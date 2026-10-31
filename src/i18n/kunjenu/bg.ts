@@ -7,6 +7,11 @@ const t: CultureTranslation = {
     kunJeNu: "Какво можеш сега?", // nieuw, nalezen
     kunNote: "Нивото до всяко изречение е ориентир, а не официално ниво.", // nieuw, nalezen
     coachCanDo: "Колко изречения „Мога …“ имаш от завършените теми", // nieuw, nalezen
+    kunLuisteren: "слушане", // nieuw, nalezen
+    kunSpreken: "говорене", // nieuw, nalezen
+    kunLezen: "четене", // nieuw, nalezen
+    kunSchrijven: "писане", // nieuw, nalezen
+    kunGesprekken: "разговори", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "Мога да се представя на колега.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "Мога да съобщя за болест и за връщане на работа.", // nieuw, nalezen
     'kjn.u.contact.1': "Мога да се обадя и да кажа кой съм.", // nieuw, nalezen
     'kjn.u.contact.2': "Мога да помоля някого да ми се обади.", // nieuw, nalezen
-    'kjn.u.contact.3': "Мога да прочета кратко съобщение от работата.", // nieuw, nalezen
+    'kjn.u.contact.3': "Мога да напиша кратко съобщение до работата.", // nieuw, nalezen
     'kjn.u.house.1': "Мога да прочета правила като „Roken verboden“.", // nieuw, nalezen
     'kjn.u.house.2': "Мога да попитам къде може да се пуши.", // nieuw, nalezen
     'kjn.u.house.3': "Мога да кажа, че нещо не е позволено.", // nieuw, nalezen

@@ -14,7 +14,8 @@
  *      - Luisteren: a sentence is heard (not shown); pick what it means, in the help language.
  *      - Woorden: the meaning (and the picture) of a word; pick the Dutch word (each with a speaker).
  *      - Zinnen: a colleague says something (a chat of the course); pick the right answer.
- *  - **Levels A0 to A2, two questions of each per part:** A0 = Eerste werkdag and Hulp vragen;
+ *  - **Levels A0 to A2, two questions of each per part:** A0 = Eerste werkdag, Hulp vragen and
+ *    Slimme hulpmiddelen (only its chat "Zal ik Engels praten?");
  *    A1 = Veiligheid, In het magazijn and Tijd en rooster; A2 = Samenwerken, Loon, Verlof en ziekte,
  *    Huisregels, Omgang met collega's and Naar je werk. Question k of version A and question k of
  *    version B are a pair: the same part, the same level, mostly the same topic and the same kind
@@ -88,8 +89,12 @@ const B: ToetsItem[] = [
   W('A1', 'w.nooduitgang', 'w.heftruck', 'w.pijn'),
   W('A2', 'w.overuren', 'w.ziekte', 'w.loon'),
   W('A2', 'w.vakantiegeld', 'w.ziekmelden', 'w.samen'),
-  Z('A0', 'c.arrive.q', 'c.transit.a', 'c.cleaning.a'), //      Goedemorgen, waar komt u voor?
+  // Pair 13: a short fixed phrase of the first day in both ("Hoe heet je?" / "Fijne avond!").
+  // Pair 14: a yes/no question in both, answered with "Nee, ..." ("Begrijp je het?" / "Zal ik
+  // Engels praten?"). "Goedemorgen, waar komt u voor?" (u, and an expression) was harder than
+  // "Hoe heet je?", so it is in neither version now.
   Z('A0', 'c.hello.q', 'c.roundsounds.a', 'c.cv.a'), //         Fijne avond!
+  Z('A0', 'c.keeplearning.q', 'c.shift.a', 'c.doctor.a'), //    Zal ik Engels praten?
   Z('A1', 'c.danger.q', 'c.findwork.a', 'c.letters.a'), //      Is er een ongeluk?
   Z('A1', 'c.directions.q', 'c.pbgk.a', 'c.agency.a'), //       Links of rechts?
   Z('A2', 'd.agree.q', 'c.insurance.a', 'c.respect.a'), //      Kun je zaterdag overwerken?

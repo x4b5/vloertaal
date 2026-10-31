@@ -7,6 +7,11 @@ const t: CultureTranslation = {
     kunJeNu: "Que sais-tu faire maintenant ?", // nieuw, nalezen
     kunNote: "Le niveau à côté de chaque phrase est un repère, pas un niveau officiel.", // nieuw, nalezen
     coachCanDo: "Combien de phrases “Je peux …” tu as, des thèmes terminés", // nieuw, nalezen // nagelezen AI 31 okt
+    kunLuisteren: "écouter", // nieuw, nalezen
+    kunSpreken: "parler", // nieuw, nalezen
+    kunLezen: "lire", // nieuw, nalezen
+    kunSchrijven: "écrire", // nieuw, nalezen
+    kunGesprekken: "dialoguer", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "Je peux me présenter à un collègue.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "Je peux me déclarer malade, puis annoncer mon retour.", // nieuw, nalezen
     'kjn.u.contact.1': "Je peux appeler et dire qui je suis.", // nieuw, nalezen
     'kjn.u.contact.2': "Je peux demander qu’on me rappelle.", // nieuw, nalezen
-    'kjn.u.contact.3': "Je peux lire un court message du travail.", // nieuw, nalezen
+    'kjn.u.contact.3': "Je peux écrire un court message au travail.", // nieuw, nalezen
     'kjn.u.house.1': "Je peux lire des règles comme “Roken verboden”.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.house.2': "Je peux demander où on peut fumer.", // nieuw, nalezen
     'kjn.u.house.3': "Je peux dire que quelque chose est interdit.", // nieuw, nalezen

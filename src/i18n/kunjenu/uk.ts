@@ -7,6 +7,11 @@ const t: CultureTranslation = {
     kunJeNu: "Що ти вмієш тепер?", // nieuw, nalezen
     kunNote: "Рівень біля кожного речення — це орієнтир, а не офіційний рівень.", // nieuw, nalezen
     coachCanDo: "Скільки речень «Я можу …» у тебе є із завершених тем", // nieuw, nalezen
+    kunLuisteren: "слухання", // nieuw, nalezen
+    kunSpreken: "говоріння", // nieuw, nalezen
+    kunLezen: "читання", // nieuw, nalezen
+    kunSchrijven: "письмо", // nieuw, nalezen
+    kunGesprekken: "розмова", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "Я можу представитися колегам на роботі.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "Я можу повідомити про хворобу і про одужання.", // nieuw, nalezen
     'kjn.u.contact.1': "Я можу зателефонувати і сказати, хто я.", // nieuw, nalezen
     'kjn.u.contact.2': "Я можу попросити, щоб мені передзвонили.", // nieuw, nalezen
-    'kjn.u.contact.3': "Я можу прочитати коротке повідомлення з роботи.", // nieuw, nalezen
+    'kjn.u.contact.3': "Я можу написати коротке повідомлення на роботу.", // nieuw, nalezen
     'kjn.u.house.1': "Я можу прочитати правила, як «Roken verboden».", // nieuw, nalezen
     'kjn.u.house.2': "Я можу запитати, де можна курити.", // nieuw, nalezen
     'kjn.u.house.3': "Я можу сказати, що чогось робити не можна.", // nieuw, nalezen

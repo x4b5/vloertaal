@@ -32,7 +32,7 @@ Bij elke zin staat een niveau en een vaardigheid waar de zin bij **past**:
 
 - **Taal**: A1 of A2 van het ERK (Europees Referentiekader).
 - **Werkregels**: 1F (Referentiekader taal; ongeveer A2).
-- Vaardigheden: luisteren, spreken, lezen of gesprekken.
+- Vaardigheden: luisteren, spreken, lezen, schrijven of gesprekken.
 
 Dit is een richtlijn om de app in een les of traject in te passen. Het is **geen officieel
 niveau**, geen toets en geen bewijs van een niveau.

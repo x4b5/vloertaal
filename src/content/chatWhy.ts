@@ -96,7 +96,7 @@ const reasons: Record<string, string> = {
   'c.workshop.a': 'Asked why: this reply gives the reason, the eyes need protection.',
   'c.power.a': 'Work on a lamp: this reply first asks if the power is off.',
   'c.garage.a': 'Asked to change the tyres: a yes, and a question about where they are.',
-  'c.carjob.a': 'Extra work: the customer must agree first, so this reply calls them.',
+  'c.carjob.a': 'Extra work needs the customer’s OK: this reply asks the supervisor.',
   'c.placement.a': 'Asked when: this reply gives the day, and the agreement comes first.',
   'c.review.a': 'Feedback is not clear yet: asking to be shown is a good reply.',
   'c.mychoice.a': 'Asked about strong points: this reply names one, with an example.',

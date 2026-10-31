@@ -1352,7 +1352,7 @@ const t: CultureTranslation = {
     'w.afmelden': "sich abmelden (sagen, dass die Arbeit fertig ist, und gehen)", // nieuw, nalezen
     'w.kapot': "kaputt", // nieuw, nalezen
     'w.opslot': "abgeschlossen (mit dem Schlüssel zu)", // nieuw, nalezen
-    'w.bijzonderheid': "die Besonderheit (etwas, das anders gelaufen ist)", // nieuw, nalezen
+    'w.bijzonderheid': "die Tür", // nieuw, nalezen
     's.handover.1': "Ich räume meinen Platz auf.", // nieuw, nalezen
     's.handover.2': "Können Sie meine Arbeit kurz prüfen?", // nieuw, nalezen
     's.handover.3': "Ich melde mich beim Vorgesetzten ab.", // nieuw, nalezen
@@ -1407,7 +1407,7 @@ const t: CultureTranslation = {
     's.carjob.2': "Dieses Teil ist kaputt.", // nieuw, nalezen
     's.carjob.3': "Darf ich eine Probefahrt machen?", // nieuw, nalezen
     'c.carjob.q': "Die Bremsen sind auch schlecht. Machst du die gleich mit?", // nieuw, nalezen
-    'c.carjob.a': "Zuerst rufe ich den Kunden an. Er muss einverstanden sein.", // nieuw, nalezen
+    'c.carjob.a': "Zuerst frage ich meinen Chef. Der Kunde muss einverstanden sein.", // nieuw, nalezen
     'u.stage': "Ein Praktikum machen", // nieuw, nalezen
     'l.placement': "Dein Praktikum", // nieuw, nalezen
     'w.stage': "das Praktikum (du lernst in einem Betrieb)", // nieuw, nalezen
@@ -1455,7 +1455,7 @@ const t: CultureTranslation = {
     'w.wet': "das Gesetz", // nieuw, nalezen
     's.police.1': "Ich habe ein Bußgeld bekommen.", // nieuw, nalezen
     's.police.2': "Ich will Widerspruch einlegen.", // nieuw, nalezen
-    's.police.3': "Darf ich einen Anwalt haben?", // nieuw, nalezen
+    's.police.3': "Ich will mit einem Anwalt sprechen.", // nieuw, nalezen
     'c.police.q': "Darf ich Ihren Ausweis sehen?", // nieuw, nalezen
     'c.police.a': "Ja, hier ist er. Was ist los?", // nieuw, nalezen
     'u.online': "Online bei der Arbeit", // nieuw, nalezen
@@ -1490,11 +1490,11 @@ const t: CultureTranslation = {
     'w.bijbaan': "der Nebenjob (eine kleine Arbeit neben der Schule)", // nieuw, nalezen
     'w.nauwkeurig': "sorgfältig und genau", // nieuw, nalezen
     'w.meeloopdag': "der Schnuppertag (ein Tag, an dem du jemanden bei der Arbeit begleitest)", // nieuw, nalezen
-    's.mychoice.1': "Ich bin geschickt mit den Händen.", // nieuw, nalezen
+    's.mychoice.1': "Ich kann gut mit den Händen arbeiten.", // nieuw, nalezen
     's.mychoice.2': "Ich arbeite gern mit Menschen.", // nieuw, nalezen
     's.mychoice.3': "Darf ich einen Tag mitlaufen, um die Arbeit zu sehen?", // nieuw, nalezen
     'c.mychoice.q': "Was kannst du gut?", // nieuw, nalezen
-    'c.mychoice.a': "Ich bin genau. Zu Hause kümmere ich mich um meine Mutter.", // nieuw, nalezen
+    'c.mychoice.a': "Ich kann mich gut um Menschen kümmern. Zu Hause kümmere ich mich um meine Mutter.", // nieuw, nalezen
     'l.nextstep': "Nach Entree", // nieuw, nalezen
     'w.niveau2': "Niveau 2 (die nächste Stufe im mbo)", // nieuw, nalezen
     'w.startkwalificatie': "die Grundqualifikation (ein mbo-Abschluss auf Niveau 2 oder höher)", // nieuw, nalezen
@@ -1548,7 +1548,7 @@ const t: CultureTranslation = {
     'c.workorder.p': "Auf dem Arbeitsauftrag stehen zehn Kartons. Stimmt das?", // nieuw, nalezen
     'c.workorder.s': "Auf deinem Arbeitsauftrag steht: Zimmer 3 streichen. Dein Kollege sagt, es ist Zimmer 5. Was machst du?", // nieuw, nalezen
     'c.workorder.o1': "Du fragst deinen Vorgesetzten, welches Zimmer richtig ist.", // nieuw, nalezen
-    'c.workorder.o2': "Du streichst Zimmer 3, weil es auf dem Zettel steht.", // nieuw, nalezen
+    'c.workorder.o2': "Du streichst Zimmer 3, weil es auf dem Arbeitsauftrag steht.", // nieuw, nalezen
     'c.workorder.o3': "Du streichst beide Zimmer, dann bist du sicher.", // nieuw, nalezen
     'c.workorder.w': "Wenn zwei Dinge nicht zusammenpassen, prüfst du das, bevor du anfängst. Eine kurze Frage kostet weniger Zeit, als die Arbeit noch einmal zu machen.", // nieuw, nalezen
     'c.handover': "Sag, was fertig ist und was nicht", // nieuw, nalezen
@@ -1572,8 +1572,8 @@ const t: CultureTranslation = {
     'c.power.p': "Ich sehe ein kaputtes Kabel. Wer kann sich das ansehen?", // nieuw, nalezen
     'c.power.s': "Du sollst eine Lampe aufhängen. Ein Kollege sagt: „Der Strom ist aus, glaube ich.“ Was machst du?", // nieuw, nalezen
     'c.power.o1': "Du bittest einen ausgebildeten Kollegen zu prüfen, ob der Strom aus ist.", // nieuw, nalezen
-    'c.power.o2': "Du fängst an, fasst die Drähte aber nur mit Handschuhen an.", // nieuw, nalezen
-    'c.power.o3': "Du fasst den Draht kurz an, um zu fühlen, ob Strom drauf ist.", // nieuw, nalezen
+    'c.power.o2': "Du fängst an, trägst aber dicke Handschuhe, wenn du die Drähte anfasst.", // nieuw, nalezen
+    'c.power.o3': "Du schaltest das Licht an und aus, um zu prüfen, ob der Strom aus ist.", // nieuw, nalezen
     'c.power.w': "„Ich glaube“ reicht bei Strom nicht. Ein Stromschlag kann dich töten. Ein ausgebildeter Kollege prüft, dass kein Strom drauf ist, und dann kannst du anfangen.", // nieuw, nalezen
     'c.garage': "Sicher unter dem Auto", // nieuw, nalezen
     'c.garage.b': "Geh nie unter ein Auto, das nur auf einem Wagenheber steht. Das Auto muss fest auf der Hebebühne oder auf Unterstellböcken stehen. Ausgelaufenes Öl macht den Boden rutschig: Wisch es sofort auf. Altöl, Batterien und Putzmittel sind gefährlicher Abfall. Sie kommen an einen besonderen Ort, nie in den normalen Müll oder in den Abfluss. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
@@ -1587,8 +1587,8 @@ const t: CultureTranslation = {
     'c.carjob.b': "Findest du mehr Probleme, als auf dem Arbeitsauftrag stehen? Repariere sie nicht einfach. Der Kunde muss der Extraarbeit und den Kosten zuerst zustimmen. Dein Vorgesetzter oder die Annahme ruft den Kunden an. Eine Probefahrt gibt es nur mit Erlaubnis und nur mit einem gültigen Führerschein. Schreib auf, was du gemacht hast und welche Teile du benutzt hast. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
     'c.carjob.p': "Ich sehe noch ein Problem. Wer ruft den Kunden an?", // nieuw, nalezen
     'c.carjob.s': "Du machst bei einem Auto einen Ölwechsel. Du siehst, dass auch die Bremsen schlecht sind. Das Auto muss in einer Stunde fertig sein. Was machst du?", // nieuw, nalezen
-    'c.carjob.o1': "Du sagst es deinem Vorgesetzten, damit der Kunde angerufen wird.", // nieuw, nalezen
-    'c.carjob.o2': "Du reparierst auch die Bremsen, der Kunde wird sich freuen.", // nieuw, nalezen
+    'c.carjob.o1': "Du sagst es deinem Vorgesetzten, damit er den Kunden anruft.", // nieuw, nalezen
+    'c.carjob.o2': "Du reparierst auch die Bremsen: Der Kunde will bestimmt ein sicheres Auto.", // nieuw, nalezen
     'c.carjob.o3': "Du sagst nichts: Die Bremsen stehen nicht auf dem Auftrag.", // nieuw, nalezen
     'c.carjob.w': "Der Kunde zahlt, also entscheidet der Kunde. Ohne sein Okay darf die Werkstatt nicht einfach mehr Arbeit machen. Schlechte Bremsen sind gefährlich, darum ist es wichtig, es zu sagen.", // nieuw, nalezen
     'c.placement': "Erst unterschreiben, dann anfangen", // nieuw, nalezen
@@ -1596,7 +1596,7 @@ const t: CultureTranslation = {
     'c.placement.p': "Ich fange erst an, wenn der Praktikumsvertrag unterschrieben ist.", // nieuw, nalezen
     'c.placement.s': "Der Betrieb will, dass du morgen anfängst. Der POK ist noch nicht unterschrieben. Was machst du?", // nieuw, nalezen
     'c.placement.o1': "Du bittest deine Praktikumsbetreuung, zuerst den POK zu klären.", // nieuw, nalezen
-    'c.placement.o2': "Du fängst morgen an und unterschreibst den POK in ein paar Wochen.", // nieuw, nalezen
+    'c.placement.o2': "Du fängst morgen an und unterschreibst den POK, wenn du Zeit hast.", // nieuw, nalezen
     'c.placement.o3': "Du fängst an, sagst der Schule aber vorerst nichts.", // nieuw, nalezen
     'c.placement.w': "Im POK steht, was du lernst und wer dir hilft. Ohne unterschriebenen POK zählt dein Praktikum vielleicht nicht für dein Diplom. Darum unterschreibst du ihn, bevor du anfängst.", // nieuw, nalezen
     'c.review': "Frag nach Feedback und nach einem Beispiel", // nieuw, nalezen
@@ -1605,7 +1605,7 @@ const t: CultureTranslation = {
     'c.review.s': "Dein Ausbilder sagt: „Du musst sorgfältiger arbeiten.“ Du weißt nicht, was er meint. Was machst du?", // nieuw, nalezen
     'c.review.o1': "Du fragst nach einem Beispiel, was du anders machen sollst.", // nieuw, nalezen
     'c.review.o2': "Du sagst Ja und hoffst, dass du es selbst herausfindest.", // nieuw, nalezen
-    'c.review.o3': "Du arbeitest viel langsamer, damit nichts schiefgeht.", // nieuw, nalezen
+    'c.review.o3': "Du arbeitest ab jetzt viel langsamer, damit nichts schiefgeht.", // nieuw, nalezen
     'c.review.w': "Mit einem Beispiel weißt du, was du ändern sollst. Fragen zeigt, dass du lernen willst. Das finden Ausbilder gut.", // nieuw, nalezen
     'c.council': "Wer darf wählen?", // nieuw, nalezen
     'c.council.b': "In den Niederlanden bestimmst du durch Wählen, wer entscheidet. Der Gemeinderat (gemeenteraad) entscheidet über deinen Ort. Die Tweede Kamer macht die Gesetze für das ganze Land. Mit der niederländischen Staatsangehörigkeit darfst du bei allen Wahlen wählen, ab 18. Für den Gemeinderat dürfen mehr Menschen wählen: Menschen aus einem anderen EU-Land, die hier wohnen, und Menschen von außerhalb der EU nach 5 Jahren legalem Aufenthalt. Die Gemeinde (gemeente) schickt dir eine Wahlkarte (stempas). Bring sie mit deinem Ausweis mit. Nicht sicher, ob du wählen darfst? Frag die Gemeinde.", // nieuw, nalezen
@@ -1620,11 +1620,11 @@ const t: CultureTranslation = {
     'c.police.p': "Ich bin mit dieser Entscheidung nicht einverstanden. Ich lege Widerspruch ein.", // nieuw, nalezen
     'c.police.s': "Du bekommst einen Brief von der Gemeinde. Du bist mit ihrer Entscheidung nicht einverstanden. Im Brief steht, dass du sechs Wochen Zeit hast. Was machst du?", // nieuw, nalezen
     'c.police.o1': "Du schreibst einen Widerspruch, vor dem Datum.", // nieuw, nalezen
-    'c.police.o2': "Du rufst einmal an und wartest auf einen Rückruf.", // nieuw, nalezen
+    'c.police.o2': "Du rufst dort einmal an und wartest, bis sie dich zurückrufen.", // nieuw, nalezen
     'c.police.o3': "Du wartest: Nach sechs Wochen ist es von selbst vorbei.", // nieuw, nalezen
     'c.police.w': "Widerspruch legst du schriftlich ein, vor dem Datum im Brief. Nach diesem Datum ist es oft zu spät. Das Juridisch Loket kann dir beim Schreiben helfen.", // nieuw, nalezen
     'c.login': "Dein Login gehört nur dir", // nieuw, nalezen
-    'c.login.b': "Dein Passwort und deine DigiD sind nur für dich. Gib sie niemandem, auch nicht deinem Arbeitgeber oder einem Kollegen. An einem gemeinsamen Computer logg dich immer aus, wenn du fertig bist. Gehst du kurz weg? Sperr deinen Bildschirm. Passwort vergessen? Frag die IT-Abteilung (ICT-afdeling) nach einem neuen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.login.b': "Dein Passwort und deine DigiD sind nur für dich. Gib sie niemandem, auch nicht deinem Arbeitgeber oder einem Kollegen. An einem gemeinsamen Computer logg dich immer aus, wenn du fertig bist. Gehst du kurz weg? Sperr deinen Bildschirm. Passwort vergessen? Frag die IT-Abteilung (ICT-afdeling) nach einem neuen. Die Regeln für Computer sind in jeder Firma anders: Frag die IT-Abteilung, welche Regeln bei dir gelten.", // nieuw, nalezen
     'c.login.p': "Ich gehe kurz weg. Ich sperre meinen Bildschirm.", // nieuw, nalezen
     'c.login.s': "Dein Vorgesetzter fragt nach deiner DigiD und deinem Passwort, um deine Papiere schnell zu erledigen. Was machst du?", // nieuw, nalezen
     'c.login.o1': "Du sagst Nein und loggst dich selbst ein, während er hilft.", // nieuw, nalezen
@@ -1636,15 +1636,15 @@ const t: CultureTranslation = {
     'c.phish.p': "Ich habe auf einen verdächtigen Link geklickt.", // nieuw, nalezen
     'c.phish.s': "Du hast auf einen Link in einer E-Mail geklickt und dein Passwort eingegeben. Dann siehst du, dass die E-Mail gefälscht war. Was machst du?", // nieuw, nalezen
     'c.phish.o1': "Du änderst dein Passwort und rufst die IT-Abteilung an.", // nieuw, nalezen
-    'c.phish.o2': "Du löschst die E-Mail und hoffst, dass nichts passiert.", // nieuw, nalezen
+    'c.phish.o2': "Du löschst die E-Mail, damit niemand sonst darauf klickt.", // nieuw, nalezen
     'c.phish.o3': "Du wartest einen Tag, ob etwas schiefgeht.", // nieuw, nalezen
     'c.phish.w': "Mit deinem Passwort kann jemand anderes in die Systeme deiner Arbeit kommen. Wenn du es schnell änderst und der IT-Abteilung Bescheid sagst, können sie es rechtzeitig stoppen.", // nieuw, nalezen
     'c.mychoice': "Deine Stärken zählen", // nieuw, nalezen
     'c.mychoice.b': "Was kannst du gut? Denk an Arbeit, Schule und zu Hause. Familie versorgen, ein Nebenjob oder ein Ehrenamt zählen auch. Was magst du, und was magst du nicht? Du weißt nicht, welche Arbeit zu dir passt? Frag, ob du einen Tag bei jemandem mitlaufen darfst (meeloopdag). Deine Betreuung in der Schule kann dir beim Aussuchen helfen.", // nieuw, nalezen
-    'c.mychoice.p': "Ich kann gut mit Menschen. Zu Hause helfe ich viel.", // nieuw, nalezen
+    'c.mychoice.p': "Ich kann gut mit Menschen umgehen. Zu Hause helfe ich viel.", // nieuw, nalezen
     'c.mychoice.s': "In der Schule fragt man dich: „Was kannst du gut?“ Du hattest noch nie eine bezahlte Arbeit. Was sagst du?", // nieuw, nalezen
     'c.mychoice.o1': "Was du zu Hause gut machst, zum Beispiel andere versorgen.", // nieuw, nalezen
-    'c.mychoice.o2': "Dass du es nicht sagen kannst, weil du nie einen Job hattest.", // nieuw, nalezen
+    'c.mychoice.o2': "Dass du es noch nicht weißt, weil du nie einen Job hattest.", // nieuw, nalezen
     'c.mychoice.o3': "Dass du jede Arbeit kannst, wirklich alles.", // nieuw, nalezen
     'c.mychoice.w': "Fähigkeiten von zu Hause zählen auch. Versorgen, planen und helfen sind Fähigkeiten, die Arbeitgeber brauchen. Sag, was du gemacht hast, mit einem Beispiel.", // nieuw, nalezen
     'c.nextstep': "Nach Entree: Niveau 2 oder Arbeit", // nieuw, nalezen

@@ -172,7 +172,7 @@ export const geluidsscenes: Geluidsscene[] = [
     recht: true, // ⚖️ bij slijpen: bril en gehoorbescherming
     beurten: [
       { wie: 'henk', nl: 'Ga jij zo even slijpen? Die tien stukken hier.' },
-      { wie: 'henk', nl: 'Draag je bril en je gehoorbescherming, hè. Er komen veel vonken.' },
+      { wie: 'henk', nl: 'Draag je bril en je gehoorbescherming. Er komen veel vonken.' },
       { wie: 'ik', nl: 'Oké. Waar ligt het gereedschap?' },
       { wie: 'henk', nl: 'Rechts, in de grote kast.' },
     ],
@@ -247,7 +247,7 @@ export const geluidsscenes: Geluidsscene[] = [
       { wie: 'henk', nl: 'Klopt het aantal op de werkbon?' },
       { wie: 'ik', nl: 'Nee. Ik heb acht kabels, geen twaalf.' },
       { wie: 'henk', nl: 'Oké, schrijf acht op. Ik bestel er vier bij.' },
-      { wie: 'henk', nl: 'En zet je handtekening onderaan, hè.' },
+      { wie: 'henk', nl: 'En zet je handtekening onderaan.' },
     ],
     geluid: { nl: 'Werkplaats: een radio zacht, iemand legt gereedschap neer, een ventilator.', niveau: 'zacht' },
     vragen: [
@@ -309,13 +309,13 @@ export const geluidsscenes: Geluidsscene[] = [
   {
     id: 'g.garage.klant',
     sector: 'garage',
-    titel: 'Eerst de klant bellen',
+    titel: 'Eerst moet de klant akkoord zijn',
     naUnit: 'u.garage',
     beurten: [
       { wie: 'jada', nl: 'De remmen van deze auto zijn ook slecht.' },
       { wie: 'ik', nl: 'Doe ik die meteen?' },
-      { wie: 'jada', nl: 'Nee, eerst bel ik de klant. Hij moet akkoord zijn met de kosten.' },
-      { wie: 'jada', nl: 'Het is driehonderd euro. Wacht even, hè.' },
+      { wie: 'jada', nl: 'Nee, de klant moet eerst akkoord zijn met de kosten.' },
+      { wie: 'jada', nl: 'Het is driehonderd euro. Vraag het even aan de chef. Hij belt de klant.' },
     ],
     geluid: { nl: 'Garage: een auto rijdt langzaam binnen, gereedschap op een kar, een deur.', niveau: 'zacht' },
     vragen: [
@@ -497,7 +497,7 @@ export const geluidsscenes: Geluidsscene[] = [
       { wie: 'jada', nl: 'Pas op, de heftruck komt eraan. Even stoppen.' },
       { wie: 'jada', nl: 'Oké, loop maar. Pallet twaalf moet naar rechts, bij de stelling.' },
       { wie: 'ik', nl: 'Rechts? Bij stelling vier?' },
-      { wie: 'jada', nl: 'Ja. En til met je benen, hè.' },
+      { wie: 'jada', nl: 'Ja. En til met je benen.' },
     ],
     geluid: { nl: 'Magazijn: een heftruck piept achteruit, ver weg pallets die neergezet worden, een scanner piept.', niveau: 'midden' },
     vragen: [
@@ -638,7 +638,7 @@ export const geluidsscenes: Geluidsscene[] = [
     beurten: [
       { wie: 'amina', nl: 'Hoeveel rijen heb je gedaan, Bram?' },
       { wie: 'bram', nl: 'Vier. Nog twee te gaan.' },
-      { wie: 'amina', nl: 'Goed. Je krat is vol, hè. Zet hem bij de plukkar.' },
+      { wie: 'amina', nl: 'Goed. Je krat is vol. Zet hem bij de plukkar.' },
       { wie: 'bram', nl: 'Oké. Om half tien is de pauze, toch?' },
       { wie: 'amina', nl: 'Ja, een kwartier.' },
     ],
@@ -672,7 +672,7 @@ export const geluidsscenes: Geluidsscene[] = [
     recht: true, // ⚖️ bij hitte: genoeg drinken en even naar buiten
     beurten: [
       { wie: 'henk', nl: 'Het is vandaag dertig graden in de kas.' },
-      { wie: 'henk', nl: 'Drink elk uur water, hè. Ook als je geen dorst hebt.' },
+      { wie: 'henk', nl: 'Drink elk uur water. Ook als je geen dorst hebt.' },
       { wie: 'ik', nl: 'Oké. Mag ik ook even naar buiten?' },
       { wie: 'henk', nl: 'Ja, om elf uur. Tien minuten.' },
     ],
@@ -747,7 +747,7 @@ export const geluidsscenes: Geluidsscene[] = [
     naUnit: 'u.care',
     recht: true, // ⚖️ pillen geven alleen als het jouw taak is
     beurten: [
-      { wie: 'jada', nl: 'Het is negen uur, hè. Tijd voor de pillen.' },
+      { wie: 'jada', nl: 'Het is negen uur. Tijd voor de pillen.' },
       { wie: 'jada', nl: 'Kun je meneer in kamer vier zijn pillen geven?' },
       { wie: 'ik', nl: 'Nee, dat mag ik niet. Ik haal de verpleegkundige.' },
       { wie: 'jada', nl: 'O ja, goed. Ze is in kamer zeven.' },
@@ -822,7 +822,7 @@ export const geluidsscenes: Geluidsscene[] = [
       { wie: 'jada', nl: 'Tafel zes. Een gast heeft een allergie voor noten.' },
       { wie: 'ik', nl: 'Oké. Zitten er noten in de soep?' },
       { wie: 'jada', nl: 'Ik weet het niet. Vraag het even aan de chef.' },
-      { wie: 'jada', nl: 'En schrijf het op de bestelling, hè.' },
+      { wie: 'jada', nl: 'En schrijf het op de bestelling.' },
     ],
     geluid: { nl: 'Restaurantkeuken: pannen, de afzuiging zoemt, borden worden neergezet.', niveau: 'midden' },
     vragen: [
@@ -858,7 +858,7 @@ export const geluidsscenes: Geluidsscene[] = [
     beurten: [
       { wie: 'henk', nl: 'Zet het vlees even in de koelcel.' },
       { wie: 'ik', nl: 'Oké. Op welke plank?' },
-      { wie: 'henk', nl: 'Onderaan. En schrijf de datum erop, hè.' },
+      { wie: 'henk', nl: 'Onderaan. En schrijf de datum erop.' },
       { wie: 'henk', nl: 'Daarna snijd je de uien. Om vijf uur komen de eerste gasten.' },
     ],
     geluid: { nl: 'Keuken: de koelcel zoemt, een mes op een plank, de afzuiging.', niveau: 'zacht' },
@@ -928,7 +928,7 @@ export const geluidsscenes: Geluidsscene[] = [
     naUnit: 'u.clean',
     recht: true, // ⚖️ natte vloer: zet het bordje neer
     beurten: [
-      { wie: 'jada', nl: 'Ben je klaar met de gang? Zet het bordje neer, hè.' },
+      { wie: 'jada', nl: 'Ben je klaar met de gang? Zet het bordje neer.' },
       { wie: 'jada', nl: 'De vloer is nog glad. Een half uur ongeveer.' },
       { wie: 'ik', nl: 'Oké. Waar staat het bordje?' },
       { wie: 'jada', nl: 'Bij de emmers, in kast twee.' },

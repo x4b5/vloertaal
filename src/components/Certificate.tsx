@@ -1,12 +1,12 @@
 import { dutchUi } from '../lib/track';
 import { Fragment, useEffect, useId, useMemo, useRef, useState } from 'react';
-import { gloss, langTag, ui, said } from '../i18n';
+import { gloss, langTag, ui, said, saidLang } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
 import type { Unit } from '../content/types';
 import { CERT_NOTE, certData, certDate, certListLabel, certMeta, certSub, earnedCertificates, loadCertName, saveCertName, sealRing, type CertData } from '../lib/certificate';
 import { certKunFits, certificatePng, fontsReady, shareCertificate } from '../lib/certCanvas';
-import { kunJeNu, pastBij, type KunZin } from '../content/kunJeNu';
+import { KUN_VAARDIGHEID_UI, kunJeNu, pastBij, type KunZin } from '../content/kunJeNu';
 import type { Progress } from '../lib/progress';
 import { KAART_NOTE, kaartAlt, kaartData } from '../lib/kaart';
 import { kaartPng, shareKaart } from '../lib/kaartCanvas';
@@ -315,7 +315,8 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
 /**
  * "Wat kun je nu?" under a certificate: the topic's can-do sentences (src/content/kunJeNu.ts), each
  * in Dutch with its meaning in the help language (the work-rules track: Dutch only) and, small,
- * the level and skill it fits ("past bij A2 · spreken"). Text only, nothing to tap.
+ * the level and skill it fits ("past bij A2 · spreken"), with the skill in the help language after
+ * it ("(mówienie)"; the work-rules track: Dutch only). Text only, nothing to tap.
  */
 function KunJeNuSection({ zinnen, lang }: { zinnen: KunZin[]; lang?: HelpLanguage }) {
   const id = useId();
@@ -332,7 +333,10 @@ function KunJeNuSection({ zinnen, lang }: { zinnen: KunZin[]; lang?: HelpLanguag
             <CheckIcon size={20} />
             <span className="kun-text">
               <NlPair nlFirst content nl={z.nl} nlClass="kun-nl" className="kun-help" text={gloss(z.id, z.en ?? z.nl, lang)} />
-              <span className="kun-tag" lang="nl" dir="ltr">{pastBij(z)}</span>
+              <span className="kun-tag" lang="nl" dir="ltr">
+                {pastBij(z)}
+                <KunSkill z={z} lang={lang} />
+              </span>
             </span>
           </li>
         ))}
@@ -342,6 +346,13 @@ function KunJeNuSection({ zinnen, lang }: { zinnen: KunZin[]; lang?: HelpLanguag
       </p>
     </section>
   );
+}
+
+/** The skill of a can-do sentence in the help language (English without one), after the Dutch: " (pisanie)". */
+function KunSkill({ z, lang }: { z: KunZin; lang?: HelpLanguage }) {
+  if (dutchUi(lang)) return null;
+  const t = ui(KUN_VAARDIGHEID_UI[z.vaardigheid], lang);
+  return <> (<bdi lang={saidLang(t)}>{said(t)}</bdi>)</>;
 }
 
 /**

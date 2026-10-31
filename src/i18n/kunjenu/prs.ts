@@ -7,6 +7,11 @@ const t: CultureTranslation = {
     kunJeNu: "حالا چه کار کرده می‌توانید؟", // nieuw, nalezen // nagelezen AI 31 okt
     kunNote: "سطح کنار هر جمله فقط رهنما است، نه یک سطح رسمی.", // nieuw, nalezen
     coachCanDo: "تعداد جمله‌های «می‌توانم …» از موضوع‌هایی که تمام کرده‌اید", // nieuw, nalezen // nagelezen AI 31 okt
+    kunLuisteren: "شنیدن", // nieuw, nalezen
+    kunSpreken: "گپ زدن", // nieuw, nalezen
+    kunLezen: "خواندن", // nieuw, nalezen
+    kunSchrijven: "نوشتن", // nieuw, nalezen
+    kunGesprekken: "گفتگو", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "می‌توانم خود را به یک همکار معرفی کنم.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "می‌توانم مریضی و دوباره آمدنم به کار را اطلاع بدهم.", // nieuw, nalezen
     'kjn.u.contact.1': "می‌توانم تیلفون کنم و بگویم که کی هستم.", // nieuw, nalezen
     'kjn.u.contact.2': "می‌توانم از کسی بخواهم که دوباره به من تیلفون کند.", // nieuw, nalezen
-    'kjn.u.contact.3': "می‌توانم یک پیام کوتاه از کارم را بخوانم.", // nieuw, nalezen
+    'kjn.u.contact.3': "می‌توانم یک پیام کوتاه به کارم بنویسم.", // nieuw, nalezen
     'kjn.u.house.1': "می‌توانم قاعده‌هایی مانند «Roken verboden» را بخوانم.", // nieuw, nalezen
     'kjn.u.house.2': "می‌توانم بپرسم که سگرت را کجا کشیده می‌توانم.", // nieuw, nalezen
     'kjn.u.house.3': "می‌توانم بگویم که کاری اجازه نیست.", // nieuw, nalezen

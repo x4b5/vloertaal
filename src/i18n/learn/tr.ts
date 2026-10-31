@@ -101,7 +101,7 @@ const t: CultureTranslation = {
     'c.workshop.a.why': "Neden diye soruluyor: bu cevap nedeni veriyor, gözler korunmalı.", // nieuw, nalezen
     'c.power.a.why': "Lambada iş: bu cevap önce elektriğin kesik olup olmadığını soruyor.", // nieuw, nalezen
     'c.garage.a.why': "Lastik değiştirmesi isteniyor: bir evet ve lastiklerin nerede olduğuna dair bir soru.", // nieuw, nalezen
-    'c.carjob.a.why': "Ek iş: müşteri önce onay vermeli, bu yüzden bu cevap müşteriyi arıyor.", // nieuw, nalezen
+    'c.carjob.a.why': "Ek iş: müşteri önce onay vermeli, bu yüzden bu cevap şefe soruyor.", // nieuw, nalezen
     'c.placement.a.why': "Ne zaman diye soruluyor: bu cevap günü veriyor, önce de sözleşme geliyor.", // nieuw, nalezen
     'c.review.a.why': "Geri bildirim henüz net değil: göstermelerini istemek iyi bir cevap.", // nieuw, nalezen
     'c.council.a.why': "Oy vermek soruluyor: bir evet ve götürülecek iki şey.", // nieuw, nalezen

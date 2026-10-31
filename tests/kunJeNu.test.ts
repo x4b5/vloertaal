@@ -6,7 +6,7 @@ import { CertificateScreen, certAlt } from '../src/components/Certificate';
 import { Coaches } from '../src/components/Coaches';
 import { courseUnits } from '../src/content/courses';
 import { units } from '../src/content/curriculum';
-import { KUN_REGELS, KUN_TAAL, KUN_VERTAALD, kunAantal, kunGlossIds, kunJeNu, pastBij } from '../src/content/kunJeNu';
+import { KUN_REGELS, KUN_TAAL, KUN_VAARDIGHEID_UI, KUN_VERTAALD, kunAantal, kunGlossIds, kunJeNu, pastBij } from '../src/content/kunJeNu';
 import { proSections } from '../src/content/pro';
 import { THEME_UNITS } from '../src/content/themes';
 import { getHelpLanguage, helpLanguageSources, registerPack } from '../src/i18n/all';
@@ -55,8 +55,8 @@ describe('every topic has 2 or 3 sentences', () => {
 });
 
 describe('every sentence: a level and a skill it fits', () => {
-  it('Taal: A1 or A2; Werkregels: 1F; a skill of four', () => {
-    const skills = ['luisteren', 'spreken', 'lezen', 'gesprekken'];
+  it('Taal: A1 or A2; Werkregels: 1F; a skill of five', () => {
+    const skills = ['luisteren', 'spreken', 'lezen', 'schrijven', 'gesprekken'];
     for (const z of KUN_TAAL.flatMap((o) => o.zinnen)) {
       expect(['A1', 'A2'], z.id).toContain(z.niveau);
       expect(skills, z.id).toContain(z.vaardigheid);
@@ -101,7 +101,7 @@ describe('translations where required', () => {
     expect(required.length).toBeGreaterThan(40);
   });
 
-  it('13 help languages: every required sentence and the three screen texts, nothing else', () => {
+  it('13 help languages: every required sentence and the screen texts (with the five skills), nothing else', () => {
     expect(helpLanguageSources).toHaveLength(13);
     for (const lang of helpLanguageSources) {
       for (const id of required) {
@@ -111,7 +111,7 @@ describe('translations where required', () => {
       }
       const extra = Object.keys(lang.gloss).filter((id) => id.startsWith('kjn.') && !required.includes(id));
       expect(extra, lang.code).toEqual([]);
-      for (const key of ['kunJeNu', 'kunNote', 'coachCanDo'] as const) expect(allForms(lang.ui[key]).length, `${lang.code} ${key}`).toBeGreaterThan(0);
+      for (const key of ['kunJeNu', 'kunNote', 'coachCanDo', ...Object.values(KUN_VAARDIGHEID_UI)] as const) expect(allForms(lang.ui[key]).length, `${lang.code} ${key}`).toBeGreaterThan(0);
     }
   });
 
@@ -151,7 +151,15 @@ describe('where it shows', () => {
     expect(text).toContain('Wat kun je nu?');
     expect(text).toContain('Ik kan zeggen dat ik ziek ben.');
     expect(text).toContain('Umiem powiedzieć, że choruję.');
-    expect(text).toContain('past bij A1 · spreken');
+    expect(text).toContain('past bij A1 · spreken (mówienie)');
+  });
+
+  it('the skill "schrijven": on the writing lessons, with its name in the help language', () => {
+    expect(kunJeNu('u.contact').find((z) => z.id === 'kjn.u.contact.3')?.vaardigheid).toBe('schrijven');
+    expect(kunJeNu('r.schrijven').every((z) => z.vaardigheid === 'schrijven')).toBe(true);
+    expect(uiEn[KUN_VAARDIGHEID_UI.schrijven]).toBe('writing');
+    expect(getHelpLanguage('pl')!.ui[KUN_VAARDIGHEID_UI.schrijven]).toBe('pisanie');
+    expect(getHelpLanguage('nl')!.ui[KUN_VAARDIGHEID_UI.schrijven]).toBe('schrijven');
   });
 
   it('the certificate itself: the lines in its text alternative only when they are on it', () => {

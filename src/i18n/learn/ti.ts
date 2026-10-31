@@ -101,7 +101,7 @@ const t: CultureTranslation = {
     'c.workshop.a.why': "ስለምንታይ ተባሂሉ: እዚ መልሲ ምኽንያት ይህብ፡ ዓይኒ ሓለዋ የድልዮ።", // nieuw, nalezen
     'c.power.a.why': "ስራሕ ኣብ መብራህቲ: እዚ መልሲ ቅድም ኤሌክትሪክ ተቋሪጹ ዶ ይሓትት።", // nieuw, nalezen
     'c.garage.a.why': "ጎማ ክቕየር ተሓቲቱ: እወ፡ ጎማታት ኣበይ ከም ዘለዉ ሕቶ እውን።", // nieuw, nalezen
-    'c.carjob.a.why': "ተወሳኺ ስራሕ: ዓሚል ቅድም ክሰማማዕ ኣለዎ፡ ስለዚ እዚ መልሲ ይድውለሉ።", // nieuw, nalezen
+    'c.carjob.a.why': "ተወሳኺ ስራሕ: ዓሚል ቅድም ክሰማማዕ ኣለዎ፡ ስለዚ እዚ መልሲ ንሓላፊ ይሓትት።", // nieuw, nalezen
     'c.placement.a.why': "መዓስ ተባሂሉ: እዚ መልሲ መዓልቲ ይህብ፡ ውዕል ድማ ቅድም ይመጽእ።", // nieuw, nalezen
     'c.review.a.why': "ርእይቶ ገና ንጹር ኣይኮነን: ከርእዩ ምሕታት ጽቡቕ መልሲ እዩ።", // nieuw, nalezen
     'c.council.a.why': "ብዛዕባ ድምጺ ምሃብ: እወ፡ ክውሰዱ ዘለዎም ክልተ ነገራት እውን።", // nieuw, nalezen

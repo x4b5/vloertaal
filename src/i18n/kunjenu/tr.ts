@@ -7,6 +7,11 @@ const t: CultureTranslation = {
     kunJeNu: "Şimdi neler yapabilirsin?", // nieuw, nalezen
     kunNote: "Her cümlenin yanındaki seviye bir yol göstericidir, resmî bir seviye değildir.", // nieuw, nalezen
     coachCanDo: "Bitirdiğin konulardaki “… yapabilirim” cümlelerinin sayısı", // nieuw, nalezen
+    kunLuisteren: "dinleme", // nieuw, nalezen
+    kunSpreken: "konuşma", // nieuw, nalezen
+    kunLezen: "okuma", // nieuw, nalezen
+    kunSchrijven: "yazma", // nieuw, nalezen
+    kunGesprekken: "karşılıklı konuşma", // nieuw, nalezen
   },
   gloss: {
     'kjn.u.firstday.1': "Kendimi bir iş arkadaşıma tanıtabilirim.", // nieuw, nalezen
@@ -43,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "Hastalık bildirimi yapabilir, iyileşince de bildirebilirim.", // nieuw, nalezen
     'kjn.u.contact.1': "Arayıp kim olduğumu söyleyebilirim.", // nieuw, nalezen
     'kjn.u.contact.2': "Birinden beni geri aramasını isteyebilirim.", // nieuw, nalezen
-    'kjn.u.contact.3': "İşten gelen kısa bir mesajı okuyabilirim.", // nieuw, nalezen
+    'kjn.u.contact.3': "İşe kısa bir mesaj yazabilirim.", // nieuw, nalezen
     'kjn.u.house.1': "“Roken verboden” gibi kuralları okuyabilirim.", // nieuw, nalezen
     'kjn.u.house.2': "Nerede sigara içilebileceğini sorabilirim.", // nieuw, nalezen
     'kjn.u.house.3': "Bir şeyin yasak olduğunu söyleyebilirim.", // nieuw, nalezen

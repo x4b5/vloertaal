@@ -371,7 +371,7 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
   ],
   'r.l.werkplaats.2.mo1': [
     { text: 'De remmen zijn bijna op. Ik doe ze er meteen bij.', feedback: 'Eerst moet de klant ja zeggen. Meld het eerst.' },
-    { text: 'Ik zag iets aan de remmen. Maar goed, niet mijn werk.', feedback: 'Dan hoort de klant het niet. Vraag of iemand haar belt.' },
+    { text: 'Ik zag iets aan de remmen. Maar goed, niet mijn werk.', feedback: 'Dan hoort de klant het niet. Zeg het tegen je chef. Die belt haar.' },
   ],
 };
 
