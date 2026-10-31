@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import type { HelpLanguage } from '../i18n/types';
 import type { CardRow, CardType, DrawnCard, RuleCharacter } from '../content/regels/types';
 import { cardSpeech, payslipCard } from '../content/regels/course';
-import { ASK_WHO } from '../content/regels/askWho';
+import { askWhoCard } from '../content/regels/askWho';
 import { ruleAdviceLine } from '../content/regels/disclaimer';
 import { said, ui } from '../i18n';
 import { autoSpeakLong } from '../lib/audio';
@@ -250,12 +250,12 @@ export function WhoAsk({ ex, lang, locked, onAnswer, verdict, run, misses }: Rul
         stamp={false}
         render={(o) => (
           <>
-            <span className="rule-who-pic" aria-hidden>{ASK_WHO[o.who].emoji}</span>
+            <span className="rule-who-pic" aria-hidden>{askWhoCard(o.who, step.id).emoji}</span>
             <span className="choice-label rule-who-text" lang="nl">
-              <span className="rule-who-name">{ASK_WHO[o.who].label}</span>
+              <span className="rule-who-name">{askWhoCard(o.who, step.id).label}</span>
               {/* A pause between the name and what it is, in the button's name (one tap, read as one). */}
               <span className="sr-only">, </span>
-              <span className="rule-who-what">{ASK_WHO[o.who].what}</span>
+              <span className="rule-who-what">{askWhoCard(o.who, step.id).what}</span>
             </span>
           </>
         )}
@@ -435,7 +435,7 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
       return {
         title: correct ? 'Goed zo!' : 'Het beste antwoord is:',
         own: picked?.feedback,
-        best: correct ? undefined : { lead: 'Het beste antwoord', text: ASK_WHO[best.who].label, what: ASK_WHO[best.who].what },
+        best: correct ? undefined : { lead: 'Het beste antwoord', text: askWhoCard(best.who, ex.step.id).label, what: askWhoCard(best.who, ex.step.id).what },
         why: ex.step.why,
       };
     }

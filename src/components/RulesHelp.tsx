@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { courseUnits, ruleCards } from '../content/courses';
 import { withRegion } from '../content/regio';
-import { RULES_BE_NOTE, RULES_COUNTRY, RULES_DISCLAIMER, RULES_NOTICE, RULES_PATH_NOTE, RULES_PATH_NOTE_BE, ruleAdviceLine } from '../content/regels/disclaimer';
+import { RULES_BE_NOTE, RULES_COUNTRY, RULES_DISCLAIMER, RULES_DISCLAIMER_BE, RULES_NOTICE, RULES_NOTICE_BE, RULES_PATH_NOTE, RULES_PATH_NOTE_BE, RULES_PATH_NOTE_BE_OWN, RULES_PATH_NOTE_BE_PART, ruleAdviceLine } from '../content/regels/disclaimer';
+import { isBeId } from '../content/regels/be/ids';
+import { rulesCountry } from '../content/rulesCourse';
 import { helpRowsFor, helpRowText, type HelpRow } from '../content/regels/help';
 import type { Unit } from '../content/types';
 import { said, ui } from '../i18n';
@@ -39,19 +41,21 @@ export function RulesHelp({ lang, country, onShelf, onBack, after }: {
   /** Opened from the first lesson's result (not the tab): a back arrow. */
   onBack?: () => void;
 }) {
+  // The Belgian course plays (src/content/rulesCourse.ts): its own lines, no "the rules are Dutch" note.
+  const beCourse = country === 'be' && rulesCountry() === 'be';
   return (
     <div className="screen rules-help" lang="nl">
       <div className="screen-head">
         {onBack && <ChromeBack lang={lang} onBack={onBack} />}
         <h1>Hulp</h1>
       </div>
-      {country === 'be' && (
+      {country === 'be' && !beCourse && (
         <section className="rules-disclaimer rules-be-note" aria-label="Je werkt in België">
           <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={24} /></span>
           <p>{RULES_BE_NOTE.map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
         </section>
       )}
-      <RulesDisclaimer />
+      <RulesDisclaimer be={beCourse} />
       <h2 className="rh-title">{ui('phrasebook', lang).help ?? 'Wie bel je?'}</h2>
       <p className="muted rh-hint">{ui('phrasebookHint', lang).help}</p>
       <ul className="rh-rows">
@@ -78,14 +82,16 @@ export function RulesNoticeScreen({ country, onDone }: { country?: 'nl' | 'be'; 
   // It comes after a tap on another screen (the language): a screen reader starts at its heading.
   const head = useRef<HTMLHeadingElement>(null);
   useEffect(() => { head.current?.focus({ preventScroll: true }); }, []);
+  const beCourse = country === 'be' && rulesCountry() === 'be';
+  const notice = beCourse ? RULES_NOTICE_BE : RULES_NOTICE.filter((line) => country !== 'be' || line !== RULES_COUNTRY);
   return (
     <div className="screen onboarding rules-notice" lang="nl">
       <h1 className="onboarding-title" ref={head} tabIndex={-1}>Goed om te weten</h1>
       <section className="rules-disclaimer rules-notice-card" aria-label="Goed om te weten">
         <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={28} /></span>
-        <p>{RULES_NOTICE.filter((line) => country !== 'be' || line !== RULES_COUNTRY).map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
+        <p>{notice.map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
       </section>
-      {country === 'be' && (
+      {country === 'be' && !beCourse && (
         <section className="rules-disclaimer rules-be-note" aria-label="Je werkt in België">
           <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={24} /></span>
           <p>{RULES_BE_NOTE.map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
@@ -102,17 +108,28 @@ export function RulesPathNote({ lang, country }: { lang?: HelpLanguage; country?
   return (
     <p className="rules-path-note" lang="nl">
       <InfoIcon size={18} />
-      <span>{country === 'be' ? RULES_PATH_NOTE_BE : RULES_PATH_NOTE}</span>
+      <span>{rulesPathNote(country)}</span>
     </p>
   );
 }
 
-/** RULES_DISCLAIMER as a calm card (not a warning): general information, ask for your situation. */
-export function RulesDisclaimer() {
+/**
+ * The line above the path: whose rules these are. In the Belgian course: Belgium's, and while some
+ * units are still the Dutch ones (BE_TODO), that it is not all Belgian yet.
+ */
+export function rulesPathNote(country?: 'nl' | 'be'): string {
+  if (country !== 'be') return RULES_PATH_NOTE;
+  if (rulesCountry() !== 'be') return RULES_PATH_NOTE_BE;
+  return courseUnits('regels').every((u) => isBeId(u.id)) ? RULES_PATH_NOTE_BE_OWN : RULES_PATH_NOTE_BE_PART;
+}
+
+/** RULES_DISCLAIMER as a calm card (not a warning): general information, ask for your situation.
+ *  `be`: the Belgian course's (RULES_DISCLAIMER_BE). */
+export function RulesDisclaimer({ be }: { be?: boolean } = {}) {
   return (
     <section className="rules-disclaimer" aria-label="Goed om te weten" lang="nl">
       <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={24} /></span>
-      <p>{RULES_DISCLAIMER.map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
+      <p>{(be ? RULES_DISCLAIMER_BE : RULES_DISCLAIMER).map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
     </section>
   );
 }

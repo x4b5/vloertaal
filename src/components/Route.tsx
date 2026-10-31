@@ -634,6 +634,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                     <Bi className="bay-title" text={title} />
                     {/* Werkregels: what you can do after the lesson (its goal), under the title. */}
                     {lesson.rule?.goal && <span className="bay-goal" lang="nl">{lesson.rule.goal}</span>}
+                    {/* The Belgian course: a Dutch lesson there says so (src/content/regels/be). */}
+                    {lesson.rule?.note && <span className="bay-goal bay-note" lang="nl">{lesson.rule.note}</span>}
                     {saved && <ResumeChip save={saved} lang={lang} />}
                     {state === 'done' && !saved && (
                       <span className="bay-again">

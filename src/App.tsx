@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { findLesson, playLesson } from './content/curriculum';
 import { ensureLanguage, getHelpLanguage, isLanguageLoaded, langTag } from './i18n';
+import { setRulesCountry } from './content/rulesCourse';
 import { Splash } from './components/Splash';
 import { loadPictures, usePicturesLoaded } from './pictures';
 import type { UiCode } from './i18n/types';
-import { isPlayable, learnedItems } from './content/courses';
+import { isPlayable, learnedItems, rulesTwinHere } from './content/courses';
 import { trackOf, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
 import { tempoOf } from './lib/tempo';
@@ -16,7 +17,8 @@ import { HomeGreeting } from './components/BramSays';
 import { NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } from './components/RulesHelp';
 import { GenderScreen } from './components/Gender';
 import { shouldAskGender } from './lib/askGender';
-import { onboardingStep, previousStep, stepIndex, trialLessonAllowed, type OnbStep } from './lib/onboarding';
+import { onboardingStep, previousStep, shouldAskCountry, stepIndex, trialLessonAllowed, type OnbStep } from './lib/onboarding';
+import { CountryScreen } from './components/Country';
 import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
@@ -146,6 +148,9 @@ export default function App() {
   const [progress, setProgress] = useState(start.progress);
   const progressRef = useRef(progress);
   progressRef.current = progress;
+  // The work-rules course of the learner's country (src/content/rulesCourse.ts): set before
+  // anything below reads the course.
+  setRulesCountry(progress.country);
   /** "Je reeks is gestopt bij N": shown once on this open, before the path. */
   const [stopped, setStopped] = useState<number | null>(start.stopped);
   // An app left open overnight (a phone that keeps it in the background): brought up to date for
@@ -219,6 +224,8 @@ export default function App() {
       setProgress((p) => ({ ...p, gender: undefined, genderAsked: false }));
     } else if (to === 'gate') {
       setGateAgain(true);
+    } else if (to === 'sector') {
+      setProgress((p) => ({ ...p, sector: undefined }));
     }
   };
   // A new screen (outside a lesson, which sees to its own focus): when the focus was lost with the
@@ -568,6 +575,10 @@ export default function App() {
   const linkHandled = useRef(false);
   useEffect(() => {
     if (!focusUnit || linkHandled.current || !access || step !== 'done') return;
+    // A coach link names a rules unit by its Dutch id (?unit=r.loon): a learner in Belgium lands
+    // on its Belgian twin, and the other way round (src/content/courses.ts rulesTwinHere).
+    const twin = rulesTwinHere(focusUnit);
+    if (twin !== focusUnit) { setFocusUnit(twin); return; }
     linkHandled.current = true;
     const unit = findUnit(focusUnit);
     // A topic this app or this track does not have (a link to the other track's topic): the home
@@ -694,11 +705,15 @@ export default function App() {
   }
   // Two steps of at most three cards; the first step's arrow goes back to the password page.
   if (step === 'sector') return <SectorScreen lang={lang} onDone={setSector} onBack={onbBack} />;
+  // Right after the sector: "In welk land werk je?" (two cards; Settings can change it later).
+  if (step === 'country') return <CountryScreen lang={lang} onDone={setCountry} onBack={onbBack} />;
   // A learner from before the gender question (or who switched to a help language with gender
   // later): asked once on its own page on opening the home, without a way back.
   if (view.name === 'home' && shouldAskGender(progress)) {
     return <GenderScreen lang={lang} onDone={(gender) => setProgress((p) => ({ ...p, gender, genderAsked: true }))} />;
   }
+  // A learner from before the country question: asked once on opening the home, without a way back.
+  if (view.name === 'home' && shouldAskCountry(progress)) return <CountryScreen lang={lang} onDone={setCountry} />;
   // The work-rules track, the first time it opens: "Goed om te weten" on its own page, once.
   if (view.name === 'home' && track === 'regels' && !progress.rulesNotice) {
     return <RulesNoticeScreen country={progress.country} onDone={() => setProgress((p) => ({ ...p, rulesNotice: true }))} />;
