@@ -68,7 +68,7 @@ export const BE_TAAL_TODO: readonly string[] = [
   'u.rights', 'u.leave', 'u.lost', 'u.exploit',
 
   // Agent D: gezondheid, reizen, de eerste dagen, samenwerken, winkel en kas
-  'u.shop', 'u.kas',
+  'u.kas',
 ];
 
 /** Every Belgian file written so far. */
