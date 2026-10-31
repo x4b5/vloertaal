@@ -223,7 +223,7 @@ export const fr: Gloss = {
     "be.c.speakup.o3": "Plains-toi de lui à tous les autres collègues.", // = c.speakup.o3
     "be.c.speakup.w": "En Flandre, les gens le disent souvent avec prudence, à un moment calme, mais ils le disent. Le dire tôt et calmement garde une bonne relation.", // nieuw, nalezen
     "be.c.task": "Dis quand c’est fini, demande quand ce n’est pas clair", // = c.task
-    "be.c.task.b": "Un responsable donne souvent une tâche en quelques mots, et attend que tu dises quand c’est fini. Dire « ja » sans avoir compris mène souvent à des erreurs. Redemander, ou demander qu’on te montre, est normal ici et pas impoli.", // nieuw, nalezen
+    "be.c.task.b": "Un responsable donne souvent une tâche en quelques mots, et attend que tu dises quand c’est fini. Dire “ja” sans avoir compris mène souvent à des erreurs. Redemander, ou demander qu’on te montre, est normal ici et pas impoli.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.task.p": "Fini ! Qu’est-ce que je dois faire maintenant ?", // = c.task.p
     "be.c.task.s": "Ton responsable explique une tâche très vite. Tu n’as compris que la moitié. Que fais-tu ?", // = c.task.s
     "be.c.task.o1": "Demande à le voir encore une fois.", // = c.task.o1

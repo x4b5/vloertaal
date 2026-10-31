@@ -439,10 +439,10 @@ export const es: Gloss = {
   'be.c.police.b': 'Desde los 15 años debes llevar siempre tu carné de identidad (o tu tarjeta de residencia) y enseñarlo cuando la policía lo pida. ¿Recibes una carta con una decisión con la que no estás de acuerdo, por ejemplo una multa del ayuntamiento? Entonces puedes responder por escrito (bezwaar maken). La carta dice cómo y hasta cuándo. Hazlo antes de esa fecha. Todos son iguales ante la ley. ¿La policía quiere interrogarte? Entonces puedes hablar primero con un abogado. El primer consejo de un abogado es gratis, en el justitiehuis. ¿Discriminación? Unia puede ayudar.', // nieuw, nalezen
   'be.c.police.p': 'No estoy de acuerdo con esta decisión. Presento un recurso.', // nieuw, nalezen
   'be.c.police.s': 'Recibes por carta una multa del ayuntamiento. Crees que no es justa. La carta da una fecha para responder. ¿Qué haces?', // nieuw, nalezen
-  'be.c.police.o1': 'Respondes por escrito, antes de la fecha de la carta.', // nieuw, nalezen
+  'be.c.police.o1': 'Respondes por escrito, antes de la fecha que pone en la carta.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o2': 'Llamas una vez y esperas a que te llamen.', // nieuw, nalezen
   'be.c.police.o3': 'Esperas: después de esa fecha, se acaba solo.', // nieuw, nalezen
-  'be.c.police.w': 'Se responde por escrito, antes de la fecha de la carta. Después de esa fecha suele ser tarde. El justitiehuis da un primer consejo gratis.', // nieuw, nalezen
+  'be.c.police.w': 'Se responde por escrito, antes de la fecha que pone en la carta. Después de esa fecha suele ser tarde. El justitiehuis da un primer consejo gratis.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const pt: Gloss = {
@@ -483,10 +483,10 @@ export const pt: Gloss = {
   'be.c.police.b': 'A partir dos 15 anos tens de andar sempre com o cartão de identidade (ou o cartão de residência) e mostrá-lo quando a polícia pedir. Recebes uma carta com uma decisão com que não concordas, por exemplo uma multa da câmara? Então podes responder por escrito (bezwaar maken). A carta diz como e até quando. Fá-lo antes dessa data. Todos são iguais perante a lei. A polícia quer interrogar-te? Então podes falar primeiro com um advogado. O primeiro conselho de um advogado é grátis, no justitiehuis. Discriminação? A Unia pode ajudar.', // nieuw, nalezen
   'be.c.police.p': 'Não concordo com esta decisão. Apresento uma reclamação.', // nieuw, nalezen
   'be.c.police.s': 'Recebes por carta uma multa da câmara. Achas que não está certa. A carta dá uma data para responder. O que fazes?', // nieuw, nalezen
-  'be.c.police.o1': 'Respondes por escrito, antes da data da carta.', // nieuw, nalezen
+  'be.c.police.o1': 'Respondes por escrito, antes da data que vem na carta.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o2': 'Ligas uma vez e esperas que te liguem de volta.', // nieuw, nalezen
   'be.c.police.o3': 'Esperas: depois dessa data, acaba sozinho.', // nieuw, nalezen
-  'be.c.police.w': 'Responde-se por escrito, antes da data da carta. Depois dessa data, muitas vezes é tarde. O justitiehuis dá um primeiro conselho grátis.', // nieuw, nalezen
+  'be.c.police.w': 'Responde-se por escrito, antes da data que vem na carta. Depois dessa data, muitas vezes é tarde. O justitiehuis dá um primeiro conselho grátis.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const fr: Gloss = {
@@ -527,10 +527,10 @@ export const fr: Gloss = {
   'be.c.police.b': 'Dès 15 ans, tu dois toujours avoir sur toi ta carte d’identité (ou ta carte de séjour) et la montrer quand la police la demande. Tu reçois une lettre avec une décision avec laquelle tu n’es pas d’accord, par exemple une amende de la commune ? Alors tu peux répondre par écrit (bezwaar maken). La lettre dit comment et jusqu’à quand. Fais-le avant cette date. Tout le monde est égal devant la loi. La police veut t’interroger ? Alors tu peux d’abord parler à un avocat. Un premier conseil d’un avocat est gratuit, au justitiehuis (maison de justice). Discrimination ? Unia peut aider.', // nieuw, nalezen
   'be.c.police.p': 'Je ne suis pas d’accord avec cette décision. Je fais une réclamation.', // nieuw, nalezen
   'be.c.police.s': 'Tu reçois par lettre une amende de la commune. Tu penses qu’elle n’est pas juste. La lettre donne une date pour répondre. Que fais-tu ?', // nieuw, nalezen
-  'be.c.police.o1': 'Répondre par écrit, avant la date de la lettre.', // nieuw, nalezen
-  'be.c.police.o2': 'Appeler une fois, et attendre qu’ils rappellent.', // nieuw, nalezen
-  'be.c.police.o3': 'Attendre : après cette date, ça s’arrête tout seul.', // nieuw, nalezen
-  'be.c.police.w': 'On répond par écrit, avant la date de la lettre. Après cette date, il est souvent trop tard. Le justitiehuis donne un premier conseil gratuit.', // nieuw, nalezen
+  'be.c.police.o1': 'Réponds par écrit, avant la date indiquée dans la lettre.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o2': 'Appelle une fois, et attends qu’ils te rappellent.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.o3': 'Attends : après cette date, ça s’arrête tout seul.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.w': 'On répond par écrit, avant la date indiquée dans la lettre. Après cette date, il est souvent trop tard. Le justitiehuis donne un premier conseil gratuit.', // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const de: Gloss = {

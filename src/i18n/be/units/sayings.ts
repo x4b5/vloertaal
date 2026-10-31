@@ -127,13 +127,13 @@ export const pt: Gloss = {
 
 export const fr: Gloss = {
     "be.c.plain": "Dire les choses franchement", // = c.plain
-    "be.c.plain.b": "Les collègues flamands disent souvent avec prudence ce qu’ils pensent. Parfois, ils commencent par une expression : « Ik neem geen blad voor de mond. » Ça veut dire : je vais dire franchement ce que je pense. Ensuite vient un avis direct, mais ce n’est pas pour être impoli. Toi aussi, tu peux dire franchement ce que tu penses, calmement.", // nieuw, nalezen
+    "be.c.plain.b": "Les collègues flamands disent souvent avec prudence ce qu’ils pensent. Parfois, ils commencent par une expression : “Ik neem geen blad voor de mond.” Ça veut dire : je vais dire franchement ce que je pense. Ensuite vient un avis direct, mais ce n’est pas pour être impoli. Toi aussi, tu peux dire franchement ce que tu penses, calmement.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.plain.p": "Je peux dire honnêtement ce que je pense ?", // = c.plain.p
     "be.c.plain.s": "Ta responsable dit : “Ik neem geen blad voor de mond.” Qu’est-ce qu’elle veut dire ?", // = c.plain.s
     "be.c.plain.o1": "Elle va dire honnêtement ce qu’elle pense.", // = c.plain.o1
     "be.c.plain.o2": "Elle ne veut pas en parler.", // nieuw, nalezen
     "be.c.plain.o3": "Elle mange une feuille.", // = c.plain.o3
-    "be.c.plain.w": "« Geen blad voor de mond nemen » veut dire : dire franchement et directement ce que tu penses. La personne qui le dit te prévient : maintenant vient un avis direct.", // nieuw, nalezen
+    "be.c.plain.w": "“Geen blad voor de mond nemen” veut dire : dire franchement et directement ce que tu penses. La personne qui le dit te prévient : maintenant vient un avis direct.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const de: Gloss = {

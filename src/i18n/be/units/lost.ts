@@ -234,15 +234,15 @@ export const pl: Gloss = {
   'be.c.ww.o3': 'Przestajesz przychodzić do pracy i nic nie mówisz.',
   'be.c.ww.w': "Zwolnienie się może cię kosztować zasiłek na jakiś czas. Rozmowa najpierw z przełożonym, związkiem zawodowym albo justitiehuis może pomóc znaleźć lepsze wyjście.", // nieuw, nalezen
   'be.c.jobends': "Kończy się praca: co jeszcze się kończy?",
-  'be.c.jobends.b': end("Kiedy twoja praca się kończy, sprawdź końcowe rozliczenie (eindafrekening) i poproś o C4. Jesteś pracownikiem umysłowym (bediende)? Wtedy dostajesz dodatek urlopowy z ostatnią pensją. Pracownikiem fizycznym (arbeider)? Wtedy dostajesz go w następnym roku z kasy urlopowej (vakantiekas). Mieszkanie albo bus przez agencję mogą skończyć się w tym samym czasie. Twoja umowa najmu ma własne zasady: poproś o radę, zanim wyprowadzisz się z mieszkania. Na leczenie jesteś ubezpieczony / ubezpieczona przez swój ziekenfonds. Z zasiłkiem dla bezrobotnych zwykle zostajesz ubezpieczony / ubezpieczona. Przeprowadzasz się? Powiedz gemeente w ciągu 8 dni roboczych. Wracasz do swojego kraju? Zapytaj swój ziekenfonds.", plBase, 'advice'), // nieuw, nalezen
+  'be.c.jobends.b': end("Kiedy twoja praca się kończy, sprawdź końcowe rozliczenie (eindafrekening) i poproś o C4. Jesteś pracownikiem umysłowym (bediende)? Wtedy dostajesz wynagrodzenie urlopowe z ostatnią pensją. Pracownikiem fizycznym (arbeider)? Wtedy dostajesz go w następnym roku z kasy urlopowej (vakantiekas). Mieszkanie albo bus przez agencję mogą skończyć się w tym samym czasie. Twoja umowa najmu ma własne zasady: poproś o radę, zanim wyprowadzisz się z mieszkania. Na leczenie jesteś ubezpieczony / ubezpieczona przez swój ziekenfonds. Z zasiłkiem dla bezrobotnych zwykle zostajesz ubezpieczony / ubezpieczona. Przeprowadzasz się? Zgłoś to w gminie (gemeente) w ciągu 8 dni roboczych. Wracasz do swojego kraju? Zapytaj swój ziekenfonds.", plBase, 'advice'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.jobends.p': "Kiedy dostanę rozliczenie końcowe?",
   'be.c.jobends.s': "Twoja praca kończy się w piątek. Agencja załatwia ci też pokój. Co robisz?", // nieuw, nalezen
   'be.c.jobends.o1': "Pytasz, co jest w umowie najmu, i prosisz o radę.", // nieuw, nalezen
   'be.c.jobends.o2': "Wyprowadzasz się z pokoju w piątek, bo praca się kończy.", // nieuw, nalezen
   'be.c.jobends.o3': "Zostajesz i z nikim o tym nie rozmawiasz.", // nieuw, nalezen
-  'be.c.jobends.w': "Twoja umowa najmu jest oddzielna od umowy o pracę. Jest w niej, jak długo możesz zostać. Justitiehuis może dać ci pierwszą bezpłatną poradę.", // nieuw, nalezen
+  'be.c.jobends.w': "Twoja umowa najmu jest oddzielna od umowy o pracę. Jest w niej napisane, jak długo możesz zostać. Justitiehuis może dać ci pierwszą bezpłatną poradę.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob': 'Szukanie nowej pracy',
-  'be.c.newjob.b': end("Zanim odejdziesz, poproś o referencje (referentie). Zachowaj swoje odcinki wypłaty (loonbrieven), umowę i C4. Zaktualizuj CV. Szukaj pracy w VDAB (vdab.be) i w agencjach pracy tymczasowej (interimkantoren). Nigdy nie płać, żeby dostać pracę.", plBase, 'abuse'), // nieuw, nalezen
+  'be.c.newjob.b': end("Zanim odejdziesz, poproś o referencje (referentie). Zachowaj swoje paski wypłaty (loonbrieven), umowę i C4. Zaktualizuj CV. Szukaj pracy w VDAB (vdab.be) i w agencjach pracy tymczasowej (interimkantoren). Nigdy nie płać, żeby dostać pracę.", plBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.p': 'Czy mogę podać pana/panią jako osobę do referencji?',
   'be.c.newjob.s': 'Ktoś proponuje ci pracę, ale najpierw musisz zapłacić 300 euro „za pracę”. Co robisz?',
   'be.c.newjob.o1': "Nie płacisz. Szukasz prawdziwej agencji.", // nieuw, nalezen
@@ -427,7 +427,7 @@ export const de: Gloss = {
   'be.s.ww.1': "Ich melde mich beim VDAB an.", // nieuw, nalezen
   'be.c.ww.a': "Ich frage nach meinem C4 und gehe zur Gewerkschaft.", // nieuw, nalezen
   'be.s.jobends.2': "Ich hole mir Rat im Justitiehuis.", // nieuw, nalezen
-  'be.s.jobends.3': "Ich frage mein ziekenfonds, ob meine Versicherung weiterläuft.", // nieuw, nalezen
+  'be.s.jobends.3': "Ich frage meinen ziekenfonds, ob meine Versicherung weiterläuft.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.newjob.2': 'Ich bewahre meine Lohnabrechnungen auf.',
   'be.c.ww': "Arbeitslosengeld", // nieuw, nalezen
   'be.c.ww.b': end("Arbeit verloren? Dein Arbeitgeber gibt dir ein C4, spätestens an deinem letzten Arbeitstag. Melde dich sofort beim VDAB als arbeitssuchend. Beantrage dann dein Arbeitslosengeld über eine Gewerkschaft (ABVV, ACV oder ACLVB) oder über die HVW, wenn du kein Mitglied bist. Du beantragst es nicht bei der RVA selbst: Die RVA entscheidet. Du musst vorher lange genug gearbeitet haben. Das Arbeitslosengeld ist zeitlich begrenzt: Wie lange, hängt davon ab, wie lange du gearbeitet hast. Hast du selbst gekündigt, ohne guten Grund? Dann bekommst du meistens eine Zeit lang kein Arbeitslosengeld.", deBase, 'advice'), // nieuw, nalezen
@@ -438,9 +438,9 @@ export const de: Gloss = {
   'be.c.ww.o3': 'Komm einfach nicht mehr zur Arbeit, ohne etwas zu sagen.',
   'be.c.ww.w': "Eine Kündigung kann dich eine Zeit lang dein Arbeitslosengeld kosten. Wenn du zuerst mit deinem Vorgesetzten, der Gewerkschaft oder dem Justitiehuis sprichst, findest du vielleicht einen besseren Weg.", // nieuw, nalezen
   'be.c.jobends': "Dein Job endet: Was hört noch auf?",
-  'be.c.jobends.b': end("Wenn deine Arbeit endet, prüfe deine Schlussabrechnung (eindafrekening) und frag nach deinem C4. Bist du Angestellter (bediende)? Dann bekommst du dein Urlaubsgeld mit deinem letzten Lohn. Arbeiter (arbeider)? Dann bekommst du es im Jahr danach von der Urlaubskasse (vakantiekas). Wohnung oder ein Kleinbus über die Agentur können gleichzeitig enden. Dein Mietvertrag hat eigene Regeln: Hol dir Rat, bevor du aus der Wohnung ausziehst. Für deine Gesundheitskosten bist du über dein ziekenfonds versichert. Mit Arbeitslosengeld bleibst du meistens versichert. Du ziehst um? Sag es der gemeente innerhalb von 8 Arbeitstagen. Du gehst zurück in dein Land? Frag dein ziekenfonds.", deBase, 'advice'), // nieuw, nalezen
+  'be.c.jobends.b': end("Wenn deine Arbeit endet, prüfe deine Schlussabrechnung (eindafrekening) und frag nach deinem C4. Bist du Angestellter (bediende)? Dann bekommst du dein Urlaubsgeld mit deinem letzten Lohn. Arbeiter (arbeider)? Dann bekommst du es im Jahr danach von der Urlaubskasse (vakantiekas). Wohnung oder ein Kleinbus über die Zeitarbeitsfirma können gleichzeitig enden. Dein Mietvertrag hat eigene Regeln: Hol dir Rat, bevor du aus der Wohnung ausziehst. Für deine Gesundheitskosten bist du über deinen ziekenfonds versichert. Mit Arbeitslosengeld bleibst du meistens versichert. Du ziehst um? Sag es der gemeente innerhalb von 8 Arbeitstagen. Du gehst zurück in dein Land? Frag deinen ziekenfonds.", deBase, 'advice'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.jobends.p': "Wann bekomme ich meine Schlussabrechnung?",
-  'be.c.jobends.s': "Deine Arbeit endet am Freitag. Die Agentur besorgt dir auch dein Zimmer. Was machst du?", // nieuw, nalezen
+  'be.c.jobends.s': "Deine Arbeit endet am Freitag. Die Zeitarbeitsfirma besorgt dir auch dein Zimmer. Was machst du?", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.jobends.o1': "Frag, was in deinem Mietvertrag steht, und lass dich beraten.", // nieuw, nalezen
   'be.c.jobends.o2': "Verlass das Zimmer am Freitag, weil die Arbeit aufhört.", // nieuw, nalezen
   'be.c.jobends.o3': "Bleib und sprich mit niemandem darüber.", // nieuw, nalezen

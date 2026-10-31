@@ -1205,7 +1205,7 @@ const t: CultureTranslation = {
     'c.greensafe': "La chaleur et les produits de traitement", // nagelezen (2e lezing)
     'c.greensafe.b': "Dans une serre, il peut faire très chaud, même au printemps. Bois souvent de l’eau, même avant d’avoir soif, et prends tes pauses dans un endroit frais. Tu as la tête qui tourne, tu te sens mal ou tu as mal à la tête ? Arrête-toi et dis-le à quelqu’un. Les plantes sont parfois traitées avec des produits chimiques (spuitmiddelen). Une serre qui vient d’être traitée a souvent un panneau sur la porte. N’entre pas avant que ton responsable dise que c’est de nouveau sans danger. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nagelezen (2e lezing)
     'c.greensafe.p': "Je peux déjà travailler dans cette serre ?", // nagelezen (2e lezing)
-    'c.greensafe.s': "Une serre a été traitée ce matin. Il y a un panneau sur la porte. Un collègue dit : « Allez, c’est juste un moment. » Que fais-tu ?", // nagelezen (2e lezing)
+    'c.greensafe.s': "Une serre a été traitée ce matin. Il y a un panneau sur la porte. Un collègue dit : “Allez, c’est juste un moment.” Que fais-tu ?", // nagelezen (2e lezing) // nagelezen AI ronde 3
     'c.greensafe.o1': "Reste dehors et demande quand c’est sans danger.", // nagelezen (2e lezing)
     'c.greensafe.o2': "Entre vite et retiens ta respiration.", // nagelezen (2e lezing)
     'c.greensafe.o3': "Entre, et lave-toi bien les mains après.", // nagelezen (2e lezing)
@@ -1293,13 +1293,13 @@ const t: CultureTranslation = {
     'c.details.o3': "Raccroche, et espère qu’ils trouveront l’erreur plus tard.",
     'c.details.w': "Ton nom doit être le même sur ton contrat, ta fiche de paie et ta pièce d’identité. Comme ça, ta paie et tes impôts sont corrects. Épeler et faire relire, c’est une vérification rapide.",
     'c.dates': "Les dates : le jour vient d’abord",
-    'c.dates.b': "En néerlandais, le jour vient avant le mois : 3-6, c’est le 3 juin, pas le 6 mars. « Tot en met » veut dire que le dernier jour compte aussi. Les jours et les mois s’écrivent avec une minuscule : maandag, juni. Un doute sur une date ? Demande, et répète-la.",
+    'c.dates.b': "En néerlandais, le jour vient avant le mois : 3-6, c’est le 3 juin, pas le 6 mars. “Tot en met” veut dire que le dernier jour compte aussi. Les jours et les mois s’écrivent avec une minuscule : maandag, juni. Un doute sur une date ? Demande, et répète-la.", // nagelezen AI ronde 3
     'c.dates.p': "Tu veux dire le 3 juin ?",
-    'c.dates.s': "Sur ton planning, il est écrit : « Vrij: 3-6 tot en met 5-6 ». Quand es-tu libre ?",
+    'c.dates.s': "Sur ton planning, il est écrit : “Vrij: 3-6 tot en met 5-6”. Quand es-tu libre ?", // nagelezen AI ronde 3
     'c.dates.o1': "Le 3, le 4 et le 5 juin.",
     'c.dates.o2': "Seulement le 3 et le 4 juin.",
     'c.dates.o3': "Du 6 mars au 6 mai.",
-    'c.dates.w': "Le jour vient d’abord, puis le mois : 3-6, c’est le 3 juin. « Tot en met » veut dire que le 5 juin compte aussi, donc tu es libre trois jours.",
+    'c.dates.w': "Le jour vient d’abord, puis le mois : 3-6, c’est le 3 juin. “Tot en met” veut dire que le 5 juin compte aussi, donc tu es libre trois jours.", // nagelezen AI ronde 3
     'c.permit': "Le travail et l’intégration",
     'c.permit.b': "Tu dois faire l’intégration civique (inburgering) ? Dis-le à ton employeur, et dis à la gemeente (la mairie) que tu travailles. Demande tôt si tes cours de langue peuvent s’organiser autour de ton planning. Tu ne sais pas si tu as le droit de travailler ici ? Vérifie-le avant de commencer, par exemple auprès de l’IND, de l’UWV ou de VluchtelingenWerk. On te demande de t’inscrire comme indépendant (zzp’er) pour ce travail ? Demande d’abord conseil. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.",
     'c.permit.p': "J’ai un cours de langue le mardi. Est-ce que mon planning peut en tenir compte ?",
@@ -1317,7 +1317,7 @@ const t: CultureTranslation = {
     'c.kids.o3': "Reste au travail, et laisse ton enfant attendre la fin de ton service.",
     'c.kids.w': "Un enfant malade, c’est une urgence à la maison. Quand tu préviens d’abord ton responsable, il peut organiser le travail. Le congé d’urgence est fait pour ces moments-là.",
     'c.body': "Dis ce qui s’est passé et où tu as mal",
-    'c.body.b': "Chez le médecin, dis ce qui s’est passé et où tu as mal. Par exemple : « Ik ben gevallen. Mijn arm doet pijn. » Dis aussi depuis combien de temps tu as mal. Tu n’as pas besoin de deviner ce que tu as : c’est le médecin qui vérifie. C’est arrivé au travail ? Dis-le à ton responsable le jour même.",
+    'c.body.b': "Chez le médecin, dis ce qui s’est passé et où tu as mal. Par exemple : “Ik ben gevallen. Mijn arm doet pijn.” Dis aussi depuis combien de temps tu as mal. Tu n’as pas besoin de deviner ce que tu as : c’est le médecin qui vérifie. C’est arrivé au travail ? Dis-le à ton responsable le jour même.", // nagelezen AI ronde 3
     'c.body.p': { m: "Je suis tombé. J’ai mal au bras.", f: "Je suis tombée. J’ai mal au bras.", x: 'J’ai fait une chute. J’ai mal au bras.' }, // x: nieuw, nalezen
     'c.body.s': "Au travail, tu as soulevé une caisse lourde. Maintenant, tu as très mal au dos. Tu es chez le médecin de famille (huisarts). Que dis-tu ?",
     'c.body.o1': "Où tu as mal, et ce qui s’est passé : tu as soulevé une caisse lourde.",

@@ -76,7 +76,7 @@ export const tr: Gloss = {
 };
 
 export const pl: Gloss = {
-    'be.s.login.3': "Nikomu nie daję mojego itsme.", // nieuw, nalezen
+    'be.s.login.3': "Nikomu nie daję mojego kodu itsme.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "Twoje logowanie jest tylko twoje", // nieuw, nalezen
     'be.c.login.b': "Twoje hasło i twoje itsme są tylko dla ciebie. Nie dawaj ich nikomu, także pracodawcy ani koledze. Na wspólnym komputerze zawsze się wyloguj, kiedy skończysz. Odchodzisz na chwilę? Zablokuj ekran. Nie pamiętasz hasła? Poproś dział IT (ICT-afdeling) o nowe. Zasady korzystania z komputerów są różne w każdej firmie: zapytaj dział IT, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
     'be.c.login.p': "Odchodzę na chwilę. Blokuję ekran.", // nieuw, nalezen
@@ -112,7 +112,7 @@ export const bg: Gloss = {
 };
 
 export const es: Gloss = {
-    'be.s.login.3': "No le doy mi itsme a nadie.", // nieuw, nalezen
+    'be.s.login.3': "No le doy mi código de itsme a nadie.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "Tu acceso es solo tuyo", // nieuw, nalezen
     'be.c.login.b': "Tu contraseña y tu itsme son solo para ti. No se los des a nadie, tampoco a tu empresa ni a un compañero. En un ordenador compartido, cierra siempre la sesión cuando termines. ¿Te vas un momento? Bloquea la pantalla. ¿Has olvidado tu contraseña? Pide una nueva al departamento de informática (ICT-afdeling). Las normas de los ordenadores cambian de una empresa a otra: pregunta al departamento de informática cuáles son en tu trabajo.", // nieuw, nalezen
     'be.c.login.p': "Me voy un momento. Bloqueo la pantalla.", // nieuw, nalezen
@@ -124,7 +124,7 @@ export const es: Gloss = {
 };
 
 export const pt: Gloss = {
-    'be.s.login.3': "Não dou o meu itsme a ninguém.", // nieuw, nalezen
+    'be.s.login.3': "Não dou o meu código itsme a ninguém.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "O teu acesso é só teu", // nieuw, nalezen
     'be.c.login.b': "A tua palavra-passe e o teu itsme são só para ti. Não os dês a ninguém, nem ao teu empregador nem a um colega. Num computador partilhado, termina sempre a sessão quando acabares. Vais sair um momento? Bloqueia o ecrã. Esqueceste-te da palavra-passe? Pede uma nova ao departamento de informática (ICT-afdeling). As regras dos computadores são diferentes em cada empresa: pergunta ao departamento de informática quais são as regras onde trabalhas.", // nieuw, nalezen
     'be.c.login.p': "Vou sair um momento. Vou bloquear o ecrã.", // nieuw, nalezen
@@ -136,7 +136,7 @@ export const pt: Gloss = {
 };
 
 export const fr: Gloss = {
-    'be.s.login.3': "Je ne donne mon itsme à personne.", // nieuw, nalezen
+    'be.s.login.3': "Je ne donne mon code itsme à personne.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "Ton accès, c’est le tien", // nieuw, nalezen
     'be.c.login.b': "Ton mot de passe et ton itsme sont seulement pour toi. Ne les donne à personne, même pas à ton employeur ou à un collègue. Sur un ordinateur partagé, déconnecte-toi toujours quand tu as fini. Tu t’en vas un moment ? Verrouille ton écran. Tu as oublié ton mot de passe ? Demande-en un nouveau au service informatique (ICT-afdeling). Les règles pour les ordinateurs changent d’une entreprise à l’autre : demande au service informatique quelles sont les règles là où tu travailles.", // nieuw, nalezen
     'be.c.login.p': "Je m’en vais un moment. Je verrouille mon écran.", // nieuw, nalezen
@@ -148,7 +148,7 @@ export const fr: Gloss = {
 };
 
 export const de: Gloss = {
-    'be.s.login.3': "Meine itsme gebe ich niemandem.", // nieuw, nalezen
+    'be.s.login.3': "Meinen itsme-Code gebe ich niemandem.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.login': "Dein Login gehört nur dir", // nieuw, nalezen
     'be.c.login.b': "Dein Passwort und deine itsme sind nur für dich. Gib sie niemandem, auch nicht deinem Arbeitgeber oder einem Kollegen. An einem gemeinsamen Computer logg dich immer aus, wenn du fertig bist. Gehst du kurz weg? Sperr deinen Bildschirm. Passwort vergessen? Frag die IT-Abteilung (ICT-afdeling) nach einem neuen. Die Regeln für Computer sind in jeder Firma anders: Frag die IT-Abteilung, welche Regeln bei dir gelten.", // nieuw, nalezen
     'be.c.login.p': "Ich gehe kurz weg. Ich sperre meinen Bildschirm.", // nieuw, nalezen

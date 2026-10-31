@@ -200,12 +200,12 @@ export const pl: Gloss = {
     'be.c.bsn.o3': "Wysyłasz tylko zdjęcie karty, bez kodu itsme.", // nieuw, nalezen
     'be.c.bsn.w': "Z twoim itsme albo kopią twojej karty inni mogą używać twojego nazwiska, na przykład do kredytów albo zasiłków. Prawdziwy pracodawca potrzebuje twojego numeru rejestru krajowego, ale nigdy kodu itsme.", // nieuw, nalezen
     'be.c.housing': "Mieszkanie od pracodawcy", // nieuw, nalezen
-    'be.c.housing.b': "Pracodawca albo biuro pracy tymczasowej (interimkantoor) załatwia ci mieszkanie? Wtedy umowa najmu musi być oddzielna od umowy o pracę. Poproś o pisemną umowę najmu i potwierdzenie tego, co płacisz. Pracodawca może potrącać pieniądze z wypłaty tylko wtedy, gdy pozwala na to prawo: sprawdź to na swoim loonbrief. We Flandrii kaucja (huurwaarborg) to najwyżej 3 miesiące czynszu, na zablokowanym koncie bankowym na twoje nazwisko. Dostajesz ją z powrotem, gdy się wyprowadzasz, minus prawdziwe szkody. Zamelduj swój adres w gminie (gemeente). Niebezpieczne mieszkanie, groźby albo niesprawiedliwe koszty? CAW pomaga za darmo. Twoja praca się kończy? Poproś o radę, zanim opuścisz mieszkanie. To ogólne informacje. W twojej sytuacji zapytaj związek zawodowy, justitiehuis (bezpłatna porada prawna) albo Payoke.", // nieuw, nalezen
+    'be.c.housing.b': "Pracodawca albo agencja pracy tymczasowej (interimkantoor) załatwia ci mieszkanie? Wtedy umowa najmu musi być oddzielna od umowy o pracę. Poproś o pisemną umowę najmu i potwierdzenie tego, co płacisz. Pracodawca może potrącać pieniądze z wypłaty tylko wtedy, gdy pozwala na to prawo: sprawdź to na swoim loonbrief. We Flandrii kaucja (huurwaarborg) to najwyżej 3 miesiące czynszu, na zablokowanym koncie bankowym na twoje nazwisko. Dostajesz ją z powrotem, gdy się wyprowadzasz, minus prawdziwe szkody. Zamelduj swój adres w gminie (gemeente). Niebezpieczne mieszkanie, groźby albo niesprawiedliwe koszty? CAW pomaga za darmo. Twoja praca się kończy? Poproś o radę, zanim opuścisz mieszkanie. To ogólne informacje. W twojej sytuacji zapytaj związek zawodowy, justitiehuis (bezpłatna porada prawna) albo Payoke.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.p': "Czy mogę dostać potwierdzenie zapłaty?", // nieuw, nalezen
-    'be.c.housing.s': "Twoja praca się kończy. Biuro mówi: „Jutro musisz wyprowadzić się z domu.” Co robisz?", // nieuw, nalezen
+    'be.c.housing.s': "Twoja praca się kończy. Agencja mówi: „Jutro musisz wyprowadzić się z domu.” Co robisz?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.o1': "Najpierw prosisz o radę justitiehuis albo związek zawodowy.", // nieuw, nalezen
     'be.c.housing.o2': "Od razu się wyprowadzasz i zapominasz o kaucji.", // nieuw, nalezen
-    'be.c.housing.o3': "Zostajesz i przestajesz odpowiadać biuru.", // nieuw, nalezen
+    'be.c.housing.o3': "Zostajesz i przestajesz odpowiadać agencji.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.w': "Umowa najmu ma własne zasady, oddzielne od twojej pracy. Jest w niej napisane, jak długo możesz jeszcze zostać. Bezpłatna porada pomaga poznać twoje prawa, także co do kaucji.", // nieuw, nalezen
 };
 
@@ -287,12 +287,12 @@ export const es: Gloss = {
     'be.c.bsn.o3': "Envías solo la foto de la tarjeta, no el código de itsme.", // nieuw, nalezen
     'be.c.bsn.w': "Con tu itsme o una copia de tu tarjeta, otras personas pueden usar tu nombre, por ejemplo para préstamos o ayudas. Una empresa de verdad necesita tu número del registro nacional, pero nunca tu código de itsme.", // nieuw, nalezen
     'be.c.housing': "La vivienda de tu empresa", // nieuw, nalezen
-    'be.c.housing.b': "¿Tu empresa o la oficina de trabajo temporal (interimkantoor) te busca vivienda? Entonces el contrato de alquiler tiene que ir aparte del contrato de trabajo. Pide un contrato de alquiler por escrito y un justificante de lo que pagas. Tu empresa solo puede descontarte dinero del sueldo cuando la ley lo permite: compruébalo en tu loonbrief. En Flandes la fianza (huurwaarborg) es como mucho de 3 meses de alquiler, en una cuenta bloqueada a tu nombre. Te la devuelven cuando te vas, menos los daños reales. Inscribe tu dirección en el ayuntamiento (gemeente). ¿Vivienda insegura, amenazas o gastos injustos? El CAW ayuda gratis. ¿Se acaba tu trabajo? Pide consejo antes de dejar tu casa. Es información general. Para tu situación: pregunta al sindicato, al justitiehuis (consejo legal gratis) o a Payoke.", // nieuw, nalezen
-    'be.c.housing.p': "¿Me puede dar un justificante de que he pagado?", // nieuw, nalezen
-    'be.c.housing.s': "Tu trabajo se acaba. La oficina dice: “Mañana tienes que dejar la casa.” ¿Qué haces?", // nieuw, nalezen
+    'be.c.housing.b': "¿Tu empresa o la agencia de trabajo temporal (interimkantoor) te busca vivienda? Entonces el contrato de alquiler tiene que ir aparte del contrato de trabajo. Pide un contrato de alquiler por escrito y un justificante de lo que pagas. Tu empresa solo puede descontarte dinero del sueldo cuando la ley lo permite: compruébalo en tu loonbrief. En Flandes la fianza (huurwaarborg) es como mucho de 3 meses de alquiler, en una cuenta bloqueada a tu nombre. Te la devuelven cuando te vas, menos los daños reales. Inscribe tu dirección en el ayuntamiento (gemeente). ¿Vivienda insegura, amenazas o gastos injustos? El CAW ayuda gratis. ¿Se acaba tu trabajo? Pide consejo antes de dejar tu casa. Es información general. Para tu situación: pregunta al sindicato, al justitiehuis (consejo legal gratis) o a Payoke.", // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.housing.p': "¿Puedo tener un justificante de que he pagado?", // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.housing.s': "Tu trabajo se acaba. La agencia dice: “Mañana tienes que dejar la casa.” ¿Qué haces?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.o1': "Pides consejo primero al justitiehuis o al sindicato.", // nieuw, nalezen
     'be.c.housing.o2': "Te vas enseguida y te olvidas de la fianza.", // nieuw, nalezen
-    'be.c.housing.o3': "Te quedas y dejas de contestar a la oficina.", // nieuw, nalezen
+    'be.c.housing.o3': "Te quedas y dejas de contestar a la agencia.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.w': "Tu contrato de alquiler tiene sus propias reglas, aparte de tu trabajo. Dice cuánto tiempo puedes quedarte todavía. Un consejo gratis te ayuda a conocer tus derechos, también sobre la fianza.", // nieuw, nalezen
 };
 
@@ -317,7 +317,7 @@ export const pt: Gloss = {
     'be.c.bsn.w': "Com o teu itsme ou uma cópia do teu cartão, outras pessoas podem usar o teu nome, por exemplo para empréstimos ou apoios. Um empregador a sério precisa do teu número do registo nacional, mas nunca do teu código itsme.", // nieuw, nalezen
     'be.c.housing': "Casa dada pelo empregador", // nieuw, nalezen
     'be.c.housing.b': "O teu empregador ou a agência de trabalho temporário (interimkantoor) arranja-te casa? Então o contrato de arrendamento tem de ser separado do contrato de trabalho. Pede um contrato de arrendamento por escrito e um comprovativo do que pagas. O empregador só pode descontar dinheiro do teu salário quando a lei o permite: verifica no teu loonbrief. Na Flandres, a caução (huurwaarborg) é no máximo de 3 meses de renda, numa conta bloqueada em teu nome. Recebe-la de volta quando sais, menos os danos reais. Regista a tua morada na câmara municipal (gemeente). Casa sem segurança, ameaças ou custos injustos? O CAW ajuda de graça. O teu trabalho acaba? Pede conselho antes de saíres de casa. Informação geral. Para a tua situação: pergunta ao sindicato, ao justitiehuis (conselho jurídico grátis) ou à Payoke.", // nieuw, nalezen
-    'be.c.housing.p': "Pode dar-me um comprovativo de que paguei?", // nieuw, nalezen
+    'be.c.housing.p': "Posso ter um comprovativo de que paguei?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.s': "O teu trabalho acaba. A agência diz: “Amanhã tens de sair da casa.” O que fazes?", // nieuw, nalezen
     'be.c.housing.o1': "Pedes conselho primeiro ao justitiehuis ou ao sindicato.", // nieuw, nalezen
     'be.c.housing.o2': "Sais logo e esqueces a caução.", // nieuw, nalezen
@@ -347,7 +347,7 @@ export const fr: Gloss = {
     'be.c.housing': "Un logement par ton employeur", // nieuw, nalezen
     'be.c.housing.b': "Ton employeur ou ton agence d’intérim (interimkantoor) s’occupe de ton logement ? Alors le contrat de bail doit être séparé du contrat de travail. Demande un bail écrit et une preuve de ce que tu paies. Ton employeur peut seulement retenir de l’argent sur ton salaire quand la loi le permet : vérifie-le sur ta loonbrief. En Flandre, la garantie locative (huurwaarborg) est de 3 mois de loyer au maximum, sur un compte bloqué à ton nom. Tu la récupères quand tu pars, moins les vrais dégâts. Inscris ton adresse à la commune (gemeente). Logement dangereux, menaces ou frais injustes ? Le CAW aide gratuitement. Ton travail se termine ? Demande conseil avant de quitter ton logement. Informations générales. Pour ta situation : demande au syndicat, au justitiehuis (maison de justice : conseil juridique gratuit) ou à Payoke.", // nieuw, nalezen
     'be.c.housing.p': "Je peux avoir une preuve que j’ai payé ?", // nieuw, nalezen
-    'be.c.housing.s': "Ton travail se termine. L’agence dit : « Tu dois quitter la maison demain. » Qu’est-ce que tu fais ?", // nieuw, nalezen
+    'be.c.housing.s': "Ton travail se termine. L’agence dit : “Tu dois quitter la maison demain.” Qu’est-ce que tu fais ?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.o1': "Tu demandes d’abord conseil au justitiehuis ou au syndicat.", // nieuw, nalezen
     'be.c.housing.o2': "Tu pars tout de suite et tu oublies ta garantie.", // nieuw, nalezen
     'be.c.housing.o3': "Tu restes, et tu ne réponds plus à l’agence.", // nieuw, nalezen
@@ -374,11 +374,11 @@ export const de: Gloss = {
     'be.c.bsn.o3': "Du schickst nur das Foto der Karte, nicht den itsme-Code.", // nieuw, nalezen
     'be.c.bsn.w': "Mit deiner itsme oder einer Kopie deiner Karte können andere deinen Namen benutzen, zum Beispiel für Kredite oder Leistungen. Ein echter Arbeitgeber braucht deine Nationalregisternummer, aber nie deinen itsme-Code.", // nieuw, nalezen
     'be.c.housing': "Wohnen über den Arbeitgeber", // nieuw, nalezen
-    'be.c.housing.b': "Besorgt dein Arbeitgeber oder dein Zeitarbeitsbüro (interimkantoor) deine Wohnung? Dann muss der Mietvertrag getrennt vom Arbeitsvertrag sein. Verlang einen schriftlichen Mietvertrag und einen Beleg für das, was du zahlst. Dein Arbeitgeber darf nur Geld von deinem Lohn abziehen, wenn das Gesetz es erlaubt: Prüf es auf deinem loonbrief. In Flandern ist eine Kaution (huurwaarborg) höchstens 3 Monatsmieten, auf einem gesperrten Bankkonto auf deinen Namen. Du bekommst sie zurück, wenn du ausziehst, minus echte Schäden. Melde deine Adresse bei der Gemeinde (gemeente) an. Unsichere Wohnung, Drohungen oder unfaire Kosten? Das CAW hilft kostenlos. Dein Job endet? Hol dir Rat, bevor du aus deiner Wohnung gehst. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Justitiehuis (kostenlose Rechtsberatung) oder Payoke.", // nieuw, nalezen
+    'be.c.housing.b': "Besorgt dein Arbeitgeber oder deine Zeitarbeitsfirma (interimkantoor) deine Wohnung? Dann muss der Mietvertrag getrennt vom Arbeitsvertrag sein. Verlang einen schriftlichen Mietvertrag und einen Beleg für das, was du zahlst. Dein Arbeitgeber darf nur Geld von deinem Lohn abziehen, wenn das Gesetz es erlaubt: Prüf es auf deinem loonbrief. In Flandern ist eine Kaution (huurwaarborg) höchstens 3 Monatsmieten, auf einem gesperrten Bankkonto auf deinen Namen. Du bekommst sie zurück, wenn du ausziehst, minus echte Schäden. Melde deine Adresse bei der Gemeinde (gemeente) an. Unsichere Wohnung, Drohungen oder unfaire Kosten? Das CAW hilft kostenlos. Dein Job endet? Hol dir Rat, bevor du aus deiner Wohnung gehst. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Justitiehuis (kostenlose Rechtsberatung) oder Payoke.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.p': "Kann ich einen Beleg bekommen, dass ich bezahlt habe?", // nieuw, nalezen
-    'be.c.housing.s': "Dein Job endet. Das Büro sagt: „Du musst morgen aus dem Haus.“ Was machst du?", // nieuw, nalezen
+    'be.c.housing.s': "Dein Job endet. Die Zeitarbeitsfirma sagt: „Du musst morgen aus dem Haus.“ Was machst du?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.o1': "Du fragst zuerst das Justitiehuis oder die Gewerkschaft um Rat.", // nieuw, nalezen
     'be.c.housing.o2': "Du gehst sofort und vergisst deine Kaution.", // nieuw, nalezen
-    'be.c.housing.o3': "Du bleibst und antwortest dem Büro nicht mehr.", // nieuw, nalezen
+    'be.c.housing.o3': "Du bleibst und antwortest der Zeitarbeitsfirma nicht mehr.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.w': "Dein Mietvertrag hat eigene Regeln, getrennt von deinem Job. Darin steht, wie lange du noch bleiben darfst. Kostenloser Rat hilft dir, deine Rechte zu kennen, auch zur Kaution.", // nieuw, nalezen
 };

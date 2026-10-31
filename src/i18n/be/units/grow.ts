@@ -252,8 +252,8 @@ export const tr: Gloss = {
 
 export const pl: Gloss = {
   'be.l.nextstep': "Dalsza nauka po szkole", // nieuw, nalezen
-  'be.w.waarderen': "uznać (dyplom)", // nieuw, nalezen
-  'be.w.bijbaan': "praca studencka (mała praca obok szkoły)", // nieuw, nalezen
+  'be.w.waarderen': "uzyskać uznanie (dyplomu)", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.w.bijbaan': "praca studencka (dorywcza praca w czasie nauki)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "praktyka zapoznawcza (krótka wizyta, żeby zobaczyć pracę)", // nieuw, nalezen
   'be.w.niveau2': "szkoła średnia (dla młodzieży, mniej więcej do 18 lat)", // nieuw, nalezen
   'be.w.startkwalificatie': "edukacja dorosłych (szkoła dla dorosłych, w CVO)", // nieuw, nalezen
@@ -376,7 +376,7 @@ export const bg: Gloss = {
 export const es: Gloss = {
   'be.l.nextstep': "Seguir aprendiendo después de la escuela", // nieuw, nalezen
   'be.w.waarderen': "hacer reconocer (un título)", // nieuw, nalezen
-  'be.w.bijbaan': "el trabajo de estudiante (un trabajo pequeño junto a los estudios)", // nieuw, nalezen
+  'be.w.bijbaan': "el trabajo de estudiante (un trabajo pequeño mientras estudias)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "la práctica de prueba (una visita corta para ver el trabajo)", // nieuw, nalezen
   'be.w.niveau2': "la enseñanza secundaria (para jóvenes, hasta unos 18 años)", // nieuw, nalezen
   'be.w.startkwalificatie': "la educación de adultos (escuela para adultos, en un CVO)", // nieuw, nalezen
@@ -389,7 +389,7 @@ export const es: Gloss = {
   'be.c.nextstep.q': "¿Qué quieres hacer después?", // nieuw, nalezen
   'be.c.nextstep.a': "Elijo la formación dual. Así trabajo y aprendo.", // nieuw, nalezen
   'be.c.diploma': "Tu diploma cuenta", // nieuw, nalezen
-  'be.c.diploma.b': "¿Tienes un título de otro país? Puedes pedir a NARIC-Vlaanderen que lo reconozca. NARIC lo compara con un título flamenco. Las personas refugiadas reconocidas no pagan por esto. Para algunos trabajos, como enfermería, necesitas un reconocimiento más. ¿Una formación es obligatoria para tu trabajo? Entonces tu empresa tiene que pagarla, y cuenta como tiempo de trabajo. Muchos trabajadores también tienen derecho a algunos días de formación cada año. Pregunta a tu responsable o al VDAB por los cursos. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
+  'be.c.diploma.b': "¿Tienes un título de otro país? Puedes pedir a NARIC-Vlaanderen que lo reconozca. NARIC lo compara con un título flamenco. Las personas refugiadas reconocidas no pagan por esto. Para algunos trabajos, como enfermería, necesitas un reconocimiento más. ¿Una formación es obligatoria para tu trabajo? Entonces tu empresa tiene que pagarla, y cuenta como tiempo de trabajo. Muchos trabajadores también tienen derecho a algunos días de formación cada año. Pregunta a tu encargado o al VDAB por los cursos. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "¿Hay cursos para mí?", // nieuw, nalezen
   'be.c.diploma.s': "Tu empresa dice que tienes que hacer una formación de seguridad obligatoria el sábado, sin sueldo. ¿Qué es verdad?", // nieuw, nalezen
   'be.c.diploma.o1': "La paga la empresa, y es tiempo de trabajo.", // nieuw, nalezen
@@ -417,7 +417,7 @@ export const es: Gloss = {
 export const pt: Gloss = {
   'be.l.nextstep': "Continuar a aprender depois da escola", // nieuw, nalezen
   'be.w.waarderen': "fazer reconhecer (um diploma)", // nieuw, nalezen
-  'be.w.bijbaan': "o trabalho de estudante (um pequeno trabalho ao lado da escola)", // nieuw, nalezen
+  'be.w.bijbaan': "o trabalho de estudante (um pequeno trabalho enquanto estudas)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "o estágio de observação (uma visita curta para ver o trabalho)", // nieuw, nalezen
   'be.w.niveau2': "o ensino secundário (para jovens, até mais ou menos 18 anos)", // nieuw, nalezen
   'be.w.startkwalificatie': "o ensino de adultos (escola para adultos, num CVO)", // nieuw, nalezen
@@ -458,7 +458,7 @@ export const pt: Gloss = {
 export const fr: Gloss = {
   'be.l.nextstep': "Continuer à apprendre après l’école", // nieuw, nalezen
   'be.w.waarderen': "faire reconnaître (un diplôme)", // nieuw, nalezen
-  'be.w.bijbaan': "le job étudiant (un petit travail à côté de l’école)", // nieuw, nalezen
+  'be.w.bijbaan': "le job étudiant (un petit travail pendant tes études)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "le stage découverte (une courte visite pour voir le travail)", // nieuw, nalezen
   'be.w.niveau2': "l’enseignement secondaire (pour les jeunes, jusqu’à environ 18 ans)", // nieuw, nalezen
   'be.w.startkwalificatie': "l’enseignement pour adultes (école pour adultes, dans un CVO)", // nieuw, nalezen
@@ -471,7 +471,7 @@ export const fr: Gloss = {
   'be.c.nextstep.q': "Qu’est-ce que tu veux faire ensuite ?", // nieuw, nalezen
   'be.c.nextstep.a': "Je choisis la formation en alternance. Comme ça, je travaille et j’apprends.", // nieuw, nalezen
   'be.c.diploma': "Ton diplôme compte", // nieuw, nalezen
-  'be.c.diploma.b': "Tu as un diplôme d’un autre pays ? Tu peux demander à NARIC-Vlaanderen de le reconnaître. NARIC le compare à un diplôme flamand. Les réfugiés reconnus ne paient pas pour cela. Pour certains métiers, comme infirmier, il faut une reconnaissance en plus. Une formation est obligatoire pour ton travail ? Alors ton employeur doit la payer, et elle compte comme temps de travail. Beaucoup de travailleurs ont aussi droit à quelques jours de formation chaque année. Demande à ton responsable ou au VDAB pour les cours. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen
+  'be.c.diploma.b': "Tu as un diplôme d’un autre pays ? Tu peux demander à NARIC-Vlaanderen de le reconnaître. NARIC le compare à un diplôme flamand. Les réfugiés reconnus ne paient pas pour cela. Pour certains métiers, comme infirmier, il faut une reconnaissance en plus. Une formation est obligatoire pour ton travail ? Alors ton employeur doit la payer, et elle compte comme temps de travail. Beaucoup de travailleurs ont aussi droit à quelques jours de formation chaque année. Pose tes questions sur les cours à ton responsable ou au VDAB. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "Il y a des cours pour moi ?", // nieuw, nalezen
   'be.c.diploma.s': "Ton employeur dit que tu dois faire une formation de sécurité obligatoire samedi, sans salaire. Qu’est-ce qui est vrai ?", // nieuw, nalezen
   'be.c.diploma.o1': "L’employeur la paie, et c’est du temps de travail.", // nieuw, nalezen

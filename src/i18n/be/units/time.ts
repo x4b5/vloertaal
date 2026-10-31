@@ -72,7 +72,7 @@ export const tr: Gloss = {
 
 export const pl: Gloss = {
     "be.c.sick": "Jak zgłosić chorobę", // = c.sick
-    "be.c.sick.b": "Zadzwoń do przełożonego osobiście, przed początkiem zmiany, chyba że firma ma inną zasadę. Pracujesz przez biuro pracy tymczasowej (interimkantoor)? Powiadom też biuro. Nie musisz mówić, na co chorujesz. Często potrzebne jest zwolnienie od lekarza (ziektebriefje), czasem od pierwszego dnia: kiedy, mówi regulamin pracy (arbeidsreglement). To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen
+    "be.c.sick.b": "Zadzwoń do przełożonego osobiście, przed początkiem zmiany, chyba że firma ma inną zasadę. Pracujesz przez agencję pracy tymczasowej (interimkantoor)? Powiadom też agencję. Nie musisz mówić, na co chorujesz. Często potrzebne jest zwolnienie od lekarza (ziektebriefje), czasem od pierwszego dnia: kiedy, mówi regulamin pracy (arbeidsreglement). To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "Jestem chory. Nie mogę dziś przyjść do pracy.", f: "Jestem chora. Nie mogę dziś przyjść do pracy.", x: "Jestem chory / chora. Nie mogę dziś przyjść do pracy." }, // = c.sick.p
     "be.c.sick.s": "Budzisz się z gorączką. Twoja zmiana zaczyna się o 7:00. Co robisz?", // = c.sick.s
     "be.c.sick.o1": "Dzwonisz do przełożonego przed 7:00.", // = c.sick.o1
@@ -105,7 +105,7 @@ export const bg: Gloss = {
 
 export const es: Gloss = {
     "be.c.sick": "Cómo avisar por enfermedad", // = c.sick
-    "be.c.sick.b": "Llama tú a tu encargado, antes de que empiece tu turno, salvo que tu empresa tenga otra regla. ¿Trabajas a través de una oficina de trabajo temporal (interimkantoor)? Avisa también a la oficina. No tienes que decir qué enfermedad tienes. Muchas veces necesitas un justificante del médico (ziektebriefje), a veces desde el primer día: el reglamento de trabajo (arbeidsreglement) dice cuándo. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
+    "be.c.sick.b": "Llama tú a tu encargado, antes de que empiece tu turno, salvo que tu empresa tenga otra regla. ¿Trabajas a través de una agencia de trabajo temporal (interimkantoor)? Avisa también a la agencia. No tienes que decir qué enfermedad tienes. Muchas veces necesitas un justificante del médico (ziektebriefje), a veces desde el primer día: el reglamento de trabajo (arbeidsreglement) dice cuándo. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": { m: "Estoy enfermo. Hoy no puedo ir a trabajar.", f: "Estoy enferma. Hoy no puedo ir a trabajar.", x: "Estoy enfermo/a. Hoy no puedo ir a trabajar." }, // = c.sick.p
     "be.c.sick.s": "Te despiertas con fiebre. Tu turno empieza a las 7:00. ¿Qué haces?", // = c.sick.s
     "be.c.sick.o1": "Llamas a tu encargado antes de las 7:00.", // = c.sick.o1
@@ -138,7 +138,7 @@ export const fr: Gloss = {
 
 export const de: Gloss = {
     "be.c.sick": "So meldest du dich krank", // = c.sick
-    "be.c.sick.b": "Ruf deinen Vorgesetzten selbst an, bevor deine Schicht beginnt, außer deine Firma hat eine andere Regel. Arbeitest du über ein Zeitarbeitsbüro (interimkantoor)? Sag es auch dort. Du musst nicht sagen, welche Krankheit du hast. Oft brauchst du ein ärztliches Attest (ziektebriefje), manchmal schon ab dem ersten Tag: Die Arbeitsordnung (arbeidsreglement) sagt, wann. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen
+    "be.c.sick.b": "Ruf deinen Vorgesetzten selbst an, bevor deine Schicht beginnt, außer deine Firma hat eine andere Regel. Arbeitest du über eine Zeitarbeitsfirma (interimkantoor)? Sag es auch dort. Du musst nicht sagen, welche Krankheit du hast. Oft brauchst du ein ärztliches Attest (ziektebriefje), manchmal schon ab dem ersten Tag: Die Arbeitsordnung (arbeidsreglement) sagt, wann. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.sick.p": "Ich bin krank. Ich kann heute nicht zur Arbeit kommen.", // = c.sick.p
     "be.c.sick.s": "Du wachst mit Fieber auf. Deine Schicht fängt um 7:00 Uhr an. Was machst du?", // = c.sick.s
     "be.c.sick.o1": "Ruf vor 7:00 Uhr deinen Vorgesetzten an.", // = c.sick.o1

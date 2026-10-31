@@ -87,7 +87,7 @@ const t: CultureTranslation = {
     'c.aiplan.a.why': "Une appli a fait le planning : cette réponse demande à parler à une personne.",
     // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
     'c.harvest.a.why': "On demande combien de rangées : cette réponse donne un nombre, et ce qui reste.", // nagelezen (2e lezing)
-    'c.greensafe.a.why': "Elle vient d’être traitée : cette réponse dit « pas encore » et pourquoi.", // nagelezen (2e lezing)
+    'c.greensafe.a.why': "Elle vient d’être traitée : cette réponse dit “pas encore” et pourquoi.", // nagelezen (2e lezing) // nagelezen AI ronde 3
     // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "On demande le nom de famille : cette réponse le donne et propose de l’épeler.",
     'c.dates.a.why': "On demande la date : cette réponse donne le jour et la date.",

@@ -72,7 +72,7 @@ export const tr: Gloss = {
 
 export const pl: Gloss = {
     "be.c.smoking": "Palenie tylko na zewnątrz", // = c.smoking
-    "be.c.smoking.b": "W Belgii palenie w miejscu pracy jest zakazane przez prawo. Dotyczy to też e-papierosów (vape’ów). Niektóre firmy mają specjalną palarnię: tylko tam wolno palić w środku. Albo pal na zewnątrz, w miejscu, na które pozwala pracodawca, i zwykle tylko w przerwie. Dodatkowe przerwy na papierosa to nie twoje prawo: ustal je z przełożonym. Nigdy nie pal przy rzeczach, które łatwo się palą, jak paliwo albo kartony w magazynie. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    "be.c.smoking.b": "W Belgii prawo zakazuje palenia wewnątrz miejsca pracy. Dotyczy to też e-papierosów (vape’ów). Niektóre firmy mają specjalną palarnię: tylko tam wolno palić w środku. Albo pal na zewnątrz, w miejscu, na które pozwala pracodawca, i zwykle tylko w przerwie. Dodatkowe przerwy na papierosa to nie twoje prawo: ustal je z przełożonym. Nigdy nie pal przy rzeczach, które łatwo się palą, jak paliwo albo kartony w magazynie. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.smoking.p": "Mogę zapalić na zewnątrz w przerwie?", // = c.smoking.p
     "be.c.smoking.s": "Jest zimno i pada deszcz. Kolega mówi: „Zapal w magazynku, nikt nie zobaczy.” Co robisz?", // = c.smoking.s
     "be.c.smoking.o1": "Odmawiasz i palisz na zewnątrz, w miejscu dla palących, w przerwie.", // = c.smoking.o1
@@ -138,7 +138,7 @@ export const fr: Gloss = {
 
 export const de: Gloss = {
     "be.c.smoking": "Rauchen nur draußen", // = c.smoking
-    "be.c.smoking.b": "In Belgien ist Rauchen in einem Betrieb gesetzlich verboten. Das gilt auch für E-Zigaretten (Vapes). Manche Firmen haben einen besonderen Raucherraum: Nur dort darfst du drinnen rauchen. Oder rauch draußen, an dem Platz, den dein Arbeitgeber erlaubt, und meistens nur in deiner Pause. Extra Raucherpausen sind kein Recht: Sprich sie mit deinem Vorgesetzten ab. Rauch nie in der Nähe von Dingen, die leicht brennen, wie Treibstoff oder Kartons im Lager. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    "be.c.smoking.b": "In Belgien ist Rauchen in Innenräumen am Arbeitsplatz gesetzlich verboten. Das gilt auch für E-Zigaretten (Vapes). Manche Firmen haben einen besonderen Raucherraum: Nur dort darfst du drinnen rauchen. Oder rauch draußen, an dem Platz, den dein Arbeitgeber erlaubt, und meistens nur in deiner Pause. Extra Raucherpausen sind kein Recht: Sprich sie mit deinem Vorgesetzten ab. Rauch nie in der Nähe von Dingen, die leicht brennen, wie Treibstoff oder Kartons im Lager. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.smoking.p": "Darf ich in meiner Pause draußen rauchen?", // = c.smoking.p
     "be.c.smoking.s": "Es ist kalt und es regnet. Ein Kollege sagt: „Rauch doch im Lagerraum, da sieht es keiner.“ Was machst du?", // = c.smoking.s
     "be.c.smoking.o1": "Sag nein und rauch in deiner Pause draußen im Raucherbereich.", // = c.smoking.o1

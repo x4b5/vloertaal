@@ -188,7 +188,7 @@ export const pl: Gloss = {
     "be.w.huisartsenpost": "dyżur lekarzy rodzinnych wieczorem, w nocy i w weekend (huisartsenwachtpost)", // nieuw, nalezen
     "be.c.doctor.q": "Dyżur lekarzy rodzinnych, w czym mogę pomóc?", // nieuw, nalezen
     "be.w.premie": "składka członkowska (to, co płacisz do ziekenfonds)", // nieuw, nalezen
-    "be.w.eigenrisico": "udział własny (część kosztów, którą płacisz sam)", // nieuw, nalezen
+    "be.w.eigenrisico": "udział własny (część kosztów, którą płacisz z własnej kieszeni)", // nieuw, nalezen // nagelezen AI ronde 3
     "be.w.zorgtoeslag": "podwyższony zwrot (dodatkowa pomoc w kosztach leczenia przy niskich dochodach)", // nieuw, nalezen
     "be.w.verzekeraar": "kasa chorych (ziekenfonds, mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "Należę do kasy chorych.", // nieuw, nalezen
@@ -200,18 +200,18 @@ export const pl: Gloss = {
     "be.c.doctor.b": "Wybierz lekarza rodzinnego (huisarts) blisko domu. Potrzebujesz lekarza wieczorem, w nocy albo w weekend? Dzwoń pod 1733: skierują cię do lekarza dyżurnego (huisartsenwachtpost). Pod 112 dzwoń tylko w nagłym wypadku: zagrożenie życia, pożar albo przestępstwo, które dzieje się teraz. Leki dostajesz w aptece (apotheek).", // nieuw, nalezen
     "be.c.doctor.p": "Czy przyjmuje pan/pani jeszcze nowych pacjentów?", // nieuw, nalezen
     "be.c.doctor.s": "Jest sobota w nocy. Twoje dziecko ma wysoką gorączkę, ale jest przytomne i normalnie oddycha. Co robisz?", // = c.doctor.s
-    "be.c.doctor.o1": "Zadzwonić pod 1733.", // nieuw, nalezen
+    "be.c.doctor.o1": "Dzwonisz pod 1733.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "Dzwonisz pod 112.", // = c.doctor.o2
     "be.c.doctor.o3": "Czekasz do poniedziałku i nic nie robisz.", // = c.doctor.o3
     "be.c.doctor.w": "1733 pomaga znaleźć lekarza poza godzinami pracy przychodni. 112 jest na nagłe wypadki: zagrożenie życia, pożar albo przestępstwo, które dzieje się teraz.", // nieuw, nalezen
     "be.c.insurance": "Twoja kasa chorych (ziekenfonds)", // nieuw, nalezen
-    "be.c.insurance.b": "W Belgii musisz należeć do kasy chorych: ziekenfonds (mutualiteit) albo Hulpkas (HZIV). Zrób to, kiedy zaczynasz pracę. Ziekenfonds zwraca część kosztów lekarza, szpitala i leków. Część, którą płacisz sam, to remgeld. Przy niskich dochodach możesz dostać verhoogde tegemoetkoming: wtedy płacisz mniej. Chorujesz długo? Wtedy ziekenfonds wypłaca ci też zasiłek. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen
+    "be.c.insurance.b": "W Belgii musisz należeć do kasy chorych: ziekenfonds (mutualiteit) albo Hulpkas (HZIV). Zrób to, kiedy zaczynasz pracę. Ziekenfonds zwraca część kosztów lekarza, szpitala i leków. Część, którą płacisz z własnej kieszeni, to remgeld. Przy niskich dochodach możesz dostać verhoogde tegemoetkoming: wtedy płacisz mniej. Chorujesz długo? Wtedy ziekenfonds wypłaca ci też zasiłek. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.p": "Chcę zapisać się do kasy chorych. Może mi pan/pani pomóc?", // nieuw, nalezen
     "be.c.insurance.s": "Od dwóch tygodni tu pracujesz i nie masz jeszcze ziekenfonds. Co robisz?", // nieuw, nalezen
-    "be.c.insurance.o1": "Szybko zapisać się do ziekenfonds.", // nieuw, nalezen
+    "be.c.insurance.o1": "Szybko zapisujesz się do ziekenfonds.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.o2": "Czekasz: ubezpieczenie z twojego kraju wystarczy.", // = c.insurance.o2
     "be.c.insurance.o3": "Używasz karty ubezpieczenia kolegi.", // = c.insurance.o3
-    "be.c.insurance.w": "Bez ziekenfonds sam płacisz za lekarza i szpital. Szybkie zapisanie się chroni cię. Pracodawca albo biuro pracy tymczasowej może ci pomóc.", // nieuw, nalezen
+    "be.c.insurance.w": "Bez ziekenfonds za lekarza i szpital płacisz z własnej kieszeni. Szybkie zapisanie się chroni cię. Pracodawca albo agencja pracy tymczasowej może ci pomóc.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const ro: Gloss = {
@@ -290,7 +290,7 @@ export const es: Gloss = {
     "be.c.doctor.b": "Elige un médico de cabecera (huisarts) cerca de tu casa. ¿Necesitas un médico por la tarde, por la noche o el fin de semana? Llama al 1733: te mandan al médico de guardia (huisartsenwachtpost). Llama al 112 solo en una emergencia: peligro para la vida, fuego o un delito que pasa ahora. Las medicinas las recoges en la farmacia (apotheek).", // nieuw, nalezen
     "be.c.doctor.p": "¿Todavía acepta pacientes nuevos?", // nieuw, nalezen
     "be.c.doctor.s": "Es sábado por la noche. Tu hijo tiene mucha fiebre, pero está despierto y respira normal. ¿Qué haces?", // = c.doctor.s
-    "be.c.doctor.o1": "Llamar al 1733.", // nieuw, nalezen
+    "be.c.doctor.o1": "Llamas al 1733.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "Llamas al 112.", // = c.doctor.o2
     "be.c.doctor.o3": "Esperas hasta el lunes y no haces nada.", // = c.doctor.o3
     "be.c.doctor.w": "El 1733 te ayuda a encontrar un médico fuera del horario de consulta. El 112 es para emergencias: peligro para la vida, fuego o un delito que pasa ahora.", // nieuw, nalezen
@@ -298,10 +298,10 @@ export const es: Gloss = {
     "be.c.insurance.b": "En Bélgica tienes que apuntarte a una mutua de salud: un ziekenfonds (mutualiteit), o la Hulpkas (HZIV). Hazlo cuando empiezas a trabajar. El ziekenfonds te devuelve una parte de lo que cuestan el médico, el hospital y las medicinas. La parte que pagas tú es el remgeld. Con ingresos bajos puedes recibir la verhoogde tegemoetkoming: entonces pagas menos. ¿Estás enfermo mucho tiempo? Entonces el ziekenfonds también te paga una prestación. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
     "be.c.insurance.p": "Quiero hacerme socio de una mutua de salud. ¿Me puede ayudar?", // nieuw, nalezen
     "be.c.insurance.s": "Empezaste a trabajar aquí hace dos semanas y todavía no tienes ziekenfonds. ¿Qué haces?", // nieuw, nalezen
-    "be.c.insurance.o1": "Apuntarte pronto a un ziekenfonds.", // nieuw, nalezen
+    "be.c.insurance.o1": "Te apuntas pronto a un ziekenfonds.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.o2": "Esperas: el seguro de tu país es suficiente.", // = c.insurance.o2
     "be.c.insurance.o3": "Usas la tarjeta del seguro de un amigo.", // = c.insurance.o3
-    "be.c.insurance.w": "Sin ziekenfonds, el médico y el hospital los pagas tú. Apuntarte pronto te protege. Tu empresa o tu oficina de trabajo temporal te pueden ayudar.", // nieuw, nalezen
+    "be.c.insurance.w": "Sin ziekenfonds, el médico y el hospital los pagas tú. Apuntarte pronto te protege. Tu empresa o tu agencia de trabajo temporal te pueden ayudar.", // nieuw, nalezen // nagelezen AI ronde 3
 };
 
 export const pt: Gloss = {
@@ -320,7 +320,7 @@ export const pt: Gloss = {
     "be.c.doctor.b": "Escolhe um médico de família (huisarts) perto de casa. Precisas de um médico à noite ou ao fim de semana? Liga para o 1733: mandam-te para o médico de serviço (huisartsenwachtpost). Liga para o 112 só numa emergência: perigo de vida, fogo ou um crime a acontecer agora. Os medicamentos levantas na farmácia (apotheek).", // nieuw, nalezen
     "be.c.doctor.p": "Ainda aceita doentes novos?", // nieuw, nalezen
     "be.c.doctor.s": "É sábado à noite. O teu filho tem febre alta, mas está acordado e respira normalmente. O que fazes?", // = c.doctor.s
-    "be.c.doctor.o1": "Ligar para o 1733.", // nieuw, nalezen
+    "be.c.doctor.o1": "Ligas para o 1733.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "Ligas para o 112.", // = c.doctor.o2
     "be.c.doctor.o3": "Esperas até segunda-feira e não fazes nada.", // = c.doctor.o3
     "be.c.doctor.w": "O 1733 ajuda-te a encontrar um médico fora do horário normal. O 112 é para emergências: perigo de vida, fogo ou um crime a acontecer agora.", // nieuw, nalezen
@@ -328,7 +328,7 @@ export const pt: Gloss = {
     "be.c.insurance.b": "Na Bélgica tens de te inscrever numa mutualidade de saúde: um ziekenfonds (mutualiteit), ou a Hulpkas (HZIV). Fá-lo quando começas a trabalhar. O ziekenfonds devolve uma parte dos custos do médico, do hospital e dos medicamentos. A parte que pagas tu é o remgeld. Com rendimentos baixos podes receber a verhoogde tegemoetkoming: então pagas menos. Estás doente muito tempo? Então o ziekenfonds também te paga um subsídio. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao justitiehuis (conselho jurídico grátis).", // nieuw, nalezen
     "be.c.insurance.p": "Quero inscrever-me numa mutualidade de saúde. Pode ajudar-me?", // nieuw, nalezen
     "be.c.insurance.s": "Começaste a trabalhar aqui há duas semanas e ainda não tens ziekenfonds. O que fazes?", // nieuw, nalezen
-    "be.c.insurance.o1": "Inscrever-te depressa num ziekenfonds.", // nieuw, nalezen
+    "be.c.insurance.o1": "Inscreves-te depressa num ziekenfonds.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.o2": "Esperas: o seguro do teu país chega.", // = c.insurance.o2
     "be.c.insurance.o3": "Usas o cartão do seguro de um amigo.", // = c.insurance.o3
     "be.c.insurance.w": "Sem ziekenfonds, o médico e o hospital pagas tu. Inscrever-te depressa protege-te. O teu empregador ou a agência de trabalho temporário podem ajudar-te.", // nieuw, nalezen
@@ -350,7 +350,7 @@ export const fr: Gloss = {
     "be.c.doctor.b": "Choisis un médecin généraliste (huisarts) près de chez toi. Tu as besoin d’un médecin le soir, la nuit ou le week-end ? Appelle le 1733 : on t’envoie au médecin de garde (huisartsenwachtpost). Appelle le 112 seulement en cas d’urgence : danger de mort, incendie ou crime en train de se passer. Les médicaments, tu les reçois à la pharmacie (apotheek).", // nieuw, nalezen
     "be.c.doctor.p": "Vous prenez encore de nouveaux patients ?", // nieuw, nalezen
     "be.c.doctor.s": "C’est samedi soir. Ton enfant a beaucoup de fièvre, mais il est réveillé et respire normalement. Que fais-tu ?", // = c.doctor.s
-    "be.c.doctor.o1": "Appeler le 1733.", // nieuw, nalezen
+    "be.c.doctor.o1": "Appelle le 1733.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "Appelle le 112.", // = c.doctor.o2
     "be.c.doctor.o3": "Attends lundi et ne fais rien.", // = c.doctor.o3
     "be.c.doctor.w": "Le 1733 t’aide à trouver un médecin en dehors des heures de bureau. Le 112, c’est pour les urgences : danger de mort, incendie ou crime en train de se passer.", // nieuw, nalezen
@@ -358,7 +358,7 @@ export const fr: Gloss = {
     "be.c.insurance.b": "En Belgique, tu dois t’inscrire à une mutuelle : un ziekenfonds (mutualiteit), ou la Hulpkas (HZIV, la CAAMI). Fais-le quand tu commences à travailler. Le ziekenfonds rembourse une partie des frais du médecin, de l’hôpital et des médicaments. La part que tu paies toi-même, c’est le remgeld. Avec un petit revenu, tu peux recevoir la verhoogde tegemoetkoming : alors tu paies moins. Tu es malade longtemps ? Alors le ziekenfonds te paie aussi une indemnité. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen
     "be.c.insurance.p": "Je veux m’inscrire à une mutuelle. Vous pouvez m’aider ?", // nieuw, nalezen
     "be.c.insurance.s": "Tu as commencé à travailler ici il y a deux semaines et tu n’as pas encore de ziekenfonds. Que fais-tu ?", // nieuw, nalezen
-    "be.c.insurance.o1": "T’inscrire vite à un ziekenfonds.", // nieuw, nalezen
+    "be.c.insurance.o1": "Inscris-toi vite à un ziekenfonds.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.o2": "Attends : l’assurance de ton pays suffit.", // = c.insurance.o2
     "be.c.insurance.o3": "Utilise la carte d’assurance d’un ami.", // = c.insurance.o3
     "be.c.insurance.w": "Sans ziekenfonds, tu paies toi-même le médecin et l’hôpital. T’inscrire vite te protège. Ton employeur ou ton agence d’intérim peut t’aider.", // nieuw, nalezen
@@ -380,7 +380,7 @@ export const de: Gloss = {
     "be.c.doctor.b": "Such dir einen Hausarzt (huisarts) in der Nähe deiner Wohnung aus. Brauchst du abends, nachts oder am Wochenende einen Arzt? Ruf 1733 an: Man schickt dich zum Bereitschaftsarzt (huisartsenwachtpost). Ruf 112 nur im Notfall an: Lebensgefahr, Feuer oder eine Straftat, die gerade passiert. Medikamente bekommst du in der Apotheke (apotheek).", // nieuw, nalezen
     "be.c.doctor.p": "Nehmen Sie noch neue Patienten?", // nieuw, nalezen
     "be.c.doctor.s": "Es ist Samstagnacht. Dein Kind hat hohes Fieber, aber es ist wach und atmet normal. Was machst du?", // = c.doctor.s
-    "be.c.doctor.o1": "1733 anrufen.", // nieuw, nalezen
+    "be.c.doctor.o1": "Ruf 1733 an.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "Ruf 112 an.", // = c.doctor.o2
     "be.c.doctor.o3": "Warte bis Montag und tu nichts.", // = c.doctor.o3
     "be.c.doctor.w": "Die 1733 hilft dir, außerhalb der Sprechzeiten einen Arzt zu finden. Die 112 ist für Notfälle: Lebensgefahr, Feuer oder eine Straftat, die gerade passiert.", // nieuw, nalezen
@@ -388,8 +388,8 @@ export const de: Gloss = {
     "be.c.insurance.b": "In Belgien musst du Mitglied einer Krankenkasse werden: eines ziekenfonds (mutualiteit) oder der Hulpkas (HZIV). Mach das, wenn du anfängst zu arbeiten. Der ziekenfonds zahlt einen Teil der Kosten für Arzt, Krankenhaus und Medikamente zurück. Den Teil, den du selbst zahlst, nennt man remgeld. Mit einem niedrigen Einkommen bekommst du vielleicht die verhoogde tegemoetkoming: Dann zahlst du weniger. Bist du lange krank? Dann zahlt dir der ziekenfonds auch Krankengeld. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Justitiehuis (kostenlose Rechtsberatung).", // nieuw, nalezen
     "be.c.insurance.p": "Ich möchte Mitglied einer Krankenkasse werden. Können Sie mir helfen?", // nieuw, nalezen
     "be.c.insurance.s": "Du arbeitest seit zwei Wochen hier und hast noch keinen ziekenfonds. Was machst du?", // nieuw, nalezen
-    "be.c.insurance.o1": "Schnell Mitglied eines ziekenfonds werden.", // nieuw, nalezen
+    "be.c.insurance.o1": "Werde schnell Mitglied eines ziekenfonds.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.o2": "Warte: Deine Versicherung von zu Hause reicht.", // = c.insurance.o2
     "be.c.insurance.o3": "Benutz die Versichertenkarte von einem Freund.", // = c.insurance.o3
-    "be.c.insurance.w": "Ohne ziekenfonds bezahlst du Arzt und Krankenhaus selbst. Schnell Mitglied zu werden schützt dich. Dein Arbeitgeber oder dein Zeitarbeitsbüro kann dir helfen.", // nieuw, nalezen
+    "be.c.insurance.w": "Ohne ziekenfonds bezahlst du Arzt und Krankenhaus selbst. Schnell Mitglied zu werden schützt dich. Dein Arbeitgeber oder deine Zeitarbeitsfirma kann dir helfen.", // nieuw, nalezen // nagelezen AI ronde 3
 };

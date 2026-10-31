@@ -100,11 +100,11 @@ export const pl: Gloss = {
     "be.s.checkout.1": "Płaci pan/pani kartą czy gotówką?", // nieuw, nalezen
     "be.c.checkout.q": "Czy mogę tu zapłacić kartą?", // nieuw, nalezen
     "be.c.checkout": "Dowód przy alkoholu i tytoniu", // = c.checkout
-    "be.c.checkout.b": "Nie wolno sprzedawać piwa ani wina osobom poniżej 16 lat, a mocnych alkoholi ani tytoniu osobom poniżej 18: takie jest prawo. Nie wiesz, ile lat ma klient? Poproś o dowód (identiteitskaart). Przy tytoniu proś o dowód każdego, kto wygląda na mniej niż 25 lat. Nie ma dowodu albo jest za młody? Wtedy nie sprzedajesz i zostajesz uprzejmy. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    "be.c.checkout.b": "Nie wolno sprzedawać piwa ani wina osobom poniżej 16 lat, a mocnych alkoholi ani tytoniu osobom poniżej 18: takie jest prawo. Nie wiesz, ile lat ma klient? Poproś o dowód (identiteitskaart). Przy tytoniu proś o dowód każdego, kto wygląda na mniej niż 25 lat. Nie ma dowodu albo jest za młody? Wtedy nie sprzedajesz i dalej mówisz uprzejmie. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.p": "Bez dowodu nie mogę tego sprzedać.", // = c.checkout.p
     "be.c.checkout.s": "Młody chłopak chce kupić piwo. Wygląda na około 14 lat. Mówi, że ma 16, ale nie ma przy sobie dowodu. Co robisz?", // nieuw, nalezen
     "be.c.checkout.o1": "Mówisz, że bez dowodu nie możesz sprzedać.", // = c.checkout.o1
-    "be.c.checkout.o2": "Sprzedać, bo mówi, że ma 16 lat.", // nieuw, nalezen
+    "be.c.checkout.o2": "Sprzedajesz, bo mówi, że ma 16 lat.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.o3": "Sprzedajesz, ale tylko jedną puszkę.", // = c.checkout.o3
     "be.c.checkout.w": "Bez dowodu nie możesz znać jego wieku. Sprzedaż piwa osobie poniżej 16 lat jest niezgodna z prawem, a sklep może dostać karę.", // nieuw, nalezen
 };
@@ -149,7 +149,7 @@ export const es: Gloss = {
     "be.c.checkout.p": "Sin documento de identidad no puedo vender esto.", // = c.checkout.p
     "be.c.checkout.s": "Un chico joven quiere comprar cerveza. Parece tener unos 14 años. Dice que tiene 16, pero no lleva documento. ¿Qué haces?", // nieuw, nalezen
     "be.c.checkout.o1": "Dices que sin documento no se la puedes vender.", // = c.checkout.o1
-    "be.c.checkout.o2": "Vendérsela, porque dice que tiene 16.", // nieuw, nalezen
+    "be.c.checkout.o2": "Se la vendes, porque dice que tiene 16.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.o3": "Se la vendes, pero solo una lata.", // = c.checkout.o3
     "be.c.checkout.w": "Sin documento no puedes saber su edad. Vender cerveza a un menor de 16 va contra la ley, y la tienda puede recibir una multa.", // nieuw, nalezen
 };
@@ -164,7 +164,7 @@ export const pt: Gloss = {
     "be.c.checkout.p": "Sem identificação não posso vender isto.", // = c.checkout.p
     "be.c.checkout.s": "Um rapaz quer comprar cerveja. Parece ter uns 14 anos. Diz que tem 16, mas não tem documento com ele. O que fazes?", // nieuw, nalezen
     "be.c.checkout.o1": "Dizes que não podes vender sem identificação.", // = c.checkout.o1
-    "be.c.checkout.o2": "Vender, porque ele diz que tem 16.", // nieuw, nalezen
+    "be.c.checkout.o2": "Vendes, porque ele diz que tem 16.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.o3": "Vendes, mas só uma lata.", // = c.checkout.o3
     "be.c.checkout.w": "Sem documento não podes saber a idade dele. Vender cerveja a menores de 16 é contra a lei, e a loja pode levar uma multa.", // nieuw, nalezen
 };
@@ -179,7 +179,7 @@ export const fr: Gloss = {
     "be.c.checkout.p": "Sans pièce d’identité, je n’ai pas le droit de vendre ça.", // = c.checkout.p
     "be.c.checkout.s": "Un jeune homme veut acheter de la bière. Il a l’air d’avoir environ 14 ans. Il dit qu’il a 16 ans, mais il n’a pas de pièce d’identité sur lui. Que fais-tu ?", // nieuw, nalezen
     "be.c.checkout.o1": "Dis que tu ne peux pas vendre sans pièce d’identité.", // = c.checkout.o1
-    "be.c.checkout.o2": "Vendre, parce qu’il dit qu’il a 16 ans.", // nieuw, nalezen
+    "be.c.checkout.o2": "Vends, parce qu’il dit qu’il a 16 ans.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.o3": "Vends, mais seulement une canette.", // = c.checkout.o3
     "be.c.checkout.w": "Sans pièce d’identité, tu ne peux pas connaître son âge. Vendre de la bière à un moins de 16 ans est contre la loi, et le magasin peut recevoir une amende.", // nieuw, nalezen
 };
@@ -194,7 +194,7 @@ export const de: Gloss = {
     "be.c.checkout.p": "Ohne Ausweis darf ich das nicht verkaufen.", // = c.checkout.p
     "be.c.checkout.s": "Ein junger Mann will Bier kaufen. Er sieht aus wie etwa 14. Er sagt, er ist 16, aber er hat keinen Ausweis dabei. Was machst du?", // nieuw, nalezen
     "be.c.checkout.o1": "Sag, ohne Ausweis geht es nicht.", // = c.checkout.o1
-    "be.c.checkout.o2": "Verkaufen, weil er sagt, er ist 16.", // nieuw, nalezen
+    "be.c.checkout.o2": "Verkauf es, weil er sagt, er ist 16.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.checkout.o3": "Verkauf es, aber nur eine Dose.", // = c.checkout.o3
     "be.c.checkout.w": "Ohne Ausweis kannst du sein Alter nicht wissen. Bier an jemanden unter 16 zu verkaufen ist gegen das Gesetz, und der Laden kann eine Strafe bekommen.", // nieuw, nalezen
 };
