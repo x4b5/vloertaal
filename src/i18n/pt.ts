@@ -83,7 +83,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Onde trabalhas?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Em que país trabalhas?',
-    countryHint: 'As regras de trabalho do Vloertaal são dos Países Baixos. Na Bélgica, muitas regras são diferentes. Isto fica no teu telemóvel. Não o enviamos para lado nenhum.',
+    countryHint: 'Escolhe o país onde trabalhas. Recebes as regras de trabalho desse país. Isto fica no teu telemóvel. Não o enviamos para lado nenhum.', // nieuw, nalezen
     countryNl: 'Países Baixos',
     countryBe: 'Bélgica (Flandres)',
     tipsNote: 'Estas dicas são sobre o trabalho nos Países Baixos. Informação geral, não é aconselhamento jurídico.',
