@@ -7,6 +7,7 @@ import type { Gloss } from '../types';
 // the polite plural). Every line: // nieuw, nalezen
 
 export const ar: Gloss = {
+    'be.l.bsn': "رقم السجل الوطني وأوراقك", // nieuw, nalezen
     'be.w.bsn': "رقم السجل الوطني (رقمك في بلجيكا)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "بطاقة الإقامة (لغير البلجيكيين)", // nieuw, nalezen
     'be.w.zorgverzekering': "صندوق التأمين الصحي (mutualiteit)", // nieuw, nalezen
@@ -36,6 +37,7 @@ export const ar: Gloss = {
 };
 
 export const ti: Gloss = {
+    'be.l.bsn': { m: 'ቁጽሪ ሃገራዊ መዝገብካን ወረቓቕትካን', f: 'ቁጽሪ ሃገራዊ መዝገብኪን ወረቓቕትኪን' }, // nieuw, nalezen
     'be.w.bsn': "ቁጽሪ ሃገራዊ መዝገብ (ቁጽርኹም ኣብ ቤልጅዩም)", // nieuw, nalezen
     'be.w.identiteitsbewijs': 'ወረቐት መንበሪ (ንዘይቤልጅዩማውያን)', // nieuw, nalezen // nagelezen AI ronde 3
     'be.w.zorgverzekering': "ፈንድ መድሕን ጥዕና (mutualiteit)", // nieuw, nalezen
@@ -65,6 +67,7 @@ export const ti: Gloss = {
 };
 
 export const fa: Gloss = {
+    'be.l.bsn': "شمارهٔ ثبت ملی و مدارک تو", // nieuw, nalezen
     'be.w.bsn': "شمارهٔ ثبت ملی (شمارهٔ تو در بلژیک)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "کارت اقامت (برای کسانی که بلژیکی نیستند)", // nieuw, nalezen
     'be.w.zorgverzekering': "صندوق بیمهٔ درمانی (mutualiteit)", // nieuw, nalezen
@@ -94,6 +97,7 @@ export const fa: Gloss = {
 };
 
 export const prs: Gloss = {
+    'be.l.bsn': "نمبر ثبت ملی و اسناد شما", // nieuw, nalezen
     'be.w.bsn': "نمبر ثبت ملی (نمبر شما در بلجیم)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "کارت اقامت (برای کسانی که بلجیمی نیستند)", // nieuw, nalezen
     'be.w.zorgverzekering': "صندوق بیمهٔ صحی (mutualiteit)", // nieuw, nalezen
@@ -123,6 +127,7 @@ export const prs: Gloss = {
 };
 
 export const uk: Gloss = {
+    'be.l.bsn': "Твій номер національного реєстру і документи", // nieuw, nalezen
     'be.w.bsn': "номер національного реєстру (твій номер у Бельгії)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "посвідка на проживання (для тих, хто не бельгієць)", // nieuw, nalezen
     'be.w.zorgverzekering': "лікарняна каса (mutualiteit)", // nieuw, nalezen
@@ -152,6 +157,7 @@ export const uk: Gloss = {
 };
 
 export const tr: Gloss = {
+    'be.l.bsn': "Ulusal sicil numaran ve belgelerin", // nieuw, nalezen
     'be.w.bsn': "ulusal sicil numarası (Belçika’daki numaran)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "oturma kartı (Belçikalı olmayanlar için)", // nieuw, nalezen
     'be.w.zorgverzekering': "sağlık sigortası kasası (mutualiteit)", // nieuw, nalezen
@@ -181,6 +187,7 @@ export const tr: Gloss = {
 };
 
 export const pl: Gloss = {
+    'be.l.bsn': "Twój numer rejestru krajowego i dokumenty", // nieuw, nalezen
     'be.w.bsn': "numer rejestru krajowego (twój numer w Belgii)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "karta pobytu (dla osób, które nie są Belgami)", // nieuw, nalezen
     'be.w.zorgverzekering': "kasa chorych (mutualiteit)", // nieuw, nalezen
@@ -210,6 +217,7 @@ export const pl: Gloss = {
 };
 
 export const ro: Gloss = {
+    'be.l.bsn': "Numărul de registru național și actele tale", // nieuw, nalezen
     'be.w.bsn': "numărul de registru național (numărul tău în Belgia)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "cartea de rezidență (pentru cine nu e belgian)", // nieuw, nalezen
     'be.w.zorgverzekering': "casa de asigurări de sănătate (mutualiteit)", // nieuw, nalezen
@@ -239,6 +247,7 @@ export const ro: Gloss = {
 };
 
 export const bg: Gloss = {
+    'be.l.bsn': "Твоят номер в националния регистър и документите", // nieuw, nalezen
     'be.w.bsn': "номерът в националния регистър (твоят номер в Белгия)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "картата за пребиваване (за хора, които не са белгийци)", // nieuw, nalezen
     'be.w.zorgverzekering': "здравната каса (mutualiteit)", // nieuw, nalezen
@@ -268,6 +277,7 @@ export const bg: Gloss = {
 };
 
 export const es: Gloss = {
+    'be.l.bsn': "Tu número del registro nacional y tus papeles", // nieuw, nalezen
     'be.w.bsn': "el número del registro nacional (tu número en Bélgica)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "la tarjeta de residencia (para quien no es belga)", // nieuw, nalezen
     'be.w.zorgverzekering': "la mutua de salud (mutualiteit)", // nieuw, nalezen
@@ -297,6 +307,7 @@ export const es: Gloss = {
 };
 
 export const pt: Gloss = {
+    'be.l.bsn': "O teu número do registo nacional e os papéis", // nieuw, nalezen
     'be.w.bsn': "o número do registo nacional (o teu número na Bélgica)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "o cartão de residência (para quem não é belga)", // nieuw, nalezen
     'be.w.zorgverzekering': "a mutualidade de saúde (mutualiteit)", // nieuw, nalezen
@@ -326,6 +337,7 @@ export const pt: Gloss = {
 };
 
 export const fr: Gloss = {
+    'be.l.bsn': "Ton numéro de registre national et tes papiers", // nieuw, nalezen
     'be.w.bsn': "le numéro de registre national (ton numéro en Belgique)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "la carte de séjour (pour qui n’est pas belge)", // nieuw, nalezen
     'be.w.zorgverzekering': "la mutuelle (mutualiteit)", // nieuw, nalezen
@@ -355,6 +367,7 @@ export const fr: Gloss = {
 };
 
 export const de: Gloss = {
+    'be.l.bsn': "Deine Nationalregisternummer und deine Papiere", // nieuw, nalezen
     'be.w.bsn': "die Nationalregisternummer (deine Nummer in Belgien)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "die Aufenthaltskarte (für Menschen, die nicht belgisch sind)", // nieuw, nalezen
     'be.w.zorgverzekering': "die Krankenkasse (mutualiteit)", // nieuw, nalezen

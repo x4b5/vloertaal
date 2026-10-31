@@ -60,7 +60,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   } },
   'u.time': { kind: 'B', lessons: {
     'l.shift': L('A', 'A'),
-    'l.sick': L('A', 'B', 'vaak een doktersattest (ziektebriefje) vanaf de eerste dag'),
+    'l.sick': L('A', 'B', 'vaak een ziektebriefje, soms vanaf de eerste dag (het arbeidsreglement zegt wanneer)'),
   } },
   'u.sounds': { kind: 'A', lessons: {
     'l.shortlong': L('A', '-'),
@@ -83,7 +83,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.permit': L('B', 'C', 'de zzp’er → de zelfstandige; IND, UWV, VluchtelingenWerk → DVZ, VDAB, Vluchtelingenwerk Vlaanderen; inburgering via het Agentschap Integratie en Inburgering'),
   } },
   'u.papers': { kind: 'B', lessons: {
-    'l.bsn': L('C', 'C', 'BSN, DigiD, zorgverzekering → rijksregisternummer, eID en itsme, ziekenfonds'),
+    'l.bsn': L('C', 'C', 'ook de titel; BSN, DigiD, zorgverzekering → rijksregisternummer, eID en itsme, ziekenfonds'),
     'l.housing': L('B', 'C', 'de borg → de huurwaarborg; Huurcommissie en Juridisch Loket → Vlaamse huurregels, justitiehuis'),
   } },
   'u.pay': { kind: 'B', lessons: {
@@ -203,7 +203,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   } },
   'u.stage': { kind: 'B', lessons: {
     'l.placement': L('C', 'C', 'POK, praktijkopleider, stagebegeleider, bpv → stageovereenkomst, mentor, school'),
-    'l.review': L('A', 'A'),
+    'l.review': L('A', 'B', 'tip: "workplace trainer" (praktijkopleider) → de mentor, zoals in l.placement'),
   } },
   'u.society': { kind: 'C', lessons: {
     'l.council': L('C', 'C', 'gemeenteraad, Tweede Kamer, stempas → gemeenteraad, opkomstplicht, oproepingsbrief'),

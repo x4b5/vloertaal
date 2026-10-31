@@ -60,6 +60,28 @@ const tips = [
       why: 'The stageovereenkomst says what you learn and who helps you. Without a signed agreement, your placement may not count. So you sign it before you start.',
     }),
   },
+  // The Dutch tip says "workplace trainer" (praktijkopleider); the Belgian l.placement calls that person
+  // the mentor, so this tip does too (otherwise the same as c.review; its translations are those of
+  // c.review, which say "the trainer at the company").
+  // ⚖️ check: At the company a mentor guides the student, from school a stagebegeleider ⚖️ (the same
+  // as be.c.placement above; onderwijs.vlaanderen.be "leerlingenstages"). No other fact.
+  {
+    ...beTip({
+      slug: 'review',
+      lessonId: 'l.review',
+      emoji: '🗣️',
+      title: 'Ask for feedback, and for an example',
+      body: 'At your placement, people tell you what goes well and what can be better: feedback. That is normal, and it helps you learn. You do not understand it? Ask for an example. Ask for feedback yourself too, for example once a week. Is something really wrong at your placement? First talk to your mentor at the company. Does that not help? Then go to your placement coach at school.',
+      phrase: ['Wat ging goed, en wat kan beter?', 'What went well, and what can be better?'],
+      situation: 'Your mentor says: "You must work more carefully." You do not know what they mean. What do you do?',
+      options: [
+        'Ask for an example of what you must do differently.',
+        'Say yes, and hope that you find out yourself.',
+        'Work much slower from now on, so that nothing goes wrong.',
+      ],
+      why: 'With an example, you know what to change. Asking shows that you want to learn. Mentors like that.',
+    }),
+  },
 ];
 
 export const be: BeTaal = { nl: 'u.stage', lines, tips };
