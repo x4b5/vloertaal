@@ -4522,6 +4522,31 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
    made the pinned footer cover almost the whole result). Settings › Sneller leren explains it. */
 @media (max-height: 700px) { .result-faster-hint { display: none; } }
 @media (max-height: 900px) { :root:is([data-text='large'], [data-text='xl']) .result-faster-hint { display: none; } }
+/* While "Wil je sneller?" asks on a small screen (or with large text): the result itself stays in
+   view above the pinned question. The scene and the stamp go (Bram's line stays), the title and
+   the stat cards get compact, and the question is one size smaller; Ja and Nee stay as they are. */
+@media (max-height: 760px) {
+  .result-asks .result-hero :is(.cel-scene, .result-stamp) { display: none; }
+  .result-asks .result-hero .bram-say { margin-bottom: 0; }
+  .result-asks .result-title { margin-top: 0; font-size: 1.6rem; line-height: 1.15; }
+  .result-asks .result-stats { margin: 12px 0 4px; gap: 12px; }
+  .result-asks .stat-card { padding: 8px 10px 10px; gap: 4px; }
+  .result-asks .stat-card-head { font-size: 0.8rem; }
+  .result-asks .stat-card-value { font-size: 2rem; }
+  .result-asks .result-faster { margin-bottom: 6px; }
+  .result-asks .result-faster-ask { font-size: 1.1rem; }
+}
+@media (max-height: 900px) {
+  :root:is([data-text='large'], [data-text='xl']) .result-asks .result-hero :is(.cel-scene, .result-stamp) { display: none; }
+  :root:is([data-text='large'], [data-text='xl']) .result-asks .result-hero .bram-say { margin-bottom: 0; }
+  :root:is([data-text='large'], [data-text='xl']) .result-asks .result-title { margin-top: 0; font-size: 1.45rem; line-height: 1.15; }
+  :root:is([data-text='large'], [data-text='xl']) .result-asks .result-stats { margin: 10px 0 4px; gap: 10px; }
+  :root:is([data-text='large'], [data-text='xl']) .result-asks .stat-card { padding: 6px 10px 8px; gap: 2px; }
+  :root:is([data-text='large'], [data-text='xl']) .result-asks .stat-card-head { font-size: 0.75rem; }
+  :root:is([data-text='large'], [data-text='xl']) .result-asks .stat-card-value { font-size: 1.8rem; }
+  :root:is([data-text='large'], [data-text='xl']) .result-asks .result-faster { margin-bottom: 4px; }
+  :root:is([data-text='large'], [data-text='xl']) .result-asks .result-faster-ask { font-size: 1rem; }
+}
 /* "Wat kun je nu?" (src/content/kunJeNu.ts): on the certificate sheet, in its own sizes (cqw, as
    src/lib/certCanvas.ts draws it), and as a card on the certificate screen, under the sheet. */
 .cert-kun { margin-top: 1.9cqw; }
