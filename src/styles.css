@@ -4351,8 +4351,31 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* The work-rules track's onboarding question (Waar werk je?): one Dutch line, at the main line's size. */
 .sector-title .sector-title-solo .bi-en { font-size: 1.45rem; font-weight: 650; color: var(--ink); }
 
-/* Over: the date of the newest update (src/content/updates.ts); plain text, not a button. */
+/* Over: the date of the newest update (src/content/updates.ts) as plain text, where there is no
+   "Wat is er nieuw?" row. */
 .about-updated { margin: 8px 0 24px; text-align: center; }
+/* Over: the owner's story signed and dated; the two rows at the bottom (one list, one kind of row). */
+.about-signed { margin: 6px 0 0; }
+.about-links { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.about-links .about-banner { margin-top: 0; width: 100%; }
+.about-links + .about-tester, .about-links ~ .about-tester { margin-top: 18px; }
+.news-link .news-link-icon { font-size: 1.3rem; }
+.news-link-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.news-link-text .bi { font-weight: 500; }
+.news-link .news-link-date { display: block; font-size: 0.85rem; }
+
+/* "Wat is er nieuw?" (src/components/News.tsx): a heading per date, its points in Dutch, calm. */
+.news-dutch { margin: 4px 0 8px; }
+.news-day { margin: 20px 0 0; }
+.news-day h2 { font-size: 1.1rem; margin: 0 0 6px; }
+.news-items { margin: 0; padding-inline-start: 1.2em; display: flex; flex-direction: column; gap: 8px; line-height: 1.5; }
+/* On a right-to-left page the Dutch points start on the right (as everywhere): no bullets on the
+   far left side then, a little space between the points instead. */
+[dir='rtl'] .news-items { list-style: none; padding: 0; gap: 12px; }
+/* "Binnenkort": what is coming, set apart in a dashed box (no dates, no promise). */
+.news-soon { border: 2px dashed var(--line); border-radius: var(--radius); padding: 12px 16px; }
+.news-soon-hint { margin: 0 0 8px; }
+.news-more { display: flex; width: 100%; margin: 24px 0; background: var(--card); color: var(--ink); }
 
 /* Voor begeleiders: the intro is body text (at least 17px), not a footnote. */
 .coaches > p.small { font-size: 1.0625rem; line-height: 1.5; }

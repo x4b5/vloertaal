@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { Coaches } from '../src/components/Coaches';
 import { About } from '../src/components/Screens';
-import { aboutIds, aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE, siteSections } from '../src/content/about';
+import { aboutIds, aboutSection, aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE, siteSections } from '../src/content/about';
 import { COACH_FACTS } from '../src/content/facts';
 import { ENTREE_UNITS, PRO_LEAD, proSections } from '../src/content/pro';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
@@ -25,9 +25,9 @@ const coaches = () => renderToStaticMarkup(createElement(Coaches, { onBack: () =
 
 describe('the learner’s Over: short, in the learner’s language', () => {
   it('has only what a learner needs, in this order', () => {
-    expect(aboutSections.map((s) => s.id)).toEqual(['a.what', 'a.how', 'a.bram', 'a.culture', 'a.free', 'a.disclaimer', 'a.contact']);
+    expect(aboutSections.map((s) => s.id)).toEqual(['a.what', 'a.story', 'a.beta', 'a.how', 'a.bram', 'a.culture', 'a.free', 'a.disclaimer', 'a.contact']);
     // The work-rules track: the same, without "Zo werkt het hier" (the track is that, all through).
-    expect(aboutRules.map((s) => s.id)).toEqual(['a.what', 'a.how', 'a.bram', 'a.free', 'a.disclaimer', 'a.contact']);
+    expect(aboutRules.map((s) => s.id)).toEqual(['a.what', 'a.story', 'a.beta', 'a.how', 'a.bram', 'a.free', 'a.disclaimer', 'a.contact']);
   });
 
   it('leaves the professionals’ sections out, in the help language and in Dutch', () => {
@@ -73,11 +73,11 @@ describe('Voor begeleiders en werkgevers: in the app and on the site, from one s
   const site = coachPage();
 
   it('has the professionals’ sections, in this order', () => {
-    expect(proSections.map((s) => s.id)).toEqual(['p.mission', 'p.beta', 'p.who', 'p.voices', 'p.privacy', 'p.facts', 'p.group', 'p.weekplan', 'p.kunjenu', 'p.entree', 'p.contact']);
-    // What left Over is here, in its Dutch: the mission, the test version, for whom (both tracks).
+    expect(proSections.map((s) => s.id)).toEqual(['p.mission', 'p.story', 'p.beta', 'p.who', 'p.voices', 'p.privacy', 'p.facts', 'p.group', 'p.weekplan', 'p.kunjenu', 'p.entree', 'p.contact']);
+    // In their Dutch: the mission and for whom (both tracks), not on Over; the story and the test version, as on Over.
     const body = (id: string) => proSections.find((s) => s.id === id)!.body.join(' ') + (proSections.find((s) => s.id === id)!.lines ?? []).map((l) => l.text).join(' ');
     expect(body('p.mission')).toContain(siteSections.find((s) => s.id === 'a.mission')!.nl.body);
-    expect(body('p.beta')).toContain(siteSections.find((s) => s.id === 'a.beta')!.nl.body);
+    expect(body('p.beta')).toContain(aboutSection('a.beta').nl.body);
     expect(body('p.beta')).toContain('Melden');
     expect(body('p.who')).toContain(siteSections.find((s) => s.id === 'a.who')!.nl.body);
     expect(body('p.who')).toContain(siteSections.find((s) => s.id === 'a.who')!.nlRules!.body);

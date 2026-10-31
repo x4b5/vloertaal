@@ -4,12 +4,17 @@ const t: CultureTranslation = {
   ui: {
     about: 'Vloertaal hakkında',
     forCoaches: 'Koçlar ve işverenler için', // nieuw, nalezen
+    whatsNew: 'Yenilikler neler?', // nieuw, nalezen
+    newsInDutch: 'Değişiklikler Hollandaca yazılı.', // nieuw, nalezen
+    upcomingNow: 'Şu anda bunlar üzerinde çalışıyoruz.', // nieuw, nalezen
   },
   gloss: {
     'a.what': 'Vloertaal nedir?',
     'a.what.b': 'Vloertaal, işinde ihtiyacın olan Hollandacayı öğrenmene yardım eder: depoda, mutfakta, fabrikada ya da inşaatta. Sadece iş yerindeki kelimeler değil, işle ilgili tüm dil: işe başvurmak, sözleşmen ve maaş bordron, hakların, konut ve belgeler, hastalık bildirmek ve iş arkadaşlarınla iyi geçinmek. Dersler kısadır, böylece her gün birkaç dakika pratik yapabilirsin. Vloertaal’ı boş anlar için küçük bir ek olarak düşün. Bir dil kursunun ya da bir dil öğretmeninin yerini tutmaz.',
+    'a.story': 'Neden Vloertaal?', // nieuw, nalezen
+    'a.story.b': 'Merhaba, ben Xavier. İş danışmanı olarak çalışıyorum. İnsanların iş bulmasına yardım ediyorum. Bazen bir iş yine de kötü gidiyor. Bunun sebebi çoğu zaman dil: biri açıklamayı anlamıyor ya da soru sormaya cesaret edemiyor. Bu yüzden Vloertaal’ı başlattım. Umarım uygulama yardımcı olur. Böylece daha çok insan işini iyi yapabilir ve işini kaybetmez. Ama bu uygulamayı tek başıma yapamam, yapmak da istemiyorum.', // nieuw, nalezen
     'a.beta': 'Deneme sürümü',
-    'a.beta.b': 'Vloertaal hâlâ bir deneme sürümüdür (beta). Uygulamayı küçük bir grup öğrenci ve eğitmenle test ediyoruz. Henüz her şey kontrol edilmedi. Çevirileri ve kurallarla ilgili ipuçlarını kontrol edecek uzmanlar hâlâ arıyoruz. Uzman mısın ya da dillerimizden biri ana dilin mi, yardım etmek ister misin? Bize yaz. Bir hata mı buldun? Adresimizi bu sayfanın en altında bulabilirsin.', // nieuw, nalezen
+    'a.beta.b': 'Şimdi Vloertaal’ı birlikte geliştiriyoruz. Uygulama hâlâ bir deneme sürümü (beta). Onu küçük bir grup öğrenci ve eğitmenle test ediyoruz. Henüz her şey kontrol edilmedi ve bunun için yardıma ihtiyacımız var. Dillerimizden biri senin ana dilin mi? Ya da Hollanda veya Belçika’da iş ve kurallar hakkında çok şey biliyor musun? O zaman uygulamayı daha iyi yapmamıza yardım et. Bir hata mı gördün? Bize haber ver. Adresimiz bu sayfanın en altında.', // nieuw, nalezen
     'a.mission': 'Misyonumuz',
     'a.mission.b': 'Vloertaal biraz yardım etmek istiyor, böylece iş için Hollandaca öğrenmek biraz daha kolay olsun: ücretsiz, kolay ve kendi dilinde yardımla. Vloertaal’dan kimse para kazanmıyor: reklam yok, abonelik yok ve verilerin asla satılmaz.',
     'a.bram': 'Bram kim?',

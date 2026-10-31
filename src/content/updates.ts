@@ -1,7 +1,8 @@
 /**
  * What changed in Vloertaal, newest first, in plain Dutch for coaches, teachers and partners.
- * Shown in two places from this one list: the date of the newest entry at the bottom of "Over"
- * ("Laatst bijgewerkt"), and the page vloertaal.nl/nieuw (made at build time, vite.config.ts).
+ * Shown in two places from this one list: in the app, "Wat is er nieuw?" at the bottom of "Over"
+ * (with the date of the newest entry) opens the whole list (src/components/News.tsx), and the page
+ * vloertaal.nl/nieuw (made at build time, vite.config.ts).
  *
  * Adding an update: put a new entry at the top, with the date it goes live (YYYY-MM-DD) and a
  * few short lines. One line = one change a user or coach would notice.
@@ -16,6 +17,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-31',
     items: [
+      'Nieuw bij Over: Waarom Vloertaal? En "Wat is er nieuw?": hier zie je wat er in de app veranderd is.',
       'Werk je in België (Vlaanderen)? Kies dan bij de start, of later bij Instellingen, "België". In het spoor Werkregels krijg je dan de regels van België: alle onderwerpen, met Vlaamse woorden (loonbrief, interimkantoor, ziekenfonds, RVA). Dit is nieuw: de Belgische lessen zijn nog niet nagekeken door een expert. Zie je een fout? Mail naar hoi@vloertaal.nl.',
     ],
   },
@@ -177,8 +179,26 @@ export const UPDATES: Update[] = [
   },
 ];
 
+/**
+ * "Binnenkort", at the top of "Wat is er nieuw?" (the app and vloertaal.nl/nieuw): wat eraan komt;
+ * zonder datum en zonder belofte; haal een punt weg zodra het in UPDATES staat. Plain Dutch, one
+ * short line per point. Empty: the heading is left out.
+ */
+export const UPCOMING: string[] = [
+  'AI-stemmen (ElevenLabs) voor de nieuwe lessen en zinnen. Tot dan leest de stem van je telefoon voor.',
+  'Belgische lessen in het spoor Taal: werk, loon, ziek zijn en je rechten in België.',
+  'Luisteren zoals op de werkvloer: korte gesprekjes met geluid van het werk.',
+  'Experts en moedertaalsprekers kijken de lessen en vertalingen na. We zoeken hen nog.',
+];
+
 /** The date of the newest update. */
 export const LAST_UPDATE = UPDATES[0].date;
+
+/** The locale for a date in a page's language: a help language's own code (Dari: Afghan Persian), Dutch, or English (no help language). */
+export function dateLocale(code?: string): string {
+  if (!code || code === 'en') return 'en-GB';
+  return ({ prs: 'fa-AF', nl: 'nl-NL' } as Record<string, string>)[code] ?? code;
+}
 
 /** "15 oktober 2026" in a language (Dutch by default). */
 export function updateDate(day: string, locale = 'nl-NL'): string {

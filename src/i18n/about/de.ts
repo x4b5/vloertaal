@@ -4,12 +4,17 @@ const t: CultureTranslation = {
   ui: {
     about: 'Über Vloertaal',
     forCoaches: 'Für Coaches und Arbeitgeber', // nieuw, nalezen
+    whatsNew: 'Was ist neu?', // nieuw, nalezen
+    newsInDutch: 'Die Änderungen sind auf Niederländisch.', // nieuw, nalezen
+    upcomingNow: 'Daran arbeiten wir gerade.', // nieuw, nalezen
   },
   gloss: {
     'a.what': 'Was ist Vloertaal?',
     'a.what.b': 'Vloertaal hilft dir, das Niederländisch zu lernen, das du bei der Arbeit brauchst: im Lager, in der Küche, in der Fabrik oder auf der Baustelle. Nicht nur die Wörter bei der Arbeit, sondern die ganze Sprache rund um die Arbeit: dich bewerben, dein Vertrag und deine Lohnabrechnung, deine Rechte, Wohnen und Papiere, dich krankmelden und gut mit Kollegen auskommen. Die Lektionen sind kurz, so kannst du jeden Tag ein paar Minuten üben. Sieh Vloertaal als kleines Extra für zwischendurch. Es ersetzt keinen Sprachkurs und keinen Sprachcoach.',
+    'a.story': 'Warum Vloertaal?', // nieuw, nalezen
+    'a.story.b': 'Hallo, ich bin Xavier. Ich arbeite als Arbeitsvermittler. Ich helfe Menschen, Arbeit zu finden. Manchmal geht ein Job trotzdem schief. Oft liegt das an der Sprache: Jemand versteht die Erklärungen nicht oder traut sich nicht zu fragen. Deshalb habe ich Vloertaal gestartet. Ich hoffe, die App hilft, damit mehr Menschen ihre Arbeit gut machen und ihren Job behalten können. Aber ich kann und will diese App nicht allein bauen.', // nieuw, nalezen
     'a.beta': 'Eine Testversion',
-    'a.beta.b': 'Vloertaal ist noch eine Testversion (Beta). Wir testen die App mit einer kleinen Gruppe von Lernenden und Coaches. Noch ist nicht alles geprüft. Wir suchen noch Fachleute, die die Übersetzungen und die Tipps zu Regeln prüfen. Bist du Fachperson oder sprichst du eine unserer Sprachen als Muttersprache und willst helfen? Schreib uns. Hast du einen Fehler gefunden? Unsere Adresse findest du unten auf dieser Seite.', // nieuw, nalezen
+    'a.beta.b': 'Jetzt bauen wir Vloertaal gemeinsam weiter. Die App ist noch eine Testversion (Beta). Wir testen sie mit einer kleinen Gruppe von Lernenden und Coaches. Noch ist nicht alles geprüft, und dabei brauchen wir Hilfe. Ist eine unserer Sprachen deine Muttersprache? Oder weißt du viel über Arbeit und Regeln in den Niederlanden oder in Belgien? Dann hilf uns, die App besser zu machen. Hast du einen Fehler gefunden? Sag uns Bescheid. Unsere Adresse steht unten auf dieser Seite.', // nieuw, nalezen
     'a.mission': 'Unser Ziel',
     'a.mission.b': 'Vloertaal will ein wenig helfen, damit Niederländisch lernen für die Arbeit etwas leichter wird: kostenlos, einfach und mit Hilfe in deiner eigenen Sprache. Niemand verdient Geld mit Vloertaal: keine Werbung, kein Abo, und deine Daten werden nie verkauft.',
     'a.bram': 'Wer ist Bram?',

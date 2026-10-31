@@ -13,6 +13,7 @@ import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
+import { News } from './components/News';
 import { HomeGreeting } from './components/BramSays';
 import { NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } from './components/RulesHelp';
 import { GenderScreen } from './components/Gender';
@@ -90,6 +91,8 @@ type View =
   | { name: 'settings'; upgrade?: boolean; page?: SettingsPage; up?: number }
   /** "Voor begeleiders": a link per topic to send (from About). */
   | { name: 'coaches' }
+  /** "Wat is er nieuw?": what changed in the app (src/content/updates.ts), from the row at the bottom of About. */
+  | { name: 'news' }
   | { name: 'about' }
   /** "Alle onderwerpen": every unit as one long path (from the link at the foot of the home). */
   | { name: 'all' }
@@ -938,12 +941,14 @@ export default function App() {
       return (
         <>
           {/* The coaches' page lists the language course's topics: not offered in the work-rules track. */}
-          <About lang={lang} onCoaches={track === 'regels' ? undefined : () => go({ name: 'coaches' })} />
+          <About lang={lang} onCoaches={track === 'regels' ? undefined : () => go({ name: 'coaches' })} onNews={() => go({ name: 'news' })} />
           <BottomNav current="about" onTab={tab} lang={lang} />
         </>
       );
     case 'coaches':
       return <Coaches onBack={back} lang={lang} />;
+    case 'news':
+      return <News onBack={back} lang={lang} />;
     case 'samen': {
       // From a lesson's result: back and "Klaar" go on to the certificate or the streak milestone.
       const onward = () => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());

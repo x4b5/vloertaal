@@ -4,12 +4,17 @@ const t: CultureTranslation = {
   ui: {
     about: 'O Vloertaal',
     forCoaches: 'Dla opiekunów i pracodawców', // nieuw, nalezen
+    whatsNew: 'Co nowego?', // nieuw, nalezen
+    newsInDutch: 'Zmiany są opisane po niderlandzku.', // nieuw, nalezen
+    upcomingNow: 'Nad tym teraz pracujemy.', // nieuw, nalezen
   },
   gloss: {
     'a.what': 'Czym jest Vloertaal?',
     'a.what.b': 'Vloertaal pomaga ci nauczyć się niderlandzkiego, którego potrzebujesz w pracy: w magazynie, w kuchni, w fabryce albo na budowie. Nie tylko słowa na hali, ale cały język związany z pracą: szukanie pracy, umowa i pasek wypłaty, twoje prawa, mieszkanie i dokumenty, zgłaszanie choroby i dogadywanie się ze współpracownikami. Lekcje są krótkie, więc możesz ćwiczyć kilka minut każdego dnia. Traktuj Vloertaal jak mały dodatek na wolną chwilę. Nie zastępuje kursu językowego ani nauczyciela języka.',
+    'a.story': 'Dlaczego Vloertaal?', // nieuw, nalezen
+    'a.story.b': 'Cześć, jestem Xavier. Pracuję jako pośrednik pracy. Pomagam ludziom znaleźć pracę. Czasem mimo to coś w pracy idzie nie tak. Często chodzi o język: ktoś nie rozumie instrukcji albo boi się zapytać. Dlatego zacząłem Vloertaal. Mam nadzieję, że aplikacja pomoże, żeby więcej osób mogło dobrze wykonywać swoją pracę i jej nie stracić. Ale nie mogę i nie chcę budować tej aplikacji sam.', // nieuw, nalezen
     'a.beta': 'Wersja testowa',
-    'a.beta.b': 'Vloertaal to wciąż wersja testowa (beta). Testujemy aplikację z małą grupą uczniów i opiekunów. Jeszcze nie wszystko zostało sprawdzone. Wciąż szukamy ekspertów, którzy sprawdzą tłumaczenia i wskazówki o przepisach. Jesteś ekspertem albo jeden z naszych języków to twój język ojczysty i chcesz pomóc? Napisz do nas. Widzisz błąd? Nasz adres znajdziesz na dole tej strony.', // nieuw, nalezen
+    'a.beta.b': 'Teraz razem rozwijamy Vloertaal dalej. Aplikacja to wciąż wersja testowa (beta). Testujemy ją z małą grupą uczniów i opiekunów. Jeszcze nie wszystko zostało sprawdzone i potrzebujemy w tym pomocy. Czy jeden z naszych języków to twój język ojczysty? Albo dużo wiesz o pracy i przepisach w Holandii lub Belgii? To pomóż nam ulepszyć aplikację. Widzisz błąd? Daj nam znać. Nasz adres jest na dole tej strony.', // nieuw, nalezen
     'a.mission': 'Nasza misja',
     'a.mission.b': 'Vloertaal chce trochę pomóc, żeby nauka niderlandzkiego do pracy była trochę łatwiejsza: za darmo, łatwo i z pomocą w twoim języku. Nikt nie zarabia na Vloertaal: nie ma reklam ani abonamentu, a twoje dane nigdy nie są sprzedawane.',
     'a.bram': 'Kim jest Bram?',

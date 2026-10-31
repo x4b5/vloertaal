@@ -31,6 +31,7 @@ export const STYLE = `
   table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
   th, td { padding: 6px 8px; border: 1px solid var(--line); text-align: start; vertical-align: top; }
   .remember { font-weight: 600; }
+  .signed { color: var(--ink2); font-size: 0.95rem; }
   .cta { display: block; margin: 20px 0 24px; padding: 16px; border-radius: 10px; background: var(--yellow); color: #1e2226; border: 2px solid #1e2226; font-weight: 700; font-size: 1.2rem; text-align: center; text-decoration: none; }
   nav { margin: 0 0 16px; }
   nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
