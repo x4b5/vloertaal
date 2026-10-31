@@ -37,4 +37,9 @@ export interface BeTaal {
   unit?: Unit;
   lines?: Record<string, BeLine>;
   tips?: CultureTip[];
+  /**
+   * "Wat kun je nu?" (src/content/kunJeNu.ts) lines said otherwise in Belgium, by their id
+   * ("kjn.u.pay.1"): the Flemish sentence. The id and its translation stay (they say the same).
+   */
+  kun?: Record<string, string>;
 }
