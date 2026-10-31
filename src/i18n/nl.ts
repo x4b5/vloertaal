@@ -457,6 +457,11 @@ export const uiNl: Record<UiKey, UiText> = {
   shareInvite: 'Ik leer Nederlands voor mijn werk met Vloertaal. Gratis: {link}', // nieuw, nalezen
   workTry: 'Probeer het vandaag op je werk',
   saveFailed: 'Je voortgang is niet bewaard. Is je telefoon vol? Maak wat ruimte. Of ga naar Instellingen: Bewaar je voortgang.',
+  speakTurnPrompt: 'Wat zeg je?',
+  speakTurnExample: 'Voorbeeld',
+  speakTurnReveal: 'Hoor het antwoord',
+  sceneTitle: 'Luister op de werkvloer',
+  sceneIntro: 'Er is lawaai, net als op je werk. Luister. Daarna komen de vragen.',
 };
 
 const lang: HelpLanguageSource = {

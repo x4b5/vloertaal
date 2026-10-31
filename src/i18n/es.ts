@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Aprendo neerlandés para mi trabajo con Vloertaal. Gratis: {link}', // nieuw, nalezen
     workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen
     saveFailed: 'Tu progreso no se ha guardado. ¿Tu teléfono está lleno? Libera un poco de espacio. O ve a Ajustes: «Guarda tu progreso».', // nieuw, nalezen
+    speakTurnPrompt: '¿Qué dices?', // nieuw, nalezen
+    speakTurnExample: 'Ejemplo', // nieuw, nalezen
+    speakTurnReveal: 'Escucha la respuesta', // nieuw, nalezen
+    sceneTitle: 'Escucha en el trabajo', // nieuw, nalezen
+    sceneIntro: 'Hay ruido, como en el trabajo. Escucha. Después vienen las preguntas.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

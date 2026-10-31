@@ -5,7 +5,7 @@ import type { Lesson } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
 import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
-import { autoSpeak, endLessonPace, sounds, speak, startLessonPace, stopSpeech, surelySilent } from '../lib/audio';
+import { autoSpeak, endLessonPace, hasClip, sounds, speak, startLessonPace, stopSpeech, surelySilent } from '../lib/audio';
 import { realPaceReplay } from '../lib/tempo';
 import { unitOfLesson } from '../content/courses';
 
@@ -23,7 +23,7 @@ import { chatWhy } from '../content/chatWhy';
 import { sayingQuestion } from '../content/sayings';
 import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
-import { learnerCharacter, voiceFor } from '../lib/voices';
+import { learnerCharacter, learnerVoice, voiceFor } from '../lib/voices';
 import { nonLatinHelp, pickInsteadOfTyping, typeAsPick, writingInput } from '../lib/writing';
 import { castFor, colleaguesOf, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
@@ -379,11 +379,14 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const [nonLatinAtStart] = useState(() => nonLatinHelp(lang));
   const [sayingsAtStart] = useState(() => Boolean(sayings));
   const [paceAtStart] = useState(() => ({ fast, easy }));
+  // "Wat zeg je?" only for a chat whose lines are recorded (public/audio-el/voices.json), checked
+  // once at the start: the colleague's line and the reply are then heard, never the phone voice.
+  const [recordedAtStart] = useState(() => (text: string) => hasClip(text, learnerVoice(lang?.gender)));
   const initial = useMemo(
     // A learner who reads only another script gets picture cards (or cards with speakers) where
     // a review would show Latin-only text cards (lib/exercises.ts readableDutch).
-    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart, sector, sayings: sayingsAtStart, ...paceAtStart }),
-    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector, sayingsAtStart, paceAtStart],
+    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart, sector, sayings: sayingsAtStart, ...paceAtStart, recorded: recordedAtStart }),
+    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector, sayingsAtStart, paceAtStart, recordedAtStart],
   );
   // The saved place in that list, with the mistakes queued then (null: start from the top).
   // A mistake comes back in a new form made from its place in the queue (forRetry, as check() does).
@@ -784,7 +787,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   function next(queued?: number) {
     const coming = typeof queued === 'number' ? queued : 0;
     // A sentence said ("Zeg het", never graded): it gets a spoken-sentence card (lib/spaced.ts).
-    if (ex?.kind === 'speak' && index < initial.length && !isWord(ex.item)) {
+    // ("Wat zeg je?" is a reply of a chat, not a sentence of the lesson: no card.)
+    if (ex?.kind === 'speak' && index < initial.length && !isWord(ex.item) && !ex.turn) {
       wordResults.current[speakCardId(ex.item.id)] = true;
       made.current.add(speakCardId(ex.item.id));
     }

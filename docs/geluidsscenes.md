@@ -7,8 +7,10 @@ een heftruck, er draait een machine. In deze stap komen per sector **drie korte 
 een instructie of een kort gesprek, met omgevingsgeluid erachter. Daarna 1 of 2 vragen over de kern
 (wat moet je doen, hoe laat, welk nummer) en één zin uitleg.
 
-- **De teksten** staan in [`src/content/geluidsscenes.ts`](../src/content/geluidsscenes.ts). Ze
-  worden nog nergens in de app getoond: het scherm komt pas als de opnames er zijn.
+- **De teksten** staan in [`src/content/geluidsscenes.ts`](../src/content/geluidsscenes.ts).
+- **Het scherm** "Luister op de werkvloer" staat in [`src/components/Scene.tsx`](../src/components/Scene.tsx)
+  (zie [In de app](#in-de-app)). De leerling ziet een scène **alleen als de mix er is**. Zolang er
+  geen mixen zijn, verandert er voor de leerling niets.
 - **De controle** staat in [`tests/geluidsscenes.test.ts`](../tests/geluidsscenes.test.ts): 3 scènes
   per sector, 3 tot 6 beurten, 25 tot 60 woorden, zinnen van hoogstens 12 woorden, de A2-regels
   van [`taal-a2.md`](taal-a2.md), alleen woorden uit de cursus (of een korte lijst gewone woorden),
@@ -648,7 +650,78 @@ Alle 30 scènes in één keer, met de goede bestanden en het goede niveau per sc
 ```sh
 npm run scenes:lines -- --mix         # schrijft public/audio/scene-mix.sh
 bash public/audio/scene-mix.sh        # maakt public/audio-scenes/<id>[.thijmen|.ariel].mp3
+                                      # en als laatste public/audio-scenes/scenes.json
 ```
+
+Het script stopt bij het eerste bestand dat ontbreekt (een stemclip of een geluid). Neem dus eerst
+alles op, en mix daarna. De laatste stap (`npm run scenes:lines -- --manifest`) schrijft de lijst
+`public/audio-scenes/scenes.json`: welke mixen er echt zijn. Alleen die scènes toont de app. Mix je
+later één scène opnieuw? Draai dan zelf nog een keer `npm run scenes:lines -- --manifest`.
+
+Getest op 31 oktober 2026 met nepclips (een toon en ruis) in een aparte map: 55 mixen in ongeveer
+30 seconden. Een scène duurt ongeveer 9 tot 12 seconden en is zo'n 80 kB groot.
+
+## Stap voor stap: van opname tot de app
+
+Voor de eigenaar. Doe alles in de map van Vloertaal, op je eigen computer. De GitHub-workflow doet
+`--merge` en het mixen niet. Nodig: Node, ffmpeg 4.4 of nieuwer, en je ElevenLabs-sleutel.
+
+1. **De lijst met zinnen.**
+   ```sh
+   npm run clips
+   npm run scenes:lines -- --merge       # zet de 124 scène-clips achter in public/audio/clips.json
+   ```
+2. **De stemmen opnemen** (ongeveer 5.500 credits, zie [Wat het kost](#wat-het-kost)).
+   ```sh
+   export ELEVENLABS_API_KEY=jouw-sleutel
+   node scripts/voices/elevenlabs.mjs check   # alleen de prijs; er wordt niets opgenomen
+   node scripts/voices/elevenlabs.mjs all     # neemt op wat ontbreekt
+   ```
+   Ontbreken er ook gewone clips? Dan neemt `all` die mee. Wil je dat niet, begrens de run dan met
+   `MAX_CREDITS=6000`. Luister een paar scène-clips na: het tempo moet gewoon zijn, niet langzaam.
+3. **Het omgevingsgeluid.** Per scène één bestand `public/audio-scenes/geluid/<scène-id>.mp3`, van
+   15 s, als loop (zie stap 2 hierboven). Is één geluid voor meer scènes? Kopieer het dan onder elke
+   scène-id. Deze map gaat **niet** mee in de commit (hij staat in `.gitignore`).
+4. **Mixen.**
+   ```sh
+   npm run scenes:lines -- --mix
+   bash public/audio/scene-mix.sh
+   ```
+   Je krijgt 55 mixen: 25 scènes met de leerling in twee stemmen (`<id>.thijmen.mp3` en
+   `<id>.ariel.mp3`) en 5 scènes zonder leerling (`<id>.mp3`). Daarbij komt
+   `public/audio-scenes/scenes.json`.
+5. **Luister na.** Is bij elke scène elk woord te verstaan? Is het geluid niet harder dan de stem?
+   Is één mix niet goed? Haal dat mp3'tje weg en draai `npm run scenes:lines -- --manifest`. Dan
+   toont de app die scène niet. Een scène met de leerling krijgt dan alleen wie de andere stem heeft.
+6. **Controleer en commit.**
+   ```sh
+   npx vitest run tests/scenes.test.ts tests/geluidsscenes.test.ts
+   ```
+   Deze bestanden moeten in `public/` komen en mee in de commit:
+   - `public/audio-el/<stem>/g.*.mp3` en `public/audio-el/voices.json`: de losse stemclips en de
+     lijst ervan, net als bij de andere opnames. `voices.json` noemt ze, dus ze horen erbij.
+   - `public/audio-scenes/*.mp3`: de mixen.
+   - `public/audio-scenes/scenes.json`: de lijst voor de app.
+
+   Niet mee: `public/audio/` (de lijsten en het mixscript) en `public/audio-scenes/geluid/`.
+   Samen is het ongeveer 8 MB: de mixen ongeveer 4 MB, de losse clips nog eens zoveel.
+
+## In de app
+
+- **Waar.** Op de onderwerppagina van het onderwerp in `naUnit` (Alle onderwerpen › het
+  onderwerp). Onder de lessen staat dan een extra rij "Luister op de werkvloer", met de titel van
+  de scène. De rij komt pas als het onderwerp klaar is: dan kent de leerling de woorden.
+- **Waarom daar, en niet in de les.** De lessen hebben al 19 tot 21 oefeningen, en "Wat zeg je?"
+  zit er nu ook in. Een scène van 10 seconden met 2 vragen maakt een les langer. Op de
+  onderwerppagina is de scène een vrije extra: je kunt hem vaker beluisteren. Hij staat in de
+  lijst van het onderwerp, dus er komt geen vierde knop bij (hooguit 3 dingen om op te tikken).
+- **Hoe.** Eerst speelt de mix (de knop Luisteren); pas daarna komt Verder. Dan komen de 1 of 2
+  vragen, in het Nederlands, met 3 antwoorden en een luidspreker. Na het antwoord: goed of fout,
+  de uitleg in het Nederlands met de vertaling, en Verder. De vertaling is nu nog Engels (`gloss`,
+  id `<scène-id>.<n>.why`). Er wordt niets bewaard en niets geteld.
+- **Alleen met een mix.** De app vraagt `audio-scenes/scenes.json` op (`src/lib/scenes.ts`). Is er
+  geen lijst, is hij kapot, is de telefoon offline, of is er geen mix in de stem van de leerling?
+  Dan is er geen rij. Nooit de stem van de telefoon: het lawaai is juist het punt.
 
 ## Wat het kost
 
@@ -687,8 +760,8 @@ Echte stemmen en echt geluid klinken het meest als de werkvloer. Dat kan bij een
 2. **Eén geluid per plek of per scène.** Delen is goedkoper en klinkt vaak net zo goed.
 3. **De leerling in twee stemmen**, of de leerling-beurten weglaten in de mix (dan horen ze alleen
    de collega, en volstaat één mix per scène).
-4. **Waar de scène komt.** Nu: na het genoemde onderwerp. Het scherm (stap 2.3, later) kan de
-   scène als extra oefening na dat onderwerp tonen, of in de herhaling.
+4. **Waar de scène komt.** Nu: op de onderwerppagina van `naUnit`, als het onderwerp klaar is (zie
+   [In de app](#in-de-app)). Later kan de scène ook in de herhaling komen.
 5. **De ⚖️-scènes** noemen een veiligheidsregel of rechtenfeit (valbeveiliging, last van de kraan,
    spanningsloos werken, rijbewijs, storing aan een machine, heftruck, bespoten kas, hitte, gevallen cliënt, pillen,
    allergie, datum in de koelcel, natte vloer, middelen mengen, vlees over de datum, alcohol onder de 18). Laat ze nalezen zoals de andere

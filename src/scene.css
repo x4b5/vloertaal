@@ -1,0 +1,41 @@
+/* "Luister op de werkvloer" (src/components/Scene.tsx): a sound scene and its questions. */
+.scene-head { padding: calc(12px + env(safe-area-inset-top)) 16px 0; width: 100%; max-width: 640px; margin: 0 auto; }
+.scene-title { margin: 0.1em 0; font-size: 1.35rem; font-weight: 650; display: flex; flex-direction: column; }
+.scene-title-nl { font-weight: 650; }
+.scene-title .bi { font-weight: 400; color: var(--ink-2); font-size: 0.85em; }
+.scene-title > .bi:only-child { font-weight: 650; color: var(--ink); font-size: 1em; }
+.scene-body { padding-top: 8px; gap: 14px; }
+.scene-body [tabindex="-1"]:focus, .scene-body [tabindex="-1"]:focus-visible { outline: none; }
+
+.scene-card {
+  display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 16px;
+  background: var(--card); border: 2.5px solid var(--edge); border-radius: var(--radius); text-align: center;
+}
+.scene-cast { display: flex; gap: 8px; justify-content: center; }
+.scene-cast .ch { display: block; height: 88px; width: auto; }
+.scene-name { margin: 0; font-size: 1.5rem; font-weight: 700; line-height: 1.25; color: var(--ink-strong); overflow-wrap: anywhere; }
+.scene-intro { margin: 0; font-size: 1.1rem; line-height: 1.4; }
+
+/* The scene's sound: a big speaker button (the same on every page of the scene). */
+.scene-play { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; width: 100%; background: var(--card); color: var(--blue); border-color: var(--blue); }
+.scene-play .btn-label { color: var(--ink); }
+.scene-play.is-playing { background: var(--blue); color: var(--paper); }
+.scene-play.is-playing .btn-label { color: var(--paper); }
+
+.scene-question { display: flex; align-items: center; gap: 12px; }
+.scene-question .speak { flex: none; }
+.scene-ask { margin: 0; font-size: 1.35rem; font-weight: 700; line-height: 1.3; color: var(--ink-strong); overflow-wrap: anywhere; }
+.scene-ask[dir="ltr"] { text-align: start; }
+
+.scene-why {
+  display: flex; align-items: flex-start; gap: 10px; margin: 0; padding: 12px 14px;
+  border: 2px solid var(--line); border-radius: var(--radius); background: var(--card);
+}
+.scene-why.is-right { border-color: var(--green); }
+.scene-why.is-wrong { border-color: var(--red); }
+.scene-why-icon { flex: none; display: grid; place-items: center; }
+.scene-why.is-right .scene-why-icon { color: var(--right-ink); }
+.scene-why.is-wrong .scene-why-icon { color: var(--wrong-ink); }
+.scene-why-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.scene-why-help { color: var(--ink-2); }
+.scene-why-nl { font-weight: 650; }

@@ -1,12 +1,14 @@
-// Nog geen scherm; wacht op opnames (docs/geluidsscenes.md)
+// Scherm: src/components/Scene.tsx; alleen te zien met een mix (docs/geluidsscenes.md)
 //
 // Werkvloer-luisteren (fase 2, stap 2.3): per sector drie korte geluidsscènes. Een collega of
 // leidinggevende geeft een instructie op normaal tempo, met omgevingsgeluid erachter; soms zegt
 // de leerling ("ik") kort iets terug. Daarna 1 of 2 vragen over de kern: wat moet je doen, hoe
 // laat, welk nummer.
 //
-// Dit bestand wordt nog nergens in de app geïmporteerd: alleen tests/geluidsscenes.test.ts en
-// scripts/scene-lines.ts (npm run scenes:lines) lezen het. Het scherm komt pas als de opnames er zijn.
+// Het scherm "Luister op de werkvloer" (src/components/Scene.tsx, een eigen bestand dat pas laadt
+// als het opengaat) leest dit bestand, net als tests/geluidsscenes.test.ts en scripts/scene-lines.ts
+// (npm run scenes:lines). De onderwerppagina toont een scène pas als zijn mix er is
+// (public/audio-scenes/scenes.json, src/lib/scenes.ts). Zonder mixen ziet de leerling niets.
 //
 // Stemmen: dezelfde personages en stemmen als in de lessen (src/lib/voices.ts):
 // bram → Thijmen, henk → Daniel, amina → Ariël, jada → Noa. "ik" is de leerling: die beurt wordt

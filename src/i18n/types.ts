@@ -500,6 +500,12 @@ export const uiEn = {
   workTry: 'Try it at work today',
   /** Saving the progress on this phone failed (src/lib/progress.ts saveProgress; src/components/SaveFailedNote.tsx): once. */
   saveFailed: 'Your progress was not saved. Is your phone full? Make some room. Or go to Settings: Keep your progress.',
+  /* Stap 2: "Wat zeg je?" before a chat (src/components/Speaking.tsx), and the sound scenes (src/components/Scene.tsx). */
+  speakTurnPrompt: 'What do you say?',
+  speakTurnExample: 'Example',
+  speakTurnReveal: 'Hear the answer',
+  sceneTitle: 'Listen at work',
+  sceneIntro: 'There is noise, as at work. Listen. Then come the questions.',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

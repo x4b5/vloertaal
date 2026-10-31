@@ -402,6 +402,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'ን ስራሐይ ሆላንድኛ ብ Vloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen
     workTry: { m: 'ሎሚ ኣብ ስራሕካ ፈትኖ', f: 'ሎሚ ኣብ ስራሕኪ ፈትንዮ', x: 'ሎሚ ኣብ ስራሕ ፈትንዎ' }, // nieuw, nalezen
     saveFailed: 'ምዕባለኹም ኣይተዓቀበን። ተሌፎንኩም መሊኡ ድዩ? ቁሩብ ቦታ ግበሩ። ወይ ኣብ ምድላዋት: «ምዕባለኹም ዓቅቡ»።', // nieuw, nalezen
+    speakTurnPrompt: { m: 'እንታይ ትብል?', f: 'እንታይ ትብሊ?', x: 'እንታይ ትብሉ?' }, // nieuw, nalezen
+    speakTurnExample: 'ኣብነት', // nieuw, nalezen
+    speakTurnReveal: { m: 'መልሲ ስማዕ', f: 'መልሲ ስምዒ', x: 'መልሲ ስምዑ' }, // nieuw, nalezen
+    sceneTitle: { m: 'ኣብ ቦታ ስራሕ ስማዕ', f: 'ኣብ ቦታ ስራሕ ስምዒ', x: 'ኣብ ቦታ ስራሕ ስምዑ' }, // nieuw, nalezen
+    sceneIntro: { m: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስማዕ። ድሕሪኡ ሕቶታት ይመጹ።', f: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስምዒ። ድሕሪኡ ሕቶታት ይመጹ።', x: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስምዑ። ድሕሪኡ ሕቶታት ይመጹ።' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

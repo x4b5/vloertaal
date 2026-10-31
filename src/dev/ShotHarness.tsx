@@ -51,6 +51,7 @@ import { allRegionUnits, isRegionChoice, regionOf, type RegionChoice } from '../
 import { ToetsShot } from './ToetsShot';
 import { NiveauShot } from './NiveauShot';
 import { SamenShot } from './SamenShot';
+import { SceneShot } from './SceneShot';
 import { InstapCheckShot } from './InstapCheckShot';
 import { MeldingShot } from './MeldingShot';
 
@@ -138,6 +139,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'niveau') return <NiveauShot lang={lang} gender={gender} q={q} />;
   // "Oefen samen": /?shot=samen&step=intro|turn|end|result&at=N&swap=1&cu=<lesson> (src/dev/SamenShot.tsx).
   if (shot === 'samen') return <SamenShot lang={lang} gender={gender} q={q} />;
+  // "Luister op de werkvloer": /?shot=scene&state=topic|listen|question&id=<scene>&at=N&pick=K (src/dev/SceneShot.tsx).
+  if (shot === 'scene') return <SceneShot lang={lang} gender={gender} q={q} />;
   // "Ik ken dit al: korte check": /?shot=instapcheck&state=topic|question&at=N|passed|notyet|checked|route|kaart (src/dev/InstapCheckShot.tsx).
   if (shot === 'instapcheck') return <InstapCheckShot lang={lang} gender={gender} q={q} />;
   // "Er is iets veranderd" (a notice, with a made-up example): /?shot=melding&country=be&state=new (src/dev/MeldingShot.tsx).
@@ -403,7 +406,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     // &heard=wait while it listens.
     const heard = q.get('heard');
     setSpeakShotHeard(heard === 'same' ? item.nl : heard === 'almost' ? item.nl.split(' ').slice(0, -1).join(' ') : heard ?? undefined);
-    exercises[shot] = { kind: 'speak', item };
+    // &turn=1: "Wat zeg je?" before the chat (the shift chat): the reply is what to say.
+    exercises[shot] = q.get('turn') ? { kind: 'speak', item: { ...coffee.reply }, turn: coffee } : { kind: 'speak', item };
   }
   const ex = exercises[shot] ?? exercises.dutch;
   // A few intro exercises in front would move the progress bar; pad so it sits at ~40%.

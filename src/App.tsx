@@ -26,7 +26,7 @@ import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
 // Screens in files of their own (loaded when needed, and in the background after the start).
-import { Admin, CertEarned, CertificateScreen, CoachCardScreen, Coaches, KeepScreen, Milestone, PocketCardScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
+import { Admin, CertEarned, CertificateScreen, CoachCardScreen, Coaches, KeepScreen, Milestone, PocketCardScreen, SceneScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
 import { keepOffered } from './lib/keepOffered';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
@@ -109,7 +109,9 @@ type View =
   | { name: 'kaart' }
   /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): the 5 questions of a topic, and the end. */
   | { name: 'check'; unit: string; seed: number }
-  | { name: 'check-result'; unit: string; right: number; total: number };
+  | { name: 'check-result'; unit: string; right: number; total: number }
+  /** "Luister op de werkvloer" (src/components/Scene.tsx): a sound scene, from its topic page. */
+  | { name: 'scene'; id: string; url: string };
 
 const HOME: View = { name: 'home' };
 
@@ -935,6 +937,7 @@ export default function App() {
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
             onCheck={(id) => go({ name: 'check', unit: id, seed: Date.now() >>> 0 })}
             onUndoCheck={(id) => setProgress((p) => { const u = findUnit(id); return u ? undoCheck(p, u) : p; })}
+            onScene={(id, url) => go({ name: 'scene', id, url })}
             unlocked={unlockedShown}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
@@ -956,6 +959,8 @@ export default function App() {
       );
     case 'coaches':
       return <Coaches onBack={back} lang={lang} />;
+    case 'scene':
+      return <SceneScreen id={view.id} url={view.url} lang={lang} onBack={back} onDone={back} />;
     case 'news':
       return <News onBack={back} lang={lang} />;
     case 'samen': {

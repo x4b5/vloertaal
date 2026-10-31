@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Уча нидерландски за работата си с Vloertaal. Безплатно е: {link}', // nieuw, nalezen
     workTry: 'Опитай днес на работа', // nieuw, nalezen
     saveFailed: 'Напредъкът ти не е запазен. Телефонът пълен ли е? Освободи малко място. Или отвори Настройки: „Запази напредъка си“.', // nieuw, nalezen
+    speakTurnPrompt: 'Какво казваш?', // nieuw, nalezen
+    speakTurnExample: 'Пример', // nieuw, nalezen
+    speakTurnReveal: 'Чуй отговора', // nieuw, nalezen
+    sceneTitle: 'Слушай на работа', // nieuw, nalezen
+    sceneIntro: 'Има шум, като на работа. Слушай. После идват въпросите.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

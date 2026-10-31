@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'أتعلّم الهولندية لعملي مع Vloertaal. مجاناً: {link}', // nieuw, nalezen
     workTry: { m: 'جرّبها اليوم في عملك', f: 'جرّبيها اليوم في عملك', x: 'للتجربة اليوم في العمل' }, // nieuw, nalezen
     saveFailed: 'لم يُحفظ تقدّمك. هل الهاتف ممتلئ؟ الحل: إفراغ بعض المساحة. أو في الإعدادات: «حفظ تقدمك».', // nieuw, nalezen
+    speakTurnPrompt: { m: 'ماذا تقول؟', f: 'ماذا تقولين؟', x: 'ما الرد؟' }, // nieuw, nalezen
+    speakTurnExample: 'مثال', // nieuw, nalezen
+    speakTurnReveal: { m: 'استمع إلى الجواب', f: 'استمعي إلى الجواب', x: 'الاستماع إلى الجواب' }, // nieuw, nalezen
+    sceneTitle: { m: 'استمع في مكان العمل', f: 'استمعي في مكان العمل', x: 'الاستماع في مكان العمل' }, // nieuw, nalezen
+    sceneIntro: { m: 'هناك ضجيج كما في العمل. استمع، ثم تأتي الأسئلة.', f: 'هناك ضجيج كما في العمل. استمعي، ثم تأتي الأسئلة.', x: 'هناك ضجيج كما في العمل. الاستماع أولاً، ثم الأسئلة.' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

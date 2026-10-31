@@ -9,13 +9,13 @@ import {
   canRecord, isWord, MAX_RECORD_MS, MIC_RETRIES, micBlocked, recordMime, setMicBlocked, SILENCE_MS, speakMode,
 } from '../lib/speaking';
 import { judge, localStatus, startListening, verdictOf, type Heard, type Listening, type Verdict } from '../lib/listen';
-import { voiceFor } from '../lib/voices';
+import { learnerCharacter, voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
 import { pictureCast, WordPicture } from '../pictures';
 import { Bi } from './Bi';
 import { NlPair } from './NlPair';
-import { castFor, Character, type CharacterId } from './Characters';
-import { LockIcon, SpeakerIcon } from './Icons';
+import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId } from './Characters';
+import { BubblesIcon, LockIcon, SpeakerIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { focusIsLost } from './useFocusLost';
 
@@ -108,13 +108,19 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
   /** Screenshot harness only: what the phone "heard" (judged as usual), or 'wait'. */
   heardForShot?: string;
 }) {
-  const { item } = ex;
-  const picture = isWord(item) ? (hasPicture(item) ? item : undefined) : sentencePicture(item);
+  const { item, turn } = ex;
+  const picture = turn ? undefined : isWord(item) ? (hasPicture(item) ? item : undefined) : sentencePicture(item);
   // The speaker is the person in the picture when it shows one of the cast, so the face on the
   // card, the voice and the name on the compare button are the same character.
-  const who: CharacterId = (picture && pictureCast(picture.id)) || (isWord(item) ? 'bram' : castFor(item.id));
+  // "Wat zeg je?" (`turn`): the reply is "your" line, in the voice "you" have in the chats (Amina's,
+  // or Bram's for a man); the colleague who asks is the one of that chat (ChatExercise).
+  const who: CharacterId = turn ? learnerCharacter(lang?.gender) : (picture && pictureCast(picture.id)) || (isWord(item) ? 'bram' : castFor(item.id));
   const voice = voiceFor(who);
+  const them = turn ? castFor(turn.prompt.id, colleaguesOf(lang?.gender)) : undefined;
+  const themVoice = them ? voiceFor(them) : undefined;
   const name = who[0].toUpperCase() + who.slice(1);
+  /** "Wat zeg je?" without recording ("say it out loud"): the reply shows after "Hear the answer". */
+  const [shown, setShown] = useState(false);
   // No usable microphone (none, or it failed earlier in this lesson): "say it out loud" at once.
   const [phase, setPhase] = useState<Phase>(phaseForShot ?? (speakMode() === 'record' ? 'idle' : 'off'));
   /** Retries left after the microphone failed here (one; see MIC_RETRIES). */
@@ -199,9 +205,12 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
   }, [item.nl, voice]);
 
   // Say it once when the exercise opens (not in "Without sound"); let go of everything on leave.
+  // "Wat zeg je?": the colleague's line, never the reply (the learner says that first).
+  const opening = turn ? turn.prompt.nl : item.nl;
+  const openingVoice = turn ? themVoice : voice;
   useEffect(() => {
     alive.current = true;
-    if (!phaseForShot) autoSpeak(item.nl, false, 'nl', voice);
+    if (!phaseForShot) autoSpeak(opening, false, 'nl', openingVoice);
     return () => {
       alive.current = false;
       const rec = recRef.current;
@@ -212,7 +221,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
       release();
       discard();
     };
-  }, [item.nl, voice, phaseForShot, release, discard]);
+  }, [opening, openingVoice, phaseForShot, release, discard]);
 
   // No microphone: Continue is open. After recording, the learner rates instead: "Sounds the
   // same" goes on (nothing is scored), "Say it again" records once more; Continue stays hidden.
@@ -367,10 +376,39 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
   const recording = phase === 'recording';
   const listenFirst = phase === 'idle' || phase === 'asking' || phase === 'recording';
   const meaning = gloss(item.id, item.en, lang);
+  // "Wat zeg je?": the reply is shown once the learner has said it (recorded, or out loud and then
+  // "Hear the answer").
+  const revealed = phase === 'review' || shown;
 
   return (
-    <div className={`exercise say-ex say-is-${phase}`} ref={box}>
-      <h2 className="prompt" tabIndex={-1}><Bi text={ui('speakPrompt', lang)} /></h2>
+    <div className={`exercise say-ex say-is-${phase} ${turn ? 'say-turn' : ''}`} ref={box}>
+      <h2 className="prompt" tabIndex={-1}><Bi text={ui(turn ? 'speakTurnPrompt' : 'speakPrompt', lang)} /></h2>
+      {turn && them ? (
+        <div className="chat say-turn-chat">
+          <div className="chat-row chat-them">
+            <span className="chat-char"><Character who={them} /></span>
+            <div className="chat-bubble">
+              {/* Hidden while recording (its sound would be recorded too), its place kept. */}
+              <SpeakButton glyph text={turn.prompt.nl} help={lang} voice={themVoice} className={recording ? 'say-model-off' : undefined} />
+              <span className="chat-line" lang="nl">{breakable(turn.prompt.nl)}</span>
+              <span className="chat-hint"><Bi text={gloss(turn.prompt.id, turn.prompt.en, lang)} /></span>
+            </div>
+          </div>
+          <div className="chat-row chat-me">
+            <div className="chat-bubble chat-bubble-me" aria-live="polite">
+              {revealed ? (
+                <>
+                  {/* While comparing, the Example button below plays it (one speaker per item). */}
+                  {phase !== 'review' && <SpeakButton glyph text={item.nl} help={lang} voice={voice} />}
+                  <span className="chat-line" lang="nl">{breakable(item.nl)}</span>
+                  <span className="chat-hint"><Bi text={meaning} /></span>
+                </>
+              ) : <span className="chat-blank" aria-hidden />}
+            </div>
+            <span className="chat-char"><MeAvatar /></span>
+          </div>
+        </div>
+      ) : (
       <div className={`card say-card ${picture ? '' : 'say-card-text'}`}>
         {picture && <WordPicture className="say-pic" id={picture.id} emoji={picture.emoji} size={76} />}
         <div className="say-words">
@@ -380,6 +418,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
             (one speaker per item). Hidden while recording (its sound would be recorded too), its place kept. */}
         {phase !== 'review' && <SpeakButton text={item.nl} voice={voice} help={lang} className={recording ? 'say-model-off' : undefined} />}
       </div>
+      )}
 
       {listenFirst && (
         <div className="say-mic-area">
@@ -420,11 +459,21 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
       {phase === 'review' && (
         <>
           <div className="say-compare">
-            <button type="button" className={`say-play ${playing === 'them' ? 'is-playing' : ''}`} onClick={playThem} aria-label={`${name}: ${item.nl}`} lang="nl">
-              <span className="say-face" aria-hidden><Character who={who} crop="head" size={48} /></span>
-              <SpeakerIcon size={30} />
-              <span className="say-who" lang="nl">{name}</span>
-            </button>
+            {turn ? (
+              // "Your" line, as an example: no face ("you" are never a cast member, and the person
+              // icon is your own recording next to it), a speech bubble instead.
+              <button type="button" className={`say-play ${playing === 'them' ? 'is-playing' : ''}`} onClick={playThem} aria-label={`${said(ui('speakTurnExample', lang))}: ${item.nl}`}>
+                <span className="say-face say-face-example" aria-hidden><BubblesIcon size={30} /></span>
+                <SpeakerIcon size={30} />
+                <Bi className="say-who" text={ui('speakTurnExample', lang)} />
+              </button>
+            ) : (
+              <button type="button" className={`say-play ${playing === 'them' ? 'is-playing' : ''}`} onClick={playThem} aria-label={`${name}: ${item.nl}`} lang="nl">
+                <span className="say-face" aria-hidden><Character who={who} crop="head" size={48} /></span>
+                <SpeakerIcon size={30} />
+                <span className="say-who" lang="nl">{name}</span>
+              </button>
+            )}
             <button type="button" className={`say-play say-play-me ${playing === 'me' ? 'is-playing' : ''}`} onClick={playMine} aria-label={said(ui('speakMe', lang))} lang={saidLang(ui('speakMe', lang))}>
               <span className="say-face say-face-me" aria-hidden><PersonIcon size={34} /></span>
               <SpeakerIcon size={30} />
@@ -456,6 +505,13 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
               (here or earlier in the lesson) it says the microphone did not work; chosen by the
               learner ("Say it out loud instead"): the microphone is off, that's fine. */}
           <Bi text={ui(!canRecord() ? 'sayAloud' : failed || micBlocked() ? 'micFailed' : 'micUnavailable', lang)} />
+          {/* "Wat zeg je?": first say the answer yourself, then hear it. */}
+          {turn && !shown && (
+            <button type="button" className="btn say-reveal" onClick={() => { setShown(true); playThem(); }}>
+              <SpeakerIcon size={24} />
+              <Bi text={ui('speakTurnReveal', lang)} />
+            </button>
+          )}
           {failed && retries > 0 && canRecord() && !phaseForShot && (
             <button
               type="button"

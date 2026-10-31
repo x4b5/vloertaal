@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'من با Vloertaal هلندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
     workTry: 'امروز سر کار امتحانش کن', // nieuw, nalezen
     saveFailed: 'پیشرفت شما ذخیره نشد. آیا گوشی پر است؟ کمی جا باز کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
+    speakTurnPrompt: 'چه می‌گویی؟', // nieuw, nalezen
+    speakTurnExample: 'نمونه', // nieuw, nalezen
+    speakTurnReveal: 'جواب را بشنو', // nieuw, nalezen
+    sceneTitle: 'در محل کار گوش کن', // nieuw, nalezen
+    sceneIntro: 'مثل سر کار، سر و صدا هست. گوش کن. بعد سؤال‌ها می‌آیند.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

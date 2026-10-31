@@ -4687,3 +4687,10 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
    always there but taking no room or taps; the note looks like the sound note, above every screen. */
 .save-note-live { position: fixed; top: 0; left: 0; width: 0; height: 0; z-index: 40; pointer-events: none; }
 .save-note { z-index: 40; }
+
+/* ---- Stap 2: "Wat zeg je?" (Speaking.tsx, `turn`) ---- */
+.say-turn-chat { margin-bottom: 12px; }
+.say-turn-chat .say-model-off { visibility: hidden; }
+.say-reveal { flex: 1 1 100%; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; }
+.say-turn-chat .chat-bubble-me:has(.chat-line) { flex-wrap: wrap; justify-content: flex-start; flex: 0 1 auto; }
+.say-turn .say-face-example { color: var(--blue); }

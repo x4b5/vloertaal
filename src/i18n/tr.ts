@@ -401,6 +401,11 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
     workTry: 'Bugün işte dene', // nieuw, nalezen
     saveFailed: 'İlerlemen kaydedilmedi. Telefonun dolu mu? Biraz yer aç. Ya da Ayarlar’a git: “İlerlemeni sakla”.', // nieuw, nalezen
+    speakTurnPrompt: 'Ne dersin?', // nieuw, nalezen
+    speakTurnExample: 'Örnek', // nieuw, nalezen
+    speakTurnReveal: 'Cevabı dinle', // nieuw, nalezen
+    sceneTitle: 'İş yerinde dinle', // nieuw, nalezen
+    sceneIntro: 'İşteki gibi gürültü var. Dinle. Sonra sorular gelir.', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
