@@ -1,4 +1,5 @@
-import { aboutSection } from '../content/about';
+import { aboutSection, STORY_DATE } from '../content/about';
+import { dateLocale, updateDate } from '../content/updates';
 import { units } from '../content/curriculum';
 import { THEME_UNITS, THEMES } from '../content/themes';
 import { APP_DATA, esc, plainPage, SITE } from './plainPage';
@@ -15,8 +16,11 @@ import { packText } from './pageTexts';
  * corrects the page too. The button opens the app with that language already asked ("Polski?").
  */
 
-/** The sections a newcomer needs to decide: what, how, for whom, free, privacy, and that it is a beta. */
-const SECTIONS = ['a.what', 'a.how', 'a.who', 'a.mission', 'a.free', 'a.beta'] as const;
+/**
+ * The sections a newcomer needs to decide: what, how, for whom, free, privacy, then why (the owner's
+ * story, signed and dated) and right after it that it is a beta (the story's last line leads into it).
+ */
+export const SECTIONS = ['a.what', 'a.how', 'a.who', 'a.mission', 'a.free', 'a.story', 'a.beta'] as const;
 
 export type PageCode = LangCode | 'en';
 
@@ -129,6 +133,12 @@ function topicsSection(t: ReturnType<typeof texts>, dir: 'ltr' | 'rtl'): string 
   return `<section aria-labelledby="topics" dir="${dir}"><h2 id="topics">${esc(t.topics)}</h2>${rows}</section>`;
 }
 
+/** Under the story: "Xavier · 31 oktober 2026", the date in the page's language (STORY_DATE). */
+function signed(code: PageCode): string {
+  const name = aboutSection('a.story').signed ?? '';
+  return `<p class="signed"><span lang="nl" dir="ltr">${esc(name)}</span> · <time datetime="${STORY_DATE}">${esc(updateDate(STORY_DATE, dateLocale(code)))}</time></p>`;
+}
+
 /** The page for one language. */
 export function langPage(code: PageCode): string {
   const page = LANG_PAGES.find((p) => p.code === code)!;
@@ -138,7 +148,7 @@ export function langPage(code: PageCode): string {
   // What it is, then (when it fits) that it is free and in your own language: the mission's first sentence.
   const description = describe(`${describe(t.body('a.what'), 160)} ${t.body('a.mission')}`);
   const sections = SECTIONS.map(
-    (id, i) => `<section aria-labelledby="s${i}"><h2 id="s${i}">${esc(t.title(id))}</h2><p>${esc(t.body(id))}</p></section>`,
+    (id, i) => `<section aria-labelledby="s${i}"><h2 id="s${i}">${esc(t.title(id))}</h2><p>${esc(t.body(id))}</p>${id === 'a.story' ? signed(code) : ''}</section>`,
   ).join('\n');
   // The help languages' own button opens the guess page with this language ("Polski?"); English
   // has no guess, so the app's own list of languages shows.

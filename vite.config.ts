@@ -3,7 +3,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
-import { UPDATES } from './src/content/updates';
+import { UPCOMING, UPDATES } from './src/content/updates';
 import { updatesPage } from './src/lib/updatesPage';
 import { INTRO_QUESTIONS } from './src/content/intro';
 import { introPage } from './src/lib/introPage';
@@ -93,13 +93,13 @@ export function bootPreloadScript(bundle: Record<string, { type: string; fileNam
   return `<script>try{var p=JSON.parse(localStorage.getItem('vloertaal:v1')||'null'),f=${JSON.stringify(packs)},a=function(h){if(!h)return;var l=document.createElement('link');l.rel='modulepreload';l.href=h;document.head.appendChild(l)};if(p){${look}}if(p&&p.onboarded){a(f[p.helpLang]);a(${JSON.stringify(pictures)})}}catch(e){}</script>`;
 }
 
-/** vloertaal.nl/nieuw: "Wat is er nieuw?", a plain page made from src/content/updates.ts. */
+/** vloertaal.nl/nieuw: "Wat is er nieuw?" ("Binnenkort" first), a plain page made from src/content/updates.ts. */
 function updatesPagePlugin(): Plugin {
   return {
     name: 'vloertaal-updates-page',
     apply: 'build',
     generateBundle() {
-      this.emitFile({ type: 'asset', fileName: 'nieuw/index.html', source: updatesPage(UPDATES) });
+      this.emitFile({ type: 'asset', fileName: 'nieuw/index.html', source: updatesPage(UPDATES, UPCOMING) });
     },
   };
 }

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { INTRO_QUESTIONS } from '../src/content/intro';
-import { UPDATES } from '../src/content/updates';
+import { UPCOMING, UPDATES } from '../src/content/updates';
 import { coachPage } from '../src/lib/coachPage';
 import { introPage } from '../src/lib/introPage';
 import { LANG_PAGES, langPage, languageNav } from '../src/lib/langPages';
@@ -22,7 +22,7 @@ const PAGES: { name: string; html: string }[] = [
   { name: '/onderwerpen/', html: topicsIndexPage() },
   { name: '/404.html', html: notFoundPage() },
   { name: '/intro/', html: introPage(INTRO_QUESTIONS) },
-  { name: '/nieuw/', html: updatesPage(UPDATES) },
+  { name: '/nieuw/', html: updatesPage(UPDATES, UPCOMING) },
 ];
 
 describe.each(PAGES)('plain page $name', ({ name, html }) => {

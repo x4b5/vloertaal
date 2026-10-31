@@ -17,8 +17,8 @@ describe('About in Dutch (the "NL" toggle)', () => {
       expect(s.nl.body.trim(), s.id).not.toBe('');
       expect(s.nl.body, s.id).not.toBe(s.body);
     }
-    // "What is Vloertaal?", then how it works, then Bram (the mission is on the professionals page).
-    expect(aboutSections.slice(0, 3).map((s) => s.id)).toEqual(['a.what', 'a.how', 'a.bram']);
+    // "What is Vloertaal?", then why (the owner's story, then the "we": the test version), then how it works (the mission is on the professionals page).
+    expect(aboutSections.slice(0, 4).map((s) => s.id)).toEqual(['a.what', 'a.story', 'a.beta', 'a.how']);
   });
 
   it('the privacy section keeps the privacy points and leaves "free" to the mission', () => {

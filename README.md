@@ -74,7 +74,7 @@ Hulptalen in het spoor Taal:
   - één vraag per pagina bij de start;
   - alles kan worden voorgelezen, ook de hulptaal;
   - werkt rechts-naar-links, in Tigrinya-schrift, met grote letters, donker en zonder geluid.
-- **Echte stemmen** (ElevenLabs, 1389 opnames); zonder opname leest de telefoonstem voor.
+- **AI-stemmen** (ElevenLabs, 1389 opnames); zonder opname leest de telefoonstem voor.
 - **Privacy**:
   - geen account en geen cookies; voortgang alleen op het toestel;
   - alleen een anonieme telling (GoatCounter): app geopend, les gestart, gestopt en afgerond (met

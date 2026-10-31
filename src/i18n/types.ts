@@ -354,6 +354,12 @@ export const uiEn = {
   forCoaches: 'For coaches and employers',
   /** Bottom of Over: the date of the newest entry in src/content/updates.ts. */
   lastUpdated: 'Last updated: {date}',
+  /** Bottom of Over: the row to the list of changes (src/content/updates.ts), and that page's title. */
+  whatsNew: 'What’s new?',
+  /** At the top of that page: the changes themselves are in Dutch only. */
+  newsInDutch: 'The changes are in Dutch.',
+  /** Under "Binnenkort" on that page (src/content/updates.ts UPCOMING): what is coming, without a date. */
+  upcomingNow: 'We are working on this now.',
   /* G4 b3: a sentence built by ear and a chat the other way round (later units); after a review
      with many words still due. */
   buildListen: 'Listen and make the sentence',

@@ -1,4 +1,5 @@
-import { aboutSection, CONTACT_EMAIL, PRO_TITLE } from './about';
+import { aboutSection, CONTACT_EMAIL, PRO_TITLE, STORY_DATE } from './about';
+import { updateDate } from './updates';
 
 /**
  * "Voor begeleiders en werkgevers": the page for professionals (language coaches, NT2 teachers,
@@ -42,6 +43,7 @@ export { PRO_TITLE };
 export const PRO_LEAD = 'Voor taalcoaches, NT2-docenten, taalhuizen, werkgevers, uitzendbureaus en scholen. Vloertaal is een gratis web-app waarmee nieuwkomers en arbeidsmigranten Nederlands oefenen voor hun werk: korte lessen met woorden, zinnen en gesprekjes van de werkvloer, met uitleg in dertien talen. Geen account, geen reclame, en het werkt op elke telefoon. Een aanvulling op een taalcursus of taalcoach, geen vervanging.';
 
 const mission = aboutSection('a.mission');
+const story = aboutSection('a.story');
 const beta = aboutSection('a.beta');
 const who = aboutSection('a.who');
 
@@ -55,6 +57,11 @@ export const proSections: ProSection[] = [
   {
     id: 'p.mission', emoji: mission.emoji, title: mission.nl.title,
     body: [mission.nl.body],
+  },
+  {
+    // The owner's story, signed and dated as on Over; its last line leads into the test version.
+    id: 'p.story', emoji: story.emoji, title: story.nl.title,
+    body: [story.nl.body, `${story.signed} · ${updateDate(STORY_DATE)}`],
   },
   {
     id: 'p.beta', emoji: beta.emoji, title: 'Een testversie: wie test er?',
@@ -78,7 +85,7 @@ export const proSections: ProSection[] = [
   {
     id: 'p.voices', emoji: '🔊', title: 'De stemmen en de bronnen',
     body: [
-      'Elk personage heeft een eigen Nederlandse stem: Bram praat met de stem van Thijmen, Henk met Daniel, Amina met Ariël en Jada met Noa. Deze stemmen zijn opgenomen met ElevenLabs. Heeft een zin nog geen opname? Dan hoor je de stem van je eigen telefoon of computer.',
+      'Elk personage heeft een eigen Nederlandse stem: Bram praat met de stem van Thijmen, Henk met Daniel, Amina met Ariël en Jada met Noa. Deze stemmen zijn gemaakt met AI (ElevenLabs). Heeft een zin nog geen opname? Dan hoor je de stem van je eigen telefoon of computer.',
       'De tips over regels en rechten zijn geschreven met de informatie van de overheid en officiële instanties, zoals de Rijksoverheid, UWV, de Nederlandse Arbeidsinspectie, de Belastingdienst en het Juridisch Loket. De teksten zijn bijgewerkt in oktober 2026. Het blijft algemene informatie, geen juridisch advies. De bronnen van de cijfers staan hieronder bij de feiten.',
     ],
   },
