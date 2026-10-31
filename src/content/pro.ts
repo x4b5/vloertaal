@@ -39,8 +39,14 @@ export interface ProSection {
 
 export { PRO_TITLE };
 
-/** Under the title: what Vloertaal is, for someone who does not know it yet. */
-export const PRO_LEAD = 'Voor taalcoaches, NT2-docenten, taalhuizen, werkgevers, uitzendbureaus en scholen. Vloertaal is een gratis web-app waarmee nieuwkomers en arbeidsmigranten Nederlands oefenen voor hun werk: korte lessen met woorden, zinnen en gesprekjes van de werkvloer, met uitleg in dertien talen. Geen account, geen reclame, en het werkt op elke telefoon. Een aanvulling op een taalcursus of taalcoach, geen vervanging.';
+/**
+ * Under the title: the question first, so whoever arrives (for example from a poster) sees at once
+ * what we ask. Modest, as a question; what Vloertaal is follows in 'p.what', the reason in 'p.story'.
+ */
+export const PRO_LEAD = 'Zou je willen meekijken? Vloertaal is nog in ontwikkeling en is gemaakt met hulp van AI. Daarom zouden we graag horen wat mensen die met taal werken ervan vinden. Zou je de app eens willen proberen en laten weten wat beter kan? En past het misschien bij je deelnemers? Elke opmerking helpt. Mail naar hoi@vloertaal.nl, of tik in een les op het vlaggetje Melden.';
+
+/** 'p.what': what Vloertaal is, for someone who does not know it yet (it was the lead). */
+const WHAT = 'Vloertaal is een gratis web-app voor taalcoaches, NT2-docenten, taalhuizen, werkgevers, uitzendbureaus en scholen. Nieuwkomers en arbeidsmigranten oefenen er Nederlands mee voor hun werk: korte lessen met woorden, zinnen en gesprekjes van de werkvloer, met uitleg in dertien talen. Er is geen account nodig, en het werkt op elke telefoon. Het is bedoeld als een kleine aanvulling op een taalcursus of taalcoach, niet als vervanging.';
 
 const mission = aboutSection('a.mission');
 const story = aboutSection('a.story');
@@ -55,8 +61,9 @@ export const ENTREE_UNITS = ['Stage lopen', 'Rekenen op je werk', 'Je werk goed 
 
 export const proSections: ProSection[] = [
   {
-    id: 'p.mission', emoji: mission.emoji, title: mission.nl.title,
-    body: [mission.nl.body],
+    // What it is and the mission in one block, before the reason (the story).
+    id: 'p.what', emoji: mission.emoji, title: 'Wat is Vloertaal?',
+    body: [WHAT, mission.nl.body],
   },
   {
     // The owner's story, signed and dated as on Over; its last line leads into the test version.
@@ -151,6 +158,6 @@ export const proSections: ProSection[] = [
   {
     // Last, like the learner's About: the address is the page's mail link (one tap).
     id: 'p.contact', emoji: '✉️', title: 'Meedoen of meedenken?',
-    body: [`Wil je Vloertaal gebruiken met een groep, meedoen aan de test, of heb je een vraag of een fout gevonden? Mail naar ${CONTACT_EMAIL}.`],
+    body: [`Zou je Vloertaal willen gebruiken met een groep, of wil je meekijken? Of heb je een vraag of een fout gevonden? Mail dan naar ${CONTACT_EMAIL}.`],
   },
 ];

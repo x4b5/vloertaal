@@ -71,7 +71,7 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
         <ChromeBack lang={lang} onBack={onBack} />
         <h1 tabIndex={-1}>{PRO_TITLE}</h1>
       </div>
-      <p className="muted small">{PRO_LEAD}</p>
+      <p>{PRO_LEAD}</p>
       {proSections.map((s) => <Section key={s.id} s={s}>{s.extra === 'topics' ? topics : s.extra === 'facts' ? <Facts /> : s.extra === 'kunjenu' ? <KunTabel /> : null}</Section>)}
     </div>
   );
