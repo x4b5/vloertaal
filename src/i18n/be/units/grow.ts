@@ -5,6 +5,7 @@ import type { Gloss } from '../types';
 // Every text: // nieuw, nalezen
 
 export const ar: Gloss = {
+  'be.l.nextstep': "مواصلة التعلّم بعد المدرسة", // nieuw, nalezen
   'be.w.waarderen': "الحصول على اعتراف (بشهادة)", // nieuw, nalezen
   'be.w.bijbaan': "عمل الطلاب (عمل صغير بجانب الدراسة)", // nieuw, nalezen
   'be.w.meeloopdag': "تدريب الاستكشاف (زيارة قصيرة لترى العمل)", // nieuw, nalezen
@@ -45,6 +46,7 @@ export const ar: Gloss = {
 };
 
 export const ti: Gloss = {
+  'be.l.nextstep': "ድሕሪ ቤት ትምህርቲ ምቕጻል ትምህርቲ", // nieuw, nalezen
   'be.w.waarderen': "(ዲፕሎማ) ከም ዝፍለጥ ምግባር", // nieuw, nalezen
   'be.w.bijbaan': "ስራሕ ተማሃራይ (ብጎኒ ትምህርቲ ንእሽቶ ስራሕ)", // nieuw, nalezen
   'be.w.meeloopdag': "ናይ ምፍላጥ ልምምድ (ነቲ ስራሕ ንምርኣይ ሓጺር ምብጻሕ)", // nieuw, nalezen
@@ -85,6 +87,7 @@ export const ti: Gloss = {
 };
 
 export const fa: Gloss = {
+  'be.l.nextstep': "ادامهٔ یادگیری بعد از مدرسه", // nieuw, nalezen
   'be.w.waarderen': "(مدرک را) به رسمیت شناساندن", // nieuw, nalezen
   'be.w.bijbaan': "کار دانشجویی (کار کوچک کنار درس)", // nieuw, nalezen
   'be.w.meeloopdag': "کارآموزی آشنایی (بازدید کوتاه برای دیدن کار)", // nieuw, nalezen
@@ -125,6 +128,7 @@ export const fa: Gloss = {
 };
 
 export const prs: Gloss = {
+  'be.l.nextstep': "ادامهٔ آموزش بعد از مکتب", // nieuw, nalezen
   'be.w.waarderen': "(سند تحصیلی را) به رسمیت شناختن دادن", // nieuw, nalezen
   'be.w.bijbaan': "کار محصلی (کار کوچک در کنار درس)", // nieuw, nalezen
   'be.w.meeloopdag': "کارآموزی آشنایی (بازدید کوتاه برای دیدن کار)", // nieuw, nalezen
@@ -165,6 +169,7 @@ export const prs: Gloss = {
 };
 
 export const uk: Gloss = {
+  'be.l.nextstep': "Навчання після школи", // nieuw, nalezen
   'be.w.waarderen': "визнати (диплом)", // nieuw, nalezen
   'be.w.bijbaan': "студентська підробітка (невелика робота поруч із навчанням)", // nieuw, nalezen
   'be.w.meeloopdag': "ознайомча практика (короткий візит, щоб побачити роботу)", // nieuw, nalezen
@@ -205,6 +210,7 @@ export const uk: Gloss = {
 };
 
 export const tr: Gloss = {
+  'be.l.nextstep': "Okuldan sonra öğrenmeye devam", // nieuw, nalezen
   'be.w.waarderen': "(diplomayı) tanıtmak, denklik almak", // nieuw, nalezen
   'be.w.bijbaan': "öğrenci işi (okulun yanında küçük bir iş)", // nieuw, nalezen
   'be.w.meeloopdag': "tanıma stajı (işi görmek için kısa bir ziyaret)", // nieuw, nalezen
@@ -245,6 +251,7 @@ export const tr: Gloss = {
 };
 
 export const pl: Gloss = {
+  'be.l.nextstep': "Dalsza nauka po szkole", // nieuw, nalezen
   'be.w.waarderen': "uznać (dyplom)", // nieuw, nalezen
   'be.w.bijbaan': "praca studencka (mała praca obok szkoły)", // nieuw, nalezen
   'be.w.meeloopdag': "praktyka zapoznawcza (krótka wizyta, żeby zobaczyć pracę)", // nieuw, nalezen
@@ -285,6 +292,7 @@ export const pl: Gloss = {
 };
 
 export const ro: Gloss = {
+  'be.l.nextstep': "Învățare mai departe după școală", // nieuw, nalezen
   'be.w.waarderen': "a-ți recunoaște (diploma)", // nieuw, nalezen
   'be.w.bijbaan': "jobul de student (o muncă mică pe lângă școală)", // nieuw, nalezen
   'be.w.meeloopdag': "stagiul de cunoaștere (o vizită scurtă ca să vezi munca)", // nieuw, nalezen
@@ -325,6 +333,7 @@ export const ro: Gloss = {
 };
 
 export const bg: Gloss = {
+  'be.l.nextstep': "Учене след училище", // nieuw, nalezen
   'be.w.waarderen': "да признаят (диплома)", // nieuw, nalezen
   'be.w.bijbaan': "студентската работа (малка работа покрай училището)", // nieuw, nalezen
   'be.w.meeloopdag': "опознавателният стаж (кратко посещение, за да видиш работата)", // nieuw, nalezen
@@ -365,6 +374,7 @@ export const bg: Gloss = {
 };
 
 export const es: Gloss = {
+  'be.l.nextstep': "Seguir aprendiendo después de la escuela", // nieuw, nalezen
   'be.w.waarderen': "hacer reconocer (un título)", // nieuw, nalezen
   'be.w.bijbaan': "el trabajo de estudiante (un trabajo pequeño junto a los estudios)", // nieuw, nalezen
   'be.w.meeloopdag': "la práctica de prueba (una visita corta para ver el trabajo)", // nieuw, nalezen
@@ -405,6 +415,7 @@ export const es: Gloss = {
 };
 
 export const pt: Gloss = {
+  'be.l.nextstep': "Continuar a aprender depois da escola", // nieuw, nalezen
   'be.w.waarderen': "fazer reconhecer (um diploma)", // nieuw, nalezen
   'be.w.bijbaan': "o trabalho de estudante (um pequeno trabalho ao lado da escola)", // nieuw, nalezen
   'be.w.meeloopdag': "o estágio de observação (uma visita curta para ver o trabalho)", // nieuw, nalezen
@@ -445,6 +456,7 @@ export const pt: Gloss = {
 };
 
 export const fr: Gloss = {
+  'be.l.nextstep': "Continuer à apprendre après l’école", // nieuw, nalezen
   'be.w.waarderen': "faire reconnaître (un diplôme)", // nieuw, nalezen
   'be.w.bijbaan': "le job étudiant (un petit travail à côté de l’école)", // nieuw, nalezen
   'be.w.meeloopdag': "le stage découverte (une courte visite pour voir le travail)", // nieuw, nalezen
@@ -485,6 +497,7 @@ export const fr: Gloss = {
 };
 
 export const de: Gloss = {
+  'be.l.nextstep': "Weiterlernen nach der Schule", // nieuw, nalezen
   'be.w.waarderen': "(einen Abschluss) anerkennen lassen", // nieuw, nalezen
   'be.w.bijbaan': "der Studentenjob (ein kleiner Job neben der Schule)", // nieuw, nalezen
   'be.w.meeloopdag': "das Schnupperpraktikum (ein kurzer Besuch, um die Arbeit zu sehen)", // nieuw, nalezen

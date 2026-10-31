@@ -140,4 +140,5 @@ const tips = [
   },
 ];
 
-export const be: BeTaal = { nl: 'u.grow', lines, tips };
+// "After Entree" is a Dutch school route; in Flanders the lesson is about learning on after school.
+export const be: BeTaal = { nl: 'u.grow', lines, tips, titles: { 'l.nextstep': 'Learning on after school' } };

@@ -464,3 +464,16 @@ describe('BE_TAAL_TODO', () => {
     for (const lang of helpLanguages) for (const id of beTaalIds()) expect(lang.gloss[id]?.trim(), `${lang.code} ${id}`).toBeTruthy();
   });
 });
+
+describe('a Belgian lesson title', () => {
+  it('l.nextstep is "Learning on after school" in Belgium, translated under be.l.nextstep', async () => {
+    const { beTaalCourse } = await import('../src/content/taalBe');
+    const { units } = await import('../src/content/curriculum');
+    const be = beTaalCourse(units);
+    const l = be.flatMap((u) => u.lessons).find((x) => x.id === 'l.nextstep')!;
+    expect(l.title).toBe('Learning on after school');
+    expect(l.titleId).toBe('be.l.nextstep');
+    const nl = units.flatMap((u) => u.lessons).find((x) => x.id === 'l.nextstep')!;
+    expect(nl.titleId).toBeUndefined();
+  });
+});

@@ -42,4 +42,9 @@ export interface BeTaal {
    * ("kjn.u.pay.1"): the Flemish sentence. The id and its translation stay (they say the same).
    */
   kun?: Record<string, string>;
+  /**
+   * Lesson titles said otherwise in Belgium, by the Dutch lesson id: the English title. Its
+   * translations are the gloss of "be.<lesson id>"; the lesson keeps its id (and its progress).
+   */
+  titles?: Record<string, string>;
 }
