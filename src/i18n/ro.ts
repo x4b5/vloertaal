@@ -83,7 +83,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Unde lucrezi?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'În ce țară lucrezi?',
-    countryHint: 'Regulile de muncă din Vloertaal sunt pentru Olanda. În Belgia, multe reguli sunt diferite. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.',
+    countryHint: 'Alege țara în care lucrezi. Primești regulile de muncă din acea țară. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.', // nieuw, nalezen
     countryNl: 'Olanda',
     countryBe: 'Belgia (Flandra)',
     tipsNote: 'Aceste sfaturi sunt despre munca în Olanda. Informații generale, nu consultanță juridică.',

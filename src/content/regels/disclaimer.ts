@@ -176,6 +176,7 @@ export const RULES_NL_LESSON_NOTE = 'Deze les gaat nog over Nederland.';
 /** "Goed om te weten" for a learner in Belgium, with the Belgian course on (RULES_NOTICE). */
 export const RULES_NOTICE_BE = [
   'Vloertaal geeft algemene informatie over werk in België. Het is geen juridisch advies.',
+  'De Belgische lessen zijn nieuw. Een deskundige kijkt ze nog na. Zie je een fout? Mail naar hoi@vloertaal.nl.',
   RULES_COUNTRY_BE,
   'Regels kunnen veranderen. Bijgewerkt: ' + RULES_CHECKED + '.',
   'Gaat het om jouw situatie? Vraag je werkgever, een vakbond of het justitiehuis.',

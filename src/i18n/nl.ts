@@ -111,7 +111,7 @@ export const uiNl: Record<UiKey, UiText> = {
   sector: 'Je werk',
   chooseSector: 'Waar werk je?',
   countryTitle: 'In welk land werk je?',
-  countryHint: 'De werkregels in Vloertaal gaan over Nederland. In België zijn veel regels anders. Dit blijft op je telefoon. We sturen het nergens heen.',
+  countryHint: 'Kies het land waar je werkt. Dan krijg je de werkregels van dat land. Dit blijft op je telefoon. We sturen het nergens heen.',
   countryNl: 'Nederland',
   countryBe: 'België (Vlaanderen)',
   tipsNote: 'Deze tips gaan over werk in Nederland. Algemene informatie, geen juridisch advies.',

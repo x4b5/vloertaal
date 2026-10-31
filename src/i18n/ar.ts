@@ -83,7 +83,7 @@ const lang: HelpLanguageSource = {
     chooseSector: { m: 'أين تعمل؟', f: 'أين تعملين؟', x: 'مجال عملك' }, // x: nieuw, nalezen
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: { m: 'في أي بلد تعمل؟', f: 'في أي بلد تعملين؟', x: 'بلد العمل' }, // x: nieuw, nalezen
-    countryHint: 'قواعد العمل في Vloertaal خاصة بهولندا. في بلجيكا كثير من القواعد مختلفة. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.',
+    countryHint: 'اختر البلد الذي تعمل فيه. ستحصل على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.', // nieuw, nalezen
     countryNl: 'هولندا',
     countryBe: 'بلجيكا (فلاندرز)',
     tipsNote: 'هذه النصائح عن العمل في هولندا. معلومات عامة، وليست استشارة قانونية.',

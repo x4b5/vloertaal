@@ -5,7 +5,8 @@
  * Tests turn it on with setBeRules(true); in development `?be=1` once in the address keeps it on
  * in this tab.
  */
-export const BE_RULES_LIVE: boolean = false;
+// On since 31 October 2026 (owner's choice): live with the beta disclaimer while the expert check runs.
+export const BE_RULES_LIVE: boolean = true;
 
 let forced: boolean | null = null;
 

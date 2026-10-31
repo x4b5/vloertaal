@@ -14,6 +14,12 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-10-31',
+    items: [
+      'Werk je in België (Vlaanderen)? Kies dan bij de start, of later bij Instellingen, "België". In het spoor Werkregels krijg je dan de regels van België: alle onderwerpen, met Vlaamse woorden (loonbrief, interimkantoor, ziekenfonds, RVA). Dit is nieuw: een deskundige kijkt de Belgische lessen nog na. Zie je een fout? Mail naar hoi@vloertaal.nl.',
+    ],
+  },
+  {
     date: '2026-10-30',
     items: [
       'Nieuw bij Instellingen › Taal en ik: "Laat zien hoe het gaat". De telefoon maakt een kaart voor je begeleider: welke onderwerpen af zijn, op hoeveel dagen je oefende in de laatste 4 weken, je laatste les en (in het spoor Taal) de toets "Wat ken je al?". Jij laat de kaart zelf zien, of je bewaart of deelt hem als plaatje. Er gaat niets naar ons.',
