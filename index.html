@@ -9,12 +9,13 @@
     <!-- Not render-blocking (it only maps the emoji font's files): the splash paints without waiting for it. -->
     <link href="./fonts/noto-color-emoji.css" rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript><link href="./fonts/noto-color-emoji.css" rel="stylesheet" /></noscript>
-    <meta name="description" content="Gratis Nederlands leren voor je werk, met uitleg in je eigen taal: Arabisch, Pools, Oekraïens, Tigrinya en meer. Geen account, geen reclame." />
+    <meta name="description" content="Gratis Nederlands leren voor je werk in Nederland en België, met uitleg in je eigen taal: Arabisch, Pools, Oekraïens en meer. Geen account, geen reclame." />
     <link rel="canonical" href="https://vloertaal.nl/" />
     <!-- Link previews (WhatsApp, Signal, Facebook): the share image and one line in Dutch. -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Vloertaal" />
     <meta property="og:locale" content="nl_NL" />
+    <meta property="og:locale:alternate" content="nl_BE" />
     <meta property="og:title" content="Vloertaal – Nederlands voor op de werkvloer" />
     <meta property="og:description" content="Gratis Nederlands leren voor je werk, met hulp in je eigen taal. Geen account nodig." />
     <meta property="og:url" content="https://vloertaal.nl/" />
@@ -57,13 +58,18 @@
             "@id": "https://vloertaal.nl/#app",
             "name": "Vloertaal",
             "url": "https://vloertaal.nl/",
-            "description": "Gratis Nederlands leren voor je werk, met uitleg in je eigen taal. Ook de regels op het werk: loon, contract, ziek zijn.",
+            "description": "Gratis Nederlands leren voor je werk in Nederland en België, met uitleg in je eigen taal. Ook de regels op het werk: loon, contract, ziek zijn.",
             "applicationCategory": "EducationalApplication",
             "operatingSystem": "Web",
             "inLanguage": "nl",
             "isAccessibleForFree": true,
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-            "audience": { "@type": "Audience", "audienceType": "Mensen die in Nederland werken of werk zoeken en Nederlands leren" },
+            "audience": { "@type": "Audience", "audienceType": "Mensen die in Nederland of België (Vlaanderen) werken of werk zoeken en Nederlands leren" },
+            "areaServed": [
+              { "@type": "Country", "name": "Nederland", "identifier": "NL" },
+              { "@type": "Country", "name": "België", "identifier": "BE" }
+            ],
+            "availableLanguage": ["nl", "ar", "ti", "fa", "prs", "uk", "tr", "pl", "ro", "bg", "es", "pt", "fr", "de", "en"],
             "publisher": { "@id": "https://vloertaal.nl/#org" }
           }
         ]

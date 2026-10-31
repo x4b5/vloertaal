@@ -101,6 +101,12 @@ ${body}
 `;
 }
 
+/** Where Vloertaal is for (schema.org areaServed): the Netherlands and Belgium (Flanders). */
+export const AREA_SERVED = [
+  { '@type': 'Country', name: 'Nederland', identifier: 'NL' },
+  { '@type': 'Country', name: 'België', identifier: 'BE' },
+];
+
 /** What every page is about: the free web app (structured data). */
 export const APP_DATA = {
   '@type': 'WebApplication',
@@ -111,6 +117,7 @@ export const APP_DATA = {
   operatingSystem: 'Web',
   isAccessibleForFree: true,
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  areaServed: AREA_SERVED,
 };
 
 /** "Vloertaal › Bouw" for search results (structured data). */

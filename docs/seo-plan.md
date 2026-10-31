@@ -172,3 +172,26 @@ gecontroleerd en niet gemeten**; graag laten nakijken via `docs/vertaalcontrole.
 
 Ook per taal een eigen beschrijving van ±150 tekens met "gratis" en "leren" (nu het begin van
 "Wat is Vloertaal?").
+
+## GEO: vindbaar op plaats en in AI-zoekmachines (31 oktober 2026)
+
+GEO heeft hier twee betekenissen, en we doen allebei (`src/lib/geoPages.ts`, `tests/geo.test.ts`):
+
+**1. Plaats: Nederland én België.**
+- In de gestructureerde gegevens staat `areaServed`: Nederland (NL) en België (BE). Dat geldt voor `/` en voor elke pagina via `APP_DATA`.
+- De voorpagina noemt in de beschrijving "Nederland en België". Er is `og:locale:alternate nl_BE`.
+- Nieuw: `/belgie/` (`lang="nl-BE"`), met:
+  - Vlaamse woorden naast de Nederlandse (uit de woordenlijst in `docs/werkregels-belgie.md`);
+  - de Belgische Werkregels-onderwerpen;
+  - de Belgische disclaimer;
+  - een paar vragen en antwoorden.
+- `/belgie/` staat in de sitemap, in `llms.txt` en in de linkrijen.
+
+**2. AI-zoekmachines (ChatGPT, Perplexity, Claude, Gemini, Copilot).**
+- **Vragen en antwoorden** (`FAQ`): elk antwoord is te citeren zonder de rest van de pagina. Ze staan als tekst op de voorpagina (vóór JavaScript) en als `FAQPage`-gegevens in de head. Google toont FAQ-resultaten sinds 2023 bijna alleen nog voor overheid en zorg, maar AI-zoekmachines lezen ze wel.
+- **`/llms.txt`** (llmstxt.org): wat Vloertaal is in een paar regels (Nederlands, plus één Engelse alinea), de vragen en antwoorden, en alle pagina's. Het bestand wordt bij de build gemaakt uit dezelfde lijsten als de sitemap, dus het groeit vanzelf mee.
+- **`robots.txt`**: noemt de AI-crawlers bij naam (OAI-SearchBot, ChatGPT-User, GPTBot, Claude-SearchBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended). Ze mochten al alles (`User-agent: *`). Dat blijft zo, ook voor training. Wil je training uitzetten maar zoeken aanhouden? Zet dan `Disallow: /` bij GPTBot, ClaudeBot, Google-Extended en Applebot-Extended.
+
+**Nog te doen (Xavier):**
+- Bing Webmaster Tools (stap 1): ChatGPT en Copilot zoeken via Bing.
+- Vermeldingen op sites die AI-zoekmachines vaak aanhalen: Wikipedia-achtige lijsten, taalhuizen, VDAB, Agentschap Integratie en Inburgering, Atlas Antwerpen, en Belgische organisaties (stap 6).

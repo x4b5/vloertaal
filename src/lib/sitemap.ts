@@ -1,6 +1,6 @@
 import { LAST_UPDATE } from '../content/updates';
 import { LANG_PAGES } from './langPages';
-import { COACH_PATH, RULES_PATH, TOPICS_PATH } from './paths';
+import { BELGIUM_PATH, COACH_PATH, RULES_PATH, TOPICS_PATH } from './paths';
 import { SECTOR_PAGES } from './sectorPages';
 import { TOPIC_PAGES } from './topicPages';
 
@@ -8,7 +8,7 @@ import { TOPIC_PAGES } from './topicPages';
  * vloertaal.nl/sitemap.xml, made at build time: every page a search engine should read. The app
  * itself is one address (/); the plain pages beside it are made by vite.config.ts.
  */
-export const PAGES: readonly string[] = ['/', '/intro/', '/nieuw/', ...LANG_PAGES.map((p) => p.path), ...SECTOR_PAGES.map((p) => p.path), RULES_PATH, COACH_PATH, TOPICS_PATH, ...TOPIC_PAGES.map((t) => t.path)];
+export const PAGES: readonly string[] = ['/', '/intro/', '/nieuw/', ...LANG_PAGES.map((p) => p.path), ...SECTOR_PAGES.map((p) => p.path), RULES_PATH, BELGIUM_PATH, COACH_PATH, TOPICS_PATH, ...TOPIC_PAGES.map((t) => t.path)];
 
 /**
  * When a page last changed, where that is known for sure (/nieuw: its newest entry). Left out

@@ -1,11 +1,13 @@
 import { aboutSection } from '../content/about';
+import { faqHtml } from './geoPages';
 import { linkRows } from './linkRows';
 import { esc, plainPage } from './plainPage';
 
 /**
  * Below the start page's splash, in the HTML itself (vite.config.ts): a heading and a few lines on
  * what Vloertaal is (the About page's Dutch), and links to the plain pages, so a search engine
- * finds them from the start page without running the app. Below the fold of the splash (it fills
+ * finds them from the start page without running the app. Then the questions and answers
+ * (src/lib/geoPages.ts FAQ), also as data in the head. Below the fold of the splash (it fills
  * the screen); the app removes it when it draws (src/main.tsx).
  */
 export function siteLinks(): string {
@@ -16,6 +18,7 @@ export function siteLinks(): string {
 <p>${about('a.who')} Spreek je al Nederlands? Dan leer je met Werkregels de regels op het werk: loon, contract, ziek zijn en je rechten.</p>
 <p>${about('a.mission')}</p>
 ${linkRows()}
+${faqHtml()}
 </section>`;
 }
 

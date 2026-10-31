@@ -7,3 +7,5 @@ export const TOPICS_PATH = '/onderwerpen/';
 
 /** The app's link to a topic (src/lib/unitLink.ts): "?unit=pay" for u.pay. */
 export const appLink = (unitId: string) => `/?unit=${encodeURIComponent(unitId.slice(2))}`;
+/** Werken in België (Vlaanderen): the Belgian version of the app in one page (src/lib/geoPages.ts). */
+export const BELGIUM_PATH = '/belgie/';
