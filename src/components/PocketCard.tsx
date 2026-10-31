@@ -100,7 +100,7 @@ export function PocketCardScreen({ unit, lang, onBack, sector, region }: { unit:
               return (
                 <li key={p.id} className={`pocket-row pocket-row-${p.rule}`}>
                   <span className="pocket-pic" aria-hidden>
-                    {p.picture ? <span className="pocket-rule-emoji">{p.picture.emoji}</span> : <span className="pocket-no">{i + 1}</span>}
+                    {p.picture ? <WordPicture className="pocket-rule-pic" id={p.picture.id} emoji={p.picture.emoji} size={40} /> : <span className="pocket-no">{i + 1}</span>}
                   </span>
                   <span className="pocket-text">
                     <span className="pocket-nl" lang="nl" dir="ltr">{p.nl}</span>

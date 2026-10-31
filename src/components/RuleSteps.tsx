@@ -3,6 +3,7 @@ import type { HelpLanguage } from '../i18n/types';
 import type { CardRow, CardType, DrawnCard, RuleCharacter } from '../content/regels/types';
 import { cardSpeech, payslipCard } from '../content/regels/course';
 import { askWhoCard } from '../content/regels/askWho';
+import { ruleIconId } from '../content/regels/ruleIcons';
 import { ruleAdviceLine } from '../content/regels/disclaimer';
 import { said, ui } from '../i18n';
 import { autoSpeakLong } from '../lib/audio';
@@ -14,6 +15,7 @@ import { type Answer, ChoiceGrid, moodFor, reactClass } from './Exercises';
 import { CheckIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { DialectLine } from './Dialect';
+import { WordPicture } from '../pictures';
 
 /**
  * The work-rules track (Werkregels): one component per kind of step (src/content/regels/types.ts).
@@ -127,7 +129,7 @@ export function RuleCard({ ex, lang, onAnswer }: RuleProps<'rule'>) {
   return (
     <div className="exercise rule-card">
       <div className="rule-badges">
-        <span className="rule-emoji" aria-hidden>{step.emoji}</span>
+        <span className="rule-emoji" aria-hidden><WordPicture id={ruleIconId(step.emoji)} emoji={step.emoji} size={34} /></span>
         <span className={`rule-kind rule-kind-${step.rule}`} lang="nl">{RULE_KIND_TAG[step.rule]}</span>
         {step.key && (
           <span className="rule-key" lang="nl">
@@ -250,7 +252,7 @@ export function WhoAsk({ ex, lang, locked, onAnswer, verdict, run, misses }: Rul
         stamp={false}
         render={(o) => (
           <>
-            <span className="rule-who-pic" aria-hidden>{askWhoCard(o.who, step.id).emoji}</span>
+            <span className="rule-who-pic" aria-hidden><WordPicture id={ruleIconId(askWhoCard(o.who, step.id).emoji)} emoji={askWhoCard(o.who, step.id).emoji} size={38} /></span>
             <span className="choice-label rule-who-text" lang="nl">
               <span className="rule-who-name">{askWhoCard(o.who, step.id).label}</span>
               {/* A pause between the name and what it is, in the button's name (one tap, read as one). */}
