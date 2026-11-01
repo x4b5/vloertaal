@@ -970,6 +970,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const showGo = !speakRating && Boolean(checked || answer || typing);
   /** The footer button is Continue (not Check): after the answer, or on a step that only goes on. */
   const goIsContinue = (checked && swapped) || autoContinue;
+  // A plain right answer where the screen already shows the Dutch and its meaning (the word in
+  // the bubble or the prompt, the meaning in the green option): no label that says it all again
+  // ("Vloertaal rustiger": say it once). The green, the check and the sound say "right"; the
+  // status region still says "Goed zo! het hesje = the safety vest". A label stays when it adds
+  // something: a why, "almost", a wrong answer, a sentence or a reply (its meaning and ▶), writing,
+  // a picture pick ("Which picture is it?": the meaning in words is only on the label).
+  const cardless = quietRight && !ruleFb && !why && (ex.kind === 'meaning' || ex.kind === 'listen');
   // Answered: the question steps back (styles.css "the spotlight after the answer"). Matching has
   // no Check; it is answered when the last pair is made.
   const answered = checked || (ex.kind === 'match' && answer !== null);
@@ -1111,7 +1118,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         <div className="foot-inner">
           {/* Always present, so screen readers hear what is put in it one tick after Check. */}
           <div className="sr-only" role="status"><LiveParts parts={live} /></div>
-          {feedback && outcome && (
+          {feedback && outcome && !cardless && (
             <div className={`feedback feedback-${outcome}`}>
               <span className="feedback-tape" aria-hidden />
               <span className="feedback-icon" aria-hidden>
