@@ -4837,3 +4837,5 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 @media (prefers-reduced-motion: reduce) { .calm-preview-figure { animation: none; } }
 /* With the count gone, the top bar folds away (its heading stays for screen readers). */
 :root[data-calm] .topbar:not(:has(.sound-off-mark, .bram-greet)) { padding-block: env(safe-area-inset-top) 0; min-height: 0; }
+/* While a name is typed on the certificate or the card: where it stays, just under it. */
+.name-hint { margin: 10px 0 0; }

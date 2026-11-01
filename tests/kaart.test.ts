@@ -206,7 +206,7 @@ describe('coach card: the screen', () => {
 });
 
 describe('coach card: the texts', () => {
-  const KEYS = ['coachCard', 'coachCardIntro', 'coachCardKeep', 'coachCardWhat', 'coachTopics', 'coachDays', 'coachLast', 'coachNameAsk'] as const;
+  const KEYS = ['coachCard', 'coachCardIntro', 'coachCardKeep', 'coachCardWhat', 'coachTopics', 'coachDays', 'coachLast'] as const;
   it('are in English and in every help language', () => {
     for (const k of KEYS) expect(uiEn[k], k).toBeTruthy();
     for (const src of helpLanguageSources) for (const k of KEYS) expect(src.ui[k], `${src.code} ${k}`).toBeTruthy();
@@ -222,7 +222,7 @@ describe('coach card: the texts', () => {
     // Arabic and Tigrinya speak to the learner: m, f and x.
     for (const code of ['ar', 'ti']) {
       const src = helpLanguageSources.find((s) => s.code === code)!;
-      for (const k of ['coachCard', 'coachCardIntro', 'coachNameAsk'] as const) expect(typeof src.ui[k], `${code} ${k}`).toBe('object');
+      for (const k of ['coachCard', 'coachCardIntro'] as const) expect(typeof src.ui[k], `${code} ${k}`).toBe('object');
     }
   });
 });

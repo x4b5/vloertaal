@@ -178,9 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'Пізніше',
     certPrint: 'Друкувати або зберегти як PDF',
     certSaved: 'Зображення збережено.',
-    certNameAsk: 'Твоє імʼя на сертифікаті?',
     certNameHint: 'Воно залишається тільки на цьому телефоні. Можна залишити порожнім.',
-    certNoName: 'Без імені',
     certChangeName: 'Змінити імʼя',
     certPractice: 'Навчальний сертифікат, не офіційний диплом',
     resumeLesson: 'Продовжити урок',
@@ -272,7 +270,6 @@ const lang: HelpLanguageSource = {
     remindNo: 'Ні, дякую',
     remindPickTime: 'Коли тобі нагадувати?',
     certSaveShare: 'Зберегти або поділитися',
-    certNameDone: 'Готово',
     pauseTitle: 'Пауза',
     back: 'Назад',
     quitLesson: 'Вийти з уроку',
@@ -361,7 +358,6 @@ const lang: HelpLanguageSource = {
     coachTopics: 'Завершені теми', // nieuw, nalezen
     coachDays: 'Дні занять за останні 4 тижні', // nieuw, nalezen
     coachLast: 'Останній урок, з датою', // nieuw, nalezen
-    coachNameAsk: 'Твоє ім’я на картці?', // nieuw, nalezen
     coachCode: 'Код: ті самі числа коротко, для огляду групи. Без імені.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Телефон слухає (пробна функція)', // nieuw, nalezen // nagelezen AI 31 okt

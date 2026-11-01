@@ -61,7 +61,7 @@ describe('About in Dutch (the "NL" toggle)', () => {
     expect(on).toContain('aria-label="NL · عرض بالهولندية"');
     for (const s of aboutSections) {
       expect(on, s.id).toContain(s.nl.title);
-      expect(textOf(on), s.id).toContain(s.nl.body);
+      expect(textOf(on), s.id).toContain(s.lead?.nl ?? s.nl.body);
       expect(textOf(off), s.id).not.toContain(s.nl.body);
     }
     expect(off).toContain('خصوصيتك');

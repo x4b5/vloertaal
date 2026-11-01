@@ -22,6 +22,9 @@ export interface AboutSection {
   nlRules?: { title: string; body: string };
   /** Left out of the work-rules track's About (the section is only about the language course). */
   rules?: false;
+  /** A short version for the app's About (the web pages keep `body`): three short sentences
+   *  ("Vloertaal rustiger": the first section in view, the rest behind "Lees meer"). */
+  lead?: { en: string; nl: string; nlRules?: string };
   /** Signed: a small line under the text, "Xavier · 31 oktober 2026" (STORY_DATE, in the page's language). */
   signed?: string;
 }
@@ -44,6 +47,11 @@ export const STORY_DATE = '2026-10-31';
 export const aboutSections: AboutSection[] = [
   {
     id: 'a.what', emoji: '🦺', title: 'What is Vloertaal?',
+    lead: {
+      en: 'Vloertaal helps you learn the Dutch you need for your work. A lesson takes a few minutes. It is an extra: a language course is still needed.',
+      nl: 'Met Vloertaal leer je het Nederlands voor je werk. Een les duurt een paar minuten. Het is een extra: een taalcursus blijft nodig.',
+      nlRules: 'Vloertaal legt uit hoe werken in Nederland en België gaat. Een les duurt een paar minuten. Het is een extra: advies van je werkgever of een vakbond blijft nodig.',
+    },
     body: 'Vloertaal helps you learn the Dutch you need at work: in the warehouse, the kitchen, the factory or on the building site. Not only the words on the work floor, but all the language around work: applying for a job, your contract and pay slip, your rights, housing and papers, calling in sick and getting along with colleagues. The lessons are short, so you can practise a few minutes every day. Think of Vloertaal as a small extra for in between. It does not replace a language course or a language coach.',
     nl: {
       title: 'Wat is Vloertaal?',
@@ -195,9 +203,13 @@ export const PRO_TITLE = 'Voor begeleiders en werkgevers';
  * fits the track, with its rules text where the Dutch course's text is about learning Dutch (what,
  * how, disclaimer, contact), the others as they are (the story, the test version, Bram, privacy).
  */
-export const aboutRules: { id: string; emoji: string; who?: 'bram'; signed?: string; title: string; body: string }[] = aboutSections
+export const aboutRules: { id: string; emoji: string; who?: 'bram'; signed?: string; title: string; body: string; lead?: string }[] = aboutSections
   .filter((s) => s.rules !== false)
-  .map((s) => ({ id: s.id, emoji: s.emoji, ...(s.who ? { who: s.who } : {}), ...(s.signed ? { signed: s.signed } : {}), ...(s.nlRules ?? s.nl) }));
+  .map((s) => ({ id: s.id, emoji: s.emoji, ...(s.who ? { who: s.who } : {}), ...(s.signed ? { signed: s.signed } : {}), ...(s.nlRules ?? s.nl), ...(s.lead ? { lead: s.nlRules && s.lead.nlRules ? s.lead.nlRules : s.lead.nl } : {}) }));
 
 /** The translated ids (title, and body + '.b'): the About sections and the site's. */
-export const aboutIds: string[] = [...aboutSections, ...siteSections].flatMap((s) => [s.id, `${s.id}.b`]);
+export const aboutIds: string[] = [
+  ...[...aboutSections, ...siteSections].flatMap((s) => [s.id, `${s.id}.b`]),
+  // The app's short versions (AboutSection.lead).
+  ...aboutSections.filter((s) => s.lead).map((s) => `${s.id}.lead`),
+];
