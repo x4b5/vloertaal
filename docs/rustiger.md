@@ -37,11 +37,19 @@ regels die we in de code aanhouden, en wat er al gedaan is.
   - de onderbalk toont alleen iconen, en alleen het tabblad waar je bent heeft zijn woord eronder (in de hulptaal, in Werkregels in het Nederlands);
   - een schermlezer hoort bij elk tabblad nog steeds de naam.
 
+- **Fase 2 (info-knop en startpagina):**
+  - Een ⓘ met een duidelijk label (`src/components/InfoMore.tsx`). Dicht is het één rustige regel; je opent het op dezelfde plek.
+  - Achter de ⓘ staan:
+    - de juridische regel onder tips ("Over deze tips");
+    - de regel boven Werkregels ("Over deze regels");
+    - de uitleg bij instellingen ("Meer uitleg");
+    - bij Over alles na het eerste stuk ("Lees meer over Vloertaal").
+  - **Uitzondering:** op een instellingenpagina met al 3 keuzes (stem, schrijven) blijft de uitleg zichtbaar, vanwege de max-3-regel.
+  - Waarschuwingen (zoals bij "Voortgang wissen") en meldingen over wat er net gebeurde blijven altijd zichtbaar.
+  - De reeks en de woorden bovenin zijn kleiner en rustiger.
+
 ## Volgende stappen (met de keuzes van de eigenaar)
 
-- **Fase 2:**
-  - rustiger startpagina: de reeks en de woorden klein in één regel;
-  - een info-knop voor de juridische regel onder tips, uitleg in Instellingen en de lange tekst bij Over.
 - **Fase 3:** "Rustig scherm" bij Instellingen › Les: geen animaties, geen feestje, geen reeks op de
   startpagina. Staat de telefoon op "minder beweging", dan gaat het vanzelf aan.
 

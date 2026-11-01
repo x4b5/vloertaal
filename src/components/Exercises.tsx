@@ -9,9 +9,10 @@ import { allTiles, buildSteps, choicePictures, frontSteps, MATCH_ASKED, sentence
 import { shuffle } from '../lib/random';
 import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
+import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
 import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
-import { CheckIcon, CloseIcon, InfoIcon, SpeakerIcon } from './Icons';
+import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
@@ -1117,7 +1118,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
           its own (part 'read') without the "…": that only made the learner look for more here. */}
       <TipBody text={say ? shortTip(tipBody(tip, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(tipBody(tip, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} />
       {say && phrase}
-      <p className="tips-note"><InfoIcon size={16} /><Bi text={ui('tipsNote', lang)} /></p>
+      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={ui('tipsNote', lang)} /></p></InfoMore>
     </div>
   );
 }

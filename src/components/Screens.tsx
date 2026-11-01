@@ -26,6 +26,7 @@ import { isNextInCourse } from '../lib/exercises';
 import type { Access } from '../lib/access';
 import type { Progress } from '../lib/progress';
 import { Bi, HelpText, isolateLatin } from './Bi';
+import { InfoMore } from './InfoMore';
 import { LogoMark, Wordmark } from './Logo';
 import { WordPicture } from '../pictures';
 import { hasPicture } from '../lib/wordPicture';
@@ -676,7 +677,10 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
       {/* The language course in Belgium is a beta (docs/taal-belgie.md). */}
       {!dutchUi(lang) && taalBeActive() && <BeNote lang={lang} kind="beta" className="about-be-note" />}
       {/* The work-rules track: its own sections, in Dutch only (src/content/about.ts aboutRules). */}
-      {dutchUi(lang) ? aboutRules.map((s) => (
+      {/* The first section in view; the rest behind "Lees meer over Vloertaal" ("Vloertaal rustiger"). */}
+      {(() => {
+        const all = dutchUi(lang)
+          ? aboutRules.map((s) => (
         <section key={s.id} className="about-section about-nl-on" lang="nl" dir="ltr">
           <h2>
             {s.who
@@ -688,7 +692,8 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
           {s.id === 'a.free' && <PrivacyLink lang={lang} />}
           {s.signed && <Signed name={s.signed} code="nl" />}
         </section>
-      )) : aboutSections.map((s) => (
+      ))
+          : aboutSections.map((s) => (
         <section key={s.id} className={dutch ? 'about-section about-nl-on' : 'about-section'} {...(dutch ? { lang: 'nl', dir: 'ltr' } : {})}>
           <h2>
             {s.who
@@ -702,7 +707,14 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
           {s.id === 'a.free' && <PrivacyLink lang={lang} />}
           {s.signed && <Signed name={s.signed} code={dutch ? 'nl' : lang?.code} dir={dutch ? 'ltr' : lang?.dir} />}
         </section>
-      ))}
+      ));
+        return (
+          <>
+            {all[0]}
+            {all.length > 1 && <InfoMore className="about-more" label={ui('aboutMore', lang)}>{all.slice(1)}</InfoMore>}
+          </>
+        );
+      })()}
       {/* Two rows of one kind (the list exception of "at most three"): the professionals' page
           (src/content/pro.ts; its Dutch name, as on that page, over the help language's, for the
           learner who shows it to a coach), and "Wat is er nieuw?" with the newest update's date. */}
@@ -1085,7 +1097,7 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
         <h1><Bi text={ui('cultureTips', lang)} /></h1>
       </div>
       <p className="muted"><Bi text={ui('cultureTipsHint', lang)} /><HelpSay text={ui('cultureTipsHint', lang).help} lang={lang} /></p>
-      <p className="tips-note"><InfoIcon size={18} /><Bi text={ui('tipsNote', lang)} /><HelpSay text={ui('tipsNote', lang).help} lang={lang} /></p>
+      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={ui('tipsNote', lang)} /><HelpSay text={ui('tipsNote', lang).help} lang={lang} /></p></InfoMore>
       {/* The Belgian course is a beta (docs/taal-belgie.md). */}
       {taalBeActive() && <BeNote lang={lang} kind="beta" />}
       <ul className="tips-list">

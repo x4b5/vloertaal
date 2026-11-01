@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Totuși fă lecțiile', // nieuw, nalezen
     shareInvite: 'Învăț olandeză pentru munca mea cu Vloertaal. Gratuit: {link}', // nieuw, nalezen
     workTry: 'Încearcă azi la muncă', // nieuw, nalezen
+    infoMore: 'Mai multe explicații', // nieuw, nalezen
+    tipsAbout: 'Despre aceste sfaturi', // nieuw, nalezen
+    aboutMore: 'Citește mai mult despre Vloertaal', // nieuw, nalezen
     geluktAsk: 'Ai spus asta la muncă?', // nieuw, nalezen
     geluktYes: 'Da, a mers', // nieuw, nalezen
     geluktNotYet: 'Încă nu', // nieuw, nalezen

@@ -469,6 +469,9 @@ export const uiNl: Record<UiKey, UiText> = {
   noticeOk: 'Oké',
   shareInvite: 'Ik leer Nederlands voor mijn werk met Vloertaal. Gratis: {link}', // nieuw, nalezen
   workTry: 'Probeer het vandaag op je werk',
+  infoMore: 'Meer uitleg',
+  tipsAbout: 'Over deze tips',
+  aboutMore: 'Lees meer over Vloertaal',
   geluktAsk: 'Heb je dit op je werk gezegd?',
   geluktYes: 'Ja, gelukt',
   geluktNotYet: 'Nog niet',

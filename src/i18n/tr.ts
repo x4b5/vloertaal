@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Yine de dersleri yap', // nieuw, nalezen
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
     workTry: 'Bugün işte dene', // nieuw, nalezen
+    infoMore: 'Daha fazla açıklama', // nieuw, nalezen
+    tipsAbout: 'Bu ipuçları hakkında', // nieuw, nalezen
+    aboutMore: 'Vloertaal hakkında daha fazla', // nieuw, nalezen
     geluktAsk: 'Bunu işte söyledin mi?', // nieuw, nalezen
     geluktYes: 'Evet, oldu', // nieuw, nalezen
     geluktNotYet: 'Henüz değil', // nieuw, nalezen
