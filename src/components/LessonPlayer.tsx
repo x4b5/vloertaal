@@ -1,3 +1,4 @@
+import { ShowHow } from './ShowHow';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { goKnown, markGoKnown } from '../lib/goKnown';
 import { stillMotion } from '../lib/calm';
@@ -1059,6 +1060,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       <ComesBack.Provider value={index < initial.length}>
       <div className="player-body" ref={bodyRef} inert={askQuit}>
         <div className="ex-ghost" ref={ghostRef} aria-hidden />
+        {/* The first time a kind of exercise comes: a hand shows where to tap, once (ShowHow). */}
+        <ShowHow key={`how-${key}`} kind={ex.kind === 'build' || ex.kind === 'match' || ex.kind === 'type' ? ex.kind : null} root={bodyRef} />
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
         {/* The Belgian course: a lesson that is still the Dutch one says so, on its first step. */}
         {index === 0 && lesson.rule?.note && <p className="rule-country-note" role="note" lang="nl">{lesson.rule.note}</p>}
