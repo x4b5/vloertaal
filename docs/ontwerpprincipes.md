@@ -59,12 +59,22 @@ Gebaseerd op wat onderzoek zegt over onthouden.
   2006).
 - **Van herkennen naar zelf maken.** Eerst kies je, dan bouw je, typ je en zeg je het zelf.
   Later zet je een woord vooraan en bouw je de hele zin.
-- **Door elkaar.** Een les "Alles door elkaar" mengt eerdere onderwerpen (*interleaving*).
+- **Door elkaar.** Een les "Alles door elkaar" mengt eerdere onderwerpen. De winst daarvan zit
+  vooral in spreiden en zelf ophalen; afwisselen (*interleaving*) helpt vooral bij dingen die op
+  elkaar lijken, zoals klankparen. Bij losse woordenlijsten werkte blokken in onderzoek zelfs beter
+  (Brunmair & Richter 2019).
+- **Veel stemmen.** Losse woorden in de vragen zegt elke keer een andere collega, en elke dag komt
+  één klankpaar terug op gehoor (man of maan?), in een andere stem: zo train je je oor
+  (Barcroft & Sommers 2005; HVPT).
+- **Laten merken dat het blijft.** Na de herhaling: "Woorden van 2 weken of langer geleden: je
+  wist er nog 9 van de 10." Zelf merken dat iets lukt geeft het meeste zelfvertrouwen.
+- **Eén keer voordoen.** Bij een nieuwe soort oefening wijst een hand één keer aan waar je tikt.
 - **Beeld, geluid en tekst samen.** Elk woord heeft een tekening, een stem en de geschreven
   vorm (*dual coding*; Paivio).
 - **Meteen feedback, en fouten komen terug** in dezelfde les, tot je het weet.
-- **Naar het werk.** Een zin om vandaag op je werk te proberen, en de dag erna de vraag of het
-  gelukt is.
+- **Naar het werk.** Een zin om vandaag op je werk te proberen, als als-dan-plan ("Als: …
+  Zeg dan: …"), en de dag erna de vraag of het gelukt is (bij "Nog niet" nog één keer).
+  Als-dan-plannen helpen om een voornemen echt uit te voeren (Gollwitzer & Sheeran 2006).
 - **Eerlijk meten.** De toets "Wat ken je al?" haalt gokken uit de score en laat groei zien.
 
 ## 6. Spel als steun, niet als doel
