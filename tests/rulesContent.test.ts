@@ -168,6 +168,11 @@ describe('rules content: lessons and steps', () => {
     }
   });
 
+  // Vloertaal rustiger (optie B): the why in view is the core; the rest sits behind "Meer uitleg".
+  it('keeps every why in view at 20 words or fewer', () => {
+    const long = steps.filter((s) => 'why' in s && s.why.split(/\s+/).filter(Boolean).length > 20).map((s) => s.id);
+    expect(long).toEqual([]);
+  });
   it('gives every graded step a why', () => {
     for (const s of steps) if (GRADED.has(s.kind)) expect(('why' in s ? s.why : '').trim().length, s.id).toBeGreaterThan(0);
   });

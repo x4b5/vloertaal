@@ -55,7 +55,7 @@ export const stageUnit: RuleUnit = {
           id: 'r.l.stage.1.tf1',
           statement: 'De POK teken je pas als je stage al bezig is.',
           answer: false,
-          why: 'De POK is een afspraak tussen 3 partijen. Dat zijn jij, je school en het bedrijf. Alle drie tekenen vóór de stage begint. Er staat in wanneer je stage loopt, en wie je begeleidt.',
+          why: 'De POK is een afspraak tussen jou, je school en het bedrijf. Alle drie tekenen vóór de stage begint.', whyMore: 'Er staat in wanneer je stage loopt, en wie je begeleidt.',
         },
         // ⚖️ check: Die komt vaak een keer langs ⚖️.
         {
@@ -67,7 +67,7 @@ export const stageUnit: RuleUnit = {
             { id: 'b', text: 'Ze is je docent, en ze geeft je cijfers op school.', best: false, feedback: 'Nee. Ze werkt in het bedrijf, niet op school.' },
             { id: 'c', text: 'Ze regelt je loon en je arbeidscontract.', best: false, feedback: 'Nee. Op stage heb je meestal geen arbeidscontract.' },
           ],
-          why: 'De praktijkopleider werkt in het bedrijf. Zij leert je het werk en geeft je feedback. Op school heb je ook iemand: de stagebegeleider of bpv-begeleider. Die komt vaak een keer langs.',
+          why: 'De praktijkopleider werkt in het bedrijf. Zij leert je het werk en geeft je feedback.', whyMore: 'Op school heb je ook iemand: de stagebegeleider of bpv-begeleider. Die komt vaak een keer langs.',
         },
         // ⚖️ check: Zonder POK telt je stage misschien niet mee voor je diploma ⚖️.
         // ⚖️ check: Het bedrijf moet ook erkend zijn als leerbedrijf ⚖️.
@@ -80,7 +80,7 @@ export const stageUnit: RuleUnit = {
             { id: 'b', text: 'Hij vraagt eerst aan school of de POK klaar is.', best: true, feedback: 'Goed. Dan weet hij zeker dat alles klopt.' },
             { id: 'c', text: 'Hij zoekt meteen een ander stagebedrijf.', best: false, feedback: 'Dat hoeft niet. Eerst even vragen.' },
           ],
-          why: 'Zonder POK telt je stage misschien niet mee voor je diploma. Het bedrijf moet ook erkend zijn als leerbedrijf. Dat check je op stagemarkt.nl. Je school helpt je daarbij.',
+          why: 'Zonder POK telt je stage misschien niet mee voor je diploma.', whyMore: 'Het bedrijf moet ook erkend zijn als leerbedrijf. Dat check je op stagemarkt.nl. Je school helpt je daarbij.',
         },
         {
           kind: 'whoask',
@@ -91,7 +91,7 @@ export const stageUnit: RuleUnit = {
             { id: 'b', who: 'praktijkopleider', best: false, feedback: 'Zij weet het misschien. Maar school regelt de POK.' },
             { id: 'c', who: 'school', best: true, feedback: 'Goed. School regelt de POK met jou en het bedrijf.' },
           ],
-          why: 'Je stagebegeleider of bpv-begeleider van school regelt de POK. Op het werk ga je met vragen naar je praktijkopleider.',
+          why: 'Je stagebegeleider of bpv-begeleider van school regelt de POK.', whyMore: 'Op het werk ga je met vragen naar je praktijkopleider.',
         },
         { kind: 'model', id: 'r.l.stage.1.mo1', context: 'Het bedrijf wil dat je begint. Je weet niet of de POK klaar is.', nl: 'Is mijn POK al getekend? Dan kan ik beginnen.' },
       ],
@@ -137,14 +137,14 @@ export const stageUnit: RuleUnit = {
             { id: 'b', text: 'Ze knikt, en ze zegt verder niets.', best: false, feedback: 'Dan weet ze nog niet wat ze anders kan doen.' },
             { id: 'c', text: 'Ze vraagt: "Wanneer had ik iets moeten vragen?"', best: true, feedback: 'Goed. Met een voorbeeld weet ze wat beter kan.' },
           ],
-          why: 'Feedback gaat over je werk, niet over jou. Vraag om een voorbeeld. Dan weet je wat je anders kunt doen. Zo leer je het meest op je stage.',
+          why: 'Feedback gaat over je werk, niet over jou. Vraag om een voorbeeld.', whyMore: 'Dan weet je wat je anders kunt doen. Zo leer je het meest op je stage.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.stage.2.tf1',
           statement: 'Je mag zelf om feedback vragen, ook zonder gesprek.',
           answer: true,
-          why: 'Vragen om feedback laat zien dat je wilt leren. Vraag het na een klus: "Wat ging goed? Wat kan beter?" Schrijf het op, bijvoorbeeld in je logboek of portfolio.',
+          why: 'Vragen om feedback laat zien dat je wilt leren.', whyMore: 'Vraag het na een klus: "Wat ging goed? Wat kan beter?" Schrijf het op, bijvoorbeeld in je logboek of portfolio.',
         },
         // ⚖️ check: Het bedrijf geeft zijn oordeel ⚖️ (twijfel 5: wie beslist er precies?).
         {
@@ -156,7 +156,7 @@ export const stageUnit: RuleUnit = {
             { id: 'b', text: 'Ze tekent, en ze zegt er niets van. Mark is de baas.', best: false, feedback: 'Dat snap ik. Maar het oneens zijn mag. Dan moet ze het wel zeggen.' },
             { id: 'c', text: 'Ze praat er alleen met haar klasgenoten over.', best: false, feedback: 'Steun is fijn. Maar zo verandert er niets aan de beoordeling.' },
           ],
-          why: 'Het oneens zijn mag. Zeg rustig waarom, met voorbeelden. Bespreek het ook met je school. De school beslist over je examen. Het bedrijf geeft zijn oordeel.',
+          why: 'Het oneens zijn mag. Zeg rustig waarom, met voorbeelden. Bespreek het ook met je school.', whyMore: 'De school beslist over je examen. Het bedrijf geeft zijn oordeel.',
         },
         {
           kind: 'whoask',
@@ -167,7 +167,7 @@ export const stageUnit: RuleUnit = {
             { id: 'b', who: 'hr', best: false, feedback: 'HR gaat over contracten en loon, niet over je stagewerk.' },
             { id: 'c', who: 'school', best: false, feedback: 'Kan ook. Maar je praktijkopleider ziet je werk elke dag.' },
           ],
-          why: 'Vraag het eerst aan je praktijkopleider, na een klus. Ben je het oneens met je beoordeling? Bespreek het ook met je begeleider van school.',
+          why: 'Vraag het eerst aan je praktijkopleider, na een klus.', whyMore: 'Ben je het oneens met je beoordeling? Bespreek het ook met je begeleider van school.',
         },
         { kind: 'model', id: 'r.l.stage.2.mo1', context: 'Je hebt een klus af. Je vraagt om feedback.', nl: 'Wat ging goed? En wat kan ik beter doen?' },
       ],
@@ -221,7 +221,7 @@ export const stageUnit: RuleUnit = {
             { id: 'b', text: 'Hij stopt met de stage, zonder iets te zeggen.', best: false, feedback: 'Niet doen. Dan heeft hij misschien een probleem met school.' },
             { id: 'c', text: 'Hij praat met zijn praktijkopleider, en ook met school.', best: true, feedback: 'Goed. Zo kan er iets veranderen.' },
           ],
-          why: 'Een stage is om te leren. Je bent geen goedkope werknemer. Ook op stage gelden de regels voor werktijden en pauze. Leer je weinig? Zeg het eerst tegen je praktijkopleider. Helpt dat niet? Ga naar je begeleider van school. Stop nooit zomaar.',
+          why: 'Een stage is om te leren. Je bent geen goedkope werknemer.', whyMore: 'Ook op stage gelden de regels voor werktijden en pauze. Leer je weinig? Zeg het eerst tegen je praktijkopleider. Helpt dat niet? Ga naar je begeleider van school. Stop nooit zomaar.',
         },
         // ⚖️ check: Meld het ook bij school ⚖️ (twijfel 6: altijd bij allebei?).
         {
@@ -229,7 +229,7 @@ export const stageUnit: RuleUnit = {
           id: 'r.l.stage.3.tf1',
           statement: 'Ben je ziek op stage? Dan meld je je alleen ziek bij school.',
           answer: false,
-          why: 'Meld je ziek bij het bedrijf, vóór je begint. Meld het ook bij school. Hoe het moet, staat vaak in je POK of de stagegids. Weer beter? Meld dat ook bij allebei.',
+          why: 'Meld je ziek bij het bedrijf, vóór je begint. Meld het ook bij school.', whyMore: 'Hoe het moet, staat vaak in je POK of de stagegids. Weer beter? Meld dat ook bij allebei.',
         },
         // ⚖️ check: Discriminatie op stage is verboden ⚖️.
         // ⚖️ check: Elke mbo-school moet een meldpunt hebben ⚖️.
@@ -243,7 +243,7 @@ export const stageUnit: RuleUnit = {
             { id: 'b', text: 'Hij lacht mee. Hij wil geen gedoe op zijn stage.', best: false, feedback: 'Dat snap ik. Maar het mag niet, en hij hoeft het niet te accepteren.' },
             { id: 'c', text: 'Hij zoekt zelf een nieuwe stage, zonder iets te zeggen.', best: false, feedback: 'Dan gaat het bij de volgende stagiair misschien ook zo.' },
           ],
-          why: 'Discriminatie op stage is verboden. Elke mbo-school moet een meldpunt hebben. Je kunt ook naar de vertrouwenspersoon van school. Of naar discriminatie.nl. SBB kan het bedrijf erop aanspreken.',
+          why: 'Discriminatie op stage is verboden. Elke mbo-school moet een meldpunt hebben.', whyMore: 'Je kunt ook naar de vertrouwenspersoon van school. Of naar discriminatie.nl. SBB kan het bedrijf erop aanspreken.',
         },
         {
           kind: 'whoask',
@@ -254,7 +254,7 @@ export const stageUnit: RuleUnit = {
             { id: 'b', who: 'politie', best: false, feedback: 'Te lang werken is geen zaak voor de politie.' },
             { id: 'c', who: 'huisarts', best: false, feedback: 'De huisarts helpt bij je gezondheid, niet bij je werktijden.' },
           ],
-          why: 'Praat eerst met je praktijkopleider en met school. Werk je toch veel te lang? Dan kun je het melden bij de Nederlandse Arbeidsinspectie.',
+          why: 'Praat eerst met je praktijkopleider en met school.', whyMore: 'Werk je toch veel te lang? Dan kun je het melden bij de Nederlandse Arbeidsinspectie.',
         },
         { kind: 'model', id: 'r.l.stage.3.mo1', context: 'Je leert weinig op je stage.', nl: 'Ik leer hier weinig. Kunnen we er samen met school over praten?' },
       ],

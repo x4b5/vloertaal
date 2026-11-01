@@ -56,7 +56,7 @@ export const winkelUnit: RuleUnit = {
             { id: 'b', text: 'Achteraan. De oude melk blijft vooraan staan.', best: true, feedback: 'Goed. Zo gaat de oude melk het eerst weg.' },
             { id: 'c', text: 'Ergens waar plek is. Klanten kiezen zelf wel.', best: false, feedback: 'Dan raakt de oude melk over de datum.' },
           ],
-          why: 'Oud naar voren, nieuw naar achteren. Zo verkoop je eerst wat het eerst over de datum gaat. Dan hoeft er minder weg. Kijk bij het vullen altijd even naar de datum.',
+          why: 'Oud naar voren, nieuw naar achteren. Zo verkoop je eerst wat het eerst over de datum gaat.', whyMore: 'Dan hoeft er minder weg. Kijk bij het vullen altijd even naar de datum.',
         },
         // ⚖️ check: Daarna is een product vaak nog goed ⚖️.
         // ⚖️ check: Na die datum mag een winkel het niet meer verkopen ⚖️.
@@ -68,7 +68,7 @@ export const winkelUnit: RuleUnit = {
           id: 'r.l.winkel.1.tf1',
           statement: 'Na de THT-datum mag een winkel een product nooit meer verkopen.',
           answer: false,
-          why: 'THT betekent "ten minste houdbaar tot". Daarna is een product vaak nog goed. TGT betekent "te gebruiken tot". Na die datum mag een winkel het niet meer verkopen. Elke winkel heeft eigen regels voor THT. Vraag hoe het bij jou gaat.',
+          why: 'Na de THT is een product vaak nog goed. Na de TGT mag een winkel het niet meer verkopen.', whyMore: 'THT betekent "ten minste houdbaar tot". TGT betekent "te gebruiken tot". Elke winkel heeft eigen regels voor THT. Vraag hoe het bij jou gaat.',
         },
         // ⚖️ check: Nooduitgangen moeten altijd vrij zijn ⚖️.
         {
@@ -80,7 +80,7 @@ export const winkelUnit: RuleUnit = {
             { id: 'b', text: 'Hij vraagt de klant om even om te lopen.', best: false, feedback: 'Dat is logisch. Maar het pad is er voor de klant.' },
             { id: 'c', text: 'Hij werkt snel door. Over 5 minuten is hij klaar.', best: false, feedback: 'Dan moet de klant wachten. En iemand kan vallen.' },
           ],
-          why: 'Houd de paden vrij. Dat is veiliger voor klanten en collega\'s. Nooduitgangen moeten altijd vrij zijn. Zet lege dozen en folie meteen weg.',
+          why: "Houd de paden vrij. Dat is veiliger voor klanten en collega's.", whyMore: 'Nooduitgangen moeten altijd vrij zijn. Zet lege dozen en folie meteen weg.',
         },
         {
           kind: 'whoask',
@@ -91,7 +91,7 @@ export const winkelUnit: RuleUnit = {
             { id: 'b', who: 'leidinggevende', best: true, feedback: 'Goed. Je leidinggevende weet hoe het in jouw winkel gaat.' },
             { id: 'c', who: 'gemeente', best: false, feedback: 'De gemeente gaat niet over de regels in jouw winkel.' },
           ],
-          why: 'Elke winkel heeft eigen regels voor THT. Vraag je leidinggevende of een ervaren collega hoe het bij jou gaat.',
+          why: 'Je leidinggevende of een ervaren collega weet hoe het bij jou gaat.', whyMore: 'Elke winkel heeft eigen regels voor THT.',
         },
         { kind: 'model', id: 'r.l.winkel.1.mo1', context: 'Je staat met een rolcontainer in het pad. Een klant wil erlangs.', nl: 'Sorry, ik zet het even aan de kant.' },
       ],
@@ -137,7 +137,7 @@ export const winkelUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt: "Dat weet ik niet," en werkt door.', best: false, feedback: 'Eerlijk. Maar de klant heeft nog geen hulp.' },
             { id: 'c', text: 'Ze zegt: "Dat weet ik niet. Ik haal een collega."', best: true, feedback: 'Goed. Eerlijk, en de klant krijgt toch hulp.' },
           ],
-          why: 'Niet alles weten is normaal. Raden is niet slim: de klant komt dan terug. Zeg het eerlijk. Breng de klant naar iemand die het wel weet. Dat heet doorverwijzen.',
+          why: 'Niet alles weten is normaal. Zeg het eerlijk, en breng de klant naar iemand die het weet.', whyMore: 'Raden is niet slim: de klant komt dan terug. De klant naar een ander brengen heet doorverwijzen.',
         },
         {
           kind: 'whatdo',
@@ -148,7 +148,7 @@ export const winkelUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt "moment" en maakt eerst haar doos leeg.', best: false, feedback: 'Dat is logisch. Maar dan moet de klant lang wachten.' },
             { id: 'c', text: 'Ze wijst naar de servicebalie, zonder iets te zeggen.', best: false, feedback: 'Dat kan onvriendelijk lijken.' },
           ],
-          why: 'In een winkel gaat de klant voor. Stop even met je werk. Kijk de klant aan en groet. Tegen klanten zeg je meestal "u".',
+          why: 'In een winkel gaat de klant voor. Stop even met je werk.', whyMore: 'Kijk de klant aan en groet. Tegen klanten zeg je meestal "u".',
         },
         // ⚖️ check: Allergenen staan daar extra duidelijk, bijvoorbeeld vet gedrukt ⚖️.
         {
@@ -156,7 +156,7 @@ export const winkelUnit: RuleUnit = {
           id: 'r.l.winkel.2.tf1',
           statement: 'Vraagt een klant of er noten in een product zitten? Dan zeg je wat je denkt.',
           answer: false,
-          why: 'Bij een allergie kan een fout gevaarlijk zijn. Raad dus nooit. Lees samen met de klant het etiket. Allergenen staan daar extra duidelijk, bijvoorbeeld vet gedrukt. Weet je het nog niet zeker? Vraag het na.',
+          why: 'Bij een allergie kan een fout gevaarlijk zijn. Raad dus nooit.', whyMore: 'Lees samen met de klant het etiket. Allergenen staan daar extra duidelijk, bijvoorbeeld vet gedrukt. Weet je het nog niet zeker? Vraag het na.',
         },
         { kind: 'model', id: 'r.l.winkel.2.mo1', context: 'Een klant vraagt iets. Je weet het antwoord niet zeker.', nl: 'Dat weet ik niet zeker. Ik vraag het even aan mijn collega.' },
       ],
@@ -211,7 +211,7 @@ export const winkelUnit: RuleUnit = {
             { id: 'b', text: 'Hij gelooft de jongen. De rij is al lang.', best: false, feedback: 'Dat snap ik. Maar hij moet de leeftijd echt zien.' },
             { id: 'c', text: 'Hij zegt dat hij geen bier verkoopt aan jongeren.', best: false, feedback: 'Misschien is hij wel 18. Jayden kan beter eerst zijn ID vragen.' },
           ],
-          why: 'Alcohol en tabak verkoop je alleen aan mensen vanaf 18 jaar. Twijfel je? Dan moet je een ID zien. Lijkt iemand jonger dan 25? Dan vragen veel winkels een ID. Geen ID? Dan geen alcohol.',
+          why: 'Alcohol en tabak verkoop je alleen vanaf 18 jaar. Twijfel je? Dan moet je een ID zien.', whyMore: 'Lijkt iemand jonger dan 25? Dan vragen veel winkels een ID. Geen ID? Dan geen alcohol.',
         },
         // ⚖️ check: Je baas mag het niet zomaar van je loon afhalen ⚖️ (twijfel 8: kassatekort).
         // The sum says "euro" after each amount, so the voice reads it as money (sayNumbers).
@@ -238,7 +238,7 @@ export const winkelUnit: RuleUnit = {
             'Van 14 euro naar 20 euro is 6 euro.',
             'Samen is dat 6,60 euro.',
           ],
-          why: 'De kassa rekent het vaak voor je uit. Tel het toch na als je het geld geeft. Tel hardop terug, dan ziet de klant het ook. Kom je aan het eind geld tekort? Zeg het meteen tegen je leidinggevende. Je baas mag het niet zomaar van je loon afhalen.',
+          why: 'Tel het geld na, ook als de kassa het uitrekent. Tel hardop terug, dan ziet de klant het.', whyMore: 'Kom je aan het eind geld tekort? Zeg het meteen tegen je leidinggevende. Je baas mag het niet zomaar van je loon afhalen.',
         },
         {
           kind: 'whatdo',
@@ -249,7 +249,7 @@ export const winkelUnit: RuleUnit = {
             { id: 'b', text: 'Je luistert, zegt sorry en vraagt naar de bon.', best: true, feedback: 'Goed. Zo help je de klant verder.' },
             { id: 'c', text: 'Je geeft hem meteen geld terug uit de kassa.', best: false, feedback: 'Goed bedoeld. Maar vraag eerst wat je mag doen.' },
           ],
-          why: 'Een klacht gaat niet over jou. Blijf rustig en luister. Zeg sorry voor het probleem. Weet je niet wat je mag doen? Roep je leidinggevende. Wordt een klant agressief? Haal meteen hulp.',
+          why: 'Een klacht gaat niet over jou. Blijf rustig, luister en zeg sorry voor het probleem.', whyMore: 'Weet je niet wat je mag doen? Roep je leidinggevende. Wordt een klant agressief? Haal meteen hulp.',
         },
         {
           kind: 'whoask',
@@ -260,7 +260,7 @@ export const winkelUnit: RuleUnit = {
             { id: 'b', who: 'politie', best: false, feedback: 'Een tekort in de kassa is geen zaak voor de politie.' },
             { id: 'c', who: 'leidinggevende', best: true, feedback: 'Goed. Zeg het meteen. Dan kan je leidinggevende het nakijken.' },
           ],
-          why: 'Kom je geld tekort? Zeg het meteen tegen je leidinggevende. Bij agressie of diefstal haal je je leidinggevende of de beveiliging. Bij gevaar bel je 112. Ren nooit zelf achter een dief aan.',
+          why: 'Geld tekort? Zeg het meteen tegen je leidinggevende. Bij gevaar bel je 112.', whyMore: 'Bij agressie of diefstal haal je je leidinggevende of de beveiliging. Ren nooit zelf achter een dief aan.',
         },
         { kind: 'model', id: 'r.l.winkel.3.mo1', context: 'Een klant is boos over een product.', nl: 'Vervelend voor u. Heeft u de bon nog? Ik haal even mijn leidinggevende.' },
       ],

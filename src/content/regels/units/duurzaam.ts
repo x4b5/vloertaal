@@ -56,7 +56,7 @@ export const duurzaamUnit: RuleUnit = {
             { id: 'b', text: 'In de bak voor restafval. Dat is het snelst.', best: false, feedback: 'Dat is snel, ja. Maar karton hoort apart.' },
             { id: 'c', text: 'Naast de bakken. Iemand anders ruimt het wel op.', best: false, feedback: 'Dan ligt het in de weg. En het is zijn afval.' },
           ],
-          why: 'Bedrijven moeten afval scheiden. Welke bakken er zijn, verschilt per bedrijf. Weet je het niet? Kijk op de sticker van de bak, of vraag het.',
+          why: 'Bedrijven moeten afval scheiden. Welke bakken er zijn, verschilt per bedrijf.', whyMore: 'Weet je het niet? Kijk op de sticker van de bak, of vraag het.',
         },
         // ⚖️ check: Batterijen, lampen en resten van chemische middelen zijn gevaarlijk afval ⚖️.
         // ⚖️ check: Die moeten altijd apart ⚖️.
@@ -65,7 +65,7 @@ export const duurzaamUnit: RuleUnit = {
           id: 'r.l.duurzaam.1.tf1',
           statement: 'Een lege batterij mag je bij het gewone afval gooien.',
           answer: false,
-          why: 'Batterijen, lampen en resten van chemische middelen zijn gevaarlijk afval. Die moeten altijd apart. Giet ook nooit resten van middelen door de gootsteen. Vraag waar het gevaarlijke afval heen moet.',
+          why: 'Batterijen, lampen en resten van chemische middelen zijn gevaarlijk afval. Die moeten altijd apart.', whyMore: 'Giet ook nooit resten van middelen door de gootsteen. Vraag waar het gevaarlijke afval heen moet.',
         },
         // ⚖️ check: Gescheiden afval wordt meestal ook apart opgehaald ⚖️.
         {
@@ -77,7 +77,7 @@ export const duurzaamUnit: RuleUnit = {
             { id: 'b', text: 'Hij praat er lang met de collega over.', best: false, feedback: 'Dat mag. Maar het lost de vraag niet op.' },
             { id: 'c', text: 'Hij blijft scheiden en vraagt het aan Henk.', best: true, feedback: 'Goed. Henk weet hoe ze het afval ophalen.' },
           ],
-          why: 'Gescheiden afval wordt meestal ook apart opgehaald. Van oud papier maken ze weer nieuw papier. Weet je het niet zeker? Vraag het je leidinggevende. De regels op je werk volg je, ook als een collega het anders doet.',
+          why: 'Gescheiden afval wordt meestal ook apart opgehaald. Van oud papier maken ze weer nieuw papier.', whyMore: 'Weet je het niet zeker? Vraag het je leidinggevende. De regels op je werk volg je, ook als een collega het anders doet.',
         },
         { kind: 'model', id: 'r.l.duurzaam.1.mo1', context: 'Je weet niet waar je afval heen moet.', nl: 'In welke bak moet dit?' },
       ],
@@ -122,14 +122,14 @@ export const duurzaamUnit: RuleUnit = {
             { id: 'b', text: 'Ze laat alles zo. Het is niet haar gebouw.', best: false, feedback: 'Dat is logisch. Maar een lek kost veel water.' },
             { id: 'c', text: 'Ze probeert de kraan zelf te maken.', best: false, feedback: 'Goed bedoeld. Maar dat is niet haar werk.' },
           ],
-          why: 'Doe lampen en apparaten uit als dat mag. Vraag wat aan moet blijven, zoals de noodverlichting. Meld een lek meteen. Zelf repareren doe je alleen als dat jouw werk is.',
+          why: 'Doe lampen en apparaten uit als dat mag. Meld een lek meteen.', whyMore: 'Vraag wat aan moet blijven, zoals de noodverlichting. Zelf repareren doe je alleen als dat jouw werk is.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.duurzaam.2.tf1',
           statement: 'Een koelcel of vriezer houd je niet langer open dan nodig.',
           answer: true,
-          why: 'Een open deur kost veel energie. Het eten wordt ook minder goed koud. Pak wat je nodig hebt, en doe de deur dicht. Sluit een deur niet goed? Meld het.',
+          why: 'Een open deur kost veel energie. Het eten wordt ook minder goed koud.', whyMore: 'Pak wat je nodig hebt, en doe de deur dicht. Sluit een deur niet goed? Meld het.',
         },
         {
           kind: 'whatdo',
@@ -140,7 +140,7 @@ export const duurzaamUnit: RuleUnit = {
             { id: 'b', text: 'Hij kijkt eerst of er een restje is dat past.', best: true, feedback: 'Goed. Dat scheelt geld en afval.' },
             { id: 'c', text: 'Hij neemt de restjes mee naar huis.', best: false, feedback: 'Dat moet hij eerst vragen. Het hout is van het bedrijf.' },
           ],
-          why: 'Zuinig werken scheelt geld en afval. Meet eerst, dan zaag je. Gebruik restjes als het kan. Iets mee naar huis nemen? Vraag het altijd eerst. Het materiaal is van het bedrijf.',
+          why: 'Zuinig werken scheelt geld en afval. Meet eerst, dan zaag je.', whyMore: 'Gebruik restjes als het kan. Iets mee naar huis nemen? Vraag het altijd eerst. Het materiaal is van het bedrijf.',
         },
         { kind: 'model', id: 'r.l.duurzaam.2.mo1', context: 'Je ziet lampen aan en een lekkende kraan.', nl: 'Mogen deze lampen uit? En de kraan lekt. Wie kan dat maken?' },
       ],

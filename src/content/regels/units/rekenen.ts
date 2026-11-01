@@ -76,7 +76,7 @@ export const rekenenUnit: RuleUnit = {
             'Van 7.30 tot 16.00 uur is 8,5 uur.',
             'Min een half uur pauze. Dat is 8 uur.',
           ],
-          why: 'Werktijd is: eindtijd min begintijd, min de pauze. Een pauze is vaak niet betaald. Soms wel, bijvoorbeeld als je moet blijven voor cliënten. Kijk in je contract of cao.',
+          why: 'Werktijd is: eindtijd min begintijd, min de pauze. Een pauze is vaak niet betaald.', whyMore: 'Soms wel, bijvoorbeeld als je moet blijven voor cliënten. Kijk in je contract of cao.',
         },
         {
           kind: 'card',
@@ -99,7 +99,7 @@ export const rekenenUnit: RuleUnit = {
             { id: 'c', text: 'Nee, het is 2 uur te veel.', best: true, feedback: 'Goed. Dat klopt.' },
           ],
           sum: ['8 + 6 + 6 + 6 = 26 uur.', 'Dat is 2 uur meer dan 24.'],
-          why: 'Tel de uren van alle dagen op. Klopt het niet met je contract? Vraag het na. Werk je toch meer? Schrijf die uren op, met de datum.',
+          why: 'Tel de uren van alle dagen op. Klopt het niet met je contract? Vraag het na.', whyMore: 'Werk je toch meer? Schrijf die uren op, met de datum.',
         },
         // Pauze na 5,5 uur (rapport hiaten, voorstel 3): de tweede vraag naast r.l.tijd.2.tf1.
         // ⚖️ check: Werk je meer dan 5,5 uur ⚖️? Dan krijg je minstens 30 minuten ⚖️ pauze. Dat mag
@@ -127,14 +127,14 @@ export const rekenenUnit: RuleUnit = {
             'Van 8.00 tot 14.00 uur is 6 uur.',
             '6 uur is meer dan 5,5 uur. Dan hoort er minstens 30 minuten pauze bij.',
           ],
-          why: 'Werk je meer dan 5,5 uur? Dan krijg je minstens 30 minuten pauze. Dat mag ook 2 keer 15 minuten. Staat er geen pauze op je rooster? Vraag het na bij je leidinggevende of de planner.',
+          why: 'Werk je meer dan 5,5 uur? Dan krijg je minstens 30 minuten pauze.', whyMore: 'Dat mag ook 2 keer 15 minuten. Staat er geen pauze op je rooster? Vraag het na bij je leidinggevende of de planner.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.rekenen.1.tf1',
           statement: '7,5 uur is hetzelfde als 7 uur en 30 minuten.',
           answer: true,
-          why: 'Een half uur is 30 minuten. Dus 0,5 uur is 30 minuten. Een kwartier is 15 minuten: dat is 0,25 uur. Op een loonstrook staan uren vaak zo, met een komma.',
+          why: 'Een half uur is 30 minuten. Dus 0,5 uur is 30 minuten.', whyMore: 'Een kwartier is 15 minuten: dat is 0,25 uur. Op een loonstrook staan uren vaak zo, met een komma.',
         },
         {
           kind: 'whoask',
@@ -145,7 +145,7 @@ export const rekenenUnit: RuleUnit = {
             { id: 'b', who: 'hr', best: false, feedback: 'De loonadministratie gaat over je loon. Het rooster maakt de planner.' },
             { id: 'c', who: 'uwv', best: false, feedback: 'UWV gaat niet over je rooster.' },
           ],
-          why: 'Vraag het eerst aan je leidinggevende of de planner. Gaat het om je loon? Dan helpt de loonadministratie.',
+          why: 'Vraag het eerst aan je leidinggevende of de planner.', whyMore: 'Gaat het om je loon? Dan helpt de loonadministratie.',
         },
         { kind: 'model', id: 'r.l.rekenen.1.mo1', context: 'Je rooster heeft meer uren dan je contract.', nl: 'Op mijn rooster staan 26 uur. Mijn contract is 24 uur. Klopt dat?' },
       ],
@@ -206,7 +206,7 @@ export const rekenenUnit: RuleUnit = {
             { id: 'c', text: '200 euro', best: false, feedback: 'Kijk nog een keer: 20 keer 15.' },
           ],
           sum: ['20 × 15 = 300 euro.', '(10 × 15 = 150, en dat 2 keer.)'],
-          why: 'Uren keer uurloon is je bruto loon. Netto krijg je minder. Dat komt vooral door de loonheffing. Hoeveel het minimumloon is, staat op rijksoverheid.nl.',
+          why: 'Uren keer uurloon is je bruto loon. Netto krijg je minder, vooral door de loonheffing.', whyMore: 'Hoeveel het minimumloon is, staat op rijksoverheid.nl.',
         },
         // ⚖️ check: Vakantiegeld is minstens 8 procent van je bruto loon ⚖️.
         {
@@ -233,7 +233,7 @@ export const rekenenUnit: RuleUnit = {
             'Van elke 100 euro is 8 euro vakantiegeld.',
             '10 × 8 = 80 euro.',
           ],
-          why: 'Procent betekent: van elke 100. Vakantiegeld is minstens 8 procent van je bruto loon. Zo kun je checken of het klopt.',
+          why: 'Procent betekent: van elke 100. Vakantiegeld is minstens 8 procent van je bruto loon.', whyMore: 'Zo kun je checken of het klopt.',
         },
         // 70 procent bij ziekte (rapport hiaten, voorstel 3): de tweede vraag naast r.l.ziek.2.
         //   Een rekenvoorbeeld zonder wachtdag; 100 euro per dag is verzonnen.
@@ -263,7 +263,7 @@ export const rekenenUnit: RuleUnit = {
             '3 × 100 = 300 euro.',
             'Van elke 100 euro krijgt hij 70 euro. 3 × 70 = 210 euro.',
           ],
-          why: 'Ben je ziek? Dan betaalt je werkgever minstens 70 procent van je loon door. In het eerste jaar krijg je minstens het minimumloon. Een cao geeft vaak meer. Soms zijn de eerste dagen wachtdagen, zonder loon. Kijk in je contract of cao.',
+          why: 'Ben je ziek? Dan betaalt je werkgever minstens 70 procent van je loon door.', whyMore: 'In het eerste jaar krijg je minstens het minimumloon. Een cao geeft vaak meer. Soms zijn de eerste dagen wachtdagen, zonder loon. Kijk in je contract of cao.',
         },
         // The why says "euro" after each amount, so the voice reads it as money (sayNumbers).
         {
@@ -271,7 +271,7 @@ export const rekenenUnit: RuleUnit = {
           id: 'r.l.rekenen.2.tf1',
           statement: 'Een klant betaalt 5 euro voor 3,20 euro. Dan geef je 1,80 euro terug.',
           answer: true,
-          why: 'Van 3,20 euro naar 4 euro is 80 cent. Van 4 euro naar 5 euro is 1 euro. Samen is dat 1,80 euro. Zo tel je terug vanaf het bedrag. Dat is makkelijker dan aftrekken.',
+          why: 'Van 3,20 euro naar 4 euro is 80 cent. Van 4 naar 5 euro is 1 euro. Samen 1,80 euro.', whyMore: 'Zo tel je terug vanaf het bedrag. Dat is makkelijker dan aftrekken.',
         },
         {
           kind: 'whoask',
@@ -282,7 +282,7 @@ export const rekenenUnit: RuleUnit = {
             { id: 'b', who: 'hr', best: true, feedback: 'Goed. De loonadministratie kan het nakijken.' },
             { id: 'c', who: 'bedrijfsarts', best: false, feedback: 'De bedrijfsarts gaat over je gezondheid, niet over je loon.' },
           ],
-          why: 'De loonadministratie maakt je loonstrook. Reken het na, en vraag het daar. Het minimumloon staat op rijksoverheid.nl.',
+          why: 'De loonadministratie maakt je loonstrook. Reken het na, en vraag het daar.', whyMore: 'Het minimumloon staat op rijksoverheid.nl.',
         },
         { kind: 'model', id: 'r.l.rekenen.2.mo1', context: 'Je rekent je loon van deze week na.', nl: 'Ik heb 20 uur gewerkt. Dan krijg ik 300 euro bruto, toch?' },
       ],
@@ -336,7 +336,7 @@ export const rekenenUnit: RuleUnit = {
             { id: 'c', text: '45 dozen', best: false, feedback: 'Tel nog een keer: 5 keer 8.' },
           ],
           sum: ['5 × 8 = 40 dozen.'],
-          why: 'Tel niet elke doos los. Tel één laag, en doe dat keer het aantal lagen. Klopt het niet met de pakbon? Meld het meteen, vóór je tekent voor ontvangst.',
+          why: 'Tel één laag, en doe dat keer het aantal lagen. Dat is sneller dan elke doos los.', whyMore: 'Klopt het niet met de pakbon? Meld het meteen, vóór je tekent voor ontvangst.',
         },
         {
           kind: 'card',
@@ -353,14 +353,14 @@ export const rekenenUnit: RuleUnit = {
             { id: 'c', text: '20 ml', best: false, feedback: 'Dat is voor 1 liter. De emmer is 5 liter.' },
           ],
           sum: ['20 ml voor elke liter.', '5 × 20 = 100 ml.'],
-          why: 'Meet het af met een maatbeker. Gok niet. Meer middel maakt niet schoner. Het is wel slecht voor je huid en voor het milieu.',
+          why: 'Meet het af met een maatbeker. Meer middel maakt niet schoner.', whyMore: 'Gok dus niet. Te veel middel is wel slecht voor je huid en voor het milieu.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.rekenen.3.tf1',
           statement: 'Een doos van 12 kilo is lichter dan een doos van 12.000 gram.',
           answer: false,
-          why: 'Ze zijn even zwaar. 1 kilo is 1000 gram, dus 12 kilo is 12.000 gram. Goed om te weten: 1 liter is 1000 milliliter (ml). En 1 meter is 100 centimeter.',
+          why: 'Ze zijn even zwaar. 1 kilo is 1000 gram, dus 12 kilo is 12.000 gram.', whyMore: 'Goed om te weten: 1 liter is 1000 milliliter (ml). En 1 meter is 100 centimeter.',
         },
         { kind: 'model', id: 'r.l.rekenen.3.mo1', context: 'Je telt minder dozen dan op de pakbon staat.', nl: 'Op de pakbon staan 40 dozen. Ik tel er 38. Wil je meekijken?' },
       ],
