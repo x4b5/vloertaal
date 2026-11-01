@@ -470,6 +470,7 @@ export const uiNl: Record<UiKey, UiText> = {
   colleagueCardHint: 'Laat dit zien aan een collega die Nederlands spreekt. Hier staat hoe die je kan helpen oefenen.',
   colleagueShare: 'Stuur naar je collega',
   coachCardRights: 'Onderwerpen over je rechten bij naam tonen',
+  speakFromMemory: 'Nu uit je hoofd: hoe was het ook alweer?',
   keptNofM: 'Woorden van 2 weken of langer geleden: je wist er nog {n} van de {m}.',
   calmScreen: 'Rustig scherm',
   calmAuto: 'Zoals je telefoon',

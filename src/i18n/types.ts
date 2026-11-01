@@ -516,6 +516,8 @@ export const uiEn = {
   colleagueShare: 'Send it to your colleague',
   /* The coach card (src/components/Certificate.tsx CoachCardScreen): a topic about rights named or not. */
   coachCardRights: 'Show topics about your rights by name',
+  /* Speaking (src/components/Speaking.tsx): "say it again" is said from memory. */
+  speakFromMemory: 'Now from memory: what was it in Dutch?',
   /* After a review (src/components/Screens.tsx Result, lib/spaced.ts keptCount): what stayed. */
   keptNofM: 'Words from 2 weeks ago or longer: you still knew {n} of {m}.',
   /* "Rustig scherm" (Settings › Lessons; src/lib/calm.ts). */

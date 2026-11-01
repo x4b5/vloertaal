@@ -408,6 +408,7 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Mostra isto a um colega que fala neerlandês. Diz como te pode ajudar a praticar.', // nieuw, nalezen
     colleagueShare: 'Envia ao teu colega', // nieuw, nalezen
     coachCardRights: 'Mostrar pelo nome os temas sobre os teus direitos', // nieuw, nalezen
+    speakFromMemory: 'Agora de memória: como era em neerlandês?', // nieuw, nalezen
     keptNofM: 'Palavras de há 2 semanas ou mais: ainda sabias {n} de {m}.', // nieuw, nalezen
     calmScreen: 'Ecrã calmo', // nieuw, nalezen
     calmAuto: 'Como o teu telemóvel', // nieuw, nalezen

@@ -4948,3 +4948,6 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   100% { opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .show-how-hand, .show-how-ring { animation: none; } }
+
+/* Speaking, "say it again": from memory (the Dutch hidden until the try is done). */
+.say-memory { margin: 0 0 4px; font-size: var(--fs-small); font-weight: 700; color: var(--ink-2); }
