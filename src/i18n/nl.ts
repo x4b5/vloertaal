@@ -469,6 +469,7 @@ export const uiNl: Record<UiKey, UiText> = {
   colleagueCard: 'Voor je collega',
   colleagueCardHint: 'Laat dit zien aan een collega die Nederlands spreekt. Hier staat hoe die je kan helpen oefenen.',
   colleagueShare: 'Stuur naar je collega',
+  coachCardRights: 'Onderwerpen over je rechten bij naam tonen',
   calmScreen: 'Rustig scherm',
   calmAuto: 'Zoals je telefoon',
   calmHint: 'Aan: niets beweegt. Geen feestje voor je reeks na een les. Je reeks en woorden staan niet op de startpagina.',

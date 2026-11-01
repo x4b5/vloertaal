@@ -8,7 +8,7 @@ import { getHelpLanguage, registerPack } from '../src/i18n';
 import nlPack from '../src/i18n/packs/nl';
 import { GENDERED_LANGS, uiEn } from '../src/i18n/types';
 import { helpLanguageSources } from '../src/i18n/all';
-import { KAART_NOTE, kaartAlt, kaartData, kaartRows, lessonText, practisedDays } from '../src/lib/kaart';
+import { KAART_NOTE, kaartAlt, kaartData, kaartRows, lessonText, practisedDays, RIGHTS_TOPIC } from '../src/lib/kaart';
 import { completeDaily, completeLesson, emptyProgress, parseBackup, backupFile, mergeBackup, replaceWithBackup, DAYS_KEEP, type Progress } from '../src/lib/progress';
 import { settingsRows } from '../src/lib/settingsMenu';
 import type { ToetsRun } from '../src/lib/toetsState';
@@ -27,6 +27,33 @@ const run = (dayKey: string, version: 'A' | 'B', r: [number, number, number]): T
 const finishUnit = (p: Progress, unitIndex: number, d: number, course = units) =>
   course[unitIndex].lessons.reduce((q, l) => completeLesson(q, l.id, 1, false, day(d)), p);
 const withCerts = (p: Progress, ids: [string, string][]): Progress => ({ ...p, certs: { ...p.certs, ...Object.fromEntries(ids) } });
+
+describe('coach card: topics about rights (W3)', () => {
+  const rightsIndex = units.findIndex((u) => u.id === 'u.exploit');
+  const withRights = () => {
+    let p = finishUnit(emptyProgress, 0, 20);
+    p = finishUnit(p, rightsIndex, 25);
+    return withCerts(p, [[units[0].id, '2026-10-20'], [units[rightsIndex].id, '2026-10-25']]);
+  };
+
+  it('does not name them by default: "een onderwerp over je rechten", also as the last lesson', () => {
+    const d = kaartData(withRights(), '', TODAY);
+    expect(d.hasRights).toBe(true);
+    expect(d.lastUnits).toEqual([RIGHTS_TOPIC, units[0].titleNl]);
+    expect(d.lastLesson?.text).toBe(RIGHTS_TOPIC);
+    expect(kaartAlt(d)).not.toContain(units[rightsIndex].titleNl);
+  });
+
+  it('names them when the learner chooses so', () => {
+    const d = kaartData(withRights(), '', TODAY, true);
+    expect(d.lastUnits[0]).toBe(units[rightsIndex].titleNl);
+    expect(d.lastLesson?.text).toContain(units[rightsIndex].titleNl);
+  });
+
+  it('has nothing to hide without such a topic', () => {
+    expect(kaartData(finishUnit(emptyProgress, 0, 20), '', TODAY).hasRights).toBeUndefined();
+  });
+});
 
 describe('coach card: its fields', () => {
   it('a new learner: nothing done, no test, today’s date', () => {

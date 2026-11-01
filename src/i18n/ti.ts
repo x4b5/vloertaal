@@ -408,6 +408,7 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'ንብጻይ ስራሕ', // nieuw, nalezen
     colleagueCardHint: { m: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእዮ። ከመይ ጌሩ ክሕግዘካ ከም ዝኽእል ተጻሒፉ ኣሎ።', f: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእይዮ። ከመይ ጌሩ ክሕግዘኪ ከም ዝኽእል ተጻሒፉ ኣሎ።', x: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእዩዎ። ከመይ ጌሩ ክሕግዘኩም ከም ዝኽእል ተጻሒፉ ኣሎ።' }, // nieuw, nalezen
     colleagueShare: { m: 'ናብ ብጻይካ ስደዶ', f: 'ናብ ብጻይኪ ስደድዮ', x: 'ናብ ብጻይኩም ስደዱዎ' }, // nieuw, nalezen
+    coachCardRights: 'ኣርእስታት ብዛዕባ መሰላትካ ብስሞም ኣርኢ', // nieuw, nalezen
     calmScreen: 'ህዱእ ስክሪን', // nieuw, nalezen
     calmAuto: { m: 'ከም ተሌፎንካ', f: 'ከም ተሌፎንኪ', x: 'ከም ተሌፎንኩም' }, // nieuw, nalezen
     calmHint: 'ክፉት: ዝንቀሳቐስ የለን፡ ድሕሪ ትምህርቲ ናይ ተኸታታሊ መዓልትታት ጽምብል የለን፡ መዓልትታትን ቃላትን ኣብ ቀንዲ ስክሪን ኣይርአዩን።', // nieuw, nalezen

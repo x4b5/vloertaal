@@ -4905,3 +4905,15 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .colleague-card-thanks { margin: 10px 0 0; font-weight: 700; color: var(--ink); }
 .colleague-card-site { font-weight: 500; color: var(--muted); }
 .colleague-share { width: 100%; }
+
+/* The coach card: name topics about rights or not (src/lib/kaart.ts RIGHTS_UNIT); a tick box and its line. */
+.kaart-rights {
+  display: flex; align-items: center; gap: 10px; width: 100%; min-height: 48px; margin: 4px 0 10px; padding: 8px 10px;
+  border: 2px solid var(--line); border-radius: 8px; background: transparent; color: var(--ink); font: inherit; text-align: start; cursor: pointer;
+}
+.kaart-rights-box {
+  flex: none; display: grid; place-items: center; width: 26px; height: 26px;
+  border: 2px solid var(--edge-strong); border-radius: 5px; background: var(--card); color: var(--ink-strong);
+}
+.kaart-rights[aria-pressed='true'] .kaart-rights-box { background: var(--yellow); }
+.kaart-rights-nl { font-weight: 650; }

@@ -407,6 +407,7 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'Pentru colegul tău', // nieuw, nalezen
     colleagueCardHint: 'Arată asta unui coleg care vorbește olandeză. Scrie cum te poate ajuta să exersezi.', // nieuw, nalezen
     colleagueShare: 'Trimite-l colegului', // nieuw, nalezen
+    coachCardRights: 'Arată pe nume subiectele despre drepturile tale', // nieuw, nalezen
     calmScreen: 'Ecran liniștit', // nieuw, nalezen
     calmAuto: 'Ca telefonul tău', // nieuw, nalezen
     calmHint: 'Pornit: nimic nu se mișcă, nicio sărbătoare pentru seria ta după o lecție, iar seria și cuvintele nu apar pe ecranul principal.', // nieuw, nalezen
