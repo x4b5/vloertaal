@@ -471,6 +471,7 @@ export const uiNl: Record<UiKey, UiText> = {
   colleagueShare: 'Stuur naar je collega',
   coachCardRights: 'Onderwerpen over je rechten bij naam tonen',
   keptNofM: 'Woorden van 2 weken of langer geleden: je wist er nog {n} van de {m}.',
+  verbSecond: 'Het werkwoord staat op plek 2.',
   calmScreen: 'Rustig scherm',
   calmAuto: 'Zoals je telefoon',
   calmHint: 'Aan: niets beweegt. Geen feestje voor je reeks na een les. Je reeks en woorden staan niet op de startpagina.',

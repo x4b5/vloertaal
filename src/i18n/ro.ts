@@ -409,6 +409,7 @@ const lang: HelpLanguageSource = {
     colleagueShare: 'Trimite-l colegului', // nieuw, nalezen
     coachCardRights: 'Arată pe nume subiectele despre drepturile tale', // nieuw, nalezen
     keptNofM: 'Cuvinte de acum 2 săptămâni sau mai vechi: încă știai {n} din {m}.', // nieuw, nalezen
+    verbSecond: 'Verbul stă pe locul 2.', // nieuw, nalezen
     calmScreen: 'Ecran liniștit', // nieuw, nalezen
     calmAuto: 'Ca telefonul tău', // nieuw, nalezen
     calmHint: 'Pornit: nimic nu se mișcă, nicio sărbătoare pentru seria ta după o lecție, iar seria și cuvintele nu apar pe ecranul principal.', // nieuw, nalezen

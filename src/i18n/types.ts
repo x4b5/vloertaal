@@ -518,6 +518,8 @@ export const uiEn = {
   coachCardRights: 'Show topics about your rights by name',
   /* After a review (src/components/Screens.tsx Result, lib/spaced.ts keptCount): what stayed. */
   keptNofM: 'Words from 2 weeks ago or longer: you still knew {n} of {m}.',
+  /* "Zet het vooraan" feedback (src/components/LessonPlayer.tsx): the verb boxed, and why. */
+  verbSecond: 'The verb is in place 2.',
   /* "Rustig scherm" (Settings › Lessons; src/lib/calm.ts). */
   calmScreen: 'Calm screen',
   calmAuto: 'Like your phone',

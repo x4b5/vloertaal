@@ -409,6 +409,7 @@ const lang: HelpLanguageSource = {
     colleagueShare: 'به همکار تان بفرستید', // nieuw, nalezen
     coachCardRights: 'موضوعات مربوط به حقوق شما با نام نشان داده شود', // nieuw, nalezen
     keptNofM: 'کلمه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را می‌دانستید.', // nieuw, nalezen
+    verbSecond: 'فعل در جای دوم است.', // nieuw, nalezen
     calmScreen: 'صفحهٔ آرام', // nieuw, nalezen
     calmAuto: 'مثل تلفن شما', // nieuw, nalezen
     calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پیهم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen

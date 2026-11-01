@@ -409,6 +409,7 @@ const lang: HelpLanguageSource = {
     colleagueShare: { m: 'أرسِلها إلى زميلك', f: 'أرسِليها إلى زميلك', x: 'إرسالها إلى زميل' }, // nieuw, nalezen
     coachCardRights: 'إظهار أسماء المواضيع عن حقوقك', // nieuw, nalezen
     keptNofM: { m: 'كلمات من قبل أسبوعين أو أكثر: ما زلتَ تعرف {n} من {m}.', f: 'كلمات من قبل أسبوعين أو أكثر: ما زلتِ تعرفين {n} من {m}.', x: 'كلمات من قبل أسبوعين أو أكثر: ما زالت {n} من {m} معروفة.' }, // nieuw, nalezen
+    verbSecond: 'الفعل في المكان الثاني.', // nieuw, nalezen
     calmScreen: 'شاشة هادئة', // nieuw, nalezen
     calmAuto: 'مثل هاتفك', // nieuw, nalezen
     calmHint: 'مُفعّل: لا شيء يتحرك، لا احتفال بسلسلة أيامك بعد الدرس، ولا تظهر السلسلة والكلمات في الشاشة الرئيسية.', // nieuw, nalezen

@@ -409,6 +409,7 @@ const lang: HelpLanguageSource = {
     colleagueShare: 'İş arkadaşına gönder', // nieuw, nalezen
     coachCardRights: 'Haklarınla ilgili konuları adıyla göster', // nieuw, nalezen
     keptNofM: '2 hafta veya daha önceki kelimeler: {m} kelimeden {n} tanesini hâlâ biliyordun.', // nieuw, nalezen
+    verbSecond: 'Fiil 2. sıradadır.', // nieuw, nalezen
     calmScreen: 'Sakin ekran', // nieuw, nalezen
     calmAuto: 'Telefonundaki gibi', // nieuw, nalezen
     calmHint: 'Açık: hiçbir şey hareket etmez, dersten sonra serin için kutlama olmaz, serin ve kelimelerin ana ekranda görünmez.', // nieuw, nalezen

@@ -409,6 +409,7 @@ const lang: HelpLanguageSource = {
     colleagueShare: 'Envíaselo a tu compañero', // nieuw, nalezen
     coachCardRights: 'Mostrar por su nombre los temas sobre tus derechos', // nieuw, nalezen
     keptNofM: 'Palabras de hace 2 semanas o más: todavía sabías {n} de {m}.', // nieuw, nalezen
+    verbSecond: 'El verbo va en el lugar 2.', // nieuw, nalezen
     calmScreen: 'Pantalla tranquila', // nieuw, nalezen
     calmAuto: 'Como tu teléfono', // nieuw, nalezen
     calmHint: 'Activado: nada se mueve, no hay celebración de tu racha después de una lección, y tu racha y tus palabras no aparecen en la pantalla de inicio.', // nieuw, nalezen
