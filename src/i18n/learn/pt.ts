@@ -8,7 +8,8 @@ const t: CultureTranslation = {
     micFailed: "O microfone não funcionou. Diz em voz alta e depois continua.",
     micRefused: "A app não pode usar o teu microfone. Podes ativá-lo.", // nieuw, nalezen
     micTurnOn: "Ativa o microfone", // nieuw, nalezen
-    micStepsIos: "Toca em “aA” na barra de endereço › Definições do site › Microfone › Permitir. Ou: Definições › Apps › Safari › Microfone. Depois toca no botão abaixo.", // nieuw, nalezen
+    micStepsIos: "Toca em “•••” ou “aA” na barra de endereço › Definições do site › Microfone › Permitir. Ou: Definições › Apps › Safari › Microfone. Depois toca no botão abaixo.", // nieuw, nalezen
+    micStepsIosOther: "Toca no ícone à esquerda do endereço web › Autorizações › Microfone › Permitir. Ou: Definições › Apps › {app} › Microfone. Depois toca no botão abaixo.", // nieuw, nalezen
     micStepsAndroid: "Toca no ícone à esquerda do endereço web › Autorizações › Microfone › Permitir. Depois toca no botão abaixo.", // nieuw, nalezen
     micStepsAndroidApp: "Mantém premido o ícone do Vloertaal no ecrã principal › Informações da app › Autorizações › Microfone › Permitir. Depois toca no botão abaixo.", // nieuw, nalezen
     micStepsDesktop: "Clica no ícone à esquerda do endereço web › Microfone › Permitir. Depois clica no botão abaixo.", // nieuw, nalezen

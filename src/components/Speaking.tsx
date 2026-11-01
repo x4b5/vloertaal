@@ -8,7 +8,7 @@ import { sentencePicture } from '../lib/exercises';
 import {
   canRecord, isWord, MAX_RECORD_MS, MIC_RETRIES, micBlocked, micRefusedNow, recordMime, setMicBlocked, setMicRefused, SILENCE_MS, speakMode,
 } from '../lib/speaking';
-import { MIC_STEPS, micPlatform, micRefusedError, watchMicPermission } from '../lib/micHelp';
+import { MIC_STEPS, micPlatform, micRefusedError, micSteps, watchMicPermission } from '../lib/micHelp';
 import { judge, localStatus, startListening, verdictOf, type Heard, type Listening, type Verdict } from '../lib/listen';
 import { learnerCharacter, voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
@@ -528,7 +528,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
               (here or earlier in the lesson) it says the microphone did not work; chosen by the
               learner ("Say it out loud instead"): the microphone is off, that's fine. */}
           {/* Refused by the browser: say so, then (one tap) this phone's steps to allow it. */}
-          <Bi text={ui(!canRecord() ? 'sayAloud' : refused ? (steps ? MIC_STEPS[micPlatform()] : 'micRefused') : failed || micBlocked() ? 'micFailed' : 'micUnavailable', lang)} />
+          <Bi text={refused && steps && canRecord() ? micSteps(ui(MIC_STEPS[micPlatform()], lang)) : ui(!canRecord() ? 'sayAloud' : refused ? 'micRefused' : failed || micBlocked() ? 'micFailed' : 'micUnavailable', lang)} />
           {refused && canRecord() && !steps && (
             <button type="button" className="btn say-mic-on" onClick={() => setSteps(true)}>
               <MicIcon size={24} />

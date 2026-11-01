@@ -8,7 +8,8 @@ const t: CultureTranslation = {
     micFailed: "Microfonul nu a funcționat. Spune cu voce tare, apoi mergi mai departe.",
     micRefused: "Aplicația nu are voie să folosească microfonul. Îl poți porni.", // nieuw, nalezen
     micTurnOn: "Pornește microfonul", // nieuw, nalezen
-    micStepsIos: "Atinge „aA” în bara de adrese › Configurări site web › Microfon › Permite. Sau: Configurări › Aplicații › Safari › Microfon. Apoi atinge butonul de mai jos.", // nieuw, nalezen
+    micStepsIos: "Atinge „•••” sau „aA” în bara de adrese › Configurări site web › Microfon › Permite. Sau: Configurări › Aplicații › Safari › Microfon. Apoi atinge butonul de mai jos.", // nieuw, nalezen
+    micStepsIosOther: "Atinge pictograma din stânga adresei web › Permisiuni › Microfon › Permite. Sau: Configurări › Aplicații › {app} › Microfon. Apoi atinge butonul de mai jos.", // nieuw, nalezen
     micStepsAndroid: "Atinge pictograma din stânga adresei web › Permisiuni › Microfon › Permite. Apoi atinge butonul de mai jos.", // nieuw, nalezen
     micStepsAndroidApp: "Ține apăsat pe pictograma Vloertaal de pe ecranul principal › Informații aplicație › Permisiuni › Microfon › Permite. Apoi atinge butonul de mai jos.", // nieuw, nalezen
     micStepsDesktop: "Dă clic pe pictograma din stânga adresei web › Microfon › Permite. Apoi dă clic pe butonul de mai jos.", // nieuw, nalezen

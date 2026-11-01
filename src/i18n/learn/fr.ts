@@ -8,7 +8,8 @@ const t: CultureTranslation = {
     micFailed: "Le micro n’a pas marché. Dis-le à voix haute, puis continue.",
     micRefused: "L’app ne peut pas utiliser ton micro. Tu peux l’activer.", // nieuw, nalezen
     micTurnOn: "Active le micro", // nieuw, nalezen
-    micStepsIos: "Touche « aA » dans la barre d’adresse › Réglages du site web › Micro › Autoriser. Ou : Réglages › Apps › Safari › Micro. Puis touche le bouton ci-dessous.", // nieuw, nalezen
+    micStepsIos: "Touche « ••• » ou « aA » dans la barre d’adresse › Réglages du site web › Micro › Autoriser. Ou : Réglages › Apps › Safari › Micro. Puis touche le bouton ci-dessous.", // nieuw, nalezen
+    micStepsIosOther: "Touche l’icône à gauche de l’adresse web › Autorisations › Micro › Autoriser. Ou : Réglages › Apps › {app} › Micro. Puis touche le bouton ci-dessous.", // nieuw, nalezen
     micStepsAndroid: "Touche l’icône à gauche de l’adresse web › Autorisations › Micro › Autoriser. Puis touche le bouton ci-dessous.", // nieuw, nalezen
     micStepsAndroidApp: "Appuie longtemps sur l’icône de Vloertaal sur ton écran d’accueil › Infos sur l’appli › Autorisations › Micro › Autoriser. Puis touche le bouton ci-dessous.", // nieuw, nalezen
     micStepsDesktop: "Clique sur l’icône à gauche de l’adresse web › Micro › Autoriser. Puis clique sur le bouton ci-dessous.", // nieuw, nalezen

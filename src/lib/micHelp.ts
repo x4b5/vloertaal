@@ -11,13 +11,22 @@ export function micRefusedError(e: unknown): boolean {
   return name === 'NotAllowedError' || name === 'SecurityError' || name === 'PermissionDeniedError';
 }
 
-/** Which steps fit this device: an iPhone or iPad, Android in the browser, the installed app on
+/** Which steps fit this device: an iPhone or iPad in Safari, or in another browser (Chrome, Edge,
+ *  Firefox: no "aA" or "•••" page menu there), Android in the browser, the installed app on
  *  Android, or a computer. */
-export type MicPlatform = 'ios' | 'android' | 'android-app' | 'desktop';
+export type MicPlatform = 'ios' | 'ios-other' | 'android' | 'android-app' | 'desktop';
+
+/** The other browser on an iPhone or iPad, by the name it has in the phone's Settings › Apps. */
+export function iosBrowser(ua = typeof navigator !== 'undefined' ? navigator.userAgent : ''): string | null {
+  if (/CriOS/.test(ua)) return 'Chrome';
+  if (/EdgiOS/.test(ua)) return 'Edge';
+  if (/FxiOS/.test(ua)) return 'Firefox';
+  return null;
+}
 
 export function micPlatform(ua = typeof navigator !== 'undefined' ? navigator.userAgent : '', touch = typeof navigator !== 'undefined' ? navigator.maxTouchPoints : 0, standalone = installedApp()): MicPlatform {
   // iPadOS says "Macintosh", but a Mac has no touch screen.
-  if (/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && touch > 1)) return 'ios';
+  if (/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && touch > 1)) return iosBrowser(ua) ? 'ios-other' : 'ios';
   if (/Android/.test(ua)) return standalone ? 'android-app' : 'android';
   return 'desktop';
 }
@@ -31,12 +40,19 @@ function installedApp(): boolean {
 }
 
 /** The ui key with this device's steps. */
-export const MIC_STEPS: Record<MicPlatform, 'micStepsIos' | 'micStepsAndroid' | 'micStepsAndroidApp' | 'micStepsDesktop'> = {
+export const MIC_STEPS: Record<MicPlatform, 'micStepsIos' | 'micStepsIosOther' | 'micStepsAndroid' | 'micStepsAndroidApp' | 'micStepsDesktop'> = {
   ios: 'micStepsIos',
+  'ios-other': 'micStepsIosOther',
   android: 'micStepsAndroid',
   'android-app': 'micStepsAndroidApp',
   desktop: 'micStepsDesktop',
 };
+
+/** This device's steps, with the browser's name where they need it ("{app}"). */
+export function micSteps<T extends { en: string; help?: string }>(text: T, ua?: string): T {
+  const app = iosBrowser(ua) ?? 'Safari';
+  return { ...text, en: text.en.replace('{app}', app), help: text.help?.replace('{app}', app) };
+}
 
 /**
  * Calls `onAllowed` once the microphone is no longer refused ('granted', or 'prompt': the browser
