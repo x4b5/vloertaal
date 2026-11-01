@@ -903,7 +903,6 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const pairLine = pair && sayable ? (
     <div className="feedback-pair feedback-say">
       <div className="pair-say" dir="ltr">
-        {replay}
         {diff ? (
           <span className="pair-tiles" lang="nl">
             {diff.map((t, i) => (
@@ -916,6 +915,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         ) : (
           <strong className="pair-nl" lang="nl">{breakable(pair.nl ?? '')}</strong>
         )}
+        {/* To hear it again: optional, so at the end (the right), as every optional speaker. */}
+        {replay}
       </div>
       {pairHelp && lang && <HelpText className="pair-gloss" text={pairHelp} lang={lang} />}
       <span className={`pair-en ${pairHelp && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>

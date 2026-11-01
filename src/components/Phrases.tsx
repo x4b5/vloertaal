@@ -18,10 +18,10 @@ export function PhraseList({ lang }: { lang?: HelpLanguage }) {
           if (!item) return null;
           return (
             <li key={id} className="phrase">
-              <SpeakButton text={item.nl} help={lang} />
               <div className="phrase-text">
                 <NlPair content nlFirst nl={breakable(item.nl)} nlClass="phrase-nl" text={gloss(id, item.en, lang)} />
               </div>
+              <SpeakButton text={item.nl} help={lang} />
             </li>
           );
         })}

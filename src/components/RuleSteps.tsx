@@ -69,8 +69,8 @@ function Question({ text, lang, who, verdict, run, misses }: {
   return (
     <div className="rule-q">
       <div className="rule-q-text">
-        <Say text={text} lang={lang} />
         <h2 className="prompt rule-prompt" lang="nl">{text}</h2>
+        <Say text={text} lang={lang} />
       </div>
       {who && (
         <span className="speaker-char speaker-char-sm rule-q-char">
@@ -143,8 +143,8 @@ export function RuleCard({ ex, lang, onAnswer }: RuleProps<'rule'>) {
         <h2 className="prompt rule-title" lang="nl">{step.title}</h2>
         <div className="rule-body">
           {/* A dialect word card (regio): no speaker, the words marked as Limburgish. */}
-          {!step.dialect && <Say text={body} lang={lang} />}
           <p lang="nl">{step.body.map((line, i) => <span key={i} className="rule-line">{step.dialect ? <DialectLine line={line} /> : line}</span>)}</p>
+          {!step.dialect && <Say text={body} lang={lang} />}
         </div>
       </div>
       {advice && <p className="rule-advice" lang="nl"><InfoGlyph />{advice}</p>}
@@ -213,8 +213,8 @@ export function WhatDo({ ex, lang, locked, onAnswer, verdict }: RuleProps<'whatd
           <span className="speaker-char"><Character who={who} mood={moodFor(verdict, 'thinking', true)} talking={talking && !verdict} size={96} /></span>
           <div className="speaker-bubble situation-text situation-says">
             <span className="situation-quote" dir="ltr">
-              <Say text={step.quote} lang={lang} voice={quoteVoice} />
               <span lang="nl" className="situation-nl">“{step.quote}”</span>
+              <Say text={step.quote} lang={lang} voice={quoteVoice} />
             </span>
           </div>
         </div>
@@ -287,8 +287,8 @@ export function ModelLine({ ex, lang, onAnswer }: RuleProps<'model'>) {
         <div className="tip-say-row">
           <span className="tip-char rule-me"><MeAvatar /><span className="rule-me-name" lang="nl">Jij</span></span>
           <div className="speaker-bubble tip-bubble">
-            <Say text={step.nl} lang={lang} voice={voice} />
             <span className="tip-phrase-nl rule-model-nl" lang="nl">{step.nl}</span>
+            <Say text={step.nl} lang={lang} voice={voice} />
           </div>
         </div>
       </div>
@@ -479,17 +479,17 @@ export function RuleFeedbackBody({ v, lang }: { v: RuleVerdict; lang?: HelpLangu
       {v.own && <p className="rule-fb-own" lang="nl">{v.own}</p>}
       {v.sum && (
         <div className="rule-fb-sum">
-          <Say text={v.sum.join(' ')} lang={lang} />
           <div className="rule-fb-sum-body">
             <span className="feedback-kicker" lang="nl">Zo reken je het</span>
             <p lang="nl">{v.sum.map((line, i) => <span key={i} className="rule-line">{line}</span>)}</p>
           </div>
+          <Say text={v.sum.join(' ')} lang={lang} />
         </div>
       )}
       {(v.best || v.own || v.sum) && <hr className="feedback-rule" />}
       <div className="feedback-why rule-fb-why">
-        <Say text={v.why} lang={lang} />
         <p lang="nl">{v.why}</p>
+        <Say text={v.why} lang={lang} />
       </div>
       {/* Where it is written, an exception: behind an ⓘ, opened in place. */}
       {v.more && (

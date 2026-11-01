@@ -431,8 +431,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
             <span className="chat-char"><Character who={them} /></span>
             <div className="chat-bubble">
               {/* Hidden while recording (its sound would be recorded too), its place kept. */}
-              <SpeakButton glyph text={turn.prompt.nl} help={lang} voice={themVoice} className={recording ? 'say-model-off' : undefined} />
               <span className="chat-line" lang="nl">{breakable(turn.prompt.nl)}</span>
+              <SpeakButton glyph text={turn.prompt.nl} help={lang} voice={themVoice} className={recording ? 'say-model-off' : undefined} />
               <span className="chat-hint"><Bi text={gloss(turn.prompt.id, turn.prompt.en, lang)} /></span>
             </div>
           </div>
@@ -441,8 +441,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
               {revealed ? (
                 <>
                   {/* Your reply, to hear again (after recording, the example and your try played by themselves). */}
-                  <SpeakButton glyph text={item.nl} help={lang} voice={voice} />
                   <span className="chat-line" lang="nl">{breakable(item.nl)}</span>
+                  <SpeakButton glyph text={item.nl} help={lang} voice={voice} />
                   <span className="chat-hint"><Bi text={meaning} /></span>
                 </>
               ) : <span className="chat-blank" aria-hidden />}

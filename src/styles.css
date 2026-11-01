@@ -737,7 +737,8 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .speaker-char { flex: none; font-size: 124px; line-height: 1; }
 .speaker-bubble {
   position: relative; display: flex; align-items: center; gap: 12px; margin-bottom: 20px; min-width: 0;
-  padding: 9px 18px 9px 9px; border: 2px solid var(--edge); border-radius: 12px; background: var(--card);
+  /* The speaker is at the end (an optional speaker is always on the right): the tight side is the end. */
+  padding-block: 9px; padding-inline: 18px 9px; border: 2px solid var(--edge); border-radius: 12px; background: var(--card);
 }
 .speaker-bubble::before {
   content: ''; position: absolute; left: -9px; top: 50%; width: 16px; height: 16px; margin-top: -8px;
@@ -758,7 +759,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   .speaker-word.len-m .speaker-char, .speaker-word.len-l .speaker-char { font-size: 96px; }
   .speaker-word.len-l .speaker-char { font-size: 80px; }
   .speaker-word.len-m, .speaker-word.len-l { gap: 12px; }
-  .speaker-word.len-l .speaker-bubble { gap: 8px; padding: 8px 12px 8px 8px; }
+  .speaker-word.len-l .speaker-bubble { gap: 8px; padding-block: 8px; padding-inline: 12px 8px; }
   .speaker-word.len-l .speaker-bubble .speak { width: 40px; height: 40px; }
 }
 
@@ -909,7 +910,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* Sentence building: character + speech bubble (speaker icon, dotted hint underline). */
 .speaker-build { align-items: flex-end; gap: 14px; margin-bottom: 4px; }
 .speaker-build .speaker-char { font-size: 136px; }
-.speaker-build .speaker-bubble { padding: 8px 18px 8px 8px; margin-bottom: 20px; gap: 8px; min-width: 0; }
+.speaker-build .speaker-bubble { padding-block: 8px; padding-inline: 18px 8px; margin-bottom: 20px; gap: 8px; min-width: 0; }
 .speak-glyph {
   display: inline-grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0;
   border: none; border-radius: 10px; background: var(--blue); color: var(--on-blue);
@@ -1072,7 +1073,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 }
 .chat-bubble {
   position: relative; display: flex; align-items: center; gap: 4px; min-width: 0;
-  padding: 8px 18px 8px 8px; border: 2px solid var(--edge); border-radius: 12px; background: var(--card);
+  padding-block: 8px; padding-inline: 18px 8px; border: 2px solid var(--edge); border-radius: 12px; background: var(--card);
 }
 .chat-bubble::before {
   content: ''; position: absolute; left: -9px; top: 50%; width: 16px; height: 16px; margin-top: -8px;
@@ -1344,7 +1345,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .tip-say-row { display: flex; align-items: flex-end; gap: 10px; }
 .tip-char { flex: none; display: flex; justify-content: center; }
 .tip-char .ch { height: 76px; width: auto; }
-.tip-bubble { flex: 1; min-width: 0; margin-bottom: 0; display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px 10px 10px; }
+.tip-bubble { flex: 1; min-width: 0; margin-bottom: 0; display: flex; align-items: flex-start; gap: 10px; padding-block: 10px; padding-inline: 14px 10px; }
 .tip-bubble::before { top: auto; bottom: 22px; }
 .tip-phrase { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .tip-phrase-nl { font-weight: 700; font-size: 1.2rem; }
@@ -1379,7 +1380,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   .tip-say-label { margin-bottom: 8px; }
   .tip-say-row { gap: 6px; }
   .tip-char .ch { height: 60px; }
-  .tip-bubble { padding: 8px 12px 8px 8px; gap: 8px; }
+  .tip-bubble { padding-block: 8px; padding-inline: 12px 8px; gap: 8px; }
   .tip-phrase-nl { font-size: 1.1rem; line-height: 1.25; }
   .tip-phrase .bi { font-size: 0.95rem; }
 }
@@ -2281,7 +2282,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .speaker-char, .speaker-build .speaker-char, .situation .speaker-char,
   .speaker-word.len-m .speaker-char, .speaker-word.len-l .speaker-char { font-size: 64px; }
   .prompt-row .speaker-char { font-size: 52px; }
-  .speaker-bubble, .speaker-build .speaker-bubble { padding: 6px 10px 6px 6px; gap: 6px; }
+  .speaker-bubble, .speaker-build .speaker-bubble { padding-block: 6px; padding-inline: 10px 6px; gap: 6px; }
   .speaker-bubble .speak, .speaker-word.len-l .speaker-bubble .speak { width: 40px; height: 40px; }
   .situation-text { padding-left: 10px; }
   /* Too narrow for a colleague beside a bubble: the bubble goes under the colleague. */
@@ -2573,9 +2574,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .pair-gloss { display: block; font-size: 1.15rem; font-weight: 650; line-height: 1.3; color: var(--ink); }
 .pair-gloss:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.22rem; }
 .pair-en { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
-/* The meaning under the Dutch starts where the Dutch starts, not under the ▶ (44 + 10 px):
-   one left edge reads calmer. Right-to-left help languages keep their own right edge. */
-.feedback-text:not([dir='rtl']) .feedback-say:has(.replay-btn) > :is(.pair-gloss, .pair-en) { padding-inline-start: 54px; }
+/* The speaker at the right edge of the label (the check is at the left); the Dutch takes the room. */
+.pair-say > :not(.replay-btn) { flex: 1; min-width: 0; }
 
 /* Tip card: the heading in the help language large, the Dutch name a small label. */
 .tip-badge-swap .tip-badge-main { font-size: 1.05rem; font-weight: 650; color: var(--ink); line-height: 1.2; }
@@ -2921,8 +2921,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
    Dutch line in a mirrored card showed its full stop at the wrong end (".uur"). */
 .player[dir='rtl'] [lang='nl'], .player[dir='rtl'] [lang='en'] { direction: ltr; unicode-bidi: isolate; }
 .player[dir='rtl'] .answer-line, .player[dir='rtl'] .tile-bank, .player[dir='rtl'] .pair-say, .player[dir='rtl'] .pair-tiles { direction: ltr; }
-.player[dir='rtl'] .speaker-bubble { padding-left: 18px; padding-right: 9px; }
-.player[dir='rtl'] .chat-bubble:not(.chat-bubble-me) { padding-left: 18px; padding-right: 8px; }
 .player[dir='rtl'] :is(.speaker-bubble, .chat-bubble:not(.chat-bubble-me))::before {
   left: auto; right: -9px; border-left: none; border-bottom: none;
   border-right: 2px solid var(--edge); border-top: 2px solid var(--edge);

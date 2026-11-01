@@ -147,8 +147,8 @@ export function SceneScreen({ id, url, lang, onBack, onDone, start = 'listen', p
       <>
         {listen}
         <div className="scene-question" ref={mainRef as React.RefObject<HTMLDivElement>} tabIndex={-1}>
-          <SpeakButton glyph text={q.vraag} help={lang} />
           <h2 className="scene-ask" lang="nl" dir="ltr">{breakable(q.vraag)}</h2>
+          <SpeakButton glyph text={q.vraag} help={lang} />
         </div>
         <ChoiceGrid
           className="choices-rows scene-choices"
