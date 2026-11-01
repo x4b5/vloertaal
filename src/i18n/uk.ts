@@ -208,8 +208,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Показати теми',
     privacyLink: 'Прочитати заяву про конфіденційність (нідерландською)', // nieuw, nalezen
     routeTitle: 'Що ти хочеш вивчати?', // nieuw, nalezen
-    routeLearn: 'Вивчати нідерландську для роботи, з підказками твоєю мовою', // nieuw, nalezen
-    routeRules: 'Я вже говорю нідерландською: як працюють у Нідерландах і Бельгії', // nieuw, nalezen
+    routeLearn: 'Вивчати нідерландську для роботи', // nieuw, nalezen
+    routeRules: 'Я вже говорю нідерландською: правила роботи', // nieuw, nalezen
     routeLearnShort: 'Вивчати нідерландську', // nieuw, nalezen
     byTheme: 'За розділами',
     inOrder: 'По порядку',
@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Слова', // nieuw, nalezen
     toetsPartSentences: 'Речення', // nieuw, nalezen
     toetsListenAsk: 'Послухай. Що це означає?', // nieuw, nalezen
-    toetsNotSure: 'Не знаєш? Просто вибери одну відповідь. Це нормально.', // nieuw, nalezen
+    toetsNotSure: 'Не знаєш? Натисни «Я не знаю». Це нормально.', // nieuw, nalezen
     toetsMicKeep: 'Твій запис залишається тільки на цьому телефоні. Пізніше ти зможеш почути себе знову.', // nieuw, nalezen
     toetsStartDone: 'Гарний початок! Ось що ти вже знаєш.', // nieuw, nalezen
     toetsEndDone: 'Молодець! Подивися, що ти знаєш тепер.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Ти зараз', // nieuw, nalezen
     toetsKeepGoing: 'Займайся трохи щодня. Тоді ти знатимеш усе більше.', // nieuw, nalezen
     toetsStart: 'Пройти тест', // nieuw, nalezen
+    toetsIdk: 'Я не знаю', // nieuw, nalezen
+    toetsMore: 'Більше, ніж тоді', // nieuw, nalezen
+    toetsSame: 'Приблизно так само', // nieuw, nalezen
+    toetsMoreAll: 'Усе разом: тепер ти знаєш більше, ніж тоді.', // nieuw, nalezen
+    toetsSameAll: 'Усе разом: приблизно так само, як тоді.', // nieuw, nalezen
     tempo: 'Темп', // nieuw, nalezen
     tempoCalm: 'Спокійно', // nieuw, nalezen
     tempoNormal: 'Звичайно', // nieuw, nalezen
@@ -357,6 +362,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'Дні занять за останні 4 тижні', // nieuw, nalezen
     coachLast: 'Останній урок, з датою', // nieuw, nalezen
     coachNameAsk: 'Твоє ім’я на картці?', // nieuw, nalezen
+    coachCode: 'Код: ті самі числа коротко, для огляду групи. Без імені.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Телефон слухає (пробна функція)', // nieuw, nalezen // nagelezen AI 31 okt
     listenHint: 'Коли ти скажеш, телефон покаже, чи він тебе зрозумів. Це відбувається на самому телефоні. Нічого не йде ні нам, ні іншим.', // nieuw, nalezen
@@ -401,6 +407,20 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Я вчу нідерландську для роботи з Vloertaal. Безкоштовно: {link}', // nieuw, nalezen
     workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
     saveFailed: 'Твій прогрес не збережено. Телефон заповнений? Звільни трохи місця. Або відкрий Налаштування: «Збережи свій прогрес».', // nieuw, nalezen
+    bewaarNudge: 'Телефон іноді може стерти твій прогрес. Тому збережи копію.', // nieuw, nalezen
+    bewaarGo: 'Зберегти зараз', // nieuw, nalezen
+    backupShare: 'Надіслати собі', // nieuw, nalezen
+    backupShareHint: 'Надішли файл собі, наприклад у WhatsApp або електронною поштою.', // nieuw, nalezen
+    backupMade: 'Готово. Добре збережи цей файл. З ним ти пізніше повернеш свій прогрес.', // nieuw, nalezen
+    speakTurnPrompt: 'Що ти скажеш?', // nieuw, nalezen
+    speakTurnExample: 'Приклад', // nieuw, nalezen
+    speakTurnReveal: 'Послухай відповідь', // nieuw, nalezen
+    sceneTitle: 'Слухай на роботі', // nieuw, nalezen
+    sceneIntro: 'Тут шумно, як на роботі. Слухай. Потім будуть запитання.', // nieuw, nalezen
+    buildFront: 'Постав позначене слово на початок', // nieuw, nalezen
+    bridgeTitle: 'Правила роботи', // nieuw, nalezen
+    bridgeText: 'Ти вже знаєш багато нідерландської. Хочеш також вивчити правила роботи? Тоді все буде нідерландською.', // nieuw, nalezen
+    bridgeGo: 'Так, покажи', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -19,7 +19,8 @@ import { lessonIcon } from '../lib/lessonIcon';
 import { WordPicture } from '../pictures';
 import { Bi, HelpText } from './Bi';
 import { CertBadge } from './CertBadge';
-import { CheckIcon, ChevronIcon, CrownIcon, HourglassIcon, LockIcon, SearchIcon } from './Icons';
+import { CheckIcon, ChevronIcon, CrownIcon, EarIcon, HourglassIcon, LockIcon, SearchIcon } from './Icons';
+import { useScenesAfter } from './useScenes';
 import { ChromeBack } from './ChromeBack';
 import { NlPair } from './NlPair';
 import { dutchUi, trackOf } from '../lib/track';
@@ -576,7 +577,7 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
  * and the certificate once the topic is finished) and its lessons. Done lessons can be practised
  * again here; the next one says Start (or Continue when it was stopped halfway).
  */
-export function TopicPage({ unit, progress, lang, access = 'full', onBack, onStart, onRestart, onPocket, onCertificate, onUpgrade, onCheck, onUndoCheck, focus = false, unlocked = false }: {
+export function TopicPage({ unit, progress, lang, access = 'full', onBack, onStart, onRestart, onPocket, onCertificate, onUpgrade, onCheck, onUndoCheck, onScene, focus = false, unlocked = false }: {
   unit: Unit;
   progress: Progress;
   lang?: HelpLanguage;
@@ -593,6 +594,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
   onCheck?: (unitId: string) => void;
   /** "Toch de lessen doen": the topic's check records go (shown once it was ticked off with a check). */
   onUndoCheck?: (unitId: string) => void;
+  /** "Luister op de werkvloer" (src/components/Scene.tsx): a sound scene after this topic. */
+  onScene?: (sceneId: string, url: string) => void;
   /** From a coach link: mark the topic for a moment. */
   focus?: boolean;
   /** The full version was unlocked a moment ago (from this page): the code was right. */
@@ -625,6 +628,9 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
   // The next lesson, stopped halfway: "Start again" sits with the topic's tools (at most 3 there).
   const restartId = onRestart && next && !completed[next.id] && saves[next.id]?.review === false ? next.id : undefined;
   const restartLesson = restartId ? unit.lessons.find((l) => l.id === restartId) : undefined;
+  // "Luister op de werkvloer": the sound scenes after this topic, once it is done, and only those
+  // whose mix is on the server (src/lib/scenes.ts). None yet: the page is as it was.
+  const scenes = useScenesAfter(unit.id, lang?.gender, Boolean(onScene) && allowed && unitDone(unit, completed));
   return (
     <div className="rb-all-screen topic-screen">
       {/* The head names the topic (Dutch small, the help language large); Back goes to All topics. */}
@@ -734,6 +740,19 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
               </li>
             );
           })}
+          {/* After the lessons, as one more row of the same kind (the list, not a fourth tool). */}
+          {onScene && scenes.map((scene) => (
+            <li key={scene.id} className="bay bay-open bay-scene">
+              <span className="bay-marker" aria-hidden><EarIcon size={20} /></span>
+              <button type="button" className="bay-card scene-open" onClick={() => onScene(scene.id, scene.url)}>
+                <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
+                  <Bi className="bay-title" text={ui('sceneTitle', lang)} />
+                  <span className="bay-goal" lang="nl">{scene.titel}</span>
+                </span>
+                <ChevronIcon size={22} className="bay-chev" />
+              </button>
+            </li>
+          ))}
         </ol>
       </div>
     </div>

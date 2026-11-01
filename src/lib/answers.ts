@@ -62,7 +62,7 @@ export function tokenize(sentence: string): string[] {
 }
 
 /** The same tiles (written small), whatever their order. */
-const sameTiles = (a: readonly string[], b: readonly string[]) => {
+export const sameTiles = (a: readonly string[], b: readonly string[]) => {
   const key = (t: readonly string[]) => t.map((w) => w.toLowerCase()).sort().join(' ');
   return key(a) === key(b);
 };

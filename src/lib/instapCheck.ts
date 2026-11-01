@@ -7,6 +7,7 @@ import { buildTiles, chatOptions, dutchExercise, options, type Exercise } from '
 import { dayKey, type LessonRecord, type Progress } from './progress';
 import { createRng, shuffle } from './random';
 import { trackOf } from './track';
+import { knownOf } from './toetsState';
 
 export { hasCheck, lessonViaCheck } from './certificate';
 
@@ -46,7 +47,13 @@ type Completed = Record<string, LessonRecord | unknown>;
 /** The start test is high enough for the check (Woorden and Luisteren). */
 export function checkLevel(p: Pick<Progress, 'toets'>): boolean {
   const run = p.toets?.instap;
-  return Boolean(run && run.right.words >= CHECK_TOETS_MIN && run.right.listen >= CHECK_TOETS_MIN);
+  if (!run) return false;
+  // A start of form 1 (6 picks a part, kept from before): as it always was, so a learner who had
+  // the check keeps it. Form 2 (src/content/toets.ts): the same share, with the guessing taken
+  // out (knownOf): 5 of 6 is 6 of 7.
+  if (!run.form || run.form < 2) return run.right.words >= CHECK_TOETS_MIN && run.right.listen >= CHECK_TOETS_MIN;
+  const enough = (part: 'words' | 'listen') => knownOf(run, part) * 6 >= CHECK_TOETS_MIN * run.of[part];
+  return enough('words') && enough('listen');
 }
 
 /** The first lesson of a theme (its first topic in course order): a check never ticks it off. */

@@ -208,8 +208,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Mostrar los temas',
     privacyLink: 'Leer la declaración de privacidad (en neerlandés)', // nieuw, nalezen
     routeTitle: '¿Qué quieres aprender?', // nieuw, nalezen
-    routeLearn: 'Aprender neerlandés para el trabajo, con ayuda en tu idioma', // nieuw, nalezen
-    routeRules: 'Ya hablo neerlandés: cómo funciona el trabajo en los Países Bajos y Bélgica', // nieuw, nalezen
+    routeLearn: 'Aprender neerlandés para el trabajo', // nieuw, nalezen
+    routeRules: 'Ya hablo neerlandés: las reglas del trabajo', // nieuw, nalezen
     routeLearnShort: 'Aprender neerlandés', // nieuw, nalezen
     byTheme: 'Por tema',
     inOrder: 'En orden',
@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Palabras', // nieuw, nalezen
     toetsPartSentences: 'Frases', // nieuw, nalezen
     toetsListenAsk: 'Escucha. ¿Qué significa?', // nieuw, nalezen
-    toetsNotSure: '¿No lo sabes? Elige una. No pasa nada.', // nieuw, nalezen
+    toetsNotSure: '¿No lo sabes? Toca «No lo sé». No pasa nada.', // nieuw, nalezen
     toetsMicKeep: 'Tu grabación se queda solo en este teléfono. Después podrás escucharte otra vez.', // nieuw, nalezen
     toetsStartDone: '¡Buen comienzo! Esto ya lo sabes.', // nieuw, nalezen
     toetsEndDone: '¡Muy bien! Mira lo que sabes ahora.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Tú ahora', // nieuw, nalezen
     toetsKeepGoing: 'Practica un poco cada día. Así aprendes cada vez más.', // nieuw, nalezen
     toetsStart: 'Hacer la prueba', // nieuw, nalezen
+    toetsIdk: 'No lo sé', // nieuw, nalezen
+    toetsMore: 'Más que antes', // nieuw, nalezen
+    toetsSame: 'Más o menos igual', // nieuw, nalezen
+    toetsMoreAll: 'En total: ahora sabes más que antes.', // nieuw, nalezen
+    toetsSameAll: 'En total: más o menos igual que antes.', // nieuw, nalezen
     tempo: 'Velocidad', // nieuw, nalezen
     tempoCalm: 'Despacio', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -357,6 +362,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'Días de práctica en las últimas 4 semanas', // nieuw, nalezen
     coachLast: 'Última lección, con la fecha', // nieuw, nalezen
     coachNameAsk: '¿Tu nombre en la tarjeta?', // nieuw, nalezen
+    coachCode: 'Código: los mismos números, en corto, para un resumen del grupo. Sin nombre.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Que el teléfono escuche (experimental)', // nieuw, nalezen // nagelezen AI 31 okt
     listenHint: 'Después de hablar, el teléfono dice si te ha entendido. Esto pasa en el mismo teléfono. No va nada a nosotros ni a otros.', // nieuw, nalezen
@@ -401,6 +407,20 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Aprendo neerlandés para mi trabajo con Vloertaal. Gratis: {link}', // nieuw, nalezen
     workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen
     saveFailed: 'Tu progreso no se ha guardado. ¿Tu teléfono está lleno? Libera un poco de espacio. O ve a Ajustes: «Guarda tu progreso».', // nieuw, nalezen
+    bewaarNudge: 'Tu teléfono a veces puede borrar tu progreso. Por eso, guarda una copia.', // nieuw, nalezen
+    bewaarGo: 'Guardar ahora', // nieuw, nalezen
+    backupShare: 'Envíatelo', // nieuw, nalezen
+    backupShareHint: 'Envíate el archivo, por ejemplo por WhatsApp o por correo electrónico.', // nieuw, nalezen
+    backupMade: 'Listo. Guarda bien este archivo. Con él recuperas tu progreso más tarde.', // nieuw, nalezen
+    speakTurnPrompt: '¿Qué dices?', // nieuw, nalezen
+    speakTurnExample: 'Ejemplo', // nieuw, nalezen
+    speakTurnReveal: 'Escucha la respuesta', // nieuw, nalezen
+    sceneTitle: 'Escucha en el trabajo', // nieuw, nalezen
+    sceneIntro: 'Hay ruido, como en el trabajo. Escucha. Después vienen las preguntas.', // nieuw, nalezen
+    buildFront: 'Pon la palabra marcada al principio', // nieuw, nalezen
+    bridgeTitle: 'Las normas del trabajo', // nieuw, nalezen
+    bridgeText: 'Ya sabes mucho neerlandés. ¿Quieres aprender también las normas del trabajo? Entonces todo está en neerlandés.', // nieuw, nalezen
+    bridgeGo: 'Sí, enséñame', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

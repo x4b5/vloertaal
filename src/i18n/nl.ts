@@ -101,8 +101,8 @@ export const uiNl: Record<UiKey, UiText> = {
   topicsOrder: 'Toon de onderwerpen',
   privacyLink: 'Lees de privacyverklaring',
   routeTitle: 'Wat wil je leren?',
-  routeLearn: 'Nederlands leren voor je werk, met hulp in je eigen taal',
-  routeRules: 'Ik spreek al Nederlands: hoe werken in Nederland en België gaat',
+  routeLearn: 'Nederlands leren voor je werk',
+  routeRules: 'Ik spreek al Nederlands: de werkregels',
   routeLearnShort: 'Nederlands leren',
   byTheme: 'Op thema',
   inOrder: 'Op volgorde',
@@ -371,7 +371,7 @@ export const uiNl: Record<UiKey, UiText> = {
   toetsPartWords: 'Woorden',
   toetsPartSentences: 'Zinnen',
   toetsListenAsk: 'Luister. Wat betekent het?',
-  toetsNotSure: 'Weet je het niet? Kies er gewoon één. Dat is goed.',
+  toetsNotSure: 'Weet je het niet? Tik dan op ‘Ik weet het niet’. Dat is goed.',
   toetsMicKeep: 'Je opname blijft alleen op deze telefoon. Later hoor je jezelf terug.',
   toetsStartDone: 'Goed begin! Dit ken je al.',
   toetsEndDone: 'Goed gedaan! Kijk wat je nu kent.',
@@ -379,6 +379,11 @@ export const uiNl: Record<UiKey, UiText> = {
   toetsYouNow: 'Jij nu',
   toetsKeepGoing: 'Oefen elke dag een beetje. Dan leer je steeds meer.',
   toetsStart: 'Doe de toets',
+  toetsIdk: 'Ik weet het niet',
+  toetsMore: 'Meer dan toen',
+  toetsSame: 'Ongeveer gelijk',
+  toetsMoreAll: 'Alles samen: je kent nu meer dan toen.',
+  toetsSameAll: 'Alles samen: ongeveer gelijk aan toen.',
   tempo: 'Tempo',
   tempoCalm: 'Rustig',
   tempoNormal: 'Normaal',
@@ -392,6 +397,7 @@ export const uiNl: Record<UiKey, UiText> = {
   coachDays: 'Dagen geoefend in de laatste 4 weken',
   coachLast: 'Laatste les, met de datum',
   coachNameAsk: 'Je naam op de kaart?',
+  coachCode: 'Code: dezelfde getallen, kort, voor een overzicht van de groep. Zonder naam.',
   // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
   listenTrial: 'Laat de telefoon luisteren (proef)',
   listenHint: 'Na het spreken zegt de telefoon of hij je verstaat. Dat gebeurt op de telefoon zelf. Er gaat niets naar ons of naar anderen.',
@@ -457,6 +463,20 @@ export const uiNl: Record<UiKey, UiText> = {
   shareInvite: 'Ik leer Nederlands voor mijn werk met Vloertaal. Gratis: {link}', // nieuw, nalezen
   workTry: 'Probeer het vandaag op je werk',
   saveFailed: 'Je voortgang is niet bewaard. Is je telefoon vol? Maak wat ruimte. Of ga naar Instellingen: Bewaar je voortgang.',
+  bewaarNudge: 'Je telefoon kan je voortgang soms wissen. Bewaar daarom een kopie.', // nieuw, nalezen
+  bewaarGo: 'Bewaar nu', // nieuw, nalezen
+  backupShare: 'Stuur naar jezelf', // nieuw, nalezen
+  backupShareHint: 'Stuur het bestand naar jezelf, bijvoorbeeld in WhatsApp of in een e-mail.', // nieuw, nalezen
+  backupMade: 'Klaar. Bewaar dit bestand goed. Daarmee zet je je voortgang later terug.', // nieuw, nalezen
+  speakTurnPrompt: 'Wat zeg je?',
+  speakTurnExample: 'Voorbeeld',
+  speakTurnReveal: 'Hoor het antwoord',
+  sceneTitle: 'Luister op de werkvloer',
+  sceneIntro: 'Er is lawaai, net als op je werk. Luister. Daarna komen de vragen.',
+  buildFront: 'Zet het woord vooraan', // nieuw, nalezen
+  bridgeTitle: 'De werkregels', // nieuw, nalezen
+  bridgeText: 'Je kent nu veel Nederlands. Wil je ook de werkregels leren? Dan is alles in het Nederlands.', // nieuw, nalezen
+  bridgeGo: 'Ja, laat zien', // nieuw, nalezen
 };
 
 const lang: HelpLanguageSource = {

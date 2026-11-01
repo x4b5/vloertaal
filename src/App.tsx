@@ -26,7 +26,7 @@ import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
 // Screens in files of their own (loaded when needed, and in the background after the start).
-import { Admin, CertEarned, CertificateScreen, CoachCardScreen, Coaches, KeepScreen, Milestone, PocketCardScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
+import { Admin, CertEarned, CertificateScreen, CoachCardScreen, Coaches, KeepScreen, Milestone, PocketCardScreen, SceneScreen, Settings, StreakStopped, needAtStart, warmScreensLater } from './lazyScreens';
 import { keepOffered } from './lib/keepOffered';
 import { Gate } from './components/Gate';
 import { SectorScreen } from './components/Sector';
@@ -36,10 +36,14 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
-import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
+import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, knownLessons, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dueIds, gradedStepIds, seedCards, strongerCount, addLessonSentences, dailyIds, reviewResults, seedSentenceCards, wordResultCount } from './lib/spaced';
 import { gloss } from './i18n';
-import { keepStorageAgain, persistStorage } from './lib/install';
+import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
+import { BackupNudge } from './components/BackupNudge';
+import { BridgeOffer } from './components/BridgeOffer';
+import { bridgeDue, seeBridge } from './lib/bridge';
+import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
 import { clockMinutes, count, countDayMilestones, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
@@ -109,7 +113,9 @@ type View =
   | { name: 'kaart' }
   /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): the 5 questions of a topic, and the end. */
   | { name: 'check'; unit: string; seed: number }
-  | { name: 'check-result'; unit: string; right: number; total: number };
+  | { name: 'check-result'; unit: string; right: number; total: number }
+  /** "Luister op de werkvloer" (src/components/Scene.tsx): a sound scene, from its topic page. */
+  | { name: 'scene'; id: string; url: string };
 
 const HOME: View = { name: 'home' };
 
@@ -196,6 +202,10 @@ export default function App() {
   const typedCode = useRef('');
   /** A coach link to a topic outside the preview: the home offers its unlock (this visit). */
   const [lockedLink, setLockedLink] = useState<string | null>(null);
+  /** "Bewaar je voortgang" on the home (src/lib/backupNudge.ts) was tapped: draw the home again. */
+  const [, setNudgeTick] = useState(0);
+  // Opened from the home screen: quietly ask the browser to keep the storage (and remember its answer).
+  useEffect(() => { if (isInstalled()) void keepStorageAgain(); }, []);
   const grant = (given: Access, typed?: string) => {
     // Back on the password page, a smaller code typed after a bigger one keeps the bigger one.
     const a = higherAccess(access, given);
@@ -783,9 +793,10 @@ export default function App() {
         // Do learners come back: the 1st, 2nd, 7th, 14th and 28th day with a lesson, once per device.
         countDayMilestones(next.days?.length ?? 0);
         // The first finished lesson: ask the browser to keep this site's storage (the progress).
-        if (!daily && !Object.keys(progress.completed).length) persistStorage();
+        // (Its answer is remembered: src/lib/backupNudge.ts reminds of a backup where it was no.)
+        if (!daily && !Object.keys(progress.completed).length) void persistStorage();
         // Not granted (yet): ask again now and then, so the progress is not cleared with the cache.
-        else keepStorageAgain();
+        else void keepStorageAgain();
         const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
         // Words learned, or in the rules track rules learned (the rule cards of finished lessons).
         const before = learnedItems(track, progress.completed);
@@ -935,6 +946,7 @@ export default function App() {
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
             onCheck={(id) => go({ name: 'check', unit: id, seed: Date.now() >>> 0 })}
             onUndoCheck={(id) => setProgress((p) => { const u = findUnit(id); return u ? undoCheck(p, u) : p; })}
+            onScene={(id, url) => go({ name: 'scene', id, url })}
             unlocked={unlockedShown}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
@@ -956,6 +968,8 @@ export default function App() {
       );
     case 'coaches':
       return <Coaches onBack={back} lang={lang} />;
+    case 'scene':
+      return <SceneScreen id={view.id} url={view.url} lang={lang} onBack={back} onDone={back} />;
     case 'news':
       return <News onBack={back} lang={lang} />;
     case 'samen': {
@@ -1069,9 +1083,9 @@ export default function App() {
           moment={view.moment}
           lang={lang}
           onQuit={back}
-          onDone={({ right, of, voice }) => {
+          onDone={({ tally, voice }) => {
             const moment = view.moment;
-            setProgress((p) => recordToets(p, moment, right, of, new Date()));
+            setProgress((p) => recordToets(p, moment, tally, new Date()));
             // The recording stays on this phone only (src/lib/toetsVoice.ts), for "Jij toen / Jij nu".
             if (voice) void keepVoice(moment, voice);
             count('toets-done', { lesson: versionOf(moment).toLowerCase() });
@@ -1117,6 +1131,12 @@ export default function App() {
       const offered = stopped === null ? toetsOffer(progress, new Date()) : null;
       // "Er is iets veranderd" (src/lib/notice.ts): once, before the test's card (one card at a time).
       const notice = noticeFor(progress, new Date());
+      // "Bewaar je voortgang" (src/lib/backupNudge.ts): only where the phone may lose the
+      // progress, after 3 lessons, once; after the notice and the test (one card at a time).
+      const lessonsDone = knownLessons(progress.completed);
+      // "Wil je ook de werkregels leren?" (src/lib/bridge.ts): once, most of the course done; after the notice and the test.
+      const bridge = !notice && !offered && bridgeDue(progress);
+      const nudge = !notice && !offered && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
       const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
       return (
         <>
@@ -1158,6 +1178,19 @@ export default function App() {
                 lang={lang}
                 onDo={() => startToets(offered)}
                 onLater={() => setProgress((p) => toetsLater(p, offered, new Date()))}
+              />
+            ) : bridge ? (
+              <BridgeOffer
+                lang={lang}
+                onGo={() => { setProgress((p) => seeBridge(p)); go({ name: 'settings', page: 'route' }); }}
+                onLater={() => setProgress((p) => seeBridge(p))}
+              />
+            ) : nudge ? (
+              <BackupNudge
+                lang={lang}
+                lessons={lessonsDone}
+                onKeep={() => { nudgeClosed(lessonsDone); go({ name: 'settings', page: 'backup' }); }}
+                onLater={() => { nudgeClosed(lessonsDone); setNudgeTick((n) => n + 1); }}
               />
             ) : undefined}
           />

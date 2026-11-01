@@ -208,8 +208,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Pokaż tematy',
     privacyLink: 'Przeczytaj oświadczenie o prywatności (po niderlandzku)', // nieuw, nalezen
     routeTitle: 'Czego chcesz się uczyć?', // nieuw, nalezen
-    routeLearn: 'Nauka niderlandzkiego do pracy, z pomocą w twoim języku', // nieuw, nalezen
-    routeRules: 'Mówię już po niderlandzku: jak wygląda praca w Holandii i Belgii', // nieuw, nalezen
+    routeLearn: 'Nauka niderlandzkiego do pracy', // nieuw, nalezen
+    routeRules: 'Mówię już po niderlandzku: zasady pracy', // nieuw, nalezen
     routeLearnShort: 'Nauka niderlandzkiego', // nieuw, nalezen
     byTheme: 'Według działów',
     inOrder: 'Po kolei',
@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Słowa', // nieuw, nalezen
     toetsPartSentences: 'Zdania', // nieuw, nalezen
     toetsListenAsk: 'Posłuchaj. Co to znaczy?', // nieuw, nalezen
-    toetsNotSure: 'Nie wiesz? Po prostu wybierz jedną odpowiedź. To nic.', // nieuw, nalezen
+    toetsNotSure: 'Nie wiesz? Dotknij „Nie wiem”. To nic.', // nieuw, nalezen
     toetsMicKeep: 'Twoje nagranie zostaje tylko na tym telefonie. Później usłyszysz siebie jeszcze raz.', // nieuw, nalezen
     toetsStartDone: 'Dobry początek! To już znasz.', // nieuw, nalezen
     toetsEndDone: 'Dobra robota! Zobacz, co teraz wiesz.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Ty teraz', // nieuw, nalezen
     toetsKeepGoing: 'Ćwicz trochę codziennie. Wtedy nauczysz się coraz więcej.', // nieuw, nalezen
     toetsStart: 'Zrób test', // nieuw, nalezen
+    toetsIdk: 'Nie wiem', // nieuw, nalezen
+    toetsMore: 'Więcej niż wtedy', // nieuw, nalezen
+    toetsSame: 'Mniej więcej tak samo', // nieuw, nalezen
+    toetsMoreAll: 'Wszystko razem: teraz znasz więcej niż wtedy.', // nieuw, nalezen
+    toetsSameAll: 'Wszystko razem: mniej więcej tak samo jak wtedy.', // nieuw, nalezen
     tempo: 'Tempo', // nieuw, nalezen
     tempoCalm: 'Spokojnie', // nieuw, nalezen
     tempoNormal: 'Normalnie', // nieuw, nalezen
@@ -357,6 +362,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'Dni ćwiczeń w ostatnich 4 tygodniach', // nieuw, nalezen
     coachLast: 'Ostatnia lekcja, z datą', // nieuw, nalezen
     coachNameAsk: 'Twoje imię na karcie?', // nieuw, nalezen
+    coachCode: 'Kod: te same liczby w skrócie, do przeglądu grupy. Bez imienia.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Telefon słucha (próba)', // nieuw, nalezen // nagelezen AI 31 okt
     listenHint: 'Gdy coś powiesz, telefon pokaże, czy cię zrozumiał. To dzieje się w samym telefonie. Nic nie trafia do nas ani do innych.', // nieuw, nalezen
@@ -401,6 +407,20 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Uczę się niderlandzkiego do pracy z Vloertaal. Za darmo: {link}', // nieuw, nalezen
     workTry: 'Spróbuj dziś w pracy', // nieuw, nalezen
     saveFailed: 'Twoje postępy nie zostały zapisane. Czy telefon jest pełny? Zrób trochę miejsca. Albo wejdź w Ustawienia: „Zachowaj swoje postępy”.', // nieuw, nalezen
+    bewaarNudge: 'Telefon czasem może usunąć twoje postępy. Dlatego zachowaj kopię.', // nieuw, nalezen
+    bewaarGo: 'Zapisz teraz', // nieuw, nalezen
+    backupShare: 'Wyślij do siebie', // nieuw, nalezen
+    backupShareHint: 'Wyślij plik do siebie, na przykład na WhatsAppie albo e-mailem.', // nieuw, nalezen
+    backupMade: 'Gotowe. Dobrze przechowuj ten plik. Dzięki niemu później przywrócisz swoje postępy.', // nieuw, nalezen
+    speakTurnPrompt: 'Co mówisz?', // nieuw, nalezen
+    speakTurnExample: 'Przykład', // nieuw, nalezen
+    speakTurnReveal: 'Posłuchaj odpowiedzi', // nieuw, nalezen
+    sceneTitle: 'Słuchaj w pracy', // nieuw, nalezen
+    sceneIntro: 'Jest hałas, jak w pracy. Słuchaj. Potem będą pytania.', // nieuw, nalezen
+    buildFront: 'Postaw zaznaczone słowo na początku', // nieuw, nalezen
+    bridgeTitle: 'Zasady pracy', // nieuw, nalezen
+    bridgeText: 'Znasz już dużo niderlandzkiego. Chcesz też poznać zasady pracy? Wtedy wszystko jest po niderlandzku.', // nieuw, nalezen
+    bridgeGo: 'Tak, pokaż', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

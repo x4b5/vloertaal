@@ -469,6 +469,89 @@ export const be: BeUnit = {
           { kind: 'model', id: 'r.be.l.contract.4.mo1', context: 'Je weet niet wat voor contract je hebt.', nl: 'Ben ik hier werknemer of zelfstandige? Wat staat er in mijn contract?' },
         ],
       },
+      {
+        // Les 3.5 · Gedetacheerd: A1 en Limosa (arbeidsmigranten, 31 oktober 2026). Opgezocht via
+        //   zoekresultaten (werk.belgie.be, vlaanderen.be, securex.be); de sites zelf waren niet te openen.
+        id: 'r.be.l.contract.5',
+        title: 'Gedetacheerd: A1 en Limosa',
+        goal: 'Je weet wat gedetacheerd zijn betekent. Je vraagt naar je A1 en je Limosa-melding.',
+        remember: 'Gedetacheerd? Vraag je werkgever om je A1 en je L1.',
+        // Wie kan je helpen: je werkgever · Toezicht op de Sociale Wetten (te weinig loon) · een vakbond.
+        help: ['leidinggevende', 'tsw', 'vakbond'],
+        steps: [
+          {
+            kind: 'scene',
+            id: 'r.be.l.contract.5.sc1',
+            picture: 'Een busje met een buitenlands nummerbord bij een bouwplaats. Mohammed stapt uit.',
+            lines: [
+              'Mohammed werkt voor een bouwbedrijf in Portugal.',
+              'Het bedrijf stuurt hem 6 maanden naar België.',
+              'Hij blijft in dienst van het bedrijf in Portugal.',
+              'De klant in België vraagt: "Waar is je L1?"',
+            ],
+          },
+          // ⚖️ check: gedetacheerd = je werkgever in een ander EU-land stuurt je tijdelijk naar België; je blijft
+          //   meestal sociaal verzekerd in dat land, hooguit 24 maanden; het bewijs is het formulier A1
+          //   (Verordening 883/2004 art. 12; Verordening 987/2009 art. 15 en 19). 24 maanden = "2 jaar" in de les.
+          // ⚖️ check: de buitenlandse werkgever doet vóór het begin van het werk een Limosa-melding; het bewijs
+          //   heet L1 (Limosa-1); de Belgische klant of gebruiker moet erom vragen (Programmawet 27 december 2006,
+          //   art. 137 e.v.; werk.belgie.be "formaliteiten die moeten worden vervuld"; vlaanderen.be
+          //   "Limosa-aangifte"; securex.be; zoekresultaat 31-10-2026).
+          // ⚖️ check: in België heb je recht op de Belgische loon- en arbeidsvoorwaarden die strafrechtelijk
+          //   gesanctioneerd zijn, zoals het minimumloon van het paritair comité (Wet 5 maart 2002 art. 5;
+          //   Richtlijn 96/71/EG; werk.belgie.be "detachering").
+          {
+            kind: 'rule',
+            id: 'r.be.l.contract.5.ru1',
+            emoji: '🪪',
+            title: 'Gedetacheerd? Vraag je werkgever om je A1 en je L1.',
+            body: [
+              'Stuurt je werkgever je voor een tijd naar België? Dan ben je gedetacheerd.',
+              'Je blijft dan vaak verzekerd in je eigen land. Het bewijs is de A1.',
+              'Je werkgever meldt je werk vooraf in België. Dat heet de Limosa-melding.',
+              'Het bewijs van die melding heet L1.',
+              'Detacheren kan meestal hooguit 2 jaar.',
+              'In België krijg je wel minstens het Belgische minimumloon voor jouw werk.',
+            ],
+            rule: 'geschreven',
+          },
+          // ⚖️ check: de A1 gaat over de sociale zekerheid; het Belgische minimumloon en de regels voor
+          //   arbeidsduur en veiligheid gelden toch (Wet 5 maart 2002 art. 5; Richtlijn 96/71/EG art. 3).
+          {
+            kind: 'truefalse',
+            id: 'r.be.l.contract.5.tf1',
+            statement: 'Met een A1 mag je baas minder geven dan het minimumloon.',
+            answer: false,
+            why: 'Nee. De A1 gaat over je verzekering, zoals voor ziek zijn en pensioen. In België krijg je minstens het Belgische minimumloon voor jouw werk. Ook de regels voor werkuren en veiligheid gelden.',
+          },
+          // ⚖️ check: de Limosa-melding gebeurt vóór het begin van het werk; zonder L1 moet de Belgische klant
+          //   zelf een melding doen, of hij kan een boete krijgen (Programmawet 27 december 2006 art. 140;
+          //   werk.belgie.be; zoekresultaat).
+          {
+            kind: 'whatdo',
+            id: 'r.be.l.contract.5.wd1',
+            situation: 'Mohammed weet niet wat een L1 is. Wat kan Mohammed het beste doen?',
+            options: [
+              { id: 'a', text: 'Hij vraagt zijn baas om het bewijs van de melding.', best: true, feedback: 'Goed. Dan kan hij het aan de klant laten zien.' },
+              { id: 'b', text: 'Hij zegt niets, en hij werkt gewoon door.', best: false, feedback: 'Dan blijft het probleem. De klant moet het bewijs zien.' },
+              { id: 'c', text: 'Hij gaat naar huis, en hij komt niet terug.', best: false, feedback: 'Dat is snel. Vraag eerst je baas om het bewijs.' },
+            ],
+            why: 'De L1 bewijst dat je werkgever je werk in België meldde. Die melding moet vóór je begint. Vraag je werkgever om de L1 en de A1.',
+          },
+          {
+            kind: 'whoask',
+            id: 'r.be.l.contract.5.wa1',
+            question: 'Je bent gedetacheerd. Je krijgt minder dan het minimumloon. Wie controleert dat?',
+            options: [
+              { id: 'a', who: 'ocmw', best: false, feedback: 'Het OCMW helpt bij geldzorgen. Maar je loon controleert een andere plek.' },
+              { id: 'b', who: 'collega', best: false, feedback: 'Een collega kan meedenken. Maar controleren doet een andere plek.' },
+              { id: 'c', who: 'tsw', best: true, feedback: 'Goed. Toezicht op de Sociale Wetten controleert ook buitenlandse bedrijven.' },
+            ],
+            why: 'Krijg je te weinig loon? Meld het bij Toezicht op de Sociale Wetten. Een vakbond kan je ook helpen.',
+          },
+          { kind: 'model', id: 'r.be.l.contract.5.mo1', context: 'Je vraagt je werkgever naar je papieren.', nl: 'Ik werk hier gedetacheerd. Mag ik een kopie van mijn A1 en mijn L1?' },
+        ],
+      },
     ],
   },
   zegHet: {
@@ -488,12 +571,17 @@ export const be: BeUnit = {
       { text: 'Het maakt mij niet uit wat ik ben. Als ik maar werk heb.', feedback: 'Het is wel belangrijk. Het geeft andere rechten.' },
       { text: 'Ik vraag het wel aan een collega. Die weet het vast.', feedback: 'Een collega weet het misschien niet. Vraag het aan je baas.' },
     ],
+    'r.be.l.contract.5.mo1': [
+      { text: 'Ik werk hier. Papieren zijn niet mijn probleem, toch?', feedback: 'Toch wel. Je A1 en je L1 zijn ook voor jou.' },
+      { text: 'Geef me nu mijn papieren, anders stop ik ermee!', feedback: 'Dat klinkt boos. Je kunt het ook rustig vragen.' },
+    ],
   },
   advice: {
     'r.be.l.contract.1.ru1': 'advice',
     'r.be.l.contract.2.ru1': 'advice',
     'r.be.l.contract.3.ru1': 'advice',
     'r.be.l.contract.4.ru1': 'advice',
+    'r.be.l.contract.5.ru1': 'advice',
   },
   kun: [
     ['Ik kan de belangrijkste afspraken in mijn contract lezen.', '1F', 'lezen'],

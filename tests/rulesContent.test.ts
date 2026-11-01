@@ -101,7 +101,10 @@ describe('rules content: ids', () => {
     // 42 lessons of the path (5.5 "Kinderen en zorg" and 10.5 "Je werk stopt" came later, and 7.4,
     // 7.5, 10.6 and 10.7 in the second Entree round) and the 25 of the Entree additions (15.3 "AI op
     // je werk" came later; 16.4 and the 5 lessons of units 18 and 19 in the second round).
-    expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(42);
+    // With the 4 lessons for labour migrants (31 October 2026, curriculum deel 8): 3.5 "Gedetacheerd: de
+    // A1-verklaring", 4.4 "Wonen, vervoer en boetes via het bureau", 6.4 "Ziek en naar je eigen land" and
+    // 10.8 "Werkloos en terug naar je land": 46.
+    expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(46);
     // The 3 lessons of the winkel left the path when it became a sector unit (31 October 2026).
     expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(22);
     expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.kas', 'r.techniek', 'r.warehouse', 'r.werkplaats', 'r.winkel']);

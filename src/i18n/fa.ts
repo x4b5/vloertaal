@@ -208,8 +208,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'نمایش موضوع‌ها',
     privacyLink: 'بیانیهٔ حریم خصوصی را بخوانید (به هلندی)', // nieuw, nalezen
     routeTitle: 'چه می‌خواهید یاد بگیرید؟', // nieuw, nalezen
-    routeLearn: 'یادگیری هلندی برای کار، با کمک به زبان خودتان', // nieuw, nalezen
-    routeRules: 'هلندی بلدم: کار در هلند و بلژیک چطور است', // nieuw, nalezen
+    routeLearn: 'یادگیری هلندی برای کار', // nieuw, nalezen
+    routeRules: 'هلندی بلدم: قوانین کار', // nieuw, nalezen
     routeLearnShort: 'یادگیری هلندی', // nieuw, nalezen
     byTheme: 'بر اساس بخش‌ها',
     inOrder: 'به ترتیب',
@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'کلمه‌ها', // nieuw, nalezen
     toetsPartSentences: 'جمله‌ها', // nieuw, nalezen
     toetsListenAsk: 'گوش کنید. یعنی چه؟', // nieuw, nalezen // nagelezen AI 31 okt
-    toetsNotSure: 'نمی‌دانید؟ فقط یکی را انتخاب کنید. اشکالی ندارد.', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsNotSure: 'نمی‌دانید؟ روی «نمی‌دانم» بزنید. اشکالی ندارد.', // nieuw, nalezen
     toetsMicKeep: 'صدای ضبط‌شدهٔ شما فقط روی همین گوشی می‌ماند. بعداً می‌توانید دوباره صدای خودتان را بشنوید.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsStartDone: 'شروع خوبی بود! این‌ها را از قبل می‌دانید.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsEndDone: 'آفرین! ببینید حالا چه می‌دانید.', // nieuw, nalezen // nagelezen AI 31 okt
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'شما حالا', // nieuw, nalezen // nagelezen AI 31 okt
     toetsKeepGoing: 'هر روز کمی تمرین کنید. این‌طوری بیشتر و بیشتر یاد می‌گیرید.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsStart: 'آزمون را شروع کنید', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsIdk: 'نمی‌دانم', // nieuw, nalezen
+    toetsMore: 'بیشتر از قبل', // nieuw, nalezen
+    toetsSame: 'تقریباً مثل قبل', // nieuw, nalezen
+    toetsMoreAll: 'همه با هم: الان بیشتر از قبل می‌دانید.', // nieuw, nalezen
+    toetsSameAll: 'همه با هم: تقریباً مثل قبل.', // nieuw, nalezen
     tempo: 'سرعت', // nieuw, nalezen
     tempoCalm: 'آرام', // nieuw, nalezen
     tempoNormal: 'عادی', // nieuw, nalezen
@@ -357,6 +362,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen
     coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen
     coachNameAsk: 'اسم شما روی کارت؟', // nieuw, nalezen // nagelezen AI 31 okt
+    coachCode: 'کد: همان عددها، کوتاه، برای خلاصهٔ گروه. بدون نام.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'گوش دادن گوشی (آزمایشی)', // nieuw, nalezen
     listenHint: 'بعد از حرف زدن، گوشی می‌گوید که حرف شما را فهمید یا نه. این کار روی خود گوشی انجام می‌شود. چیزی برای ما یا دیگران فرستاده نمی‌شود.', // nieuw, nalezen
@@ -401,6 +407,20 @@ const lang: HelpLanguageSource = {
     shareInvite: 'من با Vloertaal هلندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
     workTry: 'امروز سر کار امتحانش کن', // nieuw, nalezen
     saveFailed: 'پیشرفت شما ذخیره نشد. آیا گوشی پر است؟ کمی جا باز کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
+    bewaarNudge: 'گوشی شما ممکن است گاهی پیشرفت شما را پاک کند. پس یک نسخه نگه دارید.', // nieuw, nalezen
+    bewaarGo: 'همین حالا ذخیره کنید', // nieuw, nalezen
+    backupShare: 'برای خودتان بفرستید', // nieuw, nalezen
+    backupShareHint: 'فایل را برای خودتان بفرستید، مثلاً در واتس‌اپ یا با ایمیل.', // nieuw, nalezen
+    backupMade: 'تمام شد. این فایل را خوب نگه دارید. بعداً با آن پیشرفت خود را برمی‌گردانید.', // nieuw, nalezen
+    speakTurnPrompt: 'چه می‌گویی؟', // nieuw, nalezen
+    speakTurnExample: 'نمونه', // nieuw, nalezen
+    speakTurnReveal: 'جواب را بشنو', // nieuw, nalezen
+    sceneTitle: 'در محل کار گوش کن', // nieuw, nalezen
+    sceneIntro: 'مثل سر کار، سر و صدا هست. گوش کن. بعد سؤال‌ها می‌آیند.', // nieuw, nalezen
+    buildFront: 'کلمهٔ علامت‌دار را اول بگذارید', // nieuw, nalezen
+    bridgeTitle: 'قوانین کار', // nieuw, nalezen
+    bridgeText: 'حالا هلندی زیادی بلدید. می‌خواهید قوانین کار را هم یاد بگیرید؟ آن وقت همه‌چیز به هلندی است.', // nieuw, nalezen
+    bridgeGo: 'بله، نشان بدهید', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

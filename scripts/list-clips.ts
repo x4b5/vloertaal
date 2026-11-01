@@ -8,6 +8,7 @@ import { beTaalTips } from '../src/content/taalBe';
 import { allRegionTips, allRegionUnits, isRegionLoaded, REGIONS, registerRegion, setRegionsOn } from '../src/content/regio';
 import zlPack from '../src/content/regio/zuid-limburg-pack';
 import { lessonSayings } from '../src/content/sayings';
+import { FRONT_LINES } from '../src/content/patterns';
 import { tokenize } from '../src/lib/answers';
 import { sayAs } from '../src/lib/sayAs';
 import { hasDigitNumber } from '../src/lib/sayNumbers';
@@ -55,6 +56,9 @@ for (const t of [...cultureTips, ...allRegionTips(), ...beTaalTips]) {
 for (const s of lessonSayings) add(`${s.id}.s.nl`, s.nl);
 // Emergency phrases that only live in the phrasebook ("Bel 112!").
 for (const p of phrasebookExtras) add(p.id, p.nl);
+// "Zet het vooraan" (stap 3, src/content/patterns.ts): a line again with its time or place words
+// first ("Morgen verstuur ik de mail."). Until it is recorded the phone's voice says it.
+for (const f of FRONT_LINES) add(`${f.id}.front`, f.nl);
 add('x.sample', VOICE_SAMPLE);
 // Bram introduces himself on the first tap of the app (sayFirstWord in src/lib/audio.ts): only in
 // his own voice, Thijmen; the other voices never say it.

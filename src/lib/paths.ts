@@ -11,3 +11,5 @@ export const appLink = (unitId: string) => `/?unit=${encodeURIComponent(unitId.s
 export const BELGIUM_PATH = '/belgie/';
 /** The privacy statement (src/lib/privacyPage.ts). */
 export const PRIVACY_PATH = '/privacy/';
+/** The group overview for coaches (src/lib/groepPage.ts): totals from the coach cards, nothing sent (noindex, not in the sitemap). */
+export const GROEP_PATH = '/groep/';

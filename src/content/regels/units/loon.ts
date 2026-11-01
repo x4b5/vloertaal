@@ -315,5 +315,103 @@ export const loonUnit: RuleUnit = {
         { kind: 'model', id: 'r.l.loon.3.mo1', context: 'Je overuren staan niet op je loonstrook.', nl: 'Ik heb 10 uur overgewerkt. Krijg ik die uitbetaald, of krijg ik vrij?' },
       ],
     },
+    {
+      // Les 4.4 · Wonen, vervoer en boetes via het bureau (arbeidsmigranten, 31 oktober 2026; zie
+      //   docs/werkregels-curriculum.md, deel 8).
+      // Redactie: het kabinet wil de inhouding voor huisvesting op het minimumloon afschaffen,
+      //   waarschijnlijk per 1 juli 2028 (Kamerbrief SZW 10 september 2026, via secundaire bron). Pas deze
+      //   les dan aan; zie ook UPCOMING_LAW in src/content/updates.ts.
+      id: 'r.l.loon.4',
+      title: 'Wonen, vervoer en boetes via het bureau',
+      goal: 'Je weet wat het bureau van je loon mag inhouden. Je checkt je huis en je loonstrook.',
+      remember: 'Wonen via het bureau? Check het keurmerk en je loonstrook.',
+      // Wie kan je helpen: het uitzendbureau (vraag uitleg) · de Arbeidsinspectie · een vakbond · het
+      //   Juridisch Loket. Klachten over een huis met een SNF-keurmerk kunnen ook bij SNF.
+      help: ['uitzendbureau', 'arbeidsinspectie', 'vakbond', 'juridischloket'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.loon.4.sc1',
+          picture: 'Ewa aan tafel met haar loonstrook. Achter het raam staat een wit busje.',
+          lines: [
+            'Ewa woont net in Nederland.',
+            'Ze werkt via een uitzendbureau in een magazijn.',
+            'Ze woont in een huis van het bureau.',
+            'Op haar loonstrook staan huur, vervoer en een boete.',
+          ],
+        },
+        // ⚖️ check: Op het minimumloon mag de werkgever alleen inhouden voor huisvesting en de
+        //   zorgverzekering; al het andere is verboden (Wet minimumloon en minimumvakantiebijslag art. 13;
+        //   Besluit minimumloon; vng.nl "afhankelijkheidsrelatie"; zoekresultaat 31-10-2026).
+        // ⚖️ check: Inhouding voor huisvesting: alleen bij gecertificeerde huisvesting (SNF of AKF), hooguit 25
+        //   procent van het minimumloon, en zichtbaar op de loonstrook (Besluit minimumloon; rijksoverheid.nl
+        //   30-10-2025 "regeling voor huisvestingskosten arbeidsmigranten blijft bestaan"; kamerantwoorden
+        //   via eerstekamer.nl). Nakijken: is ook een schriftelijke volmacht van de werknemer nodig?
+        // ⚖️ check: Huurcontract los van het arbeidscontract (Wet goed verhuurderschap, regels voor
+        //   arbeidsmigranten; rijksoverheid.nl; nakijken welk artikel).
+        // ⚖️ check: Een boete mag alleen als het boetebeding schriftelijk is afgesproken; op het minimumloon
+        //   mag geen boete (art. 7:650 BW; Wml art. 13; dutch-law.com, zoekresultaat 31-10-2026).
+        {
+          kind: 'rule',
+          id: 'r.l.loon.4.ru1',
+          emoji: '🧾',
+          title: 'Wonen via het bureau? Check het keurmerk en je loonstrook.',
+          body: [
+            'Woon je in een huis van het bureau?',
+            'Heeft het huis een keurmerk? Alleen dan mag het bureau huur inhouden.',
+            'Dat keurmerk is van SNF of AKF.',
+            'Het mag hooguit 25 procent van het minimumloon zijn.',
+            'Je huurcontract staat los van je werkcontract.',
+            'Voor vervoer mag niets van je minimumloon af.',
+            'Een boete mag alleen als die in je contract staat.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: Huisvesting inhouden alleen bij een SNF- of AKF-keurmerk, hooguit 25 procent van het
+        //   minimumloon (Besluit minimumloon; rijksoverheid.nl 30-10-2025).
+        {
+          kind: 'truefalse',
+          id: 'r.l.loon.4.tf1',
+          statement: 'Het bureau mag voor elk huis de huur van je loon inhouden.',
+          answer: false,
+          why: 'Nee. Dat mag alleen als het huis een keurmerk heeft. Dat is van SNF of AKF. En hooguit 25 procent van het minimumloon. Vraag het bureau naar het keurmerk.',
+        },
+        // ⚖️ check: Vervoer valt niet onder de toegestane inhoudingen op het minimumloon (alleen huisvesting
+        //   en zorgverzekering: Wml art. 13; Besluit minimumloon). Twijfel: het bedrag boven het minimumloon
+        //   valt hier niet onder; de les noemt alleen het minimumloon.
+        {
+          kind: 'whatdo',
+          id: 'r.l.loon.4.wd1',
+          situation: 'Ewa verdient het minimumloon. Op haar loonstrook staat: "busje 30 euro". Wat kan Ewa het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze vraagt het bureau waarom dat eraf gaat.', best: true, feedback: 'Goed. Op het minimumloon mag niets af voor vervoer.' },
+            { id: 'b', text: 'Ze betaalt het. Het busje brengt haar toch elke dag.', best: false, feedback: 'Dat snap ik. Maar dit mag niet van haar minimumloon af.' },
+            { id: 'c', text: 'Ze stopt meteen met werken bij dit bureau.', best: false, feedback: 'Dat is snel. Vraag eerst uitleg, en vraag hulp.' },
+          ],
+          why: 'Van je minimumloon mag alleen iets af voor huur en zorgverzekering. Niet voor vervoer. Klopt het niet? Vraag het bureau, of meld het bij de Arbeidsinspectie.',
+        },
+        // ⚖️ check: Boetebeding alleen schriftelijk, met de overtredingen erin; geen boete op het
+        //   minimumloon (art. 7:650 lid 1, 2 en 5 BW; Wml art. 13).
+        {
+          kind: 'truefalse',
+          id: 'r.l.loon.4.tf2',
+          statement: 'Een boete mag alleen als die in je contract staat.',
+          answer: true,
+          why: 'Klopt. Een boete moet in je contract staan. Op je minimumloon mag geen boete. Krijg je een boete? Vraag waarom.',
+        },
+        {
+          kind: 'whoask',
+          id: 'r.l.loon.4.wa1',
+          question: 'Het bureau houdt huur in voor een huis zonder keurmerk. Waar meld je dat?',
+          options: [
+            { id: 'a', who: 'huisarts', best: false, feedback: 'De huisarts gaat over je gezondheid, niet over je loon.' },
+            { id: 'b', who: 'uitzendbureau', best: false, feedback: 'Je kunt het eerst aan het bureau vragen. Maar melden doe je ergens anders.' },
+            { id: 'c', who: 'arbeidsinspectie', best: true, feedback: 'Goed. De Arbeidsinspectie controleert inhoudingen op je loon.' },
+          ],
+          why: 'Klopt een inhouding niet? Meld het bij de Arbeidsinspectie. Een vakbond of het Juridisch Loket helpt je ook.',
+        },
+        { kind: 'model', id: 'r.l.loon.4.mo1', context: 'Je ziet een boete op je loonstrook.', nl: 'Ik zie een boete op mijn loonstrook. Waar staat die in mijn contract?' },
+      ],
+    },
   ],
 };

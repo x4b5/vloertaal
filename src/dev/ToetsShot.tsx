@@ -8,19 +8,28 @@ import { setSpeakShotPhase } from '../components/Speaking';
 import { emptyProgress, type Progress } from '../lib/progress';
 import { keepVoice } from '../lib/toetsVoice';
 import type { ToetsRun } from '../lib/toetsState';
+import { TOETS_VERSIONS } from '../content/toets';
 
 /**
  * "Wat ken je al?" in fixed states for screenshots and the max-3 counter (src/dev/ShotHarness.tsx):
  *   /?shot=toets&state=offer         the card on the home (the start); &state=offer-eind the end's
- *   /?shot=toets&state=question&at=0 a question (0–5 listening, 6–11 words, 12–17 sentences; seed 1)
+ *   /?shot=toets&state=question&at=0 a question (seed 1): 0–4 listening, 5–6 building by ear,
+ *                                    7–11 words, 12–13 dictation, 14–18 chats, 19–20 building
  *   /?shot=toets&state=speak         the speaking task (&phase=review: comparing)
  *   /?shot=toets&state=result-instap the result after the start
  *   /?shot=toets&state=result-eind   the result after the end, then and now (with two short
  *                                    recordings put on this phone, so "Jij toen / Jij nu" shows)
+ *                                    (&old=1: the start kept from form 1, 18 picks)
  *   /?shot=toets&state=page          its page under Settings (after the end)
  */
-const INSTAP: ToetsRun = { day: '2026-10-02', version: 'A', right: { listen: 2, words: 3, sentences: 1 }, of: { listen: 6, words: 6, sentences: 6 } };
-const EIND: ToetsRun = { day: '2026-10-30', version: 'B', right: { listen: 4, words: 5, sentences: 4 }, of: { listen: 6, words: 6, sentences: 6 } };
+const seven = { listen: 7, words: 7, sentences: 7 };
+const picks = { listen: 5, words: 5, sentences: 5 };
+/** Form 2: known (guessing out) 1, 2 and 0 of 7 at the start; 5, 6 and 2 at the end: Luisteren and
+ *  Woorden "Meer dan toen", Zinnen "Ongeveer gelijk" (+2, but within what guessing gives). */
+const INSTAP: ToetsRun = { day: '2026-10-02', version: 'A', right: { listen: 2, words: 3, sentences: 1 }, of: seven, form: 2, mc: picks, wrong: { listen: 2, words: 1, sentences: 3 }, idk: { listen: 3, words: 3, sentences: 3 } };
+const EIND: ToetsRun = { day: '2026-10-30', version: 'B', right: { listen: 5, words: 6, sentences: 3 }, of: seven, form: 2, mc: picks, wrong: { listen: 0, words: 0, sentences: 2 }, idk: { listen: 2, words: 1, sentences: 2 } };
+/** A start kept from form 1 (18 picks, before November 2026). */
+const INSTAP_OLD: ToetsRun = { day: '2026-10-02', version: 'A', right: { listen: 2, words: 3, sentences: 1 }, of: { listen: 6, words: 6, sentences: 6 } };
 
 /** A short silent WAV: a stand-in for a recording (nothing is recorded in a screenshot). */
 function silence(): Blob {
@@ -62,11 +71,11 @@ export function ToetsShot({ lang: code, gender }: { lang: string | null; gender?
     );
   }
   if (state === 'question' || state === 'speak') {
-    const at = state === 'speak' ? 18 : Number(q.get('at') ?? 0);
+    const at = state === 'speak' ? TOETS_VERSIONS.A.length : Number(q.get('at') ?? 0);
     return <ToetsPlayer moment={q.get('moment') === 'eind' ? 'eind' : 'instap'} lang={lang} seed={1} startAt={at} onQuit={() => {}} onDone={() => {}} />;
   }
   if (state === 'result-instap') return <ToetsResult moment="instap" now={INSTAP} lang={lang} onDone={() => {}} />;
-  if (state === 'result-eind') return <ToetsResult moment="eind" now={EIND} before={INSTAP} lang={lang} onDone={() => {}} />;
+  if (state === 'result-eind') return <ToetsResult moment="eind" now={EIND} before={q.get('old') ? INSTAP_OLD : INSTAP} lang={lang} onDone={() => {}} />;
   const progress: Progress = { ...emptyProgress, onboarded: true, toets: { v: 1, instap: INSTAP, eind: EIND, start: INSTAP.day, unitsAt: 0 } };
   return (
     <>

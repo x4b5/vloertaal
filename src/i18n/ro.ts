@@ -208,8 +208,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Arată subiectele',
     privacyLink: 'Citește declarația de confidențialitate (în olandeză)', // nieuw, nalezen
     routeTitle: 'Ce vrei să înveți?', // nieuw, nalezen
-    routeLearn: 'Învață olandeză pentru muncă, cu ajutor în limba ta', // nieuw, nalezen
-    routeRules: 'Vorbesc deja olandeză: cum se lucrează în Țările de Jos și Belgia', // nieuw, nalezen
+    routeLearn: 'Învață olandeză pentru muncă', // nieuw, nalezen
+    routeRules: 'Vorbesc deja olandeză: regulile muncii', // nieuw, nalezen
     routeLearnShort: 'Învață olandeză', // nieuw, nalezen
     byTheme: 'Pe teme',
     inOrder: 'În ordine',
@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Cuvinte', // nieuw, nalezen
     toetsPartSentences: 'Propoziții', // nieuw, nalezen
     toetsListenAsk: 'Ascultă. Ce înseamnă?', // nieuw, nalezen
-    toetsNotSure: 'Nu știi? Alege unul, pur și simplu. Nu e nicio problemă.', // nieuw, nalezen
+    toetsNotSure: 'Nu știi? Atinge „Nu știu”. Nu e nicio problemă.', // nieuw, nalezen
     toetsMicKeep: 'Înregistrarea ta rămâne doar pe acest telefon. Mai târziu te poți auzi din nou.', // nieuw, nalezen
     toetsStartDone: 'Un început bun! Asta știi deja.', // nieuw, nalezen
     toetsEndDone: 'Bravo! Uite ce știi acum.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Tu acum', // nieuw, nalezen
     toetsKeepGoing: 'Exersează puțin în fiecare zi. Așa înveți tot mai mult.', // nieuw, nalezen
     toetsStart: 'Fă testul', // nieuw, nalezen
+    toetsIdk: 'Nu știu', // nieuw, nalezen
+    toetsMore: 'Mai mult decât atunci', // nieuw, nalezen
+    toetsSame: 'Cam la fel', // nieuw, nalezen
+    toetsMoreAll: 'Totul la un loc: acum știi mai mult decât atunci.', // nieuw, nalezen
+    toetsSameAll: 'Totul la un loc: cam la fel ca atunci.', // nieuw, nalezen
     tempo: 'Viteză', // nieuw, nalezen
     tempoCalm: 'Calm', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -357,6 +362,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'Zile de exercițiu în ultimele 4 săptămâni', // nieuw, nalezen
     coachLast: 'Ultima lecție, cu data', // nieuw, nalezen
     coachNameAsk: 'Numele tău pe card?', // nieuw, nalezen
+    coachCode: 'Cod: aceleași numere, pe scurt, pentru rezumatul grupului. Fără nume.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Telefonul ascultă (probă)', // nieuw, nalezen
     listenHint: 'După ce vorbești, telefonul spune dacă te-a înțeles. Asta se întâmplă pe telefon. Nimic nu ajunge la noi sau la alții.', // nieuw, nalezen
@@ -401,6 +407,20 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Învăț olandeză pentru munca mea cu Vloertaal. Gratuit: {link}', // nieuw, nalezen
     workTry: 'Încearcă azi la muncă', // nieuw, nalezen
     saveFailed: 'Progresul tău nu a fost salvat. Telefonul e plin? Fă puțin loc. Sau mergi la Setări: „Păstrează-ți progresul”.', // nieuw, nalezen
+    bewaarNudge: 'Telefonul îți poate șterge uneori progresul. De aceea, păstrează o copie.', // nieuw, nalezen
+    bewaarGo: 'Salvează acum', // nieuw, nalezen
+    backupShare: 'Trimite-ți ție', // nieuw, nalezen
+    backupShareHint: 'Trimite-ți fișierul ție, de exemplu pe WhatsApp sau pe e-mail.', // nieuw, nalezen
+    backupMade: 'Gata. Păstrează bine acest fișier. Cu el îți recuperezi progresul mai târziu.', // nieuw, nalezen
+    speakTurnPrompt: 'Ce spui?', // nieuw, nalezen
+    speakTurnExample: 'Exemplu', // nieuw, nalezen
+    speakTurnReveal: 'Ascultă răspunsul', // nieuw, nalezen
+    sceneTitle: 'Ascultă la locul de muncă', // nieuw, nalezen
+    sceneIntro: 'E zgomot, ca la muncă. Ascultă. Apoi vin întrebările.', // nieuw, nalezen
+    buildFront: 'Pune cuvântul marcat la început', // nieuw, nalezen
+    bridgeTitle: 'Regulile de muncă', // nieuw, nalezen
+    bridgeText: 'Acum știi multă olandeză. Vrei să înveți și regulile de muncă? Atunci totul este în olandeză.', // nieuw, nalezen
+    bridgeGo: 'Da, arată-mi', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

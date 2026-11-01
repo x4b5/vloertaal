@@ -21,6 +21,8 @@ bestand komt terug in de app (`review:import`). De code staat in `scripts/review
 npm run review:export                 # alleen wat nog geen mens heeft nagekeken
 npm run review:export -- --alles      # ook de teksten zonder markering
 npm run review:export -- --taal pl,ro # alleen deze talen
+npm run review:export -- --uit /dev/shm/review  # ergens anders dan review/ (bijvoorbeeld op een
+                                                 # krappe schijf, of om alleen te kijken)
 ```
 
 Alles komt in `review/` (staat in `.gitignore`). Per vrijwilliger één map, die je zo kunt zippen
@@ -29,8 +31,10 @@ of mailen:
 | Map | Inhoud | Voor wie |
 |---|---|---|
 | `review/vertaling-pl/` | `vertaling-pl.csv` + `LEESMIJ.txt` | een moedertaalspreker Pools (zo ook ar, ti, fa, prs, uk, tr, ro, bg, es, pt, fr, de) |
-| `review/feiten-NL/` | `feiten-NL.csv` + `LEESMIJ.txt` | een jurist of vakbondsmens voor Nederland |
-| `review/feiten-BE/` | `feiten-BE.csv` + `LEESMIJ.txt` | een jurist of vakbondsmens voor België (Vlaanderen) |
+| `review/feiten-NL-A/` | `feiten-NL-A.csv` + `LEESMIJ.txt` | een jurist of vakbondsmens voor Nederland: **begin hier** |
+| `review/feiten-NL-B/`, `review/feiten-NL-C/` | idem, lijst B en C | dezelfde of een tweede vrijwilliger, later |
+| `review/feiten-BE-A/` | `feiten-BE-A.csv` + `LEESMIJ.txt` | een jurist of vakbondsmens voor België (Vlaanderen): **begin hier** |
+| `review/feiten-BE-B/`, `review/feiten-BE-C/` | idem, lijst B en C | later |
 
 Waarom `review/` en niet de scratchpad: de eigenaar maakt de lijsten zelf, op de eigen
 computer, en ingevulde bestanden kunnen namen of mailadressen van vrijwilligers bevatten. Die
@@ -67,9 +71,35 @@ Kolommen: `id`, `waar` ("Taal › Veiligheid › tip, keuze 1 (de goede)", "Sche
   zonder die slotzin in; `waar` zegt het erbij. De slotzin zelf is een eigen rij
   (`be.closing.*`).
 
-### De feitenlijst
+### De feitenlijsten: A, B en C, op volgorde van schade
 
-Kolommen: `nr`, `prioriteit`, `land`, `spoor` (Taal, Werkregels, help, disclaimer), `onderwerp`,
+Een land had eerst één lijst van 500 tot 850 feiten (17 tot 27 uur werk). Daar haakt een
+vrijwilliger op af, en dan wordt ook het belangrijkste niet nagekeken. Daarom zijn er per land drie
+lijsten, op wat een fout kan kosten (`lijstOf` in `scripts/review/feiten.ts`):
+
+| Lijst | Wat | Waarom |
+|---|---|---|
+| **A** | Werkregels ziek, rechten, loon, contract en veilig (`units/` en `be/units/`), en de hulp: `help.ts` en `askWho.ts` | een fout kost geld, een uitkering of veiligheid |
+| **B** | de rest van Werkregels: de andere units, de sectoren, de regio (`*-regels.ts`) en de slotzinnen (`disclaimer.ts`) | belangrijk, minder direct schade |
+| **C** | de tips en de Taal-lessen (`work.ts`, `taalBe/`, `regio/`) en de rest (`updates.ts`) | de tips zijn korter; de werkregels zeggen hetzelfde uitgebreider |
+
+- De export zegt per lijst het aantal feiten en een schatting in uren (1 minuut per feit, 3 per
+  feit met prioriteit, zoals in de LEESMIJ). Stand 31 oktober 2026: NL A 167 (ongeveer 3 uur),
+  B 315 (5 uur), C 72 (2 uur); BE A 238 (4 uur), B 365 (6 uur), C 248 (5 uur).
+- **Met alleen lijst A beginnen, in 1 uur.** Elke lijst begint bij 1. De kolom `uur` zegt in welk
+  uur een rij valt als je bovenaan begint: de rijen met `uur` = 1 passen in het eerste uur (NL
+  ongeveer 56, BE ongeveer 40). De LEESMIJ van lijst A zegt dat met zoveel woorden. Vraag een
+  expert dus om "1 uur voor lijst A".
+- Volgorde in lijst A: eerst de punten met prioriteit, dan rechten (ontslag, uitbuiting,
+  discriminatie), dan de hulp (een fout telefoonnummer doet kwaad en is snel nagekeken), dan ziek,
+  loon, contract en veilig. In B en C: prioriteit, dan de volgorde van hieronder.
+- Een punt met prioriteit staat in de lijst van de plek met de meeste schade die het noemt
+  (`lijstOfId`): "r.be.l.tijd.3 / loon.3" staat in A, door loon.
+- Een nieuwe unit hoort niet vanzelf in A: zet hem zo nodig in `A_UNITS` (`scripts/review/feiten.ts`).
+  Losse lessen kunnen ook naar A, met `A_LESSONS`. Les 10.8 (WW of werkloosheidsuitkering meenemen,
+  formulier U2) staat in `geld.ts`, maar staat zo toch in A: een fout kost daar een hele uitkering.
+
+Kolommen: `nr`, `lijst`, `uur`, `prioriteit`, `land`, `spoor` (Taal, Werkregels, help, disclaimer), `onderwerp`,
 `bewering` (de noot), `tekst in de app` (de zin die het best bij de noot past, als die er is),
 `bron` (wat in de noot tussen haakjes staat na een ⚖️, of de laatste haakjes die op een bron
 lijken), `twijfel van de maker`, `bestand:regel`, en drie lege: `klopt?`, `correctie`,
@@ -94,7 +124,8 @@ lijken), `twijfel van de maker`, `bestand:regel`, en drie lege: `klopt?`, `corre
 - Per hulptaal één moedertaalspreker: de map `review/vertaling-<taal>/`. Het liefst iemand die ook
   Nederlands of Engels leest, en de taal van de werkvloer kent. Prioriteit: Tigrinya, dan Dari
   ([`vertaalcontrole.md`](vertaalcontrole.md)).
-- Per land één jurist of iemand van een vakbond: `review/feiten-NL/` of `review/feiten-BE/`.
+- Per land één jurist of iemand van een vakbond: eerst `review/feiten-NL-A/` of
+  `review/feiten-BE-A/`, met de vraag om 1 uur. Lijst B en C later, of aan een tweede persoon.
   Werkregels voor België en Taal voor België staan **allebei al live**, als bèta (sinds 31 oktober
   2026: `BE_RULES_LIVE = true` en `BE_TAAL_LIVE = true`). Een leerling in België leest de Belgische
   feiten dus nu al, terwijl een deskundige ze nog niet heeft nagekeken. Deze lijst is daarom
@@ -148,9 +179,10 @@ Staat er één fout in het bestand, dan schrijft het script **niets** en noemt h
 het rijnummer. Verbeter het bestand, of verwerk de goede rijen toch met `--toch`.
 
 **Een feitenlijst.** Er verandert **niets** in de app: een feit veranderen blijft mensenwerk. Het
-script schrijft `review/feiten-terug-<land>.md`: wat niet klopt (met de correctie, de bron van de
+script schrijft `review/feiten-terug-<land>-<lijst>.md` (bij een bestand met één lijst, anders
+`review/feiten-terug-<land>.md`): wat niet klopt (met de correctie, de bron van de
 expert en `bestand:regel`), wat zonder ja of nee een opmerking heeft, en wat klopt. Daarmee
-verwerk je het zelf, of geef je het aan Claude: "verwerk review/feiten-terug-BE.md; pas de tekst
+verwerk je het zelf, of geef je het aan Claude: "verwerk review/feiten-terug-BE-A.md; pas de tekst
 en de ⚖️-noot aan, en zet bij de noot: nagekeken door … op …".
 
 ## 4. Tekst voor de mail aan vrijwilligers

@@ -5,15 +5,18 @@ import { autoSpeak, speak, stopSpeech } from '../lib/audio';
 import { breakable, wordSize } from '../lib/dutch';
 import type { Exercise } from '../lib/exercises';
 import type { Progress } from '../lib/progress';
-import { rightId, scoreOf, settingsMoment, speakSentence, toetsQuestions, TOETS_PARTS, versionOf, type ToetsMoment, type ToetsPart, type ToetsQuestion } from '../lib/toets';
-import type { ToetsRun as Run, ToetsScore } from '../lib/toetsState';
+import {
+  answerMode, growthOf, knownOf, resultOf, scoreOf, settingsMoment, speakSentence, toetsQuestions, TOETS_PARTS, versionOf,
+  type ToetsAnswer, type ToetsGrowth, type ToetsMoment, type ToetsPart, type ToetsQuestion, type ToetsTally,
+} from '../lib/toets';
+import type { ToetsRun as Run } from '../lib/toetsState';
 import { loadVoice } from '../lib/toetsVoice';
 import { voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
 import { Bi } from './Bi';
 import { castFor } from './Characters';
 import { ChromeBack } from './ChromeBack';
-import { type Answer, ChatExercise, ChoiceGrid } from './Exercises';
+import { type Answer, BuildExercise, ChatExercise, ChoiceGrid, TypeExercise } from './Exercises';
 import { HelpSay } from './HelpSay';
 import { BubblesIcon, ChevronIcon, CloseIcon, EarIcon, HourglassIcon, PictureIcon, SpeakerIcon } from './Icons';
 import { NlPair } from './NlPair';
@@ -154,7 +157,23 @@ function WordQuestion({ q, lang, onAnswer }: { q: Extract<ToetsQuestion, { part:
   );
 }
 
+/**
+ * A question. The building and the writing are the lessons' own, never locked (no colours, no
+ * "right" voice): a wrong word or letter shakes and waits, as in the lesson, and the last one ends
+ * the question. A dictation falls back as in the lesson (lib/writing.ts): hear and pick the written
+ * word for a learner who reads another script (unless they chose to learn writing), letter tiles
+ * or the keyboard as set in Settings. Never the "first units" fallback: the start and the end must
+ * ask the same of the same learner.
+ */
 function Question({ q, lang, onAnswer }: { q: ToetsQuestion; lang?: HelpLanguage; onAnswer: (a: Answer | null) => void }) {
+  if (q.kind === 'build') {
+    const ex: Extract<Exercise, { kind: 'build' }> = { kind: 'build', sentence: q.sentence, tiles: q.tiles, ...(q.audio ? { audio: true as const } : {}) };
+    return <BuildExercise ex={ex} lang={lang} locked={false} onAnswer={onAnswer} />;
+  }
+  if (q.kind === 'dictate') {
+    const ex: Extract<Exercise, { kind: 'type' }> = { kind: 'type', word: q.word, options: q.options };
+    return <TypeExercise ex={ex} lang={lang} locked={false} onAnswer={onAnswer} />;
+  }
   if (q.part === 'listen') return <ListenQuestion q={q} lang={lang} onAnswer={onAnswer} />;
   if (q.part === 'words') return <WordQuestion q={q} lang={lang} onAnswer={onAnswer} />;
   // The chat of the lessons, never locked: no colours, no "right" voice after the tap.
@@ -162,13 +181,17 @@ function Question({ q, lang, onAnswer }: { q: ToetsQuestion; lang?: HelpLanguage
   return <ChatExercise ex={ex} lang={lang} locked={false} onAnswer={onAnswer} />;
 }
 
+
 /* ------------------------------------------------------------------ the test */
 
-export interface ToetsOutcome { right: ToetsScore; of: ToetsScore; voice: Blob | null }
+export interface ToetsOutcome { tally: ToetsTally; voice: Blob | null }
 
 /**
- * The test: 18 questions (6 per part), then the speaking task. ✕ stops it (nothing is kept, the
- * card comes back). `startAt` and `speakPhase` are for the screenshot harness.
+ * The test: 21 questions (7 per part), then the speaking task. ✕ stops it (nothing is kept, the
+ * card comes back). Under every question the small way out "Ik weet het niet" (a text link, like
+ * "Ik kan nu niet luisteren" in the lesson: it does not count as one of the three things to tap,
+ * scripts/max3/count.cjs): an honest answer, never a wrong one. `startAt` and `speakPhase` are
+ * for the screenshot harness.
  */
 export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: fixedSeed }: {
   moment: ToetsMoment;
@@ -182,8 +205,10 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
   const questions = useMemo(() => toetsQuestions(versionOf(moment), seed), [moment, seed]);
   const speakEx = useMemo<Extract<Exercise, { kind: 'speak' }>>(() => ({ kind: 'speak', item: speakSentence() }), []);
   const [index, setIndex] = useState(startAt);
-  const answers = useRef<boolean[]>([]);
+  const answers = useRef<(ToetsAnswer | undefined)[]>([]);
   const busy = useRef(false);
+  /** With the keyboard: the word typed so far, graded (Verder takes it). */
+  const [typed, setTyped] = useState<Answer | null>(null);
   const voice = useRef<Blob | null>(null);
   /** The speaking task: Continue once it can go on (said aloud, no microphone); hidden while comparing. */
   const [spoken, setSpoken] = useState(false);
@@ -191,6 +216,8 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
   const total = questions.length + 1;
   const speaking = index >= questions.length;
   const q = questions[index];
+  // Decided once per question, as the lesson's own exercise decides it (a change in Settings never swaps it halfway).
+  const mode = useMemo(() => (q ? answerMode(q, lang) : { pick: false, keys: false }), [q, lang]);
   const rtl = lang?.dir === 'rtl';
   const slide = useRef<HTMLDivElement>(null);
   const timer = useRef(0);
@@ -207,21 +234,29 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
 
   const finish = useCallback(() => {
     stopSpeech();
-    onDone({ ...scoreOf(questions, answers.current), voice: voice.current });
+    onDone({ tally: scoreOf(questions, answers.current), voice: voice.current });
   }, [onDone, questions]);
 
   // A tap is the answer: it shows as picked for a moment (no colour, no sound of right or wrong),
-  // then the next question. A second tap meanwhile does nothing.
-  const onAnswer = useCallback((a: Answer | null) => {
-    if (!a?.done || busy.current) return;
+  // then the next question. A second tap meanwhile does nothing. A built sentence waits a little
+  // longer, so its last word is heard.
+  const record = useCallback((result: ToetsAnswer['result'], wait: number) => {
+    if (busy.current) return;
     busy.current = true;
-    answers.current[index] = a.given?.[0] === rightId(questions[index]);
+    answers.current[index] = { result, pick: mode.pick };
     timer.current = window.setTimeout(() => {
       busy.current = false;
       stopSpeech();
+      setTyped(null);
       setIndex((i) => i + 1);
-    }, still() ? 250 : 450);
-  }, [index, questions]);
+    }, still() ? Math.min(wait, 250) : wait);
+  }, [index, mode.pick]);
+  const onAnswer = useCallback((a: Answer | null) => {
+    if (mode.keys && !a?.done) { setTyped(a); return; }
+    if (!a?.done) return;
+    record(resultOf(questions[index], a, mode.pick), questions[index].kind === 'build' ? 900 : 450);
+  }, [index, questions, mode, record]);
+  const notKnown = useCallback(() => record('idk', 150), [record]);
 
   const onSpeakAnswer = useCallback((a: { correct: boolean } | null) => setSpoken(Boolean(a)), []);
   const onRecording = useCallback((blob: Blob) => { voice.current = blob; }, []);
@@ -270,13 +305,24 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
               keepNote={moment === 'instap' ? ui('toetsMicKeep', lang) : undefined}
             />
           ) : (
-            <Question key={index} q={q} lang={lang} onAnswer={onAnswer} />
+            <>
+              <Question key={index} q={q} lang={lang} onAnswer={onAnswer} />
+              <button type="button" className="toets-idk" onClick={notKnown}>
+                <NlPair nlFirst nl="Ik weet het niet" nlClass="toets-idk-nl" className="toets-idk-help" text={ui('toetsIdk', lang)} />
+              </button>
+            </>
           )}
         </div>
       </div>
-      <footer className={`player-foot ${speaking && spoken && !rating ? '' : 'foot-empty'}`}>
+      <footer className={`player-foot ${(speaking && spoken && !rating) || (!speaking && typed) ? '' : 'foot-empty'}`}>
         <div className="foot-inner">
           <div className="foot-actions">
+            {!speaking && typed && (
+              <button type="button" className="btn btn-go btn-primary toets-typed-go" onClick={() => record(typed.correct ? 'right' : 'wrong', 150)} dir={rtl ? 'rtl' : undefined}>
+                <Bi className="btn-label" text={ui('continue', lang)} />
+                <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
+              </button>
+            )}
             {speaking && spoken && !rating && (
               <button type="button" className="btn btn-go btn-primary" onClick={finish} dir={rtl ? 'rtl' : undefined}>
                 <Bi className="btn-label" text={ui('continue', lang)} />
@@ -294,11 +340,31 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
 
 const PART_NL: Record<ToetsPart, string> = { listen: 'Luisteren', words: 'Woorden', sentences: 'Zinnen' };
 
-/** One part: its name, and one bar (or "Jij toen" and "Jij nu"). The numbers are written, the bar only draws them. */
+/**
+ * Then against now, in words: "Meer dan toen" only when the difference is bigger than guessing can
+ * give (lib/toetsState.ts growthOf), else "Ongeveer gelijk". Lower by more than guessing can give:
+ * no words (the bars show it; the test never says "less").
+ */
+function GrowthNote({ growth, all, lang }: { growth: ToetsGrowth; all?: boolean; lang?: HelpLanguage }) {
+  if (growth === 'down') return null;
+  const up = growth === 'up';
+  const nl = all ? (up ? 'Alles samen: je kent nu meer dan toen.' : 'Alles samen: ongeveer gelijk aan toen.') : up ? 'Meer dan toen' : 'Ongeveer gelijk';
+  const key: UiKey = all ? (up ? 'toetsMoreAll' : 'toetsSameAll') : up ? 'toetsMore' : 'toetsSame';
+  return (
+    <p className={`toets-growth toets-growth-${growth} ${all ? 'toets-growth-all' : ''}`}>
+      <NlPair nlFirst nl={nl} nlClass="toets-growth-nl" className="toets-growth-help" text={ui(key, lang)} />
+    </p>
+  );
+}
+
+/**
+ * One part: its name, and one bar (or "Jij toen" and "Jij nu"). The numbers are written, the bar
+ * only draws them: what the learner knows with the guessing taken out (knownOf), of the questions.
+ */
 function PartBars({ part, now, before, lang }: { part: ToetsPart; now: Run; before?: Run; lang?: HelpLanguage }) {
   const { Icon } = PART[part];
   const row = (run: Run, who?: 'then' | 'now') => {
-    const n = run.right[part];
+    const n = knownOf(run, part);
     const of = run.of[part];
     const label = who ? ui(who === 'then' ? 'toetsYouThen' : 'toetsYouNow', lang) : null;
     return (
@@ -315,7 +381,7 @@ function PartBars({ part, now, before, lang }: { part: ToetsPart; now: Run; befo
         <span className="toets-part-icon" aria-hidden><Icon size={22} /></span>
         <NlPair nlFirst nl={PART_NL[part]} nlClass="toets-part-nl" className="toets-part-help" text={ui(PART[part].key, lang)} />
       </span>
-      {before ? <>{row(before, 'then')}{row(now, 'now')}</> : row(now)}
+      {before ? <>{row(before, 'then')}{row(now, 'now')}<GrowthNote growth={growthOf(before, now, part)} lang={lang} /></> : row(now)}
     </li>
   );
 }
@@ -428,12 +494,15 @@ function useMoreBelow(): boolean {
   return more;
 }
 
-/** The three parts as bars. */
+/** The three parts as bars; then and now: and under them the whole test in one line. */
 export function ToetsBars({ now, before, lang }: { now: Run; before?: Run; lang?: HelpLanguage }) {
   return (
-    <ul className="toets-parts">
-      {TOETS_PARTS.map((p) => <PartBars key={p} part={p} now={now} before={before} lang={lang} />)}
-    </ul>
+    <>
+      <ul className="toets-parts">
+        {TOETS_PARTS.map((p) => <PartBars key={p} part={p} now={now} before={before} lang={lang} />)}
+      </ul>
+      {before && <GrowthNote growth={growthOf(before, now)} all lang={lang} />}
+    </>
   );
 }
 
@@ -482,7 +551,7 @@ export function ToetsLine({ progress, lang }: { progress: Progress; lang?: HelpL
   const t = progress.toets;
   const now = t?.eind ?? t?.instap;
   if (!now) return null;
-  const parts = TOETS_PARTS.map((p) => `${PART_NL[p]} ${now.right[p]}/${now.of[p]}`).join(' · ');
+  const parts = TOETS_PARTS.map((p) => `${PART_NL[p]} ${knownOf(now, p)}/${now.of[p]}`).join(' · ');
   return (
     <p className="toets-line">
       <span className="toets-line-icon" aria-hidden><BarsGlyph size={22} /></span>

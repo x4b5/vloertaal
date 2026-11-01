@@ -335,6 +335,98 @@ export const be: BeUnit = {
           { kind: 'model', id: 'r.be.l.ziek.3.mo1', context: 'Je zegt je leidinggevende dat je weer kunt werken.', nl: 'Ik ben weer beter. Ik kan morgen weer komen werken.' },
         ],
       },
+      {
+        // Les 6.4 · Ziek en naar je eigen land (arbeidsmigranten, 31 oktober 2026). Opgezocht via
+        //   zoekresultaten (riziv.fgov.be, socialsecurity.be, mloz.be); de sites zelf waren in deze sessie
+        //   niet te openen.
+        id: 'r.be.l.ziek.4',
+        title: 'Ziek en naar je eigen land',
+        goal: 'Ziek en naar je eigen land? Je weet wat je regelt. Je meldt het eerst.',
+        remember: 'Ziek en naar huis? Meld het eerst, en geef je adres door.',
+        // Wie kan je helpen: je leidinggevende of het interimkantoor · je ziekenfonds (de adviserend arts) ·
+        //   een vakbond.
+        help: ['leidinggevende', 'interimkantoor', 'ziekenfonds', 'vakbond'],
+        steps: [
+          {
+            kind: 'scene',
+            id: 'r.be.l.ziek.4.sc1',
+            picture: 'Ewa met haar arm in een mitella. Naast haar staat een tas met een busticket.',
+            lines: [
+              'Ewa werkt via een interimkantoor.',
+              'Ze heeft haar pols gebroken.',
+              'Ze kan 4 weken niet werken.',
+              'Ze wil graag naar haar familie, in haar eigen land.',
+            ],
+          },
+          // ⚖️ check: de werkgever mag een controlearts sturen; de werknemer moet bereikbaar zijn op het adres
+          //   dat hij doorgeeft, ook in het buitenland; het arbeidsreglement of de cao kan dat regelen
+          //   (Arbeidsovereenkomstenwet art. 31 §3; Wet 13 juni 1999 controlegeneeskunde).
+          // ⚖️ check: met een uitkering van het ziekenfonds: een verblijf in de EU, de EER of Zwitserland meld
+          //   je vooraf aan de dienst van de adviserend arts; voor andere landen is vooraf een schriftelijke
+          //   toelating van de adviserend arts nodig (mloz.be factsheet arbeidsongeschiktheid 2023;
+          //   socialsecurity.be "leaving Belgium", RIZIV; zoekresultaat 31-10-2026). Nakijken of dit in 2026 zo is.
+          // ⚖️ check: zonder de nodige melding of toelating kan het ziekenfonds de uitkering voor die periode
+          //   terugvragen (mloz.be; riziv.fgov.be; nakijken).
+          {
+            kind: 'rule',
+            id: 'r.be.l.ziek.4.ru1',
+            emoji: '🏥',
+            title: 'Ziek en naar huis? Meld het eerst, en geef je adres door.',
+            body: [
+              'Ben je ziek? Dan ga je niet zomaar naar je eigen land.',
+              'Zeg het eerst aan je werkgever of het interimkantoor.',
+              'Geef je adres daar door. Je baas mag een controlearts sturen.',
+              'Krijg je een uitkering van het ziekenfonds? Meld je reis dan vooraf.',
+              'Ga je buiten de Europese Unie? Dan vraag je eerst toestemming aan de adviserend arts.',
+            ],
+            rule: 'geschreven',
+          },
+          // ⚖️ check: wie ziek naar het buitenland gaat zonder het te melden, riskeert problemen met het
+          //   gewaarborgd loon (controle niet mogelijk) en met de uitkering van het ziekenfonds (art. 31 §3
+          //   Arbeidsovereenkomstenwet; mloz.be).
+          {
+            kind: 'truefalse',
+            id: 'r.be.l.ziek.4.tf1',
+            statement: 'Ben je ziek? Dan mag je altijd naar je eigen land, zonder iets te zeggen.',
+            answer: false,
+            why: 'Zeg het eerst aan je werkgever of het interimkantoor. Je baas moet weten waar je bent. Krijg je een uitkering? Meld het ook aan je ziekenfonds.',
+          },
+          {
+            kind: 'whatdo',
+            id: 'r.be.l.ziek.4.wd1',
+            situation: 'Ewa wil volgende week naar huis. Wat kan Ewa het beste doen?',
+            options: [
+              { id: 'a', text: 'Ze gaat stil naar huis. Ze werkt nu toch niet.', best: false, feedback: 'Dan weet niemand waar ze is. Dat geeft problemen.' },
+              { id: 'b', text: 'Ze zegt het interimkantoor waar ze dan is.', best: true, feedback: 'Goed. Dan weet het kantoor waar ze is.' },
+              { id: 'c', text: 'Ze zegt haar contract op. Dan is ze vrij om te gaan.', best: false, feedback: 'Dan raakt ze haar werk en haar loon kwijt. Dat hoeft niet.' },
+            ],
+            why: 'Meld het eerst. Zeg waar je bent, en hoe ze je kunnen bellen. Stuur je ziektebriefje op tijd. Vraag ook of je werkgever iets anders wil.',
+          },
+          // ⚖️ check: een ziektebriefje (attest) van een arts in een ander land geldt ook; je stuurt het binnen
+          //   de termijn van het arbeidsreglement (Arbeidsovereenkomstenwet art. 31 §2; securex.be; nakijken).
+          // ⚖️ check: de Europese ziekteverzekeringskaart (EZVK) vraag je aan bij je ziekenfonds; daarmee krijg
+          //   je in een ander EU-land de nodige zorg (Verordening 883/2004 art. 19; riziv.fgov.be; nakijken).
+          {
+            kind: 'truefalse',
+            id: 'r.be.l.ziek.4.tf2',
+            statement: 'Ben je ziek in je eigen land? Dan kan een dokter daar je ziektebriefje maken.',
+            answer: true,
+            why: 'Een dokter daar mag het ziektebriefje maken. Stuur het op tijd naar je werkgever. Neem ook je Europese ziekteverzekeringskaart mee. Die vraag je aan bij je ziekenfonds.',
+          },
+          {
+            kind: 'whoask',
+            id: 'r.be.l.ziek.4.wa1',
+            question: 'Je krijgt een uitkering van het ziekenfonds. Je wilt naar je eigen land. Aan wie meld je dat?',
+            options: [
+              { id: 'a', who: 'interimkantoor', best: false, feedback: 'Het interimkantoor betaalt die uitkering niet. Meld het ergens anders.' },
+              { id: 'b', who: 'huisarts', best: false, feedback: 'Je huisarts helpt je beter worden. Je reis meld je ergens anders.' },
+              { id: 'c', who: 'ziekenfonds', best: true, feedback: 'Goed. Meld het vooraf aan je ziekenfonds.' },
+            ],
+            why: 'Krijg je een uitkering? Meld een reis vooraf aan je ziekenfonds. Ga je buiten de Europese Unie? Vraag dan eerst toestemming.',
+          },
+          { kind: 'model', id: 'r.be.l.ziek.4.mo1', context: 'Je bent ziek, en je wilt naar je familie.', nl: 'Ik ben ziek. Mag ik een tijd naar mijn familie? Ik blijf bereikbaar.' },
+        ],
+      },
     ],
   },
   zegHet: {
@@ -350,11 +442,16 @@ export const be: BeUnit = {
       { text: 'Ik voel me al wat beter. Misschien kom ik binnenkort terug.', feedback: 'Dat is niet duidelijk. Zeg wanneer je komt.' },
       { text: 'Ik kom morgen weer. Of overmorgen, dat zie ik nog.', feedback: 'Dan kan je baas niet plannen. Kies een dag.' },
     ],
+    'r.be.l.ziek.4.mo1': [
+      { text: 'Ik ben ziek. Ik ga morgen naar huis. Tot over een maand.', feedback: 'Je zegt niet waar je bent. Meld het eerst.' },
+      { text: 'Ik ben ziek. Mijn telefoon staat uit. Ik bel later wel.', feedback: 'Dan ben je niet bereikbaar. Dat moet wel.' },
+    ],
   },
   advice: {
     'r.be.l.ziek.1.ru1': 'advice',
     'r.be.l.ziek.2.ru1': 'advice',
     'r.be.l.ziek.3.ru1': 'advice',
+    'r.be.l.ziek.4.ru1': 'advice',
   },
   kun: [
     ['Ik kan mij op tijd ziek melden.', '1F', 'gesprekken'],

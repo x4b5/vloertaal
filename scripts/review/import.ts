@@ -5,7 +5,7 @@
  *  - a translation list: the better texts go into src/i18n, the approved entries get
  *    "// nagekeken: <taal> <datum>", and review/vertaling-terug-<taal>.md says what happened
  *    (with the list "nog open"). With an error in the file nothing is written, unless --toch.
- *  - a facts list: nothing in the app changes. review/feiten-terug-<land>.md says what is right,
+ *  - a facts list: nothing in the app changes. review/feiten-terug-<land>-<lijst>.md says what is right,
  *    what is not and the corrections.
  * --check: shows what would change, and writes nothing.
  */
@@ -45,11 +45,13 @@ export function runImport(argv: string[], root: string, log: (s: string) => void
 
   if (head.includes('klopt?')) {
     const r = importFeiten(text, basename(file));
-    log(`Feiten (${r.land}): ${r.kloptNiet.length} klopt niet, ${r.klopt.length} klopt, ${r.zonderAntwoord.length} zonder ja of nee, ${r.leeg} niet beantwoord.`);
+    log(`Feiten (${r.land}${r.lijst ? `, lijst ${r.lijst}` : ''}): ${r.kloptNiet.length} klopt niet, ${r.klopt.length} klopt, ${r.zonderAntwoord.length} zonder ja of nee, ${r.leeg} niet beantwoord.`);
     for (const f of r.fouten) log(`  rij ${f.rij}: ${f.melding}`);
     log('In de app verandert niets: verwerk de correcties zelf, met het verslag.');
     if (check) log(r.md);
-    save(`feiten-terug-${r.land.replace(/\W+/g, '-')}.md`, r.md);
+    // One list (feiten-NL-A.csv) → feiten-terug-NL-A.md; a whole country → feiten-terug-NL.md.
+    const one = /^[ABC]$/.test(r.lijst) ? r.lijst : '';
+    save(`feiten-terug-${[r.land, one].filter(Boolean).join('-').replace(/[^\w-]+/g, '-')}.md`, r.md);
     return 0;
   }
 

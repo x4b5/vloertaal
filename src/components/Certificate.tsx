@@ -8,7 +8,7 @@ import { CERT_NOTE, certData, certDate, certListLabel, certMeta, certSub, earned
 import { certKunFits, certificatePng, fontsReady, shareCertificate } from '../lib/certCanvas';
 import { KUN_VAARDIGHEID_UI, kunJeNu, pastBij, type KunZin } from '../content/kunJeNu';
 import type { Progress } from '../lib/progress';
-import { KAART_NOTE, kaartAlt, kaartData } from '../lib/kaart';
+import { KAART_CODE_LABEL, KAART_NOTE, kaartAlt, kaartCode, kaartData } from '../lib/kaart';
 import { kaartPng, shareKaart } from '../lib/kaartCanvas';
 import { shareText } from '../lib/shareLink';
 import { Bi } from './Bi';
@@ -477,6 +477,7 @@ const KAART_LEGEND: { nl: string; key: UiKey; toets?: boolean; kun?: boolean }[]
   { nl: 'Dagen geoefend', key: 'coachDays' },
   { nl: 'Laatste les', key: 'coachLast' },
   { nl: 'Toets “Wat ken je al?”', key: 'toetsTitle', toets: true },
+  { nl: 'Code voor het groepsoverzicht', key: 'coachCode' },
 ];
 
 /**
@@ -535,7 +536,8 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
     setBusy(true);
     setSaved(false);
     try {
-      if ((await shareKaart(shown.blob, undefined, shareText(lang))) === 'saved') setSaved(true);
+      // With the card's short code as text, so a coach can paste it into the group overview (vloertaal.nl/groep).
+      if ((await shareKaart(shown.blob, undefined, `${shareText(lang)}\n${KAART_CODE_LABEL}: ${kaartCode(data)}`)) === 'saved') setSaved(true);
     } catch {
       // Nothing more to do: the card stays on screen, to show.
     } finally {

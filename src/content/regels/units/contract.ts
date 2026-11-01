@@ -392,5 +392,86 @@ export const contractUnit: RuleUnit = {
         { kind: 'model', id: 'r.l.contract.4.mo1', context: 'Je weet niet wat voor contract je hebt.', nl: "Ben ik hier werknemer of zzp'er? Wat staat er in mijn contract?" },
       ],
     },
+    {
+      // Les 3.5 · Gedetacheerd: de A1-verklaring (arbeidsmigranten, 31 oktober 2026; zie
+      //   docs/werkregels-curriculum.md, deel 8).
+      id: 'r.l.contract.5',
+      title: 'Gedetacheerd: de A1-verklaring',
+      goal: 'Je weet wat gedetacheerd zijn betekent. Je vraagt naar je A1-verklaring.',
+      remember: 'Gedetacheerd? Vraag je werkgever om je A1-verklaring.',
+      // Wie kan je helpen: je werkgever · de Arbeidsinspectie (te weinig loon) · een vakbond · het
+      //   Juridisch Loket. De SVB (svb.nl) geeft de A1 af voor wie vanuit Nederland gaat werken.
+      help: ['leidinggevende', 'arbeidsinspectie', 'vakbond', 'juridischloket'],
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.contract.5.sc1',
+          picture: 'Een busje met een buitenlands nummerbord bij een bouwplaats. Mohammed stapt uit.',
+          lines: [
+            'Mohammed werkt voor een bouwbedrijf in Portugal.',
+            'Het bedrijf stuurt hem 6 maanden naar Nederland.',
+            'Hij blijft in dienst van het bedrijf in Portugal.',
+            'Een collega vraagt: "Heb jij je A1?"',
+          ],
+        },
+        // ⚖️ check: Gedetacheerd = je werkgever in een ander EU-land stuurt je tijdelijk naar Nederland; je
+        //   blijft dan meestal sociaal verzekerd in dat land, hooguit 24 maanden (Verordening 883/2004 art. 12;
+        //   svb.nl "A1-verklaring"; zoekresultaat 31-10-2026). 24 maanden = "2 jaar" in de les.
+        // ⚖️ check: De A1-verklaring is het bewijs daarvan; de werkgever vraagt hem aan bij de instantie van
+        //   het land van waaruit je gedetacheerd wordt (in Nederland: de SVB) (Verordening 987/2009 art. 15 en 19).
+        // ⚖️ check: In Nederland heb je wel recht op de harde kern van de Nederlandse arbeidsvoorwaarden, zoals
+        //   het minimumloon, werktijden, vakantie en veiligheid (WagwEU art. 2; Richtlijn 96/71/EG;
+        //   postedworkers.nl factsheet "buitenlandse werkgever"); na 12 (soms 18) maanden meer.
+        // ⚖️ check: De buitenlandse werkgever meldt de detachering vóór het werk begint bij het meldloket
+        //   (WagwEU art. 8; postedworkers.nl; zoekresultaat 31-10-2026).
+        {
+          kind: 'rule',
+          id: 'r.l.contract.5.ru1',
+          emoji: '🪪',
+          title: 'Gedetacheerd? Vraag je werkgever om je A1-verklaring.',
+          body: [
+            'Stuurt je werkgever je voor een tijd naar Nederland? Dan ben je gedetacheerd.',
+            'Je blijft dan vaak verzekerd in je eigen land.',
+            'Het bewijs daarvan is de A1-verklaring.',
+            'Detacheren kan meestal hooguit 2 jaar.',
+            'In Nederland krijg je wel minstens het Nederlandse minimumloon.',
+            'Je werkgever meldt je werk vooraf bij de Nederlandse overheid.',
+          ],
+          rule: 'geschreven',
+        },
+        // ⚖️ check: De A1 gaat over de sociale verzekering; het Nederlandse minimumloon en de regels voor
+        //   werktijden en veiligheid gelden toch (WagwEU art. 2; Richtlijn 96/71/EG art. 3; postedworkers.nl).
+        {
+          kind: 'truefalse',
+          id: 'r.l.contract.5.tf1',
+          statement: 'Met een A1-verklaring mag je werkgever je minder geven dan het minimumloon.',
+          answer: false,
+          why: 'Nee. De A1 gaat over je verzekering, zoals voor ziek zijn en pensioen. In Nederland krijg je minstens het Nederlandse minimumloon. Ook de regels voor werktijden en veiligheid gelden.',
+        },
+        {
+          kind: 'whatdo',
+          id: 'r.l.contract.5.wd1',
+          situation: 'Mohammed heeft geen A1-verklaring gezien. Wat kan Mohammed het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij doet niets. Papieren zijn de zaak van de baas.', best: false, feedback: 'Dat snap ik. Maar zonder A1 weet hij niet waar hij verzekerd is.' },
+            { id: 'b', text: 'Hij gebruikt de A1 van een collega.', best: false, feedback: 'Dat kan niet. Een A1 is van één persoon.' },
+            { id: 'c', text: 'Hij vraagt zijn baas om een kopie van zijn A1.', best: true, feedback: 'Goed. Dan weet hij waar hij verzekerd is.' },
+          ],
+          why: 'De A1 laat zien waar je verzekerd bent. Bijvoorbeeld voor de dokter, of als je ziek wordt. Vraag je werkgever om een kopie. Bewaar die goed.',
+        },
+        {
+          kind: 'whoask',
+          id: 'r.l.contract.5.wa1',
+          question: 'Je bent gedetacheerd. Je krijgt minder dan het minimumloon. Wie controleert dat?',
+          options: [
+            { id: 'a', who: 'gemeente', best: false, feedback: 'De gemeente gaat niet over je loon.' },
+            { id: 'b', who: 'arbeidsinspectie', best: true, feedback: 'Goed. De Arbeidsinspectie controleert ook buitenlandse bedrijven.' },
+            { id: 'c', who: 'collega', best: false, feedback: 'Een collega kan meedenken. Maar controleren doet een andere plek.' },
+          ],
+          why: 'Krijg je te weinig loon? Meld het bij de Arbeidsinspectie. Een vakbond kan je ook helpen.',
+        },
+        { kind: 'model', id: 'r.l.contract.5.mo1', context: 'Je vraagt je werkgever naar je papieren.', nl: 'Ik werk hier gedetacheerd. Mag ik een kopie van mijn A1-verklaring?' },
+      ],
+    },
   ],
 };

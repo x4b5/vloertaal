@@ -208,8 +208,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Покажи темите',
     privacyLink: 'Прочети декларацията за поверителност (на нидерландски)', // nieuw, nalezen
     routeTitle: 'Какво искаш да учиш?', // nieuw, nalezen
-    routeLearn: 'Нидерландски за работа, с помощ на твоя език', // nieuw, nalezen
-    routeRules: 'Вече говоря нидерландски: как се работи в Нидерландия и Белгия', // nieuw, nalezen
+    routeLearn: 'Нидерландски за работа', // nieuw, nalezen
+    routeRules: 'Вече говоря нидерландски: правилата в работата', // nieuw, nalezen
     routeLearnShort: 'Учене на нидерландски', // nieuw, nalezen
     byTheme: 'По раздели',
     inOrder: 'По ред',
@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Думи', // nieuw, nalezen
     toetsPartSentences: 'Изречения', // nieuw, nalezen
     toetsListenAsk: 'Слушай. Какво означава?', // nieuw, nalezen
-    toetsNotSure: 'Не знаеш ли? Просто избери едно. Няма проблем.', // nieuw, nalezen
+    toetsNotSure: 'Не знаеш ли? Натисни „Не знам“. Няма проблем.', // nieuw, nalezen
     toetsMicKeep: 'Записът ти остава само на този телефон. По-късно можеш да се чуеш отново.', // nieuw, nalezen
     toetsStartDone: 'Добро начало! Това вече го знаеш.', // nieuw, nalezen
     toetsEndDone: 'Браво! Виж какво знаеш сега.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Ти сега', // nieuw, nalezen
     toetsKeepGoing: 'Упражнявай се малко всеки ден. Така ще научаваш все повече.', // nieuw, nalezen
     toetsStart: 'Направи теста', // nieuw, nalezen
+    toetsIdk: 'Не знам', // nieuw, nalezen
+    toetsMore: 'Повече от тогава', // nieuw, nalezen
+    toetsSame: 'Горе-долу същото', // nieuw, nalezen
+    toetsMoreAll: 'Всичко заедно: сега знаеш повече от тогава.', // nieuw, nalezen
+    toetsSameAll: 'Всичко заедно: горе-долу същото като тогава.', // nieuw, nalezen
     tempo: 'Темпо', // nieuw, nalezen
     tempoCalm: 'Спокойно', // nieuw, nalezen
     tempoNormal: 'Нормално', // nieuw, nalezen
@@ -357,6 +362,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'Дни с упражнения през последните 4 седмици', // nieuw, nalezen
     coachLast: 'Последен урок, с датата', // nieuw, nalezen
     coachNameAsk: 'Името ти на картата?', // nieuw, nalezen
+    coachCode: 'Код: същите числа накратко, за преглед на групата. Без име.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Телефонът слуша (проба)', // nieuw, nalezen
     listenHint: 'След като кажеш нещо, телефонът показва дали те е разбрал. Това става в самия телефон. Нищо не отива при нас или при други.', // nieuw, nalezen
@@ -401,6 +407,20 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Уча нидерландски за работата си с Vloertaal. Безплатно е: {link}', // nieuw, nalezen
     workTry: 'Опитай днес на работа', // nieuw, nalezen
     saveFailed: 'Напредъкът ти не е запазен. Телефонът пълен ли е? Освободи малко място. Или отвори Настройки: „Запази напредъка си“.', // nieuw, nalezen
+    bewaarNudge: 'Телефонът понякога може да изтрие напредъка ти. Затова запази копие.', // nieuw, nalezen
+    bewaarGo: 'Запази сега', // nieuw, nalezen
+    backupShare: 'Изпрати на себе си', // nieuw, nalezen
+    backupShareHint: 'Изпрати файла на себе си, например в WhatsApp или по имейл.', // nieuw, nalezen
+    backupMade: 'Готово. Пази добре този файл. С него по-късно ще върнеш напредъка си.', // nieuw, nalezen
+    speakTurnPrompt: 'Какво казваш?', // nieuw, nalezen
+    speakTurnExample: 'Пример', // nieuw, nalezen
+    speakTurnReveal: 'Чуй отговора', // nieuw, nalezen
+    sceneTitle: 'Слушай на работа', // nieuw, nalezen
+    sceneIntro: 'Има шум, като на работа. Слушай. После идват въпросите.', // nieuw, nalezen
+    buildFront: 'Сложи отбелязаната дума в началото', // nieuw, nalezen
+    bridgeTitle: 'Правилата в работата', // nieuw, nalezen
+    bridgeText: 'Вече знаеш много нидерландски. Искаш ли да научиш и правилата в работата? Тогава всичко е на нидерландски.', // nieuw, nalezen
+    bridgeGo: 'Да, покажи', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

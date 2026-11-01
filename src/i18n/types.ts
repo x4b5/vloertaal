@@ -91,8 +91,8 @@ export const uiEn = {
   privacyLink: "Read the privacy statement (in Dutch)",
   /* The first question (src/components/Screens.tsx RoutePage) and Settings: the two learning routes. */
   routeTitle: "What do you want to learn?",
-  routeLearn: "Learn Dutch for work, with help in your own language",
-  routeRules: "I already speak Dutch: how work goes in the Netherlands and Belgium",
+  routeLearn: "Learn Dutch for work",
+  routeRules: "I already speak Dutch: the work rules",
   routeLearnShort: "Learn Dutch",
   topicsOrder: "Show the topics",
   byTheme: "By theme",
@@ -406,7 +406,7 @@ export const uiEn = {
   toetsPartWords: 'Words',
   toetsPartSentences: 'Sentences',
   toetsListenAsk: 'Listen. What does it mean?',
-  toetsNotSure: 'Don’t know? Just pick one. That is fine.',
+  toetsNotSure: 'Don’t know? Then tap ‘I don’t know’. That is fine.',
   toetsMicKeep: 'Your recording stays on this phone only. Later you can hear yourself again.',
   toetsStartDone: 'Good start! This is what you know already.',
   toetsEndDone: 'Well done! Look what you know now.',
@@ -414,6 +414,11 @@ export const uiEn = {
   toetsYouNow: 'You now',
   toetsKeepGoing: 'Practise a little every day. Then you learn more and more.',
   toetsStart: 'Do the test',
+  toetsIdk: 'I don’t know',
+  toetsMore: 'More than then',
+  toetsSame: 'About the same',
+  toetsMoreAll: 'All together: you know more now than then.',
+  toetsSameAll: 'All together: about the same as then.',
   /* "Tempo" in Settings (src/lib/tempo.ts): how fast the Dutch is played. */
   tempo: 'Speed',
   tempoCalm: 'Calm',
@@ -428,6 +433,7 @@ export const uiEn = {
   coachDays: 'Days of practice in the last 4 weeks',
   coachLast: 'Last lesson, with the date',
   coachNameAsk: 'Your name on the card?',
+  coachCode: 'Code: the same numbers, short, for a group overview. No name.',
   // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
   listenTrial: 'Let the phone listen (trial)',
   listenHint: 'After you speak, the phone says if it understood you. This happens on the phone itself. Nothing goes to us or to others.',
@@ -500,6 +506,26 @@ export const uiEn = {
   workTry: 'Try it at work today',
   /** Saving the progress on this phone failed (src/lib/progress.ts saveProgress; src/components/SaveFailedNote.tsx): once. */
   saveFailed: 'Your progress was not saved. Is your phone full? Make some room. Or go to Settings: Keep your progress.',
+  /** "Bewaar je voortgang" on the home, once, where the phone may lose the progress (src/components/BackupNudge.tsx). */
+  bewaarNudge: 'Your phone can sometimes delete your progress. So keep a copy.',
+  bewaarGo: 'Keep it now',
+  /** Settings › "Bewaar je voortgang": the file through the phone's share sheet (src/lib/backupShare.ts). */
+  backupShare: 'Send to yourself',
+  backupShareHint: 'Send the file to yourself, for example in WhatsApp or by e-mail.',
+  /** The backup file was saved or sent. */
+  backupMade: 'Done. Keep this file safe. With it you can put your progress back later.',
+  /* Stap 2: "Wat zeg je?" before a chat (src/components/Speaking.tsx), and the sound scenes (src/components/Scene.tsx). */
+  speakTurnPrompt: 'What do you say?',
+  speakTurnExample: 'Example',
+  speakTurnReveal: 'Hear the answer',
+  sceneTitle: 'Listen at work',
+  sceneIntro: 'There is noise, as at work. Listen. Then come the questions.',
+  /* Stap 3: "Zet het vooraan" (a sentence built again with its time or place words first, src/components/Exercises.tsx BuildExercise). */
+  buildFront: 'Put the marked word first',
+  /* Stap 3: once, on the home, when most of the language course is done (src/components/BridgeOffer.tsx). */
+  bridgeTitle: 'The work rules',
+  bridgeText: 'You know a lot of Dutch now. Do you also want to learn the work rules? Then everything is in Dutch.',
+  bridgeGo: 'Yes, show me',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

@@ -12,6 +12,8 @@
     "typecheck": "tsc -b",
     "clips": "tsx scripts/list-clips.ts",
     "voices:missing": "tsx scripts/list-clips.ts && node scripts/voices/missing.mjs",
+    "help:clips": "tsx scripts/list-help-clips.ts",
+    "help:missing": "tsx scripts/list-help-clips.ts && node scripts/voices/help-manifest.mjs",
     "taal": "tsx scripts/taal-a2.ts",
     "scenes:lines": "tsx scripts/scene-lines.ts",
     "splash": "tsx scripts/splash-html.ts",

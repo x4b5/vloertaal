@@ -4,7 +4,9 @@
  *
  * Opens each named state in Chromium, counts the visible, enabled, tappable elements (in view or
  * reachable by scrolling), leaves out the fixed chrome (the bottom nav, the lesson ✕, the back
- * arrow `.chrome-back`, the "Melden" flag `.lesson-report` and its switch `.about-tester`) and speaker/play buttons, and
+ * arrow `.chrome-back`, the "Melden" flag `.lesson-report` and its switch `.about-tester`, and the small
+ * way out "Ik kan nu niet luisteren" `.skip-sound`, owner's choice 31 October 2026, and its twin in the test
+ * "Wat ken je al?", "Ik weet het niet" `.toets-idk`, stap 3) and speaker/play buttons, and
  * prints screen -> count -> elements with PASS/FAIL against the limit.
  *
  * A state FAILS when
@@ -17,7 +19,9 @@
  * A list state ({ list: true }, the named exception) is checked, not waved through: it needs a
  * list (ul / ol / .lang-grid / .set-rows) whose rows are one kind, with at most one tap per row
  * and no extra per-row buttons; outside its lists at most --limit things to tap (the back arrow is
- * chrome).
+ * chrome). A sentence built with all its tiles at once (stap 3, `ul.tile-all`) is such a list:
+ * each tile is one row (one tap: the word; its speaker is not counted, as everywhere), a placed
+ * tile leaves an empty row without a tap; outside it at most --limit.
  *
  * Usage:
  *   node count.cjs                       # every state, one configuration
@@ -100,11 +104,12 @@ async function buildRight(page, wrongFirst = 0) {
     for (let i = 0; i < n; i++) texts.push((await tiles.nth(i).innerText()).replace(/[.,!?\u00ad]/g, '').trim());
     if (wrongFirst && k === 0) {
       const wrong = texts.map((t, j) => (t.toLowerCase() !== w.toLowerCase() ? j : -1)).filter((j) => j >= 0);
-      for (let x = 0; x < wrongFirst; x++) { await tiles.nth(wrong[x % wrong.length]).click(); await settle(page, 150); }
+      for (let x = 0; x < wrongFirst; x++) { await tiles.nth(wrong[x % wrong.length]).click(); await settle(page, 300); }
     }
     // The first word's tiles are written small (src/lib/exercises.ts tileLabel): "draag" for "Draag".
     const i = texts.findIndex((t) => t === w || (k === 0 && t.toLowerCase() === w.toLowerCase()));
-    if (i >= 0) { await tiles.nth(i).click(); await settle(page, 150); }
+    // Longer than the tiles' settling time (useSettledTiles, 250 ms), else the next tap is dropped.
+    if (i >= 0) { await tiles.nth(i).click(); await settle(page, 300); }
   }
   await settle(page, 300);
 }
@@ -243,6 +248,23 @@ function defineStates(LANG) {
   };
   add('flow:home-new', '/', (p) => realHome(p), { expect: '.home3' });
   add('flow:home-quiet', '/', (p) => realHome(p, { quiet: true }), { expect: '.sound-off-mark' });
+  // "Bewaar je voortgang" (src/components/BackupNudge.tsx): 3 lessons done on a phone whose browser
+  // said no to keeping the storage: the card in the block's place ([Bewaar nu] [Later], "Ander
+  // onderwerp"); Later closes it; Bewaar nu opens Settings › Bewaar je voortgang (with a share sheet).
+  const atRisk = async (p) => {
+    await p.evaluate(() => localStorage.setItem('vloertaal:persist', 'denied'));
+    await realHome(p, { completed: { 'l.hello': { best: 1, times: 1 }, 'l.people': { best: 1, times: 1 }, 'l.understand': { best: 1, times: 1 } } });
+  };
+  add('flow:bewaar-home', '/', atRisk, { expect: '.home-offer .bewaar-card .bewaar-go' });
+  // Stap 3: "Wil je ook de werkregels leren?" (src/components/BridgeOffer.tsx), most of the course done.
+  add('home:bridge', shot('bridge'), null, { expect: '.home-offer .bridge-card .bridge-go' });
+  add('home:bridge-later', shot('bridge'), async (p) => { await tap(p, '.bridge-later'); await settle(p); }, { expect: '.home3:not(.home-offer)' });
+  add('flow:bewaar-later', '/', async (p) => { await atRisk(p); await tap(p, '.bewaar-later'); await settle(p); }, { expect: '.home3 .bay-now' });
+  add('flow:bewaar-go', '/', async (p) => {
+    await atRisk(p);
+    await p.evaluate(() => { navigator.share = () => Promise.resolve(); navigator.canShare = () => true; });
+    await tap(p, '.bewaar-go'); await settle(p);
+  }, { expect: '.waybill .keep-hint-share' });
   const startFirstLesson = async (p) => { await realHome(p); await tap(p, '.bay-start, .route-start, .start-btn, button.btn-primary', 0); await settle(p, 900); };
   const stopHalfway = async (p) => {
     await startFirstLesson(p);
@@ -328,6 +350,14 @@ function defineStates(LANG) {
   add('route:topic', shot('topic&cu=u.firstday&state=mid'), null, { list: true });
   add('route:topic-done', shot('topic&cu=u.firstday&state=shelf'), null, { list: true });
   add('route:topic-locked', shot('topic&cu=u.pay&state=mid&access=preview'), null, { list: true });
+  // "Luister op de werkvloer" (stap 2): only with mixes in public/audio-scenes (none committed;
+  // a test mp3 for the count). The topic page with its scene rows, the scene's first page, after
+  // it was played (Verder), a question and its answer.
+  add('scene:topic', shot('scene&state=topic'), null, { list: true, expect: '.bay-scene' });
+  add('scene:listen', shot('scene&state=listen'), null, { expect: '.scene-play' });
+  add('scene:listen-played', shot('scene&state=listen'), async (p) => { await tap(p, '.scene-play'); }, { expect: '.scene-next' });
+  add('scene:question', shot('scene&state=question&at=0'), null, { expect: '.scene-choices' });
+  add('scene:answered', shot('scene&state=question&at=0'), async (p) => { await tap(p, '.scene-choices .choice', 0); await settle(p, 600); }, { expect: '.scene-why' });
   add('route:topic-sample', shot('topic&cu=u.firstday&state=new&access=sample'), null, { list: true });
   add('route:all-topics-tap', shot('all&state=mid'), async (p) => { await tap(p, '.topic-row', 0); await settle(p); }, { list: true });
   // "Volgorde": the own course in the order of the path (the choice is kept on the device).
@@ -358,6 +388,8 @@ function defineStates(LANG) {
   // Tester mode: the "Iets melden" flag in the header (chrome, like the ✕).
   add('lesson:report', shot('meaning&report=1'), null, { expect: '.player-top .lesson-report' });
   add('lesson:tip', shot('tip'));
+  // The tip's second page: "Zeg het zo" on its own (31 October 2026).
+  add('lesson:tip-say', shot('tip&part=say'));
   add('lesson:saying', shot('saying'));
   add('lesson:saying-long', shot('saying&saying=l.measures'));
   add('lesson:word-card-saying', shot('intro&word=w.blad'));
@@ -366,38 +398,38 @@ function defineStates(LANG) {
   add('lesson:sounds-listen', shot('lesson&lesson=l.shortlong&at=10'));
   // "Een ongeluk melden" (l.accident, seed 1): a word card, the abstract word "gebeuren", the tip
   // and its situation, a sentence to build, the chat and typing "gewond".
-  for (const [key, at] of [['intro', 0], ['word-abstract', 7], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+  for (const [key, at] of [['intro', 0], ['word-abstract', 7], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:accident-${key}`, shot(`lesson&lesson=l.accident&at=${at}`));
   }
   // "Werken via een uitzendbureau" (l.agency, seed 1): a word card, the abstract word "de opdracht",
   // the tip and its situation, a sentence to build, the chat and typing "de opdracht".
-  for (const [key, at] of [['intro', 0], ['word-abstract', 4], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+  for (const [key, at] of [['intro', 0], ['word-abstract', 4], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:agency-${key}`, shot(`lesson&lesson=l.agency&at=${at}`));
   }
   // "Opdrachten van je leidinggevende" (l.task, seed 1): a word card, the abstract word "eerst",
   // the tip and its situation, a sentence to build, the chat and typing "de taak".
-  for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+  for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:task-${key}`, shot(`lesson&lesson=l.task&at=${at}`));
   }
   // "De eerste dag: je weg vinden" (l.arrive, seed 1): a word card, the picture choice "de buddy",
   // the tip and its situation, a sentence to build, the chat and typing "de ingang".
-  for (const [key, at] of [['intro', 0], ['pick', 13], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+  for (const [key, at] of [['intro', 0], ['pick', 14], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:arrive-${key}`, shot(`lesson&lesson=l.arrive&at=${at}`));
   }
   // "Dit heb ik nog niet geleerd" (l.notyet, seed 1): the abstract word "nog niet", a word card, the
   // tip and its situation (a Dutch quote with its speaker), a sentence to build, the chat and typing "mogen".
-  for (const [key, at] of [['word-abstract', 0], ['intro', 3], ['tip', 9], ['situation', 10], ['build', 14], ['chat', 17], ['type', 19]]) {
+  for (const [key, at] of [['word-abstract', 0], ['intro', 3], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:notyet-${key}`, shot(`lesson&lesson=l.notyet&at=${at}`));
   }
   // "Slimme apps en AI" (u.ai, seed 1): every step of its four lessons (word cards, the abstract
   // words, picture and listen choices, the tip and its situation, the sentences, the chats, typing).
   for (const lesson of ['aihelp', 'aiprivate', 'aifake', 'aiplan']) {
-    for (let at = 0; at < 20; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
+    for (let at = 0; at < 21; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
   }
   // The tips of "Messages and the roster app" (l.texting: the example message on one line, never
   // split inside its quotes, and "Mag ik mijn dienst ruilen?") and "Beschermende kleding" (l.gear:
   // "Heb je dit ook in mijn maat?"), with their situations (seed 1).
-  for (const [key, at] of [['tip', 9], ['situation', 10]]) {
+  for (const [key, at] of [['tip', 9], ['tip-say', 10], ['situation', 11]]) {
     add(`lesson:texting-${key}`, shot(`lesson&lesson=l.texting&at=${at}`));
     add(`lesson:gear-${key}`, shot(`lesson&lesson=l.gear&at=${at}`));
   }
@@ -415,6 +447,16 @@ function defineStates(LANG) {
   // Two stray taps are forgiven in a built sentence (BUILD_FORGIVEN_TAPS); three are a mistake.
   add('lesson:build:two-slips', shot('build'), async (p) => { await buildRight(p, 2); await settle(p, 900); }, { expect: '.answer-right' });
   add('lesson:build:wrong', shot('build'), async (p) => { await buildRight(p, 3); await settle(p, 900); }, { expect: '.answer-wrong' });
+  // Stap 3: all the tiles at once (later units): the tile bank is a list (see the head of this file).
+  add('lesson:build-all', shot('build&all=1'), null, { list: true, expect: 'ul.tile-all' });
+  add('lesson:build-all:placed', shot('build&all=1'), async (p) => {
+    const label = await p.locator('.build-steps[data-nl]').first().getAttribute('data-nl');
+    await tapText(p, '.tile-all .tile-with-say', label.split(/\s+/)[0].toLowerCase());
+  }, { list: true, expect: '.answer-line .tile-placed' });
+  add('lesson:build-all:right', shot('build&all=1'), async (p) => { await buildRight(p); await settle(p, 900); }, { expect: '.answer-right' });
+  // Stap 3: "Zet het vooraan": the line with its front words marked, three words for each place.
+  add('lesson:front', shot('front'), null, { expect: '.build-front-mark' });
+  add('lesson:front:right', shot('front'), async (p) => { await buildRight(p); await settle(p, 900); }, { expect: '.answer-right' });
   // Keyboard dictation is for a help language in Latin letters (another script gets hear-and-pick).
   const latin = ['pl', 'tr', 'ro'].includes(LANG) ? LANG : 'pl';
   add('lesson:dictation', shot('type', latin));
@@ -430,6 +472,11 @@ function defineStates(LANG) {
   add('lesson:speak:recording', shot('speak-rec'));
   add('lesson:speak:compare', shot('speak-compare'));
   add('lesson:speak:off', shot('speak-off'));
+  // "Wat zeg je?" before the chat (stap 2): the colleague's line, then say the reply.
+  add('lesson:speak-turn:idle', shot('speak&turn=1'), null, { expect: '.say-turn .say-mic' });
+  add('lesson:speak-turn:compare', shot('speak-compare&turn=1'), null, { expect: '.say-turn .say-rate' });
+  add('lesson:speak-turn:off', shot('speak-off&turn=1'), null, { expect: '.say-turn .say-reveal' });
+  add('lesson:speak-turn:shown', shot('speak-off&turn=1'), async (p) => { await tap(p, '.say-reveal'); }, { expect: '.say-turn .chat-bubble-me .chat-line' });
   add('lesson:retry', shot('retry'));
   add('lesson:quiet', shot('meaning&quiet=1'));
   add('lesson:quit-dialog', shot('meaning'), async (p) => { await tap(p, '.player-top .lesson-close'); }, { expect: '.sheet-stop .sheet-stop-icon' });
@@ -519,14 +566,22 @@ function defineStates(LANG) {
   // the real way from a new learner's home into the test.
   add('toets:offer', shot('toets&state=offer'), null, { expect: '.toets-offer' });
   add('toets:offer-eind', shot('toets&state=offer-eind'), null, { expect: '.toets-offer-eind' });
-  add('toets:listen', shot('toets&state=question&at=0'), null, { expect: '.toets-listen' });
+  // Form 2 (21 questions): 0–4 listen, 5–6 build by ear, 7–11 words, 12–13 dictation, 14–18 chat,
+  // 19–20 build; every question with the small link "Ik weet het niet" (.toets-idk, not counted).
+  add('toets:listen', shot('toets&state=question&at=0'), null, { expect: '.toets-listen .choice' });
+  add('toets:listen-build', shot('toets&state=question&at=5'), null, { expect: '.toets-player .build-steps' });
   add('toets:word', shot('toets&state=question&at=7'), null, { expect: '.toets-word' });
   add('toets:word-picked', shot('toets&state=question&at=7'), async (p) => { await tap(p, '.choice', 0); }, { expect: '.toets-player' });
-  add('toets:chat', shot('toets&state=question&at=12'), null, { expect: '.chat' });
+  add('toets:dictate', shot('toets&state=question&at=12'), null, { expect: '.toets-player .exercise' });
+  // With the keyboard (a Latin help language): a word typed shows Verder in the footer.
+  add('toets:dictate-typed', shot('toets&state=question&at=12'), async (p) => { const i = p.locator('input.type-input'); if (await i.count()) { await i.fill('helm'); await settle(p); } }, { expect: '.toets-player .exercise' });
+  add('toets:chat', shot('toets&state=question&at=14'), null, { expect: '.chat' });
+  add('toets:build', shot('toets&state=question&at=19'), null, { expect: '.toets-player .build-steps' });
   add('toets:speak', shot('toets&state=speak'), null, { expect: '.say-mic' });
   add('toets:speak-review', shot('toets&state=speak&phase=review'), null, { expect: '.say-rate' });
   add('toets:result-instap', shot('toets&state=result-instap'), null, { expect: '.toets-parts' });
   add('toets:result-eind', shot('toets&state=result-eind'), null, { expect: '.toets-voices' });
+  add('toets:result-eind-growth', shot('toets&state=result-eind'), null, { expect: '.toets-growth-all' });
   add('toets:page', shot('toets&state=page'), null, { expect: '.toets-page .chrome-back' });
   // "Laat zien hoe het gaat" (the coach card, Settings › Taal en ik): the card with Bewaar of deel and
   // Naam wijzigen; a new learner's; and the name asked first (as on the certificate).
@@ -544,6 +599,8 @@ function defineStates(LANG) {
   add('flow:toets-offer', '/', (p) => realHome(p, afterFirst), { expect: '.toets-offer' });
   add('flow:toets-start', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
   add('flow:toets-later', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3 .bay-now' });
+  // "Ik weet het niet" goes on to the next question (the second listening question).
+  add('flow:toets-idk', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-do'); await settle(p, 900); await tap(p, '.toets-idk'); await settle(p, 700); }, { expect: '.toets-player .toets-listen .choice' });
   // "Laat de telefoon luisteren (proef)" (src/lib/listen.ts), with a mocked on-device API
   // (&listen=, src/dev/ShotHarness.tsx fakeListenApi): its row in Lessen, its page (Dutch on the
   // phone, or still to download, and the wifi question), and the three outcomes after speaking.
@@ -854,7 +911,7 @@ function countInPage() {
     // Fixed chrome: the lesson ✕ and the back arrow (same component, same corner everywhere), and
     // the "Iets melden" flag (a tool, not a step of the lesson; src/lib/report.ts), and its
     // switch at the bottom of Over (after the credits, like the flag a tool).
-    if (el.matches('.lesson-close') || el.matches('.lesson-report') || el.matches('.about-tester') || (el.closest('.player-top') && el.getAttribute('aria-label') === 'Quit lesson') || el.matches('.chrome-back')) { chrome.push(item); continue; }
+    if (el.matches('.lesson-close') || el.matches('.lesson-report') || el.matches('.about-tester') || el.matches('.skip-sound') || el.matches('.toets-idk') || (el.closest('.player-top') && el.getAttribute('aria-label') === 'Quit lesson') || el.matches('.chrome-back')) { chrome.push(item); continue; }
     if (transparent(el)) { hiddenTappables.push(item); continue; }
     const al = el.getAttribute('aria-label') || '';
     if (/(^|\s)help-say(\s|$)/.test(cls)) { helpSpeakers.push(item); continue; }
@@ -890,6 +947,7 @@ function countInPage() {
       rows: rows.length,
       rowKinds: kinds,
       multiTapRows: per.filter((t) => t.length > 1).map((t) => t.map((c) => c.label).join(' + ')),
+      tileAll: ul.classList.contains('tile-all'),
       _el: ul,
     });
   }
@@ -906,7 +964,9 @@ function countInPage() {
 /** The verdict for a state: PASS / LIST / FAIL, with the reasons. */
 function judge(st, res, expectOk) {
   const why = [];
-  if (st.list) {
+  // A sentence built with all its tiles at once (ul.tile-all, stap 3) is the list exception
+  // wherever it shows (a lesson step of any state): checked as a list.
+  if (st.list || res.lists.some((l) => l.tileAll)) {
     if (!res.lists.length) why.push('list state without a list');
     if (res.outsideLists.length > LIMIT) why.push(`${res.outsideLists.length} outside the list`);
     for (const l of res.lists) {
@@ -980,7 +1040,7 @@ async function runOne(browser, st, cfg, outDir) {
     if (outDir && !NO_SHOTS) await page.screenshot({ path: path.join(outDir, `${file}.png`), fullPage: true });
     const why = COUNTER_SRC ? judgeMine(st, res, expectOk) : judge(st, res, expectOk);
     if (errors.length) why.push(`page errors: ${errors.join(' | ')}`);
-    const row = { config: cfgName(cfg), state: st.name, url: st.url, pass: why.length === 0, list: Boolean(st.list), why, ...res, count: res.counted.length, errors };
+    const row = { config: cfgName(cfg), state: st.name, url: st.url, pass: why.length === 0, list: Boolean(st.list) || (res.lists ?? []).some((l) => l.tileAll), why, ...res, count: res.counted.length, errors };
     if (outDir) fs.writeFileSync(path.join(outDir, `${file}.json`), JSON.stringify(row, null, 2));
     return row;
   } catch (e) {

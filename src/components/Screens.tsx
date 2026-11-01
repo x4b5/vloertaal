@@ -50,7 +50,7 @@ import {
 import { SpeakButton } from './SpeakButton';
 import { useVoices } from './useVoices';
 import { setTesterSwitch, testerSwitch } from '../lib/report';
-import { ChoiceCards } from './Choice';
+import { ChoiceCards, QuestionSay } from './Choice';
 import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
@@ -252,13 +252,15 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
       <h2 className="lang-guess-q">
         <span className="lang-guess-name" lang={langTag(g.code)} dir={g.dir}>{g.nativeName}{q}</span>
       </h2>
+      {/* "Polski?" and its two answers, heard in that language (a recording, else the phone's voice). */}
+      <div className="onb-say"><HelpSay text={`${g.nativeName}${q}`} lang={g} /></div>
       <ChoiceCards
         label={said(ui('chooseLanguage', g))}
         dir={g.dir}
         onPick={(id) => (id === 'yes' ? pick(g.code) : setList(true))}
         options={[
-          { id: 'yes', text: ui('langGuessYes', g), picture: <CheckIcon size={30} /> },
-          { id: 'other', text: ui('langGuessOther', g), picture: <GlobeIcon size={30} />, next: true },
+          { id: 'yes', text: ui('langGuessYes', g), picture: <CheckIcon size={30} />, extra: <HelpSay text={g.ui.langGuessYes} lang={g} /> },
+          { id: 'other', text: ui('langGuessOther', g), picture: <GlobeIcon size={30} />, next: true, extra: <HelpSay text={g.ui.langGuessOther} lang={g} /> },
         ]}
       />
     </div>
@@ -285,21 +287,26 @@ function PrivacyLink({ lang }: { lang?: HelpLanguage }) {
  */
 export function RoutePage({ lang, onLearn, onRules }: { lang?: HelpLanguage; onLearn: () => void; onRules: () => void }) {
   useEffect(() => { applyEnglish(null); }, []);
+  // With the phone's language guessed, the page is in that language and Dutch only: no English
+  // third line (calmer cards). Without a guess, the English stays (the only line besides Dutch).
+  const solo = Boolean(lang && lang.code !== 'nl');
   return (
-    <div className="screen onboarding max3-page route-page" dir={lang?.dir}>
+    <div className={`screen onboarding max3-page route-page ${solo ? 'route-solo' : ''}`} dir={lang?.dir}>
       <div className="hero">
         <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
       </div>
       <h2 className="onboarding-title">
         <NlPair nlFirst nl="Wat wil je leren?" nlClass="route-q-nl" text={ui('routeTitle', lang)} />
       </h2>
+      {/* The question in Dutch, and in the help language (its recording, else the phone's voice). */}
+      <QuestionSay nl="Wat wil je leren?" help={lang?.ui.routeTitle} lang={lang} />
       <ChoiceCards
         label="Wat wil je leren?"
         dir={lang?.dir}
         onPick={(id) => (id === 'taal' ? onLearn() : onRules())}
         options={[
-          { id: 'taal', nl: 'Nederlands leren', text: ui('routeLearn', lang), picture: <WordPicture id="w.hallo" emoji="🗣️" size={52} />, next: true },
-          { id: 'regels', nl: 'Ik spreek al Nederlands', text: ui('routeRules', lang), picture: <WordPicture id="w.contract" emoji="📘" size={52} /> },
+          { id: 'taal', nl: 'Nederlands leren', text: ui('routeLearn', lang), picture: <WordPicture id="w.hallo" emoji="🗣️" size={52} />, next: true, extra: <HelpSay text={lang?.ui.routeLearn} lang={lang} /> },
+          { id: 'regels', nl: 'Ik spreek al Nederlands', text: ui('routeRules', lang), picture: <WordPicture id="w.contract" emoji="📘" size={52} />, extra: <HelpSay text={lang?.ui.routeRules} lang={lang} /> },
         ]}
       />
     </div>

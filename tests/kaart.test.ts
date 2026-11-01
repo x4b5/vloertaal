@@ -62,17 +62,17 @@ describe('coach card: its fields', () => {
     expect(kaartData(old as Progress, '', TODAY).lastLesson).toEqual({ text: undefined, date: '29 oktober 2026' });
   });
 
-  it('with the test: the start and the end, X/6 per part, in Dutch', () => {
+  it('with the test: the start and the end, X/6 per part (a run of form 1, the guessing taken out), in Dutch', () => {
     const p: Progress = { ...emptyProgress, toets: { v: 1, instap: run('2026-10-02', 'A', [2, 3, 1]), eind: run('2026-10-29', 'B', [4, 5, 4]), start: '2026-10-02', unitsAt: 0 } };
     const d = kaartData(p, '', TODAY);
     expect(d.toets?.instap?.date).toBe('2 oktober 2026');
     const row = kaartRows(d).at(-1)!;
     expect(row.label).toBe('Toets “Wat ken je al?”');
     expect(row.sub).toEqual([
-      { head: 'Instap · 2 oktober 2026', text: 'Luisteren 2/6 · Woorden 3/6 · Zinnen 1/6' },
-      { head: 'Eind · 29 oktober 2026', text: 'Luisteren 4/6 · Woorden 5/6 · Zinnen 4/6' },
+      { head: 'Instap · 2 oktober 2026', text: 'Luisteren 0/6 · Woorden 1/6 · Zinnen 0/6' },
+      { head: 'Eind · 29 oktober 2026', text: 'Luisteren 3/6 · Woorden 4/6 · Zinnen 3/6' },
     ]);
-    expect(kaartAlt(d)).toContain('Toets “Wat ken je al?”: Instap, 2 oktober 2026: Luisteren 2/6 · Woorden 3/6 · Zinnen 1/6. Eind, 29 oktober 2026: Luisteren 4/6');
+    expect(kaartAlt(d)).toContain('Toets “Wat ken je al?”: Instap, 2 oktober 2026: Luisteren 0/6 · Woorden 1/6 · Zinnen 0/6. Eind, 29 oktober 2026: Luisteren 3/6');
   });
 
   it('with only the start of the test: only that line; without the test: no test row', () => {

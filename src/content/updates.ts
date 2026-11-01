@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-10-31',
     items: [
+      'Een tip in de les staat nu op twee pagina\'s: eerst "Zo werkt het hier", dan "Zeg het zo" met de zin om te oefenen. Zo staat er minder op één scherm.',
       'Nieuw bij "Waar werk je?": Winkel. Werk je in een winkel of supermarkt? Kies dan "Winkel en horeca" en dan "Winkel". Dan komt het onderwerp In de winkel vroeg in je lespad, in Taal en in Werkregels. Horeca staat nu ook bij "Winkel en horeca". Je keuze van eerder blijft staan.',
       'Nieuw: een privacyverklaring op vloertaal.nl/privacy. Daar staat precies wat de app wel en niet doet. Ook nieuw: geeft de app een fout? Dan telt hij dat, zonder iets over jou (onder "Anoniem meetellen", dus ook uit te zetten). Zo kunnen we fouten sneller vinden.',
       'Hulp: tekeningen in plaats van emoji bij de tips en bij "Wie kan helpen?", en een voorleesknop in je eigen taal bij de uitleg en de tips (als je telefoon een stem voor je taal heeft). Bij Over › Jouw privacy staat nu een link naar de hele privacyverklaring.',
@@ -30,8 +31,15 @@ export const UPDATES: Update[] = [
       'Hulp: nieuwe nummers bij "Wie bel je?". In Nederland 113 (als je aan zelfdoding denkt), Veilig Thuis, het Centrum Seksueel Geweld en het nummer van FairWork. In België 1813 en het meldpunt mensenhandel (Payoke, PAG-ASA en Sürya).',
       'Deel je een certificaat, spiekkaartje of je kaart? Dan staat onderaan het adres van de app, bijvoorbeeld vloertaal.nl/pl. Er gaat ook een korte tekst mee met de link, in je eigen taal. En de app telt nu ook of mensen terugkomen: één keer op je 1e, 2e, 7e, 14e en 28e dag met een les. Zonder naam, en uit te zetten bij "Anoniem meetellen".',
       'Rustiger begin: je start meteen met les 1. De toets "Wat ken je al?" komt pas na de eerste les. De knop Melden staat in de les niet meer aan. Wil je hem toch? Zet hem aan onderaan bij Over.',
-      'Taal: bij "Maak het gesprek af" zie je de vertaling pas na je antwoord. In de eerste onderwerpen hoef je niet te typen: je hoort een woord en kiest het. En na een les staat soms een zin om vandaag op je werk te proberen.',
+      'Taal: bij "Maak het gesprek af" zie je vanaf het vijfde onderwerp de vertaling pas na je antwoord. In de eerste onderwerpen staat hij er meteen bij. In de eerste onderwerpen hoef je niet te typen: je hoort een woord en kiest het. En na een les staat soms een zin om vandaag op je werk te proberen.',
       'De app start sneller, en een woord dat je al hoorde speelt meteen. Kan je telefoon je voortgang niet bewaren? Dan zie je dat nu, met een tip.',
+      'Werkregels: 4 nieuwe lessen voor wie uit een ander land komt, voor Nederland en België. Ziek en naar je eigen land, je WW of uitkering meenemen (formulier U2), gedetacheerd zijn (A1, in België ook Limosa), en wonen, vervoer en boetes via het bureau. Nog niet nagekeken door een expert.',
+      'Bewaar je voortgang: kan je telefoon je voortgang wissen? Dan vraagt de app na 3 lessen één keer of je een kopie wilt maken. Bij Instellingen › Bewaar je voortgang stuur je het bestand nu ook naar jezelf, bijvoorbeeld in WhatsApp of een e-mail.',
+      'Bij de start kun je meer horen in je eigen taal: de vraag "Wat wil je leren?", de twee keuzes, "Polski?" en de uitleg bij de vragen daarna. Tik op de knop met de wereldbol. Die staat er als je telefoon een stem voor je taal heeft. De keuzes bij "Wat wil je leren?" zijn ook korter.',
+      'Taal: nieuw in de les is "Wat zeg je?". Vlak voor "Maak het gesprek af" hoor je de collega. Dan zeg je zelf het antwoord, en daarna hoor je het voorbeeld. Daarvoor gaat er meestal een andere oefening uit de les.',
+      'Op je kaart bij "Laat zien hoe het gaat" staat nu onderaan een korte code, bijvoorbeeld VT1 O3 D12. Daarin staan dezelfde getallen als op de kaart, zonder naam. Je begeleider kan die code overnemen voor een overzicht van de groep.',
+      'Taal: de toets "Wat ken je al?" is anders. Nu 21 vragen. Soms bouw je een zin of schrijf je een woord. Weet je het niet? Tik op "Ik weet het niet". Dat is goed. Na 4 weken staat er alleen "Meer dan toen" als het echt meer is. Anders staat er "Ongeveer gelijk". Je uitslag van eerder blijft staan.',
+      'Taal: in de tweede helft van je lespad is er "Zet het woord vooraan". Van "Ik verstuur de mail morgen." maak je "Morgen verstuur ik de mail." Later maak je een zin met alle woorden tegelijk. Heb je bijna alles gedaan? Dan vraagt de app één keer of je ook de werkregels wilt leren.',
     ],
   },
   {

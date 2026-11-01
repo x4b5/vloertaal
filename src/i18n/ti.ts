@@ -209,8 +209,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'ኣርእስትታት ምርኣይ',
     privacyLink: 'መግለጺ ብሕትውና ኣንብብ (ብሆላንድኛ)', // nieuw, nalezen
     routeTitle: 'እንታይ ክትመሃሩ ትደልዩ?', // nieuw, nalezen (een vraag, de x-vorm)
-    routeLearn: 'ንስራሕ ሆላንድኛ ምምሃር፡ ምስ ቋንቋ ሓገዝ', // nieuw, nalezen
-    routeRules: 'ሆላንድኛ እዛረብ እየ፡ ስራሕ ኣብ ሆላንድን ቤልጅዩምን ከመይ ይኸይድ', // nieuw, nalezen
+    routeLearn: 'ንስራሕ ሆላንድኛ ምምሃር', // nieuw, nalezen
+    routeRules: 'ሆላንድኛ እዛረብ እየ፡ ሕግታት ስራሕ', // nieuw, nalezen
     routeLearnShort: 'ሆላንድኛ ምምሃር', // nieuw, nalezen
     byTheme: 'ብክፍልታት',
     inOrder: 'ብቕደም ሰዓብ',
@@ -337,7 +337,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'ቃላት', // nieuw, nalezen
     toetsPartSentences: 'ሓረጋት', // nieuw, nalezen
     toetsListenAsk: { m: 'ስማዕ። እንታይ ማለት እዩ?', f: 'ስምዒ። እንታይ ማለት እዩ?', x: 'ስምዑ። እንታይ ማለት እዩ?' }, // nieuw, nalezen
-    toetsNotSure: { m: 'ኣይትፈልጥን ዲኻ? ሓደ ጥራይ ምረጽ። ጸገም የብሉን።', f: 'ኣይትፈልጥን ዲኺ? ሓደ ጥራይ ምረጺ። ጸገም የብሉን።', x: 'ኣይትፈልጡን ዲኹም? ሓደ ጥራይ ምረጹ። ጸገም የብሉን።' }, // nieuw, nalezen
+    toetsNotSure: { m: 'ኣይትፈልጥን ዲኻ? «ኣይፈልጥን» ጠውቕ። ጸገም የብሉን።', f: 'ኣይትፈልጥን ዲኺ? «ኣይፈልጥን» ጠውቒ። ጸገም የብሉን።', x: 'ኣይትፈልጡን ዲኹም? «ኣይፈልጥን» ጠውቑ። ጸገም የብሉን።' }, // nieuw, nalezen
     toetsMicKeep: { m: 'ቅጂኻ ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኻ ደጊምካ ክትሰምዕ ትኽእል ኢኻ።', f: 'ቅጂኺ ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኺ ደጊምኪ ክትሰምዒ ትኽእሊ ኢኺ።', x: 'ቅጂኹም ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኹም ደጊምኩም ክትሰምዑ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
     toetsStartDone: { m: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጥ ኢኻ።', f: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጢ ኢኺ።', x: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጡ ኢኹም።' }, // nieuw, nalezen
     toetsEndDone: { m: 'ጽቡቕ ገይርካ! ሕጂ እንታይ ከም እትፈልጥ ርአ።', f: 'ጽቡቕ ገይርኪ! ሕጂ እንታይ ከም እትፈልጢ ርአዪ።', x: 'ጽቡቕ ገይርኩም! ሕጂ እንታይ ከም እትፈልጡ ርአዩ።' }, // nieuw, nalezen
@@ -345,6 +345,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: { m: 'ንስኻ ሕጂ', f: 'ንስኺ ሕጂ', x: 'ንስኹም ሕጂ' }, // nieuw, nalezen
     toetsKeepGoing: { m: 'መዓልታዊ ቁሩብ ተለማመድ። ከምኡ ብዝያዳ ትማሃር።', f: 'መዓልታዊ ቁሩብ ተለማመዲ። ከምኡ ብዝያዳ ትማሃሪ።', x: 'መዓልታዊ ቁሩብ ተለማመዱ። ከምኡ ብዝያዳ ትማሃሩ።' }, // nieuw, nalezen
     toetsStart: { m: 'ፈተና ጀምር', f: 'ፈተና ጀምሪ', x: 'ፈተና ጀምሩ' }, // nieuw, nalezen
+    toetsIdk: 'ኣይፈልጥን', // nieuw, nalezen
+    toetsMore: 'ካብ ቅድሚ ይበዝሕ', // nieuw, nalezen
+    toetsSame: 'ዳርጋ ሓደ ዓይነት', // nieuw, nalezen
+    toetsMoreAll: { m: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጥ ኢኻ።', f: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጢ ኢኺ።', x: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጡ ኢኹም።' }, // nieuw, nalezen
+    toetsSameAll: 'ኩሉ ብሓባር: ዳርጋ ከም ቅድሚ።', // nieuw, nalezen
     tempo: 'ቅልጣፈ', // nieuw, nalezen
     tempoCalm: 'ህዱእ', // nieuw, nalezen
     tempoNormal: 'ንቡር', // nieuw, nalezen
@@ -358,6 +363,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'መዓልትታት ልምምድ ኣብ ዝሓለፉ 4 ሰሙናት', // nieuw, nalezen
     coachLast: 'ናይ መወዳእታ ትምህርቲ፡ ምስ ዕለቱ', // nieuw, nalezen
     coachNameAsk: { m: 'ስምካ ኣብታ ካርድ?', f: 'ስምኪ ኣብታ ካርድ?', x: 'ስምኩም ኣብታ ካርድ?' }, // nieuw, nalezen
+    coachCode: 'ኮድ፡ ተመሳሳሊ ቁጽርታት ብሓጺሩ፡ ንሓፈሻዊ መግለጺ ጉጅለ። ብዘይ ስም።', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'ተሌፎን ይስማዕ (ፈተነ)', // nieuw, nalezen
     listenHint: { m: 'ምስ ተዛረብካ፡ እቲ ተሌፎን እንተ ተረዲኡካ ይነግረካ። እዚ ኣብቲ ተሌፎን ባዕሉ እዩ ዝኸውን። ናባና ወይ ናብ ካልኦት ዋላ ሓንቲ ኣይለኣኽን።', f: 'ምስ ተዛረብኪ፡ እቲ ተሌፎን እንተ ተረዲኡኪ ይነግረኪ። እዚ ኣብቲ ተሌፎን ባዕሉ እዩ ዝኸውን። ናባና ወይ ናብ ካልኦት ዋላ ሓንቲ ኣይለኣኽን።', x: 'ምስ ተዛረብኩም፡ እቲ ተሌፎን እንተ ተረዲኡኩም ይነግረኩም። እዚ ኣብቲ ተሌፎን ባዕሉ እዩ ዝኸውን። ናባና ወይ ናብ ካልኦት ዋላ ሓንቲ ኣይለኣኽን።' }, // nieuw, nalezen
@@ -402,6 +408,20 @@ const lang: HelpLanguageSource = {
     shareInvite: 'ን ስራሐይ ሆላንድኛ ብ Vloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen
     workTry: { m: 'ሎሚ ኣብ ስራሕካ ፈትኖ', f: 'ሎሚ ኣብ ስራሕኪ ፈትንዮ', x: 'ሎሚ ኣብ ስራሕ ፈትንዎ' }, // nieuw, nalezen
     saveFailed: 'ምዕባለኹም ኣይተዓቀበን። ተሌፎንኩም መሊኡ ድዩ? ቁሩብ ቦታ ግበሩ። ወይ ኣብ ምድላዋት: «ምዕባለኹም ዓቅቡ»።', // nieuw, nalezen
+    bewaarNudge: { m: 'ተሌፎንካ ገለ ግዜ ምዕባለኻ ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅብ።', f: 'ተሌፎንኪ ገለ ግዜ ምዕባለኺ ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅቢ።', x: 'ተሌፎንኩም ገለ ግዜ ምዕባለኹም ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅቡ።' }, // nieuw, nalezen
+    bewaarGo: { m: 'ሕጂ ዓቅብ', f: 'ሕጂ ዓቅቢ', x: 'ሕጂ ዓቅቡ' }, // nieuw, nalezen
+    backupShare: { m: 'ናባኻ ስደድ', f: 'ናባኺ ስደዲ', x: 'ናባኹም ስደዱ' }, // nieuw, nalezen
+    backupShareHint: { m: 'ነቲ ፋይል ናባኻ ስደዶ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።', f: 'ነቲ ፋይል ናባኺ ስደድዮ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።', x: 'ነቲ ፋይል ናባኹም ስደድዎ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።' }, // nieuw, nalezen
+    backupMade: { m: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርካ ዓቅቦ። ደሓር ብእኡ ምዕባለኻ ክትመልሶ ትኽእል።', f: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርኪ ዓቅብዮ። ደሓር ብእኡ ምዕባለኺ ክትመልስዮ ትኽእሊ።', x: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርኩም ዓቅብዎ። ደሓር ብእኡ ምዕባለኹም ክትመልስዎ ትኽእሉ።' }, // nieuw, nalezen
+    speakTurnPrompt: { m: 'እንታይ ትብል?', f: 'እንታይ ትብሊ?', x: 'እንታይ ትብሉ?' }, // nieuw, nalezen
+    speakTurnExample: 'ኣብነት', // nieuw, nalezen
+    speakTurnReveal: { m: 'መልሲ ስማዕ', f: 'መልሲ ስምዒ', x: 'መልሲ ስምዑ' }, // nieuw, nalezen
+    sceneTitle: { m: 'ኣብ ቦታ ስራሕ ስማዕ', f: 'ኣብ ቦታ ስራሕ ስምዒ', x: 'ኣብ ቦታ ስራሕ ስምዑ' }, // nieuw, nalezen
+    sceneIntro: { m: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስማዕ። ድሕሪኡ ሕቶታት ይመጹ።', f: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስምዒ። ድሕሪኡ ሕቶታት ይመጹ።', x: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስምዑ። ድሕሪኡ ሕቶታት ይመጹ።' }, // nieuw, nalezen
+    buildFront: { m: 'ነታ ምልክት ዘለዋ ቃል ኣብ መጀመርታ ኣቐምጣ', f: 'ነታ ምልክት ዘለዋ ቃል ኣብ መጀመርታ ኣቐምጥያ', x: 'ነታ ምልክት ዘለዋ ቃል ኣብ መጀመርታ ኣቐምጥዋ' }, // nieuw, nalezen
+    bridgeTitle: 'ሕግታት ስራሕ', // nieuw, nalezen
+    bridgeText: { m: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጥ ኢኻ። ሕግታት ስራሕ እውን ክትመሃር ትደሊዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።', f: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጢ ኢኺ። ሕግታት ስራሕ እውን ክትመሃሪ ትደልዮ? ሽዑ ኩሉ ብሆላንድኛ እዩ።', x: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጡ ኢኹም። ሕግታት ስራሕ እውን ክትመሃሩ ትደልዩዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።' }, // nieuw, nalezen
+    bridgeGo: { m: 'እወ፡ ኣርእየኒ', f: 'እወ፡ ኣርእይኒ', x: 'እወ፡ ኣርእዩኒ' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

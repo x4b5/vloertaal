@@ -208,8 +208,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Afficher les sujets',
     privacyLink: 'Lire la déclaration de confidentialité (en néerlandais)', // nieuw, nalezen
     routeTitle: 'Qu’est-ce que tu veux apprendre ?', // nieuw, nalezen
-    routeLearn: 'Apprendre le néerlandais pour le travail, avec de l’aide dans ta langue', // nieuw, nalezen
-    routeRules: 'Je parle déjà néerlandais : comment se passe le travail aux Pays-Bas et en Belgique', // nieuw, nalezen
+    routeLearn: 'Apprendre le néerlandais pour le travail', // nieuw, nalezen
+    routeRules: 'Je parle déjà néerlandais : les règles du travail', // nieuw, nalezen
     routeLearnShort: 'Apprendre le néerlandais', // nieuw, nalezen
     byTheme: 'Par thème',
     inOrder: 'Dans l’ordre',
@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Mots', // nieuw, nalezen
     toetsPartSentences: 'Phrases', // nieuw, nalezen
     toetsListenAsk: 'Écoute. Qu’est-ce que ça veut dire ?', // nieuw, nalezen
-    toetsNotSure: 'Tu ne sais pas ? Choisis-en une, c’est tout. Ce n’est pas grave.', // nieuw, nalezen
+    toetsNotSure: 'Tu ne sais pas ? Touche « Je ne sais pas ». Ce n’est pas grave.', // nieuw, nalezen
     toetsMicKeep: 'Ton enregistrement reste seulement sur ce téléphone. Plus tard, tu pourras t’écouter à nouveau.', // nieuw, nalezen
     toetsStartDone: 'Bon début ! Voilà ce que tu sais déjà.', // nieuw, nalezen
     toetsEndDone: 'Bravo ! Regarde ce que tu sais maintenant.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Toi maintenant', // nieuw, nalezen
     toetsKeepGoing: 'Entraîne-toi un peu chaque jour. Comme ça, tu apprends de plus en plus.', // nieuw, nalezen
     toetsStart: 'Faire le test', // nieuw, nalezen
+    toetsIdk: 'Je ne sais pas', // nieuw, nalezen
+    toetsMore: 'Plus qu’avant', // nieuw, nalezen
+    toetsSame: 'À peu près pareil', // nieuw, nalezen
+    toetsMoreAll: 'Au total : tu en sais plus qu’avant.', // nieuw, nalezen
+    toetsSameAll: 'Au total : à peu près pareil qu’avant.', // nieuw, nalezen
     tempo: 'Vitesse', // nieuw, nalezen
     tempoCalm: 'Calme', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -357,6 +362,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'Jours d’exercice ces 4 dernières semaines', // nieuw, nalezen
     coachLast: 'Dernière leçon, avec la date', // nieuw, nalezen
     coachNameAsk: 'Ton nom sur la carte ?', // nieuw, nalezen
+    coachCode: 'Code : les mêmes chiffres, en court, pour un aperçu du groupe. Sans nom.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Le téléphone écoute (essai)', // nieuw, nalezen
     listenHint: 'Quand tu as parlé, le téléphone dit s’il t’a compris. Ça se passe dans le téléphone lui-même. Rien ne va chez nous ni chez d’autres.', // nieuw, nalezen
@@ -401,6 +407,20 @@ const lang: HelpLanguageSource = {
     shareInvite: 'J’apprends le néerlandais pour mon travail avec Vloertaal. Gratuit : {link}', // nieuw, nalezen
     workTry: 'Essaie aujourd’hui au travail', // nieuw, nalezen
     saveFailed: 'Ta progression n’a pas été enregistrée. Ton téléphone est plein ? Libère un peu de place. Ou va dans Réglages : « Garde ta progression ».', // nieuw, nalezen
+    bewaarNudge: 'Ton téléphone peut parfois effacer ta progression. Alors garde une copie.', // nieuw, nalezen
+    bewaarGo: 'Garder maintenant', // nieuw, nalezen
+    backupShare: 'T’envoyer le fichier', // nieuw, nalezen
+    backupShareHint: 'Envoie-toi le fichier, par exemple sur WhatsApp ou par e-mail.', // nieuw, nalezen
+    backupMade: 'C’est fait. Garde bien ce fichier. Avec lui, tu récupères ta progression plus tard.', // nieuw, nalezen
+    speakTurnPrompt: 'Que dis-tu ?', // nieuw, nalezen
+    speakTurnExample: 'Exemple', // nieuw, nalezen
+    speakTurnReveal: 'Écoute la réponse', // nieuw, nalezen
+    sceneTitle: 'Écoute au travail', // nieuw, nalezen
+    sceneIntro: 'Il y a du bruit, comme au travail. Écoute. Ensuite viennent les questions.', // nieuw, nalezen
+    buildFront: 'Mets le mot marqué au début', // nieuw, nalezen
+    bridgeTitle: 'Les règles du travail', // nieuw, nalezen
+    bridgeText: 'Tu connais maintenant beaucoup de néerlandais. Tu veux aussi apprendre les règles du travail ? Alors tout est en néerlandais.', // nieuw, nalezen
+    bridgeGo: 'Oui, montre-moi', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

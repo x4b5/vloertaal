@@ -1,19 +1,32 @@
 import { readFileSync } from 'fs';
 import { describe, expect, it } from 'vitest';
-import { TOETS_PARTS, TOETS_SPEAK, TOETS_VERSIONS } from '../src/content/toets';
+import { units } from '../src/content/curriculum';
+import { TOETS_FORM, TOETS_PARTS, TOETS_SPEAK, TOETS_VERSIONS, type ToetsVersion } from '../src/content/toets';
 import { helpLanguageSources } from '../src/i18n/all';
+import { getHelpLanguage } from '../src/i18n';
 import { GENDERED_LANGS, isPlural, uiEn } from '../src/i18n/types';
+import { tokenize } from '../src/lib/answers';
 import { countPath } from '../src/lib/count';
+import { buildSteps } from '../src/lib/exercises';
+import { checkLevel } from '../src/lib/instapCheck';
+import { letterSteps } from '../src/lib/letters';
 import { emptyProgress, mergeBackup, parseBackup, type Progress, backupFile, replaceWithBackup } from '../src/lib/progress';
+import { createRng } from '../src/lib/random';
 import {
-  END_DAYS, INSTAP_FROM_LESSONS, INSTAP_UNTIL_LESSONS, recordToets, rightId, scoreOf, settingsMoment, speakSentence, toetsLater, toetsLine, toetsOffer, toetsQuestions,
+  answerMode, END_DAYS, growthOf, INSTAP_FROM_LESSONS, INSTAP_UNTIL_LESSONS, knownExact, knownOf, recordToets, resultOf, rightId, scoreOf, settingsMoment,
+  speakSentence, toetsLater, toetsLine, toetsOffer, toetsQuestions, type ToetsAnswer, type ToetsQuestion, type ToetsTally,
 } from '../src/lib/toets';
-import { readToets } from '../src/lib/toetsState';
+import { readToets, runTally, type ToetsRun, type ToetsScore } from '../src/lib/toetsState';
 
 const day = (y: number, m: number, d: number) => new Date(y, m - 1, d, 12);
-const ids = (v: 'A' | 'B') => TOETS_VERSIONS[v].flatMap((i) => [i.answer, ...i.others]);
+const ids = (v: ToetsVersion) => TOETS_VERSIONS[v].flatMap((i) => [i.answer, ...i.others]);
 /** The Dutch of every line a version shows or plays (a chat: the colleague's line and the three replies). */
-const texts = (v: 'A' | 'B') => toetsQuestions(v).flatMap((q) => (q.part === 'sentences' ? [q.dialogue.prompt.nl, ...q.options.map((o) => o.nl)] : q.options.map((o) => o.nl)));
+const texts = (v: ToetsVersion) => toetsQuestions(v).flatMap((q) => {
+  if (q.kind === 'build') return [q.sentence.nl];
+  if (q.part === 'sentences') return [q.dialogue.prompt.nl, ...q.options.map((o) => o.nl)];
+  return q.options.map((o) => o.nl);
+});
+const score = (l: number, w: number, s: number): ToetsScore => ({ listen: l, words: w, sentences: s });
 
 describe('"Wat ken je al?": the items', () => {
   it('A and B share no item, no wrong option and no line', () => {
@@ -23,16 +36,17 @@ describe('"Wat ken je al?": the items', () => {
     expect(texts('B').filter((t) => at.has(t))).toEqual([]);
   });
 
-  it('A and B have as many questions per part, 16 to 20 in all, and pair up by part and level', () => {
-    for (const part of TOETS_PARTS) {
-      expect(TOETS_VERSIONS.A.filter((i) => i.part === part).length).toBe(TOETS_VERSIONS.B.filter((i) => i.part === part).length);
+  it('A and B: 7 questions per part (21), and question k of both is the same part and the same kind', () => {
+    expect(TOETS_FORM).toBe(2);
+    for (const v of ['A', 'B'] as const) {
+      for (const part of TOETS_PARTS) expect(TOETS_VERSIONS[v].filter((i) => i.part === part).length, `${v} ${part}`).toBe(7);
     }
-    expect(TOETS_VERSIONS.A.length).toBeGreaterThanOrEqual(16);
-    expect(TOETS_VERSIONS.A.length).toBeLessThanOrEqual(20);
     TOETS_VERSIONS.A.forEach((a, k) => {
       const b = TOETS_VERSIONS.B[k];
-      expect([b.part, b.level]).toEqual([a.part, a.level]);
+      expect([b.part, b.kind], `pair ${k}`).toEqual([a.part, a.kind]);
     });
+    // Each part: 5 picks of three and 2 the learner makes (built or written).
+    for (const part of TOETS_PARTS) expect(TOETS_VERSIONS.A.filter((i) => i.part === part && i.kind === 'choice')).toHaveLength(5);
   });
 
   it('within a version no line is used twice, and the speaking sentence is in neither', () => {
@@ -40,9 +54,16 @@ describe('"Wat ken je al?": the items', () => {
     expect([...ids('A'), ...ids('B')]).not.toContain(TOETS_SPEAK);
   });
 
-  it('every item is a line of the course, with three different options and one right answer', () => {
+  it('every item is a line of the course: three different options and one right answer, a sentence to build with all its words', () => {
     for (const v of ['A', 'B'] as const) {
       for (const q of toetsQuestions(v, 7)) {
+        if (q.kind === 'build') {
+          const tiles = q.tiles.map((t) => t.toLowerCase());
+          for (const w of tokenize(q.sentence.nl)) expect(tiles, q.sentence.nl).toContain(w.toLowerCase());
+          expect(q.tiles.length).toBeGreaterThan(tokenize(q.sentence.nl).length);
+          expect(q.audio).toBe(q.part === 'listen');
+          continue;
+        }
         expect(q.options).toHaveLength(3);
         expect(new Set(q.options.map((o) => o.id)).size).toBe(3);
         expect(new Set(q.options.map((o) => o.en.toLowerCase())).size).toBe(3);
@@ -68,18 +89,239 @@ describe('"Wat ken je al?": the items', () => {
       expect(all.filter((id) => !src.gloss[id]), src.code).toEqual([]);
     }
   });
+});
 
-  it('counts right answers per part', () => {
+/* ---- A and B as hard as each other: measured on the language, not on the topic ---- */
+
+/** Where in the path (default order) a line is first taught: the index of its topic. */
+function unitIndex(id: string): number {
+  const i = units.findIndex((u) => u.lessons.some((l) => [...l.sentences, ...l.words, ...(l.dialogues ?? []).map((d) => d.prompt)].some((x) => x.id === id)));
+  expect(i, id).toBeGreaterThanOrEqual(0);
+  return i;
+}
+/** The Dutch the learner has to understand or make for a question: the sentence, the word, or the colleague's line and the reply. */
+const target = (q: ToetsQuestion): string =>
+  q.kind === 'build' ? q.sentence.nl : q.part === 'words' ? q.word.nl : q.part === 'listen' ? q.sentence.nl : `${q.dialogue.prompt.nl} ${q.dialogue.reply.nl}`;
+const words = (t: string) => tokenize(t).length;
+const letters = (t: string) => tokenize(t).join('').length;
+/** A heard or built sentence that is a question ("?"). The chats are paired by hand (src/content/toets.ts): counted apart. */
+const isQuestion = (q: ToetsQuestion) => (q.kind === 'build' || q.part === 'listen' ? q.sentence.nl : '').trim().endsWith('?');
+const isChatQuestion = (q: ToetsQuestion) => q.kind === 'choice' && q.part === 'sentences' && q.dialogue.prompt.nl.trim().endsWith('?');
+
+export function measure(v: ToetsVersion) {
+  const qs = toetsQuestions(v);
+  const items = TOETS_VERSIONS[v];
+  const sum = (f: (q: ToetsQuestion, i: number) => number) => qs.reduce((n, q, i) => n + f(q, i), 0);
+  return {
+    words: sum((q) => words(target(q))),
+    letters: sum((q) => letters(target(q))),
+    perWord: sum((q) => letters(target(q))) / sum((q) => words(target(q))),
+    unit: sum((_, i) => unitIndex(items[i].answer)) / qs.length,
+    questions: Object.fromEntries(TOETS_PARTS.map((p) => [p, qs.filter((q) => q.part === p && isQuestion(q)).length])),
+    chatQuestions: qs.filter(isChatQuestion).length,
+    kinds: qs.map((q) => `${q.part}/${q.kind}`).join(','),
+  };
+}
+
+describe('"Wat ken je al?": A and B are as hard as each other', () => {
+  const a = measure('A');
+  const b = measure('B');
+
+  it('the same kinds of question, in the same order, and as many questions ("?") per part', () => {
+    expect(b.kinds).toBe(a.kinds);
+    expect(b.questions).toEqual(a.questions);
+    // The colleague's line in a chat: a question in 5 of A and 4 of B ("Hoe heet je?" and "Fijne
+    // avond!" are a pair on purpose: a short fixed phrase of the first day).
+    expect(Math.abs(a.chatQuestions - b.chatQuestions)).toBeLessThanOrEqual(1);
+  });
+
+  it('about as many words and letters (within 10%), equally long words (within 10%)', () => {
+    expect(Math.abs(a.words - b.words) / a.words).toBeLessThanOrEqual(0.1);
+    expect(Math.abs(a.letters - b.letters) / a.letters).toBeLessThanOrEqual(0.1);
+    expect(Math.abs(a.perWord - b.perWord) / a.perWord).toBeLessThanOrEqual(0.1);
+  });
+
+  it('each pair: a built sentence the same number of words, a heard one at most 2 apart, a word to write as long', () => {
+    const qa = toetsQuestions('A');
+    const qb = toetsQuestions('B');
+    qa.forEach((x, k) => {
+      const y = qb[k];
+      const what = `pair ${k}: ${target(x)} / ${target(y)}`;
+      if (x.kind === 'dictate') expect(letters(target(x)), what).toBe(letters(target(y)));
+      else if (x.kind === 'build') expect(words(target(x)), what).toBe(words(target(y)));
+      else if (x.part === 'listen') expect(Math.abs(words(target(x)) - words(target(y))), what).toBeLessThanOrEqual(2);
+      else if (x.part === 'sentences') expect(Math.abs(words(target(x)) - words(target(y))), what).toBeLessThanOrEqual(3);
+      else expect(Math.abs(letters(target(x)) - letters(target(y))), what).toBeLessThanOrEqual(7);
+    });
+  });
+
+  it('from about as early in the path (the mean topic within 1.5 of each other)', () => {
+    expect(Math.abs(a.unit - b.unit)).toBeLessThanOrEqual(1.5);
+  });
+});
+
+/* ---- Guessing ---- */
+
+/** Chance to build a sentence right by tapping at random: at most one place with a wrong tap. */
+function buildGuess(q: Extract<ToetsQuestion, { kind: 'build' }>): number {
+  const ks = buildSteps(q.sentence.nl, q.tiles, 3).map((s) => s.length);
+  const none = ks.reduce((p, k) => p / k, 1);
+  return none + ks.reduce((n, k) => n + (none * k) * (1 - 1 / k), 0);
+}
+/** Chance to write a word right with letter tiles at random: at most one wrong tile in all (the lesson's rule). */
+function dictateGuess(q: Extract<ToetsQuestion, { kind: 'dictate' }>): number {
+  const ks = letterSteps(q.word.nl, createRng(q.word.id.length * 7919 + q.word.nl.length)).map((s) => s.options.length);
+  const none = ks.reduce((p, k) => p / k, 1); // no wrong tile at any letter
+  return none + ks.reduce((n, k) => n + (none * k) * (1 / k), 0); // exactly one wrong tile at one letter
+}
+
+describe('"Wat ken je al?": guessing', () => {
+  it('a built sentence is right by guessing less than 5 times in 100, a word written with tiles less than 3 in 100', () => {
+    for (const v of ['A', 'B'] as const) {
+      for (const q of toetsQuestions(v)) {
+        if (q.kind === 'build') expect(buildGuess(q), q.sentence.nl).toBeLessThan(0.05);
+        if (q.kind === 'dictate') expect(dictateGuess(q), q.word.nl).toBeLessThan(0.03);
+      }
+    }
+  });
+
+  it('someone who guesses everything: about 5 of 21 right (24%, the old test 33%), and after the correction about nothing', () => {
     const qs = toetsQuestions('A');
-    const { right, of } = scoreOf(qs, qs.map((_, i) => i % 2 === 0));
-    expect(of).toEqual({ listen: 6, words: 6, sentences: 6 });
-    expect(right).toEqual({ listen: 3, words: 3, sentences: 3 });
+    const chance = qs.reduce((n, q) => n + (q.kind === 'choice' ? 1 / 3 : q.kind === 'build' ? buildGuess(q) : dictateGuess(q)), 0);
+    expect(chance / qs.length).toBeLessThan(0.26);
+    // Expected wrong picks 15·2/3 = 10: the correction takes off 5, so the expected known is what
+    // building and writing give by luck (well under one question).
+    const known = chance - (15 * 2) / 3 / 2;
+    expect(known).toBeGreaterThanOrEqual(0);
+    expect(known).toBeLessThan(0.3);
+  });
+});
+
+/* ---- Answering, counting, the guessing taken out ---- */
+
+describe('"Wat ken je al?": answering and counting', () => {
+  const qs = toetsQuestions('A');
+  const build = qs.find((q) => q.kind === 'build')!;
+  const dictate = qs.find((q) => q.kind === 'dictate')!;
+
+  it('a pick is right on the right option; a build with one place tapped wrong is still right, two are not', () => {
+    expect(resultOf(qs[0], { correct: true, given: [rightId(qs[0])] }, true)).toBe('right');
+    expect(resultOf(qs[0], { correct: false, given: ['x'] }, true)).toBe('wrong');
+    expect(resultOf(build, { correct: true, missed: ['Kunt'] }, false)).toBe('right');
+    expect(resultOf(build, { correct: true, missed: ['Kunt', 'het'] }, false)).toBe('wrong');
+    expect(resultOf(dictate, { correct: true }, false)).toBe('right');
+  });
+
+  it('writing falls back as in the lesson: hear and pick for another script, typing for the Latin one (or letter tiles)', () => {
+    expect(answerMode(qs[0], getHelpLanguage('pl'))).toEqual({ pick: true, keys: false });
+    expect(answerMode(build, getHelpLanguage('ar'))).toEqual({ pick: false, keys: false });
+    expect(answerMode(dictate, getHelpLanguage('ar'), false)).toEqual({ pick: true, keys: false });
+    expect(answerMode(dictate, getHelpLanguage('ar'), true)).toEqual({ pick: false, keys: false }); // letter tiles
+    expect(answerMode(dictate, getHelpLanguage('pl'), false)).toEqual({ pick: false, keys: true });
+  });
+
+  it('counts right, wrong picks and "Ik weet het niet" per part; a wrong build or word is no wrong pick', () => {
+    const answers: (ToetsAnswer | undefined)[] = qs.map((q, i) => ({ result: i % 3 === 0 ? 'right' : i % 3 === 1 ? 'wrong' : 'idk', pick: q.kind === 'choice' }));
+    const t = scoreOf(qs, answers);
+    expect(t.of).toEqual(score(7, 7, 7));
+    expect(t.mc).toEqual(score(5, 5, 5));
+    for (const p of TOETS_PARTS) expect(t.right[p] + t.idk[p] + (t.of[p] - t.right[p] - t.idk[p])).toBe(7);
+    const wrongPicks = qs.filter((q, i) => i % 3 === 1 && q.kind === 'choice');
+    expect(t.wrong.listen + t.wrong.words + t.wrong.sentences).toBe(wrongPicks.length);
+    // Not answered (stopped halfway would not be kept, but a gap counts as "Ik weet het niet").
+    expect(scoreOf(qs, []).idk).toEqual(score(7, 7, 7));
+  });
+
+  it('takes the guessing out: right minus half the wrong picks, never below 0; "Ik weet het niet" takes nothing off', () => {
+    const run = (right: ToetsScore, wrong: ToetsScore, idk: ToetsScore): ToetsRun => ({ day: '2026-11-01', version: 'A', right, of: score(7, 7, 7), form: 2, mc: score(5, 5, 5), wrong, idk });
+    const r = run(score(5, 3, 1), score(1, 0, 4), score(1, 4, 0));
+    expect(knownExact(r, 'listen')).toBe(4.5);
+    expect(knownOf(r, 'listen')).toBe(4);
+    expect(knownOf(r, 'words')).toBe(3);
+    expect(knownOf(r, 'sentences')).toBe(0);
+    // A run of form 1 (18 picks): every miss was a wrong pick.
+    const old: ToetsRun = { day: '2026-10-01', version: 'A', right: score(2, 6, 4), of: score(6, 6, 6) };
+    expect(runTally(old).wrong).toEqual(score(4, 0, 2));
+    expect([knownOf(old, 'listen'), knownOf(old, 'words'), knownOf(old, 'sentences')]).toEqual([0, 6, 3]);
+  });
+});
+
+/* ---- Growth only when it is more than guessing ---- */
+
+/**
+ * A run of form 2 from a learner who knows `p` of each part (the same number of questions both
+ * times: only the guessing differs) and guesses the rest, or says "Ik weet het niet" (`idk`).
+ */
+let simQs: ToetsQuestion[] | undefined;
+function simulate(rng: () => number, p: number, idk: number): ToetsRun {
+  const qs = (simQs ??= toetsQuestions('A'));
+  const seen = { listen: 0, words: 0, sentences: 0 };
+  const answers: ToetsAnswer[] = qs.map((q) => {
+    const pick = q.kind === 'choice';
+    const n = seen[q.part]++;
+    if (n < Math.round(p * 7)) return { result: 'right', pick };
+    if (rng() < idk) return { result: 'idk', pick };
+    const lucky = pick ? rng() < 1 / 3 : rng() < 0.03;
+    return { result: lucky ? 'right' : 'wrong', pick };
+  });
+  const t: ToetsTally = scoreOf(qs, answers);
+  return { day: '2026-11-01', version: 'A', right: t.right, of: t.of, form: 2, mc: t.mc, wrong: t.wrong, idk: t.idk };
+}
+
+describe('"Wat ken je al?": then and now', () => {
+  it('two runs of someone who learned nothing (only the guesses differ): "Meer dan toen" at most 5 times in 100 (a part or all)', () => {
+    const rng = createRng(42);
+    for (const knows of [0, 0.3, 0.6]) {
+      let up = 0;
+      let upAll = 0;
+      const n = 1000;
+      for (let i = 0; i < n; i++) {
+        const a = simulate(rng, knows, 0);
+        const b = simulate(rng, knows, 0);
+        if (growthOf(a, b, 'listen') === 'up') up += 1;
+        if (growthOf(a, b) === 'up') upAll += 1;
+      }
+      expect(up / n, `knows ${knows}, a part`).toBeLessThan(0.05);
+      expect(upAll / n, `knows ${knows}, all`).toBeLessThan(0.05);
+    }
+  });
+
+  it('someone who learned a lot (from 2 to 5 of 7 known in every part): "Meer dan toen" over the whole test nearly always', () => {
+    const rng = createRng(7);
+    let up = 0;
+    let upHonest = 0;
+    for (let i = 0; i < 500; i++) {
+      if (growthOf(simulate(rng, 2 / 7, 0), simulate(rng, 5 / 7, 0)) === 'up') up += 1;
+      if (growthOf(simulate(rng, 2 / 7, 0.8), simulate(rng, 5 / 7, 0.8)) === 'up') upHonest += 1;
+    }
+    expect(up / 500).toBeGreaterThan(0.9);
+    expect(upHonest / 500).toBeGreaterThan(0.98);
+  });
+
+  it('a step of 1 or 2 questions in a part is "ongeveer gelijk"; with honest answers 3 is "Meer dan toen", with many guesses it is not', () => {
+    const r = (right: number, wrong: number): ToetsRun => ({ day: '2026-11-01', version: 'A', right: score(right, right, right), of: score(7, 7, 7), form: 2, mc: score(5, 5, 5), wrong: score(wrong, wrong, wrong), idk: score(7 - right - wrong, 7 - right - wrong, 7 - right - wrong) });
+    expect(growthOf(r(2, 0), r(3, 0), 'listen')).toBe('same');
+    expect(growthOf(r(2, 0), r(4, 0), 'listen')).toBe('same');
+    expect(growthOf(r(2, 0), r(5, 0), 'listen')).toBe('up');
+    // The same step, with many wrong picks both times: within what guessing gives.
+    expect(growthOf(r(2, 4), r(5, 2), 'listen')).toBe('same');
+    expect(growthOf(r(5, 0), r(1, 0), 'listen')).toBe('down');
+    // Over the whole test (21 questions) a step of 3 is enough with honest answers.
+    expect(growthOf(r(2, 0), r(3, 0))).toBe('up');
+  });
+
+  it('a start of form 1 (6 picks a part) and an end of form 2 compare by share, with the guessing taken out of both', () => {
+    const old: ToetsRun = { day: '2026-10-01', version: 'A', right: score(2, 2, 2), of: score(6, 6, 6) }; // what guessing gives: known 0
+    const now: ToetsRun = { day: '2026-11-01', version: 'B', right: score(6, 6, 6), of: score(7, 7, 7), form: 2, mc: score(5, 5, 5), wrong: score(0, 0, 0), idk: score(1, 1, 1) };
+    expect(growthOf(old, now)).toBe('up');
+    expect(growthOf(old, old)).toBe('same');
   });
 });
 
 describe('"Wat ken je al?": when it is offered', () => {
   const taal: Progress = { ...emptyProgress, onboarded: true, helpLang: 'pl' };
   const lessons = (n: number) => Object.fromEntries(['l.hello', 'l.people', 'l.arrive', 'l.understand'].slice(0, n).map((id) => [id, { best: 1, times: 1 }]));
+  const tally: ToetsTally = { right: score(2, 3, 1), of: score(7, 7, 7), mc: score(5, 5, 5), wrong: score(1, 1, 2), idk: score(4, 3, 4) };
 
   it('offers the start after the first lesson, not before it, not after a few lessons, not in the work-rules track', () => {
     // The very first home: lesson 1.1 with Start, no test yet.
@@ -98,11 +340,9 @@ describe('"Wat ken je al?": when it is offered', () => {
     expect(toetsOffer(later, day(2026, 10, 29), 0)).toBe('eind');
   });
 
-  it('offers the end after 28 days or 3 more topics, whichever comes first', () => {
-    const score = { listen: 2, words: 3, sentences: 1 };
-    const of = { listen: 6, words: 6, sentences: 6 };
-    const done = recordToets(taal, 'instap', score, of, day(2026, 10, 1), 1);
-    expect(done.toets?.instap?.version).toBe('A');
+  it('offers the end after 28 days or 3 more topics, whichever comes first; keeps the counts of form 2', () => {
+    const done = recordToets(taal, 'instap', tally, day(2026, 10, 1), 1);
+    expect(done.toets?.instap).toEqual({ day: '2026-10-01', version: 'A', ...tally, form: 2 });
     expect(toetsOffer(done, day(2026, 10, 1 + END_DAYS - 1), 1)).toBeNull();
     expect(toetsOffer(done, day(2026, 10, 1 + END_DAYS), 1)).toBe('eind');
     expect(toetsOffer(done, day(2026, 10, 10), 3)).toBeNull();
@@ -112,17 +352,26 @@ describe('"Wat ken je al?": when it is offered', () => {
     expect(toetsOffer(wait, day(2026, 10, 16), 4)).toBeNull();
     expect(toetsOffer(wait, day(2026, 10, 17), 4)).toBe('eind');
     // Done: never again by itself; Settings offers the end (version B).
-    const end = recordToets(done, 'eind', score, of, day(2026, 10, 29), 4);
+    const end = recordToets(done, 'eind', tally, day(2026, 10, 29), 4);
     expect(end.toets?.eind?.version).toBe('B');
     expect(end.toets?.instap).toEqual(done.toets?.instap);
     expect(toetsOffer(end, day(2026, 12, 1), 9)).toBeNull();
     expect(settingsMoment(end, day(2026, 12, 1), 9)).toBe('eind');
     expect(settingsMoment(taal, day(2026, 12, 1), 0)).toBe('instap');
   });
+
+  it('the check of Starten (instapCheck): a start of form 2 needs the same share with the guessing out, 6 of 7', () => {
+    const run = (words: number, wrong: number): ToetsRun => ({ day: '2026-10-29', version: 'A', right: score(6, words, 2), of: score(7, 7, 7), form: 2, mc: score(5, 5, 5), wrong: score(0, wrong, 0), idk: score(1, 7 - words - wrong, 5) });
+    const with_ = (r: ToetsRun) => ({ toets: { v: 1 as const, instap: r } });
+    expect(checkLevel(with_(run(6, 0)))).toBe(true);
+    expect(checkLevel(with_(run(6, 1)))).toBe(false); // 6 right, but one wrong pick: 5.5 known
+    expect(checkLevel(with_(run(5, 0)))).toBe(false);
+  });
 });
 
 describe('"Wat ken je al?": what is kept', () => {
   const run = { day: '2026-10-01', version: 'A', right: { listen: 2, words: 3, sentences: 1 }, of: { listen: 6, words: 6, sentences: 6 } };
+  const run2 = { day: '2026-11-01', version: 'A', right: score(2, 3, 1), of: score(7, 7, 7), form: 2, mc: score(5, 5, 5), wrong: score(1, 1, 2), idk: score(4, 3, 4) };
 
   it('reads its own version only, and drops what it cannot read', () => {
     expect(readToets({ v: 1, instap: run, start: '2026-10-01', unitsAt: 2 })).toEqual({ v: 1, instap: run, start: '2026-10-01', unitsAt: 2 });
@@ -131,6 +380,21 @@ describe('"Wat ken je al?": what is kept', () => {
     // A broken run (more right than asked, a bad day) is left out, the rest stays.
     expect(readToets({ v: 1, instap: { ...run, right: { ...run.right, listen: 9 } }, skipped: '2026-10-01' })).toEqual({ v: 1, skipped: '2026-10-01' });
     expect(readToets({ v: 1, eind: { ...run, day: 'gisteren' } })).toEqual({ v: 1 });
+  });
+
+  it('reads a run of form 2 with its counts; counts that do not add up are dropped (the run reads as form 1)', () => {
+    expect(readToets({ v: 1, instap: run2 })).toEqual({ v: 1, instap: run2 });
+    const bad = (x: object) => readToets({ v: 1, instap: { ...run2, ...x } })?.instap;
+    expect(bad({ wrong: score(6, 1, 2) })).toEqual({ day: run2.day, version: 'A', right: run2.right, of: run2.of }); // more wrong picks than picks
+    expect(bad({ idk: score(7, 3, 4) })).toEqual({ day: run2.day, version: 'A', right: run2.right, of: run2.of }); // more than asked
+    expect(bad({ form: 'twee' })).toEqual({ day: run2.day, version: 'A', right: run2.right, of: run2.of });
+    expect(bad({ mc: undefined })).toEqual({ day: run2.day, version: 'A', right: run2.right, of: run2.of });
+  });
+
+  it('an older app reads a run of form 2 as a run (its day, version, right and of)', () => {
+    // What the reader of form 1 checked: these four fields, nothing else.
+    const r = readToets({ v: 1, instap: run2 })!.instap!;
+    expect([r.day, r.version, r.right, r.of]).toEqual([run2.day, 'A', run2.right, run2.of]);
   });
 
   it('loads an old save without the test as before, and a save with it', async () => {
@@ -143,6 +407,8 @@ describe('"Wat ken je al?": what is kept', () => {
     expect(old.completed['l.hello']).toEqual({ best: 1, times: 1 });
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, themeVersion: 2, completed: {}, toets: { v: 1, instap: run } }));
     expect(loadProgress().toets).toEqual({ v: 1, instap: run });
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, themeVersion: 2, completed: {}, toets: { v: 1, instap: run, eind: { ...run2, version: 'B' } } }));
+    expect(loadProgress().toets?.eind).toEqual({ ...run2, version: 'B' });
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, themeVersion: 2, completed: {}, toets: { v: 99 } }));
     expect('toets' in loadProgress()).toBe(false);
   });
@@ -152,7 +418,7 @@ describe('"Wat ken je al?": what is kept', () => {
     const back = parseBackup(backupFile(p, new Date()));
     expect(back?.toets).toEqual(p.toets);
     expect(replaceWithBackup(emptyProgress, back!).toets).toEqual(p.toets);
-    const end = { ...run, day: '2026-10-29', version: 'B' };
+    const end = { ...run2, day: '2026-10-29', version: 'B' };
     const merged = mergeBackup({ ...emptyProgress, toets: { v: 1, eind: end as never } }, back!);
     expect(merged.toets?.instap).toEqual(run);
     expect(merged.toets?.eind).toEqual(end);
@@ -167,7 +433,7 @@ describe('"Wat ken je al?": counting and texts', () => {
 
   it('every new text has its x form in the languages with gender', () => {
     const keys = Object.keys(uiEn).filter((k) => k.startsWith('toets'));
-    expect(keys.length).toBeGreaterThan(10);
+    expect(keys.length).toBeGreaterThan(15);
     for (const src of helpLanguageSources.filter((s) => GENDERED_LANGS.includes(s.code as never))) {
       for (const k of keys) {
         const t = src.ui[k as keyof typeof uiEn];
@@ -175,5 +441,37 @@ describe('"Wat ken je al?": counting and texts', () => {
         if (typeof t === 'object' && !isPlural(t)) expect(t.x, `${src.code} ${k}`).toBeTruthy();
       }
     }
+  });
+
+  it('every help language has "Ik weet het niet" and the words for then and now', () => {
+    for (const src of helpLanguageSources) {
+      for (const k of ['toetsIdk', 'toetsMore', 'toetsSame', 'toetsMoreAll', 'toetsSameAll', 'toetsNotSure'] as const) expect(src.ui[k], `${src.code} ${k}`).toBeTruthy();
+    }
+    // The hint no longer says "just pick one".
+    expect(uiEn.toetsNotSure).not.toMatch(/pick one/i);
+  });
+});
+
+describe('"Wat ken je al?": the screens', () => {
+  it('every question has "Ik weet het niet"; building and writing are the lessons\' own; the end says then against now', async () => {
+    const { createElement } = await import('react');
+    const { renderToStaticMarkup } = await import('react-dom/server');
+    const { ToetsPlayer, ToetsResult } = await import('../src/components/Toets');
+    const noop = () => {};
+    const at = (startAt: number, code: 'pl' | 'ar') => renderToStaticMarkup(createElement(ToetsPlayer, { moment: 'instap', lang: getHelpLanguage(code), seed: 1, startAt, onQuit: noop, onDone: noop }));
+    for (let i = 0; i < TOETS_VERSIONS.A.length; i++) expect(at(i, 'pl'), `question ${i}`).toContain('toets-idk');
+    expect(at(5, 'pl')).toContain('build-steps');
+    expect(at(19, 'pl')).toContain('build-steps');
+    expect(at(12, 'pl')).toContain('type-input'); // the keyboard (Latin script)
+    expect(at(12, 'ar')).toContain('hear-pick'); // hear and pick (another script)
+    expect(at(TOETS_VERSIONS.A.length, 'pl')).not.toContain('toets-idk'); // speaking: not scored
+    const run = (right: ToetsScore, version: 'A' | 'B'): ToetsRun => ({ day: '2026-11-01', version, right, of: score(7, 7, 7), form: 2, mc: score(5, 5, 5), wrong: score(0, 0, 0), idk: score(0, 0, 0) });
+    const lang = getHelpLanguage('pl');
+    const html = renderToStaticMarkup(createElement(ToetsResult, { moment: 'eind', now: run(score(6, 3, 1), 'B'), before: run(score(1, 3, 1), 'A'), lang, onDone: noop }));
+    expect(html).toContain('Meer dan toen');
+    expect(html).toContain('Ongeveer gelijk');
+    expect(html).toContain('Alles samen: je kent nu meer dan toen.');
+    // After the start: no then and now.
+    expect(renderToStaticMarkup(createElement(ToetsResult, { moment: 'instap', now: run(score(1, 3, 1), 'A'), lang, onDone: noop }))).not.toContain('toets-growth');
   });
 });

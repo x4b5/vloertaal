@@ -1,0 +1,873 @@
+{
+ "ar": [
+  {
+   "id": "routeTitle",
+   "text": "ماذا نتعلّم؟",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "تعلّم الهولندية للعمل",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "أتكلّم الهولندية: قواعد العمل",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "العربية؟",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "نعم",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "لغة أخرى",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "امرأة أم رجل؟",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "لكي تخاطبك لغتك بالشكل الصحيح.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "مجال عملك",
+   "page": "werk"
+  },
+  {
+   "id": "chooseSector.f",
+   "text": "أين تعملين؟",
+   "page": "werk"
+  },
+  {
+   "id": "chooseSector.m",
+   "text": "أين تعمل؟",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "دروس عملك تأتي مبكراً. يمكنك تغيير هذا لاحقاً في الإعدادات.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "بلد العمل",
+   "page": "land"
+  },
+  {
+   "id": "countryTitle.f",
+   "text": "في أي بلد تعملين؟",
+   "page": "land"
+  },
+  {
+   "id": "countryTitle.m",
+   "text": "في أي بلد تعمل؟",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "اختيار بلد العمل يعطي قواعد العمل في هذا البلد. يبقى هذا على الهاتف. لا نرسله إلى أي مكان.",
+   "page": "land"
+  },
+  {
+   "id": "countryHint.f",
+   "text": "اختاري البلد الذي تعملين فيه. ستحصلين على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.",
+   "page": "land"
+  },
+  {
+   "id": "countryHint.m",
+   "text": "اختر البلد الذي تعمل فيه. ستحصل على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.",
+   "page": "land"
+  }
+ ],
+ "ti": [
+  {
+   "id": "routeTitle",
+   "text": "እንታይ ክትመሃሩ ትደልዩ?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "ንስራሕ ሆላንድኛ ምምሃር",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "ሆላንድኛ እዛረብ እየ፡ ሕግታት ስራሕ",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "ትግርኛ?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "እወ",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "ካልእ ቋንቋ",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "ሰበይቲ ወይስ ሰብኣይ?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "ቋንቋኹም ብቕኑዕ መንገዲ ምእንቲ ክዛረበኩም።",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "ኣበይ ኢኹም ትሰርሑ?",
+   "page": "werk"
+  },
+  {
+   "id": "chooseSector.f",
+   "text": "ኣበይ ኢኺ ትሰርሒ?",
+   "page": "werk"
+  },
+  {
+   "id": "chooseSector.m",
+   "text": "ኣበይ ኢኻ ትሰርሕ?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "ትምህርትታት ናይ ስራሕካ ኣቐዲሞም ይመጹ። ደሓር ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ።",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint.f",
+   "text": "ትምህርትታት ናይ ስራሕኪ ኣቐዲሞም ይመጹ። ደሓር ኣብ ምድላዋት ክትቅይርዮ ትኽእሊ ኢኺ።",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "ኣብ ኣየናይ ሃገር ኢኹም ትሰርሑ?",
+   "page": "land"
+  },
+  {
+   "id": "countryTitle.f",
+   "text": "ኣብ ኣየናይ ሃገር ኢኺ ትሰርሒ?",
+   "page": "land"
+  },
+  {
+   "id": "countryTitle.m",
+   "text": "ኣብ ኣየናይ ሃገር ኢኻ ትሰርሕ?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "እትሰርሑሉ ሃገር ምረጹ። ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም። እዚ ኣብ ተሌፎንኩም ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።",
+   "page": "land"
+  },
+  {
+   "id": "countryHint.f",
+   "text": "እትሰርሕሉ ሃገር ምረጺ። ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ። እዚ ኣብ ተሌፎንኪ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።",
+   "page": "land"
+  },
+  {
+   "id": "countryHint.m",
+   "text": "እትሰርሓሉ ሃገር ምረጽ። ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ። እዚ ኣብ ተሌፎንካ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።",
+   "page": "land"
+  }
+ ],
+ "fa": [
+  {
+   "id": "routeTitle",
+   "text": "چه می‌خواهید یاد بگیرید؟",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "یادگیری هلندی برای کار",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "هلندی بلدم: قوانین کار",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "فارسی؟",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "بله",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "زبان دیگر",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "زن یا مرد؟",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "تا زبان شما درست با شما صحبت کند.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "کجا کار می‌کنید؟",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "درس‌های کار شما زود می‌آیند. بعداً می‌توانید این را در تنظیمات عوض کنید.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "در کدام کشور کار می‌کنید؟",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "کشوری را که در آن کار می‌کنید انتخاب کنید. قوانین کار همان کشور را می‌بینید. این فقط روی گوشی شما می‌ماند. ما آن را جایی نمی‌فرستیم.",
+   "page": "land"
+  }
+ ],
+ "prs": [
+  {
+   "id": "routeTitle",
+   "text": "چه می‌خواهید یاد بگیرید؟",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "آموختن هالندی برای کار",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "هالندی را بلد هستم: قوانین کار",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "دری؟",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "بلی",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "زبان دیگر",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "زن یا مرد؟",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "تا زبان شما به شکل درست با شما صحبت کند.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "در کجا کار می‌کنید؟",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "درس‌های کار شما زود می‌آیند. بعداً می‌توانید این را در تنظیمات تغییر بدهید.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "در کدام کشور کار می‌کنید؟",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "کشوری را که در آن کار می‌کنید انتخاب کنید. قوانین کار همان کشور را می‌بینید. این تنها روی تیلفون شما می‌ماند. ما آن را جایی نمی‌فرستیم.",
+   "page": "land"
+  }
+ ],
+ "uk": [
+  {
+   "id": "routeTitle",
+   "text": "Що ти хочеш вивчати?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "Вивчати нідерландську для роботи",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "Я вже говорю нідерландською: правила роботи",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "Українська?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "Так",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "Інша мова",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "Жінка чи чоловік?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "Щоб підказки зверталися до тебе правильно.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "Де ти працюєш?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "Уроки для твоєї роботи будуть серед перших. Пізніше це можна змінити в Налаштуваннях.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "У якій країні ти працюєш?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "Обери країну, де ти працюєш. Ти отримаєш правила роботи цієї країни. Це залишається на твоєму телефоні. Ми нікуди це не надсилаємо.",
+   "page": "land"
+  }
+ ],
+ "tr": [
+  {
+   "id": "routeTitle",
+   "text": "Ne öğrenmek istiyorsun?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "İş için Hollandaca öğren",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "Hollandaca biliyorum: iş kuralları",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "Türkçe?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "Evet",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "Başka dil",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "Kadın mı, erkek mi?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "Dilin sana doğru şekilde hitap etsin diye.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "Nerede çalışıyorsun?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "Kendi işinin dersleri erkenden gelir. Bunu sonra Ayarlar’da değiştirebilirsin.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "Hangi ülkede çalışıyorsun?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "Çalıştığın ülkeyi seç. O ülkenin iş kurallarını görürsün. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.",
+   "page": "land"
+  }
+ ],
+ "pl": [
+  {
+   "id": "routeTitle",
+   "text": "Czego chcesz się uczyć?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "Nauka niderlandzkiego do pracy",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "Mówię już po niderlandzku: zasady pracy",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "Polski?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "Tak",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "Inny język",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "Kobieta czy mężczyzna?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "Żeby twój język zwracał się do ciebie poprawnie.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "Gdzie pracujesz?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "Lekcje do twojej pracy są już na początku. Możesz to później zmienić w Ustawieniach.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "W jakim kraju pracujesz?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "Wybierz kraj, w którym pracujesz. Dostaniesz zasady pracy tego kraju. To zostaje w twoim telefonie. Nigdzie tego nie wysyłamy.",
+   "page": "land"
+  }
+ ],
+ "ro": [
+  {
+   "id": "routeTitle",
+   "text": "Ce vrei să înveți?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "Învață olandeză pentru muncă",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "Vorbesc deja olandeză: regulile muncii",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "Română?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "Da",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "Altă limbă",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "Femeie sau bărbat?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "Ca limba ta să ți se adreseze corect.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "Unde lucrezi?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "Lecțiile pentru munca ta vin devreme. Poți schimba asta mai târziu în Setări.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "În ce țară lucrezi?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "Alege țara în care lucrezi. Primești regulile de muncă din acea țară. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.",
+   "page": "land"
+  }
+ ],
+ "bg": [
+  {
+   "id": "routeTitle",
+   "text": "Какво искаш да учиш?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "Нидерландски за работа",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "Вече говоря нидерландски: правилата в работата",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "Български?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "Да",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "Друг език",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "Жена или мъж?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "За да може езикът ти да се обръща към теб правилно.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "Къде работиш?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "Уроците за твоята работа идват рано. Можеш да промениш това по-късно в Настройки.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "В коя държава работиш?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "Избери държавата, в която работиш. Ще получиш правилата за работа в нея. Това остава на телефона ти. Не го изпращаме никъде.",
+   "page": "land"
+  }
+ ],
+ "es": [
+  {
+   "id": "routeTitle",
+   "text": "¿Qué quieres aprender?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "Aprender neerlandés para el trabajo",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "Ya hablo neerlandés: las reglas del trabajo",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "Español?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "Sí",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "Otro idioma",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "¿Mujer u hombre?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "Así tu idioma te habla de la forma correcta.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "¿Dónde trabajas?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "Las lecciones para tu trabajo van primero. Puedes cambiarlo más tarde en Ajustes.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "¿En qué país trabajas?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "Elige el país donde trabajas. Así recibes las reglas de trabajo de ese país. Esto se queda en tu teléfono. No lo enviamos a ningún sitio.",
+   "page": "land"
+  }
+ ],
+ "pt": [
+  {
+   "id": "routeTitle",
+   "text": "O que queres aprender?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "Aprender neerlandês para o trabalho",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "Já falo neerlandês: as regras do trabalho",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "Português?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "Sim",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "Outra língua",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "Mulher ou homem?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "Para a tua língua falar contigo da forma certa.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "Onde trabalhas?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "As lições para o teu trabalho aparecem primeiro. Podes mudar isto mais tarde nas Definições.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "Em que país trabalhas?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "Escolhe o país onde trabalhas. Recebes as regras de trabalho desse país. Isto fica no teu telemóvel. Não o enviamos para lado nenhum.",
+   "page": "land"
+  }
+ ],
+ "fr": [
+  {
+   "id": "routeTitle",
+   "text": "Qu’est-ce que tu veux apprendre ?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "Apprendre le néerlandais pour le travail",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "Je parle déjà néerlandais : les règles du travail",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "Français?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "Oui",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "Autre langue",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "Femme ou homme ?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "Pour que ta langue te parle de la bonne façon.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "Où travailles-tu ?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "Les leçons pour ton travail viennent tôt. Tu peux changer ça plus tard dans les Réglages.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "Dans quel pays travailles-tu ?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "Choisis le pays où tu travailles. Tu reçois alors les règles du travail de ce pays. Cela reste sur ton téléphone. Nous ne l’envoyons nulle part.",
+   "page": "land"
+  }
+ ],
+ "de": [
+  {
+   "id": "routeTitle",
+   "text": "Was möchtest du lernen?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "Niederländisch für die Arbeit lernen",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "Ich spreche schon Niederländisch: die Regeln bei der Arbeit",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "Deutsch?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "Ja",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "Andere Sprache",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "Frau oder Mann?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "Damit deine Sprache dich richtig anspricht.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "Wo arbeitest du?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "Die Lektionen für deine Arbeit kommen früh. Du kannst das später in den Einstellungen ändern.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "In welchem Land arbeitest du?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "Wähle das Land, in dem du arbeitest. Dann bekommst du die Arbeitsregeln dieses Landes. Das bleibt auf deinem Handy. Wir schicken es nirgendwohin.",
+   "page": "land"
+  }
+ ]
+}

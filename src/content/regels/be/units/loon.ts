@@ -325,6 +325,97 @@ export const be: BeUnit = {
           { kind: 'model', id: 'r.be.l.loon.3.mo1', context: 'Je overuren staan niet op je loonbrief.', nl: 'Ik heb 10 uur overgewerkt. Krijg ik daar een toeslag voor, of krijg ik vrij?' },
         ],
       },
+      {
+        // Les 4.4 · Wonen, vervoer en boetes via je werk (arbeidsmigranten, 31 oktober 2026). Opgezocht via
+        //   zoekresultaten (securex.be, werk.belgie.be "loonbescherming", legalnews.be).
+        id: 'r.be.l.loon.4',
+        title: 'Wonen, vervoer en boetes via je werk',
+        goal: 'Je weet wat je baas van je loon mag afhouden. Je kijkt je loonbrief na.',
+        remember: 'Iets van je loon af? Vraag waarom, en kijk op je loonbrief.',
+        // Wie kan je helpen: het interimkantoor (vraag uitleg) · Toezicht op de Sociale Wetten · een vakbond.
+        help: ['interimkantoor', 'tsw', 'vakbond'],
+        steps: [
+          {
+            kind: 'scene',
+            id: 'r.be.l.loon.4.sc1',
+            picture: 'Ewa aan tafel met haar loonbrief. Achter het raam staat een wit busje.',
+            lines: [
+              'Ewa woont net in België.',
+              'Ze werkt via een interimkantoor in een magazijn.',
+              'Ze huurt een kamer via het kantoor.',
+              'Op haar loonbrief staan huur, vervoer en een boete.',
+            ],
+          },
+          // ⚖️ check: de werkgever mag alleen inhouden wat de wet toelaat (een gesloten lijst): belastingen en
+          //   RSZ, boetes uit het arbeidsreglement, schadevergoeding, voorschotten en waarborgen; samen hooguit
+          //   een deel van het nettoloon (Loonbeschermingswet 12 april 1965 art. 23; securex.be "kan de werkgever
+          //   inhoudingen op het loon uitvoeren"; zoekresultaat 31-10-2026). Nakijken: is de grens een vijfde (zo
+          //   las ik het) of een derde (legalnews.be)? De les noemt geen getal.
+          // ⚖️ check: een boete (sanctie) mag alleen als ze in het arbeidsreglement staat (Wet 8 april 1965
+          //   arbeidsreglementen art. 6 en 16-18).
+          // ⚖️ check: schade betaalt de werknemer alleen terug bij bedrog, een zware fout of een lichte fout
+          //   die vaak terugkomt (Arbeidsovereenkomstenwet art. 18).
+          // ⚖️ check: elke inhouding staat op de loonbrief (KB 27 september 1966 en KB 23 oktober 1978
+          //   individuele afrekening; nakijken).
+          // ⚖️ check: een kamer via de werkgever: een apart huurcontract is een advies, geen wettelijke eis in
+          //   Vlaanderen (Vlaams Woninghuurdecreet; nakijken). Vervoer: zet de afspraak op papier (advies).
+          {
+            kind: 'rule',
+            id: 'r.be.l.loon.4.ru1',
+            emoji: '🧾',
+            title: 'Iets van je loon af? Vraag waarom, en kijk op je loonbrief.',
+            body: [
+              'Je baas mag niet zomaar iets van je loon afhouden.',
+              'Een boete mag alleen als die in het arbeidsreglement staat.',
+              'Schade betaal je meestal alleen terug bij een zware fout.',
+              'Alles wat je baas afhoudt, staat op je loonbrief.',
+              'Huur je een kamer via je werk? Vraag dan een apart huurcontract.',
+              'Vraag vooraf wat het busje kost. Zet die afspraak op papier.',
+            ],
+            rule: 'geschreven',
+          },
+          // ⚖️ check: een sanctie of boete moet in het arbeidsreglement staan (Wet 8 april 1965 art. 6 en 16).
+          {
+            kind: 'truefalse',
+            id: 'r.be.l.loon.4.tf1',
+            statement: 'Je baas mag je altijd een boete geven, ook zonder arbeidsreglement.',
+            answer: false,
+            why: 'Nee. Een boete mag alleen als die in het arbeidsreglement staat. Krijg je een boete? Vraag waarom, en vraag het arbeidsreglement.',
+          },
+          {
+            kind: 'whatdo',
+            id: 'r.be.l.loon.4.wd1',
+            situation: 'Op de loonbrief van Ewa staat: "busje 30 euro". Niemand zei dat vooraf. Wat kan Ewa het beste doen?',
+            options: [
+              { id: 'a', text: 'Ze betaalt het. Het busje brengt haar toch elke dag.', best: false, feedback: 'Dat snap ik. Maar ze weet niet of het mag.' },
+              { id: 'b', text: 'Ze stopt meteen met werken bij dit kantoor.', best: false, feedback: 'Dat is snel. Vraag eerst uitleg, en vraag hulp.' },
+              { id: 'c', text: 'Ze vraagt het kantoor waarom dat eraf gaat.', best: true, feedback: 'Goed. Je baas mag niet zomaar iets afhouden.' },
+            ],
+            why: 'Je baas mag alleen afhouden wat de wet toelaat. Vraag waarom dat bedrag eraf gaat. Klopt het niet? Vraag hulp bij je vakbond of bij Toezicht op de Sociale Wetten.',
+          },
+          // ⚖️ check: bij een gewone (lichte) fout die niet vaak terugkomt, hoeft de werknemer de schade niet te
+          //   betalen (Arbeidsovereenkomstenwet art. 18).
+          {
+            kind: 'truefalse',
+            id: 'r.be.l.loon.4.tf2',
+            statement: 'Breek je per ongeluk een glas? Dan moet je dat meestal niet betalen.',
+            answer: true,
+            why: 'Klopt. Bij een gewone fout betaal je meestal niets. Alleen bij een zware fout, of als je het expres doet. Of als je dezelfde fout vaak maakt.',
+          },
+          {
+            kind: 'whoask',
+            id: 'r.be.l.loon.4.wa1',
+            question: 'Je baas houdt geld af dat niet mag. Wie controleert dat?',
+            options: [
+              { id: 'a', who: 'tsw', best: true, feedback: 'Goed. Toezicht op de Sociale Wetten controleert je loon.' },
+              { id: 'b', who: 'huisarts', best: false, feedback: 'De huisarts gaat over je gezondheid, niet over je loon.' },
+              { id: 'c', who: 'interimkantoor', best: false, feedback: 'Je kunt het eerst aan het kantoor vragen. Maar controleren doet een andere plek.' },
+            ],
+            why: 'Klopt een inhouding niet? Meld het bij Toezicht op de Sociale Wetten. Je vakbond helpt je ook.',
+          },
+          { kind: 'model', id: 'r.be.l.loon.4.mo1', context: 'Je ziet een boete op je loonbrief.', nl: 'Ik zie een boete op mijn loonbrief. Waar staat die in het arbeidsreglement?' },
+        ],
+      },
     ],
   },
   zegHet: {
@@ -340,11 +431,16 @@ export const be: BeUnit = {
       { text: 'Ik heb wat langer gewerkt de laatste tijd. Dat is toch goed?', feedback: 'Dan weet de baas niet hoeveel uur. En je vraagt niets.' },
       { text: 'Ik heb 10 uur overgewerkt. Maar dat geeft niet, hoor. Laat maar.', feedback: 'Je mag vragen wat je voor je overuren krijgt.' },
     ],
+    'r.be.l.loon.4.mo1': [
+      { text: 'Een boete? Oké, dan heb ik vast iets fout gedaan.', feedback: 'Vraag eerst waarom. Een boete moet in het reglement staan.' },
+      { text: 'Ik betaal geen boete. Dit kantoor is gewoon oneerlijk!', feedback: 'Dat klinkt boos. Vraag rustig waar het staat.' },
+    ],
   },
   advice: {
     'r.be.l.loon.1.ru1': 'advice',
     'r.be.l.loon.2.ru1': 'advice',
     'r.be.l.loon.3.ru1': 'advice',
+    'r.be.l.loon.4.ru1': 'advice',
   },
   kun: [
     ['Ik kan mijn loonbrief lezen en nakijken.', '1F', 'lezen'],

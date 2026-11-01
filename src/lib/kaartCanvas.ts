@@ -1,7 +1,7 @@
 import { sharePng } from './canvasShare';
 import { siteLink } from './shareLink';
 import { C, drawLogo, fitName, font, fontsReady, HELP, RTL_LETTERS, spaced, STENCIL, toBlob, wrap } from './certCanvas';
-import { KAART_NOTE, kaartRows, type KaartData } from './kaart';
+import { KAART_CODE_LABEL, KAART_NOTE, kaartCode, kaartRows, type KaartData } from './kaart';
 
 /**
  * The coach card as a picture (src/lib/kaart.ts), drawn on a canvas like the certificate (same
@@ -150,6 +150,19 @@ function layout(ctx: CanvasRenderingContext2D, d: KaartData, H: number, draw: bo
     }
     y += 3.4 * u;
   }
+  rule(y);
+
+  // The short code for the coach's group overview (vloertaal.nl/groep, src/lib/groepCode.ts):
+  // the numbers above in one line, spaced so O and 0 are easy to tell apart.
+  y += 3.4 * u;
+  label(KAART_CODE_LABEL, y + 2.2 * u);
+  y += 2.2 * u + 3.6 * u * 1.3;
+  if (draw) {
+    ctx.fillStyle = C.ink;
+    ctx.font = font(700, 3.6 * u);
+    spaced(ctx, kaartCode(d), left, y, 0.1 * 3.6 * u);
+  }
+  y += 3.4 * u;
   rule(y);
 
   // "Gemaakt op deze telefoon. Vloertaal bewaart niets.", small, at the bottom, and the site's

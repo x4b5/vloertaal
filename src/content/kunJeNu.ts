@@ -15,8 +15,10 @@ import { beTaalOf, taalBeActive } from './taalBe';
  * spreekopdrachten; in Werkregels de verhalen, regelkaarten, kaartjes en "Zo zeg je het").
  *
  * "Past bij": elke zin heeft een niveau en een vaardigheid waar hij bij **past**. Taal: A1 of A2
- * van het ERK. Werkregels: 1F (Referentiekader taal, ongeveer A2). Dat is een richtlijn voor
- * begeleiders, geen officieel niveau en geen toets: zeg altijd "past bij", nooit "officieel".
+ * van het ERK; een A2-zin heet op het scherm "op weg naar A2" (niveauLabel), want de Taal-route
+ * gaat van A0 naar A1, op weg naar A2. Werkregels: 1F (Referentiekader taal, ongeveer A2). Dat is
+ * een richtlijn voor begeleiders, geen officieel niveau en geen toets: zeg altijd "past bij",
+ * nooit "officieel".
  *
  * Vertalingen (alleen het spoor Taal; Werkregels is alleen Nederlands): de `id` van een zin is
  * zijn sleutel in src/i18n/kunjenu/<taal>.ts, zoals een unit-id in src/i18n/<taal>.ts. Verplicht
@@ -402,7 +404,15 @@ export function kunOnderwerpenNu(lijst: KunOnderwerp[], cursus: { id: string; ti
 }
 
 /** "past bij A2 · spreken" */
-export const pastBij = (z: Pick<KunZin, 'niveau' | 'vaardigheid'>): string => `past bij ${z.niveau} · ${z.vaardigheid}`;
+/**
+ * Het niveau zoals het er staat. Een Taal-zin met A2 heet "op weg naar A2": de Taal-route gaat van
+ * A0 naar A1, op weg naar A2 (stap 3, eerlijk niveau). Zo'n zin is een stap in die richting; de
+ * leerling heeft daarmee nog geen A2.
+ */
+export const niveauLabel = (z: Pick<KunZin, 'niveau'>): string => (z.niveau === 'A2' ? 'op weg naar A2' : z.niveau);
+
+/** "past bij A1 · spreken", "op weg naar A2 · spreken", "past bij 1F · lezen". */
+export const pastBij = (z: Pick<KunZin, 'niveau' | 'vaardigheid'>): string => `${z.niveau === 'A2' ? niveauLabel(z) : `past bij ${z.niveau}`} · ${z.vaardigheid}`;
 
 /** De vaardigheid in de hulptaal (een ui-sleutel): op het certificaat-scherm na het Nederlands, "(pisanie)". */
 export const KUN_VAARDIGHEID_UI: Record<KunVaardigheid, UiKey> = {

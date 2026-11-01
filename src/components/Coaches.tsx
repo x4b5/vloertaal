@@ -14,7 +14,7 @@ import { ThemeHeadRow } from './Themes';
 import { COACH_FACTS } from '../content/facts';
 import { CONTACT_EMAIL } from '../content/about';
 import { PRO_LEAD, PRO_TITLE, proSections, type ProSection } from '../content/pro';
-import { KUN_REGELS, KUN_TAAL, kunOnderwerpenNu, type KunOnderwerp } from '../content/kunJeNu';
+import { KUN_REGELS, KUN_TAAL, kunOnderwerpenNu, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 
 /**
  * "Voor begeleiders en werkgevers" (Dutch only), its own page from the button at the bottom of
@@ -123,7 +123,7 @@ function KunTabel() {
                 <tr key={z.id} className={i === 0 ? 'kun-first' : undefined}>
                   {i === 0 && <th scope="row" rowSpan={o.zinnen.length}>{o.titel}</th>}
                   <td>{z.nl}</td>
-                  <td>{z.niveau} · {z.vaardigheid}</td>
+                  <td>{niveauLabel(z)} · {z.vaardigheid}</td>
                 </tr>
               )))}
             </tbody>

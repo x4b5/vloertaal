@@ -213,6 +213,14 @@ deze sessies niet te openen.
 | sector-techniek | NEN 3140 | AREI (elektrische installaties), BA4/BA5 | economie.fgov.be |
 | sector-werkplaats | | geldt grotendeels; PC 112 (garage) | werk.belgie.be |
 
+**Arbeidsmigranten (31 oktober 2026, curriculum deel 8).** Vier lessen erbij, in beide landen aan
+het eind van een unit: `r.be.l.ziek.4` (ziek en naar je eigen land: werkgever, controlearts,
+ziekenfonds en adviserend arts), `r.be.l.geld.8` (werkloosheidsuitkering meenemen met de U2, via
+vakbond of HVW), `r.be.l.contract.5` (gedetacheerd: A1 en de Limosa-melding met het bewijs L1) en
+`r.be.l.loon.4` (inhoudingen: boetes alleen uit het arbeidsreglement, schade alleen bij een zware
+fout, huur en busje op papier). Bronnen: riziv.fgov.be, socialsecurity.be, werk.belgie.be,
+vlaanderen.be en europa.eu, via zoekresultaten. Ze staan in de nakijklijst BE-A, behalve geld.8 (B).
+
 ---
 
 ## 4. Woorden: Nederland → Vlaanderen

@@ -641,6 +641,98 @@ export const be: BeUnit = {
           { kind: 'model', id: 'r.be.l.geld.7.mo1', context: 'Je wilt iets terugsturen naar een webwinkel.', nl: 'Ik wil deze jas terugsturen. Hoe krijg ik mijn geld terug?' },
         ],
       },
+      {
+        // Les 10.8 · Werkloos en terug naar je land (arbeidsmigranten, 31 oktober 2026). Opgezocht via
+        //   zoekresultaten (europa.eu Your Europe, vdab.be); rva.be en onem.be waren niet te openen.
+        id: 'r.be.l.geld.8',
+        title: 'Werkloos en terug naar je land',
+        goal: 'Je weet hoe je je uitkering meeneemt naar een ander EU-land. Je regelt het vóór je vertrekt.',
+        remember: 'Uitkering meenemen? Vraag eerst het formulier U2 aan.',
+        // Wie kan je helpen: je vakbond of de HVW (je uitbetalingsinstelling) · de RVA · de VDAB.
+        help: ['hvw', 'rva', 'vakbond', 'vdab'],
+        steps: [
+          {
+            kind: 'scene',
+            id: 'r.be.l.geld.8.sc1',
+            picture: 'Piotr met een koffer bij de bushalte. Hij kijkt op zijn telefoon.',
+            lines: [
+              'Piotr werkte 2 jaar in een fabriek.',
+              'Zijn contract is gestopt.',
+              'Hij krijgt nu een werkloosheidsuitkering.',
+              'Hij wil terug naar Polen, en daar werk zoeken.',
+            ],
+          },
+          // ⚖️ check: wie werkloos is en werk gaat zoeken in een ander land van de EU, de EER of Zwitserland,
+          //   kan de uitkering meenemen met het formulier PD U2 (Verordening 883/2004 art. 64; europa.eu "Uw
+          //   werkloosheidsuitkering meenemen"; zoekresultaat 31-10-2026).
+          // ⚖️ check: voorwaarde: minstens 4 weken als werkzoekende ingeschreven (art. 64 lid 1 sub a; de RVA kan
+          //   een kortere termijn toestaan).
+          // ⚖️ check: de U2 vraag je vóór vertrek aan via je uitbetalingsinstelling (vakbond of HVW) of de RVA;
+          //   de RVA beslist (vdab.be "Werken in Europa: regel vlot je administratie"; zoekresultaat).
+          // ⚖️ check: binnen 7 dagen na vertrek inschrijven bij de arbeidsdienst van het nieuwe land; export
+          //   meestal 3 maanden, verlengbaar tot 6 (art. 64 lid 1 sub b en c; europa.eu). Zonder U2 stopt de
+          //   uitkering (europa.eu; nakijken bij de RVA).
+          {
+            kind: 'rule',
+            id: 'r.be.l.geld.8.ru1',
+            emoji: '🗂️',
+            title: 'Uitkering meenemen? Vraag eerst het formulier U2 aan.',
+            body: [
+              'Ga je werk zoeken in een ander land van de EU? Dan kun je je uitkering soms meenemen.',
+              'Je moet eerst minstens 4 weken als werkzoekende ingeschreven zijn.',
+              'Vraag vóór je vertrek het formulier U2 aan. Dat gaat via je vakbond of de HVW.',
+              'De RVA beslist.',
+              'Meld je binnen 7 dagen bij het werkbureau in het nieuwe land.',
+              'Je krijgt de uitkering daar meestal hooguit 3 maanden.',
+              'Ga je zonder U2? Dan stopt je uitkering.',
+            ],
+            rule: 'geschreven',
+          },
+          // ⚖️ check: zonder PD U2 gaat de uitkering niet mee; export meestal hooguit 3 maanden (Verordening
+          //   883/2004 art. 64; europa.eu; zoekresultaat 31-10-2026).
+          {
+            kind: 'truefalse',
+            id: 'r.be.l.geld.8.tf1',
+            statement: 'Je uitkering gaat altijd door, ook in een ander land.',
+            answer: false,
+            why: 'Je uitkering gaat niet zomaar mee. Je hebt het formulier U2 nodig. Dat vraag je aan vóór je vertrekt. Meestal krijg je de uitkering daar hooguit 3 maanden.',
+          },
+          // ⚖️ check: binnen 7 dagen na vertrek inschrijven bij de arbeidsdienst van het nieuwe land
+          //   (Verordening 883/2004 art. 64 lid 1 sub b).
+          {
+            kind: 'whatdo',
+            id: 'r.be.l.geld.8.wd1',
+            situation: 'Piotr wil volgende week naar Polen. Wat kan Piotr het beste doen?',
+            options: [
+              { id: 'a', text: 'Hij gaat, en hij belt de HVW vanuit Polen.', best: false, feedback: 'Dan is hij te laat. Het formulier vraag je vóór je vertrek aan.' },
+              { id: 'b', text: 'Hij stopt zelf zijn uitkering, en vraagt niets.', best: false, feedback: 'Dat hoeft niet. Met het formulier kan hij zijn uitkering soms meenemen.' },
+              { id: 'c', text: 'Hij vraagt de HVW nu om het formulier U2.', best: true, feedback: 'Goed. Dan kan hij zijn uitkering meenemen.' },
+            ],
+            why: 'Vraag het formulier U2 aan vóór je vertrekt. Meld je in Polen binnen 7 dagen bij het werkbureau. Geef ook je nieuwe adres door.',
+          },
+          // ⚖️ check: minstens 4 weken ingeschreven als werkzoekende vóór de export; de RVA kan een uitzondering
+          //   maken (Verordening 883/2004 art. 64 lid 1 sub a; europa.eu).
+          {
+            kind: 'truefalse',
+            id: 'r.be.l.geld.8.tf2',
+            statement: 'Je moet eerst een tijd als werkzoekende ingeschreven zijn. Pas dan kun je je uitkering meenemen.',
+            answer: true,
+            why: 'Klopt. Je bent eerst minstens 4 weken ingeschreven als werkzoekende. Daarna kun je het formulier U2 krijgen. Soms mag het eerder, als de RVA dat goed vindt.',
+          },
+          {
+            kind: 'whoask',
+            id: 'r.be.l.geld.8.wa1',
+            question: 'Je wilt je uitkering meenemen naar een ander land. Waar vraag je het formulier U2 aan?',
+            options: [
+              { id: 'a', who: 'vdab', best: false, feedback: 'De VDAB helpt je werk zoeken. Het formulier vraag je ergens anders.' },
+              { id: 'b', who: 'hvw', best: true, feedback: 'Goed. De HVW of je vakbond vraagt het voor je aan.' },
+              { id: 'c', who: 'ocmw', best: false, feedback: 'Het OCMW gaat niet over je werkloosheidsuitkering.' },
+            ],
+            why: 'Het formulier U2 vraag je aan via je vakbond of de HVW. Doe het vóór je vertrekt.',
+          },
+          { kind: 'model', id: 'r.be.l.geld.8.mo1', context: 'Je belt de HVW, want je wilt terug naar je land.', nl: 'Ik ga werk zoeken in mijn eigen land. Kan ik het formulier U2 krijgen?' },
+        ],
+      },
     ],
   },
   zegHet: {
@@ -672,6 +764,10 @@ export const be: BeUnit = {
       { text: 'Die jas is te klein. Ik betaal hem dus ook niet.', feedback: 'Dan komen er kosten bij. Meld eerst dat je hem terugstuurt.' },
       { text: 'Jullie jassen zijn waardeloos! Ik wil nu mijn geld!', feedback: 'Dat klinkt boos. Vraag het rustig, dan helpen ze je sneller.' },
     ],
+    'r.be.l.geld.8.mo1': [
+      { text: 'Ik ga terug naar mijn land. Stop mijn uitkering maar.', feedback: 'Dan stopt je uitkering echt. Vraag eerst naar het formulier.' },
+      { text: 'Ik ben al in mijn land. Kunt u mijn geld hierheen sturen?', feedback: 'Dan ben je te laat. Vraag het vóór je vertrekt.' },
+    ],
   },
   advice: {
     'r.be.l.geld.1.ru1': 'advice',
@@ -681,6 +777,7 @@ export const be: BeUnit = {
     'r.be.l.geld.5.ru1': 'advice',
     'r.be.l.geld.6.ru1': 'advice',
     'r.be.l.geld.7.ru1': 'advice',
+    'r.be.l.geld.8.ru1': 'advice',
   },
   kun: [
     ['Ik kan een brief van de overheid lezen, ook in mijn eBox.', '1F', 'lezen'],

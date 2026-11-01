@@ -59,7 +59,7 @@ export const PRIVACY: readonly PrivacySection[] = [
     id: 'delen',
     title: 'Wat je zelf deelt',
     paras: [
-      'De kaart bij “Laat zien hoe het gaat” maakt je telefoon zelf. Jij kiest of je die laat zien, bewaart of stuurt.',
+      'De kaart bij “Laat zien hoe het gaat” maakt je telefoon zelf. Jij kiest of je die laat zien, bewaart of stuurt. Onderaan staat een korte code met dezelfde getallen, zonder naam. Je begeleider kan die overnemen op vloertaal.nl/groep. Die pagina rekent alleen op de computer of telefoon van je begeleider en stuurt niets naar ons.',
       '“Melden” en “Vraag of fout?” openen je eigen e-mail. Er gaat pas iets naar ons als jij de mail verstuurt. We gebruiken je mail alleen om te antwoorden en de app te verbeteren. Wil je dat we je mail wissen? Vraag het ons.',
       'Een herinnering in je agenda: kies je Google Agenda? Dan open je hun website, met de tekst van de herinnering. Kies je een agendabestand? Dan blijft het op je telefoon.',
       'In de Hulp-tab staan links naar andere organisaties. Op hun websites gelden hun eigen regels.',

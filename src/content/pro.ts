@@ -147,15 +147,16 @@ export const proSections: ProSection[] = [
       { lead: 'Elke week.', text: 'Kijk één keer samen naar de begeleiderskaart (Instellingen › Taal en ik › “Laat zien hoe het gaat”). De leerling laat de kaart zelf zien. Praat over wat lukte en wat lastig was. De kaart geeft geen cijfer en geen niveau.' },
       { lead: 'Week 4.', text: 'De eindtoets. De app biedt die zelf aan na 4 weken of na 3 onderwerpen; hij staat ook bij Instellingen › Lessen › “Wat ken je al?”. Kijk daarna samen naar “Jij toen” en “Jij nu”.' },
       { lead: 'Werkregels.', text: 'Voor wie al Nederlands spreekt: hetzelfde ritme, zonder toets. De begeleiderskaart werkt ook daar.' },
+      { lead: 'Voor de hele groep.', text: 'Neem de getallen van de kaarten over op vloertaal.nl/groep: onderwerpen af, dagen geoefend en de toets. Onderaan elke kaart staat een korte code met die getallen, die je kunt plakken. De pagina maakt de totalen van de groep, zoals het gemiddelde en hoeveel deelnemers terugkwamen. Zonder namen, en er gaat niets naar een server. Handig voor een verslag aan een gemeente of fonds.' },
     ],
-    site: [{ text: 'Werkregels.', href: '/werkregels/' }],
+    site: [{ text: 'Werkregels.', href: '/werkregels/' }, { text: 'vloertaal.nl/groep', href: '/groep/' }],
   },
   {
     // "Wat kun je nu?" (src/content/kunJeNu.ts, werkplan stap 2.6): the table follows (extra).
     id: 'p.kunjenu', emoji: '✅', title: 'Wat kun je nu? Zinnen per onderwerp',
     body: [
       'Bij elk onderwerp staan 2 of 3 korte zinnen over wat de leerling na de lessen kan, zoals “Ik kan zeggen dat ik ziek ben.” Ze staan op het certificaat-scherm, en als ze passen ook op het certificaat zelf. De begeleiderskaart laat zien hoeveel zinnen het zijn.',
-      'Bij elke zin staat waar hij bij past: een niveau en een vaardigheid. Bij Taal is dat A1 of A2 van het ERK, bij Werkregels 1F. Dat helpt om de app in je les in te passen. Het is geen officieel niveau en geen toets. De zinnen zijn nog niet nagekeken door een NT2-docent.',
+      'Bij elke zin staat waar hij bij past: een niveau en een vaardigheid. Bij Taal is dat A1 of “op weg naar A2” van het ERK, bij Werkregels 1F. De Taal-route gaat van A0 naar A1, op weg naar A2. Wie hem afmaakt, heeft dus nog geen A2. Dat helpt om de app in je les in te passen. Het is geen officieel niveau en geen toets. De zinnen zijn nog niet nagekeken door een NT2-docent.',
     ],
     extra: 'kunjenu',
   },

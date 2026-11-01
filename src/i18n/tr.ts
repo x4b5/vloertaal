@@ -208,8 +208,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Konuları göster',
     privacyLink: 'Gizlilik açıklamasını oku (Hollandaca)', // nieuw, nalezen
     routeTitle: 'Ne öğrenmek istiyorsun?', // nieuw, nalezen
-    routeLearn: 'İş için Hollandaca öğren, kendi dilinde yardımla', // nieuw, nalezen
-    routeRules: 'Hollandaca biliyorum: Hollanda ve Belçika’da iş nasıl yürür', // nieuw, nalezen
+    routeLearn: 'İş için Hollandaca öğren', // nieuw, nalezen
+    routeRules: 'Hollandaca biliyorum: iş kuralları', // nieuw, nalezen
     routeLearnShort: 'Hollandaca öğren', // nieuw, nalezen
     byTheme: 'Temaya göre',
     inOrder: 'Sırayla',
@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Kelimeler', // nieuw, nalezen
     toetsPartSentences: 'Cümleler', // nieuw, nalezen
     toetsListenAsk: 'Dinle. Ne anlama geliyor?', // nieuw, nalezen
-    toetsNotSure: 'Bilmiyor musun? Birini seç, yeter. Sorun değil.', // nieuw, nalezen
+    toetsNotSure: 'Bilmiyor musun? «Bilmiyorum» seçeneğine dokun. Sorun değil.', // nieuw, nalezen
     toetsMicKeep: 'Kaydın sadece bu telefonda kalır. Sonra kendini tekrar dinleyebilirsin.', // nieuw, nalezen
     toetsStartDone: 'İyi bir başlangıç! Bunları zaten biliyorsun.', // nieuw, nalezen
     toetsEndDone: 'Aferin! Şimdi neler bildiğine bak.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Sen şimdi', // nieuw, nalezen
     toetsKeepGoing: 'Her gün biraz çalış. Böylece gittikçe daha çok öğrenirsin.', // nieuw, nalezen
     toetsStart: 'Testi yap', // nieuw, nalezen
+    toetsIdk: 'Bilmiyorum', // nieuw, nalezen
+    toetsMore: 'Öncekinden fazla', // nieuw, nalezen
+    toetsSame: 'Aşağı yukarı aynı', // nieuw, nalezen
+    toetsMoreAll: 'Hepsi birlikte: Şimdi öncekinden daha fazla biliyorsun.', // nieuw, nalezen
+    toetsSameAll: 'Hepsi birlikte: Aşağı yukarı öncekiyle aynı.', // nieuw, nalezen
     tempo: 'Hız', // nieuw, nalezen
     tempoCalm: 'Sakin', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -357,6 +362,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'Son 4 haftada çalışılan günler', // nieuw, nalezen
     coachLast: 'Son ders, tarihiyle', // nieuw, nalezen
     coachNameAsk: 'Kartta adın?', // nieuw, nalezen
+    coachCode: 'Kod: aynı sayılar, kısaca, grup özeti için. İsim yok.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Telefon dinlesin (deneme)', // nieuw, nalezen
     listenHint: 'Konuştuktan sonra telefon seni anlayıp anlamadığını söyler. Bu, telefonun kendisinde olur. Bize veya başkalarına hiçbir şey gitmez.', // nieuw, nalezen
@@ -401,6 +407,20 @@ const lang: HelpLanguageSource = {
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
     workTry: 'Bugün işte dene', // nieuw, nalezen
     saveFailed: 'İlerlemen kaydedilmedi. Telefonun dolu mu? Biraz yer aç. Ya da Ayarlar’a git: “İlerlemeni sakla”.', // nieuw, nalezen
+    bewaarNudge: 'Telefonun bazen ilerlemeni silebilir. Bu yüzden bir kopya sakla.', // nieuw, nalezen
+    bewaarGo: 'Şimdi kaydet', // nieuw, nalezen
+    backupShare: 'Kendine gönder', // nieuw, nalezen
+    backupShareHint: 'Dosyayı kendine gönder, örneğin WhatsApp’ta veya e-postayla.', // nieuw, nalezen
+    backupMade: 'Tamam. Bu dosyayı iyi sakla. Onunla ilerlemeni sonra geri yüklersin.', // nieuw, nalezen
+    speakTurnPrompt: 'Ne dersin?', // nieuw, nalezen
+    speakTurnExample: 'Örnek', // nieuw, nalezen
+    speakTurnReveal: 'Cevabı dinle', // nieuw, nalezen
+    sceneTitle: 'İş yerinde dinle', // nieuw, nalezen
+    sceneIntro: 'İşteki gibi gürültü var. Dinle. Sonra sorular gelir.', // nieuw, nalezen
+    buildFront: 'İşaretli kelimeyi başa koy', // nieuw, nalezen
+    bridgeTitle: 'İş kuralları', // nieuw, nalezen
+    bridgeText: 'Artık çok Hollandaca biliyorsun. İş kurallarını da öğrenmek ister misin? O zaman her şey Hollandaca olur.', // nieuw, nalezen
+    bridgeGo: 'Evet, göster', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

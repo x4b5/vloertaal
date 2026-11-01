@@ -23,7 +23,7 @@ import { getHelpLanguage } from '../i18n';
 import { GenderScreen } from '../components/Gender';
 import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies } from '../content/curriculum';
-import { buildLesson, buildTiles, buildRuleLesson, forRetry, RULE_KINDS, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
+import { buildLesson, buildTiles, buildRuleLesson, forRetry, frontExercise, frontSource, RULE_KINDS, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
 import { setSpeakShotHeard, setSpeakShotPhase } from '../components/Speaking';
 import { createRng } from '../lib/random';
@@ -51,8 +51,10 @@ import { allRegionUnits, isRegionChoice, regionOf, type RegionChoice } from '../
 import { ToetsShot } from './ToetsShot';
 import { NiveauShot } from './NiveauShot';
 import { SamenShot } from './SamenShot';
+import { SceneShot } from './SceneShot';
 import { InstapCheckShot } from './InstapCheckShot';
 import { MeldingShot } from './MeldingShot';
+import { BridgeShot } from './BridgeShot';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -138,10 +140,14 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'niveau') return <NiveauShot lang={lang} gender={gender} q={q} />;
   // "Oefen samen": /?shot=samen&step=intro|turn|end|result&at=N&swap=1&cu=<lesson> (src/dev/SamenShot.tsx).
   if (shot === 'samen') return <SamenShot lang={lang} gender={gender} q={q} />;
+  // "Luister op de werkvloer": /?shot=scene&state=topic|listen|question&id=<scene>&at=N&pick=K (src/dev/SceneShot.tsx).
+  if (shot === 'scene') return <SceneShot lang={lang} gender={gender} q={q} />;
   // "Ik ken dit al: korte check": /?shot=instapcheck&state=topic|question&at=N|passed|notyet|checked|route|kaart (src/dev/InstapCheckShot.tsx).
   if (shot === 'instapcheck') return <InstapCheckShot lang={lang} gender={gender} q={q} />;
   // "Er is iets veranderd" (a notice, with a made-up example): /?shot=melding&country=be&state=new (src/dev/MeldingShot.tsx).
   if (shot === 'melding') return <MeldingShot lang={lang} gender={gender} q={q} />;
+  // "Wil je ook de werkregels leren?" on the home, most of the course done (src/dev/BridgeShot.tsx).
+  if (shot === 'bridge') return <BridgeShot lang={lang} gender={gender} />;
   // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512
   if (shot === 'logo') return <LogoSheet px={Number(q.get('px') ?? 120)} />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety
@@ -375,16 +381,22 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     type: { kind: 'type', word: helm, options: [hesje, helm, handschoenen], ...(q.get('pick') === '1' ? { pick: true as const } : {}) },
     // Guided matching: three pairs (lib/exercises.ts MATCH_PAIRS).
     match: { kind: 'match', words: [helm, handschoenen, hesje] },
-    build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)) },
+    // &all=1: all the tiles at once (later units, PROGRESSION.buildAll).
+    build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)), ...(q.get('all') === '1' ? { all: true as const } : {}) },
   };
+  // "Zet het vooraan" (PROGRESSION.front): /?shot=front, the e-mail line "Ik verstuur de mail morgen.".
+  const mail = findLesson('l.email')!.lesson;
+  exercises.front = frontExercise(frontSource(mail)!, mail, createRng(3));
   // The shift chat: "Wanneer begint je dienst?" → "Morgen om zeven uur." (right), "Tot morgen!" (wrong).
   const coffee = findLesson('l.shift')!.lesson.dialogues![0];
   const byeReply = allReplies.find((r) => r.id === 'c.hello.a')!;
-  exercises.chat = { kind: 'chat', dialogue: coffee, options: [coffee.reply, byeReply] };
+  exercises.chat = { kind: 'chat', dialogue: coffee, options: [coffee.reply, byeReply], ...(q.get('hint') === '1' ? { hint: true as const } : {}) };
   // Workplace culture: the speak-up tip and its situation (best option listed first);
   // &tip=l.hello another lesson's tip (that one quotes Dutch: "Zeg maar je, hoor!").
   const speakTip = tipForLesson(q.get('tip') ?? 'l.speakup') ?? tipForLesson('l.speakup')!;
-  exercises.tip = { kind: 'tip', tip: speakTip };
+  // The tip in two pages: &part=read (default) or &part=say; &part=both as before the split.
+  const tipPart = q.get('part');
+  exercises.tip = { kind: 'tip', tip: speakTip, ...(tipPart === 'both' ? {} : { part: tipPart === 'say' ? 'say' as const : 'read' as const }) };
   exercises.situation = { kind: 'situation', tip: speakTip, options: speakTip.options };
   // A saying in a later lesson (src/content/sayings.ts): /?shot=saying, and its question
   // /?shot=saying-ask; &saying=l.health another lesson's saying (default De klant is koning).
@@ -403,7 +415,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     // &heard=wait while it listens.
     const heard = q.get('heard');
     setSpeakShotHeard(heard === 'same' ? item.nl : heard === 'almost' ? item.nl.split(' ').slice(0, -1).join(' ') : heard ?? undefined);
-    exercises[shot] = { kind: 'speak', item };
+    // &turn=1: "Wat zeg je?" before the chat (the shift chat): the reply is what to say.
+    exercises[shot] = q.get('turn') ? { kind: 'speak', item: { ...coffee.reply }, turn: coffee } : { kind: 'speak', item };
   }
   const ex = exercises[shot] ?? exercises.dutch;
   // A few intro exercises in front would move the progress bar; pad so it sits at ~40%.

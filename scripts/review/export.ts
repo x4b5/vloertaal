@@ -3,7 +3,10 @@
  *
  * Makes the lists for the volunteers (docs/nakijken.md), in review/ (not in git):
  *   review/vertaling-<taal>/vertaling-<taal>.csv + LEESMIJ.txt   one per help language
- *   review/feiten-<NL|BE>/feiten-<NL|BE>.csv + LEESMIJ.txt         one per country
+ *   review/feiten-<NL|BE>-<A|B|C>/feiten-<NL|BE>-<A|B|C>.csv + LEESMIJ.txt
+ *                                       three per country, by the harm a wrong fact can do: A = ziek,
+ *                                       rechten, loon, contract, veilig and help; B = the rest of
+ *                                       Werkregels; C = the tips and Taal (scripts/review/feiten.ts)
  * Without --alles a translation list has only the texts with a mark ("nieuw, nalezen",
  * "nagelezen AI"); with --alles also the unmarked ones. Texts checked by a person
  * ("nagekeken: …") never come back.
@@ -13,9 +16,9 @@ import { join } from 'node:path';
 import { allEntries } from './files';
 import { LANGS, isLang, type Lang } from './i18nSource';
 import { taalRows, TAAL_COLUMNS } from './taal';
-import { allFacts, feitenRows, FEITEN_COLUMNS, type ExpertPoint } from './feiten';
+import { allFacts, feitenLijsten, FEITEN_COLUMNS, LIJSTEN, type ExpertPoint } from './feiten';
 import { toCsv } from './csv';
-import { leesmijFeiten, leesmijTaal, LANG_NL } from './leesmij';
+import { duur, leesmijFeiten, leesmijTaal, LANG_NL, rijenIn, tijdVan } from './leesmij';
 import { contentSources } from './sources';
 
 const args = process.argv.slice(2);
@@ -50,14 +53,17 @@ for (const lang of talen) {
 const sources = contentSources(root);
 const facts = allFacts(sources);
 const points: ExpertPoint[] = JSON.parse(readFileSync(join(root, 'scripts/review/prioriteit.json'), 'utf8'));
-console.log('Feiten:');
+console.log('Feiten (lijst A = ziek, rechten, loon, contract, veilig en hulp; B = de rest van Werkregels; C = tips en Taal):');
 for (const land of ['NL', 'BE'] as const) {
-  const { rows, nietGekoppeld } = feitenRows(facts, land, points, sources);
-  const name = `feiten-${land}.csv`;
-  const prio = rows.filter((r) => r.prioriteit).length;
-  write(`feiten-${land}`, name, toCsv(FEITEN_COLUMNS, rows));
-  write(`feiten-${land}`, 'LEESMIJ.txt', leesmijFeiten(land, name, rows.length, prio));
-  console.log(`  ${land} ${String(rows.length).padStart(5)} feiten, waarvan ${prio} met prioriteit`);
+  const { lijsten, nietGekoppeld } = feitenLijsten(facts, land, points, sources);
+  for (const lijst of LIJSTEN) {
+    const rows = lijsten[lijst];
+    const dir = `feiten-${land}-${lijst}`;
+    write(dir, `${dir}.csv`, toCsv(FEITEN_COLUMNS, rows));
+    write(dir, 'LEESMIJ.txt', leesmijFeiten(land, lijst, `${dir}.csv`, lijsten));
+    const prio = rows.filter((r) => r.prioriteit).length;
+    console.log(`  ${land} ${lijst} ${String(rows.length).padStart(5)} feiten, ${duur(tijdVan(rows))}${prio ? `, waarvan ${prio} met prioriteit` : ''}${lijst === 'A' ? ` · in 1 uur de eerste ${rijenIn(rows, 3600)}` : ''}`);
+  }
   for (const p of nietGekoppeld) console.log(`     niet gekoppeld (geen id in de app): ${p.rapport}`);
 }
 console.log(`Klaar: ${uit}`);
