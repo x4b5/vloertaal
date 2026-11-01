@@ -82,8 +82,8 @@ vinden de Nederlandse tweeling van beide sporen op dezelfde manier. `r.be.` (Wer
   `be.`-woorden. Zinnen bij een Belgisch woord komen uit de Belgische les.
 - **De toets** (`src/lib/toets.ts` `inCountry`): een item dat in België anders gezegd wordt,
   speelt zijn Belgische regel (de items en hun ids blijven gelijk, dus de twee momenten zijn te
-  vergelijken). Nu nog niet van toepassing: `c.payslip.q`, `w.bedrijfsarts` en `w.kantine` zitten
-  in units die nog moeten (u.pay, u.leave, u.firstday).
+  vergelijken). Nu nog niet van toepassing: `c.payslip.q` en `w.kantine` zitten
+  in units die nog moeten (u.pay, u.firstday). Sinds vorm 2 van de toets (november 2026) zit `w.bedrijfsarts` er niet meer in.
 - **"Wat kun je nu?"**: een Belgische Taal-unit krijgt de zinnen van zijn tweeling.
 - **Plaatjes**: `WordPicture` zoekt via `pictureIdOf` (alleen bij `picture: 'same'`).
 - **Opnames**: de app zoekt een opname op tekst. `scripts/list-clips.ts` neemt de Belgische
@@ -181,7 +181,7 @@ ze in beide landen kloppen.*
 - C-unit: Meedoen in Nederland → **Meedoen in België** (af).
 - **Rechten**: van de 33 rechten-tips verschillen er 24 per land (9 B, 15 C); 18 lessen hebben
   rechten-woorden of -zinnen die in België anders zijn (5 C, 13 B).
-- **Toets**: 3 items (loonstrook, bedrijfsarts, kantine). **Wat kun je nu?**: 3 zinnen (loonstrook → loonbrief, pinnen → met de kaart betalen, beter
+- **Toets**: 2 items (loonstrook, kantine; tot november 2026 ook bedrijfsarts). **Wat kun je nu?**: 3 zinnen (loonstrook → loonbrief, pinnen → met de kaart betalen, beter
   melden → zeggen dat ik weer kan werken).
 - **Begeleiders**: de pagina "Voor begeleiders en werkgevers" en de begeleiderskaart tonen in België de
   Belgische titels ("Meedoen in België") en zinnen (`kunOnderwerpenNu`, tests/coachesBe.test.ts).

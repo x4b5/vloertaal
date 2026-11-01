@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Kelimeler', // nieuw, nalezen
     toetsPartSentences: 'Cümleler', // nieuw, nalezen
     toetsListenAsk: 'Dinle. Ne anlama geliyor?', // nieuw, nalezen
-    toetsNotSure: 'Bilmiyor musun? Birini seç, yeter. Sorun değil.', // nieuw, nalezen
+    toetsNotSure: 'Bilmiyor musun? «Bilmiyorum» seçeneğine dokun. Sorun değil.', // nieuw, nalezen
     toetsMicKeep: 'Kaydın sadece bu telefonda kalır. Sonra kendini tekrar dinleyebilirsin.', // nieuw, nalezen
     toetsStartDone: 'İyi bir başlangıç! Bunları zaten biliyorsun.', // nieuw, nalezen
     toetsEndDone: 'Aferin! Şimdi neler bildiğine bak.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Sen şimdi', // nieuw, nalezen
     toetsKeepGoing: 'Her gün biraz çalış. Böylece gittikçe daha çok öğrenirsin.', // nieuw, nalezen
     toetsStart: 'Testi yap', // nieuw, nalezen
+    toetsIdk: 'Bilmiyorum', // nieuw, nalezen
+    toetsMore: 'Öncekinden fazla', // nieuw, nalezen
+    toetsSame: 'Aşağı yukarı aynı', // nieuw, nalezen
+    toetsMoreAll: 'Hepsi birlikte: Şimdi öncekinden daha fazla biliyorsun.', // nieuw, nalezen
+    toetsSameAll: 'Hepsi birlikte: Aşağı yukarı öncekiyle aynı.', // nieuw, nalezen
     tempo: 'Hız', // nieuw, nalezen
     tempoCalm: 'Sakin', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen

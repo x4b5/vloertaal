@@ -9,7 +9,7 @@ import { kunAantal, kunJeNu } from '../content/kunJeNu';
 import { groepCode } from './groepCode';
 import { dayKey, type Progress } from './progress';
 import { trackOf, trackOfId, type Track } from './track';
-import type { ToetsRun } from './toetsState';
+import { knownOf, type ToetsRun } from './toetsState';
 
 /**
  * The coach card ("begeleiderskaart", Settings › "Laat zien hoe het gaat"): a picture the phone
@@ -31,7 +31,7 @@ export const KAART_NOTE = 'Gemaakt op deze telefoon. Vloertaal bewaart niets.';
 export interface KaartToets {
   /** "2 oktober 2026" */
   date: string;
-  /** Right out of how many, per part, in the order of TOETS_PARTS. */
+  /** Known out of how many, per part, in the order of TOETS_PARTS: the guessing taken out (lib/toetsState.ts knownOf, docs/toets.md). */
   parts: { part: ToetsPart; nl: string; right: number; of: number }[];
 }
 
@@ -109,7 +109,7 @@ export function lessonText(lessonId: string): string | undefined {
 }
 
 function toetsOf(run: ToetsRun): KaartToets {
-  return { date: certDate(run.day), parts: TOETS_PARTS.map((part) => ({ part, nl: PART_NL[part], right: run.right[part], of: run.of[part] })) };
+  return { date: certDate(run.day), parts: TOETS_PARTS.map((part) => ({ part, nl: PART_NL[part], right: knownOf(run, part), of: run.of[part] })) };
 }
 
 /** The card's fields, from the progress on this phone, the learner's name and today. */

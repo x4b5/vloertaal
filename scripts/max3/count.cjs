@@ -5,7 +5,8 @@
  * Opens each named state in Chromium, counts the visible, enabled, tappable elements (in view or
  * reachable by scrolling), leaves out the fixed chrome (the bottom nav, the lesson ✕, the back
  * arrow `.chrome-back`, the "Melden" flag `.lesson-report` and its switch `.about-tester`, and the small
- * way out "Ik kan nu niet luisteren" `.skip-sound`, owner's choice 31 October 2026) and speaker/play buttons, and
+ * way out "Ik kan nu niet luisteren" `.skip-sound`, owner's choice 31 October 2026, and its twin in the test
+ * "Wat ken je al?", "Ik weet het niet" `.toets-idk`, stap 3) and speaker/play buttons, and
  * prints screen -> count -> elements with PASS/FAIL against the limit.
  *
  * A state FAILS when
@@ -549,14 +550,22 @@ function defineStates(LANG) {
   // the real way from a new learner's home into the test.
   add('toets:offer', shot('toets&state=offer'), null, { expect: '.toets-offer' });
   add('toets:offer-eind', shot('toets&state=offer-eind'), null, { expect: '.toets-offer-eind' });
-  add('toets:listen', shot('toets&state=question&at=0'), null, { expect: '.toets-listen' });
+  // Form 2 (21 questions): 0–4 listen, 5–6 build by ear, 7–11 words, 12–13 dictation, 14–18 chat,
+  // 19–20 build; every question with the small link "Ik weet het niet" (.toets-idk, not counted).
+  add('toets:listen', shot('toets&state=question&at=0'), null, { expect: '.toets-listen .choice' });
+  add('toets:listen-build', shot('toets&state=question&at=5'), null, { expect: '.toets-player .build-steps' });
   add('toets:word', shot('toets&state=question&at=7'), null, { expect: '.toets-word' });
   add('toets:word-picked', shot('toets&state=question&at=7'), async (p) => { await tap(p, '.choice', 0); }, { expect: '.toets-player' });
-  add('toets:chat', shot('toets&state=question&at=12'), null, { expect: '.chat' });
+  add('toets:dictate', shot('toets&state=question&at=12'), null, { expect: '.toets-player .exercise' });
+  // With the keyboard (a Latin help language): a word typed shows Verder in the footer.
+  add('toets:dictate-typed', shot('toets&state=question&at=12'), async (p) => { const i = p.locator('input.type-input'); if (await i.count()) { await i.fill('helm'); await settle(p); } }, { expect: '.toets-player .exercise' });
+  add('toets:chat', shot('toets&state=question&at=14'), null, { expect: '.chat' });
+  add('toets:build', shot('toets&state=question&at=19'), null, { expect: '.toets-player .build-steps' });
   add('toets:speak', shot('toets&state=speak'), null, { expect: '.say-mic' });
   add('toets:speak-review', shot('toets&state=speak&phase=review'), null, { expect: '.say-rate' });
   add('toets:result-instap', shot('toets&state=result-instap'), null, { expect: '.toets-parts' });
   add('toets:result-eind', shot('toets&state=result-eind'), null, { expect: '.toets-voices' });
+  add('toets:result-eind-growth', shot('toets&state=result-eind'), null, { expect: '.toets-growth-all' });
   add('toets:page', shot('toets&state=page'), null, { expect: '.toets-page .chrome-back' });
   // "Laat zien hoe het gaat" (the coach card, Settings › Taal en ik): the card with Bewaar of deel and
   // Naam wijzigen; a new learner's; and the name asked first (as on the certificate).
@@ -574,6 +583,8 @@ function defineStates(LANG) {
   add('flow:toets-offer', '/', (p) => realHome(p, afterFirst), { expect: '.toets-offer' });
   add('flow:toets-start', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
   add('flow:toets-later', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3 .bay-now' });
+  // "Ik weet het niet" goes on to the next question (the second listening question).
+  add('flow:toets-idk', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-do'); await settle(p, 900); await tap(p, '.toets-idk'); await settle(p, 700); }, { expect: '.toets-player .toets-listen .choice' });
   // "Laat de telefoon luisteren (proef)" (src/lib/listen.ts), with a mocked on-device API
   // (&listen=, src/dev/ShotHarness.tsx fakeListenApi): its row in Lessen, its page (Dutch on the
   // phone, or still to download, and the wifi question), and the three outcomes after speaking.
@@ -884,7 +895,7 @@ function countInPage() {
     // Fixed chrome: the lesson ✕ and the back arrow (same component, same corner everywhere), and
     // the "Iets melden" flag (a tool, not a step of the lesson; src/lib/report.ts), and its
     // switch at the bottom of Over (after the credits, like the flag a tool).
-    if (el.matches('.lesson-close') || el.matches('.lesson-report') || el.matches('.about-tester') || el.matches('.skip-sound') || (el.closest('.player-top') && el.getAttribute('aria-label') === 'Quit lesson') || el.matches('.chrome-back')) { chrome.push(item); continue; }
+    if (el.matches('.lesson-close') || el.matches('.lesson-report') || el.matches('.about-tester') || el.matches('.skip-sound') || el.matches('.toets-idk') || (el.closest('.player-top') && el.getAttribute('aria-label') === 'Quit lesson') || el.matches('.chrome-back')) { chrome.push(item); continue; }
     if (transparent(el)) { hiddenTappables.push(item); continue; }
     const al = el.getAttribute('aria-label') || '';
     if (/(^|\s)help-say(\s|$)/.test(cls)) { helpSpeakers.push(item); continue; }

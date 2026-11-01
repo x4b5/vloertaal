@@ -1,16 +1,20 @@
 import { allDialogues, allLessons, allReplies, allWords, beOnlyTaalLessons } from '../content/curriculum';
 import { taalBeActive } from '../content/taalBe';
 import { taalBeId } from '../content/taalBe/ids';
-import { TOETS_PARTS, TOETS_SPEAK, TOETS_VERSIONS, type ToetsItem, type ToetsPart, type ToetsVersion } from '../content/toets';
-import type { ChatLine, Dialogue, Sentence, Word } from '../content/types';
+import { TOETS_FORM, TOETS_PARTS, TOETS_SPEAK, TOETS_VERSIONS, type ToetsItem, type ToetsPart, type ToetsVersion } from '../content/toets';
+import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
 import { earnedCertificates } from './certificate';
+import { buildTiles } from './exercises';
 import { dayKey, daysBetween, type Progress } from './progress';
 import { createRng, shuffle } from './random';
 import { trackOf, trackOfId } from './track';
+import type { HelpLanguage } from '../i18n/types';
+import { typeAsPick, wantsWriting, writingInput } from './writing';
 import { TOETS_STATE_VERSION, type ToetsRun, type ToetsScore, type ToetsState } from './toetsState';
 
 /**
- * "Wat ken je al?" (src/content/toets.ts): when it is offered, its questions, and what is kept.
+ * "Wat ken je al?" (src/content/toets.ts): when it is offered, its questions, what is kept, and how
+ * the result is read (docs/toets.md).
  *
  *  - The start (instap, version A): offered on the home of the language track once the first lesson
  *    (1.1) is done, to a learner who has finished fewer than INSTAP_UNTIL_LESSONS lessons; never
@@ -72,10 +76,10 @@ export function settingsMoment(p: Progress, today: Date, unitsDone = taalUnitsDo
 }
 
 /** The test was done: its run is kept (a second end replaces the first). */
-export function recordToets(p: Progress, moment: ToetsMoment, right: ToetsScore, of: ToetsScore, today: Date, unitsDone = taalUnitsDone(p, today)): Progress {
+export function recordToets(p: Progress, moment: ToetsMoment, tally: ToetsTally, today: Date, unitsDone = taalUnitsDone(p, today)): Progress {
   const day = dayKey(today);
   const t: ToetsState = p.toets ?? { v: TOETS_STATE_VERSION };
-  const run: ToetsRun = { day, version: versionOf(moment), right, of };
+  const run: ToetsRun = { day, version: versionOf(moment), right: tally.right, of: tally.of, form: TOETS_FORM, mc: tally.mc, wrong: tally.wrong, idk: tally.idk };
   if (moment === 'instap') {
     const { skipped: _, ...rest } = t;
     return { ...p, toets: { ...rest, v: TOETS_STATE_VERSION, instap: run, start: day, unitsAt: unitsDone } };
@@ -95,9 +99,13 @@ export function toetsLater(p: Progress, moment: ToetsMoment, today: Date, unitsD
 /* ---- The questions ---- */
 
 export type ToetsQuestion =
-  | { part: 'listen'; sentence: Sentence; options: Sentence[] }
-  | { part: 'words'; word: Word; options: Word[] }
-  | { part: 'sentences'; dialogue: Dialogue; options: ChatLine[] };
+  | { part: 'listen'; kind: 'choice'; sentence: Sentence; options: Sentence[] }
+  | { part: 'words'; kind: 'choice'; word: Word; options: Word[] }
+  | { part: 'sentences'; kind: 'choice'; dialogue: Dialogue; options: ChatLine[] }
+  /** Build the sentence word by word: by ear in Luisteren (heard, not shown), from its meaning in Zinnen. */
+  | { part: 'listen' | 'sentences'; kind: 'build'; sentence: Sentence; tiles: string[]; audio: boolean }
+  /** Hear the word and write it (or pick it, written, as in the lessons: lib/writing.ts typeAsPick). */
+  | { part: 'words'; kind: 'dictate'; word: Word; options: Word[] };
 
 const allSentences = (): Sentence[] => allLessons.flatMap((l) => l.sentences);
 
@@ -123,19 +131,25 @@ export function toetsLine(id: string): { id: string; nl: string; en: string } | 
     ?? allDialogues.find((d) => d.prompt.id === id)?.prompt;
 }
 
+/** The lesson that teaches a sentence: the extra words to build it with come from there, as in the lesson. */
+const lessonOf = (id: string): Lesson | undefined => allLessons.find((l) => l.sentences.some((s) => s.id === id));
+
 function question(item: ToetsItem, rng: () => number): ToetsQuestion {
   const need = <T,>(x: T | undefined, id: string): T => { if (!x) throw new Error(`toets: ${id} is not in the course`); return x; };
-  if (item.part === 'listen') {
-    const find = (id: string) => inCountry(need(allSentences().find((s) => s.id === id), id));
-    return { part: 'listen', sentence: find(item.answer), options: shuffle([item.answer, ...item.others].map(find), rng) };
+  const sentence = (id: string) => inCountry(need(allSentences().find((s) => s.id === id), id));
+  const word = (id: string) => inCountry(need(allWords.find((w) => w.id === id), id));
+  const options = <T,>(find: (id: string) => T) => shuffle([item.answer, ...item.others].map(find), rng);
+  if (item.kind === 'build') {
+    const s = sentence(item.answer);
+    const part = item.part === 'listen' ? 'listen' : 'sentences';
+    return { part, kind: 'build', sentence: s, tiles: buildTiles(s, need(lessonOf(item.answer), item.answer), rng), audio: part === 'listen' };
   }
-  if (item.part === 'words') {
-    const find = (id: string) => inCountry(need(allWords.find((w) => w.id === id), id));
-    return { part: 'words', word: find(item.answer), options: shuffle([item.answer, ...item.others].map(find), rng) };
-  }
+  if (item.kind === 'dictate') return { part: 'words', kind: 'dictate', word: word(item.answer), options: options(word) };
+  if (item.part === 'listen') return { part: 'listen', kind: 'choice', sentence: sentence(item.answer), options: options(sentence) };
+  if (item.part === 'words') return { part: 'words', kind: 'choice', word: word(item.answer), options: options(word) };
   const dialogue = inCountryChat(need(allDialogues.find((d) => d.prompt.id === item.answer), item.answer));
   const others = item.others.map((id) => inCountry(need(allReplies.find((r) => r.id === id), id)));
-  return { part: 'sentences', dialogue, options: shuffle([dialogue.reply, ...others], rng) };
+  return { part: 'sentences', kind: 'choice', dialogue, options: shuffle([dialogue.reply, ...others], rng) };
 }
 
 /** The questions of a version, in its order; the options shuffled (seeded). */
@@ -144,9 +158,11 @@ export function toetsQuestions(version: ToetsVersion, seed = 1): ToetsQuestion[]
   return TOETS_VERSIONS[version].map((item) => question(item, rng));
 }
 
-/** The id of the right option. */
+/** The id of the right answer (a build: the sentence; a dictation: the word). */
 export function rightId(q: ToetsQuestion): string {
-  return q.part === 'listen' ? q.sentence.id : q.part === 'words' ? q.word.id : q.dialogue.reply.id;
+  if (q.kind === 'build') return q.sentence.id;
+  if (q.part === 'words') return q.word.id;
+  return q.part === 'listen' ? q.sentence.id : q.dialogue.reply.id;
 }
 
 /** The sentence to say at the end (the same at both moments). */
@@ -156,16 +172,52 @@ export function speakSentence(): Sentence {
   return s;
 }
 
-/** Right answers per part, out of how many. `answers[i]`: question i answered right. */
-export function scoreOf(questions: readonly ToetsQuestion[], answers: readonly boolean[]): { right: ToetsScore; of: ToetsScore } {
+/* ---- The score ---- */
+
+/** One answer: right, wrong, or "Ik weet het niet". `pick`: it was a pick of three (a guess can be right). */
+export interface ToetsAnswer { result: 'right' | 'wrong' | 'idk'; pick: boolean }
+
+/** What a run counts, per part. */
+export interface ToetsTally { right: ToetsScore; of: ToetsScore; mc: ToetsScore; wrong: ToetsScore; idk: ToetsScore }
+
+
+/** The counts per part. `answers[i]`: question i (none: counted as "Ik weet het niet"). */
+export function scoreOf(questions: readonly ToetsQuestion[], answers: readonly (ToetsAnswer | undefined)[]): ToetsTally {
   const zero = (): ToetsScore => ({ listen: 0, words: 0, sentences: 0 });
-  const right = zero();
-  const of = zero();
+  const t: ToetsTally = { right: zero(), of: zero(), mc: zero(), wrong: zero(), idk: zero() };
   questions.forEach((q, i) => {
-    of[q.part] += 1;
-    if (answers[i]) right[q.part] += 1;
+    const a = answers[i] ?? { result: 'idk', pick: q.kind === 'choice' };
+    t.of[q.part] += 1;
+    if (a.pick) t.mc[q.part] += 1;
+    if (a.result === 'right') t.right[q.part] += 1;
+    else if (a.result === 'idk') t.idk[q.part] += 1;
+    else if (a.pick) t.wrong[q.part] += 1;
   });
-  return { right, of };
+  return t;
 }
 
+
+/* ---- Answering ---- */
+
+/** How a question is answered here: a pick of three, or made by the learner (and with the keyboard: Verder). */
+export function answerMode(q: ToetsQuestion, lang?: HelpLanguage, writing = wantsWriting()): { pick: boolean; keys: boolean } {
+  if (q.kind === 'choice') return { pick: true, keys: false };
+  if (q.kind === 'build') return { pick: false, keys: false };
+  const pick = typeAsPick({ options: q.options }, lang, writing);
+  return { pick, keys: !pick && writingInput(lang) === 'keys' };
+}
+
+/**
+ * The result of one answer. A pick: the option tapped. Writing: as the lesson grades it (one stray
+ * wrong letter forgiven, one typo forgiven). Building: at most one place with a wrong tap (stricter
+ * than the lesson's two wrong taps, so a sentence built by guessing is rarely right:
+ * tests/toets.test.ts works it out).
+ */
+export function resultOf(q: ToetsQuestion, a: { correct: boolean; given?: string[]; missed?: string[] }, pick: boolean): ToetsAnswer['result'] {
+  if (pick) return a.given?.[0] === rightId(q) ? 'right' : 'wrong';
+  if (q.kind === 'build') return (a.missed?.length ?? 0) <= 1 ? 'right' : 'wrong';
+  return a.correct ? 'right' : 'wrong';
+}
+
+export { growthOf, knownExact, knownOf, MIN_MORE, TOETS_OPTIONS, type ToetsGrowth } from './toetsState';
 export { TOETS_PARTS, type ToetsPart };

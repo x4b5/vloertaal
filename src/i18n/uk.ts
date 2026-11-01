@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Слова', // nieuw, nalezen
     toetsPartSentences: 'Речення', // nieuw, nalezen
     toetsListenAsk: 'Послухай. Що це означає?', // nieuw, nalezen
-    toetsNotSure: 'Не знаєш? Просто вибери одну відповідь. Це нормально.', // nieuw, nalezen
+    toetsNotSure: 'Не знаєш? Натисни «Я не знаю». Це нормально.', // nieuw, nalezen
     toetsMicKeep: 'Твій запис залишається тільки на цьому телефоні. Пізніше ти зможеш почути себе знову.', // nieuw, nalezen
     toetsStartDone: 'Гарний початок! Ось що ти вже знаєш.', // nieuw, nalezen
     toetsEndDone: 'Молодець! Подивися, що ти знаєш тепер.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Ти зараз', // nieuw, nalezen
     toetsKeepGoing: 'Займайся трохи щодня. Тоді ти знатимеш усе більше.', // nieuw, nalezen
     toetsStart: 'Пройти тест', // nieuw, nalezen
+    toetsIdk: 'Я не знаю', // nieuw, nalezen
+    toetsMore: 'Більше, ніж тоді', // nieuw, nalezen
+    toetsSame: 'Приблизно так само', // nieuw, nalezen
+    toetsMoreAll: 'Усе разом: тепер ти знаєш більше, ніж тоді.', // nieuw, nalezen
+    toetsSameAll: 'Усе разом: приблизно так само, як тоді.', // nieuw, nalezen
     tempo: 'Темп', // nieuw, nalezen
     tempoCalm: 'Спокійно', // nieuw, nalezen
     tempoNormal: 'Звичайно', // nieuw, nalezen

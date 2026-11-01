@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'کلمه‌ها', // nieuw, nalezen
     toetsPartSentences: 'جمله‌ها', // nieuw, nalezen
     toetsListenAsk: 'گوش کنید. یعنی چه؟', // nieuw, nalezen // nagelezen AI 31 okt
-    toetsNotSure: 'نمی‌دانید؟ فقط یکی را انتخاب کنید. اشکالی ندارد.', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsNotSure: 'نمی‌دانید؟ روی «نمی‌دانم» بزنید. اشکالی ندارد.', // nieuw, nalezen
     toetsMicKeep: 'صدای ضبط‌شدهٔ شما فقط روی همین گوشی می‌ماند. بعداً می‌توانید دوباره صدای خودتان را بشنوید.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsStartDone: 'شروع خوبی بود! این‌ها را از قبل می‌دانید.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsEndDone: 'آفرین! ببینید حالا چه می‌دانید.', // nieuw, nalezen // nagelezen AI 31 okt
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'شما حالا', // nieuw, nalezen // nagelezen AI 31 okt
     toetsKeepGoing: 'هر روز کمی تمرین کنید. این‌طوری بیشتر و بیشتر یاد می‌گیرید.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsStart: 'آزمون را شروع کنید', // nieuw, nalezen // nagelezen AI 31 okt
+    toetsIdk: 'نمی‌دانم', // nieuw, nalezen
+    toetsMore: 'بیشتر از قبل', // nieuw, nalezen
+    toetsSame: 'تقریباً مثل قبل', // nieuw, nalezen
+    toetsMoreAll: 'همه با هم: الان بیشتر از قبل می‌دانید.', // nieuw, nalezen
+    toetsSameAll: 'همه با هم: تقریباً مثل قبل.', // nieuw, nalezen
     tempo: 'سرعت', // nieuw, nalezen
     tempoCalm: 'آرام', // nieuw, nalezen
     tempoNormal: 'عادی', // nieuw, nalezen

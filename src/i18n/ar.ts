@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'الكلمات', // nieuw, nalezen
     toetsPartSentences: 'الجمل', // nieuw, nalezen
     toetsListenAsk: { m: 'استمع. ماذا يعني؟', f: 'استمعي. ماذا يعني؟', x: 'استماع: ماذا يعني؟' }, // nieuw, nalezen
-    toetsNotSure: { m: 'لا تعرف؟ اختر واحدة فقط. لا بأس.', f: 'لا تعرفين؟ اختاري واحدة فقط. لا بأس.', x: 'غير معروف؟ يكفي اختيار واحدة. لا بأس.' }, // nieuw, nalezen
+    toetsNotSure: { m: 'لا تعرف؟ اضغط على «لا أعرف». لا بأس.', f: 'لا تعرفين؟ اضغطي على «لا أعرف». لا بأس.', x: 'الإجابة غير معروفة؟ يمكن الضغط على «لا أعرف». لا بأس.' }, // nieuw, nalezen
     toetsMicKeep: { m: 'يبقى تسجيلك على هذا الهاتف فقط. لاحقاً يمكنك أن تسمع نفسك مرة أخرى.', f: 'يبقى تسجيلكِ على هذا الهاتف فقط. لاحقاً يمكنكِ أن تسمعي نفسكِ مرة أخرى.', x: 'يبقى التسجيل على هذا الهاتف فقط. ويمكن سماعه مرة أخرى لاحقاً.' }, // nieuw, nalezen
     toetsStartDone: { m: 'بداية جيدة! هذا ما تعرفه بالفعل.', f: 'بداية جيدة! هذا ما تعرفينه بالفعل.', x: 'بداية جيدة! هذه هي النتيجة الآن.' }, // nieuw, nalezen
     toetsEndDone: { m: 'أحسنت! انظر ماذا تعرف الآن.', f: 'أحسنتِ! انظري ماذا تعرفين الآن.', x: 'عمل جيد! هذه هي النتيجة الآن.' }, // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'أنت الآن', // nieuw, nalezen
     toetsKeepGoing: { m: 'تمرّن قليلاً كل يوم. هكذا تتعلم أكثر فأكثر.', f: 'تمرّني قليلاً كل يوم. هكذا تتعلمين أكثر فأكثر.', x: 'القليل من التمرين كل يوم يعني تعلّماً أكثر فأكثر.' }, // nieuw, nalezen
     toetsStart: { m: 'ابدأ الاختبار', f: 'ابدئي الاختبار', x: 'بدء الاختبار' }, // nieuw, nalezen
+    toetsIdk: 'لا أعرف', // nieuw, nalezen
+    toetsMore: 'أكثر من قبل', // nieuw, nalezen
+    toetsSame: 'تقريباً مثل قبل', // nieuw, nalezen
+    toetsMoreAll: { m: 'كل شيء معاً: تعرف الآن أكثر من قبل.', f: 'كل شيء معاً: تعرفين الآن أكثر من قبل.', x: 'كل شيء معاً: المعرفة الآن أكثر من قبل.' }, // nieuw, nalezen
+    toetsSameAll: 'كل شيء معاً: تقريباً مثل قبل.', // nieuw, nalezen
     tempo: 'السرعة', // nieuw, nalezen
     tempoCalm: 'هادئ', // nieuw, nalezen
     tempoNormal: 'عادي', // nieuw, nalezen

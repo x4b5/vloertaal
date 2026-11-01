@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Palabras', // nieuw, nalezen
     toetsPartSentences: 'Frases', // nieuw, nalezen
     toetsListenAsk: 'Escucha. ¿Qué significa?', // nieuw, nalezen
-    toetsNotSure: '¿No lo sabes? Elige una. No pasa nada.', // nieuw, nalezen
+    toetsNotSure: '¿No lo sabes? Toca «No lo sé». No pasa nada.', // nieuw, nalezen
     toetsMicKeep: 'Tu grabación se queda solo en este teléfono. Después podrás escucharte otra vez.', // nieuw, nalezen
     toetsStartDone: '¡Buen comienzo! Esto ya lo sabes.', // nieuw, nalezen
     toetsEndDone: '¡Muy bien! Mira lo que sabes ahora.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Tú ahora', // nieuw, nalezen
     toetsKeepGoing: 'Practica un poco cada día. Así aprendes cada vez más.', // nieuw, nalezen
     toetsStart: 'Hacer la prueba', // nieuw, nalezen
+    toetsIdk: 'No lo sé', // nieuw, nalezen
+    toetsMore: 'Más que antes', // nieuw, nalezen
+    toetsSame: 'Más o menos igual', // nieuw, nalezen
+    toetsMoreAll: 'En total: ahora sabes más que antes.', // nieuw, nalezen
+    toetsSameAll: 'En total: más o menos igual que antes.', // nieuw, nalezen
     tempo: 'Velocidad', // nieuw, nalezen
     tempoCalm: 'Despacio', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
