@@ -23,7 +23,7 @@ import { getHelpLanguage } from '../i18n';
 import { GenderScreen } from '../components/Gender';
 import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies } from '../content/curriculum';
-import { buildLesson, buildTiles, buildRuleLesson, forRetry, RULE_KINDS, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
+import { buildLesson, buildTiles, buildRuleLesson, forRetry, frontExercise, frontSource, RULE_KINDS, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
 import { setSpeakShotHeard, setSpeakShotPhase } from '../components/Speaking';
 import { createRng } from '../lib/random';
@@ -54,6 +54,7 @@ import { SamenShot } from './SamenShot';
 import { SceneShot } from './SceneShot';
 import { InstapCheckShot } from './InstapCheckShot';
 import { MeldingShot } from './MeldingShot';
+import { BridgeShot } from './BridgeShot';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -145,6 +146,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'instapcheck') return <InstapCheckShot lang={lang} gender={gender} q={q} />;
   // "Er is iets veranderd" (a notice, with a made-up example): /?shot=melding&country=be&state=new (src/dev/MeldingShot.tsx).
   if (shot === 'melding') return <MeldingShot lang={lang} gender={gender} q={q} />;
+  // "Wil je ook de werkregels leren?" on the home, most of the course done (src/dev/BridgeShot.tsx).
+  if (shot === 'bridge') return <BridgeShot lang={lang} gender={gender} />;
   // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512
   if (shot === 'logo') return <LogoSheet px={Number(q.get('px') ?? 120)} />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety
@@ -378,8 +381,12 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     type: { kind: 'type', word: helm, options: [hesje, helm, handschoenen], ...(q.get('pick') === '1' ? { pick: true as const } : {}) },
     // Guided matching: three pairs (lib/exercises.ts MATCH_PAIRS).
     match: { kind: 'match', words: [helm, handschoenen, hesje] },
-    build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)) },
+    // &all=1: all the tiles at once (later units, PROGRESSION.buildAll).
+    build: { kind: 'build', sentence: lesson.sentences[0], tiles: buildTiles(lesson.sentences[0], lesson, createRng(3)), ...(q.get('all') === '1' ? { all: true as const } : {}) },
   };
+  // "Zet het vooraan" (PROGRESSION.front): /?shot=front, the e-mail line "Ik verstuur de mail morgen.".
+  const mail = findLesson('l.email')!.lesson;
+  exercises.front = frontExercise(frontSource(mail)!, mail, createRng(3));
   // The shift chat: "Wanneer begint je dienst?" → "Morgen om zeven uur." (right), "Tot morgen!" (wrong).
   const coffee = findLesson('l.shift')!.lesson.dialogues![0];
   const byeReply = allReplies.find((r) => r.id === 'c.hello.a')!;

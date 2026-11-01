@@ -411,6 +411,10 @@ const lang: HelpLanguageSource = {
     speakTurnReveal: 'جواب را بشنو', // nieuw, nalezen
     sceneTitle: 'در محل کار گوش کن', // nieuw, nalezen
     sceneIntro: 'مثل سر کار، سر و صدا هست. گوش کن. بعد سؤال‌ها می‌آیند.', // nieuw, nalezen
+    buildFront: 'کلمهٔ علامت‌دار را اول بگذارید', // nieuw, nalezen
+    bridgeTitle: 'قوانین کار', // nieuw, nalezen
+    bridgeText: 'حالا هلندی زیادی بلدید. می‌خواهید قوانین کار را هم یاد بگیرید؟ آن وقت همه‌چیز به هلندی است.', // nieuw, nalezen
+    bridgeGo: 'بله، نشان بدهید', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -411,6 +411,10 @@ const lang: HelpLanguageSource = {
     speakTurnReveal: 'Ascultă răspunsul', // nieuw, nalezen
     sceneTitle: 'Ascultă la locul de muncă', // nieuw, nalezen
     sceneIntro: 'E zgomot, ca la muncă. Ascultă. Apoi vin întrebările.', // nieuw, nalezen
+    buildFront: 'Pune cuvântul marcat la început', // nieuw, nalezen
+    bridgeTitle: 'Regulile de muncă', // nieuw, nalezen
+    bridgeText: 'Acum știi multă olandeză. Vrei să înveți și regulile de muncă? Atunci totul este în olandeză.', // nieuw, nalezen
+    bridgeGo: 'Da, arată-mi', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

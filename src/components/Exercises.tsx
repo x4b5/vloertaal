@@ -5,7 +5,7 @@ import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i
 import type { HelpLanguage } from '../i18n/types';
 import { checkTyped, nextTileOrder, sentenceOrders } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
-import { buildSteps, choicePictures, MATCH_ASKED, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
+import { allTiles, buildSteps, choicePictures, frontSteps, MATCH_ASKED, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
@@ -583,10 +583,30 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
 }
 
 /**
+ * The line of "Zet het vooraan" with the words to put first marked (bold, on yellow: not only a
+ * colour). The first match, written small or not.
+ */
+function FrontLine({ nl, phrase }: { nl: string; phrase: string }) {
+  const at = nl.toLowerCase().indexOf(phrase.toLowerCase());
+  if (at < 0) return <span className="build-front-line" lang="nl" dir="ltr">{nl}</span>;
+  return (
+    <span className="build-front-line" lang="nl" dir="ltr">
+      {nl.slice(0, at)}
+      <mark className="build-front-mark">{nl.slice(at, at + phrase.length)}</mark>
+      {nl.slice(at + phrase.length)}
+    </span>
+  );
+}
+
+/**
  * Build the sentence word by word: for each next place three words (the right one and two
  * others, lib/exercises.ts buildSteps). A right tap puts the word in the sentence; a wrong tap
  * shakes that word with a small cross and the sentence waits. No Check and no taking words
  * back: the last word grades it (one stray wrong tap is forgiven, two or more are a mistake).
+ * `ex.all` (later units): all the sentence's tiles at once plus one that does not fit (allTiles),
+ * in a fixed place each; a placed tile leaves an empty spot, so nothing jumps. `ex.front` ("Zet
+ * het vooraan"): the line as the learner knows it, its front words marked, is in the bubble with
+ * its speaker; it is built again with those words first, three words for each place.
  */
 export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'build'>) {
   // One voice per exercise: the speaker says the words and, when it is done, the whole sentence.
@@ -595,7 +615,12 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   // Every right order (the sentence's own, then its `alt` ones): a tap that fits another order
   // goes on in that order, with that order's words offered from then on.
   const orders = useMemo(() => sentenceOrders(ex.sentence), [ex.sentence]);
-  const allSteps = useMemo(() => orders.map((o, k) => buildSteps(k === 0 ? ex.sentence.nl : o.join(' '), ex.tiles, 3, ex.salt)), [ex, orders]);
+  // "Zet het vooraan": the old first word and, after the front words, the subject beside the verb (frontSteps).
+  const allSteps = useMemo(() => orders.map((o, k) => (k === 0 && ex.front ? frontSteps(ex.sentence.nl, ex.tiles, ex.front, ex.salt) : buildSteps(k === 0 ? ex.sentence.nl : o.join(' '), ex.tiles, 3, ex.salt))), [ex, orders]);
+  const front = ex.front;
+  // All the tiles at once (never for a sentence by ear or "Zet het vooraan"): each keeps its place.
+  const bank = useMemo(() => (ex.all && !ex.audio && !ex.front ? allTiles(ex.sentence.nl, ex.tiles, ex.salt) : null), [ex]);
+  const [used, setUsed] = useState<number[]>([]);
   const [path, setPath] = useState(0);
   const words = orders[path];
   const steps = allSteps[path];
@@ -620,13 +645,16 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   const tiles = useSettledTiles();
   const bankBox = useRef<HTMLDivElement>(null);
   useRefocus(bankBox, at);
-  const tap = (w: string) => {
+  // `slot`: the tile's place in the bank (all tiles at once); its shake is that tile's only.
+  const tap = (w: string, slot?: number) => {
     if (locked || complete || tiles.settling()) return;
     const order = nextTileOrder(orders, words.slice(0, at), w, path);
+    const missKey = slot === undefined ? w : `#${slot}`;
     if (order >= 0) {
       tiles.changed();
       speak(w, false, 'nl', voiceFor(who));
       setMiss(null);
+      if (slot !== undefined) setUsed((u) => [...u, slot]);
       if (order !== path) setPath(order);
       const built = orders[order];
       const next = at + 1;
@@ -638,23 +666,58 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       wrongsRef.current = [...wrongsRef.current, { at, word: w }];
       setWrongs(wrongsRef.current);
       sounds.tap();
-      setMiss(w);
+      setMiss(missKey);
     }
+  };
+  // The bubble's speaker: "Zet het vooraan" plays the line as it was (the new order shows only by
+  // building it), and the new sentence once it is built; else the sentence, held back as before.
+  const bubbleSay = front ? (complete || locked ? ex.sentence.nl : front.nl) : ex.sentence.nl;
+  const sayShown = Boolean(front) || byEar || wrongs.length > 0 || complete || locked;
+  const tileButton = (t: string, label: string, slot?: number) => {
+    const key = slot === undefined ? t : `#${slot}`;
+    return (
+      <>
+        <button
+          type="button"
+          className={`tile tile-with-say ${miss === key ? 'shake tile-miss' : ''}`}
+          lang="nl"
+          disabled={locked}
+          onClick={() => tap(t, slot)}
+        >
+          {/* Written small at the first place too (tileLabel); the tap is checked on the word itself. */}
+          {breakable(label)}
+          {miss === key && <span className="tile-x" aria-hidden><CloseIcon size={14} /></span>}
+          {miss === key && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}>, {srText(ui('incorrect', lang))}</span>}
+        </button>
+        <button
+          type="button"
+          className="tile-say"
+          onClick={(e) => {
+            e.stopPropagation();
+            speak(t, false, 'nl', voiceFor(who));
+          }}
+        >
+          <PlayName text={label} help={lang} />
+          <SpeakerIcon size={22} />
+        </button>
+      </>
+    );
   };
 
   return (
     // data-nl: the sentence, for the tap counter (scripts/max3) now that its speaker waits.
     <div className="exercise build-steps" data-nl={ex.sentence.nl}>
-      <Prompt text={ui(byEar ? 'buildListen' : 'buildSentence', lang)} />
-      <div className={`speaker speaker-build ${byEar ? 'build-by-ear' : ''}`}>
-        <Speaker who={who} lines={[ex.sentence.nl, ...words]} verdict={verdict} run={run} misses={misses} />
+      <Prompt text={ui(front ? 'buildFront' : byEar ? 'buildListen' : 'buildSentence', lang)} />
+      <div className={`speaker speaker-build ${byEar ? 'build-by-ear' : ''} ${front ? 'build-front' : ''}`}>
+        <Speaker who={who} lines={[bubbleSay, ...words]} verdict={verdict} run={run} misses={misses} />
         {/* The meaning, large in the help language, with the sentence's picture word and a
             speaker: hearing the Dutch is the listen-and-build form of the task. */}
         <div className="speaker-bubble build-bubble">
           {/* The whole sentence is held back until a wrong tap or the end: before that, hearing
               it would give the order away (the words' own speakers stay). */}
-          {(byEar || wrongs.length > 0 || complete || locked) && <SpeakButton glyph={!byEar} size={byEar ? 'lg' : undefined} hideText={byEar || undefined} text={ex.sentence.nl} help={lang} voice={voiceFor(who)} />}
-          {pic && <WordPicture className="build-pic" id={pic.id} emoji={pic.emoji} size={56} />}
+          {sayShown && <SpeakButton glyph={!byEar} size={byEar ? 'lg' : undefined} hideText={byEar || undefined} text={bubbleSay} help={lang} voice={voiceFor(who)} />}
+          {pic && !front && <WordPicture className="build-pic" id={pic.id} emoji={pic.emoji} size={56} />}
+          {front && <FrontLine nl={front.nl} phrase={front.phrase} />}
           {(!byEar || complete || locked) && <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />}
         </div>
       </div>
@@ -680,35 +743,20 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           </span>
         </div>
       )}
+      {/* All the tiles at once (later units): one row per tile, each in its own place; a placed
+          one leaves an empty spot of its size. Written small, as at the first place (tileLabel). */}
+      {!complete && bank && (
+        <ul className="tile-bank tile-steps tile-all" dir="ltr" ref={bankBox as RefObject<HTMLUListElement | null>}>
+          {bank.map((t, k) => (used.includes(k)
+            ? <li key={k} className="tile-slot tile-slot-used" aria-hidden><span className="tile tile-spot">{breakable(tileLabel(t, 0, ex.sentence.nl))}</span><span className="tile-say-spot" /></li>
+            : <li key={k} className="tile-slot">{tileButton(t, tileLabel(t, 0, ex.sentence.nl), k)}</li>))}
+        </ul>
+      )}
       {/* Three words for the next place; each has its own small speaker that only plays it. */}
-      {!complete && (
+      {!complete && !bank && (
         <div className="tile-bank tile-steps" dir="ltr" key={at} ref={bankBox}>
           {steps[at].map((t) => (
-            <span key={t} className="tile-slot">
-              <button
-                type="button"
-                className={`tile tile-with-say ${miss === t ? 'shake tile-miss' : ''}`}
-                lang="nl"
-                disabled={locked}
-                onClick={() => tap(t)}
-              >
-                {/* Written small at the first place too (tileLabel); the tap is checked on the word itself. */}
-                {breakable(tileLabel(t, at, ex.sentence.nl))}
-                {miss === t && <span className="tile-x" aria-hidden><CloseIcon size={14} /></span>}
-                {miss === t && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}>, {srText(ui('incorrect', lang))}</span>}
-              </button>
-              <button
-                type="button"
-                className="tile-say"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  speak(t, false, 'nl', voiceFor(who));
-                }}
-              >
-                <PlayName text={tileLabel(t, at, ex.sentence.nl)} help={lang} />
-                <SpeakerIcon size={22} />
-              </button>
-            </span>
+            <span key={t} className="tile-slot">{tileButton(t, tileLabel(t, at, ex.sentence.nl))}</span>
           ))}
         </div>
       )}

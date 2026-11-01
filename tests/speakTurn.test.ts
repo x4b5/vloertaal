@@ -90,8 +90,13 @@ describe('"Wat zeg je?" before the chat', () => {
             expect(list).toHaveLength(without.length);
             const gone = without.filter((e) => !rest.some((r) => JSON.stringify(r) === JSON.stringify(e)));
             expect(gone).toHaveLength(1);
-            expect(['listen', 'dutch', 'meaning']).toContain(gone[0].kind);
+            expect(['listen', 'dutch', 'meaning', 'chat']).toContain(gone[0].kind);
             if (gone[0].kind === 'dutch') expect(without.some((e) => e.kind === 'chat' && e.reverse)).toBe(true);
+            // Stap 3: with "Zet het vooraan" in the picture choice's place, the reversed chat makes room.
+            if (gone[0].kind === 'chat') {
+              expect(gone[0].kind === 'chat' && gone[0].reverse).toBe(true);
+              expect(without.some((e) => e.kind === 'build' && e.front)).toBe(true);
+            }
             // Everything else the same, in the same order.
             expect(rest).toEqual(without.filter((e) => e !== gone[0]));
           } else {

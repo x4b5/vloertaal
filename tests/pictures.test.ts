@@ -108,6 +108,8 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
       for (const seed of SEEDS) {
         // The picture choice comes after the match board (a review asks "which one is …" before it).
         const list = buildLesson(lesson, { review: false, seed });
+        // Stap 3: in the second half of the path "Zet het vooraan" takes the picture choice's place.
+        if (list.some((e) => e.kind === 'build' && e.front)) continue;
         const ex = list.slice(list.findIndex((e) => e.kind === 'match')).find((e) => e.kind === 'dutch');
         expect(ex && hasPicture(ex.word), `${lesson.id} seed ${seed}`).toBe(true);
       }

@@ -411,6 +411,10 @@ const lang: HelpLanguageSource = {
     speakTurnReveal: 'Hör die Antwort', // nieuw, nalezen
     sceneTitle: 'Hör zu bei der Arbeit', // nieuw, nalezen
     sceneIntro: 'Es ist laut, wie bei der Arbeit. Hör zu. Dann kommen die Fragen.', // nieuw, nalezen
+    buildFront: 'Stell das markierte Wort an den Anfang', // nieuw, nalezen
+    bridgeTitle: 'Die Regeln bei der Arbeit', // nieuw, nalezen
+    bridgeText: 'Du kannst jetzt viel Niederländisch. Willst du auch die Regeln bei der Arbeit lernen? Dann ist alles auf Niederländisch.', // nieuw, nalezen
+    bridgeGo: 'Ja, zeig mal', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

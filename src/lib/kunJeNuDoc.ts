@@ -1,4 +1,4 @@
-import { KUN_REGELS, KUN_TAAL, KUN_VERTAALD, type KunOnderwerp } from '../content/kunJeNu';
+import { KUN_REGELS, KUN_TAAL, KUN_VERTAALD, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 import { THEMES } from '../content/themes';
 
 /**
@@ -10,7 +10,7 @@ export function kunJeNuMarkdown(): string {
   const tabel = (lijst: KunOnderwerp[]) => [
     '| Onderwerp | Zinnen | Past bij |',
     '|---|---|---|',
-    ...lijst.flatMap((o) => o.zinnen.map((z, i) => `| ${i === 0 ? cel(o.titel) : ''} | ${cel(z.nl)} | ${z.niveau} · ${z.vaardigheid} |`)),
+    ...lijst.flatMap((o) => o.zinnen.map((z, i) => `| ${i === 0 ? cel(o.titel) : ''} | ${cel(z.nl)} | ${niveauLabel(z)} · ${z.vaardigheid} |`)),
   ].join('\n');
   const vertaald = KUN_VERTAALD.map((id) => THEMES.find((t) => t.id === id)!.titleNl).join(', ');
   const taal = KUN_TAAL.reduce((n, o) => n + o.zinnen.length, 0);
@@ -30,7 +30,9 @@ certificaat-scherm, onder "Wat kun je nu?", en op het certificaat zelf als ze pa
 
 Bij elke zin staat een niveau en een vaardigheid waar de zin bij **past**:
 
-- **Taal**: A1 of A2 van het ERK (Europees Referentiekader).
+- **Taal**: A1, of "op weg naar A2", van het ERK (Europees Referentiekader). De Taal-route gaat
+  van A0 naar A1, op weg naar A2. Een zin "op weg naar A2" is een stap in die richting: de
+  leerling heeft daarmee nog geen A2.
 - **Werkregels**: 1F (Referentiekader taal; ongeveer A2).
 - Vaardigheden: luisteren, spreken, lezen, schrijven of gesprekken.
 

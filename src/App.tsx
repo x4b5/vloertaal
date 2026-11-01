@@ -41,6 +41,8 @@ import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, daily
 import { gloss } from './i18n';
 import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
 import { BackupNudge } from './components/BackupNudge';
+import { BridgeOffer } from './components/BridgeOffer';
+import { bridgeDue, seeBridge } from './lib/bridge';
 import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
@@ -1132,7 +1134,9 @@ export default function App() {
       // "Bewaar je voortgang" (src/lib/backupNudge.ts): only where the phone may lose the
       // progress, after 3 lessons, once; after the notice and the test (one card at a time).
       const lessonsDone = knownLessons(progress.completed);
-      const nudge = !notice && !offered && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
+      // "Wil je ook de werkregels leren?" (src/lib/bridge.ts): once, most of the course done; after the notice and the test.
+      const bridge = !notice && !offered && bridgeDue(progress);
+      const nudge = !notice && !offered && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
       const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
       return (
         <>
@@ -1174,6 +1178,12 @@ export default function App() {
                 lang={lang}
                 onDo={() => startToets(offered)}
                 onLater={() => setProgress((p) => toetsLater(p, offered, new Date()))}
+              />
+            ) : bridge ? (
+              <BridgeOffer
+                lang={lang}
+                onGo={() => { setProgress((p) => seeBridge(p)); go({ name: 'settings', page: 'route' }); }}
+                onLater={() => setProgress((p) => seeBridge(p))}
               />
             ) : nudge ? (
               <BackupNudge

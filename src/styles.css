@@ -2763,6 +2763,20 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* A short word ("je") still makes a big tile to tap. */
 .tile-slot > .tile-with-say { min-width: 64px; justify-content: center; }
 .tile-steps { column-gap: 14px; }
+/* Stap 3, "Zet het vooraan": the line as the learner knows it, its front words marked (bold on
+   yellow, not only a colour), beside its speaker; the meaning under it. */
+.build-front-line { flex: 1 1 150px; min-width: 0; text-align: left; font-size: 1.2rem; font-weight: 600; line-height: 1.35; color: var(--ink-strong); }
+.build-front-mark {
+  padding: 1px 5px; border-radius: 5px; background: var(--yellow); color: var(--on-yellow); font-weight: 800;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.build-front .build-gloss { flex-basis: 100%; font-size: 1.1rem; }
+/* Stap 3: all the tiles of a sentence at once (a list: one tile per row of the list); a placed
+   tile leaves an empty spot of its size, so the others never move. */
+.tile-all { list-style: none; padding: 0; column-gap: 10px; row-gap: 8px; }
+.tile-slot-used { visibility: hidden; }
+.tile-say-spot { flex: none; width: 44px; height: 44px; }
+.tile-slot-used > .tile-spot { display: inline-flex; min-width: 64px; }
 
 /* Type what you hear, with letter tiles: the answer, a back key, then the letters. */
 .type-answer-row { display: flex; align-items: stretch; gap: 10px; }

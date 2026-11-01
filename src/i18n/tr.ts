@@ -411,6 +411,10 @@ const lang: HelpLanguageSource = {
     speakTurnReveal: 'Cevabı dinle', // nieuw, nalezen
     sceneTitle: 'İş yerinde dinle', // nieuw, nalezen
     sceneIntro: 'İşteki gibi gürültü var. Dinle. Sonra sorular gelir.', // nieuw, nalezen
+    buildFront: 'İşaretli kelimeyi başa koy', // nieuw, nalezen
+    bridgeTitle: 'İş kuralları', // nieuw, nalezen
+    bridgeText: 'Artık çok Hollandaca biliyorsun. İş kurallarını da öğrenmek ister misin? O zaman her şey Hollandaca olur.', // nieuw, nalezen
+    bridgeGo: 'Evet, göster', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
