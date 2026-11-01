@@ -157,9 +157,10 @@ export function switchTrack(p: Progress, helpLang: UiCode | null): Progress {
 
 export const emptyProgress: Progress = {
   onboarded: false,
-  // A new learner follows the phone (light or dark); a saved choice is kept (loadProgress).
-  theme: 'auto',
-  themeVersion: 2,
+  // Light by default, also on a phone set to dark (the owner's choice, 1 November 2026); dark or
+  // "follow the phone" is a choice in Settings, and a saved choice is kept (loadProgress).
+  theme: 'light',
+  themeVersion: 3,
   voice: null,
   helpLang: null,
   xp: 0,
@@ -175,11 +176,11 @@ export function loadProgress(): Progress {
     const raw = localStorage.getItem(KEY);
     if (raw) {
       const saved = JSON.parse(raw);
-      // Light became the default later; an 'auto' saved before then was the old
-      // default rather than a choice, so it moves to light. An explicit dark stays.
-      if (saved.themeVersion !== 2) {
+      // Light is the default (themeVersion 3, 1 November 2026). An 'auto' saved before then was
+      // the default for new learners rather than a choice, so it moves to light. Dark stays.
+      if (saved.themeVersion !== 3) {
         saved.theme = saved.theme === 'dark' ? 'dark' : 'light';
-        saved.themeVersion = 2;
+        saved.themeVersion = 3;
       }
       // Saved before the automatic default for new learners: they had light, and keep it.
       if (saved.theme === undefined) saved.theme = 'light';
