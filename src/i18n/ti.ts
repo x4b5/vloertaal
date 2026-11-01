@@ -358,6 +358,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'መዓልትታት ልምምድ ኣብ ዝሓለፉ 4 ሰሙናት', // nieuw, nalezen
     coachLast: 'ናይ መወዳእታ ትምህርቲ፡ ምስ ዕለቱ', // nieuw, nalezen
     coachNameAsk: { m: 'ስምካ ኣብታ ካርድ?', f: 'ስምኪ ኣብታ ካርድ?', x: 'ስምኩም ኣብታ ካርድ?' }, // nieuw, nalezen
+    coachCode: 'ኮድ፡ ተመሳሳሊ ቁጽርታት ብሓጺሩ፡ ንሓፈሻዊ መግለጺ ጉጅለ። ብዘይ ስም።', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'ተሌፎን ይስማዕ (ፈተነ)', // nieuw, nalezen
     listenHint: { m: 'ምስ ተዛረብካ፡ እቲ ተሌፎን እንተ ተረዲኡካ ይነግረካ። እዚ ኣብቲ ተሌፎን ባዕሉ እዩ ዝኸውን። ናባና ወይ ናብ ካልኦት ዋላ ሓንቲ ኣይለኣኽን።', f: 'ምስ ተዛረብኪ፡ እቲ ተሌፎን እንተ ተረዲኡኪ ይነግረኪ። እዚ ኣብቲ ተሌፎን ባዕሉ እዩ ዝኸውን። ናባና ወይ ናብ ካልኦት ዋላ ሓንቲ ኣይለኣኽን።', x: 'ምስ ተዛረብኩም፡ እቲ ተሌፎን እንተ ተረዲኡኩም ይነግረኩም። እዚ ኣብቲ ተሌፎን ባዕሉ እዩ ዝኸውን። ናባና ወይ ናብ ካልኦት ዋላ ሓንቲ ኣይለኣኽን።' }, // nieuw, nalezen

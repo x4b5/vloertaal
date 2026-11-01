@@ -15,6 +15,7 @@ import { rulesPage, SECTOR_PAGES, sectorPage } from './src/lib/sectorPages';
 import { notFoundPage, siteLinks } from './src/lib/siteLinks';
 import { belgiumPage, faqScript, llmsTxt } from './src/lib/geoPages';
 import { privacyPage } from './src/lib/privacyPage';
+import { groepPage } from './src/lib/groepPage';
 import { RULES_TOPIC_PAGES, rulesTopicPage } from './src/lib/rulesPages';
 import { sitemap } from './src/lib/sitemap';
 import { TOPIC_PAGES, topicPage, topicsIndexPage } from './src/lib/topicPages';
@@ -123,7 +124,7 @@ function introPagePlugin(): Plugin {
 /**
  * vloertaal.nl/pl, /ar, /uk … /en: what Vloertaal is, in each help language (src/lib/langPages.ts);
  * /bouw, /logistiek … and /werkregels in Dutch (src/lib/sectorPages.ts); /onderwerpen and a page per
- * topic (src/lib/topicPages.ts); /voor-begeleiders; /belgie and /llms.txt (src/lib/geoPages.ts);
+ * topic (src/lib/topicPages.ts); /voor-begeleiders and its /groep (src/lib/groepPage.ts); /belgie and /llms.txt (src/lib/geoPages.ts);
  * a 404 page; and the sitemap that lists them all (src/lib/sitemap.ts).
  */
 function langPagesPlugin(): Plugin {
@@ -140,6 +141,7 @@ function langPagesPlugin(): Plugin {
       for (const p of RULES_TOPIC_PAGES) this.emitFile({ type: 'asset', fileName: `${p.path.slice(1)}index.html`, source: rulesTopicPage(p) });
       this.emitFile({ type: 'asset', fileName: 'voor-begeleiders/index.html', source: coachPage() });
       this.emitFile({ type: 'asset', fileName: 'meekijken/index.html', source: askPage() });
+      this.emitFile({ type: 'asset', fileName: 'groep/index.html', source: groepPage() });
       for (const t of TOPIC_PAGES) this.emitFile({ type: 'asset', fileName: `${t.path.slice(1)}index.html`, source: topicPage(t) });
       this.emitFile({ type: 'asset', fileName: 'onderwerpen/index.html', source: topicsIndexPage() });
       this.emitFile({ type: 'asset', fileName: '404.html', source: notFoundPage() });

@@ -357,6 +357,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'Días de práctica en las últimas 4 semanas', // nieuw, nalezen
     coachLast: 'Última lección, con la fecha', // nieuw, nalezen
     coachNameAsk: '¿Tu nombre en la tarjeta?', // nieuw, nalezen
+    coachCode: 'Código: los mismos números, en corto, para un resumen del grupo. Sin nombre.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Que el teléfono escuche (experimental)', // nieuw, nalezen // nagelezen AI 31 okt
     listenHint: 'Después de hablar, el teléfono dice si te ha entendido. Esto pasa en el mismo teléfono. No va nada a nosotros ni a otros.', // nieuw, nalezen

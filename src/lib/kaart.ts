@@ -6,6 +6,7 @@ import { certDate, earnedCertificates, hasCheck, unitDone } from './certificate'
 import { courseUnits } from '../content/courses';
 import { checkDay } from './instapCheck';
 import { kunAantal, kunJeNu } from '../content/kunJeNu';
+import { groepCode } from './groepCode';
 import { dayKey, type Progress } from './progress';
 import { trackOf, trackOfId, type Track } from './track';
 import type { ToetsRun } from './toetsState';
@@ -200,6 +201,21 @@ export function kaartRows(d: KaartData): KaartRow[] {
   return rows;
 }
 
+/** The label of the short code at the foot of the card. */
+export const KAART_CODE_LABEL = 'Code voor het groepsoverzicht';
+
+/**
+ * The card's numbers in one short line (src/lib/groepCode.ts), for the coach's group overview
+ * (vloertaal.nl/groep): topics done, days practised and the test's total right, start and end.
+ * Only what the card shows; no name.
+ */
+export function kaartCode(d: Pick<KaartData, 'unitsDone' | 'days' | 'toets'>): string {
+  const total = (t?: KaartToets) => (t ? { goed: t.parts.reduce((a, x) => a + x.right, 0), van: t.parts.reduce((a, x) => a + x.of, 0) } : undefined);
+  const voor = total(d.toets?.instap);
+  const na = total(d.toets?.eind);
+  return groepCode({ onderwerpen: d.unitsDone, dagen: d.days, ...(voor && voor.van > 0 ? { voor } : {}), ...(na && na.van > 0 ? { na } : {}) });
+}
+
 /** What a screen reader hears for the card (one picture): everything on it, in its order, in Dutch. */
 export function kaartAlt(d: KaartData): string {
   const end = (t: string) => (/[.!?]$/.test(t) ? t : `${t}.`);
@@ -210,6 +226,7 @@ export function kaartAlt(d: KaartData): string {
     for (const m of r.more ?? []) parts.push(end(m));
     for (const b of r.sub ?? []) parts.push(end(`${b.head.replace(' · ', ', ')}: ${b.text}`));
   }
+  parts.push(`${KAART_CODE_LABEL}: ${kaartCode(d)}.`);
   parts.push(KAART_NOTE);
   return parts.join(' ');
 }

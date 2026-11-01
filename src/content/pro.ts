@@ -147,8 +147,9 @@ export const proSections: ProSection[] = [
       { lead: 'Elke week.', text: 'Kijk één keer samen naar de begeleiderskaart (Instellingen › Taal en ik › “Laat zien hoe het gaat”). De leerling laat de kaart zelf zien. Praat over wat lukte en wat lastig was. De kaart geeft geen cijfer en geen niveau.' },
       { lead: 'Week 4.', text: 'De eindtoets. De app biedt die zelf aan na 4 weken of na 3 onderwerpen; hij staat ook bij Instellingen › Lessen › “Wat ken je al?”. Kijk daarna samen naar “Jij toen” en “Jij nu”.' },
       { lead: 'Werkregels.', text: 'Voor wie al Nederlands spreekt: hetzelfde ritme, zonder toets. De begeleiderskaart werkt ook daar.' },
+      { lead: 'Voor de hele groep.', text: 'Neem de getallen van de kaarten over op vloertaal.nl/groep: onderwerpen af, dagen geoefend en de toets. Onderaan elke kaart staat een korte code met die getallen, die je kunt plakken. De pagina maakt de totalen van de groep, zoals het gemiddelde en hoeveel deelnemers terugkwamen. Zonder namen, en er gaat niets naar een server. Handig voor een verslag aan een gemeente of fonds.' },
     ],
-    site: [{ text: 'Werkregels.', href: '/werkregels/' }],
+    site: [{ text: 'Werkregels.', href: '/werkregels/' }, { text: 'vloertaal.nl/groep', href: '/groep/' }],
   },
   {
     // "Wat kun je nu?" (src/content/kunJeNu.ts, werkplan stap 2.6): the table follows (extra).

@@ -5,7 +5,7 @@ import { THEMES } from '../content/themes';
 import { KUN_REGELS, KUN_TAAL, type KunOnderwerp } from '../content/kunJeNu';
 import { languageNav } from './langPages';
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
-import { appLink, ASK_PATH, COACH_PATH } from './paths';
+import { appLink, ASK_PATH, COACH_PATH, GROEP_PATH } from './paths';
 import { sectorNav } from './sectorPages';
 import { TOPIC_LINKS } from './topicPages';
 
@@ -88,7 +88,7 @@ ${proSections.map(section).join('\n')}
 ${sectorNav()}
 <h2>In de eigen taal van je leerlingen</h2>
 ${languageNav()}
-<p><a href="/intro/">Waarom Vloertaal?</a> · <a href="/nieuw/">Wat is er nieuw?</a></p>
+<p><a href="${GROEP_PATH}">Groepsoverzicht (zonder namen)</a> · <a href="/intro/">Waarom Vloertaal?</a> · <a href="/nieuw/">Wat is er nieuw?</a></p>
 </footer>`,
   );
 }

@@ -357,6 +357,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'Son 4 haftada çalışılan günler', // nieuw, nalezen
     coachLast: 'Son ders, tarihiyle', // nieuw, nalezen
     coachNameAsk: 'Kartta adın?', // nieuw, nalezen
+    coachCode: 'Kod: aynı sayılar, kısaca, grup özeti için. İsim yok.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Telefon dinlesin (deneme)', // nieuw, nalezen
     listenHint: 'Konuştuktan sonra telefon seni anlayıp anlamadığını söyler. Bu, telefonun kendisinde olur. Bize veya başkalarına hiçbir şey gitmez.', // nieuw, nalezen

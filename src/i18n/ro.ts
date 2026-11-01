@@ -357,6 +357,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'Zile de exercițiu în ultimele 4 săptămâni', // nieuw, nalezen
     coachLast: 'Ultima lecție, cu data', // nieuw, nalezen
     coachNameAsk: 'Numele tău pe card?', // nieuw, nalezen
+    coachCode: 'Cod: aceleași numere, pe scurt, pentru rezumatul grupului. Fără nume.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Telefonul ascultă (probă)', // nieuw, nalezen
     listenHint: 'După ce vorbești, telefonul spune dacă te-a înțeles. Asta se întâmplă pe telefon. Nimic nu ajunge la noi sau la alții.', // nieuw, nalezen

@@ -357,6 +357,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen
     coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen
     coachNameAsk: 'نام شما روی کارت؟', // nieuw, nalezen // nagelezen AI 31 okt
+    coachCode: 'کود: همان عددها، کوتاه، برای خلاصهٔ گروپ. بدون نام.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'گوش دادن تیلفون (آزمایشی)', // nieuw, nalezen
     listenHint: 'بعد از گپ زدن، تیلفون می‌گوید که گپ شما را فهمید یا نی. این کار در خود تیلفون انجام می‌شود. هیچ چیزی به ما یا دیگران فرستاده نمی‌شود.', // nieuw, nalezen

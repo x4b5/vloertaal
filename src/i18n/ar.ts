@@ -357,6 +357,7 @@ const lang: HelpLanguageSource = {
     coachDays: 'أيام التمرين في آخر 4 أسابيع', // nieuw, nalezen
     coachLast: 'آخر درس، مع التاريخ', // nieuw, nalezen
     coachNameAsk: { m: 'اسمك على البطاقة؟', f: 'اسمكِ على البطاقة؟', x: 'الاسم على البطاقة؟' }, // nieuw, nalezen
+    coachCode: 'رمز: نفس الأرقام باختصار، لملخص المجموعة. بدون اسم.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'استماع الهاتف (تجربة)', // nieuw, nalezen
     listenHint: { m: 'بعد أن تتكلم، يقول الهاتف هل فهمك. يحدث هذا على الهاتف نفسه. لا يُرسَل شيء إلينا أو إلى غيرنا.', f: 'بعد أن تتكلمي، يقول الهاتف هل فهمكِ. يحدث هذا على الهاتف نفسه. لا يُرسَل شيء إلينا أو إلى غيرنا.', x: 'بعد الكلام، يقول الهاتف هل فهم الكلام. يحدث هذا على الهاتف نفسه. لا يُرسَل شيء إلينا أو إلى غيرنا.' }, // nieuw, nalezen

@@ -18,6 +18,8 @@ De privacyverklaring op vloertaal.nl/privacy (`src/lib/privacyPage.ts`) zegt pre
 | Fouten tellen | `src/lib/errors.ts` | GoatCounter: de soort, een code van 8 tekens en een opgeschoonde melding. Hooguit 3 per bezoek |
 | Melden | `src/lib/report.ts` | Alleen als de leerling de mail zelf verstuurt |
 | Herinnering | `src/lib/reminder.ts` | Alleen als de leerling Google Agenda kiest |
+| Code op de begeleiderskaart | `src/lib/groepCode.ts`, `src/lib/kaart.ts` | Nee: alleen de getallen van de kaart, zonder naam. Gaat mee in de deeltekst als de leerling de kaart zelf deelt |
+| Groepsoverzicht `/groep/` | `src/lib/groepPage.ts`, `src/lib/groep.ts` | Nee: rekent in de browser van de begeleider. De eigen CSP verbiedt elke verbinding (`connect-src 'none'`). Bewaart niets |
 | Hosting | Vercel (VS) | IP-adres bij elk verzoek, zoals bij elke website |
 
 **Tellen gebeurt nooit:**

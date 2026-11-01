@@ -428,6 +428,7 @@ export const uiEn = {
   coachDays: 'Days of practice in the last 4 weeks',
   coachLast: 'Last lesson, with the date',
   coachNameAsk: 'Your name on the card?',
+  coachCode: 'Code: the same numbers, short, for a group overview. No name.',
   // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
   listenTrial: 'Let the phone listen (trial)',
   listenHint: 'After you speak, the phone says if it understood you. This happens on the phone itself. Nothing goes to us or to others.',

@@ -392,6 +392,7 @@ export const uiNl: Record<UiKey, UiText> = {
   coachDays: 'Dagen geoefend in de laatste 4 weken',
   coachLast: 'Laatste les, met de datum',
   coachNameAsk: 'Je naam op de kaart?',
+  coachCode: 'Code: dezelfde getallen, kort, voor een overzicht van de groep. Zonder naam.',
   // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
   listenTrial: 'Laat de telefoon luisteren (proef)',
   listenHint: 'Na het spreken zegt de telefoon of hij je verstaat. Dat gebeurt op de telefoon zelf. Er gaat niets naar ons of naar anderen.',
