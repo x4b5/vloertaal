@@ -9,7 +9,7 @@ import { setRulesTrack } from '../src/lib/track';
 const html = (el: ReturnType<typeof createElement>) => renderToStaticMarkup(el);
 afterEach(() => setRulesTrack(null));
 
-/** The two learning routes (owner's choice, 31 October 2026): first "Wat wil je leren?", then the help language. */
+/** The two learning routes (owner's choice, 31 October 2026): since 1 November 2026 the help language first, then "Wat wil je leren?". */
 describe('the first page: two routes', () => {
   it('asks "Wat wil je leren?" with two cards, in Dutch and the phone\'s language', () => {
     const pl = metaLanguage(langMeta('pl')!);
@@ -24,7 +24,7 @@ describe('the first page: two routes', () => {
     expect(m).toContain('class="onb-say"');
   });
 
-  it('opens on the language page first (the owner's choice, 1 November 2026), also while the track is on', () => {
+  it('opens on the language page first (the owner’s choice, 1 November 2026), also while the track is on', () => {
     setRulesTrack(true);
     const first = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
     expect(first).toContain('onb-lang-list');
