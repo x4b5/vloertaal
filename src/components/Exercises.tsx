@@ -26,6 +26,7 @@ import { BeNote } from './BeNote';
 import { tipNlOnly } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
 import { tipBody } from '../lib/tipText';
+import { dropAsk } from '../lib/dropAsk';
 
 export interface Answer {
   correct: boolean;
@@ -1296,7 +1297,9 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
   const best = tip.options.find((o) => o.best)!;
   const who = tipCast(tip, lang?.gender);
   const said = tip.situation.nl;
-  const text = gloss(tip.situation.id, tip.situation.en, lang);
+  // The heading asks the question ("What do you do?"), so the text does not ask it again.
+  const full = gloss(tip.situation.id, tip.situation.en, lang);
+  const text = tip.situation.ask === 'which' ? full : { ...full, en: dropAsk(full.en), ...(full.help ? { help: dropAsk(full.help) } : {}) };
   // The Dutch in the situation ("Zeg maar je, hoor!") is said by the character, as in a chat.
   useEffect(() => { if (said) autoSpeak(said, false, 'nl', voiceFor(who)); }, [said, who]);
   const talking = useTalking(said ? [said] : [], Boolean(said));

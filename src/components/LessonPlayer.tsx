@@ -970,11 +970,14 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const showGo = !speakRating && Boolean(checked || answer || typing);
   /** The footer button is Continue (not Check): after the answer, or on a step that only goes on. */
   const goIsContinue = (checked && swapped) || autoContinue;
+  // Answered: the question steps back (styles.css "the spotlight after the answer"). Matching has
+  // no Check; it is answered when the last pair is made.
+  const answered = checked || (ex.kind === 'match' && answer !== null);
 
   return (
     // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
     // and English in it keep their own direction (lang="nl" / lang="en" isolates, styles.css).
-    <div className={`player ${rtl ? 'player-rtl' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
+    <div className={`player ${rtl ? 'player-rtl' : ''} ${answered ? 'is-answered' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
       <header className="player-top" inert={askQuit}>
         {/* The only control up here: ✕ opens the pause sheet (keep going, without sound, stop). */}
         <button ref={closeRef} type="button" className="icon-btn lesson-close" onClick={() => setAskQuit(true)} aria-label={said(ui('quitLesson', lang))} lang={saidLang(ui('quitLesson', lang))} aria-haspopup="dialog"><CloseIcon size={28} /></button>
