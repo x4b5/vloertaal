@@ -402,6 +402,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   const coffee = findLesson('l.shift')!.lesson.dialogues![0];
   const byeReply = allReplies.find((r) => r.id === 'c.hello.a')!;
   exercises.chat = { kind: 'chat', dialogue: coffee, options: [coffee.reply, byeReply], ...(q.get('hint') === '1' ? { hint: true as const } : {}) };
+  // &reverse=1: the chat the other way round (the reply given, pick the colleague's question).
+  if (q.get('reverse') === '1') exercises.chat = { kind: 'chat', dialogue: coffee, options: [coffee.prompt, { ...byeReply, nl: 'Ben je ziek?', en: 'Are you sick?' }], reverse: true };
   // Workplace culture: the speak-up tip and its situation (best option listed first);
   // &tip=l.hello another lesson's tip (that one quotes Dutch: "Zeg maar je, hoor!").
   const speakTip = tipForLesson(q.get('tip') ?? 'l.speakup') ?? tipForLesson('l.speakup')!;

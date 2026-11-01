@@ -4092,6 +4092,12 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 /* A chat the other way round (later units): "your" answer is given with what it means, the
    colleague's bubble waits for the question picked. */
 .chat-reversed .chat-bubble-given { flex-wrap: wrap; justify-content: flex-start; flex: 0 1 auto; border-style: solid; border-color: var(--edge); }
+/* The given reply is a speech bubble by "you", not an answer card: never as wide as the options
+   (at most about three fifths of the row, so it starts well in from the edge), against "your" avatar, and with room under the
+   chat before the choices (feedback of the maker, 1 November: the bubble looked like an option). */
+.chat-reversed .chat-bubble-given { max-width: 62%; margin-inline-start: auto; }
+.chat-reversed .chat-me { justify-content: flex-end; }
+.chat-reversed .chat { margin-bottom: 32px; }
 .chat-reversed .chat-bubble-given::before { border-top-style: solid; border-right-style: solid; border-color: var(--edge); }
 .chat-reversed .chat-bubble-given .chat-line { flex: 1 1 0; }
 .chat-reversed .chat-bubble-given .chat-hint {
