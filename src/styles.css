@@ -2562,6 +2562,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .pair-gloss { display: block; font-size: 1.15rem; font-weight: 650; line-height: 1.3; color: var(--ink); }
 .pair-gloss:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.22rem; }
 .pair-en { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
+/* The meaning under the Dutch starts where the Dutch starts, not under the ▶ (44 + 10 px):
+   one left edge reads calmer. Right-to-left help languages keep their own right edge. */
+.feedback-text:not([dir='rtl']) .feedback-say:has(.replay-btn) > :is(.pair-gloss, .pair-en) { padding-inline-start: 54px; }
 
 /* Tip card: the heading in the help language large, the Dutch name a small label. */
 .tip-badge-swap .tip-badge-main { font-size: 1.05rem; font-weight: 650; color: var(--ink); line-height: 1.2; }
