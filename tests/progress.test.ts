@@ -44,7 +44,7 @@ describe('theme default', () => {
     (globalThis as { localStorage?: unknown }).localStorage = ls;
     const { loadProgress } = await import('../src/lib/progress');
     store.clear();
-    expect(loadProgress().theme).toBe('auto');
+    expect(loadProgress().theme).toBe('light');
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'light', themeVersion: 2 }));
     expect(loadProgress().theme).toBe('light');
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, themeVersion: 2 }));
@@ -53,7 +53,11 @@ describe('theme default', () => {
     expect(loadProgress().theme).toBe('light');
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'dark' }));
     expect(loadProgress().theme).toBe('dark');
+    // 'auto' was the default for new learners until light became it (themeVersion 3): now light.
     store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'auto', themeVersion: 2 }));
+    expect(loadProgress().theme).toBe('light');
+    // "Follow the phone" chosen since then stays.
+    store.set('vloertaal:v1', JSON.stringify({ onboarded: true, theme: 'auto', themeVersion: 3 }));
     expect(loadProgress().theme).toBe('auto');
   });
 
