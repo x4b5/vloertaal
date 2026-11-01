@@ -4855,5 +4855,9 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .btn-go.btn-icon-only { padding-inline: 0; }
 .btn-go.btn-icon-only .btn-block { inset-inline-end: auto; inset-inline-start: 50%; translate: -50% 0; }
 [dir='rtl'] .btn-go.btn-icon-only .btn-block { translate: 50% 0; }
+/* Continue as an arrow only: no block behind it ("Vloertaal rustiger"), the › in the button's
+   own text colour (white on green or brick red, ink on yellow), a little larger. */
+.btn-go.btn-icon-only .btn-block { background: transparent; color: inherit; }
+.btn-go.btn-icon-only .btn-block svg { width: 32px; height: 32px; }
 /* While a name is typed on the certificate or the card: where it stays, just under it. */
 .name-hint { margin: 10px 0 0; }
