@@ -30,8 +30,9 @@ dezelfde principes in beeld zien.
 ## 3. Verander het in het voorbeeld zelf
 
 - Wat je aanpast, pas je aan op de plek waar je het ziet. Je ziet het effect meteen.
-  Voorbeeld: de naam op de kaart "Laat zien hoe het gaat". Tik op het potlood en typ op de
-  kaart; de kaart volgt elke letter.
+  Voorbeeld: de naam op het certificaat en op de kaart "Laat zien hoe het gaat". Tik op het
+  potlood en typ op het certificaat of de kaart zelf; die volgt elke letter. Ook de eerste
+  keer: er komt geen apart scherm meer dat eerst om je naam vraagt.
 - Waar dat niet kan, toont de instelling meteen het effect. Een andere tekstgrootte of het
   donkere thema zie je direct, en een stem hoor je meteen.
 - Bekend als *direct manipulation* (Shneiderman, 1983) en als "laat de status van het systeem

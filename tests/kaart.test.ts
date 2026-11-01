@@ -197,9 +197,11 @@ describe('coach card: the screen', () => {
     expect(html).not.toMatch(/lang="(en|ar|pl)"/);
   });
 
-  it('asks for the name first when it was never asked (the certificate’s name)', () => {
+  it('shows the card at once, also when the name was never asked (the name is changed on the card itself)', () => {
     named(null);
-    expect(render(emptyProgress, 'pl')).toContain('Je naam op de kaart?');
+    const html = render(emptyProgress, 'pl');
+    expect(html).not.toContain('Je naam op de kaart?');
+    expect(html).toContain('Laat zien hoe het gaat');
   });
 });
 

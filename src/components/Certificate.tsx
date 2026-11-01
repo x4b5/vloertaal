@@ -1,5 +1,5 @@
 import { dutchUi } from '../lib/track';
-import { Fragment, useEffect, useId, useMemo, useRef, useState } from 'react';
+import { Fragment, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { gloss, langTag, ui, said, saidLang } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import type { SectorChoice } from '../content/sectors';
@@ -75,10 +75,19 @@ export function certAlt(data: CertData): string {
 }
 
 /** The certificate: A4 landscape, paper on a kraft border. Sizes follow its width (cqw). */
-export function CertificateSheet({ data, className }: { data: CertData; className?: string }) {
+export function CertificateSheet({ data, className, nameSlot = false, frameRef, overlay }: {
+  data: CertData;
+  className?: string;
+  /** The name is changed on the sheet itself: its row shows even without a name (screen only;
+   *  the picture and print leave an empty name out), and `overlay` (the field) sits over it. */
+  nameSlot?: boolean;
+  frameRef?: React.Ref<HTMLDivElement>;
+  overlay?: React.ReactNode;
+}) {
   const helpRtl = data.helpDir === 'rtl';
   return (
-    <div className={`cert-frame ${className ?? ''}`} lang="nl" role="img" aria-label={certAlt(data)}>
+    <div className={`cert-frame ${className ?? ''}`} lang="nl" ref={frameRef}>
+      <div className="cert-frame-img" role="img" aria-label={certAlt(data)}>
       <div className="cert" aria-hidden>
         <div className="cert-head">
           <span className="cert-logo"><LogoMark size={120} /></span>
@@ -89,10 +98,10 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
           <span className="cert-unit">Onderwerp {data.unitNo}</span>
         </div>
         <div className="cert-body">
-          {data.name && (
+          {(data.name || nameSlot) && (
             <p className="cert-to">
               <span className="cert-label">Uitgereikt aan</span>
-              <span className="cert-name" dir="auto">{data.name}</span>
+              <span className={`cert-name ${data.name ? '' : 'cert-name-empty'}`} dir="auto">{data.name}</span>
             </p>
           )}
           <h2 className="cert-title"><span>{data.titleNl}</span></h2>
@@ -134,6 +143,8 @@ export function CertificateSheet({ data, className }: { data: CertData; classNam
         </div>
         <p className="cert-note">{CERT_NOTE}</p>
       </div>
+      </div>
+      {overlay}
     </div>
   );
 }
@@ -147,54 +158,6 @@ function ShareGlyph() {
       <path d="M6.5 16.5l4-4.5 3 3 2-2 2 3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
       <circle cx="15.5" cy="8.5" r="1.7" fill="currentColor" />
     </svg>
-  );
-}
-
-/**
- * "Je naam op het certificaat?": a page of its own, asked the first time and after "Change name".
- * Three things: the field, [Done] and [Without name]. Kept on this device only.
- */
-function NamePage({ name, lang, onDone, ask = { nl: 'Je naam op het certificaat?', key: 'certNameAsk' } }: {
-  name: string;
-  lang?: HelpLanguage;
-  onDone: (name: string) => void;
-  /** The question (the coach card asks for "Je naam op de kaart?"; the name is the same one). */
-  ask?: { nl: string; key: UiKey };
-}) {
-  const id = useId();
-  const [value, setValue] = useState(name);
-  const rtl = lang?.dir === 'rtl';
-  // Comes in the place of the button tapped ("Change name", or the certificate row): the focus goes
-  // to the question (not to the field, so no phone keyboard pops up by itself), then Tab to the field.
-  const page = useRef<HTMLDivElement>(null);
-  useFocusWhenLost(page, 'name', '.cert-name-head');
-  return (
-    <div className="screen cert-name-page" ref={page}>
-      <form className="cert-name-form" onSubmit={(e) => { e.preventDefault(); if (value.trim()) onDone(value); }}>
-        <span className="cert-name-icon" aria-hidden><CertIcon size={40} /></span>
-        <label className="keep-head cert-name-head" htmlFor={id} dir={rtl ? 'rtl' : undefined}>
-          <NlPair nlFirst nl={ask.nl} nlClass="keep-nl" dir="ltr" className="keep-gloss" text={ui(ask.key, lang)} />
-        </label>
-        <input
-          id={id}
-          className="cert-name-input"
-          type="text"
-          value={value}
-          maxLength={60}
-          autoComplete="name"
-          autoCapitalize="words"
-          enterKeyHint="done"
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <p className="keep-hint"><Bi text={ui('certNameHint', lang)} /></p>
-        <button type="submit" className="btn btn-primary keep-btn cert-name-done" disabled={!value.trim()}>
-          <NlPair nlFirst nl="Klaar" className="keep-btn-gloss" text={ui('certNameDone', lang)} />
-        </button>
-        <button type="button" className="keep-link cert-no-name" onClick={() => onDone('')}>
-          <NlPair nlFirst nl="Zonder naam" className="keep-link-gloss" text={ui('certNoName', lang)} />
-        </button>
-      </form>
-    </div>
   );
 }
 
@@ -217,8 +180,8 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
 }) {
   const [stored] = useState(loadCertName);
   const [name, setName] = useState(stored ?? '');
-  /** The name page shows the first time (never asked), or after "Change name". */
-  const [asking, setAsking] = useState(stored === null);
+  /** The name is being typed on the certificate itself (no page of its own, also the first time). */
+  const [editing, setEditing] = useState(false);
   const [busy, setBusy] = useState(false);
   const [saved, setSaved] = useState(false);
   const base = certData(unit, day, name, lang, sector, region, completed);
@@ -243,14 +206,14 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
     document.title = `Vloertaal certificaat - ${unit.titleNl}`;
     return () => { document.title = before; };
   }, [unit.titleNl]);
-  useEffect(() => { window.scrollTo(0, 0); }, [asking]);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   // The picture is drawn ahead (a moment after the sheet shows), so a tap shares it at once: a
   // phone refuses the share sheet when the tap was too long ago.
   const key = JSON.stringify(data);
   const png = useRef<{ key: string; blob: Promise<Blob> } | null>(null);
   useEffect(() => {
-    if (asking) return;
+    if (editing) return;
     const t = window.setTimeout(() => {
       const blob = certificatePng(data);
       blob.catch(() => {});
@@ -258,9 +221,29 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
     }, 300);
     return () => window.clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key, asking]);
+  }, [key, editing]);
 
-  const done = (n: string) => { saveCertName(n); setName(n.trim()); setAsking(false); };
+  const finishEdit = () => { saveCertName(name); setName(name.trim()); setEditing(false); };
+  // Where the name's row is on the sheet (it scales with the screen), for the field over it.
+  const frame = useRef<HTMLDivElement>(null);
+  const [nameAt, setNameAt] = useState<{ top: number; height: number } | null>(null);
+  useLayoutEffect(() => {
+    const el = frame.current;
+    if (!el) return;
+    const measure = () => {
+      const row = el.querySelector('.cert-to');
+      if (!row) return;
+      const f = el.getBoundingClientRect();
+      const r = row.getBoundingClientRect();
+      if (!f.height) return;
+      setNameAt({ top: ((r.top - f.top) / f.height) * 100, height: (r.height / f.height) * 100 });
+    };
+    measure();
+    if (typeof ResizeObserver !== 'function') return;
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [key]);
   // Shared where the phone can share files, else (or when sharing fails) saved as a PNG, like the
   // pocket card. Only a picture that could not be drawn at all opens the print dialog.
   const share = async () => {
@@ -280,8 +263,7 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
 
   // Back from the name page (same screen, other page): the focus to the certificate's title.
   const view = useRef<HTMLDivElement>(null);
-  useFocusWhenLost(view, asking, 'h1');
-  if (asking) return <NamePage name={name} lang={lang} onDone={done} />;
+  useFocusWhenLost(view, editing, 'h1');
   return (
     <div className="screen cert-screen" ref={view}>
       <div className="screen-head" dir={rtl ? 'rtl' : undefined}>
@@ -290,7 +272,24 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
           <NlPair nlFirst nl="Certificaat" nlClass="cert-screen-nl" text={ui('certificate', lang)} />
         </h1>
       </div>
-      <CertificateSheet data={data} />
+      <CertificateSheet
+        data={data}
+        nameSlot
+        frameRef={frame}
+        overlay={nameAt ? (
+          <NameInPlace
+            style={{ top: `${nameAt.top + nameAt.height / 2}%` }}
+            empty={!name}
+            variant="cert"
+            name={name}
+            editing={editing}
+            lang={lang}
+            onEdit={() => setEditing(true)}
+            onChange={setName}
+            onDone={finishEdit}
+          />
+        ) : null}
+      />
       <p className="cert-practice">
         <NlPair nlFirst nl={CERT_NOTE} text={ui('certPractice', lang)} />
       </p>
@@ -306,9 +305,6 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
         <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
       )}
       <KunJeNuSection zinnen={zinnen} lang={lang} />
-      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)} dir={rtl ? 'rtl' : undefined}>
-        <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
-      </button>
     </div>
   );
 }
@@ -498,7 +494,6 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
 }) {
   const [stored] = useState(loadCertName);
   const [name, setName] = useState(stored ?? '');
-  const [asking, setAsking] = useState(stored === null);
   const [today] = useState(() => fixedToday ?? new Date());
   const data = useMemo(() => ({ ...kaartData(progress, name, today), helpCode: lang?.code }), [progress, name, today, lang?.code]);
   const key = JSON.stringify(data);
@@ -513,7 +508,6 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   // The picture is drawn when the screen opens: it is what the screen shows, and a tap on
   // [Bewaar of deel] then shares it at once (a phone refuses the share sheet when the tap was long ago).
   useEffect(() => {
-    if (asking) return;
     let alive = true;
     let url: string | null = null;
     setFailed(false);
@@ -529,10 +523,9 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
       if (url) URL.revokeObjectURL(url);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key, asking]);
-  useEffect(() => { window.scrollTo(0, 0); }, [asking]);
+  }, [key]);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  const done = (n: string) => { saveCertName(n); setName(n.trim()); setAsking(false); };
   // While typing on the card, the last picture stays until the new one is drawn (no flicker).
   const shown = png?.key === key || (editing && png) ? png : null;
   const finishEdit = () => { saveCertName(name); setName(name.trim()); setEditing(false); };
@@ -551,8 +544,7 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   };
 
   const view = useRef<HTMLDivElement>(null);
-  useFocusWhenLost(view, asking, 'h1');
-  if (asking) return <NamePage name={name} lang={lang} onDone={done} ask={{ nl: 'Je naam op de kaart?', key: 'coachNameAsk' }} />;
+  useFocusWhenLost(view, editing, 'h1');
   const intro = ui('coachCardIntro', lang);
   const alt = kaartAlt(data);
   return (
@@ -588,8 +580,10 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
                 in the same place, and the picture follows each letter. Without a name, the
                 pencil sits where the name would go. */}
             {shown.box.height ? (
-              <NameOnCard
-                box={shown.box}
+              <NameInPlace
+                style={kaartNameStyle(shown.box)}
+                empty={shown.box.bottom - shown.box.top < 1}
+                variant="kaart"
                 name={name}
                 editing={editing}
                 lang={lang}
@@ -626,13 +620,16 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
 }
 
 /**
- * The name on the coach card, editable where it is (the principle "change it in the example
- * itself"): over the picture, at the name's place (`box`, from the drawing), a button with a
- * pencil; a tap makes it a field there. Each letter redraws the card; Enter or leaving the field
- * keeps the name (as on the certificates). An empty name takes the name off the card.
+ * A name changed where it is shown (the principle "change it in the example itself"): over the
+ * picture of the coach card or the certificate, at the name's place (`style`, from the caller),
+ * a button with a pencil; a tap makes it a field there. Each letter redraws what is under it;
+ * Enter or leaving the field keeps the name (one name for the certificates and the card). An
+ * empty name takes it off. `empty`: there is no name yet, the pencil marks where it goes.
  */
-function NameOnCard({ box, name, editing, lang, onEdit, onChange, onDone }: {
-  box: KaartNameBox;
+function NameInPlace({ style, empty, variant, name, editing, lang, onEdit, onChange, onDone }: {
+  style: React.CSSProperties;
+  empty: boolean;
+  variant: 'kaart' | 'cert';
   name: string;
   editing: boolean;
   lang?: HelpLanguage;
@@ -640,17 +637,12 @@ function NameOnCard({ box, name, editing, lang, onEdit, onChange, onDone }: {
   onChange: (name: string) => void;
   onDone: () => void;
 }) {
-  const H = box.height ?? 1;
-  const empty = box.bottom - box.top < 1;
-  const style = {
-    top: `${(box.top / H) * 100}%`,
-    height: empty ? undefined : `${((box.bottom - box.top) / H) * 100}%`,
-  };
   const label = said(ui('certChangeName', lang));
+  const cls = `name-${variant} ${empty ? 'is-empty' : ''}`;
   if (editing) {
     return (
       <input
-        className={`kaart-name-input ${empty ? 'is-empty' : ''}`}
+        className={`name-in-place-input ${cls}`}
         style={style}
         type="text"
         value={name}
@@ -668,8 +660,15 @@ function NameOnCard({ box, name, editing, lang, onEdit, onChange, onDone }: {
     );
   }
   return (
-    <button type="button" className={`kaart-name-edit ${empty ? 'is-empty' : ''}`} style={style} onClick={onEdit} aria-label={label} lang={saidLang(ui('certChangeName', lang))}>
-      <span className="kaart-name-pencil" aria-hidden><PencilIcon size={22} /></span>
+    <button type="button" className={`name-in-place-edit ${cls}`} style={style} onClick={onEdit} aria-label={label} lang={saidLang(ui('certChangeName', lang))}>
+      <span className="name-in-place-pencil" aria-hidden><PencilIcon size={22} /></span>
     </button>
   );
+}
+
+/** Where the name sits on the coach card's picture, as a share of its height. */
+function kaartNameStyle(box: KaartNameBox): React.CSSProperties {
+  const H = box.height ?? 1;
+  const empty = box.bottom - box.top < 1;
+  return { top: `${(box.top / H) * 100}%`, height: empty ? undefined : `${((box.bottom - box.top) / H) * 100}%` };
 }
