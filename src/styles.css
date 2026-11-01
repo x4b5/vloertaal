@@ -4734,8 +4734,10 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .tip-say-page .tip-phrase-nl { font-size: 1.35rem; }
 /* The tip's first page ("Zo werkt het hier") on its own: only the title and at most three
    sentences, so the text can be larger than on the old combined page (where the phone is tall
-   enough; a small screen keeps the compact size). */
-@media (min-height: 780px) {
+   enough; a small screen keeps the compact size). 640 px: a phone in a browser with its bars
+   (an iPhone in Chrome is about 660 px high); the longest tips, also in Ukrainian and Arabic,
+   still end above the Continue bar at 375 × 640. */
+@media (min-height: 640px) {
   .tip-page-read .tip-title { font-size: 1.6rem; }
   .tip-page-read .tip-body { font-size: 1.25rem; line-height: 1.5; }
   .tip-page-read .tip-body .bi-help { --help-size: 0.82em; }
