@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Themen zeigen',
     privacyLink: 'Datenschutzerklärung lesen (auf Niederländisch)', // nieuw, nalezen
     routeTitle: 'Was möchtest du lernen?', // nieuw, nalezen
-    routeLearn: 'Niederländisch für die Arbeit lernen', // nieuw, nalezen
-    routeRules: 'Ich spreche schon Niederländisch: die Regeln bei der Arbeit', // nieuw, nalezen
+    routeLearn: 'Niederländisch für die Arbeit lernen – und wie Arbeit hier läuft', // nieuw, nalezen
+    routeRules: 'Ich spreche schon Niederländisch: nur die Regeln bei der Arbeit', // nieuw, nalezen
     routeLearnShort: 'Niederländisch lernen', // nieuw, nalezen
     byTheme: 'Nach Bereich',
     inOrder: 'Der Reihe nach',

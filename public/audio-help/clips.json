@@ -7,12 +7,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "تعلّم الهولندية للعمل",
+   "text": "تعلّم الهولندية للعمل، وكيف يسير العمل هنا",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "أتكلّم الهولندية: قواعد العمل",
+   "text": "أتكلّم الهولندية: قواعد العمل فقط",
    "page": "route"
   },
   {
@@ -99,12 +99,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "ንስራሕ ሆላንድኛ ምምሃር",
+   "text": "ንስራሕ ሆላንድኛ ምምሃርን ስራሕ ኣብዚ ከመይ ከም ዝኸይድን",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "ሆላንድኛ እዛረብ እየ፡ ሕግታት ስራሕ",
+   "text": "ሆላንድኛ እዛረብ እየ፡ ሕግታት ስራሕ ጥራይ",
    "page": "route"
   },
   {
@@ -196,12 +196,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "یادگیری هلندی برای کار",
+   "text": "یادگیری هلندی برای کار، و اینکه کار اینجا چطور است",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "هلندی بلدم: قوانین کار",
+   "text": "هلندی بلدم: فقط قوانین کار",
    "page": "route"
   },
   {
@@ -258,12 +258,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "آموختن هالندی برای کار",
+   "text": "آموختن هالندی برای کار، و اینکه کار در اینجا چگونه است",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "هالندی را بلد هستم: قوانین کار",
+   "text": "هالندی را بلد هستم: فقط قوانین کار",
    "page": "route"
   },
   {
@@ -320,12 +320,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "Вивчати нідерландську для роботи",
+   "text": "Вивчати нідерландську для роботи і те, як тут влаштована робота",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "Я вже говорю нідерландською: правила роботи",
+   "text": "Я вже говорю нідерландською: лише правила роботи",
    "page": "route"
   },
   {
@@ -382,12 +382,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "İş için Hollandaca öğren",
+   "text": "İş için Hollandaca ve burada işin nasıl yürüdüğünü öğren",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "Hollandaca biliyorum: iş kuralları",
+   "text": "Hollandaca biliyorum: sadece iş kuralları",
    "page": "route"
   },
   {
@@ -444,12 +444,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "Nauka niderlandzkiego do pracy",
+   "text": "Nauka niderlandzkiego do pracy i tego, jak tu wygląda praca",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "Mówię już po niderlandzku: zasady pracy",
+   "text": "Mówię już po niderlandzku: tylko zasady pracy",
    "page": "route"
   },
   {
@@ -506,12 +506,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "Învață olandeză pentru muncă",
+   "text": "Învață olandeză pentru muncă și cum se lucrează aici",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "Vorbesc deja olandeză: regulile muncii",
+   "text": "Vorbesc deja olandeză: doar regulile muncii",
    "page": "route"
   },
   {
@@ -568,12 +568,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "Нидерландски за работа",
+   "text": "Нидерландски за работа и как се работи тук",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "Вече говоря нидерландски: правилата в работата",
+   "text": "Вече говоря нидерландски: само правилата в работата",
    "page": "route"
   },
   {
@@ -630,12 +630,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "Aprender neerlandés para el trabajo",
+   "text": "Aprender neerlandés para el trabajo, y cómo funciona el trabajo aquí",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "Ya hablo neerlandés: las reglas del trabajo",
+   "text": "Ya hablo neerlandés: solo las reglas del trabajo",
    "page": "route"
   },
   {
@@ -692,12 +692,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "Aprender neerlandês para o trabalho",
+   "text": "Aprender neerlandês para o trabalho, e como funciona o trabalho aqui",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "Já falo neerlandês: as regras do trabalho",
+   "text": "Já falo neerlandês: só as regras do trabalho",
    "page": "route"
   },
   {
@@ -754,12 +754,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "Apprendre le néerlandais pour le travail",
+   "text": "Apprendre le néerlandais pour le travail, et comment le travail se passe ici",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "Je parle déjà néerlandais : les règles du travail",
+   "text": "Je parle déjà néerlandais : seulement les règles du travail",
    "page": "route"
   },
   {
@@ -816,12 +816,12 @@
   },
   {
    "id": "routeLearn",
-   "text": "Niederländisch für die Arbeit lernen",
+   "text": "Niederländisch für die Arbeit lernen – und wie Arbeit hier läuft",
    "page": "route"
   },
   {
    "id": "routeRules",
-   "text": "Ich spreche schon Niederländisch: die Regeln bei der Arbeit",
+   "text": "Ich spreche schon Niederländisch: nur die Regeln bei der Arbeit",
    "page": "route"
   },
   {

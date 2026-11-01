@@ -48,8 +48,8 @@ export const aboutSections: AboutSection[] = [
   {
     id: 'a.what', emoji: '🦺', title: 'What is Vloertaal?',
     lead: {
-      en: 'Vloertaal helps you learn the Dutch you need for your work. A lesson takes a few minutes. It is an extra: a language course is still needed.',
-      nl: 'Met Vloertaal leer je het Nederlands voor je werk. Een les duurt een paar minuten. Het is een extra: een taalcursus blijft nodig.',
+      en: 'Vloertaal helps you learn the Dutch you need for your work. You also learn how work goes here: your contract, your pay, calling in sick. A lesson takes a few minutes. It is an extra: a language course is still needed.',
+      nl: 'Met Vloertaal leer je het Nederlands voor je werk. Je leert ook hoe werk hier gaat: je contract, je loon, je ziekmelden. Een les duurt een paar minuten. Het is een extra: een taalcursus blijft nodig.',
       nlRules: 'Vloertaal legt uit hoe werken in Nederland en België gaat. Een les duurt een paar minuten. Het is een extra: advies van je werkgever of een vakbond blijft nodig.',
     },
     body: 'Vloertaal helps you learn the Dutch you need at work: in the warehouse, the kitchen, the factory or on the building site. Not only the words on the work floor, but all the language around work: applying for a job, your contract and pay slip, your rights, housing and papers, calling in sick and getting along with colleagues. The lessons are short, so you can practise a few minutes every day. Think of Vloertaal as a small extra for in between. It does not replace a language course or a language coach.',

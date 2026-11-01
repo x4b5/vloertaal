@@ -91,8 +91,8 @@ export const uiEn = {
   privacyLink: "Read the privacy statement (in Dutch)",
   /* The first question (src/components/Screens.tsx RoutePage) and Settings: the two learning routes. */
   routeTitle: "What do you want to learn?",
-  routeLearn: "Learn Dutch for work",
-  routeRules: "I already speak Dutch: the work rules",
+  routeLearn: "Learn Dutch for work, and how work goes here",
+  routeRules: "I already speak Dutch: only the work rules",
   routeLearnShort: "Learn Dutch",
   topicsOrder: "Show the topics",
   byTheme: "By theme",

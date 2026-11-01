@@ -25,7 +25,7 @@ import { HelpSay } from './HelpSay';
 import { BeNote } from './BeNote';
 import { tipNlOnly } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
-import { tipBody } from '../lib/tipText';
+import { splitClosing, tipBody } from '../lib/tipText';
 import { dropAsk } from '../lib/dropAsk';
 
 export interface Answer {
@@ -1096,6 +1096,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       </div>
     );
   }
+  const text = splitClosing(tipBody(tip, lang), lang);
   return (
     <div className={`exercise tip ${part === 'read' ? 'tip-page-read' : ''}`}>
       {badge}
@@ -1105,9 +1106,10 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       {isTaalBeId(tip.id) && <BeNote lang={lang} kind="beta" />}
       {/* The first sentences (the lead); the whole tip is in Hulp › Zo werkt het hier. On a page of
           its own (part 'read') without the "…": that only made the learner look for more here. */}
-      <TipBody text={say ? shortTip(tipBody(tip, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(tipBody(tip, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} />
+      <TipBody text={say ? shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} />
       {say && phrase}
-      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={ui('tipsNote', lang)} /></p></InfoMore>
+      {/* Who can help (the tip's closing line, cut off above) or else what these tips are. */}
+      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={text.closing ?? ui('tipsNote', lang)} /></p></InfoMore>
     </div>
   );
 }

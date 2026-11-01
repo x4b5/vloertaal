@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Konuları göster',
     privacyLink: 'Gizlilik açıklamasını oku (Hollandaca)', // nieuw, nalezen
     routeTitle: 'Ne öğrenmek istiyorsun?', // nieuw, nalezen
-    routeLearn: 'İş için Hollandaca öğren', // nieuw, nalezen
-    routeRules: 'Hollandaca biliyorum: iş kuralları', // nieuw, nalezen
+    routeLearn: 'İş için Hollandaca ve burada işin nasıl yürüdüğünü öğren', // nieuw, nalezen
+    routeRules: 'Hollandaca biliyorum: sadece iş kuralları', // nieuw, nalezen
     routeLearnShort: 'Hollandaca öğren', // nieuw, nalezen
     byTheme: 'Temaya göre',
     inOrder: 'Sırayla',

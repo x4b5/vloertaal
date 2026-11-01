@@ -106,7 +106,7 @@ ${unitSections(own)}
 <p>Kies je in de app bij de vraag waar je werkt voor ‘${esc(group.nl)}’ en dan ‘${esc(page.name)}’? Dan staat ${names} al vroeg in je lespad, meteen na de eerste basisonderwerpen. Ook ${esc(focus.map((f) => `‘${f}’`).join(' en '))} komen eerder aan de beurt. Alle andere onderwerpen blijven open: je kiest zelf.</p>
 <p>Leidinggevende of werkgever in ${esc(page.short)}? Stuur je nieuwe collega’s de link naar deze pagina, of naar de pagina in hun eigen taal (hieronder). Meer tips staan bij <a href="${COACH_PATH}">Voor begeleiders en werkgevers</a>.</p></section>
 ${rules.length ? `<section aria-labelledby="rules"><h2 id="rules">Werkregels voor ${esc(page.phrase)}</h2>
-<p>Spreek je al Nederlands? Kies dan in de app “Nederlands”. Dan leer je de regels op het werk, ook voor ${esc(page.phrase)}:</p>
+<p>Spreek je al Nederlands? Kies dan in de app “Ik spreek al Nederlands”. Dan leer je de regels op het werk, ook voor ${esc(page.phrase)}:</p>
 ${rules.map((l) => `<h3>${esc(l.title)}</h3><p>${esc(l.goal)}</p><p class="remember">Onthoud: ${esc(l.remember)}</p>`).join('\n')}
 <p><a href="${RULES_PATH}">Alle werkregels</a></p></section>` : ''}
 <a class="cta" href="${appLink(own[0].id)}">Oefen ${names} in Vloertaal →</a>
@@ -136,7 +136,7 @@ export function rulesPage(): string {
     { path: RULES_PATH, lang: 'nl', title, description, ogLocale: 'nl_NL', data },
     `<h1>Werkregels: hoe werken in Nederland gaat</h1>
 <p class="lead">Vloertaal Werkregels is voor wie al Nederlands spreekt en in Nederland werkt of werk zoekt. Je leert de regels van de wet en je contract, en de regels die nergens staan maar die iedereen kent. In korte lessen: een verhaal, de regel, en dan kies je zelf wat je doet. ${all.length} onderwerpen, ${lessons} lessen. Gratis, zonder account.</p>
-<a class="cta" href="/">Open Vloertaal en kies “Nederlands” →</a>
+<a class="cta" href="/">Open Vloertaal en kies “Ik spreek al Nederlands” →</a>
 ${all
   .map(
     (u, i) => `<section aria-labelledby="u${i}"><h2 id="u${i}"><a href="${rulesTopicPath(u.id)}">${esc(u.title)}</a></h2>
@@ -145,7 +145,7 @@ ${all
   )
   .join('\n')}
 <section aria-labelledby="note"><h2 id="note">Goed om te weten</h2><p>${esc(RULES_DISCLAIMER.join(' '))}</p></section>
-<a class="cta" href="/">Open Vloertaal en kies “Nederlands” →</a>
+<a class="cta" href="/">Open Vloertaal en kies “Ik spreek al Nederlands” →</a>
 ${footer(RULES_PATH)}`,
   );
 }
