@@ -4753,3 +4753,5 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
       out. They can still be tapped; after Check they fade as before (.faded). */
 .choices-rows:has(.choice.picked) .choice:not(.picked, .right, .wrong, .faded) { border-color: var(--line); color: var(--ink-2); }
 .choices-rows:has(.choice.picked) .choice:not(.picked, .right, .wrong, .faded) :is(.choice-pic, .pic-emoji) { opacity: 0.7; }
+/* 5. A plain right answer has no heading: the one line sits level with the check. */
+.feedback:not(:has(.feedback-head)) { align-items: center; }
