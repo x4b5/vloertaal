@@ -1,0 +1,5 @@
+# Bouwinstructies voor statichost.eu (Zweden): zelfde bouw als lokaal, uitvoer in dist/.
+# Beveiliging en bewaartijden: public/_headers. Doorsturen: public/_redirects.
+image: node:22
+command: npm ci && npm run build
+public: dist
