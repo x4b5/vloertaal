@@ -11,6 +11,7 @@ const t: CultureTranslation = {
   gloss: {
     'a.what': 'Vloertaal nedir?',
     'a.what.b': 'Vloertaal, işinde ihtiyacın olan Hollandacayı öğrenmene yardım eder: depoda, mutfakta, fabrikada ya da inşaatta. Sadece iş yerindeki kelimeler değil, işle ilgili tüm dil: işe başvurmak, sözleşmen ve maaş bordron, hakların, konut ve belgeler, hastalık bildirmek ve iş arkadaşlarınla iyi geçinmek. Dersler kısadır, böylece her gün birkaç dakika pratik yapabilirsin. Vloertaal’ı boş anlar için küçük bir ek olarak düşün. Bir dil kursunun ya da bir dil öğretmeninin yerini tutmaz.',
+    'a.what.lead': 'Vloertaal ile işin için gereken Felemenkçeyi öğrenirsin. Bir ders birkaç dakika sürer. Bu bir ektir: bir dil kursu yine de gereklidir.', // nieuw, nalezen
     'a.story': 'Neden Vloertaal?', // nieuw, nalezen
     'a.story.b': 'Merhaba, ben Xavier. İş danışmanı olarak çalışıyorum. İnsanların iş bulmasına yardım ediyorum. Bazen bir iş yine de kötü gidiyor. Bunun sebebi çoğu zaman dil: biri açıklamayı anlamıyor ya da soru sormaya cesaret edemiyor. Bu yüzden Vloertaal’ı başlattım. Umarım uygulama yardımcı olur. Böylece daha çok insan işini iyi yapabilir ve işini kaybetmez. Ama bu uygulamayı tek başıma yapamam, yapmak da istemiyorum.', // nieuw, nalezen
     'a.beta': 'Deneme sürümü',

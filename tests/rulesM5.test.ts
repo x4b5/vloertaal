@@ -165,7 +165,8 @@ describe('Over in the work-rules track', () => {
     noEnglish(m, 'About');
     expect(m).not.toContain('class="about-nl"');
     expect(m).toContain(`href="mailto:${CONTACT_EMAIL}"`);
-    expect(m).toContain(aboutRules[0].body);
+    // The first section: its short version in the app (the web pages keep the long one).
+    expect(m).toContain(aboutRules[0].lead ?? aboutRules[0].body);
     expect(m).not.toContain('Zo werkt het hier');
     expect(m).not.toContain('Voor begeleiders');
   });

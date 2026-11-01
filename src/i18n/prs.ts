@@ -178,9 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'بعداً',
     certPrint: 'چاپ کنید یا منحیث PDF ذخیره کنید',
     certSaved: 'عکس ذخیره شد.',
-    certNameAsk: 'نام شما بالای تصدیق‌نامه؟',
     certNameHint: 'تنها در همین تیلفون می‌ماند. می‌توانید خالی بگذارید.',
-    certNoName: 'بدون نام',
     certChangeName: 'تغییر نام',
     certPractice: 'تصدیق‌نامهٔ تمرینی، نه دیپلوم رسمی',
     resumeLesson: 'ادامهٔ درس',
@@ -272,7 +270,6 @@ const lang: HelpLanguageSource = {
     remindNo: 'نی، تشکر',
     remindPickTime: 'چه وقت به شما یادآوری کنیم؟',
     certSaveShare: 'ذخیره یا شریک‌سازی',
-    certNameDone: 'خلاص',
     pauseTitle: 'مکث',
     back: 'برگشت',
     quitLesson: 'خروج از درس',
@@ -361,7 +358,6 @@ const lang: HelpLanguageSource = {
     coachTopics: 'موضوعات تمام‌شده', // nieuw, nalezen
     coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen
     coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen
-    coachNameAsk: 'نام شما روی کارت؟', // nieuw, nalezen // nagelezen AI 31 okt
     coachCode: 'کود: همان عددها، کوتاه، برای خلاصهٔ گروپ. بدون نام.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'گوش دادن تیلفون (آزمایشی)', // nieuw, nalezen

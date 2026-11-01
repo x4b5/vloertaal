@@ -178,9 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'Sonra',
     certPrint: 'Yazdır veya PDF olarak kaydet',
     certSaved: 'Resim kaydedildi.',
-    certNameAsk: 'Sertifikada adın?',
     certNameHint: 'Sadece bu telefonda kalır. Boş bırakabilirsin.',
-    certNoName: 'İsimsiz',
     certChangeName: 'Adı değiştir',
     certPractice: 'Alıştırma sertifikası, resmî diploma değil',
     resumeLesson: 'Derse devam et',
@@ -272,7 +270,6 @@ const lang: HelpLanguageSource = {
     remindNo: 'Hayır, teşekkürler',
     remindPickTime: 'Sana ne zaman hatırlatalım?',
     certSaveShare: 'Kaydet veya paylaş',
-    certNameDone: 'Tamam',
     pauseTitle: 'Mola',
     back: 'Geri',
     quitLesson: 'Dersten çık',
@@ -361,7 +358,6 @@ const lang: HelpLanguageSource = {
     coachTopics: 'Biten konular', // nieuw, nalezen
     coachDays: 'Son 4 haftada çalışılan günler', // nieuw, nalezen
     coachLast: 'Son ders, tarihiyle', // nieuw, nalezen
-    coachNameAsk: 'Kartta adın?', // nieuw, nalezen
     coachCode: 'Kod: aynı sayılar, kısaca, grup özeti için. İsim yok.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Telefon dinlesin (deneme)', // nieuw, nalezen

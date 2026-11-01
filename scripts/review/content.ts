@@ -135,6 +135,7 @@ export function idIndex(): Map<string, IdInfo> {
   for (const s of [...aboutSections, ...siteSections]) {
     add(s.id, { nl: s.nl.title, en: s.title, waar: `Over › ${s.nl.title} › titel`, rank: 3 });
     add(`${s.id}.b`, { nl: s.nl.body, en: s.body, waar: `Over › ${s.nl.title} › tekst`, rank: 3 });
+    if ('lead' in s && s.lead) add(`${s.id}.lead`, { nl: s.lead.nl, en: s.lead.en, waar: `Over › ${s.nl.title} › korte tekst in de app`, rank: 3 });
   }
   for (const t of THEMES) add(t.id, { nl: t.titleNl, en: t.title, waar: 'Thema › naam', rank: 3 });
   add('be.theme.life', { nl: 'Leven in België', en: 'Life in Belgium', waar: 'Thema › naam (België)', rank: 3, land: 'BE' });

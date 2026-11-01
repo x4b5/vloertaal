@@ -178,9 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'لاحقًا',
     certPrint: { m: 'اطبع أو احفظ كملف PDF', f: 'اطبعي أو احفظي كملف PDF', x: 'طباعة أو حفظ كملف PDF' }, // x: nieuw, nalezen
     certSaved: 'تم حفظ الصورة.',
-    certNameAsk: 'اسمك على الشهادة؟',
     certNameHint: 'يبقى على هذا الهاتف فقط. يمكنك تركه فارغًا.',
-    certNoName: 'بدون اسم',
     certChangeName: { m: 'غيّر الاسم', f: 'غيّري الاسم', x: 'تغيير الاسم' }, // x: nieuw, nalezen
     certPractice: 'شهادة تدريب، وليست دبلومًا رسميًا',
     resumeLesson: { m: 'تابع الدرس', f: 'تابعي الدرس', x: 'متابعة الدرس' }, // x: nieuw, nalezen
@@ -272,7 +270,6 @@ const lang: HelpLanguageSource = {
     remindNo: 'لا، شكرًا',
     remindPickTime: 'متى نذكّرك؟',
     certSaveShare: { m: 'احفظ أو شارك', f: 'احفظي أو شاركي', x: 'حفظ أو مشاركة' }, // x: nieuw, nalezen
-    certNameDone: 'تم',
     pauseTitle: 'إيقاف مؤقت',
     back: 'رجوع',
     quitLesson: { m: 'اخرج من الدرس', f: 'اخرجي من الدرس', x: 'الخروج من الدرس' }, // x: nieuw, nalezen
@@ -361,7 +358,6 @@ const lang: HelpLanguageSource = {
     coachTopics: 'المواضيع المنتهية', // nieuw, nalezen
     coachDays: 'أيام التمرين في آخر 4 أسابيع', // nieuw, nalezen
     coachLast: 'آخر درس، مع التاريخ', // nieuw, nalezen
-    coachNameAsk: { m: 'اسمك على البطاقة؟', f: 'اسمكِ على البطاقة؟', x: 'الاسم على البطاقة؟' }, // nieuw, nalezen
     coachCode: 'رمز: نفس الأرقام باختصار، لملخص المجموعة. بدون اسم.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'استماع الهاتف (تجربة)', // nieuw, nalezen

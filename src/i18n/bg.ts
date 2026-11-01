@@ -178,9 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'По-късно',
     certPrint: 'Отпечатай или запази като PDF',
     certSaved: 'Снимката е запазена.',
-    certNameAsk: 'Твоето име на сертификата?',
     certNameHint: 'Остава само на този телефон. Може да го оставиш празно.',
-    certNoName: 'Без име',
     certChangeName: 'Смени името',
     certPractice: 'Сертификат за упражнение, не официална диплома',
     resumeLesson: 'Продължи урока',
@@ -272,7 +270,6 @@ const lang: HelpLanguageSource = {
     remindNo: 'Не, благодаря',
     remindPickTime: 'Кога да ти напомняме?',
     certSaveShare: 'Запази или сподели',
-    certNameDone: 'Готово',
     pauseTitle: 'Пауза',
     back: 'Назад',
     quitLesson: 'Изход от урока',
@@ -361,7 +358,6 @@ const lang: HelpLanguageSource = {
     coachTopics: 'Завършени теми', // nieuw, nalezen
     coachDays: 'Дни с упражнения през последните 4 седмици', // nieuw, nalezen
     coachLast: 'Последен урок, с датата', // nieuw, nalezen
-    coachNameAsk: 'Името ти на картата?', // nieuw, nalezen
     coachCode: 'Код: същите числа накратко, за преглед на групата. Без име.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Телефонът слуша (проба)', // nieuw, nalezen

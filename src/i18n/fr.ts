@@ -178,9 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'Plus tard',
     certPrint: 'Imprimer ou enregistrer en PDF',
     certSaved: 'L’image est enregistrée.',
-    certNameAsk: 'Ton nom sur le certificat ?',
     certNameHint: 'Il reste seulement sur ce téléphone. Tu peux le laisser vide.',
-    certNoName: 'Sans nom',
     certChangeName: 'Changer le nom',
     certPractice: 'Certificat d’entraînement, pas un diplôme officiel',
     resumeLesson: 'Reprendre la leçon',
@@ -272,7 +270,6 @@ const lang: HelpLanguageSource = {
     remindNo: 'Non merci',
     remindPickTime: 'Quand veux-tu un rappel ?',
     certSaveShare: 'Enregistrer ou partager',
-    certNameDone: 'Fait',
     pauseTitle: 'Pause',
     back: 'Retour',
     quitLesson: 'Quitter la leçon',
@@ -361,7 +358,6 @@ const lang: HelpLanguageSource = {
     coachTopics: 'Thèmes terminés', // nieuw, nalezen
     coachDays: 'Jours d’exercice ces 4 dernières semaines', // nieuw, nalezen
     coachLast: 'Dernière leçon, avec la date', // nieuw, nalezen
-    coachNameAsk: 'Ton nom sur la carte ?', // nieuw, nalezen
     coachCode: 'Code : les mêmes chiffres, en court, pour un aperçu du groupe. Sans nom.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Le téléphone écoute (essai)', // nieuw, nalezen

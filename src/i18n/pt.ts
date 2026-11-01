@@ -178,9 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'Mais tarde',
     certPrint: 'Imprimir ou guardar como PDF',
     certSaved: 'A imagem está guardada.',
-    certNameAsk: 'O teu nome no certificado?',
     certNameHint: 'Fica só neste telemóvel. Podes deixar em branco.',
-    certNoName: 'Sem nome',
     certChangeName: 'Mudar o nome',
     certPractice: 'Certificado de prática, não é um diploma oficial',
     resumeLesson: 'Continuar a lição',
@@ -272,7 +270,6 @@ const lang: HelpLanguageSource = {
     remindNo: { m: 'Não, obrigado', f: 'Não, obrigada', x: 'Não, obrigado / obrigada' }, // x: nieuw, nalezen
     remindPickTime: 'Quando te devemos lembrar?',
     certSaveShare: 'Guardar ou partilhar',
-    certNameDone: 'Pronto',
     pauseTitle: 'Pausa',
     back: 'Voltar',
     quitLesson: 'Sair da lição',
@@ -361,7 +358,6 @@ const lang: HelpLanguageSource = {
     coachTopics: 'Temas terminados', // nieuw, nalezen
     coachDays: 'Dias de prática nas últimas 4 semanas', // nieuw, nalezen
     coachLast: 'Última lição, com a data', // nieuw, nalezen
-    coachNameAsk: 'O teu nome no cartão?', // nieuw, nalezen
     coachCode: 'Código: os mesmos números, em curto, para um resumo do grupo. Sem nome.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'O telemóvel ouve (experimental)', // nieuw, nalezen // nagelezen AI 31 okt
