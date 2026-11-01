@@ -81,7 +81,7 @@ describe('the status line after Check speaks each part in its own language', () 
     // The status region is built by announcement() and <LiveParts> (from a11y/taal-les): each part
     // with its own lang (and dir for a right-to-left help language).
     expect(src).toContain('<div className="sr-only" role="status"><LiveParts parts={live} /></div>');
-    expect(src).toMatch(/\[\{ text: feedbackTitle\(correct, e\.kind\), lang: 'nl' \}\]/);
+    expect(src).toMatch(/\[\{ text: feedbackTitle\(correct, e\.kind, almost\), lang: 'nl' \}\]/);
   });
 });
 

@@ -100,11 +100,18 @@ export function needsMade(id: string): boolean {
  * not make an answer: another script without writing, no sound) every right answer moves up, as
  * before. The saved cards keep their form: boxes already reached stay.
  */
-export function applyReview(cards: Cards, results: Record<string, boolean>, today: string, made?: readonly string[]): Cards {
+export function applyReview(cards: Cards, results: Record<string, boolean>, today: string, made?: readonly string[], almost?: readonly string[]): Cards {
   const next = { ...cards };
   const madeSet = made ? new Set(made) : undefined;
+  const almostSet = new Set(almost ?? []);
   for (const [id, right] of Object.entries(results)) {
     const card = next[id] ?? { box: 1, due: today };
+    // Typed almost right (a typo, the article): it stays in its box, back after that box's days;
+    // not up (it was not fully right), not back to box 1 (it was not wrong).
+    if (right && almostSet.has(id) && card.due <= today) {
+      next[id] = { box: card.box, due: addDays(today, INTERVALS[card.box - 1]) };
+      continue;
+    }
     if (right && card.due > today) {
       next[id] = { box: card.box, due: addDays(card.due, 1) };
       continue;

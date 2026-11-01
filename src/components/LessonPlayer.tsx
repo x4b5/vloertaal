@@ -74,6 +74,8 @@ export interface LessonResult {
    *  a sentence said), for today's review (lib/spaced.ts applyReview). Left out when this learner
    *  could not make one (another script without writing, or without sound): the old rule then. */
   made?: string[];
+  /** Words typed "almost" right (a typo, the article): they stay in their box (lib/spaced.ts applyReview). */
+  almost?: string[];
 }
 
 function solution(ex: Exercise): { text: string; nl: boolean } {
@@ -239,7 +241,7 @@ export function announcement(e: Exercise, correct: boolean, lang?: HelpLanguage,
   const rv = isRuleExercise(e) ? ruleVerdict(e, correct, given) : null;
   if (rv) return [{ text: ruleAnnouncement(rv), lang: 'nl' }];
   const inOwn = (b: Bilingual): LivePart => ({ text: said(b), lang: saidLang(b), dir: b.help && b.lang ? b.lang.dir : undefined });
-  const parts: LivePart[] = [{ text: feedbackTitle(correct, e.kind), lang: 'nl' }];
+  const parts: LivePart[] = [{ text: feedbackTitle(correct, e.kind, almost), lang: 'nl' }];
   if (correct) {
     const outcome = inOwn(ui(feedbackMeaningKey(correct, almost, e.kind), lang));
     parts.push({ ...outcome, text: /[.!?。።؟]$/.test(outcome.text) ? outcome.text : `${outcome.text}.` });
@@ -441,6 +443,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const wordResults = useRef<Record<string, boolean>>(resumed ? { ...saved!.words } : {});
   /** Cards answered right with a made answer (LessonResult.made). */
   const made = useRef(new Set<string>());
+  /** Words typed almost right (LessonResult.almost). */
+  const almostIds = useRef(new Set<string>());
   /** "Without sound" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
@@ -681,7 +685,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       // A built sentence: its sentence card in "Herhaal vandaag" (lib/spaced.ts addLessonSentences).
       if (ex.kind === 'build') wordResults.current[ex.sentence.id] = (wordResults.current[ex.sentence.id] ?? true) && answer.correct;
       // Made by the learner, not picked: a word written, a sentence built.
-      if (answer.correct && ex.kind === 'type' && !typeAsPick(ex, lang)) made.current.add(ex.word.id);
+      if (answer.correct && !answer.almost && ex.kind === 'type' && !typeAsPick(ex, lang)) made.current.add(ex.word.id);
+      if (answer.correct && answer.almost && ex.kind === 'type') almostIds.current.add(ex.word.id);
       if (answer.correct && ex.kind === 'build') made.current.add(ex.sentence.id);
       // A match or a sentence that counts as a mistake: the words the wrong taps were on go back
       // to the first box of the review cards too (one stray tap is forgiven, as in the grading).
@@ -761,7 +766,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     sounds.done();
     // Without a way to make an answer (another script without writing, no sound), no `made`.
     const canMake = !soundOff && !pickInsteadOfTyping(lang);
-    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current, ...(canMake ? { made: [...made.current] } : {}) });
+    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current, ...(canMake ? { made: [...made.current] } : {}), ...(almostIds.current.size ? { almost: [...almostIds.current] } : {}) });
   }
 
   function reset() {
@@ -1147,7 +1152,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                   {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
                   <div className="feedback-line">
                     <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
-                      {ruleFb ? ruleFb.title : feedbackTitle(answer.correct, ex.kind)}
+                      {ruleFb ? ruleFb.title : feedbackTitle(answer.correct, ex.kind, answer.almost)}
                     </span>
                     {headingMeaning?.help && <span className="feedback-sep en-support" aria-hidden>·</span>}
                     {headingMeaning && <span className={`feedback-en ${headingMeaning.help && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}
