@@ -985,9 +985,11 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // the bubble or the prompt, the meaning in the green option): no label that says it all again
   // ("Vloertaal rustiger": say it once). The green, the check and the sound say "right"; the
   // status region still says "Goed zo! het hesje = the safety vest". A label stays when it adds
-  // something: a why, "almost", a wrong answer, a sentence or a reply (its meaning and ▶), writing,
-  // a picture pick ("Which picture is it?": the meaning in words is only on the label).
-  const cardless = quietRight && !ruleFb && !why && (ex.kind === 'meaning' || ex.kind === 'listen');
+  // something: a why, "almost", a wrong answer, a sentence (its meaning and speaker), writing,
+  // a picture pick ("Which picture is it?": the meaning in words is only on the label). A chat's
+  // right reply is in the bubble and in the green option, with its meaning and its speaker: a
+  // third time on a label was too much (feedback of the maker, 1 November).
+  const cardless = quietRight && !ruleFb && !why && (ex.kind === 'meaning' || ex.kind === 'listen' || ex.kind === 'chat');
   // Answered: the question steps back (styles.css "the spotlight after the answer"). Matching has
   // no Check; it is answered when the last pair is made.
   const answered = checked || (ex.kind === 'match' && answer !== null);
