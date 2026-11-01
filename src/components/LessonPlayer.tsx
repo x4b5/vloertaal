@@ -32,6 +32,7 @@ import { castFor, colleaguesOf, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { PlayName } from './SpeakButton';
 import { NlPair } from './NlPair';
+import { HelpSay } from './HelpSay';
 import { FlameIcon } from './StreakArt';
 import {
   BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, FlagIcon, KeyboardIcon, ListIcon, PairIcon,
@@ -901,26 +902,41 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       <SpeakerIcon size={26} />
     </button>
   ) : null;
+  // "Zet het vooraan": the verb comes right after the words put first ("Morgen werk ik"): it is
+  // boxed in the sentence, with one line "Het werkwoord staat op plek 2." (said in the help
+  // language). Explicit rule plus examples beats examples alone (Spada & Tomita 2010); the verb in
+  // second place comes in stages (Verhagen 2009). reports/Leerwetenschap en tweede taal.md, voorstel 12.
+  const verbAt = feedback && ex.kind === 'build' && ex.front ? ex.front.phrase.trim().split(/\s+/).length : -1;
   const pairLine = pair && sayable ? (
     <div className="feedback-pair feedback-say">
       <div className="pair-say" dir="ltr">
         {diff ? (
           <span className="pair-tiles" lang="nl">
             {diff.map((t, i) => (
-              <span key={i} className={`ftile ${t.ok ? '' : 'ftile-miss'}`}>
+              <span key={i} className={`ftile ${t.ok ? '' : 'ftile-miss'} ${i === verbAt ? 'ftile-verb' : ''}`}>
                 {breakable(t.word)}
                 {!t.ok && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}> ({said(ui('incorrect', lang))})</span>}
               </span>
             ))}
           </span>
         ) : (
-          <strong className="pair-nl" lang="nl">{breakable(pair.nl ?? '')}</strong>
+          <strong className="pair-nl" lang="nl">
+            {verbAt >= 0
+              ? (pair.nl ?? '').split(' ').map((w, i, all) => <span key={i}>{i === verbAt ? <span className="verb-mark">{w}</span> : breakable(w)}{i < all.length - 1 ? ' ' : ''}</span>)
+              : breakable(pair.nl ?? '')}
+          </strong>
         )}
         {/* To hear it again: optional, so at the end (the right), as every optional speaker. */}
         {replay}
       </div>
       {pairHelp && lang && <HelpText className="pair-gloss" text={pairHelp} lang={lang} />}
       <span className={`pair-en ${pairHelp && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
+      {verbAt >= 0 && (
+        <p className="feedback-verb">
+          <NlPair nlFirst nl="Het werkwoord staat op plek 2." nlClass="feedback-verb-nl" text={ui('verbSecond', lang)} />
+          <HelpSay text={lang?.ui.verbSecond} lang={lang} />
+        </p>
+      )}
     </div>
   ) : pair && (
     <div className="feedback-pair">

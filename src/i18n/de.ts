@@ -409,6 +409,7 @@ const lang: HelpLanguageSource = {
     colleagueShare: 'An deinen Kollegen schicken', // nieuw, nalezen
     coachCardRights: 'Themen über deine Rechte mit Namen zeigen', // nieuw, nalezen
     keptNofM: 'Wörter von vor 2 Wochen oder länger: Du wusstest noch {n} von {m}.', // nieuw, nalezen
+    verbSecond: 'Das Verb steht an Stelle 2.', // nieuw, nalezen
     calmScreen: 'Ruhiger Bildschirm', // nieuw, nalezen
     calmAuto: 'Wie dein Handy', // nieuw, nalezen
     calmHint: 'An: Nichts bewegt sich, keine Feier für deine Serie nach einer Lektion, und deine Serie und Wörter stehen nicht auf der Startseite.', // nieuw, nalezen

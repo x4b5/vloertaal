@@ -410,6 +410,7 @@ const lang: HelpLanguageSource = {
     colleagueShare: { m: 'ናብ ብጻይካ ስደዶ', f: 'ናብ ብጻይኪ ስደድዮ', x: 'ናብ ብጻይኩም ስደዱዎ' }, // nieuw, nalezen
     coachCardRights: 'ኣርእስታት ብዛዕባ መሰላትካ ብስሞም ኣርኢ', // nieuw, nalezen
     keptNofM: { m: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጥ ኔርካ።', f: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጢ ኔርኪ።', x: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጡ ኔርኩም።' }, // nieuw, nalezen
+    verbSecond: 'ግሲ ኣብ ቦታ 2 እዩ።', // nieuw, nalezen
     calmScreen: 'ህዱእ ስክሪን', // nieuw, nalezen
     calmAuto: { m: 'ከም ተሌፎንካ', f: 'ከም ተሌፎንኪ', x: 'ከም ተሌፎንኩም' }, // nieuw, nalezen
     calmHint: 'ክፉት: ዝንቀሳቐስ የለን፡ ድሕሪ ትምህርቲ ናይ ተኸታታሊ መዓልትታት ጽምብል የለን፡ መዓልትታትን ቃላትን ኣብ ቀንዲ ስክሪን ኣይርአዩን።', // nieuw, nalezen

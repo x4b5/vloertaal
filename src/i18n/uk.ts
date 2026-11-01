@@ -409,6 +409,7 @@ const lang: HelpLanguageSource = {
     colleagueShare: 'Надіслати колезі', // nieuw, nalezen
     coachCardRights: 'Показувати назви тем про твої права', // nieuw, nalezen
     keptNofM: 'Слова двотижневої давності й старші: ти ще пам’ятаєш {n} з {m}.', // nieuw, nalezen
+    verbSecond: 'Дієслово стоїть на місці 2.', // nieuw, nalezen
     calmScreen: 'Спокійний екран', // nieuw, nalezen
     calmAuto: 'Як у телефоні', // nieuw, nalezen
     calmHint: 'Увімкнено: нічого не рухається, немає святкування серії після уроку, а серія і слова не показуються на головному екрані.', // nieuw, nalezen

@@ -409,6 +409,7 @@ const lang: HelpLanguageSource = {
     colleagueShare: 'Изпрати на колегата', // nieuw, nalezen
     coachCardRights: 'Показвай по име темите за твоите права', // nieuw, nalezen
     keptNofM: 'Думи отпреди 2 седмици или повече: още помниш {n} от {m}.', // nieuw, nalezen
+    verbSecond: 'Глаголът е на място 2.', // nieuw, nalezen
     calmScreen: 'Спокоен екран', // nieuw, nalezen
     calmAuto: 'Като телефона ти', // nieuw, nalezen
     calmHint: 'Включено: нищо не се движи, няма празнуване на поредицата след урок, а поредицата и думите не са на началния екран.', // nieuw, nalezen

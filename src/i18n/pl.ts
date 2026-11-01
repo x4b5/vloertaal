@@ -409,6 +409,7 @@ const lang: HelpLanguageSource = {
     colleagueShare: 'Wyślij koledze', // nieuw, nalezen
     coachCardRights: 'Pokaż z nazwy tematy o twoich prawach', // nieuw, nalezen
     keptNofM: 'Słowa sprzed 2 tygodni lub dawniej: pamiętasz jeszcze {n} z {m}.', // nieuw, nalezen
+    verbSecond: 'Czasownik stoi na miejscu 2.', // nieuw, nalezen
     calmScreen: 'Spokojny ekran', // nieuw, nalezen
     calmAuto: 'Jak w telefonie', // nieuw, nalezen
     calmHint: 'Włączone: nic się nie rusza, nie ma świętowania serii po lekcji, a seria i słowa nie są na ekranie głównym.', // nieuw, nalezen
