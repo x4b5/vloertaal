@@ -147,11 +147,13 @@ describe('the code on the coach card', () => {
   it('the card shows it, from its own numbers only (no name)', () => {
     const p: Progress = { ...emptyProgress, toets: { v: 1, instap: run('2026-10-02', 'A', [2, 3, 1]), eind: run('2026-10-29', 'B', [4, 5, 4]), start: '2026-10-02', unitsAt: 0 } };
     const d = kaartData(p, 'Amina Yusuf', TODAY);
-    expect(kaartCode(d)).toBe('VT1 O0 D0 V6/18 N13/18');
+    // The test score with the guessing taken out, as the card itself shows it (src/lib/toets.ts:
+    // right minus half the wrong picks): 6 right of 18 is 1, 13 right is 10.
+    expect(kaartCode(d)).toBe('VT1 O0 D0 V1/18 N10/18');
     expect(kaartCode(kaartData(emptyProgress, '', TODAY))).toBe('VT1 O0 D0');
     expect(kaartCode(d)).not.toMatch(/Amina/);
-    expect(kaartAlt(d)).toContain(`${KAART_CODE_LABEL}: VT1 O0 D0 V6/18 N13/18.`);
-    expect(readGroepCode(kaartCode(d))).toEqual({ onderwerpen: 0, dagen: 0, voor: { goed: 6, van: 18 }, na: { goed: 13, van: 18 } });
+    expect(kaartAlt(d)).toContain(`${KAART_CODE_LABEL}: VT1 O0 D0 V1/18 N10/18.`);
+    expect(readGroepCode(kaartCode(d))).toEqual({ onderwerpen: 0, dagen: 0, voor: { goed: 1, van: 18 }, na: { goed: 10, van: 18 } });
   });
 
   it('the learner’s screen explains the code in every help language', () => {

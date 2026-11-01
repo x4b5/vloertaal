@@ -79,14 +79,14 @@ export function groepPage(): string {
 <section aria-labelledby="veilig"><h2 id="veilig">Zo blijft het veilig</h2>
 <ul class="lines">${GROEP_SAFE.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></section>
 <section aria-labelledby="codes"><h2 id="codes">Snel: plak de codes</h2>
-<p>De leerling laat de kaart zien bij Instellingen › Taal en ik › “Laat zien hoe het gaat”. Onderaan de kaart staat een code, zoals <code>VT1 O3 D12 V11/18 N15/18</code>. Stuurde de leerling de kaart? Dan staat de code ook in het bericht. Plak een of meer codes hier, één per regel.</p>
+<p>De leerling laat de kaart zien bij Instellingen › Taal en ik › “Laat zien hoe het gaat”. Onderaan de kaart staat een code, zoals <code>VT1 O3 D12 V11/21 N15/21</code>. Stuurde de leerling de kaart? Dan staat de code ook in het bericht. Plak een of meer codes hier, één per regel.</p>
 <label for="codes-in">Codes van de kaarten</label>
 <textarea id="codes-in" rows="3" autocomplete="off" spellcheck="false"></textarea>
 <div class="knoppen"><button type="button" id="codes-add" class="hoofd">Zet in de lijst</button></div>
 <p class="melding" id="codes-msg" role="status"></p>
 </section>
 <section aria-labelledby="lijst"><h2 id="lijst">Deelnemers</h2>
-<p>Of typ de getallen over. Vul in wat je weet: een leeg veld telt niet mee. De toets: tel de drie onderdelen van de kaart op. Luisteren 4/6, Woorden 5/6 en Zinnen 4/6 is samen 13/18.</p>
+<p>Of typ de getallen over. Vul in wat je weet: een leeg veld telt niet mee. De toets: tel de drie onderdelen van de kaart op. Luisteren 4/7, Woorden 5/7 en Zinnen 4/7 is samen 13/21. Dat is de score zoals de kaart hem toont: met het gokken eruit.</p>
 <div id="rijen"></div>
 <div class="knoppen"><button type="button" id="erbij">Deelnemer erbij</button></div>
 </section>
@@ -107,7 +107,7 @@ export function groepPage(): string {
 <section aria-labelledby="betekenis"><h2 id="betekenis">Wat de getallen zeggen, en wat niet</h2>
 <ul class="lines">
 <li><strong>Dagen geoefend</strong> telt de dagen met een les in de laatste 4 weken, zoals op de kaart. “Kwamen terug” is: op 2 of meer dagen geoefend.</li>
-<li><strong>De toets “Wat ken je al?”</strong> is kort, zonder cijfer of niveau. Instap en eind zijn twee verschillende versies. Hij is nog niet nagekeken door een expert. Een verschil zegt dus iets, maar bewijst niets.</li>
+<li><strong>De toets “Wat ken je al?”</strong> is kort, zonder cijfer of niveau. Instap en eind zijn twee verschillende versies, even moeilijk gemaakt. Het gokken is uit de score gehaald. Hij is nog niet nagekeken door een expert. Een verschil zegt dus iets, maar bewijst niets.</li>
 <li><strong>De mediaan</strong> is het middelste getal: de helft zit eronder, de helft erboven. Bij een kleine groep zegt die vaak meer dan het gemiddelde.</li>
 <li><strong>Werkregels</strong> heeft geen toets: daar vul je alleen onderwerpen en dagen in.</li>
 </ul></section>
@@ -140,8 +140,8 @@ const GROEP_SCRIPT = `(function () {
   var VELDEN = [
     { k: 'onderwerpen', label: 'Onderwerpen af', mode: 'numeric', hint: '' },
     { k: 'dagen', label: 'Dagen geoefend', mode: 'numeric', hint: '' },
-    { k: 'voor', label: 'Toets instap', mode: 'text', hint: '11/18' },
-    { k: 'na', label: 'Toets eind', mode: 'text', hint: '15/18' }
+    { k: 'voor', label: 'Toets instap', mode: 'text', hint: '11/21' },
+    { k: 'na', label: 'Toets eind', mode: 'text', hint: '15/21' }
   ];
   function lees(r) {
     var out = {};
@@ -156,7 +156,7 @@ const GROEP_SCRIPT = `(function () {
     if (String(waarde).trim() === '') return '';
     if (k === 'onderwerpen') return G.leesAantal(waarde, 999) === undefined ? 'Typ een getal, bijvoorbeeld 3.' : '';
     if (k === 'dagen') return G.leesAantal(waarde, 28) === undefined ? 'Typ een getal van 0 tot 28.' : '';
-    return G.leesScore(waarde) ? '' : 'Typ goed/van, bijvoorbeeld 11/18.';
+    return G.leesScore(waarde) ? '' : 'Typ goed/van, bijvoorbeeld 11/21.';
   }
   function tekenRijen() {
     var box = $('rijen');
