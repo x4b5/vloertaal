@@ -95,6 +95,11 @@ export interface Lesson {
      *  one is not written yet ("Deze les gaat nog over Nederland.", src/content/regels/be). */
     note?: string;
   };
+  /**
+   * Today's review (lib/spaced.ts dailyLesson): one sound pair to hear (ear training): the word to
+   * hear, its partner, and the day's turn (which of the four voices says it).
+   */
+  ear?: { word: Word; partner: Word; turn: number };
 }
 
 export interface Unit {

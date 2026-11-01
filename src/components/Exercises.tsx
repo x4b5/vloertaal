@@ -11,7 +11,7 @@ import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
-import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
+import { CAST, castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
 import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
@@ -365,15 +365,18 @@ export function DutchExercise(props: Props<'dutch'>) {
 
 /** Hear and read the Dutch word → pick its picture. */
 function PictureFromDutch({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'dutch'>) {
-  const who = wordCast(ex.word.id, 'dutch');
+  // Ear training (today's review): the voice of the day's turn, and the word written only after
+  // the answer (before, the two pictures would be a reading match: "man" or "maan").
+  const ear = ex.ear !== undefined;
+  const who = ear ? CAST[ex.ear! % CAST.length] : wordCast(ex.word.id, 'dutch');
   useEffect(() => { autoSpeak(ex.word.nl, false, 'nl', voiceFor(who)); }, [ex.word, who]);
   return (
-    <div className="exercise pic-from-nl">
-      <Prompt text={ui('whichPicture', lang)} />
+    <div className={`exercise pic-from-nl ${ear ? 'pic-by-ear' : ''}`}>
+      <Prompt text={ui(ear ? 'whatDoYouHear' : 'whichPicture', lang)} />
       <div className={`speaker speaker-word ${wordSize(ex.word.nl)}`}>
         <Speaker who={who} lines={[ex.word.nl]} verdict={verdict} run={run} misses={misses} />
         <div className="speaker-bubble">
-          <span className="speaker-nl" lang="nl">{breakable(ex.word.nl)}</span>
+          {(!ear || locked) && <span className="speaker-nl" lang="nl">{breakable(ex.word.nl)}</span>}
           <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor(who)} />
         </div>
       </div>

@@ -23,7 +23,7 @@ export type Exercise =
   | { kind: 'intro'; word: Word }
   | { kind: 'meaning'; word: Word; options: Word[] }
   /** Pick the Dutch word for a meaning; from picture cards, or text cards when `textOnly`. */
-  | { kind: 'dutch'; word: Word; options: Word[]; textOnly?: boolean }
+  | { kind: 'dutch'; word: Word; options: Word[]; textOnly?: boolean; /** Ear training: by ear only (no word written before the answer), said by the voice of this turn. */ ear?: number }
   | { kind: 'listen'; word: Word; options: Word[] }
   | { kind: 'match'; words: Word[] }
   /** `salt` (a retry) changes the words offered step by step (buildSteps). `audio`: listen and
@@ -1039,6 +1039,9 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // question (above), one tip situation, the match board, one sentence to build and one chat. Its words already
   // rotate through listening, picture and writing questions, so the extra ones are left out.
   if (daily) {
+    // Ear training (voorstel 11 of the research report): one sound pair a day, two pictures, by
+    // ear only, in a voice that changes by the day. Not without sound.
+    if (lesson.ear && !opts.quiet) out.push({ kind: 'dutch', word: lesson.ear.word, options: shuffle([lesson.ear.word, lesson.ear.partner], rng), ear: lesson.ear.turn });
     for (const sentence of sentences) out.push({ kind: 'build', sentence: withFrontAlt(sentence), tiles: buildTiles(sentence, lesson, rng) });
     for (const dialogue of dialogues) {
       out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
