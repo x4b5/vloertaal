@@ -52,7 +52,7 @@ export const loonUnit: RuleUnit = {
           id: 'r.l.loon.1.tf1',
           statement: 'Bruto is het geld dat op je bankrekening komt.',
           answer: false,
-          why: 'Bruto is je loon vóór belasting. Netto is wat je echt op je rekening krijgt. Het verschil is vooral loonheffing. Loonheffing is belasting en premie voor verzekeringen. Je werkgever betaalt die voor jou aan de Belastingdienst. Vaak gaat er ook geld af voor je pensioen.',
+          why: 'Bruto is je loon vóór belasting. Netto is wat je echt op je rekening krijgt.', whyMore: 'Het verschil is vooral loonheffing: belasting en premie voor verzekeringen. Je werkgever betaalt die voor jou aan de Belastingdienst. Vaak gaat er ook geld af voor je pensioen.',
         },
         // ⚖️ check: Ben je jonger dan 21 ⚖️?
         // ⚖️ check: Vanaf 21 ⚖️ krijg je het volle minimumloon.
@@ -65,7 +65,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt meteen hetzelfde loon als haar collega.', best: false, feedback: 'Vragen mag. Maar er is een regel voor leeftijd.' },
             { id: 'c', text: 'Ze denkt: nieuwe mensen verdienen altijd minder.', best: false, feedback: 'Niet altijd. Check eerst wat de regel is.' },
           ],
-          why: 'Ben je jonger dan 21? Dan is je minimumloon lager. Dat heet jeugdloon. Vanaf 21 krijg je het volle minimumloon. Je loon mag nooit lager zijn. Het bedrag per uur staat op rijksoverheid.nl. Je cao kan meer geven.',
+          why: 'Ben je jonger dan 21? Dan is je minimumloon lager. Dat heet jeugdloon.', whyMore: 'Vanaf 21 krijg je het volle minimumloon. Je loon mag nooit lager zijn. Het bedrag per uur staat op rijksoverheid.nl. Je cao kan meer geven.',
         },
         {
           kind: 'whatdo',
@@ -76,7 +76,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt ja bij één baan, en nee bij de andere.', best: true, feedback: 'Goed. De korting krijgt ze maar één keer.' },
             { id: 'c', text: 'Ze zegt bij allebei nee. Dat lijkt haar het veiligst.', best: false, feedback: 'Dan betaalt ze eerst te veel belasting.' },
           ],
-          why: 'Loonheffingskorting is korting op je belasting. Je krijgt die maar bij één werkgever. Kies meestal de baan waar je het meest verdient.',
+          why: 'Je krijgt de korting maar bij één werkgever. Kies meestal de baan waar je het meest verdient.', whyMore: 'Loonheffingskorting is korting op je belasting.',
         },
         // Pensioen (rapport hiaten, hoofdstuk 3).
         // ⚖️ check: Bij veel banen gaat er elke maand iets van je loon af voor je pensioen ⚖️ (geen
@@ -88,7 +88,7 @@ export const loonUnit: RuleUnit = {
           id: 'r.l.loon.1.tf2',
           statement: 'Bij veel banen is een deel van je loon voor later, voor je pensioen.',
           answer: true,
-          why: 'Pensioen is geld voor later, als je oud bent en stopt met werken. Bij veel banen gaat er elke maand iets van je loon af voor je pensioen. Je werkgever betaalt meestal ook mee. Hoeveel je al hebt, zie je op mijnpensioenoverzicht.nl. Je logt in met je DigiD.',
+          why: 'Pensioen is geld voor later. Bij veel banen gaat er elke maand iets van je loon af.', whyMore: 'Pensioen krijg je als je oud bent en stopt met werken. Je werkgever betaalt meestal ook mee. Hoeveel je al hebt, zie je op mijnpensioenoverzicht.nl. Je logt in met je DigiD.',
         },
         {
           kind: 'whoask',
@@ -150,7 +150,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', text: 'Hij werkt volgende maand gewoon 12 uur minder.', best: false, feedback: 'Dat lost het niet op, en het kan problemen geven.' },
             { id: 'c', text: 'Hij laat zijn lijstje zien en vraagt het na.', best: true, feedback: 'Goed. Met zijn lijstje kan hij het laten zien.' },
           ],
-          why: 'Fouten op een loonstrook komen vaak voor. Navragen is jouw recht. Je eigen lijstje met uren helpt heel goed. Vraag het snel, en het liefst per mail.',
+          why: 'Fouten op een loonstrook komen vaak voor. Navragen is jouw recht.', whyMore: 'Je eigen lijstje met uren helpt heel goed. Vraag het snel, en het liefst per mail.',
         },
         // ⚖️ check: Je krijgt een loonstrook bij je eerste loon ⚖️.
         // ⚖️ check: En elke keer als het bedrag verandert ⚖️.
@@ -159,7 +159,7 @@ export const loonUnit: RuleUnit = {
           id: 'r.l.loon.2.tf1',
           statement: 'Je werkgever moet je een loonstrook geven.',
           answer: true,
-          why: 'Je krijgt een loonstrook bij je eerste loon. En elke keer als het bedrag verandert. De meeste werkgevers geven elke maand een loonstrook, vaak in een app. Bewaar ze goed.',
+          why: 'Je krijgt een loonstrook bij je eerste loon, en als het bedrag verandert.', whyMore: 'De meeste werkgevers geven elke maand een loonstrook, vaak in een app. Bewaar ze goed.',
         },
         // ⚖️ check: Daar moet je eerst schriftelijk mee instemmen ⚖️.
         // ⚖️ check: Ook dan zijn er grenzen ⚖️.
@@ -172,7 +172,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', text: 'Hij denkt: dat hoort er vast bij, iedereen heeft het.', best: false, feedback: 'Dat is logisch. Maar het mag niet zomaar.' },
             { id: 'c', text: 'Hij vraagt een voorschot om het verschil te betalen.', best: false, feedback: 'Dan leent hij geld dat misschien van hem is.' },
           ],
-          why: 'Een inhouding is geld dat je baas van je loon afhaalt. Je werkgever mag niet zomaar geld van je loon afhalen. Daar moet je eerst schriftelijk mee instemmen. Ook dan zijn er grenzen. Klopt het niet? Vraag hulp.',
+          why: 'Je werkgever mag niet zomaar geld van je loon afhalen. Daar moet je eerst schriftelijk mee instemmen.', whyMore: 'Zo\'n inhouding is geld dat je baas van je loon afhaalt. Ook als je instemt, zijn er grenzen. Klopt het niet? Vraag hulp.',
         },
         // Loon niet (op tijd) betaald (rapport hiaten, hoofdstuk 3).
         // ⚖️ check: Je loon moet op tijd op je rekening staan, op de dag uit je contract of cao ⚖️
@@ -188,7 +188,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', text: 'Hij stopt meteen met werken tot het geld er is.', best: false, feedback: 'Riskant. Vraag eerst advies voordat je stopt.' },
             { id: 'c', text: 'Hij vraagt het na, eerst zelf en dan per mail.', best: true, feedback: 'Goed. Helpt dat niet? Dan vraagt hij advies.' },
           ],
-          why: 'Je loon moet op tijd op je rekening staan. Op welke dag, staat in je contract of cao. Is het te laat? Vraag het eerst zelf. Dan per mail, met de datum. Helpt dat niet? Ga naar een vakbond of het Juridisch Loket. Betaalt je werkgever te laat? Dan moet hij soms extra betalen.',
+          why: 'Je loon moet op tijd op je rekening staan. Is het te laat? Vraag het eerst zelf.', whyMore: 'Op welke dag, staat in je contract of cao. Vraag het daarna per mail, met de datum. Helpt dat niet? Ga naar een vakbond of het Juridisch Loket. Betaalt je werkgever te laat? Dan moet die soms extra betalen.',
         },
         // Fictieve loonstrook: ronde bedragen, geen echt minimumloon.
         {
@@ -214,7 +214,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', text: '240 euro', best: true, feedback: 'Goed. 12 uur keer 20 euro is 240 euro.' },
             { id: 'c', text: '3.040 euro', best: false, feedback: 'Nee. Dat is het loon voor alle 152 uur. Hij mist alleen het verschil.' },
           ],
-          why: 'Op de loonstrook staat 140 uur. Piotr werkte 152 uur. Hij mist dus 12 uur. 12 keer 20 euro is 240 euro bruto. Vergelijk je loonstrook altijd met je eigen lijstje.',
+          why: 'Op de loonstrook staat 140 uur. Piotr werkte 152 uur. Hij mist dus 12 uur.', whyMore: '12 keer 20 euro is 240 euro bruto. Vergelijk je loonstrook altijd met je eigen lijstje.',
         },
         {
           kind: 'whoask',
@@ -274,7 +274,7 @@ export const loonUnit: RuleUnit = {
           id: 'r.l.loon.3.tf1',
           statement: 'Vakantiegeld is jouw recht, geen cadeautje van je baas.',
           answer: true,
-          why: 'Je werkgever moet vakantiegeld betalen. Het is minstens 8 procent van je bruto loon. Je bouwt het op met elk uur dat je werkt. Meestal krijg je het in mei of juni. Stop je eerder? Dan krijg je het bij je laatste loon.',
+          why: 'Je werkgever moet vakantiegeld betalen: minstens 8 procent van je bruto loon.', whyMore: 'Je bouwt het op met elk uur dat je werkt. Meestal krijg je het in mei of juni. Stop je eerder? Dan krijg je het bij je laatste loon.',
         },
         // ⚖️ check: Het staat in de cao, niet in de wet ⚖️.
         {
@@ -286,7 +286,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', text: 'Extra loon voor werk in de avond, nacht of weekend.', best: true, feedback: 'Goed. Zo heet die toeslag in de zorg.' },
             { id: 'c', text: 'Een aftrek omdat ze een keer te laat was.', best: false, feedback: 'Nee. ORT is geen aftrek. Het is extra geld.' },
           ],
-          why: 'ORT betekent onregelmatigheidstoeslag. Dat is extra geld voor werk op onregelmatige tijden. Het staat in de cao, niet in de wet. Elke cao heeft eigen regels.',
+          why: 'ORT is extra geld voor werk op onregelmatige tijden. Het staat in de cao, niet in de wet.', whyMore: 'ORT betekent onregelmatigheidstoeslag. Elke cao heeft eigen regels.',
         },
         // ⚖️ check: Je werkgever betaalt elk uur dat je werkt ⚖️.
         // ⚖️ check: Of je extra toeslag krijgt, staat in je cao of contract ⚖️.
@@ -299,7 +299,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', text: 'Ze besluit dat ze nooit meer overwerkt.', best: false, feedback: 'Dat mag ze zelf weten. Maar de 10 uur zijn nog niet geregeld.' },
             { id: 'c', text: 'Ze vraagt waar de 10 uur zijn gebleven.', best: true, feedback: 'Goed. Navragen is haar recht.' },
           ],
-          why: 'Je werkgever betaalt elk uur dat je werkt. Soms krijg je vrije tijd terug in plaats van geld. Of je extra toeslag krijgt, staat in je cao of contract. Schrijf je overuren altijd op.',
+          why: 'Je werkgever betaalt elk uur dat je werkt. Soms krijg je vrije tijd terug in plaats van geld.', whyMore: 'Of je extra toeslag krijgt, staat in je cao of contract. Schrijf je overuren altijd op.',
         },
         {
           kind: 'whoask',
@@ -374,7 +374,7 @@ export const loonUnit: RuleUnit = {
           id: 'r.l.loon.4.tf1',
           statement: 'Het bureau mag voor elk huis de huur van je loon inhouden.',
           answer: false,
-          why: 'Nee. Dat mag alleen als het huis een keurmerk heeft. Dat is van SNF of AKF. En hooguit 25 procent van het minimumloon. Vraag het bureau naar het keurmerk.',
+          why: 'Nee. Dat mag alleen als het huis een keurmerk heeft. En hooguit 25 procent van het minimumloon.', whyMore: 'Het keurmerk is van SNF of AKF. Vraag het bureau naar het keurmerk.',
         },
         // ⚖️ check: Vervoer valt niet onder de toegestane inhoudingen op het minimumloon (alleen huisvesting
         //   en zorgverzekering: Wml art. 13; Besluit minimumloon). Twijfel: het bedrag boven het minimumloon
@@ -388,7 +388,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', text: 'Ze betaalt het. Het busje brengt haar toch elke dag.', best: false, feedback: 'Dat snap ik. Maar dit mag niet van haar minimumloon af.' },
             { id: 'c', text: 'Ze stopt meteen met werken bij dit bureau.', best: false, feedback: 'Dat is snel. Vraag eerst uitleg, en vraag hulp.' },
           ],
-          why: 'Van je minimumloon mag alleen iets af voor huur en zorgverzekering. Niet voor vervoer. Klopt het niet? Vraag het bureau, of meld het bij de Arbeidsinspectie.',
+          why: 'Van je minimumloon mag alleen iets af voor huur en zorgverzekering. Niet voor vervoer.', whyMore: 'Klopt het niet? Vraag het bureau, of meld het bij de Arbeidsinspectie.',
         },
         // ⚖️ check: Boetebeding alleen schriftelijk, met de overtredingen erin; geen boete op het
         //   minimumloon (art. 7:650 lid 1, 2 en 5 BW; Wml art. 13).
@@ -397,7 +397,7 @@ export const loonUnit: RuleUnit = {
           id: 'r.l.loon.4.tf2',
           statement: 'Een boete mag alleen als die in je contract staat.',
           answer: true,
-          why: 'Klopt. Een boete moet in je contract staan. Op je minimumloon mag geen boete. Krijg je een boete? Vraag waarom.',
+          why: 'Klopt. Een boete moet in je contract staan. Op je minimumloon mag geen boete.', whyMore: 'Krijg je een boete? Vraag waarom.',
         },
         {
           kind: 'whoask',
@@ -408,7 +408,7 @@ export const loonUnit: RuleUnit = {
             { id: 'b', who: 'uitzendbureau', best: false, feedback: 'Je kunt het eerst aan het bureau vragen. Maar melden doe je ergens anders.' },
             { id: 'c', who: 'arbeidsinspectie', best: true, feedback: 'Goed. De Arbeidsinspectie controleert inhoudingen op je loon.' },
           ],
-          why: 'Klopt een inhouding niet? Meld het bij de Arbeidsinspectie. Een vakbond of het Juridisch Loket helpt je ook.',
+          why: 'Klopt een inhouding niet? Meld het bij de Arbeidsinspectie.', whyMore: 'Een vakbond of het Juridisch Loket helpt je ook.',
         },
         { kind: 'model', id: 'r.l.loon.4.mo1', context: 'Je ziet een boete op je loonstrook.', nl: 'Ik zie een boete op mijn loonstrook. Waar staat die in mijn contract?' },
       ],

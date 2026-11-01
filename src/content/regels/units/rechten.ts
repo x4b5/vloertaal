@@ -53,7 +53,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.1.tf1',
           statement: 'Een werkgever mag kiezen op afkomst of geloof.',
           answer: false,
-          why: 'Discriminatie bij werk is verboden. Bijvoorbeeld om je afkomst, geloof, geslacht, leeftijd of handicap. Dat geldt bij solliciteren en bij stages. En ook bij loon en promotie.',
+          why: 'Discriminatie bij werk is verboden. Bijvoorbeeld om je afkomst, geloof, geslacht, leeftijd of handicap.', whyMore: 'Dat geldt bij solliciteren en bij stages. En ook bij loon en promotie.',
         },
         {
           kind: 'whatdo',
@@ -64,7 +64,7 @@ export const rechtenUnit: RuleUnit = {
             { id: 'b', text: 'Hij schrijft op wat er gebeurde, en hij meldt het.', best: true, feedback: 'Goed. Zo kan iemand hem helpen.' },
             { id: 'c', text: 'Hij zet de naam van het bedrijf boos online.', best: false, feedback: 'Dat kan hem zelf problemen geven.' },
           ],
-          why: 'Schrijf op wat er gebeurde, met datum. Bewaar berichten en de vacature. Meld het via discriminatie.nl. Melden helpt, ook voor anderen.',
+          why: 'Schrijf op wat er gebeurde, met datum. Meld het via discriminatie.nl.', whyMore: 'Bewaar berichten en de vacature. Melden helpt, ook voor anderen.',
         },
         // ⚖️ check: Bijvoorbeeld veiligheid of hygiëne ⚖️.
         {
@@ -76,7 +76,7 @@ export const rechtenUnit: RuleUnit = {
             { id: 'b', text: 'Ze doet hem af, en ze zegt er niets van.', best: false, feedback: 'Ik snap het. Maar het kan discriminatie zijn.' },
             { id: 'c', text: 'Ze neemt meteen ontslag.', best: false, feedback: 'Dan verliest ze misschien rechten. Ze kan beter eerst advies vragen.' },
           ],
-          why: 'Een regel over kleding moet een goede reden hebben. Bijvoorbeeld veiligheid of hygiëne. Zonder goede reden kan het discriminatie zijn. Het College voor de Rechten van de Mens kan daar gratis een oordeel over geven.',
+          why: 'Een regel over kleding moet een goede reden hebben. Anders kan het discriminatie zijn.', whyMore: 'Een goede reden is bijvoorbeeld veiligheid of hygiëne. Het College voor de Rechten van de Mens kan daar gratis een oordeel over geven.',
         },
         {
           kind: 'whoask',
@@ -135,7 +135,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.2.tf1',
           statement: 'Als hij het als grapje bedoelt, is het niet erg.',
           answer: false,
-          why: 'Grensoverschrijdend gedrag is gedrag dat over jouw grens gaat. Bijvoorbeeld aanraken, seksuele grappen of staren. Het maakt niet uit hoe de ander het bedoelt. Het gaat om hoe het voor jou voelt.',
+          why: 'Grensoverschrijdend gedrag gaat over jouw grens. Het gaat om hoe het voor jou voelt.', whyMore: 'Bijvoorbeeld aanraken, seksuele grappen of staren. Het maakt niet uit hoe de ander het bedoelt.',
         },
         // ⚖️ check: Je werkgever moet je beschermen ⚖️.
         {
@@ -147,7 +147,7 @@ export const rechtenUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt duidelijk: "Stop. Ik wil dit niet."', best: true, feedback: 'Goed. Dan weet hij het, en anderen horen het ook.' },
             { id: 'c', text: 'Ze gaat hem uit de weg, en ze zegt niets.', best: false, feedback: 'Dat lost het niet op. Hulp vragen mag.' },
           ],
-          why: 'Zeg duidelijk dat je het niet wilt, als je dat kunt. Schrijf op wat er gebeurde, wanneer, en wie het zag. Vertel het aan je leidinggevende of de vertrouwenspersoon. Je werkgever moet je beschermen.',
+          why: 'Vertel het ook aan je leidinggevende of de vertrouwenspersoon. Je werkgever moet je beschermen.', whyMore: 'Zeg duidelijk dat je het niet wilt, als je dat kunt. Schrijf op wat er gebeurde, wanneer, en wie het zag.',
         },
         {
           kind: 'whatdo',
@@ -158,7 +158,7 @@ export const rechtenUnit: RuleUnit = {
             { id: 'b', text: 'Hij doet alsof hij niets heeft gezien.', best: false, feedback: 'Dan voelt de collega zich alleen.' },
             { id: 'c', text: 'Hij vraagt de collega of het goed met hem gaat.', best: true, feedback: 'Goed. Dat helpt meer dan hij denkt.' },
           ],
-          why: 'Pesten maakt mensen ziek. Vraag of het goed gaat. Bied aan om getuige te zijn. Samen sta je sterker.',
+          why: 'Pesten maakt mensen ziek. Vraag of het goed gaat.', whyMore: 'Bied aan om getuige te zijn. Samen sta je sterker.',
         },
         {
           kind: 'whoask',
@@ -169,7 +169,7 @@ export const rechtenUnit: RuleUnit = {
             { id: 'b', who: 'collega', best: false, feedback: 'Een collega kan steunen. Maar die kan het niet oplossen.' },
             { id: 'c', who: 'uwv', best: false, feedback: 'UWV gaat over uitkeringen, niet over gedrag op je werk.' },
           ],
-          why: 'Heeft je bedrijf een vertrouwenspersoon? Dan kun je daar in vertrouwen praten. Of ga naar je leidinggevende of HR.',
+          why: 'Heeft je bedrijf een vertrouwenspersoon? Daar kun je in vertrouwen praten.', whyMore: 'Je kunt ook naar je leidinggevende of HR.',
         },
         { kind: 'model', id: 'r.l.rechten.2.mo1', context: 'Iemand gaat over je grens.', nl: 'Stop. Ik wil dit niet.' },
       ],
@@ -217,7 +217,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.3.tf1',
           statement: 'Een werkgever mag je paspoort voor je bewaren.',
           answer: false,
-          why: 'Je ID houd je altijd zelf. Een werkgever mag alleen een kopie maken. Je paspoort afpakken is een duidelijk teken van uitbuiting.',
+          why: 'Je ID houd je altijd zelf. Een werkgever mag alleen een kopie maken.', whyMore: 'Je paspoort afpakken is een duidelijk teken van uitbuiting.',
         },
         {
           kind: 'whatdo',
@@ -228,7 +228,7 @@ export const rechtenUnit: RuleUnit = {
             { id: 'b', text: 'Hij wacht af. Het wordt vast beter als hij hard werkt.', best: false, feedback: 'Dat is logisch. Maar dit gaat meestal niet vanzelf over.' },
             { id: 'c', text: 'Hij vraagt de baas beleefd om iets meer loon.', best: false, feedback: 'Mag. Maar het paspoort en de uren blijven een probleem.' },
           ],
-          why: 'Uitbuiting is niet normaal, en het mag niet. Iedereen die in Nederland werkt, kan hulp krijgen. Je kunt het melden bij de Arbeidsinspectie, ook zonder je naam. Ben je in gevaar? Bel 112.',
+          why: 'Uitbuiting is niet normaal, en het mag niet. Ben je in gevaar? Bel 112.', whyMore: 'Iedereen die in Nederland werkt, kan hulp krijgen. Je kunt het melden bij de Arbeidsinspectie, ook zonder je naam.',
         },
         {
           kind: 'whatdo',
@@ -239,7 +239,7 @@ export const rechtenUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt nee, en hij blokkeert het nummer.', best: true, feedback: 'Goed. Zo voorkomt hij grote problemen.' },
             { id: 'c', text: 'Hij geeft alleen zijn rekeningnummer, niet zijn pas.', best: false, feedback: 'Ook dat kunnen criminelen misbruiken.' },
           ],
-          why: 'Dit heet een geldezel zijn. Criminelen gebruiken jouw rekening voor hun geld. Dat is strafbaar, ook voor jou. Je kunt er grote schulden aan overhouden. Geef je pas en codes nooit aan een ander.',
+          why: 'Criminelen gebruiken dan jouw rekening voor hun geld. Dat is strafbaar, ook voor jou.', whyMore: 'Dit heet een geldezel zijn. Je kunt er grote schulden aan overhouden. Geef je pas en codes nooit aan een ander.',
         },
         // Voor werk betaal je nooit (rapport hiaten, voorstel 3).
         // ⚖️ check: Een bureau mag je geen geld vragen voor werk, ook niet later van je loon ⚖️
@@ -253,7 +253,7 @@ export const rechtenUnit: RuleUnit = {
             { id: 'b', text: 'Hij vraagt of het later van zijn loon af mag.', best: false, feedback: 'Dan betaalt hij nog steeds. Dat mag ook niet.' },
             { id: 'c', text: 'Hij betaalt niet, en hij meldt het bureau.', best: true, feedback: 'Goed. Een bureau mag hiervoor geen geld vragen.' },
           ],
-          why: 'Voor echt werk hoef jij zelf niet te betalen. Een bureau mag je geen geld vragen voor werk. Ook niet later, van je loon. Vraagt een bureau het toch? Meld het bij de Arbeidsinspectie.',
+          why: 'Voor echt werk betaal je niet zelf. Een bureau mag je geen geld vragen voor werk.', whyMore: 'Ook niet later, van je loon. Vraagt een bureau het toch? Meld het bij de Arbeidsinspectie.',
         },
         {
           kind: 'whoask',
@@ -318,7 +318,7 @@ export const rechtenUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt tijd, en ze laat het papier eerst nakijken.', best: true, feedback: 'Goed. Daar heeft ze recht op.' },
             { id: 'c', text: 'Ze tekent, en ze schrijft erbij dat ze het niet zeker weet.', best: false, feedback: 'Dan heeft ze toch getekend. Dat erbij schrijven helpt niet.' },
           ],
-          why: 'Een vaststellingsovereenkomst is een afspraak om je baan samen te stoppen. Staat er iets verkeerd in? Dan kun je je WW kwijtraken. Vraag eerst advies. Om tijd vragen is normaal.',
+          why: 'Staat er iets verkeerd in? Dan kun je je WW kwijtraken. Vraag eerst advies.', whyMore: 'Een vaststellingsovereenkomst is een afspraak om je baan samen te stoppen. Om tijd vragen is normaal.',
         },
         // ⚖️ check: Binnen 14 dagen ⚖️ na het tekenen mag je je nog bedenken.
         // ⚖️ check: Staat die termijn niet in het papier? Dan heb je 3 weken ⚖️ (art. 7:670b lid 2 BW).
@@ -327,7 +327,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.4.tf1',
           statement: 'Heb je toch getekend? Dan kun je het nooit meer terugdraaien.',
           answer: false,
-          why: 'Binnen 14 dagen na het tekenen mag je je nog bedenken. Doe dat op papier of per mail. Staat die termijn niet in het papier? Dan heb je 3 weken.',
+          why: 'Binnen 14 dagen na het tekenen mag je je nog bedenken.', whyMore: 'Doe dat op papier of per mail. Staat die termijn niet in het papier? Dan heb je 3 weken.',
         },
         // ⚖️ check: Je baas heeft meestal toestemming nodig van UWV of de rechter ⚖️.
         // ⚖️ check: Bij ontslag krijg je vaak geld mee: de transitievergoeding ⚖️.
@@ -336,7 +336,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.4.tf2',
           statement: 'Je baas mag je zomaar ontslaan, als hij dat wil.',
           answer: false,
-          why: 'Je baas heeft meestal toestemming nodig van UWV of de rechter. Of jouw instemming. Bij ontslag krijg je vaak geld mee: de transitievergoeding. In de proeftijd en bij een tijdelijk contract gelden andere regels. Op staande voet ontslagen? Vraag meteen advies.',
+          why: 'Je baas heeft meestal toestemming nodig van UWV of de rechter. Of jouw instemming.', whyMore: 'Bij ontslag krijg je vaak geld mee: de transitievergoeding. In de proeftijd en bij een tijdelijk contract gelden andere regels. Op staande voet ontslagen? Vraag meteen advies.',
         },
         // De vakbond (rapport hiaten, hoofdstuk 3): word lid vóór je een probleem hebt.
         // ⚖️ check: Ben je net lid? Dan is er soms een wachttijd ⚖️. Dan helpt de vakbond nog niet bij
@@ -346,7 +346,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.4.tf3',
           statement: 'Het is slim om lid te worden van een vakbond vóór je een probleem hebt.',
           answer: true,
-          why: 'Een vakbond helpt leden met vragen en problemen over hun werk. Ben je net lid? Dan is er soms een wachttijd. Dan helpt de vakbond nog niet bij een probleem dat er al was. Lid zijn kost geld per maand. Kijk op de site van de vakbond.',
+          why: 'Ben je net lid? Dan helpt de vakbond soms nog niet bij een probleem dat er al was.', whyMore: 'Een vakbond helpt leden met vragen en problemen over hun werk. Voor nieuwe leden is er soms een wachttijd. Lid zijn kost geld per maand. Kijk op de site van de vakbond.',
         },
         {
           kind: 'whoask',
