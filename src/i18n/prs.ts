@@ -408,6 +408,7 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'این را به همکاری که هالندی گپ می‌زند نشان دهید. در آن نوشته است که چگونه می‌تواند در تمرین به شما کمک کند.', // nieuw, nalezen
     colleagueShare: 'به همکار تان بفرستید', // nieuw, nalezen
     coachCardRights: 'موضوعات مربوط به حقوق شما با نام نشان داده شود', // nieuw, nalezen
+    speakFromMemory: 'حالا از یاد: به هالندی چه بود؟', // nieuw, nalezen
     keptNofM: 'کلمه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را می‌دانستید.', // nieuw, nalezen
     verbSecond: 'فعل در جای دوم است.', // nieuw, nalezen
     calmScreen: 'صفحهٔ آرام', // nieuw, nalezen

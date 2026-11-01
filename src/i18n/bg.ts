@@ -408,6 +408,7 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Покажи това на колега, който говори нидерландски. Там пише как може да ти помогне да упражняваш.', // nieuw, nalezen
     colleagueShare: 'Изпрати на колегата', // nieuw, nalezen
     coachCardRights: 'Показвай по име темите за твоите права', // nieuw, nalezen
+    speakFromMemory: 'Сега наизуст: как беше на нидерландски?', // nieuw, nalezen
     keptNofM: 'Думи отпреди 2 седмици или повече: още помниш {n} от {m}.', // nieuw, nalezen
     verbSecond: 'Глаголът е на място 2.', // nieuw, nalezen
     calmScreen: 'Спокоен екран', // nieuw, nalezen

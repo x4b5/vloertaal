@@ -408,6 +408,7 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Zeig das einem Kollegen, der Niederländisch spricht. Dort steht, wie er dir beim Üben helfen kann.', // nieuw, nalezen
     colleagueShare: 'An deinen Kollegen schicken', // nieuw, nalezen
     coachCardRights: 'Themen über deine Rechte mit Namen zeigen', // nieuw, nalezen
+    speakFromMemory: 'Jetzt aus dem Kopf: Was hieß es auf Niederländisch?', // nieuw, nalezen
     keptNofM: 'Wörter von vor 2 Wochen oder länger: Du wusstest noch {n} von {m}.', // nieuw, nalezen
     verbSecond: 'Das Verb steht an Stelle 2.', // nieuw, nalezen
     calmScreen: 'Ruhiger Bildschirm', // nieuw, nalezen

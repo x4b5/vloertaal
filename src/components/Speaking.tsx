@@ -119,6 +119,10 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   /** "Wat zeg je?" without recording ("say it out loud"): the reply shows after "Hear the answer". */
   const [shown, setShown] = useState(false);
   // No usable microphone (none, or it failed earlier in this lesson): "say it out loud" at once.
+  /** "Zeg het nog eens": the second try and after are said from memory (the Dutch hidden until the
+   *  try is done; the model stays one tap away). Saying the same turn again, with less support,
+   *  builds fluency (de Jong & Perfetti 2011; reports/Leerwetenschap en tweede taal.md, voorstel 16). */
+  const [tries, setTries] = useState(0);
   const [phase, setPhase] = useState<Phase>(phaseForShot ?? (speakMode() === 'record' ? 'idle' : 'off'));
   /** Retries left after the microphone failed here (one; see MIC_RETRIES). */
   const [retries, setRetries] = useState(MIC_RETRIES);
@@ -404,6 +408,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   }
 
   function again() {
+    setTries((n) => n + 1);
     stopBoth.current?.();
     tryRef.current++;
     listenRef.current?.abort();
@@ -454,7 +459,14 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
       <div className={`card say-card ${picture ? '' : 'say-card-text'}`}>
         {picture && <WordPicture className="say-pic" id={picture.id} emoji={picture.emoji} size={76} />}
         <div className="say-words">
-          <NlPair content nlFirst nl={breakable(item.nl)} nlClass="say-nl" dir="ltr" className="say-meaning" text={meaning} />
+          {tries > 0 && phase !== 'review' ? (
+            <>
+              <p className="say-memory"><Bi text={ui('speakFromMemory', lang)} /></p>
+              <Bi className="say-meaning" text={meaning} />
+            </>
+          ) : (
+            <NlPair content nlFirst nl={breakable(item.nl)} nlClass="say-nl" dir="ltr" className="say-meaning" text={meaning} />
+          )}
         </div>
         {/* The model is one tap away, also after recording. Hidden while recording (its sound
             would be recorded too), its place kept. */}

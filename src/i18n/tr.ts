@@ -408,6 +408,7 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Bunu Hollandaca konuşan bir iş arkadaşına göster. Pratik yapmana nasıl yardım edebileceği yazıyor.', // nieuw, nalezen
     colleagueShare: 'İş arkadaşına gönder', // nieuw, nalezen
     coachCardRights: 'Haklarınla ilgili konuları adıyla göster', // nieuw, nalezen
+    speakFromMemory: 'Şimdi ezberden: Hollandacası neydi?', // nieuw, nalezen
     keptNofM: '2 hafta veya daha önceki kelimeler: {m} kelimeden {n} tanesini hâlâ biliyordun.', // nieuw, nalezen
     verbSecond: 'Fiil 2. sıradadır.', // nieuw, nalezen
     calmScreen: 'Sakin ekran', // nieuw, nalezen

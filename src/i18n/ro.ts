@@ -408,6 +408,7 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Arată asta unui coleg care vorbește olandeză. Scrie cum te poate ajuta să exersezi.', // nieuw, nalezen
     colleagueShare: 'Trimite-l colegului', // nieuw, nalezen
     coachCardRights: 'Arată pe nume subiectele despre drepturile tale', // nieuw, nalezen
+    speakFromMemory: 'Acum din memorie: cum era în olandeză?', // nieuw, nalezen
     keptNofM: 'Cuvinte de acum 2 săptămâni sau mai vechi: încă știai {n} din {m}.', // nieuw, nalezen
     verbSecond: 'Verbul stă pe locul 2.', // nieuw, nalezen
     calmScreen: 'Ecran liniștit', // nieuw, nalezen
