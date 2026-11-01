@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'با این حال درس‌ها را انجام دهید', // nieuw, nalezen
     shareInvite: 'من با Vloertaal هلندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
     workTry: 'امروز سر کار امتحانش کن', // nieuw, nalezen
+    workTryWhen: 'وقتی:', // nieuw, nalezen
+    workTryThen: 'آن‌وقت بگویید:', // nieuw, nalezen
     calmScreen: 'صفحهٔ آرام', // nieuw, nalezen
     calmAuto: 'مثل گوشی شما', // nieuw, nalezen
     calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پشت سر هم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen

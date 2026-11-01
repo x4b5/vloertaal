@@ -403,6 +403,8 @@ const lang: HelpLanguageSource = {
     checkUndo: { m: 'ግን ነቶም ትምህርትታት ግበሮም', f: 'ግን ነቶም ትምህርትታት ግበርዮም', x: 'ግን ነቶም ትምህርትታት ግበሩዎም' }, // nieuw, nalezen
     shareInvite: 'ን ስራሐይ ሆላንድኛ ብ Vloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen
     workTry: { m: 'ሎሚ ኣብ ስራሕካ ፈትኖ', f: 'ሎሚ ኣብ ስራሕኪ ፈትንዮ', x: 'ሎሚ ኣብ ስራሕ ፈትንዎ' }, // nieuw, nalezen
+    workTryWhen: 'መዓስ:', // nieuw, nalezen
+    workTryThen: { m: 'ሽዑ በል:', f: 'ሽዑ በሊ:', x: 'ሽዑ በሉ:' }, // nieuw, nalezen
     calmScreen: 'ህዱእ ስክሪን', // nieuw, nalezen
     calmAuto: { m: 'ከም ተሌፎንካ', f: 'ከም ተሌፎንኪ', x: 'ከም ተሌፎንኩም' }, // nieuw, nalezen
     calmHint: 'ክፉት: ዝንቀሳቐስ የለን፡ ድሕሪ ትምህርቲ ናይ ተኸታታሊ መዓልትታት ጽምብል የለን፡ መዓልትታትን ቃላትን ኣብ ቀንዲ ስክሪን ኣይርአዩን።', // nieuw, nalezen

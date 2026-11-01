@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Hacer las lecciones igualmente', // nieuw, nalezen
     shareInvite: 'Aprendo neerlandés para mi trabajo con Vloertaal. Gratis: {link}', // nieuw, nalezen
     workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen
+    workTryWhen: 'Cuando:', // nieuw, nalezen
+    workTryThen: 'Entonces di:', // nieuw, nalezen
     calmScreen: 'Pantalla tranquila', // nieuw, nalezen
     calmAuto: 'Como tu teléfono', // nieuw, nalezen
     calmHint: 'Activado: nada se mueve, no hay celebración de tu racha después de una lección, y tu racha y tus palabras no aparecen en la pantalla de inicio.', // nieuw, nalezen

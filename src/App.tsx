@@ -838,9 +838,9 @@ export default function App() {
           samen: !daily && !phrases && track === 'taal' && hasSamen(found.lesson) ? view.lessonId : undefined,
           // A rules lesson: its "Onthoud" line under the numbers.
           remember: daily ? undefined : found.lesson.rule?.remember,
-          // "Probeer het vandaag op je werk": after a language lesson's first time, once a day
-          // (lib/workTry.ts); not while "Wil je sneller?" needs the room.
-          workTry: daily || reviewing || askFaster || track !== 'taal' ? undefined : workTryFor(view.lessonId, !progress.completed[view.lessonId], today),
+          // "Probeer het vandaag op je werk": after a lesson's first time, once a day, in both
+          // tracks (lib/workTry.ts); not while "Wil je sneller?" needs the room.
+          workTry: daily || reviewing || askFaster ? undefined : workTryFor(view.lessonId, !progress.completed[view.lessonId], today),
         });
       };
       return (
@@ -1139,8 +1139,8 @@ export default function App() {
       // "Bewaar je voortgang" (src/lib/backupNudge.ts): only where the phone may lose the
       // progress, after 3 lessons, once; after the notice and the test (one card at a time).
       const lessonsDone = knownLessons(progress.completed);
-      // "Gelukt?" (src/lib/workTry.ts): a day after "Probeer het vandaag op je werk", once; after the notice.
-      const gelukt = !notice && track === 'taal' ? geluktDue(dayKey(new Date())) : undefined;
+      // "Gelukt?" (src/lib/workTry.ts): a day after "Probeer het vandaag op je werk" (again the next day after "Nog niet"); after the notice.
+      const gelukt = !notice ? geluktDue(dayKey(new Date())) : undefined;
       // "Wil je ook de werkregels leren?" (src/lib/bridge.ts): once, most of the course done; after the notice and the test.
       const bridge = !notice && !gelukt && !offered && bridgeDue(progress);
       const nudge = !notice && !gelukt && !offered && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
@@ -1183,7 +1183,7 @@ export default function App() {
               <GeluktCard
                 line={gelukt}
                 lang={lang}
-                onAnswer={(worked) => { answerGelukt(worked ? 'ja' : 'nog-niet'); setNudgeTick((n) => n + 1); }}
+                onAnswer={(worked) => { answerGelukt(worked ? 'ja' : 'nog-niet', dayKey(new Date())); setNudgeTick((n) => n + 1); }}
               />
             ) : offered ? (
               <ToetsOffer
