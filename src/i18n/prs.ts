@@ -404,6 +404,9 @@ const lang: HelpLanguageSource = {
     workTry: 'امروز در کار امتحانش کن', // nieuw, nalezen
     workTryWhen: 'وقتی:', // nieuw, nalezen
     workTryThen: 'آنگاه بگویید:', // nieuw, nalezen
+    colleagueCard: 'برای همکار شما', // nieuw, nalezen
+    colleagueCardHint: 'این را به همکاری که هالندی گپ می‌زند نشان دهید. در آن نوشته است که چگونه می‌تواند در تمرین به شما کمک کند.', // nieuw, nalezen
+    colleagueShare: 'به همکار تان بفرستید', // nieuw, nalezen
     calmScreen: 'صفحهٔ آرام', // nieuw, nalezen
     calmAuto: 'مثل تلفن شما', // nieuw, nalezen
     calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پیهم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen

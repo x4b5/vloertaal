@@ -404,6 +404,9 @@ const lang: HelpLanguageSource = {
     workTry: 'Bugün işte dene', // nieuw, nalezen
     workTryWhen: 'Ne zaman:', // nieuw, nalezen
     workTryThen: 'O zaman şunu söyle:', // nieuw, nalezen
+    colleagueCard: 'İş arkadaşın için', // nieuw, nalezen
+    colleagueCardHint: 'Bunu Hollandaca konuşan bir iş arkadaşına göster. Pratik yapmana nasıl yardım edebileceği yazıyor.', // nieuw, nalezen
+    colleagueShare: 'İş arkadaşına gönder', // nieuw, nalezen
     calmScreen: 'Sakin ekran', // nieuw, nalezen
     calmAuto: 'Telefonundaki gibi', // nieuw, nalezen
     calmHint: 'Açık: hiçbir şey hareket etmez, dersten sonra serin için kutlama olmaz, serin ve kelimelerin ana ekranda görünmez.', // nieuw, nalezen

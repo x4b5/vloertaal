@@ -1,6 +1,7 @@
 import { tipForLesson } from '../content/culture';
 import { applyCalm } from '../lib/calm';
 import { workTryLine } from '../lib/workTry';
+import { ColleagueCard } from '../components/ColleagueCard';
 import { sayingForLesson, sayingQuestion } from '../content/sayings';
 import { findLesson } from '../content/curriculum';
 import { useState } from 'react';
@@ -150,6 +151,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'melding') return <MeldingShot lang={lang} gender={gender} q={q} />;
   // "Gelukt?" a day after the work sentence: /?shot=gelukt (src/dev/GeluktShot.tsx).
   if (shot === 'gelukt') return <GeluktShot lang={lang} gender={gender} />;
+  // "Voor je collega" (the Hulp tab): /?shot=colleague&lang=pl.
+  if (shot === 'colleague') return <ColleagueCard lang={getHelpLanguage((lang ?? 'en') as LangCode, gender)} onBack={() => {}} />;
   // "Wil je ook de werkregels leren?" on the home, most of the course done (src/dev/BridgeShot.tsx).
   if (shot === 'bridge') return <BridgeShot lang={lang} gender={gender} />;
   // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512
@@ -281,7 +284,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     if (shot === 'words') {
       return (
         <>
-          <WordsHub lang={l} onTips={() => {}} after={mapLink} />
+          <WordsHub lang={l} onTips={() => {}} onColleague={() => {}} after={mapLink} />
           <BottomNav current="words" onTab={() => {}} lang={l} />
         </>
       );

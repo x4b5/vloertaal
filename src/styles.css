@@ -4893,3 +4893,15 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* Matching: when every pair is made, the card that was never needed steps back too. */
 .match-cards .choice:disabled:not(.matched, .match-hit) { background: transparent; border-color: var(--line); color: var(--muted); }
 .match-cards .choice:disabled:not(.matched, .match-hit) .choice-pic { opacity: 0.45; filter: grayscale(1); }
+
+/* "Voor je collega" (src/components/ColleagueCard.tsx): the learner's two sentences, then a paper
+   card in Dutch for the colleague (to show, or to send as text). */
+.colleague-card {
+  margin: 18px 0 16px; padding: 14px 16px 12px; background: var(--card);
+  border: 2px solid var(--edge); border-radius: 6px; box-shadow: 4px 4px 0 var(--label-shadow);
+}
+.colleague-card-title { margin: 0 0 8px; font-size: var(--fs-question); line-height: 1.25; color: var(--ink-strong); }
+.colleague-card-lines { margin: 0; padding-inline-start: 1.2em; display: flex; flex-direction: column; gap: 6px; font-size: var(--fs-answer); line-height: 1.4; color: var(--ink); }
+.colleague-card-thanks { margin: 10px 0 0; font-weight: 700; color: var(--ink); }
+.colleague-card-site { font-weight: 500; color: var(--muted); }
+.colleague-share { width: 100%; }

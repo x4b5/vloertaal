@@ -404,6 +404,9 @@ const lang: HelpLanguageSource = {
     workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
     workTryWhen: 'Коли:', // nieuw, nalezen
     workTryThen: 'Тоді скажи:', // nieuw, nalezen
+    colleagueCard: 'Для колеги', // nieuw, nalezen
+    colleagueCardHint: 'Покажи це колезі, який говорить нідерландською. Тут написано, як він може допомогти тобі практикуватися.', // nieuw, nalezen
+    colleagueShare: 'Надіслати колезі', // nieuw, nalezen
     calmScreen: 'Спокійний екран', // nieuw, nalezen
     calmAuto: 'Як у телефоні', // nieuw, nalezen
     calmHint: 'Увімкнено: нічого не рухається, немає святкування серії після уроку, а серія і слова не показуються на головному екрані.', // nieuw, nalezen

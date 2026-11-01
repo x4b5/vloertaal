@@ -12,6 +12,7 @@ import { tempoOf } from './lib/tempo';
 import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
 import { answerGelukt, geluktDue, type WorkTryLine, workTryFor } from './lib/workTry';
 import { GeluktCard } from './components/GeluktCard';
+import { ColleagueCard } from './components/ColleagueCard';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
@@ -91,6 +92,7 @@ type View =
    *  certificate or the streak milestone still follows. */
   | { name: 'phrasebook'; streakUp?: number; cert?: string }
   | { name: 'tips' }
+  | { name: 'colleague' }
   /** The region's "Sociale kaart" (from the Hulp tab, only with a region chosen in Settings). */
   | { name: 'socialmap' }
   /** upgrade: opened from a locked unit, so the unlock card is scrolled into view. */
@@ -677,7 +679,7 @@ export default function App() {
     <>
       {track === 'regels'
         ? <RulesHelp lang={lang} country={progress.country} onShelf={() => go({ name: 'tips' })} after={mapLink} />
-        : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} after={mapLink} />}
+        : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} onColleague={() => go({ name: 'colleague' })} after={mapLink} />}
       <BottomNav current="words" onTab={tab} lang={lang} />
     </>
   );
@@ -972,6 +974,8 @@ export default function App() {
       );
     case 'coaches':
       return <Coaches onBack={back} lang={lang} />;
+    case 'colleague':
+      return <ColleagueCard lang={lang} onBack={back} />;
     case 'scene':
       return <SceneScreen id={view.id} url={view.url} lang={lang} onBack={back} onDone={back} />;
     case 'news':
