@@ -725,11 +725,10 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       {/* The sentence so far (not tappable), with a dashed slot where the next word goes. */}
       <div className={`answer-line ${twoRows ? 'answer-two' : ''} ${verdict ? `answer-${verdict}` : ''}`} aria-live="polite" lang="nl" dir="ltr">
         {verdict === 'wrong' && <WrongStamp lang={lang} />}
+        {/* Right: no check here, the feedback below has it ("Vloertaal rustiger": say it once);
+            a screen reader still hears it. */}
         {verdict === 'right' && (
-          <span className="answer-mark mark-right">
-            <CheckIcon size={24} />
-            <span className="sr-only" lang={saidLang(ui('correctAnswer', lang))}>{srText(ui('correctAnswer', lang))}</span>
-          </span>
+          <span className="sr-only" lang={saidLang(ui('correctAnswer', lang))}>{srText(ui('correctAnswer', lang))}</span>
         )}
         {words.slice(0, at).map((w, i) => <span key={i} className="tile tile-placed">{breakable(w)}</span>)}
         {!complete && <span className="tile-next" aria-hidden />}
