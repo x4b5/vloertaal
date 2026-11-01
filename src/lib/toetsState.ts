@@ -1,4 +1,4 @@
-import type { ToetsPart, ToetsVersion } from '../content/toets';
+import { TOETS_PARTS, type ToetsPart, type ToetsVersion } from '../content/toets';
 
 /**
  * What the progress keeps of "Wat ken je al?" (src/content/toets.ts): per moment the day, the
@@ -6,6 +6,12 @@ import type { ToetsPart, ToetsVersion } from '../content/toets';
  *
  * `v` is the version of this shape. A save from before the test has no `toets` and works as
  * before; a `toets` this app cannot read (another `v`, broken values) is left out (readToets).
+ *
+ * Form 2 of the test (November 2026, src/content/toets.ts TOETS_FORM) keeps a little more per run:
+ * `form`, `mc`, `wrong` and `idk`. They are optional and added to the same shape (still `v: 1`),
+ * so nothing has to be moved: a run of form 1 (18 picks, no "Ik weet het niet") has none of them
+ * and is read as `mc = of`, `wrong = of - right`, `idk = 0` (runTally), and an older app that
+ * reads a run of form 2 keeps its day, version, right and of (it skips what it does not know).
  */
 export const TOETS_STATE_VERSION = 1;
 
@@ -19,6 +25,14 @@ export interface ToetsRun {
   right: ToetsScore;
   /** Questions per part. */
   of: ToetsScore;
+  /** The form of the test (TOETS_FORM); none: form 1. */
+  form?: number;
+  /** Form 2: questions per part that were a pick of three (a guess can be right). */
+  mc?: ToetsScore;
+  /** Form 2: wrong picks per part (picks only; a wrong built sentence or word is not here). */
+  wrong?: ToetsScore;
+  /** Form 2: "Ik weet het niet" per part. */
+  idk?: ToetsScore;
 }
 
 export interface ToetsState {
@@ -53,7 +67,23 @@ function readRun(raw: unknown): ToetsRun | undefined {
   if (!isDay(r.day) || (r.version !== 'A' && r.version !== 'B')) return undefined;
   const of = readScore(r.of);
   const right = of && readScore(r.right, of);
-  return of && right ? { day: r.day, version: r.version, right, of } : undefined;
+  if (!of || !right) return undefined;
+  const run: ToetsRun = { day: r.day, version: r.version, right, of };
+  // Form 2's counts: all of them, and adding up (right + wrong + idk never more than asked, the
+  // wrong picks never more than the picks), or none (the run is then read as form 1).
+  const mc = readScore(r.mc, of);
+  const wrong = mc && readScore(r.wrong, mc);
+  const idk = readScore(r.idk, of);
+  const adds = mc && wrong && idk && (['listen', 'words', 'sentences'] as const).every((k) => right[k] + wrong[k] + idk[k] <= of[k]);
+  if (isCount(r.form, 99) && r.form >= 2 && adds) Object.assign(run, { form: r.form, mc, wrong, idk });
+  return run;
+}
+
+/** The counts of a run, also for a run of form 1 (every question a pick, every miss a wrong pick). */
+export function runTally(run: ToetsRun): { right: ToetsScore; of: ToetsScore; mc: ToetsScore; wrong: ToetsScore; idk: ToetsScore } {
+  if (run.mc && run.wrong && run.idk) return { right: run.right, of: run.of, mc: run.mc, wrong: run.wrong, idk: run.idk };
+  const each = (f: (k: ToetsPart) => number): ToetsScore => ({ listen: f('listen'), words: f('words'), sentences: f('sentences') });
+  return { right: run.right, of: run.of, mc: run.of, wrong: each((k) => run.of[k] - run.right[k]), idk: each(() => 0) };
 }
 
 /** The test's place in a save, as far as it can be read; undefined when there is none (or it is unknown). */
@@ -86,4 +116,58 @@ export function mergeToets(a?: ToetsState, b?: ToetsState): ToetsState | undefin
   if (instap) delete out.skipped;
   else out.skipped = a.skipped ?? b.skipped;
   return out;
+}
+
+/* ---- Reading a run: the guessing taken out, and then against now (docs/toets.md) ---- */
+
+/** How many options a pick has: a guess is right one time in this many. */
+export const TOETS_OPTIONS = 3;
+
+/**
+ * What the learner knows of a part, with the guessing taken out: the right answers minus half the
+ * wrong picks (with three options a guess is wrong two times in three, so for every two wrong
+ * picks one right pick was a lucky guess, on average). Never below 0. "Ik weet het niet" and a
+ * wrong built sentence or written word take nothing off. The same for a run of form 1 (every miss
+ * there was a wrong pick). Exact (it can end in .5); knownOf rounds it down for the screen.
+ */
+export function knownExact(run: ToetsRun, part: ToetsPart): number {
+  const t = runTally(run);
+  return Math.max(0, t.right[part] - t.wrong[part] / (TOETS_OPTIONS - 1));
+}
+
+/** knownExact in whole questions (rounded down): what the bars and the coach card show. */
+export const knownOf = (run: ToetsRun, part: ToetsPart): number => Math.floor(knownExact(run, part));
+
+/** Growth needs at least this many questions more (of the run now). */
+export const MIN_MORE = 2;
+export type ToetsGrowth = 'up' | 'same' | 'down';
+
+/**
+ * Then and now, honestly: 'up' only when the difference is bigger than guessing can give.
+ *  - The share known (knownExact / questions) is at least MIN_MORE questions higher, and
+ *  - more than twice the spread that the guesses of both runs can cause. A guess, corrected, adds
+ *    +1 (one time in three) or -1/2 (two times in three): its variance is 1/2. A run with W wrong
+ *    picks guessed about 1.5·W times, so its guesses spread about 0.75·W (in questions; divided
+ *    by the questions squared for the share). W + 1, not W: a few lucky guesses can leave W small
+ *    by chance (tests/toets.test.ts: without the 1, a learner who learned nothing got "Meer dan
+ *    toen" 6 times in 100 in a part; with it, fewer than 5).
+ * 'down' when lower by as much; else 'same' ("ongeveer gelijk"). Over one part, or over the whole
+ * test (`part` left out). docs/toets.md explains it for coaches.
+ */
+export function growthOf(before: ToetsRun, now: ToetsRun, part?: ToetsPart): ToetsGrowth {
+  const parts = part ? [part] : TOETS_PARTS;
+  const total = (run: ToetsRun, f: (t: ReturnType<typeof runTally>, k: ToetsPart) => number) => {
+    const t = runTally(run);
+    return parts.reduce((n, k) => n + f(t, k), 0);
+  };
+  const of1 = total(before, (t, k) => t.of[k]);
+  const of2 = total(now, (t, k) => t.of[k]);
+  if (!of1 || !of2) return 'same';
+  const share1 = parts.reduce((n, k) => n + knownExact(before, k), 0) / of1;
+  const share2 = parts.reduce((n, k) => n + knownExact(now, k), 0) / of2;
+  const guessed = (run: ToetsRun) => 0.75 * (total(run, (t, k) => t.wrong[k]) + 1);
+  const spread = guessed(before) / (of1 * of1) + guessed(now) / (of2 * of2);
+  const d = share2 - share1;
+  const big = Math.abs(d) * of2 >= MIN_MORE - 1e-9 && Math.abs(d) > 2 * Math.sqrt(spread);
+  return !big ? 'same' : d > 0 ? 'up' : 'down';
 }

@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Cuvinte', // nieuw, nalezen
     toetsPartSentences: 'Propoziții', // nieuw, nalezen
     toetsListenAsk: 'Ascultă. Ce înseamnă?', // nieuw, nalezen
-    toetsNotSure: 'Nu știi? Alege unul, pur și simplu. Nu e nicio problemă.', // nieuw, nalezen
+    toetsNotSure: 'Nu știi? Atinge „Nu știu”. Nu e nicio problemă.', // nieuw, nalezen
     toetsMicKeep: 'Înregistrarea ta rămâne doar pe acest telefon. Mai târziu te poți auzi din nou.', // nieuw, nalezen
     toetsStartDone: 'Un început bun! Asta știi deja.', // nieuw, nalezen
     toetsEndDone: 'Bravo! Uite ce știi acum.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Tu acum', // nieuw, nalezen
     toetsKeepGoing: 'Exersează puțin în fiecare zi. Așa înveți tot mai mult.', // nieuw, nalezen
     toetsStart: 'Fă testul', // nieuw, nalezen
+    toetsIdk: 'Nu știu', // nieuw, nalezen
+    toetsMore: 'Mai mult decât atunci', // nieuw, nalezen
+    toetsSame: 'Cam la fel', // nieuw, nalezen
+    toetsMoreAll: 'Totul la un loc: acum știi mai mult decât atunci.', // nieuw, nalezen
+    toetsSameAll: 'Totul la un loc: cam la fel ca atunci.', // nieuw, nalezen
     tempo: 'Viteză', // nieuw, nalezen
     tempoCalm: 'Calm', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen

@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'Думи', // nieuw, nalezen
     toetsPartSentences: 'Изречения', // nieuw, nalezen
     toetsListenAsk: 'Слушай. Какво означава?', // nieuw, nalezen
-    toetsNotSure: 'Не знаеш ли? Просто избери едно. Няма проблем.', // nieuw, nalezen
+    toetsNotSure: 'Не знаеш ли? Натисни „Не знам“. Няма проблем.', // nieuw, nalezen
     toetsMicKeep: 'Записът ти остава само на този телефон. По-късно можеш да се чуеш отново.', // nieuw, nalezen
     toetsStartDone: 'Добро начало! Това вече го знаеш.', // nieuw, nalezen
     toetsEndDone: 'Браво! Виж какво знаеш сега.', // nieuw, nalezen
@@ -344,6 +344,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'Ти сега', // nieuw, nalezen
     toetsKeepGoing: 'Упражнявай се малко всеки ден. Така ще научаваш все повече.', // nieuw, nalezen
     toetsStart: 'Направи теста', // nieuw, nalezen
+    toetsIdk: 'Не знам', // nieuw, nalezen
+    toetsMore: 'Повече от тогава', // nieuw, nalezen
+    toetsSame: 'Горе-долу същото', // nieuw, nalezen
+    toetsMoreAll: 'Всичко заедно: сега знаеш повече от тогава.', // nieuw, nalezen
+    toetsSameAll: 'Всичко заедно: горе-долу същото като тогава.', // nieuw, nalezen
     tempo: 'Темпо', // nieuw, nalezen
     tempoCalm: 'Спокойно', // nieuw, nalezen
     tempoNormal: 'Нормално', // nieuw, nalezen

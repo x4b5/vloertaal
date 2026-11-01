@@ -337,7 +337,7 @@ const lang: HelpLanguageSource = {
     toetsPartWords: 'ቃላት', // nieuw, nalezen
     toetsPartSentences: 'ሓረጋት', // nieuw, nalezen
     toetsListenAsk: { m: 'ስማዕ። እንታይ ማለት እዩ?', f: 'ስምዒ። እንታይ ማለት እዩ?', x: 'ስምዑ። እንታይ ማለት እዩ?' }, // nieuw, nalezen
-    toetsNotSure: { m: 'ኣይትፈልጥን ዲኻ? ሓደ ጥራይ ምረጽ። ጸገም የብሉን።', f: 'ኣይትፈልጥን ዲኺ? ሓደ ጥራይ ምረጺ። ጸገም የብሉን።', x: 'ኣይትፈልጡን ዲኹም? ሓደ ጥራይ ምረጹ። ጸገም የብሉን።' }, // nieuw, nalezen
+    toetsNotSure: { m: 'ኣይትፈልጥን ዲኻ? «ኣይፈልጥን» ጠውቕ። ጸገም የብሉን።', f: 'ኣይትፈልጥን ዲኺ? «ኣይፈልጥን» ጠውቒ። ጸገም የብሉን።', x: 'ኣይትፈልጡን ዲኹም? «ኣይፈልጥን» ጠውቑ። ጸገም የብሉን።' }, // nieuw, nalezen
     toetsMicKeep: { m: 'ቅጂኻ ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኻ ደጊምካ ክትሰምዕ ትኽእል ኢኻ።', f: 'ቅጂኺ ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኺ ደጊምኪ ክትሰምዒ ትኽእሊ ኢኺ።', x: 'ቅጂኹም ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኹም ደጊምኩም ክትሰምዑ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
     toetsStartDone: { m: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጥ ኢኻ።', f: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጢ ኢኺ።', x: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጡ ኢኹም።' }, // nieuw, nalezen
     toetsEndDone: { m: 'ጽቡቕ ገይርካ! ሕጂ እንታይ ከም እትፈልጥ ርአ።', f: 'ጽቡቕ ገይርኪ! ሕጂ እንታይ ከም እትፈልጢ ርአዪ።', x: 'ጽቡቕ ገይርኩም! ሕጂ እንታይ ከም እትፈልጡ ርአዩ።' }, // nieuw, nalezen
@@ -345,6 +345,11 @@ const lang: HelpLanguageSource = {
     toetsYouNow: { m: 'ንስኻ ሕጂ', f: 'ንስኺ ሕጂ', x: 'ንስኹም ሕጂ' }, // nieuw, nalezen
     toetsKeepGoing: { m: 'መዓልታዊ ቁሩብ ተለማመድ። ከምኡ ብዝያዳ ትማሃር።', f: 'መዓልታዊ ቁሩብ ተለማመዲ። ከምኡ ብዝያዳ ትማሃሪ።', x: 'መዓልታዊ ቁሩብ ተለማመዱ። ከምኡ ብዝያዳ ትማሃሩ።' }, // nieuw, nalezen
     toetsStart: { m: 'ፈተና ጀምር', f: 'ፈተና ጀምሪ', x: 'ፈተና ጀምሩ' }, // nieuw, nalezen
+    toetsIdk: 'ኣይፈልጥን', // nieuw, nalezen
+    toetsMore: 'ካብ ቅድሚ ይበዝሕ', // nieuw, nalezen
+    toetsSame: 'ዳርጋ ሓደ ዓይነት', // nieuw, nalezen
+    toetsMoreAll: { m: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጥ ኢኻ።', f: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጢ ኢኺ።', x: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጡ ኢኹም።' }, // nieuw, nalezen
+    toetsSameAll: 'ኩሉ ብሓባር: ዳርጋ ከም ቅድሚ።', // nieuw, nalezen
     tempo: 'ቅልጣፈ', // nieuw, nalezen
     tempoCalm: 'ህዱእ', // nieuw, nalezen
     tempoNormal: 'ንቡር', // nieuw, nalezen

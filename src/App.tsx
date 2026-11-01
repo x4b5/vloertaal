@@ -1081,9 +1081,9 @@ export default function App() {
           moment={view.moment}
           lang={lang}
           onQuit={back}
-          onDone={({ right, of, voice }) => {
+          onDone={({ tally, voice }) => {
             const moment = view.moment;
-            setProgress((p) => recordToets(p, moment, right, of, new Date()));
+            setProgress((p) => recordToets(p, moment, tally, new Date()));
             // The recording stays on this phone only (src/lib/toetsVoice.ts), for "Jij toen / Jij nu".
             if (voice) void keepVoice(moment, voice);
             count('toets-done', { lesson: versionOf(moment).toLowerCase() });

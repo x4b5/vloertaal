@@ -281,7 +281,7 @@ describe('the language course per country', () => {
     expect(routeOrder(undefined, 'taal').map((u) => u.id)).toEqual((setRulesCountry('nl'), routeOrder(undefined, 'taal').map((u) => u.id)));
     inCountryBe(false);
     expect(tipBody(tipForLesson('l.site')!).en.endsWith(ADVICE_LINE)).toBe(true);
-    expect(toetsQuestions('A').map((q) => q.part)).toHaveLength(18);
+    expect(toetsQuestions('A').map((q) => q.part)).toHaveLength(TOETS_VERSIONS.A.length);
   });
 
   it('gives every changed unit a mixed review of its own items, with a translated title', () => {
@@ -340,8 +340,8 @@ describe('the language course per country', () => {
     // The test's items resolve in both countries.
     for (const c of ['nl', 'be'] as const) {
       setRulesCountry(c);
-      expect(toetsQuestions('A')).toHaveLength(18);
-      expect(toetsQuestions('B')).toHaveLength(18);
+      expect(toetsQuestions('A')).toHaveLength(TOETS_VERSIONS.A.length);
+      expect(toetsQuestions('B')).toHaveLength(TOETS_VERSIONS.B.length);
     }
   });
 
@@ -410,7 +410,7 @@ describe('"Wat kun je nu?" and the test', () => {
     // The Dutch words of the test that Flanders says otherwise (docs/taal-belgie.md, "De toets").
     const FLEMISH = /\b(loonstro\w*|bedrijfsarts|kantine|uitzendbureau|UWV|DigiD|pinnen)\b/i;
     const differ = [...new Set(items)].filter((id) => FLEMISH.test(lines.find((x) => x.id === id)?.nl ?? '')).sort();
-    expect(differ).toEqual(['c.payslip.q', 'w.bedrijfsarts', 'w.kantine']);
+    expect(differ).toEqual(['c.payslip.q', 'w.kantine']);
   });
 });
 

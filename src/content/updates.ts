@@ -37,6 +37,7 @@ export const UPDATES: Update[] = [
       'Bewaar je voortgang: kan je telefoon je voortgang wissen? Dan vraagt de app na 3 lessen één keer of je een kopie wilt maken. Bij Instellingen › Bewaar je voortgang stuur je het bestand nu ook naar jezelf, bijvoorbeeld in WhatsApp of een e-mail.',
       'Bij de start kun je meer horen in je eigen taal: de vraag "Wat wil je leren?", de twee keuzes, "Polski?" en de uitleg bij de vragen daarna. Tik op de knop met de wereldbol. Die staat er als je telefoon een stem voor je taal heeft. De keuzes bij "Wat wil je leren?" zijn ook korter.',
       'Taal: nieuw in de les is "Wat zeg je?". Vlak voor "Maak het gesprek af" hoor je de collega. Dan zeg je zelf het antwoord, en daarna hoor je het voorbeeld. Daarvoor gaat er meestal een andere oefening uit de les.',
+      'Taal: de toets "Wat ken je al?" is anders. Nu 21 vragen. Soms bouw je een zin of schrijf je een woord. Weet je het niet? Tik op "Ik weet het niet". Dat is goed. Na 4 weken staat er alleen "Meer dan toen" als het echt meer is. Anders staat er "Ongeveer gelijk". Je uitslag van eerder blijft staan.',
     ],
   },
   {

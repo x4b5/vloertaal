@@ -56,8 +56,11 @@ nummer, geen naam.
 ## De toets "Wat ken je al?"
 
 Om te zien wat een leerling erbij leert, heeft het spoor Taal een korte toets van ongeveer
-10 minuten: 18 vragen (6 luisteren, 6 woorden, 6 zinnen) en aan het eind één zin hardop zeggen.
-Er is geen cijfer en geen "geslaagd" of "gezakt". De uitslag is drie balken.
+10 minuten: 21 vragen (7 luisteren, 7 woorden, 7 zinnen) en aan het eind één zin hardop zeggen.
+Bij 5 van de 7 vragen per onderdeel kiest de leerling uit 3; bij 2 maakt de leerling zelf iets (een
+zin bouwen, een woord schrijven). Elke vraag heeft "Ik weet het niet". Er is geen cijfer en geen
+"geslaagd" of "gezakt". De uitslag is drie balken, met het gokken eruit gehaald. Hoe de toets werkt
+en wat hij wel en niet zegt: [toets.md](toets.md).
 
 - **Instap, in week 1.** Na de start staat op het lespad een kaart "Wat ken je al? · 10 min" met
   **Doen** en **Later**. Op dag 1 doet de leerling de toets vóór les 1 (reken er 10 minuten bij).

@@ -94,3 +94,22 @@
   .toets-result .toets-keep { margin-top: 12px; }
   .toets-result .toets-result-foot { margin-top: 14px; padding-top: 8px; }
 }
+
+/* "Ik weet het niet" under every question (Toets.tsx ToetsPlayer): a small text link like the
+   lesson's "Ik kan nu niet luisteren" (.skip-sound), not a fourth card. Dutch above the help line. */
+.toets-idk {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  margin: 18px auto 0; min-height: 44px; padding: 8px 14px;
+  background: none; border: none; color: var(--muted); font: inherit; font-size: 0.95rem; cursor: pointer;
+  text-align: center;
+}
+.toets-idk-nl { text-decoration: underline dashed var(--ink-3); text-underline-offset: 5px; }
+.toets-idk-help { --help-size: 0.85em; }
+.toets-idk:hover, .toets-idk:focus-visible { color: var(--ink-strong); }
+
+/* Then against now, in words (GrowthNote): under a part's two bars, and under all three. */
+.toets-growth { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; margin: 6px 0 0; font-size: 0.92rem; color: var(--muted); }
+.toets-growth-up { color: var(--ink-strong); font-weight: 650; }
+.toets-growth-nl { font-weight: inherit; }
+.toets-growth-help { --help-size: 0.9em; }
+.toets-growth-all { justify-content: center; text-align: center; margin: 12px auto 0; max-width: 520px; font-size: 1rem; }
