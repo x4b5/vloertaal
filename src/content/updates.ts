@@ -19,6 +19,17 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-01',
     items: [
+      'Na het antwoord is het scherm rustiger: de vraag gaat naar de achtergrond, en bij een goed antwoord staat het antwoord er niet nog eens onder als er niets bij te vertellen is. Een luidspreker die je mag gebruiken staat nu altijd rechts. De knop Doorgaan is na de eerste keer alleen een pijl.',
+      'Woorden hoor je nu van verschillende collega\'s, niet alleen van Bram. En in "Herhaal vandaag" komt elke dag één klankpaar terug (man of maan?): je hoort het woord en kiest het plaatje.',
+      'Na de herhaling zie je wat is blijven hangen: "Woorden van 2 weken of langer geleden: je wist er nog 9 van de 10."',
+      'De eerste keer dat je een zin bouwt, paren koppelt of met letters typt, wijst een hand één keer aan waar je tikt.',
+      '"Probeer het vandaag op je werk" zegt nu ook wanneer: "Als: … Zeg dan: …". Dat komt nu ook na een les van Werkregels. Zeg je de dag erna "Nog niet", dan vraagt de app het nog één keer.',
+      'Nieuw onder Hulp: "Voor je collega". Een kaart voor een Nederlandse collega die met je wil oefenen: praat rustig, doe het voor, blijf Nederlands praten. Je kunt hem laten zien of sturen.',
+      'Typen: de en het verwisseld telt nu als bijna goed. Je ziet het goede lidwoord, maar het woord gaat niet terug naar het begin van de herhaling.',
+      'Bij "Zet het vooraan" staat het werkwoord in een kader, met de uitleg "Het werkwoord staat op plek 2." Bij spreken zeg je de zin bij "Zeg het nog eens" uit je hoofd.',
+      'Op de kaart "Laat zien hoe het gaat" staan onderwerpen over je rechten niet meer bij naam, maar als "een onderwerp over je rechten". Je kiest zelf of de naam erop mag.',
+      'Werkregels: de uitleg na een vraag is korter. Meer uitleg staat achter een ⓘ. Bij een tip in de les staat achter de ⓘ ook wie je om hulp kunt vragen.',
+      'Bij de start staat nu dat Vloertaal ook uitlegt hoe werk hier gaat: je contract, je loon, ziek melden. De voortgangsbalk is rustiger, en de tekst van een tip is groter op een telefoon.',
       'Nieuw bij Instellingen › Lessen: Rustig scherm. Aan: niets beweegt, geen feestje voor je reeks na een les, en je reeks en woorden staan niet op de startpagina. Staat je telefoon op "minder beweging"? Dan staat het vanzelf aan.',
       'De app is rustiger: warmere kleuren, zachtere randen, en minder tegelijk op het scherm. De onderbalk toont iconen. Extra uitleg staat achter een ⓘ: tik erop om hem te lezen. Je naam op een certificaat of op je kaart pas je nu aan op het certificaat of de kaart zelf: tik op het potlood.',
       'Mag de app je microfoon niet gebruiken? Dan zie je bij het spreken de knop "Zet de microfoon aan", met de stappen voor jouw telefoon. Staat de microfoon weer aan, dan gaat de oefening meteen verder.',
