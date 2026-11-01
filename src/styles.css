@@ -539,18 +539,19 @@ h2 { font-size: 1.25rem; }
 /* Generic bar (admin page). */
 .bar { flex: 1; height: 14px; background: var(--track); border-radius: 4px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--ink); border-radius: 4px; transition: width 0.4s ease; }
-/* Lesson progress: one continuous bar. Ink fills what is done, yellow marks where you are and
-   a kraft tail at the end holds the mistakes that come back. The ink-3 outline keeps the empty
-   track at 3:1 or more against the floor. Transform-only motion (320 ms); fills from the right
+/* Lesson progress: one continuous bar. The soft edge colour fills what is done ("Vloertaal
+   rustiger": the bar stays quiet), yellow with an ink outline marks where you are (the one strong
+   spot) and a kraft tail at the end holds the mistakes that come back. The edge outline and the
+   fill keep 3:1 or more against the floor (--edge). Transform-only motion (320 ms); fills from the right
    in right-to-left help languages. */
 .lbar {
   position: relative; flex: 1; min-width: 0; height: 12px; overflow: hidden;
-  border-radius: 6px; background: var(--track); box-shadow: inset 0 0 0 1.5px var(--ink-3);
+  border-radius: 6px; background: var(--track); box-shadow: inset 0 0 0 1.5px var(--edge);
 }
 .lbar > span { position: absolute; inset-block: 0; }
 .lbar-tail { right: 0; background: color-mix(in srgb, var(--kraft) 70%, var(--track)); }
 .lbar-now { left: 0; background: var(--yellow); box-shadow: inset 0 0 0 1.5px #1e2226; transition: transform 0.32s var(--ease-out); }
-.lbar-fill { left: 0; width: 100%; background: var(--ink); transform-origin: left center; transition: transform 0.32s var(--ease-out); }
+.lbar-fill { left: 0; width: 100%; background: var(--edge); transform-origin: left center; transition: transform 0.32s var(--ease-out); }
 /* Countable steps: a 2 px notch in the floor colour at the end of every exercise's slot, over
    the fill, so "how many left" can be seen without reading a number (still clear at ~20). */
 .lbar-ticks {
