@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { stillMotion } from '../lib/calm';
 import { NOT_SURE, sectorGroups, sectors, type SectorChoice } from '../content/sectors';
 import { REGIONS, regionMetaOf, regionsOn, type RegionChoice } from '../content/regio';
 import { ensureLanguage, hasGender, isLanguageLoaded, langTag, said, saidLang, ui, type Bilingual } from '../i18n';
@@ -24,6 +25,9 @@ import { installLocal, listenOn, localStatus, setListenOn, type LocalStatus } fr
 import { tempoOf, TEMPOS, type Tempo } from '../lib/tempo';
 import { fasterOn } from '../lib/pace';
 import { TEXT_SIZES, type TextSize } from '../lib/textSize';
+import { CALM_CHOICES, type CalmChoice } from '../lib/calm';
+import { FlameIcon } from './StreakArt';
+import { Character } from './Characters';
 import { VOICE_SAMPLE } from '../lib/voices';
 import { nonLatinHelp, setWantsWriting, setWritingInput, wantsWriting, writingInput } from '../lib/writing';
 import { Bi } from './Bi';
@@ -101,6 +105,35 @@ const TextA = ({ size }: { size: TextSize }) => <span className={`text-size-a te
 const TEXT_KEYS = { normal: 'textNormal', large: 'textLarge', xl: 'textXl' } as const;
 const THEME_KEYS = { auto: 'themeAuto', light: 'themeLight', dark: 'themeDark' } as const;
 const THEME_ICONS = { auto: AutoThemeIcon, light: SunIcon, dark: MoonIcon };
+const CALM_KEYS = { auto: 'calmAuto', on: 'settingOn', off: 'settingOff' } as const;
+/** "Rustig scherm": a line that settles (a wave that becomes still). */
+const CalmIcon = ({ size = 24, still }: { size?: number; still?: boolean }) => (
+  <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
+    {still === undefined ? (
+      <>
+        <path d="M3 9c3-3 5 3 9 0s6 3 9 0" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+        <path d="M3 16h18" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+      </>
+    ) : still ? (
+      <><path d="M4 9h16M4 15h16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" /></>
+    ) : (
+      <><path d="M3 9c3-3 5 3 9 0s6 3 9 0M3 15c3-3 5 3 9 0s6 3 9 0" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" /></>
+    )}
+  </svg>
+);
+/**
+ * "Rustig scherm" shown at once (the principle "change it in the example itself"): a small piece
+ * of the home, with Bram moving and the day count and words, as they are now. With the calm
+ * screen on, the motion stops and the count leaves (the same rules as the whole app).
+ */
+function CalmPreview() {
+  return (
+    <div className="calm-preview" aria-hidden>
+      <span className="calm-preview-stats"><FlameIcon lit size={18} /> 7 <CrateIcon size={16} /> 24</span>
+      <span className="calm-preview-figure"><Character who="bram" mood="pleased" size={64} /></span>
+    </div>
+  );
+}
 
 /** Each row: its Dutch name, its UI key and its icon. */
 const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; icon: ReactNode }> = {
@@ -126,6 +159,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   writing: { nl: 'Schrijven', key: 'settingWriting', icon: <PencilIcon size={24} /> },
   text: { nl: 'Tekstgrootte', key: 'textSize', icon: <TextA size="normal" /> },
   theme: { nl: 'Weergave', key: 'theme', icon: <AutoThemeIcon size={24} /> },
+  calm: { nl: 'Rustig scherm', key: 'calmScreen', icon: <CalmIcon size={24} /> },
   // An arrow into the phone's tray: lessons downloaded (the crate is the backup's file).
   offline: { nl: 'Lessen op deze telefoon', key: 'settingKeepLessons', icon: <DownloadIcon size={24} /> },
   reminder: { nl: 'Herinner mij elke dag', key: 'remindTitle', icon: <CalendarIcon size={24} /> },
@@ -163,7 +197,7 @@ function Head({ page, lang, onBack }: { page: SettingsPage | null; lang?: HelpLa
 }
 
 export function Settings({
-  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onCountry, onTheme, onTextSize, onVoice, onQuiet, onTempo, onReset,
+  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onCountry, onTheme, onTextSize, onCalm, onVoice, onQuiet, onTempo, onReset,
   onRestore, access = 'full', onAccess, onCertificate, onFaster,
 }: {
   progress: Progress;
@@ -183,6 +217,8 @@ export function Settings({
   onCountry?: (country: Country) => void;
   onTheme: (theme: ThemeChoice) => void;
   onTextSize: (size: TextSize) => void;
+  /** "Rustig scherm": auto (as the phone), on or off (src/lib/calm.ts). */
+  onCalm?: (calm: CalmChoice) => void;
   onVoice: (voice: string | null) => void;
   /** "Without sound" on (true) or off. */
   onQuiet: (quiet: boolean) => void;
@@ -230,7 +266,7 @@ export function Settings({
   useEffect(() => {
     if (!notHere) return;
     // A language far down the list was tapped: the line comes into view.
-    notHereRef.current?.scrollIntoView?.({ block: 'nearest', behavior: window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    notHereRef.current?.scrollIntoView?.({ block: 'nearest', behavior: stillMotion() ? 'auto' : 'smooth' });
     const back = () => setNotHere(null);
     window.addEventListener('online', back);
     return () => window.removeEventListener('online', back);
@@ -320,6 +356,7 @@ export function Settings({
       case 'writing': return <Value text={say(writing === 'pick' ? 'writingPick' : writing === 'tiles' ? 'letterTiles' : 'useKeyboard')} />;
       case 'text': return <Value text={say(TEXT_KEYS[progress.textSize ?? 'normal'])} />;
       case 'theme': return <Value text={say(THEME_KEYS[progress.theme])} />;
+      case 'calm': return <Value text={say(CALM_KEYS[progress.calm ?? 'auto'])} />;
       case 'offline': return <Value text={say(offlineAuto() ? 'settingOn' : 'settingOff')} />;
       case 'reminder': {
         const t = reminderTime();
@@ -586,6 +623,20 @@ export function Settings({
               return { id: t, text: say(THEME_KEYS[t]), picture: <Icon size={28} /> };
             })}
           />
+        );
+      case 'calm':
+        return (
+          <>
+            <CalmPreview />
+            <ChoiceCards
+              label={said(ui('calmScreen', lang))}
+              current={progress.calm ?? 'auto'}
+              // Stays on this page: the example above shows the choice at once (Back leads on).
+              onPick={(c) => onCalm?.(c)}
+              options={CALM_CHOICES.map((c) => ({ id: c, text: say(CALM_KEYS[c]), picture: c === 'auto' ? <PhoneIcon size={26} /> : <CalmIcon size={26} still={c === 'on'} /> }))}
+            />
+            <p className="max3-hint"><Bi text={say('calmHint')} /></p>
+          </>
         );
       case 'offline':
         // Off leads back; On stays, so the learner sees the topic being saved (or why it was not).

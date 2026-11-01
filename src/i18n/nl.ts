@@ -469,6 +469,9 @@ export const uiNl: Record<UiKey, UiText> = {
   noticeOk: 'Oké',
   shareInvite: 'Ik leer Nederlands voor mijn werk met Vloertaal. Gratis: {link}', // nieuw, nalezen
   workTry: 'Probeer het vandaag op je werk',
+  calmScreen: 'Rustig scherm',
+  calmAuto: 'Zoals je telefoon',
+  calmHint: 'Aan: niets beweegt. Geen feestje voor je reeks na een les. Je reeks en woorden staan niet op de startpagina.',
   infoMore: 'Meer uitleg',
   tipsAbout: 'Over deze tips',
   aboutMore: 'Lees meer over Vloertaal',

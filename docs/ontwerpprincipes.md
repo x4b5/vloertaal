@@ -130,3 +130,5 @@ aangetoond. Daarom steunen ze de gewoonte, en nooit ten koste van rust of eerlij
 - **Instellingen van de telefoon:** licht en donker, grote tekst en minder beweging volgen de telefoon.
 - **Kort en offline:** de app werkt offline. Een les duurt een paar minuten, en je kunt altijd stoppen en later verder.
 - **De reeks** is een steun, geen druk.
+- **Rustig scherm:** wie wil, zet beweging, het feestje en de reeks uit (Instellingen › Lessen).
+  Staat de telefoon op "minder beweging", dan gebeurt dat vanzelf.

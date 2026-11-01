@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Все пак направи уроците', // nieuw, nalezen
     shareInvite: 'Уча нидерландски за работата си с Vloertaal. Безплатно е: {link}', // nieuw, nalezen
     workTry: 'Опитай днес на работа', // nieuw, nalezen
+    calmScreen: 'Спокоен екран', // nieuw, nalezen
+    calmAuto: 'Като телефона ти', // nieuw, nalezen
+    calmHint: 'Включено: нищо не се движи, няма празнуване на поредицата след урок, а поредицата и думите не са на началния екран.', // nieuw, nalezen
     infoMore: 'Повече обяснения', // nieuw, nalezen
     tipsAbout: 'За тези съвети', // nieuw, nalezen
     aboutMore: 'Повече за Vloertaal', // nieuw, nalezen

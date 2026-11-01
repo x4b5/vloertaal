@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { stillMotion } from '../lib/calm';
 import { BeNote } from './BeNote';
 import { lessonNlOnly } from '../content/taalBe';
 import type { Lesson } from '../content/types';
@@ -265,7 +266,7 @@ export function LiveParts({ parts }: { parts: readonly LivePart[] }) {
 export const SOUND_NOTE_MS = 9000;
 
 function reducedMotion(): boolean {
-  return typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  return stillMotion();
 }
 
 /**

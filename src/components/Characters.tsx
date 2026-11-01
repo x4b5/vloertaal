@@ -1,4 +1,5 @@
 import { useEffect, useId, useLayoutEffect, useState } from 'react';
+import { stillMotion } from '../lib/calm';
 import { onSpeech } from '../lib/audio';
 import { FACES, type Emotion, type Expr, type TalkFrame } from './Faces';
 import { tipGender, type CultureTip } from '../content/culture';
@@ -913,7 +914,7 @@ function useOneShot(on: boolean, ms: number): boolean {
 }
 
 function prefersReducedMotion(): boolean {
-  return typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  return stillMotion();
 }
 
 /**

@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: { m: 'اعمل الدروس رغم ذلك', f: 'اعملي الدروس رغم ذلك', x: 'القيام بالدروس رغم ذلك' }, // nieuw, nalezen
     shareInvite: 'أتعلّم الهولندية لعملي مع Vloertaal. مجاناً: {link}', // nieuw, nalezen
     workTry: { m: 'جرّبها اليوم في عملك', f: 'جرّبيها اليوم في عملك', x: 'للتجربة اليوم في العمل' }, // nieuw, nalezen
+    calmScreen: 'شاشة هادئة', // nieuw, nalezen
+    calmAuto: 'مثل هاتفك', // nieuw, nalezen
+    calmHint: 'مُفعّل: لا شيء يتحرك، لا احتفال بسلسلة أيامك بعد الدرس، ولا تظهر السلسلة والكلمات في الشاشة الرئيسية.', // nieuw, nalezen
     infoMore: 'مزيد من الشرح', // nieuw, nalezen
     tipsAbout: 'عن هذه النصائح', // nieuw, nalezen
     aboutMore: 'اقرأ المزيد عن Vloertaal', // nieuw, nalezen

@@ -59,6 +59,8 @@ describe('prefers-reduced-motion', () => {
   it('no animation outside it is marked !important (it would win over the reduced-motion rule)', () => {
     let rest = css;
     for (const b of reduce) rest = rest.replace(b.body, '');
+    // "Rustig scherm" (src/lib/calm.ts) turns every animation off with !important: that stops motion, it never adds any.
+    rest = rest.replace(/animation:\s*none\s*!important/g, '');
     expect(rest).not.toMatch(/animation[\w-]*:[^;}]*!important/);
   });
 });

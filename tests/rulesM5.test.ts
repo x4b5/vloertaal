@@ -182,11 +182,11 @@ describe('Instellingen in the work-rules track', () => {
 
   it('has the rows that fit: no English, gender, speaking or writing; voice only with recorded voices', () => {
     expect(settingsRows('me', ctx)).toEqual(['language', 'sector', 'country', 'certificates', 'kaart']);
-    expect(settingsRows('lessons', { ...ctx, recorded: true })).toEqual(['sound', 'voice', 'text', 'theme']);
-    expect(settingsRows('lessons', { ...ctx, recorded: false })).toEqual(['sound', 'text', 'theme']);
+    expect(settingsRows('lessons', { ...ctx, recorded: true })).toEqual(['sound', 'voice', 'text', 'theme', 'calm']);
+    expect(settingsRows('lessons', { ...ctx, recorded: false })).toEqual(['sound', 'text', 'theme', 'calm']);
     expect(settingsRows('phone', ctx)).toEqual(['offline', 'reminder', 'backup', 'counting', 'reset']);
     // The language course keeps its voice row, recorded voices or not.
-    expect(settingsRows('lessons', { ...ctx, rules: false, recorded: false })).toEqual(['sound', 'voice', 'tempo', 'faster', 'speaking', 'writing', 'text', 'theme', 'toets']);
+    expect(settingsRows('lessons', { ...ctx, rules: false, recorded: false })).toEqual(['sound', 'voice', 'tempo', 'faster', 'speaking', 'writing', 'text', 'theme', 'calm', 'toets']);
   });
 
   it('says every label in Dutch, on every page of the track', () => {

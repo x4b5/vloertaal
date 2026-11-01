@@ -512,6 +512,10 @@ export const uiEn = {
   shareInvite: 'I am learning Dutch for my work with Vloertaal. It is free: {link}',
   /* "Probeer het vandaag op je werk": one sentence of the lesson on its result (src/components/WorkTry.tsx). */
   workTry: 'Try it at work today',
+  /* "Rustig scherm" (Settings › Lessons; src/lib/calm.ts). */
+  calmScreen: 'Calm screen',
+  calmAuto: 'Like your phone',
+  calmHint: 'On: nothing moves. No celebration of your streak after a lesson. Your streak and words are not on the home screen.',
   /* An ⓘ that opens a side matter in place (src/components/InfoMore.tsx): its label says what is behind it. */
   infoMore: 'More explanation',
   tipsAbout: 'About these tips',

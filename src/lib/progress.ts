@@ -11,6 +11,7 @@ import { mergeToets, readToets, type ToetsState } from './toetsState';
 export type Country = 'nl' | 'be';
 export const isCountry = (x: unknown): x is Country => x === 'nl' || x === 'be';
 import type { TextSize } from './textSize';
+import type { CalmChoice } from './calm';
 import { isTempo, type Tempo } from './tempo';
 import { readPace, type PaceState } from './pace';
 
@@ -43,6 +44,8 @@ export interface Progress {
   quiet?: boolean;
   /** "Text size" in Settings (src/lib/textSize.ts). Missing = normal. */
   textSize?: TextSize;
+  /** "Rustig scherm" in Settings (src/lib/calm.ts). Missing = auto (as the phone's "less motion"). */
+  calm?: CalmChoice;
   /** "Tempo" in Settings (src/lib/tempo.ts): 'calm' ("Rustig") or 'normal' ("Normaal"). Missing in
    *  older saves = calm, the pace from before. */
   tempo?: Tempo;

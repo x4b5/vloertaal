@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
+import { stillMotion } from '../lib/calm';
 import { BeNote } from './BeNote';
 import { lessonNlOnly, unitNlOnly } from '../content/taalBe';
 import { Character } from './Characters';
@@ -108,7 +109,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   // between the sticky top bar and the bottom bar.
   useEffect(() => {
     if (!focusUnit && !arrived) return;
-    const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const still = stillMotion();
     const t = window.setTimeout(() => {
       const top = document.querySelector('.topbar')?.getBoundingClientRect().bottom ?? 0;
       const foot = document.querySelector('.bottom-nav')?.getBoundingClientRect().top ?? window.innerHeight;
