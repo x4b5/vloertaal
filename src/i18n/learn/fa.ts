@@ -14,7 +14,6 @@ const t: CultureTranslation = {
     micStepsAndroidApp: "نماد Vloertaal را در صفحهٔ اصلی نگه دارید › اطلاعات برنامه › مجوزها › میکروفون › اجازه دادن. بعد دکمهٔ پایین را بزنید.", // nieuw, nalezen
     micStepsDesktop: "روی نماد سمت چپ آدرس وب کلیک کنید › میکروفون › اجازه دادن. بعد روی دکمهٔ پایین کلیک کنید.", // nieuw, nalezen
     whichPicture: "کدام تصویر است؟",
-    wrongTapsN: "لمس‌های اشتباه: {n}",
     sayAloudInstead: "به‌جایش بلند بگویید",
     wordsPractised: "کلمه‌های تمرین‌شده",
     reviewComplete: "مرور تمام شد!",

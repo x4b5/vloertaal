@@ -3764,9 +3764,6 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .say-aloud > .bi { flex: 1 1 200px; }
 .say-retry { flex: 1 1 100%; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; }
 /* Build: after the last word, the wrong taps as crossed-out tiles with their count. */
-.build-misses { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 10px; color: var(--wrong-ink); font-weight: 600; }
-.build-misses-tiles { display: flex; flex-wrap: wrap; gap: 6px; }
-.tile.tile-wrong-tap { text-decoration: line-through; text-decoration-thickness: 2px; color: var(--wrong-ink); background: var(--red-bg); border-color: var(--red-line); box-shadow: none; padding: 4px 10px; min-height: 0; }
 /* Picture choice from the Dutch word: pictures only until the answer. */
 .pic-from-nl .choices-pics .choice { justify-content: center; }
 

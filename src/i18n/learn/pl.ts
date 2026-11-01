@@ -14,7 +14,6 @@ const t: CultureTranslation = {
     micStepsAndroidApp: "Przytrzymaj ikonę Vloertaal na ekranie głównym › Informacje o aplikacji › Uprawnienia › Mikrofon › Zezwalaj. Potem stuknij przycisk poniżej.", // nieuw, nalezen
     micStepsDesktop: "Kliknij ikonę po lewej stronie adresu › Mikrofon › Zezwalaj. Potem kliknij przycisk poniżej.", // nieuw, nalezen
     whichPicture: "Który to obrazek?",
-    wrongTapsN: "Błędne dotknięcia: {n}",
     sayAloudInstead: "Zamiast tego powiedz to na głos",
     wordsPractised: "Powtórzone słowa",
     reviewComplete: "Powtórka skończona!",

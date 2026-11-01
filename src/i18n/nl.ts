@@ -260,7 +260,6 @@ export const uiNl: Record<UiKey, UiText> = {
   micStepsAndroidApp: "Houd het icoon van Vloertaal op je beginscherm ingedrukt › App-info › Rechten › Microfoon › Toestaan. Tik daarna op de knop hieronder.",
   micStepsDesktop: "Klik op het icoon links van het webadres › Microfoon › Toestaan. Klik daarna op de knop hieronder.",
   whichPicture: 'Welk plaatje is het?',
-  wrongTapsN: 'Verkeerd getikt: {n}',
   cantSpeak: 'Ik kan nu niet praten',
   soundsSame: 'Klinkt hetzelfde',
   sayAgain: 'Zeg het nog eens',

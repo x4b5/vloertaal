@@ -1,7 +1,7 @@
 import { createContext, type RefObject, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import type { ChatLine } from '../content/types';
 import { sayingQuestion } from '../content/sayings';
-import { fillN, gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
+import { gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { checkTyped, nextTileOrder, sentenceOrders } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
@@ -640,9 +640,6 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   const byEar = Boolean(ex.audio);
   useEffect(() => { if (byEar) autoSpeak(ex.sentence.nl, false, 'nl', voiceFor(who)); }, [byEar, ex.sentence, who]);
 
-  // The wrong taps shown after the sentence: each wrong word at each place once (tapping the same
-  // wrong tile again is the same mistake).
-  const shownWrongs = wrongs.filter((x, i) => wrongs.findIndex((y) => y.at === x.at && y.word === x.word) === i);
   const tiles = useSettledTiles();
   const bankBox = useRef<HTMLDivElement>(null);
   useRefocus(bankBox, at);
@@ -733,16 +730,6 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
         {words.slice(0, at).map((w, i) => <span key={i} className="tile tile-placed">{breakable(w)}</span>)}
         {!complete && <span className="tile-next" aria-hidden />}
       </div>
-      {/* After the last word: how many wrong taps there were (in the help language), and the
-          words tapped wrongly, crossed out. */}
-      {complete && shownWrongs.length > 0 && (
-        <div className="build-misses">
-          <Bi className="build-misses-n" text={fillN(ui('wrongTapsN', lang), shownWrongs.length)} />
-          <span className="build-misses-tiles" lang="nl" dir="ltr">
-            {shownWrongs.map((x, i) => <s key={i} className="tile tile-wrong-tap">{breakable(tileLabel(x.word, x.at, ex.sentence.nl))}</s>)}
-          </span>
-        </div>
-      )}
       {/* All the tiles at once (later units): one row per tile, each in its own place; a placed
           one leaves an empty spot of its size. Written small, as at the first place (tileLabel). */}
       {!complete && bank && (

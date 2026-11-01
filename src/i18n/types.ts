@@ -268,7 +268,6 @@ export const uiEn = {
   /** Picture choice: the Dutch word is said and written, the learner picks its picture. */
   whichPicture: 'Which picture is it?',
   /** After building a sentence with wrong taps. */
-  wrongTapsN: 'Wrong taps: {n}',
   cantSpeak: 'I can’t speak now',
   soundsSame: 'Sounds the same',
   sayAgain: 'Say it again',

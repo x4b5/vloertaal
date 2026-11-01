@@ -14,7 +14,6 @@ const t: CultureTranslation = {
     micStepsAndroidApp: "Appuie longtemps sur l’icône de Vloertaal sur ton écran d’accueil › Infos sur l’appli › Autorisations › Micro › Autoriser. Puis touche le bouton ci-dessous.", // nieuw, nalezen
     micStepsDesktop: "Clique sur l’icône à gauche de l’adresse web › Micro › Autoriser. Puis clique sur le bouton ci-dessous.", // nieuw, nalezen
     whichPicture: "C’est quelle image ?",
-    wrongTapsN: "Mauvaises touches : {n}",
     sayAloudInstead: "Dis-le plutôt à voix haute",
     wordsPractised: "Mots pratiqués",
     reviewComplete: "Révision terminée !",

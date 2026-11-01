@@ -14,7 +14,6 @@ const t: CultureTranslation = {
     micStepsAndroidApp: "Задръж иконата на Vloertaal на началния екран › Информация за приложението › Разрешения › Микрофон › Разрешаване. После докосни бутона отдолу.", // nieuw, nalezen
     micStepsDesktop: "Кликни иконата вляво от уеб адреса › Микрофон › Разрешаване. После кликни бутона отдолу.", // nieuw, nalezen
     whichPicture: "Коя е правилната картинка?",
-    wrongTapsN: "Грешни докосвания: {n}",
     sayAloudInstead: "Вместо това го кажи на глас",
     wordsPractised: "Упражнени думи",
     reviewComplete: "Преговорът приключи!",
