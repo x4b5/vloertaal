@@ -28,7 +28,6 @@ regels die we in de code aanhouden, en wat er al gedaan is.
   - gekozen of aan: sterke rand;
   - geen nummers op touchscreens;
   - lichtere luidsprekers bij antwoorden;
-  - rustiger label boven de oefening;
   - de andere antwoorden worden zachter zodra je kiest.
 - **Minder herhaling:**
   - geen label boven de oefening;
@@ -41,8 +40,7 @@ regels die we in de code aanhouden, en wat er al gedaan is.
 ## Volgende stappen (met de keuzes van de eigenaar)
 
 - **Fase 2:**
-  - één label boven de oefening;
-  - rustiger startpagina: de ballon van Bram alleen de eerste dagen, de reeks en de woorden klein in één regel;
+  - rustiger startpagina: de reeks en de woorden klein in één regel;
   - een info-knop voor de juridische regel onder tips, uitleg in Instellingen en de lange tekst bij Over.
 - **Fase 3:** "Rustig scherm" bij Instellingen › Les: geen animaties, geen feestje, geen reeks op de
   startpagina. Staat de telefoon op "minder beweging", dan gaat het vanzelf aan.
