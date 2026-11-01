@@ -39,6 +39,7 @@ export const UPDATES: Update[] = [
       'Taal: nieuw in de les is "Wat zeg je?". Vlak voor "Maak het gesprek af" hoor je de collega. Dan zeg je zelf het antwoord, en daarna hoor je het voorbeeld. Daarvoor gaat er meestal een andere oefening uit de les.',
       'Op je kaart bij "Laat zien hoe het gaat" staat nu onderaan een korte code, bijvoorbeeld VT1 O3 D12. Daarin staan dezelfde getallen als op de kaart, zonder naam. Je begeleider kan die code overnemen voor een overzicht van de groep.',
       'Taal: de toets "Wat ken je al?" is anders. Nu 21 vragen. Soms bouw je een zin of schrijf je een woord. Weet je het niet? Tik op "Ik weet het niet". Dat is goed. Na 4 weken staat er alleen "Meer dan toen" als het echt meer is. Anders staat er "Ongeveer gelijk". Je uitslag van eerder blijft staan.',
+      'Taal: in de tweede helft van je lespad is er "Zet het woord vooraan". Van "Ik verstuur de mail morgen." maak je "Morgen verstuur ik de mail." Later maak je een zin met alle woorden tegelijk. Heb je bijna alles gedaan? Dan vraagt de app één keer of je ook de werkregels wilt leren.',
     ],
   },
   {

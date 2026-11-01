@@ -7,6 +7,11 @@ Concept: de docent kijkt deze meetlat nog na.*
 Vloertaal gaat uit van A2. Op dat niveau moet een tekst te volgen zijn zonder woordenboek. Deze
 meetlat zegt wanneer een zin goed genoeg is, en wanneer hij korter of eenvoudiger moet.
 
+Let op: deze meetlat gaat over hoe we teksten schrijven (vooral Werkregels, op 1F, ongeveer A2).
+De Taal-route zelf gaat van A0 naar A1, op weg naar A2. Wie Taal afmaakt, heeft nog geen A2.
+Daarom staat bij een A2-zin van "Wat kun je nu?" in de app "op weg naar A2"
+([`kun-je-nu.md`](kun-je-nu.md)).
+
 ## De regels
 
 1. **Korte zinnen.** Hooguit ongeveer 12 woorden per zin. Eén idee per zin. Twee ideeën? Twee zinnen.

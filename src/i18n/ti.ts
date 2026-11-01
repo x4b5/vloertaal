@@ -418,6 +418,10 @@ const lang: HelpLanguageSource = {
     speakTurnReveal: { m: 'መልሲ ስማዕ', f: 'መልሲ ስምዒ', x: 'መልሲ ስምዑ' }, // nieuw, nalezen
     sceneTitle: { m: 'ኣብ ቦታ ስራሕ ስማዕ', f: 'ኣብ ቦታ ስራሕ ስምዒ', x: 'ኣብ ቦታ ስራሕ ስምዑ' }, // nieuw, nalezen
     sceneIntro: { m: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስማዕ። ድሕሪኡ ሕቶታት ይመጹ።', f: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስምዒ። ድሕሪኡ ሕቶታት ይመጹ።', x: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስምዑ። ድሕሪኡ ሕቶታት ይመጹ።' }, // nieuw, nalezen
+    buildFront: { m: 'ነታ ምልክት ዘለዋ ቃል ኣብ መጀመርታ ኣቐምጣ', f: 'ነታ ምልክት ዘለዋ ቃል ኣብ መጀመርታ ኣቐምጥያ', x: 'ነታ ምልክት ዘለዋ ቃል ኣብ መጀመርታ ኣቐምጥዋ' }, // nieuw, nalezen
+    bridgeTitle: 'ሕግታት ስራሕ', // nieuw, nalezen
+    bridgeText: { m: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጥ ኢኻ። ሕግታት ስራሕ እውን ክትመሃር ትደሊዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።', f: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጢ ኢኺ። ሕግታት ስራሕ እውን ክትመሃሪ ትደልዮ? ሽዑ ኩሉ ብሆላንድኛ እዩ።', x: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጡ ኢኹም። ሕግታት ስራሕ እውን ክትመሃሩ ትደልዩዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።' }, // nieuw, nalezen
+    bridgeGo: { m: 'እወ፡ ኣርእየኒ', f: 'እወ፡ ኣርእይኒ', x: 'እወ፡ ኣርእዩኒ' }, // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

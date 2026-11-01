@@ -473,6 +473,10 @@ export const uiNl: Record<UiKey, UiText> = {
   speakTurnReveal: 'Hoor het antwoord',
   sceneTitle: 'Luister op de werkvloer',
   sceneIntro: 'Er is lawaai, net als op je werk. Luister. Daarna komen de vragen.',
+  buildFront: 'Zet het woord vooraan', // nieuw, nalezen
+  bridgeTitle: 'De werkregels', // nieuw, nalezen
+  bridgeText: 'Je kent nu veel Nederlands. Wil je ook de werkregels leren? Dan is alles in het Nederlands.', // nieuw, nalezen
+  bridgeGo: 'Ja, laat zien', // nieuw, nalezen
 };
 
 const lang: HelpLanguageSource = {

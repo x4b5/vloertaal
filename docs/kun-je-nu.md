@@ -13,7 +13,9 @@ certificaat-scherm, onder "Wat kun je nu?", en op het certificaat zelf als ze pa
 
 Bij elke zin staat een niveau en een vaardigheid waar de zin bij **past**:
 
-- **Taal**: A1 of A2 van het ERK (Europees Referentiekader).
+- **Taal**: A1, of "op weg naar A2", van het ERK (Europees Referentiekader). De Taal-route gaat
+  van A0 naar A1, op weg naar A2. Een zin "op weg naar A2" is een stap in die richting: de
+  leerling heeft daarmee nog geen A2.
 - **Werkregels**: 1F (Referentiekader taal; ongeveer A2).
 - Vaardigheden: luisteren, spreken, lezen, schrijven of gesprekken.
 
@@ -34,7 +36,7 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 | Hulp vragen | Ik kan zeggen dat ik het niet begrijp. | A1 · gesprekken |
 |  | Ik kan vragen of iemand langzamer praat. | A1 · spreken |
 | Slimme hulpmiddelen | Ik kan vragen of iemand het opschrijft of laat zien. | A1 · spreken |
-|  | Ik kan een opdracht herhalen om te checken. | A2 · gesprekken |
+|  | Ik kan een opdracht herhalen om te checken. | op weg naar A2 · gesprekken |
 |  | Ik kan zeggen dat ik Nederlands wil oefenen. | A1 · gesprekken |
 | Getallen en gegevens | Ik kan mijn naam spellen. | A1 · spreken |
 |  | Ik kan zeggen op welke dagen ik kan werken. | A1 · gesprekken |
@@ -42,81 +44,81 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 | Klanken | Ik kan woorden als man en maan uit elkaar houden. | A1 · luisteren |
 |  | Ik kan korte zinnen met lastige klanken nazeggen. | A1 · spreken |
 | Veiligheid | Ik kan een waarschuwing als "Pas op!" verstaan. | A1 · luisteren |
-|  | Ik kan een ongeluk melden. | A2 · spreken |
-|  | Ik kan zeggen dat ik iets nog niet geleerd heb. | A2 · gesprekken |
-| Solliciteren | Ik kan vertellen welke ervaring ik heb. | A2 · spreken |
-|  | Ik kan in een sollicitatiegesprek iets over mezelf vertellen. | A2 · gesprekken |
-| Werk en contract | Ik kan vragen hoeveel uur ik per week werk. | A2 · spreken |
-|  | Ik kan vragen of mijn contract tijdelijk of vast is. | A2 · spreken |
-|  | Ik kan zeggen wanneer ik wel en niet kan werken. | A2 · gesprekken |
-| Diploma’s en verder komen | Ik kan vertellen welke diploma’s en certificaten ik heb. | A2 · spreken |
-|  | Ik kan zeggen waar ik goed in ben. | A2 · gesprekken |
-| Werk kwijt | Ik kan zeggen dat mijn contract stopt. | A2 · spreken |
-|  | Ik kan vragen of mijn vakantiegeld wordt uitbetaald. | A2 · gesprekken |
-| Stage lopen | Ik kan vragen wie mijn praktijkopleider is. | A2 · spreken |
-|  | Ik kan om feedback en een voorbeeld vragen. | A2 · gesprekken |
+|  | Ik kan een ongeluk melden. | op weg naar A2 · spreken |
+|  | Ik kan zeggen dat ik iets nog niet geleerd heb. | op weg naar A2 · gesprekken |
+| Solliciteren | Ik kan vertellen welke ervaring ik heb. | op weg naar A2 · spreken |
+|  | Ik kan in een sollicitatiegesprek iets over mezelf vertellen. | op weg naar A2 · gesprekken |
+| Werk en contract | Ik kan vragen hoeveel uur ik per week werk. | op weg naar A2 · spreken |
+|  | Ik kan vragen of mijn contract tijdelijk of vast is. | op weg naar A2 · spreken |
+|  | Ik kan zeggen wanneer ik wel en niet kan werken. | op weg naar A2 · gesprekken |
+| Diploma’s en verder komen | Ik kan vertellen welke diploma’s en certificaten ik heb. | op weg naar A2 · spreken |
+|  | Ik kan zeggen waar ik goed in ben. | op weg naar A2 · gesprekken |
+| Werk kwijt | Ik kan zeggen dat mijn contract stopt. | op weg naar A2 · spreken |
+|  | Ik kan vragen of mijn vakantiegeld wordt uitbetaald. | op weg naar A2 · gesprekken |
+| Stage lopen | Ik kan vragen wie mijn praktijkopleider is. | op weg naar A2 · spreken |
+|  | Ik kan om feedback en een voorbeeld vragen. | op weg naar A2 · gesprekken |
 | Tijd en rooster | Ik kan zeggen hoe laat mijn dienst begint. | A1 · gesprekken |
 |  | Ik kan zeggen dat ik ziek ben. | A1 · spreken |
-| Loon | Ik kan zeggen dat mijn loonstrook niet klopt. | A2 · spreken |
-|  | Ik kan woorden als bruto en netto lezen. | A2 · lezen |
-| Verlof en ziekte | Ik kan verlof aanvragen. | A2 · spreken |
-|  | Ik kan me ziek melden en beter melden. | A2 · gesprekken |
+| Loon | Ik kan zeggen dat mijn loonstrook niet klopt. | op weg naar A2 · spreken |
+|  | Ik kan woorden als bruto en netto lezen. | op weg naar A2 · lezen |
+| Verlof en ziekte | Ik kan verlof aanvragen. | op weg naar A2 · spreken |
+|  | Ik kan me ziek melden en beter melden. | op weg naar A2 · gesprekken |
 | Bellen en appen met je werk | Ik kan bellen en zeggen wie ik ben. | A1 · gesprekken |
-|  | Ik kan vragen of iemand mij terugbelt. | A2 · spreken |
-|  | Ik kan een kort bericht aan mijn werk schrijven. | A2 · schrijven |
+|  | Ik kan vragen of iemand mij terugbelt. | op weg naar A2 · spreken |
+|  | Ik kan een kort bericht aan mijn werk schrijven. | op weg naar A2 · schrijven |
 | Huisregels | Ik kan regels als "Roken verboden" lezen. | A1 · lezen |
 |  | Ik kan vragen waar ik mag roken. | A1 · spreken |
-|  | Ik kan zeggen dat iets niet mag. | A2 · gesprekken |
+|  | Ik kan zeggen dat iets niet mag. | op weg naar A2 · gesprekken |
 | Rekenen: tijd, geld, maten | Ik kan tijden als "kwart over vier" verstaan. | A1 · luisteren |
 |  | Ik kan zeggen hoeveel iets kost of weegt. | A1 · spreken |
-| In de winkel | Ik kan vragen of een klant wil pinnen. | A2 · gesprekken |
-|  | Ik kan een klant de weg in de winkel wijzen. | A2 · gesprekken |
-| Slimme apps en AI | Ik kan vragen of een antwoord klopt. | A2 · spreken |
-|  | Ik kan zeggen dat ik met een mens wil praten. | A2 · gesprekken |
-| Je werk afronden | Ik kan vragen wat een woord op de werkbon betekent. | A2 · gesprekken |
-|  | Ik kan zeggen wat klaar is en wat niet. | A2 · spreken |
-| Online op je werk | Ik kan zeggen dat mijn wachtwoord niet werkt. | A2 · gesprekken |
-|  | Ik kan een verdachte mail herkennen. | A2 · lezen |
-| Samenwerken | Ik kan zeggen dat ik ergens mee zit. | A2 · gesprekken |
-|  | Ik kan rustig nee zeggen tegen extra werk. | A2 · gesprekken |
+| In de winkel | Ik kan vragen of een klant wil pinnen. | op weg naar A2 · gesprekken |
+|  | Ik kan een klant de weg in de winkel wijzen. | op weg naar A2 · gesprekken |
+| Slimme apps en AI | Ik kan vragen of een antwoord klopt. | op weg naar A2 · spreken |
+|  | Ik kan zeggen dat ik met een mens wil praten. | op weg naar A2 · gesprekken |
+| Je werk afronden | Ik kan vragen wat een woord op de werkbon betekent. | op weg naar A2 · gesprekken |
+|  | Ik kan zeggen wat klaar is en wat niet. | op weg naar A2 · spreken |
+| Online op je werk | Ik kan zeggen dat mijn wachtwoord niet werkt. | op weg naar A2 · gesprekken |
+|  | Ik kan een verdachte mail herkennen. | op weg naar A2 · lezen |
+| Samenwerken | Ik kan zeggen dat ik ergens mee zit. | op weg naar A2 · gesprekken |
+|  | Ik kan rustig nee zeggen tegen extra werk. | op weg naar A2 · gesprekken |
 |  | Ik kan vragen wat ik eerst moet doen. | A1 · spreken |
-| Omgang met collega’s | Ik kan een praatje maken in de pauze. | A2 · gesprekken |
-|  | Ik kan zeggen dat ik een fout heb gemaakt. | A2 · spreken |
-|  | Ik kan zeggen dat iets over mijn grens gaat. | A2 · spreken |
-| Uitdrukkingen en gezegden | Ik kan een paar gewone uitdrukkingen verstaan. | A2 · luisteren |
-|  | Ik kan zeggen dat iets een eitje is. | A2 · spreken |
-| Regels en rechten | Ik kan zeggen dat ik recht heb op pauze. | A2 · spreken |
-|  | Ik kan zeggen dat ik een klacht wil indienen. | A2 · spreken |
-| Uitbuiting herkennen | Ik kan zeggen dat ik mijn paspoort zelf houd. | A2 · gesprekken |
-|  | Ik kan vragen of ik iets anoniem kan melden. | A2 · spreken |
-| Wonen en papieren | Ik kan zeggen dat mijn adres is veranderd. | A2 · spreken |
-|  | Ik kan vragen hoeveel de huur is. | A2 · spreken |
+| Omgang met collega’s | Ik kan een praatje maken in de pauze. | op weg naar A2 · gesprekken |
+|  | Ik kan zeggen dat ik een fout heb gemaakt. | op weg naar A2 · spreken |
+|  | Ik kan zeggen dat iets over mijn grens gaat. | op weg naar A2 · spreken |
+| Uitdrukkingen en gezegden | Ik kan een paar gewone uitdrukkingen verstaan. | op weg naar A2 · luisteren |
+|  | Ik kan zeggen dat iets een eitje is. | op weg naar A2 · spreken |
+| Regels en rechten | Ik kan zeggen dat ik recht heb op pauze. | op weg naar A2 · spreken |
+|  | Ik kan zeggen dat ik een klacht wil indienen. | op weg naar A2 · spreken |
+| Uitbuiting herkennen | Ik kan zeggen dat ik mijn paspoort zelf houd. | op weg naar A2 · gesprekken |
+|  | Ik kan vragen of ik iets anoniem kan melden. | op weg naar A2 · spreken |
+| Wonen en papieren | Ik kan zeggen dat mijn adres is veranderd. | op weg naar A2 · spreken |
+|  | Ik kan vragen hoeveel de huur is. | op weg naar A2 · spreken |
 | Gezondheid | Ik kan zeggen waar ik pijn heb. | A1 · spreken |
-|  | Ik kan een afspraak bij de huisarts vragen. | A2 · gesprekken |
-| Geld en post | Ik kan zeggen dat ik een brief niet begrijp. | A2 · spreken |
-|  | Ik kan nee zeggen tegen een oplichter aan de telefoon. | A2 · gesprekken |
+|  | Ik kan een afspraak bij de huisarts vragen. | op weg naar A2 · gesprekken |
+| Geld en post | Ik kan zeggen dat ik een brief niet begrijp. | op weg naar A2 · spreken |
+|  | Ik kan nee zeggen tegen een oplichter aan de telefoon. | op weg naar A2 · gesprekken |
 | Naar je werk | Ik kan vertellen hoe ik naar mijn werk kom. | A1 · gesprekken |
 |  | Ik kan vragen waar de bushalte is. | A1 · spreken |
-| Meedoen in Nederland | Ik kan vragen of ik mag stemmen. | A2 · spreken |
-|  | Ik kan zeggen dat ik bezwaar wil maken. | A2 · spreken |
+| Meedoen in Nederland | Ik kan vragen of ik mag stemmen. | op weg naar A2 · spreken |
+|  | Ik kan zeggen dat ik bezwaar wil maken. | op weg naar A2 · spreken |
 | In het magazijn | Ik kan korte opdrachten in het magazijn verstaan. | A1 · luisteren |
 |  | Ik kan zeggen waar iets staat: links of rechts. | A1 · gesprekken |
 | Op de bouw | Ik kan een waarschuwing op de bouw verstaan. | A1 · luisteren |
 |  | Ik kan om gereedschap vragen. | A1 · spreken |
 | In de productie | Ik kan zeggen dat er een storing is. | A1 · spreken |
-|  | Ik kan zeggen wat er mis is met een product. | A2 · gesprekken |
-| In de zorg | Ik kan een cliënt vragen of ik mag helpen. | A2 · gesprekken |
-|  | Ik kan iets doorgeven aan de verpleegkundige. | A2 · spreken |
+|  | Ik kan zeggen wat er mis is met een product. | op weg naar A2 · gesprekken |
+| In de zorg | Ik kan een cliënt vragen of ik mag helpen. | op weg naar A2 · gesprekken |
+|  | Ik kan iets doorgeven aan de verpleegkundige. | op weg naar A2 · spreken |
 | In de horeca | Ik kan gasten vragen wat ze willen drinken. | A1 · gesprekken |
-|  | Ik kan zeggen dat ik het aan de chef vraag. | A2 · gesprekken |
+|  | Ik kan zeggen dat ik het aan de chef vraag. | op weg naar A2 · gesprekken |
 | Schoonmaken | Ik kan vragen waar de schoonmaakspullen staan. | A1 · spreken |
 |  | Ik kan iemand waarschuwen dat de vloer glad is. | A1 · spreken |
 | In de kas | Ik kan vragen in welke rij ik begin. | A1 · spreken |
-|  | Ik kan vragen of een kas bespoten is. | A2 · gesprekken |
-| In de werkplaats | Ik kan vragen of er nog stroom op staat. | A2 · spreken |
+|  | Ik kan vragen of een kas bespoten is. | op weg naar A2 · gesprekken |
+| In de werkplaats | Ik kan vragen of er nog stroom op staat. | op weg naar A2 · spreken |
 |  | Ik kan zeggen dat een kabel kapot is. | A1 · spreken |
 | In de garage | Ik kan zeggen dat een band lek is. | A1 · spreken |
-|  | Ik kan zeggen dat de klant eerst akkoord moet zijn. | A2 · gesprekken |
+|  | Ik kan zeggen dat de klant eerst akkoord moet zijn. | op weg naar A2 · gesprekken |
 
 ## Werkregels (28 onderwerpen, 58 zinnen)
 

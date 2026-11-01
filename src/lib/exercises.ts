@@ -7,7 +7,8 @@ import { type CultureTip, tipForLesson } from '../content/culture';
 import { modelQuestion } from '../content/regels/zegHet';
 import type { ChatLine, Dialogue, Lesson, Sentence, Word } from '../content/types';
 import type { RuleStep } from '../content/regels/types';
-import { tokenize } from './answers';
+import { sameTiles, tokenize } from './answers';
+import { frontLine, type FrontLine } from '../content/patterns';
 import { type Access, lessonAllowed } from './access';
 import { createRng, sample, shuffle } from './random';
 import { hasPicture, looksAlike, samePicture } from './wordPicture';
@@ -26,8 +27,13 @@ export type Exercise =
   | { kind: 'listen'; word: Word; options: Word[] }
   | { kind: 'match'; words: Word[] }
   /** `salt` (a retry) changes the words offered step by step (buildSteps). `audio`: listen and
-   *  build (later units): the meaning is hidden until the end, the sentence is heard instead. */
-  | { kind: 'build'; sentence: Sentence; tiles: string[]; salt?: number; audio?: true }
+   *  build (later units): the meaning is hidden until the end, the sentence is heard instead.
+   *  `all` (later units, PROGRESSION.buildAll): every tile of the sentence at once, plus one that
+   *  does not fit (allTiles), instead of three for each place. `front` ("Zet het vooraan",
+   *  PROGRESSION.front): `sentence` is a course line with its time or place words first
+   *  (src/content/patterns.ts; its id and meaning are the line's own), `front.nl` the line as the
+   *  learner knows it and `front.phrase` the words to put first. */
+  | { kind: 'build'; sentence: Sentence; tiles: string[]; salt?: number; audio?: true; all?: true; front?: FrontTask }
   /** Type what you hear. `options` (the word and two others): for a learner who reads only a
    *  non-Latin script, the same exercise becomes "hear and pick the written word" (see
    *  lib/writing.ts); without them it is always typed. `pick` (the first units, PROGRESSION.type):
@@ -54,6 +60,12 @@ export type Exercise =
   | { kind: 'speak'; item: SpeakItem; turn?: Dialogue }
   /** The work-rules track (src/content/regels): one step of a rules lesson (buildRuleLesson). */
   | RuleExercise;
+
+/** "Zet het vooraan": the line as it stands in the course, and the words of it to put first. */
+export interface FrontTask {
+  nl: string;
+  phrase: string;
+}
 
 /** The kinds of step of a rules lesson (src/content/regels/types.ts). */
 export type RuleKind = RuleStep['kind'];
@@ -531,6 +543,55 @@ export function buildSteps(nl: string, tiles: readonly string[], n = 3, salt = 0
 }
 
 /**
+ * The words for each place of "Zet het vooraan" (buildSteps, three at most), with the two choices
+ * that matter always among them: at the first place the line's old first word ("Ik" beside
+ * "Morgen"), and right after the front words the subject beside the verb ("ik" beside
+ * "verstuur"): the verb comes second. Each takes the place of a wrong option, never the right one.
+ */
+export function frontSteps(nl: string, tiles: readonly string[], front: FrontTask, salt = 0): string[][] {
+  const steps = buildSteps(nl, tiles, 3, salt).map((s) => [...s]);
+  const words = tokenize(nl);
+  const k = tokenize(front.phrase).length;
+  const ensure = (i: number, w: string | undefined) => {
+    const step = steps[i];
+    if (!step || !w || step.some((x) => x.toLowerCase() === w.toLowerCase())) return;
+    const j = step.findIndex((x) => x.toLowerCase() !== words[i].toLowerCase());
+    if (j >= 0) step[j] = i === 0 ? w.charAt(0).toUpperCase() + w.slice(1) : w;
+  };
+  ensure(0, tokenize(front.nl)[0]);
+  ensure(k, words[k + 1]);
+  return steps;
+}
+
+/** A sentence built with all its tiles at once (PROGRESSION.buildAll): at most this many words, */
+export const ALL_MAX_WORDS = 6;
+/** and at most this many letters in all, so its tiles (each with a speaker) fit a phone of 360 px in three rows. */
+export const ALL_MAX_LETTERS = 30;
+
+/** Can this sentence be built with all its tiles at once on a small phone? (3 words or more.) */
+export function fitsAllTiles(nl: string): boolean {
+  const t = tokenize(nl);
+  return t.length >= 3 && t.length <= ALL_MAX_WORDS && t.join('').length <= ALL_MAX_LETTERS;
+}
+
+/**
+ * The tiles of a sentence built in full order (PROGRESSION.buildAll): every word of it and one
+ * extra that does not fit (from `tiles`, buildTiles; never the same as, one letter or a stem apart
+ * from, or a near-synonym of a word of the sentence), shuffled, never in the sentence's own order.
+ * Pure and seeded by the sentence and `salt` (a retry changes it).
+ */
+export function allTiles(nl: string, tiles: readonly string[], salt = 0): string[] {
+  const real = tokenize(nl);
+  const rng = createRng((hashText(nl) ^ Math.imul(salt + 1, 0x85ebca6b)) >>> 0);
+  const lower = (w: string) => (courseNames().has(w) || /^\p{Lu}{2,}/u.test(w) ? w : w.toLowerCase());
+  const extras = [...new Map(tiles.filter((t) => !real.some((r) => nearMiss(t, r) || nearSynonyms(t, r))).map((t) => [t.toLowerCase(), lower(t)])).values()];
+  const extra = extras.length ? [extras[Math.floor(rng() * extras.length)]] : [];
+  const bank = shuffle([...real, ...extra], rng);
+  const inOrder = real.every((w, i) => bank[i] === w);
+  return inOrder ? [...bank.slice(1), bank[0]] : bank;
+}
+
+/**
  * How a word option of a built sentence is written on its tile. At the first place every option
  * comes with a capital (buildSteps), so no capital gives the answer away; on screen they are all
  * written small instead ("zet", "de", "vakken", not "Zet", "De", "Vakken"), and only the word
@@ -764,8 +825,70 @@ export function buildRuleLesson(lesson: Lesson, opts: { seed?: number; review?: 
  * - `type`: "type what you hear" is written (keyboard or letter tiles, Settings). In the units
  *   before it (their lessons and mixed reviews) it is "hear and pick the written word" for every
  *   learner: no writing in the first topics (many learners read little).
+ * - `front` (stap 3, the second half of the path): "Zet het vooraan". A line met before (this
+ *   lesson's own, else one of an earlier lesson on the path; src/content/patterns.ts) is built
+ *   again with its time or place words first ("Morgen verstuur ik de mail."), three words for each
+ *   place as usual. It comes after the lesson's own sentences, in the place of the picture choice
+ *   (a fourth "which word is it" on the same words); never in the shorter lesson after mistakes.
+ * - `buildAll` (stap 3): a sentence to build (not the one by ear) shows all its tiles at once, plus
+ *   one that does not fit, so the learner sets the order (allTiles). Only a sentence that fits a
+ *   small phone that way (fitsAllTiles); a longer one keeps three words for each place.
  */
-export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10 } as const;
+export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10, front: 20, buildAll: 24 } as const;
+
+/** A line of a lesson that can be built: its sentences and the lines of its chats. */
+function linesOf(lesson: Lesson): Sentence[] {
+  return [...lesson.sentences, ...(lesson.dialogues ?? []).flatMap((d) => [d.prompt, d.reply])];
+}
+
+/** The fronted form of a line, when it is made of exactly the line's words (patterns.ts). */
+function frontOf(line: Sentence): FrontLine | undefined {
+  const f = frontLine(line.id);
+  return f && sameTiles(tokenize(f.nl), tokenize(line.nl)) ? f : undefined;
+}
+
+/**
+ * The line for "Zet het vooraan" in this lesson (PROGRESSION.front): one of its own lines that has
+ * a fronted form, else one of the lessons before it on the learner's path (met before), chosen
+ * by the lesson (the same lesson, the same line). Undefined when there is none.
+ */
+export function frontSource(lesson: Lesson, sector?: SectorChoice): { line: Sentence; front: FrontLine } | undefined {
+  const own = linesOf(lesson).find((l) => frontOf(l));
+  if (own) return { line: own, front: frontOf(own)! };
+  const { main, other } = coursePlan(sector, 'taal');
+  const order = [...main, ...other].flatMap((u) => u.lessons);
+  const at = order.findIndex((l) => l.id === lesson.id);
+  const seen = new Set<string>();
+  const pool: { line: Sentence; front: FrontLine }[] = [];
+  for (const l of order.slice(0, Math.max(0, at))) {
+    for (const line of linesOf(l)) {
+      const front = seen.has(line.id) ? undefined : frontOf(line);
+      if (front) { seen.add(line.id); pool.push({ line, front }); }
+    }
+  }
+  return pool.length ? pool[hashText(lesson.id) % pool.length] : undefined;
+}
+
+/**
+ * A sentence with a fronted form (src/content/patterns.ts): that order is right too when it is
+ * built as usual ("Vandaag werk ik acht uur." for "Ik werk vandaag acht uur."), as its `alt`.
+ * The same object when there is none.
+ */
+export function withFrontAlt(sentence: Sentence): Sentence {
+  const f = frontOf(sentence);
+  if (!f || sentence.alt?.includes(f.nl)) return sentence;
+  return { ...sentence, alt: [...(sentence.alt ?? []), f.nl] };
+}
+
+/**
+ * "Zet het vooraan" as a sentence to build: the fronted line (the line's id and meaning; its other
+ * right orders are `alt`), the line as it was and the words to put first. Its extra tiles come
+ * from this lesson, as for every sentence built here.
+ */
+export function frontExercise(src: { line: Sentence; front: FrontLine }, lesson: Lesson, rng: () => number): Exercise {
+  const sentence: Sentence = { id: src.line.id, nl: src.front.nl, en: src.line.en, ...(src.front.alt?.length ? { alt: [...src.front.alt] } : {}) };
+  return { kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng), front: { nl: src.line.nl, phrase: src.front.front } };
+}
 
 /** The 0-based place of the lesson's unit on the learner's path (-1 outside it, e.g. today's review). */
 export function unitIndexOf(lesson: Lesson, sector?: SectorChoice, track: Track = trackOfId(lesson.id)): number {
@@ -916,7 +1039,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // question (above), one tip situation, the match board, one sentence to build and one chat. Its words already
   // rotate through listening, picture and writing questions, so the extra ones are left out.
   if (daily) {
-    for (const sentence of sentences) out.push({ kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) });
+    for (const sentence of sentences) out.push({ kind: 'build', sentence: withFrontAlt(sentence), tiles: buildTiles(sentence, lesson, rng) });
     for (const dialogue of dialogues) {
       out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
     }
@@ -939,15 +1062,24 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   const pictured = words.filter(hasPicture);
   const target = hasPicture(d1) || !pictured.length ? d1 : pictured[Math.floor(rng() * pictured.length)];
   // At most three answers on a screen (the "at most 3" rule).
-  const pictureChoice = readableDutch(target, lesson, rng, Boolean(opts.nonLatin), Boolean(opts.quiet), false);
-  out.push(pictureChoice);
+  const picture = readableDutch(target, lesson, rng, Boolean(opts.nonLatin), Boolean(opts.quiet), false);
+  // The second half of the path (PROGRESSION.front): "Zet het vooraan" takes the picture choice's
+  // place, after the sentences. The picture choice is still made (the same draws), so the rest of
+  // the lesson stays as it was.
+  const front = later(PROGRESSION.front) && !easy ? frontSource(lesson, opts.sector) : undefined;
+  const pictureChoice = front ? undefined : picture;
+  if (pictureChoice) out.push(pictureChoice);
 
   sentences.forEach((sentence, k) => {
-    const build: Exercise = { kind: 'build', sentence, tiles: buildTiles(sentence, lesson, rng) };
+    const build: Exercise = { kind: 'build', sentence: withFrontAlt(sentence), tiles: buildTiles(sentence, lesson, rng) };
     // Later units: the last sentence is built by ear (never without sound).
     if (later(PROGRESSION.audioBuild) && !opts.quiet && !easy && k === sentences.length - 1 && sentences.length > 1) build.audio = true;
+    // Later still: the other sentences in full order, all their tiles at once, where they fit.
+    else if (later(PROGRESSION.buildAll) && fitsAllTiles(sentence.nl)) build.all = true;
     out.push(build);
   });
+  // From its own generator, so nothing else in the lesson changes with it.
+  if (front) out.push(frontExercise(front, lesson, createRng(((opts.seed ?? 0) ^ 0xf40e7) >>> 0)));
 
   // Complete the conversation: use the words in a real exchange with a colleague. In a later
   // unit's mixed review the last chat goes the other way round (pick the question).
@@ -971,9 +1103,12 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // the question.
   const turned = later(PROGRESSION.reverseChat) ? reverseDialogue(lesson) : undefined;
   let secondListen: Exercise | undefined;
+  let turnedChat: Exercise | undefined;
   if (easy) { /* a shorter lesson: no second listening question here */ }
-  else if (turned) out.push({ kind: 'chat', dialogue: turned, options: chatPromptOptions(turned, rng, 3, lesson), reverse: true });
-  else {
+  else if (turned) {
+    turnedChat = { kind: 'chat', dialogue: turned, options: chatPromptOptions(turned, rng, 3, lesson), reverse: true };
+    out.push(turnedChat);
+  } else {
     secondListen = opts.quiet ? readableDutch(l2, lesson, rng, Boolean(opts.nonLatin), true, false) : { kind: 'listen', word: l2, options: options(l2, lesson, rng) };
     out.push(secondListen);
   }
@@ -992,7 +1127,9 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // "Wat zeg je?" before a chat: in a lesson of its own (not a review of a topic, not today's
   // review, not the shorter lesson after many mistakes), for a chat whose two lines are recorded.
   const turnFor = !mix && !easy && opts.recorded ? dialogues.find((d) => opts.recorded!(d.prompt.nl) && opts.recorded!(d.reply.nl)) : undefined;
-  return unwritten(turnFor ? withTurn(spoken, turnFor, [secondListen, pictureChoice]) : spoken);
+  // With "Zet het vooraan" there is no picture choice: the reversed chat (a chat of the lesson
+  // before) then makes room, so the lesson never grows past its 21.
+  return unwritten(turnFor ? withTurn(spoken, turnFor, [secondListen, pictureChoice, turnedChat]) : spoken);
 }
 
 /**
@@ -1007,7 +1144,8 @@ export const TURN_LONG = 20;
  * their line, the learner says the reply, then hears it; the chat itself follows. In a long lesson
  * (TURN_LONG) it replaces the first of `instead` that is in it: the second "what do you hear" (one
  * word, the second time in this lesson), else the picture choice (a fourth "which word is it" on the
- * same words). Nothing else moves, so the other exercises stay the same with or without it.
+ * same words), else (a lesson with "Zet het vooraan" in the picture choice's place) the reversed
+ * chat. Nothing else moves, so the other exercises stay the same with or without it.
  */
 export function withTurn(list: Exercise[], dialogue: Dialogue, instead: readonly (Exercise | undefined)[]): Exercise[] {
   const at = list.findIndex((e) => e.kind === 'chat' && !e.reverse && e.dialogue === dialogue);

@@ -68,7 +68,9 @@ describe('every sentence: a level and a skill it fits', () => {
   });
 
   it('says "past bij", never that it is official', () => {
-    expect(pastBij({ niveau: 'A2', vaardigheid: 'spreken' })).toBe('past bij A2 · spreken');
+    expect(pastBij({ niveau: 'A1', vaardigheid: 'spreken' })).toBe('past bij A1 · spreken');
+    // Stap 3, eerlijk niveau: the language route goes from A0 to A1, on the way to A2.
+    expect(pastBij({ niveau: 'A2', vaardigheid: 'spreken' })).toBe('op weg naar A2 · spreken');
     for (const z of ALL.flatMap((o) => o.zinnen)) expect(z.nl.toLowerCase(), z.id).not.toMatch(/officieel|erkend|diploma a2/);
     const pro = proSections.find((s) => s.id === 'p.kunjenu')!;
     expect(pro.body.join(' ')).toContain('geen officieel niveau');

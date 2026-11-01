@@ -2,7 +2,7 @@ import { CONTACT_EMAIL } from '../content/about';
 import { COACH_FACTS } from '../content/facts';
 import { PRO_LEAD, proSections, type ProSection } from '../content/pro';
 import { THEMES } from '../content/themes';
-import { KUN_REGELS, KUN_TAAL, type KunOnderwerp } from '../content/kunJeNu';
+import { KUN_REGELS, KUN_TAAL, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 import { languageNav } from './langPages';
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
 import { appLink, ASK_PATH, COACH_PATH, GROEP_PATH } from './paths';
@@ -33,7 +33,7 @@ function topicLinks(): string {
 function kunTables(): string {
   const table = (naam: string, lijst: KunOnderwerp[]) => `<h3>${esc(naam)}</h3>
 <table><thead><tr><th scope="col">Onderwerp</th><th scope="col">Zinnen</th><th scope="col">Past bij</th></tr></thead><tbody>${lijst
-    .flatMap((o) => o.zinnen.map((z, i) => `<tr>${i === 0 ? `<th scope="row" rowspan="${o.zinnen.length}">${esc(o.titel)}</th>` : ''}<td>${esc(z.nl)}</td><td>${esc(`${z.niveau} · ${z.vaardigheid}`)}</td></tr>`))
+    .flatMap((o) => o.zinnen.map((z, i) => `<tr>${i === 0 ? `<th scope="row" rowspan="${o.zinnen.length}">${esc(o.titel)}</th>` : ''}<td>${esc(z.nl)}</td><td>${esc(`${niveauLabel(z)} · ${z.vaardigheid}`)}</td></tr>`))
     .join('')}</tbody></table>`;
   return [table('Taal', KUN_TAAL), table('Werkregels', KUN_REGELS)].join('\n');
 }

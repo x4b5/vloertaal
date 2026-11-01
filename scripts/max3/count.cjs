@@ -19,7 +19,9 @@
  * A list state ({ list: true }, the named exception) is checked, not waved through: it needs a
  * list (ul / ol / .lang-grid / .set-rows) whose rows are one kind, with at most one tap per row
  * and no extra per-row buttons; outside its lists at most --limit things to tap (the back arrow is
- * chrome).
+ * chrome). A sentence built with all its tiles at once (stap 3, `ul.tile-all`) is such a list:
+ * each tile is one row (one tap: the word; its speaker is not counted, as everywhere), a placed
+ * tile leaves an empty row without a tap; outside it at most --limit.
  *
  * Usage:
  *   node count.cjs                       # every state, one configuration
@@ -102,11 +104,12 @@ async function buildRight(page, wrongFirst = 0) {
     for (let i = 0; i < n; i++) texts.push((await tiles.nth(i).innerText()).replace(/[.,!?\u00ad]/g, '').trim());
     if (wrongFirst && k === 0) {
       const wrong = texts.map((t, j) => (t.toLowerCase() !== w.toLowerCase() ? j : -1)).filter((j) => j >= 0);
-      for (let x = 0; x < wrongFirst; x++) { await tiles.nth(wrong[x % wrong.length]).click(); await settle(page, 150); }
+      for (let x = 0; x < wrongFirst; x++) { await tiles.nth(wrong[x % wrong.length]).click(); await settle(page, 300); }
     }
     // The first word's tiles are written small (src/lib/exercises.ts tileLabel): "draag" for "Draag".
     const i = texts.findIndex((t) => t === w || (k === 0 && t.toLowerCase() === w.toLowerCase()));
-    if (i >= 0) { await tiles.nth(i).click(); await settle(page, 150); }
+    // Longer than the tiles' settling time (useSettledTiles, 250 ms), else the next tap is dropped.
+    if (i >= 0) { await tiles.nth(i).click(); await settle(page, 300); }
   }
   await settle(page, 300);
 }
@@ -253,6 +256,9 @@ function defineStates(LANG) {
     await realHome(p, { completed: { 'l.hello': { best: 1, times: 1 }, 'l.people': { best: 1, times: 1 }, 'l.understand': { best: 1, times: 1 } } });
   };
   add('flow:bewaar-home', '/', atRisk, { expect: '.home-offer .bewaar-card .bewaar-go' });
+  // Stap 3: "Wil je ook de werkregels leren?" (src/components/BridgeOffer.tsx), most of the course done.
+  add('home:bridge', shot('bridge'), null, { expect: '.home-offer .bridge-card .bridge-go' });
+  add('home:bridge-later', shot('bridge'), async (p) => { await tap(p, '.bridge-later'); await settle(p); }, { expect: '.home3:not(.home-offer)' });
   add('flow:bewaar-later', '/', async (p) => { await atRisk(p); await tap(p, '.bewaar-later'); await settle(p); }, { expect: '.home3 .bay-now' });
   add('flow:bewaar-go', '/', async (p) => {
     await atRisk(p);
@@ -441,6 +447,16 @@ function defineStates(LANG) {
   // Two stray taps are forgiven in a built sentence (BUILD_FORGIVEN_TAPS); three are a mistake.
   add('lesson:build:two-slips', shot('build'), async (p) => { await buildRight(p, 2); await settle(p, 900); }, { expect: '.answer-right' });
   add('lesson:build:wrong', shot('build'), async (p) => { await buildRight(p, 3); await settle(p, 900); }, { expect: '.answer-wrong' });
+  // Stap 3: all the tiles at once (later units): the tile bank is a list (see the head of this file).
+  add('lesson:build-all', shot('build&all=1'), null, { list: true, expect: 'ul.tile-all' });
+  add('lesson:build-all:placed', shot('build&all=1'), async (p) => {
+    const label = await p.locator('.build-steps[data-nl]').first().getAttribute('data-nl');
+    await tapText(p, '.tile-all .tile-with-say', label.split(/\s+/)[0].toLowerCase());
+  }, { list: true, expect: '.answer-line .tile-placed' });
+  add('lesson:build-all:right', shot('build&all=1'), async (p) => { await buildRight(p); await settle(p, 900); }, { expect: '.answer-right' });
+  // Stap 3: "Zet het vooraan": the line with its front words marked, three words for each place.
+  add('lesson:front', shot('front'), null, { expect: '.build-front-mark' });
+  add('lesson:front:right', shot('front'), async (p) => { await buildRight(p); await settle(p, 900); }, { expect: '.answer-right' });
   // Keyboard dictation is for a help language in Latin letters (another script gets hear-and-pick).
   const latin = ['pl', 'tr', 'ro'].includes(LANG) ? LANG : 'pl';
   add('lesson:dictation', shot('type', latin));
@@ -931,6 +947,7 @@ function countInPage() {
       rows: rows.length,
       rowKinds: kinds,
       multiTapRows: per.filter((t) => t.length > 1).map((t) => t.map((c) => c.label).join(' + ')),
+      tileAll: ul.classList.contains('tile-all'),
       _el: ul,
     });
   }
@@ -947,7 +964,9 @@ function countInPage() {
 /** The verdict for a state: PASS / LIST / FAIL, with the reasons. */
 function judge(st, res, expectOk) {
   const why = [];
-  if (st.list) {
+  // A sentence built with all its tiles at once (ul.tile-all, stap 3) is the list exception
+  // wherever it shows (a lesson step of any state): checked as a list.
+  if (st.list || res.lists.some((l) => l.tileAll)) {
     if (!res.lists.length) why.push('list state without a list');
     if (res.outsideLists.length > LIMIT) why.push(`${res.outsideLists.length} outside the list`);
     for (const l of res.lists) {
@@ -1021,7 +1040,7 @@ async function runOne(browser, st, cfg, outDir) {
     if (outDir && !NO_SHOTS) await page.screenshot({ path: path.join(outDir, `${file}.png`), fullPage: true });
     const why = COUNTER_SRC ? judgeMine(st, res, expectOk) : judge(st, res, expectOk);
     if (errors.length) why.push(`page errors: ${errors.join(' | ')}`);
-    const row = { config: cfgName(cfg), state: st.name, url: st.url, pass: why.length === 0, list: Boolean(st.list), why, ...res, count: res.counted.length, errors };
+    const row = { config: cfgName(cfg), state: st.name, url: st.url, pass: why.length === 0, list: Boolean(st.list) || (res.lists ?? []).some((l) => l.tileAll), why, ...res, count: res.counted.length, errors };
     if (outDir) fs.writeFileSync(path.join(outDir, `${file}.json`), JSON.stringify(row, null, 2));
     return row;
   } catch (e) {

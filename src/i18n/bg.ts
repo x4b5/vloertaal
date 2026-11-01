@@ -417,6 +417,10 @@ const lang: HelpLanguageSource = {
     speakTurnReveal: 'Чуй отговора', // nieuw, nalezen
     sceneTitle: 'Слушай на работа', // nieuw, nalezen
     sceneIntro: 'Има шум, като на работа. Слушай. После идват въпросите.', // nieuw, nalezen
+    buildFront: 'Сложи отбелязаната дума в началото', // nieuw, nalezen
+    bridgeTitle: 'Правилата в работата', // nieuw, nalezen
+    bridgeText: 'Вече знаеш много нидерландски. Искаш ли да научиш и правилата в работата? Тогава всичко е на нидерландски.', // nieuw, nalezen
+    bridgeGo: 'Да, покажи', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

@@ -520,6 +520,12 @@ export const uiEn = {
   speakTurnReveal: 'Hear the answer',
   sceneTitle: 'Listen at work',
   sceneIntro: 'There is noise, as at work. Listen. Then come the questions.',
+  /* Stap 3: "Zet het vooraan" (a sentence built again with its time or place words first, src/components/Exercises.tsx BuildExercise). */
+  buildFront: 'Put the marked word first',
+  /* Stap 3: once, on the home, when most of the language course is done (src/components/BridgeOffer.tsx). */
+  bridgeTitle: 'The work rules',
+  bridgeText: 'You know a lot of Dutch now. Do you also want to learn the work rules? Then everything is in Dutch.',
+  bridgeGo: 'Yes, show me',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

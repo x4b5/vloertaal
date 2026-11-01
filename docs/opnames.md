@@ -240,3 +240,12 @@ npx vitest run tests/scenes.test.ts tests/geluidsscenes.test.ts
 - **Niet mee:** `public/audio/` en `public/audio-scenes/geluid/` (beide staan in `.gitignore`).
 - **Alleen wat er is.** De app toont alleen de scènes die in `scenes.json` staan. Haal je een mix weg,
   draai dan `npm run scenes:lines -- --manifest` opnieuw.
+
+## 8. "Zet het woord vooraan" (stap 3)
+
+In de tweede helft van het lespad maakt de leerling een zin opnieuw, met het woord van tijd of
+plaats vooraan: "Ik verstuur de mail morgen." wordt "Morgen verstuur ik de mail." Dat zijn 16
+korte zinnen (`src/content/patterns.ts`, ongeveer 450 tekens per stem, dus ongeveer 1.800
+tekens voor de vier stemmen). Ze staan met `npm run clips` in `public/audio/clips.json`, met een
+id die eindigt op `.front`. Neem ze op zoals in stap 1 tot en met 4. Tot dan leest de stem van de
+telefoon de nieuwe zin voor; de oude zin en de losse woorden hebben al een opname.

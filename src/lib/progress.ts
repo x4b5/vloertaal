@@ -132,6 +132,8 @@ export interface Progress {
   firstDay?: string;
   /** The notices seen ("Er is iets veranderd", their ids). On this phone only: not in the backup. */
   noticesSeen?: string[];
+  /** "Wil je ook de werkregels leren?" (src/lib/bridge.ts) was answered: it does not come back. On this phone only. */
+  bridgeSeen?: true;
 }
 
 /** What each track keeps for itself (Progress.parked). */
