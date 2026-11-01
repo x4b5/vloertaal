@@ -234,7 +234,9 @@ describe('rule steps on screen', () => {
     const best = wd.step.options.find((o) => o.best)!;
     const other = wd.step.options.find((o) => !o.best)!;
     const right = ruleVerdict(wd, true, best.id)!;
-    expect(right).toMatchObject({ title: 'Goed zo!', own: best.feedback, why: wd.step.why });
+    // Right: no own line ('Goed. …'): the answer is green, the why says it ("Vloertaal rustiger").
+    expect(right).toMatchObject({ title: 'Goed zo!', why: wd.step.why });
+    expect(right?.own).toBeUndefined();
     expect(right.best).toBeUndefined();
     const wrong = ruleVerdict(wd, false, other.id)!;
     expect(wrong).toMatchObject({ title: 'Het beste antwoord is:', own: other.feedback, best: { text: best.text }, why: wd.step.why });

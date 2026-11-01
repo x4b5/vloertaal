@@ -12,7 +12,7 @@ import type { Exercise, RuleExercise, RuleKind } from '../lib/exercises';
 import { learnerVoice, voiceFor, type VoiceRef } from '../lib/voices';
 import { Character, MeAvatar, useTalking } from './Characters';
 import { type Answer, ChoiceGrid, moodFor, reactClass } from './Exercises';
-import { CheckIcon } from './Icons';
+import { CheckIcon, InfoIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { DialectLine } from './Dialect';
 import { WordPicture } from '../pictures';
@@ -403,7 +403,10 @@ export interface RuleVerdict {
   best?: { lead: string; text: string; what?: string };
   /** A card's sum: its steps, in words and numbers ("20 × 15 = 300 euro."). */
   sum?: string[];
+  /** The core of why, one or two short sentences (always in view). */
   why: string;
+  /** More (where it is written, an exception): behind an ⓘ "Meer uitleg" ("Vloertaal rustiger"). */
+  more?: string;
 }
 
 /** The feedback for a graded rules step: right or not, the picked option's own line, the best
@@ -415,6 +418,7 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
         title: correct ? 'Goed zo!' : 'Het goede antwoord is:',
         best: correct ? undefined : { lead: 'Het goede antwoord', text: ex.step.answer ? 'Waar' : 'Niet waar' },
         why: ex.step.why,
+        more: ex.step.whyMore,
       };
     case 'whatdo':
     case 'payslip':
@@ -425,10 +429,12 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
       const lead = ex.kind === 'card' && ex.step.sum?.length ? 'Het goede antwoord' : 'Het beste antwoord';
       return {
         title: correct ? 'Goed zo!' : `${lead} is:`,
-        own: picked?.feedback,
+        // Right: no own line ('Goed. Zo weet …'): the answer is green, the why says it ("Vloertaal rustiger").
+        own: correct ? undefined : picked?.feedback,
         best: correct ? undefined : { lead, text: best.text },
         ...(ex.kind === 'card' && ex.step.sum?.length ? { sum: ex.step.sum } : {}),
         why: ex.step.why,
+        more: ex.step.whyMore,
       };
     }
     case 'whoask': {
@@ -436,9 +442,11 @@ export function ruleVerdict(ex: RuleExercise, correct: boolean, given?: string):
       const best = ex.step.options.find((o) => o.best)!;
       return {
         title: correct ? 'Goed zo!' : 'Het beste antwoord is:',
-        own: picked?.feedback,
+        // Right: no own line ('Goed. Zo weet …'): the answer is green, the why says it ("Vloertaal rustiger").
+        own: correct ? undefined : picked?.feedback,
         best: correct ? undefined : { lead: 'Het beste antwoord', text: askWhoCard(best.who, ex.step.id).label, what: askWhoCard(best.who, ex.step.id).what },
         why: ex.step.why,
+        more: ex.step.whyMore,
       };
     }
     default:
@@ -483,6 +491,13 @@ export function RuleFeedbackBody({ v, lang }: { v: RuleVerdict; lang?: HelpLangu
         <Say text={v.why} lang={lang} />
         <p lang="nl">{v.why}</p>
       </div>
+      {/* Where it is written, an exception: behind an ⓘ, opened in place. */}
+      {v.more && (
+        <details className="info-more rule-fb-more" lang="nl">
+          <summary className="info-more-summary"><InfoIcon size={18} /><span>Meer uitleg</span></summary>
+          <p className="info-more-body">{v.more}</p>
+        </details>
+      )}
     </>
   );
 }
