@@ -417,9 +417,11 @@ export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab:
 
 /** "Hulp" tab: opens straight onto the emergency phrases; the workplace tips are below them.
  *  `after`: one more link below them (the region's Sociale kaart, src/components/SocialMap.tsx). */
-export function WordsHub({ lang, onTips, after }: {
+export function WordsHub({ lang, onTips, onColleague, after }: {
   lang?: HelpLanguage;
   onTips: () => void;
+  /** "Voor je collega" (src/components/ColleagueCard.tsx). */
+  onColleague?: () => void;
   after?: React.ReactNode;
 }) {
   return (
@@ -439,6 +441,15 @@ export function WordsHub({ lang, onTips, after }: {
         </span>
         <ChevronIcon size={24} />
       </button>
+      {onColleague && (
+        <button type="button" className="hub-card hub-colleague" onClick={onColleague}>
+          <span className="hub-icon" aria-hidden><WordPicture id="w.collega" emoji="🧑‍🤝‍🧑" size={34} /></span>
+          <span className="hub-text">
+            <NlPair nlFirst nl="Voor je collega" nlClass="hub-nl" text={ui('colleagueCard', lang)} />
+          </span>
+          <ChevronIcon size={24} />
+        </button>
+      )}
       <WorkContacts lang={lang} />
       {after}
     </div>

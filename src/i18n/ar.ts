@@ -404,6 +404,9 @@ const lang: HelpLanguageSource = {
     workTry: { m: 'جرّبها اليوم في عملك', f: 'جرّبيها اليوم في عملك', x: 'للتجربة اليوم في العمل' }, // nieuw, nalezen
     workTryWhen: 'عندما:', // nieuw, nalezen
     workTryThen: { m: 'قُل حينها:', f: 'قولي حينها:', x: 'يُقال حينها:' }, // nieuw, nalezen
+    colleagueCard: 'لزميل في العمل', // nieuw, nalezen
+    colleagueCardHint: { m: 'اعرضْ هذا على زميل يتكلّم الهولندية. فيه كيف يمكنه أن يساعدكَ على التمرين.', f: 'اعرضي هذا على زميل يتكلّم الهولندية. فيه كيف يمكنه أن يساعدكِ على التمرين.', x: 'يمكن عرض هذا على زميل يتكلّم الهولندية. فيه كيف يمكنه المساعدة في التمرين.' }, // nieuw, nalezen
+    colleagueShare: { m: 'أرسِلها إلى زميلك', f: 'أرسِليها إلى زميلك', x: 'إرسالها إلى زميل' }, // nieuw, nalezen
     calmScreen: 'شاشة هادئة', // nieuw, nalezen
     calmAuto: 'مثل هاتفك', // nieuw, nalezen
     calmHint: 'مُفعّل: لا شيء يتحرك، لا احتفال بسلسلة أيامك بعد الدرس، ولا تظهر السلسلة والكلمات في الشاشة الرئيسية.', // nieuw, nalezen

@@ -510,6 +510,10 @@ export const uiEn = {
   /* "Probeer het vandaag": the if-then plan (src/components/WorkTry.tsx): the moment, then the sentence. */
   workTryWhen: 'When:',
   workTryThen: 'Then say:',
+  /* "Voor je collega" (src/components/ColleagueCard.tsx, the Hulp tab): a card for a Dutch-speaking colleague. */
+  colleagueCard: 'For your colleague',
+  colleagueCardHint: 'Show this to a colleague who speaks Dutch. It says how they can help you practise.',
+  colleagueShare: 'Send it to your colleague',
   /* "Rustig scherm" (Settings › Lessons; src/lib/calm.ts). */
   calmScreen: 'Calm screen',
   calmAuto: 'Like your phone',

@@ -538,6 +538,7 @@ function defineStates(LANG) {
   add('settings:backup-empty', shot('settings&page=backup'), async (p) => { await putBack(p, []); }, { expect: '.waybill-ask' });
   add('settings:backup-big', shot('settings&page=backup'), async (p) => { await putBack(p, [], 2_100_000); }, { expect: '.keep-note' });
   add('tab:help', shot('words'), null, { list: true });
+  add('tab:colleague', shot('colleague'), null, { list: true }); // "Voor je collega": the two sentences (a list), the card, Send
   add('tab:about', shot('about'), null, { list: true, expect: '.about-links' });
   add('tab:about-nl', shot('about&nl=1'), null, { list: true, expect: '.about-nl-on' });
   // "Wat is er nieuw?": the last 3 dates and "Meer" (one tap), then every date (nothing to tap).

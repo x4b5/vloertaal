@@ -404,6 +404,9 @@ const lang: HelpLanguageSource = {
     workTry: 'Experimenta hoje no trabalho', // nieuw, nalezen
     workTryWhen: 'Quando:', // nieuw, nalezen
     workTryThen: 'Então diz:', // nieuw, nalezen
+    colleagueCard: 'Para o teu colega', // nieuw, nalezen
+    colleagueCardHint: 'Mostra isto a um colega que fala neerlandês. Diz como te pode ajudar a praticar.', // nieuw, nalezen
+    colleagueShare: 'Envia ao teu colega', // nieuw, nalezen
     calmScreen: 'Ecrã calmo', // nieuw, nalezen
     calmAuto: 'Como o teu telemóvel', // nieuw, nalezen
     calmHint: 'Ligado: nada se mexe, não há festa pela tua sequência depois de uma lição, e a tua sequência e as palavras não aparecem no ecrã inicial.', // nieuw, nalezen

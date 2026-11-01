@@ -404,6 +404,9 @@ const lang: HelpLanguageSource = {
     workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen
     workTryWhen: 'Cuando:', // nieuw, nalezen
     workTryThen: 'Entonces di:', // nieuw, nalezen
+    colleagueCard: 'Para tus compañeros', // nieuw, nalezen
+    colleagueCardHint: 'Enséñaselo a un compañero que habla neerlandés. Dice cómo puede ayudarte a practicar.', // nieuw, nalezen
+    colleagueShare: 'Envíaselo a tu compañero', // nieuw, nalezen
     calmScreen: 'Pantalla tranquila', // nieuw, nalezen
     calmAuto: 'Como tu teléfono', // nieuw, nalezen
     calmHint: 'Activado: nada se mueve, no hay celebración de tu racha después de una lección, y tu racha y tus palabras no aparecen en la pantalla de inicio.', // nieuw, nalezen
