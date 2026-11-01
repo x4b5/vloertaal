@@ -571,6 +571,7 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
               className={`choice match match-en ${hit === w.id ? 'match-hit' : made ? 'matched' : ''} ${miss === w.id ? 'shake match-miss' : ''}`}
               disabled={(made && hit !== w.id) || (finished && !made)}
               onClick={() => pick(w)}
+              data-demo={state.done.length === 0 && !hit && w.id === current.id ? '' : undefined}
             >
               {hasPicture(w) && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
               <span className="match-text">
@@ -686,6 +687,8 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           lang="nl"
           disabled={locked}
           onClick={() => tap(t, slot)}
+          // The first right tile, for the one-time show of how it works (components/ShowHow.tsx).
+          data-demo={at === 0 && !locked && nextTileOrder(orders, [], t, path) >= 0 ? '' : undefined}
         >
           {/* Written small at the first place too (tileLabel); the tap is checked on the word itself. */}
           {breakable(label)}
@@ -915,6 +918,7 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
                   disabled={locked}
                   aria-label={t.kind === 'space' ? srText(ui('spaceKey', lang)) : t.label}
                   onClick={() => tapTile(i)}
+                  data-demo={at === 0 && !locked && t === steps[0].answer ? '' : undefined}
                 >
                   {t.label}
                 </button>
