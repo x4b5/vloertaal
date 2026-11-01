@@ -1107,7 +1107,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
     );
   }
   return (
-    <div className="exercise tip">
+    <div className={`exercise tip ${part === 'read' ? 'tip-page-read' : ''}`}>
       {badge}
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
       {/* In Belgium (docs/taal-belgie.md): a Dutch tip that differs there says so; a Belgian tip says it is new. */}
