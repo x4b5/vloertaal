@@ -6,6 +6,12 @@ const t: CultureTranslation = {
     sayAloud: "Pas besoin de micro. Dis-le à voix haute, puis continue.",
     micRetry: "Réessayer le micro",
     micFailed: "Le micro n’a pas marché. Dis-le à voix haute, puis continue.",
+    micRefused: "L’app ne peut pas utiliser ton micro. Tu peux l’activer.", // nieuw, nalezen
+    micTurnOn: "Active le micro", // nieuw, nalezen
+    micStepsIos: "Touche « aA » dans la barre d’adresse › Réglages du site web › Micro › Autoriser. Ou : Réglages › Apps › Safari › Micro. Puis touche le bouton ci-dessous.", // nieuw, nalezen
+    micStepsAndroid: "Touche l’icône à gauche de l’adresse web › Autorisations › Micro › Autoriser. Puis touche le bouton ci-dessous.", // nieuw, nalezen
+    micStepsAndroidApp: "Appuie longtemps sur l’icône de Vloertaal sur ton écran d’accueil › Infos sur l’appli › Autorisations › Micro › Autoriser. Puis touche le bouton ci-dessous.", // nieuw, nalezen
+    micStepsDesktop: "Clique sur l’icône à gauche de l’adresse web › Micro › Autoriser. Puis clique sur le bouton ci-dessous.", // nieuw, nalezen
     whichPicture: "C’est quelle image ?",
     wrongTapsN: "Mauvaises touches : {n}",
     sayAloudInstead: "Dis-le plutôt à voix haute",

@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Fazer as lições mesmo assim', // nieuw, nalezen
     shareInvite: 'Estou a aprender neerlandês para o meu trabalho com o Vloertaal. Grátis: {link}', // nieuw, nalezen
     workTry: 'Experimenta hoje no trabalho', // nieuw, nalezen
+    geluktAsk: 'Disseste isto no trabalho?', // nieuw, nalezen
+    geluktYes: 'Sim, correu bem', // nieuw, nalezen
+    geluktNotYet: 'Ainda não', // nieuw, nalezen
     saveFailed: 'O teu progresso não foi guardado. O telemóvel está cheio? Liberta algum espaço. Ou vai a Definições: «Guarda o teu progresso».', // nieuw, nalezen
     bewaarNudge: 'O telemóvel às vezes pode apagar o teu progresso. Por isso, guarda uma cópia.', // nieuw, nalezen
     bewaarGo: 'Guardar agora', // nieuw, nalezen

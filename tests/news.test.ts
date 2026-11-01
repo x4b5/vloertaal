@@ -19,7 +19,7 @@ const about = (code?: string) => unescape(renderToStaticMarkup(createElement(Abo
 
 describe('Wat is er nieuw?', () => {
   it('says what is new on Over itself', () => {
-    expect(UPDATES[0].items.some((i) => i.includes('Waarom Vloertaal?') && i.includes('Wat is er nieuw?'))).toBe(true);
+    expect(UPDATES.some((u) => u.items.some((i) => i.includes('Waarom Vloertaal?') && i.includes('Wat is er nieuw?')))).toBe(true);
   });
 
   it('is a row at the bottom of Over, with the newest date, in a list of one kind of row', () => {

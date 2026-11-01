@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Все пак направи уроците', // nieuw, nalezen
     shareInvite: 'Уча нидерландски за работата си с Vloertaal. Безплатно е: {link}', // nieuw, nalezen
     workTry: 'Опитай днес на работа', // nieuw, nalezen
+    geluktAsk: 'Каза ли това на работа?', // nieuw, nalezen
+    geluktYes: 'Да, получи се', // nieuw, nalezen
+    geluktNotYet: 'Още не', // nieuw, nalezen
     saveFailed: 'Напредъкът ти не е запазен. Телефонът пълен ли е? Освободи малко място. Или отвори Настройки: „Запази напредъка си“.', // nieuw, nalezen
     bewaarNudge: 'Телефонът понякога може да изтрие напредъка ти. Затова запази копие.', // nieuw, nalezen
     bewaarGo: 'Запази сега', // nieuw, nalezen

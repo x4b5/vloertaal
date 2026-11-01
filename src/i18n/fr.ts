@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Faire quand même les leçons', // nieuw, nalezen
     shareInvite: 'J’apprends le néerlandais pour mon travail avec Vloertaal. Gratuit : {link}', // nieuw, nalezen
     workTry: 'Essaie aujourd’hui au travail', // nieuw, nalezen
+    geluktAsk: 'Tu l’as dit au travail ?', // nieuw, nalezen
+    geluktYes: 'Oui, ça a marché', // nieuw, nalezen
+    geluktNotYet: 'Pas encore', // nieuw, nalezen
     saveFailed: 'Ta progression n’a pas été enregistrée. Ton téléphone est plein ? Libère un peu de place. Ou va dans Réglages : « Garde ta progression ».', // nieuw, nalezen
     bewaarNudge: 'Ton téléphone peut parfois effacer ta progression. Alors garde une copie.', // nieuw, nalezen
     bewaarGo: 'Garder maintenant', // nieuw, nalezen

@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Yine de dersleri yap', // nieuw, nalezen
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
     workTry: 'Bugün işte dene', // nieuw, nalezen
+    geluktAsk: 'Bunu işte söyledin mi?', // nieuw, nalezen
+    geluktYes: 'Evet, oldu', // nieuw, nalezen
+    geluktNotYet: 'Henüz değil', // nieuw, nalezen
     saveFailed: 'İlerlemen kaydedilmedi. Telefonun dolu mu? Biraz yer aç. Ya da Ayarlar’a git: “İlerlemeni sakla”.', // nieuw, nalezen
     bewaarNudge: 'Telefonun bazen ilerlemeni silebilir. Bu yüzden bir kopya sakla.', // nieuw, nalezen
     bewaarGo: 'Şimdi kaydet', // nieuw, nalezen

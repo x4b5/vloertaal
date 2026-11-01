@@ -6,6 +6,12 @@ const t: CultureTranslation = {
     sayAloud: "Nu e nevoie de microfon. Spune cu voce tare, apoi mergi mai departe.",
     micRetry: "Încearcă din nou microfonul",
     micFailed: "Microfonul nu a funcționat. Spune cu voce tare, apoi mergi mai departe.",
+    micRefused: "Aplicația nu are voie să folosească microfonul. Îl poți porni.", // nieuw, nalezen
+    micTurnOn: "Pornește microfonul", // nieuw, nalezen
+    micStepsIos: "Atinge „aA” în bara de adrese › Configurări site web › Microfon › Permite. Sau: Configurări › Aplicații › Safari › Microfon. Apoi atinge butonul de mai jos.", // nieuw, nalezen
+    micStepsAndroid: "Atinge pictograma din stânga adresei web › Permisiuni › Microfon › Permite. Apoi atinge butonul de mai jos.", // nieuw, nalezen
+    micStepsAndroidApp: "Ține apăsat pe pictograma Vloertaal de pe ecranul principal › Informații aplicație › Permisiuni › Microfon › Permite. Apoi atinge butonul de mai jos.", // nieuw, nalezen
+    micStepsDesktop: "Dă clic pe pictograma din stânga adresei web › Microfon › Permite. Apoi dă clic pe butonul de mai jos.", // nieuw, nalezen
     whichPicture: "Care imagine este?",
     wrongTapsN: "Atingeri greșite: {n}",
     sayAloudInstead: "Spune cu voce tare în schimb",

@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Усе ж пройти уроки', // nieuw, nalezen
     shareInvite: 'Я вчу нідерландську для роботи з Vloertaal. Безкоштовно: {link}', // nieuw, nalezen
     workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
+    geluktAsk: 'Вдалося сказати це на роботі?', // nieuw, nalezen
+    geluktYes: 'Так, вдалося', // nieuw, nalezen
+    geluktNotYet: 'Ще ні', // nieuw, nalezen
     saveFailed: 'Твій прогрес не збережено. Телефон заповнений? Звільни трохи місця. Або відкрий Налаштування: «Збережи свій прогрес».', // nieuw, nalezen
     bewaarNudge: 'Телефон іноді може стерти твій прогрес. Тому збережи копію.', // nieuw, nalezen
     bewaarGo: 'Зберегти зараз', // nieuw, nalezen

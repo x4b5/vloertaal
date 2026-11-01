@@ -254,6 +254,12 @@ export const uiNl: Record<UiKey, UiText> = {
   sayAloud: 'Je hebt geen microfoon nodig. Zeg het hardop en ga dan verder.',
   micRetry: 'Probeer de microfoon nog een keer',
   micFailed: 'De microfoon werkte niet. Zeg het hardop en ga dan verder.',
+  micRefused: "De app mag je microfoon niet gebruiken. Je kunt hem aanzetten.",
+  micTurnOn: "Zet de microfoon aan",
+  micStepsIos: "Tik op “aA” in de adresbalk › Website-instellingen › Microfoon › Sta toe. Of: Instellingen › Apps › Safari › Microfoon. Tik daarna op de knop hieronder.",
+  micStepsAndroid: "Tik op het icoon links van het webadres › Rechten › Microfoon › Toestaan. Tik daarna op de knop hieronder.",
+  micStepsAndroidApp: "Houd het icoon van Vloertaal op je beginscherm ingedrukt › App-info › Rechten › Microfoon › Toestaan. Tik daarna op de knop hieronder.",
+  micStepsDesktop: "Klik op het icoon links van het webadres › Microfoon › Toestaan. Klik daarna op de knop hieronder.",
   whichPicture: 'Welk plaatje is het?',
   wrongTapsN: 'Verkeerd getikt: {n}',
   cantSpeak: 'Ik kan nu niet praten',
@@ -462,6 +468,9 @@ export const uiNl: Record<UiKey, UiText> = {
   noticeOk: 'Oké',
   shareInvite: 'Ik leer Nederlands voor mijn werk met Vloertaal. Gratis: {link}', // nieuw, nalezen
   workTry: 'Probeer het vandaag op je werk',
+  geluktAsk: 'Heb je dit op je werk gezegd?',
+  geluktYes: 'Ja, gelukt',
+  geluktNotYet: 'Nog niet',
   saveFailed: 'Je voortgang is niet bewaard. Is je telefoon vol? Maak wat ruimte. Of ga naar Instellingen: Bewaar je voortgang.',
   bewaarNudge: 'Je telefoon kan je voortgang soms wissen. Bewaar daarom een kopie.', // nieuw, nalezen
   bewaarGo: 'Bewaar nu', // nieuw, nalezen

@@ -8,6 +8,7 @@
 //
 // Needs ELEVENLABS_API_KEY and public/audio/clips.json (npm run clips).
 // MAX_CREDITS (default 12000) stops the run before it would spend more than that.
+// CLIPS (a pattern on the clip id) records only those clips.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 
 const OUT = 'public/audio-el';
@@ -37,7 +38,12 @@ const take = Number(config.take ?? 1);
 
 // sample = a few short lines to judge a voice: the settings sample plus single words and a reply.
 const SAMPLE = ['x.sample', 'w.hallo', 'w.ja', 'w.goedemorgen', 'w.collega', 'c.hello.a'];
-const wanted = mode === 'sample' ? clips.filter((c) => SAMPLE.includes(c.id)) : clips;
+// CLIPS: only the clips whose id matches this pattern (e.g. "\\.front$"), so a run can record one
+// new group without paying for everything else that is missing. Empty = every clip.
+const onlyClips = process.env.CLIPS ? new RegExp(process.env.CLIPS) : null;
+const wanted = (mode === 'sample' ? clips.filter((c) => SAMPLE.includes(c.id)) : clips).filter(
+  (c) => !onlyClips || onlyClips.test(c.id),
+);
 // A clip may name the voices that record it ("voices": ["thijmen"], e.g. x.bram: Bram's own
 // line); every other clip is recorded in every voice.
 const forVoice = (c, v) => !Array.isArray(c.voices) || c.voices.includes(v.key);

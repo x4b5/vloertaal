@@ -10,7 +10,8 @@ import { trackOf, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
 import { tempoOf } from './lib/tempo';
 import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
-import { type WorkTryLine, workTryFor } from './lib/workTry';
+import { answerGelukt, geluktDue, type WorkTryLine, workTryFor } from './lib/workTry';
+import { GeluktCard } from './components/GeluktCard';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
@@ -1134,9 +1135,11 @@ export default function App() {
       // "Bewaar je voortgang" (src/lib/backupNudge.ts): only where the phone may lose the
       // progress, after 3 lessons, once; after the notice and the test (one card at a time).
       const lessonsDone = knownLessons(progress.completed);
+      // "Gelukt?" (src/lib/workTry.ts): a day after "Probeer het vandaag op je werk", once; after the notice.
+      const gelukt = !notice && track === 'taal' ? geluktDue(dayKey(new Date())) : undefined;
       // "Wil je ook de werkregels leren?" (src/lib/bridge.ts): once, most of the course done; after the notice and the test.
-      const bridge = !notice && !offered && bridgeDue(progress);
-      const nudge = !notice && !offered && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
+      const bridge = !notice && !gelukt && !offered && bridgeDue(progress);
+      const nudge = !notice && !gelukt && !offered && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
       const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
       return (
         <>
@@ -1171,6 +1174,12 @@ export default function App() {
                 lang={lang}
                 onMore={() => { setProgress((p) => seeNotice(p, notice.id, new Date())); go({ name: 'news' }); }}
                 onOk={() => setProgress((p) => seeNotice(p, notice.id, new Date()))}
+              />
+            ) : gelukt ? (
+              <GeluktCard
+                line={gelukt}
+                lang={lang}
+                onAnswer={(worked) => { answerGelukt(worked ? 'ja' : 'nog-niet'); setNudgeTick((n) => n + 1); }}
               />
             ) : offered ? (
               <ToetsOffer
