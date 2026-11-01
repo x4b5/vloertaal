@@ -883,8 +883,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // A rules question: Dutch only (its title, the picked option's line, the best answer, why).
   const ruleFb = feedback && isRuleExercise(ex) ? ruleVerdict(ex, answer.correct, answer.given?.[0]) : null;
   const headingMeaning = ruleFb ? null : feedback ? ui(feedbackMeaningKey(answer.correct, answer.almost, ex.kind), lang) : null;
-  /** Right, not "almost", not a rules question: no heading, the green and the check say it. */
-  const quietRight = Boolean(feedback && answer.correct && !answer.almost && !ruleFb);
+  /** Right, not "almost": no heading ("Goed zo!"), the green and the check say it (also in Werkregels). */
+  const quietRight = Boolean(feedback && answer.correct && !answer.almost);
   const pairHelp = pair?.meaning.help ?? '';
   // A wrong sentence: the right one as tiles, the words that were out of place or missing
   // underlined in red (a position diff of the tiles laid against the solution).
@@ -1127,12 +1127,14 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                 {ruleFb && <RuleFeedbackBody v={ruleFb} lang={lang} />}
                 {(pairLine || whyLine) && !quietRight && <hr className="feedback-rule" />}
                 {/* After a wrong answer the heading is the lead; the answer itself is green with a check. */}
+                {/* Right with an explanation (a situation): the answer is already green in the list,
+                    so only the why ("Vloertaal rustiger": say it once). */}
                 {!answer.correct && pairLine ? (
                   <div className="feedback-answer">
                     <span className="feedback-answer-check" aria-hidden><CheckIcon size={20} /></span>
                     {pairLine}
                   </div>
-                ) : pairLine}
+                ) : quietRight && whyLine ? null : pairLine}
                 {whyLine}
               </div>
               {fbMore && <span className="feedback-more" aria-hidden><ChevronDownIcon size={20} /></span>}
