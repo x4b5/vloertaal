@@ -299,7 +299,6 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
               ex={speakEx}
               lang={lang}
               onAnswer={onSpeakAnswer}
-              onNext={finish}
               onRating={setRating}
               onRecording={onRecording}
               keepNote={moment === 'instap' ? ui('toetsMicKeep', lang) : undefined}

@@ -478,7 +478,7 @@ function defineStates(LANG) {
   add('lesson:speak-turn:refused', shot('speak-off&turn=1&refused=1'), null, { expect: '.say-turn .say-mic-on' });
   // "Wat zeg je?" before the chat (stap 2): the colleague's line, then say the reply.
   add('lesson:speak-turn:idle', shot('speak&turn=1'), null, { expect: '.say-turn .say-mic' });
-  add('lesson:speak-turn:compare', shot('speak-compare&turn=1'), null, { expect: '.say-turn .say-rate' });
+  add('lesson:speak-turn:compare', shot('speak-compare&turn=1'), null, { expect: '.say-turn .say-again-one' });
   add('lesson:speak-turn:off', shot('speak-off&turn=1'), null, { expect: '.say-turn .say-reveal' });
   add('lesson:speak-turn:shown', shot('speak-off&turn=1'), async (p) => { await tap(p, '.say-reveal'); }, { expect: '.say-turn .chat-bubble-me .chat-line' });
   add('lesson:retry', shot('retry'));
@@ -582,7 +582,7 @@ function defineStates(LANG) {
   add('toets:chat', shot('toets&state=question&at=14'), null, { expect: '.chat' });
   add('toets:build', shot('toets&state=question&at=19'), null, { expect: '.toets-player .build-steps' });
   add('toets:speak', shot('toets&state=speak'), null, { expect: '.say-mic' });
-  add('toets:speak-review', shot('toets&state=speak&phase=review'), null, { expect: '.say-rate' });
+  add('toets:speak-review', shot('toets&state=speak&phase=review'), null, { expect: '.say-again-one' });
   add('toets:result-instap', shot('toets&state=result-instap'), null, { expect: '.toets-parts' });
   add('toets:result-eind', shot('toets&state=result-eind'), null, { expect: '.toets-voices' });
   add('toets:result-eind-growth', shot('toets&state=result-eind'), null, { expect: '.toets-growth-all' });

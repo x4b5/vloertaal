@@ -8,7 +8,8 @@ const t: CultureTranslation = {
     micFailed: "Das Mikrofon hat nicht funktioniert. Sag es laut, dann mach weiter.",
     micRefused: "Die App darf dein Mikrofon nicht benutzen. Du kannst es einschalten.", // nieuw, nalezen
     micTurnOn: "Mikrofon einschalten", // nieuw, nalezen
-    micStepsIos: "Tippe in der Adressleiste auf „aA“ › Website-Einstellungen › Mikrofon › Erlauben. Oder: Einstellungen › Apps › Safari › Mikrofon. Tippe dann unten auf den Knopf.", // nieuw, nalezen
+    micStepsIos: "Tippe in der Adressleiste auf „•••“ oder „aA“ › Website-Einstellungen › Mikrofon › Erlauben. Oder: Einstellungen › Apps › Safari › Mikrofon. Tippe dann unten auf den Knopf.", // nieuw, nalezen
+    micStepsIosOther: "Tippe auf das Symbol links neben der Webadresse › Berechtigungen › Mikrofon › Zulassen. Oder: Einstellungen › Apps › {app} › Mikrofon. Tippe dann unten auf den Knopf.", // nieuw, nalezen
     micStepsAndroid: "Tippe auf das Symbol links neben der Webadresse › Berechtigungen › Mikrofon › Zulassen. Tippe dann unten auf den Knopf.", // nieuw, nalezen
     micStepsAndroidApp: "Halte das Vloertaal-Symbol auf deinem Startbildschirm gedrückt › App-Info › Berechtigungen › Mikrofon › Zulassen. Tippe dann unten auf den Knopf.", // nieuw, nalezen
     micStepsDesktop: "Klicke auf das Symbol links neben der Webadresse › Mikrofon › Zulassen. Klicke dann unten auf den Knopf.", // nieuw, nalezen

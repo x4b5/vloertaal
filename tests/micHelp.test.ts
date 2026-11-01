@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { MIC_STEPS, micPlatform, micRefusedError, watchMicPermission } from '../src/lib/micHelp';
+import { iosBrowser, MIC_STEPS, micPlatform, micRefusedError, micSteps, watchMicPermission } from '../src/lib/micHelp';
 import { micBlocked, micRefusedNow, resetMicForLesson, setMicRefused } from '../src/lib/speaking';
 import { ensureLanguage, getHelpLanguage, ui } from '../src/i18n';
 import { LANG_CODES } from '../src/i18n/meta';
@@ -23,6 +23,18 @@ describe('a refused microphone', () => {
     expect(micPlatform('Mozilla/5.0 (Linux; Android 14; Pixel 8)', 5, false)).toBe('android');
     expect(micPlatform('Mozilla/5.0 (Linux; Android 14; Pixel 8)', 5, true)).toBe('android-app');
     expect(micPlatform('Mozilla/5.0 (Windows NT 10.0; Win64; x64)', 0, false)).toBe('desktop');
+  });
+
+  it('on an iPhone, tells Safari from Chrome, Edge and Firefox (no "aA" or "•••" menu there)', () => {
+    const chrome = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 CriOS/130.0 Mobile/15E148 Safari/604.1';
+    expect(micPlatform(chrome, 5, false)).toBe('ios-other');
+    expect(iosBrowser(chrome)).toBe('Chrome');
+    expect(iosBrowser('… EdgiOS/130 …')).toBe('Edge');
+    expect(iosBrowser('… FxiOS/130 …')).toBe('Firefox');
+    expect(iosBrowser('Mozilla/5.0 (iPhone) Version/18.0 Mobile/15E148 Safari/604.1')).toBeNull();
+    expect(micSteps({ en: 'Settings › Apps › {app} › Microphone', help: 'Instellingen › Apps › {app}' }, chrome))
+      .toEqual({ en: 'Settings › Apps › Chrome › Microphone', help: 'Instellingen › Apps › Chrome' });
+    expect(micSteps({ en: '{app}' }, 'Safari/604.1').en).toBe('Safari');
   });
 
   it('is remembered for the lesson, and a new lesson tries again', () => {
