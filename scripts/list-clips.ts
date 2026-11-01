@@ -82,9 +82,10 @@ for (const u of units)
 // How a clip is pronounced where the spelling would mislead the voice (src/lib/sayAs.ts:
 // "app" → "ep"). The app shows `text`; the voice is given `say`. `take` re-records clips that
 // were made before their `say` existed; take 3: the clips with 112, recorded as "honderdtwaalf" before
-// it was said digit by digit ("één één twee").
+// it was said digit by digit ("één één twee"). Take 4: the clips with "app" ("vertaalapp",
+// "groepsapp"): the voice still said "ap" in take 2 (checked with a transcription on 1 Nov 2026).
 const SAY_TAKE = 2;
-const takeFor = (text: string) => (hasDigitNumber(text) ? 3 : SAY_TAKE);
+const takeFor = (text: string) => (/app/i.test(text) ? 4 : hasDigitNumber(text) ? 3 : SAY_TAKE);
 
 mkdirSync('public/audio', { recursive: true });
 writeFileSync(
