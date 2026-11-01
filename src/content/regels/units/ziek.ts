@@ -56,14 +56,14 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', text: 'Hij appt een collega: "Zeg jij het even tegen de chef?"', best: false, feedback: 'Ik snap het. Maar je meldt je meestal zelf ziek.' },
             { id: 'c', text: 'Hij stuurt om 10 uur een bericht: "Ziek."', best: false, feedback: 'Dat is laat, en vaak is een bericht niet genoeg.' },
           ],
-          why: 'Bel zelf, en bel vóór je dienst begint. Dat is in de meeste bedrijven de regel. Kijk in je contract of het verzuimprotocol. Dat zijn de regels voor ziekmelden bij jouw bedrijf. Afspraak is afspraak: kun je niet komen? Zeg het op tijd.',
+          why: 'Zo weet de chef het op tijd. In de meeste bedrijven is dat de regel.', whyMore: 'Kijk in je contract of het verzuimprotocol. Daar staan de regels voor ziekmelden bij jouw bedrijf.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.ziek.1.tf1',
           statement: 'Je hoeft je baas niet te vertellen welke ziekte je hebt.',
           answer: true,
-          why: 'Je hoeft niet te zeggen wat je hebt. Je baas mag wel vragen hoe lang het ongeveer duurt. En waar je te bereiken bent. Over je ziekte praat je met de bedrijfsarts.',
+          why: 'Je hoeft niet te zeggen wat je hebt. Over je ziekte praat je met de bedrijfsarts.', whyMore: 'Je baas mag wel vragen hoe lang het ongeveer duurt, en waar je te bereiken bent.',
         },
         {
           kind: 'whatdo',
@@ -74,7 +74,7 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', text: 'Hij meldt zich niet ziek. Hij heeft toch geen vast werk.', best: false, feedback: 'Toch wel melden. Dan houdt hij zijn rechten.' },
             { id: 'c', text: 'Hij meldt het bij het bureau, en bij het bedrijf.', best: true, feedback: 'Goed. Dan weten ze het allebei.' },
           ],
-          why: 'Werk je via een uitzendbureau? Meld je ziek bij het bureau. En vaak ook bij het bedrijf waar je werkt. Vraag aan het begin hoe het moet.',
+          why: 'Meld je ziek bij het bureau, en vaak ook bij het bedrijf waar je werkt.', whyMore: 'Vraag aan het begin van je werk hoe het moet.',
         },
         {
           kind: 'whoask',
@@ -85,7 +85,7 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', who: 'uitzendbureau', best: true, feedback: 'Goed. Meld je bij het bureau. Vaak ook bij het bedrijf.' },
             { id: 'c', who: 'huisarts', best: false, feedback: 'De huisarts helpt je beter worden. Je ziekmelden doe je op je werk.' },
           ],
-          why: 'Werk je via een uitzendbureau? Meld je ziek bij het bureau, en vaak ook bij het bedrijf.',
+          why: 'Meld je ziek bij het bureau, en vaak ook bij het bedrijf.',
         },
         { kind: 'model', id: 'r.l.ziek.1.mo1', context: 'Je belt je werk, want je bent ziek.', nl: 'Goedemorgen, met Jayden. Ik ben ziek. Ik kan vandaag niet komen.' },
       ],
@@ -146,7 +146,7 @@ export const ziekUnit: RuleUnit = {
           id: 'r.l.ziek.2.tf1',
           statement: 'Als je ziek bent, krijg je geen loon.',
           answer: false,
-          why: 'Je werkgever betaalt minstens 70 procent van je loon door. Dat kan tot 2 jaar duren. In het eerste jaar krijg je minstens het minimumloon. Een cao geeft vaak meer. Soms zijn er 2 wachtdagen zonder loon, als je contract of cao dat zegt.',
+          why: 'Je werkgever betaalt minstens 70 procent van je loon door, tot 2 jaar lang.', whyMore: 'In het eerste jaar krijg je minstens het minimumloon. Een cao geeft vaak meer. Soms zijn er 2 wachtdagen zonder loon, als je contract of cao dat zegt.',
         },
         {
           kind: 'whatdo',
@@ -157,7 +157,7 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt niets, en ze hangt snel weer op.', best: false, feedback: 'Contact met haar werk is wel normaal en goed.' },
             { id: 'c', text: 'Ze zegt hoe lang het ongeveer gaat duren.', best: true, feedback: 'Goed. Dat wil de leidinggevende vooral weten.' },
           ],
-          why: 'Je mag zelf iets vertellen, als je dat wilt. Maar het hoeft niet. Je baas mag vragen hoe lang het duurt. En of je misschien ander werk kunt doen.',
+          why: 'Wat je hebt, hoef je niet te vertellen. Je baas mag wel vragen hoe lang het duurt.', whyMore: 'Hij mag ook vragen of je misschien ander werk kunt doen. Wil je zelf iets vertellen? Dat mag.',
         },
         // ⚖️ check: Meld je meteen ziek bij je werkgever, ook vanuit het buitenland. Dan tellen die
         //   dagen meestal niet als vakantie ⚖️.
@@ -166,7 +166,7 @@ export const ziekUnit: RuleUnit = {
           id: 'r.l.ziek.2.tf2',
           statement: 'Word je ziek op vakantie? Dan kun je je ziekmelden.',
           answer: true,
-          why: 'Meld je meteen ziek bij je werkgever, ook vanuit het buitenland. Dan tellen die dagen meestal niet als vakantie. Vraag een briefje van een dokter daar.',
+          why: 'Meld je meteen ziek, ook vanuit het buitenland. Dan tellen die dagen meestal niet als vakantie.', whyMore: 'Vraag een briefje van een dokter daar.',
         },
         // Zzp en ziek (rapport hiaten, hoofdstuk 4): de brug tussen r.l.contract.4 en deze les.
         // ⚖️ check: Een zzp'er heeft geen werkgever die loon doorbetaalt bij ziekte ⚖️ (art. 7:629
@@ -189,7 +189,7 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', who: 'bedrijfsarts', best: false, feedback: 'De bedrijfsarts helpt bij herstel. Geld vraag je ergens anders aan.' },
             { id: 'c', who: 'uwv', best: true, feedback: 'Goed. Vraag bij UWV naar de Ziektewet.' },
           ],
-          why: 'Heb je geen werkgever meer, of werk je via een uitzendbureau? Vraag UWV naar de Ziektewet.',
+          why: 'Geen werkgever meer, of werk je via een uitzendbureau? Vraag UWV naar de Ziektewet.',
         },
         { kind: 'model', id: 'r.l.ziek.2.mo1', context: 'Je leidinggevende belt om te vragen hoe het gaat.', nl: 'Ik denk dat ik 6 weken niet kan werken. Ik houd u op de hoogte.' },
       ],
@@ -234,7 +234,7 @@ export const ziekUnit: RuleUnit = {
           id: 'r.l.ziek.3.tf1',
           statement: 'De bedrijfsarts vertelt je baas niet welke ziekte je hebt.',
           answer: true,
-          why: 'De bedrijfsarts heeft een beroepsgeheim. Hij vertelt je baas alleen wat je wel en niet kunt. Niet wat je ziekte is. Je mag ook zelf naar de bedrijfsarts gaan, zonder je baas.',
+          why: 'De bedrijfsarts vertelt je baas wat je wel en niet kunt. Niet wat je ziekte is.', whyMore: 'Hij heeft een beroepsgeheim. Je mag ook zelf naar de bedrijfsarts gaan, zonder je baas.',
         },
         // ⚖️ check: Ben je lang ziek? Dan moet je meewerken aan je herstel ⚖️.
         // ⚖️ check: Werk je niet mee? Dan kan je loon stoppen ⚖️.
@@ -248,7 +248,7 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt nee. Hij is nog niet helemaal beter.', best: false, feedback: 'Dat snap ik. Maar meewerken aan herstel hoort erbij.' },
             { id: 'c', text: 'Hij werkt meteen weer hele dagen, om te laten zien dat hij wil.', best: false, feedback: 'Te snel. Dan kan hij weer ziek worden.' },
           ],
-          why: 'Ben je lang ziek? Dan moet je meewerken aan je herstel. Jij, je baas en de bedrijfsarts maken samen een plan. Werk je niet mee? Dan kan je loon stoppen. Ben je het oneens? Vraag dan een deskundigenoordeel bij UWV.',
+          why: 'Ben je lang ziek? Dan werk je mee aan je herstel, met je baas en de bedrijfsarts.', whyMore: 'Werk je niet mee? Dan kan je loon stoppen. Ben je het oneens? Vraag dan een deskundigenoordeel bij UWV.',
         },
         {
           kind: 'whatdo',
@@ -259,7 +259,7 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', text: 'Hij wacht tot zijn baas hem zelf belt.', best: false, feedback: 'Dat kan lang duren. Zelf melden is sneller.' },
             { id: 'c', text: 'Hij belt zijn leidinggevende, en hij meldt zich beter.', best: true, feedback: 'Goed. Dan weet iedereen dat hij weer kan.' },
           ],
-          why: 'Betermelden is net zo belangrijk als ziekmelden. Dan weet je baas dat je weer komt. En dan klopt je loon weer.',
+          why: 'Meld je ook beter. Dan weet je baas dat je weer komt, en klopt je loon.',
         },
         {
           kind: 'whoask',
@@ -330,7 +330,7 @@ export const ziekUnit: RuleUnit = {
           id: 'r.l.ziek.4.tf1',
           statement: 'Ben je ziek? Dan mag je altijd naar je eigen land, zonder iets te vragen.',
           answer: false,
-          why: 'Vraag het eerst aan je werkgever of het bureau. De bedrijfsarts kijkt of het kan. Ga je zonder toestemming? Dan kan je loon stoppen.',
+          why: 'Vraag het eerst aan je werkgever of het bureau. Zonder toestemming kan je loon stoppen.', whyMore: 'De bedrijfsarts kijkt of het kan.',
         },
         {
           kind: 'whatdo',
@@ -341,7 +341,7 @@ export const ziekUnit: RuleUnit = {
             { id: 'b', text: 'Ze gaat stil naar huis. Ze werkt nu toch niet.', best: false, feedback: 'Dan weet het bureau niet waar ze is. Haar loon kan stoppen.' },
             { id: 'c', text: 'Ze zegt haar contract op. Dan is ze vrij om te gaan.', best: false, feedback: 'Dan raakt ze haar werk en haar loon kwijt. Dat hoeft niet.' },
           ],
-          why: 'Vraag het eerst. Zeg waar je bent, en hoe ze je kunnen bellen. Krijg je toestemming? Dan loopt je loon meestal gewoon door.',
+          why: 'Vraag het eerst, en zeg waar je bent. Dan loopt je loon meestal gewoon door.', whyMore: 'Zeg ook hoe ze je kunnen bellen.',
         },
         // ⚖️ check: Een verklaring van een arts in het land waar je bent, helpt om te laten zien dat je ziek
         //   bent; bij twijfel moet de werknemer de ziekte aannemelijk maken (grantthornton.nl; zoekresultaat).
@@ -353,7 +353,7 @@ export const ziekUnit: RuleUnit = {
           id: 'r.l.ziek.4.tf2',
           statement: 'Ben je ziek in je eigen land? Dan is een briefje van een dokter daar handig.',
           answer: true,
-          why: 'Een briefje van een dokter daar laat zien dat je ziek bent. Neem ook je zorgpas mee. Op de achterkant staat vaak de Europese pas. Dan betaalt je zorgverzekering de nodige zorg.',
+          why: 'Een briefje van een dokter daar laat zien dat je ziek bent.', whyMore: 'Neem ook je zorgpas mee. Op de achterkant staat vaak de Europese pas. Dan betaalt je zorgverzekering de nodige zorg.',
         },
         // ⚖️ check: Reis met een Ziektewet-uitkering uiterlijk 2 weken vooraf doorgeven aan UWV (uwv.nl
         //   "vakantie Ziektewet"; zoekresultaat 31-10-2026).

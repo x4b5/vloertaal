@@ -79,6 +79,13 @@
   --choice-edge: #8c7b66;
   --repeat-bg: var(--kraft);
   --radius: 12px;
+  /* Type in the exercises: three steps and a small one ("Vloertaal rustiger"; docs/rustiger.md).
+     The Dutch word or sentence is the largest (what you learn), the question an instruction,
+     the answers easy to read in every language. In rem: "Tekstgrootte" scales them all. */
+  --fs-word: 1.75rem;     /* 28 px */
+  --fs-question: 1.375rem; /* 22 px */
+  --fs-answer: 1.125rem;  /* 18 px */
+  --fs-small: 1rem;       /* 16 px */
   /* Motion: one set of curves for the whole app (see "Answer moment"). */
   --ease-out: cubic-bezier(.2, .8, .2, 1);
   --ease-in: cubic-bezier(.4, 0, 1, 1);
@@ -696,7 +703,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 }
 @keyframes up { from { transform: translateY(10px); opacity: 0; } }
 
-.prompt { font-size: 1.6rem; font-weight: 650; margin: 4px 0 16px; color: var(--ink-strong); letter-spacing: -0.01em; }
+.prompt { font-size: var(--fs-question); font-weight: 650; margin: 4px 0 16px; color: var(--ink-strong); letter-spacing: -0.01em; }
 .prompt .bi-help { --help-size: 0.6em; font-weight: 400; letter-spacing: 0; }
 .card { border: 2px solid var(--line); border-radius: var(--radius); padding: 24px; text-align: center; background: var(--card); }
 .intro-card { display: flex; flex-direction: column; align-items: center; gap: 12px; }
@@ -739,7 +746,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 }
 .speaker-bubble .speak { width: 48px; height: 48px; font-size: 1.1rem; }
 .speaker-nl {
-  min-width: 0; font-size: clamp(1.4rem, 7vw, 1.85rem); font-weight: 650; color: var(--ink-strong); letter-spacing: -0.01em; line-height: 1.15;
+  min-width: 0; font-size: clamp(1.4rem, 7vw, var(--fs-word)); font-weight: 650; color: var(--ink-strong); letter-spacing: -0.01em; line-height: 1.15;
   overflow-wrap: anywhere; hyphens: manual;
 }
 /* Long Dutch words (wordSize in lib/dutch.ts): a smaller word, and on phones a smaller
@@ -798,11 +805,11 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .choice.faded :is(.choice-num, .pic-emoji, .choice-pic) { opacity: 0.45; }
 .choices-rows .choice { min-height: 68px; padding: 8px 16px 8px 16px; }
 .choice > .bi { flex: 1 1 auto; }
-.choices-rows .choice-label { font-size: 1.15rem; line-height: 1.25; min-width: 0; }
+.choices-rows .choice-label { font-size: var(--fs-answer); line-height: 1.25; min-width: 0; }
 .choices-rows .choice-label .bi-help { --help-size: 0.85em; margin-top: 2px; }
-.choice-nl { font-size: 1.2rem; min-width: 0; overflow-wrap: anywhere; }
+.choice-nl { font-size: var(--fs-answer); min-width: 0; overflow-wrap: anywhere; }
 /* "Which one is …?" without pictures: Dutch words on text cards. */
-.choices-words .choice-nl { font-size: 1.35rem; font-weight: 650; }
+.choices-words .choice-nl { font-size: var(--fs-answer); font-weight: 650; }
 /* Room for the stamp on a checked row, so it never covers the words: a smaller stamp that sits
    inside the card (never clipped), and the text stops short of it. */
 .choices:not(.choices-pics) .stamp { width: 62px; height: 62px; margin-top: -31px; right: 8px; }
@@ -852,7 +859,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   grid-area: pic; justify-self: center; align-self: center;
   font-size: 72px; line-height: 1.1;
 }
-.choices-pics .choice-nl { grid-area: word; min-width: 0; font-size: 1.15rem; line-height: 1.25; overflow-wrap: break-word; hyphens: auto; }
+.choices-pics .choice-nl { grid-area: word; min-width: 0; font-size: var(--fs-answer); line-height: 1.25; overflow-wrap: break-word; hyphens: auto; }
 .choices-pics .choice-nl.len-m { font-size: 1rem; }
 .choices-pics .choice-nl.len-l { font-size: 0.85rem; }
 .choices-pics .choice-num { grid-area: num; width: 34px; height: 34px; font-size: 1.2rem; }
@@ -877,14 +884,14 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .match { justify-content: center; text-align: center; min-height: 72px; min-width: 0; padding: 8px 10px; gap: 8px; }
 .match-en { flex-direction: column; gap: 2px; padding: 6px 8px; }
 .match-en .bi { align-items: center; min-width: 0; max-width: 100%; overflow-wrap: anywhere; hyphens: auto; line-height: 1.2; }
-.match .bi { font-size: 0.95rem; }
+.match .bi { font-size: var(--fs-answer); }
 /* Phones: four pairs above the footer at 360×640. The picture sits beside the meaning, and
    the help line keeps the 15 px minimum. */
 @media (max-width: 759px) {
   .match { min-height: 60px; padding: 6px 8px; }
   .match-en { flex-direction: row; justify-content: flex-start; gap: 6px; text-align: start; padding-inline: 6px 8px; }
   .match-en .bi { align-items: stretch; flex: 1 1 auto; }
-  .match .bi { font-size: 0.88rem; line-height: 1.15; gap: 1px; }
+  .match .bi { font-size: var(--fs-answer); line-height: 1.15; gap: 1px; }
 }
 .match { transition: background-color 0.12s, border-color 0.12s, opacity 0.24s var(--ease-out), transform 0.12s var(--ease-out); }
 .match.matched { opacity: 0.35; }
@@ -2075,7 +2082,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .player .player-foot .feedback > .feedback-more { bottom: 6px; }
 /* "Type what you hear" as "hear and pick the written word": the word's picture after Check. */
 .hear-pick-pic { flex: none; animation: rm-fade 0.2s ease-out both; }
-.hear-pick-choices .choice-nl { font-size: 1.3rem; }
+.hear-pick-choices .choice-nl { font-size: var(--fs-answer); }
 /* The retry chip: HERHALEN, the help language large, and how many are left. */
 .tag-repeat .tag-count { font-weight: 650; font-variant-numeric: tabular-nums; }
 /* A help-language text read aloud by the device's own voice (when it has one). */
@@ -2095,7 +2102,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 @media (max-height: 700px) {
   .player .player-body { padding-top: 10px; }
   .player .ex-tag { margin-bottom: 2px; }
-  .player .prompt { font-size: 1.35rem; margin: 2px 0 10px; }
+  .player .prompt { font-size: var(--fs-question); margin: 2px 0 10px; }
   .player .prompt-row .speaker-char { font-size: 52px; }
   .player .listen-buttons { margin: 4px 0 14px; }
   .player .listen-buttons .speak-lg { width: 72px; height: 60px; }
@@ -3384,7 +3391,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .match-cards .match-en { flex-direction: row; justify-content: flex-start; align-items: center; gap: 12px; padding: 10px 14px; text-align: start; min-height: 68px; }
 .match-cards .match-en .bi { align-items: flex-start; }
 .match-text { display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; }
-.match-made { font-size: 0.95rem; font-weight: 700; color: var(--right-ink); }
+.match-made { font-size: var(--fs-small); font-weight: 700; color: var(--right-ink); }
 .match-check { display: grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 50%; color: #fff; background: var(--go-right); }
 .match-cards .match.matched { opacity: 0.55; }
 .match-on { animation: up 0.2s var(--ease-out) both; }
@@ -3814,10 +3821,10 @@ button.unit-tool:hover { border-color: var(--ink-3); }
    (help LARGE): at least 17 px, and more for the Ethiopic, Arabic and Persian scripts, which
    read small at the same size. Long meanings wrap inside the card (never out of it). */
 .player-body :is(.match-cards .match-en, .choices-rows .choice) .choice-label.bi-swap > .bi-en {
-  font-size: max(17px, 1.15rem); line-height: 1.22; overflow-wrap: break-word; hyphens: manual;
+  font-size: var(--fs-answer); line-height: 1.22; overflow-wrap: break-word; hyphens: manual;
 }
 .player-body :is(.match-cards .match-en, .choices-rows .choice) .choice-label.bi-swap > .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) {
-  font-size: max(19px, 1.25rem); line-height: 1.3;
+  font-size: calc(var(--fs-answer) + 0.125rem); line-height: 1.3;
 }
 /* The topic page: "Start again" for its next lesson, beside the pocket card. */
 .topic-tools .bay-restart { flex: 1 1 140px; margin: 0; grid-column: auto; }

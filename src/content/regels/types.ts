@@ -89,21 +89,21 @@ export type RuleStep =
    */
   | { kind: 'rule'; id: string; emoji: string; title: string; body: string[]; rule: RuleKind; key?: true; dialect?: true }
   /** "Waar of niet waar?" */
-  | { kind: 'truefalse'; id: string; statement: string; answer: boolean; why: string }
+  | { kind: 'truefalse'; id: string; statement: string; answer: boolean; why: string; whyMore?: string }
   /** "Wat doe je?": 3 options, one best, a why for after the answer. */
-  | { kind: 'whatdo'; id: string; situation: string; quote?: string; who?: RuleCharacter; options: RuleOption[]; why: string }
+  | { kind: 'whatdo'; id: string; situation: string; quote?: string; who?: RuleCharacter; options: RuleOption[]; why: string; whyMore?: string }
   /** "Wie vraag je het?": up to 3 places to go, one best. */
-  | { kind: 'whoask'; id: string; question: string; options: { id: string; who: AskWho; best: boolean; feedback: string }[]; why: string }
+  | { kind: 'whoask'; id: string; question: string; options: { id: string; who: AskWho; best: boolean; feedback: string }[]; why: string; whyMore?: string }
   /** "Zo zeg je het": a model sentence in context. */
   | { kind: 'model'; id: string; context: string; nl: string }
   /** A drawn payslip with a question about it. */
-  | { kind: 'payslip'; id: string; slip: Payslip; question: string; highlight: PayslipField; options: RuleOption[]; why: string }
+  | { kind: 'payslip'; id: string; slip: Payslip; question: string; highlight: PayslipField; options: RuleOption[]; why: string; whyMore?: string }
   /**
    * "Reken het uit" or "Lees het kaartje": a drawn card with a question about it, 3 options, one
    * best. For a sum each wrong option is a typical mistake (its feedback names it, without
    * blame), and `sum` holds the steps, shown after the answer. The generalisation of `payslip`.
    */
-  | { kind: 'card'; id: string; card: DrawnCard; question: string; options: RuleOption[]; why: string; sum?: string[] };
+  | { kind: 'card'; id: string; card: DrawnCard; question: string; options: RuleOption[]; why: string; whyMore?: string; sum?: string[] };
 
 /** One lesson of the track: the content, before it is turned into a `Lesson`. */
 export interface RuleLesson {

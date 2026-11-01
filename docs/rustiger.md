@@ -63,6 +63,13 @@ regels die we in de code aanhouden, en wat er al gedaan is.
     - geen reeks en woorden op de startpagina; de lege balk bovenin klapt in.
   - Op de pagina staat een klein voorbeeld van de startpagina dat meteen verandert. Je blijft op de pagina na het kiezen.
 
+- **Lettergrootte in oefeningen:** drie vaste maten en een kleine (`--fs-word` 28 px, `--fs-question` 22 px, `--fs-answer` 18 px, `--fs-small` 16 px), in rem zodat "Tekstgrootte" ze meeschaalt. Arabisch, Farsi, Dari en Tigrinya: antwoorden 2 px groter.
+- **Uitleg in Werkregels (keuze B):**
+  - Een goed antwoord geeft geen eigen reactie ("Goed. Zo weet …") meer, alleen de uitleg.
+  - De uitleg is de kern in één of twee zinnen (`why`). Voorzichtige woorden ("meestal", "in de meeste bedrijven") blijven in beeld.
+  - Waar het staat en uitzonderingen staan achter een ⓘ "Meer uitleg" (`whyMore`).
+  - Gedaan voor "Ziek zijn": van gemiddeld 30 naar 15 woorden in beeld. De andere onderwerpen volgen na akkoord.
+
 ## Hoe we meten
 
 - **Voor en na:** schermafbeeldingen van dezelfde schermen.
