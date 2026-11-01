@@ -561,8 +561,9 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, region, daily,
       {/* &quiet=1: "Without sound" is on (the small muted speaker in the top bar). */}
       {/* &bram=intro|hello|back|due|streak|done: Bram's line in the top bar (the flame is lit only for done;
           intro is the very first home, so no streak yet: use it with &state=new). */}
+      {/* Bram's line only with &bram=… (the app's home has no greeting since the logo left the top bar). */}
       <TopBar streak={bram === 'intro' ? 0 : 7} done={!bram || bram === 'done'} words={words2} lang={lang} quiet={new URLSearchParams(location.search).get('quiet') === '1'}
-        greeting={<HomeGreeting progress={progress} due={card?.due ?? 0} lang={lang} force={bram ? { kind: bram, n: bram === 'due' ? 6 : 7 } : undefined} />} />
+        greeting={bram ? <HomeGreeting progress={progress} due={card?.due ?? 0} lang={lang} force={{ kind: bram, n: bram === 'due' ? 6 : 7 }} /> : undefined} />
       <Route
         progress={progress} lang={lang} access={access} daily={card} onDaily={() => {}}
         onStart={() => {}} onRestart={() => {}} onAll={() => {}} onUpgrade={() => {}}

@@ -42,7 +42,9 @@ describe('the work-rules track renders in Dutch only', () => {
   it('BottomNav: the Dutch labels, no help line, no English', () => {
     const m = html(createElement(BottomNav, { current: 'route', onTab: () => {}, lang: nl() }));
     noEnglish(m);
-    for (const label of ['Route', 'Hulp', 'Over']) expect(m).toContain(`>${label}<`);
+    // Icons only; the tab you are on keeps its Dutch word ("Vloertaal rustiger"); every tab says its name to a screen reader.
+    expect(m).toContain('>Route<');
+    for (const label of ['Hulp', 'Over']) expect(m).not.toContain(`>${label}<`);
     expect(m).not.toContain('nav-help');
     expect(m).toContain('aria-label="Hulp"');
   });

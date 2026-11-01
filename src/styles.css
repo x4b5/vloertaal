@@ -14,14 +14,14 @@
 
 :root {
   /* Palette */
-  --ink: #1e2226;
-  --ink-2: #4a5058;
+  --ink: #26211c;            /* warm near-black (was #1e2226) */
+  --ink-2: #564c42;
   /* Faint text (--faint) and icons: 4.5:1 or more on the floor, paper and the yellow tint
      (was #6e737a: 3.7:1 on the floor). */
-  --ink-3: #60646b;
-  --concrete: #e7e3dc;
-  --concrete-2: #dad5cc;
-  --paper: #fffdf8;
+  --ink-3: #6a5f53;
+  --concrete: #efe4d1;        /* warmer sand (was #e7e3dc) */
+  --concrete-2: #e4d6bf;
+  --paper: #fffaf0;
   --yellow: #ffc414;
   --yellow-dark: #e0a800;
   --kraft: #c8955b;
@@ -37,9 +37,10 @@
   /* Semantic */
   --bg: var(--concrete);
   --card: var(--paper);
-  --line: #cfc8bc;          /* light border of cards and options */
+  --line: #dccfbb;          /* light border of cards and options */
   --track: var(--concrete-2); /* empty segments, tracks, dividers */
-  --edge: var(--ink);       /* strong (ink) border of interactive cards */
+  --edge: #8c7b66;          /* soft warm border of cards and bubbles: 3.2:1 on the background, enough to see, quiet enough to step back ("Vloertaal rustiger", fase 1) */
+  --edge-strong: var(--ink); /* what is picked, focused or on: the one thing that stands out */
   --solid: var(--ink);      /* dark button */
   --on-solid: var(--paper);
   /* A mark (check, mic) on the solid disc: yellow on ink in light; in dark the disc is light
@@ -51,10 +52,10 @@
   --muted: var(--ink-2);
   --faint: var(--ink-3);
   --ink-strong: var(--ink);
-  --tag-bg: var(--kraft-light);
+  --tag-bg: #ecdcc1;
   --tag-ink: var(--kraft-dark);
   --tape: rgba(200, 149, 91, 0.78);
-  --label-shadow: var(--kraft);
+  --label-shadow: color-mix(in srgb, var(--kraft) 45%, transparent);
   --focus: var(--ink);
   --right-ink: #0f6a4a;     /* green text on concrete or paper */
   --wrong-ink: #a8361f;     /* red text on concrete or paper */
@@ -73,9 +74,9 @@
   --on-gold: var(--on-yellow);
   --on-tone: var(--paper);
   --on-accent: var(--paper);
-  --locked-shadow: #c4bdb1;
+  --locked-shadow: #cbbda8;
   /* Edge of an answer card: 3:1 or more against the floor. */
-  --choice-edge: #827c72;
+  --choice-edge: #8c7b66;
   --repeat-bg: var(--kraft);
   --radius: 12px;
   /* Motion: one set of curves for the whole app (see "Answer moment"). */
@@ -109,16 +110,18 @@
     --ink: #edeae4;
     --ink-2: #b9b4ab;
     --ink-3: #adb2b6; /* was #9aa0a6: 3.7:1 on the yellow mark (.rb-marked) */
-    --concrete: #16191c;
-    --concrete-2: #2c3035;
-    --paper: #23272b;
+    --concrete: #1b1916;
+    --concrete-2: #302b26;
+    --paper: #27231f;
     --kraft: #8a6236;
     --kraft-light: #3d3021;
     --kraft-dark: #e8c48f;
     --green: #3dbe8b;
     --red: #f07560;
-    --line: #3a3f45;
-    --edge: #c9c4bb;
+    --line: #3f3933;
+    --edge: #8f8578;
+    --edge-strong: var(--ink);
+    --tag-bg: var(--kraft-light);
     --on-solid: #16191c;
     --on-solid-mark: #16191c;
     --blue: #1592db;
@@ -144,16 +147,18 @@
   --ink: #edeae4;
   --ink-2: #b9b4ab;
   --ink-3: #adb2b6; /* was #9aa0a6: 3.7:1 on the yellow mark (.rb-marked) */
-  --concrete: #16191c;
-  --concrete-2: #2c3035;
-  --paper: #23272b;
+  --concrete: #1b1916;
+  --concrete-2: #302b26;
+  --paper: #27231f;
   --kraft: #8a6236;
   --kraft-light: #3d3021;
   --kraft-dark: #e8c48f;
   --green: #3dbe8b;
   --red: #f07560;
-  --line: #3a3f45;
-  --edge: #c9c4bb;
+  --line: #3f3933;
+  --edge: #8f8578;
+  --edge-strong: var(--ink);
+  --tag-bg: var(--kraft-light);
   --on-solid: #16191c;
   --on-solid-mark: #16191c;
   --blue: #1592db;
@@ -303,7 +308,7 @@ h2 { font-size: 1.25rem; }
 }
 .lang-btn:hover { border-color: var(--ink-3); }
 .lang-btn:active { transform: translateY(1px); }
-.lang-btn.picked { border-color: var(--edge); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
+.lang-btn.picked { border-color: var(--edge-strong); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
 .lang-names { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; min-width: 0; max-width: 100%; }
 /* Settings: the same cards, smaller. */
 .lang-grid-compact .lang-btn { min-height: 0; gap: 8px; padding: 10px 12px; }
@@ -616,7 +621,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .feedback {
   position: relative; display: flex; align-items: flex-start; gap: 12px;
   margin: 10px 4px 14px; padding: 12px 16px 10px 12px;
-  background: var(--card); border: 2.5px solid var(--edge); border-radius: 4px;
+  background: var(--card); border: 2px solid var(--edge); border-radius: 4px;
   box-shadow: 6px 6px 0 var(--label-shadow);
   rotate: -0.6deg;
   animation: label-in 0.22s var(--ease-out) 0.12s both;
@@ -760,7 +765,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   font-weight: 500; color: var(--ink);
   transition: background-color 0.12s, border-color 0.12s, color 0.12s, transform 0.12s var(--ease-out);
 }
-.choice:hover:not(:disabled, [aria-disabled='true']) { border-color: var(--edge); }
+.choice:hover:not(:disabled, [aria-disabled='true']) { border-color: var(--edge-strong); }
 .choice:active:not(:disabled, [aria-disabled='true']) { transform: translateY(1px); filter: brightness(0.97); }
 .choice[aria-disabled='true'] { cursor: default; }
 .choice-num {
@@ -772,7 +777,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .choice-num .icon { margin-top: -2px; }
 /* Selected: ink border, a light yellow wash, the number box filled yellow. */
 .choice.picked, .choice.picked:hover:not(:disabled, [aria-disabled='true']) {
-  border-color: var(--edge);
+  border-color: var(--edge-strong);
   background: color-mix(in srgb, var(--yellow) 14%, var(--card));
 }
 /* The number box just fills (the 120 ms colour transition), no pop. */
@@ -958,7 +963,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   border: 2px solid var(--ink-3); border-radius: var(--radius); background: var(--input-bg); color: var(--ink);
 }
 /* The yellow glow alone is too faint on concrete (3:1, WCAG 1.4.11 / 2.4.7): the focus ring as everywhere else. */
-.type-input:focus { outline: 3px solid var(--focus); outline-offset: 2px; border-color: var(--edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 55%, transparent); }
+.type-input:focus { outline: 3px solid var(--focus); outline-offset: 2px; border-color: var(--edge-strong); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 55%, transparent); }
 
 /* Phrasebook */
 .phrases { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; }
@@ -990,7 +995,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .stat-card {
   --tone-ink: var(--ink);
   display: flex; flex-direction: column; gap: 6px; padding: 12px 12px 14px; text-align: start;
-  background: var(--card); border: 2.5px solid var(--edge); border-radius: 6px;
+  background: var(--card); border: 2px solid var(--edge); border-radius: 6px;
   box-shadow: 5px 5px 0 var(--label-shadow);
   animation: calm-up 0.3s 0.2s var(--ease-out) both;
 }
@@ -1077,7 +1082,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .chat-hint {
   position: absolute; z-index: 3; top: calc(100% + 8px); left: 0;
   width: max-content; max-width: 100%;
-  padding: 10px 14px; border: 2.5px solid var(--edge); border-radius: 6px; background: var(--card);
+  padding: 10px 14px; border: 2px solid var(--edge); border-radius: 6px; background: var(--card);
   box-shadow: 4px 4px 0 var(--label-shadow); font-weight: 600; animation: up 0.15s ease-out;
 }
 .chat-bubble-me { min-width: 150px; min-height: 64px; padding: 8px 18px; justify-content: center; border-style: dashed; border-color: var(--ink-3); }
@@ -1220,7 +1225,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .milestone .bi { align-items: center; }
 .streak-count {
   position: relative; display: flex; align-items: center; justify-content: center; gap: 14px; margin: 18px 0 14px;
-  padding: 10px 22px 10px 16px; background: var(--card); border: 2.5px solid var(--edge); border-radius: 6px;
+  padding: 10px 22px 10px 16px; background: var(--card); border: 2px solid var(--edge); border-radius: 6px;
   box-shadow: 6px 6px 0 var(--label-shadow); rotate: -0.8deg;
   animation: calm-up 0.3s 0.2s var(--ease-out) both;
 }
@@ -1273,7 +1278,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 }
 
 /* Hidden admin page (#beheer) */
-.admin-card { border: 2.5px solid var(--edge); border-radius: 6px; padding: 20px; margin: 12px 0 20px; background: var(--card); box-shadow: 6px 6px 0 var(--label-shadow); }
+.admin-card { border: 2px solid var(--edge); border-radius: 6px; padding: 20px; margin: 12px 0 20px; background: var(--card); box-shadow: 6px 6px 0 var(--label-shadow); }
 .admin-big { font-family: var(--stencil); font-size: 3.4rem; font-weight: 800; color: var(--ink); line-height: 1.1; }
 .admin-bar { margin: 14px 0; }
 .admin code { background: var(--input-bg); padding: 1px 6px; border-radius: 6px; }
@@ -1286,7 +1291,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
    width, in the kraft colour of the labels, with the word "Werkregels" as a small tag. */
 .lang-sep { grid-column: 1 / -1; height: 0; margin: 6px 0 2px; border-top: 2px dashed var(--line); }
 .lang-btn.lang-btn-nl { grid-column: 1 / -1; background: color-mix(in srgb, var(--kraft-light) 55%, var(--card)); border-color: var(--kraft); }
-.lang-btn.lang-btn-nl.picked { border-color: var(--edge); background: color-mix(in srgb, var(--kraft-light) 80%, var(--card)); }
+.lang-btn.lang-btn-nl.picked { border-color: var(--edge-strong); background: color-mix(in srgb, var(--kraft-light) 80%, var(--card)); }
 .lang-nl-tag {
   display: inline-block; align-self: flex-start; margin-bottom: 4px; padding: 2px 8px; border-radius: 4px;
   background: var(--tag-bg); color: var(--tag-ink); font-size: 0.75rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase;
@@ -1320,7 +1325,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* "Say it like this": a taped label with the colleague and the phrase. */
 .tip-say {
   position: relative; padding: 14px 14px 16px; background: var(--card);
-  border: 2.5px solid var(--edge); border-radius: 6px; box-shadow: 5px 5px 0 var(--label-shadow);
+  border: 2px solid var(--edge); border-radius: 6px; box-shadow: 5px 5px 0 var(--label-shadow);
 }
 .tip-say-label {
   display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; margin-bottom: 10px; padding: 3px 9px 2px; border-radius: 4px;
@@ -1379,7 +1384,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* Tips page */
 .tips-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .tips-item { border: 2px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--card); }
-.tips-item.open { border-color: var(--edge); }
+.tips-item.open { border-color: var(--edge-strong); }
 .tips-head {
   width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px; text-align: start;
   background: transparent; border: none; font-weight: 600; min-height: 60px;
@@ -1454,7 +1459,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .sheet {
   position: relative; width: 100%; max-width: 560px; overflow: hidden;
   padding: 28px 16px calc(16px + env(safe-area-inset-bottom));
-  background: var(--card); border: 3px solid var(--edge); border-bottom: 0; border-radius: 14px 14px 0 0;
+  background: var(--card); border: 2px solid var(--edge); border-bottom: 0; border-radius: 14px 14px 0 0;
   animation: sheet-up 0.22s cubic-bezier(0.2, 0.9, 0.3, 1);
 }
 @keyframes sheet-up { from { transform: translateY(100%); } }
@@ -1470,7 +1475,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .sheet-actions .btn .bi { align-items: center; }
 .sheet-actions .btn .bi-help { --help-size: 0.8em; font-weight: 500; }
 .sheet-actions .btn-primary .bi-help { color: #3f3a2c; }
-.sheet-stop { gap: 10px; background: var(--card); color: var(--ink); border: 3px solid var(--edge); }
+.sheet-stop { gap: 10px; background: var(--card); color: var(--ink); border: 2px solid var(--edge); }
 .sheet-stop-icon { color: var(--red); }
 .sheet-stop:hover { background: var(--red-bg); }
 @media (min-width: 760px) {
@@ -1814,7 +1819,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .week-rest .week-tile { background: var(--track); border-color: var(--track); color: var(--ink-3); }
 .week-today .week-letter { color: var(--ink); }
 /* Today: an outline, and one soft ring that fades (no scaling). */
-.week-today .week-tile { border-width: 2.5px; border-color: var(--edge); animation: week-pulse 0.6s 0.9s ease-out 1 both; }
+.week-today .week-tile { border-width: 2.5px; border-color: var(--edge-strong); animation: week-pulse 0.6s 0.9s ease-out 1 both; }
 .week-today .week-stamp { animation: stamp-in 0.16s 0.8s var(--ease-out) both; }
 @keyframes week-pulse {
   0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--yellow) 70%, transparent); }
@@ -1873,7 +1878,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 /* Cards that keep the habit and the progress: printed labels, like the result's stat cards. */
 .keep-card {
   position: relative; display: flex; flex-direction: column; gap: 12px; padding: 16px; text-align: start;
-  background: var(--card); color: var(--ink); border: 2.5px solid var(--edge); border-radius: 6px;
+  background: var(--card); color: var(--ink); border: 2px solid var(--edge); border-radius: 6px;
   box-shadow: 5px 5px 0 var(--label-shadow);
 }
 .screen > .keep-card { margin: 32px 0 0; }
@@ -1954,14 +1959,14 @@ svg.emoji-xl { width: 140px; height: 140px; }
   display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 8px 8px 12px;
   border: 2px dashed var(--line); border-radius: 10px;
 }
-.remind-own.picked { border-style: solid; border-color: var(--edge); }
+.remind-own.picked { border-style: solid; border-color: var(--edge-strong); }
 .remind-own-text { display: flex; flex-direction: column; gap: 1px; font-weight: 650; font-size: 0.95rem; min-width: 0; }
 .remind-own-text > span[lang='nl'] { order: 2; font-size: 0.78rem; font-weight: 500; color: var(--muted); }
 .remind-own input {
   flex: none; min-height: 44px; padding: 6px 10px; font: inherit; font-size: 1.15rem; font-weight: 650;
   color: var(--ink); background: var(--input-bg); border: 2px solid var(--line); border-radius: 8px;
 }
-.remind-own input:focus { outline: 3px solid var(--focus); outline-offset: 2px; border-color: var(--edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 55%, transparent); }
+.remind-own input:focus { outline: 3px solid var(--focus); outline-offset: 2px; border-color: var(--edge-strong); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 55%, transparent); }
 
 /* Backup: a kraft waybill ("vrachtbrief") with the contents listed, stamped in the corner. */
 .waybill {
@@ -3347,7 +3352,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .player-top .lesson-close { flex: none; }
 /* Pause sheet: the second choice ("Without sound" / "Sound on") is a calm outlined button with
    its icon, between the main "Keep going" and "Stop" (which has its own icon too). */
-.sheet-second { gap: 10px; background: var(--card); color: var(--ink); border: 3px solid var(--edge); }
+.sheet-second { gap: 10px; background: var(--card); color: var(--ink); border: 2px solid var(--edge); }
 .sheet-second:hover { background: var(--concrete-2); }
 .sheet-second-icon { display: inline-grid; place-items: center; flex: none; color: var(--ink-2); }
 
@@ -3410,7 +3415,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 }
 .max3-card:hover { border-color: var(--ink-3); }
 .max3-card:active { transform: translateY(1px); }
-.max3-card.picked { border-color: var(--edge); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
+.max3-card.picked { border-color: var(--edge-strong); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
 .max3-card.danger { color: var(--red); }
 .max3-pic {
   flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px;
@@ -3546,7 +3551,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   border: 2px solid var(--line); border-radius: var(--radius);
 }
 .topics-search-input::placeholder { color: var(--muted); opacity: 1; }
-.topics-search-input:focus-visible { outline: none; border-color: var(--edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 40%, transparent); }
+.topics-search-input:focus-visible { outline: none; border-color: var(--edge-strong); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 40%, transparent); }
 .topics-none { margin: 8px 4px; color: var(--ink); }
 .topics-none .bi { gap: 2px; }
 .topics-none-nl { font-weight: 600; }
@@ -3556,7 +3561,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); color: var(--ink);
   font-weight: 600; font-size: 1rem; line-height: 1.2;
 }
-.topics-order-btn.is-on { border-color: var(--edge); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); color: var(--pick-ink); }
+.topics-order-btn.is-on { border-color: var(--edge-strong); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); color: var(--pick-ink); }
 .topics-order-btn .bi { align-items: center; gap: 0; }
 .topics-order-nl { font-size: 0.9rem; font-weight: 500; color: var(--muted); }
 .topics-order-btn.is-on .topics-order-nl { color: inherit; }
@@ -3949,13 +3954,13 @@ button.unit-tool:hover { border-color: var(--ink-3); }
    sector pictures, and "Weet ik nog niet". Rows at least 64 px high (a tap target well over 44). */
 .sector-groups { margin-top: 18px; gap: 10px; }
 .sector-group-row { min-height: 72px; }
-.sector-group-row.picked { border-color: var(--edge); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
+.sector-group-row.picked { border-color: var(--edge-strong); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
 .sector-group-row.picked .set-row-chev { color: var(--ink); }
 .set-row-icon.sector-group-pic { width: 112px; height: 52px; border-radius: 14px; }
 .sector-group-row.picked .sector-group-pic { background: var(--yellow); color: #1e2226; }
 .sector-group-head { margin: 14px 0 0; font-size: inherit; }
 .sector-group-head:focus { outline: none; }
-.sector-group-head:focus-visible .bi { outline: 3px solid var(--edge); outline-offset: 2px; }
+.sector-group-head:focus-visible .bi { outline: 3px solid var(--edge-strong); outline-offset: 2px; }
 @media (max-width: 370px) {
   .set-row-icon.sector-group-pic { width: 100px; }
   .sector-step .max3-pic:has(.max3-trio) { width: 108px; }
@@ -4159,7 +4164,7 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
    ("3ram vertelt"): more room at the start. */
 .rule-stage-say:not(:has(.speak-glyph)) { padding-left: 14px; }
 .rule-story, .rule-label {
-  position: relative; background: var(--card); border: 2.5px solid var(--edge); border-radius: 6px;
+  position: relative; background: var(--card); border: 2px solid var(--edge); border-radius: 6px;
   box-shadow: 5px 5px 0 var(--label-shadow);
 }
 .rule-story {
@@ -4460,7 +4465,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .lang-btn.picked, .max3-card.picked, .topics-order-btn.is-on,
   .choice.picked, .rb-marked { background: var(--kraft-light); }
   /* Before Chrome 88 the picked option's own rule is lost whole (its :not(a, b)): its border too. */
-  .choice.picked, .choice.picked:hover:not(:disabled) { border-color: var(--edge); background: var(--kraft-light); }
+  .choice.picked, .choice.picked:hover:not(:disabled) { border-color: var(--edge-strong); background: var(--kraft-light); }
   .gender-btn.picked .gender-face { background: var(--kraft-light); }
   .lbar-tail { background: var(--kraft); }
   .feedback-rule, .chat-hint { border-top: 2px dashed var(--line); }
@@ -4629,7 +4634,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 }
 .kun-card {
   display: flex; flex-direction: column; gap: 12px; margin-top: 22px; padding: 16px; text-align: start;
-  background: var(--card); color: var(--ink); border: 2.5px solid var(--edge); border-radius: 6px;
+  background: var(--card); color: var(--ink); border: 2px solid var(--edge); border-radius: 6px;
   box-shadow: 5px 5px 0 var(--label-shadow);
 }
 .kun-head { display: flex; flex-direction: column; gap: 2px; margin: 0; font-size: 1.2rem; line-height: 1.25; }
@@ -4730,3 +4735,62 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
    which one is playing. One button to say it again; the footer's Continue goes on. */
 .say-compare-note { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 30px; margin: 4px 0 10px; color: var(--muted); font-weight: 700; }
 .say-again-one { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 56px; }
+
+/* ---- "Vloertaal rustiger", fase 1 (docs/rustiger.md): fewer things call at once ----
+   1. The numbers before the options are for a keyboard; on a touch screen nobody taps "2", so
+      the box shows only for the check or cross after Check. */
+@media (pointer: coarse) {
+  .choice-num:not(:has(svg)) { display: none; }
+}
+/* 2. The speaker beside an option: an icon, no box (the big speaker of the question stays blue). */
+.choice-say { border-color: transparent; background: transparent; }
+.choice-say:hover { background: color-mix(in srgb, var(--blue) 10%, transparent); }
+.tile-say { background: transparent; }
+.tile-say:hover { background: color-mix(in srgb, var(--blue) 10%, transparent); }
+/* 3. The kind of exercise ("BETEKENIS | Znaczenie"): a quiet label, the question is the title. */
+.ex-tag .tag { background: transparent; padding-inline: 0; color: var(--ink-3); }
+/* 4. Something picked: the other options step back (softer edge and text) so the pick stands
+      out. They can still be tapped; after Check they fade as before (.faded). */
+.choices-rows:has(.choice.picked) .choice:not(.picked, .right, .wrong, .faded) { border-color: var(--line); color: var(--ink-2); }
+.choices-rows:has(.choice.picked) .choice:not(.picked, .right, .wrong, .faded) :is(.choice-pic, .pic-emoji) { opacity: 0.7; }
+/* 5. A plain right answer has no heading: the one line sits level with the check. */
+.feedback:not(:has(.feedback-head)) { align-items: center; }
+
+/* A name changed where it is shown (Certificate.tsx NameInPlace): over the coach card's picture
+   (variant kaart) or the certificate (variant cert). The card's picture is 1200 wide, its name
+   9% in from each side and at most 6% of the width high (src/lib/kaartCanvas.ts); the
+   certificate's name is 3% of its width (.cert-name), its row 6.8% in from each side. The field
+   scales with the picture (cqw of the frame). */
+.kaart-figure { position: relative; container-type: inline-size; }
+.cert-frame-img { position: absolute; inset: 0; }
+.name-in-place-edit, .name-in-place-input { position: absolute; z-index: 1; }
+.name-kaart { left: 7.5%; right: 7.5%; }
+.name-cert { left: 6%; right: 6%; translate: 0 -50%; }
+.name-in-place-edit {
+  display: flex; align-items: center; justify-content: flex-end; min-height: 44px; padding: 0 4px;
+  background: transparent; border: 2px dashed transparent; border-radius: 8px; cursor: pointer;
+}
+.name-in-place-edit:hover, .name-in-place-edit:focus-visible { border-color: #8c7b66; outline: none; }
+.name-in-place-pencil {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  background: #ffc414; color: #26211c; box-shadow: 0 1px 3px rgba(38, 33, 28, 0.25);
+}
+.name-cert.name-in-place-edit { height: 44px; }
+/* Without a name on the card: the pencil sits on the first line, where the name would go. */
+.name-kaart.is-empty { translate: 0 -50%; height: 44px; }
+.name-in-place-input {
+  min-height: 44px; padding: 0 1.2cqw; margin: 0;
+  font: 700 6cqw/1.1 'Lexend Variable', Lexend, 'Noto Sans Arabic', 'Noto Sans Ethiopic', system-ui, sans-serif;
+  color: #26211c; background: #fffdf8; border: 2px solid #26211c; border-radius: 8px;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #ffc414 55%, transparent);
+}
+.name-in-place-input.name-cert { font-size: max(16px, 3.4cqw); height: max(44px, 6cqw); }
+.name-kaart.name-in-place-input.is-empty { translate: 0 -50%; height: 10cqw; }
+.name-in-place-input:focus { outline: none; }
+/* The certificate on screen without a name: its row keeps a line's room for the field. */
+.cert-name-empty { display: inline-block; min-width: 30cqw; min-height: 1.2em; }
+/* 6. No logo in the top bar: the day count and the words sit at the end of the row. */
+.topbar { justify-content: flex-end; }
+/* 7. The bottom bar shows icons; only the tab you are on has its word under it. */
+.nav-tab-on .nav-help-only { font-size: 0.8rem; font-weight: 650; color: var(--ink); }
+.bottom-nav .nav-tab { min-height: 60px; }

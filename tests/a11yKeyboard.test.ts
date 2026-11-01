@@ -96,11 +96,11 @@ describe('the focus when the button that was used is gone', () => {
     expect(h.focus).not.toHaveBeenCalled();
   });
 
-  it('is used where a page changes in place: the reminder pages, the certificate and its name page', () => {
+  it('is used where a page changes in place: the reminder pages, and the name field on the certificate and the card', () => {
     const keep = readFileSync('src/components/Keep.tsx', 'utf8');
     const cert = readFileSync('src/components/Certificate.tsx', 'utf8');
     expect(keep).toMatch(/useFocusWhenLost\(root, step, 'h1'\)/);
-    expect(cert).toMatch(/useFocusWhenLost\(view, asking, 'h1'\)/);
-    expect(cert).toMatch(/useFocusWhenLost\(page, 'name', '\.cert-name-head'\)/);
+    // The name is typed on the sheet itself; when its field closes, the focus goes to the title.
+    expect(cert.match(/useFocusWhenLost\(view, editing, 'h1'\)/g)).toHaveLength(2);
   });
 });

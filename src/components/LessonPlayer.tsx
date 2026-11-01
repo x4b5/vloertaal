@@ -882,6 +882,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // A rules question: Dutch only (its title, the picked option's line, the best answer, why).
   const ruleFb = feedback && isRuleExercise(ex) ? ruleVerdict(ex, answer.correct, answer.given?.[0]) : null;
   const headingMeaning = ruleFb ? null : feedback ? ui(feedbackMeaningKey(answer.correct, answer.almost, ex.kind), lang) : null;
+  /** Right, not "almost", not a rules question: no heading, the green and the check say it. */
+  const quietRight = Boolean(feedback && answer.correct && !answer.almost && !ruleFb);
   const pairHelp = pair?.meaning.help ?? '';
   // A wrong sentence: the right one as tiles, the words that were out of place or missing
   // underlined in red (a position diff of the tiles laid against the solution).
@@ -1051,7 +1053,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         {index === 0 && lesson.rule?.note && <p className="rule-country-note" role="note" lang="nl">{lesson.rule.note}</p>}
         {/* The language course in Belgium: a Dutch lesson that differs there says so (docs/taal-belgie.md). */}
         {index === 0 && !lesson.steps?.length && lessonNlOnly(lesson.id) && <BeNote lang={lang} className="rule-country-note" />}
-        <div className="ex-tag">
+        {/* The kind of exercise is not labelled ("BETEKENIS"): the question says it ("Vloertaal
+            rustiger", docs/rustiger.md). Only what tells something stays: the mistakes still to
+            come back, and a work-rules card's own task ("Reken het uit"). */}
+        {(repeatsLeft > 0 || ex.kind === 'card') && <div className="ex-tag">
           {repeatsLeft > 0 ? (
             <>
               {/* Retry phase: the mistakes come back, and the learner sees how many are left. */}
@@ -1062,7 +1067,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
           ) : (
             <KindTag kind={typePick ? 'listen' : ex.kind} lang={lang} nlLabel={ex.kind === 'card' ? cardTag(ex.step) : undefined} />
           )}
-        </div>
+        </div>}
         {body}
         {/* The pause sheet's "Zonder geluid", right where it is needed (src/lib/skipSound.ts). */}
         {offerSkipSound(ex, { checked, soundOff }) && (
@@ -1106,7 +1111,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                   Dutch and English pieces kept in their own direction. */}
               <div className={`feedback-text ${fbMore ? 'has-more' : ''}`} dir={rtl ? 'rtl' : undefined} ref={fbRef} onScroll={measureFb} tabIndex={fbMore ? 0 : undefined}>
                 {/* Heading: the help language first and large; the Dutch words and English under it. */}
-                <div className={`feedback-head ${headingMeaning?.help ? 'has-help' : ''}`}>
+                {/* A plain right answer has no heading ("Goed zo!"): the green and the check say it,
+                    the status region says it aloud. "Bijna goed" and "Het goede antwoord is" stay. */}
+                {!quietRight && <div className={`feedback-head ${headingMeaning?.help ? 'has-help' : ''}`}>
                   {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
                   <div className="feedback-line">
                     <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
@@ -1115,9 +1122,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                     {headingMeaning?.help && <span className="feedback-sep en-support" aria-hidden>·</span>}
                     {headingMeaning && <span className={`feedback-en ${headingMeaning.help && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{headingMeaning.en}</span>}
                   </div>
-                </div>
+                </div>}
                 {ruleFb && <RuleFeedbackBody v={ruleFb} lang={lang} />}
-                {(pairLine || whyLine) && <hr className="feedback-rule" />}
+                {(pairLine || whyLine) && !quietRight && <hr className="feedback-rule" />}
                 {/* After a wrong answer the heading is the lead; the answer itself is green with a check. */}
                 {!answer.correct && pairLine ? (
                   <div className="feedback-answer">

@@ -20,7 +20,7 @@ import { type Answer, BuildExercise, ChatExercise, ChoiceGrid, TypeExercise } fr
 import { HelpSay } from './HelpSay';
 import { BubblesIcon, ChevronIcon, CloseIcon, EarIcon, HourglassIcon, PictureIcon, SpeakerIcon } from './Icons';
 import { NlPair } from './NlPair';
-import { MicIcon, SpeakExercise } from './Speaking';
+import { SpeakExercise } from './Speaking';
 import { PlayName, SpeakButton } from './SpeakButton';
 import '../toets.css';
 
@@ -40,17 +40,6 @@ const PART: Record<ToetsPart, { nl: string; key: UiKey; Icon: (p: { size?: numbe
 };
 
 const still = () => typeof window !== 'undefined' && Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches);
-
-/** A small tag: the part's icon, the Dutch name and the help language's. */
-function PartTag({ part, lang }: { part: ToetsPart | 'speak'; lang?: HelpLanguage }) {
-  const p = part === 'speak' ? { nl: 'Spreken', key: 'tagSpeak' as UiKey, Icon: MicIcon } : PART[part];
-  return (
-    <span className="tag tag-kind">
-      <span className="tag-icon" aria-hidden><p.Icon size={20} /></span>
-      <NlPair nlFirst nl={p.nl} nlClass="tag-nl" className="tag-help" text={ui(p.key, lang)} />
-    </span>
-  );
-}
 
 /* ------------------------------------------------------------------ the card on the home */
 
@@ -260,7 +249,6 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
 
   const onSpeakAnswer = useCallback((a: { correct: boolean } | null) => setSpoken(Boolean(a)), []);
   const onRecording = useCallback((blob: Blob) => { voice.current = blob; }, []);
-  const part: ToetsPart | 'speak' = speaking ? 'speak' : q.part;
   const done = Math.min(index, total);
 
   return (
@@ -289,8 +277,8 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
       </header>
       <div className="player-body">
         <div className="ex-slide" key={index} ref={slide}>
+          {/* No label for the part ("Luisteren"): the question says it. The count stays. */}
           <div className="ex-tag">
-            <PartTag part={part} lang={lang} />
             <span className="toets-count" aria-hidden><bdi dir="ltr">{done + 1} / {total}</bdi></span>
           </div>
           {index === 0 && <p className="toets-calm"><Bi text={ui('toetsNotSure', lang)} /></p>}

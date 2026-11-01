@@ -592,7 +592,7 @@ function defineStates(LANG) {
   add('kaart:full', shot('kaart&name=Ali%20Hassan'), null, { expect: '.kaart-img' });
   add('kaart:start', shot('kaart&state=start'), null, { expect: '.kaart-img' });
   add('kaart:new', shot('kaart&state=new'), null, { expect: '.kaart-img' });
-  add('kaart:ask-name', shot('kaart&name=ask'), null, { expect: '.cert-name-input' });
+  add('kaart:ask-name', shot('kaart&name=ask'), null, { expect: '.name-in-place-edit' });
   // The real way: Instellingen › Taal en ik › the last row; the name asked first, then the card.
   const toKaart = async (p) => { await realHome(p); await navTab(p, 2); await settle(p); await tap(p, '.set-row', 0); await settle(p); const rows = p.locator('.set-row'); await rows.nth((await rows.count()) - 1).click(); await settle(p, 900); };
   add('flow:kaart-name', '/', toKaart, { expect: '.cert-name-input' });

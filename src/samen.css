@@ -27,7 +27,7 @@
 .samen-count { margin: 0; font-size: 0.95rem; font-weight: 600; color: var(--ink-2); text-align: end; }
 .samen-turn {
   display: flex; flex-direction: column; gap: 14px; padding: 16px;
-  background: var(--card); border: 2.5px solid var(--edge); border-radius: var(--radius);
+  background: var(--card); border: 2px solid var(--edge); border-radius: var(--radius);
 }
 .samen-turn-me { background: var(--tag-bg); }
 .samen-who { display: flex; align-items: center; gap: 14px; }

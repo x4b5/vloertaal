@@ -13,8 +13,13 @@ const W = 1200;
 const u = W / 100;
 const MIN_H = 1500;
 
-/** Lays the card out on `ctx`; draws only when `draw` (the first pass measures the height). */
-function layout(ctx: CanvasRenderingContext2D, d: KaartData, H: number, draw: boolean): number {
+/** Where the name sits on the card (canvas pixels): from its label to the first rule under it.
+ *  Without a name, top and bottom are the same: the first rule, where a name would go. */
+export interface KaartNameBox { top: number; bottom: number; height?: number }
+
+/** Lays the card out on `ctx`; draws only when `draw` (the first pass measures the height).
+ *  `box` gets where the name is, so the screen can make it editable in place. */
+function layout(ctx: CanvasRenderingContext2D, d: KaartData, H: number, draw: boolean, box?: KaartNameBox): number {
   const pad = 3 * u;
   const px = pad, py = pad, pw = W - 2 * pad;
   const ph = H - 2 * pad;
@@ -74,6 +79,7 @@ function layout(ctx: CanvasRenderingContext2D, d: KaartData, H: number, draw: bo
   };
 
   // The name, when there is one: smaller to fit, or on two lines (as on the certificate).
+  if (box) box.top = y;
   if (d.name) {
     const name = fitName(d.name, width, 6 * u, 3.6 * u, (text, size) => {
       ctx.font = font(700, size, HELP);
@@ -97,6 +103,7 @@ function layout(ctx: CanvasRenderingContext2D, d: KaartData, H: number, draw: bo
     }
     y += 2.6 * u;
   }
+  if (box) box.bottom = y;
 
   // The rows: a small label, the value in bold, and the lines under it.
   for (const row of kaartRows(d)) {
@@ -180,8 +187,8 @@ function layout(ctx: CanvasRenderingContext2D, d: KaartData, H: number, draw: bo
   return foot + 4.4 * u + pad;
 }
 
-/** Draws the card on a new canvas. */
-export async function drawKaart(d: KaartData): Promise<HTMLCanvasElement> {
+/** Draws the card on a new canvas; `box` (if given) gets where the name is. */
+export async function drawKaart(d: KaartData, box?: KaartNameBox): Promise<HTMLCanvasElement> {
   await fontsReady();
   const canvas = document.createElement('canvas');
   canvas.width = W;
@@ -190,15 +197,16 @@ export async function drawKaart(d: KaartData): Promise<HTMLCanvasElement> {
   ctx.direction = 'ltr';
   const H = Math.max(MIN_H, Math.ceil(layout(ctx, d, MIN_H, false)));
   canvas.height = H;
+  if (box) box.height = H;
   // (Setting the size resets the context.)
   ctx.direction = 'ltr';
-  layout(ctx, d, H, true);
+  layout(ctx, d, H, true, box);
   return canvas;
 }
 
 /** The card as a PNG (drawn when the screen opens: it is what the screen shows, and a tap shares it at once). */
-export async function kaartPng(d: KaartData): Promise<Blob> {
-  const canvas = await drawKaart(d);
+export async function kaartPng(d: KaartData, box?: KaartNameBox): Promise<Blob> {
+  const canvas = await drawKaart(d, box);
   if (typeof canvas.toBlob === 'function') return toBlob(canvas);
   // An old browser without canvas.toBlob: the same PNG from its data URL.
   const data = atob(canvas.toDataURL('image/png').split(',')[1]);
@@ -206,6 +214,9 @@ export async function kaartPng(d: KaartData): Promise<Blob> {
   for (let i = 0; i < data.length; i++) bytes[i] = data.charCodeAt(i);
   return new Blob([bytes], { type: 'image/png' });
 }
+
+/** The card's size in canvas pixels: its width is fixed, its height follows what is on it. */
+export const KAART_WIDTH = W;
 
 /** Shares the card as a PNG, or saves it where files cannot be shared (as the certificate). */
 export async function shareKaart(png: Blob, fileName = 'vloertaal-voortgang.png', text?: string): Promise<'shared' | 'saved' | 'cancelled'> {

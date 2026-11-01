@@ -222,7 +222,9 @@ describe('rule steps on screen', () => {
       const out = html(createElement(LessonPlayer, { lesson, review: false, lang: nl(), exercises: list, startAt: at, onQuit: () => {}, onFinish: () => {} }));
       expect(out, list[at].kind).not.toContain('lang="en"');
       expect(out).not.toMatch(/class="[^"]*bi-help/);
-      expect(out).toMatch(/class="tag-nl" lang="nl"/);
+      // The kind of step is no longer labelled ("Vloertaal rustiger"); a card keeps its own task.
+      if (list[at].kind === 'card') expect(out).toMatch(/class="tag-nl" lang="nl"/);
+      else expect(out).not.toContain('class="ex-tag"');
     }
   });
 
