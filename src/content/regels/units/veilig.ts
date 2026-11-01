@@ -60,7 +60,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', text: 'Hij vraagt nieuwe spullen aan zijn uitvoerder.', best: true, feedback: 'Goed. De uitvoerder is de baas op de bouwplaats. Die regelt dit.' },
             { id: 'c', text: 'Hij koopt na het werk zelf nieuwe spullen.', best: false, feedback: 'Goed bedoeld. Maar zijn werkgever moet ze geven.' },
           ],
-          why: 'Je werkgever moet beschermende spullen gratis geven. Denk aan handschoenen, een bril of veiligheidsschoenen. Erom vragen is normaal. Zonder bescherming werken is gevaarlijk.',
+          why: 'Je werkgever moet beschermende spullen gratis geven. Erom vragen is normaal.', whyMore: 'Denk aan handschoenen, een bril of veiligheidsschoenen. Zonder bescherming werken is gevaarlijk.',
         },
         // ⚖️ check: Je hebt recht op uitleg over de gevaren ⚖️.
         {
@@ -68,7 +68,7 @@ export const veiligUnit: RuleUnit = {
           id: 'r.l.veilig.1.tf1',
           statement: 'Je werkgever moet je uitleggen hoe je veilig werkt.',
           answer: true,
-          why: 'Je hebt recht op uitleg over de gevaren. En over hoe je veilig werkt. Ook als je nieuw bent of uitzendkracht. Snap je het niet? Vraag het nog een keer.',
+          why: 'Je hebt recht op uitleg over de gevaren en over veilig werken.', whyMore: 'Dat geldt ook als je nieuw bent of uitzendkracht. Snap je het niet? Vraag het nog een keer.',
         },
         {
           kind: 'whatdo',
@@ -79,7 +79,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', text: 'Hij gaat, maar hij zit op zijn telefoon.', best: false, feedback: 'Dan hoort hij niet wat er nieuw is.' },
             { id: 'c', text: 'Hij gaat erheen, luistert en stelt een vraag.', best: true, feedback: 'Goed. Zo hoort hij wat er nieuw is.' },
           ],
-          why: 'In de toolboxmeeting hoor je over gevaren en nieuwe regels. Je kunt ook zelf iets melden. Het is werktijd.',
+          why: 'In de toolboxmeeting hoor je over gevaren en nieuwe regels.', whyMore: 'Je kunt ook zelf iets melden. Het is werktijd.',
         },
         {
           kind: 'whoask',
@@ -142,7 +142,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', text: 'Hij zet de doos zelf recht, en zegt het niemand.', best: false, feedback: 'Goed dat hij helpt. Maar zo leert niemand ervan.' },
             { id: 'c', text: "Hij waarschuwt de collega's en meldt het.", best: true, feedback: 'Goed. Zo voorkomt hij een echt ongeluk.' },
           ],
-          why: 'Een bijna-ongeluk is een waarschuwing. Melden helpt om een echt ongeluk te voorkomen. Ook kleine dingen mag je melden.',
+          why: 'Een bijna-ongeluk is een waarschuwing. Melden helpt een echt ongeluk te voorkomen.', whyMore: 'Ook kleine dingen mag je melden.',
         },
         // ⚖️ check: Is er ernstig en direct gevaar? Dan mag je het werk stoppen ⚖️.
         // ⚖️ check: Je werkgever mag je daar niet voor straffen ⚖️.
@@ -151,7 +151,7 @@ export const veiligUnit: RuleUnit = {
           id: 'r.l.veilig.2.tf1',
           statement: 'Bij groot gevaar mag je stoppen met werken.',
           answer: true,
-          why: 'Is er ernstig en direct gevaar? Dan mag je het werk stoppen. Zeg het meteen tegen je leidinggevende. Je werkgever mag je daar niet voor straffen.',
+          why: 'Bij ernstig en direct gevaar mag je stoppen. Zeg het meteen tegen je leidinggevende.', whyMore: 'Je werkgever mag je daar niet voor straffen.',
         },
         {
           kind: 'whatdo',
@@ -162,7 +162,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', text: 'Hij zet een filmpje van het magazijn online.', best: false, feedback: 'Dat snap ik, maar dat kan hem problemen geven.' },
             { id: 'c', text: 'Hij stopt met melden. Het helpt toch niet.', best: false, feedback: 'Jammer. Er is nog een plek waar hij heen kan.' },
           ],
-          why: 'Helpt melden binnen het bedrijf niet? Dan kun je naar de Nederlandse Arbeidsinspectie. Dat mag ook zonder je naam. Een filmpje online kan juist problemen geven, ook voor jou.',
+          why: 'Helpt melden binnen het bedrijf niet? Ga dan naar de Nederlandse Arbeidsinspectie.', whyMore: 'Dat mag ook zonder je naam. Een filmpje online kan juist problemen geven, ook voor jou.',
         },
         {
           kind: 'whoask',
@@ -225,7 +225,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', text: 'Ze praat erover met haar leidinggevende.', best: true, feedback: 'Goed. Dan kan er samen iets veranderen.' },
             { id: 'c', text: 'Ze werkt sneller, dan is ze eerder klaar.', best: false, feedback: 'Haast geeft fouten en meer stress.' },
           ],
-          why: 'Te veel werkdruk maakt mensen ziek. Je werkgever moet daar iets aan doen. Praat erover voordat je ziek wordt. Je mag ook zelf naar de bedrijfsarts.',
+          why: 'Te veel werkdruk maakt mensen ziek. Praat erover voordat je ziek wordt.', whyMore: 'Je werkgever moet daar iets aan doen. Je mag ook zelf naar de bedrijfsarts.',
         },
         // ⚖️ check: Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie
         //   ⚖️.
@@ -237,7 +237,7 @@ export const veiligUnit: RuleUnit = {
           id: 'r.l.veilig.3.tf1',
           statement: 'Een ernstig ongeluk op het werk moet je werkgever melden.',
           answer: true,
-          why: 'Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie. Bijvoorbeeld als iemand in het ziekenhuis moet blijven, blijvend letsel heeft of overlijdt.',
+          why: 'Bij een ernstig ongeluk meldt je werkgever het meteen bij de Arbeidsinspectie.', whyMore: 'Bijvoorbeeld als iemand in het ziekenhuis moet blijven, blijvend letsel heeft of overlijdt.',
         },
         {
           kind: 'whatdo',
@@ -248,7 +248,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt niets. Ze wil niet lastig zijn.', best: false, feedback: 'Melden is niet lastig. Het hoort erbij.' },
             { id: 'c', text: 'Ze werkt door, en ze kijkt morgen hoe het gaat.', best: false, feedback: 'Kan, maar ze moet het wel vandaag melden.' },
           ],
-          why: 'Meld elk ongeluk, ook als het klein lijkt. Schrijf op wat er gebeurde, wanneer, en wie het zag. Maak een foto van de plek. Dan heb je bewijs als je later klachten krijgt.',
+          why: 'Meld elk ongeluk, ook als het klein lijkt. Dan heb je bewijs als je later klachten krijgt.', whyMore: 'Schrijf op wat er gebeurde, wanneer, en wie het zag. Maak een foto van de plek.',
         },
         // De BHV in Werkregels (rapport hiaten, hoofdstuk 4): in Taal staat de BHV'er al (l.accident).
         // ⚖️ check: Elk bedrijf moet daarvoor zorgen ⚖️ (bedrijfshulpverlening, art. 3 lid 1 onder e
@@ -262,7 +262,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', text: 'Hij helpt de collega meteen overeind.', best: false, feedback: 'Liever niet meteen. Bewegen kan letsel erger maken.' },
             { id: 'c', text: 'Hij zoekt eerst zijn leidinggevende, op een andere afdeling.', best: false, feedback: 'Dat kost tijd. Eerst hulp, daarna melden.' },
           ],
-          why: "Een BHV'er is een collega die eerste hulp geeft bij een ongeluk of brand. Elk bedrijf moet daarvoor zorgen. Vraag op je eerste dag wie de BHV'er is. Is het ernstig? Bel dan meteen 112.",
+          why: 'Een BHV\'er is een collega die eerste hulp geeft. Is het ernstig? Bel dan meteen 112.', whyMore: 'Een BHV\'er helpt bij een ongeluk of brand. Elk bedrijf moet daarvoor zorgen. Vraag op je eerste dag wie de BHV\'er is.',
         },
         {
           kind: 'whoask',
@@ -326,7 +326,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt tegen zijn leidinggevende dat hij te moe is.', best: true, feedback: 'Goed. Dan kan zijn leidinggevende hem ander werk geven.' },
             { id: 'c', text: 'Hij zegt niets, en hij werkt gewoon wat langzamer.', best: false, feedback: 'Dat snap ik. Maar moe zijn geeft snel fouten en ongelukken.' },
           ],
-          why: 'Moe zijn is gevaarlijk op je werk. Je let minder goed op. Dan gebeurt er sneller een ongeluk. Zeg het als je te moe bent om veilig te werken. Energiedrank helpt maar kort.',
+          why: 'Moe zijn is gevaarlijk: je let minder goed op. Zeg het als je te moe bent.', whyMore: 'Dan gebeurt er sneller een ongeluk. Zeg het als je te moe bent om veilig te werken. Energiedrank helpt maar kort.',
         },
         // ⚖️ check: Tussen 2 diensten zit meestal minstens 11 uur ⚖️ (Arbeidstijdenwet art. 5:3).
         // ⚖️ check: Volwassenen hebben meestal 7 tot 9 uur slaap nodig ⚖️ (Gezondheidsraad /
@@ -336,7 +336,7 @@ export const veiligUnit: RuleUnit = {
           id: 'r.l.veilig.4.tf1',
           statement: 'Tussen 2 diensten zit meestal minstens 11 uur.',
           answer: true,
-          why: 'Dat staat in de wet. Soms mag het korter, maar niet vaak. Kijk ook in je cao. Gebruik die tijd ook echt om te slapen. Volwassenen hebben meestal 7 tot 9 uur slaap nodig.',
+          why: 'Dat staat in de wet. Soms mag het korter, maar niet vaak.', whyMore: 'Kijk ook in je cao. Gebruik die tijd ook echt om te slapen. Volwassenen hebben meestal 7 tot 9 uur slaap nodig.',
         },
         // ⚖️ check: Je mag ook zelf naar de bedrijfsarts ⚖️ (Arbowet art. 14 lid 1 onder c: het open
         //   spreekuur).
@@ -349,7 +349,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', text: 'Hij neemt elke dag een pijnstiller, en werkt door.', best: false, feedback: 'Dat snap ik. Maar dan blijft het probleem.' },
             { id: 'c', text: 'Hij blijft in de pauze zitten. Dan rust zijn rug.', best: false, feedback: 'Rust helpt even. Maar bewegen is vaak beter voor je rug.' },
           ],
-          why: 'Lang stilstaan of zitten is zwaar voor je lichaam. Beweeg even in je pauze. Loop een rondje, of rek je uit. Blijft de pijn? Meld het bij je leidinggevende. Je mag ook zelf naar de bedrijfsarts.',
+          why: 'Lang stilstaan of zitten is zwaar voor je lichaam. Beweeg even in je pauze.', whyMore: 'Loop een rondje, of rek je uit. Blijft de pijn? Meld het bij je leidinggevende. Je mag ook zelf naar de bedrijfsarts.',
         },
         { kind: 'model', id: 'r.l.veilig.4.mo1', context: 'Je bent te moe om veilig te werken.', nl: 'Ik ben vandaag erg moe. Kan ik ander werk doen?' },
       ],
@@ -402,7 +402,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt niets. Het is niet zijn probleem.', best: false, feedback: 'Dat snap ik. Maar op de heftruck kan zijn collega iemand raken.' },
             { id: 'c', text: 'Hij geeft zijn collega sterke koffie. Dan gaat het wel weer.', best: false, feedback: 'Koffie helpt niet. Alleen tijd haalt alcohol uit je bloed.' },
           ],
-          why: 'Alcohol maakt je trager en minder voorzichtig. Op een heftruck of bij een machine is dat heel gevaarlijk. Zeg het tegen je leidinggevende. Zo voorkom je een ongeluk. Koffie of een douche helpt niet.',
+          why: 'Alcohol maakt je trager. Op een heftruck of bij een machine is dat heel gevaarlijk.', whyMore: 'Je bent ook minder voorzichtig. Zeg het tegen je leidinggevende. Zo voorkom je een ongeluk. Koffie of een douche helpt niet.',
         },
         // ⚖️ check: Ongeveer 1 glas in 1 tot 1,5 uur ⚖️ (Trimbos-instituut, afbraak van alcohol).
         {
@@ -410,7 +410,7 @@ export const veiligUnit: RuleUnit = {
           id: 'r.l.veilig.5.tf1',
           statement: 'Na een nacht slapen is alle alcohol weer uit je bloed.',
           answer: false,
-          why: 'Je lichaam haalt alcohol maar langzaam uit je bloed. Ongeveer 1 glas in 1 tot 1,5 uur. Heb je veel gedronken? Dan heb je de volgende ochtend vaak nog alcohol in je bloed.',
+          why: 'Alcohol gaat langzaam uit je bloed. Na veel drinken zit het er de volgende ochtend vaak nog.', whyMore: 'Je lichaam haalt ongeveer 1 glas weg in 1 tot 1,5 uur.',
         },
         // ⚖️ check: Op de doos zit dan vaak een gele sticker ⚖️ (KNMP).
         {
@@ -418,7 +418,7 @@ export const veiligUnit: RuleUnit = {
           id: 'r.l.veilig.5.tf2',
           statement: 'Ook een medicijn kan je suf maken op je werk.',
           answer: true,
-          why: 'Sommige medicijnen maken je slaperig. Op de doos zit dan vaak een gele sticker. Vraag de apotheek of je ermee kunt werken. Moet je rijden of met machines werken? Zeg dan dat je dat werk even niet kunt.',
+          why: 'Sommige medicijnen maken je slaperig. Vraag de apotheek of je ermee kunt werken.', whyMore: 'Op de doos zit dan vaak een gele sticker. Moet je rijden of met machines werken? Zeg dan dat je dat werk even niet kunt.',
         },
         // ⚖️ check: Wat je zegt, blijft geheim ⚖️ (beroepsgeheim huisarts, art. 7:457 BW).
         // ⚖️ check: Ook de bedrijfsarts vertelt je baas niets over je gezondheid ⚖️ (beroepsgeheim;
@@ -432,7 +432,7 @@ export const veiligUnit: RuleUnit = {
             { id: 'b', who: 'huisarts', best: true, feedback: 'Goed. De huisarts helpt je, en vertelt het aan niemand.' },
             { id: 'c', who: 'bedrijfsarts', best: false, feedback: 'De bedrijfsarts kan meedenken. Maar voor hulp bij stoppen is je huisarts de eerste.' },
           ],
-          why: 'Je huisarts helpt je, of stuurt je door naar hulp bij verslaving. Wat je zegt, blijft geheim. Ook de bedrijfsarts vertelt je baas niets over je gezondheid.',
+          why: 'Je huisarts helpt je. Wat je zegt, blijft geheim.', whyMore: 'De huisarts kan je doorsturen naar hulp bij verslaving. Ook de bedrijfsarts vertelt je baas niets over je gezondheid.',
         },
         { kind: 'model', id: 'r.l.veilig.5.mo1', context: 'Een collega ruikt naar alcohol en moet zo op de heftruck.', nl: 'Ik maak me zorgen. Mijn collega ruikt naar alcohol.' },
       ],

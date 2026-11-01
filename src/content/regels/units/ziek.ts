@@ -178,7 +178,7 @@ export const ziekUnit: RuleUnit = {
           id: 'r.l.ziek.2.tf3',
           statement: "Kevin is zzp'er. Is hij ziek? Dan moet hij zelf zorgen voor geld.",
           answer: true,
-          why: "Een zzp'er werkt voor zichzelf, zonder werkgever. Niemand betaalt dan je loon door als je ziek bent. Regel daarom zelf iets, zoals sparen of een verzekering. Werk je als zzp'er, maar voelt het als een gewone baan? Vraag advies.",
+          why: "Een zzp'er heeft geen werkgever. Niemand betaalt dan je loon door als je ziek bent.", whyMore: "Een zzp'er werkt voor zichzelf. Regel daarom zelf iets, zoals sparen of een verzekering. Werk je als zzp'er, maar voelt het als een gewone baan? Vraag advies.",
         },
         {
           kind: 'whoask',

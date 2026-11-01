@@ -34,7 +34,7 @@ function shownTexts(s: RuleStep): string[] {
     ];
   }
 }
-const stepTexts = (s: RuleStep) => [...shownTexts(s), ...('picture' in s ? [s.picture] : []), ...('emoji' in s ? [s.emoji] : [])];
+const stepTexts = (s: RuleStep) => [...shownTexts(s), ...('whyMore' in s && s.whyMore ? [s.whyMore] : []), ...('picture' in s ? [s.picture] : []), ...('emoji' in s ? [s.emoji] : [])];
 const lessonTexts = (l: RuleLesson) => [l.title, l.goal, l.remember];
 
 /** All texts with the id of the step (or lesson/unit) they belong to. */
@@ -168,6 +168,11 @@ describe('rules content: lessons and steps', () => {
     }
   });
 
+  // Vloertaal rustiger (optie B): the why in view is the core; the rest sits behind "Meer uitleg".
+  it('keeps every why in view at 20 words or fewer', () => {
+    const long = steps.filter((s) => 'why' in s && s.why.split(/\s+/).filter(Boolean).length > 20).map((s) => s.id);
+    expect(long).toEqual([]);
+  });
   it('gives every graded step a why', () => {
     for (const s of steps) if (GRADED.has(s.kind)) expect(('why' in s ? s.why : '').trim().length, s.id).toBeGreaterThan(0);
   });

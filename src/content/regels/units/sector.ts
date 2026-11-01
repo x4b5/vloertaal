@@ -56,7 +56,7 @@ export const buildUnit: RuleUnit = {
           id: 'r.l.build.1.tf1',
           statement: 'VCA is een diploma over veilig werken.',
           answer: true,
-          why: 'VCA is een cursus met een examen. Je leert de gevaren op de bouw kennen. VCA is geen wet. Maar veel bedrijven laten je zonder VCA niet op de bouwplaats. Vraag wie de cursus betaalt.',
+          why: 'VCA is geen wet. Maar veel bedrijven laten je zonder VCA niet op de bouwplaats.', whyMore: 'VCA is een cursus met een examen. Je leert de gevaren op de bouw kennen. Vraag wie de cursus betaalt.',
         },
         // ⚖️ check: Je werkgever geeft ze gratis ⚖️.
         {
@@ -68,7 +68,7 @@ export const buildUnit: RuleUnit = {
             { id: 'b', text: 'Hij koopt zelf schoenen, en betaalt ze van zijn loon.', best: false, feedback: 'Goed bedoeld. Maar zijn werkgever moet ze gratis geven.' },
             { id: 'c', text: 'Hij vraagt de uitvoerder om veiligheidsschoenen.', best: true, feedback: 'Goed. De uitvoerder is de baas op de bouwplaats. Die regelt dit.' },
           ],
-          why: 'Beschermende spullen heten ook PBM: persoonlijke beschermingsmiddelen. Denk aan een helm, schoenen, een bril en een hesje. Je werkgever geeft ze gratis. Werk je via een uitzendbureau? Vraag dan wie ze geeft.',
+          why: 'Je werkgever geeft beschermende spullen gratis.', whyMore: 'Ze heten ook PBM: persoonlijke beschermingsmiddelen. Denk aan een helm, schoenen, een bril en een hesje. Werk je via een uitzendbureau? Vraag dan wie ze geeft.',
         },
         // ⚖️ check: Moet je een helm of andere bescherming dragen? Dan moet je dat ook doen ⚖️.
         {
@@ -76,7 +76,7 @@ export const buildUnit: RuleUnit = {
           id: 'r.l.build.1.tf2',
           statement: 'Een helm hoef je alleen op als de baas kijkt.',
           answer: false,
-          why: 'Moet je een helm of andere bescherming dragen? Dan moet je dat ook doen. Ook als het warm is. Ook als niemand kijkt. Zo bescherm je jezelf.',
+          why: 'Moet je bescherming dragen? Dan doe je dat ook als niemand kijkt.', whyMore: 'Zo bescherm je jezelf. Ook als het warm is.',
         },
         {
           kind: 'whoask',
@@ -136,7 +136,7 @@ export const buildUnit: RuleUnit = {
             { id: 'b', text: 'Hij loopt om, ook al duurt dat langer.', best: true, feedback: 'Goed. Onder een hangende last loop je nooit.' },
             { id: 'c', text: 'Hij roept naar de kraanmachinist dat hij eraan komt.', best: false, feedback: 'Goed bedoeld. Maar onder de last blijft het gevaarlijk.' },
           ],
-          why: 'Loop nooit onder een hangende last. Die kan vallen of zwaaien. Een paar minuten omlopen is altijd beter.',
+          why: 'Een hangende last kan vallen of zwaaien.', whyMore: 'Loop er nooit onder. Een paar minuten omlopen is altijd beter.',
         },
         // ⚖️ check: Boven 2,5 meter ⚖️ is er valgevaar.
         // ⚖️ check: Dan moet je werkgever zorgen voor bescherming ⚖️.
@@ -145,7 +145,7 @@ export const buildUnit: RuleUnit = {
           id: 'r.l.build.2.tf1',
           statement: 'Werk je hoger dan 2,5 meter? Dan moet er bescherming tegen vallen zijn.',
           answer: true,
-          why: 'Boven 2,5 meter is er valgevaar. Dan moet je werkgever zorgen voor bescherming. Bijvoorbeeld een leuning of een harnas. Is die er niet? Ga dan niet verder, en zeg het meteen.',
+          why: 'Boven 2,5 meter is er valgevaar. Dan moet je werkgever zorgen voor bescherming.', whyMore: 'Bijvoorbeeld een leuning of een harnas. Is die er niet? Ga dan niet verder, en zeg het meteen.',
         },
         {
           kind: 'whatdo',
@@ -156,7 +156,7 @@ export const buildUnit: RuleUnit = {
             { id: 'b', text: 'Je vult aan het eind van de dag een lijst met uren in.', best: false, feedback: 'Nee. Het gaat over veiligheid, niet over uren.' },
             { id: 'c', text: 'Je wacht tot de uitvoerder het werk eerst voordoet.', best: false, feedback: 'Nee. Je kijkt zelf, vlak voor je begint.' },
           ],
-          why: 'LMRA betekent: laatste minuut risicoanalyse. Vlak voor je begint, kijk je even rond. Wat kan er misgaan? Wat heb je nodig? Zie je gevaar? Begin dan niet, en meld het.',
+          why: 'Vlak voor je begint, kijk je even rond. Zie je gevaar? Begin dan niet.', whyMore: 'Dat heet LMRA: laatste minuut risicoanalyse. Wat kan er misgaan? Wat heb je nodig? Zie je gevaar? Meld het.',
         },
         { kind: 'model', id: 'r.l.build.2.mo1', context: 'Je ziet gevaar vlak voor je begint.', nl: 'Ik begin nog niet. Er hangt een last boven het pad.' },
       ],
@@ -213,7 +213,7 @@ export const careUnit: RuleUnit = {
           id: 'r.l.care.1.tf1',
           statement: 'In de zorg draag je geen ring en geen horloge.',
           answer: true,
-          why: 'Onder een ring of horloge blijven bacteriën zitten. Zo kunnen cliënten ziek worden. Daarom draag je geen sieraden aan je handen en polsen. Je nagels zijn kort en zonder nagellak. Lang haar draag je vast.',
+          why: 'Onder een ring of horloge blijven bacteriën zitten. Zo kunnen cliënten ziek worden.', whyMore: 'Daarom draag je geen sieraden aan je handen en polsen. Je nagels zijn kort en zonder nagellak. Lang haar draag je vast.',
         },
         // ⚖️ check: Doe dat ook als je handschoenen uittrekt ⚖️.
         {
@@ -225,7 +225,7 @@ export const careUnit: RuleUnit = {
             { id: 'b', text: 'Ze trekt alleen een paar nieuwe handschoenen aan.', best: false, feedback: 'Handschoenen helpen. Maar ook haar handen moeten schoon zijn.' },
             { id: 'c', text: 'Ze maakt eerst haar handen schoon.', best: true, feedback: 'Goed. Zo neemt ze geen bacteriën mee.' },
           ],
-          why: 'Maak je handen schoon voor en na elke cliënt. Met water en zeep, of met handalcohol. Doe dat ook als je handschoenen uittrekt. Zo bescherm je je cliënten en jezelf.',
+          why: 'Schone handen beschermen je cliënten en jezelf.', whyMore: 'Maak je handen schoon voor en na elke cliënt. Met water en zeep, of met handalcohol. Doe dat ook als je handschoenen uittrekt.',
         },
         {
           kind: 'whatdo',
@@ -236,7 +236,7 @@ export const careUnit: RuleUnit = {
             { id: 'b', text: 'Ze belt af, en zegt: het kan besmettelijk zijn.', best: true, feedback: 'Goed. Ze hoeft niet te zeggen wat ze heeft. Dit wel.' },
             { id: 'c', text: 'Ze gaat werken, en draagt de hele dag een mondkapje.', best: false, feedback: 'Goed bedoeld. Maar dat helpt niet genoeg.' },
           ],
-          why: 'Overgeven of diarree kan besmettelijk zijn. Cliënten worden sneller en erger ziek dan gezonde mensen. Bel dus vóór je dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.',
+          why: 'Overgeven of diarree kan besmettelijk zijn. Cliënten worden sneller en erger ziek.', whyMore: 'Bel dus vóór je dienst. Volg het protocol van je werk. Daar staat in wat je moet doen.',
         },
         {
           kind: 'whoask',
@@ -296,7 +296,7 @@ export const careUnit: RuleUnit = {
           id: 'r.l.care.2.tf1',
           statement: 'Een leuke foto van een cliënt mag gewoon in de groepsapp.',
           answer: false,
-          why: "Wat je over cliënten weet, is privé. Dat geldt ook voor foto's. Je deelt niets zonder toestemming. Ook niet thuis of online. Volg de regels van je werk.",
+          why: 'Wat je over cliënten weet, is privé. Je deelt niets zonder toestemming.', whyMore: "Dat geldt ook voor foto's. Ook niet thuis of online. Volg de regels van je werk.",
         },
         // ⚖️ check: Geef alleen medicijnen als je het geleerd hebt ⚖️.
         {
@@ -308,7 +308,7 @@ export const careUnit: RuleUnit = {
             { id: 'b', text: 'Ze geeft ze toch. Het staat allemaal op de lijst.', best: false, feedback: 'Dat is logisch. Maar zonder uitleg kan ze een fout maken.' },
             { id: 'c', text: 'Ze legt de pillen op tafel. Meneer neemt ze zelf wel.', best: false, feedback: 'Dan weet niemand of hij ze echt neemt.' },
           ],
-          why: 'Geef alleen medicijnen als je het geleerd hebt. En als het mag van je werk. Check altijd de lijst: de juiste persoon, het juiste medicijn, de juiste tijd. Weet je het niet zeker? Vraag het eerst.',
+          why: 'Geef alleen medicijnen als je het geleerd hebt, en als het mag van je werk.', whyMore: 'Check altijd de lijst: de juiste persoon, het juiste medicijn, de juiste tijd. Weet je het niet zeker? Vraag het eerst.',
         },
         // ⚖️ check: Een fout met medicijnen meld je altijd ⚖️.
         {
@@ -320,7 +320,7 @@ export const careUnit: RuleUnit = {
             { id: 'b', text: 'Ze geeft morgen een extra pil, om het goed te maken.', best: false, feedback: 'Niet doen. Dat kan gevaarlijk zijn.' },
             { id: 'c', text: 'Ze meldt het, zoals het protocol zegt.', best: true, feedback: 'Goed. Dan kan iemand checken of het goed gaat.' },
           ],
-          why: 'Een fout met medicijnen meld je altijd. Dat heet een incident melden. Het gaat niet om straf. Het gaat erom dat de cliënt veilig is. En dat het team ervan leert.',
+          why: 'Het gaat niet om straf. Het gaat erom dat de cliënt veilig is.', whyMore: 'Een fout met medicijnen meld je altijd. Dat heet een incident melden. Zo leert het team ervan.',
         },
         // Terugzeggen (rapport hiaten, voorstel 3): terugzeggen in een sectorles.
         {
@@ -333,7 +333,7 @@ export const careUnit: RuleUnit = {
             { id: 'b', text: 'Ja hoor, dat lukt me wel. Geen probleem.', best: false, feedback: 'Fijn. Maar zo hoort de collega niet wat ze begrepen heeft.', say: true },
             { id: 'c', text: 'Dus om 12 uur 1 pil, met water. Klopt dat?', best: true, feedback: 'Goed. Zo hoort de collega meteen of het klopt.', say: true },
           ],
-          why: 'Zeg terug wat je gaat doen. Bij medicijnen is dat extra belangrijk. Zo hoort je collega meteen of je iets mist. Check daarna ook de lijst.',
+          why: 'Zo hoort je collega meteen of je iets mist.', whyMore: 'Zeg terug wat je gaat doen. Bij medicijnen is dat extra belangrijk. Check daarna ook de lijst.',
         },
         {
           kind: 'whoask',
@@ -401,7 +401,7 @@ export const horecaUnit: RuleUnit = {
           id: 'r.l.horeca.1.tf1',
           statement: 'HACCP is een manier van werken om eten veilig te houden.',
           answer: true,
-          why: 'HACCP is een systeem voor veilig eten. Elk bedrijf met eten moet zo werken. In de horeca staat het in de hygiënecode. Bijvoorbeeld: stickers met de datum, goed koelen en schoon werken. Een inspecteur van de NVWA komt soms kijken.',
+          why: 'Elk bedrijf met eten moet volgens HACCP werken: een systeem voor veilig eten.', whyMore: 'In de horeca staat het in de hygiënecode. Bijvoorbeeld: stickers met de datum, goed koelen en schoon werken. Een inspecteur van de NVWA komt soms kijken.',
         },
         // ⚖️ check: Koud eten bewaar je in de koelkast, op 7 graden of kouder ⚖️.
         {
@@ -413,7 +413,7 @@ export const horecaUnit: RuleUnit = {
             { id: 'b', text: 'Hij vraagt de chef wat ermee moet.', best: true, feedback: 'Goed. De chef weet wat de regels zijn.' },
             { id: 'c', text: 'Hij ruikt eraan. Ruikt het goed, dan gebruikt hij het.', best: false, feedback: 'Bacteriën ruik je niet altijd.' },
           ],
-          why: 'Koud eten bewaar je in de koelkast, op 7 graden of kouder. Stond het te lang warm? Dan kunnen er bacteriën in groeien. Weet je het niet zeker? Vraag het, of gooi het weg.',
+          why: 'Stond koud eten te lang warm? Dan kunnen er bacteriën in groeien.', whyMore: 'Koud eten bewaar je in de koelkast, op 7 graden of kouder. Weet je het niet zeker? Vraag het, of gooi het weg.',
         },
         {
           kind: 'whatdo',
@@ -424,7 +424,7 @@ export const horecaUnit: RuleUnit = {
             { id: 'b', text: 'Hij spoelt het mes even af onder de kraan.', best: false, feedback: 'Dat is niet genoeg. De plank en zijn handen zijn ook vies.' },
             { id: 'c', text: 'Hij gebruikt dezelfde plank. Hij snijdt de sla toch heel snel.', best: false, feedback: 'Snel helpt niet. Bacteriën gaan meteen mee.' },
           ],
-          why: 'Rauw vlees heeft vaak bacteriën. Houd rauw en klaar eten altijd apart. Gebruik schone planken en messen. Was je handen na rauw vlees.',
+          why: 'Rauw vlees heeft vaak bacteriën. Houd rauw en klaar eten altijd apart.', whyMore: 'Gebruik schone planken en messen. Was je handen na rauw vlees.',
         },
         { kind: 'model', id: 'r.l.horeca.1.mo1', context: 'Je weet niet zeker of eten nog goed is.', nl: 'Chef, deze saus stond lang buiten. Wat doe ik ermee?' },
       ],
@@ -476,7 +476,7 @@ export const horecaUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt: "Ik vraag het even na in de keuken."', best: true, feedback: 'Goed. Zo krijgt de gast het juiste antwoord.' },
             { id: 'c', text: 'Ze raadt de gast aan om iets anders te kiezen.', best: false, feedback: 'Aardig bedoeld. Maar de gast wil een eerlijk antwoord.' },
           ],
-          why: 'Sommige mensen worden heel ziek van noten, melk of gluten. Dat heet een allergie. Een restaurant moet weten welke allergenen in het eten zitten. Het gaat om 14 allergenen. Raad nooit. Vraag het na.',
+          why: 'Sommige mensen worden heel ziek van noten, melk of gluten. Raad dus nooit.', whyMore: 'Dat heet een allergie. Een restaurant moet weten welke allergenen in het eten zitten. Het gaat om 14 allergenen. Vraag het na.',
         },
         // ⚖️ check: Je werkgever betaalt je gewoon minstens het minimumloon ⚖️.
         // ⚖️ check: Fooi mag hij daar niet bij optellen ⚖️.
@@ -485,7 +485,7 @@ export const horecaUnit: RuleUnit = {
           id: 'r.l.horeca.2.tf1',
           statement: 'Fooi telt mee voor je minimumloon.',
           answer: false,
-          why: 'Fooi is extra, van de gasten. Je werkgever betaalt je gewoon minstens het minimumloon. Fooi mag hij daar niet bij optellen. Vraag hoe de fooi in jullie team wordt verdeeld.',
+          why: 'Fooi is extra. Je werkgever mag fooi niet bij je minimumloon optellen.', whyMore: 'Fooi komt van de gasten. Je werkgever betaalt je gewoon minstens het minimumloon. Vraag hoe de fooi in jullie team wordt verdeeld.',
         },
         {
           kind: 'whatdo',
@@ -496,7 +496,7 @@ export const horecaUnit: RuleUnit = {
             { id: 'b', text: 'Ze pakt elke avond zelf wat geld uit de pot.', best: false, feedback: 'Niet doen. Dan lijkt het op stelen.' },
             { id: 'c', text: 'Ze zegt niets. Fooi is toch niet zo belangrijk.', best: false, feedback: 'Mag. Maar fooi kan best veel geld zijn.' },
           ],
-          why: 'Elk bedrijf verdeelt fooi op een eigen manier. Soms krijgt iedereen evenveel. Soms gaat het naar uren. Vraag het gewoon. Het is geen rare vraag.',
+          why: 'Elk bedrijf verdeelt fooi op een eigen manier. Vragen is niet raar.', whyMore: 'Soms krijgt iedereen evenveel. Soms gaat het naar uren. Vraag het gewoon.',
         },
         {
           kind: 'whoask',
@@ -568,7 +568,7 @@ export const cleanUnit: RuleUnit = {
             { id: 'b', text: 'Ze gebruikt één middel, en spoelt goed na.', best: true, feedback: 'Goed. Eén middel tegelijk is veilig.' },
             { id: 'c', text: 'Ze mengt ze, maar ze zet eerst het raam open.', best: false, feedback: 'Een open raam is niet genoeg. Het gas is gevaarlijk.' },
           ],
-          why: 'Meng nooit schoonmaakmiddelen. Chloor met een ander middel kan giftig gas geven. Dat is slecht voor je longen. Gebruik één middel tegelijk. Spoel goed na voor je een ander middel pakt.',
+          why: 'Chloor met een ander middel kan giftig gas geven. Dat is slecht voor je longen.', whyMore: 'Meng dus nooit schoonmaakmiddelen. Gebruik één middel tegelijk. Spoel goed na voor je een ander middel pakt.',
         },
         // ⚖️ check: Je werkgever moet uitleg geven ⚖️.
         // ⚖️ check: En beschermende spullen, gratis ⚖️.
@@ -577,7 +577,7 @@ export const cleanUnit: RuleUnit = {
           id: 'r.l.clean.1.tf1',
           statement: 'Op het etiket staat hoe je een middel veilig gebruikt.',
           answer: true,
-          why: 'Op het etiket staan plaatjes met een rode rand. Die laten gevaar zien. Er staat ook of je handschoenen of een bril nodig hebt. Je werkgever moet uitleg geven. En beschermende spullen, gratis.',
+          why: 'Plaatjes met een rode rand op het etiket laten gevaar zien.', whyMore: 'Er staat ook of je handschoenen of een bril nodig hebt. Je werkgever moet uitleg geven. En beschermende spullen, gratis.',
         },
         // ⚖️ check: Werk je alleen? Dan moet je werkgever zorgen dat je hulp kunt krijgen ⚖️.
         {
@@ -589,7 +589,7 @@ export const cleanUnit: RuleUnit = {
             { id: 'b', text: 'Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.', best: false, feedback: 'Dat is logisch. Maar alleen loopt ze meer gevaar.' },
             { id: 'c', text: 'Ze neemt haar zoon mee, voor de veiligheid.', best: false, feedback: 'Dat snap ik. Maar haar werkgever moet dit regelen.' },
           ],
-          why: 'Werk je alleen? Dan moet je werkgever zorgen dat je hulp kunt krijgen. Spreek af wie je belt als er iets is. Zorg dat je telefoon opgeladen is.',
+          why: 'Werk je alleen? Dan moet je werkgever zorgen dat je hulp kunt krijgen.', whyMore: 'Spreek af wie je belt als er iets is. Zorg dat je telefoon opgeladen is.',
         },
         {
           kind: 'whoask',
@@ -650,7 +650,7 @@ export const cleanUnit: RuleUnit = {
             { id: 'b', text: 'Hij werkt sneller, dan staat hij korter gebukt.', best: false, feedback: 'Haast maakt het vaak erger.' },
             { id: 'c', text: 'Hij vraagt een steel die op zijn lengte past.', best: true, feedback: 'Goed. Met de goede spullen werkt hij rechtop.' },
           ],
-          why: 'Je werkgever moet zorgen dat je werk niet te zwaar is voor je lichaam. Goede spullen helpen daarbij. Bijvoorbeeld een steel die je langer kunt maken. Of een kar, zodat je minder tilt.',
+          why: 'Je werkgever moet zorgen dat je werk niet te zwaar is voor je lichaam.', whyMore: 'Goede spullen helpen daarbij. Bijvoorbeeld een steel die je langer kunt maken. Of een kar, zodat je minder tilt.',
         },
         // ⚖️ check: Je mag ook zelf naar de bedrijfsarts ⚖️.
         {
@@ -658,7 +658,7 @@ export const cleanUnit: RuleUnit = {
           id: 'r.l.clean.2.tf1',
           statement: 'Pijn hoort er gewoon bij in de schoonmaak.',
           answer: false,
-          why: 'Pijn is een waarschuwing. Wacht niet tot het erger wordt. Praat erover met je leidinggevende. Je mag ook zelf naar de bedrijfsarts.',
+          why: 'Pijn is een waarschuwing. Wacht niet tot het erger wordt.', whyMore: 'Praat erover met je leidinggevende. Je mag ook zelf naar de bedrijfsarts.',
         },
         {
           kind: 'whatdo',
@@ -669,7 +669,7 @@ export const cleanUnit: RuleUnit = {
             { id: 'b', text: 'Hij maakt de zak minder vol, of vraagt een collega.', best: true, feedback: 'Goed. Twee keer lopen is beter dan een pijnlijke rug.' },
             { id: 'c', text: 'Hij laat de zak gewoon naast de container staan.', best: false, feedback: 'Dan blijft het werk liggen voor iemand anders.' },
           ],
-          why: 'Til dicht bij je lichaam, met je knieën gebogen. Draai niet met je rug terwijl je tilt. Te zwaar? Maak het lichter, of vraag hulp. Gebruik een kar als dat kan.',
+          why: 'Til dicht bij je lichaam, met je knieën gebogen. Draai niet met je rug.', whyMore: 'Te zwaar? Maak het lichter, of vraag hulp. Gebruik een kar als dat kan.',
         },
         {
           kind: 'whoask',
@@ -742,7 +742,7 @@ export const factoryUnit: RuleUnit = {
             { id: 'b', text: 'Ze drukt op de noodstop, en ze roept Henk.', best: true, feedback: 'Goed. Eerst moet de machine echt stilstaan.' },
             { id: 'c', text: 'Ze duwt de doos los met een stuk karton.', best: false, feedback: 'Ook dan komt ze dicht bij de machine. Niet doen.' },
           ],
-          why: 'Grijp nooit in een machine die draait. Ook niet even. Druk op de noodstop als dat nodig is. Weet waar de noodstop zit, vóór je begint.',
+          why: 'Grijp nooit in een machine die draait. Ook niet even.', whyMore: 'Druk op de noodstop als dat nodig is. Weet waar de noodstop zit, vóór je begint.',
         },
         // ⚖️ check: Bij onderhoud of een storing gaat de machine uit. Dan gaat er een slot op de
         //   schakelaar ⚖️.
@@ -751,7 +751,7 @@ export const factoryUnit: RuleUnit = {
           id: 'r.l.factory.1.tf1',
           statement: 'Lock-out betekent: de machine gaat op slot, zodat niemand hem aanzet.',
           answer: true,
-          why: 'Bij onderhoud of een storing gaat de machine uit. Dan gaat er een slot op de schakelaar. Met een kaartje: wie eraan werkt. Zo kan niemand hem per ongeluk aanzetten. Haal nooit het slot van een ander eraf.',
+          why: 'Met een slot op de schakelaar kan niemand de machine per ongeluk aanzetten.', whyMore: 'Bij onderhoud of een storing gaat de machine uit. Dan gaat er een slot op de schakelaar, met een kaartje: wie eraan werkt. Haal nooit het slot van een ander eraf.',
         },
         // ⚖️ check: Haal die nooit weg, en zet die niet uit ⚖️.
         // ⚖️ check: Je werkgever moet zorgen dat machines veilig zijn ⚖️.
@@ -764,7 +764,7 @@ export const factoryUnit: RuleUnit = {
             { id: 'b', text: 'Ze plakt de kap met tape vast, en werkt door.', best: false, feedback: 'Goed bedoeld. Maar zo is het niet veilig genoeg.' },
             { id: 'c', text: 'Ze stopt, en ze meldt de kapotte kap bij Henk.', best: true, feedback: 'Goed. Een machine zonder goede beveiliging is gevaarlijk.' },
           ],
-          why: 'Een kap of hek op een machine beschermt je. Haal die nooit weg, en zet die niet uit. Is er iets kapot? Meld het meteen. Je werkgever moet zorgen dat machines veilig zijn.',
+          why: 'Een kap of hek op een machine beschermt je. Haal die nooit weg.', whyMore: 'Zet die ook niet uit. Is er iets kapot? Meld het meteen. Je werkgever moet zorgen dat machines veilig zijn.',
         },
         {
           kind: 'whoask',
@@ -828,7 +828,7 @@ export const factoryUnit: RuleUnit = {
           id: 'r.l.factory.2.tf1',
           statement: 'Na een nachtdienst mag je meteen weer een dienst draaien.',
           answer: false,
-          why: "Na een nachtdienst heb je lang rust nodig. Stopt je nachtdienst na 2 uur 's nachts? Dan heb je minstens 14 uur rust. Tussen 2 gewone diensten zit meestal minstens 11 uur. Kijk ook in je cao.",
+          why: 'Na een nachtdienst heb je lang rust nodig. Kijk ook in je cao.', whyMore: "Stopt je nachtdienst na 2 uur 's nachts? Dan heb je minstens 14 uur rust. Tussen 2 gewone diensten zit meestal minstens 11 uur.",
         },
         {
           kind: 'whatdo',
@@ -839,7 +839,7 @@ export const factoryUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt: "Te kort na mijn nacht. Morgen wel."', best: true, feedback: 'Goed. Zijn rust is ook voor zijn veiligheid.' },
             { id: 'c', text: 'Hij komt, en hij drinkt de hele dag energiedrank.', best: false, feedback: 'Dat helpt even. Maar hij blijft moe en traag.' },
           ],
-          why: 'Rust heb je echt nodig. Moe werken geeft fouten en ongelukken. Zeg rustig nee, en bied een ander moment aan. Slaap overdag in een donkere, stille kamer.',
+          why: 'Rust heb je echt nodig. Moe werken geeft fouten en ongelukken.', whyMore: 'Zeg rustig nee, en bied een ander moment aan. Slaap overdag in een donkere, stille kamer.',
         },
         // ⚖️ check: Hoeveel je krijgt, staat in je cao of contract ⚖️.
         // ⚖️ check: Niet in de wet ⚖️.
@@ -852,7 +852,7 @@ export const factoryUnit: RuleUnit = {
             { id: 'b', text: 'Hij vraagt het aan een vriend uit een andere fabriek.', best: false, feedback: 'Kan. Maar die heeft misschien een andere cao.' },
             { id: 'c', text: 'Hij denkt: de wet zegt vast hoeveel het is.', best: false, feedback: 'Nee. De toeslag staat niet in de wet.' },
           ],
-          why: 'Ploegentoeslag is extra loon voor werk in ploegen. Hoeveel je krijgt, staat in je cao of contract. Niet in de wet. Zoek je cao online, of vraag het bij de loonadministratie.',
+          why: 'Hoeveel ploegentoeslag je krijgt, staat in je cao of contract. Niet in de wet.', whyMore: 'Ploegentoeslag is extra loon voor werk in ploegen. Zoek je cao online, of vraag het bij de loonadministratie.',
         },
         {
           kind: 'whoask',
@@ -924,7 +924,7 @@ export const warehouseUnit: RuleUnit = {
             { id: 'b', text: 'Hij rijdt, want de collega zegt dat het mag.', best: false, feedback: 'Zijn collega kan dat niet beslissen.' },
             { id: 'c', text: 'Hij zegt: "Ik mag niet rijden. Kan iemand anders?"', best: true, feedback: 'Goed. Zonder opleiding rijd je niet.' },
           ],
-          why: 'Je rijdt alleen op een heftruck als je opgeleid bent. En als je werkgever zegt dat het mag. Een heftruck is zwaar en kan omvallen. Ongelukken met heftrucks komen vaak voor.',
+          why: 'Een heftruck is zwaar en kan omvallen. Ongelukken met heftrucks komen vaak voor.', whyMore: 'Je rijdt alleen op een heftruck als je opgeleid bent. En als je werkgever zegt dat het mag.',
         },
         // ⚖️ check: Er is geen rijbewijs van de overheid voor de heftruck ⚖️.
         // ⚖️ check: Maar je werkgever moet zorgen dat je goed bent opgeleid ⚖️.
@@ -933,7 +933,7 @@ export const warehouseUnit: RuleUnit = {
           id: 'r.l.warehouse.1.tf1',
           statement: 'Voor een heftruck heb je een rijbewijs van de overheid nodig.',
           answer: false,
-          why: 'Er is geen rijbewijs van de overheid voor de heftruck. Maar je werkgever moet zorgen dat je goed bent opgeleid. Daarom vragen veel bedrijven een heftruckcertificaat. Dat haal je met een cursus.',
+          why: 'Je werkgever moet zorgen dat je goed bent opgeleid voor de heftruck.', whyMore: 'Er is geen rijbewijs van de overheid voor de heftruck. Daarom vragen veel bedrijven een heftruckcertificaat. Dat haal je met een cursus.',
         },
         {
           kind: 'whatdo',
@@ -944,7 +944,7 @@ export const warehouseUnit: RuleUnit = {
             { id: 'b', text: 'Hij loopt over de rijbaan, en hij kijkt goed uit.', best: false, feedback: 'Dat is logisch. Maar een bestuurder ziet hem misschien niet.' },
             { id: 'c', text: 'Hij loopt over de rijbaan, met zijn hesje aan.', best: false, feedback: 'Het hesje helpt. Maar de rijbaan is niet om te lopen.' },
           ],
-          why: 'Loop altijd over de looppaden. Een bestuurder van een heftruck ziet niet alles. Moet je toch oversteken? Zoek oogcontact met de bestuurder. Loop nooit vlak achter een heftruck.',
+          why: 'Een bestuurder van een heftruck ziet niet alles. Loop dus over de looppaden.', whyMore: 'Moet je toch oversteken? Zoek oogcontact met de bestuurder. Loop nooit vlak achter een heftruck.',
         },
         {
           kind: 'whoask',
@@ -1005,7 +1005,7 @@ export const warehouseUnit: RuleUnit = {
             { id: 'b', text: 'Ze slaat haar pauze over om meer orders te halen.', best: false, feedback: 'Dat snap ik. Maar pauze is haar recht.' },
             { id: 'c', text: 'Ze tilt twee dozen tegelijk, om sneller te gaan.', best: false, feedback: 'Dat is zwaar voor haar rug. Zo kan ze zich bezeren.' },
           ],
-          why: 'De norm is hoeveel je per uur moet doen. Vraag hoe de norm werkt. Wat telt de scanner mee? Is de norm voor iedereen even hoog? Vraag ook wat beter kan. Je pauze sla je niet over.',
+          why: 'De norm is hoeveel je per uur moet doen. Vraag hoe de norm werkt.', whyMore: 'Wat telt de scanner mee? Is de norm voor iedereen even hoog? Vraag ook wat beter kan. Je pauze sla je niet over.',
         },
         // ⚖️ check: Je werkgever moet dat voorkomen ⚖️.
         // ⚖️ check: Of ga zelf naar de bedrijfsarts ⚖️.
@@ -1014,7 +1014,7 @@ export const warehouseUnit: RuleUnit = {
           id: 'r.l.warehouse.2.tf1',
           statement: 'Je werkgever moet zorgen dat het tempo niet ongezond is.',
           answer: true,
-          why: 'Te hoge werkdruk en te veel tillen maken mensen ziek. Je werkgever moet dat voorkomen. Krijg je klachten van het tempo? Meld het bij je leidinggevende. Of ga zelf naar de bedrijfsarts.',
+          why: 'Te hoge werkdruk maakt mensen ziek. Je werkgever moet dat voorkomen.', whyMore: 'Ook te veel tillen maakt ziek. Krijg je klachten van het tempo? Meld het bij je leidinggevende. Of ga zelf naar de bedrijfsarts.',
         },
         {
           kind: 'whatdo',
@@ -1025,7 +1025,7 @@ export const warehouseUnit: RuleUnit = {
             { id: 'b', text: 'Ze zakt door haar knieën, met de doos dicht bij zich.', best: true, feedback: 'Goed. Zo tilt ze met haar benen, niet met haar rug.' },
             { id: 'c', text: 'Ze trekt de doos snel met één hand van de plank.', best: false, feedback: 'Zo kan ze haar pols of haar rug verrekken.' },
           ],
-          why: 'Zak door je knieën. Houd je rug recht en de doos dicht bij je. Draai niet tijdens het tillen. Te zwaar? Gebruik een hulpmiddel, of vraag een collega.',
+          why: 'Zak door je knieën. Houd je rug recht en de doos dicht bij je.', whyMore: 'Draai niet tijdens het tillen. Te zwaar? Gebruik een hulpmiddel, of vraag een collega.',
         },
         {
           kind: 'whoask',
@@ -1104,7 +1104,7 @@ export const kasUnit: RuleUnit = {
             { id: 'b', text: 'Hij stopt, drinkt water en zegt het tegen zijn leidinggevende.', best: true, feedback: 'Goed. Zo wordt het niet erger.' },
             { id: 'c', text: 'Hij gaat even op de grond zitten, tussen de planten.', best: false, feedback: 'Even zitten helpt. Maar in de kas blijft het heet.' },
           ],
-          why: 'Hitte kan je snel ziek maken. Duizelig, misselijk of hoofdpijn? Stop, drink water en ga naar een koele plek. Zeg het meteen tegen iemand. Je werkgever moet zorgen voor water, pauzes en een koele plek.',
+          why: 'Hitte kan je snel ziek maken. Duizelig of misselijk? Stop en drink water.', whyMore: 'Ook bij hoofdpijn. Ga naar een koele plek, en zeg het meteen tegen iemand. Je werkgever moet zorgen voor water, pauzes en een koele plek.',
         },
         // ⚖️ check: Na het spuiten geldt een wachttijd. Pas daarna mag je weer naar binnen ⚖️ (het
         //   etiket van het middel; Arbobesluit, hoofdstuk 4).
@@ -1113,7 +1113,7 @@ export const kasUnit: RuleUnit = {
           id: 'r.l.kas.1.tf1',
           statement: 'Ruik je niets? Dan kun je een bespoten kas veilig in.',
           answer: false,
-          why: 'Veel spuitmiddelen ruik je niet. Na het spuiten geldt een wachttijd. Pas daarna mag je weer naar binnen. Vaak hangt er een bordje op de deur. Je leidinggevende weet wanneer het weer mag.',
+          why: 'Veel spuitmiddelen ruik je niet. Na het spuiten geldt een wachttijd.', whyMore: 'Pas daarna mag je weer naar binnen. Vaak hangt er een bordje op de deur. Je leidinggevende weet wanneer het weer mag.',
         },
         // ⚖️ check: Je werkgever moet zorgen dat het werk niet te zwaar is ⚖️ (Arbobesluit, art. 5.2
         //   en 5.3: tillen en lichamelijke belasting).
@@ -1126,7 +1126,7 @@ export const kasUnit: RuleUnit = {
             { id: 'b', text: 'Hij stapelt de kratten zo hoog als hij kan.', best: false, feedback: 'Een hoge stapel is zwaar en kan omvallen.' },
             { id: 'c', text: 'Hij buigt zijn knieën en houdt de krat dicht bij zich.', best: true, feedback: 'Goed. Zo spaart hij zijn rug.' },
           ],
-          why: 'Til met gebogen knieën en een rechte rug. Houd de krat dicht bij je lichaam. Draai niet met je rug terwijl je tilt. Veel bukken of tillen? Vraag om een kar, of wissel af met ander werk. Je werkgever moet zorgen dat het werk niet te zwaar is.',
+          why: 'Til met gebogen knieën en een rechte rug. Houd de krat dicht bij je.', whyMore: 'Draai niet met je rug terwijl je tilt. Veel bukken of tillen? Vraag om een kar, of wissel af met ander werk. Je werkgever moet zorgen dat het werk niet te zwaar is.',
         },
         {
           kind: 'whoask',
@@ -1137,7 +1137,7 @@ export const kasUnit: RuleUnit = {
             { id: 'b', who: 'leidinggevende', best: true, feedback: 'Goed. Je leidinggevende weet wanneer je weer naar binnen mag.' },
             { id: 'c', who: 'huisarts', best: false, feedback: 'De huisarts helpt als je klachten hebt. Voorkom het liever.' },
           ],
-          why: 'Je leidinggevende weet wanneer de wachttijd voorbij is. Krijg je geen duidelijk antwoord? Dan kun je de Nederlandse Arbeidsinspectie bellen.',
+          why: 'Je leidinggevende weet wanneer de wachttijd voorbij is.', whyMore: 'Krijg je geen duidelijk antwoord? Dan kun je de Nederlandse Arbeidsinspectie bellen.',
         },
         { kind: 'model', id: 'r.l.kas.1.mo1', context: 'Je ziet een bordje op de deur van de kas.', nl: 'Er hangt een bordje op de deur. Mag ik al naar binnen?' },
       ],
@@ -1192,14 +1192,14 @@ export const kasUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt niets. Bij stukloon is weinig loon in het begin normaal.', best: false, feedback: 'Dat snap ik. Maar ook bij stukloon geldt het minimumloon per uur.' },
             { id: 'c', text: 'Ze gaat sneller werken en slaat haar pauzes over.', best: false, feedback: 'Ik snap het. Maar pauzes heeft ze nodig, en haar loon moet nu al kloppen.' },
           ],
-          why: 'Ook bij stukloon moet je minstens het minimumloon per uur krijgen. Hoeveel dat is, staat op rijksoverheid.nl. Klopt je loon niet? Vraag om uitleg. Krijg je geen goed antwoord? Vraag hulp bij de vakbond of het Juridisch Loket.',
+          why: 'Ook bij stukloon moet je minstens het minimumloon per uur krijgen.', whyMore: 'Hoeveel dat is, staat op rijksoverheid.nl. Klopt je loon niet? Vraag om uitleg. Krijg je geen goed antwoord? Vraag hulp bij de vakbond of het Juridisch Loket.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.kas.2.tf1',
           statement: 'Bij stukloon is het niet nodig om je uren op te schrijven.',
           answer: false,
-          why: 'Schrijf altijd je uren op. Wanneer begin je, hoe lang is je pauze, wanneer stop je? Schrijf ook je kratten of rijen op. Dan kun je je loonstrook controleren.',
+          why: 'Schrijf je uren op. Dan kun je je loonstrook controleren.', whyMore: 'Wanneer begin je, hoe lang is je pauze, wanneer stop je? Schrijf ook je kratten of rijen op.',
         },
         // ⚖️ check: Op je loonstrook staat wat er van je loon af gaat, en waarvoor ⚖️ (BW 7:626).
         // ⚖️ check: Voor een huis via je werk mag maar een deel van je loon eraf ⚖️ (Wet minimumloon,
@@ -1214,7 +1214,7 @@ export const kasUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt het uitzendbureau wat er van haar loon af gaat.', best: true, feedback: 'Goed. Zo weet ze waar ze voor betaalt.' },
             { id: 'c', text: 'Ze stopt meteen met werken en zoekt een ander huis.', best: false, feedback: 'Dat is een grote stap. Eerst vragen is beter.' },
           ],
-          why: 'Op je loonstrook staat wat er van je loon af gaat, en waarvoor. Voor een huis via je werk mag maar een deel van je loon eraf. Begrijp je het niet? Vraag het na. Kijk ook in je cao.',
+          why: 'Voor een huis via je werk mag maar een deel van je loon eraf.', whyMore: 'Op je loonstrook staat wat er van je loon af gaat, en waarvoor. Begrijp je het niet? Vraag het na. Kijk ook in je cao.',
         },
         {
           kind: 'whoask',
@@ -1225,7 +1225,7 @@ export const kasUnit: RuleUnit = {
             { id: 'b', who: 'gemeente', best: false, feedback: 'De gemeente helpt bij veel dingen. Maar je loon controleert iemand anders.' },
             { id: 'c', who: 'arbeidsinspectie', best: true, feedback: 'Goed. De Arbeidsinspectie controleert of je het minimumloon krijgt.' },
           ],
-          why: 'De Nederlandse Arbeidsinspectie controleert het minimumloon. Je kunt daar een melding doen. Ook de vakbond en het Juridisch Loket helpen je.',
+          why: 'De Nederlandse Arbeidsinspectie controleert het minimumloon. Je kunt daar een melding doen.', whyMore: 'Ook de vakbond en het Juridisch Loket helpen je.',
         },
         { kind: 'model', id: 'r.l.kas.2.mo1', context: 'Je wilt je uren vergelijken met je loonstrook.', nl: 'Ik heb mijn uren en kratten opgeschreven. Klopt mijn loon?' },
       ],
@@ -1290,7 +1290,7 @@ export const techniekUnit: RuleUnit = {
             { id: 'b', text: 'Ze houdt haar hoofd ver weg van de slijpschijf.', best: false, feedback: 'Goed bedoeld. Maar vonken en spanen vliegen ver.' },
             { id: 'c', text: 'Ze haalt eerst haar bril uit haar kluisje.', best: true, feedback: 'Goed. Die minuut is het waard.' },
           ],
-          why: 'Bij slijpen, boren en zagen vliegen er vonken en spanen. Die kunnen je oog beschadigen, in 1 seconde. Draag altijd je veiligheidsbril. Je werkgever geeft hem gratis.',
+          why: 'Vonken en spanen kunnen je oog beschadigen, in 1 seconde.', whyMore: 'Die vliegen bij slijpen, boren en zagen. Draag altijd je veiligheidsbril. Je werkgever geeft hem gratis.',
         },
         // ⚖️ check: Is het lawaai hard? Dan moet je gehoorbescherming dragen ⚖️ (Arbobesluit art. 6.9:
         //   vanaf 85 dB(A)).
@@ -1300,7 +1300,7 @@ export const techniekUnit: RuleUnit = {
           id: 'r.l.techniek.1.tf1',
           statement: 'Bij hard lawaai mag je zelf kiezen of je gehoorbescherming draagt.',
           answer: false,
-          why: 'Is het lawaai hard? Dan moet je gehoorbescherming dragen. Je werkgever geeft die gratis. Gehoorschade gaat niet meer over. Je merkt het vaak pas na jaren.',
+          why: 'Gehoorschade gaat niet meer over. Je merkt het vaak pas na jaren.', whyMore: 'Is het lawaai hard? Dan moet je gehoorbescherming dragen. Je werkgever geeft die gratis.',
         },
         {
           kind: 'whatdo',
@@ -1311,7 +1311,7 @@ export const techniekUnit: RuleUnit = {
             { id: 'b', text: 'Ze blaast ze weg met de luchtslang.', best: false, feedback: 'Dat is logisch. Maar dan vliegen de spanen alle kanten op.' },
             { id: 'c', text: 'Ze veegt ze met haar hand in de bak.', best: false, feedback: 'Spanen zijn scherp. Zo snijdt ze in haar hand.' },
           ],
-          why: 'Metalen spanen zijn scherp en soms heet. Pak ze niet met je blote hand. Gebruik een borstel of een kwast. Blaas ze niet weg met de luchtslang. Dan vliegen ze in iemands oog.',
+          why: 'Metalen spanen zijn scherp en soms heet. Pak ze niet met je blote hand.', whyMore: 'Gebruik een borstel of een kwast. Blaas ze niet weg met de luchtslang. Dan vliegen ze in iemands oog.',
         },
         // ⚖️ check: Dat heet heet werk ⚖️ (vonken kunnen ver vliegen en brand geven;
         //   Verbond van Verzekeraars, "Brandgevaarlijke werkzaamheden"; vaak een werkvergunning en een
@@ -1321,7 +1321,7 @@ export const techniekUnit: RuleUnit = {
           id: 'r.l.techniek.1.tf2',
           statement: 'Vonken van slijpen of lassen kunnen een brand geven.',
           answer: true,
-          why: 'Vonken vliegen ver. Ze kunnen karton, hout of verf laten branden. Dat heet heet werk. Haal eerst weg wat kan branden. Vraag of er een blusser klaarstaat. Soms blijft iemand na het werk nog kijken.',
+          why: 'Vonken vliegen ver. Ze kunnen karton, hout of verf laten branden.', whyMore: 'Dat heet heet werk. Haal eerst weg wat kan branden. Vraag of er een blusser klaarstaat. Soms blijft iemand na het werk nog kijken.',
         },
         { kind: 'model', id: 'r.l.techniek.1.mo1', context: 'Je kunt je veiligheidsbril niet vinden.', nl: 'Ik heb geen veiligheidsbril. Waar kan ik er een halen?' },
       ],
@@ -1378,14 +1378,14 @@ export const techniekUnit: RuleUnit = {
             { id: 'b', text: 'Hij belt Henk, en vraagt wie meet of het uit is.', best: true, feedback: 'Goed. Eerst zeker weten, dan pas werken.' },
             { id: 'c', text: 'Hij pakt de draden alleen vast met handschoenen aan.', best: false, feedback: 'Gewone werkhandschoenen beschermen niet tegen stroom.' },
           ],
-          why: 'Een klant zet soms de verkeerde knop uit. Werk alleen aan stroom als je het geleerd hebt, en als het mag. Eerst gaat de stroom eraf. Dan meet iemand of het echt uit is.',
+          why: 'Een klant zet soms de verkeerde knop uit. Daarom meet iemand of de stroom echt uit is.', whyMore: 'Werk alleen aan stroom als je het geleerd hebt, en als het mag. Eerst gaat de stroom eraf. Dan meet iemand of het echt uit is.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.techniek.2.tf1',
           statement: 'Een kabel met een klein scheurtje mag je nog even gebruiken.',
           answer: false,
-          why: 'Een kapotte kabel of stekker is gevaarlijk. Je kunt een schok krijgen, of er komt brand. Gebruik hem niet. Leg hem apart, en meld het. Dan kan iemand hem maken of weggooien.',
+          why: 'Een kapotte kabel of stekker kan een schok of brand geven.', whyMore: 'Gebruik hem niet. Leg hem apart, en meld het. Dan kan iemand hem maken of weggooien.',
         },
         // ⚖️ check: Je leidinggevende zegt wie aan stroom mag werken ⚖️ (NEN 3140: de werkgever wijst
         //   aan; daar hoort een opleiding bij).
@@ -1398,7 +1398,7 @@ export const techniekUnit: RuleUnit = {
             { id: 'b', who: 'arbeidsinspectie', best: false, feedback: 'De Arbeidsinspectie controleert bedrijven. Vraag het eerst op je werk.' },
             { id: 'c', who: 'leidinggevende', best: true, feedback: 'Goed. Je leidinggevende weet wie dat mag.' },
           ],
-          why: 'Je leidinggevende zegt wie aan stroom mag werken. Daar is een opleiding voor nodig. Weet je het niet zeker? Vraag het altijd eerst.',
+          why: 'Je leidinggevende zegt wie aan stroom mag werken. Daar is een opleiding voor nodig.', whyMore: 'Weet je het niet zeker? Vraag het altijd eerst.',
         },
         { kind: 'model', id: 'r.l.techniek.2.mo1', context: 'Je moet een stopcontact vervangen bij een klant.', nl: 'Is de stroom er echt af? Wie kan dat even meten?' },
       ],
@@ -1463,14 +1463,14 @@ export const werkplaatsUnit: RuleUnit = {
             { id: 'b', text: 'Hij zet een tweede krik naast de eerste.', best: false, feedback: 'Goed bedoeld. Maar ook twee krikken staan niet vast.' },
             { id: 'c', text: 'Hij vraagt of de auto eerst op bokken kan.', best: true, feedback: 'Goed. Op bokken staat de auto vast.' },
           ],
-          why: 'Een krik is alleen om de auto op te tillen. Een krik kan wegzakken of wegglijden. Ga pas onder een auto als hij op de brug of op bokken staat. Weet je niet hoe dat moet? Vraag het eerst.',
+          why: 'Een krik kan wegzakken of wegglijden. Hij is alleen om de auto op te tillen.', whyMore: 'Ga pas onder een auto als hij op de brug of op bokken staat. Weet je niet hoe dat moet? Vraag het eerst.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.werkplaats.1.tf1',
           statement: 'Gemorste olie op de vloer ruim je meteen op.',
           answer: true,
-          why: 'Olie op de vloer is erg glad. Iemand kan uitglijden en vallen. Ruim het meteen op, met korrels of een doek. De vuile doeken gaan in de bak voor gevaarlijk afval.',
+          why: 'Olie op de vloer is erg glad. Iemand kan uitglijden en vallen.', whyMore: 'Ruim het meteen op, met korrels of een doek. De vuile doeken gaan in de bak voor gevaarlijk afval.',
         },
         // ⚖️ check: Oude olie, remvloeistof en accu's zijn gevaarlijk afval ⚖️ (Wet milieubeheer;
         //   lozen in het riool mag niet, Activiteitenbesluit).
@@ -1483,7 +1483,7 @@ export const werkplaatsUnit: RuleUnit = {
             { id: 'b', text: 'Hij doet de olie in een fles, bij het gewone afval.', best: false, feedback: 'Olie is gevaarlijk afval. Dat hoort niet bij het gewone afval.' },
             { id: 'c', text: 'Hij giet de olie in het vat voor oude olie.', best: true, feedback: 'Goed. Een bedrijf haalt de olie dan veilig op.' },
           ],
-          why: "Oude olie, remvloeistof en accu's zijn gevaarlijk afval. Ze gaan niet in de put, en niet bij het gewone afval. In de garage staan aparte vaten en bakken. Vraag waar ze staan.",
+          why: "Oude olie, remvloeistof en accu's zijn gevaarlijk afval.", whyMore: 'Ze gaan niet in de put, en niet bij het gewone afval. In de garage staan aparte vaten en bakken. Vraag waar ze staan.',
         },
         { kind: 'model', id: 'r.l.werkplaats.1.mo1', context: 'De auto staat alleen op een krik.', nl: 'De auto staat nog op de krik. Kunnen we hem eerst op bokken zetten?' },
       ],
@@ -1544,7 +1544,7 @@ export const werkplaatsUnit: RuleUnit = {
             { id: 'b', text: '4 winterbanden. De remmen meldt hij.', best: true, feedback: 'Goed. Dat staat op de werkorder.' },
             { id: 'c', text: 'Alleen de remmen. Dat is belangrijker.', best: false, feedback: 'De klant vroeg om banden. Over de remmen beslist de klant.' },
           ],
-          why: 'Op de werkorder staat wat de klant wil. Zie je nog iets wat kapot is? Schrijf het op, en zeg het tegen je chef. Die belt de klant. Pas als de klant ja zegt, doe je het extra werk.',
+          why: 'De klant beslist over extra werk. Je chef belt de klant.', whyMore: 'Op de werkorder staat wat de klant wil. Zie je nog iets wat kapot is? Schrijf het op, en zeg het tegen je chef. Pas als de klant ja zegt, doe je het extra werk.',
         },
         // ⚖️ check: Anders hoeft de klant er meestal niet voor te betalen ⚖️ (meerwerk zonder
         //   opdracht; BOVAG-voorwaarden; art. 7:405 BW).
@@ -1553,7 +1553,7 @@ export const werkplaatsUnit: RuleUnit = {
           id: 'r.l.werkplaats.2.tf1',
           statement: 'Een klant betaalt ook voor extra werk als ze geen ja zei.',
           answer: false,
-          why: 'Extra werk doe je pas als de klant ja zegt. Anders hoeft de klant er meestal niet voor te betalen. Daarom belt je chef of de receptie de klant eerst. Schrijf op wat de klant zei, en wanneer.',
+          why: 'Zonder ja van de klant hoeft die er meestal niet voor te betalen.', whyMore: 'Extra werk doe je pas als de klant ja zegt. Daarom belt je chef of de receptie de klant eerst. Schrijf op wat de klant zei, en wanneer.',
         },
         // ⚖️ check: Op de openbare weg mag je alleen rijden met een rijbewijs ⚖️ (Wegenverkeerswet
         //   1994 art. 107).
@@ -1566,7 +1566,7 @@ export const werkplaatsUnit: RuleUnit = {
             { id: 'b', text: 'Hij rijdt, en vraagt een collega om naast hem te zitten.', best: false, feedback: 'Ook met een collega naast hem mag hij niet rijden.' },
             { id: 'c', text: 'Hij zegt eerlijk dat hij geen rijbewijs heeft.', best: true, feedback: 'Goed. Dan maakt een collega de proefrit.' },
           ],
-          why: 'Op de openbare weg mag je alleen rijden met een rijbewijs. Ook voor een kort rondje. Zeg het eerlijk als je geen rijbewijs hebt. Een proefrit maak je ook alleen als je chef het vraagt.',
+          why: 'Op de openbare weg mag je alleen rijden met een rijbewijs. Ook voor een kort rondje.', whyMore: 'Zeg het eerlijk als je geen rijbewijs hebt. Een proefrit maak je ook alleen als je chef het vraagt.',
         },
         { kind: 'model', id: 'r.l.werkplaats.2.mo1', context: 'Je ziet extra werk aan een auto. Je zegt het tegen je chef.', nl: 'De remmen zijn bijna op. Wil je de klant even bellen?' },
       ],

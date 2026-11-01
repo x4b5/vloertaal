@@ -57,7 +57,7 @@ export const digitaalUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt nee, en hij vraagt hulp in de bibliotheek.', best: true, feedback: 'Goed. Daar helpen ze gratis, en veilig.' },
             { id: 'c', text: 'Hij geeft alleen zijn wachtwoord, niet zijn naam.', best: false, feedback: 'Met zijn wachtwoord kunnen ze ook alles.' },
           ],
-          why: 'Je DigiD is alleen van jou. Je geeft hem nooit aan iemand anders. Ook niet aan je werkgever of uitzendbureau. Wil iemand je helpen? Dat kan veilig met DigiD Machtigen.',
+          why: 'Je DigiD is alleen van jou. Geef hem aan niemand, ook niet aan je werkgever.', whyMore: 'Ook niet aan je uitzendbureau. Wil iemand je helpen? Dat kan veilig met DigiD Machtigen.',
         },
         // ⚖️ check: Je hebt een BSN nodig, en een adres in Nederland ⚖️.
         // ⚖️ check: Je krijgt een brief met een code ⚖️.
@@ -67,7 +67,7 @@ export const digitaalUnit: RuleUnit = {
           id: 'r.l.digitaal.1.tf1',
           statement: 'Vraag je DigiD aan? Dan krijg je een code per post.',
           answer: true,
-          why: 'Je vraagt DigiD aan op digid.nl. Je hebt een BSN nodig, en een adres in Nederland. Je krijgt een brief met een code. Daarmee zet je DigiD aan. Doe dat snel: de code werkt maar kort. Met de DigiD app log je daarna makkelijk in.',
+          why: 'Je vraagt DigiD aan op digid.nl. Je hebt een BSN en een adres in Nederland nodig.', whyMore: 'Je krijgt een brief met een code. Daarmee zet je DigiD aan. Doe dat snel: de code werkt maar kort. Met de DigiD app log je daarna makkelijk in.',
         },
         {
           kind: 'whatdo',
@@ -78,7 +78,7 @@ export const digitaalUnit: RuleUnit = {
             { id: 'b', text: 'Ze zet de computer uit met de knop.', best: false, feedback: 'Dan is ze misschien niet goed uitgelogd.' },
             { id: 'c', text: 'Ze logt uit, en dan gaat ze weg.', best: true, feedback: 'Goed. Zo blijft haar account van haar.' },
           ],
-          why: 'Op een gedeelde computer log je altijd uit. Anders kan een ander in jouw account. Bijvoorbeeld in je rooster of je loonstrook. Zet ook je telefoon op slot.',
+          why: 'Op een gedeelde computer log je altijd uit. Anders kan een ander in jouw account.', whyMore: 'Bijvoorbeeld in je rooster of je loonstrook. Zet ook je telefoon op slot.',
         },
         {
           kind: 'whoask',
@@ -89,7 +89,7 @@ export const digitaalUnit: RuleUnit = {
             { id: 'b', who: 'bibliotheek', best: true, feedback: 'Goed. Daar helpen ze je gratis en veilig.' },
             { id: 'c', who: 'collega', best: false, feedback: 'Goed bedoeld. Maar je DigiD geef je aan niemand.' },
           ],
-          why: 'In de bibliotheek is een Informatiepunt Digitale Overheid. Daar helpen ze je gratis. Ook de gemeente kan je helpen.',
+          why: 'In de bibliotheek helpen ze je gratis, bij het Informatiepunt Digitale Overheid.', whyMore: 'Ook de gemeente kan je helpen.',
         },
         { kind: 'model', id: 'r.l.digitaal.1.mo1', context: 'Iemand vraagt om je DigiD.', nl: 'Mijn DigiD geef ik niet. Kunt u mij op een andere manier helpen?' },
       ],
@@ -137,14 +137,14 @@ export const digitaalUnit: RuleUnit = {
             { id: 'b', text: 'Ze stuurt de mail door naar haar collega\'s.', best: false, feedback: 'Dan klikken zij er misschien op.' },
             { id: 'c', text: 'Ze klikt niet. Ze opent zelf de app van haar werk.', best: true, feedback: 'Goed. Daar ziet ze of de loonstrook er echt is.' },
           ],
-          why: 'Haast, dreigen en een knop: zo herken je phishing. Phishing is een nepbericht om je gegevens te stelen. Klik niet. Ga zelf naar de echte app of website. Meld de mail bij je werk.',
+          why: 'Haast, dreigen en een knop: zo herken je phishing. Klik niet.', whyMore: 'Phishing is een nepbericht om je gegevens te stelen. Ga zelf naar de echte app of website. Meld de mail bij je werk.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.digitaal.2.tf1',
           statement: 'Een kort wachtwoord met je naam en je geboortejaar is veilig genoeg.',
           answer: false,
-          why: 'Je naam en geboortejaar zijn makkelijk te raden. Een lang wachtwoord is veel sterker. Bijvoorbeeld vier gewone woorden achter elkaar. Dat onthoud je ook makkelijk. Gebruik niet overal hetzelfde wachtwoord.',
+          why: 'Je naam en geboortejaar zijn makkelijk te raden. Een lang wachtwoord is veel sterker.', whyMore: 'Bijvoorbeeld vier gewone woorden achter elkaar. Dat onthoud je ook makkelijk. Gebruik niet overal hetzelfde wachtwoord.',
         },
         {
           kind: 'whatdo',
@@ -155,7 +155,7 @@ export const digitaalUnit: RuleUnit = {
             { id: 'b', text: 'Hij verandert meteen zijn wachtwoord en meldt het.', best: true, feedback: 'Goed. Hoe sneller, hoe beter.' },
             { id: 'c', text: 'Hij gooit de mail weg. Dan is het probleem weg.', best: false, feedback: 'De mail is weg. Maar oplichters hebben zijn wachtwoord nu.' },
           ],
-          why: 'Snel zijn helpt. Verander je wachtwoord meteen. Meld het bij je leidinggevende of de ICT-afdeling. Gaat het om je bank? Bel dan meteen je bank. Dit gebeurt bij veel mensen. Schaam je niet.',
+          why: 'Snel zijn helpt. Verander je wachtwoord meteen en meld het op je werk.', whyMore: 'Meld het bij je leidinggevende of de ICT-afdeling. Gaat het om je bank? Bel dan meteen je bank. Dit gebeurt bij veel mensen. Schaam je niet.',
         },
         {
           kind: 'whoask',
@@ -166,7 +166,7 @@ export const digitaalUnit: RuleUnit = {
             { id: 'b', who: 'collega', best: false, feedback: 'Een collega kan je account niet beveiligen.' },
             { id: 'c', who: 'ict', best: true, feedback: 'Goed. De ICT-afdeling kan je account snel beveiligen.' },
           ],
-          why: 'Meld het meteen bij de ICT-afdeling of je leidinggevende. Gaat het om je bank? Bel dan meteen je bank.',
+          why: 'Meld het meteen bij de ICT-afdeling of je leidinggevende.', whyMore: 'Gaat het om je bank? Bel dan meteen je bank.',
         },
         { kind: 'model', id: 'r.l.digitaal.2.mo1', context: 'Je hebt op een rare link geklikt.', nl: 'Ik heb op een rare link geklikt. Wat moet ik doen?' },
       ],
@@ -214,14 +214,14 @@ export const digitaalUnit: RuleUnit = {
             { id: 'b', text: 'Hij gelooft de chatbot. Die weet het vast.', best: false, feedback: 'Dat is logisch. Maar AI kan het mis hebben, ook als het zeker klinkt.' },
             { id: 'c', text: 'Hij belt boos naar zijn werk. Hij wil zijn geld.', best: false, feedback: 'Eerst checken. Het antwoord van de chatbot kan fout zijn.' },
           ],
-          why: 'AI kan een brief goed uitleggen. Maar AI maakt ook fouten, en klinkt toch zeker. Gaat het om je contract of je loon? Check het bij een mens. Bijvoorbeeld bij HR of je leidinggevende.',
+          why: 'AI kan een brief goed uitleggen. Maar AI maakt ook fouten, en klinkt toch zeker.', whyMore: 'Gaat het om je contract of je loon? Check het bij een mens. Bijvoorbeeld bij HR of je leidinggevende.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.digitaal.3.tf1',
           statement: 'Je mag namen en adressen van klanten in een chatbot zetten. Dan werk je sneller.',
           answer: false,
-          why: 'Het bedrijf achter de chatbot kan bewaren wat je erin zet. Zet er dus geen persoonsgegevens in. Geen BSN, wachtwoord of bankgegevens. En geen namen of foto\'s van klanten, patiënten of collega\'s. Ook geen papieren van je werk. Vraag eerst naar de regels voor AI op je werk.',
+          why: 'Het bedrijf achter de chatbot kan bewaren wat je erin zet. Zet er dus geen persoonsgegevens in.', whyMore: "Geen BSN, wachtwoord of bankgegevens. En geen namen of foto's van klanten, patiënten of collega's. Ook geen papieren van je werk. Vraag eerst naar de regels voor AI op je werk.",
         },
         {
           kind: 'whatdo',
@@ -233,7 +233,7 @@ export const digitaalUnit: RuleUnit = {
             { id: 'b', text: 'Ze belt zelf terug, op het nummer dat ze kent.', best: true, feedback: 'Goed. Zo weet ze zeker wie het is.' },
             { id: 'c', text: 'Ze vraagt in een bericht: "Ben jij het echt?"', best: false, feedback: 'Een oplichter zegt gewoon ja.' },
           ],
-          why: 'Met AI kunnen oplichters een stem of een filmpje nadoen. Haast, geld of een code, en een nieuw nummer? Dat is een alarm. Stuur niets. Bel zelf terug op het nummer dat je kent.',
+          why: 'Oplichters kunnen met AI een stem of een filmpje nadoen. Stuur niets, en bel zelf terug.', whyMore: 'Haast, geld of een code, en een nieuw nummer? Dat is een alarm. Bel terug op het nummer dat je kent.',
         },
         // ⚖️ check: AVG art. 22 (geen besluit alleen door een computer; een mens laten kijken,
         //   je mening geven, bezwaar maken) en art. 13–15 (uitleg over de logica van het besluit).
@@ -242,7 +242,7 @@ export const digitaalUnit: RuleUnit = {
           id: 'r.l.digitaal.3.tf2',
           statement: 'Een computer beslist dat je minder uren krijgt. Je mag vragen dat een mens ernaar kijkt.',
           answer: true,
-          why: 'Beslist een computer alleen over iets belangrijks voor jou? Bijvoorbeeld minder uren of ontslag? Dan mag je om uitleg vragen. En je mag vragen dat een mens ernaar kijkt. Dat staat in de privacywet (AVG).',
+          why: 'Beslist alleen een computer over iets belangrijks voor jou? Dan mag je om uitleg vragen.', whyMore: 'Bijvoorbeeld over minder uren of ontslag. Je mag ook vragen dat een mens ernaar kijkt. Dat staat in de privacywet (AVG).',
         },
         // ⚖️ check: AI-verordening (EU) 2024/1689, art. 5 lid 1 sub f (emotieherkenning op het werk
         //   verboden, behalve om medische redenen of voor de veiligheid), geldt sinds 2 februari 2025
@@ -256,7 +256,7 @@ export const digitaalUnit: RuleUnit = {
             { id: 'b', text: 'Prima. De baas heeft het vooraf in een mail gezegd.', best: false, feedback: 'Vooraf zeggen is niet genoeg. Dit mag op het werk niet.' },
             { id: 'c', text: 'Ik vraag het de ondernemingsraad of de vakbond.', best: true, feedback: 'Goed. Dit mag niet zomaar. Zij kunnen er iets aan doen.' },
           ],
-          why: 'Een computer mag op het werk niet je gevoelens lezen. Dat staat in de Europese AI-wet. Alleen voor je gezondheid of je veiligheid mag het wel. Heeft je bedrijf een ondernemingsraad? Dan moet die instemmen met systemen die personeel volgen.',
+          why: 'Een computer mag op het werk niet je gevoelens lezen. Dat staat in de Europese AI-wet.', whyMore: 'Alleen voor je gezondheid of je veiligheid mag het wel. Heeft je bedrijf een ondernemingsraad? Dan moet die instemmen met systemen die personeel volgen.',
         },
         {
           kind: 'whoask',
@@ -267,7 +267,7 @@ export const digitaalUnit: RuleUnit = {
             { id: 'b', who: 'leidinggevende', best: true, feedback: 'Goed. Die weet wat de regels op jouw werk zijn.' },
             { id: 'c', who: 'bank', best: false, feedback: 'Je bank gaat over je geld, niet over je werk.' },
           ],
-          why: 'Veel bedrijven hebben regels voor AI. Vraag je leidinggevende wat mag. Soms weet de ICT-afdeling het ook.',
+          why: 'Veel bedrijven hebben regels voor AI. Vraag je leidinggevende wat mag.', whyMore: 'Soms weet de ICT-afdeling het ook.',
         },
         { kind: 'model', id: 'r.l.digitaal.3.mo1', context: 'Je wilt weten of je AI mag gebruiken.', nl: 'Mag ik hier AI voor gebruiken?' },
       ],
