@@ -29,7 +29,7 @@ zelf een kaart, als plaatje, in het Nederlands:
 - op hoeveel dagen de leerling oefende in de laatste 4 weken;
 - de laatste les, met de datum;
 - de toets "Wat ken je al?" als die gedaan is: instap en/of eind, per onderdeel (luisteren,
-  woorden, zinnen) het aantal goed van de 6. Alleen in het spoor Taal;
+  woorden, zinnen) het aantal goed (van de 7, in de oude vorm van de 6). Alleen in het spoor Taal;
 - de datum van vandaag.
 
 De kaart geeft **geen oordeel en geen niveau** (geen ERK). Hij laat zien wat er gedaan is, niet

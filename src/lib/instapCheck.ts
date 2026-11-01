@@ -17,7 +17,7 @@ export { hasCheck, lessonViaCheck } from './certificate';
  * with a short check of 5 questions, instead of doing every lesson. Only in the language track.
  *
  *  - Who: the start test done, with at least CHECK_TOETS_MIN of 6 right in Woorden and in
- *    Luisteren. No start test: no check (and no button).
+ *    Luisteren (form 1; form 2 has 7 a part: the same share, guessing taken out, see checkLevel). No start test: no check (and no button).
  *  - Which topics: those of CHECK_THEMES (Starten), the first topics of the path.
  *  - The check: 5 questions (CHECK_KINDS), with the lesson player and a fixed list of kinds.
  *    Passed with at least CHECK_PASS right the first time.
@@ -33,7 +33,7 @@ export { hasCheck, lessonViaCheck } from './certificate';
 
 /** The themes whose topics a check can tick off. */
 export const CHECK_THEMES: readonly ThemeId[] = ['theme.start'];
-/** The start test: at least this many right in Woorden and in Luisteren (of 6 each). */
+/** The start test: at least this many right in Woorden and in Luisteren, of 6 (form 1; form 2: the same share of 7). */
 export const CHECK_TOETS_MIN = 5;
 /** The check's questions, in this order. */
 export const CHECK_KINDS = ['meaning', 'dutch', 'listen', 'build', 'chat'] as const;
