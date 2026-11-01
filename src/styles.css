@@ -4780,3 +4780,8 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 }
 .kaart-name-input.is-empty { translate: 0 -50%; height: 10cqw; }
 .kaart-name-input:focus { outline: none; }
+/* 6. No logo in the top bar: the day count and the words sit at the end of the row. */
+.topbar { justify-content: flex-end; }
+/* 7. The bottom bar shows icons; only the tab you are on has its word under it. */
+.nav-tab-on .nav-help-only { font-size: 0.8rem; font-weight: 650; color: var(--ink); }
+.bottom-nav .nav-tab { min-height: 60px; }

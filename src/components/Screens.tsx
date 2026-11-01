@@ -338,11 +338,9 @@ export function TopBar({ streak, words, lang, done = false, quiet = false, greet
   // Right to left (Arabic, Persian, Dari): the logo moves to the right, the stats and the flag to the left.
   return (
     <header className="topbar" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
-      {/* The home's one heading: the name. Named here, as the wordmark is hidden on a phone. */}
-      <h1 className="brand" aria-label="Vloertaal" lang="nl">
-        <LogoMark size={36} />
-        <Wordmark className="topbar-wordmark" />
-      </h1>
+      {/* The home's one heading: the name, for screen readers only. No logo here ("Vloertaal
+          rustiger": it told nothing new, the app's icon is already on the phone). */}
+      <h1 className="brand sr-only" lang="nl">Vloertaal</h1>
       {greeting}
       {quiet && (
         <span className="sound-off-mark" role="img" aria-label={said(ui('withoutSound', lang))} lang={saidLang(ui('withoutSound', lang))} title={ui('withoutSound', lang).help ?? said(ui('withoutSound', lang))}>
@@ -400,10 +398,14 @@ export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab:
             onClick={() => onTab(tab)}
           >
             <span className="nav-icon" aria-hidden><Icon size={26} /></span>
-            <span className="nav-label" lang="nl" aria-hidden>{nl === 'Instellingen' ? 'Instel\u00adlingen' : nl}</span>
-            {dutch ? null : word.help && lang
-              ? <HelpText className="nav-help" text={word.help} lang={lang} />
-              : <span className="nav-help" lang="en" aria-hidden>{word.en}</span>}
+            {/* Icons only ("Vloertaal rustiger"); the tab you are on keeps one word under its
+                icon (in the help language; in Werkregels in Dutch), so you know where you are.
+                Every tab still says its name to a screen reader (aria-label). */}
+            {current === tab && (dutch
+              ? <span className="nav-label" lang="nl" aria-hidden>{nl}</span>
+              : word.help && lang
+                ? <HelpText className="nav-help nav-help-only" text={word.help} lang={lang} />
+                : <span className="nav-help nav-help-only" lang="en" aria-hidden>{word.en}</span>)}
           </button>
         );
       })}

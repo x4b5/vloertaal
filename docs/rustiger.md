@@ -30,12 +30,18 @@ regels die we in de code aanhouden, en wat er al gedaan is.
   - lichtere luidsprekers bij antwoorden;
   - rustiger label boven de oefening;
   - de andere antwoorden worden zachter zodra je kiest.
+- **Minder herhaling:**
+  - geen label boven de oefening;
+  - geen "Goed zo!" bij een goed antwoord.
+- **Bovenbalk en onderbalk:**
+  - geen logo in de bovenbalk;
+  - de onderbalk toont alleen iconen, en alleen het tabblad waar je bent heeft zijn woord eronder (in de hulptaal, in Werkregels in het Nederlands);
+  - een schermlezer hoort bij elk tabblad nog steeds de naam.
 
 ## Volgende stappen (met de keuzes van de eigenaar)
 
 - **Fase 2:**
   - één label boven de oefening;
-  - onderbalk alleen in de hulptaal, met icoon (in Werkregels Nederlands);
   - rustiger startpagina: de ballon van Bram alleen de eerste dagen, de reeks en de woorden klein in één regel;
   - een info-knop voor de juridische regel onder tips, uitleg in Instellingen en de lange tekst bij Over.
 - **Fase 3:** "Rustig scherm" bij Instellingen › Les: geen animaties, geen feestje, geen reeks op de
