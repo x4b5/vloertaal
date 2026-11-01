@@ -259,6 +259,13 @@ export const uiEn = {
   micRetry: 'Try the microphone again',
   /** Speaking after the microphone failed (here or earlier in the lesson): no "No microphone needed" next to a retry. */
   micFailed: 'The microphone did not work. Say it out loud, then go on.',
+  /* The browser refused the microphone (src/lib/micHelp.ts): say so, a button, then this phone's steps. */
+  micRefused: "The app may not use your microphone. You can turn it on.",
+  micTurnOn: "Turn on the microphone",
+  micStepsIos: "Tap “aA” in the address bar › Website Settings › Microphone › Allow. Or: Settings › Apps › Safari › Microphone. Then tap the button below.",
+  micStepsAndroid: "Tap the icon left of the web address › Permissions › Microphone › Allow. Then tap the button below.",
+  micStepsAndroidApp: "Hold the Vloertaal icon on your home screen › App info › Permissions › Microphone › Allow. Then tap the button below.",
+  micStepsDesktop: "Click the icon left of the web address › Microphone › Allow. Then click the button below.",
   /** Picture choice: the Dutch word is said and written, the learner picks its picture. */
   whichPicture: 'Which picture is it?',
   /** After building a sentence with wrong taps. */
@@ -504,6 +511,10 @@ export const uiEn = {
   shareInvite: 'I am learning Dutch for my work with Vloertaal. It is free: {link}',
   /* "Probeer het vandaag op je werk": one sentence of the lesson on its result (src/components/WorkTry.tsx). */
   workTry: 'Try it at work today',
+  /* "Gelukt?": on a later day the home asks whether that sentence was said at work (src/components/GeluktCard.tsx). */
+  geluktAsk: 'Did you say this at work?',
+  geluktYes: 'Yes, it worked',
+  geluktNotYet: 'Not yet',
   /** Saving the progress on this phone failed (src/lib/progress.ts saveProgress; src/components/SaveFailedNote.tsx): once. */
   saveFailed: 'Your progress was not saved. Is your phone full? Make some room. Or go to Settings: Keep your progress.',
   /** "Bewaar je voortgang" on the home, once, where the phone may lose the progress (src/components/BackupNudge.tsx). */

@@ -15,6 +15,7 @@ De privacyverklaring op vloertaal.nl/privacy (`src/lib/privacyPage.ts`) zegt pre
 | "Laat de telefoon luisteren" | `src/lib/listen.ts` | Nee: alleen als de herkenning op het toestel gebeurt (`processLocally`) |
 | Lessen tellen | `src/lib/count.ts` | GoatCounter: alleen de les, het kwart en de minutenband |
 | Oefendagen tellen | `src/lib/count.ts` (`countDayMilestones`) | GoatCounter: eenmalig per toestel `/e/dag/1`, `/2`, `/7`, `/14`, `/28` (het aantal verschillende oefendagen uit `Progress.days`). Welke al geteld zijn, staat lokaal (`vloertaal:count-dagen`) |
+| "Gelukt?" tellen | `src/lib/workTry.ts` (`answerGelukt`) | GoatCounter: alleen `/e/gelukt/ja` of `/e/gelukt/nog-niet`. Lokaal staan de les en de dag van de werkzin (`vloertaal:work-try-ask`), tot het antwoord |
 | Fouten tellen | `src/lib/errors.ts` | GoatCounter: de soort, een code van 8 tekens en een opgeschoonde melding. Hooguit 3 per bezoek |
 | Melden | `src/lib/report.ts` | Alleen als de leerling de mail zelf verstuurt |
 | Herinnering | `src/lib/reminder.ts` | Alleen als de leerling Google Agenda kiest |

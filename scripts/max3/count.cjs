@@ -472,6 +472,10 @@ function defineStates(LANG) {
   add('lesson:speak:recording', shot('speak-rec'));
   add('lesson:speak:compare', shot('speak-compare'));
   add('lesson:speak:off', shot('speak-off'));
+  // The browser refused the microphone: [Zet de microfoon aan], then this phone's steps with the retry.
+  add('lesson:speak:refused', shot('speak-off&refused=1'), null, { expect: '.say-mic-on' });
+  add('lesson:speak:refused-steps', shot('speak-off&refused=1'), async (p) => { await tap(p, '.say-mic-on'); }, { expect: '.say-retry' });
+  add('lesson:speak-turn:refused', shot('speak-off&turn=1&refused=1'), null, { expect: '.say-turn .say-mic-on' });
   // "Wat zeg je?" before the chat (stap 2): the colleague's line, then say the reply.
   add('lesson:speak-turn:idle', shot('speak&turn=1'), null, { expect: '.say-turn .say-mic' });
   add('lesson:speak-turn:compare', shot('speak-compare&turn=1'), null, { expect: '.say-turn .say-rate' });
@@ -666,6 +670,10 @@ function meldingStates(add, shot) {
   add('melding:back', shot('melding'), async (p) => { await tap(p, '.notice-more'); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.home3 .bay-now' });
   add('melding:be', shot('melding&country=be'), null, { expect: '.home3 .bay-now' });
   add('melding:new', shot('melding&state=new'), null, { expect: '.home3 .bay-now' });
+  // "Gelukt?" a day after the work sentence: two answers; either one gives the home as usual.
+  add('gelukt:home', shot('gelukt'), null, { voices: true, expect: '.home-offer .gelukt-card .notice-ok' });
+  add('gelukt:ja', shot('gelukt'), async (p) => { await tap(p, '.gelukt-card .notice-ok'); await settle(p); }, { expect: '.home3 .bay-now' });
+  add('gelukt:nognie', shot('gelukt'), async (p) => { await tap(p, '.gelukt-card .notice-more'); await settle(p); }, { expect: '.home3 .bay-now' });
 }
 
 /**

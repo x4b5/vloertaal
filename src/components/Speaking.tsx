@@ -6,8 +6,9 @@ import { breakable } from '../lib/dutch';
 import type { Exercise } from '../lib/exercises';
 import { sentencePicture } from '../lib/exercises';
 import {
-  canRecord, isWord, MAX_RECORD_MS, MIC_RETRIES, micBlocked, recordMime, setMicBlocked, SILENCE_MS, speakMode,
+  canRecord, isWord, MAX_RECORD_MS, MIC_RETRIES, micBlocked, micRefusedNow, recordMime, setMicBlocked, setMicRefused, SILENCE_MS, speakMode,
 } from '../lib/speaking';
+import { MIC_STEPS, micPlatform, micRefusedError, watchMicPermission } from '../lib/micHelp';
 import { judge, localStatus, startListening, verdictOf, type Heard, type Listening, type Verdict } from '../lib/listen';
 import { learnerCharacter, voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
@@ -65,6 +66,11 @@ type Phase = SpeakPhase;
 let shotPhase: Phase | undefined;
 export function setSpeakShotPhase(phase: Phase | undefined): void {
   shotPhase = phase;
+}
+/** Screenshot harness only: the browser refused the microphone ("Zet de microfoon aan"). */
+let shotRefused = false;
+export function setSpeakShotRefused(refused: boolean): void {
+  shotRefused = refused;
 }
 /** Screenshot harness only: what the phone "heard" with "Laat de telefoon luisteren" (or 'wait'). */
 let shotHeard: string | undefined;
@@ -127,6 +133,21 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
   const [retries, setRetries] = useState(MIC_RETRIES);
   /** The microphone failed in this exercise (so a retry makes sense). */
   const [failed, setFailed] = useState(false);
+  /** The browser refused the microphone: "Zet de microfoon aan", then this phone's steps. */
+  const [refused, setRefused] = useState(phaseForShot ? shotRefused : micRefusedNow());
+  const [steps, setSteps] = useState(false);
+  // Allowed again in the phone's settings (where the browser can tell): record as usual, at once.
+  useEffect(() => {
+    if (!refused || phaseForShot) return;
+    return watchMicPermission(() => {
+      setMicRefused(false);
+      setMicBlocked(false);
+      setRefused(false);
+      setSteps(false);
+      setFailed(false);
+      setPhase('idle');
+    });
+  }, [refused, phaseForShot]);
   /** 0–1 of the 6 seconds used, for the ring around the stop button. */
   const [used, setUsed] = useState(phaseForShot === 'recording' ? 0.35 : 0);
   const [status, setStatus] = useState('');
@@ -266,9 +287,11 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
     let stream: MediaStream;
     try {
       stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true } });
-    } catch {
+    } catch (e) {
       setMicBlocked(true);
-      if (alive.current) { setFailed(true); setPhase('off'); }
+      const no = micRefusedError(e);
+      if (no) setMicRefused(true);
+      if (alive.current) { setFailed(true); setRefused(no); setPhase('off'); }
       return;
     }
     if (!alive.current) { stream.getTracks().forEach((t) => t.stop()); return; }
@@ -504,15 +527,32 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
           {/* "No microphone needed" only where the phone cannot record at all; after a failure
               (here or earlier in the lesson) it says the microphone did not work; chosen by the
               learner ("Say it out loud instead"): the microphone is off, that's fine. */}
-          <Bi text={ui(!canRecord() ? 'sayAloud' : failed || micBlocked() ? 'micFailed' : 'micUnavailable', lang)} />
+          {/* Refused by the browser: say so, then (one tap) this phone's steps to allow it. */}
+          <Bi text={ui(!canRecord() ? 'sayAloud' : refused ? (steps ? MIC_STEPS[micPlatform()] : 'micRefused') : failed || micBlocked() ? 'micFailed' : 'micUnavailable', lang)} />
+          {refused && canRecord() && !steps && (
+            <button type="button" className="btn say-mic-on" onClick={() => setSteps(true)}>
+              <MicIcon size={24} />
+              <Bi text={ui('micTurnOn', lang)} />
+            </button>
+          )}
+          {refused && canRecord() && steps && (
+            <button
+              type="button"
+              className="btn say-retry"
+              onClick={() => { setFailed(false); setMicBlocked(false); setMicRefused(false); setRefused(false); setSteps(false); start(); }}
+            >
+              <MicIcon size={24} />
+              <Bi text={ui('micRetry', lang)} />
+            </button>
+          )}
           {/* "Wat zeg je?": first say the answer yourself, then hear it. */}
-          {turn && !shown && (
+          {turn && !shown && !steps && (
             <button type="button" className="btn say-reveal" onClick={() => { setShown(true); playThem(); }}>
               <SpeakerIcon size={24} />
               <Bi text={ui('speakTurnReveal', lang)} />
             </button>
           )}
-          {failed && retries > 0 && canRecord() && !phaseForShot && (
+          {failed && !refused && retries > 0 && canRecord() && !phaseForShot && (
             <button
               type="button"
               className="btn say-retry"

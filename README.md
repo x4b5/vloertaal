@@ -180,6 +180,8 @@ vloertaal.nl/nieuw en als datum onder Over.
 
 ## Licenties
 
+Vloertaal zelf: alle rechten voorbehouden, zie [`LICENSE`](LICENSE).
+
 Lettertypes, software en stemmen van anderen, en onder welke licentie we ze gebruiken: [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## ⚠️ Nog na te kijken
@@ -194,5 +196,4 @@ Lettertypes, software en stemmen van anderen, en onder welke licentie we ze gebr
 - **Regio Zuid-Limburg**: de sociale kaart en de regels, zie
   [`docs/regio-controle.md`](docs/regio-controle.md). Pas daarna aanzetten.
 - **Rechten op de stemmen**: ga na met welk ElevenLabs-abonnement de opnames zijn gemaakt (zie
-  [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)). En kies of de code en de lessen "alle rechten
-  voorbehouden" blijven (zo is het nu, want er is geen licentiebestand) of een open licentie krijgen.
+  [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)).

@@ -107,3 +107,40 @@ describe('workTryFor', () => {
     expect(workTryFor(other, true, '2026-11-01')).toBeDefined();
   });
 });
+
+describe('Gelukt? (a day after "Probeer het vandaag op je werk")', () => {
+  const lessonWithLine = () => cultureTips.find((t) => t.phrase && t.phrase.nl.trim().split(/\s+/).length <= 12)!.lessonId;
+
+  it('asks on a later day, not the same day, and only once', async () => {
+    const m = await load();
+    const lesson = lessonWithLine();
+    const line = m.workTryFor(lesson, true, '2026-11-01');
+    expect(line).toBeDefined();
+    expect(m.geluktDue('2026-11-01')).toBeUndefined();
+    expect(m.geluktDue('2026-11-02')?.nl).toBe(line!.nl);
+    m.answerGelukt('ja');
+    expect(m.geluktDue('2026-11-03')).toBeUndefined();
+  });
+
+  it('"Nog niet" closes it too', async () => {
+    const m = await load();
+    m.workTryFor(lessonWithLine(), true, '2026-11-01');
+    m.answerGelukt('nog-niet');
+    expect(m.geluktDue('2026-11-02')).toBeUndefined();
+  });
+
+  it('asks nothing without a card, or without storage', async () => {
+    const m = await load();
+    expect(m.geluktDue('2026-11-02')).toBeUndefined();
+    storage(true);
+    const n = await load();
+    n.workTryFor(lessonWithLine(), true, '2026-11-01');
+    expect(n.geluktDue('2026-11-02')).toBeUndefined();
+  });
+
+  it('ignores a damaged value', async () => {
+    store.set('vloertaal:work-try-ask', '{not json');
+    const m = await load();
+    expect(m.geluktDue('2026-11-02')).toBeUndefined();
+  });
+});

@@ -6,6 +6,12 @@ const t: CultureTranslation = {
     sayAloud: { m: "ማይክሮፎን ኣየድልን። ብዓው ኢልካ በሎ፡ ድሕሪኡ ቀጽል።", f: "ማይክሮፎን ኣየድልን። ብዓው ኢልኪ በልዮ፡ ድሕሪኡ ቀጽሊ።" },
     micRetry: { m: "ማይክሮፎን ደጊምካ ፈትን", f: "ማይክሮፎን ደጊምኪ ፈትኒ", x: 'ማይክሮፎን ደጊምኩም ፈትኑ' }, // x: nieuw, nalezen
     micFailed: { m: "ማይክሮፎን ኣይሰርሐን። ብዓው ኢልካ በሎ፡ ድሕሪኡ ቀጽል።", f: "ማይክሮፎን ኣይሰርሐን። ብዓው ኢልኪ በልዮ፡ ድሕሪኡ ቀጽሊ።" },
+    micRefused: { m: "እታ ኣፕ ማይክሮፎንካ ክትጥቀም ኣይተፈቕደላን። ክትከፍቶ ትኽእል ኢኻ።", f: "እታ ኣፕ ማይክሮፎንኪ ክትጥቀም ኣይተፈቕደላን። ክትከፍትዮ ትኽእሊ ኢኺ።", x: "እታ ኣፕ ማይክሮፎንኩም ክትጥቀም ኣይተፈቕደላን። ክትከፍትዎ ትኽእሉ ኢኹም።" }, // nieuw, nalezen
+    micTurnOn: { m: "ማይክሮፎን ክፈት", f: "ማይክሮፎን ክፈቲ", x: "ማይክሮፎን ክፈቱ" }, // nieuw, nalezen
+    micStepsIos: { m: "ኣብ መስመር ኣድራሻ “aA” ጠውቕ › “Website Settings” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “Safari” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ መስመር ኣድራሻ “aA” ጠውቒ › “Website Settings” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “Safari” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ መስመር ኣድራሻ “aA” ጠውቑ › “Website Settings” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “Safari” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
+    micStepsAndroid: { m: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቕ › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቒ › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቑ › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
+    micStepsAndroidApp: { m: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕካ ሓዝ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕኪ ሓዝዮ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕኩም ሓዙ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
+    micStepsDesktop: { m: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቕ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቒ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቑ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
     whichPicture: "ኣየናይ ስእሊ እዩ?",
     wrongTapsN: "ጌጋ ጠውቕታት: {n}",
     sayAloudInstead: { m: "ኣብ ክንድኡ ብዓው ኢልካ በሎ", f: "ኣብ ክንድኡ ብዓው ኢልኪ በልዮ" },

@@ -57,9 +57,19 @@ export function micBlocked(): boolean {
 export function setMicBlocked(blocked: boolean): void {
   micRefused = blocked;
 }
+/** The browser refused the microphone (not just failed): "Zet de microfoon aan" (lib/micHelp.ts). */
+let micDenied = false;
+export function micRefusedNow(): boolean {
+  return micDenied;
+}
+export function setMicRefused(refused: boolean): void {
+  micDenied = refused;
+  if (refused) micRefused = true;
+}
 /** A new lesson: try the microphone again. */
 export function resetMicForLesson(): void {
   micRefused = false;
+  micDenied = false;
 }
 /** Retries offered after the microphone failed in a speaking exercise. */
 export const MIC_RETRIES = 1;
