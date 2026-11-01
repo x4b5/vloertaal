@@ -54,6 +54,7 @@ import { SamenShot } from './SamenShot';
 import { SceneShot } from './SceneShot';
 import { InstapCheckShot } from './InstapCheckShot';
 import { MeldingShot } from './MeldingShot';
+import { GeluktShot } from './GeluktShot';
 import { BridgeShot } from './BridgeShot';
 
 /**
@@ -146,6 +147,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'instapcheck') return <InstapCheckShot lang={lang} gender={gender} q={q} />;
   // "Er is iets veranderd" (a notice, with a made-up example): /?shot=melding&country=be&state=new (src/dev/MeldingShot.tsx).
   if (shot === 'melding') return <MeldingShot lang={lang} gender={gender} q={q} />;
+  // "Gelukt?" a day after the work sentence: /?shot=gelukt (src/dev/GeluktShot.tsx).
+  if (shot === 'gelukt') return <GeluktShot lang={lang} gender={gender} />;
   // "Wil je ook de werkregels leren?" on the home, most of the course done (src/dev/BridgeShot.tsx).
   if (shot === 'bridge') return <BridgeShot lang={lang} gender={gender} />;
   // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512

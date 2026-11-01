@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'با این حال درس‌ها را انجام دهید', // nieuw, nalezen
     shareInvite: 'من با Vloertaal هلندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
     workTry: 'امروز سر کار امتحانش کن', // nieuw, nalezen
+    geluktAsk: 'این را سر کار گفتی؟', // nieuw, nalezen
+    geluktYes: 'بله، شد', // nieuw, nalezen
+    geluktNotYet: 'هنوز نه', // nieuw, nalezen
     saveFailed: 'پیشرفت شما ذخیره نشد. آیا گوشی پر است؟ کمی جا باز کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
     bewaarNudge: 'گوشی شما ممکن است گاهی پیشرفت شما را پاک کند. پس یک نسخه نگه دارید.', // nieuw, nalezen
     bewaarGo: 'همین حالا ذخیره کنید', // nieuw, nalezen

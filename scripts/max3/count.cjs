@@ -666,6 +666,10 @@ function meldingStates(add, shot) {
   add('melding:back', shot('melding'), async (p) => { await tap(p, '.notice-more'); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.home3 .bay-now' });
   add('melding:be', shot('melding&country=be'), null, { expect: '.home3 .bay-now' });
   add('melding:new', shot('melding&state=new'), null, { expect: '.home3 .bay-now' });
+  // "Gelukt?" a day after the work sentence: two answers; either one gives the home as usual.
+  add('gelukt:home', shot('gelukt'), null, { voices: true, expect: '.home-offer .gelukt-card .notice-ok' });
+  add('gelukt:ja', shot('gelukt'), async (p) => { await tap(p, '.gelukt-card .notice-ok'); await settle(p); }, { expect: '.home3 .bay-now' });
+  add('gelukt:nognie', shot('gelukt'), async (p) => { await tap(p, '.gelukt-card .notice-more'); await settle(p); }, { expect: '.home3 .bay-now' });
 }
 
 /**

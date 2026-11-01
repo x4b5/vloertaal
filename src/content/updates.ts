@@ -17,6 +17,12 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-01',
+    items: [
+      'Kreeg je na een les een zin om op je werk te proberen? Dan vraagt de app de dag erna één keer: "Heb je dit op je werk gezegd?" Tik op "Ja, gelukt" of "Nog niet". Alleen dat antwoord wordt geteld, zonder naam (uit te zetten bij "Anoniem meetellen").',
+    ],
+  },
+  {
     date: '2026-10-31',
     items: [
       'Een tip in de les staat nu op twee pagina\'s: eerst "Zo werkt het hier", dan "Zeg het zo" met de zin om te oefenen. Zo staat er minder op één scherm.',

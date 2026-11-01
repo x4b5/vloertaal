@@ -462,6 +462,9 @@ export const uiNl: Record<UiKey, UiText> = {
   noticeOk: 'Oké',
   shareInvite: 'Ik leer Nederlands voor mijn werk met Vloertaal. Gratis: {link}', // nieuw, nalezen
   workTry: 'Probeer het vandaag op je werk',
+  geluktAsk: 'Heb je dit op je werk gezegd?',
+  geluktYes: 'Ja, gelukt',
+  geluktNotYet: 'Nog niet',
   saveFailed: 'Je voortgang is niet bewaard. Is je telefoon vol? Maak wat ruimte. Of ga naar Instellingen: Bewaar je voortgang.',
   bewaarNudge: 'Je telefoon kan je voortgang soms wissen. Bewaar daarom een kopie.', // nieuw, nalezen
   bewaarGo: 'Bewaar nu', // nieuw, nalezen

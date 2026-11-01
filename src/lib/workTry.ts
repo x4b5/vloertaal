@@ -1,4 +1,5 @@
 import { tipForLesson } from '../content/culture';
+import { countRaw } from './count';
 
 /**
  * "Probeer het vandaag op je werk" (components/WorkTry.tsx): at the end of a lesson of the
@@ -46,8 +47,41 @@ export function workTryFor(lessonId: string, first: boolean, today: string): Wor
   dayMemory = today;
   try {
     localStorage.setItem(KEY, today);
+    localStorage.setItem(ASK_KEY, JSON.stringify({ lesson: lessonId, day: today }));
   } catch {
-    // Private mode: remembered for this visit only.
+    // Private mode: remembered for this visit only (and no "Gelukt?" on a later day).
   }
   return line;
+}
+
+/**
+ * "Gelukt?" (components/GeluktCard.tsx): on a later day, the home asks once whether the sentence
+ * of the card was said at work. Two answers, "Ja, gelukt" and "Nog niet"; either one closes it.
+ * Only the lesson and the day of the card are kept, on this device. The answer is counted
+ * anonymously ("/e/gelukt/ja", "/e/gelukt/nog-niet", src/lib/count.ts), with nothing else.
+ */
+const ASK_KEY = 'vloertaal:work-try-ask';
+
+export type GeluktAnswer = 'ja' | 'nog-niet';
+
+/** The sentence to ask about today, or undefined: a card shown on an earlier day, not yet answered. */
+export function geluktDue(today: string): WorkTryLine | undefined {
+  let asked: { lesson?: unknown; day?: unknown } | null = null;
+  try {
+    asked = JSON.parse(localStorage.getItem(ASK_KEY) ?? 'null');
+  } catch {
+    return undefined;
+  }
+  if (!asked || typeof asked.lesson !== 'string' || typeof asked.day !== 'string' || asked.day >= today) return undefined;
+  return workTryLine(asked.lesson);
+}
+
+/** The answer: counted (when counting is on) and the question closed for good. */
+export function answerGelukt(answer: GeluktAnswer): void {
+  try {
+    localStorage.removeItem(ASK_KEY);
+  } catch {
+    // Nothing kept: nothing to close.
+  }
+  countRaw(`/e/gelukt/${answer}`, 'gelukt');
 }

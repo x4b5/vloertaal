@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: { m: 'اعمل الدروس رغم ذلك', f: 'اعملي الدروس رغم ذلك', x: 'القيام بالدروس رغم ذلك' }, // nieuw, nalezen
     shareInvite: 'أتعلّم الهولندية لعملي مع Vloertaal. مجاناً: {link}', // nieuw, nalezen
     workTry: { m: 'جرّبها اليوم في عملك', f: 'جرّبيها اليوم في عملك', x: 'للتجربة اليوم في العمل' }, // nieuw, nalezen
+    geluktAsk: { m: 'هل قلتَ هذا في العمل؟', f: 'هل قلتِ هذا في العمل؟', x: 'هل قلت هذا في العمل؟' }, // nieuw, nalezen
+    geluktYes: 'نعم، نجح', // nieuw, nalezen
+    geluktNotYet: 'ليس بعد', // nieuw, nalezen
     saveFailed: 'لم يُحفظ تقدّمك. هل الهاتف ممتلئ؟ الحل: إفراغ بعض المساحة. أو في الإعدادات: «حفظ تقدمك».', // nieuw, nalezen
     bewaarNudge: { m: 'قد يمسح هاتفك تقدمك أحياناً. لذلك احفظ نسخة.', f: 'قد يمسح هاتفك تقدمك أحياناً. لذلك احفظي نسخة.', x: 'قد يمسح الهاتف التقدم أحياناً. لذلك من الأفضل حفظ نسخة.' }, // nieuw, nalezen
     bewaarGo: { m: 'احفظ الآن', f: 'احفظي الآن', x: 'الحفظ الآن' }, // nieuw, nalezen

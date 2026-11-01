@@ -504,6 +504,10 @@ export const uiEn = {
   shareInvite: 'I am learning Dutch for my work with Vloertaal. It is free: {link}',
   /* "Probeer het vandaag op je werk": one sentence of the lesson on its result (src/components/WorkTry.tsx). */
   workTry: 'Try it at work today',
+  /* "Gelukt?": on a later day the home asks whether that sentence was said at work (src/components/GeluktCard.tsx). */
+  geluktAsk: 'Did you say this at work?',
+  geluktYes: 'Yes, it worked',
+  geluktNotYet: 'Not yet',
   /** Saving the progress on this phone failed (src/lib/progress.ts saveProgress; src/components/SaveFailedNote.tsx): once. */
   saveFailed: 'Your progress was not saved. Is your phone full? Make some room. Or go to Settings: Keep your progress.',
   /** "Bewaar je voortgang" on the home, once, where the phone may lose the progress (src/components/BackupNudge.tsx). */

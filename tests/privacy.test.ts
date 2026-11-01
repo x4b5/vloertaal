@@ -16,7 +16,7 @@ describe('the privacy statement (/privacy/)', () => {
     expect(linkRows()).toContain(`href="${PRIVACY_PATH}"`);
     const html = privacyPage();
     expect(html).toMatch(/<html lang="nl"/);
-    expect(html).toContain('Bijgewerkt op 31 oktober 2026');
+    expect(html).toContain('Bijgewerkt op 1 november 2026');
   });
 
   it('names what the code sends, and who sees it', () => {
