@@ -4794,3 +4794,25 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* 7. The bottom bar shows icons; only the tab you are on has its word under it. */
 .nav-tab-on .nav-help-only { font-size: 0.8rem; font-weight: 650; color: var(--ink); }
 .bottom-nav .nav-tab { min-height: 60px; }
+
+/* ---- "Vloertaal rustiger", fase 2 (docs/rustiger.md) ----
+   An ⓘ that opens a side matter in place (src/components/InfoMore.tsx): closed, one quiet line
+   with a label that says what is behind it; open, the text under it. */
+.info-more { margin: 8px 0 0; }
+.info-more-summary {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 2px;
+  list-style: none; cursor: pointer; color: var(--ink-3); font-size: 0.92rem; font-weight: 500;
+}
+.info-more-summary::-webkit-details-marker { display: none; }
+.info-more-summary .icon { flex: none; color: var(--ink-3); }
+.info-more-summary:hover, .info-more[open] > .info-more-summary { color: var(--ink-2); }
+.info-more-summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+.info-more-body { padding: 0 0 6px 26px; }
+.info-more-body > p { margin: 0; }
+.info-more .tips-note { margin: 0; }
+.about-more .info-more-body { padding-inline-start: 0; display: flex; flex-direction: column; gap: 4px; }
+.about-more > .info-more-summary { font-size: 1rem; color: var(--ink-2); }
+/* The day count and the words: smaller, one quiet line at the end of the top bar. */
+.topbar .stat-num { font-size: 0.95rem; }
+.topbar .stat-unit { font-size: 0.8rem; color: var(--ink-3); }
+.topbar { gap: 12px; }

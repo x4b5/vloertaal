@@ -108,11 +108,12 @@ export function RulesNoticeScreen({ country, onDone }: { country?: 'nl' | 'be'; 
 /** One quiet line above the work-rules lessons, always there (not a button): whose rules these are. */
 export function RulesPathNote({ lang, country }: { lang?: HelpLanguage; country?: 'nl' | 'be' }) {
   if (!dutchUi(lang)) return null;
+  // Behind an ⓘ ("Vloertaal rustiger"): one quiet line "Over deze regels", the note when opened.
   return (
-    <p className="rules-path-note" lang="nl">
-      <InfoIcon size={18} />
-      <span>{rulesPathNote(country)}</span>
-    </p>
+    <details className="info-more rules-path-more" lang="nl">
+      <summary className="info-more-summary"><InfoIcon size={18} /><span>Over deze regels</span></summary>
+      <p className="rules-path-note info-more-body">{rulesPathNote(country)}</p>
+    </details>
   );
 }
 

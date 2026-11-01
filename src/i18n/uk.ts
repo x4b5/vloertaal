@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Усе ж пройти уроки', // nieuw, nalezen
     shareInvite: 'Я вчу нідерландську для роботи з Vloertaal. Безкоштовно: {link}', // nieuw, nalezen
     workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
+    infoMore: 'Більше пояснень', // nieuw, nalezen
+    tipsAbout: 'Про ці поради', // nieuw, nalezen
+    aboutMore: 'Більше про Vloertaal', // nieuw, nalezen
     geluktAsk: 'Вдалося сказати це на роботі?', // nieuw, nalezen
     geluktYes: 'Так, вдалося', // nieuw, nalezen
     geluktNotYet: 'Ще ні', // nieuw, nalezen

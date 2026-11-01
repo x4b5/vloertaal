@@ -407,6 +407,9 @@ const lang: HelpLanguageSource = {
     checkUndo: { m: 'ግን ነቶም ትምህርትታት ግበሮም', f: 'ግን ነቶም ትምህርትታት ግበርዮም', x: 'ግን ነቶም ትምህርትታት ግበሩዎም' }, // nieuw, nalezen
     shareInvite: 'ን ስራሐይ ሆላንድኛ ብ Vloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen
     workTry: { m: 'ሎሚ ኣብ ስራሕካ ፈትኖ', f: 'ሎሚ ኣብ ስራሕኪ ፈትንዮ', x: 'ሎሚ ኣብ ስራሕ ፈትንዎ' }, // nieuw, nalezen
+    infoMore: 'ተወሳኺ መብርሂ', // nieuw, nalezen
+    tipsAbout: 'ብዛዕባ እዞም ምኽርታት', // nieuw, nalezen
+    aboutMore: 'ብዛዕባ Vloertaal ተወሳኺ', // nieuw, nalezen
     geluktAsk: { m: 'ነዚ ኣብ ስራሕ ኢልካዮ ዶ?', f: 'ነዚ ኣብ ስራሕ ኢልኪዮ ዶ?', x: 'ነዚ ኣብ ስራሕ ኢልኩምዎ ዶ?' }, // nieuw, nalezen
     geluktYes: 'እወ፡ ሰሪሑ', // nieuw, nalezen
     geluktNotYet: 'ገና', // nieuw, nalezen

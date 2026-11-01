@@ -27,6 +27,8 @@ import { TEXT_SIZES, type TextSize } from '../lib/textSize';
 import { VOICE_SAMPLE } from '../lib/voices';
 import { nonLatinHelp, setWantsWriting, setWritingInput, wantsWriting, writingInput } from '../lib/writing';
 import { Bi } from './Bi';
+// InfoMore: an explanation behind an ⓘ, except on a page that already has three choices (max 3).
+import { InfoMore } from './InfoMore';
 import { CertIcon } from './CertBadge';
 import { CertificatesCard } from './Certificate';
 import { ChoiceCards, type ChoiceOption } from './Choice';
@@ -468,7 +470,7 @@ export function Settings({
                 { id: 'off', text: say('withoutSound'), picture: <SpeakerOffIcon size={28} /> },
               ]}
             />
-            <p className="max3-hint"><Bi text={say('quietHint')} /></p>
+            <InfoMore className="set-info" label={say('infoMore')}><p className="max3-hint"><Bi text={say('quietHint')} /></p></InfoMore>
             {/* The work-rules track on a phone without a Dutch voice: how to add one. */}
             <NoVoiceNote lang={lang} />
           </>
@@ -522,21 +524,21 @@ export function Settings({
               }}
               options={TEMPOS.map((t) => ({ id: t, nl: TEMPO_NL[t], text: say(TEMPO_KEYS[t]), picture: <TempoIcon size={28} fast={t === 'normal'} /> }))}
             />
-            <p className="max3-hint"><Bi text={say('tempoHint')} /></p>
+            <InfoMore className="set-info" label={say('infoMore')}><p className="max3-hint"><Bi text={say('tempoHint')} /></p></InfoMore>
           </>
         );
       case 'faster':
         return (
           <>
             {onOff(fasterOn(progress), (on) => onFaster?.(on))}
-            <p className="max3-hint"><Bi text={say('fasterSettingHint')} /></p>
+            <InfoMore className="set-info" label={say('infoMore')}><p className="max3-hint"><Bi text={say('fasterSettingHint')} /></p></InfoMore>
           </>
         );
       case 'speaking':
         return (
           <>
             {onOff(speakingOn(), setSpeakingOn)}
-            <p className="max3-hint"><Bi text={say('speakingHint')} /></p>
+            <InfoMore className="set-info" label={say('infoMore')}><p className="max3-hint"><Bi text={say('speakingHint')} /></p></InfoMore>
           </>
         );
       case 'writing': {
@@ -600,7 +602,7 @@ export function Settings({
         return (
           <>
             {onOff(countingOn(), setCounting)}
-            <p className="max3-hint"><Bi text={say('countHint')} /></p>
+            <InfoMore className="set-info" label={say('infoMore')}><p className="max3-hint"><Bi text={say('countHint')} /></p></InfoMore>
           </>
         );
       case 'reset':
@@ -758,7 +760,7 @@ function ListenPage({ lang, status, onStatus, onOff, onDone }: {
     return (
       <>
         {onOff(listenOn(), setListenOn)}
-        <p className="max3-hint"><Bi text={say('listenHint')} /></p>
+        <InfoMore className="set-info" label={say('infoMore')}><p className="max3-hint"><Bi text={say('listenHint')} /></p></InfoMore>
       </>
     );
   }
@@ -776,7 +778,7 @@ function ListenPage({ lang, status, onStatus, onOff, onDone }: {
             { id: 'off', nl: 'Uit', text: say('settingOff'), picture: <CloseIcon size={26} /> },
           ]}
         />
-        <p className="max3-hint"><Bi text={say('listenHint')} /></p>
+        <InfoMore className="set-info" label={say('infoMore')}><p className="max3-hint"><Bi text={say('listenHint')} /></p></InfoMore>
       </>
     );
   }

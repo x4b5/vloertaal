@@ -512,6 +512,10 @@ export const uiEn = {
   shareInvite: 'I am learning Dutch for my work with Vloertaal. It is free: {link}',
   /* "Probeer het vandaag op je werk": one sentence of the lesson on its result (src/components/WorkTry.tsx). */
   workTry: 'Try it at work today',
+  /* An ⓘ that opens a side matter in place (src/components/InfoMore.tsx): its label says what is behind it. */
+  infoMore: 'More explanation',
+  tipsAbout: 'About these tips',
+  aboutMore: 'Read more about Vloertaal',
   /* "Gelukt?": on a later day the home asks whether that sentence was said at work (src/components/GeluktCard.tsx). */
   geluktAsk: 'Did you say this at work?',
   geluktYes: 'Yes, it worked',
