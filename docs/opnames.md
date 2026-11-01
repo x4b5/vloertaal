@@ -40,7 +40,8 @@ zie stap 5). Draai in deze volgorde:
 2. `sample`: een paar korte testzinnen per stem. Luister ze na.
 3. `all`: alles wat ontbreekt of oud is. In porties van 150; na elke portie een commit.
 
-`max_credits` stopt de run voordat hij meer uitgeeft. Met `voices` neem je één stem op.
+`max_credits` stopt de run voordat hij meer uitgeeft. Met `voices` neem je één stem op. Met
+`clips` neem je alleen de clips op waarvan de id past bij een patroon, bijvoorbeeld `\.front$`.
 
 **Op je eigen computer.** In deze volgorde:
 
@@ -247,5 +248,5 @@ In de tweede helft van het lespad maakt de leerling een zin opnieuw, met het woo
 plaats vooraan: "Ik verstuur de mail morgen." wordt "Morgen verstuur ik de mail." Dat zijn 16
 korte zinnen (`src/content/patterns.ts`, ongeveer 450 tekens per stem, dus ongeveer 1.800
 tekens voor de vier stemmen). Ze staan met `npm run clips` in `public/audio/clips.json`, met een
-id die eindigt op `.front`. Neem ze op zoals in stap 1 tot en met 4. Tot dan leest de stem van de
+id die eindigt op `.front`. Neem ze op zoals in stap 1 tot en met 4, met `clips` = `\.front$`. Tot dan leest de stem van de
 telefoon de nieuwe zin voor; de oude zin en de losse woorden hebben al een opname.

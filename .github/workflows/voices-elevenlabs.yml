@@ -13,6 +13,9 @@ on:
       voices:
         description: 'Only these voices, comma separated (e.g. thijmen). Empty = all voices'
         default: ''
+      clips:
+        description: 'Only clips whose id matches this pattern (e.g. \.front$). Empty = all clips'
+        default: ''
       max_credits:
         description: 'Stop before spending more than this (per batch of 150 clips)'
         default: '20000'
@@ -32,6 +35,7 @@ jobs:
       ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
       MAX_CREDITS: ${{ inputs.max_credits }}
       VOICES: ${{ inputs.voices }}
+      CLIPS: ${{ inputs.clips }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
