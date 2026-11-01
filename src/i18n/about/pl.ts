@@ -11,7 +11,7 @@ const t: CultureTranslation = {
   gloss: {
     'a.what': 'Czym jest Vloertaal?',
     'a.what.b': 'Vloertaal pomaga ci nauczyć się niderlandzkiego, którego potrzebujesz w pracy: w magazynie, w kuchni, w fabryce albo na budowie. Nie tylko słowa na hali, ale cały język związany z pracą: szukanie pracy, umowa i pasek wypłaty, twoje prawa, mieszkanie i dokumenty, zgłaszanie choroby i dogadywanie się ze współpracownikami. Lekcje są krótkie, więc możesz ćwiczyć kilka minut każdego dnia. Traktuj Vloertaal jak mały dodatek na wolną chwilę. Nie zastępuje kursu językowego ani nauczyciela języka.',
-    'a.what.lead': 'Z Vloertaal uczysz się niderlandzkiego potrzebnego w pracy. Lekcja trwa kilka minut. To dodatek: kurs językowy nadal jest potrzebny.', // nieuw, nalezen
+    'a.what.lead': 'Z Vloertaal uczysz się niderlandzkiego potrzebnego w pracy. Uczysz się też, jak tu wygląda praca: umowa, wypłata, zgłaszanie choroby. Lekcja trwa kilka minut. To dodatek: kurs językowy nadal jest potrzebny.', // nieuw, nalezen
     'a.story': 'Dlaczego Vloertaal?', // nieuw, nalezen
     'a.story.b': 'Cześć, jestem Xavier. Pracuję jako pośrednik pracy. Pomagam ludziom znaleźć pracę. Czasem mimo to coś w pracy idzie nie tak. Często chodzi o język: ktoś nie rozumie instrukcji albo boi się zapytać. Dlatego zacząłem Vloertaal. Mam nadzieję, że aplikacja pomoże, żeby więcej osób mogło dobrze wykonywać swoją pracę i jej nie stracić. Ale nie mogę i nie chcę budować tej aplikacji sam.', // nieuw, nalezen
     'a.beta': 'Wersja testowa',

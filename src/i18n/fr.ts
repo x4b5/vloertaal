@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Afficher les sujets',
     privacyLink: 'Lire la déclaration de confidentialité (en néerlandais)', // nieuw, nalezen
     routeTitle: 'Qu’est-ce que tu veux apprendre ?', // nieuw, nalezen
-    routeLearn: 'Apprendre le néerlandais pour le travail', // nieuw, nalezen
-    routeRules: 'Je parle déjà néerlandais : les règles du travail', // nieuw, nalezen
+    routeLearn: 'Apprendre le néerlandais pour le travail, et comment le travail se passe ici', // nieuw, nalezen
+    routeRules: 'Je parle déjà néerlandais : seulement les règles du travail', // nieuw, nalezen
     routeLearnShort: 'Apprendre le néerlandais', // nieuw, nalezen
     byTheme: 'Par thème',
     inOrder: 'Dans l’ordre',

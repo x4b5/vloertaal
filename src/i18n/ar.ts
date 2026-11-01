@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'عرض المواضيع',
     privacyLink: 'اقرأ بيان الخصوصية (بالهولندية)', // nieuw, nalezen
     routeTitle: 'ماذا نتعلّم؟', // nieuw, nalezen (een vraag, zonder m/f)
-    routeLearn: 'تعلّم الهولندية للعمل', // nieuw, nalezen
-    routeRules: 'أتكلّم الهولندية: قواعد العمل', // nieuw, nalezen
+    routeLearn: 'تعلّم الهولندية للعمل، وكيف يسير العمل هنا', // nieuw, nalezen
+    routeRules: 'أتكلّم الهولندية: قواعد العمل فقط', // nieuw, nalezen
     routeLearnShort: 'تعلّم الهولندية', // nieuw, nalezen
     byTheme: 'حسب الأقسام',
     inOrder: 'بالترتيب',

@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Pokaż tematy',
     privacyLink: 'Przeczytaj oświadczenie o prywatności (po niderlandzku)', // nieuw, nalezen
     routeTitle: 'Czego chcesz się uczyć?', // nieuw, nalezen
-    routeLearn: 'Nauka niderlandzkiego do pracy', // nieuw, nalezen
-    routeRules: 'Mówię już po niderlandzku: zasady pracy', // nieuw, nalezen
+    routeLearn: 'Nauka niderlandzkiego do pracy i tego, jak tu wygląda praca', // nieuw, nalezen
+    routeRules: 'Mówię już po niderlandzku: tylko zasady pracy', // nieuw, nalezen
     routeLearnShort: 'Nauka niderlandzkiego', // nieuw, nalezen
     byTheme: 'Według działów',
     inOrder: 'Po kolei',

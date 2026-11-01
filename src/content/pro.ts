@@ -97,7 +97,7 @@ export const proSections: ProSection[] = [
     body: ['Vloertaal heeft twee lespaden. De leerling kiest er een bij de eerste keer, met de taal.'],
     lines: [
       { lead: 'Taal.', text: `${who.nl.body} Zonder hulptaal is de uitleg in eenvoudig Engels.` },
-      { lead: 'Werkregels.', text: `${who.nlRules!.body} Alles in eenvoudig Nederlands, en de telefoon leest voor. Kies bij de taal “Nederlands”.` },
+      { lead: 'Werkregels.', text: `${who.nlRules!.body} Alles in eenvoudig Nederlands, en de telefoon leest voor. Kies bij de start “Ik spreek al Nederlands”.` },
     ],
     site: [{ text: 'Werkregels.', href: '/werkregels/' }],
   },
