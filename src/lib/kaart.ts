@@ -65,7 +65,20 @@ export interface KaartData {
   toets?: { instap?: KaartToets; eind?: KaartToets };
   /** Today, "30 oktober 2026". */
   date: string;
+  /** A topic about the learner's rights is among what the card would name (see RIGHTS_UNIT). */
+  hasRights?: boolean;
 }
+
+/**
+ * Topics about the learner's rights and about exploitation ("Regels en rechten", "Uitbuiting
+ * herkennen", "Problemen en je rechten"; the Belgian and a region's versions too). The card goes
+ * to a teacher, a coach or the boss, and the boss, the agency and the landlord are often the same
+ * party: by default such a topic is not named on the card, only "een onderwerp over je rechten".
+ * The learner can choose to name it (reports/Leerwetenschap en tweede taal.md, W3).
+ */
+const RIGHTS_UNIT = /(?:^|\.)(?:rights|exploit|rechten)$/;
+export const RIGHTS_TOPIC = 'een onderwerp over je rechten';
+export const isRightsUnit = (unitId: string) => RIGHTS_UNIT.test(unitId);
 
 const PART_NL: Record<ToetsPart, string> = { listen: 'Luisteren', words: 'Woorden', sentences: 'Zinnen' };
 
@@ -112,8 +125,9 @@ function toetsOf(run: ToetsRun): KaartToets {
   return { date: certDate(run.day), parts: TOETS_PARTS.map((part) => ({ part, nl: PART_NL[part], right: knownOf(run, part), of: run.of[part] })) };
 }
 
-/** The card's fields, from the progress on this phone, the learner's name and today. */
-export function kaartData(p: Progress, name: string, today: Date): KaartData {
+/** The card's fields, from the progress on this phone, the learner's name and today.
+ *  `showRights`: name topics about rights (see RIGHTS_UNIT); off by default. */
+export function kaartData(p: Progress, name: string, today: Date, showRights = false): KaartData {
   const track = trackOf(p);
   const earned = earnedCertificates(p, today, track);
   // Topics ticked off with a check: done, without a certificate (said so on the card).
@@ -130,7 +144,12 @@ export function kaartData(p: Progress, name: string, today: Date): KaartData {
     : undefined;
   // "Wat kun je nu?" is on the certificates: only the topics that have one.
   const certified = latest.filter((e) => !e.check);
-  const voorbeeld = certified.length ? kunJeNu(certified[0].unit.id)[0]?.nl : undefined;
+  const hidden = (unitId: string) => !showRights && isRightsUnit(unitId);
+  // The example comes from the latest topic that may be named.
+  const example = certified.find((e) => !hidden(e.unit.id));
+  const voorbeeld = example ? kunJeNu(example.unit.id)[0]?.nl : undefined;
+  const lastUnitId = last ? findLesson(last)?.unit.id : undefined;
+  const hasRights = latest.slice(0, 3).some((e) => isRightsUnit(e.unit.id)) || Boolean(lastUnitId && isRightsUnit(lastUnitId));
   const t = track === 'taal' ? p.toets : undefined;
   const toets = t?.instap || t?.eind
     ? { ...(t.instap ? { instap: toetsOf(t.instap) } : {}), ...(t.eind ? { eind: toetsOf(t.eind) } : {}) }
@@ -141,13 +160,14 @@ export function kaartData(p: Progress, name: string, today: Date): KaartData {
     ...(track === 'regels' && rulesCountry() === 'be' ? { be: true } : {}),
     unitsDone: done.length,
     viaCheck: checked.length,
-    lastUnits: latest.slice(0, 3).map((e) => (e.check ? `${e.unit.titleNl} (via check)` : e.unit.titleNl)),
+    lastUnits: latest.slice(0, 3).map((e) => (hidden(e.unit.id) ? RIGHTS_TOPIC : e.check ? `${e.unit.titleNl} (via check)` : e.unit.titleNl)),
     kunZinnen: kunAantal(earned.map((e) => e.unit.id)),
     ...(voorbeeld ? { kunVoorbeeld: voorbeeld } : {}),
     days: practisedDays(p, today),
-    ...(lastLesson ? { lastLesson } : {}),
+    ...(lastLesson ? { lastLesson: lastUnitId && hidden(lastUnitId) ? { ...lastLesson, text: RIGHTS_TOPIC } : lastLesson } : {}),
     ...(toets ? { toets } : {}),
     date: certDate(dayKey(today)),
+    ...(hasRights ? { hasRights } : {}),
   };
 }
 

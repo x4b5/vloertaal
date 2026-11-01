@@ -407,6 +407,8 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'برای همکارتان', // nieuw, nalezen
     colleagueCardHint: 'این را به همکاری که هلندی صحبت می‌کند نشان دهید. در آن نوشته که چطور می‌تواند در تمرین به شما کمک کند.', // nieuw, nalezen
     colleagueShare: 'برای همکارتان بفرستید', // nieuw, nalezen
+    coachCardRights: 'موضوع‌های مربوط به حقوق شما با نام نشان داده شود', // nieuw, nalezen
+    keptNofM: 'واژه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را بلد بودید.', // nieuw, nalezen
     calmScreen: 'صفحهٔ آرام', // nieuw, nalezen
     calmAuto: 'مثل گوشی شما', // nieuw, nalezen
     calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پشت سر هم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen

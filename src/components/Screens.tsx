@@ -13,7 +13,7 @@ import { tipBody } from '../lib/tipText';
 import { BeNote } from './BeNote';
 import { regionTips } from '../content/regio';
 import { findLesson } from '../content/curriculum';
-import type { DailyCard } from '../lib/spaced';
+import { showKept, type DailyCard } from '../lib/spaced';
 import { Flag } from './Flag';
 import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, NL_MORE, ui, uiCount, withoutN, type Bilingual, said, saidLang, langTag } from '../i18n';
 import type { HelpLanguage, LangCode, UiCode, UiKey } from '../i18n/types';
@@ -855,7 +855,7 @@ export function StatCard({ tone, label, icon, value, final, done, foot, badge }:
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, easier = false, workTry }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, kept, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, easier = false, workTry }: {
   /** "Probeer het vandaag op je werk" (src/components/WorkTry.tsx, lib/workTry.ts): one sentence
    *  of the lesson, with a speaker. Not a button. */
   workTry?: WorkTryLine;
@@ -887,6 +887,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   repeated?: number;
   /** After today's review: how many words went up a box ("N woorden sterker"). */
   stronger?: number;
+  /** After the review: of the words from two weeks ago or longer, how many were still known (lib/spaced.ts keptCount). */
+  kept?: { right: number; of: number };
   /** The next lesson on the course (its title, and its id for the picture), shown as an arrow,
    *  the lesson's picture and its title. */
   next?: Bilingual & { id?: string };
@@ -993,6 +995,13 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           <p className="result-line result-stronger">
             <span className="stronger-n" lang={saidLang(fillCount('wordsStrongerN', stronger, lang))}><span className="stronger-arrow" aria-hidden>▲</span>{stronger}</span>
             <Bi text={withoutN(uiCount('wordsStrongerN', stronger, lang))} />
+          </p>
+        )}
+        {/* What stayed: "Van je woorden van 2 weken of langer geleden wist je er nog 9 van de 10". */}
+        {kept && showKept(kept) && (
+          <p className="result-line result-kept" dir={rtl ? 'rtl' : undefined}>
+            <span className="result-kept-icon" aria-hidden><CheckIcon size={20} /></span>
+            <Bi text={fillN({ ...ui('keptNofM', lang), en: ui('keptNofM', lang).en.replace('{m}', String(kept.of)), help: ui('keptNofM', lang).help?.replace('{m}', String(kept.of)) }, kept.right)} />
           </p>
         )}
         {/* Back after a long absence: the words still waiting come in the next days (calm, no

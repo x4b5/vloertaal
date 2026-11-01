@@ -39,7 +39,7 @@ import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, 
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, knownLessons, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
-import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dueIds, gradedStepIds, seedCards, strongerCount, addLessonSentences, dailyIds, reviewResults, seedSentenceCards, wordResultCount } from './lib/spaced';
+import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dueIds, gradedStepIds, seedCards, strongerCount, keptCount, addLessonSentences, dailyIds, reviewResults, seedSentenceCards, wordResultCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
 import { BackupNudge } from './components/BackupNudge';
@@ -74,7 +74,7 @@ type View =
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string; workTry?: WorkTryLine }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string; workTry?: WorkTryLine }
   /** "Oefen samen" (src/components/Samen.tsx): a lesson's chats, two people on one phone, from its
    *  result; streakUp / cert: the certificate or the streak milestone still follows. */
   | { name: 'samen'; lessonId: string; streakUp?: number; cert?: string }
@@ -825,6 +825,8 @@ export default function App() {
           kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
           repeated: daily ? wordResultCount(results) || (found.lesson.steps?.length ?? found.lesson.words.length) : reviewing ? wordResultCount(results) || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
+          // What stayed: words last practised two weeks ago or longer, how many still known (language track).
+          kept: daily && track === 'taal' ? keptCount(cards, results) : undefined,
           // Still due after today's review, only for who was away 2 days or more ("they come in the
           // next days"): a learner who practises every day and learns many words a day would read
           // a growing number every day, as if they were behind.
@@ -879,6 +881,7 @@ export default function App() {
           words={view.words}
           repeated={view.repeated}
           stronger={view.stronger}
+          kept={view.kept}
           waiting={view.waiting}
           skipped={view.skipped}
           kind={view.kind}

@@ -514,6 +514,10 @@ export const uiEn = {
   colleagueCard: 'For your colleague',
   colleagueCardHint: 'Show this to a colleague who speaks Dutch. It says how they can help you practise.',
   colleagueShare: 'Send it to your colleague',
+  /* The coach card (src/components/Certificate.tsx CoachCardScreen): a topic about rights named or not. */
+  coachCardRights: 'Show topics about your rights by name',
+  /* After a review (src/components/Screens.tsx Result, lib/spaced.ts keptCount): what stayed. */
+  keptNofM: 'Words from 2 weeks ago or longer: you still knew {n} of {m}.',
   /* "Rustig scherm" (Settings › Lessons; src/lib/calm.ts). */
   calmScreen: 'Calm screen',
   calmAuto: 'Like your phone',

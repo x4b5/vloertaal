@@ -407,6 +407,8 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'Für deine Kollegen', // nieuw, nalezen
     colleagueCardHint: 'Zeig das einem Kollegen, der Niederländisch spricht. Dort steht, wie er dir beim Üben helfen kann.', // nieuw, nalezen
     colleagueShare: 'An deinen Kollegen schicken', // nieuw, nalezen
+    coachCardRights: 'Themen über deine Rechte mit Namen zeigen', // nieuw, nalezen
+    keptNofM: 'Wörter von vor 2 Wochen oder länger: Du wusstest noch {n} von {m}.', // nieuw, nalezen
     calmScreen: 'Ruhiger Bildschirm', // nieuw, nalezen
     calmAuto: 'Wie dein Handy', // nieuw, nalezen
     calmHint: 'An: Nichts bewegt sich, keine Feier für deine Serie nach einer Lektion, und deine Serie und Wörter stehen nicht auf der Startseite.', // nieuw, nalezen

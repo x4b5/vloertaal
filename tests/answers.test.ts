@@ -17,12 +17,13 @@ describe('answers', () => {
     expect(checkTyped('de handschonen', 'de handschoenen')).toBe('almost');
   });
 
-  it('a forgotten article is almost right, a wrong one is a mistake (de/het is part of the word)', () => {
+  it('a forgotten article or de/het swapped is almost right; "een" for "de" is a mistake', () => {
     expect(checkTyped('tafel', 'de tafel')).toBe('almost');
-    expect(checkTyped('het tafel', 'de tafel')).toBe('wrong');
-    expect(checkTyped('de ei', 'het ei')).toBe('wrong');
+    // De/het: shown, not punished (voorstel 4 of the research report).
+    expect(checkTyped('het tafel', 'de tafel')).toBe('almost');
+    expect(checkTyped('de ei', 'het ei')).toBe('almost');
     expect(checkTyped('een helm', 'de helm')).toBe('wrong');
-    // Also with a typo on top: the article decides.
+    // A swapped article with a typo on top is wrong.
     expect(checkTyped('het tafell', 'de tafel')).toBe('wrong');
     expect(checkTyped('de tafell', 'de tafel')).toBe('almost');
     // A word asked without article: one typed with it is still almost.

@@ -497,7 +497,9 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   const [stored] = useState(loadCertName);
   const [name, setName] = useState(stored ?? '');
   const [today] = useState(() => fixedToday ?? new Date());
-  const data = useMemo(() => ({ ...kaartData(progress, name, today), helpCode: lang?.code }), [progress, name, today, lang?.code]);
+  /** Topics about rights by name (off: "een onderwerp over je rechten", src/lib/kaart.ts RIGHTS_UNIT). */
+  const [showRights, setShowRights] = useState(false);
+  const data = useMemo(() => ({ ...kaartData(progress, name, today, showRights), helpCode: lang?.code }), [progress, name, today, showRights, lang?.code]);
   const key = JSON.stringify(data);
   const [png, setPng] = useState<{ key: string; blob: Blob; url: string; box: KaartNameBox } | null>(null);
   const [failed, setFailed] = useState(false);
@@ -573,6 +575,13 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
       </div>
       {saved && (
         <p className="keep-ok cert-saved" role="status"><CheckIcon size={20} /><Bi text={ui('certSaved', lang)} /></p>
+      )}
+      {/* Only when the card would name a topic about rights: the learner chooses (default: not by name). */}
+      {data.hasRights && (
+        <button type="button" className="kaart-rights" aria-pressed={showRights} onClick={() => setShowRights((v) => !v)} dir={rtl ? 'rtl' : undefined}>
+          <span className="kaart-rights-box" aria-hidden>{showRights ? <CheckIcon size={18} /> : null}</span>
+          <NlPair nlFirst nl="Onderwerpen over je rechten bij naam tonen" nlClass="kaart-rights-nl" text={ui('coachCardRights', lang)} />
+        </button>
       )}
       <figure className="kaart-figure">
         {shown ? (

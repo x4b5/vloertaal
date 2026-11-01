@@ -194,6 +194,7 @@ Samen slagen alle tests en de build. In de browser toont `/?taal=pl` "Polski?", 
 4. **Sectorpagina na Terug en dan Vooruit** kan op stap 2 openen. Dat kan alleen met een
    Vooruit-knop (een computer), en het gevolg is klein. Niet aangepast.
 5. *Besloten en gedaan (29 oktober): een verkeerd lidwoord is fout; een vergeten lidwoord blijft "bijna goed".* **Een ander lidwoord telt als "bijna goed"** ("het tafel" voor "de tafel"). Bedoeld voor een
+   *Herzien (1 november, na het onderzoeksrapport, voorstel 4): de en het verwisseld bij een verder goed getypt woord telt nu als "bijna goed", met het goede lidwoord in beeld. "Een" in plaats van "de", of een verwisseld lidwoord plus een tikfout, blijft fout (`src/lib/answers.ts`).*
    *vergeten* lidwoord; een *verkeerd* lidwoord gaat er nu ook door, en het woord gaat in de
    herhaling omhoog. Zo wordt de/het nooit als fout geoefend. Strenger maken is een keuze over
    de lesaanpak; daarom niet zelf gedaan.

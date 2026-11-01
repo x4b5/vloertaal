@@ -281,6 +281,32 @@ export function dailyCard(cards: Cards, today: string, reviewDay?: string, track
 }
 
 /** "N woorden sterker": how many words moved up a box in a review (sentence cards not counted). */
+/** A word last practised two weeks ago or longer: before the review it was in a box whose
+ *  interval is 14 days or more (INTERVALS: box 5 and 6). */
+export const KEPT_FROM_BOX = 5;
+
+/**
+ * "Van je woorden van 2 weken of langer geleden wist je er nog 9 van de 10" (the result of a
+ * review): of the words (sentence cards left out) that were in box KEPT_FROM_BOX or higher before
+ * the review, how many were right. Noticing what stayed builds confidence most (Usher & Pajares
+ * 2008), and effort feels like learning less while it works (Kirk-Johnson e.a. 2019);
+ * reports/Leerwetenschap en tweede taal.md, voorstel 5.
+ */
+export function keptCount(before: Cards, results: Record<string, boolean>): { right: number; of: number } {
+  let right = 0;
+  let of = 0;
+  for (const [id, ok] of Object.entries(results)) {
+    if (isSentenceCard(id) || (before[id]?.box ?? 0) < KEPT_FROM_BOX) continue;
+    of += 1;
+    if (ok) right += 1;
+  }
+  return { right, of };
+}
+
+/** Shown only for a few old words and at least half of them right: a moment of "it stayed". */
+export const KEPT_MIN = 3;
+export const showKept = (k: { right: number; of: number } | undefined) => Boolean(k && k.of >= KEPT_MIN && k.right * 2 >= k.of);
+
 export function strongerCount(before: Cards, after: Cards): number {
   return Object.entries(after).filter(([id, c]) => !isSentenceCard(id) && c.box > (before[id]?.box ?? 0) && before[id] !== undefined).length;
 }

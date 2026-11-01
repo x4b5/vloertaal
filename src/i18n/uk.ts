@@ -407,6 +407,8 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'Для колеги', // nieuw, nalezen
     colleagueCardHint: 'Покажи це колезі, який говорить нідерландською. Тут написано, як він може допомогти тобі практикуватися.', // nieuw, nalezen
     colleagueShare: 'Надіслати колезі', // nieuw, nalezen
+    coachCardRights: 'Показувати назви тем про твої права', // nieuw, nalezen
+    keptNofM: 'Слова двотижневої давності й старші: ти ще пам’ятаєш {n} з {m}.', // nieuw, nalezen
     calmScreen: 'Спокійний екран', // nieuw, nalezen
     calmAuto: 'Як у телефоні', // nieuw, nalezen
     calmHint: 'Увімкнено: нічого не рухається, немає святкування серії після уроку, а серія і слова не показуються на головному екрані.', // nieuw, nalezen
