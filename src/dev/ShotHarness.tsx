@@ -25,7 +25,7 @@ import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies } from '../content/curriculum';
 import { buildLesson, buildTiles, buildRuleLesson, forRetry, frontExercise, frontSource, RULE_KINDS, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
-import { setSpeakShotHeard, setSpeakShotPhase } from '../components/Speaking';
+import { setSpeakShotHeard, setSpeakShotPhase, setSpeakShotRefused } from '../components/Speaking';
 import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
@@ -412,6 +412,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot.startsWith('speak')) {
     const phase = ({ 'speak-rec': 'recording', 'speak-compare': 'review', 'speak-off': 'off' } as const)[shot] ?? 'idle';
     setSpeakShotPhase(phase);
+    // &refused=1 (with speak-off): the browser refused the microphone ("Zet de microfoon aan").
+    setSpeakShotRefused(q.get('refused') === '1');
     const item = q.get('item') === 'sentence' ? lesson.sentences[0] : focus ?? handschoenen;
     // &heard=ik%20draag%20mijn: with "Laat de telefoon luisteren (proef)", what the phone heard
     // (judged as in the app); &heard=same the item itself, &heard=almost without its last word,

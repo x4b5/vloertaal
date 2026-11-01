@@ -6,6 +6,12 @@ const t: CultureTranslation = {
     sayAloud: "No necesitas micrófono. Dilo en voz alta y luego sigue.",
     micRetry: "Prueba otra vez el micrófono",
     micFailed: "El micrófono no funcionó. Dilo en voz alta y luego sigue.",
+    micRefused: "La app no puede usar tu micrófono. Puedes activarlo.", // nieuw, nalezen
+    micTurnOn: "Activa el micrófono", // nieuw, nalezen
+    micStepsIos: "Toca “aA” en la barra de direcciones › Ajustes del sitio web › Micrófono › Permitir. O: Ajustes › Apps › Safari › Micrófono. Luego toca el botón de abajo.", // nieuw, nalezen
+    micStepsAndroid: "Toca el icono a la izquierda de la dirección web › Permisos › Micrófono › Permitir. Luego toca el botón de abajo.", // nieuw, nalezen
+    micStepsAndroidApp: "Mantén pulsado el icono de Vloertaal en tu pantalla de inicio › Información de la app › Permisos › Micrófono › Permitir. Luego toca el botón de abajo.", // nieuw, nalezen
+    micStepsDesktop: "Haz clic en el icono a la izquierda de la dirección web › Micrófono › Permitir. Luego haz clic en el botón de abajo.", // nieuw, nalezen
     whichPicture: "¿Qué imagen es?",
     wrongTapsN: "Toques equivocados: {n}",
     sayAloudInstead: "Mejor dilo en voz alta",

@@ -6,6 +6,12 @@ const t: CultureTranslation = {
     sayAloud: "Mikrofon gerekmez. Sesli söyle, sonra devam et.",
     micRetry: "Mikrofonu tekrar dene",
     micFailed: "Mikrofon çalışmadı. Sesli söyle, sonra devam et.",
+    micRefused: "Uygulama mikrofonunu kullanamıyor. Mikrofonu açabilirsin.", // nieuw, nalezen
+    micTurnOn: "Mikrofonu aç", // nieuw, nalezen
+    micStepsIos: "Adres çubuğunda “aA”ya dokun › Web Sitesi Ayarları › Mikrofon › İzin Ver. Ya da: Ayarlar › Uygulamalar › Safari › Mikrofon. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen
+    micStepsAndroid: "Web adresinin solundaki simgeye dokun › İzinler › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen
+    micStepsAndroidApp: "Ana ekrandaki Vloertaal simgesine basılı tut › Uygulama bilgileri › İzinler › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen
+    micStepsDesktop: "Web adresinin solundaki simgeye tıkla › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye tıkla.", // nieuw, nalezen
     whichPicture: "Hangi resim?",
     wrongTapsN: "Yanlış dokunuş: {n}",
     sayAloudInstead: "Bunun yerine sesli söyle",

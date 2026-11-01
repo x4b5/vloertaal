@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-01',
     items: [
+      'Mag de app je microfoon niet gebruiken? Dan zie je bij het spreken de knop "Zet de microfoon aan", met de stappen voor jouw telefoon. Staat de microfoon weer aan, dan gaat de oefening meteen verder.',
       'Kreeg je na een les een zin om op je werk te proberen? Dan vraagt de app de dag erna één keer: "Heb je dit op je werk gezegd?" Tik op "Ja, gelukt" of "Nog niet". Alleen dat antwoord wordt geteld, zonder naam (uit te zetten bij "Anoniem meetellen").',
     ],
   },
