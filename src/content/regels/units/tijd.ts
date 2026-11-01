@@ -60,7 +60,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.1.tf1',
           statement: 'Een dienst van 13 uur mag meestal niet.',
           answer: true,
-          why: 'De wet zegt: hooguit 12 uur per dienst. En hooguit 60 uur in één week. Over een langere tijd moet het gemiddeld minder zijn. Voor nachtdiensten en jongeren zijn de regels strenger.',
+          why: 'De wet zegt: hooguit 12 uur per dienst, en hooguit 60 uur in één week.', whyMore: 'Over een langere tijd moet het gemiddeld minder zijn. Voor nachtdiensten en jongeren zijn de regels strenger.',
         },
         // ⚖️ check: Ben je 16 of 17 ⚖️?
         // ⚖️ check: Dan mag je niet werken tussen 23.00 en 6.00 uur ⚖️.
@@ -72,7 +72,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.1.tf2',
           statement: 'Malik is 17. Hij mag in het restaurant werken tot middernacht.',
           answer: false,
-          why: 'Ben je 16 of 17? Dan mag je niet werken tussen 23.00 en 6.00 uur. Je werkt hooguit 9 uur per dienst. En hooguit 45 uur per week. Je schooltijd telt daarbij mee.',
+          why: 'Ben je 16 of 17? Dan mag je niet werken tussen 23.00 en 6.00 uur.', whyMore: 'Je werkt hooguit 9 uur per dienst. En hooguit 45 uur per week. Je schooltijd telt daarbij mee.',
         },
         // ⚖️ check: Meestal 4 weken ⚖️ van tevoren, tenzij de cao iets anders zegt.
         {
@@ -84,7 +84,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Hij vraagt wanneer het rooster vast hoort te staan.', best: true, feedback: 'Goed. Rustig vragen is de eerste stap.' },
             { id: 'c', text: 'Hij komt alleen nog op de dagen die hij zelf wil.', best: false, feedback: 'Dan breekt hij zelf afspraken. Praten werkt beter.' },
           ],
-          why: 'Je werkgever moet je werktijden op tijd laten weten. Meestal 4 weken van tevoren, tenzij de cao iets anders zegt. Een verandering moet een goede reden hebben.',
+          why: 'Je werkgever moet je werktijden op tijd laten weten. Meestal 4 weken van tevoren.', whyMore: 'Dat geldt tenzij de cao iets anders zegt. Een verandering moet een goede reden hebben.',
         },
         {
           kind: 'whoask',
@@ -151,7 +151,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.2.tf1',
           statement: 'Werk je meer dan 5,5 uur? Dan heb je recht op pauze.',
           answer: true,
-          why: 'Werk je meer dan 5,5 uur? Dan krijg je minstens 30 minuten pauze. Dat mag ook 2 keer 15 minuten. Werk je meer dan 10 uur? Dan minstens 45 minuten. Ben je 16 of 17? Dan krijg je al pauze na 4,5 uur.',
+          why: 'Werk je meer dan 5,5 uur? Dan krijg je minstens 30 minuten pauze.', whyMore: 'Dat mag ook 2 keer 15 minuten. Werk je meer dan 10 uur? Dan minstens 45 minuten. Ben je 16 of 17? Dan krijg je al pauze na 4,5 uur.',
         },
         {
           kind: 'whatdo',
@@ -162,7 +162,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Ze slaat haar pauze over. Het is nu eenmaal druk.', best: false, feedback: 'Dat snap ik. Maar pauze is haar recht, ook als het druk is.' },
             { id: 'c', text: 'Ze neemt meteen pauze, ook al staat er een rij.', best: false, feedback: 'Ze heeft recht op pauze. Maar ze vraagt het beter eerst even.' },
           ],
-          why: 'Pauze is je recht. Dat staat in de wet. Rust helpt je ook om veilig te werken. Zoek samen een moment, ook als het druk is.',
+          why: 'Pauze is je recht, ook als het druk is. Zoek samen een moment.', whyMore: 'Dat staat in de wet. Rust helpt je ook om veilig te werken.',
         },
         // ⚖️ check: Pauze is vaak onbetaald. Dat hangt af van je contract of cao ⚖️.
         {
@@ -170,7 +170,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.2.tf2',
           statement: 'Je baas betaalt je pauze altijd.',
           answer: false,
-          why: 'Pauze is vaak onbetaald. Dat hangt af van je contract of cao. In je pauze hoef je niet te werken. Je mag dan echt stoppen.',
+          why: 'Pauze is vaak onbetaald. Dat hangt af van je contract of cao.', whyMore: 'In je pauze hoef je niet te werken. Je mag dan echt stoppen.',
         },
         {
           kind: 'whoask',
@@ -230,7 +230,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt: "Vandaag niet. Morgen kan ik wel."', best: true, feedback: 'Goed. Duidelijk, en hij biedt iets anders aan.' },
             { id: 'c', text: 'Hij zegt "misschien", en hij belt zijn moeder.', best: false, feedback: 'Dan weet Henk niet of Kevin blijft.' },
           ],
-          why: 'Mensen hier vinden een duidelijk nee beter dan een vaag ja. Ja zeggen en het niet doen, kost veel vertrouwen. Bied een andere keer aan als dat kan.',
+          why: 'Mensen hier vinden een duidelijk nee beter dan een vaag ja.', whyMore: 'Ja zeggen en het niet doen, kost veel vertrouwen. Bied een andere keer aan als dat kan.',
         },
         // ⚖️ check: Het hangt af van je contract en je cao ⚖️.
         // ⚖️ check: Bij een noodgeval moet je soms wel ⚖️.
@@ -239,7 +239,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.3.tf1',
           statement: 'Je moet altijd overwerken als je baas het vraagt.',
           answer: false,
-          why: 'Het hangt af van je contract en je cao. Bij een noodgeval moet je soms wel. Maar jouw situatie telt ook mee. Bijvoorbeeld zorg voor een kind.',
+          why: 'Het hangt af van je contract en je cao. Bij een noodgeval moet je soms wel.', whyMore: 'Maar jouw situatie telt ook mee. Bijvoorbeeld zorg voor een kind.',
         },
         // ⚖️ check: Loon contant, buiten de loonstrook om, is zwart werk. Dan bouw je bijvoorbeeld
         //   geen WW en pensioen op ⚖️. (Niet: "loon zonder loonstrook is zwart werk": een loonstrook
@@ -253,7 +253,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Hij vraagt Henk om de extra uren contant te betalen.', best: false, feedback: 'Contant en buiten de loonstrook om is zwart werk. Dan mist hij rechten.' },
             { id: 'c', text: 'Hij schrijft de extra uren op, met datum en tijd.', best: true, feedback: 'Goed. Daarna checkt hij zijn loonstrook.' },
           ],
-          why: 'Je eigen lijst helpt als er iets misgaat. Check daarna je loonstrook. Krijg je loon contant, buiten je loonstrook om? Dan is het zwart werk. Dan bouw je bijvoorbeeld geen WW en pensioen op.',
+          why: 'Je eigen lijst helpt als er iets misgaat. Check daarna je loonstrook.', whyMore: 'Krijg je loon contant, buiten je loonstrook om? Dan is het zwart werk. Dan bouw je bijvoorbeeld geen WW en pensioen op.',
         },
         // Oproep 4 dagen (rapport hiaten, voorstel 3): de tweede vraag naast r.l.contract.3.tf1.
         // ⚖️ check: Je werkgever moet je meestal minstens 4 dagen ⚖️ van tevoren oproepen.
@@ -267,7 +267,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt rustig nee. Het is te kort van tevoren.', best: true, feedback: 'Goed. Bij minder dan 4 dagen mag hij nee zeggen.' },
             { id: 'c', text: 'Hij zegt niets, en hij komt zaterdag gewoon niet.', best: false, feedback: 'Dan rekent Mark op hem. Zeg het duidelijk.' },
           ],
-          why: 'Een oproepkracht werkt als het bedrijf belt. Je werkgever moet je meestal minstens 4 dagen van tevoren oproepen. Is het later? Dan mag je nee zeggen. Een cao kan die 4 dagen korter maken. Kijk in je cao.',
+          why: 'Je werkgever moet je meestal minstens 4 dagen van tevoren oproepen. Later? Dan mag je nee zeggen.', whyMore: 'Een oproepkracht werkt als het bedrijf belt. Een cao kan die 4 dagen korter maken. Kijk in je cao.',
         },
         {
           kind: 'whoask',
@@ -331,7 +331,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Ze boekt de reis alvast, en ze meldt het later.', best: false, feedback: 'Riskant. De baas moet het eerst goedvinden.' },
             { id: 'c', text: 'Ze vraagt het nu al, per mail of in de app.', best: true, feedback: 'Goed. Vroeg en op papier geeft de beste kans.' },
           ],
-          why: 'Vraag vrij op tijd en op papier. Je werkgever moet in principe ja zeggen. Alleen bij een heel goede reden van het bedrijf mag hij nee zeggen. Dat moet hij binnen 2 weken op papier laten weten. Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd.',
+          why: 'Vraag vrij op tijd en op papier. Je werkgever moet in principe ja zeggen.', whyMore: 'Alleen bij een heel goede reden van het bedrijf mag hij nee zeggen. Dat moet hij binnen 2 weken op papier laten weten. Vroeg je het op papier, en zegt je werkgever binnen 2 weken niets? Dan is je vakantie goedgekeurd.',
         },
         // ⚖️ check: Je krijgt minstens 4 keer ⚖️ zoveel vrije dagen als je dagen per week werkt.
         // ⚖️ check: Vrije dagen van de wet vervallen meestal op 1 juli van het jaar erna ⚖️ (6 maanden
@@ -341,7 +341,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.4.tf1',
           statement: 'Werk je 5 dagen per week? Dan heb je minstens 20 vrije dagen per jaar.',
           answer: true,
-          why: 'Je krijgt minstens 4 keer zoveel vrije dagen als je dagen per week werkt. Je cao geeft vaak meer. Vrije dagen van de wet vervallen meestal op 1 juli van het jaar erna. Wil je vrij voor een feestdag, zoals het Suikerfeest of Kerst? Vraag die dag op tijd aan.',
+          why: 'Je krijgt minstens 4 keer zoveel vrije dagen als je dagen per week werkt.', whyMore: 'Je cao geeft vaak meer. Vrije dagen van de wet vervallen meestal op 1 juli van het jaar erna. Wil je vrij voor een feestdag, zoals het Suikerfeest of Kerst? Vraag die dag op tijd aan.',
         },
         // ⚖️ check: Bij een noodgeval mag je meteen weg. Dat heet calamiteitenverlof ⚖️.
         // ⚖️ check: Je krijgt dan meestal gewoon loon ⚖️.
@@ -355,7 +355,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Hij werkt eerst zijn dienst af, en gaat dan.', best: false, feedback: 'Dat hoeft niet. Bij een noodgeval mag je weg.' },
             { id: 'c', text: 'Hij gaat meteen weg, en hij belt morgen zijn baas.', best: false, feedback: 'Gaan is goed. Maar hij moet het meteen laten weten.' },
           ],
-          why: 'Bij een noodgeval mag je meteen weg. Dat heet calamiteitenverlof. Je krijgt dan meestal gewoon loon. Moet je langer voor iemand zorgen? Vraag naar zorgverlof.',
+          why: 'Bij een noodgeval mag je meteen weg. Dat heet calamiteitenverlof.', whyMore: 'Je krijgt dan meestal gewoon loon. Moet je langer voor iemand zorgen? Vraag naar zorgverlof.',
         },
         {
           kind: 'whoask',
@@ -426,7 +426,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.5.tf1',
           statement: 'Dewi is zwanger. Haar baas mag haar daarom ontslaan.',
           answer: false,
-          why: 'Je werkgever mag je niet ontslaan omdat je zwanger bent. Een tijdelijk contract niet verlengen om die reden, mag ook niet. Je vertelt het op je werk als je er klaar voor bent. Maar wel op tijd voor je verlof.',
+          why: 'Je werkgever mag je niet ontslaan omdat je zwanger bent.', whyMore: 'Een tijdelijk contract niet verlengen om die reden, mag ook niet. Je vertelt het op je werk als je er klaar voor bent. Maar wel op tijd voor je verlof.',
         },
         // ⚖️ check: Krijgt je partner een baby? Dan heb je recht op geboorteverlof ⚖️ (Wazo 4:1).
         // ⚖️ check: Ouderschapsverlof: tot je kind 8 jaar is ⚖️ (Wazo 6:1).
@@ -441,7 +441,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', who: 'uwv', best: false, feedback: 'UWV betaalt soms een deel. Maar je vraagt het verlof aan op je werk.' },
             { id: 'c', who: 'gemeente', best: false, feedback: 'De gemeente gaat niet over verlof van je werk.' },
           ],
-          why: 'Krijgt je partner een baby? Dan heb je recht op geboorteverlof. Vraag het op tijd aan bij je werkgever. Later kun je ook ouderschapsverlof vragen. Dat is verlof om voor je kind te zorgen, tot je kind 8 jaar is. Voor een deel ervan kun je geld krijgen van UWV.',
+          why: 'Krijgt je partner een baby? Dan heb je recht op geboorteverlof. Vraag het op tijd aan.', whyMore: 'Dat vraag je aan bij je werkgever. Later kun je ook ouderschapsverlof vragen. Dat is verlof om voor je kind te zorgen, tot je kind 8 jaar is. Voor een deel ervan kun je geld krijgen van UWV.',
         },
         // ⚖️ check: Bij een noodgeval mag je meteen weg. Dat heet calamiteitenverlof ⚖️ (Wazo 4:1).
         // ⚖️ check: Moet je een paar dagen voor je kind zorgen? Dan kun je kortdurend zorgverlof
@@ -455,7 +455,7 @@ export const tijdUnit: RuleUnit = {
             { id: 'b', text: 'Hij meldt zich ziek. Dat is het makkelijkst.', best: false, feedback: 'Hij is zelf niet ziek. Voor zijn kind is er verlof.' },
             { id: 'c', text: 'Hij werkt eerst zijn dienst af. Dan haalt hij haar op.', best: false, feedback: 'Dat hoeft niet. Zijn dochter heeft hem nu nodig.' },
           ],
-          why: 'Is je kind ineens ziek? Bij een noodgeval mag je meteen weg. Dat heet calamiteitenverlof. Moet je een paar dagen voor je kind zorgen? Dan kun je kortdurend zorgverlof vragen. Je krijgt dan meestal een deel van je loon. Kijk in je cao.',
+          why: 'Is je kind ineens ziek? Bij een noodgeval mag je meteen weg.', whyMore: 'Dat heet calamiteitenverlof. Moet je een paar dagen voor je kind zorgen? Dan kun je kortdurend zorgverlof vragen. Je krijgt dan meestal een deel van je loon. Kijk in je cao.',
         },
         // ⚖️ check: Hoeveel je krijgt, hangt onder meer af van je inkomen ⚖️ (Wet kinderopvang).
         // ⚖️ check: Geef het meteen door via Mijn toeslagen ⚖️.
@@ -464,7 +464,7 @@ export const tijdUnit: RuleUnit = {
           id: 'r.l.tijd.5.tf2',
           statement: 'Verandert je inkomen of je opvang? Geef het door voor je kinderopvangtoeslag.',
           answer: true,
-          why: 'Kinderopvangtoeslag is geld van de overheid voor de opvang van je kind. Hoeveel je krijgt, hangt onder meer af van je inkomen. Verandert er iets? Geef het meteen door via Mijn toeslagen. Anders moet je later misschien veel terugbetalen.',
+          why: 'Hoeveel toeslag je krijgt, hangt onder meer af van je inkomen. Verandert er iets? Geef het meteen door.', whyMore: 'Kinderopvangtoeslag is geld van de overheid voor de opvang van je kind. Je geeft het door via Mijn toeslagen. Anders moet je later misschien veel terugbetalen.',
         },
         { kind: 'model', id: 'r.l.tijd.5.mo1', context: 'De opvang belt: je kind is ziek.', nl: 'Mijn kind is ziek. Ik moet het ophalen. Mag ik nu weg?' },
       ],
