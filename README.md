@@ -55,7 +55,7 @@ Hulptalen in het spoor Taal:
   vakbond, Juridisch Loket of FairWork bij uitbuiting.
 
 **Spoor Werkregels** (bèta, alleen Nederlands)
-- **23 onderwerpen, 67 lessen**: korte verhalen, regelkaarten, waar-of-niet-waar, "wat doe je?",
+- **28 onderwerpen, 89 lessen**: korte verhalen, regelkaarten, waar-of-niet-waar, "wat doe je?",
   een getekende loonstrook, rekenen met kaartjes. Per les een "Onthoud"-zin.
 - Hulp-pagina "Wie bel je?" met de juiste instanties.
 
@@ -74,13 +74,17 @@ Hulptalen in het spoor Taal:
   - één vraag per pagina bij de start;
   - alles kan worden voorgelezen, ook de hulptaal;
   - werkt rechts-naar-links, in Tigrinya-schrift, met grote letters, donker en zonder geluid.
-- **AI-stemmen** (ElevenLabs, 1389 opnames); zonder opname leest de telefoonstem voor.
+- **AI-stemmen** (ElevenLabs, vier stemmen, elk ongeveer 1.560 tot 1.580 opnames); zonder opname leest de telefoonstem voor.
 - **Privacy**:
   - geen account en geen cookies; voortgang alleen op het toestel;
-  - alleen een anonieme telling (GoatCounter): app geopend, les gestart, gestopt en afgerond (met
-    hoe lang ongeveer: 0–2, 2–5, 5–10 of meer dan 10 minuten), en een code ingevuld. Per hulptaal,
-    per sector, per versie (sneak preview of volledig) en per les, elk apart. Respecteert Do Not
-    Track, uit te zetten;
+  - alleen een anonieme telling (GoatCounter, zonder cookies), één verzoek per gebeurtenis, met
+    alleen inhoud in het adres (`src/lib/count.ts`): een les gestart, gestopt (in welk kwart) of
+    afgerond (hoe lang ongeveer: 0–2, 2–5, 5–10 of meer dan 10 minuten); de herhaling en een
+    onderwerp afgerond; de toets "Wat ken je al?" gestart en afgerond (welke versie, nooit de
+    score); het antwoord op "Gelukt?"; de dag van oefenen (1, 2, 7, 14, 28); en waar de app fout
+    gaat (alleen het soort fout). Er gaat **niets over de leerder** mee: geen hulptaal, geen
+    sector, geen versie, geen id, geen naam. Alleen in de productieversie op vloertaal.nl;
+    respecteert Do Not Track en Global Privacy Control, en is uit te zetten in Instellingen;
   - de microfoon slaat niets op, behalve bij de toets "Wat ken je al?": die bewaart je zin van
     toen en nu alleen op het toestel (IndexedDB), zodat je ze naast elkaar hoort.
 - **Wat ken je al?** (spoor Taal): een toets van ongeveer 10 minuten na de start en na 4 weken (of

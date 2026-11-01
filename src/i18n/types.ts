@@ -507,6 +507,9 @@ export const uiEn = {
   shareInvite: 'I am learning Dutch for my work with Vloertaal. It is free: {link}',
   /* "Probeer het vandaag op je werk": one sentence of the lesson on its result (src/components/WorkTry.tsx). */
   workTry: 'Try it at work today',
+  /* "Probeer het vandaag": the if-then plan (src/components/WorkTry.tsx): the moment, then the sentence. */
+  workTryWhen: 'When:',
+  workTryThen: 'Then say:',
   /* "Rustig scherm" (Settings › Lessons; src/lib/calm.ts). */
   calmScreen: 'Calm screen',
   calmAuto: 'Like your phone',

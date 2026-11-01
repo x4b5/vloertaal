@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Jednak zrób lekcje', // nieuw, nalezen
     shareInvite: 'Uczę się niderlandzkiego do pracy z Vloertaal. Za darmo: {link}', // nieuw, nalezen
     workTry: 'Spróbuj dziś w pracy', // nieuw, nalezen
+    workTryWhen: 'Kiedy:', // nieuw, nalezen
+    workTryThen: 'Wtedy powiedz:', // nieuw, nalezen
     calmScreen: 'Spokojny ekran', // nieuw, nalezen
     calmAuto: 'Jak w telefonie', // nieuw, nalezen
     calmHint: 'Włączone: nic się nie rusza, nie ma świętowania serii po lekcji, a seria i słowa nie są na ekranie głównym.', // nieuw, nalezen

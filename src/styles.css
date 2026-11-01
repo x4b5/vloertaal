@@ -4712,6 +4712,13 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .result-worktry .worktry-label-nl { font-weight: 700; }
 .result-worktry .worktry-gloss { grid-column: 1; --help-size: 0.9rem; color: var(--ink); }
 .result-worktry .speak-glyph { grid-row: 1 / span 3; }
+/* As an if-then plan: "Als:" with the moment, then "Zeg dan:" with the sentence; the speaker beside
+   the sentence (rows: label, moment, "Zeg dan", sentence, meaning). */
+.result-worktry .worktry-when { grid-column: 1; margin: 4px 0 0; display: flex; flex-direction: column; gap: 1px; }
+.result-worktry .worktry-kicker { grid-column: 1; font-size: var(--fs-small); font-weight: 700; color: var(--muted); line-height: 1.25; }
+.result-worktry .worktry-when-text { font-size: 1rem; color: var(--ink-2); line-height: 1.35; --help-size: 1rem; }
+.result-worktry:has(.worktry-when) > .worktry-kicker { margin-top: 6px; }
+.result-worktry:has(.worktry-when) .speak-glyph { grid-row: 4 / span 2; }
 /* "Je voortgang is niet bewaard" (src/components/SaveFailedNote.tsx): the note's status region,
    always there but taking no room or taps; the note looks like the sound note, above every screen. */
 .save-note-live { position: fixed; top: 0; left: 0; width: 0; height: 0; z-index: 40; pointer-events: none; }

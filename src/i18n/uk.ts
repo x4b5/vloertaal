@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Усе ж пройти уроки', // nieuw, nalezen
     shareInvite: 'Я вчу нідерландську для роботи з Vloertaal. Безкоштовно: {link}', // nieuw, nalezen
     workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
+    workTryWhen: 'Коли:', // nieuw, nalezen
+    workTryThen: 'Тоді скажи:', // nieuw, nalezen
     calmScreen: 'Спокійний екран', // nieuw, nalezen
     calmAuto: 'Як у телефоні', // nieuw, nalezen
     calmHint: 'Увімкнено: нічого не рухається, немає святкування серії після уроку, а серія і слова не показуються на головному екрані.', // nieuw, nalezen
