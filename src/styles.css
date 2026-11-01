@@ -4725,3 +4725,8 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .tip-page-read .tip-body { font-size: 1.25rem; line-height: 1.5; }
   .tip-page-read .tip-body .bi-help { --help-size: 0.82em; }
 }
+
+/* After recording (Speaking.tsx): the example and your try play by themselves; this line says
+   which one is playing. One button to say it again; the footer's Continue goes on. */
+.say-compare-note { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 30px; margin: 4px 0 10px; color: var(--muted); font-weight: 700; }
+.say-again-one { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 56px; }

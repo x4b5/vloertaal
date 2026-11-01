@@ -132,15 +132,15 @@ describe('"Wat zeg je?" on screen (Speaking.tsx)', () => {
     expect(off).toContain('Posłuchaj odpowiedzi');
   });
 
-  it('shows the reply after recording, with "Voorbeeld" next to your own recording', () => {
+  it('shows the reply after recording, with one "Say it again" (the example and your try play by themselves)', () => {
     const review = render('review');
     expect(review).toContain(dialogue.reply.nl);
-    expect(review).toContain('Przykład');
-    expect(review).toContain('say-play-me');
-    // "You" are the neutral person icon, never a cast member's face; the example has no face.
+    expect(review).toContain('say-again-one');
+    // No more self-rating and no two play cards: Continue (the footer) goes on.
+    expect(review).not.toContain('say-rate');
+    expect(review).not.toContain('say-play-me');
+    // "You" are still the neutral person icon in the chat, never a cast member's face.
     expect(review).toContain('ch-me');
-    expect(review).toContain('say-face-example');
-    expect(review).not.toContain('say-face"><svg class="ch ');
   });
 });
 

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { gloss, langTag, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { autoSpeak, speak, stopSpeech } from '../lib/audio';
+import { autoSpeak, onSpeech, speak, stopSpeech } from '../lib/audio';
 import { breakable } from '../lib/dutch';
 import type { Exercise } from '../lib/exercises';
 import { sentencePicture } from '../lib/exercises';
@@ -16,7 +16,7 @@ import { pictureCast, WordPicture } from '../pictures';
 import { Bi } from './Bi';
 import { NlPair } from './NlPair';
 import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId } from './Characters';
-import { BubblesIcon, LockIcon, SpeakerIcon } from './Icons';
+import { LockIcon, SpeakerIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { focusIsLost } from './useFocusLost';
 
@@ -39,12 +39,6 @@ const MicOffIcon = ({ size }: { size?: number }) => (
 );
 const StopGlyph = ({ size }: { size?: number }) => (
   <Svg size={size}><rect x="6" y="6" width="12" height="12" rx="2.4" fill="currentColor" /></Svg>
-);
-const PersonIcon = ({ size }: { size?: number }) => (
-  <Svg size={size}>
-    <circle cx="12" cy="8" r="4.2" fill="currentColor" />
-    <path d="M3.8 21.2a8.2 8.2 0 0 1 16.4 0z" fill="currentColor" />
-  </Svg>
 );
 const SameIcon = ({ size }: { size?: number }) => (
   <Svg size={size}>
@@ -93,14 +87,12 @@ const RING_C = 2 * Math.PI * RING_R;
  *
  * `phaseForShot` fixes the phase for the screenshot harness (no microphone used).
  */
-export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecording, keepNote, phaseForShot = shotPhase, listen = false, heardForShot = shotHeard }: {
+export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepNote, phaseForShot = shotPhase, listen = false, heardForShot = shotHeard }: {
   ex: Extract<Exercise, { kind: 'speak' }>;
   lang?: HelpLanguage;
   onAnswer: (a: { correct: boolean } | null) => void;
-  /** "Sounds the same": done, go on. */
-  onNext?: () => void;
-  /** True while the learner compares and rates: "Sounds the same" is then the way forward, so
-   *  the player hides its own Continue (one clear path). */
+  /** Always false now (the self-rating "Sounds the same" is gone: after recording the example
+   *  and the try play by themselves, and the player's own Continue goes on). */
   onRating?: (rating: boolean) => void;
   /** Each recording made ("Wat ken je al?" keeps it on the phone, src/lib/toetsVoice.ts). */
   onRecording?: (blob: Blob) => void;
@@ -124,7 +116,6 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
   const voice = voiceFor(who);
   const them = turn ? castFor(turn.prompt.id, colleaguesOf(lang?.gender)) : undefined;
   const themVoice = them ? voiceFor(them) : undefined;
-  const name = who[0].toUpperCase() + who.slice(1);
   /** "Wat zeg je?" without recording ("say it out loud"): the reply shows after "Hear the answer". */
   const [shown, setShown] = useState(false);
   // No usable microphone (none, or it failed earlier in this lesson): "say it out loud" at once.
@@ -225,6 +216,31 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
     themTimer.current = window.setTimeout(() => { if (alive.current) setPlaying((p) => (p === 'them' ? null : p)); }, 1600);
   }, [item.nl, voice]);
 
+  // After recording: the example first, then the learner's own try, without a tap (the two side
+  // by side are the comparison). The example's end is heard from onSpeech; a fallback timer goes
+  // on when no end comes (a voice that never reports one).
+  const bothTimer = useRef(0);
+  const stopBoth = useRef<(() => void) | null>(null);
+  const playBoth = useCallback(() => {
+    stopBoth.current?.();
+    let done = false;
+    const next = () => {
+      if (done) return;
+      done = true;
+      off();
+      window.clearTimeout(bothTimer.current);
+      if (alive.current) window.setTimeout(() => { if (alive.current) playMine(); }, 300);
+    };
+    const off = onSpeech((text, on) => { if (!on && text === item.nl) next(); });
+    stopBoth.current = () => { done = true; off(); window.clearTimeout(bothTimer.current); };
+    playThem();
+    window.clearTimeout(bothTimer.current);
+    bothTimer.current = window.setTimeout(next, Math.min(8000, 1200 + item.nl.length * 90));
+  }, [item.nl, playThem, playMine]);
+  useEffect(() => {
+    return () => { stopBoth.current?.(); };
+  }, []);
+
   // Say it once when the exercise opens (not in "Without sound"); let go of everything on leave.
   // "Wat zeg je?": the colleague's line, never the reply (the learner says that first).
   const opening = turn ? turn.prompt.nl : item.nl;
@@ -244,8 +260,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
     };
   }, [opening, openingVoice, phaseForShot, release, discard]);
 
-  // No microphone: Continue is open. After recording, the learner rates instead: "Sounds the
-  // same" goes on (nothing is scored), "Say it again" records once more; Continue stays hidden.
+  // No microphone: Continue is open. After recording too: the example and the try play by
+  // themselves, "Say it again" records once more, Continue goes on (nothing is scored).
   // A new try after the microphone failed: Continue goes until it is over (a tap on it would end the
   // recording halfway).
   // A try that ends without a recording (an empty one, the app hidden) after the microphone had
@@ -253,9 +269,10 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
   const wasOff = useRef(false);
   useEffect(() => {
     if (phase === 'off') wasOff.current = true;
-    if (phase === 'off' || (phase === 'idle' && wasOff.current)) onAnswer({ correct: true });
+    if (phase === 'off' || phase === 'review' || (phase === 'idle' && wasOff.current)) onAnswer({ correct: true });
     if (phase === 'asking') onAnswer(null);
-    onRating?.(phase === 'review');
+    // No self-rating any more: after recording the usual Continue goes on.
+    onRating?.(false);
   }, [phase, onAnswer, onRating]);
   // The button that had the focus is gone (the microphone after recording, "Say it again"): the
   // first button of the new phase gets it, so a keyboard or screen-reader user keeps their place.
@@ -338,8 +355,9 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
       onRecording?.(blob);
       setPhase('review');
       setStatus(said(ui('speakMe', lang)));
-      // Hear yourself right away (not in the background: stopped because the app was hidden).
-      if (document.visibilityState !== 'hidden') playMine();
+      // Hear the example and then yourself right away (not in the background: stopped because
+      // the app was hidden).
+      if (document.visibilityState !== 'hidden') playBoth();
     };
     rec.start();
     setPhase('recording');
@@ -386,6 +404,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
   }
 
   function again() {
+    stopBoth.current?.();
     tryRef.current++;
     listenRef.current?.abort();
     listenRef.current = null;
@@ -421,8 +440,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
             <div className="chat-bubble chat-bubble-me" aria-live="polite">
               {revealed ? (
                 <>
-                  {/* While comparing, the Example button below plays it (one speaker per item). */}
-                  {phase !== 'review' && <SpeakButton glyph text={item.nl} help={lang} voice={voice} />}
+                  {/* Your reply, to hear again (after recording, the example and your try played by themselves). */}
+                  <SpeakButton glyph text={item.nl} help={lang} voice={voice} />
                   <span className="chat-line" lang="nl">{breakable(item.nl)}</span>
                   <span className="chat-hint"><Bi text={meaning} /></span>
                 </>
@@ -437,9 +456,9 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
         <div className="say-words">
           <NlPair content nlFirst nl={breakable(item.nl)} nlClass="say-nl" dir="ltr" className="say-meaning" text={meaning} />
         </div>
-        {/* The model is one tap away. While comparing, the speaker's own button below plays it
-            (one speaker per item). Hidden while recording (its sound would be recorded too), its place kept. */}
-        {phase !== 'review' && <SpeakButton text={item.nl} voice={voice} help={lang} className={recording ? 'say-model-off' : undefined} />}
+        {/* The model is one tap away, also after recording. Hidden while recording (its sound
+            would be recorded too), its place kept. */}
+        <SpeakButton text={item.nl} voice={voice} help={lang} className={recording ? 'say-model-off' : undefined} />
       </div>
       )}
 
@@ -481,41 +500,16 @@ export function SpeakExercise({ ex, lang, onAnswer, onNext, onRating, onRecordin
 
       {phase === 'review' && (
         <>
-          <div className="say-compare">
-            {turn ? (
-              // "Your" line, as an example: no face ("you" are never a cast member, and the person
-              // icon is your own recording next to it), a speech bubble instead.
-              <button type="button" className={`say-play ${playing === 'them' ? 'is-playing' : ''}`} onClick={playThem} aria-label={`${said(ui('speakTurnExample', lang))}: ${item.nl}`}>
-                <span className="say-face say-face-example" aria-hidden><BubblesIcon size={30} /></span>
-                <SpeakerIcon size={30} />
-                <Bi className="say-who" text={ui('speakTurnExample', lang)} />
-              </button>
-            ) : (
-              <button type="button" className={`say-play ${playing === 'them' ? 'is-playing' : ''}`} onClick={playThem} aria-label={`${name}: ${item.nl}`} lang="nl">
-                <span className="say-face" aria-hidden><Character who={who} crop="head" size={48} /></span>
-                <SpeakerIcon size={30} />
-                <span className="say-who" lang="nl">{name}</span>
-              </button>
-            )}
-            <button type="button" className={`say-play say-play-me ${playing === 'me' ? 'is-playing' : ''}`} onClick={playMine} aria-label={said(ui('speakMe', lang))} lang={saidLang(ui('speakMe', lang))}>
-              <span className="say-face say-face-me" aria-hidden><PersonIcon size={34} /></span>
-              <SpeakerIcon size={30} />
-              <Bi className="say-who" text={ui('speakMe', lang)} />
-            </button>
-          </div>
+          {/* The example and the learner's try play by themselves (playBoth); one button to say
+              it again. Continue (the footer) goes on. */}
+          <p className="say-compare-note" aria-live="polite">
+            {playing && <><SpeakerIcon size={22} /><Bi text={ui(playing === 'me' ? 'speakMe' : 'speakTurnExample', lang)} /></>}
+          </p>
           {verdict && <Heard verdict={verdict} lang={lang} />}
-          <div className="say-rate">
-            {/* With the phone listening: "Continue" when understood, else "Continue anyway"
-                (always there: the phone can be wrong). Without: "Sounds the same". */}
-            <button type="button" className="say-rate-btn say-same" onClick={() => onNext?.()}>
-              <SameIcon size={30} />
-              <Bi text={ui(!verdict ? 'soundsSame' : verdict !== 'wait' && verdict.kind === 'ok' ? 'continue' : 'goOnAnyway', lang)} />
-            </button>
-            <button type="button" className="say-rate-btn say-again" onClick={again}>
-              <AgainIcon size={30} />
-              <Bi text={ui('sayAgain', lang)} />
-            </button>
-          </div>
+          <button type="button" className="btn say-again say-again-one" onClick={again}>
+            <AgainIcon size={26} />
+            <Bi text={ui('sayAgain', lang)} />
+          </button>
         </>
       )}
 
