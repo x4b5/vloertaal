@@ -9,14 +9,14 @@ import { certKunFits, certificatePng, fontsReady, shareCertificate } from '../li
 import { KUN_VAARDIGHEID_UI, kunJeNu, pastBij, type KunZin } from '../content/kunJeNu';
 import type { Progress } from '../lib/progress';
 import { KAART_CODE_LABEL, KAART_NOTE, kaartAlt, kaartCode, kaartData } from '../lib/kaart';
-import { kaartPng, shareKaart } from '../lib/kaartCanvas';
+import { kaartPng, shareKaart, type KaartNameBox } from '../lib/kaartCanvas';
 import { shareText } from '../lib/shareLink';
 import { Bi } from './Bi';
 import { HelpSay } from './HelpSay';
 import { NlPair } from './NlPair';
 import { Character } from './Characters';
 import { CertIcon } from './CertBadge';
-import { CheckIcon, ChevronIcon } from './Icons';
+import { CheckIcon, ChevronIcon, PencilIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
 import { LogoMark } from './Logo';
 import { PocketIcon } from './Offline';
@@ -502,10 +502,12 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   const [today] = useState(() => fixedToday ?? new Date());
   const data = useMemo(() => ({ ...kaartData(progress, name, today), helpCode: lang?.code }), [progress, name, today, lang?.code]);
   const key = JSON.stringify(data);
-  const [png, setPng] = useState<{ key: string; blob: Blob; url: string } | null>(null);
+  const [png, setPng] = useState<{ key: string; blob: Blob; url: string; box: KaartNameBox } | null>(null);
   const [failed, setFailed] = useState(false);
   const [busy, setBusy] = useState(false);
   const [saved, setSaved] = useState(false);
+  /** The name is being typed on the card itself ("edit in the example": the card follows each letter). */
+  const [editing, setEditing] = useState(false);
   const rtl = lang?.dir === 'rtl';
 
   // The picture is drawn when the screen opens: it is what the screen shows, and a tap on
@@ -515,10 +517,11 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
     let alive = true;
     let url: string | null = null;
     setFailed(false);
-    kaartPng(data).then((blob) => {
+    const box: KaartNameBox = { top: 0, bottom: 0 };
+    kaartPng(data, box).then((blob) => {
       if (!alive) return;
       url = typeof URL.createObjectURL === 'function' ? URL.createObjectURL(blob) : null;
-      if (url) setPng({ key, blob, url });
+      if (url) setPng({ key, blob, url, box });
       else setFailed(true);
     }, () => { if (alive) setFailed(true); });
     return () => {
@@ -530,7 +533,9 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   useEffect(() => { window.scrollTo(0, 0); }, [asking]);
 
   const done = (n: string) => { saveCertName(n); setName(n.trim()); setAsking(false); };
-  const shown = png?.key === key ? png : null;
+  // While typing on the card, the last picture stays until the new one is drawn (no flicker).
+  const shown = png?.key === key || (editing && png) ? png : null;
+  const finishEdit = () => { saveCertName(name); setName(name.trim()); setEditing(false); };
   const share = async () => {
     if (busy || !shown) return;
     setBusy(true);
@@ -577,7 +582,23 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
       )}
       <figure className="kaart-figure">
         {shown ? (
-          <img className="kaart-img" src={shown.url} alt={alt} lang="nl" width={1200} />
+          <>
+            <img className="kaart-img" src={shown.url} alt={alt} lang="nl" width={1200} />
+            {/* The name is changed on the card itself: a tap on it (the pencil) makes it a field
+                in the same place, and the picture follows each letter. Without a name, the
+                pencil sits where the name would go. */}
+            {shown.box.height ? (
+              <NameOnCard
+                box={shown.box}
+                name={name}
+                editing={editing}
+                lang={lang}
+                onEdit={() => setEditing(true)}
+                onChange={setName}
+                onDone={finishEdit}
+              />
+            ) : null}
+          </>
         ) : failed ? (
           // No picture on this phone (an old browser): the same lines as text.
           <p className="kaart-text" lang="nl" dir="ltr">{alt}</p>
@@ -600,9 +621,55 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
           <NlPair nlFirst nl={KAART_NOTE} nlClass="kaart-keep-nl" text={ui('coachCardKeep', lang)} />
         </p>
       </section>
-      <button type="button" className="keep-link cert-rename" onClick={() => setAsking(true)} dir={rtl ? 'rtl' : undefined}>
-        <NlPair nlFirst nl="Naam wijzigen" className="keep-link-gloss" text={ui('certChangeName', lang)} />
-      </button>
     </div>
+  );
+}
+
+/**
+ * The name on the coach card, editable where it is (the principle "change it in the example
+ * itself"): over the picture, at the name's place (`box`, from the drawing), a button with a
+ * pencil; a tap makes it a field there. Each letter redraws the card; Enter or leaving the field
+ * keeps the name (as on the certificates). An empty name takes the name off the card.
+ */
+function NameOnCard({ box, name, editing, lang, onEdit, onChange, onDone }: {
+  box: KaartNameBox;
+  name: string;
+  editing: boolean;
+  lang?: HelpLanguage;
+  onEdit: () => void;
+  onChange: (name: string) => void;
+  onDone: () => void;
+}) {
+  const H = box.height ?? 1;
+  const empty = box.bottom - box.top < 1;
+  const style = {
+    top: `${(box.top / H) * 100}%`,
+    height: empty ? undefined : `${((box.bottom - box.top) / H) * 100}%`,
+  };
+  const label = said(ui('certChangeName', lang));
+  if (editing) {
+    return (
+      <input
+        className={`kaart-name-input ${empty ? 'is-empty' : ''}`}
+        style={style}
+        type="text"
+        value={name}
+        maxLength={60}
+        autoFocus
+        autoComplete="name"
+        autoCapitalize="words"
+        enterKeyHint="done"
+        aria-label={label}
+        lang={saidLang(ui('certChangeName', lang))}
+        onChange={(e) => onChange(e.target.value)}
+        onBlur={onDone}
+        onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); onDone(); } }}
+      />
+    );
+  }
+  return (
+    <button type="button" className={`kaart-name-edit ${empty ? 'is-empty' : ''}`} style={style} onClick={onEdit} aria-label={label} lang={saidLang(ui('certChangeName', lang))}>
+      <span className="kaart-name-pencil" aria-hidden><PencilIcon size={22} /></span>
+    </button>
   );
 }

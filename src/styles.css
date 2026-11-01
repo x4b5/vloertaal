@@ -4755,3 +4755,28 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .choices-rows:has(.choice.picked) .choice:not(.picked, .right, .wrong, .faded) :is(.choice-pic, .pic-emoji) { opacity: 0.7; }
 /* 5. A plain right answer has no heading: the one line sits level with the check. */
 .feedback:not(:has(.feedback-head)) { align-items: center; }
+
+/* The name on the coach card, changed on the card itself (Certificate.tsx NameOnCard). The
+   picture is 1200 wide; the name starts 9% in from each side, its letters at most 6% of the
+   width (src/lib/kaartCanvas.ts), so the field sits exactly over it and scales with the card. */
+.kaart-figure { position: relative; container-type: inline-size; }
+.kaart-name-edit, .kaart-name-input { position: absolute; left: 7.5%; right: 7.5%; z-index: 1; }
+.kaart-name-edit {
+  display: flex; align-items: center; justify-content: flex-end; min-height: 44px; padding: 0 4px;
+  background: transparent; border: 2px dashed transparent; border-radius: 8px; cursor: pointer;
+}
+.kaart-name-edit:hover, .kaart-name-edit:focus-visible { border-color: #8c7b66; outline: none; }
+.kaart-name-pencil {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  background: #ffc414; color: #26211c; box-shadow: 0 1px 3px rgba(38, 33, 28, 0.25);
+}
+/* Without a name: the pencil sits on the first line, where the name would go. */
+.kaart-name-edit.is-empty { translate: 0 -50%; height: 44px; }
+.kaart-name-input {
+  min-height: 44px; padding: 0 1.2cqw; margin: 0;
+  font: 700 6cqw/1.1 'Lexend Variable', Lexend, 'Noto Sans Arabic', 'Noto Sans Ethiopic', system-ui, sans-serif;
+  color: #26211c; background: #fffdf8; border: 2px solid #26211c; border-radius: 8px;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #ffc414 55%, transparent);
+}
+.kaart-name-input.is-empty { translate: 0 -50%; height: 10cqw; }
+.kaart-name-input:focus { outline: none; }

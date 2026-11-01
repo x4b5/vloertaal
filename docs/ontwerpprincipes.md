@@ -14,7 +14,17 @@ dezelfde principes in beeld zien.
 - **Zeg iets één keer.** Geen label dat de vraag herhaalt, geen "Goed zo!" naast een groen vinkje.
   Zie `docs/rustiger.md`.
 
-## 2. Elke kleur heeft één taak
+## 2. Verander het in het voorbeeld zelf
+
+- Wat je aanpast, pas je aan op de plek waar je het ziet. Je ziet het effect meteen.
+  Voorbeeld: de naam op de kaart "Laat zien hoe het gaat". Tik op het potlood en typ op de
+  kaart; de kaart volgt elke letter.
+- Waar dat niet kan, toont de instelling meteen het effect. Een andere tekstgrootte of het
+  donkere thema zie je direct, en een stem hoor je meteen.
+- Bekend als *direct manipulation* (Shneiderman, 1983) en als "laat de status van het systeem
+  zien" (Nielsen, heuristiek 1).
+
+## 3. Elke kleur heeft één taak
 
 - **Geel** betekent "doe dit": Verder, de volgende les.
 - **Blauw** betekent "luister".
@@ -24,47 +34,47 @@ dezelfde principes in beeld zien.
   wat aan staat of wat focus heeft.
 - **Contrast:** gecontroleerd in `tests/a11yScan.test.ts`.
 
-## 3. Nederlands is het doel, de eigen taal de brug
+## 4. Nederlands is het doel, de eigen taal de brug
 
 - Nederlands staat voorop. De hulptaal staat erbij, als steun.
 - Een Nederlandse zin is kort en komt van de werkvloer.
 - Van rechts naar links (Arabisch, Farsi, Dari) werkt overal.
 - Wie al Nederlands spreekt, kiest Werkregels: alles in het Nederlands.
 
-## 4. Horen bij alles
+## 5. Horen bij alles
 
 - Bij elk Nederlands woord en elke zin staat een luidspreker.
 - Opnames zijn AI-stemmen, en zo noemen we ze ook. We zeggen nooit "echte stemmen".
 - Het uitspreken mag anders zijn dan het schrijven, als de stem anders verkeerd klinkt (`src/lib/sayAs.ts`).
 - Spreken mag zonder microfoon: je kunt het altijd hardop zeggen en doorgaan.
 
-## 5. Eigen tekeningen, geen emoji
+## 6. Eigen tekeningen, geen emoji
 
 - Alleen eigen SVG-tekeningen, in één stijl: plat, zonder lijnen eromheen, licht van linksboven.
   Zie `docs/tekenstijl.md`.
 - Mensen zijn altijd de vaste personages: Bram, Amina, Henk en Jada.
 - Een tekening moet te herkennen zijn op 48 px.
 
-## 6. Fouten mogen
+## 7. Fouten mogen
 
 - Een fout geeft geen straf. Je ziet het goede antwoord, en het woord komt later terug.
 - Kleur is nooit het enige teken: groen heeft een vinkje, rood een kruis.
 - "Ik weet het niet" is een eerlijk antwoord. Gokken telt niet mee in de toets.
 
-## 7. Bescheiden en eerlijk
+## 8. Bescheiden en eerlijk
 
 - Geen superlatieven. Nooit "de beste", "de enige" of "uniek".
 - Wat niet is nagekeken, zegt dat: "nog niet nagekeken door een expert". Nooit "experts kijken na".
 - Regels en tips zijn algemene informatie, geen juridisch advies, en dat staat erbij.
 - Nieuwe vertalingen zijn gemarkeerd om na te lezen (`// nieuw, nalezen`).
 
-## 8. Privacy als standaard
+## 9. Privacy als standaard
 
 - Geen account en geen cookies. Wat je leert, blijft op je telefoon.
 - We tellen alleen anoniem, en dat kun je uitzetten. Bij "Do Not Track" telt de app niets.
 - Elke nieuwe telling komt in de privacyverklaring (`src/lib/privacyPage.ts`, `docs/privacy.md`).
 
-## 9. Voor iedereen, op je eigen tempo
+## 10. Voor iedereen, op je eigen tempo
 
 - **Contrast:** tekst minstens 4,5:1, randen van knoppen minstens 3:1.
 - **Tikken:** tikvlakken minstens 44 px.

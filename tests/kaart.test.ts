@@ -185,7 +185,7 @@ describe('coach card: the screen', () => {
     expect(html).toContain('dir="rtl"');
     expect(html).toContain('lang="ar"');
     expect(html).toContain('Toets “Wat ken je al?”');
-    expect(html.match(/<button\b/g)).toHaveLength(3); // Back (chrome), Bewaar of deel, Naam wijzigen
+    expect(html.match(/<button\b/g)).toHaveLength(2); // Back (chrome), Bewaar of deel (the name is changed on the card itself, once the picture is drawn)
     expect(html).toContain('chrome-back');
   });
 
