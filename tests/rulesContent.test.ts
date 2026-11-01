@@ -34,7 +34,7 @@ function shownTexts(s: RuleStep): string[] {
     ];
   }
 }
-const stepTexts = (s: RuleStep) => [...shownTexts(s), ...('picture' in s ? [s.picture] : []), ...('emoji' in s ? [s.emoji] : [])];
+const stepTexts = (s: RuleStep) => [...shownTexts(s), ...('whyMore' in s && s.whyMore ? [s.whyMore] : []), ...('picture' in s ? [s.picture] : []), ...('emoji' in s ? [s.emoji] : [])];
 const lessonTexts = (l: RuleLesson) => [l.title, l.goal, l.remember];
 
 /** All texts with the id of the step (or lesson/unit) they belong to. */
