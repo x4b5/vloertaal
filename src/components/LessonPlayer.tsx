@@ -117,14 +117,6 @@ function answerVoice(ex: Exercise, gender?: Gender): CharacterId {
     : 'bram';
 }
 
-/** A filled play triangle for the replay button in the feedback label. */
-function PlayGlyph() {
-  return (
-    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden focusable="false">
-      <path d="M8 5.2v13.6a1 1 0 0 0 1.5.86l11-6.8a1 1 0 0 0 0-1.72l-11-6.8A1 1 0 0 0 8 5.2z" fill="currentColor" />
-    </svg>
-  );
-}
 
 /**
  * The kraft tag above each exercise: a fixed pictogram per kind of exercise, a short Dutch
@@ -904,13 +896,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       title={said(ui('playAgain', lang))}
     >
       <PlayName text={pair.nl} help={lang} say="playAgain" />
-      <PlayGlyph />
+      {/* The same speaker as every other "listen" button: one sign for hearing Dutch. */}
+      <SpeakerIcon size={26} />
     </button>
   ) : null;
   const pairLine = pair && sayable ? (
     <div className="feedback-pair feedback-say">
       <div className="pair-say" dir="ltr">
-        {replay}
         {diff ? (
           <span className="pair-tiles" lang="nl">
             {diff.map((t, i) => (
@@ -923,6 +915,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         ) : (
           <strong className="pair-nl" lang="nl">{breakable(pair.nl ?? '')}</strong>
         )}
+        {/* To hear it again: optional, so at the end (the right), as every optional speaker. */}
+        {replay}
       </div>
       {pairHelp && lang && <HelpText className="pair-gloss" text={pairHelp} lang={lang} />}
       <span className={`pair-en ${pairHelp && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
@@ -970,11 +964,21 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const showGo = !speakRating && Boolean(checked || answer || typing);
   /** The footer button is Continue (not Check): after the answer, or on a step that only goes on. */
   const goIsContinue = (checked && swapped) || autoContinue;
+  // A plain right answer where the screen already shows the Dutch and its meaning (the word in
+  // the bubble or the prompt, the meaning in the green option): no label that says it all again
+  // ("Vloertaal rustiger": say it once). The green, the check and the sound say "right"; the
+  // status region still says "Goed zo! het hesje = the safety vest". A label stays when it adds
+  // something: a why, "almost", a wrong answer, a sentence or a reply (its meaning and ▶), writing,
+  // a picture pick ("Which picture is it?": the meaning in words is only on the label).
+  const cardless = quietRight && !ruleFb && !why && (ex.kind === 'meaning' || ex.kind === 'listen');
+  // Answered: the question steps back (styles.css "the spotlight after the answer"). Matching has
+  // no Check; it is answered when the last pair is made.
+  const answered = checked || (ex.kind === 'match' && answer !== null);
 
   return (
     // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
     // and English in it keep their own direction (lang="nl" / lang="en" isolates, styles.css).
-    <div className={`player ${rtl ? 'player-rtl' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
+    <div className={`player ${rtl ? 'player-rtl' : ''} ${answered ? 'is-answered' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
       <header className="player-top" inert={askQuit}>
         {/* The only control up here: ✕ opens the pause sheet (keep going, without sound, stop). */}
         <button ref={closeRef} type="button" className="icon-btn lesson-close" onClick={() => setAskQuit(true)} aria-label={said(ui('quitLesson', lang))} lang={saidLang(ui('quitLesson', lang))} aria-haspopup="dialog"><CloseIcon size={28} /></button>
@@ -1108,7 +1112,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         <div className="foot-inner">
           {/* Always present, so screen readers hear what is put in it one tick after Check. */}
           <div className="sr-only" role="status"><LiveParts parts={live} /></div>
-          {feedback && outcome && (
+          {feedback && outcome && !cardless && (
             <div className={`feedback feedback-${outcome}`}>
               <span className="feedback-tape" aria-hidden />
               <span className="feedback-icon" aria-hidden>

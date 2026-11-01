@@ -1116,10 +1116,10 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
                 <p><Bi text={tipBody(t, lang)} /></p>
                 <HelpSay text={tipBody(t, lang).help} lang={lang} />
                 <div className="phrase">
-                  <SpeakButton text={t.phrase.nl} help={lang} />
                   <div className="phrase-text">
                     <NlPair content nlFirst nl={breakable(t.phrase.nl)} nlClass="phrase-nl" text={gloss(t.phrase.id, t.phrase.en, lang)} />
                   </div>
+                  <SpeakButton text={t.phrase.nl} help={lang} />
                 </div>
               </div>
             )}

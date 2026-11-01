@@ -26,6 +26,7 @@ import { BeNote } from './BeNote';
 import { tipNlOnly } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
 import { tipBody } from '../lib/tipText';
+import { dropAsk } from '../lib/dropAsk';
 
 export interface Answer {
   correct: boolean;
@@ -327,8 +328,8 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, miss
       <div className={`speaker speaker-word ${wordSize(ex.word.nl)}`}>
         <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} run={run} misses={misses} />
         <div className="speaker-bubble">
-          <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor('bram')} />
           <span className="speaker-nl" lang="nl">{breakable(ex.word.nl)}</span>
+          <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor('bram')} />
         </div>
       </div>
       <ChoiceGrid
@@ -370,8 +371,8 @@ function PictureFromDutch({ ex, lang, locked, onAnswer, verdict, run, misses }: 
       <div className={`speaker speaker-word ${wordSize(ex.word.nl)}`}>
         <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} run={run} misses={misses} />
         <div className="speaker-bubble">
-          <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor('bram')} />
           <span className="speaker-nl" lang="nl">{breakable(ex.word.nl)}</span>
+          <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor('bram')} />
         </div>
       </div>
       <ChoiceGrid
@@ -540,8 +541,8 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
       <div className={`speaker speaker-word ${wordSize(current.nl)}`}>
         <Speaker who="bram" lines={finished ? [] : [current.nl]} />
         <div className="speaker-bubble match-on" key={current.id}>
-          <SpeakButton text={current.nl} help={lang} voice={voiceFor('bram')} />
           <span className="speaker-nl" lang="nl">{breakable(current.nl)}</span>
+          <SpeakButton text={current.nl} help={lang} voice={voiceFor('bram')} />
         </div>
       </div>
       {/* Where the learner is: one dot per pair, filled when made. */}
@@ -713,10 +714,12 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
         <div className="speaker-bubble build-bubble">
           {/* The whole sentence is held back until a wrong tap or the end: before that, hearing
               it would give the order away (the words' own speakers stay). */}
-          {sayShown && <SpeakButton glyph={!byEar} size={byEar ? 'lg' : undefined} hideText={byEar || undefined} text={bubbleSay} help={lang} voice={voiceFor(who)} />}
+          {/* By ear the speaker is the task (large, first); otherwise it is optional, at the end. */}
+          {sayShown && byEar && <SpeakButton size="lg" hideText text={bubbleSay} help={lang} voice={voiceFor(who)} />}
           {pic && !front && <WordPicture className="build-pic" id={pic.id} emoji={pic.emoji} size={56} />}
           {front && <FrontLine nl={front.nl} phrase={front.phrase} />}
           {(!byEar || complete || locked) && <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />}
+          {sayShown && !byEar && <SpeakButton glyph text={bubbleSay} help={lang} voice={voiceFor(who)} />}
         </div>
       </div>
       {/* The sentence so far (not tappable), with a dashed slot where the next word goes. */}
@@ -951,8 +954,8 @@ function ChatForward({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
         <div className="chat-row chat-them">
           <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking && !meTalking} /></span>
           <div className="chat-bubble">
-            <SpeakButton glyph text={prompt.nl} help={lang} voice={voiceFor(them)} />
             <span className="chat-line" lang="nl">{breakable(prompt.nl)}</span>
+            <SpeakButton glyph text={prompt.nl} help={lang} voice={voiceFor(them)} />
             {/* What was asked: only after the answer. First the learner listens and reads the
                 Dutch (the speaker, and every reply has its own); with the translation in view
                 the chat could be solved without understanding the colleague. No extra button
@@ -1001,8 +1004,8 @@ function ChatReversed({ ex, lang, locked, onAnswer, verdict, run, misses }: Prop
         </div>
         <div className="chat-row chat-me">
           <div className="chat-bubble chat-bubble-me chat-bubble-given">
-            <SpeakButton glyph text={reply.nl} help={lang} voice={myVoice} />
             <span className="chat-line" lang="nl">{breakable(reply.nl)}</span>
+            <SpeakButton glyph text={reply.nl} help={lang} voice={myVoice} />
             {/* What you answered, always under it. */}
             <span className="chat-hint">
               <Bi text={gloss(reply.id, reply.en, lang)} />
@@ -1075,10 +1078,10 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       <div className="tip-say-row">
         <span className="tip-char"><Character who={tipCast(tip, lang?.gender)} talking={talking} size={part === 'say' ? 120 : 96} /></span>
         <div className="speaker-bubble tip-bubble">
-          <SpeakButton glyph text={tip.phrase.nl} help={lang} voice={voiceFor(tipCast(tip, lang?.gender))} />
           <span className="tip-phrase">
             <NlPair content nlFirst nl={breakable(tip.phrase.nl)} nlClass="tip-phrase-nl" text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
           </span>
+          <SpeakButton glyph text={tip.phrase.nl} help={lang} voice={voiceFor(tipCast(tip, lang?.gender))} />
         </div>
       </div>
     </div>
@@ -1135,8 +1138,8 @@ export function SayingCard({ ex, lang, onAnswer }: Props<'saying'>) {
       <div className="tip-say-row">
         <span className="tip-char"><Character who={who} talking={talking} size={96} /></span>
         <div className="speaker-bubble tip-bubble">
-          <SpeakButton glyph text={saying.nl} help={lang} voice={voiceFor(who)} />
           <span className="tip-phrase"><span lang="nl" className="tip-phrase-nl saying-nl">{breakable(saying.nl)}</span></span>
+          <SpeakButton glyph text={saying.nl} help={lang} voice={voiceFor(who)} />
         </div>
       </div>
       <div className="card saying-card">
@@ -1258,8 +1261,8 @@ function SituationText({ text, said, who, lang }: { text: Bilingual; said: strin
   const rtl = text.help && text.lang?.dir === 'rtl';
   const quote = (
     <span className="situation-quote" dir="ltr">
-      <SpeakButton glyph text={said} help={lang} voice={voiceFor(who)} />
       <span lang="nl" className="situation-nl">{breakable(said)}</span>
+      <SpeakButton glyph text={said} help={lang} voice={voiceFor(who)} />
     </span>
   );
   if (!parts) {
@@ -1296,7 +1299,9 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
   const best = tip.options.find((o) => o.best)!;
   const who = tipCast(tip, lang?.gender);
   const said = tip.situation.nl;
-  const text = gloss(tip.situation.id, tip.situation.en, lang);
+  // The heading asks the question ("What do you do?"), so the text does not ask it again.
+  const full = gloss(tip.situation.id, tip.situation.en, lang);
+  const text = tip.situation.ask === 'which' ? full : { ...full, en: dropAsk(full.en), ...(full.help ? { help: dropAsk(full.help) } : {}) };
   // The Dutch in the situation ("Zeg maar je, hoor!") is said by the character, as in a chat.
   useEffect(() => { if (said) autoSpeak(said, false, 'nl', voiceFor(who)); }, [said, who]);
   const talking = useTalking(said ? [said] : [], Boolean(said));
