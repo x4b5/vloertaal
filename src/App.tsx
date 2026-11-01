@@ -703,6 +703,7 @@ export default function App() {
   }
 
   // First run, one question per page: the language (an app to learn Dutch can't start in Dutch),
+  // then "Wat wil je leren?" in that language (both in Onboarding),
   // "Woman or man?" (only for a help language with gender, so the password page already uses the
   // right form), the password, then the sector. Every page has a back arrow to the one before
   // (and the phone's Back does the same). The admin page above stays reachable with #beheer.

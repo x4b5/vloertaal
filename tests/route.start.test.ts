@@ -24,16 +24,23 @@ describe('the first page: two routes', () => {
     expect(m).toContain('class="onb-say"');
   });
 
-  it('opens on the route page while the track is on, and on the language page when it is off', () => {
+  it('opens on the language page first (the owner's choice, 1 November 2026), also while the track is on', () => {
     setRulesTrack(true);
-    expect(html(createElement(Onboarding, { onDone: () => {}, guess: null }))).toContain('route-page');
+    const first = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
+    expect(first).toContain('onb-lang-list');
+    expect(first).not.toContain('route-page');
     setRulesTrack(false);
     expect(html(createElement(Onboarding, { onDone: () => {}, guess: null }))).not.toContain('route-page');
+    // The route page comes after the language, in that language, with a way back.
+    setRulesTrack(true);
+    const route = html(createElement(Onboarding, { onDone: () => {}, guess: 'pl', startAtRoute: true }));
+    expect(route).toContain('route-page');
+    expect(route).toContain('chrome-back');
   });
 
-  it('back from the next page: the language list after "Nederlands leren", the route page after Werkregels', () => {
+  it('back from the next page: the route page (the page before it), after either choice', () => {
     setRulesTrack(true);
-    expect(html(createElement(Onboarding, { onDone: () => {}, guess: null, startWithList: true, previous: 'pl' }))).toContain('onb-lang-list');
+    expect(html(createElement(Onboarding, { onDone: () => {}, guess: null, startWithList: true, previous: 'pl' }))).toContain('route-page');
     expect(html(createElement(Onboarding, { onDone: () => {}, guess: null, startWithList: true, previous: 'nl' }))).toContain('route-page');
   });
 
