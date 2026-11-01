@@ -31,8 +31,11 @@ export type TypedResult = 'correct' | 'almost' | 'wrong';
 /**
  * Forgiving check for typed answers. Beginners should not fail on a capital
  * letter, a missing article or one typo; those count as "almost" (still correct,
- * but we show the right spelling). A *wrong* article ("het tafel" for "de tafel")
- * is a mistake: de or het is part of the word to learn. `others`: words the learner could mix it up with
+ * but we show the right spelling). A *wrong* article with the word itself right ("het tafel"
+ * for "de tafel") is "almost" too: the right article is shown, but the word does not go back to
+ * the first box. De/het takes adults years and hardly ever makes a sentence hard to understand
+ * (Loerts 2012; reports/Leerwetenschap en tweede taal.md, voorstel 4). A wrong article and a typo
+ * together are wrong. `others`: words the learner could mix it up with
  * (the other word of a sound pair, "man" for "maan"): typing one of those is wrong,
  * even when it is only a letter away.
  */
@@ -43,9 +46,12 @@ export function checkTyped(input: string, expected: string, others: readonly str
   if (got === want) return 'correct';
   const wantArticle = ARTICLES.exec(want)?.[1];
   const gotArticle = ARTICLES.exec(got)?.[1];
-  if (wantArticle && gotArticle && wantArticle !== gotArticle) return 'wrong';
   const wantBare = want.replace(ARTICLES, '');
   const gotBare = got.replace(ARTICLES, '');
+  if (wantArticle && gotArticle && wantArticle !== gotArticle) {
+    const deHet = (a: string) => a === 'de' || a === 'het';
+    return deHet(wantArticle) && deHet(gotArticle) && gotBare === wantBare ? 'almost' : 'wrong';
+  }
   if (gotBare === wantBare) return 'almost';
   if (others.some((o) => normalize(o).replace(ARTICLES, '') === gotBare)) return 'wrong';
   const allowed = wantBare.length >= 4 ? 1 : 0;
