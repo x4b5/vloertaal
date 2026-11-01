@@ -23,6 +23,19 @@ Nagaan of Vloertaal, naast de gewone begeleiding, helpt om (1) vaker en langer t
 
 De evaluatiepartner kan een eigen, korte taaltaak toevoegen die door een NT2-docent is gemaakt. Dat maakt de toets sterker.
 
+### Afspraken om onszelf niet voor de gek te houden
+*Uit het onderzoeksrapport (`reports/Leerwetenschap en tweede taal.md`, voorstel 7 en het hoofdstuk "Wat is er nodig om de beste in zijn soort te worden?").*
+
+- **Altijd delen door het aantal starters**, niet door wie volhoudt. App-studies testen vaak alleen wie het traject afmaakt; dat maakt de uitkomst mooier dan hij is.
+- **Kijken naar wat blijft, niet naar de les.** Hoe het in een les gaat, zegt weinig over wat blijft. Een maat die er al is: in de herhaling het aandeel goed op woorden van 2 weken of ouder (de regel "je wist er nog 9 van de 10" na de herhaling). Die staat alleen op de telefoon; in de pilot kan de begeleider hem met toestemming noteren.
+- **"Gelukt?" is een duwtje, geen bewijs.** Wat de leerder zelf op hetzelfde moment zegt, blaast verbanden op. Gebruik op het werk liever ook laten zien door een coach of leidinggevende: vóór en na een handvol werkvloertaken (ziek melden, om uitleg vragen, gevaar melden), los van wat de leerder zelf zegt.
+- **Spreken blind laten beoordelen.** Met toestemming luisteren NT2-docenten naar de toetsopnames "Jij toen / Jij nu" zonder te weten welke van het begin en welke van het eind is, en beoordelen ze op verstaanbaarheid (niet op accent).
+- **Plaatjes laten lezen.** Leg een handvol plaatjes en opdrachten voor aan leerders: begrijpen ze wat er bedoeld is? Plaatjes zijn geen universele taal.
+- **Apart rapporteren voor wie weinig leest**, als de groep groot genoeg is (5 of meer).
+- **Een vervolgmeting na 8 tot 12 weken**, niet alleen na 4. Uitspraaktraining van 1 tot 4 weken liet in onderzoek vrijwel geen effect zien, en een gewoonte vormen duurt eerder twee maanden.
+- **Ook negatieve uitkomsten publiceren**, en de uitkomstmaten vooraf vastleggen.
+- **Liefst een vergelijking van app alleen met app plus collega** (de collegakaart, "Oefen samen"): dat is precies waar het onderzoek zwijgt.
+
 ## Wat het de privacy kost (zo weinig mogelijk)
 - **De app zelf verandert niet.** Geen account, geen naam, geen id. Wat de app telt, blijft wat in `/privacy/` staat.
 - **Het groepsoverzicht** rekent alleen in de browser van de begeleider. Er gaat niets naar een server. De begeleider kiest een nummer per deelnemer en houdt de lijst met namen zelf, apart en veilig, of gebruikt helemaal geen namen.
