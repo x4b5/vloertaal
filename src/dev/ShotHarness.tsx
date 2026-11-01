@@ -112,6 +112,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       <Result
         right={right} total={total} newWords={6} words={24} lang={l} onDone={() => {}}
         repeated={review || q.get('mix') === '1' ? 8 : undefined} stronger={review ? 5 : undefined}
+        // &kept=9,10: "wist je er nog 9 van de 10" after the review.
+        kept={q.get('kept') ? { right: Number(q.get('kept')!.split(',')[0]), of: Number(q.get('kept')!.split(',')[1]) } : undefined}
         waiting={Number(q.get('waiting') ?? 0)}
         kind={review ? 'daily' : q.get('mix') === '1' ? 'review' : 'lesson'}
         next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id } : undefined}

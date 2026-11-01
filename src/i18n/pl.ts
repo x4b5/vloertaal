@@ -408,6 +408,7 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Pokaż to koledze z pracy, który mówi po niderlandzku. Jest tu napisane, jak może ci pomóc ćwiczyć.', // nieuw, nalezen
     colleagueShare: 'Wyślij koledze', // nieuw, nalezen
     coachCardRights: 'Pokaż z nazwy tematy o twoich prawach', // nieuw, nalezen
+    keptNofM: 'Słowa sprzed 2 tygodni lub dawniej: pamiętasz jeszcze {n} z {m}.', // nieuw, nalezen
     calmScreen: 'Spokojny ekran', // nieuw, nalezen
     calmAuto: 'Jak w telefonie', // nieuw, nalezen
     calmHint: 'Włączone: nic się nie rusza, nie ma świętowania serii po lekcji, a seria i słowa nie są na ekranie głównym.', // nieuw, nalezen

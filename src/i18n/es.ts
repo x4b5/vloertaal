@@ -408,6 +408,7 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Enséñaselo a un compañero que habla neerlandés. Dice cómo puede ayudarte a practicar.', // nieuw, nalezen
     colleagueShare: 'Envíaselo a tu compañero', // nieuw, nalezen
     coachCardRights: 'Mostrar por su nombre los temas sobre tus derechos', // nieuw, nalezen
+    keptNofM: 'Palabras de hace 2 semanas o más: todavía sabías {n} de {m}.', // nieuw, nalezen
     calmScreen: 'Pantalla tranquila', // nieuw, nalezen
     calmAuto: 'Como tu teléfono', // nieuw, nalezen
     calmHint: 'Activado: nada se mueve, no hay celebración de tu racha después de una lección, y tu racha y tus palabras no aparecen en la pantalla de inicio.', // nieuw, nalezen

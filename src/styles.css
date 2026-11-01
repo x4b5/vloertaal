@@ -4917,3 +4917,8 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 }
 .kaart-rights[aria-pressed='true'] .kaart-rights-box { background: var(--yellow); }
 .kaart-rights-nl { font-weight: 650; }
+
+/* After a review: what stayed (src/components/Screens.tsx, lib/spaced.ts keptCount). */
+.result-line.result-kept { flex-wrap: nowrap; gap: 10px; text-align: start; margin-inline: auto; }
+.result-kept > :last-child { flex: 0 1 auto; min-width: 0; }
+.result-kept-icon { flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--go-right); color: #fff; }
