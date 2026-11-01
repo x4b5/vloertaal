@@ -4762,6 +4762,13 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .choices-rows:has(.choice.picked) .choice:not(.picked, .right, .wrong, .faded) :is(.choice-pic, .pic-emoji) { opacity: 0.7; }
 /* 5. A plain right answer has no heading: the one line sits level with the check. */
 .feedback:not(:has(.feedback-head)) { align-items: center; }
+/* With a ▶ on the first line, the check sits level with the ▶ (44 px), not with the middle of
+   the Dutch and the meaning under it. */
+.feedback:not(:has(.feedback-head)):has(.feedback-say .replay-btn) { align-items: flex-start; }
+.feedback:not(:has(.feedback-head)):has(.feedback-say .replay-btn) .feedback-icon { margin-top: 1px; }
+@media (max-width: 300px) {
+  .feedback:not(:has(.feedback-head)):has(.feedback-say .replay-btn) .feedback-icon { margin-top: 5px; }
+}
 
 /* A name changed where it is shown (Certificate.tsx NameInPlace): over the coach card's picture
    (variant kaart) or the certificate (variant cert). The card's picture is 1200 wide, its name
