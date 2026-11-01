@@ -11,7 +11,7 @@ import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
-import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking } from './Characters';
+import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
 import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
@@ -25,7 +25,7 @@ import { HelpSay } from './HelpSay';
 import { BeNote } from './BeNote';
 import { tipNlOnly } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
-import { tipBody } from '../lib/tipText';
+import { splitClosing, tipBody } from '../lib/tipText';
 import { dropAsk } from '../lib/dropAsk';
 
 export interface Answer {
@@ -320,16 +320,17 @@ export function ChoiceGrid<T extends { id: string }>({ options, render, correctI
 
 /** Dutch word shown → pick the English meaning. */
 export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'meaning'>) {
-  useEffect(() => { autoSpeak(ex.word.nl, false, 'nl', voiceFor('bram')); }, [ex.word]);
+  const who = wordCast(ex.word.id, 'meaning');
+  useEffect(() => { autoSpeak(ex.word.nl, false, 'nl', voiceFor(who)); }, [ex.word, who]);
   const pics = choicePictures(ex.word, ex.options);
   return (
     <div className="exercise">
       <Prompt text={ui('whatDoesThisMean', lang)} />
       <div className={`speaker speaker-word ${wordSize(ex.word.nl)}`}>
-        <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} run={run} misses={misses} />
+        <Speaker who={who} lines={[ex.word.nl]} verdict={verdict} run={run} misses={misses} />
         <div className="speaker-bubble">
           <span className="speaker-nl" lang="nl">{breakable(ex.word.nl)}</span>
-          <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor('bram')} />
+          <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor(who)} />
         </div>
       </div>
       <ChoiceGrid
@@ -364,15 +365,16 @@ export function DutchExercise(props: Props<'dutch'>) {
 
 /** Hear and read the Dutch word → pick its picture. */
 function PictureFromDutch({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'dutch'>) {
-  useEffect(() => { autoSpeak(ex.word.nl, false, 'nl', voiceFor('bram')); }, [ex.word]);
+  const who = wordCast(ex.word.id, 'dutch');
+  useEffect(() => { autoSpeak(ex.word.nl, false, 'nl', voiceFor(who)); }, [ex.word, who]);
   return (
     <div className="exercise pic-from-nl">
       <Prompt text={ui('whichPicture', lang)} />
       <div className={`speaker speaker-word ${wordSize(ex.word.nl)}`}>
-        <Speaker who="bram" lines={[ex.word.nl]} verdict={verdict} run={run} misses={misses} />
+        <Speaker who={who} lines={[ex.word.nl]} verdict={verdict} run={run} misses={misses} />
         <div className="speaker-bubble">
           <span className="speaker-nl" lang="nl">{breakable(ex.word.nl)}</span>
-          <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor('bram')} />
+          <SpeakButton text={ex.word.nl} help={lang} voice={voiceFor(who)} />
         </div>
       </div>
       <ChoiceGrid
@@ -487,6 +489,8 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
   const cards = useMemo(() => shuffle(all, createRng(all.map((w) => w.id).join('|').length * 7919 + all.length)), [all]);
   /** The words that got a wrong tap while they were on (fed to the review cards). */
   const missed = useRef<Set<string>>(new Set());
+  /** One colleague says all the words of this matching (not a new face for every word). */
+  const who = useMemo(() => wordCast(all.map((w) => w.id).join('|'), 'match'), [all]);
   const [state, setState] = useState<MatchState>(matchStart);
   /** The word on screen: it stays a moment after its pair is made (the card flashes green). */
   const [step, setStep] = useState(0);
@@ -499,8 +503,8 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
   const finished = state.done.length >= words.length;
 
   useEffect(() => {
-    if (!finished) autoSpeak(current.nl, false, 'nl', voiceFor('bram'));
-  }, [current, finished]);
+    if (!finished) autoSpeak(current.nl, false, 'nl', voiceFor(who));
+  }, [current, finished, who]);
 
   useEffect(() => {
     if (!hit) return;
@@ -539,10 +543,10 @@ export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
     <div className="exercise match-guided">
       <Prompt text={ui('whatDoesThisMean', lang)} />
       <div className={`speaker speaker-word ${wordSize(current.nl)}`}>
-        <Speaker who="bram" lines={finished ? [] : [current.nl]} />
+        <Speaker who={who} lines={finished ? [] : [current.nl]} />
         <div className="speaker-bubble match-on" key={current.id}>
           <span className="speaker-nl" lang="nl">{breakable(current.nl)}</span>
-          <SpeakButton text={current.nl} help={lang} voice={voiceFor('bram')} />
+          <SpeakButton text={current.nl} help={lang} voice={voiceFor(who)} />
         </div>
       </div>
       {/* Where the learner is: one dot per pair, filled when made. */}
@@ -1096,6 +1100,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       </div>
     );
   }
+  const text = splitClosing(tipBody(tip, lang), lang);
   return (
     <div className={`exercise tip ${part === 'read' ? 'tip-page-read' : ''}`}>
       {badge}
@@ -1105,9 +1110,10 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       {isTaalBeId(tip.id) && <BeNote lang={lang} kind="beta" />}
       {/* The first sentences (the lead); the whole tip is in Hulp › Zo werkt het hier. On a page of
           its own (part 'read') without the "…": that only made the learner look for more here. */}
-      <TipBody text={say ? shortTip(tipBody(tip, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(tipBody(tip, lang), TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} />
+      <TipBody text={say ? shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} />
       {say && phrase}
-      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={ui('tipsNote', lang)} /></p></InfoMore>
+      {/* Who can help (the tip's closing line, cut off above) or else what these tips are. */}
+      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={text.closing ?? ui('tipsNote', lang)} /></p></InfoMore>
     </div>
   );
 }

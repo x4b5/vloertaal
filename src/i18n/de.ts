@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Themen zeigen',
     privacyLink: 'Datenschutzerklärung lesen (auf Niederländisch)', // nieuw, nalezen
     routeTitle: 'Was möchtest du lernen?', // nieuw, nalezen
-    routeLearn: 'Niederländisch für die Arbeit lernen', // nieuw, nalezen
-    routeRules: 'Ich spreche schon Niederländisch: die Regeln bei der Arbeit', // nieuw, nalezen
+    routeLearn: 'Niederländisch für die Arbeit lernen – und wie Arbeit hier läuft', // nieuw, nalezen
+    routeRules: 'Ich spreche schon Niederländisch: nur die Regeln bei der Arbeit', // nieuw, nalezen
     routeLearnShort: 'Niederländisch lernen', // nieuw, nalezen
     byTheme: 'Nach Bereich',
     inOrder: 'Der Reihe nach',
@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Doch die Lektionen machen', // nieuw, nalezen
     shareInvite: 'Ich lerne Niederländisch für meine Arbeit mit Vloertaal. Kostenlos: {link}', // nieuw, nalezen
     workTry: 'Probier es heute bei der Arbeit', // nieuw, nalezen
+    workTryWhen: 'Wenn:', // nieuw, nalezen
+    workTryThen: 'Dann sag:', // nieuw, nalezen
     calmScreen: 'Ruhiger Bildschirm', // nieuw, nalezen
     calmAuto: 'Wie dein Handy', // nieuw, nalezen
     calmHint: 'An: Nichts bewegt sich, keine Feier für deine Serie nach einer Lektion, und deine Serie und Wörter stehen nicht auf der Startseite.', // nieuw, nalezen

@@ -65,7 +65,7 @@ export const meedoenUnit: RuleUnit = {
           id: 'r.l.meedoen.1.tf1',
           statement: 'Piotr mag ook stemmen voor de gemeenteraad.',
           answer: true,
-          why: 'Voor de gemeenteraad mogen meer mensen stemmen dan alleen Nederlanders. Mensen uit een ander EU-land mogen stemmen als ze hier wonen. Polen hoort bij de EU. Mensen van buiten de EU mogen stemmen na 5 jaar in Nederland. Ze moeten al die tijd een verblijfsvergunning hebben. Je moet wel 18 jaar of ouder zijn.',
+          why: 'Voor de gemeenteraad mogen ook mensen uit andere EU-landen stemmen, als ze hier wonen.', whyMore: 'Polen hoort bij de EU. Mensen van buiten de EU mogen stemmen na 5 jaar in Nederland. Ze moeten al die tijd een verblijfsvergunning hebben. Je moet wel 18 jaar of ouder zijn.',
         },
         // ⚖️ check: De Tweede Kamer heeft 150 leden ⚖️ (twijfel 15).
         {
@@ -77,7 +77,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', text: 'De gemeenteraad beslist over je eigen stad of dorp.', best: true, feedback: 'Goed. Bijvoorbeeld over wegen, afval en sport.' },
             { id: 'c', text: 'De gemeenteraad kiest de koning.', best: false, feedback: 'Nee. Niemand kiest de koning.' },
           ],
-          why: 'De gemeenteraad beslist over je stad of dorp. De burgemeester en de wethouders voeren het uit. De Tweede Kamer maakt wetten voor heel Nederland, samen met de regering. De Tweede Kamer heeft 150 leden.',
+          why: 'De gemeenteraad beslist over je stad of dorp. De Tweede Kamer maakt wetten voor heel Nederland.', whyMore: 'De burgemeester en de wethouders voeren het uit. De Tweede Kamer maakt wetten samen met de regering. De Tweede Kamer heeft 150 leden.',
         },
         // ⚖️ check: Voor de Tweede Kamer moet je de Nederlandse nationaliteit hebben ⚖️.
         // ⚖️ check: En je moet 18 jaar of ouder zijn ⚖️.
@@ -86,7 +86,7 @@ export const meedoenUnit: RuleUnit = {
           id: 'r.l.meedoen.1.tf2',
           statement: 'Iedereen die in Nederland werkt, mag stemmen voor de Tweede Kamer.',
           answer: false,
-          why: 'Voor de Tweede Kamer moet je de Nederlandse nationaliteit hebben. En je moet 18 jaar of ouder zijn. Stemmen is niet verplicht. Stemmen is geheim: niemand mag meekijken.',
+          why: 'Voor de Tweede Kamer moet je de Nederlandse nationaliteit hebben. En je moet 18 of ouder zijn.', whyMore: 'Stemmen is niet verplicht. Stemmen is geheim: niemand mag meekijken.',
         },
         // ⚖️ check: the gemeente sends the stempas (not in the doc's sources).
         {
@@ -98,7 +98,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', who: 'leidinggevende', best: false, feedback: 'Je werk gaat niet over stemmen.' },
             { id: 'c', who: 'uwv', best: false, feedback: 'UWV gaat over werk en uitkeringen, niet over stemmen.' },
           ],
-          why: 'Of je mag stemmen, hangt af van de verkiezing en je nationaliteit. Vraag het de gemeente. Uitleg staat ook op rijksoverheid.nl.',
+          why: 'Of je mag stemmen, hangt af van de verkiezing en je nationaliteit.', whyMore: 'Vraag het de gemeente. Uitleg staat ook op rijksoverheid.nl.',
         },
         { kind: 'model', id: 'r.l.meedoen.1.mo1', context: 'Je belt de gemeente over de verkiezingen.', nl: 'Mag ik stemmen? En waar vind ik mijn stempas?' },
       ],
@@ -150,7 +150,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', text: 'Mohammed. Je mag veel zeggen, maar er zijn grenzen.', best: true, feedback: 'Goed. Bedreigen en discrimineren mag niet.' },
             { id: 'c', text: 'Niemand. Over het nieuws praat je niet op je werk.', best: false, feedback: 'Dat mag wel. Doe het met respect.' },
           ],
-          why: 'In Nederland heb je vrijheid van meningsuiting. Je mag zeggen wat je denkt, ook over de regering. Maar bedreigen en discrimineren mag niet. Dat is strafbaar. Op je werk kan je baas ook regels hebben. Bijvoorbeeld over hoe je met elkaar praat.',
+          why: 'Je mag zeggen wat je denkt, ook over de regering. Bedreigen en discrimineren mag niet.', whyMore: 'Dat heet vrijheid van meningsuiting. Bedreigen en discrimineren is strafbaar. Op je werk kan je baas ook regels hebben. Bijvoorbeeld over hoe je met elkaar praat.',
         },
         // ⚖️ check: Dat staat in artikel 1 van de Grondwet ⚖️.
         // ⚖️ check: Discriminatie om je geloof, afkomst, geslacht of iets anders mag niet ⚖️.
@@ -160,7 +160,7 @@ export const meedoenUnit: RuleUnit = {
           id: 'r.l.meedoen.2.tf1',
           statement: 'In de Grondwet staat dat iedereen gelijk behandeld moet worden.',
           answer: true,
-          why: 'Dat staat in artikel 1 van de Grondwet. De Grondwet is de belangrijkste wet van Nederland. Discriminatie om je geloof, afkomst, geslacht of iets anders mag niet. Ook vrijheid van geloof is een grondrecht.',
+          why: 'Dat staat in artikel 1 van de Grondwet. Discriminatie mag niet.', whyMore: 'De Grondwet is de belangrijkste wet van Nederland. Discriminatie om je geloof, afkomst, geslacht of iets anders mag niet. Ook vrijheid van geloof is een grondrecht.',
         },
         // ⚖️ check: Discriminatie is ook verboden bij wonen ⚖️.
         {
@@ -172,7 +172,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', text: 'Ze stuurt de verhuurder een boos bericht.', best: false, feedback: 'Dat snap ik. Maar zo verandert er niets.' },
             { id: 'c', text: 'Ze schrijft op wat er gebeurde, en meldt het.', best: true, feedback: 'Goed. Bij een meldpunt helpen ze haar gratis.' },
           ],
-          why: 'Discriminatie is ook verboden bij wonen. Schrijf op wat er gebeurde, met de datum. Maak een screenshot van de advertentie. Meld het bij discriminatie.nl. Daar helpen ze je gratis.',
+          why: 'Discriminatie is ook verboden bij wonen. Meld het bij discriminatie.nl. Daar helpen ze gratis.', whyMore: 'Schrijf op wat er gebeurde, met de datum. Maak een screenshot van de advertentie.',
         },
         {
           kind: 'whoask',
@@ -183,7 +183,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', who: 'politie', best: true, feedback: 'Goed. Bedreigen is strafbaar. Bij gevaar bel je 112.' },
             { id: 'c', who: 'juridischloket', best: false, feedback: 'Het Juridisch Loket geeft advies. Bij bedreiging waarschuw je de politie.' },
           ],
-          why: 'Bij bedreiging waarschuw je de politie. Bij discriminatie helpt een meldpunt, zoals discriminatie.nl. Het Juridisch Loket geeft gratis advies.',
+          why: 'Bij bedreiging waarschuw je de politie. Bij discriminatie helpt een meldpunt, zoals discriminatie.nl.', whyMore: 'Het Juridisch Loket geeft gratis advies.',
         },
         { kind: 'model', id: 'r.l.meedoen.2.mo1', context: 'Je belt een meldpunt discriminatie.', nl: 'Ik wil discriminatie melden. Wat moet ik doen?' },
       ],
@@ -235,14 +235,14 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', text: 'Hij zegt: "Ik heb niets gedaan," en loopt weg.', best: false, feedback: 'Dat is logisch. Maar dan kan hij een boete krijgen.' },
             { id: 'c', text: 'Hij zegt dat zijn ID thuis ligt. Dat is niet waar.', best: false, feedback: 'Niet doen. Dan maakt hij het moeilijker voor zichzelf.' },
           ],
-          why: 'Vraagt de politie om je ID? Vanaf 14 jaar moet je het laten zien. Dat heet de identificatieplicht. Geen ID bij je? Dan kun je een boete krijgen. Vond je het niet eerlijk? Je kunt later een klacht indienen bij de politie.',
+          why: 'Vanaf 14 jaar moet je je ID laten zien als de politie erom vraagt.', whyMore: 'Dat heet de identificatieplicht. Geen ID bij je? Dan kun je een boete krijgen. Vond je het niet eerlijk? Je kunt later een klacht indienen bij de politie.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.meedoen.3.tf1',
           statement: 'In Nederland moet ook de regering zich aan de wet houden.',
           answer: true,
-          why: 'Nederland is een rechtsstaat. De regels gelden voor iedereen: voor jou, voor bedrijven en voor de regering. De politie zorgt voor veiligheid. Een rechter beslist bij een ruzie of een misdrijf. De rechter is onafhankelijk. De regering mag de rechter niet vertellen wat hij beslist.',
+          why: 'Nederland is een rechtsstaat. De regels gelden voor iedereen, ook voor de regering.', whyMore: 'Ze gelden ook voor jou en voor bedrijven. De politie zorgt voor veiligheid. Een rechter beslist bij een ruzie of een misdrijf. De rechter is onafhankelijk. De regering mag de rechter niet vertellen wat die beslist.',
         },
         // ⚖️ check: Dan mag je bezwaar maken ⚖️.
         // ⚖️ check: Let goed op de datum ⚖️.
@@ -256,7 +256,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', text: 'Ze belt de gemeente, en ze wacht op antwoord.', best: false, feedback: 'Bellen mag. Maar een telefoontje is meestal geen bezwaar. En de datum loopt door.' },
             { id: 'c', text: 'Ze maakt bezwaar, vóór de datum in de brief.', best: true, feedback: 'Goed. Zo kijkt iemand er opnieuw naar.' },
           ],
-          why: 'Vind je een boete of besluit niet eerlijk? Dan mag je bezwaar maken. Hoe dat moet, staat in de brief. Let goed op de datum. Niet betalen maakt de boete vaak hoger. Het Juridisch Loket geeft gratis advies.',
+          why: 'Vind je een boete niet eerlijk? Dan mag je bezwaar maken. Let goed op de datum.', whyMore: 'Dat mag ook bij een ander besluit. Hoe het moet, staat in de brief. Niet betalen maakt de boete vaak hoger. Het Juridisch Loket geeft gratis advies.',
         },
         // ⚖️ check: een advocaat (soms betaalt de overheid mee ⚖️).
         {
@@ -268,7 +268,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', who: 'leidinggevende', best: false, feedback: 'Je werk gaat hier niet over.' },
             { id: 'c', who: 'juridischloket', best: true, feedback: 'Goed. Het Juridisch Loket geeft gratis advies.' },
           ],
-          why: 'Het Juridisch Loket geeft gratis advies over bezwaar maken. Soms heb je een advocaat nodig. Dan betaalt de overheid soms mee.',
+          why: 'Het Juridisch Loket geeft gratis advies over bezwaar maken.', whyMore: 'Soms heb je een advocaat nodig. Dan betaalt de overheid soms mee.',
         },
         { kind: 'model', id: 'r.l.meedoen.3.mo1', context: 'Je belt over een boete die niet klopt.', nl: 'Ik ben het niet eens met deze boete. Hoe maak ik bezwaar?' },
       ],
@@ -316,14 +316,14 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', text: 'Hij gelooft het. Het staat in de groepsapp van zijn werk.', best: false, feedback: 'Ook in een groepsapp staat soms nep. Check eerst waar het vandaan komt.' },
             { id: 'c', text: 'Hij zoekt op een site van de overheid of het klopt.', best: true, feedback: 'Goed. Daar staat wat echt geldt.' },
           ],
-          why: 'Check een bericht voor je het doorstuurt. Wie zegt het? Staat het op een site van de overheid? Of op een bekende nieuwssite? Mensen uit de EU hebben geen vergunning nodig om hier te werken.',
+          why: 'Check een bericht voor je het doorstuurt. Wie zegt het? Staat het op een site van de overheid?', whyMore: 'Of op een bekende nieuwssite? Mensen uit de EU hebben geen vergunning nodig om hier te werken.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.meedoen.4.tf1',
           statement: 'Een nepbericht wil vaak dat je bang of boos wordt.',
           answer: true,
-          why: 'Wie bang of boos is, deelt sneller. Daarom maakt nepnieuws je vaak bang of boos. Let op veel uitroeptekens, haast en geen naam. Kijk wie het zegt. En zoek of een bekende nieuwssite het ook heeft.',
+          why: 'Nepnieuws maakt je vaak bang of boos. Wie bang of boos is, deelt sneller.', whyMore: 'Let op veel uitroeptekens, haast en geen naam. Kijk wie het zegt. En zoek of een bekende nieuwssite het ook heeft.',
         },
         // ⚖️ check: Schelden en bedreigen mag niet ⚖️ (bedreiging is strafbaar, art. 285 Sr; zie
         //   r.l.meedoen.2).
@@ -336,7 +336,7 @@ export const meedoenUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt rustig wat zij denkt, en ze luistert ook.', best: true, feedback: 'Goed. Zo kan iedereen zijn mening geven.' },
             { id: 'c', text: 'Ze zegt dat hun mening dom is. Zij weet het beter.', best: false, feedback: 'Dat is niet respectvol. Dan komt er snel ruzie.' },
           ],
-          why: 'Je mag je mening geven, ook op je werk. Iemand anders mag iets anders vinden. Luister naar elkaar, en blijf rustig. Schelden en bedreigen mag niet. Soms heeft je werk ook regels over hoe je praat.',
+          why: 'Je mag je mening geven, ook op je werk. Schelden en bedreigen mag niet.', whyMore: 'Iemand anders mag iets anders vinden. Luister naar elkaar, en blijf rustig. Soms heeft je werk ook regels over hoe je praat.',
         },
         { kind: 'model', id: 'r.l.meedoen.4.mo1', context: 'Een collega stuurt een bericht dat je niet vertrouwt.', nl: 'Waar heb je dit gelezen? Ik wil eerst checken of het klopt.' },
       ],

@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Mostrar los temas',
     privacyLink: 'Leer la declaración de privacidad (en neerlandés)', // nieuw, nalezen
     routeTitle: '¿Qué quieres aprender?', // nieuw, nalezen
-    routeLearn: 'Aprender neerlandés para el trabajo', // nieuw, nalezen
-    routeRules: 'Ya hablo neerlandés: las reglas del trabajo', // nieuw, nalezen
+    routeLearn: 'Aprender neerlandés para el trabajo, y cómo funciona el trabajo aquí', // nieuw, nalezen
+    routeRules: 'Ya hablo neerlandés: solo las reglas del trabajo', // nieuw, nalezen
     routeLearnShort: 'Aprender neerlandés', // nieuw, nalezen
     byTheme: 'Por tema',
     inOrder: 'En orden',
@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Hacer las lecciones igualmente', // nieuw, nalezen
     shareInvite: 'Aprendo neerlandés para mi trabajo con Vloertaal. Gratis: {link}', // nieuw, nalezen
     workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen
+    workTryWhen: 'Cuando:', // nieuw, nalezen
+    workTryThen: 'Entonces di:', // nieuw, nalezen
     calmScreen: 'Pantalla tranquila', // nieuw, nalezen
     calmAuto: 'Como tu teléfono', // nieuw, nalezen
     calmHint: 'Activado: nada se mueve, no hay celebración de tu racha después de una lección, y tu racha y tus palabras no aparecen en la pantalla de inicio.', // nieuw, nalezen

@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Показати теми',
     privacyLink: 'Прочитати заяву про конфіденційність (нідерландською)', // nieuw, nalezen
     routeTitle: 'Що ти хочеш вивчати?', // nieuw, nalezen
-    routeLearn: 'Вивчати нідерландську для роботи', // nieuw, nalezen
-    routeRules: 'Я вже говорю нідерландською: правила роботи', // nieuw, nalezen
+    routeLearn: 'Вивчати нідерландську для роботи і те, як тут влаштована робота', // nieuw, nalezen
+    routeRules: 'Я вже говорю нідерландською: лише правила роботи', // nieuw, nalezen
     routeLearnShort: 'Вивчати нідерландську', // nieuw, nalezen
     byTheme: 'За розділами',
     inOrder: 'По порядку',
@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Усе ж пройти уроки', // nieuw, nalezen
     shareInvite: 'Я вчу нідерландську для роботи з Vloertaal. Безкоштовно: {link}', // nieuw, nalezen
     workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
+    workTryWhen: 'Коли:', // nieuw, nalezen
+    workTryThen: 'Тоді скажи:', // nieuw, nalezen
     calmScreen: 'Спокійний екран', // nieuw, nalezen
     calmAuto: 'Як у телефоні', // nieuw, nalezen
     calmHint: 'Увімкнено: нічого не рухається, немає святкування серії після уроку, а серія і слова не показуються на головному екрані.', // nieuw, nalezen

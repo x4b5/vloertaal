@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Konuları göster',
     privacyLink: 'Gizlilik açıklamasını oku (Hollandaca)', // nieuw, nalezen
     routeTitle: 'Ne öğrenmek istiyorsun?', // nieuw, nalezen
-    routeLearn: 'İş için Hollandaca öğren', // nieuw, nalezen
-    routeRules: 'Hollandaca biliyorum: iş kuralları', // nieuw, nalezen
+    routeLearn: 'İş için Hollandaca ve burada işin nasıl yürüdüğünü öğren', // nieuw, nalezen
+    routeRules: 'Hollandaca biliyorum: sadece iş kuralları', // nieuw, nalezen
     routeLearnShort: 'Hollandaca öğren', // nieuw, nalezen
     byTheme: 'Temaya göre',
     inOrder: 'Sırayla',
@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Yine de dersleri yap', // nieuw, nalezen
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
     workTry: 'Bugün işte dene', // nieuw, nalezen
+    workTryWhen: 'Ne zaman:', // nieuw, nalezen
+    workTryThen: 'O zaman şunu söyle:', // nieuw, nalezen
     calmScreen: 'Sakin ekran', // nieuw, nalezen
     calmAuto: 'Telefonundaki gibi', // nieuw, nalezen
     calmHint: 'Açık: hiçbir şey hareket etmez, dersten sonra serin için kutlama olmaz, serin ve kelimelerin ana ekranda görünmez.', // nieuw, nalezen

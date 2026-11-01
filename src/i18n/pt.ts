@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Mostrar os temas',
     privacyLink: 'Ler a declaração de privacidade (em neerlandês)', // nieuw, nalezen
     routeTitle: 'O que queres aprender?', // nieuw, nalezen
-    routeLearn: 'Aprender neerlandês para o trabalho', // nieuw, nalezen
-    routeRules: 'Já falo neerlandês: as regras do trabalho', // nieuw, nalezen
+    routeLearn: 'Aprender neerlandês para o trabalho, e como funciona o trabalho aqui', // nieuw, nalezen
+    routeRules: 'Já falo neerlandês: só as regras do trabalho', // nieuw, nalezen
     routeLearnShort: 'Aprender neerlandês', // nieuw, nalezen
     byTheme: 'Por capítulo',
     inOrder: 'Por ordem',
@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Fazer as lições mesmo assim', // nieuw, nalezen
     shareInvite: 'Estou a aprender neerlandês para o meu trabalho com o Vloertaal. Grátis: {link}', // nieuw, nalezen
     workTry: 'Experimenta hoje no trabalho', // nieuw, nalezen
+    workTryWhen: 'Quando:', // nieuw, nalezen
+    workTryThen: 'Então diz:', // nieuw, nalezen
     calmScreen: 'Ecrã calmo', // nieuw, nalezen
     calmAuto: 'Como o teu telemóvel', // nieuw, nalezen
     calmHint: 'Ligado: nada se mexe, não há festa pela tua sequência depois de uma lição, e a tua sequência e as palavras não aparecem no ecrã inicial.', // nieuw, nalezen

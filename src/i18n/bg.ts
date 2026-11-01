@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Покажи темите',
     privacyLink: 'Прочети декларацията за поверителност (на нидерландски)', // nieuw, nalezen
     routeTitle: 'Какво искаш да учиш?', // nieuw, nalezen
-    routeLearn: 'Нидерландски за работа', // nieuw, nalezen
-    routeRules: 'Вече говоря нидерландски: правилата в работата', // nieuw, nalezen
+    routeLearn: 'Нидерландски за работа и как се работи тук', // nieuw, nalezen
+    routeRules: 'Вече говоря нидерландски: само правилата в работата', // nieuw, nalezen
     routeLearnShort: 'Учене на нидерландски', // nieuw, nalezen
     byTheme: 'По раздели',
     inOrder: 'По ред',
@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Все пак направи уроците', // nieuw, nalezen
     shareInvite: 'Уча нидерландски за работата си с Vloertaal. Безплатно е: {link}', // nieuw, nalezen
     workTry: 'Опитай днес на работа', // nieuw, nalezen
+    workTryWhen: 'Кога:', // nieuw, nalezen
+    workTryThen: 'Тогава кажи:', // nieuw, nalezen
     calmScreen: 'Спокоен екран', // nieuw, nalezen
     calmAuto: 'Като телефона ти', // nieuw, nalezen
     calmHint: 'Включено: нищо не се движи, няма празнуване на поредицата след урок, а поредицата и думите не са на началния екран.', // nieuw, nalezen

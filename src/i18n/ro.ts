@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'Arată subiectele',
     privacyLink: 'Citește declarația de confidențialitate (în olandeză)', // nieuw, nalezen
     routeTitle: 'Ce vrei să înveți?', // nieuw, nalezen
-    routeLearn: 'Învață olandeză pentru muncă', // nieuw, nalezen
-    routeRules: 'Vorbesc deja olandeză: regulile muncii', // nieuw, nalezen
+    routeLearn: 'Învață olandeză pentru muncă și cum se lucrează aici', // nieuw, nalezen
+    routeRules: 'Vorbesc deja olandeză: doar regulile muncii', // nieuw, nalezen
     routeLearnShort: 'Învață olandeză', // nieuw, nalezen
     byTheme: 'Pe teme',
     inOrder: 'În ordine',
@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Totuși fă lecțiile', // nieuw, nalezen
     shareInvite: 'Învăț olandeză pentru munca mea cu Vloertaal. Gratuit: {link}', // nieuw, nalezen
     workTry: 'Încearcă azi la muncă', // nieuw, nalezen
+    workTryWhen: 'Când:', // nieuw, nalezen
+    workTryThen: 'Atunci spune:', // nieuw, nalezen
     calmScreen: 'Ecran liniștit', // nieuw, nalezen
     calmAuto: 'Ca telefonul tău', // nieuw, nalezen
     calmHint: 'Pornit: nimic nu se mișcă, nicio sărbătoare pentru seria ta după o lecție, iar seria și cuvintele nu apar pe ecranul principal.', // nieuw, nalezen

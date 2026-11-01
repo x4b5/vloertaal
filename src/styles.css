@@ -539,18 +539,19 @@ h2 { font-size: 1.25rem; }
 /* Generic bar (admin page). */
 .bar { flex: 1; height: 14px; background: var(--track); border-radius: 4px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--ink); border-radius: 4px; transition: width 0.4s ease; }
-/* Lesson progress: one continuous bar. Ink fills what is done, yellow marks where you are and
-   a kraft tail at the end holds the mistakes that come back. The ink-3 outline keeps the empty
-   track at 3:1 or more against the floor. Transform-only motion (320 ms); fills from the right
+/* Lesson progress: one continuous bar. The soft edge colour fills what is done ("Vloertaal
+   rustiger": the bar stays quiet), yellow with an ink outline marks where you are (the one strong
+   spot) and a kraft tail at the end holds the mistakes that come back. The edge outline and the
+   fill keep 3:1 or more against the floor (--edge). Transform-only motion (320 ms); fills from the right
    in right-to-left help languages. */
 .lbar {
   position: relative; flex: 1; min-width: 0; height: 12px; overflow: hidden;
-  border-radius: 6px; background: var(--track); box-shadow: inset 0 0 0 1.5px var(--ink-3);
+  border-radius: 6px; background: var(--track); box-shadow: inset 0 0 0 1.5px var(--edge);
 }
 .lbar > span { position: absolute; inset-block: 0; }
 .lbar-tail { right: 0; background: color-mix(in srgb, var(--kraft) 70%, var(--track)); }
 .lbar-now { left: 0; background: var(--yellow); box-shadow: inset 0 0 0 1.5px #1e2226; transition: transform 0.32s var(--ease-out); }
-.lbar-fill { left: 0; width: 100%; background: var(--ink); transform-origin: left center; transition: transform 0.32s var(--ease-out); }
+.lbar-fill { left: 0; width: 100%; background: var(--edge); transform-origin: left center; transition: transform 0.32s var(--ease-out); }
 /* Countable steps: a 2 px notch in the floor colour at the end of every exercise's slot, over
    the fill, so "how many left" can be seen without reading a number (still clear at ~20). */
 .lbar-ticks {
@@ -4711,6 +4712,13 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .result-worktry .worktry-label-nl { font-weight: 700; }
 .result-worktry .worktry-gloss { grid-column: 1; --help-size: 0.9rem; color: var(--ink); }
 .result-worktry .speak-glyph { grid-row: 1 / span 3; }
+/* As an if-then plan: "Als:" with the moment, then "Zeg dan:" with the sentence; the speaker beside
+   the sentence (rows: label, moment, "Zeg dan", sentence, meaning). */
+.result-worktry .worktry-when { grid-column: 1; margin: 4px 0 0; display: flex; flex-direction: column; gap: 1px; }
+.result-worktry .worktry-kicker { grid-column: 1; font-size: var(--fs-small); font-weight: 700; color: var(--muted); line-height: 1.25; }
+.result-worktry .worktry-when-text { font-size: 1rem; color: var(--ink-2); line-height: 1.35; --help-size: 1rem; }
+.result-worktry:has(.worktry-when) > .worktry-kicker { margin-top: 6px; }
+.result-worktry:has(.worktry-when) .speak-glyph { grid-row: 4 / span 2; }
 /* "Je voortgang is niet bewaard" (src/components/SaveFailedNote.tsx): the note's status region,
    always there but taking no room or taps; the note looks like the sound note, above every screen. */
 .save-note-live { position: fixed; top: 0; left: 0; width: 0; height: 0; z-index: 40; pointer-events: none; }
@@ -4733,8 +4741,10 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .tip-say-page .tip-phrase-nl { font-size: 1.35rem; }
 /* The tip's first page ("Zo werkt het hier") on its own: only the title and at most three
    sentences, so the text can be larger than on the old combined page (where the phone is tall
-   enough; a small screen keeps the compact size). */
-@media (min-height: 780px) {
+   enough; a small screen keeps the compact size). 640 px: a phone in a browser with its bars
+   (an iPhone in Chrome is about 660 px high); the longest tips, also in Ukrainian and Arabic,
+   still end above the Continue bar at 375 × 640. */
+@media (min-height: 640px) {
   .tip-page-read .tip-title { font-size: 1.6rem; }
   .tip-page-read .tip-body { font-size: 1.25rem; line-height: 1.5; }
   .tip-page-read .tip-body .bi-help { --help-size: 0.82em; }
@@ -4857,6 +4867,10 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .btn-go.btn-icon-only { padding-inline: 0; }
 .btn-go.btn-icon-only .btn-block { inset-inline-end: auto; inset-inline-start: 50%; translate: -50% 0; }
 [dir='rtl'] .btn-go.btn-icon-only .btn-block { translate: 50% 0; }
+/* Continue as an arrow only: no block behind it ("Vloertaal rustiger"), the › in the button's
+   own text colour (white on green or brick red, ink on yellow), a little larger. */
+.btn-go.btn-icon-only .btn-block { background: transparent; color: inherit; }
+.btn-go.btn-icon-only .btn-block svg { width: 32px; height: 32px; }
 /* While a name is typed on the certificate or the card: where it stays, just under it. */
 .name-hint { margin: 10px 0 0; }
 

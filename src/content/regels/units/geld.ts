@@ -61,7 +61,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Hij wacht een maand. Misschien vindt hij snel werk.', best: false, feedback: 'Dan is hij te laat, en krijgt hij misschien minder.' },
             { id: 'c', text: 'Hij gaat eerst naar de gemeente voor bijstand.', best: false, feedback: 'Ben je je werk kwijt? Dan is UWV meestal de eerste stap.' },
           ],
-          why: 'Vraag WW aan zo snel als je kunt. Uiterlijk 1 week na je eerste dag zonder werk. Ben je later? Dan krijg je misschien minder, of niets. Je doet het via Mijn UWV, met je DigiD.',
+          why: 'Vraag WW aan binnen 1 week na je eerste dag zonder werk.', whyMore: 'Ben je later? Dan krijg je misschien minder, of niets. Je doet het via Mijn UWV, met je DigiD.',
         },
         // ⚖️ check: Je moet meestal minstens 26 van de laatste 36 weken ⚖️ gewerkt hebben.
         {
@@ -69,7 +69,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.1.tf1',
           statement: 'Je krijgt altijd WW als je werk stopt.',
           answer: false,
-          why: 'Je moet meestal minstens 26 van de laatste 36 weken gewerkt hebben. Neem je zelf ontslag? Dan krijg je meestal geen WW. Vraag eerst advies voordat je zelf stopt.',
+          why: 'Je moet meestal minstens 26 van de laatste 36 weken gewerkt hebben.', whyMore: 'Neem je zelf ontslag? Dan krijg je meestal geen WW. Vraag eerst advies voordat je zelf stopt.',
         },
         // ⚖️ check: UWV haalt dan een deel van je loon van je WW af ⚖️.
         {
@@ -81,7 +81,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Hij stopt zelf meteen met zijn hele WW.', best: false, feedback: 'Dat hoeft niet. Hij kan vaak een deel houden.' },
             { id: 'c', text: 'Hij geeft zijn uren en zijn loon door aan UWV.', best: true, feedback: 'Goed. Dan klopt zijn WW, en is hij veilig.' },
           ],
-          why: 'Werk je naast je WW? Geef het altijd door aan UWV. UWV haalt dan een deel van je loon van je WW af. Niet doorgeven is fraude. Dan moet je terugbetalen, vaak met een boete.',
+          why: 'Werk naast je WW geef je altijd door aan UWV. Niet doorgeven is fraude.', whyMore: 'UWV haalt dan een deel van je loon van je WW af. Bij fraude moet je terugbetalen, vaak met een boete.',
         },
         // Bezwaar maken (rapport hiaten, hoofdstuk 4): kwam alleen in r.l.meedoen.3 voor.
         // ⚖️ check: Dat doe je binnen 6 weken ⚖️ na de datum van de brief (art. 6:7 Awb).
@@ -94,7 +94,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Hij maakt op tijd bezwaar, en hij vraagt hulp bij de brief.', best: true, feedback: 'Goed. Zo kijkt UWV er nog een keer naar.' },
             { id: 'c', text: 'Hij vraagt de WW nog een keer aan, met hetzelfde formulier.', best: false, feedback: 'Dan verandert er meestal niets. Bezwaar is de goede weg.' },
           ],
-          why: 'Bezwaar maken betekent: je vraagt UWV om het besluit opnieuw te bekijken. Dat doe je binnen 6 weken na de datum van de brief. Schrijf op waarom het niet klopt. Het Juridisch Loket of een vakbond kan je helpen.',
+          why: 'Met bezwaar vraag je UWV om het besluit opnieuw te bekijken. Dat kan binnen 6 weken.', whyMore: 'De 6 weken tellen vanaf de datum van de brief. Schrijf op waarom het niet klopt. Het Juridisch Loket of een vakbond kan je helpen.',
         },
         {
           kind: 'whoask',
@@ -158,14 +158,14 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Ze zegt de baan af. Ze is bang om geld te verliezen.', best: false, feedback: 'Dat snap ik. Maar laat het eerst uitrekenen.' },
             { id: 'c', text: 'Ze geeft de nieuwe baan meteen door aan de gemeente.', best: true, feedback: 'Goed. Dan klopt haar uitkering meteen.' },
           ],
-          why: 'Geef werk en loon altijd meteen door aan de gemeente. Dat moet. De gemeente rekent uit hoeveel bijstand je nog krijgt. Soms mag je een deel van je loon houden. Niet doorgeven geeft later schulden.',
+          why: 'Werk en loon geef je altijd meteen door aan de gemeente. Dat moet.', whyMore: 'De gemeente rekent uit hoeveel bijstand je nog krijgt. Soms mag je een deel van je loon houden. Niet doorgeven geeft later schulden.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.geld.2.tf1',
           statement: 'Ga je werken? Dan veranderen je toeslagen misschien ook.',
           answer: true,
-          why: 'Toeslagen zijn geld van de overheid. Bijvoorbeeld voor je zorgverzekering, je huur of de kinderopvang. Hoeveel je krijgt, hangt af van je inkomen. Verdien je meer? Geef het door via Mijn toeslagen. Anders moet je later terugbetalen.',
+          why: 'Hoeveel toeslag je krijgt, hangt af van je inkomen. Verdien je meer? Geef het door.', whyMore: 'Toeslagen zijn geld van de overheid. Bijvoorbeeld voor je zorgverzekering, je huur of de kinderopvang. Je geeft het door via Mijn toeslagen. Anders moet je later terugbetalen.',
         },
         {
           kind: 'whatdo',
@@ -176,7 +176,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt het aan een buurman die ook werkt.', best: false, feedback: 'Aardig. Maar zijn situatie is anders dan die van haar.' },
             { id: 'c', text: 'Ze rekent het zelf uit met haar oude bijstand.', best: false, feedback: 'Dan mist ze misschien toeslagen of kosten.' },
           ],
-          why: 'Laat de gemeente of een geldcoach het samen met je uitrekenen. Denk ook aan reiskosten en kinderopvang. Dan kies je met de juiste cijfers.',
+          why: 'De gemeente of een geldcoach rekent het samen met je uit. Dan kies je met de juiste cijfers.', whyMore: 'Denk ook aan reiskosten en kinderopvang.',
         },
         // Inburgering naast werk (rapport hiaten, hoofdstuk 3). Geen regels per groep uitleggen.
         // ⚖️ check: Voor veel nieuwkomers is dat verplicht ⚖️ (Wet inburgering 2021).
@@ -191,7 +191,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Ze stopt met de taalles. Werk gaat nu voor.', best: false, feedback: 'Dat is logisch. Maar de gemeente moet het weten, want inburgeren moet.' },
             { id: 'c', text: 'Ze werkt op dinsdag, en ze zegt niets tegen de gemeente.', best: false, feedback: 'Dan mist ze lessen. Dat kan problemen geven.' },
           ],
-          why: 'Inburgeren betekent: je leert Nederlands en hoe Nederland werkt. Voor veel nieuwkomers is dat verplicht. Werk en inburgering kunnen vaak samen. Vertel het je werkgever en de gemeente op tijd. De gemeente maakt met je een plan voor inburgering en werk.',
+          why: 'Werk en inburgering kunnen vaak samen. De gemeente maakt met je een plan.', whyMore: 'Inburgeren betekent: je leert Nederlands en hoe Nederland werkt. Voor veel nieuwkomers is dat verplicht. Vertel het je werkgever en de gemeente op tijd.',
         },
         {
           kind: 'whoask',
@@ -250,7 +250,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: "Hij vraagt zijn vrienden of zij ook zo'n brief hebben.", best: false, feedback: 'Kan. Maar de brief gaat over zijn eigen geld.' },
             { id: 'c', text: 'Hij opent de brief, en hij vraagt hulp bij het lezen.', best: true, feedback: 'Goed. Misschien krijgt hij geld terug.' },
           ],
-          why: 'Een brief van de Belastingdienst, UWV of de gemeente laat je niet liggen. Vaak staat er een datum in. Vraag iemand die je vertrouwt om te helpen. Ook de bibliotheek helpt gratis.',
+          why: 'Vaak staat er een datum in de brief. Daarom laat je hem niet liggen.', whyMore: 'Dat geldt voor brieven van de Belastingdienst, UWV of de gemeente. Vraag iemand die je vertrouwt om te helpen. Ook de bibliotheek helpt gratis.',
         },
         // ⚖️ check: Dat kun je terugvragen met je aangifte. Dat kan tot 5 jaar ⚖️ terug.
         {
@@ -258,7 +258,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.3.tf1',
           statement: 'Werk je maar een paar maanden? Dan krijg je vaak belasting terug.',
           answer: true,
-          why: 'Werk je niet het hele jaar? Dan betaal je vaak te veel belasting. Dat kun je terugvragen met je aangifte. Dat kan tot 5 jaar terug.',
+          why: 'Werk je niet het hele jaar? Dan betaal je vaak te veel belasting.', whyMore: 'Dat kun je terugvragen met je aangifte. Dat kan tot 5 jaar terug.',
         },
         // ⚖️ check: Doe het dan vóór 1 mei ⚖️.
         {
@@ -266,7 +266,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.3.tf2',
           statement: 'De aangifte over vorig jaar doe je meestal vóór 1 mei.',
           answer: true,
-          why: 'Een aangifte is een formulier over je inkomen van vorig jaar. Krijg je een brief dat je aangifte moet doen? Doe het dan vóór 1 mei. Lukt dat niet? Vraag dan op tijd om uitstel. Dan krijg je meer tijd. Je doet aangifte online, met je DigiD.',
+          why: 'Krijg je een brief dat je aangifte moet doen? Doe het dan vóór 1 mei.', whyMore: 'Een aangifte is een formulier over je inkomen van vorig jaar. Je doet het online, met je DigiD. Lukt het niet op tijd? Vraag dan op tijd om uitstel. Dan krijg je meer tijd.',
         },
         { kind: 'model', id: 'r.l.geld.3.mo1', context: 'Je vraagt hulp bij een brief.', nl: 'Ik heb een brief van de Belastingdienst. Wil je mij helpen met lezen?' },
       ],
@@ -317,7 +317,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt nu hulp, bij de gemeente of bij Geldfit.', best: true, feedback: 'Goed. Hoe eerder, hoe makkelijker.' },
             { id: 'c', text: 'Ze sluit snel een lening af om alles te betalen.', best: false, feedback: 'Dan heeft ze één schuld meer, vaak met hoge rente.' },
           ],
-          why: 'Hoe eerder je hulp vraagt, hoe kleiner het probleem. Veel mensen hebben geldzorgen. Je bent niet de enige. Hulp van de gemeente bij schulden is gratis.',
+          why: 'Hoe eerder je hulp vraagt, hoe kleiner het probleem. Hulp van de gemeente is gratis.', whyMore: 'Veel mensen hebben geldzorgen. Je bent niet de enige.',
         },
         // ⚖️ check: Maar een deel blijft altijd voor jou. Dat heet de beslagvrije voet ⚖️.
         {
@@ -325,7 +325,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.4.tf1',
           statement: 'Bij beslag op je loon houd je helemaal niets over.',
           answer: false,
-          why: 'Bij beslag gaat een deel van je loon naar de schuld. Maar een deel blijft altijd voor jou. Dat heet de beslagvrije voet. Check of dat bedrag klopt.',
+          why: 'Een deel van je loon blijft altijd voor jou. Dat heet de beslagvrije voet.', whyMore: 'Bij beslag gaat een deel van je loon naar de schuld. Check of het bedrag van je beslagvrije voet klopt.',
         },
         {
           kind: 'whatdo',
@@ -336,7 +336,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Ze betaalt eerst wie het vaakst belt of mailt.', best: false, feedback: 'Dat is logisch. Maar dat is niet altijd de belangrijkste.' },
             { id: 'c', text: 'Ze betaalt elke schuld een klein beetje tegelijk.', best: false, feedback: 'Goed bedoeld. Maar sommige rekeningen gaan voor.' },
           ],
-          why: 'Begin met een overzicht: wat moet je aan wie? Betaal eerst je huur, energie en zorgverzekering. Een nieuwe lening maakt het vaak erger.',
+          why: 'Zo zie je wat je aan wie moet. Betaal eerst je huur, energie en zorgverzekering.', whyMore: 'Een nieuwe lening maakt het vaak erger.',
         },
         {
           kind: 'whoask',
@@ -407,7 +407,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Hij laat het zo. Vrije dagen vervallen als je stopt.', best: false, feedback: 'Nee. Vrije dagen die hij niet opnam, krijgt hij uitbetaald.' },
             { id: 'c', text: 'Hij vraagt of hij de dagen bij een nieuwe baan mag houden.', best: false, feedback: 'Dat gaat meestal niet. De dagen horen bij deze baan.' },
           ],
-          why: 'Bij je laatste loon hoort een eindafrekening. Dat is de laatste betaling als je baan stopt. Daarin staat je vakantiegeld. En geld voor vrije dagen die je niet opnam. Klopt het niet? Vraag het na, het liefst per mail.',
+          why: 'Je vakantiegeld en je vrije dagen die je niet opnam, horen bij je eindafrekening.', whyMore: 'De eindafrekening is de laatste betaling als je baan stopt. Klopt het niet? Vraag het na, het liefst per mail.',
         },
         // ⚖️ check: Dan heb je vaak een eigen huurcontract ⚖️. Daarin staat hoe lang je nog mag
         //   blijven ⚖️ (Wet goed verhuurderschap; huur en werk in aparte contracten).
@@ -416,7 +416,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.5.tf1',
           statement: 'Woon je via het bureau? Dan moet je altijd weg op je laatste werkdag.',
           answer: false,
-          why: 'Huur je een kamer of huis via het bureau? Dan heb je vaak een eigen huurcontract. Daarin staat hoe lang je nog mag blijven. Dat heet de opzegtermijn. Vraag het op tijd na. Klopt het niet? Vraag hulp, bijvoorbeeld bij het Juridisch Loket.',
+          why: 'Je hebt vaak een eigen huurcontract. Daarin staat hoe lang je nog mag blijven.', whyMore: 'Dat geldt als je via het bureau een kamer of huis huurt. Die tijd heet de opzegtermijn. Vraag het op tijd na. Klopt het niet? Vraag hulp, bijvoorbeeld bij het Juridisch Loket.',
         },
         // ⚖️ check: Een zorgverzekering via het bureau stopt vaak als je werk stopt ⚖️.
         // ⚖️ check: Woon of werk je nog in Nederland? Dan moet je verzekerd zijn ⚖️ (art. 2 Zvw).
@@ -431,7 +431,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Hij wacht tot hij naar de dokter moet. Dan regelt hij het.', best: false, feedback: 'Te laat. Een dokter of ziekenhuis kan dan veel geld kosten.' },
             { id: 'c', text: 'Hij vraagt of de verzekering stopt. Dan regelt hij een nieuwe.', best: true, feedback: 'Goed. Zo is hij altijd verzekerd.' },
           ],
-          why: 'Een zorgverzekering via het bureau stopt vaak als je werk stopt. Woon of werk je nog in Nederland? Dan moet je verzekerd zijn. Regel op tijd een nieuwe. Ga je terug naar je eigen land? Zeg de verzekering dan op.',
+          why: 'Een verzekering via het bureau stopt vaak met je werk. Woon of werk je hier? Dan moet je verzekerd zijn.', whyMore: 'Regel op tijd een nieuwe. Ga je terug naar je eigen land? Zeg de verzekering dan op.',
         },
         // ⚖️ check: Geef je nieuwe adres binnen 5 dagen ⚖️ door aan de gemeente (Wet BRP).
         // ⚖️ check: Ga je voor lange tijd weg uit Nederland? Meld je dan af bij de gemeente ⚖️.
@@ -444,7 +444,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', who: 'gemeente', best: true, feedback: 'Goed. Je nieuwe adres geef je door aan de gemeente.' },
             { id: 'c', who: 'uwv', best: false, feedback: 'Krijg je WW? Dan wil UWV het ook weten. Maar eerst de gemeente.' },
           ],
-          why: 'Verhuis je? Geef je nieuwe adres binnen 5 dagen door aan de gemeente. Ga je voor lange tijd weg uit Nederland? Meld je dan af. Geef je adres ook aan je bureau, je bank en UWV.',
+          why: 'Verhuis je? Geef je nieuwe adres binnen 5 dagen door aan de gemeente.', whyMore: 'Geef je adres ook aan je bureau, je bank en UWV. Ga je voor lange tijd weg uit Nederland? Meld je dan af bij de gemeente.',
         },
         { kind: 'model', id: 'r.l.geld.5.mo1', context: 'Je contract stopt, en je wilt weten wat je nog krijgt.', nl: 'Mijn contract stopt. Krijg ik mijn vakantiegeld en mijn vrije dagen uitbetaald?' },
       ],
@@ -496,7 +496,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.6.tf1',
           statement: 'Vanaf je 18e moet je zelf een zorgverzekering hebben.',
           answer: true,
-          why: 'In Nederland moet iedereen vanaf 18 jaar een zorgverzekering hebben. Tot je 18e ben je gratis verzekerd, via je ouders. Heb je een laag inkomen? Dan krijg je misschien zorgtoeslag. Kijk bij Mijn toeslagen.',
+          why: 'In Nederland moet iedereen vanaf 18 jaar een zorgverzekering hebben.', whyMore: 'Tot je 18e ben je gratis verzekerd, via je ouders. Heb je een laag inkomen? Dan krijg je misschien zorgtoeslag. Kijk bij Mijn toeslagen.',
         },
         {
           kind: 'whatdo',
@@ -507,7 +507,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Hij betaalt de rekeningen pas als er een herinnering komt.', best: false, feedback: 'Dan kost het vaak extra geld. Betaal op tijd.' },
             { id: 'c', text: 'Hij betaalt eerst de rekeningen. Dan spaart hij een beetje.', best: true, feedback: 'Goed. Wat dan over is, mag hij uitgeven.' },
           ],
-          why: 'Betaal eerst je vaste lasten: huur, zorgverzekering, telefoon. Zet daarna een klein bedrag apart. Wat dan over is, kun je uitgeven. Laat de vaste lasten automatisch betalen. Dan vergeet je niets.',
+          why: 'Eerst je vaste lasten, dan een klein bedrag apart. Wat over is, kun je uitgeven.', whyMore: 'Vaste lasten zijn bijvoorbeeld huur, zorgverzekering en telefoon. Laat ze automatisch betalen. Dan vergeet je niets.',
         },
         // ⚖️ check: Op nibud.nl staan gratis tips en voorbeelden ⚖️ (Nibud, budgetplanner).
         {
@@ -519,14 +519,14 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Hij schrijft een maand op wat hij uitgeeft.', best: true, feedback: 'Goed. Dan ziet hij waar zijn geld heen gaat.' },
             { id: 'c', text: 'Hij kijkt maar niet meer in zijn bankapp.', best: false, feedback: 'Dat snap ik. Maar dan ziet hij een probleem te laat.' },
           ],
-          why: 'Schrijf een maand op wat je uitgeeft. Of kijk in je bankapp. Dan zie je waar je geld heen gaat. Op nibud.nl staan gratis tips en voorbeelden.',
+          why: 'Als je het opschrijft, zie je waar je geld heen gaat.', whyMore: 'Schrijf een maand op wat je uitgeeft. Of kijk in je bankapp. Op nibud.nl staan gratis tips en voorbeelden.',
         },
         {
           kind: 'truefalse',
           id: 'r.l.geld.6.tf2',
           statement: 'Sparen heeft pas zin als je veel verdient.',
           answer: false,
-          why: 'Ook een klein bedrag per maand helpt. Zo maak je een buffer. Dat is geld voor als er iets kapotgaat. Of als je werk stopt. Dan hoef je niet te lenen.',
+          why: 'Ook een klein bedrag per maand helpt. Zo maak je een buffer.', whyMore: 'Een buffer is geld voor als er iets kapotgaat. Of als je werk stopt. Dan hoef je niet te lenen.',
         },
         { kind: 'model', id: 'r.l.geld.6.mo1', context: 'Je wilt elke maand een beetje sparen.', nl: 'Kan ik elke maand automatisch geld naar mijn spaarrekening zetten?' },
       ],
@@ -583,7 +583,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.7.tf1',
           statement: 'Een jas uit een gewone winkel mag je altijd ruilen.',
           answer: false,
-          why: 'In een winkel ruilen is geen recht. Veel winkels doen het wel, met het bonnetje. Vraag het bij het kopen. Online is het anders. Dan heb je meestal 14 dagen bedenktijd.',
+          why: 'In een winkel ruilen is geen recht. Veel winkels doen het wel, met het bonnetje.', whyMore: 'Vraag het bij het kopen. Online is het anders. Dan heb je meestal 14 dagen bedenktijd.',
         },
         // ⚖️ check: Dan heb je meestal 14 dagen bedenktijd ⚖️ (art. 6:230o BW; meld het binnen 14
         //   dagen, stuur het daarna binnen 14 dagen terug, art. 6:230s BW).
@@ -596,7 +596,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Ze meldt het, en stuurt de jas terug.', best: true, feedback: 'Goed. Dan hoeft ze de jas niet te betalen.' },
             { id: 'c', text: 'Ze betaalt de jas gewoon niet. Dan is het ook goed.', best: false, feedback: 'Dan komen er kosten bij. Stuur hem eerst netjes terug.' },
           ],
-          why: 'Koop je iets online? Dan heb je meestal 14 dagen bedenktijd. Je mag het dan terugsturen. Meld het eerst bij de webwinkel. Betaal je achteraf? Zeg dan ook dat je het terugstuurt. Zo krijg je geen rekening.',
+          why: 'Koop je iets online? Dan heb je meestal 14 dagen bedenktijd om het terug te sturen.', whyMore: 'Meld het eerst bij de webwinkel. Betaal je achteraf? Zeg dan ook dat je het terugstuurt. Zo krijg je geen rekening.',
         },
         // ⚖️ check: Dat kan online, net zo makkelijk als afsluiten ⚖️ (art. 6:236 en 6:237 BW).
         // ⚖️ check: Na het eerste jaar kun je meestal elke maand opzeggen ⚖️ (art. 6:236 onder j en
@@ -610,7 +610,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Ze laat het lopen. Misschien gaat ze nog een keer.', best: false, feedback: 'Dat snap ik. Maar zo betaalt ze elke maand voor niets.' },
             { id: 'c', text: 'Ze stopt de betaling bij de bank. Dan is het klaar.', best: false, feedback: 'Dan loopt het abonnement nog door. Dan krijgt ze een schuld.' },
           ],
-          why: 'Kijk elke maand welke abonnementen je hebt. Gebruik je iets niet? Zeg het op. Dat kan online, net zo makkelijk als afsluiten. Na het eerste jaar kun je meestal elke maand opzeggen. Stop niet alleen de betaling. Dan krijg je een schuld.',
+          why: 'Opzeggen kan online, net zo makkelijk als afsluiten. Stop niet alleen de betaling. Dan krijg je een schuld.', whyMore: 'Kijk elke maand welke abonnementen je hebt. Gebruik je iets niet? Zeg het op. Na het eerste jaar kun je meestal elke maand opzeggen.',
         },
         // ⚖️ check: Op ConsuWijzer staat uitleg over je rechten als klant ⚖️ (ConsuWijzer, van de
         //   Autoriteit Consument & Markt).
@@ -623,7 +623,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', who: 'politie', best: false, feedback: 'De politie helpt bij oplichting. Bij een ruzie met een winkel vraag je eerst advies.' },
             { id: 'c', who: 'juridischloket', best: true, feedback: 'Goed. Daar krijg je gratis informatie over je rechten.' },
           ],
-          why: 'Het Juridisch Loket geeft gratis informatie over je rechten. Op ConsuWijzer staat ook uitleg voor klanten. Is de webwinkel nep? Doe dan aangifte bij de politie.',
+          why: 'Het Juridisch Loket geeft gratis informatie over je rechten.', whyMore: 'Op ConsuWijzer staat ook uitleg voor klanten. Is de webwinkel nep? Doe dan aangifte bij de politie.',
         },
         { kind: 'model', id: 'r.l.geld.7.mo1', context: 'Je wilt iets terugsturen naar een webwinkel.', nl: 'Ik wil deze jas terugsturen. Hoe krijg ik mijn geld terug?' },
       ],
@@ -686,7 +686,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.8.tf1',
           statement: 'Je WW gaat altijd door, ook in een ander land.',
           answer: false,
-          why: 'Je WW gaat niet zomaar mee. Je hebt het formulier U2 nodig. Dat vraag je aan vóór je vertrekt. Meestal krijg je de WW daar hooguit 3 maanden.',
+          why: 'Je WW gaat niet zomaar mee. Je hebt het formulier U2 nodig.', whyMore: 'Dat vraag je aan vóór je vertrekt. Meestal krijg je de WW daar hooguit 3 maanden.',
         },
         // ⚖️ check: Binnen 7 dagen na vertrek inschrijven bij de arbeidsdienst van het nieuwe land
         //   (Verordening 883/2004 art. 64 lid 1 sub b).
@@ -699,7 +699,7 @@ export const geldUnit: RuleUnit = {
             { id: 'b', text: 'Hij vraagt UWV nu om het formulier U2.', best: true, feedback: 'Goed. Dan kan hij zijn WW meenemen.' },
             { id: 'c', text: 'Hij stopt zelf zijn WW, en hij vraagt niets.', best: false, feedback: 'Dat hoeft niet. Met het formulier kan hij zijn WW soms meenemen.' },
           ],
-          why: 'Vraag het formulier U2 aan vóór je vertrekt. Meld je in Polen binnen 7 dagen bij het werkbureau. Geef ook je nieuwe adres door aan UWV.',
+          why: 'Het formulier U2 vraag je aan vóór je vertrekt.', whyMore: 'Meld je in Polen binnen 7 dagen bij het werkbureau. Geef ook je nieuwe adres door aan UWV.',
         },
         // ⚖️ check: Minstens 4 weken ingeschreven als werkzoekende vóór de export; UWV kan een uitzondering
         //   maken (Verordening 883/2004 art. 64 lid 1 sub a; uwv.nl).
@@ -708,7 +708,7 @@ export const geldUnit: RuleUnit = {
           id: 'r.l.geld.8.tf2',
           statement: 'Je moet eerst een tijd bij UWV ingeschreven staan. Pas dan kun je je WW meenemen.',
           answer: true,
-          why: 'Klopt. Je staat eerst minstens 4 weken als werkzoekende bij UWV. Daarna kun je het formulier U2 krijgen. Soms mag het eerder, als UWV dat goed vindt.',
+          why: 'Je staat eerst minstens 4 weken als werkzoekende bij UWV. Daarna kun je het formulier U2 krijgen.', whyMore: 'Soms mag het eerder, als UWV dat goed vindt.',
         },
         {
           kind: 'whoask',

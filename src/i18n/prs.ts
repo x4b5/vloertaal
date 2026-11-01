@@ -206,8 +206,8 @@ const lang: HelpLanguageSource = {
     topicsOrder: 'نمایش موضوع‌ها',
     privacyLink: 'بیانیهٔ حریم خصوصی را بخوانید (به هالندی)', // nieuw, nalezen
     routeTitle: 'چه می‌خواهید یاد بگیرید؟', // nieuw, nalezen
-    routeLearn: 'آموختن هالندی برای کار', // nieuw, nalezen
-    routeRules: 'هالندی را بلد هستم: قوانین کار', // nieuw, nalezen
+    routeLearn: 'آموختن هالندی برای کار، و اینکه کار در اینجا چگونه است', // nieuw, nalezen
+    routeRules: 'هالندی را بلد هستم: فقط قوانین کار', // nieuw, nalezen
     routeLearnShort: 'آموختن هالندی', // nieuw, nalezen
     byTheme: 'بر اساس بخش‌ها',
     inOrder: 'به ترتیب',
@@ -402,6 +402,8 @@ const lang: HelpLanguageSource = {
     checkUndo: 'با این هم درس‌ها را انجام دهید', // nieuw, nalezen
     shareInvite: 'من با Vloertaal هالندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
     workTry: 'امروز در کار امتحانش کن', // nieuw, nalezen
+    workTryWhen: 'وقتی:', // nieuw, nalezen
+    workTryThen: 'آنگاه بگویید:', // nieuw, nalezen
     calmScreen: 'صفحهٔ آرام', // nieuw, nalezen
     calmAuto: 'مثل تلفن شما', // nieuw, nalezen
     calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پیهم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen

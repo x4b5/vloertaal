@@ -38,3 +38,32 @@ export function tipBody(tip: CultureTip, lang?: HelpLanguage): Bilingual {
   const text = gloss(`${tip.id}.b`, tip.body, lang);
   return taalBeActive() ? { ...text, ...beClosing(text.en, text.help, lang) } : text;
 }
+
+/** The closing lines a tip can end with (in English) and the ids of their help-language text. */
+const CLOSINGS: [en: string, glossIds: string[]][] = [
+  [ADVICE_LINE, ['be.closing.advice.nl', 'be.closing.advice.nl2']],
+  [ABUSE_LINE, ['be.closing.abuse.nl']],
+  [BE_ADVICE_LINE, ['be.closing.advice']],
+  [BE_ABUSE_LINE, ['be.closing.abuse']],
+];
+
+/**
+ * A tip's text without its closing line ("General information. For your situation: ask your
+ * employer, the union or the Juridisch Loket."), and that line on its own. In a lesson the tip
+ * shows only its first sentences, which cut the closing line off; on its own it goes in the tip's
+ * ⓘ, so who can help is always one tap away. When the help language does not end with the same
+ * line, the text stays whole (nothing is split wrongly).
+ */
+export function splitClosing(text: Bilingual, lang?: HelpLanguage): { body: Bilingual; closing?: Bilingual } {
+  for (const [en, ids] of CLOSINGS) {
+    if (!text.en.endsWith(en)) continue;
+    const helpEnd = ids.map((id) => lang?.gloss[id]).find((x): x is string => Boolean(x && text.help?.endsWith(x)));
+    if (text.help !== undefined && !helpEnd) return { body: text };
+    const body: Bilingual = { ...text, en: text.en.slice(0, text.en.length - en.length).trimEnd() };
+    if (text.help !== undefined && helpEnd) body.help = text.help.slice(0, text.help.length - helpEnd.length).trimEnd();
+    const closing: Bilingual = { ...text, en };
+    if (helpEnd) closing.help = helpEnd; else delete closing.help;
+    return { body, closing };
+  }
+  return { body: text };
+}

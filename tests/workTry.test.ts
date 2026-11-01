@@ -59,7 +59,28 @@ describe('workTryLine', () => {
     const { workTryLine, WORK_TRY_MAX_WORDS } = await load();
     const short = cultureTips.filter((t) => t.phrase.nl.trim().split(/\s+/).length <= WORK_TRY_MAX_WORDS);
     expect(short.length).toBeGreaterThan(0);
-    for (const tip of short) expect(workTryLine(tip.lessonId)).toEqual({ id: tip.phrase.id, nl: tip.phrase.nl, en: tip.phrase.en });
+    for (const tip of short) {
+      const when = tip.situation.ask === 'which' ? {} : { when: { id: tip.situation.id, en: tip.situation.en } };
+      expect(workTryLine(tip.lessonId)).toEqual({ id: tip.phrase.id, nl: tip.phrase.nl, en: tip.phrase.en, ...when });
+    }
+  });
+
+  it('gives the moment as "Als", so it is an if-then plan (not for a "which is right?" situation)', async () => {
+    const { workTryLine } = await load();
+    const tip = cultureTips.find((t) => t.lessonId === 'l.speakup')!;
+    expect(workTryLine('l.speakup')?.when).toEqual({ id: tip.situation.id, en: tip.situation.en });
+    const which = cultureTips.find((t) => t.situation.ask === 'which' && t.phrase.nl.trim().split(/\s+/).length <= 12);
+    if (which) expect(workTryLine(which.lessonId)?.when).toBeUndefined();
+  });
+
+  it('gives a Werkregels lesson its "Zo zeg je het" sentence, with its context as the moment (W1)', async () => {
+    await import('../src/i18n/packs/nl');
+    const { workTryLine } = await import('../src/lib/workTry');
+    expect(workTryLine('r.l.ziek.3')).toEqual({ id: 'r.l.ziek.3.mo1', nl: 'Ik ben weer beter. Ik kan morgen weer komen werken.', en: '', whenNl: 'Je meldt je beter bij je leidinggevende.' });
+    // A sentence with a character's name in it is not one to say yourself.
+    expect(workTryLine('r.l.ziek.1')).toBeUndefined();
+    // Too long (13 words).
+    expect(workTryLine('r.l.ziek.2')).toBeUndefined();
   });
 
   it('gives nothing for a lesson without a tip, or with a long sentence', async () => {
@@ -122,11 +143,23 @@ describe('Gelukt? (a day after "Probeer het vandaag op je werk")', () => {
     expect(m.geluktDue('2026-11-03')).toBeUndefined();
   });
 
-  it('"Nog niet" closes it too', async () => {
+  it('"Nog niet" asks once more the next day, then closes', async () => {
+    const m = await load();
+    const line = m.workTryFor(lessonWithLine(), true, '2026-11-01');
+    expect(m.geluktDue('2026-11-02')?.nl).toBe(line!.nl);
+    m.answerGelukt('nog-niet', '2026-11-02');
+    expect(m.geluktDue('2026-11-02')).toBeUndefined();
+    expect(m.geluktDue('2026-11-03')?.nl).toBe(line!.nl);
+    m.answerGelukt('nog-niet', '2026-11-03');
+    expect(m.geluktDue('2026-11-04')).toBeUndefined();
+  });
+
+  it('"Ja, gelukt" after a second chance closes it too', async () => {
     const m = await load();
     m.workTryFor(lessonWithLine(), true, '2026-11-01');
-    m.answerGelukt('nog-niet');
-    expect(m.geluktDue('2026-11-02')).toBeUndefined();
+    m.answerGelukt('nog-niet', '2026-11-02');
+    m.answerGelukt('ja', '2026-11-03');
+    expect(m.geluktDue('2026-11-04')).toBeUndefined();
   });
 
   it('asks nothing without a card, or without storage', async () => {

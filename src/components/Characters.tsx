@@ -967,6 +967,18 @@ export function castFor(seed: string, from: CharacterId[] = CAST): CharacterId {
 }
 
 /**
+ * Who says a single word in a quiz (meaning, picture, matching): one of the four colleagues, fixed
+ * per word and kind of question. Over the lessons a word is heard in several voices, as at work,
+ * where no colleague sounds the same (more speakers, better word learning: Barcroft & Sommers
+ * 2005; reports/Leerwetenschap en tweede taal.md, voorstel 1). The introduction of a new word
+ * stays Bram's. A word one voice lacks is played by a recorded voice of the same gender (clipFor
+ * in src/lib/audio.ts), so the face and the voice keep matching.
+ */
+export function wordCast(seed: string, kind: string): CharacterId {
+  return castFor(`${kind}:${seed}`);
+}
+
+/**
  * The colleague of a workplace tip and its situation: a woman when the text says "she", a man
  * when it says "he" (see tipGender), any colleague otherwise. The learner's own character ("you"
  * voice in the chats: Amina's, or Bram's for a man; see learnerCharacter) never plays the other person.

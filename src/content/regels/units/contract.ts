@@ -56,7 +56,7 @@ export const contractUnit: RuleUnit = {
           id: 'r.l.contract.1.tf1',
           statement: 'Je werkgever moet de belangrijkste afspraken op papier of per mail geven.',
           answer: true,
-          why: 'Je werkgever moet laten weten wat je verdient. En hoeveel uur je werkt. Dat moet binnen 1 week na je eerste werkdag, op papier of digitaal. Andere afspraken volgen binnen 1 maand. Bijvoorbeeld over vakantie en opzeggen.',
+          why: 'Je werkgever moet binnen 1 week laten weten wat je verdient en hoeveel uur je werkt.', whyMore: 'Die week telt vanaf je eerste werkdag. Dat mag op papier of digitaal. Andere afspraken volgen binnen 1 maand. Bijvoorbeeld over vakantie en opzeggen.',
         },
         {
           kind: 'whatdo',
@@ -67,7 +67,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Ze tekent eerst, en ze zoekt het later op.', best: false, feedback: 'Beter andersom: eerst snappen, dan tekenen.' },
             { id: 'c', text: 'Ze vraagt wat het is, en welke cao het is.', best: true, feedback: 'Goed. Dan kan ze de cao zelf opzoeken.' },
           ],
-          why: 'Een cao is een afspraak over loon en regels voor jouw soort werk. Je cao staat vaak online. Zoek op "cao" en de naam van je sector.',
+          why: 'Een cao is een afspraak over loon en regels voor jouw soort werk.', whyMore: 'Je cao staat vaak online. Zoek op "cao" en de naam van je sector.',
         },
         // ⚖️ check: Werk je lange tijd meer uren? Dan kun je vragen om die uren in je contract ⚖️.
         {
@@ -79,7 +79,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Je zegt niets. Je wilt geen gedoe op je eerste dag.', best: false, feedback: 'Dat snap ik. Maar later is het lastiger.' },
             { id: 'c', text: 'Je vraagt of hij 30 uur in het contract zet.', best: true, feedback: 'Goed. Wat op papier staat, telt.' },
           ],
-          why: 'Bij ziekte, WW of ontslag kijken ze naar je contract. Werk je lange tijd meer uren? Dan kun je vragen om die uren in je contract.',
+          why: 'Bij ziekte, WW of ontslag kijken ze naar de uren in je contract.', whyMore: 'Werk je lange tijd meer uren? Dan kun je vragen om die uren in je contract.',
         },
         // Mag ik hier werken? (rapport hiaten, hoofdstuk 3). Bewust geen regels per groep (EU,
         //   asiel, Oekraïne, statushouder): alleen "vraag het na vóór je begint".
@@ -96,7 +96,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt het na vóór ze begint, bijvoorbeeld bij UWV.', best: true, feedback: 'Goed. Dan weet ze het zeker.' },
             { id: 'c', text: 'Ze vraagt het aan een vriendin die hier ook werkt.', best: false, feedback: 'Aardig. Maar het hangt af van haar eigen papieren.' },
           ],
-          why: 'Mag je in Nederland werken? Dat hangt af van je papieren. Weet je het niet zeker? Vraag het na vóór je begint. Dat kan bij UWV, de IND of VluchtelingenWerk. Je werkgever moet je ID zien en een kopie bewaren.',
+          why: 'Of je in Nederland mag werken, hangt af van je papieren. Vraag het na vóór je begint.', whyMore: 'Dat kan bij UWV, de IND of VluchtelingenWerk. Je werkgever moet je ID zien en een kopie bewaren.',
         },
         {
           kind: 'whoask',
@@ -156,7 +156,7 @@ export const contractUnit: RuleUnit = {
           id: 'r.l.contract.2.tf1',
           statement: 'In de proeftijd mag de baas je meteen laten stoppen.',
           answer: true,
-          why: 'In de proeftijd mogen jij en de baas meteen stoppen. Je mag vragen waarom. Dan moet de baas de reden op papier geven. De reden mag geen discriminatie zijn.',
+          why: 'In de proeftijd mogen jij en de baas meteen stoppen.', whyMore: 'Je mag vragen waarom. Dan moet de baas de reden op papier geven. De reden mag geen discriminatie zijn.',
         },
         // ⚖️ check: In een contract van 6 maanden of korter mag geen proeftijd ⚖️.
         // ⚖️ check: Contract langer dan 6 maanden, maar korter dan 2 jaar? Dan hooguit 1 maand ⚖️.
@@ -166,7 +166,7 @@ export const contractUnit: RuleUnit = {
           id: 'r.l.contract.2.tf2',
           statement: 'In een contract van 6 maanden mag een proeftijd staan.',
           answer: false,
-          why: 'In een contract van 6 maanden of korter mag geen proeftijd. Contract langer dan 6 maanden, maar korter dan 2 jaar? Dan hooguit 1 maand. Contract van 2 jaar of langer, of vast? Dan hooguit 2 maanden.',
+          why: 'In een contract van 6 maanden of korter mag geen proeftijd.', whyMore: 'Contract langer dan 6 maanden, maar korter dan 2 jaar? Dan hooguit 1 maand proeftijd. Contract van 2 jaar of langer, of vast? Dan hooguit 2 maanden.',
         },
         // Redactie: de ketenregeling verandert waarschijnlijk per 1 januari 2028 (Wet meer
         //   zekerheid flexwerkers). Tot die tijd geldt de regel hierboven. ⚖️
@@ -188,7 +188,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Ze vraagt haar baas of ze na 1 juni mag blijven.', best: true, feedback: 'Goed. Dan weet ze op tijd of ze mag blijven.' },
             { id: 'c', text: 'Ze zoekt alvast ander werk en zegt niets.', best: false, feedback: 'Slim om te zoeken. Maar vragen kan ook.' },
           ],
-          why: 'Een tijdelijk contract stopt vanzelf op de einddatum. Duurt je contract 6 maanden of langer? Dan moet je werkgever 1 maand voor het einde laten weten of het doorgaat. Krijg je een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je contract meestal vanzelf vast. Maar na het 3e contract mag je baas ook stoppen. Zit er meer dan 6 maanden tussen twee contracten? Dan begint de telling opnieuw. Werk je via een uitzendbureau? Dan gelden vaak andere regels. Kijk in de uitzend-cao.',
+          why: 'Een tijdelijk contract stopt vanzelf op de einddatum. Vraag dus op tijd of het doorgaat.', whyMore: 'Duurt je contract 6 maanden of langer? Dan moet je werkgever 1 maand voor het einde laten weten of het doorgaat. Krijg je een 4e tijdelijk contract, of werk je er langer dan 3 jaar? Dan is je contract meestal vanzelf vast. Maar na het 3e contract mag je baas ook stoppen. Zit er meer dan 6 maanden tussen twee contracten? Dan begint de telling opnieuw. Werk je via een uitzendbureau? Dan gelden vaak andere regels. Kijk in de uitzend-cao.',
         },
         {
           kind: 'whoask',
@@ -257,7 +257,7 @@ export const contractUnit: RuleUnit = {
           id: 'r.l.contract.3.tf1',
           statement: 'Esra moet zaterdag komen, want het hotel belt haar.',
           answer: false,
-          why: 'Je werkgever moet je meestal minstens 4 dagen van tevoren oproepen. Is het later? Dan mag je nee zeggen. Een cao kan die 4 dagen korter maken. Maar niet korter dan 1 dag.',
+          why: 'Je werkgever moet je meestal minstens 4 dagen van tevoren oproepen. Later? Dan mag je nee zeggen.', whyMore: 'Een cao kan die 4 dagen korter maken. Maar niet korter dan 1 dag.',
         },
         // ⚖️ check: Bij oproepwerk krijg je meestal minstens 3 uur ⚖️ loon per oproep.
         // ⚖️ check: Ook als je korter werkt. Dat geldt bij een klein contract zonder vaste
@@ -271,7 +271,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Ze checkt of ze loon krijgt voor 3 uur.', best: true, feedback: 'Goed. Daar heeft ze meestal recht op.' },
             { id: 'c', text: 'Ze krijgt niets, want ze was er maar kort.', best: false, feedback: 'Nee. De baas betaalt gewerkte tijd altijd.' },
           ],
-          why: 'Bij oproepwerk krijg je meestal minstens 3 uur loon per oproep. Ook als je korter werkt. Dat geldt bij een klein contract zonder vaste werktijden.',
+          why: 'Bij oproepwerk krijg je meestal minstens 3 uur loon per oproep, ook als je korter werkt.', whyMore: 'Dat geldt bij een klein contract zonder vaste werktijden.',
         },
         // Redactie: vanaf 1 januari 2028 verdwijnt het nulurencontract voor de meeste mensen (Wet
         //   meer zekerheid flexwerkers). Vanaf 2028 mogen bedrijven alleen werken met toegelaten
@@ -284,7 +284,7 @@ export const contractUnit: RuleUnit = {
           id: 'r.l.contract.3.tf2',
           statement: 'Een uitzendkracht heeft recht op hetzelfde loon als de vaste mensen die hetzelfde werk doen.',
           answer: true,
-          why: "Dat klopt. Doe je hetzelfde werk als vaste collega's? Dan krijg je hetzelfde loon. Zo staat het in de wet. Weet je het niet zeker? Vraag het na bij het bureau.",
+          why: "Doe je hetzelfde werk als vaste collega's? Dan krijg je hetzelfde loon. Zo staat het in de wet.", whyMore: 'Weet je het niet zeker? Vraag het na bij het bureau.',
         },
         // Voor werk betaal je nooit (rapport hiaten, voorstel 3): de tweede vraag naast r.l.zoeken.1.
         // ⚖️ check: Inschrijven bij een uitzendbureau is gratis. Een bureau mag je geen geld vragen
@@ -294,7 +294,7 @@ export const contractUnit: RuleUnit = {
           id: 'r.l.contract.3.tf3',
           statement: 'Een uitzendbureau mag je laten betalen om je in te schrijven.',
           answer: false,
-          why: 'Inschrijven bij een uitzendbureau is gratis. Het bureau krijgt geld van het bedrijf waar je werkt. Voor echt werk hoef jij zelf niet te betalen. Vraagt een bureau toch geld? Dan klopt er iets niet.',
+          why: 'Inschrijven bij een uitzendbureau is gratis. Het bureau krijgt geld van het bedrijf waar je werkt.', whyMore: 'Voor echt werk hoef jij zelf niet te betalen. Vraagt een bureau toch geld? Dan klopt er iets niet.',
         },
         {
           kind: 'whoask',
@@ -353,7 +353,7 @@ export const contractUnit: RuleUnit = {
           id: 'r.l.contract.4.tf1',
           statement: "Als zzp'er krijg je je loon door als je ziek bent.",
           answer: false,
-          why: "Als zzp'er krijg je geen loon als je ziek bent. Je krijgt geen WW als het werk stopt. Je regelt zelf je belasting, je verzekering en je pensioen. Meer per uur is dus niet altijd meer geld.",
+          why: "Als zzp'er krijg je geen loon als je ziek bent. Stopt het werk? Dan krijg je geen WW.", whyMore: 'Je regelt zelf je belasting, je verzekering en je pensioen. Meer per uur is dus niet altijd meer geld.',
         },
         // ⚖️ check: Bepaalt het bedrijf hoe, wanneer en waar je werkt? Dan ben je vaak gewoon
         //   werknemer ⚖️.
@@ -366,7 +366,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Hij vindt het prima. Zo gaat het bij bezorgers.', best: false, feedback: 'Dat is logisch. Maar dan mist hij misschien rechten.' },
             { id: 'c', text: 'Hij koopt alvast zelf een fiets en een tas.', best: false, feedback: 'Wacht daar nog even mee. Eerst advies vragen.' },
           ],
-          why: "Bepaalt het bedrijf hoe, wanneer en waar je werkt? Dan ben je vaak gewoon werknemer. Dan heb je recht op loon bij ziekte en op WW. Iemand die zzp'er heet, maar werknemer is, heet schijnzelfstandig.",
+          why: 'Bepaalt het bedrijf hoe, wanneer en waar je werkt? Dan ben je vaak gewoon werknemer.', whyMore: "Dan heb je recht op loon bij ziekte en op WW. Iemand die zzp'er heet, maar werknemer is, heet schijnzelfstandig.",
         },
         // Redactie: het kabinet wil een stagevergoeding verplicht maken (brief juli 2026). Nog geen
         //   wet. ⚖️
@@ -376,7 +376,7 @@ export const contractUnit: RuleUnit = {
           id: 'r.l.contract.4.tf2',
           statement: 'Op een stage krijg je altijd het minimumloon.',
           answer: false,
-          why: 'Op een stage ben je aan het leren. Een stagevergoeding is nu nog geen recht in de wet. Veel bedrijven geven wel een vergoeding. Een leerwerkbaan (bbl) is anders. Dan heb je een contract en krijg je loon.',
+          why: 'Op een stage ben je aan het leren. Een stagevergoeding is nu nog geen recht in de wet.', whyMore: 'Veel bedrijven geven wel een vergoeding. Een leerwerkbaan (bbl) is anders. Dan heb je een contract en krijg je loon.',
         },
         {
           kind: 'whoask',
@@ -446,7 +446,7 @@ export const contractUnit: RuleUnit = {
           id: 'r.l.contract.5.tf1',
           statement: 'Met een A1-verklaring mag je werkgever je minder geven dan het minimumloon.',
           answer: false,
-          why: 'Nee. De A1 gaat over je verzekering, zoals voor ziek zijn en pensioen. In Nederland krijg je minstens het Nederlandse minimumloon. Ook de regels voor werktijden en veiligheid gelden.',
+          why: 'De A1 gaat over je verzekering. In Nederland krijg je minstens het Nederlandse minimumloon.', whyMore: 'De verzekering is bijvoorbeeld voor ziek zijn en pensioen. Ook de regels voor werktijden en veiligheid gelden.',
         },
         {
           kind: 'whatdo',
@@ -457,7 +457,7 @@ export const contractUnit: RuleUnit = {
             { id: 'b', text: 'Hij gebruikt de A1 van een collega.', best: false, feedback: 'Dat kan niet. Een A1 is van één persoon.' },
             { id: 'c', text: 'Hij vraagt zijn baas om een kopie van zijn A1.', best: true, feedback: 'Goed. Dan weet hij waar hij verzekerd is.' },
           ],
-          why: 'De A1 laat zien waar je verzekerd bent. Bijvoorbeeld voor de dokter, of als je ziek wordt. Vraag je werkgever om een kopie. Bewaar die goed.',
+          why: 'De A1 laat zien waar je verzekerd bent. Vraag je werkgever om een kopie.', whyMore: 'Bijvoorbeeld voor de dokter, of als je ziek wordt. Bewaar de kopie goed.',
         },
         {
           kind: 'whoask',
