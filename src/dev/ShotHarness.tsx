@@ -383,6 +383,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
       ...(q.get('text') === '1' ? { textOnly: true } : {}),
     },
     meaning: { kind: 'meaning', word: focus ?? hesje, options: [handschoenen, schoenen, focus ?? hesje] },
+    // Ear training in today's review: /?shot=ear (man or maan, by ear, the day's voice; &turn=2 another voice).
+    ear: (() => { const man = allWords.find((w) => w.id === 'w.kl.man')!; const maan = allWords.find((w) => w.id === 'w.kl.maan')!; return { kind: 'dutch' as const, word: maan, options: [man, maan], ear: Number(q.get('turn') ?? 1) }; })(),
     intro: { kind: 'intro', word: focus ?? hesje },
     listen: { kind: 'listen', word: focus ?? schoenen, options: [helm, focus ?? schoenen, hesje] },
     // With options: a non-Latin help language picks the written word (unless writing is on).
