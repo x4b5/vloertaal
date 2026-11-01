@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { stillMotion } from '../lib/calm';
 import { learnedItems } from '../content/courses';
 import { dutchUi, trackOf, trackOfLang } from '../lib/track';
 import { fillCount, ui, said } from '../i18n';
@@ -474,7 +475,7 @@ function useGuard(step: string) {
   const ready = useRef(false);
   useEffect(() => {
     ready.current = false;
-    const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const still = stillMotion();
     const t = window.setTimeout(() => { ready.current = true; }, still ? 300 : 500);
     return () => window.clearTimeout(t);
   }, [step]);

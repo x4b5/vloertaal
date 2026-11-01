@@ -1,4 +1,5 @@
 import { tipForLesson } from '../content/culture';
+import { applyCalm } from '../lib/calm';
 import { workTryLine } from '../lib/workTry';
 import { sayingForLesson, sayingQuestion } from '../content/sayings';
 import { findLesson } from '../content/curriculum';
@@ -660,6 +661,7 @@ function SettingsShot({ progress: start, access }: { progress: Progress; access:
       onRegion={(region) => set({ region })}
       onTheme={(theme) => set({ theme })}
       onTextSize={pickSize}
+      onCalm={(calm) => { set({ calm }); applyCalm(calm); }}
       onVoice={(voice) => set({ voice })}
       onQuiet={(quiet) => set({ quiet })}
       onTempo={(tempo) => set({ tempo })}

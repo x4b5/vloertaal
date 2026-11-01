@@ -1,4 +1,5 @@
 import { breakable } from '../lib/dutch';
+import { stillMotion } from '../lib/calm';
 import { LessonCelebration } from './Celebrate';
 import { BramSays } from './BramSays';
 import { Character } from './Characters';
@@ -892,7 +893,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   const shownNew = newWords;
   // A tap or Enter meant for the last exercise must not skip this screen: both are ignored for
   // a moment (shorter with reduced motion), and the button fades in after about a second.
-  const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const still = stillMotion();
   const ready = useRef(false);
   useEffect(() => {
     const t = window.setTimeout(() => { ready.current = true; }, still ? 400 : 700);

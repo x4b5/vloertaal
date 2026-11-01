@@ -52,6 +52,7 @@ import { explainReport, testerMode } from './lib/report';
 import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpdate';
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
+import { applyCalm, calmOn } from './lib/calm';
 import { applyEnglish, englishLangFor } from './lib/english';
 import { SocialMap, SocialMapLink } from './components/SocialMap';
 import { regionOf, type RegionChoice } from './content/regio';
@@ -570,6 +571,7 @@ export default function App() {
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
+  useEffect(() => { applyCalm(progress.calm); }, [progress.calm]);
   // Also on `onboarded`: Back to the language page clears the setting (English shows there), and
   // picking the same language again must hide the English again, though helpLang did not change.
   useEffect(() => { applyEnglish(englishLangFor(progress.helpLang, progress.onboarded)); }, [progress.helpLang, progress.onboarded]);
@@ -798,7 +800,8 @@ export default function App() {
         if (!daily && !Object.keys(progress.completed).length) void persistStorage();
         // Not granted (yet): ask again now and then, so the progress is not cleared with the cache.
         else void keepStorageAgain();
-        const streakUp = streakWentUp(progress, next) ? next.streak : undefined;
+        // "Rustig scherm": no celebration of the day streak after a lesson (src/lib/calm.ts).
+        const streakUp = streakWentUp(progress, next) && !calmOn(progress.calm) ? next.streak : undefined;
         // Words learned, or in the rules track rules learned (the rule cards of finished lessons).
         const before = learnedItems(track, progress.completed);
         const words = learnedItems(track, next.completed);
@@ -1004,6 +1007,7 @@ export default function App() {
             onRegion={setRegion}
             onCountry={setCountry}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
+            onCalm={(calm) => setProgress((p) => ({ ...p, calm }))}
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}

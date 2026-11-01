@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Doch die Lektionen machen', // nieuw, nalezen
     shareInvite: 'Ich lerne Niederländisch für meine Arbeit mit Vloertaal. Kostenlos: {link}', // nieuw, nalezen
     workTry: 'Probier es heute bei der Arbeit', // nieuw, nalezen
+    calmScreen: 'Ruhiger Bildschirm', // nieuw, nalezen
+    calmAuto: 'Wie dein Handy', // nieuw, nalezen
+    calmHint: 'An: Nichts bewegt sich, keine Feier für deine Serie nach einer Lektion, und deine Serie und Wörter stehen nicht auf der Startseite.', // nieuw, nalezen
     infoMore: 'Mehr Erklärung', // nieuw, nalezen
     tipsAbout: 'Über diese Tipps', // nieuw, nalezen
     aboutMore: 'Mehr über Vloertaal lesen', // nieuw, nalezen

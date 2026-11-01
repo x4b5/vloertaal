@@ -48,10 +48,16 @@ regels die we in de code aanhouden, en wat er al gedaan is.
   - Waarschuwingen (zoals bij "Voortgang wissen") en meldingen over wat er net gebeurde blijven altijd zichtbaar.
   - De reeks en de woorden bovenin zijn kleiner en rustiger.
 
-## Volgende stappen (met de keuzes van de eigenaar)
-
-- **Fase 3:** "Rustig scherm" bij Instellingen › Les: geen animaties, geen feestje, geen reeks op de
-  startpagina. Staat de telefoon op "minder beweging", dan gaat het vanzelf aan.
+- **Fase 3 ("Rustig scherm", Instellingen › Lessen; `src/lib/calm.ts`):**
+  - Drie keuzes:
+    - **Zoals je telefoon:** de standaard. Staat de telefoon op "minder beweging", dan gaat het aan.
+    - **Aan.**
+    - **Uit.**
+  - Aan betekent:
+    - niets beweegt (`data-calm` op `<html>` zet alle animaties uit, en `stillMotion()` geldt voor beweging uit code);
+    - geen feestje voor je reeks na een les;
+    - geen reeks en woorden op de startpagina; de lege balk bovenin klapt in.
+  - Op de pagina staat een klein voorbeeld van de startpagina dat meteen verandert. Je blijft op de pagina na het kiezen.
 
 ## Hoe we meten
 

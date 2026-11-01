@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-01',
     items: [
+      'Nieuw bij Instellingen › Lessen: Rustig scherm. Aan: niets beweegt, geen feestje voor je reeks na een les, en je reeks en woorden staan niet op de startpagina. Staat je telefoon op "minder beweging"? Dan staat het vanzelf aan.',
       'De app is rustiger: warmere kleuren, zachtere randen, en minder tegelijk op het scherm. De onderbalk toont iconen. Extra uitleg staat achter een ⓘ: tik erop om hem te lezen. Je naam op een certificaat of op je kaart pas je nu aan op het certificaat of de kaart zelf: tik op het potlood.',
       'Mag de app je microfoon niet gebruiken? Dan zie je bij het spreken de knop "Zet de microfoon aan", met de stappen voor jouw telefoon. Staat de microfoon weer aan, dan gaat de oefening meteen verder.',
       'Kreeg je na een les een zin om op je werk te proberen? Dan vraagt de app de dag erna één keer: "Heb je dit op je werk gezegd?" Tik op "Ja, gelukt" of "Nog niet". Alleen dat antwoord wordt geteld, zonder naam (uit te zetten bij "Anoniem meetellen").',

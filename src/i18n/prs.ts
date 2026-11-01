@@ -406,6 +406,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'با این هم درس‌ها را انجام دهید', // nieuw, nalezen
     shareInvite: 'من با Vloertaal هالندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
     workTry: 'امروز در کار امتحانش کن', // nieuw, nalezen
+    calmScreen: 'صفحهٔ آرام', // nieuw, nalezen
+    calmAuto: 'مثل تلفن شما', // nieuw, nalezen
+    calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پیهم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen
     infoMore: 'توضیح بیشتر', // nieuw, nalezen
     tipsAbout: 'در بارهٔ این نکته‌ها', // nieuw, nalezen
     aboutMore: 'بیشتر در بارهٔ Vloertaal', // nieuw, nalezen

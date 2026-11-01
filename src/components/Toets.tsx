@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { stillMotion } from '../lib/calm';
 import { gloss, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, speak, stopSpeech } from '../lib/audio';
@@ -39,7 +40,7 @@ const PART: Record<ToetsPart, { nl: string; key: UiKey; Icon: (p: { size?: numbe
   sentences: { nl: 'Zinnen', key: 'toetsPartSentences', Icon: BubblesIcon },
 };
 
-const still = () => typeof window !== 'undefined' && Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches);
+const still = () => stillMotion();
 
 /* ------------------------------------------------------------------ the card on the home */
 

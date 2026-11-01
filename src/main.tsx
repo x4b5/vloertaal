@@ -10,6 +10,7 @@ import { watchErrors } from './lib/errors';
 import { watchForUpdates } from './lib/appUpdate';
 import { applyTheme } from './lib/theme';
 import { applyTextSize } from './lib/textSize';
+import { applyCalm } from './lib/calm';
 import { applyEnglish } from './lib/english';
 import { refreshOfflineShell, warmLanguageCache, warmPhrases } from './lib/offline';
 import { ensureLanguage, ensureRegionTexts, LANG_CODES } from './i18n';
@@ -37,6 +38,8 @@ watchErrors();
 applyTheme(import.meta.env.DEV && params.get('shot') ? 'auto' : loadProgress().theme);
 // The text size too, so the first paint already has it (screenshots: &text=large|xl).
 applyTextSize(import.meta.env.DEV && params.get('shot') ? (params.get('text') as 'large' | 'xl' | null) ?? 'normal' : loadProgress().textSize);
+// "Rustig scherm" too (screenshots: &calm=on|off).
+applyCalm(import.meta.env.DEV && params.get('shot') ? (params.get('calm') as 'on' | 'off' | null) ?? 'off' : loadProgress().calm);
 
 // English next to the help language: hidden unless "Show English too" is on (screenshots: &en=1).
 applyEnglish(import.meta.env.DEV && params.get('shot') ? params.get('lang') : loadProgress().helpLang, import.meta.env.DEV && params.get('shot') ? params.get('en') === '1' : undefined);

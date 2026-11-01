@@ -1,4 +1,5 @@
 import { WordPicture } from '../pictures';
+import { stillMotion } from '../lib/calm';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { fillCount, ui, uiCount, said } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
@@ -17,7 +18,7 @@ import { MILESTONE_FACTS } from '../content/facts';
 export function useTapGuard() {
   const ready = useRef(false);
   useEffect(() => {
-    const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const still = stillMotion();
     const t = window.setTimeout(() => { ready.current = true; }, still ? 400 : 700);
     return () => window.clearTimeout(t);
   }, []);
@@ -201,7 +202,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
 }) {
   const [step, setStep] = useState<'streak' | 'keep'>('streak');
   const [offer] = useState(() => keep && streak === 1 && !keepOffered());
-  const still = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const still = stillMotion();
   // The number ticks up from yesterday's count, like a counter flipping over; on the first
   // day it shows 1 from the start (never "0"), and only the flame lights up.
   const [shown, setShown] = useState(still || streak <= 1 ? streak : streak - 1);
