@@ -31,7 +31,8 @@ regels die we in de code aanhouden, en wat er al gedaan is.
   - de andere antwoorden worden zachter zodra je kiest.
 - **Minder herhaling:**
   - geen label boven de oefening;
-  - geen "Goed zo!" bij een goed antwoord.
+  - geen "Goed zo!" bij een goed antwoord, ook niet in Werkregels;
+  - goed antwoord met een uitleg (een situatie): alleen de uitleg, want het antwoord staat al groen in de lijst.
 - **Bovenbalk en onderbalk:**
   - geen logo in de bovenbalk;
   - de onderbalk toont alleen iconen, en alleen het tabblad waar je bent heeft zijn woord eronder (in de hulptaal, in Werkregels in het Nederlands);

@@ -478,7 +478,7 @@ export function RuleFeedbackBody({ v, lang }: { v: RuleVerdict; lang?: HelpLangu
           </div>
         </div>
       )}
-      <hr className="feedback-rule" />
+      {(v.best || v.own || v.sum) && <hr className="feedback-rule" />}
       <div className="feedback-why rule-fb-why">
         <Say text={v.why} lang={lang} />
         <p lang="nl">{v.why}</p>
