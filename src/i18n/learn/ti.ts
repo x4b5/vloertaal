@@ -14,7 +14,6 @@ const t: CultureTranslation = {
     micStepsAndroidApp: { m: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕካ ሓዝ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕኪ ሓዝዮ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕኩም ሓዙ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
     micStepsDesktop: { m: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቕ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቒ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቑ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
     whichPicture: "ኣየናይ ስእሊ እዩ?",
-    wrongTapsN: "ጌጋ ጠውቕታት: {n}",
     sayAloudInstead: { m: "ኣብ ክንድኡ ብዓው ኢልካ በሎ", f: "ኣብ ክንድኡ ብዓው ኢልኪ በልዮ" },
     wordsPractised: "ዝተደገሙ ቃላት",
     reviewComplete: "ድግግም ተወዲኡ!",

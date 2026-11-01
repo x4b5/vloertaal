@@ -179,9 +179,7 @@ const lang: HelpLanguageSource = {
     certLater: 'ደሓር',
     certPrint: { m: 'ሕተም ወይ ከም PDF ዓቅብ', f: 'ሕተሚ ወይ ከም PDF ዓቅቢ', x: 'ሕተሙ ወይ ከም PDF ዓቅቡ' }, // x: nieuw, nalezen
     certSaved: 'እቲ ስእሊ ተዓቂቡ።',
-    certNameAsk: { m: 'ስምካ ኣብቲ ምስክር ወረቐት?', f: 'ስምኪ ኣብቲ ምስክር ወረቐት?', x: 'ስምኩም ኣብቲ ምስክር ወረቐት?' }, // x: nieuw, nalezen
     certNameHint: { m: 'ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ባዶ ክትገድፎ ትኽእል ኢኻ።', f: 'ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ባዶ ክትገድፍዮ ትኽእሊ ኢኺ።' },
-    certNoName: 'ብዘይ ስም',
     certChangeName: { m: 'ስም ቀይር', f: 'ስም ቀይሪ', x: 'ስም ቀይሩ' }, // x: nieuw, nalezen
     certPractice: 'ናይ ልምምድ ምስክር ወረቐት እዩ፡ ወግዓዊ ዲፕሎማ ኣይኮነን',
     resumeLesson: { m: 'ትምህርቲ ቀጽል', f: 'ትምህርቲ ቀጽሊ', x: 'ትምህርቲ ቀጽሉ' }, // x: nieuw, nalezen
@@ -273,7 +271,6 @@ const lang: HelpLanguageSource = {
     remindNo: 'ኣይፋል፡ የቐንየለይ',
     remindPickTime: { m: 'መዓስ ነዘኻኽረካ?', f: 'መዓስ ነዘኻኽረኪ?', x: 'መዓስ ነዘኻኽረኩም?' }, // x: nieuw, nalezen
     certSaveShare: { m: 'ዓቅብ ወይ ኣካፍል', f: 'ዓቅቢ ወይ ኣካፍሊ', x: 'ዓቅቡ ወይ ኣካፍሉ' }, // x: nieuw, nalezen
-    certNameDone: 'ተወዲኡ',
     pauseTitle: 'ዕረፍቲ',
     back: 'ንድሕሪት',
     quitLesson: { m: 'ካብ ትምህርቲ ውጻእ', f: 'ካብ ትምህርቲ ውጽኢ', x: 'ካብ ትምህርቲ ውጽኡ' }, // x: nieuw, nalezen
@@ -362,7 +359,6 @@ const lang: HelpLanguageSource = {
     coachTopics: 'ዝተወድኡ ኣርእስታት', // nieuw, nalezen
     coachDays: 'መዓልትታት ልምምድ ኣብ ዝሓለፉ 4 ሰሙናት', // nieuw, nalezen
     coachLast: 'ናይ መወዳእታ ትምህርቲ፡ ምስ ዕለቱ', // nieuw, nalezen
-    coachNameAsk: { m: 'ስምካ ኣብታ ካርድ?', f: 'ስምኪ ኣብታ ካርድ?', x: 'ስምኩም ኣብታ ካርድ?' }, // nieuw, nalezen
     coachCode: 'ኮድ፡ ተመሳሳሊ ቁጽርታት ብሓጺሩ፡ ንሓፈሻዊ መግለጺ ጉጅለ። ብዘይ ስም።', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'ተሌፎን ይስማዕ (ፈተነ)', // nieuw, nalezen

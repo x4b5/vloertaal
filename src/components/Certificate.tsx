@@ -290,6 +290,8 @@ export function CertificateScreen({ unit, day, lang, onBack, sector, region, com
           />
         ) : null}
       />
+      {/* While the name is typed: where it stays (on this phone only; it may stay empty). */}
+      {editing && <p className="keep-hint name-hint" role="note"><Bi text={ui('certNameHint', lang)} /></p>}
       <p className="cert-practice">
         <NlPair nlFirst nl={CERT_NOTE} text={ui('certPractice', lang)} />
       </p>
@@ -600,6 +602,7 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
           <div className="kaart-wait" role="img" aria-label={alt} lang="nl" />
         )}
       </figure>
+      {editing && <p className="keep-hint name-hint" role="note"><Bi text={ui('certNameHint', lang)} /></p>}
       <section className="kaart-legend" dir={rtl ? 'rtl' : undefined} aria-label={said(ui('coachCardWhat', lang))}>
         <p className="kaart-legend-head"><NlPair nlFirst nl="Op de kaart, in het Nederlands:" nlClass="kaart-legend-nl" text={ui('coachCardWhat', lang)} /></p>
         <ul className="kaart-legend-rows">

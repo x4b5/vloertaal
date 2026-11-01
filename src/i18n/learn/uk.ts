@@ -14,7 +14,6 @@ const t: CultureTranslation = {
     micStepsAndroidApp: "Утримуй значок Vloertaal на головному екрані › Про додаток › Дозволи › Мікрофон › Дозволити. Потім торкнися кнопки нижче.", // nieuw, nalezen
     micStepsDesktop: "Клацни значок ліворуч від вебадреси › Мікрофон › Дозволити. Потім клацни кнопку нижче.", // nieuw, nalezen
     whichPicture: "Яка це картинка?",
-    wrongTapsN: "Неправильних натискань: {n}",
     sayAloudInstead: "Натомість скажи вголос",
     wordsPractised: "Повторені слова",
     reviewComplete: "Повторення завершено!",

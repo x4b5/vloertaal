@@ -209,9 +209,7 @@ export const uiEn = {
   certLater: 'Later',
   certPrint: 'Print or save as PDF',
   certSaved: 'The picture is saved.',
-  certNameAsk: 'Your name on the certificate?',
   certNameHint: 'It stays on this phone only. You can leave it empty.',
-  certNoName: 'Without a name',
   certChangeName: 'Change name',
   certPractice: 'Practice certificate, not an official diploma',
   /* Retention: resume an interrupted lesson (the path bay, the quit sheet). */
@@ -270,7 +268,6 @@ export const uiEn = {
   /** Picture choice: the Dutch word is said and written, the learner picks its picture. */
   whichPicture: 'Which picture is it?',
   /** After building a sentence with wrong taps. */
-  wrongTapsN: 'Wrong taps: {n}',
   cantSpeak: 'I can’t speak now',
   soundsSame: 'Sounds the same',
   sayAgain: 'Say it again',
@@ -330,7 +327,6 @@ export const uiEn = {
   remindNo: 'No thanks',
   remindPickTime: 'When shall we remind you?',
   certSaveShare: 'Save or share',
-  certNameDone: 'Done',
   pauseTitle: 'Pause',
   back: 'Back',
   /* G4 r1 a11y: screen-reader names, said in the help language when there is one. */
@@ -440,7 +436,6 @@ export const uiEn = {
   coachTopics: 'Topics finished',
   coachDays: 'Days of practice in the last 4 weeks',
   coachLast: 'Last lesson, with the date',
-  coachNameAsk: 'Your name on the card?',
   coachCode: 'Code: the same numbers, short, for a group overview. No name.',
   // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
   listenTrial: 'Let the phone listen (trial)',

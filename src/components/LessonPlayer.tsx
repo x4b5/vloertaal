@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { goKnown, markGoKnown } from '../lib/goKnown';
 import { stillMotion } from '../lib/calm';
 import { BeNote } from './BeNote';
 import { lessonNlOnly } from '../content/taalBe';
@@ -842,8 +843,11 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // that answers itself, as a new word does): the second tap of a double tap is not a new tap.
   const footChanged = useRef(0);
   useEffect(() => { footChanged.current = performance.now(); }, [index, checked]);
+  /** "Verder" only until the button has been used once (src/lib/goKnown.ts); then the arrow alone. */
+  const [knowsGo, setKnowsGo] = useState(goKnown);
   const footTap = () => {
     if (performance.now() - footChanged.current < 300) return;
+    if (checked || autoContinue) { if (!knowsGo) { markGoKnown(); setKnowsGo(true); } }
     if (checked) next();
     else check();
   };
@@ -964,6 +968,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
 
   /** The footer button: Continue after an answer, Check while typing (nothing before a tap). */
   const showGo = !speakRating && Boolean(checked || answer || typing);
+  /** The footer button is Continue (not Check): after the answer, or on a step that only goes on. */
+  const goIsContinue = (checked && swapped) || autoContinue;
 
   return (
     // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
@@ -1148,14 +1154,17 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
             {showGo && <button
               key={key}
               type="button"
-              className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'}`}
+              className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'} ${goIsContinue && knowsGo ? 'btn-icon-only' : ''}`}
               dir={rtl ? 'rtl' : undefined}
               disabled={!answer}
               onClick={footTap}
               ref={goRef}
+              aria-label={goIsContinue && knowsGo ? said(ui('continue', lang)) : undefined}
+              lang={goIsContinue && knowsGo ? saidLang(ui('continue', lang)) : undefined}
             >
-              {/* The help language large, the English small under it (just English without one). */}
-              <Bi className="btn-label" text={ui((checked && swapped) || autoContinue ? 'continue' : 'check', lang)} />
+              {/* The help language large, the English small under it (just English without one).
+                  Continue: its word only until it was used once; then the arrow alone. */}
+              {!(goIsContinue && knowsGo) && <Bi className="btn-label" text={ui(goIsContinue ? 'continue' : 'check', lang)} />}
               <ButtonBlock icon={(checked && swapped) || autoContinue ? 'next' : 'check'} />
             </button>}
           </div>

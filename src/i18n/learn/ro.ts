@@ -14,7 +14,6 @@ const t: CultureTranslation = {
     micStepsAndroidApp: "Ține apăsat pe pictograma Vloertaal de pe ecranul principal › Informații aplicație › Permisiuni › Microfon › Permite. Apoi atinge butonul de mai jos.", // nieuw, nalezen
     micStepsDesktop: "Dă clic pe pictograma din stânga adresei web › Microfon › Permite. Apoi dă clic pe butonul de mai jos.", // nieuw, nalezen
     whichPicture: "Care imagine este?",
-    wrongTapsN: "Atingeri greșite: {n}",
     sayAloudInstead: "Spune cu voce tare în schimb",
     wordsPractised: "Cuvinte exersate",
     reviewComplete: "Recapitularea s-a terminat!",

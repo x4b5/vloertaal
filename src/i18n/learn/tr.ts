@@ -14,7 +14,6 @@ const t: CultureTranslation = {
     micStepsAndroidApp: "Ana ekrandaki Vloertaal simgesine basılı tut › Uygulama bilgileri › İzinler › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen
     micStepsDesktop: "Web adresinin solundaki simgeye tıkla › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye tıkla.", // nieuw, nalezen
     whichPicture: "Hangi resim?",
-    wrongTapsN: "Yanlış dokunuş: {n}",
     sayAloudInstead: "Bunun yerine sesli söyle",
     wordsPractised: "Tekrar edilen kelimeler",
     reviewComplete: "Tekrar bitti!",

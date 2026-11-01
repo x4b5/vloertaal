@@ -178,9 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'Más tarde',
     certPrint: 'Imprimir o guardar como PDF',
     certSaved: 'La imagen está guardada.',
-    certNameAsk: '¿Tu nombre en el certificado?',
     certNameHint: 'Solo se queda en este teléfono. Puedes dejarlo vacío.',
-    certNoName: 'Sin nombre',
     certChangeName: 'Cambiar nombre',
     certPractice: 'Certificado de práctica, no es un diploma oficial',
     resumeLesson: 'Seguir la lección',
@@ -272,7 +270,6 @@ const lang: HelpLanguageSource = {
     remindNo: 'No, gracias',
     remindPickTime: '¿Cuándo te lo recordamos?',
     certSaveShare: 'Guardar o compartir',
-    certNameDone: 'Listo',
     pauseTitle: 'Pausa',
     back: 'Atrás',
     quitLesson: 'Salir de la lección',
@@ -361,7 +358,6 @@ const lang: HelpLanguageSource = {
     coachTopics: 'Temas terminados', // nieuw, nalezen
     coachDays: 'Días de práctica en las últimas 4 semanas', // nieuw, nalezen
     coachLast: 'Última lección, con la fecha', // nieuw, nalezen
-    coachNameAsk: '¿Tu nombre en la tarjeta?', // nieuw, nalezen
     coachCode: 'Código: los mismos números, en corto, para un resumen del grupo. Sin nombre.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Que el teléfono escuche (experimental)', // nieuw, nalezen // nagelezen AI 31 okt

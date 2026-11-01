@@ -14,7 +14,6 @@ const t: CultureTranslation = {
     micStepsAndroidApp: "Mantém premido o ícone do Vloertaal no ecrã principal › Informações da app › Autorizações › Microfone › Permitir. Depois toca no botão abaixo.", // nieuw, nalezen
     micStepsDesktop: "Clica no ícone à esquerda do endereço web › Microfone › Permitir. Depois clica no botão abaixo.", // nieuw, nalezen
     whichPicture: "Qual é a imagem?",
-    wrongTapsN: "Toques errados: {n}",
     sayAloudInstead: "Em vez disso, diz em voz alta",
     wordsPractised: "Palavras praticadas",
     reviewComplete: "Revisão terminada!",

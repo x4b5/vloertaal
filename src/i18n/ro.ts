@@ -178,9 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'Mai târziu',
     certPrint: 'Tipărește sau salvează ca PDF',
     certSaved: 'Imaginea este salvată.',
-    certNameAsk: 'Numele tău pe certificat?',
     certNameHint: 'Rămâne doar pe acest telefon. Poți să-l lași gol.',
-    certNoName: 'Fără nume',
     certChangeName: 'Schimbă numele',
     certPractice: 'Certificat de exercițiu, nu o diplomă oficială',
     resumeLesson: 'Continuă lecția',
@@ -272,7 +270,6 @@ const lang: HelpLanguageSource = {
     remindNo: 'Nu, mulțumesc',
     remindPickTime: 'Când să-ți amintim?',
     certSaveShare: 'Salvează sau trimite',
-    certNameDone: 'Gata',
     pauseTitle: 'Pauză',
     back: 'Înapoi',
     quitLesson: 'Ieși din lecție',
@@ -361,7 +358,6 @@ const lang: HelpLanguageSource = {
     coachTopics: 'Teme terminate', // nieuw, nalezen
     coachDays: 'Zile de exercițiu în ultimele 4 săptămâni', // nieuw, nalezen
     coachLast: 'Ultima lecție, cu data', // nieuw, nalezen
-    coachNameAsk: 'Numele tău pe card?', // nieuw, nalezen
     coachCode: 'Cod: aceleași numere, pe scurt, pentru rezumatul grupului. Fără nume.', // nieuw, nalezen
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Telefonul ascultă (probă)', // nieuw, nalezen

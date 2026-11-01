@@ -689,7 +689,8 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
               : <span className="about-emoji" aria-hidden><WordPicture id="" emoji={s.emoji} size={30} /></span>}
             <span className="bi"><span className="bi-en">{s.title}</span></span>
           </h2>
-          <p>{withMailLink(s.body, undefined, true)}</p>
+          {/* The app shows the short version where there is one (the web pages keep the long one). */}
+          <p>{withMailLink(s.lead ?? s.body, undefined, true)}</p>
           {s.id === 'a.free' && <PrivacyLink lang={lang} />}
           {s.signed && <Signed name={s.signed} code="nl" />}
         </section>
@@ -704,7 +705,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
               ? <span className="bi"><span className="bi-en">{s.nl.title}</span></span>
               : <Bi text={gloss(s.id, s.title, lang)} />}
           </h2>
-          <p>{dutch ? withMailLink(s.nl.body) : <AboutBody text={gloss(`${s.id}.b`, s.body, lang)} />}</p>
+          <p>{dutch ? withMailLink(s.lead?.nl ?? s.nl.body) : <AboutBody text={s.lead ? gloss(`${s.id}.lead`, s.lead.en, lang) : gloss(`${s.id}.b`, s.body, lang)} />}</p>
           {s.id === 'a.free' && <PrivacyLink lang={lang} />}
           {s.signed && <Signed name={s.signed} code={dutch ? 'nl' : lang?.code} dir={dutch ? 'ltr' : lang?.dir} />}
         </section>
