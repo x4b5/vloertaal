@@ -3,7 +3,7 @@ import type { ChatLine } from '../content/types';
 import { sayingQuestion } from '../content/sayings';
 import { gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
-import { checkTyped, nextTileOrder, sentenceOrders } from '../lib/answers';
+import { checkTyped, nextTileOrder, sentenceOrders, typoMarks } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
 import { allTiles, buildSteps, choicePictures, frontSteps, MATCH_ASKED, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
@@ -871,7 +871,13 @@ function TypeWriting({ ex, lang, locked, onAnswer, verdict, run, misses }: Props
       <div className="listen-buttons">
         <SpeakButton text={ex.word.nl} size="lg" hideText help={lang} />
       </div>
-      {mode === 'keys' ? (
+      {mode === 'keys' && locked && checkTyped(value, ex.word.nl, lookalikes) === 'almost' ? (
+        // Almost (one typo, the article): the learner's own answer stays, with the part that
+        // differs marked in it; the right spelling is on the label below, once.
+        <div className={`type-input type-display type-almost ${verdict ? `type-${verdict}` : ''}`} lang="nl" dir="ltr">
+          {typoMarks(value, ex.word.nl).map((p, i) => (p.typo ? <mark key={i} className="type-typo">{p.text}</mark> : <span key={i}>{p.text}</span>))}
+        </div>
+      ) : mode === 'keys' ? (
         <input
           lang="nl"
           dir="ltr"

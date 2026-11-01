@@ -108,3 +108,28 @@ export function checkTiles(chosen: string[], sentence: string | { nl: string; al
 export function tileDiff(given: string[], sentence: string): { word: string; ok: boolean }[] {
   return tokenize(sentence).map((word, i) => ({ word, ok: given[i] !== undefined && normalize(given[i]) === normalize(word) }));
 }
+
+/**
+ * Where an "almost" answer differs from the right one, to mark it in the learner's own answer
+ * (the typed word stays where it was typed; the right spelling is on the label, once): the part
+ * between the common start and the common end. A letter left out is marked with "‸" at its place.
+ */
+export function typoMarks(typed: string, want: string): { text: string; typo: boolean }[] {
+  const a = typed.trim();
+  const al = a.toLowerCase();
+  let bl = want.trim().toLowerCase();
+  // An article left out ("helm" for "de helm") is not the typo: compare with the word alone, and
+  // with nothing else wrong, a caret where the article goes.
+  const article = /^(?:de|het|een)\s+/;
+  if (article.test(bl) && !article.test(al)) {
+    bl = bl.replace(article, '');
+    if (bl === al) return [{ text: '‸', typo: true }, { text: a, typo: false }];
+  }
+  let i = 0;
+  while (i < al.length && i < bl.length && al[i] === bl[i]) i += 1;
+  let j = 0;
+  while (j < al.length - i && j < bl.length - i && al[al.length - 1 - j] === bl[bl.length - 1 - j]) j += 1;
+  const mid = a.slice(i, a.length - j);
+  const parts = [{ text: a.slice(0, i), typo: false }, { text: mid || '‸', typo: true }, { text: a.slice(a.length - j), typo: false }];
+  return parts.filter((p) => p.text);
+}
