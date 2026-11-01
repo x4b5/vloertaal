@@ -117,14 +117,6 @@ function answerVoice(ex: Exercise, gender?: Gender): CharacterId {
     : 'bram';
 }
 
-/** A filled play triangle for the replay button in the feedback label. */
-function PlayGlyph() {
-  return (
-    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden focusable="false">
-      <path d="M8 5.2v13.6a1 1 0 0 0 1.5.86l11-6.8a1 1 0 0 0 0-1.72l-11-6.8A1 1 0 0 0 8 5.2z" fill="currentColor" />
-    </svg>
-  );
-}
 
 /**
  * The kraft tag above each exercise: a fixed pictogram per kind of exercise, a short Dutch
@@ -904,7 +896,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       title={said(ui('playAgain', lang))}
     >
       <PlayName text={pair.nl} help={lang} say="playAgain" />
-      <PlayGlyph />
+      {/* The same speaker as every other "listen" button: one sign for hearing Dutch. */}
+      <SpeakerIcon size={26} />
     </button>
   ) : null;
   const pairLine = pair && sayable ? (

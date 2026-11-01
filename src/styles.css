@@ -2557,16 +2557,18 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 
 /* Feedback: a built sentence or chat reply with a ▶ to hear it again, the meaning large. */
 .feedback-say { gap: 4px; }
-.pair-say { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.pair-say { display: flex; align-items: flex-start; gap: 10px; min-width: 0; }
+/* The speaker sits beside the first line (and so level with the check), not in the middle of a
+   sentence over three lines; a one-line sentence is centred on the 44 px button. */
+.pair-say:has(> .replay-btn) > :not(.replay-btn) { padding-top: max(0px, calc((44px - 1lh) / 2)); }
 .pair-say .pair-tiles { margin: 0; }
 .pair-nl { font-size: 1.15rem; font-weight: 650; color: var(--ink-strong); overflow-wrap: anywhere; }
 .replay-btn {
   flex: none; display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
-  border: none; border-radius: 50%; background: var(--blue); color: var(--on-blue); cursor: pointer;
+  border: none; border-radius: 10px; background: var(--blue); color: var(--on-blue); cursor: pointer;
 }
 .replay-btn:active { transform: translateY(1px); filter: brightness(0.94); }
-/* The ▶ path (PlayGlyph) is already drawn optically centred (its weight sits at x 12 of 24):
-   no extra shift, or it leans right in the circle. */
+/* The speaker, as on every listen button (a blue square, SpeakButton's look). */
 .replay-btn svg { margin: 0; }
 .pair-gloss { display: block; font-size: 1.15rem; font-weight: 650; line-height: 1.3; color: var(--ink); }
 .pair-gloss:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.22rem; }
