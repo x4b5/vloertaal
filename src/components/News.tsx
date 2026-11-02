@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react';
 import type { Update } from '../content/updates';
 import { dateLocale, updateDate } from '../content/updateDate';
 import { useUpdates } from '../content/updatesLive';
@@ -8,42 +7,40 @@ import { dutchUi } from '../lib/track';
 import { Bi } from './Bi';
 import { ChromeBack } from './ChromeBack';
 
-/** How many dates show before "Meer". */
-export const NEWS_FIRST = 3;
+/** In the app: the newest date only, and of it at most NEWS_ITEMS points (the owner's choice, 2
+ *  November 2026: a long Dutch list with old points that newer ones contradict was too much).
+ *  "Meer" opens the whole list on the site (vloertaal.nl/nieuw, also for coaches). */
+export const NEWS_FIRST = 1;
+export const NEWS_ITEMS = 5;
+/** The whole list on the site (vite.config.ts writes it, src/lib/updatesPage.ts). */
+export const NEWS_SITE = '/nieuw/';
 
 /**
  * "Wat is er nieuw?" (from the row at the bottom of Over): first "Binnenkort" (UPCOMING: what we
  * work on now, no dates; one line in the help language says so), then what changed in the app, the
  * list of src/content/updates.ts (also vloertaal.nl/nieuw), newest first, a heading per date (in the
  * page's language) with its points under it. The points are Dutch (lang nl, left to right also in
- * an Arabic page); in the language course one line in the help language says so. Calm: the last
- * NEWS_FIRST dates, then one button "Meer" for the rest (one thing to tap; the back arrow is
- * chrome). Works in both tracks: the work-rules track reads it all in Dutch, without that line.
+ * an Arabic page); in the language course one line in the help language says so. Calm: the newest
+ * date with its first NEWS_ITEMS points, then "Meer", a link to the whole list on the site (one
+ * thing to tap; the back arrow is chrome). Works in both tracks: the work-rules track reads it all
+ * in Dutch, without that line.
  */
-export function News({ lang, onBack, all: allStart = false, updates: givenUpdates, upcoming: givenUpcoming }: {
+export function News({ lang, onBack, all = false, updates: givenUpdates, upcoming: givenUpcoming }: {
   lang?: HelpLanguage;
   onBack: () => void;
-  /** Start with every date shown (screenshots, tests). */
+  /** Every date and point (screenshots, tests). */
   all?: boolean;
   updates?: Update[];
   /** "Binnenkort" (what is coming), above the dates. */
   upcoming?: string[];
 }) {
-  const [all, setAll] = useState(allStart);
   // The logbook (src/content/updates.ts) loads when it is not here yet (src/content/updatesLive.ts).
   const loaded = useUpdates();
   const updates = givenUpdates ?? loaded?.updates ?? [];
   const upcoming = givenUpcoming ?? loaded?.upcoming ?? [];
-  const shown = all ? updates : updates.slice(0, NEWS_FIRST);
-  const more = !all && updates.length > NEWS_FIRST;
+  const shown = all ? updates : updates.slice(0, NEWS_FIRST).map((u) => ({ ...u, items: u.items.slice(0, NEWS_ITEMS) }));
+  const more = !all && (updates.length > NEWS_FIRST || updates.some((u) => u.items.length > NEWS_ITEMS));
   const code = lang?.code ?? 'en';
-  // After "Meer": the focus goes to the first date that was not there before, so a screen reader
-  // reads on from there (the button itself is gone).
-  const firstNew = useRef<HTMLHeadingElement>(null);
-  const opened = useRef(false);
-  useEffect(() => {
-    if (all && opened.current) firstNew.current?.focus({ preventScroll: true });
-  }, [all]);
   return (
     <div className="screen news" dir={lang?.dir}>
       <div className="screen-head">
@@ -62,9 +59,9 @@ export function News({ lang, onBack, all: allStart = false, updates: givenUpdate
           </ul>
         </section>
       )}
-      {shown.map((u, i) => (
+      {shown.map((u) => (
         <section key={u.date} className="news-day" aria-labelledby={`news-${u.date}`}>
-          <h2 id={`news-${u.date}`} lang={langTag(code)} tabIndex={i === NEWS_FIRST ? -1 : undefined} ref={i === NEWS_FIRST ? firstNew : undefined}>
+          <h2 id={`news-${u.date}`} lang={langTag(code)}>
             <time dateTime={u.date}>{updateDate(u.date, dateLocale(code))}</time>
           </h2>
           <ul className="news-items" lang="nl" dir="ltr">
@@ -73,9 +70,9 @@ export function News({ lang, onBack, all: allStart = false, updates: givenUpdate
         </section>
       ))}
       {more && (
-        <button type="button" className="btn news-more" onClick={() => { opened.current = true; setAll(true); }}>
+        <a className="btn news-more" href={NEWS_SITE} target="_blank" rel="noopener">
           <Bi text={ui('more', lang)} />
-        </button>
+        </a>
       )}
     </div>
   );

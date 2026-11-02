@@ -543,7 +543,6 @@ function defineStates(LANG) {
   add('tab:about-nl', shot('about&nl=1'), null, { list: true, expect: '.about-nl-on' });
   // "Wat is er nieuw?": the last 3 dates and "Meer" (one tap), then every date (nothing to tap).
   add('screen:news', shot('news'), null, { expect: '.news-more' });
-  add('screen:news-more', shot('news'), async (p) => { await tap(p, '.news-more'); await settle(p); }, { expect: '.news-day h2:focus' });
   add('screen:news-all', shot('news&all=1'), null, { expect: '.news-day' });
   add('screen:coaches', shot('coaches'), null, { list: true });
   add('screen:tips', shot('tips'), null, { list: true });
@@ -771,7 +770,6 @@ function defineRuleStates() {
   add('rule:about', shot('about'), null, { expect: '.about-section .about-signed' });
   // "Wat is er nieuw?" in Dutch only (no line that it is in Dutch).
   add('rule:news', shot('news'), null, { expect: '.news-more' });
-  add('rule:news-more', shot('news'), async (p) => { await tap(p, '.news-more'); await settle(p); }, { expect: '.news-day h2:focus' });
   add('rule:settings', shot('settings'), null, { expect: '.max3-menu' });
   for (const pg of ['me', 'lessons', 'phone', 'language']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('rule:settings-sector', shot('settings&page=sector'), null, { list: true, expect: '.chrome-back' });

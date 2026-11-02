@@ -112,7 +112,7 @@ export const uiEn = {
   sector: 'Your work',
   chooseSector: 'Where do you work?',
   countryTitle: 'Which country do you work in?',
-  countryHint: 'You get the work rules of that country. This stays on your phone. We send it nowhere.',
+  countryHint: 'You get the work rules of that country.',
   countryNl: 'The Netherlands',
   countryBe: 'Belgium (Flanders)',
   tipsNote: 'These tips are about work in the Netherlands. General information, not legal advice.',
@@ -307,7 +307,7 @@ export const uiEn = {
   sectorGroupBuild: 'Building & technical',
   /* The regions (src/content/regio): Settings › "Waar woon je?" and the Sociale kaart on the Hulp tab. */
   regionTitle: 'Where do you live?',
-  regionHint: 'Do you live or work in South Limburg? Then you get extra lessons about your region. This stays on your phone. We send it nowhere.',
+  regionHint: 'Do you live or work in South Limburg? Then you get extra lessons about your region.',
   regionOther: 'Somewhere else / I’d rather not say',
   regionNone: 'Not chosen',
   socialMap: 'Where to get help',

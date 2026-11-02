@@ -27,6 +27,7 @@ import { tipNlOnly } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
 import { splitClosing, tipBody } from '../lib/tipText';
 import { dropAsk } from '../lib/dropAsk';
+import { firstTimes, STAMP_LATER_TIMES, TAP_TO_HEAR_TIMES } from '../lib/firstTimes';
 
 export interface Answer {
   correct: boolean;
@@ -129,7 +130,11 @@ export const ComesBack = createContext(true);
  *  label below says the same in words. */
 function WrongStamp({ lang }: { lang?: HelpLanguage }) {
   const back = useContext(ComesBack);
+  // STRAKS WEER the first few times only: it explains that a mistake comes back; once that is
+  // known, the red cross and the bar's kraft tail say it (the owner's choice, 2 November 2026).
+  const [shown] = useState(() => !back || firstTimes('stamp-later', STAMP_LATER_TIMES));
   const sub = ui(back ? 'stampLater' : 'incorrect', lang);
+  if (!shown) return null;
   return (
     <span className="stamp stamp-wrong" aria-hidden>
       <span className="stamp-word" lang="nl">{back ? <>Straks<br />weer</> : <>Niet<br />goed</>}</span>
@@ -182,9 +187,10 @@ function useMiss<T>(): [T | null, (v: T | null) => void] {
 }
 
 /** The question. Focus moves here on a new exercise (tabIndex -1), see LessonPlayer. */
-function Prompt({ text }: { text: Bilingual }) {
+function Prompt({ text, quiet = false }: { text: Bilingual; quiet?: boolean }) {
+  // `quiet`: only for a screen reader (a hint the learner has seen often enough).
   return (
-    <h2 className="prompt" tabIndex={-1}>
+    <h2 className={quiet ? 'prompt sr-only' : 'prompt'} tabIndex={-1}>
       <Bi text={text} />
     </h2>
   );
@@ -192,15 +198,17 @@ function Prompt({ text }: { text: Bilingual }) {
 
 export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
   const { word } = ex;
+  // "Tap to hear" on the word cards of the first lessons only: the word plays by itself, and after
+  // a few cards the big speaker says it (the owner's choice, 2 November 2026). A screen reader
+  // still hears it as the card's heading.
+  const [hint] = useState(() => firstTimes('tap-to-hear', TAP_TO_HEAR_TIMES));
   useEffect(() => {
     autoSpeak(word.nl);
     onAnswer({ correct: true });
   }, [word, onAnswer]);
   return (
     <div className="exercise">
-      {/* The kraft tag above already says "Nieuw woord" (with its translation beside it), so the
-          heading tells the learner what to do: listen to the word. */}
-      <Prompt text={ui('tapToHear', lang)} />
+      <Prompt text={ui('tapToHear', lang)} quiet={!hint} />
       {/* Abstract words get no picture (it would mislead): a calm word card, word + sound + gloss. */}
       <div className={`card intro-card ${introPicture(word) ? '' : 'intro-word-only'}`}>
         {introPicture(word) && <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />}
@@ -1103,12 +1111,12 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       </div>
     </div>
   );
-  // Page 2 of the tip: only the phrase to say, big, under the tip's title (what it is about).
+  // Page 2 of the tip: only "Say it like this" and the phrase, big. The badge and the title were on
+  // the page before (the back arrow leads there); a screen reader still hears the title first.
   if (!read) {
     return (
       <div className="exercise tip tip-page-say">
-        {badge}
-        <h2 className="prompt tip-title tip-title-small"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
+        <h2 className="prompt sr-only"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
         {phrase}
       </div>
     );

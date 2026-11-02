@@ -8,7 +8,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {
     regionTitle: 'در کجا زندگی می‌کنید؟',
-    regionHint: 'آیا در Zuid-Limburg زندگی یا کار می‌کنید؟ پس درس‌های اضافی دربارهٔ منطقهٔ خود می‌گیرید. این معلومات در تیلفون شما می‌ماند. ما آن را به هیچ جای نمی‌فرستیم.',
+    regionHint: 'آیا در Zuid-Limburg زندگی یا کار می‌کنید؟ پس درس‌های اضافی دربارهٔ منطقهٔ خود می‌گیرید.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     regionOther: 'جای دیگر / ترجیح می‌دهم نگویم',
     regionNone: 'انتخاب نشده',
     socialMap: 'آدرس‌های کمک',

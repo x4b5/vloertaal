@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Къде работиш?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'В коя държава работиш?',
-    countryHint: 'Ще получиш правилата за работа в нея. Това остава на телефона ти. Не го изпращаме никъде.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Ще получиш правилата за работа в нея.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Нидерландия',
     countryBe: 'Белгия (Фландрия)',
     tipsNote: 'Тези съвети са за работа в Нидерландия. Обща информация, не е правен съвет.',

@@ -51,6 +51,7 @@ import {
 } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { useVoices } from './useVoices';
+import { voiceCreditLine, voiceCredits } from '../lib/voiceCredits';
 import { setTesterSwitch, testerSwitch } from '../lib/report';
 import { ChoiceCards } from './Choice';
 import { phoneHelpLang } from '../lib/langGuess';
@@ -729,11 +730,12 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
       )}
       {recorded.length > 0 && (
         <ul className="about-credits muted small" lang={dutchUi(lang) ? 'nl' : 'en'} dir="ltr">
-          {recorded.map((v) => (
-            <li key={v.key}>
-              {/* The work-rules track: the voice and its maker only (the licence lines are English). */}
-              {dutchUi(lang) ? 'Stem' : 'Voice'} “{v.label}”: {v.engine ?? 'Piper'}{!dutchUi(lang) && v.dataset ? ` · ${v.dataset}` : ''}{!dutchUi(lang) && v.license ? ` · ${v.license}` : ''}
-              {v.modelCard && !dutchUi(lang) && <> · <a href={v.modelCard} target="_blank" rel="noreferrer">model card</a></>}
+          {/* One line per maker and licence, the voices together (src/lib/voiceCredits.ts). The
+              work-rules track: the voices and their maker only (the licence lines are English). */}
+          {voiceCredits(recorded, dutchUi(lang)).map((c) => (
+            <li key={c.key}>
+              {voiceCreditLine(c, dutchUi(lang))}
+              {c.modelCard && <> · <a href={c.modelCard} target="_blank" rel="noreferrer">model card</a></>}
             </li>
           ))}
         </ul>
@@ -902,12 +904,9 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           {/* Bram (the one with the thumb up) says one calm line. */}
           <BramSays text={ui(resultLineFor(kind, right, total), lang)} tail="down" />
           <LessonCelebration />
-          {/* Rubber stamp on the delivery note: the lesson is done. */}
-          <span className="stamp stamp-right result-stamp" aria-hidden>
-            <span className="stamp-word" lang="nl">Klaar</span>
-            {/* The Dutch stamp in the help language too (English without one). */}
-            {dutchUi(lang) ? null : lang?.ui.stampDone ? <HelpText className="stamp-sub" text={lang.ui.stampDone} lang={lang} /> : <span className="stamp-sub" lang="en">{ui('stampDone').en}</span>}
-          </span>
+          {/* No KLAAR stamp beside the heading any more: the heading and the celebration say it;
+              stamps stay for rarer moments (a week in a row, a certificate). The owner's choice,
+              2 November 2026. */}
         </div>
         <h1 className="result-title" tabIndex={-1} ref={titleRef}><Bi text={title} /></h1>
         <div className="result-stats" dir={rtl ? 'rtl' : undefined}>
