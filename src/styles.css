@@ -4504,6 +4504,8 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .about-europe svg { flex: none; }
 .about-maker { display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 0; font-size: 0.85rem; color: var(--muted); }
 .about-maker img { width: 96px; max-width: 100%; height: auto; }
+/* At least 44px high so a thumb can hit it; the logo itself is only 14px. */
+.about-maker-link { display: inline-flex; align-items: center; min-block-size: 44px; padding: 0 8px; }
 /* The right logo per theme; follows the Settings switch too (same pattern as the colour blocks above). */
 .about-maker-dark { display: none; }
 @media (prefers-color-scheme: dark) {

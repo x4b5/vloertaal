@@ -50,8 +50,10 @@ export function AboutFooter() {
       {/* Shown at 96 wide, smaller than its true size (127×19), so the logo stays modest. */}
       <p className="about-maker">
         <span>Built by</span>
-        <img className="about-maker-light" src="/a-bit-odd/a-bit-odd-logo-licht.svg" width="96" height="14" alt="a-bit-odd" />
-        <img className="about-maker-dark" src="/a-bit-odd/a-bit-odd-logo-donker.svg" width="96" height="14" alt="a-bit-odd" />
+        <a className="about-maker-link" href="https://a-bit-odd.com" target="_blank" rel="noopener">
+          <img className="about-maker-light" src="/a-bit-odd/a-bit-odd-logo-licht.svg" width="96" height="14" alt="a-bit-odd" />
+          <img className="about-maker-dark" src="/a-bit-odd/a-bit-odd-logo-donker.svg" width="96" height="14" alt="a-bit-odd" />
+        </a>
       </p>
     </div>
   );
