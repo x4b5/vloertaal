@@ -12,11 +12,15 @@ import { stillMotion } from '../lib/calm';
  *   bottom edge (it bobs twice on arrival). Tapping it scrolls on; at the end it is gone.
  * - The page itself does not scroll (styles: .scroll-box), so there is one thing that scrolls.
  */
-export function ScrollBox({ children, className = '', moreLabel }: {
+export function ScrollBox({ children, className = '', moreLabel, moreLang = 'en', reveal }: {
   children: ReactNode;
   className?: string;
   /** The arrow's name for a screen reader ("More languages"). */
   moreLabel: string;
+  /** The language of that name (English on the first run, before a language is chosen). */
+  moreLang?: string;
+  /** On opening, scroll so the first element matching this selector is in view (the chosen one). */
+  reveal?: string;
 }) {
   const box = useRef<HTMLDivElement>(null);
   const scroller = useRef<HTMLDivElement>(null);
@@ -34,6 +38,13 @@ export function ScrollBox({ children, className = '', moreLabel }: {
     setBar(scrolls);
     setMore(scrolls && el.scrollTop < room - 8);
   }, []);
+  // The chosen row in the middle of the box on opening (Settings: your language is in view).
+  useEffect(() => {
+    const el = scroller.current;
+    const row = reveal ? el?.querySelector<HTMLElement>(reveal) : null;
+    if (!el || !row) return;
+    el.scrollTop = Math.max(0, row.offsetTop - (el.clientHeight - row.offsetHeight) / 2);
+  }, [reveal]);
   useEffect(() => {
     const el = scroller.current;
     if (!el) return;
@@ -84,7 +95,7 @@ export function ScrollBox({ children, className = '', moreLabel }: {
         </div>
       )}
       {more && (
-        <button type="button" className="scroll-box-more" onClick={scrollOn} aria-label={moreLabel} lang="en">
+        <button type="button" className="scroll-box-more" onClick={scrollOn} aria-label={moreLabel} lang={moreLang}>
           <ChevronDownIcon size={24} />
         </button>
       )}

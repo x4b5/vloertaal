@@ -48,6 +48,7 @@ import { BackupCard, ClockGlyph, InstallCard, OwnTime, addReminder, remindAddedK
 import { DownloadIcon, OfflineSettingCard } from './Offline';
 import { LogoMark } from './Logo';
 import { LanguagePicker } from './Screens';
+import { ScrollBox } from './ScrollBox';
 import { NoVoiceNote } from './RulesHelp';
 import { SectorCards, SectorGroupHead, SectorGroupList, SectorIcon } from './Sector';
 import { MicIcon } from './Speaking';
@@ -425,7 +426,12 @@ export function Settings({
                 </span>
               </p>
             )}
-            <LanguagePicker current={progress.helpLang} onPick={pickLanguage} showBeta compact lang={lang} />
+            {/* The same menu as on the first run: one language under the other in a box that
+                scrolls inside, with its own scroll bar (the owner's request, 2 November 2026);
+                the chosen one in view on opening. */}
+            <ScrollBox className="lang-box" moreLabel={said(ui('scrollDown', lang))} moreLang={saidLang(ui('scrollDown', lang))} reveal=".lang-btn.picked">
+              <LanguagePicker current={progress.helpLang} onPick={pickLanguage} showBeta lang={lang} />
+            </ScrollBox>
             {lang && !lang.reviewed && (
               <p className="beta-note">
                 <span className={`beta-chip ${lang.ui.beta ? 'en-support' : ''}`} lang="en">beta</span>
@@ -684,7 +690,7 @@ export function Settings({
   };
 
   return (
-    <div className={`screen max3-settings ${page ? (isList ? 'max3-list' : 'max3-setting') : 'max3-menu'}`} data-depth={settingsDepth(page)} dir={lang?.dir}>
+    <div className={`screen max3-settings ${page ? (isList ? 'max3-list' : 'max3-setting') : 'max3-menu'} ${page === 'language' ? 'max3-lang' : ''}`} data-depth={settingsDepth(page)} dir={lang?.dir}>
       <Head page={page ?? null} lang={lang} onBack={page ? () => onReturn(1) : undefined} />
       {body()}
     </div>
