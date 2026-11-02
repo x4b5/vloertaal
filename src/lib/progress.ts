@@ -66,6 +66,9 @@ export interface Progress {
    * page replaced was closed with ✕): it never comes back. Settings can still choose. Missing = not asked.
    */
   genderAsked?: boolean;
+  /** "Welke kleur wil je?" was answered in the first run (src/lib/onboarding.ts). Missing = not asked;
+   *  a learner who had already begun is never asked (the colour stays in Settings). */
+  colourAsked?: boolean;
   /** The learner's sector ('none' = not sure yet); undefined = not asked yet (first run). */
   sector?: SectorChoice;
   /**
@@ -207,6 +210,7 @@ export function loadProgress(): Progress {
       if (typeof saved.voice === 'string' && !saved.voice.startsWith('piper:')) saved.voice = null;
       if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;
       if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
+      if (saved.colourAsked !== undefined && typeof saved.colourAsked !== 'boolean') delete saved.colourAsked;
       if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
       if (saved.pickedUnit !== undefined && typeof saved.pickedUnit !== 'string') delete saved.pickedUnit;
       if (saved.lastLesson !== undefined && typeof saved.lastLesson !== 'string') delete saved.lastLesson;

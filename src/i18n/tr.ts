@@ -12,6 +12,8 @@ const lang: HelpLanguageSource = {
     themeSand: 'Kum', // nieuw, nalezen
     themeHarbour: 'Liman', // nieuw, nalezen
     themeWorkwear: 'İş ceketi', // nieuw, nalezen
+    colourTitle: 'Hangi rengi istersin?', // nieuw, nalezen
+    colourHint: 'Bunu sonra Ayarlar’da değiştirebilirsin.', // nieuw, nalezen
     themeDark: 'Koyu',
     voice: 'Hollandaca ses',
     voiceAuto: 'Otomatik',

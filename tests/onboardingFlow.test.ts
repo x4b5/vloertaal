@@ -5,6 +5,7 @@ import { units } from '../src/content/curriculum';
 import { getHelpLanguage } from '../src/i18n/all';
 import { Gate } from '../src/components/Gate';
 import { CountryScreen } from '../src/components/Country';
+import { ColourScreen } from '../src/components/Colour';
 import {
   onboardingStep,
   previousStep,
@@ -25,9 +26,10 @@ describe('first-run order: language, gender (gendered only), password, sector', 
     expect(onboardingStep(pl, null)).toBe('gender');
     expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true }, null)).toBe('gate');
     expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true }, 'preview')).toBe('sector');
-    // Then "In welk land werk je?", and then the home.
+    // Then "In welk land werk je?", "Welke kleur wil je?" and then the home.
     expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none' }, 'preview')).toBe('country');
-    expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none', country: 'be' }, 'preview')).toBe('done');
+    expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none', country: 'be' }, 'preview')).toBe('colour');
+    expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none', country: 'be', colourAsked: true }, 'preview')).toBe('done');
   });
 
   it('goes straight to the password for a help language without gender, and for English only', () => {
@@ -55,7 +57,7 @@ describe('first-run order: language, gender (gendered only), password, sector', 
   });
 
   it('a learner from before the gender question with a sector keeps the one-time page (not a first-run step)', () => {
-    const old = { ...fresh, onboarded: true, helpLang: 'pl' as const, sector: 'none' as const, country: 'nl' as const };
+    const old = { ...fresh, onboarded: true, helpLang: 'pl' as const, sector: 'none' as const, country: 'nl' as const, colourAsked: true };
     expect(onboardingStep(old, 'full')).toBe('done');
   });
 });
@@ -67,7 +69,7 @@ describe('"In welk land werk je?": right after the sector, in both tracks', () =
       const p = { ...fresh, onboarded: true, helpLang, sector: 'construction' as const, completed: {}, xp: 0 };
       expect(onboardingStep(p, 'full'), String(helpLang)).toBe('country');
       expect(shouldAskCountry(p)).toBe(false);
-      expect(onboardingStep({ ...p, country: 'nl' }, 'full')).toBe('done');
+      expect(onboardingStep({ ...p, country: 'nl', colourAsked: true }, 'full')).toBe('done');
     }
     expect(previousStep('country', { ...fresh, onboarded: true, helpLang: 'tr' })).toBe('sector');
     expect(stepIndex('sector')).toBeLessThan(stepIndex('country'));
@@ -197,5 +199,32 @@ describe('the first Dutch word on the first tap', () => {
     expect(voices.voices[0].key).toBe('thijmen');
     expect(voices.voices[0].said['w.hallo']).toBe('hallo');
     expect(existsSync('public/audio-el/thijmen/w.hallo.mp3')).toBe(true);
+  });
+});
+
+describe('"Welke kleur wil je?": the last first-run page', () => {
+  const p = { ...fresh, onboarded: true, helpLang: 'tr' as const, sector: 'none' as const, country: 'nl' as const, completed: {}, xp: 0 };
+
+  it('comes after the country and before the home, once', () => {
+    expect(onboardingStep(p, 'full')).toBe('colour');
+    expect(onboardingStep({ ...p, colourAsked: true }, 'full')).toBe('done');
+    expect(stepIndex('country')).toBeLessThan(stepIndex('colour'));
+    expect(stepIndex('colour')).toBeLessThan(stepIndex('done'));
+  });
+
+  it('back goes to the country', () => {
+    expect(previousStep('colour', p)).toBe('country');
+  });
+
+  it('a learner who already began is not asked: the colour stays in Settings', () => {
+    const old = { ...p, completed: { 'l.hello': { best: 1, times: 1 } }, xp: 10 };
+    expect(onboardingStep(old, 'full')).toBe('done');
+  });
+
+  it('shows the four colours of Settings, with their Dutch names', () => {
+    const html = renderToStaticMarkup(createElement(ColourScreen, { lang: getHelpLanguage('tr'), onDone: () => {} }));
+    expect(html).toContain('Welke kleur wil je?');
+    for (const name of ['Zand', 'Haven', 'Werkjas', 'Donker']) expect(html).toContain(name);
+    expect(html.match(/theme-swatch-/g)?.length).toBe(4);
   });
 });
