@@ -4498,6 +4498,20 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* Over: the date of the newest update (src/content/updates.ts) as plain text, where there is no
    "Wat is er nieuw?" row. */
 .about-updated { margin: 8px 0 24px; text-align: center; }
+.about-foot { display: flex; flex-direction: column; align-items: center; gap: 16px; margin: 8px 0 32px; text-align: center; }
+.about-europe { display: inline-flex; align-items: center; gap: 10px; min-block-size: 44px; color: inherit; font-weight: 700; text-decoration: none; }
+.about-europe:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.about-europe svg { flex: none; }
+.about-maker { display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 0; font-size: 0.85rem; color: var(--muted); }
+.about-maker img { width: 96px; max-width: 100%; height: auto; }
+/* The right logo per theme; follows the Settings switch too (same pattern as the colour blocks above). */
+.about-maker-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .about-maker-light { display: none; }
+  :root:not([data-theme='light']) .about-maker-dark { display: inline; }
+}
+:root[data-theme='dark'] .about-maker-light { display: none; }
+:root[data-theme='dark'] .about-maker-dark { display: inline; }
 /* Over: the owner's story signed and dated; the two rows at the bottom (one list, one kind of row). */
 .about-signed { margin: 6px 0 0; }
 .about-links { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
