@@ -17,7 +17,8 @@ const mayBeHeard = (text: string) => !surelySilent(text);
 import { useVoices } from './useVoices';
 import { tileDiff } from '../lib/answers';
 import { breakable } from '../lib/dutch';
-import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, unheard, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
+import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, readBackAt, unheard, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
+import { ChromeBack } from './ChromeBack';
 import { feedbackMeaningKey, feedbackTitle } from '../lib/feedbackTitle';
 import { offerSkipSound } from '../lib/skipSound';
 import { deviceLabel, firstReportHint, reportMail } from '../lib/report';
@@ -810,6 +811,16 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     }
   }
 
+  /** The read page this question goes with (lib/exercises.ts readBackAt), while it is unanswered. */
+  const backTo = checked ? null : readBackAt(queue, index, initial.length);
+  /** Back to that page to read it again: nothing is graded there, so nothing is lost; its
+   *  Continue comes back to this question. */
+  function readBack() {
+    if (backTo === null) return;
+    reset();
+    setIndex(backTo);
+  }
+
   /** Leave the listening, speaking or writing exercise on screen (unanswered) for the next one
    *  that needs no sound. */
   function skipAudio() {
@@ -1086,6 +1097,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         {/* The first time a kind of exercise comes: a hand shows where to tap, once (ShowHow). */}
         <ShowHow key={`how-${key}`} kind={ex.kind === 'build' || ex.kind === 'match' || ex.kind === 'type' ? ex.kind : null} root={bodyRef} />
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
+        {/* A question in parts on more pages: the back arrow to the page before, to read it again. */}
+        {backTo !== null && <div className="ex-back"><ChromeBack lang={lang} onBack={readBack} /></div>}
         {/* The Belgian course: a lesson that is still the Dutch one says so, on its first step. */}
         {index === 0 && lesson.rule?.note && <p className="rule-country-note" role="note" lang="nl">{lesson.rule.note}</p>}
         {/* The language course in Belgium: a Dutch lesson that differs there says so (docs/taal-belgie.md). */}

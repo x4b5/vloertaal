@@ -5012,3 +5012,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
    the learner's own answer, with a wavy underline as a spelling checker does (not only a colour). */
 .type-almost { display: block; text-align: center; white-space: pre-wrap; }
 .type-typo { background: transparent; color: inherit; text-decoration: underline wavy 2px var(--wrong-ink); text-decoration-skip-ink: none; text-underline-offset: 5px; }
+
+/* A question in parts on more pages (lib/exercises.ts readBackAt): the back arrow above it, to
+   read the page before again. The app's one back arrow, at the start of the exercise. */
+.ex-back { display: flex; margin: -6px 0 2px; }
