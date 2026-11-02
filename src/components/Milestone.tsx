@@ -1,7 +1,7 @@
 import { WordPicture } from '../pictures';
 import { stillMotion } from '../lib/calm';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { fillCount, ui, uiCount, said } from '../i18n';
+import { fillCount, ui, uiCount, said, type Bilingual } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { STREAK_TIERS, dayKey, emptyProgress, workWeek, type WeekDayState } from '../lib/progress';
 import { Bi, HelpText } from './Bi';
@@ -216,7 +216,8 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   useEnter(step === 'streak' ? next : noop);
 
   // Counted strings take the help language's plural form (Polish 2 dni, 5 dni; Arabic يومان، أيام، يوماً).
-  const line = streak > 1 ? fillCount('streakGrew', streak, lang) : ui('streakStarted', lang);
+  // The number stands big above the line, so the line says only the cheer ("Ga zo door.").
+  const line = streak > 1 ? withoutCount(fillCount('streakGrew', streak, lang)) : ui('streakStarted', lang);
   const label = uiCount('dayStreak', streak, lang);
   const tier = (STREAK_TIERS as readonly number[]).includes(streak) ? TIERS[streak as keyof typeof TIERS] : null;
   // Without the real week (dev screenshots), the streak's days are counted back from today.
@@ -280,6 +281,16 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
 }
 
 const noop = () => {};
+
+/**
+ * "7 dagen op rij! Ga zo door." → "Ga zo door.": the streak's number stands big above the line,
+ * with its days, so the line does not say it again (feedback of the maker, 2 November 2026: say
+ * it once). Every language's line is the count, "!", then the cheer (tests/streakLine.test.ts).
+ */
+export function withoutCount(t: Bilingual): Bilingual {
+  const cut = (s: string | undefined) => (s && /!\s*\S/.test(s) ? s.replace(/^[^!]*!\s*/, '') : s);
+  return { ...t, en: cut(t.en) ?? t.en, help: cut(t.help) };
+}
 
 /**
  * "Wist je dat?" (src/content/facts.ts): one calm fact on the milestones 3, 7, 14 and 30, in the

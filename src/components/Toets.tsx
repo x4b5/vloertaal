@@ -59,7 +59,8 @@ export function ToetsOffer({ moment, lang, onDo, onLater }: { moment: ToetsMomen
         <h2 id="toets-offer-title" className="toets-offer-title">
           <NlPair nlFirst nl="Wat ken je al?" nlClass="toets-offer-nl" className="toets-offer-help" text={ui('toetsTitle', lang)} />
         </h2>
-        <span className="toets-time" lang="nl"><HourglassIcon size={18} /><bdi dir="ltr">10 min</bdi></span>
+        {/* The start test's line says "About 10 minutes" already: the chip only on the end test's card. */}
+        {moment !== 'instap' && <span className="toets-time" lang="nl"><HourglassIcon size={18} /><bdi dir="ltr">10 min</bdi></span>}
       </div>
       <p className="toets-offer-text">
         <NlPair nlFirst nl={nlText} nlClass="toets-offer-text-nl" text={text} />

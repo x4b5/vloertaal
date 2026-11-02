@@ -4,7 +4,7 @@ import { withRegion } from '../content/regio';
 import { RULES_BE_NOTE, RULES_COUNTRY, RULES_DISCLAIMER, RULES_DISCLAIMER_BE, RULES_NOTICE, RULES_NOTICE_BE, RULES_PATH_NOTE, RULES_PATH_NOTE_BE, RULES_PATH_NOTE_BE_OWN, RULES_PATH_NOTE_BE_PART, ruleAdviceLine } from '../content/regels/disclaimer';
 import { isBeId } from '../content/regels/be/ids';
 import { rulesCountry } from '../content/rulesCourse';
-import { helpRowsFor, helpRowText, type HelpRow } from '../content/regels/help';
+import { helpRowsFor, helpRowText, helpShow, type HelpRow } from '../content/regels/help';
 import { ruleIconId } from '../content/regels/ruleIcons';
 import { unitIcon } from '../content/unitIcons';
 import type { Unit } from '../content/types';
@@ -145,7 +145,7 @@ function HelpRowItem({ row, lang }: { row: HelpRow; lang?: HelpLanguage }) {
       <span className="rh-text">
         <span className="rh-name">{breakable(row.name)}</span>
         <span className="rh-when">{breakable(row.when)}</span>
-        <span className={`rh-show ${row.href ? 'rh-show-link' : ''}`} dir="auto">{row.show}</span>
+        {helpShow(row) && <span className={`rh-show ${row.href ? 'rh-show-link' : ''}`} dir="auto">{row.show}</span>}
       </span>
     </>
   );
@@ -175,7 +175,7 @@ function HelpRowItem({ row, lang }: { row: HelpRow; lang?: HelpLanguage }) {
           {/* The speaker is named after the row ("Afspelen: Vertrouwenspersoon"): its text is right beside it. */}
           <span className="rh-name"><ReadDigits text={row.name}>{breakable(row.name)}</ReadDigits> <SpeakButton text={helpRowText(row)} long needsDevice glyph help={lang} label={`${said(ui('playAudio', lang))}: ${digitsApart(row.name)}`} /></span>
           <span className="rh-when">{breakable(row.when)}</span>
-          <span className="rh-show" dir="auto"><ReadDigits text={row.show}>{row.show}</ReadDigits></span>
+          {helpShow(row) && <span className="rh-show" dir="auto"><ReadDigits text={row.show}>{row.show}</ReadDigits></span>}
         </span>
       </div>
     </li>

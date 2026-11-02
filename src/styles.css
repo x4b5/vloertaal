@@ -606,11 +606,6 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   font-weight: 600; font-size: 0.8rem; line-height: 1.2; letter-spacing: 0.06em; text-transform: uppercase;
 }
 .ex-tag { flex-wrap: wrap; row-gap: 4px; }
-.ex-tag-note { flex-direction: row; flex-wrap: wrap; gap: 0 8px; font-size: 0.9rem; font-weight: 500; color: var(--ink-2); }
-.ex-tag-note .bi-help { --help-size: 1em; }
-.ex-tag-note::before { content: '·'; color: var(--ink-3); }
-/* Phones: the translation of the tag gets its own line (no dangling dot when it wraps). */
-@media (max-width: 759px) { .ex-tag-note { flex-basis: 100%; } .ex-tag-note::before { content: none; } }
 
 /* Action bar, pinned to the bottom of the lesson; the feedback label sits on top of it. */
 .player-foot {
@@ -1835,22 +1830,8 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .result-go { animation: result-go 0.35s 0.9s var(--ease-out) both; }
 @keyframes result-go { from { opacity: 0; transform: translateY(10px); } }
 @media (prefers-reduced-motion: reduce) { .result-go { animation: none; } }
-/* FOUTLOOS: a blue-ink rubber stamp on the "right the first time" card. */
-.stat-card:has(.flawless-stamp) { position: relative; }
-/* Inside the card's bottom corner (never over its edge), beside "No mistakes". */
-.flawless-stamp {
-  top: auto; bottom: 8px; right: auto; inset-inline-end: 8px; margin-top: 0; width: 62px; height: 62px; rotate: 12deg;
-  color: var(--stamp-ink); animation-delay: 1.45s;
-}
-.flawless-stamp .stamp-word { font-size: 0.82rem; letter-spacing: 0; }
-.stat-card:has(.flawless-stamp) .stat-card-foot { min-height: 54px; padding-inline-end: 62px; color: var(--stamp-ink); }
-.stat-card:has(.flawless-stamp) .stat-card-foot .bi-help { color: var(--muted); }
-/* The stamp beside "No mistakes" in the flow, so it never covers the words; calm: small, a
-   slight tilt. */
-.stat-card-foot-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
-.stat-card:has(.flawless-stamp) .stat-card-foot-row .stat-card-foot { flex: 1 1 72px; min-width: 0; min-height: 0; padding-inline-end: 0; }
-.stat-card .stat-card-foot-row .flawless-stamp { position: relative; inset: auto; flex: none; width: 54px; height: 54px; rotate: 6deg; margin: 0; }
-.stat-card-foot-row .flawless-stamp .stamp-word { font-size: 0.64rem; }
+/* Every answer right: "No mistakes" under the number, in the green of the card. */
+.stat-green .stat-card-foot { color: var(--right-ink); }
 /* Short screens (360×640): the scene's empty sky is cropped (the figures stand at its bottom),
    so both result cards are above Continue. */
 @media (max-height: 760px) {
@@ -4594,7 +4575,6 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .sheet-backdrop { top: 0; left: 0; width: 100%; height: 100%; }
   .sheet-hazard, .gate-sign::before { top: 0; right: 0; left: 0; }
   .bottom-nav { right: 0; bottom: 0; left: 0; }
-  .stat-card .stat-card-foot-row .flawless-stamp { bottom: auto; right: auto; }
   .player-foot::before { top: -18px; right: 0; left: 0; }
   .say-mic.is-rec::before { top: -16px; left: -16px; width: calc(100% + 32px); height: calc(100% + 32px); }
   .say-ring { top: -12px; left: -12px; }
@@ -4622,7 +4602,6 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .choices:not(.choices-pics) .choice-wrap .choice > .stamp, .choices:not(.choices-pics) .stamp.stamp-wrong { right: 10px; }
   .answer-line .stamp.stamp-wrong { right: 9px; }
   .stamp.stamp-wrong .stamp-sub { right: -4px; }
-  .flawless-stamp { right: 8px; }
   .result-stamp { right: 0; }
   .player-rtl .answer-mark { right: auto; left: 12px; }
   .player-rtl .stamp { right: auto; left: -8px; }

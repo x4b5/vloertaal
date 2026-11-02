@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Къде работиш?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'В коя държава работиш?',
-    countryHint: 'Избери държавата, в която работиш. Ще получиш правилата за работа в нея. Това остава на телефона ти. Не го изпращаме никъде.', // nieuw, nalezen
+    countryHint: 'Ще получиш правилата за работа в нея. Това остава на телефона ти. Не го изпращаме никъде.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Нидерландия',
     countryBe: 'Белгия (Фландрия)',
     tipsNote: 'Тези съвети са за работа в Нидерландия. Обща информация, не е правен съвет.',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Спри напомнянето',
     remindStopped: 'Отвори файла, за да махнеш напомнянето от календара.',
     remindStoppedAndroid: 'Изтрий напомнянето ръчно в Google Календар.',
-    resetKeeps: 'Уроците, думите, дните поред и сертификатите ти се изтриват. Езикът, кодът и настройките ти остават.',
+    resetKeeps: 'Уроците, думите, дните поред и сертификатите ти се изтриват. Езикът и настройките ти остават.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Не се зареди. Има ли интернет?',
     retry: 'Опитай отново',

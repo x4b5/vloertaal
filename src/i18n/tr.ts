@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Nerede çalışıyorsun?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Hangi ülkede çalışıyorsun?',
-    countryHint: 'Çalıştığın ülkeyi seç. O ülkenin iş kurallarını görürsün. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.', // nieuw, nalezen
+    countryHint: 'O ülkenin iş kurallarını görürsün. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Hollanda',
     countryBe: 'Belçika (Flandra)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     tipsNote: 'Bu ipuçları Hollanda’daki iş hakkında. Genel bilgidir, hukuki danışmanlık değildir.',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Hatırlatmayı durdur',
     remindStopped: 'Hatırlatmayı takviminden kaldırmak için dosyayı aç.',
     remindStoppedAndroid: 'Hatırlatmayı Google Takvim\'den kendin sil.',
-    resetKeeps: 'Derslerin, kelimelerin, günlük serin ve sertifikaların silinir. Dilin, kodun ve ayarların kalır.',
+    resetKeeps: 'Derslerin, kelimelerin, günlük serin ve sertifikaların silinir. Dilin ve ayarların kalır.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Yüklenmedi. İnternet var mı?',
     retry: 'Tekrar dene',

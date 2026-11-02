@@ -8,6 +8,16 @@
  * docs/werkregels-bronnen.md. A number or site that is in none of them is marked `// ⚖️ check`:
  * the expert checks it with the ⚖️ facts before the track goes live (docs/livegang.md).
  */
+/**
+ * The number line under a row, unless the name already is that number ("112", "1813
+ * Zelfmoordlijn"): then it would say it twice (feedback of the maker, 2 November 2026). A row
+ * whose line says "gratis" no longer has "(gratis)" after its number either.
+ */
+export function helpShow(row: Pick<HelpRow, 'name' | 'show'>): string | null {
+  const s = row.show.trim();
+  return row.name === s || row.name.startsWith(`${s} `) ? null : s;
+}
+
 export interface HelpRow {
   id: string;
   /** Who it is, as people say it. */
@@ -66,7 +76,7 @@ export const HELP_ROWS: HelpRow[] = alphabetical([
   {
     id: 'h.juridischloket', emoji: '⚖️', name: 'Juridisch Loket',
     when: 'Gratis advies over je contract, je loon of ontslag.',
-    show: '0800-8020 (gratis)', href: 'tel:08008020',
+    show: '0800-8020', href: 'tel:08008020',
   },
   {
     id: 'h.arbeidsinspectie', emoji: '🔍', name: 'Nederlandse Arbeidsinspectie',
@@ -83,19 +93,19 @@ export const HELP_ROWS: HelpRow[] = alphabetical([
     // ⚖️ check: 113 Zelfmoordpreventie: 113 and 0800-0113, both free since October 2025, day and night, also a chat on 113.nl (ANP via hartvannederland.nl and welingelichtekringen.nl, Oct 2025; telecompaper.com; search results of 31 okt 2026, 113.nl could not be opened). Lesson 7.3 (veilig.ts, "te veel stress") is about stress, this is the crisis line.
     id: 'h.113', emoji: '☎️', name: '113 Zelfmoordpreventie',
     when: 'Je denkt aan zelfdoding, of je maakt je zorgen om iemand. Gratis, dag en nacht. Chatten kan ook, op 113.nl.',
-    show: '113 (gratis)', href: 'tel:113', // ⚖️ check: 113 is free since Oct 2025 (0800-0113 too)
+    show: '113', href: 'tel:113', // ⚖️ check: 113 is free since Oct 2025 (0800-0113 too)
   },
   {
     // ⚖️ check: Veilig Thuis, advice and reports about domestic violence and child abuse: 0800-2000, free, day and night, anonymous if you want; you are put through to the Veilig Thuis of your region (rijksoverheid.nl "Wat moet ik doen bij huiselijk geweld?"; search result of 31 okt 2026)
     id: 'h.veiligthuis', emoji: '🏠', name: 'Veilig Thuis',
     when: 'Geweld of misbruik thuis, bij jou of bij iemand anders. Gratis, dag en nacht. Je mag anoniem bellen.',
-    show: '0800-2000 (gratis)', href: 'tel:08002000', // ⚖️ check: rijksoverheid.nl huiselijk geweld
+    show: '0800-2000', href: 'tel:08002000', // ⚖️ check: rijksoverheid.nl huiselijk geweld
   },
   {
     // ⚖️ check: Centrum Seksueel Geweld: 0800-0188, free and anonymous, day and night, or the chat (centrumseksueelgeweld.nl "Bel 0800-0188"; om.nl "waar kunnen slachtoffers terecht"; search results of 31 okt 2026). The site says the number only works with a Dutch provider: hence the chat in the line. Also in rechten.ts (a comment only, until now).
     id: 'h.csg', emoji: '🛡️', name: 'Centrum Seksueel Geweld',
     when: 'Iemand deed je seksueel geweld aan, ook op je werk. Gratis, dag en nacht. Chatten kan ook, op de site.',
-    show: '0800-0188 (gratis)', href: 'tel:08000188', // ⚖️ check: centrumseksueelgeweld.nl
+    show: '0800-0188', href: 'tel:08000188', // ⚖️ check: centrumseksueelgeweld.nl
   },
   {
     id: 'h.vakbond', emoji: '✊', name: 'Vakbond (FNV of CNV)',
@@ -182,7 +192,7 @@ export const HELP_ROWS_BE: HelpRow[] = alphabetical([
     // source, so they are not in the row). Be/units/rechten.ts sends you here (r.be.l.rechten.1).
     id: 'h.be.unia', emoji: '📣', name: 'Unia',
     when: 'Iemand discrimineert je, op je werk of ergens anders. Melden is gratis.',
-    show: '0800 12 800 (gratis)', href: 'tel:080012800',
+    show: '0800 12 800', href: 'tel:080012800',
   },
   {
     // ⚖️ check: 1712 is the free, anonymous helpline of Flanders for violence, abuse and child abuse

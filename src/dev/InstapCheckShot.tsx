@@ -46,7 +46,7 @@ export function InstapCheckShot({ lang, gender, q }: { lang: string | null; gend
     return (
       <LessonPlayer
         lesson={checkLesson(unit)} review={false} lang={l} exercises={checkExercises(unit, 1, quiet)} startAt={Number(q.get('at') ?? 0)}
-        quiet={quiet} onQuit={() => {}} onFinish={() => {}}
+        quiet={quiet} onQuit={() => {}} onFinish={() => {}} check
       />
     );
   }
