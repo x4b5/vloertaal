@@ -1004,8 +1004,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // something: a why, "almost", a wrong answer, a sentence (its meaning and speaker), writing,
   // a picture pick ("Which picture is it?": the meaning in words is only on the label). A chat's
   // right reply is in the bubble and in the green option, with its meaning and its speaker: a
-  // third time on a label was too much (feedback of the maker, 1 November).
-  const cardless = quietRight && !ruleFb && !why && (ex.kind === 'meaning' || ex.kind === 'listen' || ex.kind === 'chat');
+  // third time on a label was too much (feedback of the maker, 1 November). The same for "What do
+  // you hear?" picked from written words (typing in the first topics, typeAsPick): the green card
+  // has the word, its meaning, its picture and its speaker (feedback of the maker, 2 November).
+  const cardless = quietRight && !ruleFb && !why && (ex.kind === 'meaning' || ex.kind === 'listen' || ex.kind === 'chat' || typePick);
   // Answered: the question steps back (styles.css "the spotlight after the answer"). Matching has
   // no Check; it is answered when the last pair is made.
   const answered = checked || (ex.kind === 'match' && answer !== null);
