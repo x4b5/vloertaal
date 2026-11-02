@@ -19,7 +19,7 @@ const t: CultureTranslation = {
     'kjn.u.help.1': "Мога да кажа, че не разбирам.", // nieuw, nalezen
     'kjn.u.help.2': "Мога да помоля някого да говори по-бавно.", // nieuw, nalezen
     'kjn.u.tools.1': "Мога да помоля някого да го запише или да го покаже.", // nieuw, nalezen
-    'kjn.u.tools.2': "Мога да повторя задача, за да проверя дали разбирам.", // nieuw, nalezen
+    'kjn.u.tools.2': "Мога да повторя указанието, за да проверя дали разбирам.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Мога да кажа, че искам да упражнявам нидерландски.", // nieuw, nalezen
     'kjn.u.data.1': "Мога да кажа името си буква по буква.", // nieuw, nalezen
     'kjn.u.data.2': "Мога да кажа в кои дни мога да работя.", // nieuw, nalezen
@@ -41,7 +41,7 @@ const t: CultureTranslation = {
     'kjn.u.stage.1': "Мога да попитам кой е наставникът ми във фирмата.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "Мога да поискам обратна връзка и пример.", // nieuw, nalezen
     'kjn.u.time.1': "Мога да кажа в колко часа започва смяната ми.", // nieuw, nalezen
-    'kjn.u.time.2': { m: "Мога да кажа, че съм болен.", f: "Мога да кажа, че съм болна.", x: "Мога да кажа, че съм болен / болна." }, // nieuw, nalezen
+    'kjn.u.time.2': { m: "Мога да кажа, че съм болен.", f: "Мога да кажа, че съм болна.", x: "Мога да кажа, че се разболях." }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.pay.1': "Мога да кажа, че фишът ми за заплата не е верен.", // nieuw, nalezen
     'kjn.u.pay.2': "Мога да прочета думи като bruto и netto.", // nieuw, nalezen
     'kjn.u.leave.1': "Мога да поискам отпуск.", // nieuw, nalezen
@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'kjn.u.teamwork.3': "Мога да попитам какво да направя първо.", // nieuw, nalezen
     'kjn.u.social.1': "Мога да си побъбря с колегите в почивката.", // nieuw, nalezen
     'kjn.u.social.2': "Мога да кажа, че сгреших.", // nieuw, nalezen
-    'kjn.u.social.3': "Мога да кажа, че нещо преминава моята граница.", // nieuw, nalezen
+    'kjn.u.social.3': "Мога да кажа, че нещо нарушава личните ми граници.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.sayings.1': "Мога да разбера няколко често срещани израза.", // nieuw, nalezen
     'kjn.u.sayings.2': "Мога да кажа, че нещо е много лесно (een eitje).", // nieuw, nalezen
     'kjn.u.rights.1': "Мога да кажа, че имам право на почивка.", // nieuw, nalezen

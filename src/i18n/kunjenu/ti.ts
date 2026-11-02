@@ -19,7 +19,7 @@ const t: CultureTranslation = {
     'kjn.u.help.1': "ከም ዘይተረደኣኒ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.help.2': "ሓደ ሰብ ቀስ ኢሉ ክዛረብ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.tools.1': "ሓደ ሰብ ክጽሕፎ ወይ ከርእየኒ ክሓትት እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.tools.2': "ከም ዝተረዳእኩ ንምርግጋጽ ሓደ ዕማም ክደግሞ እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.tools.2': "ከም ዝተረዳእኩ ንምርግጋጽ ዝተዋህበኒ መምርሒ ደጊመ ክብሎ እኽእል እየ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "ሆላንድኛ ክለማመድ ከም ዝደሊ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.data.1': "ስመይ ብፊደል ክብሎ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.data.2': "ኣበየኖት መዓልትታት ክሰርሕ ከም ዝኽእል ክብል እኽእል እየ።", // nieuw, nalezen
@@ -29,7 +29,7 @@ const t: CultureTranslation = {
     'kjn.u.safety.1': "ከም «Pas op!» ዝኣመሰለ መጠንቀቕታ ክርድኦ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.safety.2': "ሓደጋ ክሕብር እኽእል እየ።", // nieuw, nalezen
     'kjn.u.safety.3': "ገና ዘይተማሃርክዎ ነገር ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.apply.1': "እንታይ ተሞክሮ ከም ዘለኒ ክነግር እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.apply.1': "እንታይ ተመኩሮ ከም ዘለኒ ክነግር እኽእል እየ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.apply.2': "ኣብ ቃለ-መሕትት ስራሕ ብዛዕባ ርእሰይ ክዛረብ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.contract.1': "ኣብ ሰሙን ክንደይ ሰዓት ከም ዝሰርሕ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.contract.2': "ውዕለይ ግዝያዊ ድዩ ወይስ ቀዋሚ ክሓትት እኽእል እየ።", // nieuw, nalezen
@@ -38,7 +38,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.2': "ኣብ እንታይ ጽቡቕ ከም ዝኾንኩ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.lost.1': "ውዕለይ ይውዳእ ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.lost.2': "ተወሳኺ ክፍሊት ዓመታዊ ዕረፍተይ ክኽፈለኒ ድዩ ክሓትት እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.stage.1': "ኣብ ትካል መሰልጠኒይ መን ምዃኑ ክሓትት እኽእል እየ።", // nieuw, nalezen // nagelezen AI 31 okt
+    'kjn.u.stage.1': "ኣብ ትካል ኣሰልጣኒይ መን ምዃኑ ክሓትት እኽእል እየ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.stage.2': "ርእይቶን ኣብነትን ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.time.1': "ፈረቓ ስራሐይ ሰዓት ክንደይ ከም ዝጅምር ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.time.2': "ሕማም ከም ዘለኒ ክብል እኽእል እየ።", // nieuw, nalezen
@@ -61,7 +61,7 @@ const t: CultureTranslation = {
     'kjn.u.finish.1': "ኣብ ወረቐት ስራሕ ዘሎ ቃል እንታይ ማለት ምዃኑ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.finish.2': "እንታይ ከም ዝተወድአን እንታይ ከም ዘይተወድአን ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.online.1': "መሕለፊ ቃለይ ከም ዘይሰርሕ ክብል እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.online.2': "ጥርጣረ ዘለዎ ኢመይል ክፈልጦ እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.online.2': "ዘጠራጥር ኢመይል ክፈልጦ እኽእል እየ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.teamwork.1': "ገለ ነገር ከም ዘሸግረኒ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.teamwork.2': "ንተወሳኺ ስራሕ ብህድኣት ኣይፋል ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.teamwork.3': "ቅድም እንታይ ክገብር ከም ዘለኒ ክሓትት እኽእል እየ።", // nieuw, nalezen
@@ -73,7 +73,7 @@ const t: CultureTranslation = {
     'kjn.u.rights.1': "ዕረፍቲ ናይ ምውሳድ መሰል ከም ዘለኒ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.rights.2': "ጥርዓን ከቕርብ ከም ዝደሊ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.exploit.1': "ፓስፖርተይ ኣብ ኢደይ ከም ዝጸንሕ ክብል እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.exploit.2': "ብዘይ ስመይ ገለ ነገር ክሕብር ይኽእል እንተኾይነ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.exploit.2': "ብዘይ ስመይ ገለ ነገር ክሕብር ይከኣል እንተኾይኑ ክሓትት እኽእል እየ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.papers.1': "ኣድራሻይ ከም ዝተቐየረ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.papers.2': "ክራይ ክንደይ ምዃኑ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.health.1': "ኣበይ ከም ዘቐንዝወኒ ክብል እኽእል እየ።", // nieuw, nalezen
@@ -88,7 +88,7 @@ const t: CultureTranslation = {
     'kjn.u.warehouse.2': "ሓደ ነገር ኣበይ ከም ዘሎ ክብል እኽእል እየ፡ ኣብ ጸጋም ወይ ኣብ የማን።", // nieuw, nalezen
     'kjn.u.build.1': "ኣብ ቦታ ህንጻ መጠንቀቕታ ክርዳእ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.build.2': "መሳርሒ ክሓትት እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.factory.1': "ብልሽት ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.factory.1': "ኣብ ማሽን ጸገም ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.factory.2': "ኣብ ሓደ ፍርያት እንታይ ጸገም ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.care.1': "ንተገልጋሊ ክሕግዞ ይፍቀደለይ እንተኾይኑ ክሓትቶ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.care.2': "ገለ ነገር ናብ ነርስ ከሕልፍ እኽእል እየ።", // nieuw, nalezen

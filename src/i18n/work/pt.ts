@@ -609,7 +609,7 @@ const t: CultureTranslation = {
     'c.housing.o3': 'Ficas, e deixas de responder à agência.',
     'c.housing.w': 'O teu contrato de arrendamento tem as suas próprias regras, separadas do teu trabalho. Um conselho grátis ajuda-te a conhecer os teus direitos, por exemplo sobre quando tens de sair e sobre a caução.',
     'c.payslip': 'Verifica o teu recibo de vencimento',
-    'c.payslip.b': 'Bruto é o teu salário antes dos impostos. Líquido é o que recebes na tua conta bancária: o bruto menos os impostos e as contribuições (loonheffing). O teu empregador tem de te dar um recibo de vencimento (loonstrook). Verifica as horas e o salário em cada recibo, e aponta as horas que trabalhas. Tens dois empregos? Usa a dedução fiscal (loonheffingskorting) só num empregador. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
+    'c.payslip.b': 'Bruto é o teu salário antes dos impostos. Netto (líquido) é o que recebes na tua conta bancária: o bruto menos os impostos e as contribuições (loonheffing). O teu empregador tem de te dar um recibo de vencimento (loonstrook). Verifica as horas e o salário em cada recibo, e aponta as horas que trabalhas. Tens dois empregos? Usa a dedução fiscal (loonheffingskorting) só num empregador. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.payslip.p': 'Trabalhei mais horas. Podes verificar?',
     'c.payslip.s': 'O teu recibo de vencimento tem menos horas do que as que trabalhaste. O que fazes?',
     'c.payslip.o1': 'Mostras as tuas notas e pedes ao teu chefe que verifique.', // nagelezen (2e lezing)
@@ -722,7 +722,7 @@ const t: CultureTranslation = {
     'c.warning.w': 'O teu passaporte é teu. Ficar com ele é uma forma de controlar os trabalhadores. Um empregador só precisa de uma cópia para os arquivos.',
     'c.gethelp': 'Onde pedir ajuda',
     'c.gethelp.b': 'Vês sinais de exploração, contigo ou com outra pessoa? Pede ajuda. Podes denunciar à Nederlandse Arbeidsinspectie, também de forma anónima, ou à polícia. Meld Misdaad Anoniem: 0800-7000. Aconselhamento jurídico grátis: o Juridisch Loket. Em perigo? Liga para o 112. Todas as pessoas que trabalham nos Países Baixos podem ter ajuda, também os migrantes. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.',
-    'c.gethelp.p': { m: 'Preciso de ajuda. Estou a ser explorado.', f: 'Preciso de ajuda. Estou a ser explorada.', x: 'Preciso de ajuda. Estou a ser explorado / explorada.' },
+    'c.gethelp.p': { m: 'Preciso de ajuda. Estou a ser explorado.', f: 'Preciso de ajuda. Estou a ser explorada.', x: 'Preciso de ajuda. Estão a explorar-me.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.gethelp.s': 'Um amigo trabalha 14 horas por dia, quase não recebe nada e tem medo do patrão. O que podes fazer?',
     'c.gethelp.o1': 'Ajudá-lo a contactar a Arbeidsinspectie ou o Juridisch Loket.', // nieuw, nalezen
     'c.gethelp.o2': 'Dizer-lhe que isto é normal para trabalhadores novos.',

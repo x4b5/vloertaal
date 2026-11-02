@@ -6,7 +6,7 @@ const t: CultureTranslation = {
   ui: {
     kunJeNu: "Ce poți face acum?", // nieuw, nalezen
     kunNote: "Nivelul de lângă fiecare propoziție e un reper, nu un nivel oficial.", // nieuw, nalezen
-    coachCanDo: "Câte propoziții „Pot …” ai din temele terminate", // nieuw, nalezen
+    coachCanDo: "Câte propoziții „Pot …” ai din subiectele terminate", // nieuw, nalezen (AI-correctie 2 nov 2026)
     kunLuisteren: "ascultare", // nieuw, nalezen
     kunSpreken: "vorbire", // nieuw, nalezen
     kunLezen: "citire", // nieuw, nalezen
@@ -19,7 +19,7 @@ const t: CultureTranslation = {
     'kjn.u.help.1': "Pot să spun că nu înțeleg.", // nieuw, nalezen
     'kjn.u.help.2': "Pot să rog pe cineva să vorbească mai rar.", // nieuw, nalezen
     'kjn.u.tools.1': "Pot să rog pe cineva să scrie sau să-mi arate.", // nieuw, nalezen
-    'kjn.u.tools.2': "Pot să repet o sarcină ca să verific dacă am înțeles.", // nieuw, nalezen
+    'kjn.u.tools.2': "Pot să repet o instrucțiune ca să verific dacă am înțeles.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Pot să spun că vreau să exersez olandeza.", // nieuw, nalezen
     'kjn.u.data.1': "Pot să-mi spun numele pe litere.", // nieuw, nalezen
     'kjn.u.data.2': "Pot să spun în ce zile pot lucra.", // nieuw, nalezen
@@ -51,7 +51,7 @@ const t: CultureTranslation = {
     'kjn.u.contact.3': "Pot să scriu un mesaj scurt către serviciu.", // nieuw, nalezen
     'kjn.u.house.1': "Pot să citesc reguli ca „Roken verboden”.", // nieuw, nalezen
     'kjn.u.house.2': "Pot să întreb unde am voie să fumez.", // nieuw, nalezen
-    'kjn.u.house.3': "Pot să spun că ceva nu e voie.", // nieuw, nalezen
+    'kjn.u.house.3': "Pot să spun că ceva nu e permis.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.numbers.1': "Pot să înțeleg ore ca „kwart over vier”.", // nieuw, nalezen
     'kjn.u.numbers.2': "Pot să spun cât costă sau cât cântărește ceva.", // nieuw, nalezen
     'kjn.u.shop.1': "Pot să întreb un client dacă vrea să plătească cu cardul.", // nieuw, nalezen

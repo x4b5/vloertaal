@@ -19,14 +19,14 @@ const t: CultureTranslation = {
     'kjn.u.help.1': "Я можу сказати, що не розумію.", // nieuw, nalezen
     'kjn.u.help.2': "Я можу попросити говорити повільніше.", // nieuw, nalezen
     'kjn.u.tools.1': "Я можу попросити записати це або показати.", // nieuw, nalezen
-    'kjn.u.tools.2': "Я можу повторити завдання, щоб перевірити розуміння.", // nieuw, nalezen
+    'kjn.u.tools.2': "Я можу повторити вказівку, щоб перевірити розуміння.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Я можу сказати, що хочу практикувати нідерландську.", // nieuw, nalezen
     'kjn.u.data.1': "Я можу назвати своє ім’я по літерах.", // nieuw, nalezen
     'kjn.u.data.2': "Я можу сказати, в які дні можу працювати.", // nieuw, nalezen
     'kjn.u.data.3': "Я можу зрозуміти дату на слух.", // nieuw, nalezen
-    'kjn.u.sounds.1': "Я чую різницю між словами, як man і maan.", // nieuw, nalezen
+    'kjn.u.sounds.1': "Я чую різницю між словами, як-от man і maan.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.sounds.2': "Я можу повторити короткі речення зі складними звуками.", // nieuw, nalezen
-    'kjn.u.safety.1': "Я розумію попередження, як «Pas op!».", // nieuw, nalezen
+    'kjn.u.safety.1': "Я розумію попередження, як-от «Pas op!».", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.safety.2': "Я можу повідомити про нещасний випадок.", // nieuw, nalezen
     'kjn.u.safety.3': "Я можу сказати, що мене цього ще не навчили.", // nieuw, nalezen
     'kjn.u.apply.1': "Я можу розповісти, який у мене досвід.", // nieuw, nalezen
@@ -43,16 +43,16 @@ const t: CultureTranslation = {
     'kjn.u.time.1': "Я можу сказати, о котрій починається моя зміна.", // nieuw, nalezen
     'kjn.u.time.2': "Я можу сказати, що я хворію.", // nieuw, nalezen
     'kjn.u.pay.1': "Я можу сказати, що в моєму розрахунковому листі помилка.", // nieuw, nalezen
-    'kjn.u.pay.2': "Я можу прочитати слова, як bruto і netto.", // nieuw, nalezen
+    'kjn.u.pay.2': "Я можу прочитати слова, як-от bruto і netto.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.leave.1': "Я можу попросити відпустку.", // nieuw, nalezen
     'kjn.u.leave.2': "Я можу повідомити про хворобу і про одужання.", // nieuw, nalezen
     'kjn.u.contact.1': "Я можу зателефонувати і сказати, хто я.", // nieuw, nalezen
     'kjn.u.contact.2': "Я можу попросити, щоб мені передзвонили.", // nieuw, nalezen
     'kjn.u.contact.3': "Я можу написати коротке повідомлення на роботу.", // nieuw, nalezen
-    'kjn.u.house.1': "Я можу прочитати правила, як «Roken verboden».", // nieuw, nalezen
+    'kjn.u.house.1': "Я можу прочитати правила, як-от «Roken verboden».", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.house.2': "Я можу запитати, де можна курити.", // nieuw, nalezen
     'kjn.u.house.3': "Я можу сказати, що чогось робити не можна.", // nieuw, nalezen
-    'kjn.u.numbers.1': "Я розумію час, як «kwart over vier».", // nieuw, nalezen
+    'kjn.u.numbers.1': "Я розумію позначення часу, як-от «kwart over vier».", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.numbers.2': "Я можу сказати, скільки щось коштує або важить.", // nieuw, nalezen
     'kjn.u.shop.1': "Я можу запитати, чи клієнт хоче платити карткою.", // nieuw, nalezen
     'kjn.u.shop.2': "Я можу показати клієнтові дорогу в магазині.", // nieuw, nalezen
@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'kjn.u.teamwork.3': "Я можу запитати, що мені зробити спочатку.", // nieuw, nalezen
     'kjn.u.social.1': "Я можу трохи поговорити з колегами на перерві.", // nieuw, nalezen
     'kjn.u.social.2': { m: "Я можу сказати, що зробив помилку.", f: "Я можу сказати, що зробила помилку.", x: "Я можу сказати, що це моя помилка." }, // nieuw, nalezen
-    'kjn.u.social.3': "Я можу сказати, що щось переходить мою межу.", // nieuw, nalezen
+    'kjn.u.social.3': "Я можу сказати, що щось порушує мої межі.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.sayings.1': "Я можу зрозуміти кілька поширених висловів.", // nieuw, nalezen
     'kjn.u.sayings.2': "Я можу сказати, що щось дуже легко (een eitje).", // nieuw, nalezen
     'kjn.u.rights.1': "Я можу сказати, що маю право на перерву.", // nieuw, nalezen
@@ -82,7 +82,7 @@ const t: CultureTranslation = {
     'kjn.u.money.2': "Я можу сказати «ні» шахраю по телефону.", // nieuw, nalezen
     'kjn.u.travel.1': "Я можу розповісти, як я добираюся на роботу.", // nieuw, nalezen
     'kjn.u.travel.2': "Я можу запитати, де автобусна зупинка.", // nieuw, nalezen
-    'kjn.u.society.1': "Я можу запитати, чи можу я голосувати.", // nieuw, nalezen
+    'kjn.u.society.1': "Я можу запитати, чи маю я право голосувати.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.society.2': "Я можу сказати, що хочу подати заперечення.", // nieuw, nalezen
     'kjn.u.warehouse.1': "Я можу зрозуміти короткі вказівки на складі.", // nieuw, nalezen
     'kjn.u.warehouse.2': "Я можу сказати, де щось стоїть: ліворуч чи праворуч.", // nieuw, nalezen

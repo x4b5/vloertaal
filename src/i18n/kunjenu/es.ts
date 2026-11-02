@@ -19,7 +19,7 @@ const t: CultureTranslation = {
     'kjn.u.help.1': "Puedo decir que no entiendo.", // nieuw, nalezen
     'kjn.u.help.2': "Puedo pedir que alguien hable más despacio.", // nieuw, nalezen
     'kjn.u.tools.1': "Puedo pedir que alguien lo escriba o me lo enseñe.", // nieuw, nalezen
-    'kjn.u.tools.2': "Puedo repetir una tarea para comprobar que la entiendo.", // nieuw, nalezen
+    'kjn.u.tools.2': "Puedo repetir una instrucción para comprobar que la he entendido.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Puedo decir que quiero practicar neerlandés.", // nieuw, nalezen
     'kjn.u.data.1': "Puedo deletrear mi nombre.", // nieuw, nalezen
     'kjn.u.data.2': "Puedo decir qué días puedo trabajar.", // nieuw, nalezen
@@ -37,7 +37,7 @@ const t: CultureTranslation = {
     'kjn.u.grow.1': "Puedo decir qué diplomas y certificados tengo.", // nieuw, nalezen
     'kjn.u.grow.2': "Puedo decir qué se me da bien.", // nieuw, nalezen
     'kjn.u.lost.1': "Puedo decir que mi contrato termina.", // nieuw, nalezen
-    'kjn.u.lost.2': "Puedo preguntar si me pagan la paga de vacaciones.", // nieuw, nalezen
+    'kjn.u.lost.2': "Puedo preguntar si voy a recibir mi paga de vacaciones.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.stage.1': "Puedo preguntar quién es mi tutor de empresa.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.stage.2': "Puedo pedir comentarios y un ejemplo.", // nieuw, nalezen
     'kjn.u.time.1': "Puedo decir a qué hora empieza mi turno.", // nieuw, nalezen
@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'kjn.u.teamwork.3': "Puedo preguntar qué tengo que hacer primero.", // nieuw, nalezen
     'kjn.u.social.1': "Puedo charlar un poco en la pausa.", // nieuw, nalezen
     'kjn.u.social.2': "Puedo decir que he cometido un error.", // nieuw, nalezen
-    'kjn.u.social.3': "Puedo decir que algo pasa mi límite.", // nieuw, nalezen
+    'kjn.u.social.3': "Puedo decir que algo sobrepasa mis límites.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.sayings.1': "Puedo entender algunas expresiones comunes.", // nieuw, nalezen
     'kjn.u.sayings.2': "Puedo decir que algo es muy fácil (een eitje).", // nieuw, nalezen
     'kjn.u.rights.1': "Puedo decir que tengo derecho a una pausa.", // nieuw, nalezen
@@ -90,7 +90,7 @@ const t: CultureTranslation = {
     'kjn.u.build.2': "Puedo pedir herramientas.", // nieuw, nalezen
     'kjn.u.factory.1': "Puedo decir que hay una avería.", // nieuw, nalezen
     'kjn.u.factory.2': "Puedo decir qué le pasa a un producto.", // nieuw, nalezen
-    'kjn.u.care.1': "Puedo preguntar a un cliente si puedo ayudarle.", // nieuw, nalezen
+    'kjn.u.care.1': "Puedo preguntar a la persona que cuido si puedo ayudarle.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.care.2': "Puedo comunicar algo a la enfermera.", // nieuw, nalezen
     'kjn.u.horeca.1': "Puedo preguntar a los clientes qué desean tomar.", // nieuw, nalezen
     'kjn.u.horeca.2': "Puedo decir que se lo pregunto al jefe de cocina.", // nieuw, nalezen

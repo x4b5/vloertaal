@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.unsafe.s': 'Uma palete está empilhada alta demais e quase cai. Ninguém se magoou. O que fazes?',
     'c.unsafe.o1': 'Avisas os colegas e dizes ao teu chefe.',
     'c.unsafe.o2': 'Não dizes nada, porque não aconteceu nada.',
-    'c.unsafe.o3': { m: 'Arrumas a palete sozinho e não dizes a ninguém.', f: 'Arrumas a palete sozinha e não dizes a ninguém.', x: 'Arrumas a palete sozinho/a e não dizes a ninguém.' }, // nieuw, nalezen
+    'c.unsafe.o3': { m: 'Arrumas a palete sozinho e não dizes a ninguém.', f: 'Arrumas a palete sozinha e não dizes a ninguém.', x: 'Arrumas a palete por tua conta e não dizes a ninguém.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.unsafe.w': 'Um quase-acidente é um aviso. Comunicá-lo ajuda a evitar um acidente a sério. O teu empregador não te pode castigar por o comunicares.',
     'c.accident': 'Comunica todos os acidentes',
     'c.accident.b': 'Conta ao teu chefe ou ao BHV’er (o socorrista da empresa) todos os acidentes, também os pequenos. Trabalhas através de uma agência? Avisa também a agência. Numa emergência, liga primeiro para o 112. A empresa onde o acidente aconteceu tem de comunicar um acidente grave à Nederlandse Arbeidsinspectie (também se trabalhas através de uma agência): quando alguém morre, fica com lesões para a vida ou tem de ficar no hospital. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',

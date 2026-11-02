@@ -87,7 +87,7 @@ const lang: HelpLanguageSource = {
     countryTitle: 'Hangi ülkede çalışıyorsun?',
     countryHint: 'Çalıştığın ülkeyi seç. O ülkenin iş kurallarını görürsün. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.', // nieuw, nalezen
     countryNl: 'Hollanda',
-    countryBe: 'Belçika (Flandre)',
+    countryBe: 'Belçika (Flandra)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     tipsNote: 'Bu ipuçları Hollanda’daki iş hakkında. Genel bilgidir, hukuki danışmanlık değildir.',
     sectorHint: 'Kendi işinin dersleri erkenden gelir. Bunu sonra Ayarlar’da değiştirebilirsin.',
     otherSectors: 'Diğer sektörler',
@@ -109,7 +109,7 @@ const lang: HelpLanguageSource = {
     withoutSound: 'Sessiz',
     quietHint: 'Sessiz modda derslerde dinleme sorusu olmaz ve hiçbir şey kendiliğinden çalmaz. Bir kelimeyi duymak için 🔊 simgesine dokun, örneğin kulaklıkla.',
     soundOffToast: 'Sessiz. Sesi Ayarlar’dan açabilirsin.',
-    stillToDo: 'Bugün daha yapılacak',
+    stillToDo: 'Bugün yapılacaklar', // nieuw, nalezen (AI-correctie 2 nov 2026)
     streakStopped: 'Serin {n} günde durdu. Bugün yeniden başla.',
     recordN: 'Rekorun: {n} gün',
     workWeek: 'İş haftan',
@@ -171,9 +171,9 @@ const lang: HelpLanguageSource = {
     countHint: 'Uygulama derslerin kaç kez yapıldığını ve yaklaşık ne kadar sürdüğünü sayar. Ve uygulamada bir yerde hata olup olmadığını. İsim yok, hesap yok, takip yok.', // fout-zin nieuw, nalezen
     certificate: 'Sertifika',
     myCertificates: 'Sertifikalarım',
-    certsEmpty: 'Bir ünitenin tüm derslerini bitir. Sonra bir sertifika alırsın.',
+    certsEmpty: 'Bir konunun tüm derslerini bitir. Sonra bir sertifika alırsın.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certEarned: 'Sertifika kazandın!',
-    certEarnedHint: 'Bu ünitenin tüm derslerini bitirdin.',
+    certEarnedHint: 'Bu konunun tüm derslerini bitirdin.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certView: 'Gör',
     certLater: 'Sonra',
     certPrint: 'Yazdır veya PDF olarak kaydet',
@@ -337,15 +337,15 @@ const lang: HelpLanguageSource = {
     toetsMicKeep: 'Kaydın sadece bu telefonda kalır. Sonra kendini tekrar dinleyebilirsin.', // nieuw, nalezen
     toetsStartDone: 'İyi bir başlangıç! Bunları zaten biliyorsun.', // nieuw, nalezen
     toetsEndDone: 'Aferin! Şimdi neler bildiğine bak.', // nieuw, nalezen
-    toetsYouThen: 'Sen o zaman', // nieuw, nalezen
-    toetsYouNow: 'Sen şimdi', // nieuw, nalezen
+    toetsYouThen: 'O zamanki sen', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    toetsYouNow: 'Şimdiki sen', // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsKeepGoing: 'Her gün biraz çalış. Böylece gittikçe daha çok öğrenirsin.', // nieuw, nalezen
     toetsStart: 'Testi yap', // nieuw, nalezen
     toetsIdk: 'Bilmiyorum', // nieuw, nalezen
     toetsMore: 'Öncekinden fazla', // nieuw, nalezen
     toetsSame: 'Aşağı yukarı aynı', // nieuw, nalezen
-    toetsMoreAll: 'Hepsi birlikte: Şimdi öncekinden daha fazla biliyorsun.', // nieuw, nalezen
-    toetsSameAll: 'Hepsi birlikte: Aşağı yukarı öncekiyle aynı.', // nieuw, nalezen
+    toetsMoreAll: 'Genel olarak: Şimdi öncekinden daha fazla biliyorsun.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    toetsSameAll: 'Genel olarak: Aşağı yukarı öncekiyle aynı.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     tempo: 'Hız', // nieuw, nalezen
     tempoCalm: 'Sakin', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -390,7 +390,7 @@ const lang: HelpLanguageSource = {
     samenHear: 'Dinle', // nieuw, nalezen
     samenNext: 'Sonraki', // nieuw, nalezen
     samenTranslation: 'Çeviri', // nieuw, nalezen
-    samenEnd: 'Aferin! Rolleri değiştirip bir kez daha yapın?', // nieuw, nalezen
+    samenEnd: 'Aferin! Rolleri değiştirip bir kez daha yapmak ister misiniz?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     samenSwap: 'Rolleri değiştirin', // nieuw, nalezen
     samenStop: 'Bitti', // nieuw, nalezen
     checkStart: 'Bunu biliyorum: kısa kontrol', // nieuw, nalezen
@@ -402,7 +402,7 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Yine de dersleri yap', // nieuw, nalezen
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
     workTry: 'Bugün işte dene', // nieuw, nalezen
-    workTryWhen: 'Ne zaman:', // nieuw, nalezen
+    workTryWhen: 'Şu durumda:', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTryThen: 'O zaman şunu söyle:', // nieuw, nalezen
     colleagueCard: 'İş arkadaşın için', // nieuw, nalezen
     colleagueCardHint: 'Bunu Hollandaca konuşan bir iş arkadaşına göster. Pratik yapmana nasıl yardım edebileceği yazıyor.', // nieuw, nalezen

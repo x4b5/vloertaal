@@ -23,10 +23,10 @@ export const ar: CultureTranslation = {
   },
   gloss: {
     'be.theme.life': 'الحياة في بلجيكا', // nieuw, nalezen
-    'be.closing.advice': { m: 'معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'معلومات عامة. للوضع الشخصي: السؤال عند صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen // nagelezen AI ronde 3
-    'be.closing.abuse': { m: 'معلومات عامة. لوضعك أنت: اسأل النقابة أو justitiehuis (استشارة قانونية مجانية) أو Payoke.', f: 'معلومات عامة. لوضعك أنت: اسألي النقابة أو justitiehuis (استشارة قانونية مجانية) أو Payoke.', x: 'معلومات عامة. للوضع الشخصي: السؤال عند النقابة أو justitiehuis (استشارة قانونية مجانية) أو Payoke.' }, // nieuw, nalezen // nagelezen AI ronde 3
+    'be.closing.advice': { m: 'معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'be.closing.abuse': { m: 'معلومات عامة. لوضعك أنت: اسأل النقابة أو justitiehuis (استشارة قانونية مجانية) أو Payoke.', f: 'معلومات عامة. لوضعك أنت: اسألي النقابة أو justitiehuis (استشارة قانونية مجانية) أو Payoke.', x: 'معلومات عامة. للوضع الشخصي: يمكن سؤال النقابة أو justitiehuis (استشارة قانونية مجانية) أو Payoke.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.closing.advice.nl': { m: 'معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.', f: 'معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.' }, // nagelezen AI ronde 3
-    'be.closing.advice.nl2': 'معلومات عامة. للوضع الشخصي: السؤال عند صاحب العمل أو النقابة أو Juridisch Loket.',
+    'be.closing.advice.nl2': 'معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.closing.abuse.nl': { m: 'معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.', f: 'معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.' }, // nagelezen AI ronde 3
   },
 };
@@ -43,11 +43,11 @@ export const ti: CultureTranslation = {
   },
   gloss: {
     'be.theme.life': 'ህይወት ኣብ ቤልጅዩም', // nieuw, nalezen
-    'be.closing.advice': { m: 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተት።', f: 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቲ።', x: 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።' }, // nieuw, nalezen
-    'be.closing.abuse': { m: 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንማሕበር ሰራሕተኛታት፡ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ወይ ንPayoke ሕተት።', f: 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንማሕበር ሰራሕተኛታት፡ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ወይ ንPayoke ሕተቲ።', x: 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንማሕበር ሰራሕተኛታት፡ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ወይ ንPayoke ሕተቱ።' }, // nieuw, nalezen
-    'be.closing.advice.nl': { m: 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተት።', f: 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቲ።' }, // nagelezen AI ronde 3
-    'be.closing.advice.nl2': 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቱ።',
-    'be.closing.abuse.nl': { m: 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንማሕበር ሰራሕተኛታት፡ ንJuridisch Loket ወይ ንFairWork ሕተት።', f: 'ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንማሕበር ሰራሕተኛታት፡ ንJuridisch Loket ወይ ንFairWork ሕተቲ።' }, // nagelezen AI ronde 3
+    'be.closing.advice': { m: 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተት።', f: 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቲ።', x: 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'be.closing.abuse': { m: 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትካ፡ ንማሕበር ሰራሕተኛታት፡ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ወይ ንPayoke ሕተት።', f: 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኪ፡ ንማሕበር ሰራሕተኛታት፡ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ወይ ንPayoke ሕተቲ።', x: 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኩም፡ ንማሕበር ሰራሕተኛታት፡ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ወይ ንPayoke ሕተቱ።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'be.closing.advice.nl': { m: 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተት።', f: 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቲ።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'be.closing.advice.nl2': 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቱ።', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'be.closing.abuse.nl': { m: 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትካ፡ ንማሕበር ሰራሕተኛታት፡ ንJuridisch Loket ወይ ንFairWork ሕተት።', f: 'ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኪ፡ ንማሕበር ሰራሕተኛታት፡ ንJuridisch Loket ወይ ንFairWork ሕተቲ።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 
@@ -217,7 +217,7 @@ export const pt: CultureTranslation = {
     beTaalBeta: 'As lições belgas são novas e ainda não foram verificadas por um especialista.', // nieuw, nalezen
     whoLegalBe: 'Um primeiro conselho grátis de um advogado sobre o teu contrato, o teu salário ou um despedimento.', // nieuw, nalezen
     whoInspectionBe: 'Denuncia salário baixo demais ou trabalho sem contrato.', // nieuw, nalezen
-    whoExploitBe: { m: 'Estás a ser explorado no trabalho, ou achas que sim.', f: 'Estás a ser explorada no trabalho, ou achas que sim.', x: 'Estás a ser explorado/a no trabalho, ou achas que sim.' }, // nieuw, nalezen
+    whoExploitBe: { m: 'Estás a ser explorado no trabalho, ou achas que sim.', f: 'Estás a ser explorada no trabalho, ou achas que sim.', x: 'Alguém está a explorar-te no trabalho, ou achas que sim.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     whoUnionBe: 'Ajuda com o teu salário, o teu contrato ou quando o trabalho acaba. Os sócios recebem mais ajuda.', // nieuw, nalezen
     who1813Be: 'Pensas em pôr fim à vida, ou alguém te preocupa. Gratuito e anónimo.', // nieuw, nalezen
   },

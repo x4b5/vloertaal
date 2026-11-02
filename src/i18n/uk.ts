@@ -55,7 +55,7 @@ const lang: HelpLanguageSource = {
     whoInspection: 'Повідом про небезпечну роботу, замалу зарплату чи експлуатацію. Можна анонімно.',
     whoFairwork: 'Тебе експлуатують на роботі, або ти так думаєш.',
     who113: 'Ти думаєш про самогубство або хвилюєшся за когось. Безкоштовно, вдень і вночі.', // nieuw, nalezen
-    whoVeiligThuis: 'Насильство або кривда вдома, щодо тебе чи когось іншого. Безкоштовно, можна анонімно.', // nieuw, nalezen
+    whoVeiligThuis: 'Насильство або жорстоке поводження вдома, щодо тебе чи когось іншого. Безкоштовно, можна анонімно.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     settings: 'Налаштування',
     helpLanguage: 'Мова підказок',
     resetProgress: 'Скинути мій прогрес',
@@ -328,7 +328,7 @@ const lang: HelpLanguageSource = {
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'Що ти вже знаєш?', // nieuw, nalezen
     toetsOffer: 'Приблизно 10 хвилин. Оцінок немає. Це тільки для тебе.', // nieuw, nalezen
-    toetsEndOffer: { m: 'Ти багато навчився. Пройди тест ще раз і подивися, що ти знаєш тепер.', f: 'Ти багато навчилася. Пройди тест ще раз і подивися, що ти знаєш тепер.', x: 'Позаду багато навчання. Пройди тест ще раз і подивися, що ти знаєш тепер.' }, // nieuw, nalezen
+    toetsEndOffer: { m: 'Ти багато навчився. Пройди тест ще раз і подивися, що ти знаєш тепер.', f: 'Ти багато навчилася. Пройди тест ще раз і подивися, що ти знаєш тепер.', x: 'Уже багато вивчено. Пройди тест ще раз і подивися, що ти знаєш тепер.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsPartListen: 'Слухання', // nieuw, nalezen
     toetsPartWords: 'Слова', // nieuw, nalezen
     toetsPartSentences: 'Речення', // nieuw, nalezen
@@ -394,13 +394,13 @@ const lang: HelpLanguageSource = {
     samenSwap: 'Поміняйтеся ролями', // nieuw, nalezen
     samenStop: 'Готово', // nieuw, nalezen
     checkStart: 'Я це знаю: коротка перевірка', // nieuw, nalezen
-    checkPassed: 'Ти вже це знаєш. Позначити цю тему?', // nieuw, nalezen
+    checkPassed: 'Ти вже це знаєш. Позначити цю тему як пройдену?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     checkNoCert: 'Тоді сертифіката ще немає. Ти отримаєш його після уроків.', // nieuw, nalezen
     checkNotYet: 'Уроки допоможуть тобі з цією темою.', // nieuw, nalezen
     checkMark: 'Позначити', // nieuw, nalezen
     checkVia: 'через перевірку', // nieuw, nalezen
     checkUndo: 'Усе ж пройти уроки', // nieuw, nalezen
-    shareInvite: 'Я вчу нідерландську для роботи з Vloertaal. Безкоштовно: {link}', // nieuw, nalezen
+    shareInvite: 'Я вчу нідерландську для роботи за допомогою Vloertaal. Безкоштовно: {link}', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
     workTryWhen: 'Коли:', // nieuw, nalezen
     workTryThen: 'Тоді скажи:', // nieuw, nalezen
@@ -607,7 +607,7 @@ const lang: HelpLanguageSource = {
     'c.sick.a': 'Так, сьогодні я залишаюся вдома.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Дзвони 112!',
-    'p.hurt': { m: 'Я поранений.', f: 'Я поранена.', x: 'Я поранений / поранена.' },
+    'p.hurt': { m: 'Я поранений.', f: 'Я поранена.', x: 'У мене травма.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 
