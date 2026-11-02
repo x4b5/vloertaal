@@ -1935,7 +1935,7 @@ const shopUnit = unit('shop', 'In the shop', 'In de winkel', '🛒', '#2a9d8f', 
       ['schap', 'het schap', 'the shelf (in a shop)', '🗃️'],
       ['vakkenvullen', 'vakken vullen', 'to stock the shelves', '🥫'],
       ['voorraad', 'de voorraad', 'the stock', '📦'],
-      ['houdbaarheidsdatum', 'de houdbaarheidsdatum', 'the best-before date', '📅', false],
+      ['houdbaarheidsdatum', 'de houdbaarheidsdatum', 'the best-before date', '📅'],
       ['prijskaartje', 'het prijskaartje', 'the price tag', '🏷️'],
       ['achteraan', 'achteraan', 'at the back', '🔙', false],
     ],
@@ -2602,9 +2602,9 @@ const finishUnit = unit('finish', 'Finishing your work', 'Je werk afronden', '�
       ['nakijken', 'nakijken', 'to check (look at the work again)', '🔎', false],
       ['afmelden', 'afmelden', 'to sign off (say that you are done and leave)', '📣', false],
       ['kapot', 'kapot', 'broken', '🪫'],
-      ['opslot', 'op slot', 'locked', '🔐', false],
+      ['opslot', 'op slot', 'locked', '🔐'],
       // "de bijzonderheid" (B1) became "de deur", the door of the tip's "De deur zat op slot."; the id stays.
-      ['bijzonderheid', 'de deur', 'the door', '🚪', false],
+      ['bijzonderheid', 'de deur', 'the door', '🚪'],
     ],
     [
       ['Ik ruim mijn plek op.', 'I am tidying up my place.'],
@@ -2682,7 +2682,7 @@ const garageUnit = unit('garage', 'In the garage', 'In de garage', '🚗', '#1f6
       ['akkoord', 'akkoord', 'agreed, OK (you say yes to it)', '👌', false],
       ['kosten', 'de kosten', 'the costs (what you must pay)', '💰', false],
       ['repareren', 'repareren', 'to repair, to fix', '🔧'],
-      ['onderdeel', 'het onderdeel', 'the part (of a car or machine)', '⚙️', false],
+      ['onderdeel', 'het onderdeel', 'the part (of a car or machine)', '⚙️'],
     ],
     [
       ['Is de klant akkoord met de kosten?', 'Does the customer agree to the costs?'],
@@ -2720,7 +2720,7 @@ const stageUnit = unit('stage', 'Your work placement', 'Stage lopen', '🎒', '#
       ['leerdoel', 'het leerdoel', 'the learning goal (what you want to learn)', '🎯'],
       ['voorbeeld', 'het voorbeeld', 'the example', '🔍', false],
       ['portfolio', 'het portfolio', 'the portfolio (a folder with your work and proof)', '📁'],
-      ['cijfer', 'het cijfer', 'the mark, the grade', '🔟', false],
+      ['cijfer', 'het cijfer', 'the mark, the grade', '🔟'],
       ['verslag', 'het verslag', 'the report (a text about your work)', '🗞️', false],
     ],
     [
