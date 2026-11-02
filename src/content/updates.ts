@@ -17,6 +17,15 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-02',
+    items: [
+      'Bij de start kies je eerst de taal waarin je hulp krijgt. Spreek je al Nederlands? Kies dan onderaan de lijst, onder de streep, "Ik spreek al Nederlands" (Werkregels). De aparte vraag "Wat wil je leren?" is weg bij de start; wisselen kan nog bij Instellingen › Taal en ik.',
+      'De app staat nu altijd eerst in de lichte weergave, ook als je telefoon op donker staat. Liever donker? Kies het bij Instellingen.',
+      'Een kleine tikfout bij typen: je ziet nu "Bijna goed!", met een golflijn onder de fout in je eigen antwoord. De goede spelling staat er één keer. In de herhaling blijft zo\'n woord in zijn vak.',
+      'Gesprekje: is je antwoord goed, dan staat het niet nog eens in een kaart eronder. Bij een gesprekje andersom staat jouw antwoord als spreekballon in het gesprek.',
+    ],
+  },
+  {
     date: '2026-11-01',
     items: [
       'Na het antwoord is het scherm rustiger: de vraag gaat naar de achtergrond, en bij een goed antwoord staat het antwoord er niet nog eens onder als er niets bij te vertellen is. Een luidspreker die je mag gebruiken staat nu altijd rechts. De knop Doorgaan is na de eerste keer alleen een pijl.',
