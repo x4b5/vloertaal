@@ -549,7 +549,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.health',
     emoji: '⏸️',
     title: 'Breaks and working hours',
-    body: 'The law protects your health. Do you work more than 5.5 hours? Then you get at least 30 minutes of break (it may be 2 times 15 minutes). More than 10 hours? Then at least 45 minutes. A cao can have slightly different break rules. You may work at most 12 hours in one shift and 60 hours in one week. Under 18? Then you may work fewer hours. Your employer must give you protective equipment, like safety shoes or gloves, for free. Unsafe work or too little pay? You can report it to the Nederlandse Arbeidsinspectie, also without giving your name.',
+    body: 'The law protects your health. Do you work more than 5.5 hours? Then you get at least 30 minutes of break (it may be 2 times 15 minutes). More than 10 hours? Then at least 45 minutes. A cao can have slightly different break rules. You may work at most 12 hours in one shift and 60 hours in one week. Under 18? Then your maximum hours are lower. Your employer must give you protective equipment, like safety shoes or gloves, for free. Unsafe work or too little pay? You can report it to the Nederlandse Arbeidsinspectie, also without giving your name.',
     phrase: { id: 'c.health.p', nl: 'Ik heb nog geen pauze gehad.', en: 'I have not had a break yet.' },
     situation: { id: 'c.health.s', en: 'You have worked 6 hours without a break. Your supervisor asks you to keep going. What do you do?' },
     options: [

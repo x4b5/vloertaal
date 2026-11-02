@@ -70,7 +70,7 @@ export const KUN_TAAL: KunOnderwerp[] = [
   ]),
   onderwerp('u.tools', 'Slimme hulpmiddelen', [
     ['Ik kan vragen of iemand het opschrijft of laat zien.', 'A1', 'spreken', 'I can ask someone to write it down or show me.'],
-    ['Ik kan een opdracht herhalen om te checken.', 'A2', 'gesprekken', 'I can repeat a task to check I understood.'],
+    ['Ik kan een opdracht herhalen om te checken.', 'A2', 'gesprekken', 'I can repeat an instruction to check I understood.'],
     ['Ik kan zeggen dat ik Nederlands wil oefenen.', 'A1', 'gesprekken', 'I can say that I want to practise Dutch.'],
   ]),
   onderwerp('u.data', 'Getallen en gegevens', [
