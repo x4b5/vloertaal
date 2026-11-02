@@ -1309,6 +1309,20 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
   background: var(--bg); border-top: 2px solid var(--edge);
 }
+/* More languages below the line: the cards fade out above it, and a round arrow sits on the line
+   (it bobs twice on arrival; still with "Rustig scherm" or the phone's less motion). */
+.onb-nl-dock.has-more::before {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 100%; height: 40px; margin-bottom: 2px;
+  background: linear-gradient(to bottom, transparent, var(--bg)); pointer-events: none;
+}
+.onb-more {
+  position: absolute; left: 50%; top: 0; z-index: 1; translate: -50% calc(-75% - 1px);
+  display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border-radius: 50%;
+  background: var(--card); color: var(--ink); border: 2px solid var(--edge); cursor: pointer;
+  animation: more-bob 0.9s 0.6s ease-in-out 2;
+}
+@keyframes more-bob { 50% { transform: translateY(5px); } }
+@media (prefers-reduced-motion: reduce) { .onb-more { animation: none; } }
 /* In the band: one line for the name, so the languages keep most of the screen. */
 .onb-nl-dock .lang-btn-nl { min-height: 0; padding: 10px 14px; }
 .onb-nl-dock .lang-native { font-size: 1.15rem; overflow-wrap: normal; }
@@ -3996,6 +4010,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   .onb-lang-list { padding-top: calc(16px + env(safe-area-inset-top)); padding-bottom: 12px; }
   .onb-lang-list .onb-nl-dock { margin-bottom: calc(-12px - env(safe-area-inset-bottom)); padding-top: 8px; padding-bottom: calc(8px + env(safe-area-inset-bottom)); }
   .onb-lang-list .lang-btn-nl { padding: 8px 10px; }
+  .onb-lang-list .onb-nl-dock.has-more { padding-top: 14px; }
   .onb-lang-list .lang-nl-more { display: none; }
   .onb-lang-list .hero-logo .wordmark { font-size: 1.9rem; }
   .onb-lang-list .tagline { margin-top: 2px; font-size: 0.95rem; }
