@@ -98,23 +98,22 @@ describe('the work-rules track renders in Dutch only', () => {
 describe('the language list', () => {
   const count = (m: string) => (m.match(/class="lang-btn/g) ?? []).length;
 
-  it('offers "Nederlands – ik spreek al Nederlands" only while RULES_TRACK is on', () => {
+  it('offers "Ik spreek al Nederlands" only while RULES_TRACK is on', () => {
     setRulesTrack(false);
     const off = html(createElement(LanguagePicker, { onPick: () => {} }));
     expect(count(off)).toBe(14);
-    expect(off).not.toContain('ik spreek al Nederlands');
+    expect(off).not.toContain('Ik spreek al Nederlands');
     setRulesTrack(true);
-    // Since 31 October 2026 the work-rules track is a route of its own (RoutePage, Settings ›
-    // "Wat wil je leren?"): the list shows it only when asked to (rules).
+    // The first run's list shows it (rules); Settings has "Wat wil je leren?" for it.
     expect(count(html(createElement(LanguagePicker, { onPick: () => {} })))).toBe(14);
     const on = html(createElement(LanguagePicker, { onPick: () => {}, rules: true }));
     expect(count(on)).toBe(15);
-    expect(on).toMatch(/lang="nl"[^>]*>.*Nederlands.*ik spreek al Nederlands/);
+    expect(on).toMatch(/lang="nl"[^>]*>.*Ik spreek al Nederlands/);
     // The very last, after English and under a line, with the word "Werkregels": another part of
     // the app, not one more help language.
     expect(on.indexOf('>English<')).toBeLessThan(on.indexOf('lang-sep'));
-    expect(on.indexOf('lang-sep')).toBeLessThan(on.indexOf('ik spreek al Nederlands'));
-    expect(on).toMatch(/lang-btn-nl[\s\S]*Werkregels[\s\S]*Nederlands/);
+    expect(on.indexOf('lang-sep')).toBeLessThan(on.indexOf('Ik spreek al Nederlands'));
+    expect(on).toMatch(/lang-btn-nl[\s\S]*Werkregels[\s\S]*Ik spreek al Nederlands/);
     expect(off).not.toContain('lang-sep');
   });
 

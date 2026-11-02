@@ -175,8 +175,6 @@ function defineStates(LANG) {
   // Onboarding (shots), one question per page: language -> gender (gendered languages) -> password
   // -> sector (2 steps: a list of the kinds of work and "Weet ik nog niet", the list exception; then
   // the three sectors of a group). The password page: the field, Unlock and "Try one lesson first".
-  add('onb:route', shot('language&route=1', null)); // the first page: "Wat wil je leren?" (two cards)
-  add('onb:route-guess', shot(`language&route=1&guess=${LANG}`, null)); // the same, with the phone's language
   add('onb:language', shot('language', null), null, { list: true }); // no guess from the phone: the list
   add('onb:language-guess', shot(`language&guess=${LANG}`, null)); // "Polski?" [Yes] [Other language]
   add('onb:language-list', shot(`language&guess=${LANG}&list=1`, null), null, { list: true, expect: '.chrome-back' }); // the list, with Back
@@ -200,19 +198,19 @@ function defineStates(LANG) {
     await p.evaluate(([x, lang]) => { localStorage.setItem('vloertaal.access', 'full'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, ...x })); }, [extra, LANG]);
     await p.reload(); await settle(p, 900);
   };
-  // The real first page is the language (since 1 November 2026); then "Wat wil je leren?" in that
-  // language, where "Nederlands leren" goes on.
+  // The real first page is the language (since 1 November 2026); "Ik spreek al Nederlands" is the
+  // last card of the list (since 2 November 2026; before, a page "Wat wil je leren?" followed).
   const toLangs = async () => {};
-  const pickLang = async (p, name) => { await tapText(p, 'button', name); await settle(p); await tap(p, '.route-page .max3-card', 0); await settle(p); };
+  const pickLang = async (p, name) => { await tapText(p, 'button', name); await settle(p); };
   add('flow:language', '/', toLangs, { list: true });
-  add('flow:route', '/', async (p) => { await tapText(p, 'button', NATIVE[LANG] ?? 'Polski'); await settle(p); }, { expect: '.route-page .chrome-back' });
+  add('flow:lang-list', '/', async (p) => { if (await p.$('.lang-guess')) { await tap(p, '.lang-guess .max3-card', 1); await settle(p); } }, { list: true, expect: '.onb-lang-list .lang-btn-nl' });
   // The language picked: "Woman or man?" first for a help language with gender, then the password.
   const toGate = async (p) => { await pickLang(p, NATIVE[LANG] ?? 'Polski'); if (gendered) { await tap(p, '.gender-btn', 1); await settle(p); } };
   add('flow:gate', '/', toGate, { expect: '.pw-input' });
   add('flow:gate-tr', '/', async (p) => { await pickLang(p, 'Türkçe'); }, { expect: '.pw-input' });
-  // The password page's back arrow and the phone's Back go one page back (gender or the route page).
-  add('flow:gate-back', '/', async (p) => { await toGate(p); await tap(p, '.chrome-back'); await settle(p); }, gendered ? { expect: '.gender-screen' } : { expect: '.route-page' });
-  add('flow:gate-phone-back', '/', async (p) => { await toGate(p); await p.goBack(); await settle(p); }, gendered ? { expect: '.gender-screen' } : { expect: '.route-page' });
+  // The password page's back arrow and the phone's Back go one page back (gender or the language list).
+  add('flow:gate-back', '/', async (p) => { await toGate(p); await tap(p, '.chrome-back'); await settle(p); }, gendered ? { expect: '.gender-screen' } : { list: true, expect: '.onb-lang-list' });
+  add('flow:gate-phone-back', '/', async (p) => { await toGate(p); await p.goBack(); await settle(p); }, gendered ? { expect: '.gender-screen' } : { list: true, expect: '.onb-lang-list' });
   // "No code? Start with the first lessons": the sneak preview without a code, on to the sector;
   // back from there, the password page again (still with the button, no code shown as accepted).
   add('flow:free-sector', '/', async (p) => { await toGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { list: true, expect: '.sector-groups' });
@@ -220,7 +218,7 @@ function defineStates(LANG) {
   if (gendered) {
     // Right after the language: "Woman or man?", with the back arrow to the language.
     add('flow:gender', '/', firstRun({}), { expect: '.gender-screen .chrome-back' });
-    add('flow:gender-back', '/', async (p) => { await firstRun({})(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.route-page' });
+    add('flow:gender-back', '/', async (p) => { await firstRun({})(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.onb-lang-list' });
   }
   add('flow:sector', '/', firstRun({ gender: 'm' }), { list: true, expect: '.sector-groups' });
   // Back from the sector: the password page with the accepted code kept (not cleared).
@@ -804,13 +802,14 @@ function defineRuleStates() {
     await p.evaluate((x) => { localStorage.setItem('vloertaal.access', 'full'); localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: 'nl', country: 'nl', ...x })); }, extra);
     await p.reload(); await settle(p, 900);
   };
-  // "Ik spreek al Nederlands" on the route page (since 31 October 2026; before: the last row of the language list).
-  const toNlGate = async (p) => { await tap(p, '.route-page .max3-card', 1); await settle(p); };
-  add('flow:nl-language', RULES, null, { expect: '.route-page' });
+  // "Ik spreek al Nederlands": the last card of the language list (since 2 November 2026).
+  const toNlList = async (p) => { if (await p.$('.lang-guess')) { await tap(p, '.lang-guess .max3-card', 1); await settle(p); } };
+  const toNlGate = async (p) => { await toNlList(p); await tap(p, '.lang-btn-nl'); await settle(p); };
+  add('flow:nl-language', RULES, toNlList, { list: true, expect: '.lang-btn-nl' });
   add('flow:nl-gate', RULES, toNlGate, { expect: '.pw-input' });
-  // Back from the code page: the route page (Dutch has no gender page in between).
-  add('flow:nl-gate-back', RULES, async (p) => { await toNlGate(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.route-page' });
-  add('flow:nl-gate-phone-back', RULES, async (p) => { await toNlGate(p); await p.goBack(); await settle(p); }, { expect: '.route-page' });
+  // Back from the code page: the language list (Dutch has no gender page in between).
+  add('flow:nl-gate-back', RULES, async (p) => { await toNlGate(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.onb-lang-list' });
+  add('flow:nl-gate-phone-back', RULES, async (p) => { await toNlGate(p); await p.goBack(); await settle(p); }, { list: true, expect: '.onb-lang-list' });
   // Without a code: the sneak preview of the track, on to the sector.
   add('flow:nl-free-sector', RULES, async (p) => { await toNlGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { list: true, expect: '.sector-groups' });
   add('flow:nl-sector', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); }, { list: true, expect: '.sector-groups' });
