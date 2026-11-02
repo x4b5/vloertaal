@@ -1296,11 +1296,24 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .wordmark { font-family: 'Lexend Variable', 'Lexend', system-ui, sans-serif; font-weight: 700; color: var(--ink-strong); letter-spacing: -0.02em; }
 .wordmark-dot { color: #ffc414; }
 /* "Nederlands" in the language list: what the work-rules track teaches (src/i18n/meta.ts NL_MORE). */
-/* "Ik spreek al Nederlands" is the work-rules track, not a help language: last, under a line, on the whole
-   width, in the kraft colour of the labels, with the word "Werkregels" as a small tag. */
-.lang-sep { grid-column: 1 / -1; height: 0; margin: 10px 0 6px; border-top: 2px solid var(--edge); }
-.lang-btn.lang-btn-nl { grid-column: 1 / -1; background: color-mix(in srgb, var(--kraft-light) 55%, var(--card)); border-color: var(--kraft); }
-.lang-btn.lang-btn-nl.picked { border-color: var(--edge-strong); background: color-mix(in srgb, var(--kraft-light) 80%, var(--card)); }
+/* "Ik spreek al Nederlands" is the work-rules track, not a help language: in the kraft colour of
+   the labels, with the word "Werkregels" as a small tag. */
+.lang-btn.lang-btn-nl { width: 100%; flex-direction: row; align-items: center; gap: 12px; background: color-mix(in srgb, var(--kraft-light) 55%, var(--card)); border-color: var(--kraft); text-align: start; }
+.lang-btn-nl .lang-names { flex: 1; min-width: 0; }
+/* First run: the card stays at the bottom of the screen, under a line, while the languages scroll
+   above it. The negative margins cancel the screen's side and bottom padding, so the band spans
+   the width and sits on the bottom edge (above the phone's home bar). */
+.onb-nl-dock {
+  position: sticky; bottom: 0; z-index: 2;
+  margin: 16px -16px calc(-48px - env(safe-area-inset-bottom));
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: var(--bg); border-top: 2px solid var(--edge);
+}
+/* In the band: one line for the name, so the languages keep most of the screen. */
+.onb-nl-dock .lang-btn-nl { min-height: 0; padding: 10px 14px; }
+.onb-nl-dock .lang-native { font-size: 1.15rem; overflow-wrap: normal; }
+.onb-nl-dock .lang-nl-tag { margin-bottom: 2px; }
+.onb-nl-dock .lang-nl-more { margin-top: 2px; }
 .lang-nl-tag {
   display: inline-block; align-self: flex-start; margin-bottom: 4px; padding: 2px 8px; border-radius: 4px;
   background: var(--tag-bg); color: var(--tag-ink); font-size: 0.75rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase;
@@ -3981,6 +3994,9 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* The language list fits a 360 x 640 phone without scrolling: tighter rows and head. */
 @media (max-height: 700px) {
   .onb-lang-list { padding-top: calc(16px + env(safe-area-inset-top)); padding-bottom: 12px; }
+  .onb-lang-list .onb-nl-dock { margin-bottom: calc(-12px - env(safe-area-inset-bottom)); padding-top: 8px; padding-bottom: calc(8px + env(safe-area-inset-bottom)); }
+  .onb-lang-list .lang-btn-nl { padding: 8px 10px; }
+  .onb-lang-list .lang-nl-more { display: none; }
   .onb-lang-list .hero-logo .wordmark { font-size: 1.9rem; }
   .onb-lang-list .tagline { margin-top: 2px; font-size: 0.95rem; }
   .onb-lang-list .onboarding-title { margin: 12px 0 2px; font-size: 1.2rem; }

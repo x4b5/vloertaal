@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { afterEach, describe, expect, it } from 'vitest';
 import { GenderPicker, GenderScreen } from '../src/components/Gender';
 import { Route } from '../src/components/Route';
-import { BottomNav, LanguagePicker, TopBar } from '../src/components/Screens';
+import { BottomNav, LanguagePicker, Onboarding, TopBar } from '../src/components/Screens';
 import { Settings, type SettingsPage } from '../src/components/Settings';
 import { ChromeBack } from '../src/components/ChromeBack';
 import { getHelpLanguage } from '../src/i18n/all';
@@ -39,8 +39,9 @@ describe('choice screens: a named group, the choice read out', () => {
 
   it('"Nederlands" (Werkregels): the line above it is decoration, the card says Werkregels in Dutch', () => {
     setRulesTrack(true);
-    const m = html(createElement(LanguagePicker, { onPick: () => {}, rules: true }));
-    expect(m).toContain('<span class="lang-sep" aria-hidden="true"></span>');
+    const m = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
+    // The line above it is the band's border (CSS): nothing for a screen reader.
+    expect(m).not.toContain('lang-sep');
     const card = /<button[^>]*class="lang-btn lang-btn-nl[^"]*"[^>]*>/.exec(m)?.[0] ?? '';
     expect(card).toContain('lang="nl"');
     expect(m).toMatch(/lang-btn-nl[\s\S]*<span class="lang-nl-tag">Werkregels<\/span>/);
