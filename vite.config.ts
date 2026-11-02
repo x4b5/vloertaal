@@ -9,6 +9,7 @@ import { UPCOMING, UPDATES } from './src/content/updates';
 import { updatesPage } from './src/lib/updatesPage';
 import { INTRO_QUESTIONS } from './src/content/intro';
 import { introPage } from './src/lib/introPage';
+import { THEME_BAR } from './src/lib/theme';
 import { hreflangLinks, LANG_PAGES, langPage } from './src/lib/langPages';
 import { askPage, coachPage } from './src/lib/coachPage';
 import { rulesPage, SECTOR_PAGES, sectorPage } from './src/lib/sectorPages';
@@ -95,8 +96,9 @@ export function bootPreloadScript(bundle: Record<string, { type: string; fileNam
   // Also the learner's look and text size, before the first paint (src/lib/theme.ts and
   // textSize.ts again, small): a dark theme must not flash light while the app file loads, and a
   // new visitor on a dark phone gets light at once (light is the default, src/lib/progress.ts).
-  // Light unless the save says dark, or "follow the phone" chosen since light became the default.
-  const look = `var d=document.documentElement,q=p||{},t=q.theme==='dark'?'dark':q.theme==='auto'&&q.themeVersion===3?'auto':'light';if(t==='auto'){delete d.dataset.theme}else{d.dataset.theme=t;document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute('content',t==='dark'?'#16191c':'#f3ede3')})}if(q.textSize==='large'||q.textSize==='xl')d.dataset.text=q.textSize`;
+  // The saved colour (Zand = light unless the save says otherwise); before themeVersion 3 only
+  // dark survives, and "follow the phone" only when chosen since light became the default.
+  const look = `var d=document.documentElement,q=p||{},B=${JSON.stringify(THEME_BAR)},v=q.themeVersion===3,t=v&&q.theme==='auto'?'auto':v&&B.hasOwnProperty(q.theme)?q.theme:q.theme==='dark'?'dark':'light';if(t==='auto'){delete d.dataset.theme}else{d.dataset.theme=t;document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute('content',B[t])})}if(q.textSize==='large'||q.textSize==='xl')d.dataset.text=q.textSize`;
   return `<script>try{var p=JSON.parse(localStorage.getItem('vloertaal:v1')||'null'),f=${JSON.stringify(packs)},a=function(h){if(!h)return;var l=document.createElement('link');l.rel='modulepreload';l.href=h;document.head.appendChild(l)};${look};if(p&&p.onboarded){a(f[p.helpLang]);a(${JSON.stringify(pictures)})}}catch(e){}</script>`;
 }
 

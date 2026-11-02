@@ -27,11 +27,16 @@ export interface LessonRecord {
   check?: string;
 }
 
-export type ThemeChoice = 'auto' | 'light' | 'dark';
+/** The look: a colour picked in Settings > Weergave (light = "Zand", the default), or 'auto'
+ *  (zand or dark as the device says; still in older saves, no longer offered). */
+export type ThemeChoice = 'auto' | 'light' | 'haven' | 'werkjas' | 'dark';
+/** The four colours in Settings, in this order. */
+export const THEME_COLOURS = ['light', 'haven', 'werkjas', 'dark'] as const;
+const isThemeChoice = (t: unknown): t is ThemeChoice => t === 'auto' || (THEME_COLOURS as readonly unknown[]).includes(t);
 
 export interface Progress {
   onboarded: boolean;
-  /** 'auto' follows the device setting; light is the default. */
+  /** The colour (Settings > Weergave); light (Zand) is the default, 'auto' follows the device. */
   theme: ThemeChoice;
   /** 2 = saved after light became the default (see loadProgress). */
   themeVersion?: number;
@@ -184,6 +189,8 @@ export function loadProgress(): Progress {
       }
       // Saved before the automatic default for new learners: they had light, and keep it.
       if (saved.theme === undefined) saved.theme = 'light';
+      // A colour this version does not know (a newer save on an older app): the default.
+      if (!isThemeChoice(saved.theme)) saved.theme = 'light';
       // Older saves have no sector (asked once after the password); drop anything unknown.
       if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
       if (saved.region !== undefined && !isRegionChoice(saved.region)) delete saved.region;

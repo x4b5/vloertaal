@@ -82,7 +82,9 @@ export const uiNl: Record<UiKey, UiText> = {
   slow: 'Langzaam',
   theme: 'Weergave',
   themeAuto: 'Automatisch',
-  themeLight: 'Licht',
+  themeSand: 'Zand',
+  themeHarbour: 'Haven',
+  themeWorkwear: 'Werkjas',
   themeDark: 'Donker',
   voice: 'Voorleesstem', // regels: the voice reads the rules aloud
   voiceAuto: 'Automatisch',

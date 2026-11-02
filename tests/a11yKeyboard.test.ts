@@ -36,7 +36,7 @@ describe('the focus ring', () => {
     expect(css).toMatch(/:focus-visible \{ outline: 3px solid var\(--focus\); outline-offset: 3px; \}/);
   });
 
-  for (const [theme, head] of [['light', ':root {'], ['dark (device)', ":root:not([data-theme='light']) {"], ['dark (picked)', ":root[data-theme='dark'] {"]] as const) {
+  for (const [theme, head] of [['light', ':root {'], ['dark (device)', ":root:not([data-theme]) {"], ['dark (picked)', ":root[data-theme='dark'] {"]] as const) {
     it(`has 3:1 or more against the floor and a card in ${theme}`, () => {
       const focus = color(head, 'focus');
       expect(focus).toMatch(/^#[0-9a-f]{6}$/i);

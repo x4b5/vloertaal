@@ -14,7 +14,7 @@ import { countingOn, setCounting } from '../lib/count';
 import { applyEnglish, setWantsEnglish, wantsEnglish } from '../lib/english';
 import { installWay } from '../lib/install';
 import { offlineAuto, offlineSupported } from '../lib/offline';
-import type { Country, Progress, ThemeChoice } from '../lib/progress';
+import { THEME_COLOURS, type Country, type Progress, type ThemeChoice } from '../lib/progress';
 import { REMINDER_TIMES, reminderTapAdds, reminderTime } from '../lib/reminder';
 import {
   settingsDepth, settingsRows, SETTINGS_LIST_PAGES, voiceChoiceOf, voiceRefs,
@@ -42,7 +42,7 @@ import { UpgradeCard } from './Gate';
 import { GenderPicker, NeutralIcon } from './Gender';
 import {
   AlertIcon, AutoThemeIcon, CalendarIcon, CheckIcon, ChevronIcon, CloseIcon, CrateIcon, GlobeIcon, KeyboardIcon,
-  LettersIcon, LockIcon, MoonIcon, PencilIcon, RouteIcon, SpeakerIcon, SpeakerOffIcon, SunIcon,
+  LettersIcon, LockIcon, PencilIcon, RouteIcon, SpeakerIcon, SpeakerOffIcon,
 } from './Icons';
 import { BackupCard, ClockGlyph, InstallCard, OwnTime, addReminder, remindAddedKey, remindStoppedKey, stopReminder } from './Keep';
 import { DownloadIcon, OfflineSettingCard } from './Offline';
@@ -109,8 +109,9 @@ const tempoChoiceOf = (p: Progress): TempoChoice => (fasterOn(p) ? 'faster' : te
 const TextA = ({ size }: { size: TextSize }) => <span className={`text-size-a text-size-${size}`} aria-hidden>A</span>;
 
 const TEXT_KEYS = { normal: 'textNormal', large: 'textLarge', xl: 'textXl' } as const;
-const THEME_KEYS = { auto: 'themeAuto', light: 'themeLight', dark: 'themeDark' } as const;
-const THEME_ICONS = { auto: AutoThemeIcon, light: SunIcon, dark: MoonIcon };
+const THEME_KEYS = { auto: 'themeAuto', light: 'themeSand', haven: 'themeHarbour', werkjas: 'themeWorkwear', dark: 'themeDark' } as const;
+/** A colour as a round swatch of its floor and its strong colour: no words needed to choose. */
+const ThemeSwatch = ({ theme }: { theme: (typeof THEME_COLOURS)[number] }) => <span className={`theme-swatch theme-swatch-${theme}`} aria-hidden />;
 const CALM_KEYS = { auto: 'calmAuto', on: 'settingOn', off: 'settingOff' } as const;
 /** "Rustig scherm": a line that settles (a wave that becomes still). */
 const CalmIcon = ({ size = 24, still }: { size?: number; still?: boolean }) => (
@@ -627,12 +628,10 @@ export function Settings({
         return (
           <ChoiceCards
             label={said(ui('theme', lang))}
-            current={progress.theme}
+            // 'auto' (an older save) is shown as the colour it gives on this device now.
+            current={progress.theme === 'auto' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : progress.theme}
             onPick={(t) => { onTheme(t); answered(); }}
-            options={(['auto', 'light', 'dark'] as const).map((t) => {
-              const Icon = THEME_ICONS[t];
-              return { id: t, text: say(THEME_KEYS[t]), picture: <Icon size={28} /> };
-            })}
+            options={THEME_COLOURS.map((t) => ({ id: t, text: say(THEME_KEYS[t]), picture: <ThemeSwatch theme={t} /> }))}
           />
         );
       case 'calm':

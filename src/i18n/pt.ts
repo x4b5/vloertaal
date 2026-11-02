@@ -9,7 +9,9 @@ const lang: HelpLanguageSource = {
   ui: {
     theme: 'Aspeto',
     themeAuto: 'Automático',
-    themeLight: 'Claro',
+    themeSand: 'Areia', // nieuw, nalezen
+    themeHarbour: 'Porto', // nieuw, nalezen
+    themeWorkwear: 'Casaco de trabalho', // nieuw, nalezen
     themeDark: 'Escuro',
     voice: 'Voz neerlandesa',
     voiceAuto: 'Automática',
