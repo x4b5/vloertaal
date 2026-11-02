@@ -380,6 +380,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'Наступний урок трохи коротший.', // nieuw, nalezen
     fasterSetting: 'Вчитися швидше', // nieuw, nalezen
     fasterSettingHint: 'Увімкнено: менше пояснень у нових уроках і нідерландська у звичайному темпі. Вимкнено: як раніше.', // nieuw, nalezen
+    tempoFasterHint: 'Вчитися швидше: менше пояснень у нових уроках і нідерландська у звичайному темпі.', // nieuw, nalezen
     samenTitle: 'Вправляйтеся разом', // nieuw, nalezen
     samenRowHint: 'Двоє людей, один телефон', // nieuw, nalezen
     samenIntro: 'Вправляйся з колегою, другом або вчителем. Читайте по черзі.', // nieuw, nalezen

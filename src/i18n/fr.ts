@@ -380,6 +380,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'La prochaine leçon est un peu plus courte.', // nieuw, nalezen
     fasterSetting: 'Apprendre plus vite', // nieuw, nalezen
     fasterSettingHint: 'Activé : moins d’explications dans les nouvelles leçons et le néerlandais à vitesse normale. Désactivé : comme avant.', // nieuw, nalezen
+    tempoFasterHint: 'Apprendre plus vite : moins d’explications dans les nouvelles leçons et le néerlandais à vitesse normale.', // nieuw, nalezen
     samenTitle: 'S’entraîner à deux', // nieuw, nalezen
     samenRowHint: 'Deux personnes, un téléphone', // nieuw, nalezen
     samenIntro: 'Entraîne-toi avec un collègue, un ami ou un professeur. Lisez chacun votre tour.', // nieuw, nalezen

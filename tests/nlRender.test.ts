@@ -78,7 +78,7 @@ describe('the work-rules track renders in Dutch only', () => {
     expect(settingsRows('lessons', rules)).toEqual(['sound', 'voice', 'text', 'theme', 'calm']);
     // The Dutch course keeps its rows.
     expect(settingsRows('me', { ...rules, rules: false, gender: true })).toEqual(['language', 'gender', 'sector', 'country', 'english', 'certificates', 'kaart']);
-    expect(settingsRows('lessons', { ...rules, rules: false })).toEqual(['sound', 'voice', 'tempo', 'faster', 'speaking', 'writing', 'text', 'theme', 'calm', 'toets']);
+    expect(settingsRows('lessons', { ...rules, rules: false })).toEqual(['sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'calm', 'toets']);
   });
 
   it('a yes/no page has one Dutch line per card', () => {

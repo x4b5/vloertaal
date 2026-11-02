@@ -380,6 +380,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'Lecția următoare e puțin mai scurtă.', // nieuw, nalezen
     fasterSetting: 'Învață mai repede', // nieuw, nalezen
     fasterSettingHint: 'Pornit: mai puține explicații în lecțiile noi și olandeza în ritm normal. Oprit: ca înainte.', // nieuw, nalezen // nagelezen AI 31 okt
+    tempoFasterHint: 'Învață mai repede: mai puține explicații în lecțiile noi și olandeza în ritm normal.', // nieuw, nalezen
     samenTitle: 'Exersați împreună', // nieuw, nalezen
     samenRowHint: 'Două persoane, un telefon', // nieuw, nalezen
     samenIntro: 'Exersează cu un coleg, un prieten sau un profesor. Citiți pe rând.', // nieuw, nalezen

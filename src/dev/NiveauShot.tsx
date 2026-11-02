@@ -16,7 +16,7 @@ import { dailyLesson, speakCardId } from '../lib/spaced';
  *  - &state=easier: the result after many mistakes, with "De volgende les is wat korter.";
  *  - &state=daily&at=N: today's review with two sentence cards to build and a spoken sentence
  *    (&at= the step; the first build is at the number of words + 2).
- * Settings › Lessen › Sneller leren: /?shot=settings&page=faster.
+ * Settings › Lessen › Tempo (Rustig, Normaal, Sneller leren): /?shot=settings&page=tempo.
  */
 export function NiveauShot({ lang, gender, q }: { lang: string | null; gender?: Gender; q: URLSearchParams }) {
   const l = getHelpLanguage(lang as LangCode, gender);
