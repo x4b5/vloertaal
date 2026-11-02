@@ -22,7 +22,7 @@ De privacyverklaring op vloertaal.nl/privacy (`src/lib/privacyPage.ts`) zegt pre
 | Herinnering | `src/lib/reminder.ts` | Alleen als de leerling Google Agenda kiest |
 | Code op de begeleiderskaart | `src/lib/groepCode.ts`, `src/lib/kaart.ts` | Nee: alleen de getallen van de kaart, zonder naam. Gaat mee in de deeltekst als de leerling de kaart zelf deelt |
 | Groepsoverzicht `/groep/` | `src/lib/groepPage.ts`, `src/lib/groep.ts` | Nee: rekent in de browser van de begeleider. De eigen CSP verbiedt elke verbinding (`connect-src 'none'`). Bewaart niets |
-| Hosting | Vercel (VS) | IP-adres bij elk verzoek, zoals bij elke website |
+| Hosting | statichost.eu (Zweden; servers in Duitsland en Slovenië, sinds 2 nov 2026; daarvoor Vercel, VS) | IP-adres bij elk verzoek, zoals bij elke website; niet bewaard |
 
 **Tellen gebeurt nooit:**
 - als "Anoniem meetellen" uit staat;
