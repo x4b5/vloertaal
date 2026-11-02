@@ -49,7 +49,9 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     // them "het aantal" and "klaarleggen" (l.workorder), "nakijken" and "op slot" (l.handover),
     // "onder spanning" (l.power), "de POK" (l.placement), all six of l.mychoice and l.nextstep, "de
     // bedenktijd" (l.budget), "somber" (l.healthy) and "de verkiezing" (l.council).
-    for (const id of ['w.aantal', 'w.klaarleggen', 'w.nakijken', 'w.opslot', 'w.onderspanning', 'w.pok', 'w.goedin', 'w.startkwalificatie', 'w.bedenktijd', 'w.somber', 'w.verkiezing']) expect(abstract).toContain(id);
+    for (const id of ['w.aantal', 'w.klaarleggen', 'w.nakijken', 'w.onderspanning', 'w.pok', 'w.goedin', 'w.startkwalificatie', 'w.bedenktijd', 'w.somber', 'w.verkiezing']) expect(abstract).toContain(id);
+    // 2 November 2026: five of them are one plain thing and got a simple drawing (src/pictures/group33.tsx).
+    for (const id of ['w.opslot', 'w.bijzonderheid', 'w.onderdeel', 'w.cijfer', 'w.houdbaarheidsdatum']) expect(abstract).not.toContain(id);
     // 199 (30 October 2026, group26): ten of them were concrete after all and got a drawing: "het
     // hoofd", "de rug", "de buik" (l.body), "slijpen", "de kabel", "de stroom", "de hefbrug", "lek",
     // "kapot" and "de rechter".
@@ -58,7 +60,9 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     // in a warm tint): the six of l.dates, "het weekend", "zaterdag", "overmorgen" and "elke dag".
     const weekWords = ['w.week', 'w.weekend', 'w.maandag', 'w.zaterdag', 'w.elkedag', 'w.totenmet', 'w.volgendeweek', 'w.vorigeweek', 'w.overmorgen', 'w.maand'];
     for (const id of weekWords) expect(abstract).not.toContain(id);
-    expect(abstract.length).toBe(189);
+    // 184 (2 November 2026, group33): "de deur", "op slot", "het onderdeel", "het cijfer" and "de
+    // houdbaarheidsdatum" got a simple drawing.
+    expect(abstract.length).toBe(184);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).
