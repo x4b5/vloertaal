@@ -96,15 +96,20 @@ async function buildRight(page, wrongFirst = 0) {
   // The sentence (its speaker is held back until a wrong tap, so read it from the exercise).
   const label = await page.locator('.build-steps[data-nl]').first().getAttribute('data-nl');
   const words = label.replace(/[.,!?]/g, '').split(/\s+/).filter(Boolean);
+  // Wrong taps on DIFFERENT tiles (the same wrong tile again counts once, src/components/Exercises.tsx):
+  // as many as a step has, the rest on the next word.
+  let left = wrongFirst;
   for (const [k, w] of words.entries()) {
     const tiles = page.locator('.tile-steps .tile-with-say:not([disabled])');
     const n = await tiles.count();
     const texts = [];
     // Without soft hyphens (long compounds, src/lib/dutch.ts breakable).
     for (let i = 0; i < n; i++) texts.push((await tiles.nth(i).innerText()).replace(/[.,!?\u00ad]/g, '').trim());
-    if (wrongFirst && k === 0) {
+    if (left > 0) {
       const wrong = texts.map((t, j) => (t.toLowerCase() !== w.toLowerCase() ? j : -1)).filter((j) => j >= 0);
-      for (let x = 0; x < wrongFirst; x++) { await tiles.nth(wrong[x % wrong.length]).click(); await settle(page, 300); }
+      const take = Math.min(left, wrong.length);
+      for (let x = 0; x < take; x++) { await tiles.nth(wrong.at(x)).click(); await settle(page, 300); }
+      left -= take;
     }
     // The first word's tiles are written small (src/lib/exercises.ts tileLabel): "draag" for "Draag".
     const i = texts.findIndex((t) => t === w || (k === 0 && t.toLowerCase() === w.toLowerCase()));
@@ -298,12 +303,14 @@ function defineStates(LANG) {
   // The language track in Belgium (docs/taal-belgie.md): the line "Dit gaat over Nederland. In
   // België is het anders." on the path, "Meedoen in België", its tip, All topics ("Leven in
   // België") and the Hulp tab with the Belgian places. `?be=1`: on in development either way.
-  add('be:home', '/?be=1', (p) => realHome(p, { country: 'be' }), { expect: '.be-note' });
+  // The Belgian course is live (BE_TAAL_LIVE, 31 October 2026): every topic has its Belgian version,
+  // so the line "Dit gaat over Nederland" shows only with that course switched off.
+  add('be:home', '/?be=1', (p) => realHome(p, { country: 'be' }), { expect: '.home3' });
   add('be:society', '/?be=1', (p) => realHome(p, { country: 'be', currentUnit: 'be.u.society' }), { expect: '.home3' });
   add('be:society-topic', '/?be=1', async (p) => { await realHome(p, { country: 'be', currentUnit: 'be.u.society' }); await tap(p, '.rb-other'); await settle(p); await tapText(p, '.topic-row', 'Belgi'); await settle(p); }, { list: true, expect: '.topic-lessons' });
   add('be:all-topics', '/?be=1', async (p) => { await realHome(p, { country: 'be' }); await tap(p, '.rb-other'); await settle(p); }, { list: true });
   add('be:help-tab', '/?be=1', async (p) => { await realHome(p, { country: 'be' }); await navTab(p, 1); await settle(p); }, { list: true, expect: '.work-contacts' });
-  add('be:lesson-first', '/?be=1', async (p) => { await realHome(p, { country: 'be' }); await tap(p, '.bay-start, .route-start, .start-btn, button.btn-primary', 0); await settle(p, 900); }, { expect: '.be-note' });
+  add('be:lesson-first', '/?be=1', async (p) => { await realHome(p, { country: 'be' }); await tap(p, '.bay-start, .route-start, .start-btn, button.btn-primary', 0); await settle(p, 900); }, { expect: '.player' });
   add('flow:settings-tab', '/', async (p) => { await realHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
   // Over: the toggle and the mail link, then a list of two rows (begeleiders, "Wat is er nieuw?").
   add('flow:about-tab', '/', async (p) => { await realHome(p); await navTab(p, 3); await settle(p); }, { list: true, expect: '.about-links' });
@@ -351,13 +358,16 @@ function defineStates(LANG) {
   add('route:topic-done', shot('topic&cu=u.firstday&state=shelf'), null, { list: true });
   add('route:topic-locked', shot('topic&cu=u.pay&state=mid&access=preview'), null, { list: true });
   // "Luister op de werkvloer" (stap 2): only with mixes in public/audio-scenes (none committed;
-  // a test mp3 for the count). The topic page with its scene rows, the scene's first page, after
-  // it was played (Verder), a question and its answer.
-  add('scene:topic', shot('scene&state=topic'), null, { list: true, expect: '.bay-scene' });
-  add('scene:listen', shot('scene&state=listen'), null, { expect: '.scene-play' });
-  add('scene:listen-played', shot('scene&state=listen'), async (p) => { await tap(p, '.scene-play'); }, { expect: '.scene-next' });
-  add('scene:question', shot('scene&state=question&at=0'), null, { expect: '.scene-choices' });
-  add('scene:answered', shot('scene&state=question&at=0'), async (p) => { await tap(p, '.scene-choices .choice', 0); await settle(p, 600); }, { expect: '.scene-why' });
+  // a test mp3 for the count, docs/geluidsscenes.md). Without them these states are left out, so a
+  // run on a clean checkout is not red for a feature that is not there yet. The topic page with
+  // its scene rows, the scene's first page, after it was played (Verder), a question and its answer.
+  if (fs.existsSync(path.resolve(__dirname, '../../public/audio-scenes/scenes.json'))) {
+    add('scene:topic', shot('scene&state=topic'), null, { list: true, expect: '.bay-scene' });
+    add('scene:listen', shot('scene&state=listen'), null, { expect: '.scene-play' });
+    add('scene:listen-played', shot('scene&state=listen'), async (p) => { await tap(p, '.scene-play'); }, { expect: '.scene-next' });
+    add('scene:question', shot('scene&state=question&at=0'), null, { expect: '.scene-choices' });
+    add('scene:answered', shot('scene&state=question&at=0'), async (p) => { await tap(p, '.scene-choices .choice', 0); await settle(p, 600); }, { expect: '.scene-why' });
+  }
   add('route:topic-sample', shot('topic&cu=u.firstday&state=new&access=sample'), null, { list: true });
   add('route:all-topics-tap', shot('all&state=mid'), async (p) => { await tap(p, '.topic-row', 0); await settle(p); }, { list: true });
   // "Volgorde": the own course in the order of the path (the choice is kept on the device).
@@ -600,8 +610,9 @@ function defineStates(LANG) {
   add('kaart:ask-name', shot('kaart&name=ask'), null, { expect: '.name-in-place-edit' });
   // The real way: Instellingen › Taal en ik › the last row; the name asked first, then the card.
   const toKaart = async (p) => { await realHome(p); await navTab(p, 2); await settle(p); await tap(p, '.set-row', 0); await settle(p); const rows = p.locator('.set-row'); await rows.nth((await rows.count()) - 1).click(); await settle(p, 900); };
-  add('flow:kaart-name', '/', toKaart, { expect: '.cert-name-input' });
-  add('flow:kaart', '/', async (p) => { await toKaart(p); await tap(p, '.cert-no-name'); await settle(p, 1500); }, { expect: '.kaart-img' });
+  // The card comes at once; the name is changed on the card itself (the pencil, NameInPlace).
+  add('flow:kaart', '/', toKaart, { expect: '.kaart-img' });
+  add('flow:kaart-name', '/', async (p) => { await toKaart(p); await tap(p, '.name-in-place-edit'); await settle(p, 600); }, { expect: '.name-in-place-input' });
   // "Wat ken je al?" comes after the first lesson (1.1 done); before it the home shows lesson 1.
   const afterFirst = { toets: undefined, completed: { 'l.hello': { best: 1, times: 1 } } };
   add('flow:toets-none-first', '/', (p) => realHome(p, { toets: undefined }), { expect: '.home3 .bay-now' });
