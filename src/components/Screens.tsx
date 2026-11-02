@@ -69,7 +69,7 @@ import type { WorkTryLine } from '../lib/workTry';
  *  native name, and what the page is in before a language is chosen): Arabic, Bulgarian, Dari … */
 const PICKER_ORDER = [...languageMeta].sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
-export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang, rules = false }: {
+export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
   /** The help language in use (Settings): the "in review" tag is written in it. */
   lang?: HelpLanguage;
   /** undefined = nothing chosen yet (first run). */
@@ -79,11 +79,6 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   showBeta?: boolean;
   /** Smaller cards (Settings); the first-run screen has the big ones. */
   compact?: boolean;
-  /**
-   * Also "Ik spreek al Nederlands" (Werkregels) at the end of the list, under a line: the first
-   * run's list (the owner's choice, 2 November 2026). Settings has "Wat wil je leren?" for it.
-   */
-  rules?: boolean;
 }) {
   const betaHelp = lang?.ui.inReview ?? lang?.ui.beta;
   // The work-rules track reads in Dutch only: no English names under the languages.
@@ -120,35 +115,32 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`} role="group" aria-label={said(ask)}>
       {PICKER_ORDER.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
       {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
-      {/* "Ik spreek al Nederlands": the work-rules track, always said in Dutch. Last, under a
-          line and in its own colour, with the word "Werkregels": it is another part of the app,
-          not one more help language. */}
-      {rules && rulesTrackOn() && <span className="lang-sep" aria-hidden />}
-      {rules && rulesTrackOn() && (
-        <button
-          key="nl"
-          type="button"
-          className={`lang-btn lang-btn-nl ${current === 'nl' ? 'picked' : ''}`}
-          onClick={() => onPick('nl')}
-          aria-pressed={current === undefined ? undefined : current === 'nl'}
-          lang="nl"
-        >
-          <LangMark code="nl" />
-          <span className="lang-names">
-            <span className="lang-nl-tag">Werkregels</span>
-            <span className="lang-native">{NL_KNOWN}</span>
-            {/* Its own direction: in a right-to-left list the full stop stays at its end. */}
-            <span className="lang-nl-more"><bdi dir="ltr">{NL_MORE}</bdi></span>
-          </span>
-          {current === 'nl' && <CheckIcon size={20} className="lang-check" />}
-        </button>
-      )}
     </div>
   );
 }
 
-/** The work-rules card in the language list (the same words as on "Wat wil je leren?" in Settings). */
+/** The work-rules card under the language list (the same words as on "Wat wil je leren?" in Settings). */
 export const NL_KNOWN = 'Ik spreek al Nederlands';
+
+/**
+ * "Ik spreek al Nederlands": the work-rules track, always said in Dutch, in its own colour and
+ * with the word "Werkregels": another part of the app, not one more help language. On the first
+ * run it stays at the bottom of the screen, under a line, while the languages scroll above it
+ * (the owner's choice, 2 November 2026).
+ */
+export function NlCard({ onPick }: { onPick: () => void }) {
+  return (
+    <button type="button" className="lang-btn lang-btn-nl" onClick={onPick} lang="nl">
+      <LangMark code="nl" />
+      <span className="lang-names">
+        <span className="lang-nl-tag">Werkregels</span>
+        <span className="lang-native">{NL_KNOWN}</span>
+        {/* Its own direction: on a right-to-left page the full stop stays at its end. */}
+        <span className="lang-nl-more"><bdi dir="ltr">{NL_MORE}</bdi></span>
+      </span>
+    </button>
+  );
+}
 
 /**
  * Beside a language's name: its flag where a flag is not sensitive, else a calm tile with a few
@@ -170,9 +162,10 @@ function LangMark({ code }: { code: UiCode | null }) {
  * First run, before anything else: the language you get help in (the owner's choice, 1 November
  * 2026: without it the rest is not clear). The phone's own languages give a guess ("Polski?"
  * [Yes] [Other language]); "Other language", or no guess, shows the list of all languages, each
- * name in its own script (the list is the one place with more than three choices). At the end of
- * the list, under a line, "Ik spreek al Nederlands": the work-rules track (the owner's choice,
- * 2 November 2026; before, a page "Wat wil je leren?" came after the language). The gender
+ * name in its own script (the list is the one place with more than three choices). Under the
+ * list, fixed at the bottom of the screen and under a line, "Ik spreek al Nederlands": the
+ * work-rules track (the owner's choice, 2 November 2026; before, a page "Wat wil je leren?" came
+ * after the language). The gender
  * question, the sector and the country follow on their own pages (App.tsx).
  */
 export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = false }: {
@@ -217,7 +210,8 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
           <p className="tagline" lang="en">{ui('appTagline').en}</p>
         </div>
         <h2 className="onboarding-title" lang="en">{ui('chooseLanguage').en}</h2>
-        <LanguagePicker onPick={onDone} rules />
+        <LanguagePicker onPick={onDone} />
+        {rulesTrackOn() && <div className="onb-nl-dock"><NlCard onPick={() => onDone('nl')} /></div>}
       </div>
     );
   }

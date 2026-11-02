@@ -21,11 +21,11 @@ describe('the first page: the language, with "Ik spreek al Nederlands" in the li
     expect(html(createElement(Onboarding, { onDone: () => {}, guess: null }))).not.toContain('Ik spreek al Nederlands');
   });
 
-  it('the list ends with "Ik spreek al Nederlands", under a line, while the track is on', () => {
+  it('under the list, in a band fixed at the bottom: "Ik spreek al Nederlands", while the track is on', () => {
     setRulesTrack(true);
     const m = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
-    expect(m.indexOf('>English<')).toBeLessThan(m.indexOf('lang-sep'));
-    expect(m.indexOf('lang-sep')).toBeLessThan(m.indexOf(NL_KNOWN));
+    expect(m.indexOf('>English<')).toBeLessThan(m.indexOf('onb-nl-dock'));
+    expect(m.indexOf('onb-nl-dock')).toBeLessThan(m.indexOf(NL_KNOWN));
     expect(m).toMatch(/lang-btn-nl[\s\S]*Werkregels[\s\S]*Ik spreek al Nederlands/);
   });
 
