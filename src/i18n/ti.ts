@@ -381,6 +381,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'እቲ ዝቕጽል ትምህርቲ ቁሩብ ሓጺር እዩ።', // nieuw, nalezen
     fasterSetting: 'ብቕልጡፍ ምምሃር', // nieuw, nalezen
     fasterSettingHint: 'ክፉት: ኣብ ሓደሽቲ ትምህርትታት ዝወሓደ መብርሂ፣ ሆላንድኛ ድማ ብንቡር ቅልጣፈ። ዕጹው: ከም ቀደም።', // nieuw, nalezen
+    tempoFasterHint: 'ብቕልጡፍ ምምሃር: ኣብ ሓደሽቲ ትምህርትታት ዝወሓደ መብርሂ፣ ሆላንድኛ ድማ ብንቡር ቅልጣፈ።', // nieuw, nalezen
     samenTitle: 'ብሓባር ምልምማድ', // nieuw, nalezen
     samenRowHint: 'ክልተ ሰባት፡ ሓደ ተሌፎን', // nieuw, nalezen
     samenIntro: { m: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመድ። ብተራ ኣንብቡ።', f: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመዲ። ብተራ ኣንብቡ።', x: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመዱ። ብተራ ኣንብቡ።' }, // nieuw, nalezen

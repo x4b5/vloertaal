@@ -380,6 +380,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'La próxima lección es un poco más corta.', // nieuw, nalezen
     fasterSetting: 'Aprender más rápido', // nieuw, nalezen
     fasterSettingHint: 'Activado: menos explicación en las lecciones nuevas y el neerlandés a velocidad normal. Desactivado: como antes.', // nieuw, nalezen
+    tempoFasterHint: 'Aprender más rápido: menos explicación en las lecciones nuevas y el neerlandés a velocidad normal.', // nieuw, nalezen
     samenTitle: 'Practicar en pareja', // nieuw, nalezen
     samenRowHint: 'Dos personas, un teléfono', // nieuw, nalezen
     samenIntro: 'Practica con un compañero, un amigo o un profesor. Cada uno lee una parte, por turnos.', // nieuw, nalezen (AI-correctie 2 nov 2026)

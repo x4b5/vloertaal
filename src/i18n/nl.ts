@@ -422,6 +422,7 @@ export const uiNl: Record<UiKey, UiText> = {
   easierNext: 'De volgende les is wat korter.',
   fasterSetting: 'Sneller leren',
   fasterSettingHint: 'Aan: minder uitleg in nieuwe lessen, en het Nederlands op normaal tempo. Uit: zoals eerst.',
+  tempoFasterHint: 'Sneller leren: minder uitleg in nieuwe lessen, en het Nederlands op normaal tempo.',
   // "Wat kun je nu?": zinnen per onderwerp (src/content/kunJeNu.ts)
   kunJeNu: 'Wat kun je nu?',
   kunNote: 'Het niveau bij elke zin is een richtlijn, geen officieel niveau.',

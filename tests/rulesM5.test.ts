@@ -187,7 +187,7 @@ describe('Instellingen in the work-rules track', () => {
     expect(settingsRows('lessons', { ...ctx, recorded: false })).toEqual(['sound', 'text', 'theme', 'calm']);
     expect(settingsRows('phone', ctx)).toEqual(['offline', 'reminder', 'backup', 'counting', 'reset']);
     // The language course keeps its voice row, recorded voices or not.
-    expect(settingsRows('lessons', { ...ctx, rules: false, recorded: false })).toEqual(['sound', 'voice', 'tempo', 'faster', 'speaking', 'writing', 'text', 'theme', 'calm', 'toets']);
+    expect(settingsRows('lessons', { ...ctx, rules: false, recorded: false })).toEqual(['sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'calm', 'toets']);
   });
 
   it('says every label in Dutch, on every page of the track', () => {

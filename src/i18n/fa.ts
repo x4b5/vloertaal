@@ -380,6 +380,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'درس بعدی کمی کوتاه‌تر است.', // nieuw, nalezen
     fasterSetting: 'سریع‌تر یاد گرفتن', // nieuw, nalezen
     fasterSettingHint: 'روشن: توضیح کمتر در درس‌های تازه، و هلندی با سرعت عادی. خاموش: مثل قبل.', // nieuw, nalezen
+    tempoFasterHint: 'سریع‌تر یاد گرفتن: توضیح کمتر در درس‌های تازه، و هلندی با سرعت عادی.', // nieuw, nalezen
     samenTitle: 'با هم تمرین کنید', // nieuw, nalezen
     samenRowHint: 'دو نفر، یک گوشی', // nieuw, nalezen
     samenIntro: 'با یک همکار، دوست یا معلم تمرین کنید. به نوبت بخوانید.', // nieuw, nalezen // nagelezen AI 31 okt

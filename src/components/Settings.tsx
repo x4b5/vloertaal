@@ -99,8 +99,13 @@ const CardIcon = ({ size = 24 }: { size?: number }) => (
     <path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
   </svg>
 );
-const TEMPO_KEYS = { calm: 'tempoCalm', normal: 'tempoNormal' } as const;
-const TEMPO_NL = { calm: 'Rustig', normal: 'Normaal' } as const;
+const TEMPO_KEYS = { calm: 'tempoCalm', normal: 'tempoNormal', faster: 'fasterSetting' } as const;
+const TEMPO_NL = { calm: 'Rustig', normal: 'Normaal', faster: 'Sneller leren' } as const;
+/** "Tempo" in Settings: three choices on one row (the owner's choice, 2 November 2026; "Sneller
+ *  leren" was a row of its own that also set the tempo to Normaal). */
+type TempoChoice = Tempo | 'faster';
+const TEMPO_CHOICES: readonly TempoChoice[] = [...TEMPOS, 'faster'];
+const tempoChoiceOf = (p: Progress): TempoChoice => (fasterOn(p) ? 'faster' : tempoOf(p));
 const TextA = ({ size }: { size: TextSize }) => <span className={`text-size-a text-size-${size}`} aria-hidden>A</span>;
 
 const TEXT_KEYS = { normal: 'textNormal', large: 'textLarge', xl: 'textXl' } as const;
@@ -173,7 +178,6 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   toets: { nl: 'Wat ken je al?', key: 'toetsTitle', icon: <BarsIcon size={24} /> },
   kaart: { nl: 'Laat zien hoe het gaat', key: 'coachCard', icon: <CardIcon size={24} /> },
   listen: { nl: 'Laat de telefoon luisteren (proef)', key: 'listenTrial', icon: <MicIcon size={24} /> },
-  faster: { nl: 'Sneller leren', key: 'fasterSetting', icon: <TempoIcon size={24} fast /> },
 };
 
 /** A short value in the help language only (English when there is none). */
@@ -350,7 +354,7 @@ export function Settings({
       case 'english': return <Value text={say(wantsEnglish() ? 'settingOn' : 'settingOff')} />;
       case 'certificates': return <span className="set-row-value">{earnedCertificates(progress).length}</span>;
       case 'sound': return <Value text={say(progress.quiet ? 'withoutSound' : 'soundOn')} />;
-      case 'tempo': return <Value text={say(TEMPO_KEYS[tempoOf(progress)])} />;
+      case 'tempo': return <Value text={say(TEMPO_KEYS[tempoChoiceOf(progress)])} />;
       case 'voice': return voice ? <Value text={say(voice === 'f' ? 'voiceWoman' : voice === 'm' ? 'voiceMan' : 'voiceAuto')} /> : null;
       case 'speaking': return <Value text={say(speakingOn() ? 'settingOn' : 'settingOff')} />;
       case 'listen': return <Value text={say(listenOn() && listenStatus === 'available' ? 'settingOn' : 'settingOff')} />;
@@ -364,7 +368,6 @@ export function Settings({
         return t ? <span className="set-row-value" dir="ltr">{t}</span> : null;
       }
       case 'counting': return <Value text={say(countingOn() ? 'settingOn' : 'settingOff')} />;
-      case 'faster': return <Value text={say(fasterOn(progress) ? 'settingOn' : 'settingOff')} />;
       default: return null;
     }
   };
@@ -553,28 +556,30 @@ export function Settings({
         );
       }
       case 'tempo':
-        // Two cards; a tap plays the sample line at that pace (unless sound is off), then leads back.
+        // Three cards: Rustig, Normaal, Sneller leren (Normaal and less explanation in new lessons).
+        // A tap plays the sample line at that pace (unless sound is off), then leads back.
         return (
           <>
             <ChoiceCards
               label={said(ui('tempo', lang))}
-              current={tempoOf(progress)}
-              onPick={(t) => {
+              current={tempoChoiceOf(progress)}
+              onPick={(c) => {
+                const t: Tempo = c === 'faster' ? 'normal' : c;
                 setTempo(t);
-                onTempo?.(t);
+                if (c === 'faster') onFaster?.(true);
+                else {
+                  // Off "Sneller leren" first (it puts back the tempo from before), then this tempo.
+                  if (fasterOn(progress)) onFaster?.(false);
+                  onTempo?.(t);
+                }
                 autoSpeak(VOICE_SAMPLE);
                 answered(1, 900);
               }}
-              options={TEMPOS.map((t) => ({ id: t, nl: TEMPO_NL[t], text: say(TEMPO_KEYS[t]), picture: <TempoIcon size={28} fast={t === 'normal'} /> }))}
+              options={TEMPO_CHOICES.map((c) => ({ id: c, nl: TEMPO_NL[c], text: say(TEMPO_KEYS[c]), picture: <TempoIcon size={28} fast={c !== 'calm'} /> }))}
             />
-            <InfoMore className="set-info" label={say('infoMore')}><p className="max3-hint"><Bi text={say('tempoHint')} /></p></InfoMore>
-          </>
-        );
-      case 'faster':
-        return (
-          <>
-            {onOff(fasterOn(progress), (on) => onFaster?.(on))}
-            <InfoMore className="set-info" label={say('infoMore')}><p className="max3-hint"><Bi text={say('fasterSettingHint')} /></p></InfoMore>
+            {/* No ⓘ (it would be a fourth thing to tap): Rustig and Normaal explain themselves with
+                the sample they play; one line says what "Sneller leren" does more. */}
+            <p className="max3-hint"><Bi text={say('tempoFasterHint')} /></p>
           </>
         );
       case 'speaking':

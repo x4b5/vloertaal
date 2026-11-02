@@ -380,6 +380,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'الدرس التالي أقصر قليلاً.', // nieuw, nalezen
     fasterSetting: 'التعلّم بسرعة أكبر', // nieuw, nalezen
     fasterSettingHint: 'تشغيل: شرح أقل في الدروس الجديدة، والهولندية بسرعة عادية. إيقاف: كما كان من قبل.', // nieuw, nalezen
+    tempoFasterHint: 'التعلّم بسرعة أكبر: شرح أقل في الدروس الجديدة، والهولندية بسرعة عادية.', // nieuw, nalezen
     samenTitle: 'التمرين معاً', // nieuw, nalezen
     samenRowHint: 'شخصان، هاتف واحد', // nieuw, nalezen
     samenIntro: { m: 'تدرّب مع زميل أو صديق أو معلّم. اقرآ بالتناوب.', f: 'تدرّبي مع زميل أو صديق أو معلّم. اقرآ بالتناوب.', x: 'التمرين مع زميل أو صديق أو معلّم. القراءة بالتناوب.' }, // nieuw, nalezen

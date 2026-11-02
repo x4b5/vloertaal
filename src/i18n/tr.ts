@@ -380,6 +380,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'Sonraki ders biraz daha kısa.', // nieuw, nalezen
     fasterSetting: 'Daha hızlı öğren', // nieuw, nalezen
     fasterSettingHint: 'Açık: yeni derslerde daha az açıklama ve Hollandaca normal hızda. Kapalı: eskisi gibi.', // nieuw, nalezen
+    tempoFasterHint: 'Daha hızlı öğren: yeni derslerde daha az açıklama ve Hollandaca normal hızda.', // nieuw, nalezen
     samenTitle: 'Birlikte pratik yapın', // nieuw, nalezen
     samenRowHint: 'İki kişi, tek telefon', // nieuw, nalezen
     samenIntro: 'Bir iş arkadaşı, arkadaş ya da öğretmenle pratik yap. Sırayla okuyun.', // nieuw, nalezen
