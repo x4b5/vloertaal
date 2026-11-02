@@ -257,7 +257,8 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                 {choices.map((unit, i) => {
                   const allowed = blockPlayable(unit, completed, access);
                   const n = blockDoneCount(unit, completed);
-                  const rec = i === 0 && allowed;
+                  // "Recommended" only among more than one choice (with one, there is nothing to recommend).
+                  const rec = i === 0 && allowed && choices.length > 1;
                   const t = unitTitle(unit, lang);
                   return (
                     <li key={unit.id}>
@@ -721,7 +722,9 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                     {/* The language course in Belgium (docs/taal-belgie.md). */}
                     {!lesson.steps?.length && lessonNlOnly(lesson.id) && <BeNote lang={lang} inline className="bay-goal bay-note" />}
                     {saved && <ResumeChip save={saved} lang={lang} />}
-                    {state === 'done' && !saved && via && <ViaCheck lang={lang} />}
+                    {/* The topic's sign says "via check" once for the whole topic; a row says it
+                        only when the topic as a whole was not ticked off with it. */}
+                    {state === 'done' && !saved && via && !checked && <ViaCheck lang={lang} />}
                     {state === 'done' && !saved && !via && (
                       <span className="bay-again">
                         {record?.best === 1 ? <CrownIcon size={16} /> : <CheckIcon size={16} />}

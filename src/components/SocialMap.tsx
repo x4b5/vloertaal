@@ -2,6 +2,7 @@ import { WordPicture } from '../pictures';
 import { Fragment } from 'react';
 import { areaName, categoryGlossId, mapChecked, mapHref, shortUrl, SOCIAL_CATEGORIES, type Region, type SocialMapEntry } from '../content/regio';
 import { CONTACT_EMAIL } from '../content/about';
+import { helpShow } from '../content/regels/help';
 import { gloss, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { breakable } from '../lib/dutch';
@@ -70,11 +71,13 @@ export function SocialMap({ region, lang, onBack }: { region: Region; lang?: Hel
   );
 }
 
-/** What a row shows of its number and site ("14 045 · heerlen.nl"): the one the tap opens in bold. */
+/** What a row shows of its number and site ("14 045 · heerlen.nl"): the one the tap opens in bold.
+ *  A number that is the row's name ("112") is not said twice. */
 function Shown({ e, href }: { e: SocialMapEntry; href?: string }) {
   const tel = Boolean(href?.startsWith('tel:'));
+  const telShown = e.tel && helpShow({ name: e.name, show: e.tel });
   const parts = [
-    e.tel && <span key="t" className={tel ? 'rh-show-link' : undefined}>{e.tel}</span>,
+    telShown && <span key="t" className={tel ? 'rh-show-link' : undefined}>{e.tel}</span>,
     e.url && <span key="u" className={href && !tel ? 'rh-show-link' : undefined}>{shortUrl(e.url)}</span>,
   ].filter(Boolean);
   if (!parts.length) return null;
@@ -83,7 +86,9 @@ function Shown({ e, href }: { e: SocialMapEntry; href?: string }) {
 
 function MapRow({ entry: e, region, lang }: { entry: SocialMapEntry; region: Region; lang?: HelpLanguage }) {
   const href = mapHref(e);
-  const where = e.area.includes('all') ? areaName(region, 'all') : e.area.map((a) => areaName(region, a)).join(', ');
+  // The whole region is the page's own name ("Zuid-Limburg" above the list): only a part of it is
+  // said on a row ("Parkstad"), not "Heel Zuid-Limburg" under most of them.
+  const where = e.area.includes('all') ? null : e.area.map((a) => areaName(region, a)).join(', ');
   const body = (
     <>
       <span className="rh-emoji rh-pic" aria-hidden><WordPicture id="" emoji={e.emoji} size={36} /></span>
@@ -91,7 +96,7 @@ function MapRow({ entry: e, region, lang }: { entry: SocialMapEntry; region: Reg
         <span className="rh-name">{breakable(e.name)}</span>
         <span className="rh-when">{breakable(e.when)}</span>
         <Shown e={e} href={href} />
-        <span className="sm-area">{where}</span>
+        {where && <span className="sm-area">{where}</span>}
       </span>
     </>
   );
@@ -103,7 +108,7 @@ function MapRow({ entry: e, region, lang }: { entry: SocialMapEntry; region: Reg
           className="rh-card rh-link"
           href={href}
           {...(call ? {} : { target: '_blank', rel: 'noreferrer' })}
-          aria-label={`${e.name}: ${call ? `bel ${e.tel}` : `open ${shortUrl(href)}`}. ${e.when} ${where}.`}
+          aria-label={`${e.name}: ${call ? `bel ${e.tel}` : `open ${shortUrl(href)}`}. ${e.when}${where ? ` ${where}.` : ''}`}
         >
           {body}
           <span className="rh-go" aria-hidden>{call ? <CallIcon size={24} /> : <GlobeIcon size={24} />}</span>

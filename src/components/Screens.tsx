@@ -17,7 +17,7 @@ import { showKept, type DailyCard } from '../lib/spaced';
 import { Flag } from './Flag';
 import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_MORE, ui, uiCount, withoutN, type Bilingual, said, saidLang, langTag } from '../i18n';
 import type { HelpLanguage, LangCode, UiCode, UiKey } from '../i18n/types';
-import { helpRowsFor, type HelpRow } from '../content/regels/help';
+import { helpRowsFor, helpShow, type HelpRow } from '../content/regels/help';
 import { learnerCountry } from '../content/country';
 import { dutchUi, rulesTrackOn } from '../lib/track';
 import { NlPair } from './NlPair';
@@ -479,7 +479,7 @@ function WorkContacts({ lang }: { lang?: HelpLanguage }) {
                 <span className="rh-text">
                   <span className="rh-name" lang="nl">{row.name}</span>
                   <Bi className="rh-when" text={ui(when, lang)} />
-                  <span className="rh-show" lang="nl" dir="ltr">{row.show}</span>
+                  {helpShow(row) && <span className="rh-show" lang="nl" dir="ltr">{row.show}</span>}
                 </span>
               </div>
             </li>
@@ -492,7 +492,7 @@ function WorkContacts({ lang }: { lang?: HelpLanguage }) {
                 <span className="rh-text">
                   <span className="rh-name" lang="nl">{row.name}</span>
                   <Bi className="rh-when" text={ui(when, lang)} />
-                  <span className="rh-show rh-show-link" lang="nl" dir="ltr">{row.show}</span>
+                  {helpShow(row) && <span className="rh-show rh-show-link" lang="nl" dir="ltr">{row.show}</span>}
                 </span>
                 <span className="rh-go" aria-hidden>{call ? <CallIcon size={24} /> : <GlobeIcon size={24} />}</span>
               </a>
@@ -784,9 +784,7 @@ export function Phrasebook({ lang, onBack }: { lang?: HelpLanguage; onBack: () =
   );
 }
 
-export function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
-  /** A stamp on the card's corner (FOUTLOOS). */
-  badge?: React.ReactNode;
+export function StatCard({ tone, label, icon, value, final, done, foot }: {
   tone: 'gold' | 'green' | 'orange';
   label: Bilingual;
   icon: React.ReactNode;
@@ -807,16 +805,7 @@ export function StatCard({ tone, label, icon, value, final, done, foot, badge }:
         {icon}
         <span className="stat-card-value" dir="ltr">{ofTotal ? <>{ofTotal[1]}<span className="stat-of">/{ofTotal[2]}</span></> : value}</span>
       </div>
-      {/* The stamp sits beside the line under the value, in the flow (never over its words);
-          on a narrow card it wraps under it. */}
-      {badge ? (
-        <div className="stat-card-foot-row">
-          {foot && <Bi className="stat-card-foot" text={foot} />}
-          {badge}
-        </div>
-      ) : (
-        foot && <Bi className="stat-card-foot" text={foot} />
-      )}
+      {foot && <Bi className="stat-card-foot" text={foot} />}
     </div>
   );
 }
@@ -929,14 +918,10 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             value={`${shownRight} / ${total}`}
             final={`${right} / ${total}`}
             done={shownRight === right}
-            // Every answer right the first time: a blue-ink rubber stamp inside the card, and
-            // "No mistakes" in the help language in the card's free space.
+            // Every answer right the first time: "No mistakes" in the help language under the
+            // number (no FOUTLOOS stamp beside it any more: it said it a third time, feedback of
+            // the maker, 2 November 2026).
             foot={perfect ? ui('noMistakes', lang) : undefined}
-            badge={perfect ? (
-              <span className="stamp flawless-stamp" aria-hidden>
-                <span className="stamp-word" lang="nl">Foutloos</span>
-              </span>
-            ) : undefined}
           />
           <StatCard
             tone="gold"

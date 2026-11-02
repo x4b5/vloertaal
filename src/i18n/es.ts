@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: '¿Dónde trabajas?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: '¿En qué país trabajas?',
-    countryHint: 'Elige el país donde trabajas. Así recibes las reglas de trabajo de ese país. Esto se queda en tu teléfono. No lo enviamos a ningún sitio.', // nieuw, nalezen
+    countryHint: 'Así recibes las reglas de trabajo de ese país. Esto se queda en tu teléfono. No lo enviamos a ningún sitio.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Países Bajos',
     countryBe: 'Bélgica (Flandes)',
     tipsNote: 'Estos consejos son sobre el trabajo en los Países Bajos. Información general, no asesoramiento legal.',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Quitar el recordatorio',
     remindStopped: 'Abre el archivo para quitar el recordatorio de tu calendario.',
     remindStoppedAndroid: 'Borra tú el recordatorio en Google Calendar.',
-    resetKeeps: 'Se borran tus lecciones, palabras, racha y certificados. Tu idioma, tu código y tus ajustes se quedan.',
+    resetKeeps: 'Se borran tus lecciones, palabras, racha y certificados. Tu idioma y tus ajustes se quedan.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'No se ha cargado. ¿Tienes internet?',
     retry: 'Intentar de nuevo',

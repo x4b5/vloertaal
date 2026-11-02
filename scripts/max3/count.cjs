@@ -207,33 +207,30 @@ function defineStates(LANG) {
   // "Is your language missing?" (since 2 November 2026): a field and Send, then thanks and back.
   add('flow:missing-lang', '/', async (p) => { await tap(p, '.lang-btn-missing'); await settle(p); }, { expect: '.missing-input' });
   add('flow:missing-lang-back', '/', async (p) => { await tap(p, '.lang-btn-missing'); await settle(p); await p.goBack(); await settle(p); }, { list: true, expect: '.onb-lang-list' });
-  // The language picked: "Woman or man?" first for a help language with gender, then the password.
+  // The language picked: "Woman or man?" first for a help language with gender, then the sector.
+  // Open to all since 28 October 2026 (src/lib/access.ts OPEN_TO_ALL): no password page in the
+  // first run any more (the page itself is still checked with ?shot=gate, onb:gate*).
   const toGate = async (p) => { await pickLang(p, NATIVE[LANG] ?? 'Polski'); if (gendered) { await tap(p, '.gender-btn', 1); await settle(p); } };
-  add('flow:gate', '/', toGate, { expect: '.pw-input' });
-  add('flow:gate-tr', '/', async (p) => { await pickLang(p, 'Türkçe'); }, { expect: '.pw-input' });
-  // The password page's back arrow and the phone's Back go one page back (gender or the language list).
+  add('flow:gate', '/', toGate, { list: true, expect: '.sector-groups' });
+  add('flow:gate-tr', '/', async (p) => { await pickLang(p, 'Türkçe'); }, { list: true, expect: '.sector-groups' });
+  // The sector page's back arrow and the phone's Back go one page back (gender or the language list).
   add('flow:gate-back', '/', async (p) => { await toGate(p); await tap(p, '.chrome-back'); await settle(p); }, gendered ? { expect: '.gender-screen' } : { list: true, expect: '.onb-lang-list' });
   add('flow:gate-phone-back', '/', async (p) => { await toGate(p); await p.goBack(); await settle(p); }, gendered ? { expect: '.gender-screen' } : { list: true, expect: '.onb-lang-list' });
-  // "No code? Start with the first lessons": the sneak preview without a code, on to the sector;
-  // back from there, the password page again (still with the button, no code shown as accepted).
-  add('flow:free-sector', '/', async (p) => { await toGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { list: true, expect: '.sector-groups' });
-  add('flow:free-sector-back', '/', async (p) => { await toGate(p); await tap(p, '.gate-try'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.gate-try' });
   if (gendered) {
     // Right after the language: "Woman or man?", with the back arrow to the language.
     add('flow:gender', '/', firstRun({}), { expect: '.gender-screen .chrome-back' });
     add('flow:gender-back', '/', async (p) => { await firstRun({})(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.onb-lang-list' });
   }
   add('flow:sector', '/', firstRun({ gender: 'm' }), { list: true, expect: '.sector-groups' });
-  // Back from the sector: the password page with the accepted code kept (not cleared).
-  add('flow:sector-back', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-ok' });
-  add('flow:sector-phone-back', '/', async (p) => { await toGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await p.goBack(); await settle(p); }, { expect: '.pw-ok' });
+  // Back from the sector: the page before it (no password page, OPEN_TO_ALL).
+  add('flow:sector-back', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.chrome-back'); await settle(p); }, gendered ? { expect: '.gender-screen' } : { list: true, expect: '.onb-lang-list' });
   add('flow:sector-step2', '/', async (p) => { await firstRun({ gender: 'm' })(p); await tap(p, '.sector-group-row', 0); await settle(p); }, { expect: '.sector-step-2' });
   // Back from step 2: the list again, the focus on the row of the group that was open.
   add('flow:sector-step2-back', '/', async (p) => { await firstRun({ gender: 'm' })(p); await tap(p, '.sector-group-row', 0); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.sector-groups [data-group="build"]:focus' });
   add('flow:sector-step2-phone-back', '/', async (p) => { await firstRun({ gender: 'm' })(p); await tap(p, '.sector-group-row', 1); await settle(p); await p.goBack(); await settle(p); }, { list: true, expect: '.sector-groups [data-group="make"]:focus' });
   // The first run: after "Weet ik nog niet" the country page, its back arrow to the sector.
-  add('flow:country', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.sector-group-row', 3); await settle(p, 900); }, { expect: '.country-screen .chrome-back' });
-  add('flow:country-back', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.sector-group-row', 3); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.sector-groups' });
+  add('flow:country', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.sector-group-row[data-group="none"]'); await settle(p, 900); }, { expect: '.country-screen .chrome-back' });
+  add('flow:country-back', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.sector-group-row[data-group="none"]'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.sector-groups' });
   add('flow:country-home', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true, sector: 'none' })(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); }, { expect: '.home3' });
   // A learner from before the country question: a one-time page on opening the home (no back).
   add('flow:old-country', '/', firstRun({ gender: 'm', genderAsked: true, sector: 'none', completed: { 'l.hello': { best: 1, times: 1 } } }), { expect: '.country-screen' });
@@ -809,16 +806,16 @@ function defineRuleStates() {
   const toNlList = async (p) => { if (await p.$('.lang-guess')) { await tap(p, '.lang-guess .max3-card', 1); await settle(p); } };
   const toNlGate = async (p) => { await toNlList(p); await tap(p, '.lang-btn-nl'); await settle(p); };
   add('flow:nl-language', RULES, toNlList, { list: true, expect: '.lang-btn-nl' });
-  add('flow:nl-gate', RULES, toNlGate, { expect: '.pw-input' });
-  // Back from the code page: the language list (Dutch has no gender page in between).
+  // Open to all (OPEN_TO_ALL): after "Ik spreek al Nederlands" the sector, no code page.
+  add('flow:nl-gate', RULES, toNlGate, { list: true, expect: '.sector-groups' });
+  // Back from the sector: the language list (Dutch has no gender page in between).
   add('flow:nl-gate-back', RULES, async (p) => { await toNlGate(p); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.onb-lang-list' });
   add('flow:nl-gate-phone-back', RULES, async (p) => { await toNlGate(p); await p.goBack(); await settle(p); }, { list: true, expect: '.onb-lang-list' });
-  // Without a code: the sneak preview of the track, on to the sector.
-  add('flow:nl-free-sector', RULES, async (p) => { await toNlGate(p); await tap(p, '.gate-try'); await settle(p, 900); }, { list: true, expect: '.sector-groups' });
-  add('flow:nl-sector', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); }, { list: true, expect: '.sector-groups' });
-  add('flow:nl-sector-back', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.pw-ok' });
-  add('flow:nl-country', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.max3-card', 2); await settle(p, 900); }, { expect: '.country-screen' });
-  add('flow:nl-home', RULES, async (p) => { await toNlGate(p); await p.fill('.pw-input', 'testcode'); await tap(p, '.pw-go'); await settle(p, 900); await tap(p, '.max3-card', 2); await settle(p, 900); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); }, { expect: '.home3' });
+  const nlNotSure = async (p) => { await toNlGate(p); await tap(p, '.sector-group-row[data-group="none"]'); await settle(p, 900); };
+  add('flow:nl-country', RULES, nlNotSure, { expect: '.country-screen' });
+  // After the country: once, "Goed om te weten" (rules:notice, [Ik snap het]), then the home.
+  add('flow:nl-notice', RULES, async (p) => { await nlNotSure(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); }, { expect: '.rules-notice-ok' });
+  add('flow:nl-home', RULES, async (p) => { await nlNotSure(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); await tap(p, '.rules-notice-ok'); await settle(p, 900); }, { expect: '.home3' });
   const nlHome = nlStore({ sector: 'none', completed: { 'r.l.zoeken.1': { best: 1, times: 1 } } });
   add('flow:nl-help-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); }, { list: true, expect: '.rh-rows' });
   add('flow:nl-shelf', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); await tap(p, '.rules-shelf-link'); await settle(p); }, { list: true, expect: '.shelf-list' });

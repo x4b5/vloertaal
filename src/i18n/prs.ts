@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'در کجا کار می‌کنید؟',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'در کدام کشور کار می‌کنید؟',
-    countryHint: 'کشوری را که در آن کار می‌کنید انتخاب کنید. قوانین کار همان کشور را می‌بینید. این تنها روی تیلفون شما می‌ماند. ما آن را جایی نمی‌فرستیم.', // nieuw, nalezen
+    countryHint: 'قوانین کار همان کشور را می‌بینید. این تنها روی تیلفون شما می‌ماند. ما آن را جایی نمی‌فرستیم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'هالند',
     countryBe: 'بلجیم (فلاندر)',
     tipsNote: 'این نکته‌ها در باره کار در هالند است. معلومات عمومی است، نه مشوره حقوقی.',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'یادآوری را خاموش کنید',
     remindStopped: 'فایل را باز کنید تا یادآوری از تقویم شما برداشته شود.',
     remindStoppedAndroid: 'یادآوری را خودتان در تقویم Google پاک کنید.',
-    resetKeeps: 'درس‌ها، کلمه‌ها، روزهای پی‌هم و تصدیق‌نامه‌های شما پاک می‌شوند. زبان، کد و تنظیمات شما می‌مانند.',
+    resetKeeps: 'درس‌ها، کلمه‌ها، روزهای پی‌هم و تصدیق‌نامه‌های شما پاک می‌شوند. زبان و تنظیمات شما می‌مانند.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'بارگیری نشد. انترنت وصل است؟',
     retry: 'دوباره کوشش کنید',

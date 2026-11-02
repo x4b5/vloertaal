@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Unde lucrezi?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'În ce țară lucrezi?',
-    countryHint: 'Alege țara în care lucrezi. Primești regulile de muncă din acea țară. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.', // nieuw, nalezen
+    countryHint: 'Primești regulile de muncă din acea țară. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Olanda',
     countryBe: 'Belgia (Flandra)',
     tipsNote: 'Aceste sfaturi sunt despre munca în Olanda. Informații generale, nu consultanță juridică.',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Oprește reamintirea',
     remindStopped: 'Deschide fișierul ca să scoți reamintirea din calendar.',
     remindStoppedAndroid: 'Șterge tu reamintirea din Google Calendar.',
-    resetKeeps: 'Lecțiile, cuvintele, zilele la rând și certificatele tale se șterg. Limba, codul și setările tale rămân.',
+    resetKeeps: 'Lecțiile, cuvintele, zilele la rând și certificatele tale se șterg. Limba și setările tale rămân.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nu s-a încărcat. Este internet?',
     retry: 'Încearcă din nou',

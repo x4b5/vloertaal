@@ -1068,6 +1068,7 @@ export default function App() {
           // Nothing is kept yet: ticking off is the learner's choice on the next screen.
           onFinish={({ right, total }) => replace({ name: 'check-result', unit: unit.id, right, total })}
           sector={progress.sector}
+          check
         />
       );
     }
