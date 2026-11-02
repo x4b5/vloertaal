@@ -1,17 +1,17 @@
 # Livegang Vloertaal
 
 Vloertaal is gratis en heeft geen verdienmodel. Het doel is mensen een toegankelijke manier geven om
-Nederlands te leren voor hun werk. Daarom past het gratis **Vercel Hobby**-plan: dat is bedoeld
-voor niet-commercieel gebruik. Bij ongeveer 2.500 tot 5.000 actieve leerders per maand kom je aan
-de 100 GB per maand. Daarboven is Pro nodig (ongeveer $20 per maand) of een andere host.
+Nederlands te leren voor hun werk. Sinds 2 november 2026 staat de app bij **statichost.eu**
+(Zweden; servers in de EU), zodat ook het IP-adres van een bezoeker in Europa blijft. Daarvoor
+stond hij op het gratis Vercel Hobby-plan (VS).
 
 ## Stand van zaken
 
 | | Wat | Status |
 |---|---|---|
 | ✅ | App werkt, 873 automatische tests, max. 3 tikbare dingen per scherm | klaar |
-| ✅ | Hosting op Vercel; GitHub draait alleen nog de tests (geen tweede kopie op GitHub Pages) | klaar |
-| ✅ | Domein `vloertaal.nl` gekoppeld (vercel.json, deelplaatje, canonical, robots, sitemap) | klaar |
+| ✅ | Hosting op statichost.eu (sinds 2 november 2026; daarvoor Vercel); GitHub draait alleen de tests | klaar |
+| ✅ | Domein `vloertaal.nl` gekoppeld (statichost, deelplaatje, canonical, robots, sitemap) | klaar |
 | ✅ | Contact `hoi@vloertaal.nl` en privacy op de pagina *Over* | klaar |
 | ✅ | Stemmen: ElevenLabs betaald plan, commercieel gebruik toegestaan | klaar |
 | ✅ | Pilot gestart (15 oktober 2026, LinkedIn). Sinds 28 oktober staat de app open voor iedereen (`OPEN_TO_ALL`): geen toegangscode meer, alleen de link | loopt |
@@ -26,19 +26,13 @@ de 100 GB per maand. Daarboven is Pro nodig (ongeveer $20 per maand) of een ande
 1. **Aanvragen** bij een registrar naar keuze, bijvoorbeeld TransIP, Versio of Hostnet. Alleen de
    domeinnaam is genoeg: geen hosting- of e-mailpakket nodig, tenzij je ook een mailadres
    `@vloertaal.nl` wilt (zie "Contact" hieronder).
-2. **In Vercel:** open het project → *Settings* → *Domains* → voeg `vloertaal.nl` toe en ook
-   `www.vloertaal.nl`.
-3. **DNS bij je registrar:** Vercel laat precies zien welke records nodig zijn. Neem die over.
-   Meestal is dat:
-   - voor `vloertaal.nl`: een **A-record** naar het IP-adres dat Vercel toont;
-   - voor `www`: een **CNAME-record** naar het adres dat Vercel toont.
-
-   Of zet in één keer de **nameservers** van het domein op die van Vercel. Dan regelt Vercel de
-   DNS zelf.
-4. Na een paar minuten tot een paar uur staat er een groen vinkje in Vercel. Het
-   HTTPS-certificaat komt vanzelf.
-5. `www.vloertaal.nl` stuurt automatisch door naar `vloertaal.nl` (dat staat in `vercel.json`).
-   Zet in Vercel `vloertaal.nl` als hoofddomein (*primary*).
+2. **Bij statichost:** koppel `vloertaal.nl` en `www.vloertaal.nl` aan de site.
+3. **DNS bij je registrar:** neem de records over die statichost toont. Meestal is dat een
+   **A-record** voor `vloertaal.nl` en een **CNAME-record** voor `www`.
+4. Wacht tot de DNS is bijgewerkt (een paar minuten tot een paar uur) en controleer dat
+   `https://vloertaal.nl` een geldig certificaat heeft.
+5. `www.vloertaal.nl` stuurt door naar `vloertaal.nl` met "Redirect to primary" in het dashboard
+   van statichost (niet in een bestand).
 6. **Testen:**
    - open `https://vloertaal.nl` op je telefoon;
    - deel de link in WhatsApp: je ziet het plaatje met Bram;
@@ -48,14 +42,16 @@ Het oude `.vercel.app`-adres blijft werken. Wie de app al heeft geïnstalleerd, 
 met de voortgang op dat adres. Voortgang staat op de telefoon per adres en verhuist niet mee.
 Deel daarom vanaf nu alleen nog `vloertaal.nl`.
 
-## Instellingen in Vercel
+## Instellingen bij statichost
 
-**Alleen main wordt gebouwd** (`vercel.json`, `git.deploymentEnabled`). Andere branches en PR's krijgen geen preview meer. Het gratis plan bouwt hooguit 100 keer per dag, en op 31 oktober 2026 was die limiet op door previews van branches. Een wijziging zie je dus pas na het mergen. Wil je toch een preview van één branch? Zet die branch dan tijdelijk op `true` in `vercel.json`.
-
-- **Environment Variables** → `ELEVENLABS_API_KEY` (alleen *Production*): dan toont de verborgen
-  beheerpagina (`vloertaal.nl/#beheer`) het ElevenLabs-saldo. Het saldo wordt bij elke publicatie
-  ververst. Optioneel.
-- Hobby-plan is genoeg zolang Vloertaal gratis en niet-commercieel blijft.
+- **Bouwen:** `statichost.yml` (`npm ci && npm run build`, uitvoer in `dist/`), dezelfde bouw als lokaal.
+- **Beveiliging en bewaartijden:** `public/_headers`. Mp3's blijven een dag in de cache (statichost
+  kan niet kijken naar `?v=`); `/assets/*` een jaar.
+- **Doorsturen:** `public/_redirects` (bijvoorbeeld `/onderwerpen/in-de-winkel/` → `/winkel/`).
+- **ElevenLabs-saldo (optioneel):** zet bij de bouw een geheime variabele `ELEVENLABS_API_KEY`. Dan
+  toont de verborgen beheerpagina (`vloertaal.nl/#beheer`) het saldo, ververst bij elke publicatie.
+- **Vercel:** `vercel.json` staat nog in de repo zolang Vercel meedraait. Gebruik je Vercel niet
+  meer, zet dan het project daar uit en haal `vercel.json` weg.
 
 ## GoatCounter (anonieme telling)
 
@@ -147,6 +143,6 @@ export const REGIONS_LIVE: boolean = true;   // was: false
 
 ## Na elke merge naar main
 
-Vercel publiceert vanzelf. Lukt dat niet, kijk dan in Vercel bij *Deployments*.
+statichost bouwt en publiceert de site uit `main`. Lukt dat niet, kijk dan in het dashboard van statichost.
 Nieuwe of gewijzigde Nederlandse zinnen: draai in GitHub **Actions → Record ElevenLabs voices**.
 De stappen (ook zonder GitHub, en wat er nog ontbreekt) staan in `opnames.md`.

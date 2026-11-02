@@ -22,7 +22,7 @@ ${faqHtml()}
 </section>`;
 }
 
-/** The page for an address that does not exist (Vercel serves dist/404.html with status 404). */
+/** The page for an address that does not exist (the host serves dist/404.html with status 404). */
 export function notFoundPage(): string {
   return plainPage(
     { path: '/404.html', lang: 'nl', title: 'Deze pagina bestaat niet | Vloertaal', description: 'Deze pagina bestaat niet (meer). Ga naar Vloertaal: gratis Nederlands leren voor je werk.', ogLocale: 'nl_NL', noindex: true },

@@ -1,6 +1,6 @@
 // Fetches the ElevenLabs credit balance at build time (npm run build, so also on Vercel) and
 // writes public/credits.json for the hidden admin page (#beheer). The API key stays in the host's
-// secret settings (Vercel: ELEVENLABS_API_KEY); only the numbers below end up on the site.
+// secret build settings (ELEVENLABS_API_KEY); only the numbers below end up on the site.
 // Never fails the build.
 import { writeFileSync } from 'node:fs';
 
