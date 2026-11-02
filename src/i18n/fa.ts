@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'من Bram هستم، همکار شما.',
     bramIntroHello: 'سلام، من Bram هستم.',
     showDutch: 'نمایش به هلندی',
+    showAnswers: 'نمایش پاسخ‌ها', // nieuw, nalezen
     lastUpdated: 'آخرین به‌روزرسانی: {date}',
     /* G4 b3 */
     buildListen: 'گوش کنید و جمله را بسازید',

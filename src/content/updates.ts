@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-02',
     items: [
+      'Wat doe je? Je leest eerst de situatie en tikt dan op "Toon de antwoorden"; dan pas zie je de drie antwoorden. Zo denk je eerst zelf na, en staat niet alles tegelijk op het scherm. Elf lange situaties zijn ook korter geschreven, met dezelfde inhoud.',
       'Instellingen › Lessen › Tempo heeft nu drie keuzes: Rustig, Normaal en Sneller leren (normaal tempo en minder uitleg in nieuwe lessen). De aparte rij "Sneller leren" is weg.',
       'Nog rustiger: "Tik om te horen" staat alleen nog boven de woorden van de eerste lessen, en de stempel "Straks weer" zie je de eerste drie keer. Na een les staat er geen stempel "Klaar" meer naast "Les klaar!". Bij een gesprekje heeft jouw ballon een eigen kleur. Bij Over staan de AI-stemmen op één regel. "Wat is er nieuw?" toont de nieuwste punten; de hele lijst staat op vloertaal.nl/nieuw.',
       'Spreken gaat nu ook zoals in WhatsApp: hou de microfoon ingedrukt, praat, en laat los. Kort tikken kan ook nog: dan stopt de opname vanzelf als je klaar bent. En onderaan staat onder elk icoon weer zijn naam, zodat je ziet wat waar is.',

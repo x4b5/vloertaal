@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Sunt Bram, colegul tău de muncă.',
     bramIntroHello: 'Bună, sunt Bram.',
     showDutch: 'Arată în olandeză',
+    showAnswers: 'Arată răspunsurile', // nieuw, nalezen
     lastUpdated: 'Ultima actualizare: {date}',
     /* G4 b3 */
     buildListen: 'Ascultă și formează propoziția',

@@ -595,10 +595,10 @@ const t: CultureTranslation = {
     'c.bsn': 'Deine BSN: Pass gut darauf auf',
     'c.bsn.b': 'Du bekommst eine BSN (burgerservicenummer), wenn du dich bei der Gemeinde (gemeente) anmeldest. Nur kurz hier? Dann meldest du dich an einem RNI-Schalter an. Du brauchst deine BSN für die Arbeit, für Steuern, für die Krankenversicherung und für ein Bankkonto. Dein Arbeitgeber braucht deinen Ausweis und deine BSN. Gib deine BSN oder eine Kopie deines Ausweises nicht an Leute, die sie nicht brauchen: Frag, warum sie sie brauchen. Du ziehst um? Melde deine neue Adresse innerhalb von 5 Tagen bei der Gemeinde. DigiD ist dein Login für Websites der Behörden: Gib es nie an jemand anderen. Wohnst oder arbeitest du hier? Dann musst du meistens eine niederländische Krankenversicherung (zorgverzekering) haben. Kümmere dich schnell darum. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.bsn.p': 'Warum brauchen Sie meine BSN?',
-    'c.bsn.s': 'Jemand, den du nicht kennst, bietet dir über WhatsApp eine Arbeit an. Er will ein Foto von deinem Pass und deine DigiD-Zugangsdaten. Was machst du?',
-    'c.bsn.o1': 'Gib nie deine DigiD-Zugangsdaten. Prüfe zuerst, wer er ist.', // nagelezen (2e lezing)
-    'c.bsn.o2': 'Schick schnell alles, damit du die Arbeit bekommst.',
-    'c.bsn.o3': 'Schick nur das Foto vom Pass, nicht deine DigiD-Zugangsdaten.', // nagelezen (2e lezing)
+    'c.bsn.s': 'Ein Fremder bietet dir über WhatsApp eine Arbeit an. Er will ein Foto von deinem Pass und deine DigiD-Zugangsdaten. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.bsn.o1': 'Gib nie deine DigiD-Zugangsdaten. Prüfe, wer er ist.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.bsn.o2': 'Schick schnell alles, um die Arbeit zu bekommen.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.bsn.o3': 'Schick nur das Foto vom Pass.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.bsn.w': 'Mit deinem DigiD oder einer Kopie deines Ausweises können andere Leute deinen Namen benutzen, zum Beispiel für Kredite oder Sozialleistungen. Ein echter Arbeitgeber braucht deinen Ausweis und deine BSN, aber nie deine DigiD-Zugangsdaten.',
     'c.housing': 'Wohnen über deinen Arbeitgeber',
     'c.housing.b': 'Kümmert sich dein Arbeitgeber oder deine Zeitarbeitsfirma um deine Wohnung? Dann muss der Mietvertrag getrennt von deinem Arbeitsvertrag sein. Frag nach einem schriftlichen Mietvertrag und einem Nachweis, was du bezahlst. Miete darf nur von deinem Lohn abgezogen werden, wenn du schriftlich zugestimmt hast, und nur innerhalb der gesetzlichen Grenzen: Prüfe es auf deiner Lohnabrechnung. Eine Kaution (borg) ist höchstens 2 Monate Kaltmiete. Du bekommst sie zurück, wenn du ausziehst, minus echte Schäden. Melde dich mit deiner Adresse bei der Gemeinde an. Unsichere Wohnung, Drohungen oder unfaire Kosten? Melde es der Gemeinde (meldpunt) und hol dir kostenlose Beratung beim Juridisch Loket oder bei einer Wohnberatung. Bei Problemen mit der Miethöhe oder den Nebenkosten gibt es die Huurcommissie. Deine Arbeit endet? Hol dir Rat, bevor du aus deiner Wohnung ausziehst. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
@@ -707,10 +707,10 @@ const t: CultureTranslation = {
     'c.illness': 'Deine Rechte, wenn du krank bist',
     'c.illness.b': 'Wenn du krank bist, muss dein Arbeitgeber mindestens 70 % deines Lohns zahlen, bis zu 2 Jahre lang. Ein Tarifvertrag (cao) gibt oft mehr. Es kann bis zu 2 Karenztage (wachtdagen) ohne Lohn geben, aber nur, wenn das in deinem Vertrag oder im Tarifvertrag steht. Dein Chef darf nicht fragen, welche Krankheit du hast: Über deine Gesundheit und deine Arbeit sprichst du mit dem Betriebsarzt (bedrijfsarts). Ruf deinen Arbeitgeber an, wenn du wieder gesund bist (betermelden). Im ersten Jahr bekommst du mindestens den Mindestlohn. Ein befristeter Vertrag endet am Enddatum, auch wenn du krank bist. Arbeitest du über eine Zeitarbeitsfirma? Hat dein Vertrag eine Zeitarbeitsklausel (uitzendbeding)? Dann kann er enden, wenn du krank wirst. Frag dann beim UWV nach der Ziektewet, oder frag bei einer Gewerkschaft. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.', // nalezen: feit gelijk getrokken
     'c.illness.p': 'Ich bin wieder gesund. Ich komme morgen zur Arbeit.',
-    'c.illness.s': 'Du bist eine Woche krank. Dein Arbeitgeber bittet dich, zum Betriebsarzt zu gehen. Was machst du?',
-    'c.illness.o1': 'Geh hin und sprich mit dem Arzt über deine Gesundheit und deine Arbeit.',
-    'c.illness.o2': 'Geh nicht hin, du hast ja schon deinen eigenen Arzt.',
-    'c.illness.o3': 'Geh krank wieder arbeiten, damit du nicht hingehen musst.',
+    'c.illness.s': 'Du bist eine Woche krank. Dein Arbeitgeber schickt dich zum Betriebsarzt. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.illness.o1': 'Geh hin und sprich über deine Gesundheit und Arbeit.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.illness.o2': 'Geh nicht hin, du hast deinen eigenen Arzt.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.illness.o3': 'Geh krank wieder arbeiten.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.illness.w': 'Der Betriebsarzt hilft dir, gesund wieder an die Arbeit zu kommen. Der Arzt sagt deinem Chef keine medizinischen Details, nur welche Arbeit du machen kannst.',
     'c.warning': 'Zeichen von Ausbeutung',
     'c.warning.b': 'Achte auf diese Zeichen. Dein Arbeitgeber behält deinen Pass oder Ausweis: Das ist nicht erlaubt, du behältst deinen Ausweis selbst, und ein Arbeitgeber darf nur eine Kopie machen. Du bekommst viel weniger Lohn als abgemacht, oder keine Lohnabrechnung. Du musst hohe Schulden beim Arbeitgeber oder bei der Zeitarbeitsfirma abbezahlen. Du musst extrem lange arbeiten, ohne Wahl. Jemand bedroht dich oder setzt dich mit deiner Wohnung unter Druck. Das ist nicht normal und nicht erlaubt. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
@@ -723,10 +723,10 @@ const t: CultureTranslation = {
     'c.gethelp': 'Wo du Hilfe bekommst',
     'c.gethelp.b': 'Siehst du Zeichen von Ausbeutung, bei dir oder bei jemand anderem? Hol dir Hilfe. Du kannst es der Nederlandse Arbeidsinspectie melden, auch anonym, oder der Polizei. Meld Misdaad Anoniem: 0800-7000. Kostenlose Rechtsberatung: das Juridisch Loket. In Gefahr? Ruf 112 an. Jeder, der in den Niederlanden arbeitet, kann Hilfe bekommen, auch Migranten. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
     'c.gethelp.p': 'Ich brauche Hilfe. Ich werde ausgebeutet.',
-    'c.gethelp.s': 'Ein Freund arbeitet 14 Stunden am Tag, bekommt fast keinen Lohn und hat Angst vor dem Chef. Was kannst du tun?',
+    'c.gethelp.s': 'Ein Freund arbeitet 14 Stunden am Tag für fast keinen Lohn. Er hat Angst vor seinem Chef. Was kannst du tun?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.gethelp.o1': 'Hilf ihm, Kontakt mit der Arbeidsinspectie oder dem Juridisch Loket aufzunehmen.', // nieuw, nalezen
-    'c.gethelp.o2': 'Sag ihm, dass das für neue Arbeiter normal ist.',
-    'c.gethelp.o3': 'Sag ihm, er soll warten, bis sein Vertrag endet, und dann andere Arbeit suchen.',
+    'c.gethelp.o2': 'Sag ihm, das ist für neue Arbeiter normal.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.gethelp.o3': 'Sag ihm, er soll warten, bis sein Vertrag endet, und dann gehen.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.gethelp.w': 'Hilfe gibt es für alle, die in den Niederlanden arbeiten. Eine Meldung geht auch ohne Namen.',
     'c.callin': 'Deinen Vorgesetzten anrufen',
     'c.callin.b': 'Wenn du deinen Vorgesetzten anrufst, sag deinen Namen, den Grund und wann du wahrscheinlich wiederkommst. Krank? Du musst nur sagen, dass du krank bist, nicht welche Krankheit du hast. Ruf an: Schick nicht nur eine Nachricht, außer deine Firma sagt, dass eine Nachricht reicht. Keine Antwort? Sprich auf die Mailbox und versuch es noch einmal. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
@@ -944,10 +944,10 @@ const t: CultureTranslation = {
     'c.translate': 'Übersetzungs-Apps: schlau, aber prüfe',
     'c.translate.b': 'Eine Übersetzungs-App wie Google Übersetzer hilft sehr. Du kannst tippen, sprechen oder den Gesprächsmodus benutzen, um mit einem Kollegen zu reden. Mit der Kamera kannst du Schilder, Zettel und Anleitungen übersetzen. Auf vielen Handys kann auch WhatsApp Nachrichten übersetzen. Benutz dein Handy nur da, wo es sicher und erlaubt ist: nicht an Maschinen oder Gabelstaplern, und frag zuerst (mehr in der Lektion „Dein Handy bei der Arbeit“). Apps machen Fehler. Bei wichtigen Dingen, wie deinem Vertrag, einem Brief oder einer Sicherheitsanweisung, bitte auch einen Menschen, es dir zu erklären. Mach keine Fotos von vertraulichen Arbeitspapieren ohne Erlaubnis.',
     'c.translate.p': 'Darf ich mein Handy zum Übersetzen benutzen?',
-    'c.translate.s': 'Dein Vorgesetzter gibt dir ein Papier mit Sicherheitsanweisungen auf Niederländisch. Du verstehst nur ein paar Wörter. Was machst du?',
-    'c.translate.o1': 'Frag, ob du eine Übersetzungs-App benutzen darfst, und bitte um eine Erklärung.', // nagelezen (2e lezing)
-    'c.translate.o2': 'Sag „ja, ja“ und fang an zu arbeiten. Du verstehst es später.',
-    'c.translate.o3': 'Mach ein Foto und schick es in eine Gruppe mit Freunden, damit sie es übersetzen.',
+    'c.translate.s': 'Dein Vorgesetzter gibt dir Sicherheitsanweisungen auf Niederländisch. Du verstehst nur ein paar Wörter. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.translate.o1': 'Bitte um eine Erklärung und frag, ob eine App okay ist.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.translate.o2': 'Sag „ja, ja“ und fang an zu arbeiten.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.translate.o3': 'Mach ein Foto und schick es deinen Freunden zum Übersetzen.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.translate.w': 'Eine Übersetzungs-App hilft dir, schnell zu verstehen, aber sie kann Fehler machen. Bei Sicherheit ist eine Erklärung von einem Menschen die beste Kontrolle. Arbeitspapiere können vertraulich sein, also teile sie nicht ohne Erlaubnis.',
     'c.understood': 'Prüfe, ob du es verstanden hast',
     'c.understood.b': 'Dein Handy kann Sprache in Text verwandeln (Live-Untertitel): Live Transcribe auf Android, Live-Untertitel auf dem iPhone. Prüfe, welche Sprachen dein Handy kann. Du kannst auch jemanden bitten, es aufzuschreiben, es zu zeigen oder langsam zu sprechen. Frag, ob es eine Anleitung mit Bildern gibt, oder in deiner Sprache. Sag dann zurück, was du verstanden hast: „Dus ik moet eerst …?“ Das ist hier normal, und es verhindert Fehler.',
@@ -1058,10 +1058,10 @@ const t: CultureTranslation = {
     'c.shelves': 'Alt nach vorne',
     'c.shelves.b': 'Wenn du Regale auffüllst, schau auf das Datum der Produkte. Stell die Produkte mit dem frühesten Datum nach vorne und die neuen nach hinten. Kunden nehmen von vorne, so gehen die alten Produkte zuerst weg. Ist ein Produkt abgelaufen oder beschädigt? Nimm es aus dem Regal und frag, was du damit machen sollst. Halte die Gänge frei von Kartons und Wagen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.shelves.p': 'Was mache ich mit abgelaufenen Produkten?',
-    'c.shelves.s': 'Du stellst neue Milch ins Regal. Vorne steht noch Milch mit einem früheren Datum. Was machst du?',
-    'c.shelves.o1': 'Stell die neue Milch nach hinten und die alte Milch nach vorne.',
-    'c.shelves.o2': 'Stell die neue Milch nach vorne, sie ist frischer.',
-    'c.shelves.o3': 'Wirf die alte Milch weg, damit das Regal schön aussieht.',
+    'c.shelves.s': 'Du stellst neue Milch ins Regal. Vorne steht Milch mit einem früheren Datum. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.shelves.o1': 'Neue Milch nach hinten, alte Milch nach vorne.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.shelves.o2': 'Neue Milch nach vorne, sie ist frischer.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.shelves.o3': 'Wirf die alte Milch weg.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.shelves.w': 'Kunden nehmen von vorne. Wenn die alten Produkte zuerst weggehen, wird weniger Essen weggeworfen.',
     'c.checkout': 'Ausweis für Alkohol und Tabak',
     'c.checkout.b': 'Du darfst an niemanden unter 18 Alkohol oder Tabak verkaufen: Das ist Gesetz. Nicht sicher, wie alt ein Kunde ist? Frag nach dem Ausweis. Viele Geschäfte fragen jeden nach dem Ausweis, der jünger als 25 aussieht. Kein Ausweis, oder unter 18? Dann verkaufst du es nicht, und du bleibst höflich. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
@@ -1197,10 +1197,10 @@ const t: CultureTranslation = {
     'c.harvest': "Tempo und Stücklohn", // nagelezen (2e lezing)
     'c.harvest.b': "Im Gewächshaus arbeitest du oft in einem festen Tempo. Manche Arbeitgeber zahlen pro Kiste, pro Reihe oder pro Kilo: Stücklohn (stukloon). Auch mit Stücklohn musst du für jede Stunde, die du arbeitest, mindestens den Mindestlohn verdienen. Schau den Betrag auf rijksoverheid.nl nach. Schreib jeden Tag deine Stunden und deine Kisten auf und vergleiche sie mit deiner Lohnabrechnung. Schnell arbeiten ist gut, aber sicher arbeiten geht vor. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nagelezen (2e lezing)
     'c.harvest.p': "Wie viele Kisten habe ich heute geschafft?", // nagelezen (2e lezing)
-    'c.harvest.s': "Du wirst pro Kiste bezahlt. Am Ende der Woche ist dein Lohn viel niedriger als der Mindestlohn für die Stunden, die du gearbeitet hast. Was machst du?", // nagelezen (2e lezing)
-    'c.harvest.o1': "Zeig deinem Arbeitgeber deine eigene Liste mit Stunden und Kisten.", // nagelezen (2e lezing)
-    'c.harvest.o2': "Sag nichts und arbeite nächste Woche schneller, damit du mehr verdienst.", // nagelezen (2e lezing)
-    'c.harvest.o3': "Akzeptiere es: Mit Stücklohn ist ein niedriger Lohn normal.", // nagelezen (2e lezing)
+    'c.harvest.s': "Du wirst pro Kiste bezahlt. Diese Woche verdienst du pro Stunde weniger als den Mindestlohn. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.harvest.o1': "Zeig deine eigene Liste mit Stunden und Kisten.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.harvest.o2': "Sag nichts und arbeite schneller.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.harvest.o3': "Akzeptiere es: Mit Stücklohn ist das normal.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.harvest.w': "Auch mit Stücklohn musst du für jede gearbeitete Stunde mindestens den Mindestlohn bekommen. Deine eigene Liste mit Stunden und Kisten hilft dir zu zeigen, was du gemacht hast. Wird es nicht korrigiert, hol dir Hilfe.", // nagelezen (2e lezing)
     'c.greensafe': "Hitze und Spritzmittel", // nagelezen (2e lezing)
     'c.greensafe.b': "Im Gewächshaus kann es sehr heiß werden, auch im Frühling. Trink oft Wasser, auch bevor du Durst hast, und mach deine Pausen an einem kühlen Ort. Ist dir schwindelig oder übel, oder hast du Kopfschmerzen? Hör auf und sag es jemandem. Pflanzen werden manchmal mit Chemikalien gespritzt (spuitmiddelen). An einem Gewächshaus, das gerade gespritzt wurde, hängt oft ein Schild an der Tür. Geh erst wieder hinein, wenn dein Vorgesetzter sagt, dass es sicher ist. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nagelezen (2e lezing)
@@ -1303,10 +1303,10 @@ const t: CultureTranslation = {
     'c.permit': "Arbeit und Integration",
     'c.permit.b': "Musst du den Integrationskurs (inburgering) machen? Sag es deinem Arbeitgeber, und sag der gemeente (der Gemeinde), dass du arbeitest. Frag früh, ob deine Sprachkurse zu deinem Dienstplan passen können. Nicht sicher, ob du hier arbeiten darfst? Prüfe es, bevor du anfängst, zum Beispiel beim IND, beim UWV oder bei VluchtelingenWerk. Sollst du dich für diesen Job als Selbstständiger (zzp’er) anmelden? Hol dir zuerst Rat. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.permit.p': "Ich habe dienstags Sprachkurs. Kann mein Dienstplan darauf Rücksicht nehmen?",
-    'c.permit.s': "Du fängst einen neuen Job an. Dein Sprachkurs ist dienstagmorgens, aber laut Dienstplan arbeitest du dienstags. Was machst du?",
-    'c.permit.o1': "Sag es deinem Vorgesetzten und bitte, den Dienstplan zu ändern.", // nagelezen (2e lezing)
-    'c.permit.o2': "Lass den Sprachkurs ausfallen, denn die Arbeit geht vor.",
-    'c.permit.o3': "Bleib dienstags zu Hause, ohne etwas zu sagen.",
+    'c.permit.s': "Dein Sprachkurs ist dienstagmorgens. Laut deinem neuen Dienstplan arbeitest du dann. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.permit.o1': "Bitte deinen Vorgesetzten, den Dienstplan zu ändern.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.permit.o2': "Lass den Kurs ausfallen: Die Arbeit geht vor.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.permit.o3': "Bleib dienstags zu Hause und sag nichts.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.permit.w': "Deine Integration ist auch eine Pflicht. Viele Arbeitgeber helfen, wenn sie es früh wissen. Die gemeente kann dir auch helfen, deinen Plan mit deiner Arbeit zu verbinden.",
     'c.kids': "Dein Kind ist krank",
     'c.kids.b': "Ist dein Kind plötzlich krank? Sag es sofort deinem Arbeitgeber. Für die ersten Stunden oder Tage kannst du Sonderurlaub für Notfälle nehmen (calamiteitenverlof), und dein Arbeitgeber zahlt dich weiter. Braucht dein Kind länger Pflege? Dann kannst du Pflegeurlaub (zorgverlof) beantragen. Schwanger? Deshalb darf dein Arbeitgeber dir nicht kündigen. Frag rechtzeitig nach dem Mutterschutz und der Elternzeit (ouderschapsverlof). Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.",
@@ -1554,10 +1554,10 @@ const t: CultureTranslation = {
     'c.handover': "Sag, was fertig ist und was nicht", // nieuw, nalezen
     'c.handover.b': "Deine Arbeit ist nicht fertig, wenn du aufhörst. Räum zuerst deinen Platz und dein Werkzeug auf. Dann bitte jemanden, deine Arbeit zu prüfen. Sag deinem Vorgesetzten, was fertig ist und was nicht. Ist etwas schiefgegangen, oder ist etwas kaputt? Sag es jetzt, nicht morgen. Dich abzumelden gehört zu deiner Arbeit. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
     'c.handover.p': "Zimmer vier ist noch nicht fertig. Die Tür war abgeschlossen.", // nieuw, nalezen
-    'c.handover.s': "Du hast fünf Zimmer geputzt. Zimmer 4 war abgeschlossen, darum konntest du es nicht putzen. Deine Schicht ist zu Ende. Was machst du?", // nieuw, nalezen
-    'c.handover.o1': "Du sagst deinem Vorgesetzten, dass Zimmer 4 nicht fertig ist, und warum.", // nieuw, nalezen
-    'c.handover.o2': "Du gehst nach Hause: Zimmer 4 war zu, das ist nicht deine Schuld.", // nieuw, nalezen
-    'c.handover.o3': "Du schreibst „alles fertig“ auf die Liste, weil du dein Bestes gegeben hast.", // nieuw, nalezen
+    'c.handover.s': "Du hast fünf Zimmer geputzt. Zimmer 4 war abgeschlossen. Deine Schicht ist zu Ende. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.handover.o1': "Du sagst deinem Vorgesetzten: Zimmer 4 ist nicht fertig.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.handover.o2': "Du gehst nach Hause: Zimmer 4 war zu, nicht deine Schuld.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.handover.o3': "Du schreibst „alles fertig“ auf die Liste.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.handover.w': "Dein Vorgesetzter plant die Arbeit. Wenn er weiß, dass Zimmer 4 nicht fertig ist, kann er jemand anderen schicken. Dann findet kein Kunde ein schmutziges Zimmer.", // nieuw, nalezen
     'c.workshop': "Augen, Ohren und Feuer", // nieuw, nalezen
     'c.workshop.b': "Schleifen, Sägen und Bohren machen Funken, kleine Stücke und viel Lärm. Trag eine Schutzbrille und Gehörschutz, auch bei einer kurzen Arbeit. Wenn es sehr laut ist, muss dein Arbeitgeber dir Gehörschutz geben. Funken können einen Brand auslösen. Beim Schweißen oder Schleifen in der Nähe von Dingen, die brennen können, gibt es extra Regeln (heet werk): Frag, bevor du anfängst. Räum nach der Arbeit die Metallstücke weg. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
@@ -1578,18 +1578,18 @@ const t: CultureTranslation = {
     'c.garage': "Sicher unter dem Auto", // nieuw, nalezen
     'c.garage.b': "Geh nie unter ein Auto, das nur auf einem Wagenheber steht. Das Auto muss fest auf der Hebebühne oder auf Unterstellböcken stehen. Ausgelaufenes Öl macht den Boden rutschig: Wisch es sofort auf. Altöl, Batterien und Putzmittel sind gefährlicher Abfall. Sie kommen an einen besonderen Ort, nie in den normalen Müll oder in den Abfluss. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
     'c.garage.p': "Da ist Öl auf dem Boden. Ich wische es auf.", // nieuw, nalezen
-    'c.garage.s': "Du musst unter ein Auto schauen. Das Auto steht nur auf einem Wagenheber. Dein Kollege sagt: „Passt schon, mach einfach schnell.“ Was machst du?", // nieuw, nalezen
-    'c.garage.o1': "Du wartest, bis das Auto auf der Hebebühne oder auf Böcken steht.", // nieuw, nalezen
-    'c.garage.o2': "Du gehst schnell drunter und lässt die Beine draußen.", // nieuw, nalezen
-    'c.garage.o3': "Du gehst drunter und bittest den Kollegen, das Auto zu halten.", // nieuw, nalezen
+    'c.garage.s': "Du musst unter ein Auto schauen, das nur auf einem Wagenheber steht. Ein Kollege sagt: „Passt schon, mach schnell.“ Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.garage.o1': "Du wartest auf die Hebebühne oder auf Böcke.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.garage.o2': "Du gehst schnell drunter, die Beine draußen.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.garage.o3': "Du bittest den Kollegen, das Auto zu halten.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.garage.w': "Ein Wagenheber kann wegrutschen. Ein Auto ist sehr schwer, und darunter kommst du nicht schnell weg. Böcke oder eine Hebebühne halten das Auto an seinem Platz.", // nieuw, nalezen
     'c.carjob': "Mehr Arbeit? Frag zuerst den Kunden", // nieuw, nalezen
     'c.carjob.b': "Findest du mehr Probleme, als auf dem Arbeitsauftrag stehen? Repariere sie nicht einfach. Der Kunde muss der Extraarbeit und den Kosten zuerst zustimmen. Dein Vorgesetzter oder die Annahme ruft den Kunden an. Eine Probefahrt gibt es nur mit Erlaubnis und nur mit einem gültigen Führerschein. Schreib auf, was du gemacht hast und welche Teile du benutzt hast. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
     'c.carjob.p': "Ich sehe noch ein Problem. Wer ruft den Kunden an?", // nieuw, nalezen
-    'c.carjob.s': "Du machst bei einem Auto einen Ölwechsel. Du siehst, dass auch die Bremsen schlecht sind. Das Auto muss in einer Stunde fertig sein. Was machst du?", // nieuw, nalezen
+    'c.carjob.s': "Du machst bei einem Auto einen Ölwechsel. Auch die Bremsen sind schlecht. Es muss in einer Stunde fertig sein. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.carjob.o1': "Du sagst es deinem Vorgesetzten, damit er den Kunden anruft.", // nieuw, nalezen
-    'c.carjob.o2': "Du reparierst auch die Bremsen: Der Kunde will bestimmt ein sicheres Auto.", // nieuw, nalezen
-    'c.carjob.o3': "Du sagst nichts: Die Bremsen stehen nicht auf dem Auftrag.", // nieuw, nalezen
+    'c.carjob.o2': "Du reparierst auch die Bremsen, zur Sicherheit.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.carjob.o3': "Du sagst nichts, sie stehen nicht auf dem Auftrag.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.carjob.w': "Der Kunde zahlt, also entscheidet der Kunde. Ohne sein Okay darf die Werkstatt nicht einfach mehr Arbeit machen. Schlechte Bremsen sind gefährlich, darum ist es wichtig, es zu sagen.", // nieuw, nalezen
     'c.placement': "Erst unterschreiben, dann anfangen", // nieuw, nalezen
     'c.placement.b': "In Entree lernst du viel in einem Betrieb: Das ist dein Praktikum (stage oder bpv). Bevor du anfängst, unterschreiben du, die Schule und der Betrieb einen Vertrag: den POK. Im Betrieb hilft dir dein Ausbilder (praktijkopleider). In der Schule hilft dir deine Praktikumsbetreuung (stagebegeleider). Krank? Ruf vor deinem Arbeitsbeginn im Betrieb an, und sag auch der Schule Bescheid. Die Regeln sind an jeder Schule anders: Frag deine Praktikumsbetreuung.", // nieuw, nalezen
@@ -1610,10 +1610,10 @@ const t: CultureTranslation = {
     'c.council': "Wer darf wählen?", // nieuw, nalezen
     'c.council.b': "In den Niederlanden bestimmst du durch Wählen, wer entscheidet. Der Gemeinderat (gemeenteraad) entscheidet über deinen Ort. Die Tweede Kamer macht die Gesetze für das ganze Land. Mit der niederländischen Staatsangehörigkeit darfst du bei allen Wahlen wählen, ab 18. Für den Gemeinderat dürfen mehr Menschen wählen: Menschen aus einem anderen EU-Land, die hier wohnen, und Menschen von außerhalb der EU nach 5 Jahren legalem Aufenthalt. Die Gemeinde (gemeente) schickt dir eine Wahlkarte (stempas). Bring sie mit deinem Ausweis mit. Nicht sicher, ob du wählen darfst? Frag die Gemeinde.", // nieuw, nalezen
     'c.council.p': "Darf ich für den Gemeinderat wählen?", // nieuw, nalezen
-    'c.council.s': "Du kommst aus Marokko und wohnst seit sechs Jahren legal hier. Du hast keine niederländische Staatsangehörigkeit. Es gibt eine Wahl zum Gemeinderat. Was stimmt?", // nieuw, nalezen
+    'c.council.s': "Du kommst aus Marokko und wohnst seit sechs Jahren legal hier, ohne niederländische Staatsangehörigkeit. Was stimmt?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.council.o1': "Du darfst für den Gemeinderat wählen.", // nieuw, nalezen
     'c.council.o2': "Du darfst auch für die Tweede Kamer wählen.", // nieuw, nalezen
-    'c.council.o3': "Ohne niederländischen Pass darfst du gar nicht wählen.", // nieuw, nalezen
+    'c.council.o3': "Ohne niederländischen Pass darfst du nicht wählen.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.council.w': "Nach 5 Jahren legalem Aufenthalt darfst du für den Gemeinderat wählen. Für die Tweede Kamer brauchst du die niederländische Staatsangehörigkeit.", // nieuw, nalezen
     'c.police': "Dein Ausweis und deine Rechte", // nieuw, nalezen
     'c.police.b': "Ab 14 musst du deinen Ausweis zeigen, wenn die Polizei danach fragt. Trag ihn also immer bei dir. Bekommst du einen Brief mit einer Entscheidung, mit der du nicht einverstanden bist, zum Beispiel von der Gemeinde oder vom UWV? Dann kannst du schriftlich Widerspruch einlegen (bezwaar maken). Mach das vor dem Datum im Brief. Die Polizei und das Gericht müssen alle gleich behandeln. Festgenommen? Du darfst einen Anwalt verlangen. Das Juridisch Loket berät dich kostenlos.", // nieuw, nalezen

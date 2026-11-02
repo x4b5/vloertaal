@@ -344,6 +344,7 @@ export const uiNl: Record<UiKey, UiText> = {
   bramIntro: 'Ik ben Bram. Ik help je op weg.', // regels: a colleague who knows how work goes here
   bramIntroHello: 'Hallo, ik ben Bram.',
   showDutch: 'Toon in het Nederlands',
+  showAnswers: 'Toon de antwoorden',
   forCoaches: 'Voor begeleiders en werkgevers', // nieuw
   lastUpdated: 'Laatst bijgewerkt: {date}',
   whatsNew: 'Wat is er nieuw?', // nieuw

@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Ben Bram, iş arkadaşınım.',
     bramIntroHello: 'Merhaba, ben Bram.',
     showDutch: 'Hollandaca göster',
+    showAnswers: 'Cevapları göster', // nieuw, nalezen
     lastUpdated: 'Son güncelleme: {date}',
     /* G4 b3 */
     buildListen: 'Dinle ve cümleyi kur',

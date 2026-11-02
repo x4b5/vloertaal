@@ -366,10 +366,12 @@ function defineStates(LANG) {
   // Lesson exercises: before, after a right tap, after a wrong tap.
   // Shot option order is fixed: dutch -> 3rd right; meaning -> 3rd; listen -> 2nd; type(pick) -> 2nd; chat -> 1st; situation -> 1st.
   const choice = '.player-body .choice';
+  // A situation shows its answers after "Show the answers" (since 2 November 2026): tap it first.
+  const reveal = async (p) => { if (await p.$('.situation-show')) { await tap(p, '.situation-show'); await settle(p, 500); } };
   const graded = (key, q, right, wrong, lang) => {
     add(`lesson:${key}`, shot(q, lang));
-    add(`lesson:${key}:right`, shot(q, lang), async (p) => { await tap(p, choice, right); await settle(p, 900); });
-    add(`lesson:${key}:wrong`, shot(q, lang), async (p) => { await tap(p, choice, wrong); await settle(p, 900); });
+    add(`lesson:${key}:right`, shot(q, lang), async (p) => { await reveal(p); await tap(p, choice, right); await settle(p, 900); });
+    add(`lesson:${key}:wrong`, shot(q, lang), async (p) => { await reveal(p); await tap(p, choice, wrong); await settle(p, 900); });
   };
   graded('meaning', 'meaning', 2, 0);
   graded('picture', 'dutch', 2, 0);
@@ -377,6 +379,9 @@ function defineStates(LANG) {
   graded('hear-pick', 'type', 1, 0, 'ar');
   graded('chat', 'chat', 0, 1);
   graded('situation', 'situation', 0, 1);
+  add('lesson:situation:shown', shot('situation'), async (p) => { await reveal(p); }, { expect: '.situation-answers .choice' });
+  // With the keyboard: the focus on the first answer.
+  add('lesson:situation:shown-keys', shot('situation'), async (p) => { await p.focus('.situation-show'); await p.keyboard.press('Enter'); await settle(p, 500); }, { expect: '.situation-answers .choice:focus' });
   // A saying in a later lesson (src/content/sayings.ts): its card, and "What does he mean?".
   graded('saying-ask', 'saying-ask', 0, 1);
   // With a device voice for the help language: the situation and the tip show the help-language

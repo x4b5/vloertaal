@@ -1469,6 +1469,13 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* "What do you do?" situation */
 .situation-text { font-weight: 600; font-size: 1.0625rem; line-height: 1.45; padding-left: 16px; }
 .situation .choice { text-align: start; justify-content: flex-start; }
+/* "Show the answers" under the situation (SituationExercise): first read or hear the situation,
+   then the three answers come on the same page, sliding in gently (still with less motion). */
+.situation-show { width: 100%; margin-top: 18px; gap: 8px; background: var(--card); color: var(--ink); border-color: var(--edge-strong); }
+.situation-show .bi { align-items: center; }
+.situation-answers-in { animation: answers-in 0.24s var(--ease-out) both; }
+@keyframes answers-in { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) { .situation-answers-in { animation: none; } }
 
 /* Tips page */
 .tips-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
