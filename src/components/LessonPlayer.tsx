@@ -1007,7 +1007,15 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // third time on a label was too much (feedback of the maker, 1 November). The same for "What do
   // you hear?" picked from written words (typing in the first topics, typeAsPick): the green card
   // has the word, its meaning, its picture and its speaker (feedback of the maker, 2 November).
-  const cardless = quietRight && !ruleFb && !why && (ex.kind === 'meaning' || ex.kind === 'listen' || ex.kind === 'chat' || typePick);
+  // A wrong answer too (feedback of the maker, 2 November): the green option already shows the
+  // right one with its meaning, the red one what was picked, and "comes back later" that it
+  // returns; the label only repeated it ("Het goede antwoord is: tot morgen = see you tomorrow").
+  // It stays when it explains something (a chat's why, a situation, a rules question, "almost").
+  const answerShown = ex.kind === 'meaning' || ex.kind === 'listen' || ex.kind === 'chat' || typePick;
+  const cardless = Boolean(feedback) && !answer?.almost && !ruleFb && !why && answerShown;
+  /** A wrong answer whose right one is already on screen, with an explanation (a chat's why): the
+   *  label holds only that explanation, like a right answer with a why. */
+  const whyOnly = Boolean(feedback && answer && !answer.correct && answerShown && why && !ruleFb);
   // Answered: the question steps back (styles.css "the spotlight after the answer"). Matching has
   // no Check; it is answered when the last pair is made.
   const answered = checked || (ex.kind === 'match' && answer !== null);
@@ -1165,7 +1173,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                 {/* Heading: the help language first and large; the Dutch words and English under it. */}
                 {/* A plain right answer has no heading ("Goed zo!"): the green and the check say it,
                     the status region says it aloud. "Bijna goed" and "Het goede antwoord is" stay. */}
-                {!quietRight && <div className={`feedback-head ${headingMeaning?.help ? 'has-help' : ''}`}>
+                {!quietRight && !whyOnly && <div className={`feedback-head ${headingMeaning?.help ? 'has-help' : ''}`}>
                   {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
                   <div className="feedback-line">
                     <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
@@ -1176,11 +1184,11 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                   </div>
                 </div>}
                 {ruleFb && <RuleFeedbackBody v={ruleFb} lang={lang} />}
-                {(pairLine || whyLine) && !quietRight && <hr className="feedback-rule" />}
+                {(pairLine || whyLine) && !quietRight && !whyOnly && <hr className="feedback-rule" />}
                 {/* After a wrong answer the heading is the lead; the answer itself is green with a check. */}
                 {/* Right with an explanation (a situation): the answer is already green in the list,
                     so only the why ("Vloertaal rustiger": say it once). */}
-                {!answer.correct && pairLine ? (
+                {whyOnly ? null : !answer.correct && pairLine ? (
                   <div className="feedback-answer">
                     <span className="feedback-answer-check" aria-hidden><CheckIcon size={20} /></span>
                     {pairLine}
