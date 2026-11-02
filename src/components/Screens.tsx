@@ -369,14 +369,14 @@ export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab:
             onClick={() => onTab(tab)}
           >
             <span className="nav-icon" aria-hidden><Icon size={26} /></span>
-            {/* Icons only ("Vloertaal rustiger"); the tab you are on keeps one word under its
-                icon (in the help language; in Werkregels in Dutch), so you know where you are.
-                Every tab still says its name to a screen reader (aria-label). */}
-            {current === tab && (dutch
+            {/* One word under every icon, as in WhatsApp and most apps (the owner's UX check, 2
+                November 2026: an icon alone is harder to recognise for who reads little): in the
+                help language, in Werkregels in Dutch. The tab you are on is bold, its icon yellow. */}
+            {dutch
               ? <span className="nav-label" lang="nl" aria-hidden>{nl}</span>
               : word.help && lang
                 ? <HelpText className="nav-help nav-help-only" text={word.help} lang={lang} />
-                : <span className="nav-help nav-help-only" lang="en" aria-hidden>{word.en}</span>)}
+                : <span className="nav-help nav-help-only" lang="en" aria-hidden>{word.en}</span>}
           </button>
         );
       })}

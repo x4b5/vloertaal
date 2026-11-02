@@ -3140,7 +3140,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .say-mic {
   position: relative; display: grid; place-items: center; width: 96px; height: 96px; padding: 0;
   border: 3px solid var(--ink); border-radius: 50%; background: var(--yellow); color: var(--on-yellow);
-  cursor: pointer; touch-action: manipulation;
+  cursor: pointer; touch-action: none;
+  /* Press and hold (as in WhatsApp): no text selection or callout menu on a long press. */
+  -webkit-touch-callout: none; -webkit-user-select: none; user-select: none;
 }
 .say-mic:active { transform: translateY(1px); }
 .say-mic:disabled { opacity: 0.7; cursor: progress; }
@@ -4890,8 +4892,9 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .cert-name-empty { display: inline-block; min-width: 30cqw; min-height: 1.2em; }
 /* 6. No logo in the top bar: the day count and the words sit at the end of the row. */
 .topbar { justify-content: flex-end; }
-/* 7. The bottom bar shows icons; only the tab you are on has its word under it. */
-.nav-tab-on .nav-help-only { font-size: 0.8rem; font-weight: 650; color: var(--ink); }
+/* 7. The bottom bar: every icon with its word under it (the tab you are on in bold). */
+.nav-help-only { font-size: 0.8rem; font-weight: 500; color: var(--ink-2); }
+.nav-tab-on .nav-help-only { font-weight: 650; color: var(--ink); }
 .bottom-nav .nav-tab { min-height: 60px; }
 
 /* ---- "Vloertaal rustiger", fase 2 (docs/rustiger.md) ----
