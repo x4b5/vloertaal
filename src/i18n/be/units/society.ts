@@ -507,11 +507,11 @@ export const fr: Gloss = {
   'be.w.wijkagent': 'l’agent de quartier', // nieuw, nalezen
   'be.w.identiteitskaart': 'la carte d’identité (eID)', // nieuw, nalezen
   'be.w.boete': 'l’amende (de l’argent à payer comme punition)', // nieuw, nalezen
-  'be.w.bezwaar': 'la réclamation (tu dis par écrit que tu n’es pas d’accord)', // nieuw, nalezen
+  'be.w.bezwaar': 'la contestation (tu dis par écrit que tu n’es pas d’accord)', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.advocaat': 'l’avocat', // nieuw, nalezen
   'be.w.recht': 'le droit (ce que la loi te permet de faire ou de recevoir)', // nieuw, nalezen
   'be.s.police.1': 'J’ai toujours ma carte d’identité sur moi.', // nieuw, nalezen
-  'be.s.police.2': 'Je veux faire une réclamation.', // nieuw, nalezen
+  'be.s.police.2': 'Je veux contester la décision.', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.s.police.3': 'Je veux d’abord parler à un avocat.', // nieuw, nalezen
   'be.c.police.q': 'Je peux voir votre carte d’identité ?', // nieuw, nalezen
   'be.c.police.a': 'Oui, la voici. Qu’est-ce qui se passe ?', // nieuw, nalezen

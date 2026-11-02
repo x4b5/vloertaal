@@ -162,7 +162,7 @@ describe('content and translations', () => {
     expect(ui('notSureYet', getHelpLanguage('ar', 'f')).help).toBe('لست متأكدة بعد');
     expect(ui('notSureYet', getHelpLanguage('ar', 'm')).help).toBe('لست متأكداً بعد');
     expect(getHelpLanguage('pl', 'f')!.gloss['c.sick.q']).toBe('Jesteś chora?');
-    expect(getHelpLanguage('ro', 'x')!.gloss['p.hurt']).toBe('Sunt rănit / rănită.');
+    expect(getHelpLanguage('ro', 'x')!.gloss['p.hurt']).toBe('M-am rănit.');
     expect(getHelpLanguage('ro', 'f')!.gloss['p.hurt']).toBe('Sunt rănită.');
     // Languages without grammatical gender give the same text for everyone.
     for (const code of ['fa', 'prs', 'tr'] as const) {

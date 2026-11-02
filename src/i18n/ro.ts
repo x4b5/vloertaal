@@ -14,7 +14,7 @@ const lang: HelpLanguageSource = {
     voice: 'Voce în olandeză',
     voiceAuto: 'Automat',
     voiceHint: 'Atinge 🔊 ca să asculți. Vocile Vloertaal sună la fel pe orice telefon; celelalte vin de pe telefonul tău.',
-    voiceNone: 'Acest dispozitiv nu are o voce în olandeză. O poți adăuga din setările telefonului (Redare text în vorbire).',
+    voiceNone: 'Acest dispozitiv nu are o voce în olandeză. O poți adăuga din setările telefonului (Transformarea textului în vorbire).', // nieuw, nalezen (AI-correctie 2 nov 2026)
     appTagline: 'Olandeză pentru locul de muncă',
     chooseLanguage: 'Alege limba de ajutor',
     englishOnly: 'Doar engleză',
@@ -294,7 +294,7 @@ const lang: HelpLanguageSource = {
     bramDone: 'Gata pentru azi. Ne vedem mâine.',
     bramPerfect: 'Foarte bine. Știi aceste cuvinte.',
     bramGood: 'Treabă bună. Pas cu pas.',
-    bramHard: { m: 'E bine că ai fost harnic. Cuvintele grele revin.', f: 'E bine că ai fost harnică. Cuvintele grele revin.', x: 'E bine că ai exersat. Cuvintele grele revin.' }, // x: nieuw, nalezen
+    bramHard: 'E bine că ai exersat. Cuvintele grele revin.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     bramReview: 'Bine. Repetiția te ajută să ții minte.',
     bramIntro: 'Sunt Bram, colegul tău de muncă.',
     bramIntroHello: 'Bună, sunt Bram.',
@@ -355,7 +355,7 @@ const lang: HelpLanguageSource = {
     coachCardIntro: 'Acest card arată progresul tău. Arată-l profesorului, coach-ului sau șefului tău. Tu decizi.', // nieuw, nalezen
     coachCardKeep: 'Telefonul tău face cardul. Nu se trimite nimic. Vloertaal nu păstrează nimic.', // nieuw, nalezen
     coachCardWhat: 'Pe card, în olandeză:', // nieuw, nalezen // nagelezen AI 31 okt
-    coachTopics: 'Teme terminate', // nieuw, nalezen
+    coachTopics: 'Subiecte terminate', // nieuw, nalezen (AI-correctie 2 nov 2026)
     coachDays: 'Zile de exercițiu în ultimele 4 săptămâni', // nieuw, nalezen
     coachLast: 'Ultima lecție, cu data', // nieuw, nalezen
     coachCode: 'Cod: aceleași numere, pe scurt, pentru rezumatul grupului. Fără nume.', // nieuw, nalezen
@@ -394,9 +394,9 @@ const lang: HelpLanguageSource = {
     samenSwap: 'Schimbați rolurile', // nieuw, nalezen
     samenStop: 'Gata', // nieuw, nalezen
     checkStart: 'Știu asta: verificare scurtă', // nieuw, nalezen
-    checkPassed: 'Știi deja asta. Bifezi tema aceasta?', // nieuw, nalezen
+    checkPassed: 'Știi deja asta. Bifezi acest subiect?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     checkNoCert: 'Atunci nu ai încă certificat. Îl primești după lecții.', // nieuw, nalezen
-    checkNotYet: 'Lecțiile te ajută la această temă.', // nieuw, nalezen
+    checkNotYet: 'Lecțiile te ajută la acest subiect.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     checkMark: 'Bifează', // nieuw, nalezen
     checkVia: 'prin verificare', // nieuw, nalezen
     checkUndo: 'Totuși fă lecțiile', // nieuw, nalezen
@@ -604,7 +604,7 @@ const lang: HelpLanguageSource = {
     'c.sick.a': 'Da, azi rămân acasă.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Sună la 112!',
-    'p.hurt': { m: 'Sunt rănit.', f: 'Sunt rănită.', x: 'Sunt rănit / rănită.' },
+    'p.hurt': { m: 'Sunt rănit.', f: 'Sunt rănită.', x: 'M-am rănit.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 

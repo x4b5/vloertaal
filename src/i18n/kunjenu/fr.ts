@@ -6,7 +6,7 @@ const t: CultureTranslation = {
   ui: {
     kunJeNu: "Que sais-tu faire maintenant ?", // nieuw, nalezen
     kunNote: "Le niveau à côté de chaque phrase est un repère, pas un niveau officiel.", // nieuw, nalezen
-    coachCanDo: "Combien de phrases “Je peux …” tu as, des thèmes terminés", // nieuw, nalezen // nagelezen AI 31 okt
+    coachCanDo: "Combien de phrases “Je peux …” tu as, dans les sujets terminés", // nieuw, nalezen (AI-correctie 2 nov 2026)
     kunLuisteren: "écouter", // nieuw, nalezen
     kunSpreken: "parler", // nieuw, nalezen
     kunLezen: "lire", // nieuw, nalezen
@@ -83,7 +83,7 @@ const t: CultureTranslation = {
     'kjn.u.travel.1': "Je peux dire comment je vais au travail.", // nieuw, nalezen
     'kjn.u.travel.2': "Je peux demander où est l’arrêt de bus.", // nieuw, nalezen
     'kjn.u.society.1': "Je peux demander si j’ai le droit de voter.", // nieuw, nalezen
-    'kjn.u.society.2': "Je peux dire que je veux faire une réclamation contre une décision.", // nieuw, nalezen
+    'kjn.u.society.2': "Je peux dire que je veux contester une décision.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.warehouse.1': "Je peux comprendre des consignes courtes à l’entrepôt.", // nieuw, nalezen
     'kjn.u.warehouse.2': "Je peux dire où se trouve quelque chose : à gauche ou à droite.", // nieuw, nalezen
     'kjn.u.build.1': "Je peux comprendre un avertissement sur le chantier.", // nieuw, nalezen

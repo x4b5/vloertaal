@@ -232,7 +232,7 @@ const lang: HelpLanguageSource = {
     speakingPractice: 'تمرین گپ زدن',
     speakingHint: 'کلمه‌ها را بلند بگویید و مقایسه کنید. صدای شما هیچ وقت ذخیره یا فرستاده نمی‌شود.',
     savingOffline: 'ذخیره می‌شود…',
-    savedOffline: 'بدون انترنت ذخیره شد',
+    savedOffline: 'در تیلفون شما ذخیره شد', // nieuw, nalezen (AI-correctie 2 nov 2026)
     offlineNoSpace: 'جای کافی در این تیلفون نیست. یک موضوع ذخیره‌شده را پاک کنید یا جای خالی کنید.',
     offlineFailed: 'ذخیره نشد. انترنت را چک کنید و دوباره کوشش کنید.',
     pocketCard: 'کارت جیبی',
@@ -401,7 +401,7 @@ const lang: HelpLanguageSource = {
     checkVia: 'با آزمون', // nieuw, nalezen
     checkUndo: 'با این هم درس‌ها را انجام دهید', // nieuw, nalezen
     shareInvite: 'من با Vloertaal هالندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
-    workTry: 'امروز در کار امتحانش کن', // nieuw, nalezen
+    workTry: 'امروز در کار امتحانش کنید', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTryWhen: 'وقتی:', // nieuw, nalezen
     workTryThen: 'آنگاه بگویید:', // nieuw, nalezen
     colleagueCard: 'برای همکار شما', // nieuw, nalezen
@@ -412,12 +412,12 @@ const lang: HelpLanguageSource = {
     keptNofM: 'کلمه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را می‌دانستید.', // nieuw, nalezen
     verbSecond: 'فعل در جای دوم است.', // nieuw, nalezen
     calmScreen: 'صفحهٔ آرام', // nieuw, nalezen
-    calmAuto: 'مثل تلفن شما', // nieuw, nalezen
+    calmAuto: 'مثل تیلفون شما', // nieuw, nalezen (AI-correctie 2 nov 2026)
     calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پیهم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen
     infoMore: 'توضیح بیشتر', // nieuw, nalezen
     tipsAbout: 'در بارهٔ این نکته‌ها', // nieuw, nalezen
     aboutMore: 'بیشتر در بارهٔ Vloertaal', // nieuw, nalezen
-    geluktAsk: 'این را در کار گفتی؟', // nieuw, nalezen
+    geluktAsk: 'این را در کار گفتید؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     geluktYes: 'بلی، شد', // nieuw, nalezen
     geluktNotYet: 'هنوز نه', // nieuw, nalezen
     saveFailed: 'پیشرفت شما ذخیره نشد. آیا تیلفون پر است؟ کمی جا خالی کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
@@ -426,11 +426,11 @@ const lang: HelpLanguageSource = {
     backupShare: 'برای خود تان بفرستید', // nieuw, nalezen
     backupShareHint: 'فایل را برای خود تان بفرستید، مثلاً در واتس‌اپ یا با ایمیل.', // nieuw, nalezen
     backupMade: 'تمام شد. این فایل را خوب نگه دارید. بعداً با آن پیشرفت خود را دوباره می‌آورید.', // nieuw, nalezen
-    speakTurnPrompt: 'چه می‌گویی؟', // nieuw, nalezen
+    speakTurnPrompt: 'چه می‌گویید؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakTurnExample: 'نمونه', // nieuw, nalezen
-    speakTurnReveal: 'جواب را بشنو', // nieuw, nalezen
-    sceneTitle: 'در جای کار گوش کن', // nieuw, nalezen
-    sceneIntro: 'مثل جای کار، سر و صدا است. گوش کن. بعد سوال‌ها می‌آیند.', // nieuw, nalezen
+    speakTurnReveal: 'جواب را بشنوید', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    sceneTitle: 'در جای کار گوش کنید', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    sceneIntro: 'مثل جای کار، سر و صدا است. گوش کنید. بعد سوال‌ها می‌آیند.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     buildFront: 'کلمهٔ نشانی‌شده را اول بگذارید', // nieuw, nalezen
     bridgeTitle: 'قوانین کار', // nieuw, nalezen
     bridgeText: 'حالا هالندی زیاد می‌دانید. می‌خواهید قوانین کار را هم یاد بگیرید؟ آن وقت همه چیز به هالندی است.', // nieuw, nalezen

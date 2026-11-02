@@ -137,14 +137,14 @@ const lang: HelpLanguageSource = {
     backupSave: 'دانلود',
     backupLoad: 'برگرداندن',
     backupBad: 'این فایل Vloertaal نیست.',
-    backupAsk: 'این فایل را به پیشرفت خود اضافه کنید، یا پیشرفت خود را با آن عوض کنید؟',
+    backupAsk: 'می‌خواهید این فایل را به پیشرفت خود اضافه کنید، یا پیشرفت خود را با آن عوض کنید؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     backupMerge: 'با هم جمع کنید',
     backupReplace: 'عوض کنید',
     backupBack: 'پیشرفت شما برگشت.',
     backupNothingNew: 'چیز تازه‌ای نبود: این از قبل روی گوشی شما بود.',
     cancel: 'لغو',
     remindTitle: 'هر روز به من یادآوری کنید',
-    remindEvent: 'وقت هلندی (10 دقیقه)',
+    remindEvent: 'وقت تمرین هلندی (10 دقیقه)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     remindHint: 'تقویم گوشی به شما یادآوری می‌کند. چیزی برای ما فرستاده نمی‌شود.',
     remindBefore: 'قبل از کار',
     remindBreak: 'در زمان استراحت',
@@ -295,7 +295,7 @@ const lang: HelpLanguageSource = {
     bramPerfect: 'خیلی خوب. این کلمه‌ها را بلدید.',
     bramGood: 'کار خوبی بود. قدم به قدم.',
     bramHard: 'خوب شد که تمرین کردید. کلمه‌های سخت دوباره می‌آیند.',
-    bramReview: 'خوب است. تکرار به یاد ماندن کمک می‌کند.',
+    bramReview: 'خوب است. تکرار کمک می‌کند چیزها را به خاطر بسپارید.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     bramIntro: 'من Bram هستم، همکار شما.',
     bramIntroHello: 'سلام، من Bram هستم.',
     showDutch: 'نمایش به هلندی',
@@ -401,13 +401,13 @@ const lang: HelpLanguageSource = {
     checkVia: 'با آزمون', // nieuw, nalezen
     checkUndo: 'با این حال درس‌ها را انجام دهید', // nieuw, nalezen
     shareInvite: 'من با Vloertaal هلندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
-    workTry: 'امروز سر کار امتحانش کن', // nieuw, nalezen
+    workTry: 'امروز سر کار امتحانش کنید', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTryWhen: 'وقتی:', // nieuw, nalezen
     workTryThen: 'آن‌وقت بگویید:', // nieuw, nalezen
     colleagueCard: 'برای همکارتان', // nieuw, nalezen
     colleagueCardHint: 'این را به همکاری که هلندی صحبت می‌کند نشان دهید. در آن نوشته که چطور می‌تواند در تمرین به شما کمک کند.', // nieuw, nalezen
     colleagueShare: 'برای همکارتان بفرستید', // nieuw, nalezen
-    coachCardRights: 'موضوع‌های مربوط به حقوق شما با نام نشان داده شود', // nieuw, nalezen
+    coachCardRights: 'موضوع‌های مربوط به حق‌های شما با نام نشان داده شود', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'حالا از حفظ: به هلندی چه بود؟', // nieuw, nalezen
     keptNofM: 'واژه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را بلد بودید.', // nieuw, nalezen
     verbSecond: 'فعل در جای دوم است.', // nieuw, nalezen

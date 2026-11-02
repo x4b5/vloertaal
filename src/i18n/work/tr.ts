@@ -689,7 +689,7 @@ const t: CultureTranslation = {
     'c.health.o3': 'Tek kelime etmeden işi bırakıp eve gidersin.',
     'c.health.w': '5,5 saatten fazla çalıştığında mola yasal bir haktır, bir iyilik değil. Dinlenmek güvenli çalışmana da yardım eder.',
     'c.rights': 'Ayrımcılık ve işten çıkarılma',
-    'c.rights.b': 'İş yerinde ayrımcılık yasaktır, örneğin kökenin, dinin veya cinsiyetin yüzünden. İşveren seni öylece işten çıkaramaz: normalde UWV’den veya bir hâkimden izin ya da senin onayın gerekir. (Deneme süresinde veya geçici bir sözleşmenin sonunda başka kurallar geçerlidir.) İşten çıkarılmanla ilgili anlamadığın bir kâğıdı imzalama. İşini bitirmek için bir anlaşma (vaststellingsovereenkomst) mı imzaladın? O zaman genelde 14 gün içinde yazılı olarak iptal edebilirsin. Önce sendikadan (örneğin FNV), bir ayrımcılık danışma merkezinden veya Juridisch Loket’ten (ücretsiz hukuki tavsiye) yardım al. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.',
+    'c.rights.b': 'İş yerinde ayrımcılık yasaktır, örneğin kökenin, dinin veya cinsiyetin yüzünden. İşveren seni öylece işten çıkaramaz: normalde UWV’den veya bir hâkimden izin ya da senin onayın gerekir. (Deneme süresinde veya geçici bir sözleşmenin sonunda başka kurallar geçerlidir.) İşten çıkarılmanla ilgili anlamadığın bir kâğıdı imzalama. İş sözleşmeni sona erdiren bir anlaşma (vaststellingsovereenkomst) mı imzaladın? O zaman genelde 14 gün içinde yazılı olarak iptal edebilirsin. Önce sendikadan (örneğin FNV), bir ayrımcılık danışma merkezinden veya Juridisch Loket’ten (ücretsiz hukuki tavsiye) yardım al. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.rights.p': 'Önce tavsiye almak istiyorum.',
     'c.rights.s': 'Patronun sana bir kâğıt veriyor: “Bugün imzala, anlaşmayla ayrılırsın.” Tam anlamıyorsun. Ne yaparsın?',
     'c.rights.o1': 'Henüz imzalamazsın. Önce tavsiye alırsın.', // nieuw, nalezen
@@ -1556,7 +1556,7 @@ const t: CultureTranslation = {
     'c.handover.p': "Dört numaralı oda daha bitmedi. Kapı kilitliydi.", // nieuw, nalezen
     'c.handover.s': "Beş oda temizledin. 4 numaralı oda kilitliydi, bu yüzden orayı temizleyemedin. Vardiyan bitiyor. Ne yaparsın?", // nieuw, nalezen
     'c.handover.o1': "Amirine 4 numaralı odanın bitmediğini ve nedenini söylersin.", // nieuw, nalezen
-    'c.handover.o2': "Eve gidersin: oda kilitliydi, bu senin suçun değil.", // nieuw, nalezen
+    'c.handover.o2': "Eve gidersin: 4 numaralı oda kilitliydi, bu senin suçun değil.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.handover.o3': "Listeye “hepsi bitti” yazarsın, çünkü elinden geleni yaptın.", // nieuw, nalezen
     'c.handover.w': "Amirin işi planlar. 4 numaralı odanın bitmediğini bilirse, başka birini gönderebilir. Böylece hiçbir müşteri kirli bir oda bulmaz.", // nieuw, nalezen
     'c.workshop': "Gözler, kulaklar ve yangın", // nieuw, nalezen
@@ -1671,7 +1671,7 @@ const t: CultureTranslation = {
     'c.budget.o2': "Ayakkabıları alırsın, kirayı sonra ödersin.", // nieuw, nalezen
     'c.budget.o3': "Ayakkabıları “şimdi al, sonra öde” ile alırsın.", // nieuw, nalezen
     'c.budget.w': "Kira, sigorta ve telefon her ay tekrar gelir. Önce bunları ödersen, ne kadar paran kaldığını bilirsin. Böylece borca girmezsin.", // nieuw, nalezen
-    'c.healthy': "Uyku, yemek ve uyuşturucu yok", // nieuw, nalezen
+    'c.healthy': "Uyku, beslenme ve uyuşturucuya hayır", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.healthy.b': "Yeterince uyuduğunda daha iyi ve daha güvenli çalışırsın, geç bir vardiyadan sonra da. Kahvaltı yap ve gün içinde su iç. Molada hareket et, örneğin kısa bir yürüyüş yap. Alkol ya da uyuşturucunun etkisi altında çalışmak tehlikelidir ve çoğu işveren bunu yasaklar. Uzun süredir moralin mi bozuk, ya da içmeyi veya kullanmayı bırakamıyor musun? Aile hekiminle (huisarts) konuş. Sana yardım edebilir ve bunu gizli tutar.", // nieuw, nalezen
     'c.healthy.p': "Uzun süredir moralim bozuk. Randevu alabilir miyim?", // nieuw, nalezen
     'c.healthy.s': "Bu gece gece vardiyan var. Bir iş arkadaşın uyanık kalman için sana bir hap veriyor. Ne yaparsın?", // nieuw, nalezen

@@ -15,11 +15,11 @@ const t: CultureTranslation = {
   },
   gloss: {
     'kjn.u.firstday.1': "Kendimi bir iş arkadaşıma tanıtabilirim.", // nieuw, nalezen
-    'kjn.u.firstday.2': "Kime başvurmam gerektiğini sorabilirim.", // nieuw, nalezen
+    'kjn.u.firstday.2': "Geldiğimde kime haber vermem gerektiğini sorabilirim.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.help.1': "Anlamadığımı söyleyebilirim.", // nieuw, nalezen
     'kjn.u.help.2': "Birinden daha yavaş konuşmasını isteyebilirim.", // nieuw, nalezen
     'kjn.u.tools.1': "Birinden yazmasını ya da göstermesini isteyebilirim.", // nieuw, nalezen
-    'kjn.u.tools.2': "Anladığımı kontrol etmek için bir görevi tekrar edebilirim.", // nieuw, nalezen
+    'kjn.u.tools.2': "Anladığımı kontrol etmek için bir talimatı tekrar edebilirim.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Hollandaca pratik yapmak istediğimi söyleyebilirim.", // nieuw, nalezen
     'kjn.u.data.1': "Adımı harf harf söyleyebilirim.", // nieuw, nalezen
     'kjn.u.data.2': "Hangi günler çalışabileceğimi söyleyebilirim.", // nieuw, nalezen
@@ -90,7 +90,7 @@ const t: CultureTranslation = {
     'kjn.u.build.2': "Alet isteyebilirim.", // nieuw, nalezen
     'kjn.u.factory.1': "Bir arıza olduğunu söyleyebilirim.", // nieuw, nalezen
     'kjn.u.factory.2': "Bir üründe neyin yanlış olduğunu söyleyebilirim.", // nieuw, nalezen
-    'kjn.u.care.1': "Bir danışana yardım edip edemeyeceğimi sorabilirim.", // nieuw, nalezen
+    'kjn.u.care.1': "Bakımını yaptığım bir kişiye yardım edip edemeyeceğimi sorabilirim.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.care.2': "Bir şeyi hemşireye iletebilirim.", // nieuw, nalezen
     'kjn.u.horeca.1': "Misafirlere ne içmek istediklerini sorabilirim.", // nieuw, nalezen
     'kjn.u.horeca.2': "Şefe soracağımı söyleyebilirim.", // nieuw, nalezen

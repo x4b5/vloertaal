@@ -474,7 +474,7 @@
   },
   {
    "id": "genderHint",
-   "text": "Żeby twój język zwracał się do ciebie poprawnie.",
+   "text": "Żeby w twoim języku zwracać się do ciebie we właściwej formie.",
    "page": "vrouw-man"
   },
   {
@@ -598,7 +598,7 @@
   },
   {
    "id": "genderHint",
-   "text": "За да може езикът ти да се обръща към теб правилно.",
+   "text": "Така приложението ще се обръща към теб правилно на твоя език.",
    "page": "vrouw-man"
   },
   {
@@ -794,7 +794,7 @@
   },
   {
    "id": "sectorHint",
-   "text": "Les leçons pour ton travail viennent tôt. Tu peux changer ça plus tard dans les Réglages.",
+   "text": "Les leçons pour ton travail arrivent dès le début. Tu peux changer ça plus tard dans les Réglages.",
    "page": "werk"
   },
   {

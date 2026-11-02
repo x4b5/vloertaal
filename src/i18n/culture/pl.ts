@@ -60,9 +60,9 @@ const t: CultureTranslation = {
     'c.unsafe.o1': 'Ostrzegasz kolegów i mówisz przełożonemu.',
     'c.unsafe.o2': 'Nic nie mówisz, bo nic się nie stało.',
     'c.unsafe.o3': { m: 'Sam poprawiasz paletę i nikomu nie mówisz.', f: 'Sama poprawiasz paletę i nikomu nie mówisz.', x: 'Samodzielnie poprawiasz paletę i nikomu nie mówisz.' }, // nieuw, nalezen
-    'c.unsafe.w': 'Sytuacja, w której prawie doszło do wypadku, to ostrzeżenie. Zgłoszenie go pomaga zapobiec prawdziwemu wypadkowi. Pracodawca nie może cię za to ukarać.',
+    'c.unsafe.w': 'Sytuacja, w której prawie doszło do wypadku, to ostrzeżenie. Zgłoszenie jej pomaga zapobiec prawdziwemu wypadkowi. Pracodawca nie może cię za to ukarać.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.accident': 'Zgłaszaj każdy wypadek',
-    'c.accident.b': 'O każdym wypadku, nawet drobnym, powiedz przełożonemu albo BHV’er (osobie, która w firmie udziela pierwszej pomocy). Pracujesz przez agencję? Powiadom też agencję. W nagłym przypadku najpierw dzwoń pod 112. Poważny wypadek musi zgłosić do Nederlandse Arbeidsinspectie firma, w której do niego doszło (także jeśli pracujesz przez agencję): gdy ktoś ginie, zostaje trwale ranny albo musi zostać w szpitalu. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
+    'c.accident.b': 'O każdym wypadku, nawet drobnym, powiedz przełożonemu albo BHV’er (osobie, która w firmie udziela pierwszej pomocy). Pracujesz przez agencję? Powiadom też agencję. W nagłym przypadku najpierw dzwoń pod 112. Poważny wypadek musi zgłosić do Nederlandse Arbeidsinspectie firma, w której do niego doszło (także jeśli pracujesz przez agencję): gdy ktoś ginie, odnosi trwałe obrażenia albo musi zostać w szpitalu. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.accident.p': 'Mój kolega jest ranny. Gdzie jest osoba od pierwszej pomocy?',
     'c.accident.s': 'Przy podnoszeniu nadwyrężasz sobie plecy. Boisz się, że stracisz pracę. Co robisz?',
     'c.accident.o1': 'Zgłaszasz to przełożonemu tego samego dnia.', // nagelezen (2e lezing)

@@ -568,7 +568,7 @@ const t: CultureTranslation = {
     'c.interview.o2': 'Mówisz „nie”, bo zadawanie pytań jest niegrzeczne.',
     'c.interview.o3': 'Mówisz więcej o sobie, żeby pokazać, że dobrze pracujesz.', // nagelezen (2e lezing)
     'c.interview.w': 'Pytania pokazują, że interesuje cię ta praca. Tutaj pracodawcy często ich oczekują.', // nieuw, nalezen
-    'c.findwork': 'Weź umowę na piśmie',
+    'c.findwork': 'Poproś o umowę na piśmie', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.findwork.b': 'Zawsze proś o umowę na piśmie i kopię dla siebie. Przeczytaj ją, zanim podpiszesz, albo poproś o pomoc kogoś, komu ufasz. Agencja pracy (uitzendbureau) nie może brać od ciebie pieniędzy za znalezienie pracy. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
     'c.findwork.p': 'Mogę najpierw przeczytać umowę?',
     'c.findwork.s': 'Nowy pracodawca mówi: „Podpisz tu teraz. Przeczytasz później.” Co robisz?',
@@ -593,7 +593,7 @@ const t: CultureTranslation = {
     'c.agency.o3': 'Prosisz szefa w firmie, w której pracujesz, żeby zapłacił za te 6 godzin.',
     'c.agency.w': 'Płaci ci agencja, więc to agencja musi poprawić błąd. Twoja własna lista dat i godzin pomaga. Pytanie o to jest twoim prawem.',
     'c.bsn': 'Twój BSN: chroń go',
-    'c.bsn.b': 'BSN (burgerservicenummer) dostajesz, gdy zameldujesz się w gminie (gemeente). Jesteś tu tylko na krótko? Wtedy rejestrujesz się w punkcie RNI. BSN jest potrzebny do pracy, podatków, ubezpieczenia zdrowotnego i konta bankowego. Pracodawca potrzebuje twojego dokumentu tożsamości i BSN. Nie dawaj BSN ani kopii dokumentu ludziom, którzy go nie potrzebują: zapytaj, po co im on. Przeprowadzasz się? Zgłoś nowy adres w gemeente w ciągu 5 dni. DigiD to twój login do stron urzędowych: nigdy nie dawaj go nikomu. Mieszkasz albo pracujesz tutaj? Wtedy zwykle musisz mieć holenderskie ubezpieczenie zdrowotne (zorgverzekering). Załatw je szybko. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
+    'c.bsn.b': 'BSN (burgerservicenummer) dostajesz, gdy zameldujesz się w gminie (gemeente). Jesteś tu tylko na krótko? Wtedy rejestrujesz się w punkcie RNI. BSN jest potrzebny do pracy, podatków, ubezpieczenia zdrowotnego i konta bankowego. Pracodawca potrzebuje twojego dokumentu tożsamości i BSN. Nie dawaj BSN ani kopii dokumentu osobom, które ich nie potrzebują: zapytaj, do czego są im potrzebne. Przeprowadzasz się? Zgłoś nowy adres w gemeente w ciągu 5 dni. DigiD to twój login do stron urzędowych: nigdy nie dawaj go nikomu. Mieszkasz albo pracujesz tutaj? Wtedy zwykle musisz mieć holenderskie ubezpieczenie zdrowotne (zorgverzekering). Załatw je szybko. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.bsn.p': 'Dlaczego potrzebuje pan/pani mojego BSN?',
     'c.bsn.s': 'Ktoś, kogo nie znasz, proponuje ci pracę na WhatsAppie. Prosi o zdjęcie paszportu i twój login DigiD. Co robisz?',
     'c.bsn.o1': 'Nigdy nie podajesz loginu DigiD. Najpierw sprawdzasz, kto to.', // nagelezen (2e lezing)
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.respect.o3': 'W odpowiedzi żartujesz z jego pochodzenia.',
     'c.respect.w': 'Takie żarty są w pracy nie do przyjęcia. Zgłoszenie tego jest normalne: firma musi dbać, żeby miejsce pracy było bezpieczne dla wszystkich.',
     'c.health': 'Przerwy i godziny pracy',
-    'c.health.b': 'Prawo chroni twoje zdrowie. Pracujesz dłużej niż 5,5 godziny? Wtedy masz co najmniej 30 minut przerwy (może być 2 razy po 15 minut). Dłużej niż 10 godzin? Wtedy co najmniej 45 minut. Cao może mieć trochę inne zasady dotyczące przerw. Możesz pracować najwyżej 12 godzin na jednej zmianie i 60 godzin w tygodniu. Masz mniej niż 18 lat? Wtedy możesz pracować mniej godzin. Pracodawca musi dać ci za darmo środki ochrony, np. obuwie ochronne albo rękawice. Niebezpieczna praca albo za niska zapłata? Możesz to zgłosić do Nederlandse Arbeidsinspectie, także bez podawania nazwiska. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', // nieuw, nalezen
+    'c.health.b': 'Prawo chroni twoje zdrowie. Pracujesz dłużej niż 5,5 godziny? Wtedy masz co najmniej 30 minut przerwy (może być 2 razy po 15 minut). Dłużej niż 10 godzin? Wtedy co najmniej 45 minut. Cao może mieć trochę inne zasady dotyczące przerw. Możesz pracować najwyżej 12 godzin na jednej zmianie i 60 godzin w tygodniu. Masz mniej niż 18 lat? Wtedy limity godzin pracy są dla ciebie niższe. Pracodawca musi dać ci za darmo środki ochrony, np. obuwie ochronne albo rękawice. Niebezpieczna praca albo za niska zapłata? Możesz to zgłosić do Nederlandse Arbeidsinspectie, także bez podawania nazwiska. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.health.p': { m: 'Nie miałem jeszcze przerwy.', f: 'Nie miałam jeszcze przerwy.', x: 'Wciąż czekam na przerwę.' }, // x: nieuw, nalezen
     'c.health.s': { m: 'Pracujesz od 6 godzin bez przerwy. Przełożony prosi, żebyś pracował dalej. Co robisz?', f: 'Pracujesz od 6 godzin bez przerwy. Przełożony prosi, żebyś pracowała dalej. Co robisz?', x: 'Pracujesz od 6 godzin bez przerwy. Przełożony prosi cię o dalszą pracę. Co robisz?' }, // x: nieuw, nalezen // nagelezen AI 31 okt
     'c.health.o1': 'Mówisz, że teraz potrzebujesz przerwy.', // nagelezen (2e lezing)
@@ -695,7 +695,7 @@ const t: CultureTranslation = {
     'c.rights.o1': 'Jeszcze nie podpisujesz. Najpierw szukasz porady.', // nieuw, nalezen
     'c.rights.o2': 'Podpisujesz, bo szef mówi, że wszystko w porządku.',
     'c.rights.o3': 'Odkładasz papier i nigdy o nim nie rozmawiasz.',
-    'c.rights.w': 'Jest w nim coś źle? Wtedy możesz stracić prawa, np. do zasiłku dla bezrobotnych (WW). Prośba o czas na poradę jest normalna i dozwolona.', // nieuw, nalezen
+    'c.rights.w': 'Coś jest w nim nie tak? Wtedy możesz stracić prawa, np. do zasiłku dla bezrobotnych (WW). Prośba o czas na poradę jest normalna i dozwolona.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.leave': 'Urlop i urlop w nagłej sytuacji',
     'c.leave.b': 'Z mocy prawa masz płatne dni wolne: co najmniej 4 razy tyle dni, ile pracujesz w tygodniu. Pełny etat, 5 dni w tygodniu? Wtedy co najmniej 20 dni w roku. Cao może dawać więcej. Proś o urlop na czas i na piśmie. Nagła sytuacja, np. wypadek albo choroba w rodzinie? Wtedy możesz dostać krótki płatny urlop (calamiteitenverlof). Od razu powiedz pracodawcy. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
     'c.leave.p': { m: 'Chciałbym poprosić o urlop w lipcu.', f: 'Chciałabym poprosić o urlop w lipcu.', x: 'Czy mogę prosić o urlop w lipcu?' }, // x: nieuw, nalezen
@@ -1301,7 +1301,7 @@ const t: CultureTranslation = {
     'c.dates.o3': "Od 6 marca do 6 maja.",
     'c.dates.w': "Najpierw jest dzień, potem miesiąc: 3-6 to 3 czerwca. „Tot en met” znaczy, że 5 czerwca też się liczy, więc masz trzy dni wolnego.",
     'c.permit': "Praca i integracja",
-    'c.permit.b': "Musisz przejść integrację obywatelską (inburgering)? Powiedz o tym pracodawcy i powiedz gminie (gemeente), że pracujesz. Wcześnie zapytaj, czy lekcje języka da się dopasować do twojego grafiku. Nie wiesz, czy możesz tu pracować? Sprawdź to, zanim zaczniesz, na przykład w IND, UWV albo VluchtelingenWerk. Każą ci zarejestrować się jako samozatrudniony (zzp’er) do tej pracy? Najpierw poproś o radę. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.",
+    'c.permit.b': "Musisz przejść integrację obywatelską (inburgering)? Powiedz o tym pracodawcy i powiedz gminie (gemeente), że pracujesz. Wcześnie zapytaj, czy lekcje języka da się dopasować do twojego grafiku. Nie wiesz, czy możesz tu pracować? Sprawdź to, zanim zaczniesz, na przykład w IND, UWV albo VluchtelingenWerk. Każą ci zarejestrować się jako osoba samozatrudniona (zzp’er) do tej pracy? Najpierw poproś o radę. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.permit.p': "We wtorek mam lekcję języka. Czy grafik może to uwzględnić?",
     'c.permit.s': "Zaczynasz nową pracę. Twoja lekcja języka jest we wtorki rano, ale według grafiku pracujesz we wtorki. Co robisz?",
     'c.permit.o1': "Mówisz przełożonemu i prosisz o zmianę grafiku.", // nagelezen (2e lezing)
@@ -1678,7 +1678,7 @@ const t: CultureTranslation = {
     'c.healthy.o1': "Odmawiasz i śpisz kilka godzin przed zmianą.", // nieuw, nalezen
     'c.healthy.o2': "Bierzesz pół tabletki, to nie jest niebezpieczne.", // nieuw, nalezen
     'c.healthy.o3': "Bierzesz ją, ale nikomu w pracy nie mówisz.", // nieuw, nalezen
-    'c.healthy.w': "Tabletki od kolegi mogą być narkotykami. Mogą wywołać chorobę albo błędy w pracy. Sen to bezpieczny sposób, żeby nie zasnąć.", // nieuw, nalezen
+    'c.healthy.w': "Tabletki od kolegi mogą być narkotykami. Mogą zaszkodzić twojemu zdrowiu albo sprawić, że popełnisz błędy w pracy. Wyspanie się to bezpieczny sposób, żeby nie zasypiać w pracy.", // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 

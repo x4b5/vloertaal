@@ -72,7 +72,7 @@ const t: CultureTranslation = {
     'c.notyet': 'Noch nicht gelernt? Sag es',
     'c.notyet.b': 'Die Firma, in der du arbeitest, muss dir erklären, wie du sicher arbeitest. Benutze keine Maschine und keinen Gabelstapler, wenn es dir niemand beigebracht hat. „Dit heb ik nog niet geleerd“ zu sagen ist hier normal: Es zeigt, dass du sicher arbeitest.',
     'c.notyet.p': 'Das habe ich noch nicht gelernt. Kannst du es mir vormachen?',
-    'c.notyet.s': 'Ein voller Morgen. Dein Vorgesetzter sagt: „Pak jij even de heftruck? Het is makkelijk.“ Du bist noch nie Gabelstapler gefahren. Was machst du?',
+    'c.notyet.s': 'Am Morgen ist viel los. Dein Vorgesetzter sagt: „Pak jij even de heftruck? Het is makkelijk.“ Du bist noch nie Gabelstapler gefahren. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.notyet.o1': 'Sag, dass du es nicht gelernt hast. Bitte um eine Einweisung.',
     'c.notyet.o2': 'Fahr langsam und vorsichtig, nur dieses eine Mal.',
     'c.notyet.o3': 'Sag „ja“ und hoffe, dass es gut geht.',

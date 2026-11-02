@@ -46,7 +46,7 @@ const t: CultureTranslation = {
     'c.ask.o3': 'Excuse-toi pour ton néerlandais et commence à travailler.', // nagelezen (2e lezing)
     'c.ask.w': 'Ici, les responsables s’attendent à des questions. Mieux vaut demander deux fois que faire une erreur.', // nieuw, nalezen
     'c.gear': 'Les règles de sécurité sont pour tout le monde',
-    'c.gear.b': 'Les règles sur les casques, les chaussures et les gants ne sont pas des conseils : tout le monde les suit, aussi le patron. Ton employeur doit te donner gratuitement l’équipement de protection dont tu as besoin. Un équipement qui ne te va pas te protège mal, alors demande ta taille : “Heb je dit ook in mijn maat?”',
+    'c.gear.b': 'Les règles sur les casques, les chaussures et les gants ne sont pas des conseils : tout le monde les suit, même le patron. Ton employeur doit te donner gratuitement l’équipement de protection dont tu as besoin. Un équipement qui ne te va pas te protège mal, alors demande ta taille : “Heb je dit ook in mijn maat?”', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.gear.p': 'Mes gants sont abîmés. Où est-ce que j’en trouve de nouveaux ?',
     'c.gear.s': 'Tes gants sont déchirés. Que fais-tu ?',
     'c.gear.o1': 'Demande des gants neufs à ton responsable.',
@@ -55,22 +55,22 @@ const t: CultureTranslation = {
     'c.gear.w': 'L’équipement de protection, c’est le rôle de l’employeur. Le demander est normal et montre que tu prends la sécurité au sérieux.',
     'c.unsafe': 'Dis-le quand c’est dangereux',
     'c.unsafe.b': 'Si quelque chose est dangereux, dis-le tout de suite, aussi à ton patron. Tu as le droit d’arrêter un travail vraiment dangereux. Signale les accidents et les presque-accidents, même petits.',
-    'c.unsafe.p': 'Stop ! Ce n’est pas sûr.',
+    'c.unsafe.p': 'Stop ! C’est dangereux.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.unsafe.s': 'Une palette est empilée trop haut et tombe presque. Personne n’est blessé. Que fais-tu ?',
     'c.unsafe.o1': 'Préviens les collègues et dis-le à ton responsable.',
     'c.unsafe.o2': 'Ne dis rien, car il ne s’est rien passé.',
     'c.unsafe.o3': 'Répare toi-même la palette et ne le dis à personne.', // nieuw, nalezen
     'c.unsafe.w': 'Un presque-accident est un avertissement. Le signaler aide à éviter un vrai accident. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé.',
     'c.accident': 'Signale chaque accident',
-    'c.accident.b': 'Parle de chaque accident à ton responsable ou au BHV’er (le secouriste de l’entreprise), même d’un petit. Tu travailles par une agence ? Préviens aussi l’agence. En cas d’urgence, appelle d’abord le 112. L’entreprise où l’accident a eu lieu doit déclarer un accident grave à la Nederlandse Arbeidsinspectie (aussi si tu travailles par une agence) : quand quelqu’un meurt, est blessé pour toute sa vie ou doit rester à l’hôpital. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
+    'c.accident.b': 'Parle de chaque accident à ton responsable ou au BHV’er (le secouriste de l’entreprise), même d’un petit. Tu travailles via une agence ? Préviens aussi l’agence. En cas d’urgence, appelle d’abord le 112. L’entreprise où l’accident a eu lieu doit déclarer un accident grave à la Nederlandse Arbeidsinspectie (même si tu travailles via une agence) : quand quelqu’un meurt, est blessé pour toute sa vie ou doit rester à l’hôpital. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.accident.p': 'Mon collègue est blessé. Où est le secouriste ?',
     'c.accident.s': 'Tu t’es fait mal au dos en soulevant quelque chose. Tu as peur de perdre ton travail. Que fais-tu ?',
     'c.accident.o1': 'Signale-le à ton responsable le jour même.', // nagelezen (2e lezing)
     'c.accident.o2': 'Ne dis rien, pour ne pas perdre ton travail.',
     'c.accident.o3': 'Attends de voir si la douleur part toute seule.',
-    'c.accident.w': 'Signale-le le jour même, même si ça semble petit : la douleur peut empirer plus tard. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé. Tu travailles par une agence ? Dis-le aussi à l’agence.', // nagelezen (2e lezing)
+    'c.accident.w': 'Signale-le le jour même, même si ça semble petit : la douleur peut empirer plus tard. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé. Tu travailles via une agence ? Dis-le aussi à l’agence.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.notyet': 'Pas encore appris ? Dis-le',
-    'c.notyet.b': 'L’entreprise où tu travailles doit t’expliquer comment faire ton travail en sécurité. N’utilise pas une machine ou un chariot élévateur que personne ne t’a appris. Dire “Dit heb ik nog niet geleerd” est normal ici : ça montre que tu travailles en sécurité.',
+    'c.notyet.b': 'L’entreprise où tu travailles doit t’expliquer comment faire ton travail en sécurité. N’utilise pas une machine ou un chariot élévateur si personne ne t’a appris à t’en servir. Dire “Dit heb ik nog niet geleerd” est normal ici : ça montre que tu travailles en sécurité.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.notyet.p': 'Je n’ai pas encore appris ça. Tu peux me montrer comment faire ?',
     'c.notyet.s': 'Une matinée chargée. Ton responsable dit : “Pak jij even de heftruck? Het is makkelijk.” Tu n’as jamais conduit de chariot élévateur. Que fais-tu ?',
     'c.notyet.o1': 'Dis que tu ne l’as pas appris. Demande une formation.',
@@ -102,7 +102,7 @@ const t: CultureTranslation = {
     'c.time.o3': 'Ne va pas du tout au travail aujourd’hui.',
     'c.time.w': 'Prévenir tôt permet à l’équipe de s’organiser. Être en retard sans message est vu comme bien pire que le retard lui-même.',
     'c.sick': 'Comment te déclarer malade',
-    'c.sick.b': 'Appelle toi-même ton responsable, avant le début de ton service, sauf si ton entreprise a une autre règle. Tu travailles par une agence ? Préviens aussi l’agence. Tu n’as pas besoin de dire quelle maladie tu as. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
+    'c.sick.b': 'Appelle toi-même ton responsable, avant le début de ton service, sauf si ton entreprise a une autre règle. Tu travailles via une agence ? Préviens aussi l’agence. Tu n’as pas besoin de dire quelle maladie tu as. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.sick.p': 'Je suis malade. Je ne peux pas venir travailler aujourd’hui.',
     'c.sick.s': 'Tu te réveilles avec de la fièvre. Ton service commence à 7 h 00. Que fais-tu ?',
     'c.sick.o1': 'Appelle ton responsable avant 7 h 00.', // nagelezen (2e lezing)

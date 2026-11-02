@@ -178,7 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'Później',
     certPrint: 'Drukuj lub zapisz jako PDF',
     certSaved: 'Obraz jest zapisany.',
-    certNameHint: 'Zostaje tylko na tym telefonie. Możesz zostawić puste.',
+    certNameHint: 'Twoje imię zostaje tylko na tym telefonie. Możesz też zostawić to pole puste.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certChangeName: 'Zmień imię',
     certPractice: 'Certyfikat ćwiczeniowy, nie oficjalny dyplom',
     resumeLesson: 'Kontynuuj lekcję',
@@ -243,7 +243,7 @@ const lang: HelpLanguageSource = {
     textXl: 'Bardzo duży',
     showEnglish: 'Pokazuj też angielski',
     genderTitle: 'Kobieta czy mężczyzna?',
-    genderHint: 'Żeby twój język zwracał się do ciebie poprawnie.',
+    genderHint: 'Żeby w twoim języku zwracać się do ciebie we właściwej formie.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     genderWoman: 'Kobieta',
     genderMan: 'Mężczyzna',
     genderNone: 'Wolę nie mówić',
@@ -352,7 +352,7 @@ const lang: HelpLanguageSource = {
     tempoHint: 'Spokojnie to wolno i wyraźnie. Normalnie to tak, jak mówią koledzy. Wybierz „Normalnie”, jeśli już dużo rozumiesz.', // nieuw, nalezen
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Pokaż, jak ci idzie', // nieuw, nalezen
-    coachCardIntro: 'Ta karta pokazuje twoje postępy. Pokaż ją nauczycielowi, trenerowi albo szefowi. Ty decydujesz.', // nieuw, nalezen
+    coachCardIntro: 'Ta karta pokazuje twoje postępy. Pokaż ją nauczycielowi, opiekunowi albo szefowi. Ty decydujesz.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     coachCardKeep: 'Kartę robi twój telefon. Nic nie jest wysyłane. Vloertaal nic nie zapisuje.', // nieuw, nalezen
     coachCardWhat: 'Na karcie, po niderlandzku:', // nieuw, nalezen
     coachTopics: 'Skończone tematy', // nieuw, nalezen
@@ -407,7 +407,7 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'Dla kolegi z pracy', // nieuw, nalezen
     colleagueCardHint: 'Pokaż to koledze z pracy, który mówi po niderlandzku. Jest tu napisane, jak może ci pomóc ćwiczyć.', // nieuw, nalezen
     colleagueShare: 'Wyślij koledze', // nieuw, nalezen
-    coachCardRights: 'Pokaż z nazwy tematy o twoich prawach', // nieuw, nalezen
+    coachCardRights: 'Pokazuj nazwy tematów o twoich prawach', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'Teraz z pamięci: jak to było po niderlandzku?', // nieuw, nalezen
     keptNofM: 'Słowa sprzed 2 tygodni lub dawniej: pamiętasz jeszcze {n} z {m}.', // nieuw, nalezen
     verbSecond: 'Czasownik stoi na miejscu 2.', // nieuw, nalezen

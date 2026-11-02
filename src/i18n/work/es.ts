@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.respect.o3': 'Tú también haces bromas sobre su origen.',
     'c.respect.w': 'Esas bromas no se aceptan en el trabajo. Contarlo es normal: la empresa tiene que mantener el lugar de trabajo seguro para todos.',
     'c.health': 'Pausas y horas de trabajo',
-    'c.health.b': 'La ley protege tu salud. ¿Trabajas más de 5,5 horas? Entonces tienes como mínimo 30 minutos de pausa (pueden ser 2 veces 15 minutos). ¿Más de 10 horas? Entonces como mínimo 45 minutos. Un cao puede tener normas de pausas un poco diferentes. Puedes trabajar como máximo 12 horas en un turno y 60 horas en una semana. ¿Tienes menos de 18 años? Entonces puedes trabajar menos horas como máximo. Tu empresa te tiene que dar gratis el equipo de protección, como zapatos de seguridad o guantes. ¿Trabajo peligroso o un sueldo demasiado bajo? Puedes denunciarlo ante la Nederlandse Arbeidsinspectie, también sin dar tu nombre. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.', // nieuw, nalezen
+    'c.health.b': 'La ley protege tu salud. ¿Trabajas más de 5,5 horas? Entonces tienes como mínimo 30 minutos de pausa (pueden ser 2 pausas de 15 minutos). ¿Más de 10 horas? Entonces como mínimo 45 minutos. Un cao puede tener normas de pausas un poco diferentes. Puedes trabajar como máximo 12 horas en un turno y 60 horas en una semana. ¿Tienes menos de 18 años? Entonces el máximo de horas que puedes trabajar es más bajo. Tu empresa te tiene que dar gratis el equipo de protección, como zapatos de seguridad o guantes. ¿Trabajo peligroso o un sueldo demasiado bajo? Puedes denunciarlo ante la Nederlandse Arbeidsinspectie, también sin dar tu nombre. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.health.p': 'Todavía no he tenido pausa.',
     'c.health.s': 'Has trabajado 6 horas sin pausa. Tu encargado te pide que sigas. ¿Qué haces?',
     'c.health.o1': 'Dices que ahora necesitas tu pausa.', // nagelezen (2e lezing)
@@ -689,7 +689,7 @@ const t: CultureTranslation = {
     'c.health.o3': 'Dejas el trabajo y te vas a casa sin decir nada.',
     'c.health.w': 'Cuando trabajas más de 5,5 horas, la pausa es la ley, no un favor. Descansar también te ayuda a trabajar de forma segura.',
     'c.rights': 'Discriminación y despido',
-    'c.rights.b': 'La discriminación en el trabajo está prohibida, por ejemplo por tu origen, tu religión o tu género. Tu empresa no te puede despedir así como así: normalmente necesita el permiso del UWV o de un juez, o tu acuerdo. (En el periodo de prueba o al final de un contrato temporal hay otras normas.) No firmes un papel sobre tu despido que no entiendes. ¿Firmaste un acuerdo para terminar tu trabajo (vaststellingsovereenkomst)? Entonces normalmente todavía puedes anularlo por escrito en un plazo de 14 días. Pide ayuda primero al sindicato (por ejemplo FNV), a una oficina contra la discriminación o al Juridisch Loket (consejo legal gratis). Es información general. Para tu situación: pregunta al sindicato, al Juridisch Loket o a FairWork.',
+    'c.rights.b': 'La discriminación en el trabajo está prohibida, por ejemplo por tu origen, tu religión o tu género. Tu empresa no te puede despedir así como así: normalmente necesita el permiso del UWV o de un juez, o tu acuerdo. (En el periodo de prueba o al final de un contrato temporal hay otras normas.) No firmes ningún papel sobre tu despido que no entiendas. ¿Firmaste un acuerdo para terminar tu trabajo (vaststellingsovereenkomst)? Entonces normalmente todavía puedes anularlo por escrito en un plazo de 14 días. Pide ayuda primero al sindicato (por ejemplo FNV), a una oficina contra la discriminación o al Juridisch Loket (consejo legal gratis). Es información general. Para tu situación: pregunta al sindicato, al Juridisch Loket o a FairWork.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.rights.p': 'Primero quiero pedir consejo.',
     'c.rights.s': 'Tu jefe te da un papel: “Firma hoy, así te vas de mutuo acuerdo.” No lo entiendes bien. ¿Qué haces?',
     'c.rights.o1': 'Todavía no firmas. Primero pides consejo.', // nieuw, nalezen
@@ -761,13 +761,13 @@ const t: CultureTranslation = {
     'c.diploma.o3': 'Tienes que pagar tú la formación.',
     'c.diploma.w': 'Si una formación es obligatoria para tu trabajo, la paga la empresa y cuenta como tiempo de trabajo. Si no está claro, pide consejo.',
     'c.doctor': '¿Médico o 112?',
-    'c.doctor.b': 'Inscríbete con un médico de cabecera (huisarts) cerca de tu casa. ¿Necesitas atención urgente por la tarde, por la noche o el fin de semana? Llama a la huisartsenpost. Llama al 112 solo en una emergencia: peligro de muerte, fuego o un delito que pasa ahora. Los medicamentos los recibes en la farmacia (apotheek).',
+    'c.doctor.b': 'Inscríbete con un médico de cabecera (huisarts) cerca de tu casa. ¿Necesitas atención urgente por la tarde, por la noche o el fin de semana? Llama a la huisartsenpost. Llama al 112 solo en una emergencia: peligro de muerte, incendio o un delito que está pasando ahora. Los medicamentos los recibes en la farmacia (apotheek).', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.doctor.p': 'Quiero inscribirme con el médico de cabecera.',
     'c.doctor.s': 'Es sábado por la noche. Tu hijo tiene mucha fiebre, pero está despierto y respira normal. ¿Qué haces?',
     'c.doctor.o1': 'Llamas a la huisartsenpost.',
     'c.doctor.o2': 'Llamas al 112.',
     'c.doctor.o3': 'Esperas hasta el lunes y no haces nada.',
-    'c.doctor.w': 'La huisartsenpost ayuda con la atención urgente fuera del horario de consulta. El 112 es para emergencias: peligro de muerte, fuego o un delito que pasa ahora.',
+    'c.doctor.w': 'La huisartsenpost ayuda con la atención urgente fuera del horario de consulta. El 112 es para emergencias: peligro de muerte, incendio o un delito que está pasando ahora.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.insurance': 'El seguro médico',
     'c.insurance.b': 'Si vives o trabajas en los Países Bajos, normalmente es obligatorio tener un seguro médico básico. Pagas una cuota cada mes. Cada año hay una franquicia (eigen risico): los primeros gastos los pagas tú. La cantidad cambia: pregúntala a tu aseguradora. Las visitas al médico de cabecera (huisarts) no cuentan para la franquicia. Con ingresos bajos puedes recibir una ayuda para el seguro médico (zorgtoeslag). Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
     'c.insurance.p': 'Necesito un seguro médico. ¿Me puede ayudar?',
