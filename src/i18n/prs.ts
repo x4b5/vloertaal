@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'در کجا کار می‌کنید؟',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'در کدام کشور کار می‌کنید؟',
-    countryHint: 'قوانین کار همان کشور را می‌بینید. این تنها روی تیلفون شما می‌ماند. ما آن را جایی نمی‌فرستیم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'قوانین کار همان کشور را می‌بینید.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'هالند',
     countryBe: 'بلجیم (فلاندر)',
     tipsNote: 'این نکته‌ها در باره کار در هالند است. معلومات عمومی است، نه مشوره حقوقی.',

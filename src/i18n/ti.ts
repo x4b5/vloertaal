@@ -86,7 +86,7 @@ const lang: HelpLanguageSource = {
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: { m: 'ኣብ ኣየናይ ሃገር ኢኻ ትሰርሕ?', f: 'ኣብ ኣየናይ ሃገር ኢኺ ትሰርሒ?', x: 'ኣብ ኣየናይ ሃገር ኢኹም ትሰርሑ?' }, // x: nieuw, nalezen
     // nagelezen (2e lezing)
-    countryHint: { m: 'ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ። እዚ ኣብ ተሌፎንካ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።', f: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ። እዚ ኣብ ተሌፎንኪ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።', x: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም። እዚ ኣብ ተሌፎንኩም ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: { m: 'ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ።', f: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ።', x: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'ኔዘርላንድ',
     countryBe: 'ቤልጅዩም (ፍላንደርስ)',
     tipsNote: 'እዞም ምኽርታት ብዛዕባ ስራሕ ኣብ ኔዘርላንድ እዮም። ሓፈሻዊ ሓበሬታ እዩ፡ ሕጋዊ ምኽሪ ኣይኮነን።',

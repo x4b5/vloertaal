@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-02',
     items: [
+      'Nog rustiger: "Tik om te horen" staat alleen nog boven de woorden van de eerste lessen, en de stempel "Straks weer" zie je de eerste drie keer. Na een les staat er geen stempel "Klaar" meer naast "Les klaar!". Bij een gesprekje heeft jouw ballon een eigen kleur. Bij Over staan de AI-stemmen op één regel. "Wat is er nieuw?" toont de nieuwste punten; de hele lijst staat op vloertaal.nl/nieuw.',
       'Spreken gaat nu ook zoals in WhatsApp: hou de microfoon ingedrukt, praat, en laat los. Kort tikken kan ook nog: dan stopt de opname vanzelf als je klaar bent. En onderaan staat onder elk icoon weer zijn naam, zodat je ziet wat waar is.',
       'Minder dubbel op het scherm. Kies je bij een situatie of een gezegde het verkeerde antwoord? Dan staat alleen nog de uitleg eronder; het goede antwoord is al groen. Een goed gebouwde zin krijgt geen extra kaart meer. Na een foutloze les staat er "11/11" en "Zonder fouten", zonder stempel. De reeks noemt het aantal dagen één keer. Bij Hulp staat een nummer als 112 niet meer twee keer op een kaart. En in de herhaalronde staat bovenaan één regel.',
       'Moeilijke woorden zoals de huur, de borg, bruto en netto, de boete en het verlof hebben nu een geheugenplaatje: een eenvoudige tekening waar je het woord aan ophangt, naast de vertaling. Die tekening zie je als het woord nieuw is, niet in de oefeningen, zodat hij je niet op het verkeerde been zet.',

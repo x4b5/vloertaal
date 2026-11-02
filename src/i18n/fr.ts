@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Où travailles-tu ?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Dans quel pays travailles-tu ?',
-    countryHint: 'Tu reçois alors les règles du travail de ce pays. Cela reste sur ton téléphone. Nous ne l’envoyons nulle part.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Tu reçois alors les règles du travail de ce pays.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Pays-Bas',
     countryBe: 'Belgique (Flandre)',
     tipsNote: 'Ces conseils parlent du travail aux Pays-Bas. Ce sont des informations générales, pas un conseil juridique.',

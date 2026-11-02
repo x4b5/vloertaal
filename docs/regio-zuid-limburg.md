@@ -648,7 +648,7 @@ gids). Een S-rij moet eerst nagekeken worden.
 | **Juridisch Loket** | Het Juridisch Loket | Gratis advies over je contract, je loon, ontslag, huur of schulden. | juridischloket.nl | 0800-8020 | ZL | ⚖️ 15-10-2026 · O (nummer uit `werkregels-bronnen.md`) |
 | | Juridisch Loket Heerlen, in het Huis van het Recht | Je hebt meer problemen tegelijk, zoals schulden en huur, en woont in Heerlen. | juridischloket.nl | — | P | ⚖️ 15-10-2026 · O (rechtspraak.nl, 2020–2022; nu nog open?) |
 | **Werk** | UWV en werk.nl | Werk kwijt, WW, inschrijven als werkzoekende, vacatures. | werk.nl · uwv.nl | — | ZL | ⚖️ 15-10-2026 · O |
-| | Werkgeversservicepunt (WSP) Zuid-Limburg | Samenwerking van UWV, gemeenten en sociale werkbedrijven. Helpt werkzoekenden en werkgevers. | zuid-limburg.werkgeversanno.nu ⚖️ | — | ZL | ⚖️ 15-10-2026 · S |
+| | ~~Werkgeversservicepunt (WSP) Zuid-Limburg~~ | Van de kaart gehaald (2 november 2026): voor werkgevers, niet voor de leerder; het Werkcentrum staat erboven. | zuid-limburg.werkgeversanno.nu | — | ZL | — |
 | | Werkcentrum Zuid-Limburg | Je zoekt werk: hulp bij werk zoeken, solliciteren en een opleiding. | werkcentrumzuidlimburg.nl | — | ZL | ✅ naam bevestigd door de eigenaar (15-10-2026); site en adres nog nakijken ⚖️ |
 | | Sociale Zaken Maastricht Heuvelland | Je zoekt werk en hebt een uitkering van de gemeente, in Maastricht of het Heuvelland. | socialezaken-mh.nl | — | M-H | ⚖️ 15-10-2026 · O (sdg.government.nl) |
 | | WSP Parkstad, en WerkvoorHeerlen | Je zoekt werk vanuit de bijstand in Parkstad. WSP Parkstad zoekt mee naar een baan. | wspparkstad.nl | — | P | ⚖️ 15-10-2026 · O (heerlen.nl, gemeenteraad 2024) |

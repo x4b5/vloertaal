@@ -216,15 +216,8 @@ export const zlSocialMap: SocialMapEntry[] = [
     when: 'Je zoekt werk: hulp bij werk zoeken, solliciteren en een opleiding.',
     url: 'https://www.werkcentrumzuidlimburg.nl', area: ['all'], checked: C, source: 'other',
   },
-  {
-    // 16-10: zuid-limburg.werkgeversanno.nu/over-werkgeversservicepunt (search result): UWV, gemeenten and
-    //   SW-bedrijven; "hét aanspreekpunt voor werkgevers" in all 16 gemeenten. It is for employers, so the line
-    //   now sends a job seeker to the Werkcentrum.
-    id: 'rg.zl.k.wsp', category: 'werk', emoji: '🤝',
-    name: 'Werkgeversservicepunt (WSP) Zuid-Limburg',
-    when: 'Voor werkgevers: UWV, gemeenten en sociale werkbedrijven samen. Zoek je zelf werk? Ga naar het Werkcentrum.',
-    url: 'https://zuid-limburg.werkgeversanno.nu', area: ['all'], checked: C, source: 'other',
-  },
+  // The Werkgeversservicepunt (WSP) Zuid-Limburg is for employers, not for the learner: it only sent a
+  // job seeker on to the Werkcentrum above. Taken off the map (the owner's choice, 2 November 2026).
   {
     // 16-10: socialezaken-mh.nl/werk-vinden and sdg.government.nl (search result): help with work for people in
     //   Maastricht, Meerssen, Vaals, Valkenburg and Gulpen-Wittem; the site links to Podium24. Eijsden-Margraten
