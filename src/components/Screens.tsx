@@ -64,6 +64,7 @@ import { pushSubStep } from '../lib/onbHistory';
 import { HelpSay } from './HelpSay';
 import { emojiIconId } from '../content/tipIcons';
 import { PRIVACY_PATH } from '../lib/paths';
+import { AboutFooter } from './AboutFooter';
 import { aboutDutchRemembered, rememberAboutDutch } from '../lib/aboutDutch';
 import { WorkTry } from './WorkTry';
 import type { WorkTryLine } from '../lib/workTry';
@@ -745,6 +746,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
       {!onNews && lastUpdate && <p className="about-updated muted small"><Bi text={lastUpdatedText(lastUpdate, lang)} /></p>}
       {/* Which deploy runs on this phone (the commit; src/lib/appUpdate.ts loads a newer one). */}
       <p className="about-version muted small" dir="ltr" lang="nl">Versie {(import.meta.env.VITE_BUILD as string | undefined) ?? 'dev'}</p>
+      <AboutFooter />
     </div>
   );
 }
