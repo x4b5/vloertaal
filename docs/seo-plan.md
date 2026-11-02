@@ -151,8 +151,8 @@ Gedaan, in code en getest (`tests/seo.test.ts`):
   les (zie hieronder); een onderwerp is groot genoeg om iets te zoeken en klein genoeg om bij te houden.
 - De voorpagina heeft vóór JavaScript een kop, drie alinea's en links naar alle pagina's
   (`src/lib/siteLinks.ts`); /intro, /nieuw en de nieuwe 404-pagina linken ook door.
-- `sitemap.xml` wordt bij de build gemaakt; `trailingSlash: true` in `vercel.json` (één adres per
-  pagina: `/bouw` → `/bouw/`); JSON-LD op `/` met `WebSite`, `Organization` en `WebApplication`.
+- `sitemap.xml` wordt bij de build gemaakt; een pagina zonder slash stuurt de host door naar de
+  versie met slash (één adres per pagina: `/bouw` → `/bouw/`; vroeger `trailingSlash` in `vercel.json`); JSON-LD op `/` met `WebSite`, `Organization` en `WebApplication`.
 
 ### Nog te doen: zoekwoorden in de eigen taal (moedertaalsprekers)
 

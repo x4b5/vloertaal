@@ -91,7 +91,7 @@ let recorded: Recorded[] = [];
  * A recording keeps its file name when it is made again (a new take, or a changed text:
  * scripts/voices/elevenlabs.mjs writes the same <voice>/<id>.mp3), so the address a clip is played
  * from carries its version: ?v=<take>.<text>. A new recording then has a new address, and the
- * service worker (public/sw.js) and the browser may keep a played clip as it is (vercel.json).
+ * service worker (public/sw.js) and the browser may keep a played clip as it is (public/_headers).
  * File path (as clipPath writes it) → version.
  */
 const versions = new Map<string, string>();

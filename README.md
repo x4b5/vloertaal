@@ -148,8 +148,10 @@ Schermafbeeldingen en de max-3-telling: zie `src/dev/ShotHarness.tsx` (`/?shot=.
 
 ## Publiceren
 
-De app staat op **Vercel** op **vloertaal.nl**. Elke merge naar `main` wordt vanzelf gepubliceerd,
-en elke pull request krijgt een voorbeeldversie. GitHub Actions draait de tests
+De app staat sinds 2 november 2026 op **statichost.eu** (Zweden; servers in de EU) op
+**vloertaal.nl**; daarvoor op Vercel (VS). statichost bouwt de site uit `main` met `statichost.yml`;
+beveiliging en bewaartijden staan in `public/_headers`, doorsturen in `public/_redirects`. GitHub
+Actions draait de tests
 (`.github/workflows/deploy.yml`). Nieuwe of gewijzigde Nederlandse zinnen neem je op met **Actions
 → Record ElevenLabs voices**. Zie [`docs/livegang.md`](docs/livegang.md) voor de checklist, ook
 voor het aanzetten van de regio's.

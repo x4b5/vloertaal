@@ -40,9 +40,8 @@ export function Admin({ onBack }: { onBack: () => void }) {
       {credits === null && <p className="muted">Laden…</p>}
       {credits === 'missing' && (
         <div className="warn">
-          <p>Nog geen gegevens. Zet in Vercel onder <em>Settings → Environment Variables</em> een variabele
-            met de naam <code>ELEVENLABS_API_KEY</code> (alleen voor Production). Na de volgende publicatie
-            verschijnt hier het saldo.</p>
+          <p>Nog geen gegevens. Zet bij de host (statichost) een geheime bouwvariabele met de naam
+            <code>ELEVENLABS_API_KEY</code>. Na de volgende publicatie verschijnt hier het saldo.</p>
         </div>
       )}
       {credits && credits !== 'missing' && (

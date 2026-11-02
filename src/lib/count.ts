@@ -82,7 +82,7 @@ export function setCountEnv(env: Partial<Env> | null): void {
 }
 const env = (): Env => ({ ...realEnv(), ...envOverride });
 
-/** The only hosts that count: the live site. Previews (*.vercel.app), localhost and copies never do. */
+/** The only hosts that count: the live site. Previews (*.statichost.page, *.vercel.app), localhost and copies never do. */
 const LIVE = /^(www\.)?vloertaal\.nl$/;
 
 function storage(): Storage | null {
