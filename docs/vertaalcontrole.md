@@ -3,6 +3,49 @@
 Alle bestanden in `src/i18n/` zijn met AI gemaakt. Zet `reviewed: true` pas als een moedertaalspreker
 het hele bestand heeft gecontroleerd. Hieronder de punten waar de vertaler zelf twijfelde.
 
+## Kritische controle 2 november 2026, ronde 2: woorden, zinnen en gesprekjes
+
+Per taal las een AI-lezer alle woorden, zinnen, gesprekjes (met de "waarom"), lestitels en
+onderwerpnamen, plus de Belgische versies waar die anders zijn: ongeveer 1.500 teksten per taal.
+**383 teksten veranderd**, elk gemarkeerd `// nieuw, nalezen (AI-correctie 2 nov 2026)`:
+
+| Taal | fout | twijfel | stijl | totaal |
+|---|---|---|---|---|
+| Arabisch | 5 | 24 | 5 | 34 |
+| Bulgaars | 9 | 17 | 5 | 31 |
+| Dari | 3 | 22 | 0 | 25 |
+| Duits | 8 | 10 | 1 | 19 |
+| Frans | 7 | 11 | 2 | 20 |
+| Oekraïens | 18 | 22 | 0 | 40 |
+| Perzisch | 4 | 14 | 1 | 19 |
+| Pools | 8 | 14 | 8 | 30 |
+| Portugees | 6 | 18 | 0 | 24 |
+| Roemeens | 10 | 14 | 1 | 25 |
+| Spaans | 6 | 31 | 0 | 37 |
+| Tigrinya | 47 | 10 | 0 | 57 |
+| Turks | 5 | 16 | 1 | 22 |
+
+
+**Wat vaak terugkwam:**
+- **"Mijn itsme-code" zonder "code"** (`be.s.login.3`: bg, fa, prs, ro, tr, uk).
+- **De werkgever mag het ID "zien"**, niet opeisen (`c.bsn.a.why`: bg, fa, pl, ro, uk). Dat botste met de les over uitbuiting.
+- **"Solliciteren" als "werk zoeken"** (`u.apply`: es, fr, pl). **De stempas als stembiljet** (pl, tr).
+- **Engelse bron:** "Saying the task back checks that the order is clear" las als "de opdracht", terwijl de volgorde bedoeld is ("Dus ik moet eerst …?"). De bron is nu "checks what you must do first".
+- **Tigrinya:**
+  - "Mag ik / Kan ik …?" stond 21 keer in de 3e persoon (ይኽእል, "hij kan"); het moet እኽእል zijn.
+  - 6 ik-zinnen stonden ook in de 3e persoon.
+  - Amhaarse vormen vervangen: ነጻ werd ናጻ, ቀዝቃዛ werd ዝሑል, ኣገልግሎት werd ግልጋሎት.
+- **Termen:**
+  - doos, gemeente (uk: overal муніципалітет), cliënt in de zorg (pt utente, fr résident);
+  - Belastingdienst;
+  - ziekenfonds (ro: "casă de sănătate" is een kliniek).
+- **Spaans:** woorden uit Spanje die in Latijns-Amerika iets anders betekenen, krijgen het tweede woord erbij (taquilla/casillero, fichar/marcar, carretilla elevadora/montacargas).
+- **x-vormen:** waar een natuurlijke neutrale zin bestaat, is de schuine streep weg. In de verleden tijd van de 1e persoon (pl, uk, bg) blijft hij soms staan: daar is geen goede neutrale vorm.
+
+**Nog open:** de lezers merkten dat in een aantal talen (es, pt, ro, pl, uk) nog oudere x-vormen
+met een schuine streep staan waar het Nederlands een ik-zin heeft. Dat is een keuze per taal.
+`w.bijzonderheid` ("de deur") is geen bronfout: het woord veranderde, de id bleef.
+
 ## Kritische controle 2 november 2026 (alle 13 hulptalen)
 
 **Hoe.** Twee lagen.

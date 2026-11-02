@@ -479,7 +479,7 @@ const lang: HelpLanguageSource = {
     'w.waar': 'nerede',
     'w.wc': 'tuvalet',
     's.understand.1': 'Bunu tekrar edebilir misiniz?',
-    's.understand.2': 'Yavaş konuşabilir misiniz?',
+    's.understand.2': 'Daha yavaş konuşabilir misiniz?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.understand.3': 'Tuvalet nerede?',
 
     // Unit: Safety first

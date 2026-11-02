@@ -42,7 +42,7 @@ const t: CultureTranslation = {
     'c.findwork.a.why': "Întrebarea e ce fel de muncă. Acest răspuns o numește.",
     'c.contract.a.why': "Un „da” plus o întrebare despre oră e clar și arată interes.",
     'c.agency.a.why': "Întrebarea e despre ore: da, și spune când și cum.",
-    'c.bsn.a.why': "Angajatorul poate cere un act de identitate, de exemplu pașaportul.",
+    'c.bsn.a.why': "Angajatorul poate cere să vadă un act de identitate, de exemplu pașaportul.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.housing.a.why': "Banii reținuți din salariu trebuie conveniți în scris.",
     'c.payslip.a.why': "Orele lipsă de pe fluturașul de salariu trebuie semnalate.",
     'c.extra.a.why': "Orele suplimentare se notează, ca să poată fi verificate pe fluturașul de salariu.",
@@ -54,7 +54,7 @@ const t: CultureTranslation = {
     'c.mistakes.a.why': "La un compliment se răspunde cu mulțumesc.",
     'c.respect.a.why': "Hărțuirea trebuie spusă, ca cineva să poată ajuta.",
     'c.gossip.a.why': "Neparticiparea la bârfe păstrează încrederea în echipă.",
-    'c.boundaries.a.why': "O glumă care rănește poate fi oprită, clar.",
+    'c.boundaries.a.why': "Ai voie să oprești o glumă care rănește. Spune-o clar.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.health.a.why': "Pauza protejează sănătatea, așa că se ia.",
     'c.rights.a.why': "O concediere nu se semnează niciodată pe loc. Întâi se cere sfat.",
     'c.leave.a.why': "Când? Acest răspuns dă o lună și cât timp.",

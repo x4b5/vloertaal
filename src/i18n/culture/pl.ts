@@ -133,7 +133,7 @@ const t: CultureTranslation = {
     'c.task.o2': 'Zaczynasz od tej połowy, którą rozumiesz.', // nagelezen (2e lezing)
     'c.task.o3': 'Czekasz, aż zrobi to kolega.',
     'c.task.w': 'Zapytać jeszcze raz to normalne i zajmuje minutę. Poprawienie błędu trwa o wiele dłużej. Większość przełożonych woli pokazać coś dwa razy.',
-    'u.teamwork': 'Praca razem',
+    'u.teamwork': 'Współpraca', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.speakup': 'Coś mi przeszkadza',
     'w.probleem': 'problem',
     'w.praten': 'rozmawiać',
@@ -146,7 +146,7 @@ const t: CultureTranslation = {
     's.speakup.3': 'Uważam, że to nie jest uczciwe.',
     'd.speakup.q': 'Coś się stało?',
     'd.speakup.a': 'Tak, coś mi przeszkadza.',
-    'l.agree': 'Umowy i odmawianie',
+    'l.agree': 'Ustalenia i odmawianie', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.afspraak': 'ustalenie, umowa (to, na co się umówiliście)',
     'w.lukken': 'udawać się, dać radę',
     'w.oneens': 'nie zgadzać się',
@@ -166,7 +166,7 @@ const t: CultureTranslation = {
     'w.snel': 'szybko, szybki',
     'w.bijna': 'prawie',
     's.task.1': 'Co mam zrobić najpierw?',
-    's.task.2': { m: 'Skończyłem to zadanie.', f: 'Skończyłam to zadanie.', x: 'Skończyłem / skończyłam to zadanie.' },
+    's.task.2': { m: 'Skończyłem to zadanie.', f: 'Skończyłam to zadanie.', x: 'To zadanie jest już skończone.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.task.3': 'Czy może mi pan/pani pokazać to jeszcze raz?',
     'd.task.q': { m: 'Skończyłeś?', f: 'Skończyłaś?', x: 'Gotowe?' }, // x: nieuw, nalezen
     'd.task.a': 'Prawie. Jeszcze pięć minut.',

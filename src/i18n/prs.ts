@@ -535,7 +535,7 @@ const lang: HelpLanguageSource = {
     's.people.2': 'آمر کیست؟',
     's.people.3': 'من یک همکار نو هستم.',
     's.understand.1': 'می‌توانید آن را دوباره بگویید؟',
-    's.understand.2': 'می‌توانید آهسته گپ بزنید؟',
+    's.understand.2': 'می‌توانید کمی آهسته‌تر گپ بزنید؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.understand.3': 'تشناب کجاست؟',
     's.gear.1': 'همیشه کلاه ایمنی خود را سر کن.',
     's.gear.2': 'دستکش‌ها کجاست؟',
@@ -593,7 +593,7 @@ const lang: HelpLanguageSource = {
     's.notyet.2': 'هنوز توضیحی نگرفته‌ام.',
     's.notyet.3': 'آیا اجازه دارم این کار را حالا تنها انجام بدهم؟',
     'c.notyet.q': 'امتحانش کنید، آسان است.',
-    'c.notyet.a': 'می‌توانید اول برایم نشان بدهید که چطور است؟',
+    'c.notyet.a': 'می‌توانید اول برایم نشان بدهید که چطور انجام می‌شود؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.things.q': 'این قطی کجا برود؟',
     'c.things.a': 'بالای پالت.',
     'c.directions.q': 'چپ یا راست؟',

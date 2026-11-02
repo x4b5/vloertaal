@@ -4,7 +4,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {},
   gloss: {
-    'u.apply': 'Chercher un emploi',
+    'u.apply': 'Postuler à un emploi', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.cv': 'Ton CV et ta lettre',
     'w.cv': 'le CV',
     'w.motivatie': 'la motivation (pourquoi tu veux ce travail)',
@@ -277,7 +277,7 @@ const t: CultureTranslation = {
     's.gethelp.3': 'J’ai peur de mon patron.',
     'c.gethelp.q': 'Comment est-ce que je peux t’aider ?',
     'c.gethelp.a': 'On me traite mal au travail.',
-    'u.contact': 'Appeler et écrire au travail',
+    'u.contact': 'Appels et messages avec ton travail', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.callin': 'Appeler le travail',
     'w.telefoontje': 'le coup de téléphone',
     'w.terugbellen': 'rappeler',
@@ -374,7 +374,7 @@ const t: CultureTranslation = {
     'w.nep': 'faux',
     's.scams.1': 'Je ne donne jamais mon code PIN.',
     's.scams.2': 'Je ne clique pas sur le lien.',
-    's.scams.3': 'Ce message est faux.',
+    's.scams.3': 'C’est un faux message.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.scams.q': 'Ici la banque. Quel est votre code PIN ?',
     'c.scams.a': 'Je ne le donne pas. Je raccroche.',
     'u.travel': 'Aller au travail',
@@ -512,8 +512,8 @@ const t: CultureTranslation = {
     'w.datum': 'la date',
     's.kitchen.1': 'Mets la viande dans la chambre froide.',
     's.kitchen.2': 'Coupe les oignons en petits morceaux.',
-    's.kitchen.3': 'Il y a des noix là-dedans ?',
-    'c.kitchen.q': 'Un client est allergique aux noix.',
+    's.kitchen.3': 'Il y a des fruits à coque (noix, noisettes…) là-dedans ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.kitchen.q': 'Un client est allergique aux fruits à coque (noix, noisettes…).', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.kitchen.a': 'Je demande au chef.',
     'l.service': 'Servir les clients',
     'w.gast': 'le client (au restaurant, à l’hôtel)',
@@ -1244,7 +1244,7 @@ const t: CultureTranslation = {
     'w.inburgering': "l’intégration civique (les cours et les examens pour les nouveaux arrivants)",
     'w.taalles': "le cours de langue",
     's.permit.1': "Je peux travailler ici avec mes papiers ?",
-    's.permit.2': { m: "Je suis salarié ou indépendant ?", f: "Je suis salariée ou indépendante ?", x: 'Je travaille avec un contrat ou à mon compte ?' }, // x: nieuw, nalezen
+    's.permit.2': { m: "Je suis salarié ou indépendant ?", f: "Je suis salariée ou indépendante ?", x: 'Je travaille avec un contrat de travail ou à mon compte ?' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.permit.3': "Je travaille sur appel.",
     'c.permit.q': "Tu peux travailler mardi ?",
     'c.permit.a': "Non, j’ai un cours de langue ce jour-là. Mercredi, je peux.",
@@ -1269,9 +1269,9 @@ const t: CultureTranslation = {
     'w.oog': "l’œil",
     's.body.1': "J’ai mal à la main.",
     's.body.2': "Je ne me sens pas bien.",
-    's.body.3': { m: "Je suis tombé sur le bras.", f: "Je suis tombée sur le bras.", x: 'Je me suis fait mal au bras en tombant.' }, // x: nieuw, nalezen
+    's.body.3': { m: "Je suis tombé sur le bras.", f: "Je suis tombée sur le bras.", x: 'J’ai fait une chute sur le bras.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.body.q': "Où est-ce que tu as mal ?",
-    'c.body.a': "Au dos. J’ai soulevé une caisse lourde.",
+    'c.body.a': "Au dos. J’ai soulevé un carton lourd.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.jobends': "Quand ton travail s’arrête",
     'w.eindafrekening': "le solde de tout compte (ta dernière paie quand un travail s’arrête)",
     'w.opzeggen': "résilier (un contrat), annuler",
@@ -1339,7 +1339,7 @@ const t: CultureTranslation = {
     'w.lezen': "lire", // nieuw, nalezen
     'w.aantal': "le nombre (combien)", // nieuw, nalezen
     'w.materiaal': "le matériel (ce qu’il te faut pour le travail)", // nieuw, nalezen
-    'w.klaarleggen': "préparer (mettre prêt ce qu’il te faut)", // nieuw, nalezen
+    'w.klaarleggen': "préparer (sortir ce qu’il te faut)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.handtekening': "la signature", // nieuw, nalezen
     's.workorder.1': "Je lis d’abord le bon de travail.", // nieuw, nalezen
     's.workorder.2': "Ce nombre est juste ?", // nieuw, nalezen
@@ -1413,7 +1413,7 @@ const t: CultureTranslation = {
     'w.stage': "le stage (tu apprends dans une entreprise)", // nieuw, nalezen
     'w.praktijkopleider': "le tuteur en entreprise (il te guide dans l’entreprise)", // nieuw, nalezen
     'w.stagebegeleider': "le référent de stage de l’école (il te guide pour l’école)", // nieuw, nalezen
-    'w.pok': "la convention de stage (toi, l’école et l’entreprise la signez)", // nieuw, nalezen
+    'w.pok': "la convention de stage (toi, l’école et l’entreprise, vous la signez)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.school': "l’école", // nieuw, nalezen
     'w.leerbedrijf': "l’entreprise formatrice (une entreprise où des élèves peuvent apprendre)", // nieuw, nalezen
     's.placement.1': "Je fais mon stage dans un entrepôt.", // nieuw, nalezen
@@ -1433,7 +1433,7 @@ const t: CultureTranslation = {
     's.review.3': "Mon évaluation est la semaine prochaine.", // nieuw, nalezen
     'c.review.q': "Tu dois travailler plus vite.", // nieuw, nalezen
     'c.review.a': "D’accord. Vous pouvez me montrer comment faire plus vite ?", // nieuw, nalezen
-    'u.society': "Participer aux Pays-Bas", // nieuw, nalezen
+    'u.society': "Participer à la vie aux Pays-Bas", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.council': "La commune et le vote", // nieuw, nalezen
     'w.stemmen': "voter", // nieuw, nalezen
     'w.verkiezing': "l’élection", // nieuw, nalezen
@@ -1507,7 +1507,7 @@ const t: CultureTranslation = {
     's.nextstep.3': "Quand est la journée portes ouvertes ?", // nieuw, nalezen
     'c.nextstep.q': "Qu’est-ce que tu vas faire après Entree ?", // nieuw, nalezen
     'c.nextstep.a': "Je veux faire la bbl. Comme ça, je travaille et j’apprends.", // nieuw, nalezen
-    'l.email': "Écrire au travail", // nieuw, nalezen
+    'l.email': "Écrire à ton employeur", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.mail': "l’e-mail", // nieuw, nalezen
     'w.onderwerp': "l’objet (d’un e-mail)", // nieuw, nalezen
     'w.beste': "cher, chère (au début d’une lettre ou d’un e-mail)", // nieuw, nalezen

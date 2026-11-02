@@ -26,7 +26,7 @@ const t: CultureTranslation = {
     'rg.zl.u': { m: 'ዞባኻ፡ Zuid-Limburg', f: 'ዞባኺ፡ Zuid-Limburg', x: 'ዞባኹም፡ Zuid-Limburg' }, // x: nieuw, nalezen
     'rg.zl.l.1': { m: 'ምምሕዳር ከተማን ገዛኻን', f: 'ምምሕዳር ከተማን ገዛኺን' },
     'rg.zl.w.gemeentehuis': 'ህንጻ ምምሕዳር ከተማ',
-    'rg.zl.w.loket': 'መቐበሊ ኣገልግሎት (ኮንተር)',
+    'rg.zl.w.loket': 'መቐበሊ ግልጋሎት (ኮንተር)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'rg.zl.w.verhuizing': 'ምግዓዝ (ናብ ሓድሽ ገዛ)',
     'rg.zl.w.woningcorporatie': 'ትካል ገዛውቲ (ማሕበራዊ ገዛ ብክራይ)',
     'rg.zl.w.wachtlijst': 'ዝርዝር ተጸበይቲ',
@@ -39,13 +39,13 @@ const t: CultureTranslation = {
     'rg.zl.l.2': 'ዶብ፡ ካርኒቫልን ዘዬን',
     'rg.zl.w.grens': 'ዶብ (ኣብ መንጎ ክልተ ሃገራት)',
     'rg.zl.w.buitenland': 'ወጻኢ ሃገር፡ ካልእ ሃገር',
-    'rg.zl.w.carnaval': 'ካርኒቫል (ኣብ የካቲት ወይ መጋቢት ኣብ ጎደናታት ዝግበር ዓቢ በዓል)',
+    'rg.zl.w.carnaval': 'ካርኒቫል (ኣብ ለካቲት ወይ መጋቢት ኣብ ጎደናታት ዝግበር ዓቢ በዓል)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'rg.zl.w.dialect': 'ዘዬ (ናይቲ ከባቢ ኣዘራርባ)',
     'rg.zl.w.verstaan': 'ምርዳእ (ሰብ ዝብሎ)',
     'rg.zl.w.langzaam': 'ብቐስታ',
     'rg.zl.s.2.1': 'ኣብ ሆላንድ እነብር፡ ኣብ ጀርመን ድማ እሰርሕ።',
     'rg.zl.s.2.2': 'ሆላንድኛ ክትዛረቡ ትኽእሉ ዶ? ነቲ ዘዬ ኣይርደኣንን።',
-    'rg.zl.s.2.3': 'ንካርኒቫል ዕረፍቲ ክወስድ ይኽእል ዶ?',
+    'rg.zl.s.2.3': 'ንካርኒቫል ዕረፍቲ ክወስድ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'rg.zl.c.2.q': 'ይቕሬታ፡ ብጣዕሚ ቀልጢፈ እዛረብ ኣለኹ።',
     'rg.zl.c.2.a': 'እወ፡ በጃኹም ቁሩብ ብቐስታ።',
     'rg.zl.c.1': { m: 'ኣድራሻኻ ኣመዝግብ፡ ገዛ ድማ ድለ', f: 'ኣድራሻኺ ኣመዝግቢ፡ ገዛ ድማ ድለዪ' },

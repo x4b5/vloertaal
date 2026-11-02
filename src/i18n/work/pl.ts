@@ -4,7 +4,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {},
   gloss: {
-    'u.apply': 'Szukanie pracy',
+    'u.apply': 'Ubieganie się o pracę', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.cv': 'Twoje CV i list',
     'w.cv': 'CV',
     'w.motivatie': 'motywacja (dlaczego chcesz tę pracę)',
@@ -37,7 +37,7 @@ const t: CultureTranslation = {
     'w.contract': 'umowa',
     'w.tekenen': 'podpisać',
     'w.tijdelijk': 'tymczasowy, na czas określony',
-    's.findwork.1': 'Chcę się starać o tę pracę.',
+    's.findwork.1': 'Chcę się starać o pracę.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.findwork.2': 'Umowa jest na czas określony czy na stałe?',
     's.findwork.3': 'Czy mogę dostać kopię umowy?',
     'c.findwork.q': 'Jakiej pracy szukasz?',
@@ -177,7 +177,7 @@ const t: CultureTranslation = {
     's.smalltalk.2': 'Mogę się do was przysiąść?',
     's.smalltalk.3': 'Dziś jest ładna pogoda.',
     'c.smalltalk.q': { m: 'Co robiłeś w weekend?', f: 'Co robiłaś w weekend?', x: 'Jak ci minął weekend?' }, // x: nieuw, nalezen
-    'c.smalltalk.a': { m: 'Grałem w piłkę z przyjaciółmi.', f: 'Grałam w piłkę z przyjaciółmi.', x: 'Grałem / grałam w piłkę z przyjaciółmi.' }, // x: nieuw, nalezen
+    'c.smalltalk.a': { m: 'Grałem w piłkę z przyjaciółmi.', f: 'Grałam w piłkę z przyjaciółmi.', x: 'Na grze w piłkę z przyjaciółmi.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.mistakes': 'Uwagi i błędy',
     'w.fout': 'błąd',
     'w.compliment': 'komplement, pochwała',
@@ -348,7 +348,7 @@ const t: CultureTranslation = {
     'w.permaand': 'miesięcznie',
     'w.vergoeden': 'pokrywać (zwracać) koszty',
     's.insurance.1': 'Co miesiąc płacę składkę.',
-    's.insurance.2': 'Czy to jest pokrywane?',
+    's.insurance.2': 'Czy to jest refundowane?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.insurance.3': 'Składam wniosek o zorgtoeslag.',
     'c.insurance.q': { m: 'Gdzie jesteś ubezpieczony?', f: 'Gdzie jesteś ubezpieczona?', x: 'Gdzie masz ubezpieczenie?' }, // x: nieuw, nalezen
     'c.insurance.a': 'To jest na mojej karcie ubezpieczenia.',
@@ -489,7 +489,7 @@ const t: CultureTranslation = {
     's.client.2': 'Pomogę panu/pani się ubrać.',
     's.client.3': 'Zje pan/pani jeszcze coś?',
     'c.client.q': 'Może mi pan/pani pomóc z płaszczem?',
-    'c.client.a': 'Oczywiście, pomogę.',
+    'c.client.a': 'Oczywiście, pomogę panu/pani.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.privacy': 'Prywatność i bezpieczeństwo w opiece',
     'w.privacy': 'prywatność',
     'w.hygiene': 'higiena',
@@ -1120,7 +1120,7 @@ const t: CultureTranslation = {
     'w.nummer': 'numer (telefonu)',
     'w.haast': 'pośpiech',
     's.aifake.1': 'Czy to jest prawdziwe, czy fałszywe?',
-    's.aifake.2': { m: 'Rozłączam się i sam oddzwaniam.', f: 'Rozłączam się i sama oddzwaniam.', x: 'Rozłączam się i sam / sama oddzwaniam.' },
+    's.aifake.2': { m: 'Rozłączam się i sam oddzwaniam.', f: 'Rozłączam się i sama oddzwaniam.', x: 'Rozłączam się i to ja oddzwaniam.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.aifake.3': 'Nie wysyłam pieniędzy.',
     'c.aifake.q': 'Cześć, to mój nowy numer. Możesz szybko przesłać pieniądze?',
     'c.aifake.a': 'Najpierw zadzwonię do ciebie na stary numer.',
@@ -1271,7 +1271,7 @@ const t: CultureTranslation = {
     's.body.2': "Źle się czuję.",
     's.body.3': { m: "Upadłem na rękę.", f: "Upadłam na rękę.", x: 'Upadłem / upadłam na rękę.' }, // x: nieuw, nalezen
     'c.body.q': "Gdzie cię boli?",
-    'c.body.a': { m: "W plecach. Podniosłem ciężkie pudło.", f: "W plecach. Podniosłam ciężkie pudło.", x: 'W plecach. Od podnoszenia ciężkiego pudła.' }, // x: nieuw, nalezen
+    'c.body.a': { m: "W plecach. Podniosłem ciężki karton.", f: "W plecach. Podniosłam ciężki karton.", x: 'W plecach. Od podnoszenia ciężkiego kartonu.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.jobends': "Kiedy kończy się twoja praca",
     'w.eindafrekening': "rozliczenie końcowe (ostatnia wypłata, kiedy kończy się praca)",
     'w.opzeggen': "wypowiedzieć (umowę), zrezygnować",
@@ -1354,7 +1354,7 @@ const t: CultureTranslation = {
     'w.opslot': "zamknięty na klucz", // nieuw, nalezen
     'w.bijzonderheid': "drzwi", // nieuw, nalezen
     's.handover.1': "Sprzątam swoje miejsce.", // nieuw, nalezen
-    's.handover.2': "Czy może Pan / Pani sprawdzić moją pracę?", // nieuw, nalezen
+    's.handover.2': "Czy może pan/pani sprawdzić moją pracę?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.handover.3': "Zgłaszam przełożonemu koniec pracy.", // nieuw, nalezen
     'c.handover.q': "Wszystko gotowe?", // nieuw, nalezen
     'c.handover.a': "Prawie. Pokój numer cztery był zamknięty na klucz.", // nieuw, nalezen
@@ -1406,7 +1406,7 @@ const t: CultureTranslation = {
     's.carjob.1': "Czy klient zgadza się na koszty?", // nieuw, nalezen
     's.carjob.2': "Ta część jest zepsuta.", // nieuw, nalezen
     's.carjob.3': "Czy mogę zrobić jazdę próbną?", // nieuw, nalezen
-    'c.carjob.q': "Hamulce też są złe. Zrobisz je od razu?", // nieuw, nalezen
+    'c.carjob.q': "Hamulce też są w złym stanie. Zrobisz je od razu?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.carjob.a': "Najpierw zapytam szefa. Klient musi się zgodzić.", // nieuw, nalezen
     'u.stage': "Praktyka zawodowa", // nieuw, nalezen
     'l.placement': "Twoja praktyka", // nieuw, nalezen
@@ -1429,23 +1429,23 @@ const t: CultureTranslation = {
     'w.cijfer': "ocena, stopień", // nieuw, nalezen
     'w.verslag': "sprawozdanie (tekst o twojej pracy)", // nieuw, nalezen
     's.review.1': "Co mogę robić lepiej?", // nieuw, nalezen
-    's.review.2': "Czy może Pan / Pani podać przykład?", // nieuw, nalezen
+    's.review.2': "Czy może pan/pani podać przykład?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.review.3': "Moja ocena jest w przyszłym tygodniu.", // nieuw, nalezen
     'c.review.q': "Musisz pracować szybciej.", // nieuw, nalezen
-    'c.review.a': "Dobrze. Czy może Pan / Pani pokazać, jak zrobić to szybciej?", // nieuw, nalezen
+    'c.review.a': "Dobrze. Czy może pan/pani pokazać, jak zrobić to szybciej?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'u.society': "Udział w życiu Holandii", // nieuw, nalezen
     'l.council': "Gmina i głosowanie", // nieuw, nalezen
     'w.stemmen': "głosować", // nieuw, nalezen
     'w.verkiezing': "wybory", // nieuw, nalezen
     'w.gemeenteraad': "rada gminy (decyduje o twojej miejscowości)", // nieuw, nalezen
     'w.parlement': "parlament (tworzy prawo)", // nieuw, nalezen
-    'w.stempas': "karta do głosowania (potrzebna, żeby głosować)", // nieuw, nalezen
+    'w.stempas': "karta uprawniająca do głosowania (potrzebna, żeby głosować)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.burgemeester': "burmistrz", // nieuw, nalezen
     's.council.1': "Czy mogę głosować?", // nieuw, nalezen
-    's.council.2': "Moja karta do głosowania przyszła pocztą.", // nieuw, nalezen
+    's.council.2': "Moja karta uprawniająca do głosowania przyszła pocztą.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.council.3': "Rada gminy decyduje o mojej okolicy.", // nieuw, nalezen
     'c.council.q': "Idziesz w środę głosować?", // nieuw, nalezen
-    'c.council.a': "Tak. Mam kartę do głosowania i dowód tożsamości.", // nieuw, nalezen
+    'c.council.a': "Tak. Mam kartę uprawniającą do głosowania i dowód tożsamości.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.police': "Policja i twoje prawa", // nieuw, nalezen
     'w.agent': "policjant", // nieuw, nalezen
     'w.boete': "mandat, kara (pieniądze, które musisz zapłacić za karę)", // nieuw, nalezen
@@ -1453,10 +1453,10 @@ const t: CultureTranslation = {
     'w.rechter': "sędzia", // nieuw, nalezen
     'w.advocaat': "adwokat", // nieuw, nalezen
     'w.wet': "prawo, ustawa", // nieuw, nalezen
-    's.police.1': { m: "Dostałem mandat.", f: "Dostałam mandat.", x: "Dostałem / dostałam mandat." }, // nieuw, nalezen // nagelezen AI 31 okt
+    's.police.1': { m: "Dostałem mandat.", f: "Dostałam mandat.", x: "Mam mandat." }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.police.2': "Chcę złożyć sprzeciw.", // nieuw, nalezen
     's.police.3': "Chcę porozmawiać z adwokatem.", // nieuw, nalezen
-    'c.police.q': "Czy mogę zobaczyć Pana / Pani dokument tożsamości?", // nieuw, nalezen
+    'c.police.q': "Czy mogę zobaczyć pana/pani dokument tożsamości?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.police.a': "Tak, proszę. Co się dzieje?", // nieuw, nalezen
     'u.online': "Online w pracy", // nieuw, nalezen
     'l.login': "Logowanie", // nieuw, nalezen
@@ -1483,7 +1483,7 @@ const t: CultureTranslation = {
     's.phish.3': "Od razu zmieniam hasło.", // nieuw, nalezen
     'c.phish.q': { m: "Kliknąłeś w link?", f: "Kliknęłaś w link?", x: "Czy link został kliknięty?" }, // nieuw, nalezen // nagelezen AI 31 okt
     'c.phish.a': "Tak. Dzwonię do działu IT.", // nieuw, nalezen
-    'l.mychoice': "W czym jestem dobry", // nieuw, nalezen
+    'l.mychoice': "Co mi dobrze wychodzi", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.goedin': "dobry w (czymś)", // nieuw, nalezen
     'w.kiezen': "wybierać", // nieuw, nalezen
     'w.beroep': "zawód, rodzaj pracy", // nieuw, nalezen

@@ -73,7 +73,7 @@ export const ti: Gloss = {
   'be.s.police.1': 'መንነት ወረቐተይ ኩሉ ግዜ ምሳይ ኣሎ።', // nieuw, nalezen
   'be.s.police.2': 'ተቓውሞ ከቕርብ እደሊ።', // nieuw, nalezen
   'be.s.police.3': 'መጀመርታ ምስ ጠበቓ ክዛረብ እደሊ።', // nieuw, nalezen
-  'be.c.police.q': 'መንነት ወረቐት ክርኢ ይኽእል ድየ?', // nieuw, nalezen
+  'be.c.police.q': 'መንነት ወረቐትኩም ክርኢ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.c.police.a': 'እወ፡ እንሆ። እንታይ ኣሎ?', // nieuw, nalezen
   'be.c.council': 'ምምሕዳር ከተማ፡ መን ክድምጽ ይኽእል', // nieuw, nalezen
   'be.c.council.b': { m: 'ምምሕዳር ከተማ (gemeente) ኣድራሻ ይሕዝ፡ መንነት ወረቐት ድማ ይህብ። ገዛ ምቕያር? ኣብ ውሽጢ 8 መዓልታት ስራሕ ንምምሕዳር ከተማ ናይቲ ሓድሽ ገዛ ምሕባር የድሊ። ድሕሪኡ ፖሊስ ናይ ከባቢ (wijkagent) ኣብኡ ከም እትነብር ክርኢ ይመጽእ። ኣብ ነፍሲ ወከፍ 6 ዓመት ምርጫ ቤት ምኽሪ ከተማ (gemeenteraad) ኣሎ። ካብ ካልእ ሃገር ናይ ኤውሮጳዊ ሕብረት ዝመጹ፡ ከምኡውን ካብ ደገ ኤውሮጳዊ ሕብረት ድሕሪ 5 ዓመት ሕጋዊ መንበሪ፡ ክድምጹ ይኽእሉ። መጀመርታ ኣብ ምምሕዳር ከተማ ከም መራጺ ምምዝጋብ የድሊ። ኣብ ፍላንደርስ ንቤት ምኽሪ ከተማ ምድማጽ ግዴታ ኣይኮነን። ኣብ ካልኦት ምርጫታት ቤልጅዩማውያን ክድምጹ ግዴታ ኣለዎም (opkomstplicht)። ደብዳቤ (oproepingsbrief) ይመጽእ፡ ምስ መንነት ወረቐት ሒዝካ ኺድ። ርግጸኛ ዘይኮንካ? ንምምሕዳር ከተማ ሕተት።', f: 'ምምሕዳር ከተማ (gemeente) ኣድራሻ ይሕዝ፡ መንነት ወረቐት ድማ ይህብ። ገዛ ምቕያር? ኣብ ውሽጢ 8 መዓልታት ስራሕ ንምምሕዳር ከተማ ናይቲ ሓድሽ ገዛ ምሕባር የድሊ። ድሕሪኡ ፖሊስ ናይ ከባቢ (wijkagent) ኣብኡ ከም እትነብር ክርኢ ይመጽእ። ኣብ ነፍሲ ወከፍ 6 ዓመት ምርጫ ቤት ምኽሪ ከተማ (gemeenteraad) ኣሎ። ካብ ካልእ ሃገር ናይ ኤውሮጳዊ ሕብረት ዝመጹ፡ ከምኡውን ካብ ደገ ኤውሮጳዊ ሕብረት ድሕሪ 5 ዓመት ሕጋዊ መንበሪ፡ ክድምጹ ይኽእሉ። መጀመርታ ኣብ ምምሕዳር ከተማ ከም መራጺ ምምዝጋብ የድሊ። ኣብ ፍላንደርስ ንቤት ምኽሪ ከተማ ምድማጽ ግዴታ ኣይኮነን። ኣብ ካልኦት ምርጫታት ቤልጅዩማውያን ክድምጹ ግዴታ ኣለዎም (opkomstplicht)። ደብዳቤ (oproepingsbrief) ይመጽእ፡ ምስ መንነት ወረቐት ሒዝኪ ኪዲ። ርግጸኛ ዘይኮንኪ? ንምምሕዳር ከተማ ሕተቲ።', x: 'ምምሕዳር ከተማ (gemeente) ኣድራሻ ይሕዝ፡ መንነት ወረቐት ድማ ይህብ። ገዛ ምቕያር? ኣብ ውሽጢ 8 መዓልታት ስራሕ ንምምሕዳር ከተማ ናይቲ ሓድሽ ገዛ ምሕባር የድሊ። ድሕሪኡ ፖሊስ ናይ ከባቢ (wijkagent) ኣብኡ ከም እትነብር ክርኢ ይመጽእ። ኣብ ነፍሲ ወከፍ 6 ዓመት ምርጫ ቤት ምኽሪ ከተማ (gemeenteraad) ኣሎ። ካብ ካልእ ሃገር ናይ ኤውሮጳዊ ሕብረት ዝመጹ፡ ከምኡውን ካብ ደገ ኤውሮጳዊ ሕብረት ድሕሪ 5 ዓመት ሕጋዊ መንበሪ፡ ክድምጹ ይኽእሉ። መጀመርታ ኣብ ምምሕዳር ከተማ ከም መራጺ ምምዝጋብ የድሊ። ኣብ ፍላንደርስ ንቤት ምኽሪ ከተማ ምድማጽ ግዴታ ኣይኮነን። ኣብ ካልኦት ምርጫታት ቤልጅዩማውያን ክድምጹ ግዴታ ኣለዎም (opkomstplicht)። ደብዳቤ (oproepingsbrief) ይመጽእ፡ ምስ መንነት ወረቐት ሒዝኩም ኪዱ። ርግጸኛታት ዘይኮንኩም? ንምምሕዳር ከተማ ሕተቱ።' }, // nieuw, nalezen // nagelezen AI ronde 3
@@ -146,7 +146,7 @@ export const prs: Gloss = {
   'be.w.burgemeester': 'شاروال', // nieuw, nalezen
   'be.w.oproepingsbrief': 'نامهٔ دعوت به رأی‌دهی (می‌گوید کجا و چه وقت رأی می‌دهید)', // nieuw, nalezen
   'be.w.opkomstplicht': 'وجیبهٔ رفتن برای رأی دادن', // nieuw, nalezen
-  'be.s.council.1': 'خانه‌ام را تبدیل می‌کنم. آدرس نو خود را به شاروالی می‌دهم.', // nieuw, nalezen
+  'be.s.council.1': 'کوچ می‌کنم. آدرس نو خود را به شاروالی می‌دهم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.s.council.2': 'آیا می‌توانم برای شورای شهر رأی بدهم؟', // nieuw, nalezen
   'be.s.council.3': 'نامهٔ رأی‌دهی من با پست آمد.', // nieuw, nalezen
   'be.c.council.q': 'یکشنبه برای رأی دادن می‌روید؟', // nieuw, nalezen // nagelezen AI ronde 3
@@ -183,15 +183,15 @@ export const prs: Gloss = {
 
 export const uk: Gloss = {
   'be.u.society': 'Участь у житті Бельгії', // nieuw, nalezen
-  'be.l.council': 'Громада (gemeente) і вибори', // nieuw, nalezen
+  'be.l.council': 'Муніципалітет (gemeente) і вибори', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.stemmen': 'голосувати', // nieuw, nalezen
-  'be.w.gemeentehuis': 'будівля громади (ратуша)', // nieuw, nalezen
-  'be.w.gemeenteraad': 'рада громади (вирішує щодо твого міста)', // nieuw, nalezen
+  'be.w.gemeentehuis': 'будівля муніципалітету (ратуша)', // nieuw, nalezen (AI-correctie 2 nov 2026)
+  'be.w.gemeenteraad': 'муніципальна рада (вирішує питання твого міста)', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.burgemeester': 'мер, бургомістр', // nieuw, nalezen
   'be.w.oproepingsbrief': 'запрошення на вибори (там сказано, де і коли голосувати)', // nieuw, nalezen
   'be.w.opkomstplicht': 'обов’язок прийти на вибори', // nieuw, nalezen
-  'be.s.council.1': 'Я переїжджаю. Я повідомляю громаді свою нову адресу.', // nieuw, nalezen
-  'be.s.council.2': 'Чи можу я голосувати за раду громади?', // nieuw, nalezen
+  'be.s.council.1': 'Я переїжджаю. Я повідомляю муніципалітет про свою нову адресу.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+  'be.s.council.2': 'Чи маю я право голосувати на виборах до муніципальної ради?', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.s.council.3': 'Моє запрошення на вибори прийшло поштою.', // nieuw, nalezen
   'be.c.council.q': 'Підеш у неділю голосувати?', // nieuw, nalezen
   'be.c.council.a': 'Так. У мене є запрошення і моя ID-картка.', // nieuw, nalezen
@@ -226,7 +226,7 @@ export const uk: Gloss = {
 };
 
 export const tr: Gloss = {
-  'be.u.society': 'Belçika’da katılım', // nieuw, nalezen
+  'be.u.society': 'Belçika’da hayata katılmak', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.l.council': 'Belediye (gemeente) ve oy vermek', // nieuw, nalezen
   'be.w.stemmen': 'oy vermek', // nieuw, nalezen
   'be.w.gemeentehuis': 'belediye binası', // nieuw, nalezen
@@ -314,7 +314,7 @@ export const pl: Gloss = {
 };
 
 export const ro: Gloss = {
-  'be.u.society': 'Participarea în Belgia', // nieuw, nalezen
+  'be.u.society': 'Participarea la viața din Belgia', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.l.council': 'Primăria (gemeente) și votul', // nieuw, nalezen
   'be.w.stemmen': 'a vota', // nieuw, nalezen
   'be.w.gemeentehuis': 'clădirea primăriei', // nieuw, nalezen
@@ -375,7 +375,7 @@ export const bg: Gloss = {
   'be.w.wijkagent': 'кварталният полицай', // nieuw, nalezen
   'be.w.identiteitskaart': 'личната карта (eID)', // nieuw, nalezen
   'be.w.boete': 'глобата (пари, които плащаш като наказание)', // nieuw, nalezen
-  'be.w.bezwaar': 'възражението (казваш писмено, че не си съгласен / съгласна)', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.w.bezwaar': 'възражението (казваш писмено, че не приемаш нещо)', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.advocaat': 'адвокатът', // nieuw, nalezen
   'be.w.recht': 'правото (какво законът ти позволява да правиш или да получиш)', // nieuw, nalezen
   'be.s.police.1': 'Винаги нося личната си карта.', // nieuw, nalezen
@@ -490,8 +490,8 @@ export const pt: Gloss = {
 };
 
 export const fr: Gloss = {
-  'be.u.society': 'Participer en Belgique', // nieuw, nalezen
-  'be.l.council': 'La commune (gemeente) et voter', // nieuw, nalezen
+  'be.u.society': 'Participer à la vie en Belgique', // nieuw, nalezen (AI-correctie 2 nov 2026)
+  'be.l.council': 'La commune (gemeente) et le vote', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.stemmen': 'voter', // nieuw, nalezen
   'be.w.gemeentehuis': 'la maison communale', // nieuw, nalezen
   'be.w.gemeenteraad': 'le conseil communal (il décide pour ta ville)', // nieuw, nalezen
@@ -537,7 +537,7 @@ export const de: Gloss = {
   'be.u.society': 'Mitmachen in Belgien', // nieuw, nalezen
   'be.l.council': 'Die Gemeinde (gemeente) und Wählen', // nieuw, nalezen
   'be.w.stemmen': 'wählen (seine Stimme abgeben)', // nieuw, nalezen
-  'be.w.gemeentehuis': 'das Gemeindehaus (Rathaus)', // nieuw, nalezen
+  'be.w.gemeentehuis': 'das Rathaus (das Gebäude der Gemeinde)', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.gemeenteraad': 'der Gemeinderat (er entscheidet über deinen Ort)', // nieuw, nalezen
   'be.w.burgemeester': 'der Bürgermeister', // nieuw, nalezen
   'be.w.oproepingsbrief': 'die Wahlaufforderung (Brief: wo und wann du wählst)', // nieuw, nalezen
@@ -553,7 +553,7 @@ export const de: Gloss = {
   'be.w.boete': 'das Bußgeld (Geld, das du als Strafe zahlen musst)', // nieuw, nalezen
   'be.w.bezwaar': 'der Widerspruch (du sagst schriftlich, dass du nicht einverstanden bist)', // nieuw, nalezen
   'be.w.advocaat': 'der Anwalt', // nieuw, nalezen
-  'be.w.recht': 'das Recht (was das Gesetz dir zu tun oder zu bekommen erlaubt)', // nieuw, nalezen
+  'be.w.recht': 'das Recht (was du laut Gesetz tun oder bekommen darfst)', // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.s.police.1': 'Ich habe meinen Personalausweis immer dabei.', // nieuw, nalezen
   'be.s.police.2': 'Ich will Widerspruch einlegen.', // nieuw, nalezen
   'be.s.police.3': 'Ich will zuerst mit einem Anwalt sprechen.', // nieuw, nalezen

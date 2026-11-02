@@ -57,7 +57,7 @@ export const ti: Gloss = {
   'be.w.betermelden': "ምምላስ (ናብ ስራሕ፡ ድሕሪ ሕማም)", // nieuw, nalezen
   'be.s.illness.2': "ምስ ሓኪም ስራሕ ቆጸራ ኣለኒ።", // nieuw, nalezen
   'be.c.illness.a': "ዘይምዝራብ ይሓይሽ። ናይ ሕማም ወረቐት ኣለኒ።", // nieuw, nalezen
-  'be.s.kids.2': "ብህጹጽ ምኽንያት ፍቓድ ክወስድ ይኽእል ዶ?", // nieuw, nalezen
+  'be.s.kids.2': "ብህጹጽ ምኽንያት ፍቓድ ክወስድ እኽእል ዶ?", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.zorgverlof': "ፍቓድ ሕርሲ (ንካልኣይ ወላዲ፡ ህጻን ምስ ዝውለድ)", // nieuw, nalezen
   'be.c.leave': "ዕረፍቲን ፍቓድ ብህጹጽ ምኽንያትን", // nieuw, nalezen
   'be.c.leave.b': end("ዝኽፈሎም መዓልትታት ዕረፍትኹም ኣብ ዝሓለፈ ዓመት ክንደይ ከም ዝሰራሕኩም ይምርኮስ። ምሉእ ዓመት ምሉእ ግዜ፡ ኣብ ሰሙን 5 መዓልቲ? ሽዑ 20 መዓልቲ ዕረፍቲ ኣለኩም። ዘርፍኹም ዝያዳ ክህብ ይኽእል። ሓደሽቲ ኣብ ስራሕ ዶ ኢኹም? ኣብ ቀዳማይ ዓመት እንታይ ክትረኽቡ ከም ትኽእሉ ሕተቱ። ዕለታት ምስ ኣስራሒ ትሰማምዑ፡ ኣቐዲምኩም ብጽሑፍ ሕተቱ። ገለ ትካላት ንሓያሎ ሰሙናት ይዕጸዋ፡ ከም ዕረፍቲ ህንጻ (bouwverlof)። ሃንደበታዊ ህጹጽ ኩነታት፡ ከም ሓደጋ ወይ ሕማም ኣብ ስድራ? ሽዑ ፍቓድ ብህጹጽ ምኽንያት (verlof om dwingende redenen) ክትወስዱ ትኽእሉ፡ ኣብ ዓመት እንተ በዝሐ 10 መዓልቲ፡ መብዛሕትኡ ግዜ ብዘይ ደሞዝ። መርዓ ወይ ቀብሪ ኣብ ስድራ? ሽዑ ገለ ዝኽፈሎም መዓልትታት ዕረፍቲ ኣለኩም (klein verlet)። ብቕጽበት ንኣስራሒ ንገሩ።", tiBase, 'advice'), // nieuw, nalezen

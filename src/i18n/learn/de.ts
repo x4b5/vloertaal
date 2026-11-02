@@ -24,7 +24,7 @@ const t: CultureTranslation = {
     'c.arrive.a.why': "Gefragt, warum man da ist: Diese Antwort sagt, dass man neu ist und heute anfängt.",
     'c.understand.a.why': "Nicht verstanden? Um Wiederholung bitten ist normal.",
     'c.translate.a.why': "Der Zettel ist noch nicht klar, darum wird er zuerst übersetzt.",
-    'c.understood.a.why': "Die Aufgabe noch einmal sagen prüft, ob der Auftrag klar ist.",
+    'c.understood.a.why': "Wer die Aufgabe noch einmal sagt, prüft, ob die Reihenfolge klar ist.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.keeplearning.a.why': "Um Niederländisch bitten ist in Ordnung: Üben hilft.",
     'c.gear.a.why': "Gefragt wird nach dem Helm: Ja, er ist auf dem Kopf.",
     'c.danger.a.why': "Bei einem Unfall ruft man zuerst 112 an.",
@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.phone.a.why': "Kein Handy bei Maschinen: Nachrichten warten bis zur Pause.",
     'c.smoking.a.why': "Pausen sind zu festen Zeiten, nicht vorher.",
     'c.clock.a.why': "Für jemand anderen stempeln ist nicht erlaubt.",
-    'c.hygiene.a.why': "Haarnetz auf, Schmuck ab: Regeln für sauberes Essen.",
+    'c.hygiene.a.why': "Haarnetz auf, Schmuck ab: Hygieneregeln für Lebensmittel.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.smalltalk.a.why': "Gefragt wird nach dem Wochenende: Eine Sache reicht.",
     'c.mistakes.a.why': "Auf ein Kompliment antwortet man mit Danke.",
     'c.respect.a.why': "Mobbing muss man ansprechen, damit jemand helfen kann.",
@@ -64,8 +64,8 @@ const t: CultureTranslation = {
     'c.callin.a.why': "Wann zurück? Diese Antwort nennt einen Tag.",
     'c.texting.a.why': "Eine schnelle Antwort in der App hilft bei der Planung.",
     'c.certs.a.why': "Ein ehrliches Nein und Lust zu lernen: eine gute Antwort.",
-    'c.diploma.a.why': "Ja zur Schulung und fragen, wer zahlt, ist normal.",
-    'c.doctor.a.why': "Der Hausarztdienst muss wissen, wer krank ist und was los ist.",
+    'c.diploma.a.why': "Ja zur Ausbildung sagen und fragen, wer zahlt, ist normal.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.doctor.a.why': "Der Hausarzt-Notdienst muss wissen, wer krank ist und was los ist.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.insurance.a.why': "Der Name der Versicherung steht auf der Krankenversicherungskarte.",
     'c.letters.a.why': "Die Steuererklärung muss bis zum 1. Mai gemacht sein.",
     'c.scams.a.why': "Eine Bank fragt nie nach der PIN. Auflegen ist richtig.",

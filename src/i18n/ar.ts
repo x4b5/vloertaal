@@ -598,7 +598,7 @@ const lang: HelpLanguageSource = {
     'c.things.a': 'على المنصة الخشبية (البالِت).',
     'c.directions.q': 'يسار أم يمين؟',
     'c.directions.a': 'يمين، عند رف التخزين.',
-    'c.shift.q': 'متى تبدأ مناوبتك؟',
+    'c.shift.q': 'متى تبدأ نوبتك؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.shift.a': 'غداً الساعة السابعة.',
     'c.sick.q': { m: 'هل أنت مريض؟', f: 'هل أنت مريضة؟' },
     'c.sick.a': 'نعم، سأبقى في البيت اليوم.',

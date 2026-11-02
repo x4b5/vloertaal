@@ -7,7 +7,7 @@ const t: CultureTranslation = {
     'u.apply': 'التقديم على وظيفة',
     'l.cv': 'سيرتك الذاتية ورسالتك',
     'w.cv': 'السيرة الذاتية',
-    'w.motivatie': 'الدافع (لماذا تريد الوظيفة)',
+    'w.motivatie': 'الدافع (سبب الرغبة في الوظيفة)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.ervaring': 'الخبرة',
     'w.opleiding': 'التعليم، التدريب',
     'w.vaardigheden': 'المهارات',
@@ -37,7 +37,7 @@ const t: CultureTranslation = {
     'w.contract': 'العقد',
     'w.tekenen': 'يوقّع',
     'w.tijdelijk': 'مؤقت',
-    's.findwork.1': 'أريد أن أتقدّم لهذه الوظيفة.',
+    's.findwork.1': 'أريد أن أتقدّم لوظيفة.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.findwork.2': 'هل العقد مؤقت أم دائم؟',
     's.findwork.3': 'هل يمكنني أن آخذ نسخة من العقد؟',
     'c.findwork.q': { m: 'ما نوع العمل الذي تبحث عنه؟', f: 'ما نوع العمل الذي تبحثين عنه؟' },
@@ -189,7 +189,7 @@ const t: CultureTranslation = {
     's.mistakes.2': 'هل تستطيع أن تشرحه؟',
     's.mistakes.3': 'شكراً على المديح!',
     'c.mistakes.q': 'عمل رائع!',
-    'c.mistakes.a': 'شكراً، هذا جميل أن أسمعه.',
+    'c.mistakes.a': 'شكراً، يسعدني أن أسمع ذلك.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.respect': 'الاحترام للجميع',
     'w.respect': 'الاحترام',
     'w.gelijk': 'متساوٍ',
@@ -259,7 +259,7 @@ const t: CultureTranslation = {
     'w.schuld': 'الدَّين',
     'w.dreigen': 'يهدّد',
     'w.onderbetaald': 'يتقاضى أجراً أقل من حقّه',
-    'w.afpakken': 'يأخذ منك بالقوة',
+    'w.afpakken': 'يأخذ منك، يسحب منك', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.warning.1': 'مديري يحتفظ بجواز سفري.',
     's.warning.2': 'لا أحصل على قسيمة راتب.',
     's.warning.3': 'يجب أن أسدّد ديناً.',
@@ -479,7 +479,7 @@ const t: CultureTranslation = {
     'c.quality.a': 'الملصق مائل.',
     'u.care': 'في الرعاية',
     'l.client': 'المستفيد من الرعاية والعناية اليومية',
-    'w.client': 'المستفيد من الرعاية (الشخص الذي ترعاه)',
+    'w.client': 'المستفيد من الرعاية (الشخص الذي يتلقى الرعاية)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.wassen': 'يغسل',
     'w.aankleden': 'يرتدي ملابسه، يساعد شخصاً على ارتداء ملابسه',
     'w.eten': 'الطعام',
@@ -986,7 +986,7 @@ const t: CultureTranslation = {
     'w.grapje': "النكتة، المزحة",
     's.boundaries.1': "من فضلك لا تلمسني.",
     's.boundaries.2': "لا أجد هذا التعليق مضحكاً.",
-    's.boundaries.3': "أريد أن أبلّغ عن شيء عند الشخص المؤتمن.",
+    's.boundaries.3': "أريد أن أبلّغ الشخص المؤتمن عن شيء.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.boundaries.q': { m: 'لا تكبّر الموضوع، كانت مجرّد مزحة.', f: 'لا تكبّري الموضوع، كانت مجرّد مزحة.' },
     'c.boundaries.a': "ليست مزحة بالنسبة لي. أريدك أن تتوقّف.",
     'c.gossip': "النميمة ووسائل التواصل الاجتماعي",
@@ -1021,7 +1021,7 @@ const t: CultureTranslation = {
     'l.checkout': 'عند صندوق الدفع',
     'w.klant': 'الزبون',
     'w.kassa': 'صندوق الدفع',
-    'w.wisselgeld': 'الباقي (النقود التي تعيدها للزبون)',
+    'w.wisselgeld': 'الباقي (النقود التي تُعاد للزبون)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.bonnetje': 'الإيصال',
     'w.pinnen': 'يدفع بالبطاقة',
     'w.contant': 'نقداً',
@@ -1239,8 +1239,8 @@ const t: CultureTranslation = {
     'l.permit': "الأوراق والاندماج وعملك",
     'w.papieren': "الأوراق (الوثائق)",
     'w.werkvergunning': "تصريح العمل",
-    'w.werknemer': "الموظف، العامل (تعمل لدى صاحب عمل)",
-    'w.zzper': "العامل المستقل (تعمل لحسابك)",
+    'w.werknemer': "الموظف، العامل (يعمل لدى صاحب عمل)", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.zzper': "العامل المستقل (يعمل لحسابه الخاص)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.inburgering': "الاندماج المدني (الدورة والامتحانات للقادمين الجدد)",
     'w.taalles': "درس اللغة",
     's.permit.1': "هل يُسمح لي أن أعمل هنا بأوراقي؟",
@@ -1279,7 +1279,7 @@ const t: CultureTranslation = {
     'w.sleutel': "المفتاح",
     'w.verhuizen': "ينتقل (إلى سكن آخر)",
     'w.busje': "الحافلة الصغيرة، الفان",
-    's.jobends.1': "هل أحصل على بدل العطلة وأيام إجازتي مدفوعة؟",
+    's.jobends.1': "هل أحصل على بدل العطلة وعلى مقابل مالي عن أيام إجازتي؟", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.jobends.2': "أطلب النصيحة من Juridisch Loket.",
     's.jobends.3': "أرتّب بنفسي تأميناً صحياً جديداً.",
     'c.jobends.q': { m: "عملك ينتهي يوم الجمعة. عندها يجب أن تترك السكن أيضاً.", f: "عملكِ ينتهي يوم الجمعة. عندها يجب أن تتركي السكن أيضاً." },
@@ -1338,7 +1338,7 @@ const t: CultureTranslation = {
     'w.werkbon': "أمر العمل (ورقة أو تطبيق فيه مهمتك)", // nieuw, nalezen
     'w.lezen': "يقرأ", // nieuw, nalezen
     'w.aantal': "العدد (كم واحداً)", // nieuw, nalezen
-    'w.materiaal': "المواد (ما تحتاجه للعمل)", // nieuw, nalezen
+    'w.materiaal': "المواد (ما يلزم للعمل)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.klaarleggen': "يجهّز (يضع ما يحتاجه جاهزاً)", // nieuw, nalezen
     'w.handtekening': "التوقيع", // nieuw, nalezen
     's.workorder.1': "أقرأ أمر العمل أولاً.", // nieuw, nalezen
@@ -1371,7 +1371,7 @@ const t: CultureTranslation = {
     's.workshop.3': "انتبهوا من الشرر!", // nieuw, nalezen
     'c.workshop.q': { m: "لماذا تلبس نظارة؟", f: "لماذا تلبسين نظارة؟", x: "لماذا النظارة؟" }, // nieuw, nalezen
     'c.workshop.a': "عند النشر قد تدخل قطع صغيرة في عيني.", // nieuw, nalezen
-    'l.power': "افصل الكهرباء أولاً", // nieuw, nalezen
+    'l.power': "فصل الكهرباء أولاً", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.stroom': "الكهرباء، التيار", // nieuw, nalezen
     'w.kabel': "الكابل", // nieuw, nalezen
     'w.stekker': "القابس (الفيش)", // nieuw, nalezen
@@ -1399,7 +1399,7 @@ const t: CultureTranslation = {
     'l.carjob': "الزبون يقرّر", // nieuw, nalezen
     'w.proefrit': "تجربة القيادة", // nieuw, nalezen
     'w.rijbewijs': "رخصة القيادة", // nieuw, nalezen
-    'w.akkoord': "موافق، تمام (تقول نعم لشيء)", // nieuw, nalezen
+    'w.akkoord': "موافق، تمام (قول نعم لشيء)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.kosten': "التكاليف (ما يجب دفعه)", // nieuw, nalezen
     'w.repareren': "يصلح", // nieuw, nalezen
     'w.onderdeel': "القطعة (من سيارة أو آلة)", // nieuw, nalezen
@@ -1410,10 +1410,10 @@ const t: CultureTranslation = {
     'c.carjob.a': "أسأل المسؤول أولاً. يجب أن يوافق الزبون.", // nieuw, nalezen
     'u.stage': "التدريب العملي", // nieuw, nalezen
     'l.placement': "تدريبك العملي", // nieuw, nalezen
-    'w.stage': "التدريب العملي (تتعلم في شركة)", // nieuw, nalezen
+    'w.stage': "التدريب العملي (التعلّم في شركة)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.praktijkopleider': "المدرّب في الشركة (يرشدك في الشركة)", // nieuw, nalezen
     'w.stagebegeleider': "مشرف التدريب من المدرسة (يرشدك من جهة المدرسة)", // nieuw, nalezen
-    'w.pok': "عقد التدريب العملي (توقّعه أنت والمدرسة والشركة)", // nieuw, nalezen
+    'w.pok': "عقد التدريب العملي (يوقّعه المتدرّب والمدرسة والشركة)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.school': "المدرسة", // nieuw, nalezen
     'w.leerbedrijf': "الشركة المعتمدة للتدريب (شركة يمكن للطلاب التعلم فيها)", // nieuw, nalezen
     's.placement.1': "أقوم بتدريبي العملي في مستودع.", // nieuw, nalezen
@@ -1423,7 +1423,7 @@ const t: CultureTranslation = {
     'c.placement.a': "يوم الاثنين. أولاً نوقّع عقد التدريب.", // nieuw, nalezen
     'l.review': "ملاحظات على تدريبك", // nieuw, nalezen
     'w.beoordeling': "التقييم (مدى جودة عملك)", // nieuw, nalezen
-    'w.leerdoel': "هدف التعلّم (ما تريد أن تتعلمه)", // nieuw, nalezen
+    'w.leerdoel': "هدف التعلّم (ما يُراد تعلّمه)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.voorbeeld': "المثال", // nieuw, nalezen
     'w.portfolio': "ملف الإنجاز (ملف فيه أعمالك وإثباتاتها)", // nieuw, nalezen
     'w.cijfer': "العلامة، الدرجة", // nieuw, nalezen
@@ -1439,7 +1439,7 @@ const t: CultureTranslation = {
     'w.verkiezing': "الانتخابات", // nieuw, nalezen
     'w.gemeenteraad': "المجلس البلدي (يقرّر في شؤون مدينتك)", // nieuw, nalezen
     'w.parlement': "البرلمان (يضع القوانين)", // nieuw, nalezen
-    'w.stempas': "بطاقة التصويت (البطاقة التي تحتاجها لتصوّت)", // nieuw, nalezen
+    'w.stempas': "بطاقة التصويت (البطاقة اللازمة للتصويت)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.burgemeester': "رئيس البلدية", // nieuw, nalezen
     's.council.1': "هل يحق لي أن أصوّت؟", // nieuw, nalezen
     's.council.2': "وصلتني بطاقة التصويت بالبريد.", // nieuw, nalezen
@@ -1448,8 +1448,8 @@ const t: CultureTranslation = {
     'c.council.a': "نعم. معي بطاقة التصويت ووثيقة الهوية.", // nieuw, nalezen
     'l.police': "الشرطة وحقوقك", // nieuw, nalezen
     'w.agent': "الشرطي", // nieuw, nalezen
-    'w.boete': "الغرامة (مال تدفعه عقوبةً)", // nieuw, nalezen
-    'w.bezwaar': "الاعتراض (تقول كتابةً إنك غير موافق)", // nieuw, nalezen
+    'w.boete': "الغرامة (مال يُدفع عقوبةً)", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.bezwaar': "الاعتراض (إعلان عدم الموافقة كتابةً)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.rechter': "القاضي", // nieuw, nalezen
     'w.advocaat': "المحامي", // nieuw, nalezen
     'w.wet': "القانون", // nieuw, nalezen
@@ -1481,7 +1481,7 @@ const t: CultureTranslation = {
     's.phish.1': "هذه الرسالة مشبوهة.", // nieuw, nalezen
     's.phish.2': "لا أفتح المرفق.", // nieuw, nalezen
     's.phish.3': "أغيّر كلمة المرور فوراً.", // nieuw, nalezen
-    'c.phish.q': { m: "هل نقرت على الرابط؟", f: "هل نقرتِ على الرابط؟", x: "هل حصل نقر على الرابط؟" }, // nieuw, nalezen
+    'c.phish.q': { m: "هل نقرت على الرابط؟", f: "هل نقرتِ على الرابط؟", x: "هل تمّ النقر على الرابط؟" }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.phish.a': "نعم. سأتصل بقسم تقنية المعلومات.", // nieuw, nalezen
     'l.mychoice': "ما أجيده", // nieuw, nalezen
     'w.goedin': "جيد في (شيء ما)", // nieuw, nalezen
@@ -1489,7 +1489,7 @@ const t: CultureTranslation = {
     'w.beroep': "المهنة، نوع العمل", // nieuw, nalezen
     'w.bijbaan': "العمل الجانبي (عمل صغير بجانب الدراسة)", // nieuw, nalezen
     'w.nauwkeurig': "دقيق ومتأنٍّ", // nieuw, nalezen
-    'w.meeloopdag': "يوم المرافقة (يوم ترافق فيه شخصاً في عمله)", // nieuw, nalezen
+    'w.meeloopdag': "يوم المرافقة (يوم لمرافقة شخص في عمله)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.mychoice.1': "أستطيع أن أعمل جيداً بيديّ.", // nieuw, nalezen
     's.mychoice.2': "أحب العمل مع الناس.", // nieuw, nalezen
     's.mychoice.3': "هل يمكنني أن أرافقكم يوماً لأرى العمل؟", // nieuw, nalezen
@@ -1498,7 +1498,7 @@ const t: CultureTranslation = {
     'l.nextstep': "بعد Entree", // nieuw, nalezen
     'w.niveau2': "المستوى 2 (المستوى التالي في mbo)", // nieuw, nalezen
     'w.startkwalificatie': "المؤهل الأساسي (شهادة mbo من المستوى 2 أو أعلى)", // nieuw, nalezen
-    'w.bbl': "bbl (تعمل في شركة وتذهب إلى المدرسة يوماً في الأسبوع تقريباً)", // nieuw, nalezen
+    'w.bbl': "bbl (العمل في شركة والذهاب إلى المدرسة يوماً في الأسبوع تقريباً)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.doorstromen': "يواصل (إلى مستوى أعلى)", // nieuw, nalezen
     'w.aanmelden': "يسجّل (في مدرسة أو دورة)", // nieuw, nalezen
     'w.opendag': 'يوم الأبواب المفتوحة (يمكنك زيارة مدرسة)', // nieuw, nalezen // nagelezen AI ronde 3
@@ -1522,16 +1522,16 @@ const t: CultureTranslation = {
     'l.budget': "مالك كل شهر", // nieuw, nalezen
     'w.vastelasten': "المصاريف الثابتة (الإيجار، التأمين، الهاتف: كل شهر)", // nieuw, nalezen
     'w.sparen': "يدّخر (المال)", // nieuw, nalezen
-    'w.abonnement': "الاشتراك (تدفع ثمنه كل شهر)", // nieuw, nalezen
-    'w.achterafbetalen': "الدفع لاحقاً (اشترِ الآن وادفع لاحقاً)", // nieuw, nalezen
-    'w.bedenktijd': "مهلة التراجع (وقت لتغيّر رأيك)", // nieuw, nalezen
+    'w.abonnement': "الاشتراك (يُدفع ثمنه كل شهر)", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.achterafbetalen': "الدفع لاحقاً (الشراء الآن والدفع لاحقاً)", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.bedenktijd': "مهلة التراجع (وقت لتغيير الرأي)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.garantie': "الضمان (يجب أن يعمل، وإلا يُصلَح لك)", // nieuw, nalezen
     's.budget.1': "أدفع المصاريف الثابتة أولاً.", // nieuw, nalezen
     's.budget.2': "أدّخر قليلاً كل شهر.", // nieuw, nalezen
     's.budget.3': "سألغي هذا الاشتراك.", // nieuw, nalezen
     'c.budget.q': { m: "اشترِ هذا الهاتف الآن وادفع لاحقاً!", f: "اشتري هذا الهاتف الآن وادفعي لاحقاً!", x: "هذا الهاتف: الشراء الآن والدفع لاحقاً!" }, // nieuw, nalezen
     'c.budget.a': "لا، شكراً. الدفع لاحقاً دَين أيضاً.", // nieuw, nalezen
-    'l.healthy': "لائق للعمل", // nieuw, nalezen
+    'l.healthy': "اللياقة للعمل", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.slapen': "ينام", // nieuw, nalezen
     'w.ontbijt': "الفطور", // nieuw, nalezen
     'w.bewegen': "يتحرّك، يكون نشيطاً", // nieuw, nalezen

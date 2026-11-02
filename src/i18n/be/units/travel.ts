@@ -60,11 +60,11 @@ export const fa: Gloss = {
 
 export const prs: Gloss = {
     "be.w.inchecken": "تکت", // nieuw, nalezen
-    "be.w.uitchecken": "آبونمان (تکت برای مدت طولانی)", // nieuw, nalezen
+    "be.w.uitchecken": "اشتراک (تکت برای مدت طولانی)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.w.bankpas": "کارت بانکی", // nieuw, nalezen
     "be.w.reiskosten": "پول رفت‌وآمد به کار (از طرف کارفرما)", // nieuw, nalezen
     "be.s.transit.1": "در بس با کارت بانکی خود پرداخت می‌کنم.", // nieuw, nalezen
-    "be.s.transit.2": "آبونمان ریل دارم.", // nieuw, nalezen
+    "be.s.transit.2": "برای ریل اشتراک دارم.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.transit.a": "نی، با بس De Lijn. پیش دروازه ایستاد می‌شود.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit": "بس، ریل و مصرف راه", // = c.transit
     "be.c.transit.b": "در فلاندر سوار بس یا ترام De Lijn و ریل NMBS می‌شوید. در بس نمی‌توانید نقد پرداخت کنید: تکت را در اپ بخرید، یا در بس با کارت بانکی پرداخت کنید. هر روز به کار می‌روید؟ آن وقت آبونمان (abonnement) اکثراً ارزان‌تر است. با ریل به کار می‌روید؟ آن وقت کارفرما بخشی از آبونمان ریل شما را می‌پردازد. برای بس، ترام یا بایسکل، به بخش کاری شما بستگی دارد: در این باره بپرسید. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen
@@ -167,8 +167,8 @@ export const bg: Gloss = {
 };
 
 export const es: Gloss = {
-    "be.w.inchecken": "el billete", // nieuw, nalezen
-    "be.w.uitchecken": "el abono (billete para un periodo)", // nieuw, nalezen
+    "be.w.inchecken": "el billete, el boleto", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    "be.w.uitchecken": "el abono (un billete o boleto para un periodo)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.w.bankpas": "la tarjeta bancaria", // nieuw, nalezen
     "be.w.reiskosten": "el dinero para el viaje al trabajo (de tu empresa)", // nieuw, nalezen
     "be.s.transit.1": "En el autobús pago con mi tarjeta bancaria.", // nieuw, nalezen

@@ -480,7 +480,7 @@ const lang: HelpLanguageSource = {
     'w.naam': 'ስም',
     'w.nieuw': 'ሓድሽ',
     'w.begrijpniet': 'ኣይተረድኣንን',
-    'w.nogeenkeer': 'ሓንሳብ ደጊም',
+    'w.nogeenkeer': 'ሓንሳብ ከኣ', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.langzaam': 'ብቐስታ',
     'w.helpen': 'ምሕጋዝ',
     'w.waar': 'ኣበይ',
@@ -521,7 +521,7 @@ const lang: HelpLanguageSource = {
     'w.klaar': 'ተወዲኡ',
     'w.telaat': 'ምድንጓይ',
     'w.morgen': 'ጽባሕ',
-    'w.ziek': { m: 'ሕሙም', f: 'ሕምምቲ', x: 'ሕሙም / ሕምምቲ' },
+    'w.ziek': { m: 'ሕሙም', f: 'ሕምምቲ', x: 'ሕሙማት' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.bellen': 'ምድዋል (ብተሌፎን)',
     'w.dokter': 'ሓኪም',
     'w.pijn': 'ቃንዛ',
@@ -585,7 +585,7 @@ const lang: HelpLanguageSource = {
     'c.accident.a': 'ወዲቑ። ይደምይ ኣሎ።',
     'l.notyet': 'እዚ ገና ኣይተማሃርክዎን',
     'w.nogniet': 'ገና',
-    'w.mogen': 'ፍቓድ ምርካብ (ይፍቀደኒ)',
+    'w.mogen': 'ፍቓድ ምርካብ (ይፍቀደለይ)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.proberen': 'ምፍታን',
     'w.voordoen': 'ብተግባር ምርኣይ (ቅድም ገይሩ ምርኣይ)',
     'w.gevaarlijk': 'ሓደገኛ',
