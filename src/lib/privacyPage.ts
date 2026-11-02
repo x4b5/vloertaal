@@ -70,8 +70,8 @@ export const PRIVACY: readonly PrivacySection[] = [
     id: 'website',
     title: 'Waar de website staat',
     paras: [
-      'De website staat bij Vercel (in de Verenigde Staten). Hun servers zien, zoals bij elke website, je IP-adres om de pagina’s te sturen. Lettertypen, plaatjes en geluiden komen allemaal van vloertaal.nl zelf, niet van Google of andere partijen.',
-      'We willen Vloertaal later bij een Europese aanbieder zetten. Als dat gebeurt, staat het hier en in het logboek.',
+      'De website staat bij statichost.eu, een bedrijf uit Stockholm (Zweden). Hun servers staan in Duitsland en Slovenië, dus alles blijft in de Europese Unie. Hun servers zien, zoals bij elke website, je IP-adres om de pagina’s te sturen. statichost bewaart het niet. Lettertypen, plaatjes en geluiden komen allemaal van vloertaal.nl zelf, niet van Google of andere partijen.',
+      'Tot 2 november 2026 stond Vloertaal bij Vercel, in de Verenigde Staten.',
     ],
   },
   {

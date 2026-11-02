@@ -27,6 +27,7 @@ export const UPDATES: Update[] = [
       'De app staat nu altijd eerst in de lichte weergave, ook als je telefoon op donker staat. Liever donker? Kies het bij Instellingen.',
       'Een kleine tikfout bij typen: je ziet nu "Bijna goed!", met een golflijn onder de fout in je eigen antwoord. De goede spelling staat er één keer. In de herhaling blijft zo\'n woord in zijn vak.',
       'Gesprekje: is je antwoord goed, dan staat het niet nog eens in een kaart eronder. Bij een gesprekje andersom staat jouw antwoord als spreekballon in het gesprek.',
+      'Vloertaal staat nu in Europa: bij statichost.eu (Zweden), niet meer in de Verenigde Staten. Wat dat voor je privacy betekent, staat op vloertaal.nl/privacy.',
     ],
   },
   {
