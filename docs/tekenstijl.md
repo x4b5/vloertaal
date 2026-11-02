@@ -97,3 +97,39 @@ export default {
   ),
 } as Record<string, () => JSX.Element>;
 ```
+
+## Geheugenplaatjes: wanneer helpt een tekening bij een moeilijk woord?
+
+A picture can do one of two jobs (the owner's question, 2 November 2026):
+
+1. **Explain**: the picture alone says which word it is (de helm, op slot). It may be used anywhere,
+   including "Which picture is it?" and the match cards, so it must not look like another word of the lesson.
+2. **Help to remember**: the help-language gloss says what the word means; the picture is a hook to
+   hang the word on (de huur, de borg, bruto). `Word.picture: 'hook'`. It is shown on the word's
+   intro card only, never in a picture choice, a match, the path or a lesson icon
+   (`src/lib/wordPicture.ts`: `hasPicture` for job 1, `introPicture` for both).
+
+Four steps from concrete to abstract:
+
+| Step | Kind of word | Example | Picture |
+|---|---|---|---|
+| 1 | a thing | de helm, de stekker | yes, job 1 |
+| 2 | something you can see happen | op slot, kapot, tillen | yes, job 1 |
+| 3 | abstract, with one fixed, familiar scene | de huur, de borg, de boete, het verlof, bruto/netto | yes, job 2 (`'hook'`) |
+| 4 | purely abstract or ambiguous | het recht, eerlijk, misschien, de cao | no (`picture: false`): the example sentence and the sound do more |
+
+A memory picture must pass three questions:
+
+1. **One scene.** Readable at a glance: no strip of steps, no symbol you must learn first (§, ⚖️, a mayor's chain).
+2. **From the learner's own working life.** Would an order picker or a cleaner recognise it?
+3. **Not misleading.** Could someone take a wrong meaning from it? ("het recht" as a judge's gavel suggests a court case: no.)
+   Check a Belgian twin too: `be.w.wachtdag` ("het gewaarborgd loon") keeps no picture, because the
+   struck-out coin of "de wachtdag" would say the opposite.
+
+Simple test with two or three learners or coaches:
+- the right word is picked from the lesson's words with the picture alone → job 1;
+- only with the gloss does the picture make sense → job 2;
+- even with the gloss it is odd or misleading → no picture.
+
+The first eleven memory pictures (`src/pictures/group34.tsx`): de huur, de borg, de boete, het verlof,
+de wachtdag, bruto, netto, de feestdag, de allergie, de belasting, de zorgverzekering.

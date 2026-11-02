@@ -15,9 +15,9 @@ import { regionTips } from '../content/regio';
 import { findLesson } from '../content/curriculum';
 import { showKept, type DailyCard } from '../lib/spaced';
 import { Flag } from './Flag';
-import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_META, NL_MORE, ui, uiCount, withoutN, type Bilingual, said, saidLang, langTag } from '../i18n';
+import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_MORE, ui, uiCount, withoutN, type Bilingual, said, saidLang, langTag } from '../i18n';
 import type { HelpLanguage, LangCode, UiCode, UiKey } from '../i18n/types';
-import { helpRowsFor, type HelpRow } from '../content/regels/help';
+import { helpRowsFor, helpShow, type HelpRow } from '../content/regels/help';
 import { learnerCountry } from '../content/country';
 import { dutchUi, rulesTrackOn } from '../lib/track';
 import { NlPair } from './NlPair';
@@ -52,11 +52,13 @@ import {
 import { SpeakButton } from './SpeakButton';
 import { useVoices } from './useVoices';
 import { setTesterSwitch, testerSwitch } from '../lib/report';
-import { ChoiceCards, QuestionSay } from './Choice';
+import { ChoiceCards } from './Choice';
 import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
+import { MissingLanguage } from './MissingLanguage';
+import { ScrollBox } from './ScrollBox';
 import { pushSubStep } from '../lib/onbHistory';
 import { HelpSay } from './HelpSay';
 import { emojiIconId } from '../content/tipIcons';
@@ -69,7 +71,9 @@ import type { WorkTryLine } from '../lib/workTry';
  *  native name, and what the page is in before a language is chosen): Arabic, Bulgarian, Dari … */
 const PICKER_ORDER = [...languageMeta].sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
-export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang, rules = false }: {
+export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang, onMissing }: {
+  /** First run: a last card "Is your language missing?" (src/lib/missingLang.ts). */
+  onMissing?: () => void;
   /** The help language in use (Settings): the "in review" tag is written in it. */
   lang?: HelpLanguage;
   /** undefined = nothing chosen yet (first run). */
@@ -79,11 +83,6 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
   showBeta?: boolean;
   /** Smaller cards (Settings); the first-run screen has the big ones. */
   compact?: boolean;
-  /**
-   * Also "Nederlands · Werkregels" at the end of the list. Off since 31 October 2026: the work-rules
-   * track is a route of its own (RoutePage, and Settings › "Wat wil je leren?"), not a help language.
-   */
-  rules?: boolean;
 }) {
   const betaHelp = lang?.ui.inReview ?? lang?.ui.beta;
   // The work-rules track reads in Dutch only: no English names under the languages.
@@ -120,31 +119,40 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`} role="group" aria-label={said(ask)}>
       {PICKER_ORDER.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
       {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
-      {/* "Nederlands – ik spreek al Nederlands": the work-rules track, always said in Dutch. Last,
-          under a line and in its own colour, with the word "Werkregels": it is another part of
-          the app, not one more help language. */}
-      {rules && rulesTrackOn() && <span className="lang-sep" aria-hidden />}
-      {rules && rulesTrackOn() && (
-        <button
-          key="nl"
-          type="button"
-          className={`lang-btn lang-btn-nl ${current === 'nl' ? 'picked' : ''}`}
-          onClick={() => onPick('nl')}
-          aria-pressed={current === undefined ? undefined : current === 'nl'}
-          lang="nl"
-        >
-          <LangMark code="nl" />
+      {/* Not a language: a dashed card on the whole width, after English. */}
+      {onMissing && (
+        <button key="missing" type="button" className="lang-btn lang-btn-missing" onClick={onMissing} lang="en">
+          <span className="lang-mark" aria-hidden><GlobeIcon size={26} /></span>
           <span className="lang-names">
-            <span className="lang-nl-tag">Werkregels</span>
-            <span className="lang-native">{NL_META.nativeName}</span>
-            <span className="lang-en lang-nl-sub">{NL_META.name}</span>
-            {/* Its own direction: in a right-to-left list the full stop stays at its end. */}
-            <span className="lang-nl-more"><bdi dir="ltr">{NL_MORE}</bdi></span>
+            <span className="lang-native">Is your language missing?</span>
+            <span className="lang-en">Tell us which one</span>
           </span>
-          {current === 'nl' && <CheckIcon size={20} className="lang-check" />}
         </button>
       )}
     </div>
+  );
+}
+
+/** The work-rules card under the language list (the same words as on "Wat wil je leren?" in Settings). */
+export const NL_KNOWN = 'Ik spreek al Nederlands';
+
+/**
+ * "Ik spreek al Nederlands": the work-rules track, always said in Dutch, in its own colour and
+ * with the word "Werkregels": another part of the app, not one more help language. On the first
+ * run it stays at the bottom of the screen, under a line, while the languages scroll above it
+ * (the owner's choice, 2 November 2026).
+ */
+export function NlCard({ onPick }: { onPick: () => void }) {
+  return (
+    <button type="button" className="lang-btn lang-btn-nl" onClick={onPick} lang="nl">
+      <LangMark code="nl" />
+      <span className="lang-names">
+        <span className="lang-nl-tag">Werkregels</span>
+        <span className="lang-native">{NL_KNOWN}</span>
+        {/* Its own direction: on a right-to-left page the full stop stays at its end. */}
+        <span className="lang-nl-more"><bdi dir="ltr">{NL_MORE}</bdi></span>
+      </span>
+    </button>
   );
 }
 
@@ -165,36 +173,33 @@ function LangMark({ code }: { code: UiCode | null }) {
 }
 
 /**
- * First run, before anything else: the language you get help in. The phone's own languages give
- * a guess ("Polski?" [Yes] [Other language]); "Other language", or no guess, shows the list of
- * all ten, each name in its own script (the list is the one place with more than three choices).
- * The password, the gender question and the sector follow on their own pages (App.tsx).
+ * First run, before anything else: the language you get help in (the owner's choice, 1 November
+ * 2026: without it the rest is not clear). The phone's own languages give a guess ("Polski?"
+ * [Yes] [Other language]); "Other language", or no guess, shows the list of all languages, each
+ * name in its own script (the list is the one place with more than three choices), one under the
+ * other in a box that scrolls inside (ScrollBox). Under the box, at the bottom of the screen,
+ * "Ik spreek al Nederlands": the work-rules track (the owner's choice, 2 November 2026; before,
+ * a page "Wat wil je leren?" came after the language). The gender question, the sector and the
+ * country follow on their own pages (App.tsx).
  */
-export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = false, previous, startAtRoute = true }: {
+export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = false }: {
   onDone: (code: UiCode | null) => void;
-  /** Back from the next page: the choice made before ('nl' = Werkregels: back on the route page). */
-  previous?: UiCode | null;
-  /** Begin on the route page (default). Screenshots of the language pages leave it out. */
-  startAtRoute?: boolean;
   /** The guessed help language (from navigator.languages); null = no guess, the list right away. */
   guess?: LangCode | null;
   /** Back from the next page: open on the list (the guess was already seen). */
   startWithList?: boolean;
 }) {
   const [list, setList] = useState(startWithList || !guess);
-  // First the route (since 31 October 2026): "Nederlands leren" leads on to the help language,
-  // "Ik spreek al Nederlands" is the work-rules track at once. Without the track: no route page.
-  const routes = rulesTrackOn();
-  const [route, setRoute] = useState<'taal' | null>(() => (!routes || !startAtRoute || (startWithList && previous !== 'nl') ? 'taal' : null));
+  /** "Is your language missing?" open (its own page, with its own history entry). */
+  const [missing, setMissing] = useState(false);
   useEffect(() => {
-    if (route !== 'taal' || !routes) return;
-    if (!(history.state as { route?: number } | null)?.route) pushSubStep({ route: 1 });
-    const onPop = () => { if (!(history.state as { route?: number } | null)?.route) { setRoute(null); setList(startWithList || !guess); } };
+    if (!missing) return;
+    if (!(history.state as { missing?: number } | null)?.missing) pushSubStep({ missing: 1 });
+    const onPop = () => { if (!(history.state as { missing?: number } | null)?.missing) setMissing(false); };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
-  }, [route, routes, startWithList, guess]);
-  /** Back to the route page (the first page), from the language page. */
-  const toRoute = () => ((history.state as { route?: number } | null)?.route ? history.back() : setRoute(null));
+  }, [missing]);
+  const closeMissing = () => ((history.state as { missing?: number } | null)?.missing ? history.back() : setMissing(false));
   // Nothing is chosen yet: the English stays next to every line.
   useEffect(() => { applyEnglish(null); }, []);
   // The list after the guess has its own history entry: the phone's Back returns to the guess.
@@ -217,35 +222,36 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
     if (!q.hasAttribute('tabindex')) q.tabIndex = -1;
     q.focus({ preventScroll: true });
   }, [list]);
-  /** The first tap: the next page shows (silent since 28 October 2026: no "Hallo, ik ben Bram."). */
-  const pick = (code: UiCode | null) => {
-    onDone(code);
-  };
   // The guess page needs only its few strings (src/i18n/meta.ts): no pack to wait for.
   const gMeta = langMeta(guess);
   const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
-  if (route === null) return <RoutePage lang={g} onLearn={() => setRoute('taal')} onRules={() => pick('nl')} />;
+  if (missing) return <MissingLanguage onBack={closeMissing} />;
   if (list || !g) {
     return (
       <div className="screen onboarding max3-page onb-lang-list">
-        {g ? (
-          <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />
-        ) : routes && <ChromeHead onBack={toRoute} />}
+        {g && <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />}
         <div className="hero">
           <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
           <p className="tagline" lang="en">{ui('appTagline').en}</p>
         </div>
         <h2 className="onboarding-title" lang="en">{ui('chooseLanguage').en}</h2>
-        <LanguagePicker onPick={pick} />
+        {/* The languages in a framed box that scrolls inside, with a scroll bar that is always
+            there (the owner's request, 2 November 2026: a clear menu); under it, outside the box,
+            "Ik spreek al Nederlands". */}
+        <ScrollBox className="lang-box" moreLabel="More languages">
+          <LanguagePicker onPick={onDone} onMissing={() => setMissing(true)} />
+        </ScrollBox>
+        {rulesTrackOn() && (
+          <div className="onb-nl-dock">
+            <NlCard onPick={() => onDone('nl')} />
+          </div>
+        )}
       </div>
     );
   }
   const q = g.dir === 'rtl' ? '\u061f' : '?';
   return (
     <div className="screen onboarding max3-page lang-guess">
-      {/* The back arrow on its own row above the logo (not over it), at the start of the guessed
-          language: the right in Arabic, Persian and Dari. */}
-      {routes && <ChromeHead lang={g} onBack={toRoute} />}
       <div className="hero">
         <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
         {/* What the app is, in the guessed language (large), the English small under it. */}
@@ -259,7 +265,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
       <ChoiceCards
         label={said(ui('chooseLanguage', g))}
         dir={g.dir}
-        onPick={(id) => (id === 'yes' ? pick(g.code) : setList(true))}
+        onPick={(id) => (id === 'yes' ? onDone(g.code) : setList(true))}
         options={[
           { id: 'yes', text: ui('langGuessYes', g), picture: <CheckIcon size={30} />, extra: <HelpSay text={g.ui.langGuessYes} lang={g} /> },
           { id: 'other', text: ui('langGuessOther', g), picture: <GlobeIcon size={30} />, next: true, extra: <HelpSay text={g.ui.langGuessOther} lang={g} /> },
@@ -275,43 +281,6 @@ function PrivacyLink({ lang }: { lang?: HelpLanguage }) {
     <a className="about-privacy-link" href={PRIVACY_PATH} target="_blank" rel="noopener">
       <NlPair nlFirst nl="Lees de privacyverklaring" nlClass="about-privacy-nl" text={ui('privacyLink', lang)} />
     </a>
-  );
-}
-
-/**
- * The very first page (since 31 October 2026, the owner's choice): what do you want to learn? Two
- * cards (max 3), each with its Dutch and, under it, the line in the phone's language when it is
- * one of ours (src/i18n/meta.ts, no pack needed), else in English:
- *  - "Nederlands leren": on to the help language (the guess or the list);
- *  - "Ik spreek al Nederlands": the work-rules track (Werkregels) at once, in Dutch.
- * Before this, "Nederlands · Werkregels" was the last row of the language list, which confused:
- * it is not a help language.
- */
-export function RoutePage({ lang, onLearn, onRules }: { lang?: HelpLanguage; onLearn: () => void; onRules: () => void }) {
-  useEffect(() => { applyEnglish(null); }, []);
-  // With the phone's language guessed, the page is in that language and Dutch only: no English
-  // third line (calmer cards). Without a guess, the English stays (the only line besides Dutch).
-  const solo = Boolean(lang && lang.code !== 'nl');
-  return (
-    <div className={`screen onboarding max3-page route-page ${solo ? 'route-solo' : ''}`} dir={lang?.dir}>
-      <div className="hero">
-        <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
-      </div>
-      <h2 className="onboarding-title">
-        <NlPair nlFirst nl="Wat wil je leren?" nlClass="route-q-nl" text={ui('routeTitle', lang)} />
-      </h2>
-      {/* The question in Dutch, and in the help language (its recording, else the phone's voice). */}
-      <QuestionSay nl="Wat wil je leren?" help={lang?.ui.routeTitle} lang={lang} />
-      <ChoiceCards
-        label="Wat wil je leren?"
-        dir={lang?.dir}
-        onPick={(id) => (id === 'taal' ? onLearn() : onRules())}
-        options={[
-          { id: 'taal', nl: 'Nederlands leren', text: ui('routeLearn', lang), picture: <WordPicture id="w.hallo" emoji="🗣️" size={52} />, next: true, extra: <HelpSay text={lang?.ui.routeLearn} lang={lang} /> },
-          { id: 'regels', nl: 'Ik spreek al Nederlands', text: ui('routeRules', lang), picture: <WordPicture id="w.contract" emoji="📘" size={52} />, extra: <HelpSay text={lang?.ui.routeRules} lang={lang} /> },
-        ]}
-      />
-    </div>
   );
 }
 
@@ -510,7 +479,7 @@ function WorkContacts({ lang }: { lang?: HelpLanguage }) {
                 <span className="rh-text">
                   <span className="rh-name" lang="nl">{row.name}</span>
                   <Bi className="rh-when" text={ui(when, lang)} />
-                  <span className="rh-show" lang="nl" dir="ltr">{row.show}</span>
+                  {helpShow(row) && <span className="rh-show" lang="nl" dir="ltr">{row.show}</span>}
                 </span>
               </div>
             </li>
@@ -523,7 +492,7 @@ function WorkContacts({ lang }: { lang?: HelpLanguage }) {
                 <span className="rh-text">
                   <span className="rh-name" lang="nl">{row.name}</span>
                   <Bi className="rh-when" text={ui(when, lang)} />
-                  <span className="rh-show rh-show-link" lang="nl" dir="ltr">{row.show}</span>
+                  {helpShow(row) && <span className="rh-show rh-show-link" lang="nl" dir="ltr">{row.show}</span>}
                 </span>
                 <span className="rh-go" aria-hidden>{call ? <CallIcon size={24} /> : <GlobeIcon size={24} />}</span>
               </a>
@@ -815,9 +784,7 @@ export function Phrasebook({ lang, onBack }: { lang?: HelpLanguage; onBack: () =
   );
 }
 
-export function StatCard({ tone, label, icon, value, final, done, foot, badge }: {
-  /** A stamp on the card's corner (FOUTLOOS). */
-  badge?: React.ReactNode;
+export function StatCard({ tone, label, icon, value, final, done, foot }: {
   tone: 'gold' | 'green' | 'orange';
   label: Bilingual;
   icon: React.ReactNode;
@@ -838,16 +805,7 @@ export function StatCard({ tone, label, icon, value, final, done, foot, badge }:
         {icon}
         <span className="stat-card-value" dir="ltr">{ofTotal ? <>{ofTotal[1]}<span className="stat-of">/{ofTotal[2]}</span></> : value}</span>
       </div>
-      {/* The stamp sits beside the line under the value, in the flow (never over its words);
-          on a narrow card it wraps under it. */}
-      {badge ? (
-        <div className="stat-card-foot-row">
-          {foot && <Bi className="stat-card-foot" text={foot} />}
-          {badge}
-        </div>
-      ) : (
-        foot && <Bi className="stat-card-foot" text={foot} />
-      )}
+      {foot && <Bi className="stat-card-foot" text={foot} />}
     </div>
   );
 }
@@ -960,14 +918,10 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             value={`${shownRight} / ${total}`}
             final={`${right} / ${total}`}
             done={shownRight === right}
-            // Every answer right the first time: a blue-ink rubber stamp inside the card, and
-            // "No mistakes" in the help language in the card's free space.
+            // Every answer right the first time: "No mistakes" in the help language under the
+            // number (no FOUTLOOS stamp beside it any more: it said it a third time, feedback of
+            // the maker, 2 November 2026).
             foot={perfect ? ui('noMistakes', lang) : undefined}
-            badge={perfect ? (
-              <span className="stamp flawless-stamp" aria-hidden>
-                <span className="stamp-word" lang="nl">Foutloos</span>
-              </span>
-            ) : undefined}
           />
           <StatCard
             tone="gold"

@@ -121,7 +121,7 @@ function topicsSection(t: ReturnType<typeof texts>, dir: 'ltr' | 'rtl'): string 
     const words = THEME_UNITS[th.id].taal
       .map((id) => units.find((u) => u.id === id))
       .filter((u) => u !== undefined)
-      .flatMap((u) => u.lessons[0].words.filter((w) => w.picture !== false).slice(0, 2))
+      .flatMap((u) => u.lessons[0].words.filter((w) => w.picture === undefined).slice(0, 2))
       .filter((w) => t.gloss(w.id))
       .slice(0, 4);
     const name = t.gloss(th.id);

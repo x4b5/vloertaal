@@ -28,7 +28,7 @@ export const ti: Gloss = {
 };
 
 export const fa: Gloss = {
-    'be.s.login.3': "itsme خودم را به هیچ‌کس نمی‌دهم.", // nieuw, nalezen
+    'be.s.login.3': "کد itsme خودم را به هیچ‌کس نمی‌دهم.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.login': "ورودت فقط مال خودت است", // nieuw, nalezen
     'be.c.login.b': "رمز عبور و itsme تو فقط برای خودت است. آن‌ها را به هیچ‌کس نده، حتی به کارفرما یا همکارت. روی کامپیوتر مشترک، وقتی کارت تمام شد همیشه از حساب خارج شو. چند لحظه می‌روی؟ صفحه را قفل کن. رمزت را فراموش کردی؟ از بخش IT (ICT-afdeling) رمز تازه بخواه. قانون‌های کامپیوتر در هر شرکت فرق دارد: از بخش IT بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
     'be.c.login.p': "چند لحظه می‌روم. صفحه‌ام را قفل می‌کنم.", // nieuw, nalezen
@@ -40,7 +40,7 @@ export const fa: Gloss = {
 };
 
 export const prs: Gloss = {
-    'be.s.login.3': "itsme خود را به هیچ کس نمی‌دهم.", // nieuw, nalezen
+    'be.s.login.3': "کود itsme خود را به هیچ کس نمی‌دهم.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.login': "ورود تان تنها مال خود تان است", // nieuw, nalezen
     'be.c.login.b': "رمز و itsme شما تنها برای خود شماست. آن‌ها را به هیچ کس ندهید، حتی به کارفرما یا همکار تان. روی کمپیوتر مشترک، وقتی کار تان تمام شد همیشه از حساب خارج شوید. چند لحظه می‌روید؟ صفحه را قفل کنید. رمز خود را فراموش کردید؟ از بخش IT (ICT-afdeling) رمز نو بخواهید. مقررات کمپیوتر در هر کمپنی فرق می‌کند: از بخش IT بپرسید که مقررات جای کار شما چیست.", // nieuw, nalezen
     'be.c.login.p': "چند لحظه می‌روم. صفحهٔ خود را قفل می‌کنم.", // nieuw, nalezen
@@ -52,7 +52,7 @@ export const prs: Gloss = {
 };
 
 export const uk: Gloss = {
-    'be.s.login.3': "Свій itsme я нікому не даю.", // nieuw, nalezen
+    'be.s.login.3': "Свій код itsme я нікому не даю.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.login': "Твій вхід — тільки твій", // nieuw, nalezen
     'be.c.login.b': { m: "Твій пароль і твій itsme — тільки для тебе. Нікому їх не давай, навіть роботодавцю чи колезі. На спільному комп’ютері завжди виходь з акаунта, коли закінчиш. Відходиш на хвилинку? Заблокуй екран. Забув пароль? Попроси новий в IT-відділі (ICT-afdeling). У кожній фірмі свої правила для комп’ютерів: запитай IT-відділ, які правила там, де ти працюєш.", f: "Твій пароль і твій itsme — тільки для тебе. Нікому їх не давай, навіть роботодавцю чи колезі. На спільному комп’ютері завжди виходь з акаунта, коли закінчиш. Відходиш на хвилинку? Заблокуй екран. Забула пароль? Попроси новий в IT-відділі (ICT-afdeling). У кожній фірмі свої правила для комп’ютерів: запитай IT-відділ, які правила там, де ти працюєш.", x: "Твій пароль і твій itsme — тільки для тебе. Нікому їх не давай, навіть роботодавцю чи колезі. На спільному комп’ютері завжди виходь з акаунта, коли закінчиш. Відходиш на хвилинку? Заблокуй екран. Забув / Забула пароль? Попроси новий в IT-відділі (ICT-afdeling). У кожній фірмі свої правила для комп’ютерів: запитай IT-відділ, які правила там, де ти працюєш." }, // nieuw, nalezen
     'be.c.login.p': "Я відійду на хвилинку. Я блокую екран.", // nieuw, nalezen
@@ -64,7 +64,7 @@ export const uk: Gloss = {
 };
 
 export const tr: Gloss = {
-    'be.s.login.3': "itsme’mi kimseye vermem.", // nieuw, nalezen
+    'be.s.login.3': "itsme kodumu kimseye vermem.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.login': "Girişin sadece senin", // nieuw, nalezen
     'be.c.login.b': "Şifren ve itsme’n sadece senin için. Onları kimseye verme, işverenine ya da bir iş arkadaşına bile. Ortak bir bilgisayarda işin bitince her zaman çıkış yap. Kısa bir süre mi uzaklaşıyorsun? Ekranını kilitle. Şifreni mi unuttun? Bilgi işlem bölümünden (ICT-afdeling) yenisini iste. Bilgisayar kuralları şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu bilgi işlem bölümüne sor.", // nieuw, nalezen
     'be.c.login.p': "Biraz uzaklaşıyorum. Ekranımı kilitliyorum.", // nieuw, nalezen
@@ -88,7 +88,7 @@ export const pl: Gloss = {
 };
 
 export const ro: Gloss = {
-    'be.s.login.3': "Nu dau nimănui itsme-ul meu.", // nieuw, nalezen
+    'be.s.login.3': "Nu dau nimănui codul meu itsme.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.login': "Contul tău e doar al tău", // nieuw, nalezen
     'be.c.login.b': "Parola ta și itsme-ul tău sunt doar pentru tine. Nu le da nimănui, nici angajatorului, nici unui coleg. Pe un calculator comun, ieși mereu din cont când ai terminat. Pleci o clipă? Blochează-ți ecranul. Ți-ai uitat parola? Cere una nouă de la departamentul IT (ICT-afdeling). Regulile pentru calculatoare diferă de la o firmă la alta: întreabă la departamentul IT care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
     'be.c.login.p': "Plec o clipă. Îmi blochez ecranul.", // nieuw, nalezen
@@ -100,7 +100,7 @@ export const ro: Gloss = {
 };
 
 export const bg: Gloss = {
-    'be.s.login.3': "Не давам на никого моето itsme.", // nieuw, nalezen
+    'be.s.login.3': "Не давам на никого кода си за itsme.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.login': "Входът ти е само твой", // nieuw, nalezen
     'be.c.login.b': "Паролата ти и itsme-то ти са само за теб. Не ги давай на никого, дори на работодателя или на колега. На общ компютър винаги излизай от профила, когато свършиш. Отиваш някъде за малко? Заключи екрана. Забрави ли паролата си? Поискай нова от IT отдела (ICT-afdeling). Правилата за компютрите са различни във всяка фирма: питай IT отдела какви са правилата там, където работиш.", // nieuw, nalezen
     'be.c.login.p': "Отивам за малко. Заключвам екрана си.", // nieuw, nalezen

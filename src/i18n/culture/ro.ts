@@ -70,7 +70,7 @@ const t: CultureTranslation = {
     'c.accident.o3': 'Aștepți să vezi dacă durerea trece de la sine.',
     'c.accident.w': 'Raportează în aceeași zi, chiar dacă pare ceva mic: durerea se poate agrava mai târziu. Angajatorul nu are voie să te pedepsească pentru că ai raportat. Lucrezi printr-o agenție? Spune și agenției.', // nagelezen (2e lezing)
     'c.notyet': 'N-ai învățat încă? Spune asta',
-    'c.notyet.b': 'Firma la care lucrezi trebuie să-ți explice cum să-ți faci munca în siguranță. Nu folosi o mașină sau un motostivuitor dacă nu te-a învățat nimeni. E normal aici să spui „Dit heb ik nog niet geleerd”: arată că lucrezi în siguranță.',
+    'c.notyet.b': 'Firma la care lucrezi trebuie să-ți explice cum să-ți faci munca în siguranță. Nu folosi un utilaj sau un motostivuitor dacă nu te-a învățat nimeni să-l folosești. E normal aici să spui „Dit heb ik nog niet geleerd”: arată că lucrezi în siguranță.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.notyet.p': 'Asta n-am învățat-o încă. Poți să-mi arăți cum se face?',
     'c.notyet.s': 'O dimineață aglomerată. Șeful îți spune: „Pak jij even de heftruck? Het is makkelijk.” N-ai condus niciodată un motostivuitor. Ce faci?',
     'c.notyet.o1': 'Spui că n-ai învățat. Ceri instruire.',

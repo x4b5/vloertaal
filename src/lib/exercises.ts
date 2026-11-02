@@ -130,6 +130,38 @@ export function isGraded(ex: Exercise): boolean {
   return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'saying' && ex.kind !== 'speak';
 }
 
+/** A page that is only read (what a question after it builds on): a tip, a saying, and in a
+ *  rules lesson a story, a rule card or a model sentence. */
+export function isReadPage(ex: Exercise | undefined): boolean {
+  if (!ex) return false;
+  if (isRuleExercise(ex)) return ex.kind === 'scene' || ex.kind === 'rule' || ex.kind === 'model';
+  return ex.kind === 'tip' || ex.kind === 'saying';
+}
+
+/**
+ * Read it again (the owner's request, 2 November 2026): some questions come in parts on more
+ * than one page (a tip: "Zo werkt het hier", then "Zeg het zo"; a saying, then "What does she
+ * mean?"; in Werkregels a story and a rule card, then the questions). On the page after such a
+ * read page, a back arrow goes to it; Continue there comes back. Only in the first round (a
+ * mistake coming back at the end has no page before it that belongs to it), and only to the
+ * page right before: from there, the one before that if it is a read page too.
+ * Returns the index to go back to, or null.
+ */
+export function readBackAt(queue: readonly Exercise[], index: number, firstRound: number): number | null {
+  if (index <= 0 || index >= firstRound) return null;
+  return partOf(queue[index - 1], queue[index]) ? index - 1 : null;
+}
+
+/** Is `cur` the next part of what `prev` (a read page) started? A tip's two pages; a saying and
+ *  its question; in Werkregels every step after a story, a rule card or a model sentence (a
+ *  rules lesson is one story with its questions). Not just any exercise after a tip. */
+function partOf(prev: Exercise | undefined, cur: Exercise | undefined): boolean {
+  if (!prev || !cur || !isReadPage(prev)) return false;
+  if (isRuleExercise(prev)) return isRuleExercise(cur);
+  if (prev.kind === 'tip') return cur.kind === 'tip' && cur.tip === prev.tip && prev.part === 'read' && cur.part === 'say';
+  return prev.kind === 'saying' && cur.kind === 'situation';
+}
+
 /** Same answer, near-synonyms (content/synonyms.ts), or the same (or a near-identical) picture:
  *  never two of these in one choice. */
 function clashes(a: Word, b: Word, pictured: boolean): boolean {

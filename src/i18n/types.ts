@@ -112,7 +112,7 @@ export const uiEn = {
   sector: 'Your work',
   chooseSector: 'Where do you work?',
   countryTitle: 'Which country do you work in?',
-  countryHint: 'Choose the country where you work. Then you get the work rules of that country. This stays on your phone. We send it nowhere.',
+  countryHint: 'You get the work rules of that country. This stays on your phone. We send it nowhere.',
   countryNl: 'The Netherlands',
   countryBe: 'Belgium (Flanders)',
   tipsNote: 'These tips are about work in the Netherlands. General information, not legal advice.',
@@ -397,7 +397,7 @@ export const uiEn = {
   remindStop: 'Stop the reminder',
   remindStopped: 'Open the file to take the reminder out of your calendar.',
   remindStoppedAndroid: 'Delete the reminder yourself in Google Calendar.',
-  resetKeeps: 'Your lessons, words, streak and certificates are deleted. Your language, your code and your settings stay.',
+  resetKeeps: 'Your lessons, words, streak and certificates are deleted. Your language and your settings stay.',
   /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
   loadFailed: 'Not loaded. Is the internet on?',
   /** The error screen's "Try again" button, for screen readers (also in src/i18n/meta.ts: the screen comes before the pack). */

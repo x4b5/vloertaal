@@ -606,11 +606,6 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   font-weight: 600; font-size: 0.8rem; line-height: 1.2; letter-spacing: 0.06em; text-transform: uppercase;
 }
 .ex-tag { flex-wrap: wrap; row-gap: 4px; }
-.ex-tag-note { flex-direction: row; flex-wrap: wrap; gap: 0 8px; font-size: 0.9rem; font-weight: 500; color: var(--ink-2); }
-.ex-tag-note .bi-help { --help-size: 1em; }
-.ex-tag-note::before { content: '·'; color: var(--ink-3); }
-/* Phones: the translation of the tag gets its own line (no dangling dot when it wraps). */
-@media (max-width: 759px) { .ex-tag-note { flex-basis: 100%; } .ex-tag-note::before { content: none; } }
 
 /* Action bar, pinned to the bottom of the lesson; the feedback label sits on top of it. */
 .player-foot {
@@ -1296,11 +1291,95 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .wordmark { font-family: 'Lexend Variable', 'Lexend', system-ui, sans-serif; font-weight: 700; color: var(--ink-strong); letter-spacing: -0.02em; }
 .wordmark-dot { color: #ffc414; }
 /* "Nederlands" in the language list: what the work-rules track teaches (src/i18n/meta.ts NL_MORE). */
-/* Nederlands is the work-rules track, not a help language: last, under a thin line, on the whole
-   width, in the kraft colour of the labels, with the word "Werkregels" as a small tag. */
-.lang-sep { grid-column: 1 / -1; height: 0; margin: 6px 0 2px; border-top: 2px dashed var(--line); }
-.lang-btn.lang-btn-nl { grid-column: 1 / -1; background: color-mix(in srgb, var(--kraft-light) 55%, var(--card)); border-color: var(--kraft); }
-.lang-btn.lang-btn-nl.picked { border-color: var(--edge-strong); background: color-mix(in srgb, var(--kraft-light) 80%, var(--card)); }
+/* "Ik spreek al Nederlands" is the work-rules track, not a help language: in the kraft colour of
+   the labels, with the word "Werkregels" as a small tag. */
+.lang-btn.lang-btn-nl { width: 100%; flex-direction: row; align-items: center; gap: 12px; background: color-mix(in srgb, var(--kraft-light) 55%, var(--card)); border-color: var(--kraft); text-align: start; }
+.lang-btn-nl .lang-names { flex: 1; min-width: 0; }
+/* First run: the list page itself does not scroll. The head, then the languages in a box that
+   scrolls inside (src/components/ScrollBox.tsx), then "Ik spreek al Nederlands" at the bottom of
+   the screen, outside the box. On a very low screen (a phone on its side) the page scrolls too. */
+.onb-lang-list {
+  display: flex; flex-direction: column; box-sizing: border-box;
+  height: 100vh; height: 100dvh; min-height: 460px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
+}
+.onb-lang-list > * { flex: none; }
+.onb-lang-list > .scroll-box { flex: 1 1 auto; }
+/* Without the Werkregels card under it: room for the arrow on the box's bottom edge. */
+.onb-lang-list > .scroll-box:last-child { margin-bottom: 24px; }
+/* Room under the box for the arrow on its edge. */
+.onb-nl-dock { margin-top: 30px; }
+/* "Is your language missing?": not a language, so a dashed card on the whole width, after English. */
+.lang-btn.lang-btn-missing { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 12px; border-style: dashed; background: transparent; text-align: start; }
+.lang-btn-missing .lang-mark { color: var(--muted); }
+.lang-grid .lang-btn.lang-btn-missing { min-height: 0; padding-block: 12px; justify-content: flex-start; }
+.onboarding .lang-grid .lang-btn.lang-btn-missing .lang-native { font-size: 1.05rem; }
+/* Its page: the field and the button on the whole width, the address selectable. */
+.missing-lang { display: flex; flex-direction: column; gap: 12px; }
+.missing-lang .onboarding-title { margin-top: 16px; }
+.missing-label { font-weight: 650; margin-top: 8px; }
+.missing-input { flex: none; padding-inline-end: 16px; }
+.missing-go { width: 100%; text-decoration: none; }
+.missing-small { font-size: 0.9rem; }
+.missing-mail { font-weight: 650; color: var(--ink); user-select: all; }
+.missing-thanks { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 8px 0 0; font-size: 1.3rem; font-weight: 650; }
+/* A box that scrolls inside, with its own scroll bar that is always there (ScrollBox): a phone
+   hides its scroll bar until you scroll. The bar is a track with a handle; drag it, or tap the
+   track to move a box-height. Its touch area is wider than the line you see. */
+.scroll-box {
+  position: relative; display: flex; min-height: 0; margin-top: 12px;
+  background: var(--card); border: 2px solid var(--edge); border-radius: 16px;
+}
+.scroll-box-list {
+  flex: 1; min-width: 0; overflow-y: auto; overscroll-behavior: contain; border-radius: 14px;
+  scrollbar-width: none;
+}
+.scroll-box-list::-webkit-scrollbar { display: none; }
+.scroll-box-bar {
+  position: absolute; top: 10px; bottom: 10px; inset-inline-end: 1px; z-index: 1; width: 22px;
+  cursor: pointer; touch-action: none;
+}
+.scroll-box-bar::before {
+  content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 6px; translate: -50% 0;
+  border-radius: 3px; background: var(--line);
+}
+.scroll-box-thumb {
+  --thumb-h: max(32px, calc(var(--thumb-size, 1) * 100%));
+  position: absolute; left: 50%; width: 8px; translate: -50% 0; border-radius: 4px; background: var(--edge);
+  height: var(--thumb-h); top: calc(var(--thumb-at, 0) * (100% - var(--thumb-h)));
+}
+/* More below: the rows fade out at the bottom of the box, and a round arrow sits on its bottom
+   edge (it bobs twice on arrival; still with "Rustig scherm" or the phone's less motion). */
+.scroll-box.has-more::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 48px;
+  border-radius: 0 0 14px 14px; background: linear-gradient(to bottom, transparent, var(--card)); pointer-events: none;
+}
+.scroll-box-more {
+  position: absolute; left: 50%; bottom: 0; z-index: 2; translate: -50% calc(50% + 1px);
+  display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border-radius: 50%;
+  background: var(--card); color: var(--ink); border: 2px solid var(--edge); cursor: pointer;
+  animation: more-bob 0.9s 0.6s ease-in-out 2;
+}
+@keyframes more-bob { 50% { transform: translateY(5px); } }
+@media (prefers-reduced-motion: reduce) { .scroll-box-more { animation: none; } }
+/* The languages in the box: one under the other, as rows of a menu (flag or script, the name in
+   its own script, the English under it), with a thin line between them. */
+.lang-box .lang-grid { grid-template-columns: minmax(0, 1fr); gap: 0; margin: 0; }
+.lang-box .lang-grid .lang-btn {
+  flex-direction: row; align-items: center; justify-content: flex-start; gap: 14px;
+  min-height: 62px; padding: 8px 14px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent;
+}
+.lang-box.has-bar .lang-grid .lang-btn { padding-inline-end: 30px; }
+.lang-box .lang-grid .lang-btn:hover { background: color-mix(in srgb, var(--yellow) 12%, var(--card)); }
+.lang-box .lang-grid .lang-btn:active { transform: none; background: color-mix(in srgb, var(--yellow) 22%, var(--card)); }
+.lang-box .lang-grid .lang-btn:focus-visible { outline-offset: -3px; }
+/* "Is your language missing?": not a language, so the last row, under a dashed line. */
+.lang-box .lang-grid .lang-btn.lang-btn-missing { min-height: 56px; border-bottom: 0; border-top: 2px dashed var(--line); margin-top: -1px; }
+/* In the band: one line for the name, so the languages keep most of the screen. */
+.onb-nl-dock .lang-btn-nl { min-height: 0; padding: 10px 14px; }
+.onb-nl-dock .lang-native { font-size: 1.15rem; overflow-wrap: normal; }
+.onb-nl-dock .lang-nl-tag { margin-bottom: 2px; }
+.onb-nl-dock .lang-nl-more { margin-top: 2px; }
 .lang-nl-tag {
   display: inline-block; align-self: flex-start; margin-bottom: 4px; padding: 2px 8px; border-radius: 4px;
   background: var(--tag-bg); color: var(--tag-ink); font-size: 0.75rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase;
@@ -1751,22 +1830,8 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .result-go { animation: result-go 0.35s 0.9s var(--ease-out) both; }
 @keyframes result-go { from { opacity: 0; transform: translateY(10px); } }
 @media (prefers-reduced-motion: reduce) { .result-go { animation: none; } }
-/* FOUTLOOS: a blue-ink rubber stamp on the "right the first time" card. */
-.stat-card:has(.flawless-stamp) { position: relative; }
-/* Inside the card's bottom corner (never over its edge), beside "No mistakes". */
-.flawless-stamp {
-  top: auto; bottom: 8px; right: auto; inset-inline-end: 8px; margin-top: 0; width: 62px; height: 62px; rotate: 12deg;
-  color: var(--stamp-ink); animation-delay: 1.45s;
-}
-.flawless-stamp .stamp-word { font-size: 0.82rem; letter-spacing: 0; }
-.stat-card:has(.flawless-stamp) .stat-card-foot { min-height: 54px; padding-inline-end: 62px; color: var(--stamp-ink); }
-.stat-card:has(.flawless-stamp) .stat-card-foot .bi-help { color: var(--muted); }
-/* The stamp beside "No mistakes" in the flow, so it never covers the words; calm: small, a
-   slight tilt. */
-.stat-card-foot-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
-.stat-card:has(.flawless-stamp) .stat-card-foot-row .stat-card-foot { flex: 1 1 72px; min-width: 0; min-height: 0; padding-inline-end: 0; }
-.stat-card .stat-card-foot-row .flawless-stamp { position: relative; inset: auto; flex: none; width: 54px; height: 54px; rotate: 6deg; margin: 0; }
-.stat-card-foot-row .flawless-stamp .stamp-word { font-size: 0.64rem; }
+/* Every answer right: "No mistakes" under the number, in the green of the card. */
+.stat-green .stat-card-foot { color: var(--right-ink); }
 /* Short screens (360×640): the scene's empty sky is cropped (the figures stand at its bottom),
    so both result cards are above Continue. */
 @media (max-height: 760px) {
@@ -3978,17 +4043,20 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   .max3-trio .word-pic { width: 40px; height: 40px; }
 }
 
-/* The language list fits a 360 x 640 phone without scrolling: tighter rows and head. */
+/* A low screen (360 x 640): a smaller head and lower rows, so the box keeps room for 5 languages. */
 @media (max-height: 700px) {
-  .onb-lang-list { padding-top: calc(16px + env(safe-area-inset-top)); padding-bottom: 12px; }
+  .onb-lang-list { padding-top: calc(16px + env(safe-area-inset-top)); padding-bottom: calc(8px + env(safe-area-inset-bottom)); }
+  .onb-lang-list .onb-nl-dock { margin-top: 28px; }
+  .onb-lang-list .lang-btn-nl { padding: 8px 10px; }
+  .onb-lang-list .lang-nl-more { display: none; }
   .onb-lang-list .hero-logo .wordmark { font-size: 1.9rem; }
   .onb-lang-list .tagline { margin-top: 2px; font-size: 0.95rem; }
   .onb-lang-list .onboarding-title { margin: 12px 0 2px; font-size: 1.2rem; }
-  .onb-lang-list .lang-grid { gap: 8px; margin: 10px 0 0; }
-  .onb-lang-list .lang-btn:not(.sector-btn, .gender-btn) { min-height: 0; padding: 8px 10px; gap: 2px; }
-  .onb-lang-list .lang-btn:not(.sector-btn, .gender-btn) .lang-native { font-size: 1.15rem; }
-  .onb-lang-list .lang-btn:not(.sector-btn, .gender-btn) .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.25rem; }
-  .onb-lang-list .lang-en { font-size: 0.8rem; }
+  .onb-lang-list .scroll-box { margin-top: 8px; }
+  .lang-box .lang-grid .lang-btn { min-height: 54px; padding-block: 6px; gap: 12px; }
+  .lang-box .lang-grid .lang-btn .lang-native { font-size: 1.15rem; }
+  .lang-box .lang-grid .lang-btn .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.25rem; }
+  .lang-box .lang-en { font-size: 0.8rem; }
 }
 
 /* ---- G4 r5 ---- */
@@ -4507,7 +4575,6 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .sheet-backdrop { top: 0; left: 0; width: 100%; height: 100%; }
   .sheet-hazard, .gate-sign::before { top: 0; right: 0; left: 0; }
   .bottom-nav { right: 0; bottom: 0; left: 0; }
-  .stat-card .stat-card-foot-row .flawless-stamp { bottom: auto; right: auto; }
   .player-foot::before { top: -18px; right: 0; left: 0; }
   .say-mic.is-rec::before { top: -16px; left: -16px; width: calc(100% + 32px); height: calc(100% + 32px); }
   .say-ring { top: -12px; left: -12px; }
@@ -4535,7 +4602,6 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .choices:not(.choices-pics) .choice-wrap .choice > .stamp, .choices:not(.choices-pics) .stamp.stamp-wrong { right: 10px; }
   .answer-line .stamp.stamp-wrong { right: 9px; }
   .stamp.stamp-wrong .stamp-sub { right: -4px; }
-  .flawless-stamp { right: 8px; }
   .result-stamp { right: 0; }
   .player-rtl .answer-mark { right: auto; left: 12px; }
   .player-rtl .stamp { right: auto; left: -8px; }
@@ -4732,7 +4798,6 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 
 /* Stap 2, luisterstart: the route page with a guessed language has no English line (help language
    and Dutch only), and a hint's "read aloud" sits centred under the hint. */
-.route-solo .bi-swap > .bi-help[lang='en'], .route-solo .bi-swap > .bi-sep { display: none; }
 .sector-hint > .help-say { display: flex; margin: 8px auto 0; }
 .lang-guess .onb-say { margin: 4px 0 10px; }
 /* ---- Stap 2: "Wat zeg je?" (Speaking.tsx, `turn`) ---- */
@@ -4968,3 +5033,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
    the learner's own answer, with a wavy underline as a spelling checker does (not only a colour). */
 .type-almost { display: block; text-align: center; white-space: pre-wrap; }
 .type-typo { background: transparent; color: inherit; text-decoration: underline wavy 2px var(--wrong-ink); text-decoration-skip-ink: none; text-underline-offset: 5px; }
+
+/* A question in parts on more pages (lib/exercises.ts readBackAt): the back arrow above it, to
+   read the page before again. The app's one back arrow, at the start of the exercise. */
+.ex-back { display: flex; margin: -6px 0 2px; }

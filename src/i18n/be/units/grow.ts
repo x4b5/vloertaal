@@ -17,10 +17,10 @@ export const ar: Gloss = {
   'be.w.opendag': 'يوم الأبواب المفتوحة (يمكنك زيارة مدرسة)', // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.nextstep.1': "أريد أن أحصل على شهادة التعليم الثانوي.", // nieuw, nalezen
   'be.s.nextstep.3': 'متى يوم الأبواب المفتوحة؟', // nieuw, nalezen // nagelezen AI ronde 3
-  'be.c.nextstep.q': "ماذا تريد أن تفعل بعد ذلك؟", // nieuw, nalezen
+  'be.c.nextstep.q': "ما خطتك بعد ذلك؟", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.c.nextstep.a': "أختار التعلّم المزدوج. هكذا أعمل وأتعلّم.", // nieuw, nalezen
   'be.c.diploma': "شهادتك الدراسية لها قيمة", // nieuw, nalezen
-  'be.c.diploma.b': { m: 'هل لديك شهادة من بلد آخر؟ يمكنك أن تطلب من NARIC-Vlaanderen الاعتراف بها. تقارن NARIC شهادتك بشهادة فلامنكية. اللاجئون المعترف بهم لا يدفعون مقابل ذلك. لبعض المهن، مثل التمريض، تحتاج إلى اعتراف إضافي. هل التدريب إلزامي لعملك؟ عندها يجب أن يدفع صاحب العمل ثمنه، ويُحتسب وقت عمل. كثير من العمال لهم أيضاً حق في بعض أيام التدريب كل سنة. اسأل مسؤولك أو VDAB عن الدورات. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'هل لديك شهادة من بلد آخر؟ يمكنكِ أن تطلبي من NARIC-Vlaanderen الاعتراف بها. تقارن NARIC شهادتك بشهادة فلامنكية. اللاجئون المعترف بهم لا يدفعون مقابل ذلك. لبعض المهن، مثل التمريض، تحتاجين إلى اعتراف إضافي. هل التدريب إلزامي لعملك؟ عندها يجب أن يدفع صاحب العمل ثمنه، ويُحتسب وقت عمل. كثير من العمال لهم أيضاً حق في بعض أيام التدريب كل سنة. اسألي مسؤولك أو VDAB عن الدورات. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'شهادة من بلد آخر؟ يمكن طلب الاعتراف بها من NARIC-Vlaanderen. تقارن NARIC الشهادة بشهادة فلامنكية. اللاجئون المعترف بهم لا يدفعون مقابل ذلك. لبعض المهن، مثل التمريض، يلزم اعتراف إضافي. هل التدريب إلزامي للعمل؟ عندها يجب أن يدفع صاحب العمل ثمنه، ويُحتسب وقت عمل. كثير من العمال لهم أيضاً حق في بعض أيام التدريب كل سنة. السؤال عن الدورات يكون عند المسؤول أو VDAB. معلومات عامة. للوضع الشخصي: السؤال عند صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.diploma.b': { m: 'هل لديك شهادة من بلد آخر؟ يمكنك أن تطلب من NARIC-Vlaanderen الاعتراف بها. تقارن NARIC شهادتك بشهادة فلامنكية. اللاجئون المعترف بهم لا يدفعون مقابل ذلك. لبعض المهن، مثل التمريض، تحتاج إلى اعتراف إضافي. هل التدريب إلزامي لعملك؟ عندها يجب أن يدفع صاحب العمل ثمنه، ويُحتسب وقت عمل. كثير من العمال لهم أيضاً حق في بعض أيام التدريب كل سنة. اسأل مسؤولك أو VDAB عن الدورات. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'هل لديك شهادة من بلد آخر؟ يمكنكِ أن تطلبي من NARIC-Vlaanderen الاعتراف بها. تقارن NARIC شهادتك بشهادة فلامنكية. اللاجئون المعترف بهم لا يدفعون مقابل ذلك. لبعض المهن، مثل التمريض، تحتاجين إلى اعتراف إضافي. هل التدريب إلزامي لعملك؟ عندها يجب أن يدفع صاحب العمل ثمنه، ويُحتسب وقت عمل. كثير من العمال لهم أيضاً حق في بعض أيام التدريب كل سنة. اسألي مسؤولك أو VDAB عن الدورات. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'شهادة من بلد آخر؟ يمكن طلب الاعتراف بها من NARIC-Vlaanderen. تقارن NARIC الشهادة بشهادة فلامنكية. اللاجئون المعترف بهم لا يدفعون مقابل ذلك. لبعض المهن، مثل التمريض، يلزم اعتراف إضافي. هل التدريب إلزامي للعمل؟ عندها يجب أن يدفع صاحب العمل ثمنه، ويُحتسب وقت عمل. كثير من العمال لهم أيضاً حق في بعض أيام التدريب كل سنة. السؤال عن الدورات يكون عند المسؤول أو VDAB. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "هل هناك دورات لي؟", // nieuw, nalezen
   'be.c.diploma.s': { m: 'صاحب العمل يقول إن عليك أن تأخذ تدريب سلامة إلزامياً يوم السبت، بدون أجر. ما الصحيح؟', f: 'صاحب العمل يقول إن عليكِ أن تأخذي تدريب سلامة إلزامياً يوم السبت، بدون أجر. ما الصحيح؟', x: 'صاحب العمل يقول إن تدريب السلامة الإلزامي يكون يوم السبت، بدون أجر. ما الصحيح؟' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.o1': "يدفعه صاحب العمل، وهو وقت عمل.", // nieuw, nalezen
@@ -61,7 +61,7 @@ export const ti: Gloss = {
   'be.c.nextstep.q': "ድሕሪ እዚ እንታይ ክትገብሩ ትደልዩ?", // nieuw, nalezen
   'be.c.nextstep.a': "ክልተኣዊ ምምሃር እመርጽ። ሽዑ እሰርሕን እመሃርን።", // nieuw, nalezen
   'be.c.diploma': "ዲፕሎማኹም ይቑጸር", // nieuw, nalezen
-  'be.c.diploma.b': 'ካብ ካልእ ሃገር ዲፕሎማ ኣለኩም ዶ? ንNARIC-Vlaanderen ኣፍልጦ ክህቦ ክትሓቱ ትኽእሉ። NARIC ምስ ዲፕሎማ ፍላንደርስ የወዳድሮ። ኣፍልጦ ዝረኸቡ ስደተኛታት ነዚ ኣይከፍሉን። ንገለ ስራሓት፡ ከም ነርስ፡ ተወሳኺ ኣፍልጦ የድልየኩም። ስልጠና ንስራሕኩም ግዴታ ድዩ? ሽዑ ኣስራሒኹም ክኸፍሎ ኣለዎ፡ ከም ግዜ ስራሕ ድማ ይቑጸር። ብዙሓት ሰራሕተኛታት ኣብ ዓመት ገለ መዓልታት ስልጠና ናይ ምርካብ መሰል እውን ኣለዎም። ብዛዕባ ኮርሳት ንሓላፊኹም ወይ ንVDAB ሕተቱ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.diploma.b': 'ካብ ካልእ ሃገር ዲፕሎማ ኣለኩም ዶ? ንNARIC-Vlaanderen ኣፍልጦ ክህቦ ክትሓቱ ትኽእሉ። NARIC ምስ ዲፕሎማ ፍላንደርስ የወዳድሮ። ኣፍልጦ ዝረኸቡ ስደተኛታት ነዚ ኣይከፍሉን። ንገለ ስራሓት፡ ከም ነርስ፡ ተወሳኺ ኣፍልጦ የድልየኩም። ስልጠና ንስራሕኩም ግዴታ ድዩ? ሽዑ ኣስራሒኹም ክኸፍሎ ኣለዎ፡ ከም ግዜ ስራሕ ድማ ይቑጸር። ብዙሓት ሰራሕተኛታት ኣብ ዓመት ገለ መዓልታት ስልጠና ናይ ምርካብ መሰል እውን ኣለዎም። ብዛዕባ ኮርሳት ንሓላፊኹም ወይ ንVDAB ሕተቱ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.diploma.p': "ንዓይ ዝኸውን ኮርሳት ኣለዉ ድዮም?", // nieuw, nalezen
   'be.c.diploma.s': "ኣስራሒኹም ቀዳም ብዘይ ደሞዝ ግዴታ ዝኾነ ስልጠና ድሕንነት ክትወስዱ ኣለኩም ይብለኩም። ሓቂ እንታይ እዩ?", // nieuw, nalezen
   'be.c.diploma.o1': "ኣስራሒ ይኸፍሎ፡ ግዜ ስራሕ ድማ እዩ።", // nieuw, nalezen
@@ -170,7 +170,7 @@ export const prs: Gloss = {
 
 export const uk: Gloss = {
   'be.l.nextstep': "Навчання після школи", // nieuw, nalezen
-  'be.w.waarderen': "визнати (диплом)", // nieuw, nalezen
+  'be.w.waarderen': "подати на визнання (диплом)", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.bijbaan': "студентський підробіток (невелика робота поруч із навчанням)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "ознайомча практика (короткий візит, щоб побачити роботу)", // nieuw, nalezen
   'be.w.niveau2': "середня школа (для молоді, приблизно до 18 років)", // nieuw, nalezen
@@ -211,7 +211,7 @@ export const uk: Gloss = {
 
 export const tr: Gloss = {
   'be.l.nextstep': "Okuldan sonra öğrenmeye devam", // nieuw, nalezen
-  'be.w.waarderen': "(diplomayı) tanıtmak, denklik almak", // nieuw, nalezen
+  'be.w.waarderen': "(diplomanın) tanınmasını sağlamak, denklik almak", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.bijbaan': "öğrenci işi (okulun yanında küçük bir iş)", // nieuw, nalezen
   'be.w.meeloopdag': "tanıma stajı (işi görmek için kısa bir ziyaret)", // nieuw, nalezen
   'be.w.niveau2': "ortaöğretim (gençler için, yaklaşık 18 yaşına kadar)", // nieuw, nalezen
@@ -292,8 +292,8 @@ export const pl: Gloss = {
 };
 
 export const ro: Gloss = {
-  'be.l.nextstep': "Învățare mai departe după școală", // nieuw, nalezen
-  'be.w.waarderen': "a-ți recunoaște (diploma)", // nieuw, nalezen
+  'be.l.nextstep': "Să înveți mai departe după școală", // nieuw, nalezen (AI-correctie 2 nov 2026)
+  'be.w.waarderen': "a cere recunoașterea (diplomei)", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.bijbaan': "jobul de student (o muncă mică pe lângă școală)", // nieuw, nalezen
   'be.w.meeloopdag': "stagiul de cunoaștere (o vizită scurtă ca să vezi munca)", // nieuw, nalezen
   'be.w.niveau2': "învățământul secundar (pentru tineri, până pe la 18 ani)", // nieuw, nalezen
@@ -333,7 +333,7 @@ export const ro: Gloss = {
 };
 
 export const bg: Gloss = {
-  'be.l.nextstep': "Учене след училище", // nieuw, nalezen
+  'be.l.nextstep': "Да продължиш да учиш след училище", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.waarderen': "да признаят (диплома)", // nieuw, nalezen
   'be.w.bijbaan': "студентската работа (малка работа покрай училището)", // nieuw, nalezen
   'be.w.meeloopdag': "опознавателният стаж (кратко посещение, за да видиш работата)", // nieuw, nalezen

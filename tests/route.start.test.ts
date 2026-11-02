@@ -1,43 +1,42 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { afterEach, describe, expect, it } from 'vitest';
-import { LanguagePicker, Onboarding, RoutePage } from '../src/components/Screens';
-import { langMeta, metaLanguage } from '../src/i18n';
+import { LanguagePicker, NL_KNOWN, Onboarding } from '../src/components/Screens';
 import { settingsRows } from '../src/lib/settingsMenu';
 import { setRulesTrack } from '../src/lib/track';
 
 const html = (el: ReturnType<typeof createElement>) => renderToStaticMarkup(el);
 afterEach(() => setRulesTrack(null));
 
-/** The two learning routes (owner's choice, 31 October 2026): first "Wat wil je leren?", then the help language. */
-describe('the first page: two routes', () => {
-  it('asks "Wat wil je leren?" with two cards, in Dutch and the phone\'s language', () => {
-    const pl = metaLanguage(langMeta('pl')!);
-    const m = html(createElement(RoutePage, { lang: pl, onLearn: () => {}, onRules: () => {} }));
-    expect(m).toContain('Wat wil je leren?');
-    expect(m).toContain('Czego chcesz się uczyć?');
-    expect(m).toContain('Nederlands leren');
-    expect(m).toContain('Ik spreek al Nederlands');
-    expect(m).toContain('Mówię już po niderlandzku');
-    // Two cards to choose from; the speaker for the question is not a choice (max-3 leaves it out).
-    expect(m.match(/class="max3-card /g)).toHaveLength(2);
-    expect(m).toContain('class="onb-say"');
-  });
-
-  it('opens on the route page while the track is on, and on the language page when it is off', () => {
+/** The two learning routes (owner's choice, 31 October 2026). Since 2 November 2026 the first run
+ *  has no page "Wat wil je leren?": "Ik spreek al Nederlands" is the last card of the language list. */
+describe('the first page: the language, with "Ik spreek al Nederlands" in the list', () => {
+  it('opens on the language page, also while the track is on', () => {
     setRulesTrack(true);
-    expect(html(createElement(Onboarding, { onDone: () => {}, guess: null }))).toContain('route-page');
+    const first = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
+    expect(first).toContain('onb-lang-list');
+    expect(first).not.toContain('route-page');
+    expect(first).not.toContain('Wat wil je leren?');
     setRulesTrack(false);
-    expect(html(createElement(Onboarding, { onDone: () => {}, guess: null }))).not.toContain('route-page');
+    expect(html(createElement(Onboarding, { onDone: () => {}, guess: null }))).not.toContain('Ik spreek al Nederlands');
   });
 
-  it('back from the next page: the language list after "Nederlands leren", the route page after Werkregels', () => {
+  it('under the list, in a band fixed at the bottom: "Ik spreek al Nederlands", while the track is on', () => {
     setRulesTrack(true);
-    expect(html(createElement(Onboarding, { onDone: () => {}, guess: null, startWithList: true, previous: 'pl' }))).toContain('onb-lang-list');
-    expect(html(createElement(Onboarding, { onDone: () => {}, guess: null, startWithList: true, previous: 'nl' }))).toContain('route-page');
+    const m = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
+    expect(m.indexOf('>English<')).toBeLessThan(m.indexOf('onb-nl-dock'));
+    expect(m.indexOf('onb-nl-dock')).toBeLessThan(m.indexOf(NL_KNOWN));
+    expect(m).toMatch(/lang-btn-nl[\s\S]*Werkregels[\s\S]*Ik spreek al Nederlands/);
   });
 
-  it('no longer lists "Nederlands · Werkregels" among the help languages', () => {
+  it('the guess page keeps two answers (yes, other language)', () => {
+    setRulesTrack(true);
+    const m = html(createElement(Onboarding, { onDone: () => {}, guess: 'pl' }));
+    expect(m).toContain('lang-guess');
+    expect(m.match(/class="max3-card /g)).toHaveLength(2);
+  });
+
+  it('Settings keeps the help languages only (no Werkregels card)', () => {
     setRulesTrack(true);
     expect(html(createElement(LanguagePicker, { onPick: () => {} }))).not.toContain('Werkregels');
   });

@@ -45,12 +45,12 @@ const lang: HelpLanguageSource = {
     learnWriting: 'También quiero aprender a escribir',
     learnWritingHint: 'Activado: escribe con letras las palabras que oyes. Desactivado: elige la palabra escrita que oyes.',
     tagRepeat: 'Otra vez',
-    readAloud: 'Lee en voz alta',
+    readAloud: 'Leer en voz alta', // nieuw, nalezen (AI-correctie 2 nov 2026)
     lessonComplete: '¡Lección terminada!',
     phrasebook: 'Frases de emergencia',
     phrasebookHint: 'Toca una frase para escucharla. También puedes mostrar la pantalla a un compañero.',
     whoToCall: '¿Problemas en el trabajo? Quién puede ayudar',
-    who112: 'Emergencia: peligro de muerte, fuego o un delito que pasa ahora.',
+    who112: 'Emergencia: peligro de muerte, incendio o un delito que está pasando ahora.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     whoLegal: 'Consejo gratis sobre tu contrato, tu sueldo o un despido.',
     whoInspection: 'Denuncia trabajo peligroso, un sueldo demasiado bajo o explotación. Puedes hacerlo de forma anónima.',
     whoFairwork: 'Te explotan en el trabajo, o crees que te explotan.',
@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: '¿Dónde trabajas?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: '¿En qué país trabajas?',
-    countryHint: 'Elige el país donde trabajas. Así recibes las reglas de trabajo de ese país. Esto se queda en tu teléfono. No lo enviamos a ningún sitio.', // nieuw, nalezen
+    countryHint: 'Así recibes las reglas de trabajo de ese país. Esto se queda en tu teléfono. No lo enviamos a ningún sitio.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Países Bajos',
     countryBe: 'Bélgica (Flandes)',
     tipsNote: 'Estos consejos son sobre el trabajo en los Países Bajos. Información general, no asesoramiento legal.',
@@ -123,7 +123,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Mañana: {n} palabra', many: 'Mañana: {n} palabras', other: 'Mañana: {n} palabras' },
     firstWordsTomorrow: 'Mañana vuelven tus primeras palabras',
     extraRound: 'Ronda extra',
-    wordsStrongerN: { one: '{n} palabra más firme', many: '{n} palabras más firmes', other: '{n} palabras más firmes' },
+    wordsStrongerN: { one: '{n} palabra mejor aprendida', many: '{n} palabras mejor aprendidas', other: '{n} palabras mejor aprendidas' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     noMistakes: 'Sin errores',
     nextUp: 'Siguiente',
     installTitle: 'Pon Vloertaal en tu pantalla de inicio',
@@ -160,7 +160,7 @@ const lang: HelpLanguageSource = {
     tagType: 'Escribe',
     tagMatch: 'Parejas',
     tagBuild: 'Frase',
-    tagChat: 'Habla',
+    tagChat: 'Conversación', // nieuw, nalezen (AI-correctie 2 nov 2026)
     tagSituation: 'Situación',
     tagTip: 'Consejo',
     more: 'Más',
@@ -192,13 +192,13 @@ const lang: HelpLanguageSource = {
     wordsUnitOne: 'palabra',
     wordsLearnedOne: '{n} palabra aprendida',
     tomorrowOne: 'Mañana: {n} palabra',
-    wordsStrongerOne: '{n} palabra más firme',
+    wordsStrongerOne: '{n} palabra mejor aprendida', // nieuw, nalezen (AI-correctie 2 nov 2026)
     recordOne: 'Tu récord: {n} día',
     streakStoppedOne: 'Tu racha terminó en {n} día. Empieza otra vez hoy.',
     letterTiles: 'Letras',
     useKeyboard: 'Teclado',
     skippedN: { one: '{n} saltada, no cuenta', many: '{n} saltadas, no cuentan', other: '{n} saltadas, no cuentan' },
-    stampLater: 'Vuelve más tarde',
+    stampLater: 'Volverá más tarde', // nieuw, nalezen (AI-correctie 2 nov 2026)
     stampDone: 'Hecho',
     chooseNext: 'Elige tu próximo tema',
     recommended: 'Recomendado',
@@ -263,7 +263,7 @@ const lang: HelpLanguageSource = {
     writingPick: 'Elige la palabra',
     settingWriting: 'Escribir',
     settingKeepLessons: 'Guardar las lecciones en este teléfono',
-    settingKeepLessonsHint: 'El tema que aprendes ahora se guarda en este teléfono, así también funciona sin internet. Los temas terminados se borran otra vez.',
+    settingKeepLessonsHint: 'El tema que aprendes ahora se guarda en este teléfono, así también funciona sin internet. Cuando terminas un tema, se borra del teléfono.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     otherTopicLink: 'Otro tema',
     remindAsk: '¿Te lo recordamos cada día?',
     remindYes: 'Sí, después del trabajo',
@@ -290,7 +290,7 @@ const lang: HelpLanguageSource = {
     bramRested: 'Ayer fue tu día libre. Tu racha sigue.',
     bramDueN: { one: 'Hoy toca repetir {n} palabra.', many: 'Hoy toca repetir {n} palabras.', other: 'Hoy toca repetir {n} palabras.' },
     bramDueOne: 'Hoy toca repetir {n} palabra.',
-    bramDayN: 'Día {n} seguido.',
+    bramDayN: 'Día {n} de tu racha.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     bramDone: 'Listo por hoy. Hasta mañana.',
     bramPerfect: 'Muy bien. Conoces estas palabras.',
     bramGood: 'Buen trabajo. Paso a paso.',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Quitar el recordatorio',
     remindStopped: 'Abre el archivo para quitar el recordatorio de tu calendario.',
     remindStoppedAndroid: 'Borra tú el recordatorio en Google Calendar.',
-    resetKeeps: 'Se borran tus lecciones, palabras, racha y certificados. Tu idioma, tu código y tus ajustes se quedan.',
+    resetKeeps: 'Se borran tus lecciones, palabras, racha y certificados. Tu idioma y tus ajustes se quedan.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'No se ha cargado. ¿Tienes internet?',
     retry: 'Intentar de nuevo',
@@ -352,16 +352,16 @@ const lang: HelpLanguageSource = {
     tempoHint: 'Despacio es lento y claro. Normal es como hablan los compañeros. Elige «Normal» si ya entiendes mucho.', // nieuw, nalezen
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Muestra cómo te va', // nieuw, nalezen
-    coachCardIntro: 'Esta tarjeta muestra tu progreso. Enséñasela a tu profesor, coach o jefe. Tú decides.', // nieuw, nalezen
+    coachCardIntro: 'Esta tarjeta muestra tu progreso. Enséñasela a tu profesor, orientador o jefe. Tú decides.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     coachCardKeep: 'Tu teléfono hace la tarjeta. No se envía nada. Vloertaal no guarda nada.', // nieuw, nalezen
     coachCardWhat: 'En la tarjeta, en neerlandés:', // nieuw, nalezen
     coachTopics: 'Temas terminados', // nieuw, nalezen
     coachDays: 'Días de práctica en las últimas 4 semanas', // nieuw, nalezen
     coachLast: 'Última lección, con la fecha', // nieuw, nalezen
-    coachCode: 'Código: los mismos números, en corto, para un resumen del grupo. Sin nombre.', // nieuw, nalezen
+    coachCode: 'Código: los mismos números, en versión corta, para un resumen del grupo. Sin nombre.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Que el teléfono escuche (experimental)', // nieuw, nalezen // nagelezen AI 31 okt
-    listenHint: 'Después de hablar, el teléfono dice si te ha entendido. Esto pasa en el mismo teléfono. No va nada a nosotros ni a otros.', // nieuw, nalezen
+    listenHint: 'Después de hablar, el teléfono dice si te ha entendido. Esto pasa en el mismo teléfono. No se envía nada, ni a nosotros ni a nadie más.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     listenNeedsPack: 'Primero el teléfono necesita el neerlandés. Es una descarga grande: usa wifi.', // nieuw, nalezen
     listenDownload: 'Descargar neerlandés', // nieuw, nalezen
     listenNotNow: 'Ahora no', // nieuw, nalezen
@@ -382,7 +382,7 @@ const lang: HelpLanguageSource = {
     fasterSettingHint: 'Activado: menos explicación en las lecciones nuevas y el neerlandés a velocidad normal. Desactivado: como antes.', // nieuw, nalezen
     samenTitle: 'Practicar en pareja', // nieuw, nalezen
     samenRowHint: 'Dos personas, un teléfono', // nieuw, nalezen
-    samenIntro: 'Practica con un compañero, un amigo o un profesor. Leen por turnos.', // nieuw, nalezen
+    samenIntro: 'Practica con un compañero, un amigo o un profesor. Cada uno lee una parte, por turnos.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     samenHow: 'La persona 1 es el compañero. La persona 2 responde.', // nieuw, nalezen
     samenNoScore: 'No se graba nada. No hay puntuación.', // nieuw, nalezen
     samenPerson: 'Persona {n}', // nieuw, nalezen
@@ -390,7 +390,7 @@ const lang: HelpLanguageSource = {
     samenHear: 'Escuchar', // nieuw, nalezen
     samenNext: 'Siguiente', // nieuw, nalezen
     samenTranslation: 'Traducción', // nieuw, nalezen
-    samenEnd: '¡Muy bien! ¿Cambiar los papeles y otra vez?', // nieuw, nalezen
+    samenEnd: '¡Muy bien! ¿Cambiar los papeles y hacerlo otra vez?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     samenSwap: 'Cambiar los papeles', // nieuw, nalezen
     samenStop: 'Terminar', // nieuw, nalezen
     checkStart: 'Ya lo sé: prueba corta', // nieuw, nalezen
@@ -520,7 +520,7 @@ const lang: HelpLanguageSource = {
     'l.things': 'Cosas del almacén',
     'w.doos': 'la caja',
     'w.pallet': 'el palé',
-    'w.heftruck': 'la carretilla elevadora',
+    'w.heftruck': 'la carretilla elevadora, el montacargas', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.kar': 'el carro (de mano)',
     'w.stelling': 'la estantería',
     'w.scanner': 'el escáner',

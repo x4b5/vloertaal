@@ -50,7 +50,7 @@ const lang: HelpLanguageSource = {
     phrasebook: 'Phrases d’urgence',
     phrasebookHint: 'Touche une phrase pour l’entendre. Tu peux aussi montrer ton écran à un collègue.',
     whoToCall: 'Des problèmes au travail ? Qui peut t’aider',
-    who112: 'Urgence : danger de mort, incendie ou crime en ce moment.',
+    who112: 'Urgence : danger de mort, incendie ou crime en train de se passer.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     whoLegal: 'Conseils gratuits sur ton contrat, ton salaire ou un licenciement.',
     whoInspection: 'Signale un travail dangereux, un salaire trop bas ou de l’exploitation. Tu peux le faire de façon anonyme.',
     whoFairwork: 'On t’exploite au travail, ou tu penses que c’est le cas.',
@@ -85,11 +85,11 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Où travailles-tu ?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Dans quel pays travailles-tu ?',
-    countryHint: 'Choisis le pays où tu travailles. Tu reçois alors les règles du travail de ce pays. Cela reste sur ton téléphone. Nous ne l’envoyons nulle part.', // nieuw, nalezen
+    countryHint: 'Tu reçois alors les règles du travail de ce pays. Cela reste sur ton téléphone. Nous ne l’envoyons nulle part.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Pays-Bas',
     countryBe: 'Belgique (Flandre)',
     tipsNote: 'Ces conseils parlent du travail aux Pays-Bas. Ce sont des informations générales, pas un conseil juridique.',
-    sectorHint: 'Les leçons pour ton travail viennent tôt. Tu peux changer ça plus tard dans les Réglages.',
+    sectorHint: 'Les leçons pour ton travail arrivent dès le début. Tu peux changer ça plus tard dans les Réglages.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     otherSectors: 'Autres secteurs',
     reviewToday: 'Révision du jour',
     reviewTodayN: { one: 'Mot à revoir : {n} · quelques minutes', many: 'Mots à revoir : {n} · quelques minutes', other: 'Mots à revoir : {n} · quelques minutes' },
@@ -135,7 +135,7 @@ const lang: HelpLanguageSource = {
     backupTitle: 'Garde ta progression',
     backupHint: 'Ta progression est seulement sur ce téléphone. Enregistre-la dans un fichier, par exemple pour un nouveau téléphone.',
     backupSave: 'Télécharger',
-    backupLoad: 'Remettre',
+    backupLoad: 'Restaurer', // nieuw, nalezen (AI-correctie 2 nov 2026)
     backupBad: 'Ce n’est pas un fichier Vloertaal.',
     backupAsk: 'Ajouter ce fichier à ta progression, ou remplacer ta progression ?',
     backupMerge: 'Combiner',
@@ -171,14 +171,14 @@ const lang: HelpLanguageSource = {
     countHint: 'L’appli compte combien de fois on fait les leçons, et à peu près combien de temps elles durent. Et si l’appli a une erreur quelque part. Pas de nom, pas de compte, pas de suivi.', // fout-zin nieuw, nalezen
     certificate: 'Certificat',
     myCertificates: 'Mes certificats',
-    certsEmpty: 'Termine toutes les leçons d’une partie. Tu reçois alors un certificat.',
+    certsEmpty: 'Termine toutes les leçons d’un sujet. Tu reçois alors un certificat.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certEarned: 'Certificat obtenu !',
-    certEarnedHint: 'Tu as terminé toutes les leçons de cette partie.',
+    certEarnedHint: 'Tu as terminé toutes les leçons de ce sujet.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certView: 'Voir',
     certLater: 'Plus tard',
     certPrint: 'Imprimer ou enregistrer en PDF',
     certSaved: 'L’image est enregistrée.',
-    certNameHint: 'Il reste seulement sur ce téléphone. Tu peux le laisser vide.',
+    certNameHint: 'Ton nom reste seulement sur ce téléphone. Tu peux aussi laisser la case vide.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certChangeName: 'Changer le nom',
     certPractice: 'Certificat d’entraînement, pas un diplôme officiel',
     resumeLesson: 'Reprendre la leçon',
@@ -235,7 +235,7 @@ const lang: HelpLanguageSource = {
     savedOffline: 'Enregistré hors ligne',
     offlineNoSpace: 'Pas assez de place sur ce téléphone. Supprime un sujet enregistré ou libère de la place.',
     offlineFailed: 'L’enregistrement n’a pas marché. Vérifie ton internet et réessaie.',
-    pocketCard: 'Carte de poche',
+    pocketCard: 'Aide-mémoire', // nieuw, nalezen (AI-correctie 2 nov 2026)
     pocketSave: 'Enregistrer comme image',
     textSize: 'Taille du texte',
     textNormal: 'Normale',
@@ -305,10 +305,10 @@ const lang: HelpLanguageSource = {
     chatWhichQuestion: 'Quelle question va avec cette réponse ?',
     reviewWaiting: 'Encore des mots qui attendent : {n}. Ils reviennent dans les prochains jours.',
     factTitle: 'Le savais-tu ?',
-    fact3: { m: 'Tu n’es pas seul : plus de 3 millions d’adultes aux Pays-Bas ont du mal à lire, à calculer ou avec l’ordinateur. Pratiquer aide.', f: 'Tu n’es pas seule : plus de 3 millions d’adultes aux Pays-Bas ont du mal à lire, à calculer ou avec l’ordinateur. Pratiquer aide.', x: 'Tu n’es pas seul(e) : plus de 3 millions d’adultes aux Pays-Bas ont du mal à lire, à calculer ou avec l’ordinateur. Pratiquer aide.' },
+    fact3: { m: 'Tu n’es pas seul : plus de 3 millions d’adultes aux Pays-Bas ont du mal à lire, à calculer ou avec l’ordinateur. Pratiquer aide.', f: 'Tu n’es pas seule : plus de 3 millions d’adultes aux Pays-Bas ont du mal à lire, à calculer ou avec l’ordinateur. Pratiquer aide.', x: 'Tu n’es pas la seule personne dans ce cas : plus de 3 millions d’adultes aux Pays-Bas ont du mal à lire, à calculer ou avec l’ordinateur. Pratiquer aide.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     fact7: 'Parmi les migrants qui parlent très bien néerlandais, 69 sur 100 ont un travail payé.',
     fact14: 'Beaucoup de bibliothèques ont un Taalhuis : une aide gratuite pour continuer à apprendre le néerlandais.',
-    fact30: 'Un peu de pratique chaque jour marche mieux que beaucoup de temps en temps. Tu l’as fait pendant 30 jours !',
+    fact30: 'Un peu de pratique chaque jour marche mieux que beaucoup de temps en temps. Ça fait déjà 30 jours que tu le fais !', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* Backup, reminder and reset, a second look */
     backupFileN: { one: 'Ce fichier a {n} leçon.', many: 'Ce fichier a {n} leçons.', other: 'Ce fichier a {n} leçons.' },
     backupFileOne: 'Ce fichier a {n} leçon.',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Arrêter le rappel',
     remindStopped: 'Ouvre le fichier pour retirer le rappel de ton calendrier.',
     remindStoppedAndroid: 'Supprime toi-même le rappel dans Google Agenda.',
-    resetKeeps: 'Tes leçons, tes mots, ta série et tes certificats sont supprimés. Ta langue, ton code et tes réglages restent.',
+    resetKeeps: 'Tes leçons, tes mots, ta série et tes certificats sont supprimés. Ta langue et tes réglages restent.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Pas chargé. Tu as internet ?',
     retry: 'Réessayer',
@@ -355,13 +355,13 @@ const lang: HelpLanguageSource = {
     coachCardIntro: 'Cette carte montre tes progrès. Montre-la à ton professeur, ton coach ou ton chef. C’est toi qui décides.', // nieuw, nalezen
     coachCardKeep: 'Ton téléphone fait la carte. Rien n’est envoyé. Vloertaal ne garde rien.', // nieuw, nalezen
     coachCardWhat: 'Sur la carte, en néerlandais :', // nieuw, nalezen
-    coachTopics: 'Thèmes terminés', // nieuw, nalezen
+    coachTopics: 'Sujets terminés', // nieuw, nalezen (AI-correctie 2 nov 2026)
     coachDays: 'Jours d’exercice ces 4 dernières semaines', // nieuw, nalezen
     coachLast: 'Dernière leçon, avec la date', // nieuw, nalezen
-    coachCode: 'Code : les mêmes chiffres, en court, pour un aperçu du groupe. Sans nom.', // nieuw, nalezen
+    coachCode: 'Code : les mêmes chiffres, en version courte, pour un aperçu du groupe. Sans nom.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Le téléphone écoute (essai)', // nieuw, nalezen
-    listenHint: 'Quand tu as parlé, le téléphone dit s’il t’a compris. Ça se passe dans le téléphone lui-même. Rien ne va chez nous ni chez d’autres.', // nieuw, nalezen
+    listenHint: 'Quand tu as parlé, le téléphone dit s’il t’a compris. Ça se passe dans le téléphone lui-même. Rien n’est envoyé, ni à nous ni à d’autres.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     listenNeedsPack: 'D’abord, le téléphone a besoin du néerlandais. C’est un gros téléchargement : utilise le wifi.', // nieuw, nalezen
     listenDownload: 'Télécharger le néerlandais', // nieuw, nalezen
     listenNotNow: 'Pas maintenant', // nieuw, nalezen
@@ -394,9 +394,9 @@ const lang: HelpLanguageSource = {
     samenSwap: 'Changer de rôle', // nieuw, nalezen
     samenStop: 'Terminer', // nieuw, nalezen
     checkStart: 'Je connais déjà : test court', // nieuw, nalezen
-    checkPassed: 'Tu connais déjà ça. Cocher ce thème ?', // nieuw, nalezen
+    checkPassed: 'Tu connais déjà ça. Cocher ce sujet ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     checkNoCert: 'Alors pas encore de certificat. Tu l’as après les leçons.', // nieuw, nalezen
-    checkNotYet: 'Les leçons t’aident pour ce thème.', // nieuw, nalezen
+    checkNotYet: 'Les leçons t’aident pour ce sujet.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     checkMark: 'Cocher', // nieuw, nalezen
     checkVia: 'par test', // nieuw, nalezen
     checkUndo: 'Faire quand même les leçons', // nieuw, nalezen
@@ -410,7 +410,7 @@ const lang: HelpLanguageSource = {
     coachCardRights: 'Afficher le nom des sujets sur tes droits', // nieuw, nalezen
     speakFromMemory: 'Maintenant de mémoire : c’était quoi en néerlandais ?', // nieuw, nalezen
     keptNofM: 'Mots d’il y a 2 semaines ou plus : tu en connaissais encore {n} sur {m}.', // nieuw, nalezen
-    verbSecond: 'Le verbe est à la place 2.', // nieuw, nalezen
+    verbSecond: 'Le verbe est en 2e position.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     calmScreen: 'Écran calme', // nieuw, nalezen
     calmAuto: 'Comme ton téléphone', // nieuw, nalezen
     calmHint: 'Activé : rien ne bouge, pas de fête pour ta série après une leçon, et ta série et tes mots ne sont pas sur l’écran d’accueil.', // nieuw, nalezen
@@ -607,7 +607,7 @@ const lang: HelpLanguageSource = {
     'c.sick.a': 'Oui, je reste à la maison aujourd’hui.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Appelle le 112 !',
-    'p.hurt': { m: 'Je suis blessé.', f: 'Je suis blessée.', x: 'Je suis blessé / blessée.' },
+    'p.hurt': { m: 'Je suis blessé.', f: 'Je suis blessée.', x: 'J’ai une blessure.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 

@@ -23,7 +23,7 @@ const lang: HelpLanguageSource = {
     streakStarted: 'Серията ти от дни започна! Ела пак утре.',
     streakGrew: { one: '{n} ден поред! Продължавай така.', other: '{n} дни поред! Продължавай така.' },
     start: 'Започни',
-    practice: 'Упражнявай отново',
+    practice: 'Упражни се отново', // nieuw, nalezen (AI-correctie 2 nov 2026)
     locked: 'Първо завърши предишния урок',
     newWord: 'Нова дума',
     tapToHear: 'Докосни, за да чуеш',
@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Къде работиш?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'В коя държава работиш?',
-    countryHint: 'Избери държавата, в която работиш. Ще получиш правилата за работа в нея. Това остава на телефона ти. Не го изпращаме никъде.', // nieuw, nalezen
+    countryHint: 'Ще получиш правилата за работа в нея. Това остава на телефона ти. Не го изпращаме никъде.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Нидерландия',
     countryBe: 'Белгия (Фландрия)',
     tipsNote: 'Тези съвети са за работа в Нидерландия. Обща информация, не е правен съвет.',
@@ -102,7 +102,7 @@ const lang: HelpLanguageSource = {
     sectorRetail: 'Магазин и супермаркет', // nieuw, nalezen
     sectorCleaning: 'Почистване',
     sectorHorticulture: 'Градинарство', // nieuw (30 okt 2026), nagelezen (2e lezing)
-    sectorTechnical: 'Техника', // nieuw (30 okt 2026), nalezen
+    sectorTechnical: 'Техническа работа', // nieuw, nalezen (AI-correctie 2 nov 2026)
     sectorGarage: 'Автосервиз', // nieuw (30 okt 2026), nalezen
     sound: 'Звук',
     soundOn: 'Със звук',
@@ -171,9 +171,9 @@ const lang: HelpLanguageSource = {
     countHint: 'Приложението брои колко често се правят уроците и колко време отнемат приблизително. И дали някъде в приложението има грешка. Без име, без акаунт, без следене.', // fout-zin nieuw, nalezen
     certificate: 'Сертификат',
     myCertificates: 'Моите сертификати',
-    certsEmpty: 'Завърши всички уроци от един раздел. Тогава получаваш сертификат.',
+    certsEmpty: 'Завърши всички уроци от една тема. Тогава получаваш сертификат.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certEarned: 'Имаш сертификат!',
-    certEarnedHint: 'Всички уроци от този раздел са завършени.',
+    certEarnedHint: 'Всички уроци от тази тема са завършени.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certView: 'Виж',
     certLater: 'По-късно',
     certPrint: 'Отпечатай или запази като PDF',
@@ -243,7 +243,7 @@ const lang: HelpLanguageSource = {
     textXl: 'Много голям',
     showEnglish: 'Показвай и английски',
     genderTitle: 'Жена или мъж?',
-    genderHint: 'За да може езикът ти да се обръща към теб правилно.',
+    genderHint: 'Така приложението ще се обръща към теб правилно на твоя език.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     genderWoman: 'Жена',
     genderMan: 'Мъж',
     genderNone: 'Предпочитам да не казвам',
@@ -289,7 +289,7 @@ const lang: HelpLanguageSource = {
     bramBack: { m: 'Добре дошъл отново. Продължаваме.', f: 'Добре дошла отново. Продължаваме.', x: 'Ето те отново. Продължаваме.' }, // x: nieuw, nalezen
     bramRested: 'Вчера беше свободният ти ден. Серията продължава.',
     bramDueN: { one: '{n} дума за повторение днес.', other: '{n} думи за повторение днес.' },
-    bramDueOne: 'Думи за повторение днес: {n}',
+    bramDueOne: '{n} дума за повторение днес.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     bramDayN: 'Ден {n} поред.',
     bramDone: { m: 'За днес си готов. До утре.', f: 'За днес си готова. До утре.', x: 'За днес всичко е готово. До утре.' }, // x: nieuw, nalezen
     bramPerfect: 'Много добре. Знаеш тези думи.',
@@ -305,7 +305,7 @@ const lang: HelpLanguageSource = {
     chatWhichQuestion: 'Кой въпрос подхожда на този отговор?',
     reviewWaiting: 'Чакат още думи: {n}. Ще се върнат в следващите дни.',
     factTitle: 'Знаеш ли?',
-    fact3: { m: 'Не си сам: над 3 милиона възрастни в Нидерландия трудно четат, смятат или работят с компютър. Упражненията помагат.', f: 'Не си сама: над 3 милиона възрастни в Нидерландия трудно четат, смятат или работят с компютър. Упражненията помагат.', x: 'Не само ти: над 3 милиона възрастни в Нидерландия трудно четат, смятат или работят с компютър. Упражненията помагат.' }, // x: nieuw, nalezen
+    fact3: { m: 'Не си сам: над 3 милиона възрастни в Нидерландия трудно четат, смятат или работят с компютър. Упражненията помагат.', f: 'Не си сама: над 3 милиона възрастни в Нидерландия трудно четат, смятат или работят с компютър. Упражненията помагат.', x: 'Много хора са като теб: над 3 милиона възрастни в Нидерландия трудно четат, смятат или работят с компютър. Упражненията помагат.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     fact7: 'От мигрантите, които говорят много добре нидерландски, 69 от 100 имат платена работа.',
     fact14: 'В много библиотеки има Taalhuis („къща на езика“): безплатна помощ, за да учиш нидерландски и занапред.',
     fact30: { m: 'По малко упражнения всеки ден помагат повече, отколкото много наведнъж от време на време. Ти си се упражнявал вече 30 дни поред!', f: 'По малко упражнения всеки ден помагат повече, отколкото много наведнъж от време на време. Ти си се упражнявала вече 30 дни поред!', x: 'По малко упражнения всеки ден помагат повече, отколкото много наведнъж от време на време. Вече 30 дни поред се упражняваш!' }, // x: nieuw, nalezen
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Спри напомнянето',
     remindStopped: 'Отвори файла, за да махнеш напомнянето от календара.',
     remindStoppedAndroid: 'Изтрий напомнянето ръчно в Google Календар.',
-    resetKeeps: 'Уроците, думите, дните поред и сертификатите ти се изтриват. Езикът, кодът и настройките ти остават.',
+    resetKeeps: 'Уроците, думите, дните поред и сертификатите ти се изтриват. Езикът и настройките ти остават.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Не се зареди. Има ли интернет?',
     retry: 'Опитай отново',
@@ -352,7 +352,7 @@ const lang: HelpLanguageSource = {
     tempoHint: 'Спокойно е бавно и ясно. Нормално е както говорят колегите. Избери „Нормално“, ако вече разбираш много.', // nieuw, nalezen
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Покажи как върви', // nieuw, nalezen
-    coachCardIntro: 'Тази карта показва напредъка ти. Покажи я на учителя, на коуча или на шефа си. Ти решаваш.', // nieuw, nalezen
+    coachCardIntro: 'Тази карта показва напредъка ти. Покажи я на учителя, на наставника или на шефа си. Ти решаваш.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     coachCardKeep: 'Телефонът ти прави картата. Нищо не се изпраща. Vloertaal не пази нищо.', // nieuw, nalezen
     coachCardWhat: 'На картата, на нидерландски:', // nieuw, nalezen
     coachTopics: 'Завършени теми', // nieuw, nalezen
@@ -390,7 +390,7 @@ const lang: HelpLanguageSource = {
     samenHear: 'Чуй', // nieuw, nalezen
     samenNext: 'Напред', // nieuw, nalezen
     samenTranslation: 'Превод', // nieuw, nalezen
-    samenEnd: 'Браво! Сменете ролите и направете го още веднъж?', // nieuw, nalezen
+    samenEnd: 'Браво! Да смените ли ролите и да го направите още веднъж?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     samenSwap: 'Сменете ролите', // nieuw, nalezen
     samenStop: 'Готово', // nieuw, nalezen
     checkStart: 'Знам това: кратка проверка', // nieuw, nalezen
@@ -405,7 +405,7 @@ const lang: HelpLanguageSource = {
     workTryWhen: 'Кога:', // nieuw, nalezen
     workTryThen: 'Тогава кажи:', // nieuw, nalezen
     colleagueCard: 'За колегата', // nieuw, nalezen
-    colleagueCardHint: 'Покажи това на колега, който говори нидерландски. Там пише как може да ти помогне да упражняваш.', // nieuw, nalezen
+    colleagueCardHint: 'Покажи това на колега, който говори нидерландски. Там пише как може да ти помогне да се упражняваш.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     colleagueShare: 'Изпрати на колегата', // nieuw, nalezen
     coachCardRights: 'Показвай по име темите за твоите права', // nieuw, nalezen
     speakFromMemory: 'Сега наизуст: как беше на нидерландски?', // nieuw, nalezen
@@ -413,7 +413,7 @@ const lang: HelpLanguageSource = {
     verbSecond: 'Глаголът е на място 2.', // nieuw, nalezen
     calmScreen: 'Спокоен екран', // nieuw, nalezen
     calmAuto: 'Като телефона ти', // nieuw, nalezen
-    calmHint: 'Включено: нищо не се движи, няма празнуване на поредицата след урок, а поредицата и думите не са на началния екран.', // nieuw, nalezen
+    calmHint: 'Включено: нищо не се движи, няма празнуване на серията след урок, а серията и думите не са на началния екран.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     infoMore: 'Повече обяснения', // nieuw, nalezen
     tipsAbout: 'За тези съвети', // nieuw, nalezen
     aboutMore: 'Повече за Vloertaal', // nieuw, nalezen
@@ -528,14 +528,14 @@ const lang: HelpLanguageSource = {
     'w.beter': 'по-добре',
 
     // Sentences
-    's.hello.1': { m: 'Здравей, нов съм.', f: 'Здравей, нова съм.', x: 'Здравей, нов / нова съм.' }, // x: nieuw, nalezen
+    's.hello.1': { m: 'Здравей, нов съм.', f: 'Здравей, нова съм.', x: 'Здравей, аз съм нов човек тук.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.hello.2': 'Добро утро, аз съм Али.',
     's.hello.3': 'Благодаря, до утре!',
     's.people.1': 'Казвам се Сара.',
     's.people.2': 'Кой е шефът?',
     's.people.3': { m: 'Аз съм нов колега.', f: 'Аз съм нова колежка.', x: 'Аз съм нов човек в екипа.' }, // x: nieuw, nalezen
     's.understand.1': 'Може ли да повторите?',
-    's.understand.2': 'Може ли да говорите бавно?',
+    's.understand.2': 'Може ли да говорите по-бавно?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.understand.3': 'Къде е тоалетната?',
     's.gear.1': 'Винаги носи каската си.',
     's.gear.2': 'Къде са ръкавиците?',
@@ -573,7 +573,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'Не мога да намеря съблекалнята.',
     's.arrive.3': 'Кой е моят наставник днес?',
     'c.arrive.q': 'Добро утро, по какъв въпрос идвате?',
-    'c.arrive.a': { m: 'Нов съм. Започвам днес.', f: 'Нова съм. Започвам днес.', x: 'Нов / нова съм. Започвам днес.' }, // x: nieuw, nalezen
+    'c.arrive.a': { m: 'Нов съм. Започвам днес.', f: 'Нова съм. Започвам днес.', x: 'Аз съм нов човек тук. Започвам днес.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.understand.q': 'Разбираш ли?',
     'c.understand.a': 'Не, още веднъж, моля.',
     'c.gear.q': 'Носиш ли си каската?',
@@ -589,7 +589,7 @@ const lang: HelpLanguageSource = {
     'w.voordoen': 'показвам как (като го направя първо)',
     'w.gevaarlijk': 'опасен',
     'w.uitleg': 'обяснението',
-    's.notyet.1': { m: 'Още не съм научил това.', f: 'Още не съм научила това.', x: 'Още не съм научил / научила това.' }, // x: nieuw, nalezen
+    's.notyet.1': { m: 'Още не съм научил това.', f: 'Още не съм научила това.', x: 'Още не са ме учили на това.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.notyet.2': 'Още никой не ми е обяснил.',
     's.notyet.3': { m: 'Мога ли вече да го правя сам?', f: 'Мога ли вече да го правя сама?', x: 'Мога ли вече да го правя самостоятелно?' }, // x: nieuw, nalezen
     'c.notyet.q': 'Просто опитай, лесно е.',
@@ -604,7 +604,7 @@ const lang: HelpLanguageSource = {
     'c.sick.a': 'Да, днес оставам вкъщи.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Обади се на 112!',
-    'p.hurt': { m: 'Ранен съм.', f: 'Ранена съм.', x: 'Ранен / ранена съм.' },
+    'p.hurt': { m: 'Ранен съм.', f: 'Ранена съм.', x: 'Имам нараняване.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 

@@ -19,7 +19,7 @@ const t: CultureTranslation = {
     'kjn.u.help.1': "أستطيع أن أقول إنني لا أفهم.", // nieuw, nalezen
     'kjn.u.help.2': "أستطيع أن أطلب من شخص أن يتكلم ببطء أكثر.", // nieuw, nalezen
     'kjn.u.tools.1': "أستطيع أن أطلب من شخص أن يكتبه أو يريني إياه.", // nieuw, nalezen
-    'kjn.u.tools.2': "أستطيع أن أكرر مهمة لأتأكد من أنني فهمتها.", // nieuw, nalezen
+    'kjn.u.tools.2': "أستطيع أن أكرر التعليمات لأتأكد من أنني فهمتها.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "أستطيع أن أقول إنني أريد التدرب على الهولندية.", // nieuw, nalezen
     'kjn.u.data.1': "أستطيع أن أتهجى اسمي.", // nieuw, nalezen
     'kjn.u.data.2': "أستطيع أن أقول في أي أيام أستطيع العمل.", // nieuw, nalezen

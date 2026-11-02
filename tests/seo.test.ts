@@ -18,7 +18,7 @@ const meta = (name: string) => page.match(new RegExp(`<meta name="${name}" conte
 
 describe('start page for search engines', () => {
   it('is Dutch', () => {
-    expect(page).toMatch(/<html lang="nl">/);
+    expect(page).toMatch(/<html lang="nl"[ >]/);
   });
 
   it('has a title that says what it is', () => {

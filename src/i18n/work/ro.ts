@@ -325,7 +325,7 @@ const t: CultureTranslation = {
     's.diploma.1': 'Am o diplomă din țara mea.',
     's.diploma.2': 'Această instruire e obligatorie?',
     's.diploma.3': 'Vreau să avansez în munca mea.',
-    'c.diploma.q': 'Vrei să faci o instruire?',
+    'c.diploma.q': 'Vrei să urmezi o formare?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.diploma.a': 'Da, te rog! Cine o plătește?',
     'u.health': 'Sănătatea',
     'l.doctor': 'Doctor sau 112?',
@@ -580,7 +580,7 @@ const t: CultureTranslation = {
     'c.contract.b': { m: 'Perioada de probă (proeftijd) trebuie să fie în scris. Nu e permisă într-un contract de 6 luni sau mai scurt. Într-un contract mai lung, dar mai scurt de 2 ani, e de cel mult 1 lună. Într-un contract de 2 ani sau mai lung, sau pe perioadă nedeterminată, e de cel mult 2 luni. Lucrezi la chemare (oproepkracht)? De obicei, angajatorul trebuie să te cheme cu cel puțin 4 zile înainte. Dacă te cheamă mai târziu, nu trebuie să vii. Un cao poate scurta aceste 4 zile, dar nu la mai puțin de 1 zi. Dacă îți anulează munca mai târziu de atât, tot primești plata. Dacă te cheamă pentru mai puțin de 3 ore de muncă, de obicei ești plătit pentru 3 ore. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.', f: 'Perioada de probă (proeftijd) trebuie să fie în scris. Nu e permisă într-un contract de 6 luni sau mai scurt. Într-un contract mai lung, dar mai scurt de 2 ani, e de cel mult 1 lună. Într-un contract de 2 ani sau mai lung, sau pe perioadă nedeterminată, e de cel mult 2 luni. Lucrezi la chemare (oproepkracht)? De obicei, angajatorul trebuie să te cheme cu cel puțin 4 zile înainte. Dacă te cheamă mai târziu, nu trebuie să vii. Un cao poate scurta aceste 4 zile, dar nu la mai puțin de 1 zi. Dacă îți anulează munca mai târziu de atât, tot primești plata. Dacă te cheamă pentru mai puțin de 3 ore de muncă, de obicei ești plătită pentru 3 ore. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.', x: 'Perioada de probă (proeftijd) trebuie să fie în scris. Nu e permisă într-un contract de 6 luni sau mai scurt. Într-un contract mai lung, dar mai scurt de 2 ani, e de cel mult 1 lună. Într-un contract de 2 ani sau mai lung, sau pe perioadă nedeterminată, e de cel mult 2 luni. Lucrezi la chemare (oproepkracht)? De obicei, angajatorul trebuie să te cheme cu cel puțin 4 zile înainte. Dacă te cheamă mai târziu, nu trebuie să vii. Un cao poate scurta aceste 4 zile, dar nu la mai puțin de 1 zi. Dacă îți anulează munca mai târziu de atât, tot primești plata. Dacă te cheamă pentru mai puțin de 3 ore de muncă, de obicei primești plata pentru 3 ore. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.' }, // nalezen: feit gelijk getrokken // x: nieuw, nalezen
     'c.contract.p': 'Perioada de probă e în contractul meu?',
     'c.contract.s': 'Contractul tău e pe 3 luni. Scrie în el: „Proeftijd: 1 maand”. Ce faci?',
-    'c.contract.o1': 'Întrebi despre asta: această perioadă de probă nu contează.', // nagelezen (2e lezing)
+    'c.contract.o1': 'Întrebi despre asta: această perioadă de probă nu este valabilă.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.contract.o2': 'Nu faci nimic. Orice contract are perioadă de probă.',
     'c.contract.o3': 'Semnezi și nu întrebi niciodată, pentru că șeful știe cel mai bine.',
     'c.contract.w': 'O perioadă de probă într-un contract de 6 luni sau mai scurt nu e valabilă. E normal să întrebi calm. Dacă răspunsul nu e clar, cere sfatul sindicatului sau al Juridisch Loket.',
@@ -695,7 +695,7 @@ const t: CultureTranslation = {
     'c.rights.o1': 'Nu semnezi încă. Ceri întâi un sfat.', // nieuw, nalezen
     'c.rights.o2': 'O semnezi, pentru că șeful spune că e în regulă.',
     'c.rights.o3': 'Pui hârtia deoparte și nu mai vorbești niciodată despre ea.',
-    'c.rights.w': 'E ceva greșit în el? Atunci poți pierde drepturi, de exemplu dreptul la ajutorul de șomaj (WW). E normal și permis să ceri timp ca să te sfătuiești.', // nieuw, nalezen
+    'c.rights.w': 'E ceva greșit în document? Atunci poți pierde drepturi, de exemplu dreptul la ajutorul de șomaj (WW). E normal și permis să ceri timp ca să te sfătuiești.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.leave': 'Concediu și concediu pentru urgențe',
     'c.leave.b': 'Prin lege ai zile libere plătite: cel puțin de 4 ori numărul de zile pe care le lucrezi pe săptămână. Normă întreagă, 5 zile pe săptămână? Atunci cel puțin 20 de zile pe an. Un cao poate da mai multe. Cere concediu din timp și în scris. O urgență neașteptată, ca un accident sau o boală în familie? Atunci poți primi un concediu scurt plătit (calamiteitenverlof). Anunță-ți imediat angajatorul. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.leave.p': 'Aș vrea să cer concediu pentru iulie.',
@@ -938,7 +938,7 @@ const t: CultureTranslation = {
     'w.woord': 'cuvântul',
     's.keeplearning.1': 'Exersez zece minute în fiecare zi.',
     's.keeplearning.2': 'Ce înseamnă cuvântul ăsta?',
-    's.keeplearning.3': 'Vorbești olandeză cu mine?',
+    's.keeplearning.3': 'Vrei să vorbești olandeză cu mine?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.keeplearning.q': 'Să vorbesc engleză?',
     'c.keeplearning.a': 'Nu, olandeză, te rog. Vreau să exersez.',
     'c.translate': 'Aplicațiile de traducere: inteligente, dar verifică',
@@ -1107,11 +1107,11 @@ const t: CultureTranslation = {
     'w.typen': 'a tasta, a scrie la tastatură',
     'w.opslaan': 'a salva, a păstra',
     'w.inloggen': 'a intra în cont',
-    's.aiprivate.1': 'Nu împărtășesc numele clienților.',
+    's.aiprivate.1': 'Nu dau mai departe numele clienților.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.aiprivate.2': 'Am voie să folosesc AI pentru munca mea?',
     's.aiprivate.3': 'Parola mea este secretă.',
     'c.aiprivate.q': 'Pune asta în chatbot.',
-    'c.aiprivate.a': 'Mai bine nu, sunt nume de clienți în el.',
+    'c.aiprivate.a': 'Mai bine nu, conține nume de clienți.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.aifake': 'Fals sau adevărat?',
     'w.echt': 'adevărat, real',
     'w.stem': 'vocea',
@@ -1221,7 +1221,7 @@ const t: CultureTranslation = {
     'w.formulier': "formularul (o hârtie sau o pagină de completat)",
     's.details.1': "Puteți să-l spuneți pe litere?",
     's.details.2': "Vă dau noul meu număr de telefon.",
-    's.details.3': "Formularul ăsta e pentru Fisc (Belastingdienst).",
+    's.details.3': "Formularul ăsta e pentru Administrația fiscală (Belastingdienst).", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.details.q': "Care e numele tău de familie?",
     'c.details.a': "Haddad. Să-l spun pe litere?",
     'l.dates': "Zile și date",
@@ -1362,7 +1362,7 @@ const t: CultureTranslation = {
     'l.workshop': "Unelte în atelier", // nieuw, nalezen
     'w.gereedschap': "uneltele, sculele", // nieuw, nalezen
     'w.zagen': "a tăia cu fierăstrăul", // nieuw, nalezen
-    'w.slijpen': "a șlefui (a netezi sau a tăia metal cu o mașină)", // nieuw, nalezen
+    'w.slijpen': "a poliza, a șlefui (a netezi sau a tăia metal cu o mașină)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.vonk': "scânteia", // nieuw, nalezen
     'w.gehoorbescherming': "protecția auditivă (pentru urechi)", // nieuw, nalezen
     'w.lawaai': "zgomotul (mult sunet puternic)", // nieuw, nalezen
@@ -1433,7 +1433,7 @@ const t: CultureTranslation = {
     's.review.3': "Evaluarea mea e săptămâna viitoare.", // nieuw, nalezen
     'c.review.q': "Trebuie să lucrezi mai repede.", // nieuw, nalezen
     'c.review.a': "Bine. Puteți să-mi arătați cum se face mai repede?", // nieuw, nalezen
-    'u.society': "Să participi în Țările de Jos", // nieuw, nalezen
+    'u.society': "Să participi la viața din Olanda", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.council': "Primăria și votul", // nieuw, nalezen
     'w.stemmen': "a vota", // nieuw, nalezen
     'w.verkiezing': "alegerile", // nieuw, nalezen
@@ -1507,7 +1507,7 @@ const t: CultureTranslation = {
     's.nextstep.3': "Când e ziua porților deschise?", // nieuw, nalezen
     'c.nextstep.q': "Ce faci după Entree?", // nieuw, nalezen
     'c.nextstep.a': "Vreau să fac bbl. Atunci lucrez și învăț.", // nieuw, nalezen
-    'l.email': "Să scrii la lucru", // nieuw, nalezen
+    'l.email': "Cum le scrii celor de la muncă", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.mail': "e-mailul", // nieuw, nalezen
     'w.onderwerp': "subiectul (unui e-mail)", // nieuw, nalezen
     'w.beste': "dragă, stimate (la începutul unei scrisori sau al unui e-mail)", // nieuw, nalezen
@@ -1538,10 +1538,10 @@ const t: CultureTranslation = {
     'w.moe': "obosit", // nieuw, nalezen
     'w.drugs': "drogurile", // nieuw, nalezen
     'w.somber': "deprimat (trist de mult timp)", // nieuw, nalezen
-    's.healthy.1': { m: "Azi sunt foarte obosit.", f: "Azi sunt foarte obosită.", x: "Azi sunt foarte obosit / obosită." }, // nieuw, nalezen
+    's.healthy.1': { m: "Azi sunt foarte obosit.", f: "Azi sunt foarte obosită.", x: "Azi simt o oboseală foarte mare." }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.healthy.2': "Mereu mănânc mai întâi micul dejun.", // nieuw, nalezen
     's.healthy.3': "În pauză merg puțin pe jos.", // nieuw, nalezen
-    'c.healthy.q': { m: "Vrei o pastilă? Așa rămâi treaz.", f: "Vrei o pastilă? Așa rămâi trează.", x: "Vrei o pastilă? Așa rămâi treaz / trează." }, // nieuw, nalezen
+    'c.healthy.q': { m: "Vrei o pastilă? Așa rămâi treaz.", f: "Vrei o pastilă? Așa rămâi trează.", x: "Vrei o pastilă? Așa nu adormi." }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.healthy.a': "Nu, mulțumesc. Nu lucrez sub influență.", // nieuw, nalezen
     'c.workorder': "Mai întâi citește, apoi începe", // nieuw, nalezen
     'c.workorder.b': "Înainte să începi, citește fișa de lucru (werkbon) sau sarcina din aplicație. Verifică adresa, sarcina și numărul de lucruri. Ceva nu e clar? Întreabă înainte să începi, nu la jumătate. Apoi pregătește uneltele și materialele. Așa câștigi timp și faci mai puține greșeli. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen

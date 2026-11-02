@@ -60,9 +60,9 @@ const t: CultureTranslation = {
     'c.unsafe.o1': 'Ostrzegasz kolegów i mówisz przełożonemu.',
     'c.unsafe.o2': 'Nic nie mówisz, bo nic się nie stało.',
     'c.unsafe.o3': { m: 'Sam poprawiasz paletę i nikomu nie mówisz.', f: 'Sama poprawiasz paletę i nikomu nie mówisz.', x: 'Samodzielnie poprawiasz paletę i nikomu nie mówisz.' }, // nieuw, nalezen
-    'c.unsafe.w': 'Sytuacja, w której prawie doszło do wypadku, to ostrzeżenie. Zgłoszenie go pomaga zapobiec prawdziwemu wypadkowi. Pracodawca nie może cię za to ukarać.',
+    'c.unsafe.w': 'Sytuacja, w której prawie doszło do wypadku, to ostrzeżenie. Zgłoszenie jej pomaga zapobiec prawdziwemu wypadkowi. Pracodawca nie może cię za to ukarać.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.accident': 'Zgłaszaj każdy wypadek',
-    'c.accident.b': 'O każdym wypadku, nawet drobnym, powiedz przełożonemu albo BHV’er (osobie, która w firmie udziela pierwszej pomocy). Pracujesz przez agencję? Powiadom też agencję. W nagłym przypadku najpierw dzwoń pod 112. Poważny wypadek musi zgłosić do Nederlandse Arbeidsinspectie firma, w której do niego doszło (także jeśli pracujesz przez agencję): gdy ktoś ginie, zostaje trwale ranny albo musi zostać w szpitalu. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
+    'c.accident.b': 'O każdym wypadku, nawet drobnym, powiedz przełożonemu albo BHV’er (osobie, która w firmie udziela pierwszej pomocy). Pracujesz przez agencję? Powiadom też agencję. W nagłym przypadku najpierw dzwoń pod 112. Poważny wypadek musi zgłosić do Nederlandse Arbeidsinspectie firma, w której do niego doszło (także jeśli pracujesz przez agencję): gdy ktoś ginie, odnosi trwałe obrażenia albo musi zostać w szpitalu. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.accident.p': 'Mój kolega jest ranny. Gdzie jest osoba od pierwszej pomocy?',
     'c.accident.s': 'Przy podnoszeniu nadwyrężasz sobie plecy. Boisz się, że stracisz pracę. Co robisz?',
     'c.accident.o1': 'Zgłaszasz to przełożonemu tego samego dnia.', // nagelezen (2e lezing)
@@ -133,7 +133,7 @@ const t: CultureTranslation = {
     'c.task.o2': 'Zaczynasz od tej połowy, którą rozumiesz.', // nagelezen (2e lezing)
     'c.task.o3': 'Czekasz, aż zrobi to kolega.',
     'c.task.w': 'Zapytać jeszcze raz to normalne i zajmuje minutę. Poprawienie błędu trwa o wiele dłużej. Większość przełożonych woli pokazać coś dwa razy.',
-    'u.teamwork': 'Praca razem',
+    'u.teamwork': 'Współpraca', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.speakup': 'Coś mi przeszkadza',
     'w.probleem': 'problem',
     'w.praten': 'rozmawiać',
@@ -146,7 +146,7 @@ const t: CultureTranslation = {
     's.speakup.3': 'Uważam, że to nie jest uczciwe.',
     'd.speakup.q': 'Coś się stało?',
     'd.speakup.a': 'Tak, coś mi przeszkadza.',
-    'l.agree': 'Umowy i odmawianie',
+    'l.agree': 'Ustalenia i odmawianie', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.afspraak': 'ustalenie, umowa (to, na co się umówiliście)',
     'w.lukken': 'udawać się, dać radę',
     'w.oneens': 'nie zgadzać się',
@@ -166,7 +166,7 @@ const t: CultureTranslation = {
     'w.snel': 'szybko, szybki',
     'w.bijna': 'prawie',
     's.task.1': 'Co mam zrobić najpierw?',
-    's.task.2': { m: 'Skończyłem to zadanie.', f: 'Skończyłam to zadanie.', x: 'Skończyłem / skończyłam to zadanie.' },
+    's.task.2': { m: 'Skończyłem to zadanie.', f: 'Skończyłam to zadanie.', x: 'To zadanie jest już skończone.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.task.3': 'Czy może mi pan/pani pokazać to jeszcze raz?',
     'd.task.q': { m: 'Skończyłeś?', f: 'Skończyłaś?', x: 'Gotowe?' }, // x: nieuw, nalezen
     'd.task.a': 'Prawie. Jeszcze pięć minut.',

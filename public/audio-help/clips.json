@@ -82,12 +82,12 @@
   },
   {
    "id": "countryHint.f",
-   "text": "اختاري البلد الذي تعملين فيه. ستحصلين على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.",
+   "text": "ستحصلين على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.",
    "page": "land"
   },
   {
    "id": "countryHint.m",
-   "text": "اختر البلد الذي تعمل فيه. ستحصل على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.",
+   "text": "ستحصل على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.",
    "page": "land"
   }
  ],
@@ -174,17 +174,17 @@
   },
   {
    "id": "countryHint",
-   "text": "እትሰርሑሉ ሃገር ምረጹ። ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም። እዚ ኣብ ተሌፎንኩም ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።",
+   "text": "ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም። እዚ ኣብ ተሌፎንኩም ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።",
    "page": "land"
   },
   {
    "id": "countryHint.f",
-   "text": "እትሰርሕሉ ሃገር ምረጺ። ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ። እዚ ኣብ ተሌፎንኪ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።",
+   "text": "ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ። እዚ ኣብ ተሌፎንኪ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።",
    "page": "land"
   },
   {
    "id": "countryHint.m",
-   "text": "እትሰርሓሉ ሃገር ምረጽ። ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ። እዚ ኣብ ተሌፎንካ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።",
+   "text": "ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ። እዚ ኣብ ተሌፎንካ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።",
    "page": "land"
   }
  ],
@@ -246,7 +246,7 @@
   },
   {
    "id": "countryHint",
-   "text": "کشوری را که در آن کار می‌کنید انتخاب کنید. قوانین کار همان کشور را می‌بینید. این فقط روی گوشی شما می‌ماند. ما آن را جایی نمی‌فرستیم.",
+   "text": "قوانین کار همان کشور را می‌بینید. این فقط روی گوشی شما می‌ماند. ما آن را جایی نمی‌فرستیم.",
    "page": "land"
   }
  ],
@@ -308,7 +308,7 @@
   },
   {
    "id": "countryHint",
-   "text": "کشوری را که در آن کار می‌کنید انتخاب کنید. قوانین کار همان کشور را می‌بینید. این تنها روی تیلفون شما می‌ماند. ما آن را جایی نمی‌فرستیم.",
+   "text": "قوانین کار همان کشور را می‌بینید. این تنها روی تیلفون شما می‌ماند. ما آن را جایی نمی‌فرستیم.",
    "page": "land"
   }
  ],
@@ -370,7 +370,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Обери країну, де ти працюєш. Ти отримаєш правила роботи цієї країни. Це залишається на твоєму телефоні. Ми нікуди це не надсилаємо.",
+   "text": "Ти отримаєш правила роботи цієї країни. Це залишається на твоєму телефоні. Ми нікуди це не надсилаємо.",
    "page": "land"
   }
  ],
@@ -432,7 +432,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Çalıştığın ülkeyi seç. O ülkenin iş kurallarını görürsün. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.",
+   "text": "O ülkenin iş kurallarını görürsün. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.",
    "page": "land"
   }
  ],
@@ -474,7 +474,7 @@
   },
   {
    "id": "genderHint",
-   "text": "Żeby twój język zwracał się do ciebie poprawnie.",
+   "text": "Żeby w twoim języku zwracać się do ciebie we właściwej formie.",
    "page": "vrouw-man"
   },
   {
@@ -494,7 +494,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Wybierz kraj, w którym pracujesz. Dostaniesz zasady pracy tego kraju. To zostaje w twoim telefonie. Nigdzie tego nie wysyłamy.",
+   "text": "Dostaniesz zasady pracy tego kraju. To zostaje w twoim telefonie. Nigdzie tego nie wysyłamy.",
    "page": "land"
   }
  ],
@@ -556,7 +556,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Alege țara în care lucrezi. Primești regulile de muncă din acea țară. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.",
+   "text": "Primești regulile de muncă din acea țară. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.",
    "page": "land"
   }
  ],
@@ -598,7 +598,7 @@
   },
   {
    "id": "genderHint",
-   "text": "За да може езикът ти да се обръща към теб правилно.",
+   "text": "Така приложението ще се обръща към теб правилно на твоя език.",
    "page": "vrouw-man"
   },
   {
@@ -618,7 +618,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Избери държавата, в която работиш. Ще получиш правилата за работа в нея. Това остава на телефона ти. Не го изпращаме никъде.",
+   "text": "Ще получиш правилата за работа в нея. Това остава на телефона ти. Не го изпращаме никъде.",
    "page": "land"
   }
  ],
@@ -680,7 +680,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Elige el país donde trabajas. Así recibes las reglas de trabajo de ese país. Esto se queda en tu teléfono. No lo enviamos a ningún sitio.",
+   "text": "Así recibes las reglas de trabajo de ese país. Esto se queda en tu teléfono. No lo enviamos a ningún sitio.",
    "page": "land"
   }
  ],
@@ -742,7 +742,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Escolhe o país onde trabalhas. Recebes as regras de trabalho desse país. Isto fica no teu telemóvel. Não o enviamos para lado nenhum.",
+   "text": "Recebes as regras de trabalho desse país. Isto fica no teu telemóvel. Não o enviamos para lado nenhum.",
    "page": "land"
   }
  ],
@@ -794,7 +794,7 @@
   },
   {
    "id": "sectorHint",
-   "text": "Les leçons pour ton travail viennent tôt. Tu peux changer ça plus tard dans les Réglages.",
+   "text": "Les leçons pour ton travail arrivent dès le début. Tu peux changer ça plus tard dans les Réglages.",
    "page": "werk"
   },
   {
@@ -804,7 +804,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Choisis le pays où tu travailles. Tu reçois alors les règles du travail de ce pays. Cela reste sur ton téléphone. Nous ne l’envoyons nulle part.",
+   "text": "Tu reçois alors les règles du travail de ce pays. Cela reste sur ton téléphone. Nous ne l’envoyons nulle part.",
    "page": "land"
   }
  ],
@@ -866,7 +866,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Wähle das Land, in dem du arbeitest. Dann bekommst du die Arbeitsregeln dieses Landes. Das bleibt auf deinem Handy. Wir schicken es nirgendwohin.",
+   "text": "Dann bekommst du die Arbeitsregeln dieses Landes. Das bleibt auf deinem Handy. Wir schicken es nirgendwohin.",
    "page": "land"
   }
  ]

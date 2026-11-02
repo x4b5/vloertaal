@@ -86,7 +86,7 @@ const lang: HelpLanguageSource = {
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: { m: 'ኣብ ኣየናይ ሃገር ኢኻ ትሰርሕ?', f: 'ኣብ ኣየናይ ሃገር ኢኺ ትሰርሒ?', x: 'ኣብ ኣየናይ ሃገር ኢኹም ትሰርሑ?' }, // x: nieuw, nalezen
     // nagelezen (2e lezing)
-    countryHint: { m: 'እትሰርሓሉ ሃገር ምረጽ። ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ። እዚ ኣብ ተሌፎንካ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።', f: 'እትሰርሕሉ ሃገር ምረጺ። ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ። እዚ ኣብ ተሌፎንኪ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።', x: 'እትሰርሑሉ ሃገር ምረጹ። ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም። እዚ ኣብ ተሌፎንኩም ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።' }, // x: nieuw, nalezen // nieuw, nalezen // nagelezen AI ronde 3
+    countryHint: { m: 'ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ። እዚ ኣብ ተሌፎንካ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።', f: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ። እዚ ኣብ ተሌፎንኪ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።', x: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም። እዚ ኣብ ተሌፎንኩም ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'ኔዘርላንድ',
     countryBe: 'ቤልጅዩም (ፍላንደርስ)',
     tipsNote: 'እዞም ምኽርታት ብዛዕባ ስራሕ ኣብ ኔዘርላንድ እዮም። ሓፈሻዊ ሓበሬታ እዩ፡ ሕጋዊ ምኽሪ ኣይኮነን።',
@@ -169,7 +169,7 @@ const lang: HelpLanguageSource = {
     daysUnit: 'መዓልትታት',
     wordsUnit: 'ቃላት',
     countTitle: 'ብዘይ ስም ምቑጻር',
-    countHint: 'እቲ ኣፕ ትምህርትታት ክንደይ ግዜ ከም ዝውዳእን ብግምት ክንደይ ከም ዝወስድን ይቖጽር። ከምኡ’ውን ኣብቲ ኣፕ ጌጋ እንተ ኣጋጢሙ። ስም የለን፡ ኣካውንት የለን፡ ምክትታል የለን።', // fout-zin nieuw, nalezen
+    countHint: 'እቲ ኣፕ ትምህርትታት ክንደይ ግዜ ከም ዝውዳእን ብግምት ክንደይ ከም ዝወስድን ይቖጽር። ከምኡ’ውን ኣብቲ ኣፕ ጌጋ እንተ ኣጋጢሙ ይቖጽር። ስም የለን፡ ኣካውንት የለን፡ ምክትታል የለን።', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certificate: 'ምስክር ወረቐት',
     myCertificates: 'ምስክር ወረቐታተይ',
     certsEmpty: { m: 'ኩሉ ትምህርትታት ሓደ ክፍሊ ወድእ። ሽዑ ምስክር ወረቐት ትረኽብ።', f: 'ኩሉ ትምህርትታት ሓደ ክፍሊ ወድኢ። ሽዑ ምስክር ወረቐት ትረኽቢ።', x: 'ኩሉ ትምህርትታት ሓደ ክፍሊ ወድኡ። ሽዑ ምስክር ወረቐት ትረኽቡ።' }, // x: nieuw, nalezen
@@ -205,7 +205,7 @@ const lang: HelpLanguageSource = {
     recommended: 'ዝምከር',
     allTopics: 'ኩሎም ኣርእስትታት',
     topicsOrder: 'ኣርእስትታት ምርኣይ',
-    privacyLink: 'መግለጺ ብሕትውና ኣንብብ (ብሆላንድኛ)', // nieuw, nalezen
+    privacyLink: 'መግለጺ ብሕትውና ምንባብ (ብሆላንድኛ)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     routeTitle: 'እንታይ ክትመሃሩ ትደልዩ?', // nieuw, nalezen (een vraag, de x-vorm)
     routeLearn: 'ንስራሕ ሆላንድኛ ምምሃርን ስራሕ ኣብዚ ከመይ ከም ዝኸይድን', // nieuw, nalezen
     routeRules: 'ሆላንድኛ እዛረብ እየ፡ ሕግታት ስራሕ ጥራይ', // nieuw, nalezen
@@ -233,7 +233,7 @@ const lang: HelpLanguageSource = {
     speakingPractice: 'ልምምድ ምዝራብ',
     speakingHint: { m: 'ቃላት ብዓው ኢልካ በሎም እሞ ኣወዳድር። ድምጽካ ፈጺሙ ኣይዕቀብን ኣይለኣኽን።', f: 'ቃላት ብዓው ኢልኪ በልዮም እሞ ኣወዳድሪ። ድምጽኪ ፈጺሙ ኣይዕቀብን ኣይለኣኽን።' },
     savingOffline: 'ይዕቀብ ኣሎ…',
-    savedOffline: 'ብዘይ ኢንተርነት ተዓቂቡ',
+    savedOffline: 'ኣብዚ ተሌፎን ተዓቂቡ', // nieuw, nalezen (AI-correctie 2 nov 2026)
     offlineNoSpace: { m: 'ኣብዚ ተሌፎን እኹል ቦታ የለን። ዝተዓቀበ ኣርእስቲ ኣልግስ ወይ ቦታ ኣጽሪ።', f: 'ኣብዚ ተሌፎን እኹል ቦታ የለን። ዝተዓቀበ ኣርእስቲ ኣልግሲ ወይ ቦታ ኣጽርዪ።' },
     offlineFailed: { m: 'ምዕቃብ ኣይሰለጠን። ኢንተርነትካ ኣረጋግጽ እሞ ደጊምካ ፈትን።', f: 'ምዕቃብ ኣይሰለጠን። ኢንተርነትኪ ኣረጋግጺ እሞ ደጊምኪ ፈትኒ።', x: 'ምዕቃብ ኣይሰለጠን። ኢንተርነትኩም ኣረጋግጹ እሞ ደጊምኩም ፈትኑ።' }, // x: nieuw, nalezen
     pocketCard: 'ናይ ጁባ ካርድ',
@@ -322,22 +322,22 @@ const lang: HelpLanguageSource = {
     remindStop: { m: 'መዘኻኸሪ ኣቋርጽ', f: 'መዘኻኸሪ ኣቋርጺ', x: 'መዘኻኸሪ ኣቋርጹ' }, // x: nieuw, nalezen
     remindStopped: { m: 'መዘኻኸሪ ካብ ካሌንደርካ ንምእላይ ነቲ ፋይል ክፈቶ።', f: 'መዘኻኸሪ ካብ ካሌንደርኪ ንምእላይ ነቲ ፋይል ክፈትዮ።' },
     remindStoppedAndroid: { m: 'መዘኻኸሪ ባዕልኻ ካብ Google ካሌንደር ኣልግሶ።', f: 'መዘኻኸሪ ባዕልኺ ካብ Google ካሌንደር ኣልግስዮ።' },
-    resetKeeps: { m: 'ትምህርትታትካ፡ ቃላትካ፡ ተኸታታሊ መዓልትታትካን ምስክር ወረቐታትካን ይድምሰሱ። ቋንቋኻ፡ ኮድካን ምድላዋትካን ይጸንሑ።', f: 'ትምህርትታትኪ፡ ቃላትኪ፡ ተኸታታሊ መዓልትታትኪን ምስክር ወረቐታትኪን ይድምሰሱ። ቋንቋኺ፡ ኮድኪን ምድላዋትኪን ይጸንሑ።' },
+    resetKeeps: { m: 'ትምህርትታትካ፡ ቃላትካ፡ ተኸታታሊ መዓልትታትካን ምስክር ወረቐታትካን ይድምሰሱ። ቋንቋኻን ምድላዋትካን ይጸንሑ።', f: 'ትምህርትታትኪ፡ ቃላትኪ፡ ተኸታታሊ መዓልትታትኪን ምስክር ወረቐታትኪን ይድምሰሱ። ቋንቋኺን ምድላዋትኪን ይጸንሑ።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'ኣይተጻዕነን። ኢንተርነት ኣሎ ድዩ?',
     retry: 'ዳግማይ ምፍታን',
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: { m: 'ድሮ እንታይ ትፈልጥ?', f: 'ድሮ እንታይ ትፈልጢ?', x: 'ድሮ እንታይ ትፈልጡ?' }, // nieuw, nalezen
     toetsOffer: { m: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኻ ጥራይ እዩ።', f: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኺ ጥራይ እዩ።', x: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኹም ጥራይ እዩ።' }, // nieuw, nalezen
-    toetsEndOffer: { m: 'ብዙሕ ተማሂርካ ኢኻ። ፈተና ደጊምካ ግበር፣ ሕጂ እንታይ ከም እትፈልጥ ርአ።', f: 'ብዙሕ ተማሂርኪ ኢኺ። ፈተና ደጊምኪ ግበሪ፣ ሕጂ እንታይ ከም እትፈልጢ ርአዪ።', x: 'ብዙሕ ተማሂርኩም ኢኹም። ፈተና ደጊምኩም ግበሩ፣ ሕጂ እንታይ ከም እትፈልጡ ርአዩ።' }, // nieuw, nalezen
+    toetsEndOffer: { m: 'ብዙሕ ተማሂርካ ኢኻ። ፈተና ደጊምካ ግበር፣ ሕጂ እንታይ ከም እትፈልጥ ርአ።', f: 'ብዙሕ ተማሂርኪ ኢኺ። ፈተና ደጊምኪ ግበሪ፣ ሕጂ እንታይ ከም እትፈልጢ ርኣዪ።', x: 'ብዙሕ ተማሂርኩም ኢኹም። ፈተና ደጊምኩም ግበሩ፣ ሕጂ እንታይ ከም እትፈልጡ ርኣዩ።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsPartListen: 'ምስማዕ', // nieuw, nalezen
     toetsPartWords: 'ቃላት', // nieuw, nalezen
     toetsPartSentences: 'ሓረጋት', // nieuw, nalezen
     toetsListenAsk: { m: 'ስማዕ። እንታይ ማለት እዩ?', f: 'ስምዒ። እንታይ ማለት እዩ?', x: 'ስምዑ። እንታይ ማለት እዩ?' }, // nieuw, nalezen
     toetsNotSure: { m: 'ኣይትፈልጥን ዲኻ? «ኣይፈልጥን» ጠውቕ። ጸገም የብሉን።', f: 'ኣይትፈልጥን ዲኺ? «ኣይፈልጥን» ጠውቒ። ጸገም የብሉን።', x: 'ኣይትፈልጡን ዲኹም? «ኣይፈልጥን» ጠውቑ። ጸገም የብሉን።' }, // nieuw, nalezen
-    toetsMicKeep: { m: 'ቅጂኻ ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኻ ደጊምካ ክትሰምዕ ትኽእል ኢኻ።', f: 'ቅጂኺ ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኺ ደጊምኪ ክትሰምዒ ትኽእሊ ኢኺ።', x: 'ቅጂኹም ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኹም ደጊምኩም ክትሰምዑ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
+    toetsMicKeep: { m: 'ቅዳሕ ድምጽኻ ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኻ ደጊምካ ክትሰምዕ ትኽእል ኢኻ።', f: 'ቅዳሕ ድምጽኺ ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኺ ደጊምኪ ክትሰምዒ ትኽእሊ ኢኺ።', x: 'ቅዳሕ ድምጽኹም ኣብዚ ተሌፎን ጥራይ ይጸንሕ። ድሕሪኡ ድምጽኹም ደጊምኩም ክትሰምዑ ትኽእሉ ኢኹም።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsStartDone: { m: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጥ ኢኻ።', f: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጢ ኢኺ።', x: 'ጽቡቕ ጅማሮ! ድሮ እዚ ትፈልጡ ኢኹም።' }, // nieuw, nalezen
-    toetsEndDone: { m: 'ጽቡቕ ገይርካ! ሕጂ እንታይ ከም እትፈልጥ ርአ።', f: 'ጽቡቕ ገይርኪ! ሕጂ እንታይ ከም እትፈልጢ ርአዪ።', x: 'ጽቡቕ ገይርኩም! ሕጂ እንታይ ከም እትፈልጡ ርአዩ።' }, // nieuw, nalezen
+    toetsEndDone: { m: 'ጽቡቕ ገይርካ! ሕጂ እንታይ ከም እትፈልጥ ርአ።', f: 'ጽቡቕ ገይርኪ! ሕጂ እንታይ ከም እትፈልጢ ርኣዪ።', x: 'ጽቡቕ ገይርኩም! ሕጂ እንታይ ከም እትፈልጡ ርኣዩ።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsYouThen: { m: 'ንስኻ ቅድም', f: 'ንስኺ ቅድም', x: 'ንስኹም ቅድም' }, // nieuw, nalezen
     toetsYouNow: { m: 'ንስኻ ሕጂ', f: 'ንስኺ ሕጂ', x: 'ንስኹም ሕጂ' }, // nieuw, nalezen
     toetsKeepGoing: { m: 'መዓልታዊ ቁሩብ ተለማመድ። ከምኡ ብዝያዳ ትማሃር።', f: 'መዓልታዊ ቁሩብ ተለማመዲ። ከምኡ ብዝያዳ ትማሃሪ።', x: 'መዓልታዊ ቁሩብ ተለማመዱ። ከምኡ ብዝያዳ ትማሃሩ።' }, // nieuw, nalezen
@@ -400,15 +400,15 @@ const lang: HelpLanguageSource = {
     checkNotYet: 'እቶም ትምህርትታት ኣብዚ ኣርእስቲ ይሕግዙ።', // nieuw, nalezen
     checkMark: { m: 'ምልክት ግበር', f: 'ምልክት ግበሪ', x: 'ምልክት ግበሩ' }, // nieuw, nalezen
     checkVia: 'ብፈተና', // nieuw, nalezen
-    checkUndo: { m: 'ግን ነቶም ትምህርትታት ግበሮም', f: 'ግን ነቶም ትምህርትታት ግበርዮም', x: 'ግን ነቶም ትምህርትታት ግበሩዎም' }, // nieuw, nalezen
-    shareInvite: 'ን ስራሐይ ሆላንድኛ ብ Vloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen
+    checkUndo: { m: 'ብዘየገድስ ነቶም ትምህርትታት ግበሮም', f: 'ብዘየገድስ ነቶም ትምህርትታት ግበርዮም', x: 'ብዘየገድስ ነቶም ትምህርትታት ግበሩዎም' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    shareInvite: 'ንስራሐይ ሆላንድኛ ብVloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTry: { m: 'ሎሚ ኣብ ስራሕካ ፈትኖ', f: 'ሎሚ ኣብ ስራሕኪ ፈትንዮ', x: 'ሎሚ ኣብ ስራሕ ፈትንዎ' }, // nieuw, nalezen
-    workTryWhen: 'መዓስ:', // nieuw, nalezen
+    workTryWhen: 'ኩነታት:', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTryThen: { m: 'ሽዑ በል:', f: 'ሽዑ በሊ:', x: 'ሽዑ በሉ:' }, // nieuw, nalezen
     colleagueCard: 'ንብጻይ ስራሕ', // nieuw, nalezen
     colleagueCardHint: { m: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእዮ። ከመይ ጌሩ ክሕግዘካ ከም ዝኽእል ተጻሒፉ ኣሎ።', f: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእይዮ። ከመይ ጌሩ ክሕግዘኪ ከም ዝኽእል ተጻሒፉ ኣሎ።', x: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእዩዎ። ከመይ ጌሩ ክሕግዘኩም ከም ዝኽእል ተጻሒፉ ኣሎ።' }, // nieuw, nalezen
     colleagueShare: { m: 'ናብ ብጻይካ ስደዶ', f: 'ናብ ብጻይኪ ስደድዮ', x: 'ናብ ብጻይኩም ስደዱዎ' }, // nieuw, nalezen
-    coachCardRights: 'ኣርእስታት ብዛዕባ መሰላትካ ብስሞም ኣርኢ', // nieuw, nalezen
+    coachCardRights: 'ኣርእስታት ብዛዕባ መሰላት ብስሞም ምርኣይ', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'ሕጂ ብልቢ፡ ብሆላንድኛ እንታይ ነይሩ?', // nieuw, nalezen
     keptNofM: { m: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጥ ኔርካ።', f: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጢ ኔርኪ።', x: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጡ ኔርኩም።' }, // nieuw, nalezen
     verbSecond: 'ግሲ ኣብ ቦታ 2 እዩ።', // nieuw, nalezen
@@ -424,8 +424,8 @@ const lang: HelpLanguageSource = {
     saveFailed: 'ምዕባለኹም ኣይተዓቀበን። ተሌፎንኩም መሊኡ ድዩ? ቁሩብ ቦታ ግበሩ። ወይ ኣብ ምድላዋት: «ምዕባለኹም ዓቅቡ»።', // nieuw, nalezen
     bewaarNudge: { m: 'ተሌፎንካ ገለ ግዜ ምዕባለኻ ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅብ።', f: 'ተሌፎንኪ ገለ ግዜ ምዕባለኺ ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅቢ።', x: 'ተሌፎንኩም ገለ ግዜ ምዕባለኹም ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅቡ።' }, // nieuw, nalezen
     bewaarGo: { m: 'ሕጂ ዓቅብ', f: 'ሕጂ ዓቅቢ', x: 'ሕጂ ዓቅቡ' }, // nieuw, nalezen
-    backupShare: { m: 'ናባኻ ስደድ', f: 'ናባኺ ስደዲ', x: 'ናባኹም ስደዱ' }, // nieuw, nalezen
-    backupShareHint: { m: 'ነቲ ፋይል ናባኻ ስደዶ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።', f: 'ነቲ ፋይል ናባኺ ስደድዮ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።', x: 'ነቲ ፋይል ናባኹም ስደድዎ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።' }, // nieuw, nalezen
+    backupShare: { m: 'ናብ ርእስኻ ስደድ', f: 'ናብ ርእስኺ ስደዲ', x: 'ናብ ርእስኹም ስደዱ' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    backupShareHint: { m: 'ነቲ ፋይል ናብ ርእስኻ ስደዶ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።', f: 'ነቲ ፋይል ናብ ርእስኺ ስደድዮ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።', x: 'ነቲ ፋይል ናብ ርእስኹም ስደድዎ፡ ንኣብነት ብWhatsApp ወይ ብኢመይል።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     backupMade: { m: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርካ ዓቅቦ። ደሓር ብእኡ ምዕባለኻ ክትመልሶ ትኽእል።', f: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርኪ ዓቅብዮ። ደሓር ብእኡ ምዕባለኺ ክትመልስዮ ትኽእሊ።', x: 'ተወዲኡ። ነዚ ፋይል ጽቡቕ ጌርኩም ዓቅብዎ። ደሓር ብእኡ ምዕባለኹም ክትመልስዎ ትኽእሉ።' }, // nieuw, nalezen
     speakTurnPrompt: { m: 'እንታይ ትብል?', f: 'እንታይ ትብሊ?', x: 'እንታይ ትብሉ?' }, // nieuw, nalezen
     speakTurnExample: 'ኣብነት', // nieuw, nalezen
@@ -434,7 +434,7 @@ const lang: HelpLanguageSource = {
     sceneIntro: { m: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስማዕ። ድሕሪኡ ሕቶታት ይመጹ።', f: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስምዒ። ድሕሪኡ ሕቶታት ይመጹ።', x: 'ከም ኣብ ስራሕ ጫውጫው ኣሎ። ስምዑ። ድሕሪኡ ሕቶታት ይመጹ።' }, // nieuw, nalezen
     buildFront: { m: 'ነታ ምልክት ዘለዋ ቃል ኣብ መጀመርታ ኣቐምጣ', f: 'ነታ ምልክት ዘለዋ ቃል ኣብ መጀመርታ ኣቐምጥያ', x: 'ነታ ምልክት ዘለዋ ቃል ኣብ መጀመርታ ኣቐምጥዋ' }, // nieuw, nalezen
     bridgeTitle: 'ሕግታት ስራሕ', // nieuw, nalezen
-    bridgeText: { m: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጥ ኢኻ። ሕግታት ስራሕ እውን ክትመሃር ትደሊዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።', f: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጢ ኢኺ። ሕግታት ስራሕ እውን ክትመሃሪ ትደልዮ? ሽዑ ኩሉ ብሆላንድኛ እዩ።', x: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጡ ኢኹም። ሕግታት ስራሕ እውን ክትመሃሩ ትደልዩዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።' }, // nieuw, nalezen
+    bridgeText: { m: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጥ ኢኻ። ሕግታት ስራሕ እውን ክትመሃር ትደሊዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።', f: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጢ ኢኺ። ሕግታት ስራሕ እውን ክትመሃሪ ትደልዪ ዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።', x: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጡ ኢኹም። ሕግታት ስራሕ እውን ክትመሃሩ ትደልዩዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     bridgeGo: { m: 'እወ፡ ኣርእየኒ', f: 'እወ፡ ኣርእይኒ', x: 'እወ፡ ኣርእዩኒ' }, // nieuw, nalezen
   },
   gloss: {
@@ -480,7 +480,7 @@ const lang: HelpLanguageSource = {
     'w.naam': 'ስም',
     'w.nieuw': 'ሓድሽ',
     'w.begrijpniet': 'ኣይተረድኣንን',
-    'w.nogeenkeer': 'ሓንሳብ ደጊም',
+    'w.nogeenkeer': 'ሓንሳብ ከኣ', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.langzaam': 'ብቐስታ',
     'w.helpen': 'ምሕጋዝ',
     'w.waar': 'ኣበይ',
@@ -521,7 +521,7 @@ const lang: HelpLanguageSource = {
     'w.klaar': 'ተወዲኡ',
     'w.telaat': 'ምድንጓይ',
     'w.morgen': 'ጽባሕ',
-    'w.ziek': { m: 'ሕሙም', f: 'ሕምምቲ', x: 'ሕሙም / ሕምምቲ' },
+    'w.ziek': { m: 'ሕሙም', f: 'ሕምምቲ', x: 'ሕሙማት' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.bellen': 'ምድዋል (ብተሌፎን)',
     'w.dokter': 'ሓኪም',
     'w.pijn': 'ቃንዛ',
@@ -585,7 +585,7 @@ const lang: HelpLanguageSource = {
     'c.accident.a': 'ወዲቑ። ይደምይ ኣሎ።',
     'l.notyet': 'እዚ ገና ኣይተማሃርክዎን',
     'w.nogniet': 'ገና',
-    'w.mogen': 'ፍቓድ ምርካብ (ይፍቀደኒ)',
+    'w.mogen': 'ፍቓድ ምርካብ (ይፍቀደለይ)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.proberen': 'ምፍታን',
     'w.voordoen': 'ብተግባር ምርኣይ (ቅድም ገይሩ ምርኣይ)',
     'w.gevaarlijk': 'ሓደገኛ',

@@ -2,7 +2,7 @@ import { createElement, type ReactElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { afterEach, beforeAll, describe, expect, it } from 'vitest';
 import { Gate } from '../src/components/Gate';
-import { BottomNav, LanguagePicker } from '../src/components/Screens';
+import { BottomNav, LanguagePicker, Onboarding } from '../src/components/Screens';
 import { Settings } from '../src/components/Settings';
 import { registerRulesCourse } from '../src/content/courses';
 import { toCourseUnits } from '../src/content/regels/course';
@@ -98,34 +98,33 @@ describe('the work-rules track renders in Dutch only', () => {
 describe('the language list', () => {
   const count = (m: string) => (m.match(/class="lang-btn/g) ?? []).length;
 
-  it('offers "Nederlands – ik spreek al Nederlands" only while RULES_TRACK is on', () => {
+  it('offers "Ik spreek al Nederlands" only while RULES_TRACK is on, under the list, not in it', () => {
     setRulesTrack(false);
-    const off = html(createElement(LanguagePicker, { onPick: () => {} }));
-    expect(count(off)).toBe(14);
-    expect(off).not.toContain('ik spreek al Nederlands');
+    const off = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
+    // 14 languages and "Is your language missing?".
+    expect(count(off)).toBe(15);
+    expect(off).not.toContain('Ik spreek al Nederlands');
+    expect(off).not.toContain('onb-nl-dock');
     setRulesTrack(true);
-    // Since 31 October 2026 the work-rules track is a route of its own (RoutePage, Settings ›
-    // "Wat wil je leren?"): the list shows it only when asked to (rules).
+    // Settings' list never has it ("Wat wil je leren?" is there for it).
     expect(count(html(createElement(LanguagePicker, { onPick: () => {} })))).toBe(14);
-    const on = html(createElement(LanguagePicker, { onPick: () => {}, rules: true }));
-    expect(count(on)).toBe(15);
-    expect(on).toMatch(/lang="nl"[^>]*>.*Nederlands.*ik spreek al Nederlands/);
-    // The very last, after English and under a line, with the word "Werkregels": another part of
-    // the app, not one more help language.
-    expect(on.indexOf('>English<')).toBeLessThan(on.indexOf('lang-sep'));
-    expect(on.indexOf('lang-sep')).toBeLessThan(on.indexOf('ik spreek al Nederlands'));
-    expect(on).toMatch(/lang-btn-nl[\s\S]*Werkregels[\s\S]*Nederlands/);
-    expect(off).not.toContain('lang-sep');
+    const on = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
+    expect(count(on)).toBe(16);
+    // After the list, in its own band (fixed at the bottom of the screen, under a line), with the
+    // word "Werkregels": another part of the app, not one more help language.
+    expect(on.indexOf('>English<')).toBeLessThan(on.indexOf('onb-nl-dock'));
+    expect(on.indexOf('</div><div class="onb-nl-dock">')).toBeGreaterThan(0);
+    expect(on).toMatch(/onb-nl-dock[\s\S]*lang="nl"[\s\S]*Werkregels[\s\S]*Ik spreek al Nederlands/);
   });
 
   it('shows flags as decoration (hidden from screen readers), never as an extra button', () => {
     setRulesTrack(true);
-    const m = html(createElement(LanguagePicker, { onPick: () => {}, rules: true }));
-    expect(m.match(/<button/g)).toHaveLength(15);
+    const m = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
+    expect(m.match(/<button/g)).toHaveLength(16);
     // Drawn flags, no flag emoji: the emoji font for flags alone was 709 KB on the first screen.
     expect(m).not.toMatch(/[\u{1F1E6}-\u{1F1FF}]/u);
     expect(m.match(/<svg class="lang-flag"[^>]*aria-hidden="true"/g)).toHaveLength(6);
-    expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(15);
+    expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(16);
     expect(m.match(/class="lang-flag"/g)).toHaveLength(6);
     // A tile of letters for ar, ti, fa, prs, and for es, pt, fr and de (spoken in many countries).
     expect(m.match(/class="lang-sample"/g)).toHaveLength(9);
@@ -133,10 +132,10 @@ describe('the language list', () => {
 
   it('in Settings of the Dutch track: no English names under the languages', () => {
     setRulesTrack(true);
-    const m = html(createElement(LanguagePicker, { onPick: () => {}, current: 'nl', compact: true, showBeta: true, lang: nl(), rules: true }));
+    const m = html(createElement(LanguagePicker, { onPick: () => {}, current: 'nl', compact: true, showBeta: true, lang: nl() }));
     expect(m).not.toContain('>Arabic<');
     expect(m).not.toContain('lang-beta');
     expect(m).toContain('Ik leer Nederlands via het Engels');
-    expect(m).toMatch(/lang-btn lang-btn-nl picked/);
+    expect(m).not.toContain('lang-btn-nl');
   });
 });

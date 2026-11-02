@@ -55,7 +55,7 @@ const lang: HelpLanguageSource = {
     whoInspection: 'Повідом про небезпечну роботу, замалу зарплату чи експлуатацію. Можна анонімно.',
     whoFairwork: 'Тебе експлуатують на роботі, або ти так думаєш.',
     who113: 'Ти думаєш про самогубство або хвилюєшся за когось. Безкоштовно, вдень і вночі.', // nieuw, nalezen
-    whoVeiligThuis: 'Насильство або кривда вдома, щодо тебе чи когось іншого. Безкоштовно, можна анонімно.', // nieuw, nalezen
+    whoVeiligThuis: 'Насильство або жорстоке поводження вдома, щодо тебе чи когось іншого. Безкоштовно, можна анонімно.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     settings: 'Налаштування',
     helpLanguage: 'Мова підказок',
     resetProgress: 'Скинути мій прогрес',
@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Де ти працюєш?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'У якій країні ти працюєш?',
-    countryHint: 'Обери країну, де ти працюєш. Ти отримаєш правила роботи цієї країни. Це залишається на твоєму телефоні. Ми нікуди це не надсилаємо.', // nieuw, nalezen
+    countryHint: 'Ти отримаєш правила роботи цієї країни. Це залишається на твоєму телефоні. Ми нікуди це не надсилаємо.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Нідерланди',
     countryBe: 'Бельгія (Фландрія)',
     tipsNote: 'Ці поради — про роботу в Нідерландах. Це загальна інформація, а не юридична порада.',
@@ -321,14 +321,14 @@ const lang: HelpLanguageSource = {
     remindStop: 'Вимкнути нагадування',
     remindStopped: 'Відкрий файл, щоб прибрати нагадування з календаря.',
     remindStoppedAndroid: 'Видали нагадування власноруч у Google Календарі.',
-    resetKeeps: 'Твої уроки, слова, дні поспіль і сертифікати буде видалено. Твоя мова, код і налаштування залишаться.',
+    resetKeeps: 'Твої уроки, слова, дні поспіль і сертифікати буде видалено. Твоя мова і налаштування залишаться.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Не завантажилося. Чи є інтернет?',
     retry: 'Спробувати ще раз',
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'Що ти вже знаєш?', // nieuw, nalezen
     toetsOffer: 'Приблизно 10 хвилин. Оцінок немає. Це тільки для тебе.', // nieuw, nalezen
-    toetsEndOffer: { m: 'Ти багато навчився. Пройди тест ще раз і подивися, що ти знаєш тепер.', f: 'Ти багато навчилася. Пройди тест ще раз і подивися, що ти знаєш тепер.', x: 'Позаду багато навчання. Пройди тест ще раз і подивися, що ти знаєш тепер.' }, // nieuw, nalezen
+    toetsEndOffer: { m: 'Ти багато навчився. Пройди тест ще раз і подивися, що ти знаєш тепер.', f: 'Ти багато навчилася. Пройди тест ще раз і подивися, що ти знаєш тепер.', x: 'Уже багато вивчено. Пройди тест ще раз і подивися, що ти знаєш тепер.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsPartListen: 'Слухання', // nieuw, nalezen
     toetsPartWords: 'Слова', // nieuw, nalezen
     toetsPartSentences: 'Речення', // nieuw, nalezen
@@ -394,13 +394,13 @@ const lang: HelpLanguageSource = {
     samenSwap: 'Поміняйтеся ролями', // nieuw, nalezen
     samenStop: 'Готово', // nieuw, nalezen
     checkStart: 'Я це знаю: коротка перевірка', // nieuw, nalezen
-    checkPassed: 'Ти вже це знаєш. Позначити цю тему?', // nieuw, nalezen
+    checkPassed: 'Ти вже це знаєш. Позначити цю тему як пройдену?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     checkNoCert: 'Тоді сертифіката ще немає. Ти отримаєш його після уроків.', // nieuw, nalezen
     checkNotYet: 'Уроки допоможуть тобі з цією темою.', // nieuw, nalezen
     checkMark: 'Позначити', // nieuw, nalezen
     checkVia: 'через перевірку', // nieuw, nalezen
     checkUndo: 'Усе ж пройти уроки', // nieuw, nalezen
-    shareInvite: 'Я вчу нідерландську для роботи з Vloertaal. Безкоштовно: {link}', // nieuw, nalezen
+    shareInvite: 'Я вчу нідерландську для роботи за допомогою Vloertaal. Безкоштовно: {link}', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
     workTryWhen: 'Коли:', // nieuw, nalezen
     workTryThen: 'Тоді скажи:', // nieuw, nalezen
@@ -455,7 +455,7 @@ const lang: HelpLanguageSource = {
     'w.ja': 'так',
     'w.nee': 'ні',
     'w.totmorgen': 'до завтра',
-    's.hello.1': { m: 'Привіт, я тут новенький.', f: 'Привіт, я тут новенька.', x: 'Привіт, я тут новенький / новенька.' }, // x: nieuw, nalezen
+    's.hello.1': { m: 'Привіт, я тут новенький.', f: 'Привіт, я тут новенька.', x: 'Привіт, я тут недавно.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.hello.2': 'Доброго ранку, я Алі.',
     's.hello.3': 'Дякую, до завтра!',
     'l.people': 'Люди на роботі',
@@ -512,7 +512,7 @@ const lang: HelpLanguageSource = {
     'w.ziekenhuis': 'лікарня',
     'w.gebeuren': 'ставатися, траплятися',
     's.accident.1': 'Мій колега впав.',
-    's.accident.2': { m: 'Я порізався.', f: 'Я порізалася.', x: 'Я порізався / порізалася.' },
+    's.accident.2': { m: 'Я порізався.', f: 'Я порізалася.', x: 'У мене поріз.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.accident.3': 'Я хочу повідомити про нещасний випадок.',
 
     // Unit: In the warehouse
@@ -557,7 +557,7 @@ const lang: HelpLanguageSource = {
     'w.pijn': 'біль',
     'w.vandaag': 'сьогодні',
     'w.beter': 'краще',
-    's.sick.1': { m: 'Я сьогодні хворий.', f: 'Я сьогодні хвора.', x: 'Я сьогодні хворий / хвора.' }, // x: nieuw, nalezen
+    's.sick.1': { m: 'Я сьогодні хворий.', f: 'Я сьогодні хвора.', x: 'Я сьогодні хворію.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.sick.2': 'У мене болить спина.',
     's.sick.3': 'Я дзвоню лікарю.',
 
@@ -592,7 +592,7 @@ const lang: HelpLanguageSource = {
     'w.voordoen': 'показувати, як (спершу зробити самому)',
     'w.gevaarlijk': 'небезпечний',
     'w.uitleg': 'пояснення',
-    's.notyet.1': { m: 'Я цього ще не навчився.', f: 'Я цього ще не навчилася.', x: 'Я цього ще не навчився / не навчилася.' },
+    's.notyet.1': { m: 'Я цього ще не навчився.', f: 'Я цього ще не навчилася.', x: 'Мене цього ще не навчили.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.notyet.2': 'Мені ще нічого не пояснили.',
     's.notyet.3': { m: 'Мені вже можна робити це самому?', f: 'Мені вже можна робити це самій?', x: 'Мені вже можна робити це самостійно?' }, // x: nieuw, nalezen
     'c.notyet.q': 'Просто спробуй, це легко.',
@@ -607,7 +607,7 @@ const lang: HelpLanguageSource = {
     'c.sick.a': 'Так, сьогодні я залишаюся вдома.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Дзвони 112!',
-    'p.hurt': { m: 'Я поранений.', f: 'Я поранена.', x: 'Я поранений / поранена.' },
+    'p.hurt': { m: 'Я поранений.', f: 'Я поранена.', x: 'У мене травма.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 

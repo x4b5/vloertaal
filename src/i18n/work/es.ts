@@ -4,7 +4,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {},
   gloss: {
-    'u.apply': 'Buscar trabajo',
+    'u.apply': 'Solicitar un empleo', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.cv': 'Tu currículum y tu carta',
     'w.cv': 'el currículum (CV)',
     'w.motivatie': 'la motivación (por qué quieres el trabajo)',
@@ -120,11 +120,11 @@ const t: CultureTranslation = {
     'l.phone': 'Tu teléfono en el trabajo',
     'w.telefoon': 'el teléfono',
     'w.appen': 'mandar un mensaje (por app)',
-    'w.kluisje': 'la taquilla',
+    'w.kluisje': 'la taquilla, el casillero', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.uitzetten': 'apagar',
     'w.prive': 'privado, personal',
     'w.foto': 'la foto',
-    's.phone.1': 'Mi teléfono está en mi taquilla.',
+    's.phone.1': 'Mi teléfono está en mi casillero.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.phone.2': 'Apago mi teléfono.',
     's.phone.3': '¿Puedo hacer una foto aquí?',
     'c.phone.q': 'Nada de teléfono cerca de la máquina, ¿de acuerdo?',
@@ -142,8 +142,8 @@ const t: CultureTranslation = {
     'c.smoking.q': '¿Vienes a fumar?',
     'c.smoking.a': 'No, todavía no tengo pausa.',
     'l.clock': 'Fichar y llegar a tiempo',
-    'w.inklokken': 'fichar al entrar',
-    'w.uitklokken': 'fichar al salir',
+    'w.inklokken': 'fichar al entrar, marcar la entrada', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.uitklokken': 'fichar al salir, marcar la salida', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.pasje': 'la tarjeta (de empleado)',
     'w.prikklok': 'el reloj para fichar',
     'w.optijd': 'a tiempo',
@@ -317,7 +317,7 @@ const t: CultureTranslation = {
     'c.certs.a': 'No, pero me gustaría sacarlo.',
     'l.diploma': 'Tu diploma y la formación',
     'w.diploma': 'el diploma',
-    'w.waarderen': 'hacer valorar (un diploma)',
+    'w.waarderen': 'hacer evaluar (un diploma)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.training': 'la formación, el curso',
     'w.verplicht': 'obligatorio',
     'w.werktijd': 'el tiempo de trabajo',
@@ -386,7 +386,7 @@ const t: CultureTranslation = {
     'w.stoplicht': 'el semáforo',
     'w.bel': 'el timbre',
     's.bike.1': 'Voy al trabajo en bicicleta.',
-    's.bike.2': '¡Enciende la luz!',
+    's.bike.2': '¡Enciende la luz de la bici!', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.bike.3': 'Ponle el candado a tu bicicleta.',
     'c.bike.q': '¿Cómo vas al trabajo?',
     'c.bike.a': 'En bicicleta, veinte minutos.',
@@ -433,7 +433,7 @@ const t: CultureTranslation = {
     'w.ladder': 'la escalera de mano',
     'w.boor': 'el taladro',
     'w.hamer': 'el martillo',
-    'w.beton': 'el hormigón',
+    'w.beton': 'el hormigón, el concreto', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.kraan': 'la grúa',
     's.tools.1': 'Pásame el martillo un momento.',
     's.tools.2': 'La escalera está apoyada en el andamio.',
@@ -499,7 +499,7 @@ const t: CultureTranslation = {
     'w.gevallen': 'caído',
     's.privacy.1': 'La señora se ha caído.',
     's.privacy.2': 'Se lo comunico a la enfermera.',
-    's.privacy.3': 'En casa no hablo de los clientes.',
+    's.privacy.3': 'En casa no hablo de las personas que cuido.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.privacy.q': '¿Le puedes dar las pastillas al señor Jansen?',
     'c.privacy.a': 'No, no me está permitido. Voy a buscar a la enfermera.',
     'u.horeca': 'En la hostelería',
@@ -523,7 +523,7 @@ const t: CultureTranslation = {
     'w.afruimen': 'recoger (la mesa)',
     'w.fooi': 'la propina',
     's.service.1': '¿Qué desea tomar?',
-    's.service.2': '¿Le tomo nota?',
+    's.service.2': '¿Puedo tomarle el pedido?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.service.3': 'Recojo la mesa.',
     'c.service.q': '¿Nos trae la cuenta?',
     'c.service.a': 'Claro, ya voy.',
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.respect.o3': 'Tú también haces bromas sobre su origen.',
     'c.respect.w': 'Esas bromas no se aceptan en el trabajo. Contarlo es normal: la empresa tiene que mantener el lugar de trabajo seguro para todos.',
     'c.health': 'Pausas y horas de trabajo',
-    'c.health.b': 'La ley protege tu salud. ¿Trabajas más de 5,5 horas? Entonces tienes como mínimo 30 minutos de pausa (pueden ser 2 veces 15 minutos). ¿Más de 10 horas? Entonces como mínimo 45 minutos. Un cao puede tener normas de pausas un poco diferentes. Puedes trabajar como máximo 12 horas en un turno y 60 horas en una semana. ¿Tienes menos de 18 años? Entonces puedes trabajar menos horas como máximo. Tu empresa te tiene que dar gratis el equipo de protección, como zapatos de seguridad o guantes. ¿Trabajo peligroso o un sueldo demasiado bajo? Puedes denunciarlo ante la Nederlandse Arbeidsinspectie, también sin dar tu nombre. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.', // nieuw, nalezen
+    'c.health.b': 'La ley protege tu salud. ¿Trabajas más de 5,5 horas? Entonces tienes como mínimo 30 minutos de pausa (pueden ser 2 pausas de 15 minutos). ¿Más de 10 horas? Entonces como mínimo 45 minutos. Un cao puede tener normas de pausas un poco diferentes. Puedes trabajar como máximo 12 horas en un turno y 60 horas en una semana. ¿Tienes menos de 18 años? Entonces el máximo de horas que puedes trabajar es más bajo. Tu empresa te tiene que dar gratis el equipo de protección, como zapatos de seguridad o guantes. ¿Trabajo peligroso o un sueldo demasiado bajo? Puedes denunciarlo ante la Nederlandse Arbeidsinspectie, también sin dar tu nombre. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.health.p': 'Todavía no he tenido pausa.',
     'c.health.s': 'Has trabajado 6 horas sin pausa. Tu encargado te pide que sigas. ¿Qué haces?',
     'c.health.o1': 'Dices que ahora necesitas tu pausa.', // nagelezen (2e lezing)
@@ -689,7 +689,7 @@ const t: CultureTranslation = {
     'c.health.o3': 'Dejas el trabajo y te vas a casa sin decir nada.',
     'c.health.w': 'Cuando trabajas más de 5,5 horas, la pausa es la ley, no un favor. Descansar también te ayuda a trabajar de forma segura.',
     'c.rights': 'Discriminación y despido',
-    'c.rights.b': 'La discriminación en el trabajo está prohibida, por ejemplo por tu origen, tu religión o tu género. Tu empresa no te puede despedir así como así: normalmente necesita el permiso del UWV o de un juez, o tu acuerdo. (En el periodo de prueba o al final de un contrato temporal hay otras normas.) No firmes un papel sobre tu despido que no entiendes. ¿Firmaste un acuerdo para terminar tu trabajo (vaststellingsovereenkomst)? Entonces normalmente todavía puedes anularlo por escrito en un plazo de 14 días. Pide ayuda primero al sindicato (por ejemplo FNV), a una oficina contra la discriminación o al Juridisch Loket (consejo legal gratis). Es información general. Para tu situación: pregunta al sindicato, al Juridisch Loket o a FairWork.',
+    'c.rights.b': 'La discriminación en el trabajo está prohibida, por ejemplo por tu origen, tu religión o tu género. Tu empresa no te puede despedir así como así: normalmente necesita el permiso del UWV o de un juez, o tu acuerdo. (En el periodo de prueba o al final de un contrato temporal hay otras normas.) No firmes ningún papel sobre tu despido que no entiendas. ¿Firmaste un acuerdo para terminar tu trabajo (vaststellingsovereenkomst)? Entonces normalmente todavía puedes anularlo por escrito en un plazo de 14 días. Pide ayuda primero al sindicato (por ejemplo FNV), a una oficina contra la discriminación o al Juridisch Loket (consejo legal gratis). Es información general. Para tu situación: pregunta al sindicato, al Juridisch Loket o a FairWork.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.rights.p': 'Primero quiero pedir consejo.',
     'c.rights.s': 'Tu jefe te da un papel: “Firma hoy, así te vas de mutuo acuerdo.” No lo entiendes bien. ¿Qué haces?',
     'c.rights.o1': 'Todavía no firmas. Primero pides consejo.', // nieuw, nalezen
@@ -761,13 +761,13 @@ const t: CultureTranslation = {
     'c.diploma.o3': 'Tienes que pagar tú la formación.',
     'c.diploma.w': 'Si una formación es obligatoria para tu trabajo, la paga la empresa y cuenta como tiempo de trabajo. Si no está claro, pide consejo.',
     'c.doctor': '¿Médico o 112?',
-    'c.doctor.b': 'Inscríbete con un médico de cabecera (huisarts) cerca de tu casa. ¿Necesitas atención urgente por la tarde, por la noche o el fin de semana? Llama a la huisartsenpost. Llama al 112 solo en una emergencia: peligro de muerte, fuego o un delito que pasa ahora. Los medicamentos los recibes en la farmacia (apotheek).',
+    'c.doctor.b': 'Inscríbete con un médico de cabecera (huisarts) cerca de tu casa. ¿Necesitas atención urgente por la tarde, por la noche o el fin de semana? Llama a la huisartsenpost. Llama al 112 solo en una emergencia: peligro de muerte, incendio o un delito que está pasando ahora. Los medicamentos los recibes en la farmacia (apotheek).', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.doctor.p': 'Quiero inscribirme con el médico de cabecera.',
     'c.doctor.s': 'Es sábado por la noche. Tu hijo tiene mucha fiebre, pero está despierto y respira normal. ¿Qué haces?',
     'c.doctor.o1': 'Llamas a la huisartsenpost.',
     'c.doctor.o2': 'Llamas al 112.',
     'c.doctor.o3': 'Esperas hasta el lunes y no haces nada.',
-    'c.doctor.w': 'La huisartsenpost ayuda con la atención urgente fuera del horario de consulta. El 112 es para emergencias: peligro de muerte, fuego o un delito que pasa ahora.',
+    'c.doctor.w': 'La huisartsenpost ayuda con la atención urgente fuera del horario de consulta. El 112 es para emergencias: peligro de muerte, incendio o un delito que está pasando ahora.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.insurance': 'El seguro médico',
     'c.insurance.b': 'Si vives o trabajas en los Países Bajos, normalmente es obligatorio tener un seguro médico básico. Pagas una cuota cada mes. Cada año hay una franquicia (eigen risico): los primeros gastos los pagas tú. La cantidad cambia: pregúntala a tu aseguradora. Las visitas al médico de cabecera (huisarts) no cuentan para la franquicia. Con ingresos bajos puedes recibir una ayuda para el seguro médico (zorgtoeslag). Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
     'c.insurance.p': 'Necesito un seguro médico. ¿Me puede ayudar?',
@@ -915,7 +915,7 @@ const t: CultureTranslation = {
     's.translate.1': 'Lo traduzco con mi teléfono.',
     's.translate.2': '¿Puedo traducir esto un momento?',
     's.translate.3': '¿Puede hablarle un momento a mi teléfono?',
-    'c.translate.q': '¿Qué pone en esa nota?',
+    'c.translate.q': '¿Qué dice esa nota?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.translate.a': 'Espera un momento, lo traduzco.',
     'l.understood': 'Entender y que te entiendan',
     'w.herhalen': 'repetir',
@@ -1129,7 +1129,7 @@ const t: CultureTranslation = {
     'w.mens': 'el ser humano, la persona',
     'w.computer': 'la computadora, el ordenador',
     'w.tempo': 'el ritmo (de trabajo)',
-    'w.automatisch': 'automático, solo',
+    'w.automatisch': 'automático (funciona solo)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.besluit': 'la decisión',
     's.aiplan.1': '¿Quién ha tomado esta decisión?',
     's.aiplan.2': 'Quiero hablar con una persona.',
@@ -1245,7 +1245,7 @@ const t: CultureTranslation = {
     'w.taalles': "la clase de idioma",
     's.permit.1': "¿Puedo trabajar aquí con mis papeles?",
     's.permit.2': { m: "¿Soy empleado o autónomo?", f: "¿Soy empleada o autónoma?", x: '¿Trabajo por cuenta ajena o por cuenta propia?' }, // x: nieuw, nalezen
-    's.permit.3': "Trabajo a llamada.",
+    's.permit.3': "Trabajo cuando me llaman (oproepkracht).", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.permit.q': "¿Puedes trabajar el martes?",
     'c.permit.a': "No, ese día tengo clase de idioma. El miércoles sí puedo.",
     'l.kids': "Los hijos y el trabajo",
@@ -1371,7 +1371,7 @@ const t: CultureTranslation = {
     's.workshop.3': "¡Cuidado con las chispas!", // nieuw, nalezen
     'c.workshop.q': "¿Por qué llevas gafas?", // nieuw, nalezen
     'c.workshop.a': "Al serrar, me pueden entrar trocitos en el ojo.", // nieuw, nalezen
-    'l.power': "Primero, la corriente fuera", // nieuw, nalezen
+    'l.power': "Primero, corta la corriente", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.stroom': "la corriente, la electricidad", // nieuw, nalezen
     'w.kabel': "el cable", // nieuw, nalezen
     'w.stekker': "el enchufe (la clavija)", // nieuw, nalezen
@@ -1398,7 +1398,7 @@ const t: CultureTranslation = {
     'c.garage.a': "Sí. ¿Dónde están los neumáticos de invierno?", // nieuw, nalezen
     'l.carjob': "El cliente decide", // nieuw, nalezen
     'w.proefrit': "la prueba de conducción", // nieuw, nalezen
-    'w.rijbewijs': "el carné de conducir", // nieuw, nalezen
+    'w.rijbewijs': "el carné de conducir, la licencia de conducir", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.akkoord': "de acuerdo, vale (dices que sí)", // nieuw, nalezen
     'w.kosten': "los costes (lo que hay que pagar)", // nieuw, nalezen
     'w.repareren': "reparar, arreglar", // nieuw, nalezen
@@ -1449,12 +1449,12 @@ const t: CultureTranslation = {
     'l.police': "La policía y tus derechos", // nieuw, nalezen
     'w.agent': "el agente de policía", // nieuw, nalezen
     'w.boete': "la multa (dinero que pagas como castigo)", // nieuw, nalezen
-    'w.bezwaar': "la reclamación (dices por escrito que no estás de acuerdo)", // nieuw, nalezen
+    'w.bezwaar': "el recurso (dices por escrito que no estás de acuerdo)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.rechter': "el juez, la jueza", // nieuw, nalezen
     'w.advocaat': "el abogado, la abogada", // nieuw, nalezen
     'w.wet': "la ley", // nieuw, nalezen
     's.police.1': "Me han puesto una multa.", // nieuw, nalezen
-    's.police.2': "Quiero presentar una reclamación.", // nieuw, nalezen
+    's.police.2': "Quiero presentar un recurso.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.police.3': "Quiero hablar con un abogado.", // nieuw, nalezen
     'c.police.q': "¿Me enseña su documento de identidad?", // nieuw, nalezen
     'c.police.a': "Sí, aquí lo tiene. ¿Qué pasa?", // nieuw, nalezen

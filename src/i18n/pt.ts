@@ -53,7 +53,7 @@ const lang: HelpLanguageSource = {
     who112: 'Emergência: perigo de vida, incêndio ou um crime que está a acontecer agora.',
     whoLegal: 'Conselho grátis sobre o teu contrato, o teu salário ou um despedimento.',
     whoInspection: 'Denuncia trabalho perigoso, salário baixo demais ou exploração. Podes fazê-lo de forma anónima.',
-    whoFairwork: { m: 'Estás a ser explorado no trabalho, ou achas que sim.', f: 'Estás a ser explorada no trabalho, ou achas que sim.', x: 'Estás a ser explorado/a no trabalho, ou achas que sim.' },
+    whoFairwork: { m: 'Estás a ser explorado no trabalho, ou achas que sim.', f: 'Estás a ser explorada no trabalho, ou achas que sim.', x: 'Alguém está a explorar-te no trabalho, ou achas que sim.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     who113: 'Pensas em pôr fim à vida, ou alguém te preocupa. Gratuito, dia e noite.', // nieuw, nalezen
     whoVeiligThuis: 'Violência ou abuso em casa, contra ti ou contra outra pessoa. Gratuito, também sem dar o nome.', // nieuw, nalezen
     settings: 'Definições',
@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Onde trabalhas?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Em que país trabalhas?',
-    countryHint: 'Escolhe o país onde trabalhas. Recebes as regras de trabalho desse país. Isto fica no teu telemóvel. Não o enviamos para lado nenhum.', // nieuw, nalezen
+    countryHint: 'Recebes as regras de trabalho desse país. Isto fica no teu telemóvel. Não o enviamos para lado nenhum.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Países Baixos',
     countryBe: 'Bélgica (Flandres)',
     tipsNote: 'Estas dicas são sobre o trabalho nos Países Baixos. Informação geral, não é aconselhamento jurídico.',
@@ -123,7 +123,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Amanhã: {n} palavra', many: 'Amanhã: {n} palavras', other: 'Amanhã: {n} palavras' },
     firstWordsTomorrow: 'Amanhã voltam as tuas primeiras palavras',
     extraRound: 'Ronda extra',
-    wordsStrongerN: { one: '{n} palavra mais firme', many: '{n} palavras mais firmes', other: '{n} palavras mais firmes' },
+    wordsStrongerN: { one: '{n} palavra que já sabes melhor', many: '{n} palavras que já sabes melhor', other: '{n} palavras que já sabes melhor' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     noMistakes: 'Sem erros',
     nextUp: 'A seguir',
     installTitle: 'Põe o Vloertaal no ecrã principal',
@@ -192,7 +192,7 @@ const lang: HelpLanguageSource = {
     wordsUnitOne: 'palavra',
     wordsLearnedOne: '{n} palavra aprendida',
     tomorrowOne: 'Amanhã: {n} palavra',
-    wordsStrongerOne: '{n} palavra mais firme',
+    wordsStrongerOne: '{n} palavra que já sabes melhor', // nieuw, nalezen (AI-correctie 2 nov 2026)
     recordOne: 'O teu recorde: {n} dia',
     streakStoppedOne: 'A tua série parou em {n} dia. Começa de novo hoje.',
     letterTiles: 'Letras',
@@ -267,7 +267,7 @@ const lang: HelpLanguageSource = {
     otherTopicLink: 'Outro tema',
     remindAsk: 'Queres que te lembremos todos os dias?',
     remindYes: 'Sim, depois do trabalho',
-    remindNo: { m: 'Não, obrigado', f: 'Não, obrigada', x: 'Não, obrigado / obrigada' }, // x: nieuw, nalezen
+    remindNo: { m: 'Não, obrigado', f: 'Não, obrigada', x: 'Não, prefiro que não' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     remindPickTime: 'Quando te devemos lembrar?',
     certSaveShare: 'Guardar ou partilhar',
     pauseTitle: 'Pausa',
@@ -305,7 +305,7 @@ const lang: HelpLanguageSource = {
     chatWhichQuestion: 'Que pergunta combina com esta resposta?',
     reviewWaiting: 'Ainda há {n} palavras à espera. Voltam nos próximos dias.',
     factTitle: 'Sabias?',
-    fact3: { m: 'Não estás sozinho: mais de 3 milhões de adultos nos Países Baixos têm dificuldade em ler, fazer contas ou usar o computador. Praticar ajuda.', f: 'Não estás sozinha: mais de 3 milhões de adultos nos Países Baixos têm dificuldade em ler, fazer contas ou usar o computador. Praticar ajuda.', x: 'Não estás sozinho/a: mais de 3 milhões de adultos nos Países Baixos têm dificuldade em ler, fazer contas ou usar o computador. Praticar ajuda.' },
+    fact3: { m: 'Não estás sozinho: mais de 3 milhões de adultos nos Países Baixos têm dificuldade em ler, fazer contas ou usar o computador. Praticar ajuda.', f: 'Não estás sozinha: mais de 3 milhões de adultos nos Países Baixos têm dificuldade em ler, fazer contas ou usar o computador. Praticar ajuda.', x: 'Não és a única pessoa: mais de 3 milhões de adultos nos Países Baixos têm dificuldade em ler, fazer contas ou usar o computador. Praticar ajuda.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     fact7: 'Dos migrantes que falam muito bem neerlandês, 69 em cada 100 têm trabalho pago.',
     fact14: 'Muitas bibliotecas têm um Taalhuis (“casa da língua”): ajuda grátis para continuares a aprender neerlandês.',
     fact30: 'Praticar um pouco todos os dias resulta melhor do que muito de vez em quando. Já o fizeste durante 30 dias!',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Parar o lembrete',
     remindStopped: 'Abre o ficheiro para tirar o lembrete do teu calendário.',
     remindStoppedAndroid: 'Apaga tu o lembrete no Google Calendar.',
-    resetKeeps: 'As tuas lições, palavras, série de dias e certificados são apagados. A tua língua, o teu código e as tuas definições ficam.',
+    resetKeeps: 'As tuas lições, palavras, série de dias e certificados são apagados. A tua língua e as tuas definições ficam.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Não carregou. Tens internet?',
     retry: 'Tentar de novo',
@@ -349,7 +349,7 @@ const lang: HelpLanguageSource = {
     tempo: 'Velocidade', // nieuw, nalezen
     tempoCalm: 'Devagar', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
-    tempoHint: 'Devagar é lento e claro. Normal é como falam os colegas. Escolhe «Normal» se já percebes muito.', // nieuw, nalezen
+    tempoHint: '«Devagar» é uma fala lenta e clara. «Normal» é como falam os colegas. Escolhe «Normal» se já percebes muito.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Mostra como te está a correr', // nieuw, nalezen
     coachCardIntro: 'Este cartão mostra o teu progresso. Mostra-o ao teu professor, coach ou chefe. Tu decides.', // nieuw, nalezen
@@ -358,7 +358,7 @@ const lang: HelpLanguageSource = {
     coachTopics: 'Temas terminados', // nieuw, nalezen
     coachDays: 'Dias de prática nas últimas 4 semanas', // nieuw, nalezen
     coachLast: 'Última lição, com a data', // nieuw, nalezen
-    coachCode: 'Código: os mesmos números, em curto, para um resumo do grupo. Sem nome.', // nieuw, nalezen
+    coachCode: 'Código: os mesmos números, em versão curta, para um resumo do grupo. Sem nome.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'O telemóvel ouve (experimental)', // nieuw, nalezen // nagelezen AI 31 okt
     listenHint: 'Depois de falares, o telemóvel diz se te percebeu. Isto acontece no próprio telemóvel. Nada vai para nós nem para outros.', // nieuw, nalezen
@@ -413,7 +413,7 @@ const lang: HelpLanguageSource = {
     verbSecond: 'O verbo fica no lugar 2.', // nieuw, nalezen
     calmScreen: 'Ecrã calmo', // nieuw, nalezen
     calmAuto: 'Como o teu telemóvel', // nieuw, nalezen
-    calmHint: 'Ligado: nada se mexe, não há festa pela tua sequência depois de uma lição, e a tua sequência e as palavras não aparecem no ecrã inicial.', // nieuw, nalezen
+    calmHint: 'Ligado: nada se mexe, não há festa pela tua série depois de uma lição, e a tua série e as palavras não aparecem no ecrã inicial.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     infoMore: 'Mais explicação', // nieuw, nalezen
     tipsAbout: 'Sobre estas dicas', // nieuw, nalezen
     aboutMore: 'Ler mais sobre o Vloertaal', // nieuw, nalezen
@@ -490,7 +490,7 @@ const lang: HelpLanguageSource = {
     'w.veiligheidsschoenen': 'os sapatos de segurança',
     'w.hesje': 'o colete refletor',
     'w.bril': 'os óculos de proteção',
-    'w.dragen': 'usar, ter vestido',
+    'w.dragen': 'usar (roupa ou equipamento)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.gear.1': 'Usa sempre o teu capacete.',
     's.gear.2': 'Onde estão as luvas?',
     's.gear.3': 'Estou com o meu colete refletor.',
@@ -549,7 +549,7 @@ const lang: HelpLanguageSource = {
     'w.morgen': 'amanhã',
     's.shift.1': 'O meu turno começa às sete horas.',
     's.shift.2': 'Quando é a pausa?',
-    's.shift.3': { m: 'Desculpa, estou atrasado.', f: 'Desculpa, estou atrasada.', x: 'Desculpa, estou atrasado / atrasada.' },
+    's.shift.3': { m: 'Desculpa, estou atrasado.', f: 'Desculpa, estou atrasada.', x: 'Desculpa o atraso.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.sick': 'Avisar que estás doente',
     'w.ziek': 'doente',
     'w.bellen': 'ligar (por telefone)',
@@ -594,7 +594,7 @@ const lang: HelpLanguageSource = {
     'w.uitleg': 'a explicação',
     's.notyet.1': 'Isto ainda não aprendi.',
     's.notyet.2': 'Ainda ninguém me explicou isto.',
-    's.notyet.3': { m: 'Já posso fazer isto sozinho?', f: 'Já posso fazer isto sozinha?', x: 'Já posso fazer isto sozinho / sozinha?' },
+    's.notyet.3': { m: 'Já posso fazer isto sozinho?', f: 'Já posso fazer isto sozinha?', x: 'Já posso fazer isto por minha conta?' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.notyet.q': 'Experimenta, é fácil.',
     'c.notyet.a': 'Podes mostrar-me primeiro como se faz?',
     'c.things.q': 'Para onde vai a caixa?',
@@ -607,7 +607,7 @@ const lang: HelpLanguageSource = {
     'c.sick.a': 'Sim, hoje fico em casa.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Liga para o 112!',
-    'p.hurt': { m: 'Estou ferido.', f: 'Estou ferida.', x: 'Estou ferido / ferida.' },
+    'p.hurt': { m: 'Estou ferido.', f: 'Estou ferida.', x: 'Magoei-me.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 

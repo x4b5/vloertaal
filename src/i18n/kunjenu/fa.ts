@@ -19,7 +19,7 @@ const t: CultureTranslation = {
     'kjn.u.help.1': "می‌توانم بگویم که متوجه نمی‌شوم.", // nieuw, nalezen
     'kjn.u.help.2': "می‌توانم از کسی بخواهم آهسته‌تر حرف بزند.", // nieuw, nalezen
     'kjn.u.tools.1': "می‌توانم از کسی بخواهم آن را بنویسد یا نشانم بدهد.", // nieuw, nalezen
-    'kjn.u.tools.2': "می‌توانم یک کار را تکرار کنم تا مطمئن شوم درست فهمیده‌ام.", // nieuw, nalezen
+    'kjn.u.tools.2': "می‌توانم کاری را که از من خواسته‌اند دوباره بگویم تا مطمئن شوم درست فهمیده‌ام.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "می‌توانم بگویم که می‌خواهم هلندی تمرین کنم.", // nieuw, nalezen
     'kjn.u.data.1': "می‌توانم اسمم را حرف‌به‌حرف بگویم.", // nieuw, nalezen
     'kjn.u.data.2': "می‌توانم بگویم چه روزهایی می‌توانم کار کنم.", // nieuw, nalezen
@@ -45,7 +45,7 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "می‌توانم بگویم فیش حقوقی‌ام درست نیست.", // nieuw, nalezen
     'kjn.u.pay.2': "می‌توانم کلمه‌هایی مثل bruto و netto را بخوانم.", // nieuw, nalezen
     'kjn.u.leave.1': "می‌توانم مرخصی درخواست کنم.", // nieuw, nalezen
-    'kjn.u.leave.2': "می‌توانم بیماری‌ام را اطلاع بدهم و برگشتنم را هم.", // nieuw, nalezen
+    'kjn.u.leave.2': "می‌توانم خبر بدهم که مریضم، و وقتی خوب شدم هم خبر بدهم.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.contact.1': "می‌توانم تلفن کنم و بگویم چه کسی هستم.", // nieuw, nalezen
     'kjn.u.contact.2': "می‌توانم از کسی بخواهم دوباره به من زنگ بزند.", // nieuw, nalezen
     'kjn.u.contact.3': "می‌توانم یک پیام کوتاه به محل کارم بنویسم.", // nieuw, nalezen
@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'kjn.u.teamwork.3': "می‌توانم بپرسم اول چه کار باید بکنم.", // nieuw, nalezen
     'kjn.u.social.1': "می‌توانم در وقت استراحت کمی گپ بزنم.", // nieuw, nalezen
     'kjn.u.social.2': "می‌توانم بگویم که اشتباه کردم.", // nieuw, nalezen
-    'kjn.u.social.3': "می‌توانم بگویم که چیزی از حد من می‌گذرد.", // nieuw, nalezen
+    'kjn.u.social.3': "می‌توانم بگویم که چیزی از حد و مرز من گذشته است.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.sayings.1': "می‌توانم چند اصطلاح رایج را بفهمم.", // nieuw, nalezen
     'kjn.u.sayings.2': "می‌توانم بگویم که چیزی خیلی آسان است (een eitje).", // nieuw, nalezen
     'kjn.u.rights.1': "می‌توانم بگویم که حق استراحت دارم.", // nieuw, nalezen

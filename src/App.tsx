@@ -702,11 +702,12 @@ export default function App() {
     return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
 
-  // First run, one question per page: the language (an app to learn Dutch can't start in Dutch),
+  // First run, one question per page: the language (an app to learn Dutch can't start in Dutch;
+  // "Ik spreek al Nederlands" is the last card of the list, the work-rules track), then
   // "Woman or man?" (only for a help language with gender, so the password page already uses the
   // right form), the password, then the sector. Every page has a back arrow to the one before
   // (and the phone's Back does the same). The admin page above stays reachable with #beheer.
-  if (!progress.onboarded) return <Onboarding onDone={setLang} startWithList={langAgain} previous={langAgain ? progress.helpLang : undefined} />;
+  if (!progress.onboarded) return <Onboarding onDone={setLang} startWithList={langAgain} />;
   if (step === 'gender') {
     return (
       <GenderScreen
@@ -1067,6 +1068,7 @@ export default function App() {
           // Nothing is kept yet: ticking off is the learner's choice on the next screen.
           onFinish={({ right, total }) => replace({ name: 'check-result', unit: unit.id, right, total })}
           sector={progress.sector}
+          check
         />
       );
     }

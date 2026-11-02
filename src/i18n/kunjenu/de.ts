@@ -19,7 +19,7 @@ const t: CultureTranslation = {
     'kjn.u.help.1': "Ich kann sagen, dass ich es nicht verstehe.", // nieuw, nalezen
     'kjn.u.help.2': "Ich kann jemanden bitten, langsamer zu sprechen.", // nieuw, nalezen
     'kjn.u.tools.1': "Ich kann jemanden bitten, es aufzuschreiben oder zu zeigen.", // nieuw, nalezen
-    'kjn.u.tools.2': "Ich kann eine Aufgabe wiederholen, um zu prüfen, ob ich sie verstanden habe.", // nieuw, nalezen
+    'kjn.u.tools.2': "Ich kann eine Anweisung wiederholen, um zu prüfen, ob ich sie verstanden habe.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Ich kann sagen, dass ich Niederländisch üben will.", // nieuw, nalezen
     'kjn.u.data.1': "Ich kann meinen Namen buchstabieren.", // nieuw, nalezen
     'kjn.u.data.2': "Ich kann sagen, an welchen Tagen ich arbeiten kann.", // nieuw, nalezen
@@ -48,7 +48,7 @@ const t: CultureTranslation = {
     'kjn.u.leave.2': "Ich kann mich krankmelden und wieder gesund melden.", // nieuw, nalezen
     'kjn.u.contact.1': "Ich kann anrufen und sagen, wer ich bin.", // nieuw, nalezen
     'kjn.u.contact.2': "Ich kann jemanden bitten, mich zurückzurufen.", // nieuw, nalezen
-    'kjn.u.contact.3': "Ich kann eine kurze Nachricht an meine Arbeit schreiben.", // nieuw, nalezen
+    'kjn.u.contact.3': "Ich kann meinem Arbeitgeber eine kurze Nachricht schreiben.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.house.1': "Ich kann Regeln wie „Roken verboden“ lesen.", // nieuw, nalezen
     'kjn.u.house.2': "Ich kann fragen, wo ich rauchen darf.", // nieuw, nalezen
     'kjn.u.house.3': "Ich kann sagen, dass etwas nicht erlaubt ist.", // nieuw, nalezen
@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'kjn.u.teamwork.3': "Ich kann fragen, was ich zuerst machen muss.", // nieuw, nalezen
     'kjn.u.social.1': "Ich kann in der Pause ein bisschen plaudern.", // nieuw, nalezen
     'kjn.u.social.2': "Ich kann sagen, dass ich einen Fehler gemacht habe.", // nieuw, nalezen
-    'kjn.u.social.3': "Ich kann sagen, dass etwas über meine Grenze geht.", // nieuw, nalezen
+    'kjn.u.social.3': "Ich kann sagen, dass mir etwas zu weit geht.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.sayings.1': "Ich kann ein paar übliche Redewendungen verstehen.", // nieuw, nalezen
     'kjn.u.sayings.2': "Ich kann sagen, dass etwas sehr leicht ist (een eitje).", // nieuw, nalezen
     'kjn.u.rights.1': "Ich kann sagen, dass ich ein Recht auf Pause habe.", // nieuw, nalezen

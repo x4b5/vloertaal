@@ -25,7 +25,7 @@ export const ar: Gloss = {
     "be.c.doctor.o3": { m: "انتظر حتى يوم الاثنين ولا تفعل شيئاً.", f: "انتظري حتى يوم الاثنين ولا تفعلي شيئاً." }, // = c.doctor.o3
     "be.c.doctor.w": "الرقم 1733 يساعد في إيجاد طبيب خارج ساعات العمل. 112 لحالات الطوارئ: خطر على الحياة، أو حريق، أو جريمة تحدث الآن.", // nieuw, nalezen
     "be.c.insurance": "صندوق التأمين الصحي (ziekenfonds)", // nieuw, nalezen
-    "be.c.insurance.b": { m: 'في بلجيكا يجب الانضمام إلى صندوق تأمين صحي: ziekenfonds (mutualiteit)، أو Hulpkas (HZIV). الأفضل فعل ذلك عند بداية العمل. الـziekenfonds يرد جزءاً من تكاليف الطبيب والمستشفى والأدوية. الجزء الذي يُدفع شخصياً هو الـremgeld. مع دخل منخفض قد تحصل على verhoogde tegemoetkoming: عندها تدفع أقل. مرض لمدة طويلة؟ عندها يدفع الـziekenfonds أيضاً تعويضاً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'في بلجيكا يجب الانضمام إلى صندوق تأمين صحي: ziekenfonds (mutualiteit)، أو Hulpkas (HZIV). الأفضل فعل ذلك عند بداية العمل. الـziekenfonds يرد جزءاً من تكاليف الطبيب والمستشفى والأدوية. الجزء الذي يُدفع شخصياً هو الـremgeld. مع دخل منخفض قد تحصلين على verhoogde tegemoetkoming: عندها تدفعين أقل. مرض لمدة طويلة؟ عندها يدفع الـziekenfonds أيضاً تعويضاً. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'في بلجيكا يجب الانضمام إلى صندوق تأمين صحي: ziekenfonds (mutualiteit)، أو Hulpkas (HZIV). الأفضل فعل ذلك عند بداية العمل. الـziekenfonds يرد جزءاً من تكاليف الطبيب والمستشفى والأدوية. الجزء الذي يُدفع شخصياً هو الـremgeld. مع دخل منخفض قد يوجد حق في verhoogde tegemoetkoming: عندها يكون الدفع أقل. مرض لمدة طويلة؟ عندها يدفع الـziekenfonds أيضاً تعويضاً. معلومات عامة. للوضع الشخصي: السؤال عند صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.insurance.b": { m: 'في بلجيكا يجب الانضمام إلى صندوق تأمين صحي: ziekenfonds (mutualiteit)، أو Hulpkas (HZIV). الأفضل فعل ذلك عند بداية العمل. الـziekenfonds يرد جزءاً من تكاليف الطبيب والمستشفى والأدوية. الجزء الذي يُدفع شخصياً هو الـremgeld. مع دخل منخفض قد تحصل على verhoogde tegemoetkoming: عندها تدفع أقل. مرض لمدة طويلة؟ عندها يدفع الـziekenfonds أيضاً تعويضاً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'في بلجيكا يجب الانضمام إلى صندوق تأمين صحي: ziekenfonds (mutualiteit)، أو Hulpkas (HZIV). الأفضل فعل ذلك عند بداية العمل. الـziekenfonds يرد جزءاً من تكاليف الطبيب والمستشفى والأدوية. الجزء الذي يُدفع شخصياً هو الـremgeld. مع دخل منخفض قد تحصلين على verhoogde tegemoetkoming: عندها تدفعين أقل. مرض لمدة طويلة؟ عندها يدفع الـziekenfonds أيضاً تعويضاً. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'في بلجيكا يجب الانضمام إلى صندوق تأمين صحي: ziekenfonds (mutualiteit)، أو Hulpkas (HZIV). الأفضل فعل ذلك عند بداية العمل. الـziekenfonds يرد جزءاً من تكاليف الطبيب والمستشفى والأدوية. الجزء الذي يُدفع شخصياً هو الـremgeld. مع دخل منخفض قد يوجد حق في verhoogde tegemoetkoming: عندها يكون الدفع أقل. مرض لمدة طويلة؟ عندها يدفع الـziekenfonds أيضاً تعويضاً. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.insurance.p": "أريد أن أصبح عضواً في صندوق تأمين صحي. هل يمكنك مساعدتي؟", // nieuw, nalezen
     "be.c.insurance.s": "بدأت العمل هنا قبل أسبوعين وليس لديك ziekenfonds بعد. ما التصرف الصحيح؟", // nieuw, nalezen
     "be.c.insurance.o1": { m: 'انضمّ بسرعة إلى ziekenfonds.', f: 'انضمّي بسرعة إلى ziekenfonds.', x: 'الانضمام بسرعة إلى ziekenfonds.' }, // nieuw, nalezen // nagelezen AI ronde 3
@@ -36,7 +36,7 @@ export const ar: Gloss = {
 
 export const ti: Gloss = {
     "be.w.huisartsenpost": "ናይ ምሸት፡ ለይትን ቀዳመ-ሰንበትን ቤት ሕክምና ሓኪም ስድራ (huisartsenwachtpost)", // nieuw, nalezen
-    "be.c.doctor.q": "Huisartsenwachtpost፡ እንታይ ክሕግዘኩም ይኽእል?", // nieuw, nalezen
+    "be.c.doctor.q": "Huisartsenwachtpost፡ እንታይ ክሕግዘኩም እኽእል?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.w.premie": "ክፍሊት ኣባልነት (ንziekenfonds ትኸፍልዎ)", // nieuw, nalezen
     "be.w.eigenrisico": 'ናይ ባዕልኹም ክፋል (ካብቲ ወጻኢ ባዕልኹም እትኸፍልዎ)', // nieuw, nalezen // nagelezen AI ronde 3
     "be.w.zorgtoeslag": "ተወሳኺ ሓገዝ ንወጻኢ ጥዕና (ንትሑት ኣታዊ)", // nieuw, nalezen
@@ -47,7 +47,7 @@ export const ti: Gloss = {
     "be.c.insurance.q": "ኣብ ኣየናይ ziekenfonds ኣለኹም?", // nieuw, nalezen
     "be.c.insurance.a": "ኣይፈልጦን። ክርእዮ እየ።", // nieuw, nalezen
     "be.c.doctor": "ሓኪም ድዩ 112?", // = c.doctor
-    "be.c.doctor.b": "ኣብ ጥቓ ገዛኹም ሓኪም ስድራ (huisarts) ምረጹ። ምሸት፡ ለይቲ ወይ ቀዳመ-ሰንበት ሓኪም የድልየኩም ድዩ? ናብ 1733 ደውሉ፡ ናብቲ ተረኛ ሓኪም (huisartsenwachtpost) ይሰዱኹም። ናብ 112 ኣብ ህጹጽ ኩነታት ጥራይ ደውሉ፡ ሓደጋ ህይወት፡ ሓዊ፡ ወይ ሕጂ ዝፍጸም ገበን። መድሃኒት ካብ ፋርማሲ (apotheek) ትረኽቡ።", // nieuw, nalezen
+    "be.c.doctor.b": "ኣብ ጥቓ ገዛኹም ሓኪም ስድራ (huisarts) ምረጹ። ምሸት፡ ለይቲ ወይ ቀዳመ-ሰንበት ሓኪም የድልየኩም ድዩ? ናብ 1733 ደውሉ፡ ናብቲ ብተራ ዝሰርሕ ሓኪም (huisartsenwachtpost) ይሰዱኹም። ናብ 112 ኣብ ህጹጽ ኩነታት ጥራይ ደውሉ፡ ሓደጋ ህይወት፡ ሓዊ፡ ወይ ሕጂ ዝፍጸም ገበን። መድሃኒት ካብ ፋርማሲ (apotheek) ትረኽቡ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.doctor.p": "ገና ሓደሽቲ ሕሙማት ትቕበሉ ዶ?", // nieuw, nalezen
     "be.c.doctor.s": { m: "ቀዳም ለይቲ እዩ። ውላድካ ብርቱዕ ረስኒ ኣለዎ፡ ግን ነቒሑ ኣሎ፡ ብልሙድ ድማ የስተንፍስ። እንታይ ትገብር?", f: "ቀዳም ለይቲ እዩ። ውላድኪ ብርቱዕ ረስኒ ኣለዎ፡ ግን ነቒሑ ኣሎ፡ ብልሙድ ድማ የስተንፍስ። እንታይ ትገብሪ?", x: "ቀዳም ለይቲ እዩ። ውላድኩም ብርቱዕ ረስኒ ኣለዎ፡ ግን ነቒሑ ኣሎ፡ ብልሙድ ድማ የስተንፍስ። እንታይ ትገብሩ?" }, // = c.doctor.s
     "be.c.doctor.o1": { m: 'ናብ 1733 ደውል።', f: 'ናብ 1733 ደውሊ።', x: 'ናብ 1733 ደውሉ።' }, // nieuw, nalezen // nagelezen AI ronde 3
@@ -55,7 +55,7 @@ export const ti: Gloss = {
     "be.c.doctor.o3": { m: "ክሳዕ ሰኑይ ተጸበ፡ ገለ ድማ ኣይትግበር።", f: "ክሳዕ ሰኑይ ተጸበዪ፡ ገለ ድማ ኣይትግበሪ።" }, // = c.doctor.o3
     "be.c.doctor.w": "1733 ካብ ሰዓታት ስራሕ ወጻኢ ሓኪም ክትረኽቡ ይሕግዘኩም። 112 ንህጹጽ ኩነታት እዩ፡ ሓደጋ ህይወት፡ ሓዊ፡ ወይ ሕጂ ዝፍጸም ገበን።", // nieuw, nalezen
     "be.c.insurance": "ziekenfonds ናትኩም", // nieuw, nalezen
-    "be.c.insurance.b": { m: 'ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትከውን ኣለካ፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርካ ግበሮ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኻ እትኸፍሎ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረክብ ትኽእል፡ ሽዑ ውሑድ ትኸፍል። ንነዊሕ ግዜ ሕሙም ዲኻ? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለካ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተት።', f: 'ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትኮኒ ኣለኪ፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርኪ ግበርዮ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኺ እትኸፍልዮ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረኽቢ ትኽእሊ፡ ሽዑ ውሑድ ትኸፍሊ። ንነዊሕ ግዜ ሕምምቲ ዲኺ? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለኪ። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቲ።', x: 'ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትኮኑ ኣለኩም፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርኩም ግበርዎ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኹም እትኸፍልዎ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረኽቡ ትኽእሉ፡ ሽዑ ውሑድ ትኸፍሉ። ንነዊሕ ግዜ ሕሙማት ዲኹም? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለኩም። ሓፈሻዊ ሓበሬታ እዩ። ንኹነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።' }, // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.insurance.b": { m: 'ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትከውን ኣለካ፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርካ ግበሮ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኻ እትኸፍሎ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረክብ ትኽእል፡ ሽዑ ውሑድ ትኸፍል። ንነዊሕ ግዜ ሕሙም ዲኻ? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለካ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተት።', f: 'ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትኮኒ ኣለኪ፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርኪ ግበርዮ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኺ እትኸፍልዮ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረኽቢ ትኽእሊ፡ ሽዑ ውሑድ ትኸፍሊ። ንነዊሕ ግዜ ሕምምቲ ዲኺ? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለኪ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቲ።', x: 'ኣብ ቤልጅዩም ኣባል ፈንድ ጥዕና ክትኮኑ ኣለኩም፡ ziekenfonds (mutualiteit)፡ ወይ Hulpkas (HZIV)። ስራሕ ምስ ጀመርኩም ግበርዎ። ziekenfonds ክፋል ወጻኢታት ሓኪም፡ ሆስፒታልን መድሃኒትን ይመልስ። ባዕልኹም እትኸፍልዎ ክፋል remgeld ይበሃል። ብትሑት ኣታዊ verhoogde tegemoetkoming ክትረኽቡ ትኽእሉ፡ ሽዑ ውሑድ ትኸፍሉ። ንነዊሕ ግዜ ሕሙማት ዲኹም? ሽዑ ziekenfonds ገንዘብ ሓገዝ እውን ይኸፍለኩም። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።' }, // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.insurance.p": "ኣባል ziekenfonds ክኸውን እደሊ። ክትሕግዙኒ ትኽእሉ ዶ?", // nieuw, nalezen
     "be.c.insurance.s": "ቅድሚ ክልተ ሰሙን ኣብዚ ስራሕ ጀሚርኩም፡ ገና ziekenfonds የብልኩምን። እንታይ ትገብሩ?", // nieuw, nalezen
     "be.c.insurance.o1": { m: 'ቀልጢፍካ ኣባል ziekenfonds ኩን።', f: 'ቀልጢፍኪ ኣባል ziekenfonds ኩኒ።', x: 'ቀልጢፍኩም ኣባል ziekenfonds ኩኑ።' }, // nieuw, nalezen // nagelezen AI ronde 3
@@ -102,7 +102,7 @@ export const prs: Gloss = {
     "be.w.zorgtoeslag": "کمک بیشتر برای مصارف صحی (برای عاید کم)", // nieuw, nalezen
     "be.w.verzekeraar": "صندوق بیمهٔ صحی (ziekenfonds، mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "من عضو یک صندوق بیمهٔ صحی هستم.", // nieuw, nalezen
-    "be.s.insurance.2": "آیا این مصرف دوباره پرداخت می‌شود؟", // nieuw, nalezen
+    "be.s.insurance.2": "آیا پول این مصرف برایم پس داده می‌شود؟", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.s.insurance.3": "برای کمک بیشتر مصارف صحی درخواست می‌دهم.", // nieuw, nalezen
     "be.c.insurance.q": "عضو کدام صندوق بیمهٔ صحی هستید؟", // nieuw, nalezen
     "be.c.insurance.a": "نمی‌دانم. آن را می‌بینم.", // nieuw, nalezen
@@ -159,11 +159,11 @@ export const tr: Gloss = {
     "be.c.doctor.q": "Nöbetçi aile hekimi merkezi, size nasıl yardım edebilirim?", // nieuw, nalezen
     "be.w.premie": "üyelik aidatı (ziekenfonds’a ödediğin)", // nieuw, nalezen
     "be.w.eigenrisico": "katkı payı (masrafın kendin ödediğin kısmı)", // nieuw, nalezen
-    "be.w.zorgtoeslag": "yüksek geri ödeme (düşük gelirde sağlık masraflarına ek yardım)", // nieuw, nalezen
+    "be.w.zorgtoeslag": "artırılmış geri ödeme (düşük gelirde sağlık masraflarına ek yardım)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.w.verzekeraar": "sağlık sigortası kurumu (ziekenfonds, mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "Bir sağlık sigortası kurumuna üyeyim.", // nieuw, nalezen
     "be.s.insurance.2": "Bu geri ödeniyor mu?", // nieuw, nalezen
-    "be.s.insurance.3": "Yüksek geri ödeme için başvuruyorum.", // nieuw, nalezen
+    "be.s.insurance.3": "Artırılmış geri ödeme için başvuruyorum.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.insurance.q": "Hangi sağlık sigortası kurumundasın?", // nieuw, nalezen
     "be.c.insurance.a": "Bilmiyorum. Kontrol edeceğim.", // nieuw, nalezen
     "be.c.doctor": "Doktor mu, 112 mi?", // = c.doctor
@@ -220,11 +220,11 @@ export const ro: Gloss = {
     "be.w.premie": "cotizația (ce plătești la ziekenfonds)", // nieuw, nalezen
     "be.w.eigenrisico": "partea ta (partea din cost pe care o plătești tu)", // nieuw, nalezen
     "be.w.zorgtoeslag": "rambursarea mărită (ajutor în plus la costurile de sănătate, pentru venit mic)", // nieuw, nalezen
-    "be.w.verzekeraar": "casa de sănătate (ziekenfonds, mutualiteit)", // nieuw, nalezen
-    "be.s.insurance.1": "Sunt membru al unei case de sănătate.", // nieuw, nalezen
+    "be.w.verzekeraar": "casa de asigurări de sănătate (ziekenfonds, mutualiteit)", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    "be.s.insurance.1": "Sunt membru al unei case de asigurări de sănătate.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.s.insurance.2": "Se rambursează asta?", // nieuw, nalezen
     "be.s.insurance.3": "Cer rambursarea mărită.", // nieuw, nalezen
-    "be.c.insurance.q": "La ce casă de sănătate ești?", // nieuw, nalezen
+    "be.c.insurance.q": "La ce casă de asigurări de sănătate ești?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.insurance.a": "Nu știu. Verific.", // nieuw, nalezen
     "be.c.doctor": "Doctor sau 112?", // = c.doctor
     "be.c.doctor.b": "Alege un medic de familie (huisarts) aproape de casă. Ai nevoie de un medic seara, noaptea sau în weekend? Sună la 1733: te trimit la medicul de gardă (huisartsenwachtpost). Sună la 112 doar în caz de urgență: pericol de moarte, incendiu sau o infracțiune care are loc acum. Medicamentele le iei de la farmacie (apotheek).", // nieuw, nalezen
@@ -249,11 +249,11 @@ export const bg: Gloss = {
     "be.c.doctor.q": "Дежурен лекарски център, с какво мога да помогна?", // nieuw, nalezen
     "be.w.premie": "членският внос (това, което плащаш на ziekenfonds)", // nieuw, nalezen
     "be.w.eigenrisico": "собственото участие (частта от разходите, която плащаш ти)", // nieuw, nalezen // nagelezen AI ronde 3
-    "be.w.zorgtoeslag": "повишено обезщетение (допълнителна помощ за здравни разходи при нисък доход)", // nieuw, nalezen
+    "be.w.zorgtoeslag": "повишеното възстановяване (допълнителна помощ за здравни разходи при нисък доход)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.w.verzekeraar": "здравната каса (ziekenfonds, mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "Член съм на здравна каса.", // nieuw, nalezen
     "be.s.insurance.2": "Това възстановява ли се?", // nieuw, nalezen
-    "be.s.insurance.3": "Кандидатствам за повишено обезщетение.", // nieuw, nalezen
+    "be.s.insurance.3": "Кандидатствам за повишено възстановяване на здравните разходи.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.insurance.q": "В коя здравна каса си?", // nieuw, nalezen
     "be.c.insurance.a": "Не знам. Ще проверя.", // nieuw, nalezen
     "be.c.doctor": "Лекар или 112?", // = c.doctor
@@ -287,15 +287,15 @@ export const es: Gloss = {
     "be.c.insurance.q": "¿En qué mutua de salud estás?", // nieuw, nalezen
     "be.c.insurance.a": "No lo sé. Lo miro.", // nieuw, nalezen
     "be.c.doctor": "¿Médico o 112?", // = c.doctor
-    "be.c.doctor.b": "Elige un médico de cabecera (huisarts) cerca de tu casa. ¿Necesitas un médico por la tarde, por la noche o el fin de semana? Llama al 1733: te mandan al médico de guardia (huisartsenwachtpost). Llama al 112 solo en una emergencia: peligro para la vida, fuego o un delito que pasa ahora. Las medicinas las recoges en la farmacia (apotheek).", // nieuw, nalezen
+    "be.c.doctor.b": "Elige un médico de cabecera (huisarts) cerca de tu casa. ¿Necesitas un médico por la tarde, por la noche o el fin de semana? Llama al 1733: te mandan al médico de guardia (huisartsenwachtpost). Llama al 112 solo en una emergencia: peligro para la vida, incendio o un delito que está pasando ahora. Las medicinas las recoges en la farmacia (apotheek).", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.doctor.p": "¿Todavía acepta pacientes nuevos?", // nieuw, nalezen
     "be.c.doctor.s": "Es sábado por la noche. Tu hijo tiene mucha fiebre, pero está despierto y respira normal. ¿Qué haces?", // = c.doctor.s
     "be.c.doctor.o1": "Llamas al 1733.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "Llamas al 112.", // = c.doctor.o2
     "be.c.doctor.o3": "Esperas hasta el lunes y no haces nada.", // = c.doctor.o3
-    "be.c.doctor.w": "El 1733 te ayuda a encontrar un médico fuera del horario de consulta. El 112 es para emergencias: peligro para la vida, fuego o un delito que pasa ahora.", // nieuw, nalezen
+    "be.c.doctor.w": "El 1733 te ayuda a encontrar un médico fuera del horario de consulta. El 112 es para emergencias: peligro para la vida, incendio o un delito que está pasando ahora.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.insurance": "Tu mutua de salud (ziekenfonds)", // nieuw, nalezen
-    "be.c.insurance.b": "En Bélgica tienes que apuntarte a una mutua de salud: un ziekenfonds (mutualiteit), o la Hulpkas (HZIV). Hazlo cuando empiezas a trabajar. El ziekenfonds te devuelve una parte de lo que cuestan el médico, el hospital y las medicinas. La parte que pagas tú es el remgeld. Con ingresos bajos puedes recibir la verhoogde tegemoetkoming: entonces pagas menos. ¿Estás enfermo mucho tiempo? Entonces el ziekenfonds también te paga una prestación. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
+    "be.c.insurance.b": "En Bélgica tienes que apuntarte a una mutua de salud: un ziekenfonds (mutualiteit), o la Hulpkas (HZIV). Hazlo cuando empieces a trabajar. El ziekenfonds te devuelve una parte de lo que cuestan el médico, el hospital y las medicinas. La parte que pagas tú es el remgeld. Con ingresos bajos puedes recibir la verhoogde tegemoetkoming: entonces pagas menos. ¿Estás enfermo mucho tiempo? Entonces el ziekenfonds también te paga una prestación. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.insurance.p": "Quiero hacerme socio de una mutua de salud. ¿Me puede ayudar?", // nieuw, nalezen
     "be.c.insurance.s": "Empezaste a trabajar aquí hace dos semanas y todavía no tienes ziekenfonds. ¿Qué haces?", // nieuw, nalezen
     "be.c.insurance.o1": "Te apuntas pronto a un ziekenfonds.", // nieuw, nalezen // nagelezen AI ronde 3
@@ -311,7 +311,7 @@ export const pt: Gloss = {
     "be.w.eigenrisico": "a taxa moderadora (a parte do custo que pagas tu)", // nieuw, nalezen
     "be.w.zorgtoeslag": "a comparticipação aumentada (ajuda extra nos custos de saúde, para rendimentos baixos)", // nieuw, nalezen
     "be.w.verzekeraar": "a mutualidade de saúde (ziekenfonds, mutualiteit)", // nieuw, nalezen
-    "be.s.insurance.1": "Sou sócio de uma mutualidade de saúde.", // nieuw, nalezen
+    "be.s.insurance.1": "Sou membro de uma mutualidade de saúde.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.s.insurance.2": "Isto é reembolsado?", // nieuw, nalezen
     "be.s.insurance.3": "Peço a comparticipação aumentada.", // nieuw, nalezen
     "be.c.insurance.q": "Em que mutualidade de saúde estás?", // nieuw, nalezen
@@ -378,7 +378,7 @@ export const de: Gloss = {
     "be.c.insurance.a": "Weiß ich nicht. Ich schaue nach.", // nieuw, nalezen
     "be.c.doctor": "Arzt oder 112?", // = c.doctor
     "be.c.doctor.b": "Such dir einen Hausarzt (huisarts) in der Nähe deiner Wohnung aus. Brauchst du abends, nachts oder am Wochenende einen Arzt? Ruf 1733 an: Man schickt dich zum Bereitschaftsarzt (huisartsenwachtpost). Ruf 112 nur im Notfall an: Lebensgefahr, Feuer oder eine Straftat, die gerade passiert. Medikamente bekommst du in der Apotheke (apotheek).", // nieuw, nalezen
-    "be.c.doctor.p": "Nehmen Sie noch neue Patienten?", // nieuw, nalezen
+    "be.c.doctor.p": "Nehmen Sie noch neue Patienten auf?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.doctor.s": "Es ist Samstagnacht. Dein Kind hat hohes Fieber, aber es ist wach und atmet normal. Was machst du?", // = c.doctor.s
     "be.c.doctor.o1": "Ruf 1733 an.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.doctor.o2": "Ruf 112 an.", // = c.doctor.o2

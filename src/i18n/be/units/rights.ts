@@ -33,7 +33,7 @@ export const ar: Gloss = {
   'be.c.rights.o1': { m: 'لا توقّع الآن. اطلب وقتاً واطلب النصيحة أولاً.', f: 'لا توقّعي الآن. اطلبي وقتاً واطلبي النصيحة أولاً.' },
   'be.c.rights.o2': { m: 'وقّعها، لأن المدير يقول إنها جيدة.', f: 'وقّعيها، لأن المدير يقول إنها جيدة.' },
   'be.c.rights.o3': { m: 'ضع الورقة جانباً ولا تتكلم عنها أبداً.', f: 'ضعي الورقة جانباً ولا تتكلمي عنها أبداً.' },
-  'be.c.rights.w': "التوقيع قد يُفقد حقوقاً: مثلاً مهلة الإشعار، وإعانة البطالة لفترة. طلب وقت للاستشارة أمر عادي ومسموح.", // nieuw, nalezen
+  'be.c.rights.w': "التوقيع قد يؤدي إلى خسارة حقوق: مثلاً مهلة الإشعار، وإعانة البطالة لفترة. طلب وقت للاستشارة أمر عادي ومسموح.", // nieuw, nalezen (AI-correctie 2 nov 2026)
 };
 
 export const ti: Gloss = {
@@ -86,7 +86,7 @@ export const prs: Gloss = {
   'be.w.arbowet': "قانون مصئونیت و صحت در کار (Welzijnswet)", // nieuw, nalezen
   'be.w.arbeidsinspectie': "تفتیش کار (مقررات جای کار را کنترول می‌کند)", // nieuw, nalezen
   'be.s.health.3': "آن را به تفتیش کار گزارش می‌دهم.", // nieuw, nalezen
-  'be.w.juridischloket': "justitiehuis (اولین مشورهٔ حقوقی رایگان)", // nieuw, nalezen
+  'be.w.juridischloket': "justitiehuis (اولین مشورهٔ حقوقی مفت)", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.c.health': 'تفریح و ساعت‌های کار',
   'be.c.health.b': end("قانون از مصئونیت و صحت شما در کار محافظت می‌کند (Welzijnswet). بیشتر از ۶ ساعت کار می‌کنید؟ پس حق تفریح دارید. اگر بخش کاری شما قاعدهٔ دیگری ندارد، تفریح دست‌کم ۱۵ دقیقه است. معمولاً حداکثر ۸ ساعت در روز و به‌طور اوسط ۳۸ ساعت در هفته کار می‌کنید. بخش کاری شما می‌تواند مقررات دیگری داشته باشد. کارفرما باید وسایل محافظتی، مانند بوت مصئونیت یا دستکش، را رایگان به شما بدهد. کار خطرناک؟ به Toezicht op het Welzijn op het Werk گزارش بدهید. ساعات بسیار طولانی یا معاش بسیار کم؟ به Toezicht op de Sociale Wetten گزارش بدهید. نام شما مخفی می‌ماند.", prsBase, 'advice'), // nieuw, nalezen
   'be.c.health.p': 'من هنوز تفریح نکرده‌ام.',
@@ -140,7 +140,7 @@ export const tr: Gloss = {
   'be.c.health.o1': 'Şimdi molaya ihtiyacın olduğunu söylersin.',
   'be.c.health.o2': 'Devam eder, sonra daha uzun bir mola verirsin.',
   'be.c.health.o3': 'Tek kelime etmeden işi bırakıp eve gidersin.',
-  'be.c.health.w': "6 saatten fazla çalıştığında mola bir iyilik değil, yasadır. Dinlenmek güvenli çalışmana da yardım eder.", // nieuw, nalezen
+  'be.c.health.w': "6 saatten fazla çalıştığında mola bir iyilik değil, yasal bir haktır. Dinlenmek güvenli çalışmana da yardım eder.", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.c.rights': 'Ayrımcılık ve işten çıkarılma',
   'be.c.rights.b': end("İşte ayrımcılık yasaktır, örneğin kökenin, dinin, cinsiyetin, yaşın ya da bir engelin yüzünden. Bunu Unia’ya ücretsiz bildirebilirsin. VDAB gibi Flaman kurumları için Vlaams Mensenrechteninstituut’a başvurursun. İşverenin sözleşmeni bitirebilir, ama sana bir ihbar süresi (opzegtermijn) vermeli ya da o sürenin maaşını ödemelidir (opzegvergoeding). Çoğu zaman nedenleri taahhütlü mektupla sorabilirsin. İşin bittiğinde bir C4 alırsın: işsizlik ödeneği için ona ihtiyacın var. İşten çıkarılmanla ilgili anlamadığın bir kâğıdı imzalama. Önce sendikadan (ABVV, ACV ya da ACLVB), iş yerindeki sendika temsilcisinden (syndicale afgevaardigde) ya da justitiehuis’ten yardım iste.", trBase, 'abuse'), // nieuw, nalezen
   'be.c.rights.p': 'Önce tavsiye almak istiyorum.',
@@ -234,7 +234,7 @@ export const es: Gloss = {
   'be.c.health.o3': 'Dejas el trabajo y te vas a casa sin decir nada.',
   'be.c.health.w': "Si trabajas más de 6 horas, la pausa es la ley, no un favor. Descansar también te ayuda a trabajar con seguridad.", // nieuw, nalezen
   'be.c.rights': 'Discriminación y despido',
-  'be.c.rights.b': end("La discriminación en el trabajo está prohibida, por ejemplo por tu origen, tu religión, tu género, tu edad o una discapacidad. Puedes denunciarla gratis en Unia. Para servicios flamencos, como el VDAB, vas al Vlaams Mensenrechteninstituut. Tu empresa puede terminar tu contrato, pero tiene que darte un preaviso (opzegtermijn) o pagarte el sueldo de ese tiempo (opzegvergoeding). Muchas veces puedes pedir los motivos por carta certificada. Cuando tu trabajo termina, recibes un C4: lo necesitas para la prestación por desempleo. No firmes un papel sobre tu despido que no entiendes. Pide ayuda primero al sindicato (ABVV, ACV o ACLVB), al delegado sindical de tu empresa (syndicale afgevaardigde) o al justitiehuis.", esBase, 'abuse'), // nieuw, nalezen
+  'be.c.rights.b': end("La discriminación en el trabajo está prohibida, por ejemplo por tu origen, tu religión, tu género, tu edad o una discapacidad. Puedes denunciarla gratis en Unia. Para servicios flamencos, como el VDAB, vas al Vlaams Mensenrechteninstituut. Tu empresa puede terminar tu contrato, pero tiene que darte un preaviso (opzegtermijn) o pagarte el sueldo de ese tiempo (opzegvergoeding). Muchas veces puedes pedir los motivos por carta certificada. Cuando tu trabajo termina, recibes un C4: lo necesitas para la prestación por desempleo. No firmes ningún papel sobre tu despido que no entiendas. Pide ayuda primero al sindicato (ABVV, ACV o ACLVB), al delegado sindical de tu empresa (syndicale afgevaardigde) o al justitiehuis.", esBase, 'abuse'), // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.c.rights.p': 'Primero quiero pedir consejo.',
   'be.c.rights.s': 'Tu jefe te da un papel: “Firma hoy, así te vas de mutuo acuerdo.” No lo entiendes bien. ¿Qué haces?',
   'be.c.rights.o1': 'Todavía no firmas. Pides tiempo y primero pides consejo.',
@@ -257,13 +257,13 @@ export const pt: Gloss = {
   'be.c.health.o3': 'Sais do trabalho e vais para casa sem dizer nada.',
   'be.c.health.w': "Quando trabalhas mais de 6 horas, a pausa é lei, não um favor. Descansar também te ajuda a trabalhar com segurança.", // nieuw, nalezen
   'be.c.rights': 'Discriminação e despedimento',
-  'be.c.rights.b': end("A discriminação no trabalho é proibida, por exemplo por causa da tua origem, religião, género, idade ou deficiência. Podes denunciá-la de graça à Unia. Para serviços flamengos, como o VDAB, vais ao Vlaams Mensenrechteninstituut. O teu empregador pode acabar com o teu contrato, mas tem de te dar um aviso prévio (opzegtermijn) ou pagar o teu salário por esse tempo (opzegvergoeding). Muitas vezes podes pedir os motivos por carta registada. Quando o teu trabalho acaba, recebes um C4: precisas dele para o subsídio de desemprego. Não assines um papel sobre o teu despedimento que não entendes. Pede ajuda primeiro ao sindicato (ABVV, ACV ou ACLVB), ao delegado sindical da tua empresa (syndicale afgevaardigde) ou ao justitiehuis.", ptBase, 'abuse'), // nieuw, nalezen
+  'be.c.rights.b': end("A discriminação no trabalho é proibida, por exemplo por causa da tua origem, religião, género, idade ou deficiência. Podes denunciá-la de graça à Unia. Para serviços flamengos, como o VDAB, vais ao Vlaams Mensenrechteninstituut. O teu empregador pode acabar com o teu contrato, mas tem de te dar um pré-aviso (opzegtermijn) ou pagar o teu salário por esse tempo (opzegvergoeding). Muitas vezes podes pedir os motivos por carta registada. Quando o teu trabalho acaba, recebes um C4: precisas dele para o subsídio de desemprego. Não assines um papel sobre o teu despedimento que não percebas. Pede ajuda primeiro ao sindicato (ABVV, ACV ou ACLVB), ao delegado sindical da tua empresa (syndicale afgevaardigde) ou ao justitiehuis.", ptBase, 'abuse'), // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.c.rights.p': 'Primeiro quero pedir conselho.',
   'be.c.rights.s': 'O teu patrão dá-te um papel: "Assina hoje, assim sais por acordo." Não percebes bem. O que fazes?',
   'be.c.rights.o1': 'Ainda não assinas. Pedes tempo e primeiro pedes conselho.',
   'be.c.rights.o2': 'Assinas, porque o patrão diz que está tudo bem.',
   'be.c.rights.o3': 'Guardas o papel e nunca falas disso.',
-  'be.c.rights.w': "Se assinares, podes perder direitos: por exemplo o teu aviso prévio, e durante algum tempo o teu subsídio de desemprego. Pedir tempo para pedir conselho é normal e permitido.", // nieuw, nalezen
+  'be.c.rights.w': "Se assinares, podes perder direitos: por exemplo o teu pré-aviso, e durante algum tempo o teu subsídio de desemprego. Pedir tempo para pedir conselho é normal e permitido.", // nieuw, nalezen (AI-correctie 2 nov 2026)
 };
 
 export const fr: Gloss = {

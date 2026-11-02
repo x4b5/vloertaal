@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Gdzie pracujesz?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'W jakim kraju pracujesz?',
-    countryHint: 'Wybierz kraj, w którym pracujesz. Dostaniesz zasady pracy tego kraju. To zostaje w twoim telefonie. Nigdzie tego nie wysyłamy.', // nieuw, nalezen
+    countryHint: 'Dostaniesz zasady pracy tego kraju. To zostaje w twoim telefonie. Nigdzie tego nie wysyłamy.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Holandia',
     countryBe: 'Belgia (Flandria)',
     tipsNote: 'Te wskazówki dotyczą pracy w Holandii. To ogólne informacje, nie porada prawna.',
@@ -178,7 +178,7 @@ const lang: HelpLanguageSource = {
     certLater: 'Później',
     certPrint: 'Drukuj lub zapisz jako PDF',
     certSaved: 'Obraz jest zapisany.',
-    certNameHint: 'Zostaje tylko na tym telefonie. Możesz zostawić puste.',
+    certNameHint: 'Twoje imię zostaje tylko na tym telefonie. Możesz też zostawić to pole puste.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certChangeName: 'Zmień imię',
     certPractice: 'Certyfikat ćwiczeniowy, nie oficjalny dyplom',
     resumeLesson: 'Kontynuuj lekcję',
@@ -243,7 +243,7 @@ const lang: HelpLanguageSource = {
     textXl: 'Bardzo duży',
     showEnglish: 'Pokazuj też angielski',
     genderTitle: 'Kobieta czy mężczyzna?',
-    genderHint: 'Żeby twój język zwracał się do ciebie poprawnie.',
+    genderHint: 'Żeby w twoim języku zwracać się do ciebie we właściwej formie.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     genderWoman: 'Kobieta',
     genderMan: 'Mężczyzna',
     genderNone: 'Wolę nie mówić',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Wyłącz przypomnienie',
     remindStopped: 'Otwórz plik, aby usunąć przypomnienie z kalendarza.',
     remindStoppedAndroid: 'Usuń przypomnienie samodzielnie w Kalendarzu Google.',
-    resetKeeps: 'Twoje lekcje, słowa, dni z rzędu i certyfikaty zostaną usunięte. Twój język, kod i ustawienia zostają.',
+    resetKeeps: 'Twoje lekcje, słowa, dni z rzędu i certyfikaty zostaną usunięte. Twój język i ustawienia zostają.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nie załadowało się. Czy jest internet?',
     retry: 'Spróbuj ponownie',
@@ -352,7 +352,7 @@ const lang: HelpLanguageSource = {
     tempoHint: 'Spokojnie to wolno i wyraźnie. Normalnie to tak, jak mówią koledzy. Wybierz „Normalnie”, jeśli już dużo rozumiesz.', // nieuw, nalezen
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Pokaż, jak ci idzie', // nieuw, nalezen
-    coachCardIntro: 'Ta karta pokazuje twoje postępy. Pokaż ją nauczycielowi, trenerowi albo szefowi. Ty decydujesz.', // nieuw, nalezen
+    coachCardIntro: 'Ta karta pokazuje twoje postępy. Pokaż ją nauczycielowi, opiekunowi albo szefowi. Ty decydujesz.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     coachCardKeep: 'Kartę robi twój telefon. Nic nie jest wysyłane. Vloertaal nic nie zapisuje.', // nieuw, nalezen
     coachCardWhat: 'Na karcie, po niderlandzku:', // nieuw, nalezen
     coachTopics: 'Skończone tematy', // nieuw, nalezen
@@ -407,7 +407,7 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'Dla kolegi z pracy', // nieuw, nalezen
     colleagueCardHint: 'Pokaż to koledze z pracy, który mówi po niderlandzku. Jest tu napisane, jak może ci pomóc ćwiczyć.', // nieuw, nalezen
     colleagueShare: 'Wyślij koledze', // nieuw, nalezen
-    coachCardRights: 'Pokaż z nazwy tematy o twoich prawach', // nieuw, nalezen
+    coachCardRights: 'Pokazuj nazwy tematów o twoich prawach', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'Teraz z pamięci: jak to było po niderlandzku?', // nieuw, nalezen
     keptNofM: 'Słowa sprzed 2 tygodni lub dawniej: pamiętasz jeszcze {n} z {m}.', // nieuw, nalezen
     verbSecond: 'Czasownik stoi na miejscu 2.', // nieuw, nalezen
@@ -455,7 +455,7 @@ const lang: HelpLanguageSource = {
     'w.ja': 'tak',
     'w.nee': 'nie',
     'w.totmorgen': 'do jutra',
-    's.hello.1': { m: 'Cześć, jestem nowy.', f: 'Cześć, jestem nowa.', x: 'Cześć, jestem nowy / nowa.' }, // x: nieuw, nalezen
+    's.hello.1': { m: 'Cześć, jestem nowy.', f: 'Cześć, jestem nowa.', x: 'Cześć, jestem tu nową osobą.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.hello.2': 'Dzień dobry, jestem Ali.',
     's.hello.3': 'Dziękuję, do jutra!',
     'l.people': 'Ludzie w pracy',
@@ -512,7 +512,7 @@ const lang: HelpLanguageSource = {
     'w.ziekenhuis': 'szpital',
     'w.gebeuren': 'dziać się, zdarzyć się',
     's.accident.1': 'Mój kolega upadł.',
-    's.accident.2': { m: 'Skaleczyłem się.', f: 'Skaleczyłam się.', x: 'Skaleczyłem / skaleczyłam się.' },
+    's.accident.2': { m: 'Skaleczyłem się.', f: 'Skaleczyłam się.', x: 'Mam skaleczenie.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.accident.3': 'Chcę zgłosić wypadek.',
 
     // Unit: In the warehouse
@@ -545,7 +545,7 @@ const lang: HelpLanguageSource = {
     'w.pauze': 'przerwa',
     'w.beginnen': 'zaczynać',
     'w.klaar': 'skończone, gotowe',
-    'w.telaat': 'za późno',
+    'w.telaat': 'spóźniony, za późno', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.morgen': 'jutro',
     's.shift.1': 'Moja zmiana zaczyna się o siódmej.',
     's.shift.2': 'Kiedy jest przerwa?',
@@ -576,7 +576,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'Nie mogę znaleźć szatni.',
     's.arrive.3': 'Kto jest dzisiaj moim opiekunem?',
     'c.arrive.q': 'Dzień dobry, w jakiej sprawie?',
-    'c.arrive.a': { m: 'Jestem nowy. Zaczynam dzisiaj.', f: 'Jestem nowa. Zaczynam dzisiaj.', x: 'Jestem nowy / nowa. Zaczynam dzisiaj.' }, // x: nieuw, nalezen
+    'c.arrive.a': { m: 'Jestem nowy. Zaczynam dzisiaj.', f: 'Jestem nowa. Zaczynam dzisiaj.', x: 'Jestem tu nową osobą. Zaczynam dzisiaj.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.understand.q': 'Rozumiesz?',
     'c.understand.a': 'Nie, jeszcze raz, proszę.',
     'c.gear.q': 'Masz swój kask?',
@@ -592,7 +592,7 @@ const lang: HelpLanguageSource = {
     'w.voordoen': 'pokazywać (robiąc to najpierw samemu)',
     'w.gevaarlijk': 'niebezpieczny',
     'w.uitleg': 'wyjaśnienie',
-    's.notyet.1': { m: 'Jeszcze się tego nie nauczyłem.', f: 'Jeszcze się tego nie nauczyłam.', x: 'Jeszcze się tego nie nauczyłem / nauczyłam.' },
+    's.notyet.1': { m: 'Jeszcze się tego nie nauczyłem.', f: 'Jeszcze się tego nie nauczyłam.', x: 'Tego jeszcze nie umiem.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.notyet.2': 'Nikt mi jeszcze tego nie wyjaśnił.',
     's.notyet.3': { m: 'Czy mogę już robić to sam?', f: 'Czy mogę już robić to sama?', x: 'Czy mogę już robić to samodzielnie?' }, // x: nieuw, nalezen
     'c.notyet.q': 'Po prostu spróbuj, to łatwe.',

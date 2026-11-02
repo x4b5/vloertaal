@@ -28,7 +28,7 @@ const lang: HelpLanguageSource = {
     newWord: 'Neues Wort',
     tapToHear: 'Tippe zum Anhören',
     whatDoesThisMean: 'Was bedeutet das?',
-    whichOneIs: 'Was davon ist „{word}“?',
+    whichOneIs: 'Welches ist „{word}“?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     mixLesson: 'Gemischte Wiederholung',
     whatDoYouHear: 'Was hörst du?',
     buildSentence: 'Bilde diesen Satz auf Niederländisch',
@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Wo arbeitest du?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'In welchem Land arbeitest du?',
-    countryHint: 'Wähle das Land, in dem du arbeitest. Dann bekommst du die Arbeitsregeln dieses Landes. Das bleibt auf deinem Handy. Wir schicken es nirgendwohin.', // nieuw, nalezen
+    countryHint: 'Dann bekommst du die Arbeitsregeln dieses Landes. Das bleibt auf deinem Handy. Wir schicken es nirgendwohin.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Niederlande',
     countryBe: 'Belgien (Flandern)',
     tipsNote: 'Diese Tipps gelten für die Arbeit in den Niederlanden. Allgemeine Informationen, keine Rechtsberatung.',
@@ -172,13 +172,13 @@ const lang: HelpLanguageSource = {
     certificate: 'Zertifikat',
     myCertificates: 'Meine Zertifikate',
     certsEmpty: 'Mach alle Lektionen eines Themas fertig. Dann bekommst du ein Zertifikat.',
-    certEarned: 'Zertifikat geschafft!',
+    certEarned: 'Zertifikat erhalten!', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certEarnedHint: 'Du hast alle Lektionen dieses Themas fertig gemacht.',
     certView: 'Ansehen',
     certLater: 'Später',
     certPrint: 'Drucken oder als PDF speichern',
     certSaved: 'Das Bild ist gespeichert.',
-    certNameHint: 'Er bleibt nur auf diesem Handy. Du kannst das Feld leer lassen.',
+    certNameHint: 'Dein Name bleibt nur auf diesem Handy. Du kannst das Feld leer lassen.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     certChangeName: 'Namen ändern',
     certPractice: 'Übungszertifikat, kein offizielles Diplom',
     resumeLesson: 'Lektion fortsetzen',
@@ -254,7 +254,7 @@ const lang: HelpLanguageSource = {
     settingsPhone: 'Dieses Handy',
     settingOn: 'An',
     settingOff: 'Aus',
-    sectorGroupMake: 'Herstellen und Transport',
+    sectorGroupMake: 'Herstellung und Transport', // nieuw, nalezen (AI-correctie 2 nov 2026)
     sectorGroupCare: 'Pflege und Service',
     sectorGroupShop: 'Handel und Gastronomie', // nieuw, nalezen
     sectorGroupBuild: 'Bau und Technik', // nieuw (30 okt 2026), nalezen
@@ -304,7 +304,7 @@ const lang: HelpLanguageSource = {
     buildListen: 'Hör zu und bilde den Satz',
     chatWhichQuestion: 'Welche Frage passt zu dieser Antwort?',
     reviewWaiting: 'Noch {n} Wörter warten. Sie kommen in den nächsten Tagen wieder.',
-    factTitle: 'Wusstest du?',
+    factTitle: 'Schon gewusst?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     fact3: 'Du bist nicht allein: Mehr als 3 Millionen Erwachsene in den Niederlanden finden Lesen, Rechnen oder Computer schwer. Üben hilft.',
     fact7: 'Von den Migranten, die sehr gut Niederländisch sprechen, haben 69 von 100 eine bezahlte Arbeit.',
     fact14: 'Viele Bibliotheken haben ein Taalhuis („Sprachhaus“): kostenlose Hilfe, um weiter Niederländisch zu lernen.',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Erinnerung beenden',
     remindStopped: 'Öffne die Datei, um die Erinnerung aus deinem Kalender zu entfernen.',
     remindStoppedAndroid: 'Lösch die Erinnerung selbst im Google Kalender.',
-    resetKeeps: 'Deine Lektionen, Wörter, Serie und Zertifikate werden gelöscht. Deine Sprache, dein Code und deine Einstellungen bleiben.',
+    resetKeeps: 'Deine Lektionen, Wörter, Serie und Zertifikate werden gelöscht. Deine Sprache und deine Einstellungen bleiben.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nicht geladen. Hast du Internet?',
     retry: 'Erneut versuchen',
@@ -404,12 +404,12 @@ const lang: HelpLanguageSource = {
     workTry: 'Probier es heute bei der Arbeit', // nieuw, nalezen
     workTryWhen: 'Wenn:', // nieuw, nalezen
     workTryThen: 'Dann sag:', // nieuw, nalezen
-    colleagueCard: 'Für deine Kollegen', // nieuw, nalezen
+    colleagueCard: 'Für deinen Kollegen', // nieuw, nalezen (AI-correctie 2 nov 2026)
     colleagueCardHint: 'Zeig das einem Kollegen, der Niederländisch spricht. Dort steht, wie er dir beim Üben helfen kann.', // nieuw, nalezen
     colleagueShare: 'An deinen Kollegen schicken', // nieuw, nalezen
-    coachCardRights: 'Themen über deine Rechte mit Namen zeigen', // nieuw, nalezen
+    coachCardRights: 'Namen der Themen über deine Rechte zeigen', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'Jetzt aus dem Kopf: Was hieß es auf Niederländisch?', // nieuw, nalezen
-    keptNofM: 'Wörter von vor 2 Wochen oder länger: Du wusstest noch {n} von {m}.', // nieuw, nalezen
+    keptNofM: 'Wörter, die du vor 2 Wochen oder früher gelernt hast: Du wusstest noch {n} von {m}.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     verbSecond: 'Das Verb steht an Stelle 2.', // nieuw, nalezen
     calmScreen: 'Ruhiger Bildschirm', // nieuw, nalezen
     calmAuto: 'Wie dein Handy', // nieuw, nalezen

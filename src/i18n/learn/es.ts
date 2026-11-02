@@ -21,10 +21,10 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "A una despedida se responde con una despedida.",
     'c.people.a.why': "La pregunta pide un nombre. Esta respuesta lo da.",
-    'c.arrive.a.why': "Te preguntan a qué vienes: esta respuesta dice que es una persona nueva y que empieza hoy.",
+    'c.arrive.a.why': "Te preguntan a qué vienes: esta respuesta dice que eres una persona nueva y que empiezas hoy.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.understand.a.why': "¿No lo entiendes? Pedir que lo repitan es normal.",
     'c.translate.a.why': "La nota todavía no está clara, así que primero se traduce.",
-    'c.understood.a.why': "Repetir la tarea con tus palabras sirve para comprobar que la orden está clara.",
+    'c.understood.a.why': "Repetir la tarea con tus palabras sirve para comprobar que el orden está claro.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.keeplearning.a.why': "Pedir que te hablen en neerlandés está bien: practicar ayuda.",
     'c.gear.a.why': "La pregunta es sobre el casco: sí, lo lleva puesto.",
     'c.danger.a.why': "En un accidente, primero se llama al 112.",
@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.phone.a.why': "Nada de teléfono cerca de las máquinas: los mensajes esperan a la pausa.",
     'c.smoking.a.why': "Las pausas son a horas fijas, no antes.",
     'c.clock.a.why': "No está permitido fichar por otra persona.",
-    'c.hygiene.a.why': "Redecilla puesta y joyas fuera: son las normas para una comida limpia.",
+    'c.hygiene.a.why': "Redecilla puesta y joyas fuera: son las normas de higiene para la comida.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.smalltalk.a.why': "La pregunta es sobre el fin de semana: basta con contar una cosa.",
     'c.mistakes.a.why': "A un elogio se responde con un gracias.",
     'c.respect.a.why': "El acoso se tiene que contar, para que alguien pueda ayudar.",
@@ -103,22 +103,22 @@ const t: CultureTranslation = {
     'c.jobends.a.why': "La casa va con el trabajo: esta respuesta pregunta por el plazo de preaviso.",
     // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
     'c.workorder.a.why': "Una palabra no está clara: preguntar antes de empezar es la respuesta correcta.", // nieuw, nalezen
-    'c.handover.a.why': "Le preguntan si todo está hecho: esta respuesta dice qué no está hecho, y por qué.", // nieuw, nalezen
-    'c.workshop.a.why': "Le preguntan por qué: esta respuesta da la razón, hay que proteger los ojos.", // nieuw, nalezen
-    'c.power.a.why': "Trabajo con una lámpara: esta respuesta pregunta primero si la corriente está cortada.", // nieuw, nalezen
-    'c.garage.a.why': "Le piden cambiar los neumáticos: un sí, y una pregunta sobre dónde están.", // nieuw, nalezen
+    'c.handover.a.why': "Te preguntan si todo está hecho: esta respuesta dice qué no está hecho, y por qué.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.workshop.a.why': "Te preguntan por qué: esta respuesta da la razón, hay que proteger los ojos.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.power.a.why': "Cambiar una lámpara: esta respuesta pregunta primero si la corriente está cortada.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.garage.a.why': "Te piden cambiar los neumáticos: un sí, y una pregunta sobre dónde están.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.carjob.a.why': "Trabajo extra: el cliente tiene que aceptar primero, así que esta respuesta se lo pregunta al jefe.", // nieuw, nalezen
-    'c.placement.a.why': "Le preguntan cuándo: esta respuesta da el día, y el convenio va primero.", // nieuw, nalezen
+    'c.placement.a.why': "Te preguntan cuándo: esta respuesta da el día, y el convenio va primero.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.review.a.why': "El comentario no está claro todavía: pedir que te lo enseñen es una buena respuesta.", // nieuw, nalezen
-    'c.council.a.why': "Le preguntan por el voto: un sí, y las dos cosas que hay que llevar.", // nieuw, nalezen
+    'c.council.a.why': "Te preguntan por el voto: un sí, y las dos cosas que hay que llevar.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.police.a.why': "La policía pide el documento: enseñarlo y preguntar qué pasa.", // nieuw, nalezen
-    'c.login.a.why': "Le preguntan si puede entrar: esta respuesta dice que no, y por qué.", // nieuw, nalezen
-    'c.phish.a.why': "Le preguntan por el enlace: un sí sincero, y una llamada a informática.", // nieuw, nalezen
-    'c.mychoice.a.why': "Le preguntan por sus puntos fuertes: esta respuesta nombra uno, con un ejemplo.", // nieuw, nalezen
-    'c.nextstep.a.why': "Le preguntan por su plan: esta respuesta nombra la bbl y lo que significa.", // nieuw, nalezen
-    'c.email.a.why': "Le preguntan si lo envió: todavía no, primero se revisa.", // nieuw, nalezen
-    'c.budget.a.why': "Le ofrecen pagar después: un no educado, con la razón.", // nieuw, nalezen
-    'c.healthy.a.why': "Le ofrecen una pastilla: un no educado, con la razón.", // nieuw, nalezen
+    'c.login.a.why': "Te preguntan si puedes entrar: esta respuesta dice que no, y por qué.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.phish.a.why': "Te preguntan por el enlace: un sí sincero, y una llamada a informática.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.mychoice.a.why': "Te preguntan por tus puntos fuertes: esta respuesta nombra uno, con un ejemplo.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.nextstep.a.why': "Te preguntan por tu plan: esta respuesta nombra la bbl y lo que significa.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.email.a.why': "Te preguntan si lo has enviado: todavía no, primero se revisa.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.budget.a.why': "Te ofrecen pagar después: un no educado, con la razón.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.healthy.a.why': "Te ofrecen una pastilla: un no educado, con la razón.", // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 

@@ -4,7 +4,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {},
   gloss: {
-    'u.apply': 'Szukanie pracy',
+    'u.apply': 'Ubieganie się o pracę', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.cv': 'Twoje CV i list',
     'w.cv': 'CV',
     'w.motivatie': 'motywacja (dlaczego chcesz tę pracę)',
@@ -37,7 +37,7 @@ const t: CultureTranslation = {
     'w.contract': 'umowa',
     'w.tekenen': 'podpisać',
     'w.tijdelijk': 'tymczasowy, na czas określony',
-    's.findwork.1': 'Chcę się starać o tę pracę.',
+    's.findwork.1': 'Chcę się starać o pracę.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.findwork.2': 'Umowa jest na czas określony czy na stałe?',
     's.findwork.3': 'Czy mogę dostać kopię umowy?',
     'c.findwork.q': 'Jakiej pracy szukasz?',
@@ -177,7 +177,7 @@ const t: CultureTranslation = {
     's.smalltalk.2': 'Mogę się do was przysiąść?',
     's.smalltalk.3': 'Dziś jest ładna pogoda.',
     'c.smalltalk.q': { m: 'Co robiłeś w weekend?', f: 'Co robiłaś w weekend?', x: 'Jak ci minął weekend?' }, // x: nieuw, nalezen
-    'c.smalltalk.a': { m: 'Grałem w piłkę z przyjaciółmi.', f: 'Grałam w piłkę z przyjaciółmi.', x: 'Grałem / grałam w piłkę z przyjaciółmi.' }, // x: nieuw, nalezen
+    'c.smalltalk.a': { m: 'Grałem w piłkę z przyjaciółmi.', f: 'Grałam w piłkę z przyjaciółmi.', x: 'Na grze w piłkę z przyjaciółmi.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.mistakes': 'Uwagi i błędy',
     'w.fout': 'błąd',
     'w.compliment': 'komplement, pochwała',
@@ -348,7 +348,7 @@ const t: CultureTranslation = {
     'w.permaand': 'miesięcznie',
     'w.vergoeden': 'pokrywać (zwracać) koszty',
     's.insurance.1': 'Co miesiąc płacę składkę.',
-    's.insurance.2': 'Czy to jest pokrywane?',
+    's.insurance.2': 'Czy to jest refundowane?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.insurance.3': 'Składam wniosek o zorgtoeslag.',
     'c.insurance.q': { m: 'Gdzie jesteś ubezpieczony?', f: 'Gdzie jesteś ubezpieczona?', x: 'Gdzie masz ubezpieczenie?' }, // x: nieuw, nalezen
     'c.insurance.a': 'To jest na mojej karcie ubezpieczenia.',
@@ -489,7 +489,7 @@ const t: CultureTranslation = {
     's.client.2': 'Pomogę panu/pani się ubrać.',
     's.client.3': 'Zje pan/pani jeszcze coś?',
     'c.client.q': 'Może mi pan/pani pomóc z płaszczem?',
-    'c.client.a': 'Oczywiście, pomogę.',
+    'c.client.a': 'Oczywiście, pomogę panu/pani.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.privacy': 'Prywatność i bezpieczeństwo w opiece',
     'w.privacy': 'prywatność',
     'w.hygiene': 'higiena',
@@ -568,7 +568,7 @@ const t: CultureTranslation = {
     'c.interview.o2': 'Mówisz „nie”, bo zadawanie pytań jest niegrzeczne.',
     'c.interview.o3': 'Mówisz więcej o sobie, żeby pokazać, że dobrze pracujesz.', // nagelezen (2e lezing)
     'c.interview.w': 'Pytania pokazują, że interesuje cię ta praca. Tutaj pracodawcy często ich oczekują.', // nieuw, nalezen
-    'c.findwork': 'Weź umowę na piśmie',
+    'c.findwork': 'Poproś o umowę na piśmie', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.findwork.b': 'Zawsze proś o umowę na piśmie i kopię dla siebie. Przeczytaj ją, zanim podpiszesz, albo poproś o pomoc kogoś, komu ufasz. Agencja pracy (uitzendbureau) nie może brać od ciebie pieniędzy za znalezienie pracy. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
     'c.findwork.p': 'Mogę najpierw przeczytać umowę?',
     'c.findwork.s': 'Nowy pracodawca mówi: „Podpisz tu teraz. Przeczytasz później.” Co robisz?',
@@ -593,7 +593,7 @@ const t: CultureTranslation = {
     'c.agency.o3': 'Prosisz szefa w firmie, w której pracujesz, żeby zapłacił za te 6 godzin.',
     'c.agency.w': 'Płaci ci agencja, więc to agencja musi poprawić błąd. Twoja własna lista dat i godzin pomaga. Pytanie o to jest twoim prawem.',
     'c.bsn': 'Twój BSN: chroń go',
-    'c.bsn.b': 'BSN (burgerservicenummer) dostajesz, gdy zameldujesz się w gminie (gemeente). Jesteś tu tylko na krótko? Wtedy rejestrujesz się w punkcie RNI. BSN jest potrzebny do pracy, podatków, ubezpieczenia zdrowotnego i konta bankowego. Pracodawca potrzebuje twojego dokumentu tożsamości i BSN. Nie dawaj BSN ani kopii dokumentu ludziom, którzy go nie potrzebują: zapytaj, po co im on. Przeprowadzasz się? Zgłoś nowy adres w gemeente w ciągu 5 dni. DigiD to twój login do stron urzędowych: nigdy nie dawaj go nikomu. Mieszkasz albo pracujesz tutaj? Wtedy zwykle musisz mieć holenderskie ubezpieczenie zdrowotne (zorgverzekering). Załatw je szybko. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
+    'c.bsn.b': 'BSN (burgerservicenummer) dostajesz, gdy zameldujesz się w gminie (gemeente). Jesteś tu tylko na krótko? Wtedy rejestrujesz się w punkcie RNI. BSN jest potrzebny do pracy, podatków, ubezpieczenia zdrowotnego i konta bankowego. Pracodawca potrzebuje twojego dokumentu tożsamości i BSN. Nie dawaj BSN ani kopii dokumentu osobom, które ich nie potrzebują: zapytaj, do czego są im potrzebne. Przeprowadzasz się? Zgłoś nowy adres w gemeente w ciągu 5 dni. DigiD to twój login do stron urzędowych: nigdy nie dawaj go nikomu. Mieszkasz albo pracujesz tutaj? Wtedy zwykle musisz mieć holenderskie ubezpieczenie zdrowotne (zorgverzekering). Załatw je szybko. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.bsn.p': 'Dlaczego potrzebuje pan/pani mojego BSN?',
     'c.bsn.s': 'Ktoś, kogo nie znasz, proponuje ci pracę na WhatsAppie. Prosi o zdjęcie paszportu i twój login DigiD. Co robisz?',
     'c.bsn.o1': 'Nigdy nie podajesz loginu DigiD. Najpierw sprawdzasz, kto to.', // nagelezen (2e lezing)
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.respect.o3': 'W odpowiedzi żartujesz z jego pochodzenia.',
     'c.respect.w': 'Takie żarty są w pracy nie do przyjęcia. Zgłoszenie tego jest normalne: firma musi dbać, żeby miejsce pracy było bezpieczne dla wszystkich.',
     'c.health': 'Przerwy i godziny pracy',
-    'c.health.b': 'Prawo chroni twoje zdrowie. Pracujesz dłużej niż 5,5 godziny? Wtedy masz co najmniej 30 minut przerwy (może być 2 razy po 15 minut). Dłużej niż 10 godzin? Wtedy co najmniej 45 minut. Cao może mieć trochę inne zasady dotyczące przerw. Możesz pracować najwyżej 12 godzin na jednej zmianie i 60 godzin w tygodniu. Masz mniej niż 18 lat? Wtedy możesz pracować mniej godzin. Pracodawca musi dać ci za darmo środki ochrony, np. obuwie ochronne albo rękawice. Niebezpieczna praca albo za niska zapłata? Możesz to zgłosić do Nederlandse Arbeidsinspectie, także bez podawania nazwiska. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', // nieuw, nalezen
+    'c.health.b': 'Prawo chroni twoje zdrowie. Pracujesz dłużej niż 5,5 godziny? Wtedy masz co najmniej 30 minut przerwy (może być 2 razy po 15 minut). Dłużej niż 10 godzin? Wtedy co najmniej 45 minut. Cao może mieć trochę inne zasady dotyczące przerw. Możesz pracować najwyżej 12 godzin na jednej zmianie i 60 godzin w tygodniu. Masz mniej niż 18 lat? Wtedy limity godzin pracy są dla ciebie niższe. Pracodawca musi dać ci za darmo środki ochrony, np. obuwie ochronne albo rękawice. Niebezpieczna praca albo za niska zapłata? Możesz to zgłosić do Nederlandse Arbeidsinspectie, także bez podawania nazwiska. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.health.p': { m: 'Nie miałem jeszcze przerwy.', f: 'Nie miałam jeszcze przerwy.', x: 'Wciąż czekam na przerwę.' }, // x: nieuw, nalezen
     'c.health.s': { m: 'Pracujesz od 6 godzin bez przerwy. Przełożony prosi, żebyś pracował dalej. Co robisz?', f: 'Pracujesz od 6 godzin bez przerwy. Przełożony prosi, żebyś pracowała dalej. Co robisz?', x: 'Pracujesz od 6 godzin bez przerwy. Przełożony prosi cię o dalszą pracę. Co robisz?' }, // x: nieuw, nalezen // nagelezen AI 31 okt
     'c.health.o1': 'Mówisz, że teraz potrzebujesz przerwy.', // nagelezen (2e lezing)
@@ -695,7 +695,7 @@ const t: CultureTranslation = {
     'c.rights.o1': 'Jeszcze nie podpisujesz. Najpierw szukasz porady.', // nieuw, nalezen
     'c.rights.o2': 'Podpisujesz, bo szef mówi, że wszystko w porządku.',
     'c.rights.o3': 'Odkładasz papier i nigdy o nim nie rozmawiasz.',
-    'c.rights.w': 'Jest w nim coś źle? Wtedy możesz stracić prawa, np. do zasiłku dla bezrobotnych (WW). Prośba o czas na poradę jest normalna i dozwolona.', // nieuw, nalezen
+    'c.rights.w': 'Coś jest w nim nie tak? Wtedy możesz stracić prawa, np. do zasiłku dla bezrobotnych (WW). Prośba o czas na poradę jest normalna i dozwolona.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.leave': 'Urlop i urlop w nagłej sytuacji',
     'c.leave.b': 'Z mocy prawa masz płatne dni wolne: co najmniej 4 razy tyle dni, ile pracujesz w tygodniu. Pełny etat, 5 dni w tygodniu? Wtedy co najmniej 20 dni w roku. Cao może dawać więcej. Proś o urlop na czas i na piśmie. Nagła sytuacja, np. wypadek albo choroba w rodzinie? Wtedy możesz dostać krótki płatny urlop (calamiteitenverlof). Od razu powiedz pracodawcy. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.',
     'c.leave.p': { m: 'Chciałbym poprosić o urlop w lipcu.', f: 'Chciałabym poprosić o urlop w lipcu.', x: 'Czy mogę prosić o urlop w lipcu?' }, // x: nieuw, nalezen
@@ -1120,7 +1120,7 @@ const t: CultureTranslation = {
     'w.nummer': 'numer (telefonu)',
     'w.haast': 'pośpiech',
     's.aifake.1': 'Czy to jest prawdziwe, czy fałszywe?',
-    's.aifake.2': { m: 'Rozłączam się i sam oddzwaniam.', f: 'Rozłączam się i sama oddzwaniam.', x: 'Rozłączam się i sam / sama oddzwaniam.' },
+    's.aifake.2': { m: 'Rozłączam się i sam oddzwaniam.', f: 'Rozłączam się i sama oddzwaniam.', x: 'Rozłączam się i to ja oddzwaniam.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.aifake.3': 'Nie wysyłam pieniędzy.',
     'c.aifake.q': 'Cześć, to mój nowy numer. Możesz szybko przesłać pieniądze?',
     'c.aifake.a': 'Najpierw zadzwonię do ciebie na stary numer.',
@@ -1271,7 +1271,7 @@ const t: CultureTranslation = {
     's.body.2': "Źle się czuję.",
     's.body.3': { m: "Upadłem na rękę.", f: "Upadłam na rękę.", x: 'Upadłem / upadłam na rękę.' }, // x: nieuw, nalezen
     'c.body.q': "Gdzie cię boli?",
-    'c.body.a': { m: "W plecach. Podniosłem ciężkie pudło.", f: "W plecach. Podniosłam ciężkie pudło.", x: 'W plecach. Od podnoszenia ciężkiego pudła.' }, // x: nieuw, nalezen
+    'c.body.a': { m: "W plecach. Podniosłem ciężki karton.", f: "W plecach. Podniosłam ciężki karton.", x: 'W plecach. Od podnoszenia ciężkiego kartonu.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.jobends': "Kiedy kończy się twoja praca",
     'w.eindafrekening': "rozliczenie końcowe (ostatnia wypłata, kiedy kończy się praca)",
     'w.opzeggen': "wypowiedzieć (umowę), zrezygnować",
@@ -1301,7 +1301,7 @@ const t: CultureTranslation = {
     'c.dates.o3': "Od 6 marca do 6 maja.",
     'c.dates.w': "Najpierw jest dzień, potem miesiąc: 3-6 to 3 czerwca. „Tot en met” znaczy, że 5 czerwca też się liczy, więc masz trzy dni wolnego.",
     'c.permit': "Praca i integracja",
-    'c.permit.b': "Musisz przejść integrację obywatelską (inburgering)? Powiedz o tym pracodawcy i powiedz gminie (gemeente), że pracujesz. Wcześnie zapytaj, czy lekcje języka da się dopasować do twojego grafiku. Nie wiesz, czy możesz tu pracować? Sprawdź to, zanim zaczniesz, na przykład w IND, UWV albo VluchtelingenWerk. Każą ci zarejestrować się jako samozatrudniony (zzp’er) do tej pracy? Najpierw poproś o radę. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.",
+    'c.permit.b': "Musisz przejść integrację obywatelską (inburgering)? Powiedz o tym pracodawcy i powiedz gminie (gemeente), że pracujesz. Wcześnie zapytaj, czy lekcje języka da się dopasować do twojego grafiku. Nie wiesz, czy możesz tu pracować? Sprawdź to, zanim zaczniesz, na przykład w IND, UWV albo VluchtelingenWerk. Każą ci zarejestrować się jako osoba samozatrudniona (zzp’er) do tej pracy? Najpierw poproś o radę. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.permit.p': "We wtorek mam lekcję języka. Czy grafik może to uwzględnić?",
     'c.permit.s': "Zaczynasz nową pracę. Twoja lekcja języka jest we wtorki rano, ale według grafiku pracujesz we wtorki. Co robisz?",
     'c.permit.o1': "Mówisz przełożonemu i prosisz o zmianę grafiku.", // nagelezen (2e lezing)
@@ -1354,7 +1354,7 @@ const t: CultureTranslation = {
     'w.opslot': "zamknięty na klucz", // nieuw, nalezen
     'w.bijzonderheid': "drzwi", // nieuw, nalezen
     's.handover.1': "Sprzątam swoje miejsce.", // nieuw, nalezen
-    's.handover.2': "Czy może Pan / Pani sprawdzić moją pracę?", // nieuw, nalezen
+    's.handover.2': "Czy może pan/pani sprawdzić moją pracę?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.handover.3': "Zgłaszam przełożonemu koniec pracy.", // nieuw, nalezen
     'c.handover.q': "Wszystko gotowe?", // nieuw, nalezen
     'c.handover.a': "Prawie. Pokój numer cztery był zamknięty na klucz.", // nieuw, nalezen
@@ -1406,7 +1406,7 @@ const t: CultureTranslation = {
     's.carjob.1': "Czy klient zgadza się na koszty?", // nieuw, nalezen
     's.carjob.2': "Ta część jest zepsuta.", // nieuw, nalezen
     's.carjob.3': "Czy mogę zrobić jazdę próbną?", // nieuw, nalezen
-    'c.carjob.q': "Hamulce też są złe. Zrobisz je od razu?", // nieuw, nalezen
+    'c.carjob.q': "Hamulce też są w złym stanie. Zrobisz je od razu?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.carjob.a': "Najpierw zapytam szefa. Klient musi się zgodzić.", // nieuw, nalezen
     'u.stage': "Praktyka zawodowa", // nieuw, nalezen
     'l.placement': "Twoja praktyka", // nieuw, nalezen
@@ -1429,23 +1429,23 @@ const t: CultureTranslation = {
     'w.cijfer': "ocena, stopień", // nieuw, nalezen
     'w.verslag': "sprawozdanie (tekst o twojej pracy)", // nieuw, nalezen
     's.review.1': "Co mogę robić lepiej?", // nieuw, nalezen
-    's.review.2': "Czy może Pan / Pani podać przykład?", // nieuw, nalezen
+    's.review.2': "Czy może pan/pani podać przykład?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.review.3': "Moja ocena jest w przyszłym tygodniu.", // nieuw, nalezen
     'c.review.q': "Musisz pracować szybciej.", // nieuw, nalezen
-    'c.review.a': "Dobrze. Czy może Pan / Pani pokazać, jak zrobić to szybciej?", // nieuw, nalezen
+    'c.review.a': "Dobrze. Czy może pan/pani pokazać, jak zrobić to szybciej?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'u.society': "Udział w życiu Holandii", // nieuw, nalezen
     'l.council': "Gmina i głosowanie", // nieuw, nalezen
     'w.stemmen': "głosować", // nieuw, nalezen
     'w.verkiezing': "wybory", // nieuw, nalezen
     'w.gemeenteraad': "rada gminy (decyduje o twojej miejscowości)", // nieuw, nalezen
     'w.parlement': "parlament (tworzy prawo)", // nieuw, nalezen
-    'w.stempas': "karta do głosowania (potrzebna, żeby głosować)", // nieuw, nalezen
+    'w.stempas': "karta uprawniająca do głosowania (potrzebna, żeby głosować)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.burgemeester': "burmistrz", // nieuw, nalezen
     's.council.1': "Czy mogę głosować?", // nieuw, nalezen
-    's.council.2': "Moja karta do głosowania przyszła pocztą.", // nieuw, nalezen
+    's.council.2': "Moja karta uprawniająca do głosowania przyszła pocztą.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.council.3': "Rada gminy decyduje o mojej okolicy.", // nieuw, nalezen
     'c.council.q': "Idziesz w środę głosować?", // nieuw, nalezen
-    'c.council.a': "Tak. Mam kartę do głosowania i dowód tożsamości.", // nieuw, nalezen
+    'c.council.a': "Tak. Mam kartę uprawniającą do głosowania i dowód tożsamości.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.police': "Policja i twoje prawa", // nieuw, nalezen
     'w.agent': "policjant", // nieuw, nalezen
     'w.boete': "mandat, kara (pieniądze, które musisz zapłacić za karę)", // nieuw, nalezen
@@ -1453,10 +1453,10 @@ const t: CultureTranslation = {
     'w.rechter': "sędzia", // nieuw, nalezen
     'w.advocaat': "adwokat", // nieuw, nalezen
     'w.wet': "prawo, ustawa", // nieuw, nalezen
-    's.police.1': { m: "Dostałem mandat.", f: "Dostałam mandat.", x: "Dostałem / dostałam mandat." }, // nieuw, nalezen // nagelezen AI 31 okt
+    's.police.1': { m: "Dostałem mandat.", f: "Dostałam mandat.", x: "Mam mandat." }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.police.2': "Chcę złożyć sprzeciw.", // nieuw, nalezen
     's.police.3': "Chcę porozmawiać z adwokatem.", // nieuw, nalezen
-    'c.police.q': "Czy mogę zobaczyć Pana / Pani dokument tożsamości?", // nieuw, nalezen
+    'c.police.q': "Czy mogę zobaczyć pana/pani dokument tożsamości?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.police.a': "Tak, proszę. Co się dzieje?", // nieuw, nalezen
     'u.online': "Online w pracy", // nieuw, nalezen
     'l.login': "Logowanie", // nieuw, nalezen
@@ -1483,7 +1483,7 @@ const t: CultureTranslation = {
     's.phish.3': "Od razu zmieniam hasło.", // nieuw, nalezen
     'c.phish.q': { m: "Kliknąłeś w link?", f: "Kliknęłaś w link?", x: "Czy link został kliknięty?" }, // nieuw, nalezen // nagelezen AI 31 okt
     'c.phish.a': "Tak. Dzwonię do działu IT.", // nieuw, nalezen
-    'l.mychoice': "W czym jestem dobry", // nieuw, nalezen
+    'l.mychoice': "Co mi dobrze wychodzi", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.goedin': "dobry w (czymś)", // nieuw, nalezen
     'w.kiezen': "wybierać", // nieuw, nalezen
     'w.beroep': "zawód, rodzaj pracy", // nieuw, nalezen
@@ -1678,7 +1678,7 @@ const t: CultureTranslation = {
     'c.healthy.o1': "Odmawiasz i śpisz kilka godzin przed zmianą.", // nieuw, nalezen
     'c.healthy.o2': "Bierzesz pół tabletki, to nie jest niebezpieczne.", // nieuw, nalezen
     'c.healthy.o3': "Bierzesz ją, ale nikomu w pracy nie mówisz.", // nieuw, nalezen
-    'c.healthy.w': "Tabletki od kolegi mogą być narkotykami. Mogą wywołać chorobę albo błędy w pracy. Sen to bezpieczny sposób, żeby nie zasnąć.", // nieuw, nalezen
+    'c.healthy.w': "Tabletki od kolegi mogą być narkotykami. Mogą zaszkodzić twojemu zdrowiu albo sprawić, że popełnisz błędy w pracy. Wyspanie się to bezpieczny sposób, żeby nie zasypiać w pracy.", // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 

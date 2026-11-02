@@ -42,7 +42,7 @@ const t: CultureTranslation = {
     'w.pijpenstelen.lit': 'está a chover tubos de cachimbo',
     'w.hart': 'palavras amigas que dão coragem',
     'w.hart.lit': 'um coração debaixo do cinto',
-    's.plain.1': 'Avisa quando não é seguro.',
+    's.plain.1': 'Avisa se não for seguro.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.plain.2': { m: 'Estou mesmo muito cansado.', f: 'Estou mesmo muito cansada.', x: 'Estou mesmo muito cansado / cansada.' },
     's.plain.3': 'Vou direto ao assunto.',
     'c.plain.q': 'Está a chover muito!',

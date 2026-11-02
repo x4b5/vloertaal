@@ -315,7 +315,7 @@ const t: CultureTranslation = {
     's.certs.3': 'Bezahlt der Arbeitgeber den Kurs?',
     'c.certs.q': 'Hast du einen Staplerschein?',
     'c.certs.a': 'Nein, aber ich würde ihn gern machen.',
-    'l.diploma': 'Dein Abschluss und Weiterbildung',
+    'l.diploma': 'Dein Abschluss und deine Weiterbildung', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.diploma': 'das Diplom, der Abschluss',
     'w.waarderen': '(einen Abschluss) bewerten lassen',
     'w.training': 'die Schulung',
@@ -342,7 +342,7 @@ const t: CultureTranslation = {
     'c.doctor.a': 'Mein Sohn hat hohes Fieber.',
     'l.insurance': 'Krankenversicherung',
     'w.premie': 'der Beitrag (monatliche Zahlung)',
-    'w.eigenrisico': 'der Eigenanteil (Kosten, die du zuerst selbst zahlst)',
+    'w.eigenrisico': 'die Selbstbeteiligung (Kosten, die du zuerst selbst zahlst)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.zorgtoeslag': 'der Zuschuss zur Krankenversicherung (zorgtoeslag)',
     'w.verzekeraar': 'die Versicherung (die Firma)',
     'w.permaand': 'pro Monat',
@@ -475,7 +475,7 @@ const t: CultureTranslation = {
     's.quality.1': 'Dieses Produkt ist beschädigt.',
     's.quality.2': 'Das Etikett stimmt nicht.',
     's.quality.3': 'Muss ich das aussortieren?',
-    'c.quality.q': 'Warum liegt das beiseite?',
+    'c.quality.q': 'Warum liegt das separat?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.quality.a': 'Das Etikett sitzt schief.',
     'u.care': 'In der Pflege',
     'l.client': 'Der Klient und die tägliche Pflege',
@@ -507,10 +507,10 @@ const t: CultureTranslation = {
     'w.keuken': 'die Küche',
     'w.snijden': 'schneiden',
     'w.pan': 'die Pfanne, der Topf',
-    'w.koelcel': 'das Kühlhaus (begehbarer Kühlraum)',
+    'w.koelcel': 'die Kühlzelle (begehbarer Kühlraum)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.allergie': 'die Allergie',
     'w.datum': 'das Datum',
-    's.kitchen.1': 'Stell das Fleisch ins Kühlhaus.',
+    's.kitchen.1': 'Stell das Fleisch in die Kühlzelle.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.kitchen.2': 'Schneide die Zwiebeln klein.',
     's.kitchen.3': 'Sind hier Nüsse drin?',
     'c.kitchen.q': 'Ein Gast hat eine Nussallergie.',
@@ -550,7 +550,7 @@ const t: CultureTranslation = {
     's.cleansafe.1': 'Vorsicht, rutschig!',
     's.cleansafe.2': 'Stell das Schild hin.',
     's.cleansafe.3': 'Misch nie Reinigungsmittel.',
-    'c.cleansafe.q': 'Darf ich hier gehen?',
+    'c.cleansafe.q': 'Darf ich hier langgehen?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.cleansafe.a': 'Vorsicht, der Boden ist noch rutschig.',
     'c.cv': 'Ein kurzer Lebenslauf', // nieuw, nalezen
     'c.cv.b': 'Ein Lebenslauf ist hier kurz: 1 oder 2 Seiten. Schreib deine Kontaktdaten, Berufserfahrung, Ausbildung, Sprachen und Fähigkeiten auf. Ein Foto ist nicht nötig. Religion, Alter oder Familienstand musst du nicht angeben. Sei ehrlich darüber, was du kannst. Bitte jemanden, dein Niederländisch zu prüfen.', // nieuw, nalezen
@@ -577,7 +577,7 @@ const t: CultureTranslation = {
     'c.findwork.o3': 'Unterschreib und bitte danach um eine Kopie.', // nagelezen (2e lezing)
     'c.findwork.w': 'In deinem Vertrag steht, was du verdienst und welche Rechte du hast. Ein guter Arbeitgeber gibt dir Zeit, ihn zu lesen. Du darfst nach allem fragen, was du nicht verstehst.',
     'c.contract': 'Probezeit und Arbeit auf Abruf',
-    'c.contract.b': 'Eine Probezeit (proeftijd) muss schriftlich vereinbart sein. In einem Vertrag von 6 Monaten oder kürzer ist sie nicht erlaubt. In einem längeren Vertrag unter 2 Jahren ist sie höchstens 1 Monat. In einem Vertrag von 2 Jahren oder länger, oder in einem unbefristeten, ist sie höchstens 2 Monate. Arbeitest du auf Abruf (oproepkracht)? Dein Arbeitgeber muss dich meistens mindestens 4 Tage vorher rufen. Wenn es später ist, musst du nicht kommen. Ein Tarifvertrag (cao) kann diese 4 Tage kürzer machen, aber nicht kürzer als 1 Tag. Wenn sie deine Arbeit später absagen, bekommst du trotzdem deinen Lohn. Wenn sie dich für weniger als 3 Stunden Arbeit rufen, bekommst du meistens 3 Stunden bezahlt. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.', // nalezen: feit gelijk getrokken
+    'c.contract.b': 'Eine Probezeit (proeftijd) muss schriftlich vereinbart sein. In einem Vertrag von 6 Monaten oder kürzer ist sie nicht erlaubt. In einem längeren Vertrag unter 2 Jahren ist sie höchstens 1 Monat. In einem Vertrag von 2 Jahren oder länger, oder in einem unbefristeten, ist sie höchstens 2 Monate. Arbeitest du auf Abruf (oproepkracht)? Dein Arbeitgeber muss dir meistens mindestens 4 Tage vorher sagen, wann du arbeiten sollst. Wenn es später ist, musst du nicht kommen. Ein Tarifvertrag (cao) kann diese 4 Tage kürzer machen, aber nicht kürzer als 1 Tag. Wenn sie deine Arbeit später absagen, bekommst du trotzdem deinen Lohn. Wenn sie dich für weniger als 3 Stunden zur Arbeit rufen, bekommst du meistens 3 Stunden bezahlt. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.contract.p': 'Steht die Probezeit in meinem Vertrag?',
     'c.contract.s': 'Dein Vertrag geht 3 Monate. Darin steht: „Proeftijd: 1 maand“. Was machst du?',
     'c.contract.o1': 'Frag nach: Diese Probezeit zählt nicht.', // nagelezen (2e lezing)
@@ -1271,7 +1271,7 @@ const t: CultureTranslation = {
     's.body.2': "Ich fühle mich nicht gut.",
     's.body.3': "Ich bin auf den Arm gefallen.",
     'c.body.q': "Wo tut es weh?",
-    'c.body.a': "Im Rücken. Ich habe eine schwere Kiste gehoben.",
+    'c.body.a': "Im Rücken. Ich habe einen schweren Karton gehoben.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.jobends': "Wenn dein Job endet",
     'w.eindafrekening': "die Schlussabrechnung (dein letzter Lohn, wenn ein Job endet)",
     'w.opzeggen': "kündigen (einen Vertrag), absagen",
@@ -1301,7 +1301,7 @@ const t: CultureTranslation = {
     'c.dates.o3': "Vom 6. März bis zum 6. Mai.",
     'c.dates.w': "Zuerst kommt der Tag, dann der Monat: 3-6 ist der 3. Juni. „Tot en met“ heißt, dass der 5. Juni mitzählt. Du hast also drei Tage frei.",
     'c.permit': "Arbeit und Integration",
-    'c.permit.b': "Musst du die Integration (inburgering) machen? Sag es deinem Arbeitgeber, und sag der gemeente (der Gemeinde), dass du arbeitest. Frag früh, ob deine Sprachkurse zu deinem Dienstplan passen können. Nicht sicher, ob du hier arbeiten darfst? Prüfe es, bevor du anfängst, zum Beispiel beim IND, beim UWV oder bei VluchtelingenWerk. Sollst du dich für diesen Job als Selbstständiger (zzp’er) anmelden? Hol dir zuerst Rat. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.",
+    'c.permit.b': "Musst du den Integrationskurs (inburgering) machen? Sag es deinem Arbeitgeber, und sag der gemeente (der Gemeinde), dass du arbeitest. Frag früh, ob deine Sprachkurse zu deinem Dienstplan passen können. Nicht sicher, ob du hier arbeiten darfst? Prüfe es, bevor du anfängst, zum Beispiel beim IND, beim UWV oder bei VluchtelingenWerk. Sollst du dich für diesen Job als Selbstständiger (zzp’er) anmelden? Hol dir zuerst Rat. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.permit.p': "Ich habe dienstags Sprachkurs. Kann mein Dienstplan darauf Rücksicht nehmen?",
     'c.permit.s': "Du fängst einen neuen Job an. Dein Sprachkurs ist dienstagmorgens, aber laut Dienstplan arbeitest du dienstags. Was machst du?",
     'c.permit.o1': "Sag es deinem Vorgesetzten und bitte, den Dienstplan zu ändern.", // nagelezen (2e lezing)
@@ -1365,12 +1365,12 @@ const t: CultureTranslation = {
     'w.slijpen': "schleifen (Metall mit einer Maschine glätten oder schneiden)", // nieuw, nalezen
     'w.vonk': "der Funke", // nieuw, nalezen
     'w.gehoorbescherming': "der Gehörschutz (für deine Ohren)", // nieuw, nalezen
-    'w.lawaai': "der Lärm (viel lautes Geräusch)", // nieuw, nalezen
+    'w.lawaai': "der Lärm (sehr laute Geräusche)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.workshop.1': "Wo liegt das Werkzeug?", // nieuw, nalezen
     's.workshop.2': "Beim Schleifen trage ich Gehörschutz.", // nieuw, nalezen
     's.workshop.3': "Vorsicht vor den Funken!", // nieuw, nalezen
     'c.workshop.q': "Warum trägst du eine Brille?", // nieuw, nalezen
-    'c.workshop.a': "Beim Sägen können kleine Stücke in mein Auge kommen.", // nieuw, nalezen
+    'c.workshop.a': "Beim Sägen können mir kleine Stücke ins Auge kommen.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.power': "Zuerst den Strom aus", // nieuw, nalezen
     'w.stroom': "der Strom, die Elektrizität", // nieuw, nalezen
     'w.kabel': "das Kabel", // nieuw, nalezen
@@ -1412,7 +1412,7 @@ const t: CultureTranslation = {
     'l.placement': "Dein Praktikum", // nieuw, nalezen
     'w.stage': "das Praktikum (du lernst in einem Betrieb)", // nieuw, nalezen
     'w.praktijkopleider': "der Ausbilder im Betrieb (er begleitet dich im Betrieb)", // nieuw, nalezen
-    'w.stagebegeleider': "die Praktikumsbetreuung der Schule (sie begleitet dich von der Schule aus)", // nieuw, nalezen
+    'w.stagebegeleider': "der Praktikumsbetreuer / die Praktikumsbetreuerin der Schule (begleitet dich von der Schule aus)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.pok': "der Praktikumsvertrag (du, die Schule und der Betrieb unterschreiben ihn)", // nieuw, nalezen
     'w.school': "die Schule", // nieuw, nalezen
     'w.leerbedrijf': "der Ausbildungsbetrieb (ein Betrieb, in dem Schüler lernen dürfen)", // nieuw, nalezen
@@ -1512,7 +1512,7 @@ const t: CultureTranslation = {
     'w.onderwerp': "der Betreff (einer E-Mail)", // nieuw, nalezen
     'w.beste': "liebe/r, sehr geehrte/r (am Anfang eines Briefs oder einer E-Mail)", // nieuw, nalezen
     'w.beleefd': "höflich", // nieuw, nalezen
-    'w.nalezen': "nochmal lesen (prüfen, bevor du sie schickst)", // nieuw, nalezen
+    'w.nalezen': "noch einmal lesen (prüfen, bevor du es schickst)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.versturen': "verschicken, senden", // nieuw, nalezen
     's.email.1': "Was schreibe ich in den Betreff?", // nieuw, nalezen
     's.email.2': "Ich lese meine E-Mail noch einmal durch.", // nieuw, nalezen
@@ -1542,7 +1542,7 @@ const t: CultureTranslation = {
     's.healthy.2': "Ich frühstücke immer zuerst.", // nieuw, nalezen
     's.healthy.3': "In der Pause gehe ich kurz spazieren.", // nieuw, nalezen
     'c.healthy.q': "Willst du eine Pille? Dann bleibst du wach.", // nieuw, nalezen
-    'c.healthy.a': "Nein, danke. Ich arbeite nicht unter Alkohol oder Drogen.", // nieuw, nalezen // nagelezen AI 31 okt
+    'c.healthy.a': "Nein, danke. Ich arbeite nicht unter dem Einfluss von Drogen oder Alkohol.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.workorder': "Erst lesen, dann anfangen", // nieuw, nalezen
     'c.workorder.b': "Bevor du anfängst, lies den Arbeitsauftrag (werkbon) oder die Aufgabe in der App. Prüfe die Adresse, die Aufgabe und die Anzahl der Dinge. Ist etwas unklar? Frag, bevor du anfängst, nicht mittendrin. Dann leg dein Werkzeug und das Material bereit. Das spart Zeit, und du machst weniger Fehler. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
     'c.workorder.p': "Auf dem Arbeitsauftrag stehen zehn Kartons. Stimmt das?", // nieuw, nalezen
@@ -1672,7 +1672,7 @@ const t: CultureTranslation = {
     'c.budget.o3': "Du kaufst die Schuhe mit „jetzt kaufen, später zahlen“.", // nieuw, nalezen
     'c.budget.w': "Miete, Versicherung und dein Handy kommen jeden Monat wieder. Wenn du die zuerst zahlst, weißt du, wie viel Geld übrig ist. Dann machst du keine Schulden.", // nieuw, nalezen
     'c.healthy': "Schlaf, Essen und keine Drogen", // nieuw, nalezen
-    'c.healthy.b': "Du arbeitest besser und sicherer, wenn du genug schläfst, auch nach einer Spätschicht. Iss ein Frühstück, und trink über den Tag Wasser. Beweg dich in der Pause, zum Beispiel mit einem kurzen Spaziergang. Unter Einfluss von Alkohol oder Drogen zu arbeiten ist gefährlich, und die meisten Arbeitgeber verbieten es. Fühlst du dich schon lange niedergeschlagen, oder kannst du nicht aufhören zu trinken oder zu konsumieren? Sprich mit deinem Hausarzt (huisarts). Er kann helfen, und er behält es für sich.", // nieuw, nalezen
+    'c.healthy.b': "Du arbeitest besser und sicherer, wenn du genug schläfst, auch nach einer Spätschicht. Iss ein Frühstück, und trink über den Tag Wasser. Beweg dich in der Pause, zum Beispiel mit einem kurzen Spaziergang. Unter Einfluss von Alkohol oder Drogen zu arbeiten ist gefährlich, und die meisten Arbeitgeber verbieten es. Fühlst du dich schon lange niedergeschlagen, oder kannst du nicht aufhören, Alkohol zu trinken oder Drogen zu nehmen? Sprich mit deinem Hausarzt (huisarts). Er kann helfen, und er behält es für sich.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.healthy.p': "Ich fühle mich schon lange niedergeschlagen. Kann ich einen Termin machen?", // nieuw, nalezen
     'c.healthy.s': "Heute Nacht hast du Nachtschicht. Ein Kollege bietet dir eine Pille an, damit du wach bleibst. Was machst du?", // nieuw, nalezen
     'c.healthy.o1': "Du sagst Nein und schläfst vor der Schicht ein paar Stunden.", // nieuw, nalezen

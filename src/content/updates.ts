@@ -17,8 +17,32 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-02',
+    items: [
+      'Minder dubbel op het scherm. Kies je bij een situatie of een gezegde het verkeerde antwoord? Dan staat alleen nog de uitleg eronder; het goede antwoord is al groen. Een goed gebouwde zin krijgt geen extra kaart meer. Na een foutloze les staat er "11/11" en "Zonder fouten", zonder stempel. De reeks noemt het aantal dagen één keer. Bij Hulp staat een nummer als 112 niet meer twee keer op een kaart. En in de herhaalronde staat bovenaan één regel.',
+      'Moeilijke woorden zoals de huur, de borg, bruto en netto, de boete en het verlof hebben nu een geheugenplaatje: een eenvoudige tekening waar je het woord aan ophangt, naast de vertaling. Die tekening zie je als het woord nieuw is, niet in de oefeningen, zodat hij je niet op het verkeerde been zet.',
+      'Bij de start kies je eerst de taal waarin je hulp krijgt. De talen staan onder elkaar in een vak, als een menu. Rechts in het vak zie je altijd een schuifbalk: daaraan zie je dat er meer talen zijn en waar je bent. Schuif met je vinger door de lijst, sleep de balk, of tik op het pijltje onder aan het vak. Spreek je al Nederlands? Kies dan "Ik spreek al Nederlands" (Werkregels), onder het vak. De aparte vraag "Wat wil je leren?" is weg bij de start; wisselen kan nog bij Instellingen › Taal en ik.',
+      'Staat je taal er niet bij? Tik onder de talen op "Is your language missing?" en typ je taal. Je mailapp opent met een korte mail aan hoi@vloertaal.nl. Er gaat pas iets naar ons als jij de mail verstuurt.',
+      'Hoort een vraag bij de pagina ervoor, zoals een tip, een gezegde of in Werkregels een verhaal of een regel? Dan staat er boven de vraag een pijl terug. Lees het nog eens, en tik op Verder: je bent weer bij de vraag. Dat telt niet mee voor je score.',
+      'De app staat nu altijd eerst in de lichte weergave, ook als je telefoon op donker staat. Liever donker? Kies het bij Instellingen.',
+      'Een kleine tikfout bij typen: je ziet nu "Bijna goed!", met een golflijn onder de fout in je eigen antwoord. De goede spelling staat er één keer. In de herhaling blijft zo\'n woord in zijn vak.',
+      'Gesprekje: is je antwoord goed, dan staat het niet nog eens in een kaart eronder. Bij een gesprekje andersom staat jouw antwoord als spreekballon in het gesprek.',
+    ],
+  },
+  {
     date: '2026-11-01',
     items: [
+      'Na het antwoord is het scherm rustiger: de vraag gaat naar de achtergrond, en bij een goed antwoord staat het antwoord er niet nog eens onder als er niets bij te vertellen is. Een luidspreker die je mag gebruiken staat nu altijd rechts. De knop Doorgaan is na de eerste keer alleen een pijl.',
+      'Woorden hoor je nu van verschillende collega\'s, niet alleen van Bram. En in "Herhaal vandaag" komt elke dag één klankpaar terug (man of maan?): je hoort het woord en kiest het plaatje.',
+      'Na de herhaling zie je wat is blijven hangen: "Woorden van 2 weken of langer geleden: je wist er nog 9 van de 10."',
+      'De eerste keer dat je een zin bouwt, paren koppelt of met letters typt, wijst een hand één keer aan waar je tikt.',
+      '"Probeer het vandaag op je werk" zegt nu ook wanneer: "Als: … Zeg dan: …". Dat komt nu ook na een les van Werkregels. Zeg je de dag erna "Nog niet", dan vraagt de app het nog één keer.',
+      'Nieuw onder Hulp: "Voor je collega". Een kaart voor een Nederlandse collega die met je wil oefenen: praat rustig, doe het voor, blijf Nederlands praten. Je kunt hem laten zien of sturen.',
+      'Typen: de en het verwisseld telt nu als bijna goed. Je ziet het goede lidwoord, maar het woord gaat niet terug naar het begin van de herhaling.',
+      'Bij "Zet het vooraan" staat het werkwoord in een kader, met de uitleg "Het werkwoord staat op plek 2." Bij spreken zeg je de zin bij "Zeg het nog eens" uit je hoofd.',
+      'Op de kaart "Laat zien hoe het gaat" staan onderwerpen over je rechten niet meer bij naam, maar als "een onderwerp over je rechten". Je kiest zelf of de naam erop mag.',
+      'Werkregels: de uitleg na een vraag is korter. Meer uitleg staat achter een ⓘ. Bij een tip in de les staat achter de ⓘ ook wie je om hulp kunt vragen.',
+      'Bij de start staat nu dat Vloertaal ook uitlegt hoe werk hier gaat: je contract, je loon, ziek melden. De voortgangsbalk is rustiger, en de tekst van een tip is groter op een telefoon.',
       'Nieuw bij Instellingen › Lessen: Rustig scherm. Aan: niets beweegt, geen feestje voor je reeks na een les, en je reeks en woorden staan niet op de startpagina. Staat je telefoon op "minder beweging"? Dan staat het vanzelf aan.',
       'De app is rustiger: warmere kleuren, zachtere randen, en minder tegelijk op het scherm. De onderbalk toont iconen. Extra uitleg staat achter een ⓘ: tik erop om hem te lezen. Je naam op een certificaat of op je kaart pas je nu aan op het certificaat of de kaart zelf: tik op het potlood.',
       'Mag de app je microfoon niet gebruiken? Dan zie je bij het spreken de knop "Zet de microfoon aan", met de stappen voor jouw telefoon. Staat de microfoon weer aan, dan gaat de oefening meteen verder.',

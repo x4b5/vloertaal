@@ -14,7 +14,7 @@ const lang: HelpLanguageSource = {
     voice: 'Voce în olandeză',
     voiceAuto: 'Automat',
     voiceHint: 'Atinge 🔊 ca să asculți. Vocile Vloertaal sună la fel pe orice telefon; celelalte vin de pe telefonul tău.',
-    voiceNone: 'Acest dispozitiv nu are o voce în olandeză. O poți adăuga din setările telefonului (Redare text în vorbire).',
+    voiceNone: 'Acest dispozitiv nu are o voce în olandeză. O poți adăuga din setările telefonului (Transformarea textului în vorbire).', // nieuw, nalezen (AI-correctie 2 nov 2026)
     appTagline: 'Olandeză pentru locul de muncă',
     chooseLanguage: 'Alege limba de ajutor',
     englishOnly: 'Doar engleză',
@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Unde lucrezi?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'În ce țară lucrezi?',
-    countryHint: 'Alege țara în care lucrezi. Primești regulile de muncă din acea țară. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.', // nieuw, nalezen
+    countryHint: 'Primești regulile de muncă din acea țară. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Olanda',
     countryBe: 'Belgia (Flandra)',
     tipsNote: 'Aceste sfaturi sunt despre munca în Olanda. Informații generale, nu consultanță juridică.',
@@ -294,7 +294,7 @@ const lang: HelpLanguageSource = {
     bramDone: 'Gata pentru azi. Ne vedem mâine.',
     bramPerfect: 'Foarte bine. Știi aceste cuvinte.',
     bramGood: 'Treabă bună. Pas cu pas.',
-    bramHard: { m: 'E bine că ai fost harnic. Cuvintele grele revin.', f: 'E bine că ai fost harnică. Cuvintele grele revin.', x: 'E bine că ai exersat. Cuvintele grele revin.' }, // x: nieuw, nalezen
+    bramHard: 'E bine că ai exersat. Cuvintele grele revin.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     bramReview: 'Bine. Repetiția te ajută să ții minte.',
     bramIntro: 'Sunt Bram, colegul tău de muncă.',
     bramIntroHello: 'Bună, sunt Bram.',
@@ -321,7 +321,7 @@ const lang: HelpLanguageSource = {
     remindStop: 'Oprește reamintirea',
     remindStopped: 'Deschide fișierul ca să scoți reamintirea din calendar.',
     remindStoppedAndroid: 'Șterge tu reamintirea din Google Calendar.',
-    resetKeeps: 'Lecțiile, cuvintele, zilele la rând și certificatele tale se șterg. Limba, codul și setările tale rămân.',
+    resetKeeps: 'Lecțiile, cuvintele, zilele la rând și certificatele tale se șterg. Limba și setările tale rămân.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nu s-a încărcat. Este internet?',
     retry: 'Încearcă din nou',
@@ -355,7 +355,7 @@ const lang: HelpLanguageSource = {
     coachCardIntro: 'Acest card arată progresul tău. Arată-l profesorului, coach-ului sau șefului tău. Tu decizi.', // nieuw, nalezen
     coachCardKeep: 'Telefonul tău face cardul. Nu se trimite nimic. Vloertaal nu păstrează nimic.', // nieuw, nalezen
     coachCardWhat: 'Pe card, în olandeză:', // nieuw, nalezen // nagelezen AI 31 okt
-    coachTopics: 'Teme terminate', // nieuw, nalezen
+    coachTopics: 'Subiecte terminate', // nieuw, nalezen (AI-correctie 2 nov 2026)
     coachDays: 'Zile de exercițiu în ultimele 4 săptămâni', // nieuw, nalezen
     coachLast: 'Ultima lecție, cu data', // nieuw, nalezen
     coachCode: 'Cod: aceleași numere, pe scurt, pentru rezumatul grupului. Fără nume.', // nieuw, nalezen
@@ -394,9 +394,9 @@ const lang: HelpLanguageSource = {
     samenSwap: 'Schimbați rolurile', // nieuw, nalezen
     samenStop: 'Gata', // nieuw, nalezen
     checkStart: 'Știu asta: verificare scurtă', // nieuw, nalezen
-    checkPassed: 'Știi deja asta. Bifezi tema aceasta?', // nieuw, nalezen
+    checkPassed: 'Știi deja asta. Bifezi acest subiect?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     checkNoCert: 'Atunci nu ai încă certificat. Îl primești după lecții.', // nieuw, nalezen
-    checkNotYet: 'Lecțiile te ajută la această temă.', // nieuw, nalezen
+    checkNotYet: 'Lecțiile te ajută la acest subiect.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     checkMark: 'Bifează', // nieuw, nalezen
     checkVia: 'prin verificare', // nieuw, nalezen
     checkUndo: 'Totuși fă lecțiile', // nieuw, nalezen
@@ -518,7 +518,7 @@ const lang: HelpLanguageSource = {
     'w.pauze': 'pauza',
     'w.beginnen': 'a începe',
     'w.klaar': 'gata',
-    'w.telaat': 'prea târziu',
+    'w.telaat': 'întârziat (prea târziu)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.morgen': 'mâine',
     'w.ziek': 'bolnav',
     'w.bellen': 'a suna (la telefon)',
@@ -528,7 +528,7 @@ const lang: HelpLanguageSource = {
     'w.beter': 'mai bine',
 
     // Sentences
-    's.hello.1': { m: 'Salut, sunt nou.', f: 'Salut, sunt nouă.', x: 'Salut, sunt nou / nouă.' }, // x: nieuw, nalezen
+    's.hello.1': { m: 'Salut, sunt nou.', f: 'Salut, sunt nouă.', x: 'Salut, sunt o persoană nouă aici.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.hello.2': 'Bună dimineața, sunt Ali.',
     's.hello.3': 'Mulțumesc, pe mâine!',
     's.people.1': 'Numele meu este Sara.',
@@ -555,7 +555,7 @@ const lang: HelpLanguageSource = {
     's.shift.1': 'Tura mea începe la ora șapte.',
     's.shift.2': 'Când este pauza?',
     's.shift.3': 'Scuze, am întârziat.',
-    's.sick.1': { m: 'Sunt bolnav azi.', f: 'Sunt bolnavă azi.', x: 'Sunt bolnav / bolnavă azi.' }, // x: nieuw, nalezen
+    's.sick.1': { m: 'Sunt bolnav azi.', f: 'Sunt bolnavă azi.', x: 'Azi nu mă simt bine.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.sick.2': 'Mă doare spatele.',
     's.sick.3': 'Îl sun pe doctor.',
     'c.hello.q': 'Seară bună!',
@@ -573,7 +573,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'Nu găsesc vestiarul.',
     's.arrive.3': 'Cine e colegul meu îndrumător azi?',
     'c.arrive.q': 'Bună dimineața, în ce problemă veniți?',
-    'c.arrive.a': { m: 'Sunt nou. Încep azi.', f: 'Sunt nouă. Încep azi.', x: 'Sunt nou / nouă. Încep azi.' }, // x: nieuw, nalezen
+    'c.arrive.a': { m: 'Sunt nou. Încep azi.', f: 'Sunt nouă. Încep azi.', x: 'Sunt o persoană nouă aici. Încep azi.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.understand.q': 'Înțelegi?',
     'c.understand.a': 'Nu, încă o dată, te rog.',
     'c.gear.q': 'Ai casca?',
@@ -604,7 +604,7 @@ const lang: HelpLanguageSource = {
     'c.sick.a': 'Da, azi rămân acasă.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Sună la 112!',
-    'p.hurt': { m: 'Sunt rănit.', f: 'Sunt rănită.', x: 'Sunt rănit / rănită.' },
+    'p.hurt': { m: 'Sunt rănit.', f: 'Sunt rănită.', x: 'M-am rănit.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
   },
 };
 

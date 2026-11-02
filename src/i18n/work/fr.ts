@@ -4,7 +4,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {},
   gloss: {
-    'u.apply': 'Chercher un emploi',
+    'u.apply': 'Postuler à un emploi', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.cv': 'Ton CV et ta lettre',
     'w.cv': 'le CV',
     'w.motivatie': 'la motivation (pourquoi tu veux ce travail)',
@@ -54,14 +54,14 @@ const t: CultureTranslation = {
     's.contract.3': 'Quelle convention collective s’applique à moi ?',
     'c.contract.q': 'Tu peux venir travailler demain ?',
     'c.contract.a': 'Oui, je dois être là à quelle heure ?',
-    'l.agency': 'Travailler par une agence d’intérim',
+    'l.agency': 'Travailler via une agence d’intérim', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.uitzendkracht': 'l’intérimaire',
     'w.intercedent': 'la personne de contact à l’agence',
     'w.urenbriefje': 'la feuille d’heures',
     'w.opdracht': 'la mission (le travail dans une entreprise)',
     'w.verlengen': 'prolonger',
     'w.uitbetalen': 'payer, verser',
-    's.agency.1': 'Je travaille par une agence d’intérim.',
+    's.agency.1': 'Je travaille via une agence d’intérim.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.agency.2': 'Ma mission va être prolongée ?',
     's.agency.3': 'Ma mission se termine quand ?',
     'c.agency.q': 'Tu as envoyé tes heures ?',
@@ -277,7 +277,7 @@ const t: CultureTranslation = {
     's.gethelp.3': 'J’ai peur de mon patron.',
     'c.gethelp.q': 'Comment est-ce que je peux t’aider ?',
     'c.gethelp.a': 'On me traite mal au travail.',
-    'u.contact': 'Appeler et écrire au travail',
+    'u.contact': 'Appels et messages avec ton travail', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.callin': 'Appeler le travail',
     'w.telefoontje': 'le coup de téléphone',
     'w.terugbellen': 'rappeler',
@@ -374,7 +374,7 @@ const t: CultureTranslation = {
     'w.nep': 'faux',
     's.scams.1': 'Je ne donne jamais mon code PIN.',
     's.scams.2': 'Je ne clique pas sur le lien.',
-    's.scams.3': 'Ce message est faux.',
+    's.scams.3': 'C’est un faux message.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.scams.q': 'Ici la banque. Quel est votre code PIN ?',
     'c.scams.a': 'Je ne le donne pas. Je raccroche.',
     'u.travel': 'Aller au travail',
@@ -512,8 +512,8 @@ const t: CultureTranslation = {
     'w.datum': 'la date',
     's.kitchen.1': 'Mets la viande dans la chambre froide.',
     's.kitchen.2': 'Coupe les oignons en petits morceaux.',
-    's.kitchen.3': 'Il y a des noix là-dedans ?',
-    'c.kitchen.q': 'Un client est allergique aux noix.',
+    's.kitchen.3': 'Il y a des fruits à coque (noix, noisettes…) là-dedans ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.kitchen.q': 'Un client est allergique aux fruits à coque (noix, noisettes…).', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.kitchen.a': 'Je demande au chef.',
     'l.service': 'Servir les clients',
     'w.gast': 'le client (au restaurant, à l’hôtel)',
@@ -585,7 +585,7 @@ const t: CultureTranslation = {
     'c.contract.o3': 'Signe et ne demande jamais rien, parce que le patron sait mieux que toi.',
     'c.contract.w': 'Une période d’essai dans un contrat de 6 mois ou moins ne compte pas. Poser calmement la question est normal. Si la réponse n’est pas claire, demande conseil au syndicat ou au Juridisch Loket.',
     'c.agency': 'Ton agence est ton employeur',
-    'c.agency.b': 'Si tu travailles par une agence d’intérim (uitzendbureau), l’agence est ton employeur, pas l’entreprise où tu travailles. Ton contrat et ton salaire viennent de l’agence, et il y a une cao pour les intérimaires (uitzend-cao). Tu as droit au même salaire que les travailleurs de l’entreprise qui font le même travail. Tu reçois aussi une prime de vacances (vakantiegeld) et tu accumules des jours de congé. Note toi-même tes heures de travail, et vérifie-les sur ta fiche de paie. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
+    'c.agency.b': 'Si tu travailles via une agence d’intérim (uitzendbureau), l’agence est ton employeur, pas l’entreprise où tu travailles. Ton contrat et ton salaire viennent de l’agence, et il y a une cao pour les intérimaires (uitzend-cao). Tu as droit au même salaire que les travailleurs de l’entreprise qui font le même travail. Tu reçois aussi une prime de vacances (vakantiegeld) et tu accumules des jours de congé. Note toi-même tes heures de travail, et vérifie-les sur ta fiche de paie. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.agency.p': 'Sur ma fiche de paie, il y a trop peu d’heures.',
     'c.agency.s': 'Ta fiche de paie indique 32 heures, mais tu as travaillé 38 heures. Que fais-tu ?',
     'c.agency.o1': 'Montre ta propre liste d’heures à l’agence et demande de corriger.', // nagelezen (2e lezing)
@@ -623,7 +623,7 @@ const t: CultureTranslation = {
     'c.extra.o1': 'La prime de vacances : au moins 8 % de ton salaire brut.',
     'c.extra.o2': 'Un cadeau, seulement pour les meilleurs travailleurs.',
     'c.extra.o3': 'Un 13e mois : un mois de salaire en plus, pour tout le monde.', // nagelezen (2e lezing)
-    'c.extra.w': 'La prime de vacances est ton droit, pas un cadeau. Tu la constitues avec chaque heure de travail. Si tu quittes ton emploi plus tôt, tu la reçois avec ton dernier salaire.',
+    'c.extra.w': 'La prime de vacances est ton droit, pas un cadeau. Tu la gagnes avec chaque heure de travail. Si tu quittes ton emploi plus tôt, tu la reçois avec ton dernier salaire.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.phone': 'Ton téléphone au travail',
     'c.phone.b': 'Beaucoup de lieux de travail interdisent le téléphone pendant le travail, surtout près des machines et des chariots élévateurs, ou dans la production alimentaire. Ça peut être dangereux ou pas hygiénique. Utilise ton téléphone pendant ta pause. Tu attends un appel urgent de ta famille ? Préviens d’abord ton responsable. Ne prends pas de photos ni de vidéos au travail sans autorisation : pense à la vie privée des collègues et aux secrets de l’entreprise. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.',
     'c.phone.p': 'Mon enfant est malade. Je peux garder mon téléphone allumé ?',
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.respect.o3': 'Fais toi aussi des blagues sur ses origines.',
     'c.respect.w': 'Ce genre de blagues n’est pas accepté au travail. Le signaler est normal : l’entreprise doit garder le lieu de travail sûr pour tout le monde.',
     'c.health': 'Les pauses et les horaires de travail',
-    'c.health.b': 'La loi protège ta santé. Tu travailles plus de 5 h 30 ? Alors tu as au moins 30 minutes de pause (ça peut être 2 fois 15 minutes). Plus de 10 heures ? Alors au moins 45 minutes. Une cao peut avoir des règles de pause un peu différentes. Tu peux travailler au maximum 12 heures par service et 60 heures par semaine. Tu as moins de 18 ans ? Alors tu peux travailler moins d’heures au maximum. Ton employeur doit te donner gratuitement des équipements de protection, comme des chaussures de sécurité ou des gants. Travail dangereux ou salaire trop bas ? Tu peux le signaler à la Nederlandse Arbeidsinspectie, aussi sans donner ton nom. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen
+    'c.health.b': 'La loi protège ta santé. Tu travailles plus de 5 h 30 ? Alors tu as au moins 30 minutes de pause (ça peut être 2 fois 15 minutes). Plus de 10 heures ? Alors au moins 45 minutes. Une cao peut avoir des règles de pause un peu différentes. Tu peux travailler au maximum 12 heures par service et 60 heures par semaine. Tu as moins de 18 ans ? Alors tu peux travailler moins d’heures au maximum. Ton employeur doit te donner gratuitement des équipements de protection, comme des chaussures de sécurité ou des gants. Travail dangereux ou salaire trop bas ? Tu peux le signaler à la Nederlandse Arbeidsinspectie, même sans donner ton nom. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.health.p': 'Je n’ai pas encore eu de pause.',
     'c.health.s': 'Tu as travaillé 6 heures sans pause. Ton responsable te demande de continuer. Que fais-tu ?',
     'c.health.o1': 'Dis que tu as besoin de ta pause maintenant.', // nagelezen (2e lezing)
@@ -703,14 +703,14 @@ const t: CultureTranslation = {
     'c.leave.o1': 'Demande ton congé tôt à ton employeur, par écrit.',
     'c.leave.o2': 'Pars, et préviens ton patron à ton retour.',
     'c.leave.o3': 'Demande à un collègue de prévenir le patron la veille.',
-    'c.leave.w': 'Ton employeur doit en général dire oui. Il peut dire non seulement pour une raison très importante, et alors par écrit dans les 2 semaines. Demander tôt donne le plus de chances d’avoir un oui.', // nagelezen (2e lezing)
+    'c.leave.w': 'Ton employeur doit en général dire oui. Il ne peut refuser que pour une raison très importante, et il doit alors le faire par écrit dans les 2 semaines. Demander tôt donne le plus de chances d’avoir un oui.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.illness': 'Tes droits quand tu es malade',
-    'c.illness.b': 'Quand tu es malade, ton employeur doit payer au moins 70 % de ton salaire, pendant 2 ans au maximum. Une cao donne souvent plus. Il peut y avoir jusqu’à 2 jours de carence (wachtdagen) sans salaire, mais seulement si ton contrat ou ta cao le dit. Ton patron n’a pas le droit de demander quelle maladie tu as : tu parles de ta santé et de ton travail avec le médecin du travail (bedrijfsarts). Appelle ton employeur quand tu vas mieux (betermelden). La première année, tu reçois au moins le salaire minimum. Un contrat temporaire s’arrête à sa date de fin, même pendant une maladie. Tu travailles par une agence ? Si ton contrat a une clause d’intérim (uitzendbeding), il peut s’arrêter quand tu tombes malade. Alors pose tes questions sur la Ziektewet à l’UWV, ou demande à un syndicat. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nalezen: feit gelijk getrokken
+    'c.illness.b': 'Quand tu es malade, ton employeur doit payer au moins 70 % de ton salaire, pendant 2 ans au maximum. Une cao donne souvent plus. Il peut y avoir jusqu’à 2 jours de carence (wachtdagen) sans salaire, mais seulement si ton contrat ou ta cao le dit. Ton patron n’a pas le droit de demander quelle maladie tu as : tu parles de ta santé et de ton travail avec le médecin du travail (bedrijfsarts). Appelle ton employeur quand tu vas mieux (betermelden). La première année, tu reçois au moins le salaire minimum. Un contrat temporaire s’arrête à sa date de fin, même pendant une maladie. Tu travailles via une agence ? Si ton contrat a une clause d’intérim (uitzendbeding), il peut s’arrêter quand tu tombes malade. Alors pose tes questions sur la Ziektewet à l’UWV, ou demande à un syndicat. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.illness.p': 'Je vais mieux. Je viens travailler demain.',
     'c.illness.s': 'Tu es malade depuis une semaine. Ton employeur te demande d’aller voir le médecin du travail. Que fais-tu ?',
     'c.illness.o1': 'Vas-y, et parle avec le médecin de ta santé et de ton travail.',
     'c.illness.o2': 'N’y va pas, parce que tu as déjà ton propre médecin.',
-    'c.illness.o3': 'Retourne au travail alors que tu es encore malade, pour ne pas devoir y aller.',
+    'c.illness.o3': 'Retourne au travail alors que tu es encore malade, pour ne pas devoir aller chez le médecin du travail.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.illness.w': 'Le médecin du travail t’aide à reprendre le travail en bonne santé. Il ne donne pas tes détails médicaux à ton patron, seulement le travail que tu peux faire.',
     'c.warning': 'Les signes d’exploitation',
     'c.warning.b': 'Fais attention à ces signes. Ton employeur garde ton passeport ou ta pièce d’identité : c’est interdit, tu gardes toi-même tes papiers et un employeur peut seulement faire une copie. Tu reçois beaucoup moins que le salaire convenu, ou pas de fiche de paie. Tu dois rembourser une grosse dette à l’employeur ou à l’agence. Tu dois faire des journées extrêmement longues, sans avoir le choix. Quelqu’un te menace, ou utilise ton logement pour faire pression sur toi. Ce n’est pas normal et c’est interdit. Informations générales. Pour ta situation : demande au syndicat, au Juridisch Loket ou à FairWork.',
@@ -721,7 +721,7 @@ const t: CultureTranslation = {
     'c.warning.o3': 'Donne-le, mais prends-le d’abord en photo.',
     'c.warning.w': 'Ton passeport est à toi. Le garder est une façon de contrôler les travailleurs. Un employeur a seulement besoin d’une copie pour ses dossiers.',
     'c.gethelp': 'Où trouver de l’aide',
-    'c.gethelp.b': 'Tu vois des signes d’exploitation, pour toi ou pour quelqu’un d’autre ? Demande de l’aide. Tu peux le signaler à la Nederlandse Arbeidsinspectie, aussi de façon anonyme, ou à la police. Meld Misdaad Anoniem : 0800-7000. Conseil juridique gratuit : le Juridisch Loket. En danger ? Appelle le 112. Toute personne qui travaille aux Pays-Bas peut avoir de l’aide, aussi les migrants. Informations générales. Pour ta situation : demande au syndicat, au Juridisch Loket ou à FairWork.',
+    'c.gethelp.b': 'Tu vois des signes d’exploitation, pour toi ou pour quelqu’un d’autre ? Demande de l’aide. Tu peux le signaler à la Nederlandse Arbeidsinspectie, même de façon anonyme, ou à la police. Meld Misdaad Anoniem : 0800-7000. Conseil juridique gratuit : le Juridisch Loket. En danger ? Appelle le 112. Toute personne qui travaille aux Pays-Bas peut avoir de l’aide, y compris les migrants. Informations générales. Pour ta situation : demande au syndicat, au Juridisch Loket ou à FairWork.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.gethelp.p': 'J’ai besoin d’aide. On m’exploite.',
     'c.gethelp.s': 'Un ami travaille 14 heures par jour, ne reçoit presque pas de salaire et a peur du patron. Que peux-tu faire ?',
     'c.gethelp.o1': 'Aide-le à contacter l’Arbeidsinspectie ou le Juridisch Loket.', // nieuw, nalezen
@@ -761,13 +761,13 @@ const t: CultureTranslation = {
     'c.diploma.o3': 'Tu dois payer la formation toi-même.',
     'c.diploma.w': 'Si une formation est obligatoire pour ton travail, l’employeur paie et elle compte comme temps de travail. Si ce n’est pas clair, demande conseil.',
     'c.doctor': 'Médecin ou 112 ?',
-    'c.doctor.b': 'Inscris-toi chez un médecin généraliste (huisarts) près de chez toi. Tu as besoin de soins urgents le soir, la nuit ou le week-end ? Appelle la huisartsenpost. Appelle le 112 seulement en cas d’urgence : danger de mort, incendie ou crime en ce moment. Tu reçois les médicaments à la pharmacie (apotheek).',
+    'c.doctor.b': 'Inscris-toi chez un médecin généraliste (huisarts) près de chez toi. Tu as besoin de soins urgents le soir, la nuit ou le week-end ? Appelle la huisartsenpost. Appelle le 112 seulement en cas d’urgence : danger de mort, incendie ou crime en train de se passer. Tu reçois les médicaments à la pharmacie (apotheek).', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.doctor.p': 'Je veux m’inscrire chez le médecin généraliste.',
     'c.doctor.s': 'C’est samedi soir. Ton enfant a beaucoup de fièvre, mais il est réveillé et respire normalement. Que fais-tu ?',
     'c.doctor.o1': 'Appelle la huisartsenpost.',
     'c.doctor.o2': 'Appelle le 112.',
     'c.doctor.o3': 'Attends lundi et ne fais rien.',
-    'c.doctor.w': 'La huisartsenpost aide pour les soins urgents en dehors des heures de bureau. Le 112, c’est pour les urgences : danger de mort, incendie ou crime en ce moment.',
+    'c.doctor.w': 'La huisartsenpost aide pour les soins urgents en dehors des heures de bureau. Le 112, c’est pour les urgences : danger de mort, incendie ou crime en train de se passer.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.insurance': 'L’assurance maladie',
     'c.insurance.b': 'Quand tu habites ou travailles aux Pays-Bas, une assurance maladie de base est en général obligatoire. Tu paies une prime chaque mois. Chaque année, il y a une franchise (eigen risico) : les premiers frais, tu les paies toi-même. Le montant change : vérifie-le chez ton assureur. Les visites chez le médecin généraliste (huisarts) ne comptent pas pour la franchise. Avec un petit revenu, tu peux peut-être recevoir une allocation (zorgtoeslag). Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
     'c.insurance.p': 'J’ai besoin d’une assurance maladie. Vous pouvez m’aider ?',
@@ -811,7 +811,7 @@ const t: CultureTranslation = {
     'c.ww': 'L’allocation chômage (WW)',
     'c.ww.b': 'Tu as perdu ton emploi ? Demande la WW à l’UWV le plus vite possible, dans la semaine après ton premier jour sans travail. En général, tu dois avoir travaillé au moins 26 des 36 dernières semaines. Si tu démissionnes toi-même, en général tu n’as pas la WW. Inscris-toi comme demandeur d’emploi sur werk.nl. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
     'c.ww.p': 'Je veux demander l’allocation chômage. Qu’est-ce que je dois faire ?',
-    'c.ww.s': 'Ton travail t’énerve et tu veux démissionner aujourd’hui. Qu’est-ce qui est sage ?',
+    'c.ww.s': 'Ton travail t’énerve et tu veux démissionner aujourd’hui. Que vaut-il mieux faire ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.ww.o1': 'Demande d’abord conseil, avant de démissionner.', // nagelezen (2e lezing)
     'c.ww.o2': 'Démissionne aujourd’hui : tu auras quand même la WW.',
     'c.ww.o3': 'Ne viens plus au travail sans rien dire.',
@@ -1244,7 +1244,7 @@ const t: CultureTranslation = {
     'w.inburgering': "l’intégration civique (les cours et les examens pour les nouveaux arrivants)",
     'w.taalles': "le cours de langue",
     's.permit.1': "Je peux travailler ici avec mes papiers ?",
-    's.permit.2': { m: "Je suis salarié ou indépendant ?", f: "Je suis salariée ou indépendante ?", x: 'Je travaille avec un contrat ou à mon compte ?' }, // x: nieuw, nalezen
+    's.permit.2': { m: "Je suis salarié ou indépendant ?", f: "Je suis salariée ou indépendante ?", x: 'Je travaille avec un contrat de travail ou à mon compte ?' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.permit.3': "Je travaille sur appel.",
     'c.permit.q': "Tu peux travailler mardi ?",
     'c.permit.a': "Non, j’ai un cours de langue ce jour-là. Mercredi, je peux.",
@@ -1269,9 +1269,9 @@ const t: CultureTranslation = {
     'w.oog': "l’œil",
     's.body.1': "J’ai mal à la main.",
     's.body.2': "Je ne me sens pas bien.",
-    's.body.3': { m: "Je suis tombé sur le bras.", f: "Je suis tombée sur le bras.", x: 'Je me suis fait mal au bras en tombant.' }, // x: nieuw, nalezen
+    's.body.3': { m: "Je suis tombé sur le bras.", f: "Je suis tombée sur le bras.", x: 'J’ai fait une chute sur le bras.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.body.q': "Où est-ce que tu as mal ?",
-    'c.body.a': "Au dos. J’ai soulevé une caisse lourde.",
+    'c.body.a': "Au dos. J’ai soulevé un carton lourd.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.jobends': "Quand ton travail s’arrête",
     'w.eindafrekening': "le solde de tout compte (ta dernière paie quand un travail s’arrête)",
     'w.opzeggen': "résilier (un contrat), annuler",
@@ -1339,7 +1339,7 @@ const t: CultureTranslation = {
     'w.lezen': "lire", // nieuw, nalezen
     'w.aantal': "le nombre (combien)", // nieuw, nalezen
     'w.materiaal': "le matériel (ce qu’il te faut pour le travail)", // nieuw, nalezen
-    'w.klaarleggen': "préparer (mettre prêt ce qu’il te faut)", // nieuw, nalezen
+    'w.klaarleggen': "préparer (sortir ce qu’il te faut)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.handtekening': "la signature", // nieuw, nalezen
     's.workorder.1': "Je lis d’abord le bon de travail.", // nieuw, nalezen
     's.workorder.2': "Ce nombre est juste ?", // nieuw, nalezen
@@ -1413,7 +1413,7 @@ const t: CultureTranslation = {
     'w.stage': "le stage (tu apprends dans une entreprise)", // nieuw, nalezen
     'w.praktijkopleider': "le tuteur en entreprise (il te guide dans l’entreprise)", // nieuw, nalezen
     'w.stagebegeleider': "le référent de stage de l’école (il te guide pour l’école)", // nieuw, nalezen
-    'w.pok': "la convention de stage (toi, l’école et l’entreprise la signez)", // nieuw, nalezen
+    'w.pok': "la convention de stage (toi, l’école et l’entreprise, vous la signez)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.school': "l’école", // nieuw, nalezen
     'w.leerbedrijf': "l’entreprise formatrice (une entreprise où des élèves peuvent apprendre)", // nieuw, nalezen
     's.placement.1': "Je fais mon stage dans un entrepôt.", // nieuw, nalezen
@@ -1433,7 +1433,7 @@ const t: CultureTranslation = {
     's.review.3': "Mon évaluation est la semaine prochaine.", // nieuw, nalezen
     'c.review.q': "Tu dois travailler plus vite.", // nieuw, nalezen
     'c.review.a': "D’accord. Vous pouvez me montrer comment faire plus vite ?", // nieuw, nalezen
-    'u.society': "Participer aux Pays-Bas", // nieuw, nalezen
+    'u.society': "Participer à la vie aux Pays-Bas", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.council': "La commune et le vote", // nieuw, nalezen
     'w.stemmen': "voter", // nieuw, nalezen
     'w.verkiezing': "l’élection", // nieuw, nalezen
@@ -1449,12 +1449,12 @@ const t: CultureTranslation = {
     'l.police': "La police et tes droits", // nieuw, nalezen
     'w.agent': "l’agent de police", // nieuw, nalezen
     'w.boete': "l’amende (de l’argent à payer comme sanction)", // nieuw, nalezen
-    'w.bezwaar': "la réclamation (tu dis par écrit que tu n’es pas d’accord)", // nieuw, nalezen
+    'w.bezwaar': "la contestation (tu dis par écrit que tu n’es pas d’accord)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.rechter': "le juge", // nieuw, nalezen
     'w.advocaat': "l’avocat", // nieuw, nalezen
     'w.wet': "la loi", // nieuw, nalezen
     's.police.1': "J’ai eu une amende.", // nieuw, nalezen
-    's.police.2': "Je veux faire une réclamation.", // nieuw, nalezen
+    's.police.2': "Je veux contester la décision.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.police.3': "Je veux parler à un avocat.", // nieuw, nalezen
     'c.police.q': "Je peux voir votre pièce d’identité ?", // nieuw, nalezen
     'c.police.a': "Oui, la voici. Qu’est-ce qui se passe ?", // nieuw, nalezen
@@ -1507,7 +1507,7 @@ const t: CultureTranslation = {
     's.nextstep.3': "Quand est la journée portes ouvertes ?", // nieuw, nalezen
     'c.nextstep.q': "Qu’est-ce que tu vas faire après Entree ?", // nieuw, nalezen
     'c.nextstep.a': "Je veux faire la bbl. Comme ça, je travaille et j’apprends.", // nieuw, nalezen
-    'l.email': "Écrire au travail", // nieuw, nalezen
+    'l.email': "Écrire à ton employeur", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.mail': "l’e-mail", // nieuw, nalezen
     'w.onderwerp': "l’objet (d’un e-mail)", // nieuw, nalezen
     'w.beste': "cher, chère (au début d’une lettre ou d’un e-mail)", // nieuw, nalezen
@@ -1672,9 +1672,9 @@ const t: CultureTranslation = {
     'c.budget.o3': "Tu achètes les chaussures en “payer plus tard”.", // nieuw, nalezen
     'c.budget.w': "Le loyer, l’assurance et ton téléphone reviennent chaque mois. Si tu les paies d’abord, tu sais combien d’argent il reste. Comme ça, tu n’as pas de dettes.", // nieuw, nalezen
     'c.healthy': "Sommeil, repas et pas de drogue", // nieuw, nalezen
-    'c.healthy.b': { m: "Tu travailles mieux et plus en sécurité quand tu dors assez, même après un service du soir. Prends un petit-déjeuner, et bois de l’eau pendant la journée. Bouge pendant ta pause, par exemple un petit tour à pied. Travailler sous l’effet de l’alcool ou de la drogue est dangereux, et la plupart des employeurs l’interdisent. Tu te sens déprimé depuis longtemps, ou tu n’arrives pas à arrêter de boire ou de consommer ? Parle à ton médecin généraliste (huisarts). Il peut t’aider, et il garde le secret.", f: "Tu travailles mieux et plus en sécurité quand tu dors assez, même après un service du soir. Prends un petit-déjeuner, et bois de l’eau pendant la journée. Bouge pendant ta pause, par exemple un petit tour à pied. Travailler sous l’effet de l’alcool ou de la drogue est dangereux, et la plupart des employeurs l’interdisent. Tu te sens déprimée depuis longtemps, ou tu n’arrives pas à arrêter de boire ou de consommer ? Parle à ton médecin généraliste (huisarts). Il peut t’aider, et il garde le secret.", x: "Tu travailles mieux et plus en sécurité quand tu dors assez, même après un service du soir. Prends un petit-déjeuner, et bois de l’eau pendant la journée. Bouge pendant ta pause, par exemple un petit tour à pied. Travailler sous l’effet de l’alcool ou de la drogue est dangereux, et la plupart des employeurs l’interdisent. Tu te sens déprimé / déprimée depuis longtemps, ou tu n’arrives pas à arrêter de boire ou de consommer ? Parle à ton médecin généraliste (huisarts). Il peut t’aider, et il garde le secret." }, // nieuw, nalezen
-    'c.healthy.p': { m: "Je me sens déprimé depuis longtemps. Je peux prendre rendez-vous ?", f: "Je me sens déprimée depuis longtemps. Je peux prendre rendez-vous ?", x: "Je me sens déprimé / déprimée depuis longtemps. Je peux prendre rendez-vous ?" }, // nieuw, nalezen
-    'c.healthy.s': { m: "Ce soir, tu as un service de nuit. Un collègue te propose un cachet pour rester éveillé. Qu’est-ce que tu fais ?", f: "Ce soir, tu as un service de nuit. Un collègue te propose un cachet pour rester éveillée. Qu’est-ce que tu fais ?", x: "Ce soir, tu as un service de nuit. Un collègue te propose un cachet pour rester éveillé / éveillée. Qu’est-ce que tu fais ?" }, // nieuw, nalezen
+    'c.healthy.b': { m: "Tu travailles mieux et plus en sécurité quand tu dors assez, même après un service du soir. Prends un petit-déjeuner, et bois de l’eau pendant la journée. Bouge pendant ta pause, par exemple un petit tour à pied. Travailler sous l’effet de l’alcool ou de la drogue est dangereux, et la plupart des employeurs l’interdisent. Tu te sens déprimé depuis longtemps, ou tu n’arrives pas à arrêter de boire ou de consommer ? Parle à ton médecin généraliste (huisarts). Il peut t’aider, et il garde le secret.", f: "Tu travailles mieux et plus en sécurité quand tu dors assez, même après un service du soir. Prends un petit-déjeuner, et bois de l’eau pendant la journée. Bouge pendant ta pause, par exemple un petit tour à pied. Travailler sous l’effet de l’alcool ou de la drogue est dangereux, et la plupart des employeurs l’interdisent. Tu te sens déprimée depuis longtemps, ou tu n’arrives pas à arrêter de boire ou de consommer ? Parle à ton médecin généraliste (huisarts). Il peut t’aider, et il garde le secret.", x: "Tu travailles mieux et plus en sécurité quand tu dors assez, même après un service du soir. Prends un petit-déjeuner, et bois de l’eau pendant la journée. Bouge pendant ta pause, par exemple un petit tour à pied. Travailler sous l’effet de l’alcool ou de la drogue est dangereux, et la plupart des employeurs l’interdisent. Tu n’as pas le moral depuis longtemps, ou tu n’arrives pas à arrêter de boire ou de consommer ? Parle à ton médecin généraliste (huisarts). Il peut t’aider, et il garde le secret." }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.healthy.p': { m: "Je me sens déprimé depuis longtemps. Je peux prendre rendez-vous ?", f: "Je me sens déprimée depuis longtemps. Je peux prendre rendez-vous ?", x: "Je n’ai pas le moral depuis longtemps. Je peux prendre rendez-vous ?" }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.healthy.s': { m: "Ce soir, tu as un service de nuit. Un collègue te propose un cachet pour rester éveillé. Qu’est-ce que tu fais ?", f: "Ce soir, tu as un service de nuit. Un collègue te propose un cachet pour rester éveillée. Qu’est-ce que tu fais ?", x: "Ce soir, tu as un service de nuit. Un collègue te propose un cachet pour ne pas t’endormir. Qu’est-ce que tu fais ?" }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.healthy.o1': "Tu dis non, et tu dors quelques heures avant ton service.", // nieuw, nalezen
     'c.healthy.o2': "Tu prends un demi-cachet, ce n’est pas dangereux.", // nieuw, nalezen
     'c.healthy.o3': "Tu le prends, mais tu ne le dis à personne au travail.", // nieuw, nalezen

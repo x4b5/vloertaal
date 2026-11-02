@@ -113,7 +113,7 @@ export const bg: Gloss = {
 };
 
 export const es: Gloss = {
-    "be.w.taalhuis": "la praattafel (un grupo para practicar hablando neerlandés)", // nieuw, nalezen
+    "be.w.taalhuis": "la praattafel (un grupo de conversación para practicar el neerlandés)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.keeplearning": "Sigue aprendiendo, un poco cada día", // = c.keeplearning
     "be.c.keeplearning.b": "Unos minutos cada día ayudan más que una hora larga a la semana. Guarda las palabras nuevas del trabajo en una app de notas de tu teléfono. Escucha neerlandés fácil, por ejemplo Karrewiet (noticias para niños, VRT) o un pódcast en neerlandés lento. El Agentschap Integratie en Inburgering te ayuda a encontrar un curso de neerlandés, y muchas bibliotecas tienen una praattafel: un grupo para practicar hablando. Los compañeros muchas veces cambian al inglés para ayudarte. Pídeles con amabilidad que hablen neerlandés contigo: a la mayoría le gusta ayudar.", // nieuw, nalezen
     "be.c.keeplearning.p": "Háblame en neerlandés, así lo aprendo más rápido.", // = c.keeplearning.p

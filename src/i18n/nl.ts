@@ -120,7 +120,7 @@ export const uiNl: Record<UiKey, UiText> = {
   sector: 'Je werk',
   chooseSector: 'Waar werk je?',
   countryTitle: 'In welk land werk je?',
-  countryHint: 'Kies het land waar je werkt. Dan krijg je de werkregels van dat land. Dit blijft op je telefoon. We sturen het nergens heen.',
+  countryHint: 'Je krijgt de werkregels van dat land. Dit blijft op je telefoon. We sturen het nergens heen.',
   countryNl: 'Nederland',
   countryBe: 'België (Vlaanderen)',
   tipsNote: 'Deze tips gaan over werk in Nederland. Algemene informatie, geen juridisch advies.',
@@ -363,7 +363,7 @@ export const uiNl: Record<UiKey, UiText> = {
   remindStop: 'Stop de herinnering',
   remindStopped: 'Open het bestand. Dan haal je de herinnering uit je agenda.',
   remindStoppedAndroid: 'Haal de herinnering zelf weg in Google Agenda.',
-  resetKeeps: 'De app wist je lessen, je dagen op rij en je certificaten. Je taal, je code en je instellingen blijven.', // regels: no words
+  resetKeeps: 'De app wist je lessen, je dagen op rij en je certificaten. Je taal en je instellingen blijven.', // regels: no words
   loadFailed: 'Niet geladen. Is er internet?',
   retry: 'Opnieuw proberen',
   // "Wat ken je al?" (alleen in het spoor Taal; hier voor de volledigheid)

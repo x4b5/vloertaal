@@ -6,7 +6,7 @@ import { BeNote } from './BeNote';
 import { lessonNlOnly } from '../content/taalBe';
 import type { Lesson } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
-import { fillCount, gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
+import { gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, endLessonPace, hasClip, sounds, speak, startLessonPace, stopSpeech, surelySilent } from '../lib/audio';
 import { realPaceReplay } from '../lib/tempo';
@@ -17,7 +17,8 @@ const mayBeHeard = (text: string) => !surelySilent(text);
 import { useVoices } from './useVoices';
 import { tileDiff } from '../lib/answers';
 import { breakable } from '../lib/dutch';
-import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, unheard, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
+import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, readBackAt, unheard, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
+import { ChromeBack } from './ChromeBack';
 import { feedbackMeaningKey, feedbackTitle } from '../lib/feedbackTitle';
 import { offerSkipSound } from '../lib/skipSound';
 import { deviceLabel, firstReportHint, reportMail } from '../lib/report';
@@ -303,7 +304,7 @@ export function LessonPlayer(props: PlayerProps) {
   return <LessonRun {...props} />;
 }
 
-function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, fresh = false, sector, sayings, report = false, reportHint: explain = false, fast = false, easy = false }: {
+function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, fresh = false, sector, sayings, report = false, reportHint: explain = false, fast = false, easy = false, check: isCheck = false }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -344,6 +345,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   fast?: boolean;
   /** After many mistakes (src/lib/pace.ts): a shorter lesson. */
   easy?: boolean;
+  /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): a test, so no hand that shows where to
+   *  tap (it points at the right tile, and would give the first word away). */
+  check?: boolean;
 }) {
   const persist = resumable && !exercises;
   // An interrupted run of this lesson (same review mode), less than two days old.
@@ -810,6 +814,16 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     }
   }
 
+  /** The read page this question goes with (lib/exercises.ts readBackAt), while it is unanswered. */
+  const backTo = checked ? null : readBackAt(queue, index, initial.length);
+  /** Back to that page to read it again: nothing is graded there, so nothing is lost; its
+   *  Continue comes back to this question. */
+  function readBack() {
+    if (backTo === null) return;
+    reset();
+    setIndex(backTo);
+  }
+
   /** Leave the listening, speaking or writing exercise on screen (unanswered) for the next one
    *  that needs no sound. */
   function skipAudio() {
@@ -895,7 +909,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // A built sentence or a chat reply: a ▶ that says it again in the speaker's voice, the Dutch
   // (as tiles after a wrong sentence), its meaning large in the help language, English small.
   const sayable = feedback && pair?.nl && (ex.kind === 'build' || ex.kind === 'chat');
-  const replay = sayable && pair?.nl ? (
+  // A built sentence is said by the speaker in its bubble (with its meaning), so the label has no
+  // second one (feedback of the maker, 2 November: say it once).
+  const replay = sayable && ex.kind !== 'build' && pair?.nl ? (
     <button
       type="button"
       className="replay-btn"
@@ -934,8 +950,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         {/* To hear it again: optional, so at the end (the right), as every optional speaker. */}
         {replay}
       </div>
-      {pairHelp && lang && <HelpText className="pair-gloss" text={pairHelp} lang={lang} />}
-      <span className={`pair-en ${pairHelp && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>
+      {/* A built sentence's meaning is in the bubble right above (the task): not again here. */}
+      {ex.kind !== 'build' && pairHelp && lang && <HelpText className="pair-gloss" text={pairHelp} lang={lang} />}
+      {ex.kind !== 'build' && <span className={`pair-en ${pairHelp && lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{pair.meaning.en}</span>}
       {verbAt >= 0 && (
         <p className="feedback-verb">
           <NlPair nlFirst nl="Het werkwoord staat op plek 2." nlClass="feedback-verb-nl" text={ui('verbSecond', lang)} />
@@ -993,8 +1010,23 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // something: a why, "almost", a wrong answer, a sentence (its meaning and speaker), writing,
   // a picture pick ("Which picture is it?": the meaning in words is only on the label). A chat's
   // right reply is in the bubble and in the green option, with its meaning and its speaker: a
-  // third time on a label was too much (feedback of the maker, 1 November).
-  const cardless = quietRight && !ruleFb && !why && (ex.kind === 'meaning' || ex.kind === 'listen' || ex.kind === 'chat');
+  // third time on a label was too much (feedback of the maker, 1 November). The same for "What do
+  // you hear?" picked from written words (typing in the first topics, typeAsPick): the green card
+  // has the word, its meaning, its picture and its speaker (feedback of the maker, 2 November).
+  // A wrong answer too (feedback of the maker, 2 November): the green option already shows the
+  // right one with its meaning, the red one what was picked, and "comes back later" that it
+  // returns; the label only repeated it ("Het goede antwoord is: tot morgen = see you tomorrow").
+  // It stays when it explains something (a chat's why, a situation, a rules question, "almost").
+  // A situation (and the question on a saying) after a wrong pick: the usual answer is green in the
+  // list, so the label holds only why it works (feedback of the maker, 2 November). A sentence
+  // built right: it stands on the answer line, its meaning and speaker are in the bubble; with
+  // "Zet het vooraan" the label stays for the verb on place 2.
+  const builtRight = ex.kind === 'build' && !ex.front && Boolean(answer?.correct) && !answer?.almost;
+  const answerShown = ex.kind === 'meaning' || ex.kind === 'listen' || ex.kind === 'chat' || ex.kind === 'situation' || typePick || builtRight;
+  const cardless = Boolean(feedback) && !answer?.almost && !ruleFb && !why && answerShown;
+  /** A wrong answer whose right one is already on screen, with an explanation (a chat's why): the
+   *  label holds only that explanation, like a right answer with a why. */
+  const whyOnly = Boolean(feedback && answer && !answer.correct && answerShown && why && !ruleFb);
   // Answered: the question steps back (styles.css "the spotlight after the answer"). Matching has
   // no Check; it is answered when the last pair is made.
   const answered = checked || (ex.kind === 'match' && answer !== null);
@@ -1084,8 +1116,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       <div className="player-body" ref={bodyRef} inert={askQuit}>
         <div className="ex-ghost" ref={ghostRef} aria-hidden />
         {/* The first time a kind of exercise comes: a hand shows where to tap, once (ShowHow). */}
-        <ShowHow key={`how-${key}`} kind={ex.kind === 'build' || ex.kind === 'match' || ex.kind === 'type' ? ex.kind : null} root={bodyRef} />
+        <ShowHow key={`how-${key}`} kind={!isCheck && (ex.kind === 'build' || ex.kind === 'match' || ex.kind === 'type') ? ex.kind : null} root={bodyRef} />
         <div className={`ex-slide ${entering ? 'ex-enter' : ''}`} key={key} ref={slideRef}>
+        {/* A question in parts on more pages: the back arrow to the page before, to read it again. */}
+        {backTo !== null && <div className="ex-back"><ChromeBack lang={lang} onBack={readBack} /></div>}
         {/* The Belgian course: a lesson that is still the Dutch one says so, on its first step. */}
         {index === 0 && lesson.rule?.note && <p className="rule-country-note" role="note" lang="nl">{lesson.rule.note}</p>}
         {/* The language course in Belgium: a Dutch lesson that differs there says so (docs/taal-belgie.md). */}
@@ -1098,8 +1132,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
             <>
               {/* Retry phase: the mistakes come back, and the learner sees how many are left. */}
               {/* The chip says it in the help language too (large), the Dutch small beside it. */}
+              {/* One line: the tag says "repeat" and how many are left (a second line said the
+                  same, feedback of the maker, 2 November). */}
               <RepeatTag left={repeatsLeft} lang={lang} />
-              <Bi className="ex-tag-note" text={fillCount('practiseMistakes', repeatsLeft, lang)} />
             </>
           ) : (
             <KindTag kind={typePick ? 'listen' : ex.kind} lang={lang} nlLabel={ex.kind === 'card' ? cardTag(ex.step) : undefined} />
@@ -1150,7 +1185,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                 {/* Heading: the help language first and large; the Dutch words and English under it. */}
                 {/* A plain right answer has no heading ("Goed zo!"): the green and the check say it,
                     the status region says it aloud. "Bijna goed" and "Het goede antwoord is" stay. */}
-                {!quietRight && <div className={`feedback-head ${headingMeaning?.help ? 'has-help' : ''}`}>
+                {!quietRight && !whyOnly && <div className={`feedback-head ${headingMeaning?.help ? 'has-help' : ''}`}>
                   {headingMeaning?.help && lang && <HelpText className="feedback-help" text={headingMeaning.help} lang={lang} />}
                   <div className="feedback-line">
                     <span className="feedback-title" lang="nl" dir={rtl ? 'ltr' : undefined}>
@@ -1161,11 +1196,11 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
                   </div>
                 </div>}
                 {ruleFb && <RuleFeedbackBody v={ruleFb} lang={lang} />}
-                {(pairLine || whyLine) && !quietRight && <hr className="feedback-rule" />}
+                {(pairLine || whyLine) && !quietRight && !whyOnly && <hr className="feedback-rule" />}
                 {/* After a wrong answer the heading is the lead; the answer itself is green with a check. */}
                 {/* Right with an explanation (a situation): the answer is already green in the list,
                     so only the why ("Vloertaal rustiger": say it once). */}
-                {!answer.correct && pairLine ? (
+                {whyOnly ? null : !answer.correct && pairLine ? (
                   <div className="feedback-answer">
                     <span className="feedback-answer-check" aria-hidden><CheckIcon size={20} /></span>
                     {pairLine}

@@ -3,6 +3,124 @@
 Alle bestanden in `src/i18n/` zijn met AI gemaakt. Zet `reviewed: true` pas als een moedertaalspreker
 het hele bestand heeft gecontroleerd. Hieronder de punten waar de vertaler zelf twijfelde.
 
+## Kritische controle 2 november 2026, ronde 2: woorden, zinnen en gesprekjes
+
+Per taal las een AI-lezer alle woorden, zinnen, gesprekjes (met de "waarom"), lestitels en
+onderwerpnamen, plus de Belgische versies waar die anders zijn: ongeveer 1.500 teksten per taal.
+**383 teksten veranderd**, elk gemarkeerd `// nieuw, nalezen (AI-correctie 2 nov 2026)`:
+
+| Taal | fout | twijfel | stijl | totaal |
+|---|---|---|---|---|
+| Arabisch | 5 | 24 | 5 | 34 |
+| Bulgaars | 9 | 17 | 5 | 31 |
+| Dari | 3 | 22 | 0 | 25 |
+| Duits | 8 | 10 | 1 | 19 |
+| Frans | 7 | 11 | 2 | 20 |
+| Oekraïens | 18 | 22 | 0 | 40 |
+| Perzisch | 4 | 14 | 1 | 19 |
+| Pools | 8 | 14 | 8 | 30 |
+| Portugees | 6 | 18 | 0 | 24 |
+| Roemeens | 10 | 14 | 1 | 25 |
+| Spaans | 6 | 31 | 0 | 37 |
+| Tigrinya | 47 | 10 | 0 | 57 |
+| Turks | 5 | 16 | 1 | 22 |
+
+
+**Wat vaak terugkwam:**
+- **"Mijn itsme-code" zonder "code"** (`be.s.login.3`: bg, fa, prs, ro, tr, uk).
+- **De werkgever mag het ID "zien"**, niet opeisen (`c.bsn.a.why`: bg, fa, pl, ro, uk). Dat botste met de les over uitbuiting.
+- **"Solliciteren" als "werk zoeken"** (`u.apply`: es, fr, pl). **De stempas als stembiljet** (pl, tr).
+- **Engelse bron:** "Saying the task back checks that the order is clear" las als "de opdracht", terwijl de volgorde bedoeld is ("Dus ik moet eerst …?"). De bron is nu "checks what you must do first".
+- **Tigrinya:**
+  - "Mag ik / Kan ik …?" stond 21 keer in de 3e persoon (ይኽእል, "hij kan"); het moet እኽእል zijn.
+  - 6 ik-zinnen stonden ook in de 3e persoon.
+  - Amhaarse vormen vervangen: ነጻ werd ናጻ, ቀዝቃዛ werd ዝሑል, ኣገልግሎት werd ግልጋሎት.
+- **Termen:**
+  - doos, gemeente (uk: overal муніципалітет), cliënt in de zorg (pt utente, fr résident);
+  - Belastingdienst;
+  - ziekenfonds (ro: "casă de sănătate" is een kliniek).
+- **Spaans:** woorden uit Spanje die in Latijns-Amerika iets anders betekenen, krijgen het tweede woord erbij (taquilla/casillero, fichar/marcar, carretilla elevadora/montacargas).
+- **x-vormen:** waar een natuurlijke neutrale zin bestaat, is de schuine streep weg. In de verleden tijd van de 1e persoon (pl, uk, bg) blijft hij soms staan: daar is geen goede neutrale vorm.
+
+**Nog open:** de lezers merkten dat in een aantal talen (es, pt, ro, pl, uk) nog oudere x-vormen
+met een schuine streep staan waar het Nederlands een ik-zin heeft. Dat is een keuze per taal.
+`w.bijzonderheid` ("de deur") is geen bronfout: het woord veranderde, de id bleef.
+
+## Kritische controle 2 november 2026 (alle 13 hulptalen)
+
+**Hoe.** Twee lagen.
+1. *Automatisch, over alles* (48.881 teksten, `npm run review:export -- --alles`):
+   - plekhouders, getallen en termijnen, links, mail en telefoonnummers;
+   - schrift en letters per taal (Russische letters in Oekraïens of Bulgaars, Arabische ي/ك in Perzisch, ş/ţ in Roemeens, ñ in Portugees);
+   - Spaanse ¿¡, vraagtekens, haakjes, weggevallen Nederlandse termen;
+   - aanspreekvorm per taal, Dari tegenover Farsi, Europees tegenover Braziliaans Portugees;
+   - zinnen die in één taal ontbreken (vergeleken met de andere talen en met de m/f/x-vormen).
+2. *Een AI-reviewer per taal* (15 lezers, Arabisch en Tigrinya in twee delen):
+   - las alle schermteksten (Scherm, Over, Wat kun je nu?) en alle tips over veiligheid, werk en contract, loon, verlof en ziekte, werk kwijt, uitbuiting, regels en rechten, wonen en papieren, gezondheid en hulp vragen, NL en BE (ongeveer 1.000 teksten per taal);
+   - zocht naar betekenis, grammatica en vorm, woordkeus en onnatuurlijke zinnen.
+
+   *Niet* door een lezer gezien: de losse woorden, zinnen en gesprekjes, en de tips van de andere onderwerpen. Die hadden alleen de automatische controle.
+
+**Uitkomst.**
+- De automatische controle vond geen kapotte plekhouders, links of telefoonnummers. Ook geen Russische letters in het Oekraïens en het Bulgaars, geen Farsi in het Dari, en geen Braziliaans in het Portugees.
+- In de tips over rechten en veiligheid vond geen enkele lezer een fout getal, termijn, percentage of omgekeerde voorwaarde. Twee uitzonderingen:
+  - Tigrinya `c.health.b` (x): de zin over werken onder 18 ontbrak;
+  - Arabisch `be.c.newjob.w`: het werkwoord stond in de verkeerde vorm, zodat het leek alsof de leerling geld neemt, in plaats van het uitzendkantoor.
+
+**Veranderd: 419 teksten, elk gemarkeerd `// nieuw, nalezen (AI-correctie 2 nov 2026)`**, dus terug op de lijst voor de vrijwilligers:
+
+| Taal | fout | twijfel | stijl | totaal |
+|---|---|---|---|---|
+| Arabisch | 14 | 27 | 32 | 73 |
+| Bulgaars | 12 | 20 | 5 | 37 |
+| Dari | 14 | 1 | 0 | 15 |
+| Duits | 2 | 1 | 15 | 18 |
+| Frans | 13 | 11 | 27 | 51 |
+| Oekraïens | 8 | 5 | 17 | 30 |
+| Perzisch | 8 | 6 | 2 | 16 |
+| Pools | 6 | 1 | 12 | 19 |
+| Portugees | 10 | 8 | 5 | 23 |
+| Roemeens | 4 | 6 | 8 | 18 |
+| Spaans | 18 | 6 | 11 | 35 |
+| Tigrinya | 18 | 43 | 1 | 62 |
+| Turks | 7 | 7 | 8 | 22 |
+
+Daarnaast is een verbeterde vaste slotzin onder de tips overal doorgezet:
+- Arabisch, x-vorm: "يمكن سؤال …" in plaats van "السؤال عند …" (8 teksten);
+- Tigrinya: "ብዛዕባ ኩነታትካ፡" in plaats van "ንኹነታትካ፡", dat las als "vraag je situatie" (93 teksten).
+
+De slotzin moet in elke tip gelijk zijn aan `be.closing.*`, anders wisselt de app hem niet voor de Belgische versie.
+
+**Wat vaak terugkwam (let hierop bij nieuwe teksten):**
+- *De Engelse bron was dubbelzinnig.* "I can repeat a task" (`kjn.u.tools.2`) werd in elf talen "een taak opnieuw doen", terwijl de opdracht terugzeggen bedoeld is. "Under 18? Then you may work fewer hours" las als een keuze, niet als een grens. Beide bronnen zijn aangepast en de vertalingen ook.
+- *Eén begrip, meerdere woorden.* De lezer denkt dan dat het om iets anders gaat. Voorbeelden:
+  - onderwerp ↔ thema: fr thème/partie, ro temă, bg раздел, tr ünite;
+  - coach: pl trener, bg коуч, es coach;
+  - gemeente: uk громада;
+  - zorgverzekering: bg осигуровка;
+  - interimkantoor: fa/prs آژانس;
+  - finiquito/liquidación (es), pré-aviso/aviso prévio (pt), série/sequência (pt).
+- *Klacht en bezwaar door elkaar* (fr: beide "réclamation"). Bezwaar is nu "contester la décision".
+- *x-vormen met een schuine streep* ("blessé / blessée", "ранен / ранена"): dat is niet genderneutraal. Waar het kan, staat er nu een neutrale zin.
+- *Mannelijke vormen in teksten zonder m/f-vorm.* Bijvoorbeeld ar اقرأ, ti መሰላትካ, ro "ești trecut", pl "samozatrudniony".
+- *Keuzes in een andere werkwoordsvorm dan de rest* (es/pt `be.c.agency.o1`, `be.c.permit.o1/o2`): de gebiedende wijs verraadde het goede antwoord.
+- *Letterlijke vertalingen:*
+  - "words stronger" werd "stevigere woorden" (es/pt/ar);
+  - "kort" werd "en court / em curto / en corto";
+  - "over mijn grens" werd letterlijk vertaald (de/es/uk/bg);
+  - "par une agence" in het Frans is nu overal "via une agence".
+- *Amhaarse woorden in het Tigrinya:* ተሞክሮ, ቅጂ, ቅናሽ, ጉርሻ, ተረኛ.
+- *Arabisch:* in een paar Belgische tips spreken de m- en f-vorm de leerling niet direct aan (onpersoonlijk, "يجب إخبار …"), terwijl de Nederlandse versies dat wel doen. Niet veranderd; graag meenemen bij het nalezen.
+
+**Bewust niet veranderd:**
+- `ui.phrasebook`, `ui.phrasebookHint`, `ui.cultureTips(Hint)`. De Nederlandse tekst daarvan hoort bij het scherm van Werkregels ("Wie bel je?", "Alle regels"). De hulptalen volgen terecht het Engels (Noodzinnen, Werkvloer-tips).
+- `a.how.b`: daar zegt elke taal "je ziet het ook in het Pools" in plaats van de zin over Engels.
+
+**Nog open voor een moedertaalspreker:**
+- Alles met de markering hierboven.
+- Perzisch: de oudere schermteksten gebruiken شما, de tips en nieuwere teksten تو (`ui.workTry` staat nu gelijk aan de rest van zijn scherm).
+- De losse woorden, zinnen en gesprekjes zijn alleen automatisch gecontroleerd.
+
 ## Nieuw 31 oktober 2026: "Waarom Vloertaal?", de nieuwe testversie-tekst en "Wat is er nieuw?" (alle talen)
 
 In `src/i18n/about/*.ts`: `a.story` (het verhaal van Xavier, ik-vorm), `a.beta.b` (nieuwe "we"-tekst) en de

@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: { m: 'أين تعمل؟', f: 'أين تعملين؟', x: 'مجال عملك' }, // x: nieuw, nalezen
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: { m: 'في أي بلد تعمل؟', f: 'في أي بلد تعملين؟', x: 'بلد العمل' }, // x: nieuw, nalezen
-    countryHint: { m: 'اختر البلد الذي تعمل فيه. ستحصل على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.', f: 'اختاري البلد الذي تعملين فيه. ستحصلين على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.', x: 'اختيار بلد العمل يعطي قواعد العمل في هذا البلد. يبقى هذا على الهاتف. لا نرسله إلى أي مكان.' }, // nieuw, nalezen // nagelezen AI ronde 3
+    countryHint: { m: 'ستحصل على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.', f: 'ستحصلين على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.', x: 'اختيار بلد العمل يعطي قواعد العمل في هذا البلد. يبقى هذا على الهاتف. لا نرسله إلى أي مكان.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'هولندا',
     countryBe: 'بلجيكا (فلاندرز)',
     tipsNote: 'هذه النصائح عن العمل في هولندا. معلومات عامة، وليست استشارة قانونية.',
@@ -113,17 +113,17 @@ const lang: HelpLanguageSource = {
     streakStopped: { zero: { m: 'توقفت سلسلتك عند {n} يوم. ابدأ من جديد اليوم.', f: 'توقفت سلسلتك عند {n} يوم. ابدئي من جديد اليوم.', x: 'توقفت سلسلتك عند {n} يوم. اليوم بداية جديدة.' }, one: { m: 'توقفت سلسلتك عند {n} يوم. ابدأ من جديد اليوم.', f: 'توقفت سلسلتك عند {n} يوم. ابدئي من جديد اليوم.', x: 'توقفت سلسلتك عند {n} يوم. اليوم بداية جديدة.' }, two: { m: 'توقفت سلسلتك عند يومين. ابدأ من جديد اليوم.', f: 'توقفت سلسلتك عند يومين. ابدئي من جديد اليوم.', x: 'توقفت سلسلتك عند يومين. اليوم بداية جديدة.' }, few: { m: 'توقفت سلسلتك عند {n} أيام. ابدأ من جديد اليوم.', f: 'توقفت سلسلتك عند {n} أيام. ابدئي من جديد اليوم.', x: 'توقفت سلسلتك عند {n} أيام. اليوم بداية جديدة.' }, many: { m: 'توقفت سلسلتك عند {n} يوماً. ابدأ من جديد اليوم.', f: 'توقفت سلسلتك عند {n} يوماً. ابدئي من جديد اليوم.', x: 'توقفت سلسلتك عند {n} يوماً. اليوم بداية جديدة.' }, other: { m: 'توقفت سلسلتك عند {n} يوم. ابدأ من جديد اليوم.', f: 'توقفت سلسلتك عند {n} يوم. ابدئي من جديد اليوم.', x: 'توقفت سلسلتك عند {n} يوم. اليوم بداية جديدة.' } }, // x: nieuw, nalezen
     recordN: { zero: 'أفضل نتيجة لك: {n} يوم', one: 'أفضل نتيجة لك: {n} يوم', two: 'أفضل نتيجة لك: يومان', few: 'أفضل نتيجة لك: {n} أيام', many: 'أفضل نتيجة لك: {n} يوماً', other: 'أفضل نتيجة لك: {n} يوم' },
     workWeek: 'أسبوع عملك',
-    freeDaysN: 'أيام حرة: {n}. إذا فاتك يوم واحد، تستمر سلسلتك.',
-    restDay: 'يوم حر',
+    freeDaysN: 'أيام الراحة: {n}. إذا فاتك يوم واحد، تستمر سلسلتك.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    restDay: 'يوم راحة', // nieuw, nalezen (AI-correctie 2 nov 2026)
     tier3: '3 أيام متتالية',
-    tier7: 'أسبوع متتالٍ',
+    tier7: 'أسبوع متواصل', // nieuw, nalezen (AI-correctie 2 nov 2026)
     tier14: 'أسبوعان متتاليان',
-    tier30: 'شهر متتالٍ',
+    tier30: 'شهر متواصل', // nieuw, nalezen (AI-correctie 2 nov 2026)
     reviewDone: 'انتهيت لهذا اليوم',
     tomorrowN: { zero: 'غداً: {n} كلمة', one: 'غداً: {n} كلمة', two: 'غداً: كلمتان', few: 'غداً: {n} كلمات', many: 'غداً: {n} كلمة', other: 'غداً: {n} كلمة' },
     firstWordsTomorrow: 'غداً تعود كلماتك الأولى',
     extraRound: 'جولة إضافية',
-    wordsStrongerN: { zero: '{n} كلمة أقوى', one: '{n} كلمة أقوى', two: 'كلمتان أقوى', few: '{n} كلمات أقوى', many: '{n} كلمة أقوى', other: '{n} كلمة أقوى' },
+    wordsStrongerN: { zero: 'تحسّن حفظ {n} كلمة', one: 'تحسّن حفظ {n} كلمة', two: 'تحسّن حفظ كلمتين', few: 'تحسّن حفظ {n} كلمات', many: 'تحسّن حفظ {n} كلمة', other: 'تحسّن حفظ {n} كلمة' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     noMistakes: 'بدون أخطاء',
     nextUp: 'التالي',
     installTitle: { m: 'ضع Vloertaal على شاشتك الرئيسية', f: 'ضعي Vloertaal على شاشتك الرئيسية', x: 'Vloertaal على شاشتك الرئيسية' }, // x: nieuw, nalezen
@@ -192,7 +192,7 @@ const lang: HelpLanguageSource = {
     wordsUnitOne: 'كلمة',
     wordsLearnedOne: 'تعلّمت {n} كلمة',
     tomorrowOne: 'غداً: {n} كلمة',
-    wordsStrongerOne: '{n} كلمة أقوى',
+    wordsStrongerOne: 'تحسّن حفظ {n} كلمة', // nieuw, nalezen (AI-correctie 2 nov 2026)
     recordOne: 'أفضل نتيجة لك: {n} يوم',
     streakStoppedOne: { m: 'توقفت سلسلتك عند {n} يوم. ابدأ من جديد اليوم.', f: 'توقفت سلسلتك عند {n} يوم. ابدئي من جديد اليوم.', x: 'توقفت سلسلتك عند {n} يوم. اليوم بداية جديدة.' }, // x: nieuw, nalezen
     letterTiles: 'الحروف',
@@ -204,7 +204,7 @@ const lang: HelpLanguageSource = {
     recommended: 'مُوصى به',
     allTopics: 'كل المواضيع',
     topicsOrder: 'عرض المواضيع',
-    privacyLink: 'اقرأ بيان الخصوصية (بالهولندية)', // nieuw, nalezen
+    privacyLink: 'قراءة بيان الخصوصية (بالهولندية)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     routeTitle: 'ماذا نتعلّم؟', // nieuw, nalezen (een vraag, zonder m/f)
     routeLearn: 'تعلّم الهولندية للعمل، وكيف يسير العمل هنا', // nieuw, nalezen
     routeRules: 'أتكلّم الهولندية: قواعد العمل فقط', // nieuw, nalezen
@@ -287,7 +287,7 @@ const lang: HelpLanguageSource = {
     startFree: { m: 'ليس لديك رمز؟ ابدأ بالدروس الأولى', f: 'ليس لديكِ رمز؟ ابدئي بالدروس الأولى' },
     bramHello: { m: 'سعيد برؤيتكَ.', f: 'سعيد برؤيتكِ.', x: 'سعيد برؤيتك.' }, // x: nieuw, nalezen
     bramBack: { m: 'أهلاً بعودتكَ. لنكمل.', f: 'أهلاً بعودتكِ. لنكمل.', x: 'أهلاً بعودتك. لنكمل.' }, // x: nieuw, nalezen
-    bramRested: 'أمس كان يومك الحر. سلسلتك مستمرة.',
+    bramRested: 'أمس كان يوم راحتك. سلسلتك مستمرة.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     bramDueN: 'كلمات للمراجعة اليوم: {n}',
     bramDueOne: 'كلمة للمراجعة اليوم: {n}',
     bramDayN: 'اليوم {n} على التوالي.',
@@ -321,14 +321,14 @@ const lang: HelpLanguageSource = {
     remindStop: { m: 'أوقف التذكير', f: 'أوقفي التذكير', x: 'إيقاف التذكير' }, // x: nieuw, nalezen
     remindStopped: { m: 'افتح الملف لإزالة التذكير من تقويمك.', f: 'افتحي الملف لإزالة التذكير من تقويمك.', x: 'يُرجى فتح الملف لإزالة التذكير من تقويمك.' }, // x: nieuw, nalezen
     remindStoppedAndroid: { m: 'احذف التذكير بنفسك من تقويم Google.', f: 'احذفي التذكير بنفسك من تقويم Google.' },
-    resetKeeps: 'ستُحذف دروسك وكلماتك وأيامك المتتالية وشهاداتك. تبقى لغتك ورمزك وإعداداتك.',
+    resetKeeps: 'ستُحذف دروسك وكلماتك وأيامك المتتالية وشهاداتك. تبقى لغتك وإعداداتك.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'لم يتم التحميل. هل الإنترنت متصل؟',
     retry: 'إعادة المحاولة',
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: { m: 'ماذا تعرف بالفعل؟', f: 'ماذا تعرفين بالفعل؟', x: 'ما الذي أعرفه بالفعل؟' }, // nieuw, nalezen
-    toetsOffer: 'حوالي 10 دقائق. لا توجد علامات. إنه لك فقط.', // nieuw, nalezen
-    toetsEndOffer: { m: 'لقد تعلمت الكثير. أعد الاختبار وانظر ماذا تعرف الآن.', f: 'لقد تعلمتِ الكثير. أعيدي الاختبار وانظري ماذا تعرفين الآن.', x: 'حان وقت إعادة الاختبار، لرؤية التقدّم في التعلّم.' }, // nieuw, nalezen
+    toetsOffer: 'حوالي 10 دقائق. لا توجد درجات. إنه لك فقط.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    toetsEndOffer: { m: 'لقد تعلمت الكثير. أعد الاختبار وانظر ماذا تعرف الآن.', f: 'لقد تعلمتِ الكثير. أعيدي الاختبار وانظري ماذا تعرفين الآن.', x: 'تمّ تعلّم الكثير! حان وقت إعادة الاختبار، لرؤية ما صار معروفاً الآن.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsPartListen: 'الاستماع', // nieuw, nalezen
     toetsPartWords: 'الكلمات', // nieuw, nalezen
     toetsPartSentences: 'الجمل', // nieuw, nalezen
@@ -343,9 +343,9 @@ const lang: HelpLanguageSource = {
     toetsStart: { m: 'ابدأ الاختبار', f: 'ابدئي الاختبار', x: 'بدء الاختبار' }, // nieuw, nalezen
     toetsIdk: 'لا أعرف', // nieuw, nalezen
     toetsMore: 'أكثر من قبل', // nieuw, nalezen
-    toetsSame: 'تقريباً مثل قبل', // nieuw, nalezen
+    toetsSame: 'تقريباً كما في السابق', // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsMoreAll: { m: 'كل شيء معاً: تعرف الآن أكثر من قبل.', f: 'كل شيء معاً: تعرفين الآن أكثر من قبل.', x: 'كل شيء معاً: المعرفة الآن أكثر من قبل.' }, // nieuw, nalezen
-    toetsSameAll: 'كل شيء معاً: تقريباً مثل قبل.', // nieuw, nalezen
+    toetsSameAll: 'كل شيء معاً: تقريباً كما في السابق.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     tempo: 'السرعة', // nieuw, nalezen
     tempoCalm: 'هادئ', // nieuw, nalezen
     tempoNormal: 'عادي', // nieuw, nalezen
@@ -394,13 +394,13 @@ const lang: HelpLanguageSource = {
     samenSwap: 'بدّلا الأدوار', // nieuw, nalezen
     samenStop: 'إنهاء', // nieuw, nalezen
     checkStart: 'أعرف هذا: اختبار قصير', // nieuw, nalezen
-    checkPassed: { m: 'أنت تعرف هذا. هل تريد أن تعلّم هذا الموضوع كمنتهٍ؟', f: 'أنتِ تعرفين هذا. هل تريدين أن تعلّمي هذا الموضوع كمنتهٍ؟', x: 'هذا معروف لك. تعليم هذا الموضوع كمنتهٍ؟' }, // nieuw, nalezen
+    checkPassed: { m: 'أنت تعرف هذا. هل تريد اعتبار هذا الموضوع منتهياً؟', f: 'أنتِ تعرفين هذا. هل تريدين اعتبار هذا الموضوع منتهياً؟', x: 'هذا معروف لك. اعتبار هذا الموضوع منتهياً؟' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     checkNoCert: 'عندها لا توجد شهادة بعد. الشهادة تأتي بعد الدروس.', // nieuw, nalezen
     checkNotYet: { m: 'الدروس تساعدك في هذا الموضوع.', f: 'الدروس تساعدكِ في هذا الموضوع.', x: 'الدروس مفيدة في هذا الموضوع.' }, // nieuw, nalezen
-    checkMark: 'تعليم كمنتهٍ', // nieuw, nalezen
+    checkMark: 'اعتباره منتهياً', // nieuw, nalezen (AI-correctie 2 nov 2026)
     checkVia: 'عبر الاختبار', // nieuw, nalezen
-    checkUndo: { m: 'اعمل الدروس رغم ذلك', f: 'اعملي الدروس رغم ذلك', x: 'القيام بالدروس رغم ذلك' }, // nieuw, nalezen
-    shareInvite: 'أتعلّم الهولندية لعملي مع Vloertaal. مجاناً: {link}', // nieuw, nalezen
+    checkUndo: { m: 'ادرس الدروس رغم ذلك', f: 'ادرسي الدروس رغم ذلك', x: 'القيام بالدروس رغم ذلك' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    shareInvite: 'أتعلّم الهولندية لعملي بتطبيق Vloertaal. إنه مجاني: {link}', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTry: { m: 'جرّبها اليوم في عملك', f: 'جرّبيها اليوم في عملك', x: 'للتجربة اليوم في العمل' }, // nieuw, nalezen
     workTryWhen: 'عندما:', // nieuw, nalezen
     workTryThen: { m: 'قُل حينها:', f: 'قولي حينها:', x: 'يُقال حينها:' }, // nieuw, nalezen
@@ -416,15 +416,15 @@ const lang: HelpLanguageSource = {
     calmHint: 'مُفعّل: لا شيء يتحرك، لا احتفال بسلسلة أيامك بعد الدرس، ولا تظهر السلسلة والكلمات في الشاشة الرئيسية.', // nieuw, nalezen
     infoMore: 'مزيد من الشرح', // nieuw, nalezen
     tipsAbout: 'عن هذه النصائح', // nieuw, nalezen
-    aboutMore: 'اقرأ المزيد عن Vloertaal', // nieuw, nalezen
+    aboutMore: 'قراءة المزيد عن Vloertaal', // nieuw, nalezen (AI-correctie 2 nov 2026)
     geluktAsk: { m: 'هل قلتَ هذا في العمل؟', f: 'هل قلتِ هذا في العمل؟', x: 'هل قلت هذا في العمل؟' }, // nieuw, nalezen
     geluktYes: 'نعم، نجح', // nieuw, nalezen
     geluktNotYet: 'ليس بعد', // nieuw, nalezen
     saveFailed: 'لم يُحفظ تقدّمك. هل الهاتف ممتلئ؟ الحل: إفراغ بعض المساحة. أو في الإعدادات: «حفظ تقدمك».', // nieuw, nalezen
     bewaarNudge: { m: 'قد يمسح هاتفك تقدمك أحياناً. لذلك احفظ نسخة.', f: 'قد يمسح هاتفك تقدمك أحياناً. لذلك احفظي نسخة.', x: 'قد يمسح الهاتف التقدم أحياناً. لذلك من الأفضل حفظ نسخة.' }, // nieuw, nalezen
     bewaarGo: { m: 'احفظ الآن', f: 'احفظي الآن', x: 'الحفظ الآن' }, // nieuw, nalezen
-    backupShare: { m: 'أرسله لنفسك', f: 'أرسليه لنفسكِ', x: 'إرسال الملف للنفس' }, // nieuw, nalezen
-    backupShareHint: { m: 'أرسل الملف لنفسك، مثلاً في واتساب أو بالبريد الإلكتروني.', f: 'أرسلي الملف لنفسكِ، مثلاً في واتساب أو بالبريد الإلكتروني.', x: 'يمكن إرسال الملف للنفس، مثلاً في واتساب أو بالبريد الإلكتروني.' }, // nieuw, nalezen
+    backupShare: { m: 'أرسله لنفسك', f: 'أرسليه لنفسكِ', x: 'إرسال الملف إلى نفسك' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    backupShareHint: { m: 'أرسل الملف لنفسك، مثلاً في واتساب أو بالبريد الإلكتروني.', f: 'أرسلي الملف لنفسكِ، مثلاً في واتساب أو بالبريد الإلكتروني.', x: 'يمكن إرسال الملف إلى نفسك، مثلاً في واتساب أو بالبريد الإلكتروني.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     backupMade: { m: 'تم. احتفظ بهذا الملف جيداً. به تستطيع استرجاع تقدمك لاحقاً.', f: 'تم. احتفظي بهذا الملف جيداً. به تستطيعين استرجاع تقدمك لاحقاً.', x: 'تم. من المهم الاحتفاظ بهذا الملف. به يمكن استرجاع التقدم لاحقاً.' }, // nieuw, nalezen
     speakTurnPrompt: { m: 'ماذا تقول؟', f: 'ماذا تقولين؟', x: 'ما الرد؟' }, // nieuw, nalezen
     speakTurnExample: 'مثال', // nieuw, nalezen
@@ -598,7 +598,7 @@ const lang: HelpLanguageSource = {
     'c.things.a': 'على المنصة الخشبية (البالِت).',
     'c.directions.q': 'يسار أم يمين؟',
     'c.directions.a': 'يمين، عند رف التخزين.',
-    'c.shift.q': 'متى تبدأ مناوبتك؟',
+    'c.shift.q': 'متى تبدأ نوبتك؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.shift.a': 'غداً الساعة السابعة.',
     'c.sick.q': { m: 'هل أنت مريض؟', f: 'هل أنت مريضة؟' },
     'c.sick.a': 'نعم، سأبقى في البيت اليوم.',

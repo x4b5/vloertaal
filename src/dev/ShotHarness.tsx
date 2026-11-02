@@ -32,7 +32,6 @@ import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
 import * as kit from '../pictures/kit';
-import { hasPicture } from '../lib/wordPicture';
 import { lessonSayings } from '../content/sayings';
 import { CertEarned, CertificateScreen, CoachCardScreen } from '../components/Certificate';
 import { AllTopics, Route, TopicPage } from '../components/Route';
@@ -247,7 +246,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The language: /?shot=language is the list (no guess); &guess=pl asks "Polski?" first;
   // &guess=pl&list=1 is the list opened from "Other language" (with Back).
   if (shot === 'onboarding' || shot === 'language') {
-    return <Onboarding onDone={() => {}} guess={(q.get('guess') as LangCode | null) ?? null} startWithList={q.get('list') === '1'} startAtRoute={q.get('route') === '1'} />;
+    return <Onboarding onDone={() => {}} guess={(q.get('guess') as LangCode | null) ?? null} startWithList={q.get('list') === '1'} />;
   }
   // "Voor begeleiders" (from About): a link per topic.
   if (shot === 'coaches') return <Coaches onBack={() => {}} />;
@@ -696,7 +695,7 @@ function GenderShot({ lang, gender, greet }: { lang: LangCode; gender?: Gender; 
 function PicturesSheet() {
   const words = units.flatMap((u) => u.lessons.flatMap((l) => l.words));
   const done = words.filter((w) => pictures[w.id]).length;
-  const abstract = words.filter((w) => !hasPicture(w)).length;
+  const abstract = words.filter((w) => w.picture === false).length;
   return (
     <div className="pics-page">
       <h1>Woordplaatjes</h1>
@@ -730,12 +729,13 @@ function PicturesSheet() {
             </div>
             <div className="pics-grid">
               {unit.lessons.flatMap((l) => l.words).map((w) => (
-                <div key={w.id} className={`pics-cell ${!hasPicture(w) ? 'pics-abstract' : pictures[w.id] ? '' : 'pics-missing'}`}>
+                <div key={w.id} className={`pics-cell ${w.picture === false ? 'pics-abstract' : pictures[w.id] ? '' : 'pics-missing'}`}>
                   <div className="pics-row">
                     <WordPicture id={w.id} emoji={w.emoji} size={120} />
                     <WordPicture id={w.id} emoji={w.emoji} size={48} />
                   </div>
-                  {!hasPicture(w) && <span className="pics-none" lang="nl">geen plaatje</span>}
+                  {w.picture === false && <span className="pics-none" lang="nl">geen plaatje</span>}
+                  {w.picture === 'hook' && <span className="pics-none" lang="nl">geheugenplaatje</span>}
                   <span className="pics-nl" lang="nl">{w.nl}</span>
                   <span className="pics-id">{w.id}</span>
                 </div>
