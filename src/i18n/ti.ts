@@ -300,6 +300,7 @@ const lang: HelpLanguageSource = {
     bramIntro: { m: 'ኣነ Bram እየ፣ ብጻይ ስራሕካ።', f: 'ኣነ Bram እየ፣ ብጻይ ስራሕኪ።', x: 'ኣነ Bram እየ፣ ብጻይ ስራሕኩም።' }, // x: nieuw, nalezen
     bramIntroHello: 'ሰላም፣ ኣነ Bram እየ።',
     showDutch: 'ብሆላንድኛ ምርኣይ',
+    showAnswers: 'መልስታት ምርኣይ', // nieuw, nalezen
     lastUpdated: 'ዝተሓደሰሉ ዕለት: {date}',
     /* G4 b3 */
     buildListen: { m: 'ስማዕ እሞ ነቲ ሓረግ ስራሕ', f: 'ስምዒ እሞ ነቲ ሓረግ ስርሒ', x: 'ስምዑ እሞ ነቲ ሓረግ ስርሑ' }, // x: nieuw, nalezen

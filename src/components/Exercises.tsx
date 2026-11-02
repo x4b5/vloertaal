@@ -12,7 +12,7 @@ import { Bi, HelpText } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
 import { CAST, castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
-import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
+import { CheckIcon, ChevronDownIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
@@ -1324,6 +1324,31 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
   // The Dutch in the situation ("Zeg maar je, hoor!") is said by the character, as in a chat.
   useEffect(() => { if (said) autoSpeak(said, false, 'nl', voiceFor(who)); }, [said, who]);
   const talking = useTalking(said ? [said] : [], Boolean(said));
+  // First the situation alone, then "Show the answers" and the three answers on the same page: the
+  // learner reads (or hears) the situation and thinks what to do before the answers come (the
+  // owner's idea, 2 November 2026: not everything at once). In the retry round it was read before,
+  // so the answers are there at once.
+  const firstRound = useContext(ComesBack);
+  const [shown, setShown] = useState(!firstRound);
+  const open = shown || Boolean(verdict) || locked;
+  const answers = useRef<HTMLDivElement>(null);
+  const revealed = useRef(false);
+  // With the keyboard (or a switch), the focus moves to the first answer; after a tap it does not:
+  // a ring on answer 1 would look like it is chosen, or the right one.
+  const byKeys = useRef(false);
+  useEffect(() => {
+    if (!revealed.current || !byKeys.current) return;
+    answers.current?.querySelector<HTMLElement>('.choice')?.focus({ preventScroll: true });
+  }, [shown]);
+  // The first answer appears where the button was: a quick second tap (a double tap) must not
+  // answer it. The answers take no taps for a moment after they appear.
+  const [settling, setSettling] = useState(false);
+  useEffect(() => {
+    if (!shown || !revealed.current) return undefined;
+    setSettling(true);
+    const t = window.setTimeout(() => setSettling(false), 400);
+    return () => window.clearTimeout(t);
+  }, [shown]);
   return (
     <div className="exercise situation">
       <Prompt text={ui(ASK_PROMPT[tip.situation.ask ?? 'whatdo'], lang)} />
@@ -1341,16 +1366,25 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
           )}
         </div>
       </div>
-      <ChoiceGrid
-        className="choices-rows"
-        options={ex.options}
-        correctId={best.id}
-        locked={locked}
-        lang={lang}
-        onAnswer={onAnswer}
-        stamp={false}
-        render={(o) => <Bi text={gloss(o.id, o.en, lang)} />}
-      />
+      {open ? (
+        <div ref={answers} className={`situation-answers ${revealed.current ? 'situation-answers-in' : ''}`} style={settling ? { pointerEvents: 'none' } : undefined}>
+          <ChoiceGrid
+            className="choices-rows"
+            options={ex.options}
+            correctId={best.id}
+            locked={locked}
+            lang={lang}
+            onAnswer={onAnswer}
+            stamp={false}
+            render={(o) => <Bi text={gloss(o.id, o.en, lang)} />}
+          />
+        </div>
+      ) : (
+        <button type="button" className="btn situation-show" onClick={(e) => { revealed.current = true; byKeys.current = e.detail === 0; setShown(true); }}>
+          <Bi text={ui('showAnswers', lang)} />
+          <ChevronDownIcon size={24} />
+        </button>
+      )}
     </div>
   );
 }

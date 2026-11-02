@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Ich bin Bram, dein Kollege.',
     bramIntroHello: 'Hallo, ich bin Bram.',
     showDutch: 'Auf Niederländisch zeigen',
+    showAnswers: 'Antworten zeigen', // nieuw, nalezen
     lastUpdated: 'Zuletzt aktualisiert: {date}',
     /* G4 b3 */
     buildListen: 'Hör zu und bilde den Satz',
