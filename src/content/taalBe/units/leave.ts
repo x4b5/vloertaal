@@ -37,7 +37,9 @@ import type { BeTaal } from '../types';
 const lines: BeTaal['lines'] = {
   'w.calamiteitenverlof': { nl: 'het verlof om dwingende redenen', en: 'the leave for urgent reasons (often unpaid)' },
   'w.bedrijfsarts': { nl: 'de arbeidsarts', en: 'the occupational doctor (the doctor of your work)', picture: 'same' },
-  'w.wachtdag': { nl: 'het gewaarborgd loon', en: 'the guaranteed wage (your employer pays the first days you are sick)', emoji: '💶' },
+  // No picture: the Dutch "wachtdag" has a memory picture (a struck-out coin, no pay), which would
+  // say the opposite of the guaranteed wage.
+  'w.wachtdag': { nl: 'het gewaarborgd loon', en: 'the guaranteed wage (your employer pays the first days you are sick)', emoji: '💶', picture: false },
   'w.doorbetalen': { nl: 'het ziektebriefje', en: 'the sick note (from your doctor)', emoji: '📝' },
   'w.betermelden': { nl: 'terugkomen', en: 'to come back (to work, after an illness)', picture: 'same' },
   's.illness.2': { nl: 'Ik heb een afspraak met de arbeidsarts.', en: 'I have an appointment with the occupational doctor.' },
