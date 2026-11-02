@@ -101,14 +101,15 @@ describe('the language list', () => {
   it('offers "Ik spreek al Nederlands" only while RULES_TRACK is on, under the list, not in it', () => {
     setRulesTrack(false);
     const off = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
-    expect(count(off)).toBe(14);
+    // 14 languages and "Is your language missing?".
+    expect(count(off)).toBe(15);
     expect(off).not.toContain('Ik spreek al Nederlands');
     expect(off).not.toContain('onb-nl-dock');
     setRulesTrack(true);
     // Settings' list never has it ("Wat wil je leren?" is there for it).
     expect(count(html(createElement(LanguagePicker, { onPick: () => {} })))).toBe(14);
     const on = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
-    expect(count(on)).toBe(15);
+    expect(count(on)).toBe(16);
     // After the list, in its own band (fixed at the bottom of the screen, under a line), with the
     // word "Werkregels": another part of the app, not one more help language.
     expect(on.indexOf('>English<')).toBeLessThan(on.indexOf('onb-nl-dock'));
@@ -119,11 +120,11 @@ describe('the language list', () => {
   it('shows flags as decoration (hidden from screen readers), never as an extra button', () => {
     setRulesTrack(true);
     const m = html(createElement(Onboarding, { onDone: () => {}, guess: null }));
-    expect(m.match(/<button/g)).toHaveLength(15);
+    expect(m.match(/<button/g)).toHaveLength(16);
     // Drawn flags, no flag emoji: the emoji font for flags alone was 709 KB on the first screen.
     expect(m).not.toMatch(/[\u{1F1E6}-\u{1F1FF}]/u);
     expect(m.match(/<svg class="lang-flag"[^>]*aria-hidden="true"/g)).toHaveLength(6);
-    expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(15);
+    expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(16);
     expect(m.match(/class="lang-flag"/g)).toHaveLength(6);
     // A tile of letters for ar, ti, fa, prs, and for es, pt, fr and de (spoken in many countries).
     expect(m.match(/class="lang-sample"/g)).toHaveLength(9);

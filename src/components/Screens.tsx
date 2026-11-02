@@ -58,6 +58,7 @@ import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
+import { MissingLanguage } from './MissingLanguage';
 import { pushSubStep } from '../lib/onbHistory';
 import { HelpSay } from './HelpSay';
 import { emojiIconId } from '../content/tipIcons';
@@ -70,7 +71,9 @@ import type { WorkTryLine } from '../lib/workTry';
  *  native name, and what the page is in before a language is chosen): Arabic, Bulgarian, Dari … */
 const PICKER_ORDER = [...languageMeta].sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
-export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang }: {
+export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang, onMissing }: {
+  /** First run: a last card "Is your language missing?" (src/lib/missingLang.ts). */
+  onMissing?: () => void;
   /** The help language in use (Settings): the "in review" tag is written in it. */
   lang?: HelpLanguage;
   /** undefined = nothing chosen yet (first run). */
@@ -116,6 +119,16 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`} role="group" aria-label={said(ask)}>
       {PICKER_ORDER.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
       {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
+      {/* Not a language: a dashed card on the whole width, after English. */}
+      {onMissing && (
+        <button key="missing" type="button" className="lang-btn lang-btn-missing" onClick={onMissing} lang="en">
+          <span className="lang-mark" aria-hidden><GlobeIcon size={26} /></span>
+          <span className="lang-names">
+            <span className="lang-native">Is your language missing?</span>
+            <span className="lang-en">Tell us which one</span>
+          </span>
+        </button>
+      )}
     </div>
   );
 }
@@ -177,6 +190,16 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   startWithList?: boolean;
 }) {
   const [list, setList] = useState(startWithList || !guess);
+  /** "Is your language missing?" open (its own page, with its own history entry). */
+  const [missing, setMissing] = useState(false);
+  useEffect(() => {
+    if (!missing) return;
+    if (!(history.state as { missing?: number } | null)?.missing) pushSubStep({ missing: 1 });
+    const onPop = () => { if (!(history.state as { missing?: number } | null)?.missing) setMissing(false); };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [missing]);
+  const closeMissing = () => ((history.state as { missing?: number } | null)?.missing ? history.back() : setMissing(false));
   // Nothing is chosen yet: the English stays next to every line.
   useEffect(() => { applyEnglish(null); }, []);
   // The list after the guess has its own history entry: the phone's Back returns to the guess.
@@ -203,17 +226,18 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   // say so (the owner's request, 2 November 2026: make it clearer that the list scrolls).
   const [more, setMore] = useState(false);
   useEffect(() => {
-    if (!list) return;
+    if (!list || missing) return;
     const check = () => setMore(window.scrollY + window.innerHeight < document.documentElement.scrollHeight - 8);
     check();
     window.addEventListener('scroll', check, { passive: true });
     window.addEventListener('resize', check);
     return () => { window.removeEventListener('scroll', check); window.removeEventListener('resize', check); };
-  }, [list]);
+  }, [list, missing]);
   const scrollOn = () => window.scrollBy({ top: Math.round(window.innerHeight * 0.6), behavior: stillMotion() ? 'auto' : 'smooth' });
   // The guess page needs only its few strings (src/i18n/meta.ts): no pack to wait for.
   const gMeta = langMeta(guess);
   const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
+  if (missing) return <MissingLanguage onBack={closeMissing} />;
   if (list || !g) {
     return (
       <div className="screen onboarding max3-page onb-lang-list">
@@ -223,7 +247,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
           <p className="tagline" lang="en">{ui('appTagline').en}</p>
         </div>
         <h2 className="onboarding-title" lang="en">{ui('chooseLanguage').en}</h2>
-        <LanguagePicker onPick={onDone} />
+        <LanguagePicker onPick={onDone} onMissing={() => setMissing(true)} />
         {rulesTrackOn() && (
           <div className={more ? 'onb-nl-dock has-more' : 'onb-nl-dock'}>
             {/* More languages below: a round arrow on the line (it bobs twice on arrival), and

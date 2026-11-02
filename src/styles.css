@@ -1309,6 +1309,20 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
   background: var(--bg); border-top: 2px solid var(--edge);
 }
+/* "Is your language missing?": not a language, so a dashed card on the whole width, after English. */
+.lang-btn.lang-btn-missing { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 12px; border-style: dashed; background: transparent; text-align: start; }
+.lang-btn-missing .lang-mark { color: var(--muted); }
+.lang-grid .lang-btn.lang-btn-missing { min-height: 0; padding-block: 12px; justify-content: flex-start; }
+.onboarding .lang-grid .lang-btn.lang-btn-missing .lang-native { font-size: 1.05rem; }
+/* Its page: the field and the button on the whole width, the address selectable. */
+.missing-lang { display: flex; flex-direction: column; gap: 12px; }
+.missing-lang .onboarding-title { margin-top: 16px; }
+.missing-label { font-weight: 650; margin-top: 8px; }
+.missing-input { flex: none; padding-inline-end: 16px; }
+.missing-go { width: 100%; text-decoration: none; }
+.missing-small { font-size: 0.9rem; }
+.missing-mail { font-weight: 650; color: var(--ink); user-select: all; }
+.missing-thanks { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 8px 0 0; font-size: 1.3rem; font-weight: 650; }
 /* More languages below the line: the cards fade out above it, and a round arrow sits on the line
    (it bobs twice on arrival; still with "Rustig scherm" or the phone's less motion). */
 .onb-nl-dock.has-more::before {
