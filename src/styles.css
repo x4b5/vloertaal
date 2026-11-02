@@ -5037,3 +5037,22 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* A question in parts on more pages (lib/exercises.ts readBackAt): the back arrow above it, to
    read the page before again. The app's one back arrow, at the start of the exercise. */
 .ex-back { display: flex; margin: -6px 0 2px; }
+
+/* Settings › Hulptaal: the same box as on the first run (ScrollBox), between the head and the
+   bottom bar; the page itself does not scroll. The chosen language is in view on opening, its
+   check at the end of its row. */
+.max3-settings.max3-lang {
+  display: flex; flex-direction: column; box-sizing: border-box;
+  height: 100vh; height: 100dvh; min-height: 460px;
+  padding-bottom: calc(96px + env(safe-area-inset-bottom));
+}
+.max3-settings.max3-lang > * { flex: none; }
+.max3-settings.max3-lang > .scroll-box { flex: 1 1 auto; margin-top: 8px; margin-bottom: 26px; }
+.max3-settings .scroll-box.lang-box .lang-grid { margin: 0; }
+.lang-box .lang-grid .lang-btn .lang-names { flex: 1 1 auto; }
+.lang-box .lang-grid .lang-btn .lang-check { position: static; flex: none; }
+.lang-box .lang-grid .lang-btn.picked { background: color-mix(in srgb, var(--yellow) 18%, var(--card)); }
+/* Two rows of two in the bottom bar (200% zoom): a little more room under the box. */
+@media (max-width: 300px) {
+  .max3-settings.max3-lang { padding-bottom: calc(116px + env(safe-area-inset-bottom)); }
+}

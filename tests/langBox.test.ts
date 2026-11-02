@@ -37,3 +37,21 @@ describe('the first-run language list in its own scroll box', () => {
     expect(s).not.toContain('scroll-box');
   });
 });
+
+describe('Settings › Hulptaal: the same box as the first run', () => {
+  it('shows the languages in the scroll box, one page that does not scroll, the chosen one marked', async () => {
+    const { Settings } = await import('../src/components/Settings');
+    const { getHelpLanguage } = await import('../src/i18n');
+    const { emptyProgress } = await import('../src/lib/progress');
+    const m = html(createElement(Settings, {
+      progress: { ...emptyProgress, onboarded: true, helpLang: 'pl', sector: 'construction' },
+      lang: getHelpLanguage('pl'), page: 'language', onPage: () => {}, onReturn: () => {}, onLang: () => {}, onGender: () => {}, onSector: () => {},
+      onTheme: () => {}, onTextSize: () => {}, onVoice: () => {}, onQuiet: () => {}, onReset: () => {}, onRestore: () => {},
+      onCertificate: () => {},
+    }));
+    expect(m).toContain('max3-lang');
+    expect(m).toMatch(/class="scroll-box [^"]*lang-box/);
+    expect(m).not.toContain('lang-grid-compact');
+    expect(m).toMatch(/lang-btn picked/);
+  });
+});
