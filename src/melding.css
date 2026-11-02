@@ -9,7 +9,7 @@
 .notice-head { display: flex; align-items: center; gap: 12px; }
 .notice-icon {
   flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
-  background: var(--yellow); color: #1e2226;
+  background: var(--yellow); color: var(--on-yellow);
 }
 .notice-title { flex: 1; min-width: 0; margin: 0; display: flex; flex-direction: column; font-size: 1.25rem; line-height: 1.2; }
 .notice-nl, .notice-btn-nl { font-size: 0.9375rem; font-weight: 600; color: var(--muted); }
@@ -23,7 +23,7 @@
 .notice-more { background: var(--card); color: var(--ink); }
 .notice-more:hover { background: var(--concrete-2); }
 .notice-more .bi-help, .notice-ok .bi-help { --help-size: 0.8em; font-weight: 400; }
-.btn-primary .notice-btn-nl { color: #3f3a2c; }
+.btn-primary .notice-btn-nl { color: var(--on-yellow-soft); }
 /* Large text or a small phone: the two buttons one under the other. */
 @media (max-width: 340px) { .notice-actions { grid-template-columns: 1fr; } }
 :root[data-text='xl'] .notice-actions { grid-template-columns: 1fr; }

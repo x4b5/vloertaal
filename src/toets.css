@@ -14,7 +14,7 @@
 .toets-offer-head > .toets-time { grid-column: 2; justify-self: start; }
 .toets-offer-icon {
   flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
-  background: var(--yellow); color: #1e2226;
+  background: var(--yellow); color: var(--on-yellow);
 }
 .toets-offer-title { flex: 1; min-width: 0; margin: 0; display: flex; flex-direction: column; font-size: 1.3rem; line-height: 1.2; }
 .toets-offer-nl, .toets-offer-text-nl, .toets-btn-nl, .toets-keep-nl, .toets-result-nl {
@@ -29,7 +29,7 @@
 .toets-offer-text .help-say { align-self: flex-start; }
 .toets-offer-actions { display: grid; gap: 10px; }
 .toets-btn-label { display: flex; flex-direction: column; align-items: center; line-height: 1.2; }
-.btn-primary .toets-btn-nl { color: #3f3a2c; }
+.btn-primary .toets-btn-nl { color: var(--on-yellow-soft); }
 .toets-later { min-height: 52px; background: var(--card); color: var(--ink); flex-direction: column; gap: 0; line-height: 1.2; }
 .toets-later:hover { background: var(--concrete-2); }
 .toets-later .bi-help { --help-size: 0.8em; font-weight: 400; }

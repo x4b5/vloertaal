@@ -47,6 +47,11 @@
      ink, so the mark is dark (yellow on it was 1.3:1). */
   --on-solid-mark: var(--yellow);
   --on-yellow: #1e2226;
+  --on-yellow-soft: #3f3a2c;  /* quieter text on the yellow (the Dutch under a help-language label) */
+  --on-yellow-paper: #fffdf8; /* light text on a dark block inside a yellow card */
+  --yellow-hover: #ffcd3a;
+  --blue-hover: #1284c7;
+  --on-go: #fff;            /* the tick and cross on the green and red dots */
   --on-green: #ffffff;
   --on-blue: #ffffff;
   --muted: var(--ink-2);
@@ -248,8 +253,8 @@ h2 { font-size: 1.25rem; }
   transition: transform 0.06s, background-color 0.15s;
 }
 .btn:active:not(:disabled) { transform: translateY(1px); filter: brightness(0.96); }
-.btn-primary { background: var(--yellow); color: var(--on-yellow); border-color: #1e2226; }
-.btn-primary:hover:not(:disabled) { background: #ffcd3a; }
+.btn-primary { background: var(--yellow); color: var(--on-yellow); border-color: var(--on-yellow); }
+.btn-primary:hover:not(:disabled) { background: var(--yellow-hover); }
 .btn-dark { background: var(--solid); color: var(--on-solid); border-color: var(--solid); }
 .btn:disabled, .btn[aria-disabled='true'] { background: var(--disabled-bg); color: var(--disabled-ink); border-color: var(--line); }
 /* The square end block ("Check ✓", "Continue ›"); the label stays centred in the button. */
@@ -258,16 +263,16 @@ h2 { font-size: 1.25rem; }
   position: absolute; inset-block: 6px; inset-inline-end: 6px; aspect-ratio: 1.1; min-width: 44px;
   display: grid; place-items: center; border-radius: 8px;
 }
-.btn-primary .btn-block { background: #1e2226; color: var(--yellow); }
-.btn-dark .btn-block { background: var(--yellow); color: #1e2226; }
+.btn-primary .btn-block { background: var(--on-yellow); color: var(--yellow); }
+.btn-dark .btn-block { background: var(--yellow); color: var(--on-yellow); }
 .btn:disabled .btn-block, .btn[aria-disabled='true'] .btn-block { background: var(--line); color: var(--disabled-ink); }
 /* After Check, Continue takes the outcome's colour: green, brick red, or ink for a situation.
    No colour transition here (yellow → green would pass through olive): the class swaps at
    120 ms and the button gives one small press (.98 → 1). */
-.btn-right, .btn-wrong { color: #fff; }
+.btn-right, .btn-wrong { color: var(--on-go); }
 .btn-right { background: var(--go-right); border-color: var(--go-right); }
 .btn-wrong { background: var(--go-wrong); border-color: var(--go-wrong); }
-.btn-right .btn-block, .btn-wrong .btn-block { background: #fff; }
+.btn-right .btn-block, .btn-wrong .btn-block { background: var(--on-go); }
 .btn-right .btn-block { color: var(--go-right); }
 .btn-wrong .btn-block { color: var(--go-wrong); }
 .btn-go { animation: btn-in 0.2s var(--ease-out) both; }
@@ -328,7 +333,7 @@ h2 { font-size: 1.25rem; }
 .lang-beta { color: var(--muted); }
 .lang-check {
   position: absolute; top: 12px; inset-inline-end: 12px; width: 26px; height: 26px; padding: 3px;
-  border-radius: 50%; background: var(--yellow); color: #1e2226;
+  border-radius: 50%; background: var(--yellow); color: var(--on-yellow);
 }
 @media (max-width: 350px) {
   .lang-grid { gap: 8px; }
@@ -353,7 +358,7 @@ h2 { font-size: 1.25rem; }
   display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px;
   background: var(--concrete-2, var(--bg)); color: var(--ink);
 }
-.sector-btn.picked .sector-icon { background: var(--yellow); color: #1e2226; }
+.sector-btn.picked .sector-icon { background: var(--yellow); color: var(--on-yellow); }
 .sector-names { font-size: 0.92rem; line-height: 1.25; }
 .sector-names .bi-en { color: var(--ink-2); }
 .sector-names .bi-help { --help-size: 0.82rem; }
@@ -425,7 +430,7 @@ h2 { font-size: 1.25rem; }
   font-family: var(--stencil); font-weight: 800; font-size: 1.25rem; line-height: 1; padding-top: 2px;
 }
 .bay-done .bay-marker { background: var(--solid); color: var(--on-solid-mark); padding: 0; }
-.bay-now .bay-marker { width: 44px; height: 44px; font-size: 1.5rem; background: var(--yellow); color: #1e2226; border: 2px solid #1e2226; }
+.bay-now .bay-marker { width: 44px; height: 44px; font-size: 1.5rem; background: var(--yellow); color: var(--on-yellow); border: 2px solid var(--on-yellow); }
 .bay-locked .bay-marker { background: var(--bg); color: var(--ink-3); border: 2px solid var(--line); }
 .bay-open .bay-marker { background: var(--card); color: var(--ink); border: 2px solid var(--ink-3); }
 
@@ -441,21 +446,21 @@ h2 { font-size: 1.25rem; }
 .bay-pic { flex: none; width: 48px; height: 48px; font-size: 38px; }
 .bay-done .bay-card:hover { border-color: var(--ink-3); }
 .bay-goal { display: block; margin-top: 4px; font-size: 0.88rem; line-height: 1.35; font-weight: 400; color: var(--muted); }
-.bay-now .bay-goal { color: #3f3a2c; }
+.bay-now .bay-goal { color: var(--on-yellow-soft); }
 .bay-again { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
 .bay-again .icon { color: var(--right-ink); }
 /* Now: the focal point of the screen. Safety yellow, Bram and a dark Start button. */
 .bay-now .bay-card {
-  background: var(--yellow); color: #1e2226; border-color: #1e2226; min-height: 160px;
+  background: var(--yellow); color: var(--on-yellow); border-color: var(--on-yellow); min-height: 160px;
   padding: 20px 18px 18px; overflow: hidden;
 }
-.bay-now .bay-card:hover { background: #ffcd3a; }
+.bay-now .bay-card:hover { background: var(--yellow-hover); }
 .bay-now .bay-title { font-size: 1.45rem; font-weight: 650; line-height: 1.15; }
-.bay-now .bay-title .bi-help { color: #3f3a2c; --help-size: 0.68em; margin-top: 4px; }
+.bay-now .bay-title .bi-help { color: var(--on-yellow-soft); --help-size: 0.68em; margin-top: 4px; }
 .bay-start {
   align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; margin-top: 12px;
   min-height: 48px; padding: 8px 14px 8px 20px; border-radius: 10px;
-  background: #1e2226; color: #fffdf8; font-weight: 650; font-size: 1.1rem;
+  background: var(--on-yellow); color: var(--on-yellow-paper); font-weight: 650; font-size: 1.1rem;
 }
 .bay-start .icon { color: var(--yellow); }
 .bay-char { position: absolute; right: 4px; bottom: -6px; line-height: 0; pointer-events: none; }
@@ -550,7 +555,7 @@ h2 { font-size: 1.25rem; }
 }
 .lbar > span { position: absolute; inset-block: 0; }
 .lbar-tail { right: 0; background: color-mix(in srgb, var(--kraft) 70%, var(--track)); }
-.lbar-now { left: 0; background: var(--yellow); box-shadow: inset 0 0 0 1.5px #1e2226; transition: transform 0.32s var(--ease-out); }
+.lbar-now { left: 0; background: var(--yellow); box-shadow: inset 0 0 0 1.5px var(--on-yellow); transition: transform 0.32s var(--ease-out); }
 .lbar-fill { left: 0; width: 100%; background: var(--edge); transform-origin: left center; transition: transform 0.32s var(--ease-out); }
 /* Countable steps: a 2 px notch in the floor colour at the end of every exercise's slot, over
    the fill, so "how many left" can be seen without reading a number (still clear at ~20). */
@@ -640,7 +645,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* The outcome as a shape, not only a colour: a 42 px check or cross at the start. */
 .feedback-icon {
   flex: none; display: grid; place-items: center; width: 42px; height: 42px; margin-top: 2px;
-  border-radius: 50%; color: #fff; background: var(--go-right);
+  border-radius: 50%; color: var(--on-go); background: var(--go-right);
 }
 .feedback-wrong .feedback-icon { background: var(--go-wrong); }
 /* A long explanation (situations) scrolls inside the label instead of covering the question. */
@@ -722,7 +727,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   border: none; border-radius: 10px; background: var(--blue); color: var(--on-blue);
   width: 48px; height: 48px; font-size: 1.4rem;
 }
-.speak:hover { background: #1284c7; }
+.speak:hover { background: var(--blue-hover); }
 .speak-lg { width: 96px; height: 80px; font-size: 2.4rem; border-radius: 14px; }
 .speak-slow { background: var(--card); border: 3px solid var(--blue); color: var(--blue); }
 .speak-slow:hover { background: var(--card); }
@@ -785,7 +790,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   background: color-mix(in srgb, var(--yellow) 14%, var(--card));
 }
 /* The number box just fills (the 120 ms colour transition), no pop. */
-.choice.picked .choice-num { border-color: #1e2226; background: var(--yellow); color: #1e2226; }
+.choice.picked .choice-num { border-color: var(--on-yellow); background: var(--yellow); color: var(--on-yellow); }
 /* After "Check" (120 ms): the right option turns stamp green with a check, the wrong pick brick
    red with a cross, so colour is never the only cue. The rest step back without fading: a muted
    border, no fill and --muted text, which stays at 4.5:1 or more. */
@@ -897,7 +902,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* A wrong pair keeps a cross until the next tap. */
 .match-x {
   position: absolute; top: -8px; right: -6px; display: grid; place-items: center; width: 24px; height: 24px;
-  border-radius: 50%; background: var(--go-wrong); color: #fff; box-shadow: 0 0 0 2px var(--card);
+  border-radius: 50%; background: var(--go-wrong); color: var(--on-go); box-shadow: 0 0 0 2px var(--card);
 }
 /* A wrong pair: red, and a small 3 px nudge, two cycles (240 ms). */
 .shake { animation: shake 0.12s ease-in-out 2; border-color: var(--red) !important; background: var(--red-bg) !important; }
@@ -912,7 +917,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   border: none; border-radius: 10px; background: var(--blue); color: var(--on-blue);
 }
 .speak-glyph .icon { width: 26px; height: 26px; }
-.speak-glyph:hover { background: #1284c7; }
+.speak-glyph:hover { background: var(--blue-hover); }
 .speak-glyph:active { transform: translateY(1px); filter: brightness(0.94); }
 .bubble-text { font-size: 1.15rem; font-weight: 600; color: var(--ink-strong); min-width: 0; }
 .bubble-text .bi-en {
@@ -938,7 +943,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .answer-line .stamp-sub { margin-top: 1px; }
 .answer-mark {
   position: absolute; top: 14px; inset-inline-end: 12px; display: grid; place-items: center; width: 36px; height: 36px;
-  border-radius: 50%; color: #fff; background: var(--go-right);
+  border-radius: 50%; color: var(--on-go); background: var(--go-right);
   animation: stamp-in 0.16s var(--ease-out) 0.06s both;
 }
 /* The right sentence in the feedback label, as tiles; a word that was out of place or missing
@@ -1290,7 +1295,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 
 /* Logo */
 .wordmark { font-family: 'Lexend Variable', 'Lexend', system-ui, sans-serif; font-weight: 700; color: var(--ink-strong); letter-spacing: -0.02em; }
-.wordmark-dot { color: #ffc414; }
+.wordmark-dot { color: var(--yellow); }
 /* "Nederlands" in the language list: what the work-rules track teaches (src/i18n/meta.ts NL_MORE). */
 /* "Ik spreek al Nederlands" is the work-rules track, not a help language: in the kraft colour of
    the labels, with the word "Werkregels" as a small tag. */
@@ -1538,7 +1543,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
   border: 2px solid var(--line); background: var(--card); color: var(--ink);
   font: inherit; font-weight: 750; font-size: 1rem; letter-spacing: 0.04em;
 }
-.about-nl[aria-pressed='true'] { background: var(--yellow, #f5c518); border-color: var(--yellow, #f5c518); color: #1e2226; }
+.about-nl[aria-pressed='true'] { background: var(--yellow, #f5c518); border-color: var(--yellow, #f5c518); color: var(--on-yellow); }
 .about-nl:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
 .about-who { display: inline-flex; flex: none; margin-top: -2px; }
 .about-who .ch { display: block; }
@@ -1561,7 +1566,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 @keyframes sheet-up { from { transform: translateY(100%); } }
 .sheet-hazard {
   position: absolute; inset: 0 0 auto; height: 10px;
-  background: repeating-linear-gradient(-45deg, var(--yellow) 0 10px, #1e2226 10px 20px);
+  background: repeating-linear-gradient(-45deg, var(--yellow) 0 10px, var(--on-yellow) 10px 20px);
 }
 .sheet-title { margin: 0 0 6px; font-size: 1.5rem; font-weight: 700; color: var(--ink-strong); }
 .sheet-title .bi-help { --help-size: 0.7em; font-weight: 500; }
@@ -1570,7 +1575,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .sheet-actions .btn { width: 100%; min-height: 60px; font-size: 1.15rem; }
 .sheet-actions .btn .bi { align-items: center; }
 .sheet-actions .btn .bi-help { --help-size: 0.8em; font-weight: 500; }
-.sheet-actions .btn-primary .bi-help { color: #3f3a2c; }
+.sheet-actions .btn-primary .bi-help { color: var(--on-yellow-soft); }
 .sheet-stop { gap: 10px; background: var(--card); color: var(--ink); border: 2px solid var(--edge); }
 .sheet-stop-icon { color: var(--red); }
 .sheet-stop:hover { background: var(--red-bg); }
@@ -1595,7 +1600,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .nav-icon .icon { width: 24px; height: 24px; }
 .nav-label { font-size: 0.8rem; font-weight: 500; line-height: 1.1; }
 .nav-tab-on { color: var(--ink); }
-.nav-tab-on .nav-icon { background: var(--yellow); color: #1e2226; }
+.nav-tab-on .nav-icon { background: var(--yellow); color: var(--on-yellow); }
 .nav-tab-on .nav-label { font-weight: 650; }
 .nav-tab:hover:not(.nav-tab-on) { color: var(--ink); }
 .nav-tab:hover:not(.nav-tab-on) .nav-icon { background: var(--track); }
@@ -1625,7 +1630,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .hub-card > .icon:last-child { flex: none; color: var(--ink-3); }
 
 /* Retry phase: the kraft tag (the bar's kraft tail is under "Lesson progress"). */
-.tag-repeat { background: var(--repeat-bg); color: #1e2226; }
+.tag-repeat { background: var(--repeat-bg); color: var(--on-yellow); }
 
 /* Result: small line under a stat value ("24 words learned"). */
 .stat-card-foot { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
@@ -1642,7 +1647,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .gate-sign::before {
   content: ''; position: absolute; inset: 0 0 auto; height: 6px;
-  background: repeating-linear-gradient(-45deg, var(--yellow) 0 8px, #1e2226 8px 16px);
+  background: repeating-linear-gradient(-45deg, var(--yellow) 0 8px, var(--on-yellow) 8px 16px);
 }
 .gate-logo { display: flex; align-items: center; gap: 12px; }
 .gate-logo .wordmark { font-size: 2.2rem; }
@@ -1670,7 +1675,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .pw-error .bi-help { color: var(--wrong-ink); }
 .pw-go { width: 100%; min-height: 60px; margin-top: 4px; font-size: 1.15rem; padding-inline: 16px 68px; }
 .pw-go .bi { align-items: center; }
-.pw-go .bi-help { font-size: 0.8em; font-weight: 400; color: #3f3a2c; }
+.pw-go .bi-help { font-size: 0.8em; font-weight: 400; color: var(--on-yellow-soft); }
 .pw-go:disabled .bi-help { color: inherit; }
 
 /* Preview: unlock card in Settings, and the "Volledige versie" note on locked units. */
@@ -1706,14 +1711,14 @@ svg.emoji-xl { width: 140px; height: 140px; }
    next step, a big yellow card like a lesson's. */
 .full-only-big {
   display: flex; align-items: center; gap: 14px; width: 100%; min-height: 96px; margin: 12px 0 4px;
-  padding: 18px; text-align: start; font: inherit; font-weight: 650; color: #1e2226;
-  background: var(--yellow); border: 2.5px solid #1e2226; border-radius: 14px; cursor: pointer;
+  padding: 18px; text-align: start; font: inherit; font-weight: 650; color: var(--on-yellow);
+  background: var(--yellow); border: 2.5px solid var(--on-yellow); border-radius: 14px; cursor: pointer;
 }
-.full-only-big:hover { background: #ffcd3a; }
+.full-only-big:hover { background: var(--yellow-hover); }
 .full-only-big > .icon { flex: none; }
 .full-only-big-text { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: start; }
 .full-only-big-help { font-size: 1.25rem; line-height: 1.2; }
-.full-only-big-nl { font-size: 0.8rem; font-weight: 600; color: #3f3a2c; }
+.full-only-big-nl { font-size: 0.8rem; font-weight: 600; color: var(--on-yellow-soft); }
 .full-only-en { flex: 1; min-width: 0; flex-direction: row; flex-wrap: wrap; gap: 0 6px; font-weight: 600; font-size: 0.85rem; color: var(--muted); }
 .full-only-en .bi-help { display: inline; }
 .full-only-en .bi-sep { display: inline; }
@@ -1773,7 +1778,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .daily-card:hover { border-color: var(--ink); }
 .daily-icon {
   flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
-  background: var(--yellow); color: #1e2226;
+  background: var(--yellow); color: var(--on-yellow);
 }
 .daily-n {
   flex: none; min-width: 1ch; font-family: var(--stencil); font-weight: 800; font-size: 2.6rem; line-height: 1;
@@ -1894,8 +1899,8 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .week-stamp {
   display: grid; place-items: center; width: 82%; aspect-ratio: 1; border-radius: 50%;
-  background: var(--yellow); color: #1e2226; border: 2px solid #1e2226; rotate: -10deg;
-  box-shadow: inset 0 0 0 2px var(--yellow), inset 0 0 0 3px #1e2226;
+  background: var(--yellow); color: var(--on-yellow); border: 2px solid var(--on-yellow); rotate: -10deg;
+  box-shadow: inset 0 0 0 2px var(--yellow), inset 0 0 0 3px var(--on-yellow);
 }
 .week-done .week-tile { border-color: var(--edge); }
 .week-rest .week-tile { background: var(--track); border-color: var(--track); color: var(--ink-3); }
@@ -2027,15 +2032,15 @@ svg.emoji-xl { width: 140px; height: 140px; }
   border: 2px solid var(--line); border-radius: 10px;
 }
 .remind-chip:hover { border-color: var(--ink-3); }
-.remind-chip.picked { background: var(--yellow); color: #1e2226; border-color: #1e2226; }
+.remind-chip.picked { background: var(--yellow); color: var(--on-yellow); border-color: var(--on-yellow); }
 .remind-time { font-family: var(--stencil); font-weight: 800; font-size: 1.7rem; line-height: 1; font-variant-numeric: tabular-nums; }
 .remind-nl { order: 3; font-size: 0.74rem; font-weight: 500; line-height: 1.2; color: var(--muted); }
 .remind-gloss { font-size: 0.95rem; font-weight: 650; color: var(--ink); }
 .remind-gloss.bi-swap > .bi-help { --help-size: 0.8em; font-weight: 500; color: var(--muted); }
 .keep-card .remind-chip .bi { align-items: center; }
 /* On the yellow of the chosen chip every line is dark ink (7:1 or more), in both themes. */
-.remind-chip.picked :is(.remind-gloss, .remind-gloss *, .remind-nl, .bi-help, .bi-en) { color: #3f3a2c; }
-.remind-chip.picked .remind-time { color: #1e2226; }
+.remind-chip.picked :is(.remind-gloss, .remind-gloss *, .remind-nl, .bi-help, .bi-en) { color: var(--on-yellow-soft); }
+.remind-chip.picked .remind-time { color: var(--on-yellow); }
 .remind-gloss .bi-help { --help-min: 12px; }
 .remind-own {
   display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 8px 8px 12px;
@@ -2100,7 +2105,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .btn-label .bi-en { overflow-wrap: anywhere; }
 .btn-label.bi-swap > .bi-help { --help-size: 0.74em; font-weight: 500; margin-top: 1px; color: inherit; opacity: 0.86; }
 .btn-label.bi-swap[dir='rtl'] > .bi-help { text-align: center; }
-.btn-primary .btn-label.bi-swap > .bi-help { color: #3f3a2c; opacity: 1; }
+.btn-primary .btn-label.bi-swap > .bi-help { color: var(--on-yellow-soft); opacity: 1; }
 .btn:disabled .btn-label.bi-swap > .bi-help { color: inherit; opacity: 1; }
 .foot-actions .btn-go { padding-block: 8px; }
 .foot-actions .btn-go .btn-label .bi-en { font-size: 1.15rem; }
@@ -2268,7 +2273,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .bay-now .bay-pic { display: none; width: 56px; height: 56px; align-self: flex-start; }
 @media (max-width: 300px) { .bay-now .bay-pic { display: inline-block; } }
 .bay-start-label { align-items: flex-start; line-height: 1.15; }
-.bay-start-label.bi-swap > .bi-help { --help-size: 0.72em; color: rgba(255, 253, 248, 0.8); font-weight: 500; }
+.bay-start-label.bi-swap > .bi-help { --help-size: 0.72em; color: color-mix(in srgb, var(--on-yellow-paper) 80%, transparent); font-weight: 500; }
 .bay-start-label .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.15em; }
 .bay-start { padding-block: 6px; }
 .bay-again { flex-wrap: wrap; }
@@ -2484,7 +2489,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .cert-btn-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.2; }
 .cert-btn-gloss { font-size: 0.8rem; font-weight: 500; opacity: 0.9; }
 .cert-btn-gloss.bi-swap .bi-help { display: none; }
-.btn-primary .cert-btn-gloss { opacity: 1; color: #3f3a2c; }
+.btn-primary .cert-btn-gloss { opacity: 1; color: var(--on-yellow-soft); }
 .cert-saved { margin-top: 12px; }
 .cert-rename { display: flex; margin-top: 10px; }
 @media (max-width: 520px) {
@@ -2543,9 +2548,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 }
 /* A fixed size: the switch is, so "Aan" never runs under the knob with larger text. */
 .count-state { position: absolute; top: 50%; right: 10px; translate: 0 -50%; font-size: 13px; font-weight: 700; line-height: 1; color: var(--muted); }
-.count-switch.on { background: var(--yellow); border-color: #1e2226; }
-.count-switch.on .count-knob { transform: translateX(38px); background: #1e2226; border-color: #1e2226; }
-.count-switch.on .count-state { right: auto; left: 12px; color: #1e2226; }
+.count-switch.on { background: var(--yellow); border-color: var(--on-yellow); }
+.count-switch.on .count-knob { transform: translateX(38px); background: var(--on-yellow); border-color: var(--on-yellow); }
+.count-switch.on .count-state { right: auto; left: 12px; color: var(--on-yellow); }
 
 /* Print / Save as PDF: only the certificate, one A4 landscape page. */
 @media print {
@@ -2581,8 +2586,8 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* Under the Dutch: the help language, the English small under it. */
 .resume-help .bi-en { font-size: 0.85em; font-weight: 500; }
 .resume-help.bi-swap > .bi-help { --help-size: 0.68em; font-weight: 400; }
-.bay-now .resume-help .bi-en { color: rgba(255, 253, 248, 0.9); }
-.bay-now .resume-help.bi-swap > .bi-help, .bay-now .resume-help:not(.bi-swap) .bi-en { color: rgba(255, 253, 248, 0.72); }
+.bay-now .resume-help .bi-en { color: color-mix(in srgb, var(--on-yellow-paper) 90%, transparent); }
+.bay-now .resume-help.bi-swap > .bi-help, .bay-now .resume-help:not(.bi-swap) .bi-en { color: color-mix(in srgb, var(--on-yellow-paper) 72%, transparent); }
 /* Done or open: the same outlined chip as an open lesson's Start. */
 .bay-done .bay-resume, .bay-open .bay-resume {
   min-height: 40px; padding-block: 4px; font-size: 0.95rem;
@@ -2666,7 +2671,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .remind-chip { position: relative; }
 .remind-tick {
   position: absolute; top: -9px; inset-inline-end: -7px; display: grid; place-items: center;
-  width: 24px; height: 24px; border-radius: 50%; background: #1e2226; color: var(--yellow);
+  width: 24px; height: 24px; border-radius: 50%; background: var(--on-yellow); color: var(--yellow);
 }
 .remind-other {
   display: flex; align-items: center; gap: 10px; width: 100%; min-height: 52px; padding: 6px 12px;
@@ -3108,7 +3113,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .rb-choice-locked .rb-choice-pic { opacity: 0.6; }
 .rb-rec-chip {
   display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 999px;
-  background: var(--yellow); color: #1e2226; font-size: 0.8rem; font-weight: 650; line-height: 1.4;
+  background: var(--yellow); color: var(--on-yellow); font-size: 0.8rem; font-weight: 650; line-height: 1.4;
 }
 .rb-rec-word:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.88rem; }
 .rb-choose .full-only-note { padding-inline-start: 4px; }
@@ -3468,7 +3473,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .match-cards .match-en .bi { align-items: flex-start; }
 .match-text { display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; }
 .match-made { font-size: var(--fs-small); font-weight: 700; color: var(--right-ink); }
-.match-check { display: grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 50%; color: #fff; background: var(--go-right); }
+.match-check { display: grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 50%; color: var(--on-go); background: var(--go-right); }
 .match-cards .match.matched { opacity: 0.55; }
 .match-on { animation: up 0.2s var(--ease-out) both; }
 @media (prefers-reduced-motion: reduce) { .match-on { animation: none; } }
@@ -3483,7 +3488,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .tile-with-say, .letter-tile { position: relative; }
 .tile-x {
   position: absolute; top: -9px; inset-inline-start: -7px; display: grid; place-items: center; width: 22px; height: 22px;
-  border-radius: 50%; background: var(--go-wrong); color: #fff; box-shadow: 0 0 0 2px var(--card);
+  border-radius: 50%; background: var(--go-wrong); color: var(--on-go); box-shadow: 0 0 0 2px var(--card);
 }
 .letter-steps .letter-tile { min-width: 64px; height: 60px; }
 @media (prefers-reduced-motion: reduce) { .answer-line .tile-placed { animation: none; } }
@@ -3507,7 +3512,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px;
   background: var(--concrete-2, var(--bg)); color: var(--ink); overflow: hidden;
 }
-.max3-card.picked .max3-pic { background: var(--yellow); color: #1e2226; }
+.max3-card.picked .max3-pic { background: var(--yellow); color: var(--on-yellow); }
 .max3-card.danger .max3-pic { background: var(--red-bg); color: var(--red); }
 .max3-pic .word-pic { width: 52px; height: 52px; }
 .max3-names { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
@@ -3742,7 +3747,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   flex: none; font-family: var(--stencil); font-weight: 800; font-size: 1.6rem; line-height: 1;
   font-variant-numeric: tabular-nums; unicode-bidi: isolate;
 }
-.btn-primary .keep3-btn-nl, .btn-primary .keep3-btn-gloss .bi-help { color: #3f3a2c; }
+.btn-primary .keep3-btn-nl, .btn-primary .keep3-btn-gloss .bi-help { color: var(--on-yellow-soft); }
 .keep3-times { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 420px; }
 .keep3-time-btn {
   width: 100%; display: flex; align-items: center; gap: 16px; min-height: 76px; padding: 10px 16px; text-align: start;
@@ -4040,7 +4045,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .sector-group-row.picked { border-color: var(--edge-strong); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
 .sector-group-row.picked .set-row-chev { color: var(--ink); }
 .set-row-icon.sector-group-pic { width: 112px; height: 52px; border-radius: 14px; }
-.sector-group-row.picked .sector-group-pic { background: var(--yellow); color: #1e2226; }
+.sector-group-row.picked .sector-group-pic { background: var(--yellow); color: var(--on-yellow); }
 .sector-group-head { margin: 14px 0 0; font-size: inherit; }
 .sector-group-head:focus { outline: none; }
 .sector-group-head:focus-visible .bi { outline: 3px solid var(--edge-strong); outline-offset: 2px; }
@@ -4774,7 +4779,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* "Ik ken dit al: korte check" (src/lib/instapCheck.ts, src/components/Check.tsx). */
 .topic-tools .check-open, .topic-tools .check-undo { flex: 1 1 100%; }
 .check-open { border-color: var(--yellow); }
-.check-open-icon { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--yellow); color: #1e2226; }
+.check-open-icon { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--yellow); color: var(--on-yellow); }
 .unit-tool-nl { font-weight: 700; }
 /* "via check": calm text beside a topic or lesson ticked off with the check, never a button. */
 .via-check {
@@ -5016,7 +5021,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* After a review: what stayed (src/components/Screens.tsx, lib/spaced.ts keptCount). */
 .result-line.result-kept { flex-wrap: nowrap; gap: 10px; text-align: start; margin-inline: auto; }
 .result-kept > :last-child { flex: 0 1 auto; min-width: 0; }
-.result-kept-icon { flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--go-right); color: #fff; }
+.result-kept-icon { flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--go-right); color: var(--on-go); }
 
 /* Showing how, once (src/components/ShowHow.tsx): a hand moves to the first right tile and taps it
    twice. Fixed on the screen, above the exercise, never in the way of a tap (no pointer events). */
