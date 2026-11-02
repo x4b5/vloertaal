@@ -35,7 +35,7 @@ const t: CultureTranslation = {
     'c.shift.a.why': "Quando começa o turno? Esta resposta dá o dia e a hora.",
     'c.sick.a.why': "Quem está doente fica em casa e avisa.",
     'd.speakup.a.why': "Perguntam se há algum problema: um sim honesto é bom.",
-    'd.agree.a.why': "Dizer que não é permitido. Propor outro dia ajuda.",
+    'd.agree.a.why': "Podes dizer que não. Propor outro dia ajuda.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'd.task.a.why': "Perguntam se está feito: esta resposta diz quase, e quanto tempo falta.",
     'c.cv.a.why': "Uma referência é um antigo chefe que pode falar sobre o teu trabalho.",
     'c.interview.a.why': "Numa entrevista de emprego, o que conta é a experiência de trabalho.",
@@ -52,9 +52,9 @@ const t: CultureTranslation = {
     'c.hygiene.a.why': "Rede no cabelo, sem joias: regras para comida limpa.",
     'c.smalltalk.a.why': "A pergunta é sobre o fim de semana: uma coisa chega.",
     'c.mistakes.a.why': "A um elogio responde-se com um obrigado.",
-    'c.respect.a.why': "O assédio tem de ser contado, para alguém poder ajudar.",
+    'c.respect.a.why': "O bullying tem de ser contado, para alguém poder ajudar.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.gossip.a.why': "Não entrar em mexericos mantém a confiança na equipa.",
-    'c.boundaries.a.why': "Uma piada que magoa pode ser parada, com clareza.",
+    'c.boundaries.a.why': "Se uma piada magoa, podes pedir com clareza que parem.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.health.a.why': "Uma pausa protege a saúde, por isso faz-se.",
     'c.rights.a.why': "Um despedimento nunca se assina logo. Primeiro pede-se conselho.",
     'c.leave.a.why': "Quando? Esta resposta dá um mês e quanto tempo.",
@@ -81,7 +81,7 @@ const t: CultureTranslation = {
     'c.privacy.a.why': "Os medicamentos são para pessoal com formação: quem os dá é a enfermeira.",
     'c.kitchen.a.why': "Uma alergia é coisa séria: o chefe de cozinha tem de saber.",
     'c.service.a.why': "Pedem a conta: um sim curto, e já vai.",
-    'c.cleaning.a.why': "Acabaste? Esta resposta diz quase, e quantos faltam.",
+    'c.cleaning.a.why': "Acabaste? Esta resposta diz quase, e quantas faltam.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.cleansafe.a.why': "Um chão molhado escorrega: um aviso ajuda.",
     'c.shelves.a.why': "Perguntam onde: esta resposta diz o corredor e ajuda.",
     'c.checkout.a.why': "Perguntam se se pode pagar com cartão: um sim simpático.",
@@ -97,7 +97,7 @@ const t: CultureTranslation = {
     // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
     'c.details.a.why': "Perguntam o apelido: esta resposta dá-o e oferece-se para o soletrar.",
     'c.dates.a.why': "Perguntam a data: esta resposta dá o dia e a data.",
-    'c.permit.a.why': "Dizer que não está bem, se deres uma razão. Propor outro dia ajuda.",
+    'c.permit.a.why': "Podes dizer que não, se deres uma razão. Propor outro dia ajuda.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.kids.a.why': "Perguntam porquê: esta resposta dá a razão, a creche ligou.",
     'c.body.a.why': "Perguntam onde dói: esta resposta diz o sítio e a causa.",
     'c.jobends.a.why': "A casa vai com o trabalho: esta resposta pergunta pelo prazo de aviso prévio.",
@@ -109,7 +109,7 @@ const t: CultureTranslation = {
     'c.garage.a.why': "Pedem para trocar os pneus: um sim, e uma pergunta sobre onde estão.", // nieuw, nalezen
     'c.carjob.a.why': "Trabalho extra: o cliente tem de concordar primeiro, por isso esta resposta pergunta ao chefe.", // nieuw, nalezen
     'c.placement.a.why': "Perguntam quando: esta resposta dá o dia, e o contrato vem primeiro.", // nieuw, nalezen
-    'c.review.a.why': "O feedback ainda não está claro: pedir para mostrar é uma boa resposta.", // nieuw, nalezen
+    'c.review.a.why': "O feedback ainda não está claro: pedir que te mostrem é uma boa resposta.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.council.a.why': "Perguntam pelo voto: um sim, e as duas coisas a levar.", // nieuw, nalezen
     'c.police.a.why': "A polícia pede o documento: mostrar e perguntar o que se passa.", // nieuw, nalezen
     'c.login.a.why': "Perguntam se o acesso funciona: esta resposta diz que não, e porquê.", // nieuw, nalezen

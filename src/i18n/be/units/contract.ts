@@ -17,7 +17,7 @@ export const ar: Gloss = {
   'be.s.agency.1': "أعمل عن طريق مكتب عمل مؤقت.", // nieuw, nalezen
   'be.s.agency.2': "هل أحصل غداً مرة أخرى على عقد يومي (عقد ليوم واحد)؟", // nieuw, nalezen
   'be.w.zzper': "العامل المستقل (تعمل لحسابك)", // nieuw, nalezen
-  'be.s.permit.2': "هل أنا موظف أم عامل مستقل؟", // nieuw, nalezen
+  'be.s.permit.2': "هل أعمل لدى صاحب عمل أم أعمل لحسابي الخاص؟", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.s.permit.3': "أعمل بدوام جزئي.", // nieuw, nalezen
   'be.c.findwork': "الحصول على العقد مكتوباً", // nieuw, nalezen
   'be.c.findwork.b': { m: 'اطلب دائماً عقداً مكتوباً ونسخة لك. العقد لمدة محددة (bepaalde tijd) أو العقد بدوام جزئي يجب أن يكون مكتوباً عند بداية العمل. اقرأه قبل التوقيع، أو اطلب المساعدة من شخص تثق به. قبل يومك الأول، يبلّغ صاحب العمل الضمان الاجتماعي عنك: هذا هو Dimona. مكتب العمل المؤقت (interimkantoor) لا يحق له أن يطلب منك مالاً ليجد لك عملاً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'اطلبي دائماً عقداً مكتوباً ونسخة لكِ. العقد لمدة محددة (bepaalde tijd) أو العقد بدوام جزئي يجب أن يكون مكتوباً عند بداية العمل. اقرئيه قبل التوقيع، أو اطلبي المساعدة من شخص تثقين به. قبل يومكِ الأول، يبلّغ صاحب العمل الضمان الاجتماعي عنكِ: هذا هو Dimona. مكتب العمل المؤقت (interimkantoor) لا يحق له أن يطلب منكِ مالاً ليجد لكِ عملاً. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'المطلوب دائماً عقد مكتوب ونسخة شخصية منه. العقد لمدة محددة (bepaalde tijd) أو العقد بدوام جزئي يجب أن يكون مكتوباً عند بداية العمل. القراءة قبل التوقيع مهمة، أو طلب المساعدة من شخص موثوق. قبل اليوم الأول، يبلّغ صاحب العمل الضمان الاجتماعي عن العامل الجديد: هذا هو Dimona. مكتب العمل المؤقت (interimkantoor) لا يحق له أن يطلب مالاً مقابل إيجاد عمل. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
@@ -305,7 +305,7 @@ export const pl: Gloss = {
   'be.w.proeftijd': "odszkodowanie za okres wypowiedzenia (twoja pensja za ten czas)", // nieuw, nalezen
   'be.w.cao': "komisja parytetowa (ustala zasady w twojej branży)", // nieuw, nalezen
   'be.s.contract.2': "Moja umowa się kończy. Kiedy dostanę swój C4?", // nieuw, nalezen
-  'be.s.contract.3': "Pod którą komisję parytetową podlegam?", // nieuw, nalezen
+  'be.s.contract.3': "Której komisji parytetowej podlegam?", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.w.uitzendkracht': "pracownik tymczasowy (interimkracht)", // nieuw, nalezen
   'be.w.intercedent': "konsultant (twoja osoba kontaktowa w agencji)", // nieuw, nalezen
   'be.s.agency.1': "Pracuję przez agencję pracy tymczasowej.", // nieuw, nalezen
@@ -556,7 +556,7 @@ export const fr: Gloss = {
   'be.s.agency.1': "Je travaille via une agence d’intérim.", // nieuw, nalezen
   'be.s.agency.2': "Est-ce que j’ai encore un contrat d’un jour demain ?", // nieuw, nalezen
   'be.w.zzper': "le travailleur indépendant (tu travailles pour toi-même)", // nieuw, nalezen
-  'be.s.permit.2': "Je travaille avec un contrat ou à mon compte ?", // nieuw, nalezen
+  'be.s.permit.2': "Je travaille avec un contrat de travail ou à mon compte ?", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.s.permit.3': "Je travaille à temps partiel.", // nieuw, nalezen
   'be.c.findwork': "Ton contrat par écrit", // nieuw, nalezen
   'be.c.findwork.b': "Demande toujours un contrat écrit et une copie pour toi. Un contrat à durée déterminée (bepaalde tijd) ou à temps partiel doit être sur papier quand tu commences. Lis-le avant de signer, ou demande de l’aide à quelqu’un de confiance. Avant ton premier jour, ton employeur te déclare à la sécurité sociale : c’est la Dimona. Une agence d’intérim (interimkantoor) ne peut pas te demander d’argent pour te trouver un travail. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au justitiehuis (maison de justice : conseil juridique gratuit).", // nieuw, nalezen

@@ -455,7 +455,7 @@ const lang: HelpLanguageSource = {
     'w.ja': 'tak',
     'w.nee': 'nie',
     'w.totmorgen': 'do jutra',
-    's.hello.1': { m: 'Cześć, jestem nowy.', f: 'Cześć, jestem nowa.', x: 'Cześć, jestem nowy / nowa.' }, // x: nieuw, nalezen
+    's.hello.1': { m: 'Cześć, jestem nowy.', f: 'Cześć, jestem nowa.', x: 'Cześć, jestem tu nową osobą.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.hello.2': 'Dzień dobry, jestem Ali.',
     's.hello.3': 'Dziękuję, do jutra!',
     'l.people': 'Ludzie w pracy',
@@ -512,7 +512,7 @@ const lang: HelpLanguageSource = {
     'w.ziekenhuis': 'szpital',
     'w.gebeuren': 'dziać się, zdarzyć się',
     's.accident.1': 'Mój kolega upadł.',
-    's.accident.2': { m: 'Skaleczyłem się.', f: 'Skaleczyłam się.', x: 'Skaleczyłem / skaleczyłam się.' },
+    's.accident.2': { m: 'Skaleczyłem się.', f: 'Skaleczyłam się.', x: 'Mam skaleczenie.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.accident.3': 'Chcę zgłosić wypadek.',
 
     // Unit: In the warehouse
@@ -545,7 +545,7 @@ const lang: HelpLanguageSource = {
     'w.pauze': 'przerwa',
     'w.beginnen': 'zaczynać',
     'w.klaar': 'skończone, gotowe',
-    'w.telaat': 'za późno',
+    'w.telaat': 'spóźniony, za późno', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.morgen': 'jutro',
     's.shift.1': 'Moja zmiana zaczyna się o siódmej.',
     's.shift.2': 'Kiedy jest przerwa?',
@@ -576,7 +576,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'Nie mogę znaleźć szatni.',
     's.arrive.3': 'Kto jest dzisiaj moim opiekunem?',
     'c.arrive.q': 'Dzień dobry, w jakiej sprawie?',
-    'c.arrive.a': { m: 'Jestem nowy. Zaczynam dzisiaj.', f: 'Jestem nowa. Zaczynam dzisiaj.', x: 'Jestem nowy / nowa. Zaczynam dzisiaj.' }, // x: nieuw, nalezen
+    'c.arrive.a': { m: 'Jestem nowy. Zaczynam dzisiaj.', f: 'Jestem nowa. Zaczynam dzisiaj.', x: 'Jestem tu nową osobą. Zaczynam dzisiaj.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.understand.q': 'Rozumiesz?',
     'c.understand.a': 'Nie, jeszcze raz, proszę.',
     'c.gear.q': 'Masz swój kask?',
@@ -592,7 +592,7 @@ const lang: HelpLanguageSource = {
     'w.voordoen': 'pokazywać (robiąc to najpierw samemu)',
     'w.gevaarlijk': 'niebezpieczny',
     'w.uitleg': 'wyjaśnienie',
-    's.notyet.1': { m: 'Jeszcze się tego nie nauczyłem.', f: 'Jeszcze się tego nie nauczyłam.', x: 'Jeszcze się tego nie nauczyłem / nauczyłam.' },
+    's.notyet.1': { m: 'Jeszcze się tego nie nauczyłem.', f: 'Jeszcze się tego nie nauczyłam.', x: 'Tego jeszcze nie umiem.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.notyet.2': 'Nikt mi jeszcze tego nie wyjaśnił.',
     's.notyet.3': { m: 'Czy mogę już robić to sam?', f: 'Czy mogę już robić to sama?', x: 'Czy mogę już robić to samodzielnie?' }, // x: nieuw, nalezen
     'c.notyet.q': 'Po prostu spróbuj, to łatwe.',

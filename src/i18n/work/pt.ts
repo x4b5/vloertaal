@@ -188,7 +188,7 @@ const t: CultureTranslation = {
     's.mistakes.1': 'Desculpa, cometi um erro.',
     's.mistakes.2': 'Podes explicar?',
     's.mistakes.3': { m: 'Obrigado pelo elogio!', f: 'Obrigada pelo elogio!', x: 'Obrigado / obrigada pelo elogio!' },
-    'c.mistakes.q': 'Muito bem feito!',
+    'c.mistakes.q': 'Muito bem! Bom trabalho!', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.mistakes.a': { m: 'Obrigado, é bom ouvir isso.', f: 'Obrigada, é bom ouvir isso.', x: 'Obrigado / obrigada, é bom ouvir isso.' },
     'l.respect': 'Respeito por todos',
     'w.respect': 'o respeito',
@@ -411,7 +411,7 @@ const t: CultureTranslation = {
     'w.ontslagnemen': 'despedir-se (sair do emprego por vontade própria)',
     'w.werkzoekende': 'a pessoa à procura de emprego',
     's.ww.1': 'Vou pedir o subsídio de desemprego no UWV.',
-    's.ww.2': { m: 'Estou desempregado.', f: 'Estou desempregada.', x: 'Estou desempregado / desempregada.' },
+    's.ww.2': { m: 'Estou desempregado.', f: 'Estou desempregada.', x: 'Estou sem emprego.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.ww.3': 'O meu contrato acaba.',
     'c.ww.q': 'O que vais fazer agora que o teu contrato acaba?',
     'c.ww.a': 'Vou pedir já o subsídio de desemprego.',
@@ -477,16 +477,16 @@ const t: CultureTranslation = {
     's.quality.3': 'Tenho de rejeitar isto?',
     'c.quality.q': 'Porque é que isto está à parte?',
     'c.quality.a': 'A etiqueta está torta.',
-    'u.care': 'Nos cuidados',
+    'u.care': 'Na área dos cuidados', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.client': 'O cliente e os cuidados diários',
-    'w.client': 'o cliente (a pessoa de quem cuidas)',
+    'w.client': 'o utente (a pessoa de quem cuidas)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.wassen': 'lavar',
     'w.aankleden': 'vestir(-se)',
     'w.eten': 'a comida',
     'w.rolstoel': 'a cadeira de rodas',
     'w.verpleegkundige': 'o enfermeiro / a enfermeira',
     's.client.1': 'Dormiu bem?',
-    's.client.2': 'Eu ajudo a vestir-se.',
+    's.client.2': 'Eu dou-lhe uma ajuda para se vestir.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.client.3': 'Quer comer mais alguma coisa?',
     'c.client.q': 'Pode ajudar-me com o meu casaco?',
     'c.client.a': 'Claro, eu ajudo.',
@@ -1254,7 +1254,7 @@ const t: CultureTranslation = {
     'w.ophalen': "ir buscar (alguém)",
     'w.ziekkind': "uma criança doente",
     'w.ouderschapsverlof': "a licença parental",
-    'w.zorgverlof': "a licença para cuidar (tempo livre para cuidar de um familiar doente)",
+    'w.zorgverlof': "a licença para cuidar (dias sem trabalhar para cuidar de um familiar doente)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.kids.1': "O meu filho está doente. Tenho de o ir buscar.",
     's.kids.2': "Posso tirar uma licença de emergência?",
     's.kids.3': "O meu empregador continua a pagar o meu salário?",
@@ -1422,7 +1422,7 @@ const t: CultureTranslation = {
     'c.placement.q': "Quando começas o estágio?", // nieuw, nalezen
     'c.placement.a': "Na segunda-feira. Primeiro assinamos o contrato de estágio.", // nieuw, nalezen
     'l.review': "Feedback sobre o teu estágio", // nieuw, nalezen
-    'w.beoordeling': "a avaliação (como fazes bem as coisas)", // nieuw, nalezen
+    'w.beoordeling': "a avaliação (se fazes bem o teu trabalho)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.leerdoel': "o objetivo de aprendizagem (o que queres aprender)", // nieuw, nalezen
     'w.voorbeeld': "o exemplo", // nieuw, nalezen
     'w.portfolio': "o portefólio (uma pasta com o teu trabalho e provas)", // nieuw, nalezen
@@ -1483,7 +1483,7 @@ const t: CultureTranslation = {
     's.phish.3': "Altero já a minha palavra-passe.", // nieuw, nalezen
     'c.phish.q': "Clicaste no link?", // nieuw, nalezen
     'c.phish.a': "Sim. Vou ligar ao departamento de informática.", // nieuw, nalezen
-    'l.mychoice': "Aquilo em que sou bom", // nieuw, nalezen
+    'l.mychoice': "Aquilo que sei fazer bem", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.goedin': "bom em (alguma coisa)", // nieuw, nalezen
     'w.kiezen': "escolher", // nieuw, nalezen
     'w.beroep': "a profissão, o tipo de trabalho", // nieuw, nalezen
@@ -1493,7 +1493,7 @@ const t: CultureTranslation = {
     's.mychoice.1': "Sei trabalhar bem com as mãos.", // nieuw, nalezen
     's.mychoice.2': "Gosto de trabalhar com pessoas.", // nieuw, nalezen
     's.mychoice.3': "Posso acompanhar-vos um dia, para ver o trabalho?", // nieuw, nalezen
-    'c.mychoice.q': "Em que é que tens jeito?", // nieuw, nalezen
+    'c.mychoice.q': "Para que é que tens jeito?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.mychoice.a': "Tenho jeito para cuidar de pessoas. Em casa cuido da minha mãe.", // nieuw, nalezen
     'l.nextstep': "Depois do Entree", // nieuw, nalezen
     'w.niveau2': "o nível 2 (o nível seguinte do mbo)", // nieuw, nalezen
@@ -1525,7 +1525,7 @@ const t: CultureTranslation = {
     'w.abonnement': "a assinatura (pagas todos os meses)", // nieuw, nalezen
     'w.achterafbetalen': "pagar depois (compra agora, paga depois)", // nieuw, nalezen
     'w.bedenktijd': "o prazo de reflexão (tempo para mudar de ideias)", // nieuw, nalezen
-    'w.garantie': "a garantia (tem de funcionar, ou arranjam-te isso)", // nieuw, nalezen
+    'w.garantie': "a garantia (tem de funcionar, senão têm de o arranjar)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.budget.1': "Primeiro pago as despesas fixas.", // nieuw, nalezen
     's.budget.2': "Poupo um pouco todos os meses.", // nieuw, nalezen
     's.budget.3': "Vou cancelar esta assinatura.", // nieuw, nalezen
@@ -1539,7 +1539,7 @@ const t: CultureTranslation = {
     'w.drugs': "as drogas", // nieuw, nalezen
     'w.somber': "em baixo (triste durante muito tempo)", // nieuw, nalezen
     's.healthy.1': { m: "Hoje estou muito cansado.", f: "Hoje estou muito cansada.", x: "Hoje estou muito cansado / cansada." }, // nieuw, nalezen
-    's.healthy.2': "Como sempre primeiro o pequeno-almoço.", // nieuw, nalezen
+    's.healthy.2': "Tomo sempre primeiro o pequeno-almoço.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.healthy.3': "Na pausa vou dar uma pequena volta a pé.", // nieuw, nalezen
     'c.healthy.q': "Queres um comprimido? Assim não adormeces.", // nieuw, nalezen
     'c.healthy.a': { m: "Não, obrigado. Não trabalho sob efeito de nada.", f: "Não, obrigada. Não trabalho sob efeito de nada.", x: "Não, obrigado / obrigada. Não trabalho sob efeito de nada." }, // nieuw, nalezen

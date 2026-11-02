@@ -37,7 +37,7 @@ const t: CultureTranslation = {
     'w.contract': 'قرارداد',
     'w.tekenen': 'امضا کردن',
     'w.tijdelijk': 'موقت',
-    's.findwork.1': 'می‌خواهم برای این کار درخواست بدهم.',
+    's.findwork.1': 'می‌خواهم درخواست کار بدهم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.findwork.2': 'قرارداد موقت است یا دائم؟',
     's.findwork.3': 'می‌شود یک نسخه از قرارداد را بگیرم؟',
     'c.findwork.q': 'دنبال چه کاری هستی؟',
@@ -90,7 +90,7 @@ const t: CultureTranslation = {
     's.housing.2': 'ودیعه را پس می‌گیرم؟',
     's.housing.3': 'یک قرارداد اجارهٔ جدا می‌خواهم.',
     'c.housing.q': 'ما اجاره را از حقوقت کم می‌کنیم.',
-    'c.housing.a': 'پس این را روی کاغذ می‌خواهم.',
+    'c.housing.a': 'پس این را کتبی می‌خواهم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'u.pay': 'حقوق',
     'l.payslip': 'فیش حقوقی تو',
     'w.loon': 'حقوق، دستمزد',
@@ -215,7 +215,7 @@ const t: CultureTranslation = {
     's.health.3': 'من آن را به بازرسی کار گزارش می‌دهم.',
     'c.health.q': 'الان باید استراحت کنی.',
     'c.health.a': 'باشه، کمی می‌نشینم.',
-    'l.rights': 'حقوق قانونی تو',
+    'l.rights': 'حق‌های تو', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.recht': 'حق',
     'w.discriminatie': 'تبعیض',
     'w.vakbond': 'اتحادیهٔ کارگری',
@@ -235,7 +235,7 @@ const t: CultureTranslation = {
     'w.feestdag': 'تعطیل رسمی',
     'w.vrij': 'آزاد، بدون کار',
     'w.calamiteitenverlof': 'مرخصی اضطراری',
-    's.leave.1': 'می‌خواهم مرخصی بگیرم.',
+    's.leave.1': 'می‌خواهم درخواست مرخصی بدهم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.leave.2': 'روز تعطیل رسمی آزادم؟',
     's.leave.3': 'در خانه یک مشکل اضطراری دارم.',
     'c.leave.q': 'کی می‌خواهی به تعطیلات بروی؟',
@@ -247,7 +247,7 @@ const t: CultureTranslation = {
     'w.ziekte': 'بیماری',
     'w.doorbetalen': 'ادامه دادن پرداخت حقوق',
     'w.wachtdag': 'روز انتظار (بدون حقوق)',
-    's.illness.1': 'زنگ می‌زنم که بیمارم.',
+    's.illness.1': 'خبر می‌دهم که بیمارم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.illness.2': 'با پزشک شرکت وقت دارم.',
     's.illness.3': 'فردا دوباره سر کار می‌آیم.',
     'c.illness.q': 'دقیقاً چه مشکلی داری؟',
@@ -287,7 +287,7 @@ const t: CultureTranslation = {
     'w.inspreken': 'پیام صوتی گذاشتن',
     's.callin.1': 'سلام، علی هستم.',
     's.callin.2': 'فکر کنم پس‌فردا برمی‌گردم.',
-    's.callin.3': 'می‌شود به من زنگ بزنید؟',
+    's.callin.3': 'می‌شود دوباره به من زنگ بزنید؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.callin.q': 'کی برمی‌گردی؟',
     'c.callin.a': 'فکر کنم دوشنبه.',
     'l.texting': 'پیام‌ها و اپ برنامهٔ کاری',
@@ -396,7 +396,7 @@ const t: CultureTranslation = {
     'w.inchecken': 'کارت زدن موقع سوار شدن',
     'w.uitchecken': 'کارت زدن موقع پیاده شدن',
     'w.bankpas': 'کارت بانکی',
-    'w.reiskosten': 'پول رفت‌وآمد',
+    'w.reiskosten': 'کمک‌هزینهٔ رفت‌وآمد', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.transit.1': 'با کارت بانکی‌ام موقع سوار شدن کارت می‌زنم.',
     's.transit.2': 'یادت نرود موقع پیاده شدن کارت بزنی.',
     's.transit.3': 'ایستگاه اتوبوس کجاست؟',
@@ -1122,7 +1122,7 @@ const t: CultureTranslation = {
     's.aifake.1': 'این واقعی است یا جعلی؟',
     's.aifake.2': 'قطع می‌کنم و خودم دوباره زنگ می‌زنم.',
     's.aifake.3': 'پول نمی‌فرستم.',
-    'c.aifake.q': 'سلام، این شمارهٔ جدید من است. می‌توانی زود یک کم پول بفرستی؟',
+    'c.aifake.q': 'سلام، این شمارهٔ جدید من است. می‌توانی زود پول بفرستی؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.aifake.a': 'اول به شمارهٔ قبلی‌ات زنگ می‌زنم.',
     'l.aiplan': 'وقتی یک اپ تصمیم می‌گیرد',
     'w.planning': 'برنامه‌ریزی، برنامهٔ کاری',
@@ -1542,7 +1542,7 @@ const t: CultureTranslation = {
     's.healthy.2': "همیشه اول صبحانه می‌خورم.", // nieuw, nalezen
     's.healthy.3': "در زمان استراحت کمی قدم می‌زنم.", // nieuw, nalezen
     'c.healthy.q': "قرص می‌خواهی؟ اینطوری بیدار می‌مانی.", // nieuw, nalezen
-    'c.healthy.a': "نه، ممنون. تحت تأثیر هیچ چیزی کار نمی‌کنم.", // nieuw, nalezen // nagelezen AI 31 okt
+    'c.healthy.a': "نه، ممنون. تحت تأثیر مواد یا الکل کار نمی‌کنم.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.workorder': "اول بخوان، بعد شروع کن", // nieuw, nalezen
     'c.workorder.b': "پیش از شروع، برگهٔ کار (werkbon) یا کار را در اپ بخوان. نشانی، کار و تعداد چیزها را بررسی کن. چیزی روشن نیست؟ پیش از شروع بپرس، نه وسط کار. بعد ابزار و وسایلت را آماده بگذار. این کار وقت را کم می‌کند و اشتباه کمتری می‌کنی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
     'c.workorder.p': "در برگهٔ کار نوشته ده کارتن. درست است؟", // nieuw, nalezen

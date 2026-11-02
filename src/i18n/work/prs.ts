@@ -37,7 +37,7 @@ const t: CultureTranslation = {
     'w.contract': 'قرارداد',
     'w.tekenen': 'امضا کردن',
     'w.tijdelijk': 'موقت',
-    's.findwork.1': 'می‌خواهم برای این کار درخواست بدهم.',
+    's.findwork.1': 'می‌خواهم درخواست کار بدهم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.findwork.2': 'قرارداد موقت است یا دایمی؟',
     's.findwork.3': 'می‌توانم یک کاپی قرارداد را بگیرم؟',
     'c.findwork.q': 'چه رقم کار می‌پالید؟',
@@ -210,10 +210,10 @@ const t: CultureTranslation = {
     'w.rust': 'استراحت',
     'w.beschermingsmiddelen': 'وسایل محافظتی',
     'w.arbeidsinspectie': 'تفتیش کار',
-    's.health.1': 'من حق تفریح دارم.',
+    's.health.1': 'من حق دارم وقت تفریح بگیرم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.health.2': 'کار باید مصئون باشد.',
     's.health.3': 'من آن را به تفتیش کار گزارش می‌دهم.',
-    'c.health.q': 'حالا باید تفریح کنید.',
+    'c.health.q': 'حالا باید وقت تفریح خود را بگیرید.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.health.a': 'خوب، کمی می‌نشینم.',
     'l.rights': 'حقوق شما',
     'w.recht': 'حق',
@@ -237,7 +237,7 @@ const t: CultureTranslation = {
     'w.calamiteitenverlof': 'رخصتی عاجل',
     's.leave.1': 'می‌خواهم برای رخصتی درخواست بدهم.',
     's.leave.2': 'در روز رخصتی رسمی رخصت هستم؟',
-    's.leave.3': 'در خانه یک کار عاجل دارم.',
+    's.leave.3': 'در خانه یک حالت عاجل پیش آمده است.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.leave.q': 'چه وقت می‌خواهید به رخصتی بروید؟',
     'c.leave.a': 'در ماه جولای، سه هفته.',
     'l.illness': 'مریض در خانه',
@@ -258,7 +258,7 @@ const t: CultureTranslation = {
     'w.paspoort': 'پاسپورت',
     'w.schuld': 'قرض',
     'w.dreigen': 'تهدید کردن',
-    'w.onderbetaald': 'خیلی کم معاش گرفته',
+    'w.onderbetaald': 'کمتر از حق خود معاش گرفته', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.afpakken': 'گرفتن، به زور گرفتن',
     's.warning.1': 'پاسپورت من پیش آمرم است.',
     's.warning.2': 'من ورق معاش نمی‌گیرم.',
@@ -317,7 +317,7 @@ const t: CultureTranslation = {
     'c.certs.a': 'نی، اما دلم است که بگیرم.',
     'l.diploma': 'دیپلوم و آموزش شما',
     'w.diploma': 'دیپلوم، سند تحصیلی',
-    'w.waarderen': 'ارزیابی کردن (دیپلوم)',
+    'w.waarderen': '(دیپلوم را) برای ارزیابی دادن', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.training': 'آموزش، تریننگ',
     'w.verplicht': 'حتمی، اجباری',
     'w.werktijd': 'وقت کار',
@@ -396,7 +396,7 @@ const t: CultureTranslation = {
     'w.inchecken': 'کارت زدن وقت سوار شدن',
     'w.uitchecken': 'کارت زدن وقت پایین شدن',
     'w.bankpas': 'کارت بانکی',
-    'w.reiskosten': 'پول راه (کرایهٔ رفت و آمد)',
+    'w.reiskosten': 'پول راه از طرف کارفرما (برای کرایهٔ رفت و آمد)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.transit.1': 'وقت سوار شدن با کارت بانکی خود کارت می‌زنم.',
     's.transit.2': 'فراموش نکنید که وقت پایین شدن کارت بزنید.',
     's.transit.3': 'ایستگاه بس کجاست؟',
@@ -514,7 +514,7 @@ const t: CultureTranslation = {
     's.kitchen.2': 'پیازها را ریزه توته کنید.',
     's.kitchen.3': 'در این، مغزیجات (مثل بادام و چارمغز) است؟',
     'c.kitchen.q': 'یک مهمان به مغزیجات حساسیت دارد.',
-    'c.kitchen.a': 'از آشپز پرسان می‌کنم.',
+    'c.kitchen.a': 'از سرآشپز پرسان می‌کنم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.service': 'خدمت به مهمانان',
     'w.gast': 'مهمان',
     'w.bestelling': 'فرمایش',
@@ -1102,7 +1102,7 @@ const t: CultureTranslation = {
     'c.aihelp.a': 'بلی، با کمک هوش مصنوعی.',
     'l.aiprivate': 'چیزهایی که شریک نمی‌سازید',
     'w.persoonlijk': 'شخصی',
-    'w.gegevens': 'معلومات (نام، آدرس، شماره)',
+    'w.gegevens': 'معلومات (نام، آدرس، نمبر)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.wachtwoord': 'رمز',
     'w.typen': 'تایپ کردن',
     'w.opslaan': 'ذخیره کردن، نگه داشتن',
@@ -1111,19 +1111,19 @@ const t: CultureTranslation = {
     's.aiprivate.2': 'اجازه دارم برای کارم از هوش مصنوعی استفاده کنم؟',
     's.aiprivate.3': 'رمز من پنهان است.',
     'c.aiprivate.q': 'این را در چت‌بات بگذارید.',
-    'c.aiprivate.a': 'بهتر است نی، در آن نام‌های مشتری‌ها است.',
+    'c.aiprivate.a': 'بهتر است این کار را نکنم، چون نام‌های مشتری‌ها در آن است.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.aifake': 'جعلی یا واقعی؟',
     'w.echt': 'واقعی',
     'w.stem': 'صدا',
     'w.filmpje': 'ویدیو، فلم کوتاه',
     'w.ophangen': 'تیلفون را قطع کردن',
-    'w.nummer': 'شماره (تیلفون)',
+    'w.nummer': 'نمبر (تیلفون)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.haast': 'عجله',
     's.aifake.1': 'این واقعی است یا جعلی؟',
     's.aifake.2': 'تیلفون را قطع می‌کنم و خودم دوباره زنگ می‌زنم.',
     's.aifake.3': 'پول نمی‌فرستم.',
-    'c.aifake.q': 'سلام، این شمارهٔ نو من است. زود کمی پول فرستاده می‌توانید؟',
-    'c.aifake.a': 'اول به شمارهٔ کهنهٔ تان زنگ می‌زنم.',
+    'c.aifake.q': 'سلام، این نمبر نو من است. زود کمی پول فرستاده می‌توانید؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.aifake.a': 'اول به نمبر کهنهٔ تان زنگ می‌زنم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.aiplan': 'وقتی یک اپ تصمیم می‌گیرد',
     'w.planning': 'پلان کاری، تقسیم اوقات',
     'w.mens': 'انسان، آدم',
@@ -1271,7 +1271,7 @@ const t: CultureTranslation = {
     's.body.2': "حالم خوب نیست.",
     's.body.3': "روی بازویم افتادم.",
     'c.body.q': "کجای تان درد می‌کند؟",
-    'c.body.a': "کمرم. یک جعبهٔ سنگین را بلند کردم.",
+    'c.body.a': "کمرم. یک قطی سنگین را بلند کردم.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.jobends': "وقتی کار شما تمام می‌شود",
     'w.eindafrekening': "تصفیه‌حساب آخر (آخرین پرداخت وقتی کار تمام می‌شود)",
     'w.opzeggen': "فسخ کردن (قرارداد)، لغو کردن",

@@ -39,7 +39,7 @@ const t: CultureTranslation = {
     'w.kl.hoed': 'o chapéu',
     'w.kl.goed': 'bom, bem',
     's.pbgk.1': 'Deita o lixo no caixote.',
-    's.pbgk.2': 'Está frio no corredor.',
+    's.pbgk.2': 'Está frio no pavilhão.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.pbgk.3': 'Estás a fazer bem!',
     'c.pbgk.q': 'Como estás?',
     'c.pbgk.a': 'Bem, mas tenho frio.',

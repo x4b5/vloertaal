@@ -24,7 +24,7 @@ const t: CultureTranslation = {
     'c.arrive.a.why': "Soru neden gelindiğini soruyor. Bu cevap yeni olduğunu ve bugün başladığını söylüyor.",
     'c.understand.a.why': "Anlaşılmadı mı? Tekrar söylenmesini istemek normaldir.",
     'c.translate.a.why': "Not henüz anlaşılmadı, bu yüzden önce çevrilir.",
-    'c.understood.a.why': "Görevi tekrar etmek, talimatın anlaşıldığını kontrol eder.",
+    'c.understood.a.why': "Görevi tekrar söylemek, sıranın doğru anlaşıldığını kontrol eder.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.keeplearning.a.why': "Hollandaca konuşmayı istemek sorun değil: pratik yardımcı olur.",
     'c.gear.a.why': "Soru baretle ilgili: evet, takılı.",
     'c.danger.a.why': "Kazada önce 112 aranır.",
@@ -40,7 +40,7 @@ const t: CultureTranslation = {
     'c.cv.a.why': "Referans, işi anlatabilecek eski bir patrondur.",
     'c.interview.a.why': "İş görüşmesinde iş deneyimi önemlidir.",
     'c.findwork.a.why': "Soru ne tür iş olduğunu soruyor. Bu cevap onu söylüyor.",
-    'c.contract.a.why': "\"Evet\" artı saat sorusu açık ve isteklidir.",
+    'c.contract.a.why': "\"Evet\" deyip saati sormak açık bir cevaptır ve istekli olduğunu gösterir.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.agency.a.why': "Soru saatlerle ilgili: evet, ne zaman ve nasıl olduğunu da söylüyor.",
     'c.bsn.a.why': "İşveren pasaport gibi bir kimlik görmek isteyebilir.",
     'c.housing.a.why': "Maaştan kesilen para yazılı olarak kabul edilmelidir.",
@@ -61,7 +61,7 @@ const t: CultureTranslation = {
     'c.illness.a.why': "Tıbbi ayrıntılar patron için değil, işyeri hekimi içindir.",
     'c.warning.a.why': "İşveren pasaportun kopyasını alabilir, pasaportu tutamaz.",
     'c.gethelp.a.why': "Neyin yanlış olduğunu açıkça söylemek yardım etmelerini sağlar.",
-    'c.callin.a.why': "Ne zaman dönüş? Bu cevap bir gün veriyor.",
+    'c.callin.a.why': "Ne zaman döneceğin soruluyor: bu cevap bir gün veriyor.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.texting.a.why': "Uygulamada hızlı cevap planlamaya yardımcı olur.",
     'c.certs.a.why': "Dürüst bir \"hayır\" ve öğrenme isteği: iyi bir cevap.",
     'c.diploma.a.why': "Eğitime \"evet\" demek ve kimin ödediğini sormak normaldir.",
@@ -105,7 +105,7 @@ const t: CultureTranslation = {
     'c.workorder.a.why': "Bir kelime net değil: başlamadan önce sormak doğru cevap.", // nieuw, nalezen
     'c.handover.a.why': "Her şey bitti mi diye soruluyor: bu cevap neyin bitmediğini ve nedenini söylüyor.", // nieuw, nalezen
     'c.workshop.a.why': "Neden diye soruluyor: bu cevap nedeni veriyor, gözler korunmalı.", // nieuw, nalezen
-    'c.power.a.why': "Lambada iş: bu cevap önce elektriğin kesik olup olmadığını soruyor.", // nieuw, nalezen
+    'c.power.a.why': "Lambayla ilgili bir iş: bu cevap önce elektriğin kesik olup olmadığını soruyor.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.garage.a.why': "Lastik değiştirmesi isteniyor: bir evet ve lastiklerin nerede olduğuna dair bir soru.", // nieuw, nalezen
     'c.carjob.a.why': "Ek iş: müşteri önce onay vermeli, bu yüzden bu cevap şefe soruyor.", // nieuw, nalezen
     'c.placement.a.why': "Ne zaman diye soruluyor: bu cevap günü veriyor, önce de sözleşme geliyor.", // nieuw, nalezen

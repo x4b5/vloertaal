@@ -21,7 +21,7 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "À un au revoir, on répond par un au revoir.",
     'c.people.a.why': "La question demande un nom. Cette réponse en donne un.",
-    'c.arrive.a.why': "On te demande pourquoi tu viens : cette réponse dit que c’est une nouvelle personne, qui commence aujourd’hui.",
+    'c.arrive.a.why': "On te demande pourquoi tu viens : cette réponse dit que tu es une nouvelle recrue et que tu commences aujourd’hui.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.understand.a.why': "Pas compris ? C’est normal de demander à réentendre.",
     'c.translate.a.why': "Le petit mot n’est pas encore clair, alors on le traduit d’abord.",
     'c.understood.a.why': "Redire la tâche permet de vérifier que la consigne est claire.",
@@ -56,7 +56,7 @@ const t: CultureTranslation = {
     'c.gossip.a.why': "Ne pas participer aux ragots garde la confiance dans l’équipe.",
     'c.boundaries.a.why': "Une blague qui fait mal, on peut l’arrêter, clairement.",
     'c.health.a.why': "Une pause protège la santé, alors on la prend.",
-    'c.rights.a.why': "On ne signe jamais un licenciement tout de suite. D’abord un conseil.",
+    'c.rights.a.why': "On ne signe jamais un licenciement tout de suite. D’abord, on demande conseil.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.leave.a.why': "Quand ? Cette réponse donne un mois et la durée.",
     'c.illness.a.why': "Les détails médicaux sont pour le médecin du travail, pas pour le patron.",
     'c.warning.a.why': "Un employeur peut copier un passeport, pas le garder.",
@@ -77,7 +77,7 @@ const t: CultureTranslation = {
     'c.site.a.why': "Sur un toit, la protection contre les chutes passe toujours en premier.",
     'c.line.a.why': "Ça va comment ? Cette réponse dit comment, et nomme le problème.",
     'c.quality.a.why': "Pourquoi mis de côté ? Cette réponse donne le défaut.",
-    'c.client.a.why': "Un client demande de l’aide : un oui poli, avec “u”.",
+    'c.client.a.why': "Un résident demande de l’aide : un oui poli, avec “u”.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.privacy.a.why': "Les médicaments, c’est pour le personnel formé : c’est l’infirmière qui les donne.",
     'c.kitchen.a.why': "Une allergie, c’est sérieux : le chef doit le savoir.",
     'c.service.a.why': "On demande l’addition : un oui court, et on y va.",
@@ -113,7 +113,7 @@ const t: CultureTranslation = {
     'c.council.a.why': "On parle du vote : un oui, et les deux choses à prendre.", // nieuw, nalezen
     'c.police.a.why': "La police demande la pièce d’identité : la montrer et demander ce qui se passe.", // nieuw, nalezen
     'c.login.a.why': "On demande si la connexion marche : cette réponse dit non, et pourquoi.", // nieuw, nalezen
-    'c.phish.a.why': "On demande pour le lien : un oui honnête, et un appel à l’informatique.", // nieuw, nalezen
+    'c.phish.a.why': "On pose une question sur le lien : un oui honnête, et un appel au service informatique.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.mychoice.a.why': "On demande les points forts : cette réponse en nomme un, avec un exemple.", // nieuw, nalezen
     'c.nextstep.a.why': "On demande le projet : cette réponse nomme la bbl et ce que ça veut dire.", // nieuw, nalezen
     'c.email.a.why': "On demande s’il est envoyé : pas encore, il est d’abord vérifié.", // nieuw, nalezen

@@ -325,7 +325,7 @@ const t: CultureTranslation = {
     's.diploma.1': 'Am o diplomă din țara mea.',
     's.diploma.2': 'Această instruire e obligatorie?',
     's.diploma.3': 'Vreau să avansez în munca mea.',
-    'c.diploma.q': 'Vrei să faci o instruire?',
+    'c.diploma.q': 'Vrei să urmezi o formare?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.diploma.a': 'Da, te rog! Cine o plătește?',
     'u.health': 'Sănătatea',
     'l.doctor': 'Doctor sau 112?',
@@ -938,7 +938,7 @@ const t: CultureTranslation = {
     'w.woord': 'cuvântul',
     's.keeplearning.1': 'Exersez zece minute în fiecare zi.',
     's.keeplearning.2': 'Ce înseamnă cuvântul ăsta?',
-    's.keeplearning.3': 'Vorbești olandeză cu mine?',
+    's.keeplearning.3': 'Vrei să vorbești olandeză cu mine?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.keeplearning.q': 'Să vorbesc engleză?',
     'c.keeplearning.a': 'Nu, olandeză, te rog. Vreau să exersez.',
     'c.translate': 'Aplicațiile de traducere: inteligente, dar verifică',
@@ -1107,11 +1107,11 @@ const t: CultureTranslation = {
     'w.typen': 'a tasta, a scrie la tastatură',
     'w.opslaan': 'a salva, a păstra',
     'w.inloggen': 'a intra în cont',
-    's.aiprivate.1': 'Nu împărtășesc numele clienților.',
+    's.aiprivate.1': 'Nu dau mai departe numele clienților.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.aiprivate.2': 'Am voie să folosesc AI pentru munca mea?',
     's.aiprivate.3': 'Parola mea este secretă.',
     'c.aiprivate.q': 'Pune asta în chatbot.',
-    'c.aiprivate.a': 'Mai bine nu, sunt nume de clienți în el.',
+    'c.aiprivate.a': 'Mai bine nu, conține nume de clienți.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.aifake': 'Fals sau adevărat?',
     'w.echt': 'adevărat, real',
     'w.stem': 'vocea',
@@ -1221,7 +1221,7 @@ const t: CultureTranslation = {
     'w.formulier': "formularul (o hârtie sau o pagină de completat)",
     's.details.1': "Puteți să-l spuneți pe litere?",
     's.details.2': "Vă dau noul meu număr de telefon.",
-    's.details.3': "Formularul ăsta e pentru Fisc (Belastingdienst).",
+    's.details.3': "Formularul ăsta e pentru Administrația fiscală (Belastingdienst).", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.details.q': "Care e numele tău de familie?",
     'c.details.a': "Haddad. Să-l spun pe litere?",
     'l.dates': "Zile și date",
@@ -1362,7 +1362,7 @@ const t: CultureTranslation = {
     'l.workshop': "Unelte în atelier", // nieuw, nalezen
     'w.gereedschap': "uneltele, sculele", // nieuw, nalezen
     'w.zagen': "a tăia cu fierăstrăul", // nieuw, nalezen
-    'w.slijpen': "a șlefui (a netezi sau a tăia metal cu o mașină)", // nieuw, nalezen
+    'w.slijpen': "a poliza, a șlefui (a netezi sau a tăia metal cu o mașină)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.vonk': "scânteia", // nieuw, nalezen
     'w.gehoorbescherming': "protecția auditivă (pentru urechi)", // nieuw, nalezen
     'w.lawaai': "zgomotul (mult sunet puternic)", // nieuw, nalezen
@@ -1433,7 +1433,7 @@ const t: CultureTranslation = {
     's.review.3': "Evaluarea mea e săptămâna viitoare.", // nieuw, nalezen
     'c.review.q': "Trebuie să lucrezi mai repede.", // nieuw, nalezen
     'c.review.a': "Bine. Puteți să-mi arătați cum se face mai repede?", // nieuw, nalezen
-    'u.society': "Să participi în Țările de Jos", // nieuw, nalezen
+    'u.society': "Să participi la viața din Olanda", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.council': "Primăria și votul", // nieuw, nalezen
     'w.stemmen': "a vota", // nieuw, nalezen
     'w.verkiezing': "alegerile", // nieuw, nalezen
@@ -1507,7 +1507,7 @@ const t: CultureTranslation = {
     's.nextstep.3': "Când e ziua porților deschise?", // nieuw, nalezen
     'c.nextstep.q': "Ce faci după Entree?", // nieuw, nalezen
     'c.nextstep.a': "Vreau să fac bbl. Atunci lucrez și învăț.", // nieuw, nalezen
-    'l.email': "Să scrii la lucru", // nieuw, nalezen
+    'l.email': "Cum le scrii celor de la muncă", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.mail': "e-mailul", // nieuw, nalezen
     'w.onderwerp': "subiectul (unui e-mail)", // nieuw, nalezen
     'w.beste': "dragă, stimate (la începutul unei scrisori sau al unui e-mail)", // nieuw, nalezen
@@ -1538,10 +1538,10 @@ const t: CultureTranslation = {
     'w.moe': "obosit", // nieuw, nalezen
     'w.drugs': "drogurile", // nieuw, nalezen
     'w.somber': "deprimat (trist de mult timp)", // nieuw, nalezen
-    's.healthy.1': { m: "Azi sunt foarte obosit.", f: "Azi sunt foarte obosită.", x: "Azi sunt foarte obosit / obosită." }, // nieuw, nalezen
+    's.healthy.1': { m: "Azi sunt foarte obosit.", f: "Azi sunt foarte obosită.", x: "Azi simt o oboseală foarte mare." }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.healthy.2': "Mereu mănânc mai întâi micul dejun.", // nieuw, nalezen
     's.healthy.3': "În pauză merg puțin pe jos.", // nieuw, nalezen
-    'c.healthy.q': { m: "Vrei o pastilă? Așa rămâi treaz.", f: "Vrei o pastilă? Așa rămâi trează.", x: "Vrei o pastilă? Așa rămâi treaz / trează." }, // nieuw, nalezen
+    'c.healthy.q': { m: "Vrei o pastilă? Așa rămâi treaz.", f: "Vrei o pastilă? Așa rămâi trează.", x: "Vrei o pastilă? Așa nu adormi." }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.healthy.a': "Nu, mulțumesc. Nu lucrez sub influență.", // nieuw, nalezen
     'c.workorder': "Mai întâi citește, apoi începe", // nieuw, nalezen
     'c.workorder.b': "Înainte să începi, citește fișa de lucru (werkbon) sau sarcina din aplicație. Verifică adresa, sarcina și numărul de lucruri. Ceva nu e clar? Întreabă înainte să începi, nu la jumătate. Apoi pregătește uneltele și materialele. Așa câștigi timp și faci mai puține greșeli. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen

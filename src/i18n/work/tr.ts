@@ -188,7 +188,7 @@ const t: CultureTranslation = {
     's.mistakes.1': 'Pardon, bir hata yaptım.',
     's.mistakes.2': 'Açıklayabilir misin?',
     's.mistakes.3': 'Övgün için teşekkürler!',
-    'c.mistakes.q': 'Aferin!',
+    'c.mistakes.q': 'Çok iyi iş çıkardın!', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.mistakes.a': 'Teşekkürler, bunu duymak güzel.',
     'l.respect': 'Herkese saygı',
     'w.respect': 'saygı',
@@ -263,7 +263,7 @@ const t: CultureTranslation = {
     's.warning.1': 'Pasaportum patronumda.',
     's.warning.2': 'Maaş bordrosu almıyorum.',
     's.warning.3': 'Bir borcu geri ödemem gerekiyor.',
-    'c.warning.q': 'Pasaportunu bana ver, o kadar.',
+    'c.warning.q': 'Pasaportunu bana ver.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.warning.a': 'Hayır, sadece bir kopyasını alabilirsiniz.',
     'l.gethelp': 'Yardım almak',
     'w.politie': 'polis',
@@ -339,7 +339,7 @@ const t: CultureTranslation = {
     's.doctor.2': 'Eczane nerede?',
     's.doctor.3': 'Acil.',
     'c.doctor.q': 'Nöbetçi aile hekimi, size nasıl yardım edebilirim?',
-    'c.doctor.a': 'Oğlumun ateşi çok yüksek.',
+    'c.doctor.a': 'Oğlumun ateşi yüksek.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.insurance': 'Sağlık sigortası',
     'w.premie': 'prim (aylık ödeme)',
     'w.eigenrisico': 'kendi payın (önce senin ödediğin masraflar)',
@@ -988,7 +988,7 @@ const t: CultureTranslation = {
     's.boundaries.2': "Bu sözü komik bulmuyorum.",
     's.boundaries.3': "Güven danışmanına bir şey bildirmek istiyorum.",
     'c.boundaries.q': "Bu kadar zorluk çıkarma, sadece bir şakaydı.",
-    'c.boundaries.a': "Benim için değil. Durmanı istiyorum.",
+    'c.boundaries.a': "Benim için şaka değildi. Durmanı istiyorum.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.gossip': "Dedikodu ve sosyal medya",
     'c.gossip.b': "Bir iş arkadaşının arkasından konuşmak (roddelen) ekipteki güvene zarar verir. Biriyle bir sorunun mu var? O kişiyle veya amirinle konuş. İnternette de işteki kurallar geçerlidir: izin almadan iş arkadaşların, müşteriler veya şirket hakkında fotoğraf, video veya mesaj paylaşma. Patronun ne paylaştığını görebilir ve bu yıllarca internette kalabilir. Birçok ekibin iş için bir grup sohbeti (groepsapp) vardır: orada sadece işten konuş ve ekran görüntülerini başkalarıyla paylaşma. Bir iş arkadaşının özel şeylerini paylaşmak veya internette biriyle alay etmek de zorbalıktır.",
     'c.gossip.p': "Bunun internette olmasını istemiyorum.",
@@ -1279,7 +1279,7 @@ const t: CultureTranslation = {
     'w.sleutel': "anahtar",
     'w.verhuizen': "taşınmak (başka bir eve)",
     'w.busje': "minibüs",
-    's.jobends.1': "Tatil paramı ve izin günlerimi ödenmiş olarak alıyor muyum?",
+    's.jobends.1': "Tatil param ve izin günlerimin parası bana ödenecek mi?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.jobends.2': "Juridisch Loket’ten tavsiye alıyorum.",
     's.jobends.3': "Yeni sağlık sigortamı kendim ayarlıyorum.",
     'c.jobends.q': "İşin cuma günü bitiyor. O zaman evden de çıkman gerekiyor.",
@@ -1335,7 +1335,7 @@ const t: CultureTranslation = {
     // Entree in the Taal track (30 October 2026): nieuw, nalezen.
     'u.finish': "İşini bitirmek", // nieuw, nalezen
     'l.workorder': "İş emri", // nieuw, nalezen
-    'w.werkbon': "iş emri (görevinin yazdığı kâğıt ya da uygulama)", // nieuw, nalezen
+    'w.werkbon': "iş emri (görevinin yazılı olduğu kâğıt ya da uygulama)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.lezen': "okumak", // nieuw, nalezen
     'w.aantal': "sayı, adet (kaç tane)", // nieuw, nalezen
     'w.materiaal': "malzeme (iş için gereken şeyler)", // nieuw, nalezen
@@ -1399,7 +1399,7 @@ const t: CultureTranslation = {
     'l.carjob': "Karar müşterinin", // nieuw, nalezen
     'w.proefrit': "test sürüşü", // nieuw, nalezen
     'w.rijbewijs': "ehliyet", // nieuw, nalezen
-    'w.akkoord': "onaylı, tamam (bir şeye evet diyorsun)", // nieuw, nalezen
+    'w.akkoord': "kabul, tamam (bir şeye evet diyorsun)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.kosten': "masraflar (ödenmesi gereken para)", // nieuw, nalezen
     'w.repareren': "tamir etmek", // nieuw, nalezen
     'w.onderdeel': "parça (araba ya da makine parçası)", // nieuw, nalezen
@@ -1439,7 +1439,7 @@ const t: CultureTranslation = {
     'w.verkiezing': "seçim", // nieuw, nalezen
     'w.gemeenteraad': "belediye meclisi (şehrin hakkında karar verir)", // nieuw, nalezen
     'w.parlement': "parlamento (yasaları yapar)", // nieuw, nalezen
-    'w.stempas': "oy pusulası kartı (oy vermek için gereken kart)", // nieuw, nalezen
+    'w.stempas': "oy kartı (oy vermek için gereken kart)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.burgemeester': "belediye başkanı", // nieuw, nalezen
     's.council.1': "Oy verebilir miyim?", // nieuw, nalezen
     's.council.2': "Oy kartım postayla geldi.", // nieuw, nalezen
@@ -1492,9 +1492,9 @@ const t: CultureTranslation = {
     'w.meeloopdag': "gözlem günü (birinin yanında bir gün işe gittiğin gün)", // nieuw, nalezen
     's.mychoice.1': "Ellerimle iyi çalışabilirim.", // nieuw, nalezen
     's.mychoice.2': "İnsanlarla çalışmayı severim.", // nieuw, nalezen
-    's.mychoice.3': "İşi görmek için bir gün yanınızda durabilir miyim?", // nieuw, nalezen
+    's.mychoice.3': "İşi görmek için bir gün yanınızda olabilir miyim?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.mychoice.q': "Neyde iyisin?", // nieuw, nalezen
-    'c.mychoice.a': "İnsanlara iyi bakabilirim. Evde annemle ilgileniyorum.", // nieuw, nalezen
+    'c.mychoice.a': "İnsanlara iyi bakabilirim. Evde anneme bakıyorum.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.nextstep': "Entree’den sonra", // nieuw, nalezen
     'w.niveau2': "seviye 2 (mbo’nun bir sonraki seviyesi)", // nieuw, nalezen
     'w.startkwalificatie': "temel yeterlilik (mbo seviye 2 ya da daha yüksek diploma)", // nieuw, nalezen
@@ -1507,7 +1507,7 @@ const t: CultureTranslation = {
     's.nextstep.3': "Açık gün ne zaman?", // nieuw, nalezen
     'c.nextstep.q': "Entree’den sonra ne yapacaksın?", // nieuw, nalezen
     'c.nextstep.a': "bbl yapmak istiyorum. Böylece hem çalışırım hem öğrenirim.", // nieuw, nalezen
-    'l.email': "İşe yazmak", // nieuw, nalezen
+    'l.email': "İş yerine yazmak", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.mail': "e-posta", // nieuw, nalezen
     'w.onderwerp': "konu (e-postanın)", // nieuw, nalezen
     'w.beste': "sevgili, sayın (mektubun ya da e-postanın başında)", // nieuw, nalezen

@@ -490,7 +490,7 @@ const lang: HelpLanguageSource = {
     'w.veiligheidsschoenen': 'os sapatos de segurança',
     'w.hesje': 'o colete refletor',
     'w.bril': 'os óculos de proteção',
-    'w.dragen': 'usar, ter vestido',
+    'w.dragen': 'usar (roupa ou equipamento)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.gear.1': 'Usa sempre o teu capacete.',
     's.gear.2': 'Onde estão as luvas?',
     's.gear.3': 'Estou com o meu colete refletor.',
@@ -549,7 +549,7 @@ const lang: HelpLanguageSource = {
     'w.morgen': 'amanhã',
     's.shift.1': 'O meu turno começa às sete horas.',
     's.shift.2': 'Quando é a pausa?',
-    's.shift.3': { m: 'Desculpa, estou atrasado.', f: 'Desculpa, estou atrasada.', x: 'Desculpa, estou atrasado / atrasada.' },
+    's.shift.3': { m: 'Desculpa, estou atrasado.', f: 'Desculpa, estou atrasada.', x: 'Desculpa o atraso.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.sick': 'Avisar que estás doente',
     'w.ziek': 'doente',
     'w.bellen': 'ligar (por telefone)',
@@ -594,7 +594,7 @@ const lang: HelpLanguageSource = {
     'w.uitleg': 'a explicação',
     's.notyet.1': 'Isto ainda não aprendi.',
     's.notyet.2': 'Ainda ninguém me explicou isto.',
-    's.notyet.3': { m: 'Já posso fazer isto sozinho?', f: 'Já posso fazer isto sozinha?', x: 'Já posso fazer isto sozinho / sozinha?' },
+    's.notyet.3': { m: 'Já posso fazer isto sozinho?', f: 'Já posso fazer isto sozinha?', x: 'Já posso fazer isto por minha conta?' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.notyet.q': 'Experimenta, é fácil.',
     'c.notyet.a': 'Podes mostrar-me primeiro como se faz?',
     'c.things.q': 'Para onde vai a caixa?',

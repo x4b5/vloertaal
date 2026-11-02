@@ -39,7 +39,7 @@ const t: CultureTranslation = {
     'w.kl.hoed': 'der Hut',
     'w.kl.goed': 'gut',
     's.pbgk.1': 'Wirf den Müll in den Behälter.',
-    's.pbgk.2': 'Im Flur ist es kalt.',
+    's.pbgk.2': 'In der Halle ist es kalt.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.pbgk.3': 'Du machst das gut!',
     'c.pbgk.q': 'Wie geht es dir?',
     'c.pbgk.a': 'Gut, aber mir ist kalt.',

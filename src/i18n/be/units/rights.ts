@@ -86,7 +86,7 @@ export const prs: Gloss = {
   'be.w.arbowet': "قانون مصئونیت و صحت در کار (Welzijnswet)", // nieuw, nalezen
   'be.w.arbeidsinspectie': "تفتیش کار (مقررات جای کار را کنترول می‌کند)", // nieuw, nalezen
   'be.s.health.3': "آن را به تفتیش کار گزارش می‌دهم.", // nieuw, nalezen
-  'be.w.juridischloket': "justitiehuis (اولین مشورهٔ حقوقی رایگان)", // nieuw, nalezen
+  'be.w.juridischloket': "justitiehuis (اولین مشورهٔ حقوقی مفت)", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.c.health': 'تفریح و ساعت‌های کار',
   'be.c.health.b': end("قانون از مصئونیت و صحت شما در کار محافظت می‌کند (Welzijnswet). بیشتر از ۶ ساعت کار می‌کنید؟ پس حق تفریح دارید. اگر بخش کاری شما قاعدهٔ دیگری ندارد، تفریح دست‌کم ۱۵ دقیقه است. معمولاً حداکثر ۸ ساعت در روز و به‌طور اوسط ۳۸ ساعت در هفته کار می‌کنید. بخش کاری شما می‌تواند مقررات دیگری داشته باشد. کارفرما باید وسایل محافظتی، مانند بوت مصئونیت یا دستکش، را رایگان به شما بدهد. کار خطرناک؟ به Toezicht op het Welzijn op het Werk گزارش بدهید. ساعات بسیار طولانی یا معاش بسیار کم؟ به Toezicht op de Sociale Wetten گزارش بدهید. نام شما مخفی می‌ماند.", prsBase, 'advice'), // nieuw, nalezen
   'be.c.health.p': 'من هنوز تفریح نکرده‌ام.',

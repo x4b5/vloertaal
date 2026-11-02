@@ -160,7 +160,7 @@ export const tr: Gloss = {
     'be.l.bsn': "Ulusal sicil numaran ve belgelerin", // nieuw, nalezen
     'be.w.bsn': "ulusal sicil numarası (Belçika’daki numaran)", // nieuw, nalezen
     'be.w.identiteitsbewijs': "oturma kartı (Belçikalı olmayanlar için)", // nieuw, nalezen
-    'be.w.zorgverzekering': "sağlık sigortası kasası (mutualiteit)", // nieuw, nalezen
+    'be.w.zorgverzekering': "sağlık sigortası kurumu (mutualiteit)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.s.bsn.3': "itsme ile ya da eID’imle giriş yapıyorum.", // nieuw, nalezen
     'be.c.bsn.q': "Oturma kartını görebilir miyim?", // nieuw, nalezen
     'be.c.bsn.a': "Evet, buyurun. Ulusal sicil numaram üzerinde yazıyor.", // nieuw, nalezen
@@ -317,7 +317,7 @@ export const pt: Gloss = {
     'be.w.borg': "a caução da renda (huurwaarborg)", // nieuw, nalezen
     'be.w.inhouden': "descontar (do salário)", // nieuw, nalezen
     'be.s.housing.2': "Recebo a caução da renda de volta?", // nieuw, nalezen
-    'be.c.housing.q': "A renda descontamos do teu salário.", // nieuw, nalezen
+    'be.c.housing.q': "Descontamos a renda do teu salário.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.bsn': "O teu número do registo nacional: guarda-o bem", // nieuw, nalezen
     'be.c.bsn.b': "Vens viver para a Bélgica? Então inscreves-te na câmara municipal (gemeente) da tua morada. Recebes um cartão: um cartão de identidade (eID) para os belgas, um cartão de residência (verblijfskaart) para os outros. Nele está o teu número do registo nacional (rijksregisternummer). Ainda não estás no registo? Então recebes um bisnummer. Precisas desse número para trabalhar: o teu empregador pede-o. Nunca dês o cartão em si ao teu empregador. Vais mudar de casa? Avisa a câmara no prazo de 8 dias úteis. Nos sites do Estado entras com o itsme ou com o eID: nunca dês os teus códigos a ninguém. Inscreve-te depressa numa mutualidade de saúde (ziekenfonds). Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao justitiehuis (conselho jurídico grátis).", // nieuw, nalezen
     'be.c.bsn.p': "Porque precisa do meu número do registo nacional?", // nieuw, nalezen

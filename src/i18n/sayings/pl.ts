@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     'w.hart': 'miłe słowa, które dodają odwagi',
     'w.hart.lit': 'serce pod paskiem',
     's.plain.1': 'Powiedz, gdy nie jest bezpiecznie.',
-    's.plain.2': { m: 'Jestem naprawdę bardzo zmęczony.', f: 'Jestem naprawdę bardzo zmęczona.', x: 'Jestem naprawdę bardzo zmęczony / zmęczona.' }, // x: nieuw, nalezen
+    's.plain.2': { m: 'Jestem naprawdę bardzo zmęczony.', f: 'Jestem naprawdę bardzo zmęczona.', x: 'Naprawdę nie mam już sił.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.plain.3': 'Powiem od razu, o co chodzi.',
     'c.plain.q': 'Bardzo mocno pada!',
     'c.plain.a': 'To dziś pojadę autobusem.',

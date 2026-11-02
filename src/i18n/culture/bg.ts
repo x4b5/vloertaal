@@ -149,7 +149,7 @@ const t: CultureTranslation = {
     'l.agree': 'Уговорки и как да кажеш „не“',
     'w.afspraak': 'уговорката',
     'w.lukken': 'успявам, справям се',
-    'w.oneens': { m: 'не съм съгласен', f: 'не съм съгласна', x: 'не съм съгласен / съгласна' }, // x: nieuw, nalezen
+    'w.oneens': { m: 'не съм съгласен', f: 'не съм съгласна', x: 'не съм на същото мнение' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.zaterdag': 'събота',
     'w.overwerken': 'работя извънредно',
     'w.misschien': 'може би',

@@ -528,7 +528,7 @@ const lang: HelpLanguageSource = {
     'w.beter': 'بهتر',
 
     // Sentences
-    's.hello.1': 'سلام، من تازه‌کارم.',
+    's.hello.1': 'سلام، من تازه‌واردم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.hello.2': 'صبح بخیر، من علی هستم.',
     's.hello.3': 'ممنون، تا فردا!',
     's.people.1': 'اسم من سارا است.',
@@ -593,7 +593,7 @@ const lang: HelpLanguageSource = {
     's.notyet.2': 'هنوز توضیحی نگرفته‌ام.',
     's.notyet.3': 'اجازه دارم این کار را حالا تنهایی انجام بدهم؟',
     'c.notyet.q': 'امتحانش کن، آسان است.',
-    'c.notyet.a': 'می‌توانی اول نشانم بدهی چطور است؟',
+    'c.notyet.a': 'می‌توانی اول نشانم بدهی چطور انجامش بدهم؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.things.q': 'این جعبه کجا برود؟',
     'c.things.a': 'روی پالت.',
     'c.directions.q': 'چپ یا راست؟',

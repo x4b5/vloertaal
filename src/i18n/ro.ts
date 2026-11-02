@@ -518,7 +518,7 @@ const lang: HelpLanguageSource = {
     'w.pauze': 'pauza',
     'w.beginnen': 'a începe',
     'w.klaar': 'gata',
-    'w.telaat': 'prea târziu',
+    'w.telaat': 'întârziat (prea târziu)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.morgen': 'mâine',
     'w.ziek': 'bolnav',
     'w.bellen': 'a suna (la telefon)',
@@ -528,7 +528,7 @@ const lang: HelpLanguageSource = {
     'w.beter': 'mai bine',
 
     // Sentences
-    's.hello.1': { m: 'Salut, sunt nou.', f: 'Salut, sunt nouă.', x: 'Salut, sunt nou / nouă.' }, // x: nieuw, nalezen
+    's.hello.1': { m: 'Salut, sunt nou.', f: 'Salut, sunt nouă.', x: 'Salut, sunt o persoană nouă aici.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.hello.2': 'Bună dimineața, sunt Ali.',
     's.hello.3': 'Mulțumesc, pe mâine!',
     's.people.1': 'Numele meu este Sara.',
@@ -555,7 +555,7 @@ const lang: HelpLanguageSource = {
     's.shift.1': 'Tura mea începe la ora șapte.',
     's.shift.2': 'Când este pauza?',
     's.shift.3': 'Scuze, am întârziat.',
-    's.sick.1': { m: 'Sunt bolnav azi.', f: 'Sunt bolnavă azi.', x: 'Sunt bolnav / bolnavă azi.' }, // x: nieuw, nalezen
+    's.sick.1': { m: 'Sunt bolnav azi.', f: 'Sunt bolnavă azi.', x: 'Azi nu mă simt bine.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.sick.2': 'Mă doare spatele.',
     's.sick.3': 'Îl sun pe doctor.',
     'c.hello.q': 'Seară bună!',
@@ -573,7 +573,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'Nu găsesc vestiarul.',
     's.arrive.3': 'Cine e colegul meu îndrumător azi?',
     'c.arrive.q': 'Bună dimineața, în ce problemă veniți?',
-    'c.arrive.a': { m: 'Sunt nou. Încep azi.', f: 'Sunt nouă. Încep azi.', x: 'Sunt nou / nouă. Încep azi.' }, // x: nieuw, nalezen
+    'c.arrive.a': { m: 'Sunt nou. Încep azi.', f: 'Sunt nouă. Încep azi.', x: 'Sunt o persoană nouă aici. Încep azi.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.understand.q': 'Înțelegi?',
     'c.understand.a': 'Nu, încă o dată, te rog.',
     'c.gear.q': 'Ai casca?',

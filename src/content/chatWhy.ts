@@ -10,7 +10,7 @@ const reasons: Record<string, string> = {
   'c.arrive.a': 'Asked why you came: this reply says you are new and start today.',
   'c.understand.a': 'Not understood? Asking to hear it again is normal.',
   'c.translate.a': 'The note is not clear yet, so it gets translated first.',
-  'c.understood.a': 'Saying the task back checks that the order is clear.',
+  'c.understood.a': 'Saying the task back checks what you must do first.',
   'c.keeplearning.a': 'Asking for Dutch is fine: practice helps.',
   'c.gear.a': 'The question is about the helmet: yes, it is on.',
   'c.danger.a': 'In an accident, 112 is called first.',

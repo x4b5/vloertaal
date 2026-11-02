@@ -102,7 +102,7 @@ export const prs: Gloss = {
     "be.w.zorgtoeslag": "کمک بیشتر برای مصارف صحی (برای عاید کم)", // nieuw, nalezen
     "be.w.verzekeraar": "صندوق بیمهٔ صحی (ziekenfonds، mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "من عضو یک صندوق بیمهٔ صحی هستم.", // nieuw, nalezen
-    "be.s.insurance.2": "آیا این مصرف دوباره پرداخت می‌شود؟", // nieuw, nalezen
+    "be.s.insurance.2": "آیا پول این مصرف برایم پس داده می‌شود؟", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.s.insurance.3": "برای کمک بیشتر مصارف صحی درخواست می‌دهم.", // nieuw, nalezen
     "be.c.insurance.q": "عضو کدام صندوق بیمهٔ صحی هستید؟", // nieuw, nalezen
     "be.c.insurance.a": "نمی‌دانم. آن را می‌بینم.", // nieuw, nalezen
@@ -159,11 +159,11 @@ export const tr: Gloss = {
     "be.c.doctor.q": "Nöbetçi aile hekimi merkezi, size nasıl yardım edebilirim?", // nieuw, nalezen
     "be.w.premie": "üyelik aidatı (ziekenfonds’a ödediğin)", // nieuw, nalezen
     "be.w.eigenrisico": "katkı payı (masrafın kendin ödediğin kısmı)", // nieuw, nalezen
-    "be.w.zorgtoeslag": "yüksek geri ödeme (düşük gelirde sağlık masraflarına ek yardım)", // nieuw, nalezen
+    "be.w.zorgtoeslag": "artırılmış geri ödeme (düşük gelirde sağlık masraflarına ek yardım)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.w.verzekeraar": "sağlık sigortası kurumu (ziekenfonds, mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "Bir sağlık sigortası kurumuna üyeyim.", // nieuw, nalezen
     "be.s.insurance.2": "Bu geri ödeniyor mu?", // nieuw, nalezen
-    "be.s.insurance.3": "Yüksek geri ödeme için başvuruyorum.", // nieuw, nalezen
+    "be.s.insurance.3": "Artırılmış geri ödeme için başvuruyorum.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.insurance.q": "Hangi sağlık sigortası kurumundasın?", // nieuw, nalezen
     "be.c.insurance.a": "Bilmiyorum. Kontrol edeceğim.", // nieuw, nalezen
     "be.c.doctor": "Doktor mu, 112 mi?", // = c.doctor
@@ -220,11 +220,11 @@ export const ro: Gloss = {
     "be.w.premie": "cotizația (ce plătești la ziekenfonds)", // nieuw, nalezen
     "be.w.eigenrisico": "partea ta (partea din cost pe care o plătești tu)", // nieuw, nalezen
     "be.w.zorgtoeslag": "rambursarea mărită (ajutor în plus la costurile de sănătate, pentru venit mic)", // nieuw, nalezen
-    "be.w.verzekeraar": "casa de sănătate (ziekenfonds, mutualiteit)", // nieuw, nalezen
-    "be.s.insurance.1": "Sunt membru al unei case de sănătate.", // nieuw, nalezen
+    "be.w.verzekeraar": "casa de asigurări de sănătate (ziekenfonds, mutualiteit)", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    "be.s.insurance.1": "Sunt membru al unei case de asigurări de sănătate.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.s.insurance.2": "Se rambursează asta?", // nieuw, nalezen
     "be.s.insurance.3": "Cer rambursarea mărită.", // nieuw, nalezen
-    "be.c.insurance.q": "La ce casă de sănătate ești?", // nieuw, nalezen
+    "be.c.insurance.q": "La ce casă de asigurări de sănătate ești?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.insurance.a": "Nu știu. Verific.", // nieuw, nalezen
     "be.c.doctor": "Doctor sau 112?", // = c.doctor
     "be.c.doctor.b": "Alege un medic de familie (huisarts) aproape de casă. Ai nevoie de un medic seara, noaptea sau în weekend? Sună la 1733: te trimit la medicul de gardă (huisartsenwachtpost). Sună la 112 doar în caz de urgență: pericol de moarte, incendiu sau o infracțiune care are loc acum. Medicamentele le iei de la farmacie (apotheek).", // nieuw, nalezen
@@ -249,11 +249,11 @@ export const bg: Gloss = {
     "be.c.doctor.q": "Дежурен лекарски център, с какво мога да помогна?", // nieuw, nalezen
     "be.w.premie": "членският внос (това, което плащаш на ziekenfonds)", // nieuw, nalezen
     "be.w.eigenrisico": "собственото участие (частта от разходите, която плащаш ти)", // nieuw, nalezen // nagelezen AI ronde 3
-    "be.w.zorgtoeslag": "повишено обезщетение (допълнителна помощ за здравни разходи при нисък доход)", // nieuw, nalezen
+    "be.w.zorgtoeslag": "повишеното възстановяване (допълнителна помощ за здравни разходи при нисък доход)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.w.verzekeraar": "здравната каса (ziekenfonds, mutualiteit)", // nieuw, nalezen
     "be.s.insurance.1": "Член съм на здравна каса.", // nieuw, nalezen
     "be.s.insurance.2": "Това възстановява ли се?", // nieuw, nalezen
-    "be.s.insurance.3": "Кандидатствам за повишено обезщетение.", // nieuw, nalezen
+    "be.s.insurance.3": "Кандидатствам за повишено възстановяване на здравните разходи.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.c.insurance.q": "В коя здравна каса си?", // nieuw, nalezen
     "be.c.insurance.a": "Не знам. Ще проверя.", // nieuw, nalezen
     "be.c.doctor": "Лекар или 112?", // = c.doctor
@@ -311,7 +311,7 @@ export const pt: Gloss = {
     "be.w.eigenrisico": "a taxa moderadora (a parte do custo que pagas tu)", // nieuw, nalezen
     "be.w.zorgtoeslag": "a comparticipação aumentada (ajuda extra nos custos de saúde, para rendimentos baixos)", // nieuw, nalezen
     "be.w.verzekeraar": "a mutualidade de saúde (ziekenfonds, mutualiteit)", // nieuw, nalezen
-    "be.s.insurance.1": "Sou sócio de uma mutualidade de saúde.", // nieuw, nalezen
+    "be.s.insurance.1": "Sou membro de uma mutualidade de saúde.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.s.insurance.2": "Isto é reembolsado?", // nieuw, nalezen
     "be.s.insurance.3": "Peço a comparticipação aumentada.", // nieuw, nalezen
     "be.c.insurance.q": "Em que mutualidade de saúde estás?", // nieuw, nalezen

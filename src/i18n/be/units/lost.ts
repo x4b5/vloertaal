@@ -393,7 +393,7 @@ export const fr: Gloss = {
   'be.s.ww.1': "Je m’inscris au VDAB.", // nieuw, nalezen
   'be.c.ww.a': "Je demande mon C4 et je vais au syndicat.", // nieuw, nalezen
   'be.s.jobends.2': "Je demande conseil au justitiehuis.", // nieuw, nalezen
-  'be.s.jobends.3': "Je demande à ma mutualité si mon assurance continue.", // nieuw, nalezen
+  'be.s.jobends.3': "Je demande à ma mutuelle si mon assurance continue.", // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.s.newjob.2': 'Je garde mes fiches de paie.',
   'be.c.ww': "Allocations de chômage", // nieuw, nalezen
   'be.c.ww.b': end("Tu as perdu ton travail ? Ton employeur te donne un C4, au plus tard ton dernier jour de travail. Inscris-toi tout de suite comme demandeur d’emploi au VDAB. Ensuite, demande tes allocations par un syndicat (ABVV, ACV ou ACLVB), ou par la HVW (CAPAC) si tu n’es pas membre. Tu ne fais pas la demande à la RVA elle-même : c’est la RVA qui décide. Tu dois d’abord avoir travaillé assez longtemps. Les allocations sont limitées dans le temps : la durée dépend de combien de temps tu as travaillé. Tu as démissionné toi-même, sans bonne raison ? Alors, en général, tu n’as pas d’allocations pendant un temps.", frBase, 'advice'), // nieuw, nalezen

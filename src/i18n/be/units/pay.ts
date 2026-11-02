@@ -109,7 +109,7 @@ export const prs: Gloss = {
 export const uk: Gloss = {
     'be.w.loonstrook': "розрахунковий лист (loonbrief)", // nieuw, nalezen
     'be.s.payslip.2': "Мій розрахунковий лист неправильний.", // nieuw, nalezen
-    'be.c.payslip.q': "Ти отримав / отримала розрахунковий лист?", // nieuw, nalezen
+    'be.c.payslip.q': "Тобі вже дали розрахунковий лист?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.w.toeslag': "премія, доплата (наприклад, за нічну роботу)", // nieuw, nalezen
     'be.w.minimumloon': "шкала мінімальної оплати (твоєї галузі)", // nieuw, nalezen
     'be.s.extra.1': "Чи отримую я премію за нічну роботу?", // nieuw, nalezen // nagelezen AI ronde 3
