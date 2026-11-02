@@ -37,9 +37,9 @@ const t: CultureTranslation = {
     'w.contract': 'ውዕል',
     'w.tekenen': 'ምፍራም',
     'w.tijdelijk': 'ግዝያዊ',
-    's.findwork.1': 'ነዚ ስራሕ ክሓትት እደሊ።',
+    's.findwork.1': 'ንስራሕ ክሓትት እደሊ።', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.findwork.2': 'እቲ ውዕል ግዝያዊ ድዩ ቀዋሚ?',
-    's.findwork.3': 'ቅዳሕ ናይቲ ውዕል ክረኽብ ይኽእል ዶ?',
+    's.findwork.3': 'ቅዳሕ ናይቲ ውዕል ክረኽብ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.findwork.q': { m: 'እንታይ ዓይነት ስራሕ ኢኻ ትደሊ?', f: 'እንታይ ዓይነት ስራሕ ኢኺ ትደልዪ?' },
     'c.findwork.a': 'ኣብ መኽዘን ስራሕ እደሊ ኣለኹ።',
     'l.contract': { m: 'ውዕልካ', f: 'ውዕልኪ', x: 'ውዕልኩም' }, // x: nieuw, nalezen
@@ -51,7 +51,7 @@ const t: CultureTranslation = {
     'w.cao': 'ሓባራዊ ስምምዕ ስራሕ',
     's.contract.1': 'ኣብ ሰሙን ክንደይ ሰዓት እሰርሕ?',
     's.contract.2': 'ግዜ ፈተነ ክንደይ እዩ ዝነውሕ?',
-    's.contract.3': 'ኣየናይ ሓባራዊ ስምምዕ ስራሕ እዩ ንዓይ?',
+    's.contract.3': 'ኣየናይ ሓባራዊ ስምምዕ ስራሕ እዩ ዝምልከተኒ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.contract.q': { m: 'ጽባሕ ናብ ስራሕ ክትመጽእ ትኽእል ዶ?', f: 'ጽባሕ ናብ ስራሕ ክትመጽኢ ትኽእሊ ዶ?', x: 'ጽባሕ ናብ ስራሕ ክትመጽኡ ትኽእሉ ዶ?' }, // x: nieuw, nalezen
     'c.contract.a': 'እወ፡ ሰዓት ክንደይ ኣብኡ ክኸውን ኣለኒ?',
     'l.agency': 'ብኤጀንሲ ስራሕ ምስራሕ',
@@ -126,7 +126,7 @@ const t: CultureTranslation = {
     'w.foto': 'ስእሊ',
     's.phone.1': 'ተሌፎነይ ኣብ ሳንዱቐይ ኣሎ።',
     's.phone.2': 'ተሌፎነይ ከጥፍኦ እየ።',
-    's.phone.3': 'ኣብዚ ስእሊ ክወስድ ይኽእል ዶ?',
+    's.phone.3': 'ኣብዚ ስእሊ ክወስድ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.phone.q': 'ኣብ ጥቓ ማሽን ተሌፎን የለን፡ ሕራይ?',
     'c.phone.a': 'ሕራይ፡ ኣብ ዕረፍቲ መልእኽቲ ክሰድድ እየ።',
     'l.smoking': 'ሽጋራ ምትካኽ',
@@ -174,7 +174,7 @@ const t: CultureTranslation = {
     'w.verjaardag': 'መዓልቲ ልደት',
     'w.gefeliciteerd': 'እንቋዕ ሓጎሰካ / እንቋዕ ሓጎሰኪ',
     's.smalltalk.1': 'ቀዳምን ሰንበትን ከመይ ነይሩ?',
-    's.smalltalk.2': 'ምሳኻትኩም ክቕመጥ ይኽእል ዶ?',
+    's.smalltalk.2': 'ምሳኻትኩም ክቕመጥ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.smalltalk.3': 'ሎሚ ኣየር ጽቡቕ እዩ።',
     'c.smalltalk.q': { m: 'ኣብ ቀዳምን ሰንበትን እንታይ ገበርካ?', f: 'ኣብ ቀዳምን ሰንበትን እንታይ ገበርኪ?', x: 'ኣብ ቀዳምን ሰንበትን እንታይ ገበርኩም?' }, // x: nieuw, nalezen
     'c.smalltalk.a': 'ምስ ኣዕሩኽተይ ኩዕሶ እግሪ ተጻዊተ።',
@@ -195,7 +195,7 @@ const t: CultureTranslation = {
     'w.gelijk': 'ማዕረ',
     'w.grens': 'ደረት',
     'w.neezeggen': 'ኣይፋል ምባል',
-    'w.pesten': 'ምጽቃጥ (ብተደጋጋሚ ምሽቓል)',
+    'w.pesten': 'ምጽቃጥ (ብተደጋጋሚ ምህሳይን ምንዓቕን)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.vertrouwenspersoon': 'ምስጢራዊ ኣማኻሪ (ዝእመን ሰብ)',
     's.respect.1': 'ኣብዚ ኩሉ ሰብ ማዕረ እዩ።',
     's.respect.2': 'እዚ ኣይቕበሎን እየ።',
@@ -219,7 +219,7 @@ const t: CultureTranslation = {
     'w.recht': 'መሰል',
     'w.discriminatie': 'ኣድልዎ',
     'w.vakbond': 'ማሕበር ሰራሕተኛታት',
-    'w.juridischloket': 'ቤት ጽሕፈት ነጻ ሕጋዊ ሓገዝ',
+    'w.juridischloket': 'ቤት ጽሕፈት ናጻ ሕጋዊ ሓገዝ', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.klacht': 'ጥርዓን',
     'w.ontslag': 'ካብ ስራሕ ምስጓግ',
     's.rights.1': 'ጥርዓን ከቕርብ እደሊ።',
@@ -233,10 +233,10 @@ const t: CultureTranslation = {
     'w.verlof': 'ፍቓድ (ዕረፍቲ)',
     'w.aanvragen': 'ምሕታት፡ ምጥላብ',
     'w.feestdag': 'ህዝባዊ በዓል',
-    'w.vrij': 'ነጻ፡ ዘይትሰርሓሉ',
+    'w.vrij': 'ናጻ፡ ዘይትሰርሓሉ', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.calamiteitenverlof': 'ናይ ህጹጽ ኩነታት ፍቓድ',
     's.leave.1': 'ፍቓድ ክሓትት እደሊ።',
-    's.leave.2': 'ኣብ ህዝባዊ በዓል ነጻ ድየ?',
+    's.leave.2': 'ኣብ ህዝባዊ በዓል ናጻ ድየ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.leave.3': 'ኣብ ገዛ ህጹጽ ኩነታት ኣለኒ።',
     'c.leave.q': { m: 'መዓስ ናብ ዕረፍቲ ክትከይድ ትደሊ?', f: 'መዓስ ናብ ዕረፍቲ ክትከዲ ትደልዪ?' },
     'c.leave.a': 'ኣብ ሓምለ፡ ሰለስተ ሰሙን።',
@@ -271,9 +271,9 @@ const t: CultureTranslation = {
     'w.melden': 'ምሕባር',
     'w.hulp': 'ሓገዝ',
     'w.gevaar': 'ሓደጋ',
-    'w.bang': { m: 'ፍርሒ ዘለዎ', f: 'ፍርሒ ዘለዋ', x: 'ፍርሒ ዘለዎ / ዘለዋ' },
+    'w.bang': { m: 'ፍርሒ ዘለዎ', f: 'ፍርሒ ዘለዋ', x: 'ፍርሒ ዘለዎም' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.gethelp.1': 'ገለ ነገር ክሕብር እደሊ።',
-    's.gethelp.2': 'ብዘይ ስመይ ክገብሮ ይኽእል ዶ?',
+    's.gethelp.2': 'ብዘይ ስመይ ክገብሮ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.gethelp.3': 'ንሓላፊይ እፈርሆ እየ።',
     'c.gethelp.q': { m: 'ብኸመይ ክሕግዘካ እኽእል?', f: 'ብኸመይ ክሕግዘኪ እኽእል?', x: 'ብኸመይ ክሕግዘኩም እኽእል?' }, // x: nieuw, nalezen
     'c.gethelp.a': 'ኣብ ስራሕ ብኽፉእ እተሓዝ ኣለኹ።',
@@ -406,7 +406,7 @@ const t: CultureTranslation = {
     'l.ww': 'ሓገዝ ስራሕ ኣልቦነት',
     'w.uitkering': 'ሓገዝ ገንዘብ (ካብ መንግስቲ)',
     'w.ww': 'ሓገዝ ስራሕ ኣልቦነት',
-    'w.werkloos': { m: 'ስራሕ ዘይብሉ', f: 'ስራሕ ዘይብላ', x: 'ስራሕ ዘይብሉ / ዘይብላ' },
+    'w.werkloos': { m: 'ስራሕ ዘይብሉ', f: 'ስራሕ ዘይብላ', x: 'ስራሕ ዘይብሎም' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.uwv': 'UWV (ቤት ጽሕፈት ስራሕን ሓገዝ ገንዘብን)',
     'w.ontslagnemen': { m: 'ባዕልኻ ስራሕ ምግዳፍ', f: 'ባዕልኺ ስራሕ ምግዳፍ', x: 'ባዕልኹም ስራሕ ምግዳፍ' }, // x: nieuw, nalezen
     'w.werkzoekende': 'ስራሕ ዝደሊ ሰብ',
@@ -420,11 +420,11 @@ const t: CultureTranslation = {
     'w.zoeken': 'ምድላይ',
     'w.bewaren': 'ምዕቃብ',
     'w.bijwerken': 'ምሕዳስ',
-    'w.gratis': 'ብነጻ (ብዘይ ክፍሊት)',
+    'w.gratis': 'ብናጻ (ብዘይ ክፍሊት)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.nooit': 'ፈጺሙ (ዋላ ሓንሳብ)',
     's.newjob.1': 'ሓድሽ ስራሕ እደሊ ኣለኹ።',
     's.newjob.2': 'ወረቓቕቲ ደሞዘይ እዕቅቦም።',
-    's.newjob.3': 'ስራሕ ምድላይ ብነጻ እዩ።',
+    's.newjob.3': 'ስራሕ ምድላይ ብናጻ እዩ።', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.newjob.q': { m: 'ስራሕ ምስ ዝህሉ ክንድውለልካ ንኽእል ዶ?', f: 'ስራሕ ምስ ዝህሉ ክንድውለልኪ ንኽእል ዶ?', x: 'ስራሕ ምስ ዝህሉ ክንድውለልኩም ንኽእል ዶ?' }, // x: nieuw, nalezen
     'c.newjob.a': 'እወ፡ በጃኹም። እንሆ ቁጽረይ።',
     'u.build': 'ኣብ ቦታ ህንጻ',
@@ -507,10 +507,10 @@ const t: CultureTranslation = {
     'w.keuken': 'ክሽነ',
     'w.snijden': 'ምቑራጽ',
     'w.pan': 'ድስቲ',
-    'w.koelcel': 'ቀዝቃዛ ክፍሊ (ዓቢ ፍሪጅ)',
+    'w.koelcel': 'ዝሑል ክፍሊ (ዓቢ ፍሪጅ)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.allergie': 'ኣለርጂ',
     'w.datum': 'ዕለት',
-    's.kitchen.1': { m: 'ነቲ ስጋ ኣብ ቀዝቃዛ ክፍሊ ኣቐምጦ።', f: 'ነቲ ስጋ ኣብ ቀዝቃዛ ክፍሊ ኣቐምጥዮ።' },
+    's.kitchen.1': { m: 'ነቲ ስጋ ኣብ ዝሑል ክፍሊ ኣቐምጦ።', f: 'ነቲ ስጋ ኣብ ዝሑል ክፍሊ ኣቐምጥዮ።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.kitchen.2': { m: 'ነቲ ሽጉርቲ ንኣሽቱ ጌርካ ቁረጾ።', f: 'ነቲ ሽጉርቲ ንኣሽቱ ጌርኪ ቁረጽዮ።' },
     's.kitchen.3': 'ኣብዚ ለውዝ ኣሎ ድዩ?',
     'c.kitchen.q': 'ሓደ ጋሻ ናይ ለውዝ ኣለርጂ ኣለዎ።',
@@ -523,7 +523,7 @@ const t: CultureTranslation = {
     'w.afruimen': 'ጣውላ ምእላይ',
     'w.fooi': 'ቲፕ (ካብ ጋሻ ተወሳኺ ገንዘብ)',
     's.service.1': 'እንታይ ክትሰትዩ ትደልዩ?',
-    's.service.2': 'ትእዛዝኩም ክወስድ ይኽእል ዶ?',
+    's.service.2': 'ትእዛዝኩም ክወስድ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.service.3': 'ነቲ ጣውላ ኣጽርዮ ኣለኹ።',
     'c.service.q': 'ሕሳብ ክንረኽብ ንኽእል ዶ?',
     'c.service.a': 'ብርግጽ፡ እመጽእ ኣለኹ።',
@@ -550,7 +550,7 @@ const t: CultureTranslation = {
     's.cleansafe.1': { m: 'ተጠንቀቕ፡ የንሸራትት!', f: 'ተጠንቀቒ፡ የንሸራትት!', x: 'ተጠንቀቑ፡ የንሸራትት!' },
     's.cleansafe.2': { m: 'ነቲ ምልክት ኣቐምጦ።', f: 'ነቲ ምልክት ኣቐምጥዮ።' },
     's.cleansafe.3': { m: 'መጽረዪ ኬሚካላት ፈጺምካ ኣይትሐውስ።', f: 'መጽረዪ ኬሚካላት ፈጺምኪ ኣይትሐውሲ።', x: 'መጽረዪ ኬሚካላት ፈጺምኩም ኣይትሐውሱ።' },
-    'c.cleansafe.q': 'ኣብዚ ክኸይድ ይኽእል ዶ?',
+    'c.cleansafe.q': 'ኣብዚ ክኸይድ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.cleansafe.a': 'ተጠንቀቕ፡ እቲ መሬት ገና የንሸራትት እዩ።',
     'c.cv': 'ሓጺር CV', // nieuw, nalezen
     'c.cv.b': { m: 'ኣብዚ CV ሓጺር እዩ፡ 1 ወይ 2 ገጽ። መራኸቢ ሓበሬታኻ፡ ተመኩሮ ስራሕ፡ ትምህርቲ፡ ቋንቋታትን ክእለታትን ጽሓፍ። ስእሊ ኣየድልን። ሃይማኖትካ፡ ዕድመኻ ወይ ኩነታት ሓዳርካ ክትጽሕፍ ኣየድልየካን። ብዛዕባ እትኽእሎ ሓቀኛ ኩን። ሆላንድኛኻ ክርእየልካ ሓደ ሰብ ሕተት።', f: 'ኣብዚ CV ሓጺር እዩ፡ 1 ወይ 2 ገጽ። መራኸቢ ሓበሬታኺ፡ ተመኩሮ ስራሕ፡ ትምህርቲ፡ ቋንቋታትን ክእለታትን ጽሓፊ። ስእሊ ኣየድልን። ሃይማኖትኪ፡ ዕድመኺ ወይ ኩነታት ሓዳርኪ ክትጽሕፊ ኣየድልየክን። ብዛዕባ እትኽእልዮ ሓቀኛ ኩኒ። ሆላንድኛኺ ክርእየልኪ ሓደ ሰብ ሕተቲ።' }, // nieuw, nalezen
@@ -913,7 +913,7 @@ const t: CultureTranslation = {
     'w.spreken': 'ምዝራብ',
     'w.vertaling': 'ትርጉም',
     's.translate.1': 'ብተሌፎነይ እተርጕሞ።',
-    's.translate.2': 'ቀልጢፈ ክተርጕሞ ይኽእል ዶ?',
+    's.translate.2': 'ቀልጢፈ ክተርጕሞ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.translate.3': 'በጃኹም፡ ሓንሳብ ናብ ተሌፎነይ ክትዛረቡ ትኽእሉ ዶ?',
     'c.translate.q': 'ኣብቲ ጽሑፍ እንታይ ይብል?',
     'c.translate.a': 'ሓንሳብ ተጸበ፡ ክተርጕሞ እየ።',
@@ -1027,8 +1027,8 @@ const t: CultureTranslation = {
     'w.contant': 'ብጥረ ገንዘብ (ካሽ)',
     's.checkout.1': 'ብካርድ ዶ ወይስ ብጥረ ገንዘብ ክትከፍሉ ትደልዩ?',
     's.checkout.2': 'እንሆ ምልሰትኩም።',
-    's.checkout.3': 'መንነት ወረቐትኩም ክርኢ ይኽእል ዶ?',
-    'c.checkout.q': 'ኣብዚ ብካርድ ክኸፍል ይኽእል ዶ?',
+    's.checkout.3': 'መንነት ወረቐትኩም ክርኢ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.checkout.q': 'ኣብዚ ብካርድ ክኸፍል እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.checkout.a': 'እወ፡ ብርግጽ፡ ይከኣል።',
     'u.numbers': 'ግዜ፡ ገንዘብን መለክዒታትን',
     'l.hours': 'ሰዓታትን ግዜን',
@@ -1095,7 +1095,7 @@ const t: CultureTranslation = {
     'w.meekijken': 'ምስ ካልእ ሰብ ብሓባር ምርኣይ፡ ብሓባር ምፍታሽ',
     'w.kloppen': 'ቅኑዕ ምዃን',
     'w.zeker': 'ርግጸኛ',
-    's.aihelp.1': 'ነዚ ደብዳበ ክትገልጾ ትኽእል ዶ?',
+    's.aihelp.1': 'ነዚ ደብዳቤ ክትገልጾ ትኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.aihelp.2': 'እዚ መልሲ ቅኑዕ ድዩ?',
     's.aihelp.3': 'ምሳይ ሓንሳብ ክትርእይዎ ትኽእሉ ዶ?',
     'c.aihelp.q': { m: 'ነዚ ባዕልኻ ዲኻ ጽሒፍካዮ?', f: 'ነዚ ባዕልኺ ዲኺ ጽሒፍክዮ?' },
@@ -1135,7 +1135,7 @@ const t: CultureTranslation = {
     's.aiplan.2': 'ምስ ሰብ ክዛረብ እደሊ።',
     's.aiplan.3': 'ስለምንታይ ኣብ መደብ ስራሐይ ውሑድ ሰዓታት ኣለዉኒ?',
     'c.aiplan.q': { m: 'እቲ ኣፕ መደብ ስራሕካ ኣዳልዩ።', f: 'እቲ ኣፕ መደብ ስራሕኪ ኣዳልዩ።', x: 'እቲ ኣፕ መደብ ስራሕኩም ኣዳልዩ።' }, // x: nieuw, nalezen
-    'c.aiplan.a': 'ብዛዕባኡ ምስ ሰብ ክዛረብ ይኽእል ዶ?',
+    'c.aiplan.a': 'ብዛዕባኡ ምስ ሰብ ክዛረብ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.aihelp': 'AI ይሕግዝ፡ ሰብ የረጋግጽ',
     'c.aihelp.b': { m: 'ኣፕታት AIን ቻትቦታትን፡ ከም ChatGPT፡ ክተርጉሙ፡ ደብዳበ ክገልጹ ወይ መልእኽቲ ክትጽሕፍ ክሕግዙኻ ይኽእሉ። እዚ ጠቓሚ እዩ። ግን AI ሓደ ሓደ ግዜ ይጋገ፡ ኮይኑ ግን ኣዝዩ ርግጸኛ ይመስል። ንኣገደስቲ ነገራት፡ ከም ውዕልካ፡ ደሞዝካ፡ መድሃኒት ወይ ድሕንነት፡ ኩሉ ግዜ ነቲ መልሲ ምስ ሰብ ኣረጋግጾ፡ ምስ ተቖጻጻሪኻ፡ ክፍሊ ሰብኣዊ ሃብቲ (HR) ወይ Juridisch Loket።', f: 'ኣፕታት AIን ቻትቦታትን፡ ከም ChatGPT፡ ክተርጉሙ፡ ደብዳበ ክገልጹ ወይ መልእኽቲ ክትጽሕፊ ክሕግዙኺ ይኽእሉ። እዚ ጠቓሚ እዩ። ግን AI ሓደ ሓደ ግዜ ይጋገ፡ ኮይኑ ግን ኣዝዩ ርግጸኛ ይመስል። ንኣገደስቲ ነገራት፡ ከም ውዕልኪ፡ ደሞዝኪ፡ መድሃኒት ወይ ድሕንነት፡ ኩሉ ግዜ ነቲ መልሲ ምስ ሰብ ኣረጋግጽዮ፡ ምስ ተቖጻጻሪኺ፡ ክፍሊ ሰብኣዊ ሃብቲ (HR) ወይ Juridisch Loket።' },
     'c.aihelp.p': 'እዚ ቅኑዕ ድዩ? ምሳይ ሓንሳብ ክትርእይዎ ትኽእሉ ዶ?',
@@ -1257,7 +1257,7 @@ const t: CultureTranslation = {
     'w.zorgverlof': 'ፍቓድ ክንክን (ንሕሙም ኣባል ስድራ ንምክንኻን ዝውሰድ ግዜ)', // nagelezen (2e lezing)
     's.kids.1': 'ቆልዓይ ሓሚሙ። ክወስዶ ኣለኒ።', // nagelezen (2e lezing)
     's.kids.2': 'ናይ ህጹጽ ኩነታት ፍቓድ ክወስድ ይፍቀደለይ ዶ?', // nagelezen (2e lezing)
-    's.kids.3': 'ኣስራሒየ ደሞዘይ ምኽፋል ይቕጽል ድዩ?', // nagelezen (2e lezing)
+    's.kids.3': 'ኣስራሒይ ደሞዘይ ምኽፋል ይቕጽል ድዩ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.kids.q': { m: 'ስለምንታይ ሕጂ ክትከይድ ኣለካ?', f: 'ስለምንታይ ሕጂ ክትከዲ ኣለኪ?' }, // nagelezen (2e lezing)
     'c.kids.a': 'ካብ መውዓሊ ህጻናት ደዊሎም። ወደይ ረስኒ ኣለዎ።', // nagelezen (2e lezing)
     'l.body': 'ኣካልን ቃንዛን', // nagelezen (2e lezing)
@@ -1281,7 +1281,7 @@ const t: CultureTranslation = {
     'w.busje': 'ሚኒባስ (ንእሽቶ ኣውቶቡስ)', // nagelezen (2e lezing)
     's.jobends.1': 'ተወሳኺ ክፍሊት ዕረፍተይን ዘይወሰድክዎም መዓልታት ዕረፍትን ይኽፈለኒ ድዩ?', // nagelezen (2e lezing)
     's.jobends.2': 'ኣብ Juridisch Loket ምኽሪ እሓትት።', // nagelezen (2e lezing)
-    's.jobends.3': 'ሓድሽ መድሕን ጥዕና ባዕለይ የዳሉ።', // nagelezen (2e lezing)
+    's.jobends.3': 'ሓድሽ መድሕን ጥዕና ባዕለይ ኣዳሉ።', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.jobends.q': { m: 'ስራሕካ ዓርቢ ይውዳእ። ሽዑ ነቲ ገዛ እውን ክትገድፎ ኣለካ።', f: 'ስራሕኪ ዓርቢ ይውዳእ። ሽዑ ነቲ ገዛ እውን ክትገድፍዮ ኣለኪ።' }, // nagelezen (2e lezing)
     'c.jobends.a': 'ግዜ ቅድመ-ምሕባር ናይ ውዕል ክራየይ ክንደይ እዩ?', // nagelezen (2e lezing)
     'c.details': { m: 'ሓበሬታኻ፡ ብቕኑዕ ሃቦ', f: 'ሓበሬታኺ፡ ብቕኑዕ ሃብዮ' }, // nagelezen (2e lezing)
@@ -1341,9 +1341,9 @@ const t: CultureTranslation = {
     'w.materiaal': "ኣቑሑ (ንስራሕ ዘድልየካ ነገራት)", // nieuw, nalezen
     'w.klaarleggen': "ምድላው (ዘድልየካ ነገራት ኣዳሊኻ ምቕማጥ)", // nieuw, nalezen
     'w.handtekening': "ፊርማ", // nieuw, nalezen
-    's.workorder.1': "ቅድም ነቲ ወረቐት ስራሕ የንብቦ።", // nieuw, nalezen
+    's.workorder.1': "ቅድም ነቲ ወረቐት ስራሕ ኣንብቦ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.workorder.2': "እዚ ብዝሒ ቅኑዕ ድዩ?", // nieuw, nalezen
-    's.workorder.3': "ነቲ ኣቑሑ የዳልዎ ኣለኹ።", // nieuw, nalezen
+    's.workorder.3': "ነቲ ኣቑሑ ኣዳልዎ ኣለኹ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.workorder.q': { m: "እንታይ ክትገብር ከም ዘለካ ትፈልጥ ዲኻ?", f: "እንታይ ክትገብሪ ከም ዘለኪ ትፈልጢ ዲኺ?", x: "እንታይ ክትገብሩ ከም ዘለኩም ትፈልጡ ዶ?" }, // nieuw, nalezen
     'c.workorder.a': "ዳርጋ። እዚ ቃል ኣብ ወረቐት ስራሕ እንታይ ማለት እዩ?", // nieuw, nalezen
     'l.handover': "ተወዲኡ ድዩ ወይስ ገና?", // nieuw, nalezen
@@ -1353,7 +1353,7 @@ const t: CultureTranslation = {
     'w.kapot': "ዝተበላሸወ፡ ዝተሰብረ", // nieuw, nalezen
     'w.opslot': "ዕጹው (ብመፍትሕ)", // nieuw, nalezen
     'w.bijzonderheid': "ማዕጾ", // nieuw, nalezen
-    's.handover.1': "ቦታ ስራሐይ የጽርዮ ኣለኹ።", // nieuw, nalezen
+    's.handover.1': "ቦታ ስራሐይ ኣጽርዮ ኣለኹ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.handover.2': "ስራሐይ ክትርእዩለይ ትኽእሉ ዶ?", // nieuw, nalezen
     's.handover.3': "ስራሐይ ከም ዝወዳእኩ ንተቖጻጻሪ እሕብሮ።", // nieuw, nalezen
     'c.handover.q': "ኩሉ ተወዲኡ ድዩ?", // nieuw, nalezen
@@ -1390,7 +1390,7 @@ const t: CultureTranslation = {
     'w.accu': "ባተሪ መኪና", // nieuw, nalezen
     'w.monteur': "መካኒክ", // nieuw, nalezen
     'w.hefbrug': "ሊፍት መኪና (ንመኪና ናብ ላዕሊ የልዕላ)", // nieuw, nalezen
-    'w.lek': "ዝተቐደ፡ ዘፍስስ (ኣየር ወይ ማይ ይወጽእ)", // nieuw, nalezen
+    'w.lek': "ዝተቐደደ፡ ዘፍስስ (ኣየር ወይ ማይ ይወጽእ)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.garage.1': "ጎማ ተቐዲዱ እዩ።", // nieuw, nalezen
     's.garage.2': "እቲ ሓድሽ ዘይቲ ኣበይ ኣሎ?", // nieuw, nalezen
     's.garage.3': "መኪና ኣብ ሊፍት ኣላ።", // nieuw, nalezen
@@ -1398,14 +1398,14 @@ const t: CultureTranslation = {
     'c.garage.a': "እወ። ናይ ክረምቲ ጎማታት ኣበይ ኣለዉ?", // nieuw, nalezen
     'l.carjob': "ዓሚል እዩ ዝውስን", // nieuw, nalezen
     'w.proefrit': "ፈተነ ምዝዋር", // nieuw, nalezen
-    'w.rijbewijs': "መንጃ ፍቓድ", // nieuw, nalezen
+    'w.rijbewijs': "ፍቓድ ምዝዋር መኪና (ፓተንተ)", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.akkoord': "ተሰማሚዑ፡ ሕራይ (እወ ትብል)", // nieuw, nalezen
     'w.kosten': "ወጻኢታት (ዝኽፈል ገንዘብ)", // nieuw, nalezen
     'w.repareren': "ምጽጋን", // nieuw, nalezen
     'w.onderdeel': "ኣካል (ናይ መኪና ወይ ማሽን)", // nieuw, nalezen
     's.carjob.1': "ዓሚል ብወጻኢታት ተሰማሚዑ ድዩ?", // nieuw, nalezen
     's.carjob.2': "እዚ ኣካል ተበላሽዩ እዩ።", // nieuw, nalezen
-    's.carjob.3': "ፈተነ ምዝዋር ክገብር ይኽእል ዶ?", // nieuw, nalezen
+    's.carjob.3': "ፈተነ ምዝዋር ክገብር እኽእል ዶ?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.carjob.q': { m: "ፍሬናት እውን ሕማቓት እዮም። ሕጂ ክትገብሮም ዲኻ?", f: "ፍሬናት እውን ሕማቓት እዮም። ሕጂ ክትገብርዮም ዲኺ?", x: "ፍሬናት እውን ሕማቓት እዮም። ሕጂ ክትገብርዎም ዶ?" }, // nieuw, nalezen // nagelezen AI 31 okt
     'c.carjob.a': "ቅድም ንሓላፊ እሓቶ። ዓሚል ክሰማማዕ ኣለዎ።", // nieuw, nalezen
     'u.stage': "ልምምድ ስራሕ", // nieuw, nalezen
@@ -1428,7 +1428,7 @@ const t: CultureTranslation = {
     'w.portfolio': "ፖርትፎልዮ (ስራሕካን መረጋገጺታትን ዘለዎ ፋይል)", // nieuw, nalezen
     'w.cijfer': "ነጥቢ", // nieuw, nalezen
     'w.verslag': "ጸብጻብ (ብዛዕባ ስራሕካ ዝጽሓፍ)", // nieuw, nalezen
-    's.review.1': "እንታይ ዝሓሸ ክገብር ይኽእል?", // nieuw, nalezen
+    's.review.1': "እንታይ ዝሓሸ ክገብር እኽእል?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.review.2': "ኣብነት ክትህቡኒ ትኽእሉ ዶ?", // nieuw, nalezen
     's.review.3': "ገምጋመይ ኣብ ዝመጽእ ሰሙን እዩ።", // nieuw, nalezen
     'c.review.q': { m: "ቀልጢፍካ ክትሰርሕ ኣለካ።", f: "ቀልጢፍኪ ክትሰርሒ ኣለኪ።", x: "ቀልጢፍኩም ክትሰርሑ ኣለኩም።" }, // nieuw, nalezen
@@ -1456,7 +1456,7 @@ const t: CultureTranslation = {
     's.police.1': "መቕጻዕቲ ገንዘብ ተቐቢለ።", // nieuw, nalezen
     's.police.2': "ተቓውሞ ከቕርብ እደሊ።", // nieuw, nalezen
     's.police.3': "ምስ ጠበቓ ክዛረብ እደሊ።", // nieuw, nalezen
-    'c.police.q': "መንነት ወረቐትኩም ክርእዮ ይኽእል ዶ?", // nieuw, nalezen
+    'c.police.q': "መንነት ወረቐትኩም ክርእዮ እኽእል ዶ?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.police.a': "እወ፡ እንሆ። እንታይ ኣጋጢሙ?", // nieuw, nalezen
     'u.online': "ኣብ ስራሕ ብኢንተርነት", // nieuw, nalezen
     'l.login': "ናብ ሕሳብ ምእታው", // nieuw, nalezen
@@ -1491,8 +1491,8 @@ const t: CultureTranslation = {
     'w.nauwkeurig': "ጥንቁቕን ልክዕን", // nieuw, nalezen
     'w.meeloopdag': "መዓልቲ ምስዓብ (ምስ ሓደ ሰብ ናብ ስራሕ እትኸደሉ መዓልቲ)", // nieuw, nalezen
     's.mychoice.1': "ብኣእዳወይ ጽቡቕ ክሰርሕ እኽእል እየ።", // nieuw, nalezen
-    's.mychoice.2': "ምስ ሰባት ምስራሕ ይፈቱ።", // nieuw, nalezen
-    's.mychoice.3': "ነቲ ስራሕ ንምርኣይ ሓደ መዓልቲ ምሳኹም ክውዕል ይኽእል ዶ?", // nieuw, nalezen
+    's.mychoice.2': "ምስ ሰባት ምስራሕ እፈቱ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.mychoice.3': "ነቲ ስራሕ ንምርኣይ ሓደ መዓልቲ ምሳኹም ክውዕል እኽእል ዶ?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.mychoice.q': { m: "ኣብ እንታይ ጽቡቕ ኢኻ?", f: "ኣብ እንታይ ጽቡቕ ኢኺ?", x: "ኣብ እንታይ ጽቡቓት ኢኹም?" }, // nieuw, nalezen
     'c.mychoice.a': "ንሰባት ጽቡቕ ክኣሊ እኽእል እየ። ኣብ ገዛ ንኣደይ እኣሊ።", // nieuw, nalezen
     'l.nextstep': "ድሕሪ Entree", // nieuw, nalezen
@@ -1515,9 +1515,9 @@ const t: CultureTranslation = {
     'w.nalezen': "ደጊምካ ምንባብ (ቅድሚ ምልኣኽ ምፍታሽ)", // nieuw, nalezen
     'w.versturen': "ምልኣኽ", // nieuw, nalezen
     's.email.1': "ኣብ ኣርእስቲ እንታይ ክጽሕፍ?", // nieuw, nalezen
-    's.email.2': "ኢመይለይ ሓንሳእ ደጊመ የንብቦ።", // nieuw, nalezen
+    's.email.2': "ኢመይለይ ሓንሳእ ደጊመ ኣንብቦ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     's.email.3': "ነቲ ኢመይል ጽባሕ እልእኮ።", // nieuw, nalezen
-    'c.email.q': { m: "ብዛዕባ ዕረፍቲ መዓልትኻ ኢመይል ሊኢኽካ ዲኻ?", f: "ብዛዕባ ዕረፍቲ መዓልትኺ ኢመይል ሊኢኽኪ ዲኺ?", x: "ብዛዕባ ዕረፍቲ መዓልትኹም ኢመይል ሊኢኽኩም ዶ?" }, // nieuw, nalezen
+    'c.email.q': { m: "ብዛዕባ መዓልቲ ዕረፍትኻ ኢመይል ሊኢኽካ ዲኻ?", f: "ብዛዕባ መዓልቲ ዕረፍትኺ ኢመይል ሊኢኽኪ ዲኺ?", x: "ብዛዕባ መዓልቲ ዕረፍትኹም ኢመይል ሊኢኽኩም ዶ?" }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.email.a': "ገና። ቅድም ደጊመ ከንብቦ እየ።", // nieuw, nalezen
     'l.budget': "ገንዘብካ ኣብ ነፍሲ ወከፍ ወርሒ", // nieuw, nalezen
     'w.vastelasten': "ቀወምቲ ወጻኢታት (ክራይ፡ መድሕን፡ ተሌፎን፡ ወርሓዊ)", // nieuw, nalezen

@@ -42,7 +42,7 @@ export const ti: Gloss = {
     'be.w.identiteitsbewijs': 'ወረቐት መንበሪ (ንዘይቤልጅዩማውያን)', // nieuw, nalezen // nagelezen AI ronde 3
     'be.w.zorgverzekering': "ፈንድ መድሕን ጥዕና (mutualiteit)", // nieuw, nalezen
     'be.s.bsn.3': 'ብitsme ወይ ብeID እኣቱ።', // nieuw, nalezen // nagelezen AI ronde 3
-    'be.c.bsn.q': 'ወረቐት መንበሪኹም ክርኢ ይኽእል ዶ?', // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.bsn.q': 'ወረቐት መንበሪኹም ክርኢ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.bsn.a': "እወ፡ እንሆ። ቁጽሪ ሃገራዊ መዝገበይ ኣብኡ ኣሎ።", // nieuw, nalezen
     'be.w.borg': "ውሕስነት ክራይ (huurwaarborg)", // nieuw, nalezen
     'be.w.inhouden': "ምቕናስ (ካብ ደሞዝ)", // nieuw, nalezen

@@ -36,7 +36,7 @@ export const ar: Gloss = {
 
 export const ti: Gloss = {
     "be.w.huisartsenpost": "ናይ ምሸት፡ ለይትን ቀዳመ-ሰንበትን ቤት ሕክምና ሓኪም ስድራ (huisartsenwachtpost)", // nieuw, nalezen
-    "be.c.doctor.q": "Huisartsenwachtpost፡ እንታይ ክሕግዘኩም ይኽእል?", // nieuw, nalezen
+    "be.c.doctor.q": "Huisartsenwachtpost፡ እንታይ ክሕግዘኩም እኽእል?", // nieuw, nalezen (AI-correctie 2 nov 2026)
     "be.w.premie": "ክፍሊት ኣባልነት (ንziekenfonds ትኸፍልዎ)", // nieuw, nalezen
     "be.w.eigenrisico": 'ናይ ባዕልኹም ክፋል (ካብቲ ወጻኢ ባዕልኹም እትኸፍልዎ)', // nieuw, nalezen // nagelezen AI ronde 3
     "be.w.zorgtoeslag": "ተወሳኺ ሓገዝ ንወጻኢ ጥዕና (ንትሑት ኣታዊ)", // nieuw, nalezen

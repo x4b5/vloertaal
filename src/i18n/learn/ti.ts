@@ -19,7 +19,7 @@ const t: CultureTranslation = {
     reviewComplete: "ድግግም ተወዲኡ!",
   },
   gloss: {
-    'c.hello.a.why': "ንሰናብት ብሰናብት ይምለስ።",
+    'c.hello.a.why': "ሰላምታ ምፍልላይ ብሰላምታ ምፍልላይ ይምለስ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.people.a.why': "ሕቶ ብዛዕባ ስም እዩ። እዚ መልሲ ስም ይህብ።",
     'c.arrive.a.why': "እቲ ሕቶ ንምንታይ ከም ዝመጸ እዩ። እዚ መልሲ ሓድሽ ምዃኑን ሎሚ ከም ዝጅምርን ይነግር።",
     'c.understand.a.why': "ዘይተረድአ ነገር? ክድገም ምሕታት ንቡር እዩ።",
@@ -29,7 +29,7 @@ const t: CultureTranslation = {
     'c.gear.a.why': "ሕቶ ብዛዕባ ሄልመት እዩ፡ እወ፡ ኣብ ርእሲ ኣሎ።",
     'c.danger.a.why': "ኣብ ሓደጋ፡ ቅድም ናብ 112 ይድወል።",
     'c.accident.a.why': "ሕቶ ብዛዕባ ዝኣጋጠመ እዩ። እዚ መልሲ እንታይ ከም ዘጋጠመን ከመይ ከም ዘሎን ይነግር።",
-    'c.notyet.a.why': "«ፈትን ጥራይ» ምስ ተባህለ፡ ቅድም ክርአ ምሕታት እቲ ውሑስ መልሲ እዩ።",
+    'c.notyet.a.why': "«ፈትን ጥራይ» ምስ ተባህለ፡ ቅድም ገይሩ ከርኢ ምሕታት እቲ ውሑስ መልሲ እዩ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.things.a.why': "ሕቶ «ናበይ» እዩ። እዚ መልሲ ቦታ ይጠቅስ።",
     'c.directions.a.why': "ጸጋም ወይስ የማን? እዚ መልሲ ሓደ መሪጹ ኣበይ ምዃኑ ይብል።",
     'c.shift.a.why': "ፈረቓ መዓስ ይጅምር? እዚ መልሲ መዓልትን ሰዓትን ይነግር።",
@@ -114,7 +114,7 @@ const t: CultureTranslation = {
     'c.police.a.why': "ፖሊስ መንነት ወረቐት ይሓትት: ምርኣይን እንታይ ከም ዘጋጠመ ምሕታትን።", // nieuw, nalezen
     'c.login.a.why': "ምእታው ይሰርሕ ዶ ተባሂሉ: እዚ መልሲ ኣይፋል ይብል፡ ስለምንታይ እውን።", // nieuw, nalezen
     'c.phish.a.why': "ብዛዕባ ሊንክ: ቅኑዕ እወ፡ ናብ ክፍሊ IT ምድዋል እውን።", // nieuw, nalezen
-    'c.mychoice.a.why': "ብዛዕባ ጥንካረ ተሓቲቱ: እዚ መልሲ ሓደ ብኣብነት ይጠቕስ።", // nieuw, nalezen
+    'c.mychoice.a.why': "ብዛዕባ ሓያል ጎድኒ ተሓቲቱ: እዚ መልሲ ሓደ ብኣብነት ይጠቕስ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.nextstep.a.why': "ብዛዕባ መደብ ተሓቲቱ: እዚ መልሲ bblን ትርጉሙን ይጠቕስ።", // nieuw, nalezen
     'c.email.a.why': "ተላኢኹ ዶ ተባሂሉ: ገና፡ ቅድም ይፍተሽ።", // nieuw, nalezen
     'c.budget.a.why': "«ጸኒሕካ ክፈል» ቀሪቡ: ትሑት ኣይፋል፡ ምስ ምኽንያት።", // nieuw, nalezen

@@ -139,7 +139,7 @@ const t: CultureTranslation = {
     'w.praten': 'ምዝራብ',
     'w.nietfijn': 'ዘየሐጉስ',
     'w.eerlijk': 'ፍትሓዊ፡ ቅኑዕ',
-    'w.boos': { m: 'ሕሩቕ', f: 'ሕርቕቲ', x: 'ሕሩቕ / ሕርቕቲ' },
+    'w.boos': { m: 'ሕሩቕ', f: 'ሕርቕቲ', x: 'ሕሩቓት' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'w.samen': 'ብሓባር',
     's.speakup.1': 'ገለ ነገር የሸግረኒ ኣሎ።',
     's.speakup.2': 'ንሓጺር ግዜ ክንዘራረብ ንኽእል ዶ?',
@@ -157,7 +157,7 @@ const t: CultureTranslation = {
     's.agree.2': 'ምሳኻ ኣይሰማማዕን እየ።',
     's.agree.3': 'ስምምዕ ስምምዕ እዩ።',
     'd.agree.q': { m: 'ቀዳም ተወሳኺ ሰዓት ክትሰርሕ ትኽእል ዶ?', f: 'ቀዳም ተወሳኺ ሰዓት ክትሰርሒ ትኽእሊ ዶ?', x: 'ቀዳም ተወሳኺ ሰዓት ክትሰርሑ ትኽእሉ ዶ?' }, // x: nieuw, nalezen
-    'd.agree.a': 'ኣይፋል፡ ኣይኽእልን እየ። ሰንበት ግን ይኽእል እየ።',
+    'd.agree.a': 'ኣይፋል፡ ኣይኽእልን እየ። ሰንበት ግን እኽእል እየ።', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.task': 'መምርሒታት ካብ ተቖጻጻሪ',
     'w.taak': 'ዕማም',
     'w.eerst': 'ቅድም',
@@ -167,7 +167,7 @@ const t: CultureTranslation = {
     'w.bijna': 'ዳርጋ',
     's.task.1': 'ቅድም እንታይ ክገብር ኣለኒ?',
     's.task.2': 'ነዚ ዕማም እዚ ወዲአዮ።',
-    's.task.3': 'ሓንሳብ ደጊም ከተርእዩኒ ትኽእሉ ዶ?',
+    's.task.3': 'ሓንሳብ ደጊምኩም ከተርእዩኒ ትኽእሉ ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'd.task.q': { m: 'ወዲእካ ዲኻ?', f: 'ወዲእኪ ዲኺ?', x: 'ወዲእኩም ዲኹም?' }, // x: nieuw, nalezen
     'd.task.a': 'ዳርጋ። ሓሙሽተ ደቒቕ ተሪፉ።',
   },
