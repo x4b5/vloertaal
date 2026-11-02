@@ -204,6 +204,9 @@ function defineStates(LANG) {
   const pickLang = async (p, name) => { await tapText(p, 'button', name); await settle(p); };
   add('flow:language', '/', toLangs, { list: true });
   add('flow:lang-list', '/', async (p) => { if (await p.$('.lang-guess')) { await tap(p, '.lang-guess .max3-card', 1); await settle(p); } }, { list: true, expect: '.onb-lang-list .lang-btn-nl' });
+  // "Is your language missing?" (since 2 November 2026): a field and Send, then thanks and back.
+  add('flow:missing-lang', '/', async (p) => { await tap(p, '.lang-btn-missing'); await settle(p); }, { expect: '.missing-input' });
+  add('flow:missing-lang-back', '/', async (p) => { await tap(p, '.lang-btn-missing'); await settle(p); await p.goBack(); await settle(p); }, { list: true, expect: '.onb-lang-list' });
   // The language picked: "Woman or man?" first for a help language with gender, then the password.
   const toGate = async (p) => { await pickLang(p, NATIVE[LANG] ?? 'Polski'); if (gendered) { await tap(p, '.gender-btn', 1); await settle(p); } };
   add('flow:gate', '/', toGate, { expect: '.pw-input' });

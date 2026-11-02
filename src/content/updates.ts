@@ -20,6 +20,7 @@ export const UPDATES: Update[] = [
     date: '2026-11-02',
     items: [
       'Bij de start kies je eerst de taal waarin je hulp krijgt. Spreek je al Nederlands? Kies dan "Ik spreek al Nederlands" (Werkregels): die staat altijd onderaan het scherm, onder een streep, terwijl je door de talen scrolt. Zijn er nog meer talen? Dan staat er een pijltje op de streep; tik erop en de lijst gaat verder. De aparte vraag "Wat wil je leren?" is weg bij de start; wisselen kan nog bij Instellingen › Taal en ik.',
+      'Staat je taal er niet bij? Tik onder de talen op "Is your language missing?" en typ je taal. Je mailapp opent met een korte mail aan hoi@vloertaal.nl. Er gaat pas iets naar ons als jij de mail verstuurt.',
       'De app staat nu altijd eerst in de lichte weergave, ook als je telefoon op donker staat. Liever donker? Kies het bij Instellingen.',
       'Een kleine tikfout bij typen: je ziet nu "Bijna goed!", met een golflijn onder de fout in je eigen antwoord. De goede spelling staat er één keer. In de herhaling blijft zo\'n woord in zijn vak.',
       'Gesprekje: is je antwoord goed, dan staat het niet nog eens in een kaart eronder. Bij een gesprekje andersom staat jouw antwoord als spreekballon in het gesprek.',
