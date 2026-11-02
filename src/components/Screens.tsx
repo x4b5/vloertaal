@@ -38,6 +38,7 @@ import {
   CallIcon,
   CrateIcon,
   CheckIcon,
+  ChevronDownIcon,
   ChevronIcon,
   LifebuoyIcon,
   EarIcon,
@@ -198,6 +199,18 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
     if (!q.hasAttribute('tabindex')) q.tabIndex = -1;
     q.focus({ preventScroll: true });
   }, [list]);
+  // The list scrolls above the fixed "Ik spreek al Nederlands": while there is more below,
+  // say so (the owner's request, 2 November 2026: make it clearer that the list scrolls).
+  const [more, setMore] = useState(false);
+  useEffect(() => {
+    if (!list) return;
+    const check = () => setMore(window.scrollY + window.innerHeight < document.documentElement.scrollHeight - 8);
+    check();
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check);
+    return () => { window.removeEventListener('scroll', check); window.removeEventListener('resize', check); };
+  }, [list]);
+  const scrollOn = () => window.scrollBy({ top: Math.round(window.innerHeight * 0.6), behavior: stillMotion() ? 'auto' : 'smooth' });
   // The guess page needs only its few strings (src/i18n/meta.ts): no pack to wait for.
   const gMeta = langMeta(guess);
   const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
@@ -211,7 +224,18 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
         </div>
         <h2 className="onboarding-title" lang="en">{ui('chooseLanguage').en}</h2>
         <LanguagePicker onPick={onDone} />
-        {rulesTrackOn() && <div className="onb-nl-dock"><NlCard onPick={() => onDone('nl')} /></div>}
+        {rulesTrackOn() && (
+          <div className={more ? 'onb-nl-dock has-more' : 'onb-nl-dock'}>
+            {/* More languages below: a round arrow on the line (it bobs twice on arrival), and
+                the cards fade out above it. Tapping it scrolls on; at the end it is gone. */}
+            {more && (
+              <button type="button" className="onb-more" onClick={scrollOn} aria-label="More languages" lang="en">
+                <ChevronDownIcon size={24} />
+              </button>
+            )}
+            <NlCard onPick={() => onDone('nl')} />
+          </div>
+        )}
       </div>
     );
   }
