@@ -84,7 +84,7 @@ export const mixLessonId = (unitId: string): string => (isTaalBeId(unitId) ? taa
 export const isMixLesson = (lesson: Pick<Lesson, 'id'>) => lesson.id.endsWith('.mix');
 
 /** Words with a picture first (more exercise kinds), then the rest; in course order. */
-const byPicture = (words: Word[]) => [...words.filter((w) => w.picture !== false), ...words.filter((w) => w.picture === false)];
+const byPicture = (words: Word[]) => [...words.filter((w) => w.picture === undefined), ...words.filter((w) => w.picture !== undefined)];
 
 /** `xs` turned `k` places on (the first `k` go to the end). */
 const turned = <T>(xs: readonly T[], k: number): T[] => (xs.length ? [...xs.slice(k % xs.length), ...xs.slice(0, k % xs.length)] : []);

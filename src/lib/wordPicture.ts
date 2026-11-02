@@ -1,11 +1,22 @@
 import type { Word } from '../content/types';
 
 /**
- * Which words are shown with a picture. Abstract words (`picture: false`: rights, rules, times,
- * feelings) have none: they are taught with the word, its sound and the gloss only.
- * Every other word has a drawing (src/pictures) or, until it is drawn, its emoji.
+ * Does the word's picture say which word it is (a picture choice, a match, the path)? Abstract
+ * words (`picture: false`: rights, rules, times, feelings) have none: they are taught with the
+ * word, its sound and the gloss only. Memory pictures (`picture: 'hook'`) don't either: they help
+ * to remember a hard word, but alone they could point to another word (introPicture).
+ * Every other word has a drawing (src/pictures).
  */
 export function hasPicture(word: Pick<Word, 'picture'>): boolean {
+  return word.picture === undefined;
+}
+
+/**
+ * Is a picture shown on the word's intro card? Every word with a picture, and the memory pictures
+ * (`picture: 'hook'`, docs/tekenstijl.md "Geheugenplaatjes"): there the gloss says what the word
+ * means, and the picture is something to hang it on.
+ */
+export function introPicture(word: Pick<Word, 'picture'>): boolean {
   return word.picture !== false;
 }
 

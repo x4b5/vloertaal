@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-02',
     items: [
+      'Moeilijke woorden zoals de huur, de borg, bruto en netto, de boete en het verlof hebben nu een geheugenplaatje: een eenvoudige tekening waar je het woord aan ophangt, naast de vertaling. Die tekening zie je als het woord nieuw is, niet in de oefeningen, zodat hij je niet op het verkeerde been zet.',
       'Bij de start kies je eerst de taal waarin je hulp krijgt. Spreek je al Nederlands? Kies dan "Ik spreek al Nederlands" (Werkregels): die staat altijd onderaan het scherm, onder een streep, terwijl je door de talen scrolt. Zijn er nog meer talen? Dan staat er een pijltje op de streep; tik erop en de lijst gaat verder. De aparte vraag "Wat wil je leren?" is weg bij de start; wisselen kan nog bij Instellingen › Taal en ik.',
       'Staat je taal er niet bij? Tik onder de talen op "Is your language missing?" en typ je taal. Je mailapp opent met een korte mail aan hoi@vloertaal.nl. Er gaat pas iets naar ons als jij de mail verstuurt.',
       'Hoort een vraag bij de pagina ervoor, zoals een tip, een gezegde of in Werkregels een verhaal of een regel? Dan staat er boven de vraag een pijl terug. Lees het nog eens, en tik op Verder: je bent weer bij de vraag. Dat telt niet mee voor je score.',

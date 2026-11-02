@@ -12,8 +12,13 @@ export interface Word {
    * without misleading. It is taught with the word, its sound and the gloss only: no picture in
    * the intro, the match cards or the path, and never in a "Which one is …?" picture choice.
    * The emoji stays for data compatibility but is not shown.
+   *
+   * `'hook'` for a hard (abstract) word with one plain, familiar scene to hang it on (de huur, de
+   * borg, bruto): a memory picture, shown on the word's intro card next to the gloss, which says
+   * what the word means. It does not identify the word on its own, so like an abstract word it is
+   * never in a picture choice, a match, the path or a lesson icon (src/lib/wordPicture.ts).
    */
-  picture?: false;
+  picture?: false | 'hook';
   /**
    * What the picture looks like, when the emoji can't tell (src/lib/wordPicture.ts lookKey): a
    * family and a variant, "kalender/maandag". Words with different variants may stand side by side

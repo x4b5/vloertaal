@@ -130,7 +130,7 @@ const coreUnits: Unit[] = [
           { id: 'w.gemeente', nl: 'de gemeente', en: 'the town hall, the municipality', emoji: '🏘️' },
           { id: 'w.inschrijven', nl: 'inschrijven', en: 'to register', emoji: '🖊️' },
           { id: 'w.adres', nl: 'het adres', en: 'the address', emoji: '📮' },
-          { id: 'w.zorgverzekering', nl: 'de zorgverzekering', en: 'the health insurance', emoji: '🏥', picture: false },
+          { id: 'w.zorgverzekering', nl: 'de zorgverzekering', en: 'the health insurance', emoji: '🏥', picture: 'hook' },
         ],
         sentences: [
           { id: 's.bsn.1', nl: 'Ik schrijf me in bij de gemeente.', en: 'I register at the town hall.' },
@@ -149,9 +149,9 @@ const coreUnits: Unit[] = [
         title: 'Housing',
         words: [
           { id: 'w.kamer', nl: 'de kamer', en: 'the room', emoji: '🛏️' },
-          { id: 'w.huur', nl: 'de huur', en: 'the rent', emoji: '🔑', picture: false },
+          { id: 'w.huur', nl: 'de huur', en: 'the rent', emoji: '🔑', picture: 'hook' },
           { id: 'w.huurcontract', nl: 'het huurcontract', en: 'the rental contract', emoji: '📑' },
-          { id: 'w.borg', nl: 'de borg', en: 'the deposit', emoji: '💰', picture: false },
+          { id: 'w.borg', nl: 'de borg', en: 'the deposit', emoji: '💰', picture: 'hook' },
           { id: 'w.huisbaas', nl: 'de huisbaas', en: 'the landlord', emoji: '🧑‍💼' },
           { id: 'w.inhouden', nl: 'inhouden', en: 'to take off (from your pay)', emoji: '✂️', picture: false },
         ],
@@ -181,10 +181,10 @@ const coreUnits: Unit[] = [
         title: 'Your payslip',
         words: [
           { id: 'w.loon', nl: 'het loon', en: 'the pay, the wage', emoji: '💶' },
-          { id: 'w.bruto', nl: 'bruto', en: 'gross (before tax)', emoji: '🧾', picture: false },
-          { id: 'w.netto', nl: 'netto', en: 'net (what you get)', emoji: '👛', picture: false },
+          { id: 'w.bruto', nl: 'bruto', en: 'gross (before tax)', emoji: '🧾', picture: 'hook' },
+          { id: 'w.netto', nl: 'netto', en: 'net (what you get)', emoji: '👛', picture: 'hook' },
           { id: 'w.loonstrook', nl: 'de loonstrook', en: 'the payslip', emoji: '📃' },
-          { id: 'w.belasting', nl: 'de belasting', en: 'the tax', emoji: '🏛️', picture: false },
+          { id: 'w.belasting', nl: 'de belasting', en: 'the tax', emoji: '🏛️', picture: 'hook' },
           { id: 'w.uurloon', nl: 'het uurloon', en: 'the pay per hour', emoji: '⏱️' },
         ],
         sentences: [
@@ -346,9 +346,9 @@ const coreUnits: Unit[] = [
         title: 'Days off',
         words: [
           { id: 'w.vakantiedagen', nl: 'de vakantiedagen', en: 'the days off (holiday)', emoji: '🏝️' },
-          { id: 'w.verlof', nl: 'het verlof', en: 'the leave', emoji: '🌴', picture: false },
+          { id: 'w.verlof', nl: 'het verlof', en: 'the leave', emoji: '🌴', picture: 'hook' },
           { id: 'w.aanvragen', nl: 'aanvragen', en: 'to ask for, to apply for', emoji: '📝', picture: false },
-          { id: 'w.feestdag', nl: 'de feestdag', en: 'the public holiday', emoji: '🎉', picture: false },
+          { id: 'w.feestdag', nl: 'de feestdag', en: 'the public holiday', emoji: '🎉', picture: 'hook' },
           { id: 'w.vrij', nl: 'vrij', en: 'free, not working', emoji: '🆓', picture: false },
           { id: 'w.calamiteitenverlof', nl: 'het calamiteitenverlof', en: 'the emergency leave', emoji: '🚨', picture: false },
         ],
@@ -373,7 +373,7 @@ const coreUnits: Unit[] = [
           { id: 'w.bedrijfsarts', nl: 'de bedrijfsarts', en: 'the company doctor', emoji: '👩‍⚕️' },
           { id: 'w.ziekte', nl: 'de ziekte', en: 'the illness', emoji: '🦠' },
           { id: 'w.doorbetalen', nl: 'doorbetalen', en: 'to keep paying', emoji: '💶', picture: false },
-          { id: 'w.wachtdag', nl: 'de wachtdag', en: 'the waiting day (no pay)', emoji: '⏸️', picture: false },
+          { id: 'w.wachtdag', nl: 'de wachtdag', en: 'the waiting day (no pay)', emoji: '⏸️', picture: 'hook' },
         ],
         sentences: [
           { id: 's.illness.1', nl: 'Ik meld me ziek.', en: 'I am calling in sick.' },
@@ -619,7 +619,7 @@ const coreTips: CultureTip[] = [
 
 /** A word row; a fifth `false` marks an abstract word (no picture, see Word.picture). */
 /** The fifth field: `false` for an abstract word, or the picture's own look (Word.look). */
-type WordRow = [id: string, nl: string, en: string, emoji: string, picture?: false | { look: string }];
+type WordRow = [id: string, nl: string, en: string, emoji: string, picture?: false | 'hook' | { look: string }];
 type Pair = [nl: string, en: string];
 /** A sentence; `alt`: other word orders that are also right when building it (Sentence.alt). */
 type SentenceRow = [nl: string, en: string, alt?: string[]];
@@ -627,7 +627,7 @@ type SentenceRow = [nl: string, en: string, alt?: string[]];
 const lesson = (slug: string, title: string, words: WordRow[], sentences: SentenceRow[], [q, a]: [Pair, Pair]): Lesson => ({
   id: `l.${slug}`,
   title,
-  words: words.map(([id, nl, en, emoji, picture]) => ({ id: `w.${id}`, nl, en, emoji, ...(picture === false ? { picture } : picture ?? {}) })),
+  words: words.map(([id, nl, en, emoji, picture]) => ({ id: `w.${id}`, nl, en, emoji, ...(picture === false || picture === 'hook' ? { picture } : picture ?? {}) })),
   sentences: sentences.map(([nl, en, alt], i) => ({ id: `s.${slug}.${i + 1}`, nl, en, ...(alt ? { alt } : {}) })),
   dialogues: [chat(line(`c.${slug}.q`, ...q), line(`c.${slug}.a`, ...a))],
 });
@@ -1701,7 +1701,7 @@ const sectorUnits: Unit[] = [
         ['snijden', 'snijden', 'to cut', '🔪'],
         ['pan', 'de pan', 'the pan', '🥘'],
         ['koelcel', 'de koelcel', 'the cold store (walk-in fridge)', '🧊'],
-        ['allergie', 'de allergie', 'the allergy', '🥜', false],
+        ['allergie', 'de allergie', 'the allergy', '🥜', 'hook'],
         ['datum', 'de datum', 'the date', '📆'],
       ],
       [
@@ -2756,7 +2756,7 @@ const societyUnit = unit('society', 'Taking part in the Netherlands', 'Meedoen i
     'Police and your rights',
     [
       ['agent', 'de agent', 'the police officer', '👮'],
-      ['boete', 'de boete', 'the fine (money you must pay as a punishment)', '💸', false],
+      ['boete', 'de boete', 'the fine (money you must pay as a punishment)', '💸', 'hook'],
       ['bezwaar', 'het bezwaar', 'the objection (you say in writing that you do not agree)', '✋', false],
       ['rechter', 'de rechter', 'the judge', '👩‍⚖️'],
       ['advocaat', 'de advocaat', 'the lawyer', '💼', false],

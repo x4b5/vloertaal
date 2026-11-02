@@ -16,7 +16,7 @@ import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
-import { hasPicture } from '../lib/wordPicture';
+import { hasPicture, introPicture } from '../lib/wordPicture';
 import { PlayName, SpeakButton } from './SpeakButton';
 import { letterSteps } from '../lib/letters';
 import { createRng } from '../lib/random';
@@ -202,8 +202,8 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
           heading tells the learner what to do: listen to the word. */}
       <Prompt text={ui('tapToHear', lang)} />
       {/* Abstract words get no picture (it would mislead): a calm word card, word + sound + gloss. */}
-      <div className={`card intro-card ${hasPicture(word) ? '' : 'intro-word-only'}`}>
-        {hasPicture(word) && <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />}
+      <div className={`card intro-card ${introPicture(word) ? '' : 'intro-word-only'}`}>
+        {introPicture(word) && <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />}
         <div className={`intro-nl ${wordSize(word.nl)}`}>
           <span lang="nl">{breakable(word.nl)}</span>
           {/* One speaker: normal speed, then slowly on the next tap (SpeakButton). */}
