@@ -165,16 +165,19 @@ function LangMark({ code }: { code: UiCode | null }) {
 }
 
 /**
- * First run, before anything else: the language you get help in. The phone's own languages give
- * a guess ("Polski?" [Yes] [Other language]); "Other language", or no guess, shows the list of
- * all ten, each name in its own script (the list is the one place with more than three choices).
- * The password, the gender question and the sector follow on their own pages (App.tsx).
+ * First run, before anything else: the language you get help in (the owner's choice, 1 November
+ * 2026: without it the rest is not clear). The phone's own languages give a guess ("Polski?"
+ * [Yes] [Other language]); "Other language", or no guess, shows the list of all languages, each
+ * name in its own script (the list is the one place with more than three choices). Then, in that
+ * language, "Wat wil je leren?" (RoutePage): "Nederlands leren" goes on with the help language,
+ * "Ik spreek al Nederlands" is the work-rules track. The gender question, the sector and the
+ * country follow on their own pages (App.tsx).
  */
-export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = false, previous, startAtRoute = true }: {
+export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = false, previous, startAtRoute = false }: {
   onDone: (code: UiCode | null) => void;
-  /** Back from the next page: the choice made before ('nl' = Werkregels: back on the route page). */
+  /** Back from the next page: the choice made before ('nl' = Werkregels): back on the route page. */
   previous?: UiCode | null;
-  /** Begin on the route page (default). Screenshots of the language pages leave it out. */
+  /** Open on the route page with the guess as the language (screenshots of the route page). */
   startAtRoute?: boolean;
   /** The guessed help language (from navigator.languages); null = no guess, the list right away. */
   guess?: LangCode | null;
@@ -182,55 +185,67 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   startWithList?: boolean;
 }) {
   const [list, setList] = useState(startWithList || !guess);
-  // First the route (since 31 October 2026): "Nederlands leren" leads on to the help language,
-  // "Ik spreek al Nederlands" is the work-rules track at once. Without the track: no route page.
+  // With the work-rules track on, the language is followed by the route page; without it, the
+  // language is the whole first page.
   const routes = rulesTrackOn();
-  const [route, setRoute] = useState<'taal' | null>(() => (!routes || !startAtRoute || (startWithList && previous !== 'nl') ? 'taal' : null));
+  /** The help language picked, waiting for the route page's answer (undefined: not picked yet). */
+  const [chosen, setChosen] = useState<UiCode | null | undefined>(() => {
+    if (!routes) return undefined;
+    if (previous !== undefined) return previous === 'nl' ? guess ?? null : previous;
+    return startAtRoute ? guess ?? null : undefined;
+  });
+  // The route page has its own history entry: the phone's Back returns to the language page.
+  const onRoute = chosen !== undefined;
   useEffect(() => {
-    if (route !== 'taal' || !routes) return;
+    if (!onRoute) return;
     if (!(history.state as { route?: number } | null)?.route) pushSubStep({ route: 1 });
-    const onPop = () => { if (!(history.state as { route?: number } | null)?.route) { setRoute(null); setList(startWithList || !guess); } };
+    const onPop = () => { if (!(history.state as { route?: number } | null)?.route) setChosen(undefined); };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
-  }, [route, routes, startWithList, guess]);
-  /** Back to the route page (the first page), from the language page. */
-  const toRoute = () => ((history.state as { route?: number } | null)?.route ? history.back() : setRoute(null));
+  }, [onRoute]);
+  /** Back to the language page, from the route page. */
+  const toLanguage = () => ((history.state as { route?: number } | null)?.route ? history.back() : setChosen(undefined));
   // Nothing is chosen yet: the English stays next to every line.
   useEffect(() => { applyEnglish(null); }, []);
   // The list after the guess has its own history entry: the phone's Back returns to the guess.
   const hasGuess = Boolean(guess);
   useEffect(() => {
-    if (!list || !hasGuess) return;
+    if (!list || !hasGuess || onRoute) return;
     if (!(history.state as { langList?: number } | null)?.langList) pushSubStep({ langList: 1 });
     const onPop = () => { if (!(history.state as { langList?: number } | null)?.langList) setList(false); };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
-  }, [list, hasGuess]);
+  }, [list, hasGuess, onRoute]);
   // "Other language": the tapped card is gone; the list's question gets the focus (a screen reader
   // reads it), as on a new page.
   useEffect(() => {
-    if (!list) return;
+    if (!list || onRoute) return;
     const now = document.activeElement;
     if (now && now !== document.body) return;
     const q = document.querySelector<HTMLElement>('#root .onboarding-title');
     if (!q) return;
     if (!q.hasAttribute('tabindex')) q.tabIndex = -1;
     q.focus({ preventScroll: true });
-  }, [list]);
-  /** The first tap: the next page shows (silent since 28 October 2026: no "Hallo, ik ben Bram."). */
+  }, [list, onRoute]);
+  /** A language picked: on to the route page in that language (or done, without the track). */
   const pick = (code: UiCode | null) => {
-    onDone(code);
+    if (routes) setChosen(code);
+    else onDone(code);
   };
   // The guess page needs only its few strings (src/i18n/meta.ts): no pack to wait for.
   const gMeta = langMeta(guess);
   const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
-  if (route === null) return <RoutePage lang={g} onLearn={() => setRoute('taal')} onRules={() => pick('nl')} />;
+  if (onRoute) {
+    // The route page in the language just picked (its few strings are in meta.ts too); English
+    // for "English only".
+    const cMeta = chosen ? langMeta(chosen as LangCode) : undefined;
+    const c = cMeta ? getHelpLanguage(cMeta.code) ?? metaLanguage(cMeta) : undefined;
+    return <RoutePage lang={c} onBack={toLanguage} onLearn={() => onDone(chosen ?? null)} onRules={() => onDone('nl')} />;
+  }
   if (list || !g) {
     return (
       <div className="screen onboarding max3-page onb-lang-list">
-        {g ? (
-          <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />
-        ) : routes && <ChromeHead onBack={toRoute} />}
+        {g && <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />}
         <div className="hero">
           <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
           <p className="tagline" lang="en">{ui('appTagline').en}</p>
@@ -243,9 +258,6 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   const q = g.dir === 'rtl' ? '\u061f' : '?';
   return (
     <div className="screen onboarding max3-page lang-guess">
-      {/* The back arrow on its own row above the logo (not over it), at the start of the guessed
-          language: the right in Arabic, Persian and Dari. */}
-      {routes && <ChromeHead lang={g} onBack={toRoute} />}
       <div className="hero">
         <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
         {/* What the app is, in the guessed language (large), the English small under it. */}
@@ -287,13 +299,14 @@ function PrivacyLink({ lang }: { lang?: HelpLanguage }) {
  * Before this, "Nederlands · Werkregels" was the last row of the language list, which confused:
  * it is not a help language.
  */
-export function RoutePage({ lang, onLearn, onRules }: { lang?: HelpLanguage; onLearn: () => void; onRules: () => void }) {
+export function RoutePage({ lang, onLearn, onRules, onBack }: { lang?: HelpLanguage; onLearn: () => void; onRules: () => void; /** Back to the language page (the page before). */ onBack?: () => void }) {
   useEffect(() => { applyEnglish(null); }, []);
   // With the phone's language guessed, the page is in that language and Dutch only: no English
   // third line (calmer cards). Without a guess, the English stays (the only line besides Dutch).
   const solo = Boolean(lang && lang.code !== 'nl');
   return (
     <div className={`screen onboarding max3-page route-page ${solo ? 'route-solo' : ''}`} dir={lang?.dir}>
+      {onBack && <ChromeHead lang={lang} onBack={onBack} />}
       <div className="hero">
         <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
       </div>

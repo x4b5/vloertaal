@@ -20,13 +20,12 @@ beforeEach(() => {
 });
 
 describe('the guess page ("Polski?")', () => {
-  it('has the back arrow in its own head, at the start of the guessed language (right to left in Arabic)', () => {
+  it('is the first page: no back arrow (the language comes first, the owner\'s choice of 1 November 2026)', () => {
     setRulesTrack(true);
     try {
-      const ar = html(createElement(Onboarding, { onDone: noop, guess: 'ar', startAtRoute: false }));
-      expect(ar).toMatch(/<div class="screen onboarding max3-page lang-guess"><div class="screen-head chrome-head" dir="rtl"><button[^>]*class="icon-btn chrome-back"/);
-      const plHtml = html(createElement(Onboarding, { onDone: noop, guess: 'pl', startAtRoute: false }));
-      expect(plHtml).toMatch(/<div class="screen-head chrome-head"><button[^>]*class="icon-btn chrome-back"/);
+      const ar = html(createElement(Onboarding, { onDone: noop, guess: 'ar' }));
+      expect(ar).toContain('lang-guess');
+      expect(ar).not.toContain('chrome-back');
     } finally {
       setRulesTrack(null);
     }
