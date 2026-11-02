@@ -9,7 +9,9 @@ const lang: HelpLanguageSource = {
   ui: {
     theme: 'መልክዕ',
     themeAuto: 'ብባዕሉ',
-    themeLight: 'ብሩህ',
+    themeSand: 'ሑጻ', // nieuw, nalezen
+    themeHarbour: 'ወደብ', // nieuw, nalezen
+    themeWorkwear: 'ናይ ስራሕ ጃኬት', // nieuw, nalezen
     themeDark: 'ጸልማት',
     voice: 'ድምጺ ሆላንድኛ',
     voiceAuto: 'ብባዕሉ',

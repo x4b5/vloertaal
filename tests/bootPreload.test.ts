@@ -47,5 +47,9 @@ describe('index.html asks for a returning learner’s files at once (vite.config
     expect(look({ theme: 'auto', themeVersion: 3, textSize: 'normal' })).toEqual({ metas: '' });
     // A save from before the choice: light, as the app reads it.
     expect(look({})).toEqual({ theme: 'light', metas: '#f3ede3 #f3ede3' });
+    // The colours from Settings > Weergave; an unknown one is the default (Zand).
+    expect(look({ theme: 'haven', themeVersion: 3 })).toEqual({ theme: 'haven', metas: '#e8f0f0 #e8f0f0' });
+    expect(look({ theme: 'werkjas', themeVersion: 3 })).toEqual({ theme: 'werkjas', metas: '#eceff3 #eceff3' });
+    expect(look({ theme: 'constructor', themeVersion: 3 })).toEqual({ theme: 'light', metas: '#f3ede3 #f3ede3' });
   });
 });

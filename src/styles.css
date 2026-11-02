@@ -115,10 +115,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* Dark theme: the warehouse at night. Follows the device unless the learner picked light or
-   dark in Settings, which sets data-theme on <html>. Keep both blocks below identical. */
+/* Dark theme: the warehouse at night. Follows the device only while no colour is chosen (no
+   data-theme on <html>); a colour picked in Settings (light = Zand, haven, werkjas, dark) sets
+   data-theme. Keep both blocks below identical. */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
+  :root:not([data-theme]) {
     --ink: #edeae4;
     --ink-2: #b9b4ab;
     --ink-3: #adb2b6; /* was #9aa0a6: 3.7:1 on the yellow mark (.rb-marked) */
@@ -200,6 +201,53 @@
 }
 
 :root[data-theme='light'] {
+  color-scheme: light;
+}
+
+/* "Haven": petrol and sun yellow on a light sea-green floor (Settings > Weergave). Only the
+   tokens that differ from Zand; every text colour 4.5:1 or more, the answer edge 3:1. */
+:root[data-theme='haven'] {
+  --ink: #0f2e33;
+  --ink-2: #45626a;
+  --ink-3: #4a646b;
+  --concrete: #e8f0f0;
+  --concrete-2: #d3e2e4;
+  --paper: #ffffff;
+  --yellow: #ffe27a;
+  --yellow-hover: #ffe999;
+  --kraft: #9cc3c6;
+  --kraft-light: #d6ecec;
+  --kraft-dark: #0c5960;
+  --line: #d3e0e2;
+  --edge: #6d8a90;
+  --choice-edge: #6d8a90;
+  --tag-bg: #d6ecec;
+  --locked-shadow: #c3d4d6;
+  --solid: #0f4c55;
+  --gold-ink: #6b5300;
+  color-scheme: light;
+}
+
+/* "Werkjas": navy and a light signal orange on cool grey, the colours of workwear. */
+:root[data-theme='werkjas'] {
+  --ink: #14233a;
+  --ink-2: #44546a;
+  --ink-3: #45536a;
+  --concrete: #eceff3;
+  --concrete-2: #d7dee7;
+  --paper: #ffffff;
+  --yellow: #ffbf8f;
+  --yellow-hover: #ffcca5;
+  --kraft: #b8c4d2;
+  --kraft-light: #dfe6ee;
+  --kraft-dark: #1b3354;
+  --line: #d5dde6;
+  --edge: #73839a;
+  --choice-edge: #73839a;
+  --tag-bg: #dfe6ee;
+  --locked-shadow: #c5cfdb;
+  --solid: #1b3354;
+  --gold-ink: #a84300;
   color-scheme: light;
 }
 
@@ -1811,7 +1859,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
    "streak stopped" screen, "Herhaal vandaag" all day, the arrival on the path, the result's
    extras, and the cards that keep the habit and the progress (install, reminder, backup). */
 :root { --stamp-ink: #1d5fae; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) { --stamp-ink: #7db8ff; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) { --stamp-ink: #7db8ff; } }
 :root[data-theme='dark'] { --stamp-ink: #7db8ff; }
 
 /* Top bar: a flame, grey outline until today is done, then lit. */
@@ -2153,7 +2201,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
   opacity: 0; transition: opacity 0.15s;
 }
 .player-foot.foot-more::before { opacity: 1; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .player-foot::before { background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)); } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) .player-foot::before { background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)); } }
 :root[data-theme='dark'] .player-foot::before { background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0)); }
 .player-foot.foot-static { position: relative; }
 /* More of the exercise under the footer: besides the shadow, a small "more" chevron centred on
@@ -3286,6 +3334,13 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 }
 /* The colour of its tile (ink; dark ink on the yellow picked tile, also in dark mode). */
 .text-size-a { font-weight: 700; line-height: 1; color: inherit; }
+/* Settings > Weergave: each colour as a round swatch of its floor and its strong colour. Fixed
+   colours on purpose: a swatch shows that palette, whatever the current one is. */
+.theme-swatch { display: block; width: 40px; height: 40px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--edge); }
+.theme-swatch-light { background: linear-gradient(135deg, #f3ede3 50%, #2b2620 50%); }
+.theme-swatch-haven { background: linear-gradient(135deg, #e8f0f0 50%, #0f4c55 50%); }
+.theme-swatch-werkjas { background: linear-gradient(135deg, #eceff3 50%, #1b3354 50%); }
+.theme-swatch-dark { background: linear-gradient(135deg, #1b1916 50%, #ffc414 50%); }
 /* Fixed px, so the three A's keep their steps whatever the size now is. */
 .text-size-normal { font-size: 18px; }
 .text-size-large { font-size: 24px; }
@@ -4120,7 +4175,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
    on a dark page a hairline ring keeps the ink tile from melting into the background. */
 .logo-mark .ch-eyes { animation: none; }
 :root { --logo-ring: transparent; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) { --logo-ring: #3b4249; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) { --logo-ring: #3b4249; } }
 :root[data-theme='dark'] { --logo-ring: #3b4249; }
 .logo-mark { box-shadow: 0 0 0 1.5px var(--logo-ring); }
 .boot-label .logo-mark { box-shadow: none; }
@@ -4522,8 +4577,8 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* The right logo per theme; follows the Settings switch too (same pattern as the colour blocks above). */
 .about-maker-dark { display: none; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .about-maker-light { display: none; }
-  :root:not([data-theme='light']) .about-maker-dark { display: inline; }
+  :root:not([data-theme]) .about-maker-light { display: none; }
+  :root:not([data-theme]) .about-maker-dark { display: inline; }
 }
 :root[data-theme='dark'] .about-maker-light { display: none; }
 :root[data-theme='dark'] .about-maker-dark { display: inline; }

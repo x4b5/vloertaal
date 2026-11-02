@@ -28,9 +28,12 @@ function tokens(body: string): Record<string, string> {
   return out;
 }
 const light = tokens(block(':root {'));
-const darkMedia = tokens(block(":root:not([data-theme='light']) {"));
+const darkMedia = tokens(block(":root:not([data-theme]) {"));
 const darkAttr = tokens(block(":root[data-theme='dark'] {"));
 const dark = { ...light, ...darkAttr };
+// The colours from Settings > Weergave: Zand (light) with their own tokens on top.
+const haven = { ...light, ...tokens(block(":root[data-theme='haven'] {")) };
+const werkjas = { ...light, ...tokens(block(":root[data-theme='werkjas'] {")) };
 
 function value(t: Record<string, string>, name: string, seen = 0): string {
   const v = t[name];
@@ -67,7 +70,7 @@ describe('colour tokens', () => {
   it('the two dark blocks are the same', () => {
     expect(darkMedia).toEqual(darkAttr);
   });
-  for (const [name, t] of [['light', light], ['dark', dark]] as const) {
+  for (const [name, t] of [['light', light], ['haven', haven], ['werkjas', werkjas], ['dark', dark]] as const) {
     for (const [fg, bg, min] of PAIRS) {
       it(`${name}: --${fg} on --${bg} ≥ ${min}:1`, () => {
         expect(ratio(t, fg, bg)).toBeGreaterThanOrEqual(min);
