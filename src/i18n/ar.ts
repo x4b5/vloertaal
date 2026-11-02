@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: { m: 'أين تعمل؟', f: 'أين تعملين؟', x: 'مجال عملك' }, // x: nieuw, nalezen
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: { m: 'في أي بلد تعمل؟', f: 'في أي بلد تعملين؟', x: 'بلد العمل' }, // x: nieuw, nalezen
-    countryHint: { m: 'ستحصل على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.', f: 'ستحصلين على قواعد العمل في هذا البلد. يبقى هذا على هاتفك. لا نرسله إلى أي مكان.', x: 'اختيار بلد العمل يعطي قواعد العمل في هذا البلد. يبقى هذا على الهاتف. لا نرسله إلى أي مكان.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: { m: 'ستحصل على قواعد العمل في هذا البلد.', f: 'ستحصلين على قواعد العمل في هذا البلد.', x: 'اختيار بلد العمل يعطي قواعد العمل في هذا البلد.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'هولندا',
     countryBe: 'بلجيكا (فلاندرز)',
     tipsNote: 'هذه النصائح عن العمل في هولندا. معلومات عامة، وليست استشارة قانونية.',
@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: { m: 'أنا Bram، زميلكَ في العمل.', f: 'أنا Bram، زميلكِ في العمل.', x: 'أنا Bram، زميلك في العمل.' }, // x: nieuw, nalezen
     bramIntroHello: 'مرحبًا، أنا Bram.',
     showDutch: 'عرض بالهولندية',
+    showAnswers: 'عرض الإجابات', // nieuw, nalezen
     lastUpdated: 'آخر تحديث: {date}',
     /* G4 b3 */
     buildListen: { m: 'استمع وكوّن الجملة', f: 'استمعي وكوّني الجملة' },
@@ -380,6 +381,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'الدرس التالي أقصر قليلاً.', // nieuw, nalezen
     fasterSetting: 'التعلّم بسرعة أكبر', // nieuw, nalezen
     fasterSettingHint: 'تشغيل: شرح أقل في الدروس الجديدة، والهولندية بسرعة عادية. إيقاف: كما كان من قبل.', // nieuw, nalezen
+    tempoFasterHint: 'التعلّم بسرعة أكبر: شرح أقل في الدروس الجديدة، والهولندية بسرعة عادية.', // nieuw, nalezen
     samenTitle: 'التمرين معاً', // nieuw, nalezen
     samenRowHint: 'شخصان، هاتف واحد', // nieuw, nalezen
     samenIntro: { m: 'تدرّب مع زميل أو صديق أو معلّم. اقرآ بالتناوب.', f: 'تدرّبي مع زميل أو صديق أو معلّم. اقرآ بالتناوب.', x: 'التمرين مع زميل أو صديق أو معلّم. القراءة بالتناوب.' }, // nieuw, nalezen

@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Onde trabalhas?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Em que país trabalhas?',
-    countryHint: 'Recebes as regras de trabalho desse país. Isto fica no teu telemóvel. Não o enviamos para lado nenhum.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Recebes as regras de trabalho desse país.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Países Baixos',
     countryBe: 'Bélgica (Flandres)',
     tipsNote: 'Estas dicas são sobre o trabalho nos Países Baixos. Informação geral, não é aconselhamento jurídico.',
@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Sou o Bram, o teu colega.',
     bramIntroHello: 'Olá, sou o Bram.',
     showDutch: 'Mostrar em neerlandês',
+    showAnswers: 'Mostrar as respostas', // nieuw, nalezen
     lastUpdated: 'Última atualização: {date}',
     /* G4 b3 */
     buildListen: 'Ouve e faz a frase',
@@ -380,6 +381,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'A próxima lição é um pouco mais curta.', // nieuw, nalezen
     fasterSetting: 'Aprender mais rápido', // nieuw, nalezen
     fasterSettingHint: 'Ligado: menos explicação nas lições novas e o neerlandês a velocidade normal. Desligado: como antes.', // nieuw, nalezen
+    tempoFasterHint: 'Aprender mais rápido: menos explicação nas lições novas e o neerlandês a velocidade normal.', // nieuw, nalezen
     samenTitle: 'Praticar a dois', // nieuw, nalezen
     samenRowHint: 'Duas pessoas, um telemóvel', // nieuw, nalezen
     samenIntro: 'Pratica com um colega, um amigo ou um professor. Leiam à vez.', // nieuw, nalezen

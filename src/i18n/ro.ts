@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Unde lucrezi?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'În ce țară lucrezi?',
-    countryHint: 'Primești regulile de muncă din acea țară. Asta rămâne pe telefonul tău. Nu o trimitem nicăieri.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Primești regulile de muncă din acea țară.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Olanda',
     countryBe: 'Belgia (Flandra)',
     tipsNote: 'Aceste sfaturi sunt despre munca în Olanda. Informații generale, nu consultanță juridică.',
@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Sunt Bram, colegul tău de muncă.',
     bramIntroHello: 'Bună, sunt Bram.',
     showDutch: 'Arată în olandeză',
+    showAnswers: 'Arată răspunsurile', // nieuw, nalezen
     lastUpdated: 'Ultima actualizare: {date}',
     /* G4 b3 */
     buildListen: 'Ascultă și formează propoziția',
@@ -380,6 +381,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'Lecția următoare e puțin mai scurtă.', // nieuw, nalezen
     fasterSetting: 'Învață mai repede', // nieuw, nalezen
     fasterSettingHint: 'Pornit: mai puține explicații în lecțiile noi și olandeza în ritm normal. Oprit: ca înainte.', // nieuw, nalezen // nagelezen AI 31 okt
+    tempoFasterHint: 'Învață mai repede: mai puține explicații în lecțiile noi și olandeza în ritm normal.', // nieuw, nalezen
     samenTitle: 'Exersați împreună', // nieuw, nalezen
     samenRowHint: 'Două persoane, un telefon', // nieuw, nalezen
     samenIntro: 'Exersează cu un coleg, un prieten sau un profesor. Citiți pe rând.', // nieuw, nalezen

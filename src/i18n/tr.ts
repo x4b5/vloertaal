@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Nerede çalışıyorsun?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Hangi ülkede çalışıyorsun?',
-    countryHint: 'O ülkenin iş kurallarını görürsün. Bu bilgi telefonunda kalır. Hiçbir yere göndermiyoruz.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'O ülkenin iş kurallarını görürsün.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Hollanda',
     countryBe: 'Belçika (Flandra)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     tipsNote: 'Bu ipuçları Hollanda’daki iş hakkında. Genel bilgidir, hukuki danışmanlık değildir.',
@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Ben Bram, iş arkadaşınım.',
     bramIntroHello: 'Merhaba, ben Bram.',
     showDutch: 'Hollandaca göster',
+    showAnswers: 'Cevapları göster', // nieuw, nalezen
     lastUpdated: 'Son güncelleme: {date}',
     /* G4 b3 */
     buildListen: 'Dinle ve cümleyi kur',
@@ -380,6 +381,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'Sonraki ders biraz daha kısa.', // nieuw, nalezen
     fasterSetting: 'Daha hızlı öğren', // nieuw, nalezen
     fasterSettingHint: 'Açık: yeni derslerde daha az açıklama ve Hollandaca normal hızda. Kapalı: eskisi gibi.', // nieuw, nalezen
+    tempoFasterHint: 'Daha hızlı öğren: yeni derslerde daha az açıklama ve Hollandaca normal hızda.', // nieuw, nalezen
     samenTitle: 'Birlikte pratik yapın', // nieuw, nalezen
     samenRowHint: 'İki kişi, tek telefon', // nieuw, nalezen
     samenIntro: 'Bir iş arkadaşı, arkadaş ya da öğretmenle pratik yap. Sırayla okuyun.', // nieuw, nalezen

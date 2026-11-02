@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Wo arbeitest du?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'In welchem Land arbeitest du?',
-    countryHint: 'Dann bekommst du die Arbeitsregeln dieses Landes. Das bleibt auf deinem Handy. Wir schicken es nirgendwohin.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Dann bekommst du die Arbeitsregeln dieses Landes.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Niederlande',
     countryBe: 'Belgien (Flandern)',
     tipsNote: 'Diese Tipps gelten für die Arbeit in den Niederlanden. Allgemeine Informationen, keine Rechtsberatung.',
@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Ich bin Bram, dein Kollege.',
     bramIntroHello: 'Hallo, ich bin Bram.',
     showDutch: 'Auf Niederländisch zeigen',
+    showAnswers: 'Antworten zeigen', // nieuw, nalezen
     lastUpdated: 'Zuletzt aktualisiert: {date}',
     /* G4 b3 */
     buildListen: 'Hör zu und bilde den Satz',
@@ -380,6 +381,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'Die nächste Lektion ist etwas kürzer.', // nieuw, nalezen
     fasterSetting: 'Schneller lernen', // nieuw, nalezen
     fasterSettingHint: 'An: weniger Erklärung in neuen Lektionen und Niederländisch im normalen Tempo. Aus: wie vorher.', // nieuw, nalezen
+    tempoFasterHint: 'Schneller lernen: weniger Erklärung in neuen Lektionen und Niederländisch im normalen Tempo.', // nieuw, nalezen
     samenTitle: 'Zusammen üben', // nieuw, nalezen
     samenRowHint: 'Zwei Personen, ein Handy', // nieuw, nalezen
     samenIntro: 'Übe mit einer Kollegin, einem Freund oder einer Lehrkraft. Lest abwechselnd.', // nieuw, nalezen

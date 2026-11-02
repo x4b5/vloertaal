@@ -985,8 +985,6 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* (the celebration scene itself is styled under "Celebrations" below) */
 .result-screen { overflow-x: clip; }
 .result-hero { position: relative; }
-.result-stamp { top: auto; bottom: 18px; right: 0; margin-top: 0; width: 92px; height: 92px; rotate: -8deg; animation-delay: 0.5s; }
-.result-stamp .stamp-word { font-size: 1.6rem; }
 /* A calm entrance: the title and the cards fade up 8 px; the KLAAR stamp lands once. */
 .result-title { margin: 8px 0 0; animation: calm-up 0.3s 0.1s var(--ease-out) both; font-size: 2rem; font-weight: 650; color: var(--ink); letter-spacing: -0.01em; }
 @keyframes calm-up { from { transform: translateY(8px); opacity: 0; } }
@@ -1097,6 +1095,9 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .chat-bubble-me:has(.chat-line) { border-style: solid; border-color: var(--edge); }
 .chat-bubble-me:has(.chat-line)::before { border-top-style: solid; border-right-style: solid; border-color: var(--edge); }
 .chat-bubble-me .chat-line { text-decoration: none; padding: 0; min-height: 0; }
+/* Your own bubble in its own colour, as in WhatsApp (the owner's UX check, 2 November 2026): a
+   light yellow, the colour of "your choice" in the app; not green, which means "right" here. */
+.chat-bubble-me, .chat-bubble-me::before { background: color-mix(in srgb, var(--yellow) 22%, var(--card)); }
 .chat-blank { display: block; width: 110px; height: 2px; margin-top: 22px; background: var(--ink-3); border-radius: 2px; }
 .chat-bubble-me.right, .chat-bubble-me.right::before { border-color: var(--green); }
 .chat-bubble-me.right .chat-line { color: var(--right-ink); }
@@ -1468,6 +1469,13 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* "What do you do?" situation */
 .situation-text { font-weight: 600; font-size: 1.0625rem; line-height: 1.45; padding-left: 16px; }
 .situation .choice { text-align: start; justify-content: flex-start; }
+/* "Show the answers" under the situation (SituationExercise): first read or hear the situation,
+   then the three answers come on the same page, sliding in gently (still with less motion). */
+.situation-show { width: 100%; margin-top: 18px; gap: 8px; background: var(--card); color: var(--ink); border-color: var(--edge-strong); }
+.situation-show .bi { align-items: center; }
+.situation-answers-in { animation: answers-in 0.24s var(--ease-out) both; }
+@keyframes answers-in { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) { .situation-answers-in { animation: none; } }
 
 /* Tips page */
 .tips-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
@@ -2923,7 +2931,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .stamp-wrong .stamp-sub { font-size: 0.54rem; margin-top: 2px; }
 .stamp-wrong .stamp-sub:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.62rem; }
 .choices:not(.choices-pics) .stamp-wrong .stamp-word, .choices-pics .stamp-wrong .stamp-word { font-size: 0.86rem; }
-.result-stamp .stamp-sub { font-size: 0.72rem; max-width: 80%; }
 
 /* The result: listening questions left out, said on their own line. */
 .result-skipped { display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--ink-2); font-size: 0.95rem; }
@@ -2976,7 +2983,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .choices:not(.choices-pics) .stamp.stamp-wrong { width: 44px; height: 44px; margin-top: -30px; }
   .choices:not(.choices-pics) .stamp.stamp-wrong .stamp-word { font-size: 0.8rem; }
 }
-.result-stamp { right: auto; inset-inline-end: 0; }
 .chat-hint { left: auto; inset-inline-start: 0; }
 
 /* Right to left (Arabic, Persian, Dari): the whole player is mirrored (dir="rtl" on .player):
@@ -3140,7 +3146,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .say-mic {
   position: relative; display: grid; place-items: center; width: 96px; height: 96px; padding: 0;
   border: 3px solid var(--ink); border-radius: 50%; background: var(--yellow); color: var(--on-yellow);
-  cursor: pointer; touch-action: manipulation;
+  cursor: pointer; touch-action: none;
+  /* Press and hold (as in WhatsApp): no text selection or callout menu on a long press. */
+  -webkit-touch-callout: none; -webkit-user-select: none; user-select: none;
 }
 .say-mic:active { transform: translateY(1px); }
 .say-mic:disabled { opacity: 0.7; cursor: progress; }
@@ -4602,7 +4610,6 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .choices:not(.choices-pics) .choice-wrap .choice > .stamp, .choices:not(.choices-pics) .stamp.stamp-wrong { right: 10px; }
   .answer-line .stamp.stamp-wrong { right: 9px; }
   .stamp.stamp-wrong .stamp-sub { right: -4px; }
-  .result-stamp { right: 0; }
   .player-rtl .answer-mark { right: auto; left: 12px; }
   .player-rtl .stamp { right: auto; left: -8px; }
   .player-rtl .choices .stamp, .player-rtl .choices .stamp.stamp-wrong { right: auto; left: 8px; }
@@ -4683,7 +4690,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
    view above the pinned question. The scene and the stamp go (Bram's line stays), the title and
    the stat cards get compact, and the question is one size smaller; Ja and Nee stay as they are. */
 @media (max-height: 760px) {
-  .result-asks .result-hero :is(.cel-scene, .result-stamp) { display: none; }
+  .result-asks .result-hero .cel-scene { display: none; }
   .result-asks .result-hero .bram-say { margin-bottom: 0; }
   .result-asks .result-title { margin-top: 0; font-size: 1.6rem; line-height: 1.15; }
   .result-asks .result-stats { margin: 12px 0 4px; gap: 12px; }
@@ -4694,7 +4701,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .result-asks .result-faster-ask { font-size: 1.1rem; }
 }
 @media (max-height: 900px) {
-  :root:is([data-text='large'], [data-text='xl']) .result-asks .result-hero :is(.cel-scene, .result-stamp) { display: none; }
+  :root:is([data-text='large'], [data-text='xl']) .result-asks .result-hero .cel-scene { display: none; }
   :root:is([data-text='large'], [data-text='xl']) .result-asks .result-hero .bram-say { margin-bottom: 0; }
   :root:is([data-text='large'], [data-text='xl']) .result-asks .result-title { margin-top: 0; font-size: 1.45rem; line-height: 1.15; }
   :root:is([data-text='large'], [data-text='xl']) .result-asks .result-stats { margin: 10px 0 4px; gap: 10px; }
@@ -4890,8 +4897,9 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .cert-name-empty { display: inline-block; min-width: 30cqw; min-height: 1.2em; }
 /* 6. No logo in the top bar: the day count and the words sit at the end of the row. */
 .topbar { justify-content: flex-end; }
-/* 7. The bottom bar shows icons; only the tab you are on has its word under it. */
-.nav-tab-on .nav-help-only { font-size: 0.8rem; font-weight: 650; color: var(--ink); }
+/* 7. The bottom bar: every icon with its word under it (the tab you are on in bold). */
+.nav-help-only { font-size: 0.8rem; font-weight: 500; color: var(--ink-2); }
+.nav-tab-on .nav-help-only { font-weight: 650; color: var(--ink); }
 .bottom-nav .nav-tab { min-height: 60px; }
 
 /* ---- "Vloertaal rustiger", fase 2 (docs/rustiger.md) ----
@@ -5037,3 +5045,22 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* A question in parts on more pages (lib/exercises.ts readBackAt): the back arrow above it, to
    read the page before again. The app's one back arrow, at the start of the exercise. */
 .ex-back { display: flex; margin: -6px 0 2px; }
+
+/* Settings › Hulptaal: the same box as on the first run (ScrollBox), between the head and the
+   bottom bar; the page itself does not scroll. The chosen language is in view on opening, its
+   check at the end of its row. */
+.max3-settings.max3-lang {
+  display: flex; flex-direction: column; box-sizing: border-box;
+  height: 100vh; height: 100dvh; min-height: 460px;
+  padding-bottom: calc(96px + env(safe-area-inset-bottom));
+}
+.max3-settings.max3-lang > * { flex: none; }
+.max3-settings.max3-lang > .scroll-box { flex: 1 1 auto; margin-top: 8px; margin-bottom: 26px; }
+.max3-settings .scroll-box.lang-box .lang-grid { margin: 0; }
+.lang-box .lang-grid .lang-btn .lang-names { flex: 1 1 auto; }
+.lang-box .lang-grid .lang-btn .lang-check { position: static; flex: none; }
+.lang-box .lang-grid .lang-btn.picked { background: color-mix(in srgb, var(--yellow) 18%, var(--card)); }
+/* Two rows of two in the bottom bar (200% zoom): a little more room under the box. */
+@media (max-width: 300px) {
+  .max3-settings.max3-lang { padding-bottom: calc(116px + env(safe-area-inset-bottom)); }
+}

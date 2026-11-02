@@ -42,9 +42,8 @@ describe('the work-rules track renders in Dutch only', () => {
   it('BottomNav: the Dutch labels, no help line, no English', () => {
     const m = html(createElement(BottomNav, { current: 'route', onTab: () => {}, lang: nl() }));
     noEnglish(m);
-    // Icons only; the tab you are on keeps its Dutch word ("Vloertaal rustiger"); every tab says its name to a screen reader.
-    expect(m).toContain('>Route<');
-    for (const label of ['Hulp', 'Over']) expect(m).not.toContain(`>${label}<`);
+    // A Dutch word under every icon (the owner's UX check, 2 November 2026: as in WhatsApp).
+    for (const label of ['Route', 'Hulp', 'Instellingen', 'Over']) expect(m).toContain(`>${label}<`);
     expect(m).not.toContain('nav-help');
     expect(m).toContain('aria-label="Hulp"');
   });
@@ -78,7 +77,7 @@ describe('the work-rules track renders in Dutch only', () => {
     expect(settingsRows('lessons', rules)).toEqual(['sound', 'voice', 'text', 'theme', 'calm']);
     // The Dutch course keeps its rows.
     expect(settingsRows('me', { ...rules, rules: false, gender: true })).toEqual(['language', 'gender', 'sector', 'country', 'english', 'certificates', 'kaart']);
-    expect(settingsRows('lessons', { ...rules, rules: false })).toEqual(['sound', 'voice', 'tempo', 'faster', 'speaking', 'writing', 'text', 'theme', 'calm', 'toets']);
+    expect(settingsRows('lessons', { ...rules, rules: false })).toEqual(['sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'calm', 'toets']);
   });
 
   it('a yes/no page has one Dutch line per card', () => {
@@ -137,5 +136,14 @@ describe('the language list', () => {
     expect(m).not.toContain('lang-beta');
     expect(m).toContain('Ik leer Nederlands via het Engels');
     expect(m).not.toContain('lang-btn-nl');
+  });
+});
+
+describe('the bottom bar in a help language', () => {
+  it('has a word under every icon, the tab you are on in bold (nav-tab-on)', async () => {
+    const { getHelpLanguage } = await import('../src/i18n');
+    const m = html(createElement(BottomNav, { current: 'words', onTab: () => {}, lang: getHelpLanguage('pl') }));
+    expect(m.match(/class="nav-help nav-help-only"/g)).toHaveLength(4);
+    expect(m).toMatch(/nav-tab nav-tab-on[^>]*aria-label="Hulp/);
   });
 });

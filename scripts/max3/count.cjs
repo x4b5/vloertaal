@@ -366,10 +366,12 @@ function defineStates(LANG) {
   // Lesson exercises: before, after a right tap, after a wrong tap.
   // Shot option order is fixed: dutch -> 3rd right; meaning -> 3rd; listen -> 2nd; type(pick) -> 2nd; chat -> 1st; situation -> 1st.
   const choice = '.player-body .choice';
+  // A situation shows its answers after "Show the answers" (since 2 November 2026): tap it first.
+  const reveal = async (p) => { if (await p.$('.situation-show')) { await tap(p, '.situation-show'); await settle(p, 500); } };
   const graded = (key, q, right, wrong, lang) => {
     add(`lesson:${key}`, shot(q, lang));
-    add(`lesson:${key}:right`, shot(q, lang), async (p) => { await tap(p, choice, right); await settle(p, 900); });
-    add(`lesson:${key}:wrong`, shot(q, lang), async (p) => { await tap(p, choice, wrong); await settle(p, 900); });
+    add(`lesson:${key}:right`, shot(q, lang), async (p) => { await reveal(p); await tap(p, choice, right); await settle(p, 900); });
+    add(`lesson:${key}:wrong`, shot(q, lang), async (p) => { await reveal(p); await tap(p, choice, wrong); await settle(p, 900); });
   };
   graded('meaning', 'meaning', 2, 0);
   graded('picture', 'dutch', 2, 0);
@@ -377,6 +379,9 @@ function defineStates(LANG) {
   graded('hear-pick', 'type', 1, 0, 'ar');
   graded('chat', 'chat', 0, 1);
   graded('situation', 'situation', 0, 1);
+  add('lesson:situation:shown', shot('situation'), async (p) => { await reveal(p); }, { expect: '.situation-answers .choice' });
+  // With the keyboard: the focus on the first answer.
+  add('lesson:situation:shown-keys', shot('situation'), async (p) => { await p.focus('.situation-show'); await p.keyboard.press('Enter'); await settle(p, 500); }, { expect: '.situation-answers .choice:focus' });
   // A saying in a later lesson (src/content/sayings.ts): its card, and "What does he mean?".
   graded('saying-ask', 'saying-ask', 0, 1);
   // With a device voice for the help language: the situation and the tip show the help-language
@@ -543,7 +548,6 @@ function defineStates(LANG) {
   add('tab:about-nl', shot('about&nl=1'), null, { list: true, expect: '.about-nl-on' });
   // "Wat is er nieuw?": the last 3 dates and "Meer" (one tap), then every date (nothing to tap).
   add('screen:news', shot('news'), null, { expect: '.news-more' });
-  add('screen:news-more', shot('news'), async (p) => { await tap(p, '.news-more'); await settle(p); }, { expect: '.news-day h2:focus' });
   add('screen:news-all', shot('news&all=1'), null, { expect: '.news-day' });
   add('screen:coaches', shot('coaches'), null, { list: true });
   add('screen:tips', shot('tips'), null, { list: true });
@@ -622,7 +626,8 @@ function defineStates(LANG) {
   // with its sentence cards (a sentence to build, the spoken sentence).
   add('niveau:faster', shot('niveau&state=faster'), null, { expect: '.result-faster' });
   add('niveau:easier', shot('niveau&state=easier'), null, { expect: '.result-easier' });
-  add('niveau:setting', shot('settings&page=faster'), null, { expect: '.max3-hint' });
+  // "Sneller leren" is the third choice of Tempo (2 November 2026).
+  add('niveau:setting', shot('settings&page=tempo'), null, { expect: '.max3-hint' });
   add('niveau:daily-build', shot('niveau&state=daily&at=8'), null, { expect: '.player' });
   // "Wat kun je nu?" (src/content/kunJeNu.ts): under the certificate (text only), and the table on
   // the coaches' page (two folds, the list exception).
@@ -771,7 +776,6 @@ function defineRuleStates() {
   add('rule:about', shot('about'), null, { expect: '.about-section .about-signed' });
   // "Wat is er nieuw?" in Dutch only (no line that it is in Dutch).
   add('rule:news', shot('news'), null, { expect: '.news-more' });
-  add('rule:news-more', shot('news'), async (p) => { await tap(p, '.news-more'); await settle(p); }, { expect: '.news-day h2:focus' });
   add('rule:settings', shot('settings'), null, { expect: '.max3-menu' });
   for (const pg of ['me', 'lessons', 'phone', 'language']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('rule:settings-sector', shot('settings&page=sector'), null, { list: true, expect: '.chrome-back' });

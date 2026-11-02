@@ -120,7 +120,7 @@ export const uiNl: Record<UiKey, UiText> = {
   sector: 'Je werk',
   chooseSector: 'Waar werk je?',
   countryTitle: 'In welk land werk je?',
-  countryHint: 'Je krijgt de werkregels van dat land. Dit blijft op je telefoon. We sturen het nergens heen.',
+  countryHint: 'Je krijgt de werkregels van dat land.',
   countryNl: 'Nederland',
   countryBe: 'België (Vlaanderen)',
   tipsNote: 'Deze tips gaan over werk in Nederland. Algemene informatie, geen juridisch advies.',
@@ -294,7 +294,7 @@ export const uiNl: Record<UiKey, UiText> = {
   sectorGroupShop: 'Winkel en horeca',
   sectorGroupBuild: 'Bouw en techniek',
   regionTitle: 'Waar woon je?',
-  regionHint: 'Woon of werk je in Zuid-Limburg? Dan krijg je extra lessen over je regio. Dit blijft op je telefoon. We sturen het nergens heen.',
+  regionHint: 'Woon of werk je in Zuid-Limburg? Dan krijg je extra lessen over je regio.',
   regionOther: 'Andere plek / zeg ik liever niet',
   regionNone: 'Niet gekozen',
   socialMap: 'Sociale kaart',
@@ -344,6 +344,7 @@ export const uiNl: Record<UiKey, UiText> = {
   bramIntro: 'Ik ben Bram. Ik help je op weg.', // regels: a colleague who knows how work goes here
   bramIntroHello: 'Hallo, ik ben Bram.',
   showDutch: 'Toon in het Nederlands',
+  showAnswers: 'Toon de antwoorden',
   forCoaches: 'Voor begeleiders en werkgevers', // nieuw
   lastUpdated: 'Laatst bijgewerkt: {date}',
   whatsNew: 'Wat is er nieuw?', // nieuw
@@ -422,6 +423,7 @@ export const uiNl: Record<UiKey, UiText> = {
   easierNext: 'De volgende les is wat korter.',
   fasterSetting: 'Sneller leren',
   fasterSettingHint: 'Aan: minder uitleg in nieuwe lessen, en het Nederlands op normaal tempo. Uit: zoals eerst.',
+  tempoFasterHint: 'Sneller leren: minder uitleg in nieuwe lessen, en het Nederlands op normaal tempo.',
   // "Wat kun je nu?": zinnen per onderwerp (src/content/kunJeNu.ts)
   kunJeNu: 'Wat kun je nu?',
   kunNote: 'Het niveau bij elke zin is een richtlijn, geen officieel niveau.',

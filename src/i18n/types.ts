@@ -112,7 +112,7 @@ export const uiEn = {
   sector: 'Your work',
   chooseSector: 'Where do you work?',
   countryTitle: 'Which country do you work in?',
-  countryHint: 'You get the work rules of that country. This stays on your phone. We send it nowhere.',
+  countryHint: 'You get the work rules of that country.',
   countryNl: 'The Netherlands',
   countryBe: 'Belgium (Flanders)',
   tipsNote: 'These tips are about work in the Netherlands. General information, not legal advice.',
@@ -307,7 +307,7 @@ export const uiEn = {
   sectorGroupBuild: 'Building & technical',
   /* The regions (src/content/regio): Settings › "Waar woon je?" and the Sociale kaart on the Hulp tab. */
   regionTitle: 'Where do you live?',
-  regionHint: 'Do you live or work in South Limburg? Then you get extra lessons about your region. This stays on your phone. We send it nowhere.',
+  regionHint: 'Do you live or work in South Limburg? Then you get extra lessons about your region.',
   regionOther: 'Somewhere else / I’d rather not say',
   regionNone: 'Not chosen',
   socialMap: 'Where to get help',
@@ -369,6 +369,7 @@ export const uiEn = {
   bramIntroHello: 'Hello, I’m Bram.',
   /* About: the "NL" toggle that shows every section in plain Dutch (its spoken name). */
   showDutch: 'Show in Dutch',
+  showAnswers: 'Show the answers',
   /** About: the one button at the bottom, to the Dutch page for coaches and employers (src/content/pro.ts). */
   forCoaches: 'For coaches and employers',
   /** Bottom of Over: the date of the newest entry in src/content/updates.ts. */
@@ -459,6 +460,7 @@ export const uiEn = {
   easierNext: 'The next lesson is a bit shorter.',
   fasterSetting: 'Learn faster',
   fasterSettingHint: 'On: less explanation in new lessons, and the Dutch at normal speed. Off: as before.',
+  tempoFasterHint: 'Learn faster: less explanation in new lessons, and the Dutch at normal speed.',
   /* "Wat kun je nu?": can-do sentences per topic (src/content/kunJeNu.ts), on the certificate screen and the coach card. */
   kunJeNu: 'What can you do now?',
   kunNote: 'The level next to each sentence is a guide, not an official level.',

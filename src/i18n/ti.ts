@@ -86,7 +86,7 @@ const lang: HelpLanguageSource = {
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: { m: 'ኣብ ኣየናይ ሃገር ኢኻ ትሰርሕ?', f: 'ኣብ ኣየናይ ሃገር ኢኺ ትሰርሒ?', x: 'ኣብ ኣየናይ ሃገር ኢኹም ትሰርሑ?' }, // x: nieuw, nalezen
     // nagelezen (2e lezing)
-    countryHint: { m: 'ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ። እዚ ኣብ ተሌፎንካ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።', f: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ። እዚ ኣብ ተሌፎንኪ ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።', x: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም። እዚ ኣብ ተሌፎንኩም ይጸንሕ። ናብ ዝኾነ ቦታ ኣይንሰዶን ኢና።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: { m: 'ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ።', f: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ።', x: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'ኔዘርላንድ',
     countryBe: 'ቤልጅዩም (ፍላንደርስ)',
     tipsNote: 'እዞም ምኽርታት ብዛዕባ ስራሕ ኣብ ኔዘርላንድ እዮም። ሓፈሻዊ ሓበሬታ እዩ፡ ሕጋዊ ምኽሪ ኣይኮነን።',
@@ -300,6 +300,7 @@ const lang: HelpLanguageSource = {
     bramIntro: { m: 'ኣነ Bram እየ፣ ብጻይ ስራሕካ።', f: 'ኣነ Bram እየ፣ ብጻይ ስራሕኪ።', x: 'ኣነ Bram እየ፣ ብጻይ ስራሕኩም።' }, // x: nieuw, nalezen
     bramIntroHello: 'ሰላም፣ ኣነ Bram እየ።',
     showDutch: 'ብሆላንድኛ ምርኣይ',
+    showAnswers: 'መልስታት ምርኣይ', // nieuw, nalezen
     lastUpdated: 'ዝተሓደሰሉ ዕለት: {date}',
     /* G4 b3 */
     buildListen: { m: 'ስማዕ እሞ ነቲ ሓረግ ስራሕ', f: 'ስምዒ እሞ ነቲ ሓረግ ስርሒ', x: 'ስምዑ እሞ ነቲ ሓረግ ስርሑ' }, // x: nieuw, nalezen
@@ -381,6 +382,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'እቲ ዝቕጽል ትምህርቲ ቁሩብ ሓጺር እዩ።', // nieuw, nalezen
     fasterSetting: 'ብቕልጡፍ ምምሃር', // nieuw, nalezen
     fasterSettingHint: 'ክፉት: ኣብ ሓደሽቲ ትምህርትታት ዝወሓደ መብርሂ፣ ሆላንድኛ ድማ ብንቡር ቅልጣፈ። ዕጹው: ከም ቀደም።', // nieuw, nalezen
+    tempoFasterHint: 'ብቕልጡፍ ምምሃር: ኣብ ሓደሽቲ ትምህርትታት ዝወሓደ መብርሂ፣ ሆላንድኛ ድማ ብንቡር ቅልጣፈ።', // nieuw, nalezen
     samenTitle: 'ብሓባር ምልምማድ', // nieuw, nalezen
     samenRowHint: 'ክልተ ሰባት፡ ሓደ ተሌፎን', // nieuw, nalezen
     samenIntro: { m: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመድ። ብተራ ኣንብቡ።', f: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመዲ። ብተራ ኣንብቡ።', x: 'ምስ መሳርሕቲ፡ ዓርኪ ወይ መምህር ተለማመዱ። ብተራ ኣንብቡ።' }, // nieuw, nalezen

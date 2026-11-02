@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from 'react';
 import { gloss, langTag, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { autoSpeak, onSpeech, speak, stopSpeech } from '../lib/audio';
@@ -19,6 +19,9 @@ import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId } from './
 import { LockIcon, SpeakerIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { focusIsLost } from './useFocusLost';
+
+/** Held this long (ms) before letting go: a hold (let go = done), not a tap. */
+const HOLD_MS = 450;
 
 /* Icons of this feature only (same stroke as Icons.tsx). */
 const stroke = { fill: 'none', stroke: 'currentColor', strokeWidth: 2.6, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
@@ -422,6 +425,35 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
 
   const recording = phase === 'recording';
   const listenFirst = phase === 'idle' || phase === 'asking' || phase === 'recording';
+
+  // The WhatsApp habit: press and hold the microphone, talk, let go (the owner's UX check, 2
+  // November 2026). The recording starts on the press, so nothing said while holding is lost;
+  // letting go after a hold ends it. A short tap works as before: it records until a short
+  // silence, 6 s, or a second tap. Keyboard (Enter, Space) and a screen reader's activation come
+  // as a click without a press just before it.
+  const press = useRef<{ at: number; attempt: number; stops: boolean } | null>(null);
+  const lastPress = useRef(0);
+  const onMicDown = (e: ReactPointerEvent<HTMLButtonElement>) => {
+    if (e.button !== 0 || phase === 'asking') return;
+    lastPress.current = Date.now();
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+    if (recording) { press.current = { at: Date.now(), attempt: -1, stops: true }; stop(); return; }
+    press.current = { at: Date.now(), attempt: tryRef.current + 1, stops: false };
+    void start();
+  };
+  const onMicUp = () => {
+    lastPress.current = Date.now();
+    const p = press.current;
+    press.current = null;
+    if (!p || p.stops || Date.now() - p.at < HOLD_MS) return;
+    // Only the recording this press started, once it runs (not after the phone's permission question).
+    const rec = recRef.current;
+    if (tryRef.current === p.attempt && rec && rec.state === 'recording') stop();
+  };
+  const onMicClick = (e: ReactMouseEvent<HTMLButtonElement>) => {
+    if (Date.now() - lastPress.current < 1000) { e.preventDefault(); return; }
+    if (recording) stop(); else void start();
+  };
   const meaning = gloss(item.id, item.en, lang);
   // "Wat zeg je?": the reply is shown once the learner has said it (recorded, or out loud and then
   // "Hear the answer").
@@ -479,7 +511,11 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
           <button
             type="button"
             className={`say-mic ${recording ? 'is-rec' : ''}`}
-            onClick={recording ? stop : start}
+            onPointerDown={onMicDown}
+            onPointerUp={onMicUp}
+            onPointerCancel={() => { press.current = null; }}
+            onClick={onMicClick}
+            onContextMenu={(e) => e.preventDefault()}
             disabled={phase === 'asking'}
             aria-pressed={recording}
             aria-label={said(ui(recording ? 'stopRecording' : 'tapToSpeak', lang))}

@@ -1,7 +1,7 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeAll, describe, expect, it } from 'vitest';
-import { News, NEWS_FIRST } from '../src/components/News';
+import { News, NEWS_FIRST, NEWS_ITEMS, NEWS_SITE } from '../src/components/News';
 import { About } from '../src/components/Screens';
 import { LAST_UPDATE, UPCOMING, UPDATES, updateDate, dateLocale } from '../src/content/updates';
 import { updatesPage } from '../src/lib/updatesPage';
@@ -45,28 +45,28 @@ describe('Wat is er nieuw?', () => {
     expect(plain).not.toContain('news-link');
   });
 
-  it('shows the last dates newest first, each a heading in the page’s language with its points in Dutch', () => {
+  it('shows the newest date with its first points, a heading in the page’s language, the points in Dutch', () => {
     const pl = news('pl');
     expect(pl.match(/<h1[\s>]/g)).toHaveLength(1);
     expect(pl).toContain('<h1 tabindex="-1">');
     expect(pl).toContain('class="icon-btn chrome-back"');
     const days = [...pl.matchAll(/<time dateTime="([\d-]+)"/gi)].map((m) => m[1]);
-    expect(days).toEqual(UPDATES.slice(0, NEWS_FIRST).map((u) => u.date));
-    expect(NEWS_FIRST).toBe(3);
-    for (const u of UPDATES.slice(0, NEWS_FIRST)) {
-      expect(pl).toContain(updateDate(u.date, 'pl'));
-      for (const i of u.items) expect(textOf(pl)).toContain(i);
-    }
-    // One list per date, and one for "Binnenkort".
-    expect(pl.match(/<ul class="news-items" lang="nl" dir="ltr">/g)).toHaveLength(NEWS_FIRST + 1);
+    expect(days).toEqual([UPDATES[0].date]);
+    expect([NEWS_FIRST, NEWS_ITEMS]).toEqual([1, 5]);
+    expect(pl).toContain(updateDate(UPDATES[0].date, 'pl'));
+    for (const i of UPDATES[0].items.slice(0, NEWS_ITEMS)) expect(textOf(pl)).toContain(i);
+    for (const i of UPDATES[0].items.slice(NEWS_ITEMS)) expect(textOf(pl)).not.toContain(i);
+    // One list for the date, and one for "Binnenkort".
+    expect(pl.match(/<ul class="news-items" lang="nl" dir="ltr">/g)).toHaveLength(2);
     expect(pl).toMatch(/<h2 id="news-[\d-]+" lang="pl">/);
-    // One button for the rest; the line that it is in Dutch, in Polish (and English small).
+    // "Meer": the whole list on the site; the line that it is in Dutch, in Polish (and English small).
     expect(pl.match(/class="btn news-more"/g)).toHaveLength(1);
+    expect(pl).toContain(`href="${NEWS_SITE}"`);
     expect(textOf(pl)).toContain('Więcej');
     expect(textOf(pl)).toContain('Zmiany są opisane po niderlandzku.');
   });
 
-  it('shows every date after "Meer", with nothing more to tap', () => {
+  it('shows every date and point with all (screenshots), with nothing more to tap', () => {
     const all = news('pl', true);
     expect([...all.matchAll(/<time dateTime="([\d-]+)"/gi)].map((m) => m[1])).toEqual(UPDATES.map((u) => u.date));
     expect(all).not.toContain('news-more');

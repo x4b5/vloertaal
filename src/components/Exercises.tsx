@@ -12,7 +12,7 @@ import { Bi, HelpText } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
 import { CAST, castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
-import { CheckIcon, CloseIcon, SpeakerIcon } from './Icons';
+import { CheckIcon, ChevronDownIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
@@ -27,6 +27,7 @@ import { tipNlOnly } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
 import { splitClosing, tipBody } from '../lib/tipText';
 import { dropAsk } from '../lib/dropAsk';
+import { firstTimes, STAMP_LATER_TIMES, TAP_TO_HEAR_TIMES } from '../lib/firstTimes';
 
 export interface Answer {
   correct: boolean;
@@ -129,7 +130,11 @@ export const ComesBack = createContext(true);
  *  label below says the same in words. */
 function WrongStamp({ lang }: { lang?: HelpLanguage }) {
   const back = useContext(ComesBack);
+  // STRAKS WEER the first few times only: it explains that a mistake comes back; once that is
+  // known, the red cross and the bar's kraft tail say it (the owner's choice, 2 November 2026).
+  const [shown] = useState(() => !back || firstTimes('stamp-later', STAMP_LATER_TIMES));
   const sub = ui(back ? 'stampLater' : 'incorrect', lang);
+  if (!shown) return null;
   return (
     <span className="stamp stamp-wrong" aria-hidden>
       <span className="stamp-word" lang="nl">{back ? <>Straks<br />weer</> : <>Niet<br />goed</>}</span>
@@ -182,9 +187,10 @@ function useMiss<T>(): [T | null, (v: T | null) => void] {
 }
 
 /** The question. Focus moves here on a new exercise (tabIndex -1), see LessonPlayer. */
-function Prompt({ text }: { text: Bilingual }) {
+function Prompt({ text, quiet = false }: { text: Bilingual; quiet?: boolean }) {
+  // `quiet`: only for a screen reader (a hint the learner has seen often enough).
   return (
-    <h2 className="prompt" tabIndex={-1}>
+    <h2 className={quiet ? 'prompt sr-only' : 'prompt'} tabIndex={-1}>
       <Bi text={text} />
     </h2>
   );
@@ -192,15 +198,17 @@ function Prompt({ text }: { text: Bilingual }) {
 
 export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
   const { word } = ex;
+  // "Tap to hear" on the word cards of the first lessons only: the word plays by itself, and after
+  // a few cards the big speaker says it (the owner's choice, 2 November 2026). A screen reader
+  // still hears it as the card's heading.
+  const [hint] = useState(() => firstTimes('tap-to-hear', TAP_TO_HEAR_TIMES));
   useEffect(() => {
     autoSpeak(word.nl);
     onAnswer({ correct: true });
   }, [word, onAnswer]);
   return (
     <div className="exercise">
-      {/* The kraft tag above already says "Nieuw woord" (with its translation beside it), so the
-          heading tells the learner what to do: listen to the word. */}
-      <Prompt text={ui('tapToHear', lang)} />
+      <Prompt text={ui('tapToHear', lang)} quiet={!hint} />
       {/* Abstract words get no picture (it would mislead): a calm word card, word + sound + gloss. */}
       <div className={`card intro-card ${introPicture(word) ? '' : 'intro-word-only'}`}>
         {introPicture(word) && <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />}
@@ -1103,12 +1111,12 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       </div>
     </div>
   );
-  // Page 2 of the tip: only the phrase to say, big, under the tip's title (what it is about).
+  // Page 2 of the tip: only "Say it like this" and the phrase, big. The badge and the title were on
+  // the page before (the back arrow leads there); a screen reader still hears the title first.
   if (!read) {
     return (
       <div className="exercise tip tip-page-say">
-        {badge}
-        <h2 className="prompt tip-title tip-title-small"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
+        <h2 className="prompt sr-only"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
         {phrase}
       </div>
     );
@@ -1324,6 +1332,31 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
   // The Dutch in the situation ("Zeg maar je, hoor!") is said by the character, as in a chat.
   useEffect(() => { if (said) autoSpeak(said, false, 'nl', voiceFor(who)); }, [said, who]);
   const talking = useTalking(said ? [said] : [], Boolean(said));
+  // First the situation alone, then "Show the answers" and the three answers on the same page: the
+  // learner reads (or hears) the situation and thinks what to do before the answers come (the
+  // owner's idea, 2 November 2026: not everything at once). In the retry round it was read before,
+  // so the answers are there at once.
+  const firstRound = useContext(ComesBack);
+  const [shown, setShown] = useState(!firstRound);
+  const open = shown || Boolean(verdict) || locked;
+  const answers = useRef<HTMLDivElement>(null);
+  const revealed = useRef(false);
+  // With the keyboard (or a switch), the focus moves to the first answer; after a tap it does not:
+  // a ring on answer 1 would look like it is chosen, or the right one.
+  const byKeys = useRef(false);
+  useEffect(() => {
+    if (!revealed.current || !byKeys.current) return;
+    answers.current?.querySelector<HTMLElement>('.choice')?.focus({ preventScroll: true });
+  }, [shown]);
+  // The first answer appears where the button was: a quick second tap (a double tap) must not
+  // answer it. The answers take no taps for a moment after they appear.
+  const [settling, setSettling] = useState(false);
+  useEffect(() => {
+    if (!shown || !revealed.current) return undefined;
+    setSettling(true);
+    const t = window.setTimeout(() => setSettling(false), 400);
+    return () => window.clearTimeout(t);
+  }, [shown]);
   return (
     <div className="exercise situation">
       <Prompt text={ui(ASK_PROMPT[tip.situation.ask ?? 'whatdo'], lang)} />
@@ -1341,16 +1374,25 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
           )}
         </div>
       </div>
-      <ChoiceGrid
-        className="choices-rows"
-        options={ex.options}
-        correctId={best.id}
-        locked={locked}
-        lang={lang}
-        onAnswer={onAnswer}
-        stamp={false}
-        render={(o) => <Bi text={gloss(o.id, o.en, lang)} />}
-      />
+      {open ? (
+        <div ref={answers} className={`situation-answers ${revealed.current ? 'situation-answers-in' : ''}`} style={settling ? { pointerEvents: 'none' } : undefined}>
+          <ChoiceGrid
+            className="choices-rows"
+            options={ex.options}
+            correctId={best.id}
+            locked={locked}
+            lang={lang}
+            onAnswer={onAnswer}
+            stamp={false}
+            render={(o) => <Bi text={gloss(o.id, o.en, lang)} />}
+          />
+        </div>
+      ) : (
+        <button type="button" className="btn situation-show" onClick={(e) => { revealed.current = true; byKeys.current = e.detail === 0; setShown(true); }}>
+          <Bi text={ui('showAnswers', lang)} />
+          <ChevronDownIcon size={24} />
+        </button>
+      )}
     </div>
   );
 }

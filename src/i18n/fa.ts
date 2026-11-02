@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'کجا کار می‌کنید؟',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'در کدام کشور کار می‌کنید؟',
-    countryHint: 'قوانین کار همان کشور را می‌بینید. این فقط روی گوشی شما می‌ماند. ما آن را جایی نمی‌فرستیم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'قوانین کار همان کشور را می‌بینید.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'هلند',
     countryBe: 'بلژیک (فلاندر)',
     tipsNote: 'این نکته‌ها درباره کار در هلند است. اطلاعات کلی است، نه مشاوره حقوقی.',
@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'من Bram هستم، همکار شما.',
     bramIntroHello: 'سلام، من Bram هستم.',
     showDutch: 'نمایش به هلندی',
+    showAnswers: 'نمایش پاسخ‌ها', // nieuw, nalezen
     lastUpdated: 'آخرین به‌روزرسانی: {date}',
     /* G4 b3 */
     buildListen: 'گوش کنید و جمله را بسازید',
@@ -380,6 +381,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'درس بعدی کمی کوتاه‌تر است.', // nieuw, nalezen
     fasterSetting: 'سریع‌تر یاد گرفتن', // nieuw, nalezen
     fasterSettingHint: 'روشن: توضیح کمتر در درس‌های تازه، و هلندی با سرعت عادی. خاموش: مثل قبل.', // nieuw, nalezen
+    tempoFasterHint: 'سریع‌تر یاد گرفتن: توضیح کمتر در درس‌های تازه، و هلندی با سرعت عادی.', // nieuw, nalezen
     samenTitle: 'با هم تمرین کنید', // nieuw, nalezen
     samenRowHint: 'دو نفر، یک گوشی', // nieuw, nalezen
     samenIntro: 'با یک همکار، دوست یا معلم تمرین کنید. به نوبت بخوانید.', // nieuw, nalezen // nagelezen AI 31 okt

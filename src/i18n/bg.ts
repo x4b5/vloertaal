@@ -85,7 +85,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Къде работиш?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'В коя държава работиш?',
-    countryHint: 'Ще получиш правилата за работа в нея. Това остава на телефона ти. Не го изпращаме никъде.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Ще получиш правилата за работа в нея.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     countryNl: 'Нидерландия',
     countryBe: 'Белгия (Фландрия)',
     tipsNote: 'Тези съвети са за работа в Нидерландия. Обща информация, не е правен съвет.',
@@ -299,6 +299,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Аз съм Bram, твоят колега.',
     bramIntroHello: 'Здравей, аз съм Bram.',
     showDutch: 'Покажи на нидерландски',
+    showAnswers: 'Покажи отговорите', // nieuw, nalezen
     lastUpdated: 'Последна актуализация: {date}',
     /* G4 b3 */
     buildListen: 'Слушай и състави изречението',
@@ -380,6 +381,7 @@ const lang: HelpLanguageSource = {
     easierNext: 'Следващият урок е малко по-кратък.', // nieuw, nalezen
     fasterSetting: 'Учи по-бързо', // nieuw, nalezen
     fasterSettingHint: 'Включено: по-малко обяснения в новите уроци и нидерландски с нормално темпо. Изключено: както преди.', // nieuw, nalezen
+    tempoFasterHint: 'Учи по-бързо: по-малко обяснения в новите уроци и нидерландски с нормално темпо.', // nieuw, nalezen
     samenTitle: 'Упражнявайте се заедно', // nieuw, nalezen
     samenRowHint: 'Двама души, един телефон', // nieuw, nalezen
     samenIntro: 'Упражнявай се с колега, приятел или учител. Четете поред.', // nieuw, nalezen
