@@ -12,12 +12,12 @@ onderwerpnamen, plus de Belgische versies waar die anders zijn: ongeveer 1.500 t
 | Taal | fout | twijfel | stijl | totaal |
 |---|---|---|---|---|
 | Arabisch | 5 | 24 | 5 | 34 |
-| Bulgaars | 9 | 16 | 6 | 31 |
+| Bulgaars | 9 | 17 | 5 | 31 |
 | Dari | 3 | 22 | 0 | 25 |
 | Duits | 8 | 10 | 1 | 19 |
-| Frans | 8 | 10 | 2 | 20 |
-| Oekraïens | 17 | 23 | 0 | 40 |
-| Perzisch | 4 | 15 | 0 | 19 |
+| Frans | 7 | 11 | 2 | 20 |
+| Oekraïens | 18 | 22 | 0 | 40 |
+| Perzisch | 4 | 14 | 1 | 19 |
 | Pools | 8 | 14 | 8 | 30 |
 | Portugees | 6 | 18 | 0 | 24 |
 | Roemeens | 10 | 14 | 1 | 25 |
@@ -25,7 +25,6 @@ onderwerpnamen, plus de Belgische versies waar die anders zijn: ongeveer 1.500 t
 | Tigrinya | 47 | 10 | 0 | 57 |
 | Turks | 5 | 16 | 1 | 22 |
 
-(De tellingen kunnen één afwijken door eigen correcties die over meer talen liepen.)
 
 **Wat vaak terugkwam:**
 - **"Mijn itsme-code" zonder "code"** (`be.s.login.3`: bg, fa, prs, ro, tr, uk).
