@@ -14,19 +14,19 @@
 
 :root {
   /* Palette */
-  --ink: #26211c;            /* warm near-black (was #1e2226) */
-  --ink-2: #564c42;
+  --ink: #2b2620;            /* warm near-black ("Rustig zand"; was #26211c) */
+  --ink-2: #5e554b;
   /* Faint text (--faint) and icons: 4.5:1 or more on the floor, paper and the yellow tint
      (was #6e737a: 3.7:1 on the floor). */
-  --ink-3: #6a5f53;
-  --concrete: #efe4d1;        /* warmer sand (was #e7e3dc) */
-  --concrete-2: #e4d6bf;
-  --paper: #fffaf0;
-  --yellow: #ffc414;
+  --ink-3: #655a4e;
+  --concrete: #f3ede3;        /* light sand ("Rustig zand"; was #efe4d1) */
+  --concrete-2: #e6ddcf;
+  --paper: #fffdf9;
+  --yellow: #f5d77a;          /* softer yellow ("Rustig zand"; was #ffc414) */
   --yellow-dark: #e0a800;
-  --kraft: #c8955b;
-  --kraft-light: #ebd6b5;
-  --kraft-dark: #7e5428;
+  --kraft: #c9ae88;
+  --kraft-light: #ece3d4;
+  --kraft-dark: #6e5530;
   --green: #137a55;
   --red: #c2412d;
   /* Speaker buttons and icons: the icon 3:1 on its own blue tint, white on blue 4.5:1
@@ -37,9 +37,9 @@
   /* Semantic */
   --bg: var(--concrete);
   --card: var(--paper);
-  --line: #dccfbb;          /* light border of cards and options */
+  --line: #e2d8c8;          /* light border of cards and options */
   --track: var(--concrete-2); /* empty segments, tracks, dividers */
-  --edge: #8c7b66;          /* soft warm border of cards and bubbles: 3.2:1 on the background, enough to see, quiet enough to step back ("Vloertaal rustiger", fase 1) */
+  --edge: #8a7e6c;          /* soft warm border of cards and bubbles: 3.2:1 on the background, enough to see, quiet enough to step back ("Vloertaal rustiger", fase 1) */
   --edge-strong: var(--ink); /* what is picked, focused or on: the one thing that stands out */
   --solid: var(--ink);      /* dark button */
   --on-solid: var(--paper);
@@ -49,7 +49,7 @@
   --on-yellow: #1e2226;
   --on-yellow-soft: #3f3a2c;  /* quieter text on the yellow (the Dutch under a help-language label) */
   --on-yellow-paper: #fffdf8; /* light text on a dark block inside a yellow card */
-  --yellow-hover: #ffcd3a;
+  --yellow-hover: #f8e09a;
   --blue-hover: #1284c7;
   --on-go: #fff;            /* the tick and cross on the green and red dots */
   --on-green: #ffffff;
@@ -57,10 +57,10 @@
   --muted: var(--ink-2);
   --faint: var(--ink-3);
   --ink-strong: var(--ink);
-  --tag-bg: #ecdcc1;
+  --tag-bg: #ece3d4;
   --tag-ink: var(--kraft-dark);
-  --tape: rgba(200, 149, 91, 0.78);
-  --label-shadow: color-mix(in srgb, var(--kraft) 45%, transparent);
+  --tape: transparent;     /* no tape on the labels ("Rustig zand") */
+  --label-shadow: transparent;
   --focus: var(--ink);
   --right-ink: #0f6a4a;     /* green text on concrete or paper */
   --wrong-ink: #a8361f;     /* red text on concrete or paper */
@@ -79,11 +79,11 @@
   --on-gold: var(--on-yellow);
   --on-tone: var(--paper);
   --on-accent: var(--paper);
-  --locked-shadow: #cbbda8;
+  --locked-shadow: #d6cbb9;
   /* Edge of an answer card: 3:1 or more against the floor. */
-  --choice-edge: #8c7b66;
+  --choice-edge: #8a7e6c;
   --repeat-bg: var(--kraft);
-  --radius: 12px;
+  --radius: 16px;
   /* Type in the exercises: three steps and a small one ("Vloertaal rustiger"; docs/rustiger.md).
      The Dutch word or sentence is the largest (what you learn), the question an instruction,
      the answers easy to read in every language. In rem: "Tekstgrootte" scales them all. */
@@ -136,6 +136,10 @@
     --tag-bg: var(--kraft-light);
     --on-solid: #16191c;
     --on-solid-mark: #16191c;
+    /* Dark keeps the full signal yellow and the label shadow ("Rustig zand" is light only). */
+    --yellow: #ffc414;
+    --yellow-hover: #ffcd3a;
+    --label-shadow: color-mix(in srgb, var(--kraft) 45%, transparent);
     --blue: #1592db;
     --on-green: #16191c;
     --tape: rgba(200, 149, 91, 0.6);
@@ -173,6 +177,10 @@
   --tag-bg: var(--kraft-light);
   --on-solid: #16191c;
   --on-solid-mark: #16191c;
+  /* Dark keeps the full signal yellow and the label shadow ("Rustig zand" is light only). */
+  --yellow: #ffc414;
+  --yellow-hover: #ffcd3a;
+  --label-shadow: color-mix(in srgb, var(--kraft) 45%, transparent);
   --blue: #1592db;
   --on-green: #16191c;
   --tape: rgba(200, 149, 91, 0.6);
