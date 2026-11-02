@@ -5,7 +5,7 @@ import { units } from '../src/content/curriculum';
 import { getHelpLanguage } from '../src/i18n/all';
 import { Gate } from '../src/components/Gate';
 import { CountryScreen } from '../src/components/Country';
-import { ColourScreen } from '../src/components/Colour';
+import { ColourScreen, shownColour } from '../src/components/Colour';
 import {
   onboardingStep,
   previousStep,
@@ -221,10 +221,28 @@ describe('"Welke kleur wil je?": the last first-run page', () => {
     expect(onboardingStep(old, 'full')).toBe('done');
   });
 
+  const screen = (current: 'light' | 'dark' = 'light') =>
+    renderToStaticMarkup(createElement(ColourScreen, { lang: getHelpLanguage('tr'), current, onPick: () => {}, onDone: () => {} }));
+
   it('shows the four colours of Settings, with their Dutch names', () => {
-    const html = renderToStaticMarkup(createElement(ColourScreen, { lang: getHelpLanguage('tr'), onDone: () => {} }));
+    const html = screen();
     expect(html).toContain('Welke kleur wil je?');
     for (const name of ['Zand', 'Haven', 'Werkjas', 'Donker']) expect(html).toContain(name);
     expect(html.match(/theme-swatch-/g)?.length).toBe(4);
+  });
+
+  it('first see the colour, then agree: the colour in use has the check, and Continue ends the page', () => {
+    // A tap only shows the colour (onPick); Continue (onDone) is a button of its own.
+    const zand = screen('light');
+    expect(zand.match(/aria-checked="true"/g)).toHaveLength(1);
+    expect(zand).toMatch(/aria-checked="true"[^>]*>(?:(?!<\/button>).)*Zand/);
+    expect(screen('dark')).toMatch(/aria-checked="true"[^>]*>(?:(?!<\/button>).)*Donker/);
+    expect(zand.match(/class="max3-card /g)).toHaveLength(4);
+    expect(zand.match(/colour-go/g)).toHaveLength(1);
+  });
+
+  it('an older "auto" shows as the colour it gives on this device', () => {
+    expect(shownColour('auto')).toMatch(/^(light|dark)$/);
+    expect(shownColour('haven')).toBe('haven');
   });
 });

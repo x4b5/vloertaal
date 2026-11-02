@@ -17,7 +17,8 @@
  *    element without a pointer cursor (a hidden or unmarked tap target);
  *  - an `expect` selector of the state is not on screen (the flow ended somewhere else).
  * A list state ({ list: true }, the named exception) is checked, not waved through: it needs a
- * list (ul / ol / .lang-grid / .set-rows) whose rows are one kind, with at most one tap per row
+ * list (ul / ol / .lang-grid / .set-rows, or the colours of "Welke kleur wil je?": a group of cards
+ * with a swatch) whose rows are one kind, with at most one tap per row
  * and no extra per-row buttons; outside its lists at most --limit things to tap (the back arrow is
  * chrome). A sentence built with all its tiles at once (stap 3, `ul.tile-all`) is such a list:
  * each tile is one row (one tap: the word; its speaker is not counted, as everywhere), a placed
@@ -236,18 +237,25 @@ function defineStates(LANG) {
   // The first run: after "Weet ik nog niet" the country page, its back arrow to the sector.
   add('flow:country', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.sector-group-row[data-group="none"]'); await settle(p, 900); }, { expect: '.country-screen .chrome-back' });
   add('flow:country-back', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.sector-group-row[data-group="none"]'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.sector-groups' });
-  add('flow:country-home', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true, sector: 'none' })(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); }, { expect: '.home3' });
+  // Then the colour (the last first-run page): a tap shows the colour at once and the page stays;
+  // Continue agrees and leads to the home (the owner's request, 2 November 2026).
+  const toColour = async (p) => { await firstRun({ gender: 'm', genderAsked: true, sector: 'none' })(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); };
+  add('flow:country-home', '/', toColour, { list: true, expect: '.colour-screen .max3-card.picked' });
+  add('flow:colour-pick', '/', async (p) => { await toColour(p); await tap(p, '.colour-screen .max3-card', 1); await settle(p); }, { list: true, expect: 'html[data-theme="haven"] .colour-screen .colour-go' });
+  add('flow:colour-home', '/', async (p) => { await toColour(p); await tap(p, '.colour-screen .max3-card', 3); await settle(p); await tap(p, '.colour-go'); await settle(p, 900); }, { expect: 'html[data-theme="dark"] .home3' });
+  add('flow:colour-back', '/', async (p) => { await toColour(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.country-screen' });
   // A learner from before the country question: a one-time page on opening the home (no back).
   add('flow:old-country', '/', firstRun({ gender: 'm', genderAsked: true, sector: 'none', completed: { 'l.hello': { best: 1, times: 1 } } }), { expect: '.country-screen' });
   // A learner from before the gender question: a one-time page instead of the home card (no back).
   if (gendered) add('flow:old-gender', '/', firstRun({ sector: 'none', completed: { 'l.hello': { best: 1, times: 1 } } }), { expect: '.gender-screen' });
   const realHome = async (p, extra = {}) => {
     // "Wat ken je al?" passed over today (its card would take the block's place), unless a state
-    // asks for it (extra.toets: undefined, the flow:toets-* states).
+    // asks for it (extra.toets: undefined, the flow:toets-* states). The colour already chosen
+    // (colourAsked): else a learner who has not begun gets that first-run page first.
     await p.evaluate(([x, lang]) => {
       const d = new Date(); const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
       localStorage.setItem('vloertaal.access', 'full');
-      localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, gender: 'm', sector: 'none', country: 'nl', completed: {}, toets: { v: 1, skipped: today, start: today, unitsAt: 0 }, ...x }));
+      localStorage.setItem('vloertaal:v1', JSON.stringify({ onboarded: true, helpLang: lang, gender: 'm', sector: 'none', country: 'nl', colourAsked: true, completed: {}, toets: { v: 1, skipped: today, start: today, unitsAt: 0 }, ...x }));
     }, [extra, LANG]);
     await p.reload(); await settle(p, 900);
   };
@@ -534,7 +542,7 @@ function defineStates(LANG) {
   // with the back arrow (the "look only" way out).
   for (const pg of ['me', 'lessons', 'phone', 'language', 'sector', 'certificates']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('settings:phone-preview', shot('settings&page=phone&access=preview'), null, { list: true });
-  for (const pg of ['gender', 'sector-build', 'sector-make', 'sector-care', 'sector-shop', 'english', 'sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
+  for (const pg of ['gender', 'sector-build', 'sector-make', 'sector-care', 'sector-shop', 'english', 'sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { list: pg === 'theme', expect: '.chrome-back' });
   add('settings:writing-ar', shot('settings&page=writing', 'ar'));
   add('settings:install', shot('settings&page=install&install=prompt'));
   add('settings:unlock', shot('settings&page=unlock&access=preview'));
@@ -790,7 +798,7 @@ function defineRuleStates() {
   add('rule:settings', shot('settings'), null, { expect: '.max3-menu' });
   for (const pg of ['me', 'lessons', 'phone', 'language']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('rule:settings-sector', shot('settings&page=sector'), null, { list: true, expect: '.chrome-back' });
-  for (const pg of ['sound', 'voice', 'text', 'theme', 'reminder', 'backup']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { expect: '.chrome-back' });
+  for (const pg of ['sound', 'voice', 'text', 'theme', 'reminder', 'backup']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: pg === 'theme', expect: '.chrome-back' });
   add('rule:settings-reminder-set', shot('settings&page=reminder'), withReminder, { expect: '.set-remind-now' });
   add('rule:settings-backup-fewer', shot('settings&page=backup'), async (p) => { await putBack(p, ['r.l.zoeken.1']); await tap(p, '.waybill-ask .danger'); }, { expect: '.waybill-fewer' });
   add('rule:settings-reset', shot('settings&page=reset'), null, { expect: '.reset-actions' });
@@ -828,10 +836,15 @@ function defineRuleStates() {
   add('flow:nl-gate-phone-back', RULES, async (p) => { await toNlGate(p); await p.goBack(); await settle(p); }, { list: true, expect: '.onb-lang-list' });
   const nlNotSure = async (p) => { await toNlGate(p); await tap(p, '.sector-group-row[data-group="none"]'); await settle(p, 900); };
   add('flow:nl-country', RULES, nlNotSure, { expect: '.country-screen' });
-  // After the country: once, "Goed om te weten" (rules:notice, [Ik snap het]), then the home.
-  add('flow:nl-notice', RULES, async (p) => { await nlNotSure(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); }, { expect: '.rules-notice-ok' });
-  add('flow:nl-home', RULES, async (p) => { await nlNotSure(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); await tap(p, '.rules-notice-ok'); await settle(p, 900); }, { expect: '.home3' });
-  const nlHome = nlStore({ sector: 'none', completed: { 'r.l.zoeken.1': { best: 1, times: 1 } } });
+  // After the country the colour (a tap shows it, Verder agrees), then once "Goed om te weten"
+  // (rules:notice, [Ik snap het]), then the home.
+  const nlColour = async (p) => { await nlNotSure(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); };
+  add('flow:nl-colour', RULES, nlColour, { list: true, expect: '.colour-screen .colour-go' });
+  const nlNotice = async (p) => { await nlColour(p); await tap(p, '.colour-go'); await settle(p, 900); };
+  add('flow:nl-notice', RULES, nlNotice, { expect: '.rules-notice-ok' });
+  add('flow:nl-home', RULES, async (p) => { await nlNotice(p); await tap(p, '.rules-notice-ok'); await settle(p, 900); }, { expect: '.home3' });
+  // "Goed om te weten" already seen (rulesNotice): else that page comes first, before the home.
+  const nlHome = nlStore({ sector: 'none', rulesNotice: true, completed: { 'r.l.zoeken.1': { best: 1, times: 1 } } });
   add('flow:nl-help-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); }, { list: true, expect: '.rh-rows' });
   add('flow:nl-shelf', RULES, async (p) => { await nlHome(p); await navTab(p, 1); await settle(p); await tap(p, '.rules-shelf-link'); await settle(p); }, { list: true, expect: '.shelf-list' });
   add('flow:nl-settings-tab', RULES, async (p) => { await nlHome(p); await navTab(p, 2); await settle(p); }, { expect: '.max3-menu' });
@@ -960,7 +973,9 @@ function countInPage() {
   const speakerDupes = [...groups.values()].filter((g) => g.length > 1);
   // Lists: one kind of row, at most one tap per row, no extra per-row buttons.
   const lists = [];
-  const listEls = [...scope.querySelectorAll('ul, ol, .lang-grid, .set-rows')].filter((l) => !l.parentElement.closest('ul, ol, .lang-grid, .set-rows'));
+  // The colours of "Welke kleur wil je?" (four swatches, one tap each) are such a list too.
+  const LISTS = 'ul, ol, .lang-grid, .set-rows, .max3-cards:has(.theme-swatch)';
+  const listEls = [...scope.querySelectorAll(LISTS)].filter((l) => !l.parentElement.closest(LISTS));
   for (const ul of listEls) {
     const rows = [...ul.children].filter((c) => getComputedStyle(c).display !== 'none' && c.getBoundingClientRect().height > 2);
     if (rows.length < 2) continue;
