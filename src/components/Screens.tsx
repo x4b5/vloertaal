@@ -38,7 +38,6 @@ import {
   CallIcon,
   CrateIcon,
   CheckIcon,
-  ChevronDownIcon,
   ChevronIcon,
   LifebuoyIcon,
   EarIcon,
@@ -59,6 +58,7 @@ import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { ChromeBack, ChromeHead } from './ChromeBack';
 import { MissingLanguage } from './MissingLanguage';
+import { ScrollBox } from './ScrollBox';
 import { pushSubStep } from '../lib/onbHistory';
 import { HelpSay } from './HelpSay';
 import { emojiIconId } from '../content/tipIcons';
@@ -176,11 +176,11 @@ function LangMark({ code }: { code: UiCode | null }) {
  * First run, before anything else: the language you get help in (the owner's choice, 1 November
  * 2026: without it the rest is not clear). The phone's own languages give a guess ("Polski?"
  * [Yes] [Other language]); "Other language", or no guess, shows the list of all languages, each
- * name in its own script (the list is the one place with more than three choices). Under the
- * list, fixed at the bottom of the screen and under a line, "Ik spreek al Nederlands": the
- * work-rules track (the owner's choice, 2 November 2026; before, a page "Wat wil je leren?" came
- * after the language). The gender
- * question, the sector and the country follow on their own pages (App.tsx).
+ * name in its own script (the list is the one place with more than three choices), one under the
+ * other in a box that scrolls inside (ScrollBox). Under the box, at the bottom of the screen,
+ * "Ik spreek al Nederlands": the work-rules track (the owner's choice, 2 November 2026; before,
+ * a page "Wat wil je leren?" came after the language). The gender question, the sector and the
+ * country follow on their own pages (App.tsx).
  */
 export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = false }: {
   onDone: (code: UiCode | null) => void;
@@ -222,18 +222,6 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
     if (!q.hasAttribute('tabindex')) q.tabIndex = -1;
     q.focus({ preventScroll: true });
   }, [list]);
-  // The list scrolls above the fixed "Ik spreek al Nederlands": while there is more below,
-  // say so (the owner's request, 2 November 2026: make it clearer that the list scrolls).
-  const [more, setMore] = useState(false);
-  useEffect(() => {
-    if (!list || missing) return;
-    const check = () => setMore(window.scrollY + window.innerHeight < document.documentElement.scrollHeight - 8);
-    check();
-    window.addEventListener('scroll', check, { passive: true });
-    window.addEventListener('resize', check);
-    return () => { window.removeEventListener('scroll', check); window.removeEventListener('resize', check); };
-  }, [list, missing]);
-  const scrollOn = () => window.scrollBy({ top: Math.round(window.innerHeight * 0.6), behavior: stillMotion() ? 'auto' : 'smooth' });
   // The guess page needs only its few strings (src/i18n/meta.ts): no pack to wait for.
   const gMeta = langMeta(guess);
   const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
@@ -247,16 +235,14 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
           <p className="tagline" lang="en">{ui('appTagline').en}</p>
         </div>
         <h2 className="onboarding-title" lang="en">{ui('chooseLanguage').en}</h2>
-        <LanguagePicker onPick={onDone} onMissing={() => setMissing(true)} />
+        {/* The languages in a framed box that scrolls inside, with a scroll bar that is always
+            there (the owner's request, 2 November 2026: a clear menu); under it, outside the box,
+            "Ik spreek al Nederlands". */}
+        <ScrollBox className="lang-box" moreLabel="More languages">
+          <LanguagePicker onPick={onDone} onMissing={() => setMissing(true)} />
+        </ScrollBox>
         {rulesTrackOn() && (
-          <div className={more ? 'onb-nl-dock has-more' : 'onb-nl-dock'}>
-            {/* More languages below: a round arrow on the line (it bobs twice on arrival), and
-                the cards fade out above it. Tapping it scrolls on; at the end it is gone. */}
-            {more && (
-              <button type="button" className="onb-more" onClick={scrollOn} aria-label="More languages" lang="en">
-                <ChevronDownIcon size={24} />
-              </button>
-            )}
+          <div className="onb-nl-dock">
             <NlCard onPick={() => onDone('nl')} />
           </div>
         )}
