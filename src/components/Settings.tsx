@@ -14,7 +14,7 @@ import { countingOn, setCounting } from '../lib/count';
 import { applyEnglish, setWantsEnglish, wantsEnglish } from '../lib/english';
 import { installWay } from '../lib/install';
 import { offlineAuto, offlineSupported } from '../lib/offline';
-import { THEME_COLOURS, type Country, type Progress, type ThemeChoice } from '../lib/progress';
+import type { Country, Progress, ThemeChoice } from '../lib/progress';
 import { REMINDER_TIMES, reminderTapAdds, reminderTime } from '../lib/reminder';
 import {
   settingsDepth, settingsRows, SETTINGS_LIST_PAGES, voiceChoiceOf, voiceRefs,
@@ -36,6 +36,7 @@ import { InfoMore } from './InfoMore';
 import { CertIcon } from './CertBadge';
 import { CertificatesCard } from './Certificate';
 import { ChoiceCards, type ChoiceOption } from './Choice';
+import { colourOptions } from './Colour';
 import { countryOptions } from './Country';
 import { ChromeBack } from './ChromeBack';
 import { UpgradeCard } from './Gate';
@@ -110,8 +111,6 @@ const TextA = ({ size }: { size: TextSize }) => <span className={`text-size-a te
 
 const TEXT_KEYS = { normal: 'textNormal', large: 'textLarge', xl: 'textXl' } as const;
 const THEME_KEYS = { auto: 'themeAuto', light: 'themeSand', haven: 'themeHarbour', werkjas: 'themeWorkwear', dark: 'themeDark' } as const;
-/** A colour as a round swatch of its floor and its strong colour: no words needed to choose. */
-const ThemeSwatch = ({ theme }: { theme: (typeof THEME_COLOURS)[number] }) => <span className={`theme-swatch theme-swatch-${theme}`} aria-hidden />;
 const CALM_KEYS = { auto: 'calmAuto', on: 'settingOn', off: 'settingOff' } as const;
 /** "Rustig scherm": a line that settles (a wave that becomes still). */
 const CalmIcon = ({ size = 24, still }: { size?: number; still?: boolean }) => (
@@ -631,7 +630,7 @@ export function Settings({
             // 'auto' (an older save) is shown as the colour it gives on this device now.
             current={progress.theme === 'auto' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : progress.theme}
             onPick={(t) => { onTheme(t); answered(); }}
-            options={THEME_COLOURS.map((t) => ({ id: t, text: say(THEME_KEYS[t]), picture: <ThemeSwatch theme={t} /> }))}
+            options={colourOptions(lang)}
           />
         );
       case 'calm':
