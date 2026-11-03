@@ -17,6 +17,12 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-03',
+    items: [
+      'Meer kleur: Zand, Haven en Werkjas hebben nu echt een eigen achtergrond (zand, zachte zeegroen, licht werkjas-blauw), en bij Donker zijn de kaarten iets lichter. De kaarten en knoppen springen er zo meer uit, en je ziet beter welke kleur je hebt. Alle tekst blijft even goed leesbaar.',
+    ],
+  },
+  {
     date: '2026-11-02',
     items: [
       'Bij de start kies je nu ook je kleur: Zand, Haven, Werkjas of Donker. Tik op een kleur en de app krijgt die kleur meteen, terwijl je op de pagina blijft. Zo zie je eerst hoe het eruitziet. Goed zo? Tik op Verder. Wisselen kan later bij Instellingen › Weergave.',

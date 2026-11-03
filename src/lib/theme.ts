@@ -2,9 +2,9 @@ import type { ThemeChoice } from './progress';
 
 /** The browser bar (theme-color) per colour: the floor of each palette (src/styles.css). */
 export const THEME_BAR: Record<Exclude<ThemeChoice, 'auto'>, string> = {
-  light: '#f3ede3',
-  haven: '#e8f0f0',
-  werkjas: '#eceff3',
+  light: '#eee1cc',
+  haven: '#d0e9e8',
+  werkjas: '#d9e4f3',
   dark: '#1b1916',
 };
 
