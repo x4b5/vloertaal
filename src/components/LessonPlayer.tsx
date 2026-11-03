@@ -1007,8 +1007,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // the bubble or the prompt, the meaning in the green option): no label that says it all again
   // ("Vloertaal rustiger": say it once). The green, the check and the sound say "right"; the
   // status region still says "Goed zo! het hesje = the safety vest". A label stays when it adds
-  // something: a why, "almost", a wrong answer, a sentence (its meaning and speaker), writing,
-  // a picture pick ("Which picture is it?": the meaning in words is only on the label). A chat's
+  // something: a why, "almost", a wrong answer, a sentence (its meaning and speaker), writing.
+  // "Which picture is it?" (and its text cards): the Dutch is in the bubble and on the green card,
+  // the picture shows the meaning; "ja = yes" under it said it twice (feedback of the maker,
+  // 2 November). A chat's
   // right reply is in the bubble and in the green option, with its meaning and its speaker: a
   // third time on a label was too much (feedback of the maker, 1 November). The same for "What do
   // you hear?" picked from written words (typing in the first topics, typeAsPick): the green card
@@ -1022,7 +1024,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // built right: it stands on the answer line, its meaning and speaker are in the bubble; with
   // "Zet het vooraan" the label stays for the verb on place 2.
   const builtRight = ex.kind === 'build' && !ex.front && Boolean(answer?.correct) && !answer?.almost;
-  const answerShown = ex.kind === 'meaning' || ex.kind === 'listen' || ex.kind === 'chat' || ex.kind === 'situation' || typePick || builtRight;
+  const answerShown = ex.kind === 'meaning' || ex.kind === 'dutch' || ex.kind === 'listen' || ex.kind === 'chat' || ex.kind === 'situation' || typePick || builtRight;
   const cardless = Boolean(feedback) && !answer?.almost && !ruleFb && !why && answerShown;
   /** A wrong answer whose right one is already on screen, with an explanation (a chat's why): the
    *  label holds only that explanation, like a right answer with a why. */
