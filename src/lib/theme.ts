@@ -5,7 +5,7 @@ export const THEME_BAR: Record<Exclude<ThemeChoice, 'auto'>, string> = {
   light: '#f3ede3',
   haven: '#e8f0f0',
   werkjas: '#eceff3',
-  dark: '#16191c',
+  dark: '#1b1916',
 };
 
 /** 'auto' follows the device; a colour overrides it via <html data-theme>. */

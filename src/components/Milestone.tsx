@@ -1,6 +1,6 @@
 import { WordPicture } from '../pictures';
 import { stillMotion } from '../lib/calm';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { fillCount, ui, uiCount, said, type Bilingual } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { STREAK_TIERS, dayKey, emptyProgress, workWeek, type WeekDayState } from '../lib/progress';
@@ -12,18 +12,8 @@ import { CheckIcon, ChevronIcon, CupIcon } from './Icons';
 import { KeepFlow } from './Keep';
 import { NlPair } from './NlPair';
 import { MILESTONE_FACTS } from '../content/facts';
+import { useTapGuard } from './useFreshScreen';
 
-/** False for the first 700 ms (400 ms with reduced motion): a tap meant for the screen before
- *  must not skip this one. */
-export function useTapGuard() {
-  const ready = useRef(false);
-  useEffect(() => {
-    const still = stillMotion();
-    const t = window.setTimeout(() => { ready.current = true; }, still ? 400 : 700);
-    return () => window.clearTimeout(t);
-  }, []);
-  return ready;
-}
 
 /** The unit under the streak number: the help language's word ("days"), or the Dutch one
  *  for English only. Never a bare Dutch "DAG" for a learner who can't read it. */

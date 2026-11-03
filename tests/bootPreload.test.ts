@@ -41,7 +41,7 @@ describe('index.html asks for a returning learner’s files at once (vite.config
       new Function('localStorage', 'document', script.replace(/^<script>|<\/script>$/g, ''))({ getItem: () => JSON.stringify(saved) }, doc);
       return { ...root.dataset, metas: metas.join(' ') };
     };
-    expect(look({ theme: 'dark', textSize: 'xl' })).toEqual({ theme: 'dark', text: 'xl', metas: '#16191c #16191c' });
+    expect(look({ theme: 'dark', textSize: 'xl' })).toEqual({ theme: 'dark', text: 'xl', metas: '#1b1916 #1b1916' });
     // 'auto' from before light became the default: light; chosen since (themeVersion 3): follows the phone.
     expect(look({ theme: 'auto', textSize: 'normal' })).toEqual({ theme: 'light', metas: '#f3ede3 #f3ede3' });
     expect(look({ theme: 'auto', themeVersion: 3, textSize: 'normal' })).toEqual({ metas: '' });

@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-02',
     items: [
+      'Bij de start kies je nu ook je kleur: Zand, Haven, Werkjas of Donker. Tik op een kleur en de app krijgt die kleur meteen, terwijl je op de pagina blijft. Zo zie je eerst hoe het eruitziet. Goed zo? Tik op Verder. Wisselen kan later bij Instellingen › Weergave.',
       'Bij Instellingen › Weergave blijf je na een keuze op de pagina. Zo zie je de kleuren meteen en kun je direct een andere proberen. Met de pijl terug ga je verder.',
       'Wat doe je? Je leest eerst de situatie en tikt dan op "Toon de antwoorden"; dan pas zie je de drie antwoorden. Zo denk je eerst zelf na, en staat niet alles tegelijk op het scherm. Elf lange situaties zijn ook korter geschreven, met dezelfde inhoud.',
       'Instellingen › Lessen › Tempo heeft nu drie keuzes: Rustig, Normaal en Sneller leren (normaal tempo en minder uitleg in nieuwe lessen). De aparte rij "Sneller leren" is weg.',
