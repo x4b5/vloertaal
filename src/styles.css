@@ -19,8 +19,10 @@
   /* Faint text (--faint) and icons: 4.5:1 or more on the floor, paper and the yellow tint
      (was #6e737a: 3.7:1 on the floor). */
   --ink-3: #655a4e;
-  --concrete: #f3ede3;        /* light sand ("Rustig zand"; was #efe4d1) */
-  --concrete-2: #e6ddcf;
+  /* The floor: real sand, so the light cards stand out on it (the owner, 3 November 2026: more
+     colour in the background; was #f3ede3, "Rustig zand", and before that #efe4d1). */
+  --concrete: #eee1cc;
+  --concrete-2: #dacaaf;
   --paper: #fffdf9;
   --yellow: #f5d77a;          /* softer yellow ("Rustig zand"; was #ffc414) */
   --yellow-dark: #e0a800;
@@ -39,7 +41,7 @@
   --card: var(--paper);
   --line: #e2d8c8;          /* light border of cards and options */
   --track: var(--concrete-2); /* empty segments, tracks, dividers */
-  --edge: #8a7e6c;          /* soft warm border of cards and bubbles: 3.2:1 on the background, enough to see, quiet enough to step back ("Vloertaal rustiger", fase 1) */
+  --edge: #8a7e6c;          /* soft warm border of cards and bubbles: 3:1 on the background, enough to see, quiet enough to step back ("Vloertaal rustiger", fase 1) */
   --edge-strong: var(--ink); /* what is picked, focused or on: the one thing that stands out */
   --solid: var(--ink);      /* dark button */
   --on-solid: var(--paper);
@@ -124,8 +126,8 @@
     --ink-2: #b9b4ab;
     --ink-3: #adb2b6; /* was #9aa0a6: 3.7:1 on the yellow mark (.rb-marked) */
     --concrete: #1b1916;
-    --concrete-2: #302b26;
-    --paper: #27231f;
+    --concrete-2: #3a342e;
+    --paper: #2f2a25; /* cards a step lighter than the floor (was #27231f) */
     --kraft: #8a6236;
     --kraft-light: #3d3021;
     --kraft-dark: #e8c48f;
@@ -165,8 +167,8 @@
   --ink-2: #b9b4ab;
   --ink-3: #adb2b6; /* was #9aa0a6: 3.7:1 on the yellow mark (.rb-marked) */
   --concrete: #1b1916;
-  --concrete-2: #302b26;
-  --paper: #27231f;
+  --concrete-2: #3a342e;
+  --paper: #2f2a25; /* cards a step lighter than the floor (was #27231f) */
   --kraft: #8a6236;
   --kraft-light: #3d3021;
   --kraft-dark: #e8c48f;
@@ -208,10 +210,10 @@
    tokens that differ from Zand; every text colour 4.5:1 or more, the answer edge 3:1. */
 :root[data-theme='haven'] {
   --ink: #0f2e33;
-  --ink-2: #45626a;
+  --ink-2: #3d5a61;          /* 4.5:1 on the deeper track (was #45626a) */
   --ink-3: #4a646b;
-  --concrete: #e8f0f0;
-  --concrete-2: #d3e2e4;
+  --concrete: #d0e9e8;       /* a soft sea green (was #e8f0f0, nearly white) */
+  --concrete-2: #b5d3d3;
   --paper: #ffffff;
   --yellow: #ffe27a;
   --yellow-hover: #ffe999;
@@ -219,8 +221,8 @@
   --kraft-light: #d6ecec;
   --kraft-dark: #0c5960;
   --line: #d3e0e2;
-  --edge: #6d8a90;
-  --choice-edge: #6d8a90;
+  --edge: #6a878d;
+  --choice-edge: #6a878d;
   --tag-bg: #d6ecec;
   --locked-shadow: #c3d4d6;
   --solid: #0f4c55;
@@ -233,8 +235,8 @@
   --ink: #14233a;
   --ink-2: #44546a;
   --ink-3: #45536a;
-  --concrete: #eceff3;
-  --concrete-2: #d7dee7;
+  --concrete: #d9e4f3;       /* a light workwear blue (was #eceff3, light grey) */
+  --concrete-2: #bfcee0;
   --paper: #ffffff;
   --yellow: #ffbf8f;
   --yellow-hover: #ffcca5;
@@ -3337,9 +3339,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* Settings > Weergave: each colour as a round swatch of its floor and its strong colour. Fixed
    colours on purpose: a swatch shows that palette, whatever the current one is. */
 .theme-swatch { display: block; width: 40px; height: 40px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--edge); }
-.theme-swatch-light { background: linear-gradient(135deg, #f3ede3 50%, #2b2620 50%); }
-.theme-swatch-haven { background: linear-gradient(135deg, #e8f0f0 50%, #0f4c55 50%); }
-.theme-swatch-werkjas { background: linear-gradient(135deg, #eceff3 50%, #1b3354 50%); }
+.theme-swatch-light { background: linear-gradient(135deg, #eee1cc 50%, #2b2620 50%); }
+.theme-swatch-haven { background: linear-gradient(135deg, #d0e9e8 50%, #0f4c55 50%); }
+.theme-swatch-werkjas { background: linear-gradient(135deg, #d9e4f3 50%, #1b3354 50%); }
 .theme-swatch-dark { background: linear-gradient(135deg, #1b1916 50%, #ffc414 50%); }
 /* The first run's colour page: Continue pinned at the bottom of the screen, always in view, over
    the full width (the screen's own side padding taken back). */

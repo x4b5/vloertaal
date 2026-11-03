@@ -43,13 +43,13 @@ describe('index.html asks for a returning learner’s files at once (vite.config
     };
     expect(look({ theme: 'dark', textSize: 'xl' })).toEqual({ theme: 'dark', text: 'xl', metas: '#1b1916 #1b1916' });
     // 'auto' from before light became the default: light; chosen since (themeVersion 3): follows the phone.
-    expect(look({ theme: 'auto', textSize: 'normal' })).toEqual({ theme: 'light', metas: '#f3ede3 #f3ede3' });
+    expect(look({ theme: 'auto', textSize: 'normal' })).toEqual({ theme: 'light', metas: '#eee1cc #eee1cc' });
     expect(look({ theme: 'auto', themeVersion: 3, textSize: 'normal' })).toEqual({ metas: '' });
     // A save from before the choice: light, as the app reads it.
-    expect(look({})).toEqual({ theme: 'light', metas: '#f3ede3 #f3ede3' });
+    expect(look({})).toEqual({ theme: 'light', metas: '#eee1cc #eee1cc' });
     // The colours from Settings > Weergave; an unknown one is the default (Zand).
-    expect(look({ theme: 'haven', themeVersion: 3 })).toEqual({ theme: 'haven', metas: '#e8f0f0 #e8f0f0' });
-    expect(look({ theme: 'werkjas', themeVersion: 3 })).toEqual({ theme: 'werkjas', metas: '#eceff3 #eceff3' });
-    expect(look({ theme: 'constructor', themeVersion: 3 })).toEqual({ theme: 'light', metas: '#f3ede3 #f3ede3' });
+    expect(look({ theme: 'haven', themeVersion: 3 })).toEqual({ theme: 'haven', metas: '#d0e9e8 #d0e9e8' });
+    expect(look({ theme: 'werkjas', themeVersion: 3 })).toEqual({ theme: 'werkjas', metas: '#d9e4f3 #d9e4f3' });
+    expect(look({ theme: 'constructor', themeVersion: 3 })).toEqual({ theme: 'light', metas: '#eee1cc #eee1cc' });
   });
 });

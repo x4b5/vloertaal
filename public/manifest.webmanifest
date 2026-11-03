@@ -7,7 +7,7 @@
   "lang": "nl",
   "description": "Free Dutch for the work floor, and how work goes here. With help in your own language.",
   "display": "standalone",
-  "background_color": "#f3ede3",
+  "background_color": "#eee1cc",
   "theme_color": "#1e2226",
   "icons": [
     {
