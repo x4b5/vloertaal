@@ -153,7 +153,6 @@ const lang: HelpLanguageSource = {
     remindEvent: 'C’est l’heure de ton néerlandais (10 minutes)',
     remindHint: 'Le calendrier de ton téléphone te le rappelle. Rien ne nous est envoyé.',
     remindBefore: 'Avant le travail',
-    remindBreak: 'Pendant la pause',
     remindAfter: 'Après le travail',
     remindOwn: 'Autre heure',
     remindAdd: 'Ajouter à mon calendrier',

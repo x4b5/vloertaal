@@ -531,7 +531,8 @@ function defineStates(LANG) {
   add('after:streak-30', shot('streak&n=30&rest=1&best=40'));
   add('after:keep', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); }, { expect: '.keep-no.keep3-btn' });
   add('after:keep-install', shot('streak&n=1&install=prompt'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); await tap(p, '.keep-no'); await settle(p, 700); });
-  // The reminder's "Other time" page: three times and the back arrow.
+  // The reminder's "Other time" page: "Voor het werk", "Kies zelf" and the back arrow (no time in
+  // the break since 4 November 2026: a break is for rest).
   add('after:keep-times', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); await tap(p, '.keep-other'); await settle(p, 700); }, { expect: '.keep3-step-times .chrome-back' });
   add('after:keep-times-back', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); await tap(p, '.keep-other'); await settle(p, 700); await tap(p, '.chrome-back'); await settle(p, 700); }, { expect: '.keep-yes' });
   add('after:keep-added', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); await tap(p, '.keep-yes'); await settle(p, 700); });

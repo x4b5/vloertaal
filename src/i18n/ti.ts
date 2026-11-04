@@ -154,7 +154,6 @@ const lang: HelpLanguageSource = {
     remindEvent: 'ግዜ ንሆላንድኛ (10 ደቓይቕ)',
     remindHint: { m: 'ካሌንደር ተሌፎንካ የዘኻኽረካ። ናባና ዝለኣኽ ነገር የለን።', f: 'ካሌንደር ተሌፎንኪ የዘኻኽረኪ። ናባና ዝለኣኽ ነገር የለን።', x: 'ካሌንደር ተሌፎንኩም የዘኻኽረኩም። ናባና ዝለኣኽ ነገር የለን።' }, // x: nieuw, nalezen
     remindBefore: 'ቅድሚ ስራሕ',
-    remindBreak: 'ኣብ ዕረፍቲ',
     remindAfter: 'ድሕሪ ስራሕ',
     remindOwn: 'ካልእ ሰዓት',
     remindAdd: { m: 'ኣብ ካሌንደረይ ወስኽ', f: 'ኣብ ካሌንደረይ ወስኺ', x: 'ኣብ ካሌንደረይ ወስኹ' }, // x: nieuw, nalezen

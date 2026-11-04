@@ -153,7 +153,6 @@ const lang: HelpLanguageSource = {
     remindEvent: 'E timpul pentru olandeză (10 minute)',
     remindHint: 'Calendarul telefonului îți amintește. Nu ni se trimite nimic.',
     remindBefore: 'Înainte de lucru',
-    remindBreak: 'În pauză',
     remindAfter: 'După lucru',
     remindOwn: 'Altă oră',
     remindAdd: 'Adaugă în calendarul meu',

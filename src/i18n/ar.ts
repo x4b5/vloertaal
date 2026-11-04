@@ -153,7 +153,6 @@ const lang: HelpLanguageSource = {
     remindEvent: 'وقت الهولندية (10 دقائق)',
     remindHint: 'تقويم هاتفك يذكّرك. لا يُرسل إلينا أي شيء.',
     remindBefore: 'قبل العمل',
-    remindBreak: 'في الاستراحة',
     remindAfter: 'بعد العمل',
     remindOwn: 'وقت آخر',
     remindAdd: { m: 'أضف إلى تقويمي', f: 'أضيفي إلى تقويمي', x: 'إضافة إلى تقويمي' }, // x: nieuw, nalezen
