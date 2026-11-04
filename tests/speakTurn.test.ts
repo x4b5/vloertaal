@@ -41,7 +41,8 @@ describe('"Wat zeg je?" after the chat', () => {
     expect(chat.reverse).toBeUndefined();
     expect(chat.dialogue).toBe(turn.turn);
     expect(turn.item).toEqual({ id: chat.dialogue.reply.id, nl: chat.dialogue.reply.nl, en: chat.dialogue.reply.en });
-    // The usual "say it" stays too: speaking is doubled.
+    // A second speaking exercise too: the sentence of "Probeer het vandaag" at the end (in the
+    // place of the usual "say it", tests/workTurn.test.ts).
     expect(list.filter((e) => e.kind === 'speak')).toHaveLength(2);
   });
 
@@ -100,7 +101,10 @@ describe('"Wat zeg je?" after the chat', () => {
     it(`${lesson.id}: makes the lesson at most one longer, and takes the place of a less important exercise in a long one`, () => {
       for (const review of [false, true]) {
         for (const seed of [1, 42, 999]) {
-          const without = buildLesson(lesson, { review, seed, speak: true });
+          // The same lesson without the chat's turn: its colleague's line not recorded (the
+          // sentence of "Probeer het vandaag" still is, so its own turn is in both).
+          const prompts = new Set((lesson.dialogues ?? []).map((d) => d.prompt.nl));
+          const without = buildLesson(lesson, { review, seed, speak: true, recorded: (t) => !prompts.has(t) });
           const list = buildLesson(lesson, { review, seed, speak: true, recorded: all });
           const turns = turnOf(list);
           expect(turns).toHaveLength(lesson.dialogues?.length ? 1 : 0);

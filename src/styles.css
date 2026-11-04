@@ -4930,6 +4930,11 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .say-reveal { flex: 1 1 100%; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; }
 .say-turn-chat .chat-bubble-me:has(.chat-line) { flex-wrap: wrap; justify-content: flex-start; flex: 0 1 auto; }
 .say-turn .say-face-example { color: var(--blue); }
+/* "Wat zeg je?" on the sentence of "Probeer het vandaag" (`work`): "When:" small above the moment,
+   as on the card; with no moment, the meaning on a card of its own. */
+.say-work-when { flex-direction: column; align-items: flex-start; gap: 4px; }
+.say-work-kicker { font-size: var(--fs-small); font-weight: 700; color: var(--muted); line-height: 1.25; }
+.say-work-meaning { padding: 14px 16px; margin-bottom: 12px; font-weight: 600; font-size: 1.0625rem; line-height: 1.4; }
 /* "Zeg het zo" on a page of its own (the tip's second page): the phrase big, the title small above it. */
 .tip-page-say .tip-title-small { font-size: 1.05rem; color: var(--muted); }
 .tip-say-page { margin-top: 12px; }

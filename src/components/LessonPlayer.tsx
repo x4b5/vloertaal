@@ -804,7 +804,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   function next(queued?: number) {
     const coming = typeof queued === 'number' ? queued : 0;
     // A sentence said ("Zeg het", never graded): it gets a spoken-sentence card (lib/spaced.ts).
-    // ("Wat zeg je?" is a reply of a chat, not a sentence of the lesson: no card.)
+    // So does the sentence of "Probeer het vandaag" said at the end (`work`). ("Wat zeg je?" after
+    // a chat is a reply of that chat, not a sentence of the lesson: no card.)
     if (ex?.kind === 'speak' && index < initial.length && !isWord(ex.item) && !ex.turn) {
       wordResults.current[speakCardId(ex.item.id)] = true;
       made.current.add(speakCardId(ex.item.id));

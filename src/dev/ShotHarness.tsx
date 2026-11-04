@@ -26,7 +26,7 @@ import { getHelpLanguage } from '../i18n';
 import { GenderScreen } from '../components/Gender';
 import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies } from '../content/curriculum';
-import { buildLesson, buildTiles, buildRuleLesson, forRetry, frontExercise, frontSource, RULE_KINDS, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
+import { buildLesson, buildTiles, buildRuleLesson, forRetry, frontExercise, frontSource, RULE_KINDS, workTurn, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
 import { setSpeakShotHeard, setSpeakShotPhase, setSpeakShotRefused } from '../components/Speaking';
 import { createRng } from '../lib/random';
@@ -434,8 +434,11 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     // &heard=wait while it listens.
     const heard = q.get('heard');
     setSpeakShotHeard(heard === 'same' ? item.nl : heard === 'almost' ? item.nl.split(' ').slice(0, -1).join(' ') : heard ?? undefined);
-    // &turn=1: "Wat zeg je?" before the chat (the shift chat): the reply is what to say.
-    exercises[shot] = q.get('turn') ? { kind: 'speak', item: { ...coffee.reply }, turn: coffee } : { kind: 'speak', item };
+    // &turn=1: "Wat zeg je?" after the chat (the shift chat): the reply is what to say.
+    // &work=l.gear: "Wat zeg je?" on the sentence of "Probeer het vandaag" of that lesson (its moment;
+    // l.people a moment with a Dutch quote, l.hello none: the meaning).
+    const work = q.get('work') ? workTurn(findLesson(q.get('work')!)!.lesson, () => true) : undefined;
+    exercises[shot] = work ?? (q.get('turn') ? { kind: 'speak', item: { ...coffee.reply }, turn: coffee } : { kind: 'speak', item });
   }
   const ex = exercises[shot] ?? exercises.dutch;
   // A few intro exercises in front would move the progress bar; pad so it sits at ~40%.

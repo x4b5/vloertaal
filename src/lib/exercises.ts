@@ -18,6 +18,7 @@ import { DAILY_ID, MADE_FROM_BOX } from './spaced';
 import { typable } from './typable';
 import { regionTaalLessons } from '../content/regio';
 import { type LessonSaying, sayingForLesson, sayingQuestion } from '../content/sayings';
+import { workTryLine } from './workTry';
 
 export type Exercise =
   | { kind: 'intro'; word: Word }
@@ -56,10 +57,24 @@ export type Exercise =
   | { kind: 'situation'; tip: CultureTip; options: CultureTip['options'] }
   /** "Say it": hear the Dutch, record yourself, compare, rate yourself. Never graded (lib/speaking.ts).
    *  `turn` ("Wat zeg je?", right after that chat): the colleague's line is heard and the learner
-   *  says the reply (`item`) first; only then is the reply shown and played as the example. */
-  | { kind: 'speak'; item: SpeakItem; turn?: Dialogue }
+   *  says the reply (`item`) first; only then is the reply shown and played as the example.
+   *  `work` ("Wat zeg je?" on the sentence of "Probeer het vandaag", workTurn): the same, with the
+   *  moment of that card as the question. */
+  | { kind: 'speak'; item: SpeakItem; turn?: Dialogue; work?: WorkTurn }
   /** The work-rules track (src/content/regels): one step of a rules lesson (buildRuleLesson). */
   | RuleExercise;
+
+/**
+ * The question of "Wat zeg je?" on the sentence to try at work today (lib/workTry.ts): the moment
+ * of the card ("Als: …", the tip's situation, `when`), with the Dutch quoted in it (`said`, said
+ * by the tip's character). A tip whose situation asks what a line means has no moment: then the
+ * sentence's meaning is the question.
+ */
+export interface WorkTurn {
+  tip: CultureTip;
+  when?: { id: string; en: string };
+  said?: string;
+}
 
 /** "Zet het vooraan": the line as it stands in the course, and the words of it to put first. */
 export interface FrontTask {
@@ -1233,13 +1248,37 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // Speaking practice (Settings, on by default; never "Without sound"): one "say it" near the
   // end, placed after the rest is built so the other exercises stay the same with or without it.
   if (!opts.speak || opts.quiet) return unwritten(out);
-  const spoken = withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);
+  // The sentence of "Probeer het vandaag" (workTurn): said from memory as the last exercise, in
+  // the place of the "say it" (the lesson keeps its length).
+  const work = !mix && !easy ? workTurn(lesson, opts.recorded) : undefined;
+  const spoken = work ? [...out, work] : withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);
   // "Wat zeg je?" after a chat: in a lesson of its own (not a review of a topic, not today's
   // review, not the shorter lesson after many mistakes), for a chat whose two lines are recorded.
   const turnFor = !mix && !easy && opts.recorded ? dialogues.find((d) => opts.recorded!(d.prompt.nl) && opts.recorded!(d.reply.nl)) : undefined;
   // With "Zet het vooraan" there is no picture choice: the reversed chat (a chat of the lesson
   // before) then makes room, so the lesson never grows past its 21.
   return unwritten(turnFor ? withTurn(spoken, turnFor, [secondListen, pictureChoice, turnedChat]) : spoken);
+}
+
+/**
+ * "Wat zeg je?" on the sentence to try at work today (the owner's request, 4 November 2026): at
+ * the end of the lesson, right before the result with "Probeer het vandaag op je werk", the
+ * learner says that sentence from memory, then hears it (Speaking.tsx, never graded, as the turn
+ * of a chat). The question is the moment of the card (WorkTurn). The sentence is exactly the
+ * card's (workTryLine): the tip's "Zeg het zo", or for a tip with a name in it another line of
+ * the lesson. Before, the learner only read and heard it on the tip's pages. It takes the place
+ * of the lesson's "say it" (one sentence the lesson built, to repeat), so the lesson keeps its
+ * length; its sentence gets the spoken-sentence card instead (lib/spaced.ts sayLine). In a
+ * lesson of its own (not a topic's review, not today's review, not the shorter lesson after many
+ * mistakes), with speaking and sound on, and only when the sentence is recorded in "your" voice
+ * (`recorded`, as the turn of a chat): it is the example heard after saying it.
+ */
+export function workTurn(lesson: Lesson, recorded?: (text: string) => boolean): Extract<Exercise, { kind: 'speak' }> | undefined {
+  const tip = tipForLesson(lesson.id);
+  const line = tip && recorded ? workTryLine(lesson.id) : undefined;
+  if (!tip || !line || !recorded!(line.nl)) return undefined;
+  const said = line.when ? tip.situation.nl : undefined;
+  return { kind: 'speak', item: { id: line.id, nl: line.nl, en: line.en }, work: { tip, ...(line.when ? { when: line.when } : {}), ...(said ? { said } : {}) } };
 }
 
 /**

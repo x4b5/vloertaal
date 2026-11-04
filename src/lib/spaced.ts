@@ -9,6 +9,7 @@ import type { Dialogue, Lesson, Sentence, Unit, Word } from '../content/types';
 import { dayKey } from './progress';
 import type { Track } from './track';
 import { typable } from './typable';
+import { workTryLine } from './workTry';
 
 /**
  * "Herhaal vandaag": spaced repetition with a card box (Leitner). Every word the learner met
@@ -236,7 +237,7 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   const words = ids.map((id) => wordById().get(id)).filter((w): w is Word => Boolean(w));
   // Sentence cards (2 at most) and a spoken sentence (1) that came along with today's words.
   const boxSentences = ids.map((id) => sentenceById().get(id)).filter((s): s is Sentence => Boolean(s)).slice(0, SENTENCE_DAILY_MAX);
-  const say = ids.filter(isSpeakCard).map((id) => sentenceById().get(id.slice(SPEAK_PREFIX.length))).find((s): s is Sentence => Boolean(s));
+  const say = ids.filter(isSpeakCard).map((id) => sayLine(id.slice(SPEAK_PREFIX.length))).find((s): s is Sentence => Boolean(s));
   const boxes = Object.fromEntries(words.map((w) => [w.id, cards[w.id]?.box ?? 1]));
   const idSet = new Set(ids);
   const n = day ? dayNumber(day) : 0;
@@ -451,8 +452,8 @@ export function dailyRuleLesson(ids: readonly string[]): Lesson {
 
 /**
  * Next to the words, the box holds the sentences of the lessons (by sentence id: built again in
- * today's review) and the sentence said in a lesson's "Zeg het" (by SPEAK_PREFIX + sentence id:
- * said again). The same boxes and days as a word (1, 2, 4, 7, 14, 30). They have a small limit
+ * today's review) and the sentence said in a lesson's "Zeg het", or in its "Wat zeg je?" on the
+ * sentence of "Probeer het vandaag" (by SPEAK_PREFIX + sentence id: said again). The same boxes and days as a word (1, 2, 4, 7, 14, 30). They have a small limit
  * of their own, so the review stays short: SENTENCE_DAILY_MAX sentences to build and
  * SPEAK_DAILY_MAX to say. They come along with today's words (dailyIds): a day with no word due
  * has no review, and the sentences wait for the next one. Saves from before have no sentence
@@ -478,6 +479,29 @@ function sentenceById(): Map<string, Sentence> {
   return sentenceIndex.byId;
 }
 
+// The sentence of "Probeer het vandaag" of each lesson (lib/workTry.ts) by id: said from memory at
+// the end of its lesson (exercises.ts workTurn), so it gets the spoken-sentence card that the
+// lesson's "say it" had. Most are the tips' "Zeg het zo" phrases, not sentences of a lesson.
+let workIndex: { key: string; byId: Map<string, Sentence> } | null = null;
+function workLineById(): Map<string, Sentence> {
+  const lessons = [...teachingLessons, ...beOnlyTaalLessons().filter((l) => !isMixLesson(l)), ...regionTaalLessons()];
+  const key = `${lessons.length}:${taalBeActive()}`;
+  if (workIndex?.key !== key) {
+    const byId = new Map<string, Sentence>();
+    for (const l of lessons) {
+      const line = workTryLine(l.id);
+      if (line) byId.set(line.id, { id: line.id, nl: line.nl, en: line.en });
+    }
+    workIndex = { key, byId };
+  }
+  return workIndex.byId;
+}
+
+/** A sentence that can be said again (a spoken-sentence card): one of the course, or the sentence of "Probeer het vandaag". */
+function sayLine(id: string): Sentence | undefined {
+  return sentenceById().get(id) ?? workLineById().get(id);
+}
+
 /** A sentence card to build (a sentence id of the course). */
 export const isBuildCard = (id: string): boolean => sentenceById().has(id);
 /** A sentence card of either kind (built or said): not a word, not a rules question. */
@@ -498,7 +522,7 @@ export function dailySentenceIds(cards: Cards, today: string): string[] {
 
 /** The spoken-sentence cards for today (at most SPEAK_DAILY_MAX); only known sentences. */
 export function dailySpeakIds(cards: Cards, today: string): string[] {
-  return dueOf(cards, today, (id) => isSpeakCard(id) && sentenceById().has(id.slice(SPEAK_PREFIX.length))).slice(0, SPEAK_DAILY_MAX);
+  return dueOf(cards, today, (id) => isSpeakCard(id) && Boolean(sayLine(id.slice(SPEAK_PREFIX.length)))).slice(0, SPEAK_DAILY_MAX);
 }
 
 /**
@@ -512,11 +536,12 @@ export function dailyIds(cards: Cards, today: string): string[] {
 
 /**
  * After a lesson of the language course: its sentences get a card (the ones built), and so does
- * the sentence that was said (results[speakCardId(id)]), as addLessonItems does for words.
+ * the sentence that was said (results[speakCardId(id)]; a sentence of the course or the sentence
+ * of "Probeer het vandaag", sayLine), as addLessonItems does for words.
  */
 export function addLessonSentences(cards: Cards, sentences: readonly Sentence[], results: Record<string, boolean>, today: string): Cards {
   const known = sentenceById();
-  const said = Object.keys(results).filter((id) => isSpeakCard(id) && results[id] && known.has(id.slice(SPEAK_PREFIX.length)));
+  const said = Object.keys(results).filter((id) => isSpeakCard(id) && results[id] && sayLine(id.slice(SPEAK_PREFIX.length)));
   // Only the sentences that were built (they have a result): one left out (a shorter lesson) waits.
   return addLessonItems(cards, [...sentences.filter((s) => known.has(s.id) && s.id in results).map((s) => s.id), ...said], results, today);
 }

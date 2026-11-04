@@ -214,6 +214,15 @@ Een gesprek zonder opname krijgt "Wat zeg je?" nog niet (nu 77 van de 102 gespre
 ontbrekende zinnen op (stap 1 tot en met 4), dan komt "Wat zeg je?" er vanzelf bij. Er hoeft dan
 niets aan de code te veranderen.
 
+Aan het eind van een les komt ook "Wat zeg je?" op de zin van "Probeer het vandaag": de leerling
+krijgt het moment van de kaart als vraag en zegt de zin. Dat kan alleen als die zin is opgenomen in de
+stem van de leerling (Thijmen en Ariel). Nu hebben 73 van de 96 zinnen een opname. Zonder opname blijft
+daar het gewone "Zeg het". Nog op te nemen (4 november 2026): `c.dates.p`, `c.permit.p`,
+`c.kids.p`, `c.mychoice.p`, `c.nextstep.p`, `c.body.p`, `c.healthy.p`, `c.budget.p`,
+`c.jobends.p`, `c.harvest.p`, `c.greensafe.p`, `c.workorder.p`, `c.handover.p`, `c.workshop.p`,
+`c.power.p`, `c.garage.p`, `c.carjob.p`, `c.placement.p`, `c.review.p`, `c.council.p`,
+`c.police.p`, `c.login.p`, `c.phish.p`.
+
 ## 7. De geluidsscènes ("Luister op de werkvloer")
 
 De 30 geluidsscènes (`src/content/geluidsscenes.ts`) zijn een collega op gewoon tempo, met lawaai

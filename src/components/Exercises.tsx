@@ -7,7 +7,7 @@ import { checkTyped, nextTileOrder, sentenceOrders, typoMarks } from '../lib/ans
 import { autoSpeak, sounds, speak } from '../lib/audio';
 import { allTiles, buildSteps, choicePictures, frontSteps, matchAsked, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
-import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
+import { breakable, sentences, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
@@ -22,6 +22,7 @@ import { letterSteps } from '../lib/letters';
 import { createRng } from '../lib/random';
 import { typeAsPick, writingInput } from '../lib/writing';
 import { HelpSay } from './HelpSay';
+import { SituationText } from './SituationText';
 import { BeNote } from './BeNote';
 import { tipNlOnly } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
@@ -1300,49 +1301,6 @@ function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
 
 /** The heading of each kind of situation (src/content/culture.ts SituationAsk). */
 const ASK_PROMPT = { whatdo: 'whatDoYouDo', whatsay: 'whatDoYouSay', which: 'whatIsRight' } as const;
-
-/**
- * The situation's text, with the Dutch said in it once: in its own place, on a line of its own
- * with its speaker ('Przełożony mówi:' / [🔊 Morgen begin je om half negen.] / 'O której …?').
- * A text that does not quote the Dutch as it is keeps the Dutch line above it.
- */
-function SituationText({ text, said, who, lang }: { text: Bilingual; said: string; who: CharacterId; lang?: HelpLanguage }) {
-  const main = text.help ?? text.en;
-  const parts = splitQuote(main, said);
-  const rtl = text.help && text.lang?.dir === 'rtl';
-  const quote = (
-    <span className="situation-quote" dir="ltr">
-      <span lang="nl" className="situation-nl">{breakable(said)}</span>
-      <SpeakButton glyph text={said} help={lang} voice={voiceFor(who)} />
-    </span>
-  );
-  if (!parts) {
-    return (
-      <>
-        {quote}
-        <span className="help-say-row">
-          <Bi text={text} />
-          <HelpSay text={text.help} lang={lang} />
-        </span>
-      </>
-    );
-  }
-  const line = (t: string) => (text.help && text.lang ? <HelpText className="situation-line" text={t} lang={text.lang} /> : <span className="situation-line">{t}</span>);
-  return (
-    <span className="help-say-row">
-      <span className={`bi situation-lines ${text.help ? 'bi-swap' : ''}`} dir={rtl ? 'rtl' : undefined}>
-        <span className="bi-en">
-          {parts.before && line(parts.before)}
-          {quote}
-          {parts.after && line(parts.after)}
-        </span>
-        {/* The English under it (hidden unless "Show English" is on), as in every pair. */}
-        {text.help && <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{text.en}</span>}
-      </span>
-      <HelpSay text={text.help} lang={lang} />
-    </span>
-  );
-}
 
 /** "What do you do?" (or "What do you say?", "What is right?"): pick the usual answer to a workplace situation. */
 export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props<'situation'>) {

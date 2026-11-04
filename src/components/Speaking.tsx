@@ -15,7 +15,10 @@ import { hasPicture } from '../lib/wordPicture';
 import { pictureCast, WordPicture } from '../pictures';
 import { Bi } from './Bi';
 import { NlPair } from './NlPair';
-import { castFor, Character, colleaguesOf, MeAvatar, type CharacterId } from './Characters';
+import { castFor, Character, colleaguesOf, MeAvatar, tipCast, type CharacterId } from './Characters';
+import { dropAsk } from '../lib/dropAsk';
+import { HelpSay } from './HelpSay';
+import { SituationText } from './SituationText';
 import { LockIcon, SpeakerIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { focusIsLost } from './useFocusLost';
@@ -109,15 +112,19 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   /** Screenshot harness only: what the phone "heard" (judged as usual), or 'wait'. */
   heardForShot?: string;
 }) {
-  const { item, turn } = ex;
-  const picture = turn ? undefined : isWord(item) ? (hasPicture(item) ? item : undefined) : sentencePicture(item);
+  const { item, turn, work } = ex;
+  /** "Wat zeg je?" (after a chat, or on the sentence of "Probeer het vandaag"): say it first, then see and hear it. */
+  const asks = Boolean(turn || work);
+  const picture = asks ? undefined : isWord(item) ? (hasPicture(item) ? item : undefined) : sentencePicture(item);
   // The speaker is the person in the picture when it shows one of the cast, so the face on the
   // card, the voice and the name on the compare button are the same character.
   // "Wat zeg je?" (`turn`): the reply is "your" line, in the voice "you" have in the chats (Amina's,
-  // or Bram's for a man); the colleague who asks is the one of that chat (ChatExercise).
-  const who: CharacterId = turn ? learnerCharacter(lang?.gender) : (picture && pictureCast(picture.id)) || (isWord(item) ? 'bram' : castFor(item.id));
+  // or Bram's for a man); the colleague who asks is the one of that chat (ChatExercise). On the
+  // sentence of "Probeer het vandaag" (`work`) the person in the situation is the tip's (as in its
+  // "What do you do?"), and the sentence is "yours" too (the card plays it in your voice).
+  const who: CharacterId = asks ? learnerCharacter(lang?.gender) : (picture && pictureCast(picture.id)) || (isWord(item) ? 'bram' : castFor(item.id));
   const voice = voiceFor(who);
-  const them = turn ? castFor(turn.prompt.id, colleaguesOf(lang?.gender)) : undefined;
+  const them = turn ? castFor(turn.prompt.id, colleaguesOf(lang?.gender)) : work ? tipCast(work.tip, lang?.gender) : undefined;
   const themVoice = them ? voiceFor(them) : undefined;
   /** "Wat zeg je?" without recording ("say it out loud"): the reply shows after "Hear the answer". */
   const [shown, setShown] = useState(false);
@@ -249,12 +256,13 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   }, []);
 
   // Say it once when the exercise opens (not in "Without sound"); let go of everything on leave.
-  // "Wat zeg je?": the colleague's line, never the reply (the learner says that first).
-  const opening = turn ? turn.prompt.nl : item.nl;
-  const openingVoice = turn ? themVoice : voice;
+  // "Wat zeg je?": the colleague's line, never the reply (the learner says that first); on the
+  // sentence of "Probeer het vandaag" the Dutch quoted in its situation, if any.
+  const opening = turn ? turn.prompt.nl : work ? work.said : item.nl;
+  const openingVoice = asks ? themVoice : voice;
   useEffect(() => {
     alive.current = true;
-    if (!phaseForShot) autoSpeak(opening, false, 'nl', openingVoice);
+    if (!phaseForShot && opening) autoSpeak(opening, false, 'nl', openingVoice);
     return () => {
       alive.current = false;
       const rec = recRef.current;
@@ -458,10 +466,22 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   // "Wat zeg je?": the reply is shown once the learner has said it (recorded, or out loud and then
   // "Hear the answer").
   const revealed = phase === 'review' || shown;
+  // On the sentence of "Probeer het vandaag": its moment as on the card ("When: …", without the
+  // closing question of the situation), or, with none, its meaning (then not again under the Dutch).
+  const when = work?.when ? gloss(work.when.id, work.when.en, lang) : undefined;
+  const moment = when && { ...when, en: dropAsk(when.en), ...(when.help ? { help: dropAsk(when.help) } : {}) };
+  const yours = revealed ? (
+    <>
+      {/* Your line, to hear again (after recording, the example and your try played by themselves). */}
+      <span className="chat-line" lang="nl">{breakable(item.nl)}</span>
+      <SpeakButton glyph text={item.nl} help={lang} voice={voice} />
+      {!(work && !moment) && <span className="chat-hint"><Bi text={meaning} /></span>}
+    </>
+  ) : <span className="chat-blank" aria-hidden />;
 
   return (
-    <div className={`exercise say-ex say-is-${phase} ${turn ? 'say-turn' : ''}`} ref={box}>
-      <h2 className="prompt" tabIndex={-1}><Bi text={ui(turn ? 'speakTurnPrompt' : 'speakPrompt', lang)} /></h2>
+    <div className={`exercise say-ex say-is-${phase} ${asks ? 'say-turn' : ''} ${work ? 'say-work' : ''}`} ref={box}>
+      <h2 className="prompt" tabIndex={-1}><Bi text={ui(asks ? 'speakTurnPrompt' : 'speakPrompt', lang)} /></h2>
       {turn && them ? (
         <div className="chat say-turn-chat">
           <div className="chat-row chat-them">
@@ -474,16 +494,38 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
             </div>
           </div>
           <div className="chat-row chat-me">
-            <div className="chat-bubble chat-bubble-me" aria-live="polite">
-              {revealed ? (
-                <>
-                  {/* Your reply, to hear again (after recording, the example and your try played by themselves). */}
-                  <span className="chat-line" lang="nl">{breakable(item.nl)}</span>
-                  <SpeakButton glyph text={item.nl} help={lang} voice={voice} />
-                  <span className="chat-hint"><Bi text={meaning} /></span>
-                </>
-              ) : <span className="chat-blank" aria-hidden />}
+            <div className="chat-bubble chat-bubble-me" aria-live="polite">{yours}</div>
+            <span className="chat-char"><MeAvatar /></span>
+          </div>
+        </div>
+      ) : work ? (
+        <div className="chat say-turn-chat say-work-chat">
+          {moment && them ? (
+            // The moment, as the tip's "What do you do?" showed it: the person in it, the situation
+            // in the help language (read aloud where the phone can), its Dutch quote with a speaker.
+            <div className="chat-row chat-them">
+              <span className="chat-char"><Character who={them} /></span>
+              <div className="chat-bubble situation-text say-work-when">
+                <span className="say-work-kicker"><Bi text={ui('workTryWhen', lang)} /></span>
+                {work.said ? <SituationText text={moment} said={work.said} who={them} lang={lang} /> : (
+                  <span className="help-say-row">
+                    <Bi text={moment} />
+                    <HelpSay text={moment.help} lang={lang} />
+                  </span>
+                )}
+              </div>
             </div>
+          ) : (
+            // No moment (a tip that asks what a line means): what to say, in your own language.
+            <div className="card say-work-meaning">
+              <span className="help-say-row">
+                <Bi text={meaning} />
+                <HelpSay text={meaning.help} lang={lang} />
+              </span>
+            </div>
+          )}
+          <div className="chat-row chat-me">
+            <div className="chat-bubble chat-bubble-me" aria-live="polite">{yours}</div>
             <span className="chat-char"><MeAvatar /></span>
           </div>
         </div>
@@ -588,7 +630,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
             </button>
           )}
           {/* "Wat zeg je?": first say the answer yourself (the chat before taught it), then hear it. */}
-          {turn && !shown && !steps && (
+          {asks && !shown && !steps && (
             <button type="button" className="btn say-reveal" onClick={() => { setShown(true); playThem(); }}>
               <SpeakerIcon size={24} />
               <Bi text={ui('speakTurnReveal', lang)} />
