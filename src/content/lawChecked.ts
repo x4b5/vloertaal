@@ -6,6 +6,7 @@
  *
  * A file of its own (4 November 2026): the work-rules lines need it on the first screen, and
  * importing it from the logbook (src/content/updates.ts) put the whole logbook in the app's start
- * file, although the app loads that only when needed (src/content/updatesLive.ts).
+ * file, although the app loads that only when needed (src/content/updatesLive.ts). The build now
+ * fails on such an import (vite.config.ts, failOnDynamicImportWarnings).
  */
 export const LAW_CHECKED = '2026-10-31';

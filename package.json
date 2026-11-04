@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "typecheck": "tsc -b",
+    "size": "node scripts/bundle-size.mjs",
     "clips": "tsx scripts/list-clips.ts",
     "voices:missing": "tsx scripts/list-clips.ts && node scripts/voices/missing.mjs",
     "help:clips": "tsx scripts/list-help-clips.ts",

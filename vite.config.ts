@@ -2,7 +2,7 @@
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { defineConfig, type Plugin } from 'vite';
+import { defineConfig, type Plugin, type Rolldown } from 'vite';
 import react from '@vitejs/plugin-react';
 import { beLangSplit } from './scripts/beLangSplit';
 import { UPCOMING, UPDATES } from './src/content/updates';
@@ -234,6 +234,20 @@ function swBuild(): Plugin {
  */
 export const STABLE_CHUNK = /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]|[\\/]src[\\/]pictures[\\/]kit\.tsx$/;
 
+/**
+ * A build warning about a dynamic import fails the build. Such an import that does not split (the
+ * file is also imported statically somewhere: INEFFECTIVE_DYNAMIC_IMPORT) put the whole logbook back
+ * in the start file for days (31 October 2026) with only a line in the build output; an import()
+ * the build cannot follow (vite:dynamic-import-vars) is a file that will not load. Other logs go on
+ * as before. (Vite only prints a log of level "error", so this throws.) Guarded in CI next to the
+ * size limits (scripts/bundle-size.mjs). The owner's request, 4 November 2026.
+ */
+export const failOnDynamicImportWarnings: NonNullable<Rolldown.InputOptions['onLog']> = (level, log, handler) => {
+  if (level === 'warn' && (/DYNAMIC_IMPORT/.test(log.code ?? '') || /dynamic-import/.test(log.plugin ?? '')))
+    throw new Error(`${log.code ?? log.plugin}: ${log.message}\n(vite.config.ts failOnDynamicImportWarnings: a dynamic import that does not work as one fails the build.)`);
+  handler(level, log);
+};
+
 // Relative base so the build works on GitHub Pages or any sub-path.
 export default defineConfig({
   base: './',
@@ -264,6 +278,7 @@ export default defineConfig({
     // left-to-right on every phone, new ones too. Old phones get fallbacks in styles.css instead.
     cssTarget: ['chrome111', 'edge111', 'firefox114', 'safari16.4', 'ios16.4'],
     rolldownOptions: {
+      onLog: failOnDynamicImportWarnings,
       output: {
         codeSplitting: {
           // Everything the start needs in one file (index-*.js): without this, the code shared by the
