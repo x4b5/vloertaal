@@ -1,6 +1,7 @@
-import type { Cards } from './spaced';
+import type { Cards, DailyCard } from './spaced';
 import type { Tempo } from './tempo';
 import { isTempo } from './tempo';
+import type { Track } from './track';
 
 /**
  * Lessons that follow the learner's level (spoor Taal, docs: werkplan 2.2). Only on this phone.
@@ -92,6 +93,29 @@ export function setFaster<P extends { pace?: PaceState; tempo?: Tempo }>(p: P, o
 
 /** "Sneller leren" is on. */
 export const fasterOn = (p: { pace?: PaceState }): boolean => Boolean(p.pace?.faster);
+
+/**
+ * "Eerst herhalen, dan pas iets nieuws" (verbeterplan fase 2, V1; 4 November 2026). Today's review
+ * is done and more than REVIEW_FIRST_ABOVE words are still due: on the home "Extra ronde" is the
+ * first, yellow choice and the next lesson the second (src/components/Route.tsx). The lesson never
+ * locks: the learner may still start it.
+ *
+ * Why: a review takes at most DAILY_MAX (10) words and every lesson adds 6. At 3 sessions a week
+ * (docs/weekplan.md) a new lesson after every review makes the pile grow faster than it goes
+ * down: in the simulation (tests/reviewFirst.test.ts, after the evaluation's
+ * scratchpad/evaluatie/didactiek/scripts/sim.ts) 97 of 108 words were overdue after 8 weeks, a new
+ * word first came back after a week and a wrong one after 10 days. 15 is one and a half reviews:
+ * more than the next review can take, with the next lesson's 6 words on top. Only the language
+ * track (its words); the work-rules track's questions are left as they were.
+ *
+ * Not yet approved by the owner in so many words: to undo it, set REVIEW_FIRST_ABOVE to Infinity.
+ */
+export const REVIEW_FIRST_ABOVE = 15;
+
+/** Today's review is done and too many words still wait (see REVIEW_FIRST_ABOVE): review first. */
+export function reviewFirst(card: DailyCard | null | undefined, track: Track): boolean {
+  return track === 'taal' && card?.state === 'done' && card.extra > REVIEW_FIRST_ABOVE;
+}
 
 /**
  * Extra review after many mistakes: the cards answered wrong in the lesson are due today, so

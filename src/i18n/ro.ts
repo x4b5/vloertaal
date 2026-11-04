@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Mâine: {n} cuvânt', few: 'Mâine: {n} cuvinte', other: 'Mâine: {n} de cuvinte' },
     firstWordsTomorrow: 'Mâine se întorc primele tale cuvinte',
     extraRound: 'Rundă în plus',
+    reviewFirstHint: 'Mai întâi repetă. Așa ții minte mai mult.', // nieuw, nalezen
     wordsStrongerN: { one: '{n} cuvânt mai bine învățat', few: '{n} cuvinte mai bine învățate', other: '{n} de cuvinte mai bine învățate' },
     noMistakes: 'Fără greșeli',
     nextUp: 'Următoarea',

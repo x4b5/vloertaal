@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Morgen: {n} Wort', other: 'Morgen: {n} Wörter' },
     firstWordsTomorrow: 'Morgen kommen deine ersten Wörter wieder',
     extraRound: 'Extra-Runde',
+    reviewFirstHint: 'Erst wiederholen. Dann merkst du dir mehr.', // nieuw, nalezen
     wordsStrongerN: { one: '{n} Wort sitzt besser', other: '{n} Wörter sitzen besser' },
     noMistakes: 'Keine Fehler',
     nextUp: 'Als Nächstes',

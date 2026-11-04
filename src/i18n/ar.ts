@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { zero: 'غداً: {n} كلمة', one: 'غداً: {n} كلمة', two: 'غداً: كلمتان', few: 'غداً: {n} كلمات', many: 'غداً: {n} كلمة', other: 'غداً: {n} كلمة' },
     firstWordsTomorrow: 'غداً تعود كلماتك الأولى',
     extraRound: 'جولة إضافية',
+    reviewFirstHint: { m: 'راجِع أولاً. هكذا تتذكّر أكثر.', f: 'راجِعي أولاً. هكذا تتذكّرين أكثر.', x: 'المراجعة أولاً. هكذا يبقى في الذاكرة أكثر.' }, // nieuw, nalezen
     wordsStrongerN: { zero: 'تحسّن حفظ {n} كلمة', one: 'تحسّن حفظ {n} كلمة', two: 'تحسّن حفظ كلمتين', few: 'تحسّن حفظ {n} كلمات', many: 'تحسّن حفظ {n} كلمة', other: 'تحسّن حفظ {n} كلمة' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     noMistakes: 'بدون أخطاء',
     nextUp: 'التالي',

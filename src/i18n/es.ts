@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Mañana: {n} palabra', many: 'Mañana: {n} palabras', other: 'Mañana: {n} palabras' },
     firstWordsTomorrow: 'Mañana vuelven tus primeras palabras',
     extraRound: 'Ronda extra',
+    reviewFirstHint: 'Primero repasa. Así recuerdas más.', // nieuw, nalezen
     wordsStrongerN: { one: '{n} palabra mejor aprendida', many: '{n} palabras mejor aprendidas', other: '{n} palabras mejor aprendidas' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     noMistakes: 'Sin errores',
     nextUp: 'Siguiente',

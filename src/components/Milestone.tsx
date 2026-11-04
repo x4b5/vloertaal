@@ -1,6 +1,6 @@
 import { WordPicture } from '../pictures';
 import { stillMotion } from '../lib/calm';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { fillCount, ui, uiCount, said, type Bilingual } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { STREAK_TIERS, dayKey, emptyProgress, workWeek, type WeekDayState } from '../lib/progress';
@@ -162,20 +162,42 @@ function ContinueButton({ lang, onClick }: { lang?: HelpLanguage; onClick: () =>
 }
 
 /**
- * After the first day's milestone, once (or, for a learner who tried lesson 1.1 before the code,
+ * With the first day's milestone, once (or, for a learner who tried lesson 1.1 before the code,
  * after the first lesson finished with the code: App.tsx): the reminder and the home-screen offer, a few small
- * pages with at most 3 choices each (KeepFlow in Keep.tsx; both also in Settings).
+ * pages with at most 3 choices each (KeepFlow in Keep.tsx; both also in Settings). `head`: above
+ * the question, in Bram's place (the first day's streak, FirstDayHead).
  */
-export function KeepScreen({ lang, onDone }: { lang?: HelpLanguage; onDone: () => void }) {
+export function KeepScreen({ lang, onDone, head }: { lang?: HelpLanguage; onDone: () => void; head?: React.ReactNode }) {
   useEffect(() => { markKeepOffered(); window.scrollTo(0, 0); }, []);
-  return <KeepFlow lang={lang} onDone={onDone} />;
+  return <KeepFlow lang={lang} onDone={onDone} head={head} />;
+}
+
+/**
+ * The first day's streak as the head of the reminder's question: the board with the flame and
+ * "1 dag" and "Je reeks is begonnen!", without the podium and the week (one stamped day says
+ * little). After the first lesson the milestone and the reminder were two screens before the home;
+ * now they are one (verbeterplan fase 2, 4 November 2026): "Come back tomorrow" and "Remind you
+ * every day?" belong together.
+ */
+export function FirstDayHead({ lang }: { lang?: HelpLanguage }) {
+  return (
+    <div className="keep-streak">
+      <div className="streak-count streak-lit keep-streak-count" role="img" aria-label={`1 ${said(uiCount('dayStreak', 1, lang))}`}>
+        <span className="streak-flame-wrap"><StreakFlame size={60} /></span>
+        <span className="streak-num" aria-hidden>1</span>
+        <span className="streak-unit-col"><DaysUnit n={1} lang={lang} /></span>
+      </div>
+      <p className="streak-line keep-streak-line"><Bi text={ui('streakStarted', lang)} /></p>
+    </div>
+  );
 }
 
 /**
  * Day-streak milestone ("Mijlpaal"), shown after the lesson-complete screen on the first
  * lesson of a day: the worker on a podium, the flame with the new streak (a tier stamp at 3, 7,
  * 14 and 30 days), one sentence in the help language, the work week and the record.
- * After the very first day, Continue leads once to the reminder and home-screen cards.
+ * On the very first day (once): the streak and the reminder's question in one screen (KeepScreen
+ * with FirstDayHead), then its later pages (a time, the home screen), then on.
  */
 export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep = true }: {
   streak: number;
@@ -187,10 +209,9 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   best?: number;
   /** Free days in hand. */
   freezes?: number;
-  /** Offer the reminder and home-screen cards after day 1 (once, on a screen of their own). */
+  /** Offer the reminder and home-screen cards on day 1 (once, with the streak on one screen). */
   keep?: boolean;
 }) {
-  const [step, setStep] = useState<'streak' | 'keep'>('streak');
   const [offer] = useState(() => keep && streak === 1 && !keepOffered());
   const still = stillMotion();
   // The number ticks up from yesterday's count, like a counter flipping over; on the first
@@ -202,8 +223,8 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
     const t = window.setTimeout(() => { setShown(streak); setLit(true); }, 600);
     return () => window.clearTimeout(t);
   }, [streak, still]);
-  const next = useCallback(() => (offer ? setStep('keep') : onDone()), [offer, onDone]);
-  useEnter(step === 'streak' ? next : noop);
+  // With the reminder's question its own buttons answer (Enter does not skip it).
+  useEnter(offer ? noop : onDone);
 
   // Counted strings take the help language's plural form (Polish 2 dni, 5 dni; Arabic يومان، أيام، يوماً).
   // The number stands big above the line, so the line says only the cheer ("Ga zo door.").
@@ -216,7 +237,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
   // The record only when it says something new: never the same number as the streak above it.
   const showRecord = record > 1 && record > streak;
 
-  if (step === 'keep') return <KeepScreen lang={lang} onDone={onDone} />;
+  if (offer) return <KeepScreen lang={lang} onDone={onDone} head={<FirstDayHead lang={lang} />} />;
   return (
     <div className="player milestone-screen">
       <div className="player-body milestone">
@@ -265,7 +286,7 @@ export function Milestone({ streak, lang, onDone, days, best, freezes = 0, keep 
         )}
         <MilestoneFact streak={streak} lang={lang} />
       </div>
-      <ContinueButton lang={lang} onClick={next} />
+      <ContinueButton lang={lang} onClick={onDone} />
     </div>
   );
 }

@@ -39,7 +39,7 @@ export function MeldingShot({ lang: code, gender, q }: { lang: string | null; ge
       <TopBar streak={1} done={false} words={6} lang={lang} />
       <Route
         progress={progress} lang={lang} access="full" onStart={() => {}} onPick={() => {}} onAll={() => {}}
-        note={<RulesPathNote lang={lang} country={progress.country} />}
+        lines={lang?.code === 'nl' ? [{ id: 'rules', node: <RulesPathNote lang={lang} country={progress.country} /> }] : undefined}
         offer={notice ? (
           <NoticeCard
             notice={notice}

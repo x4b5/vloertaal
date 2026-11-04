@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Jutro do powtórki: {n} słowo', few: 'Jutro do powtórki: {n} słowa', many: 'Jutro do powtórki: {n} słów', other: 'Jutro do powtórki: {n} słów' },
     firstWordsTomorrow: 'Jutro wrócą twoje pierwsze słowa',
     extraRound: 'Dodatkowa runda',
+    reviewFirstHint: 'Najpierw powtórka. Wtedy zapamiętasz więcej.', // nieuw, nalezen
     wordsStrongerN: { one: '{n} słowo lepiej utrwalone', few: '{n} słowa lepiej utrwalone', many: '{n} słów lepiej utrwalonych', other: '{n} słów lepiej utrwalonych' },
     noMistakes: 'Bez błędów',
     nextUp: 'Następna lekcja',

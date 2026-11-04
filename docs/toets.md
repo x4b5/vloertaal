@@ -11,6 +11,9 @@ De code staat in `src/content/toets.ts` (de vragen), `src/lib/toets.ts` en `src/
 - Alleen in het spoor **Taal**. Twee momenten: de **instap** (versie A, na de eerste les) en het
   **eind** (versie B, na 28 dagen of na 3 afgeronde onderwerpen). Beide kunnen ook via
   Instellingen › Lessen › Wat ken je al?
+- Op de begintab staat de toets als kleine regel onder de volgende les, niet in de plaats van de
+  les. Een tik opent de uitleg met "Doe de toets" en "Later". Doet de leerling de instap niet en
+  gaat hij door met de lessen, dan telt dat als "Later": het eind komt dan toch.
 - Ongeveer **10 minuten**: **21 vragen** in drie onderdelen, en aan het eind één zin hardop
   zeggen ("Kunt u dat herhalen?"). Dat spreken telt niet mee: de leerling (en de begeleider) hoort
   "Jij toen" en "Jij nu" naast elkaar.

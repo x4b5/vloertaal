@@ -249,7 +249,7 @@ function defineStates(LANG) {
   // A learner from before the gender question: a one-time page instead of the home card (no back).
   if (gendered) add('flow:old-gender', '/', firstRun({ sector: 'none', completed: { 'l.hello': { best: 1, times: 1 } } }), { expect: '.gender-screen' });
   const realHome = async (p, extra = {}) => {
-    // "Wat ken je al?" passed over today (its card would take the block's place), unless a state
+    // "Wat ken je al?" passed over today (its line would take one of the three), unless a state
     // asks for it (extra.toets: undefined, the flow:toets-* states). The colour already chosen
     // (colourAsked): else a learner who has not begun gets that first-run page first.
     await p.evaluate(([x, lang]) => {
@@ -310,6 +310,16 @@ function defineStates(LANG) {
     await tap(p, '.player-top .lesson-close'); await tap(p, '.sheet-stop'); await settle(p, 900);
   };
   add('flow:home-resume-daily', '/', stopHalfwayDue, { expect: '.home3 .daily-due ~ .rb-current .bay-saved' });
+  // "Eerst herhalen" (src/lib/pace.ts reviewFirst): today's review done and 20 words still due:
+  // [Extra ronde] (yellow) [1.4] (second, not locked) [Ander onderwerp]; either one starts.
+  const WORDS20 = ['w.hallo', 'w.goedemorgen', 'w.dankjewel', 'w.ja', 'w.nee', 'w.totmorgen', 'w.collega', 'w.baas', 'w.leidinggevende', 'w.werk', 'w.naam', 'w.nieuw', 'w.ingang', 'w.receptie', 'w.kantine', 'w.kleedkamer', 'w.buddy', 'w.vinden', 'w.begrijpniet', 'w.nogeenkeer'];
+  const extraHome = async (p) => {
+    const d = new Date(); const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    await realHome(p, { reviewDay: today, completed: { 'l.hello': { best: 1, times: 1 }, 'l.people': { best: 1, times: 1 }, 'l.arrive': { best: 1, times: 1 } }, cards: Object.fromEntries(WORDS20.map((id) => [id, { box: 1, due: '2000-01-01' }])) });
+  };
+  add('flow:home-extra-first', '/', extraHome, { expect: '.home3 .daily-lead ~ .rb-second .bay-now' });
+  add('flow:home-extra-first-round', '/', async (p) => { await extraHome(p); await tap(p, '.daily-lead'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
+  add('flow:home-extra-first-lesson', '/', async (p) => { await extraHome(p); await tap(p, '.rb-second .bay-now .bay-card'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
   add('flow:topic-restart', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); }, { list: true, expect: '.topic-tools .bay-restart' });
   add('flow:topic-restart-go', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); await tap(p, '.topic-tools .bay-restart'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
   // The Hulp tab: the phrases, then "Wie kan helpen" (a list of numbers to call, as in Werkregels).
@@ -349,6 +359,14 @@ function defineStates(LANG) {
   // Home / route
   for (const st of ['new', 'mid', 'finished', 'shelf', 'pick', 'coach', 'done']) add(`route:${st}`, shot(`route&state=${st}`));
   add('route:daily-due', shot('route&state=mid&daily=due'));
+  // Today's review done, a few words left: the small "Extra ronde" button, the lesson yellow.
+  add('route:extra-few', shot('route&state=mid&daily=few'), null, { expect: '.daily-done .daily-extra' });
+  // "Eerst herhalen" (src/lib/pace.ts reviewFirst): more than 15 words left after today's review:
+  // "Extra ronde" is the first, yellow card, the lesson the second (a calm card, Start still there).
+  add('route:extra-first', shot('route&state=mid&daily=extra'), null, { expect: '.daily-lead ~ .rb-second .bay-now .bay-start' });
+  add('route:extra-first-finished', shot('route&state=finished&daily=extra'), null, { expect: '.daily-lead ~ .rb-choose' });
+  // A lesson stopped halfway as well: [Extra ronde] [Continue] [Other topic] ("Start again" on the topic page).
+  add('route:extra-first-resume', shot('path&resume=1&daily=extra'), null, { expect: '.daily-lead ~ .rb-second .bay-saved' });
   // A finished topic with words due: the recommended topic, Herhaal vandaag, Other topic.
   add('route:finished-daily', shot('route&state=finished&daily=due'), null, { expect: '.daily-due' });
   add('route:preview-finished-daily', shot('route&state=finished&daily=due&access=preview'), null, { expect: '.daily-due' });
@@ -533,17 +551,21 @@ function defineStates(LANG) {
   // "Type what you hear" in the first units (PROGRESSION.type): hear and pick, for a Latin script too.
   add('lesson:hear-pick-first', shot('type&pick=1'));
   add('after:streak', shot('streak&n=7'));
-  add('after:streak-first', shot('streak&n=1'));
+  // After the first lesson (since 4 November 2026, verbeterplan fase 2): the first day's streak and
+  // the reminder's question on one screen ([Ja, na het werk] [Andere tijd] [Nee, dank je], no
+  // Verder), then the reminder's later pages.
+  add('after:streak-first', shot('streak&n=1'), null, { expect: '.keep-streak .streak-num' });
   // The fullest milestone: "Wist je dat?" (src/content/facts.ts) with a record and a free day.
   add('after:streak-30', shot('streak&n=30&rest=1&best=40'));
-  add('after:keep', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); }, { expect: '.keep-no.keep3-btn' });
-  add('after:keep-install', shot('streak&n=1&install=prompt'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); await tap(p, '.keep-no'); await settle(p, 700); });
+  const keepAsk = async (p) => { await settle(p, 900); };
+  add('after:keep', shot('streak&n=1'), keepAsk, { expect: '.keep-streak ~ .keep3-actions .keep-no.keep3-btn' });
+  add('after:keep-install', shot('streak&n=1&install=prompt'), async (p) => { await keepAsk(p); await tap(p, '.keep-no'); await settle(p, 700); }, { expect: '.keep3-step-install' });
   // The reminder's "Other time" page: "Voor het werk", "Kies zelf" and the back arrow (no time in
-  // the break since 4 November 2026: a break is for rest).
-  add('after:keep-times', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); await tap(p, '.keep-other'); await settle(p, 700); }, { expect: '.keep3-step-times .chrome-back' });
-  add('after:keep-times-back', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); await tap(p, '.keep-other'); await settle(p, 700); await tap(p, '.chrome-back'); await settle(p, 700); }, { expect: '.keep-yes' });
-  add('after:keep-added', shot('streak&n=1'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); await tap(p, '.keep-yes'); await settle(p, 700); });
-  add('after:keep-yes-install', shot('streak&n=1&install=prompt'), async (p) => { await settle(p, 900); await go(p); await settle(p, 900); await tap(p, '.keep-yes'); await settle(p, 700); });
+  // the break since 4 November 2026: a break is for rest); back: the question with the streak.
+  add('after:keep-times', shot('streak&n=1'), async (p) => { await keepAsk(p); await tap(p, '.keep-other'); await settle(p, 700); }, { expect: '.keep3-step-times .chrome-back' });
+  add('after:keep-times-back', shot('streak&n=1'), async (p) => { await keepAsk(p); await tap(p, '.keep-other'); await settle(p, 700); await tap(p, '.chrome-back'); await settle(p, 700); }, { expect: '.keep-streak ~ .keep3-actions .keep-yes' });
+  add('after:keep-added', shot('streak&n=1'), async (p) => { await keepAsk(p); await tap(p, '.keep-yes'); await settle(p, 700); }, { expect: '.keep3-step-added .keep-continue' });
+  add('after:keep-yes-install', shot('streak&n=1&install=prompt'), async (p) => { await keepAsk(p); await tap(p, '.keep-yes'); await settle(p, 700); }, { expect: '.keep3-step-install' });
   add('after:streak-stopped', shot('stopped'));
   add('after:cert-earned', shot('cert-earned'));
   add('after:certificate', shot('certificate&name=Ali%20Hassan'));
@@ -602,11 +624,16 @@ function defineStates(LANG) {
   add('lesson:region-tip', shot('lesson&lesson=rg.zl.l.1&at=9'));
   add('lesson:region-situation', shot('lesson&lesson=rg.zl.l.1&at=10'));
   add('flow:help-map', '/', async (p) => { await realHome(p, { region: 'zl' }); await navTab(p, 1); await settle(p); await tap(p, '.social-map-link'); await settle(p); }, { list: true, expect: '.sm-rows' });
-  // "Wat ken je al?" (src/components/Toets.tsx): the card on the home, a question of each part (and
-  // one picked: no colour, no Continue), the speaking task, both results, its Settings page, and
-  // the real way from a new learner's home into the test.
-  add('toets:offer', shot('toets&state=offer'), null, { expect: '.toets-offer' });
-  add('toets:offer-eind', shot('toets&state=offer-eind'), null, { expect: '.toets-offer-eind' });
+  // "Wat ken je al?" (src/components/Toets.tsx): its line under the next lesson on the home and the
+  // page it opens (since 4 November 2026: the card no longer takes the lesson's place), a question
+  // of each part (and one picked: no colour, no Continue), the speaking task, both results, its
+  // Settings page, and the real way from a new learner's home into the test.
+  add('toets:offer', shot('toets&state=offer'), null, { expect: '.home3:not(.home-offer) .rb-current ~ .toets-line-instap' });
+  add('toets:offer-eind', shot('toets&state=offer-eind'), null, { expect: '.home3:not(.home-offer) .rb-current ~ .toets-line-eind' });
+  add('toets:offer-page', shot('toets&state=offer-page'), null, { voices: true, expect: '.toets-offer-page .toets-offer-instap .toets-do' });
+  add('toets:offer-eind-page', shot('toets&state=offer-eind-page'), null, { expect: '.toets-offer-page .toets-offer-eind .toets-do' });
+  add('toets:offer-open', shot('toets&state=offer'), async (p) => { await tap(p, '.toets-line-home'); await settle(p); }, { expect: '.toets-offer-page .chrome-back' });
+  add('toets:offer-later', shot('toets&state=offer'), async (p) => { await tap(p, '.toets-line-home'); await settle(p); await tap(p, '.toets-later'); await settle(p); }, { expect: '.home3:not(:has(.toets-line-home)) .bay-now' });
   // Form 2 (21 questions): 0–4 listen, 5–6 build by ear, 7–11 words, 12–13 dictation, 14–18 chat,
   // 19–20 build; every question with the small link "Ik weet het niet" (.toets-idk, not counted).
   add('toets:listen', shot('toets&state=question&at=0'), null, { expect: '.toets-listen .choice' });
@@ -636,13 +663,25 @@ function defineStates(LANG) {
   add('flow:kaart', '/', toKaart, { expect: '.kaart-img' });
   add('flow:kaart-name', '/', async (p) => { await toKaart(p); await tap(p, '.name-in-place-edit'); await settle(p, 600); }, { expect: '.name-in-place-input' });
   // "Wat ken je al?" comes after the first lesson (1.1 done); before it the home shows lesson 1.
-  const afterFirst = { toets: undefined, completed: { 'l.hello': { best: 1, times: 1 } } };
+  // After it (its words back tomorrow, as on the day of the first lesson): lesson 1.2 is the
+  // yellow card and the test a line under it ([1.2] [the line] [Ander onderwerp]); the line
+  // opens its page ([Doe de toets] [Later], the back arrow); Later gives the home without it.
+  const tomorrow = (() => { const d = new Date(); d.setDate(d.getDate() + 1); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; })();
+  const afterFirst = { toets: undefined, completed: { 'l.hello': { best: 1, times: 1 } }, cards: { 'w.hallo': { box: 1, due: tomorrow }, 'w.ja': { box: 1, due: tomorrow } } };
+  const toToetsPage = async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-line-home'); await settle(p, 900); };
   add('flow:toets-none-first', '/', (p) => realHome(p, { toets: undefined }), { expect: '.home3 .bay-now' });
-  add('flow:toets-offer', '/', (p) => realHome(p, afterFirst), { expect: '.toets-offer' });
-  add('flow:toets-start', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
-  add('flow:toets-later', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3 .bay-now' });
+  add('flow:toets-offer', '/', (p) => realHome(p, afterFirst), { expect: '.home3:not(.home-offer) .rb-current ~ .toets-line-instap' });
+  add('flow:toets-page', '/', toToetsPage, { expect: '.toets-offer-page .toets-do' });
+  add('flow:toets-page-back', '/', async (p) => { await toToetsPage(p); await tap(p, '.chrome-back'); await settle(p, 900); }, { expect: '.home3 .toets-line-home' });
+  add('flow:toets-page-phone-back', '/', async (p) => { await toToetsPage(p); await p.goBack(); await settle(p, 900); }, { expect: '.home3 .toets-line-home' });
+  add('flow:toets-start', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
+  // Out of the test (✕, Stop): the home, not the offer's page (the test took its place).
+  add('flow:toets-quit', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); await tap(p, '.player-top .lesson-close'); await settle(p, 600); const stop = p.locator('.sheet-stop').filter({ visible: true }); if (await stop.count()) { await stop.first().click(); await settle(p, 900); } }, { expect: '.home3 .toets-line-home' });
+  add('flow:toets-later', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3:not(:has(.toets-line-home)) .bay-now' });
   // "Ik weet het niet" goes on to the next question (the second listening question).
-  add('flow:toets-idk', '/', async (p) => { await realHome(p, afterFirst); await tap(p, '.toets-do'); await settle(p, 900); await tap(p, '.toets-idk'); await settle(p, 700); }, { expect: '.toets-player .toets-listen .choice' });
+  add('flow:toets-idk', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); await tap(p, '.toets-idk'); await settle(p, 700); }, { expect: '.toets-player .toets-listen .choice' });
+  // With words due on the home as well ([Herhaal vandaag] [1.2] [Ander onderwerp]) the line waits.
+  add('flow:toets-no-room', '/', (p) => realHome(p, { ...afterFirst, cards: { 'w.hallo': { box: 1, due: '2000-01-01' }, 'w.ja': { box: 1, due: '2000-01-01' } } }), { expect: '.home3:not(:has(.toets-line-home)) .daily-due' });
   // "Laat de telefoon luisteren (proef)" (src/lib/listen.ts), with a mocked on-device API
   // (&listen=, src/dev/ShotHarness.tsx fakeListenApi): its row in Lessen, its page (Dutch on the
   // phone, or still to download, and the wifi question), and the three outcomes after speaking.
@@ -709,10 +748,19 @@ function meldingStates(add, shot) {
   add('melding:back', shot('melding'), async (p) => { await tap(p, '.notice-more'); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.home3 .bay-now' });
   add('melding:be', shot('melding&country=be'), null, { expect: '.home3 .bay-now' });
   add('melding:new', shot('melding&state=new'), null, { expect: '.home3 .bay-now' });
-  // "Gelukt?" a day after the work sentence: two answers; either one gives the home as usual.
-  add('gelukt:home', shot('gelukt'), null, { voices: true, expect: '.home-offer .gelukt-card .notice-ok' });
-  add('gelukt:ja', shot('gelukt'), async (p) => { await tap(p, '.gelukt-card .notice-ok'); await settle(p); }, { expect: '.home3 .bay-now' });
-  add('gelukt:nognie', shot('gelukt'), async (p) => { await tap(p, '.gelukt-card .notice-more'); await settle(p); }, { expect: '.home3 .bay-now' });
+  // "Gelukt?" a day after the work sentence (since 4 November 2026, verbeterplan fase 2): a line
+  // under the next lesson, which stays the yellow card (in Werkregels in the place of "Over deze
+  // regels", the last of the three); the line opens its page with the two answers and the back
+  // arrow; either answer gives the home without the line, Back keeps it. With words due there is
+  // no room: the line waits.
+  const noLine = '.home3:not(.home-offer):not(:has(.gelukt-line)) .bay-now';
+  add('gelukt:home', shot('gelukt'), null, { expect: '.home3:not(.home-offer) .rb-current ~ .gelukt-line' });
+  add('gelukt:page', shot('gelukt&state=page'), null, { voices: true, expect: '.gelukt-page .gelukt-card .notice-ok' });
+  add('gelukt:open', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); }, { voices: true, expect: '.gelukt-page .gelukt-card .notice-ok' });
+  add('gelukt:ja', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.gelukt-card .notice-ok'); await settle(p); }, { expect: noLine });
+  add('gelukt:nognie', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.gelukt-card .notice-more'); await settle(p); }, { expect: noLine });
+  add('gelukt:back', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.home3 .gelukt-line' });
+  add('gelukt:daily-due', shot('gelukt&daily=due'), null, { expect: '.home3:not(:has(.gelukt-line)) .daily-due' });
 }
 
 /**
@@ -790,6 +838,11 @@ function defineRuleStates() {
   add('rule:daily-wrong', shot('daily'), async (p) => { await tap(p, choice, 1); await settle(p, 900); }, { expect: '.feedback-wrong' });
   add('rule:route-daily-due', shot('route&state=shelf&daily=due'), null, { expect: '.daily-due' });
   add('rule:route-finished-daily', shot('route&state=finished&daily=due'), null, { expect: '.daily-due' });
+  // Many questions left after today's review: in this track as before (the small "Extra ronde"
+  // button, the lesson yellow; src/lib/pace.ts reviewFirst is for the language track's words).
+  // "Over deze regels" (a line of the home since 4 November 2026) only with room: not next to it.
+  add('rule:route-extra', shot('route&state=shelf&daily=extra'), null, { expect: '.home3:not(:has(.daily-lead)):not(:has(.rules-path-more)) .daily-done .daily-extra' });
+  add('rule:route-room', shot('route&state=shelf'), null, { expect: '.home3 .rb-current ~ .rules-path-more' });
   add('rule:result', shot('result'), null, { expect: '.result-remember' });
   add('rule:result-review', shot('result&review=1'), null, { expect: '.result-stronger' });
   add('rule:result-no-voice', shot('result'), null, { voices: false, expect: '.result-remember' });

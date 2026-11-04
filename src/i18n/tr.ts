@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: 'Yarın: {n} kelime',
     firstWordsTomorrow: 'Yarın ilk kelimelerin geri geliyor',
     extraRound: 'Ekstra tur',
+    reviewFirstHint: 'Önce tekrar. Böylece daha çok hatırlarsın.', // nieuw, nalezen
     wordsStrongerN: '{n} kelime güçlendi',
     noMistakes: 'Hatasız',
     nextUp: 'Sıradaki',

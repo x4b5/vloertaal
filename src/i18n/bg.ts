@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Утре: {n} дума', other: 'Утре: {n} думи' },
     firstWordsTomorrow: 'Утре се връщат първите ти думи',
     extraRound: 'Допълнителен кръг',
+    reviewFirstHint: 'Първо преговор. Така ще запомниш повече.', // nieuw, nalezen
     wordsStrongerN: { one: '{n} затвърдена дума', other: '{n} затвърдени думи' },
     noMistakes: 'Без грешки',
     nextUp: 'Следващ',

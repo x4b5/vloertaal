@@ -13,7 +13,7 @@ import { tipBody } from '../lib/tipText';
 import { BeNote } from './BeNote';
 import { regionTips } from '../content/regio';
 import { findLesson } from '../content/curriculum';
-import { showKept, type DailyCard } from '../lib/spaced';
+import { DAILY_MAX, showKept, type DailyCard } from '../lib/spaced';
 import { Flag } from './Flag';
 import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_MORE, ui, uiCount, withoutN, type Bilingual, said, saidLang, langTag } from '../i18n';
 import type { HelpLanguage, LangCode, UiCode, UiKey } from '../i18n/types';
@@ -513,9 +513,34 @@ function WorkContacts({ lang }: { lang?: HelpLanguage }) {
  * "Done for today", and a real "Extra round" button when words are left over. After the first
  * lesson: "Tomorrow your first words come back". The Dutch name is in the spoken label only; no
  * "label: n" strings, so nothing wraps or reorders in right-to-left text.
+ *
+ * `lead` (src/lib/pace.ts reviewFirst): done today with many words still waiting. "Extra ronde" is
+ * then the home's first choice: the whole card is one yellow button with the number of words of
+ * the round and why ("Eerst herhalen. Dan onthoud je meer."); the next lesson comes second.
  */
-export function DailyReview({ card, lang, onDaily }: { card: DailyCard; lang?: HelpLanguage; onDaily?: () => void }) {
+export function DailyReview({ card, lang, onDaily, lead = false }: { card: DailyCard; lang?: HelpLanguage; onDaily?: () => void; lead?: boolean }) {
   const rtl = lang?.dir === 'rtl';
+  if (lead && card.state === 'done' && card.extra > 0 && onDaily) {
+    const n = Math.min(card.extra, DAILY_MAX);
+    const why = ui('reviewFirstHint', lang);
+    return (
+      <button
+        type="button"
+        className="daily-card daily-lead"
+        dir={rtl ? 'rtl' : undefined}
+        onClick={onDaily}
+        aria-label={`${dutchUi(lang) ? '' : 'Extra ronde · '}${said(ui('extraRound', lang))}: ${said(fillCount('reviewTodayN', n, lang))} · ${dutchUi(lang) ? '' : 'Eerst herhalen. Dan onthoud je meer. · '}${said(why)}`}
+      >
+        <span className="daily-icon" aria-hidden><CalendarIcon size={28} /></span>
+        <span className="daily-n" aria-hidden>{n}</span>
+        <span className="daily-lead-text" aria-hidden>
+          <Bi className="daily-title" text={ui('extraRound', lang)} />
+          <Bi className="daily-why" text={why} />
+        </span>
+        <ChevronIcon size={26} className="daily-go" />
+      </button>
+    );
+  }
   if (card.state === 'due') {
     return (
       <button

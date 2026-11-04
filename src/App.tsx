@@ -6,12 +6,12 @@ import { Splash } from './components/Splash';
 import { loadPictures, usePicturesLoaded } from './pictures';
 import type { UiCode } from './i18n/types';
 import { isPlayable, learnedItems, rulesTwinHere } from './content/courses';
-import { trackOf, trackOfId } from './lib/track';
+import { dutchUi, trackOf, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
 import { tempoOf } from './lib/tempo';
 import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
 import { answerGelukt, geluktDue, type WorkTryLine, workTryFor } from './lib/workTry';
-import { GeluktCard } from './components/GeluktCard';
+import { GeluktLine, GeluktPage } from './components/GeluktCard';
 import { ColleagueCard } from './components/ColleagueCard';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
@@ -59,8 +59,8 @@ import { applyEnglish, englishLangFor } from './lib/english';
 import { SocialMap, SocialMapLink } from './components/SocialMap';
 import { regionOf, type RegionChoice } from './content/regio';
 import { ensureRegionFor, regionReady } from './lib/region';
-import { ToetsOffer, ToetsPage, ToetsPlayer, ToetsResult } from './components/Toets';
-import { recordToets, toetsLater, toetsOffer, versionOf, type ToetsMoment } from './lib/toets';
+import { ToetsHomeLine, ToetsOfferPage, ToetsPage, ToetsPlayer, ToetsResult } from './components/Toets';
+import { recordToets, toetsAfterLesson, toetsLater, toetsOffer, versionOf, type ToetsMoment } from './lib/toets';
 import { forgetVoices, keepVoice } from './lib/toetsVoice';
 import { Samen } from './components/Samen';
 import { CheckResult } from './components/Check';
@@ -114,6 +114,10 @@ type View =
   | { name: 'toets'; moment: ToetsMoment }
   | { name: 'toets-result'; moment: ToetsMoment }
   | { name: 'toets-page' }
+  /** The test offered (Doe de toets, Later), from its line under the next lesson on the home. */
+  | { name: 'toets-offer'; moment: ToetsMoment }
+  /** "Gelukt?" (src/components/GeluktCard.tsx), from its line under the next lesson on the home. */
+  | { name: 'gelukt' }
   /** "Laat zien hoe het gaat": the coach card (src/components/Certificate.tsx CoachCardScreen), from Settings › Taal en ik. */
   | { name: 'kaart' }
   /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): the 5 questions of a topic, and the end. */
@@ -674,10 +678,11 @@ export default function App() {
     toRoute.current = false;
     if (route) tab('route'); else back();
   };
-  /** "Wat ken je al?" starts (counted without any result: only that it started, and which version). */
-  const startToets = (moment: ToetsMoment) => {
+  /** "Wat ken je al?" starts (counted without any result: only that it started, and which version).
+   *  `instead`: from the offer's own page, which the test replaces (its end goes back home). */
+  const startToets = (moment: ToetsMoment, instead = false) => {
     count('toets-start', { lesson: versionOf(moment).toLowerCase() });
-    go({ name: 'toets', moment });
+    (instead ? replace : go)({ name: 'toets', moment });
   };
   const setSector = (sector: SectorChoice) => setProgress((p) => ({ ...p, sector }));
   /** "Waar woon je?" (Settings only): the region's lessons come in or go out of the path. */
@@ -790,6 +795,8 @@ export default function App() {
         // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
         // (A lesson done before, practised again, leaves the block where it is.)
         if (!daily && !progress.completed[view.lessonId]) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
+        // "Wat ken je al?" left on its line under the lesson until its last day on offer: passed over (as "Later").
+        if (!daily) { const passed = toetsAfterLesson(progress, next, now); if (passed !== next) next.toets = passed.toets; }
         // The very first lesson: its result shows, once, where the emergency phrases are.
         // (A phone that did the old trial lesson before a code shows it after its next lesson.)
         const phrases = !daily && !progress.phrasesShown && Object.keys(progress.completed).every((id) => trialLessonAllowed(id, track));
@@ -1153,21 +1160,69 @@ export default function App() {
       return hulpTab();
     case 'words':
       return hulpTab();
+    // The pages of the home's small lines (src/components/Route.tsx `lines`); no longer offered
+    // (answered, or a history entry from before): the home.
+    case 'toets-offer':
+    case 'gelukt':
     default:
+      if (view.name === 'toets-offer' && stopped === null) {
+        const moment = toetsOffer(progress, new Date());
+        if (moment) {
+          return (
+            <>
+              <ToetsOfferPage
+                moment={moment}
+                lang={lang}
+                onBack={back}
+                onDo={() => startToets(moment, true)}
+                onLater={() => { setProgress((p) => toetsLater(p, moment, new Date())); back(); }}
+              />
+              <BottomNav current="route" onTab={tab} lang={lang} />
+            </>
+          );
+        }
+      }
+      if (view.name === 'gelukt') {
+        const line = geluktDue(dayKey(new Date()));
+        if (line) {
+          return (
+            <>
+              <GeluktPage
+                line={line}
+                lang={lang}
+                onBack={back}
+                onAnswer={(worked) => { answerGelukt(worked ? 'ja' : 'nog-niet', dayKey(new Date())); setNudgeTick((n) => n + 1); back(); }}
+              />
+              <BottomNav current="route" onTab={tab} lang={lang} />
+            </>
+          );
+        }
+      }
       if (stopped !== null) {
         return <StreakStopped streak={stopped} best={bestStreak(progress)} lang={lang} onDone={() => setStopped(null)} />;
       }
+      // "Wat ken je al?" (src/lib/toets.ts) and "Gelukt?" (src/lib/workTry.ts: a day after "Probeer
+      // het vandaag op je werk", again the next day after "Nog niet") are small lines under the next
+      // lesson since 4 November 2026 (verbeterplan fase 2), each leading to its own page; before,
+      // each was a card in the lesson's place, so after the first lesson the home showed the test
+      // and not lesson 1.2. Route shows a line only while there is room (at most 3 things to tap),
+      // "Gelukt?" first; in the work-rules track "Over deze regels" comes last.
       const offered = stopped === null ? toetsOffer(progress, new Date()) : null;
-      // "Er is iets veranderd" (src/lib/notice.ts): once, before the test's card (one card at a time).
+      const gelukt = geluktDue(dayKey(new Date()));
+      const lines = [
+        ...(gelukt ? [{ id: 'gelukt', node: <GeluktLine line={gelukt} lang={lang} onOpen={() => go({ name: 'gelukt' })} /> }] : []),
+        ...(offered ? [{ id: 'toets', node: <ToetsHomeLine moment={offered} lang={lang} onOpen={() => go({ name: 'toets-offer', moment: offered })} /> }] : []),
+        ...(dutchUi(lang) ? [{ id: 'rules', node: <RulesPathNote lang={lang} country={progress.country} /> }] : []),
+      ];
+      // The cards in the block's place, one at a time (each with two buttons): "Er is iets
+      // veranderd" (src/lib/notice.ts) once; "Wil je ook de werkregels leren?" (src/lib/bridge.ts)
+      // once, most of the course done; "Bewaar je voortgang" (src/lib/backupNudge.ts) only where the
+      // phone may lose the progress, after 3 lessons, once. (No longer after the test and "Gelukt?":
+      // a line can wait for days, a card is closed with one tap.)
       const notice = noticeFor(progress, new Date());
-      // "Bewaar je voortgang" (src/lib/backupNudge.ts): only where the phone may lose the
-      // progress, after 3 lessons, once; after the notice and the test (one card at a time).
       const lessonsDone = knownLessons(progress.completed);
-      // "Gelukt?" (src/lib/workTry.ts): a day after "Probeer het vandaag op je werk" (again the next day after "Nog niet"); after the notice.
-      const gelukt = !notice ? geluktDue(dayKey(new Date())) : undefined;
-      // "Wil je ook de werkregels leren?" (src/lib/bridge.ts): once, most of the course done; after the notice and the test.
-      const bridge = !notice && !gelukt && !offered && bridgeDue(progress);
-      const nudge = !notice && !gelukt && !offered && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
+      const bridge = !notice && bridgeDue(progress);
+      const nudge = !notice && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
       const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
       return (
         <>
@@ -1194,7 +1249,8 @@ export default function App() {
             focusUnit={focusUnit}
             onFocused={() => { setFocusUnit(null); forgetLinkedUnit(); }}
             lockedLink={lockedLink}
-            note={<><RulesPathNote lang={lang} country={progress.country} /><NoVoiceNote lang={lang} once /></>}
+            note={<NoVoiceNote lang={lang} once />}
+            lines={lines}
             unlocked={unlockedShown}
             offer={notice ? (
               <NoticeCard
@@ -1202,19 +1258,6 @@ export default function App() {
                 lang={lang}
                 onMore={() => { setProgress((p) => seeNotice(p, notice.id, new Date())); go({ name: 'news' }); }}
                 onOk={() => setProgress((p) => seeNotice(p, notice.id, new Date()))}
-              />
-            ) : gelukt ? (
-              <GeluktCard
-                line={gelukt}
-                lang={lang}
-                onAnswer={(worked) => { answerGelukt(worked ? 'ja' : 'nog-niet', dayKey(new Date())); setNudgeTick((n) => n + 1); }}
-              />
-            ) : offered ? (
-              <ToetsOffer
-                moment={offered}
-                lang={lang}
-                onDo={() => startToets(offered)}
-                onLater={() => setProgress((p) => toetsLater(p, offered, new Date()))}
               />
             ) : bridge ? (
               <BridgeOffer
