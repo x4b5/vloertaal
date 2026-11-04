@@ -188,7 +188,6 @@ export const uiNl: Record<UiKey, UiText> = {
   remindEvent: 'Tijd voor je Nederlands (10 minuten)',
   remindHint: 'De agenda van je telefoon herinnert je. We krijgen daar niets van te zien.',
   remindBefore: 'Voor het werk',
-  remindBreak: 'In de pauze',
   remindAfter: 'Na het werk',
   remindOwn: 'Andere tijd',
   remindAdd: 'Zet in mijn agenda',

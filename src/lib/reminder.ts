@@ -18,10 +18,10 @@ export function reminderText(track: Track = 'taal'): { title: string; descriptio
     : { title: REMINDER_TITLE, description: 'Bram van Vloertaal: oefen 10 minuten Nederlands voor je werk.', minutes: 10 };
 }
 
-/** The three quick choices: before work, in the break, after work. */
+/** The quick choices: before work and after work. Never in the break: a break is for rest, not
+ *  for practising (the owner, 4 November 2026). Any other time: "Kies zelf". */
 export const REMINDER_TIMES = [
   { time: '07:00', nl: 'Voor het werk', key: 'remindBefore' },
-  { time: '12:00', nl: 'In de pauze', key: 'remindBreak' },
   { time: '18:00', nl: 'Na het werk', key: 'remindAfter' },
 ] as const;
 

@@ -12,10 +12,10 @@ describe('the reminder and home-screen pages after the first day', () => {
     expect(keepNext('added', 'next', false)).toBe('done');
   });
 
-  it('"Other time" opens a page with 2 times and "Kies zelf"; a time adds it', () => {
+  it('"Other time" opens a page with "Voor het werk" and "Kies zelf"; a time adds it', () => {
     expect(keepNext('ask', 'other', true)).toBe('times');
-    // 2 times + "Kies zelf" (the phone's time field) = 3 choices on the page.
-    expect(REMIND_OTHER_TIMES).toHaveLength(2);
+    // Before work + "Kies zelf" (the phone's time field); no time in the break (4 November 2026).
+    expect(REMIND_OTHER_TIMES).toHaveLength(1);
     expect(uiEn[REMIND_OWN.key]).toBeTruthy();
     expect(ownTime('05:30')).toBe('05:30');
     expect(ownTime('22:15:00')).toBe('22:15');
@@ -45,5 +45,16 @@ describe('Settings → reminder: the way back', () => {
 
   it('the pause sheet has a neutral title (the other languages are checked in i18n.test)', () => {
     expect(uiEn.pauseTitle).toBe('Pause');
+  });
+});
+
+describe('reminders: never in the break', () => {
+  it('offers no time in the break: a break is for rest (the owner, 4 November 2026)', async () => {
+    const { REMINDER_TIMES } = await import('../src/lib/reminder');
+    const { REMIND_DEFAULT, REMIND_OTHER_TIMES } = await import('../src/lib/keep');
+    for (const t of [...REMINDER_TIMES, REMIND_DEFAULT, ...REMIND_OTHER_TIMES]) {
+      expect(t.nl).not.toMatch(/pauze/i);
+      expect(t.time).not.toBe('12:00');
+    }
   });
 });
