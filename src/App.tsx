@@ -775,18 +775,18 @@ export default function App() {
         : playLesson(view.lessonId, progress.completed, dayNumber(dayKey(new Date())));
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
-      const finish = ({ accuracy, review, right, total, words: results, skipped, made, almost }: LessonResult) => {
+      const finish = ({ accuracy, review, right, total, words: results, skipped, made, almost, written }: LessonResult) => {
         const now = practisedAt(lessonStarted.current, new Date(), progress.lastDay);
         const today = dayKey(now);
         const cards = progress.cards ?? {};
         const next = earnCertificates(daily
           // (Its review day is the day it was started for, with that day's words: one begun at
           // 23:58 and finished after midnight leaves today's own review to do.)
-          ? { ...completeDaily(progress, accuracy, now), reviewDay: dayKey(lessonStarted.current), cards: track === 'regels' ? applyReview(cards, results, today) : applyReview(cards, reviewResults(results, view.ids ?? []), today, made, almost) }
+          ? { ...completeDaily(progress, accuracy, now), reviewDay: dayKey(lessonStarted.current), cards: track === 'regels' ? applyReview(cards, results, today) : applyReview(cards, reviewResults(results, view.ids ?? []), today, made, almost, written) }
           : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: found.lesson.steps?.length
             // A rules lesson: its questions get a card (by step id), for "Herhaal vandaag" of that track.
             ? addLessonItems(cards, gradedStepIds(found.lesson), results, today)
-            : addLessonSentences(addLessonWords(cards, found.lesson.words, results, today), found.lesson.sentences, results, today) }, now);
+            : addLessonSentences(addLessonWords(cards, found.lesson.words, results, today, written), found.lesson.sentences, results, today) }, now);
         // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
         // (A lesson done before, practised again, leaves the block where it is.)
         if (!daily && !progress.completed[view.lessonId]) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);

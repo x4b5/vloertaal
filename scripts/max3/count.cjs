@@ -399,6 +399,8 @@ function defineStates(LANG) {
   };
   graded('meaning', 'meaning', 2, 0);
   graded('picture', 'dutch', 2, 0);
+  // "Which one is …?" on text cards: after a wrong pick, that card says what its word means.
+  graded('text-cards', 'dutch&text=1', 2, 0);
   graded('listen', 'listen', 1, 0);
   graded('hear-pick', 'type', 1, 0, 'ar');
   graded('chat', 'chat', 0, 1);
@@ -510,6 +512,11 @@ function defineStates(LANG) {
   add('lesson:speak-turn:compare', shot('speak-compare&turn=1'), null, { expect: '.say-turn .say-again-one' });
   add('lesson:speak-turn:off', shot('speak-off&turn=1'), null, { expect: '.say-turn .say-reveal' });
   add('lesson:speak-turn:shown', shot('speak-off&turn=1'), async (p) => { await tap(p, '.say-reveal'); }, { expect: '.say-turn .chat-bubble-me .chat-line' });
+  // "Wat zeg je?" on the sentence of "Probeer het vandaag" (the moment as the question; l.hello: its meaning).
+  add('lesson:speak-work:idle', shot('speak&work=l.gear'), null, { expect: '.say-work .say-mic' });
+  add('lesson:speak-work:compare', shot('speak-compare&work=l.gear'), null, { expect: '.say-work .say-again-one' });
+  add('lesson:speak-work:off', shot('speak-off&work=l.people'), null, { expect: '.say-work .say-reveal' });
+  add('lesson:speak-work:meaning', shot('speak-off&work=l.hello'), async (p) => { await tap(p, '.say-reveal'); }, { expect: '.say-work .chat-bubble-me .chat-line' });
   add('lesson:retry', shot('retry'));
   add('lesson:quiet', shot('meaning&quiet=1'));
   add('lesson:quit-dialog', shot('meaning'), async (p) => { await tap(p, '.player-top .lesson-close'); }, { expect: '.sheet-stop .sheet-stop-icon' });
