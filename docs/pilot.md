@@ -44,8 +44,10 @@ nummer, geen naam.
 1. Geef iedere leerling **het briefje met de link** (zie „Praktisch”). Een code is niet nodig: de
    app staat open voor iedereen.
 2. Zeg alleen: *„Open deze link en begin. Ik kijk mee. Ik help als je echt niet verder kunt.”*
-3. De leerling doorloopt zelf de start: **taal kiezen (en wat wil je leren) → vrouw of man → waar
-   werk je → Nederland of België → les 1** („Say hello”, unit „Eerste werkdag”).
+3. De leerling doorloopt zelf de start: **taal kiezen → vrouw of man (alleen in talen die dat
+   nodig hebben) → waar werk je → Nederland of België → welke kleur → les 1** („Say hello”, unit
+   „Eerste werkdag”). Wie al Nederlands spreekt, kiest onder de talen „Ik spreek al Nederlands”
+   (het spoor Werkregels).
 4. De coach vult het waarneemformulier in.
 5. **Helpen pas als iemand vastzit:** ongeveer een minuut niets doen, of zelf om hulp vragen. Help
    dan met één kleine aanwijzing („kijk onderaan”), niet door het over te nemen. Noteer altijd
@@ -62,10 +64,10 @@ zin bouwen, een woord schrijven). Elke vraag heeft "Ik weet het niet". Er is gee
 "geslaagd" of "gezakt". De uitslag is drie balken, met het gokken eruit gehaald. Hoe de toets werkt
 en wat hij wel en niet zegt: [toets.md](toets.md).
 
-- **Instap, in week 1.** Na de start staat op het lespad een kaart "Wat ken je al? · 10 min" met
-  **Doen** en **Later**. Op dag 1 doet de leerling de toets vóór les 1 (reken er 10 minuten bij).
-  Wie op **Later** tikt, slaat de instap over; de toets kan dan nog via **Instellingen → Lessen →
-  Wat ken je al?**.
+- **Instap, in week 1.** Eerst les 1. Daarna staat op het lespad een kaart "Wat ken je al? · 10 min"
+  met **Doen** en **Later** (zolang de leerling minder dan 3 lessen af heeft). Op dag 1 doet de
+  leerling de toets dus ná les 1 (reken er 10 minuten bij). Wie op **Later** tikt, slaat de instap
+  over; de toets kan dan nog via **Instellingen → Lessen → Wat ken je al?**.
 - **Eind, na 4 weken.** De app biedt de toets opnieuw aan na 28 dagen of na 3 afgeronde
   onderwerpen, wat het eerst komt. Dit is een andere versie (B) met andere vragen van dezelfde
   moeilijkheid, dus de leerling herkent niets. De eindtoets kan ook altijd via Instellingen.
@@ -234,7 +236,9 @@ controle van de vertaling.
 
 ## Fouten in de vertaling melden
 
-De app heeft geen meldknop. Zo loopt het:
+De knop **Melden** staat standaard uit (sinds 31 oktober 2026, `src/lib/report.ts`): voor een
+leerling was het een extra knop in elke les. Een coach of tester kan hem aanzetten met
+`vloertaal.nl/?test` of onderaan **Over**. Voor de leerlingen in de pilot loopt het zo:
 
 1. **Leerling → coach.** De leerling laat het de coach zien of zegt het in het gesprek. Een foto
    van het scherm is het handigst.

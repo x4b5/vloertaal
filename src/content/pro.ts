@@ -145,7 +145,8 @@ export const proSections: ProSection[] = [
     id: 'p.weekplan', emoji: '🗓️', title: 'Een voorbeeld: vier weken met een groep',
     body: ['Een voorbeeld, geen voorschrift: pas het aan je groep aan. Reken op ongeveer drie keer tien minuten oefenen per week, op de eigen telefoon. Vloertaal is daarbij een aanvulling op je les of begeleiding.'],
     lines: [
-      { lead: 'Week 1.', text: 'Samen beginnen. Ieder kiest een taal en doet de toets “Wat ken je al?” (ongeveer 10 minuten, zonder cijfer). Daarna de eerste les van thema 1, Starten.' },
+      // The test comes after the first lesson (src/lib/toets.ts INSTAP_FROM_LESSONS), 4 November 2026.
+      { lead: 'Week 1.', text: 'Samen beginnen. Ieder kiest een taal en doet de eerste les van thema 1, Starten. Daarna biedt de app de toets “Wat ken je al?” aan (ongeveer 10 minuten, zonder cijfer).' },
       { lead: 'Week 2 en 3.', text: 'Zelf oefenen, ongeveer drie keer tien minuten per week. Past een onderwerp bij het werk? Stuur de link van dat onderwerp (de links staan hierboven, bij “Zo zet je het in”).' },
       { lead: 'Elke week.', text: 'Kijk één keer samen naar de begeleiderskaart (Instellingen › Taal en ik › “Laat zien hoe het gaat”). De leerling laat de kaart zelf zien. Praat over wat lukte en wat lastig was. De kaart geeft geen cijfer en geen niveau.' },
       { lead: 'Week 4.', text: 'De eindtoets. De app biedt die zelf aan na 4 weken of na 3 onderwerpen; hij staat ook bij Instellingen › Lessen › “Wat ken je al?”. Kijk daarna samen naar “Jij toen” en “Jij nu”.' },

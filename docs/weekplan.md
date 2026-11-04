@@ -10,7 +10,7 @@ ongeveer **drie keer tien minuten oefenen per week**, op de eigen telefoon van d
 
 | Week | Samen (10–15 minuten) | Zelf oefenen |
 |---|---|---|
-| **1** | Ieder opent de app op de eigen telefoon en kiest een taal. Doe samen de toets **"Wat ken je al?"** (ongeveer 10 minuten, geen cijfer). Daarna de eerste les van **thema 1, Starten** (onderwerp "Eerste werkdag"). | 2 keer 10 minuten |
+| **1** | Ieder opent de app op de eigen telefoon en kiest een taal. Doe samen de eerste les van **thema 1, Starten** (onderwerp "Eerste werkdag"). Daarna biedt de app de toets **"Wat ken je al?"** aan (ongeveer 10 minuten, geen cijfer): doe die ook samen. | 2 keer 10 minuten |
 | **2** | Kijk samen naar de **begeleiderskaart** (zie hieronder). Kies eventueel een onderwerp dat bij het werk past en stuur de link. | 3 keer 10 minuten |
 | **3** | Kijk samen naar de begeleiderskaart. Vraag wat lukte en wat lastig was. | 3 keer 10 minuten |
 | **4** | De **eindtoets**: de app biedt hem zelf aan na 4 weken of na 3 onderwerpen; hij staat ook bij **Instellingen › Lessen › Wat ken je al?**. Kijk daarna samen naar het uitslagscherm: "Jij toen" en "Jij nu", en de eigen stem van toen en nu. | 3 keer 10 minuten |
@@ -40,6 +40,11 @@ lastig, welk onderwerp past bij het werk?
 de leerling zelf laat zien**: de leerling toont de kaart op het scherm, of bewaart of deelt het
 plaatje zelf. Onderaan de kaart staat: "Gemaakt op deze telefoon. Vloertaal bewaart niets."
 
+**Spelregels.** Laten zien is vrijwillig: de leerling mag nee zeggen (dat staat ook op het scherm
+van de kaart). Maak het geen verplichting, en gebruik de kaart niet voor een beoordeling, een
+contract of het loon. Houd je bij wie welk nummer is, bijvoorbeeld voor vloertaal.nl/groep? Dan
+verwerk je persoonsgegevens, en gelden daarvoor de regels van de privacywet (AVG).
+
 ## Links naar één onderwerp
 
 Elk onderwerp heeft een eigen link. Met de link opent Vloertaal meteen bij dat onderwerp. Alle
@@ -50,10 +55,12 @@ in, ook met een groep". Een link heeft deze vorm: `vloertaal.nl/?unit=safety` (V
 
 ## Werkregels
 
-Voor wie al Nederlands spreekt (kies bij de taal "Nederlands"): hetzelfde ritme, zonder toets. De
-begeleiderskaart werkt ook daar, met de onderwerpen en lessen van Werkregels.
+Voor wie al Nederlands spreekt (kies bij de start "Ik spreek al Nederlands"): hetzelfde ritme,
+zonder toets. De begeleiderskaart werkt ook daar, met de onderwerpen en lessen van Werkregels.
 
 ## Na vier weken
 
 Ga gewoon door met hetzelfde ritme, of kies samen een paar onderwerpen die bij het werk passen.
-Fouten in een les of vertaling? Tik in de les op **Melden**, of mail naar hoi@vloertaal.nl.
+Fouten in een les of vertaling? Mail naar hoi@vloertaal.nl. Of zet de knop **Melden** aan (open
+`vloertaal.nl/?test`, of tik onderaan **Over** op de regel over Melden) en tik in de les op het
+vlaggetje: dan staat de plek in de app al in de mail. De knop staat standaard uit.
