@@ -283,6 +283,8 @@ export const uiEn = {
   cantSpeak: 'I can’t speak now',
   soundsSame: 'Sounds the same',
   sayAgain: 'Say it again',
+  /** After recording: play your own try again (the owner's request, 4 November 2026). */
+  hearMine: 'Hear yourself',
   speakMe: 'Me',
   speakingPractice: 'Speaking practice',
   speakingHint: 'Say words out loud and compare. Your voice is never saved or sent.',

@@ -235,6 +235,7 @@ const lang: HelpLanguageSource = {
     cantSpeak: 'Nie mogę teraz mówić',
     soundsSame: 'Brzmi tak samo',
     sayAgain: 'Powiedz jeszcze raz',
+    hearMine: 'Posłuchaj siebie', // nieuw, nalezen
     speakMe: 'Ja',
     speakingPractice: 'Ćwiczenie mówienia',
     speakingHint: 'Mów słowa na głos i porównuj. Twój głos nigdy nie jest zapisywany ani wysyłany.',

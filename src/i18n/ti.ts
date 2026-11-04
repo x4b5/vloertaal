@@ -236,6 +236,7 @@ const lang: HelpLanguageSource = {
     cantSpeak: 'ሕጂ ክዛረብ ኣይክእልን',
     soundsSame: 'ሓደ ዓይነት ይስማዕ',
     sayAgain: { m: 'ደጊምካ በሎ', f: 'ደጊምኪ በልዮ' },
+    hearMine: { m: 'ንርእስኻ ስማዕ', f: 'ንርእስኺ ስምዒ' }, // nieuw, nalezen
     speakMe: 'ኣነ',
     speakingPractice: 'ልምምድ ምዝራብ',
     speakingHint: { m: 'ቃላት ብዓው ኢልካ በሎም እሞ ኣወዳድር። ድምጽካ ፈጺሙ ኣይዕቀብን ኣይለኣኽን።', f: 'ቃላት ብዓው ኢልኪ በልዮም እሞ ኣወዳድሪ። ድምጽኪ ፈጺሙ ኣይዕቀብን ኣይለኣኽን።' },

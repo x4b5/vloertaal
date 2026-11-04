@@ -235,6 +235,7 @@ const lang: HelpLanguageSource = {
     cantSpeak: 'الان نمی‌توانم حرف بزنم',
     soundsSame: 'مثل هم شنیده می‌شود',
     sayAgain: 'دوباره بگویید',
+    hearMine: 'صدای خودتان را بشنوید', // nieuw, nalezen
     speakMe: 'من',
     speakingPractice: 'تمرین حرف زدن',
     speakingHint: 'کلمه‌ها را بلند بگویید و مقایسه کنید. صدای شما هیچ‌وقت ذخیره یا فرستاده نمی‌شود.',

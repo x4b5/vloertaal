@@ -235,6 +235,7 @@ const lang: HelpLanguageSource = {
     cantSpeak: 'Je ne peux pas parler maintenant',
     soundsSame: 'Ça sonne pareil',
     sayAgain: 'Redis-le',
+    hearMine: 'Écoute-toi', // nieuw, nalezen
     speakMe: 'Moi',
     speakingPractice: 'Pratique de l’oral',
     speakingHint: 'Dis des mots à voix haute et compare. Ta voix n’est jamais enregistrée ni envoyée.',

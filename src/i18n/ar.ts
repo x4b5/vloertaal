@@ -235,6 +235,7 @@ const lang: HelpLanguageSource = {
     cantSpeak: 'لا أستطيع التكلّم الآن',
     soundsSame: 'النطق نفسه',
     sayAgain: { m: 'قلها مرة أخرى', f: 'قوليها مرة أخرى' },
+    hearMine: { m: 'استمع إلى نفسك', f: 'استمعي إلى نفسك' }, // nieuw, nalezen
     speakMe: 'أنا',
     speakingPractice: 'تمرين التكلّم',
     speakingHint: { m: 'قل الكلمات بصوت عالٍ وقارن. صوتك لا يُحفَظ ولا يُرسَل أبداً.', f: 'قولي الكلمات بصوت عالٍ وقارني. صوتك لا يُحفَظ ولا يُرسَل أبداً.' },
