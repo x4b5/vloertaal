@@ -113,6 +113,7 @@ const lang: HelpLanguageSource = {
     withoutSound: 'Fără sunet',
     quietHint: 'Fără sunet, lecțiile nu au exerciții de ascultare și nimic nu pornește singur. Atinge 🔊 ca să auzi un cuvânt, de exemplu cu căștile.',
     soundOffToast: 'Fără sunet. Poți porni sunetul din Setări.',
+    noInternetSound: 'Fără internet: sunetul nu merge acum.', // nieuw, nalezen
     stillToDo: 'Încă de făcut azi',
     streakStopped: { one: 'Seria ta s-a oprit la {n} zi. Începe din nou azi.', few: 'Seria ta s-a oprit la {n} zile. Începe din nou azi.', other: 'Seria ta s-a oprit la {n} de zile. Începe din nou azi.' },
     recordN: { one: 'Recordul tău: {n} zi', few: 'Recordul tău: {n} zile', other: 'Recordul tău: {n} de zile' },

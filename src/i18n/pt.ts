@@ -113,6 +113,7 @@ const lang: HelpLanguageSource = {
     withoutSound: 'Sem som',
     quietHint: 'Sem som, as lições não têm perguntas para ouvir e nada toca sozinho. Toca em 🔊 para ouvir uma palavra, por exemplo com auscultadores.',
     soundOffToast: 'Sem som. Podes ligar o som nas Definições.',
+    noInternetSound: 'Sem internet: o som não funciona agora.', // nieuw, nalezen
     stillToDo: 'Ainda por fazer hoje',
     streakStopped: { one: 'A tua série parou em {n} dia. Começa de novo hoje.', many: 'A tua série parou em {n} dias. Começa de novo hoje.', other: 'A tua série parou em {n} dias. Começa de novo hoje.' },
     recordN: { one: 'O teu recorde: {n} dia', many: 'O teu recorde: {n} dias', other: 'O teu recorde: {n} dias' },

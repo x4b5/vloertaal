@@ -113,6 +113,7 @@ const lang: HelpLanguageSource = {
     withoutSound: 'Ohne Ton',
     quietHint: 'Ohne Ton haben die Lektionen keine Hörübungen, und nichts spielt von selbst. Tippe auf 🔊, um ein Wort zu hören, zum Beispiel mit Kopfhörern.',
     soundOffToast: 'Ohne Ton. Du kannst den Ton in den Einstellungen einschalten.',
+    noInternetSound: 'Kein Internet: Der Ton funktioniert gerade nicht.', // nieuw, nalezen
     stillToDo: 'Heute noch zu tun',
     streakStopped: { one: 'Deine Serie ist nach {n} Tag zu Ende. Fang heute neu an.', other: 'Deine Serie ist nach {n} Tagen zu Ende. Fang heute neu an.' },
     recordN: { one: 'Dein Rekord: {n} Tag', other: 'Dein Rekord: {n} Tage' },

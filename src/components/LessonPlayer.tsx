@@ -8,12 +8,18 @@ import type { Lesson } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
 import { gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
-import { autoSpeak, endLessonPace, hasClip, sounds, speak, startLessonPace, stopSpeech, surelySilent } from '../lib/audio';
+import { autoSpeak, endLessonPace, hasClip, onSoundNeedsInternet, sounds, speak, startLessonPace, stopSpeech, surelySilent } from '../lib/audio';
 import { realPaceReplay } from '../lib/tempo';
 import { unitOfLesson } from '../content/courses';
+import { prepareLessonSound } from '../lib/lessonClips';
+import { heardVoice, lessonLines } from './lessonLines';
 
-/** Can the phone say this line, as far as is known (see surelySilent: no index yet counts as yes). */
-const mayBeHeard = (text: string) => !surelySilent(text);
+/**
+ * Nothing on this phone can say what this step needs heard, as far as is known: no recording and
+ * no Dutch phone voice, or offline a recording that is not on the phone (surelySilent: no index
+ * yet counts as heard). In the voice the step is heard in (a sentence built by ear: its speaker's).
+ */
+export const cantBeHeard = (e: Exercise) => unheard(e, (text) => !surelySilent(text, heardVoice(e)));
 import { useVoices } from './useVoices';
 import { tileDiff } from '../lib/answers';
 import { breakable } from '../lib/dutch';
@@ -37,7 +43,7 @@ import { HelpSay } from './HelpSay';
 import { FlameIcon } from './StreakArt';
 import {
   BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, FlagIcon, KeyboardIcon, ListIcon, PairIcon,
-  PictureIcon, AskIcon, CalcIcon, QuestionIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
+  PictureIcon, AskIcon, CalcIcon, NoInternetIcon, QuestionIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
 } from './Icons';
 import { CardStep, cardTag, ModelLine, PayslipStep, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, SceneCard, TrueFalse, WhatDo, WhoAsk } from './RuleSteps';
 import { MicIcon, SpeakExercise } from './Speaking';
@@ -458,27 +464,42 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   /** Listening exercises left out, counted out loud on the result. */
   const skipped = useRef(0);
   /** Short line after the sound changed: 'off' = without sound, 'on' = sound on. It stays long
-   *  enough to read slowly in two languages (WCAG 2.2.1); the pause sheet keeps saying it after. */
-  const [soundNote, setSoundNote] = useState<'off' | 'on' | null>(null);
+   *  enough to read slowly in two languages (WCAG 2.2.1); the pause sheet keeps saying it after.
+   *  'net': a line could not be heard for want of internet ("Geen internet: het geluid werkt nu
+   *  niet.", phase 3, 4 November 2026), so the silence has a reason. */
+  const [soundNote, setSoundNote] = useState<'off' | 'on' | 'net' | null>(null);
   useEffect(() => {
     if (!soundNote) return;
     const t = setTimeout(() => setSoundNote(null), SOUND_NOTE_MS);
     return () => clearTimeout(t);
   }, [soundNote]);
+  useEffect(() => {
+    return onSoundNeedsInternet(() => setSoundNote('net'));
+  }, []);
 
   // A sentence built by ear becomes the usual one (meaning shown) when the learner can't listen;
   // so does "pick the Dutch word" on text cards for a learner who reads another script (the
   // cards' speakers were their way in): "what does it mean" instead.
   const queued = queue[index];
-  // Re-checked when the phone's voices or the recorded voices arrive (see unheard).
+  // Re-checked when the phone's voices or the recorded voices arrive (see unheard), and when the
+  // lesson's clips were looked for on the phone (`onPhone`, below: offline only those play).
   const voices = useVoices();
+  /** Goes up each time it is known anew which of this lesson's clips are on the phone. */
+  const [onPhone, setOnPhone] = useState(0);
   const ex: Exercise = useMemo(() => {
-    if (queued && queued.kind === 'build' && queued.audio && (audioOff || unheard(queued, mayBeHeard))) return { ...queued, audio: undefined };
+    if (queued && queued.kind === 'build' && queued.audio && (audioOff || cantBeHeard(queued))) return { ...queued, audio: undefined };
     if (queued && queued.kind === 'dutch' && queued.textOnly && nonLatinAtStart && (audioOff || surelySilent(queued.word.nl))) {
       return { kind: 'meaning', word: queued.word, options: queued.options };
     }
     return queued;
-  }, [queued, audioOff, nonLatinAtStart, voices.device, voices.recorded]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [queued, audioOff, nonLatinAtStart, voices.device, voices.recorded, onPhone]); // eslint-disable-line react-hooks/exhaustive-deps
+  // The lesson's sound, ready before it is tapped (src/lib/lessonClips.ts): its clips are looked
+  // for on the phone, and online fetched ahead in the background, from the exercise on screen on.
+  // Once, as the lesson opens; stopped when it closes.
+  useEffect(() => {
+    const order = [...queue.slice(index), ...queue.slice(0, index)];
+    return prepareLessonSound(lessonLines(order, lang?.gender), () => setOnPhone((n) => n + 1));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   /*
    * Resume: the place is saved after every answer (on the exercise that comes next) and when the
@@ -798,11 +819,18 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       made.current.add(speakCardId(ex.item.id));
     }
     reset();
-    let i = index + 1;
-    // Skip audio-only exercises when the learner can't listen right now, or when nothing on this
-    // phone can say the line (no recording yet, no Dutch phone voice: lib/exercises.ts unheard);
-    // and speaking that can't happen.
-    while (i < queue.length && (((audioOff || unheard(queue[i], mayBeHeard)) && needsAudio(queue[i])) || cantSpeak(queue[i]))) {
+    moveOn(index + 1, coming);
+  }
+
+  /**
+   * To the exercise at `start`, or the first one after it that can be done now. Audio-only
+   * exercises are skipped when the learner can't listen right now, or when nothing on this phone
+   * can say the line (no recording yet, no Dutch phone voice; offline, a recording not on the
+   * phone: cantBeHeard); and speaking that can't happen. `coming`: retries just queued.
+   */
+  function moveOn(start: number, coming = 0) {
+    let i = start;
+    while (i < queue.length && (((audioOff || cantBeHeard(queue[i])) && needsAudio(queue[i])) || cantSpeak(queue[i]))) {
       if (i < initial.length && needsAudio(queue[i])) skipped.current += 1;
       i++;
     }
@@ -813,6 +841,16 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       setIndex(i);
     }
   }
+
+  // Offline, a listening step on screen whose clip turned out not to be on the phone (the lesson
+  // was opened again on it, or the connection went while it waited): left out like the next ones,
+  // as "Without sound" does (counted as skipped). The line "Geen internet" says why.
+  useEffect(() => {
+    if (!onPhone || checked || audioOff || !needsAudio(ex) || !cantBeHeard(ex)) return;
+    reset();
+    if (index < initial.length) skipped.current += 1;
+    moveOn(index + 1);
+  }, [onPhone]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /** The read page this question goes with (lib/exercises.ts readBackAt), while it is unanswered. */
   const backTo = checked ? null : readBackAt(queue, index, initial.length);
@@ -1105,9 +1143,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
             read out); only the note inside it comes and goes. */}
         <div className="sound-note-live" role="status">
           {soundNote && (
-            <div className="sound-note" key={soundNote}>
-              {soundNote === 'on' ? <SpeakerIcon size={20} /> : <SpeakerOffIcon size={20} />}
-              <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : 'soundOn', lang)} />
+            <div className={`sound-note ${soundNote === 'net' ? 'sound-note-net' : ''}`} key={soundNote}>
+              {soundNote === 'on' ? <SpeakerIcon size={20} /> : soundNote === 'net' ? <NoInternetIcon size={20} /> : <SpeakerOffIcon size={20} />}
+              <Bi text={ui(soundNote === 'off' ? 'soundOffToast' : soundNote === 'net' ? 'noInternetSound' : 'soundOn', lang)} />
             </div>
           )}
         </div>

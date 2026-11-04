@@ -148,6 +148,7 @@ export const uiNl: Record<UiKey, UiText> = {
   withoutSound: 'Zonder geluid',
   quietHint: 'Zonder geluid speelt er niets vanzelf af. Tik op 🔊 om toch iets te horen, bijvoorbeeld met oortjes.', // regels: no listening questions here
   soundOffToast: 'Zonder geluid. Bij Instellingen zet je het geluid weer aan.',
+  noInternetSound: 'Geen internet: het geluid werkt nu niet.',
   stillToDo: 'Vandaag nog doen',
   streakStopped: 'Je reeks stopte bij {n} dagen. Begin vandaag opnieuw.',
   recordN: 'Je record: {n} dagen',
