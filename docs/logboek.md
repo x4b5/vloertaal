@@ -108,4 +108,8 @@ Elke maand:
    maandcheck doet (nu de eigenaar), werkt hem bij, en alleen na een echte check. De leerling ziet
    die maand als "Bijgewerkt: …" in Werkregels (`RULES_CHECKED` in
    `src/content/regels/disclaimer.ts` volgt hem vanzelf). Is hij ouder dan 45 dagen, dan geeft
-   `tests/upcomingLaw.test.ts` een waarschuwing.
+   `tests/upcomingLaw.test.ts` een waarschuwing. Is hij ouder dan 90 dagen, dan zegt de app het
+   zelf (`src/content/lawAge.ts`, sinds 4 november 2026): Werkregels en de tips over rechten in
+   Taal krijgen de regel "Deze uitleg is van [maand jaar]. Kijk voor de laatste regels bij het
+   Juridisch Loket of Work in NL." (in België: het justitiehuis of werk.belgie.be). Die regel gaat
+   vanzelf weg zodra `LAW_CHECKED` weer is bijgewerkt.

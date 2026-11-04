@@ -429,6 +429,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پیهم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen
     infoMore: 'توضیح بیشتر', // nieuw, nalezen
     tipsAbout: 'در بارهٔ این نکته‌ها', // nieuw, nalezen
+    tipsNotChecked: 'هنوز یک متخصص این توضیح را بررسی نکرده است.', // nieuw, nalezen
+    lawStale: 'تاریخ این توضیح: {month}. برای قوانین تازه، به Juridisch Loket یا Work in NL مراجعه کنید.', // nieuw, nalezen
+    lawStaleBe: 'تاریخ این توضیح: {month}. برای قوانین تازه، به justitiehuis یا werk.belgie.be مراجعه کنید.', // nieuw, nalezen
     aboutMore: 'بیشتر در بارهٔ Vloertaal', // nieuw, nalezen
     geluktAsk: 'این را در کار گفتید؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     geluktYes: 'بلی، شد', // nieuw, nalezen

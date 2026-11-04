@@ -1,5 +1,6 @@
 import { LAW_CHECKED } from '../updates';
 import { isBeId } from './be/ids';
+import { lawCheckStale } from '../lawAge';
 
 /**
  * Lines shown with the rules track (Werkregels). Plain Dutch, never legal advice.
@@ -73,6 +74,21 @@ export const RULES_DISCLAIMER = [
   'Gaat het om jouw situatie? Vraag je werkgever, een vakbond of het Juridisch Loket.',
   RULES_COUNTRY,
 ];
+
+/**
+ * Once the law check is more than 90 days old (src/content/lawAge.ts): one line with the month of
+ * the explanation and where to find the latest rules, so "Bijgewerkt: …" never stays up alone when
+ * nobody checks the law any more (fase 4, 4 November 2026). On the disclaimer card, the first
+ * notice and under every written rule. The same words as `lawStale` in src/i18n/nl.ts (Taal's tips
+ * say it in the help language). In Belgium: the justitiehuis (free first legal advice) and
+ * werk.belgie.be (FOD WASO), the places the Belgian course already sends you to (help.ts).
+ */
+export const RULES_STALE = `Deze uitleg is van ${RULES_CHECKED}. Kijk voor de laatste regels bij het Juridisch Loket of Work in NL.`;
+export const RULES_STALE_BE = `Deze uitleg is van ${RULES_CHECKED}. Kijk voor de laatste regels bij het justitiehuis of op werk.belgie.be.`;
+
+/** The line for the Dutch or (`be`) the Belgian course, or undefined while the law check is recent. */
+export const rulesStaleLine = (be = false, today: Date = new Date()): string | undefined =>
+  (lawCheckStale(today) ? (be ? RULES_STALE_BE : RULES_STALE) : undefined);
 
 /** Which line goes under which written rule, keyed by rule step id. Every 'geschreven' rule has one. */
 export const ruleAdvice: Record<string, 'advice' | 'abuse' | 'civic'> = {
@@ -216,6 +232,11 @@ export function addRuleAdviceBe(lines: Record<string, RuleAdviceKind>): void {
 }
 /** The Belgian lines registered so far (tests). */
 export const ruleAdviceBeAll = (): Readonly<Record<string, RuleAdviceKind>> => ruleAdviceBe;
+
+/** Under a written rule, after its advice line: the stale line (rulesStaleLine), Belgian for a Belgian rule. */
+export function ruleStaleLine(ruleId: string, today: Date = new Date()): string | undefined {
+  return ruleAdviceLine(ruleId) ? rulesStaleLine(isBeId(ruleId), today) : undefined;
+}
 
 /** The line to show under a rule step, or undefined for an unwritten rule (a custom). */
 export function ruleAdviceLine(ruleId: string): string | undefined {

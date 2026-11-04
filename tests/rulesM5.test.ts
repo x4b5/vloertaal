@@ -54,9 +54,10 @@ describe('Hulp in the work-rules track: "Wie bel je?"', () => {
     const byName = Object.fromEntries(HELP_ROWS.map((r) => [r.id, r]));
     expect(byName['h.112'].show).toBe('112');
     expect(byName['h.juridischloket'].show).toContain('0800-8020');
-    expect(byName['h.arbeidsinspectie'].show).toBe('0800-5151');
-    expect(byName['h.meldmisdaad'].show).toBe('0800-7000');
-    expect(byName['h.geldfit'].show).toBe('0800-8115');
+    // Each 0800 row also shows its site (fase 4: a foreign SIM card often cannot call 0800).
+    expect(byName['h.arbeidsinspectie'].show).toBe('0800-5151 · nlarbeidsinspectie.nl');
+    expect(byName['h.meldmisdaad'].show).toBe('0800-7000 · meldmisdaadanoniem.nl');
+    expect(byName['h.geldfit'].show).toBe('0800-8115 · geldfit.nl');
     expect(byName['h.politie'].show).toBe('0900-8844');
     // FairWork: a number to call (Inhoudsronde 3), the site still in the line.
     expect(byName['h.fairwork'].href).toBe('tel:0207600809');

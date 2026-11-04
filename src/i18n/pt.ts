@@ -429,6 +429,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Ligado: nada se mexe, não há festa pela tua série depois de uma lição, e a tua série e as palavras não aparecem no ecrã inicial.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     infoMore: 'Mais explicação', // nieuw, nalezen
     tipsAbout: 'Sobre estas dicas', // nieuw, nalezen
+    tipsNotChecked: 'Um especialista ainda não verificou esta explicação.', // nieuw, nalezen
+    lawStale: 'Data desta explicação: {month}. Para ver as regras mais recentes, consulta o Juridisch Loket ou o Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Data desta explicação: {month}. Para ver as regras mais recentes, consulta o justitiehuis ou o werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Ler mais sobre o Vloertaal', // nieuw, nalezen
     geluktAsk: 'Disseste isto no trabalho?', // nieuw, nalezen
     geluktYes: 'Sim, correu bem', // nieuw, nalezen

@@ -429,6 +429,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Włączone: nic się nie rusza, nie ma świętowania serii po lekcji, a seria i słowa nie są na ekranie głównym.', // nieuw, nalezen
     infoMore: 'Więcej wyjaśnień', // nieuw, nalezen
     tipsAbout: 'O tych wskazówkach', // nieuw, nalezen
+    tipsNotChecked: 'Ekspert jeszcze nie sprawdził tego wyjaśnienia.', // nieuw, nalezen
+    lawStale: 'Data tego wyjaśnienia: {month}. Najnowsze zasady sprawdź w Juridisch Loket albo w Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Data tego wyjaśnienia: {month}. Najnowsze zasady sprawdź w justitiehuis albo na werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Więcej o Vloertaal', // nieuw, nalezen
     geluktAsk: 'Udało się to powiedzieć w pracy?', // nieuw, nalezen
     geluktYes: 'Tak, udało się', // nieuw, nalezen

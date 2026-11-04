@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { courseUnits, ruleCards } from '../content/courses';
 import { withRegion } from '../content/regio';
-import { RULES_BE_NOTE, RULES_COUNTRY, RULES_DISCLAIMER, RULES_DISCLAIMER_BE, RULES_NOTICE, RULES_NOTICE_BE, RULES_PATH_NOTE, RULES_PATH_NOTE_BE, RULES_PATH_NOTE_BE_OWN, RULES_PATH_NOTE_BE_PART, ruleAdviceLine } from '../content/regels/disclaimer';
+import { RULES_BE_NOTE, RULES_COUNTRY, RULES_DISCLAIMER, RULES_DISCLAIMER_BE, RULES_NOTICE, RULES_NOTICE_BE, RULES_PATH_NOTE, RULES_PATH_NOTE_BE, RULES_PATH_NOTE_BE_OWN, RULES_PATH_NOTE_BE_PART, ruleAdviceLine, rulesStaleLine, ruleStaleLine } from '../content/regels/disclaimer';
 import { isBeId } from '../content/regels/be/ids';
 import { rulesCountry } from '../content/rulesCourse';
 import { helpRowsFor, helpRowText, helpShow, type HelpRow } from '../content/regels/help';
@@ -86,7 +86,9 @@ export function RulesNoticeScreen({ country, lang, onDone }: { country?: 'nl' | 
   const head = useRef<HTMLHeadingElement>(null);
   useEffect(() => { head.current?.focus({ preventScroll: true }); }, []);
   const beCourse = country === 'be' && rulesCountry() === 'be';
-  const notice = beCourse ? RULES_NOTICE_BE : RULES_NOTICE.filter((line) => country !== 'be' || line !== RULES_COUNTRY);
+  // The law check more than 90 days old: its month and where to look, last (src/content/lawAge.ts).
+  const stale = rulesStaleLine(beCourse);
+  const notice = [...(beCourse ? RULES_NOTICE_BE : RULES_NOTICE.filter((line) => country !== 'be' || line !== RULES_COUNTRY)), ...(stale ? [stale] : [])];
   // About 45 words before the first lesson: each card has one speaker for its whole text (hidden
   // without a Dutch phone voice), named after the card (the UX evaluation, 4 November 2026).
   return (
@@ -134,10 +136,12 @@ export function rulesPathNote(country?: 'nl' | 'be'): string {
 /** RULES_DISCLAIMER as a calm card (not a warning): general information, ask for your situation.
  *  `be`: the Belgian course's (RULES_DISCLAIMER_BE). */
 export function RulesDisclaimer({ be }: { be?: boolean } = {}) {
+  // The law check more than 90 days old: its month and where to look, last (src/content/lawAge.ts).
+  const stale = rulesStaleLine(be);
   return (
     <section className="rules-disclaimer" aria-label="Goed om te weten" lang="nl">
       <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={24} /></span>
-      <p>{(be ? RULES_DISCLAIMER_BE : RULES_DISCLAIMER).map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
+      <p>{[...(be ? RULES_DISCLAIMER_BE : RULES_DISCLAIMER), ...(stale ? [stale] : [])].map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
     </section>
   );
 }
@@ -229,6 +233,7 @@ export function RulesShelf({ progress, lang, onBack }: { progress: Progress; lan
               ...rules.map((r) => {
                 const isOpen = open === r.id;
                 const advice = r.rule === 'geschreven' ? ruleAdviceLine(r.id) : undefined;
+                const stale = r.rule === 'geschreven' ? ruleStaleLine(r.id) : undefined;
                 const text = r.body.join(' ');
                 return (
                   <li key={r.id} className={`tips-item ${isOpen ? 'open' : ''}`}>
@@ -246,6 +251,7 @@ export function RulesShelf({ progress, lang, onBack }: { progress: Progress; lan
                           <p>{r.body.map((line, i) => <span key={i} className="rule-line">{r.dialect ? <DialectLine line={line} /> : line}</span>)}</p>
                         </div>
                         {advice && <p className="rule-advice"><InfoGlyph />{advice}</p>}
+                        {stale && <p className="rule-advice rule-stale" role="note">{stale}</p>}
                       </div>
                     )}
                   </li>

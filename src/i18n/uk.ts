@@ -429,6 +429,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Увімкнено: нічого не рухається, немає святкування серії після уроку, а серія і слова не показуються на головному екрані.', // nieuw, nalezen
     infoMore: 'Більше пояснень', // nieuw, nalezen
     tipsAbout: 'Про ці поради', // nieuw, nalezen
+    tipsNotChecked: 'Експерт ще не перевірив це пояснення.', // nieuw, nalezen
+    lawStale: 'Дата цього пояснення: {month}. Найновіші правила перевір у Juridisch Loket або на Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Дата цього пояснення: {month}. Найновіші правила перевір у justitiehuis або на werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Більше про Vloertaal', // nieuw, nalezen
     geluktAsk: 'Вдалося сказати це на роботі?', // nieuw, nalezen
     geluktYes: 'Так, вдалося', // nieuw, nalezen

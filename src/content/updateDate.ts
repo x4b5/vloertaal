@@ -9,6 +9,17 @@ export function dateLocale(code?: string): string {
   return ({ prs: 'fa-AF', nl: 'nl-NL' } as Record<string, string>)[code] ?? code;
 }
 
+/** "oktober 2026" in a language (Dutch by default): the month and year of a day. The day itself
+ *  counts, for a language whose calendar has other months (Persian and Dari: "آبان ۱۴۰۵"). */
+export function updateMonth(day: string, locale = 'nl-NL'): string {
+  const [y, m, d] = day.split('-').map(Number);
+  try {
+    return new Date(y, m - 1, d).toLocaleDateString(locale, { month: 'long', year: 'numeric' });
+  } catch {
+    return new Date(y, m - 1, d).toLocaleDateString('nl-NL', { month: 'long', year: 'numeric' });
+  }
+}
+
 /** "15 oktober 2026" in a language (Dutch by default). */
 export function updateDate(day: string, locale = 'nl-NL'): string {
   const [y, m, d] = day.split('-').map(Number);

@@ -43,6 +43,21 @@ function alphabetical(rows: HelpRow[]): HelpRow[] {
   return [...sos, ...rest];
 }
 
+/**
+ * A free 0800 number often does not work from a foreign SIM card, and many learners have one
+ * (Meld Misdaad Anoniem: "niet iedere provider ondersteunt de mogelijkheid om 0800 nummers in
+ * Nederland te bellen", Aanhangsel Handelingen TK 2014-2015, 1573; the Centrum Seksueel Geweld says
+ * the same of its own number). So every 0800 row shows the official site after its number: a second
+ * way in (fase 4, 4 November 2026). Shown as text, as FairWork's site already was: the row stays one
+ * tap (the call), the tap rule of this list (a second link per row would be a second tap).
+ * The sites are the ones the content already names (zuid-limburg.ts, veilig.ts, werkregels-bronnen.md),
+ * each also found in a web search of 4 November 2026 (the sites themselves could not be opened from
+ * that session): juridischloket.nl, nlarbeidsinspectie.nl (/melden), veiligthuis.nl (with a chat),
+ * centrumseksueelgeweld.nl (with a chat), meldmisdaadanoniem.nl (an online form), geldfit.nl, unia.be
+ * (an online form).
+ */
+export const withSite = (number: string, site: string): string => `${number} · ${site}`;
+
 export const HELP_ROWS: HelpRow[] = alphabetical([
   {
     // No one-tap call: a tap by accident, or "to try", would dial the emergency number (feedback from an NT2 teacher, 29 okt 2026).
@@ -76,12 +91,12 @@ export const HELP_ROWS: HelpRow[] = alphabetical([
   {
     id: 'h.juridischloket', emoji: '⚖️', name: 'Juridisch Loket',
     when: 'Gratis advies over je contract, je loon of ontslag.',
-    show: '0800-8020', href: 'tel:08008020',
+    show: withSite('0800-8020', 'juridischloket.nl'), href: 'tel:08008020',
   },
   {
     id: 'h.arbeidsinspectie', emoji: '🔍', name: 'Nederlandse Arbeidsinspectie',
     when: 'Onveilig werk, te weinig loon of uitbuiting melden. Dat kan ook anoniem.',
-    show: '0800-5151', href: 'tel:08005151',
+    show: withSite('0800-5151', 'nlarbeidsinspectie.nl'), href: 'tel:08005151',
   },
   {
     id: 'h.fairwork', emoji: '🤝', name: 'FairWork',
@@ -99,13 +114,13 @@ export const HELP_ROWS: HelpRow[] = alphabetical([
     // ⚖️ check: Veilig Thuis, advice and reports about domestic violence and child abuse: 0800-2000, free, day and night, anonymous if you want; you are put through to the Veilig Thuis of your region (rijksoverheid.nl "Wat moet ik doen bij huiselijk geweld?"; search result of 31 okt 2026)
     id: 'h.veiligthuis', emoji: '🏠', name: 'Veilig Thuis',
     when: 'Geweld of misbruik thuis, bij jou of bij iemand anders. Gratis, dag en nacht. Je mag anoniem bellen.',
-    show: '0800-2000', href: 'tel:08002000', // ⚖️ check: rijksoverheid.nl huiselijk geweld
+    show: withSite('0800-2000', 'veiligthuis.nl'), href: 'tel:08002000', // ⚖️ check: rijksoverheid.nl huiselijk geweld
   },
   {
     // ⚖️ check: Centrum Seksueel Geweld: 0800-0188, free and anonymous, day and night, or the chat (centrumseksueelgeweld.nl "Bel 0800-0188"; om.nl "waar kunnen slachtoffers terecht"; search results of 31 okt 2026). The site says the number only works with a Dutch provider: hence the chat in the line. Also in rechten.ts (a comment only, until now).
     id: 'h.csg', emoji: '🛡️', name: 'Centrum Seksueel Geweld',
     when: 'Iemand deed je seksueel geweld aan, ook op je werk. Gratis, dag en nacht. Chatten kan ook, op de site.',
-    show: '0800-0188', href: 'tel:08000188', // ⚖️ check: centrumseksueelgeweld.nl
+    show: withSite('0800-0188', 'centrumseksueelgeweld.nl'), href: 'tel:08000188', // ⚖️ check: centrumseksueelgeweld.nl
   },
   {
     id: 'h.vakbond', emoji: '✊', name: 'Vakbond (FNV of CNV)',
@@ -115,7 +130,7 @@ export const HELP_ROWS: HelpRow[] = alphabetical([
   {
     id: 'h.meldmisdaad', emoji: '📞', name: 'Meld Misdaad Anoniem',
     when: 'Je weet iets van een misdrijf, maar je wilt je naam niet geven.',
-    show: '0800-7000', href: 'tel:08007000',
+    show: withSite('0800-7000', 'meldmisdaadanoniem.nl'), href: 'tel:08007000',
   },
   {
     id: 'h.uwv', emoji: '📄', name: 'UWV',
@@ -130,7 +145,7 @@ export const HELP_ROWS: HelpRow[] = alphabetical([
   {
     id: 'h.geldfit', emoji: '💶', name: 'Geldfit',
     when: 'Vragen over geld of schulden. Gratis en anoniem.',
-    show: '0800-8115', href: 'tel:08008115',
+    show: withSite('0800-8115', 'geldfit.nl'), href: 'tel:08008115',
   },
 ]);
 
@@ -192,7 +207,7 @@ export const HELP_ROWS_BE: HelpRow[] = alphabetical([
     // source, so they are not in the row). Be/units/rechten.ts sends you here (r.be.l.rechten.1).
     id: 'h.be.unia', emoji: '📣', name: 'Unia',
     when: 'Iemand discrimineert je, op je werk of ergens anders. Melden is gratis.',
-    show: '0800 12 800', href: 'tel:080012800',
+    show: withSite('0800 12 800', 'unia.be'), href: 'tel:080012800',
   },
   {
     // ⚖️ check: 1712 is the free, anonymous helpline of Flanders for violence, abuse and child abuse

@@ -4394,6 +4394,9 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
   font-size: 1.0625rem; font-weight: 400; line-height: 1.4; color: var(--muted);
 }
 .rule-advice-icon { flex: none; margin-top: 2px; color: var(--ink-3); }
+/* Under the advice line once the law check is more than 90 days old (src/content/lawAge.ts):
+   the same quiet line, in line with the advice text after its "i". */
+.rule-stale { display: block; margin-top: 8px; padding-inline-start: 28px; }
 /* At the top of a Dutch lesson in the Belgian course ("Deze les gaat nog over Nederland."). */
 .rule-country-note {
   margin: 0 0 12px; padding: 8px 12px; border-radius: 10px; border: 2px solid var(--line, #d8d2c2);
@@ -4409,6 +4412,11 @@ p.be-note {
 }
 .be-note .bi-help { font-weight: 400; }
 p.be-note-beta { font-weight: 400; border-style: dashed; color: var(--muted); }
+/* A tip about rights (src/lib/tipText.ts rightsTipNotes): how old the explanation is, the calm
+   dashed line of the Belgian beta note; "not checked by an expert" a quiet line like the closing. */
+p.tip-law-stale { margin: 12px 0 4px; }
+.info-more .tips-note.tips-not-checked { margin-top: 6px; }
+.tips-body .tips-note.tips-not-checked { margin: 8px 0 0; }
 .theme-be-note { margin: 0 0 8px; list-style: none; }
 .rb-be-note { margin: 4px 0 8px; }
 
