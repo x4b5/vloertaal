@@ -165,7 +165,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // "Wil je ook de werkregels leren?" on the home, most of the course done (src/dev/BridgeShot.tsx).
   if (shot === 'bridge') return <BridgeShot lang={lang} gender={gender} />;
   // "Hoe zeg je het?", the pilot with a mouth per sound: /?shot=klanken, klank&k=uu, klankstrip (src/dev/KlankShot.tsx).
-  if (shot === 'klank' || shot === 'klanken' || shot === 'klankstrip') return <KlankShot shot={shot} lang={lang} gender={gender} />;
+  if (shot === 'klank' || shot === 'klanken' || shot === 'klankstrip' || shot === 'klankwoord') return <KlankShot shot={shot} lang={lang} gender={gender} />;
   // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512
   if (shot === 'logo') return <LogoSheet px={Number(q.get('px') ?? 120)} />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety

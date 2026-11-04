@@ -323,6 +323,19 @@ export function onSpeech(fn: SpeechListener): () => void {
   return () => speechListeners.delete(fn);
 }
 
+/**
+ * A recording's length, once it starts to play (the sound really starts then): its duration in
+ * seconds and the rate it plays at. "Hoe zeg je het?" (src/components/Mouth.tsx) times the mouth
+ * of a whole word by it. The phone's own voice has no length up front: it reports nothing.
+ */
+type SpeechLengthListener = (text: string, clipSeconds: number, rate: number) => void;
+const lengthListeners = new Set<SpeechLengthListener>();
+
+export function onSpeechLength(fn: SpeechLengthListener): () => void {
+  lengthListeners.add(fn);
+  return () => lengthListeners.delete(fn);
+}
+
 let speechTurn = 0;
 
 /** The lines that started and did not end yet: a stop ends them (a talking mouth, a speaker button). */
@@ -578,6 +591,7 @@ function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', v
     clearTimeout(clipGuard);
     const length = Number.isFinite(audio.duration) && audio.duration > 0 ? (audio.duration / (rate || 1)) * 1000 + CLIP_END_SLACK_MS : CLIP_LONGEST_MS;
     clipGuard = setTimeout(end, length);
+    if (Number.isFinite(audio.duration) && audio.duration > 0) lengthListeners.forEach((fn) => fn(text, audio.duration, rate || 1));
   }, () => {
     if (turn === speechTurn) clearTimeout(clipGuard);
     end();

@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useId, useRef, useState } from 'react';
-import { onSpeech } from '../lib/audio';
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
+import { onSpeech, onSpeechLength } from '../lib/audio';
 import { stillMotion } from '../lib/calm';
-import { endPose, mixPose, REST, type Klank, type MouthPose } from '../content/klankMond';
+import { endPose, mixPose, REST, wordSegments, type Klank, type MouthPose, type WordSegment } from '../content/klankMond';
 
 /**
  * A mouth seen from the front, to show how a Dutch sound is made (src/content/klankMond.ts; the
@@ -216,6 +216,73 @@ export function poseAtTime(k: Klank, t: number, slow: boolean, holdEnd?: number)
   return { pose: start, done: true };
 }
 
+/* ------------------------------------------------- the whole word (m – uu – r) */
+
+/** Every sound of a word at this many ms per weight unit, when the word's length is not known (the phone's voice). */
+export const WORD_UNIT_MS = 95;
+
+/** The silence an ElevenLabs recording ends with (measured: 0.3–0.35 s at the recorded rate), not part of the word. */
+export const CLIP_TAIL_S = 0.32;
+
+/** The steps around a word: the mouth goes from the word's last sound to rest, waits, and back to the card's sound. */
+export const WORD_STEPS = { release: 240, pause: 300, back: 420 };
+
+/** How long the mouth takes from one sound of a word to the next, at most (ms), and at most this share of a sound. */
+const WORD_MOVE_MS = 75;
+const WORD_MOVE_SHARE = 0.45;
+
+/** How long the word is said, in ms, when nothing reports it: the sum of its sounds. */
+export const nominalWordMs = (segs: WordSegment[], slow: boolean) =>
+  segs.reduce((n, s) => n + s.weight, 0) * WORD_UNIT_MS * (slow ? SLOW_FACTOR : 1);
+
+/** The word's spoken part of a recording, in ms as played: the clip without its silent end, at its rate. */
+export const spokenMs = (clipSeconds: number, rate: number) => Math.max(250, ((clipSeconds - CLIP_TAIL_S) / (rate || 1)) * 1000);
+
+/** Where a sound of a word is `u` (0–1) through it: its start, gliding to its end (ui, ij, ou fully; ee, eu, oo at the end). */
+function segmentPose(seg: WordSegment, u: number): MouthPose {
+  if (!seg.end || !seg.glide) return seg.start;
+  const [from, to] = seg.glide === 'full' ? [0.15, 0.9] : [0.55, 1];
+  return mixPose(seg.start, seg.end, ease(clamp((u - from) / (to - from))));
+}
+
+/**
+ * The pose `t` ms into a whole word that is said for `speech` ms from t = 0 (the sound's start).
+ * Each sound gets its share of `speech` by weight; the mouth moves into it quickly (WORD_MOVE_MS)
+ * from where the previous one ended, then holds it (or glides). Then to rest, a pause, and back to
+ * `still` (the card's own sound). Before t = 0 (the clip still loading) the mouth stays at `still`.
+ */
+export function wordPoseAtTime(segs: WordSegment[], still: MouthPose, t: number, speech: number, slow: boolean): { pose: MouthPose; done: boolean; part: number } {
+  if (t < 0 || !segs.length) return { pose: still, done: !segs.length, part: -1 };
+  const total = segs.reduce((n, s) => n + s.weight, 0);
+  let at = 0;
+  let prev = still;
+  for (let i = 0; i < segs.length; i++) {
+    const seg = segs[i];
+    const len = (seg.weight / total) * speech;
+    if (t < at + len) {
+      const inSeg = t - at;
+      const move = Math.min(WORD_MOVE_MS * (slow ? SLOW_FACTOR : 1), len * WORD_MOVE_SHARE);
+      const here = segmentPose(seg, inSeg / len);
+      return { pose: inSeg < move ? mixPose(prev, here, ease(inSeg / move)) : here, done: false, part: i };
+    }
+    prev = segmentPose(seg, 1);
+    at += len;
+  }
+  const f = slow ? SLOW_FACTOR : 1;
+  const t1 = speech + WORD_STEPS.release * f;
+  const t2 = t1 + WORD_STEPS.pause * f;
+  const t3 = t2 + WORD_STEPS.back * f;
+  if (t < t1) return { pose: mixPose(prev, REST, ease((t - speech) / (t1 - speech))), done: false, part: -1 };
+  if (t < t2) return { pose: REST, done: false, part: -1 };
+  if (t < t3) return { pose: mixPose(REST, still, ease((t - t2) / (t3 - t2))), done: false, part: -1 };
+  return { pose: still, done: true, part: -1 };
+}
+
+/** The longest the mouth waits for a word's recording to start before it says the word on its own:
+ *  after the tap, and after the line was started (a recording that plays reports its length well within it). */
+const WORD_WAIT_MS = 700;
+const WORD_WAIT_SOUNDING_MS = 300;
+
 /** The pose when nothing plays (and always with reduced motion): the sound's own position. */
 export function stillPose(k: Klank): MouthPose {
   return k.start;
@@ -227,20 +294,36 @@ const LONGEST_MS = 6000;
 export interface MouthMotion {
   pose: MouthPose;
   playing: boolean;
-  /** Plays the motion once (normal or slow); the card calls this as it starts the sound. */
-  play: (slow: boolean) => void;
+  /** While the whole word is said: which of its sounds (word.parts) is said now; else -1. */
+  part: number;
+  /** Plays the motion once (normal or slow): the sound on its own, or (`word`) the whole example word. */
+  play: (slow: boolean, word?: boolean) => void;
 }
+
+type Run = {
+  at: number;
+  slow: boolean;
+  sounding: boolean;
+  holdEnd?: number;
+  raf: number;
+  /** The whole word: when its sound started (ms from `at`; unknown while the clip loads) and how long it is said. */
+  word?: { from?: number; speech?: number };
+};
 
 /**
  * The mouth's motion for a sound: still in its position, until one of `follow` is said (the
- * sound, the example word: src/lib/audio.ts onSpeech) or `play` is called. Then rest, the sound,
- * hold while it sounds (it waits for the end of the recording or the phone's voice), back.
- * With reduced motion or the calm screen (stillMotion) it never moves.
+ * sound, the example word: src/lib/audio.ts onSpeech) or `play` is called. The sound on its own:
+ * rest, the sound, hold while it sounds (it waits for the end of the recording or the phone's
+ * voice), back. The example word (the owner's request, 4 November 2026): every sound of the word
+ * in turn (m – uu – r, wordSegments), stretched over the recording as it plays (onSpeechLength),
+ * then rest and back. With reduced motion or the calm screen (stillMotion) it never moves.
  */
 export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
   const [pose, setPose] = useState<MouthPose>(() => stillPose(k));
   const [playing, setPlaying] = useState(false);
-  const run = useRef<{ at: number; slow: boolean; sounding: boolean; holdEnd?: number; raf: number } | null>(null);
+  const [part, setPart] = useState(-1);
+  const run = useRef<Run | null>(null);
+  const segs = useMemo(() => wordSegments(k), [k]);
   const stop = useCallback(() => {
     if (run.current) cancelAnimationFrame(run.current.raf);
     run.current = null;
@@ -250,6 +333,23 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
     const cur = run.current;
     if (!cur) return;
     const t = now - cur.at;
+    if (cur.word) {
+      const w = cur.word;
+      // No recording reported its start in time (the phone's voice, which has no length; or a slow
+      // line): say the word now, at its nominal length.
+      if (w.from === undefined && t >= (cur.sounding ? WORD_WAIT_SOUNDING_MS : WORD_WAIT_MS)) w.from = t;
+      const speech = w.speech ?? nominalWordMs(segs, cur.slow);
+      const r = wordPoseAtTime(segs, stillPose(k), w.from === undefined ? -1 : t - w.from, speech, cur.slow);
+      setPose(r.pose);
+      setPart(r.part);
+      if (r.done) {
+        run.current = null;
+        setPlaying(false);
+        return;
+      }
+      cur.raf = requestAnimationFrame(frame);
+      return;
+    }
     const f = cur.slow ? SLOW_FACTOR : 1;
     const planned = (STEPS.toRest + STEPS.rest + STEPS.onset + holdMs(k)) * f;
     // Still sounding at the planned end of the hold: hold on until it ends (or LONGEST_MS).
@@ -263,35 +363,49 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
       return;
     }
     cur.raf = requestAnimationFrame(frame);
-  }, [k]);
-  const play = useCallback((slow: boolean) => {
+  }, [k, segs]);
+  const play = useCallback((slow: boolean, word = false) => {
     if (stillMotion()) return;
     const now = performance.now();
     // The tap that starts the sound and the sound's own start event come together: one motion.
-    if (run.current && now - run.current.at < 150) return;
+    if (run.current && now - run.current.at < 150 && Boolean(run.current.word) === word) return;
     stop();
-    run.current = { at: now, slow, sounding: false, raf: requestAnimationFrame(frame) };
+    run.current = { at: now, slow, sounding: false, raf: requestAnimationFrame(frame), word: word ? {} : undefined };
     setPlaying(true);
   }, [frame, stop]);
   const key = follow.join('\n');
   useEffect(() => {
     const mine = new Set(key.split('\n').filter(Boolean));
     if (!mine.size) return;
-    return onSpeech((text, on, slow) => {
+    const offSpeech = onSpeech((text, on, slow) => {
       if (!mine.has(text)) return;
       if (on) {
-        play(slow);
+        play(slow, text === k.word.nl);
         if (run.current) run.current.sounding = true;
         return;
       }
       const cur = run.current;
       if (!cur || !cur.sounding) return;
       cur.sounding = false;
+      if (cur.word) return;
       // The hold ends now, but never before the mouth has reached the sound (and for a diphthong: its end).
       const f = cur.slow ? SLOW_FACTOR : 1;
       const reached = (STEPS.toRest + STEPS.rest + STEPS.onset) * f + (k.glide === 'full' ? STEPS.hold * 0.85 : k.short ? 120 : 200) * f;
       cur.holdEnd = Math.max(performance.now() - cur.at, reached);
     });
+    // The word's recording starts to play: from now, its sounds over its spoken length.
+    const offLength = onSpeechLength((text, seconds, rate) => {
+      const cur = run.current;
+      if (text !== k.word.nl || !cur?.word || cur.word.speech !== undefined) return;
+      const t = performance.now() - cur.at;
+      // The sound really starts now (also when a slow line made the mouth start without it: it starts again, in time).
+      cur.word.from = t;
+      cur.word.speech = spokenMs(seconds, rate);
+    });
+    return () => {
+      offSpeech();
+      offLength();
+    };
   }, [key, play, k]);
   useEffect(() => {
     return stop;
@@ -300,9 +414,10 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
   useEffect(() => {
     stop();
     setPlaying(false);
+    setPart(-1);
     setPose(stillPose(k));
   }, [k, stop]);
-  return { pose, playing, play };
+  return { pose, playing, part, play };
 }
 
 /** A fixed frame for screenshots and the overview: rest, the sound's position, its end, or a step of the glide (0–1). */
