@@ -984,7 +984,7 @@ const t: CultureTranslation = {
     'w.intimidatie': 'el acoso, la intimidación',
     'w.getuige': 'el testigo',
     'w.grapje': 'la broma',
-    's.boundaries.1': 'No me toque, por favor.',
+    's.boundaries.1': 'No me toques.', // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
     's.boundaries.2': 'Ese comentario no me hace gracia.',
     's.boundaries.3': 'Quiero contarle algo a la persona de confianza.',
     'c.boundaries.q': 'No te pongas así, solo era una broma.',

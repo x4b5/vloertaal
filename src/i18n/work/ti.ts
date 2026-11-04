@@ -984,7 +984,7 @@ const t: CultureTranslation = {
     'w.intimidatie': "ምህሳይ፡ ምፍርራሕ",
     'w.getuige': "መሰኻኽር",
     'w.grapje': "ቀልዲ",
-    's.boundaries.1': "በጃኻ ኣይትተንክፈኒ።",
+    's.boundaries.1': "ኣይትተንክፈኒ።", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
     's.boundaries.2': "እዚ ዘረባ እዚ ኣየስሕቐንን እዩ።",
     's.boundaries.3': "ንምስጢራዊ ኣማኻሪ ገለ ነገር ክሕብር እደሊ።",
     'c.boundaries.q': { m: 'ከምኡ ኣይትተሸገር፡ ቀልዲ ጥራይ እዩ ነይሩ።', f: 'ከምኡ ኣይትተሸገሪ፡ ቀልዲ ጥራይ እዩ ነይሩ።', x: 'ከምኡ ኣይትተሸገሩ፡ ቀልዲ ጥራይ እዩ ነይሩ።' }, // x: nieuw, nalezen

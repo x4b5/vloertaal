@@ -984,7 +984,7 @@ const t: CultureTranslation = {
     'w.intimidatie': "آزار، ارعاب",
     'w.getuige': "شاهد",
     'w.grapje': "شوخی",
-    's.boundaries.1': "لطفاً به من دست نزن.",
+    's.boundaries.1': "به من دست نزن.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
     's.boundaries.2': "این حرف به نظرم خنده‌دار نیست.",
     's.boundaries.3': "می‌خواهم چیزی را به مشاور معتمد گزارش بدهم.",
     'c.boundaries.q': "این‌قدر سخت نگیر، فقط یک شوخی بود.",

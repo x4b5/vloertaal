@@ -483,11 +483,13 @@ describe('pocket card phrases', () => {
       'de drugs',
       'somber',
       'Ik ben erg moe vandaag.',
-      'Ik eet altijd eerst een ontbijt.',
+      'Ik ontbijt altijd eerst.',
       'In de pauze ga ik even wandelen.',
       'Wil je een pilletje? Dan blijf je wakker.',
       'Nee, dank je. Ik werk niet onder invloed.',
       'Ik voel me al lang somber. Kan ik een afspraak maken?',
+      // s.boundaries.1, said firmly (was "Raak me niet aan, alstublieft.", 4 November 2026):
+      'Blijf van me af.',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

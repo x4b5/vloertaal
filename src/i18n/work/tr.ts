@@ -397,8 +397,8 @@ const t: CultureTranslation = {
     'w.uitchecken': 'çıkış yapmak (kart okutmak)',
     'w.bankpas': 'banka kartı',
     'w.reiskosten': 'yol parası',
-    's.transit.1': 'Banka kartımla giriş yapıyorum.',
-    's.transit.2': 'Çıkış yapmayı unutma.',
+    's.transit.1': 'Banka kartımı okutuyorum.', // nieuw, nalezen (4 nov 2026)
+    's.transit.2': 'İnerken kartını okutmayı unutma.', // nieuw, nalezen (4 nov 2026)
     's.transit.3': 'Otobüs durağı nerede?',
     'c.transit.q': 'Trenle mi geliyorsun?',
     'c.transit.a': 'Hayır, otobüsle. Kapının önünde duruyor.',
@@ -479,7 +479,7 @@ const t: CultureTranslation = {
     'c.quality.a': 'Etiket eğri.',
     'u.care': 'Bakım işinde',
     'l.client': 'Danışan ve günlük bakım',
-    'w.client': 'danışan (bakım verdiğin kişi)',
+    'w.client': 'bakımını yaptığın kişi', // nieuw, nalezen (4 nov 2026)
     'w.wassen': 'yıkamak',
     'w.aankleden': 'giyinmek, birini giydirmek',
     'w.eten': 'yemek',
@@ -984,7 +984,7 @@ const t: CultureTranslation = {
     'w.intimidatie': "taciz, yıldırma",
     'w.getuige': "tanık",
     'w.grapje': "şaka",
-    's.boundaries.1': "Lütfen bana dokunmayın.",
+    's.boundaries.1': "Bana dokunma.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
     's.boundaries.2': "Bu sözü komik bulmuyorum.",
     's.boundaries.3': "Güven danışmanına bir şey bildirmek istiyorum.",
     'c.boundaries.q': "Bu kadar zorluk çıkarma, sadece bir şakaydı.",

@@ -984,7 +984,7 @@ const t: CultureTranslation = {
     'w.intimidatie': "домагання, залякування",
     'w.getuige': "свідок",
     'w.grapje': "жарт",
-    's.boundaries.1': "Не торкайтеся мене, будь ласка.",
+    's.boundaries.1': "Не чіпай мене.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
     's.boundaries.2': "Мені не смішно від цього зауваження.",
     's.boundaries.3': "Я хочу повідомити дещо довіреній особі.",
     'c.boundaries.q': "Не ускладнюй, це був лише жарт.",

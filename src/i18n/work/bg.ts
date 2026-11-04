@@ -984,7 +984,7 @@ const t: CultureTranslation = {
     'w.intimidatie': "тормозът, сплашването",
     'w.getuige': "свидетелят",
     'w.grapje': "шегата",
-    's.boundaries.1': "Моля, не ме докосвайте.",
+    's.boundaries.1': "Не ме докосвай.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
     's.boundaries.2': "Тази забележка не ми е смешна.",
     's.boundaries.3': "Искам да съобщя нещо на довереното лице.",
     'c.boundaries.q': "Не преувеличавай, беше само шега.",
