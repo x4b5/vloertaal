@@ -55,7 +55,7 @@ export type Exercise =
   /** "What do you do?": the tip's situation with shuffled options. */
   | { kind: 'situation'; tip: CultureTip; options: CultureTip['options'] }
   /** "Say it": hear the Dutch, record yourself, compare, rate yourself. Never graded (lib/speaking.ts).
-   *  `turn` ("Wat zeg je?", right before that chat): the colleague's line is heard and the learner
+   *  `turn` ("Wat zeg je?", right after that chat): the colleague's line is heard and the learner
    *  says the reply (`item`) first; only then is the reply shown and played as the example. */
   | { kind: 'speak'; item: SpeakItem; turn?: Dialogue }
   /** The work-rules track (src/content/regels): one step of a rules lesson (buildRuleLesson). */
@@ -1234,7 +1234,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // end, placed after the rest is built so the other exercises stay the same with or without it.
   if (!opts.speak || opts.quiet) return unwritten(out);
   const spoken = withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0);
-  // "Wat zeg je?" before a chat: in a lesson of its own (not a review of a topic, not today's
+  // "Wat zeg je?" after a chat: in a lesson of its own (not a review of a topic, not today's
   // review, not the shorter lesson after many mistakes), for a chat whose two lines are recorded.
   const turnFor = !mix && !easy && opts.recorded ? dialogues.find((d) => opts.recorded!(d.prompt.nl) && opts.recorded!(d.reply.nl)) : undefined;
   // With "Zet het vooraan" there is no picture choice: the reversed chat (a chat of the lesson
@@ -1250,20 +1250,26 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
 export const TURN_LONG = 20;
 
 /**
- * "Wat zeg je?" (a speaking turn) put in right before the chat of `dialogue`: the colleague says
- * their line, the learner says the reply, then hears it; the chat itself follows. In a long lesson
+ * "Wat zeg je?" (a speaking turn) put in right after the chat of `dialogue`: the chat teaches the
+ * reply (pick it of three, then see and hear it), then the colleague says their line again and the
+ * learner says the reply, then hears it. Before the chat (until 4 November 2026) it asked a reply
+ * not learned yet ("Fijne avond!" in the very first lesson: say "Tot morgen!"), and its answer then
+ * gave the chat's answer away (the owner's request). In a long lesson
  * (TURN_LONG) it replaces the first of `instead` that is in it: the second "what do you hear" (one
  * word, the second time in this lesson), else the picture choice (a fourth "which word is it" on the
  * same words), else (a lesson with "Zet het vooraan" in the picture choice's place) the reversed
- * chat. Nothing else moves, so the other exercises stay the same with or without it.
+ * chat. Never two speaking exercises in a row: a "say it" right after the turn moves one place on
+ * (after the next exercise). Nothing else moves.
  */
 export function withTurn(list: Exercise[], dialogue: Dialogue, instead: readonly (Exercise | undefined)[]): Exercise[] {
   const at = list.findIndex((e) => e.kind === 'chat' && !e.reverse && e.dialogue === dialogue);
   if (at < 0) return list;
   const turn: Exercise = { kind: 'speak', item: { id: dialogue.reply.id, nl: dialogue.reply.nl, en: dialogue.reply.en }, turn: dialogue };
   const drop = list.length >= TURN_LONG ? instead.find((e) => e && list.includes(e)) : undefined;
-  const out = [...list.slice(0, at), turn, ...list.slice(at)];
-  return drop ? out.filter((e) => e !== drop) : out;
+  const out = [...list.slice(0, at + 1), turn, ...list.slice(at + 1)].filter((e) => e !== drop);
+  const next = out.indexOf(turn) + 1;
+  if (out[next]?.kind === 'speak' && out[next + 1]) [out[next], out[next + 1]] = [out[next + 1], out[next]];
+  return out;
 }
 
 /**

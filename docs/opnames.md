@@ -206,9 +206,9 @@ Dan passen we eerst de tekst aan (in `src/i18n/ti.ts`) en neemt de spreker daarn
 Eén zin vergeten? Dat geeft niets. Die zin leest dan niemand voor (de app laat de knop weg), de rest werkt.
 ## 6. "Wat zeg je?" in de les
 
-Voor een gesprek in de les komt nu "Wat zeg je?": de leerling hoort de collega en zegt zelf het
-antwoord. Dat gebruikt de opnames die er al zijn (de zin van de collega en het antwoord, `c.*.q` en
-`c.*.a` in `voices.json`). Er is niets nieuws op te nemen.
+Na een gesprek in de les komt nu "Wat zeg je?": de leerling hoort de collega en zegt zelf het
+antwoord dat het gesprek net heeft geleerd. Dat gebruikt de opnames die er al zijn (de zin van de
+collega en het antwoord, `c.*.q` en `c.*.a` in `voices.json`). Er is niets nieuws op te nemen.
 
 Een gesprek zonder opname krijgt "Wat zeg je?" nog niet (nu 77 van de 102 gesprekken wel). Neem je de
 ontbrekende zinnen op (stap 1 tot en met 4), dan komt "Wat zeg je?" er vanzelf bij. Er hoeft dan

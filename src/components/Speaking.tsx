@@ -587,7 +587,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
               <Bi text={ui('micRetry', lang)} />
             </button>
           )}
-          {/* "Wat zeg je?": first say the answer yourself, then hear it. */}
+          {/* "Wat zeg je?": first say the answer yourself (the chat before taught it), then hear it. */}
           {turn && !shown && !steps && (
             <button type="button" className="btn say-reveal" onClick={() => { setShown(true); playThem(); }}>
               <SpeakerIcon size={24} />
