@@ -295,6 +295,12 @@ function defineStates(LANG) {
     await tap(p, '.bay-card', 0); await settle(p, 900);
     await tap(p, '.player-top .lesson-close');
   }, { expect: '.pause-sheet .sheet-sound' });
+  // The pause sheet with the sound off: the same [Without sound], now pressed (with a check).
+  add('flow:pause-sound-off', '/', async (p) => {
+    await startFirstLesson(p);
+    await tap(p, '.player-top .lesson-close'); await tap(p, '.pause-sheet .sheet-sound'); await settle(p, 500);
+    await tap(p, '.player-top .lesson-close');
+  }, { expect: '.pause-sheet .sheet-sound.picked[aria-pressed="true"]' });
   // Stopped halfway with words due as well: [Herhaal vandaag] [Continue] [Other topic]; "Start
   // again" is then on the topic page (Other topic > the topic), next to the pocket card.
   const dueHome = (p) => realHome(p, { completed: { 'l.hello': { best: 1, times: 1 } }, cards: { 'w.hallo': { box: 1, due: '2000-01-01' }, 'w.ja': { box: 1, due: '2000-01-01' } } });

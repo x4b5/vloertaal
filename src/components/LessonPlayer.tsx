@@ -1253,13 +1253,17 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
 
 /**
  * The pause sheet behind the ✕: always three big buttons, each with its icon. Keep going is the
- * main one; then "Without sound" (leave out listening, speaking and writing from now on; "Sound
- * on" when it is already off); then Stop. Help (the phrasebook) is one tap further: Stop, then
- * Help in the bottom bar. "Start again" lives on the home, next to Continue (on the topic page
- * when "Herhaal vandaag" takes its place on the home): a fourth button here would break the 3.
+ * main one; then "Without sound" (leave out listening, speaking and writing from now on); then
+ * Stop. Help (the phrasebook) is one tap further: Stop, then Help in the bottom bar. "Start again"
+ * lives on the home, next to Continue (on the topic page when "Herhaal vandaag" takes its place on
+ * the home): a fourth button here would break the 3.
+ * "Without sound" is one on/off button with one meaning: always that label and the crossed-out
+ * speaker, pressed (with a check, like a picked card) while the sound is off. It used to turn
+ * into "Sound on" with a speaker while pressed, so a screen reader said "Sound on, pressed" with
+ * the sound off, and in Settings "Sound on" is the current state (4 November 2026).
  * kept: the lesson's place is saved (resume), so the hint says the progress stays.
  */
-function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onStop }: {
+export function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onStop }: {
   lang?: HelpLanguage;
   kept: boolean;
   soundOff: boolean;
@@ -1289,9 +1293,10 @@ function PauseSheet({ lang, kept, soundOff, onKeep, onSound, onStop }: {
             <Bi text={ui('keepGoing', lang)} />
             <ButtonBlock icon="next" />
           </button>
-          <button type="button" className="btn sheet-second sheet-sound" onClick={onSound} aria-pressed={soundOff}>
-            <span className="sheet-second-icon" aria-hidden>{soundOff ? <SpeakerIcon size={24} /> : <SpeakerOffIcon size={24} />}</span>
-            <Bi text={ui(soundOff ? 'soundOn' : 'withoutSound', lang)} />
+          <button type="button" className={`btn sheet-second sheet-sound ${soundOff ? 'picked' : ''}`} onClick={onSound} aria-pressed={soundOff}>
+            <span className="sheet-second-icon" aria-hidden><SpeakerOffIcon size={24} /></span>
+            <Bi text={ui('withoutSound', lang)} />
+            {soundOff && <span className="sheet-sound-check" aria-hidden><CheckIcon size={22} /></span>}
           </button>
           <button type="button" className="btn sheet-stop" onClick={onStop}>
             <span className="sheet-second-icon sheet-stop-icon" aria-hidden><StopIcon size={24} /></span>
