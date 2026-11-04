@@ -4953,8 +4953,10 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
    (an iPhone in Chrome is about 660 px high); the longest tips, also in Ukrainian and Arabic,
    still end above the Continue bar at 375 × 640. */
 @media (min-height: 640px) {
-  .tip-page-read .tip-title { font-size: 1.6rem; }
-  .tip-page-read .tip-body { font-size: 1.25rem; line-height: 1.5; }
+  /* --tip-fit: as large as the room above Continue allows, up to 1.7rem (useFitText.ts, the
+     owner's request, 4 November 2026); a long tip keeps 1.25rem. The title grows with it. */
+  .tip-page-read .tip-title { font-size: min(2rem, calc(var(--tip-fit, 1.25rem) * 1.28)); }
+  .tip-page-read .tip-body { font-size: var(--tip-fit, 1.25rem); line-height: 1.5; }
   .tip-page-read .tip-body .bi-help { --help-size: 0.82em; }
 }
 
