@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'Doğru, ama yazımına dikkat et',
     incorrect: 'Tam değil',
     correctAnswer: 'Doğru cevap',
+    rightAnswerIs: 'Doğru cevap şu:', // nieuw, nalezen
+    bestAnswerIs: 'En iyi cevap şu:', // nieuw, nalezen
     yourAnswer: 'Senin cevabın',
     inARow: 'Üst üste {n}',
     cantListen: 'Şu an dinleyemiyorum',
@@ -330,6 +332,10 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Yüklenmedi. İnternet var mı?',
     retry: 'Tekrar dene',
+    /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+    bootFailed: 'Vloertaal başlatılamıyor.', // nieuw, nalezen
+    bootFailedHint: 'Önce ilerlemeni sakla. Sonra baştan başla.', // nieuw, nalezen
+    startOver: 'Baştan başla', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'Neleri zaten biliyorsun?', // nieuw, nalezen
     toetsOffer: 'Yaklaşık 10 dakika. Not yok. Sadece senin için.', // nieuw, nalezen
@@ -358,6 +364,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Nasıl gittiğini göster', // nieuw, nalezen
     coachCardIntro: 'Bu kart ilerlemeni gösterir. Öğretmenine, koçuna ya da amirine göster. Sen karar verirsin.', // nieuw, nalezen
+    coachCardNo: '“Hayır” da diyebilirsin.', // nieuw, nalezen
     coachCardKeep: 'Kartı telefonun yapar. Hiçbir şey gönderilmez. Vloertaal hiçbir şey saklamaz.', // nieuw, nalezen
     coachCardWhat: 'Kartta, Hollandaca:', // nieuw, nalezen // nagelezen AI 31 okt
     coachTopics: 'Biten konular', // nieuw, nalezen

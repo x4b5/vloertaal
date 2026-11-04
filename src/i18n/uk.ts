@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'Правильно, але зверни увагу на правопис',
     incorrect: 'Не зовсім',
     correctAnswer: 'Правильна відповідь',
+    rightAnswerIs: 'Ось правильна відповідь:', // nieuw, nalezen
+    bestAnswerIs: 'Ось найкраща відповідь:', // nieuw, nalezen
     yourAnswer: 'Твоя відповідь',
     inARow: '{n} поспіль',
     cantListen: 'Зараз не можу слухати',
@@ -330,6 +332,10 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Не завантажилося. Чи є інтернет?',
     retry: 'Спробувати ще раз',
+    /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+    bootFailed: 'Vloertaal не може запуститися.', // nieuw, nalezen
+    bootFailedHint: 'Спершу збережи свій прогрес. Потім почни заново.', // nieuw, nalezen
+    startOver: 'Почати заново', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'Що ти вже знаєш?', // nieuw, nalezen
     toetsOffer: 'Приблизно 10 хвилин. Оцінок немає. Це тільки для тебе.', // nieuw, nalezen
@@ -358,6 +364,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Покажи, як справи', // nieuw, nalezen
     coachCardIntro: 'Ця картка показує твій прогрес. Покажи її вчителю, коучу або керівнику. Вирішуєш ти.', // nieuw, nalezen
+    coachCardNo: 'Ти можеш також сказати «ні».', // nieuw, nalezen
     coachCardKeep: 'Картку робить твій телефон. Нічого не надсилається. Vloertaal нічого не зберігає.', // nieuw, nalezen
     coachCardWhat: 'На картці, нідерландською:', // nieuw, nalezen
     coachTopics: 'Завершені теми', // nieuw, nalezen

@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'Corect, dar atenție la scriere',
     incorrect: 'Nu chiar',
     correctAnswer: 'Răspunsul corect',
+    rightAnswerIs: 'Răspunsul corect este:', // nieuw, nalezen
+    bestAnswerIs: 'Cel mai bun răspuns este:', // nieuw, nalezen
     yourAnswer: 'Răspunsul tău',
     inARow: '{n} la rând',
     cantListen: 'Nu pot asculta acum',
@@ -330,6 +332,10 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nu s-a încărcat. Este internet?',
     retry: 'Încearcă din nou',
+    /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+    bootFailed: 'Vloertaal nu poate porni.', // nieuw, nalezen
+    bootFailedHint: 'Mai întâi păstrează-ți progresul. Apoi începe din nou.', // nieuw, nalezen
+    startOver: 'Începe din nou', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'Ce știi deja?', // nieuw, nalezen
     toetsOffer: 'Cam 10 minute. Nu primești note. Este doar pentru tine.', // nieuw, nalezen
@@ -358,6 +364,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Arată cum îți merge', // nieuw, nalezen
     coachCardIntro: 'Acest card arată progresul tău. Arată-l profesorului, coach-ului sau șefului tău. Tu decizi.', // nieuw, nalezen
+    coachCardNo: 'Poți să spui și „nu”.', // nieuw, nalezen
     coachCardKeep: 'Telefonul tău face cardul. Nu se trimite nimic. Vloertaal nu păstrează nimic.', // nieuw, nalezen
     coachCardWhat: 'Pe card, în olandeză:', // nieuw, nalezen // nagelezen AI 31 okt
     coachTopics: 'Subiecte terminate', // nieuw, nalezen (AI-correctie 2 nov 2026)

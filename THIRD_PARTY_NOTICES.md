@@ -8,24 +8,35 @@ en de teksten van Vloertaal zelf vallen hier niet onder.
 
 | Lettertype | Waarvoor | Van wie |
 |---|---|---|
-| Lexend | lopende tekst en de cijfers in de stencilkoppen | The Lexend Project Authors ([googlefonts/lexend](https://github.com/googlefonts/lexend)) |
-| Big Shoulders Stencil Display | de stencilkoppen | The Big Shoulders Project Authors ([xotypeco/big_shoulders](https://github.com/xotypeco/big_shoulders)) |
-| Noto Color Emoji | emoji, zelf gehost in `public/fonts/` | Google LLC ([googlefonts/noto-emoji](https://github.com/googlefonts/noto-emoji)) |
+| Lexend | lopende tekst en de cijfers in de stencilkoppen | The Lexend Project Authors ([googlefonts/lexend](https://github.com/googlefonts/lexend)), via `@fontsource-variable/lexend` |
+| Big Shoulders Stencil Display | de stencilkoppen | The Big Shoulders Project Authors ([xotypeco/big_shoulders](https://github.com/xotypeco/big_shoulders)), via `@fontsource/big-shoulders-stencil-display` |
 
-De volledige licentietekst wordt met de site meegeleverd: [`public/fonts/OFL.txt`](public/fonts/OFL.txt)
-(op de site: `/fonts/OFL.txt`). De OFL staat gebruik, ook commercieel, toe. Je mag de lettertypes
-alleen niet los verkopen.
+De lettertypes komen uit de npm-pakketten van Fontsource en komen bij het bouwen in `/assets/` van
+de site. Een emoji-lettertype is er niet meer: sinds 31 oktober 2026 tekent de app alles zelf (SVG).
+De OFL staat gebruik, ook commercieel, toe. Je mag de lettertypes alleen niet los verkopen.
 
 ## Software (MIT)
 
 | Pakket | Van wie |
 |---|---|
-| React, React DOM | Meta Platforms, Inc. and affiliates |
+| React, React DOM (met scheduler) | Meta Platforms, Inc. and affiliates |
 | Vite (bouwen, plus een klein stukje laadcode in de site) | VoidZero Inc. and Vite contributors |
+| Rolldown (bouwen, plus kleine hulpfuncties die de code samenvoegen) | VoidZero Inc. & Contributors |
 
-De MIT-licentie staat in `node_modules/<pakket>/LICENSE` (bij Vite: `LICENSE.md`). In de site zelf
-komen alleen React, React DOM en dat kleine stukje van Vite terecht. De rest (Vitest, TypeScript)
-wordt alleen gebruikt om te bouwen en te testen.
+In de site zelf komen alleen React, React DOM, scheduler en die kleine stukjes van Vite en
+Rolldown terecht. De rest (Vitest, TypeScript) wordt alleen gebruikt om te bouwen en te testen.
+
+## De licentieteksten in de site
+
+De volledige teksten gaan met elke build mee: [`public/licenses.txt`](public/licenses.txt) (op de
+site: `/licenses.txt`). Het bestand neemt de licentiebestanden uit `node_modules` letterlijk over:
+de MIT-licentie van React (ook React DOM en scheduler), Vite en Rolldown, en de OFL van beide
+lettertypes. Na een update van een van die pakketten: `node scripts/licenses.mjs`
+(`tests/licenses.test.ts` controleert dat het bestand bij `node_modules` past).
+
+Let op: het OFL-bestand van `@fontsource/big-shoulders-stencil-display` noemt als eerste regel
+"Google Inc.", niet de makers van het lettertype. Dat staat er zoals Fontsource het levert; de
+makers staan in de tabel hierboven.
 
 ## Stemmen (ElevenLabs)
 
@@ -36,8 +47,10 @@ Welke rechten we daarop hebben, hangt af van het abonnement waarmee ze zijn gema
 - met een **gratis** account mag je de opnames niet commercieel gebruiken, en moet je ElevenLabs
   vermelden.
 
-Op de pagina Over Vloertaal staat al dat de stemmen met ElevenLabs zijn gemaakt. ⚠️ Nog na te
-gaan: met welk abonnement de opnames zijn gemaakt.
+De opnames zijn gemaakt met een **betaald** abonnement, met commercieel gebruik: zo staat het in
+[`docs/livegang.md`](docs/livegang.md) en bij elke stem in `public/audio-el/voices.json`
+(`"license": "ElevenLabs (paid plan, commercial use)"`). Op de pagina Over Vloertaal en bij de
+begeleiders staat dat de stemmen met ElevenLabs zijn gemaakt.
 
 Zinnen zonder opname leest de telefoon of computer van de leerling zelf voor. Dat geluid wordt niet
 door ons gemaakt of verspreid.

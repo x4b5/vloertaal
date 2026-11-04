@@ -482,10 +482,10 @@ const KAART_LEGEND: { nl: string; key: UiKey; toets?: boolean; kun?: boolean }[]
  * "Laat zien hoe het gaat" (Settings › Taal en ik): the coach card ("begeleiderskaart",
  * src/lib/kaart.ts), a picture this phone makes from its own progress, for the learner to show a
  * coach, teacher or employer. Nothing is sent: the learner shows it, or saves or shares the
- * picture themselves. On screen: [Bewaar of deel] (above the picture, so it is always in view),
- * the picture (large, with all it says as its text alternative), what each line means in the help
- * language, and [Naam wijzigen] (the same name as on the certificates, asked first when it never
- * was). Two things to tap, and Back.
+ * picture themselves. On screen: the intro and "Je mag ook nee zeggen." (text), [Bewaar of deel]
+ * (above the picture, so it is always in view), the picture (large, with all it says as its text
+ * alternative), what each line means in the help language, and [Naam wijzigen] (the same name as
+ * on the certificates, asked first when it never was). Two things to tap, and Back.
  */
 export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   progress: Progress;
@@ -550,6 +550,7 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   const view = useRef<HTMLDivElement>(null);
   useFocusWhenLost(view, editing, 'h1');
   const intro = ui('coachCardIntro', lang);
+  const no = ui('coachCardNo', lang);
   const alt = kaartAlt(data);
   return (
     <div className="screen cert-screen kaart-screen" ref={view}>
@@ -562,6 +563,12 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
       <p className="kaart-intro" dir={rtl ? 'rtl' : undefined}>
         <NlPair nlFirst nl="Deze kaart laat zien hoe het gaat. Laat hem zien aan je docent, coach of baas. Jij kiest." nlClass="kaart-intro-nl" text={intro} />
         <HelpSay text={intro.help} lang={lang} />
+      </p>
+      {/* Showing the card is voluntary, said to the learner too (the owner's request, 4 November
+          2026; the rules for coaches and employers: 'p.privacy' and GROEP_SAFE). Text only. */}
+      <p className="kaart-no" dir={rtl ? 'rtl' : undefined}>
+        <NlPair nlFirst nl="Je mag ook nee zeggen." nlClass="kaart-no-nl" text={no} />
+        <HelpSay text={no.help} lang={lang} />
       </p>
       {/* Above the picture: the main action is in view on every phone, also with large text
           (the picture is taller than the rest of a small screen). */}

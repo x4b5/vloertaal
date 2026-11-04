@@ -1,5 +1,7 @@
 import { tipForLesson } from '../content/culture';
 import { findLesson } from '../content/curriculum';
+import { taalNlId } from '../content/taalBe/ids';
+import type { ChatLine } from '../content/types';
 import { countRaw } from './count';
 
 /**
@@ -10,9 +12,12 @@ import { countRaw } from './count';
  * lesson's first time (not a review), only a lesson with a sentence made for the work floor, and
  * at most once a day (the first such lesson of the day). Plain text with a speaker on the result:
  * nothing more to tap.
- * - The language course: the "Zeg het zo" phrase of the lesson's own tip; the moment is the tip's
- *   situation (in the help language), without its closing question.
- * - Werkregels: the lesson's "Zo zeg je het" sentence; the moment is its context (Dutch only).
+ * - The language course: the "Zeg het zo" phrase of the lesson's own tip (with a name in it:
+ *   another line of the lesson, see UNNAMED); the moment is the tip's situation (in the help
+ *   language), without its closing question.
+ * - Werkregels: the lesson's "Zo zeg je het" sentence (one without a name); the moment is its
+ *   context (Dutch only).
+ * Never a sentence with someone's name in it (hasName).
  */
 export interface WorkTryLine {
   id: string;
@@ -30,20 +35,64 @@ export const WORK_TRY_MAX_WORDS = 12;
 
 const fits = (nl: string) => nl.trim().split(/\s+/).length <= WORK_TRY_MAX_WORDS;
 
-/** A model sentence with a character's name in it ("Hoi, ik ben Jayden."): not one to say yourself. */
-const NAMED = /\b(?:ik ben|met) [A-Z]/;
+/**
+ * The people the course's Dutch names: the cast (src/components/Characters.tsx) and the colleagues,
+ * bosses and learners of the lessons, chats and stories of both tracks (and "De Vries", "Ali
+ * Haddad"). tests/workTry.test.ts also finds them in the content itself.
+ */
+const PEOPLE = [
+  'Bram', 'Amina', 'Henk', 'Jada',
+  'Ali', 'Bakker', 'Bogdan', 'Dewi', 'Esra', 'Ewa', 'Fatima', 'Haddad', 'Hatice', 'Jan', 'Jansen', 'Jayden', 'Joep', 'Karin',
+  'Kevin', 'Linda', 'Lotte', 'Malik', 'Mark', 'Mehmet', 'Mohammed', 'Nadia', 'Peeters', 'Piotr', 'Sanne', 'Sara', 'Vries', 'Yonas',
+];
+// (No lookbehind: an old iPhone cannot make one, tests/oldPhones.test.ts.)
+const PERSON = new RegExp(`(?:^|[^\\p{L}])(?:${PEOPLE.join('|')})(?:'?s)?(?!\\p{L})`, 'u');
+/** Someone named the way a chat does it ("ik ben Jayden", "met Ali", "Hoi Mark", "Groet, Ali"), also a name not in PEOPLE. */
+const INTRODUCED = /(?:^|[^\p{L}])(?:ik ben|ik heet|mijn naam is|met|Hoi|Hallo|Beste|Dag|Groet,|Groeten,) \p{Lu}\p{Ll}/u;
+/** A name spelled out letter by letter ("Ik spel het even: A, L, I."). */
+const SPELLED = /(?:^|[^\p{L}])\p{Lu}(?:, \p{Lu}(?!\p{L})){2,}/u;
+
+/**
+ * A sentence with someone's name in it ("Hoi, ik ben Ali.", "Henk, er zit een doos vast."): the
+ * character's sentence, not one to say yourself. A learner who reads little says it as written,
+ * name and all (the owner's request, 4 November 2026: before, only "ik ben"/"met" and only in Werkregels).
+ */
+export const hasName = (nl: string): boolean => PERSON.test(nl) || INTRODUCED.test(nl) || SPELLED.test(nl);
+
+/**
+ * A tip whose "Zeg het zo" has a name in it: another line of its own lesson instead, one for the
+ * same moment, translated and recorded already (no new sentence to translate and record). A
+ * named tip without one here has no card: c.email and c.texting (a written message with names),
+ * c.details (Ali's name spelled out).
+ */
+const UNNAMED: Record<string, string> = {
+  'c.names': 's.people.3', // "Ik ben een nieuwe collega." for "Hoi, ik ben Ali. Ik ben nieuw hier."
+  'c.arrive': 'c.arrive.a', // "Ik ben nieuw. Ik begin vandaag." for "Goedemorgen, ik ben Ali. Ik begin vandaag. …"
+  'c.callin': 's.callin.2', // "Ik denk dat ik overmorgen weer kom." for "Hallo, met Ali. Ik kan vandaag niet komen."
+};
+
+/** The tip's line to say: its phrase, or (with a name in it) the line of UNNAMED, as the lesson plays it. */
+function tipLine(lessonId: string, phrase: ChatLine, tipId: string): ChatLine | undefined {
+  if (!hasName(phrase.nl)) return phrase;
+  const want = UNNAMED[taalNlId(tipId)];
+  const lesson = want ? findLesson(lessonId, 'taal')?.lesson : undefined;
+  const lines = lesson ? [...lesson.sentences, ...(lesson.dialogues ?? []).map((d) => d.reply)] : [];
+  const line = lines.find((l) => taalNlId(l.id) === want);
+  return line && !hasName(line.nl) ? line : undefined;
+}
 
 /** The lesson's sentence to try at work, with its moment: see WorkTryLine. */
 export function workTryLine(lessonId: string): WorkTryLine | undefined {
   const tip = tipForLesson(lessonId);
   if (tip) {
-    const { phrase, situation } = tip;
-    if (!fits(phrase.nl)) return undefined;
+    const { situation } = tip;
+    const line = tipLine(lessonId, tip.phrase, tip.id);
+    if (!line || !fits(line.nl)) return undefined;
     // "Which is right?" situations ask about the meaning of a line, not a moment to speak.
-    return { id: phrase.id, nl: phrase.nl, en: phrase.en, ...(situation.ask === 'which' ? {} : { when: { id: situation.id, en: situation.en } }) };
+    return { id: line.id, nl: line.nl, en: line.en, ...(situation.ask === 'which' ? {} : { when: { id: situation.id, en: situation.en } }) };
   }
   const steps = findLesson(lessonId, 'regels')?.lesson.steps ?? [];
-  const model = steps.find((s): s is Extract<typeof s, { kind: 'model' }> => s.kind === 'model' && fits(s.nl) && !NAMED.test(s.nl));
+  const model = steps.find((s): s is Extract<typeof s, { kind: 'model' }> => s.kind === 'model' && fits(s.nl) && !hasName(s.nl));
   return model ? { id: model.id, nl: model.nl, en: '', whenNl: model.context } : undefined;
 }
 

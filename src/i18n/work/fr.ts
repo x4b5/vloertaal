@@ -984,7 +984,7 @@ const t: CultureTranslation = {
     'w.intimidatie': 'le harcèlement, l’intimidation',
     'w.getuige': 'le témoin',
     'w.grapje': 'la blague',
-    's.boundaries.1': 'Ne me touchez pas, s’il vous plaît.',
+    's.boundaries.1': 'Ne me touche pas.', // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
     's.boundaries.2': 'Je ne trouve pas cette remarque drôle.',
     's.boundaries.3': 'Je veux signaler quelque chose à la personne de confiance.',
     'c.boundaries.q': 'Ne fais pas tant d’histoires, c’était juste une blague.',

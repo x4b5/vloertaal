@@ -1,17 +1,18 @@
 import type { Gender, UiCode } from '../i18n/types';
+import { LANG_CODES } from '../i18n/meta';
 import { rulesTrackOn, trackOf, trackOfLang, type Track } from './track';
 import { isSectorId, type SectorChoice } from '../content/sectors';
 import { isRegionChoice, isRegionId, regionOf, regionsOn, type RegionChoice } from '../content/regio';
 import { findCourseUnit, isRulesLessonAnyCountry, unitOfLesson } from '../content/courses';
 import { rulesCourseUnits } from '../content/rulesCourse';
-import type { Cards } from './spaced';
+import type { Card, Cards } from './spaced';
 import { mergeToets, readToets, type ToetsState } from './toetsState';
 
 /** The country the learner works in (Settings): the work rules are those of the Netherlands. */
 export type Country = 'nl' | 'be';
 export const isCountry = (x: unknown): x is Country => x === 'nl' || x === 'be';
-import type { TextSize } from './textSize';
-import type { CalmChoice } from './calm';
+import { TEXT_SIZES, type TextSize } from './textSize';
+import { CALM_CHOICES, type CalmChoice } from './calm';
 import { isTempo, type Tempo } from './tempo';
 import { readPace, type PaceState } from './pace';
 
@@ -179,81 +180,177 @@ export const emptyProgress: Progress = {
 
 const KEY = 'vloertaal:v1';
 
+/* ---- What is saved, read field by field: one check per field, for the progress on this phone
+   (loadProgress) and in a backup file (parseBackup) alike. Until 4 November 2026 each had its
+   own checks, which drifted apart: a save with `completed: null` or a number as `lastDay` got
+   past loadProgress and stopped the app at its start. ---- */
+
+const isDay = (v: unknown): v is string => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
+const isCount = (v: unknown): v is number => typeof v === 'number' && Number.isFinite(v) && v >= 0;
+const isObject = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null && !Array.isArray(v);
+/** A help language this app has ('nl' is the work-rules track). */
+const isHelpLang = (v: unknown): v is UiCode => v === 'nl' || (LANG_CODES as readonly unknown[]).includes(v);
+
+/** A field's check: the value as this app reads it, or undefined when it can't be read (then it is left out). */
+type Check<T> = (v: unknown) => T | undefined;
+const bool: Check<boolean> = (v) => (typeof v === 'boolean' ? v : undefined);
+const str: Check<string> = (v) => (typeof v === 'string' ? v : undefined);
+const day: Check<string> = (v) => (isDay(v) ? v : undefined);
+const count: Check<number> = (v) => (isCount(v) ? Math.floor(v) : undefined);
+const oneOf = <T>(values: readonly T[]): Check<T> => (v) => ((values as readonly unknown[]).includes(v) ? (v as T) : undefined);
+/** A list of days (YYYY-MM-DD), the last `keep` of them; anything else in the list is left out. */
+function dayList(v: unknown, keep: number, sort = false): string[] | undefined {
+  if (!Array.isArray(v)) return undefined;
+  const list = v.filter(isDay);
+  return (sort ? list.sort() : list).slice(-keep);
+}
+/** An object of id → value: the entries whose value can be read. */
+const byId = <T>(check: Check<T>): Check<Record<string, T>> => (v) => {
+  if (!isObject(v)) return undefined;
+  const out: Record<string, T> = {};
+  for (const [id, x] of Object.entries(v)) {
+    const y = check(x);
+    if (y !== undefined) out[id] = y;
+  }
+  return out;
+};
+
+/** A finished lesson: its best (0–1) and how often. A check's day ("Ik ken dit al") only on a record without lessons done. */
+const readRecord: Check<LessonRecord> = (v) => {
+  if (!isObject(v) || typeof v.best !== 'number' || !(v.best >= 0 && v.best <= 1) || !isCount(v.times)) return undefined;
+  const rec: LessonRecord = { best: v.best, times: Math.floor(v.times) };
+  if (isDay(v.check) && !v.times) rec.check = v.check;
+  return rec;
+};
+/** A word's card for "Herhaal vandaag": its box (1–6, src/lib/spaced.ts) and the day it is due. */
+const readCard: Check<Card> = (v) => (isObject(v) && isCount(v.box) && v.box >= 1 && v.box <= 6 && isDay(v.due) ? { box: Math.floor(v.box), due: v.due } : undefined);
+/** The other track's place (switchTrack). */
+const readPlace: Check<TrackPlace> = (v) => (isObject(v) ? { currentUnit: str(v.currentUnit), pickedUnit: str(v.pickedUnit), reviewDay: day(v.reviewDay), phrasesShown: v.phrasesShown === true || undefined } : undefined);
+
+/**
+ * Every field of Progress with its check (the type asks for one for each field, so a new field
+ * cannot be forgotten here). A value that can't be read is left out: an optional field is then
+ * missing, a required one gets its default (emptyProgress).
+ */
+const FIELDS: { [K in keyof Progress]-?: Check<Progress[K]> } = {
+  onboarded: bool,
+  theme: (v) => (isThemeChoice(v) ? v : undefined),
+  themeVersion: count,
+  voice: (v) => (v === null || typeof v === 'string' ? v : undefined),
+  quiet: bool,
+  textSize: oneOf(TEXT_SIZES),
+  calm: oneOf(CALM_CHOICES),
+  // "Tempo" came later: a missing one is calm (the old pace).
+  tempo: (v) => (isTempo(v) ? v : undefined),
+  // A help language this app does not know: see progressFrom.
+  helpLang: (v) => (v === null || isHelpLang(v) ? v : undefined),
+  gender: oneOf<Gender>(['f', 'm', 'x']),
+  genderAsked: bool,
+  colourAsked: bool,
+  // Older saves have no sector (asked once after the password).
+  sector: (v) => (v === 'none' || isSectorId(v) ? v : undefined),
+  region: (v) => (isRegionChoice(v) ? v : undefined),
+  country: (v) => (isCountry(v) ? v : undefined),
+  rulesNotice: bool,
+  xp: count,
+  streak: count,
+  lastDay: day,
+  completed: byId(readRecord),
+  cards: byId(readCard),
+  reviewDay: day,
+  lessonDay: day,
+  lastLesson: str,
+  freezes: (v) => (isCount(v) ? Math.min(FREEZE_MAX, Math.floor(v)) : undefined),
+  rest: (v) => dayList(v, REST_KEEP),
+  bestStreak: count,
+  certs: byId(day),
+  currentUnit: str,
+  pickedUnit: str,
+  // Saved before the practised days were kept: none (the week row then counts the streak back).
+  days: (v) => dayList(v, DAYS_KEEP, true),
+  phrasesShown: bool,
+  parked: readPlace,
+  // The test's results and the pace (added later): kept when they can be read.
+  toets: readToets,
+  pace: readPace,
+  // (A missing first day is filled in by withFirstDay.)
+  firstDay: day,
+  noticesSeen: (v) => (Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : undefined),
+  bridgeSeen: (v) => (v === true ? true : undefined),
+};
+
+/** The fields asked for that can be read, each checked (FIELDS). */
+function readFields<K extends keyof Progress>(src: Record<string, unknown>, keys: readonly K[]): Partial<Pick<Progress, K>> {
+  const out: Partial<Pick<Progress, K>> = {};
+  for (const k of keys) {
+    const v = (FIELDS[k] as Check<Progress[K]>)(src[k]);
+    if (v !== undefined) out[k] = v;
+  }
+  return out;
+}
+
+const PROGRESS_FIELDS = Object.keys(FIELDS) as (keyof Progress)[];
+
+/**
+ * The progress from what this phone saved: each field checked (FIELDS), one that can't be read
+ * restored to its default or left out, everything else kept as it is (also a field this version
+ * does not know: a save from a newer version). Then brought up to this version. Something that is
+ * not a saved progress at all: a fresh start.
+ */
+export function progressFrom(saved: unknown): Progress {
+  if (!isObject(saved)) return emptyProgress;
+  const known = new Set<string>(PROGRESS_FIELDS);
+  const s: Partial<Progress> = { ...Object.fromEntries(Object.entries(saved).filter(([k]) => !known.has(k))), ...readFields(saved, PROGRESS_FIELDS) };
+  // Light is the default (themeVersion 3, 1 November 2026). An 'auto' saved before then was
+  // the default for new learners rather than a choice, so it moves to light. Dark stays; a colour
+  // this version does not know (a newer save on an older app) is the default.
+  if (s.themeVersion !== 3) {
+    s.theme = s.theme === 'dark' ? 'dark' : 'light';
+    s.themeVersion = 3;
+  }
+  // Regions while they are not offered (REGIONS_LIVE off): no region unit, no region map.
+  if (s.region !== undefined && !regionsOn()) delete s.region;
+  // The work-rules track while it is not offered (RULES_TRACK off): the language page again.
+  if (s.helpLang === 'nl' && !rulesTrackOn()) { s.helpLang = null; s.onboarded = false; }
+  // A help language this app does not know (a newer save on an older app, a broken save): not
+  // chosen yet, so the language page comes again (what else the first run asked stays answered).
+  if (saved.helpLang !== undefined && s.helpLang === undefined) { s.helpLang = null; s.onboarded = false; }
+  // A phone voice saved before the choice woman / man / automatic (Settings offers only the
+  // recordings now): automatic, so these learners hear the recordings and see the choice.
+  if (typeof s.voice === 'string' && !s.voice.startsWith('piper:')) s.voice = null;
+  return { ...emptyProgress, ...s };
+}
+
 export function loadProgress(): Progress {
   try {
     const raw = localStorage.getItem(KEY);
-    if (raw) {
-      const saved = JSON.parse(raw);
-      // Light is the default (themeVersion 3, 1 November 2026). An 'auto' saved before then was
-      // the default for new learners rather than a choice, so it moves to light. Dark stays.
-      if (saved.themeVersion !== 3) {
-        saved.theme = saved.theme === 'dark' ? 'dark' : 'light';
-        saved.themeVersion = 3;
-      }
-      // Saved before the automatic default for new learners: they had light, and keep it.
-      if (saved.theme === undefined) saved.theme = 'light';
-      // A colour this version does not know (a newer save on an older app): the default.
-      if (!isThemeChoice(saved.theme)) saved.theme = 'light';
-      // Older saves have no sector (asked once after the password); drop anything unknown.
-      if (saved.sector !== undefined && saved.sector !== 'none' && !isSectorId(saved.sector)) delete saved.sector;
-      if (saved.region !== undefined && !isRegionChoice(saved.region)) delete saved.region;
-      if (saved.country !== undefined && !isCountry(saved.country)) delete saved.country;
-      if (saved.rulesNotice !== undefined && typeof saved.rulesNotice !== 'boolean') delete saved.rulesNotice;
-      // "Tempo" came later: a missing one is calm (the old pace); anything unknown is dropped.
-      if (saved.tempo !== undefined && !isTempo(saved.tempo)) delete saved.tempo;
-      // Regions while they are not offered (REGIONS_LIVE off): no region unit, no region map.
-      if (saved.region !== undefined && !regionsOn()) delete saved.region;
-      // The work-rules track while it is not offered (RULES_TRACK off): the language page again.
-      if (saved.helpLang === 'nl' && !rulesTrackOn()) { saved.helpLang = null; saved.onboarded = false; }
-      // A phone voice saved before the choice woman / man / automatic (Settings offers only the
-      // recordings now): automatic, so these learners hear the recordings and see the choice.
-      if (typeof saved.voice === 'string' && !saved.voice.startsWith('piper:')) saved.voice = null;
-      if (saved.gender !== undefined && !['f', 'm', 'x'].includes(saved.gender)) delete saved.gender;
-      if (saved.genderAsked !== undefined && typeof saved.genderAsked !== 'boolean') delete saved.genderAsked;
-      if (saved.colourAsked !== undefined && typeof saved.colourAsked !== 'boolean') delete saved.colourAsked;
-      if (saved.currentUnit !== undefined && typeof saved.currentUnit !== 'string') delete saved.currentUnit;
-      if (saved.pickedUnit !== undefined && typeof saved.pickedUnit !== 'string') delete saved.pickedUnit;
-      if (saved.lastLesson !== undefined && typeof saved.lastLesson !== 'string') delete saved.lastLesson;
-      if (saved.parked !== undefined) {
-        const k = saved.parked as Record<string, unknown> | null;
-        if (!k || typeof k !== 'object') delete saved.parked;
-        else saved.parked = {
-          currentUnit: typeof k.currentUnit === 'string' ? k.currentUnit : undefined,
-          pickedUnit: typeof k.pickedUnit === 'string' ? k.pickedUnit : undefined,
-          reviewDay: isDay(k.reviewDay) ? k.reviewDay : undefined,
-          phrasesShown: k.phrasesShown === true || undefined,
-        };
-      }
-      // Saved before the practised days were kept: none (the week row then counts the streak back).
-      if (saved.days !== undefined) {
-        if (Array.isArray(saved.days)) saved.days = saved.days.filter(isDay).slice(-DAYS_KEEP);
-        else delete saved.days;
-      }
-      // The test's results (added later): kept when they can be read, else left out.
-      if (saved.toets !== undefined) {
-        const toets = readToets(saved.toets);
-        if (toets) saved.toets = toets;
-        else delete saved.toets;
-      }
-      // The pace (added later): kept when it can be read, else left out.
-      if (saved.pace !== undefined) {
-        const pace = readPace(saved.pace);
-        if (pace) saved.pace = pace;
-        else delete saved.pace;
-      }
-      // The first day and the notices seen (added later): kept when they can be read, else left out
-      // (withFirstDay then fills the first day in).
-      if (saved.firstDay !== undefined && !isDay(saved.firstDay)) delete saved.firstDay;
-      if (saved.noticesSeen !== undefined) {
-        if (Array.isArray(saved.noticesSeen)) saved.noticesSeen = saved.noticesSeen.filter((x: unknown) => typeof x === 'string');
-        else delete saved.noticesSeen;
-      }
-      return { ...emptyProgress, ...saved };
-    }
+    if (raw) return progressFrom(JSON.parse(raw));
   } catch {
-    // Private mode or blocked storage: start fresh, the app still works.
+    // Private mode or blocked storage, or a save that is not even JSON: start fresh, the app still works.
   }
   return emptyProgress;
+}
+
+/** What this phone saved, exactly as it is (null: nothing saved, or the storage is blocked). */
+export function savedProgressText(): string | null {
+  try {
+    return localStorage.getItem(KEY);
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * "Opnieuw beginnen" when the app cannot start (src/components/Splash.tsx BootFailed): the saved
+ * progress goes, so the app starts as on a new phone. Only that: the small notes beside it stay
+ * (among them "Anoniem meetellen" switched off, src/lib/count.ts).
+ */
+export function forgetProgress(): void {
+  try {
+    localStorage.removeItem(KEY);
+  } catch {
+    // Blocked storage: nothing was kept.
+  }
 }
 
 /** Told once when saving fails (src/components/SaveFailedNote.tsx): the progress that was not saved. */
@@ -364,6 +461,41 @@ export function settleStreak(p: Progress, today: Date): { progress: Progress; br
   return { progress: { ...p, streak: 0, bestStreak: bestStreak(p) }, broken: p.streak };
 }
 
+/** "Je reeks is gestopt bij N" (StreakStopped, components/Milestone.tsx) only for a lost streak of at least this many days. */
+export const STOPPED_FROM = 3;
+/** … and not while the learner still practised on this many of the 7 days before today. */
+export const STOPPED_UNLESS_DAYS = 3;
+
+/**
+ * The lost streak to tell about once ("Je reeks is gestopt bij N"), or undefined. The streak itself
+ * stops as before (settleStreak); only the screen is for a real break: not for a streak of 1 or 2
+ * days, and not while the learner practised on 3 or more of the 7 days before today. The week
+ * plan (3 times a week) saw it at 11 of 12 opens (Monday, Wednesday, Friday: "gestopt bij 1"), and
+ * Monday to Friday every Monday ("gestopt bij 5"). The owner's request, 4 November 2026.
+ * `p`: the progress as saved, before settleStreak.
+ */
+export function stoppedToTell(p: Progress, today: Date): number | undefined {
+  const { broken } = settleStreak(p, today);
+  if (!broken || broken < STOPPED_FROM) return undefined;
+  const key = dayKey(today);
+  const practised = new Set([...(p.days ?? []), ...streakBack(p)]);
+  const lately = [...practised].filter((d) => daysBetween(d, key) >= 1 && daysBetween(d, key) <= 7).length;
+  return lately >= STOPPED_UNLESS_DAYS ? undefined : broken;
+}
+
+/** The days of the streak, counted back from its last day (rest days sit inside it without counting). */
+function streakBack(p: Progress): string[] {
+  if (!p.lastDay || p.streak <= 0) return [];
+  const rest = new Set(p.rest ?? []);
+  const days: string[] = [];
+  let day = p.lastDay;
+  for (let guard = 0; days.length < p.streak && guard < 400; guard++) {
+    if (!rest.has(day)) days.push(day);
+    day = addDay(day, -1);
+  }
+  return days;
+}
+
 /** Adds a practised day to the kept list (sorted, no repeats, the last DAYS_KEEP). */
 function addPractised(days: string[] | undefined, key: string): string[] {
   return [...new Set([...(days ?? []), key])].sort().slice(-DAYS_KEEP);
@@ -427,15 +559,7 @@ export function workWeek(p: Progress, today: Date): { key: string; state: WeekDa
   const done = new Set<string>((p.days ?? []).filter((d) => d <= todayKey));
   const sinceLast = p.lastDay ? daysBetween(p.lastDay, todayKey) : -1;
   // (A last day after today, a clock moved back: no walking back from a day still to come.)
-  if (p.lastDay && p.streak > 0 && sinceLast >= 0 && sinceLast <= 1) {
-    let day = p.lastDay;
-    let left = p.streak;
-    // Walk back over the streak; rest days sit inside it without counting.
-    for (let guard = 0; left > 0 && guard < 400; guard++) {
-      if (!rest.has(day)) { done.add(day); left--; }
-      day = addDay(day, -1);
-    }
-  }
+  if (p.lastDay && p.streak > 0 && sinceLast >= 0 && sinceLast <= 1) for (const day of streakBack(p)) done.add(day);
   const monday = addDay(todayKey, -((today.getDay() + 6) % 7));
   return Array.from({ length: 7 }, (_, i) => {
     const key = addDay(monday, i);
@@ -524,70 +648,49 @@ export function backupForTrack(b: Backup, track: Track): Backup {
   return { ...b, track, reviewDay: other.reviewDay, parked: { reviewDay: b.reviewDay, currentUnit: b.currentUnit } };
 }
 
-const isDay = (v: unknown): v is string => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
-const isCount = (v: unknown): v is number => typeof v === 'number' && Number.isFinite(v) && v >= 0;
+/** What a backup file brings: the learning progress (lessons, words, streak, certificates, the test), never settings. */
+const LEARNED = ['completed', 'xp', 'streak', 'lastDay', 'reviewDay', 'lessonDay', 'lastLesson', 'freezes', 'bestStreak', 'rest', 'days', 'cards', 'certs', 'currentUnit', 'parked', 'toets'] as const;
 
 /**
  * Reads a backup file. Returns null for anything that is not a Vloertaal backup; keeps only
  * well-formed learning progress (lessons the app knows, words, streak), never settings from
- * another phone.
+ * another phone. Each field has the same check as the progress on this phone (FIELDS).
  */
 export function parseBackup(text: string): Backup | null {
   let data: unknown;
   try { data = JSON.parse(text); } catch { return null; }
-  if (!data || typeof data !== 'object') return null;
-  const d = data as { app?: unknown; progress?: unknown; track?: unknown };
-  if (d.app !== BACKUP_APP || !d.progress || typeof d.progress !== 'object') return null;
-  const src = d.progress as Record<string, unknown>;
-  if (!src.completed || typeof src.completed !== 'object' || Array.isArray(src.completed)) return null;
-  const completed: Record<string, LessonRecord> = {};
-  for (const [id, r] of Object.entries(src.completed as Record<string, unknown>)) {
-    const rec = r as Partial<LessonRecord> | null;
-    // A lesson the app does not know is neither counted nor merged.
-    if (!knownLessonId(id)) continue;
-    if (rec && typeof rec.best === 'number' && rec.best >= 0 && rec.best <= 1 && isCount(rec.times)) {
-      completed[id] = { best: rec.best, times: Math.floor(rec.times) };
-      // Ticked off with a check (only a check record: one with lessons done is a normal one).
-      if (isDay(rec.check) && !rec.times) completed[id].check = rec.check;
-    }
-  }
-  const out: Backup = { completed };
-  if (d.track === 'taal' || d.track === 'regels') out.track = d.track;
+  if (!isObject(data) || data.app !== BACKUP_APP || !isObject(data.progress) || !isObject(data.progress.completed)) return null;
+  const { parked, ...read } = readFields(data.progress, LEARNED);
+  // A lesson the app does not know is neither counted nor merged (nor is it the last lesson).
+  const out: Backup = { ...read, completed: Object.fromEntries(Object.entries(read.completed ?? {}).filter(([id]) => knownLessonId(id))) };
+  if (out.lastLesson !== undefined && !knownLessonId(out.lastLesson)) delete out.lastLesson;
+  if (data.track === 'taal' || data.track === 'regels') out.track = data.track;
   // The block the file was on (only one the app knows), for the other track's place (backupForTrack).
-  if (typeof src.currentUnit === 'string' && findCourseUnit(src.currentUnit)) out.currentUnit = src.currentUnit;
+  if (out.currentUnit !== undefined && !findCourseUnit(out.currentUnit)) delete out.currentUnit;
   // The other track's place only from a file that says its track (version 2): in an older file
-  // it may be this phone's own track's place.
-  if (out.track && src.parked && typeof src.parked === 'object') {
-    const k = src.parked as Record<string, unknown>;
-    out.parked = {
-      reviewDay: isDay(k.reviewDay) ? k.reviewDay : undefined,
-      currentUnit: typeof k.currentUnit === 'string' && findCourseUnit(k.currentUnit) ? k.currentUnit : undefined,
-    };
+  // it may be this phone's own track's place. Its review day and its block (one the app knows).
+  if (out.track && parked) {
+    out.parked = { reviewDay: parked.reviewDay, currentUnit: parked.currentUnit && findCourseUnit(parked.currentUnit) ? parked.currentUnit : undefined };
   }
-  if (isCount(src.xp)) out.xp = Math.floor(src.xp);
-  if (isCount(src.streak)) out.streak = Math.floor(src.streak);
-  if (isDay(src.lastDay)) out.lastDay = src.lastDay;
-  if (isDay(src.reviewDay)) out.reviewDay = src.reviewDay;
-  if (isDay(src.lessonDay)) out.lessonDay = src.lessonDay;
-  if (typeof src.lastLesson === 'string' && knownLessonId(src.lastLesson)) out.lastLesson = src.lastLesson;
-  if (isCount(src.freezes)) out.freezes = Math.min(FREEZE_MAX, Math.floor(src.freezes));
-  if (isCount(src.bestStreak)) out.bestStreak = Math.floor(src.bestStreak);
-  if (Array.isArray(src.rest)) out.rest = src.rest.filter(isDay).slice(-REST_KEEP);
-  if (Array.isArray(src.days)) out.days = src.days.filter(isDay).sort().slice(-DAYS_KEEP);
-  if (src.cards && typeof src.cards === 'object' && !Array.isArray(src.cards)) {
-    const cards: Cards = {};
-    for (const [id, c] of Object.entries(src.cards as Record<string, unknown>)) {
-      const card = c as { box?: unknown; due?: unknown } | null;
-      if (card && isCount(card.box) && card.box >= 1 && card.box <= 6 && isDay(card.due)) cards[id] = { box: Math.floor(card.box), due: card.due };
-    }
-    out.cards = cards;
-  }
-  if (src.certs && typeof src.certs === 'object' && !Array.isArray(src.certs)) {
-    out.certs = Object.fromEntries(Object.entries(src.certs as Record<string, unknown>).filter((e): e is [string, string] => isDay(e[1])));
-  }
-  const toets = readToets(src.toets);
-  if (toets) out.toets = toets;
   return out;
+}
+
+/**
+ * "Bewaar je voortgang" when the app cannot start (src/components/Splash.tsx BootFailed): the
+ * same file as backupFile's, with the progress as this app reads it (so "Zet terug" puts it back
+ * later, also when a field of it was broken), and beside it what this phone saved exactly as it
+ * was (`raw`), so nothing is lost, even where the app reads it wrong. A save that is not even JSON
+ * goes along only as that text ("Zet terug" then says it is not a Vloertaal file).
+ */
+export function rawBackupFile(raw: string | null, now: Date): string {
+  let progress: Progress | undefined;
+  try {
+    const saved: unknown = raw === null ? null : JSON.parse(raw);
+    if (isObject(saved)) progress = progressFrom(saved);
+  } catch {
+    // Not JSON: the text alone.
+  }
+  return JSON.stringify({ app: BACKUP_APP, version: 2, saved: now.toISOString(), ...(progress && { track: trackOf(progress), progress }), raw }, null, 1);
 }
 
 /**

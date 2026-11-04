@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: { m: 'ቅኑዕ እዩ፡ ግን ኣብ ኣጸሓሕፋ ተጠንቀቕ', f: 'ቅኑዕ እዩ፡ ግን ኣብ ኣጸሓሕፋ ተጠንቀቒ', x: 'ቅኑዕ እዩ፡ ግን ኣብ ኣጸሓሕፋ ተጠንቀቑ' }, // x: nieuw, nalezen
     incorrect: 'ገና ኣይኮነን',
     correctAnswer: 'ቅኑዕ መልሲ',
+    rightAnswerIs: 'ቅኑዕ መልሲ እዚ እዩ፦', // nieuw, nalezen
+    bestAnswerIs: 'ዝበለጸ መልሲ እዚ እዩ፦', // nieuw, nalezen
     yourAnswer: { m: 'መልስኻ', f: 'መልስኺ', x: 'መልስኹም' }, // x: nieuw, nalezen
     inARow: '{n} ብተኸታታሊ',
     cantListen: 'ሕጂ ክሰምዕ ኣይክእልን',
@@ -331,6 +333,10 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'ኣይተጻዕነን። ኢንተርነት ኣሎ ድዩ?',
     retry: 'ዳግማይ ምፍታን',
+    /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+    bootFailed: 'Vloertaal ክጅምር ኣይከኣለን።', // nieuw, nalezen
+    bootFailedHint: { m: 'መጀመርታ ምዕባለኻ ዓቅብ። ድሕሪኡ ካብ መጀመርታ ጀምር።', f: 'መጀመርታ ምዕባለኺ ዓቅቢ። ድሕሪኡ ካብ መጀመርታ ጀምሪ።', x: 'መጀመርታ ምዕባለኹም ዓቅቡ። ድሕሪኡ ካብ መጀመርታ ጀምሩ።' }, // nieuw, nalezen
+    startOver: { m: 'ካብ መጀመርታ ጀምር', f: 'ካብ መጀመርታ ጀምሪ', x: 'ካብ መጀመርታ ጀምሩ' }, // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: { m: 'ድሮ እንታይ ትፈልጥ?', f: 'ድሮ እንታይ ትፈልጢ?', x: 'ድሮ እንታይ ትፈልጡ?' }, // nieuw, nalezen
     toetsOffer: { m: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኻ ጥራይ እዩ።', f: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኺ ጥራይ እዩ።', x: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኹም ጥራይ እዩ።' }, // nieuw, nalezen
@@ -359,6 +365,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: { m: 'ከመይ ከም ዝኸይድ ኣርኢ', f: 'ከመይ ከም ዝኸይድ ኣርእዪ', x: 'ከመይ ከም ዝኸይድ ኣርእዩ' }, // nieuw, nalezen
     coachCardIntro: { m: 'እዛ ካርድ ምዕባለኻ ተርኢ። ንመምህርካ፡ ንኣሰልጣኒኻ ወይ ንሓላፊኻ ኣርእዮ። ንስኻ ኢኻ ትውስን።', f: 'እዛ ካርድ ምዕባለኺ ተርኢ። ንመምህርኪ፡ ንኣሰልጣኒኺ ወይ ንሓላፊኺ ኣርእይዮ። ንስኺ ኢኺ ትውስኒ።', x: 'እዛ ካርድ ምዕባለኹም ተርኢ። ንመምህርኹም፡ ንኣሰልጣኒኹም ወይ ንሓላፊኹም ኣርእዩዎ። ንስኹም ኢኹም ትውስኑ።' }, // nieuw, nalezen
+    coachCardNo: { m: 'ኣይፋልን ክትብል እውን ትኽእል ኢኻ።', f: 'ኣይፋልን ክትብሊ እውን ትኽእሊ ኢኺ።', x: 'ኣይፋልን ክትብሉ እውን ትኽእሉ ኢኹም።' }, // nieuw, nalezen
     coachCardKeep: { m: 'ተሌፎንካ እያ ነታ ካርድ ትሰርሓ። ዝኾነ ነገር ኣይለኣኽን። Vloertaal ዝኾነ ነገር ኣይዕቅብን።', f: 'ተሌፎንኪ እያ ነታ ካርድ ትሰርሓ። ዝኾነ ነገር ኣይለኣኽን። Vloertaal ዝኾነ ነገር ኣይዕቅብን።', x: 'ተሌፎንኹም እያ ነታ ካርድ ትሰርሓ። ዝኾነ ነገር ኣይለኣኽን። Vloertaal ዝኾነ ነገር ኣይዕቅብን።' }, // nieuw, nalezen
     coachCardWhat: 'ኣብታ ካርድ፡ ብሆላንድኛ፦', // nieuw, nalezen
     coachTopics: 'ዝተወድኡ ኣርእስታት', // nieuw, nalezen

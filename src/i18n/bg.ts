@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'Правилно, но внимавай с правописа',
     incorrect: 'Не съвсем',
     correctAnswer: 'Правилен отговор',
+    rightAnswerIs: 'Правилният отговор е:', // nieuw, nalezen
+    bestAnswerIs: 'Най-добрият отговор е:', // nieuw, nalezen
     yourAnswer: 'Твоят отговор',
     inARow: '{n} поред',
     cantListen: 'Сега не мога да слушам',
@@ -330,6 +332,10 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Не се зареди. Има ли интернет?',
     retry: 'Опитай отново',
+    /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+    bootFailed: 'Vloertaal не може да стартира.', // nieuw, nalezen
+    bootFailedHint: 'Първо запази напредъка си. После започни отначало.', // nieuw, nalezen
+    startOver: 'Започни отначало', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'Какво вече знаеш?', // nieuw, nalezen
     toetsOffer: 'Около 10 минути. Няма оценки. Това е само за теб.', // nieuw, nalezen
@@ -358,6 +364,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Покажи как върви', // nieuw, nalezen
     coachCardIntro: 'Тази карта показва напредъка ти. Покажи я на учителя, на наставника или на шефа си. Ти решаваш.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    coachCardNo: 'Можеш да кажеш и „не“.', // nieuw, nalezen
     coachCardKeep: 'Телефонът ти прави картата. Нищо не се изпраща. Vloertaal не пази нищо.', // nieuw, nalezen
     coachCardWhat: 'На картата, на нидерландски:', // nieuw, nalezen
     coachTopics: 'Завършени теми', // nieuw, nalezen

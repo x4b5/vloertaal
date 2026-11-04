@@ -397,8 +397,8 @@ const t: CultureTranslation = {
     'w.uitchecken': 'validar à saída (check-out)',
     'w.bankpas': 'o cartão bancário',
     'w.reiskosten': 'o subsídio de transporte',
-    's.transit.1': 'Faço o check-in com o meu cartão bancário.',
-    's.transit.2': 'Não te esqueças de fazer o check-out.',
+    's.transit.1': 'Valido com o meu cartão bancário.', // nieuw, nalezen (4 nov 2026)
+    's.transit.2': 'Não te esqueças de validar o cartão à saída.', // nieuw, nalezen (4 nov 2026)
     's.transit.3': 'Onde é a paragem do autocarro?',
     'c.transit.q': 'Vens de comboio?',
     'c.transit.a': 'Não, de autocarro. Para mesmo à porta.',
@@ -984,7 +984,7 @@ const t: CultureTranslation = {
     'w.intimidatie': 'o assédio, a intimidação',
     'w.getuige': 'a testemunha',
     'w.grapje': 'a piada',
-    's.boundaries.1': 'Não me toque, por favor.',
+    's.boundaries.1': 'Não me toques.', // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
     's.boundaries.2': 'Não acho piada a esse comentário.',
     's.boundaries.3': 'Quero comunicar uma coisa à pessoa de confiança.',
     'c.boundaries.q': { m: 'Não sejas tão complicado, era só uma piada.', f: 'Não sejas tão complicada, era só uma piada.', x: 'Não compliques tanto, era só uma piada.' }, // x: nieuw, nalezen

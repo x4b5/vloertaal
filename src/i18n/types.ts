@@ -43,6 +43,11 @@ export const uiEn = {
   almost: 'Correct, but watch the spelling',
   incorrect: 'Not quite',
   correctAnswer: 'Correct answer',
+  /** The meaning of the heading "Het goede antwoord is:" after a wrong answer: it announces the
+   *  answer. "Correct answer" next to a red cross read as "right!" (4 November 2026). */
+  rightAnswerIs: 'The right answer is:',
+  /** The same for a situation: "Het beste antwoord is:". */
+  bestAnswerIs: 'The best answer is:',
   /** After Check, read out on the option the learner picked when it was wrong. */
   yourAnswer: 'Your answer',
   /** Kraft stamp "3 OP RIJ" in a lesson: right answers in a row. */
@@ -407,6 +412,12 @@ export const uiEn = {
   loadFailed: 'Not loaded. Is the internet on?',
   /** The error screen's "Try again" button, for screen readers (also in src/i18n/meta.ts: the screen comes before the pack). */
   retry: 'Try again',
+  /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed): what this
+     phone saved can't be read, or a bug. Not "Is the internet on?". Its two ways out: backupTitle
+     and startOver; before wiping it asks resetConfirm, with cancel and resetProgress. */
+  bootFailed: 'Vloertaal can’t start.',
+  bootFailedHint: 'Keep your progress first. Then start again.',
+  startOver: 'Start again',
   /* "Wat ken je al?": a short test at the start and after 4 weeks (src/components/Toets.tsx). */
   toetsTitle: 'What do you know already?',
   toetsOffer: 'About 10 minutes. There are no marks. It is just for you.',
@@ -436,6 +447,8 @@ export const uiEn = {
   /* "Laat zien hoe het gaat": the coach card, made on this phone (src/lib/kaart.ts, Settings › Taal en ik). */
   coachCard: 'Show how it is going',
   coachCardIntro: 'This card shows your progress. Show it to your teacher, coach or boss. You decide.',
+  /* Under the intro: showing the card is voluntary (the owner's request, 4 November 2026). */
+  coachCardNo: 'You can also say no.',
   coachCardKeep: 'Your phone makes the card. Nothing is sent. Vloertaal keeps nothing.',
   coachCardWhat: 'On the card, in Dutch:',
   coachTopics: 'Topics finished',

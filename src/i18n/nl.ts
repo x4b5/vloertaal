@@ -57,6 +57,8 @@ export const uiNl: Record<UiKey, UiText> = {
   almost: 'Goed, maar let op de spelling',
   incorrect: 'Niet helemaal',
   correctAnswer: 'Het goede antwoord',
+  rightAnswerIs: 'Het goede antwoord is:',
+  bestAnswerIs: 'Het beste antwoord is:',
   yourAnswer: 'Jouw antwoord',
   inARow: '{n} op rij',
   cantListen: 'Ik kan nu niet luisteren',
@@ -371,6 +373,10 @@ export const uiNl: Record<UiKey, UiText> = {
   resetKeeps: 'De app wist je lessen, je dagen op rij en je certificaten. Je taal en je instellingen blijven.', // regels: no words
   loadFailed: 'Niet geladen. Is er internet?',
   retry: 'Opnieuw proberen',
+  /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+  bootFailed: 'Vloertaal kan niet starten.', // nieuw, nalezen
+  bootFailedHint: 'Bewaar eerst je voortgang. Begin daarna opnieuw.', // nieuw, nalezen
+  startOver: 'Opnieuw beginnen', // nieuw, nalezen
   // "Wat ken je al?" (alleen in het spoor Taal; hier voor de volledigheid)
   toetsTitle: 'Wat ken je al?',
   toetsOffer: 'Ongeveer 10 minuten. Je krijgt geen cijfer. Het is alleen voor jou.',
@@ -399,6 +405,7 @@ export const uiNl: Record<UiKey, UiText> = {
   // "Laat zien hoe het gaat": de begeleiderskaart (src/lib/kaart.ts)
   coachCard: 'Laat zien hoe het gaat',
   coachCardIntro: 'Deze kaart laat zien hoe het gaat. Laat hem zien aan je docent, coach of baas. Jij kiest.',
+  coachCardNo: 'Je mag ook nee zeggen.',
   coachCardKeep: 'Je telefoon maakt de kaart. Er gaat niets weg. Vloertaal bewaart niets.',
   coachCardWhat: 'Op de kaart:',
   coachTopics: 'Onderwerpen af',

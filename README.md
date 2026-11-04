@@ -87,7 +87,7 @@ Hulptalen in het spoor Taal:
     respecteert Do Not Track en Global Privacy Control, en is uit te zetten in Instellingen;
   - de microfoon slaat niets op, behalve bij de toets "Wat ken je al?": die bewaart je zin van
     toen en nu alleen op het toestel (IndexedDB), zodat je ze naast elkaar hoort.
-- **Wat ken je al?** (spoor Taal): een toets van ongeveer 10 minuten na de start en na 4 weken (of
+- **Wat ken je al?** (spoor Taal): een toets van ongeveer 10 minuten na de eerste les en na 4 weken (of
   3 onderwerpen), met twee gelijke versies; de uitslag is drie balken, voor en na
   (`src/content/toets.ts`, [`docs/pilot.md`](docs/pilot.md)).
 - **Offline**: met "Lessen op deze telefoon" staat het huidige onderwerp op de telefoon (PWA).
@@ -128,11 +128,12 @@ slot (daar staat ook het mailadres om een code te vragen).
 
   Zet de hash met het niveau in `PASSWORD_HASHES` en pas `tests/access.test.ts` aan.
 - Wie een code al invulde, houdt het niveau van toen: dat staat op de telefoon.
-- **Melden**: in elke les staat rechtsboven een knop **Melden** met een vlaggetje (de eerste keer
-  met een korte uitleg in het Nederlands, voor testers en in Werkregels). Een tik opent een mail met de plek al ingevuld (les, stap, woord, telefoon, versie).
-  Zolang de app een bètaversie is, staat de knop standaard aan, voor iedereen. Uitzetten kan met de
-  schakelaar onderaan **Over** (die werkt ook in een app op het beginscherm van een iPhone), of met
-  `vloertaal.nl/?test=0`. Met `?test` gaat hij weer aan.
+- **Melden** (voor testers en begeleiders): staat **standaard uit** (sinds 31 oktober 2026,
+  `src/lib/report.ts`). Aanzetten kan met `vloertaal.nl/?test`, of met de schakelaar onderaan
+  **Over** (die werkt ook in een app op het beginscherm van een iPhone); met `?test=0` gaat hij weer
+  uit. Staat hij aan, dan staat in elke les rechtsboven een knop **Melden** met een vlaggetje (de
+  eerste keer met een korte uitleg in het Nederlands). Een tik opent een mail met de plek al
+  ingevuld (les, stap, woord, telefoon, versie).
 
 ## Starten
 
@@ -189,6 +190,8 @@ vloertaal.nl/nieuw en als datum onder Over.
 Vloertaal zelf: alle rechten voorbehouden, zie [`LICENSE`](LICENSE).
 
 Lettertypes, software en stemmen van anderen, en onder welke licentie we ze gebruiken: [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+De volledige licentieteksten gaan met de site mee: `public/licenses.txt` (op de site `/licenses.txt`,
+gemaakt met `node scripts/licenses.mjs`).
 
 ## ⚠️ Nog na te kijken
 
@@ -201,5 +204,6 @@ Lettertypes, software en stemmen van anderen, en onder welke licentie we ze gebr
 - **Uitdrukkingen**: [`docs/uitdrukkingen.md`](docs/uitdrukkingen.md).
 - **Regio Zuid-Limburg**: de sociale kaart en de regels, zie
   [`docs/regio-controle.md`](docs/regio-controle.md). Pas daarna aanzetten.
-- **Rechten op de stemmen**: ga na met welk ElevenLabs-abonnement de opnames zijn gemaakt (zie
-  [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)).
+- **Rechten op de stemmen**: volgens `docs/livegang.md` en `voices.json` zijn de opnames gemaakt
+  met een betaald ElevenLabs-abonnement (commercieel gebruik). Bevestig dat dit ook geldt voor de
+  oudste opnames (zie [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)).

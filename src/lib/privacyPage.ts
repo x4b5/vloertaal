@@ -7,10 +7,11 @@ import { breadcrumbs, esc, plainPage, SITE } from './plainPage';
  * what the code does, so change it with the code: src/lib/count.ts (the lessons counter),
  * src/lib/errors.ts (errors), src/lib/listen.ts (speech on the device), src/lib/report.ts (Melden
  * by e-mail), src/lib/reminder.ts (the calendar). docs/privacy.md lists those places.
+ * What "Voortgang wissen" keeps is the reset in src/App.tsx (onReset): change both together.
  */
 
 /** When this text last changed. A change also goes in the logbook (src/content/updates.ts). */
-export const PRIVACY_DATE = '2026-11-02';
+export const PRIVACY_DATE = '2026-11-04';
 
 export interface PrivacySection { id: string; title: string; paras: string[] }
 
@@ -30,7 +31,11 @@ export const PRIVACY: readonly PrivacySection[] = [
     title: 'Wat er op je telefoon of computer staat',
     paras: [
       'Je voortgang en je keuzes: je hulptaal, je land, waar je werkt, je lessen, je certificaten en je instellingen. Ook de uitslag van de toets “Wat ken je al?” en de opnames van je stem bij die toets. Dit staat in het geheugen van je browser, niet bij ons.',
-      'Alles weg? Kies bij Instellingen “Voortgang wissen”. Of wis de gegevens van de website in je browser.',
+      // What the reset keeps (src/App.tsx onReset), said plainly: "Alles weg?" promised more than it
+      // does (the owner's request, 4 November 2026). Everything goes only with the browser's own wipe.
+      'Kies je bij Instellingen “Voortgang wissen”? Dan zijn je lessen, je certificaten, de naam op je certificaten, en de uitslag en de opnames van de toets weg.',
+      'Een paar dingen blijven staan, zodat je meteen opnieuw kunt beginnen: je hulptaal, je land, waar je werkt, je regio, je keuze bij “Vrouw of man?”, de dag waarop je begon en je instellingen.',
+      'Wil je dat echt alles weg is? Wis dan in je browser de gegevens van de website vloertaal.nl (de sitegegevens). Staat Vloertaal als app op je telefoon? Verwijder de app dan ook.',
       'Maak je een back-up? Dan maakt je telefoon een bestand. Jij bepaalt waar dat bestand blijft.',
     ],
   },
@@ -70,16 +75,29 @@ export const PRIVACY: readonly PrivacySection[] = [
     id: 'website',
     title: 'Waar de website staat',
     paras: [
-      'De website staat bij statichost.eu, een bedrijf uit Stockholm (Zweden). Hun servers staan in Duitsland en Slovenië, dus alles blijft in de Europese Unie. Hun servers zien, zoals bij elke website, je IP-adres om de pagina’s te sturen. statichost bewaart het niet. Lettertypen, plaatjes en geluiden komen allemaal van vloertaal.nl zelf, niet van Google of andere partijen.',
-      'Tot 2 november 2026 stond Vloertaal bij Vercel, in de Verenigde Staten.',
+      'De website vloertaal.nl staat bij statichost.eu, een bedrijf uit Stockholm (Zweden). Hun servers staan in Duitsland en Slovenië, dus alles blijft in de Europese Unie. Hun servers zien, zoals bij elke website, je IP-adres om de pagina’s te sturen. statichost bewaart het niet. Lettertypen, plaatjes en geluiden komen allemaal van vloertaal.nl zelf, niet van Google of andere partijen.',
+      // The old address still works (docs/livegang.md): honest about who sees a visit there
+      // (the owner's request, 4 November 2026). src/lib/count.ts counts on vloertaal.nl only.
+      'Tot 2 november 2026 stond Vloertaal bij Vercel, een bedrijf uit de Verenigde Staten. Het oude adres vloertaal.vercel.app werkt nog. Open je Vloertaal via dat adres? Dan komen de pagina’s van Vercel, en ziet Vercel je IP-adres. Daar telt de app niets.',
+      'Gebruik daarom vloertaal.nl. Je voortgang gaat niet vanzelf mee naar het nieuwe adres. Kies op het oude adres bij Instellingen “Bewaar je voortgang” › “Opslaan”. Kies daarna op vloertaal.nl “Terugzetten”.',
+    ],
+  },
+  {
+    // Why we may (AVG article 13: the legal ground), the owner's request, 4 November 2026.
+    id: 'waarom',
+    title: 'Waarom we dit mogen',
+    paras: [
+      'Het tellen zonder naam doen we omdat we de app beter willen maken: we zien welke lessen goed werken en waar het misgaat. In de wet heet dat een gerechtvaardigd belang. Het tellen gaat zonder naam, en je kunt het altijd uitzetten.',
+      'Stuur je ons een mail? Dan gebruiken we die omdat jij ons zelf iets vraagt of meldt: om je te antwoorden en om de app te verbeteren.',
     ],
   },
   {
     id: 'rechten',
     title: 'Je rechten',
     paras: [
-      'Over jou hebben we niets, behalve een mail die je ons zelf stuurt. Wil je weten wat we hebben, of wil je dat we het wissen? Mail naar hoi@vloertaal.nl.',
-      'Heb je een klacht over privacy? Mail ons eerst. Je mag ook een klacht indienen bij de Autoriteit Persoonsgegevens (Nederland) of de Gegevensbeschermingsautoriteit (België).',
+      'Over jou hebben we niets, behalve een mail die je ons zelf stuurt. Wil je weten wat we hebben? Wil je iets laten verbeteren of wissen? Mail naar hoi@vloertaal.nl.',
+      'Wil je niet dat de app telt? Dan mag je daar bezwaar tegen maken. Het snelst gaat het zo: zet bij Instellingen “Anoniem meetellen” uit. Dan stopt het tellen meteen. Je mag ons ook mailen.',
+      'Heb je een klacht over privacy? Mail ons eerst. Je hebt ook het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens (Nederland) of de Gegevensbeschermingsautoriteit (België).',
     ],
   },
 ];

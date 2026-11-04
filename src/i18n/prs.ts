@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'درست است، اما به املا دقت کنید',
     incorrect: 'کاملاً درست نیست',
     correctAnswer: 'جواب درست',
+    rightAnswerIs: 'جواب درست این است:', // nieuw, nalezen
+    bestAnswerIs: 'بهترین جواب این است:', // nieuw, nalezen
     yourAnswer: 'جواب شما',
     inARow: '{n} پشت سر هم',
     cantListen: 'حالا نمی‌توانم بشنوم',
@@ -330,6 +332,10 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'بارگیری نشد. انترنت وصل است؟',
     retry: 'دوباره کوشش کنید',
+    /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+    bootFailed: 'Vloertaal اجرا نمی‌شود.', // nieuw, nalezen
+    bootFailedHint: 'اول پیشرفت خود را نگه دارید. بعداً از نو شروع کنید.', // nieuw, nalezen
+    startOver: 'از نو شروع کنید', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'از پیش چه می‌دانید؟', // nieuw, nalezen // nagelezen AI 31 okt
     toetsOffer: 'تقریباً 10 دقیقه. نمره‌ای در کار نیست. فقط برای خود شماست.', // nieuw, nalezen // nagelezen AI 31 okt
@@ -358,6 +364,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'نشان بدهید که چطور پیش می‌رود', // nieuw, nalezen // nagelezen AI 31 okt
     coachCardIntro: 'این کارت پیشرفت شما را نشان می‌دهد. آن را به معلم، مربی یا آمر تان نشان بدهید. خود تان تصمیم می‌گیرید.', // nieuw, nalezen // nagelezen AI 31 okt
+    coachCardNo: 'می‌توانید «نخیر» هم بگویید.', // nieuw, nalezen
     coachCardKeep: 'تیلفون شما خودش کارت را می‌سازد. چیزی فرستاده نمی‌شود. Vloertaal چیزی نگه نمی‌دارد.', // nieuw, nalezen // nagelezen AI 31 okt
     coachCardWhat: 'روی کارت، به زبان هالندی:', // nieuw, nalezen
     coachTopics: 'موضوعات تمام‌شده', // nieuw, nalezen

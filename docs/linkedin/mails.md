@@ -10,14 +10,15 @@ Wie eerder een code invulde, merkt niets: die heeft gewoon alles.
 Houd per persoon bij wie de link kreeg en wanneer (een lijstje is genoeg). Dan weet je wie je na
 een week een bericht stuurt (mail 5).
 
-**Iets melden.** In elke les staat rechtsboven een vlaggetje. Een tik opent een mail aan
-hoi@vloertaal.nl met de plek al ingevuld: les, stap, het woord of de zin, hulptaal, telefoon en
-versie. De tester schrijft er alleen bij wat er mis is (en voegt een schermfoto toe).
+**Iets melden.** Staat Melden aan, dan staat in elke les rechtsboven een vlaggetje. Een tik opent
+een mail aan hoi@vloertaal.nl met de plek al ingevuld: les, stap, het woord of de zin, hulptaal,
+telefoon en versie. De tester schrijft er alleen bij wat er mis is (en voegt een schermfoto toe).
 
-Zolang de app een bètaversie is, staat het vlaggetje **standaard aan**, voor iedereen. Uitzetten
-kan onderaan **Over** ("Knop Melden staat aan in de lessen. Tik om uit te zetten"), of met
-**vloertaal.nl/?test=0**. De schakelaar onder Over werkt ook in een app op het beginscherm van een
-iPhone (die heeft een eigen geheugen, los van Safari).
+Het vlaggetje staat **standaard uit** (sinds 31 oktober 2026). De link **vloertaal.nl/?test** in
+de mails hieronder zet het aan. Het kan ook onderaan **Over** ("Knop Melden staat uit. Tik om aan
+te zetten"); met **vloertaal.nl/?test=0** gaat het weer uit. De schakelaar onder Over werkt ook in
+een app op het beginscherm van een iPhone (die heeft een eigen geheugen, los van Safari: daar
+helpt de link niet).
 
 ---
 

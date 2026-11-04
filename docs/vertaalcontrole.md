@@ -931,7 +931,7 @@ Een NT2-docent las 20 lessen na: "zeer goed, kort en dicht bij de werkvloer". Ve
 - `c.task.p` "Klaar! Wat moet ik nu doen?" (was "Wat is de volgende taak?", te schools), in 9 talen.
 
 **Nog te doen zodra er weer opgenomen kan worden** (deze zinnen hebben nu een opname; een nieuwe tekst valt tot dan terug op de telefoonstem):
-- `s.boundaries.1` "Raak me niet aan, alstublieft." → "Raak me niet aan." (de rest van de les zegt "je"; een grens zeg je stevig, zonder "alstublieft").
+- ~~`s.boundaries.1` "Raak me niet aan, alstublieft." → "Raak me niet aan."~~ *Gedaan 4 november 2026:* "Blijf van me af." (een grens zeg je stevig, zonder "alstublieft"), met de 13 vertalingen (`// nieuw, nalezen`). De opname moet opnieuw (ook het blokje "blijf"); tot dan de telefoonstem.
 - `c.texting.q/a` "Kun je zaterdag een extra dienst draaien?" → "Ja, ik reageer meteen in de app." past niet als paar. Voorstel: "Zie je de extra dienst in de app?" → "Ja, ik reageer meteen."
 - Mogelijke nieuwe zinnen: "Is dit goed zo?", "Hoe zeg je dat in het Nederlands?", "Mag ik even naar de wc?", "Ik weet het niet."
 

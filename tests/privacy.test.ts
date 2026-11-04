@@ -6,6 +6,7 @@ import { PRIVACY, PRIVACY_DATE, privacyPage } from '../src/lib/privacyPage';
 import { PAGES, sitemap } from '../src/lib/sitemap';
 import { aboutSection } from '../src/content/about';
 import { uiNl } from '../src/i18n/nl';
+import { proSections } from '../src/content/pro';
 
 const text = PRIVACY.flatMap((s) => s.paras).join(' ');
 
@@ -16,7 +17,7 @@ describe('the privacy statement (/privacy/)', () => {
     expect(linkRows()).toContain(`href="${PRIVACY_PATH}"`);
     const html = privacyPage();
     expect(html).toMatch(/<html lang="nl"/);
-    expect(html).toContain('Bijgewerkt op 2 november 2026');
+    expect(html).toContain('Bijgewerkt op 4 november 2026');
   });
 
   it('names what the code sends, and who sees it', () => {
@@ -29,6 +30,38 @@ describe('the privacy statement (/privacy/)', () => {
       expect(text, fact).toContain(fact);
     }
     expect(text).not.toMatch(/experts kijken|de beste|garantie/i);
+  });
+
+  it('says what “Voortgang wissen” keeps, as the reset in src/App.tsx does, and how to wipe everything', () => {
+    // The reset keeps the choices and the settings: no "Alles weg?" before it (4 November 2026).
+    const reset = readFileSync('src/App.tsx', 'utf8').match(/onReset=\{\(\) => \{([\s\S]*?)tab\('route'\)/)![1];
+    const kept: Record<string, string> = { helpLang: 'je hulptaal', country: 'je land', sector: 'waar je werkt', region: 'je regio', gender: 'Vrouw of man?', firstDay: 'de dag waarop je begon', theme: 'je instellingen' };
+    for (const [field, words] of Object.entries(kept)) {
+      expect(reset, field).toMatch(new RegExp(`\\b${field}: p\\.${field}\\b`));
+      expect(text, words).toContain(words);
+    }
+    expect(text).not.toMatch(/Alles weg\? Kies/);
+    for (const fact of ['blijven staan', 'sitegegevens', 'Verwijder de app']) expect(text, fact).toContain(fact);
+    // The professionals' page says it the same way.
+    const pro = proSections.find((s) => s.id === 'p.privacy')!.body.join(' ');
+    expect(pro).not.toContain('is alles weg');
+    for (const fact of ['blijven staan', 'sitegegevens']) expect(pro, fact).toContain(fact);
+  });
+
+  it('is honest about the old address: vloertaal.vercel.app is Vercel, in the United States', () => {
+    const site = PRIVACY.find((s) => s.id === 'website')!.paras.join(' ');
+    for (const fact of ['vloertaal.vercel.app', 'Vercel', 'Verenigde Staten', 'IP-adres', 'Gebruik daarom vloertaal.nl']) expect(site, fact).toContain(fact);
+    // The EU promise is about vloertaal.nl, and the app does not count on the old address (src/lib/count.ts).
+    expect(site).toContain('De website vloertaal.nl staat bij statichost.eu');
+    expect(readFileSync('src/lib/count.ts', 'utf8')).toContain('const LIVE = /^(www\\.)?vloertaal\\.nl$/;');
+  });
+
+  it('names the legal ground and the rights (AVG article 13): objection and a complaint', () => {
+    const why = PRIVACY.find((s) => s.id === 'waarom')!.paras.join(' ');
+    expect(why).toContain('gerechtvaardigd belang');
+    expect(why).toMatch(/mail[\s\S]*zelf iets vraagt/);
+    const rights = PRIVACY.find((s) => s.id === 'rechten')!.paras.join(' ');
+    for (const fact of ['bezwaar', 'Anoniem meetellen', 'recht om een klacht', 'Autoriteit Persoonsgegevens', 'hoi@vloertaal.nl']) expect(rights, fact).toContain(fact);
   });
 
   it('matches what the app itself says: errors are counted too, under the same switch', () => {

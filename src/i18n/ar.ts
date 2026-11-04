@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: { m: 'صحيح، لكن انتبه إلى الإملاء', f: 'صحيح، لكن انتبهي إلى الإملاء' },
     incorrect: 'ليس تماماً',
     correctAnswer: 'الإجابة الصحيحة',
+    rightAnswerIs: 'الإجابة الصحيحة هي:', // nieuw, nalezen
+    bestAnswerIs: 'أفضل إجابة هي:', // nieuw, nalezen
     yourAnswer: 'إجابتك',
     inARow: '{n} على التوالي',
     cantListen: 'لا أستطيع الاستماع الآن',
@@ -330,6 +332,10 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'لم يتم التحميل. هل الإنترنت متصل؟',
     retry: 'إعادة المحاولة',
+    /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+    bootFailed: 'تعذّر تشغيل Vloertaal.', // nieuw, nalezen
+    bootFailedHint: { m: 'احفظ تقدمك أولاً. ثم ابدأ من جديد.', f: 'احفظي تقدمك أولاً. ثم ابدئي من جديد.', x: 'من المهم حفظ التقدم أولاً، ثم البدء من جديد.' }, // nieuw, nalezen
+    startOver: { m: 'ابدأ من جديد', f: 'ابدئي من جديد', x: 'البدء من جديد' }, // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: { m: 'ماذا تعرف بالفعل؟', f: 'ماذا تعرفين بالفعل؟', x: 'ما الذي أعرفه بالفعل؟' }, // nieuw, nalezen
     toetsOffer: 'حوالي 10 دقائق. لا توجد درجات. إنه لك فقط.', // nieuw, nalezen (AI-correctie 2 nov 2026)
@@ -358,6 +364,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: { m: 'أظهر كيف تسير الأمور', f: 'أظهري كيف تسير الأمور', x: 'عرض سير التعلّم' }, // nieuw, nalezen
     coachCardIntro: { m: 'هذه البطاقة تُظهر تقدّمك. أرِها لمعلّمك أو مدرّبك أو مديرك. أنت تقرّر.', f: 'هذه البطاقة تُظهر تقدّمكِ. أريها لمعلّمكِ أو مدرّبكِ أو مديركِ. أنتِ تقرّرين.', x: 'هذه البطاقة تُظهر التقدّم في التعلّم. يمكن عرضها على المعلّم أو المدرّب أو المدير. القرار لصاحب البطاقة.' }, // nieuw, nalezen
+    coachCardNo: { m: 'يمكنك أيضاً أن تقول «لا».', f: 'يمكنكِ أيضاً أن تقولي «لا».', x: 'يمكن أيضاً قول «لا».' }, // nieuw, nalezen
     coachCardKeep: { m: 'هاتفك يصنع البطاقة. لا يُرسَل شيء. Vloertaal لا يحفظ شيئاً.', f: 'هاتفكِ يصنع البطاقة. لا يُرسَل شيء. Vloertaal لا يحفظ شيئاً.', x: 'الهاتف يصنع البطاقة. لا يُرسَل شيء. Vloertaal لا يحفظ شيئاً.' }, // nieuw, nalezen
     coachCardWhat: 'على البطاقة، بالهولندية:', // nieuw, nalezen
     coachTopics: 'المواضيع المنتهية', // nieuw, nalezen

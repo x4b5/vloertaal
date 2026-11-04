@@ -1,4 +1,5 @@
 /// <reference types="vitest/config" />
+import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -193,11 +194,35 @@ function swBuild(): Plugin {
   };
 }
 
+const isCommit = (s: string | undefined): s is string => Boolean(s && /^[0-9a-f]{7,40}$/i.test(s));
+/** The commit the host names in the build's environment, where it does (none is known for statichost yet; Vercel's while it still builds). */
+const COMMIT_VARS = ['COMMIT_SHA', 'GIT_COMMIT', 'VERCEL_GIT_COMMIT_SHA'] as const;
+
+/**
+ * Which build this is: "Versie …" in About and in a tester's report (src/lib/report.ts). The short
+ * commit hash from git (statichost builds a checkout of main, as `npm run build` here does), else a
+ * commit the host gives in the environment (COMMIT_VARS), else "dev". Until 4 November 2026 only
+ * Vercel's variable was read, so every build on statichost said "Versie dev".
+ */
+export function buildVersion(
+  git: () => string = () => execFileSync('git', ['rev-parse', '--short', 'HEAD'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }),
+  env: Record<string, string | undefined> = process.env,
+): string {
+  try {
+    const hash = git().trim();
+    if (isCommit(hash)) return hash.toLowerCase();
+  } catch {
+    // No git here (a copy without .git, or no git installed): the environment, else "dev".
+  }
+  const sha = COMMIT_VARS.map((k) => env[k]?.trim()).find(isCommit);
+  return sha ? sha.slice(0, 7).toLowerCase() : 'dev';
+}
+
 // Relative base so the build works on GitHub Pages or any sub-path.
 export default defineConfig({
   base: './',
-  // Which deploy a tester's report came from (src/lib/report.ts): the commit on Vercel, "dev" here.
-  define: { 'import.meta.env.VITE_BUILD': JSON.stringify((process.env.VERCEL_GIT_COMMIT_SHA ?? 'dev').slice(0, 7)) },
+  // Which build a learner and a tester's report see (buildVersion).
+  define: { 'import.meta.env.VITE_BUILD': JSON.stringify(buildVersion()) },
   css: {
     lightningcss: {
       // The CSS minifier writes media queries the old way, (max-width: 380px), never (width<=380px)

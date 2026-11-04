@@ -913,7 +913,9 @@ const socialUnit = unit('social', 'Getting along', 'Omgang met collega’s', '�
       ['grapje', 'het grapje', 'the joke', '😜', false],
     ],
     [
-      ['Raak me niet aan, alstublieft.', 'Please do not touch me.'],
+      // A boundary is said firmly, not as a polite request ("Raak me niet aan, alstublieft."), the
+      // owner's request, 4 November 2026. Its clip is to be recorded again (tests: PENDING_RECORDING).
+      ['Blijf van me af.', 'Do not touch me.'],
       ['Die opmerking vind ik niet grappig.', 'I do not find that remark funny.'],
       ['Ik wil iets melden bij de vertrouwenspersoon.', 'I want to report something to the confidential adviser.'],
     ],
@@ -2907,7 +2909,8 @@ const entreeMore: Record<string, Lesson[]> = {
       ],
       [
         ['Ik ben erg moe vandaag.', 'I am very tired today.'],
-        ['Ik eet altijd eerst een ontbijt.', 'I always eat breakfast first.'],
+        // "Ik eet een ontbijt" is not how Dutch says it (4 November 2026); not recorded yet either way.
+        ['Ik ontbijt altijd eerst.', 'I always have breakfast first.'],
         ['In de pauze ga ik even wandelen.', 'In the break I go for a short walk.'],
       ],
       [['Wil je een pilletje? Dan blijf je wakker.', 'Do you want a pill? Then you stay awake.'], ['Nee, dank je. Ik werk niet onder invloed.', 'No, thank you. I do not work under the influence.']],

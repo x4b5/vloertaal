@@ -2788,6 +2788,11 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .kaart-intro > .bi { order: 1; font-size: 1.05rem; font-weight: 600; }
 .kaart-intro > .kaart-intro-nl { order: 2; font-size: 0.9rem; color: var(--muted); }
 .kaart-intro > .help-say { order: 3; align-self: flex-start; }
+/* "Je mag ook nee zeggen." right under the intro, in the same voice (text, nothing to tap). */
+.kaart-no { display: flex; flex-direction: column; gap: 4px; margin: 10px 0 0; line-height: 1.4; }
+.kaart-no > .bi { order: 1; font-size: 1.05rem; font-weight: 600; }
+.kaart-no > .kaart-no-nl { order: 2; font-size: 0.9rem; color: var(--muted); }
+.kaart-no > .help-say { order: 3; align-self: flex-start; }
 /* [Bewaar of deel] sits above the picture, so it is in view without scrolling on every phone. */
 .kaart-screen .kaart-actions { margin-top: 14px; }
 .kaart-figure { margin: 18px 0 0; }
@@ -3510,11 +3515,21 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* The header holds only the ✕ and the progress bar (the sound toggle and Help moved into the
    pause sheet and the bottom bar). */
 .player-top .lesson-close { flex: none; }
-/* Pause sheet: the second choice ("Without sound" / "Sound on") is a calm outlined button with
-   its icon, between the main "Keep going" and "Stop" (which has its own icon too). */
+/* Pause sheet: the second choice ("Without sound") is a calm outlined button with its icon,
+   between the main "Keep going" and "Stop" (which has its own icon too). */
 .sheet-second { gap: 10px; background: var(--card); color: var(--ink); border: 2px solid var(--edge); }
 .sheet-second:hover { background: var(--concrete-2); }
 .sheet-second-icon { display: inline-grid; place-items: center; flex: none; color: var(--ink-2); }
+/* "Without sound" is an on/off button: while the sound is off it is pressed, and looks like a
+   picked card (yellow tint, strong edge, a check at the end; .max3-card.picked). The label stays
+   in the middle, clear of the check. */
+.sheet-sound { padding-inline: 52px; }
+.sheet-sound.picked, .sheet-sound.picked:hover { border-color: var(--edge-strong); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
+.sheet-sound.picked .sheet-second-icon { color: var(--ink); }
+.sheet-sound-check {
+  position: absolute; inset-inline-end: 16px; top: 50%; transform: translateY(-50%);
+  display: grid; place-items: center; color: var(--ink);
+}
 
 /* One speaker per item: after a normal play a turtle sits on the speaker (the next tap is
    slow); after the slow play it goes again. The turtle is part of the button: a tap on it (also
@@ -4185,6 +4200,16 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 :root[data-theme='dark'] { --logo-ring: #3b4249; }
 .logo-mark { box-shadow: 0 0 0 1.5px var(--logo-ring); }
 .boot-label .logo-mark { box-shadow: none; }
+/* The start that failed (src/components/Splash.tsx BootFailed): its words and two ways out under
+   the name (the words' own style, .boot-failed, is in index.html with the splash's). */
+.boot-stuck { display: flex; flex-direction: column; align-items: stretch; gap: 12px; width: 100%; max-width: 340px; outline: none; }
+.boot-stuck .boot-failed { max-width: none; }
+.boot-hint { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; font-size: 0.95rem; line-height: 1.35; color: var(--ink-2); }
+.boot-made { color: var(--right-ink); font-weight: 600; }
+.boot-way { min-height: 64px; font-size: 1rem; }
+/* "Opnieuw beginnen" is a way out too, not a faint extra: ink, as a button that works. */
+.boot-way.btn-ghost { color: var(--ink); border-color: var(--ink-3); }
+.boot-stuck .reset-actions { margin-top: 4px; }
 
 /* Bram says one calm line: a small speech bubble, never a button (no pointer, no motion). */
 .bram-say {
@@ -4645,7 +4670,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
  */
 @supports not (color: color-mix(in srgb, red 50%, blue)) {
   .lang-btn.picked, .max3-card.picked, .topics-order-btn.is-on,
-  .choice.picked, .rb-marked { background: var(--kraft-light); }
+  .choice.picked, .rb-marked, .sheet-sound.picked, .sheet-sound.picked:hover { background: var(--kraft-light); }
   /* Before Chrome 88 the picked option's own rule is lost whole (its :not(a, b)): its border too. */
   .choice.picked, .choice.picked:hover:not(:disabled) { border-color: var(--edge-strong); background: var(--kraft-light); }
   .gender-btn.picked .gender-face { background: var(--kraft-light); }

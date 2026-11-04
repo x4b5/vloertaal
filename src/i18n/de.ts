@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'Richtig, aber achte auf die Schreibweise',
     incorrect: 'Nicht ganz',
     correctAnswer: 'Richtige Antwort',
+    rightAnswerIs: 'Die richtige Antwort ist:', // nieuw, nalezen
+    bestAnswerIs: 'Die beste Antwort ist:', // nieuw, nalezen
     yourAnswer: 'Deine Antwort',
     inARow: '{n} in Folge',
     cantListen: 'Ich kann gerade nicht zuhören',
@@ -330,6 +332,10 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'Nicht geladen. Hast du Internet?',
     retry: 'Erneut versuchen',
+    /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+    bootFailed: 'Vloertaal kann nicht starten.', // nieuw, nalezen
+    bootFailedHint: 'Sichere zuerst deinen Fortschritt. Fang dann neu an.', // nieuw, nalezen
+    startOver: 'Neu anfangen', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'Was kannst du schon?', // nieuw, nalezen
     toetsOffer: 'Etwa 10 Minuten. Es gibt keine Noten. Es ist nur für dich.', // nieuw, nalezen
@@ -358,6 +364,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Zeig, wie es läuft', // nieuw, nalezen
     coachCardIntro: 'Diese Karte zeigt deinen Fortschritt. Zeig sie deiner Lehrkraft, deinem Coach oder deinem Chef. Du entscheidest.', // nieuw, nalezen
+    coachCardNo: 'Du kannst auch Nein sagen.', // nieuw, nalezen
     coachCardKeep: 'Dein Handy macht die Karte. Nichts wird gesendet. Vloertaal speichert nichts.', // nieuw, nalezen
     coachCardWhat: 'Auf der Karte, auf Niederländisch:', // nieuw, nalezen
     coachTopics: 'Fertige Themen', // nieuw, nalezen

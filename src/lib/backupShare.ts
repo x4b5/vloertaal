@@ -1,4 +1,14 @@
-import { saveFile } from './reminder';
+/** Hands a file to the learner (the phone's download or "open in Calendar": src/lib/reminder.ts uses it too). */
+export function saveFile(name: string, type: string, content: string): void {
+  const url = URL.createObjectURL(new Blob([content], { type }));
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = name;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 10_000);
+}
 
 /**
  * Settings › "Bewaar je voortgang": the backup file goes out in one tap.
@@ -8,6 +18,8 @@ import { saveFile } from './reminder';
  *    files, and "Zet terug" reads .txt as well as .json (the same content).
  *  - Else: downloaded as .json, as before.
  * Cancelled in the share sheet: nothing happens (no download behind it).
+ * The same way out when the app cannot start (src/components/Splash.tsx BootFailed), so this file
+ * is part of the start (keep it small).
  */
 
 export type BackupOut = 'shared' | 'saved' | 'cancelled';

@@ -984,7 +984,7 @@ const t: CultureTranslation = {
     'w.intimidatie': 'die Belästigung, die Einschüchterung',
     'w.getuige': 'der Zeuge / die Zeugin',
     'w.grapje': 'der Witz, der Spaß',
-    's.boundaries.1': 'Bitte fassen Sie mich nicht an.',
+    's.boundaries.1': 'Fass mich nicht an.', // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
     's.boundaries.2': 'Diese Bemerkung finde ich nicht lustig.',
     's.boundaries.3': 'Ich möchte der Vertrauensperson etwas melden.',
     'c.boundaries.q': 'Stell dich nicht so an, das war doch nur ein Witz.',

@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Word } from '../src/content/types';
 import { cultureTips } from '../src/content/culture';
@@ -55,9 +56,9 @@ describe('typable', () => {
 describe('workTryLine', () => {
   const lessonIds = units.flatMap((u) => u.lessons.map((l) => l.id));
 
-  it('gives the lesson\'s own "Zeg het zo" sentence, when short enough', async () => {
-    const { workTryLine, WORK_TRY_MAX_WORDS } = await load();
-    const short = cultureTips.filter((t) => t.phrase.nl.trim().split(/\s+/).length <= WORK_TRY_MAX_WORDS);
+  it('gives the lesson\'s own "Zeg het zo" sentence, when short enough (and without a name)', async () => {
+    const { hasName, workTryLine, WORK_TRY_MAX_WORDS } = await load();
+    const short = cultureTips.filter((t) => t.phrase.nl.trim().split(/\s+/).length <= WORK_TRY_MAX_WORDS && !hasName(t.phrase.nl));
     expect(short.length).toBeGreaterThan(0);
     for (const tip of short) {
       const when = tip.situation.ask === 'which' ? {} : { when: { id: tip.situation.id, en: tip.situation.en } };
@@ -79,8 +80,39 @@ describe('workTryLine', () => {
     expect(workTryLine('r.l.ziek.3')).toEqual({ id: 'r.l.ziek.3.mo1', nl: 'Ik ben weer beter. Ik kan morgen weer komen werken.', en: '', whenNl: 'Je meldt je beter bij je leidinggevende.' });
     // A sentence with a character's name in it is not one to say yourself.
     expect(workTryLine('r.l.ziek.1')).toBeUndefined();
+    // Also a name you speak to ("Henk, er zit een doos vast."), not only "ik ben …" (4 November 2026).
+    expect(workTryLine('r.l.factory.1')).toBeUndefined();
     // Too long (13 words).
     expect(workTryLine('r.l.ziek.2')).toBeUndefined();
+  });
+
+  it('gives a tip with a name in it another line of its own lesson, for the same moment, or no card (4 November 2026)', async () => {
+    const { workTryLine } = await load();
+    const when = (lessonId: string) => {
+      const { situation } = cultureTips.find((t) => t.lessonId === lessonId)!;
+      return { id: situation.id, en: situation.en };
+    };
+    // "Hoi, ik ben Ali. Ik ben nieuw hier.", "Goedemorgen, ik ben Ali. …", "Hallo, met Ali. …": a learner
+    // who reads little would say "Ali".
+    expect(workTryLine('l.people')).toEqual({ id: 's.people.3', nl: 'Ik ben een nieuwe collega.', en: 'I am a new colleague.', when: when('l.people') });
+    expect(workTryLine('l.arrive')).toEqual({ id: 'c.arrive.a', nl: 'Ik ben nieuw. Ik begin vandaag.', en: 'I am new. I start today.', when: when('l.arrive') });
+    expect(workTryLine('l.callin')).toEqual({ id: 's.callin.2', nl: 'Ik denk dat ik overmorgen weer kom.', en: 'I think I will be back the day after tomorrow.', when: when('l.callin') });
+    // A written message with names in it, and Ali's name spelled out: no line of the lesson fits.
+    expect(workTryLine('l.email')).toBeUndefined();
+    expect(workTryLine('l.texting')).toBeUndefined();
+    expect(workTryLine('l.details')).toBeUndefined();
+  });
+
+  it('takes those lines from what is there already: recorded in every voice, translated in every help language', async () => {
+    const { workTryLine } = await load();
+    const { helpLanguages } = await import('../src/i18n/all');
+    expect(helpLanguages).toHaveLength(13);
+    const voices = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')).voices as { key: string; said: Record<string, string> }[];
+    for (const lessonId of ['l.people', 'l.arrive', 'l.callin']) {
+      const line = workTryLine(lessonId)!;
+      for (const v of voices) expect(Object.values(v.said), `${v.key}: ${line.nl}`).toContain(line.nl);
+      for (const lang of helpLanguages) expect(lang.gloss[line.id], `${lang.code}: ${line.id}`).toBeTruthy();
+    }
   });
 
   it('gives nothing for a lesson without a tip, or with a long sentence', async () => {
@@ -91,6 +123,86 @@ describe('workTryLine', () => {
       expect(workTryLine(tip.lessonId)).toBeUndefined();
     }
     expect(workTryLine('l.does-not-exist')).toBeUndefined();
+  });
+});
+
+describe('"Probeer het vandaag" never has a name in it (4 November 2026)', () => {
+  /** Every text in a value (the steps of a rules lesson). */
+  const strings = (x: unknown): string[] =>
+    typeof x === 'string' ? [x] : Array.isArray(x) ? x.flatMap(strings) : x && typeof x === 'object' ? Object.values(x).flatMap(strings) : [];
+
+  it('in both tracks, both countries and a region: no name of the cast or of anyone the lessons name', async () => {
+    vi.resetModules();
+    await import('./regionLoaded');
+    await import('../src/i18n/packs/nl');
+    const { allRegionTips, allRegionUnits, setRegionsOn } = await import('../src/content/regio');
+    const { setBeTaal } = await import('../src/content/taalBe/live');
+    const { beTaalTips } = await import('../src/content/taalBe');
+    const { setBeRules } = await import('../src/content/regels/be/live');
+    const { allCountriesRulesUnits, setRulesCountry } = await import('../src/content/rulesCourse');
+    const { allCountriesTaalUnits } = await import('../src/content/curriculum');
+    const tips = (await import('../src/content/culture')).cultureTips;
+    const { CAST } = await import('../src/components/Characters');
+    const { workTryLine } = await import('../src/lib/workTry');
+    setRegionsOn(true);
+    try {
+      const taal = [...allCountriesTaalUnits(), ...allRegionUnits('taal')].flatMap((u) => u.lessons);
+      const regels = [...allCountriesRulesUnits(), ...allRegionUnits('regels')].flatMap((u) => u.lessons);
+
+      // The names, found in the course's own Dutch: how a chat, a story or a question names someone
+      // ("ik ben Ali", "Beste Karin", "Groet, Ali Haddad", "ploegbaas Jan", "Henk vraagt", "Wat kan
+      // Fatima het beste doen?"), and the cast.
+      const texts = [
+        ...taal.flatMap((l) => [...l.words.map((w) => w.nl), ...l.sentences.map((s) => s.nl), ...(l.dialogues ?? []).flatMap((d) => [d.prompt.nl, d.reply.nl])]),
+        ...[...tips, ...beTaalTips, ...allRegionTips()].flatMap((t) => [t.phrase.nl, t.situation.nl ?? '']),
+        ...regels.flatMap((l) => strings(l.steps ?? [])),
+      ];
+      // Written with a capital in the middle of a sentence somewhere ("Dan zegt" is not a name).
+      const midSentence = new Set(texts.flatMap((text) => {
+        const raw = text.split(/\s+/);
+        return raw.flatMap((r, i) => (i > 0 && !/[.!?…:]["”’]?$/.test(raw[i - 1]) ? [r.replace(/[^\p{L}'-]/gu, '')] : []));
+      }));
+      const NAME = '(\\p{Lu}\\p{Ll}{2,})';
+      const asName = [
+        new RegExp(`(?<!\\p{L})(?:[Ii]k ben|[Ii]k heet|heet|naam is|meneer|mevrouw|collega|ploegbaas|leidinggevende|eigenaar|Hoi|Hallo|Beste|Dag|Groet,|Groeten,) ${NAME}`, 'gu'),
+        new RegExp(`(?:Groet|Groeten), \\p{Lu}\\p{Ll}+ ${NAME}`, 'gu'),
+        new RegExp(`(?<!\\p{L})(?<!(?:in|voor|uit|naar) )${NAME} (?:zegt|vraagt|roept|antwoordt|schrijft|appt)(?!\\p{L})`, 'gu'),
+        new RegExp(`(?<!\\p{L})Wat (?:kan|moet|doet|zegt) ${NAME}`, 'gu'),
+      ];
+      const found = texts.flatMap((text) => asName.flatMap((p) => [...text.matchAll(p)].map((m) => m[1]))).filter((w) => midSentence.has(w));
+      const names = [...new Set([...CAST.map((c) => c.charAt(0).toUpperCase() + c.slice(1)), ...found])];
+      expect(names).toEqual(expect.arrayContaining(['Bram', 'Amina', 'Henk', 'Jada', 'Ali', 'Haddad', 'Mark', 'Karin', 'Sara', 'Jan', 'Fatima', 'Jayden', 'Sanne']));
+      const named = new RegExp(`(?<!\\p{L})(?:${names.join('|')})(?:'?s)?(?!\\p{L})`, 'u');
+      // A name spelled out letter by letter ("A, L, I").
+      const spelled = (nl: string) => [...nl.matchAll(/(?<!\p{L})\p{Lu}(?:, \p{Lu}(?!\p{L}))+/gu)].map((m) => m[0].replace(/, /g, ''));
+      const isName = (w: string) => names.some((n) => n.toLowerCase() === w.toLowerCase());
+
+      let taalLines = 0;
+      let regelsLines = 0;
+      for (const country of ['nl', 'be'] as const) {
+        setRulesCountry(country);
+        setBeTaal(country === 'be');
+        setBeRules(country === 'be');
+        for (const [lessons, track] of [[taal, 'taal'], [regels, 'regels']] as const) {
+          for (const lesson of lessons) {
+            const line = workTryLine(lesson.id);
+            if (!line) continue;
+            if (track === 'taal') taalLines++;
+            else regelsLines++;
+            expect(line.nl, `${country} ${lesson.id}`).not.toMatch(named);
+            expect(spelled(line.nl).filter(isName), `${country} ${lesson.id}: ${line.nl}`).toEqual([]);
+          }
+        }
+      }
+      // Both tracks have their cards (each country counted).
+      expect(taalLines).toBeGreaterThan(100);
+      expect(regelsLines).toBeGreaterThan(100);
+    } finally {
+      setRulesCountry('nl');
+      setBeTaal(null);
+      setBeRules(null);
+      setRegionsOn(null);
+    }
   });
 });
 

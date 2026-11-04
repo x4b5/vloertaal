@@ -984,7 +984,7 @@ const t: CultureTranslation = {
     'w.intimidatie': "hărțuirea, intimidarea",
     'w.getuige': "martorul",
     'w.grapje': "gluma",
-    's.boundaries.1': "Vă rog, nu mă atingeți.",
+    's.boundaries.1': "Nu mă atinge.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
     's.boundaries.2': "Nu mi se pare amuzantă remarca asta.",
     's.boundaries.3': "Vreau să raportez ceva persoanei de încredere.",
     'c.boundaries.q': { m: 'Nu fi așa dificil, a fost doar o glumă.', f: 'Nu fi așa dificilă, a fost doar o glumă.', x: 'Nu mai face atâtea probleme, a fost doar o glumă.' }, // x: nieuw, nalezen
