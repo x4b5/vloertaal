@@ -10,6 +10,7 @@ De privacyverklaring op vloertaal.nl/privacy (`src/lib/privacyPage.ts`) zegt pre
 | Wat | Waar | Gaat er iets weg? |
 |---|---|---|
 | Voortgang, keuzes, certificaten | `src/lib/progress.ts` (localStorage) | Nee |
+| "Voortgang wissen" | `src/App.tsx` (`onReset`) | Wist lessen, certificaten, de naam en de toets met opnames. Hulptaal, land, sector, regio, gender, de eerste dag en de instellingen blijven staan; de privacytekst zegt dat. Alles weg: de sitegegevens in de browser wissen, of de app verwijderen |
 | Toets-uitslag en stemopnames van de toets | `src/lib/toetsVoice.ts` (IndexedDB) | Nee |
 | "Zeg het"-opname | `src/lib/speaking.ts` | Nee, en weg na de oefening |
 | "Laat de telefoon luisteren" | `src/lib/listen.ts` | Nee: alleen als de herkenning op het toestel gebeurt (`processLocally`) |
@@ -22,7 +23,7 @@ De privacyverklaring op vloertaal.nl/privacy (`src/lib/privacyPage.ts`) zegt pre
 | Herinnering | `src/lib/reminder.ts` | Alleen als de leerling Google Agenda kiest |
 | Code op de begeleiderskaart | `src/lib/groepCode.ts`, `src/lib/kaart.ts` | Nee: alleen de getallen van de kaart, zonder naam. Gaat mee in de deeltekst als de leerling de kaart zelf deelt |
 | Groepsoverzicht `/groep/` | `src/lib/groepPage.ts`, `src/lib/groep.ts` | Nee: rekent in de browser van de begeleider. De eigen CSP verbiedt elke verbinding (`connect-src 'none'`). Bewaart niets |
-| Hosting | statichost.eu (Zweden; servers in Duitsland en Slovenië, sinds 2 nov 2026; daarvoor Vercel, VS) | IP-adres bij elk verzoek, zoals bij elke website; niet bewaard |
+| Hosting | statichost.eu (Zweden; servers in Duitsland en Slovenië, sinds 2 nov 2026; daarvoor Vercel, VS) | IP-adres bij elk verzoek, zoals bij elke website; niet bewaard. Het oude adres `vloertaal.vercel.app` werkt nog en staat bij Vercel (VS): de privacytekst zegt dat en raadt vloertaal.nl aan. Daar telt de app niet (`LIVE` in `src/lib/count.ts`) |
 
 **Tellen gebeurt nooit:**
 - als "Anoniem meetellen" uit staat;
