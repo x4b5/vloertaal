@@ -414,6 +414,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'через перевірку', // nieuw, nalezen
     checkUndo: 'Усе ж пройти уроки', // nieuw, nalezen
     shareInvite: 'Я вчу нідерландську для роботи за допомогою Vloertaal. Безкоштовно: {link}', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    briefjeWhat: 'Vloertaal — безкоштовний застосунок, щоб вивчати нідерландську для роботи.', // nieuw, nalezen
+    briefjeHow: 'Короткі уроки на твоєму телефоні, з підказками твоєю мовою. Без акаунта.', // nieuw, nalezen
+    briefjeOpen: 'Відкрий на телефоні:', // nieuw, nalezen
     workTry: 'Спробуй сьогодні на роботі', // nieuw, nalezen
     workTryWhen: 'Коли:', // nieuw, nalezen
     workTryThen: 'Тоді скажи:', // nieuw, nalezen
@@ -429,6 +432,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Увімкнено: нічого не рухається, немає святкування серії після уроку, а серія і слова не показуються на головному екрані.', // nieuw, nalezen
     infoMore: 'Більше пояснень', // nieuw, nalezen
     tipsAbout: 'Про ці поради', // nieuw, nalezen
+    tipsNotChecked: 'Експерт ще не перевірив це пояснення.', // nieuw, nalezen
+    lawStale: 'Дата цього пояснення: {month}. Найновіші правила перевір у Juridisch Loket або на Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Дата цього пояснення: {month}. Найновіші правила перевір у justitiehuis або на werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Більше про Vloertaal', // nieuw, nalezen
     geluktAsk: 'Вдалося сказати це на роботі?', // nieuw, nalezen
     geluktYes: 'Так, вдалося', // nieuw, nalezen

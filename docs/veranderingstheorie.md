@@ -30,7 +30,7 @@ Vloertaal is een **aanvulling** op een taalcursus of coach, geen vervanging. De 
 ## Hoe we dat meten
 Zonder account en zonder namen. Wat we niet kunnen meten, zeggen we eerlijk.
 
-1. **Terugkomen.** De app telt per telefoon één keer de 1e, 2e, 7e, 14e en 28e oefendag (`/e/dag/1` … `/e/dag/28`, zie `src/lib/count.ts` en `/privacy/`). Dat geeft een trechter: hoeveel nieuwe leerlingen, en hoeveel daarvan op dag 2, 7, 14 en 28. Zonder taal, sector of nummer, en uit te zetten.
+1. **Terugkomen.** De app telt per telefoon één keer de 1e, 2e, 7e, 14e en 28e oefendag (`/e/dag/1` … `/e/dag/28`, zie `src/lib/count.ts` en `/privacy/`). Daarvoor telt elke telefoon één keer dat de app voor het eerst opent en dat de start klaar is (`/e/eerste/geopend`, `/e/eerste/start-af`). Dat geeft een trechter: hoeveel nieuwe telefoons, hoeveel daarvan door de start en bij les 1, en hoeveel op dag 2, 7, 14 en 28. Zonder taal, sector of nummer, en uit te zetten.
 2. **De toets “Wat ken je al?”.** Instap en eind, per onderdeel (luisteren, woorden, zinnen). De uitslag blijft op de telefoon. Alleen de begeleider ziet hem, als de leerling de kaart laat zien.
 3. **Het groepsoverzicht** (`vloertaal.nl/groep`). De begeleider neemt per deelnemer de getallen van de kaart over, of plakt de korte code (bijvoorbeeld `VT1 O3 D12 V9/18 N13/18`). De pagina maakt groepstotalen: gemiddelde en mediaan van onderwerpen en oefendagen, hoeveel deelnemers terugkwamen, en de toets voor en na. Er gaat niets naar een server. De begeleider stuurt alleen de totalen door.
 4. **De begeleiders.** Een kort gesprek of vragenlijst na 4 weken en na 3 maanden: wat zien ze op het werk? Wordt er vaker gevraagd en bevestigd? Zijn er minder misverstanden? Dat zijn waarnemingen, geen metingen.

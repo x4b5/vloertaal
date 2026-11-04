@@ -414,6 +414,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'con prueba', // nieuw, nalezen
     checkUndo: 'Hacer las lecciones igualmente', // nieuw, nalezen
     shareInvite: 'Aprendo neerlandés para mi trabajo con Vloertaal. Gratis: {link}', // nieuw, nalezen
+    briefjeWhat: 'Vloertaal es una app gratis para aprender el neerlandés del trabajo.', // nieuw, nalezen
+    briefjeHow: 'Lecciones cortas en tu propio teléfono, con ayuda en tu idioma. Sin cuenta.', // nieuw, nalezen
+    briefjeOpen: 'Ábrelo en tu teléfono:', // nieuw, nalezen
     workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen
     workTryWhen: 'Cuando:', // nieuw, nalezen
     workTryThen: 'Entonces di:', // nieuw, nalezen
@@ -429,6 +432,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Activado: nada se mueve, no hay celebración de tu racha después de una lección, y tu racha y tus palabras no aparecen en la pantalla de inicio.', // nieuw, nalezen
     infoMore: 'Más explicación', // nieuw, nalezen
     tipsAbout: 'Sobre estos consejos', // nieuw, nalezen
+    tipsNotChecked: 'Un experto todavía no ha revisado esta explicación.', // nieuw, nalezen
+    lawStale: 'Fecha de esta explicación: {month}. Para ver las reglas más nuevas, consulta el Juridisch Loket o Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Fecha de esta explicación: {month}. Para ver las reglas más nuevas, consulta el justitiehuis o werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Leer más sobre Vloertaal', // nieuw, nalezen
     geluktAsk: '¿Lo dijiste en el trabajo?', // nieuw, nalezen
     geluktYes: 'Sí, funcionó', // nieuw, nalezen

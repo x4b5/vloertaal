@@ -414,6 +414,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'با آزمون', // nieuw, nalezen
     checkUndo: 'با این حال درس‌ها را انجام دهید', // nieuw, nalezen
     shareInvite: 'من با Vloertaal هلندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
+    briefjeWhat: 'Vloertaal یک برنامهٔ رایگان برای یادگیری هلندیِ کار است.', // nieuw, nalezen
+    briefjeHow: 'درس‌های کوتاه روی گوشی خود، با توضیح به زبان خود. بدون حساب.', // nieuw, nalezen
+    briefjeOpen: 'روی گوشی خود باز کنید:', // nieuw, nalezen
     workTry: 'امروز سر کار امتحانش کنید', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTryWhen: 'وقتی:', // nieuw, nalezen
     workTryThen: 'آن‌وقت بگویید:', // nieuw, nalezen
@@ -429,6 +432,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پشت سر هم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen
     infoMore: 'توضیح بیشتر', // nieuw, nalezen
     tipsAbout: 'دربارهٔ این نکته‌ها', // nieuw, nalezen
+    tipsNotChecked: 'هنوز یک متخصص این توضیح را بررسی نکرده است.', // nieuw, nalezen
+    lawStale: 'تاریخ این توضیح: {month}. برای قوانین تازه، به Juridisch Loket یا Work in NL مراجعه کنید.', // nieuw, nalezen
+    lawStaleBe: 'تاریخ این توضیح: {month}. برای قوانین تازه، به justitiehuis یا werk.belgie.be مراجعه کنید.', // nieuw, nalezen
     aboutMore: 'بیشتر دربارهٔ Vloertaal', // nieuw, nalezen
     geluktAsk: 'این را سر کار گفتی؟', // nieuw, nalezen
     geluktYes: 'بله، شد', // nieuw, nalezen

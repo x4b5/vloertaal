@@ -52,6 +52,13 @@ const WHAT = 'Vloertaal is een gratis web-app waarmee andertaligen en laaggelett
 const WHAT_PLACE = 'Vloertaal is nadrukkelijk bedoeld als aanvulling op een taalcursus of taalcoach, niet als vervanging. Er wordt niets aan verdiend: geen reclame, geen abonnement, en er worden geen gegevens verkocht.';
 
 /**
+ * 'p.what', third paragraph: where Vloertaal fits beside what coaches already use (the owner's
+ * request, 4 November 2026). Facts only, no judgement of the others, and names without links: their
+ * addresses were not checked from here.
+ */
+export const WHAT_BESIDE = 'Vloertaal past naast wat er al is, zoals Oefenen.nl, NedBox (in Vlaanderen), een taalbuddy (bijvoorbeeld via Taal Doet Meer of Het Begint met Taal), een Taalhuis of een NT2-les. Vloertaal is een oefenmaatje voor de werkvloer: kort oefenen op de eigen telefoon, met de woorden en zinnen van het werk. Het is geen vervanging van les. Informatie over werken in Nederland in meer talen staat op Work in NL, van het ministerie van Sociale Zaken en Werkgelegenheid.';
+
+/**
  * 'p.story': the reason, written for professionals (the learner's About keeps its own plain text,
  * 'a.story'). No second "Hoi, ik ben Xavier": the lead already says it.
  */
@@ -75,7 +82,7 @@ export const proSections: ProSection[] = [
   {
     // What it is and the mission in one block, before the reason (the story).
     id: 'p.what', emoji: mission.emoji, title: 'Wat is Vloertaal?',
-    body: [WHAT, WHAT_PLACE],
+    body: [WHAT, WHAT_PLACE, WHAT_BESIDE],
   },
   {
     // The owner's reason, for professionals, signed and dated as on Over; it leads into the test version.
@@ -117,7 +124,9 @@ export const proSections: ProSection[] = [
       'Drie spelregels bij de kaart. Laten zien is vrijwillig: de leerling mag nee zeggen. Maak het geen verplichting, en gebruik de kaart niet voor een beoordeling, een contract of het loon. Houd je bij wie welk nummer is, bijvoorbeeld voor vloertaal.nl/groep? Dan verwerk je persoonsgegevens, en gelden daarvoor de regels van de privacywet (AVG).',
       'De toets “Wat ken je al?” werkt net zo. De uitslag en de opname van de stem van de leerling (om later “Jij toen” en “Jij nu” te horen) blijven alleen op het toestel. Wij krijgen die niet. Kijk samen met de leerling naar het uitslagscherm. Met “Voortgang wissen” zijn de lessen, de uitslag en de opnames weg. De hulptaal, het land, de sector en de instellingen blijven staan. Echt alles wissen: wis in de browser de sitegegevens van vloertaal.nl, en verwijder de app als die op het beginscherm staat.',
       'Spreken met “Laat de telefoon luisteren (proef)”: dit staat standaard uit, en de leerling kan het alleen aanzetten op een telefoon die Nederlands zelf kan herkennen, zonder internet. De app gebruikt de herkenning alleen als de browser bevestigt dat die op het toestel gebeurt (processLocally). Kan dat niet, dan is de proef er niet. Er gaat geen geluid en geen tekst naar ons of naar anderen. De telefoon zegt alleen of hij de zin verstond, nooit een cijfer of “fout”.',
-      'Wat telt de app? Alleen hoe vaak een les begint, stopt of af is: welke les, in welk kwart iemand stopte, en ongeveer hoeveel minuten een les duurde. Of leerlingen terugkomen: elke telefoon telt één keer de 1e, 2e, 7e, 14e en 28e dag waarop de leerling een les deed, alleen met dat getal, zonder datum of nummer. En hoe vaak de toets “Wat ken je al?” begint en af is (instap of eind), zonder de uitslag. Dat gaat zonder cookies, met GoatCounter. En of de app ergens een fout geeft: de soort fout, een korte code en een opgeschoonde foutmelding uit de code, nooit wat de leerling typte (hooguit drie per bezoek). Er gaat niets mee over de leerling: geen hulptaal, geen sector, geen naam en geen nummer.',
+      // All that src/lib/count.ts sends, as /privacy says it: since 4 November 2026 also the start
+      // (once per phone) and the answer to "Gelukt?" (src/lib/workTry.ts), which this "Alleen" left out.
+      'Wat telt de app? Alleen hoe vaak een les begint, stopt of af is: welke les, in welk kwart iemand stopte, en ongeveer hoeveel minuten een les duurde. Hoeveel telefoons de app voor het eerst openen en de vragen van de start afmaken (tot en met de kleur): elke telefoon telt dat één keer, zonder wat de leerling koos. Of leerlingen terugkomen: elke telefoon telt één keer de 1e, 2e, 7e, 14e en 28e dag waarop de leerling een les deed, alleen met dat getal, zonder datum of nummer. En hoe vaak de toets “Wat ken je al?” begint en af is (instap of eind), zonder de uitslag. Het antwoord op “Heb je dit op je werk gezegd?”: alleen “ja” of “nog niet”. Dat gaat zonder cookies, met GoatCounter. En of de app ergens een fout geeft: de soort fout, een korte code en een opgeschoonde foutmelding uit de code, nooit wat de leerling typte (hooguit drie per bezoek). Er gaat niets mee over de leerling: geen hulptaal, geen sector, geen naam en geen nummer.',
       'De leerling kan het tellen uitzetten bij Instellingen (“Anoniem meetellen”). Vraagt de browser om niet gevolgd te worden (Do Not Track of Global Privacy Control)? Dan telt de app niets. Melden opent een gewone mail: er gaat pas iets naar ons als de leerling die zelf verstuurt. Alles op een rij: vloertaal.nl/privacy.',
     ],
   },
@@ -131,13 +140,15 @@ export const proSections: ProSection[] = [
     body: [],
     lines: [
       { lead: 'Op de eigen telefoon.', text: 'Stuur de link in de taal van je leerling, bijvoorbeeld vloertaal.nl/pl voor Poolse collega’s: de app vraagt dan meteen ‘Polski?’. De leerling kiest zelf een sector. Geen account, geen app-winkel.' },
+      // The printed note per language (src/lib/briefjePage.ts), 4 November 2026.
+      { lead: 'Een briefje voor dag 1.', text: 'Print op vloertaal.nl/briefje een A4-briefje in de taal van je leerling. Daarop staat in die taal en in het Nederlands wat Vloertaal is, met de link en een QR-code. De leerling houdt het briefje.' },
       { lead: 'Elke dag een paar minuten.', text: 'Korte lessen werken beter dan af en toe lang. “Herhaal vandaag” brengt de woorden terug die nog lastig zijn.' },
       { lead: 'Met een groep.', text: 'Bij een taalcafé of in de klas: samen één les doen, daarna gaat ieder zelf verder. Per onderwerp is er een certificaat en een spiekkaartje met de belangrijkste zinnen.' },
       { lead: 'Oefen samen.', text: 'Na een les met een gesprekje staat op het eindscherm “Oefen samen”. Twee mensen gebruiken dan één telefoon. De een leest de collega uit het gesprekje, de ander antwoordt. Daarna wisselen ze van rol. De zin staat groot in beeld, met de vertaling eronder (die kan uit). Er is geen internet nodig, er wordt niets opgenomen en er is geen score. Het past bij een taalcafé of een klas: leerlingen oefenen in tweetallen, of met een vrijwilliger of docent. Het is een keuze, nooit verplicht.' },
       { lead: 'Op de werkvloer.', text: 'Nieuwe collega’s leren de woorden van hun eigen werk: de veiligheidsinstructie, beschermingsmiddelen en de toolbox, het rooster en het loonstrookje. Zo kun je een instructie of een eerste werkdag voorbereiden. Vloertaal vervangt geen veiligheidsinstructie of VCA-cursus: het helpt om die beter te begrijpen.' },
       { lead: 'Naar één onderwerp.', text: 'Elk onderwerp heeft een eigen link. Met de link opent Vloertaal meteen bij dat onderwerp, ook bij de eerste les. Een nieuwe gebruiker kiest eerst nog een taal. Handig na een les over het loonstrookje of veiligheid. Hieronder staat elk onderwerp, per thema.' },
     ],
-    site: [{ text: 'vloertaal.nl/pl', href: '/pl/' }],
+    site: [{ text: 'vloertaal.nl/pl', href: '/pl/' }, { text: 'vloertaal.nl/briefje', href: '/briefje/' }],
     extra: 'topics',
   },
   {

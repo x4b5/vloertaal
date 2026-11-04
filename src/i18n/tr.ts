@@ -414,6 +414,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'kontrolle', // nieuw, nalezen
     checkUndo: 'Yine de dersleri yap', // nieuw, nalezen
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
+    briefjeWhat: 'Vloertaal, iş için Hollandaca öğreten ücretsiz bir uygulamadır.', // nieuw, nalezen
+    briefjeHow: 'Kendi telefonunda kısa dersler, kendi dilinde yardımla. Hesap yok.', // nieuw, nalezen
+    briefjeOpen: 'Telefonunda aç:', // nieuw, nalezen
     workTry: 'Bugün işte dene', // nieuw, nalezen
     workTryWhen: 'Şu durumda:', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTryThen: 'O zaman şunu söyle:', // nieuw, nalezen
@@ -429,6 +432,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Açık: hiçbir şey hareket etmez, dersten sonra serin için kutlama olmaz, serin ve kelimelerin ana ekranda görünmez.', // nieuw, nalezen
     infoMore: 'Daha fazla açıklama', // nieuw, nalezen
     tipsAbout: 'Bu ipuçları hakkında', // nieuw, nalezen
+    tipsNotChecked: 'Bu açıklama henüz bir uzman tarafından kontrol edilmedi.', // nieuw, nalezen
+    lawStale: 'Bu açıklamanın tarihi: {month}. En yeni kurallar için: Juridisch Loket veya Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Bu açıklamanın tarihi: {month}. En yeni kurallar için: justitiehuis veya werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Vloertaal hakkında daha fazla', // nieuw, nalezen
     geluktAsk: 'Bunu işte söyledin mi?', // nieuw, nalezen
     geluktYes: 'Evet, oldu', // nieuw, nalezen

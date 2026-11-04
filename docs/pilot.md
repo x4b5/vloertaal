@@ -41,8 +41,8 @@ nummer, geen naam.
 
 ### Dag 1: zo verloopt de eerste sessie
 
-1. Geef iedere leerling **het briefje met de link** (zie „Praktisch”). Een code is niet nodig: de
-   app staat open voor iedereen.
+1. Geef iedere leerling **het briefje met de link** (vloertaal.nl/briefje, zie „Praktisch”). Een
+   code is niet nodig: de app staat open voor iedereen.
 2. Zeg alleen: *„Open deze link en begin. Ik kijk mee. Ik help als je echt niet verder kunt.”*
 3. De leerling doorloopt zelf de start: **taal kiezen → vrouw of man (alleen in talen die dat
    nodig hebben) → waar werk je → Nederland of België → welke kleur → les 1** („Say hello”, unit
@@ -129,12 +129,16 @@ vriendelijk, en schrijf de antwoorden in steekwoorden op. Er zijn geen goede of 
 De app telt een paar gebeurtenissen anoniem via **GoatCounter** (dashboard:
 vloertaal.goatcounter.com). Er zijn geen cookies, geen account en geen namen.
 
-Er wordt alleen geteld wat de privacytekst in de app zegt: **hoe vaak lessen worden gedaan, en
-ongeveer hoe lang ze duren**, en op hoeveel dagen een toestel lessen deed. Eén verzoek per gebeurtenis, en dat verzoek noemt alleen de les, nooit
-iets over de leerling: geen hulptaal, geen sector, geen versie, geen toestel-id.
+Er wordt alleen geteld wat de privacytekst zegt (`/privacy/`): **hoe vaak lessen worden gedaan, en
+ongeveer hoe lang ze duren**, op hoeveel dagen een toestel lessen deed, en hoeveel toestellen de app
+voor het eerst openen en de start afmaken. Eén verzoek per gebeurtenis, en dat verzoek noemt alleen
+de les (of niets), nooit iets over de leerling: geen hulptaal, geen sector, geen versie, geen
+toestel-id.
 
 | Wat wordt geteld | Pad in GoatCounter |
 |---|---|
+| De app voor het eerst open | `/e/eerste/geopend`: één keer per toestel, op een toestel dat de start nog niet begon (sinds 4 november 2026) |
+| De start afgerond | `/e/eerste/start-af`: één keer per toestel, na Verder bij „Welke kleur wil je?” (sinds 4 november 2026) |
 | Les gestart | `/e/lesson-start/l-cv` (de herhaling van de dag: `/e/lesson-start/daily`) |
 | Les gestopt | `/e/lesson-quit/l-cv/q2`: met het kwart van de les waarin iemand op ✕ → Stoppen tikte (q1 tot q4) |
 | Les afgerond | `/e/lesson-done/l-cv/t2-5`: met hoe lang ongeveer (`t0-2`, `t2-5`, `t5-10`, `t10plus` minuten; de tijd dat de app weg was telt niet) |
@@ -144,10 +148,13 @@ iets over de leerling: geen hulptaal, geen sector, geen versie, geen toestel-id.
 | Toets klaar | `/e/toets-done/a` of `/e/toets-done/b`: nooit de score |
 | Oefendag 1, 2, 7, 14 en 28 | `/e/dag/1`, `/e/dag/2`, `/e/dag/7`, `/e/dag/14`, `/e/dag/28`: één keer per toestel, op de 1e, 2e, 7e, 14e en 28e verschillende dag met een les (sinds 31 oktober 2026) |
 
-Sinds 29 oktober 2026 telt de app **niet meer**: het openen van de app, het invullen van een code,
-en per hulptaal, sector of versie. Eén gebeurtenis ging toen als tot 8 losse verzoeken tegelijk,
-en GoatCounter kon die (met IP-adres, browser en tijd) per bezoek samenvoegen: bij een kleine
-taalgroep in één plaats kon dat één persoon aanwijzen. Er wordt niets geteld als de leerling
+Sinds 29 oktober 2026 telt de app **niet meer**: elke dag het openen van de app, het invullen van
+een code, en per hulptaal, sector of versie. Eén gebeurtenis ging toen als tot 8 losse verzoeken
+tegelijk, en GoatCounter kon die (met IP-adres, browser en tijd) per bezoek samenvoegen: bij een
+kleine taalgroep in één plaats kon dat één persoon aanwijzen. Sinds 4 november 2026 telt de app wel
+weer het eerste openen, maar alleen **één keer per toestel en zonder iets erbij** (`/e/eerste/…`):
+zonder dat zag u niets van wie afhaakte voordat de eerste les af was. Een toestel dat de start al begonnen was vóór
+4 november, telt niet als nieuw. Er wordt niets geteld als de leerling
 „Anoniem meetellen” uitzet, of als de browser „niet volgen” (Do Not Track of Global Privacy
 Control) vraagt.
 
@@ -156,11 +163,45 @@ vaak maar wordt hij weinig afgerond, dan is die les te lang of te moeilijk. Bij 
 waar: `q1` is in het eerste kwart, `q4` vlak voor het eind. Wie de app gewoon wegklikt, telt niet
 als gestopt; dat zie je alleen aan het verschil tussen gestart en afgerond.
 
+**Haken mensen af bij de start?** Zet `/e/eerste/geopend` naast `/e/eerste/start-af` en `/e/dag/1`.
+Bijvoorbeeld 100 geopend, 80 door de start, 60 met les 1 af: dan haken er 20 af in de vragen van de
+start (taal, vrouw of man, werk, land, kleur), en 20 tussen de start en het eind van les 1. Wélke
+vraag mensen kost (bijvoorbeeld de kleur), zegt de telling niet: dat ziet u alleen op het
+waarneemformulier van dag 1.
+
 **Komen mensen terug?** Zet `/e/dag/1` (nieuwe leerlingen) naast `/e/dag/2`, `/e/dag/7`,
 `/e/dag/14` en `/e/dag/28`. Bijvoorbeeld 100 nieuw, 45 op dag 2, 18 op dag 7. Het telt dagen met
 een les, geen kalenderdagen: wie op maandag en vrijdag oefent, zit op dag 2. Een toestel dat al
 lessen had vóór 31 oktober, stuurt bij de eerstvolgende les in één keer de mijlpalen die het al
 had. Een andere telefoon of gewiste gegevens tellen als nieuw.
+
+### De weekregel: zes getallen per week
+
+Schrijf elke week (bijvoorbeeld op maandag, over maandag tot en met zondag ervoor) zes getallen op.
+Zo ziet u na een paar weken of er iets verandert, zonder elke dag te kijken.
+
+| Week | Geopend | Start af | Dag 1 | Dag 2 | Dag 7 | Dag 28 |
+|---|---|---|---|---|---|---|
+| bijv. 9–15 nov 2026 | | | | | | |
+
+| Getal | Pad in GoatCounter | Wat het zegt |
+|---|---|---|
+| Geopend | `/e/eerste/geopend` | nieuwe toestellen: de starters |
+| Start af | `/e/eerste/start-af` | door de vragen van de start, tot en met de kleur |
+| Dag 1 | `/e/dag/1` | de eerste les af |
+| Dag 2 | `/e/dag/2` | terug op een tweede dag |
+| Dag 7 | `/e/dag/7` | 7 dagen met een les |
+| Dag 28 | `/e/dag/28` | 28 dagen met een les |
+
+**Waar staat het?** Open het dashboard (vloertaal.goatcounter.com), kies bovenaan de week als
+periode, en zoek de paden in de lijst met pagina's (typ `/e/eerste` of `/e/dag/` in het filter). Het
+getal achter een pad is het aantal in die week.
+
+**Lezen.** Elk getal telt een toestel hooguit één keer. Het zijn wel aantallen per week, geen groep
+die u volgt: wie deze week op dag 7 komt, begon meestal een week of meer eerder. Kijk dus naar de
+lijn over een paar weken, en deel door het aantal geopend (de starters), niet door wie volhoudt. In de
+eerste weken na 4 november kan dag 1 hoger zijn dan start af: toestellen die de start al eerder
+deden, tellen hun eerste les nog wel.
 
 **Welke les duurt te lang?** Kijk per les bij afgerond naar de minuten
 (`/e/lesson-done/l-cv/t10plus`). Duurt een les vaak meer dan 10 minuten, dan is hij te lang.
@@ -177,10 +218,11 @@ had. Een andere telefoon of gewiste gegevens tellen als nieuw.
 
 ## Praktisch
 
-- **De link op papier.** Geef ieder een briefje met de link in grote letters, het liefst in de
-  eigen taal (`vloertaal.nl/pl`, `vloertaal.nl/ar` …) en met een QR-code. Een toegangscode is niet
-  meer nodig: alle lessen zijn open voor iedereen. Neem het briefje na afloop niet terug: de
-  leerling heeft het nodig op een andere telefoon.
+- **De link op papier.** Geef ieder een briefje met de link in grote letters, in de eigen taal
+  (`vloertaal.nl/pl`, `vloertaal.nl/ar` …) en met een QR-code. Kant-en-klaar per taal:
+  **vloertaal.nl/briefje** (A4, in de hulptaal en in het Nederlands; test de QR-code eerst met je
+  eigen telefoon). Een toegangscode is niet meer nodig: alle lessen zijn open voor iedereen. Neem
+  het briefje na afloop niet terug: de leerling heeft het nodig op een andere telefoon.
 - **Lessen bewaren voor zonder internet.** Zet bij wie weinig data of slecht bereik heeft (in de
   kas, op de bouw, in de bus) de instelling aan: **Instellingen → Deze telefoon → „Lessen op deze
   telefoon”**. Doe dat op dag 1 via wifi. Het onderwerp waar de leerling mee bezig is, wordt dan

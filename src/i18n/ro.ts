@@ -414,6 +414,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'prin verificare', // nieuw, nalezen
     checkUndo: 'Totuși fă lecțiile', // nieuw, nalezen
     shareInvite: 'Învăț olandeză pentru munca mea cu Vloertaal. Gratuit: {link}', // nieuw, nalezen
+    briefjeWhat: 'Vloertaal este o aplicație gratuită pentru a învăța olandeză pentru muncă.', // nieuw, nalezen
+    briefjeHow: 'Lecții scurte pe telefonul tău, cu ajutor în limba ta. Fără cont.', // nieuw, nalezen
+    briefjeOpen: 'Deschide pe telefon:', // nieuw, nalezen
     workTry: 'Încearcă azi la muncă', // nieuw, nalezen
     workTryWhen: 'Când:', // nieuw, nalezen
     workTryThen: 'Atunci spune:', // nieuw, nalezen
@@ -429,6 +432,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Pornit: nimic nu se mișcă, nicio sărbătoare pentru seria ta după o lecție, iar seria și cuvintele nu apar pe ecranul principal.', // nieuw, nalezen
     infoMore: 'Mai multe explicații', // nieuw, nalezen
     tipsAbout: 'Despre aceste sfaturi', // nieuw, nalezen
+    tipsNotChecked: 'Un expert nu a verificat încă această explicație.', // nieuw, nalezen
+    lawStale: 'Data acestei explicații: {month}. Pentru cele mai noi reguli, verifică la Juridisch Loket sau la Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Data acestei explicații: {month}. Pentru cele mai noi reguli, verifică la justitiehuis sau pe werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Citește mai mult despre Vloertaal', // nieuw, nalezen
     geluktAsk: 'Ai spus asta la muncă?', // nieuw, nalezen
     geluktYes: 'Da, a mers', // nieuw, nalezen

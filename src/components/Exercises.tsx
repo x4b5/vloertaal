@@ -27,7 +27,7 @@ import { useFitText } from './useFitText';
 import { BeNote } from './BeNote';
 import { tipNlOnly } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
-import { splitClosing, tipBody } from '../lib/tipText';
+import { rightsTipNotes, splitClosing, tipBody } from '../lib/tipText';
 import { dropAsk } from '../lib/dropAsk';
 import { firstTimes, STAMP_LATER_TIMES, TAP_TO_HEAR_TIMES } from '../lib/firstTimes';
 
@@ -1151,6 +1151,9 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
     );
   }
   const text = splitClosing(tipBody(tip, lang), lang);
+  // A tip about rights: "not checked by an expert yet" with who can help, and once the law check is
+  // more than 90 days old, how old it is (src/lib/tipText.ts rightsTipNotes; fase 4).
+  const notes = rightsTipNotes(tip, lang);
   return (
     <div ref={fitRef} className={`exercise tip ${part === 'read' ? 'tip-page-read' : ''}`}>
       {badge}
@@ -1162,9 +1165,15 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
           its own (part 'read') without the "…": that only made the learner look for more here. */}
       <TipBody text={say ? shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} />
       {say && phrase}
-      {/* Who can help (the tip's closing line, cut off above) or else what these tips are. */}
-      {/* Read aloud in the help language too, as on the "Zo werkt het hier" page. */}
-      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={text.closing ?? ui('tipsNote', lang)} /><HelpSay text={(text.closing ?? ui('tipsNote', lang)).help} lang={lang} /></p></InfoMore>
+      {/* How old the explanation is: in view, a calm line (a warning stays visible, docs/rustiger.md). */}
+      {notes.stale && <p className="be-note be-note-beta tip-law-stale" role="note"><Bi text={notes.stale} /></p>}
+      {/* Who can help (the tip's closing line, cut off above) or else what these tips are; with a
+          tip about rights also that no expert has checked it yet. Text only: nothing more to tap. */}
+      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}>
+        {/* Read aloud in the help language too, as on the "Zo werkt het hier" page. */}
+        <p className="tips-note"><Bi text={text.closing ?? ui('tipsNote', lang)} /><HelpSay text={(text.closing ?? ui('tipsNote', lang)).help} lang={lang} /></p>
+        {notes.notChecked && <p className="tips-note tips-not-checked"><Bi text={notes.notChecked} /></p>}
+      </InfoMore>
     </div>
   );
 }

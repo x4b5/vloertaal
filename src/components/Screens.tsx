@@ -7,9 +7,9 @@ import { resultLineFor } from '../lib/greeting';
 import { aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE, STORY_DATE } from '../content/about';
 import { dateLocale, updateDate } from '../content/updateDate';
 import { useUpdates } from '../content/updatesLive';
-import { taalTips } from '../content/culture';
+import { taalTips, type CultureTip } from '../content/culture';
 import { taalBeActive, tipNlOnly } from '../content/taalBe';
-import { tipBody } from '../lib/tipText';
+import { rightsTipNotes, tipBody } from '../lib/tipText';
 import { BeNote } from './BeNote';
 import { regionTips } from '../content/regio';
 import { findLesson } from '../content/curriculum';
@@ -1085,6 +1085,21 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   );
 }
 
+/**
+ * Under an open tip about rights (src/lib/tipText.ts rightsTipNotes; fase 4, 4 November 2026):
+ * "not checked by an expert yet", and once the law check is more than 90 days old, how old the
+ * explanation is and where to find the latest rules. Calm lines, nothing to tap.
+ */
+function RightsTipNotes({ tip, lang }: { tip: CultureTip; lang?: HelpLanguage }) {
+  const notes = rightsTipNotes(tip, lang);
+  return (
+    <>
+      {notes.notChecked && <p className="tips-note tips-not-checked"><Bi text={notes.notChecked} /></p>}
+      {notes.stale && <p className="be-note be-note-beta tip-law-stale" role="note"><Bi text={notes.stale} /></p>}
+    </>
+  );
+}
+
 /** All "Zo werkt het hier" tips, to read again. Tips of lessons not reached yet stay hidden. */
 export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Progress; lang?: HelpLanguage; onBack: () => void; access?: Access }) {
   const [open, setOpen] = useState<string | null>(null);
@@ -1115,6 +1130,7 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
                 {tipNlOnly(t) && <BeNote lang={lang} />}
                 <p><Bi text={tipBody(t, lang)} /></p>
                 <HelpSay text={tipBody(t, lang).help} lang={lang} />
+                <RightsTipNotes tip={t} lang={lang} />
                 <div className="phrase">
                   <div className="phrase-text">
                     <NlPair content nlFirst nl={breakable(t.phrase.nl)} nlClass="phrase-nl" text={gloss(t.phrase.id, t.phrase.en, lang)} />

@@ -19,6 +19,8 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-04',
     items: [
+      'Rechten: is de uitleg over regels en rechten ouder dan 3 maanden, dan staat erbij van welke maand hij is en waar je de laatste regels vindt. Bij de tips over rechten staat dat een expert ze nog niet heeft nagekeken. Bij elk 0800-nummer staat nu ook de website: met een buitenlandse simkaart werkt een 0800-nummer vaak niet.',
+      'Voor begeleiders: een briefje voor dag 1, per taal op een A4, met de link en een QR-code (vloertaal.nl/briefje). Op de pagina voor begeleiders staat hoe Vloertaal past naast Oefenen.nl, NedBox, een taalbuddy, een Taalhuis of een NT2-les. En de app telt nu ook, zonder naam, hoe vaak hij voor het eerst wordt geopend en hoe vaak de start lukt.',
       'Eerst herhalen: staan er na "Herhaal vandaag" nog veel woorden klaar, dan is "Extra ronde" de eerste keuze. De nieuwe les staat eronder en blijft open. Zo onthoud je meer.',
       'Na de eerste les zie je meteen de volgende les. "Wat ken je al?" en "Gelukt?" staan als een kleine regel onder de les, niet meer in plaats van de les. Je reeks en de herinnering staan samen op één scherm.',
       'In de les: "Wat zeg je?" komt nu na het gesprekje dat het antwoord leert. De zin voor "Probeer het vandaag" zeg je eerst zelf. Een fout dictee kost één vakje, niet alles. Bij een foute keuze zie je wat je koos. En de herhaling neemt eerst de woorden die nog moeilijk zijn.',

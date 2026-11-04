@@ -8,7 +8,8 @@
  * only content in the path, a count cannot say who it was.)
  *
  * Started, stopped and finished per lesson show where learners give up (docs/pilot.md); the day
- * milestones (countDayMilestones: "/e/dag/1", "/e/dag/7" …) show whether they come back.
+ * milestones (countDayMilestones: "/e/dag/1", "/e/dag/7" …) show whether they come back, and the
+ * start before them (countFirstOpen, countStartDone: "/e/eerste/…") how many new devices get that far.
  * Under the same switch, src/lib/errors.ts counts where the app goes wrong ("/e/fout/…"): only
  * the kind of error and a short code, never what the learner typed or where they were.
  *
@@ -191,6 +192,64 @@ export function countDayMilestones(practisedDays: number): number[] {
   } catch {
     return [];
   }
+}
+
+/**
+ * The start, before lesson 1 (the owner's request, 4 November 2026: from 29 October until then
+ * nothing was counted before a finished lesson, so who stopped in the first run could not be seen).
+ * Each device counts, once: the app opened for the first time ("/e/eerste/geopend"), and the first
+ * run done, past "Welke kleur wil je?" ("/e/eerste/start-af"). With "/e/dag/1" that is a funnel:
+ * how many new, how many through the start, how many with a lesson. Only that it happened: no help
+ * language, no sector, no country, no colour, no date, no id.
+ */
+export const FIRST_STEPS = ['geopend', 'start-af'] as const;
+export type FirstStep = (typeof FIRST_STEPS)[number];
+/** The steps already handled on this device ("geopend,start-af"), so each is counted at most once. */
+const FIRST_KEY = 'vloertaal:count-eerste';
+
+/**
+ * Marks `steps` as handled on this device and counts those not handled before, under the same rules
+ * as the day milestones: a step reached while counting may not happen is marked without a count
+ * (switching counting on later never sends the past), and nothing is sent when the device cannot
+ * remember what it counted (blocked storage). `withCount` false: only marks. Returns the steps sent.
+ */
+function countFirstSteps(steps: readonly FirstStep[], withCount = true): FirstStep[] {
+  const s = storage();
+  if (!s) return [];
+  try {
+    const done = new Set((s.getItem(FIRST_KEY) ?? '').split(','));
+    const fresh = steps.filter((m) => !done.has(m));
+    if (!fresh.length) return [];
+    s.setItem(FIRST_KEY, FIRST_STEPS.filter((m) => done.has(m) || fresh.includes(m)).join(','));
+    if (!withCount || !mayCount()) return [];
+    for (const m of fresh) countRaw(`/e/eerste/${m}`, 'eerste');
+    return fresh;
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * When the app opens (src/App.tsx, once per page load): "/e/eerste/geopend" the first time on this
+ * device. `isNew`: this device has not begun the first run (no help language chosen yet). A device
+ * that has, and was here before this count existed, only marks both steps as handled, so it is never
+ * counted as new; one that already counted its first open (a reload in the middle of the start) keeps
+ * its "start-af" to come.
+ */
+export function countFirstOpen(isNew: boolean): boolean {
+  if (isNew) return countFirstSteps(['geopend']).length > 0;
+  const s = storage();
+  try {
+    if (s && !s.getItem(FIRST_KEY)) countFirstSteps(FIRST_STEPS, false);
+  } catch {
+    // Blocked storage: nothing is sent either way.
+  }
+  return false;
+}
+
+/** The first run is done: Continue on "Welke kleur wil je?" (src/App.tsx). "/e/eerste/start-af", once per device. */
+export function countStartDone(): boolean {
+  return countFirstSteps(['start-af']).length > 0;
 }
 
 /** Counts one event (one request). A no-op unless mayCount(). */

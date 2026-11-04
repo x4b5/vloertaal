@@ -525,6 +525,11 @@ export const uiEn = {
   noticeOk: 'OK',
   /* The text with a shared certificate, pocket card or coach card (src/lib/shareLink.ts): {link} is vloertaal.nl/<help language>. */
   shareInvite: 'I am learning Dutch for my work with Vloertaal. It is free: {link}',
+  /* The printed note for day 1 (src/lib/briefjePage.ts, vloertaal.nl/briefje/<lang>/), not shown in the app: what
+     Vloertaal is in two lines, then where to open it (the address follows on a line of its own). */
+  briefjeWhat: 'Vloertaal is a free app to learn Dutch for work.',
+  briefjeHow: 'Short lessons on your own phone, with help in your own language. No account.',
+  briefjeOpen: 'Open on your phone:',
   /* "Probeer het vandaag op je werk": one sentence of the lesson on its result (src/components/WorkTry.tsx). */
   workTry: 'Try it at work today',
   /* "Probeer het vandaag": the if-then plan (src/components/WorkTry.tsx): the moment, then the sentence. */
@@ -549,6 +554,12 @@ export const uiEn = {
   /* An ⓘ that opens a side matter in place (src/components/InfoMore.tsx): its label says what is behind it. */
   infoMore: 'More explanation',
   tipsAbout: 'About these tips',
+  /* A tip about rights (src/lib/tipText.ts rightsTipNotes; fase 4, 4 November 2026): not checked by
+     an expert yet, and, once the law check is more than 90 days old (src/content/lawAge.ts), its
+     month ({month}: "October 2026") and where to find the latest rules (in Belgium: lawStaleBe). */
+  tipsNotChecked: 'An expert has not checked this explanation yet.',
+  lawStale: 'This explanation is from {month}. For the latest rules, check the Juridisch Loket or Work in NL.',
+  lawStaleBe: 'This explanation is from {month}. For the latest rules, check the justitiehuis or werk.belgie.be.',
   aboutMore: 'Read more about Vloertaal',
   /* "Gelukt?": on a later day the home asks whether that sentence was said at work (src/components/GeluktCard.tsx). */
   geluktAsk: 'Did you say this at work?',

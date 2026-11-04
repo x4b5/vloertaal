@@ -415,6 +415,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'ብፈተና', // nieuw, nalezen
     checkUndo: { m: 'ብዘየገድስ ነቶም ትምህርትታት ግበሮም', f: 'ብዘየገድስ ነቶም ትምህርትታት ግበርዮም', x: 'ብዘየገድስ ነቶም ትምህርትታት ግበሩዎም' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     shareInvite: 'ንስራሐይ ሆላንድኛ ብVloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    briefjeWhat: 'Vloertaal ንስራሕ ሆላንድኛ ንምምሃር ኣፕ እዩ። ብነጻ እዩ።', // nieuw, nalezen
+    briefjeHow: 'ሓጸርቲ ትምህርትታት ኣብ ተሌፎን፡ ብትግርኛ ሓገዝ። ኣካውንት የለን።', // nieuw, nalezen
+    briefjeOpen: { m: 'ኣብ ተሌፎንካ ክፈት:', f: 'ኣብ ተሌፎንኪ ክፈቲ:', x: 'ኣብ ተሌፎንኩም ክፈቱ:' }, // nieuw, nalezen
     workTry: { m: 'ሎሚ ኣብ ስራሕካ ፈትኖ', f: 'ሎሚ ኣብ ስራሕኪ ፈትንዮ', x: 'ሎሚ ኣብ ስራሕ ፈትንዎ' }, // nieuw, nalezen
     workTryWhen: 'ኩነታት:', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTryThen: { m: 'ሽዑ በል:', f: 'ሽዑ በሊ:', x: 'ሽዑ በሉ:' }, // nieuw, nalezen
@@ -430,6 +433,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'ክፉት: ዝንቀሳቐስ የለን፡ ድሕሪ ትምህርቲ ናይ ተኸታታሊ መዓልትታት ጽምብል የለን፡ መዓልትታትን ቃላትን ኣብ ቀንዲ ስክሪን ኣይርአዩን።', // nieuw, nalezen
     infoMore: 'ተወሳኺ መብርሂ', // nieuw, nalezen
     tipsAbout: 'ብዛዕባ እዞም ምኽርታት', // nieuw, nalezen
+    tipsNotChecked: 'እዚ መብርሂ ገና ብክኢላ ኣይተፈተሸን።', // nieuw, nalezen
+    lawStale: 'ዕለት እዚ መብርሂ፡ {month}። ዝሓደሱ ሕግታት ኣብ Juridisch Loket ወይ Work in NL ይርከቡ።', // nieuw, nalezen
+    lawStaleBe: 'ዕለት እዚ መብርሂ፡ {month}። ዝሓደሱ ሕግታት ኣብ justitiehuis ወይ werk.belgie.be ይርከቡ።', // nieuw, nalezen
     aboutMore: 'ብዛዕባ Vloertaal ተወሳኺ', // nieuw, nalezen
     geluktAsk: { m: 'ነዚ ኣብ ስራሕ ኢልካዮ ዶ?', f: 'ነዚ ኣብ ስራሕ ኢልኪዮ ዶ?', x: 'ነዚ ኣብ ስራሕ ኢልኩምዎ ዶ?' }, // nieuw, nalezen
     geluktYes: 'እወ፡ ሰሪሑ', // nieuw, nalezen

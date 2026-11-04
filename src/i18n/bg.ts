@@ -414,6 +414,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'чрез проверка', // nieuw, nalezen
     checkUndo: 'Все пак направи уроците', // nieuw, nalezen
     shareInvite: 'Уча нидерландски за работата си с Vloertaal. Безплатно е: {link}', // nieuw, nalezen
+    briefjeWhat: 'Vloertaal е безплатно приложение за учене на нидерландски за работа.', // nieuw, nalezen
+    briefjeHow: 'Кратки уроци на твоя телефон, с помощ на твоя език. Без акаунт.', // nieuw, nalezen
+    briefjeOpen: 'Отвори на телефона си:', // nieuw, nalezen
     workTry: 'Опитай днес на работа', // nieuw, nalezen
     workTryWhen: 'Кога:', // nieuw, nalezen
     workTryThen: 'Тогава кажи:', // nieuw, nalezen
@@ -429,6 +432,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Включено: нищо не се движи, няма празнуване на серията след урок, а серията и думите не са на началния екран.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     infoMore: 'Повече обяснения', // nieuw, nalezen
     tipsAbout: 'За тези съвети', // nieuw, nalezen
+    tipsNotChecked: 'Експерт още не е проверил това обяснение.', // nieuw, nalezen
+    lawStale: 'Дата на това обяснение: {month}. За най-новите правила провери в Juridisch Loket или в Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Дата на това обяснение: {month}. За най-новите правила провери в justitiehuis или на werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Повече за Vloertaal', // nieuw, nalezen
     geluktAsk: 'Каза ли това на работа?', // nieuw, nalezen
     geluktYes: 'Да, получи се', // nieuw, nalezen

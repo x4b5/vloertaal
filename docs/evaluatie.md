@@ -15,7 +15,7 @@ Nagaan of Vloertaal, naast de gewone begeleiding, helpt om (1) vaker en langer t
 
 | Vraag | Meting | Bron | Wanneer |
 |---|---|---|---|
-| Komen leerlingen terug? | Trechter dag 1, 2, 7, 14, 28 | Anonieme telling `/e/dag/*` (alle gebruikers, niet per groep) | doorlopend |
+| Komen leerlingen terug? | Trechter: eerste keer geopend, start af, dag 1, 2, 7, 14, 28 (de weekregel in `docs/pilot.md`) | Anonieme telling `/e/eerste/*` en `/e/dag/*` (alle gebruikers, niet per groep) | doorlopend, één regel per week |
 | Oefent de groep? | Onderwerpen af, dagen geoefend (mediaan, deel met 2+ en 7+ dagen) | Groepsoverzicht `/groep/` | week 4 |
 | Leren ze iets? | Toets “Wat ken je al?” instap en eind, in % goed, en beter/gelijk/minder | Groepsoverzicht `/groep/` | week 0 en 4 |
 | Gebruiken ze het op het werk? | Waarneming van de begeleider (korte lijst), 3 vragen aan de leerling in de eigen taal | Begeleider, partner | week 4 en maand 3 |
@@ -26,7 +26,7 @@ De evaluatiepartner kan een eigen, korte taaltaak toevoegen die door een NT2-doc
 ### Afspraken om onszelf niet voor de gek te houden
 *Uit het onderzoeksrapport (`reports/Leerwetenschap en tweede taal.md`, voorstel 7 en het hoofdstuk "Wat is er nodig om de beste in zijn soort te worden?").*
 
-- **Altijd delen door het aantal starters**, niet door wie volhoudt. App-studies testen vaak alleen wie het traject afmaakt; dat maakt de uitkomst mooier dan hij is.
+- **Altijd delen door het aantal starters**, niet door wie volhoudt. App-studies testen vaak alleen wie het traject afmaakt; dat maakt de uitkomst mooier dan hij is. In de telling zijn de starters `/e/eerste/geopend`, niet `/e/dag/1`.
 - **Kijken naar wat blijft, niet naar de les.** Hoe het in een les gaat, zegt weinig over wat blijft. Een maat die er al is: in de herhaling het aandeel goed op woorden van 2 weken of ouder (de regel "je wist er nog 9 van de 10" na de herhaling). Die staat alleen op de telefoon; in de pilot kan de begeleider hem met toestemming noteren.
 - **"Gelukt?" is een duwtje, geen bewijs.** Wat de leerder zelf op hetzelfde moment zegt, blaast verbanden op. Gebruik op het werk liever ook laten zien door een coach of leidinggevende: vóór en na een handvol werkvloertaken (ziek melden, om uitleg vragen, gevaar melden), los van wat de leerder zelf zegt.
 - **Spreken blind laten beoordelen.** Met toestemming luisteren NT2-docenten naar de toetsopnames "Jij toen / Jij nu" zonder te weten welke van het begin en welke van het eind is, en beoordelen ze op verstaanbaarheid (niet op accent).
