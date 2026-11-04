@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-04',
     items: [
+      'Zo werkt het hier: is de uitleg kort, dan staat hij nu in grotere letters. De app gebruikt de ruimte tot de knop Verder. Een lange uitleg houdt de gewone grootte.',
       'Fout antwoord? Bovenaan staat nu ook in je eigen taal "Het goede antwoord is:". Eerst stond er alleen "Goed antwoord", en dat leek op goed.',
       '"Probeer het vandaag" geeft nooit meer een zin met een naam erin, zoals "ik ben Ali". Je krijgt een zin die je zelf kunt zeggen. En elk nieuw woord krijgt in zijn eigen les minstens één vraag.',
       'Je reeks: oefen je 3 keer per week, of neem je een weekend vrij? Dan zie je niet meer "Je reeks is gestopt". Dat scherm komt alleen na een echte pauze, en Bram zwaait dan.',
