@@ -60,6 +60,9 @@ const PAIRS: [string, string, number][] = [
   ['ink-3', 'track', 3], ['ink-3', 'tag-bg', 3],
   ['tag-ink', 'tag-bg', 4.5], ['warn-ink', 'warn-bg', 4.5], ['tag-ink', 'bg', 4.5], ['tag-ink', 'card', 4.5],
   ['on-solid', 'solid', 4.5], ['on-solid-mark', 'solid', 3], ['on-yellow', 'yellow', 4.5],
+  // Each colour's own "doe dit" colour, speaker and done fill (4 November 2026).
+  ['on-yellow-soft', 'yellow', 4.5], ['on-yellow', 'yellow-hover', 4.5],
+  ['blue', 'bg', 3], ['progress', 'bg', 3], ['progress', 'track', 3],
   ['right-ink', 'bg', 4.5], ['right-ink', 'card', 4.5], ['right-ink', 'green-bg', 4.5],
   ['wrong-ink', 'bg', 4.5], ['wrong-ink', 'card', 4.5], ['wrong-ink', 'red-bg', 4.5],
   ['blue', 'card', 3], ['on-blue', 'blue', 3],

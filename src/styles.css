@@ -24,8 +24,12 @@
   --concrete: #eee1cc;
   --concrete-2: #dacaaf;
   --paper: #fffdf9;
-  --yellow: #f5d77a;          /* softer yellow ("Rustig zand"; was #ffc414) */
-  --yellow-dark: #e0a800;
+  /* Each colour in Settings > Weergave has its own "doe dit" colour, its own ink for the block
+     and border on it, and its own fill for what is done (the owner's request, 4 November 2026:
+     "give the colours some character"). Zand stays the calmest: workshop and kraft paper, a warm
+     ochre with warm brown on it (was #f5d77a with a cool near-black). */
+  --yellow: #eec46a;
+  --yellow-dark: #c9952a;
   --kraft: #c9ae88;
   --kraft-light: #ece3d4;
   --kraft-dark: #6e5530;
@@ -48,10 +52,13 @@
   /* A mark (check, mic) on the solid disc: yellow on ink in light; in dark the disc is light
      ink, so the mark is dark (yellow on it was 1.3:1). */
   --on-solid-mark: var(--yellow);
-  --on-yellow: #1e2226;
+  --on-yellow: var(--ink);    /* warm brown on the ochre (was #1e2226; dark keeps it) */
   --on-yellow-soft: #3f3a2c;  /* quieter text on the yellow (the Dutch under a help-language label) */
   --on-yellow-paper: #fffdf8; /* light text on a dark block inside a yellow card */
-  --yellow-hover: #f8e09a;
+  --yellow-hover: #f3d283;
+  /* What is done in the lesson bar: kraft tape (was the soft edge colour), 3:1 on the floor and
+     the empty track. */
+  --progress: #8f6a3a;
   --blue-hover: #1284c7;
   --on-go: #fff;            /* the tick and cross on the green and red dots */
   --on-green: #ffffff;
@@ -158,6 +165,10 @@
     --locked-shadow: #23272b;
     --choice-edge: #6b7178;
     --repeat-bg: #e8c48f;
+    /* Night shift: the signal yellow with near-black on it, and a quiet done fill. */
+    --on-yellow: #1e2226;
+    --yellow-dark: #e0a800;
+    --progress: var(--edge);
     color-scheme: dark;
   }
 }
@@ -199,6 +210,10 @@
   --locked-shadow: #23272b;
   --choice-edge: #6b7178;
   --repeat-bg: #e8c48f;
+  /* Night shift: the signal yellow with near-black on it, and a quiet done fill. */
+  --on-yellow: #1e2226;
+  --yellow-dark: #e0a800;
+  --progress: var(--edge);
   color-scheme: dark;
 }
 
@@ -206,8 +221,10 @@
   color-scheme: light;
 }
 
-/* "Haven": petrol and sun yellow on a light sea-green floor (Settings > Weergave). Only the
-   tokens that differ from Zand; every text colour 4.5:1 or more, the answer edge 3:1. */
+/* "Haven": petrol and the yellow of a buoy on a light sea-green floor (Settings > Weergave). Only
+   the tokens that differ from Zand; every text colour 4.5:1 or more, the answer edge 3:1. Its
+   own: a full buoy yellow with petrol on it (was #ffe27a with near-black), a sea-blue speaker,
+   petrol for what is done, and a thin wave on the bottom bar (below). */
 :root[data-theme='haven'] {
   --ink: #0f2e33;
   --ink-2: #3d5a61;          /* 4.5:1 on the deeper track (was #45626a) */
@@ -215,8 +232,13 @@
   --concrete: #d0e9e8;       /* a soft sea green (was #e8f0f0, nearly white) */
   --concrete-2: #b5d3d3;
   --paper: #ffffff;
-  --yellow: #ffe27a;
-  --yellow-hover: #ffe999;
+  --yellow: #ffd54f;
+  --yellow-hover: #ffde75;
+  --yellow-dark: #d9a800;
+  --on-yellow-soft: #2e5257;
+  --blue: #1d6aa0;           /* sea blue, still clearly "listen" next to the petrol buttons */
+  --blue-hover: #2277b2;
+  --progress: #2f6f78;
   --kraft: #9cc3c6;
   --kraft-light: #d6ecec;
   --kraft-dark: #0c5960;
@@ -230,7 +252,10 @@
   color-scheme: light;
 }
 
-/* "Werkjas": navy and a light signal orange on cool grey, the colours of workwear. */
+/* "Werkjas": navy and hi-vis orange on a light workwear blue, the colours of a work jacket. Its
+   own: a real hi-vis orange with navy on it (was the pale #ffbf8f), still light enough to stay
+   far from the brick red of a wrong answer; an overall-blue speaker; navy for what is done; and
+   two thin reflective stripes along the bottom of the main button (below). */
 :root[data-theme='werkjas'] {
   --ink: #14233a;
   --ink-2: #44546a;
@@ -238,8 +263,13 @@
   --concrete: #d9e4f3;       /* a light workwear blue (was #eceff3, light grey) */
   --concrete-2: #bfcee0;
   --paper: #ffffff;
-  --yellow: #ffbf8f;
-  --yellow-hover: #ffcca5;
+  --yellow: #ff9f4a;
+  --yellow-hover: #ffb06a;
+  --yellow-dark: #d9741a;
+  --on-yellow-soft: #2c3a52;
+  --blue: #1f63b8;
+  --blue-hover: #2470cc;
+  --progress: #34507a;
   --kraft: #b8c4d2;
   --kraft-light: #dfe6ee;
   --kraft-dark: #1b3354;
@@ -250,8 +280,34 @@
   --locked-shadow: #c5cfdb;
   --solid: #1b3354;
   --gold-ink: #a84300;
+  --reflect: #e8edf3;        /* the reflective stripes: silver */
   color-scheme: light;
 }
+
+/* One small mark per colour (the owner's request, 4 November 2026). Only on the frame of a
+   screen: never behind text, an exercise or an answer, nothing to tap and nothing that moves.
+   Zand has none: it is the calm default. */
+/* Haven: the top edge of the bottom bar is a thin wave, a waterline. */
+:root[data-theme='haven'] .bottom-nav { border-top-color: transparent; }
+:root[data-theme='haven'] .bottom-nav::before {
+  content: ''; position: absolute; inset: -6px 0 auto; height: 7px; pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='7' viewBox='0 0 48 7'%3E%3Cpath d='M0 4.5Q12 0.8 24 4.5T48 4.5V7H0Z' fill='%23fff'/%3E%3Cpath d='M0 4.5Q12 0.8 24 4.5T48 4.5' fill='none' stroke='%237fb0b5' stroke-width='1.5'/%3E%3C/svg%3E") 0 0 / 48px 7px repeat-x;
+}
+/* Werkjas: two thin reflective stripes along the bottom of the orange main button, under the
+   label (never behind it), as on a hi-vis jacket. */
+:root[data-theme='werkjas'] .btn-primary:not(:disabled):not([aria-disabled='true']) {
+  background-image: linear-gradient(var(--reflect), var(--reflect)), linear-gradient(var(--reflect), var(--reflect));
+  /* Inset by the corner radius, so they end on the straight part (under the end block on one
+     side; the same on both sides, so right to left needs nothing). */
+  background-repeat: no-repeat; background-size: calc(100% - 2 * var(--radius)) 2px;
+  background-position: center bottom 4px, center bottom 8px;
+}
+/* Donker: the signal yellow gives a little light at night, a soft glow around the main button
+   and the lesson to do now. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) :is(.btn-primary:not(:disabled), .bay-now .bay-card) { box-shadow: 0 0 20px -6px rgb(255 196 20 / 0.6); }
+}
+:root[data-theme='dark'] :is(.btn-primary:not(:disabled), .bay-now .bay-card) { box-shadow: 0 0 20px -6px rgb(255 196 20 / 0.6); }
 
 * { box-sizing: border-box; }
 
@@ -602,8 +658,8 @@ h2 { font-size: 1.25rem; }
 /* Generic bar (admin page). */
 .bar { flex: 1; height: 14px; background: var(--track); border-radius: 4px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--ink); border-radius: 4px; transition: width 0.4s ease; }
-/* Lesson progress: one continuous bar. The soft edge colour fills what is done ("Vloertaal
-   rustiger": the bar stays quiet), yellow with an ink outline marks where you are (the one strong
+/* Lesson progress: one continuous bar. --progress fills what is done (each colour its own, quiet
+   tone: kraft, petrol, navy, the soft edge in dark; "Vloertaal rustiger": the bar stays quiet), yellow with an ink outline marks where you are (the one strong
    spot) and a kraft tail at the end holds the mistakes that come back. The edge outline and the
    fill keep 3:1 or more against the floor (--edge). Transform-only motion (320 ms); fills from the right
    in right-to-left help languages. */
@@ -614,7 +670,7 @@ h2 { font-size: 1.25rem; }
 .lbar > span { position: absolute; inset-block: 0; }
 .lbar-tail { right: 0; background: color-mix(in srgb, var(--kraft) 70%, var(--track)); }
 .lbar-now { left: 0; background: var(--yellow); box-shadow: inset 0 0 0 1.5px var(--on-yellow); transition: transform 0.32s var(--ease-out); }
-.lbar-fill { left: 0; width: 100%; background: var(--edge); transform-origin: left center; transition: transform 0.32s var(--ease-out); }
+.lbar-fill { left: 0; width: 100%; background: var(--progress); transform-origin: left center; transition: transform 0.32s var(--ease-out); }
 /* Countable steps: a 2 px notch in the floor colour at the end of every exercise's slot, over
    the fill, so "how many left" can be seen without reading a number (still clear at ~20). */
 .lbar-ticks {
@@ -3346,10 +3402,12 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* Settings > Weergave: each colour as a round swatch of its floor and its strong colour. Fixed
    colours on purpose: a swatch shows that palette, whatever the current one is. */
 .theme-swatch { display: block; width: 40px; height: 40px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--edge); }
-.theme-swatch-light { background: linear-gradient(135deg, #eee1cc 50%, #2b2620 50%); }
-.theme-swatch-haven { background: linear-gradient(135deg, #d0e9e8 50%, #0f4c55 50%); }
-.theme-swatch-werkjas { background: linear-gradient(135deg, #d9e4f3 50%, #1b3354 50%); }
-.theme-swatch-dark { background: linear-gradient(135deg, #1b1916 50%, #ffc414 50%); }
+/* Floor, ink and the colour's own "doe dit" colour (4 November 2026): the swatch shows what makes
+   each colour its own, not only light or dark. Keep in step with the tokens on :root. */
+.theme-swatch-light { background: linear-gradient(135deg, #eee1cc 50%, #2b2620 50% 72%, #eec46a 72%); }
+.theme-swatch-haven { background: linear-gradient(135deg, #d0e9e8 50%, #0f4c55 50% 72%, #ffd54f 72%); }
+.theme-swatch-werkjas { background: linear-gradient(135deg, #d9e4f3 50%, #1b3354 50% 72%, #ff9f4a 72%); }
+.theme-swatch-dark { background: linear-gradient(135deg, #1b1916 50%, #2f2a25 50% 72%, #ffc414 72%); }
 /* The first run's colour page: Continue pinned at the bottom of the screen, always in view, over
    the full width (the screen's own side padding taken back). */
 .colour-foot { margin: 24px -16px calc(-48px - env(safe-area-inset-bottom)); }
@@ -4708,6 +4766,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   .sheet-backdrop { top: 0; left: 0; width: 100%; height: 100%; }
   .sheet-hazard, .gate-sign::before { top: 0; right: 0; left: 0; }
   .bottom-nav { right: 0; bottom: 0; left: 0; }
+  :root[data-theme='haven'] .bottom-nav::before { top: -6px; right: 0; left: 0; }
   .player-foot::before { top: -18px; right: 0; left: 0; }
   .say-mic.is-rec::before { top: -16px; left: -16px; width: calc(100% + 32px); height: calc(100% + 32px); }
   .say-ring { top: -12px; left: -12px; }

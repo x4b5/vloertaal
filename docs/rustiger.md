@@ -70,6 +70,13 @@ regels die we in de code aanhouden, en wat er al gedaan is.
   - Waar het staat en uitzonderingen staan achter een ⓘ "Meer uitleg" (`whyMore`).
   - Gedaan voor "Ziek zijn": van gemiddeld 30 naar 15 woorden in beeld. De andere onderwerpen volgen na akkoord.
 
+- **Kleuren met karakter (4 november 2026):** elke kleur uit Instellingen › Weergave heeft een eigen "doe dit"-kleur (regel 1 blijft: één kleur voor "doe dit", blauw voor "luister", groen en rood voor de uitslag).
+  - **Zand:** warm oker met bruin erop, kraft voor wat klaar is in de lesbalk. De rustigste, zonder extra teken.
+  - **Haven:** boei-geel met petrol, zeeblauwe luidsprekers, petrol in de lesbalk; een dun golfje boven de onderbalk.
+  - **Werkjas:** fel oranje met marineblauw, blauwe luidsprekers als een overall, marine in de lesbalk; twee dunne reflecterende strepen onder het woord op de hoofdknop.
+  - **Donker:** signaalgeel; een zachte gloed om de hoofdknop en de les van nu.
+  - De tekens staan alleen op de rand van een scherm: nooit achter tekst of een oefening, niets om op te tikken, niets beweegt.
+
 ## Hoe we meten
 
 - **Voor en na:** schermafbeeldingen van dezelfde schermen.
