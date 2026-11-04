@@ -61,6 +61,15 @@ export const SpeakerOffIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** A Wi-Fi sign struck through: no internet (the sound can't come now: src/components/LessonPlayer.tsx). */
+export const NoInternetIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M2.5 9.2a14 14 0 0 1 19 0M5.7 12.6a9.4 9.4 0 0 1 12.6 0M9 16a4.6 4.6 0 0 1 6 0" {...stroke} strokeWidth={2.2} />
+    <circle cx="12" cy="19.4" r="1.6" fill="currentColor" />
+    <path d="M4 3.5l16 17" {...stroke} strokeWidth={2.4} />
+  </Svg>
+);
+
 /** Snail-pace speaker: a turtle shell, for "play slowly". */
 export const SlowIcon = (p: IconProps) => (
   <Svg {...p} viewBox="0 0 32 32">

@@ -115,6 +115,7 @@ const lang: HelpLanguageSource = {
     withoutSound: 'Sessiz',
     quietHint: 'Sessiz modda derslerde dinleme sorusu olmaz ve hiçbir şey kendiliğinden çalmaz. Bir kelimeyi duymak için 🔊 simgesine dokun, örneğin kulaklıkla.',
     soundOffToast: 'Sessiz. Sesi Ayarlar’dan açabilirsin.',
+    noInternetSound: 'İnternet yok: ses şu an çalışmıyor.', // nieuw, nalezen
     stillToDo: 'Bugün yapılacaklar', // nieuw, nalezen (AI-correctie 2 nov 2026)
     streakStopped: 'Serin {n} günde durdu. Bugün yeniden başla.',
     recordN: 'Rekorun: {n} gün',

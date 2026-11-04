@@ -1,8 +1,9 @@
 name: Test
 
 # The site is hosted on statichost.eu (since 2 November 2026; before that Vercel), which builds
-# and publishes every push to main by itself (statichost.yml). This workflow only runs the tests,
-# the build and the size check, so a red change shows up on the pull request before it is merged.
+# and publishes every push to main by itself (statichost.yml: npm ci, npm test, npm run build).
+# This workflow runs the tests, the build and the size check, so a red change shows up on the
+# pull request before it is merged. The flow tests: flows.yml.
 
 on:
   push:

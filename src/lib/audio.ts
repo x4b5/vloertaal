@@ -197,13 +197,58 @@ export function recordedIndexSettled(): boolean {
   return indexSettled;
 }
 
+/** No connection at all (the phone says so: airplane mode, no data, no Wi-Fi). */
+export function isOffline(): boolean {
+  return typeof navigator !== 'undefined' && navigator.onLine === false;
+}
+
 /**
- * Is this line surely silent on this phone: no recording and no Dutch phone voice? Not while the
- * recorded-voice index has not come (yet, or offline without it): then it may well have a clip, and
- * a listening step is better kept than skipped for a whole lesson.
+ * The recorded clips (file paths as clipUrl gives them) known to be on this phone or not: the
+ * caches looked into (src/lib/lessonClips.ts, for the lesson that opens) and the clips fetched
+ * ahead. Offline only those can play (public/sw.js answers sound from its caches then).
  */
-export function surelySilent(text: string): boolean {
-  return indexArrived && !canSay(text);
+const onPhone = new Map<string, boolean>();
+
+/** Notes whether a clip's file is on this phone (src/lib/lessonClips.ts). */
+export function markOnPhone(path: string, here: boolean): void {
+  onPhone.set(path, here);
+}
+
+/** Whether a clip's file is known to be on this phone. */
+export function clipOnPhone(path: string): boolean {
+  return onPhone.get(path) === true;
+}
+
+/**
+ * Is this line surely silent on this phone, in this voice (undefined: the learner's choice)? No
+ * recording and no Dutch phone voice; or offline, a recording that is not on the phone (not saved,
+ * not played or fetched before) and no Dutch phone voice to say it instead. Not while the
+ * recorded-voice index has not come yet: then it may well have a clip, and a listening step is
+ * better kept than skipped for a whole lesson. (Offline the lesson then leaves such a step out,
+ * as it does a line nothing can say: src/components/LessonPlayer.tsx; phase 3, 4 November 2026.)
+ */
+export function surelySilent(text: string, voice?: VoiceRef): boolean {
+  if (indexArrived && !canSay(text, voice)) return true;
+  if (!isOffline() || (speechAvailable() && hasDutchVoice())) return false;
+  const path = clipUrl(text, voice);
+  // No clip to look for: silent once the index is known not to come (offline without it).
+  return path ? !clipOnPhone(path) : indexSettled;
+}
+
+/**
+ * Sound that did not play for want of a connection (offline, or a clip that did not start in
+ * time) while nothing on the phone could say it instead: src/components/LessonPlayer.tsx shows one
+ * line, "Geen internet: het geluid werkt nu niet." (phase 3, 4 November 2026).
+ */
+const noNetListeners = new Set<() => void>();
+
+export function onSoundNeedsInternet(fn: () => void): () => void {
+  noNetListeners.add(fn);
+  return () => noNetListeners.delete(fn);
+}
+
+function soundNeedsInternet(): void {
+  noNetListeners.forEach((fn) => fn());
 }
 
 /** Whether a recorded voice with this key has been loaded. */
@@ -440,7 +485,9 @@ export function speakLong(text: string, opts: LongSpeech = {}): boolean {
   if (found) {
     const { rec, id } = found;
     // A broken file: the phone reads the whole block instead (still one voice for the block).
-    playClip(clipPath(rec, id), text, slow, 'nl', VOICE_PACE[rec.voice.key] ?? 1, () => speakSentences(text, slow, deviceUriFor(ref), pace), pace);
+    playClip(clipPath(rec, id), text, slow, 'nl', VOICE_PACE[rec.voice.key] ?? 1, (noNet) => {
+      if (!speakSentences(text, slow, deviceUriFor(ref), pace) && noNet) soundNeedsInternet();
+    }, pace);
     return true;
   }
   return speakSentences(text, slow, deviceUriFor(ref), pace);
@@ -489,9 +536,10 @@ let clipGuard: ReturnType<typeof setTimeout> | undefined;
 /**
  * Plays one recorded clip; a missing or broken file lets the phone say the text instead, and so
  * does a clip that does not start within CLIP_START_MS. One that stalls while it plays ends after
- * its length (plus a little), so the line never stays "speaking".
+ * its length (plus a little), so the line never stays "speaking". `onFail` gets whether the
+ * connection is the reason (offline, or the clip did not start in time).
  */
-function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', voicePace = 1, onFail?: () => void, pace: Pace = slow ? 'slow' : 'calm'): void {
+function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', voicePace = 1, onFail?: (noNet: boolean) => void, pace: Pace = slow ? 'slow' : 'calm'): void {
   stopAll();
   const audio = new Audio(clipSrc(url));
   const rate = recordedRateFor(pace) * voicePace;
@@ -508,19 +556,21 @@ function playClip(url: string, text: string, slow: boolean, lang: 'nl' | 'en', v
     if (turn === speechTurn) clearTimeout(clipGuard);
     end();
   };
-  // A missing or broken clip: let the phone say it instead.
-  const fail = () => {
+  // A missing or broken clip: let the phone say it instead. Offline (or a clip that hangs: the
+  // line is too poor), the connection is the reason: said when the phone can't take over.
+  const fail = (stalled: boolean) => {
     if (turn !== speechTurn) return;
     clearTimeout(clipGuard);
-    if (onFail) onFail();
-    else speakDevice(text, slow, lang, undefined, pace);
+    const noNet = stalled || isOffline();
+    if (onFail) onFail(noNet);
+    else speakDevice(text, slow, lang, undefined, pace, noNet);
   };
-  audio.onerror = fail;
+  audio.onerror = () => fail(false);
   // Not started in time: this clip stops, the phone says it.
   clipGuard = setTimeout(() => {
     if (turn !== speechTurn) return;
     audio.pause();
-    fail();
+    fail(true);
   }, CLIP_START_MS);
   audio.play().then(() => {
     // It plays (play() settles when the sound starts): it ends by itself, or after its length at most.
@@ -565,10 +615,17 @@ export function sayFirstWord(): void {
   else playClip(FIRST_WORD.url, FIRST_WORD.text, false, 'nl');
 }
 
-function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: string | undefined, pace: Pace = slow ? 'slow' : 'calm'): void {
+/**
+ * The phone's own voice says it. `noNet`: it stands in for a clip that did not come for want of a
+ * connection; when the phone can't say it either (no voice for the language, or its voice needs
+ * the network too), the learner is told why it is silent (onSoundNeedsInternet).
+ */
+function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: string | undefined, pace: Pace = slow ? 'slow' : 'calm', noNet = false): void {
+  if (noNet && (!speechAvailable() || (lang === 'nl' && !hasDutchVoice()))) soundNeedsInternet();
+  // (Also without a speech engine: a clip's line that failed is no longer "being said".)
+  stopAll();
   if (!speechAvailable()) return;
   const synth = window.speechSynthesis;
-  stopAll();
   const u = new SpeechSynthesisUtterance(lang === 'en' ? text : sayAs(text));
   u.lang = lang === 'en' ? 'en-GB' : 'nl-NL';
   const voice = lang === 'en' ? undefined : dutchVoice(voiceURI);
@@ -576,8 +633,14 @@ function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: s
   u.rate = deviceRateFor(pace, rulesTrack);
   // cancel() ends the previous utterance asynchronously; only the latest one reports its end.
   const turn = ++speechTurn;
-  u.onend = u.onerror = () => {
+  u.onend = () => {
     if (turn === speechTurn) emitSpeech(text, false, slow);
+  };
+  u.onerror = (e?: { error?: string }) => {
+    if (turn !== speechTurn) return;
+    emitSpeech(text, false, slow);
+    // A phone voice that needs the network (Chrome's "Google" voices) fails offline too.
+    if ((noNet || isOffline()) && e?.error !== 'interrupted' && e?.error !== 'canceled') soundNeedsInternet();
   };
   synth.speak(u);
   emitSpeech(text, true, slow);
@@ -697,7 +760,10 @@ export function helpVoice(code: string): SpeechSynthesisVoice | null {
 export function speakHelp(text: string, code: string): void {
   const url = helpClipUrl(code, text);
   if (url) {
-    playClip(url, text, false, 'en', 1, () => speakHelpDevice(text, code), 'real');
+    playClip(url, text, false, 'en', 1, (noNet) => {
+      if (noNet && !helpVoice(code)) soundNeedsInternet();
+      speakHelpDevice(text, code);
+    }, 'real');
     return;
   }
   speakHelpDevice(text, code);
