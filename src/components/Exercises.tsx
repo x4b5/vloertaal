@@ -5,7 +5,7 @@ import { gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { checkTyped, nextTileOrder, sentenceOrders, typoMarks } from '../lib/answers';
 import { autoSpeak, sounds, speak } from '../lib/audio';
-import { allTiles, buildSteps, choicePictures, frontSteps, MATCH_ASKED, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
+import { allTiles, buildSteps, choicePictures, frontSteps, matchAsked, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
@@ -491,10 +491,10 @@ export function ListenExercise({ ex, lang, locked, onAnswer, verdict, run, misse
  * Continue appears.
  */
 export function MatchExercise({ ex, lang, onAnswer }: Props<'match'>) {
-  // Every word has a meaning card, but only the first MATCH_ASKED are asked: one card is never
+  // Every word has a meaning card, but only the first MATCH_ASKED are asked (matchAsked): one card is never
   // used, so the last word is never a forced tap on the only card left.
   const all = ex.words;
-  const words = useMemo(() => all.slice(0, Math.max(1, Math.min(MATCH_ASKED, all.length - 1))), [all]);
+  const words = useMemo(() => matchAsked(all), [all]);
   // The meaning cards keep one order through the exercise (seeded by the words, so a screenshot
   // or a resumed lesson looks the same).
   const cards = useMemo(() => shuffle(all, createRng(all.map((w) => w.id).join('|').length * 7919 + all.length)), [all]);

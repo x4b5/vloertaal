@@ -169,14 +169,78 @@ function clashes(a: Word, b: Word, pictured: boolean): boolean {
 }
 
 /** Words for one match board: no two that clash (near-synonyms, same meaning or picture), so
- *  every card has exactly one right partner. */
-function matchWords(words: readonly Word[], n: number, rng: () => number): Word[] {
+ *  every card has exactly one right partner. `rank` (a lesson's first time): lower first, as the
+ *  board asks its first words (matchAsked); equal ranks keep the shuffled order. */
+function matchWords(words: readonly Word[], n: number, rng: () => number, rank?: (w: Word) => number): Word[] {
   const picked: Word[] = [];
-  for (const w of shuffle(words, rng)) {
+  const order = shuffle(words, rng);
+  const ranked = rank ? order.map((w, i) => ({ w, i, r: rank(w) })).sort((a, b) => a.r - b.r || a.i - b.i).map((x) => x.w) : order;
+  for (const w of ranked) {
     if (picked.length >= n) break;
     if (!picked.some((p) => clashes(p, w, false))) picked.push(w);
   }
   return picked;
+}
+
+/** The words a match board asks (one at a time); its last card is never asked (MATCH_ASKED). */
+export function matchAsked(words: readonly Word[]): Word[] {
+  return words.slice(0, Math.max(1, Math.min(MATCH_ASKED, words.length - 1)));
+}
+
+/**
+ * The words a graded exercise asks, each on its own: the word of a word question, the words a
+ * match board asks. A sentence, a chat or a situation asks no word.
+ */
+export function wordsAsked(ex: Exercise): Word[] {
+  if (!isGraded(ex)) return [];
+  if (ex.kind === 'meaning' || ex.kind === 'dutch' || ex.kind === 'listen' || ex.kind === 'type') return [ex.word];
+  return ex.kind === 'match' ? matchAsked(ex.words) : [];
+}
+
+/**
+ * The word questions after the match board that a lesson's first time has, besides "what do you
+ * hear" (l1) and the word to type (t1), which are always there: the picture choice (not with "Zet
+ * het vooraan"), the second "what do you hear" (not in a shorter lesson or a later unit), and
+ * whether the lesson has words with a picture and words to type (the picture choice then asks
+ * one with a picture, and t1 one to type).
+ */
+interface LaterQuestions { picture: boolean; second: boolean; pictures: boolean; typed: boolean }
+
+/** Where a word can be asked after the match board, besides l1: [index in the slot list (see slotWords), fits]. */
+function laterSlots(has: LaterQuestions): [number, (w: Word) => boolean][] {
+  const slots: [number, (w: Word) => boolean][] = [[3, (w) => !has.typed || typable(w)]];
+  if (has.picture) slots.push([2, (w) => !has.pictures || hasPicture(w)]);
+  if (has.second) slots.push([1, () => true]);
+  return slots;
+}
+
+/** How many later places fit this word (a long word is not typed, one without a picture is not a picture choice). */
+const placesFor = (w: Word, has: LaterQuestions) => laterSlots(has).filter(([, fits]) => fits(w)).length;
+
+/**
+ * The word questions after the match board of a lesson's first time, as buildLesson takes them
+ * from the shuffled words: [what you hear (l1), the second "what you hear" (l2), the picture
+ * choice (d1), the word to type (t1), a spare]. The words no question asked yet (`asked`) go
+ * first, each to the surest place that fits it (l1, then laterSlots: t1, the picture choice,
+ * l2), the one that fits fewest places first. The other words keep their shuffled order. So
+ * every new word gets a question in its own lesson (the owner's request, 4 November 2026: one in
+ * five had none), with the same exercises as before.
+ */
+function slotWords(shuffled: readonly Word[], asked: ReadonlySet<string>, has: LaterQuestions): Word[] {
+  const fresh = shuffled.filter((w) => !asked.has(w.id));
+  if (!fresh.length) return [...shuffled];
+  const slots = laterSlots(has).filter(([at]) => at < shuffled.length);
+  // Each place takes, of the new words that fit it, the one that fits fewest places (the first of
+  // equals in the shuffled order).
+  const placed = new Map<number, Word>();
+  const take = (at: number, fits: (w: Word) => boolean) => {
+    const w = fresh.filter((x) => fits(x) && ![...placed.values()].includes(x)).reduce<Word | undefined>((a, x) => (!a || placesFor(x, has) < placesFor(a, has) ? x : a), undefined);
+    if (w) placed.set(at, w);
+  };
+  take(0, () => true);
+  for (const [at, fits] of slots) take(at, fits);
+  const rest = shuffled.filter((w) => ![...placed.values()].includes(w));
+  return shuffled.map((_, i) => placed.get(i) ?? rest.shift()!);
 }
 
 /**
@@ -1064,8 +1128,21 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     out.push({ kind: 'situation', tip, options: shuffle(tip.options, rng) });
   }
 
+  // A lesson's first time: the word questions from here on ask the words no question asked yet
+  // first (the quizzes above asked one of every two), so every new word gets one: the match board
+  // the ones that fit fewest of the later questions, then slotWords. Which later questions the
+  // lesson has needs no draw (the same lesson, the same answer).
+  const first = !opts.review && !mix;
+  const asked = () => new Set(out.flatMap((e) => wordsAsked(e).map((w) => w.id)));
+  const front = later(PROGRESSION.front) && !easy ? frontSource(lesson, opts.sector) : undefined;
+  const turned = later(PROGRESSION.reverseChat) ? reverseDialogue(lesson) : undefined;
+  const pictured = words.filter(hasPicture);
+  const laterAsks: LaterQuestions = { picture: !front, second: !easy && !turned, pictures: pictured.length > 0, typed: words.some(typable) };
+  const askedBefore = first ? asked() : undefined;
+  const rank = askedBefore ? (w: Word) => (askedBefore.has(w.id) ? Infinity : placesFor(w, laterAsks)) : undefined;
+
   // Guided matching: three cards, two Dutch words asked one at a time (components/Exercises.tsx).
-  out.push({ kind: 'match', words: matchWords(words, Math.min(MATCH_PAIRS, words.length), rng) });
+  out.push({ kind: 'match', words: matchWords(words, Math.min(MATCH_PAIRS, words.length), rng, rank) });
 
   // Today's review stays short (about a dozen items): every word once in a rotating kind of
   // question (above), one tip situation, the match board, one sentence to build and one chat. Its words already
@@ -1083,7 +1160,8 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
     return out;
   }
 
-  const shuffled = shuffle(words, rng);
+  const drawn = shuffle(words, rng);
+  const shuffled = first ? slotWords(drawn, asked(), laterAsks) : drawn;
   const [l1, l2, d1raw, t1raw, spare] = shuffled;
   // The word to type: one of at most 12 letters without capitals where the lesson has one
   // (preferably not a word already asked by ear above).
@@ -1094,14 +1172,12 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
   // second one the meaning (pick the Dutch word from picture or text cards).
   out.push({ kind: opts.quiet ? 'meaning' : 'listen', word: l1, options: options(l1, lesson, rng) });
   // The picture choice asks for a word that has a picture (text cards if the lesson has none).
-  const pictured = words.filter(hasPicture);
   const target = hasPicture(d1) || !pictured.length ? d1 : pictured[Math.floor(rng() * pictured.length)];
   // At most three answers on a screen (the "at most 3" rule).
   const picture = readableDutch(target, lesson, rng, Boolean(opts.nonLatin), Boolean(opts.quiet), false);
   // The second half of the path (PROGRESSION.front): "Zet het vooraan" takes the picture choice's
   // place, after the sentences. The picture choice is still made (the same draws), so the rest of
   // the lesson stays as it was.
-  const front = later(PROGRESSION.front) && !easy ? frontSource(lesson, opts.sector) : undefined;
   const pictureChoice = front ? undefined : picture;
   if (pictureChoice) out.push(pictureChoice);
 
@@ -1135,8 +1211,7 @@ export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: numb
 
   // Later units: the other way round, near the end (in the place of the second listening
   // question; the sentence built by ear is listening practice too): the reply is given, pick
-  // the question.
-  const turned = later(PROGRESSION.reverseChat) ? reverseDialogue(lesson) : undefined;
+  // the question (`turned`, above).
   let secondListen: Exercise | undefined;
   let turnedChat: Exercise | undefined;
   if (easy) { /* a shorter lesson: no second listening question here */ }
