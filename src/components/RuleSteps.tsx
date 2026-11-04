@@ -4,7 +4,7 @@ import type { CardRow, CardType, DrawnCard, RuleCharacter } from '../content/reg
 import { cardSpeech, payslipCard } from '../content/regels/course';
 import { askWhoCard } from '../content/regels/askWho';
 import { ruleIconId } from '../content/regels/ruleIcons';
-import { ruleAdviceLine } from '../content/regels/disclaimer';
+import { ruleAdviceLine, ruleStaleLine } from '../content/regels/disclaimer';
 import { said, ui } from '../i18n';
 import { autoSpeakLong } from '../lib/audio';
 import { sentences } from '../lib/dutch';
@@ -126,6 +126,8 @@ export function RuleCard({ ex, lang, onAnswer }: RuleProps<'rule'>) {
   useEffect(() => { onAnswer({ correct: true }); }, [step, onAnswer]);
   const body = step.body.join(' ');
   const advice = step.rule === 'geschreven' ? ruleAdviceLine(step.id) : undefined;
+  // The law check more than 90 days old: its month and where to look (src/content/lawAge.ts).
+  const stale = step.rule === 'geschreven' ? ruleStaleLine(step.id) : undefined;
   return (
     <div className="exercise rule-card">
       <div className="rule-badges">
@@ -148,6 +150,7 @@ export function RuleCard({ ex, lang, onAnswer }: RuleProps<'rule'>) {
         </div>
       </div>
       {advice && <p className="rule-advice" lang="nl"><InfoGlyph />{advice}</p>}
+      {stale && <p className="rule-advice rule-stale" lang="nl" role="note">{stale}</p>}
     </div>
   );
 }

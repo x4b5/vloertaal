@@ -422,6 +422,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'مُفعّل: لا شيء يتحرك، لا احتفال بسلسلة أيامك بعد الدرس، ولا تظهر السلسلة والكلمات في الشاشة الرئيسية.', // nieuw, nalezen
     infoMore: 'مزيد من الشرح', // nieuw, nalezen
     tipsAbout: 'عن هذه النصائح', // nieuw, nalezen
+    tipsNotChecked: 'لم يراجع خبيرٌ هذا الشرح بعد.', // nieuw, nalezen
+    lawStale: 'تاريخ هذا الشرح: {month}. أحدث القواعد موجودة لدى Juridisch Loket أو Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'تاريخ هذا الشرح: {month}. أحدث القواعد موجودة لدى justitiehuis أو على werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'قراءة المزيد عن Vloertaal', // nieuw, nalezen (AI-correctie 2 nov 2026)
     geluktAsk: { m: 'هل قلتَ هذا في العمل؟', f: 'هل قلتِ هذا في العمل؟', x: 'هل قلت هذا في العمل؟' }, // nieuw, nalezen
     geluktYes: 'نعم، نجح', // nieuw, nalezen

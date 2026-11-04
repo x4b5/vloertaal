@@ -535,6 +535,12 @@ export const uiEn = {
   /* An ⓘ that opens a side matter in place (src/components/InfoMore.tsx): its label says what is behind it. */
   infoMore: 'More explanation',
   tipsAbout: 'About these tips',
+  /* A tip about rights (src/lib/tipText.ts rightsTipNotes; fase 4, 4 November 2026): not checked by
+     an expert yet, and, once the law check is more than 90 days old (src/content/lawAge.ts), its
+     month ({month}: "October 2026") and where to find the latest rules (in Belgium: lawStaleBe). */
+  tipsNotChecked: 'An expert has not checked this explanation yet.',
+  lawStale: 'This explanation is from {month}. For the latest rules, check the Juridisch Loket or Work in NL.',
+  lawStaleBe: 'This explanation is from {month}. For the latest rules, check the justitiehuis or werk.belgie.be.',
   aboutMore: 'Read more about Vloertaal',
   /* "Gelukt?": on a later day the home asks whether that sentence was said at work (src/components/GeluktCard.tsx). */
   geluktAsk: 'Did you say this at work?',

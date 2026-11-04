@@ -1,7 +1,10 @@
 import type { CultureTip } from '../content/culture';
+import { lawCheckMonth, lawCheckStale } from '../content/lawAge';
 import { taalBeActive } from '../content/taalBe';
+import { isTaalBeId } from '../content/taalBe/ids';
+import { dateLocale } from '../content/updateDate';
 import { ABUSE_LINE, ADVICE_LINE } from '../content/work';
-import { gloss, type Bilingual } from '../i18n';
+import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 
 /**
@@ -66,4 +69,47 @@ export function splitClosing(text: Bilingual, lang?: HelpLanguage): { body: Bili
     return { body, closing };
   }
   return { body: text };
+}
+
+/**
+ * A tip about rights (fase 4, 4 November 2026): one that ends with a legal closing line, as shown
+ * (ADVICE_LINE or ABUSE_LINE; in the Belgian course their Belgian twins, BE_ADVICE_LINE and
+ * BE_ABUSE_LINE). That is 29 tips of the work units plus c.accident and c.sick, a region's tips with
+ * ADVICE_LINE (src/content/regio) and the Belgian tips with a Belgian line. A tip that ends with the
+ * house-rules line ("ask your supervisor") or with none is not one. The answer is the country whose
+ * places the line names, or null.
+ */
+export function rightsTipCountry(tip: CultureTip): 'nl' | 'be' | null {
+  const en = taalBeActive() ? beClosing(tip.body, undefined).en : tip.body;
+  if (en.endsWith(BE_ADVICE_LINE) || en.endsWith(BE_ABUSE_LINE)) return 'be';
+  if (en.endsWith(ADVICE_LINE) || en.endsWith(ABUSE_LINE)) return 'nl';
+  return null;
+}
+
+/** "October 2026" in the English line and in the help language (Dutch: "oktober 2026") of a {month} text. */
+function withMonth(text: Bilingual, lang?: HelpLanguage): Bilingual {
+  return {
+    ...text,
+    en: text.en.replace('{month}', lawCheckMonth('en-GB')),
+    help: text.help?.replace('{month}', lawCheckMonth(dateLocale(lang?.code ?? 'nl'))),
+  };
+}
+
+/**
+ * The lines with a tip about rights, in the help language:
+ *  - `notChecked`: "An expert has not checked this explanation yet." Werkregels says it in its
+ *    disclaimer (RULES_BETA) and a Belgian tip in its own BeNote; the Dutch tips said nothing.
+ *    Not for a Belgian tip (its BeNote "beta" says it already).
+ *  - `stale`, once the law check is more than 90 days old (src/content/lawAge.ts): the month of
+ *    the explanation and where to find the latest rules (the Juridisch Loket or Work in NL; in
+ *    Belgium the justitiehuis or werk.belgie.be).
+ * Nothing for any other tip.
+ */
+export function rightsTipNotes(tip: CultureTip, lang?: HelpLanguage, today: Date = new Date()): { notChecked?: Bilingual; stale?: Bilingual } {
+  const country = rightsTipCountry(tip);
+  if (!country) return {};
+  return {
+    ...(isTaalBeId(tip.id) ? {} : { notChecked: ui('tipsNotChecked', lang) }),
+    ...(lawCheckStale(today) ? { stale: withMonth(ui(country === 'be' ? 'lawStaleBe' : 'lawStale', lang), lang) } : {}),
+  };
 }

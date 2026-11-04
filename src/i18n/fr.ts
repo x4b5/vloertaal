@@ -422,6 +422,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Activé : rien ne bouge, pas de fête pour ta série après une leçon, et ta série et tes mots ne sont pas sur l’écran d’accueil.', // nieuw, nalezen
     infoMore: 'Plus d’explications', // nieuw, nalezen
     tipsAbout: 'À propos de ces conseils', // nieuw, nalezen
+    tipsNotChecked: 'Un expert n’a pas encore vérifié cette explication.', // nieuw, nalezen
+    lawStale: 'Date de cette explication : {month}. Pour les règles les plus récentes, consulte le Juridisch Loket ou Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Date de cette explication : {month}. Pour les règles les plus récentes, consulte le justitiehuis ou werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'En savoir plus sur Vloertaal', // nieuw, nalezen
     geluktAsk: 'Tu l’as dit au travail ?', // nieuw, nalezen
     geluktYes: 'Oui, ça a marché', // nieuw, nalezen

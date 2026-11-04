@@ -422,6 +422,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Включено: нищо не се движи, няма празнуване на серията след урок, а серията и думите не са на началния екран.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     infoMore: 'Повече обяснения', // nieuw, nalezen
     tipsAbout: 'За тези съвети', // nieuw, nalezen
+    tipsNotChecked: 'Експерт още не е проверил това обяснение.', // nieuw, nalezen
+    lawStale: 'Дата на това обяснение: {month}. За най-новите правила провери в Juridisch Loket или в Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Дата на това обяснение: {month}. За най-новите правила провери в justitiehuis или на werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Повече за Vloertaal', // nieuw, nalezen
     geluktAsk: 'Каза ли това на работа?', // nieuw, nalezen
     geluktYes: 'Да, получи се', // nieuw, nalezen

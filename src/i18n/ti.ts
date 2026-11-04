@@ -423,6 +423,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'ክፉት: ዝንቀሳቐስ የለን፡ ድሕሪ ትምህርቲ ናይ ተኸታታሊ መዓልትታት ጽምብል የለን፡ መዓልትታትን ቃላትን ኣብ ቀንዲ ስክሪን ኣይርአዩን።', // nieuw, nalezen
     infoMore: 'ተወሳኺ መብርሂ', // nieuw, nalezen
     tipsAbout: 'ብዛዕባ እዞም ምኽርታት', // nieuw, nalezen
+    tipsNotChecked: 'እዚ መብርሂ ገና ብክኢላ ኣይተፈተሸን።', // nieuw, nalezen
+    lawStale: 'ዕለት እዚ መብርሂ፡ {month}። ዝሓደሱ ሕግታት ኣብ Juridisch Loket ወይ Work in NL ይርከቡ።', // nieuw, nalezen
+    lawStaleBe: 'ዕለት እዚ መብርሂ፡ {month}። ዝሓደሱ ሕግታት ኣብ justitiehuis ወይ werk.belgie.be ይርከቡ።', // nieuw, nalezen
     aboutMore: 'ብዛዕባ Vloertaal ተወሳኺ', // nieuw, nalezen
     geluktAsk: { m: 'ነዚ ኣብ ስራሕ ኢልካዮ ዶ?', f: 'ነዚ ኣብ ስራሕ ኢልኪዮ ዶ?', x: 'ነዚ ኣብ ስራሕ ኢልኩምዎ ዶ?' }, // nieuw, nalezen
     geluktYes: 'እወ፡ ሰሪሑ', // nieuw, nalezen

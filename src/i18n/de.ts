@@ -422,6 +422,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'An: Nichts bewegt sich, keine Feier für deine Serie nach einer Lektion, und deine Serie und Wörter stehen nicht auf der Startseite.', // nieuw, nalezen
     infoMore: 'Mehr Erklärung', // nieuw, nalezen
     tipsAbout: 'Über diese Tipps', // nieuw, nalezen
+    tipsNotChecked: 'Eine Fachperson hat diese Erklärung noch nicht geprüft.', // nieuw, nalezen
+    lawStale: 'Stand dieser Erklärung: {month}. Die neuesten Regeln findest du beim Juridisch Loket oder bei Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Stand dieser Erklärung: {month}. Die neuesten Regeln findest du beim justitiehuis oder auf werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Mehr über Vloertaal lesen', // nieuw, nalezen
     geluktAsk: 'Hast du das bei der Arbeit gesagt?', // nieuw, nalezen
     geluktYes: 'Ja, geklappt', // nieuw, nalezen

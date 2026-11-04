@@ -422,6 +422,9 @@ const lang: HelpLanguageSource = {
     calmHint: 'Açık: hiçbir şey hareket etmez, dersten sonra serin için kutlama olmaz, serin ve kelimelerin ana ekranda görünmez.', // nieuw, nalezen
     infoMore: 'Daha fazla açıklama', // nieuw, nalezen
     tipsAbout: 'Bu ipuçları hakkında', // nieuw, nalezen
+    tipsNotChecked: 'Bu açıklama henüz bir uzman tarafından kontrol edilmedi.', // nieuw, nalezen
+    lawStale: 'Bu açıklamanın tarihi: {month}. En yeni kurallar için: Juridisch Loket veya Work in NL.', // nieuw, nalezen
+    lawStaleBe: 'Bu açıklamanın tarihi: {month}. En yeni kurallar için: justitiehuis veya werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'Vloertaal hakkında daha fazla', // nieuw, nalezen
     geluktAsk: 'Bunu işte söyledin mi?', // nieuw, nalezen
     geluktYes: 'Evet, oldu', // nieuw, nalezen
