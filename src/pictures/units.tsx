@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
-import { Box, Bubble, Bust, Clock, Ground, Halo, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Box, Bubble, Clock, Ground, Halo, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Bust } from './bust';
 
 /**
  * Pictures for the coloured unit banners on the learning path. Each sits on its unit colour,

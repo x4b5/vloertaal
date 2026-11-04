@@ -193,6 +193,15 @@ function swBuild(): Plugin {
   };
 }
 
+/**
+ * What goes in assets/vendor-*.js, a file of the start that stays the same from one deploy to the
+ * next: React (react, react-dom, scheduler) and the picture kit (src/pictures/kit.tsx, which imports
+ * no app code for this). With them in the app's own file, a phone downloaded them again after each
+ * deploy (often several a day). A test (tests/stableChunk.test.ts) and two builds in a row show the
+ * file keeps its name. The owner's request, 4 November 2026.
+ */
+export const STABLE_CHUNK = /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]|[\\/]src[\\/]pictures[\\/]kit\.tsx$/;
+
 // Relative base so the build works on GitHub Pages or any sub-path.
 export default defineConfig({
   base: './',
@@ -228,7 +237,8 @@ export default defineConfig({
           // Everything the start needs in one file (index-*.js): without this, the code shared by the
           // start and a screen loaded later (src/lazyScreens.tsx) or a help language's file would be cut
           // into many small files the start must fetch too, one more request each on a slow connection.
-          groups: [{ name: 'index', tags: ['$initial'] }],
+          // (First React and the picture kit, in their own file that does not change: STABLE_CHUNK.)
+          groups: [{ name: 'vendor', test: STABLE_CHUNK, priority: 1 }, { name: 'index', tags: ['$initial'] }],
         },
       },
     },

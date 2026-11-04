@@ -32,6 +32,7 @@ import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
 import * as kit from '../pictures/kit';
+import { Bust } from '../pictures/bust';
 import { lessonSayings } from '../content/sayings';
 import { CertEarned, CertificateScreen, CoachCardScreen } from '../components/Certificate';
 import { AllTopics, Route, TopicPage } from '../components/Route';
@@ -774,8 +775,8 @@ const KIT_SAMPLES: [string, () => React.ReactNode][] = [
   ['Clock / alarm', () => (<><kit.Ground cy={108} rx={44} /><kit.Clock cx={32} cy={70} r={24} hour={3} minute={0} /><kit.Clock cx={86} cy={62} r={22} hour={7} minute={30} bells rim={kit.PAL.red} rimShade={kit.PAL.redShade} /></>)],
   ['Calendar', () => <kit.Calendar />],
   ['Tick / Cross', () => (<><kit.Tick x={34} y={58} r={26} /><kit.Cross x={86} y={58} r={26} /></>)],
-  ['Bust bram / amina', () => (<><kit.Bust who="bram" x={34} y={116} scale={0.5} /><kit.Bust who="amina" x={88} y={116} scale={0.5} expr="pleased" flip /></>)],
-  ['Bust henk / jada', () => (<><kit.Bust who="henk" x={34} y={116} scale={0.5} /><kit.Bust who="jada" x={88} y={116} scale={0.5} expr="joy" flip /></>)],
+  ['Bust bram / amina', () => (<><Bust who="bram" x={34} y={116} scale={0.5} /><Bust who="amina" x={88} y={116} scale={0.5} expr="pleased" flip /></>)],
+  ['Bust henk / jada', () => (<><Bust who="henk" x={34} y={116} scale={0.5} /><Bust who="jada" x={88} y={116} scale={0.5} expr="joy" flip /></>)],
 ];
 
 /** Saved lesson runs for the path shots (see &resume= on the path). */

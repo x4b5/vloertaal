@@ -1,6 +1,7 @@
 import type { JSX } from 'react';
 import { CastHead } from '../components/Characters';
-import { Arrow, Bust, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 26 (keyed by id): words that were "abstract" (picture: false) but are

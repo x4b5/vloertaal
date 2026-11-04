@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
-import { Arrow, Box, Bust, Clock, Cross, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Box, Clock, Cross, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 16 (keyed by id): "Uitdrukkingen en gezegden" (src/content/sayings.ts).

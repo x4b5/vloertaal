@@ -1,7 +1,8 @@
 import type { JSX, ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import type { Emotion, Expr } from '../components/Faces';
-import { Bust, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 17 (keyed by id): "Klanken" (src/content/sounds.ts). The words come in

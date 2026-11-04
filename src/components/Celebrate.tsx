@@ -16,18 +16,6 @@ import { FlameArt } from "./StreakArt";
  * with prefers-reduced-motion the still scene is complete.
  */
 
-/** Four-pointed twinkle. */
-export const twinkle = (x: number, y: number, r: number) => {
-  const k = r * 0.18;
-  return (
-    `M${x} ${y - r}C${x + k} ${y - k} ${x + k} ${y - k} ${x + r} ${y}` +
-    `C${x + k} ${y + k} ${x + k} ${y + k} ${x} ${y + r}` +
-    `C${x - k} ${y + k} ${x - k} ${y + k} ${x - r} ${y}` +
-    `C${x - k} ${y - k} ${x - k} ${y - k} ${x} ${y - r}z`
-  );
-};
-
-
 /* ------------------------------------------------------------------------------------------
  * Full-body action rig, built from the flat primitives in Mascot.tsx: slim capsule limbs that
  * start inside a slim, straight-shouldered torso (so shoulders and hips attach cleanly), squarish

@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
-import { Arrow, Bust, Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
+import { Arrow, Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 20 (keyed by word id): the words of "In the shop" (l.checkout) and "Time,

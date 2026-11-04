@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
-import { Bubble, Bust, Clock, Cross, Dots, ExclaimMark, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Bubble, Clock, Cross, Dots, ExclaimMark, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Bust } from './bust';
 
 /** Word pictures, group 6 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
