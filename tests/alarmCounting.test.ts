@@ -11,7 +11,7 @@ import { hasPicture } from '../src/lib/wordPicture';
 
 /**
  * Two gaps in the core (the owner's plan, phase 2, 4 November 2026): numbers as words
- * ("Getallen", l.counting in u.numbers) and the fire alarm with the evacuation ("Brandalarm en
+ * ("Getallen", l.counting in u.data) and the fire alarm with the evacuation ("Brandalarm en
  * ontruimen", l.alarm in u.safety).
  */
 
@@ -24,9 +24,9 @@ const pairs: [string, string, string, string][] = [
 ];
 
 describe('Getallen (l.counting)', () => {
-  it('is the first lesson of "Rekenen: tijd, geld, maten", before the times and the money', () => {
-    expect(counting.unit.id).toBe('u.numbers');
-    expect(counting.unit.lessons.map((l) => l.id)).toEqual(['l.counting', 'l.hours', 'l.measures', 'l.numbers.mix']);
+  it('is the first lesson of "Getallen en gegevens" in Starten: needed from day 1 (4 November 2026)', () => {
+    expect(counting.unit.id).toBe('u.data');
+    expect(counting.unit.lessons[0].id).toBe('l.counting');
     expect(counting.lesson.words).toHaveLength(6);
     expect(counting.lesson.sentences).toHaveLength(3);
     expect(counting.lesson.dialogues).toHaveLength(1);
@@ -124,7 +124,7 @@ describe('Brandalarm en ontruimen (l.alarm)', () => {
     const texts = [...alarm.lesson.words.map((w) => w.nl), ...alarm.lesson.sentences.map((s) => s.nl), tip.body, tip.phrase.nl];
     expect(texts.join(' ')).not.toMatch(/BHV/);
     expect(TAAL_BE_INVENTORY['u.safety'].lessons['l.alarm']).toMatchObject({ items: 'A', tip: 'A' });
-    expect(TAAL_BE_INVENTORY['u.numbers'].lessons['l.counting']).toMatchObject({ items: 'A', tip: 'A' });
+    expect(TAAL_BE_INVENTORY['u.data'].lessons['l.counting']).toMatchObject({ items: 'A', tip: 'A' });
     const be = beTaalUnits().flatMap((u) => u.lessons);
     expect(be.find((l) => l.id === 'l.alarm')).toBe(alarm.lesson);
     expect(be.find((l) => l.id === 'l.counting')).toBe(counting.lesson);

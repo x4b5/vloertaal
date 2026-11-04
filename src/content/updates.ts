@@ -19,6 +19,11 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-04',
     items: [
+      'Eerst herhalen: staan er na "Herhaal vandaag" nog veel woorden klaar, dan is "Extra ronde" de eerste keuze. De nieuwe les staat eronder en blijft open. Zo onthoud je meer.',
+      'Na de eerste les zie je meteen de volgende les. "Wat ken je al?" en "Gelukt?" staan als een kleine regel onder de les, niet meer in plaats van de les. Je reeks en de herinnering staan samen op één scherm.',
+      'In de les: "Wat zeg je?" komt nu na het gesprekje dat het antwoord leert. De zin voor "Probeer het vandaag" zeg je eerst zelf. Een fout dictee kost één vakje, niet alles. Bij een foute keuze zie je wat je koos. En de herhaling neemt eerst de woorden die nog moeilijk zijn.',
+      'Voorlezen: bij "Wat doe je?" heeft elk antwoord en de uitleg nu een knop om het in je eigen taal te horen. In Werkregels heeft elk tekstblok een voorleesknop.',
+      'Twee nieuwe lessen: "Getallen" (13 of 30, 47 of 74, en hoe je vijfentwintig zegt), vooraan bij Starten, en "Brandalarm en ontruimen" bij Veiligheid (het alarm, de vluchtroute, de verzamelplaats).',
       'De herinnering stelt niet meer voor om in de pauze te oefenen. Een pauze is om te rusten. Je kiest voor het werk, na het werk, of een eigen tijd.',
       'Fout antwoord? Bovenaan staat nu ook in je eigen taal "Het goede antwoord is:". Eerst stond er alleen "Goed antwoord", en dat leek op goed.',
       '"Probeer het vandaag" geeft nooit meer een zin met een naam erin, zoals "ik ben Ali". Je krijgt een zin die je zelf kunt zeggen. En elk nieuw woord krijgt in zijn eigen les minstens één vraag.',

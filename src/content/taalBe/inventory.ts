@@ -56,6 +56,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.directions': L('A', 'A'),
   } },
   'u.data': { kind: 'B', lessons: {
+    'l.counting': L('A', 'A', 'getallen zijn in Vlaanderen dezelfde'),
     'l.details': L('B', 'B', 'de Belastingdienst → FOD Financiën; BSN → rijksregisternummer; payslip → loonbrief'),
     'l.dates': L('A', 'A'),
   } },
@@ -177,7 +178,6 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.checkout': L('B', 'B', 'pinnen → met je kaart betalen; bier en wijn vanaf 16, sterke drank en tabak vanaf 18'),
   } },
   'u.numbers': { kind: 'A', lessons: {
-    'l.counting': L('A', 'A', 'getallen zijn in Vlaanderen dezelfde'),
     'l.hours': L('A', 'A'),
     'l.measures': L('A', 'A'),
   } },

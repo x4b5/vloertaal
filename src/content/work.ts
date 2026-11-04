@@ -2009,7 +2009,6 @@ const countingLesson = withPairs(
 );
 
 const numbersUnit = unit('numbers', 'Time, money and measures', 'Rekenen: tijd, geld, maten', '🔢', '#6d597a', [
-  countingLesson,
   lesson(
     'hours',
     'Hours and times',
@@ -2458,6 +2457,9 @@ const toolsTips = [
 // l.kitchen) are already words of other lessons: here they come in a sentence or a chat. ----
 
 export const dataUnit = unit('data', 'Numbers and details', 'Getallen en gegevens', '📇', '#3d7f8c', [
+  // Getallen first: needed from day 1 (locations, amounts, times), so in Starten and not late in
+  // the path with Rekenen (4 November 2026).
+  countingLesson,
   lesson(
     'details',
     'Your details',
