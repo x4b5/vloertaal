@@ -458,6 +458,8 @@ const lang: HelpLanguageSource = {
     bridgeGo: 'Evet, göster', // nieuw, nalezen
     klankTitle: 'Nasıl söylenir?', // nieuw, nalezen
     klankHint: 'Bir sese dokun. Ağzın onu nasıl yaptığını gör.', // nieuw, nalezen
+    klankSpeed: 'Hız', // nieuw, nalezen
+    klankScrub: 'Kelime, ses ses', // nieuw, nalezen
     tagSound: 'Ses', // nieuw, nalezen
   },
   gloss: {

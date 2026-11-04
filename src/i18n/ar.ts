@@ -458,6 +458,8 @@ const lang: HelpLanguageSource = {
     bridgeGo: { m: 'نعم، أرني', f: 'نعم، أريني', x: 'نعم، لنرَ ذلك' }, // nieuw, nalezen
     klankTitle: 'كيف يُقال؟', // nieuw, nalezen
     klankHint: 'لكل صوت: كيف يصنعه الفم.', // nieuw, nalezen
+    klankSpeed: 'السرعة', // nieuw, nalezen
+    klankScrub: 'الكلمة، صوتًا بصوت', // nieuw, nalezen
     tagSound: 'صوت', // nieuw, nalezen
   },
   gloss: {

@@ -595,6 +595,10 @@ export const uiEn = {
      the sound cards under Hulp, and a card at the start of a Klanken lesson (its kind tag: tagSound). */
   klankTitle: 'How do you say it?',
   klankHint: 'Tap a sound. See how your mouth makes it.',
+  /** "Hoe zeg je het?": the slider for how fast the sound and the mouth go (screen-reader name). */
+  klankSpeed: 'Speed',
+  /** "Hoe zeg je het?": the slider that moves the mouth through the example word (screen-reader name). */
+  klankScrub: 'The word, sound by sound',
   tagSound: 'Sound',
 } as const;
 

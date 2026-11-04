@@ -459,6 +459,8 @@ const lang: HelpLanguageSource = {
     bridgeGo: { m: 'እወ፡ ኣርእየኒ', f: 'እወ፡ ኣርእይኒ', x: 'እወ፡ ኣርእዩኒ' }, // nieuw, nalezen
     klankTitle: 'ብኸመይ ይበሃል?', // nieuw, nalezen
     klankHint: 'ንነፍሲ ወከፍ ድምጺ፣ ኣፍ ብኸመይ ከም ዝገብሮ።', // nieuw, nalezen
+    klankSpeed: 'ፍጥነት', // nieuw, nalezen
+    klankScrub: 'ቃል፡ ድምጺ ብድምጺ', // nieuw, nalezen
     tagSound: 'ድምጺ', // nieuw, nalezen
   },
   gloss: {

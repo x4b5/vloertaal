@@ -521,6 +521,8 @@ export const uiNl: Record<UiKey, UiText> = {
   bridgeGo: 'Ja, laat zien', // nieuw, nalezen
   klankTitle: 'Hoe zeg je het?',
   klankHint: 'Tik op een klank. Zie hoe je mond hem maakt.',
+  klankSpeed: 'Snelheid',
+  klankScrub: 'Het woord, klank voor klank',
   tagSound: 'Klank',
 };
 

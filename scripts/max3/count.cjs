@@ -403,13 +403,14 @@ function defineStates(LANG) {
   }
   // "Hoe zeg je het?", a mouth per sound (src/components/KlankScreens.tsx, as under Hulp; dev page
   // src/dev/KlankShot.tsx): the overview (one row per sound, a list), each card (the sound, its
-  // word's speaker, "Langzaam"), a card after a tap on the sound, and ui on the calm screen (no motion).
+  // word's speaker, the speed slider and the word slider; "Langzaam" became the speed slider on
+  // 4 November 2026), a card after a tap on the sound, and ui on the calm screen (no motion).
   add('klank:overview', shot('klanken'), null, { list: true, expect: '.klank-list .klank-row' });
   for (const k of ['a', 'aa', 'e', 'ee', 'i', 'ie', 'o', 'oo', 'u', 'uu', 'oe', 'eu', 'ui', 'ij', 'ou']) add(`klank:${k}`, shot(`klank&k=${k}`), null, { expect: '.klank-play' });
   // The Hulp tab with its row "Hoe zeg je het?", and that row tapped (the overview).
   add('klank:hulp', shot('words'), null, { list: true, expect: '.hub-klank' });
   add('klank:hulp-tap', shot('words'), async (p) => { await tap(p, '.hub-klank'); await settle(p, 900); }, { list: true, expect: '.klank-list .klank-row' });
-  add('klank:uu-played', shot('klank&k=uu'), async (p) => { await tap(p, '.klank-play'); await settle(p, 600); }, { expect: '.klank-slow' });
+  add('klank:uu-played', shot('klank&k=uu'), async (p) => { await tap(p, '.klank-play'); await settle(p, 600); }, { expect: '.klank-speed' });
   add('klank:ui-calm', shot('klank&k=ui&calm=on'), null, { expect: '.klank-steps' });
   add('route:topic-sample', shot('topic&cu=u.firstday&state=new&access=sample'), null, { list: true });
   add('route:all-topics-tap', shot('all&state=mid'), async (p) => { await tap(p, '.topic-row', 0); await settle(p); }, { list: true });
@@ -467,7 +468,7 @@ function defineStates(LANG) {
   add('lesson:sounds-klank-aa', shot('lesson&lesson=l.shortlong&at=1'), null, { expect: '.klank-step .klank-play' });
   add('lesson:sounds-klank-uu', shot('lesson&lesson=l.roundsounds&at=0'), null, { expect: '.klank-step .klank-play' });
   add('lesson:sounds-klank-oe', shot('lesson&lesson=l.roundsounds&at=1'), null, { expect: '.klank-step .klank-play' });
-  add('lesson:sounds-klank-played', shot('lesson&lesson=l.shortlong&at=0'), async (p) => { await tap(p, '.klank-play'); await settle(p, 600); }, { expect: '.klank-step .klank-slow' });
+  add('lesson:sounds-klank-played', shot('lesson&lesson=l.shortlong&at=0'), async (p) => { await tap(p, '.klank-play'); await settle(p, 600); }, { expect: '.klank-step .klank-speed' });
   add('lesson:sounds-intro', shot('lesson&lesson=l.shortlong&at=2'));
   // Every step of the three Klanken lessons (seed 1), the sound cards included.
   for (const lesson of ['shortlong', 'roundsounds', 'pbgk']) {

@@ -437,17 +437,21 @@ function stopAll(): void {
  * "piper:<key>" for a recorded voice, "device" for the phone's voice, or a device voiceURI.
  * Recorded clips are used when one exists for this exact text; otherwise the phone speaks.
  */
-export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef): void {
+/**
+ * `speed`: a factor on top of the pace (1 as it is, 0.25 a quarter as fast). Only "Hoe zeg je
+ * het?" sets it, with its speed slider (src/components/KlankCard.tsx).
+ */
+export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef, speed = 1): void {
   const ref = voice === undefined ? preferredVoice : voice;
   const chosen = lang === 'nl' ? recordedFor(ref) : undefined;
   const found = chosen && clipFor(chosen, text);
   const pace: Pace = lang === 'nl' ? paceFor(text, slow) : slow ? 'slow' : 'calm';
   if (found) {
     const { rec, id } = found;
-    playClip(clipPath(rec, id), text, slow, lang, VOICE_PACE[rec.voice.key] ?? 1, undefined, pace);
+    playClip(clipPath(rec, id), text, slow, lang, (VOICE_PACE[rec.voice.key] ?? 1) * speed, speed === 1 ? undefined : (noNet) => speakDevice(text, slow, lang, undefined, pace, noNet, speed), pace);
     return;
   }
-  speakDevice(text, slow, lang, deviceUriFor(ref), pace);
+  speakDevice(text, slow, lang, deviceUriFor(ref), pace, false, speed);
 }
 
 /** The phone voice a reference asks for: a device voiceURI, or for "device" (female characters)
@@ -634,7 +638,7 @@ export function sayFirstWord(): void {
  * connection; when the phone can't say it either (no voice for the language, or its voice needs
  * the network too), the learner is told why it is silent (onSoundNeedsInternet).
  */
-function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: string | undefined, pace: Pace = slow ? 'slow' : 'calm', noNet = false): void {
+function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: string | undefined, pace: Pace = slow ? 'slow' : 'calm', noNet = false, speed = 1): void {
   if (noNet && (!speechAvailable() || (lang === 'nl' && !hasDutchVoice()))) soundNeedsInternet();
   // (Also without a speech engine: a clip's line that failed is no longer "being said".)
   stopAll();
@@ -644,7 +648,7 @@ function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: s
   u.lang = lang === 'en' ? 'en-GB' : 'nl-NL';
   const voice = lang === 'en' ? undefined : dutchVoice(voiceURI);
   if (voice) u.voice = voice;
-  u.rate = deviceRateFor(pace, rulesTrack);
+  u.rate = Math.max(0.1, deviceRateFor(pace, rulesTrack) * speed);
   // cancel() ends the previous utterance asynchronously; only the latest one reports its end.
   const turn = ++speechTurn;
   u.onend = () => {

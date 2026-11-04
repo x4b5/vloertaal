@@ -458,6 +458,8 @@ const lang: HelpLanguageSource = {
     bridgeGo: 'Так, покажи', // nieuw, nalezen
     klankTitle: 'Як це сказати?', // nieuw, nalezen
     klankHint: 'Торкнися звуку. Подивись, як його робить рот.', // nieuw, nalezen
+    klankSpeed: 'Швидкість', // nieuw, nalezen
+    klankScrub: 'Слово, звук за звуком', // nieuw, nalezen
     tagSound: 'Звук', // nieuw, nalezen
   },
   gloss: {

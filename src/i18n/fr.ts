@@ -458,6 +458,8 @@ const lang: HelpLanguageSource = {
     bridgeGo: 'Oui, montre-moi', // nieuw, nalezen
     klankTitle: 'Comment le dire ?', // nieuw, nalezen
     klankHint: 'Touche un son. Regarde comment la bouche le fait.', // nieuw, nalezen
+    klankSpeed: 'Vitesse', // nieuw, nalezen
+    klankScrub: 'Le mot, son par son', // nieuw, nalezen
     tagSound: 'Son', // nieuw, nalezen
   },
   gloss: {

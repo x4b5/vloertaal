@@ -42,8 +42,28 @@
 /* The letters of the sound the mouth makes now, while it says the whole word (m – uu – r). */
 .klank-now { background: var(--yellow); color: var(--on-yellow); border-radius: 6px; padding: 0 3px; margin: 0 -3px; }
 
-.klank-slow { background: var(--card); color: var(--ink); width: min(100%, 18rem); }
-.klank-slow .bi-help { --help-size: 0.75em; font-weight: 400; }
+/* The sliders (instead of "Langzaam", 4 November 2026): a wide track and a large knob for a finger.
+   Speed: the turtle at the slow end and the speed now (¼× … 1×). The word: under the mouths,
+   with the word's sounds under the track, each as wide as its share of the word. */
+.klank-slider { display: flex; align-items: center; gap: 10px; width: min(100%, 20rem); color: var(--ink-2); }
+.klank-scrub { flex-direction: column; align-items: stretch; gap: 4px; }
+.klank-slider input[type='range'] {
+  flex: 1; min-width: 0; height: 44px; margin: 0; background: none; cursor: pointer;
+  -webkit-appearance: none; appearance: none; touch-action: none;
+}
+.klank-slider input[type='range']::-webkit-slider-runnable-track { height: 10px; border-radius: 5px; background: var(--line); }
+.klank-slider input[type='range']::-moz-range-track { height: 10px; border-radius: 5px; background: var(--line); }
+.klank-slider input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 34px; height: 34px; margin-top: -12px;
+  border-radius: 50%; background: var(--blue); border: 3px solid var(--card); box-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+}
+.klank-slider input[type='range']::-moz-range-thumb {
+  width: 30px; height: 30px; border-radius: 50%; background: var(--blue); border: 3px solid var(--card); box-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+}
+.klank-slider input[type='range']:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 8px; }
+.klank-speed-now { min-width: 2.6em; font-weight: 750; font-size: 1.15rem; color: var(--ink); text-align: end; }
+.klank-scrub-parts { display: flex; padding: 0 10px; font-size: 1.15rem; font-weight: 700; color: var(--ink); }
+.klank-scrub-parts > span { flex-basis: 0; text-align: center; }
 
 /* In a lesson (LessonPlayer): a smaller mouth and less room, so the card and Continue fit a small phone. */
 .klank-compact { gap: 10px; padding: 10px 14px 14px; }

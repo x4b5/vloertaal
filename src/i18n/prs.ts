@@ -458,6 +458,8 @@ const lang: HelpLanguageSource = {
     bridgeGo: 'بلی، نشان بدهید', // nieuw, nalezen
     klankTitle: 'چطور گفته می‌شود؟', // nieuw, nalezen
     klankHint: 'یک صدا را لمس کنید. ببینید دهن چطور آن را می‌سازد.', // nieuw, nalezen
+    klankSpeed: 'سرعت', // nieuw, nalezen
+    klankScrub: 'کلمه، آواز به آواز', // nieuw, nalezen
     tagSound: 'صدا', // nieuw, nalezen
   },
   gloss: {

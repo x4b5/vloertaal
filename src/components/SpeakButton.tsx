@@ -27,7 +27,7 @@ export function PlayName({ text, help, say = 'playAudio', lang = 'nl' }: { text:
  * so on, alternating. After a normal play a small turtle sits on the button: the next tap is
  * slow. (`slow` makes a button that always plays slowly.)
  */
-export function SpeakButton({ text, size = 'md', slow = false, label, hideText = false, help, lang = 'nl', glyph = false, voice, long = false, needsDevice = false, className }: {
+export function SpeakButton({ text, size = 'md', slow = false, label, hideText = false, help, lang = 'nl', glyph = false, voice, long = false, needsDevice = false, className, speed }: {
   text: string;
   /** Plain blue speaker icon (as inside a speech bubble) instead of a filled button. */
   glyph?: boolean;
@@ -51,13 +51,18 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
    */
   needsDevice?: boolean;
   className?: string;
+  /**
+   * A speed set elsewhere ("Hoe zeg je het?": its speed slider, 1 as it is, 0.25 a quarter as fast):
+   * every tap plays at that speed, so no turtle on a second tap.
+   */
+  speed?: number;
 }) {
   // Re-checked when the phone's voices or the recorded voices arrive.
   useVoices();
   // Plays of this text (a new text starts at normal speed again).
   const [plays, setPlays] = useState({ text, n: 0 });
   const n = plays.text === text ? plays.n : 0;
-  const nextSlow = !slow && n % 2 === 1;
+  const nextSlow = !slow && speed === undefined && n % 2 === 1;
   const play = ui('playAudio', help);
   // A long text read sentence by sentence stops when its speaker goes (another screen, the next rule).
   useEffect(() => {
@@ -82,7 +87,7 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
       onClick={() => {
         if (stoppable) { stopSaying(text); return; }
         if (long && lang === 'nl') speakLong(text, { slow: slow || nextSlow, voice });
-        else speak(text, slow || nextSlow, lang, voice);
+        else speak(text, slow || nextSlow, lang, voice, speed);
         setPlays({ text, n: n + 1 });
       }}
       aria-label={label ?? (hideText ? said(play) : undefined)}

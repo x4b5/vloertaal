@@ -458,6 +458,8 @@ const lang: HelpLanguageSource = {
     bridgeGo: 'Da, arată-mi', // nieuw, nalezen
     klankTitle: 'Cum se spune?', // nieuw, nalezen
     klankHint: 'Atinge un sunet. Vezi cum îl face gura.', // nieuw, nalezen
+    klankSpeed: 'Viteză', // nieuw, nalezen
+    klankScrub: 'Cuvântul, sunet cu sunet', // nieuw, nalezen
     tagSound: 'Sunet', // nieuw, nalezen
   },
   gloss: {
