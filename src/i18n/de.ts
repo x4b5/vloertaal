@@ -458,6 +458,8 @@ const lang: HelpLanguageSource = {
     bridgeGo: 'Ja, zeig mal', // nieuw, nalezen
     klankTitle: 'Wie sagt man das?', // nieuw, nalezen
     klankHint: 'Tippe auf einen Laut. Sieh, wie der Mund ihn macht.', // nieuw, nalezen
+    klankSpeed: 'Tempo', // nieuw, nalezen
+    klankScrub: 'Das Wort, Laut für Laut', // nieuw, nalezen
     tagSound: 'Laut', // nieuw, nalezen
   },
   gloss: {

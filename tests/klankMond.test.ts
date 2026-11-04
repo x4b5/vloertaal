@@ -7,8 +7,8 @@ import { soundLessons, soundsUnit } from '../src/content/sounds';
 import { allLessons, units } from '../src/content/curriculum';
 import { isMixLesson } from '../src/content/review';
 import { TAAL_BE_INVENTORY } from '../src/content/taalBe/inventory';
-import { CLIP_TAIL_S, holdMs, mouthGeometry, nominalWordMs, poseAtTime, spokenMs, STEPS, SLOW_FACTOR, WORD_STEPS, wordPoseAtTime } from '../src/components/Mouth';
-import { KlankCard, klankText, MarkedWord, soundText } from '../src/components/KlankCard';
+import { CLIP_TAIL_S, holdMs, mouthGeometry, nominalWordMs, poseAtTime, spokenMs, STEPS, SLOW_FACTOR, WORD_STEPS, wordPoseAt, wordPoseAtTime, stretchOf } from '../src/components/Mouth';
+import { KlankCard, klankText, MarkedWord, soundText, SPEED_MIN, speedLabel } from '../src/components/KlankCard';
 import { RIDGE, sideGeometry, tonguePoints, VELUM } from '../src/components/MouthSide';
 import { KlankOverview, KlankPage } from '../src/components/KlankScreens';
 import { KlankStep } from '../src/components/KlankStep';
@@ -228,7 +228,7 @@ describe('the motion', () => {
 });
 
 describe('the card', () => {
-  it('has the letters, the mouth, the explanation, the word with picture and speaker, and "Langzaam": at most 3 taps', () => {
+  it('has the letters, the mouth, the explanation, the word with picture and speaker, and the sliders (no "Langzaam"): at most 3 taps', () => {
     const pl = getHelpLanguage('pl');
     for (const k of KLANKEN) {
       for (const compact of [false, true]) {
@@ -236,10 +236,15 @@ describe('the card', () => {
         expect(out).toContain(`>${k.letters}`);
         expect(out).toContain('class="mouth');
         expect(out).toContain(pl!.gloss[klankHowId(k.id)]!.replace(/"/g, '&quot;'));
-        // The sound (letters + mouth), the word's speaker and "Langzaam".
-        expect(out.match(/<button/g) ?? [], k.id).toHaveLength(3);
+        // The sound (letters + mouth) and the word's speaker; "Langzaam" became the speed slider
+        // (the owner's request, 4 November 2026). In Hulp also the word slider; in a lesson not
+        // (Continue is the third thing to tap there). The speaker does not count.
+        expect(out.match(/<button/g) ?? [], k.id).toHaveLength(2);
         expect(out).toContain('klank-play');
-        expect(out).toContain('klank-slow');
+        expect(out).not.toContain('klank-slow');
+        expect(out).toContain('klank-speed');
+        expect(out.includes('klank-scrub'), k.id).toBe(!compact);
+        expect(out.match(/type="range"/g) ?? []).toHaveLength(compact ? 1 : 2);
         // A diphthong shows where it starts and ends, also without motion.
         expect(out.includes('klank-steps'), k.id).toBe(k.glide === 'full');
       }
@@ -471,5 +476,44 @@ describe('the side view (what the tongue does)', () => {
     const button = out.slice(out.indexOf('klank-play'), out.indexOf('</button>'));
     expect(button).toContain('mouth-side');
     expect(button.match(/<svg/g)?.length).toBe(2);
+  });
+});
+
+describe('the sliders (speed and the word, instead of "Langzaam")', () => {
+  it('speed runs from a quarter to as it is, shown as ¼× … 1×', () => {
+    expect(SPEED_MIN).toBe(0.25);
+    expect(speedLabel(1)).toBe('1×');
+    expect(speedLabel(0.5)).toBe('½×');
+    expect(speedLabel(0.25)).toBe('¼×');
+    expect(speedLabel(0.6)).toBe('.6×');
+  });
+
+  it('a lower speed stretches the motion: at a quarter it takes four times as long', () => {
+    const k = byId.oe;
+    expect(stretchOf(1)).toBe(1);
+    expect(stretchOf(4)).toBe(4);
+    expect(stretchOf(true)).toBe(SLOW_FACTOR);
+    // The mouth reaches the sound at onset's end, four times later.
+    const reach = (f: number) => (STEPS.toRest + STEPS.rest + STEPS.onset) * f;
+    expect(poseAtTime(k, reach(4) + 1, 4).pose).toEqual(k.start);
+    expect(poseAtTime(k, reach(1) + 1, 4).pose).not.toEqual(k.start);
+    expect(nominalWordMs(wordSegments(k), 4)).toBe(nominalWordMs(wordSegments(k), false) * 4);
+  });
+
+  it('the word slider stands the mouth on each sound in turn: m at the start, uu in the middle, r at the end', () => {
+    const segs = wordSegments(byId.uu);
+    expect(wordPoseAt(segs, 0).part).toBe(0);
+    expect(wordPoseAt(segs, 0).pose.open).toBe(0);
+    expect(wordPoseAt(segs, 0.5).part).toBe(1);
+    expect(wordPoseAt(segs, 0.5).pose).toEqual(byId.uu.start);
+    expect(wordPoseAt(segs, 1).part).toBe(2);
+    expect(wordPoseAt(segs, 1.5).part).toBe(2);
+  });
+
+  it('the word slider shows the word\'s sounds under it, each as wide as its share', () => {
+    const out = html(createElement(KlankCard, { klank: byId.eu, lang: getHelpLanguage('pl') }));
+    const parts = out.slice(out.indexOf('klank-scrub-parts'));
+    for (const l of ['k', 'eu', 'e', 'n']) expect(parts).toContain(`>${l}</span>`);
+    expect(parts).toContain('flex-grow:2.6');
   });
 });

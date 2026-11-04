@@ -458,6 +458,8 @@ const lang: HelpLanguageSource = {
     bridgeGo: 'Sim, mostra-me', // nieuw, nalezen
     klankTitle: 'Como se diz?', // nieuw, nalezen
     klankHint: 'Toca num som. Vê como a boca o faz.', // nieuw, nalezen
+    klankSpeed: 'Velocidade', // nieuw, nalezen
+    klankScrub: 'A palavra, som a som', // nieuw, nalezen
     tagSound: 'Som', // nieuw, nalezen
   },
   gloss: {

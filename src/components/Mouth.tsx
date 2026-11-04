@@ -173,6 +173,13 @@ export function Mouth({ pose, size = 180, className }: { pose: MouthPose; size?:
 /** Slow ("Langzaam"): every step takes this much longer. */
 export const SLOW_FACTOR = 2;
 
+/**
+ * How much longer the motion takes: `true` is slow (SLOW_FACTOR), a number is the stretch itself
+ * (the speed slider of the card: 1 / speed, so at a quarter of the speed it takes four times as long).
+ */
+export type Stretch = boolean | number;
+export const stretchOf = (s: Stretch): number => (typeof s === 'number' ? Math.max(1, s) : s ? SLOW_FACTOR : 1);
+
 /** The steps of one play, in ms at normal speed: the mouth closes to rest, opens to the sound, holds it (and glides), and goes back. */
 export const STEPS = { toRest: 160, rest: 120, onset: 260, hold: 700, release: 260, pause: 260, back: 420 };
 
@@ -194,8 +201,8 @@ function glideAt(k: Klank, inHold: number, hold: number): number {
 }
 
 /** The pose `t` ms into a play. `holdEnd`: when the hold ends (the sound's end), in ms from the start. */
-export function poseAtTime(k: Klank, t: number, slow: boolean, holdEnd?: number): { pose: MouthPose; done: boolean } {
-  const f = slow ? SLOW_FACTOR : 1;
+export function poseAtTime(k: Klank, t: number, slow: Stretch, holdEnd?: number): { pose: MouthPose; done: boolean } {
+  const f = stretchOf(slow);
   const s = Object.fromEntries(Object.entries({ ...STEPS, hold: holdMs(k) }).map(([n, v]) => [n, v * f])) as typeof STEPS;
   const start = k.start;
   const t1 = s.toRest;
@@ -232,8 +239,8 @@ const WORD_MOVE_MS = 75;
 const WORD_MOVE_SHARE = 0.45;
 
 /** How long the word is said, in ms, when nothing reports it: the sum of its sounds. */
-export const nominalWordMs = (segs: WordSegment[], slow: boolean) =>
-  segs.reduce((n, s) => n + s.weight, 0) * WORD_UNIT_MS * (slow ? SLOW_FACTOR : 1);
+export const nominalWordMs = (segs: WordSegment[], slow: Stretch) =>
+  segs.reduce((n, s) => n + s.weight, 0) * WORD_UNIT_MS * stretchOf(slow);
 
 /** The word's spoken part of a recording, in ms as played: the clip without its silent end, at its rate. */
 export const spokenMs = (clipSeconds: number, rate: number) => Math.max(250, ((clipSeconds - CLIP_TAIL_S) / (rate || 1)) * 1000);
@@ -251,7 +258,7 @@ function segmentPose(seg: WordSegment, u: number): MouthPose {
  * from where the previous one ended, then holds it (or glides). Then to rest, a pause, and back to
  * `still` (the card's own sound). Before t = 0 (the clip still loading) the mouth stays at `still`.
  */
-export function wordPoseAtTime(segs: WordSegment[], still: MouthPose, t: number, speech: number, slow: boolean): { pose: MouthPose; done: boolean; part: number } {
+export function wordPoseAtTime(segs: WordSegment[], still: MouthPose, t: number, speech: number, slow: Stretch): { pose: MouthPose; done: boolean; part: number } {
   if (t < 0 || !segs.length) return { pose: still, done: !segs.length, part: -1 };
   const total = segs.reduce((n, s) => n + s.weight, 0);
   let at = 0;
@@ -261,14 +268,14 @@ export function wordPoseAtTime(segs: WordSegment[], still: MouthPose, t: number,
     const len = (seg.weight / total) * speech;
     if (t < at + len) {
       const inSeg = t - at;
-      const move = Math.min(WORD_MOVE_MS * (slow ? SLOW_FACTOR : 1), len * WORD_MOVE_SHARE);
+      const move = Math.min(WORD_MOVE_MS * stretchOf(slow), len * WORD_MOVE_SHARE);
       const here = segmentPose(seg, inSeg / len);
       return { pose: inSeg < move ? mixPose(prev, here, ease(inSeg / move)) : here, done: false, part: i };
     }
     prev = segmentPose(seg, 1);
     at += len;
   }
-  const f = slow ? SLOW_FACTOR : 1;
+  const f = stretchOf(slow);
   const t1 = speech + WORD_STEPS.release * f;
   const t2 = t1 + WORD_STEPS.pause * f;
   const t3 = t2 + WORD_STEPS.back * f;
@@ -276,6 +283,20 @@ export function wordPoseAtTime(segs: WordSegment[], still: MouthPose, t: number,
   if (t < t2) return { pose: REST, done: false, part: -1 };
   if (t < t3) return { pose: mixPose(REST, still, ease((t - t2) / (t3 - t2))), done: false, part: -1 };
   return { pose: still, done: true, part: -1 };
+}
+
+/** The time a word takes on the word slider (any length will do: only the shares count). */
+const SCRUB_MS = 1000;
+
+/**
+ * Where the mouth is at `u` (0–1) through the word, for the word slider: the sounds one after
+ * another by their share, the first one from its own position (no rest before or after).
+ */
+export function wordPoseAt(segs: WordSegment[], u: number): { pose: MouthPose; part: number } {
+  if (!segs.length) return { pose: REST, part: -1 };
+  const t = Math.min(1, Math.max(0, u)) * (SCRUB_MS - 1);
+  const r = wordPoseAtTime(segs, segs[0].start, t, SCRUB_MS, false);
+  return { pose: r.pose, part: Math.max(0, r.part) };
 }
 
 /** The longest the mouth waits for a word's recording to start before it says the word on its own:
@@ -296,13 +317,19 @@ export interface MouthMotion {
   playing: boolean;
   /** While the whole word is said: which of its sounds (word.parts) is said now; else -1. */
   part: number;
-  /** Plays the motion once (normal or slow): the sound on its own, or (`word`) the whole example word. */
-  play: (slow: boolean, word?: boolean) => void;
+  /** Plays the motion once (normal, slow, or stretched: Stretch): the sound on its own, or (`word`) the whole example word. */
+  play: (slow: Stretch, word?: boolean) => void;
+  /**
+   * The word slider: the mouth stands where `u` (0 the start of the word, 1 its end) is in the
+   * word, with that sound's letters lit (`part`). null: back to the card's own sound.
+   */
+  scrub: (u: number | null) => void;
 }
 
 type Run = {
   at: number;
-  slow: boolean;
+  /** How much longer every step takes (stretchOf). */
+  f: number;
   sounding: boolean;
   holdEnd?: number;
   raf: number;
@@ -338,8 +365,8 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
       // No recording reported its start in time (the phone's voice, which has no length; or a slow
       // line): say the word now, at its nominal length.
       if (w.from === undefined && t >= (cur.sounding ? WORD_WAIT_SOUNDING_MS : WORD_WAIT_MS)) w.from = t;
-      const speech = w.speech ?? nominalWordMs(segs, cur.slow);
-      const r = wordPoseAtTime(segs, stillPose(k), w.from === undefined ? -1 : t - w.from, speech, cur.slow);
+      const speech = w.speech ?? nominalWordMs(segs, cur.f);
+      const r = wordPoseAtTime(segs, stillPose(k), w.from === undefined ? -1 : t - w.from, speech, cur.f);
       setPose(r.pose);
       setPart(r.part);
       if (r.done) {
@@ -350,12 +377,12 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
       cur.raf = requestAnimationFrame(frame);
       return;
     }
-    const f = cur.slow ? SLOW_FACTOR : 1;
+    const f = cur.f;
     const planned = (STEPS.toRest + STEPS.rest + STEPS.onset + holdMs(k)) * f;
     // Still sounding at the planned end of the hold: hold on until it ends (or LONGEST_MS).
     let holdEnd = cur.holdEnd;
     if (holdEnd === undefined && cur.sounding && t >= planned && t < LONGEST_MS) holdEnd = t + 16;
-    const { pose: p, done } = poseAtTime(k, t, cur.slow, holdEnd ?? (t >= planned ? planned : undefined));
+    const { pose: p, done } = poseAtTime(k, t, cur.f, holdEnd ?? (t >= planned ? planned : undefined));
     setPose(p);
     if (done) {
       run.current = null;
@@ -364,15 +391,27 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
     }
     cur.raf = requestAnimationFrame(frame);
   }, [k, segs]);
-  const play = useCallback((slow: boolean, word = false) => {
+  const play = useCallback((slow: Stretch, word = false) => {
     if (stillMotion()) return;
     const now = performance.now();
     // The tap that starts the sound and the sound's own start event come together: one motion.
     if (run.current && now - run.current.at < 150 && Boolean(run.current.word) === word) return;
     stop();
-    run.current = { at: now, slow, sounding: false, raf: requestAnimationFrame(frame), word: word ? {} : undefined };
+    run.current = { at: now, f: stretchOf(slow), sounding: false, raf: requestAnimationFrame(frame), word: word ? {} : undefined };
     setPlaying(true);
   }, [frame, stop]);
+  const scrub = useCallback((u: number | null) => {
+    stop();
+    setPlaying(false);
+    if (u === null) {
+      setPart(-1);
+      setPose(stillPose(k));
+      return;
+    }
+    const r = wordPoseAt(segs, u);
+    setPose(r.pose);
+    setPart(r.part);
+  }, [k, segs, stop]);
   const key = follow.join('\n');
   useEffect(() => {
     const mine = new Set(key.split('\n').filter(Boolean));
@@ -389,7 +428,7 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
       cur.sounding = false;
       if (cur.word) return;
       // The hold ends now, but never before the mouth has reached the sound (and for a diphthong: its end).
-      const f = cur.slow ? SLOW_FACTOR : 1;
+      const f = cur.f;
       const reached = (STEPS.toRest + STEPS.rest + STEPS.onset) * f + (k.glide === 'full' ? STEPS.hold * 0.85 : k.short ? 120 : 200) * f;
       cur.holdEnd = Math.max(performance.now() - cur.at, reached);
     });
@@ -417,7 +456,7 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
     setPart(-1);
     setPose(stillPose(k));
   }, [k, stop]);
-  return { pose, playing, part, play };
+  return { pose, playing, part, play, scrub };
 }
 
 /** A fixed frame for screenshots and the overview: rest, the sound's position, its end, or a step of the glide (0–1). */

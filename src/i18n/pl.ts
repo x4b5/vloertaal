@@ -458,6 +458,8 @@ const lang: HelpLanguageSource = {
     bridgeGo: 'Tak, pokaż', // nieuw, nalezen
     klankTitle: 'Jak to powiedzieć?', // nieuw, nalezen
     klankHint: 'Dotknij dźwięku. Zobacz, jak robią go usta.', // nieuw, nalezen
+    klankSpeed: 'Szybkość', // nieuw, nalezen
+    klankScrub: 'Słowo, dźwięk po dźwięku', // nieuw, nalezen
     tagSound: 'Dźwięk', // nieuw, nalezen
   },
   gloss: {

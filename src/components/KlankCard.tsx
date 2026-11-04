@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { hasClip, speak } from '../lib/audio';
 import { DEVICE, voiceFor, type VoiceRef } from '../lib/voices';
 import { WordPicture } from '../pictures';
-import { klankHowId, partLetters, type Klank } from '../content/klankMond';
+import { klankHowId, partLetters, wordSegments, type Klank } from '../content/klankMond';
 import { Bi } from './Bi';
 import { SlowIcon } from './Icons';
 import { Mouth, MouthAnimation, useMouthMotion } from './Mouth';
@@ -16,13 +17,14 @@ import '../klank.css';
  * One sound of "Hoe zeg je het?" (src/content/klankMond.ts; the owner's request of 4 November
  * 2026): the letters large, the mouth that shows how to make it (from the front, and beside it
  * cut through from the side, to see the tongue: src/components/MouthSide.tsx), one short explanation, one
- * example word with its picture and speaker, and "Langzaam". In Hulp › Hoe zeg je het?
+ * example word with its picture and speaker, and the sliders (KlankCard below). In Hulp › Hoe zeg je het?
  * (src/components/KlankScreens.tsx) and at the start of a Klanken lesson (LessonPlayer, `compact`:
  * a smaller mouth, so the card and Continue fit a small phone).
  *
- * Two things to tap and one speaker (max 3): the letters and the mouth are one button (the
- * sound, with the motion), "Langzaam" the same slowly; the word's speaker plays the word, and the
- * mouth says the whole word along with it, its letters lighting up in turn (m – uu – r).
+ * At most three things to tap and one speaker: the letters and the mouth are one button (the
+ * sound, with the motion), the word slider (not in a lesson) and the speed slider; the word's
+ * speaker plays the word, and the mouth says the whole word along with it, its letters lighting
+ * up in turn (m – uu – r).
  */
 
 /** The voice of the card: Bram's (the mouth is drawn in his skin tone). */
@@ -94,21 +96,51 @@ export function GlideSteps({ klank, size = 72 }: { klank: Klank; size?: number }
   );
 }
 
+/** The speed of the sound and the mouth: from as it is (1) to a quarter (the slider's left end). Kept while the app is open, from card to card. */
+export const SPEED_MIN = 0.25;
+export const SPEED_STEP = 0.05;
+let lastSpeed = 1;
+
+/**
+ * The two sliders of the card (the owner's request, 4 November 2026, instead of "Langzaam"):
+ *  - speed: the turtle at the slow end. The next tap on the sound or the word's speaker plays at
+ *    that speed, and the mouth moves just as slowly.
+ *  - the word (not in a lesson, `compact`: there Continue is the third thing to tap): drag the
+ *    knob through the word and the mouth follows your finger, sound by sound (m – uu – r), the
+ *    letters lit. Let go and you hear the word, at the chosen speed.
+ * Both run left to right in every language (the word is Dutch, and read that way).
+ */
 export function KlankCard({ klank, lang, deviceSound = false, compact = false }: { klank: Klank; lang?: HelpLanguage; deviceSound?: boolean; compact?: boolean }) {
   useVoices();
   const voice = klankVoice();
   const sound = soundText(klank, voice, deviceSound);
   const motion = useMouthMotion(klank, [sound.text, klank.word.nl]);
-  const say = (slow: boolean) => {
-    motion.play(slow, sound.text === klank.word.nl);
-    speak(sound.text, slow, 'nl', sound.voice);
+  const [speed, setSpeedState] = useState(lastSpeed);
+  const setSpeed = (v: number) => {
+    lastSpeed = v;
+    setSpeedState(v);
+  };
+  const [at, setAt] = useState<number | null>(null);
+  const say = (text: string) => {
+    motion.play(1 / speed, text === klank.word.nl);
+    speak(text, false, 'nl', sound.voice, speed);
   };
   const rtl = lang?.dir === 'rtl';
   const how = klankText(klank, lang);
   const spoken = klank.also ? `${klank.letters}, ${klank.also}` : klank.letters;
+  const scrubTo = (v: number) => {
+    setAt(v);
+    motion.scrub(v / 100);
+  };
+  const letGo = () => {
+    if (at === null) return;
+    setAt(null);
+    motion.scrub(null);
+    say(klank.word.nl);
+  };
   return (
     <div className={`card klank-card ${compact ? 'klank-compact' : ''} ${motion.playing ? 'klank-playing' : ''}`} dir={rtl ? 'rtl' : undefined}>
-      <button type="button" className="klank-play" onClick={() => say(false)}>
+      <button type="button" className="klank-play" onClick={() => say(sound.text)}>
         <PlayName text={spoken} help={lang} />
         <KlankLetters klank={klank} />
         {/* The mouth from the front and, beside it, cut through from the side: what the tongue does. Both move together. */}
@@ -117,18 +149,46 @@ export function KlankCard({ klank, lang, deviceSound = false, compact = false }:
           <MouthSide pose={motion.pose} size={compact ? 124 : 152} />
         </span>
       </button>
+      {!compact && (
+        <label className="klank-slider klank-scrub" dir="ltr">
+          <span className="sr-only"><Bi text={ui('klankScrub', lang)} /></span>
+          <input
+            type="range" min={0} max={100} step={1} value={at ?? 0}
+            onChange={(e) => scrubTo(Number(e.currentTarget.value))}
+            onPointerUp={letGo} onKeyUp={letGo} onBlur={() => { if (at !== null) { setAt(null); motion.scrub(null); } }}
+          />
+          {/* The sounds of the word under the slider, each as wide as its share of the word. */}
+          <span className="klank-scrub-parts" aria-hidden>
+            {wordSegments(klank).map((s, i) => (
+              <span key={i} style={{ flexGrow: s.weight }} className={motion.part === i ? 'klank-now' : undefined} lang="nl">{partLetters(s.part)}</span>
+            ))}
+          </span>
+        </label>
+      )}
       <GlideSteps klank={klank} size={compact ? 56 : 72} />
       {/* The English alone (no translation yet) keeps its own direction in a right-to-left page. */}
       <p className="klank-how" dir={how.help ? undefined : 'ltr'}><Bi text={how} /></p>
       <div className="klank-word" dir="ltr">
         <WordPicture id={klank.word.id} emoji={klank.word.emoji} size={compact ? 48 : 64} />
         <span className="klank-word-nl"><MarkedWord word={klank.word.nl} klank={klank} now={motion.part} /></span>
-        <SpeakButton text={klank.word.nl} help={lang} voice={voice} />
+        <SpeakButton text={klank.word.nl} help={lang} voice={voice} speed={speed} />
       </div>
-      <button type="button" className="btn klank-slow" onClick={() => say(true)}>
-        <SlowIcon size={26} />
-        <Bi text={ui('slow', lang)} />
-      </button>
+      <label className="klank-slider klank-speed" dir="ltr">
+        <span className="sr-only"><Bi text={ui('klankSpeed', lang)} /></span>
+        <SlowIcon size={28} />
+        <input
+          type="range" min={SPEED_MIN} max={1} step={SPEED_STEP} value={speed}
+          onChange={(e) => setSpeed(Number(e.currentTarget.value))}
+        />
+        <span className="klank-speed-now" aria-hidden>{speedLabel(speed)}</span>
+      </label>
     </div>
   );
+}
+
+/** The speed as shown beside the slider: 1×, ¾×, ½×, ¼× (and 0.6× between). */
+export function speedLabel(v: number): string {
+  const named: Record<string, string> = { '1': '1×', '0.75': '¾×', '0.5': '½×', '0.25': '¼×' };
+  const key = String(Math.round(v * 100) / 100);
+  return named[key] ?? `${key.replace(/^0/, '')}×`;
 }
