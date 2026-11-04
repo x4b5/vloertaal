@@ -1,4 +1,4 @@
-import { LAW_CHECKED } from './updates';
+import { LAW_CHECKED } from './lawChecked';
 import { updateMonth } from './updateDate';
 
 /**

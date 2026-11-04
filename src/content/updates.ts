@@ -19,6 +19,8 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-04',
     items: [
+      'Sneller: na een nieuwe versie opent de app meteen van je telefoon, ook met slecht bereik. De nieuwe versie komt op de achtergrond binnen. En een nieuwe versie kost minder data.',
+      'Offline: het onderwerp waar je mee bezig bent, staat nu vanzelf op je telefoon, met geluid (niet als je data sparen aan hebt). Het geluid van een les wordt vooraf opgehaald. Is er geen internet en werkt het geluid niet, dan zegt de app dat, en slaat hij oefeningen over waarbij je moet luisteren.',
       'Rechten: is de uitleg over regels en rechten ouder dan 3 maanden, dan staat erbij van welke maand hij is en waar je de laatste regels vindt. Bij de tips over rechten staat dat een expert ze nog niet heeft nagekeken. Bij elk 0800-nummer staat nu ook de website: met een buitenlandse simkaart werkt een 0800-nummer vaak niet.',
       'Voor begeleiders: een briefje voor dag 1, per taal op een A4, met de link en een QR-code (vloertaal.nl/briefje). Op de pagina voor begeleiders staat hoe Vloertaal past naast Oefenen.nl, NedBox, een taalbuddy, een Taalhuis of een NT2-les. En de app telt nu ook, zonder naam, hoe vaak hij voor het eerst wordt geopend en hoe vaak de start lukt.',
       'Eerst herhalen: staan er na "Herhaal vandaag" nog veel woorden klaar, dan is "Extra ronde" de eerste keuze. De nieuwe les staat eronder en blijft open. Zo onthoud je meer.',
@@ -440,4 +442,4 @@ export const UPCOMING_LAW: UpcomingLaw[] = [
  * its month as "Bijgewerkt: …" (RULES_CHECKED in src/content/regels/disclaimer.ts).
  * tests/upcomingLaw.test.ts warns when it is older than 45 days.
  */
-export const LAW_CHECKED = '2026-10-31';
+export { LAW_CHECKED } from './lawChecked';
