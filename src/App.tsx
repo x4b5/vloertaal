@@ -766,7 +766,7 @@ export default function App() {
   if (view.name === 'home' && shouldAskCountry(progress)) return <CountryScreen lang={lang} onDone={setCountry} />;
   // The work-rules track, the first time it opens: "Goed om te weten" on its own page, once.
   if (view.name === 'home' && track === 'regels' && !progress.rulesNotice) {
-    return <RulesNoticeScreen country={progress.country} onDone={() => setProgress((p) => ({ ...p, rulesNotice: true }))} />;
+    return <RulesNoticeScreen country={progress.country} lang={lang} onDone={() => setProgress((p) => ({ ...p, rulesNotice: true }))} />;
   }
   // From here on there is access (a code, or the sneak preview without one).
   const acc: Access = access ?? 'preview';
