@@ -49,7 +49,7 @@ import { bridgeDue, seeBridge } from './lib/bridge';
 import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
-import { clockMinutes, count, countDayMilestones, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
+import { clockMinutes, count, countDayMilestones, countFirstOpen, countStartDone, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
 import { explainReport, testerMode } from './lib/report';
 import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpdate';
 import { clearSave } from './lib/resume';
@@ -182,6 +182,12 @@ export default function App() {
   // The work-rules course of the learner's country (src/content/rulesCourse.ts): set before
   // anything below reads the course.
   setRulesCountry(progress.country);
+  // The start, counted once per device and without anything else (src/lib/count.ts): the first
+  // open of a device that has not begun the first run. Not the coaches' page or the owner's
+  // (#begeleiders, #beheer): a coach's look is not a new learner.
+  useEffect(() => {
+    if (!coachesRequested() && !adminRequested()) countFirstOpen(!start.progress.onboarded);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   /** "Je reeks is gestopt bij N": shown once on this open, before the path. */
   const [stopped, setStopped] = useState<number | null>(start.stopped);
   // An app left open overnight (a phone that keeps it in the background): brought up to date for
@@ -751,7 +757,8 @@ export default function App() {
   if (step === 'country') return <CountryScreen lang={lang} onDone={setCountry} onBack={onbBack} />;
   // Last: "Welke kleur wil je?" (the four colours of Settings > Weergave).
   // A tap shows the colour at once (the page stays); Continue ends the first run.
-  if (step === 'colour') return <ColourScreen lang={lang} current={shownColour(progress.theme)} onPick={(theme) => setProgress((p) => ({ ...p, theme }))} onDone={() => setProgress((p) => ({ ...p, colourAsked: true }))} onBack={onbBack} />;
+  // Continue there is the end of the start: counted once per device (src/lib/count.ts countStartDone).
+  if (step === 'colour') return <ColourScreen lang={lang} current={shownColour(progress.theme)} onPick={(theme) => setProgress((p) => ({ ...p, theme }))} onDone={() => { setProgress((p) => ({ ...p, colourAsked: true })); countStartDone(); }} onBack={onbBack} />;
   // A learner from before the gender question (or who switched to a help language with gender
   // later): asked once on its own page on opening the home, without a way back.
   if (view.name === 'home' && shouldAskGender(progress)) {

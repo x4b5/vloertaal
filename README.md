@@ -81,7 +81,8 @@ Hulptalen in het spoor Taal:
     alleen inhoud in het adres (`src/lib/count.ts`): een les gestart, gestopt (in welk kwart) of
     afgerond (hoe lang ongeveer: 0–2, 2–5, 5–10 of meer dan 10 minuten); de herhaling en een
     onderwerp afgerond; de toets "Wat ken je al?" gestart en afgerond (welke versie, nooit de
-    score); het antwoord op "Gelukt?"; de dag van oefenen (1, 2, 7, 14, 28); en waar de app fout
+    score); het antwoord op "Gelukt?"; de start (de eerste keer open en de start afgerond, één keer
+    per toestel); de dag van oefenen (1, 2, 7, 14, 28); en waar de app fout
     gaat (alleen het soort fout). Er gaat **niets over de leerder** mee: geen hulptaal, geen
     sector, geen versie, geen id, geen naam. Alleen in de productieversie op vloertaal.nl;
     respecteert Do Not Track en Global Privacy Control, en is uit te zetten in Instellingen;
