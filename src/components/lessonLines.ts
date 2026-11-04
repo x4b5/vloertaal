@@ -8,6 +8,8 @@ import { learnerCharacter, learnerVoice, voiceFor, type VoiceRef } from '../lib/
 import { hasPicture } from '../lib/wordPicture';
 import { pictureCast } from '../pictures';
 import { CAST, castFor, colleaguesOf, tipCast, wordCast, type CharacterId } from './Characters';
+import { findKlank } from '../content/klankMond';
+import { klankVoice, soundText } from './KlankCard';
 
 /**
  * The Dutch lines a lesson's exercises play, each in the voice it is played with (undefined: the
@@ -67,6 +69,13 @@ export function exerciseLines(ex: Exercise, gender?: Gender): Line[] {
       return ex.tip.situation.nl ? [{ text: ex.tip.situation.nl, voice: by(tipCast(ex.tip, gender)) }] : [];
     case 'saying':
       return [{ text: ex.saying.nl, voice: by(tipCast(sayingQuestion(ex.saying), gender)) }];
+    // A sound card: the sound (where it is recorded on its own) and its example word, in Bram's voice.
+    case 'klank': {
+      const k = findKlank(ex.klank);
+      if (!k) return [];
+      const voice = klankVoice();
+      return [...new Set([soundText(k, voice).text, k.word.nl])].map((text) => ({ text, voice }));
+    }
     case 'speak': {
       const { item, turn } = ex;
       if (turn) return [{ text: turn.prompt.nl, voice: by(castFor(turn.prompt.id, colleaguesOf(gender))) }, { text: item.nl, voice: by(learnerCharacter(gender)) }];

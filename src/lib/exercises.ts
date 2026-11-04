@@ -19,6 +19,7 @@ import { typable } from './typable';
 import { regionTaalLessons } from '../content/regio';
 import { type LessonSaying, sayingForLesson, sayingQuestion } from '../content/sayings';
 import { workTryLine } from './workTry';
+import { klankenForLesson, type KlankId } from '../content/klankMond';
 
 export type Exercise =
   | { kind: 'intro'; word: Word }
@@ -61,6 +62,9 @@ export type Exercise =
    *  `work` ("Wat zeg je?" on the sentence of "Probeer het vandaag", workTurn): the same, with the
    *  moment of that card as the question. */
   | { kind: 'speak'; item: SpeakItem; turn?: Dialogue; work?: WorkTurn }
+  /** "Hoe zeg je het?": the card of one sound (src/components/KlankCard.tsx), at the start of a
+   *  Klanken lesson (klankStepsFor). Only looked at and listened to: never graded. */
+  | { kind: 'klank'; klank: KlankId }
   /** The work-rules track (src/content/regels): one step of a rules lesson (buildRuleLesson). */
   | RuleExercise;
 
@@ -137,12 +141,12 @@ export function choicePictures(answer: Word, options: readonly Word[]): boolean[
   return options.map((o) => hasPicture(answer) && hasPicture(o));
 }
 
-/** Intros, tips, sayings and speaking practice are not graded; every other exercise is. In a rules
+/** Intros, tips, sayings, sound cards and speaking practice are not graded; every other exercise is. In a rules
  *  lesson: true/false, what do you do, who do you ask, the payslip and the card are; a story, a rule card
  *  and a model sentence just go on. */
 export function isGraded(ex: Exercise): boolean {
   if (isRuleExercise(ex)) return GRADED_RULE_KINDS.includes(ex.kind);
-  return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'saying' && ex.kind !== 'speak';
+  return ex.kind !== 'intro' && ex.kind !== 'tip' && ex.kind !== 'saying' && ex.kind !== 'speak' && ex.kind !== 'klank';
 }
 
 /** A page that is only read (what a question after it builds on): a tip, a saying, and in a
@@ -1043,7 +1047,31 @@ function reverseDialogue(lesson: Lesson): Dialogue | undefined {
  * `recorded` (the lesson player passes hasClip, lib/audio.ts): is there a recording of this Dutch
  * line? Only with it, and with speaking on and sound on, a lesson gets "Wat zeg je?" (see withTurn).
  */
-export function buildLesson(lesson: Lesson, opts: { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice; sayings?: boolean; fast?: boolean; easy?: boolean; recorded?: (text: string) => boolean }): Exercise[] {
+export function buildLesson(lesson: Lesson, opts: LessonOptions): Exercise[] {
+  const list = lessonExercises(lesson, opts);
+  const sounds = klankStepsFor(lesson, opts.review);
+  return sounds.length ? [...sounds, ...list] : list;
+}
+
+type LessonOptions = { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice; sayings?: boolean; fast?: boolean; easy?: boolean; recorded?: (text: string) => boolean };
+
+/**
+ * "Hoe zeg je het?" in the Klanken lessons (the owner's request, 4 November 2026): a lesson
+ * starts with the cards of the sounds it practises (src/content/klankMond.ts KLANK_LESSONS, at
+ * most two), before its first new word. Only in the lesson's first time, as the tip's card: not
+ * in a lesson played again, a mixed review or today's review (the cards are all in Hulp › Hoe zeg
+ * je het?). Put in front of the lesson after it is built, so nothing in it changes with them, and
+ * not counted as exercises: "Wat zeg je?" (withTurn, TURN_LONG) sees the same lesson as before.
+ */
+export function klankStepsFor(lesson: Lesson, review: boolean): Exercise[] {
+  if (review || lesson.steps?.length || isMixLesson(lesson) || lesson.repeat || lesson.id === DAILY_ID) return [];
+  return klankenForLesson(lesson.id).slice(0, KLANK_STEPS_MAX).map((k) => ({ kind: 'klank', klank: k.id }));
+}
+
+/** At most this many sound cards open a lesson (the lesson and the path stay about as long). */
+export const KLANK_STEPS_MAX = 2;
+
+function lessonExercises(lesson: Lesson, opts: LessonOptions): Exercise[] {
   // The work-rules track: a lesson of steps (nothing in it needs to be heard, so "Without
   // sound" and speaking practice change nothing).
   if (lesson.steps?.length) return buildRuleLesson(lesson, { seed: opts.seed, review: opts.review });
@@ -1284,7 +1312,8 @@ export function workTurn(lesson: Lesson, recorded?: (text: string) => boolean): 
 /**
  * A lesson this long (with its "say it") is long enough: "Wat zeg je?" then takes the place of a
  * less important exercise instead of making it longer. Almost every lesson has 21 (the Klanken
- * lessons, without a tip, 19), so a lesson grows by one at most and never past 21.
+ * lessons, without a tip, 19, and their sound cards in front, which are not counted: klankStepsFor),
+ * so a lesson grows by one at most and never past 21.
  */
 export const TURN_LONG = 20;
 

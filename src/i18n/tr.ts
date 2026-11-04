@@ -456,6 +456,9 @@ const lang: HelpLanguageSource = {
     bridgeTitle: 'İş kuralları', // nieuw, nalezen
     bridgeText: 'Artık çok Hollandaca biliyorsun. İş kurallarını da öğrenmek ister misin? O zaman her şey Hollandaca olur.', // nieuw, nalezen
     bridgeGo: 'Evet, göster', // nieuw, nalezen
+    klankTitle: 'Nasıl söylenir?', // nieuw, nalezen
+    klankHint: 'Bir sese dokun. Ağzın onu nasıl yaptığını gör.', // nieuw, nalezen
+    tagSound: 'Ses', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

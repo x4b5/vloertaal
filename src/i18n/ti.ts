@@ -457,6 +457,9 @@ const lang: HelpLanguageSource = {
     bridgeTitle: 'ሕግታት ስራሕ', // nieuw, nalezen
     bridgeText: { m: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጥ ኢኻ። ሕግታት ስራሕ እውን ክትመሃር ትደሊዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።', f: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጢ ኢኺ። ሕግታት ስራሕ እውን ክትመሃሪ ትደልዪ ዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።', x: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጡ ኢኹም። ሕግታት ስራሕ እውን ክትመሃሩ ትደልዩዶ? ሽዑ ኩሉ ብሆላንድኛ እዩ።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     bridgeGo: { m: 'እወ፡ ኣርእየኒ', f: 'እወ፡ ኣርእይኒ', x: 'እወ፡ ኣርእዩኒ' }, // nieuw, nalezen
+    klankTitle: 'ብኸመይ ይበሃል?', // nieuw, nalezen
+    klankHint: 'ንነፍሲ ወከፍ ድምጺ፣ ኣፍ ብኸመይ ከም ዝገብሮ።', // nieuw, nalezen
+    tagSound: 'ድምጺ', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

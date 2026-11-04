@@ -456,6 +456,9 @@ const lang: HelpLanguageSource = {
     bridgeTitle: 'قواعد العمل', // nieuw, nalezen
     bridgeText: { m: 'أنت تعرف الآن الكثير من الهولندية. هل تريد أن تتعلم قواعد العمل أيضاً؟ عندها يكون كل شيء بالهولندية.', f: 'أنتِ تعرفين الآن الكثير من الهولندية. هل تريدين أن تتعلمي قواعد العمل أيضاً؟ عندها يكون كل شيء بالهولندية.', x: 'هناك الآن معرفة جيدة بالهولندية. ما رأيك في تعلّم قواعد العمل أيضاً؟ عندها يكون كل شيء بالهولندية.' }, // nieuw, nalezen
     bridgeGo: { m: 'نعم، أرني', f: 'نعم، أريني', x: 'نعم، لنرَ ذلك' }, // nieuw, nalezen
+    klankTitle: 'كيف يُقال؟', // nieuw, nalezen
+    klankHint: 'لكل صوت: كيف يصنعه الفم.', // nieuw, nalezen
+    tagSound: 'صوت', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

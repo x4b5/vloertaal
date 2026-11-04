@@ -93,6 +93,8 @@ export function exerciseRef(ex: Exercise): string {
       return `${ex.kind} ${ex.saying.id}`;
     case 'speak':
       return `${ex.kind} ${ex.item.id} (${ex.item.nl})`;
+    case 'klank':
+      return `${ex.kind} ${ex.klank}`;
   }
 }
 

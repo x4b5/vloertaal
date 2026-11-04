@@ -456,6 +456,9 @@ const lang: HelpLanguageSource = {
     bridgeTitle: 'Las normas del trabajo', // nieuw, nalezen
     bridgeText: 'Ya sabes mucho neerlandés. ¿Quieres aprender también las normas del trabajo? Entonces todo está en neerlandés.', // nieuw, nalezen
     bridgeGo: 'Sí, enséñame', // nieuw, nalezen
+    klankTitle: '¿Cómo se dice?', // nieuw, nalezen
+    klankHint: 'Toca un sonido. Mira cómo lo hace la boca.', // nieuw, nalezen
+    tagSound: 'Sonido', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

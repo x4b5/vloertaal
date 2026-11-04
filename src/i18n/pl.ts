@@ -456,6 +456,9 @@ const lang: HelpLanguageSource = {
     bridgeTitle: 'Zasady pracy', // nieuw, nalezen
     bridgeText: 'Znasz już dużo niderlandzkiego. Chcesz też poznać zasady pracy? Wtedy wszystko jest po niderlandzku.', // nieuw, nalezen
     bridgeGo: 'Tak, pokaż', // nieuw, nalezen
+    klankTitle: 'Jak to powiedzieć?', // nieuw, nalezen
+    klankHint: 'Dotknij dźwięku. Zobacz, jak robią go usta.', // nieuw, nalezen
+    tagSound: 'Dźwięk', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

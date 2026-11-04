@@ -591,6 +591,11 @@ export const uiEn = {
   bridgeTitle: 'The work rules',
   bridgeText: 'You know a lot of Dutch now. Do you also want to learn the work rules? Then everything is in Dutch.',
   bridgeGo: 'Yes, show me',
+  /* "Hoe zeg je het?" (the owner's request, 4 November 2026; src/components/KlankScreens.tsx, KlankCard.tsx):
+     the sound cards under Hulp, and a card at the start of a Klanken lesson (its kind tag: tagSound). */
+  klankTitle: 'How do you say it?',
+  klankHint: 'Tap a sound. See how your mouth makes it.',
+  tagSound: 'Sound',
 } as const;
 
 export type UiKey = keyof typeof uiEn;

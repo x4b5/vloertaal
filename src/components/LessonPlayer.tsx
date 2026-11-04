@@ -43,7 +43,7 @@ import { HelpSay } from './HelpSay';
 import { FlameIcon } from './StreakArt';
 import {
   BlocksIcon, BubblesIcon, BulbIcon, CheckIcon, ChevronDownIcon, ChevronIcon, CloseIcon, EarIcon, FlagIcon, KeyboardIcon, ListIcon, PairIcon,
-  PictureIcon, AskIcon, CalcIcon, NoInternetIcon, QuestionIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon,
+  PictureIcon, AskIcon, CalcIcon, NoInternetIcon, QuestionIcon, SignpostIcon, SparkleIcon, SpeakerIcon, SpeakerOffIcon, StopIcon, MouthIcon,
 } from './Icons';
 import { CardStep, cardTag, ModelLine, PayslipStep, RuleCard, RuleFeedbackBody, ruleAnnouncement, ruleVerdict, SceneCard, TrueFalse, WhatDo, WhoAsk } from './RuleSteps';
 import { MicIcon, SpeakExercise } from './Speaking';
@@ -65,6 +65,7 @@ import {
   SayingCard,
   ComesBack,
 } from './Exercises';
+import { KlankStep } from './KlankStep';
 
 export interface LessonResult {
   accuracy: number;
@@ -100,6 +101,7 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
     case 'tip':
     case 'saying':
     case 'speak':
+    case 'klank':
       return { text: '', nl: false };
     case 'situation':
       return { text: ex.tip.options.find((o) => o.best)!.en, nl: false };
@@ -164,6 +166,7 @@ const KIND_TAG: Record<Exclude<Exercise['kind'], RuleKind>, { nl: string; key: U
   saying: { nl: 'Gezegde', key: 'tagSaying', Icon: BubblesIcon },
   situation: { nl: 'Situatie', key: 'tagSituation', Icon: SignpostIcon },
   speak: { nl: 'Spreken', key: 'tagSpeak', Icon: MicIcon },
+  klank: { nl: 'Klank', key: 'tagSound', Icon: MouthIcon },
 };
 
 function KindTag({ kind, lang, nlLabel }: { kind: Exercise['kind']; lang?: HelpLanguage; nlLabel?: string }) {
@@ -945,6 +948,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'chat': body = <ChatExercise key={key} ex={ex} {...props} />; break;
     case 'tip': body = <TipCard key={key} ex={ex} {...props} />; break;
     case 'saying': body = <SayingCard key={key} ex={ex} {...props} />; break;
+    case 'klank': body = <KlankStep key={key} ex={ex} {...props} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
     // "Laat de telefoon luisteren (proef)": the Dutch course only (never Werkregels); src/lib/listen.ts.
     case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onRating={setSpeakRating} listen={!dutchUi(lang) && listenOn()} />; break;
@@ -1051,7 +1055,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const chatReason = ex.kind === 'chat' && !ex.reverse && feedback && !answer.correct ? chatWhy(ex.dialogue.reply.id) : undefined;
   const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : chatReason ? gloss(chatReason.id, chatReason.en, lang) : null;
   const whyLine = why && <WhyLine why={why} lang={lang} rtl={rtl} />;
-  const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip' || ex.kind === 'saying' || ex.kind === 'speak' || (isRuleExercise(ex) && !isGraded(ex));
+  const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip' || ex.kind === 'saying' || ex.kind === 'speak' || ex.kind === 'klank' || (isRuleExercise(ex) && !isGraded(ex));
   // One bar: ink for done, yellow for where you are, a kraft tail for mistakes that come back.
   const bar = barParts(index, checked, initial.length, queue.length);
   const doneCount = Math.round(bar.done * bar.slots);

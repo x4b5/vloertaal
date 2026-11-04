@@ -519,6 +519,9 @@ export const uiNl: Record<UiKey, UiText> = {
   bridgeTitle: 'De werkregels', // nieuw, nalezen
   bridgeText: 'Je kent nu veel Nederlands. Wil je ook de werkregels leren? Dan is alles in het Nederlands.', // nieuw, nalezen
   bridgeGo: 'Ja, laat zien', // nieuw, nalezen
+  klankTitle: 'Hoe zeg je het?',
+  klankHint: 'Tik op een klank. Zie hoe je mond hem maakt.',
+  tagSound: 'Klank',
 };
 
 const lang: HelpLanguageSource = {

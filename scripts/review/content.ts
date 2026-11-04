@@ -18,6 +18,8 @@ import { uiNl } from '../../src/i18n/nl';
 import type { Lesson, Unit } from '../../src/content/types';
 import { ADVICE_LINE, ABUSE_LINE } from '../../src/content/work';
 import { BE_ADVICE_LINE, BE_ABUSE_LINE } from '../../src/lib/tipText';
+import { KLANKEN, klankHowId } from '../../src/content/klankMond';
+import klankNl from '../../src/i18n/sounds/nl';
 
 // The region's own file, as if a learner had chosen it (the app loads it only then).
 registerRegion(zlPack);
@@ -122,6 +124,11 @@ export function idIndex(): Map<string, IdInfo> {
     add(`${s.id}.w`, { nl: '', en: s.why, waar: where('waarom'), rank: r });
   }
   for (const id of chatWhyIds) add(id, { nl: '', en: chatWhy(id.replace(/\.why$/, ''))?.en ?? '', waar: 'Taal › gesprekje, waarom dit antwoord', rank: 1 });
+  // "Hoe zeg je het?" (src/content/klankMond.ts): how the mouth makes each sound (Hulp, and the start of a Klanken lesson).
+  for (const k of KLANKEN) {
+    const nl = klankNl.gloss[klankHowId(k.id)];
+    add(klankHowId(k.id), { nl: typeof nl === 'string' ? nl : '', en: k.how, waar: `Hoe zeg je het? › ${k.also ? `${k.letters} / ${k.also}` : k.letters} › uitleg`, rank: 1 });
+  }
 
   // Screen texts.
   for (const [key, en] of Object.entries(uiEn)) {

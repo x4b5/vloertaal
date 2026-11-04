@@ -331,6 +331,14 @@ export const EarIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** A sound card ("Hoe zeg je het?"): lips, slightly open. */
+export const MouthIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M2.6 12c2.4-3.6 5.2-5.2 7.3-4.5.8.3 1.4.9 2.1.9s1.3-.6 2.1-.9c2.1-.7 4.9.9 7.3 4.5-2.4 4-5.6 5.8-9.4 5.8S5 16 2.6 12z" {...stroke} strokeWidth={2.4} />
+    <path d="M5.4 12.1c2.2.9 4.4 1.3 6.6 1.3s4.4-.4 6.6-1.3" {...stroke} strokeWidth={2.2} />
+  </Svg>
+);
+
 /** Writing: a pencil (dictation's "I can't write this yet"). */
 export const PencilIcon = (p: IconProps) => (
   <Svg {...p}>

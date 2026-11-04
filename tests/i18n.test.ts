@@ -12,6 +12,7 @@ import { THEMES } from '../src/content/themes';
 import { regionIds } from '../src/content/regio';
 import { kunGlossIds } from '../src/content/kunJeNu';
 import { beTaalIds } from '../src/content/taalBe';
+import { klankIds } from '../src/content/klankMond';
 // The region's own file (in the app loaded only for a learner of the region): its units, tips and map.
 import './regionLoaded';
 
@@ -44,6 +45,8 @@ const contentIds = [
   ...kunGlossIds(),
   // The language track in Belgium (src/content/taalBe, docs/taal-belgie.md): its units, lines, tips and shared texts.
   ...beTaalIds(),
+  // "Hoe zeg je het?" (src/content/klankMond.ts): how the mouth makes each sound.
+  ...klankIds(),
 ];
 
 describe('content and translations', () => {

@@ -401,6 +401,16 @@ function defineStates(LANG) {
     add('scene:question', shot('scene&state=question&at=0'), null, { expect: '.scene-choices' });
     add('scene:answered', shot('scene&state=question&at=0'), async (p) => { await tap(p, '.scene-choices .choice', 0); await settle(p, 600); }, { expect: '.scene-why' });
   }
+  // "Hoe zeg je het?", a mouth per sound (src/components/KlankScreens.tsx, as under Hulp; dev page
+  // src/dev/KlankShot.tsx): the overview (one row per sound, a list), each card (the sound, its
+  // word's speaker, "Langzaam"), a card after a tap on the sound, and ui on the calm screen (no motion).
+  add('klank:overview', shot('klanken'), null, { list: true, expect: '.klank-list .klank-row' });
+  for (const k of ['a', 'aa', 'e', 'ee', 'i', 'ie', 'o', 'oo', 'u', 'uu', 'oe', 'eu', 'ui', 'ij', 'ou']) add(`klank:${k}`, shot(`klank&k=${k}`), null, { expect: '.klank-play' });
+  // The Hulp tab with its row "Hoe zeg je het?", and that row tapped (the overview).
+  add('klank:hulp', shot('words'), null, { list: true, expect: '.hub-klank' });
+  add('klank:hulp-tap', shot('words'), async (p) => { await tap(p, '.hub-klank'); await settle(p, 900); }, { list: true, expect: '.klank-list .klank-row' });
+  add('klank:uu-played', shot('klank&k=uu'), async (p) => { await tap(p, '.klank-play'); await settle(p, 600); }, { expect: '.klank-slow' });
+  add('klank:ui-calm', shot('klank&k=ui&calm=on'), null, { expect: '.klank-steps' });
   add('route:topic-sample', shot('topic&cu=u.firstday&state=new&access=sample'), null, { list: true });
   add('route:all-topics-tap', shot('all&state=mid'), async (p) => { await tap(p, '.topic-row', 0); await settle(p); }, { list: true });
   // "Volgorde": the own course in the order of the path (the choice is kept on the device).
@@ -447,9 +457,22 @@ function defineStates(LANG) {
   add('lesson:saying', shot('saying'));
   add('lesson:saying-long', shot('saying&saying=l.measures'));
   add('lesson:word-card-saying', shot('intro&word=w.blad'));
-  // Klanken (src/content/sounds.ts): the picture choice and "What do you hear?" offer the word's pair.
-  add('lesson:sounds-pick', shot('lesson&lesson=l.shortlong&at=8'));
-  add('lesson:sounds-listen', shot('lesson&lesson=l.shortlong&at=10'));
+  // Klanken (src/content/sounds.ts): the picture choice and "What do you hear?" offer the word's pair
+  // (two places on since 4 November 2026: the lesson starts with its two sound cards).
+  add('lesson:sounds-pick', shot('lesson&lesson=l.shortlong&at=10'));
+  add('lesson:sounds-listen', shot('lesson&lesson=l.shortlong&at=12'));
+  // "Hoe zeg je het?" at the start of a Klanken lesson (lib/exercises.ts klankStepsFor): the cards of
+  // a and aa, of uu and oe, one after a tap on the sound, and the first word card after them.
+  add('lesson:sounds-klank-a', shot('lesson&lesson=l.shortlong&at=0'), null, { expect: '.klank-step .klank-play' });
+  add('lesson:sounds-klank-aa', shot('lesson&lesson=l.shortlong&at=1'), null, { expect: '.klank-step .klank-play' });
+  add('lesson:sounds-klank-uu', shot('lesson&lesson=l.roundsounds&at=0'), null, { expect: '.klank-step .klank-play' });
+  add('lesson:sounds-klank-oe', shot('lesson&lesson=l.roundsounds&at=1'), null, { expect: '.klank-step .klank-play' });
+  add('lesson:sounds-klank-played', shot('lesson&lesson=l.shortlong&at=0'), async (p) => { await tap(p, '.klank-play'); await settle(p, 600); }, { expect: '.klank-step .klank-slow' });
+  add('lesson:sounds-intro', shot('lesson&lesson=l.shortlong&at=2'));
+  // Every step of the three Klanken lessons (seed 1), the sound cards included.
+  for (const lesson of ['shortlong', 'roundsounds', 'pbgk']) {
+    for (let at = 0; at < 22; at++) add(`lesson:klanken-${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
+  }
   // "Een ongeluk melden" (l.accident, seed 1): a word card, the abstract word "gebeuren", the tip
   // and its situation, a sentence to build, the chat and typing "gewond".
   for (const [key, at] of [['intro', 0], ['word-abstract', 7], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {

@@ -11,7 +11,8 @@ describe('progression through the course', () => {
   it('the last quiz after the new words asks for the Dutch word from the fifth unit on', () => {
     for (const { l, at } of teaching) {
       const ex = buildLesson(l, { review: false, seed: 5 });
-      const quiz = ex.slice(0, ex.findIndex((e) => e.kind === 'tip' || e.kind === 'match')).filter((e) => e.kind !== 'intro');
+      // The sound cards that open a Klanken lesson (klankStepsFor) are no quiz.
+      const quiz = ex.slice(0, ex.findIndex((e) => e.kind === 'tip' || e.kind === 'match')).filter((e) => e.kind !== 'intro' && e.kind !== 'klank');
       const last = quiz[quiz.length - 1];
       if (at >= PROGRESSION.pickDutch) {
         expect(last.kind, l.id).toBe('dutch');
@@ -30,7 +31,7 @@ describe('progression through the course', () => {
   it('a reader of another script without sound gets "what does it mean" instead (no unheard Latin cards)', () => {
     for (const { l, at } of teaching.filter(({ at }) => at >= PROGRESSION.pickDutch)) {
       const ex = buildLesson(l, { review: false, seed: 5, quiet: true, nonLatin: true });
-      const quiz = ex.slice(0, ex.findIndex((e) => e.kind === 'tip' || e.kind === 'match')).filter((e) => e.kind !== 'intro');
+      const quiz = ex.slice(0, ex.findIndex((e) => e.kind === 'tip' || e.kind === 'match')).filter((e) => e.kind !== 'intro' && e.kind !== 'klank');
       expect(quiz.every((e) => e.kind === 'meaning'), `${l.id} ${at}`).toBe(true);
     }
   });

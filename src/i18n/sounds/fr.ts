@@ -44,6 +44,22 @@ const t: CultureTranslation = {
     'c.pbgk.q': 'Comment ça va ?',
     'c.pbgk.a': 'Bien, mais j’ai froid.',
     'c.pbgk.a.why': 'On demande comment tu vas : une réponse, et comment tu te sens.',
+    // "Hoe zeg je het?" (src/content/klankMond.ts): how the mouth makes each sound.
+    'k.uitleg.a': 'Ouvre la bouche, un peu moins que pour « aa ». La langue va vers l’arrière. Dis-le court.', // nieuw, nalezen
+    'k.uitleg.aa': 'Ouvre grand la bouche. Les lèvres sont détendues. La langue est basse et plate.', // nieuw, nalezen
+    'k.uitleg.e': 'La bouche est mi-ouverte, plus que pour « ee ». Les lèvres sont détendues. Dis-le court.', // nieuw, nalezen
+    'k.uitleg.ee': 'La bouche est mi-ouverte. Les lèvres sont étirées, comme pour sourire. Le bout de la langue touche les dents du bas.', // nieuw, nalezen
+    'k.uitleg.i': 'Comme pour « ie », mais la bouche est un peu plus ouverte et détendue. Dis-le court.', // nieuw, nalezen
+    'k.uitleg.ie': 'La bouche est presque fermée. Les lèvres sont étirées, comme pour sourire. La langue est haute et en avant.', // nieuw, nalezen
+    'k.uitleg.o': 'La bouche est ouverte. Les lèvres sont un peu rondes. La langue est en arrière. Dis-le court.', // nieuw, nalezen
+    'k.uitleg.oo': 'Les lèvres sont rondes. La bouche est mi-ouverte. À la fin, les lèvres deviennent plus petites.', // nieuw, nalezen
+    'k.uitleg.u': 'Les lèvres sont un peu rondes, pas serrées. La langue est en avant. Dis-le court.', // nieuw, nalezen
+    'k.uitleg.uu': 'Lèvres rondes et serrées, comme pour un bisou. La langue en avant, comme pour « ie ».', // nieuw, nalezen
+    'k.uitleg.oe': 'Fais des lèvres rondes et serrées, bien en avant. Il reste juste un petit trou. La langue reste au fond de la bouche.', // nieuw, nalezen
+    'k.uitleg.eu': 'La bouche est mi-ouverte. Les lèvres sont rondes, mais pas serrées. La langue en avant, comme pour « ee ».', // nieuw, nalezen
+    'k.uitleg.ui': 'Commence la bouche mi-ouverte, les lèvres rondes. Puis rends les lèvres petites, jusqu’à « uu ». Elles restent rondes.', // nieuw, nalezen
+    'k.uitleg.ij': 'Commence la bouche mi-ouverte, les lèvres étirées. Puis ferme presque la bouche, jusqu’à « ie ».', // nieuw, nalezen
+    'k.uitleg.ou': 'Commence la bouche ouverte. Puis rends les lèvres petites et rondes, jusqu’à « oe ».', // nieuw, nalezen
   },
 };
 export default t;

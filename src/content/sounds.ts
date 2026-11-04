@@ -6,7 +6,9 @@ import type { ChatLine, Dialogue, Lesson, Unit, Word } from './types';
  * difference is heard, seen and said:
  *  - "What do you hear?" and the picture choice always offer the word's partner (`pair`, see
  *    src/lib/exercises.ts options), so the learner has to hear the difference;
- *  - writing what you hear and "record and compare" (src/lib/speaking.ts) do the rest.
+ *  - writing what you hear and "record and compare" (src/lib/speaking.ts) do the rest;
+ *  - "Hoe zeg je het?": a lesson about vowels starts with the cards of its sounds, a mouth that
+ *    shows how to make each one (src/content/klankMond.ts KLANK_LESSONS; all cards are in Hulp).
  *
  * In the path after "Tijd en rooster" (Safety and the learner's own sector stay early); on All
  * topics under the theme Starten: pronunciation is basic.

@@ -114,7 +114,8 @@ describe('"Wat zeg je?" after the chat', () => {
           // row); everything else keeps its order.
           const plain = (xs: Exercise[]) => xs.filter((e) => e.kind !== 'speak');
           expect(rest.filter((e) => e.kind === 'speak')).toEqual(without.filter((e) => e.kind === 'speak'));
-          if (without.length >= TURN_LONG) {
+          // The sound cards in front of a Klanken lesson are not counted (lib/exercises.ts klankStepsFor).
+          if (without.filter((e) => e.kind !== 'klank').length >= TURN_LONG) {
             // Same length; one exercise out: the second "what do you hear", else the picture choice.
             expect(list).toHaveLength(without.length);
             const gone = without.filter((e) => !rest.some((r) => JSON.stringify(r) === JSON.stringify(e)));
@@ -132,8 +133,9 @@ describe('"Wat zeg je?" after the chat', () => {
             expect(list).toHaveLength(without.length + 1);
             expect(plain(rest)).toEqual(plain(without));
           }
-          // 21 exercises, plus the tip's second page ("Zeg het zo", only a phrase to hear) since the tip has two pages.
-          expect(list.length - list.filter((e) => e.kind === 'tip' && e.part === 'say').length).toBeLessThanOrEqual(21);
+          // 21 exercises, plus the tip's second page ("Zeg het zo", only a phrase to hear) since the tip has two pages,
+          // or (a Klanken lesson, without a tip) its sound cards in front.
+          expect(list.length - list.filter((e) => (e.kind === 'tip' && e.part === 'say') || e.kind === 'klank').length).toBeLessThanOrEqual(21);
           // Never two speaking exercises in a row.
           list.forEach((e, i) => { if (e.kind === 'speak') expect(list[i + 1]?.kind).not.toBe('speak'); });
         }

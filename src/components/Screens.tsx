@@ -57,6 +57,7 @@ import { ChoiceCards } from './Choice';
 import { phoneHelpLang } from '../lib/langGuess';
 import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
+import { KlankHubIcon } from './KlankScreens';
 import { ChromeBack, ChromeHead } from './ChromeBack';
 import { MissingLanguage } from './MissingLanguage';
 import { ScrollBox } from './ScrollBox';
@@ -388,9 +389,11 @@ export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab:
 
 /** "Hulp" tab: opens straight onto the emergency phrases; the workplace tips are below them.
  *  `after`: one more link below them (the region's Sociale kaart, src/components/SocialMap.tsx). */
-export function WordsHub({ lang, onTips, onColleague, after }: {
+export function WordsHub({ lang, onTips, onKlanken, onColleague, after }: {
   lang?: HelpLanguage;
   onTips: () => void;
+  /** "Hoe zeg je het?": every sound card (src/components/KlankScreens.tsx). */
+  onKlanken?: () => void;
   /** "Voor je collega" (src/components/ColleagueCard.tsx). */
   onColleague?: () => void;
   after?: React.ReactNode;
@@ -412,6 +415,15 @@ export function WordsHub({ lang, onTips, onColleague, after }: {
         </span>
         <ChevronIcon size={24} />
       </button>
+      {onKlanken && (
+        <button type="button" className="hub-card hub-klank" onClick={onKlanken}>
+          <span className="hub-icon" aria-hidden><KlankHubIcon /></span>
+          <span className="hub-text">
+            <NlPair nlFirst nl="Hoe zeg je het?" nlClass="hub-nl" text={ui('klankTitle', lang)} />
+          </span>
+          <ChevronIcon size={24} />
+        </button>
+      )}
       {onColleague && (
         <button type="button" className="hub-card hub-colleague" onClick={onColleague}>
           <span className="hub-icon" aria-hidden><WordPicture id="w.collega" emoji="🧑‍🤝‍🧑" size={34} /></span>
