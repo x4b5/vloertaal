@@ -1,6 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 import group25 from './group25';
-import { Bubble, Bust, Calendar, Dots, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Bubble, Calendar, Dots, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Bust } from './bust';
 
 /**
  * Pictures, group 32 (keyed by id): drawings for emoji that the app still showed as emoji

@@ -1,6 +1,7 @@
 import type { JSX } from 'react';
 import { CastHead } from '../components/Characters';
-import { Bust, Clock, Cross, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Clock, Cross, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Bust } from './bust';
 
 /** Word pictures, group 8 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 

@@ -1,7 +1,8 @@
 import type { JSX, ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import type { Emotion, Expr } from '../components/Faces';
-import { Box, Bust, Clock, ExclaimMark, Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
+import { Box, Clock, ExclaimMark, Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 19 (keyed by id): "Een ongeluk melden" (l.accident), "gevaarlijk"

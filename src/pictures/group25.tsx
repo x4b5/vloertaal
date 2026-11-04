@@ -1,5 +1,6 @@
 import { useId, type JSX } from 'react';
-import { Arrow, Bust, CurveArrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, CurveArrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 25 (keyed by id): the Entree topics at the end of the Taal track that

@@ -1,7 +1,8 @@
 import type { JSX, ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import type { Expr } from '../components/Faces';
-import { Arrow, Bubble, Bust, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Arrow, Bubble, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Bust } from './bust';
 
 /** Word pictures, group 9 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 

@@ -1,5 +1,6 @@
 import type { JSX, ReactNode } from 'react';
-import { Bust, Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
+import { Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 15 (keyed by word id): "In the shop" and "Time, money and measures"

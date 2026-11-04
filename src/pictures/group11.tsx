@@ -1,5 +1,6 @@
 import type { JSX, ReactNode } from 'react';
-import { Arrow, Bubble, Bust, Clock, CurveArrow, Dots, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Arrow, Bubble, Clock, CurveArrow, Dots, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Bust } from './bust';
 
 /** Word pictures, group 11 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 

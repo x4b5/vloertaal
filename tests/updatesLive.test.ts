@@ -20,8 +20,10 @@ describe('the logbook, loaded when needed', () => {
   });
 
   it('is imported by no file of the app other than with import() (or for its types)', () => {
-    const app = ['src/lib/notice.ts', 'src/components/Screens.tsx', 'src/components/News.tsx', 'src/content/pro.ts', 'src/lib/langPages.ts', 'src/App.tsx', 'src/main.tsx'];
-    for (const f of app) expect(readFileSync(f, 'utf8'), f).not.toMatch(/^import (?!type )[^;]*from '(\.\.\/content|\.)\/updates';/m);
+    // (src/content/regels/disclaimer.ts: its LAW_CHECKED comes from src/content/lawChecked.ts since
+    // 4 November 2026; the build also fails on such an import now, vite.config.ts.)
+    const app = ['src/lib/notice.ts', 'src/components/Screens.tsx', 'src/components/News.tsx', 'src/content/pro.ts', 'src/lib/langPages.ts', 'src/App.tsx', 'src/main.tsx', 'src/content/regels/disclaimer.ts'];
+    for (const f of app) expect(readFileSync(f, 'utf8'), f).not.toMatch(/^import (?!type )[^;]*from '(\.\.\/content|\.\.|\.)\/updates';/m);
     expect(readFileSync('src/main.tsx', 'utf8')).toContain('ensureUpdates()');
   });
 });
