@@ -52,6 +52,13 @@ const WHAT = 'Vloertaal is een gratis web-app waarmee andertaligen en laaggelett
 const WHAT_PLACE = 'Vloertaal is nadrukkelijk bedoeld als aanvulling op een taalcursus of taalcoach, niet als vervanging. Er wordt niets aan verdiend: geen reclame, geen abonnement, en er worden geen gegevens verkocht.';
 
 /**
+ * 'p.what', third paragraph: where Vloertaal fits beside what coaches already use (the owner's
+ * request, 4 November 2026). Facts only, no judgement of the others, and names without links: their
+ * addresses were not checked from here.
+ */
+export const WHAT_BESIDE = 'Vloertaal past naast wat er al is, zoals Oefenen.nl, NedBox (in Vlaanderen), een taalbuddy (bijvoorbeeld via Taal Doet Meer of Het Begint met Taal), een Taalhuis of een NT2-les. Vloertaal is een oefenmaatje voor de werkvloer: kort oefenen op de eigen telefoon, met de woorden en zinnen van het werk. Het is geen vervanging van les. Informatie over werken in Nederland in meer talen staat op Work in NL, van het ministerie van Sociale Zaken en Werkgelegenheid.';
+
+/**
  * 'p.story': the reason, written for professionals (the learner's About keeps its own plain text,
  * 'a.story'). No second "Hoi, ik ben Xavier": the lead already says it.
  */
@@ -75,7 +82,7 @@ export const proSections: ProSection[] = [
   {
     // What it is and the mission in one block, before the reason (the story).
     id: 'p.what', emoji: mission.emoji, title: 'Wat is Vloertaal?',
-    body: [WHAT, WHAT_PLACE],
+    body: [WHAT, WHAT_PLACE, WHAT_BESIDE],
   },
   {
     // The owner's reason, for professionals, signed and dated as on Over; it leads into the test version.
