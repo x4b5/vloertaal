@@ -28,6 +28,7 @@ const t: CultureTranslation = {
     'c.keeplearning.a.why': "Um Niederländisch bitten ist in Ordnung: Üben hilft.",
     'c.gear.a.why': "Gefragt wird nach dem Helm: Ja, er ist auf dem Kopf.",
     'c.danger.a.why': "Bei einem Unfall ruft man zuerst 112 an.",
+    'c.alarm.a.why': "Gefragt wird, ob alle draußen sind: Diese Antwort sagt, wer noch fehlt.", // nieuw, nalezen
     'c.accident.a.why': "Gefragt, was passiert ist: Diese Antwort sagt, was passiert ist und wie es ihm geht.",
     'c.notyet.a.why': "Wenn jemand sagt „probier es einfach“, ist die sichere Antwort: erst vormachen lassen.",
     'c.things.a.why': "Die Frage ist „wo“. Diese Antwort nennt einen Ort.",
@@ -85,6 +86,7 @@ const t: CultureTranslation = {
     'c.cleansafe.a.why': "Ein nasser Boden ist rutschig: Eine Warnung hilft.",
     'c.shelves.a.why': "Gefragt, wo: Diese Antwort nennt den Gang und hilft.",
     'c.checkout.a.why': "Gefragt, ob man mit Karte zahlen kann: ein freundliches Ja.",
+    'c.counting.a.why': "Gefragt wird, wie viele: Diese Antwort nennt die Zahl und prüft sie Ziffer für Ziffer.", // nieuw, nalezen
     'c.hours.a.why': "Gefragt nach der Uhrzeit: Diese Antwort nennt eine Uhrzeit.",
     'c.measures.a.why': "Gefragt, wie lang: Diese Antwort nennt eine Länge.",
     'c.aihelp.a.why': "Gefragt, wer es geschrieben hat: ein ehrliches Ja, das die Hilfe nennt.",

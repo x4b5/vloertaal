@@ -1031,6 +1031,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'اینجا می‌توانم با کارت پرداخت کنم؟',
     'c.checkout.a': 'بله، حتماً، می‌شود.',
     'u.numbers': 'زمان، پول و اندازه‌ها',
+    'l.counting': 'عددها', // nieuw, nalezen
+    'w.dertien': 'سیزده (13)', // nieuw, nalezen
+    'w.dertig': 'سی (30)', // nieuw, nalezen
+    'w.zeventien': 'هفده (17)', // nieuw, nalezen
+    'w.zeventig': 'هفتاد (70)', // nieuw, nalezen
+    'w.zevenenveertig': 'چهل و هفت (47)', // nieuw, nalezen
+    'w.vierenzeventig': 'هفتاد و چهار (74)', // nieuw, nalezen
+    's.counting.1': 'سیزده جعبه دارم، نه سی تا.', // nieuw, nalezen
+    's.counting.2': 'محل هفتاد و چهار خالی است.', // nieuw, nalezen
+    's.counting.3': 'می‌شود آن را رقم به رقم بگویید؟', // nieuw, nalezen
+    'c.counting.q': 'چند جعبه مانده؟', // nieuw, nalezen
+    'c.counting.a': 'هفتاد. هفت، صفر.', // nieuw, nalezen
     'l.hours': 'ساعت‌ها و زمان‌ها',
     'w.uur': 'ساعت (۶۰ دقیقه)',
     'w.minuut': 'دقیقه',
@@ -1071,6 +1083,14 @@ const t: CultureTranslation = {
     'c.checkout.o2': 'به او بفروش، چون می‌گوید ۱۹ سال دارد.',
     'c.checkout.o3': 'به او بفروش، اما فقط یک قوطی.',
     'c.checkout.w': 'بدون کارت شناسایی نمی‌توانی بدانی چند سال دارد. فروش الکل به کسی که زیر ۱۸ سال است خلاف قانون است، و فروشگاه ممکن است جریمه شود.',
+    'c.counting': 'Vijfentwintig: اول ۵، بعد ۲۰', // nieuw, nalezen
+    'c.counting.b': 'در هلندی، عددهای ۰ تا ۱۲ هر کدام کلمهٔ خودشان را دارند: nul، een، twee، drie، vier، vijf، zes، zeven، acht، negen، tien، elf، twaalf. عددهای ۱۳ تا ۱۹ با -tien تمام می‌شوند: dertien، veertien، vijftien، zestien، zeventien، achttien، negentien. دهگان‌ها با -tig تمام می‌شوند: twintig، dertig، veertig، vijftig، zestig، zeventig، tachtig، negentig. از ۲۱ تا ۹۹ اول رقم آخر را می‌گویند: ۲۵ می‌شود vijfentwintig، یعنی «پنج و بیست». پس ۴۷ می‌شود zevenenveertig و ۷۴ می‌شود vierenzeventig. Dertien و dertig تقریباً یکسان شنیده می‌شوند: به آخرش گوش بده. مطمئن نیستی؟ رقم‌ها را یکی‌یکی تکرار کن.', // nieuw, nalezen
+    'c.counting.p': 'چهار، هفت؟ یعنی چهل و هفت؟', // nieuw, nalezen
+    'c.counting.s': 'سرپرستت می‌گوید: «Ga naar gang zevenenveertig.» کدام راهرو است؟', // nieuw, nalezen
+    'c.counting.o1': 'راهروی ۴۷.', // nieuw, nalezen
+    'c.counting.o2': 'راهروی ۷۴.', // nieuw, nalezen
+    'c.counting.o3': 'راهروی ۴۰.', // nieuw, nalezen
+    'c.counting.w': '«Zevenenveertig» یعنی «هفت و چهل»: اول ۷، بعد ۴۰. پس راهروی ۴۷ است. خیلی از تازه‌واردها ۷۴ می‌شنوند و به راهروی اشتباه می‌روند.', // nieuw, nalezen
     'c.hours': '«Half acht» یعنی ۷:۳۰',
     'c.hours.b': 'در هلندی، «half» تا ساعت بعدی حساب می‌شود: half acht یعنی ۷:۳۰، نه ۸:۳۰. Kwart over acht یعنی ۸:۱۵، و kwart voor acht یعنی ۷:۴۵. ساعت‌های کارت را خودت حساب کن: ساعت پایان منهای ساعت شروع، منهای استراحت. برای استراحت اغلب پولی پرداخت نمی‌شود. ساعت‌های کارت را هر روز یادداشت کن.',
     'c.hours.p': '«Half acht»؟ یعنی نیم ساعت قبل از هشت؟',

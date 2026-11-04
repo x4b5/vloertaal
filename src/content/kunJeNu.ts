@@ -136,6 +136,8 @@ export const KUN_TAAL: KunOnderwerp[] = [
   onderwerp('u.numbers', 'Rekenen: tijd, geld, maten', [
     ['Ik kan tijden als "kwart over vier" verstaan.', 'A1', 'luisteren', 'I can understand times like "kwart over vier".'],
     ['Ik kan zeggen hoeveel iets kost of weegt.', 'A1', 'spreken', 'I can say how much something costs or weighs.'],
+    // l.counting "Getallen" (4 November 2026): the listening pairs 13/30, 17/70, 47/74.
+    ['Ik kan getallen als 13 en 30 uit elkaar houden.', 'A1', 'luisteren', 'I can tell numbers like 13 and 30 apart.'],
   ]),
   onderwerp('u.shop', 'In de winkel', [
     ['Ik kan vragen of een klant wil pinnen.', 'A2', 'gesprekken', 'I can ask a customer if they want to pay by card.'],

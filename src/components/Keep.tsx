@@ -498,12 +498,15 @@ function KeepTitle({ nl, text, lang }: { nl: string; text: ReturnType<typeof ui>
  *  times: 07:00 / 12:00 / "Kies zelf" with the phone's time field (a time adds it);
  *  install (only when the phone can): [Add to home screen] [Later];
  *  added: "Open the file to add it" and Continue (when there is no install page).
+ * `head`: on the question page in Bram's place (after the first lesson: the first day's streak,
+ * src/components/Milestone.tsx, so the milestone and the question are one screen).
  */
-export function KeepFlow({ lang, onDone, start }: {
+export function KeepFlow({ lang, onDone, start, head }: {
   lang?: HelpLanguage;
   onDone: () => void;
   /** Start on a later page, with a time already added (tests, screenshots); default: the question. */
   start?: { step: KeepStep; added?: string };
+  head?: React.ReactNode;
 }) {
   const way = useInstallWay();
   const [step, setStep] = useState<KeepStep>(start?.step ?? 'ask');
@@ -526,7 +529,7 @@ export function KeepFlow({ lang, onDone, start }: {
   if (step === 'ask') {
     body = (
       <>
-        {hero('wave')}
+        {head ?? hero('wave')}
         <KeepTitle nl="Herinner mij elke dag" text={ui('remindAsk', lang)} lang={lang} />
         <p className="keep3-hint"><Bi text={ui('remindHint', lang)} /></p>
         <div className="keep3-actions">
@@ -634,7 +637,7 @@ export function KeepFlow({ lang, onDone, start }: {
     );
   }
   return (
-    <div className="player milestone-screen keep-screen keep3" ref={root}>
+    <div className={`player milestone-screen keep-screen keep3 ${head ? 'keep3-with-head' : ''}`} ref={root}>
       <div className={`player-body milestone keep3-page keep3-step-${step}`}>{body}</div>
     </div>
   );

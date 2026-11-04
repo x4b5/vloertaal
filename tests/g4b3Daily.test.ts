@@ -75,13 +75,26 @@ describe('Herhaal vandaag rotates sentences and chats', () => {
     const allSentences = done.reduce((a, l) => a + l.sentences.length, 0);
     const allChats = done.reduce((a, l) => a + (l.dialogues?.length ?? 0), 0);
     // Before: only the first sentence of each lesson (37 of 111).
-    expect(sentencesBy42.size / allSentences).toBeGreaterThan(0.6);
+    // Half of today's words are the weak ones since 4 November 2026 (lib/spaced.ts dailyWordIds):
+    // their lessons give the sentences and the chat more often, so in the first 6 weeks fewer
+    // other lessons do (47% of the sentences instead of 64%; after 12 weeks 81% as before, and
+    // 84% of the chats instead of 89%). Each limit is a little under the new number.
+    // Before: only the first sentence of each lesson (37 of 111). 4 November 2026: with l.alarm in
+    // Safety (6 words, 3 sentences and a chat more in the first 16 units) 74 of 135 by 6 weeks
+    // (without it 84 of 132), but 122 of 135 by 12 weeks (without it 108 of 132): more words
+    // share the daily places, so the first weeks spread over more lessons. With another pattern
+    // of mistakes (one in four wrong) 6 weeks bring 58.5% with it and 59.1% without.
+    expect(sentencesBy42.size / allSentences).toBeGreaterThan(0.45);
+    // Both together (weak words first and l.alarm): 76% of the sentences by 12 weeks. Weak words
+    // take half the places, so the sentences of the lessons that went well come back later.
+    expect(sentences.size / allSentences).toBeGreaterThan(0.72);
     // After 6 weeks more than half of the chats came back (a weak lesson keeps the chat to itself:
     // with "Klanken" in the first 16 units 58%), after 12 weeks nearly all.
     expect(chatsBy42.size / allChats).toBeGreaterThan(0.55);
     // One chat a day: more lessons in the first 16 units means more chats to share the 84 days
-    // (30 October 2026: with "Getallen en gegevens" and l.permit, 44 chats, 39 of them back).
-    expect(chats.size / allChats).toBeGreaterThan(0.85);
+    // (30 October 2026: with "Getallen en gegevens" and l.permit, 44 chats, 39 of them back; since
+    // 4 November 2026, with the weak words first, 37).
+    expect(chats.size / allChats).toBeGreaterThan(0.8);
     // Second and third sentences of lessons come back too.
     const later = done.flatMap((l) => l.sentences.slice(1)).filter((s) => sentencesBy42.has(s.id));
     expect(later.length).toBeGreaterThan(30);

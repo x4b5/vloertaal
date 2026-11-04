@@ -77,6 +77,9 @@ export interface LessonResult {
   made?: string[];
   /** Words typed "almost" right (a typo, the article): they stay in their box (lib/spaced.ts applyReview). */
   almost?: string[];
+  /** Words wrong only in writing (a dictation written wrong, every other question on them right):
+   *  from box 3 on they go one box down, not back to box 1 (lib/spaced.ts wrongCard). */
+  written?: string[];
 }
 
 function solution(ex: Exercise): { text: string; nl: boolean } {
@@ -297,6 +300,24 @@ function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
 type PlayerProps = Parameters<typeof LessonRun>[0];
 
 /**
+ * The why on the feedback label (a situation; a chat after a wrong pick): the help language large,
+ * the English small. It is the longest help-language text after the answer (about rights and
+ * manners), so it can be heard in the help language too, as the situation above it (HelpSay; the
+ * UX evaluation, 4 November 2026): hidden when there is no recording and no phone voice for it.
+ */
+export function WhyLine({ why, lang, rtl }: { why: Bilingual; lang?: HelpLanguage; rtl: boolean }) {
+  return (
+    <div className="help-say-row feedback-why-row">
+      <div className="feedback-meaning feedback-why">
+        <span className={`bi-en ${why.help && why.lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
+        {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
+      </div>
+      <HelpSay text={why.help} lang={lang} />
+    </div>
+  );
+}
+
+/**
  * The lesson. "Start again" for a lesson stopped halfway is on the home (it clears the saved
  * place before the lesson opens); the pause sheet is always Keep going / sound / Stop.
  */
@@ -449,6 +470,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const made = useRef(new Set<string>());
   /** Words typed almost right (LessonResult.almost). */
   const almostIds = useRef(new Set<string>());
+  /** Words written wrong in a dictation, and words wrong in any other question (LessonResult.written). */
+  const writtenWrong = useRef(new Set<string>());
+  const otherWrong = useRef(new Set<string>());
   /** "Without sound" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
@@ -692,13 +716,17 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       if (answer.correct && !answer.almost && ex.kind === 'type' && !typeAsPick(ex, lang)) made.current.add(ex.word.id);
       if (answer.correct && answer.almost && ex.kind === 'type') almostIds.current.add(ex.word.id);
       if (answer.correct && ex.kind === 'build') made.current.add(ex.sentence.id);
+      // Wrong in a dictation the learner wrote (not one picked from three), or wrong in another way.
+      if (!answer.correct && (ex.kind === 'meaning' || ex.kind === 'dutch' || ex.kind === 'listen' || ex.kind === 'type')) {
+        (ex.kind === 'type' && !typeAsPick(ex, lang) ? writtenWrong : otherWrong).current.add(ex.word.id);
+      }
       // A match or a sentence that counts as a mistake: the words the wrong taps were on go back
       // to the first box of the review cards too (one stray tap is forgiven, as in the grading).
       if (!answer.correct && answer.missed?.length) {
         const ids = ex.kind === 'match' ? answer.missed
           : ex.kind === 'build' ? wordsInSentence(answer.missed, lesson.words).map((w) => w.id)
           : [];
-        for (const id of ids) wordResults.current[id] = false;
+        for (const id of ids) { wordResults.current[id] = false; otherWrong.current.add(id); }
       }
     }
     // A finished match board already gave its feedback tile by tile. Two or more wrong taps make
@@ -770,7 +798,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     sounds.done();
     // Without a way to make an answer (another script without writing, no sound), no `made`.
     const canMake = !soundOff && !pickInsteadOfTyping(lang);
-    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current, ...(canMake ? { made: [...made.current] } : {}), ...(almostIds.current.size ? { almost: [...almostIds.current] } : {}) });
+    // (A lesson resumed from a save has lost which words those were: the old rule for them, box 1.)
+    const written = [...writtenWrong.current].filter((id) => !otherWrong.current.has(id));
+    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current, ...(canMake ? { made: [...made.current] } : {}), ...(almostIds.current.size ? { almost: [...almostIds.current] } : {}), ...(written.length ? { written } : {}) });
   }
 
   function reset() {
@@ -792,7 +822,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   function next(queued?: number) {
     const coming = typeof queued === 'number' ? queued : 0;
     // A sentence said ("Zeg het", never graded): it gets a spoken-sentence card (lib/spaced.ts).
-    // ("Wat zeg je?" is a reply of a chat, not a sentence of the lesson: no card.)
+    // So does the sentence of "Probeer het vandaag" said at the end (`work`). ("Wat zeg je?" after
+    // a chat is a reply of that chat, not a sentence of the lesson: no card.)
     if (ex?.kind === 'speak' && index < initial.length && !isWord(ex.item) && !ex.turn) {
       wordResults.current[speakCardId(ex.item.id)] = true;
       made.current.add(speakCardId(ex.item.id));
@@ -981,12 +1012,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // A chat after a wrong pick: one short line on why the right reply fits.
   const chatReason = ex.kind === 'chat' && !ex.reverse && feedback && !answer.correct ? chatWhy(ex.dialogue.reply.id) : undefined;
   const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : chatReason ? gloss(chatReason.id, chatReason.en, lang) : null;
-  const whyLine = why && (
-    <div className="feedback-meaning feedback-why">
-      <span className={`bi-en ${why.help && why.lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
-      {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
-    </div>
-  );
+  const whyLine = why && <WhyLine why={why} lang={lang} rtl={rtl} />;
   const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip' || ex.kind === 'saying' || ex.kind === 'speak' || (isRuleExercise(ex) && !isGraded(ex));
   // One bar: ink for done, yellow for where you are, a kraft tail for mistakes that come back.
   const bar = barParts(index, checked, initial.length, queue.length);

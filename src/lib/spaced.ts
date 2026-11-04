@@ -9,12 +9,15 @@ import type { Dialogue, Lesson, Sentence, Unit, Word } from '../content/types';
 import { dayKey } from './progress';
 import type { Track } from './track';
 import { typable } from './typable';
+import { workTryLine } from './workTry';
+import { hasPicture } from './wordPicture';
 
 /**
  * "Herhaal vandaag": spaced repetition with a card box (Leitner). Every word the learner met
  * (in the work-rules track: every question of a finished lesson, by its step id) gets a card in
  * box 1. Right in a review moves it one box up and it comes back later (1, 2, 4, 7, 14, 30
- * days); wrong sends it back to box 1, so it comes back tomorrow.
+ * days); wrong sends it back to box 1, so it comes back tomorrow (a word wrong only in writing,
+ * from box 3 on, one box down: wrongCard).
  */
 export interface Card {
   /** 1–6 */
@@ -56,20 +59,40 @@ function wordById(): Map<string, Word> {
 }
 
 /**
- * After a lesson: new items get a card (back tomorrow); an item answered wrong goes back to box 1.
+ * After a lesson: new items get a card (back tomorrow); an item answered wrong goes back to box 1
+ * (a word wrong only in writing, from MADE_FROM_BOX on, one box down: see wrongCard).
  * The items are word ids (the language course) or the ids of a rules lesson's questions.
  */
-export function addLessonItems(cards: Cards, ids: readonly string[], results: Record<string, boolean>, today: string): Cards {
+export function addLessonItems(cards: Cards, ids: readonly string[], results: Record<string, boolean>, today: string, written?: readonly string[]): Cards {
   const next = { ...cards };
+  const writtenSet = new Set(written ?? []);
   for (const id of ids) {
-    if (!next[id] || results[id] === false) next[id] = { box: 1, due: addDays(today, 1) };
+    if (!next[id]) next[id] = { box: 1, due: addDays(today, 1) };
+    else if (results[id] === false) next[id] = wrongCard(next[id], writtenSet.has(id), today);
   }
   return next;
 }
 
 /** After a lesson of the language course: its words (addLessonItems by word id). */
-export function addLessonWords(cards: Cards, words: Word[], results: Record<string, boolean>, today: string): Cards {
-  return addLessonItems(cards, words.map((w) => w.id), results, today);
+export function addLessonWords(cards: Cards, words: Word[], results: Record<string, boolean>, today: string, written?: readonly string[]): Cards {
+  return addLessonItems(cards, words.map((w) => w.id), results, today, written);
+}
+
+/**
+ * A card answered wrong comes back tomorrow, in box 1. A word that was wrong only in writing (a
+ * dictation: heard and written wrong, every other question on it right; LessonPlayer's
+ * LessonResult.written) goes one box down instead, from MADE_FROM_BOX on (the owner's request,
+ * 4 November 2026). From that box a word moves up only after a written answer, and one typo too
+ * many (answers.ts) sent a word the learner knows and can say back to the start. In the
+ * simulation of the week plan (tests/writtenWrong.test.ts) a word of box 3 or higher went back to
+ * box 1 15 times in 8 weeks, nearly 9 in 10 of them for the dictation alone; now 2 times.
+ * A wrong recognition question (the meaning, a picture, what you hear) still sends it to box 1:
+ * then the word itself was not known. (The simulation cannot weigh that rule: it has no
+ * forgetting, so there any rule that sends a word back less looks better.)
+ */
+function wrongCard(card: Card | undefined, writtenOnly: boolean, today: string): Card {
+  const box = writtenOnly && card && card.box >= MADE_FROM_BOX ? card.box - 1 : 1;
+  return { box, due: addDays(today, 1) };
 }
 
 /**
@@ -91,21 +114,28 @@ export function needsMade(id: string): boolean {
 }
 
 /**
- * After a daily review: right moves a card up a box, wrong sends it back to box 1. A word that was
- * not due yet (a top-up, dailyWordIds) keeps its box when right: its date moves one day on, so a
- * strong word is not sent away for a month by an early answer.
+ * After a daily review: right moves a card up a box, wrong sends it back to box 1 (wrongCard). A
+ * word that was not due yet (a top-up, dailyWordIds) keeps its box when right: its date moves one
+ * day on, so a strong word is not sent away for a month by an early answer.
  * `made` (the language course, LessonPlayer's LessonResult.made): the cards answered with an
  * answer the learner made. With it, a card from MADE_FROM_BOX on that needsMade and was only
  * recognised keeps its box (and its days). Without it (the rules track, or a learner who could
  * not make an answer: another script without writing, no sound) every right answer moves up, as
  * before. The saved cards keep their form: boxes already reached stay.
+ * `written` (LessonResult.written): the words that were wrong only in writing; from MADE_FROM_BOX
+ * on they go one box down instead of back to box 1 (wrongCard).
  */
-export function applyReview(cards: Cards, results: Record<string, boolean>, today: string, made?: readonly string[], almost?: readonly string[]): Cards {
+export function applyReview(cards: Cards, results: Record<string, boolean>, today: string, made?: readonly string[], almost?: readonly string[], written?: readonly string[]): Cards {
   const next = { ...cards };
   const madeSet = made ? new Set(made) : undefined;
   const almostSet = new Set(almost ?? []);
+  const writtenSet = new Set(written ?? []);
   for (const [id, right] of Object.entries(results)) {
     const card = next[id] ?? { box: 1, due: today };
+    if (!right) {
+      next[id] = wrongCard(next[id], writtenSet.has(id), today);
+      continue;
+    }
     // Typed almost right (a typo, the article): it stays in its box, back after that box's days;
     // not up (it was not fully right), not back to box 1 (it was not wrong).
     if (right && almostSet.has(id) && card.due <= today) {
@@ -120,8 +150,8 @@ export function applyReview(cards: Cards, results: Record<string, boolean>, toda
       next[id] = { box: card.box, due: addDays(today, INTERVALS[card.box - 1]) };
       continue;
     }
-    const box = right ? Math.min(card.box + 1, MAX_BOX) : 1;
-    next[id] = { box, due: addDays(today, right ? INTERVALS[box - 1] : 1) };
+    const box = Math.min(card.box + 1, MAX_BOX);
+    next[id] = { box, due: addDays(today, INTERVALS[box - 1]) };
   }
   return next;
 }
@@ -152,9 +182,32 @@ export function dueIds(cards: Cards, today: string, track: Track = 'taal'): stri
     .map(([id]) => id);
 }
 
-/** The words for today's review: up to DAILY_MAX due words, topped up with the next ones to come. */
+/** Cards in this box or lower are weak: a new word, a word answered wrong, one right once since. */
+export const WEAK_BOX = 2;
+/** At least this many of today's DAILY_MAX places go to weak cards, when that many are due. */
+export const WEAK_PLACES = Math.ceil(DAILY_MAX / 2);
+
+/**
+ * The words for today's review: up to DAILY_MAX due words, topped up with the next ones to come.
+ * At least half of the places (WEAK_PLACES) go to weak words (box 1 and 2) when there are (the
+ * owner's request, 4 November 2026): box 1 first, then box 2, and in each the one most recently
+ * due first, so a new word (due the day after its lesson) and a word just answered wrong (due the
+ * next day) come back at once. The other places go to the oldest due, as before (dueIds), so the
+ * backlog still gets its turn. Oldest first alone put those words behind the whole backlog: in the
+ * simulation of the week plan (3 sessions a week, a mixed review every 4th, 90% right when
+ * recognising, 70% when writing; tests/weakFirst.test.ts) a new word came back after a median 7
+ * days and a word answered wrong after 7 too; now after 3 and 2. The price: with far more due than
+ * fits, the strong words wait longer, so fewer reach box 4 in 8 weeks (18 instead of 23 of 108);
+ * with fewer due ("eerst herhalen, dan nieuw") there is none (40 instead of 36 of 60).
+ * The words keep the order of dueIds (oldest first); with DAILY_MAX or fewer due nothing changes.
+ */
 export function dailyWordIds(cards: Cards, today: string): string[] {
-  const due = dueIds(cards, today).slice(0, DAILY_MAX);
+  const all = dueIds(cards, today);
+  const fresh = (a: string, b: string) => cards[a].box - cards[b].box || (cards[a].due > cards[b].due ? -1 : cards[a].due < cards[b].due ? 1 : 0);
+  const weak = all.filter((id) => cards[id].box <= WEAK_BOX).sort(fresh).slice(0, WEAK_PLACES);
+  const rest = all.filter((id) => !weak.includes(id)).slice(0, DAILY_MAX - weak.length);
+  const picked = new Set([...weak, ...rest]);
+  const due = all.filter((id) => picked.has(id));
   if (!due.length || due.length >= DAILY_MIN) return due;
   const words = wordById();
   const soon = Object.entries(cards)
@@ -185,7 +238,7 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   const words = ids.map((id) => wordById().get(id)).filter((w): w is Word => Boolean(w));
   // Sentence cards (2 at most) and a spoken sentence (1) that came along with today's words.
   const boxSentences = ids.map((id) => sentenceById().get(id)).filter((s): s is Sentence => Boolean(s)).slice(0, SENTENCE_DAILY_MAX);
-  const say = ids.filter(isSpeakCard).map((id) => sentenceById().get(id.slice(SPEAK_PREFIX.length))).find((s): s is Sentence => Boolean(s));
+  const say = ids.filter(isSpeakCard).map((id) => sayLine(id.slice(SPEAK_PREFIX.length))).find((s): s is Sentence => Boolean(s));
   const boxes = Object.fromEntries(words.map((w) => [w.id, cards[w.id]?.box ?? 1]));
   const idSet = new Set(ids);
   const n = day ? dayNumber(day) : 0;
@@ -249,11 +302,14 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   // Sentence cards that are due go first (they are built); the sentences picked above stay
   // behind them for a review without any (as before the sentence cards).
   const all = [...boxSentences, ...sentences.filter((s) => !boxSentences.some((b) => b.nl === s.nl))];
-  // Ear training: once both words of a sound pair (src/content/sounds.ts) are known, one of them
-  // comes back every day by ear, against its partner, each day another one and another voice.
+  // Ear training: once both words of a sound pair (src/content/sounds.ts, and the numbers of
+  // l.counting: dertien – dertig) are known, one of them comes back every day by ear, against its
+  // partner, each day another one and another voice.
   // Hearing a sound in many voices, again and again over weeks, trains the ear (HVPT; Sakai &
-  // Moorman 2018; reports/Leerwetenschap en tweede taal.md, voorstel 11).
-  const paired = [...wordById().values()].filter((w) => w.pair && cards[w.id] && cards[w.pair]);
+  // Moorman 2018; reports/Leerwetenschap en tweede taal.md, voorstel 11). It is a choice of two
+  // pictures, so a pair without pictures stays out (an empty card would be no choice at all).
+  const pictured = (id: string) => { const w = wordById().get(id); return Boolean(w && hasPicture(w)); };
+  const paired = [...wordById().values()].filter((w) => w.pair && cards[w.id] && cards[w.pair] && pictured(w.id) && pictured(w.pair));
   const earWord = paired.length ? paired[n % paired.length] : undefined;
   const partner = earWord?.pair ? wordById().get(earWord.pair) : undefined;
   return {
@@ -400,8 +456,8 @@ export function dailyRuleLesson(ids: readonly string[]): Lesson {
 
 /**
  * Next to the words, the box holds the sentences of the lessons (by sentence id: built again in
- * today's review) and the sentence said in a lesson's "Zeg het" (by SPEAK_PREFIX + sentence id:
- * said again). The same boxes and days as a word (1, 2, 4, 7, 14, 30). They have a small limit
+ * today's review) and the sentence said in a lesson's "Zeg het", or in its "Wat zeg je?" on the
+ * sentence of "Probeer het vandaag" (by SPEAK_PREFIX + sentence id: said again). The same boxes and days as a word (1, 2, 4, 7, 14, 30). They have a small limit
  * of their own, so the review stays short: SENTENCE_DAILY_MAX sentences to build and
  * SPEAK_DAILY_MAX to say. They come along with today's words (dailyIds): a day with no word due
  * has no review, and the sentences wait for the next one. Saves from before have no sentence
@@ -427,6 +483,29 @@ function sentenceById(): Map<string, Sentence> {
   return sentenceIndex.byId;
 }
 
+// The sentence of "Probeer het vandaag" of each lesson (lib/workTry.ts) by id: said from memory at
+// the end of its lesson (exercises.ts workTurn), so it gets the spoken-sentence card that the
+// lesson's "say it" had. Most are the tips' "Zeg het zo" phrases, not sentences of a lesson.
+let workIndex: { key: string; byId: Map<string, Sentence> } | null = null;
+function workLineById(): Map<string, Sentence> {
+  const lessons = [...teachingLessons, ...beOnlyTaalLessons().filter((l) => !isMixLesson(l)), ...regionTaalLessons()];
+  const key = `${lessons.length}:${taalBeActive()}`;
+  if (workIndex?.key !== key) {
+    const byId = new Map<string, Sentence>();
+    for (const l of lessons) {
+      const line = workTryLine(l.id);
+      if (line) byId.set(line.id, { id: line.id, nl: line.nl, en: line.en });
+    }
+    workIndex = { key, byId };
+  }
+  return workIndex.byId;
+}
+
+/** A sentence that can be said again (a spoken-sentence card): one of the course, or the sentence of "Probeer het vandaag". */
+function sayLine(id: string): Sentence | undefined {
+  return sentenceById().get(id) ?? workLineById().get(id);
+}
+
 /** A sentence card to build (a sentence id of the course). */
 export const isBuildCard = (id: string): boolean => sentenceById().has(id);
 /** A sentence card of either kind (built or said): not a word, not a rules question. */
@@ -447,7 +526,7 @@ export function dailySentenceIds(cards: Cards, today: string): string[] {
 
 /** The spoken-sentence cards for today (at most SPEAK_DAILY_MAX); only known sentences. */
 export function dailySpeakIds(cards: Cards, today: string): string[] {
-  return dueOf(cards, today, (id) => isSpeakCard(id) && sentenceById().has(id.slice(SPEAK_PREFIX.length))).slice(0, SPEAK_DAILY_MAX);
+  return dueOf(cards, today, (id) => isSpeakCard(id) && Boolean(sayLine(id.slice(SPEAK_PREFIX.length)))).slice(0, SPEAK_DAILY_MAX);
 }
 
 /**
@@ -461,11 +540,12 @@ export function dailyIds(cards: Cards, today: string): string[] {
 
 /**
  * After a lesson of the language course: its sentences get a card (the ones built), and so does
- * the sentence that was said (results[speakCardId(id)]), as addLessonItems does for words.
+ * the sentence that was said (results[speakCardId(id)]; a sentence of the course or the sentence
+ * of "Probeer het vandaag", sayLine), as addLessonItems does for words.
  */
 export function addLessonSentences(cards: Cards, sentences: readonly Sentence[], results: Record<string, boolean>, today: string): Cards {
   const known = sentenceById();
-  const said = Object.keys(results).filter((id) => isSpeakCard(id) && results[id] && known.has(id.slice(SPEAK_PREFIX.length)));
+  const said = Object.keys(results).filter((id) => isSpeakCard(id) && results[id] && sayLine(id.slice(SPEAK_PREFIX.length)));
   // Only the sentences that were built (they have a result): one left out (a shorter lesson) waits.
   return addLessonItems(cards, [...sentences.filter((s) => known.has(s.id) && s.id in results).map((s) => s.id), ...said], results, today);
 }

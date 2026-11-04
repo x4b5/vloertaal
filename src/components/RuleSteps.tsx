@@ -56,6 +56,30 @@ function Say({ text, lang, voice, glyph = true, name }: { text: string; lang?: H
 /** The screen-reader name of a speaker that reads a whole drawn card: "Afspelen: Loonstrook, Maart". */
 export const speakerName = (what: string, lang?: HelpLanguage) => `${said(ui('playAudio', lang))}: ${what}`;
 
+/** Answers with at least this many words in one of them are sentences ("Hij belt zelf de chef,
+ *  ruim vóór 10 uur."), not a number or a word ("300 euro", "Waar"). */
+export const SAY_OPTION_WORDS = 4;
+
+const wordCount = (t: string) => t.trim().split(/\s+/).filter(Boolean).length;
+
+/**
+ * The speakers beside the answer cards (ChoiceGrid `side`), or none. When the answers are
+ * sentences, every card has one (the UX evaluation, 4 November 2026: three answers of ten words
+ * each, about 30 words on a screen, could not be heard), so a learner who reads little hears them
+ * all. Short answers ("300 euro") have none. One speaker per answer, not one per sentence, beside
+ * the card and outside its tap area: hearing an answer never picks it. An answer that is said out
+ * loud (`say`) always has one, in "your" voice (the learner's character); a card without one keeps
+ * its place empty, so the cards line up.
+ */
+export function optionSpeakers<T>(options: readonly T[], spoken: (o: T) => string, lang?: HelpLanguage, voice?: (o: T) => VoiceRef | undefined, says?: (o: T) => boolean) {
+  const sentences = options.some((o) => wordCount(spoken(o)) >= SAY_OPTION_WORDS);
+  const has = (o: T) => sentences || Boolean(says?.(o));
+  if (!options.some(has)) return undefined;
+  return (o: T) => (has(o)
+    ? <span className="rule-option-say"><Say text={spoken(o)} lang={lang} voice={voice?.(o)} /></span>
+    : <span className="rule-option-say" aria-hidden />);
+}
+
 /** A question with its speaker: the text a learner answers (focus lands here on a new step). */
 function Question({ text, lang, who, verdict, run, misses }: {
   text: string;
@@ -147,7 +171,8 @@ export function RuleCard({ ex, lang, onAnswer }: RuleProps<'rule'>) {
           {!step.dialect && <Say text={body} lang={lang} />}
         </div>
       </div>
-      {advice && <p className="rule-advice" lang="nl"><InfoGlyph />{advice}</p>}
+      {/* Where to ask for your own situation: a text block with its own speaker. */}
+      {advice && <p className="rule-advice" lang="nl"><InfoGlyph /><span className="rule-advice-text">{advice}</span><Say text={advice} lang={lang} /></p>}
     </div>
   );
 }
@@ -227,12 +252,15 @@ export function WhatDo({ ex, lang, locked, onAnswer, verdict }: RuleProps<'whatd
         lang={lang}
         onAnswer={onAnswer}
         stamp={false}
-        side={step.options.some((o) => o.say) ? (o) => (o.say ? <span className="rule-option-say"><Say text={o.text} lang={lang} voice={you} /></span> : <span className="rule-option-say" aria-hidden />) : undefined}
+        side={optionSpeakers(step.options, (o) => o.text, lang, (o) => (o.say ? you : undefined), (o) => Boolean(o.say))}
         render={(o) => <span className="choice-label" lang="nl">{o.text}</span>}
       />
     </div>
   );
 }
+
+/** What the speaker beside a place to ask says: its name, then what it is, as two sentences. */
+export const whoSpeech = (c: { label: string; what: string }) => `${c.label}. ${c.what.charAt(0).toUpperCase()}${c.what.slice(1)}.`;
 
 /** "Wie vraag je het?": up to three places to go, each with its name, a picture and a short
  *  second line that says what the place is (ASK_WHO `what`). Part of the card: no extra tap. */
@@ -250,6 +278,8 @@ export function WhoAsk({ ex, lang, locked, onAnswer, verdict, run, misses }: Rul
         lang={lang}
         onAnswer={onAnswer}
         stamp={false}
+        // The name, a pause, and what the place is ("HR of de loonadministratie. Contract, loon en vrije dagen.").
+        side={optionSpeakers(step.options, (o) => whoSpeech(askWhoCard(o.who, step.id)), lang)}
         render={(o) => (
           <>
             <span className="rule-who-pic" aria-hidden><WordPicture id={ruleIconId(askWhoCard(o.who, step.id).emoji)} emoji={askWhoCard(o.who, step.id).emoji} size={38} /></span>
@@ -282,7 +312,11 @@ export function ModelLine({ ex, lang, onAnswer }: RuleProps<'model'>) {
   }, [step, voice, onAnswer]);
   return (
     <div className="exercise rule-model">
-      <p className="prompt rule-context" lang="nl">{step.context}</p>
+      {/* The situation is a text block too: its own speaker, as a question's (not the sentence's voice). */}
+      <div className="rule-context-row">
+        <p className="prompt rule-context" lang="nl">{step.context}</p>
+        <Say text={step.context} lang={lang} />
+      </div>
       <div className="tip-say rule-say-card">
         <div className="tip-say-row">
           <span className="tip-char rule-me"><MeAvatar /><span className="rule-me-name" lang="nl">Jij</span></span>
@@ -359,6 +393,7 @@ export function PayslipStep({ ex, lang, locked, onAnswer }: RuleProps<'payslip'>
         lang={lang}
         onAnswer={onAnswer}
         stamp={false}
+        side={optionSpeakers(step.options, (o) => o.text, lang)}
         render={(o) => <span className="choice-label" lang="nl">{o.text}</span>}
       />
     </div>
@@ -385,6 +420,7 @@ export function CardStep({ ex, lang, locked, onAnswer }: RuleProps<'card'>) {
         lang={lang}
         onAnswer={onAnswer}
         stamp={false}
+        side={optionSpeakers(step.options, (o) => o.text, lang)}
         render={(o) => <span className="choice-label" lang="nl">{o.text}</span>}
       />
     </div>
@@ -476,7 +512,13 @@ export function RuleFeedbackBody({ v, lang }: { v: RuleVerdict; lang?: HelpLangu
             : <strong>{v.best.text}</strong>}
         </p>
       )}
-      {v.own && <p className="rule-fb-own" lang="nl">{v.own}</p>}
+      {/* The picked answer's own line is a text block too: its own speaker, as the why's. */}
+      {v.own && (
+        <div className="rule-fb-own-row">
+          <p className="rule-fb-own" lang="nl">{v.own}</p>
+          <Say text={v.own} lang={lang} />
+        </div>
+      )}
       {v.sum && (
         <div className="rule-fb-sum">
           <div className="rule-fb-sum-body">
@@ -495,7 +537,11 @@ export function RuleFeedbackBody({ v, lang }: { v: RuleVerdict; lang?: HelpLangu
       {v.more && (
         <details className="info-more rule-fb-more" lang="nl">
           <summary className="info-more-summary"><InfoIcon size={18} /><span>Meer uitleg</span></summary>
-          <p className="info-more-body">{v.more}</p>
+          {/* Up to 80 words: one speaker for the whole block (read sentence by sentence). */}
+          <div className="info-more-body rule-fb-more-body">
+            <p>{v.more}</p>
+            <Say text={v.more} lang={lang} />
+          </div>
         </details>
       )}
     </>

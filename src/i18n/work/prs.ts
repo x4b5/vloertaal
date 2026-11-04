@@ -1031,6 +1031,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'اینجا با کارت پول داده می‌توانم؟',
     'c.checkout.a': 'بلی، حتماً، می‌شود.',
     'u.numbers': 'وقت، پول و اندازه‌ها',
+    'l.counting': 'عددها', // nieuw, nalezen
+    'w.dertien': 'سیزده (13)', // nieuw, nalezen
+    'w.dertig': 'سی (30)', // nieuw, nalezen
+    'w.zeventien': 'هفده (17)', // nieuw, nalezen
+    'w.zeventig': 'هفتاد (70)', // nieuw, nalezen
+    'w.zevenenveertig': 'چهل و هفت (47)', // nieuw, nalezen
+    'w.vierenzeventig': 'هفتاد و چهار (74)', // nieuw, nalezen
+    's.counting.1': 'سیزده قطی دارم، نه سی.', // nieuw, nalezen
+    's.counting.2': 'جای هفتاد و چهار خالی است.', // nieuw, nalezen
+    's.counting.3': 'می‌توانید آن را رقم به رقم بگویید؟', // nieuw, nalezen
+    'c.counting.q': 'چند قطی باقی مانده؟', // nieuw, nalezen
+    'c.counting.a': 'هفتاد. هفت، صفر.', // nieuw, nalezen
     'l.hours': 'ساعت‌ها و وقت',
     'w.uur': 'ساعت (۶۰ دقیقه)',
     'w.minuut': 'دقیقه',
@@ -1071,6 +1083,14 @@ const t: CultureTranslation = {
     'c.checkout.o2': 'به او بفروشید، چون می‌گوید ۱۹ ساله است.',
     'c.checkout.o3': 'به او بفروشید، اما فقط یک قطی.',
     'c.checkout.w': 'بدون کارت هویت نمی‌توانید عمر او را بدانید. فروختن الکول به کسی که کمتر از ۱۸ سال دارد خلاف قانون است، و دکان ممکن است جریمه شود.',
+    'c.counting': 'Vijfentwintig: اول ۵، بعد ۲۰', // nieuw, nalezen
+    'c.counting.b': 'در هالندی، عددهای ۰ تا ۱۲ هر کدام کلمهٔ خود را دارند: nul، een، twee، drie، vier، vijf، zes، zeven، acht، negen، tien، elf، twaalf. عددهای ۱۳ تا ۱۹ با -tien ختم می‌شوند: dertien، veertien، vijftien، zestien، zeventien، achttien، negentien. ده‌ها با -tig ختم می‌شوند: twintig، dertig، veertig، vijftig، zestig، zeventig، tachtig، negentig. از ۲۱ تا ۹۹ اول رقم آخر گفته می‌شود: ۲۵ می‌شود vijfentwintig، یعنی «پنج و بیست». پس ۴۷ می‌شود zevenenveertig و ۷۴ می‌شود vierenzeventig. Dertien و dertig تقریباً یکسان شنیده می‌شوند: به آخر آن گوش کنید. مطمئن نیستید؟ رقم‌ها را یکی‌یکی تکرار کنید.', // nieuw, nalezen
+    'c.counting.p': 'چهار، هفت؟ یعنی چهل و هفت؟', // nieuw, nalezen
+    'c.counting.s': 'سرپرست تان می‌گوید: «Ga naar gang zevenenveertig.» کدام راهرو است؟', // nieuw, nalezen
+    'c.counting.o1': 'راهروی ۴۷.', // nieuw, nalezen
+    'c.counting.o2': 'راهروی ۷۴.', // nieuw, nalezen
+    'c.counting.o3': 'راهروی ۴۰.', // nieuw, nalezen
+    'c.counting.w': '«Zevenenveertig» یعنی «هفت و چهل»: اول ۷، بعد ۴۰. پس راهروی ۴۷ است. بسیاری از تازه‌واردها ۷۴ می‌شنوند و به راهروی غلط می‌روند.', // nieuw, nalezen
     'c.hours': '«Half acht» یعنی ۷:۳۰',
     'c.hours.b': 'در هالندی، «half» تا ساعت بعدی حساب می‌شود: half acht یعنی ۷:۳۰، نه ۸:۳۰. Kwart over acht یعنی ۸:۱۵، و kwart voor acht یعنی ۷:۴۵. ساعت‌های کار خود را خود تان حساب کنید: وقت ختم منهای وقت شروع، منهای وقت تفریح. برای وقت تفریح اکثراً پول داده نمی‌شود. ساعت‌های کار خود را هر روز یادداشت کنید.',
     'c.hours.p': '«Half acht»؟ یعنی نیم ساعت پیش از هشت؟',

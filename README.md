@@ -36,11 +36,11 @@ Hulptalen in het spoor Taal:
 ## Wat zit erin
 
 **Spoor Taal**
-- **40 onderwerpen, 142 lessen** (102 lessen en 40 herhalingen; 612 woorden, 306 zinnen, 102 gesprekjes), in **8 thema's**:
+- **40 onderwerpen, 144 lessen** (104 lessen en 40 herhalingen; 624 woorden, 312 zinnen, 104 gesprekjes), in **8 thema's**:
   Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland en
   Jouw sector (Logistiek, Bouw, Productie, Zorg, Horeca, Schoonmaak, Tuinbouw, Techniek, Garage).
 - Ook: **Klanken** (woordparen als man/maan, pak/bak), **Uitdrukkingen en gezegden** (daarna komt
-  in latere lessen een passende uitdrukking terug), **In de winkel**, **Rekenen** en **Slimme apps en AI**
+  in latere lessen een passende uitdrukking terug), **In de winkel**, **Rekenen** (ook getallen: 13 of 30, 47 of 74) en **Slimme apps en AI**
   (AI als hulp, wat je niet deelt, nep of echt, en als een app beslist), en **Getallen en gegevens**
   (je naam spellen, je telefoonnummer, dagen en datums).
 - Voor de **Entree-opleiding** (mbo niveau 1): **Je werk afronden** (de werkbon, afmelden),

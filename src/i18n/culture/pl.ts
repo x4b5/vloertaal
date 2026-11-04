@@ -61,6 +61,14 @@ const t: CultureTranslation = {
     'c.unsafe.o2': 'Nic nie mówisz, bo nic się nie stało.',
     'c.unsafe.o3': { m: 'Sam poprawiasz paletę i nikomu nie mówisz.', f: 'Sama poprawiasz paletę i nikomu nie mówisz.', x: 'Samodzielnie poprawiasz paletę i nikomu nie mówisz.' }, // nieuw, nalezen
     'c.unsafe.w': 'Sytuacja, w której prawie doszło do wypadku, to ostrzeżenie. Zgłoszenie jej pomaga zapobiec prawdziwemu wypadkowi. Pracodawca nie może cię za to ukarać.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.alarm': 'Alarm: przerwij pracę i wyjdź', // nieuw, nalezen
+    'c.alarm.b': 'Pierwszego dnia zapytaj, gdzie są wyjścia ewakuacyjne i miejsce zbiórki. Kiedy włączy się alarm, od razu przerwij pracę. Zostaw swoje rzeczy i wyjdź na zewnątrz drogą ewakuacyjną. Idź schodami, nigdy windą. Na miejscu zbiórki liczą, kto jest na zewnątrz, więc zostań tam. Wychodź też wtedy, gdy myślisz, że to tylko ćwiczenia.', // nieuw, nalezen
+    'c.alarm.p': { m: 'Jestem nowy. Gdzie jest miejsce zbiórki?', f: 'Jestem nowa. Gdzie jest miejsce zbiórki?', x: 'Jestem tu nową osobą. Gdzie jest miejsce zbiórki?' }, // nieuw, nalezen
+    'c.alarm.s': 'Włącza się alarm pożarowy. Prawie kończysz zamówienie. Co robisz?', // nieuw, nalezen
+    'c.alarm.o1': 'Od razu przerywasz i idziesz na miejsce zbiórki.', // nieuw, nalezen
+    'c.alarm.o2': 'Najpierw kończysz zamówienie, potem wychodzisz.', // nieuw, nalezen
+    'c.alarm.o3': 'Najpierw bierzesz kurtkę i telefon z szafki.', // nieuw, nalezen
+    'c.alarm.w': 'Dym szybko się rozprzestrzenia, więc wychodzisz od razu. Twoje rzeczy mogą poczekać. Na miejscu zbiórki liczą wszystkich: wtedy nikt nie musi cię szukać w środku.', // nieuw, nalezen
     'c.accident': 'Zgłaszaj każdy wypadek',
     'c.accident.b': 'O każdym wypadku, nawet drobnym, powiedz przełożonemu albo BHV’er (osobie, która w firmie udziela pierwszej pomocy). Pracujesz przez agencję? Powiadom też agencję. W nagłym przypadku najpierw dzwoń pod 112. Poważny wypadek musi zgłosić do Nederlandse Arbeidsinspectie firma, w której do niego doszło (także jeśli pracujesz przez agencję): gdy ktoś ginie, odnosi trwałe obrażenia albo musi zostać w szpitalu. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.accident.p': 'Mój kolega jest ranny. Gdzie jest osoba od pierwszej pomocy?',

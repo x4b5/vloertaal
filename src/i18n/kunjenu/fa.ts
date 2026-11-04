@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "می‌توانم بگویم که کاری مجاز نیست.", // nieuw, nalezen
     'kjn.u.numbers.1': "می‌توانم ساعت‌هایی مثل «kwart over vier» را بفهمم.", // nieuw, nalezen
     'kjn.u.numbers.2': "می‌توانم بگویم قیمت یا وزن چیزی چقدر است.", // nieuw, nalezen
+    'kjn.u.numbers.3': "می‌توانم عددهایی مثل ۱۳ و ۳۰ را از هم تشخیص بدهم.", // nieuw, nalezen
     'kjn.u.shop.1': "می‌توانم از مشتری بپرسم می‌خواهد با کارت پرداخت کند یا نه.", // nieuw, nalezen
     'kjn.u.shop.2': "می‌توانم راه را در فروشگاه به مشتری نشان بدهم.", // nieuw, nalezen
     'kjn.u.ai.1': "می‌توانم بپرسم یک جواب درست است یا نه.", // nieuw, nalezen

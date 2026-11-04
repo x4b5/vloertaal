@@ -7,7 +7,7 @@ import { checkTyped, nextTileOrder, sentenceOrders, typoMarks } from '../lib/ans
 import { autoSpeak, sounds, speak } from '../lib/audio';
 import { allTiles, buildSteps, choicePictures, frontSteps, matchAsked, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
-import { breakable, sentences, splitQuote, wordSize } from '../lib/dutch';
+import { breakable, sentences, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
@@ -22,6 +22,7 @@ import { letterSteps } from '../lib/letters';
 import { createRng } from '../lib/random';
 import { typeAsPick, writingInput } from '../lib/writing';
 import { HelpSay } from './HelpSay';
+import { SituationText } from './SituationText';
 import { useFitText } from './useFitText';
 import { BeNote } from './BeNote';
 import { tipNlOnly } from '../content/taalBe';
@@ -247,6 +248,14 @@ function SayingLines({ literal, meaning, lang }: { literal: Bilingual; meaning: 
   );
 }
 
+export type ChoiceState = 'right' | 'wrong' | 'picked' | '';
+
+/** Tests only: the option a ChoiceGrid starts with as picked (a static render cannot tap one). */
+let pickForTest: string | null = null;
+export function setChoicePickForTest(id: string | null): void {
+  pickForTest = id;
+}
+
 export function ChoiceGrid<T extends { id: string }>({ options, render, correctId, locked, onAnswer, onPick, className, style, stamp = true, lang, side }: {
   options: T[];
   lang?: HelpLanguage;
@@ -256,13 +265,14 @@ export function ChoiceGrid<T extends { id: string }>({ options, render, correctI
   stamp?: boolean;
   className?: string;
   style?: React.CSSProperties;
-  render: (w: T) => React.ReactNode;
+  /** An option's content; `state`: 'right' / 'wrong' (picked, not right) after Check, 'picked' before, else ''. */
+  render: (w: T, state: ChoiceState) => React.ReactNode;
   correctId: string;
   locked: boolean;
   onAnswer: (a: Answer | null) => void;
   onPick?: (w: T) => void;
 }) {
-  const [picked, setPicked] = useState<string | null>(null);
+  const [picked, setPicked] = useState<string | null>(pickForTest);
   const pick = (w: T) => {
     if (locked) return;
     sounds.tap();
@@ -291,7 +301,7 @@ export function ChoiceGrid<T extends { id: string }>({ options, render, correctI
   return (
     <div className={`choices ${locked ? 'checked' : ''} ${className ?? ''}`} style={style}>
       {options.map((w, i) => {
-        const state = locked
+        const state: ChoiceState = locked
           ? w.id === correctId
             ? 'right'
             : w.id === picked
@@ -315,7 +325,7 @@ export function ChoiceGrid<T extends { id: string }>({ options, render, correctI
             <span className="choice-num" aria-hidden>
               {state === 'right' ? <CheckIcon size={26} /> : state === 'wrong' ? <CloseIcon size={26} /> : i + 1}
             </span>
-            {render(w)}
+            {render(w, state)}
             {state === 'right' && <span className="sr-only" lang={saidLang(ui('correctAnswer', lang))}>, {srText(ui('correctAnswer', lang))}</span>}
             {state === 'wrong' && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}>, {srText(ui('yourAnswer', lang))}: {srText(ui('incorrect', lang))}</span>}
             {state === 'wrong' && stamp && <WrongStamp lang={lang} />}
@@ -349,13 +359,21 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, miss
         locked={locked}
         lang={lang}
         onAnswer={onAnswer}
-        render={(w) => (
+        render={(w, state) => (
           <>
             {/* A small picture of each option (abstract words keep a text-only row). When the
                 answer has no picture, no option shows one: the one row without a picture
                 would give it away. */}
             {pics[ex.options.indexOf(w)] && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
-            <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />
+            {/* A wrong pick says which Dutch word that meaning is, as "What do you hear?" says what
+                each word means (the owner's request, 4 November 2026). Only the wrong one: the
+                right one's Dutch is the word in the bubble ("Vloertaal rustiger": say it once). */}
+            {state === 'wrong' ? (
+              <span className="choice-text">
+                <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />
+                <span lang="nl" className="choice-gloss choice-gloss-nl">{breakable(w.nl)}</span>
+              </span>
+            ) : <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />}
           </>
         )}
       />
@@ -443,7 +461,14 @@ function DutchFromMeaning({ ex, lang, locked, onAnswer, verdict, run, misses }: 
             <SpeakerIcon size={24} />
           </button>
         )}
-        render={(w) => <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>}
+        // A wrong pick says what that word means, as "What do you hear?" does (the owner's
+        // request, 4 November 2026). Only the wrong one: the right one's meaning is the question.
+        render={(w, state) => (state === 'wrong' ? (
+          <span className="choice-text">
+            <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+            <Bi className="choice-gloss" text={gloss(w.id, w.en, lang)} />
+          </span>
+        ) : <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>)}
       />
     </div>
   );
@@ -1138,7 +1163,8 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       <TipBody text={say ? shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} />
       {say && phrase}
       {/* Who can help (the tip's closing line, cut off above) or else what these tips are. */}
-      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={text.closing ?? ui('tipsNote', lang)} /></p></InfoMore>
+      {/* Read aloud in the help language too, as on the "Zo werkt het hier" page. */}
+      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={text.closing ?? ui('tipsNote', lang)} /><HelpSay text={(text.closing ?? ui('tipsNote', lang)).help} lang={lang} /></p></InfoMore>
     </div>
   );
 }
@@ -1281,49 +1307,6 @@ function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
 /** The heading of each kind of situation (src/content/culture.ts SituationAsk). */
 const ASK_PROMPT = { whatdo: 'whatDoYouDo', whatsay: 'whatDoYouSay', which: 'whatIsRight' } as const;
 
-/**
- * The situation's text, with the Dutch said in it once: in its own place, on a line of its own
- * with its speaker ('Przełożony mówi:' / [🔊 Morgen begin je om half negen.] / 'O której …?').
- * A text that does not quote the Dutch as it is keeps the Dutch line above it.
- */
-function SituationText({ text, said, who, lang }: { text: Bilingual; said: string; who: CharacterId; lang?: HelpLanguage }) {
-  const main = text.help ?? text.en;
-  const parts = splitQuote(main, said);
-  const rtl = text.help && text.lang?.dir === 'rtl';
-  const quote = (
-    <span className="situation-quote" dir="ltr">
-      <span lang="nl" className="situation-nl">{breakable(said)}</span>
-      <SpeakButton glyph text={said} help={lang} voice={voiceFor(who)} />
-    </span>
-  );
-  if (!parts) {
-    return (
-      <>
-        {quote}
-        <span className="help-say-row">
-          <Bi text={text} />
-          <HelpSay text={text.help} lang={lang} />
-        </span>
-      </>
-    );
-  }
-  const line = (t: string) => (text.help && text.lang ? <HelpText className="situation-line" text={t} lang={text.lang} /> : <span className="situation-line">{t}</span>);
-  return (
-    <span className="help-say-row">
-      <span className={`bi situation-lines ${text.help ? 'bi-swap' : ''}`} dir={rtl ? 'rtl' : undefined}>
-        <span className="bi-en">
-          {parts.before && line(parts.before)}
-          {quote}
-          {parts.after && line(parts.after)}
-        </span>
-        {/* The English under it (hidden unless "Show English" is on), as in every pair. */}
-        {text.help && <span className="bi-help" lang="en" dir={rtl ? 'ltr' : undefined}>{text.en}</span>}
-      </span>
-      <HelpSay text={text.help} lang={lang} />
-    </span>
-  );
-}
-
 /** "What do you do?" (or "What do you say?", "What is right?"): pick the usual answer to a workplace situation. */
 export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props<'situation'>) {
   const { tip } = ex;
@@ -1388,6 +1371,11 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
             lang={lang}
             onAnswer={onAnswer}
             stamp={false}
+            // Each answer can be heard in the help language too (its recording, else the phone's
+            // voice; HelpSay), beside the card and outside its tap area, as the Dutch speakers of
+            // a chat: a learner who reads little can follow three answers of ten words each. A
+            // tap on it only reads; it never picks the answer (the UX evaluation, 4 November 2026).
+            side={(o) => <HelpSay text={gloss(o.id, o.en, lang).help} lang={lang} />}
             render={(o) => <Bi text={gloss(o.id, o.en, lang)} />}
           />
         </div>

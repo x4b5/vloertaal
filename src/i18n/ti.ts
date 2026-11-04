@@ -130,6 +130,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: 'ጽባሕ: {n} ቃላት',
     firstWordsTomorrow: { m: 'ጽባሕ ቀዳሞት ቃላትካ ይምለሳ', f: 'ጽባሕ ቀዳሞት ቃላትኪ ይምለሳ', x: 'ጽባሕ ቀዳሞት ቃላትኩም ይምለሳ' }, // x: nieuw, nalezen
     extraRound: 'ተወሳኺ ዙርያ',
+    reviewFirstHint: { m: 'ቅድም ድገም። ከምኡ ዝያዳ ትዝክር።', f: 'ቅድም ድገሚ። ከምኡ ዝያዳ ትዝክሪ።', x: 'ቅድም ድገሙ። ከምኡ ዝያዳ ትዝክሩ።' }, // nieuw, nalezen
     wordsStrongerN: '{n} ቃላት ዝሓየላ',
     noMistakes: 'ብዘይ ጌጋ',
     nextUp: 'ዝቕጽል',
@@ -556,6 +557,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': { m: 'ተጠንቀቕ፡ መሬት ጠሊሉ እዩ!', f: 'ተጠንቀቒ፡ መሬት ጠሊሉ እዩ!', x: 'ተጠንቀቑ፡ መሬት ጠሊሉ እዩ!' },
     's.danger.2': 'ናይ ህጹጽ ግዜ መውጽኢ ኣበይ ኣሎ?',
     's.danger.3': 'ሓደጋ ኣሎ!',
+    'l.alarm': 'ደወል ሓዊን ካብ ህንጻ ምውጻእን', // nieuw, nalezen
+    'w.alarm': 'ደወል ሓደጋ (ኣላርም)', // nieuw, nalezen
+    'w.ontruimen': 'ህንጻ ምልቃቕ (ኩሉ ሰብ ካብ ህንጻ ይወጽእ)', // nieuw, nalezen
+    'w.vluchtroute': 'መገዲ ምህዳም (ናብ መውጽኢ ዝወስድ መገዲ)', // nieuw, nalezen
+    'w.trap': 'መደያይቦ', // nieuw, nalezen
+    'w.verzamelplaats': 'ቦታ ምእካብ (ኩሉ ሰብ ኣብ ደገ ዝራኸበሉ)', // nieuw, nalezen
+    'w.brandblusser': 'መጥፍኢ ሓዊ', // nieuw, nalezen
+    's.alarm.1': 'መጥፍኢ ሓዊ ኣበይ ኣሎ?', // nieuw, nalezen
+    's.alarm.2': 'ነቲ ህንጻ ክንለቕቖ ኣሎና።', // nieuw, nalezen
+    's.alarm.3': { m: 'መደያይቦ ተጠቐም፡ ሊፍት ኣይኮነን።', f: 'መደያይቦ ተጠቐሚ፡ ሊፍት ኣይኮነን።', x: 'መደያይቦ ተጠቐሙ፡ ሊፍት ኣይኮነን።' }, // nieuw, nalezen
     's.accident.1': 'ብጻይ ስራሐይ ወዲቑ።',
     's.accident.2': 'ተቖሪጸ።',
     's.accident.3': 'ሓደጋ ክሕብር እደሊ።',
@@ -593,6 +604,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'እወ፣ ገይረዮ ኣለኹ።',
     'c.danger.q': 'ሓደጋ ኣሎ ድዩ?',
     'c.danger.a': 'እወ፣ ናብ 112 ደውል!',
+    'c.alarm.q': 'ኩሉ ሰብ ናብ ደገ ወጺኡ ድዩ?', // nieuw, nalezen
+    'c.alarm.a': 'ኣይፋል፡ ብጻይ ስራሐይ ገና ኣይመጸን።', // nieuw, nalezen
     'c.accident.q': 'እንታይ ኣጋጢሙ?',
     'c.accident.a': 'ወዲቑ። ይደምይ ኣሎ።',
     'l.notyet': 'እዚ ገና ኣይተማሃርክዎን',

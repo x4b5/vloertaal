@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { getHelpLanguage } from '../i18n';
-import type { Gender, LangCode } from '../i18n/types';
+import type { Gender, HelpLanguage, LangCode } from '../i18n/types';
+import type { ToetsMoment } from '../lib/toets';
 import { BottomNav, TopBar } from '../components/Screens';
 import { Route } from '../components/Route';
-import { ToetsOffer, ToetsPage, ToetsPlayer, ToetsResult } from '../components/Toets';
+import { ToetsHomeLine, ToetsOfferPage, ToetsPage, ToetsPlayer, ToetsResult } from '../components/Toets';
 import { setSpeakShotPhase } from '../components/Speaking';
 import { emptyProgress, type Progress } from '../lib/progress';
 import { keepVoice } from '../lib/toetsVoice';
@@ -12,7 +13,9 @@ import { TOETS_VERSIONS } from '../content/toets';
 
 /**
  * "Wat ken je al?" in fixed states for screenshots and the max-3 counter (src/dev/ShotHarness.tsx):
- *   /?shot=toets&state=offer         the card on the home (the start); &state=offer-eind the end's
+ *   /?shot=toets&state=offer         the home after the first lesson with the test's line under
+ *                                    lesson 1.2 (a tap opens its page); &state=offer-eind the end's;
+ *                                    &state=offer-page and offer-eind-page: the page itself
  *   /?shot=toets&state=question&at=0 a question (seed 1): 0–4 listening, 5–6 building by ear,
  *                                    7–11 words, 12–13 dictation, 14–18 chats, 19–20 building
  *   /?shot=toets&state=speak         the speaking task (&phase=review: comparing)
@@ -44,6 +47,37 @@ function silence(): Blob {
   return new Blob([buf], { type: 'audio/wav' });
 }
 
+/**
+ * The offer: the home after the first lesson (the start; the end: later, with more done) with the
+ * line under lesson 1.2; a tap opens its page ([Doe de toets], [Later] and the back arrow), Later
+ * and the back arrow go back to the home (Later without the line). `page`: the page itself.
+ */
+function OfferShot({ moment, page: startOnPage, lang }: { moment: ToetsMoment; page: boolean; lang?: HelpLanguage }) {
+  const [page, setPage] = useState(startOnPage);
+  const [later, setLater] = useState(false);
+  const progress: Progress = { ...emptyProgress, onboarded: true, sector: 'none', completed: moment === 'eind' ? doneIds('l.hello', 'l.people', 'l.arrive', 'l.understand') : { 'l.hello': { best: 1, times: 1 } } };
+  if (page) {
+    return (
+      <>
+        <ToetsOfferPage moment={moment} lang={lang} onBack={() => setPage(false)} onDo={() => {}} onLater={() => { setLater(true); setPage(false); }} />
+        <BottomNav current="route" onTab={() => {}} lang={lang} />
+      </>
+    );
+  }
+  return (
+    <>
+      <TopBar streak={moment === 'eind' ? 4 : 1} done={moment === 'instap'} words={moment === 'eind' ? 24 : 6} lang={lang} />
+      <Route
+        progress={progress} lang={lang} access="full" onStart={() => {}} onPick={() => {}} onAll={() => {}}
+        lines={later ? [] : [{ id: 'toets', node: <ToetsHomeLine moment={moment} lang={lang} onOpen={() => setPage(true)} /> }]}
+      />
+      <BottomNav current="route" onTab={() => {}} lang={lang} />
+    </>
+  );
+}
+
+const doneIds = (...ids: string[]) => Object.fromEntries(ids.map((id) => [id, { best: 1, times: 1 }]));
+
 export function ToetsShot({ lang: code, gender }: { lang: string | null; gender?: Gender }) {
   const q = new URLSearchParams(location.search);
   const state = q.get('state') ?? 'offer';
@@ -56,19 +90,8 @@ export function ToetsShot({ lang: code, gender }: { lang: string | null; gender?
   const phase = q.get('phase');
   setSpeakShotPhase(state === 'speak' ? (phase === 'review' ? 'review' : 'idle') : undefined);
   if (!ready) return null;
-  if (state === 'offer' || state === 'offer-eind') {
-    const moment = state === 'offer' ? 'instap' : 'eind';
-    const progress: Progress = { ...emptyProgress, onboarded: true, sector: 'none', completed: moment === 'eind' ? { 'l.hello': { best: 1, times: 1 } } : {} };
-    return (
-      <>
-        <TopBar streak={moment === 'eind' ? 4 : 0} done={false} words={moment === 'eind' ? 6 : 0} lang={lang} />
-        <Route
-          progress={progress} lang={lang} access="full" onStart={() => {}} onPick={() => {}} onAll={() => {}}
-          offer={<ToetsOffer moment={moment} lang={lang} onDo={() => {}} onLater={() => {}} />}
-        />
-        <BottomNav current="route" onTab={() => {}} lang={lang} />
-      </>
-    );
+  if (state === 'offer' || state === 'offer-eind' || state === 'offer-page' || state === 'offer-eind-page') {
+    return <OfferShot moment={state.startsWith('offer-eind') ? 'eind' : 'instap'} page={state.endsWith('-page')} lang={lang} />;
   }
   if (state === 'question' || state === 'speak') {
     const at = state === 'speak' ? TOETS_VERSIONS.A.length : Number(q.get('at') ?? 0);

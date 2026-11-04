@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "Я можу сказати, що чогось робити не можна.", // nieuw, nalezen
     'kjn.u.numbers.1': "Я розумію позначення часу, як-от «kwart over vier».", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.numbers.2': "Я можу сказати, скільки щось коштує або важить.", // nieuw, nalezen
+    'kjn.u.numbers.3': "Я розрізняю числа, як-от 13 і 30.", // nieuw, nalezen
     'kjn.u.shop.1': "Я можу запитати, чи клієнт хоче платити карткою.", // nieuw, nalezen
     'kjn.u.shop.2': "Я можу показати клієнтові дорогу в магазині.", // nieuw, nalezen
     'kjn.u.ai.1': "Я можу запитати, чи правильна відповідь.", // nieuw, nalezen

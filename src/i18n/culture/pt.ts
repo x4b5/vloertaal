@@ -61,6 +61,14 @@ const t: CultureTranslation = {
     'c.unsafe.o2': 'Não dizes nada, porque não aconteceu nada.',
     'c.unsafe.o3': { m: 'Arrumas a palete sozinho e não dizes a ninguém.', f: 'Arrumas a palete sozinha e não dizes a ninguém.', x: 'Arrumas a palete por tua conta e não dizes a ninguém.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.unsafe.w': 'Um quase-acidente é um aviso. Comunicá-lo ajuda a evitar um acidente a sério. O teu empregador não te pode castigar por o comunicares.',
+    'c.alarm': 'O alarme toca: para e sai lá para fora', // nieuw, nalezen
+    'c.alarm.b': 'No primeiro dia, pergunta onde ficam as saídas de emergência e o ponto de encontro. Quando o alarme tocar, para logo de trabalhar. Deixa as tuas coisas e sai pelo caminho de evacuação. Vai pelas escadas, nunca pelo elevador. No ponto de encontro contam quem está lá fora, por isso fica lá. Sai também quando achas que é só um simulacro.', // nieuw, nalezen
+    'c.alarm.p': { m: 'Sou novo. Onde é o ponto de encontro?', f: 'Sou nova. Onde é o ponto de encontro?', x: 'Sou novo / nova. Onde é o ponto de encontro?' }, // nieuw, nalezen
+    'c.alarm.s': 'O alarme de incêndio toca. Estás quase a acabar uma encomenda. O que fazes?', // nieuw, nalezen
+    'c.alarm.o1': 'Paras logo e vais a pé até ao ponto de encontro.', // nieuw, nalezen
+    'c.alarm.o2': 'Primeiro acabas a encomenda, depois sais.', // nieuw, nalezen
+    'c.alarm.o3': 'Primeiro vais buscar o casaco e o telemóvel ao cacifo.', // nieuw, nalezen
+    'c.alarm.w': 'O fumo espalha-se depressa, por isso sais logo. As tuas coisas podem esperar. No ponto de encontro contam toda a gente: assim ninguém tem de te procurar lá dentro.', // nieuw, nalezen
     'c.accident': 'Comunica todos os acidentes',
     'c.accident.b': 'Conta ao teu chefe ou ao BHV’er (o socorrista da empresa) todos os acidentes, também os pequenos. Trabalhas através de uma agência? Avisa também a agência. Numa emergência, liga primeiro para o 112. A empresa onde o acidente aconteceu tem de comunicar um acidente grave à Nederlandse Arbeidsinspectie (também se trabalhas através de uma agência): quando alguém morre, fica com lesões para a vida ou tem de ficar no hospital. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.accident.p': 'O meu colega está ferido. Onde está o BHV’er?',

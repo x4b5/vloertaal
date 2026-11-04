@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Завтра: {n} слово', few: 'Завтра: {n} слова', many: 'Завтра: {n} слів', other: 'Завтра: {n} слів' },
     firstWordsTomorrow: 'Завтра повернуться твої перші слова',
     extraRound: 'Додатковий раунд',
+    reviewFirstHint: 'Спочатку повторення. Так ти запам’ятаєш більше.', // nieuw, nalezen
     wordsStrongerN: { one: '{n} слово закріплено краще', few: '{n} слова закріплено краще', many: '{n} слів закріплено краще', other: '{n} слів закріплено краще' },
     noMistakes: 'Без помилок',
     nextUp: 'Далі',
@@ -516,6 +517,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Обережно, підлога мокра!',
     's.danger.2': 'Де аварійний вихід?',
     's.danger.3': 'Стався нещасний випадок!',
+    'l.alarm': 'Пожежна тривога та евакуація', // nieuw, nalezen
+    'w.alarm': 'сигнал тривоги', // nieuw, nalezen
+    'w.ontruimen': 'евакуювати (усі виходять із будівлі)', // nieuw, nalezen
+    'w.vluchtroute': 'шлях евакуації', // nieuw, nalezen
+    'w.trap': 'сходи', // nieuw, nalezen
+    'w.verzamelplaats': 'місце збору (де всі збираються надворі)', // nieuw, nalezen
+    'w.brandblusser': 'вогнегасник', // nieuw, nalezen
+    's.alarm.1': 'Де вогнегасник?', // nieuw, nalezen
+    's.alarm.2': 'Ми маємо евакуювати будівлю.', // nieuw, nalezen
+    's.alarm.3': 'Іди сходами, не ліфтом.', // nieuw, nalezen
     'l.accident': 'Повідомити про нещасний випадок',
     'w.gewond': 'поранений',
     'w.bloeden': 'кровоточити',
@@ -595,6 +606,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Так, вона на мені.',
     'c.danger.q': 'Стався нещасний випадок?',
     'c.danger.a': 'Так, дзвони 112!',
+    'c.alarm.q': 'Усі надворі?', // nieuw, nalezen
+    'c.alarm.a': 'Ні, мого колеги ще немає.', // nieuw, nalezen
     'c.accident.q': 'Що сталося?',
     'c.accident.a': 'Він упав. У нього йде кров.',
     'l.notyet': 'Цього мене ще не навчили',

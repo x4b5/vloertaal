@@ -27,6 +27,7 @@ import { NlPair } from './NlPair';
 import { dutchUi, trackOf } from '../lib/track';
 import { RestartButton, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
+import { reviewFirst } from '../lib/pace';
 import { PocketIcon } from './Offline';
 import { countedUnits, planGroups } from '../content/themes';
 import { ThemeHeadRow } from './Themes';
@@ -46,13 +47,26 @@ import { SEARCH_MIN, searchKey, searchTopics } from '../lib/topicSearch';
  * Tapping a suggestion makes it the current block and shows it with its Start button, so the
  * learner first sees what the topic is before a lesson begins. "Other topic" opens All topics: a
  * list of every topic, each leading to its topic page (lessons, pocket card, certificate).
+ *
+ * Review first (src/lib/pace.ts reviewFirst): today's review done and many words still due, then
+ * "Extra ronde" is the first, yellow card and the next lesson the second (a calm card, still with
+ * Start: it never locks).
+ *
+ * Under the lesson, small `lines` (one tap each: "Gelukt?", "Wat ken je al?", in the work-rules
+ * track "Over deze regels") fill what is left of the three, most important first; one that does
+ * not fit waits for a home with room. They never take the lesson's place: the yellow card is the
+ * next step on the path (verbeterplan fase 2, 4 November 2026).
  */
-export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink, note, unlocked = false, offer }: {
+export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink, note, lines, unlocked = false, offer }: {
   progress: Progress;
-  /** "Wat ken je al?" offered (src/components/Toets.tsx ToetsOffer, with Doen and Later): it takes
-   *  the place of the block and today's review for now, so the home keeps three things to tap. */
+  /** A card in the place of the block and today's review, with two buttons ("Er is iets veranderd",
+   *  "Wil je ook de werkregels leren?", "Bewaar je voortgang"): with "Other topic" that is three
+   *  things to tap, so no `lines` then. */
   offer?: React.ReactNode;
-  /** A calm line above "Other topic", not a button (the work-rules track: no Dutch voice on this phone). */
+  /** Small things to tap under the lesson, most important first, each one of the three; only those
+   *  that fit show. */
+  lines?: { id: string; node: React.ReactNode }[];
+  /** A calm line above "Other topic", nothing to tap (the work-rules track: no Dutch voice on this phone). */
   note?: React.ReactNode;
   /** The full version was unlocked a moment ago: a short line says the code was right. */
   unlocked?: boolean;
@@ -100,6 +114,8 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   const dailyExtra = daily?.state === 'done' && daily.extra > 0;
   // Either card is one of the three (as above).
   const dailyShown = dailyDue || dailyExtra;
+  // Many words still due after today's review: "Extra ronde" first (yellow), the lesson second.
+  const first = dailyExtra && reviewFirst(daily, track) && Boolean(onDaily);
   const choices = block ? [] : homeSuggestions(sector, completed, track, region).slice(0, dailyShown ? 1 : 2);
   const ref = useRef<HTMLDivElement>(null);
   const order = routeOrder(sector, track, region);
@@ -137,6 +153,11 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   const linked = lockedLink && !unitAllowed(lockedLink, access) ? order.find((u) => u.id === lockedLink) : undefined;
   const restartShown = Boolean(resumeId && onRestart && !dailyShown);
   const taps = (dailyShown ? 1 : 0) + (block ? 1 + (restartShown ? 1 : 0) + (blockPlayable(block, completed, access) ? 0 : 1) : choices.length) + 1;
+  // What is left of the three: the coach's locked topic first (this visit only), then the lines.
+  const extras = [
+    ...(linked ? [{ id: 'linked', node: <LinkedLocked unit={linked} lang={lang} onUpgrade={onUpgrade} /> }] : []),
+    ...(lines ?? []),
+  ].slice(0, Math.max(0, 3 - taps));
 
   const pick = (unit: Unit) => {
     if (!blockPlayable(unit, completed, access)) { onUpgrade?.(); return; }
@@ -170,14 +191,16 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                   </span>
                 )}
               </span>
-              {state === 'now' && <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>}
+              {/* Bram stands by the yellow card only (not by a lesson that comes second). */}
+              {state === 'now' && !first && <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>}
             </>
           );
-          const restart = saved && onRestart && lesson.id === resumeId && !dailyDue;
+          // (Not next to either daily card, "Herhaal vandaag" or "Extra ronde": as counted in `taps`.)
+          const restart = saved && onRestart && lesson.id === resumeId && restartShown;
           return (
             <li
               key={lesson.id}
-              className={`bay bay-${css} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''} ${state === 'now' ? 'bay-with-char' : ''}`}
+              className={`bay bay-${css} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''} ${state === 'now' && !first ? 'bay-with-char' : ''}`}
             >
               <span className="bay-marker" aria-hidden>{state === 'done' ? <CheckIcon size={18} /> : i + 1}</span>
               {state === 'now' ? (
@@ -228,12 +251,13 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   return (
     <div className="path route home3" ref={ref} dir={rtl ? 'rtl' : undefined}>
       {unlocked && <UnlockedNote lang={lang} />}
-      {dailyShown && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
+      {dailyShown && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} lead={first} />}
 
       {block && (
         // With "Herhaal vandaag" above it, the block is compact (no picture, no done lessons), so
-        // its Start stays in view on a small phone.
-        <section className={`rb-current ${dailyDue ? 'rb-tight' : ''}`} aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
+        // its Start stays in view on a small phone. After "Extra ronde" as the first choice, the
+        // next lesson is the second: a calm card (rb-second), not the yellow one.
+        <section className={`rb-current ${dailyDue || first ? 'rb-tight' : ''} ${first ? 'rb-second' : ''}`} aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
           <div id={`unit-${block.id.slice(2)}`} className={`rb-block ${marked === block.id ? 'rb-marked' : ''}`}>
             <WordPicture className="rb-pic" id={unitIcon(block.id)} emoji={block.emoji} size={64} />
             <UnitTitle unit={block} lang={lang} heading />
@@ -294,7 +318,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
         </section>
       )}
 
-      {linked && taps < 3 && <LinkedLocked unit={linked} lang={lang} onUpgrade={onUpgrade} />}
+      {extras.map((x) => <Fragment key={x.id}>{x.node}</Fragment>)}
 
       {note}
 

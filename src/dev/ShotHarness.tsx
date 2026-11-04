@@ -21,12 +21,13 @@ import { dayKey, emptyProgress, workWeek, type Progress } from '../lib/progress'
 import { Milestone, StreakStopped } from '../components/Milestone';
 import { BootFailed } from '../components/Splash';
 import { dailyCard, dailyRuleLesson, gradedStepIds } from '../lib/spaced';
+import { REVIEW_FIRST_ABOVE } from '../lib/pace';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
 import { GenderScreen } from '../components/Gender';
 import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies } from '../content/curriculum';
-import { buildLesson, buildTiles, buildRuleLesson, forRetry, frontExercise, frontSource, RULE_KINDS, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
+import { buildLesson, buildTiles, buildRuleLesson, forRetry, frontExercise, frontSource, RULE_KINDS, workTurn, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
 import { setSpeakShotHeard, setSpeakShotPhase, setSpeakShotRefused } from '../components/Speaking';
 import { createRng } from '../lib/random';
@@ -260,7 +261,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The gender question right after a help language with gender: /?shot=gender&lang=pl
   // (&gender=f shows it picked; Settings has the same cards: /?shot=settings&lang=pl&gender=f).
   if (shot === 'gender') return <GenderShot lang={(lang as LangCode) ?? 'pl'} gender={gender} greet={q.get('greet') === '1'} />;
-  if (shot === 'rulesnotice') return <RulesNoticeScreen country={q.get('country') === 'be' ? 'be' : undefined} onDone={() => {}} />;
+  if (shot === 'rulesnotice') return <RulesNoticeScreen country={q.get('country') === 'be' ? 'be' : undefined} lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} />;
   if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} />;
   if (shot === 'admin') return <Admin onBack={() => {}} />;
   // &novoice=1 (the work-rules track): the line that this phone has no Dutch voice, on the home
@@ -316,14 +317,14 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   }
   // The old long path is gone: /?shot=path is the home (&resume=1: its next lesson stopped halfway).
   if (shot === 'path') {
-    return <RouteShot shot="route" state="mid" lang={getHelpLanguage(lang as LangCode, gender)} access={access} sector={sector} daily={q.get('daily') === 'due'} resume={q.get('resume')} />;
+    return <RouteShot shot="route" state="mid" lang={getHelpLanguage(lang as LangCode, gender)} access={access} sector={sector} daily={q.get('daily')} resume={q.get('resume')} />;
   }
   // The home, one block at a time: /?shot=route&state=new|mid|finished|shelf|pick|coach|done
   // (see RouteShot); /?shot=all is "Alle onderwerpen". &access=preview, &sector=, &daily=due work too.
   // &askGender=1: a learner from before the gender question, with the one-time card (with &lang=pl).
   // /?shot=topic&cu=u.firstday is a topic page (with &state= as above; &cu= any unit).
   if (shot === 'route' || shot === 'all' || shot === 'topic') {
-    return <RouteShot shot={shot} unit={q.get('cu')} resume={q.get('resume')} state={q.get('state') ?? 'mid'} lang={getHelpLanguage(lang as LangCode, gender)} access={access} sector={sector} region={region} daily={q.get('daily') === 'due'} askGender={q.get('askGender') === '1' ? (lang as LangCode) : undefined} />;
+    return <RouteShot shot={shot} unit={q.get('cu')} resume={q.get('resume')} state={q.get('state') ?? 'mid'} lang={getHelpLanguage(lang as LangCode, gender)} access={access} sector={sector} region={region} daily={q.get('daily')} askGender={q.get('askGender') === '1' ? (lang as LangCode) : undefined} />;
   }
   // The whole cast in every mood, big, for judging the drawings.
   if (shot === 'cast') {
@@ -434,8 +435,11 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     // &heard=wait while it listens.
     const heard = q.get('heard');
     setSpeakShotHeard(heard === 'same' ? item.nl : heard === 'almost' ? item.nl.split(' ').slice(0, -1).join(' ') : heard ?? undefined);
-    // &turn=1: "Wat zeg je?" before the chat (the shift chat): the reply is what to say.
-    exercises[shot] = q.get('turn') ? { kind: 'speak', item: { ...coffee.reply }, turn: coffee } : { kind: 'speak', item };
+    // &turn=1: "Wat zeg je?" after the chat (the shift chat): the reply is what to say.
+    // &work=l.gear: "Wat zeg je?" on the sentence of "Probeer het vandaag" of that lesson (its moment;
+    // l.people a moment with a Dutch quote, l.hello none: the meaning).
+    const work = q.get('work') ? workTurn(findLesson(q.get('work')!)!.lesson, () => true) : undefined;
+    exercises[shot] = work ?? (q.get('turn') ? { kind: 'speak', item: { ...coffee.reply }, turn: coffee } : { kind: 'speak', item });
   }
   const ex = exercises[shot] ?? exercises.dutch;
   // A few intro exercises in front would move the progress bar; pad so it sits at ~40%.
@@ -521,7 +525,7 @@ const unitLessons = (...ids: string[]) => ids.flatMap((id) => findUnit(id)?.less
  *  suggestions); shelf and done: four units done and the fifth started; coach: a coach link to
  *  "Pay" (marked). shot=all is All topics (a row opens its topic page); shot=topic opens &cu=.
  */
-function RouteShot({ shot, state, lang: shotLang, access, sector, region, daily, askGender, unit, resume }: { shot: string; state: string; lang?: ReturnType<typeof getHelpLanguage>; access: Access; sector?: SectorChoice; region?: RegionChoice; daily: boolean; askGender?: LangCode; unit?: string | null; resume?: string | null }) {
+function RouteShot({ shot, state, lang: shotLang, access, sector, region, daily, askGender, unit, resume }: { shot: string; state: string; lang?: ReturnType<typeof getHelpLanguage>; access: Access; sector?: SectorChoice; region?: RegionChoice; daily: string | null; askGender?: LangCode; unit?: string | null; resume?: string | null }) {
   // The work-rules track (&lang=nl): the same states on its own course.
   const rules = shotLang?.code === 'nl';
   const rc = courseUnits('regels');
@@ -545,10 +549,16 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, region, daily,
   // &resume=1: the block's next lesson was stopped halfway ("Continue · 12/18").
   useState(() => (resume ? seedResume(resume, false) : clearSave()));
   const today = dayKey(new Date());
-  // &daily=1: the "Herhaal vandaag" card, with the words of "Hello" due (the rules track: the
-  // questions of its first lesson).
+  // &daily=due: the "Herhaal vandaag" card, with the words of "Hello" due (the rules track: the
+  // questions of its first lesson). After today's review: &daily=few, a few words still due (the
+  // small "Extra ronde" button); &daily=extra, more than REVIEW_FIRST_ABOVE (src/lib/pace.ts:
+  // "Extra ronde" is the first, yellow choice, the lesson the second; the rules track: as few).
   const dueItems = rules ? gradedStepIds(rc[0]?.lessons[0] ?? { id: '', title: '', words: [], sentences: [] }) : findLesson('l.hello')!.lesson.words.map((w) => w.id);
-  const card = daily ? dailyCard(Object.fromEntries(dueItems.map((id) => [id, { box: 1, due: today }])), today, undefined, rules ? 'regels' : 'taal') : null;
+  const manyItems = rules ? rc.slice(0, 2).flatMap((u) => u.lessons).flatMap((l) => gradedStepIds(l)) : units.slice(0, 2).flatMap((u) => u.lessons).flatMap((l) => l.words.map((w) => w.id));
+  const after = daily === 'extra' ? manyItems.slice(0, REVIEW_FIRST_ABOVE + 9) : dueItems.slice(0, 3);
+  const card = daily === 'extra' || daily === 'few'
+    ? dailyCard(Object.fromEntries(after.map((id) => [id, { box: 1, due: today }])), today, today, rules ? 'regels' : 'taal')
+    : daily ? dailyCard(Object.fromEntries(dueItems.map((id) => [id, { box: 1, due: today }])), today, undefined, rules ? 'regels' : 'taal') : null;
   const words2 = learnedItems(rules ? 'regels' : 'taal', progress.completed);
   const bramParam = new URLSearchParams(location.search).get('bram');
   const bram = (['intro', 'hello', 'back', 'due', 'streak', 'done'] as const).find((k) => k === bramParam);
@@ -583,7 +593,9 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, region, daily,
         onStart={() => {}} onRestart={() => {}} onAll={() => {}} onUpgrade={() => {}}
         onPick={(id) => setProgress((p) => ({ ...p, currentUnit: id }))}
         focusUnit={state === 'coach' ? 'u.pay' : null}
-        note={<><RulesPathNote lang={lang} country={new URLSearchParams(location.search).get('country') === 'be' ? 'be' : undefined} /><NoVoiceNote lang={lang} /></>}
+        // As App: "Over deze regels" is one of the home's lines (the last, only with room left).
+        lines={rules ? [{ id: 'rules', node: <RulesPathNote lang={lang} country={new URLSearchParams(location.search).get('country') === 'be' ? 'be' : undefined} /> }] : undefined}
+        note={<NoVoiceNote lang={lang} />}
       />
       <BottomNav current="route" onTab={() => {}} lang={lang} />
     </>

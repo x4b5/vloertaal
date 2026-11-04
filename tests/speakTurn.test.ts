@@ -11,8 +11,11 @@ import { dailyLesson } from '../src/lib/spaced';
 import index from '../public/audio-el/voices.json';
 
 /**
- * "Wat zeg je?" (stap 2, audit-didactiek punt 1 en 2): in a lesson with a chat, right before it,
- * the learner hears the colleague and says the reply first; then the chat itself.
+ * "Wat zeg je?" (stap 2, audit-didactiek punt 1 en 2): in a lesson with a chat the learner hears
+ * the colleague and says the reply first, then hears it. Right after the chat since 4 November
+ * 2026 (the owner's request): the chat teaches the reply, the turn asks it. Before the chat it
+ * asked a reply not learned yet ("Fijne avond!" in l.hello: "Tot morgen!") and gave the chat's
+ * answer away.
  */
 
 setRecordedIndex(index as ElevenIndex, null);
@@ -24,21 +27,22 @@ type Speak = Extract<Exercise, { kind: 'speak' }>;
 const turnOf = (list: Exercise[]) => list.filter((e): e is Speak => e.kind === 'speak' && Boolean(e.turn));
 const ownLessons = allLessons.filter((l) => !l.steps?.length && !isMixLesson(l) && !l.repeat);
 
-describe('"Wat zeg je?" before the chat', () => {
+describe('"Wat zeg je?" after the chat', () => {
   const hello = findLesson('l.hello')!.lesson;
 
-  it('comes right before the chat of the same dialogue, with its reply to say', () => {
+  it('comes right after the chat of the same dialogue, with its reply to say', () => {
     const list = buildLesson(hello, { review: false, seed: 1, speak: true, recorded: all });
     const [turn] = turnOf(list);
     expect(turn).toBeDefined();
     const at = list.indexOf(turn);
-    const chat = list[at + 1];
+    const chat = list[at - 1];
     expect(chat.kind).toBe('chat');
     if (chat.kind !== 'chat') return;
     expect(chat.reverse).toBeUndefined();
     expect(chat.dialogue).toBe(turn.turn);
     expect(turn.item).toEqual({ id: chat.dialogue.reply.id, nl: chat.dialogue.reply.nl, en: chat.dialogue.reply.en });
-    // The usual "say it" stays too: speaking is doubled.
+    // A second speaking exercise too: the sentence of "Probeer het vandaag" at the end (in the
+    // place of the usual "say it", tests/workTurn.test.ts).
     expect(list.filter((e) => e.kind === 'speak')).toHaveLength(2);
   });
 
@@ -75,16 +79,41 @@ describe('"Wat zeg je?" before the chat', () => {
     expect(turnOf(buildLesson(hello, { review: false, seed: 1, speak: true, easy: true, recorded: all }))).toHaveLength(0);
   });
 
+  it('asks only a reply the lesson has just taught: its chat comes first (l.hello: "Fijne avond!" / "Tot morgen!")', () => {
+    for (const lesson of ownLessons) {
+      for (const seed of [1, 42]) {
+        const list = buildLesson(lesson, { review: false, seed, speak: true, recorded: all });
+        for (const t of turnOf(list)) {
+          const chatAt = list.findIndex((e) => e.kind === 'chat' && !e.reverse && e.dialogue === t.turn);
+          expect(chatAt, lesson.id).toBeGreaterThanOrEqual(0);
+          expect(chatAt, lesson.id).toBe(list.indexOf(t) - 1);
+        }
+      }
+    }
+    const list = buildLesson(hello, { review: false, seed: 1, speak: true, recorded: all });
+    const [turn] = turnOf(list);
+    expect(turn.turn!.prompt.nl).toBe('Fijne avond!');
+    expect(turn.item.nl).toBe('Tot morgen!');
+    expect(list.slice(0, list.indexOf(turn)).some((e) => e.kind === 'chat' && e.dialogue.reply.nl === 'Tot morgen!')).toBe(true);
+  });
+
   for (const lesson of ownLessons) {
     it(`${lesson.id}: makes the lesson at most one longer, and takes the place of a less important exercise in a long one`, () => {
       for (const review of [false, true]) {
         for (const seed of [1, 42, 999]) {
-          const without = buildLesson(lesson, { review, seed, speak: true });
+          // The same lesson without the chat's turn: its colleague's line not recorded (the
+          // sentence of "Probeer het vandaag" still is, so its own turn is in both).
+          const prompts = new Set((lesson.dialogues ?? []).map((d) => d.prompt.nl));
+          const without = buildLesson(lesson, { review, seed, speak: true, recorded: (t) => !prompts.has(t) });
           const list = buildLesson(lesson, { review, seed, speak: true, recorded: all });
           const turns = turnOf(list);
           expect(turns).toHaveLength(lesson.dialogues?.length ? 1 : 0);
           if (!turns.length) { expect(list).toEqual(without); continue; }
           const rest = list.filter((e) => e !== turns[0]);
+          // A "say it" right after the turn moves one place on (never two speaking exercises in a
+          // row); everything else keeps its order.
+          const plain = (xs: Exercise[]) => xs.filter((e) => e.kind !== 'speak');
+          expect(rest.filter((e) => e.kind === 'speak')).toEqual(without.filter((e) => e.kind === 'speak'));
           if (without.length >= TURN_LONG) {
             // Same length; one exercise out: the second "what do you hear", else the picture choice.
             expect(list).toHaveLength(without.length);
@@ -98,10 +127,10 @@ describe('"Wat zeg je?" before the chat', () => {
               expect(without.some((e) => e.kind === 'build' && e.front)).toBe(true);
             }
             // Everything else the same, in the same order.
-            expect(rest).toEqual(without.filter((e) => e !== gone[0]));
+            expect(plain(rest)).toEqual(plain(without.filter((e) => e !== gone[0])));
           } else {
             expect(list).toHaveLength(without.length + 1);
-            expect(rest).toEqual(without);
+            expect(plain(rest)).toEqual(plain(without));
           }
           // 21 exercises, plus the tip's second page ("Zeg het zo", only a phrase to hear) since the tip has two pages.
           expect(list.length - list.filter((e) => e.kind === 'tip' && e.part === 'say').length).toBeLessThanOrEqual(21);

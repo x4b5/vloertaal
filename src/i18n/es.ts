@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Mañana: {n} palabra', many: 'Mañana: {n} palabras', other: 'Mañana: {n} palabras' },
     firstWordsTomorrow: 'Mañana vuelven tus primeras palabras',
     extraRound: 'Ronda extra',
+    reviewFirstHint: 'Primero repasa. Así recuerdas más.', // nieuw, nalezen
     wordsStrongerN: { one: '{n} palabra mejor aprendida', many: '{n} palabras mejor aprendidas', other: '{n} palabras mejor aprendidas' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     noMistakes: 'Sin errores',
     nextUp: 'Siguiente',
@@ -516,6 +517,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': '¡Cuidado, el suelo está mojado!',
     's.danger.2': '¿Dónde está la salida de emergencia?',
     's.danger.3': '¡Hay un accidente!',
+    'l.alarm': 'La alarma de incendio y la evacuación', // nieuw, nalezen
+    'w.alarm': 'la alarma', // nieuw, nalezen
+    'w.ontruimen': 'evacuar (todos salen del edificio)', // nieuw, nalezen
+    'w.vluchtroute': 'la ruta de evacuación', // nieuw, nalezen
+    'w.trap': 'la escalera', // nieuw, nalezen
+    'w.verzamelplaats': 'el punto de encuentro (donde todos se reúnen fuera)', // nieuw, nalezen
+    'w.brandblusser': 'el extintor', // nieuw, nalezen
+    's.alarm.1': '¿Dónde está el extintor?', // nieuw, nalezen
+    's.alarm.2': 'Tenemos que evacuar el edificio.', // nieuw, nalezen
+    's.alarm.3': 'Usa la escalera, no el ascensor.', // nieuw, nalezen
     'l.accident': 'Avisar de un accidente',
     'w.gewond': 'herido',
     'w.bloeden': 'sangrar',
@@ -595,6 +606,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Sí, lo llevo puesto.',
     'c.danger.q': '¿Hay un accidente?',
     'c.danger.a': 'Sí, ¡llama al 112!',
+    'c.alarm.q': '¿Están todos fuera?', // nieuw, nalezen
+    'c.alarm.a': 'No, mi compañero todavía no está.', // nieuw, nalezen
     'c.accident.q': '¿Qué ha pasado?',
     'c.accident.a': 'Se ha caído. Está sangrando.',
     'l.notyet': 'Esto todavía no lo he aprendido',

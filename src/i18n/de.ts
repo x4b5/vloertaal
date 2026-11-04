@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Morgen: {n} Wort', other: 'Morgen: {n} Wörter' },
     firstWordsTomorrow: 'Morgen kommen deine ersten Wörter wieder',
     extraRound: 'Extra-Runde',
+    reviewFirstHint: 'Erst wiederholen. Dann merkst du dir mehr.', // nieuw, nalezen
     wordsStrongerN: { one: '{n} Wort sitzt besser', other: '{n} Wörter sitzen besser' },
     noMistakes: 'Keine Fehler',
     nextUp: 'Als Nächstes',
@@ -516,6 +517,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Vorsicht, der Boden ist nass!',
     's.danger.2': 'Wo ist der Notausgang?',
     's.danger.3': 'Es ist ein Unfall passiert!',
+    'l.alarm': 'Feueralarm und Evakuierung', // nieuw, nalezen
+    'w.alarm': 'der Alarm', // nieuw, nalezen
+    'w.ontruimen': 'räumen, evakuieren (alle verlassen das Gebäude)', // nieuw, nalezen
+    'w.vluchtroute': 'der Fluchtweg', // nieuw, nalezen
+    'w.trap': 'die Treppe', // nieuw, nalezen
+    'w.verzamelplaats': 'der Sammelplatz (wo sich alle draußen treffen)', // nieuw, nalezen
+    'w.brandblusser': 'der Feuerlöscher', // nieuw, nalezen
+    's.alarm.1': 'Wo hängt der Feuerlöscher?', // nieuw, nalezen
+    's.alarm.2': 'Wir müssen das Gebäude räumen.', // nieuw, nalezen
+    's.alarm.3': 'Nimm die Treppe, nicht den Aufzug.', // nieuw, nalezen
     'l.accident': 'Einen Unfall melden',
     'w.gewond': 'verletzt',
     'w.bloeden': 'bluten',
@@ -595,6 +606,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Ja, ich trage ihn.',
     'c.danger.q': 'Ist ein Unfall passiert?',
     'c.danger.a': 'Ja, ruf 112 an!',
+    'c.alarm.q': 'Sind alle draußen?', // nieuw, nalezen
+    'c.alarm.a': 'Nein, mein Kollege ist noch nicht da.', // nieuw, nalezen
     'c.accident.q': 'Was ist passiert?',
     'c.accident.a': 'Er ist gestürzt. Er blutet.',
     'l.notyet': 'Das habe ich noch nicht gelernt',

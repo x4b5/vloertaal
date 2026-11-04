@@ -61,6 +61,14 @@ const t: CultureTranslation = {
     'c.unsafe.o2': 'Bir şey olmadığı için hiçbir şey söylemezsin.',
     'c.unsafe.o3': 'Paleti kendin düzeltir ve kimseye söylemezsin.', // nieuw, nalezen
     'c.unsafe.w': 'Ucuz atlatılan bir kaza bir uyarıdır. Bildirmek gerçek bir kazayı önlemeye yardım eder. İşveren seni bunun için cezalandıramaz.',
+    'c.alarm': 'Alarm çalıyor: dur ve dışarı çık', // nieuw, nalezen
+    'c.alarm.b': 'İlk gününde acil çıkışların ve toplanma alanının nerede olduğunu sor. Alarm çaldığında işini hemen bırak. Eşyalarını bırak ve kaçış yolundan dışarı çık. Merdiveni kullan, asansörü asla. Toplanma alanında kimin dışarıda olduğunu sayarlar, o yüzden orada kal. Sadece bir tatbikat olduğunu düşünsen de dışarı çık.', // nieuw, nalezen
+    'c.alarm.p': 'Yeniyim. Toplanma alanı nerede?', // nieuw, nalezen
+    'c.alarm.s': 'Yangın alarmı çalıyor. Bir siparişi bitirmek üzeresin. Ne yaparsın?', // nieuw, nalezen
+    'c.alarm.o1': 'Hemen durur ve toplanma alanına yürürsün.', // nieuw, nalezen
+    'c.alarm.o2': 'Önce siparişi bitirir, sonra dışarı çıkarsın.', // nieuw, nalezen
+    'c.alarm.o3': 'Önce dolabından montunu ve telefonunu alırsın.', // nieuw, nalezen
+    'c.alarm.w': 'Duman hızla yayılır, o yüzden hemen çıkarsın. Eşyaların bekleyebilir. Toplanma alanında herkesi sayarlar: böylece kimse seni içeride aramak zorunda kalmaz.', // nieuw, nalezen
     'c.accident': 'Her kazayı bildir',
     'c.accident.b': 'Her kazayı, küçük olsa bile, amirine veya BHV’er’e (iş yerindeki ilk yardım görevlisine) söyle. Bir ajans üzerinden mi çalışıyorsun? Ajansa da haber ver. Acil durumda önce 112’yi ara. Kazanın olduğu şirket, ciddi bir kazayı Nederlandse Arbeidsinspectie’ye bildirmek zorundadır (ajans üzerinden çalışıyorsan da): biri öldüğünde, kalıcı olarak yaralandığında veya hastanede yatması gerektiğinde. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.accident.p': 'İş arkadaşım yaralandı. İlk yardım görevlisi nerede?',

@@ -1031,6 +1031,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'Pot plăti cu cardul aici?',
     'c.checkout.a': 'Da, sigur, se poate.',
     'u.numbers': 'Timp, bani și măsuri',
+    'l.counting': 'Numerele', // nieuw, nalezen
+    'w.dertien': 'treisprezece (13)', // nieuw, nalezen
+    'w.dertig': 'treizeci (30)', // nieuw, nalezen
+    'w.zeventien': 'șaptesprezece (17)', // nieuw, nalezen
+    'w.zeventig': 'șaptezeci (70)', // nieuw, nalezen
+    'w.zevenenveertig': 'patruzeci și șapte (47)', // nieuw, nalezen
+    'w.vierenzeventig': 'șaptezeci și patru (74)', // nieuw, nalezen
+    's.counting.1': 'Am treisprezece cutii, nu treizeci.', // nieuw, nalezen
+    's.counting.2': 'Locația șaptezeci și patru e goală.', // nieuw, nalezen
+    's.counting.3': 'Puteți să-l spuneți cifră cu cifră?', // nieuw, nalezen
+    'c.counting.q': 'Câte cutii mai sunt?', // nieuw, nalezen
+    'c.counting.a': 'Șaptezeci. Șapte, zero.', // nieuw, nalezen
     'l.hours': 'Ore și timp',
     'w.uur': 'ora',
     'w.minuut': 'minutul',
@@ -1071,6 +1083,14 @@ const t: CultureTranslation = {
     'c.checkout.o2': 'Îi vinzi, pentru că spune că are 19 ani.',
     'c.checkout.o3': 'Îi vinzi, dar doar o doză.',
     'c.checkout.w': 'Fără act nu poți ști câți ani are. Vânzarea de alcool cuiva sub 18 ani e interzisă prin lege, iar magazinul poate primi amendă.',
+    'c.counting': 'Vijfentwintig: întâi 5, apoi 20', // nieuw, nalezen
+    'c.counting.b': 'În olandeză, numerele de la 0 la 12 au fiecare cuvântul lor: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. Numerele de la 13 la 19 se termină în -tien: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. Zecile se termină în -tig: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. De la 21 la 99 se spune întâi ultima cifră: 25 este vijfentwintig, „cinci și douăzeci”. Deci 47 este zevenenveertig, iar 74 este vierenzeventig. Dertien și dertig sună aproape la fel: ascultă finalul. Ai dubii? Repetă cifrele una câte una.', // nieuw, nalezen
+    'c.counting.p': 'Patru, șapte? Deci patruzeci și șapte?', // nieuw, nalezen
+    'c.counting.s': 'Șeful îți spune: „Ga naar gang zevenenveertig.” Care culoar este?', // nieuw, nalezen
+    'c.counting.o1': 'Culoarul 47.', // nieuw, nalezen
+    'c.counting.o2': 'Culoarul 74.', // nieuw, nalezen
+    'c.counting.o3': 'Culoarul 40.', // nieuw, nalezen
+    'c.counting.w': '„Zevenenveertig” înseamnă „șapte și patruzeci”: întâi 7, apoi 40. Deci este culoarul 47. Mulți nou-veniți aud 74 și merg la culoarul greșit.', // nieuw, nalezen
     'c.hours': '„Half acht” înseamnă 7:30',
     'c.hours.b': 'În olandeză, „half” se numără spre ora următoare: half acht înseamnă 7:30, nu 8:30. Kwart over acht înseamnă 8:15, iar kwart voor acht înseamnă 7:45. Verifică-ți orele: ora de sfârșit minus ora de început, minus pauza. Pauza de multe ori nu e plătită. Notează-ți orele în fiecare zi.',
     'c.hours.p': '„Half acht”? Adică o jumătate de oră înainte de opt?',

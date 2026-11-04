@@ -183,6 +183,36 @@ export const units: Unit[] = [
         ],
       },
       {
+        // Fire alarm and evacuation (the owner's plan, phase 2, 4 November 2026): part of every
+        // tour on the first day, and l.danger had no room for it. "de brand" and "de nooduitgang"
+        // (l.danger) are already words of another lesson; "buiten" (l.smoking) comes in the chat.
+        // No BHV’er here: Belgium has none (src/content/taalBe), so the lesson and its tip stay the
+        // same in both countries. No picture for "ontruimen": people leaving a building would look like the
+        // emergency exit or the escape route. "de trap" shares the ladder's emoji (🪜), so the two
+        // drawings never stand side by side in a picture choice.
+        id: 'l.alarm',
+        title: 'Fire alarm and evacuation',
+        words: [
+          { id: 'w.alarm', nl: 'het alarm', en: 'the alarm', emoji: '🚨' },
+          { id: 'w.ontruimen', nl: 'ontruimen', en: 'to evacuate (everyone leaves the building)', emoji: '🚶‍➡️', picture: false },
+          { id: 'w.vluchtroute', nl: 'de vluchtroute', en: 'the escape route', emoji: '🏃‍➡️' },
+          { id: 'w.trap', nl: 'de trap', en: 'the stairs', emoji: '🪜' },
+          { id: 'w.verzamelplaats', nl: 'de verzamelplaats', en: 'the assembly point (where everyone meets outside)', emoji: '🚩' },
+          { id: 'w.brandblusser', nl: 'de brandblusser', en: 'the fire extinguisher', emoji: '🧯' },
+        ],
+        sentences: [
+          { id: 's.alarm.1', nl: 'Waar hangt de brandblusser?', en: 'Where is the fire extinguisher?' },
+          { id: 's.alarm.2', nl: 'We moeten het gebouw ontruimen.', en: 'We must evacuate the building.' },
+          { id: 's.alarm.3', nl: 'Neem de trap, niet de lift.', en: 'Take the stairs, not the lift.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.alarm.q', nl: 'Is iedereen buiten?', en: 'Is everyone outside?' },
+            reply: { id: 'c.alarm.a', nl: 'Nee, mijn collega is er nog niet.', en: 'No, my colleague is not here yet.' },
+          },
+        ],
+      },
+      {
         // "vallen" (w.vallen, l.site) and "melden" (w.melden, l.gethelp) are already words of
         // other lessons: here they come in the sentences and the chat.
         id: 'l.accident',

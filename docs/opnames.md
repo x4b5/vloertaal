@@ -206,13 +206,22 @@ Dan passen we eerst de tekst aan (in `src/i18n/ti.ts`) en neemt de spreker daarn
 Eén zin vergeten? Dat geeft niets. Die zin leest dan niemand voor (de app laat de knop weg), de rest werkt.
 ## 6. "Wat zeg je?" in de les
 
-Voor een gesprek in de les komt nu "Wat zeg je?": de leerling hoort de collega en zegt zelf het
-antwoord. Dat gebruikt de opnames die er al zijn (de zin van de collega en het antwoord, `c.*.q` en
-`c.*.a` in `voices.json`). Er is niets nieuws op te nemen.
+Na een gesprek in de les komt nu "Wat zeg je?": de leerling hoort de collega en zegt zelf het
+antwoord dat het gesprek net heeft geleerd. Dat gebruikt de opnames die er al zijn (de zin van de
+collega en het antwoord, `c.*.q` en `c.*.a` in `voices.json`). Er is niets nieuws op te nemen.
 
 Een gesprek zonder opname krijgt "Wat zeg je?" nog niet (nu 77 van de 102 gesprekken wel). Neem je de
 ontbrekende zinnen op (stap 1 tot en met 4), dan komt "Wat zeg je?" er vanzelf bij. Er hoeft dan
 niets aan de code te veranderen.
+
+Aan het eind van een les komt ook "Wat zeg je?" op de zin van "Probeer het vandaag": de leerling
+krijgt het moment van de kaart als vraag en zegt de zin. Dat kan alleen als die zin is opgenomen in de
+stem van de leerling (Thijmen en Ariel). Nu hebben 73 van de 96 zinnen een opname. Zonder opname blijft
+daar het gewone "Zeg het". Nog op te nemen (4 november 2026): `c.dates.p`, `c.permit.p`,
+`c.kids.p`, `c.mychoice.p`, `c.nextstep.p`, `c.body.p`, `c.healthy.p`, `c.budget.p`,
+`c.jobends.p`, `c.harvest.p`, `c.greensafe.p`, `c.workorder.p`, `c.handover.p`, `c.workshop.p`,
+`c.power.p`, `c.garage.p`, `c.carjob.p`, `c.placement.p`, `c.review.p`, `c.council.p`,
+`c.police.p`, `c.login.p`, `c.phish.p`.
 
 ## 7. De geluidsscènes ("Luister op de werkvloer")
 

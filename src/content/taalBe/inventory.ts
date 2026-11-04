@@ -47,6 +47,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.safety': { kind: 'B', lessons: {
     'l.gear': L('A', 'A'),
     'l.danger': L('A', 'A'),
+    'l.alarm': L('A', 'A', 'geen BHV’er in de les of de tip; in Vlaanderen hoor je ook evacueren en de vluchtweg (nakijken door een Vlaamse NT2-docent)'),
     'l.accident': L('B', 'B', 'de BHV’er → de EHBO’er; Nederlandse Arbeidsinspectie → Toezicht op het Welzijn op het Werk; arbeidsongevallenverzekeraar'),
     'l.notyet': L('A', 'A'),
   } },
@@ -55,6 +56,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.directions': L('A', 'A'),
   } },
   'u.data': { kind: 'B', lessons: {
+    'l.counting': L('A', 'A', 'getallen zijn in Vlaanderen dezelfde'),
     'l.details': L('B', 'B', 'de Belastingdienst → FOD Financiën; BSN → rijksregisternummer; payslip → loonbrief'),
     'l.dates': L('A', 'A'),
   } },

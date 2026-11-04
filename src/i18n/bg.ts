@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Утре: {n} дума', other: 'Утре: {n} думи' },
     firstWordsTomorrow: 'Утре се връщат първите ти думи',
     extraRound: 'Допълнителен кръг',
+    reviewFirstHint: 'Първо преговор. Така ще запомниш повече.', // nieuw, nalezen
     wordsStrongerN: { one: '{n} затвърдена дума', other: '{n} затвърдени думи' },
     noMistakes: 'Без грешки',
     nextUp: 'Следващ',
@@ -555,6 +556,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Внимавай, подът е мокър!',
     's.danger.2': 'Къде е аварийният изход?',
     's.danger.3': 'Има злополука!',
+    'l.alarm': 'Пожарна аларма и евакуация', // nieuw, nalezen
+    'w.alarm': 'алармата', // nieuw, nalezen
+    'w.ontruimen': 'евакуирам (всички излизат от сградата)', // nieuw, nalezen
+    'w.vluchtroute': 'евакуационният път', // nieuw, nalezen
+    'w.trap': 'стълбите', // nieuw, nalezen
+    'w.verzamelplaats': 'мястото за събиране (където всички се събират навън)', // nieuw, nalezen
+    'w.brandblusser': 'пожарогасителят', // nieuw, nalezen
+    's.alarm.1': 'Къде е пожарогасителят?', // nieuw, nalezen
+    's.alarm.2': 'Трябва да евакуираме сградата.', // nieuw, nalezen
+    's.alarm.3': 'Използвай стълбите, не асансьора.', // nieuw, nalezen
     's.accident.1': 'Колегата ми падна.',
     's.accident.2': 'Порязах се.',
     's.accident.3': 'Искам да съобщя за злополука.',
@@ -592,6 +603,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Да, нося я.',
     'c.danger.q': 'Има ли злополука?',
     'c.danger.a': 'Да, обади се на 112!',
+    'c.alarm.q': 'Всички ли са навън?', // nieuw, nalezen
+    'c.alarm.a': 'Не, колегата ми още го няма.', // nieuw, nalezen
     'c.accident.q': 'Какво се случи?',
     'c.accident.a': 'Падна. Кърви.',
     'l.notyet': 'Това още не са ме учили',

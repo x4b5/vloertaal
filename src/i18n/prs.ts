@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: 'فردا: {n} کلمه',
     firstWordsTomorrow: 'فردا اولین کلمه‌های شما دوباره می‌آیند',
     extraRound: 'یک دور اضافی',
+    reviewFirstHint: 'اول مرور کنید. اینطور بیشتر به یاد تان می‌ماند.', // nieuw, nalezen
     wordsStrongerN: '{n} کلمه قوی‌تر',
     noMistakes: 'بدون اشتباه',
     nextUp: 'بعدی',
@@ -555,6 +556,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'هوش کن، زمین تر است!',
     's.danger.2': 'راه خروج عاجل کجاست؟',
     's.danger.3': 'حادثه شده!',
+    'l.alarm': 'زنگ خطر آتش‌سوزی و تخلیه', // nieuw, nalezen
+    'w.alarm': 'زنگ خطر', // nieuw, nalezen
+    'w.ontruimen': 'تخلیه کردن (همه از تعمیر بیرون می‌روند)', // nieuw, nalezen
+    'w.vluchtroute': 'راه فرار عاجل', // nieuw, nalezen
+    'w.trap': 'زینه', // nieuw, nalezen
+    'w.verzamelplaats': 'محل جمع شدن (جایی که همه بیرون جمع می‌شوند)', // nieuw, nalezen
+    'w.brandblusser': 'کپسول آتش‌خاموش‌کن', // nieuw, nalezen
+    's.alarm.1': 'کپسول آتش‌خاموش‌کن کجاست؟', // nieuw, nalezen
+    's.alarm.2': 'باید تعمیر را تخلیه کنیم.', // nieuw, nalezen
+    's.alarm.3': 'از زینه بروید، نه با لفت.', // nieuw, nalezen
     's.accident.1': 'همکارم افتاده است.',
     's.accident.2': 'خود را بریده‌ام.',
     's.accident.3': 'می‌خواهم یک حادثه را گزارش بدهم.',
@@ -592,6 +603,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'بلی، سرم است.',
     'c.danger.q': 'حادثه شده؟',
     'c.danger.a': 'بلی، به ۱۱۲ زنگ بزن!',
+    'c.alarm.q': 'همه بیرون هستند؟', // nieuw, nalezen
+    'c.alarm.a': 'نخیر، همکارم هنوز نیامده.', // nieuw, nalezen
     'c.accident.q': 'چه شده است؟',
     'c.accident.a': 'افتاده است. خون‌ریزی دارد.',
     'l.notyet': 'این را هنوز یاد نگرفته‌ام',

@@ -1031,6 +1031,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'Burada kartla ödeyebilir miyim?',
     'c.checkout.a': 'Evet, tabii, olur.',
     'u.numbers': 'Zaman, para ve ölçüler',
+    'l.counting': 'Sayılar', // nieuw, nalezen
+    'w.dertien': 'on üç (13)', // nieuw, nalezen
+    'w.dertig': 'otuz (30)', // nieuw, nalezen
+    'w.zeventien': 'on yedi (17)', // nieuw, nalezen
+    'w.zeventig': 'yetmiş (70)', // nieuw, nalezen
+    'w.zevenenveertig': 'kırk yedi (47)', // nieuw, nalezen
+    'w.vierenzeventig': 'yetmiş dört (74)', // nieuw, nalezen
+    's.counting.1': 'On üç kutum var, otuz değil.', // nieuw, nalezen
+    's.counting.2': 'Yetmiş dört numaralı yer boş.', // nieuw, nalezen
+    's.counting.3': 'Rakam rakam söyleyebilir misiniz?', // nieuw, nalezen
+    'c.counting.q': 'Kaç kutu kaldı?', // nieuw, nalezen
+    'c.counting.a': 'Yetmiş. Yedi, sıfır.', // nieuw, nalezen
     'l.hours': 'Saatler ve zaman',
     'w.uur': 'saat (60 dakika)',
     'w.minuut': 'dakika',
@@ -1071,6 +1083,14 @@ const t: CultureTranslation = {
     'c.checkout.o2': '19 yaşında olduğunu söylediği için satarsın.',
     'c.checkout.o3': 'Satarsın, ama sadece bir kutu.',
     'c.checkout.w': 'Kimlik olmadan yaşını bilemezsin. 18 yaşından küçük birine alkol satmak kanuna aykırıdır ve mağaza para cezası alabilir.',
+    'c.counting': 'Vijfentwintig: önce 5, sonra 20', // nieuw, nalezen
+    'c.counting.b': 'Hollandacada 0’dan 12’ye kadar her sayının kendi kelimesi var: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. 13’ten 19’a kadar olan sayılar -tien ile biter: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. Onluklar -tig ile biter: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. 21’den 99’a kadar önce son rakam söylenir: 25, vijfentwintig yani “beş ve yirmi” olur. Yani 47 zevenenveertig, 74 de vierenzeventig. Dertien ve dertig neredeyse aynı duyulur: sonuna dikkat et. Emin değil misin? Rakamları tek tek tekrar et.', // nieuw, nalezen
+    'c.counting.p': 'Dört, yedi? Yani kırk yedi?', // nieuw, nalezen
+    'c.counting.s': 'Amirin diyor ki: “Ga naar gang zevenenveertig.” Hangi koridor?', // nieuw, nalezen
+    'c.counting.o1': '47 numaralı koridor.', // nieuw, nalezen
+    'c.counting.o2': '74 numaralı koridor.', // nieuw, nalezen
+    'c.counting.o3': '40 numaralı koridor.', // nieuw, nalezen
+    'c.counting.w': '“Zevenenveertig”, “yedi ve kırk” demek: önce 7, sonra 40. Yani 47 numaralı koridor. Birçok yeni gelen 74 duyar ve yanlış koridora gider.', // nieuw, nalezen
     'c.hours': '“Half acht” 7.30 demek',
     'c.hours.b': 'Hollandacada “half” bir sonraki saate göre söylenir: half acht 7.30 demektir, 8.30 değil. Kwart over acht 8.15, kwart voor acht ise 7.45 demektir. Saatlerini kendin kontrol et: bitiş saati eksi başlangıç saati, eksi mola. Mola çoğu zaman ücretli değildir. Saatlerini her gün not et.',
     'c.hours.p': '“Half acht” mı? Yani sekizden yarım saat önce mi?',

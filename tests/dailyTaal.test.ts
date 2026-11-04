@@ -21,6 +21,10 @@ import { addDays, dailyCard, dailyLesson, dailyWordIds, dueIds, type Cards } fro
  * answers almost any line ("Wacht even, ik vertaal het.") is never a wrong reply
  * (src/lib/exercises.ts chatOptions): the chat "Hoe heet je?" offers "Nee, nog een keer graag."
  * (the nearest lesson still to come) instead, in another order. Everything else is the same.
+ * Then (4 November 2026) half of the places go to the weak words (box 1 and 2, src/lib/spaced.ts
+ * dailyWordIds): w.herhalen (box 1, due today) takes the place of w.ondertiteling (box 4). With
+ * one word other, the random numbers give other questions and options; the sentence and the chat
+ * are the same.
  */
 
 const TODAY = '2026-10-15';

@@ -1031,6 +1031,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'Тут можна заплатити карткою?',
     'c.checkout.a': 'Так, звісно, можна.',
     'u.numbers': 'Час, гроші та міри',
+    'l.counting': 'Числа', // nieuw, nalezen
+    'w.dertien': 'тринадцять (13)', // nieuw, nalezen
+    'w.dertig': 'тридцять (30)', // nieuw, nalezen
+    'w.zeventien': 'сімнадцять (17)', // nieuw, nalezen
+    'w.zeventig': 'сімдесят (70)', // nieuw, nalezen
+    'w.zevenenveertig': 'сорок сім (47)', // nieuw, nalezen
+    'w.vierenzeventig': 'сімдесят чотири (74)', // nieuw, nalezen
+    's.counting.1': 'У мене тринадцять коробок, а не тридцять.', // nieuw, nalezen
+    's.counting.2': 'Місце сімдесят чотири порожнє.', // nieuw, nalezen
+    's.counting.3': 'Можете сказати це цифра за цифрою?', // nieuw, nalezen
+    'c.counting.q': 'Скільки коробок ще залишилося?', // nieuw, nalezen
+    'c.counting.a': 'Сімдесят. Сім, нуль.', // nieuw, nalezen
     'l.hours': 'Години та час',
     'w.uur': 'година',
     'w.minuut': 'хвилина',
@@ -1071,6 +1083,14 @@ const t: CultureTranslation = {
     'c.checkout.o2': 'Продаси, бо він каже, що йому 19.',
     'c.checkout.o3': 'Продаси, але тільки одну банку.',
     'c.checkout.w': 'Без документа ти не можеш знати, скільки йому років. Продавати алкоголь людині до 18 років заборонено законом, і магазин можуть оштрафувати.',
+    'c.counting': 'Vijfentwintig: спершу 5, потім 20', // nieuw, nalezen
+    'c.counting.b': 'У нідерландській числа від 0 до 12 мають свої слова: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. Числа від 13 до 19 закінчуються на -tien: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. Десятки закінчуються на -tig: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. Від 21 до 99 спершу кажуть останню цифру: 25 — це vijfentwintig, «п’ять і двадцять». Отже, 47 — це zevenenveertig, а 74 — це vierenzeventig. Dertien і dertig звучать майже однаково: слухай кінець. Маєш сумнів? Повтори цифри по одній.', // nieuw, nalezen
+    'c.counting.p': 'Чотири, сім? Тобто сорок сім?', // nieuw, nalezen
+    'c.counting.s': 'Керівник каже: «Ga naar gang zevenenveertig.» Який це ряд?', // nieuw, nalezen
+    'c.counting.o1': 'Ряд 47.', // nieuw, nalezen
+    'c.counting.o2': 'Ряд 74.', // nieuw, nalezen
+    'c.counting.o3': 'Ряд 40.', // nieuw, nalezen
+    'c.counting.w': '«Zevenenveertig» — це «сім і сорок»: спершу 7, потім 40. Отже, це ряд 47. Багато новачків чують 74 і йдуть не в той ряд.', // nieuw, nalezen
     'c.hours': '«Half acht» — це 7:30',
     'c.hours.b': 'У нідерландській «half» рахують до наступної години: half acht — це 7:30, а не 8:30. Kwart over acht — це 8:15, а kwart voor acht — це 7:45. Перевіряй свої години самостійно: час кінця мінус час початку, мінус перерва. Перерву часто не оплачують. Записуй свої години щодня.',
     'c.hours.p': '«Half acht»? Тобто за пів години до восьмої?',

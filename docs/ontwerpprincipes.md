@@ -22,6 +22,8 @@ dezelfde principes in beeld zien.
 
 - **Hooguit 3 dingen om op te tikken per scherm.** Lijsten met één soort rij zijn de
   uitzondering. Controle: `scripts/max3/count.cjs`.
+- **Op de begintab is de gele kaart de volgende stap.** De toets en "Gelukt?" staan als kleine
+  regel onder de les, en alleen als er nog plek is binnen de 3.
 - **Wat aandacht vraagt, laat de rest zachter worden.** Laat het ene niet harder worden. Kies je
   een antwoord, dan stappen de andere antwoorden terug.
 - **Zeg iets één keer.** Geen label dat de vraag herhaalt, geen "Goed zo!" naast een groen vinkje.
@@ -57,6 +59,9 @@ Gebaseerd op wat onderzoek zegt over onthouden.
 - **Gespreid herhalen.** "Herhaal vandaag" gebruikt een kaartenbak: een woord komt terug na 1,
   2, 4, 7, 14 en 30 dagen. Fout betekent morgen weer (`src/lib/spaced.ts`; spacing, Cepeda e.a.
   2006).
+- **Eerst herhalen, dan iets nieuws.** Wachten er na de herhaling nog meer dan 15 woorden, dan is
+  "Extra ronde" de eerste keuze en de nieuwe les de tweede. De les gaat niet op slot
+  (`src/lib/pace.ts`, `REVIEW_FIRST_ABOVE`).
 - **Van herkennen naar zelf maken.** Eerst kies je, dan bouw je, typ je en zeg je het zelf.
   Later zet je een woord vooraan en bouw je de hele zin.
 - **Door elkaar.** Een les "Alles door elkaar" mengt eerdere onderwerpen. De winst daarvan zit

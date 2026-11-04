@@ -61,6 +61,14 @@ const t: CultureTranslation = {
     'c.unsafe.o2': 'Ne dis rien, car il ne s’est rien passé.',
     'c.unsafe.o3': 'Répare toi-même la palette et ne le dis à personne.', // nieuw, nalezen
     'c.unsafe.w': 'Un presque-accident est un avertissement. Le signaler aide à éviter un vrai accident. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé.',
+    'c.alarm': 'L’alarme sonne : arrête-toi et sors', // nieuw, nalezen
+    'c.alarm.b': 'Le premier jour, demande où sont les sorties de secours et le point de rassemblement. Quand l’alarme sonne, arrête tout de suite ton travail. Laisse tes affaires et sors par le chemin d’évacuation. Prends l’escalier, jamais l’ascenseur. Au point de rassemblement, on compte qui est dehors : alors reste là. Sors aussi quand tu penses que c’est seulement un exercice.', // nieuw, nalezen
+    'c.alarm.p': { m: 'Je suis nouveau. Où est le point de rassemblement ?', f: 'Je suis nouvelle. Où est le point de rassemblement ?', x: 'Je suis nouveau / nouvelle. Où est le point de rassemblement ?' }, // nieuw, nalezen
+    'c.alarm.s': 'L’alarme incendie sonne. Tu as presque fini une commande. Que fais-tu ?', // nieuw, nalezen
+    'c.alarm.o1': 'Arrête-toi tout de suite et va au point de rassemblement.', // nieuw, nalezen
+    'c.alarm.o2': 'Finis d’abord la commande, puis sors.', // nieuw, nalezen
+    'c.alarm.o3': 'Va d’abord chercher ta veste et ton téléphone au casier.', // nieuw, nalezen
+    'c.alarm.w': 'La fumée se répand vite, donc tu sors tout de suite. Tes affaires peuvent attendre. Au point de rassemblement, on compte tout le monde : ainsi, personne ne doit te chercher à l’intérieur.', // nieuw, nalezen
     'c.accident': 'Signale chaque accident',
     'c.accident.b': 'Parle de chaque accident à ton responsable ou au BHV’er (le secouriste de l’entreprise), même d’un petit. Tu travailles via une agence ? Préviens aussi l’agence. En cas d’urgence, appelle d’abord le 112. L’entreprise où l’accident a eu lieu doit déclarer un accident grave à la Nederlandse Arbeidsinspectie (même si tu travailles via une agence) : quand quelqu’un meurt, est blessé pour toute sa vie ou doit rester à l’hôpital. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.accident.p': 'Mon collègue est blessé. Où est le secouriste ?',
