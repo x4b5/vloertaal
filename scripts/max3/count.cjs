@@ -401,6 +401,13 @@ function defineStates(LANG) {
     add('scene:question', shot('scene&state=question&at=0'), null, { expect: '.scene-choices' });
     add('scene:answered', shot('scene&state=question&at=0'), async (p) => { await tap(p, '.scene-choices .choice', 0); await settle(p, 600); }, { expect: '.scene-why' });
   }
+  // "Hoe zeg je het?", the pilot with a mouth per sound (src/dev/KlankShot.tsx; not in the path
+  // yet): the overview (one row per sound, a list), each card (the sound, its word's speaker,
+  // "Langzaam"), a card after a tap on the sound, and ui on the calm screen (no motion).
+  add('klank:overview', shot('klanken'), null, { list: true, expect: '.klank-list .klank-row' });
+  for (const k of ['aa', 'ee', 'oe', 'uu', 'eu', 'ui']) add(`klank:${k}`, shot(`klank&k=${k}`), null, { expect: '.klank-play' });
+  add('klank:uu-played', shot('klank&k=uu'), async (p) => { await tap(p, '.klank-play'); await settle(p, 600); }, { expect: '.klank-slow' });
+  add('klank:ui-calm', shot('klank&k=ui&calm=on'), null, { expect: '.klank-steps' });
   add('route:topic-sample', shot('topic&cu=u.firstday&state=new&access=sample'), null, { list: true });
   add('route:all-topics-tap', shot('all&state=mid'), async (p) => { await tap(p, '.topic-row', 0); await settle(p); }, { list: true });
   // "Volgorde": the own course in the order of the path (the choice is kept on the device).

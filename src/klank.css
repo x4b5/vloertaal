@@ -1,0 +1,62 @@
+/* "Hoe zeg je het?" (src/components/KlankCard.tsx, src/components/Mouth.tsx): a pilot card per
+   sound, 4 November 2026. Tokens only, so it follows every colour (Zand, Haven, Werkjas, Donker);
+   the face itself keeps its own skin colours, like the cast. */
+
+.klank-card { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 18px 16px 20px; }
+
+/* The sound: the letters and the mouth are one button. */
+.klank-play {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  width: 100%; padding: 6px 8px 0; border: 0; border-radius: var(--radius);
+  background: none; color: var(--ink); cursor: pointer;
+}
+.klank-letters { font-size: 3.6rem; line-height: 1; font-weight: 750; letter-spacing: 0.04em; }
+.klank-play .mouth {
+  display: block; max-width: 100%; height: auto;
+  border-radius: 28px; background: var(--concrete);
+  border: 2px solid var(--line);
+}
+.klank-play:active .mouth { transform: translateY(1px); }
+
+/* ui: where it starts and where it ends, small. */
+.klank-steps { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--muted); }
+.klank-steps .mouth { border-radius: 14px; background: var(--concrete); border: 2px solid var(--line); }
+.klank-arrow { font-size: 1.6rem; font-weight: 700; }
+[dir='rtl'] .klank-arrow { transform: scaleX(-1); }
+
+.klank-how { margin: 0; max-width: 24rem; text-align: center; font-size: var(--fs-answer); line-height: 1.4; }
+.klank-how .bi-en { font-weight: 600; }
+
+/* The example word: picture, word with the sound marked, its speaker. */
+.klank-word {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  width: 100%; padding-top: 12px; border-top: 2px solid var(--line);
+}
+.klank-word-nl { font-size: var(--fs-word); font-weight: 700; }
+.klank-mark { color: var(--right-ink); font-weight: 800; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+
+.klank-slow { background: var(--card); color: var(--ink); width: min(100%, 18rem); }
+.klank-slow .bi-help { --help-size: 0.75em; font-weight: 400; }
+
+/* The overview of the pilot (dev page /?shot=klanken): one row per sound, one tap each. */
+.klank-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.klank-row {
+  display: grid; grid-template-columns: 4.2rem auto 1fr; align-items: center; gap: 12px;
+  width: 100%; padding: 8px 12px; text-align: start;
+  border: 2px solid var(--line); border-radius: var(--radius); background: var(--card); color: var(--ink);
+  text-decoration: none;
+}
+.klank-row .klank-letters { font-size: 2.2rem; }
+.klank-row .mouth { border-radius: 14px; background: var(--concrete); }
+.klank-row-word { display: flex; align-items: center; gap: 8px; font-size: 1.25rem; font-weight: 650; justify-self: end; }
+
+/* The strip for the owner (/?shot=klankstrip): rest and the sound's position side by side. */
+.klank-strip { display: grid; gap: 10px; }
+.klank-strip-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.klank-strip-row .klank-letters { font-size: 1.8rem; width: 3.2rem; }
+.klank-strip-row .mouth { border-radius: 12px; background: var(--concrete); border: 2px solid var(--line); }
+.klank-strip-cap { display: block; text-align: center; font-size: 0.8rem; color: var(--muted); }
+.klank-grid { display: grid; grid-template-columns: repeat(6, max-content); gap: 6px; justify-content: center; }
+.klank-col { display: grid; justify-items: center; align-content: start; gap: 6px; }
+.klank-col .klank-letters { font-size: 2rem; }
+.klank-col .mouth { border-radius: 12px; background: var(--concrete); border: 2px solid var(--line); }

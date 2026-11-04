@@ -60,6 +60,7 @@ import { InstapCheckShot } from './InstapCheckShot';
 import { MeldingShot } from './MeldingShot';
 import { GeluktShot } from './GeluktShot';
 import { BridgeShot } from './BridgeShot';
+import { KlankShot } from './KlankShot';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -163,6 +164,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'colleague') return <ColleagueCard lang={getHelpLanguage((lang ?? 'en') as LangCode, gender)} onBack={() => {}} />;
   // "Wil je ook de werkregels leren?" on the home, most of the course done (src/dev/BridgeShot.tsx).
   if (shot === 'bridge') return <BridgeShot lang={lang} gender={gender} />;
+  // "Hoe zeg je het?", the pilot with a mouth per sound: /?shot=klanken, klank&k=uu, klankstrip (src/dev/KlankShot.tsx).
+  if (shot === 'klank' || shot === 'klanken' || shot === 'klankstrip') return <KlankShot shot={shot} lang={lang} gender={gender} />;
   // The app icon in every variant (scripts/icons/make-icons.cjs reads these): /?shot=logo&px=512
   if (shot === 'logo') return <LogoSheet px={Number(q.get('px') ?? 120)} />;
   // The pocket card ("Spiekkaartje") of a unit: /?shot=pocket&cu=u.safety
