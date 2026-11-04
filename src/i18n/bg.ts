@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'Правилно, но внимавай с правописа',
     incorrect: 'Не съвсем',
     correctAnswer: 'Правилен отговор',
+    rightAnswerIs: 'Правилният отговор е:', // nieuw, nalezen
+    bestAnswerIs: 'Най-добрият отговор е:', // nieuw, nalezen
     yourAnswer: 'Твоят отговор',
     inARow: '{n} поред',
     cantListen: 'Сега не мога да слушам',

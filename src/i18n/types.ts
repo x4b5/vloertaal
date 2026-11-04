@@ -43,6 +43,11 @@ export const uiEn = {
   almost: 'Correct, but watch the spelling',
   incorrect: 'Not quite',
   correctAnswer: 'Correct answer',
+  /** The meaning of the heading "Het goede antwoord is:" after a wrong answer: it announces the
+   *  answer. "Correct answer" next to a red cross read as "right!" (4 November 2026). */
+  rightAnswerIs: 'The right answer is:',
+  /** The same for a situation: "Het beste antwoord is:". */
+  bestAnswerIs: 'The best answer is:',
   /** After Check, read out on the option the learner picked when it was wrong. */
   yourAnswer: 'Your answer',
   /** Kraft stamp "3 OP RIJ" in a lesson: right answers in a row. */

@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'Correct, mais attention à l’orthographe',
     incorrect: 'Pas tout à fait',
     correctAnswer: 'Bonne réponse',
+    rightAnswerIs: 'La bonne réponse est :', // nieuw, nalezen
+    bestAnswerIs: 'La meilleure réponse est :', // nieuw, nalezen
     yourAnswer: 'Ta réponse',
     inARow: '{n} d’affilée',
     cantListen: 'Je ne peux pas écouter maintenant',
