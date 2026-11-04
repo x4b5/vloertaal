@@ -141,6 +141,14 @@ const t: CultureTranslation = {
     'c.task.o2': 'Fang mit der Hälfte an, die du verstanden hast.', // nagelezen (2e lezing)
     'c.task.o3': 'Warte, bis ein Kollege es macht.',
     'c.task.w': 'Noch einmal fragen ist normal und dauert eine Minute. Einen Fehler zu beheben dauert viel länger. Die meisten Vorgesetzten zeigen es lieber zweimal.',
+    'c.clear': 'Sag zuerst das Wichtigste', // nieuw, nalezen
+    'c.clear.b': 'In vielen Sprachen ist es höflich, zuerst die ganze Geschichte zu erzählen und das Wichtigste am Ende. Bei der Arbeit hier ist es umgekehrt: Sag zuerst, was nicht stimmt oder was du brauchst, dann den Grund. Sprich ruhig und hör nach zwei oder drei Sätzen auf, damit die andere Person etwas fragen kann. Auch im Vorstellungsgespräch: zuerst die Antwort, dann ein Beispiel. Langsam sprechen ist hier nicht unhöflich: Es hilft anderen, dich zu verstehen.', // nieuw, nalezen
+    'c.clear.p': 'Entschuldigung, ich sage es noch einmal in Ruhe.', // nieuw, nalezen
+    'c.clear.s': 'Du kommst 20 Minuten zu spät. Dein Vorgesetzter fragt: „Wat is er?“ Was machst du?', // nieuw, nalezen
+    'c.clear.o1': 'Sag zuerst, dass du zu spät bist und dass es dir leidtut. Dann sag, warum.', // nieuw, nalezen
+    'c.clear.o2': 'Erzähl alles, was heute Morgen passiert ist, von Anfang an.', // nieuw, nalezen
+    'c.clear.o3': 'Sag nichts und fang schnell mit der Arbeit an.', // nieuw, nalezen
+    'c.clear.w': 'Dein Vorgesetzter will zuerst wissen, was los ist. Der Grund kommt danach. Kurz und ruhig ist klar, und hier ist es auch höflich.', // nieuw, nalezen
     'u.teamwork': 'Zusammenarbeiten',
     'l.speakup': 'Mich stört etwas',
     'w.probleem': 'das Problem',
@@ -178,6 +186,18 @@ const t: CultureTranslation = {
     's.task.3': 'Können Sie es noch einmal zeigen?',
     'd.task.q': 'Bist du fertig?',
     'd.task.a': 'Fast. Noch fünf Minuten.',
+    'l.clear': 'Kurz und klar', // nieuw, nalezen
+    'w.kort': 'kurz', // nieuw, nalezen
+    'w.duidelijk': 'klar, deutlich', // nieuw, nalezen
+    'w.belangrijkste': 'das Wichtigste', // nieuw, nalezen
+    'w.rustig': 'ruhig', // nieuw, nalezen
+    'w.teveel': 'zu viel', // nieuw, nalezen
+    'w.vraag': 'die Frage', // nieuw, nalezen
+    's.clear.1': 'Ich mache es kurz: Die Maschine ist kaputt.', // nieuw, nalezen
+    's.clear.2': 'Zuerst das Wichtigste: Ich bin krank.', // nieuw, nalezen
+    's.clear.3': 'Entschuldigung, ich rede zu schnell und zu viel.', // nieuw, nalezen
+    'd.clear.q': 'Ist das klar?', // nieuw, nalezen
+    'd.clear.a': 'Ja. Ich habe noch eine Frage.', // nieuw, nalezen
   },
 };
 

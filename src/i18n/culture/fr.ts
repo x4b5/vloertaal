@@ -141,6 +141,14 @@ const t: CultureTranslation = {
     'c.task.o2': 'Commence par la moitié que tu as comprise.', // nagelezen (2e lezing)
     'c.task.o3': 'Attends qu’un collègue le fasse.',
     'c.task.w': 'Redemander est normal et prend une minute. Réparer une erreur prend bien plus de temps. La plupart des responsables préfèrent montrer deux fois.',
+    'c.clear': 'Dis d’abord le plus important', // nieuw, nalezen
+    'c.clear.b': 'Dans beaucoup de langues, il est poli de raconter d’abord toute l’histoire, et l’essentiel à la fin. Au travail ici, c’est l’inverse : dis d’abord ce qui ne va pas ou ce dont tu as besoin, puis la raison. Parle calmement, et arrête-toi après deux ou trois phrases, pour que l’autre puisse poser une question. Dans un entretien d’embauche aussi : d’abord la réponse, puis un exemple. Parler lentement n’est pas impoli ici : ça aide les gens à te comprendre.', // nieuw, nalezen
+    'c.clear.p': 'Pardon, je le redis calmement.', // nieuw, nalezen
+    'c.clear.s': 'Tu arrives avec 20 minutes de retard. Ton responsable demande : “Wat is er?” Que fais-tu ?', // nieuw, nalezen
+    'c.clear.o1': 'Dis d’abord que tu es en retard et excuse-toi. Puis dis pourquoi.', // nieuw, nalezen
+    'c.clear.o2': 'Raconte tout ce qui s’est passé ce matin, depuis le début.', // nieuw, nalezen
+    'c.clear.o3': 'Ne dis rien et commence vite à travailler.', // nieuw, nalezen
+    'c.clear.w': 'Ton responsable veut d’abord savoir ce qui se passe. La raison vient après. Court et calme, c’est clair, et ici c’est aussi poli.', // nieuw, nalezen
     'u.teamwork': 'Travailler ensemble',
     'l.speakup': 'Quelque chose me gêne',
     'w.probleem': 'le problème',
@@ -178,6 +186,18 @@ const t: CultureTranslation = {
     's.task.3': 'Vous pouvez le montrer encore une fois ?',
     'd.task.q': 'Tu as fini ?',
     'd.task.a': 'Presque. Encore cinq minutes.',
+    'l.clear': 'Court et clair', // nieuw, nalezen
+    'w.kort': 'court', // nieuw, nalezen
+    'w.duidelijk': 'clair', // nieuw, nalezen
+    'w.belangrijkste': 'le plus important', // nieuw, nalezen
+    'w.rustig': 'calme, calmement', // nieuw, nalezen
+    'w.teveel': 'trop', // nieuw, nalezen
+    'w.vraag': 'la question', // nieuw, nalezen
+    's.clear.1': 'Je fais court : la machine est en panne.', // nieuw, nalezen
+    's.clear.2': 'D’abord le plus important : je suis malade.', // nieuw, nalezen
+    's.clear.3': 'Pardon, je parle trop vite et trop.', // nieuw, nalezen
+    'd.clear.q': 'C’est clair ?', // nieuw, nalezen
+    'd.clear.a': 'Oui. J’ai encore une question.', // nieuw, nalezen
   },
 };
 

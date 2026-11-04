@@ -38,6 +38,7 @@ const t: CultureTranslation = {
     'd.speakup.a.why': "Perguntam se há algum problema: um sim honesto é bom.",
     'd.agree.a.why': "Podes dizer que não. Propor outro dia ajuda.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'd.task.a.why': "Perguntam se está feito: esta resposta diz quase, e quanto tempo falta.",
+    'd.clear.a.why': 'Perguntam se está claro: primeiro sim, depois a única pergunta.', // nieuw, nalezen
     'c.cv.a.why': "Uma referência é um antigo chefe que pode falar sobre o teu trabalho.",
     'c.interview.a.why': "Numa entrevista de emprego, o que conta é a experiência de trabalho.",
     'c.findwork.a.why': "A pergunta é que trabalho. Esta resposta diz qual.",
