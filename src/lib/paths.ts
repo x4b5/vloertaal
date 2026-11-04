@@ -13,3 +13,5 @@ export const BELGIUM_PATH = '/belgie/';
 export const PRIVACY_PATH = '/privacy/';
 /** The group overview for coaches (src/lib/groepPage.ts): totals from the coach cards, nothing sent (noindex, not in the sitemap). */
 export const GROEP_PATH = '/groep/';
+/** The printed note for day 1 (src/lib/briefjePage.ts): a page per language, for coaches to print (noindex, not in the sitemap). */
+export const BRIEFJE_PATH = '/briefje/';

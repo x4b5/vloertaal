@@ -41,8 +41,8 @@ nummer, geen naam.
 
 ### Dag 1: zo verloopt de eerste sessie
 
-1. Geef iedere leerling **het briefje met de link** (zie „Praktisch”). Een code is niet nodig: de
-   app staat open voor iedereen.
+1. Geef iedere leerling **het briefje met de link** (vloertaal.nl/briefje, zie „Praktisch”). Een
+   code is niet nodig: de app staat open voor iedereen.
 2. Zeg alleen: *„Open deze link en begin. Ik kijk mee. Ik help als je echt niet verder kunt.”*
 3. De leerling doorloopt zelf de start: **taal kiezen → vrouw of man (alleen in talen die dat
    nodig hebben) → waar werk je → Nederland of België → welke kleur → les 1** („Say hello”, unit
@@ -218,10 +218,11 @@ deden, tellen hun eerste les nog wel.
 
 ## Praktisch
 
-- **De link op papier.** Geef ieder een briefje met de link in grote letters, het liefst in de
-  eigen taal (`vloertaal.nl/pl`, `vloertaal.nl/ar` …) en met een QR-code. Een toegangscode is niet
-  meer nodig: alle lessen zijn open voor iedereen. Neem het briefje na afloop niet terug: de
-  leerling heeft het nodig op een andere telefoon.
+- **De link op papier.** Geef ieder een briefje met de link in grote letters, in de eigen taal
+  (`vloertaal.nl/pl`, `vloertaal.nl/ar` …) en met een QR-code. Kant-en-klaar per taal:
+  **vloertaal.nl/briefje** (A4, in de hulptaal en in het Nederlands; test de QR-code eerst met je
+  eigen telefoon). Een toegangscode is niet meer nodig: alle lessen zijn open voor iedereen. Neem
+  het briefje na afloop niet terug: de leerling heeft het nodig op een andere telefoon.
 - **Lessen bewaren voor zonder internet.** Zet bij wie weinig data of slecht bereik heeft (in de
   kas, op de bouw, in de bus) de instelling aan: **Instellingen → Deze telefoon → „Lessen op deze
   telefoon”**. Doe dat op dag 1 via wifi. Het onderwerp waar de leerling mee bezig is, wordt dan

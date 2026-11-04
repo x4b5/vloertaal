@@ -414,6 +414,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'per Check', // nieuw, nalezen
     checkUndo: 'Doch die Lektionen machen', // nieuw, nalezen
     shareInvite: 'Ich lerne Niederländisch für meine Arbeit mit Vloertaal. Kostenlos: {link}', // nieuw, nalezen
+    briefjeWhat: 'Vloertaal ist eine kostenlose App, mit der du Niederländisch für die Arbeit lernst.', // nieuw, nalezen
+    briefjeHow: 'Kurze Lektionen auf deinem Handy, mit Hilfe in deiner Sprache. Ohne Konto.', // nieuw, nalezen
+    briefjeOpen: 'Öffne auf deinem Handy:', // nieuw, nalezen
     workTry: 'Probier es heute bei der Arbeit', // nieuw, nalezen
     workTryWhen: 'Wenn:', // nieuw, nalezen
     workTryThen: 'Dann sag:', // nieuw, nalezen

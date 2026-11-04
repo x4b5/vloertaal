@@ -26,6 +26,12 @@ De OFL staat gebruik, ook commercieel, toe. Je mag de lettertypes alleen niet lo
 In de site zelf komen alleen React, React DOM, scheduler en die kleine stukjes van Vite en
 Rolldown terecht. De rest (Vitest, TypeScript) wordt alleen gebruikt om te bouwen en te testen.
 
+**De QR-codes** op de briefjes (`/briefje/`, sinds 4 november 2026) maakt Vloertaal zelf bij het
+bouwen, met `src/lib/qr.ts`, zonder pakket van anderen. In de site komt alleen de code als plaatje
+(SVG), niet de software. De stappen in `qr.ts` volgen de QR Code generator library van Project
+Nayuki (MIT): de copyright- en licentietekst staat daarom bovenaan dat bestand. "QR Code" is een
+geregistreerd merk van DENSO WAVE INCORPORATED.
+
 ## De licentieteksten in de site
 
 De volledige teksten gaan met elke build mee: [`public/licenses.txt`](public/licenses.txt) (op de

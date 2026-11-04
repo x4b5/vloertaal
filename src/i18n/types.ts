@@ -524,6 +524,11 @@ export const uiEn = {
   noticeOk: 'OK',
   /* The text with a shared certificate, pocket card or coach card (src/lib/shareLink.ts): {link} is vloertaal.nl/<help language>. */
   shareInvite: 'I am learning Dutch for my work with Vloertaal. It is free: {link}',
+  /* The printed note for day 1 (src/lib/briefjePage.ts, vloertaal.nl/briefje/<lang>/), not shown in the app: what
+     Vloertaal is in two lines, then where to open it (the address follows on a line of its own). */
+  briefjeWhat: 'Vloertaal is a free app to learn Dutch for work.',
+  briefjeHow: 'Short lessons on your own phone, with help in your own language. No account.',
+  briefjeOpen: 'Open on your phone:',
   /* "Probeer het vandaag op je werk": one sentence of the lesson on its result (src/components/WorkTry.tsx). */
   workTry: 'Try it at work today',
   /* "Probeer het vandaag": the if-then plan (src/components/WorkTry.tsx): the moment, then the sentence. */

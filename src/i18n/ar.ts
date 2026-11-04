@@ -414,6 +414,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'عبر الاختبار', // nieuw, nalezen
     checkUndo: { m: 'ادرس الدروس رغم ذلك', f: 'ادرسي الدروس رغم ذلك', x: 'القيام بالدروس رغم ذلك' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     shareInvite: 'أتعلّم الهولندية لعملي بتطبيق Vloertaal. إنه مجاني: {link}', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    briefjeWhat: 'Vloertaal تطبيق مجاني لتعلّم الهولندية للعمل.', // nieuw, nalezen
+    briefjeHow: 'دروس قصيرة على هاتفك، مع شرح بلغتك. بدون حساب.', // nieuw, nalezen
+    briefjeOpen: { m: 'افتح الرابط على هاتفك:', f: 'افتحي الرابط على هاتفك:', x: 'يُرجى فتح الرابط على الهاتف:' }, // nieuw, nalezen
     workTry: { m: 'جرّبها اليوم في عملك', f: 'جرّبيها اليوم في عملك', x: 'للتجربة اليوم في العمل' }, // nieuw, nalezen
     workTryWhen: 'عندما:', // nieuw, nalezen
     workTryThen: { m: 'قُل حينها:', f: 'قولي حينها:', x: 'يُقال حينها:' }, // nieuw, nalezen

@@ -476,6 +476,10 @@ export const uiNl: Record<UiKey, UiText> = {
   noticeMore: 'Lees meer',
   noticeOk: 'Oké',
   shareInvite: 'Ik leer Nederlands voor mijn werk met Vloertaal. Gratis: {link}', // nieuw, nalezen
+  // The Dutch half of the printed note (src/lib/briefjePage.ts), not shown in the app.
+  briefjeWhat: 'Vloertaal is een gratis app om Nederlands te leren voor je werk.',
+  briefjeHow: 'Korte lessen op je eigen telefoon, met uitleg in je eigen taal. Geen account.',
+  briefjeOpen: 'Open op je telefoon:',
   workTry: 'Probeer het vandaag op je werk',
   workTryWhen: 'Als:',
   workTryThen: 'Zeg dan:',
