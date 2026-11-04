@@ -3,10 +3,10 @@ import { getHelpLanguage } from '../i18n';
 import type { Gender, LangCode } from '../i18n/types';
 import { applyTheme } from '../lib/theme';
 import type { ThemeChoice } from '../lib/progress';
-import { findKlank, KLANKEN } from '../content/klankMond';
+import { findKlank, KLANKEN, partLetters, wordSegments } from '../content/klankMond';
 import { KlankCard, KlankLetters } from '../components/KlankCard';
 import { KlankOverview } from '../components/KlankScreens';
-import { MouthAnimation, type MouthFrame } from '../components/Mouth';
+import { Mouth, MouthAnimation, type MouthFrame } from '../components/Mouth';
 import { ChromeBack } from '../components/ChromeBack';
 import '../klank.css';
 
@@ -17,6 +17,7 @@ import '../klank.css';
  *
  *   /?shot=klanken&lang=pl         the overview (as under Hulp); a tap opens its card
  *   /?shot=klank&k=uu&lang=pl      one card (k = any id of src/content/klankMond.ts); the back arrow: the overview
+ *   /?shot=klankwoord              for review: per sound its example word, the mouth in each of its sounds (m – uu – r)
  *   /?shot=klankstrip&lang=pl      for review: per sound the mouth at rest and in its position
  *                                  (&rest=1 with the mouth at rest; &ui=1 or &k=ij: the steps of one moving sound, rest → start → end → rest)
  *
@@ -45,6 +46,26 @@ export function KlankShot({ shot, lang: code, gender }: { shot: string; lang: st
           <ChromeBack lang={lang} onBack={() => { location.search = keep('shot=klanken'); }} />
         </div>
         <KlankCard klank={k} lang={lang} deviceSound={q.get('tts') === '1'} />
+      </div>
+    );
+  }
+  if (shot === 'klankwoord') {
+    // Per sound its word: the mouth in the middle of each of its sounds, the letters under it.
+    return (
+      <div className="screen klank-screen klank-strip-screen">
+        <div className="klank-strip">
+          {KLANKEN.map((k) => (
+            <div className="klank-strip-row" key={k.id}>
+              <KlankLetters klank={k} />
+              {wordSegments(k).map((seg, i) => (
+                <span key={i}>
+                  <Mouth pose={seg.start} size={Number(q.get('size') ?? 72)} />
+                  <span className="klank-strip-cap" lang="nl">{partLetters(seg.part)}</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

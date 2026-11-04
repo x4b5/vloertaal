@@ -3,7 +3,7 @@ import type { HelpLanguage } from '../i18n/types';
 import { hasClip, speak } from '../lib/audio';
 import { DEVICE, voiceFor, type VoiceRef } from '../lib/voices';
 import { WordPicture } from '../pictures';
-import { klankHowId, type Klank } from '../content/klankMond';
+import { klankHowId, partLetters, type Klank } from '../content/klankMond';
 import { Bi } from './Bi';
 import { SlowIcon } from './Icons';
 import { Mouth, MouthAnimation, useMouthMotion } from './Mouth';
@@ -20,7 +20,7 @@ import '../klank.css';
  *
  * Two things to tap and one speaker (max 3): the letters and the mouth are one button (the
  * sound, with the motion), "Langzaam" the same slowly; the word's speaker plays the word, and the
- * mouth moves along with that too.
+ * mouth says the whole word along with it, its letters lighting up in turn (m – uu – r).
  */
 
 /** The voice of the card: Bram's (the mouth is drawn in his skin tone). */
@@ -42,10 +42,24 @@ export function klankText(k: Klank, lang?: HelpLanguage): Bilingual {
   return gloss(klankHowId(k.id), k.how, lang);
 }
 
-/** The word with the sound's letters marked: m<b>uu</b>r (or its other spelling: p<b>ij</b>n). */
-export function MarkedWord({ word, klank }: { word: string; klank: Klank }) {
+/**
+ * The word with the sound's letters marked: m<b>uu</b>r (or its other spelling: p<b>ij</b>n).
+ * `now`: while the mouth says the whole word, the letters of the sound it is making
+ * (word.parts) light up, so the mouth and the letters go together: m – uu – r.
+ */
+export function MarkedWord({ word, klank, now = -1 }: { word: string; klank: Klank; now?: number }) {
   const letters = [klank.letters, klank.also].find((l) => l && word.includes(l));
   const i = letters ? word.indexOf(letters) : -1;
+  if (now >= 0 && word === klank.word.nl && klank.word.parts.map(partLetters).join('') === word) {
+    return (
+      <span lang="nl">
+        {klank.word.parts.map((p, n) => {
+          const cls = [p === klank.id ? 'klank-mark' : '', n === now ? 'klank-now' : ''].filter(Boolean).join(' ');
+          return p === klank.id ? <b key={n} className={cls}>{partLetters(p)}</b> : <span key={n} className={cls || undefined}>{partLetters(p)}</span>;
+        })}
+      </span>
+    );
+  }
   if (!letters || i < 0) return <span lang="nl">{word}</span>;
   return (
     <span lang="nl">
@@ -84,7 +98,7 @@ export function KlankCard({ klank, lang, deviceSound = false, compact = false }:
   const sound = soundText(klank, voice, deviceSound);
   const motion = useMouthMotion(klank, [sound.text, klank.word.nl]);
   const say = (slow: boolean) => {
-    motion.play(slow);
+    motion.play(slow, sound.text === klank.word.nl);
     speak(sound.text, slow, 'nl', sound.voice);
   };
   const rtl = lang?.dir === 'rtl';
@@ -102,7 +116,7 @@ export function KlankCard({ klank, lang, deviceSound = false, compact = false }:
       <p className="klank-how" dir={how.help ? undefined : 'ltr'}><Bi text={how} /></p>
       <div className="klank-word" dir="ltr">
         <WordPicture id={klank.word.id} emoji={klank.word.emoji} size={compact ? 48 : 64} />
-        <span className="klank-word-nl"><MarkedWord word={klank.word.nl} klank={klank} /></span>
+        <span className="klank-word-nl"><MarkedWord word={klank.word.nl} klank={klank} now={motion.part} /></span>
         <SpeakButton text={klank.word.nl} help={lang} voice={voice} />
       </div>
       <button type="button" className="btn klank-slow" onClick={() => say(true)}>

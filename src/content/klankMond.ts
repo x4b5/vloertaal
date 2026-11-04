@@ -96,8 +96,12 @@ export interface Klank {
   also?: string;
   /** IPA, for whoever checks the positions (not shown to learners). */
   ipa: string;
-  /** One example word: its picture id (src/pictures), the word as shown and said, the emoji it stands for. */
-  word: { id: string; nl: string; emoji: string };
+  /**
+   * One example word: its picture id (src/pictures), the word as shown and said, the emoji it
+   * stands for, and its sounds one by one (`parts`, see WordPart) for the mouth that says the
+   * whole word along with its recording.
+   */
+  word: { id: string; nl: string; emoji: string; parts: WordPart[] };
   /**
    * The text a voice says for the sound on its own. Used only when it has a recording ("u" is
    * the uu, "ui" the ui, "ei" the ij); else the card says the example word, which carries the
@@ -125,7 +129,7 @@ export const KLANKEN: Klank[] = [
     id: 'a',
     letters: 'a',
     ipa: 'ɑ',
-    word: { id: 'w.kl.man', nl: 'man', emoji: '🧔' },
+    word: { id: 'w.kl.man', nl: 'man', emoji: '🧔', parts: ['m', 'a', 'n'] },
     short: true,
     how: 'Open your mouth, a little less than for aa. Your tongue goes back. Say it short.',
     start: pose({ open: 0.82, wide: 0.5, round: 0.5, forward: 0.05, tense: 0.05, teeth: 0.5, lowTeeth: 0.25, tongue: 0.08 }),
@@ -134,7 +138,7 @@ export const KLANKEN: Klank[] = [
     id: 'aa',
     letters: 'aa',
     ipa: 'aː',
-    word: { id: 'w.kl.maan', nl: 'maan', emoji: '🌙' },
+    word: { id: 'w.kl.maan', nl: 'maan', emoji: '🌙', parts: ['m', 'aa', 'n'] },
     sound: 'aa',
     how: 'Open your mouth wide. Your lips are relaxed. Your tongue lies low and flat.',
     start: pose({ open: 1, wide: 0.6, round: 0.4, forward: 0, tense: 0, teeth: 0.7, lowTeeth: 0.45, tongue: 0.3 }),
@@ -143,7 +147,7 @@ export const KLANKEN: Klank[] = [
     id: 'e',
     letters: 'e',
     ipa: 'ɛ',
-    word: { id: 'w.helm', nl: 'helm', emoji: '⛑️' },
+    word: { id: 'w.helm', nl: 'helm', emoji: '⛑️', parts: ['h', 'e', 'l', 'm'] },
     short: true,
     how: 'Your mouth is half open, more than for ee. Your lips are relaxed. Say it short.',
     start: pose({ open: 0.56, wide: 0.78, round: 0.1, forward: 0, tense: 0.1, teeth: 0.75, lowTeeth: 0.45, tongue: 0.42 }),
@@ -152,7 +156,7 @@ export const KLANKEN: Klank[] = [
     id: 'ee',
     letters: 'ee',
     ipa: 'eː (eɪ)',
-    word: { id: 'w.nee', nl: 'nee', emoji: '❌' },
+    word: { id: 'w.nee', nl: 'nee', emoji: '❌', parts: ['n', 'ee'] },
     sound: 'ee',
     how: 'Your mouth is half open. Your lips are wide, as in a smile. The tip of your tongue touches your lower teeth.',
     start: pose({ open: 0.4, wide: 1, round: 0.05, forward: 0, tense: 0.6, teeth: 0.9, lowTeeth: 0.4, tongue: 0.55 }),
@@ -163,7 +167,7 @@ export const KLANKEN: Klank[] = [
     id: 'i',
     letters: 'i',
     ipa: 'ɪ',
-    word: { id: 'w.links', nl: 'links', emoji: '⬅️' },
+    word: { id: 'w.links', nl: 'links', emoji: '⬅️', parts: ['l', 'i', 'ŋ', 'k', 's'] },
     short: true,
     how: 'As for ie, but your mouth is a little more open and relaxed. Say it short.',
     start: pose({ open: 0.3, wide: 0.82, round: 0.05, forward: 0, tense: 0.25, teeth: 0.85, lowTeeth: 0.35, tongue: 0.6 }),
@@ -172,7 +176,7 @@ export const KLANKEN: Klank[] = [
     id: 'ie',
     letters: 'ie',
     ipa: 'i',
-    word: { id: 'w.fiets', nl: 'fiets', emoji: '🚲' },
+    word: { id: 'w.fiets', nl: 'fiets', emoji: '🚲', parts: ['f', 'ie', 't', 's'] },
     sound: 'ie',
     how: 'Your mouth is almost closed. Your lips are wide, as in a smile. Your tongue is high and forward.',
     start: pose({ open: 0.2, wide: 0.96, round: 0, forward: 0, tense: 0.85, teeth: 0.9, lowTeeth: 0.3, tongue: 0.8 }),
@@ -181,7 +185,7 @@ export const KLANKEN: Klank[] = [
     id: 'o',
     letters: 'o',
     ipa: 'ɔ',
-    word: { id: 'w.stop', nl: 'stop', emoji: '🛑' },
+    word: { id: 'w.stop', nl: 'stop', emoji: '🛑', parts: ['s', 't', 'o', 'p'] },
     short: true,
     how: 'Your mouth is open. Your lips are a little round. Your tongue is at the back. Say it short.',
     start: pose({ open: 0.62, wide: 0.36, round: 0.78, forward: 0.25, tense: 0.1, teeth: 0.4, lowTeeth: 0.15, tongue: 0.08 }),
@@ -190,7 +194,7 @@ export const KLANKEN: Klank[] = [
     id: 'oo',
     letters: 'oo',
     ipa: 'oː (oʊ)',
-    word: { id: 'w.doos', nl: 'doos', emoji: '📦' },
+    word: { id: 'w.doos', nl: 'doos', emoji: '📦', parts: ['d', 'oo', 's'] },
     sound: 'oo',
     how: 'Your lips are round. Your mouth is half open. At the end your lips get smaller.',
     start: pose({ open: 0.46, wide: 0.24, round: 0.86, forward: 0.55, tense: 0.3, teeth: 0.2, lowTeeth: 0.05, tongue: 0.05 }),
@@ -201,7 +205,7 @@ export const KLANKEN: Klank[] = [
     id: 'u',
     letters: 'u',
     ipa: 'ʏ',
-    word: { id: 'w.bus', nl: 'bus', emoji: '🚌' },
+    word: { id: 'w.bus', nl: 'bus', emoji: '🚌', parts: ['b', 'u', 's'] },
     short: true,
     how: 'Your lips are a little round, not tight. Your tongue is forward. Say it short.',
     start: pose({ open: 0.34, wide: 0.38, round: 0.62, forward: 0.2, tense: 0.1, teeth: 0.45, lowTeeth: 0.1, tongue: 0.6 }),
@@ -210,7 +214,7 @@ export const KLANKEN: Klank[] = [
     id: 'uu',
     letters: 'uu',
     ipa: 'y',
-    word: { id: 'w.kl.muur', nl: 'muur', emoji: '🧱' },
+    word: { id: 'w.kl.muur', nl: 'muur', emoji: '🧱', parts: ['m', 'uu', 'r'] },
     sound: 'u',
     how: 'Lips round and tight, as for a kiss. Your tongue forward, as for ie.',
     start: pose({ open: 0.3, wide: 0.06, round: 1, forward: 0.75, tense: 1, teeth: 0, lowTeeth: 0, tongue: 0.8 }),
@@ -219,7 +223,7 @@ export const KLANKEN: Klank[] = [
     id: 'oe',
     letters: 'oe',
     ipa: 'u',
-    word: { id: 'w.kl.moer', nl: 'moer', emoji: '🔩' },
+    word: { id: 'w.kl.moer', nl: 'moer', emoji: '🔩', parts: ['m', 'oe', 'r'] },
     sound: 'oe',
     how: 'Make your lips round and tight, pushed far forward. There is only a small hole. Your tongue stays at the back of your mouth.',
     start: pose({ open: 0.3, wide: 0, round: 1, forward: 1, tense: 1, teeth: 0, lowTeeth: 0, tongue: 0 }),
@@ -228,7 +232,7 @@ export const KLANKEN: Klank[] = [
     id: 'eu',
     letters: 'eu',
     ipa: 'øː (øʏ)',
-    word: { id: 'w.keuken', nl: 'keuken', emoji: '🍳' },
+    word: { id: 'w.keuken', nl: 'keuken', emoji: '🍳', parts: ['k', 'eu', 'k', 'ə', 'n'] },
     sound: 'eu',
     how: 'Your mouth is half open. Your lips are round, but not tight. Your tongue forward, as for ee.',
     start: pose({ open: 0.42, wide: 0.32, round: 0.8, forward: 0.45, tense: 0.3, teeth: 0.3, lowTeeth: 0.1, tongue: 0.55 }),
@@ -239,7 +243,7 @@ export const KLANKEN: Klank[] = [
     id: 'ui',
     letters: 'ui',
     ipa: 'œy',
-    word: { id: 'w.kl.ui', nl: 'ui', emoji: '🧅' },
+    word: { id: 'w.kl.ui', nl: 'ui', emoji: '🧅', parts: ['ui'] },
     sound: 'ui',
     how: 'Start with your mouth half open and round lips. Then make your lips small, to uu. Your lips stay round.',
     start: pose({ open: 0.6, wide: 0.44, round: 0.65, forward: 0.3, tense: 0.1, teeth: 0.45, lowTeeth: 0.2, tongue: 0.45 }),
@@ -251,7 +255,7 @@ export const KLANKEN: Klank[] = [
     letters: 'ij',
     also: 'ei',
     ipa: 'ɛi',
-    word: { id: 'w.pijn', nl: 'pijn', emoji: '🤕' },
+    word: { id: 'w.pijn', nl: 'pijn', emoji: '🤕', parts: ['p', 'ij', 'n'] },
     sound: 'ei',
     how: 'Start with your mouth half open and wide lips. Then almost close your mouth, to ie.',
     start: pose({ open: 0.56, wide: 0.8, round: 0.08, forward: 0, tense: 0.15, teeth: 0.75, lowTeeth: 0.45, tongue: 0.45 }),
@@ -263,7 +267,7 @@ export const KLANKEN: Klank[] = [
     letters: 'ou',
     also: 'au',
     ipa: 'ʌu',
-    word: { id: 'w.kl.koud', nl: 'koud', emoji: '🥶' },
+    word: { id: 'w.kl.koud', nl: 'koud', emoji: '🥶', parts: ['k', 'ou', 'd'] },
     sound: 'ou',
     how: 'Start with your mouth open. Then make your lips small and round, to oe.',
     start: pose({ open: 0.78, wide: 0.56, round: 0.35, forward: 0, tense: 0.05, teeth: 0.55, lowTeeth: 0.3, tongue: 0.15 }),
@@ -271,6 +275,86 @@ export const KLANKEN: Klank[] = [
     glide: 'full',
   },
 ];
+
+/* ---------------------------------------------------------------- the whole word */
+
+/**
+ * The mouth says the whole example word, not only its vowel (the owner's request, 4 November
+ * 2026: "je ziet niet het hele woord uitgesproken worden, dat is vreemd"): m – uu – r. A word is
+ * its sounds one by one (`word.parts`): the vowels are the sounds of the cards (their own
+ * position, and the glide of ui, ij, ou, ee, eu, oo), `ə` is the weak e of keuken, `ŋ` the n of
+ * links (said as ng), and the consonants are what a front view can show of them:
+ *  - m, b, p   the lips closed, pressed together.
+ *  - f, v, w   the lower lip up against the upper teeth: a slit with the upper teeth in it.
+ *  - s, z      the teeth almost together, the lips a little wide.
+ *  - t, d, n, l  a little open, the tip of the tongue up behind the upper teeth (l: a bit more open).
+ *  - k, g, ŋ, r, h  made inside (the back of the tongue, the throat): from the front the mouth
+ *              keeps much of the vowel next to it (`soft`), a little more closed.
+ * Each sound has a length relative to the others (`weight`): a long vowel long, a short one
+ * shorter, a stop (p, t, k) quick. The motion stretches them over the word's recording.
+ */
+export type WordPart = KlankId | 'ə' | 'ŋ' | 'm' | 'b' | 'p' | 'f' | 'v' | 'w' | 's' | 'z' | 't' | 'd' | 'n' | 'l' | 'k' | 'g' | 'r' | 'h';
+
+type Consonant = Exclude<WordPart, KlankId>;
+
+const CONSONANTS: Record<Consonant, { pose: MouthPose; weight: number; soft?: number }> = {
+  m: { pose: pose({ open: 0, wide: 0.5, round: 0, forward: 0.05, tense: 0.5, teeth: 0, lowTeeth: 0, tongue: 0 }), weight: 1 },
+  b: { pose: pose({ open: 0, wide: 0.5, round: 0, forward: 0.05, tense: 0.6, teeth: 0, lowTeeth: 0, tongue: 0 }), weight: 0.8 },
+  p: { pose: pose({ open: 0, wide: 0.5, round: 0, forward: 0.05, tense: 0.7, teeth: 0, lowTeeth: 0, tongue: 0 }), weight: 0.8 },
+  f: { pose: pose({ open: 0.16, wide: 0.62, round: 0, forward: 0, tense: 0.3, teeth: 1, lowTeeth: 0, tongue: 0 }), weight: 1.2 },
+  v: { pose: pose({ open: 0.16, wide: 0.62, round: 0, forward: 0, tense: 0.3, teeth: 1, lowTeeth: 0, tongue: 0 }), weight: 1.1 },
+  w: { pose: pose({ open: 0.18, wide: 0.56, round: 0.1, forward: 0, tense: 0.2, teeth: 1, lowTeeth: 0, tongue: 0 }), weight: 0.9 },
+  s: { pose: pose({ open: 0.16, wide: 0.8, round: 0, forward: 0, tense: 0.45, teeth: 1, lowTeeth: 1, tongue: 0 }), weight: 1.2 },
+  z: { pose: pose({ open: 0.16, wide: 0.78, round: 0, forward: 0, tense: 0.4, teeth: 1, lowTeeth: 1, tongue: 0 }), weight: 1.1 },
+  t: { pose: pose({ open: 0.24, wide: 0.68, round: 0, forward: 0, tense: 0.3, teeth: 0.85, lowTeeth: 0.45, tongue: 0.9 }), weight: 0.8 },
+  d: { pose: pose({ open: 0.24, wide: 0.66, round: 0, forward: 0, tense: 0.25, teeth: 0.85, lowTeeth: 0.45, tongue: 0.9 }), weight: 0.8 },
+  n: { pose: pose({ open: 0.24, wide: 0.64, round: 0, forward: 0, tense: 0.2, teeth: 0.8, lowTeeth: 0.4, tongue: 0.9 }), weight: 1 },
+  l: { pose: pose({ open: 0.32, wide: 0.64, round: 0, forward: 0, tense: 0.15, teeth: 0.8, lowTeeth: 0.4, tongue: 0.95 }), weight: 0.9 },
+  k: { pose: pose({ open: 0.26, wide: 0.6, round: 0, forward: 0, tense: 0.2, teeth: 0.55, lowTeeth: 0.3, tongue: 0.1 }), weight: 0.8, soft: 0.5 },
+  g: { pose: pose({ open: 0.26, wide: 0.6, round: 0, forward: 0, tense: 0.2, teeth: 0.55, lowTeeth: 0.3, tongue: 0.1 }), weight: 1, soft: 0.5 },
+  ŋ: { pose: pose({ open: 0.26, wide: 0.62, round: 0, forward: 0, tense: 0.15, teeth: 0.6, lowTeeth: 0.3, tongue: 0.15 }), weight: 0.9, soft: 0.5 },
+  r: { pose: pose({ open: 0.3, wide: 0.55, round: 0.1, forward: 0, tense: 0.15, teeth: 0.5, lowTeeth: 0.25, tongue: 0.4 }), weight: 0.9, soft: 0.5 },
+  h: { pose: pose({ open: 0.4, wide: 0.58, round: 0.1, forward: 0, tense: 0, teeth: 0.5, lowTeeth: 0.25, tongue: 0.2 }), weight: 0.7, soft: 0.75 },
+  /** The weak e (keuken): half open, everything relaxed. */
+  ə: { pose: pose({ open: 0.3, wide: 0.56, round: 0.1, forward: 0, tense: 0, teeth: 0.5, lowTeeth: 0.25, tongue: 0.35 }), weight: 1 },
+};
+
+/** How a part is written: ə is the e, ŋ the n (links); the others are their own letters. */
+export const partLetters = (part: WordPart): string => (part === 'ə' ? 'e' : part === 'ŋ' ? 'n' : part);
+
+/** One sound of a word: its position (and where it glides to), and its share of the word's length. */
+export interface WordSegment {
+  part: WordPart;
+  start: MouthPose;
+  end?: MouthPose;
+  glide?: 'full' | 'subtle';
+  weight: number;
+}
+
+/** Long vowels, short ones and diphthongs, relative to a consonant (1). */
+const VOWEL_WEIGHT = { long: 2.6, short: 1.5, diphthong: 3 };
+
+/** The sounds of a word in order, each with its position: what the mouth says. */
+export function wordSegments(k: Klank): WordSegment[] {
+  const parts = k.word.parts;
+  const vowelAt = (i: number): Klank | undefined => {
+    const p = parts[i];
+    return p ? KLANKEN.find((v) => v.id === p) : undefined;
+  };
+  return parts.map((part, i) => {
+    const vowel = vowelAt(i);
+    if (vowel) {
+      const weight = vowel.glide === 'full' ? VOWEL_WEIGHT.diphthong : vowel.short ? VOWEL_WEIGHT.short : VOWEL_WEIGHT.long;
+      return { part, start: vowel.start, end: vowel.end, glide: vowel.glide, weight };
+    }
+    const c = CONSONANTS[part as Consonant];
+    if (!c.soft) return { part, start: c.pose, weight: c.weight };
+    // Made inside the mouth: from the front it looks much like the vowel beside it (the next one, else the one before).
+    const near = vowelAt(i + 1) ?? vowelAt(i - 1);
+    const like = near ? (i + 1 < parts.length && vowelAt(i + 1) ? near.start : endPose(near)) : c.pose;
+    return { part, start: mixPose(c.pose, like, c.soft), weight: c.weight };
+  });
+}
 
 /** The translation key of a sound's explanation (src/i18n/sounds/<lang>.ts). */
 export const klankHowId = (id: KlankId) => `k.uitleg.${id}`;

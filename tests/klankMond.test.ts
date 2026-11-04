@@ -2,13 +2,13 @@ import { readFileSync } from 'node:fs';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { afterEach, describe, expect, it } from 'vitest';
-import { endPose, KLANK_LESSONS, KLANKEN, klankenForLesson, klankHowId, REST, type MouthPose } from '../src/content/klankMond';
+import { endPose, KLANK_LESSONS, KLANKEN, klankenForLesson, klankHowId, partLetters, REST, wordSegments, type MouthPose } from '../src/content/klankMond';
 import { soundLessons, soundsUnit } from '../src/content/sounds';
 import { allLessons, units } from '../src/content/curriculum';
 import { isMixLesson } from '../src/content/review';
 import { TAAL_BE_INVENTORY } from '../src/content/taalBe/inventory';
-import { holdMs, mouthGeometry, poseAtTime, STEPS, SLOW_FACTOR } from '../src/components/Mouth';
-import { KlankCard, klankText, soundText } from '../src/components/KlankCard';
+import { CLIP_TAIL_S, holdMs, mouthGeometry, nominalWordMs, poseAtTime, spokenMs, STEPS, SLOW_FACTOR, WORD_STEPS, wordPoseAtTime } from '../src/components/Mouth';
+import { KlankCard, klankText, MarkedWord, soundText } from '../src/components/KlankCard';
 import { KlankOverview, KlankPage } from '../src/components/KlankScreens';
 import { KlankStep } from '../src/components/KlankStep';
 import { WordsHub } from '../src/components/Screens';
@@ -339,5 +339,85 @@ describe('Hulp › Hoe zeg je het?', () => {
     expect(page).toContain('klank-also');
     // An unknown id (an old link): the first card, not an empty page.
     expect(html(createElement(KlankPage, { id: 'xx', onBack: () => {} }))).toContain('klank-card');
+  });
+});
+
+describe('the whole word (the mouth says m – uu – r, not only the uu)', () => {
+  it('every example word is its sounds one by one, spelled as the word, with the card\'s own sound in it', () => {
+    for (const k of KLANKEN) {
+      expect(k.word.parts.map(partLetters).join(''), k.id).toBe(k.word.nl);
+      expect(k.word.parts, k.id).toContain(k.id);
+      expect(wordSegments(k)).toHaveLength(k.word.parts.length);
+    }
+  });
+
+  it('the lips close for m, b and p, the teeth show for f and s, the tongue for t, n and l', () => {
+    const at = (id: string, part: string) => wordSegments(byId[id]).find((s) => s.part === part)!.start;
+    expect(at('uu', 'm').open).toBe(0);
+    expect(at('ij', 'p').open).toBe(0);
+    expect(at('u', 'b').open).toBe(0);
+    expect(at('ie', 'f').teeth).toBe(1);
+    expect(at('ie', 'f').lowTeeth).toBe(0);
+    expect(at('o', 's').lowTeeth).toBe(1);
+    for (const [id, c] of [['ie', 't'], ['aa', 'n'], ['e', 'l']] as const) expect(at(id, c).tongue, c).toBeGreaterThan(0.8);
+  });
+
+  it('a sound made inside the mouth (k, r, h) looks much like the vowel next to it', () => {
+    const keuken = wordSegments(byId.eu);
+    const k1 = keuken[0].start;
+    const eu = byId.eu.start;
+    // The k before eu takes on the round lips of eu.
+    expect(k1.round).toBeGreaterThan(0.35);
+    expect(Math.abs(k1.round - eu.round)).toBeLessThan(0.5);
+    const r = wordSegments(byId.oe).find((s) => s.part === 'r')!.start;
+    expect(r.round).toBeGreaterThan(0.5);
+  });
+
+  it('in time: each sound in turn over the spoken length, then rest, and back to the card\'s sound', () => {
+    const k = byId.uu;
+    const segs = wordSegments(k);
+    const speech = 600;
+    const total = segs.reduce((n, s) => n + s.weight, 0);
+    const mid = (i: number) => segs.slice(0, i).reduce((n, s) => n + s.weight, 0) / total * speech + (segs[i].weight / total) * speech * 0.8;
+    expect(wordPoseAtTime(segs, k.start, -10, speech, false).pose).toEqual(k.start);
+    const m = wordPoseAtTime(segs, k.start, mid(0), speech, false);
+    expect(m.part).toBe(0);
+    expect(m.pose.open).toBe(0);
+    const uu = wordPoseAtTime(segs, k.start, mid(1), speech, false);
+    expect(uu.part).toBe(1);
+    expect(uu.pose).toEqual(k.start);
+    expect(wordPoseAtTime(segs, k.start, mid(2), speech, false).part).toBe(2);
+    const after = wordPoseAtTime(segs, k.start, speech + WORD_STEPS.release + 10, speech, false);
+    expect(after.part).toBe(-1);
+    expect(after.pose).toEqual(REST);
+    const end = wordPoseAtTime(segs, k.start, speech + WORD_STEPS.release + WORD_STEPS.pause + WORD_STEPS.back + 1, speech, false);
+    expect(end.done).toBe(true);
+    expect(end.pose).toEqual(k.start);
+  });
+
+  it('the long vowel takes the longest share; a short vowel less than a long one', () => {
+    for (const k of KLANKEN) {
+      const segs = wordSegments(k);
+      const own = segs.find((s) => s.part === k.id)!;
+      expect(Math.max(...segs.map((s) => s.weight)), k.id).toBe(own.weight);
+    }
+    const shareOf = (id: string) => {
+      const segs = wordSegments(byId[id]);
+      return segs.find((s) => s.part === id)!.weight;
+    };
+    expect(shareOf('a')).toBeLessThan(shareOf('aa'));
+  });
+
+  it('the spoken length is the recording without its silent end, at the rate it plays', () => {
+    expect(spokenMs(0.7834, 0.75)).toBeCloseTo(((0.7834 - CLIP_TAIL_S) / 0.75) * 1000, 3);
+    expect(spokenMs(0.2, 1)).toBe(250);
+    expect(nominalWordMs(wordSegments(byId.uu), true)).toBe(nominalWordMs(wordSegments(byId.uu), false) * SLOW_FACTOR);
+  });
+
+  it('while the word is said, its letters light up in turn (m, then uu, then r)', () => {
+    const k = byId.uu;
+    expect(html(createElement(MarkedWord, { word: 'muur', klank: k, now: 0 }))).toContain('<span class="klank-now">m</span>');
+    expect(html(createElement(MarkedWord, { word: 'muur', klank: k, now: 1 }))).toContain('<b class="klank-mark klank-now">uu</b>');
+    expect(html(createElement(MarkedWord, { word: 'muur', klank: k }))).toContain('m<b class="klank-mark">uu</b>r');
   });
 });

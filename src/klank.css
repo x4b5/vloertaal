@@ -36,6 +36,8 @@
 }
 .klank-word-nl { font-size: var(--fs-word); font-weight: 700; }
 .klank-mark { color: var(--right-ink); font-weight: 800; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+/* The letters of the sound the mouth makes now, while it says the whole word (m – uu – r). */
+.klank-now { background: var(--yellow); color: var(--on-yellow); border-radius: 6px; padding: 0 3px; margin: 0 -3px; }
 
 .klank-slow { background: var(--card); color: var(--ink); width: min(100%, 18rem); }
 .klank-slow .bi-help { --help-size: 0.75em; font-weight: 400; }
