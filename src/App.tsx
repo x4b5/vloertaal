@@ -39,7 +39,7 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
-import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, knownLessons, loadProgress, saveProgress, practisedAt, settleStreak, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
+import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, knownLessons, loadProgress, saveProgress, practisedAt, settleStreak, stoppedToTell, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dueIds, gradedStepIds, seedCards, strongerCount, keptCount, addLessonSentences, dailyIds, reviewResults, seedSentenceCards, wordResultCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
@@ -152,19 +152,21 @@ const linkedUnit = takeLinkedUnit();
 // Only a head start: whatever goes wrong here (the phone's save, the history) must never stop this
 // file from loading, as a broken save did until 4 November 2026 (the splash stayed up for good).
 try {
-  needAtStart(adminRequested() ? 'admin' : coachesRequested() ? 'coaches' : linkedUnit ? 'home' : restored().name, settleStreak(loadProgress(), new Date()).broken ? 'stopped' : '');
+  needAtStart(adminRequested() ? 'admin' : coachesRequested() ? 'coaches' : linkedUnit ? 'home' : restored().name, stoppedToTell(loadProgress(), new Date()) ? 'stopped' : '');
 } catch {
   // The first screen's file then loads when that screen opens.
 }
 
 /**
  * The saved progress, brought up to date for today: a free day covers one missed day; when the
- * streak stopped, `stopped` holds the lost streak so a calm screen can say so once.
+ * streak stopped after a real break (stoppedToTell), `stopped` holds the lost streak so a calm
+ * screen can say so once.
  */
 function startProgress() {
-  const { progress, broken } = settleStreak(loadProgress(), new Date());
+  const saved = loadProgress();
+  const { progress } = settleStreak(saved, new Date());
   // The first day on this phone (a notice only shows when it is newer: src/lib/notice.ts).
-  return { progress: withFirstDay(progress, new Date()), stopped: broken ?? null };
+  return { progress: withFirstDay(progress, new Date()), stopped: stoppedToTell(saved, new Date()) ?? null };
 }
 
 /** How long the start waits for a file that neither comes nor fails before it offers "Try again". */
@@ -188,10 +190,11 @@ export default function App() {
     const onVis = () => {
       // (Not during a lesson: one begun yesterday still counts for yesterday when it is finished.)
       if (document.visibilityState !== 'visible' || viewRef.current.name === 'lesson') return;
-      const { progress: settled, broken } = settleStreak(progressRef.current, new Date());
+      const { progress: settled } = settleStreak(progressRef.current, new Date());
       if (settled === progressRef.current) return;
+      const told = stoppedToTell(progressRef.current, new Date());
       setProgress(settled);
-      if (broken) setStopped(broken);
+      if (told) setStopped(told);
     };
     document.addEventListener('visibilitychange', onVis);
     return () => document.removeEventListener('visibilitychange', onVis);

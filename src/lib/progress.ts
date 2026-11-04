@@ -461,6 +461,41 @@ export function settleStreak(p: Progress, today: Date): { progress: Progress; br
   return { progress: { ...p, streak: 0, bestStreak: bestStreak(p) }, broken: p.streak };
 }
 
+/** "Je reeks is gestopt bij N" (StreakStopped, components/Milestone.tsx) only for a lost streak of at least this many days. */
+export const STOPPED_FROM = 3;
+/** … and not while the learner still practised on this many of the 7 days before today. */
+export const STOPPED_UNLESS_DAYS = 3;
+
+/**
+ * The lost streak to tell about once ("Je reeks is gestopt bij N"), or undefined. The streak itself
+ * stops as before (settleStreak); only the screen is for a real break: not for a streak of 1 or 2
+ * days, and not while the learner practised on 3 or more of the 7 days before today. The week
+ * plan (3 times a week) saw it at 11 of 12 opens (Monday, Wednesday, Friday: "gestopt bij 1"), and
+ * Monday to Friday every Monday ("gestopt bij 5"). The owner's request, 4 November 2026.
+ * `p`: the progress as saved, before settleStreak.
+ */
+export function stoppedToTell(p: Progress, today: Date): number | undefined {
+  const { broken } = settleStreak(p, today);
+  if (!broken || broken < STOPPED_FROM) return undefined;
+  const key = dayKey(today);
+  const practised = new Set([...(p.days ?? []), ...streakBack(p)]);
+  const lately = [...practised].filter((d) => daysBetween(d, key) >= 1 && daysBetween(d, key) <= 7).length;
+  return lately >= STOPPED_UNLESS_DAYS ? undefined : broken;
+}
+
+/** The days of the streak, counted back from its last day (rest days sit inside it without counting). */
+function streakBack(p: Progress): string[] {
+  if (!p.lastDay || p.streak <= 0) return [];
+  const rest = new Set(p.rest ?? []);
+  const days: string[] = [];
+  let day = p.lastDay;
+  for (let guard = 0; days.length < p.streak && guard < 400; guard++) {
+    if (!rest.has(day)) days.push(day);
+    day = addDay(day, -1);
+  }
+  return days;
+}
+
 /** Adds a practised day to the kept list (sorted, no repeats, the last DAYS_KEEP). */
 function addPractised(days: string[] | undefined, key: string): string[] {
   return [...new Set([...(days ?? []), key])].sort().slice(-DAYS_KEEP);
@@ -524,15 +559,7 @@ export function workWeek(p: Progress, today: Date): { key: string; state: WeekDa
   const done = new Set<string>((p.days ?? []).filter((d) => d <= todayKey));
   const sinceLast = p.lastDay ? daysBetween(p.lastDay, todayKey) : -1;
   // (A last day after today, a clock moved back: no walking back from a day still to come.)
-  if (p.lastDay && p.streak > 0 && sinceLast >= 0 && sinceLast <= 1) {
-    let day = p.lastDay;
-    let left = p.streak;
-    // Walk back over the streak; rest days sit inside it without counting.
-    for (let guard = 0; left > 0 && guard < 400; guard++) {
-      if (!rest.has(day)) { done.add(day); left--; }
-      day = addDay(day, -1);
-    }
-  }
+  if (p.lastDay && p.streak > 0 && sinceLast >= 0 && sinceLast <= 1) for (const day of streakBack(p)) done.add(day);
   const monday = addDay(todayKey, -((today.getDay() + 6) % 7));
   return Array.from({ length: 7 }, (_, i) => {
     const key = addDay(monday, i);
