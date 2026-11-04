@@ -44,6 +44,22 @@ const t: CultureTranslation = {
     'c.pbgk.q': { m: 'ከመይ ኣለኻ?', f: 'ከመይ ኣለኺ?', x: 'ከመይ ኣለኹም?' }, // x: nieuw, nalezen
     'c.pbgk.a': 'ደሓን እየ፡ ግን ቆሪሩኒ ኣሎ።',
     'c.pbgk.a.why': 'ከመይ ከም ዘሎ ተሓቲቱ፡ መልስን ከመይ ከም ዝስምዖን።',
+    // "Hoe zeg je het?" (src/content/klankMond.ts): how the mouth makes each sound.
+    'k.uitleg.a': 'ኣፍ ክፉት እዩ፣ ካብ «aa» ቁሩብ ውሑድ። ልሳን ናብ ድሕሪት ይኸይድ። ድምጹ ሓጺር እዩ።', // nieuw, nalezen
+    'k.uitleg.aa': 'ኣፍ ብዙሕ ክፉት እዩ። ከናፍር ፈኲሶም ኣለዉ። ልሳን ታሕቲ ጽፍሕ ኢሉ ኣሎ።', // nieuw, nalezen
+    'k.uitleg.e': 'ኣፍ ፍርቂ ክፉት እዩ፣ ካብ «ee» ንላዕሊ። ከናፍር ፈኲሶም ኣለዉ። ድምጹ ሓጺር እዩ።', // nieuw, nalezen
+    'k.uitleg.ee': 'ኣፍ ፍርቂ ክፉት እዩ። ከናፍር ከም ኣብ ፍሽኽታ ተዘርጊሖም ኣለዉ። ጫፍ ልሳን ንታሕተዎት ኣስናን ይትንክፍ።', // nieuw, nalezen
+    'k.uitleg.i': 'ከም «ie»፣ ግን ኣፍ ቁሩብ ዝያዳ ክፉትን ፈኲሱን እዩ። ድምጹ ሓጺር እዩ።', // nieuw, nalezen
+    'k.uitleg.ie': 'ኣፍ ዳርጋ ዕጹው እዩ። ከናፍር ከም ኣብ ፍሽኽታ ተዘርጊሖም ኣለዉ። ልሳን ላዕልን ቅድሚትን እዩ።', // nieuw, nalezen
+    'k.uitleg.o': 'ኣፍ ክፉት እዩ። ከናፍር ቁሩብ ክቡባት እዮም። ልሳን ኣብ ድሕሪት እዩ። ድምጹ ሓጺር እዩ።', // nieuw, nalezen
+    'k.uitleg.oo': 'ከናፍር ክቡባት እዮም። ኣፍ ፍርቂ ክፉት እዩ። ኣብ መወዳእታ ከናፍር ይንእሱ።', // nieuw, nalezen
+    'k.uitleg.u': 'ከናፍር ቁሩብ ክቡባት እዮም፣ ጽኑዓት ግን ኣይኮኑን። ልሳን ኣብ ቅድሚት እዩ። ድምጹ ሓጺር እዩ።', // nieuw, nalezen
+    'k.uitleg.uu': 'ከናፍር ክቡባትን ጽኑዓትን፣ ከም ንምስዓም። ልሳን ኣብ ቅድሚት፣ ከም ኣብ «ie»።', // nieuw, nalezen
+    'k.uitleg.oe': 'ከናፍር ክቡባትን ጽኑዓትን፣ ብዙሕ ናብ ቅድሚት። ንእሽቶ ቀዳድ ጥራይ ይተርፍ። ልሳን ኣብ ድሕሪት ኣፍ ይጸንሕ።', // nieuw, nalezen
+    'k.uitleg.eu': 'ኣፍ ፍርቂ ክፉት እዩ። ከናፍር ክቡባት እዮም፣ ግን ጽኑዓት ኣይኮኑን። ልሳን ኣብ ቅድሚት፣ ከም ኣብ «ee»።', // nieuw, nalezen
+    'k.uitleg.ui': 'መጀመርታ፣ ኣፍ ፍርቂ ክፉትን ከናፍር ክቡባትን። ድሕሪኡ ከናፍር ይንእሱ፣ ክሳብ «uu»። ከናፍር ክቡባት ይጸንሑ።', // nieuw, nalezen
+    'k.uitleg.ij': 'መጀመርታ፣ ኣፍ ፍርቂ ክፉትን ከናፍር ተዘርጊሖምን። ድሕሪኡ ኣፍ ዳርጋ ይዕጾ፣ ክሳብ «ie»።', // nieuw, nalezen
+    'k.uitleg.ou': 'መጀመርታ፣ ኣፍ ክፉት። ድሕሪኡ ከናፍር ንኣሽቱን ክቡባትን ይኾኑ፣ ክሳብ «oe»።', // nieuw, nalezen
   },
 };
 export default t;

@@ -44,6 +44,22 @@ const t: CultureTranslation = {
     'c.pbgk.q': 'Nasılsın?',
     'c.pbgk.a': 'İyiyim ama üşüyorum.',
     'c.pbgk.a.why': 'Nasıl olduğun soruluyor: bir cevap ve nasıl hissettiğin.',
+    // "Hoe zeg je het?" (src/content/klankMond.ts): how the mouth makes each sound.
+    'k.uitleg.a': 'Ağzını aç, “aa” sesinden biraz daha az. Dilin geriye gider. Kısa söyle.', // nieuw, nalezen
+    'k.uitleg.aa': 'Ağzını iyice aç. Dudakların gevşek. Dilin aşağıda ve düz durur.', // nieuw, nalezen
+    'k.uitleg.e': 'Ağzın yarı açık, “ee” sesinden daha fazla. Dudakların gevşek. Kısa söyle.', // nieuw, nalezen
+    'k.uitleg.ee': 'Ağzın yarı açık. Dudakların gülümser gibi yayvan. Dilinin ucu alt dişlerine değer.', // nieuw, nalezen
+    'k.uitleg.i': '“ie” sesindeki gibi, ama ağzın biraz daha açık ve gevşek. Kısa söyle.', // nieuw, nalezen
+    'k.uitleg.ie': 'Ağzın neredeyse kapalı. Dudakların gülümser gibi yayvan. Dilin yukarıda ve önde.', // nieuw, nalezen
+    'k.uitleg.o': 'Ağzın açık. Dudakların biraz yuvarlak. Dilin arkada. Kısa söyle.', // nieuw, nalezen
+    'k.uitleg.oo': 'Dudakların yuvarlak. Ağzın yarı açık. Sonunda dudakların küçülür.', // nieuw, nalezen
+    'k.uitleg.u': 'Dudakların biraz yuvarlak, gergin değil. Dilin önde. Kısa söyle.', // nieuw, nalezen
+    'k.uitleg.uu': 'Dudaklar yuvarlak ve gergin, öpücük verir gibi. Dilin önde, “ie” sesindeki gibi.', // nieuw, nalezen
+    'k.uitleg.oe': 'Dudaklarını yuvarlak ve gergin yap, iyice öne uzat. Sadece küçük bir delik kalır. Dilin ağzının arkasında kalır.', // nieuw, nalezen
+    'k.uitleg.eu': 'Ağzın yarı açık. Dudakların yuvarlak ama gergin değil. Dilin önde, “ee” sesindeki gibi.', // nieuw, nalezen
+    'k.uitleg.ui': 'Ağzın yarı açık, dudakların yuvarlak başla. Sonra dudaklarını küçült, “uu” sesine kadar. Dudakların yuvarlak kalır.', // nieuw, nalezen
+    'k.uitleg.ij': 'Ağzın yarı açık, dudakların yayvan başla. Sonra ağzını neredeyse kapat, “ie” sesine kadar.', // nieuw, nalezen
+    'k.uitleg.ou': 'Ağzın açık başla. Sonra dudaklarını küçük ve yuvarlak yap, “oe” sesine kadar.', // nieuw, nalezen
   },
 };
 export default t;

@@ -3,6 +3,7 @@ import { registerRulesCourse } from '../../content/courses';
 import { rulesUnits, sectorRulesUnits } from '../../content/regels';
 import { toCourseUnits } from '../../content/regels/course';
 import { beCourseUnits } from '../../content/regels/be';
+import sounds from '../sounds/nl';
 import type { LanguagePack } from './types';
 
 /**
@@ -20,5 +21,6 @@ registerRulesCourse(toCourseUnits([...rulesUnits, ...sectorRulesUnits]), beCours
 // learner of that region (src/content/regio ensureRegion).
 
 const empty = { ui: {}, gloss: {} };
-const pack: LanguagePack = { base, culture: empty, work: empty, about: empty, learn: empty, sayings: empty, sounds: empty, kunJeNu: empty, be: empty, notices: empty, url: import.meta.url };
+// The sounds' Dutch: how the mouth makes each sound ("Hoe zeg je het?", src/i18n/sounds/nl.ts).
+const pack: LanguagePack = { base, culture: empty, work: empty, about: empty, learn: empty, sayings: empty, sounds, kunJeNu: empty, be: empty, notices: empty, url: import.meta.url };
 export default pack;

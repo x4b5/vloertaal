@@ -44,6 +44,22 @@ const t: CultureTranslation = {
     'c.pbgk.q': 'Wie geht es dir?',
     'c.pbgk.a': 'Gut, aber mir ist kalt.',
     'c.pbgk.a.why': 'Gefragt, wie es dir geht: eine Antwort, und wie du dich fühlst.',
+    // "Hoe zeg je het?" (src/content/klankMond.ts): how the mouth makes each sound.
+    'k.uitleg.a': 'Öffne den Mund, etwas weniger als bei „aa“. Die Zunge geht nach hinten. Sprich es kurz.', // nieuw, nalezen
+    'k.uitleg.aa': 'Öffne den Mund weit. Die Lippen sind locker. Die Zunge liegt tief und flach.', // nieuw, nalezen
+    'k.uitleg.e': 'Der Mund ist halb offen, mehr als bei „ee“. Die Lippen sind locker. Sprich es kurz.', // nieuw, nalezen
+    'k.uitleg.ee': 'Der Mund ist halb offen. Die Lippen sind breit, wie beim Lächeln. Die Zungenspitze berührt die unteren Zähne.', // nieuw, nalezen
+    'k.uitleg.i': 'Wie bei „ie“, aber der Mund ist etwas weiter offen und locker. Sprich es kurz.', // nieuw, nalezen
+    'k.uitleg.ie': 'Der Mund ist fast zu. Die Lippen sind breit, wie beim Lächeln. Die Zunge ist hoch und vorne.', // nieuw, nalezen
+    'k.uitleg.o': 'Der Mund ist offen. Die Lippen sind etwas rund. Die Zunge ist hinten. Sprich es kurz.', // nieuw, nalezen
+    'k.uitleg.oo': 'Die Lippen sind rund. Der Mund ist halb offen. Am Ende werden die Lippen kleiner.', // nieuw, nalezen
+    'k.uitleg.u': 'Die Lippen sind etwas rund, nicht fest. Die Zunge ist vorne. Sprich es kurz.', // nieuw, nalezen
+    'k.uitleg.uu': 'Lippen rund und fest, wie für einen Kuss. Die Zunge vorne, wie bei „ie“.', // nieuw, nalezen
+    'k.uitleg.oe': 'Mach die Lippen rund und fest, weit nach vorne. Es bleibt nur ein kleines Loch. Die Zunge bleibt hinten im Mund.', // nieuw, nalezen
+    'k.uitleg.eu': 'Der Mund ist halb offen. Die Lippen sind rund, aber nicht fest. Die Zunge vorne, wie bei „ee“.', // nieuw, nalezen
+    'k.uitleg.ui': 'Beginne mit halb offenem Mund und runden Lippen. Dann mach die Lippen klein, bis „uu“. Die Lippen bleiben rund.', // nieuw, nalezen
+    'k.uitleg.ij': 'Beginne mit halb offenem Mund und breiten Lippen. Dann schließ den Mund fast, bis „ie“.', // nieuw, nalezen
+    'k.uitleg.ou': 'Beginne mit offenem Mund. Dann mach die Lippen klein und rund, bis „oe“.', // nieuw, nalezen
   },
 };
 export default t;

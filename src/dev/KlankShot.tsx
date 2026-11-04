@@ -4,20 +4,21 @@ import type { Gender, LangCode } from '../i18n/types';
 import { applyTheme } from '../lib/theme';
 import type { ThemeChoice } from '../lib/progress';
 import { findKlank, KLANKEN } from '../content/klankMond';
-import { KlankCard, MarkedWord } from '../components/KlankCard';
+import { KlankCard, KlankLetters } from '../components/KlankCard';
+import { KlankOverview } from '../components/KlankScreens';
 import { MouthAnimation, type MouthFrame } from '../components/Mouth';
 import { ChromeBack } from '../components/ChromeBack';
-import { WordPicture } from '../pictures';
 import '../klank.css';
 
 /**
- * The pilot "Hoe zeg je het?" for the owner to look at (not in the path yet; 4 November 2026).
- * In the dev server (`npx vite --host`, also on a phone in the same network):
+ * "Hoe zeg je het?" for review (4 November 2026). In the app: Hulp › Hoe zeg je het?
+ * (src/components/KlankScreens.tsx) and the first steps of a Klanken lesson. In the dev server
+ * (`npx vite --host`, also on a phone in the same network):
  *
- *   /?shot=klanken&lang=pl         the six sounds, one row each; a tap opens its card
- *   /?shot=klank&k=uu&lang=pl      one card (k = aa, ee, oe, uu, eu, ui); the back arrow: the overview
+ *   /?shot=klanken&lang=pl         the overview (as under Hulp); a tap opens its card
+ *   /?shot=klank&k=uu&lang=pl      one card (k = any id of src/content/klankMond.ts); the back arrow: the overview
  *   /?shot=klankstrip&lang=pl      for review: per sound the mouth at rest and in its position
- *                                  (&ui=1: the steps of ui, rest → start → end → rest)
+ *                                  (&rest=1 with the mouth at rest; &ui=1 or &k=ij: the steps of one moving sound, rest → start → end → rest)
  *
  * &theme=dark|werkjas|haven a colour (else the phone's light or dark), &calm=on the calm screen
  * (no motion), &tts=1 the phone's own voice says the sound's letters ("eu", "oe"), to hear it.
@@ -37,7 +38,7 @@ export function KlankShot({ shot, lang: code, gender }: { shot: string; lang: st
     return `?${extra}${rest}`;
   };
   if (shot === 'klank') {
-    const k = findKlank(q.get('k')) ?? KLANKEN[3];
+    const k = findKlank(q.get('k')) ?? findKlank('uu')!;
     return (
       <div className="screen klank-screen" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
         <div className="screen-head">
@@ -48,29 +49,28 @@ export function KlankShot({ shot, lang: code, gender }: { shot: string; lang: st
     );
   }
   if (shot === 'klankstrip') {
-    const steps = q.get('ui') === '1';
-    const ui = findKlank('ui')!;
+    const one = q.get('ui') === '1' ? findKlank('ui') : findKlank(q.get('k'));
     const frames: [MouthFrame, string][] = [['rest', 'rust'], ['start', 'begin'], [0.25, '25%'], [0.5, '50%'], [0.75, '75%'], ['end', 'eind'], ['rest', 'rust']];
     return (
-      <div className="screen klank-screen" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
+      <div className="screen klank-screen klank-strip-screen" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
         <div className="klank-strip">
-          {steps ? (
+          {one ? (
             <div className="klank-strip-row">
-              <span className="klank-letters" lang="nl">ui</span>
+              <KlankLetters klank={one} />
               {frames.map(([at, cap], i) => (
                 <span key={i}>
-                  <MouthAnimation klank={ui} at={at} size={96} />
+                  <MouthAnimation klank={one} at={at} size={96} />
                   <span className="klank-strip-cap">{cap}</span>
                 </span>
               ))}
             </div>
           ) : (
-            // Six columns: the letters, the mouth at rest, in the sound's position, and where ee, eu and ui end.
-            <div className="klank-grid">
+            // A column per sound: the letters, (&rest=1: the mouth at rest,) in the sound's position, and where a moving sound ends.
+            <div className="klank-grid" style={{ ['--cols' as string]: Number(q.get('cols') ?? 5) }}>
               {KLANKEN.map((k) => (
                 <div className="klank-col" key={k.id}>
-                  <span className="klank-letters" lang="nl">{k.letters}</span>
-                  <span><MouthAnimation klank={k} at="rest" size={84} /><span className="klank-strip-cap">rust</span></span>
+                  <KlankLetters klank={k} />
+                  {q.get('rest') === '1' && <span><MouthAnimation klank={k} at="rest" size={84} /><span className="klank-strip-cap">rust</span></span>}
                   <span><MouthAnimation klank={k} at="start" size={84} /><span className="klank-strip-cap">{k.end ? 'begin' : 'stand'}</span></span>
                   {k.end ? <span><MouthAnimation klank={k} at="end" size={84} /><span className="klank-strip-cap">eind</span></span> : <span className="klank-strip-none" />}
                 </div>
@@ -81,26 +81,6 @@ export function KlankShot({ shot, lang: code, gender }: { shot: string; lang: st
       </div>
     );
   }
-  // The overview: one row per sound (a list, one tap per row).
-  return (
-    <div className="screen klank-screen" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
-      <div className="screen-head">
-        <h1 lang="nl">Hoe zeg je het?</h1>
-      </div>
-      <ul className="klank-list">
-        {KLANKEN.map((k) => (
-          <li key={k.id}>
-            <a className="klank-row" href={keep(`shot=klank&k=${k.id}`)}>
-              <span className="klank-letters" lang="nl">{k.letters}</span>
-              <MouthAnimation klank={k} at="start" size={84} />
-              <span className="klank-row-word">
-                <WordPicture id={k.word.id} emoji={k.word.emoji} size={40} />
-                <MarkedWord word={k.word.nl} letters={k.letters} />
-              </span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  // The overview, as under Hulp (a list, one tap per row).
+  return <KlankOverview lang={lang} onBack={() => {}} onOpen={(id) => { location.search = keep(`shot=klank&k=${id}`); }} />;
 }

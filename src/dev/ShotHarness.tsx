@@ -295,7 +295,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     if (shot === 'words') {
       return (
         <>
-          <WordsHub lang={l} onTips={() => {}} onColleague={() => {}} after={mapLink} />
+          <WordsHub lang={l} onTips={() => {}} onKlanken={() => { location.search = `?shot=klanken&lang=${lang ?? ''}`; }} onColleague={() => {}} after={mapLink} />
           <BottomNav current="words" onTab={() => {}} lang={l} />
         </>
       );

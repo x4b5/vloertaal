@@ -67,6 +67,7 @@ import { CheckResult } from './components/Check';
 import { checkExercises, checkLesson, checkOffered, checkPassed, recordCheck, undoCheck } from './lib/instapCheck';
 import type { Exercise } from './lib/exercises';
 import { hasSamen, samenDialogues } from './lib/samen';
+import { KlankOverview, KlankPage } from './components/KlankScreens';
 
 type View =
   | { name: 'home' }
@@ -94,6 +95,9 @@ type View =
   | { name: 'phrasebook'; streakUp?: number; cert?: string }
   | { name: 'tips' }
   | { name: 'colleague' }
+  /** "Hoe zeg je het?" (src/components/KlankScreens.tsx): every sound card, from the Hulp tab; one card. */
+  | { name: 'klanken' }
+  | { name: 'klank'; id: string }
   /** The region's "Sociale kaart" (from the Hulp tab, only with a region chosen in Settings). */
   | { name: 'socialmap' }
   /** upgrade: opened from a locked unit, so the unlock card is scrolled into view. */
@@ -702,7 +706,7 @@ export default function App() {
     <>
       {track === 'regels'
         ? <RulesHelp lang={lang} country={progress.country} onShelf={() => go({ name: 'tips' })} after={mapLink} />
-        : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} onColleague={() => go({ name: 'colleague' })} after={mapLink} />}
+        : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} onKlanken={() => go({ name: 'klanken' })} onColleague={() => go({ name: 'colleague' })} after={mapLink} />}
       <BottomNav current="words" onTab={tab} lang={lang} />
     </>
   );
@@ -1009,6 +1013,10 @@ export default function App() {
       return <Coaches onBack={back} lang={lang} />;
     case 'colleague':
       return <ColleagueCard lang={lang} onBack={back} />;
+    case 'klanken':
+      return <KlankOverview lang={lang} onBack={back} onOpen={(id) => go({ name: 'klank', id })} />;
+    case 'klank':
+      return <KlankPage id={view.id} lang={lang} onBack={back} />;
     case 'scene':
       return <SceneScreen id={view.id} url={view.url} lang={lang} onBack={back} onDone={back} />;
     case 'news':

@@ -65,8 +65,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.sick': L('A', 'B', 'vaak een ziektebriefje, soms vanaf de eerste dag (het arbeidsreglement zegt wanneer)'),
   } },
   'u.sounds': { kind: 'A', lessons: {
-    'l.shortlong': L('A', '-'),
-    'l.roundsounds': L('A', '-'),
+    // The sound cards of "Hoe zeg je het?" at the start (src/content/klankMond.ts) hold in Vlaanderen too: the same vowels.
+    'l.shortlong': L('A', '-', 'klankkaarten a en aa: dezelfde klinkers'),
+    'l.roundsounds': L('A', '-', 'klankkaarten uu en oe: dezelfde klinkers'),
     'l.pbgk': L('A', '-'),
   } },
   'u.teamwork': { kind: 'B', lessons: {

@@ -44,6 +44,22 @@ const t: CultureTranslation = {
     'c.pbgk.q': 'Como estás?',
     'c.pbgk.a': 'Bem, mas tenho frio.',
     'c.pbgk.a.why': 'Perguntam como estás: uma resposta, e como te sentes.',
+    // "Hoe zeg je het?" (src/content/klankMond.ts): how the mouth makes each sound.
+    'k.uitleg.a': 'Abre a boca, um pouco menos do que para «aa». A língua vai para trás. Diz curto.', // nieuw, nalezen
+    'k.uitleg.aa': 'Abre bem a boca. Os lábios estão relaxados. A língua fica baixa e plana.', // nieuw, nalezen
+    'k.uitleg.e': 'A boca está meio aberta, mais do que para «ee». Os lábios estão relaxados. Diz curto.', // nieuw, nalezen
+    'k.uitleg.ee': 'A boca está meio aberta. Os lábios esticados, como num sorriso. A ponta da língua toca nos dentes de baixo.', // nieuw, nalezen
+    'k.uitleg.i': 'Como para «ie», mas com a boca um pouco mais aberta e relaxada. Diz curto.', // nieuw, nalezen
+    'k.uitleg.ie': 'A boca está quase fechada. Os lábios esticados, como num sorriso. A língua está alta e à frente.', // nieuw, nalezen
+    'k.uitleg.o': 'A boca está aberta. Os lábios estão um pouco redondos. A língua está atrás. Diz curto.', // nieuw, nalezen
+    'k.uitleg.oo': 'Os lábios estão redondos. A boca está meio aberta. No fim, os lábios ficam mais pequenos.', // nieuw, nalezen
+    'k.uitleg.u': 'Os lábios estão um pouco redondos, não tensos. A língua está à frente. Diz curto.', // nieuw, nalezen
+    'k.uitleg.uu': 'Lábios redondos e tensos, como para um beijo. A língua à frente, como para «ie».', // nieuw, nalezen
+    'k.uitleg.oe': 'Põe os lábios redondos e tensos, bem para a frente. Fica só um buraco pequeno. A língua fica atrás na boca.', // nieuw, nalezen
+    'k.uitleg.eu': 'A boca está meio aberta. Os lábios estão redondos, mas não tensos. A língua à frente, como para «ee».', // nieuw, nalezen
+    'k.uitleg.ui': 'Começa com a boca meio aberta e os lábios redondos. Depois faz os lábios pequenos, até «uu». Ficam sempre redondos.', // nieuw, nalezen
+    'k.uitleg.ij': 'Começa com a boca meio aberta e os lábios esticados. Depois fecha quase a boca, até «ie».', // nieuw, nalezen
+    'k.uitleg.ou': 'Começa com a boca aberta. Depois faz os lábios pequenos e redondos, até «oe».', // nieuw, nalezen
   },
 };
 export default t;

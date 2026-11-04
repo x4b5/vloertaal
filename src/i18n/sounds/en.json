@@ -40,6 +40,21 @@
     "s.pbgk.3": "You are doing it well!",
     "c.pbgk.q": "How are you?",
     "c.pbgk.a": "Good, but I am cold.",
-    "c.pbgk.a.why": "Asked how you are: an answer, and how you feel."
+    "c.pbgk.a.why": "Asked how you are: an answer, and how you feel.",
+    "k.uitleg.a": "Open your mouth, a little less than for aa. Your tongue goes back. Say it short.",
+    "k.uitleg.aa": "Open your mouth wide. Your lips are relaxed. Your tongue lies low and flat.",
+    "k.uitleg.e": "Your mouth is half open, more than for ee. Your lips are relaxed. Say it short.",
+    "k.uitleg.ee": "Your mouth is half open. Your lips are wide, as in a smile. The tip of your tongue touches your lower teeth.",
+    "k.uitleg.i": "As for ie, but your mouth is a little more open and relaxed. Say it short.",
+    "k.uitleg.ie": "Your mouth is almost closed. Your lips are wide, as in a smile. Your tongue is high and forward.",
+    "k.uitleg.o": "Your mouth is open. Your lips are a little round. Your tongue is at the back. Say it short.",
+    "k.uitleg.oo": "Your lips are round. Your mouth is half open. At the end your lips get smaller.",
+    "k.uitleg.u": "Your lips are a little round, not tight. Your tongue is forward. Say it short.",
+    "k.uitleg.uu": "Lips round and tight, as for a kiss. Your tongue forward, as for ie.",
+    "k.uitleg.oe": "Make your lips round and tight, pushed far forward. There is only a small hole. Your tongue stays at the back of your mouth.",
+    "k.uitleg.eu": "Your mouth is half open. Your lips are round, but not tight. Your tongue forward, as for ee.",
+    "k.uitleg.ui": "Start with your mouth half open and round lips. Then make your lips small, to uu. Your lips stay round.",
+    "k.uitleg.ij": "Start with your mouth half open and wide lips. Then almost close your mouth, to ie.",
+    "k.uitleg.ou": "Start with your mouth open. Then make your lips small and round, to oe."
   }
 }

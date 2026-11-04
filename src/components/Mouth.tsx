@@ -176,13 +176,19 @@ export const SLOW_FACTOR = 2;
 /** The steps of one play, in ms at normal speed: the mouth closes to rest, opens to the sound, holds it (and glides), and goes back. */
 export const STEPS = { toRest: 160, rest: 120, onset: 260, hold: 700, release: 260, pause: 260, back: 420 };
 
+/** A short vowel (a, e, i, o, u) is held this much of the hold: short against long is seen too (man – maan). */
+export const SHORT_HOLD = 0.45;
+
+/** How long the mouth holds the sound, in ms at normal speed (the planned hold; a longer sound holds on). */
+export const holdMs = (k: Klank) => STEPS.hold * (k.short ? SHORT_HOLD : 1);
+
 const ease = (t: number) => (t <= 0 ? 0 : t >= 1 ? 1 : t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
 const clamp = (t: number) => Math.min(1, Math.max(0, t));
 
 /** Where the glide is during the hold (0 the sound's start, 1 its end), from the time into the hold. */
 function glideAt(k: Klank, inHold: number, hold: number): number {
   if (!k.end || !k.glide) return 0;
-  // ui: the movement is the sound (it starts early and fills the hold); ee and eu only glide at the end.
+  // A diphthong (ui, ij, ou): the movement is the sound (it starts early and fills the hold); ee, eu and oo only glide at the end.
   const [from, to] = k.glide === 'full' ? [0.25, 0.8] : [0.6, 1];
   return ease(clamp((inHold / hold - from) / (to - from)));
 }
@@ -190,7 +196,7 @@ function glideAt(k: Klank, inHold: number, hold: number): number {
 /** The pose `t` ms into a play. `holdEnd`: when the hold ends (the sound's end), in ms from the start. */
 export function poseAtTime(k: Klank, t: number, slow: boolean, holdEnd?: number): { pose: MouthPose; done: boolean } {
   const f = slow ? SLOW_FACTOR : 1;
-  const s = Object.fromEntries(Object.entries(STEPS).map(([n, v]) => [n, v * f])) as typeof STEPS;
+  const s = Object.fromEntries(Object.entries({ ...STEPS, hold: holdMs(k) }).map(([n, v]) => [n, v * f])) as typeof STEPS;
   const start = k.start;
   const t1 = s.toRest;
   const t2 = t1 + s.rest;
@@ -245,7 +251,7 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
     if (!cur) return;
     const t = now - cur.at;
     const f = cur.slow ? SLOW_FACTOR : 1;
-    const planned = (STEPS.toRest + STEPS.rest + STEPS.onset + STEPS.hold) * f;
+    const planned = (STEPS.toRest + STEPS.rest + STEPS.onset + holdMs(k)) * f;
     // Still sounding at the planned end of the hold: hold on until it ends (or LONGEST_MS).
     let holdEnd = cur.holdEnd;
     if (holdEnd === undefined && cur.sounding && t >= planned && t < LONGEST_MS) holdEnd = t + 16;
@@ -281,9 +287,9 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
       const cur = run.current;
       if (!cur || !cur.sounding) return;
       cur.sounding = false;
-      // The hold ends now, but never before the mouth has reached the sound (and for ui: its end).
+      // The hold ends now, but never before the mouth has reached the sound (and for a diphthong: its end).
       const f = cur.slow ? SLOW_FACTOR : 1;
-      const reached = (STEPS.toRest + STEPS.rest + STEPS.onset) * f + (k.glide === 'full' ? STEPS.hold * 0.85 : 200) * f;
+      const reached = (STEPS.toRest + STEPS.rest + STEPS.onset) * f + (k.glide === 'full' ? STEPS.hold * 0.85 : k.short ? 120 : 200) * f;
       cur.holdEnd = Math.max(performance.now() - cur.at, reached);
     });
   }, [key, play, k]);
@@ -320,7 +326,7 @@ export function MouthAnimation({ klank, motion, at, size = 180, className }: {
   size?: number;
   className?: string;
 }) {
-  const own = useMouthMotion(klank, motion || at !== undefined ? [] : [klank.sound, klank.word.nl]);
+  const own = useMouthMotion(klank, motion || at !== undefined ? [] : [klank.sound ?? '', klank.word.nl]);
   const pose = at !== undefined ? framePose(klank, at) : (motion ?? own).pose;
   return <Mouth pose={pose} size={size} className={className} />;
 }

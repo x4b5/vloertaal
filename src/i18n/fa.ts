@@ -456,6 +456,9 @@ const lang: HelpLanguageSource = {
     bridgeTitle: 'قوانین کار', // nieuw, nalezen
     bridgeText: 'حالا هلندی زیادی بلدید. می‌خواهید قوانین کار را هم یاد بگیرید؟ آن وقت همه‌چیز به هلندی است.', // nieuw, nalezen
     bridgeGo: 'بله، نشان بدهید', // nieuw, nalezen
+    klankTitle: 'چطور می‌گویند؟', // nieuw, nalezen
+    klankHint: 'روی یک صدا ضربه بزنید. ببینید دهان چطور آن را می‌سازد.', // nieuw, nalezen
+    tagSound: 'صدا', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

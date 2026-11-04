@@ -1,5 +1,5 @@
-/* "Hoe zeg je het?" (src/components/KlankCard.tsx, src/components/Mouth.tsx): a pilot card per
-   sound, 4 November 2026. Tokens only, so it follows every colour (Zand, Haven, Werkjas, Donker);
+/* "Hoe zeg je het?" (src/components/KlankCard.tsx, KlankScreens.tsx, Mouth.tsx): a card per
+   sound, 4 November 2026 (in Hulp and at the start of a Klanken lesson). Tokens only, so it follows every colour (Zand, Haven, Werkjas, Donker);
    the face itself keeps its own skin colours, like the cast. */
 
 .klank-card { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 18px 16px 20px; }
@@ -11,6 +11,8 @@
   background: none; color: var(--ink); cursor: pointer;
 }
 .klank-letters { font-size: 3.6rem; line-height: 1; font-weight: 750; letter-spacing: 0.04em; }
+/* The other spelling of the same sound (ij / ei, ou / au): smaller and quieter beside it. */
+.klank-also { font-size: 0.6em; font-weight: 650; color: var(--ink-2); letter-spacing: 0; }
 .klank-play .mouth {
   display: block; max-width: 100%; height: auto;
   border-radius: 28px; background: var(--concrete);
@@ -38,17 +40,35 @@
 .klank-slow { background: var(--card); color: var(--ink); width: min(100%, 18rem); }
 .klank-slow .bi-help { --help-size: 0.75em; font-weight: 400; }
 
-/* The overview of the pilot (dev page /?shot=klanken): one row per sound, one tap each. */
+/* In a lesson (LessonPlayer): a smaller mouth and less room, so the card and Continue fit a small phone. */
+.klank-compact { gap: 10px; padding: 10px 14px 14px; }
+/* The letters beside the mouth, not above it: a row less. */
+.klank-compact .klank-play { flex-direction: row; justify-content: center; gap: 18px; padding-top: 0; }
+.klank-compact .klank-letters { font-size: 3.2rem; min-width: 3.4rem; text-align: center; }
+.klank-compact .klank-also { display: block; font-size: 0.5em; margin-top: 4px; }
+.klank-compact .klank-slash { display: none; }
+.klank-compact .klank-how { font-size: 1.05rem; }
+.klank-compact .klank-word { padding-top: 8px; }
+.klank-step .klank-card { margin-top: 4px; }
+
+/* Hulp › Hoe zeg je het? (src/components/KlankScreens.tsx): one row per sound, one tap each. */
+.klank-hint { margin: 0 0 12px; }
 .klank-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .klank-row {
-  display: grid; grid-template-columns: 4.2rem auto 1fr; align-items: center; gap: 12px;
-  width: 100%; padding: 8px 12px; text-align: start;
+  display: grid; grid-template-columns: 4.6rem auto 1fr auto; align-items: center; gap: 10px;
+  width: 100%; padding: 8px 10px; text-align: start; font: inherit; cursor: pointer;
   border: 2px solid var(--line); border-radius: var(--radius); background: var(--card); color: var(--ink);
   text-decoration: none;
 }
-.klank-row .klank-letters { font-size: 2.2rem; }
+.klank-row:hover { border-color: var(--ink-3); }
+.klank-row .klank-letters { font-size: 2.1rem; white-space: nowrap; }
+.klank-row .klank-also { display: block; font-size: 0.55em; margin-top: 2px; }
+.klank-row .klank-slash { display: none; }
 .klank-row .mouth { border-radius: 14px; background: var(--concrete); }
-.klank-row-word { display: flex; align-items: center; gap: 8px; font-size: 1.25rem; font-weight: 650; justify-self: end; }
+.klank-row-word { display: flex; align-items: center; gap: 8px; font-size: 1.2rem; font-weight: 650; justify-self: end; min-width: 0; }
+/* The row under Hulp: the mouth is its icon. */
+.hub-klank .hub-icon { background: var(--concrete); overflow: hidden; }
+.klank-hub-mouth { display: block; }
 
 /* The strip for the owner (/?shot=klankstrip): rest and the sound's position side by side. */
 .klank-strip { display: grid; gap: 10px; }
@@ -56,7 +76,7 @@
 .klank-strip-row .klank-letters { font-size: 1.8rem; width: 3.2rem; }
 .klank-strip-row .mouth { border-radius: 12px; background: var(--concrete); border: 2px solid var(--line); }
 .klank-strip-cap { display: block; text-align: center; font-size: 0.8rem; color: var(--muted); }
-.klank-grid { display: grid; grid-template-columns: repeat(6, max-content); gap: 6px; justify-content: center; }
+.klank-grid { display: grid; grid-template-columns: repeat(var(--cols, 5), max-content); gap: 6px; justify-content: center; }
 .klank-col { display: grid; justify-items: center; align-content: start; gap: 6px; }
 .klank-col .klank-letters { font-size: 2rem; }
 .klank-col .mouth { border-radius: 12px; background: var(--concrete); border: 2px solid var(--line); }

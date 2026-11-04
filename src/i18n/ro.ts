@@ -456,6 +456,9 @@ const lang: HelpLanguageSource = {
     bridgeTitle: 'Regulile de muncă', // nieuw, nalezen
     bridgeText: 'Acum știi multă olandeză. Vrei să înveți și regulile de muncă? Atunci totul este în olandeză.', // nieuw, nalezen
     bridgeGo: 'Da, arată-mi', // nieuw, nalezen
+    klankTitle: 'Cum se spune?', // nieuw, nalezen
+    klankHint: 'Atinge un sunet. Vezi cum îl face gura.', // nieuw, nalezen
+    tagSound: 'Sunet', // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
