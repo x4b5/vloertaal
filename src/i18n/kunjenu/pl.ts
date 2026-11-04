@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "Umiem powiedzieć, że czegoś nie wolno.", // nieuw, nalezen
     'kjn.u.numbers.1': "Rozumiem godziny takie jak „kwart over vier”.", // nieuw, nalezen
     'kjn.u.numbers.2': "Umiem powiedzieć, ile coś kosztuje albo waży.", // nieuw, nalezen
+    'kjn.u.numbers.3': "Odróżniam liczby takie jak 13 i 30.", // nieuw, nalezen
     'kjn.u.shop.1': "Umiem zapytać klienta, czy chce zapłacić kartą.", // nieuw, nalezen
     'kjn.u.shop.2': "Umiem wskazać klientowi drogę w sklepie.", // nieuw, nalezen
     'kjn.u.ai.1': "Umiem zapytać, czy odpowiedź jest dobra.", // nieuw, nalezen

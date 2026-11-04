@@ -28,6 +28,7 @@ const t: CultureTranslation = {
     'c.keeplearning.a.why': "Hollandaca konuşmayı istemek sorun değil: pratik yardımcı olur.",
     'c.gear.a.why': "Soru baretle ilgili: evet, takılı.",
     'c.danger.a.why': "Kazada önce 112 aranır.",
+    'c.alarm.a.why': "Herkesin çıkıp çıkmadığı soruluyor: bu cevap kimin hâlâ eksik olduğunu söylüyor.", // nieuw, nalezen
     'c.accident.a.why': "Ne olduğu soruluyor: bu cevap ne olduğunu ve onun durumunu söylüyor.",
     'c.notyet.a.why': "“Bir dene” denince güvenli cevap, önce gösterilmesini istemektir.",
     'c.things.a.why': "Soru \"nereye\" diye soruyor. Bu cevap bir yer söylüyor.",
@@ -85,6 +86,7 @@ const t: CultureTranslation = {
     'c.cleansafe.a.why': "Islak zemin kaygandır: uyarı yardımcı olur.",
     'c.shelves.a.why': "Soru \"nerede\" diye soruyor. Bu cevap koridoru söylüyor ve yardım ediyor.",
     'c.checkout.a.why': "Kartla ödeme soruluyor: kısa ve nazik bir \"evet\".",
+    'c.counting.a.why': "Kaç tane olduğu soruluyor: bu cevap sayıyı veriyor ve rakam rakam kontrol ediyor.", // nieuw, nalezen
     'c.hours.a.why': "Soru saati soruyor. Bu cevap bir saat söylüyor.",
     'c.measures.a.why': "Soru uzunluğu soruyor. Bu cevap bir uzunluk söylüyor.",
     'c.aihelp.a.why': "Kimin yazdığı soruluyor: yardımı da söyleyen dürüst bir “evet”.",

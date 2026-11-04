@@ -48,6 +48,8 @@ export const NEAR_SYNONYMS: readonly (readonly string[])[] = [
   ['het rijbewijs', 'het identiteitsbewijs'],
   ['de school', 'de opleiding'],
   ['moe', 'somber'],
+  // Fire alarm and evacuation (l.alarm, 4 November 2026): the exit and the way to it.
+  ['de nooduitgang', 'de vluchtroute'],
 ];
 
 const ARTICLES = /^(de|het|een)\s+/i;

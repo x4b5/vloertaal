@@ -48,7 +48,9 @@ function drawAll(lessons: readonly Lesson[], lang: HelpLanguage | undefined): nu
 }
 
 /** Some 1,500 screens per language: seconds, longer than a single test's default 5 s on a slow runner. */
-const SLOW = 60_000;
+// 120 s since 4 November 2026: two lessons more (l.alarm, l.counting), and in the full suite
+// (every test file at once) a language took just over 60 s.
+const SLOW = 120_000;
 
 describe('every exercise of every lesson draws', () => {
   for (const code of LANGS) {

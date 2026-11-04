@@ -135,6 +135,25 @@ const baseTips: CultureTip[] = [
     ],
     why: { id: 'c.unsafe.w', en: 'A near-accident is a warning. Reporting it helps prevent a real accident. Your employer may not punish you for reporting it.' },
   }),
+  // "Het alarm gaat. Wat doe je?" (the owner's plan, phase 2, 4 November 2026). No closing line:
+  // what to do at an alarm is the same everywhere; where the exits and the assembly point are, the
+  // first sentence tells the learner to ask. The first three sentences (the lesson's short tip)
+  // hold what the situation needs: stop at once, leave your things, the assembly point.
+  tip({
+    id: 'c.alarm',
+    lessonId: 'l.alarm',
+    emoji: '🚨',
+    title: 'The alarm goes: stop and go outside',
+    body: 'On your first day, ask where the emergency exits and the assembly point are. When the alarm goes, stop your work at once. Leave your things, and walk outside by the escape route. Take the stairs, never the lift. At the assembly point, they count who is outside, so stay there. Also go when you think it is only a practice.',
+    phrase: { id: 'c.alarm.p', nl: 'Ik ben nieuw. Waar is de verzamelplaats?', en: 'I am new. Where is the assembly point?' },
+    situation: { id: 'c.alarm.s', en: 'The fire alarm goes off. You are almost done with an order. What do you do?' },
+    options: [
+      { id: 'c.alarm.o1', en: 'Stop at once and walk to the assembly point.', best: true },
+      { id: 'c.alarm.o2', en: 'Finish your order first, then go outside.', best: false },
+      { id: 'c.alarm.o3', en: 'First get your coat and phone from your locker.', best: false },
+    ],
+    why: { id: 'c.alarm.w', en: 'Smoke spreads fast, so you go at once. Your things can wait. At the assembly point they count everyone: then nobody has to look for you inside.' },
+  }),
   tip({
     id: 'c.accident',
     lessonId: 'l.accident',
@@ -407,6 +426,7 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.kitchen': [0, 4, 5], // allergies: always ask the chef
   'c.service': [0, 1, 2, 3], // not sure? say that you will check
   'c.cleansafe': [0, 1, 3, 4], // the wet-floor sign
+  'c.counting': [3, 4, 5], // the last digit first (vijfentwintig); 47 and 74; dertien or dertig
   'c.aihelp': [0, 2, 3], // AI makes mistakes; check important things (your contract) with a person
   'c.aiprivate': [0, 2, 4], // no names of customers; ask first if you may use AI
   'c.aifake': [0, 1, 3], // a voice can be fake; hang up and call back yourself

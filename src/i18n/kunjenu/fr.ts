@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "Je peux dire que quelque chose est interdit.", // nieuw, nalezen
     'kjn.u.numbers.1': "Je peux comprendre des heures comme “kwart over vier”.", // nieuw, nalezen // nagelezen AI 31 okt
     'kjn.u.numbers.2': "Je peux dire combien quelque chose coûte ou pèse.", // nieuw, nalezen
+    'kjn.u.numbers.3': "Je sais distinguer des nombres comme 13 et 30.", // nieuw, nalezen
     'kjn.u.shop.1': "Je peux demander à un client s’il veut payer par carte.", // nieuw, nalezen
     'kjn.u.shop.2': "Je peux montrer le chemin dans le magasin à un client.", // nieuw, nalezen
     'kjn.u.ai.1': "Je peux demander si une réponse est juste.", // nieuw, nalezen

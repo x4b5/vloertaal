@@ -556,6 +556,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'مواظب باش، زمین خیس است!',
     's.danger.2': 'خروجی اضطراری کجاست؟',
     's.danger.3': 'حادثه پیش آمده!',
+    'l.alarm': 'آژیر آتش‌سوزی و تخلیه', // nieuw, nalezen
+    'w.alarm': 'آژیر خطر', // nieuw, nalezen
+    'w.ontruimen': 'تخلیه کردن (همه از ساختمان بیرون می‌روند)', // nieuw, nalezen
+    'w.vluchtroute': 'مسیر فرار اضطراری', // nieuw, nalezen
+    'w.trap': 'پله‌ها', // nieuw, nalezen
+    'w.verzamelplaats': 'محل تجمع (جایی که همه بیرون جمع می‌شوند)', // nieuw, nalezen
+    'w.brandblusser': 'کپسول آتش‌نشانی', // nieuw, nalezen
+    's.alarm.1': 'کپسول آتش‌نشانی کجاست؟', // nieuw, nalezen
+    's.alarm.2': 'باید ساختمان را تخلیه کنیم.', // nieuw, nalezen
+    's.alarm.3': 'از پله‌ها برو، نه با آسانسور.', // nieuw, nalezen
     's.accident.1': 'همکارم زمین خورده.',
     's.accident.2': 'خودم را بریده‌ام.',
     's.accident.3': 'می‌خواهم یک حادثه را گزارش بدهم.',
@@ -593,6 +603,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'بله، سرم است.',
     'c.danger.q': 'حادثه پیش آمده؟',
     'c.danger.a': 'بله، با ۱۱۲ تماس بگیر!',
+    'c.alarm.q': 'همه بیرون هستند؟', // nieuw, nalezen
+    'c.alarm.a': 'نه، همکارم هنوز نیامده.', // nieuw, nalezen
     'c.accident.q': 'چه اتفاقی افتاده؟',
     'c.accident.a': 'افتاده. خونریزی دارد.',
     'l.notyet': 'این را هنوز یاد نگرفته‌ام',

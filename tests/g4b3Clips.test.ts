@@ -333,6 +333,32 @@ const PENDING_RECORDING = new Set<string>([
   'Ik voel me al lang somber. Kan ik een afspraak maken?',
   // s.boundaries.1, said firmly (was "Raak me niet aan, alstublieft.", 4 November 2026):
   'Blijf van me af.',
+  // New lessons "Brandalarm en ontruimen" (l.alarm, u.safety) and "Getallen" (l.counting,
+  // u.numbers), 4 November 2026, with their tips' phrases:
+  'het alarm',
+  'ontruimen',
+  'de vluchtroute',
+  'de trap',
+  'de verzamelplaats',
+  'de brandblusser',
+  'Waar hangt de brandblusser?',
+  'We moeten het gebouw ontruimen.',
+  'Neem de trap, niet de lift.',
+  'Is iedereen buiten?',
+  'Nee, mijn collega is er nog niet.',
+  'Ik ben nieuw. Waar is de verzamelplaats?',
+  'dertien',
+  'dertig',
+  'zeventien',
+  'zeventig',
+  'zevenenveertig',
+  'vierenzeventig',
+  'Ik heb dertien dozen, niet dertig.',
+  'Locatie vierenzeventig is leeg.',
+  'Kunt u het cijfer voor cijfer zeggen?',
+  'Hoeveel dozen zijn er nog?',
+  'Zeventig. Zeven, nul.',
+  'Vier, zeven? Dus zevenenveertig?',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

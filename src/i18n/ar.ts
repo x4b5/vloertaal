@@ -556,6 +556,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'انتبِهْ، الأرض مبللة!',
     's.danger.2': 'أين مخرج الطوارئ؟',
     's.danger.3': 'هناك حادث!',
+    'l.alarm': 'إنذار الحريق والإخلاء', // nieuw, nalezen
+    'w.alarm': 'الإنذار', // nieuw, nalezen
+    'w.ontruimen': 'يُخلي (يخرج الجميع من المبنى)', // nieuw, nalezen
+    'w.vluchtroute': 'طريق الإخلاء', // nieuw, nalezen
+    'w.trap': 'الدرج', // nieuw, nalezen
+    'w.verzamelplaats': 'نقطة التجمّع (حيث يلتقي الجميع في الخارج)', // nieuw, nalezen
+    'w.brandblusser': 'طفاية الحريق', // nieuw, nalezen
+    's.alarm.1': 'أين طفاية الحريق؟', // nieuw, nalezen
+    's.alarm.2': 'يجب أن نُخلي المبنى.', // nieuw, nalezen
+    's.alarm.3': 'خذ الدرج، لا المصعد.', // nieuw, nalezen
     's.accident.1': 'سقط زميلي.',
     's.accident.2': 'جرحت نفسي.',
     's.accident.3': 'أريد أن أبلّغ عن حادث.',
@@ -593,6 +603,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'نعم، أنا أرتديها.',
     'c.danger.q': 'هل هناك حادث؟',
     'c.danger.a': 'نعم، اتَّصِلْ بـ 112!',
+    'c.alarm.q': 'هل الجميع في الخارج؟', // nieuw, nalezen
+    'c.alarm.a': 'لا، زميلي ليس هنا بعد.', // nieuw, nalezen
     'c.accident.q': 'ماذا حدث؟',
     'c.accident.a': 'سقط. إنه ينزف.',
     'l.notyet': 'لم أتعلّم هذا بعد',

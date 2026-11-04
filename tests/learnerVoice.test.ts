@@ -62,6 +62,9 @@ const PENDING_RECORDING = new Set<string>([
   'Nog niet. Ik lees hem eerst na.',
   'Nee, dank je. Achteraf betalen is ook een schuld.',
   'Nee, dank je. Ik werk niet onder invloed.',
+  // New lessons "Brandalarm en ontruimen" (l.alarm) and "Getallen" (l.counting), 4 November 2026:
+  'Nee, mijn collega is er nog niet.',
+  'Zeventig. Zeven, nul.',
 ]);
 
 

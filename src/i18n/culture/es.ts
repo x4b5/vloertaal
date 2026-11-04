@@ -61,6 +61,14 @@ const t: CultureTranslation = {
     'c.unsafe.o2': 'No dices nada, porque no ha pasado nada.',
     'c.unsafe.o3': 'Arreglas tú el palé y no se lo dices a nadie.', // nieuw, nalezen
     'c.unsafe.w': 'Un casi accidente es un aviso. Contarlo ayuda a evitar un accidente de verdad. Tu empresa no te puede castigar por avisar.',
+    'c.alarm': 'Suena la alarma: para y sal fuera', // nieuw, nalezen
+    'c.alarm.b': 'El primer día, pregunta dónde están las salidas de emergencia y el punto de encuentro. Cuando suene la alarma, deja de trabajar enseguida. Deja tus cosas y sal fuera por la ruta de evacuación. Usa la escalera, nunca el ascensor. En el punto de encuentro cuentan quién está fuera, así que quédate allí. Sal también cuando creas que es solo un simulacro.', // nieuw, nalezen
+    'c.alarm.p': { m: 'Soy nuevo. ¿Dónde está el punto de encuentro?', f: 'Soy nueva. ¿Dónde está el punto de encuentro?', x: 'Soy nuevo/a. ¿Dónde está el punto de encuentro?' }, // nieuw, nalezen
+    'c.alarm.s': 'Suena la alarma de incendio. Casi has terminado un pedido. ¿Qué haces?', // nieuw, nalezen
+    'c.alarm.o1': 'Paras enseguida y vas al punto de encuentro.', // nieuw, nalezen
+    'c.alarm.o2': 'Primero terminas el pedido, luego sales.', // nieuw, nalezen
+    'c.alarm.o3': 'Primero coges el abrigo y el móvil de tu taquilla.', // nieuw, nalezen
+    'c.alarm.w': 'El humo se extiende rápido, por eso sales enseguida. Tus cosas pueden esperar. En el punto de encuentro cuentan a todos: así nadie tiene que buscarte dentro.', // nieuw, nalezen
     'c.accident': 'Avisa de cada accidente',
     'c.accident.b': 'Cuéntale cada accidente, también uno pequeño, a tu encargado o al BHV’er (la persona de primeros auxilios de la empresa). ¿Trabajas a través de una agencia? Avisa también a la agencia. En una emergencia, llama primero al 112. La empresa donde pasó el accidente tiene que avisar de un accidente grave a la Nederlandse Arbeidsinspectie (también si trabajas a través de una agencia): cuando alguien muere, queda con lesiones para toda la vida o tiene que quedarse en el hospital. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
     'c.accident.p': 'Mi compañero está herido. ¿Dónde está la persona de primeros auxilios?',

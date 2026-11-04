@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "Ich kann sagen, dass etwas nicht erlaubt ist.", // nieuw, nalezen
     'kjn.u.numbers.1': "Ich kann Uhrzeiten wie „kwart over vier“ verstehen.", // nieuw, nalezen
     'kjn.u.numbers.2': "Ich kann sagen, wie viel etwas kostet oder wiegt.", // nieuw, nalezen
+    'kjn.u.numbers.3': "Ich kann Zahlen wie 13 und 30 unterscheiden.", // nieuw, nalezen
     'kjn.u.shop.1': "Ich kann einen Kunden fragen, ob er mit Karte zahlen will.", // nieuw, nalezen
     'kjn.u.shop.2': "Ich kann einem Kunden den Weg im Laden zeigen.", // nieuw, nalezen
     'kjn.u.ai.1': "Ich kann fragen, ob eine Antwort stimmt.", // nieuw, nalezen

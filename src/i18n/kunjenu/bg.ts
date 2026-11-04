@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "Мога да кажа, че нещо не е позволено.", // nieuw, nalezen
     'kjn.u.numbers.1': "Мога да разбера часове като „kwart over vier“.", // nieuw, nalezen
     'kjn.u.numbers.2': "Мога да кажа колко струва или тежи нещо.", // nieuw, nalezen
+    'kjn.u.numbers.3': "Мога да различавам числа като 13 и 30.", // nieuw, nalezen
     'kjn.u.shop.1': "Мога да попитам клиент дали иска да плати с карта.", // nieuw, nalezen
     'kjn.u.shop.2': "Мога да покажа на клиент пътя в магазина.", // nieuw, nalezen
     'kjn.u.ai.1': "Мога да попитам дали един отговор е верен.", // nieuw, nalezen

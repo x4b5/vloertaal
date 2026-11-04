@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "Consigo dizer que uma coisa não é permitida.", // nieuw, nalezen
     'kjn.u.numbers.1': "Consigo perceber horas como «kwart over vier».", // nieuw, nalezen
     'kjn.u.numbers.2': "Consigo dizer quanto custa ou pesa uma coisa.", // nieuw, nalezen
+    'kjn.u.numbers.3': "Consigo distinguir números como 13 e 30.", // nieuw, nalezen
     'kjn.u.shop.1': "Consigo perguntar a um cliente se quer pagar com cartão.", // nieuw, nalezen
     'kjn.u.shop.2': "Consigo indicar o caminho na loja a um cliente.", // nieuw, nalezen
     'kjn.u.ai.1': "Consigo perguntar se uma resposta está certa.", // nieuw, nalezen

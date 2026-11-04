@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "أستطيع أن أقول إن شيئًا غير مسموح.", // nieuw, nalezen
     'kjn.u.numbers.1': "أستطيع أن أفهم أوقاتًا مثل «kwart over vier».", // nieuw, nalezen
     'kjn.u.numbers.2': "أستطيع أن أقول كم سعر شيء أو كم وزنه.", // nieuw, nalezen
+    'kjn.u.numbers.3': "أستطيع أن أميّز بين أعداد مثل 13 و30.", // nieuw, nalezen
     'kjn.u.shop.1': "أستطيع أن أسأل زبونًا هل يريد الدفع بالبطاقة.", // nieuw, nalezen
     'kjn.u.shop.2': "أستطيع أن أدل زبونًا على الطريق في المتجر.", // nieuw, nalezen
     'kjn.u.ai.1': "أستطيع أن أسأل هل الجواب صحيح.", // nieuw, nalezen
