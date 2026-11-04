@@ -141,6 +141,14 @@ const t: CultureTranslation = {
     'c.task.o2': 'Anladığın yarıdan başlarsın.', // nagelezen (2e lezing)
     'c.task.o3': 'Bir iş arkadaşın yapana kadar beklersin.',
     'c.task.w': 'Tekrar sormak normaldir ve bir dakika sürer. Bir hatayı düzeltmek çok daha uzun sürer. Çoğu amir bir şeyi iki kez göstermeyi tercih eder.',
+    'c.clear': 'En önemli şeyi önce söyle', // nieuw, nalezen
+    'c.clear.b': 'Birçok dilde önce bütün hikâyeyi anlatmak, asıl konuyu sona bırakmak kibarlıktır. Burada iş yerinde ise tam tersi: önce neyin yanlış olduğunu ya da neye ihtiyacın olduğunu söyle, sonra sebebini. Sakin konuş ve iki üç cümleden sonra dur, böylece karşındaki kişi bir şey sorabilir. İş görüşmesinde de öyle: önce cevap, sonra bir örnek. Yavaş konuşmak burada kabalık değil: insanların seni anlamasına yardımcı olur.', // nieuw, nalezen
+    'c.clear.p': 'Pardon, bir kez daha sakince söyleyeyim.', // nieuw, nalezen
+    'c.clear.s': 'İşe 20 dakika geç geliyorsun. Amirin soruyor: “Wat is er?” Ne yaparsın?', // nieuw, nalezen
+    'c.clear.o1': 'Önce geç kaldığını söyler ve özür dilersin. Sonra nedenini söylersin.', // nieuw, nalezen
+    'c.clear.o2': 'Bu sabah olan her şeyi baştan anlatırsın.', // nieuw, nalezen
+    'c.clear.o3': 'Hiçbir şey söylemez ve hemen işe başlarsın.', // nieuw, nalezen
+    'c.clear.w': 'Amirin önce neler olduğunu bilmek ister. Sebep ondan sonra gelir. Kısa ve sakin konuşmak nettir, burada aynı zamanda kibarlıktır.', // nieuw, nalezen
     'u.teamwork': 'Birlikte çalışmak',
     'l.speakup': 'Bir şey beni rahatsız ediyor',
     'w.probleem': 'sorun',
@@ -178,6 +186,18 @@ const t: CultureTranslation = {
     's.task.3': 'Bir kez daha gösterebilir misiniz?',
     'd.task.q': 'Bitirdin mi?',
     'd.task.a': 'Neredeyse. Beş dakika daha.',
+    'l.clear': 'Kısa ve net', // nieuw, nalezen
+    'w.kort': 'kısa', // nieuw, nalezen
+    'w.duidelijk': 'net, açık', // nieuw, nalezen
+    'w.belangrijkste': 'en önemli şey', // nieuw, nalezen
+    'w.rustig': 'sakin, sakince', // nieuw, nalezen
+    'w.teveel': 'çok fazla', // nieuw, nalezen
+    'w.vraag': 'soru', // nieuw, nalezen
+    's.clear.1': 'Kısaca söyleyeyim: makine bozuk.', // nieuw, nalezen
+    's.clear.2': 'Önce en önemlisi: hastayım.', // nieuw, nalezen
+    's.clear.3': 'Pardon, çok hızlı ve çok fazla konuşuyorum.', // nieuw, nalezen
+    'd.clear.q': 'Anlaşıldı mı?', // nieuw, nalezen
+    'd.clear.a': 'Evet. Bir sorum daha var.', // nieuw, nalezen
   },
 };
 

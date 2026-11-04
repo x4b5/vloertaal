@@ -38,6 +38,7 @@ const t: CultureTranslation = {
     'd.speakup.a.why': "Pytanie, czy coś jest nie tak: szczere „tak” jest dobre.",
     'd.agree.a.why': "Wolno odmówić. Propozycja innego dnia pomaga.",
     'd.task.a.why': "Pytanie, czy już gotowe: ta odpowiedź mówi „prawie” i ile jeszcze to potrwa.",
+    'd.clear.a.why': "Pytanie, czy jasne: najpierw „tak”, potem to jedno pytanie.", // nieuw, nalezen
     'c.cv.a.why': "Referencja to były szef, który może opowiedzieć o pracy.",
     'c.interview.a.why': "Na rozmowie o pracę liczy się doświadczenie zawodowe.",
     'c.findwork.a.why': "Pytanie dotyczy rodzaju pracy. Ta odpowiedź ją nazywa.",
