@@ -414,6 +414,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'kontrolle', // nieuw, nalezen
     checkUndo: 'Yine de dersleri yap', // nieuw, nalezen
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
+    briefjeWhat: 'Vloertaal, iş için Hollandaca öğreten ücretsiz bir uygulamadır.', // nieuw, nalezen
+    briefjeHow: 'Kendi telefonunda kısa dersler, kendi dilinde yardımla. Hesap yok.', // nieuw, nalezen
+    briefjeOpen: 'Telefonunda aç:', // nieuw, nalezen
     workTry: 'Bugün işte dene', // nieuw, nalezen
     workTryWhen: 'Şu durumda:', // nieuw, nalezen (AI-correctie 2 nov 2026)
     workTryThen: 'O zaman şunu söyle:', // nieuw, nalezen

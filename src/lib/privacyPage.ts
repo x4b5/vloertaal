@@ -23,7 +23,7 @@ export const PRIVACY: readonly PrivacySection[] = [
       'Je hebt geen account nodig. We vragen geen naam, geen e-mailadres en geen telefoonnummer.',
       'Wat je leert, staat alleen op je eigen telefoon of computer. Wij kunnen het niet zien.',
       'Vloertaal gebruikt geen cookies, geen reclame en geen sociale media. We verkopen geen gegevens.',
-      'De app telt zonder naam hoe vaak lessen gedaan worden, en of de app ergens een fout geeft. Dat kun je uitzetten.',
+      'De app telt zonder naam hoeveel mensen beginnen, hoe vaak lessen gedaan worden, en of de app ergens een fout geeft. Dat kun je uitzetten.',
     ],
   },
   {
@@ -45,6 +45,10 @@ export const PRIVACY: readonly PrivacySection[] = [
     paras: [
       'Staat “Anoniem meetellen” aan? Dan stuurt de app een korte telling naar GoatCounter, een teller zonder cookies. Zo zien we welke lessen goed gaan en waar mensen stoppen.',
       'Per telling gaat alleen dit mee: wat er gebeurt (een les begint, stopt of is af; de toets begint of is af), welke les, in welk kwart je stopte, en ongeveer hoeveel minuten een les duurde. Niet de uitslag van de toets.',
+      // The start, before lesson 1 (src/lib/count.ts countFirstOpen, countStartDone), the owner's
+      // request, 4 November 2026. It comes before the switch can be found: say so, and what does stop it.
+      'Bij de start telt de app twee dingen, één keer per telefoon: dat de app voor het eerst opent, en dat je klaar bent met de vragen van de start (tot en met de kleur). Alleen dat het gebeurde. Niet wat je koos: geen taal, geen werk, geen land, geen kleur.',
+      'Het eerste openen telt de app meteen, dus voordat je het tellen kunt uitzetten. Wil je dat niet? Vraag je browser dan om niet gevolgd te worden (zie hieronder). Je telefoon onthoudt wat al geteld is.',
       'De app telt ook of mensen terugkomen. Dat gebeurt één keer per telefoon: op je 1e, 2e, 7e, 14e en 28e dag met een les. Alleen dat getal gaat mee, geen datum. Je telefoon onthoudt welke dagen al geteld zijn.',
       'Vraagt de app “Heb je dit op je werk gezegd?”? Dan telt hij alleen je antwoord: “ja” of “nog niet”. Niet welke zin, niet wie.',
       'Geeft de app een fout? Dan telt hij ook dat: de soort fout, een korte code en een korte, opgeschoonde foutmelding uit de code. Geen tekst die jij hebt getypt, niet waar je was in de app. Hooguit drie fouten per bezoek.',
