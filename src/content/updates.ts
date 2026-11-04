@@ -17,6 +17,18 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-04',
+    items: [
+      'Fout antwoord? Bovenaan staat nu ook in je eigen taal "Het goede antwoord is:". Eerst stond er alleen "Goed antwoord", en dat leek op goed.',
+      '"Probeer het vandaag" geeft nooit meer een zin met een naam erin, zoals "ik ben Ali". Je krijgt een zin die je zelf kunt zeggen. En elk nieuw woord krijgt in zijn eigen les minstens één vraag.',
+      'Je reeks: oefen je 3 keer per week, of neem je een weekend vrij? Dan zie je niet meer "Je reeks is gestopt". Dat scherm komt alleen na een echte pauze, en Bram zwaait dan.',
+      'In Pauze is "Zonder geluid" nu één knop die aan of uit staat, met een vinkje als het geluid uit is.',
+      'Start de app niet meer, bijvoorbeeld door een fout in wat op je telefoon is bewaard? Dan zie je wat je kunt doen: je voortgang bewaren of opnieuw beginnen. Eerst bleef het beginscherm staan.',
+      'Privacy: de uitleg zegt nu precies wat "Voortgang wissen" weghaalt en wat blijft staan, en waarom de app mag tellen. Op de begeleiderskaart staat: je mag ook nee zeggen. Begeleiders lezen dat laten zien vrijwillig is.',
+      'In de les over grenzen zeg je nu "Blijf van me af." in plaats van "Raak me niet aan, alstublieft.": een grens zeg je stevig.',
+    ],
+  },
+  {
     date: '2026-11-03',
     items: [
       'Meer kleur: Zand, Haven en Werkjas hebben nu echt een eigen achtergrond (zand, zachte zeegroen, licht werkjas-blauw), en bij Donker zijn de kaarten iets lichter. De kaarten en knoppen springen er zo meer uit, en je ziet beter welke kleur je hebt. Alle tekst blijft even goed leesbaar.',
