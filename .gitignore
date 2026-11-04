@@ -10,3 +10,6 @@ public/audio/
 /review/
 # Raw background sounds for the sound scenes: only the mixes and scenes.json go in (docs/geluidsscenes.md)
 public/audio-scenes/geluid/
+# Flow tests (npm run e2e): what Playwright leaves behind
+/test-results/
+/playwright-report/
