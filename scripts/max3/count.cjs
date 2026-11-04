@@ -12,7 +12,8 @@
  * A state FAILS when
  *  - more than --limit things can be tapped (list states: see below);
  *  - one item has more than one Dutch speaker (speakerDupes). The help-language read-aloud
- *    (`.help-say`) is counted on its own (helpSpeakers), never as a Dutch speaker;
+ *    (`.help-say`) is counted on its own (helpSpeakers), never as a Dutch speaker, and at most
+ *    one per item too (helpSpeakerDupes: a situation's answer card has one beside it);
  *  - a tappable is invisible (opacity 0 on it or an ancestor) or a React click handler sits on an
  *    element without a pointer cursor (a hidden or unmarked tap target);
  *  - an `expect` selector of the state is not on screen (the flow ended somewhere else).
@@ -407,6 +408,10 @@ function defineStates(LANG) {
   add('lesson:situation-voice', shot('situation'), null, { voices: true, expect: '.help-say' });
   add('lesson:tip-voice', shot('tip'), null, { voices: true, expect: '.help-say' });
   add('lesson:situation-quote-voice', shot('situation&tip=l.hello'), null, { voices: true, expect: '.situation-quote .speak-glyph' });
+  // Each answer and the why after the answer can be heard in the help language too (one per item).
+  add('lesson:situation-voice:shown', shot('situation'), async (p) => { await reveal(p); }, { voices: true, expect: '.situation-answers .choice-wrap .help-say' });
+  add('lesson:situation-voice:wrong', shot('situation'), async (p) => { await reveal(p); await tap(p, choice, 1); await settle(p, 900); }, { voices: true, expect: '.feedback-why-row .help-say' });
+  add('lesson:saying-ask-voice:right', shot('saying-ask'), async (p) => { await reveal(p); await tap(p, choice, 0); await settle(p, 900); }, { voices: true, expect: '.feedback-why-row .help-say' });
   add('lesson:word-card', shot('intro'));
   // Tester mode: the "Iets melden" flag in the header (chrome, like the ✕).
   add('lesson:report', shot('meaning&report=1'), null, { expect: '.player-top .lesson-report' });
@@ -971,6 +976,17 @@ function countInPage() {
     groups.get(key).push(s.label);
   }
   const speakerDupes = [...groups.values()].filter((g) => g.length > 1);
+  // The help-language read-aloud (.help-say) counts apart from the Dutch speakers, but also at most
+  // one per item (a situation's answer card, its bubble). Every one has the same label ("Read
+  // aloud"), so only those inside an item are grouped (by the item, never by the label).
+  const helpGroups = new Map();
+  for (const s of helpSpeakers) {
+    const host = s._el.parentElement && s._el.parentElement.closest(ITEM);
+    if (!host) continue;
+    if (!helpGroups.has(host)) helpGroups.set(host, []);
+    helpGroups.get(host).push(s.label);
+  }
+  const helpSpeakerDupes = [...helpGroups.values()].filter((g) => g.length > 1);
   // Lists: one kind of row, at most one tap per row, no extra per-row buttons.
   const lists = [];
   // The colours of "Welke kleur wil je?" (four swatches, one tap each) are such a list too.
@@ -995,7 +1011,7 @@ function countInPage() {
   const outside = counted.filter((c) => !inList(c));
   const strip = (a) => a.map(({ _el, ...r }) => r);
   return {
-    counted: strip(counted), outsideLists: strip(outside), speakers: strip(speakers), helpSpeakers: strip(helpSpeakers), speakerDupes,
+    counted: strip(counted), outsideLists: strip(outside), speakers: strip(speakers), helpSpeakers: strip(helpSpeakers), speakerDupes, helpSpeakerDupes,
     lists: lists.map(({ _el, ...r }) => r), noPointer, hiddenTappables: strip(hiddenTappables),
     nav: nav.length, chrome: chrome.length, disabled: strip(disabled), modal: modals.length > 0, scrollHeight: document.documentElement.scrollHeight,
   };
@@ -1015,6 +1031,7 @@ function judge(st, res, expectOk) {
     }
   } else if (res.counted.length > LIMIT) why.push(`${res.counted.length} > ${LIMIT}`);
   if (res.speakerDupes.length) why.push(`>1 Dutch speaker per item: ${res.speakerDupes.map((g) => g.join(' + ')).join('; ')}`);
+  if (res.helpSpeakerDupes && res.helpSpeakerDupes.length) why.push(`>1 help-language read-aloud per item: ${res.helpSpeakerDupes.map((g) => g.join(' + ')).join('; ')}`);
   if (res.hiddenTappables.length) why.push(`invisible tappables: ${res.hiddenTappables.map((h) => h.label).join(', ')}`);
   if (res.noPointer.length) why.push(`click handler without pointer cursor: ${res.noPointer.join(', ')}`);
   if (!expectOk) why.push(`expected ${st.expect}`);

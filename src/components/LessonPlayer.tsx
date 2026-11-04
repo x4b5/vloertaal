@@ -297,6 +297,24 @@ function ButtonBlock({ icon }: { icon: 'check' | 'next' }) {
 type PlayerProps = Parameters<typeof LessonRun>[0];
 
 /**
+ * The why on the feedback label (a situation; a chat after a wrong pick): the help language large,
+ * the English small. It is the longest help-language text after the answer (about rights and
+ * manners), so it can be heard in the help language too, as the situation above it (HelpSay; the
+ * UX evaluation, 4 November 2026): hidden when there is no recording and no phone voice for it.
+ */
+export function WhyLine({ why, lang, rtl }: { why: Bilingual; lang?: HelpLanguage; rtl: boolean }) {
+  return (
+    <div className="help-say-row feedback-why-row">
+      <div className="feedback-meaning feedback-why">
+        <span className={`bi-en ${why.help && why.lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
+        {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
+      </div>
+      <HelpSay text={why.help} lang={lang} />
+    </div>
+  );
+}
+
+/**
  * The lesson. "Start again" for a lesson stopped halfway is on the home (it clears the saved
  * place before the lesson opens); the pause sheet is always Keep going / sound / Stop.
  */
@@ -981,12 +999,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // A chat after a wrong pick: one short line on why the right reply fits.
   const chatReason = ex.kind === 'chat' && !ex.reverse && feedback && !answer.correct ? chatWhy(ex.dialogue.reply.id) : undefined;
   const why = ex.kind === 'situation' ? gloss(ex.tip.why.id, ex.tip.why.en, lang) : chatReason ? gloss(chatReason.id, chatReason.en, lang) : null;
-  const whyLine = why && (
-    <div className="feedback-meaning feedback-why">
-      <span className={`bi-en ${why.help && why.lang ? 'en-support' : ''}`} lang="en" dir={rtl ? 'ltr' : undefined}>{why.en}</span>
-      {why.help && why.lang && <HelpText text={why.help} lang={why.lang} />}
-    </div>
-  );
+  const whyLine = why && <WhyLine why={why} lang={lang} rtl={rtl} />;
   const autoContinue = ex.kind === 'intro' || ex.kind === 'match' || ex.kind === 'tip' || ex.kind === 'saying' || ex.kind === 'speak' || (isRuleExercise(ex) && !isGraded(ex));
   // One bar: ink for done, yellow for where you are, a kraft tail for mistakes that come back.
   const bar = barParts(index, checked, initial.length, queue.length);

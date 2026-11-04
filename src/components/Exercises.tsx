@@ -1134,7 +1134,8 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
       <TipBody text={say ? shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} />
       {say && phrase}
       {/* Who can help (the tip's closing line, cut off above) or else what these tips are. */}
-      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={text.closing ?? ui('tipsNote', lang)} /></p></InfoMore>
+      {/* Read aloud in the help language too, as on the "Zo werkt het hier" page. */}
+      <InfoMore className="tips-note-more" label={ui('tipsAbout', lang)}><p className="tips-note"><Bi text={text.closing ?? ui('tipsNote', lang)} /><HelpSay text={(text.closing ?? ui('tipsNote', lang)).help} lang={lang} /></p></InfoMore>
     </div>
   );
 }
@@ -1384,6 +1385,11 @@ export function SituationExercise({ ex, lang, locked, onAnswer, verdict }: Props
             lang={lang}
             onAnswer={onAnswer}
             stamp={false}
+            // Each answer can be heard in the help language too (its recording, else the phone's
+            // voice; HelpSay), beside the card and outside its tap area, as the Dutch speakers of
+            // a chat: a learner who reads little can follow three answers of ten words each. A
+            // tap on it only reads; it never picks the answer (the UX evaluation, 4 November 2026).
+            side={(o) => <HelpSay text={gloss(o.id, o.en, lang).help} lang={lang} />}
             render={(o) => <Bi text={gloss(o.id, o.en, lang)} />}
           />
         </div>

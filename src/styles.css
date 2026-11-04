@@ -5154,3 +5154,12 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 @media (max-width: 300px) {
   .max3-settings.max3-lang { padding-bottom: calc(116px + env(safe-area-inset-bottom)); }
 }
+
+/* ---- Read aloud where there is most to read (the UX evaluation, 4 November 2026) ----
+   A situation's answers each have the help-language read-aloud beside the card (HelpSay, outside
+   its tap area, as the Dutch speakers of a chat), and so has the why after the answer. */
+.choice-wrap > .help-say { position: relative; z-index: 2; }
+.choice-wrap.faded > .help-say { opacity: 0.6; }
+.feedback-why-row { margin-top: 6px; }
+.feedback-why-row > .feedback-meaning { margin-top: 0; }
+
