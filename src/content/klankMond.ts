@@ -17,8 +17,10 @@
  * rounded (and pushed forward), how tight they are, and what is seen inside (teeth, tongue).
  * They are a little exaggerated on purpose: a schematic face has to show the difference. Only
  * what a front view can show: where the tongue is (front or back) is seen as more or less tongue
- * in the opening; the consonants that are made in the throat (g, ch) or with the tongue (r) need a
- * side view and are not here.
+ * in the opening. Beside it the card shows the mouth cut through from the side
+ * (src/components/MouthSide.tsx, 4 November 2026), for what the front cannot show: how high the
+ * tongue is and where (MouthPose.height, .front), its tip and its back. The consonants made in the
+ * throat (g, ch) do not have a card of their own yet.
  *
  * Long vowels and diphthongs:
  *  - aa [aː]  open front-central, unrounded: jaw wide open, lips relaxed, the tongue low and flat.
@@ -83,10 +85,31 @@ export interface MouthPose {
   lowTeeth: number;
   /** Tongue seen in the opening: 0 pulled back (not seen), 1 high and forward, right behind the teeth. */
   tongue: number;
+  /*
+   * The side view (src/components/MouthSide.tsx, the owner's request of 4 November 2026: "een
+   * doorsnede van de zijkant, zodat je beter kunt zien wat de tong doet"). The front view does not
+   * use these.
+   */
+  /** How high the body of the tongue is: 0 low (aa), 1 high, almost against the palate (ie, oe, uu). */
+  height: number;
+  /** Where the highest part of the tongue is: 0 at the back (oe, o), 1 at the front (ie, ee). */
+  front: number;
+  /** The tip of the tongue: 0 resting behind the lower teeth, 1 up against the ridge behind the upper teeth (t, d, n, l). */
+  tip: number;
+  /** The back of the tongue up against the soft palate (k, g, ng): 0 not, 1 touching. */
+  dorsum: number;
+  /** The lower lip up against the upper teeth (f, v, w): 0 not, 1 touching. */
+  tuck: number;
 }
 
+/** The side of a position: the tongue and the lower lip. */
+export type SidePose = Pick<MouthPose, 'height' | 'front' | 'tip' | 'dorsum' | 'tuck'>;
+
+/** The tongue at rest: in the middle, its tip behind the lower teeth. */
+export const SIDE_REST: SidePose = { height: 0.4, front: 0.5, tip: 0, dorsum: 0, tuck: 0 };
+
 /** The mouth at rest: closed, relaxed. Every motion starts and ends here. */
-export const REST: MouthPose = { open: 0, wide: 0.55, round: 0, forward: 0, tense: 0, teeth: 0, lowTeeth: 0, tongue: 0 };
+export const REST: MouthPose = { open: 0, wide: 0.55, round: 0, forward: 0, tense: 0, teeth: 0, lowTeeth: 0, tongue: 0, ...SIDE_REST };
 
 export interface Klank {
   id: KlankId;
@@ -121,7 +144,8 @@ export interface Klank {
   glide?: 'full' | 'subtle';
 }
 
-const pose = (p: MouthPose) => p;
+/** A position: what the front shows, and the side (the tongue at rest where it is not given). */
+const pose = (p: Omit<MouthPose, keyof SidePose> & Partial<SidePose>): MouthPose => ({ ...SIDE_REST, ...p });
 
 /** In the order of the overview: each short vowel next to its long one, then the round sounds and the diphthongs. */
 export const KLANKEN: Klank[] = [
@@ -132,7 +156,7 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.kl.man', nl: 'man', emoji: '🧔', parts: ['m', 'a', 'n'] },
     short: true,
     how: 'Open your mouth, a little less than for aa. Your tongue goes back. Say it short.',
-    start: pose({ open: 0.82, wide: 0.5, round: 0.5, forward: 0.05, tense: 0.05, teeth: 0.5, lowTeeth: 0.25, tongue: 0.08 }),
+    start: pose({ open: 0.82, wide: 0.5, round: 0.5, forward: 0.05, tense: 0.05, teeth: 0.5, lowTeeth: 0.25, tongue: 0.08, height: 0.15, front: 0.15 }),
   },
   {
     id: 'aa',
@@ -141,7 +165,7 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.kl.maan', nl: 'maan', emoji: '🌙', parts: ['m', 'aa', 'n'] },
     sound: 'aa',
     how: 'Open your mouth wide. Your lips are relaxed. Your tongue lies low and flat.',
-    start: pose({ open: 1, wide: 0.6, round: 0.4, forward: 0, tense: 0, teeth: 0.7, lowTeeth: 0.45, tongue: 0.3 }),
+    start: pose({ open: 1, wide: 0.6, round: 0.4, forward: 0, tense: 0, teeth: 0.7, lowTeeth: 0.45, tongue: 0.3, height: 0.05, front: 0.55 }),
   },
   {
     id: 'e',
@@ -150,7 +174,7 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.helm', nl: 'helm', emoji: '⛑️', parts: ['h', 'e', 'l', 'm'] },
     short: true,
     how: 'Your mouth is half open, more than for ee. Your lips are relaxed. Say it short.',
-    start: pose({ open: 0.56, wide: 0.78, round: 0.1, forward: 0, tense: 0.1, teeth: 0.75, lowTeeth: 0.45, tongue: 0.42 }),
+    start: pose({ open: 0.56, wide: 0.78, round: 0.1, forward: 0, tense: 0.1, teeth: 0.75, lowTeeth: 0.45, tongue: 0.42, height: 0.5, front: 0.85 }),
   },
   {
     id: 'ee',
@@ -159,8 +183,8 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.nee', nl: 'nee', emoji: '❌', parts: ['n', 'ee'] },
     sound: 'ee',
     how: 'Your mouth is half open. Your lips are wide, as in a smile. The tip of your tongue touches your lower teeth.',
-    start: pose({ open: 0.4, wide: 1, round: 0.05, forward: 0, tense: 0.6, teeth: 0.9, lowTeeth: 0.4, tongue: 0.55 }),
-    end: pose({ open: 0.3, wide: 1, round: 0.05, forward: 0, tense: 0.7, teeth: 0.9, lowTeeth: 0.35, tongue: 0.65 }),
+    start: pose({ open: 0.4, wide: 1, round: 0.05, forward: 0, tense: 0.6, teeth: 0.9, lowTeeth: 0.4, tongue: 0.55, height: 0.7, front: 0.9 }),
+    end: pose({ open: 0.3, wide: 1, round: 0.05, forward: 0, tense: 0.7, teeth: 0.9, lowTeeth: 0.35, tongue: 0.65, height: 0.8, front: 0.95 }),
     glide: 'subtle',
   },
   {
@@ -170,7 +194,7 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.links', nl: 'links', emoji: '⬅️', parts: ['l', 'i', 'ŋ', 'k', 's'] },
     short: true,
     how: 'As for ie, but your mouth is a little more open and relaxed. Say it short.',
-    start: pose({ open: 0.3, wide: 0.82, round: 0.05, forward: 0, tense: 0.25, teeth: 0.85, lowTeeth: 0.35, tongue: 0.6 }),
+    start: pose({ open: 0.3, wide: 0.82, round: 0.05, forward: 0, tense: 0.25, teeth: 0.85, lowTeeth: 0.35, tongue: 0.6, height: 0.8, front: 0.85 }),
   },
   {
     id: 'ie',
@@ -179,7 +203,7 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.fiets', nl: 'fiets', emoji: '🚲', parts: ['f', 'ie', 't', 's'] },
     sound: 'ie',
     how: 'Your mouth is almost closed. Your lips are wide, as in a smile. Your tongue is high and forward.',
-    start: pose({ open: 0.2, wide: 0.96, round: 0, forward: 0, tense: 0.85, teeth: 0.9, lowTeeth: 0.3, tongue: 0.8 }),
+    start: pose({ open: 0.2, wide: 0.96, round: 0, forward: 0, tense: 0.85, teeth: 0.9, lowTeeth: 0.3, tongue: 0.8, height: 1, front: 1 }),
   },
   {
     id: 'o',
@@ -188,7 +212,7 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.stop', nl: 'stop', emoji: '🛑', parts: ['s', 't', 'o', 'p'] },
     short: true,
     how: 'Your mouth is open. Your lips are a little round. Your tongue is at the back. Say it short.',
-    start: pose({ open: 0.62, wide: 0.36, round: 0.78, forward: 0.25, tense: 0.1, teeth: 0.4, lowTeeth: 0.15, tongue: 0.08 }),
+    start: pose({ open: 0.62, wide: 0.36, round: 0.78, forward: 0.25, tense: 0.1, teeth: 0.4, lowTeeth: 0.15, tongue: 0.08, height: 0.4, front: 0.1 }),
   },
   {
     id: 'oo',
@@ -197,8 +221,8 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.doos', nl: 'doos', emoji: '📦', parts: ['d', 'oo', 's'] },
     sound: 'oo',
     how: 'Your lips are round. Your mouth is half open. At the end your lips get smaller.',
-    start: pose({ open: 0.46, wide: 0.24, round: 0.86, forward: 0.55, tense: 0.3, teeth: 0.2, lowTeeth: 0.05, tongue: 0.05 }),
-    end: pose({ open: 0.34, wide: 0.12, round: 0.98, forward: 0.7, tense: 0.45, teeth: 0.06, lowTeeth: 0, tongue: 0 }),
+    start: pose({ open: 0.46, wide: 0.24, round: 0.86, forward: 0.55, tense: 0.3, teeth: 0.2, lowTeeth: 0.05, tongue: 0.05, height: 0.65, front: 0.1 }),
+    end: pose({ open: 0.34, wide: 0.12, round: 0.98, forward: 0.7, tense: 0.45, teeth: 0.06, lowTeeth: 0, tongue: 0, height: 0.8, front: 0.05 }),
     glide: 'subtle',
   },
   {
@@ -208,7 +232,7 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.bus', nl: 'bus', emoji: '🚌', parts: ['b', 'u', 's'] },
     short: true,
     how: 'Your lips are a little round, not tight. Your tongue is forward. Say it short.',
-    start: pose({ open: 0.34, wide: 0.38, round: 0.62, forward: 0.2, tense: 0.1, teeth: 0.45, lowTeeth: 0.1, tongue: 0.6 }),
+    start: pose({ open: 0.34, wide: 0.38, round: 0.62, forward: 0.2, tense: 0.1, teeth: 0.45, lowTeeth: 0.1, tongue: 0.6, height: 0.75, front: 0.75 }),
   },
   {
     id: 'uu',
@@ -217,7 +241,7 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.kl.muur', nl: 'muur', emoji: '🧱', parts: ['m', 'uu', 'r'] },
     sound: 'u',
     how: 'Lips round and tight, as for a kiss. Your tongue forward, as for ie.',
-    start: pose({ open: 0.3, wide: 0.06, round: 1, forward: 0.75, tense: 1, teeth: 0, lowTeeth: 0, tongue: 0.8 }),
+    start: pose({ open: 0.3, wide: 0.06, round: 1, forward: 0.75, tense: 1, teeth: 0, lowTeeth: 0, tongue: 0.8, height: 1, front: 0.95 }),
   },
   {
     id: 'oe',
@@ -226,7 +250,7 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.kl.moer', nl: 'moer', emoji: '🔩', parts: ['m', 'oe', 'r'] },
     sound: 'oe',
     how: 'Make your lips round and tight, pushed far forward. There is only a small hole. Your tongue stays at the back of your mouth.',
-    start: pose({ open: 0.3, wide: 0, round: 1, forward: 1, tense: 1, teeth: 0, lowTeeth: 0, tongue: 0 }),
+    start: pose({ open: 0.3, wide: 0, round: 1, forward: 1, tense: 1, teeth: 0, lowTeeth: 0, tongue: 0, height: 1, front: 0 }),
   },
   {
     id: 'eu',
@@ -235,8 +259,8 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.keuken', nl: 'keuken', emoji: '🍳', parts: ['k', 'eu', 'k', 'ə', 'n'] },
     sound: 'eu',
     how: 'Your mouth is half open. Your lips are round, but not tight. Your tongue forward, as for ee.',
-    start: pose({ open: 0.42, wide: 0.32, round: 0.8, forward: 0.45, tense: 0.3, teeth: 0.3, lowTeeth: 0.1, tongue: 0.55 }),
-    end: pose({ open: 0.34, wide: 0.24, round: 0.9, forward: 0.55, tense: 0.45, teeth: 0.15, lowTeeth: 0.05, tongue: 0.62 }),
+    start: pose({ open: 0.42, wide: 0.32, round: 0.8, forward: 0.45, tense: 0.3, teeth: 0.3, lowTeeth: 0.1, tongue: 0.55, height: 0.65, front: 0.85 }),
+    end: pose({ open: 0.34, wide: 0.24, round: 0.9, forward: 0.55, tense: 0.45, teeth: 0.15, lowTeeth: 0.05, tongue: 0.62, height: 0.75, front: 0.85 }),
     glide: 'subtle',
   },
   {
@@ -246,8 +270,8 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.kl.ui', nl: 'ui', emoji: '🧅', parts: ['ui'] },
     sound: 'ui',
     how: 'Start with your mouth half open and round lips. Then make your lips small, to uu. Your lips stay round.',
-    start: pose({ open: 0.6, wide: 0.44, round: 0.65, forward: 0.3, tense: 0.1, teeth: 0.45, lowTeeth: 0.2, tongue: 0.45 }),
-    end: pose({ open: 0.3, wide: 0.12, round: 0.95, forward: 0.7, tense: 0.75, teeth: 0, lowTeeth: 0, tongue: 0.75 }),
+    start: pose({ open: 0.6, wide: 0.44, round: 0.65, forward: 0.3, tense: 0.1, teeth: 0.45, lowTeeth: 0.2, tongue: 0.45, height: 0.45, front: 0.8 }),
+    end: pose({ open: 0.3, wide: 0.12, round: 0.95, forward: 0.7, tense: 0.75, teeth: 0, lowTeeth: 0, tongue: 0.75, height: 0.85, front: 0.9 }),
     glide: 'full',
   },
   {
@@ -258,8 +282,8 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.pijn', nl: 'pijn', emoji: '🤕', parts: ['p', 'ij', 'n'] },
     sound: 'ei',
     how: 'Start with your mouth half open and wide lips. Then almost close your mouth, to ie.',
-    start: pose({ open: 0.56, wide: 0.8, round: 0.08, forward: 0, tense: 0.15, teeth: 0.75, lowTeeth: 0.45, tongue: 0.45 }),
-    end: pose({ open: 0.2, wide: 0.94, round: 0, forward: 0, tense: 0.75, teeth: 0.9, lowTeeth: 0.3, tongue: 0.78 }),
+    start: pose({ open: 0.56, wide: 0.8, round: 0.08, forward: 0, tense: 0.15, teeth: 0.75, lowTeeth: 0.45, tongue: 0.45, height: 0.45, front: 0.85 }),
+    end: pose({ open: 0.2, wide: 0.94, round: 0, forward: 0, tense: 0.75, teeth: 0.9, lowTeeth: 0.3, tongue: 0.78, height: 0.95, front: 1 }),
     glide: 'full',
   },
   {
@@ -270,8 +294,8 @@ export const KLANKEN: Klank[] = [
     word: { id: 'w.kl.koud', nl: 'koud', emoji: '🥶', parts: ['k', 'ou', 'd'] },
     sound: 'ou',
     how: 'Start with your mouth open. Then make your lips small and round, to oe.',
-    start: pose({ open: 0.78, wide: 0.56, round: 0.35, forward: 0, tense: 0.05, teeth: 0.55, lowTeeth: 0.3, tongue: 0.15 }),
-    end: pose({ open: 0.28, wide: 0.04, round: 1, forward: 0.9, tense: 0.85, teeth: 0, lowTeeth: 0, tongue: 0 }),
+    start: pose({ open: 0.78, wide: 0.56, round: 0.35, forward: 0, tense: 0.05, teeth: 0.55, lowTeeth: 0.3, tongue: 0.15, height: 0.25, front: 0.4 }),
+    end: pose({ open: 0.28, wide: 0.04, round: 1, forward: 0.9, tense: 0.85, teeth: 0, lowTeeth: 0, tongue: 0, height: 0.95, front: 0.05 }),
     glide: 'full',
   },
 ];
@@ -297,26 +321,31 @@ export type WordPart = KlankId | 'ə' | 'ŋ' | 'm' | 'b' | 'p' | 'f' | 'v' | 'w'
 
 type Consonant = Exclude<WordPart, KlankId>;
 
-const CONSONANTS: Record<Consonant, { pose: MouthPose; weight: number; soft?: number }> = {
-  m: { pose: pose({ open: 0, wide: 0.5, round: 0, forward: 0.05, tense: 0.5, teeth: 0, lowTeeth: 0, tongue: 0 }), weight: 1 },
-  b: { pose: pose({ open: 0, wide: 0.5, round: 0, forward: 0.05, tense: 0.6, teeth: 0, lowTeeth: 0, tongue: 0 }), weight: 0.8 },
-  p: { pose: pose({ open: 0, wide: 0.5, round: 0, forward: 0.05, tense: 0.7, teeth: 0, lowTeeth: 0, tongue: 0 }), weight: 0.8 },
-  f: { pose: pose({ open: 0.16, wide: 0.62, round: 0, forward: 0, tense: 0.3, teeth: 1, lowTeeth: 0, tongue: 0 }), weight: 1.2 },
-  v: { pose: pose({ open: 0.16, wide: 0.62, round: 0, forward: 0, tense: 0.3, teeth: 1, lowTeeth: 0, tongue: 0 }), weight: 1.1 },
-  w: { pose: pose({ open: 0.18, wide: 0.56, round: 0.1, forward: 0, tense: 0.2, teeth: 1, lowTeeth: 0, tongue: 0 }), weight: 0.9 },
-  s: { pose: pose({ open: 0.16, wide: 0.8, round: 0, forward: 0, tense: 0.45, teeth: 1, lowTeeth: 1, tongue: 0 }), weight: 1.2 },
-  z: { pose: pose({ open: 0.16, wide: 0.78, round: 0, forward: 0, tense: 0.4, teeth: 1, lowTeeth: 1, tongue: 0 }), weight: 1.1 },
-  t: { pose: pose({ open: 0.24, wide: 0.68, round: 0, forward: 0, tense: 0.3, teeth: 0.85, lowTeeth: 0.45, tongue: 0.9 }), weight: 0.8 },
-  d: { pose: pose({ open: 0.24, wide: 0.66, round: 0, forward: 0, tense: 0.25, teeth: 0.85, lowTeeth: 0.45, tongue: 0.9 }), weight: 0.8 },
-  n: { pose: pose({ open: 0.24, wide: 0.64, round: 0, forward: 0, tense: 0.2, teeth: 0.8, lowTeeth: 0.4, tongue: 0.9 }), weight: 1 },
-  l: { pose: pose({ open: 0.32, wide: 0.64, round: 0, forward: 0, tense: 0.15, teeth: 0.8, lowTeeth: 0.4, tongue: 0.95 }), weight: 0.9 },
-  k: { pose: pose({ open: 0.26, wide: 0.6, round: 0, forward: 0, tense: 0.2, teeth: 0.55, lowTeeth: 0.3, tongue: 0.1 }), weight: 0.8, soft: 0.5 },
-  g: { pose: pose({ open: 0.26, wide: 0.6, round: 0, forward: 0, tense: 0.2, teeth: 0.55, lowTeeth: 0.3, tongue: 0.1 }), weight: 1, soft: 0.5 },
-  ŋ: { pose: pose({ open: 0.26, wide: 0.62, round: 0, forward: 0, tense: 0.15, teeth: 0.6, lowTeeth: 0.3, tongue: 0.15 }), weight: 0.9, soft: 0.5 },
-  r: { pose: pose({ open: 0.3, wide: 0.55, round: 0.1, forward: 0, tense: 0.15, teeth: 0.5, lowTeeth: 0.25, tongue: 0.4 }), weight: 0.9, soft: 0.5 },
-  h: { pose: pose({ open: 0.4, wide: 0.58, round: 0.1, forward: 0, tense: 0, teeth: 0.5, lowTeeth: 0.25, tongue: 0.2 }), weight: 0.7, soft: 0.75 },
+/**
+ * `soft`: how much of the vowel beside it the front of the mouth takes (k, g, ŋ, r, h).
+ * `tongue: 'vowel'`: the tongue is free (the lips or the throat make the sound: m, b, p, f, v, w,
+ * h), so in the side view it is already where the vowel beside it needs it.
+ */
+const CONSONANTS: Record<Consonant, { pose: MouthPose; weight: number; soft?: number; tongue?: 'vowel' }> = {
+  m: { pose: pose({ open: 0, wide: 0.5, round: 0, forward: 0.05, tense: 0.5, teeth: 0, lowTeeth: 0, tongue: 0 }), weight: 1, tongue: 'vowel' },
+  b: { pose: pose({ open: 0, wide: 0.5, round: 0, forward: 0.05, tense: 0.6, teeth: 0, lowTeeth: 0, tongue: 0 }), weight: 0.8, tongue: 'vowel' },
+  p: { pose: pose({ open: 0, wide: 0.5, round: 0, forward: 0.05, tense: 0.7, teeth: 0, lowTeeth: 0, tongue: 0 }), weight: 0.8, tongue: 'vowel' },
+  f: { pose: pose({ open: 0.16, wide: 0.62, round: 0, forward: 0, tense: 0.3, teeth: 1, lowTeeth: 0, tongue: 0, tuck: 1 }), weight: 1.2, tongue: 'vowel' },
+  v: { pose: pose({ open: 0.16, wide: 0.62, round: 0, forward: 0, tense: 0.3, teeth: 1, lowTeeth: 0, tongue: 0, tuck: 1 }), weight: 1.1, tongue: 'vowel' },
+  w: { pose: pose({ open: 0.18, wide: 0.56, round: 0.1, forward: 0, tense: 0.2, teeth: 1, lowTeeth: 0, tongue: 0, tuck: 0.85 }), weight: 0.9, tongue: 'vowel' },
+  s: { pose: pose({ open: 0.16, wide: 0.8, round: 0, forward: 0, tense: 0.45, teeth: 1, lowTeeth: 1, tongue: 0, height: 0.65, front: 0.85, tip: 0.85 }), weight: 1.2 },
+  z: { pose: pose({ open: 0.16, wide: 0.78, round: 0, forward: 0, tense: 0.4, teeth: 1, lowTeeth: 1, tongue: 0, height: 0.65, front: 0.85, tip: 0.85 }), weight: 1.1 },
+  t: { pose: pose({ open: 0.24, wide: 0.68, round: 0, forward: 0, tense: 0.3, teeth: 0.85, lowTeeth: 0.45, tongue: 0.9, height: 0.5, front: 0.75, tip: 1 }), weight: 0.8 },
+  d: { pose: pose({ open: 0.24, wide: 0.66, round: 0, forward: 0, tense: 0.25, teeth: 0.85, lowTeeth: 0.45, tongue: 0.9, height: 0.5, front: 0.75, tip: 1 }), weight: 0.8 },
+  n: { pose: pose({ open: 0.24, wide: 0.64, round: 0, forward: 0, tense: 0.2, teeth: 0.8, lowTeeth: 0.4, tongue: 0.9, height: 0.5, front: 0.75, tip: 1 }), weight: 1 },
+  l: { pose: pose({ open: 0.32, wide: 0.64, round: 0, forward: 0, tense: 0.15, teeth: 0.8, lowTeeth: 0.4, tongue: 0.95, height: 0.45, front: 0.7, tip: 1 }), weight: 0.9 },
+  k: { pose: pose({ open: 0.26, wide: 0.6, round: 0, forward: 0, tense: 0.2, teeth: 0.55, lowTeeth: 0.3, tongue: 0.1, height: 0.5, front: 0.15, dorsum: 1 }), weight: 0.8, soft: 0.5 },
+  g: { pose: pose({ open: 0.26, wide: 0.6, round: 0, forward: 0, tense: 0.2, teeth: 0.55, lowTeeth: 0.3, tongue: 0.1, height: 0.5, front: 0.15, dorsum: 1 }), weight: 1, soft: 0.5 },
+  ŋ: { pose: pose({ open: 0.26, wide: 0.62, round: 0, forward: 0, tense: 0.15, teeth: 0.6, lowTeeth: 0.3, tongue: 0.15, height: 0.5, front: 0.15, dorsum: 1 }), weight: 0.9, soft: 0.5 },
+  r: { pose: pose({ open: 0.3, wide: 0.55, round: 0.1, forward: 0, tense: 0.15, teeth: 0.5, lowTeeth: 0.25, tongue: 0.4, height: 0.5, front: 0.5, tip: 0.35, dorsum: 0.3 }), weight: 0.9, soft: 0.5 },
+  h: { pose: pose({ open: 0.4, wide: 0.58, round: 0.1, forward: 0, tense: 0, teeth: 0.5, lowTeeth: 0.25, tongue: 0.2 }), weight: 0.7, soft: 0.75, tongue: 'vowel' },
   /** The weak e (keuken): half open, everything relaxed. */
-  ə: { pose: pose({ open: 0.3, wide: 0.56, round: 0.1, forward: 0, tense: 0, teeth: 0.5, lowTeeth: 0.25, tongue: 0.35 }), weight: 1 },
+  ə: { pose: pose({ open: 0.3, wide: 0.56, round: 0.1, forward: 0, tense: 0, teeth: 0.5, lowTeeth: 0.25, tongue: 0.35, height: 0.5, front: 0.5 }), weight: 1 },
 };
 
 /** How a part is written: ə is the e, ŋ the n (links); the others are their own letters. */
@@ -348,11 +377,16 @@ export function wordSegments(k: Klank): WordSegment[] {
       return { part, start: vowel.start, end: vowel.end, glide: vowel.glide, weight };
     }
     const c = CONSONANTS[part as Consonant];
-    if (!c.soft) return { part, start: c.pose, weight: c.weight };
-    // Made inside the mouth: from the front it looks much like the vowel beside it (the next one, else the one before).
+    // The vowel beside it (the next one, else the one before), as the mouth is next to it.
     const near = vowelAt(i + 1) ?? vowelAt(i - 1);
-    const like = near ? (i + 1 < parts.length && vowelAt(i + 1) ? near.start : endPose(near)) : c.pose;
-    return { part, start: mixPose(c.pose, like, c.soft), weight: c.weight };
+    const like = near ? (vowelAt(i + 1) ? near.start : endPose(near)) : c.pose;
+    // Made inside the mouth: from the front it looks much like that vowel.
+    const front = c.soft ? mixPose(c.pose, like, c.soft) : c.pose;
+    // The side: the consonant's own tongue (t, k, s ...), or the vowel's where the tongue is free (m, f, h).
+    const tongue: SidePose = c.tongue === 'vowel'
+      ? { height: like.height, front: like.front, tip: like.tip, dorsum: like.dorsum, tuck: c.pose.tuck }
+      : { height: c.pose.height, front: c.pose.front, tip: c.pose.tip, dorsum: c.pose.dorsum, tuck: c.pose.tuck };
+    return { part, start: { ...front, ...tongue }, weight: c.weight };
   });
 }
 

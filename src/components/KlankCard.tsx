@@ -7,13 +7,15 @@ import { klankHowId, partLetters, type Klank } from '../content/klankMond';
 import { Bi } from './Bi';
 import { SlowIcon } from './Icons';
 import { Mouth, MouthAnimation, useMouthMotion } from './Mouth';
+import { MouthSide } from './MouthSide';
 import { PlayName, SpeakButton } from './SpeakButton';
 import { useVoices } from './useVoices';
 import '../klank.css';
 
 /**
  * One sound of "Hoe zeg je het?" (src/content/klankMond.ts; the owner's request of 4 November
- * 2026): the letters large, the mouth that shows how to make it, one short explanation, one
+ * 2026): the letters large, the mouth that shows how to make it (from the front, and beside it
+ * cut through from the side, to see the tongue: src/components/MouthSide.tsx), one short explanation, one
  * example word with its picture and speaker, and "Langzaam". In Hulp › Hoe zeg je het?
  * (src/components/KlankScreens.tsx) and at the start of a Klanken lesson (LessonPlayer, `compact`:
  * a smaller mouth, so the card and Continue fit a small phone).
@@ -109,7 +111,11 @@ export function KlankCard({ klank, lang, deviceSound = false, compact = false }:
       <button type="button" className="klank-play" onClick={() => say(false)}>
         <PlayName text={spoken} help={lang} />
         <KlankLetters klank={klank} />
-        <MouthAnimation klank={klank} motion={motion} size={compact ? 136 : 200} />
+        {/* The mouth from the front and, beside it, cut through from the side: what the tongue does. Both move together. */}
+        <span className="klank-views">
+          <MouthAnimation klank={klank} motion={motion} size={compact ? 124 : 152} />
+          <MouthSide pose={motion.pose} size={compact ? 124 : 152} />
+        </span>
       </button>
       <GlideSteps klank={klank} size={compact ? 56 : 72} />
       {/* The English alone (no translation yet) keeps its own direction in a right-to-left page. */}

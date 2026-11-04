@@ -9,6 +9,7 @@ import { isMixLesson } from '../src/content/review';
 import { TAAL_BE_INVENTORY } from '../src/content/taalBe/inventory';
 import { CLIP_TAIL_S, holdMs, mouthGeometry, nominalWordMs, poseAtTime, spokenMs, STEPS, SLOW_FACTOR, WORD_STEPS, wordPoseAtTime } from '../src/components/Mouth';
 import { KlankCard, klankText, MarkedWord, soundText } from '../src/components/KlankCard';
+import { RIDGE, sideGeometry, tonguePoints, VELUM } from '../src/components/MouthSide';
 import { KlankOverview, KlankPage } from '../src/components/KlankScreens';
 import { KlankStep } from '../src/components/KlankStep';
 import { WordsHub } from '../src/components/Screens';
@@ -419,5 +420,56 @@ describe('the whole word (the mouth says m – uu – r, not only the uu)', () =
     expect(html(createElement(MarkedWord, { word: 'muur', klank: k, now: 0 }))).toContain('<span class="klank-now">m</span>');
     expect(html(createElement(MarkedWord, { word: 'muur', klank: k, now: 1 }))).toContain('<b class="klank-mark klank-now">uu</b>');
     expect(html(createElement(MarkedWord, { word: 'muur', klank: k }))).toContain('m<b class="klank-mark">uu</b>r');
+  });
+});
+
+describe('the side view (what the tongue does)', () => {
+  const tongueOf = (p: MouthPose) => tonguePoints(p);
+  const seg = (id: string, part: string) => wordSegments(byId[id]).find((s) => s.part === part)!.start;
+
+  it('ie, uu and oe have the tongue high; aa low', () => {
+    for (const id of ['ie', 'uu', 'oe']) expect(tongueOf(byId[id].start).hump.y, id).toBeLessThan(49);
+    expect(tongueOf(byId.aa.start).hump.y).toBeGreaterThan(60);
+  });
+
+  it('ie and uu have the high point at the front, oe and o at the back (the one difference between uu and oe)', () => {
+    expect(tongueOf(byId.uu.start).hump.x).toBeLessThan(48);
+    expect(tongueOf(byId.ie.start).hump.x).toBeLessThan(48);
+    expect(tongueOf(byId.oe.start).hump.x).toBeGreaterThan(65);
+    expect(tongueOf(byId.o.start).hump.x).toBeGreaterThan(65);
+  });
+
+  it('t, d, n and l: the tip up at the ridge behind the upper teeth; k and ng: the back up at the soft palate', () => {
+    for (const [id, c] of [['ie', 't'], ['oo', 'd'], ['aa', 'n'], ['e', 'l']] as const) {
+      const { tip } = tongueOf(seg(id, c));
+      expect(Math.hypot(tip.x - RIDGE.x, tip.y - RIDGE.y), c).toBeLessThan(4);
+    }
+    for (const [id, c] of [['eu', 'k'], ['i', 'ŋ'], ['ou', 'k']] as const) {
+      const { hump } = tongueOf(seg(id, c));
+      expect(Math.hypot(hump.x - VELUM.x, hump.y - VELUM.y), c).toBeLessThan(3);
+    }
+    // At rest, the tip stays down behind the lower teeth.
+    expect(tongueOf(byId.oe.start).tip.y).toBeGreaterThan(56);
+  });
+
+  it('m, p, f and h leave the tongue where the vowel next to it needs it; f brings the lower lip to the upper teeth', () => {
+    expect(seg('uu', 'm').height).toBe(byId.uu.start.height);
+    expect(seg('ij', 'p').front).toBe(byId.ij.start.front);
+    expect(seg('ie', 'f').height).toBe(byId.ie.start.height);
+    expect(seg('ie', 'f').tuck).toBe(1);
+    expect(seg('e', 'h').front).toBe(byId.e.start.front);
+  });
+
+  it('the jaw drops with the mouth open: the chin is lower for aa than for ie', () => {
+    const chin = (p: MouthPose) => sideGeometry(p).jaw({ x: 13.5, y: 83 }).y;
+    expect(chin(byId.aa.start)).toBeGreaterThan(chin(byId.ie.start) + 8);
+    expect(sideGeometry(REST).jaw({ x: 13.5, y: 83 }).y).toBeCloseTo(83, 5);
+  });
+
+  it('is on the card next to the front view, in the one button with the sound', () => {
+    const out = html(createElement(KlankCard, { klank: byId.uu }));
+    const button = out.slice(out.indexOf('klank-play'), out.indexOf('</button>'));
+    expect(button).toContain('mouth-side');
+    expect(button.match(/<svg/g)?.length).toBe(2);
   });
 });

@@ -19,6 +19,9 @@
   border: 2px solid var(--line);
 }
 .klank-play:active .mouth { transform: translateY(1px); }
+/* The front and the side view next to each other; the side view is always a face looking left (also in a right-to-left page). */
+.klank-views { display: flex; justify-content: center; gap: 10px; width: 100%; direction: ltr; }
+.klank-views .mouth { flex: 0 1 auto; min-width: 0; }
 
 /* ui: where it starts and where it ends, small. */
 .klank-steps { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--muted); }

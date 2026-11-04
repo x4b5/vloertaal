@@ -7,6 +7,7 @@ import { findKlank, KLANKEN, partLetters, wordSegments } from '../content/klankM
 import { KlankCard, KlankLetters } from '../components/KlankCard';
 import { KlankOverview } from '../components/KlankScreens';
 import { Mouth, MouthAnimation, type MouthFrame } from '../components/Mouth';
+import { MouthSide } from '../components/MouthSide';
 import { ChromeBack } from '../components/ChromeBack';
 import '../klank.css';
 
@@ -18,6 +19,7 @@ import '../klank.css';
  *   /?shot=klanken&lang=pl         the overview (as under Hulp); a tap opens its card
  *   /?shot=klank&k=uu&lang=pl      one card (k = any id of src/content/klankMond.ts); the back arrow: the overview
  *   /?shot=klankwoord              for review: per sound its example word, the mouth in each of its sounds (m – uu – r)
+ *                                  (&side=1 also the side view, &side=only the side view alone; &size=150 larger)
  *   /?shot=klankstrip&lang=pl      for review: per sound the mouth at rest and in its position
  *                                  (&rest=1 with the mouth at rest; &ui=1 or &k=ij: the steps of one moving sound, rest → start → end → rest)
  *
@@ -59,7 +61,8 @@ export function KlankShot({ shot, lang: code, gender }: { shot: string; lang: st
               <KlankLetters klank={k} />
               {wordSegments(k).map((seg, i) => (
                 <span key={i}>
-                  <Mouth pose={seg.start} size={Number(q.get('size') ?? 72)} />
+                  {q.get('side') !== 'only' && <Mouth pose={seg.start} size={Number(q.get('size') ?? 72)} />}
+                  {q.get('side') && <MouthSide pose={seg.start} size={Number(q.get('size') ?? 72)} />}
                   <span className="klank-strip-cap" lang="nl">{partLetters(seg.part)}</span>
                 </span>
               ))}
