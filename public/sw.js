@@ -43,10 +43,11 @@ async function cacheShell() {
     .map((m) => new URL(m[1], scope()))
     .filter((u) => u.origin === self.location.origin && !isAudio(u))
     .map((u) => u.href);
-  // The build's own files must come; an icon, the manifest or the recorded-voice index may fail
-  // without stopping the update (the index: without it offline, every speaker would fall silent;
-  // the same for the help-language recordings' list, src/lib/helpAudio.ts).
-  const optional = [...urls, new URL('audio-el/voices.json', scope()).href, new URL('audio-help/manifest.json', scope()).href];
+  // The build's own files must come, the recorded-voice index too (assets/voices-*.json, named in
+  // the page: vite.config.ts voicesIndexFile; without it offline, every speaker would fall silent);
+  // an icon, the manifest or the help-language recordings' list (src/lib/helpAudio.ts) may fail
+  // without stopping the update.
+  const optional = [...urls, new URL('audio-help/manifest.json', scope()).href];
   await Promise.all(optional.map((u) => cache.add(u).catch((e) => { if (built.has(u)) throw e; })));
   const had = new Set();
   const fonts = new URL('fonts/', scope()).pathname;

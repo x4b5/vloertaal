@@ -20,6 +20,7 @@ import { groepPage } from './src/lib/groepPage';
 import { RULES_TOPIC_PAGES, rulesTopicPage } from './src/lib/rulesPages';
 import { sitemap } from './src/lib/sitemap';
 import { TOPIC_PAGES, topicPage, topicsIndexPage } from './src/lib/topicPages';
+import { packVoices } from './src/lib/voicesIndex';
 
 /**
  * The app's stylesheet does not block the first paint: index.html's inline splash (logo, ink on
@@ -159,6 +160,37 @@ function langPagesPlugin(): Plugin {
 }
 
 /**
+ * The recorded-voice index in its short form (src/lib/voicesIndex.ts), as assets/voices-<hash>.json:
+ * a new name only when a recording changes, so a phone keeps it like the app's other files (it was
+ * public/audio-el/voices.json, 107 kB gz, under the same name for every version). index.html names
+ * it (`<link rel="vloertaal-voices" …>`, which the browser does not fetch by itself): the app reads
+ * it from there (src/lib/audio.ts voicesIndexUrl) and the service worker keeps it with the app (every
+ * href of the page). public/audio-el/voices.json stays as it is: the long form, for the scripts that
+ * record the voices, the tests, and an app of before.
+ */
+function voicesIndexFile(): Plugin {
+  let publicDir = 'public';
+  return {
+    name: 'vloertaal-voices-index',
+    apply: 'build',
+    configResolved(config) {
+      publicDir = config.publicDir;
+    },
+    buildStart() {
+      const file = resolve(publicDir, 'audio-el/voices.json');
+      if (existsSync(file)) this.emitFile({ type: 'asset', name: 'voices.json', source: JSON.stringify(packVoices(JSON.parse(readFileSync(file, 'utf8')))) });
+    },
+    transformIndexHtml: {
+      order: 'post',
+      handler: (html, ctx) => {
+        const file = Object.keys(ctx.bundle ?? {}).find((f) => /^assets\/voices-[\w-]+\.json$/.test(f));
+        return file ? html.replace('</head>', `<link rel="vloertaal-voices" href="./${file}"></head>`) : html;
+      },
+    },
+  };
+}
+
+/**
  * The service worker of this build (public/sw.js): its BUILD (a hash of every file the build
  * writes, so the same code gives the same worker) and FILES (the hashed files under assets/). So
  * sw.js changes with each deploy that changes the app: the browser installs the new worker, which
@@ -219,7 +251,7 @@ export default defineConfig({
   // `npm test`: only this checkout's tests (not the copies in .claude/worktrees), and time for the
   // tests that walk all the content on a busy machine (5 s was too tight: tests/exercises.test.ts).
   test: { exclude: ['.claude/**', 'node_modules/**', 'dist/**'], testTimeout: 15000 },
-  plugins: [react(), beLangSplit(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
+  plugins: [react(), beLangSplit(), nonBlockingCss(), lazyScreenLinks(), voicesIndexFile(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
   build: {
     // Old, cheap phones (Android 7–10 with an old Chrome or Samsung Internet, iPhones on iOS 13–15):
     // Vite's own default is 'baseline-widely-available' (Chrome 111, iOS 16.4), whose ?. ?? ??= and

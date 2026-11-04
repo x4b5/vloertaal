@@ -8,7 +8,7 @@ import { mixLessonFor } from '../content/review';
 import type { Lesson, Unit } from '../content/types';
 import { tokenize } from './answers';
 import { allMatches } from './matches';
-import { clipSrc, clipUrl, recordedIndexReady } from './audio';
+import { clipSrc, clipUrl, recordedIndexReady, voicesIndexUrl } from './audio';
 import { castVoices, type VoiceRef } from './voices';
 import { persistStorage } from './install';
 import { ensureLanguage, ensureRegionTexts, isLanguageLoaded, isRegionTextsLoaded, LANG_CODES, loadedPackUrls } from '../i18n';
@@ -177,7 +177,7 @@ const abs = (path: string) => new URL(path, document.baseURI).href;
  * files under assets/ included). Same origin only; recorded sound is listed per unit.
  */
 export function shellUrls(): string[] {
-  const out = new Set<string>([abs('./'), abs('./manifest.webmanifest'), abs('./audio-el/voices.json')]);
+  const out = new Set<string>([abs('./'), abs('./manifest.webmanifest'), abs(voicesIndexUrl())]);
   const sameOrigin = (href: string) => {
     try {
       const u = new URL(href, document.baseURI);

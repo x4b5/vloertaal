@@ -3,6 +3,7 @@ import { sayAs } from './sayAs';
 import { sentences } from './dutch';
 import { deviceRateFor, paceOf, recordedRateFor, type Pace, type Tempo } from './tempo';
 import { helpClipUrl } from './helpAudio';
+import { unpackVoices, type PackedVoices } from './voicesIndex';
 
 /** Dutch text-to-speech through the browser, plus small feedback sounds. */
 
@@ -157,10 +158,21 @@ let indexLoaded: Promise<void> = Promise.resolve();
 /** The index came (so a line without a clip really has none). */
 let indexArrived = false;
 
+/**
+ * Where the recorded-voice index is: the build's short file with a version in its name, which
+ * index.html names (vite.config.ts voicesIndexFile, src/lib/voicesIndex.ts); else (development)
+ * the long one, public/audio-el/voices.json.
+ */
+export function voicesIndexUrl(): string {
+  const link = typeof document !== 'undefined' ? document.querySelector<HTMLLinkElement>('link[rel="vloertaal-voices"]') : null;
+  return link?.href || './audio-el/voices.json';
+}
+
 if (typeof window !== 'undefined' && typeof fetch === 'function') {
   // Only the ElevenLabs index: the old Piper voices (./audio/voices.json, built in CI) are no
   // longer made, so asking for that file only failed, on every load and offline.
-  indexLoaded = loadJson<ElevenIndex>('./audio-el/voices.json').then((eleven) => {
+  indexLoaded = loadJson<PackedVoices | ElevenIndex>(voicesIndexUrl()).then((data) => {
+    const eleven = data && unpackVoices(data);
     indexArrived = Boolean(eleven);
     setRecordedIndex(eleven, null);
   }).finally(() => {
