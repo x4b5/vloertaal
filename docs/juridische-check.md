@@ -1,6 +1,6 @@
 # Vloertaal: controle van de informatie over werk en rechten
 
-*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review).*
+*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen).*
 
 **Terugsturen naar:** ____________________________ (naam en e-mail van de eigenaar van Vloertaal)
 
@@ -82,6 +82,7 @@ Deze beweringen veranderen het snelst, of zijn het makkelijkst verkeerd te begri
 | c.extra | You get holiday pay (vakantiegeld): at least 8% of your gross wage. | vakantiegeld |
 | c.extra | Most employers pay it once a year, in May or June. | vakantiegeld |
 | c.extra | Your pay may never be lower than the legal minimum wage (minimumloon); for workers under 21 it is lower. | minimumloon, jeugdloon |
+| c.harvest | Even with piece rate, you must earn at least the minimum wage for every hour you work. | minimumloon bij stukloon |
 | c.smoking | Since 2022, smoking rooms inside companies are not allowed anymore. | rookverbod |
 | c.health | Do you work more than 5.5 hours? Then you get at least 30 minutes of break (it may be 2 times 15 minutes). | pauze |
 | c.health | More than 10 hours? Then at least 45 minutes. | pauze |
@@ -108,8 +109,8 @@ Bijna elke tip eindigt met een van deze drie vaste slotregels:
 
 | Slotregel (Engels, letterlijk) | Bij welke tips | Waarom deze |
 |---|---|---|
-| *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.accident, c.agency, c.bsn, c.contract, c.diploma, c.extra, c.findwork, c.health, c.illness, c.leave, c.letters, c.payslip, c.site, c.transit, c.ww | rechten en regels uit de wet |
-| *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.housing, c.rights, c.warning, c.gethelp | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
+| *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.accident, c.agency, c.aiplan, c.bsn, c.carjob, c.contract, c.diploma, c.extra, c.findwork, c.greensafe, c.health, c.illness, c.insurance, c.jobends, c.kids, c.leave, c.letters, c.payslip, c.permit, c.power, c.sick, c.site, c.transit, c.workshop, c.ww | rechten en regels uit de wet |
+| *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.gethelp, c.harvest, c.housing, c.newjob, c.rights, c.warning | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
 | *Rules differ per company: ask your supervisor what the rules are where you work.* | c.callin, c.clock, c.hygiene, c.line, c.privacy, c.smoking | huisregels |
 | (geen slotregel) | c.bike, c.boundaries, c.certs, c.doctor, c.gear, c.gossip, c.interview, c.notyet, c.respect, c.unsafe | gedragstips; sommige noemen zelf een loket |
 
@@ -301,7 +302,7 @@ ______________________________________________________________
 
 > Call your supervisor yourself, before your shift starts, unless your company has another rule. Working through an agency? Tell the agency too. You do not have to say what illness you have.
 >
-> *(geen slotregel)*
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
 **Zeg het zo (Nederlands):** „Ik ben ziek. Ik kan vandaag niet komen werken.” — *I am sick. I cannot come to work today.*
 
@@ -484,6 +485,44 @@ ______________________________________________________________
 
 ---
 
+### c.permit — Work and integration
+
+*Unit „Werk en contract”, les „Papers, integration and your job” (`l.permit`), in dit document sinds 4 november 2026*
+
+**Samenvatting (NL):** Moet je inburgeren? Vertel het je werkgever, en laat de gemeente weten dat je werkt; vraag op tijd of je taalles in je rooster past; twijfel je of je hier mag werken, check het dan vóór je begint, bijvoorbeeld bij de IND, het UWV of VluchtelingenWerk; vraagt men je om je voor dit werk als zzp’er in te schrijven, vraag dan eerst advies. Uitleg: inburgeren is ook een plicht; veel werkgevers helpen als ze het op tijd weten, en de gemeente kan helpen je plan en je werk te combineren.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Do you have to do the civic integration (inburgering)? Tell your employer, and tell the gemeente that you work. Ask early if your language classes can fit around your roster. Not sure if you may work here? Check it before you start, for example at the IND, UWV or VluchtelingenWerk. Do they ask you to register as self-employed (zzp’er) for this job? Ask for advice first.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Zeg het zo (Nederlands):** „Ik heb op dinsdag taalles. Kan mijn rooster daar rekening mee houden?” — *I have a language class on Tuesday. Can my roster take that into account?*
+
+**Situatie in de les:** Your language class is on Tuesday morning. Your new roster says you work then. What do you do?  
+**Goede antwoord:** Ask your supervisor to change the roster.  
+**Uitleg na het antwoord (`c.permit.w`):** Your integration is a duty too. Many employers help when they know it early. The gemeente can also help you fit your plan around your work.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip.
+
+**Onze eigen vraag hierbij:**
+- „Your integration is a duty too” (`c.permit.w`): de inburgeringsplicht (Wet inburgering 2021) geldt niet voor iedereen, bijvoorbeeld niet voor EU-burgers. De tip begint met „Do you have to …?”, de uitleg zegt het stellig. Is dat zo houdbaar, of moet de uitleg ook „if you have to” zeggen?
+- „Tell the gemeente that you work”: wij bedoelen het persoonlijk plan inburgering en participatie (PIP) van de gemeente, waarin werk meetelt. Is dit een juist en nuttig advies?
+- „Not sure if you may work here? Check it before you start, for example at the IND, UWV or VluchtelingenWerk”: zijn dit de goede plekken om na te gaan of je mag werken (wat er op je verblijfsdocument staat; een tewerkstellingsvergunning via het UWV)?
+- „Do they ask you to register as self-employed (zzp’er) for this job? Ask for advice first.”: is dat genoeg? De Belgische versie van deze tip zegt er ook bij dat een zelfstandige geen loon krijgt als hij ziek is, en geen WW. Moet dat hier ook?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
 ### c.bsn — Your BSN: keep it safe
 
 *Unit „Wonen en papieren”, les „Your BSN and papers” (`l.bsn`)*
@@ -843,11 +882,13 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> The law protects your health. Do you work more than 5.5 hours? Then you get at least 30 minutes of break (it may be 2 times 15 minutes). More than 10 hours? Then at least 45 minutes. A cao can have slightly different break rules. You may work at most 12 hours in one shift and 60 hours in one week. Your employer must give you protective equipment, like safety shoes or gloves, for free. Unsafe work or too little pay? You can report it to the Nederlandse Arbeidsinspectie, also without giving your name.
+> The law protects your health. Do you work more than 5.5 hours? Then you get at least 30 minutes of break (it may be 2 times 15 minutes). More than 10 hours? Then at least 45 minutes. A cao can have slightly different break rules. You may work at most 12 hours in one shift and 60 hours in one week. Under 18? Then your maximum hours are lower. Your employer must give you protective equipment, like safety shoes or gloves, for free. Unsafe work or too little pay? You can report it to the Nederlandse Arbeidsinspectie, also without giving your name.
 >
 > *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
 **Zeg het zo (Nederlands):** „Ik heb nog geen pauze gehad.” — *I have not had a break yet.*
+
+**Bijgewerkt in dit document (4 november 2026):** de tip zegt nu ook „Under 18? Then your maximum hours are lower.” (sinds 2 november 2026 in de app; eerder „Then you may work fewer hours.”). Klopt dat zo, zonder de getallen voor jongeren te noemen?
 
 **Situatie in de les:** You have worked 6 hours without a break. Your supervisor asks you to keep going. What do you do?  
 **Goede antwoord:** Say that you need your break now.  
@@ -993,6 +1034,43 @@ ______________________________________________________________
 
 ---
 
+### c.kids — Your child is sick
+
+*Unit „Verlof en ziekte”, les „Children and work” (`l.kids`), in dit document sinds 4 november 2026*
+
+**Samenvatting (NL):** Is je kind plotseling ziek, vertel het je werkgever meteen; voor de eerste uren of dagen kun je calamiteitenverlof nemen, met behoud van loon; heeft je kind langer zorg nodig, dan kun je zorgverlof vragen; ben je zwanger, dan mag je werkgever je daarom niet ontslaan; vraag op tijd naar zwangerschapsverlof en ouderschapsverlof.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Is your child suddenly sick? Tell your employer right away. For the first hours or days you can take emergency leave (calamiteitenverlof), and your employer keeps paying you. Does your child need care for longer? Then you can ask for care leave (zorgverlof). Pregnant? Your employer may not fire you because of that. Ask in time about pregnancy leave and parental leave (ouderschapsverlof).
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Zeg het zo (Nederlands):** „Mijn kind is ziek. Kan ik vandaag eerder weg?” — *My child is sick. Can I leave early today?*
+
+**Situatie in de les:** The daycare (kinderopvang) calls you at work. Your child has a fever and must go home. What do you do?  
+**Goede antwoord:** Tell your supervisor, and ask for emergency leave.  
+**Uitleg na het antwoord (`c.kids.w`):** A sick child is an emergency at home. When you tell your supervisor first, they can plan the work. Emergency leave is for moments like this.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip. Hij noemt niet hoeveel loon je krijgt bij zorgverlof, en niet hoe lang de verloven duren.
+
+**Onze eigen vraag hierbij:**
+- „For the first hours or days you can take emergency leave (calamiteitenverlof), and your employer keeps paying you”: wij gaan uit van art. 4:1 Wazo (calamiteiten- en ander kort verzuimverlof, „naar redelijkheid”, met behoud van loon). Is „the first hours or days” een goede eenvoudige weergave?
+- „Then you can ask for care leave (zorgverlof)”: wij noemen niet dat kortdurend zorgverlof meestal 70% van het loon betaalt en langdurend zorgverlof onbetaald is (Wazo hoofdstuk 5). Kan een werknemer schade oplopen omdat dat er niet staat?
+- „Pregnant? Your employer may not fire you because of that.”: wij gaan uit van het opzegverbod tijdens de zwangerschap en het bevallingsverlof (art. 7:670 lid 2 BW) en het verbod op onderscheid naar geslacht (AWGB). Is „because of that” juist, of is de bescherming breder? En geldt hij ook als een tijdelijk contract om die reden niet wordt verlengd?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
 ### c.warning — Signs of exploitation
 
 *Unit „Uitbuiting herkennen”, les „Warning signs” (`l.warning`)*
@@ -1206,9 +1284,11 @@ ______________________________________________________________
 
 > When you live or work in the Netherlands, basic health insurance is usually required. You pay a premium every month. Every year there is an own risk (eigen risico): the first costs you pay yourself. The amount changes: check it with your insurer. Visits to the family doctor (huisarts) do not count for the own risk. With a low income you may get healthcare allowance (zorgtoeslag).
 >
-> *(geen slotregel)*
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
 **Zeg het zo (Nederlands):** „Ik heb een zorgverzekering nodig. Kunt u mij helpen?” — *I need health insurance. Can you help me?*
+
+**Bijgewerkt in dit document (4 november 2026):** deze tip eindigt in de app met de gewone slotregel (werkgever, vakbond of Juridisch Loket); hier stond nog „geen slotregel”.
 
 **Situatie in de les:** You started working here two weeks ago and you have no health insurance yet. What do you do?  
 **Goede antwoord:** Arrange health insurance quickly.  
@@ -1371,6 +1451,45 @@ ______________________________________________________________
 
 ---
 
+### c.jobends — Your job ends: what else stops?
+
+*Unit „Werk kwijt”, les „When your job ends” (`l.jobends`), in dit document sinds 4 november 2026*
+
+**Samenvatting (NL):** Stopt je werk, controleer dan je eindafrekening; niet opgenomen vrije dagen en je vakantiegeld worden daarbij meestal uitbetaald; huisvesting, zorgverzekering of een busje via het uitzendbureau kunnen tegelijk stoppen; regel op tijd zelf een zorgverzekering; je huurcontract heeft eigen regels: vraag advies voordat je uit het huis gaat; verhuis je of ga je weg uit Nederland, meld het dan bij de gemeente. Uitleg: wie hier woont of werkt, moet meestal een zorgverzekering hebben.
+
+**Tekst (Engels, wordt vertaald):**
+
+> When your job ends, check your final pay (eindafrekening). Days off you did not use and your holiday pay are usually paid out with it. Housing, health insurance or a van through the agency can stop at the same time. Arrange your own health insurance in time. Your rental contract has its own rules: ask for advice before you leave the house. Moving, or leaving the Netherlands? Tell the gemeente.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Zeg het zo (Nederlands):** „Wanneer krijg ik mijn eindafrekening?” — *When do I get my final pay?*
+
+**Situatie in de les:** Your job ends on Friday. Your health insurance goes through the agency. What do you do?  
+**Goede antwoord:** Ask when it stops and arrange your own in time.  
+**Uitleg na het antwoord (`c.jobends.w`):** Insurance through the agency often stops when your job stops. When you live or work in the Netherlands, you usually must have health insurance. Arranging it in time keeps you covered.
+
+**Uitleg bij het gesprekje (`c.jobends.a.why`):** „Je werk stopt vrijdag. Dan moet je ook uit het huis.” → „Wat is de opzegtermijn van mijn huurcontract?”: The house goes with the job: this reply asks about the notice period.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip.
+
+**Onze eigen vraag hierbij:**
+- „Days off you did not use and your holiday pay are usually paid out with it”: wij gaan uit van art. 7:641 BW (uitbetaling van niet opgenomen vakantiedagen bij het einde van het dienstverband) en de vakantiebijslag. Klopt „usually”?
+- „Your rental contract has its own rules: ask for advice before you leave the house” (en het gesprekje: de vraag naar de opzegtermijn van het huurcontract): klopt het beeld dat het huurcontract niet vanzelf stopt als het werk stopt, ook bij huisvesting via het uitzendbureau? Of zijn er gevallen waarin dat wel zo is?
+- „Moving, or leaving the Netherlands? Tell the gemeente.”: wij noemen geen termijn. Moet die erbij, zoals de 5 dagen bij een verhuizing in c.bsn?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
 ### c.newjob — Looking for new work
 
 *Unit „Werk kwijt”, les „Looking for new work” (`l.newjob`)*
@@ -1381,7 +1500,7 @@ ______________________________________________________________
 
 > Before you leave, ask for a reference (referentie). Keep your payslips and your contract. Update your CV. Look for work at temp agencies (uitzendbureaus) and on werk.nl. Never pay money to get a job.
 >
-> *(geen slotregel)*
+> *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
 
 **Zeg het zo (Nederlands):** „Mag ik u als referentie opgeven?” — *May I give your name as a reference?*
 
@@ -1553,6 +1672,191 @@ ______________________________________________________________
 
 ---
 
+### c.harvest — Tempo and piece rate
+
+*Unit „In de kas”, les „Harvesting and sorting” (`l.harvest`), in dit document sinds 4 november 2026*
+
+**Samenvatting (NL):** In de kas werk je vaak op een vast tempo; sommige werkgevers betalen per krat, per rij of per kilo (stukloon); ook met stukloon moet je voor elk gewerkt uur minstens het minimumloon verdienen; het bedrag staat op rijksoverheid.nl; schrijf elke dag je uren en je kratten op en vergelijk ze met je loonstrook; snel werken is goed, maar veilig werken gaat voor. Situatie: met stukloon verdien je deze week minder dan het minimumloon per uur: laat je eigen lijst van uren en kratten zien.
+
+**Tekst (Engels, wordt vertaald):**
+
+> In a greenhouse you often work at a set pace (tempo). Some employers pay per crate, per row or per kilo: piece rate (stukloon). Even with piece rate, you must earn at least the minimum wage for every hour you work. Check the amount on rijksoverheid.nl. Write down your hours and your crates every day, and compare them with your payslip. Working fast is good, but working safely comes first.
+>
+> *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
+
+**Zeg het zo (Nederlands):** „Hoeveel kratten heb ik vandaag gedaan?” — *How many crates did I do today?*
+
+**Situatie in de les:** You are paid per crate. This week you earn less than the minimum wage per hour. What do you do?  
+**Goede antwoord:** Show your own list of hours and crates.  
+**Uitleg na het antwoord (`c.harvest.w`):** With piece rate you must still get at least the minimum wage for every hour you worked. Your own list of hours and crates helps you show what you did. If it is not fixed, ask for help.
+
+**⚠ Getallen en termijnen:**
+- Even with piece rate, you must earn at least the minimum wage for every hour you work. (Geen bedrag: de tip verwijst naar rijksoverheid.nl.)
+
+**Onze eigen vraag hierbij:**
+- „Even with piece rate, you must earn at least the minimum wage for every hour you work”: wij gaan uit van de Wet minimumloon en minimumvakantiebijslag (een wettelijk minimumuurloon sinds 1 januari 2024; ook bij stukloon geldt het minimum over de gewerkte uren). Klopt „for every hour” zo, of geldt het minimum over de hele loonperiode, zodat een trage dag tegen een snelle mag wegvallen?
+- De slotregel stuurt naar de vakbond, het Juridisch Loket of FairWork. Hoort de Nederlandse Arbeidsinspectie (onderbetaling melden) hier ook bij?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+### c.greensafe — Heat and sprays
+
+*Unit „In de kas”, les „Safe in the greenhouse” (`l.greensafe`), in dit document sinds 4 november 2026*
+
+**Samenvatting (NL):** In een kas kan het heel heet worden, ook in het voorjaar; drink vaak water, ook voordat je dorst hebt, en neem je pauze op een koele plek; voel je je duizelig of misselijk, of krijg je hoofdpijn: stop en zeg het iemand; planten worden soms gespoten met gewasbeschermingsmiddelen (spuitmiddelen); een kas die net gespoten is, heeft vaak een bord bij de deur; ga er niet in voordat je leidinggevende zegt dat het weer veilig is. Uitleg: na het spuiten is er een wachttijd voordat mensen er weer in mogen.
+
+**Tekst (Engels, wordt vertaald):**
+
+> In a greenhouse it can get very hot, also in spring. Drink water often, also before you feel thirsty, and take your breaks in a cool place. Do you feel dizzy or sick, or do you get a headache? Stop and tell someone. Plants are sometimes sprayed with chemicals (spuitmiddelen). A greenhouse that was just sprayed often has a sign at the door. Do not go in until your supervisor says it is safe again.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Zeg het zo (Nederlands):** „Mag ik al in deze kas werken?” — *May I already work in this greenhouse?*
+
+**Situatie in de les:** A greenhouse was sprayed this morning. There is a sign on the door. A colleague says: "Come on, it is only for a moment." What do you do?  
+**Goede antwoord:** Stay outside and ask when it is safe.  
+**Uitleg na het antwoord (`c.greensafe.w`):** Crop sprays can hurt your skin, eyes and lungs, also when you smell nothing. After spraying there is a waiting time before people may go in again. Your supervisor knows when it is over.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip (geen temperatuur, geen wachttijd in uren).
+
+**Onze eigen vraag hierbij:**
+- „After spraying there is a waiting time before people may go in again” (`c.greensafe.w`): wij bedoelen de herbetredingstermijn uit de gebruiksvoorschriften van het middel. Geldt die voor elk middel, of alleen als het etiket hem noemt? Moet het „there is often a waiting time” zijn?
+- „A greenhouse that was just sprayed often has a sign at the door”: is een waarschuwing bij de deur verplicht? Dan kan „often” weg.
+- Hitte: de tip geeft alleen raad (water, pauze, stoppen bij klachten). Moet erbij dat de werkgever bij hitte maatregelen moet nemen (Arbobesluit art. 6.1)?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+### c.workshop — Eyes, ears and fire
+
+*Unit „In de werkplaats”, les „Workshop tools” (`l.workshop`), in dit document sinds 4 november 2026*
+
+**Samenvatting (NL):** Slijpen, zagen en boren geven vonken, kleine deeltjes en veel lawaai; draag een veiligheidsbril en gehoorbescherming, ook bij een kort klusje; is het erg luid, dan moet je werkgever je gehoorbescherming geven; vonken kunnen brand veroorzaken; voor lassen, of slijpen bij dingen die kunnen branden, gelden extra regels (heet werk): vraag het voordat je begint; ruim na je werk de stukjes metaal op.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Grinding, sawing and drilling make sparks, small bits and a lot of noise. Wear safety glasses and hearing protection, also for a short job. When it is very loud, your employer must give you hearing protection. Sparks can start a fire. For welding, or grinding near things that can burn, there are extra rules (heet werk): ask before you start. After your work, clean up the bits of metal.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Zeg het zo (Nederlands):** „Ik ga slijpen. Waar is de gehoorbescherming?” — *I am going to grind. Where is the hearing protection?*
+
+**Situatie in de les:** You must grind one small piece of metal. It takes one minute. Your safety glasses are in the other room. What do you do?  
+**Goede antwoord:** Get your glasses first, also for one minute.  
+**Uitleg na het antwoord (`c.workshop.w`):** A spark or a bit of metal in your eye can hurt your eye for good. That can happen in one second. Safety glasses help, also for a short job.
+
+**⚠ Getallen en termijnen:** geen getallen in de tip (geen geluidsgrens in dB).
+
+**Onze eigen vraag hierbij:**
+- „When it is very loud, your employer must give you hearing protection”: wij gaan uit van Arbobesluit art. 6.8 (vanaf 80 dB(A) gehoorbescherming ter beschikking stellen, vanaf 85 dB(A) moet ze gedragen worden). Is „very loud” zonder getal goed genoeg?
+- „For welding, or grinding near things that can burn, there are extra rules (heet werk)”: dat zijn vaak regels van het bedrijf of de verzekeraar, geen wet. Past de slotregel over de wet hier, of is de slotregel van de huisregels beter (*Rules differ per company: ask your supervisor what the rules are where you work.*)?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+### c.power — Electricity: never just like that
+
+*Unit „In de werkplaats”, les „Power off first” (`l.power`), in dit document sinds 4 november 2026*
+
+**Samenvatting (NL):** Werk nooit aan iets dat onder spanning staat; eerst maakt een opgeleide collega het veilig: die zet de stroom eraf en controleert dat; alleen wie de juiste opleiding heeft, mag dat doen; zie je een kapotte kabel of stekker, gebruik hem niet en zeg het meteen tegen je leidinggevende; weet je niet zeker of de stroom eraf is, dan staat hij erop.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Never work on something that has power on it (onder spanning). First a trained colleague makes it safe: they switch off the power and check it. Only people with the right training may do this. Do you see a broken cable or plug? Do not use it, and tell your supervisor right away. Not sure if the power is off? Then it is on.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Zeg het zo (Nederlands):** „Ik zie een kapotte kabel. Wie kan ernaar kijken?” — *I see a broken cable. Who can look at it?*
+
+**Situatie in de les:** You must hang a lamp. A colleague says: "The power is off, I think." What do you do?  
+**Goede antwoord:** Ask a trained colleague to check that the power is off.  
+**Uitleg na het antwoord (`c.power.w`):** "I think" is not enough with electricity. A shock can kill you. A trained colleague checks that there is no power, and then you can start.
+
+**Uitleg bij het gesprekje (`c.power.a.why`):** „Kun je die lamp even vervangen?” → „Is de stroom eraf? Anders wacht ik op de elektricien.”: Work on a lamp: this reply first asks if the power is off.
+
+**⚠ Getallen en termijnen:** geen getallen in de tip.
+
+**Onze eigen vraag hierbij:**
+- „Only people with the right training may do this”: wij gaan uit van NEN 3140 (werken aan elektrische installaties alleen door een vakbekwaam of voldoende onderricht persoon), waar het Arbobesluit naar verwijst. Is dit een juiste korte vorm?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+### c.carjob — Extra work? Ask the customer first
+
+*Unit „In de garage”, les „The customer decides” (`l.carjob`), in dit document sinds 4 november 2026*
+
+**Samenvatting (NL):** Vind je meer problemen dan op de werkorder staat, repareer ze dan niet zomaar; de klant moet eerst akkoord gaan met het extra werk en de kosten; je leidinggevende of de receptie belt de klant; een proefrit alleen met toestemming, en alleen met een geldig rijbewijs; schrijf op wat je hebt gedaan en welke onderdelen je hebt gebruikt.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Do you find more problems than the work order says? Do not just fix them. The customer must agree to the extra work and the costs first. Your supervisor or the service desk calls the customer. A test drive is only with permission, and only with a valid driving licence. Write down what you did and which parts you used.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Zeg het zo (Nederlands):** „Ik zie nog een probleem. Wie belt de klant?” — *I see another problem. Who calls the customer?*
+
+**Situatie in de les:** You change a car's oil. The brakes are bad too. It must be ready in an hour. What do you do?  
+**Goede antwoord:** Tell your supervisor, so they call the customer.  
+**Uitleg na het antwoord (`c.carjob.w`):** The customer pays, so the customer decides. Without their OK, the garage may not just do extra work. Bad brakes are dangerous, so telling someone matters.
+
+**Uitleg bij het gesprekje (`c.carjob.a.why`):** „De remmen zijn ook slecht. Doe je die meteen?” → „Eerst vraag ik het aan de chef. De klant moet akkoord zijn.”: Extra work needs the customer’s OK: this reply asks the supervisor.
+
+**⚠ Getallen en termijnen:** geen getallen in de tip.
+
+**Onze eigen vraag hierbij:**
+- „Without their OK, the garage may not just do extra work” (`c.carjob.w`): wij gaan uit van de regels voor aanneming van werk (art. 7:755 BW: een prijsverhoging voor meerwerk moet de klant op tijd horen) en de algemene voorwaarden van garages. Is „may not just do extra work” juist, of is het eerder: zonder akkoord kan de garage het extra werk niet zomaar in rekening brengen?
+- „A test drive is only with permission, and only with a valid driving licence”: is dit juist zonder voorbehoud, ook op het terrein van de garage?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
 ## Werkregels: gewijzigde beweringen (17 oktober 2026)
 
 De track **Werkregels** is voor mensen die al Nederlands spreken. De teksten staan alleen in het

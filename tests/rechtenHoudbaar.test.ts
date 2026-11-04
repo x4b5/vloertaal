@@ -1,9 +1,12 @@
+import { readFileSync } from 'node:fs';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 import { RulesHelp } from '../src/components/RulesHelp';
 import { WordsHub } from '../src/components/Screens';
+import { cultureTips } from '../src/content/culture';
 import { HELP_ROWS, HELP_ROWS_BE, withSite } from '../src/content/regels/help';
+import { ABUSE_LINE, ADVICE_LINE } from '../src/content/work';
 import { getHelpLanguage, registerPack } from '../src/i18n';
 import nlPack from '../src/i18n/packs/nl';
 import plPack from '../src/i18n/packs/pl';
@@ -39,5 +42,31 @@ describe('a 0800 number has a second way: the official site', () => {
     expect(taal).toContain('0800-8020 · juridischloket.nl');
     expect(taal).toContain('0800-2000 · veiligthuis.nl');
     expect(taal.match(/class="rh-card rh-link"/g)).toHaveLength(5);
+  });
+});
+
+describe('docs/juridische-check.md has every Taal tip with a legal closing line', () => {
+  const doc = readFileSync('docs/juridische-check.md', 'utf8');
+  const legal = cultureTips.flatMap((t) => {
+    const end = [ADVICE_LINE, ABUSE_LINE].find((l) => t.body.endsWith(l));
+    return end ? [{ t, end }] : [];
+  });
+
+  it('31 tips end with the advice or the abuse line (29 of the work units, c.accident and c.sick)', () => {
+    expect(legal).toHaveLength(31);
+    for (const id of ['c.permit', 'c.kids', 'c.jobends', 'c.harvest', 'c.greensafe', 'c.workshop', 'c.power', 'c.carjob']) expect(legal.map(({ t }) => t.id)).toContain(id);
+  });
+
+  it('each one has its own section, with the English text and the closing line as in the app', () => {
+    for (const { t, end } of legal) {
+      const start = doc.indexOf(`### ${t.id} — `);
+      expect(start, t.id).toBeGreaterThan(-1);
+      const section = doc.slice(start, doc.indexOf('\n---\n', start));
+      expect(section, t.id).toContain(`> ${t.body.slice(0, -end.length).trim()}\n`);
+      expect([`> *${end}*`, `> *Slotregel:* ${end}`].some((line) => section.includes(line)), t.id).toBe(true);
+      expect(section, t.id).toContain(`„${t.phrase.nl}”`);
+      expect(section, t.id).toContain('**Samenvatting (NL):**');
+      expect(section, t.id).toContain('**Oordeel deskundige:**');
+    }
   });
 });
