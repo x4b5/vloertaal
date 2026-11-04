@@ -23,6 +23,7 @@ import { createRng } from '../lib/random';
 import { typeAsPick, writingInput } from '../lib/writing';
 import { HelpSay } from './HelpSay';
 import { SituationText } from './SituationText';
+import { useFitText } from './useFitText';
 import { BeNote } from './BeNote';
 import { tipNlOnly } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
@@ -1111,6 +1112,9 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
   const { tip, part } = ex;
   const talking = useTalking([tip.phrase.nl]);
   useEffect(() => { onAnswer({ correct: true }); }, [tip, part, onAnswer]);
+  // On its own page the explanation grows into the room above Continue (src/components/useFitText.ts).
+  const fitRef = useRef<HTMLDivElement>(null);
+  useFitText(fitRef, part === 'read', `${tip.id}|${lang?.code ?? ''}`);
   const read = part !== 'say';
   const say = part !== 'read';
   const badge = (
@@ -1148,7 +1152,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
   }
   const text = splitClosing(tipBody(tip, lang), lang);
   return (
-    <div className={`exercise tip ${part === 'read' ? 'tip-page-read' : ''}`}>
+    <div ref={fitRef} className={`exercise tip ${part === 'read' ? 'tip-page-read' : ''}`}>
       {badge}
       <h2 className="prompt tip-title"><Bi text={gloss(tip.id, tip.title, lang)} /></h2>
       {/* In Belgium (docs/taal-belgie.md): a Dutch tip that differs there says so; a Belgian tip says it is new. */}
