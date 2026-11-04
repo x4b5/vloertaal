@@ -358,6 +358,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Покажи, як справи', // nieuw, nalezen
     coachCardIntro: 'Ця картка показує твій прогрес. Покажи її вчителю, коучу або керівнику. Вирішуєш ти.', // nieuw, nalezen
+    coachCardNo: 'Ти можеш також сказати «ні».', // nieuw, nalezen
     coachCardKeep: 'Картку робить твій телефон. Нічого не надсилається. Vloertaal нічого не зберігає.', // nieuw, nalezen
     coachCardWhat: 'На картці, нідерландською:', // nieuw, nalezen
     coachTopics: 'Завершені теми', // nieuw, nalezen

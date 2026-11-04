@@ -216,6 +216,18 @@ describe('coach card: the screen', () => {
     expect(html).toContain('chrome-back');
   });
 
+  it('says the learner may say no, under the intro, in Dutch and in the help language: text, nothing to tap', () => {
+    named('Amina');
+    const html = render({ ...emptyProgress, helpLang: 'ar' }, 'ar');
+    const no = html.indexOf('Je mag ook nee zeggen.');
+    expect(no).toBeGreaterThan(html.indexOf('Jij kiest.'));
+    expect(no).toBeLessThan(html.indexOf('kaart-share'));
+    expect(html).toContain('يمكنكِ أيضاً أن تقولي «لا».'); // the woman's form (render: 'f')
+    expect(html.match(/<button\b/g)).toHaveLength(2);
+    // The work-rules track: the Dutch line only.
+    expect(render({ ...emptyProgress, helpLang: 'nl' }, 'nl')).toContain('Je mag ook nee zeggen.');
+  });
+
   it('Werkregels: Dutch only, without the test', () => {
     named('');
     const html = render({ ...emptyProgress, helpLang: 'nl' }, 'nl');
@@ -233,7 +245,7 @@ describe('coach card: the screen', () => {
 });
 
 describe('coach card: the texts', () => {
-  const KEYS = ['coachCard', 'coachCardIntro', 'coachCardKeep', 'coachCardWhat', 'coachTopics', 'coachDays', 'coachLast'] as const;
+  const KEYS = ['coachCard', 'coachCardIntro', 'coachCardNo', 'coachCardKeep', 'coachCardWhat', 'coachTopics', 'coachDays', 'coachLast'] as const;
   it('are in English and in every help language', () => {
     for (const k of KEYS) expect(uiEn[k], k).toBeTruthy();
     for (const src of helpLanguageSources) for (const k of KEYS) expect(src.ui[k], `${src.code} ${k}`).toBeTruthy();
@@ -249,7 +261,7 @@ describe('coach card: the texts', () => {
     // Arabic and Tigrinya speak to the learner: m, f and x.
     for (const code of ['ar', 'ti']) {
       const src = helpLanguageSources.find((s) => s.code === code)!;
-      for (const k of ['coachCard', 'coachCardIntro'] as const) expect(typeof src.ui[k], `${code} ${k}`).toBe('object');
+      for (const k of ['coachCard', 'coachCardIntro', 'coachCardNo'] as const) expect(typeof src.ui[k], `${code} ${k}`).toBe('object');
     }
   });
 });

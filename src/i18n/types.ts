@@ -436,6 +436,8 @@ export const uiEn = {
   /* "Laat zien hoe het gaat": the coach card, made on this phone (src/lib/kaart.ts, Settings › Taal en ik). */
   coachCard: 'Show how it is going',
   coachCardIntro: 'This card shows your progress. Show it to your teacher, coach or boss. You decide.',
+  /* Under the intro: showing the card is voluntary (the owner's request, 4 November 2026). */
+  coachCardNo: 'You can also say no.',
   coachCardKeep: 'Your phone makes the card. Nothing is sent. Vloertaal keeps nothing.',
   coachCardWhat: 'On the card, in Dutch:',
   coachTopics: 'Topics finished',

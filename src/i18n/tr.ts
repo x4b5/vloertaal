@@ -358,6 +358,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Nasıl gittiğini göster', // nieuw, nalezen
     coachCardIntro: 'Bu kart ilerlemeni gösterir. Öğretmenine, koçuna ya da amirine göster. Sen karar verirsin.', // nieuw, nalezen
+    coachCardNo: '“Hayır” da diyebilirsin.', // nieuw, nalezen
     coachCardKeep: 'Kartı telefonun yapar. Hiçbir şey gönderilmez. Vloertaal hiçbir şey saklamaz.', // nieuw, nalezen
     coachCardWhat: 'Kartta, Hollandaca:', // nieuw, nalezen // nagelezen AI 31 okt
     coachTopics: 'Biten konular', // nieuw, nalezen

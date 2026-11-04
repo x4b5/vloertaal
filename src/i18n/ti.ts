@@ -359,6 +359,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: { m: 'ከመይ ከም ዝኸይድ ኣርኢ', f: 'ከመይ ከም ዝኸይድ ኣርእዪ', x: 'ከመይ ከም ዝኸይድ ኣርእዩ' }, // nieuw, nalezen
     coachCardIntro: { m: 'እዛ ካርድ ምዕባለኻ ተርኢ። ንመምህርካ፡ ንኣሰልጣኒኻ ወይ ንሓላፊኻ ኣርእዮ። ንስኻ ኢኻ ትውስን።', f: 'እዛ ካርድ ምዕባለኺ ተርኢ። ንመምህርኪ፡ ንኣሰልጣኒኺ ወይ ንሓላፊኺ ኣርእይዮ። ንስኺ ኢኺ ትውስኒ።', x: 'እዛ ካርድ ምዕባለኹም ተርኢ። ንመምህርኹም፡ ንኣሰልጣኒኹም ወይ ንሓላፊኹም ኣርእዩዎ። ንስኹም ኢኹም ትውስኑ።' }, // nieuw, nalezen
+    coachCardNo: { m: 'ኣይፋልን ክትብል እውን ትኽእል ኢኻ።', f: 'ኣይፋልን ክትብሊ እውን ትኽእሊ ኢኺ።', x: 'ኣይፋልን ክትብሉ እውን ትኽእሉ ኢኹም።' }, // nieuw, nalezen
     coachCardKeep: { m: 'ተሌፎንካ እያ ነታ ካርድ ትሰርሓ። ዝኾነ ነገር ኣይለኣኽን። Vloertaal ዝኾነ ነገር ኣይዕቅብን።', f: 'ተሌፎንኪ እያ ነታ ካርድ ትሰርሓ። ዝኾነ ነገር ኣይለኣኽን። Vloertaal ዝኾነ ነገር ኣይዕቅብን።', x: 'ተሌፎንኹም እያ ነታ ካርድ ትሰርሓ። ዝኾነ ነገር ኣይለኣኽን። Vloertaal ዝኾነ ነገር ኣይዕቅብን።' }, // nieuw, nalezen
     coachCardWhat: 'ኣብታ ካርድ፡ ብሆላንድኛ፦', // nieuw, nalezen
     coachTopics: 'ዝተወድኡ ኣርእስታት', // nieuw, nalezen

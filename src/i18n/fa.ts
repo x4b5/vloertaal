@@ -358,6 +358,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'نشان بدهید چطور پیش می‌رود', // nieuw, nalezen // nagelezen AI 31 okt
     coachCardIntro: 'این کارت پیشرفت شما را نشان می‌دهد. آن را به معلم، مربی یا رئیستان نشان بدهید. خودتان تصمیم می‌گیرید.', // nieuw, nalezen // nagelezen AI 31 okt
+    coachCardNo: 'می‌توانید «نه» هم بگویید.', // nieuw, nalezen
     coachCardKeep: 'گوشی‌تان خودش کارت را می‌سازد. چیزی فرستاده نمی‌شود. Vloertaal چیزی نگه نمی‌دارد.', // nieuw, nalezen // nagelezen AI 31 okt
     coachCardWhat: 'روی کارت، به هلندی:', // nieuw, nalezen
     coachTopics: 'موضوع‌های تمام‌شده', // nieuw, nalezen

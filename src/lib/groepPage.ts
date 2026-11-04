@@ -65,9 +65,16 @@ const PAGE_STYLE = `
   .melding { font-weight: 600; margin: 8px 0 0; }
 `;
 
-/** What the page does with what is typed in, in plain words (shown first, and tested). */
+/**
+ * What the page does with what is typed in, in plain words (shown first, and tested). First the
+ * rules for asking to see a card, the same three as in 'p.privacy' (src/content/pro.ts): showing it
+ * is voluntary, never a condition or a ground for a judgement, and a list of who has which number
+ * is personal data (the owner's request, 4 November 2026).
+ */
 export const GROEP_SAFE: readonly string[] = [
-  'Vul geen namen in. Een deelnemer is hier alleen een nummer. Wil je weten wie welk nummer is? Houd dat zelf bij, apart van dit overzicht.',
+  'Laten zien is vrijwillig. De leerling kiest zelf of je de kaart ziet, en mag nee zeggen.',
+  'Verplicht niemand. Gebruik de kaart niet voor een beoordeling, een contract of het loon.',
+  'Vul geen namen in. Een deelnemer is hier alleen een nummer. Wil je weten wie welk nummer is? Houd dat zelf bij, apart van dit overzicht. Wie dat bijhoudt, verwerkt persoonsgegevens: daarvoor gelden de regels van de privacywet (AVG).',
   'Alles blijft op deze pagina, op jouw computer of telefoon. Er gaat niets naar een server, ook niet naar Vloertaal. De pagina mag zelfs geen verbinding maken: dat staat in de pagina zelf vast.',
   'De pagina bewaart niets. Sluit je hem, dan is alles weg. Bewaar dus eerst als CSV. Later open je die CSV hier weer.',
   `Stuur je de totalen door, bijvoorbeeld aan een fonds of gemeente? Stuur dan alleen de totalen, niet de rijen per deelnemer, en het liefst van een groep van ${GROEP_KLEIN} of meer.`,

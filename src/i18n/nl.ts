@@ -399,6 +399,7 @@ export const uiNl: Record<UiKey, UiText> = {
   // "Laat zien hoe het gaat": de begeleiderskaart (src/lib/kaart.ts)
   coachCard: 'Laat zien hoe het gaat',
   coachCardIntro: 'Deze kaart laat zien hoe het gaat. Laat hem zien aan je docent, coach of baas. Jij kiest.',
+  coachCardNo: 'Je mag ook nee zeggen.',
   coachCardKeep: 'Je telefoon maakt de kaart. Er gaat niets weg. Vloertaal bewaart niets.',
   coachCardWhat: 'Op de kaart:',
   coachTopics: 'Onderwerpen af',

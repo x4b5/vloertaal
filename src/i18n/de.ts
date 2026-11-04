@@ -358,6 +358,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Zeig, wie es läuft', // nieuw, nalezen
     coachCardIntro: 'Diese Karte zeigt deinen Fortschritt. Zeig sie deiner Lehrkraft, deinem Coach oder deinem Chef. Du entscheidest.', // nieuw, nalezen
+    coachCardNo: 'Du kannst auch Nein sagen.', // nieuw, nalezen
     coachCardKeep: 'Dein Handy macht die Karte. Nichts wird gesendet. Vloertaal speichert nichts.', // nieuw, nalezen
     coachCardWhat: 'Auf der Karte, auf Niederländisch:', // nieuw, nalezen
     coachTopics: 'Fertige Themen', // nieuw, nalezen

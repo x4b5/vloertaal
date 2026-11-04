@@ -176,6 +176,16 @@ describe('vloertaal.nl/groep: the page', () => {
     expect(html).not.toMatch(/experts kijken|de beste|garantie|bewezen/i);
   });
 
+  it('gives the rules for asking to see a card, the same as the professionals’ page (4 November 2026)', () => {
+    // Voluntary; never a condition, a judgement, a contract or pay; a list of numbers is personal data.
+    const pro = proSections.find((s) => s.id === 'p.privacy')!.body.join(' ');
+    for (const text of [GROEP_SAFE.join(' '), pro]) {
+      for (const fact of ['vrijwillig', 'nee zeggen', 'beoordeling', 'contract', 'loon', 'wie welk nummer', 'persoonsgegevens', 'AVG']) expect(text, fact).toContain(fact);
+    }
+    expect(pro).toContain('Vraag of de leerling de begeleiderskaart wil laten zien');
+    expect(pro).not.toContain('Vraag de leerling om de begeleiderskaart te laten zien');
+  });
+
   it('sends nothing: its own policy forbids every connection and form', () => {
     expect(html).toContain(`<meta http-equiv="Content-Security-Policy" content="${GROEP_CSP}" />`);
     // Before anything that could load (the policy only covers what comes after it).

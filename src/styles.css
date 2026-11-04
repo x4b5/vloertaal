@@ -2788,6 +2788,11 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .kaart-intro > .bi { order: 1; font-size: 1.05rem; font-weight: 600; }
 .kaart-intro > .kaart-intro-nl { order: 2; font-size: 0.9rem; color: var(--muted); }
 .kaart-intro > .help-say { order: 3; align-self: flex-start; }
+/* "Je mag ook nee zeggen." right under the intro, in the same voice (text, nothing to tap). */
+.kaart-no { display: flex; flex-direction: column; gap: 4px; margin: 10px 0 0; line-height: 1.4; }
+.kaart-no > .bi { order: 1; font-size: 1.05rem; font-weight: 600; }
+.kaart-no > .kaart-no-nl { order: 2; font-size: 0.9rem; color: var(--muted); }
+.kaart-no > .help-say { order: 3; align-self: flex-start; }
 /* [Bewaar of deel] sits above the picture, so it is in view without scrolling on every phone. */
 .kaart-screen .kaart-actions { margin-top: 14px; }
 .kaart-figure { margin: 18px 0 0; }

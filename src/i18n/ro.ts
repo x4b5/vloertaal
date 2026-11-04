@@ -358,6 +358,7 @@ const lang: HelpLanguageSource = {
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'Arată cum îți merge', // nieuw, nalezen
     coachCardIntro: 'Acest card arată progresul tău. Arată-l profesorului, coach-ului sau șefului tău. Tu decizi.', // nieuw, nalezen
+    coachCardNo: 'Poți să spui și „nu”.', // nieuw, nalezen
     coachCardKeep: 'Telefonul tău face cardul. Nu se trimite nimic. Vloertaal nu păstrează nimic.', // nieuw, nalezen
     coachCardWhat: 'Pe card, în olandeză:', // nieuw, nalezen // nagelezen AI 31 okt
     coachTopics: 'Subiecte terminate', // nieuw, nalezen (AI-correctie 2 nov 2026)
