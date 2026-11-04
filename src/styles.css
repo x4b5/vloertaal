@@ -254,8 +254,9 @@
 
 /* "Werkjas": navy and hi-vis orange on a light workwear blue, the colours of a work jacket. Its
    own: a real hi-vis orange with navy on it (was the pale #ffbf8f), still light enough to stay
-   far from the brick red of a wrong answer; an overall-blue speaker; navy for what is done; and
-   two thin reflective stripes along the bottom of the main button (below). */
+   far from the brick red of a wrong answer; an overall-blue speaker; navy for what is done. (The
+   reflective stripes on the main button went again on 4 November 2026: the owner found them
+   distracting.) */
 :root[data-theme='werkjas'] {
   --ink: #14233a;
   --ink-2: #44546a;
@@ -280,7 +281,6 @@
   --locked-shadow: #c5cfdb;
   --solid: #1b3354;
   --gold-ink: #a84300;
-  --reflect: #e8edf3;        /* the reflective stripes: silver */
   color-scheme: light;
 }
 
@@ -292,15 +292,6 @@
 :root[data-theme='haven'] .bottom-nav::before {
   content: ''; position: absolute; inset: -6px 0 auto; height: 7px; pointer-events: none;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='7' viewBox='0 0 48 7'%3E%3Cpath d='M0 4.5Q12 0.8 24 4.5T48 4.5V7H0Z' fill='%23fff'/%3E%3Cpath d='M0 4.5Q12 0.8 24 4.5T48 4.5' fill='none' stroke='%237fb0b5' stroke-width='1.5'/%3E%3C/svg%3E") 0 0 / 48px 7px repeat-x;
-}
-/* Werkjas: two thin reflective stripes along the bottom of the orange main button, under the
-   label (never behind it), as on a hi-vis jacket. */
-:root[data-theme='werkjas'] .btn-primary:not(:disabled):not([aria-disabled='true']) {
-  background-image: linear-gradient(var(--reflect), var(--reflect)), linear-gradient(var(--reflect), var(--reflect));
-  /* Inset by the corner radius, so they end on the straight part (under the end block on one
-     side; the same on both sides, so right to left needs nothing). */
-  background-repeat: no-repeat; background-size: calc(100% - 2 * var(--radius)) 2px;
-  background-position: center bottom 4px, center bottom 8px;
 }
 /* Donker: the signal yellow gives a little light at night, a soft glow around the main button
    and the lesson to do now. */
