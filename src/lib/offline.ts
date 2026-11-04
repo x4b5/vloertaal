@@ -8,9 +8,10 @@ import { mixLessonFor } from '../content/review';
 import type { Lesson, Unit } from '../content/types';
 import { tokenize } from './answers';
 import { allMatches } from './matches';
-import { clipSrc, clipUrl, recordedIndexReady } from './audio';
+import { clipSrc, clipUrl, recordedIndexReady, voicesIndexUrl } from './audio';
 import { castVoices, type VoiceRef } from './voices';
 import { persistStorage } from './install';
+import { dataSaverOn } from './dataSaver';
 import { ensureLanguage, ensureRegionTexts, isLanguageLoaded, isRegionTextsLoaded, LANG_CODES, loadedPackUrls } from '../i18n';
 import { anyRegionLoaded, loadedRegionUrls } from '../content/regio';
 import { loadedPicturesUrl } from '../pictures';
@@ -177,7 +178,7 @@ const abs = (path: string) => new URL(path, document.baseURI).href;
  * files under assets/ included). Same origin only; recorded sound is listed per unit.
  */
 export function shellUrls(): string[] {
-  const out = new Set<string>([abs('./'), abs('./manifest.webmanifest'), abs('./audio-el/voices.json')]);
+  const out = new Set<string>([abs('./'), abs('./manifest.webmanifest'), abs(voicesIndexUrl())]);
   const sameOrigin = (href: string) => {
     try {
       const u = new URL(href, document.baseURI);
@@ -316,8 +317,9 @@ export async function saveUnitOffline(unit: Unit, voices: VoiceRef[]): Promise<v
   let shell: string[] = [];
   let clips: string[] = [];
   try {
-    // Every help language's file comes along (shellUrls lists the loaded ones).
-    if (offlineAuto()) await loadEveryLanguage();
+    // Every help language's file comes along (shellUrls lists the loaded ones), when the learner
+    // turned the switch on (by default only the topic: see offlineAuto).
+    if (offlineChosen()) await loadEveryLanguage();
     ({ shell, clips } = await unitFiles(unit, voices));
     const total = shell.length + clips.length;
     jobs.set(unit.id, { status: 'saving', done: 0, total });
@@ -325,7 +327,8 @@ export async function saveUnitOffline(unit: Unit, voices: VoiceRef[]): Promise<v
     // Not enough room left at all: say so before downloading anything.
     const est = await navigator.storage?.estimate?.().catch(() => undefined);
     if (est?.quota && est.usage !== undefined && est.quota - est.usage < clips.length * CLIP_BYTES * 1.2) throw Object.assign(new Error('quota'), { name: 'QuotaExceededError' });
-    persistStorage();
+    // Not by default: Firefox asks the learner, and the first finished lesson asks anyway (App.tsx).
+    if (offlineChosen()) persistStorage();
     cache = await caches.open(OFFLINE_CACHE);
     let n = 0;
     const tick = () => {
@@ -392,7 +395,7 @@ export async function refreshOfflineShell(): Promise<void> {
     return;
   }
   if (!navigator.onLine) return;
-  if (offlineAuto()) await loadEveryLanguage();
+  if (offlineChosen()) await loadEveryLanguage();
   const shell = shellUrls();
   try {
     const cache = await caches.open(OFFLINE_CACHE);
@@ -448,9 +451,9 @@ export async function warmPhrases(voice: VoiceRef): Promise<void> {
 let everyLanguage: Promise<void> | null = null;
 
 /**
- * "Keep lessons on this phone" also keeps all nine help languages' files (about 40 kB zipped
- * each), so the help language can be switched without internet too. Loads the ones not here yet
- * (once; again after a failure).
+ * "Keep lessons on this phone", turned on by the learner (offlineChosen), also keeps all the help
+ * languages' files (about 40 kB zipped each), so the help language can be switched without
+ * internet too. Loads the ones not here yet (once; again after a failure).
  */
 /** The files kept for switching without internet: the nine help languages, plus the Dutch work-rules track while it is offered. */
 const keptCodes = (): readonly UiCode[] => (rulesTrackOn() ? [...LANG_CODES, 'nl'] : LANG_CODES);
@@ -475,11 +478,12 @@ function languagesKept(): boolean {
 }
 
 /**
- * With the setting on and topics already saved: put every help language's file with them (a
- * phone that saved its topics before this existed, or switched the setting on later). Online only.
+ * With the setting turned on by the learner and topics already saved: put every help language's
+ * file with them (a phone that saved its topics before this existed, or switched the setting on
+ * later). Online only.
  */
 export async function keepLanguagesOffline(): Promise<void> {
-  if (!offlineSupported() || !offlineAuto() || !savedUnitIds().length || navigator.onLine === false) return;
+  if (!offlineSupported() || !offlineChosen() || !savedUnitIds().length || navigator.onLine === false) return;
   if (languagesKept()) return;
   await refreshOfflineShell();
 }
@@ -494,22 +498,51 @@ export function showOfflineStateForShot(unitId: string, state: OfflineState): vo
 
 const AUTO_KEY = 'vloertaal:offline-auto';
 
-/**
- * Whether lessons are kept on this phone automatically. Never chosen yet: on when a unit was
- * saved by hand before (the old per-unit button), else off (saving costs mobile data).
- */
 /** The switch while storage is blocked: it holds for this visit. */
 let autoMemory: boolean | null = null;
 
-export function offlineAuto(): boolean {
+/** The switch as the learner set it in Settings; null: never set (the default holds). */
+function offlineChoice(): boolean | null {
   try {
     const v = localStorage.getItem(AUTO_KEY);
-    if (v === '1') return true;
-    if (v === '0') return false;
+    return v === '1' ? true : v === '0' ? false : null;
   } catch {
-    return autoMemory ?? false;
+    return autoMemory;
   }
-  return savedUnitIds().length > 0;
+}
+
+/**
+ * Whether lessons are kept on this phone automatically.
+ *
+ * Never chosen: ON, unless the phone's Data Saver is on (src/lib/dataSaver.ts), or a unit was
+ * saved by hand before (the old per-unit button: on, as before). Off by default, offline every
+ * clip failed: a learner on a bus or in a greenhouse heard nothing, and "What do you hear?" still
+ * came, with speakers that did nothing (the evaluation of phase 3, 4 November 2026).
+ *
+ * What it costs (measured on the recordings in public/audio-el, 4 November 2026): the current
+ * topic in the voices its lessons speak with (the learner's voice and the four colleagues,
+ * currentVoices: without them the colleagues' speakers would be silent offline) is about 2.2 MB
+ * (median of the 40 topics; 1.2 MB to 4.9 MB; in one voice it would be about 0.5 MB), fetched
+ * once, 1.5 s after the home shows (src/components/Offline.tsx useAutoOffline), and only online.
+ * On the phone: the topic now and any topic started but not finished; a finished topic is removed
+ * again (autoOfflinePlan), so it stays a few MB. By default only the topic: the files of every
+ * help language (about 40 kB each) and asking the browser to keep the storage (a prompt in
+ * Firefox) come along only when the learner turns the switch on (offlineChosen). Data Saver on:
+ * nothing is fetched ahead; the switch in Settings still turns it on by hand.
+ */
+export function offlineAuto(): boolean {
+  const chosen = offlineChoice();
+  if (chosen !== null) return chosen;
+  return savedUnitIds().length > 0 || !dataSaverOn();
+}
+
+/**
+ * The learner turned "Keep lessons on this phone" on in Settings themself (not just the
+ * default): then every help language's file comes along too (to switch languages without
+ * internet), and the browser is asked to keep the storage.
+ */
+export function offlineChosen(): boolean {
+  return offlineChoice() === true;
 }
 
 /** Turns the setting on or off (off removes every saved topic from this phone). */

@@ -1,7 +1,8 @@
 import { useId, type JSX, type ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import type { Emotion, Expr } from '../components/Faces';
-import { Arrow, Box, Bubble, Bust, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Box, Bubble, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 24 (keyed by id): words that had only their emoji, from nine lessons.

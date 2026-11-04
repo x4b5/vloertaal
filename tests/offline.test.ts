@@ -1,9 +1,10 @@
 import { existsSync, readFileSync } from 'node:fs';
-import { beforeAll, describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it, vi } from 'vitest';
 import { tipForLesson } from '../src/content/culture';
 import { units } from '../src/content/curriculum';
 import { clipUrl, setRecordedIndex } from '../src/lib/audio';
-import { OFFLINE_CACHE, autoOfflinePlan, clipPaths, currentVoices, formatBytes, offlineAuto, phrasebookTexts, setOfflineAuto, unitTexts, voicesKey } from '../src/lib/offline';
+import { OFFLINE_CACHE, autoOfflinePlan, clipPaths, currentVoices, formatBytes, offlineAuto, offlineChosen, phrasebookTexts, setOfflineAuto, unitTexts, voicesKey } from '../src/lib/offline';
+import { dataSaverOn } from '../src/lib/dataSaver';
 
 const firstDay = units.find((u) => u.id === 'u.firstday')!;
 const elevenIndex = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8'));
@@ -126,22 +127,49 @@ describe('"Keep lessons on this phone" (automatic)', () => {
     expect(autoOfflinePlan({ current: 'u.help', saved: {}, done: done(), busy: ['u.help'] })).toEqual({ release: [] });
   });
 
-  it('is off by default, on for a phone that saved a unit by hand before, and remembers the switch', () => {
+  // Changed on purpose (phase 3, 4 November 2026): on by default, so the current topic also
+  // speaks offline; off by default only with the phone's Data Saver on (it was off for everyone).
+  it('is on by default, off by default with Data Saver, and remembers the switch', () => {
     const store = new Map<string, string>();
     const ls = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v), removeItem: (k: string) => void store.delete(k) };
     const before = (globalThis as { localStorage?: unknown }).localStorage;
     (globalThis as { localStorage?: unknown }).localStorage = ls;
+    const connection = { saveData: false };
+    vi.stubGlobal('navigator', { connection });
     try {
+      expect(offlineAuto()).toBe(true);
+      // Only the topic by default: the help languages' files and the storage prompt need the switch.
+      expect(offlineChosen()).toBe(false);
+      connection.saveData = true;
       expect(offlineAuto()).toBe(false);
+      // A phone that saved a unit by hand before: on, as before (also with Data Saver).
       store.set('vloertaal:offline', JSON.stringify({ units: { 'u.firstday': { urls: [], bytes: 1, voices: 'auto' } }, shell: [] }));
       expect(offlineAuto()).toBe(true);
       store.delete('vloertaal:offline');
+      // Turned on by hand: on with Data Saver too, and everything comes along.
       setOfflineAuto(true);
       expect(offlineAuto()).toBe(true);
+      expect(offlineChosen()).toBe(true);
+      connection.saveData = false;
       setOfflineAuto(false);
       expect(offlineAuto()).toBe(false);
+      expect(offlineChosen()).toBe(false);
     } finally {
       (globalThis as { localStorage?: unknown }).localStorage = before;
+      vi.unstubAllGlobals();
+    }
+  });
+
+  it('turns Data Saver into off, and reads no Data Saver where the phone does not say', () => {
+    vi.stubGlobal('navigator', {});
+    try {
+      expect(dataSaverOn()).toBe(false);
+      vi.stubGlobal('navigator', { connection: { saveData: true } });
+      expect(dataSaverOn()).toBe(true);
+      vi.stubGlobal('navigator', { connection: { get saveData(): boolean { throw new Error('blocked'); } } });
+      expect(dataSaverOn()).toBe(false);
+    } finally {
+      vi.unstubAllGlobals();
     }
   });
 });

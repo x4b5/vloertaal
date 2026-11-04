@@ -1,4 +1,4 @@
-import { LAW_CHECKED } from '../updates';
+import { LAW_CHECKED } from '../lawChecked';
 import { isBeId } from './be/ids';
 import { lawCheckStale } from '../lawAge';
 
@@ -12,8 +12,8 @@ const MONTHS = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 
 export const monthYear = (day: string): string => `${MONTHS[Number(day.slice(5, 7)) - 1]} ${day.slice(0, 4)}`;
 
 /** When the rules were last brought up to date (shown in the disclaimer): the month of the last
- *  monthly law check (LAW_CHECKED in src/content/updates.ts, set by whoever does that check; see
- *  docs/logboek.md). Not yet checked by an expert: that is what RULES_BETA says. */
+ *  monthly law check (LAW_CHECKED in src/content/lawChecked.ts, set by whoever does that check; see
+ *  docs/logboek.md; not from the logbook itself, which stays out of the app's start file). Not yet checked by an expert: that is what RULES_BETA says. */
 export const RULES_CHECKED = monthYear(LAW_CHECKED);
 
 /**

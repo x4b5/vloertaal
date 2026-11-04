@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { defineConfig, type Plugin } from 'vite';
+import { defineConfig, type Plugin, type Rolldown } from 'vite';
 import react from '@vitejs/plugin-react';
 import { beLangSplit } from './scripts/beLangSplit';
 import { UPCOMING, UPDATES } from './src/content/updates';
@@ -22,6 +22,7 @@ import { briefjeFiles } from './src/lib/briefjePage';
 import { RULES_TOPIC_PAGES, rulesTopicPage } from './src/lib/rulesPages';
 import { sitemap } from './src/lib/sitemap';
 import { TOPIC_PAGES, topicPage, topicsIndexPage } from './src/lib/topicPages';
+import { packVoices } from './src/lib/voicesIndex';
 
 /**
  * The app's stylesheet does not block the first paint: index.html's inline splash (logo, ink on
@@ -162,6 +163,37 @@ function langPagesPlugin(): Plugin {
 }
 
 /**
+ * The recorded-voice index in its short form (src/lib/voicesIndex.ts), as assets/voices-<hash>.json:
+ * a new name only when a recording changes, so a phone keeps it like the app's other files (it was
+ * public/audio-el/voices.json, 107 kB gz, under the same name for every version). index.html names
+ * it (`<link rel="vloertaal-voices" …>`, which the browser does not fetch by itself): the app reads
+ * it from there (src/lib/audio.ts voicesIndexUrl) and the service worker keeps it with the app (every
+ * href of the page). public/audio-el/voices.json stays as it is: the long form, for the scripts that
+ * record the voices, the tests, and an app of before.
+ */
+function voicesIndexFile(): Plugin {
+  let publicDir = 'public';
+  return {
+    name: 'vloertaal-voices-index',
+    apply: 'build',
+    configResolved(config) {
+      publicDir = config.publicDir;
+    },
+    buildStart() {
+      const file = resolve(publicDir, 'audio-el/voices.json');
+      if (existsSync(file)) this.emitFile({ type: 'asset', name: 'voices.json', source: JSON.stringify(packVoices(JSON.parse(readFileSync(file, 'utf8')))) });
+    },
+    transformIndexHtml: {
+      order: 'post',
+      handler: (html, ctx) => {
+        const file = Object.keys(ctx.bundle ?? {}).find((f) => /^assets\/voices-[\w-]+\.json$/.test(f));
+        return file ? html.replace('</head>', `<link rel="vloertaal-voices" href="./${file}"></head>`) : html;
+      },
+    },
+  };
+}
+
+/**
  * The service worker of this build (public/sw.js): its BUILD (a hash of every file the build
  * writes, so the same code gives the same worker) and FILES (the hashed files under assets/). So
  * sw.js changes with each deploy that changes the app: the browser installs the new worker, which
@@ -220,6 +252,29 @@ export function buildVersion(
   return sha ? sha.slice(0, 7).toLowerCase() : 'dev';
 }
 
+/**
+ * What goes in assets/vendor-*.js, a file of the start that stays the same from one deploy to the
+ * next: React (react, react-dom, scheduler) and the picture kit (src/pictures/kit.tsx, which imports
+ * no app code for this). With them in the app's own file, a phone downloaded them again after each
+ * deploy (often several a day). A test (tests/stableChunk.test.ts) and two builds in a row show the
+ * file keeps its name. The owner's request, 4 November 2026.
+ */
+export const STABLE_CHUNK = /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]|[\\/]src[\\/]pictures[\\/]kit\.tsx$/;
+
+/**
+ * A build warning about a dynamic import fails the build. Such an import that does not split (the
+ * file is also imported statically somewhere: INEFFECTIVE_DYNAMIC_IMPORT) put the whole logbook back
+ * in the start file for days (31 October 2026) with only a line in the build output; an import()
+ * the build cannot follow (vite:dynamic-import-vars) is a file that will not load. Other logs go on
+ * as before. (Vite only prints a log of level "error", so this throws.) Guarded in CI next to the
+ * size limits (scripts/bundle-size.mjs). The owner's request, 4 November 2026.
+ */
+export const failOnDynamicImportWarnings: NonNullable<Rolldown.InputOptions['onLog']> = (level, log, handler) => {
+  if (level === 'warn' && (/DYNAMIC_IMPORT/.test(log.code ?? '') || /dynamic-import/.test(log.plugin ?? '')))
+    throw new Error(`${log.code ?? log.plugin}: ${log.message}\n(vite.config.ts failOnDynamicImportWarnings: a dynamic import that does not work as one fails the build.)`);
+  handler(level, log);
+};
+
 // Relative base so the build works on GitHub Pages or any sub-path.
 export default defineConfig({
   base: './',
@@ -237,7 +292,7 @@ export default defineConfig({
   // `npm test`: only this checkout's tests (not the copies in .claude/worktrees), and time for the
   // tests that walk all the content on a busy machine (5 s was too tight: tests/exercises.test.ts).
   test: { exclude: ['.claude/**', 'node_modules/**', 'dist/**'], testTimeout: 15000 },
-  plugins: [react(), beLangSplit(), nonBlockingCss(), lazyScreenLinks(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
+  plugins: [react(), beLangSplit(), nonBlockingCss(), lazyScreenLinks(), voicesIndexFile(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
   build: {
     // Old, cheap phones (Android 7–10 with an old Chrome or Samsung Internet, iPhones on iOS 13–15):
     // Vite's own default is 'baseline-widely-available' (Chrome 111, iOS 16.4), whose ?. ?? ??= and
@@ -250,12 +305,14 @@ export default defineConfig({
     // left-to-right on every phone, new ones too. Old phones get fallbacks in styles.css instead.
     cssTarget: ['chrome111', 'edge111', 'firefox114', 'safari16.4', 'ios16.4'],
     rolldownOptions: {
+      onLog: failOnDynamicImportWarnings,
       output: {
         codeSplitting: {
           // Everything the start needs in one file (index-*.js): without this, the code shared by the
           // start and a screen loaded later (src/lazyScreens.tsx) or a help language's file would be cut
           // into many small files the start must fetch too, one more request each on a slow connection.
-          groups: [{ name: 'index', tags: ['$initial'] }],
+          // (First React and the picture kit, in their own file that does not change: STABLE_CHUNK.)
+          groups: [{ name: 'vendor', test: STABLE_CHUNK, priority: 1 }, { name: 'index', tags: ['$initial'] }],
         },
       },
     },

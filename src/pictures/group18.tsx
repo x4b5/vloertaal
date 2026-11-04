@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
-import { Arrow, Bust, CurveArrow, Ground, Hand, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Arrow, CurveArrow, Ground, Hand, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 18 (keyed by id): the first day (l.arrive: entrance, reception, canteen,

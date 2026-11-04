@@ -146,6 +146,8 @@ export const uiEn = {
   withoutSound: 'Without sound',
   quietHint: 'Without sound, lessons have no listening questions and nothing plays by itself. Tap 🔊 to hear a word, for example with earphones.',
   soundOffToast: 'Without sound. You can turn sound on in Settings.',
+  /** A line could not be heard for want of internet (src/components/LessonPlayer.tsx, src/lib/audio.ts onSoundNeedsInternet). */
+  noInternetSound: 'No internet: the sound does not work now.',
   /* Round 3, coming back: streak, free days, review card, result, install, backup, reminder. */
   stillToDo: 'Still to do today',
   streakStopped: 'Your streak stopped at {n} days. Start again today.',

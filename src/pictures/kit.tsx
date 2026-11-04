@@ -1,13 +1,15 @@
 import { useId, type ReactNode } from 'react';
-import { CastHead, type CharacterId } from '../components/Characters';
-import { twinkle } from '../components/Celebrate';
-import type { Emotion, Expr } from '../components/Faces';
+import type { CharacterId } from '../components/Characters';
 
 /**
  * Building blocks for the word pictures (see docs/tekenstijl.md). Every block returns a <g>
  * for use inside a 120 x 120 <svg viewBox="0 0 120 120">, in the cast's style: flat fills,
  * no outlines, a darker tone on the right/bottom (light comes from the top left), a light
  * highlight stroke on the top left, and a soft ground shadow.
+ *
+ * The kit imports nothing of the app but React (types aside): the build puts it in the file that
+ * stays the same from one deploy to the next, with React (vite.config.ts, STABLE_CHUNK). The cast's
+ * own head in a picture is `Bust` (./bust.tsx), which needs the cast (src/components/Characters.tsx).
  */
 
 export type Pt = [number, number];
@@ -83,7 +85,18 @@ export const SKIN: Record<CharacterId, [string, string]> = {
 };
 
 const pts = (p: Pt[]) => p.map(([x, y]) => `${r1(x)} ${r1(y)}`).join(' ');
-const r1 = (n: number) => Math.round(n * 10) / 10;
+export const r1 = (n: number) => Math.round(n * 10) / 10;
+
+/** Four-pointed twinkle (a path; the cast's confetti star: Sparkle, and src/components/Celebrate.tsx). */
+export const twinkle = (x: number, y: number, r: number) => {
+  const k = r * 0.18;
+  return (
+    `M${x} ${y - r}C${x + k} ${y - k} ${x + k} ${y - k} ${x + r} ${y}` +
+    `C${x + k} ${y + k} ${x + k} ${y + k} ${x} ${y + r}` +
+    `C${x - k} ${y + k} ${x - k} ${y + k} ${x - r} ${y}` +
+    `C${x - k} ${y - k} ${x - k} ${y - k} ${x} ${y - r}z`
+  );
+};
 
 /** Soft shadow on the ground under an object (always the first thing drawn). */
 export function Ground({ cx = 60, cy = 106, rx = 34, ry = 5 }: { cx?: number; cy?: number; rx?: number; ry?: number }) {
@@ -528,7 +541,7 @@ const bustClip = (id: string, art: ReactNode) => (
 
 /** Bust clothes per cast member (head and shoulders, cut off flat at the bottom): slim, straight
  *  shoulders, the same outfits as the cast. */
-const BUST_TORSO: Record<CharacterId, (id: string) => ReactNode> = {
+export const BUST_TORSO: Record<CharacterId, (id: string) => ReactNode> = {
   bram: (id) => bustClip(id, (
     <>
       <path d={BUST} fill={PAL.orange} />
@@ -589,7 +602,7 @@ const BUST_SLEEVE: Record<CharacterId, [string, string]> = {
  */
 export type BustArms = 'crossed' | 'shrug' | 'forehead' | 'clutch' | 'raised';
 
-function BustArmsArt({ who, arms }: { who: CharacterId; arms: BustArms }) {
+export function BustArmsArt({ who, arms }: { who: CharacterId; arms: BustArms }) {
   const [s, sh] = SKIN[who];
   const [cloth, cuff] = BUST_SLEEVE[who];
   const bare = who === 'jada';
@@ -679,39 +692,6 @@ function BustArmsArt({ who, arms }: { who: CharacterId; arms: BustArms }) {
         </g>
       );
   }
-}
-
-/**
- * A cast member as a head-and-shoulders bust, exactly the cast's own head. (x, y) is the middle
- * of the bottom edge; at scale 1 the bust is 84 wide and 130 tall, so use scale 0.4-0.75.
- * For pictures about feelings: `emotion` gives a clear (still calm, adult) face, `tilt` tilts
- * the head (degrees, + is clockwise) and `arms` adds body language (see BustArms).
- */
-export function Bust({ who, x = 60, y = 110, scale = 0.7, expr = 'neutral', emotion, squint = false, flip = false, talk = false, tilt = 0, arms, bold = false }: {
-  who: CharacterId; x?: number; y?: number; scale?: number; expr?: Expr; squint?: boolean;
-  /** A clear feeling instead of the calm `expr`. */
-  emotion?: Emotion;
-  /** Mouth a little open, mid-word. */
-  talk?: boolean;
-  /** Face the other way (mirror). */
-  flip?: boolean;
-  /** Head tilt around the neck, in degrees. */
-  tilt?: number;
-  /** Body language: arms and hands in front of the bust. */
-  arms?: BustArms;
-  /** Features a little larger and bolder, for small pictures. */
-  bold?: boolean;
-}) {
-  const id = `bt-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
-  return (
-    <g transform={`translate(${r1(x)} ${r1(y)}) scale(${flip ? -scale : scale} ${scale}) translate(-60 -134)`}>
-      {BUST_TORSO[who](id)}
-      <g transform={tilt ? `rotate(${tilt} 60 96)` : undefined}>
-        <CastHead who={who} expr={expr} emotion={emotion} squint={squint} talk={talk} bold={bold} gaze={[0, 0]} />
-      </g>
-      {arms && <BustArmsArt who={who} arms={arms} />}
-    </g>
-  );
 }
 
 /** A plain round halo behind a picture, for use on coloured backgrounds (unit banners). */

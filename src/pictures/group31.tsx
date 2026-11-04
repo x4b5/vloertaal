@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
-import { Bubble, Bust, Dots, Ground, Hand, Motion, PAL, SKIN, Shade, Shine } from './kit';
+import { Bubble, Dots, Ground, Hand, Motion, PAL, SKIN, Shade, Shine } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 31 (keyed by id): drawings for emoji in the tips, the rules and the

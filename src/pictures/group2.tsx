@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
-import { Arrow, Box, Bubble, Bust, CurveArrow, Ground, Hand, PAL, QuestionMark, Shade, Shine, SKIN } from './kit';
+import { Arrow, Box, Bubble, CurveArrow, Ground, Hand, PAL, QuestionMark, Shade, Shine, SKIN } from './kit';
+import { Bust } from './bust';
 
 /** Word pictures, group 2 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 

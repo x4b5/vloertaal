@@ -2,7 +2,9 @@ import { describe, expect, it } from 'vitest';
 import { workContacts } from '../src/components/Screens';
 import { monthYear, RULES_ABUSE_BE, RULES_CHECKED, RULES_DISCLAIMER_BE, RULES_NOTICE } from '../src/content/regels/disclaimer';
 import { HELP_ROWS, HELP_ROWS_BE } from '../src/content/regels/help';
-import { LAW_CHECKED, UPCOMING_LAW } from '../src/content/updates';
+import { LAW_CHECKED } from '../src/content/lawChecked';
+import * as logbook from '../src/content/updates';
+import { UPCOMING_LAW } from '../src/content/updates';
 import { helpLanguages } from '../src/i18n/all';
 import { dayKey } from '../src/lib/progress';
 
@@ -55,6 +57,13 @@ describe('"Bijgewerkt": the month of the last law check', () => {
     expect(monthYear('2027-03-02')).toBe('maart 2027');
     expect(RULES_NOTICE.join(' ')).toContain(`Bijgewerkt: ${RULES_CHECKED}.`);
     expect(RULES_DISCLAIMER_BE.join(' ')).toContain(`Bijgewerkt: ${RULES_CHECKED}.`);
+  });
+
+  it('has one LAW_CHECKED: src/content/lawChecked.ts (the logbook may only pass it on)', () => {
+    // It moved out of src/content/updates.ts (4 November 2026) so the logbook stays out of the
+    // app's start file. A copy still there must be the same day: set it in lawChecked.ts.
+    const copy = (logbook as Record<string, unknown>).LAW_CHECKED;
+    if (copy !== undefined) expect(copy, 'LAW_CHECKED staat nu in src/content/lawChecked.ts').toBe(LAW_CHECKED);
   });
 
   it('LAW_CHECKED is not in the future, and warns when it is older than 45 days', () => {

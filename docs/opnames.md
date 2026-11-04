@@ -55,6 +55,10 @@ node scripts/voices/elevenlabs.mjs all
 `MAX_CREDITS=8000` (standaard 12000) en `VOICES=thijmen` werken hier ook. Commit daarna
 `public/audio-el/` (de mp3's en `voices.json`).
 
+(De app downloadt `voices.json` zelf niet meer: de build maakt er een korte kopie van, met een
+hash in de naam, `assets/voices-*.json`; zie `src/lib/voicesIndex.ts`. Jij commit gewoon
+`voices.json`.)
+
 ## 4. Controleer dat het gelukt is
 
 ```sh

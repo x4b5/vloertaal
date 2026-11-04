@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
-import { Arrow, Bubble, Bust, Dots, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Arrow, Bubble, Dots, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Bust } from './bust';
 
 /**
  * Word pictures, group 23 (keyed by id): "Slimme apps en AI" (u.ai). The words of one lesson are

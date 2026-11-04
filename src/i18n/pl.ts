@@ -115,6 +115,7 @@ const lang: HelpLanguageSource = {
     withoutSound: 'Bez dźwięku',
     quietHint: 'Bez dźwięku lekcje nie mają ćwiczeń ze słuchania i nic nie odtwarza się samo. Dotknij 🔊, aby usłyszeć słowo, na przykład w słuchawkach.',
     soundOffToast: 'Bez dźwięku. Dźwięk możesz włączyć w Ustawieniach.',
+    noInternetSound: 'Brak internetu: dźwięk teraz nie działa.', // nieuw, nalezen
     stillToDo: 'Dziś jeszcze do zrobienia',
     streakStopped: { one: 'Twoja seria skończyła się na {n} dniu. Zacznij dziś od nowa.', few: 'Twoja seria skończyła się na {n} dniach. Zacznij dziś od nowa.', many: 'Twoja seria skończyła się na {n} dniach. Zacznij dziś od nowa.', other: 'Twoja seria skończyła się na {n} dniach. Zacznij dziś od nowa.' },
     recordN: { one: 'Twój rekord: {n} dzień', few: 'Twój rekord: {n} dni', many: 'Twój rekord: {n} dni', other: 'Twój rekord: {n} dni' },

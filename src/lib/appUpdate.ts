@@ -8,10 +8,15 @@
  * back into view, or for the next screen the learner opens (any screen outside a lesson). A
  * reload keeps everything: the progress is on the phone, the screen comes back.
  *
- * The new version's service worker removes the old version's files (public/sw.js). A file the
- * running version loads later (a help language, a screen of its own) is then gone: such a failed
- * file reloads the page into the new version at once (recoverFromLoadError), at most once in a
- * while, so a file that keeps failing shows "Try again" instead of reloading again and again.
+ * The app opens from the phone (public/sw.js, since 4 November 2026): after a deploy that is the
+ * version before, while the new version's service worker installs alongside. When it takes over
+ * (controllerchange), the new version is known to be there, and the page reloads into it at the
+ * next calm moment, as above. The new worker keeps the files of the last builds before (KEEP_BUILDS
+ * in public/sw.js), so the running version still has its screens. A file the running version
+ * loads later that no cache has and the server no longer has (an older build, a help language
+ * never opened) reloads the page into the new version at once (recoverFromLoadError), at most
+ * once in a while, so a file that keeps failing shows "Try again" instead of reloading again and
+ * again.
  */
 
 const ENTRY = /assets\/index-[\w-]+\.js/;
@@ -52,9 +57,10 @@ const AGAIN_AFTER = 30 * 60 * 1000;
 
 /**
  * Reload into `version`, once. The new service worker first gets a moment to install (at most
- * 15 s): on a slow connection the page may come from the phone, and only the new worker's copy
- * is the new version. Still the old one after that reload (the worker did not install): no
- * reload again for the same version for half an hour.
+ * 15 s): then the new version's files come from the phone. A reload asks the network for the page
+ * first (public/sw.js), so the new version comes even when its worker could not install. Still
+ * the old one after that reload (offline, a stalled line): no reload again for the same version
+ * for half an hour.
  */
 async function reloadInto(version: string): Promise<void> {
   try {
@@ -112,9 +118,9 @@ export function watchForUpdates(): void {
   // A new service worker took over this page (a new version was deployed; the first one, on the
   // very first visit, does not count): the old version's files are going.
   const sw = navigator.serviceWorker;
-  // The page itself may already be that version (pages come from the network first): only a
-  // server version other than the running one counts, so the first session after a deploy does
-  // not reload once more for nothing.
+  // After a deploy the page usually is the version before (it opens from the phone, public/sw.js);
+  // but it may already be the new one (a reload asks the network first): only a server version
+  // other than the running one counts, so such a session does not reload once more for nothing.
   if (sw?.controller) sw.addEventListener('controllerchange', () => { void serverVersion(running, serverPage).then((v) => { waiting = waiting ?? v; }); });
 }
 

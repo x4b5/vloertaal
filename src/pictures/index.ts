@@ -1,6 +1,6 @@
 import { createElement, isValidElement, useSyncExternalStore, type CSSProperties, type JSX } from 'react';
 import type { CharacterId } from '../components/Characters';
-import { Bust } from './kit';
+import { Bust } from './bust';
 import units from './units';
 import icons from './icons';
 import { pictureIdOf } from '../content/taalBe/ids';
