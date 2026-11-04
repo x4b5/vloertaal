@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-04',
     items: [
+      'Elke kleur heeft nu een eigen karakter. Zand is warm oker, als een werkplaats. Haven is petrol met het geel van een boei, en een golfje boven de balk onderaan. Werkjas is marineblauw met fel oranje, en de knop Verder heeft twee reflecterende strepen. Donker is de nachtdienst: het signaalgeel geeft een beetje licht. Groen blijft goed en rood blijft fout, in elke kleur.',
       'Spreken: na het inspreken staat er nu ook een knop "Luister naar jezelf". Zo hoor je je eigen poging zo vaak als je wilt, en vergelijk je die met het voorbeeld.',
       'Sneller: na een nieuwe versie opent de app meteen van je telefoon, ook met slecht bereik. De nieuwe versie komt op de achtergrond binnen. En een nieuwe versie kost minder data.',
       'Offline: het onderwerp waar je mee bezig bent, staat nu vanzelf op je telefoon, met geluid (niet als je data sparen aan hebt). Het geluid van een les wordt vooraf opgehaald. Is er geen internet en werkt het geluid niet, dan zegt de app dat, en slaat hij oefeningen over waarbij je moet luisteren.',
