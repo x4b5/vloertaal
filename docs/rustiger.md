@@ -73,7 +73,7 @@ regels die we in de code aanhouden, en wat er al gedaan is.
 - **Kleuren met karakter (4 november 2026):** elke kleur uit Instellingen › Weergave heeft een eigen "doe dit"-kleur (regel 1 blijft: één kleur voor "doe dit", blauw voor "luister", groen en rood voor de uitslag).
   - **Zand:** warm oker met bruin erop, kraft voor wat klaar is in de lesbalk. De rustigste, zonder extra teken.
   - **Haven:** boei-geel met petrol, zeeblauwe luidsprekers, petrol in de lesbalk; een dun golfje boven de onderbalk.
-  - **Werkjas:** fel oranje met marineblauw, blauwe luidsprekers als een overall, marine in de lesbalk; twee dunne reflecterende strepen onder het woord op de hoofdknop.
+  - **Werkjas:** fel oranje met marineblauw, blauwe luidsprekers als een overall, marine in de lesbalk. (De twee reflecterende strepen op de hoofdknop zijn op 4 november weer weggehaald: ze leidden af.)
   - **Donker:** signaalgeel; een zachte gloed om de hoofdknop en de les van nu.
   - De tekens staan alleen op de rand van een scherm: nooit achter tekst of een oefening, niets om op te tikken, niets beweegt.
 
