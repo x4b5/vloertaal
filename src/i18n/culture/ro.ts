@@ -61,6 +61,14 @@ const t: CultureTranslation = {
     'c.unsafe.o2': 'Nu spui nimic, pentru că nu s-a întâmplat nimic.',
     'c.unsafe.o3': { m: 'Repari singur paletul și nu spui nimănui.', f: 'Repari singură paletul și nu spui nimănui.', x: 'Repari pe cont propriu paletul și nu spui nimănui.' }, // nieuw, nalezen
     'c.unsafe.w': 'Un aproape-accident e un avertisment. Dacă îl raportezi, ajuți la prevenirea unui accident adevărat. Angajatorul nu are voie să te pedepsească pentru asta.',
+    'c.alarm': 'Sună alarma: oprește-te și ieși afară', // nieuw, nalezen
+    'c.alarm.b': 'În prima zi, întreabă unde sunt ieșirile de urgență și punctul de adunare. Când sună alarma, oprește imediat lucrul. Lasă-ți lucrurile și ieși afară pe traseul de evacuare. Ia scara, niciodată liftul. La punctul de adunare se numără cine e afară, așa că rămâi acolo. Ieși și atunci când crezi că e doar un exercițiu.', // nieuw, nalezen
+    'c.alarm.p': { m: 'Sunt nou. Unde este punctul de adunare?', f: 'Sunt nouă. Unde este punctul de adunare?', x: 'Sunt o persoană nouă aici. Unde este punctul de adunare?' }, // nieuw, nalezen
+    'c.alarm.s': 'Sună alarma de incendiu. Aproape ai terminat o comandă. Ce faci?', // nieuw, nalezen
+    'c.alarm.o1': 'Te oprești imediat și mergi la punctul de adunare.', // nieuw, nalezen
+    'c.alarm.o2': 'Termini întâi comanda, apoi ieși afară.', // nieuw, nalezen
+    'c.alarm.o3': 'Îți iei întâi geaca și telefonul din dulap.', // nieuw, nalezen
+    'c.alarm.w': 'Fumul se întinde repede, așa că ieși imediat. Lucrurile tale pot aștepta. La punctul de adunare se numără toți: atunci nimeni nu trebuie să te caute înăuntru.', // nieuw, nalezen
     'c.accident': 'Raportează orice accident',
     'c.accident.b': 'Spune-i șefului sau BHV’er-ului (persoanei de prim ajutor din firmă) despre orice accident, chiar și unul mic. Lucrezi printr-o agenție? Anunță și agenția. În caz de urgență, sună întâi la 112. Firma unde s-a petrecut accidentul trebuie să raporteze un accident grav la Nederlandse Arbeidsinspectie (și dacă lucrezi printr-o agenție): când cineva moare, rămâne cu o vătămare permanentă sau trebuie să stea în spital. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.accident.p': 'Colegul meu e rănit. Unde e persoana de prim ajutor?',

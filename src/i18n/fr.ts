@@ -510,6 +510,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Attention, le sol est mouillé !',
     's.danger.2': 'Où est la sortie de secours ?',
     's.danger.3': 'Il y a un accident !',
+    'l.alarm': 'L’alarme incendie et l’évacuation', // nieuw, nalezen
+    'w.alarm': 'l’alarme', // nieuw, nalezen
+    'w.ontruimen': 'évacuer (tout le monde quitte le bâtiment)', // nieuw, nalezen
+    'w.vluchtroute': 'le chemin d’évacuation', // nieuw, nalezen
+    'w.trap': 'l’escalier', // nieuw, nalezen
+    'w.verzamelplaats': 'le point de rassemblement (où tout le monde se retrouve dehors)', // nieuw, nalezen
+    'w.brandblusser': 'l’extincteur', // nieuw, nalezen
+    's.alarm.1': 'Où est l’extincteur ?', // nieuw, nalezen
+    's.alarm.2': 'Nous devons évacuer le bâtiment.', // nieuw, nalezen
+    's.alarm.3': 'Prends l’escalier, pas l’ascenseur.', // nieuw, nalezen
     'l.accident': 'Signaler un accident',
     'w.gewond': 'blessé',
     'w.bloeden': 'saigner',
@@ -589,6 +599,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Oui, je le porte.',
     'c.danger.q': 'Il y a un accident ?',
     'c.danger.a': 'Oui, appelle le 112 !',
+    'c.alarm.q': 'Tout le monde est dehors ?', // nieuw, nalezen
+    'c.alarm.a': 'Non, mon collègue n’est pas encore là.', // nieuw, nalezen
     'c.accident.q': 'Qu’est-ce qui s’est passé ?',
     'c.accident.a': 'Il est tombé. Il saigne.',
     'l.notyet': 'Je n’ai pas encore appris ça',

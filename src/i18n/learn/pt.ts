@@ -28,6 +28,7 @@ const t: CultureTranslation = {
     'c.keeplearning.a.why': "Pedir para falarem em neerlandês não faz mal: praticar ajuda.",
     'c.gear.a.why': "A pergunta é sobre o capacete: sim, está posto.",
     'c.danger.a.why': "Num acidente, liga-se primeiro para o 112.",
+    'c.alarm.a.why': "Perguntam se estão todos lá fora: esta resposta diz quem ainda falta.", // nieuw, nalezen
     'c.accident.a.why': "Perguntam o que aconteceu: esta resposta diz o que aconteceu e como ele está.",
     'c.notyet.a.why': "Dizem para experimentar: pedir que mostrem primeiro é a resposta segura.",
     'c.things.a.why': "A pergunta é \"onde\". Esta resposta diz um sítio.",
@@ -85,6 +86,7 @@ const t: CultureTranslation = {
     'c.cleansafe.a.why': "Um chão molhado escorrega: um aviso ajuda.",
     'c.shelves.a.why': "Perguntam onde: esta resposta diz o corredor e ajuda.",
     'c.checkout.a.why': "Perguntam se se pode pagar com cartão: um sim simpático.",
+    'c.counting.a.why': "Perguntam quantas: esta resposta dá o número e confirma-o algarismo a algarismo.", // nieuw, nalezen
     'c.hours.a.why': "Perguntam a que horas: esta resposta dá uma hora.",
     'c.measures.a.why': "Perguntam o comprimento: esta resposta dá um comprimento.",
     'c.aihelp.a.why': "Perguntam quem o escreveu: um sim honesto que diz quem ajudou.",

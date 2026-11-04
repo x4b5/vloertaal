@@ -44,6 +44,10 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['stagebegeleider', 5],
   ['startkwalificatie', 5],
   ['gebruikersnaam', 10],
+  // Numbers and the fire alarm (l.counting, l.alarm, 4 November 2026).
+  ['zevenenveertig', 7],
+  ['vierenzeventig', 6],
+  ['verzamelplaats', 8],
 ];
 
 export const SHY = '\u00ad';

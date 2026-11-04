@@ -28,6 +28,7 @@ const t: CultureTranslation = {
     'c.keeplearning.a.why': "ሆላንድኛ ምሕታት ጸገም የብሉን፡ ልምምድ ይሕግዝ።",
     'c.gear.a.why': "ሕቶ ብዛዕባ ሄልመት እዩ፡ እወ፡ ኣብ ርእሲ ኣሎ።",
     'c.danger.a.why': "ኣብ ሓደጋ፡ ቅድም ናብ 112 ይድወል።",
+    'c.alarm.a.why': "ሕቶ ኩሉ ሰብ ወጺኡ ድዩ ዝብል እዩ። እዚ መልሲ መን ገና ከም ዘይመጸ ይነግር።", // nieuw, nalezen
     'c.accident.a.why': "ሕቶ ብዛዕባ ዝኣጋጠመ እዩ። እዚ መልሲ እንታይ ከም ዘጋጠመን ከመይ ከም ዘሎን ይነግር።",
     'c.notyet.a.why': "«ፈትን ጥራይ» ምስ ተባህለ፡ ቅድም ገይሩ ከርኢ ምሕታት እቲ ውሑስ መልሲ እዩ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.things.a.why': "ሕቶ «ናበይ» እዩ። እዚ መልሲ ቦታ ይጠቅስ።",
@@ -85,6 +86,7 @@ const t: CultureTranslation = {
     'c.cleansafe.a.why': "ዝጠለለ መሬት ዘንሸራትት እዩ፡ መጠንቀቕታ ይሕግዝ።",
     'c.shelves.a.why': "እቲ ሕቶ «ኣበይ» እዩ። እዚ መልሲ ነቲ መተላለዪ ይጠቅስ፡ ሓገዝ ድማ የቕርብ።",
     'c.checkout.a.why': "ብካርድ ምኽፋል ይከኣል ድዩ ተባሂሉ፡ ሓጺር ፍሽሕው «እወ»።",
+    'c.counting.a.why': "ሕቶ ብዛዕባ ብዝሒ እዩ። እዚ መልሲ ነቲ ቁጽሪ ይህብ፡ ኣሃዝ ብኣሃዝ ድማ የረጋግጾ።", // nieuw, nalezen
     'c.hours.a.why': "እቲ ሕቶ ብዛዕባ ሰዓት እዩ። እዚ መልሲ ሰዓት ይህብ።",
     'c.measures.a.why': "እቲ ሕቶ ብዛዕባ ንውሓት እዩ። እዚ መልሲ ንውሓት ይህብ።",
     'c.aihelp.a.why': "መን ከም ዝጸሓፎ ተሓቲቱ፡ ነቲ ሓገዝ ዝጠቅስ ቅኑዕ «እወ»።",

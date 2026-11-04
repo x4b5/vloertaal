@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "Bir şeyin yasak olduğunu söyleyebilirim.", // nieuw, nalezen
     'kjn.u.numbers.1': "“kwart over vier” gibi saatleri anlayabilirim.", // nieuw, nalezen
     'kjn.u.numbers.2': "Bir şeyin kaç para olduğunu ya da kaç kilo geldiğini söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.numbers.3': "13 ile 30 gibi sayıları ayırt edebilirim.", // nieuw, nalezen
     'kjn.u.shop.1': "Bir müşteriye kartla ödemek isteyip istemediğini sorabilirim.", // nieuw, nalezen
     'kjn.u.shop.2': "Bir müşteriye mağazada yolu gösterebilirim.", // nieuw, nalezen
     'kjn.u.ai.1': "Bir cevabın doğru olup olmadığını sorabilirim.", // nieuw, nalezen

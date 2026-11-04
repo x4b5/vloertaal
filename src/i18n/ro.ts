@@ -549,6 +549,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Atenție, podeaua este udă!',
     's.danger.2': 'Unde este ieșirea de urgență?',
     's.danger.3': 'S-a întâmplat un accident!',
+    'l.alarm': 'Alarma de incendiu și evacuarea', // nieuw, nalezen
+    'w.alarm': 'alarma', // nieuw, nalezen
+    'w.ontruimen': 'a evacua (toată lumea iese din clădire)', // nieuw, nalezen
+    'w.vluchtroute': 'traseul de evacuare', // nieuw, nalezen
+    'w.trap': 'scara', // nieuw, nalezen
+    'w.verzamelplaats': 'punctul de adunare (unde se strâng toți afară)', // nieuw, nalezen
+    'w.brandblusser': 'extinctorul', // nieuw, nalezen
+    's.alarm.1': 'Unde este extinctorul?', // nieuw, nalezen
+    's.alarm.2': 'Trebuie să evacuăm clădirea.', // nieuw, nalezen
+    's.alarm.3': 'Ia scara, nu liftul.', // nieuw, nalezen
     's.accident.1': 'Colegul meu a căzut.',
     's.accident.2': 'M-am tăiat.',
     's.accident.3': 'Vreau să raportez un accident.',
@@ -586,6 +596,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Da, o port.',
     'c.danger.q': 'S-a întâmplat un accident?',
     'c.danger.a': 'Da, sună la 112!',
+    'c.alarm.q': 'Sunt toți afară?', // nieuw, nalezen
+    'c.alarm.a': 'Nu, colegul meu nu e încă aici.', // nieuw, nalezen
     'c.accident.q': 'Ce s-a întâmplat?',
     'c.accident.a': 'A căzut. Sângerează.',
     'l.notyet': 'Asta n-am învățat-o încă',

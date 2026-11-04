@@ -1031,6 +1031,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'Kann ich hier mit Karte zahlen?',
     'c.checkout.a': 'Ja, klar, das geht.',
     'u.numbers': 'Rechnen: Zeit, Geld und Maße',
+    'l.counting': 'Zahlen', // nieuw, nalezen
+    'w.dertien': 'dreizehn (13)', // nieuw, nalezen
+    'w.dertig': 'dreißig (30)', // nieuw, nalezen
+    'w.zeventien': 'siebzehn (17)', // nieuw, nalezen
+    'w.zeventig': 'siebzig (70)', // nieuw, nalezen
+    'w.zevenenveertig': 'siebenundvierzig (47)', // nieuw, nalezen
+    'w.vierenzeventig': 'vierundsiebzig (74)', // nieuw, nalezen
+    's.counting.1': 'Ich habe dreizehn Kartons, nicht dreißig.', // nieuw, nalezen
+    's.counting.2': 'Lagerplatz vierundsiebzig ist leer.', // nieuw, nalezen
+    's.counting.3': 'Können Sie es Ziffer für Ziffer sagen?', // nieuw, nalezen
+    'c.counting.q': 'Wie viele Kartons sind noch übrig?', // nieuw, nalezen
+    'c.counting.a': 'Siebzig. Sieben, null.', // nieuw, nalezen
     'l.hours': 'Stunden und Uhrzeiten',
     'w.uur': 'die Stunde, Uhr',
     'w.minuut': 'die Minute',
@@ -1071,6 +1083,14 @@ const t: CultureTranslation = {
     'c.checkout.o2': 'Verkauf es, er sagt ja, er ist 19.',
     'c.checkout.o3': 'Verkauf es, aber nur eine Dose.',
     'c.checkout.w': 'Ohne Ausweis kannst du sein Alter nicht wissen. Alkohol an jemanden unter 18 zu verkaufen ist gegen das Gesetz, und das Geschäft kann eine Strafe bekommen.',
+    'c.counting': 'Vijfentwintig: erst die 5, dann die 20', // nieuw, nalezen
+    'c.counting.b': 'Auf Niederländisch hat jede Zahl von 0 bis 12 ein eigenes Wort: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. Die Zahlen von 13 bis 19 enden auf -tien: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. Die Zehner enden auf -tig: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. Von 21 bis 99 sagt man zuerst die letzte Ziffer, wie im Deutschen: 25 ist vijfentwintig, „fünfundzwanzig“. Also ist 47 zevenenveertig, und 74 ist vierenzeventig. Dertien und dertig klingen fast gleich: Hör auf das Ende. Nicht sicher? Sag die Ziffern einzeln zurück.', // nieuw, nalezen
+    'c.counting.p': 'Vier, sieben? Also siebenundvierzig?', // nieuw, nalezen
+    'c.counting.s': 'Dein Vorgesetzter sagt: „Ga naar gang zevenenveertig.“ Welcher Gang ist es?', // nieuw, nalezen
+    'c.counting.o1': 'Gang 47.', // nieuw, nalezen
+    'c.counting.o2': 'Gang 74.', // nieuw, nalezen
+    'c.counting.o3': 'Gang 40.', // nieuw, nalezen
+    'c.counting.w': '„Zevenenveertig“ heißt „sieben und vierzig“: erst die 7, dann die 40. Also ist es Gang 47. Viele Neue hören 74 und gehen in den falschen Gang.', // nieuw, nalezen
     'c.hours': 'Half acht ist 7:30 Uhr',
     'c.hours.b': 'Im Niederländischen zählt „half“ zur nächsten Stunde: half acht ist 7:30 Uhr, nicht 8:30 Uhr. Das ist wie „halb acht“ im Deutschen. Kwart over acht ist 8:15 Uhr, und kwart voor acht ist 7:45 Uhr. Prüfe deine Stunden selbst: die Endzeit minus die Anfangszeit, minus die Pause. Eine Pause ist oft nicht bezahlt. Schreib jeden Tag deine Stunden auf.',
     'c.hours.p': 'Half acht? Also eine halbe Stunde vor acht?',

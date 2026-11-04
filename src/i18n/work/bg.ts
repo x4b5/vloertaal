@@ -1031,6 +1031,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'Може ли да платя с карта тук?',
     'c.checkout.a': 'Да, разбира се, може.',
     'u.numbers': 'Време, пари и мерки',
+    'l.counting': 'Числата', // nieuw, nalezen
+    'w.dertien': 'тринайсет (13)', // nieuw, nalezen
+    'w.dertig': 'трийсет (30)', // nieuw, nalezen
+    'w.zeventien': 'седемнайсет (17)', // nieuw, nalezen
+    'w.zeventig': 'седемдесет (70)', // nieuw, nalezen
+    'w.zevenenveertig': 'четирийсет и седем (47)', // nieuw, nalezen
+    'w.vierenzeventig': 'седемдесет и четири (74)', // nieuw, nalezen
+    's.counting.1': 'Имам тринайсет кашона, не трийсет.', // nieuw, nalezen
+    's.counting.2': 'Локация седемдесет и четири е празна.', // nieuw, nalezen
+    's.counting.3': 'Може ли да го кажете цифра по цифра?', // nieuw, nalezen
+    'c.counting.q': 'Колко кашона остават?', // nieuw, nalezen
+    'c.counting.a': 'Седемдесет. Седем, нула.', // nieuw, nalezen
     'l.hours': 'Часове и време',
     'w.uur': 'час',
     'w.minuut': 'минута',
@@ -1071,6 +1083,14 @@ const t: CultureTranslation = {
     'c.checkout.o2': 'Продаваш, защото казва, че е на 19.',
     'c.checkout.o3': 'Продаваш, но само една кутийка.',
     'c.checkout.w': 'Без документ не можеш да знаеш на колко години е. Продажбата на алкохол на човек под 18 години е забранена от закона и магазинът може да получи глоба.',
+    'c.counting': 'Vijfentwintig: първо 5, после 20', // nieuw, nalezen
+    'c.counting.b': 'На нидерландски числата от 0 до 12 имат свои думи: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. Числата от 13 до 19 завършват на -tien: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. Десетиците завършват на -tig: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. От 21 до 99 първо се казва последната цифра: 25 е vijfentwintig, „пет и двайсет“. Значи 47 е zevenenveertig, а 74 е vierenzeventig. Dertien и dertig звучат почти еднакво: слушай края. Имаш съмнения? Повтори цифрите една по една.', // nieuw, nalezen
+    'c.counting.p': 'Четири, седем? Значи четирийсет и седем?', // nieuw, nalezen
+    'c.counting.s': 'Началникът ти казва: „Ga naar gang zevenenveertig.“ Коя пътека е?', // nieuw, nalezen
+    'c.counting.o1': 'Пътека 47.', // nieuw, nalezen
+    'c.counting.o2': 'Пътека 74.', // nieuw, nalezen
+    'c.counting.o3': 'Пътека 40.', // nieuw, nalezen
+    'c.counting.w': '„Zevenenveertig“ е „седем и четирийсет“: първо 7, после 40. Значи е пътека 47. Много новодошли чуват 74 и отиват на грешната пътека.', // nieuw, nalezen
     'c.hours': '„Half acht“ е 7:30',
     'c.hours.b': 'На нидерландски „half“ се брои към следващия час: half acht е 7:30, а не 8:30. Kwart over acht е 8:15, а kwart voor acht е 7:45. Проверявай часовете си: краят минус началото, минус почивката. Почивката често не се плаща. Записвай часовете си всеки ден.',
     'c.hours.p': '„Half acht“? Значи половин час преди осем?',

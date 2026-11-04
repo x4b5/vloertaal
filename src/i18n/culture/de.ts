@@ -61,6 +61,14 @@ const t: CultureTranslation = {
     'c.unsafe.o2': 'Sag nichts, es ist ja nichts passiert.',
     'c.unsafe.o3': 'Bring die Palette selbst in Ordnung und sag es niemandem.', // nieuw, nalezen
     'c.unsafe.w': 'Ein Beinahe-Unfall ist eine Warnung. Wenn du ihn meldest, hilft das, einen echten Unfall zu verhindern. Dein Arbeitgeber darf dich dafür nicht bestrafen.',
+    'c.alarm': 'Der Alarm geht los: Hör auf und geh raus', // nieuw, nalezen
+    'c.alarm.b': 'Frag am ersten Tag, wo die Notausgänge und der Sammelplatz sind. Wenn der Alarm losgeht, hör sofort mit der Arbeit auf. Lass deine Sachen liegen und geh über den Fluchtweg nach draußen. Nimm die Treppe, nie den Aufzug. Am Sammelplatz wird gezählt, wer draußen ist, also bleib dort. Geh auch raus, wenn du denkst, dass es nur eine Übung ist.', // nieuw, nalezen
+    'c.alarm.p': 'Ich bin neu. Wo ist der Sammelplatz?', // nieuw, nalezen
+    'c.alarm.s': 'Der Feueralarm geht los. Du bist mit einem Auftrag fast fertig. Was machst du?', // nieuw, nalezen
+    'c.alarm.o1': 'Hör sofort auf und geh zum Sammelplatz.', // nieuw, nalezen
+    'c.alarm.o2': 'Mach erst den Auftrag fertig, dann geh raus.', // nieuw, nalezen
+    'c.alarm.o3': 'Hol erst deine Jacke und dein Handy aus dem Spind.', // nieuw, nalezen
+    'c.alarm.w': 'Rauch breitet sich schnell aus, darum gehst du sofort. Deine Sachen können warten. Am Sammelplatz wird jeder gezählt: Dann muss niemand dich drinnen suchen.', // nieuw, nalezen
     'c.accident': 'Melde jeden Unfall',
     'c.accident.b': 'Sag deinem Vorgesetzten oder dem BHV’er (dem betrieblichen Ersthelfer) Bescheid, bei jedem Unfall, auch bei einem kleinen. Arbeitest du über eine Zeitarbeitsfirma? Sag es auch dort. Im Notfall ruf zuerst 112 an. Die Firma, in der der Unfall passiert ist, muss einen schweren Unfall der Nederlandse Arbeidsinspectie melden (auch wenn du über eine Zeitarbeitsfirma arbeitest): wenn jemand stirbt, für immer verletzt ist oder im Krankenhaus bleiben muss. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.accident.p': 'Mein Kollege ist verletzt. Wo ist der Ersthelfer?',

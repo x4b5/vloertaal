@@ -1031,6 +1031,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'هل يمكنني الدفع بالبطاقة هنا؟',
     'c.checkout.a': 'نعم، طبعاً، ممكن.',
     'u.numbers': 'الوقت والمال والمقاييس',
+    'l.counting': 'الأعداد', // nieuw, nalezen
+    'w.dertien': 'ثلاثة عشر (13)', // nieuw, nalezen
+    'w.dertig': 'ثلاثون (30)', // nieuw, nalezen
+    'w.zeventien': 'سبعة عشر (17)', // nieuw, nalezen
+    'w.zeventig': 'سبعون (70)', // nieuw, nalezen
+    'w.zevenenveertig': 'سبعة وأربعون (47)', // nieuw, nalezen
+    'w.vierenzeventig': 'أربعة وسبعون (74)', // nieuw, nalezen
+    's.counting.1': 'عندي ثلاثة عشر صندوقاً، لا ثلاثون.', // nieuw, nalezen
+    's.counting.2': 'الموقع أربعة وسبعون فارغ.', // nieuw, nalezen
+    's.counting.3': 'هل يمكنك أن تقولها رقماً رقماً؟', // nieuw, nalezen
+    'c.counting.q': 'كم صندوقاً بقي؟', // nieuw, nalezen
+    'c.counting.a': 'سبعون. سبعة، صفر.', // nieuw, nalezen
     'l.hours': 'الساعات والأوقات',
     'w.uur': 'الساعة (60 دقيقة)',
     'w.minuut': 'الدقيقة',
@@ -1071,6 +1083,14 @@ const t: CultureTranslation = {
     'c.checkout.o2': { m: 'بِعه، لأنه يقول إن عمره 19.', f: 'بيعيه، لأنه يقول إن عمره 19.' },
     'c.checkout.o3': { m: 'بِعه، لكن علبة واحدة فقط.', f: 'بيعيه، لكن علبة واحدة فقط.' },
     'c.checkout.w': { m: 'بدون هوية لا يمكنك أن تعرف عمره. بيع الكحول لشخص عمره أقل من 18 مخالف للقانون، ويمكن أن يدفع المتجر غرامة.', f: 'بدون هوية لا يمكنكِ أن تعرفي عمره. بيع الكحول لشخص عمره أقل من 18 مخالف للقانون، ويمكن أن يدفع المتجر غرامة.' },
+    'c.counting': 'Vijfentwintig: أولاً 5، ثم 20', // nieuw, nalezen
+    'c.counting.b': 'في الهولندية، لكل عدد من 0 إلى 12 كلمة خاصة: nul، een، twee، drie، vier، vijf، zes، zeven، acht، negen، tien، elf، twaalf. الأعداد من 13 إلى 19 تنتهي بـ -tien: dertien، veertien، vijftien، zestien، zeventien، achttien، negentien. العشرات تنتهي بـ -tig: twintig، dertig، veertig، vijftig، zestig، zeventig، tachtig، negentig. من 21 إلى 99 يُقال الرقم الأخير أولاً، كما في العربية: 25 هي vijfentwintig، «خمسة وعشرون». إذن 47 هي zevenenveertig، و74 هي vierenzeventig. Dertien وdertig متشابهان جداً في النطق: المهم هو الاستماع إلى النهاية. عندك شك؟ الحل هو تكرار الأرقام واحداً واحداً.', // nieuw, nalezen
+    'c.counting.p': 'أربعة، سبعة؟ يعني سبعة وأربعون؟', // nieuw, nalezen
+    'c.counting.s': 'المشرف يقول: «Ga naar gang zevenenveertig.» أي ممر هو؟', // nieuw, nalezen
+    'c.counting.o1': 'الممر 47.', // nieuw, nalezen
+    'c.counting.o2': 'الممر 74.', // nieuw, nalezen
+    'c.counting.o3': 'الممر 40.', // nieuw, nalezen
+    'c.counting.w': '«Zevenenveertig» تعني «سبعة وأربعون»: أولاً 7، ثم 40. إذن هو الممر 47. كثير من القادمين الجدد يسمعون 74، ويذهبون إلى الممر الخطأ.', // nieuw, nalezen
     'c.hours': '«Half acht» تعني 7:30',
     'c.hours.b': { m: 'في الهولندية، كلمة «half» تُحسب نحو الساعة التالية: half acht تعني 7:30، وليس 8:30. Kwart over acht تعني 8:15، وkwart voor acht تعني 7:45. تحقّق من ساعاتك بنفسك: وقت النهاية ناقص وقت البداية، ناقص الاستراحة. الاستراحة غالباً غير مدفوعة. اكتب ساعاتك كل يوم.', f: 'في الهولندية، كلمة «half» تُحسب نحو الساعة التالية: half acht تعني 7:30، وليس 8:30. Kwart over acht تعني 8:15، وkwart voor acht تعني 7:45. تحقّقي من ساعاتك بنفسك: وقت النهاية ناقص وقت البداية، ناقص الاستراحة. الاستراحة غالباً غير مدفوعة. اكتبي ساعاتك كل يوم.' },
     'c.hours.p': '«Half acht»؟ يعني نصف ساعة قبل الثامنة؟',

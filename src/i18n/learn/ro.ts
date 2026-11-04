@@ -28,6 +28,7 @@ const t: CultureTranslation = {
     'c.keeplearning.a.why': "E în regulă să ceri să se vorbească olandeză: exercițiul ajută.",
     'c.gear.a.why': "Întrebarea e despre cască: da, e pe cap.",
     'c.danger.a.why': "La un accident, întâi se sună la 112.",
+    'c.alarm.a.why': "Întrebarea e dacă toți sunt afară: răspunsul spune cine lipsește încă.", // nieuw, nalezen
     'c.accident.a.why': "Întrebarea e ce s-a întâmplat: răspunsul spune ce s-a întâmplat și cum e el.",
     'c.notyet.a.why': "La „încearcă, e ușor”, răspunsul sigur e să ceri să ți se arate întâi.",
     'c.things.a.why': "Întrebarea e „unde”. Acest răspuns numește un loc.",
@@ -85,6 +86,7 @@ const t: CultureTranslation = {
     'c.cleansafe.a.why': "O podea udă alunecă: un avertisment ajută.",
     'c.shelves.a.why': "Întrebarea e „unde”. Răspunsul spune culoarul și oferă ajutor.",
     'c.checkout.a.why': "Se întreabă dacă se poate plăti cu cardul: un „da” scurt și prietenos.",
+    'c.counting.a.why': "Întrebarea e câte sunt: răspunsul dă numărul și îl verifică cifră cu cifră.", // nieuw, nalezen
     'c.hours.a.why': "Întrebarea e despre oră. Răspunsul dă o oră.",
     'c.measures.a.why': "Întrebarea e despre lungime. Răspunsul dă o lungime.",
     'c.aihelp.a.why': "Te întreabă cine a scris: un „da” sincer, care spune cine a ajutat.",

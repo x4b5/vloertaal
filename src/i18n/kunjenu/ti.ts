@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "ሓደ ነገር ከም ዘይፍቀድ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.numbers.1': "ከም «kwart over vier» ዝኣመሰሉ ሰዓታት ክርድኦም እኽእል እየ።", // nieuw, nalezen
     'kjn.u.numbers.2': "ሓደ ነገር ክንደይ ዋጋኡ ወይ ክብደቱ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.numbers.3': "ከም 13ን 30ን ዝኣመሰሉ ቁጽርታት ክፈልዮም እኽእል እየ።", // nieuw, nalezen
     'kjn.u.shop.1': "ንዓሚል ብካርድ ክኸፍል ይደሊ እንተኾይኑ ክሓትቶ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.shop.2': "ንዓሚል ኣብ ድኳን መንገዲ ከርእዮ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.ai.1': "ሓደ መልሲ ቅኑዕ ድዩ ክሓትት እኽእል እየ።", // nieuw, nalezen

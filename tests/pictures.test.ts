@@ -19,7 +19,8 @@ const runs = (fn: (exercises: Exercise[], label: string) => void) => {
 };
 
 // Each check builds every lesson 32 times: room for a busy machine.
-describe('abstract words (no picture)', { timeout: 20000 }, () => {
+// 40 s since 4 November 2026: two lessons more, and in the full suite a check took just over 20 s.
+describe('abstract words (no picture)', { timeout: 40000 }, () => {
   it('are flagged in the content', () => {
     const abstract = allWords.filter((w) => !hasPicture(w)).map((w) => w.id);
     expect(abstract).toContain('w.recht');
@@ -62,7 +63,10 @@ describe('abstract words (no picture)', { timeout: 20000 }, () => {
     for (const id of weekWords) expect(abstract).not.toContain(id);
     // 184 (2 November 2026, group33): "de deur", "op slot", "het onderdeel", "het cijfer" and "de
     // houdbaarheidsdatum" got a simple drawing.
-    expect(abstract.length).toBe(184);
+    // 185 (4 November 2026): "ontruimen" (l.alarm) has no picture; the numbers of l.counting are
+    // drawn as labels with their digits (group35).
+    expect(abstract).toContain('w.ontruimen');
+    expect(abstract.length).toBe(185);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

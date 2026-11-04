@@ -510,6 +510,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Uwaga, podłoga jest mokra!',
     's.danger.2': 'Gdzie jest wyjście ewakuacyjne?',
     's.danger.3': 'Był wypadek!',
+    'l.alarm': 'Alarm pożarowy i ewakuacja', // nieuw, nalezen
+    'w.alarm': 'alarm', // nieuw, nalezen
+    'w.ontruimen': 'ewakuować (wszyscy wychodzą z budynku)', // nieuw, nalezen
+    'w.vluchtroute': 'droga ewakuacyjna', // nieuw, nalezen
+    'w.trap': 'schody', // nieuw, nalezen
+    'w.verzamelplaats': 'miejsce zbiórki (gdzie wszyscy spotykają się na zewnątrz)', // nieuw, nalezen
+    'w.brandblusser': 'gaśnica', // nieuw, nalezen
+    's.alarm.1': 'Gdzie jest gaśnica?', // nieuw, nalezen
+    's.alarm.2': 'Musimy ewakuować budynek.', // nieuw, nalezen
+    's.alarm.3': 'Idź schodami, nie windą.', // nieuw, nalezen
     'l.accident': 'Zgłaszanie wypadku',
     'w.gewond': 'ranny',
     'w.bloeden': 'krwawić',
@@ -589,6 +599,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Tak, mam go na sobie.',
     'c.danger.q': 'Czy był wypadek?',
     'c.danger.a': 'Tak, dzwoń pod 112!',
+    'c.alarm.q': 'Czy wszyscy są na zewnątrz?', // nieuw, nalezen
+    'c.alarm.a': 'Nie, mojego kolegi jeszcze nie ma.', // nieuw, nalezen
     'c.accident.q': 'Co się stało?',
     'c.accident.a': 'Upadł. Krwawi.',
     'l.notyet': 'Jeszcze mnie tego nie nauczyli',

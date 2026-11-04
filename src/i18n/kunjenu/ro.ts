@@ -54,6 +54,7 @@ const t: CultureTranslation = {
     'kjn.u.house.3': "Pot să spun că ceva nu e permis.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.numbers.1': "Pot să înțeleg ore ca „kwart over vier”.", // nieuw, nalezen
     'kjn.u.numbers.2': "Pot să spun cât costă sau cât cântărește ceva.", // nieuw, nalezen
+    'kjn.u.numbers.3': "Pot deosebi numere ca 13 și 30.", // nieuw, nalezen
     'kjn.u.shop.1': "Pot să întreb un client dacă vrea să plătească cu cardul.", // nieuw, nalezen
     'kjn.u.shop.2': "Pot să arăt unui client drumul prin magazin.", // nieuw, nalezen
     'kjn.u.ai.1': "Pot să întreb dacă un răspuns e corect.", // nieuw, nalezen

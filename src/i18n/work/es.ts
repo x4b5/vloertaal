@@ -1031,6 +1031,18 @@ const t: CultureTranslation = {
     'c.checkout.q': '¿Puedo pagar aquí con tarjeta?',
     'c.checkout.a': 'Sí, claro, se puede.',
     'u.numbers': 'Horas, dinero y medidas',
+    'l.counting': 'Los números', // nieuw, nalezen
+    'w.dertien': 'trece (13)', // nieuw, nalezen
+    'w.dertig': 'treinta (30)', // nieuw, nalezen
+    'w.zeventien': 'diecisiete (17)', // nieuw, nalezen
+    'w.zeventig': 'setenta (70)', // nieuw, nalezen
+    'w.zevenenveertig': 'cuarenta y siete (47)', // nieuw, nalezen
+    'w.vierenzeventig': 'setenta y cuatro (74)', // nieuw, nalezen
+    's.counting.1': 'Tengo trece cajas, no treinta.', // nieuw, nalezen
+    's.counting.2': 'La ubicación setenta y cuatro está vacía.', // nieuw, nalezen
+    's.counting.3': '¿Puede decirlo cifra por cifra?', // nieuw, nalezen
+    'c.counting.q': '¿Cuántas cajas quedan?', // nieuw, nalezen
+    'c.counting.a': 'Setenta. Siete, cero.', // nieuw, nalezen
     'l.hours': 'Horas y horarios',
     'w.uur': 'la hora',
     'w.minuut': 'el minuto',
@@ -1071,6 +1083,14 @@ const t: CultureTranslation = {
     'c.checkout.o2': 'Se la vendes, porque dice que tiene 19.',
     'c.checkout.o3': 'Se la vendes, pero solo una lata.',
     'c.checkout.w': 'Sin documento no puedes saber su edad. Vender alcohol a un menor de 18 va contra la ley, y la tienda puede recibir una multa.',
+    'c.counting': 'Vijfentwintig: primero el 5, luego el 20', // nieuw, nalezen
+    'c.counting.b': 'En neerlandés, del 0 al 12 cada número tiene su propia palabra: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. Del 13 al 19 terminan en -tien: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. Las decenas terminan en -tig: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. Del 21 al 99 se dice primero la última cifra: 25 es vijfentwintig, “cinco y veinte”. Así que 47 es zevenenveertig, y 74 es vierenzeventig. Dertien y dertig suenan casi igual: escucha el final. ¿Tienes dudas? Repite las cifras una a una.', // nieuw, nalezen
+    'c.counting.p': '¿Cuatro, siete? ¿O sea, cuarenta y siete?', // nieuw, nalezen
+    'c.counting.s': 'Tu encargado dice: “Ga naar gang zevenenveertig.” ¿Qué pasillo es?', // nieuw, nalezen
+    'c.counting.o1': 'El pasillo 47.', // nieuw, nalezen
+    'c.counting.o2': 'El pasillo 74.', // nieuw, nalezen
+    'c.counting.o3': 'El pasillo 40.', // nieuw, nalezen
+    'c.counting.w': '“Zevenenveertig” es “siete y cuarenta”: primero el 7, luego el 40. Así que es el pasillo 47. Muchos recién llegados oyen 74 y van al pasillo equivocado.', // nieuw, nalezen
     'c.hours': '“Half acht” son las 7:30',
     'c.hours.b': 'En neerlandés, “half” cuenta hacia la hora siguiente: half acht son las 7:30, no las 8:30. Kwart over acht son las 8:15, y kwart voor acht son las 7:45. Revisa tú tus horas: la hora de salida menos la hora de entrada, menos la pausa. La pausa muchas veces no se paga. Apunta tus horas cada día.',
     'c.hours.p': '¿Half acht? ¿Entonces media hora antes de las ocho?',

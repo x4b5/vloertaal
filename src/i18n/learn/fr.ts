@@ -28,6 +28,7 @@ const t: CultureTranslation = {
     'c.keeplearning.a.why': "Demander à parler néerlandais, c’est bien : la pratique aide.",
     'c.gear.a.why': "La question parle du casque : oui, il est sur la tête.",
     'c.danger.a.why': "En cas d’accident, on appelle d’abord le 112.",
+    'c.alarm.a.why': "On demande si tout le monde est sorti : cette réponse dit qui manque encore.", // nieuw, nalezen
     'c.accident.a.why': "On demande ce qui s’est passé : cette réponse dit ce qui s’est passé et comment il va.",
     'c.notyet.a.why': "On te dit “essaie” : la réponse sûre, c’est de demander qu’on te montre d’abord.",
     'c.things.a.why': "La question demande où. Cette réponse donne un endroit.",
@@ -85,6 +86,7 @@ const t: CultureTranslation = {
     'c.cleansafe.a.why': "Un sol mouillé est glissant : prévenir aide.",
     'c.shelves.a.why': "On demande où : cette réponse nomme le rayon et aide.",
     'c.checkout.a.why': "On demande si on peut payer par carte : un oui aimable.",
+    'c.counting.a.why': "On demande combien : cette réponse donne le nombre et le vérifie chiffre par chiffre.", // nieuw, nalezen
     'c.hours.a.why': "On demande l’heure : cette réponse donne une heure.",
     'c.measures.a.why': "On demande la longueur : cette réponse donne une longueur.",
     'c.aihelp.a.why': "On demande qui l’a écrit : un oui honnête qui nomme l’aide.",

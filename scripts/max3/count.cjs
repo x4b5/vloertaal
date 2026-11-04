@@ -444,6 +444,19 @@ function defineStates(LANG) {
   for (const [key, at] of [['word-abstract', 0], ['intro', 3], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:notyet-${key}`, shot(`lesson&lesson=l.notyet&at=${at}`));
   }
+  // "Brandalarm en ontruimen" (l.alarm, seed 1, 4 November 2026): the alarm's word card, the
+  // abstract word "ontruimen", the tip and "Het alarm gaat. Wat doe je?", "What do you hear?",
+  // the picture choice, a sentence to build, the chat and typing "de brandblusser".
+  for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['tip', 9], ['tip-say', 10], ['situation', 11], ['listen', 13], ['pick', 14], ['build', 15], ['chat', 18], ['type', 20]]) {
+    add(`lesson:alarm-${key}`, shot(`lesson&lesson=l.alarm&at=${at}`));
+  }
+  // "Getallen" (l.counting, seed 1, 4 November 2026): a number's word card (a label with its
+  // digits), "what does it mean" with its partner (dertien or dertig), "which one is 47" (text
+  // cards), the tip and its situation ("Ga naar gang zevenenveertig."), "What do you hear?" (47 or
+  // 74), a sentence to build, the chat and typing "dertien".
+  for (const [key, at] of [['intro', 0], ['meaning', 2], ['pick', 8], ['tip', 9], ['tip-say', 10], ['situation', 11], ['listen', 13], ['build', 14], ['chat', 18], ['type', 20]]) {
+    add(`lesson:counting-${key}`, shot(`lesson&lesson=l.counting&at=${at}`));
+  }
   // "Slimme apps en AI" (u.ai, seed 1): every step of its four lessons (word cards, the abstract
   // words, picture and listen choices, the tip and its situation, the sentences, the chats, typing).
   for (const lesson of ['aihelp', 'aiprivate', 'aifake', 'aiplan']) {

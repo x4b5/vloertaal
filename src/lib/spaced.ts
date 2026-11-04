@@ -9,6 +9,7 @@ import type { Dialogue, Lesson, Sentence, Unit, Word } from '../content/types';
 import { dayKey } from './progress';
 import type { Track } from './track';
 import { typable } from './typable';
+import { hasPicture } from './wordPicture';
 
 /**
  * "Herhaal vandaag": spaced repetition with a card box (Leitner). Every word the learner met
@@ -249,11 +250,14 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   // Sentence cards that are due go first (they are built); the sentences picked above stay
   // behind them for a review without any (as before the sentence cards).
   const all = [...boxSentences, ...sentences.filter((s) => !boxSentences.some((b) => b.nl === s.nl))];
-  // Ear training: once both words of a sound pair (src/content/sounds.ts) are known, one of them
-  // comes back every day by ear, against its partner, each day another one and another voice.
+  // Ear training: once both words of a sound pair (src/content/sounds.ts, and the numbers of
+  // l.counting: dertien – dertig) are known, one of them comes back every day by ear, against its
+  // partner, each day another one and another voice.
   // Hearing a sound in many voices, again and again over weeks, trains the ear (HVPT; Sakai &
-  // Moorman 2018; reports/Leerwetenschap en tweede taal.md, voorstel 11).
-  const paired = [...wordById().values()].filter((w) => w.pair && cards[w.id] && cards[w.pair]);
+  // Moorman 2018; reports/Leerwetenschap en tweede taal.md, voorstel 11). It is a choice of two
+  // pictures, so a pair without pictures stays out (an empty card would be no choice at all).
+  const pictured = (id: string) => { const w = wordById().get(id); return Boolean(w && hasPicture(w)); };
+  const paired = [...wordById().values()].filter((w) => w.pair && cards[w.id] && cards[w.pair] && pictured(w.id) && pictured(w.pair));
   const earWord = paired.length ? paired[n % paired.length] : undefined;
   const partner = earWord?.pair ? wordById().get(earWord.pair) : undefined;
   return {

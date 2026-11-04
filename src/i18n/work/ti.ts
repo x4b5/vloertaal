@@ -1031,6 +1031,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'ኣብዚ ብካርድ ክኸፍል እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.checkout.a': 'እወ፡ ብርግጽ፡ ይከኣል።',
     'u.numbers': 'ግዜ፡ ገንዘብን መለክዒታትን',
+    'l.counting': 'ቁጽርታት', // nieuw, nalezen
+    'w.dertien': 'ዓሰርተ ሰለስተ (13)', // nieuw, nalezen
+    'w.dertig': 'ሰላሳ (30)', // nieuw, nalezen
+    'w.zeventien': 'ዓሰርተ ሸውዓተ (17)', // nieuw, nalezen
+    'w.zeventig': 'ሰብዓ (70)', // nieuw, nalezen
+    'w.zevenenveertig': 'ኣርብዓን ሸውዓተን (47)', // nieuw, nalezen
+    'w.vierenzeventig': 'ሰብዓን ኣርባዕተን (74)', // nieuw, nalezen
+    's.counting.1': 'ዓሰርተ ሰለስተ ሳጹናት ኣለዉኒ፡ ሰላሳ ኣይኮኑን።', // nieuw, nalezen
+    's.counting.2': 'ቦታ ሰብዓን ኣርባዕተን ባዶ እዩ።', // nieuw, nalezen
+    's.counting.3': 'ኣሃዝ ብኣሃዝ ክትብልዎ ትኽእሉ ዶ?', // nieuw, nalezen
+    'c.counting.q': 'ክንደይ ሳጹናት ተሪፎም?', // nieuw, nalezen
+    'c.counting.a': 'ሰብዓ። ሸውዓተ፡ ዜሮ።', // nieuw, nalezen
     'l.hours': 'ሰዓታትን ግዜን',
     'w.uur': 'ሰዓት (60 ደቒቕ)',
     'w.minuut': 'ደቒቕ',
@@ -1071,6 +1083,14 @@ const t: CultureTranslation = {
     'c.checkout.o2': { m: '19 ዓመት እየ ስለ ዝበለ ሽጠሉ።', f: '19 ዓመት እየ ስለ ዝበለ ሽጥሉ።' },
     'c.checkout.o3': { m: 'ሽጠሉ፡ ግን ሓንቲ ጣሳ ጥራይ።', f: 'ሽጥሉ፡ ግን ሓንቲ ጣሳ ጥራይ።' },
     'c.checkout.w': { m: 'ብዘይ መንነት ወረቐት ዕድሚኡ ክትፈልጥ ኣይትኽእልን ኢኻ። ንዕድሚኡ ትሕቲ 18 ዝኾነ ሰብ ኣልኮል ምሻጥ ሕጊ ይጥሕስ፡ እቲ ድኳን ድማ ክቕጻዕ ይኽእል።', f: 'ብዘይ መንነት ወረቐት ዕድሚኡ ክትፈልጢ ኣይትኽእሊን ኢኺ። ንዕድሚኡ ትሕቲ 18 ዝኾነ ሰብ ኣልኮል ምሻጥ ሕጊ ይጥሕስ፡ እቲ ድኳን ድማ ክቕጻዕ ይኽእል።' },
+    'c.counting': 'Vijfentwintig: ቅድም 5፡ ደሓር 20', // nieuw, nalezen
+    'c.counting.b': 'ብሆላንድኛ፡ ካብ 0 ክሳብ 12 ነፍሲ ወከፍ ቁጽሪ ናቱ ቃል ኣለዎ: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf። ካብ 13 ክሳብ 19 ብ -tien ይውድኡ: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien። ዓሰርተታት ብ -tig ይውድኡ: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig። ካብ 21 ክሳብ 99 እቲ ናይ መወዳእታ ኣሃዝ ቅድም ይበሃል: 25 vijfentwintig እዩ፡ «ሓሙሽተን ዕስራን»። ስለዚ 47 zevenenveertig እዩ፡ 74 ድማ vierenzeventig። Dertien ምስ dertig ዳርጋ ሓደ ይመስሉ፡ ክሳብ መወዳእታ ምስማዕ ኣገዳሲ እዩ። ጥርጥር ኣሎ ድዩ? ነቶም ኣሃዛት ሓደ ብሓደ ምድጋም ይሕግዝ።', // nieuw, nalezen
+    'c.counting.p': 'ኣርባዕተ፡ ሸውዓተ? ስለዚ ኣርብዓን ሸውዓተን?', // nieuw, nalezen
+    'c.counting.s': 'ተቖጻጻሪ «Ga naar gang zevenenveertig.» ይብል። ኣየናይ መተላለዪ እዩ?', // nieuw, nalezen
+    'c.counting.o1': 'መተላለዪ 47።', // nieuw, nalezen
+    'c.counting.o2': 'መተላለዪ 74።', // nieuw, nalezen
+    'c.counting.o3': 'መተላለዪ 40።', // nieuw, nalezen
+    'c.counting.w': '«Zevenenveertig» ማለት «ሸውዓተን ኣርብዓን» እዩ: ቅድም 7፡ ደሓር 40። ስለዚ መተላለዪ 47 እዩ። ብዙሓት ሓደስቲ ሰራሕተኛታት 74 ይሰምዑ፡ ናብ ጌጋ መተላለዪ ድማ ይኸዱ።', // nieuw, nalezen
     'c.hours': '«Half acht» ማለት 7:30 እዩ',
     'c.hours.b': { m: 'ብሆላንድኛ «half» ናብቲ ዝቕጽል ሰዓት ይቑጸር፡ half acht ማለት 7:30 እዩ፡ 8:30 ኣይኮነን። Kwart over acht ማለት 8:15፡ kwart voor acht ድማ 7:45 እዩ። ሰዓታትካ ባዕልኻ ተቘጻጸር፡ ሰዓት መወዳእታ ጎድል ሰዓት መጀመርታ፡ ጎድል እቲ ዕረፍቲ። ዕረፍቲ መብዛሕትኡ ግዜ ኣይክፈልን እዩ። ሰዓታትካ መዓልታዊ ጽሓፍ።', f: 'ብሆላንድኛ «half» ናብቲ ዝቕጽል ሰዓት ይቑጸር፡ half acht ማለት 7:30 እዩ፡ 8:30 ኣይኮነን። Kwart over acht ማለት 8:15፡ kwart voor acht ድማ 7:45 እዩ። ሰዓታትኪ ባዕልኺ ተቘጻጸሪ፡ ሰዓት መወዳእታ ጎድል ሰዓት መጀመርታ፡ ጎድል እቲ ዕረፍቲ። ዕረፍቲ መብዛሕትኡ ግዜ ኣይክፈልን እዩ። ሰዓታትኪ መዓልታዊ ጽሓፊ።', x: 'ብሆላንድኛ «half» ናብቲ ዝቕጽል ሰዓት ይቑጸር፡ half acht ማለት 7:30 እዩ፡ 8:30 ኣይኮነን። Kwart over acht ማለት 8:15፡ kwart voor acht ድማ 7:45 እዩ። ሰዓታትኩም ባዕልኹም ተቘጻጸሩ፡ ሰዓት መወዳእታ ጎድል ሰዓት መጀመርታ፡ ጎድል እቲ ዕረፍቲ። ዕረፍቲ መብዛሕትኡ ግዜ ኣይክፈልን እዩ። ሰዓታትኩም መዓልታዊ ጽሓፉ።' }, // x: nieuw, nalezen
     'c.hours.p': '«Half acht»? ማለት ቅድሚ ሰዓት 8:00 ፍርቂ ሰዓት?',

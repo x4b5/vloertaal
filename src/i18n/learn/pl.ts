@@ -28,6 +28,7 @@ const t: CultureTranslation = {
     'c.keeplearning.a.why': "Prośba o mówienie po niderlandzku jest w porządku: ćwiczenie pomaga.",
     'c.gear.a.why': "Pytanie dotyczy kasku: tak, jest na głowie.",
     'c.danger.a.why': "W razie wypadku najpierw dzwoni się pod 112.",
+    'c.alarm.a.why': "Pytanie, czy wszyscy wyszli: ta odpowiedź mówi, kogo jeszcze brakuje.", // nieuw, nalezen
     'c.accident.a.why': "Pytanie, co się stało: ta odpowiedź mówi, co się stało i w jakim on jest stanie.",
     'c.notyet.a.why': "Gdy ktoś mówi „po prostu spróbuj”, bezpieczna odpowiedź to poprosić, żeby najpierw pokazał.",
     'c.things.a.why': "Pytanie brzmi „gdzie”. Ta odpowiedź podaje miejsce.",
@@ -85,6 +86,7 @@ const t: CultureTranslation = {
     'c.cleansafe.a.why': "Mokra podłoga jest śliska: ostrzeżenie pomaga.",
     'c.shelves.a.why': "Pytanie brzmi „gdzie”. Ta odpowiedź podaje alejkę i oferuje pomoc.",
     'c.checkout.a.why': "Pytanie o płatność kartą: krótkie, miłe „tak”.",
+    'c.counting.a.why': "Pytanie, ile: ta odpowiedź podaje liczbę i sprawdza ją cyfra po cyfrze.", // nieuw, nalezen
     'c.hours.a.why': "Pytanie o godzinę. Ta odpowiedź podaje godzinę.",
     'c.measures.a.why': "Pytanie o długość. Ta odpowiedź podaje długość.",
     'c.aihelp.a.why': "Pytanie, kto to napisał: szczere „tak”, które mówi, kto pomógł.",

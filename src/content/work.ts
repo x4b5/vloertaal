@@ -643,9 +643,9 @@ const unit = (slug: string, title: string, titleNl: string, emoji: string, color
 
 /** Closing line: ADVICE_LINE for rights and rules set by law, ABUSE_LINE where the employer may be the problem, HOUSE_LINE for company rules, '' for social norms. */
 /** Dutch said aloud in a situation (a speaker plays it in the character's voice). */
-const SAID: Record<string, string> = { interview: 'Heb je nog vragen?', hours: 'Morgen begin je om half negen.' };
+const SAID: Record<string, string> = { interview: 'Heb je nog vragen?', hours: 'Morgen begin je om half negen.', counting: 'Ga naar gang zevenenveertig.' };
 /** The heading of a situation that does not ask "What do you do?" (see SituationAsk). */
-const ASK: Record<string, SituationAsk> = { texting: 'which', diploma: 'which', hours: 'which', measures: 'whatsay', dates: 'which', body: 'whatsay', mychoice: 'whatsay', email: 'which', council: 'which' };
+const ASK: Record<string, SituationAsk> = { texting: 'which', diploma: 'which', hours: 'which', counting: 'which', measures: 'whatsay', dates: 'which', body: 'whatsay', mychoice: 'whatsay', email: 'which', council: 'which' };
 
 const tipFor = (
   slug: string,
@@ -1966,7 +1966,48 @@ const shopUnit = unit('shop', 'In the shop', 'In de winkel', '🛒', '#2a9d8f', 
   ),
 ]);
 
+/**
+ * Words that sound alike (Word.pair, as in src/content/sounds.ts): each knows the other, so a
+ * choice about one of them ("What do you hear?", the picture choice) always offers the other too.
+ */
+const withPairs = (l: Lesson, pairs: [string, string][]): Lesson => ({
+  ...l,
+  words: l.words.map((w) => {
+    const p = pairs.find(([a, b]) => `w.${a}` === w.id || `w.${b}` === w.id);
+    return p ? { ...w, pair: `w.${p[0]}` === w.id ? `w.${p[1]}` : `w.${p[0]}` } : w;
+  }),
+});
+
+// "Getallen" (the owner's plan, phase 2, 4 November 2026): numbers were only ever in sentences.
+// The six words are three listening pairs that are easy to mix up at work (13/30, 17/70, 47/74);
+// the tip gives 0 to 20 and the tens, and the order of "vijfentwintig" (the last digit first).
+// Each number is drawn as a label with its digits, as on a rack or a box (src/pictures/group35.tsx):
+// at work the learner sees "47" and hears "zevenenveertig". First in the unit: the times and the
+// money after it need the numbers.
+const countingLesson = withPairs(
+  lesson(
+    'counting',
+    'Numbers',
+    [
+      ['dertien', 'dertien', 'thirteen (13)', '1️⃣3️⃣'],
+      ['dertig', 'dertig', 'thirty (30)', '3️⃣0️⃣'],
+      ['zeventien', 'zeventien', 'seventeen (17)', '1️⃣7️⃣'],
+      ['zeventig', 'zeventig', 'seventy (70)', '7️⃣0️⃣'],
+      ['zevenenveertig', 'zevenenveertig', 'forty-seven (47)', '4️⃣7️⃣'],
+      ['vierenzeventig', 'vierenzeventig', 'seventy-four (74)', '7️⃣4️⃣'],
+    ],
+    [
+      ['Ik heb dertien dozen, niet dertig.', 'I have thirteen boxes, not thirty.'],
+      ['Locatie vierenzeventig is leeg.', 'Location seventy-four is empty.'],
+      ['Kunt u het cijfer voor cijfer zeggen?', 'Can you say it digit by digit?'],
+    ],
+    [['Hoeveel dozen zijn er nog?', 'How many boxes are left?'], ['Zeventig. Zeven, nul.', 'Seventy. Seven, zero.']],
+  ),
+  [['dertien', 'dertig'], ['zeventien', 'zeventig'], ['zevenenveertig', 'vierenzeventig']],
+);
+
 const numbersUnit = unit('numbers', 'Time, money and measures', 'Rekenen: tijd, geld, maten', '🔢', '#6d597a', [
+  countingLesson,
   lesson(
     'hours',
     'Hours and times',
@@ -2035,6 +2076,19 @@ const shopNumbersTips = [
     ],
     'Without ID you cannot know his age. Selling alcohol to someone under 18 is against the law, and the shop can get a fine.',
     HOUSE_LINE,
+  ),
+  // The lesson shows sentences 3 to 5 (TIP_LEADS in culture.ts): the order of "vijfentwintig",
+  // 47 and 74, and dertien or dertig. The "Zo werkt het hier" page has 0 to 20 and the tens too.
+  tipFor(
+    'counting',
+    '🔢',
+    'Vijfentwintig: first the 5, then the 20',
+    'In Dutch, 0 to 12 each have their own word: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. 13 to 19 end in -tien: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. The tens end in -tig: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. From 21 to 99, you say the last digit first: 25 is vijfentwintig, "five and twenty". So 47 is zevenenveertig, and 74 is vierenzeventig. Dertien and dertig sound almost the same: listen to the end. Not sure? Say the digits back one by one.',
+    ['Vier, zeven? Dus zevenenveertig?', 'Four, seven? So forty-seven?'],
+    'Your supervisor says: "Ga naar gang zevenenveertig." Which aisle is it?',
+    ['Aisle 47.', 'Aisle 74.', 'Aisle 40.'],
+    '"Zevenenveertig" is "seven and forty": first the 7, then the 40. So it is aisle 47. Many newcomers hear 74, and go to the wrong aisle.',
+    NONE,
   ),
   tipFor(
     'hours',

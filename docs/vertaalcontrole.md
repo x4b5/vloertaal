@@ -1482,3 +1482,24 @@ Geen fouten gevonden in de kritieke teksten van Dari, Oekraïens, Pools en Roeme
 
 - `c.sick.b`: 'освен ако фирмата няма друго правило' is meant as 'unless the company has another rule'. Is it read that way, or can it be read as 'unless the company does NOT have another rule'? 'освен ако във фирмата няма друго правило' or 'освен ако фирмата има друго правило' might be clearer.
 - `s.findwork.1`: 'Искам да кандидатствам за работата' uses the definite form ('the job'). NL/EN mean applying for a job in general. Is 'Искам да кандидатствам за работа' better?
+
+## Nieuw 4 november 2026: lessen Brandalarm en ontruimen en Getallen (alle talen)
+
+Twee nieuwe lessen: in Veiligheid (`u.safety`), na "Danger!" (`l.danger`), en als eerste les van
+Rekenen (`u.numbers`). Alles met AI vertaald, gemarkeerd `// nieuw, nalezen`. Nieuwe ids:
+
+- `src/i18n/<taal>.ts`: `l.alarm`, `w.alarm`, `w.ontruimen`, `w.vluchtroute`, `w.trap`,
+  `w.verzamelplaats`, `w.brandblusser`, `s.alarm.1`–`.3`, `c.alarm.q`, `c.alarm.a`.
+- `src/i18n/culture/<taal>.ts`: de tip `c.alarm` met `.b`, `.p`, `.s`, `.o1`–`.o3`, `.w`.
+- `src/i18n/work/<taal>.ts`: `l.counting`, `w.dertien`, `w.dertig`, `w.zeventien`, `w.zeventig`,
+  `w.zevenenveertig`, `w.vierenzeventig`, `s.counting.1`–`.3`, `c.counting.q/.a` en de tip `c.counting`.
+- `src/i18n/learn/<taal>.ts`: `c.alarm.a.why`, `c.counting.a.why`; `src/i18n/kunjenu/<taal>.ts`: `kjn.u.numbers.3`.
+
+Graag nakijken:
+
+- **De tip `c.counting.b`** moet in elke taal **8 zinnen** houden (de les toont zin 4–6); "Not sure?" is
+  een eigen zin. In ar en de staat erbij dat de eigen taal dezelfde volgorde heeft (خمسة وعشرون, fünfundzwanzig).
+- **Ontruimen en de vluchtroute**: ar يُخلي / طريق الإخلاء, ti ህንጻ ምልቃቕ / መገዲ ምህዳም, fa/prs تخلیه,
+  uk евакуювати / шлях евакуації. In het Tigrinya is ook "de trap" (መደያይቦ) nalezen.
+- **Getallen in fa/prs**: de woorden hebben westerse cijfers tussen haakjes, "سیزده (13)", omdat de
+  plaatjes en de etiketten op het werk zo zijn; de tip gebruikt Perzische cijfers, zoals de rest van het bestand.

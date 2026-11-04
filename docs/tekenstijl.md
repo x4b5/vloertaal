@@ -74,6 +74,7 @@ Light comes from the **top left**.
 - **No letters or numbers.** Show meaning with shapes. Paper, labels and signs get grey lines (`#9aa5ab`), not words. A clock shows time with its hands, without numbers.
 - `?` and `!` are allowed as shapes (`QuestionMark`, `ExclaimMark`). They are drawn, not typed. Never use `<text>`.
 - Only if a word cannot be shown without it (for example a sign), use at most one short **Dutch** word, drawn in the app's font weight. Avoid it if you can.
+- **Numbers are the one exception** (4 November 2026): a number word ("dertien", "zevenenveertig", l.counting) cannot be shown without its digits, so it is a yellow label with the digits drawn as strokes (`src/pictures/group35.tsx`, like the 🔢 tiles of `e.cijfers`). All number labels look the same apart from the digits, so a picture choice (13 or 30?) is decided by the number alone. Never put digits in any other picture.
 
 ## Do / don't
 

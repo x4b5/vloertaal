@@ -74,8 +74,13 @@ describe('Herhaal vandaag rotates sentences and chats', () => {
     }
     const allSentences = done.reduce((a, l) => a + l.sentences.length, 0);
     const allChats = done.reduce((a, l) => a + (l.dialogues?.length ?? 0), 0);
-    // Before: only the first sentence of each lesson (37 of 111).
-    expect(sentencesBy42.size / allSentences).toBeGreaterThan(0.6);
+    // Before: only the first sentence of each lesson (37 of 111). 4 November 2026: with l.alarm in
+    // Safety (6 words, 3 sentences and a chat more in the first 16 units) 74 of 135 by 6 weeks
+    // (without it 84 of 132), but 122 of 135 by 12 weeks (without it 108 of 132): more words
+    // share the daily places, so the first weeks spread over more lessons. With another pattern
+    // of mistakes (one in four wrong) 6 weeks bring 58.5% with it and 59.1% without.
+    expect(sentencesBy42.size / allSentences).toBeGreaterThan(0.5);
+    expect(sentences.size / allSentences).toBeGreaterThan(0.85);
     // After 6 weeks more than half of the chats came back (a weak lesson keeps the chat to itself:
     // with "Klanken" in the first 16 units 58%), after 12 weeks nearly all.
     expect(chatsBy42.size / allChats).toBeGreaterThan(0.55);
