@@ -180,9 +180,32 @@ export function dueIds(cards: Cards, today: string, track: Track = 'taal'): stri
     .map(([id]) => id);
 }
 
-/** The words for today's review: up to DAILY_MAX due words, topped up with the next ones to come. */
+/** Cards in this box or lower are weak: a new word, a word answered wrong, one right once since. */
+export const WEAK_BOX = 2;
+/** At least this many of today's DAILY_MAX places go to weak cards, when that many are due. */
+export const WEAK_PLACES = Math.ceil(DAILY_MAX / 2);
+
+/**
+ * The words for today's review: up to DAILY_MAX due words, topped up with the next ones to come.
+ * At least half of the places (WEAK_PLACES) go to weak words (box 1 and 2) when there are (the
+ * owner's request, 4 November 2026): box 1 first, then box 2, and in each the one most recently
+ * due first, so a new word (due the day after its lesson) and a word just answered wrong (due the
+ * next day) come back at once. The other places go to the oldest due, as before (dueIds), so the
+ * backlog still gets its turn. Oldest first alone put those words behind the whole backlog: in the
+ * simulation of the week plan (3 sessions a week, a mixed review every 4th, 90% right when
+ * recognising, 70% when writing; tests/weakFirst.test.ts) a new word came back after a median 7
+ * days and a word answered wrong after 7 too; now after 3 and 2. The price: with far more due than
+ * fits, the strong words wait longer, so fewer reach box 4 in 8 weeks (18 instead of 23 of 108);
+ * with fewer due ("eerst herhalen, dan nieuw") there is none (40 instead of 36 of 60).
+ * The words keep the order of dueIds (oldest first); with DAILY_MAX or fewer due nothing changes.
+ */
 export function dailyWordIds(cards: Cards, today: string): string[] {
-  const due = dueIds(cards, today).slice(0, DAILY_MAX);
+  const all = dueIds(cards, today);
+  const fresh = (a: string, b: string) => cards[a].box - cards[b].box || (cards[a].due > cards[b].due ? -1 : cards[a].due < cards[b].due ? 1 : 0);
+  const weak = all.filter((id) => cards[id].box <= WEAK_BOX).sort(fresh).slice(0, WEAK_PLACES);
+  const rest = all.filter((id) => !weak.includes(id)).slice(0, DAILY_MAX - weak.length);
+  const picked = new Set([...weak, ...rest]);
+  const due = all.filter((id) => picked.has(id));
   if (!due.length || due.length >= DAILY_MIN) return due;
   const words = wordById();
   const soon = Object.entries(cards)
