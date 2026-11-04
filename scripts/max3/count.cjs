@@ -399,6 +399,8 @@ function defineStates(LANG) {
   };
   graded('meaning', 'meaning', 2, 0);
   graded('picture', 'dutch', 2, 0);
+  // "Which one is …?" on text cards: after a wrong pick, that card says what its word means.
+  graded('text-cards', 'dutch&text=1', 2, 0);
   graded('listen', 'listen', 1, 0);
   graded('hear-pick', 'type', 1, 0, 'ar');
   graded('chat', 'chat', 0, 1);

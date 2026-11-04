@@ -246,6 +246,14 @@ function SayingLines({ literal, meaning, lang }: { literal: Bilingual; meaning: 
   );
 }
 
+export type ChoiceState = 'right' | 'wrong' | 'picked' | '';
+
+/** Tests only: the option a ChoiceGrid starts with as picked (a static render cannot tap one). */
+let pickForTest: string | null = null;
+export function setChoicePickForTest(id: string | null): void {
+  pickForTest = id;
+}
+
 export function ChoiceGrid<T extends { id: string }>({ options, render, correctId, locked, onAnswer, onPick, className, style, stamp = true, lang, side }: {
   options: T[];
   lang?: HelpLanguage;
@@ -255,13 +263,14 @@ export function ChoiceGrid<T extends { id: string }>({ options, render, correctI
   stamp?: boolean;
   className?: string;
   style?: React.CSSProperties;
-  render: (w: T) => React.ReactNode;
+  /** An option's content; `state`: 'right' / 'wrong' (picked, not right) after Check, 'picked' before, else ''. */
+  render: (w: T, state: ChoiceState) => React.ReactNode;
   correctId: string;
   locked: boolean;
   onAnswer: (a: Answer | null) => void;
   onPick?: (w: T) => void;
 }) {
-  const [picked, setPicked] = useState<string | null>(null);
+  const [picked, setPicked] = useState<string | null>(pickForTest);
   const pick = (w: T) => {
     if (locked) return;
     sounds.tap();
@@ -290,7 +299,7 @@ export function ChoiceGrid<T extends { id: string }>({ options, render, correctI
   return (
     <div className={`choices ${locked ? 'checked' : ''} ${className ?? ''}`} style={style}>
       {options.map((w, i) => {
-        const state = locked
+        const state: ChoiceState = locked
           ? w.id === correctId
             ? 'right'
             : w.id === picked
@@ -314,7 +323,7 @@ export function ChoiceGrid<T extends { id: string }>({ options, render, correctI
             <span className="choice-num" aria-hidden>
               {state === 'right' ? <CheckIcon size={26} /> : state === 'wrong' ? <CloseIcon size={26} /> : i + 1}
             </span>
-            {render(w)}
+            {render(w, state)}
             {state === 'right' && <span className="sr-only" lang={saidLang(ui('correctAnswer', lang))}>, {srText(ui('correctAnswer', lang))}</span>}
             {state === 'wrong' && <span className="sr-only" lang={saidLang(ui('incorrect', lang))}>, {srText(ui('yourAnswer', lang))}: {srText(ui('incorrect', lang))}</span>}
             {state === 'wrong' && stamp && <WrongStamp lang={lang} />}
@@ -348,13 +357,21 @@ export function MeaningExercise({ ex, lang, locked, onAnswer, verdict, run, miss
         locked={locked}
         lang={lang}
         onAnswer={onAnswer}
-        render={(w) => (
+        render={(w, state) => (
           <>
             {/* A small picture of each option (abstract words keep a text-only row). When the
                 answer has no picture, no option shows one: the one row without a picture
                 would give it away. */}
             {pics[ex.options.indexOf(w)] && <WordPicture className="choice-pic" id={w.id} emoji={w.emoji} size={56} />}
-            <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />
+            {/* A wrong pick says which Dutch word that meaning is, as "What do you hear?" says what
+                each word means (the owner's request, 4 November 2026). Only the wrong one: the
+                right one's Dutch is the word in the bubble ("Vloertaal rustiger": say it once). */}
+            {state === 'wrong' ? (
+              <span className="choice-text">
+                <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />
+                <span lang="nl" className="choice-gloss choice-gloss-nl">{breakable(w.nl)}</span>
+              </span>
+            ) : <Bi className="choice-label" text={gloss(w.id, w.en, lang)} />}
           </>
         )}
       />
@@ -442,7 +459,14 @@ function DutchFromMeaning({ ex, lang, locked, onAnswer, verdict, run, misses }: 
             <SpeakerIcon size={24} />
           </button>
         )}
-        render={(w) => <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>}
+        // A wrong pick says what that word means, as "What do you hear?" does (the owner's
+        // request, 4 November 2026). Only the wrong one: the right one's meaning is the question.
+        render={(w, state) => (state === 'wrong' ? (
+          <span className="choice-text">
+            <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>
+            <Bi className="choice-gloss" text={gloss(w.id, w.en, lang)} />
+          </span>
+        ) : <span lang="nl" className={`choice-nl ${wordSize(w.nl)}`}>{breakable(w.nl)}</span>)}
       />
     </div>
   );
