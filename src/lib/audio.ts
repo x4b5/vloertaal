@@ -164,7 +164,12 @@ let indexArrived = false;
  * the long one, public/audio-el/voices.json.
  */
 export function voicesIndexUrl(): string {
-  const link = typeof document !== 'undefined' ? document.querySelector<HTMLLinkElement>('link[rel="vloertaal-voices"]') : null;
+  let link: HTMLLinkElement | null = null;
+  try {
+    link = document.querySelector<HTMLLinkElement>('link[rel="vloertaal-voices"]');
+  } catch {
+    // No page (a test, a script): the long one.
+  }
   return link?.href || './audio-el/voices.json';
 }
 
