@@ -235,6 +235,7 @@ const lang: HelpLanguageSource = {
     cantSpeak: 'Nu pot vorbi acum',
     soundsSame: 'Sună la fel',
     sayAgain: 'Spune din nou',
+    hearMine: 'Ascultă-te', // nieuw, nalezen
     speakMe: 'Eu',
     speakingPractice: 'Exercițiu de vorbire',
     speakingHint: 'Spune cuvintele cu voce tare și compară. Vocea ta nu este niciodată salvată sau trimisă.',

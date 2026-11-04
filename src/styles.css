@@ -4966,6 +4966,10 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .say-memory { margin: 0 0 4px; font-size: var(--fs-small); font-weight: 700; color: var(--ink-2); }
 .say-compare-note { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 30px; margin: 4px 0 10px; color: var(--muted); font-weight: 700; }
 .say-again-one { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 56px; }
+/* After recording: "Hear yourself" and "Say it again" under each other, each label on one line. */
+.say-review-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.say-review-row > .btn { flex: 1 1 100%; }
+.say-hear-mine { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; }
 
 /* ---- "Vloertaal rustiger", fase 1 (docs/rustiger.md): fewer things call at once ----
    1. The numbers before the options are for a keyboard; on a touch screen nobody taps "2", so

@@ -235,6 +235,7 @@ const lang: HelpLanguageSource = {
     cantSpeak: 'Şu an konuşamıyorum',
     soundsSame: 'Aynı gibi',
     sayAgain: 'Tekrar söyle',
+    hearMine: 'Kendini dinle', // nieuw, nalezen
     speakMe: 'Ben',
     speakingPractice: 'Konuşma alıştırması',
     speakingHint: 'Kelimeleri sesli söyle ve karşılaştır. Sesin asla kaydedilmez ve gönderilmez.',

@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-04',
     items: [
+      'Spreken: na het inspreken staat er nu ook een knop "Luister naar jezelf". Zo hoor je je eigen poging zo vaak als je wilt, en vergelijk je die met het voorbeeld.',
       'Sneller: na een nieuwe versie opent de app meteen van je telefoon, ook met slecht bereik. De nieuwe versie komt op de achtergrond binnen. En een nieuwe versie kost minder data.',
       'Offline: het onderwerp waar je mee bezig bent, staat nu vanzelf op je telefoon, met geluid (niet als je data sparen aan hebt). Het geluid van een les wordt vooraf opgehaald. Is er geen internet en werkt het geluid niet, dan zegt de app dat, en slaat hij oefeningen over waarbij je moet luisteren.',
       'Rechten: is de uitleg over regels en rechten ouder dan 3 maanden, dan staat erbij van welke maand hij is en waar je de laatste regels vindt. Bij de tips over rechten staat dat een expert ze nog niet heeft nagekeken. Bij elk 0800-nummer staat nu ook de website: met een buitenlandse simkaart werkt een 0800-nummer vaak niet.',

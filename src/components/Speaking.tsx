@@ -590,16 +590,23 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
 
       {phase === 'review' && (
         <>
-          {/* The example and the learner's try play by themselves (playBoth); one button to say
-              it again. Continue (the footer) goes on. */}
+          {/* The example and the learner's try play by themselves (playBoth); then a button to
+              hear your own try again (the owner's request, 4 November 2026) and one to say it
+              again. Continue (the footer) goes on. */}
           <p className="say-compare-note" aria-live="polite">
             {playing && <><SpeakerIcon size={22} /><Bi text={ui(playing === 'me' ? 'speakMe' : 'speakTurnExample', lang)} /></>}
           </p>
           {verdict && <Heard verdict={verdict} lang={lang} />}
-          <button type="button" className="btn say-again say-again-one" onClick={again}>
-            <AgainIcon size={26} />
-            <Bi text={ui('sayAgain', lang)} />
-          </button>
+          <div className="say-review-row">
+            <button type="button" className="btn say-again say-hear-mine" onClick={() => { stopBoth.current?.(); playMine(); }} aria-pressed={playing === 'me'}>
+              <SpeakerIcon size={24} />
+              <Bi text={ui('hearMine', lang)} />
+            </button>
+            <button type="button" className="btn say-again say-again-one" onClick={again}>
+              <AgainIcon size={26} />
+              <Bi text={ui('sayAgain', lang)} />
+            </button>
+          </div>
         </>
       )}
 

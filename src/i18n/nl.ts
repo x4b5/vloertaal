@@ -270,6 +270,7 @@ export const uiNl: Record<UiKey, UiText> = {
   cantSpeak: 'Ik kan nu niet praten',
   soundsSame: 'Klinkt hetzelfde',
   sayAgain: 'Zeg het nog eens',
+  hearMine: 'Luister naar jezelf',
   speakMe: 'Ik',
   speakingPractice: 'Spreken oefenen',
   speakingHint: 'Zeg woorden hardop en luister terug. We bewaren je stem nooit en sturen hem nergens heen.',
