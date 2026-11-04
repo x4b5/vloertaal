@@ -152,17 +152,10 @@ function calendar(method: 'PUBLISH' | 'CANCEL', time: string, appUrl: string, no
   return lines.map(fold).join('\r\n') + '\r\n';
 }
 
-/** Hands a file to the learner (the phone's download or "open in Calendar"). */
-export function saveFile(name: string, type: string, content: string): void {
-  const url = URL.createObjectURL(new Blob([content], { type }));
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = name;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  window.setTimeout(() => URL.revokeObjectURL(url), 10_000);
-}
+/** Hands a file to the learner (the phone's download or "open in Calendar"). It lives in
+ *  src/lib/backupShare.ts since 4 November 2026: the start screen that says the app can't start
+ *  saves a backup with it, without this file (src/components/Splash.tsx BootFailed). */
+export { saveFile } from './backupShare';
 
 const REMINDER_KEY = 'vloertaal:reminder-time';
 
