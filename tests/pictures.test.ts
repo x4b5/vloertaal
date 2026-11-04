@@ -66,7 +66,9 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // 185 (4 November 2026): "ontruimen" (l.alarm) has no picture; the numbers of l.counting are
     // drawn as labels with their digits (group35).
     expect(abstract).toContain('w.ontruimen');
-    expect(abstract.length).toBe(185);
+    // 191 (4 November 2026): the six words of "Kort en duidelijk" (l.clear) are abstract.
+    for (const id of ['w.kort', 'w.duidelijk', 'w.belangrijkste', 'w.rustig', 'w.teveel', 'w.vraag']) expect(abstract).toContain(id);
+    expect(abstract.length).toBe(191);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

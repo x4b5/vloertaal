@@ -250,6 +250,18 @@ export const be: BeUnit = {
             ],
             why: 'Het is normaal om zelf vragen te stellen. Vraag naar de uren, het loon en het werk. Je mag ook vragen wanneer je iets hoort.',
           },
+          // Kort en duidelijk (4 November 2026), as in the Dutch lesson (r.l.zoeken.3.wd3).
+          {
+            kind: 'whatdo',
+            id: 'r.be.l.zoeken.3.wd3',
+            situation: 'Bij een volgend gesprek vraagt de werkgever: "Vertel eens iets over uzelf." Mohammed is zenuwachtig. Hij wil veel vertellen. Wat werkt het best?',
+            options: [
+              { id: 'a', text: 'Hij vertelt snel zijn hele leven, vanaf zijn jeugd.', best: false, feedback: 'Begrijpelijk. Maar zo raakt de werkgever de draad kwijt.' },
+              { id: 'b', text: 'Hij zegt kort wie hij is, welk werk hij deed en waarom hij deze job wil.', best: true, feedback: 'Goed. Kort en duidelijk. Dan kan de werkgever verder vragen.' },
+              { id: 'c', text: 'Hij zegt alleen: "Ik ben Mohammed."', best: false, feedback: 'Dat is te kort. Vertel ook iets over je werk.' },
+            ],
+            why: 'Je zegt eerst het antwoord, dan een voorbeeld. Praat rustig en stop na een paar zinnen. Dan kan de ander iets vragen.',
+          },
           // ⚖️ check: op tijd komen is belangrijk; te laat: verwittig vóór de afspraak (gewoonte; vdab.be sollicitatietips)
           {
             kind: 'truefalse',
