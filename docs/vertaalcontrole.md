@@ -1503,3 +1503,27 @@ Graag nakijken:
   uk евакуювати / шлях евакуації. In het Tigrinya is ook "de trap" (መደያይቦ) nalezen.
 - **Getallen in fa/prs**: de woorden hebben westerse cijfers tussen haakjes, "سیزده (13)", omdat de
   plaatjes en de etiketten op het werk zo zijn; de tip gebruikt Perzische cijfers, zoals de rest van het bestand.
+
+## Nieuw 4 november 2026: les Kort en duidelijk (alle talen)
+
+Een nieuwe les in Samenwerken (`u.teamwork`), na "Instructions from your supervisor" (`l.task`), met
+de tip "Say the most important thing first". Alles met AI vertaald, gemarkeerd `// nieuw, nalezen`.
+Nieuwe ids:
+
+- `src/i18n/culture/<taal>.ts`: `l.clear`, `w.kort`, `w.duidelijk`, `w.belangrijkste`, `w.rustig`,
+  `w.teveel`, `w.vraag`, `s.clear.1`–`.3`, `d.clear.q`, `d.clear.a`, en de tip `c.clear` met `.b`, `.p`,
+  `.s`, `.o1`–`.o3`, `.w`.
+- `src/i18n/learn/<taal>.ts`: `d.clear.a.why`.
+
+Graag nakijken:
+
+- **De toon van de tip**: hij mag niemand wegzetten ("in many languages", nooit één land of cultuur).
+  De tip `c.clear.b` houdt in elke taal **5 zinnen** (de les toont zin 1–3).
+- **"Sorry"** zonder geslacht: ar عفواً, fr "Pardon"; bg/uk informeel (Извинявай, Вибач), ook tegen de leidinggevende.
+- **"De machine"** (`s.clear.1`): ro "utilajul" (mașina is vooral auto), uk "машина" (beter верстат of обладнання?).
+- **Stroeve zinnen**: `s.clear.3` ("te snel en te veel") in es, pt en ti.
+- **tr** `d.clear.q` is "Anlaşıldı mı?" (begrepen?), `w.teveel` "çok fazla" (kan ook "heel veel" zijn).
+- **ti**: ደንጒኻ ("te laat"), ቃለ መሕትት ስራሕ (sollicitatiegesprek); `w.rustig` zonder m/f/x.
+- **ar**: de titel باختصار ووضوح; de x-vormen zijn wat stijf (zoals bij `c.alarm`).
+- **fa/prs**: fa روشن است؟ (of واضح است؟); prs بس کنید en چه گپ است (spreektaal).
+- **es** "Seré breve" (vrij), **fr** "Je fais court" (spreektaal), **de** "Vorstellungsgespräch" (lang woord).
