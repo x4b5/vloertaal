@@ -319,8 +319,9 @@ function TrophyGlyph() {
 }
 
 /**
- * The streak stopped (more than a day missed, no free day left). Shown once, calmly, on the next
- * open: Bram, the grey flame, "Je reeks is gestopt bij N. Begin vandaag opnieuw." and the record.
+ * The streak stopped (more than a day missed, no free day left) after a real break (lib/progress.ts
+ * stoppedToTell: not with 3 times a week). Shown once, calmly, on the next open: Bram waving, the
+ * grey flame, "Je reeks is gestopt bij N. Begin vandaag opnieuw." and the record.
  * No confetti and no red: starting again is normal.
  */
 export function StreakStopped({ streak, best, lang, onDone }: {
@@ -334,7 +335,8 @@ export function StreakStopped({ streak, best, lang, onDone }: {
     <div className="player milestone-screen streak-stopped">
       <div className="player-body milestone">
         <div className="stopped-hero" aria-hidden>
-          <Character who="bram" mood="pleased" size={170} />
+          {/* Bram waves (welcome back), no thumb up: rude in some countries (30 October 2026). */}
+          <Character who="bram" mood="wave" size={170} />
           <span className="stopped-flame"><FlameIcon lit={false} size={64} /></span>
         </div>
         <div className="streak-count stopped-count" role="img" aria-label={`${streak} ${said(uiCount('dayStreak', streak, lang))}`}>
