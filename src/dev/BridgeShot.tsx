@@ -31,7 +31,7 @@ export function BridgeShot({ lang: code, gender }: { lang: string | null; gender
       <TopBar streak={3} done={false} words={400} lang={lang} />
       <Route
         progress={progress} lang={lang} access="full" onStart={() => {}} onPick={() => {}} onAll={() => {}}
-        note={<RulesPathNote lang={lang} country={progress.country} />}
+        lines={lang?.code === 'nl' ? [{ id: 'rules', node: <RulesPathNote lang={lang} country={progress.country} /> }] : undefined}
         offer={bridgeDue(progress) ? (
           <BridgeOffer lang={lang} onGo={() => setProgress(seeBridge)} onLater={() => setProgress(seeBridge)} />
         ) : undefined}

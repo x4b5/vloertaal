@@ -51,13 +51,22 @@ import { SEARCH_MIN, searchKey, searchTopics } from '../lib/topicSearch';
  * Review first (src/lib/pace.ts reviewFirst): today's review done and many words still due, then
  * "Extra ronde" is the first, yellow card and the next lesson the second (a calm card, still with
  * Start: it never locks).
+ *
+ * Under the lesson, small `lines` (one tap each: "Gelukt?", "Wat ken je al?", in the work-rules
+ * track "Over deze regels") fill what is left of the three, most important first; one that does
+ * not fit waits for a home with room. They never take the lesson's place: the yellow card is the
+ * next step on the path (verbeterplan fase 2, 4 November 2026).
  */
-export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink, note, unlocked = false, offer }: {
+export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink, note, lines, unlocked = false, offer }: {
   progress: Progress;
-  /** "Wat ken je al?" offered (src/components/Toets.tsx ToetsOffer, with Doen and Later): it takes
-   *  the place of the block and today's review for now, so the home keeps three things to tap. */
+  /** A card in the place of the block and today's review, with two buttons ("Er is iets veranderd",
+   *  "Wil je ook de werkregels leren?", "Bewaar je voortgang"): with "Other topic" that is three
+   *  things to tap, so no `lines` then. */
   offer?: React.ReactNode;
-  /** A calm line above "Other topic", not a button (the work-rules track: no Dutch voice on this phone). */
+  /** Small things to tap under the lesson, most important first, each one of the three; only those
+   *  that fit show. */
+  lines?: { id: string; node: React.ReactNode }[];
+  /** A calm line above "Other topic", nothing to tap (the work-rules track: no Dutch voice on this phone). */
   note?: React.ReactNode;
   /** The full version was unlocked a moment ago: a short line says the code was right. */
   unlocked?: boolean;
@@ -144,6 +153,11 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   const linked = lockedLink && !unitAllowed(lockedLink, access) ? order.find((u) => u.id === lockedLink) : undefined;
   const restartShown = Boolean(resumeId && onRestart && !dailyShown);
   const taps = (dailyShown ? 1 : 0) + (block ? 1 + (restartShown ? 1 : 0) + (blockPlayable(block, completed, access) ? 0 : 1) : choices.length) + 1;
+  // What is left of the three: the coach's locked topic first (this visit only), then the lines.
+  const extras = [
+    ...(linked ? [{ id: 'linked', node: <LinkedLocked unit={linked} lang={lang} onUpgrade={onUpgrade} /> }] : []),
+    ...(lines ?? []),
+  ].slice(0, Math.max(0, 3 - taps));
 
   const pick = (unit: Unit) => {
     if (!blockPlayable(unit, completed, access)) { onUpgrade?.(); return; }
@@ -304,7 +318,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
         </section>
       )}
 
-      {linked && taps < 3 && <LinkedLocked unit={linked} lang={lang} onUpgrade={onUpgrade} />}
+      {extras.map((x) => <Fragment key={x.id}>{x.node}</Fragment>)}
 
       {note}
 

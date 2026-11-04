@@ -590,7 +590,9 @@ function RouteShot({ shot, state, lang: shotLang, access, sector, region, daily,
         onStart={() => {}} onRestart={() => {}} onAll={() => {}} onUpgrade={() => {}}
         onPick={(id) => setProgress((p) => ({ ...p, currentUnit: id }))}
         focusUnit={state === 'coach' ? 'u.pay' : null}
-        note={<><RulesPathNote lang={lang} country={new URLSearchParams(location.search).get('country') === 'be' ? 'be' : undefined} /><NoVoiceNote lang={lang} /></>}
+        // As App: "Over deze regels" is one of the home's lines (the last, only with room left).
+        lines={rules ? [{ id: 'rules', node: <RulesPathNote lang={lang} country={new URLSearchParams(location.search).get('country') === 'be' ? 'be' : undefined} /> }] : undefined}
+        note={<NoVoiceNote lang={lang} />}
       />
       <BottomNav current="route" onTab={() => {}} lang={lang} />
     </>

@@ -18,8 +18,10 @@ import { TOETS_STATE_VERSION, type ToetsRun, type ToetsScore, type ToetsState } 
  *
  *  - The start (instap, version A): offered on the home of the language track once the first lesson
  *    (1.1) is done, to a learner who has finished fewer than INSTAP_UNTIL_LESSONS lessons; never
- *    required. The very first home shows the first lesson, not a test. "Later" passes it over (it
- *    does not come back by itself; Settings has it always).
+ *    required. The very first home shows the first lesson, not a test; after it, the test is a
+ *    line under the next lesson (never in its place). "Later" passes it over (it does not come
+ *    back by itself; Settings has it always), and so does going on past INSTAP_UNTIL_LESSONS
+ *    lessons without it (toetsAfterLesson).
  *  - The end (eind, version B): offered once the start was done or passed over, after END_DAYS days
  *    or END_UNITS more finished topics, whichever comes first. "Later" waits LATER_DAYS days.
  */
@@ -94,6 +96,20 @@ export function toetsLater(p: Progress, moment: ToetsMoment, today: Date, unitsD
   const t: ToetsState = p.toets ?? { v: TOETS_STATE_VERSION };
   if (moment === 'instap') return { ...p, toets: { ...t, v: TOETS_STATE_VERSION, skipped: day, start: t.start ?? day, unitsAt: t.unitsAt ?? unitsDone } };
   return { ...p, toets: { ...t, v: TOETS_STATE_VERSION, later: addDays(day, LATER_DAYS) } };
+}
+
+/**
+ * A finished lesson took the start past its last day on offer (INSTAP_UNTIL_LESSONS lessons) and
+ * the test was neither done nor put off: it was passed over, as with "Later", so the end still
+ * comes after END_DAYS days or END_UNITS topics. Since 4 November 2026 the home offers the test
+ * as a line under the next lesson (src/components/Toets.tsx ToetsHomeLine), not as a card in its
+ * place that had to be answered first, so many learners go on with their lessons instead; without
+ * this they would never be offered the end. `after`: the progress with the lesson in it.
+ */
+export function toetsAfterLesson(before: Progress, after: Progress, today: Date): Progress {
+  if (toetsOffer(before, today) !== 'instap' || toetsOffer(after, today) === 'instap') return after;
+  if (after.toets?.instap || after.toets?.skipped) return after;
+  return toetsLater(after, 'instap', today);
 }
 
 /* ---- The questions ---- */

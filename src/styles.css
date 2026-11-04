@@ -5211,3 +5211,44 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .rb-second .bay-now .resume-meta { color: var(--ink); }
 .rb-second .bay-now .resume-help .bi-en, .rb-second .bay-now .resume-help.bi-swap > .bi-help { color: var(--muted); }
 .rb-second .bay-now .resume-ring circle:first-child { stroke: var(--line); stroke-opacity: 1; }
+/* Small lines under the lesson (Route.tsx `lines`): "Gelukt?" and "Wat ken je al?", one tap each
+   to a page of their own. A quiet row in the lessons' column, not a card with two buttons: the
+   lesson stays the yellow card. */
+.home-line {
+  display: flex; align-items: center; gap: 12px; width: calc(100% - 68px); min-height: 56px;
+  margin: 12px 0 0; margin-inline-start: 68px; padding: 8px 10px;
+  background: var(--card); color: var(--ink); border: 2px solid var(--line); border-radius: var(--radius);
+  text-align: start; font: inherit; cursor: pointer;
+}
+.home-line:hover { border-color: var(--ink-3); }
+.home-line:active { transform: translateY(1px); }
+@media (max-width: 380px) { .home-line { width: 100%; margin-inline-start: 0; } }
+.home-line-icon { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--yellow); color: var(--on-yellow); }
+.home-line-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.home-line-nl { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.home-line-help { font-size: 1rem; font-weight: 650; line-height: 1.25; }
+.home-line-help.bi-swap > .bi-help { --help-size: 0.8em; font-weight: 400; color: var(--muted); }
+.home-line-quote { font-size: 0.95rem; font-weight: 600; color: var(--ink-2); overflow-wrap: anywhere; }
+.home-line-quote::before { content: '„'; }
+.home-line-quote::after { content: '”'; }
+.home-line-nl-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.home-line-time { padding: 1px 8px; font-size: 0.8rem; }
+.home-line-go { flex: none; color: var(--ink-3); }
+/* Their pages: the card under a back arrow. */
+.toets-offer-page, .gelukt-page { padding: 0 16px 120px; }
+.toets-offer-page .toets-offer, .gelukt-page .gelukt-card { margin-top: 8px; }
+/* After the first lesson: the first day's streak and the reminder's question on one screen
+   (Milestone.tsx FirstDayHead in KeepFlow): the board smaller, no podium, no week. */
+.keep-streak { display: flex; flex-direction: column; align-items: center; }
+.keep-streak .streak-count { margin: 4px 0 6px; padding: 6px 18px 6px 12px; gap: 10px; }
+.keep-streak .streak-num { font-size: 4rem; }
+.keep-streak .streak-unit { padding-bottom: 6px; }
+.keep-streak-line { margin: 2px 0 0; font-size: 1.2rem; }
+.keep3-with-head .keep3-title { margin-top: 14px; }
+@media (min-height: 701px) { .keep-streak { margin-top: 28px; } }
+@media (max-height: 700px) {
+  .keep-streak .streak-num { font-size: 3.2rem; }
+  .keep-streak .streak-count { margin: 6px 0 4px; }
+  .keep-streak-line { font-size: 1.05rem; }
+  .keep3-with-head .keep3-title { margin-top: 6px; }
+}

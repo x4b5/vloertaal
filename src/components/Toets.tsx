@@ -12,6 +12,7 @@ import {
 } from '../lib/toets';
 import type { ToetsRun as Run } from '../lib/toetsState';
 import { loadVoice } from '../lib/toetsVoice';
+import { dutchUi } from '../lib/track';
 import { voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
 import { Bi } from './Bi';
@@ -45,8 +46,52 @@ const still = () => stillMotion();
 /* ------------------------------------------------------------------ the card on the home */
 
 /**
- * The offer on the home, in the place of the block (after the first lesson): "Wat ken je al? ·
- * 10 minuten" with [Doe de toets] (its words as in Settings) and [Later] (and "Ander onderwerp" under it: three things to tap).
+ * "Wat ken je al?" on the home since 4 November 2026 (verbeterplan fase 2): one small line under
+ * the next lesson, not a card in its place (src/components/Route.tsx `lines`). After the first
+ * lesson the yellow card is lesson 1.2; the line leads to ToetsOfferPage with the explanation,
+ * [Doe de toets] and [Later]. Only while the home has room for it (at most 3 things to tap).
+ */
+export function ToetsHomeLine({ moment, lang, onOpen }: { moment: ToetsMoment; lang?: HelpLanguage; onOpen: () => void }) {
+  const rtl = lang?.dir === 'rtl';
+  const title = ui('toetsTitle', lang);
+  return (
+    <button
+      type="button"
+      className={`home-line toets-line-home toets-line-${moment}`}
+      onClick={onOpen}
+      dir={rtl ? 'rtl' : undefined}
+      aria-label={`${dutchUi(lang) ? '' : 'Wat ken je al? · '}${said(title)} · 10 min`}
+    >
+      <span className="home-line-icon" aria-hidden><BarsGlyph size={22} /></span>
+      <span className="home-line-text" aria-hidden>
+        {/* "10 min" beside the small Dutch, so the help language keeps the whole width. */}
+        <NlPair nlFirst nl={<>Wat ken je al? <span className="toets-time home-line-time"><HourglassIcon size={14} /><bdi dir="ltr">10 min</bdi></span></>} nlClass="home-line-nl home-line-nl-row" className="home-line-help" text={title} />
+      </span>
+      <ChevronIcon size={20} className="home-line-go" />
+    </button>
+  );
+}
+
+/**
+ * The page the home's line opens: ToetsOffer ([Doe de toets], [Later]) under a back arrow (chrome,
+ * not one of the three). Later passes the test over as the card on the home did (src/lib/toets.ts
+ * toetsLater); Back leaves it on offer.
+ */
+export function ToetsOfferPage({ moment, lang, onBack, onDo, onLater }: { moment: ToetsMoment; lang?: HelpLanguage; onBack: () => void; onDo: () => void; onLater: () => void }) {
+  return (
+    <div className="screen toets-offer-page" dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
+      <div className="screen-head max3-head">
+        <ChromeBack lang={lang} onBack={onBack} />
+      </div>
+      <ToetsOffer moment={moment} lang={lang} onDo={onDo} onLater={onLater} />
+    </div>
+  );
+}
+
+/**
+ * The offer: "Wat ken je al? · 10 minuten" with [Doe de toets] (its words as in Settings) and
+ * [Later]. Until 4 November 2026 on the home in the place of the block; now on its own page
+ * (ToetsOfferPage), from a line under the next lesson.
  */
 export function ToetsOffer({ moment, lang, onDo, onLater }: { moment: ToetsMoment; lang?: HelpLanguage; onDo: () => void; onLater: () => void }) {
   const rtl = lang?.dir === 'rtl';

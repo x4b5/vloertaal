@@ -22,6 +22,8 @@ dezelfde principes in beeld zien.
 
 - **Hooguit 3 dingen om op te tikken per scherm.** Lijsten met één soort rij zijn de
   uitzondering. Controle: `scripts/max3/count.cjs`.
+- **Op de begintab is de gele kaart de volgende stap.** De toets en "Gelukt?" staan als kleine
+  regel onder de les, en alleen als er nog plek is binnen de 3.
 - **Wat aandacht vraagt, laat de rest zachter worden.** Laat het ene niet harder worden. Kies je
   een antwoord, dan stappen de andere antwoorden terug.
 - **Zeg iets één keer.** Geen label dat de vraag herhaalt, geen "Goed zo!" naast een groen vinkje.
