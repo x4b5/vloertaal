@@ -310,6 +310,16 @@ function defineStates(LANG) {
     await tap(p, '.player-top .lesson-close'); await tap(p, '.sheet-stop'); await settle(p, 900);
   };
   add('flow:home-resume-daily', '/', stopHalfwayDue, { expect: '.home3 .daily-due ~ .rb-current .bay-saved' });
+  // "Eerst herhalen" (src/lib/pace.ts reviewFirst): today's review done and 20 words still due:
+  // [Extra ronde] (yellow) [1.4] (second, not locked) [Ander onderwerp]; either one starts.
+  const WORDS20 = ['w.hallo', 'w.goedemorgen', 'w.dankjewel', 'w.ja', 'w.nee', 'w.totmorgen', 'w.collega', 'w.baas', 'w.leidinggevende', 'w.werk', 'w.naam', 'w.nieuw', 'w.ingang', 'w.receptie', 'w.kantine', 'w.kleedkamer', 'w.buddy', 'w.vinden', 'w.begrijpniet', 'w.nogeenkeer'];
+  const extraHome = async (p) => {
+    const d = new Date(); const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    await realHome(p, { reviewDay: today, completed: { 'l.hello': { best: 1, times: 1 }, 'l.people': { best: 1, times: 1 }, 'l.arrive': { best: 1, times: 1 } }, cards: Object.fromEntries(WORDS20.map((id) => [id, { box: 1, due: '2000-01-01' }])) });
+  };
+  add('flow:home-extra-first', '/', extraHome, { expect: '.home3 .daily-lead ~ .rb-second .bay-now' });
+  add('flow:home-extra-first-round', '/', async (p) => { await extraHome(p); await tap(p, '.daily-lead'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
+  add('flow:home-extra-first-lesson', '/', async (p) => { await extraHome(p); await tap(p, '.rb-second .bay-now .bay-card'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
   add('flow:topic-restart', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); }, { list: true, expect: '.topic-tools .bay-restart' });
   add('flow:topic-restart-go', '/', async (p) => { await stopHalfwayDue(p); await tap(p, '.rb-other'); await settle(p); await tap(p, '.topic-row', 0); await settle(p); await tap(p, '.topic-tools .bay-restart'); await settle(p, 900); }, { expect: '.player-top .lesson-close' });
   // The Hulp tab: the phrases, then "Wie kan helpen" (a list of numbers to call, as in Werkregels).
@@ -349,6 +359,14 @@ function defineStates(LANG) {
   // Home / route
   for (const st of ['new', 'mid', 'finished', 'shelf', 'pick', 'coach', 'done']) add(`route:${st}`, shot(`route&state=${st}`));
   add('route:daily-due', shot('route&state=mid&daily=due'));
+  // Today's review done, a few words left: the small "Extra ronde" button, the lesson yellow.
+  add('route:extra-few', shot('route&state=mid&daily=few'), null, { expect: '.daily-done .daily-extra' });
+  // "Eerst herhalen" (src/lib/pace.ts reviewFirst): more than 15 words left after today's review:
+  // "Extra ronde" is the first, yellow card, the lesson the second (a calm card, Start still there).
+  add('route:extra-first', shot('route&state=mid&daily=extra'), null, { expect: '.daily-lead ~ .rb-second .bay-now .bay-start' });
+  add('route:extra-first-finished', shot('route&state=finished&daily=extra'), null, { expect: '.daily-lead ~ .rb-choose' });
+  // A lesson stopped halfway as well: [Extra ronde] [Continue] [Other topic] ("Start again" on the topic page).
+  add('route:extra-first-resume', shot('path&resume=1&daily=extra'), null, { expect: '.daily-lead ~ .rb-second .bay-saved' });
   // A finished topic with words due: the recommended topic, Herhaal vandaag, Other topic.
   add('route:finished-daily', shot('route&state=finished&daily=due'), null, { expect: '.daily-due' });
   add('route:preview-finished-daily', shot('route&state=finished&daily=due&access=preview'), null, { expect: '.daily-due' });

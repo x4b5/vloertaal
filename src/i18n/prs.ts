@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: 'فردا: {n} کلمه',
     firstWordsTomorrow: 'فردا اولین کلمه‌های شما دوباره می‌آیند',
     extraRound: 'یک دور اضافی',
+    reviewFirstHint: 'اول مرور کنید. اینطور بیشتر به یاد تان می‌ماند.', // nieuw, nalezen
     wordsStrongerN: '{n} کلمه قوی‌تر',
     noMistakes: 'بدون اشتباه',
     nextUp: 'بعدی',

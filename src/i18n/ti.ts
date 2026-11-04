@@ -130,6 +130,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: 'ጽባሕ: {n} ቃላት',
     firstWordsTomorrow: { m: 'ጽባሕ ቀዳሞት ቃላትካ ይምለሳ', f: 'ጽባሕ ቀዳሞት ቃላትኪ ይምለሳ', x: 'ጽባሕ ቀዳሞት ቃላትኩም ይምለሳ' }, // x: nieuw, nalezen
     extraRound: 'ተወሳኺ ዙርያ',
+    reviewFirstHint: { m: 'ቅድም ድገም። ከምኡ ዝያዳ ትዝክር።', f: 'ቅድም ድገሚ። ከምኡ ዝያዳ ትዝክሪ።', x: 'ቅድም ድገሙ። ከምኡ ዝያዳ ትዝክሩ።' }, // nieuw, nalezen
     wordsStrongerN: '{n} ቃላት ዝሓየላ',
     noMistakes: 'ብዘይ ጌጋ',
     nextUp: 'ዝቕጽል',

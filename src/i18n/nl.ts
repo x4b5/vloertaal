@@ -164,6 +164,7 @@ export const uiNl: Record<UiKey, UiText> = {
   tomorrowN: 'Morgen: {n} vragen', // regels
   firstWordsTomorrow: 'Morgen komen je eerste vragen terug', // regels
   extraRound: 'Extra ronde',
+  reviewFirstHint: 'Eerst herhalen. Dan onthoud je meer.', // nieuw, nalezen (alleen spoor Taal; hier voor de volledigheid)
   wordsStrongerN: '{n} antwoorden beter onthouden', // regels
   noMistakes: 'Geen fouten',
   nextUp: 'Volgende',

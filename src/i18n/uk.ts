@@ -129,6 +129,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Завтра: {n} слово', few: 'Завтра: {n} слова', many: 'Завтра: {n} слів', other: 'Завтра: {n} слів' },
     firstWordsTomorrow: 'Завтра повернуться твої перші слова',
     extraRound: 'Додатковий раунд',
+    reviewFirstHint: 'Спочатку повторення. Так ти запам’ятаєш більше.', // nieuw, nalezen
     wordsStrongerN: { one: '{n} слово закріплено краще', few: '{n} слова закріплено краще', many: '{n} слів закріплено краще', other: '{n} слів закріплено краще' },
     noMistakes: 'Без помилок',
     nextUp: 'Далі',

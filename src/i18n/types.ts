@@ -161,6 +161,8 @@ export const uiEn = {
   tomorrowN: 'Tomorrow: {n} words',
   firstWordsTomorrow: 'Tomorrow your first words come back',
   extraRound: 'Extra round',
+  /** "Extra ronde" as the home's first choice (src/lib/pace.ts reviewFirst): why the review comes before the new lesson. */
+  reviewFirstHint: 'First review. Then you remember more.',
   wordsStrongerN: '{n} words stronger',
   noMistakes: 'No mistakes',
   nextUp: 'Next',

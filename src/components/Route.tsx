@@ -27,6 +27,7 @@ import { NlPair } from './NlPair';
 import { dutchUi, trackOf } from '../lib/track';
 import { RestartButton, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
+import { reviewFirst } from '../lib/pace';
 import { PocketIcon } from './Offline';
 import { countedUnits, planGroups } from '../content/themes';
 import { ThemeHeadRow } from './Themes';
@@ -46,6 +47,10 @@ import { SEARCH_MIN, searchKey, searchTopics } from '../lib/topicSearch';
  * Tapping a suggestion makes it the current block and shows it with its Start button, so the
  * learner first sees what the topic is before a lesson begins. "Other topic" opens All topics: a
  * list of every topic, each leading to its topic page (lessons, pocket card, certificate).
+ *
+ * Review first (src/lib/pace.ts reviewFirst): today's review done and many words still due, then
+ * "Extra ronde" is the first, yellow card and the next lesson the second (a calm card, still with
+ * Start: it never locks).
  */
 export function Route({ progress, lang, access = 'full', daily, onDaily, onStart, onRestart, onPick, onAll, onUpgrade, arrived, onArrived, focusUnit, onFocused, lockedLink, note, unlocked = false, offer }: {
   progress: Progress;
@@ -100,6 +105,8 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   const dailyExtra = daily?.state === 'done' && daily.extra > 0;
   // Either card is one of the three (as above).
   const dailyShown = dailyDue || dailyExtra;
+  // Many words still due after today's review: "Extra ronde" first (yellow), the lesson second.
+  const first = dailyExtra && reviewFirst(daily, track) && Boolean(onDaily);
   const choices = block ? [] : homeSuggestions(sector, completed, track, region).slice(0, dailyShown ? 1 : 2);
   const ref = useRef<HTMLDivElement>(null);
   const order = routeOrder(sector, track, region);
@@ -170,14 +177,16 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                   </span>
                 )}
               </span>
-              {state === 'now' && <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>}
+              {/* Bram stands by the yellow card only (not by a lesson that comes second). */}
+              {state === 'now' && !first && <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>}
             </>
           );
-          const restart = saved && onRestart && lesson.id === resumeId && !dailyDue;
+          // (Not next to either daily card, "Herhaal vandaag" or "Extra ronde": as counted in `taps`.)
+          const restart = saved && onRestart && lesson.id === resumeId && restartShown;
           return (
             <li
               key={lesson.id}
-              className={`bay bay-${css} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''} ${state === 'now' ? 'bay-with-char' : ''}`}
+              className={`bay bay-${css} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''} ${state === 'now' && !first ? 'bay-with-char' : ''}`}
             >
               <span className="bay-marker" aria-hidden>{state === 'done' ? <CheckIcon size={18} /> : i + 1}</span>
               {state === 'now' ? (
@@ -228,12 +237,13 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
   return (
     <div className="path route home3" ref={ref} dir={rtl ? 'rtl' : undefined}>
       {unlocked && <UnlockedNote lang={lang} />}
-      {dailyShown && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} />}
+      {dailyShown && daily && <DailyReview card={daily} lang={lang} onDaily={onDaily} lead={first} />}
 
       {block && (
         // With "Herhaal vandaag" above it, the block is compact (no picture, no done lessons), so
-        // its Start stays in view on a small phone.
-        <section className={`rb-current ${dailyDue ? 'rb-tight' : ''}`} aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
+        // its Start stays in view on a small phone. After "Extra ronde" as the first choice, the
+        // next lesson is the second: a calm card (rb-second), not the yellow one.
+        <section className={`rb-current ${dailyDue || first ? 'rb-tight' : ''} ${first ? 'rb-second' : ''}`} aria-label={`${unitIndex(block) + 1}. ${said(unitTitle(block, lang))}`}>
           <div id={`unit-${block.id.slice(2)}`} className={`rb-block ${marked === block.id ? 'rb-marked' : ''}`}>
             <WordPicture className="rb-pic" id={unitIcon(block.id)} emoji={block.emoji} size={64} />
             <UnitTitle unit={block} lang={lang} heading />
