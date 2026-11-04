@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: { m: 'ቅኑዕ እዩ፡ ግን ኣብ ኣጸሓሕፋ ተጠንቀቕ', f: 'ቅኑዕ እዩ፡ ግን ኣብ ኣጸሓሕፋ ተጠንቀቒ', x: 'ቅኑዕ እዩ፡ ግን ኣብ ኣጸሓሕፋ ተጠንቀቑ' }, // x: nieuw, nalezen
     incorrect: 'ገና ኣይኮነን',
     correctAnswer: 'ቅኑዕ መልሲ',
+    rightAnswerIs: 'ቅኑዕ መልሲ እዚ እዩ፦', // nieuw, nalezen
+    bestAnswerIs: 'ዝበለጸ መልሲ እዚ እዩ፦', // nieuw, nalezen
     yourAnswer: { m: 'መልስኻ', f: 'መልስኺ', x: 'መልስኹም' }, // x: nieuw, nalezen
     inARow: '{n} ብተኸታታሊ',
     cantListen: 'ሕጂ ክሰምዕ ኣይክእልን',

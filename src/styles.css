@@ -3515,11 +3515,21 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* The header holds only the ✕ and the progress bar (the sound toggle and Help moved into the
    pause sheet and the bottom bar). */
 .player-top .lesson-close { flex: none; }
-/* Pause sheet: the second choice ("Without sound" / "Sound on") is a calm outlined button with
-   its icon, between the main "Keep going" and "Stop" (which has its own icon too). */
+/* Pause sheet: the second choice ("Without sound") is a calm outlined button with its icon,
+   between the main "Keep going" and "Stop" (which has its own icon too). */
 .sheet-second { gap: 10px; background: var(--card); color: var(--ink); border: 2px solid var(--edge); }
 .sheet-second:hover { background: var(--concrete-2); }
 .sheet-second-icon { display: inline-grid; place-items: center; flex: none; color: var(--ink-2); }
+/* "Without sound" is an on/off button: while the sound is off it is pressed, and looks like a
+   picked card (yellow tint, strong edge, a check at the end; .max3-card.picked). The label stays
+   in the middle, clear of the check. */
+.sheet-sound { padding-inline: 52px; }
+.sheet-sound.picked, .sheet-sound.picked:hover { border-color: var(--edge-strong); background: color-mix(in srgb, var(--yellow) 16%, var(--card)); }
+.sheet-sound.picked .sheet-second-icon { color: var(--ink); }
+.sheet-sound-check {
+  position: absolute; inset-inline-end: 16px; top: 50%; transform: translateY(-50%);
+  display: grid; place-items: center; color: var(--ink);
+}
 
 /* One speaker per item: after a normal play a turtle sits on the speaker (the next tap is
    slow); after the slow play it goes again. The turtle is part of the button: a tap on it (also
@@ -4660,7 +4670,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
  */
 @supports not (color: color-mix(in srgb, red 50%, blue)) {
   .lang-btn.picked, .max3-card.picked, .topics-order-btn.is-on,
-  .choice.picked, .rb-marked { background: var(--kraft-light); }
+  .choice.picked, .rb-marked, .sheet-sound.picked, .sheet-sound.picked:hover { background: var(--kraft-light); }
   /* Before Chrome 88 the picked option's own rule is lost whole (its :not(a, b)): its border too. */
   .choice.picked, .choice.picked:hover:not(:disabled) { border-color: var(--edge-strong); background: var(--kraft-light); }
   .gender-btn.picked .gender-face { background: var(--kraft-light); }

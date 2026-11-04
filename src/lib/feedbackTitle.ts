@@ -13,8 +13,13 @@ export function feedbackTitle(correct: boolean, kind: Exercise['kind'], almost =
   return kind === 'situation' ? 'Het beste antwoord is:' : 'Het goede antwoord is:';
 }
 
-/** The heading's meaning in the help language (English small under it). */
+/**
+ * The heading's meaning in the help language (English small under it). After a wrong answer it
+ * announces the answer ("The right answer is:"), like the Dutch: "Correct answer" ("Poprawna
+ * odpowiedź", "Doğru cevap") next to the red cross read as "right!" (4 November 2026).
+ * `correctAnswer` stays the screen-reader label on the right option itself.
+ */
 export function feedbackMeaningKey(correct: boolean, almost: boolean | undefined, kind: Exercise['kind']): UiKey {
   if (correct) return almost ? 'almost' : kind === 'situation' ? 'goodChoice' : 'correct';
-  return kind === 'situation' ? 'bestAnswer' : 'correctAnswer';
+  return kind === 'situation' ? 'bestAnswerIs' : 'rightAnswerIs';
 }

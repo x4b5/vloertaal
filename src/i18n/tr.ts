@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'Doğru, ama yazımına dikkat et',
     incorrect: 'Tam değil',
     correctAnswer: 'Doğru cevap',
+    rightAnswerIs: 'Doğru cevap şu:', // nieuw, nalezen
+    bestAnswerIs: 'En iyi cevap şu:', // nieuw, nalezen
     yourAnswer: 'Senin cevabın',
     inARow: 'Üst üste {n}',
     cantListen: 'Şu an dinleyemiyorum',

@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'درست است، ولی به املا دقت کنید',
     incorrect: 'نه کاملاً',
     correctAnswer: 'پاسخ درست',
+    rightAnswerIs: 'پاسخ درست این است:', // nieuw, nalezen
+    bestAnswerIs: 'بهترین پاسخ این است:', // nieuw, nalezen
     yourAnswer: 'پاسخ شما',
     inARow: '{n} پشت سر هم',
     cantListen: 'الان نمی‌توانم گوش بدهم',

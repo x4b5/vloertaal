@@ -57,6 +57,8 @@ export const uiNl: Record<UiKey, UiText> = {
   almost: 'Goed, maar let op de spelling',
   incorrect: 'Niet helemaal',
   correctAnswer: 'Het goede antwoord',
+  rightAnswerIs: 'Het goede antwoord is:',
+  bestAnswerIs: 'Het beste antwoord is:',
   yourAnswer: 'Jouw antwoord',
   inARow: '{n} op rij',
   cantListen: 'Ik kan nu niet luisteren',

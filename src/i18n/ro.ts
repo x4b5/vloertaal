@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: 'Corect, dar atenție la scriere',
     incorrect: 'Nu chiar',
     correctAnswer: 'Răspunsul corect',
+    rightAnswerIs: 'Răspunsul corect este:', // nieuw, nalezen
+    bestAnswerIs: 'Cel mai bun răspuns este:', // nieuw, nalezen
     yourAnswer: 'Răspunsul tău',
     inARow: '{n} la rând',
     cantListen: 'Nu pot asculta acum',

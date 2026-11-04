@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { feedbackMeaningKey, feedbackTitle } from '../src/lib/feedbackTitle';
+import { getHelpLanguage, helpLanguages, ui } from '../src/i18n/all';
+import { uiNl } from '../src/i18n/nl';
+import { uiEn } from '../src/i18n/types';
 
 // A wrong answer is already red with a cross; its heading is the right answer, not "Niet helemaal".
 describe('the heading of the feedback label', () => {
@@ -25,7 +28,30 @@ describe('the heading of the feedback label', () => {
     expect(feedbackMeaningKey(true, false, 'meaning')).toBe('correct');
     expect(feedbackMeaningKey(true, true, 'type')).toBe('almost');
     expect(feedbackMeaningKey(true, false, 'situation')).toBe('goodChoice');
-    expect(feedbackMeaningKey(false, false, 'meaning')).toBe('correctAnswer');
-    expect(feedbackMeaningKey(false, false, 'situation')).toBe('bestAnswer');
+    // Wrong: an announcement of the answer, like the Dutch heading (4 November 2026).
+    expect(feedbackMeaningKey(false, false, 'meaning')).toBe('rightAnswerIs');
+    expect(feedbackMeaningKey(false, false, 'type')).toBe('rightAnswerIs');
+    expect(feedbackMeaningKey(false, false, 'situation')).toBe('bestAnswerIs');
+  });
+
+  // "Correct answer" ("Poprawna odpowiedź", "Doğru cevap") next to a red cross read as "right!".
+  it('after a wrong answer, announces the answer in every help language', () => {
+    expect(uiEn.rightAnswerIs).toBe('The right answer is:');
+    expect(uiEn.bestAnswerIs).toBe('The best answer is:');
+    expect(uiNl.rightAnswerIs).toBe(feedbackTitle(false, 'meaning'));
+    expect(uiNl.bestAnswerIs).toBe(feedbackTitle(false, 'situation'));
+    expect(helpLanguages).toHaveLength(13);
+    for (const lang of helpLanguages) {
+      for (const key of ['rightAnswerIs', 'bestAnswerIs'] as const) {
+        const text = lang.ui[key];
+        expect(text?.trim(), `${lang.code} ${key}`).toBeTruthy();
+        // It ends on a colon (Tigrinya ፦): it introduces the answer, it is not a verdict.
+        expect(text, `${lang.code} ${key}`).toMatch(/[:፦]$/);
+      }
+      expect(lang.ui.rightAnswerIs, lang.code).not.toBe(lang.ui.correctAnswer);
+      expect(lang.ui.bestAnswerIs, lang.code).not.toBe(lang.ui.bestAnswer);
+    }
+    expect(ui('rightAnswerIs', getHelpLanguage('pl'))).toMatchObject({ help: 'Poprawna odpowiedź to:' });
+    expect(ui('rightAnswerIs', getHelpLanguage('tr'))).toMatchObject({ help: 'Doğru cevap şu:' });
   });
 });

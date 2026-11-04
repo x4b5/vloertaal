@@ -43,6 +43,8 @@ const lang: HelpLanguageSource = {
     almost: { m: 'صحيح، لكن انتبه إلى الإملاء', f: 'صحيح، لكن انتبهي إلى الإملاء' },
     incorrect: 'ليس تماماً',
     correctAnswer: 'الإجابة الصحيحة',
+    rightAnswerIs: 'الإجابة الصحيحة هي:', // nieuw, nalezen
+    bestAnswerIs: 'أفضل إجابة هي:', // nieuw, nalezen
     yourAnswer: 'إجابتك',
     inARow: '{n} على التوالي',
     cantListen: 'لا أستطيع الاستماع الآن',
