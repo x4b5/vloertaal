@@ -114,7 +114,7 @@ export function InstallCard({ lang }: { lang?: HelpLanguage }) {
 export function ReminderCard({ lang, secondary }: { lang?: HelpLanguage; secondary?: boolean }) {
   // One clear action: "Na het werk" is chosen from the start, so "Zet in mijn agenda" works
   // right away. A chip changes the time; "Andere tijd" opens the phone's own time field.
-  const [time, setTime] = useState<string>(REMINDER_TIMES[2].time);
+  const [time, setTime] = useState<string>(REMIND_DEFAULT.time);
   const [ownOpen, setOwnOpen] = useState(false);
   const [own, setOwn] = useState('');
   const [saved, setSaved] = useState(false);

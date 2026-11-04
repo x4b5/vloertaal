@@ -15,11 +15,10 @@ export type KeepAction = 'yes' | 'other' | 'no' | 'time' | 'next';
 /** "Yes": after work. */
 export const REMIND_DEFAULT = { time: '18:00', nl: 'Na het werk', key: 'remindAfter' } as const;
 
-/** "Other time": two other moments of the day (after work is the "Yes" already); the third
- *  choice is REMIND_OWN. */
+/** "Other time": before work (after work is the "Yes" already); the other choice is REMIND_OWN.
+ *  Not "In de pauze": a break is for rest, not for practising (the owner, 4 November 2026). */
 export const REMIND_OTHER_TIMES = [
   { time: '07:00', nl: 'Voor het werk', key: 'remindBefore' },
-  { time: '12:00', nl: 'In de pauze', key: 'remindBreak' },
 ] as const;
 
 /** "Kies zelf": any time, in the phone's own time field (night and shift work). */

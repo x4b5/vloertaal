@@ -185,7 +185,6 @@ export const uiEn = {
   remindEvent: 'Time for your Dutch (10 minutes)',
   remindHint: 'Your phone calendar reminds you. Nothing is sent to us.',
   remindBefore: 'Before work',
-  remindBreak: 'In the break',
   remindAfter: 'After work',
   remindOwn: 'Other time',
   remindAdd: 'Add to my calendar',

@@ -708,7 +708,7 @@ export function Settings({
  * phone's calendar, shows "added" a moment and leads back. The time already in the calendar carries
  * the check, and choosing it again only leads back (no second, identical reminder).
  */
-const SETTINGS_TIMES = REMINDER_TIMES.filter((t) => t.time !== '12:00');
+const SETTINGS_TIMES = REMINDER_TIMES;
 function ReminderTimes({ lang, onDone }: { lang?: HelpLanguage; onDone: (added: boolean) => void }) {
   const [current] = useState<string | null>(reminderTime);
   const [saved, setSaved] = useState<string | null>(null);

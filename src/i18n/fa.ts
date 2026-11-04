@@ -153,7 +153,6 @@ const lang: HelpLanguageSource = {
     remindEvent: 'وقت تمرین هلندی (10 دقیقه)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     remindHint: 'تقویم گوشی به شما یادآوری می‌کند. چیزی برای ما فرستاده نمی‌شود.',
     remindBefore: 'قبل از کار',
-    remindBreak: 'در زمان استراحت',
     remindAfter: 'بعد از کار',
     remindOwn: 'زمان دیگر',
     remindAdd: 'افزودن به تقویم من',

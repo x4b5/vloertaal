@@ -153,7 +153,6 @@ const lang: HelpLanguageSource = {
     remindEvent: 'وقت هالندی (10 دقیقه)',
     remindHint: 'تقویم تیلفون به شما یادآوری می‌کند. هیچ چیز برای ما فرستاده نمی‌شود.',
     remindBefore: 'پیش از کار',
-    remindBreak: 'در وقت تفریح',
     remindAfter: 'بعد از کار',
     remindOwn: 'وقت دیگر',
     remindAdd: 'به تقویم من اضافه کن',

@@ -153,7 +153,6 @@ const lang: HelpLanguageSource = {
     remindEvent: 'Hollandaca zamanı (10 dakika)',
     remindHint: 'Telefonunun takvimi sana hatırlatır. Bize hiçbir şey gönderilmez.',
     remindBefore: 'İşten önce',
-    remindBreak: 'Molada',
     remindAfter: 'İşten sonra',
     remindOwn: 'Başka saat',
     remindAdd: 'Takvimime ekle',
