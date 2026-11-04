@@ -14,7 +14,8 @@ import { typable } from './typable';
  * "Herhaal vandaag": spaced repetition with a card box (Leitner). Every word the learner met
  * (in the work-rules track: every question of a finished lesson, by its step id) gets a card in
  * box 1. Right in a review moves it one box up and it comes back later (1, 2, 4, 7, 14, 30
- * days); wrong sends it back to box 1, so it comes back tomorrow.
+ * days); wrong sends it back to box 1, so it comes back tomorrow (a word wrong only in writing,
+ * from box 3 on, one box down: wrongCard).
  */
 export interface Card {
   /** 1–6 */
@@ -56,20 +57,40 @@ function wordById(): Map<string, Word> {
 }
 
 /**
- * After a lesson: new items get a card (back tomorrow); an item answered wrong goes back to box 1.
+ * After a lesson: new items get a card (back tomorrow); an item answered wrong goes back to box 1
+ * (a word wrong only in writing, from MADE_FROM_BOX on, one box down: see wrongCard).
  * The items are word ids (the language course) or the ids of a rules lesson's questions.
  */
-export function addLessonItems(cards: Cards, ids: readonly string[], results: Record<string, boolean>, today: string): Cards {
+export function addLessonItems(cards: Cards, ids: readonly string[], results: Record<string, boolean>, today: string, written?: readonly string[]): Cards {
   const next = { ...cards };
+  const writtenSet = new Set(written ?? []);
   for (const id of ids) {
-    if (!next[id] || results[id] === false) next[id] = { box: 1, due: addDays(today, 1) };
+    if (!next[id]) next[id] = { box: 1, due: addDays(today, 1) };
+    else if (results[id] === false) next[id] = wrongCard(next[id], writtenSet.has(id), today);
   }
   return next;
 }
 
 /** After a lesson of the language course: its words (addLessonItems by word id). */
-export function addLessonWords(cards: Cards, words: Word[], results: Record<string, boolean>, today: string): Cards {
-  return addLessonItems(cards, words.map((w) => w.id), results, today);
+export function addLessonWords(cards: Cards, words: Word[], results: Record<string, boolean>, today: string, written?: readonly string[]): Cards {
+  return addLessonItems(cards, words.map((w) => w.id), results, today, written);
+}
+
+/**
+ * A card answered wrong comes back tomorrow, in box 1. A word that was wrong only in writing (a
+ * dictation: heard and written wrong, every other question on it right; LessonPlayer's
+ * LessonResult.written) goes one box down instead, from MADE_FROM_BOX on (the owner's request,
+ * 4 November 2026). From that box a word moves up only after a written answer, and one typo too
+ * many (answers.ts) sent a word the learner knows and can say back to the start. In the
+ * simulation of the week plan (tests/writtenWrong.test.ts) a word of box 3 or higher went back to
+ * box 1 15 times in 8 weeks, nearly 9 in 10 of them for the dictation alone; now 2 times.
+ * A wrong recognition question (the meaning, a picture, what you hear) still sends it to box 1:
+ * then the word itself was not known. (The simulation cannot weigh that rule: it has no
+ * forgetting, so there any rule that sends a word back less looks better.)
+ */
+function wrongCard(card: Card | undefined, writtenOnly: boolean, today: string): Card {
+  const box = writtenOnly && card && card.box >= MADE_FROM_BOX ? card.box - 1 : 1;
+  return { box, due: addDays(today, 1) };
 }
 
 /**
@@ -91,21 +112,28 @@ export function needsMade(id: string): boolean {
 }
 
 /**
- * After a daily review: right moves a card up a box, wrong sends it back to box 1. A word that was
- * not due yet (a top-up, dailyWordIds) keeps its box when right: its date moves one day on, so a
- * strong word is not sent away for a month by an early answer.
+ * After a daily review: right moves a card up a box, wrong sends it back to box 1 (wrongCard). A
+ * word that was not due yet (a top-up, dailyWordIds) keeps its box when right: its date moves one
+ * day on, so a strong word is not sent away for a month by an early answer.
  * `made` (the language course, LessonPlayer's LessonResult.made): the cards answered with an
  * answer the learner made. With it, a card from MADE_FROM_BOX on that needsMade and was only
  * recognised keeps its box (and its days). Without it (the rules track, or a learner who could
  * not make an answer: another script without writing, no sound) every right answer moves up, as
  * before. The saved cards keep their form: boxes already reached stay.
+ * `written` (LessonResult.written): the words that were wrong only in writing; from MADE_FROM_BOX
+ * on they go one box down instead of back to box 1 (wrongCard).
  */
-export function applyReview(cards: Cards, results: Record<string, boolean>, today: string, made?: readonly string[], almost?: readonly string[]): Cards {
+export function applyReview(cards: Cards, results: Record<string, boolean>, today: string, made?: readonly string[], almost?: readonly string[], written?: readonly string[]): Cards {
   const next = { ...cards };
   const madeSet = made ? new Set(made) : undefined;
   const almostSet = new Set(almost ?? []);
+  const writtenSet = new Set(written ?? []);
   for (const [id, right] of Object.entries(results)) {
     const card = next[id] ?? { box: 1, due: today };
+    if (!right) {
+      next[id] = wrongCard(next[id], writtenSet.has(id), today);
+      continue;
+    }
     // Typed almost right (a typo, the article): it stays in its box, back after that box's days;
     // not up (it was not fully right), not back to box 1 (it was not wrong).
     if (right && almostSet.has(id) && card.due <= today) {
@@ -120,8 +148,8 @@ export function applyReview(cards: Cards, results: Record<string, boolean>, toda
       next[id] = { box: card.box, due: addDays(today, INTERVALS[card.box - 1]) };
       continue;
     }
-    const box = right ? Math.min(card.box + 1, MAX_BOX) : 1;
-    next[id] = { box, due: addDays(today, right ? INTERVALS[box - 1] : 1) };
+    const box = Math.min(card.box + 1, MAX_BOX);
+    next[id] = { box, due: addDays(today, INTERVALS[box - 1]) };
   }
   return next;
 }

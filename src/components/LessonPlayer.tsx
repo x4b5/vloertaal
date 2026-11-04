@@ -77,6 +77,9 @@ export interface LessonResult {
   made?: string[];
   /** Words typed "almost" right (a typo, the article): they stay in their box (lib/spaced.ts applyReview). */
   almost?: string[];
+  /** Words wrong only in writing (a dictation written wrong, every other question on them right):
+   *  from box 3 on they go one box down, not back to box 1 (lib/spaced.ts wrongCard). */
+  written?: string[];
 }
 
 function solution(ex: Exercise): { text: string; nl: boolean } {
@@ -449,6 +452,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const made = useRef(new Set<string>());
   /** Words typed almost right (LessonResult.almost). */
   const almostIds = useRef(new Set<string>());
+  /** Words written wrong in a dictation, and words wrong in any other question (LessonResult.written). */
+  const writtenWrong = useRef(new Set<string>());
+  const otherWrong = useRef(new Set<string>());
   /** "Without sound" without a saved setting to switch (screenshot harness). */
   const [cantListen, setCantListen] = useState(false);
   const soundOff = quiet || cantListen;
@@ -692,13 +698,17 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       if (answer.correct && !answer.almost && ex.kind === 'type' && !typeAsPick(ex, lang)) made.current.add(ex.word.id);
       if (answer.correct && answer.almost && ex.kind === 'type') almostIds.current.add(ex.word.id);
       if (answer.correct && ex.kind === 'build') made.current.add(ex.sentence.id);
+      // Wrong in a dictation the learner wrote (not one picked from three), or wrong in another way.
+      if (!answer.correct && (ex.kind === 'meaning' || ex.kind === 'dutch' || ex.kind === 'listen' || ex.kind === 'type')) {
+        (ex.kind === 'type' && !typeAsPick(ex, lang) ? writtenWrong : otherWrong).current.add(ex.word.id);
+      }
       // A match or a sentence that counts as a mistake: the words the wrong taps were on go back
       // to the first box of the review cards too (one stray tap is forgiven, as in the grading).
       if (!answer.correct && answer.missed?.length) {
         const ids = ex.kind === 'match' ? answer.missed
           : ex.kind === 'build' ? wordsInSentence(answer.missed, lesson.words).map((w) => w.id)
           : [];
-        for (const id of ids) wordResults.current[id] = false;
+        for (const id of ids) { wordResults.current[id] = false; otherWrong.current.add(id); }
       }
     }
     // A finished match board already gave its feedback tile by tile. Two or more wrong taps make
@@ -770,7 +780,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     sounds.done();
     // Without a way to make an answer (another script without writing, no sound), no `made`.
     const canMake = !soundOff && !pickInsteadOfTyping(lang);
-    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current, ...(canMake ? { made: [...made.current] } : {}), ...(almostIds.current.size ? { almost: [...almostIds.current] } : {}) });
+    // (A lesson resumed from a save has lost which words those were: the old rule for them, box 1.)
+    const written = [...writtenWrong.current].filter((id) => !otherWrong.current.has(id));
+    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current, ...(canMake ? { made: [...made.current] } : {}), ...(almostIds.current.size ? { almost: [...almostIds.current] } : {}), ...(written.length ? { written } : {}) });
   }
 
   function reset() {
