@@ -1,12 +1,12 @@
 import { StrictMode, type ReactNode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, type Root } from 'react-dom/client';
 import App from './App';
-import { Crashed, Splash } from './components/Splash';
+import { BootFailed, Crashed, Splash } from './components/Splash';
 import { SaveFailedNote } from './components/SaveFailedNote';
 import { startScreens } from './lazyScreens';
 import { loadProgress } from './lib/progress';
 import { readTesterParam } from './lib/report';
-import { watchErrors } from './lib/errors';
+import { reportError, watchErrors } from './lib/errors';
 import { watchForUpdates } from './lib/appUpdate';
 import { applyTheme } from './lib/theme';
 import { applyTextSize } from './lib/textSize';
@@ -70,11 +70,24 @@ const cssFailed = () => {
   window.addEventListener('online', again, { once: true });
   render(<Splash failed onRetry={again} />);
 };
-// Crashed: a drawing error shows the splash with "Try again", never a blank screen.
+// Crashed: a drawing error shows the splash with "Try again" (or, at the start, the screen with
+// its two ways out), never a blank screen.
+let root: Root | null = null;
 const render = (node: ReactNode) => {
   // The links for search engines under the splash (src/lib/siteLinks.ts): the app has its own ways.
   document.getElementById('site-links')?.remove();
-  createRoot(document.getElementById('root')!).render(<StrictMode><Crashed>{node}</Crashed></StrictMode>);
+  root ??= createRoot(document.getElementById('root')!);
+  root.render(<StrictMode><Crashed>{node}</Crashed></StrictMode>);
+};
+/**
+ * Anything that goes wrong on the way to the first screen: the screen that says the app can't
+ * start, with its two ways out (src/components/Splash.tsx BootFailed), never a splash that stays
+ * up without a button (as until 4 November 2026). Counted like a script error (src/lib/errors.ts).
+ */
+const bootFailed = (e: unknown) => {
+  console.error(e);
+  reportError('script', e);
+  render(<BootFailed />);
 };
 
 if (import.meta.env.DEV && params.get('shot')) {
@@ -97,7 +110,7 @@ if (import.meta.env.DEV && params.get('shot')) {
   // then App draws its own splash, which offers "Try again" and goes on when the file comes.
   const filesBoot = Promise.race([Promise.all([langBoot, regionBoot, loadProgress().onboarded ? picsBoot : null, newsBoot]), new Promise<void>((done) => window.setTimeout(done, 8000))]);
   // (With the note for when saving the progress fails: src/components/SaveFailedNote.tsx.)
-  void Promise.all([cssBoot, filesBoot, screensBoot]).then(([css]) => (css ? render(<><App /><SaveFailedNote /></>) : cssFailed()));
+  void Promise.all([cssBoot, filesBoot, screensBoot]).then(([css]) => (css ? render(<><App /><SaveFailedNote /></>) : cssFailed())).catch(bootFailed);
 }
 
 // Offline support: cache the app after the first visit (production only).

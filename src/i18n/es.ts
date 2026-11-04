@@ -330,6 +330,10 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'No se ha cargado. ¿Tienes internet?',
     retry: 'Intentar de nuevo',
+    /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+    bootFailed: 'Vloertaal no puede arrancar.', // nieuw, nalezen
+    bootFailedHint: 'Primero guarda tu progreso. Después empieza de nuevo.', // nieuw, nalezen
+    startOver: 'Empezar de nuevo', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: '¿Qué sabes ya?', // nieuw, nalezen
     toetsOffer: 'Unos 10 minutos. No hay notas. Es solo para ti.', // nieuw, nalezen

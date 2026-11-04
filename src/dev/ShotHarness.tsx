@@ -19,6 +19,7 @@ import { isSectorGroupId, isSectorId, type SectorChoice } from '../content/secto
 import type { Access } from '../lib/access';
 import { dayKey, emptyProgress, workWeek, type Progress } from '../lib/progress';
 import { Milestone, StreakStopped } from '../components/Milestone';
+import { BootFailed } from '../components/Splash';
 import { dailyCard, dailyRuleLesson, gradedStepIds } from '../lib/spaced';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
@@ -135,6 +136,10 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The streak stopped at 12 (record 21), shown once on the next open.
   if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} />;
   if (shot === 'pictures') return <PicturesSheet />;
+  // "Vloertaal kan niet starten" (src/components/Splash.tsx BootFailed): /?shot=bootfailed. As the
+  // real screen, it reads this browser's save (vloertaal:v1) for the help language; without a save
+  // only "Opnieuw beginnen" shows.
+  if (shot === 'bootfailed') return <BootFailed />;
   // "Wat ken je al?": /?shot=toets&state=offer|offer-eind|question&at=N|speak|result-instap|result-eind|page (src/dev/ToetsShot.tsx).
   if (shot === 'toets') return <ToetsShot lang={lang} gender={gender} />;
   // "Laat zien hoe het gaat" (the coach card): /?shot=kaart&state=full|start|new (see KaartShot);

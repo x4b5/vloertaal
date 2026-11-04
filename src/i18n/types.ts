@@ -407,6 +407,12 @@ export const uiEn = {
   loadFailed: 'Not loaded. Is the internet on?',
   /** The error screen's "Try again" button, for screen readers (also in src/i18n/meta.ts: the screen comes before the pack). */
   retry: 'Try again',
+  /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed): what this
+     phone saved can't be read, or a bug. Not "Is the internet on?". Its two ways out: backupTitle
+     and startOver; before wiping it asks resetConfirm, with cancel and resetProgress. */
+  bootFailed: 'Vloertaal can’t start.',
+  bootFailedHint: 'Keep your progress first. Then start again.',
+  startOver: 'Start again',
   /* "Wat ken je al?": a short test at the start and after 4 weeks (src/components/Toets.tsx). */
   toetsTitle: 'What do you know already?',
   toetsOffer: 'About 10 minutes. There are no marks. It is just for you.',

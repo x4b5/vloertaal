@@ -4190,6 +4190,16 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 :root[data-theme='dark'] { --logo-ring: #3b4249; }
 .logo-mark { box-shadow: 0 0 0 1.5px var(--logo-ring); }
 .boot-label .logo-mark { box-shadow: none; }
+/* The start that failed (src/components/Splash.tsx BootFailed): its words and two ways out under
+   the name (the words' own style, .boot-failed, is in index.html with the splash's). */
+.boot-stuck { display: flex; flex-direction: column; align-items: stretch; gap: 12px; width: 100%; max-width: 340px; outline: none; }
+.boot-stuck .boot-failed { max-width: none; }
+.boot-hint { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; font-size: 0.95rem; line-height: 1.35; color: var(--ink-2); }
+.boot-made { color: var(--right-ink); font-weight: 600; }
+.boot-way { min-height: 64px; font-size: 1rem; }
+/* "Opnieuw beginnen" is a way out too, not a faint extra: ink, as a button that works. */
+.boot-way.btn-ghost { color: var(--ink); border-color: var(--ink-3); }
+.boot-stuck .reset-actions { margin-top: 4px; }
 
 /* Bram says one calm line: a small speech bubble, never a button (no pointer, no motion). */
 .bram-say {

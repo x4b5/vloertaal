@@ -330,6 +330,10 @@ const lang: HelpLanguageSource = {
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'بارگیری نشد. اینترنت وصل است؟',
     retry: 'دوباره امتحان کنید',
+    /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+    bootFailed: 'Vloertaal اجرا نمی‌شود.', // nieuw, nalezen
+    bootFailedHint: 'اول پیشرفت خود را نگه دارید. بعد از نو شروع کنید.', // nieuw, nalezen
+    startOver: 'از نو شروع کنید', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'از قبل چه می‌دانید؟', // nieuw, nalezen // nagelezen AI 31 okt
     toetsOffer: 'حدود 10 دقیقه. نمره‌ای در کار نیست. فقط برای خودتان است.', // nieuw, nalezen // nagelezen AI 31 okt

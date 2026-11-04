@@ -371,6 +371,10 @@ export const uiNl: Record<UiKey, UiText> = {
   resetKeeps: 'De app wist je lessen, je dagen op rij en je certificaten. Je taal en je instellingen blijven.', // regels: no words
   loadFailed: 'Niet geladen. Is er internet?',
   retry: 'Opnieuw proberen',
+  /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
+  bootFailed: 'Vloertaal kan niet starten.', // nieuw, nalezen
+  bootFailedHint: 'Bewaar eerst je voortgang. Begin daarna opnieuw.', // nieuw, nalezen
+  startOver: 'Opnieuw beginnen', // nieuw, nalezen
   // "Wat ken je al?" (alleen in het spoor Taal; hier voor de volledigheid)
   toetsTitle: 'Wat ken je al?',
   toetsOffer: 'Ongeveer 10 minuten. Je krijgt geen cijfer. Het is alleen voor jou.',

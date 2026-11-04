@@ -149,7 +149,13 @@ if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 const linkedUnit = takeLinkedUnit();
 // The first screen's own file, when it has one (src/lazyScreens.tsx): main.tsx renders once it is here,
 // so the splash stays up meanwhile. 'stopped': the streak stopped, its page shows on the home first.
-needAtStart(adminRequested() ? 'admin' : coachesRequested() ? 'coaches' : linkedUnit ? 'home' : restored().name, settleStreak(loadProgress(), new Date()).broken ? 'stopped' : '');
+// Only a head start: whatever goes wrong here (the phone's save, the history) must never stop this
+// file from loading, as a broken save did until 4 November 2026 (the splash stayed up for good).
+try {
+  needAtStart(adminRequested() ? 'admin' : coachesRequested() ? 'coaches' : linkedUnit ? 'home' : restored().name, settleStreak(loadProgress(), new Date()).broken ? 'stopped' : '');
+} catch {
+  // The first screen's file then loads when that screen opens.
+}
 
 /**
  * The saved progress, brought up to date for today: a free day covers one missed day; when the
