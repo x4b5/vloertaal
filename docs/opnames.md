@@ -263,3 +263,39 @@ korte zinnen (`src/content/patterns.ts`, ongeveer 450 tekens per stem, dus ongev
 tekens voor de vier stemmen). Ze staan met `npm run clips` in `public/audio/clips.json`, met een
 id die eindigt op `.front`. Neem ze op zoals in stap 1 tot en met 4, met `clips` = `\.front$`. Tot dan leest de stem van de
 telefoon de nieuwe zin voor; de oude zin en de losse woorden hebben al een opname.
+
+## 9. "Hoe zeg je het?": de losse klanken
+
+De klankkaarten (`src/content/klankMond.ts`; in Hulp en aan het begin van de lessen van Klanken)
+hebben een knop die de klank laat horen. Is de klank los opgenomen, dan hoor je die; anders hoor je
+het voorbeeldwoord (maan, nee, fiets, …). Alle voorbeeldwoorden hebben al een opname in de vier
+stemmen. Er is dus niets verplicht op te nemen; de kaarten werken nu al.
+
+Los opgenomen zijn al (4 november 2026): **u** (de uu), **ui** en **ei** (de ij).
+
+Nog los op te nemen, als je dat wilt. De tekst moet precies zo in `voices.json` komen te staan;
+de kaart vindt de opname dan zelf (Bram, de stem Thijmen, is genoeg; de app zoekt bij een andere
+mannenstem verder):
+
+| klank | tekst van de opname | nu te horen |
+| --- | --- | --- |
+| aa | `aa` | maan |
+| ee | `ee` | nee |
+| ie | `ie` | fiets |
+| oo | `oo` | doos |
+| oe | `oe` | moer |
+| eu | `eu` | keuken |
+| ou / au | `ou` | koud |
+
+Zeven heel korte teksten: een paar credits per stem. Let op: een computerstem leest twee letters
+los soms als namen van letters ("o-e" in plaats van oe) of als een afkorting. Luister elke opname
+na voordat je hem in `voices.json` zet. Klinkt hij niet goed, laat hem dan weg: het woord werkt ook.
+Deze teksten staan niet in `public/audio/clips.json` (`npm run clips`), zodat een gewone opnamerun
+ze niet vanzelf meeneemt. Neem ze apart op (in de app van ElevenLabs, of met een eigen regel in
+`clips.json`) en zet ze daarna met de juiste tekst in `voices.json`.
+
+De korte klinkers **a, e, i, o, u** kun je niet als losse letter opnemen: "a" alleen klinkt als de
+naam van de letter, en dat is de aa. Die kaarten laten daarom altijd het woord horen (man, helm,
+links, stop, bus). Wil je ze toch los, dan kan alleen een mens ze goed inspreken (kort, zonder
+letternaam). Ook dan geldt: de tekst van de opname moet dezelfde zijn als in `klankMond.ts`
+(`sound`), en daar moet die tekst er dan bij.
