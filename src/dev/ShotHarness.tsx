@@ -255,7 +255,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // The gender question right after a help language with gender: /?shot=gender&lang=pl
   // (&gender=f shows it picked; Settings has the same cards: /?shot=settings&lang=pl&gender=f).
   if (shot === 'gender') return <GenderShot lang={(lang as LangCode) ?? 'pl'} gender={gender} greet={q.get('greet') === '1'} />;
-  if (shot === 'rulesnotice') return <RulesNoticeScreen country={q.get('country') === 'be' ? 'be' : undefined} onDone={() => {}} />;
+  if (shot === 'rulesnotice') return <RulesNoticeScreen country={q.get('country') === 'be' ? 'be' : undefined} lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} />;
   if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} />;
   if (shot === 'admin') return <Admin onBack={() => {}} />;
   // &novoice=1 (the work-rules track): the line that this phone has no Dutch voice, on the home

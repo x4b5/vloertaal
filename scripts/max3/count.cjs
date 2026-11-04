@@ -763,6 +763,8 @@ function defineRuleStates() {
   step('card-werkorder', 'rule&step=card&id=r.l.werkplaats.2.ca1', true);
   step('whatdo-proefrit', 'rule&step=whatdo&id=r.l.werkplaats.2.wd1', true);
   step('whoask-huisarts', 'rule&step=whoask&id=r.l.veilig.5.wa1', true);
+  // After another pick, "Meer uitleg" opened: its text has its own speaker (one per block).
+  add('rule:whatdo:more', shot('rule&step=whatdo'), async (p) => { await tap(p, choice, 1); await settle(p, 900); await tap(p, '.rule-fb-more summary'); await settle(p); }, { expect: '.rule-fb-more-body .speak-glyph' });
   add('rule:retry', shot('rule&step=whatdo&retry=1'), null, { expect: '.tag-repeat' });
   add('rule:quiet', shot('rule&step=scene&quiet=1'), null, { expect: '.player-body .exercise' });
   add('rule:quit-dialog', shot('rule&step=whatdo'), async (p) => { await tap(p, '.player-top .lesson-close'); }, { expect: '.pause-sheet .sheet-sound' });

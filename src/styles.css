@@ -5163,3 +5163,19 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .feedback-why-row { margin-top: 6px; }
 .feedback-why-row > .feedback-meaning { margin-top: 0; }
 
+/* ---- Werkregels, read aloud (the UX evaluation, 4 November 2026) ----
+   Every Dutch text block has one speaker: answers that are sentences, the situation of "Zo zeg je
+   het", the advice line under a rule, the picked answer's own line, "Meer uitleg", "Goed om te
+   weten". Without any Dutch voice no answer has a speaker: no empty column beside the cards either. */
+.rule-options:not(:has(.rule-option-say > *)) .rule-option-say { display: none; }
+.rule-context-row { display: flex; align-items: flex-start; gap: 10px; margin: 4px 0 16px; }
+.rule-context-row > .rule-context { flex: 1; min-width: 0; margin: 0; }
+.rule-context-row > .speak-glyph { flex: none; margin-top: 1px; }
+.rule-advice-text { flex: 1; min-width: 0; }
+.rule-advice > .speak-glyph { flex: none; margin-top: -4px; }
+.rule-fb-own-row { display: flex; align-items: flex-start; gap: 10px; margin: 8px 0 0; }
+.rule-fb-own-row > .rule-fb-own { flex: 1; min-width: 0; margin: 0; }
+.rule-fb-more-body { display: flex; align-items: flex-start; gap: 10px; }
+.rule-fb-more-body > p { flex: 1; min-width: 0; }
+.rules-disclaimer > p { flex: 1; }
+.rules-disclaimer > .speak-glyph { flex: none; margin-top: -4px; }

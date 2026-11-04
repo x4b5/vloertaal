@@ -81,23 +81,27 @@ export function RulesHelp({ lang, country, onShelf, onBack, after }: {
  * "Goed om te weten", once: the first time the work-rules track opens (before its path), on a page
  * of its own with one button. It stays readable in the Hulp tab and on Over Vloertaal.
  */
-export function RulesNoticeScreen({ country, onDone }: { country?: 'nl' | 'be'; onDone: () => void }) {
+export function RulesNoticeScreen({ country, lang, onDone }: { country?: 'nl' | 'be'; lang?: HelpLanguage; onDone: () => void }) {
   // It comes after a tap on another screen (the language): a screen reader starts at its heading.
   const head = useRef<HTMLHeadingElement>(null);
   useEffect(() => { head.current?.focus({ preventScroll: true }); }, []);
   const beCourse = country === 'be' && rulesCountry() === 'be';
   const notice = beCourse ? RULES_NOTICE_BE : RULES_NOTICE.filter((line) => country !== 'be' || line !== RULES_COUNTRY);
+  // About 45 words before the first lesson: each card has one speaker for its whole text (hidden
+  // without a Dutch phone voice), named after the card (the UX evaluation, 4 November 2026).
   return (
     <div className="screen onboarding rules-notice" lang="nl">
       <h1 className="onboarding-title" ref={head} tabIndex={-1}>Goed om te weten</h1>
       <section className="rules-disclaimer rules-notice-card" aria-label="Goed om te weten">
         <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={28} /></span>
         <p>{notice.map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
+        <SpeakButton text={notice.join(' ')} long needsDevice glyph help={lang} label={`${said(ui('playAudio', lang))}: Goed om te weten`} />
       </section>
       {country === 'be' && !beCourse && (
         <section className="rules-disclaimer rules-be-note" aria-label="Je werkt in België">
           <span className="rules-disclaimer-icon" aria-hidden><InfoIcon size={24} /></span>
           <p>{RULES_BE_NOTE.map((line) => <span key={line} className="rules-disclaimer-line">{line}</span>)}</p>
+          <SpeakButton text={RULES_BE_NOTE.join(' ')} long needsDevice glyph help={lang} label={`${said(ui('playAudio', lang))}: Je werkt in België`} />
         </section>
       )}
       <button type="button" className="btn btn-primary rules-notice-ok" onClick={onDone}>Ik snap het</button>
