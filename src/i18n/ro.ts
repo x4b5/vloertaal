@@ -452,6 +452,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Ai spus asta la muncă?', // nieuw, nalezen
     geluktYes: 'Da, a mers', // nieuw, nalezen
     geluktNotYet: 'Încă nu', // nieuw, nalezen
+    geluktDoneN: { one: 'Bravo! Deja {n} propoziție reușită la muncă.', few: 'Bravo! Deja {n} propoziții reușite la muncă.', other: 'Bravo! Deja {n} de propoziții reușite la muncă.' }, // nieuw, nalezen
+    geluktDoneOne: 'Bravo! Prima ta propoziție la muncă a reușit.', // nieuw, nalezen
+    geluktWhere: 'Le găsești în Setări.', // nieuw, nalezen
+    geluktTitle: 'Reușit la muncă', // nieuw, nalezen
+    geluktListHint: 'Ai spus aceste propoziții la muncă.', // nieuw, nalezen
+    nextMinutesN: 'cam {n} min', // nieuw, nalezen
     saveFailed: 'Progresul tău nu a fost salvat. Telefonul e plin? Fă puțin loc. Sau mergi la Setări: „Păstrează-ți progresul”.', // nieuw, nalezen
     bewaarNudge: 'Telefonul îți poate șterge uneori progresul. De aceea, păstrează o copie.', // nieuw, nalezen
     bewaarGo: 'Salvează acum', // nieuw, nalezen

@@ -452,6 +452,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Bunu işte söyledin mi?', // nieuw, nalezen
     geluktYes: 'Evet, oldu', // nieuw, nalezen
     geluktNotYet: 'Henüz değil', // nieuw, nalezen
+    geluktDoneN: 'Aferin! İşte şimdiye kadar {n} cümle başardın.', // nieuw, nalezen
+    geluktDoneOne: 'Aferin! İşteki ilk cümlen başarılı oldu.', // nieuw, nalezen
+    geluktWhere: 'Onları Ayarlar’da bulursun.', // nieuw, nalezen
+    geluktTitle: 'İşte başarılı', // nieuw, nalezen
+    geluktListHint: 'Bu cümleleri işte söyledin.', // nieuw, nalezen
+    nextMinutesN: 'yaklaşık {n} dk', // nieuw, nalezen
     saveFailed: 'İlerlemen kaydedilmedi. Telefonun dolu mu? Biraz yer aç. Ya da Ayarlar’a git: “İlerlemeni sakla”.', // nieuw, nalezen
     bewaarNudge: 'Telefonun bazen ilerlemeni silebilir. Bu yüzden bir kopya sakla.', // nieuw, nalezen
     bewaarGo: 'Şimdi kaydet', // nieuw, nalezen

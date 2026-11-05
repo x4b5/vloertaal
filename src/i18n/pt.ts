@@ -452,6 +452,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Disseste isto no trabalho?', // nieuw, nalezen
     geluktYes: 'Sim, correu bem', // nieuw, nalezen
     geluktNotYet: 'Ainda não', // nieuw, nalezen
+    geluktDoneN: { one: 'Muito bem! Já conseguiste {n} frase no trabalho.', many: 'Muito bem! Já conseguiste {n} frases no trabalho.', other: 'Muito bem! Já conseguiste {n} frases no trabalho.' }, // nieuw, nalezen
+    geluktDoneOne: 'Muito bem! A tua primeira frase no trabalho correu bem.', // nieuw, nalezen
+    geluktWhere: 'Encontras as frases nas Definições.', // nieuw, nalezen
+    geluktTitle: 'Conseguido no trabalho', // nieuw, nalezen
+    geluktListHint: 'Disseste estas frases no trabalho.', // nieuw, nalezen
+    nextMinutesN: 'cerca de {n} min', // nieuw, nalezen
     saveFailed: 'O teu progresso não foi guardado. O telemóvel está cheio? Liberta algum espaço. Ou vai a Definições: «Guarda o teu progresso».', // nieuw, nalezen
     bewaarNudge: 'O telemóvel às vezes pode apagar o teu progresso. Por isso, guarda uma cópia.', // nieuw, nalezen
     bewaarGo: 'Guardar agora', // nieuw, nalezen

@@ -452,6 +452,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Udało się to powiedzieć w pracy?', // nieuw, nalezen
     geluktYes: 'Tak, udało się', // nieuw, nalezen
     geluktNotYet: 'Jeszcze nie', // nieuw, nalezen
+    geluktDoneN: { one: 'Dobra robota! Już {n} zdanie udało się w pracy.', few: 'Dobra robota! Już {n} zdania udały się w pracy.', many: 'Dobra robota! Już {n} zdań udało się w pracy.', other: 'Dobra robota! Już {n} zdania udało się w pracy.' }, // nieuw, nalezen
+    geluktDoneOne: 'Dobra robota! Twoje pierwsze zdanie w pracy się udało.', // nieuw, nalezen
+    geluktWhere: 'Znajdziesz je w Ustawieniach.', // nieuw, nalezen
+    geluktTitle: 'Udało się w pracy', // nieuw, nalezen
+    geluktListHint: { m: 'Te zdania powiedziałeś w pracy.', f: 'Te zdania powiedziałaś w pracy.', x: 'Te zdania udało się powiedzieć w pracy.' }, // nieuw, nalezen
+    nextMinutesN: 'ok. {n} min', // nieuw, nalezen
     saveFailed: 'Twoje postępy nie zostały zapisane. Czy telefon jest pełny? Zrób trochę miejsca. Albo wejdź w Ustawienia: „Zachowaj swoje postępy”.', // nieuw, nalezen
     bewaarNudge: 'Telefon czasem może usunąć twoje postępy. Dlatego zachowaj kopię.', // nieuw, nalezen
     bewaarGo: 'Zapisz teraz', // nieuw, nalezen

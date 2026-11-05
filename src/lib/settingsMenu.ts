@@ -17,6 +17,9 @@ export type SettingsPage =
   /** "Laat zien hoe het gaat": the coach card, a screen of its own (App, src/components/Certificate.tsx
    *  CoachCardScreen), from Taal en ik, under "Mijn certificaten". */
   | 'kaart'
+  /** "Gelukt op het werk": the sentences said at work (src/components/GeluktCard.tsx GeluktList),
+   *  from Taal en ik, under "Mijn certificaten". Only with at least one (SettingsContext.gelukt). */
+  | 'gelukt'
   /** "Laat de telefoon luisteren (proef)", under "Spreken oefenen": only on a phone that can
    *  recognise Dutch on the device (src/lib/listen.ts). */
   | 'listen';
@@ -58,6 +61,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   unlock: 'phone',
   toets: 'lessons',
   kaart: 'me',
+  gelukt: 'me',
   listen: 'lessons',
 };
 
@@ -69,7 +73,7 @@ export function settingsDepth(page?: SettingsPage | null): number {
 }
 
 /** Pages that are lists (one kind of row, one tap per row): they keep a Back button. */
-export const SETTINGS_LIST_PAGES: SettingsPage[] = ['me', 'lessons', 'phone', 'language', 'sector', 'certificates'];
+export const SETTINGS_LIST_PAGES: SettingsPage[] = ['me', 'lessons', 'phone', 'language', 'sector', 'certificates', 'gelukt'];
 
 export interface SettingsContext {
   /** A help language is chosen (else "Show English too" has nothing to do). */
@@ -96,12 +100,15 @@ export interface SettingsContext {
   /** This phone can recognise Dutch on the device, or download it (src/lib/listen.ts
    *  localStatus): "Laat de telefoon luisteren (proef)" is offered. Missing = not offered. */
   listen?: boolean;
+  /** Sentences said at work are kept (Progress.gelukt): "Gelukt op het werk" is offered. Missing
+   *  = none (the row is left out: an empty list would only say what has not happened yet). */
+  gelukt?: boolean;
 }
 
 /** The rows of a list, in order. */
 export function settingsRows(list: SettingsList, ctx: SettingsContext): SettingsPage[] {
   const rows: (SettingsPage | false)[] =
-    list === 'me' ? [ctx.routes === true && 'route', (!ctx.rules || ctx.routes !== true) && 'language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates', 'kaart']
+    list === 'me' ? [ctx.routes === true && 'route', (!ctx.rules || ctx.routes !== true) && 'language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates', ctx.gelukt === true && 'gelukt', 'kaart']
     : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'tempo', !ctx.rules && 'speaking', !ctx.rules && ctx.listen === true && 'listen', !ctx.rules && 'writing', 'text', 'theme', 'calm', !ctx.rules && 'toets']
     : [ctx.preview && 'unlock', ctx.offline && 'offline', 'reminder', ctx.install && 'install', 'backup', 'counting', 'reset'];
   return rows.filter((r): r is SettingsPage => Boolean(r));

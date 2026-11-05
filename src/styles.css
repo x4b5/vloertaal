@@ -1987,6 +1987,10 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .result-next-pic { flex: none; width: 44px; height: 44px; }
 .result-next-title { align-items: flex-start; text-align: start; font-weight: 650; min-width: 0; }
 .result-next-title .bi-help { font-weight: 400; color: var(--muted); }
+/* About how long the next lesson takes (src/lib/lessonTime.ts): small and calm under its title. */
+.result-next-text { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0; text-align: start; }
+.result-next-time { align-items: flex-start; font-size: 0.92rem; font-weight: 500; color: var(--muted); }
+.result-next-time .bi-help { --help-size: 0.85em; }
 @media (prefers-reduced-motion: reduce) { .result-line { animation: none; } }
 
 /* Milestone: tier stamp on the streak card, the work week, record and free days. */

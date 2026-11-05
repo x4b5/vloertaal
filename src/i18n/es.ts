@@ -452,6 +452,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: '¿Lo dijiste en el trabajo?', // nieuw, nalezen
     geluktYes: 'Sí, funcionó', // nieuw, nalezen
     geluktNotYet: 'Todavía no', // nieuw, nalezen
+    geluktDoneN: { one: '¡Muy bien! Ya te salió {n} frase en el trabajo.', many: '¡Muy bien! Ya te salieron {n} frases en el trabajo.', other: '¡Muy bien! Ya te salieron {n} frases en el trabajo.' }, // nieuw, nalezen
+    geluktDoneOne: '¡Muy bien! Tu primera frase en el trabajo salió bien.', // nieuw, nalezen
+    geluktWhere: 'Las encuentras en Ajustes.', // nieuw, nalezen
+    geluktTitle: 'Logrado en el trabajo', // nieuw, nalezen
+    geluktListHint: 'Dijiste estas frases en el trabajo.', // nieuw, nalezen
+    nextMinutesN: 'unos {n} min', // nieuw, nalezen
     saveFailed: 'Tu progreso no se ha guardado. ¿Tu teléfono está lleno? Libera un poco de espacio. O ve a Ajustes: «Guarda tu progreso».', // nieuw, nalezen
     bewaarNudge: 'Tu teléfono a veces puede borrar tu progreso. Por eso, guarda una copia.', // nieuw, nalezen
     bewaarGo: 'Guardar ahora', // nieuw, nalezen

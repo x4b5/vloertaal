@@ -452,6 +452,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Вдалося сказати це на роботі?', // nieuw, nalezen
     geluktYes: 'Так, вдалося', // nieuw, nalezen
     geluktNotYet: 'Ще ні', // nieuw, nalezen
+    geluktDoneN: { one: 'Молодець! Уже {n} речення вдалося сказати на роботі.', few: 'Молодець! Уже {n} речення вдалося сказати на роботі.', many: 'Молодець! Уже {n} речень вдалося сказати на роботі.', other: 'Молодець! Уже {n} речення вдалося сказати на роботі.' }, // nieuw, nalezen
+    geluktDoneOne: 'Молодець! Перше речення на роботі вдалося.', // nieuw, nalezen
+    geluktWhere: 'Їх можна знайти в Налаштуваннях.', // nieuw, nalezen
+    geluktTitle: 'Вдалося на роботі', // nieuw, nalezen
+    geluktListHint: { m: 'Ці речення ти сказав на роботі.', f: 'Ці речення ти сказала на роботі.', x: 'Ці речення вдалося сказати на роботі.' }, // nieuw, nalezen
+    nextMinutesN: 'близько {n} хв', // nieuw, nalezen
     saveFailed: 'Твій прогрес не збережено. Телефон заповнений? Звільни трохи місця. Або відкрий Налаштування: «Збережи свій прогрес».', // nieuw, nalezen
     bewaarNudge: 'Телефон іноді може стерти твій прогрес. Тому збережи копію.', // nieuw, nalezen
     bewaarGo: 'Зберегти зараз', // nieuw, nalezen

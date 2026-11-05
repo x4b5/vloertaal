@@ -35,6 +35,7 @@ import { Bi } from './Bi';
 import { InfoMore } from './InfoMore';
 import { CertIcon } from './CertBadge';
 import { CertificatesCard } from './Certificate';
+import { GeluktList } from './GeluktCard';
 import { ChoiceCards, type ChoiceOption } from './Choice';
 import { colourOptions } from './Colour';
 import { countryOptions } from './Country';
@@ -42,7 +43,7 @@ import { ChromeBack } from './ChromeBack';
 import { UpgradeCard } from './Gate';
 import { GenderPicker, NeutralIcon } from './Gender';
 import {
-  AlertIcon, AutoThemeIcon, CalendarIcon, CheckIcon, ChevronIcon, CloseIcon, CrateIcon, GlobeIcon, KeyboardIcon,
+  AlertIcon, AutoThemeIcon, BubblesIcon, CalendarIcon, CheckIcon, ChevronIcon, CloseIcon, CrateIcon, GlobeIcon, KeyboardIcon,
   LettersIcon, LockIcon, PencilIcon, RouteIcon, SpeakerIcon, SpeakerOffIcon,
 } from './Icons';
 import { BackupCard, ClockGlyph, InstallCard, OwnTime, addReminder, remindAddedKey, remindStoppedKey, stopReminder } from './Keep';
@@ -177,6 +178,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   unlock: { nl: 'Volledige versie', key: 'unlockFull', icon: <LockIcon size={24} /> },
   toets: { nl: 'Wat ken je al?', key: 'toetsTitle', icon: <BarsIcon size={24} /> },
   kaart: { nl: 'Laat zien hoe het gaat', key: 'coachCard', icon: <CardIcon size={24} /> },
+  gelukt: { nl: 'Gelukt op het werk', key: 'geluktTitle', icon: <BubblesIcon size={24} /> },
   listen: { nl: 'Laat de telefoon luisteren (proef)', key: 'listenTrial', icon: <MicIcon size={24} /> },
 };
 
@@ -331,6 +333,7 @@ export function Settings({
     recorded: recorded.length > 0,
     // Only when the regions are offered (src/content/regio regionsOn) and the app can store one.
     region: regionsOn() && Boolean(onRegion),
+    gelukt: Boolean(progress.gelukt?.length),
   };
   const writing = nonLatinHelp(lang) && !wantsWriting() ? 'pick' : writingInput(lang);
   const voice = voiceChoiceOf(progress.voice, recorded);
@@ -353,6 +356,7 @@ export function Settings({
       case 'country': return <Value text={say(progress.country === 'be' ? 'countryBe' : 'countryNl')} />;
       case 'english': return <Value text={say(wantsEnglish() ? 'settingOn' : 'settingOff')} />;
       case 'certificates': return <span className="set-row-value">{earnedCertificates(progress).length}</span>;
+      case 'gelukt': return <span className="set-row-value">{progress.gelukt?.length ?? 0}</span>;
       case 'sound': return <Value text={say(progress.quiet ? 'withoutSound' : 'soundOn')} />;
       case 'tempo': return <Value text={say(TEMPO_KEYS[tempoChoiceOf(progress)])} />;
       case 'voice': return voice ? <Value text={say(voice === 'f' ? 'voiceWoman' : voice === 'm' ? 'voiceMan' : 'voiceAuto')} /> : null;
@@ -504,6 +508,8 @@ export function Settings({
         return onOff(wantsEnglish(), (on) => { setWantsEnglish(on); applyEnglish(lang?.code, on); });
       case 'certificates':
         return <><CertificatesCard progress={progress} lang={lang} onOpen={onCertificate} /><ToetsLine progress={progress} lang={lang} /></>;
+      case 'gelukt':
+        return <GeluktList entries={progress.gelukt ?? []} lang={lang} />;
       case 'sound':
         return (
           <>

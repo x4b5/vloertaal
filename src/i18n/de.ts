@@ -452,6 +452,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Hast du das bei der Arbeit gesagt?', // nieuw, nalezen
     geluktYes: 'Ja, geklappt', // nieuw, nalezen
     geluktNotYet: 'Noch nicht', // nieuw, nalezen
+    geluktDoneN: { one: 'Gut gemacht! Schon {n} Satz bei der Arbeit geschafft.', other: 'Gut gemacht! Schon {n} Sätze bei der Arbeit geschafft.' }, // nieuw, nalezen
+    geluktDoneOne: 'Gut gemacht! Dein erster Satz bei der Arbeit hat geklappt.', // nieuw, nalezen
+    geluktWhere: 'Du findest sie in den Einstellungen.', // nieuw, nalezen
+    geluktTitle: 'Bei der Arbeit geschafft', // nieuw, nalezen
+    geluktListHint: 'Diese Sätze hast du bei der Arbeit gesagt.', // nieuw, nalezen
+    nextMinutesN: 'ca. {n} Min.', // nieuw, nalezen
     saveFailed: 'Dein Fortschritt wurde nicht gespeichert. Ist dein Handy voll? Mach etwas Platz frei. Oder geh zu Einstellungen: „Deinen Fortschritt sichern“.', // nieuw, nalezen
     bewaarNudge: 'Dein Handy kann deinen Fortschritt manchmal löschen. Speichere darum eine Kopie.', // nieuw, nalezen
     bewaarGo: 'Jetzt sichern', // nieuw, nalezen

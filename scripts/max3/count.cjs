@@ -826,13 +826,20 @@ function meldingStates(add, shot) {
   // "Gelukt?" a day after the work sentence (since 4 November 2026, verbeterplan fase 2): a line
   // under the next lesson, which stays the yellow card (in Werkregels in the place of "Over deze
   // regels", the last of the three); the line opens its page with the two answers and the back
-  // arrow; either answer gives the home without the line, Back keeps it. With words due there is
-  // no room: the line waits.
+  // arrow; "Nog niet" gives the home without the line, Back keeps it. With words due there is
+  // no room: the line waits. Since 5 November 2026 "Ja, gelukt" first gives a short moment
+  // (Bram: "Al 4 zinnen gelukt op het werk", one button Verder), then the home without the line.
   const noLine = '.home3:not(.home-offer):not(:has(.gelukt-line)) .bay-now';
   add('gelukt:home', shot('gelukt'), null, { expect: '.home3:not(.home-offer) .rb-current ~ .gelukt-line' });
   add('gelukt:page', shot('gelukt&state=page'), null, { voices: true, expect: '.gelukt-page .gelukt-card .notice-ok' });
   add('gelukt:open', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); }, { voices: true, expect: '.gelukt-page .gelukt-card .notice-ok' });
-  add('gelukt:ja', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.gelukt-card .notice-ok'); await settle(p); }, { expect: noLine });
+  add('gelukt:ja', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.gelukt-card .notice-ok'); await settle(p); }, { expect: '.gelukt-done-page .gelukt-done-go' });
+  add('gelukt:done', shot('gelukt&state=done'), null, { expect: '.gelukt-done-page .gelukt-done-go' });
+  add('gelukt:done-first', shot('gelukt&state=done&n=1'), null, { expect: '.gelukt-done-page .gelukt-done-go' });
+  add('gelukt:ja-verder', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.gelukt-card .notice-ok'); await settle(p, 1000); await tap(p, '.gelukt-done-go'); await settle(p); }, { expect: noLine });
+  // "Gelukt op het werk" in Settings › Taal en ik: the row (with sentences only) and its list.
+  add('gelukt:settings-me', shot('settings&page=me&gelukt=4'), null, { list: true, expect: '.set-rows' });
+  add('gelukt:settings-list', shot('settings&page=gelukt&gelukt=4'), null, { list: true, voices: true, expect: '.gelukt-list .gelukt-row' });
   add('gelukt:nognie', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.gelukt-card .notice-more'); await settle(p); }, { expect: noLine });
   add('gelukt:back', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.home3 .gelukt-line' });
   add('gelukt:daily-due', shot('gelukt&daily=due'), null, { expect: '.home3:not(:has(.gelukt-line)) .daily-due' });
@@ -942,6 +949,8 @@ function defineRuleStates() {
   add('rule:settings', shot('settings'), null, { expect: '.max3-menu' });
   for (const pg of ['me', 'lessons', 'phone', 'language']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('rule:settings-sector', shot('settings&page=sector'), null, { list: true, expect: '.chrome-back' });
+  add('rule:gelukt-done', shot('gelukt&state=done'), null, { expect: '.gelukt-done-page .gelukt-done-go' });
+  add('rule:gelukt-list', shot('settings&page=gelukt&gelukt=3'), null, { list: true, voices: true, expect: '.gelukt-list .gelukt-row' });
   for (const pg of ['sound', 'voice', 'text', 'theme', 'reminder', 'backup']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: pg === 'theme', expect: '.chrome-back' });
   add('rule:settings-reminder-set', shot('settings&page=reminder'), withReminder, { expect: '.set-remind-now' });
   add('rule:settings-backup-fewer', shot('settings&page=backup'), async (p) => { await putBack(p, ['r.l.zoeken.1']); await tap(p, '.waybill-ask .danger'); }, { expect: '.waybill-fewer' });
