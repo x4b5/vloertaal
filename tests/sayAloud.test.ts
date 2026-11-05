@@ -2,7 +2,10 @@ import { readFileSync } from 'node:fs';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeAll, describe, expect, it, vi } from 'vitest';
-import { DutchExercise, IntroCard, ListenExercise, MeaningExercise } from '../src/components/Exercises';
+import { DutchExercise, IntroCard, ListenExercise, MeaningExercise, TipCard } from '../src/components/Exercises';
+import { ModelLine } from '../src/components/RuleSteps';
+import { cultureTips } from '../src/content/culture';
+import { rulesUnits } from '../src/content/regels';
 import { LessonPlayer } from '../src/components/LessonPlayer';
 import { findLesson } from '../src/content/curriculum';
 import { getHelpLanguage } from '../src/i18n/all';
@@ -300,5 +303,34 @@ describe('the texts', () => {
     }
     expect(uiNl.sayItAloud).toBe('Zeg het hardop.');
     expect(uiNl.sayItQuietly).toBe('Zeg het zachtjes, of in je hoofd.');
+  });
+});
+
+describe('"Zeg het hardop" under "Zeg het zo" and "Zo zeg je het" too (the owner, 5 November 2026)', () => {
+  beforeAll(async () => { await loadPictures(); });
+  const tip = cultureTips.find((t) => t.id === 'c.gear')!;
+  const pl = getHelpLanguage('pl');
+  const tipCard = (part: 'read' | 'say', extra: Record<string, unknown> = {}) =>
+    renderToStaticMarkup(createElement(TipCard as never, { ex: { kind: 'tip', tip, part }, lang: pl, onAnswer: () => {}, ...extra } as never));
+
+  it('on the tip\'s "Zeg het zo" page, at once (the phrase does not play by itself), in Dutch and the help language', () => {
+    const out = tipCard('say');
+    expect(out).toContain('class="say-aloud ');
+    expect(out).not.toContain('say-aloud is-waiting');
+    expect(out).toContain(uiNl.sayItAloud as string);
+    expect(out).toContain(pl!.ui.sayItAloud as string);
+  });
+
+  it('softly without sound; not on the tip\'s first page (its explanation)', () => {
+    expect(tipCard('say', { soundOff: true })).toContain(uiNl.sayItQuietly as string);
+    expect(tipCard('read')).not.toContain('say-aloud');
+  });
+
+  it('under "Zo zeg je het" in Werkregels: in Dutch only, after the sentence has sounded', () => {
+    const step = rulesUnits.flatMap((u) => u.lessons).flatMap((l) => l.steps).find((s) => s.kind === 'model')!;
+    const out = renderToStaticMarkup(createElement(ModelLine as never, { ex: { kind: 'model', step }, onAnswer: () => {} } as never));
+    expect(out).toContain('say-aloud is-waiting');
+    expect(out).toContain(uiNl.sayItAloud as string);
+    expect(out).not.toContain('bi-help');
   });
 });

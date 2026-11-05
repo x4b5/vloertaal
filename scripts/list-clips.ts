@@ -11,7 +11,7 @@ import { lessonSayings } from '../src/content/sayings';
 import { FRONT_LINES } from '../src/content/patterns';
 import { TOETS_DURF } from '../src/content/toets';
 import { tokenize } from '../src/lib/answers';
-import { sayAs } from '../src/lib/sayAs';
+import { minTake, sayAs } from '../src/lib/sayAs';
 import { hasDigitNumber } from '../src/lib/sayNumbers';
 import { BRAM_HELLO, BRAM_VOICE, VOICE_SAMPLE } from '../src/lib/voices';
 
@@ -89,7 +89,8 @@ for (const u of units)
 // it was said digit by digit ("één één twee"). Take 4: the clips with "app" ("vertaalapp",
 // "groepsapp"): the voice still said "ap" in take 2 (checked with a transcription on 1 Nov 2026).
 const SAY_TAKE = 2;
-const takeFor = (text: string) => (/app/i.test(text) ? 4 : hasDigitNumber(text) ? 3 : SAY_TAKE);
+// Take 5 (minTake, src/lib/sayAs.ts): "cao", said as one word before; now "cee-aa-oo".
+const takeFor = (text: string) => (minTake(text) || (/app/i.test(text) ? 4 : hasDigitNumber(text) ? 3 : SAY_TAKE));
 
 mkdirSync('public/audio', { recursive: true });
 writeFileSync(

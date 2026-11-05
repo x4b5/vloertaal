@@ -6,12 +6,13 @@ import { askWhoCard } from '../content/regels/askWho';
 import { ruleIconId } from '../content/regels/ruleIcons';
 import { ruleAdviceLine, ruleStaleLine } from '../content/regels/disclaimer';
 import { said, ui } from '../i18n';
-import { autoSpeakLong } from '../lib/audio';
+import { autoSpeakLong, surelySilent } from '../lib/audio';
+import { sayMode } from '../lib/sayAloud';
 import { sentences } from '../lib/dutch';
 import type { Exercise, RuleExercise, RuleKind } from '../lib/exercises';
 import { learnerVoice, voiceFor, type VoiceRef } from '../lib/voices';
 import { Character, MeAvatar, useTalking } from './Characters';
-import { type Answer, ChoiceGrid, moodFor, reactClass } from './Exercises';
+import { type Answer, ChoiceGrid, moodFor, reactClass, SayAloudLine, useSayAloud } from './Exercises';
 import { CheckIcon, InfoIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
 import { DialectLine } from './Dialect';
@@ -300,8 +301,11 @@ export function WhoAsk({ ex, lang, locked, onAnswer, verdict, run, misses }: Rul
 }
 
 /** "Zo zeg je het": the situation, and the Dutch sentence "you" say, in a speech bubble. */
-export function ModelLine({ ex, lang, onAnswer }: RuleProps<'model'>) {
+export function ModelLine({ ex, lang, onAnswer, soundOff = false }: RuleProps<'model'> & { soundOff?: boolean }) {
   const { step } = ex;
+  // "Zeg het hardop" under the sentence (the owner, 5 November 2026), in Dutch only: it plays by
+  // itself, so the line shows when it has sounded (src/lib/sayAloud.ts), softly without sound.
+  const sayLine = useSayAloud(step.nl, sayMode(soundOff, surelySilent(step.nl)), () => 0);
   // "You" say it: a neutral person icon, with the voice of the learner's character. A recording
   // of the exact sentence is used when there is one (most "Zo zeg je het" lines of the course
   // tips have one); otherwise the phone's voice.
@@ -328,6 +332,7 @@ export function ModelLine({ ex, lang, onAnswer }: RuleProps<'model'>) {
             <Say text={step.nl} lang={lang} voice={voice} />
           </div>
         </div>
+        <SayAloudLine {...sayLine} lang={lang} dutchOnly />
       </div>
     </div>
   );
