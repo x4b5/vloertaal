@@ -313,6 +313,24 @@ const baseTips: CultureTip[] = [
     ],
     why: { id: 'c.clear.w', en: 'Your supervisor first wants to know what is going on. The reason comes after that. Short and calm is clear, and here it is also polite.' },
   }),
+  // "Een nieuwe collega helpen" (the owner's request, 5 November 2026). The learner is now the one
+  // who explains: the same order as "Kort en duidelijk", and the rule of "Voor begeleiders"
+  // (src/content/pro.ts): not "Snap je het?" but "Laat eens zien". No closing line: a habit, no rule.
+  tip({
+    id: 'c.newcolleague',
+    lessonId: 'l.newcolleague',
+    emoji: '🧑‍🏫',
+    title: 'Show it, step by step',
+    body: 'What was hard for you in your first weeks is hard for a new colleague too. Explain the work in small steps: first this, then that. Do not speak faster or louder: show it, and let them do it after you. Do not ask "Snap je het?": many people say yes, also when they do not understand. Say "Laat eens zien" instead, and watch. Tell them where things are, like the toilet, the canteen and the gloves. Be patient (geduld): learning takes time, for everyone.',
+    phrase: { id: 'c.newcolleague.p', nl: 'Goed zo! Nu de volgende stap.', en: 'Well done! Now the next step.' },
+    situation: { id: 'c.newcolleague.s', en: 'You explain a task to a new colleague. He says: "Ja, ja, ik snap het." What do you do?', nl: 'Ja, ja, ik snap het.' },
+    options: [
+      { id: 'c.newcolleague.o1', en: 'Say "Laat eens zien," and watch him do it.', best: true },
+      { id: 'c.newcolleague.o2', en: 'Say "Goed zo," and go back to your own work.', best: false },
+      { id: 'c.newcolleague.o3', en: 'Explain it all again, faster and louder.', best: false },
+    ],
+    why: { id: 'c.newcolleague.w', en: 'Many people say "ja", also when they did not understand. When he shows it, you both see if it works. That is quicker than fixing a mistake later.' },
+  }),
 ];
 
 const line = (id: string, nl: string, en: string): ChatLine => ({ id, nl, en });
@@ -418,6 +436,35 @@ export const teamworkUnit: Unit = {
         chat(line('d.clear.q', 'Is het duidelijk?', 'Is it clear?'), line('d.clear.a', 'Ja. Ik heb nog één vraag.', 'Yes. I have one more question.')),
       ],
     },
+    {
+      // "Een nieuwe collega helpen" (the owner's request, 5 November 2026): welcome a new colleague,
+      // show a task in steps ("eerst … dan …"), let them copy it, check that it works ("Laat eens
+      // zien"), be patient and say where things are. Right after "Kort en duidelijk", whose order it
+      // uses. "eerst" and "daarna" (l.task), "voordoen" (l.notyet), "laten zien" (l.understood),
+      // "uitleggen" (l.mistakes), "de collega" and "nieuw" (l.people), "de buddy" (l.arrive) and
+      // "de handschoenen" (l.gear) are already words of other lessons: here they come in the
+      // sentences, the chat and the tip. Drawn: "de kast" (a cupboard, one door open); the other
+      // five have no one plain scene ("nadoen" would look like "voordoen", which has no picture
+      // either).
+      id: 'l.newcolleague',
+      title: 'Helping a new colleague',
+      words: [
+        { id: 'w.welkom', nl: 'welkom', en: 'welcome', emoji: '🙌', picture: false },
+        { id: 'w.inwerken', nl: 'inwerken', en: 'to show a new colleague the work (in the first days)', emoji: '🧭', picture: false },
+        { id: 'w.stap', nl: 'de stap', en: 'the step (one small part of a task)', emoji: '👣', picture: false },
+        { id: 'w.nadoen', nl: 'nadoen', en: 'to copy (do what someone showed you)', emoji: '🪞', picture: false },
+        { id: 'w.geduld', nl: 'het geduld', en: 'the patience', emoji: '⏳', picture: false },
+        { id: 'w.kast', nl: 'de kast', en: 'the cupboard', emoji: '🗄️' },
+      ],
+      sentences: [
+        { id: 's.newcolleague.1', nl: 'Welkom! Ik werk je vandaag in.', en: 'Welcome! Today I will show you the work.' },
+        { id: 's.newcolleague.2', nl: 'Kijk eerst. Dan doe je het na.', en: 'Watch first. Then you copy it.' },
+        { id: 's.newcolleague.3', nl: 'De handschoenen liggen in die kast.', en: 'The gloves are in that cupboard.' },
+      ],
+      dialogues: [
+        chat(line('d.newcolleague.q', 'Ik snap het, denk ik.', 'I get it, I think.'), line('d.newcolleague.a', 'Mooi. Laat eens zien.', 'Good. Show me.')),
+      ],
+    },
   ] satisfies Lesson[],
 };
 
@@ -490,6 +537,8 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.food': [0, 1, 2, 5, 6], // the hygiene rules are for everyone and for the food; a wound or sick: report it
   'c.parcel': [0, 1, 3, 5], // not at home: the company's rules; broken: a photo as proof, report it
   'c.road': [0, 2, 7, 8, 9], // no phone in your hand; breaks; who decides your hours and route: maybe an employee
+  'c.newcolleague': [0, 2, 3, 4], // what was hard for you is hard for them; show it, let them copy it; not "Snap je het?" but "Laat eens zien"
+  'c.feelwell': [2, 3, 6, 7], // not alone, not weak; who to talk to; thoughts of suicide: 113
 };
 
 /** All tips in course order: the ones above (with the Smart tools tips after "Asking for help" and the Numbers and details tips before "Time and schedule"), then those of the work-and-rights units (src/content/work.ts). */

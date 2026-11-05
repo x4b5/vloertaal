@@ -1883,6 +1883,31 @@ ______________________________________________________________
 - „If the company decides all that, you may be an employee after all”: wij gaan uit van art. 7:610 BW en het Deliveroo-arrest (HR 24 maart 2023). Is „may be … after all” en „often more rights, like pay when you are sick” voorzichtig genoeg? Moet de EU-richtlijn platformwerk (2024/2831, omzetting uiterlijk 2 december 2026, een vermoeden van werknemerschap) erbij, of juist niet zolang de Nederlandse wet er nog niet is?
 - De slotregel stuurt naar de vakbond, het Juridisch Loket of FairWork (het bedrijf kan zelf het probleem zijn). Hoort de Belastingdienst of de Arbeidsinspectie (schijnzelfstandigheid melden) hier ook bij?
 
+### c.feelwell — Too much? You do not have to do it alone (nieuw, 5 november 2026)
+
+*Unit „Gezondheid”, les „Feeling good at work” (`l.feelwell`)*
+
+**Samenvatting (NL):** Iedereen is soms moe, gestrest of verdrietig. Werkdruk, slecht slapen door ploegendienst of je familie missen kan het zwaar maken. Je hoeft het niet alleen te doen, en zeggen dat het te veel is, is geen zwakte. Praat met iemand: je leidinggevende, de vertrouwenspersoon (als die er is), de bedrijfsarts of je huisarts. Je mag ook zelf om een gesprek met de bedrijfsarts vragen. Artsen vertellen je baas niet wat je zei. Denk je aan zelfdoding, of maak je je zorgen om iemand? Bel 113 (gratis, dag en nacht) of chat op 113.nl.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Everyone feels tired, stressed or sad sometimes. Too much work (werkdruk), bad sleep from shift work or missing your family can make it heavy. You do not have to carry it alone, and saying "it is too much" is not weak. Talk to someone you trust: your supervisor, the confidential adviser (vertrouwenspersoon, if there is one), the company doctor (bedrijfsarts) or your huisarts. You may also ask for a talk with the company doctor yourself. Doctors do not tell your boss what you said. Do you think about suicide, or do you worry about someone? Call 113 (free, day and night), or chat at 113.nl.
+
+Geen slotregel („General information …”): de tip gaat over je goed voelen en hulp vragen, zoals c.healthy.
+
+**Grondslag (onze lezing):** Arbowet art. 14 (de werknemer kan de bedrijfsarts raadplegen: het open spreekuur van het basiscontract arbodienstverlening, sinds 1 juli 2017; welk onderdeel van art. 14 precies?); medisch beroepsgeheim (WGBO, BW 7:457), en voor de bedrijfsarts: alleen wat je kunt, niet wat je hebt (zoals c.illness); Arbowet art. 3 lid 2 (beleid psychosociale arbeidsbelasting; een vertrouwenspersoon is gebruikelijk, niet verplicht); 113 Zelfmoordpreventie: zie „Wie bel je?” (h.113).
+
+**Zeg het zo (Nederlands):** „Het gaat niet zo goed. Kan ik even met je praten?” — *I am not doing so well. Can I talk to you for a moment?*
+
+**Situatie in de les:** For weeks, you sleep badly and the work is too much. You feel very tired. What do you do?  
+**Goede antwoord:** Tell your supervisor or the company doctor.  
+**Uitleg na het antwoord (`c.feelwell.w`):** Saying it early is not weak. Then you can look for a way out together, for example other shifts. You do not have to do it alone.
+
+**Onze vragen aan u:**
+1. Is „You may also ask for a talk with the company doctor yourself” juist, ook voor een uitzendkracht en voor wie geen vast contract heeft?
+2. Is „Doctors do not tell your boss what you said” juist zo kort (de bedrijfsarts geeft wel door wat je wel en niet kunt)?
+3. In België (de Belgische tip `be.c.feelwell`): de arbeidsarts (spontane raadpleging), de preventieadviseur psychosociale aspecten en 1813. Klopt „You may also ask for a talk with the occupational doctor yourself” daar?
+
 **Oordeel deskundige:**
 
 - [ ] klopt
@@ -1895,6 +1920,9 @@ ______________________________________________________________
 ______________________________________________________________
 
 ---
+
+---
+
 ## Werkregels: gewijzigde beweringen (17 oktober 2026)
 
 De track **Werkregels** is voor mensen die al Nederlands spreken. De teksten staan alleen in het
@@ -1986,7 +2014,7 @@ komen), c.speakup (zeggen wat je dwarszit), c.no („Afspraak is afspraak"), c.c
 cv), c.phone (telefoon op het werk), c.smalltalk (praatje in de pauze), c.mistakes (fouten zijn
 normaal), c.texting (berichten naar het werk; sinds 18 oktober ook: een dienst ruilen pas als de leidinggevende of planner het goedvindt, een huisregel; de tip geeft daarbij de vraag „Mag ik mijn dienst ruilen?”), c.scams (oplichting en de bank), c.tools
 (toolboxmeeting), c.quality (kwaliteit), c.client (respect voor de cliënt), c.kitchen
-(voedselveiligheid), c.service (gasten), c.cleaning (etiket lezen), c.cleansafe (middelen niet mengen).
+(voedselveiligheid), c.service (gasten), c.cleaning (etiket lezen), c.cleansafe (middelen niet mengen), c.newcolleague (een nieuwe collega helpen: voordoen, laten nadoen, „Laat eens zien”).
 
 ---
 

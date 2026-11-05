@@ -71,7 +71,12 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // 194 (5 November 2026): "het bewijs" (l.parcel), "in loondienst" and "bepalen" (l.road) are
     // abstract; the other fifteen words of l.parcel, l.road and l.food are drawn (group36).
     for (const id of ['w.bewijs', 'w.loondienst', 'w.bepalen']) expect(abstract).toContain(id);
-    expect(abstract.length).toBe(194);
+        // 203 with the three of l.parcel/l.road above (5 November 2026): four words of "Je goed voelen op het werk" (l.feelwell) and five of
+    // "Een nieuwe collega helpen" (l.newcolleague) are abstract; wakker liggen, de familie and de
+    // kast are drawn (src/pictures/groupWelzijn.tsx).
+    for (const id of ['w.werkdruk', 'w.ploegendienst', 'w.heimwee', 'w.alleen', 'w.welkom', 'w.inwerken', 'w.stap', 'w.nadoen', 'w.geduld']) expect(abstract).toContain(id);
+    for (const id of ['w.wakkerliggen', 'w.familie', 'w.kast']) expect(abstract).not.toContain(id);
+    expect(abstract.length).toBe(203);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

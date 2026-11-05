@@ -75,6 +75,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.agree': L('A', 'A'),
     'l.task': L('A', 'B', '"In the Netherlands a supervisor …"'),
     'l.clear': L('A', 'A', 'de tip zegt "At work here" (niet "in the Netherlands"): eerst de kern geldt ook in Vlaanderen, al verpakt men het daar vaak wat voorzichtiger (nakijken door een Vlaamse NT2-docent)'),
+    'l.newcolleague': L('A', 'A', 'inwerken en de kast zeg je in Vlaanderen ook; de tip noemt geen land (nakijken door een Vlaamse NT2-docent)'),
   } },
   'u.apply': { kind: 'A', lessons: {
     'l.cv': L('A', 'A', 'de tip zegt "A CV here" (was "A Dutch CV")'),
@@ -140,6 +141,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.insurance': L('C', 'C', 'zorgverzekering, eigen risico, zorgtoeslag → ziekenfonds, remgeld, verhoogde tegemoetkoming'),
     'l.body': L('A', 'A'),
     'l.healthy': L('A', 'A'),
+    'l.feelwell': L('A', 'B', 'de tip: de bedrijfsarts → de arbeidsarts, ook de preventieadviseur psychosociale aspecten, 113 → 1813; de ploegendienst heet in Vlaanderen ook ploegenwerk (nakijken door een Vlaamse NT2-docent)'),
   } },
   'u.money': { kind: 'B', lessons: {
     'l.letters': L('C', 'C', 'Belastingdienst, aangifte voor 1 mei, toeslagen → FOD Financiën, MyMinfin, Groeipakket'),

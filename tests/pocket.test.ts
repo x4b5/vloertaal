@@ -567,6 +567,32 @@ describe('pocket card phrases', () => {
       'Waarom maken we de band nu schoon?',
       'Hierna komt een product zonder noten.',
       'Ik heb een wondje aan mijn hand. Mag ik een pleister?',
+      // New lessons "Je goed voelen op het werk" (l.feelwell, u.health) and "Een nieuwe collega helpen"
+      // (l.newcolleague, u.teamwork), 5 November 2026, with their tips' phrases:
+      'de werkdruk',
+      'wakker liggen',
+      'de ploegendienst',
+      'het heimwee',
+      'de familie',
+      'alleen',
+      'Ik slaap slecht door de ploegendienst.',
+      'Het is te veel. Ik red het niet alleen.',
+      'Ik heb heimwee. Mijn familie is ver weg.',
+      'Gaat het wel met je?',
+      'Niet zo goed. Ik lig vaak wakker.',
+      'Het gaat niet zo goed. Kan ik even met je praten?',
+      'welkom',
+      'inwerken',
+      'de stap',
+      'nadoen',
+      'het geduld',
+      'de kast',
+      'Welkom! Ik werk je vandaag in.',
+      'Kijk eerst. Dan doe je het na.',
+      'De handschoenen liggen in die kast.',
+      'Ik snap het, denk ik.',
+      'Mooi. Laat eens zien.',
+      'Goed zo! Nu de volgende stap.',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

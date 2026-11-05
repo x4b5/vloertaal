@@ -71,6 +71,9 @@ const PENDING_RECORDING = new Set<string>([
   'Ja. Wilt u hier even tekenen?',
   'Nee, dan heb ik geen tijd voor mijn pauze.',
   'Hierna komt een product zonder noten.',
+  // New lessons "Je goed voelen op het werk" (l.feelwell) and "Een nieuwe collega helpen" (l.newcolleague), 5 November 2026:
+  'Niet zo goed. Ik lig vaak wakker.',
+  'Mooi. Laat eens zien.',
 ]);
 
 

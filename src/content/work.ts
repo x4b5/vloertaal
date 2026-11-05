@@ -2917,7 +2917,7 @@ const onlineUnit = unit('online', 'Online at work', 'Online op je werk', '💻',
   ),
 ]);
 
-/** Lessons added at the end of an existing unit (Entree, 30 October 2026). */
+/** Lessons added at the end of an existing unit (Entree, 30 October 2026; l.feelwell in u.health, 5 November 2026). */
 const entreeMore: Record<string, Lesson[]> = {
   'u.grow': [
     lesson(
@@ -3016,6 +3016,33 @@ const entreeMore: Record<string, Lesson[]> = {
         ['In de pauze ga ik even wandelen.', 'In the break I go for a short walk.'],
       ],
       [['Wil je een pilletje? Dan blijf je wakker.', 'Do you want a pill? Then you stay awake.'], ['Nee, dank je. Ik werk niet onder invloed.', 'No, thank you. I do not work under the influence.']],
+    ),
+    // "Je goed voelen op het werk" (the owner's request, 5 November 2026): tired, too much work,
+    // bad sleep from shift work, homesickness, and who to talk to. In Gezondheid, after "Fit for
+    // work" (l.healthy: slapen, moe, somber), not in "Omgang met collega's": it goes on from sleep
+    // and the huisarts, and it is about how you feel, not about a colleague. "slapen", "moe" and
+    // "somber" (l.healthy), "te veel" (l.clear), "praten" (l.speakup), "de huisarts" (l.doctor),
+    // "de bedrijfsarts" (l.illness) and "de vertrouwenspersoon" (l.respect) are already words of
+    // other lessons: here they come in the sentences, the chat and the tip. Drawn: "wakker liggen"
+    // (Amina awake in bed, a clock at night) and "de familie" (a family under a heart); the other
+    // four are feelings or arrangements without one plain scene (picture: false).
+    lesson(
+      'feelwell',
+      'Feeling good at work',
+      [
+        ['werkdruk', 'de werkdruk', 'the pressure of work (too much work in too little time)', '😮‍💨', false],
+        ['wakkerliggen', 'wakker liggen', 'to lie awake (you cannot sleep)', '🛏️'],
+        ['ploegendienst', 'de ploegendienst', 'shift work (early, late and night shifts in turn)', '🔄', false],
+        ['heimwee', 'het heimwee', 'homesickness (you miss home)', '🧳', false],
+        ['familie', 'de familie', 'the family', '👨‍👩‍👧'],
+        ['alleen', 'alleen', 'alone', '🧍', false],
+      ],
+      [
+        ['Ik slaap slecht door de ploegendienst.', 'I sleep badly because of the shift work.'],
+        ['Het is te veel. Ik red het niet alleen.', 'It is too much. I cannot manage it alone.'],
+        ['Ik heb heimwee. Mijn familie is ver weg.', 'I am homesick. My family is far away.'],
+      ],
+      [['Gaat het wel met je?', 'Are you doing okay?'], ['Niet zo goed. Ik lig vaak wakker.', 'Not so good. I often lie awake.']],
     ),
   ],
 };
@@ -3264,6 +3291,37 @@ const entreeTips = [
       'Take it, but tell nobody at work about it.',
     ],
     'Pills from a colleague can be drugs. They can make you sick, or make you make mistakes at work. Sleep is the safe way to stay awake.',
+    NONE,
+  ),
+  // "Je goed voelen op het werk" (5 November 2026). Warm and calm, no medical promises: who you can
+  // talk to, not what they will fix. Not about one culture: missing your family is named as one of
+  // the reasons, never as something of a country. No closing line: the tip is about feeling well
+  // and asking for help (as c.healthy); its one right is said plainly.
+  // ⚖️ check: You may also ask for a talk with the company doctor yourself ⚖️ (Arbowet art. 14: the
+  // worker can consult the bedrijfsarts, the "open spreekuur" of the basiscontract
+  // arbodienstverlening, since 1 July 2017 (which sub-clause: for the expert); as Werkregels
+  // r.l.veilig.3: "Je mag ook zelf naar de bedrijfsarts").
+  // ⚖️ check: Doctors do not tell your boss what you said ⚖️ (medisch beroepsgeheim, WGBO, BW 7:457;
+  // for the bedrijfsarts also the Wet verbetering poortwachter: only what work you can do, as
+  // c.illness.w).
+  // ⚖️ check: 113: free, day and night, also a chat on 113.nl ⚖️ (as "Wie bel je?" h.113 in
+  // src/content/regels/help.ts, with its sources).
+  // ⚖️ check: The vertrouwenspersoon "if there is one": not required by law in the Netherlands ⚖️
+  // (Arbowet art. 3 lid 2: beleid psychosociale arbeidsbelasting; a vertrouwenspersoon is usual,
+  // not compulsory; as c.respect and c.boundaries).
+  tipFor(
+    'feelwell',
+    '💬',
+    'Too much? You do not have to do it alone',
+    'Everyone feels tired, stressed or sad sometimes. Too much work (werkdruk), bad sleep from shift work or missing your family can make it heavy. You do not have to carry it alone, and saying "it is too much" is not weak. Talk to someone you trust: your supervisor, the confidential adviser (vertrouwenspersoon, if there is one), the company doctor (bedrijfsarts) or your huisarts. You may also ask for a talk with the company doctor yourself. Doctors do not tell your boss what you said. Do you think about suicide, or do you worry about someone? Call 113 (free, day and night), or chat at 113.nl.',
+    ['Het gaat niet zo goed. Kan ik even met je praten?', 'I am not doing so well. Can I talk to you for a moment?'],
+    'For weeks, you sleep badly and the work is too much. You feel very tired. What do you do?',
+    [
+      'Tell your supervisor or the company doctor.',
+      'Say nothing, and work harder and faster.',
+      'Stay at home, and tell nobody why.',
+    ],
+    'Saying it early is not weak. Then you can look for a way out together, for example other shifts. You do not have to do it alone.',
     NONE,
   ),
   // ⚖️ check: With Dutch nationality you may vote in every election, from 18 ⚖️ (Grondwet art. 4;
