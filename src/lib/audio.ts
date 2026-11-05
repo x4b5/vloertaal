@@ -1,5 +1,5 @@
 import { BRAM_HELLO, BRAM_VOICE, DEVICE, type VoiceRef } from './voices';
-import { sayAs } from './sayAs';
+import { minTake, sayAs } from './sayAs';
 import { sentences } from './dutch';
 import { deviceRateFor, paceOf, recordedRateFor, type Pace, type Tempo } from './tempo';
 import { helpClipUrl } from './helpAudio';
@@ -149,7 +149,8 @@ export function setRecordedIndex(eleven: ElevenIndex | null, piper: RecordedInde
       withPlain({
         voice: { ...voice, engine: 'ElevenLabs' as const },
         base: './audio-el',
-        clips: Object.fromEntries(Object.entries(said).map(([id, text]) => [text.trim(), id])),
+        // A take known to be said wrong ("cao" as one word, sayAs.ts minTake) is not played.
+        clips: Object.fromEntries(Object.entries(said).filter(([id, text]) => (voice.takes?.[id] ?? 1) >= minTake(text)).map(([id, text]) => [text.trim(), id])),
       }),
     ),
     ...(piper?.voices ?? []).map((voice) =>
