@@ -113,7 +113,7 @@ The limits:
   end: a tick, a mark). A joint chain nests: ankle → knee → hip → shoulder (see "tillen"). A pose
   that is bent in the still picture bends from straight with `Bend` (group24, see "bukken"); a
   part that goes round another (two shift cards swapping) turns around the middle and back around
-  its own centre (`Arc`, group36, see "ruilen").
+  its own centre (`Arc`, group37, see "ruilen").
 - At most two steps one after the other (`from`, then `then` or `show`): the whole picture is still
   within 3 s.
 - An abstract word whose still picture says too little gets `picture: 'motion'`: the picture is on

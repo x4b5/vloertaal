@@ -19,7 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-05',
     items: [
-      'Bewegende plaatjes (proef): bij negen woorden beweegt het plaatje even als je het woord leert: glad, tillen, ontruimen, inchecken, uitchecken, bijna, langzaam, snel en te laat. Tik op de speaker en je ziet het opnieuw. Bij "Rustig scherm" of "minder beweging" staat alles stil. Het plaatje van tillen laat nu de veilige manier zien: door je knieën, de doos dicht bij je lijf.',
+      'Bewegende plaatjes: nu bewegen 40 woorden even als je ze leert, zoals vallen, bukken, inklokken, ruilen, sorteren, uitzetten, mengen, eerst, daarna, voordoen en tellen. Tik op de speaker en je ziet het opnieuw. Bij "Rustig scherm" of "minder beweging" staat alles stil. Tillen en bukken laten de veilige manier zien: door je knieën, met een rechte rug.',
       'Toen en nu: de eerste keer dat je een zin inspreekt, bewaart je telefoon die opname. Spreek je dezelfde zin een week later of nog later weer in, dan hoor je ze naast elkaar: eerst toen, dan nu. Zo hoor je zelf dat je beter wordt.',
       'Zeg het samen: wie niet graag hardop praat, kan eerst samen met de stem meepraten. Er wordt dan niets opgenomen. Daarna probeer je het alleen. Bram zegt één keer: "Fouten mogen. Nederlanders begrijpen je ook met fouten."',
       'Snap je het? Af en toe zegt een collega in "Herhaal vandaag" een zin op gewone snelheid. Snap je hem niet? Zeg dan "Kunt u dat herhalen?". Dat kost nooit punten. Zo oefen je om eerlijk te vragen, in plaats van te knikken.',
