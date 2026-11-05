@@ -446,6 +446,7 @@ const lang: HelpLanguageSource = {
     geluktWhere: 'Onları Ayarlar’da bulursun.', // nieuw, nalezen
     geluktTitle: 'İşte başarılı', // nieuw, nalezen
     geluktListHint: 'Bu cümleleri işte söyledin.', // nieuw, nalezen
+    nextMinutesN: 'yaklaşık {n} dk', // nieuw, nalezen
     saveFailed: 'İlerlemen kaydedilmedi. Telefonun dolu mu? Biraz yer aç. Ya da Ayarlar’a git: “İlerlemeni sakla”.', // nieuw, nalezen
     bewaarNudge: 'Telefonun bazen ilerlemeni silebilir. Bu yüzden bir kopya sakla.', // nieuw, nalezen
     bewaarGo: 'Şimdi kaydet', // nieuw, nalezen

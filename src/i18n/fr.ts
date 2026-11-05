@@ -446,6 +446,7 @@ const lang: HelpLanguageSource = {
     geluktWhere: 'Tu les trouves dans Réglages.', // nieuw, nalezen
     geluktTitle: 'Réussi au travail', // nieuw, nalezen
     geluktListHint: 'Tu as dit ces phrases au travail.', // nieuw, nalezen
+    nextMinutesN: 'environ {n} min', // nieuw, nalezen
     saveFailed: 'Ta progression n’a pas été enregistrée. Ton téléphone est plein ? Libère un peu de place. Ou va dans Réglages : « Garde ta progression ».', // nieuw, nalezen
     bewaarNudge: 'Ton téléphone peut parfois effacer ta progression. Alors garde une copie.', // nieuw, nalezen
     bewaarGo: 'Garder maintenant', // nieuw, nalezen

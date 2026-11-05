@@ -446,6 +446,7 @@ const lang: HelpLanguageSource = {
     geluktWhere: 'آن‌ها را در تنظیمات پیدا می‌کنید.', // nieuw, nalezen
     geluktTitle: 'موفق در کار', // nieuw, nalezen
     geluktListHint: 'این جمله‌ها را در کار گفتید.', // nieuw, nalezen
+    nextMinutesN: 'حدود {n} دقیقه', // nieuw, nalezen
     saveFailed: 'پیشرفت شما ذخیره نشد. آیا تیلفون پر است؟ کمی جا خالی کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
     bewaarNudge: 'تیلفون شما ممکن است گاهی پیشرفت شما را پاک کند. پس یک کاپی نگه دارید.', // nieuw, nalezen
     bewaarGo: 'همین حالا ذخیره کنید', // nieuw, nalezen

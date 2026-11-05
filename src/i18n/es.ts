@@ -446,6 +446,7 @@ const lang: HelpLanguageSource = {
     geluktWhere: 'Las encuentras en Ajustes.', // nieuw, nalezen
     geluktTitle: 'Logrado en el trabajo', // nieuw, nalezen
     geluktListHint: 'Dijiste estas frases en el trabajo.', // nieuw, nalezen
+    nextMinutesN: 'unos {n} min', // nieuw, nalezen
     saveFailed: 'Tu progreso no se ha guardado. ¿Tu teléfono está lleno? Libera un poco de espacio. O ve a Ajustes: «Guarda tu progreso».', // nieuw, nalezen
     bewaarNudge: 'Tu teléfono a veces puede borrar tu progreso. Por eso, guarda una copia.', // nieuw, nalezen
     bewaarGo: 'Guardar ahora', // nieuw, nalezen

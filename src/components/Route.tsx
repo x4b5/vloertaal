@@ -6,7 +6,7 @@ import { Character } from './Characters';
 import { unitIcon } from '../content/unitIcons';
 import { coursePlan } from '../content/sectors';
 import type { Unit } from '../content/types';
-import { gloss, said, saidLang, ui, uiCount, type Bilingual } from '../i18n';
+import { fillCount, gloss, said, saidLang, ui, uiCount, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { type Access, lessonAllowed, unitAllowed } from '../lib/access';
 import { hasCertificate, hasCheck, lessonViaCheck, unitDone, unitEarned } from '../lib/certificate';
@@ -27,7 +27,9 @@ import { NlPair } from './NlPair';
 import { dutchUi, trackOf } from '../lib/track';
 import { RestartButton, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
-import { reviewFirst } from '../lib/pace';
+import { lessonPace, reviewFirst } from '../lib/pace';
+import { lessonMinutes } from '../lib/lessonTime';
+import { speakingOn } from '../lib/speaking';
 import { PocketIcon } from './Offline';
 import { countedUnits, planGroups } from '../content/themes';
 import { ThemeHeadRow } from './Themes';
@@ -181,6 +183,12 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
               {icon && <WordPicture className="bay-pic" id={icon.id} emoji={icon.emoji} size={48} />}
               <span className="bay-text" dir={rtl ? 'rtl' : undefined}>
                 <Bi className="bay-title" text={title} />
+                {/* About how long it takes ("± 6 min", src/lib/lessonTime.ts; the owner's request,
+                    5 November 2026): only on the yellow card, not for a lesson stopped halfway (its
+                    chip says what is left), and not in the compact block under "Herhaal vandaag". */}
+                {state === 'now' && !saved && !first && !dailyDue && (
+                  <Bi className="bay-goal bay-time" text={fillCount('nextMinutesN', lessonMinutes(lesson, { quiet: Boolean(progress.quiet), sector, speak: track === 'taal' && speakingOn(), ...(track === 'taal' ? lessonPace(progress) : {}) }), lang)} />
+                )}
                 {/* In Belgium: a Dutch lesson that differs there (docs/taal-belgie.md). */}
                 {lessonNlOnly(lesson.id) && <BeNote lang={lang} inline className="bay-goal bay-note" />}
                 {saved && <ResumeChip save={saved} lang={lang} count={false} />}

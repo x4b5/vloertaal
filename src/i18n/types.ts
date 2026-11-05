@@ -577,6 +577,9 @@ export const uiEn = {
   geluktWhere: 'You can find them in Settings.',
   geluktTitle: 'Said at work',
   geluktListHint: 'You said these sentences at work.',
+  /* The next lesson on a lesson's result (src/components/Screens.tsx Result): about how long it
+     takes (src/lib/lessonTime.ts), the owner's request, 5 November 2026. */
+  nextMinutesN: 'about {n} min',
   /** Saving the progress on this phone failed (src/lib/progress.ts saveProgress; src/components/SaveFailedNote.tsx): once. */
   saveFailed: 'Your progress was not saved. Is your phone full? Make some room. Or go to Settings: Keep your progress.',
   /** "Bewaar je voortgang" on the home, once, where the phone may lose the progress (src/components/BackupNudge.tsx). */

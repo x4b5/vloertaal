@@ -889,8 +889,9 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   /** After the review: of the words from two weeks ago or longer, how many were still known (lib/spaced.ts keptCount). */
   kept?: { right: number; of: number };
   /** The next lesson on the course (its title, and its id for the picture), shown as an arrow,
-   *  the lesson's picture and its title. */
-  next?: Bilingual & { id?: string };
+   *  the lesson's picture and its title; `minutes`: about how long it takes (src/lib/lessonTime.ts),
+   *  under the title ("± 6 min"). */
+  next?: Bilingual & { id?: string; minutes?: number };
   /** Graded exercises right the first time, out of all graded ones. */
   right: number;
   total: number;
@@ -1021,7 +1022,12 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             <span className="sr-only" lang={saidLang(ui('nextUp', lang))}>{`${said(ui('nextUp', lang))}: `}</span>
             <span className="result-next-arrow" aria-hidden><ArrowIcon size={22} /></span>
             {nextPic && <WordPicture className="result-next-pic" id={nextPic.id} emoji={nextPic.emoji} size={44} />}
-            <Bi className="result-next-title" text={next} />
+            <span className="result-next-text">
+              <Bi className="result-next-title" text={next} />
+              {/* About how long it takes, so the next time looks small (the owner's request,
+                  5 November 2026): in the line's own language, as the title; not a button. */}
+              {next.minutes !== undefined && <Bi className="result-next-time" text={fillCount('nextMinutesN', next.minutes, lang)} />}
+            </span>
           </p>
         )}
         {workTry && <WorkTry line={workTry} lang={lang} />}

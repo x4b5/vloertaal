@@ -446,6 +446,7 @@ const lang: HelpLanguageSource = {
     geluktWhere: 'Encontras as frases nas Definições.', // nieuw, nalezen
     geluktTitle: 'Conseguido no trabalho', // nieuw, nalezen
     geluktListHint: 'Disseste estas frases no trabalho.', // nieuw, nalezen
+    nextMinutesN: 'cerca de {n} min', // nieuw, nalezen
     saveFailed: 'O teu progresso não foi guardado. O telemóvel está cheio? Liberta algum espaço. Ou vai a Definições: «Guarda o teu progresso».', // nieuw, nalezen
     bewaarNudge: 'O telemóvel às vezes pode apagar o teu progresso. Por isso, guarda uma cópia.', // nieuw, nalezen
     bewaarGo: 'Guardar agora', // nieuw, nalezen

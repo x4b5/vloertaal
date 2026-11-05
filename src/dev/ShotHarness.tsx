@@ -1,6 +1,7 @@
 import { tipForLesson } from '../content/culture';
 import { applyCalm } from '../lib/calm';
 import { workTryLine } from '../lib/workTry';
+import { lessonMinutes } from '../lib/lessonTime';
 import { ColleagueCard } from '../components/ColleagueCard';
 import { sayingForLesson, sayingQuestion } from '../content/sayings';
 import { findLesson } from '../content/curriculum';
@@ -100,7 +101,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
         repeated={review ? 6 : undefined} stronger={review ? 4 : undefined}
         kind={review ? 'daily' : 'lesson'}
         remember={review ? undefined : done?.rule?.remember}
-        next={!review && next ? { en: next.title, lang: l, id: next.id } : undefined}
+        next={!review && next ? { en: next.title, lang: l, id: next.id, minutes: lessonMinutes(next) } : undefined}
       />
     );
   }
@@ -119,7 +120,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
         kept={q.get('kept') ? { right: Number(q.get('kept')!.split(',')[0]), of: Number(q.get('kept')!.split(',')[1]) } : undefined}
         waiting={Number(q.get('waiting') ?? 0)}
         kind={review ? 'daily' : q.get('mix') === '1' ? 'review' : 'lesson'}
-        next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id } : undefined}
+        next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id, minutes: lessonMinutes(next, { speak: true }) } : undefined}
         onPhrases={q.get('phrases') === '1' ? () => {} : undefined}
         // &worktry=l.arrive: "Probeer het vandaag op je werk" with that lesson's sentence.
         workTry={q.get('worktry') ? workTryLine(q.get('worktry')!) : undefined}

@@ -446,6 +446,7 @@ const lang: HelpLanguageSource = {
     geluktWhere: 'Le găsești în Setări.', // nieuw, nalezen
     geluktTitle: 'Reușit la muncă', // nieuw, nalezen
     geluktListHint: 'Ai spus aceste propoziții la muncă.', // nieuw, nalezen
+    nextMinutesN: 'cam {n} min', // nieuw, nalezen
     saveFailed: 'Progresul tău nu a fost salvat. Telefonul e plin? Fă puțin loc. Sau mergi la Setări: „Păstrează-ți progresul”.', // nieuw, nalezen
     bewaarNudge: 'Telefonul îți poate șterge uneori progresul. De aceea, păstrează o copie.', // nieuw, nalezen
     bewaarGo: 'Salvează acum', // nieuw, nalezen

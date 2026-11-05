@@ -509,6 +509,7 @@ export const uiNl: Record<UiKey, UiText> = {
   geluktWhere: 'Je vindt ze bij Instellingen.',
   geluktTitle: 'Gelukt op het werk',
   geluktListHint: 'Deze zinnen heb je op je werk gezegd.',
+  nextMinutesN: '± {n} min',
   saveFailed: 'Je voortgang is niet bewaard. Is je telefoon vol? Maak wat ruimte. Of ga naar Instellingen: Bewaar je voortgang.',
   bewaarNudge: 'Je telefoon kan je voortgang soms wissen. Bewaar daarom een kopie.', // nieuw, nalezen
   bewaarGo: 'Bewaar nu', // nieuw, nalezen

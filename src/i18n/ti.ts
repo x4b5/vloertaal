@@ -447,6 +447,7 @@ const lang: HelpLanguageSource = {
     geluktWhere: { m: 'ኣብ ምድላዋት ክትረኽቦም ትኽእል።', f: 'ኣብ ምድላዋት ክትረኽብዮም ትኽእሊ።', x: 'ኣብ ምድላዋት ይርከቡ።' }, // nieuw, nalezen
     geluktTitle: 'ኣብ ስራሕ ሰሊጡ', // nieuw, nalezen
     geluktListHint: { m: 'ነዞም ሓረጋት ኣብ ስራሕ ኢልካዮም።', f: 'ነዞም ሓረጋት ኣብ ስራሕ ኢልኪዮም።', x: 'እዞም ሓረጋት ኣብ ስራሕ ተባሂሎም።' }, // nieuw, nalezen
+    nextMinutesN: 'ኣስታት {n} ደቒቕ', // nieuw, nalezen
     saveFailed: 'ምዕባለኹም ኣይተዓቀበን። ተሌፎንኩም መሊኡ ድዩ? ቁሩብ ቦታ ግበሩ። ወይ ኣብ ምድላዋት: «ምዕባለኹም ዓቅቡ»።', // nieuw, nalezen
     bewaarNudge: { m: 'ተሌፎንካ ገለ ግዜ ምዕባለኻ ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅብ።', f: 'ተሌፎንኪ ገለ ግዜ ምዕባለኺ ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅቢ።', x: 'ተሌፎንኩም ገለ ግዜ ምዕባለኹም ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅቡ።' }, // nieuw, nalezen
     bewaarGo: { m: 'ሕጂ ዓቅብ', f: 'ሕጂ ዓቅቢ', x: 'ሕጂ ዓቅቡ' }, // nieuw, nalezen

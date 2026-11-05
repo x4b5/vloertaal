@@ -446,6 +446,7 @@ const lang: HelpLanguageSource = {
     geluktWhere: 'Du findest sie in den Einstellungen.', // nieuw, nalezen
     geluktTitle: 'Bei der Arbeit geschafft', // nieuw, nalezen
     geluktListHint: 'Diese Sätze hast du bei der Arbeit gesagt.', // nieuw, nalezen
+    nextMinutesN: 'ca. {n} Min.', // nieuw, nalezen
     saveFailed: 'Dein Fortschritt wurde nicht gespeichert. Ist dein Handy voll? Mach etwas Platz frei. Oder geh zu Einstellungen: „Deinen Fortschritt sichern“.', // nieuw, nalezen
     bewaarNudge: 'Dein Handy kann deinen Fortschritt manchmal löschen. Speichere darum eine Kopie.', // nieuw, nalezen
     bewaarGo: 'Jetzt sichern', // nieuw, nalezen

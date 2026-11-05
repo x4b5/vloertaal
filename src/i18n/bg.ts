@@ -446,6 +446,7 @@ const lang: HelpLanguageSource = {
     geluktWhere: 'Ще ги намериш в Настройки.', // nieuw, nalezen
     geluktTitle: 'Получи се на работа', // nieuw, nalezen
     geluktListHint: 'Тези изречения каза на работа.', // nieuw, nalezen
+    nextMinutesN: 'около {n} мин.', // nieuw, nalezen
     saveFailed: 'Напредъкът ти не е запазен. Телефонът пълен ли е? Освободи малко място. Или отвори Настройки: „Запази напредъка си“.', // nieuw, nalezen
     bewaarNudge: 'Телефонът понякога може да изтрие напредъка ти. Затова запази копие.', // nieuw, nalezen
     bewaarGo: 'Запази сега', // nieuw, nalezen

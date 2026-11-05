@@ -10,6 +10,8 @@ import { dutchUi, trackOf, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
 import { tempoOf } from './lib/tempo';
 import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
+import { lessonMinutes } from './lib/lessonTime';
+import { speakingOn } from './lib/speaking';
 import { addGelukt, answerGelukt, geluktCount, geluktDue, type WorkTryLine, workTryFor } from './lib/workTry';
 import { GeluktDonePage, GeluktLine, GeluktPage } from './components/GeluktCard';
 import { ColleagueCard } from './components/ColleagueCard';
@@ -76,7 +78,7 @@ type View =
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string; workTry?: WorkTryLine }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string; workTry?: WorkTryLine }
   /** "Oefen samen" (src/components/Samen.tsx): a lesson's chats, two people on one phone, from its
    *  result; streakUp / cert: the certificate or the streak milestone still follows. */
   | { name: 'samen'; lessonId: string; streakUp?: number; cert?: string }
@@ -868,6 +870,9 @@ export default function App() {
           // a growing number every day, as if they were behind.
           waiting: daily && progress.lastDay && (daysBetween(progress.lastDay, today) >= 2 || restedYesterday(progress, today)) ? dueIds(next.cards ?? {}, today, track).length || undefined : undefined,
           next: upNext?.id,
+          // About how long that lesson takes ("± 6 min", src/lib/lessonTime.ts), built as it will be
+          // played: sound, sector, speaking practice and the pace after this lesson.
+          nextMinutes: upNext ? lessonMinutes(upNext, { quiet: Boolean(next.quiet), sector: next.sector, speak: track === 'taal' && speakingOn(), ...(track === 'taal' ? lessonPace(next) : {}) }) : undefined,
           cert: unitDone?.id,
           skipped: skipped || undefined,
           phrases: phrases || undefined,
@@ -922,7 +927,7 @@ export default function App() {
           skipped={view.skipped}
           kind={view.kind}
           remember={view.remember}
-          next={view.next ? nextTitle(view.next, lang) : undefined}
+          next={view.next ? nextTitle(view.next, lang, view.nextMinutes) : undefined}
           lang={lang}
           onDone={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
           onPhrases={view.phrases ? () => replace({ name: 'phrasebook', streakUp: view.streakUp, cert: view.cert }) : undefined}
@@ -1313,9 +1318,9 @@ export default function App() {
   }
 }
 
-function nextTitle(id: string, lang: ReturnType<typeof getHelpLanguage>) {
+function nextTitle(id: string, lang: ReturnType<typeof getHelpLanguage>, minutes?: number) {
   const found = findLesson(id);
-  return found ? { ...gloss(id, found.lesson.title, lang), id } : undefined;
+  return found ? { ...gloss(id, found.lesson.title, lang), id, minutes } : undefined;
 }
 
 function adminRequested(): boolean {
