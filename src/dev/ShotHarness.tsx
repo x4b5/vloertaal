@@ -278,7 +278,13 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     const doneN = Number(q.get('done') ?? 8) || 8;
     const doneLessons = lang === 'nl' ? courseUnits('regels').flatMap((u) => u.lessons).slice(0, doneN) : allLessons.slice(0, doneN);
     const done = Object.fromEntries(doneLessons.map((l) => [l.id, { best: 1, times: 1 }]));
-    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, region, quiet, completed: done, gender };
+    // &gelukt=4: that many sentences said at work ("Gelukt op het werk", Settings › Taal en ik):
+    // the work sentences of the first lessons that have one, a day apart.
+    const geluktN = Number(q.get('gelukt') ?? 0);
+    const gelukt = geluktN > 0 ? (lang === 'nl' ? courseUnits('regels').flatMap((u) => u.lessons) : allLessons)
+      .map((x) => workTryLine(x.id)).filter((x) => x !== undefined).slice(0, geluktN)
+      .map((x, i) => ({ id: x.id, nl: x.nl, en: x.en, day: `2026-10-${String(10 + i).padStart(2, '0')}` })) : undefined;
+    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, region, quiet, completed: done, gender, gelukt };
     const l = getHelpLanguage(lang as LangCode, gender);
     const zl = regionOf(region);
     const mapLink = zl ? <SocialMapLink region={zl} lang={l} onOpen={() => {}} /> : undefined;

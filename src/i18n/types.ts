@@ -569,6 +569,14 @@ export const uiEn = {
   geluktAsk: 'Did you say this at work?',
   geluktYes: 'Yes, it worked',
   geluktNotYet: 'Not yet',
+  /* "Gelukt op het werk" (the owner's request, 5 November 2026; src/components/GeluktCard.tsx): after
+     "Ja, gelukt" Bram's line with how many sentences were said at work so far (geluktDoneOne: the
+     first) and where they are; the row and its list in Settings › Taal en ik, with a line on top. */
+  geluktDoneN: 'Well done! You have used {n} sentences at work.',
+  geluktDoneOne: 'Well done! You used your first sentence at work.',
+  geluktWhere: 'You can find them in Settings.',
+  geluktTitle: 'Said at work',
+  geluktListHint: 'You said these sentences at work.',
   /** Saving the progress on this phone failed (src/lib/progress.ts saveProgress; src/components/SaveFailedNote.tsx): once. */
   saveFailed: 'Your progress was not saved. Is your phone full? Make some room. Or go to Settings: Keep your progress.',
   /** "Bewaar je voortgang" on the home, once, where the phone may lose the progress (src/components/BackupNudge.tsx). */

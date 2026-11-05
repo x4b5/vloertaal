@@ -441,6 +441,11 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Каза ли това на работа?', // nieuw, nalezen
     geluktYes: 'Да, получи се', // nieuw, nalezen
     geluktNotYet: 'Още не', // nieuw, nalezen
+    geluktDoneN: { one: 'Браво! Вече {n} изречение се получи на работа.', other: 'Браво! Вече {n} изречения се получиха на работа.' }, // nieuw, nalezen
+    geluktDoneOne: 'Браво! Първото ти изречение на работа се получи.', // nieuw, nalezen
+    geluktWhere: 'Ще ги намериш в Настройки.', // nieuw, nalezen
+    geluktTitle: 'Получи се на работа', // nieuw, nalezen
+    geluktListHint: 'Тези изречения каза на работа.', // nieuw, nalezen
     saveFailed: 'Напредъкът ти не е запазен. Телефонът пълен ли е? Освободи малко място. Или отвори Настройки: „Запази напредъка си“.', // nieuw, nalezen
     bewaarNudge: 'Телефонът понякога може да изтрие напредъка ти. Затова запази копие.', // nieuw, nalezen
     bewaarGo: 'Запази сега', // nieuw, nalezen

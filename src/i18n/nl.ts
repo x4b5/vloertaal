@@ -504,6 +504,11 @@ export const uiNl: Record<UiKey, UiText> = {
   geluktAsk: 'Heb je dit op je werk gezegd?',
   geluktYes: 'Ja, gelukt',
   geluktNotYet: 'Nog niet',
+  geluktDoneN: 'Goed gedaan! Al {n} zinnen gelukt op het werk.',
+  geluktDoneOne: 'Goed gedaan! Je eerste zin op het werk is gelukt.',
+  geluktWhere: 'Je vindt ze bij Instellingen.',
+  geluktTitle: 'Gelukt op het werk',
+  geluktListHint: 'Deze zinnen heb je op je werk gezegd.',
   saveFailed: 'Je voortgang is niet bewaard. Is je telefoon vol? Maak wat ruimte. Of ga naar Instellingen: Bewaar je voortgang.',
   bewaarNudge: 'Je telefoon kan je voortgang soms wissen. Bewaar daarom een kopie.', // nieuw, nalezen
   bewaarGo: 'Bewaar nu', // nieuw, nalezen

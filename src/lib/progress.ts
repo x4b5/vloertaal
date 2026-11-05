@@ -146,6 +146,22 @@ export interface Progress {
   noticesSeen?: string[];
   /** "Wil je ook de werkregels leren?" (src/lib/bridge.ts) was answered: it does not come back. On this phone only. */
   bridgeSeen?: true;
+  /**
+   * "Gelukt op het werk": the sentences of "Probeer het vandaag op je werk" the learner said at
+   * work ("Ja, gelukt", src/lib/workTry.ts addGelukt), oldest first, each once. Shown in Settings ›
+   * Taal en ik (src/components/GeluktCard.tsx GeluktList). Learning progress: in the backup, gone
+   * with "Voortgang wissen". Only on this phone. Missing = none yet.
+   */
+  gelukt?: GeluktEntry[];
+}
+
+/** A sentence said at work: its id (for the translation), its Dutch, what it means in English
+ *  (empty in Werkregels: all Dutch) and the day of "Ja, gelukt" (YYYY-MM-DD). */
+export interface GeluktEntry {
+  id: string;
+  nl: string;
+  en: string;
+  day: string;
 }
 
 /** What each track keeps for itself (Progress.parked). */
@@ -224,6 +240,26 @@ const readRecord: Check<LessonRecord> = (v) => {
 };
 /** A word's card for "Herhaal vandaag": its box (1–6, src/lib/spaced.ts) and the day it is due. */
 const readCard: Check<Card> = (v) => (isObject(v) && isCount(v.box) && v.box >= 1 && v.box <= 6 && isDay(v.due) ? { box: Math.floor(v.box), due: v.due } : undefined);
+/** At most this many sentences said at work are kept (the courses have fewer than that). */
+export const GELUKT_KEEP = 500;
+/** One sentence said at work (GeluktEntry). */
+const readGeluktEntry: Check<GeluktEntry> = (v) => (isObject(v) && typeof v.id === 'string' && v.id && typeof v.nl === 'string' && v.nl.trim() && isDay(v.day)
+  ? { id: v.id, nl: v.nl, en: typeof v.en === 'string' ? v.en : '', day: v.day }
+  : undefined);
+/** The sentences said at work: each one once (its first day), oldest first. */
+const readGelukt: Check<GeluktEntry[]> = (v) => (Array.isArray(v) ? joinGelukt(v.map(readGeluktEntry).filter((e): e is GeluktEntry => e !== undefined)) : undefined);
+
+/** Sentences said at work, from one list or two: each id once (the earliest day), oldest first. */
+export function joinGelukt(...lists: (readonly GeluktEntry[] | undefined)[]): GeluktEntry[] {
+  const byId = new Map<string, GeluktEntry>();
+  for (const e of lists.flatMap((l) => l ?? [])) {
+    const had = byId.get(e.id);
+    if (!had || e.day < had.day) byId.set(e.id, e);
+  }
+  // A stable sort: on the same day, the order they were said in.
+  return [...byId.values()].sort((a, b) => (a.day < b.day ? -1 : a.day > b.day ? 1 : 0)).slice(-GELUKT_KEEP);
+}
+
 /** The other track's place (switchTrack). */
 const readPlace: Check<TrackPlace> = (v) => (isObject(v) ? { currentUnit: str(v.currentUnit), pickedUnit: str(v.pickedUnit), reviewDay: day(v.reviewDay), phrasesShown: v.phrasesShown === true || undefined } : undefined);
 
@@ -277,6 +313,7 @@ const FIELDS: { [K in keyof Progress]-?: Check<Progress[K]> } = {
   firstDay: day,
   noticesSeen: (v) => (Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : undefined),
   bridgeSeen: (v) => (v === true ? true : undefined),
+  gelukt: readGelukt,
 };
 
 /** The fields asked for that can be read, each checked (FIELDS). */
@@ -648,8 +685,8 @@ export function backupForTrack(b: Backup, track: Track): Backup {
   return { ...b, track, reviewDay: other.reviewDay, parked: { reviewDay: b.reviewDay, currentUnit: b.currentUnit } };
 }
 
-/** What a backup file brings: the learning progress (lessons, words, streak, certificates, the test), never settings. */
-const LEARNED = ['completed', 'xp', 'streak', 'lastDay', 'reviewDay', 'lessonDay', 'lastLesson', 'freezes', 'bestStreak', 'rest', 'days', 'cards', 'certs', 'currentUnit', 'parked', 'toets'] as const;
+/** What a backup file brings: the learning progress (lessons, words, streak, certificates, the test, the sentences said at work), never settings. */
+const LEARNED = ['completed', 'xp', 'streak', 'lastDay', 'reviewDay', 'lessonDay', 'lastLesson', 'freezes', 'bestStreak', 'rest', 'days', 'cards', 'certs', 'currentUnit', 'parked', 'toets', 'gelukt'] as const;
 
 /**
  * Reads a backup file. Returns null for anything that is not a Vloertaal backup; keeps only
@@ -695,13 +732,15 @@ export function rawBackupFile(raw: string | null, now: Date): string {
 
 /**
  * Would putting this backup in place lose something on this phone: a lesson the file does not
- * have, a certificate, or the record? (Then the learner is asked once more: a file with as many
- * lessons as the phone can still be missing the ones done here.)
+ * have, a certificate, a sentence said at work, or the record? (Then the learner is asked once
+ * more: a file with as many lessons as the phone can still be missing the ones done here.)
  */
 export function replaceLoses(p: Progress, b: Partial<Progress>): boolean {
   const theirs = b.completed ?? {};
   if (Object.keys(p.completed).some((id) => knownLessonId(id) && !theirs[id])) return true;
   if (Object.keys(p.certs ?? {}).some((id) => !b.certs?.[id])) return true;
+  // A sentence said at work ("Gelukt op het werk") that the file does not have.
+  if ((p.gelukt ?? []).some((e) => !b.gelukt?.some((x) => x.id === e.id))) return true;
   return bestStreak(p) > Math.max(b.bestStreak ?? 0, b.streak ?? 0);
 }
 
@@ -729,6 +768,7 @@ export function replaceWithBackup(p: Progress, file: Backup): Progress {
     pickedUnit: undefined,
     parked: b.parked?.reviewDay || b.parked?.currentUnit ? { reviewDay: b.parked.reviewDay, currentUnit: b.parked.currentUnit } : undefined,
     toets: b.toets,
+    gelukt: b.gelukt,
   };
 }
 
@@ -756,9 +796,9 @@ function joinedStreak(later: Partial<Progress>, earlier: Partial<Progress>, days
 /** A value as text with its keys in order, so two objects built in another order compare equal. */
 const canon = (v: unknown): string => JSON.stringify(v, (_, x) => (x && typeof x === 'object' && !Array.isArray(x) ? Object.fromEntries(Object.entries(x).sort(([a], [b]) => (a < b ? -1 : 1))) : x));
 
-/** Did adding a backup change nothing that counts (lessons, words, certificates, streak, days)? Then "Niets nieuws". */
+/** Did adding a backup change nothing that counts (lessons, words, certificates, streak, days, sentences said at work)? Then "Niets nieuws". */
 export function mergeAddsNothing(before: Progress, after: Progress): boolean {
-  const learnt = (p: Progress) => canon([p.completed, p.cards ?? {}, p.certs ?? {}, p.xp, p.streak, bestStreak(p), p.lastDay, [...(p.days ?? [])].sort(), [...(p.rest ?? [])].sort(), p.reviewDay, p.parked?.reviewDay, p.toets ?? null]);
+  const learnt = (p: Progress) => canon([p.completed, p.cards ?? {}, p.certs ?? {}, p.xp, p.streak, bestStreak(p), p.lastDay, [...(p.days ?? [])].sort(), [...(p.rest ?? [])].sort(), p.reviewDay, p.parked?.reviewDay, p.toets ?? null, (p.gelukt ?? []).map((e) => e.id).sort()]);
   return learnt(before) === learnt(after);
 }
 
@@ -822,6 +862,8 @@ export function mergeBackup(p: Progress, file: Backup): Progress {
         .map((id) => [id, earlier(p.certs?.[id], b.certs?.[id])]),
     ),
     toets: mergeToets(p.toets, b.toets),
+    // The sentences said at work on either phone, each once (its earliest day).
+    gelukt: p.gelukt || b.gelukt ? joinGelukt(p.gelukt, b.gelukt) : undefined,
   };
 }
 

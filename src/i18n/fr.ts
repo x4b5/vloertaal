@@ -441,6 +441,11 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Tu l’as dit au travail ?', // nieuw, nalezen
     geluktYes: 'Oui, ça a marché', // nieuw, nalezen
     geluktNotYet: 'Pas encore', // nieuw, nalezen
+    geluktDoneN: { one: 'Bravo ! Déjà {n} phrase réussie au travail.', many: 'Bravo ! Déjà {n} phrases réussies au travail.', other: 'Bravo ! Déjà {n} phrases réussies au travail.' }, // nieuw, nalezen
+    geluktDoneOne: 'Bravo ! Ta première phrase au travail a marché.', // nieuw, nalezen
+    geluktWhere: 'Tu les trouves dans Réglages.', // nieuw, nalezen
+    geluktTitle: 'Réussi au travail', // nieuw, nalezen
+    geluktListHint: 'Tu as dit ces phrases au travail.', // nieuw, nalezen
     saveFailed: 'Ta progression n’a pas été enregistrée. Ton téléphone est plein ? Libère un peu de place. Ou va dans Réglages : « Garde ta progression ».', // nieuw, nalezen
     bewaarNudge: 'Ton téléphone peut parfois effacer ta progression. Alors garde une copie.', // nieuw, nalezen
     bewaarGo: 'Garder maintenant', // nieuw, nalezen

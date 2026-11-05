@@ -10,8 +10,8 @@ import { dutchUi, trackOf, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
 import { tempoOf } from './lib/tempo';
 import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
-import { answerGelukt, geluktDue, type WorkTryLine, workTryFor } from './lib/workTry';
-import { GeluktLine, GeluktPage } from './components/GeluktCard';
+import { addGelukt, answerGelukt, geluktCount, geluktDue, type WorkTryLine, workTryFor } from './lib/workTry';
+import { GeluktDonePage, GeluktLine, GeluktPage } from './components/GeluktCard';
 import { ColleagueCard } from './components/ColleagueCard';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
@@ -122,6 +122,8 @@ type View =
   | { name: 'toets-offer'; moment: ToetsMoment }
   /** "Gelukt?" (src/components/GeluktCard.tsx), from its line under the next lesson on the home. */
   | { name: 'gelukt' }
+  /** Right after "Ja, gelukt": Bram with how many sentences were said at work (n), and the sentence (nl). */
+  | { name: 'gelukt-done'; n: number; nl: string }
   /** "Laat zien hoe het gaat": the coach card (src/components/Certificate.tsx CoachCardScreen), from Settings › Taal en ik. */
   | { name: 'kaart' }
   /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): the 5 questions of a topic, and the end. */
@@ -1177,6 +1179,13 @@ export default function App() {
       return hulpTab();
     // The pages of the home's small lines (src/components/Route.tsx `lines`); no longer offered
     // (answered, or a history entry from before): the home.
+    case 'gelukt-done':
+      return (
+        <>
+          <GeluktDonePage n={view.n} nl={view.nl} lang={lang} onDone={back} />
+          <BottomNav current="route" onTab={tab} lang={lang} />
+        </>
+      );
     case 'toets-offer':
     case 'gelukt':
     default:
@@ -1206,7 +1215,16 @@ export default function App() {
                 line={line}
                 lang={lang}
                 onBack={back}
-                onAnswer={(worked) => { answerGelukt(worked ? 'ja' : 'nog-niet', dayKey(new Date())); setNudgeTick((n) => n + 1); back(); }}
+                onAnswer={(worked) => {
+                  const today = dayKey(new Date());
+                  answerGelukt(worked ? 'ja' : 'nog-niet', today);
+                  setNudgeTick((n) => n + 1);
+                  if (!worked) { back(); return; }
+                  // "Ja, gelukt": the sentence goes into "Gelukt op het werk" (the progress), and a
+                  // short moment says how many there are now (the owner's request, 5 November 2026).
+                  setProgress((p) => addGelukt(p, line, today));
+                  replace({ name: 'gelukt-done', n: geluktCount(addGelukt(progress, line, today)), nl: line.nl });
+                }}
               />
               <BottomNav current="route" onTab={tab} lang={lang} />
             </>
