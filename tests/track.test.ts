@@ -50,22 +50,27 @@ const LATE_BASIS = ['u.finish', 'u.tech', 'u.garage', 'u.stage', 'u.society', 'u
  * sectors' units after "In de kas". With no sector their place in the course is unchanged.
  */
 const LATE_OWN = ['u.tech', 'u.garage'];
-const expectedOrder = (own: string | null) => {
-  const main = BASIS.map((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
+/**
+ * "Vervoer en bezorging" (5 November 2026): appended after everything else, the second own unit of
+ * Logistiek (right after the warehouse in its slot); for the other sectors it waits at the very end.
+ */
+const NEWEST_SECTOR_UNITS = ['u.delivery'];
+const expectedOrder = (own: string | string[] | null) => {
+  const main = BASIS.flatMap((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
-  const late = [...LATE_SECTOR_UNITS, ...LATE_OWN].filter((id) => !main.includes(id));
+  const late = [...LATE_SECTOR_UNITS, ...LATE_OWN, ...NEWEST_SECTOR_UNITS].filter((id) => !main.includes(id));
   // "In de winkel" became the own unit of Winkel (31 October 2026): with a sector it now waits with
   // the other sectors' units (in its course place, after Schoonmaak), unless it is the own one.
   return own
     ? [...main, ...APPENDED.filter((id) => id !== SHOP), ...LATE_BASIS.filter((id) => !LATE_OWN.includes(id)), ...[...rest, SHOP].filter((id) => !main.includes(id)), ...late]
-    : [...main, ...rest, ...APPENDED, ...LATE_SECTOR_UNITS, ...LATE_BASIS];
+    : [...main, ...rest, ...APPENDED, ...LATE_SECTOR_UNITS, ...LATE_BASIS, ...NEWEST_SECTOR_UNITS];
 };
 
 /** routeOrder for every sector, written out from the course as it was before the work-rules track. */
 const TAAL_ORDER: Record<string, string[]> = {
   undefined: expectedOrder(null),
   none: expectedOrder(null),
-  logistics: expectedOrder('u.warehouse'),
+  logistics: expectedOrder(['u.warehouse', 'u.delivery']),
   construction: expectedOrder('u.build'),
   production: expectedOrder('u.factory'),
   care: expectedOrder('u.care'),

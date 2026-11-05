@@ -20,13 +20,15 @@ describe('sectors', () => {
     expect(main[4].id).toBe('u.build');
     expect(main.filter((u) => u.id === 'u.build')).toHaveLength(1);
     expect(main.some((u) => u.id === 'u.warehouse')).toBe(false);
-    expect(other.map((u) => u.id).sort()).toEqual(['u.care', 'u.clean', 'u.factory', 'u.garage', 'u.horeca', 'u.kas', 'u.shop', 'u.tech', 'u.warehouse']);
+    expect(other.map((u) => u.id).sort()).toEqual(['u.care', 'u.clean', 'u.delivery', 'u.factory', 'u.garage', 'u.horeca', 'u.kas', 'u.shop', 'u.tech', 'u.warehouse']);
     expect(main.length + other.length).toBe(units.length);
     // The basis units keep their course order around it.
     const basis = main.filter((u) => !unitSector(u.id));
     expect(basis).toEqual(units.filter((u) => !unitSector(u.id)));
     expect(coursePlan('care').main[4].id).toBe('u.care');
     expect(coursePlan('logistics').main[4].id).toBe('u.warehouse');
+    // Logistiek has two own units since 5 November 2026: "Vervoer en bezorging" right after the warehouse.
+    expect(coursePlan('logistics').main[5].id).toBe('u.delivery');
     for (const s of ['none', undefined] as const) {
       expect(coursePlan(s).main).toEqual(units);
       expect(coursePlan(s).other).toEqual([]);

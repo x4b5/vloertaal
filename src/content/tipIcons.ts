@@ -32,6 +32,7 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '📜': 'w.diploma',
   '🌟': 'w.compliment',
   '🦹': 'w.oplichter',
+  '🚚': 'w.bestelbus',
 };
 
 const bare = (emoji: string): string => emoji.replace(/️/g, '');

@@ -48,6 +48,8 @@ export const unitIcons: Record<string, string> = {
   // Taking part in the Netherlands (the council and voting, the police): the ballot box, not a postbox.
   'u.society': 'w.stemmen',
   'u.online': 'w.computer',
+  // Vervoer en bezorging: the delivery van (not "het busje" of l.jobends, the van that brings workers).
+  'u.delivery': 'w.bestelbus',
 };
 
 /**

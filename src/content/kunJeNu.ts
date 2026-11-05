@@ -212,6 +212,8 @@ export const KUN_TAAL: KunOnderwerp[] = [
   onderwerp('u.factory', 'In de productie', [
     ['Ik kan zeggen dat er een storing is.', 'A1', 'spreken', 'I can say that there is a breakdown.'],
     ['Ik kan zeggen wat er mis is met een product.', 'A2', 'gesprekken', 'I can say what is wrong with a product.'],
+    // Voedselverwerking (l.food, 5 November 2026).
+    ['Ik kan melden dat ik een wondje heb.', 'A1', 'spreken', 'I can report that I have a small cut.'],
   ]),
   onderwerp('u.care', 'In de zorg', [
     ['Ik kan een cliënt vragen of ik mag helpen.', 'A2', 'gesprekken', 'I can ask a client if I may help.'],
@@ -236,6 +238,12 @@ export const KUN_TAAL: KunOnderwerp[] = [
   onderwerp('u.garage', 'In de garage', [
     ['Ik kan zeggen dat een band lek is.', 'A1', 'spreken', 'I can say that a tyre is flat.'],
     ['Ik kan zeggen dat de klant eerst akkoord moet zijn.', 'A2', 'gesprekken', 'I can say that the customer must agree first.'],
+  ]),
+  // Vervoer en bezorging (5 November 2026).
+  onderwerp('u.delivery', 'Vervoer en bezorging', [
+    ['Ik kan zeggen dat de klant niet thuis is.', 'A1', 'spreken', 'I can say that the customer is not at home.'],
+    ['Ik kan de buren vragen een pakket aan te nemen.', 'A2', 'gesprekken', 'I can ask the neighbours to take in a parcel.'],
+    ['Ik kan vragen wie mijn route en mijn tijden bepaalt.', 'A2', 'spreken', 'I can ask who decides my route and my times.'],
   ]),
 ];
 

@@ -162,6 +162,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.factory': { kind: 'A', lessons: {
     'l.line': L('A', 'A'),
     'l.quality': L('A', 'A'),
+    'l.food': L('A', 'A', 'de meldplicht bij ziekte of een wond komt uit de EU-hygiëneverordening (852/2004): ook in België'),
   } },
   'u.care': { kind: 'A', lessons: {
     'l.client': L('A', 'A'),
@@ -216,6 +217,10 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.online': { kind: 'B', lessons: {
     'l.login': L('B', 'B', 'DigiD → itsme'),
     'l.phish': L('A', 'A'),
+  } },
+  'u.delivery': { kind: 'A', lessons: {
+    'l.parcel': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: in Vlaanderen zegt men vaak "de bestelwagen" (de bestelbus wordt begrepen)'),
+    'l.road': L('A', 'A', 'de tip zegt "zelfstandig" en "in loondienst" (niet "zzp’er"); telefoon in de hand verboden ook in België (Wegverkeersreglement art. 8.4); alleen de slotregel; nakijken: in Vlaanderen vaak "de steekkar"'),
   } },
 };
 

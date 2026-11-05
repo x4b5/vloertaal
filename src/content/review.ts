@@ -52,6 +52,8 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.stage': ['u.apply', 'u.grow'],
   'u.society': ['u.papers', 'u.rights'],
   'u.online': ['u.ai', 'u.money'],
+  // Vervoer en bezorging (5 November 2026): the warehouse (the scanner, the boxes) and safety (the road).
+  'u.delivery': ['u.warehouse', 'u.safety'],
 };
 
 /**
@@ -76,6 +78,7 @@ const relatedWords: Record<string, string[]> = {
   'u.clean': ['w.handschoenen', 'w.kluisje'],
   'u.shop': ['w.rekening', 'w.doos'],
   'u.numbers': ['w.pauze', 'w.uurloon'],
+  'u.delivery': ['w.scanner', 'w.ongeluk'],
 };
 
 export const MIX_TITLE = 'Mixed review';

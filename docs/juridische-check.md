@@ -1,6 +1,6 @@
 # Vloertaal: controle van de informatie over werk en rechten
 
-*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen).*
+*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.road: 5 november 2026).*
 
 **Terugsturen naar:** ____________________________ (naam en e-mail van de eigenaar van Vloertaal)
 
@@ -110,7 +110,7 @@ Bijna elke tip eindigt met een van deze drie vaste slotregels:
 | Slotregel (Engels, letterlijk) | Bij welke tips | Waarom deze |
 |---|---|---|
 | *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.accident, c.agency, c.aiplan, c.bsn, c.carjob, c.contract, c.diploma, c.extra, c.findwork, c.greensafe, c.health, c.illness, c.insurance, c.jobends, c.kids, c.leave, c.letters, c.payslip, c.permit, c.power, c.sick, c.site, c.transit, c.workshop, c.ww | rechten en regels uit de wet |
-| *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.gethelp, c.harvest, c.housing, c.newjob, c.rights, c.warning | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
+| *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.gethelp, c.harvest, c.housing, c.newjob, c.rights, c.road, c.warning | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
 | *Rules differ per company: ask your supervisor what the rules are where you work.* | c.callin, c.clock, c.hygiene, c.line, c.privacy, c.smoking | huisregels |
 | (geen slotregel) | c.bike, c.boundaries, c.certs, c.doctor, c.gear, c.gossip, c.interview, c.notyet, c.respect, c.unsafe | gedragstips; sommige noemen zelf een loket |
 
@@ -1844,6 +1844,44 @@ ______________________________________________________________
 **Onze eigen vraag hierbij:**
 - „Without their OK, the garage may not just do extra work” (`c.carjob.w`): wij gaan uit van de regels voor aanneming van werk (art. 7:755 BW: een prijsverhoging voor meerwerk moet de klant op tijd horen) en de algemene voorwaarden van garages. Is „may not just do extra work” juist, of is het eerder: zonder akkoord kan de garage het extra werk niet zomaar in rekening brengen?
 - „A test drive is only with permission, and only with a valid driving licence”: is dit juist zonder voorbehoud, ook op het terrein van de garage?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+### c.road — Safe on the road, and fair work
+
+*Unit „Vervoer en bezorging”, les „Safe and fair on the road” (`l.road`), in dit document sinds 5 november 2026*
+
+**Samenvatting (NL):** Houd je telefoon nooit in je hand tijdens het rijden: dat is verboden; gebruik een houder voor de navigatie; neem je pauzes, ook op een drukke dag; een zwaar pakket: gebruik de steekwagen of til samen; ijs of sneeuw: rij langzaam; sommige bedrijven zeggen dat je als zelfstandige werkt, maar wie bepaalt je uren, je route en je kleding? Bepaalt het bedrijf dat allemaal, dan ben je misschien toch werknemer (in loondienst), met vaak meer rechten, zoals loon als je ziek bent; meer in de les „Papers, integration and your job”. Situatie: het bedrijf noemt je zelfstandige, maar bepaalt je uren, je route en je kleding: vraag advies.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Never hold your phone while you drive: that is forbidden. Use a holder for the navigation. Take your breaks, also on a busy day. A heavy parcel? Use the hand truck, or lift it together. Ice or snow? Drive slowly: arriving late is better than an accident. Some companies say you work as self-employed (zelfstandig). But who decides your hours, your route and your clothes? If the company decides all that, you may be an employee after all (in loondienst). Then you often have more rights, like pay when you are sick. More about this in the lesson "Papers, integration and your job".
+>
+> *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
+
+**Zeg het zo (Nederlands):** „Ik neem nu pauze. Daarna rij ik verder.” — *I am taking my break now. Then I will drive on.*
+
+**Situatie in de les:** The company calls you self-employed. But it decides your hours, your route and your clothes. What do you do?
+**Goede antwoord:** Ask for advice: maybe you are an employee.
+**Uitleg na het antwoord (`c.road.w`):** What counts is how you really work, not only the word on the contract. If the company decides how, when and where you work, you are often an employee. Then you have more rights.
+
+**⚠ Getallen en termijnen:** geen getallen in de tip (bewust geen rij- en rusttijden: de EU-regels met tachograaf gelden niet voor de meeste bestelbussen onder 3,5 ton).
+
+**Onze eigen vraag hierbij:**
+- „Never hold your phone while you drive: that is forbidden”: wij gaan uit van art. 61a RVV 1990 (in België art. 8.4 Wegverkeersreglement). Klopt dit zonder voorbehoud, ook voor de handscanner van de bezorger?
+- „Take your breaks”: wij noemen geen minuten. Voor werknemers geldt de Arbeidstijdenwet (art. 5:4), voor chauffeurs ook het Arbeidstijdenbesluit vervoer. Is het juist om voor bezorgers in een bestelbus geen getal te noemen, of is één getal (30 minuten na 5,5 uur) hier zeker genoeg?
+- „If the company decides all that, you may be an employee after all”: wij gaan uit van art. 7:610 BW en het Deliveroo-arrest (HR 24 maart 2023). Is „may be … after all” en „often more rights, like pay when you are sick” voorzichtig genoeg? Moet de EU-richtlijn platformwerk (2024/2831, omzetting uiterlijk 2 december 2026, een vermoeden van werknemerschap) erbij, of juist niet zolang de Nederlandse wet er nog niet is?
+- De slotregel stuurt naar de vakbond, het Juridisch Loket of FairWork (het bedrijf kan zelf het probleem zijn). Hoort de Belastingdienst of de Arbeidsinspectie (schijnzelfstandigheid melden) hier ook bij?
 
 **Oordeel deskundige:**
 

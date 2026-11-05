@@ -1652,6 +1652,30 @@ const sectorUnits: Unit[] = [
       ],
       [['Waarom ligt dit apart?', 'Why is this put aside?'], ['Het etiket zit scheef.', 'The label is crooked.']],
     ),
+    // "Voedselverwerking" (the owner's request, 5 November 2026): working with food, in the
+    // factory's own unit, before its mixed review. "het haarnetje", "handen wassen", "de
+    // werkkleding" and "schoon" (l.hygiene), "de koelcel", "snijden" and "de allergie"
+    // (l.kitchen), "de lopende band" (l.line) and "de hand" (l.body) are already words of other
+    // lessons: here they come in the sentences, the chat and the tip. Six new concrete words, each
+    // with a drawing (src/pictures/group36.tsx).
+    lesson(
+      'food',
+      'Working with food',
+      [
+        ['mes', 'het mes', 'the knife', '🔪'],
+        ['snijhandschoen', 'de snijhandschoen', 'the cut-resistant glove (a glove against cuts)', '🧤'],
+        ['vriescel', 'de vriescel', 'the freezer room (a very cold room)', '🥶'],
+        ['sieraden', 'de sieraden', 'the jewellery (a ring, a watch, earrings)', '💍'],
+        ['pleister', 'de pleister', 'the plaster (for a small cut)', '🩹'],
+        ['vlees', 'het vlees', 'the meat', '🥩'],
+      ],
+      [
+        ['Ik doe mijn sieraden af.', 'I am taking off my jewellery.'],
+        ['Waar zijn de snijhandschoenen?', 'Where are the cut-resistant gloves?'],
+        ['In de vriescel draag ik een warme jas.', 'In the freezer room I wear a warm coat.', ['Ik draag een warme jas in de vriescel.']],
+      ],
+      [['Waarom maken we de band nu schoon?', 'Why are we cleaning the line now?'], ['Hierna komt een product zonder noten.', 'Next comes a product without nuts.']],
+    ),
   ]),
   unit('care', 'In care', 'In de zorg', '🧓', '#9d4edd', [
     lesson(
@@ -1832,6 +1856,28 @@ const sectorTips = [
     ],
     'A wrong label can mean that all products must come back from the shops. Saying it early is what a good team member does.',
     NONE,
+  ),
+  // "Voedselverwerking" (5 November 2026). The hygiene rules are the same for everyone and are
+  // about the food, not about the person (no judgement).
+  // ⚖️ check: Who works with food and is sick (for example diarrhoea or vomiting) or has a wound or
+  // a skin infection, must report it to the company right away ⚖️ (Verordening (EG) 852/2004,
+  // bijlage II, hoofdstuk VIII, punt 2: EU law, so the same in Belgium). The tip says "report it
+  // before you start" and names no sanction; a special (blue) plaster or other work is common
+  // practice (HACCP), not a legal rule: "can".
+  tipFor(
+    'food',
+    '🧤',
+    'Clean hands, safe food',
+    'Working with food has strict hygiene rules: a hairnet, clean work clothes, washed hands and no jewellery. These rules are the same for everyone. They say nothing about you: they keep the food safe for the people who eat it. With a knife, always wear your cut-resistant glove. In a cold room or a freezer room, wear the warm clothes you get, and warm up in your break. Are you sick, or do you have a wound on your hand? Report it before you start. Then you can get a special plaster, or other work for a while.',
+    ['Ik heb een wondje aan mijn hand. Mag ik een pleister?', 'I have a small cut on my hand. May I have a plaster?'],
+    'You cut your finger a little at home. Today you work with meat. What do you do?',
+    [
+      'Tell your supervisor, and ask for a plaster.',
+      'Say nothing: it is only a small cut.',
+      'Wear a glove over it, so nobody sees it.',
+    ],
+    'A small wound can bring germs into the food. When you report it, you can get a special plaster or other work for a while. Reporting it is normal: nobody blames you for it.',
+    HOUSE_LINE,
   ),
   tipFor(
     'client',
@@ -3301,6 +3347,103 @@ const entreeTips = [
   ),
 ];
 
+// ---- Transport and delivery (the owner's request, 5 November 2026) ----
+// A sector unit appended at the very end, so every existing course keeps its order. It is the
+// second own unit of the sector Logistiek (src/content/sectors.ts): in the path of a learner who
+// chose it, it comes right after "In het magazijn"; for the other sectors it waits with the other
+// sectors' units. Already words of other lessons, used here in a sentence, the chat or a tip
+// only: "de scanner" (l.things), "het adres" (l.bsn), "de klant" (l.checkout), "de handtekening"
+// (l.workorder), "tekenen" (l.contract), "de foto" (l.phone), "kapot" (l.handover), "de buur"
+// (l.roundsounds, as "de buren"), "tillen" (l.directions), "de pauze" (l.shift), "glad"
+// (l.cleansafe), "rustig" (l.clear), "het weer" (l.smalltalk), "de telefoon" (l.phone) and "de
+// zzp’er" and "de werknemer" (l.permit). "het busje" (l.jobends) is the van that brings workers;
+// here the delivery van is "de bestelbus".
+
+const deliveryUnit = unit('delivery', 'Transport and delivery', 'Vervoer en bezorging', '🚚', '#9a3412', [
+  lesson(
+    'parcel',
+    'Delivering parcels',
+    [
+      ['pakket', 'het pakket', 'the parcel', '📦'],
+      ['bestelbus', 'de bestelbus', 'the delivery van', '🚚'],
+      ['bezorgen', 'bezorgen', 'to deliver (bring to the customer)', '📬'],
+      ['inladen', 'inladen', 'to load (put things into the van)', '📥'],
+      ['aanbellen', 'aanbellen', 'to ring the doorbell', '🔔'],
+      ['bewijs', 'het bewijs', 'the proof (something that shows what happened)', '🧾', false],
+    ],
+    [
+      ['Ik scan elk pakket.', 'I scan every parcel.'],
+      ['De klant is niet thuis.', 'The customer is not at home.'],
+      ['Wilt u een pakket voor de buren aannemen?', 'Would you take in a parcel for the neighbours?'],
+    ],
+    [['Is dit pakket voor mij?', 'Is this parcel for me?'], ['Ja. Wilt u hier even tekenen?', 'Yes. Would you sign here, please?']],
+  ),
+  lesson(
+    'road',
+    'Safe and fair on the road',
+    [
+      ['rijden', 'rijden', 'to drive', '🛣️'],
+      ['zwaar', 'zwaar', 'heavy', '🏋️'],
+      ['steekwagen', 'de steekwagen', 'the hand truck (a trolley for heavy boxes)', '🛒'],
+      ['route', 'de route', 'the route (the way you drive)', '🗺️'],
+      ['loondienst', 'in loondienst', 'employed (you work for a boss and get a wage)', '🧑‍💼', false],
+      ['bepalen', 'bepalen', 'to decide (say how it must be done)', '👉', false],
+    ],
+    [
+      ['Dit pakket is te zwaar. Ik pak de steekwagen.', 'This parcel is too heavy. I am getting the hand truck.'],
+      ['Het is glad. Ik rij rustig.', 'It is slippery. I am driving slowly.'],
+      ['Wie bepaalt mijn route en mijn tijden?', 'Who decides my route and my times?', ['Wie bepaalt mijn tijden en mijn route?']],
+    ],
+    [['Kun je vandaag nog een rit doen?', 'Can you do one more run today?'], ['Nee, dan heb ik geen tijd voor mijn pauze.', 'No, then I have no time for my break.']],
+  ),
+]);
+
+const deliveryTips = [
+  // Company rules (where a parcel may go when nobody is home): HOUSE_LINE.
+  tipFor(
+    'parcel',
+    '📦',
+    'Not at home, or a broken parcel',
+    'Is the customer not at home? Follow the rules of your company: try the neighbours, or take the parcel back. Do not just leave it at the door, unless the customer asked for that. Is a parcel broken or wet? Do not deliver it as if nothing is wrong. Take a photo as proof, and report it in the scanner or the app. Being honest about a problem is always better than hiding it.',
+    ['Dit pakket is kapot. Hier is een foto.', 'This parcel is broken. Here is a photo.'],
+    'The customer is not at home, and the neighbours are not either. What do you do?',
+    [
+      'Scan "not at home", and take it back.',
+      'Scan it as delivered, and leave it at the door.',
+      'Hide it behind the bin, so nobody sees it.',
+    ],
+    'A parcel scanned as delivered must really be with the customer. When you scan what really happened, the customer can get the parcel later, and nobody thinks you lost it.',
+    HOUSE_LINE,
+  ),
+  // ⚖️ check: Holding a phone while you drive is forbidden ⚖️ (RVV 1990 art. 61a; in Belgium the
+  // same: Wegverkeersreglement art. 8.4). A holder for the navigation is advice, no legal claim.
+  // ⚖️ check: An employee has a right to breaks ⚖️ (Arbeidstijdenwet art. 5:4; for drivers also the
+  // Arbeidstijdenbesluit vervoer; the EU driving times with a tachograph are for trucks and vans
+  // above 3.5 t: no hours or numbers in the text).
+  // ⚖️ check: Who decides how, when and where you work counts, not the word on the contract: then
+  // you may be an employee after all (schijnzelfstandigheid; BW 7:610, Hoge Raad 24 maart 2023,
+  // Deliveroo; the EU platform work directive 2024/2831, to be in national law by 2 December 2026,
+  // is not named). Werkregels says the same (r.l.contract.4, "Stage, leerwerkbaan en zzp"); the
+  // language course's l.permit asks "Ben ik werknemer of zzp’er?": the tip points there, it does
+  // not repeat it. "zelfstandig" and "in loondienst", not "zzp’er": the same in Belgium.
+  // The company may itself be the problem: ABUSE_LINE.
+  tipFor(
+    'road',
+    '🚚',
+    'Safe on the road, and fair work',
+    'Never hold your phone while you drive: that is forbidden. Use a holder for the navigation. Take your breaks, also on a busy day. A heavy parcel? Use the hand truck, or lift it together. Ice or snow? Drive slowly: arriving late is better than an accident. Some companies say you work as self-employed (zelfstandig). But who decides your hours, your route and your clothes? If the company decides all that, you may be an employee after all (in loondienst). Then you often have more rights, like pay when you are sick. More about this in the lesson "Papers, integration and your job".',
+    ['Ik neem nu pauze. Daarna rij ik verder.', 'I am taking my break now. Then I will drive on.'],
+    'The company calls you self-employed. But it decides your hours, your route and your clothes. What do you do?',
+    [
+      'Ask for advice: maybe you are an employee.',
+      'Nothing: the contract says self-employed, so it is.',
+      'Work more hours, so you earn the same.',
+    ],
+    'What counts is how you really work, not only the word on the contract. If the company decides how, when and where you work, you are often an employee. Then you have more rights.',
+    ABUSE_LINE,
+  ),
+];
+
 // ---- Course order of everything in this file ----
 
 const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
@@ -3336,12 +3479,14 @@ export const workUnits: Unit[] = [
   stageUnit,
   societyUnit,
   onlineUnit,
+  // The newest sector unit (5 November 2026), at the very end (see "Transport and delivery" above).
+  deliveryUnit,
 ];
 
 const lessonOrder = [toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips].sort(
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

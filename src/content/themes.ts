@@ -81,7 +81,8 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
   'theme.sector': {
     // "In de werkplaats" and "In de garage": the own units of Techniek and Garage (30 October 2026).
     // "In de winkel": a sector of its own since 31 October 2026 (before, a basis unit under "Je baan").
-    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas', 'u.tech', 'u.garage', 'u.shop'],
+    // "Vervoer en bezorging": the second own unit of Logistiek (5 November 2026).
+    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas', 'u.tech', 'u.garage', 'u.shop', 'u.delivery'],
     regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean', 'r.kas', 'r.techniek', 'r.werkplaats', 'r.winkel'],
   },
 };

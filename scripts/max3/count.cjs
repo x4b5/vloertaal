@@ -520,6 +520,13 @@ function defineStates(LANG) {
   for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:clear-${key}`, shot(`lesson&lesson=l.clear&at=${at}`));
   }
+  // "Vervoer en bezorging" (u.delivery: l.parcel, l.road) and "Voedselverwerking" (l.food, in
+  // u.factory), seed 1, 5 November 2026: every step of the three lessons (word cards with the new
+  // drawings, the abstract words, picture and listen choices, the tip and its situation, the
+  // sentences, the chat, typing).
+  for (const lesson of ['parcel', 'road', 'food']) {
+    for (let at = 0; at < 21; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
+  }
   // "Getallen" (l.counting, seed 1, 4 November 2026): a number's word card (a label with its
   // digits), "what does it mean" with its partner (dertien or dertig), "which one is 47" (text
   // cards), the tip and its situation ("Ga naar gang zevenenveertig."), "What do you hear?" (47 or
