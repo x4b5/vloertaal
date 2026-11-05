@@ -243,15 +243,17 @@ export const units: Unit[] = [
       {
         // "leren" (w.leren, l.mistakes) and "de heftruck" (w.heftruck, l.things) are already words
         // of other lessons: here they come in the sentences, the tip and its situation. No picture
-        // for "proberen" (🤞 says "hope it goes well", the situation's wrong answer) or "voordoen"
-        // (🧑‍🔧 reads as "mechanic"). "de uitleg" is the word of s.notyet.2.
+        // for "proberen" (🤞 says "hope it goes well", the situation's wrong answer). No still
+        // picture for "voordoen" (🧑‍🔧 reads as "mechanic"): since 5 November 2026 (the second
+        // round of moving pictures) a moving one on its intro card only (`picture: 'motion'`): Henk
+        // puts a box on his stack, then Jada does the same. "de uitleg" is the word of s.notyet.2.
         id: 'l.notyet',
         title: 'I have not learned this yet',
         words: [
           { id: 'w.nogniet', nl: 'nog niet', en: 'not yet', emoji: '⏳', picture: false },
           { id: 'w.mogen', nl: 'mogen', en: 'to be allowed to, may', emoji: '🆗', picture: false },
           { id: 'w.proberen', nl: 'proberen', en: 'to try', emoji: '🤞', picture: false },
-          { id: 'w.voordoen', nl: 'voordoen', en: 'to show how (by doing it first)', emoji: '🧑‍🔧', picture: false },
+          { id: 'w.voordoen', nl: 'voordoen', en: 'to show how (by doing it first)', emoji: '🧑‍🔧', picture: 'motion' },
           { id: 'w.gevaarlijk', nl: 'gevaarlijk', en: 'dangerous', emoji: '☠️' },
           { id: 'w.uitleg', nl: 'de uitleg', en: 'the explanation', emoji: '💬', picture: false },
         ],

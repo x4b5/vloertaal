@@ -10,17 +10,43 @@ import { loadPictures } from '../src/pictures';
 /*
  * Moving word pictures (the owner's trial, 5 November 2026; docs/tekenstijl.md "Beweging"): a few
  * pictures whose meaning is a movement move once on the word's intro card, and nowhere else.
- *  - each trial picture has a moving part (src/pictures/kit.tsx Move: a <g class="mv-…">);
+ *  - each chosen picture (the trial, then the second round after the owner's "go on") has a
+ *    moving part (src/pictures/kit.tsx Move: a <g class="mv-…">);
  *  - only a rule under .intro-card animates it: in a choice, on the path, on the pocket cards and
  *    in the lists the same picture stands still;
  *  - the keyframes say only where a part comes from, so its base style is the still picture;
  *  - short and calm: it plays once (at most twice), no step shorter than 0.4 s, no loop;
- *  - "ontruimen" and "bijna" (abstract before) have a moving picture only ('motion'): on the
- *    intro card, never in a picture choice or a match.
+ *  - abstract words such as "ontruimen" and "bijna" have a moving picture only ('motion'): on
+ *    the intro card, never in a picture choice or a match.
  * Less motion and "Rustig scherm" stop it: tests/a11yMotionSound.test.ts.
  */
 
 const MOTION_TRIAL = ['w.glad', 'w.tillen', 'w.ontruimen', 'w.inchecken', 'w.uitchecken', 'w.bijna', 'w.langzaam', 'w.snel', 'w.telaat'];
+/**
+ * The second round (the owner's "go on", 5 November 2026), by group of docs/tekenstijl.md
+ * "Beweging": the body, from A to B, A becomes B, time and order. Left out on purpose: "beginnen"
+ * (a start button, not the scene of "uitzetten") and "gevallen" (stays still next to "vallen").
+ */
+const MOTION_ROUND2 = [
+  'w.vallen', 'w.bukken',
+  'w.inklokken', 'w.uitklokken', 'w.inloggen', 'w.uitloggen', 'w.ruilen', 'w.versturen', 'w.doorgeven', 'w.sorteren', 'w.ophalen',
+  'w.uitzetten', 'w.automatisch', 'w.verbeteren', 'w.lek', 'w.mengen',
+  'w.eerst', 'w.daarna', 'w.voordoen', 'w.verlengen', 'w.tellen', 'w.herhalen',
+];
+/**
+ * The last round (the owner: "do the rest of the words where movement helps", 5 November 2026):
+ * the report's "later" list and a pass over every word, by the same rules; in doubt, not.
+ */
+const MOTION_ROUND3 = ['w.opruimen', 'w.afruimen', 'w.inpakken', 'w.afpakken', 'w.kiezen', 'w.beter', 'w.duren', 'w.verhuizen', 'w.vergrendelen'];
+const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3];
+/** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
+const MOTION_ONLY: [string, string][] = [
+  ['w.ontruimen', 'l.alarm'], ['w.bijna', 'l.task'],
+  ['w.uitloggen', 'l.login'], ['w.ruilen', 'l.texting'], ['w.versturen', 'l.email'], ['w.doorgeven', 'l.privacy'],
+  ['w.automatisch', 'l.aiplan'], ['w.verbeteren', 'l.mistakes'], ['w.eerst', 'l.task'], ['w.daarna', 'l.task'],
+  ['w.voordoen', 'l.notyet'], ['w.verlengen', 'l.agency'], ['w.tellen', 'l.measures'],
+  ['w.kiezen', 'l.mychoice'],
+];
 
 const css = readFileSync(new URL('../src/styles.css', import.meta.url), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
 
@@ -50,26 +76,28 @@ beforeAll(async () => {
 });
 
 describe('moving word pictures: the trial', () => {
-  it('each trial word has a picture with a moving part', () => {
-    for (const id of MOTION_TRIAL) {
+  it('each moving word has a picture with a moving part', () => {
+    for (const id of MOVING) {
       expect(words[id], id).toBeDefined();
-      expect(renderToStaticMarkup(createElement(words[id])), id).toMatch(/class="mv-(from|slow|fast|turn|tip|grow|show)"/);
+      expect(renderToStaticMarkup(createElement(words[id])), id).toMatch(/class="mv-(from|slow|fast|drop|then|steps|turn|tip|grow|sag|show)"/);
     }
   });
 
-  it('no other picture moves (the trial stays a trial)', () => {
+  it('no other picture moves (only the words chosen, one by one)', () => {
     const moving = Object.entries(words).filter(([, draw]) => /class="mv-/.test(renderToStaticMarkup(createElement(draw)))).map(([id]) => id);
-    expect(moving.sort()).toEqual([...MOTION_TRIAL].sort());
+    expect(moving.sort()).toEqual([...MOVING].sort());
   });
 
-  it('"ontruimen" and "bijna" have a moving picture only: on the intro card, never in a choice', () => {
-    for (const id of ['w.ontruimen', 'w.bijna']) {
+  it('the moving-only words are abstract: their picture is on the intro card, never in a choice', () => {
+    expect(allWords.filter((w) => w.picture === 'motion').map((w) => w.id).sort()).toEqual(MOTION_ONLY.map(([id]) => id).sort());
+    for (const [id, lessonId] of MOTION_ONLY) {
       const w = allWords.find((x) => x.id === id)!;
       expect(w.picture, id).toBe('motion');
       expect(introPicture(w), id).toBe(true);
       expect(hasPicture(w), id).toBe(false);
+      expect(findLesson(lessonId)!.lesson.words.map((x) => x.id), id).toContain(id);
     }
-    for (const [lessonId, id] of [['l.alarm', 'w.ontruimen'], ['l.task', 'w.bijna']]) {
+    for (const [id, lessonId] of MOTION_ONLY) {
       const { lesson } = findLesson(lessonId)!;
       for (const seed of [1, 2, 3, 7, 42, 99]) {
         for (const review of [false, true]) {
@@ -84,7 +112,7 @@ describe('moving word pictures: the trial', () => {
 
   it('the intro card shows the moving picture', async () => {
     const { IntroCard } = await import('../src/components/Exercises');
-    for (const id of MOTION_TRIAL) {
+    for (const id of MOVING) {
       const word = allWords.find((x) => x.id === id)!;
       const html = renderToStaticMarkup(createElement(IntroCard as never, { ex: { kind: 'intro', word }, onAnswer: () => {} } as never));
       expect(html, id).toContain('intro-card');
@@ -107,7 +135,7 @@ describe('moving word pictures: the motion (styles.css)', () => {
   });
 
   it('every kind of moving part has its rule', () => {
-    for (const kind of ['from', 'slow', 'fast', 'turn', 'tip', 'grow', 'show']) {
+    for (const kind of ['from', 'slow', 'fast', 'drop', 'then', 'steps', 'turn', 'tip', 'grow', 'sag', 'show']) {
       expect(animating.some((r) => r.sel.includes(`.mv-${kind}`)), kind).toBe(true);
     }
   });

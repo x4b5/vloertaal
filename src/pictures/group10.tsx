@@ -1,7 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 import { CastHead } from '../components/Characters';
 import type { CharacterId } from '../components/Characters';
-import { Arrow, Bubble, Calendar, Clock, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Tick } from './kit';
+import { Arrow, Bubble, Calendar, Clock, CurveArrow, ExclaimMark, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Tick } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 10 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -552,13 +552,19 @@ export default {
     </g>
   ),
 
-  // "afpakken": to take away — a hand snatches the passport from an open hand. Warning sign.
+  // "afpakken": to take away — a hand snatches the passport from an open hand. Warning sign. On
+  // the intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the passport goes from her open hand away to his, at an
+  // even pace (one slide, nothing rough): away from someone, which "pakken" (to take) does not say.
   'w.afpakken': () => (
     <g>
       <Hand pose="open" x={30} y={118} rotate={32} scale={0.72} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
-      <Passport cx={78} cy={52} s={0.48} rot={12} />
-      <Hand pose="hold" x={116} y={58} rotate={-80} scale={0.72} skin={SKIN.henk} sleeve={[PAL.slate, PAL.slateDark]} />
-      <Motion x={58} y={52} dir={180} spread={50} n={3} len={8} gap={4} color={PAL.line} width={3.4} />
+      <Move kind="from" dx={-30} dy={24}>
+        <Passport cx={78} cy={52} s={0.48} rot={12} />
+        <Hand pose="hold" x={116} y={58} rotate={-80} scale={0.72} skin={SKIN.henk} sleeve={[PAL.slate, PAL.slateDark]} />
+      </Move>
+      <Move kind="show">
+        <Motion x={58} y={52} dir={180} spread={50} n={3} len={8} gap={4} color={PAL.line} width={3.4} />
+      </Move>
       <Arrow from={[56, 18]} to={[100, 18]} color={PAL.red} width={6} head={10} />
       <circle cx="22" cy="28" r="13" fill={PAL.redShade} transform="translate(0 1.5)" />
       <circle cx="22" cy="28" r="13" fill={PAL.red} />

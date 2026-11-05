@@ -1,6 +1,6 @@
 import type { JSX, ReactNode } from 'react';
 import type { CharacterId } from '../components/Characters';
-import { Arrow, Bubble, Cross, Dots, ExclaimMark, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick, type Pt } from './kit';
+import { Arrow, Bubble, Cross, Dots, ExclaimMark, Ground, Hand, Motion, Move, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick, type Pt } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 12 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -334,17 +334,26 @@ export default {
   ),
 
   // "uitzetten": to switch off — a finger presses the side button; the screen goes black and
-  // shows the power symbol.
+  // shows the power symbol. On the intro card (docs/tekenstijl.md "Beweging", second round, 5
+  // November 2026) the screen is lit (as on "de telefoon"), the finger comes to the button and
+  // then the screen goes dark: one fade, once.
   'w.uitzetten': () => (
     <g>
-      <Phone x={18} y={10} w={60} h={98} screen={PAL.slateDark}>
-        <path d="M38.8 46A15 15 0 1 0 57.2 46" fill="none" stroke={PAL.steel} strokeWidth="5.5" strokeLinecap="round" />
-        <path d="M48 38V58" stroke={PAL.steel} strokeWidth="5.5" strokeLinecap="round" />
+      <Phone x={18} y={10} w={60} h={98} screen={PAL.sky}>
+        <Move kind="show">
+          <rect x={22} y={17} width={52} height={84} rx="4" fill={PAL.slateDark} />
+          <path d="M38.8 46A15 15 0 1 0 57.2 46" fill="none" stroke={PAL.steel} strokeWidth="5.5" strokeLinecap="round" />
+          <path d="M48 38V58" stroke={PAL.steel} strokeWidth="5.5" strokeLinecap="round" />
+        </Move>
       </Phone>
       <rect x={78} y={28} width={6} height={18} rx="2.5" fill={PAL.red} />
-      <Hand pose="point" x={122} y={30} rotate={-90} scale={0.78} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
-      <Motion x={81} y={37} dir={-90} spread={0} n={1} len={6} gap={14} color={PAL.red} width={3.4} />
-      <Motion x={81} y={37} dir={90} spread={0} n={1} len={6} gap={14} color={PAL.red} width={3.4} />
+      <Move kind="from" dx={26}>
+        <Hand pose="point" x={122} y={30} rotate={-90} scale={0.78} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
+      </Move>
+      <Move kind="show">
+        <Motion x={81} y={37} dir={-90} spread={0} n={1} len={6} gap={14} color={PAL.red} width={3.4} />
+        <Motion x={81} y={37} dir={90} spread={0} n={1} len={6} gap={14} color={PAL.red} width={3.4} />
+      </Move>
     </g>
   ),
 

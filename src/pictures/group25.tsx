@@ -1,5 +1,5 @@
 import { useId, type JSX } from 'react';
-import { Arrow, CurveArrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, CurveArrow, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 import { Bust } from './bust';
 
 /**
@@ -45,11 +45,13 @@ function Paper({ x, y, w, h, lines = 4 }: { x: number; y: number; w: number; h: 
 }
 
 /** A padlock, bottom-middle of the body at (x, y), body `w` wide. */
-function Padlock({ x, y, w = 26 }: { x: number; y: number; w?: number }) {
+function Padlock({ x, y, w = 26, closing = false }: { x: number; y: number; w?: number; closing?: boolean }) {
   const h = w * 0.82;
+  const shackle = <path d={`M${x - w * 0.3} ${y - h}V${y - h - w * 0.28}A${w * 0.3} ${w * 0.3} 0 0 1 ${x + w * 0.3} ${y - h - w * 0.28}V${y - h}`} fill="none" stroke={PAL.steel} strokeWidth={w * 0.16} />;
   return (
     <g>
-      <path d={`M${x - w * 0.3} ${y - h}V${y - h - w * 0.28}A${w * 0.3} ${w * 0.3} 0 0 1 ${x + w * 0.3} ${y - h - w * 0.28}V${y - h}`} fill="none" stroke={PAL.steel} strokeWidth={w * 0.16} />
+      {/* `closing`: on the intro card the shackle snaps down into the lock (Move) */}
+      {closing ? <Move kind="fast" dy={-w * 0.3}>{shackle}</Move> : shackle}
       <Shade color={PAL.yellowShade} opacity={1} at={[x + w * 0.6, y - h / 2, w * 0.3, h]}>
         <rect x={x - w / 2} y={y - h} width={w} height={h} rx={w * 0.16} fill={PAL.yellow} />
       </Shade>
@@ -300,7 +302,8 @@ export default {
     </g>
   ),
 
-  // "opruimen": to tidy up, to put away — a hand puts the wrench away in a crate, all neat
+  // "opruimen": to tidy up, to put away — a hand puts the wrench away in a crate, all neat. On the
+  // intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the hand lowers the wrench into the crate, then the sparkles come.
   'w.opruimen': () => (
     <g>
       <Ground cy={106} rx={42} />
@@ -308,15 +311,19 @@ export default {
       <path d="M20 58H100L96 66H24Z" fill={PAL.blueShade} />
       <rect x="32" y="48" width="9" height="18" rx="3" fill={PAL.yellow} />
       <rect x="45" y="44" width="10" height="22" rx="3" fill={PAL.red} />
-      <Wrench x={66} y={42} rotate={-90} len={44} />
-      <Hand pose="hold" x={80} y={28} rotate={-90} scale={0.66} skin={SKIN.henk} sleeve={['#2d5a92', PAL.navyShade]} />
+      <Move kind="from" dy={-30}>
+        <Wrench x={66} y={42} rotate={-90} len={44} />
+        <Hand pose="hold" x={80} y={28} rotate={-90} scale={0.66} skin={SKIN.henk} sleeve={['#2d5a92', PAL.navyShade]} />
+      </Move>
       <Shade color={PAL.blueShade} opacity={1} at={[106, 86, 16, 30]}>
         <path d="M18 62H102L98 104H22Z" fill={PAL.blue} />
       </Shade>
       <rect x="44" y="74" width="32" height="8" rx="4" fill={PAL.blueShade} />
       <Shine d="M24 68H46" opacity={0.45} width={3} />
-      <Sparkle x={100} y={40} r={8} />
-      <Sparkle x={16} y={42} r={5} color={PAL.yellowLight} />
+      <Move kind="show">
+        <Sparkle x={100} y={40} r={8} />
+        <Sparkle x={16} y={42} r={5} color={PAL.yellowLight} />
+      </Move>
     </g>
   ),
 
@@ -754,15 +761,19 @@ export default {
     </g>
   ),
 
-  // "vergrendelen": to lock (a screen or a phone) — a finger taps the padlock: the phone locks
+  // "vergrendelen": to lock (a screen or a phone) — a finger taps the padlock: the phone locks. On
+  // the intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the shackle snaps shut, then the lines come: to lock, the
+  // action ("op slot", l.handover, is the padlock standing still).
   'w.vergrendelen': () => (
     <g>
       <Shade color={PAL.slateDark} opacity={1} at={[84, 60, 8, 60]}>
         <rect x="26" y="8" width="56" height="102" rx="10" fill={PAL.slate} />
       </Shade>
       <rect x="31" y="16" width="46" height="86" rx="5" fill={PAL.navy} />
-      <Padlock x={54} y={66} w={28} />
-      <Motion x={54} y={50} dir={-90} spread={100} n={3} len={6} gap={20} color={PAL.ice} width={2.6} />
+      <Padlock x={54} y={66} w={28} closing />
+      <Move kind="show">
+        <Motion x={54} y={50} dir={-90} spread={100} n={3} len={6} gap={20} color={PAL.ice} width={2.6} />
+      </Move>
       <Hand pose="point" x={82} y={90} rotate={-28} scale={0.74} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
     </g>
   ),
