@@ -112,6 +112,13 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "أستطيع أن أقول إن الزبون ليس في البيت.", // nieuw, nalezen
     'kjn.u.delivery.2': "أستطيع أن أطلب من الجيران أن يستلموا طرداً.", // nieuw, nalezen
     'kjn.u.delivery.3': "أستطيع أن أسأل من يقرّر مساري وأوقاتي.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 nov 2026)
+    'kjn.u.communicate.1': "أستطيع أن أشرح ما المشكلة.", // nieuw, nalezen
+    'kjn.u.communicate.2': "أستطيع أن أقول ما سمعته.", // nieuw, nalezen
+    'kjn.u.communicate.3': "أستطيع أن أطلب حديثاً في الوقت المناسب.", // nieuw, nalezen
+    'kjn.u.feedback.1': "أستطيع أن أطلب مثالاً عندما أتلقى ملاحظات.", // nieuw, nalezen
+    'kjn.u.feedback.2': "أستطيع أن أقول بلطف ما يمكن أن يكون أفضل.", // nieuw, nalezen
+    'kjn.u.feedback.3': "أستطيع أن أطرح سؤالاً في اجتماع الفريق.", // nieuw, nalezen
   },
 };
 

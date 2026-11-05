@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'ርእይቶን ጌጋታትን',
     'w.fout': 'ጌጋ',
     'w.compliment': 'ናእዳ',
-    'w.feedback': { m: 'ርእይቶ (ብዛዕባ ስራሕካ)', f: 'ርእይቶ (ብዛዕባ ስራሕኪ)', x: 'ርእይቶ (ብዛዕባ ስራሕኩም)' }, // x: nieuw, nalezen
+    'w.feedback': { m: "ርእይቶ (ሓደ ሰብ ብዛዕባ ስራሕካ ዝብሎ)", f: "ርእይቶ (ሓደ ሰብ ብዛዕባ ስራሕኪ ዝብሎ)", x: "ርእይቶ (ሓደ ሰብ ብዛዕባ ስራሕኩም ዝብሎ)" }, // nieuw, nalezen
     'w.uitleggen': 'ምግላጽ',
     'w.leren': 'ምምሃር',
     'w.verbeteren': 'ምምሕያሽ፡ ምእራም',

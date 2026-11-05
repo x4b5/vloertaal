@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'بازخورد و اشتباه',
     'w.fout': 'اشتباه',
     'w.compliment': 'تعریف، تشویق',
-    'w.feedback': 'بازخورد',
+    'w.feedback': "بازخورد (چیزی که کسی دربارهٔ کارت می‌گوید)", // nieuw, nalezen
     'w.uitleggen': 'توضیح دادن',
     'w.leren': 'یاد گرفتن',
     'w.verbeteren': 'بهتر کردن، درست کردن',

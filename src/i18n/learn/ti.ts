@@ -129,6 +129,15 @@ const t: CultureTranslation = {
     'c.road.a.why': "ሓደ ተወሳኺ ዙረት ተሓቲቱ: ኣይፋል፡ ቅድም ዕረፍቲ ስለ ዝመጽእ።", // nieuw, nalezen
     'c.backtowork.a.why': "ብዛዕባ ጥዕና ተሓቲቱ: ሓጺር «እወ»፡ ቀስ ብቐስ ምኻድ ድማ።", // nieuw, nalezen
     'c.feelwell.a.why': "ብዛዕባ ኩነታት ተሓቲቱ: ሓቀኛ «ብዙሕ ጽቡቕ ኣይኮነን» ጸገም የብሉን።", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 nov 2026)
+    'd.explain.a.why': "እንታይ ጸገም ከም ዘሎ ተሓቲቱ: እዚ መልሲ እንታይ ምዃኑን እንታይ ከም ዘድሊን ይብል።", // nieuw, nalezen
+    'd.listen.a.why': "ቀልዲ ምዃኑ ርግጸኛ ዘይምዃን: ምሕታት ካብ ምግማት ይሓይሽ።", // nieuw, nalezen
+    'd.calm.a.why': "ስለምንታይ ከም ዘይተወድአ ተሓቲቱ: ህዱእ ምኽንያት፡ እንታይ ቅድም ከም ዝመጽእ ድማ።", // nieuw, nalezen
+    'd.talkintime.a.why': "ሓደ ሰብ ቁሩብ ግዜ ይሓትት: «እወ»፡ ክነግር ምእንቲ ድማ ሕቶ።", // nieuw, nalezen
+    'd.reachable.a.why': "ድሕሪ ዘይተመለሰ ጻውዒት ምምላስ ጻውዒት: ሰላምታ፡ ምኽንያት ናይቲ ጻውዒት ድማ።", // nieuw, nalezen
+    'd.getfeedback.a.why': "ርእይቶ ቀሪቡ: «እወ»፡ ብጽቡቕ ክግበር ከም ዝድለ ድማ።", // nieuw, nalezen
+    'd.givefeedback.a.why': "ብዛዕባ ስራሕ ተሓቲቱ: ቅድም እቲ ጽቡቕ፡ ድሕሪኡ እቲ ክመሓየሽ ዝኽእል።", // nieuw, nalezen
+    'd.meeting.a.why': "ሕቶታት ተሓቲቱ: እዚ መልሲ ብዛዕባ መደብ ስራሕ ሓደ ሕቶ ይሓትት።", // nieuw, nalezen
   },
 };
 

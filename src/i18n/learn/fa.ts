@@ -128,6 +128,15 @@ const t: CultureTranslation = {
     'c.road.a.why': "یک سرویس دیگر خواسته‌اند: نه، چون اول استراحت است.", // nieuw, nalezen
     'c.backtowork.a.why': "پرسیده‌اند حالت چطور است: یک بلهٔ کوتاه، و اینکه آرام‌آرام پیش می‌روی.", // nieuw, nalezen
     'c.feelwell.a.why': "پرسیده‌اند حالت چطور است: یک «نه چندان» صادقانه اشکالی ندارد.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 nov 2026)
+    'd.explain.a.why': "پرسیده‌اند چه مشکلی هست: این جواب می‌گوید چه شده، و چه لازم است.", // nieuw, nalezen
+    'd.listen.a.why': "مطمئن نیستی شوخی است یا نه: پرسیدن بهتر از حدس زدن است.", // nieuw, nalezen
+    'd.calm.a.why': "پرسیده‌اند چرا تمام نشده: یک دلیل آرام، و اینکه اول چه کاری است.", // nieuw, nalezen
+    'd.talkintime.a.why': "کسی کمی وقت می‌خواهد: یک بله، و یک سؤال تا بتواند تعریف کند.", // nieuw, nalezen
+    'd.reachable.a.why': "زنگ زدن بعد از یک تماس بی‌پاسخ: یک سلام، و اینکه چرا زنگ می‌زنی.", // nieuw, nalezen
+    'd.getfeedback.a.why': "پیشنهاد بازخورد: یک بله، و اینکه می‌خواهی کار را خوب انجام بدهی.", // nieuw, nalezen
+    'd.givefeedback.a.why': "پرسیده‌اند کارش چطور است: اول چیزی که خوب است، بعد چیزی که می‌تواند بهتر شود.", // nieuw, nalezen
+    'd.meeting.a.why': "پرسیده‌اند سؤالی هست: این جواب یک سؤال می‌پرسد، دربارهٔ برنامهٔ کاری.", // nieuw, nalezen
   },
 };
 

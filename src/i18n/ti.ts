@@ -493,6 +493,7 @@ const lang: HelpLanguageSource = {
     klankSpeed: 'ፍጥነት', // nieuw, nalezen
     klankScrub: 'ቃል፡ ድምጺ ብድምጺ', // nieuw, nalezen
     tagSound: 'ድምጺ', // nieuw, nalezen
+    commLabel: "ምዝርራብ", // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

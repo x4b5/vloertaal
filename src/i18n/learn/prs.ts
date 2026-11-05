@@ -128,6 +128,15 @@ const t: CultureTranslation = {
     'c.road.a.why': "یک دور دیگر خواسته‌اند: نی، چون اول وقت تفریح است.", // nieuw, nalezen
     'c.backtowork.a.why': "پرسیده‌اند حال تان چطور است: یک بلی کوتاه، و اینکه آهسته آهسته پیش می‌روید.", // nieuw, nalezen
     'c.feelwell.a.why': "پرسیده‌اند حال تان چطور است: یک «زیاد خوب نی» صادقانه مشکلی ندارد.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 nov 2026)
+    'd.explain.a.why': "پرسیده‌اند که چه مشکل است: این جواب می‌گوید چه شده، و به چه ضرورت است.", // nieuw, nalezen
+    'd.listen.a.why': "مطمئن نیستید که شوخی است یا نی: پرسیدن از حدس زدن بهتر است.", // nieuw, nalezen
+    'd.calm.a.why': "پرسیده‌اند چرا تمام نشده: یک دلیل آرام، و اینکه اول چه کار است.", // nieuw, nalezen
+    'd.talkintime.a.why': "کسی کمی وقت می‌خواهد: یک بلی، و یک سوال تا بتواند قصه کند.", // nieuw, nalezen
+    'd.reachable.a.why': "دوباره زنگ زدن بعد از یک زنگ بی‌جواب: یک سلام، و اینکه چرا زنگ می‌زنید.", // nieuw, nalezen
+    'd.getfeedback.a.why': "پیشنهاد نظر دربارهٔ کار: یک بلی، و اینکه می‌خواهید کار را خوب انجام بدهید.", // nieuw, nalezen
+    'd.givefeedback.a.why': "پرسیده‌اند که کار چطور است: اول چیزی که خوب است، بعد چیزی که می‌تواند بهتر شود.", // nieuw, nalezen
+    'd.meeting.a.why': "پرسیده‌اند که سوالی هست: این جواب یک سوال می‌پرسد، دربارهٔ تقسیم اوقات کار.", // nieuw, nalezen
   },
 };
 
