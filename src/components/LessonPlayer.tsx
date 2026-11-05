@@ -967,7 +967,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'build': body = <BuildExercise key={key} ex={ex} {...props} />; break;
     case 'type': body = <TypeExercise key={key} ex={ex} {...props} />; break;
     case 'chat': body = <ChatExercise key={key} ex={ex} {...props} />; break;
-    case 'tip': body = <TipCard key={key} ex={ex} {...props} />; break;
+    case 'tip': body = <TipCard key={key} ex={ex} {...props} soundOff={soundOff} />; break;
     case 'saying': body = <SayingCard key={key} ex={ex} {...props} />; break;
     case 'klank': body = <KlankStep key={key} ex={ex} {...props} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
@@ -981,7 +981,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'truefalse': body = <TrueFalse key={key} ex={ex} {...props} />; break;
     case 'whatdo': body = <WhatDo key={key} ex={ex} {...props} />; break;
     case 'whoask': body = <WhoAsk key={key} ex={ex} {...props} />; break;
-    case 'model': body = <ModelLine key={key} ex={ex} {...props} />; break;
+    case 'model': body = <ModelLine key={key} ex={ex} {...props} soundOff={soundOff} />; break;
     case 'payslip': body = <PayslipStep key={key} ex={ex} {...props} />; break;
     case 'card': body = <CardStep key={key} ex={ex} {...props} />; break;
   }

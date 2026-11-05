@@ -251,8 +251,10 @@ export function IntroCard({ ex, lang, onAnswer, soundOff = false }: Props<'intro
  * The say-it line's state on a word card: shown (with its text) and how often the "your turn"
  * sign has played. Before it shows, the line keeps its place (hidden), so nothing below moves.
  */
-function useSayAloud(text: string, mode: SayMode, stillIn: () => number): { shown: SayMode | null; pulse: number } {
-  const [shown, setShown] = useState<SayMode | null>(mode === 'quiet' ? 'quiet' : null);
+export function useSayAloud(text: string, mode: SayMode, stillIn: () => number, atOnce = false): { shown: SayMode | null; pulse: number } {
+  // `atOnce`: a sentence that does not play by itself ("Zeg het zo" of a tip): the line shows at
+  // once, and the "your turn" sign plays after the learner has heard it (the owner, 5 November 2026).
+  const [shown, setShown] = useState<SayMode | null>(mode === 'quiet' || atOnce ? mode : null);
   const [pulse, setPulse] = useState(0);
   const still = useRef(stillIn);
   still.current = stillIn;
@@ -262,10 +264,10 @@ function useSayAloud(text: string, mode: SayMode, stillIn: () => number): { show
   const before = useRef<SayMode | null>(null);
   useEffect(() => {
     // The sound switched on or off while the line is up: it keeps its place, its text follows.
-    const was = up.current && before.current !== null && before.current !== mode;
+    const was = (atOnce && before.current === null) || (up.current && before.current !== null && before.current !== mode);
     before.current = mode;
     return followSayAloud(text, mode, { shown: setShown, pulse: () => setPulse((n) => n + 1) }, { stillIn: () => still.current() }, was);
-  }, [text, mode]);
+  }, [text, mode, atOnce]);
   return { shown, pulse };
 }
 
@@ -275,7 +277,7 @@ const SAY_NL = { sayItAloud: 'Zeg het hardop.', sayItQuietly: 'Zeg het zachtjes,
 
 /** "Zeg het hardop." (or softly, in your head) in Dutch and the help language, with three dots
  *  that light up after each other once ("your turn"), then stand still. Not a button. */
-function SayAloudLine({ shown, pulse, lang }: { shown: SayMode | null; pulse: number; lang?: HelpLanguage }) {
+export function SayAloudLine({ shown, pulse, lang, dutchOnly = false }: { shown: SayMode | null; pulse: number; lang?: HelpLanguage; dutchOnly?: boolean }) {
   const key = shown === 'quiet' ? 'sayItQuietly' : 'sayItAloud';
   const text = ui(key, lang);
   return (
@@ -285,7 +287,8 @@ function SayAloudLine({ shown, pulse, lang }: { shown: SayMode | null; pulse: nu
         {/* The Dutch keeps its own direction in a right-to-left screen (its full stop at its end,
             also when it wraps), set to the right there (styles.css). */}
         <span className="say-aloud-nl" lang="nl" dir="ltr">{SAY_NL[key]}</span>
-        {text.help && text.lang ? <HelpText text={text.help} lang={text.lang} /> : <span className="bi-help" lang="en">{text.en}</span>}
+        {/* The work-rules track is Dutch only (dutchOnly): no translation under it. */}
+        {dutchOnly ? null : text.help && text.lang ? <HelpText text={text.help} lang={text.lang} /> : <span className="bi-help" lang="en">{text.en}</span>}
       </span>
       {/* A new key replays the dots (a new element starts its animation again). */}
       <span key={pulse} className={`say-aloud-dots ${pulse ? 'is-pulsing' : ''}`} aria-hidden>
@@ -1339,8 +1342,14 @@ export function SnapExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
 }
 
 /** "How it works here": one Dutch workplace custom, with the sentence to use. Not graded. */
-export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
+export function TipCard({ ex, lang, onAnswer, soundOff = false }: Props<'tip'> & {
+  /** "Zonder geluid" (or "Ik kan nu niet luisteren"): the say-it line asks to say it softly. */
+  soundOff?: boolean;
+}) {
   const { tip, part } = ex;
+  // "Zeg het hardop" under "Zeg het zo" too (the owner, 5 November 2026): at once (the phrase does
+  // not play by itself), the "your turn" sign after the learner has heard it.
+  const sayLine = useSayAloud(tip.phrase.nl, sayMode(soundOff, surelySilent(tip.phrase.nl)), () => 0, true);
   const talking = useTalking([tip.phrase.nl]);
   useEffect(() => { onAnswer({ correct: true }); }, [tip, part, onAnswer]);
   // On its own page the explanation grows into the room above Continue (src/components/useFitText.ts).
@@ -1369,6 +1378,7 @@ export function TipCard({ ex, lang, onAnswer }: Props<'tip'>) {
           <SpeakButton glyph text={tip.phrase.nl} help={lang} voice={voiceFor(tipCast(tip, lang?.gender))} />
         </div>
       </div>
+      {part === 'say' && !dutchUi(lang) && <SayAloudLine {...sayLine} lang={lang} />}
     </div>
   );
   // Page 2 of the tip: only "Say it like this" and the phrase, big. The badge and the title were on
