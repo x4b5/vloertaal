@@ -152,6 +152,41 @@ The second round (the owner's "go on", 5 November 2026; the same limits):
 | Time, order | tellen (`'motion'`) | a finger taps three boxes one by one (`steps`) |
 | Time, order | herhalen | the loop in Bram's speech bubble goes round once more |
 
+The last round (the owner: "do the rest of the words where movement helps", 5 November 2026): the
+report's "later" list and a pass over all 630 words (no words were added since the report's list),
+by the same rules; in doubt, not.
+
+| Word | What moves |
+|---|---|
+| opruimen | the hand lowers the wrench into the crate, then the sparkles |
+| afruimen | the top plate goes up from the table onto the stack on the tray |
+| inpakken | the two hands lower the product into the box |
+| afpakken | the passport goes from her open hand away to his, at an even pace (nothing rough): away from someone, which "pakken" does not say; "pakken" stays still |
+| kiezen (`'motion'`) | three cards (kinds of work): the finger goes along and stops at the middle one, then its ring and tick |
+| beter | the green arrow rises from low to high, then the sparkles (getting well again, not a feeling) |
+| duren | the hourglass runs: the top sinks, the heap grows (`sag`) |
+| verhuizen | the box comes out from the old house on its way to the new one |
+| vergrendelen | the padlock's shackle snaps shut, then the lines: to lock (the action; "op slot" stays the still padlock) |
+
+Not moved in the last round, with the reason:
+
+- **Already clear standing still, movement adds little** (in doubt, not): pakken, opschrijven,
+  tekenen, stemmen, oogsten, vakken vullen, afkeuren, luchten, stoffen, spoelen, typen, klikken,
+  ophangen, appen, posten, delen, terugbellen, inspreken, handen wassen, zoeken, vinden,
+  laten zien, optellen, repareren, overwerken, klaarleggen, reageren, nalezen.
+- **"afmaken"**: the still counterpart of "bijna" from the trial (a full bar with a tick); it stays
+  still so that the two can still be told apart and the trial stays measurable.
+- **Time words** (volgende week, vorige week, overmorgen, morgen, het uur, het kwartier, de minuut):
+  the drawn week strips and clocks already say it; the clock of "duren" is the one that runs.
+- **Up a level** (doorstromen, verder komen): a figure going up a step would be the same picture
+  for two words in two lessons, and could read as "de trap".
+- **Things** (helm, heftruck, kraan, hefbrug, lopende band, machine, boor), **blinking or
+  flashing** (alarm, stoplicht, bellen, noodstop, storing), **harsh pictures** (bloeden, snijden,
+  zagen, slijpen, vonk, aanraken, pesten), **rights, money and feelings** (cao, toeslag,
+  uitbetalen, terugbetalen, betalen, pinnen, boos, bang, somber, misschien, gebeuren, proberen)
+  and **"nog niet"** (it would look like "bijna"): as in the report.
+- The **kl.\*** words (the mouth already moves) and the sayings (zg.\*).
+
 Left out: "beginnen" (a start button on a machine, not the scene of "uitzetten"; a machine
 starting would say more than "to start" your shift). In every `'motion'` word the still picture
 would say too little or look like another word of its lesson, so it never stands in a picture

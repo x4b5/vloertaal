@@ -7,7 +7,8 @@ import { Arrow, Box, CurveArrow, Ground, Hand, Motion, Move, PAL, SKIN, Shade, S
  * Word pictures, group 36 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
  *
  * Moving pictures of abstract words, the second round (the owner's "go on" after the trial, 5
- * November 2026; docs/tekenstijl.md "Beweging"). Each of these words is `picture: 'motion'`: the
+ * November 2026; docs/tekenstijl.md "Beweging") and the last one ("kiezen"). Each of these words
+ * is `picture: 'motion'`: the
  * picture is on its intro card only, where it moves once; standing still it says too little, so it
  * is never in a picture choice or a match. The people in them are cast heads (no Bust), so the
  * word's voice stays the default one (pictureCast finds no bust).
@@ -298,6 +299,34 @@ export default {
         <Arrow from={[80, 26]} to={[104, 26]} color={PAL.sky} width={5} head={9} />
       </Move>
       <Shine d="M18 66H40" opacity={0.5} width={3} />
+    </g>
+  ),
+
+  // "kiezen": to choose — three cards with three kinds of work (a hard hat, a tomato, a box); the
+  // finger is at the middle one, which has a ring and a tick. On the intro card (the last round, 5
+  // November 2026) the finger goes along from the first card and stops at the middle one, then
+  // the ring and the tick come: of the three, this one.
+  'w.kiezen': () => (
+    <g>
+      {[22, 60, 98].map((x) => (
+        <g key={x}>
+          <rect x={x - 16} y="30" width="32" height="40" rx="5" fill={PAL.paperShade} transform="translate(0 3)" />
+          <rect x={x - 16} y="30" width="32" height="40" rx="5" fill={PAL.white} />
+        </g>
+      ))}
+      {/* A hard hat, a tomato, a box */}
+      <path d="M11 56A11 11 0 0 1 33 56Z" fill={PAL.yellow} />
+      <rect x="8" y="55" width="28" height="4" rx="2" fill={PAL.yellowShade} />
+      <circle cx="60" cy="52" r="10" fill={PAL.red} />
+      <path d="M55 43Q60 46 65 43M60 42V45" stroke={PAL.green} strokeWidth="3" strokeLinecap="round" fill="none" />
+      <Box x={88} y={46} w={16} h={14} depth={5} />
+      <Move kind="show">
+        <rect x="42" y="26" width="36" height="48" rx="7" fill="none" stroke={PAL.sky} strokeWidth="4" />
+        <Tick x={74} y={28} r={9} />
+      </Move>
+      <Move kind="from" dx={-38}>
+        <Hand pose="point" x={60} y={112} scale={0.7} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
+      </Move>
     </g>
   ),
 

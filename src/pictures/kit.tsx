@@ -418,8 +418,9 @@ export type MoveKind = 'from' | 'slow' | 'fast' | 'drop' | 'then' | 'steps' | 't
  *  - 'turn' / 'tip': it turns `turn` degrees back into place around `at` (a joint, a clock's centre);
  *    'tip' is quick and speeds up, as a fall;
  *  - 'grow': it grows from `grow` (a fraction) of its width to its full width, from its left edge;
- *  - 'sag': it sinks from `grow` (here a factor above 1: taller) to its own height, onto its
- *    bottom edge (a tyre going flat);
+ *  - 'sag': it goes from `grow` times its height to its own height, on its bottom edge: above 1
+ *    it sinks (a tyre going flat, the sand in the top of an hourglass), below 1 it rises (the
+ *    heap of sand, an arrow going up);
  *  - 'show': it appears at the end of the motion (a tick, a mark: one fade, never a flash).
  * The <g> carries no transform attribute of its own (the animation would replace it): nest it.
  */

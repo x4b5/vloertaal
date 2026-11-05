@@ -450,7 +450,8 @@ export default {
     </g>
   ),
 
-  // "inpakken": to pack — two hands lower a blue product into an open cardboard box
+  // "inpakken": to pack — two hands lower a blue product into an open cardboard box. On the
+  // intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the hands lower it in from above.
   'w.inpakken': () => {
     const x = 24;
     const y = 66;
@@ -460,16 +461,20 @@ export default {
         <Ground cx={62} cy={108} rx={44} ry={4.5} />
         <Box x={x} y={y} w={w} h={38} depth={16} open />
         {/* The product going in */}
-        <Shade color={PAL.blueShade} opacity={1} at={[76, 46, 6, 30]}>
-          <rect x="38" y="30" width="34" height="38" rx="3" fill={PAL.blue} />
-        </Shade>
-        <rect x="44" y="40" width="18" height="12" rx="2" fill={PAL.paper} />
+        <Move kind="from" dy={-26}>
+          <Shade color={PAL.blueShade} opacity={1} at={[76, 46, 6, 30]}>
+            <rect x="38" y="30" width="34" height="38" rx="3" fill={PAL.blue} />
+          </Shade>
+          <rect x="44" y="40" width="18" height="12" rx="2" fill={PAL.paper} />
+        </Move>
         {/* Front flap over it */}
         <polygon points={`${x} ${y} ${x + w} ${y} ${x + w - 5} ${y - 13} ${x - 5} ${y - 13}`} fill="#f0c48a" stroke="#f0c48a" strokeWidth="2" />
         <path d={`M${x + 3} ${y + 2.2}H${x + w - 3}`} stroke="#f6d3a2" strokeWidth="2" strokeLinecap="round" />
         {/* Hands holding its sides */}
-        <Hand pose="open" x={8} y={40} rotate={90} scale={0.62} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
-        <Hand pose="open" x={102} y={40} rotate={-90} scale={0.62} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} mirror />
+        <Move kind="from" dy={-26}>
+          <Hand pose="open" x={8} y={40} rotate={90} scale={0.62} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+          <Hand pose="open" x={102} y={40} rotate={-90} scale={0.62} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} mirror />
+        </Move>
       </g>
     );
   },

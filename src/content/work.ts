@@ -2884,7 +2884,7 @@ const entreeMore: Record<string, Lesson[]> = {
       'What I am good at',
       [
         ['goedin', 'goed in', 'good at', '🌟', false],
-        ['kiezen', 'kiezen', 'to choose', '🤔', false],
+        ['kiezen', 'kiezen', 'to choose', '🤔', 'motion'],
         ['beroep', 'het beroep', 'the profession, the kind of work', '🧑‍🍳', false],
         ['bijbaan', 'de bijbaan', 'the side job (a small job next to school)', '🛵', false],
         ['nauwkeurig', 'nauwkeurig', 'careful and exact', '🎯', false],

@@ -653,7 +653,8 @@ export default {
     </g>
   ),
 
-  // "afruimen": to clear the table — the used plates go from the table onto a tray
+  // "afruimen": to clear the table — the used plates go from the table onto a tray. On the intro
+  // card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the top plate goes up from the table onto the stack on the tray.
   'w.afruimen': () => (
     <g>
       {/* Tray, held on a flat hand, with a stack of used plates */}
@@ -661,7 +662,9 @@ export default {
       <rect x="52" y="46" width="58" height="7" rx="3.5" fill={PAL.cardDark} />
       <Plate cx={81} cy={42} rx={22} />
       <Plate cx={81} cy={36} rx={22} />
-      <Plate cx={81} cy={30} rx={22} food />
+      <Move kind="from" dx={-47} dy={50}>
+        <Plate cx={81} cy={30} rx={22} food />
+      </Move>
       {/* Table with one plate left */}
       <rect x="8" y="88" width="104" height="8" rx="3" fill={PAL.cardShade} />
       <rect x="8" y="84" width="104" height="6" rx="3" fill={PAL.card} />

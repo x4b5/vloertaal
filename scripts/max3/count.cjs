@@ -462,11 +462,12 @@ function defineStates(LANG) {
   add('lesson:word-card', shot('intro'));
   // Moving word pictures (the trial of 5 November 2026, docs/tekenstijl.md "Beweging"): their intro
   // cards; the speaker plays the movement again, so there is no button of its own. The second
-  // round (the owner's "go on", 5 November 2026) follows the trial's nine.
+  // round (the owner's "go on", 5 November 2026) follows the trial's nine, then the last round.
   for (const id of [
     'glad', 'tillen', 'ontruimen', 'inchecken', 'uitchecken', 'bijna', 'langzaam', 'snel', 'telaat',
     'vallen', 'bukken', 'inklokken', 'uitklokken', 'inloggen', 'uitloggen', 'ruilen', 'versturen', 'doorgeven', 'sorteren', 'ophalen',
     'uitzetten', 'automatisch', 'verbeteren', 'lek', 'mengen', 'eerst', 'daarna', 'voordoen', 'verlengen', 'tellen', 'herhalen',
+    'opruimen', 'afruimen', 'inpakken', 'afpakken', 'kiezen', 'beter', 'duren', 'verhuizen', 'vergrendelen',
   ]) {
     add(`lesson:word-card-moving-${id}`, shot(`intro&word=w.${id}`), null, { expect: '.intro-card [class^="mv-"]' });
   }

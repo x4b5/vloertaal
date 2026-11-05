@@ -33,13 +33,19 @@ const MOTION_ROUND2 = [
   'w.uitzetten', 'w.automatisch', 'w.verbeteren', 'w.lek', 'w.mengen',
   'w.eerst', 'w.daarna', 'w.voordoen', 'w.verlengen', 'w.tellen', 'w.herhalen',
 ];
-const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2];
+/**
+ * The last round (the owner: "do the rest of the words where movement helps", 5 November 2026):
+ * the report's "later" list and a pass over every word, by the same rules; in doubt, not.
+ */
+const MOTION_ROUND3 = ['w.opruimen', 'w.afruimen', 'w.inpakken', 'w.afpakken', 'w.kiezen', 'w.beter', 'w.duren', 'w.verhuizen', 'w.vergrendelen'];
+const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
 const MOTION_ONLY: [string, string][] = [
   ['w.ontruimen', 'l.alarm'], ['w.bijna', 'l.task'],
   ['w.uitloggen', 'l.login'], ['w.ruilen', 'l.texting'], ['w.versturen', 'l.email'], ['w.doorgeven', 'l.privacy'],
   ['w.automatisch', 'l.aiplan'], ['w.verbeteren', 'l.mistakes'], ['w.eerst', 'l.task'], ['w.daarna', 'l.task'],
   ['w.voordoen', 'l.notyet'], ['w.verlengen', 'l.agency'], ['w.tellen', 'l.measures'],
+  ['w.kiezen', 'l.mychoice'],
 ];
 
 const css = readFileSync(new URL('../src/styles.css', import.meta.url), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');

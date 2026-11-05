@@ -704,14 +704,17 @@ export default {
     </g>
   ),
 
-  // "verhuizen": to move (to another home) — a moving box travels from the old house to the new one
+  // "verhuizen": to move (to another home) — a moving box travels from the old house to the new
+  // one. On the intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the box comes out from the old house on its way.
   'w.verhuizen': () => (
     <g>
       <Ground cx={60} cy={106} rx={52} ry={4} />
       <House x={10} y={104} w={30} wall={PAL.mist} roof={PAL.steel} roofShade={PAL.slate} />
       <House x={80} y={104} w={30} />
       <CurveArrow from={[28, 44]} to={[94, 44]} bend={18} color={PAL.sky} width={7} head={12} />
-      <Box x={44} y={76} w={26} h={24} depth={8} />
+      <Move kind="from" dx={-30}>
+        <Box x={44} y={76} w={26} h={24} depth={8} />
+      </Move>
     </g>
   ),
 

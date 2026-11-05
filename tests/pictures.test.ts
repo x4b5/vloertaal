@@ -72,12 +72,13 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // Of the 191 (5 November 2026, the owner's trial of moving pictures, tests/motionPictures.test.ts):
     // 178 with no picture at all, 11 memory pictures ('hook') and 2 moving pictures ('motion':
     // "ontruimen" and "bijna", which were abstract). The 2 still never stand in a picture choice.
-    // The second round (5 November 2026): 11 more abstract words got a moving picture only, so
-    // 167 with no picture at all, 11 memory pictures and 13 moving pictures (still 191 abstract).
-    expect(allWords.filter((w) => w.picture === false)).toHaveLength(167);
+    // The second round (5 November 2026): 11 more abstract words got a moving picture only, and
+    // in the last round "kiezen" (l.mychoice): 166 with no picture at all, 11 memory pictures and
+    // 14 moving pictures (still 191 abstract).
+    expect(allWords.filter((w) => w.picture === false)).toHaveLength(166);
     expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(11);
     expect(allWords.filter((w) => w.picture === 'motion').map((w) => w.id).sort()).toEqual([
-      'w.automatisch', 'w.bijna', 'w.daarna', 'w.doorgeven', 'w.eerst', 'w.ontruimen', 'w.ruilen',
+      'w.automatisch', 'w.bijna', 'w.daarna', 'w.doorgeven', 'w.eerst', 'w.kiezen', 'w.ontruimen', 'w.ruilen',
       'w.tellen', 'w.uitloggen', 'w.verbeteren', 'w.verlengen', 'w.versturen', 'w.voordoen',
     ]);
     const { lesson: hours } = findLesson('l.hours')!;
