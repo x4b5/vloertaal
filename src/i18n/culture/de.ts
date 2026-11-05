@@ -198,6 +198,26 @@ const t: CultureTranslation = {
     's.clear.3': 'Entschuldigung, ich rede zu schnell und zu viel.', // nieuw, nalezen
     'd.clear.q': 'Ist das klar?', // nieuw, nalezen
     'd.clear.a': 'Ja. Ich habe noch eine Frage.', // nieuw, nalezen
+    'l.newcolleague': "Einem neuen Kollegen helfen", // nieuw, nalezen
+    'w.welkom': "willkommen", // nieuw, nalezen
+    'w.inwerken': "einarbeiten (einem neuen Kollegen in den ersten Tagen die Arbeit zeigen)", // nieuw, nalezen
+    'w.stap': "der Schritt (ein kleiner Teil einer Aufgabe)", // nieuw, nalezen
+    'w.nadoen': "nachmachen (tun, was dir jemand gezeigt hat)", // nieuw, nalezen
+    'w.geduld': "die Geduld", // nieuw, nalezen
+    'w.kast': "der Schrank", // nieuw, nalezen
+    's.newcolleague.1': "Willkommen! Heute arbeite ich dich ein.", // nieuw, nalezen
+    's.newcolleague.2': "Schau erst zu. Dann machst du es nach.", // nieuw, nalezen
+    's.newcolleague.3': "Die Handschuhe liegen in dem Schrank da.", // nieuw, nalezen
+    'd.newcolleague.q': "Ich hab’s verstanden, glaube ich.", // nieuw, nalezen
+    'd.newcolleague.a': "Gut. Zeig mal.", // nieuw, nalezen
+    'c.newcolleague': "Zeig es, Schritt für Schritt", // nieuw, nalezen
+    'c.newcolleague.b': "Was für dich in den ersten Wochen schwer war, ist auch für einen neuen Kollegen schwer. Erkläre die Arbeit in kleinen Schritten: erst das eine, dann das andere. Sprich nicht schneller oder lauter: Zeig es und lass es ihn nachmachen. Frag nicht „Snap je het?“: Viele sagen Ja, auch wenn sie es nicht verstehen. Sag stattdessen „Laat eens zien“ und schau zu. Sag ihm, wo die Dinge sind, zum Beispiel die Toilette, die Kantine und die Handschuhe. Hab Geduld (geduld): Lernen braucht Zeit, für alle.", // nieuw, nalezen
+    'c.newcolleague.p': "Gut gemacht! Jetzt der nächste Schritt.", // nieuw, nalezen
+    'c.newcolleague.s': "Du erklärst einem neuen Kollegen eine Aufgabe. Er sagt: „Ja, ja, ik snap het.“ Was machst du?", // nieuw, nalezen
+    'c.newcolleague.o1': "Du sagst „Laat eens zien,“ und schaust zu, wie er es macht.", // nieuw, nalezen
+    'c.newcolleague.o2': "Du sagst „Goed zo,“ und gehst zurück an deine eigene Arbeit.", // nieuw, nalezen
+    'c.newcolleague.o3': "Du erklärst alles noch einmal, schneller und lauter.", // nieuw, nalezen
+    'c.newcolleague.w': "Viele sagen „ja“, auch wenn sie es nicht verstanden haben. Wenn er es zeigt, seht ihr beide, ob es klappt. Das geht schneller, als später einen Fehler zu beheben.", // nieuw, nalezen
   },
 };
 

@@ -198,6 +198,26 @@ const t: CultureTranslation = {
     's.clear.3': 'Pardon, çok hızlı ve çok fazla konuşuyorum.', // nieuw, nalezen
     'd.clear.q': 'Anlaşıldı mı?', // nieuw, nalezen
     'd.clear.a': 'Evet. Bir sorum daha var.', // nieuw, nalezen
+    'l.newcolleague': "Yeni bir iş arkadaşına yardım etmek", // nieuw, nalezen
+    'w.welkom': "hoş geldin", // nieuw, nalezen
+    'w.inwerken': "işe alıştırmak (ilk günlerde yeni bir iş arkadaşına işi göstermek)", // nieuw, nalezen
+    'w.stap': "adım (bir işin küçük bir parçası)", // nieuw, nalezen
+    'w.nadoen': "aynısını yapmak (birinin sana gösterdiğini yapmak)", // nieuw, nalezen
+    'w.geduld': "sabır", // nieuw, nalezen
+    'w.kast': "dolap", // nieuw, nalezen
+    's.newcolleague.1': "Hoş geldin! Bugün sana işi göstereceğim.", // nieuw, nalezen
+    's.newcolleague.2': "Önce izle. Sonra aynısını sen yaparsın.", // nieuw, nalezen
+    's.newcolleague.3': "Eldivenler şu dolapta.", // nieuw, nalezen
+    'd.newcolleague.q': "Anladım, sanırım.", // nieuw, nalezen
+    'd.newcolleague.a': "Güzel. Göster bakalım.", // nieuw, nalezen
+    'c.newcolleague': "Göster, adım adım", // nieuw, nalezen
+    'c.newcolleague.b': "İlk haftalarında senin için zor olan şey, yeni bir iş arkadaşı için de zordur. İşi küçük adımlarla anlat: önce bu, sonra şu. Daha hızlı ya da daha yüksek sesle konuşma: göster ve senden sonra o da yapsın. “Snap je het?” diye sorma: birçok kişi anlamasa da evet der. Bunun yerine “Laat eens zien” de ve izle. Tuvalet, yemekhane ve eldivenler gibi şeylerin nerede olduğunu söyle. Sabırlı ol (geduld): öğrenmek herkes için zaman alır.", // nieuw, nalezen
+    'c.newcolleague.p': "Aferin! Şimdi sıradaki adım.", // nieuw, nalezen
+    'c.newcolleague.s': "Yeni bir iş arkadaşına bir işi anlatıyorsun. O da şöyle diyor: “Ja, ja, ik snap het.” Ne yaparsın?", // nieuw, nalezen
+    'c.newcolleague.o1': "“Laat eens zien,” der ve onun yapmasını izlersin.", // nieuw, nalezen
+    'c.newcolleague.o2': "“Goed zo,” der ve kendi işine dönersin.", // nieuw, nalezen
+    'c.newcolleague.o3': "Hepsini yeniden, daha hızlı ve daha yüksek sesle anlatırsın.", // nieuw, nalezen
+    'c.newcolleague.w': "Birçok kişi anlamasa da “ja” der. O gösterince, ikiniz de işin doğru olup olmadığını görürsünüz. Bu, sonra bir hatayı düzeltmekten daha hızlıdır.", // nieuw, nalezen
   },
 };
 

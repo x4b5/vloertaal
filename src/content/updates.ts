@@ -19,6 +19,11 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-05',
     items: [
+      'Nieuw onderwerp: Vervoer en bezorging (bij Logistiek). Pakketten bezorgen, de scanner, "klant niet thuis", een kapot pakket melden met een foto. En veilig en eerlijk onderweg: de steekwagen bij zware pakketten, je pauze, en wie je tijden en je route bepaalt.',
+      'Nieuwe les bij In de productie: Werken met voedsel. Sieraden af, de snijhandschoen, de vriescel, allergenen, en een wondje aan je hand melden.',
+      'Nieuwe les bij Gezondheid: Je goed voelen op het werk. Slecht slapen door ploegendienst, "het is te veel", heimwee, en met wie je kunt praten: je leidinggevende, de vertrouwenspersoon, de bedrijfsarts, de huisarts of 113.',
+      'Nieuwe les bij Samenwerken: Een nieuwe collega helpen. Welkom zeggen, iets voordoen, laten nadoen, en "Laat eens zien" in plaats van "Snap je het?".',
+      'Verlof en ziekte zijn nu twee onderwerpen: Verlof (vrije dagen, kinderen en werk) en Ziekte (ziek thuis, en de nieuwe les Weer aan het werk na ziekte: rustig opbouwen, en zeggen wat je wel en nog niet kunt). Wat je al deed, blijft staan.',
       'Zeg het hardop: na het woord op de woordkaart staat nu "Zeg het hardop." Wie het woord zelf zegt, onthoudt het beter. Zonder geluid staat er "Zeg het zachtjes, of in je hoofd." Er wordt niets opgenomen.',
       'Bewegende plaatjes: nu bewegen 40 woorden even als je ze leert, zoals vallen, bukken, inklokken, ruilen, sorteren, uitzetten, mengen, eerst, daarna, voordoen en tellen. Tik op de speaker en je ziet het opnieuw. Bij "Rustig scherm" of "minder beweging" staat alles stil. Tillen en bukken laten de veilige manier zien: door je knieën, met een rechte rug.',
       'Toen en nu: de eerste keer dat je een zin inspreekt, bewaart je telefoon die opname. Spreek je dezelfde zin een week later of nog later weer in, dan hoor je ze naast elkaar: eerst toen, dan nu. Zo hoor je zelf dat je beter wordt.',

@@ -198,6 +198,27 @@ const t: CultureTranslation = {
     's.clear.3': 'Вибач, я говорю надто швидко й забагато.', // nieuw, nalezen
     'd.clear.q': 'Зрозуміло?', // nieuw, nalezen
     'd.clear.a': 'Так. У мене ще одне питання.', // nieuw, nalezen
+    // Vertaalronde 5 november 2026: l.newcolleague en c.newcolleague.
+    'l.newcolleague': "Допомога новому колезі", // nieuw, nalezen
+    'w.welkom': "ласкаво просимо", // nieuw, nalezen
+    'w.inwerken': "вводити в роботу (показувати новому колезі роботу в перші дні)", // nieuw, nalezen
+    'w.stap': "крок (одна маленька частина завдання)", // nieuw, nalezen
+    'w.nadoen': "повторювати за кимось (робити те, що тобі показали)", // nieuw, nalezen
+    'w.geduld': "терпіння", // nieuw, nalezen
+    'w.kast': "шафа", // nieuw, nalezen
+    's.newcolleague.1': "Ласкаво просимо! Сьогодні я покажу тобі роботу.", // nieuw, nalezen
+    's.newcolleague.2': "Спершу дивись. Потім повтори.", // nieuw, nalezen
+    's.newcolleague.3': "Рукавиці лежать у тій шафі.", // nieuw, nalezen
+    'd.newcolleague.q': "Здається, мені все зрозуміло.", // nieuw, nalezen
+    'd.newcolleague.a': "Добре. Покажи.", // nieuw, nalezen
+    'c.newcolleague': "Покажи, крок за кроком", // nieuw, nalezen
+    'c.newcolleague.b': "Те, що було важко тобі в перші тижні, важко й новому колезі. Пояснюй роботу маленькими кроками: спершу це, потім те. Не говори швидше чи голосніше: покажи й дай людині повторити за тобою. Не питай «Snap je het?»: багато людей кажуть «так», навіть коли не розуміють. Натомість скажи «Laat eens zien» і дивись. Скажи, де що є, наприклад туалет, їдальня й рукавиці. Май терпіння (geduld): навчання потребує часу, для всіх.", // nieuw, nalezen
+    'c.newcolleague.p': "Молодець! Тепер наступний крок.", // nieuw, nalezen
+    'c.newcolleague.s': "Ти пояснюєш завдання новому колезі. Він каже: «Ja, ja, ik snap het.» Що ти зробиш?", // nieuw, nalezen
+    'c.newcolleague.o1': "Скажеш «Laat eens zien» і подивишся, як він це робить.", // nieuw, nalezen
+    'c.newcolleague.o2': "Скажеш «Goed zo» і повернешся до своєї роботи.", // nieuw, nalezen
+    'c.newcolleague.o3': "Поясниш усе ще раз, швидше й голосніше.", // nieuw, nalezen
+    'c.newcolleague.w': "Багато людей кажуть «ja», навіть коли не зрозуміли. Коли він показує, ви обидва бачите, чи все виходить. Це швидше, ніж потім виправляти помилку.", // nieuw, nalezen
   },
 };
 

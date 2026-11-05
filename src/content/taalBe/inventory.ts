@@ -75,6 +75,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.agree': L('A', 'A'),
     'l.task': L('A', 'B', '"In the Netherlands a supervisor …"'),
     'l.clear': L('A', 'A', 'de tip zegt "At work here" (niet "in the Netherlands"): eerst de kern geldt ook in Vlaanderen, al verpakt men het daar vaak wat voorzichtiger (nakijken door een Vlaamse NT2-docent)'),
+    'l.newcolleague': L('A', 'A', 'inwerken en de kast zeg je in Vlaanderen ook; de tip noemt geen land (nakijken door een Vlaamse NT2-docent)'),
   } },
   'u.apply': { kind: 'A', lessons: {
     'l.cv': L('A', 'A', 'de tip zegt "A CV here" (was "A Dutch CV")'),
@@ -115,10 +116,14 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.health': L('C', 'C', 'Arbowet, Arbeidsinspectie, pauze na 5,5 uur → Welzijnswet, Arbeidswet, pauze na 6 uur, Toezicht op de Sociale Wetten'),
     'l.rights': L('B', 'C', 'het Juridisch Loket → het justitiehuis; ontslag via UWV, vaststellingsovereenkomst, FNV, WW → opzegtermijn, C4, ABVV/ACV/ACLVB'),
   } },
+  // "Verlof en ziekte" became "Verlof" (u.leave) and "Ziekte" (u.sick) on 5 November 2026.
   'u.leave': { kind: 'B', lessons: {
     'l.leave': L('B', 'B', 'het calamiteitenverlof → het verlof om dwingende redenen (zonder loon)'),
-    'l.illness': L('B', 'C', 'de bedrijfsarts → de arbeidsarts; 70% voor 2 jaar, wachtdag → gewaarborgd loon, dan het ziekenfonds'),
     'l.kids': L('B', 'B', 'calamiteitenverlof; ouderschapsverlof en zorgverlof anders geregeld (RVA)'),
+  } },
+  'u.sick': { kind: 'B', lessons: {
+    'l.illness': L('B', 'C', 'de bedrijfsarts → de arbeidsarts; 70% voor 2 jaar, wachtdag → gewaarborgd loon, dan het ziekenfonds'),
+    'l.backtowork': L('B', 'C', 'de bedrijfsarts → de arbeidsarts (zin 3); Wet verbetering poortwachter → het re-integratietraject met de arbeidsarts; deeltijds werken met een uitkering: eerst het ziekenfonds vragen. "herstellen" is in Vlaanderen ook "repareren" (de vertaling zegt "recover"; nakijken door een Vlaamse NT2-docent)'),
   } },
   'u.exploit': { kind: 'B', lessons: {
     'l.warning': L('B', 'A', 'zin "Ik krijg geen loonstrook." → loonbrief; de tip: alleen de slotregel'),
@@ -140,6 +145,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.insurance': L('C', 'C', 'zorgverzekering, eigen risico, zorgtoeslag → ziekenfonds, remgeld, verhoogde tegemoetkoming'),
     'l.body': L('A', 'A'),
     'l.healthy': L('A', 'A'),
+    'l.feelwell': L('A', 'B', 'de tip: de bedrijfsarts → de arbeidsarts, ook de preventieadviseur psychosociale aspecten, 113 → 1813; de ploegendienst heet in Vlaanderen ook ploegenwerk (nakijken door een Vlaamse NT2-docent)'),
   } },
   'u.money': { kind: 'B', lessons: {
     'l.letters': L('C', 'C', 'Belastingdienst, aangifte voor 1 mei, toeslagen → FOD Financiën, MyMinfin, Groeipakket'),
@@ -162,6 +168,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.factory': { kind: 'A', lessons: {
     'l.line': L('A', 'A'),
     'l.quality': L('A', 'A'),
+    'l.food': L('A', 'A', 'de meldplicht bij ziekte of een wond komt uit de EU-hygiëneverordening (852/2004): ook in België'),
   } },
   'u.care': { kind: 'A', lessons: {
     'l.client': L('A', 'A'),
@@ -216,6 +223,10 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.online': { kind: 'B', lessons: {
     'l.login': L('B', 'B', 'DigiD → itsme'),
     'l.phish': L('A', 'A'),
+  } },
+  'u.delivery': { kind: 'A', lessons: {
+    'l.parcel': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: in Vlaanderen zegt men vaak "de bestelwagen" (de bestelbus wordt begrepen)'),
+    'l.road': L('A', 'A', 'de tip zegt "zelfstandig" en "in loondienst" (niet "zzp’er"); telefoon in de hand verboden ook in België (Wegverkeersreglement art. 8.4); alleen de slotregel; nakijken: in Vlaanderen vaak "de steekkar"'),
   } },
 };
 

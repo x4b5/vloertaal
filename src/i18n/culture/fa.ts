@@ -198,6 +198,26 @@ const t: CultureTranslation = {
     's.clear.3': 'ببخشید، خیلی تند و خیلی زیاد حرف می‌زنم.', // nieuw, nalezen
     'd.clear.q': 'روشن است؟', // nieuw, nalezen
     'd.clear.a': 'بله. یک سؤال دیگر دارم.', // nieuw, nalezen
+    'l.newcolleague': "کمک به یک همکار تازه", // nieuw, nalezen
+    'w.welkom': "خوش آمدی", // nieuw, nalezen
+    'w.inwerken': "کار را به همکار تازه یاد دادن (در روزهای اول)", // nieuw, nalezen
+    'w.stap': "مرحله، قدم (یک بخش کوچک از یک کار)", // nieuw, nalezen
+    'w.nadoen': "تقلید کردن (کاری را که کسی نشانت داده، انجام دادن)", // nieuw, nalezen
+    'w.geduld': "صبر، حوصله", // nieuw, nalezen
+    'w.kast': "کمد", // nieuw, nalezen
+    's.newcolleague.1': "خوش آمدی! امروز کار را نشانت می‌دهم.", // nieuw, nalezen
+    's.newcolleague.2': "اول نگاه کن. بعد خودت همان کار را بکن.", // nieuw, nalezen
+    's.newcolleague.3': "دستکش‌ها توی آن کمد است.", // nieuw, nalezen
+    'd.newcolleague.q': "فکر کنم فهمیدم.", // nieuw, nalezen
+    'd.newcolleague.a': "خوب است. نشانم بده.", // nieuw, nalezen
+    'c.newcolleague': "نشانش بده، قدم به قدم", // nieuw, nalezen
+    'c.newcolleague.b': "چیزی که در هفته‌های اول برای تو سخت بود، برای یک همکار تازه هم سخت است. کار را در قدم‌های کوچک توضیح بده: اول این، بعد آن. تندتر یا بلندتر حرف نزن: نشانش بده، و بگذار بعد از تو همان کار را بکند. نپرس «Snap je het?»: خیلی‌ها بله می‌گویند، حتی وقتی نفهمیده‌اند. به‌جایش بگو «Laat eens zien» و نگاه کن. بگو چیزها کجاست، مثل توالت، غذاخوری و دستکش‌ها. صبور باش (geduld): یاد گرفتن برای همه وقت می‌برد.", // nieuw, nalezen
+    'c.newcolleague.p': "آفرین! حالا قدم بعدی.", // nieuw, nalezen
+    'c.newcolleague.s': "داری یک کار را برای یک همکار تازه توضیح می‌دهی. او می‌گوید: «Ja, ja, ik snap het.» چه کار می‌کنی؟", // nieuw, nalezen
+    'c.newcolleague.o1': "بگو «Laat eens zien,» و نگاه کن که چطور انجامش می‌دهد.", // nieuw, nalezen
+    'c.newcolleague.o2': "بگو «Goed zo,» و برگرد سر کار خودت.", // nieuw, nalezen
+    'c.newcolleague.o3': "همه را دوباره توضیح بده، تندتر و بلندتر.", // nieuw, nalezen
+    'c.newcolleague.w': "خیلی‌ها «ja» می‌گویند، حتی وقتی نفهمیده‌اند. وقتی او نشان می‌دهد، هر دو می‌بینید که درست کار می‌کند یا نه. این سریع‌تر از درست کردن یک اشتباه در آینده است.", // nieuw, nalezen
   },
 };
 

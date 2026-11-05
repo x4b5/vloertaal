@@ -122,6 +122,13 @@ const t: CultureTranslation = {
     'c.email.a.why': "Pytanie, czy mail poszedł: jeszcze nie, najpierw jest sprawdzany.", // nieuw, nalezen
     'c.budget.a.why': "Propozycja „kup teraz, zapłać później”: grzeczne „nie”, z powodem.", // nieuw, nalezen
     'c.healthy.a.why': "Propozycja tabletki: grzeczne „nie”, z powodem.", // nieuw, nalezen
+    // Vertaalronde 5 november 2026.
+    'd.newcolleague.a.why': "„Chyba” to jeszcze nie pewność: kiedy prosisz, żeby pokazał, sprawdzasz, czy to działa.", // nieuw, nalezen
+    'c.food.a.why': "Pytanie, dlaczego czyści się linię: następny produkt jest bez orzechów.", // nieuw, nalezen
+    'c.parcel.a.why': "Pytanie, czy paczka jest dla tej osoby: tak, a potem podpis.", // nieuw, nalezen
+    'c.road.a.why': "Prośba o jeszcze jeden kurs: nie, bo najpierw jest przerwa.", // nieuw, nalezen
+    'c.backtowork.a.why': "Pytanie, jak się czujesz: krótkie „tak” i że robisz wszystko powoli.", // nieuw, nalezen
+    'c.feelwell.a.why': "Pytanie, jak się czujesz: szczere „nie bardzo” jest w porządku.", // nieuw, nalezen
   },
 };
 

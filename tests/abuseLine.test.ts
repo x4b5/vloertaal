@@ -9,7 +9,8 @@ import { allForms } from '../src/i18n/types';
  * the closing line never says "ask your employer": it names the union, the Juridisch Loket and FairWork.
  */
 // c.harvest: piece rate below the minimum wage (u.kas, 30 October 2026).
-const ABUSE_TIPS = ['c.warning', 'c.gethelp', 'c.housing', 'c.rights', 'c.newjob', 'c.harvest'];
+// c.road: called self-employed, but the company decides your hours and route (u.delivery, 5 November 2026).
+const ABUSE_TIPS = ['c.warning', 'c.gethelp', 'c.housing', 'c.rights', 'c.newjob', 'c.harvest', 'c.road'];
 const tip = (id: string) => cultureTips.find((t) => t.id === id)!;
 /** "employer" in each help language (the old closing line named it). */
 const EMPLOYER: Record<string, RegExp> = {

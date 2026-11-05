@@ -27,11 +27,13 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.social': ['u.teamwork', 'u.house'],
   'u.sayings': ['u.social', 'u.teamwork'],
   'u.rights': ['u.contract', 'u.exploit'],
-  'u.leave': ['u.time', 'u.health'],
+  // "Verlof" and "Ziekte" (one unit until 5 November 2026) are related both ways.
+  'u.leave': ['u.time', 'u.sick'],
+  'u.sick': ['u.leave', 'u.health'],
   'u.exploit': ['u.rights', 'u.pay'],
   'u.contact': ['u.time', 'u.leave'],
   'u.grow': ['u.apply', 'u.lost'],
-  'u.health': ['u.leave', 'u.papers'],
+  'u.health': ['u.sick', 'u.papers'],
   'u.money': ['u.pay', 'u.papers'],
   'u.travel': ['u.time', 'u.papers'],
   'u.lost': ['u.apply', 'u.rights'],
@@ -52,6 +54,8 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.stage': ['u.apply', 'u.grow'],
   'u.society': ['u.papers', 'u.rights'],
   'u.online': ['u.ai', 'u.money'],
+  // Vervoer en bezorging (5 November 2026): the warehouse (the scanner, the boxes) and safety (the road).
+  'u.delivery': ['u.warehouse', 'u.safety'],
 };
 
 /**
@@ -66,7 +70,12 @@ const relatedWords: Record<string, string[]> = {
   'u.pay': ['w.contract', 'w.brief'],
   'u.social': ['w.samen', 'w.roken'],
   'u.sayings': ['w.compliment', 'w.samen'],
+  // "ziekmelden" is of "Ziekte" (u.sick) since 5 November 2026, still a related unit.
   'u.health': ['w.ziekmelden', 'w.identiteitsbewijs'],
+  // Verlof: the shift you ask leave for, and "betermelden" (not "licht werk" from the other lesson
+  // of Ziekte); Ziekte: the GP and the sick child (l.kids, Verlof).
+  'u.leave': ['w.dienst', 'w.betermelden'],
+  'u.sick': ['w.huisarts', 'w.ziekkind'],
   'u.money': ['w.loonstrook', 'w.identiteitsbewijs'],
   'u.travel': ['w.telaat', 'w.adres'],
   'u.care': ['w.helpen', 'w.huisarts'],
@@ -76,6 +85,7 @@ const relatedWords: Record<string, string[]> = {
   'u.clean': ['w.handschoenen', 'w.kluisje'],
   'u.shop': ['w.rekening', 'w.doos'],
   'u.numbers': ['w.pauze', 'w.uurloon'],
+  'u.delivery': ['w.scanner', 'w.ongeluk'],
 };
 
 export const MIX_TITLE = 'Mixed review';

@@ -12,6 +12,8 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['veiligheidsbril', 11],
   ['leidinggevende', 7],
   ['handschoenen', 4],
+  ['snijhandschoen', [4, 8]],
+  ['snijhandschoenen', [4, 8]],
   ['goedemorgen', 5],
   ['nooduitgang', 4],
   ['werkkleding', 4],

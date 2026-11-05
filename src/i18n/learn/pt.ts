@@ -122,6 +122,12 @@ const t: CultureTranslation = {
     'c.email.a.why': "Perguntam se foi enviado: ainda não, primeiro é verificado.", // nieuw, nalezen
     'c.budget.a.why': "Oferecem pagar depois: um não educado, com a razão.", // nieuw, nalezen
     'c.healthy.a.why': "Oferecem um comprimido: um não educado, com a razão.", // nieuw, nalezen
+    'd.newcolleague.a.why': "\"Acho\" ainda não é certeza: pedir para ver confirma que funciona.", // nieuw, nalezen
+    'c.food.a.why': "Perguntam porque se limpa a linha: o produto seguinte não tem frutos secos.", // nieuw, nalezen
+    'c.parcel.a.why': "Perguntam se a encomenda é para eles: sim, e depois a assinatura.", // nieuw, nalezen
+    'c.road.a.why': "Pedem mais uma volta: não, porque a pausa vem primeiro.", // nieuw, nalezen
+    'c.backtowork.a.why': "Perguntam como estás: um sim curto, e que vais com calma.", // nieuw, nalezen
+    'c.feelwell.a.why': "Perguntam como estás: um \"não muito bem\" sincero está bem.", // nieuw, nalezen
   },
 };
 

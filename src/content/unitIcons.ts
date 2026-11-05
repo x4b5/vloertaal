@@ -23,7 +23,9 @@ export const unitIcons: Record<string, string> = {
   'u.social': 'w.compliment',
   'u.sayings': 'w.eitje',
   'u.rights': 'i.rights',
-  'u.leave': 'w.ziekmelden',
+  // Verlof: the days off (the beach chair); Ziekte: better again, not the sick face (5 November 2026).
+  'u.leave': 'w.vakantiedagen',
+  'u.sick': 'w.betermelden',
   'u.exploit': 'w.paspoort',
   'u.contact': 'w.terugbellen',
   'u.grow': 'w.certificaat',
@@ -48,6 +50,8 @@ export const unitIcons: Record<string, string> = {
   // Taking part in the Netherlands (the council and voting, the police): the ballot box, not a postbox.
   'u.society': 'w.stemmen',
   'u.online': 'w.computer',
+  // Vervoer en bezorging: the delivery van (not "het busje" of l.jobends, the van that brings workers).
+  'u.delivery': 'w.bestelbus',
 };
 
 /**

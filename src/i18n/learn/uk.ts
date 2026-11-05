@@ -122,6 +122,13 @@ const t: CultureTranslation = {
     'c.email.a.why': "Питання, чи лист надіслано: ще ні, його спершу перевіряють.", // nieuw, nalezen
     'c.budget.a.why': "Пропонують «купи зараз, заплати потім»: ввічливе «ні», з причиною.", // nieuw, nalezen
     'c.healthy.a.why': "Пропонують пігулку: ввічливе «ні», з причиною.", // nieuw, nalezen
+    // Vertaalronde 5 november 2026.
+    'd.newcolleague.a.why': "«Здається» — це ще не впевненість: попросити показати — значить перевірити, що все виходить.", // nieuw, nalezen
+    'c.food.a.why': "Питають, чому чистять лінію: наступний продукт без горіхів.", // nieuw, nalezen
+    'c.parcel.a.why': "Питають, чи посилка для них: так, а потім підпис.", // nieuw, nalezen
+    'c.road.a.why': "Просять ще один рейс: ні, бо спершу перерва.", // nieuw, nalezen
+    'c.backtowork.a.why': "Питають, як ти: коротке «так» і що ти не поспішаєш.", // nieuw, nalezen
+    'c.feelwell.a.why': "Питають, як ти: чесне «не дуже» — це нормально.", // nieuw, nalezen
   },
 };
 

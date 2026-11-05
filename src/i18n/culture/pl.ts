@@ -198,6 +198,27 @@ const t: CultureTranslation = {
     's.clear.3': 'Przepraszam, mówię za szybko i za dużo.', // nieuw, nalezen
     'd.clear.q': 'Czy to jasne?', // nieuw, nalezen
     'd.clear.a': 'Tak. Mam jeszcze jedno pytanie.', // nieuw, nalezen
+    // Vertaalronde 5 november 2026: l.newcolleague en c.newcolleague.
+    'l.newcolleague': "Pomoc nowemu koledze", // nieuw, nalezen
+    'w.welkom': "witaj, witamy", // nieuw, nalezen
+    'w.inwerken': "wdrażać nowego kolegę (pokazywać pracę w pierwszych dniach)", // nieuw, nalezen
+    'w.stap': "krok (jedna mała część zadania)", // nieuw, nalezen
+    'w.nadoen': "powtarzać za kimś (robić to, co ktoś ci pokazał)", // nieuw, nalezen
+    'w.geduld': "cierpliwość", // nieuw, nalezen
+    'w.kast': "szafa", // nieuw, nalezen
+    's.newcolleague.1': "Witaj! Dziś pokażę ci pracę.", // nieuw, nalezen
+    's.newcolleague.2': "Najpierw patrz. Potem zrób to samo.", // nieuw, nalezen
+    's.newcolleague.3': "Rękawice leżą w tej szafie.", // nieuw, nalezen
+    'd.newcolleague.q': "Chyba rozumiem.", // nieuw, nalezen
+    'd.newcolleague.a': "Dobrze. Pokaż mi.", // nieuw, nalezen
+    'c.newcolleague': "Pokaż to, krok po kroku", // nieuw, nalezen
+    'c.newcolleague.b': "To, co było dla ciebie trudne w pierwszych tygodniach, jest trudne także dla nowego kolegi. Wyjaśniaj pracę małymi krokami: najpierw to, potem tamto. Nie mów szybciej ani głośniej: pokaż to i pozwól mu zrobić to po tobie. Nie pytaj „Snap je het?”: wiele osób mówi „tak”, także kiedy nie rozumie. Zamiast tego powiedz „Laat eens zien” i patrz. Powiedz, gdzie co jest, na przykład toaleta, stołówka i rękawice. Miej cierpliwość (geduld): nauka wymaga czasu, u każdego.", // nieuw, nalezen
+    'c.newcolleague.p': "Brawo! Teraz następny krok.", // nieuw, nalezen
+    'c.newcolleague.s': "Wyjaśniasz nowemu koledze zadanie. On mówi: „Ja, ja, ik snap het.” Co robisz?", // nieuw, nalezen
+    'c.newcolleague.o1': "Mówisz „Laat eens zien” i patrzysz, jak on to robi.", // nieuw, nalezen
+    'c.newcolleague.o2': "Mówisz „Goed zo” i wracasz do swojej pracy.", // nieuw, nalezen
+    'c.newcolleague.o3': "Wyjaśniasz wszystko jeszcze raz, szybciej i głośniej.", // nieuw, nalezen
+    'c.newcolleague.w': "Wiele osób mówi „ja”, także kiedy nie zrozumiało. Kiedy on to pokaże, oboje widzicie, czy to działa. To szybsze niż poprawianie błędu później.", // nieuw, nalezen
   },
 };
 

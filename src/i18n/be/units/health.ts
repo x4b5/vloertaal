@@ -32,6 +32,14 @@ export const ar: Gloss = {
     "be.c.insurance.o2": { m: 'انتظر: تأمينك من بلدك يكفي.', f: 'انتظري: تأمينك من بلدك يكفي.', x: 'الانتظار: التأمين من البلد الأصلي يكفي.' }, // = c.insurance.o2 // nagelezen AI ronde 3
     "be.c.insurance.o3": { m: 'استخدم بطاقة تأمين صديق.', f: 'استخدمي بطاقة تأمين صديق.', x: 'استخدام بطاقة تأمين صديق.' }, // = c.insurance.o3 // nagelezen AI ronde 3
     "be.c.insurance.w": 'من دون ziekenfonds، يُدفع للطبيب والمستشفى من المال الخاص. الانضمام بسرعة يحميك. يمكن لصاحب العمل أو مكتب العمل المؤقت المساعدة.', // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": { m: "كثير جداً؟ لست مضطراً أن تتحمّل ذلك وحدك", f: "كثير جداً؟ لستِ مضطرة أن تتحمّلي ذلك وحدك", x: "كثير جداً؟ لا داعي لتحمّل ذلك بلا مساعدة" }, // = c.feelwell
+    "be.c.feelwell.b": { m: "كل شخص يشعر أحياناً بالتعب أو التوتر أو الحزن. العمل الكثير (werkdruk)، أو النوم السيئ بسبب النوبات، أو الشوق إلى عائلتك قد يجعل الأمر ثقيلاً. لست مضطراً أن تتحمّل ذلك وحدك، وأن تقول «هذا كثير جداً» ليس ضعفاً. تكلّم مع شخص تثق به: مشرفك، أو الشخص المؤتمن (vertrouwenspersoon)، أو مستشار الوقاية (preventieadviseur psychosociale aspecten)، أو طبيب العمل (arbeidsarts)، أو طبيب العائلة (huisarts). يمكنك أيضاً أن تطلب بنفسك موعداً للحديث مع طبيب العمل. الأطباء لا يخبرون مديرك بما قلته. هل تفكّر في الانتحار، أو أنت قلق على شخص ما؟ اتصل بـ1813 (مجاناً، ليلاً ونهاراً)، أو تحدّث كتابةً على zelfmoord1813.be.", f: "كل شخص يشعر أحياناً بالتعب أو التوتر أو الحزن. العمل الكثير (werkdruk)، أو النوم السيئ بسبب النوبات، أو الشوق إلى عائلتك قد يجعل الأمر ثقيلاً. لستِ مضطرة أن تتحمّلي ذلك وحدك، وأن تقولي «هذا كثير جداً» ليس ضعفاً. تكلّمي مع شخص تثقين به: مشرفك، أو الشخص المؤتمن (vertrouwenspersoon)، أو مستشار الوقاية (preventieadviseur psychosociale aspecten)، أو طبيب العمل (arbeidsarts)، أو طبيب العائلة (huisarts). يمكنكِ أيضاً أن تطلبي بنفسك موعداً للحديث مع طبيب العمل. الأطباء لا يخبرون مديرك بما قلتِه. هل تفكّرين في الانتحار، أو أنتِ قلقة على شخص ما؟ اتصلي بـ1813 (مجاناً، ليلاً ونهاراً)، أو تحدّثي كتابةً على zelfmoord1813.be.", x: "كل شخص يشعر أحياناً بالتعب أو التوتر أو الحزن. العمل الكثير (werkdruk)، أو النوم السيئ بسبب النوبات، أو الشوق إلى العائلة قد يجعل الأمر ثقيلاً. لا داعي لتحمّل ذلك بلا مساعدة، وقول «هذا كثير جداً» ليس ضعفاً. الكلام مع شخص موثوق يساعد: المشرف، أو الشخص المؤتمن (vertrouwenspersoon)، أو مستشار الوقاية (preventieadviseur psychosociale aspecten)، أو طبيب العمل (arbeidsarts)، أو طبيب العائلة (huisarts). يمكن أيضاً طلب موعد للحديث مع طبيب العمل مباشرةً. الأطباء لا يخبرون المدير بما قيل لهم. أفكار عن الانتحار، أو قلق على شخص ما؟ الاتصال بـ1813 (مجاناً، ليلاً ونهاراً)، أو المحادثة كتابةً على zelfmoord1813.be." }, // nieuw, nalezen
+    "be.c.feelwell.p": "لستُ على ما يرام. هل يمكنني أن أتكلم معك قليلاً؟", // = c.feelwell.p
+    "be.c.feelwell.s": { m: "منذ أسابيع تنام بشكل سيئ، والعمل كثير جداً. تشعر بتعب شديد. ماذا تفعل؟", f: "منذ أسابيع تنامين بشكل سيئ، والعمل كثير جداً. تشعرين بتعب شديد. ماذا تفعلين؟", x: "منذ أسابيع النوم سيئ، والعمل كثير جداً. التعب شديد. ما التصرف الصحيح؟" }, // = c.feelwell.s
+    "be.c.feelwell.o1": { m: "أخبر مشرفك أو طبيب العمل.", f: "أخبري مشرفك أو طبيب العمل.", x: "إخبار المشرف أو طبيب العمل." }, // nieuw, nalezen
+    "be.c.feelwell.o2": { m: "لا تقل شيئاً، واعمل أكثر وأسرع.", f: "لا تقولي شيئاً، واعملي أكثر وأسرع.", x: "السكوت، والعمل أكثر وأسرع." }, // = c.feelwell.o2
+    "be.c.feelwell.o3": { m: "ابقَ في البيت، ولا تخبر أحداً بالسبب.", f: "ابقي في البيت، ولا تخبري أحداً بالسبب.", x: "البقاء في البيت، وعدم إخبار أحد بالسبب." }, // = c.feelwell.o3
+    "be.c.feelwell.w": "قول ذلك مبكراً ليس ضعفاً. عندها يمكن البحث معاً عن حل، مثلاً نوبات أخرى. لا داعي لتحمّل ذلك بلا مساعدة.", // = c.feelwell.w
 };
 
 export const ti: Gloss = {
@@ -62,6 +70,14 @@ export const ti: Gloss = {
     "be.c.insurance.o2": { m: 'ተጸበ፡ መድሕን ናይ ዓድኻ ይኣክል እዩ።', f: 'ተጸበዪ፡ መድሕን ናይ ዓድኺ ይኣክል እዩ።', x: 'ተጸበዩ፡ መድሕን ናይ ዓድኹም ይኣክል እዩ።' }, // = c.insurance.o2 // nagelezen AI ronde 3
     "be.c.insurance.o3": { m: "ካርድ መድሕን ናይ ዓርክኻ ተጠቐም።", f: "ካርድ መድሕን ናይ ዓርክኺ ተጠቐሚ።", x: "ካርድ መድሕን ናይ ዓርክኹም ተጠቐሙ።" }, // = c.insurance.o3
     "be.c.insurance.w": "ብዘይ ziekenfonds፡ ሓኪምን ሆስፒታልን ባዕልኹም ትኸፍሉ። ቀልጢፍኩም ኣባል ምዃን ይሕልወኩም። ኣስራሒኹም ወይ ቤት ጽሕፈት ግዝያዊ ስራሕ ክሕግዘኩም ይኽእል።", // nieuw, nalezen
+    "be.c.feelwell": { m: "ኣዝዩ በዚሑ? በይንኻ ክትጸሮ ኣየድልየካን", f: "ኣዝዩ በዚሑ? በይንኺ ክትጸርዮ ኣየድልየክን", x: "ኣዝዩ በዚሑ? በይንኹም ክትጸርዎ ኣየድልየኩምን" }, // = c.feelwell
+    "be.c.feelwell.b": { m: "ኩሉ ሰብ ሓደ ሓደ ግዜ ድኻም፡ ጸቕጢ ወይ ጓሂ ይስምዖ። ብዙሕ ስራሕ (werkdruk)፡ ብሰንኪ ፈረቓ ሕማቕ ድቃስ፡ ወይ ስድራኻ ምንፋቕ ነገራት ከኽብድ ይኽእል። በይንኻ ክትጸሮ ኣየድልየካን፡ «ኣዝዩ በዚሑ» ምባል ድማ ድኽመት ኣይኮነን። ምስ እትኣምኖ ሰብ ተዛረብ፡ ተቖጻጻሪኻ፡ ምስጢራዊ ኣማኻሪ (vertrouwenspersoon) ወይ ኣማኻሪ መከላኸሊ (preventieadviseur psychosociale aspecten)፡ ሓኪም ስራሕ (arbeidsarts) ወይ ሓኪም ስድራኻ (huisarts)። ባዕልኻ እውን ምስ ሓኪም ስራሕ ዘተ ክትሓትት ትኽእል ኢኻ። ሓካይም ዝበልካዮ ንሓላፊኻ ኣይነግርዎን። ብዛዕባ ርእሰ-ቕትለት ትሓስብ ዲኻ፡ ወይስ ብዛዕባ ሓደ ሰብ ትሻቐል ዲኻ? ናብ 1813 ደውል (ብናጻ፡ ለይትን መዓልትን)፡ ወይ ኣብ zelfmoord1813.be ብጽሑፍ ተዘራረብ።", f: "ኩሉ ሰብ ሓደ ሓደ ግዜ ድኻም፡ ጸቕጢ ወይ ጓሂ ይስምዖ። ብዙሕ ስራሕ (werkdruk)፡ ብሰንኪ ፈረቓ ሕማቕ ድቃስ፡ ወይ ስድራኺ ምንፋቕ ነገራት ከኽብድ ይኽእል። በይንኺ ክትጸርዮ ኣየድልየክን፡ «ኣዝዩ በዚሑ» ምባል ድማ ድኽመት ኣይኮነን። ምስ እትኣምንዮ ሰብ ተዛረቢ፡ ተቖጻጻሪኺ፡ ምስጢራዊ ኣማኻሪ (vertrouwenspersoon) ወይ ኣማኻሪ መከላኸሊ (preventieadviseur psychosociale aspecten)፡ ሓኪም ስራሕ (arbeidsarts) ወይ ሓኪም ስድራኺ (huisarts)። ባዕልኺ እውን ምስ ሓኪም ስራሕ ዘተ ክትሓትቲ ትኽእሊ ኢኺ። ሓካይም ዝበልክዮ ንሓላፊኺ ኣይነግርዎን። ብዛዕባ ርእሰ-ቕትለት ትሓስቢ ዲኺ፡ ወይስ ብዛዕባ ሓደ ሰብ ትሽቀሊ ዲኺ? ናብ 1813 ደውሊ (ብናጻ፡ ለይትን መዓልትን)፡ ወይ ኣብ zelfmoord1813.be ብጽሑፍ ተዘራረቢ።", x: "ኩሉ ሰብ ሓደ ሓደ ግዜ ድኻም፡ ጸቕጢ ወይ ጓሂ ይስምዖ። ብዙሕ ስራሕ (werkdruk)፡ ብሰንኪ ፈረቓ ሕማቕ ድቃስ፡ ወይ ስድራኹም ምንፋቕ ነገራት ከኽብድ ይኽእል። በይንኹም ክትጸርዎ ኣየድልየኩምን፡ «ኣዝዩ በዚሑ» ምባል ድማ ድኽመት ኣይኮነን። ምስ እትኣምንዎ ሰብ ተዛረቡ፡ ተቖጻጻሪኹም፡ ምስጢራዊ ኣማኻሪ (vertrouwenspersoon) ወይ ኣማኻሪ መከላኸሊ (preventieadviseur psychosociale aspecten)፡ ሓኪም ስራሕ (arbeidsarts) ወይ ሓኪም ስድራኹም (huisarts)። ባዕልኹም እውን ምስ ሓኪም ስራሕ ዘተ ክትሓትቱ ትኽእሉ ኢኹም። ሓካይም ዝበልኩምዎ ንሓላፊኹም ኣይነግርዎን። ብዛዕባ ርእሰ-ቕትለት ትሓስቡ ዲኹም፡ ወይስ ብዛዕባ ሓደ ሰብ ትሻቐሉ ዲኹም? ናብ 1813 ደውሉ (ብናጻ፡ ለይትን መዓልትን)፡ ወይ ኣብ zelfmoord1813.be ብጽሑፍ ተዘራረቡ።" }, // nieuw, nalezen
+    "be.c.feelwell.p": "ብዙሕ ጽቡቕ ኣይኮንኩን። ንሓጺር ግዜ ምሳኹም ክዛረብ ይኽእል ዶ?", // = c.feelwell.p
+    "be.c.feelwell.s": { m: "ንሰሙናት ሕማቕ ትድቅስ፡ እቲ ስራሕ ድማ ኣዝዩ በዚሑ። ኣዝዩ ደኺምካ። እንታይ ትገብር?", f: "ንሰሙናት ሕማቕ ትድቅሲ፡ እቲ ስራሕ ድማ ኣዝዩ በዚሑ። ኣዝዩ ደኺምኪ። እንታይ ትገብሪ?", x: "ንሰሙናት ሕማቕ ትድቅሱ፡ እቲ ስራሕ ድማ ኣዝዩ በዚሑ። ኣዝዩ ደኺምኩም። እንታይ ትገብሩ?" }, // = c.feelwell.s
+    "be.c.feelwell.o1": { m: "ንተቖጻጻሪኻ ወይ ንሓኪም ስራሕ ንገር።", f: "ንተቖጻጻሪኺ ወይ ንሓኪም ስራሕ ንገሪ።", x: "ንተቖጻጻሪኹም ወይ ንሓኪም ስራሕ ንገሩ።" }, // nieuw, nalezen
+    "be.c.feelwell.o2": { m: "ገለ ኣይትበል፡ ዝያዳን ቀልጢፍካን ስራሕ።", f: "ገለ ኣይትበሊ፡ ዝያዳን ቀልጢፍክን ስርሒ።", x: "ገለ ኣይትበሉ፡ ዝያዳን ቀልጢፍኩምን ስርሑ።" }, // = c.feelwell.o2
+    "be.c.feelwell.o3": { m: "ኣብ ገዛ ጽናሕ፡ ስለምንታይ ከም ዝኾነ ድማ ንሓደ እኳ ኣይትንገር።", f: "ኣብ ገዛ ጽንሒ፡ ስለምንታይ ከም ዝኾነ ድማ ንሓደ እኳ ኣይትንገሪ።", x: "ኣብ ገዛ ጽንሑ፡ ስለምንታይ ከም ዝኾነ ድማ ንሓደ እኳ ኣይትንገሩ።" }, // = c.feelwell.o3
+    "be.c.feelwell.w": { m: "ኣቐዲምካ ምንጋር ድኽመት ኣይኮነን። ሽዑ ብሓባር መውጽኢ ክትደልዩ ትኽእሉ፡ ንኣብነት ካልእ ፈረቓታት። በይንኻ ክትጸሮ ኣየድልየካን።", f: "ኣቐዲምኪ ምንጋር ድኽመት ኣይኮነን። ሽዑ ብሓባር መውጽኢ ክትደልዩ ትኽእሉ፡ ንኣብነት ካልእ ፈረቓታት። በይንኺ ክትጸርዮ ኣየድልየክን።", x: "ኣቐዲምኩም ምንጋር ድኽመት ኣይኮነን። ሽዑ ብሓባር መውጽኢ ክትደልዩ ትኽእሉ፡ ንኣብነት ካልእ ፈረቓታት። በይንኹም ክትጸርዎ ኣየድልየኩምን።" }, // = c.feelwell.w
 };
 
 export const fa: Gloss = {
@@ -92,6 +108,14 @@ export const fa: Gloss = {
     "be.c.insurance.o2": "صبر کن: بیمهٔ کشور خودت کافی است.", // = c.insurance.o2
     "be.c.insurance.o3": "از کارت بیمهٔ یک دوست استفاده کن.", // = c.insurance.o3
     "be.c.insurance.w": "بدون ziekenfonds، پول پزشک و بیمارستان را خودت می‌پردازی. زود عضو شدن از تو محافظت می‌کند. کارفرما یا دفتر کاریابی موقت می‌تواند کمکت کند.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": "خیلی زیاد است؟ لازم نیست تنهایی از پسش بربیایی", // nieuw, nalezen (= c.feelwell)
+    "be.c.feelwell.b": "همه گاهی خسته، تحت فشار یا غمگین می‌شوند. کار خیلی زیاد (werkdruk)، خواب بد به خاطر کار شیفتی یا دلتنگی برای خانواده می‌تواند همه چیز را سنگین کند. لازم نیست این بار را تنهایی به دوش بکشی، و گفتن «خیلی زیاد است» ضعف نیست. با کسی که به او اعتماد داری حرف بزن: سرپرستت، مشاور معتمد (vertrouwenspersoon) یا مشاور پیشگیری (preventieadviseur psychosociale aspecten)، پزشک طب کار (arbeidsarts) یا پزشک خانواده‌ات (huisarts). خودت هم می‌توانی برای گفت‌وگو با پزشک طب کار وقت بخواهی. پزشک‌ها به رئیست نمی‌گویند تو چه گفته‌ای. به خودکشی فکر می‌کنی، یا نگران کسی هستی؟ به 1813 زنگ بزن (رایگان، شب و روز)، یا در zelfmoord1813.be چت کن.", // nieuw, nalezen
+    "be.c.feelwell.p": "حالم زیاد خوب نیست. می‌توانم یک لحظه با تو حرف بزنم؟", // nieuw, nalezen (= c.feelwell.p)
+    "be.c.feelwell.s": "چند هفته است که بد می‌خوابی و کار خیلی زیاد است. خیلی خسته‌ای. چه کار می‌کنی؟", // nieuw, nalezen (= c.feelwell.s)
+    "be.c.feelwell.o1": "به سرپرستت یا arbeidsarts می‌گویی.", // nieuw, nalezen
+    "be.c.feelwell.o2": "چیزی نمی‌گویی و بیشتر و تندتر کار می‌کنی.", // nieuw, nalezen (= c.feelwell.o2)
+    "be.c.feelwell.o3": "در خانه می‌مانی و به هیچ‌کس نمی‌گویی چرا.", // nieuw, nalezen (= c.feelwell.o3)
+    "be.c.feelwell.w": "زود گفتنش ضعف نیست. آن وقت می‌توانید با هم دنبال راه‌حلی بگردید، مثلاً شیفت‌های دیگر. لازم نیست تنهایی از پسش بربیایی.", // nieuw, nalezen (= c.feelwell.w)
 };
 
 export const prs: Gloss = {
@@ -122,6 +146,14 @@ export const prs: Gloss = {
     "be.c.insurance.o2": "صبر کنید: بیمهٔ کشور خود تان کافی است.", // = c.insurance.o2
     "be.c.insurance.o3": "از کارت بیمهٔ یک دوست استفاده کنید.", // = c.insurance.o3
     "be.c.insurance.w": "بدون ziekenfonds، پول داکتر و شفاخانه را خود تان می‌پردازید. زود عضو شدن از شما محافظت می‌کند. کارفرما یا دفتر کاریابی موقت می‌تواند کمک تان کند.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": "خیلی زیاد است؟ لازم نیست به تنهایی از عهدهٔ آن برآیید", // nieuw, nalezen (= c.feelwell)
+    "be.c.feelwell.b": "همه گاهی مانده، تحت فشار یا غمگین می‌شوند. کار خیلی زیاد (werkdruk)، خواب بد به خاطر کار نوبتی یا دلتنگی برای فامیل می‌تواند همه چیز را سنگین کند. لازم نیست این بار را به تنهایی بردارید، و گفتن «خیلی زیاد است» ضعف نیست. با کسی که به او اعتماد دارید گپ بزنید: سرپرست خود، مشاور معتمد (vertrouwenspersoon) یا مشاور پیشگیری (preventieadviseur psychosociale aspecten)، داکتر طب کار (arbeidsarts) یا داکتر خانوادگی خود (huisarts). خود تان هم می‌توانید برای گپ زدن با داکتر طب کار وقت بخواهید. داکترها به آمر شما نمی‌گویند که شما چه گفته‌اید. به خودکشی فکر می‌کنید، یا نگران کسی هستید؟ به 1813 زنگ بزنید (رایگان، شب و روز)، یا در zelfmoord1813.be چت کنید.", // nieuw, nalezen
+    "be.c.feelwell.p": "حالم زیاد خوب نیست. می‌توانم یک لحظه با شما گپ بزنم؟", // nieuw, nalezen (= c.feelwell.p)
+    "be.c.feelwell.s": "چند هفته است که بد خواب می‌کنید و کار خیلی زیاد است. خیلی مانده هستید. چه می‌کنید؟", // nieuw, nalezen (= c.feelwell.s)
+    "be.c.feelwell.o1": "به سرپرست خود یا arbeidsarts بگویید.", // nieuw, nalezen
+    "be.c.feelwell.o2": "چیزی نگویید و سخت‌تر و تیزتر کار کنید.", // nieuw, nalezen (= c.feelwell.o2)
+    "be.c.feelwell.o3": "در خانه بمانید و به هیچ کس نگویید چرا.", // nieuw, nalezen (= c.feelwell.o3)
+    "be.c.feelwell.w": "زود گفتن آن ضعف نیست. آن وقت می‌توانید با هم راه حلی پیدا کنید، مثلاً نوبت‌های کاری دیگر. لازم نیست به تنهایی از عهدهٔ آن برآیید.", // nieuw, nalezen (= c.feelwell.w)
 };
 
 export const uk: Gloss = {
@@ -152,6 +184,14 @@ export const uk: Gloss = {
     "be.c.insurance.o2": "Почекаєш: страхування з твоєї країни вистачить.", // = c.insurance.o2
     "be.c.insurance.o3": "Користуватимешся страховою карткою друга.", // = c.insurance.o3
     "be.c.insurance.w": "Без ziekenfonds ти платиш лікарю та лікарні сам / сама. Швидко вступити — значить захистити себе. Роботодавець або агентство тимчасової роботи можуть допомогти.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": "Забагато? Не залишайся з цим наодинці", // nieuw, nalezen (= c.feelwell)
+    "be.c.feelwell.b": "Кожен часом почувається втомленим, напруженим або сумним. Забагато роботи (werkdruk), поганий сон через змінну роботу або туга за родиною можуть зробити все важким. Не треба нести це наодинці, і сказати «це забагато» — не слабкість. Поговори з кимось, кому довіряєш: з керівником, з довіреною особою (vertrouwenspersoon) або з радником з профілактики (preventieadviseur psychosociale aspecten), з лікарем з медицини праці (arbeidsarts) або зі своїм сімейним лікарем (huisarts). Ти також можеш з власної ініціативи попросити про розмову з лікарем з медицини праці. Лікарі не переказують керівникові того, що ти їм кажеш. Думаєш про самогубство або хвилюєшся за когось? Подзвони на 1813 (безкоштовно, вдень і вночі) або напиши в чат на zelfmoord1813.be.", // nieuw, nalezen
+    "be.c.feelwell.p": "Мені не дуже добре. Можна з тобою трохи поговорити?", // nieuw, nalezen (= c.feelwell.p)
+    "be.c.feelwell.s": { m: "Уже кілька тижнів ти погано спиш, а роботи забагато. Ти почуваєшся дуже втомленим. Що ти зробиш?", f: "Уже кілька тижнів ти погано спиш, а роботи забагато. Ти почуваєшся дуже втомленою. Що ти зробиш?", x: "Уже кілька тижнів ти погано спиш, а роботи забагато. Сил зовсім немає. Що ти зробиш?" }, // nieuw, nalezen (= c.feelwell.s)
+    "be.c.feelwell.o1": "Скажеш керівнику або лікарю з медицини праці (arbeidsarts).", // nieuw, nalezen
+    "be.c.feelwell.o2": "Нічого не скажеш і працюватимеш більше й швидше.", // nieuw, nalezen (= c.feelwell.o2)
+    "be.c.feelwell.o3": "Залишишся вдома й нікому не скажеш чому.", // nieuw, nalezen (= c.feelwell.o3)
+    "be.c.feelwell.w": "Сказати про це рано — не слабкість. Тоді ви разом можете шукати вихід, наприклад інші зміни. Не треба справлятися з цим наодинці.", // nieuw, nalezen (= c.feelwell.w)
 };
 
 export const tr: Gloss = {
@@ -182,6 +222,14 @@ export const tr: Gloss = {
     "be.c.insurance.o2": "Beklersin: kendi ülkendeki sigortan yeterli.", // = c.insurance.o2
     "be.c.insurance.o3": "Bir arkadaşının sigorta kartını kullanırsın.", // = c.insurance.o3
     "be.c.insurance.w": "Ziekenfonds olmadan doktoru ve hastaneyi kendin ödersin. Hemen üye olmak seni korur. İşverenin veya geçici iş ajansın sana yardım edebilir.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": "Çok mu fazla? Tek başına yapmak zorunda değilsin", // nieuw, nalezen (= c.feelwell)
+    "be.c.feelwell.b": "Herkes bazen yorgun, stresli ya da üzgün hisseder. Çok fazla iş (werkdruk), vardiyalı çalışma yüzünden kötü uyku ya da aileni özlemek her şeyi ağırlaştırabilir. Bunu tek başına taşımak zorunda değilsin ve “bu çok fazla” demek zayıflık değildir. Güvendiğin biriyle konuş: amirin, güven danışmanı (vertrouwenspersoon) ya da önleme danışmanı (preventieadviseur psychosociale aspecten), iş yeri hekimi (arbeidsarts) ya da aile hekimin (huisarts). İş yeri hekimiyle bir görüşmeyi kendin de isteyebilirsin. Doktorlar ne söylediğini patronuna anlatmaz. İntihar etmeyi mi düşünüyorsun, ya da biri için endişeleniyor musun? 1813’ü ara (ücretsiz, gece gündüz) ya da zelfmoord1813.be’de sohbet et.", // nieuw, nalezen
+    "be.c.feelwell.p": "Pek iyi değilim. Seninle biraz konuşabilir miyim?", // nieuw, nalezen (= c.feelwell.p)
+    "be.c.feelwell.s": "Haftalardır kötü uyuyorsun ve iş çok fazla. Kendini çok yorgun hissediyorsun. Ne yaparsın?", // nieuw, nalezen (= c.feelwell.s)
+    "be.c.feelwell.o1": "Amirine ya da arbeidsarts’a söylersin.", // nieuw, nalezen
+    "be.c.feelwell.o2": "Hiçbir şey söylemez, daha çok ve daha hızlı çalışırsın.", // nieuw, nalezen (= c.feelwell.o2)
+    "be.c.feelwell.o3": "Evde kalır, kimseye nedenini söylemezsin.", // nieuw, nalezen (= c.feelwell.o3)
+    "be.c.feelwell.w": "Bunu erken söylemek zayıflık değildir. O zaman birlikte bir çıkış yolu arayabilirsiniz, örneğin başka vardiyalar. Bunu tek başına yapmak zorunda değilsin.", // nieuw, nalezen (= c.feelwell.w)
 };
 
 export const pl: Gloss = {
@@ -212,6 +260,14 @@ export const pl: Gloss = {
     "be.c.insurance.o2": "Czekasz: ubezpieczenie z twojego kraju wystarczy.", // = c.insurance.o2
     "be.c.insurance.o3": "Używasz karty ubezpieczenia kolegi.", // = c.insurance.o3
     "be.c.insurance.w": "Bez ziekenfonds za lekarza i szpital płacisz z własnej kieszeni. Szybkie zapisanie się chroni cię. Pracodawca albo agencja pracy tymczasowej może ci pomóc.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": "Za dużo? Nie musisz radzić sobie w pojedynkę", // nieuw, nalezen (= c.feelwell)
+    "be.c.feelwell.b": "Każdy czasem czuje się zmęczony, zestresowany albo smutny. Za dużo pracy (werkdruk), zły sen przez pracę zmianową albo tęsknota za rodziną mogą sprawić, że jest ciężko. Nie musisz dźwigać tego w pojedynkę, a powiedzieć „to za dużo” to nie słabość. Porozmawiaj z kimś, komu ufasz: z przełożonym, z osobą zaufania (vertrouwenspersoon) albo z doradcą ds. prewencji (preventieadviseur psychosociale aspecten), z lekarzem medycyny pracy (arbeidsarts) albo ze swoim lekarzem rodzinnym (huisarts). Możesz też z własnej inicjatywy poprosić o rozmowę z lekarzem medycyny pracy. Lekarze nie przekazują szefowi tego, co im mówisz. Myślisz o samobójstwie albo martwisz się o kogoś? Zadzwoń pod 1813 (bezpłatnie, w dzień i w nocy) albo napisz na czacie na zelfmoord1813.be.", // nieuw, nalezen
+    "be.c.feelwell.p": "Nie czuję się najlepiej. Czy mogę chwilę z tobą porozmawiać?", // nieuw, nalezen (= c.feelwell.p)
+    "be.c.feelwell.s": { m: "Od tygodni źle śpisz, a pracy jest za dużo. Czujesz się bardzo zmęczony. Co robisz?", f: "Od tygodni źle śpisz, a pracy jest za dużo. Czujesz się bardzo zmęczona. Co robisz?", x: "Od tygodni źle śpisz, a pracy jest za dużo. Bardzo brakuje ci sił. Co robisz?" }, // nieuw, nalezen (= c.feelwell.s)
+    "be.c.feelwell.o1": "Mówisz o tym przełożonemu albo lekarzowi medycyny pracy (arbeidsarts).", // nieuw, nalezen
+    "be.c.feelwell.o2": "Nic nie mówisz i pracujesz ciężej i szybciej.", // nieuw, nalezen (= c.feelwell.o2)
+    "be.c.feelwell.o3": "Zostajesz w domu i nikomu nie mówisz dlaczego.", // nieuw, nalezen (= c.feelwell.o3)
+    "be.c.feelwell.w": "Powiedzieć o tym wcześnie to nie słabość. Wtedy razem możecie szukać wyjścia, na przykład innych zmian. Nie musisz radzić sobie z tym w pojedynkę.", // nieuw, nalezen (= c.feelwell.w)
 };
 
 export const ro: Gloss = {
@@ -242,6 +298,14 @@ export const ro: Gloss = {
     "be.c.insurance.o2": "Aștepți: asigurarea din țara ta e suficientă.", // = c.insurance.o2
     "be.c.insurance.o3": "Folosești cardul de asigurare al unui prieten.", // = c.insurance.o3
     "be.c.insurance.w": "Fără ziekenfonds plătești singur / singură medicul și spitalul. Dacă te înscrii repede, te protejezi. Angajatorul sau agenția de muncă temporară te poate ajuta.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": { m: "Prea mult? Nu trebuie să faci totul singur", f: "Prea mult? Nu trebuie să faci totul singură", x: "Prea mult? Nu trebuie să faci totul fără ajutor" }, // nieuw, nalezen (= c.feelwell)
+    "be.c.feelwell.b": "Toată lumea se simte uneori obosită, stresată sau tristă. Prea mult de lucru (werkdruk), somnul prost din cauza schimburilor sau dorul de familie pot face totul greu. Nu trebuie să duci povara fără ajutor, iar să spui „e prea mult” nu e o slăbiciune. Vorbește cu cineva în care ai încredere: cu șeful, cu persoana de încredere (vertrouwenspersoon) sau cu consilierul de prevenire (preventieadviseur psychosociale aspecten), cu medicul de medicina muncii (arbeidsarts) sau cu medicul tău de familie (huisarts). Poți cere și tu o discuție cu medicul de medicina muncii. Medicii nu-i spun șefului ce le-ai spus. Te gândești la sinucidere sau îți faci griji pentru cineva? Sună la 1813 (gratuit, zi și noapte) sau scrie pe chat la zelfmoord1813.be.", // nieuw, nalezen
+    "be.c.feelwell.p": "Nu mă simt prea bine. Pot să vorbesc puțin cu tine?", // nieuw, nalezen (= c.feelwell.p)
+    "be.c.feelwell.s": { m: "De câteva săptămâni dormi prost și munca e prea multă. Te simți foarte obosit. Ce faci?", f: "De câteva săptămâni dormi prost și munca e prea multă. Te simți foarte obosită. Ce faci?", x: "De câteva săptămâni dormi prost și munca e prea multă. Simți o oboseală foarte mare. Ce faci?" }, // nieuw, nalezen (= c.feelwell.s)
+    "be.c.feelwell.o1": "Îi spui șefului sau medicului de medicina muncii (arbeidsarts).", // nieuw, nalezen
+    "be.c.feelwell.o2": "Nu spui nimic și muncești mai mult și mai repede.", // nieuw, nalezen (= c.feelwell.o2)
+    "be.c.feelwell.o3": "Rămâi acasă și nu spui nimănui de ce.", // nieuw, nalezen (= c.feelwell.o3)
+    "be.c.feelwell.w": "Să spui asta din timp nu e o slăbiciune. Atunci puteți căuta împreună o soluție, de exemplu alte schimburi. Nu trebuie să treci prin asta fără ajutor.", // nieuw, nalezen (= c.feelwell.w)
 };
 
 export const bg: Gloss = {
@@ -272,6 +336,14 @@ export const bg: Gloss = {
     "be.c.insurance.o2": "Чакаш: застраховката от твоята страна е достатъчна.", // = c.insurance.o2
     "be.c.insurance.o3": "Ползваш здравната карта на приятел.", // = c.insurance.o3
     "be.c.insurance.w": "Без ziekenfonds плащаш сам / сама на лекаря и болницата. Бързото записване те пази. Работодателят или агенцията за временна работа могат да ти помогнат.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": "Твърде много? Не е нужно да се справяш без помощ", // nieuw, nalezen (= c.feelwell)
+    "be.c.feelwell.b": "Всеки понякога се чувства уморен, стресиран или тъжен. Твърде много работа (werkdruk), лош сън заради сменната работа или липсата на семейството могат да направят всичко тежко. Не е нужно да носиш това без помощ, и да кажеш „твърде много е“ не е слабост. Поговори с човек, на когото имаш доверие: с началника си, с довереното лице (vertrouwenspersoon) или със съветника по превенция (preventieadviseur psychosociale aspecten), с лекаря по трудова медицина (arbeidsarts) или с личния си лекар (huisarts). Можеш и по своя инициатива да поискаш разговор с лекаря по трудова медицина. Лекарите не казват на шефа ти какво им казваш. Мислиш за самоубийство или се тревожиш за някого? Обади се на 1813 (безплатно, денем и нощем) или пиши в чата на zelfmoord1813.be.", // nieuw, nalezen
+    "be.c.feelwell.p": "Не съм много добре. Може ли да поговоря с теб за малко?", // nieuw, nalezen (= c.feelwell.p)
+    "be.c.feelwell.s": { m: "От седмици спиш лошо и работата е твърде много. Чувстваш се много уморен. Какво правиш?", f: "От седмици спиш лошо и работата е твърде много. Чувстваш се много уморена. Какво правиш?", x: "От седмици спиш лошо и работата е твърде много. Чувстваш се много уморен / уморена. Какво правиш?" }, // nieuw, nalezen (= c.feelwell.s)
+    "be.c.feelwell.o1": "Казваш на началника си или на лекаря по трудова медицина (arbeidsarts).", // nieuw, nalezen
+    "be.c.feelwell.o2": "Не казваш нищо и работиш повече и по-бързо.", // nieuw, nalezen (= c.feelwell.o2)
+    "be.c.feelwell.o3": "Оставаш вкъщи и не казваш на никого защо.", // nieuw, nalezen (= c.feelwell.o3)
+    "be.c.feelwell.w": "Да го кажеш рано не е слабост. Тогава можете заедно да търсите изход, например други смени. Не е нужно да се справяш без помощ.", // nieuw, nalezen (= c.feelwell.w)
 };
 
 export const es: Gloss = {
@@ -302,6 +374,14 @@ export const es: Gloss = {
     "be.c.insurance.o2": "Esperas: el seguro de tu país es suficiente.", // = c.insurance.o2
     "be.c.insurance.o3": "Usas la tarjeta del seguro de un amigo.", // = c.insurance.o3
     "be.c.insurance.w": "Sin ziekenfonds, el médico y el hospital los pagas tú. Apuntarte pronto te protege. Tu empresa o tu agencia de trabajo temporal te pueden ayudar.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": "¿Demasiado? No tienes que hacerlo sin ayuda", // nieuw, nalezen
+    "be.c.feelwell.b": "Todo el mundo se siente a veces cansado, estresado o triste. Demasiado trabajo (werkdruk), dormir mal por los turnos o echar de menos a tu familia pueden hacerlo pesado. No tienes que cargar con ello sin ayuda, y decir “es demasiado” no es ser débil. Habla con alguien de confianza: tu encargado, la persona de confianza (vertrouwenspersoon) o el asesor de prevención (preventieadviseur psychosociale aspecten), el médico del trabajo (arbeidsarts) o tu médico de cabecera (huisarts). También puedes pedir por tu cuenta una conversación con el médico del trabajo. Los médicos no le cuentan a tu jefe lo que les has dicho. ¿Piensas en el suicidio, o te preocupa alguien? Llama al 1813 (gratis, de día y de noche), o chatea en zelfmoord1813.be.", // nieuw, nalezen
+    "be.c.feelwell.p": "No estoy muy bien. ¿Puedo hablar contigo un momento?", // nieuw, nalezen
+    "be.c.feelwell.s": { m: "Desde hace semanas duermes mal y el trabajo es demasiado. Te sientes muy cansado. ¿Qué haces?", f: "Desde hace semanas duermes mal y el trabajo es demasiado. Te sientes muy cansada. ¿Qué haces?", x: "Desde hace semanas duermes mal y el trabajo es demasiado. Sientes mucho cansancio. ¿Qué haces?" }, // nieuw, nalezen
+    "be.c.feelwell.o1": "Se lo dices a tu encargado o al médico del trabajo (arbeidsarts).", // nieuw, nalezen
+    "be.c.feelwell.o2": "No dices nada, y trabajas más y más rápido.", // nieuw, nalezen
+    "be.c.feelwell.o3": "Te quedas en casa, y no le dices a nadie por qué.", // nieuw, nalezen
+    "be.c.feelwell.w": "Decirlo pronto no es ser débil. Entonces se puede buscar una solución entre todos, por ejemplo otros turnos. No tienes que hacerlo sin ayuda.", // nieuw, nalezen
 };
 
 export const pt: Gloss = {
@@ -332,6 +412,14 @@ export const pt: Gloss = {
     "be.c.insurance.o2": "Esperas: o seguro do teu país chega.", // = c.insurance.o2
     "be.c.insurance.o3": "Usas o cartão do seguro de um amigo.", // = c.insurance.o3
     "be.c.insurance.w": "Sem ziekenfonds, o médico e o hospital pagas tu. Inscrever-te depressa protege-te. O teu empregador ou a agência de trabalho temporário podem ajudar-te.", // nieuw, nalezen
+    "be.c.feelwell": "É demais? Não tens de passar por isto sem ajuda", // nieuw, nalezen
+    "be.c.feelwell.b": "Toda a gente se sente às vezes cansada, stressada ou triste. Trabalho a mais (werkdruk), dormir mal por causa dos turnos ou ter saudades da família podem tornar tudo pesado. Não tens de carregar isso sem ajuda, e dizer \"é demais\" não é fraqueza. Fala com alguém de confiança: o teu chefe, a pessoa de confiança (vertrouwenspersoon) ou o conselheiro de prevenção (preventieadviseur psychosociale aspecten), o médico do trabalho (arbeidsarts) ou o teu médico de família (huisarts). Também podes ser tu a pedir uma conversa com o médico do trabalho. Os médicos não contam ao teu patrão o que disseste. Pensas em suicídio, ou preocupa-te alguém? Liga para o 1813 (grátis, de dia e de noite), ou fala por chat em zelfmoord1813.be.", // nieuw, nalezen
+    "be.c.feelwell.p": "Não estou muito bem. Posso falar contigo um momento?", // nieuw, nalezen
+    "be.c.feelwell.s": { m: "Há semanas que dormes mal e o trabalho é demais. Sentes-te muito cansado. O que fazes?", f: "Há semanas que dormes mal e o trabalho é demais. Sentes-te muito cansada. O que fazes?", x: "Há semanas que dormes mal e o trabalho é demais. Sentes um grande cansaço. O que fazes?" }, // nieuw, nalezen
+    "be.c.feelwell.o1": "Dizes ao teu chefe ou ao médico do trabalho (arbeidsarts).", // nieuw, nalezen
+    "be.c.feelwell.o2": "Não dizes nada, e trabalhas mais e mais depressa.", // nieuw, nalezen
+    "be.c.feelwell.o3": "Ficas em casa, e não dizes a ninguém porquê.", // nieuw, nalezen
+    "be.c.feelwell.w": "Dizer cedo não é fraqueza. Assim podem procurar juntos uma saída, por exemplo outros turnos. Não tens de fazer isto sem ajuda.", // nieuw, nalezen
 };
 
 export const fr: Gloss = {
@@ -362,6 +450,14 @@ export const fr: Gloss = {
     "be.c.insurance.o2": "Attends : l’assurance de ton pays suffit.", // = c.insurance.o2
     "be.c.insurance.o3": "Utilise la carte d’assurance d’un ami.", // = c.insurance.o3
     "be.c.insurance.w": "Sans ziekenfonds, tu paies toi-même le médecin et l’hôpital. T’inscrire vite te protège. Ton employeur ou ton agence d’intérim peut t’aider.", // nieuw, nalezen
+    "be.c.feelwell": "C’est trop ? Tu n’as pas à porter ça sans aide", // nieuw, nalezen
+    "be.c.feelwell.b": "Tout le monde se sent parfois fatigué, stressé ou triste. Trop de travail (werkdruk), un mauvais sommeil à cause du travail posté ou le manque de ta famille peuvent rendre les choses lourdes. Tu n’as pas à porter ça sans aide, et dire “c’est trop” n’est pas une faiblesse. Parle à quelqu’un de confiance : ton responsable, la personne de confiance (vertrouwenspersoon) ou le conseiller en prévention (preventieadviseur psychosociale aspecten), le médecin du travail (arbeidsarts) ou ton médecin généraliste (huisarts). Tu peux aussi demander toi-même un entretien avec le médecin du travail. Les médecins ne répètent pas à ton patron ce que tu as dit. Tu penses au suicide, ou tu t’inquiètes pour quelqu’un ? Appelle le 1813 (gratuit, jour et nuit), ou chatte sur zelfmoord1813.be.", // nieuw, nalezen
+    "be.c.feelwell.p": "Ça ne va pas très bien. Je peux te parler un moment ?", // nieuw, nalezen
+    "be.c.feelwell.s": { m: "Depuis des semaines, tu dors mal et le travail est trop lourd. Tu te sens très fatigué. Que fais-tu ?", f: "Depuis des semaines, tu dors mal et le travail est trop lourd. Tu te sens très fatiguée. Que fais-tu ?", x: "Depuis des semaines, tu dors mal et le travail est trop lourd. Tu ressens une grande fatigue. Que fais-tu ?" }, // nieuw, nalezen
+    "be.c.feelwell.o1": "Tu en parles à ton responsable ou au médecin du travail (arbeidsarts).", // nieuw, nalezen
+    "be.c.feelwell.o2": "Tu ne dis rien, et tu travailles plus dur et plus vite.", // nieuw, nalezen
+    "be.c.feelwell.o3": "Tu restes à la maison, et tu ne dis à personne pourquoi.", // nieuw, nalezen
+    "be.c.feelwell.w": "Le dire tôt n’est pas une faiblesse. Alors vous pouvez chercher ensemble une solution, par exemple d’autres horaires d’équipe. Tu n’as pas à faire ça sans aide.", // nieuw, nalezen
 };
 
 export const de: Gloss = {
@@ -392,4 +488,12 @@ export const de: Gloss = {
     "be.c.insurance.o2": "Warte: Deine Versicherung von zu Hause reicht.", // = c.insurance.o2
     "be.c.insurance.o3": "Benutz die Versichertenkarte von einem Freund.", // = c.insurance.o3
     "be.c.insurance.w": "Ohne ziekenfonds bezahlst du Arzt und Krankenhaus selbst. Schnell Mitglied zu werden schützt dich. Dein Arbeitgeber oder deine Zeitarbeitsfirma kann dir helfen.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": "Zu viel? Du musst das nicht allein schaffen", // nieuw, nalezen
+    "be.c.feelwell.b": "Jeder ist manchmal müde, gestresst oder traurig. Zu viel Arbeit (werkdruk), schlechter Schlaf durch Schichtarbeit oder Sehnsucht nach deiner Familie können es schwer machen. Du musst das nicht allein tragen, und zu sagen „es ist zu viel“ ist keine Schwäche. Sprich mit jemandem, dem du vertraust: deinem Vorgesetzten, der Vertrauensperson (vertrouwenspersoon) oder dem Präventionsberater (preventieadviseur psychosociale aspecten), dem Arbeitsarzt (arbeidsarts) oder deinem Hausarzt (huisarts). Du kannst auch selbst um ein Gespräch mit dem Arbeitsarzt bitten. Ärzte erzählen deinem Chef nicht, was du gesagt hast. Denkst du an Suizid, oder machst du dir Sorgen um jemanden? Ruf 1813 an (kostenlos, Tag und Nacht), oder chatte auf zelfmoord1813.be.", // nieuw, nalezen
+    "be.c.feelwell.p": "Mir geht es nicht so gut. Kann ich kurz mit dir reden?", // nieuw, nalezen
+    "be.c.feelwell.s": "Seit Wochen schläfst du schlecht, und die Arbeit ist zu viel. Du bist sehr müde. Was machst du?", // nieuw, nalezen
+    "be.c.feelwell.o1": "Du sagst es deinem Vorgesetzten oder dem Arbeitsarzt (arbeidsarts).", // nieuw, nalezen
+    "be.c.feelwell.o2": "Du sagst nichts und arbeitest härter und schneller.", // nieuw, nalezen
+    "be.c.feelwell.o3": "Du bleibst zu Hause und sagst niemandem, warum.", // nieuw, nalezen
+    "be.c.feelwell.w": "Es früh zu sagen ist keine Schwäche. Dann könnt ihr zusammen einen Ausweg suchen, zum Beispiel andere Schichten. Du musst das nicht allein schaffen.", // nieuw, nalezen
 };

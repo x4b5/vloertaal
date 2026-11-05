@@ -10,7 +10,11 @@ import { workTips } from '../src/content/work';
  */
 const SHORT = ['c.translate', 'c.harvest', 'c.shelves', 'c.garage', 'c.illness', 'c.carjob', 'c.gethelp', 'c.council', 'c.handover', 'c.bsn', 'c.permit',
   // The new lessons of 4 November 2026 (fire alarm, numbers): short from the start.
-  'c.alarm', 'c.counting'];
+  'c.alarm', 'c.counting',
+  // Vervoer en bezorging and Voedselverwerking (5 November 2026): short from the start.
+  'c.parcel', 'c.road', 'c.food',
+  // And those of 5 November 2026 (feeling good at work, helping a new colleague).
+  'c.feelwell', 'c.newcolleague'];
 const SITUATION_MAX = 18; // words, without the question at the end
 const ANSWER_MAX = 10;
 const SCREEN_MAX = 42; // the situation and its three answers together

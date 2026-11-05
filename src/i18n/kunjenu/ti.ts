@@ -45,7 +45,10 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "ወረቐት ደሞዘይ ከም ዘይቅኑዕ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.pay.2': "ከም bruto ከምኡውን netto ዝኣመሰሉ ቃላት ከንብብ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.leave.1': "ፍቓድ ክሓትት እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.leave.2': "ሕማመይን ናብ ስራሕ ምምላሰይን ክሕብር እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.leave.2': "ውላደይ ከም ዝሓመመ ክብል እኽእል እየ።", // nieuw, nalezen (5 nov 2026: nieuwe zin; de oude staat nu bij kjn.u.sick.1)
+    'kjn.u.sick.1': "ሕማመይን ናብ ስራሕ ምምላሰይን ክሕብር እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.sick.2': "እንታይ ገና ከም ዘይክእል ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.sick.3': "ቅድም ፍርቂ መዓልትታት ከም ዝሰርሕ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.contact.1': "ደዊለ መን ምዃነይ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.contact.2': "ሓደ ሰብ ተመሊሱ ክድውለለይ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.contact.3': "ናብ ስራሐይ ሓጺር መልእኽቲ ክጽሕፍ እኽእል እየ።", // nieuw, nalezen
@@ -79,6 +82,7 @@ const t: CultureTranslation = {
     'kjn.u.papers.2': "ክራይ ክንደይ ምዃኑ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.health.1': "ኣበይ ከም ዘቐንዝወኒ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.health.2': "ምስ ሓኪም ስድራ ቆጸራ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.health.3': "እቲ ስራሕ ኣዝዩ ከም ዝበዝሓኒ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.money.1': "ሓደ ደብዳቤ ከም ዘይተረደኣኒ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.money.2': "ንተታላሊ ብተሌፎን ኣይፋል ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.travel.1': "ናብ ስራሐይ ብኸመይ ከም ዝኸይድ ክገልጽ እኽእል እየ።", // nieuw, nalezen
@@ -91,6 +95,7 @@ const t: CultureTranslation = {
     'kjn.u.build.2': "መሳርሒ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.factory.1': "ኣብ ማሽን ጸገም ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.factory.2': "ኣብ ሓደ ፍርያት እንታይ ጸገም ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.factory.3': "ንእሽቶ መቑሰሊ ከም ዘለኒ ክሕብር እኽእል እየ።", // nieuw, nalezen
     'kjn.u.care.1': "ንተገልጋሊ ክሕግዞ ይፍቀደለይ እንተኾይኑ ክሓትቶ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.care.2': "ገለ ነገር ናብ ነርስ ከሕልፍ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.horeca.1': "ንጋሻ እንታይ ክሰትዩ ከም ዝደልዩ ክሓትቶም እኽእል እየ።", // nieuw, nalezen
@@ -103,6 +108,10 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "ሓደ ገመድ ኤሌክትሪክ ከም ዝተበላሸወ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.garage.1': "ጎማ ከም ዝተቐደደ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.garage.2': "ዓሚል ቅድም ክሰማማዕ ከም ዘለዎ ክብል እኽእል እየ።", // nieuw, nalezen
+    // Vervoer en bezorging (5 nov 2026)
+    'kjn.u.delivery.1': "እቲ ዓሚል ኣብ ገዛ ከም ዘየለ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.delivery.2': "ንጎረባብቲ ሓደ ጥቕሊል ክቕበሉ ክሓቶም እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.delivery.3': "መስመረይን ሰዓታተይን መን ከም ዝውስኖ ክሓትት እኽእል እየ።", // nieuw, nalezen
   },
 };
 

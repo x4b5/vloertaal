@@ -45,7 +45,7 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "Maaş bordromun doğru olmadığını söyleyebilirim.", // nieuw, nalezen
     'kjn.u.pay.2': "“bruto” ve “netto” gibi kelimeleri okuyabilirim.", // nieuw, nalezen
     'kjn.u.leave.1': "İzin isteyebilirim.", // nieuw, nalezen
-    'kjn.u.leave.2': "Hastalık bildirimi yapabilir, iyileşince de bildirebilirim.", // nieuw, nalezen
+    'kjn.u.leave.2': "Çocuğumun hasta olduğunu söyleyebilirim.", // nieuw, nalezen
     'kjn.u.contact.1': "Arayıp kim olduğumu söyleyebilirim.", // nieuw, nalezen
     'kjn.u.contact.2': "Birinden beni geri aramasını isteyebilirim.", // nieuw, nalezen
     'kjn.u.contact.3': "İşe kısa bir mesaj yazabilirim.", // nieuw, nalezen
@@ -103,6 +103,14 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "Bir kablonun bozuk olduğunu söyleyebilirim.", // nieuw, nalezen
     'kjn.u.garage.1': "Bir lastiğin patlak olduğunu söyleyebilirim.", // nieuw, nalezen
     'kjn.u.garage.2': "Müşterinin önce onay vermesi gerektiğini söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.sick.1': "Hastalık bildirimi yapabilir, iyileşince de bildirebilirim.", // nieuw, nalezen
+    'kjn.u.sick.2': "Neyi henüz yapamadığımı söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.sick.3': "İlk başta yarım gün çalıştığımı söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.health.3': "İşin bana fazla gelmeye başladığını söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.factory.3': "Küçük bir yaram olduğunu bildirebilirim.", // nieuw, nalezen
+    'kjn.u.delivery.1': "Müşterinin evde olmadığını söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.delivery.2': "Komşulardan bir paketi teslim almalarını isteyebilirim.", // nieuw, nalezen
+    'kjn.u.delivery.3': "Güzergâhımı ve saatlerimi kimin belirlediğini sorabilirim.", // nieuw, nalezen
   },
 };
 

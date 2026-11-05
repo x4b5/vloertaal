@@ -198,6 +198,27 @@ const t: CultureTranslation = {
     's.clear.3': 'Scuze, vorbesc prea repede și prea mult.', // nieuw, nalezen
     'd.clear.q': 'E clar?', // nieuw, nalezen
     'd.clear.a': 'Da. Mai am o întrebare.', // nieuw, nalezen
+    // Vertaalronde 5 november 2026: l.newcolleague en c.newcolleague.
+    'l.newcolleague': "Să ajuți un coleg nou", // nieuw, nalezen
+    'w.welkom': "bun venit", // nieuw, nalezen
+    'w.inwerken': "a instrui un coleg nou (a-i arăta munca în primele zile)", // nieuw, nalezen
+    'w.stap': "pasul (o mică parte dintr-o sarcină)", // nieuw, nalezen
+    'w.nadoen': "a face la fel (a face ce ți-a arătat cineva)", // nieuw, nalezen
+    'w.geduld': "răbdarea", // nieuw, nalezen
+    'w.kast': "dulapul", // nieuw, nalezen
+    's.newcolleague.1': "Bun venit! Azi îți arăt eu munca.", // nieuw, nalezen
+    's.newcolleague.2': "Întâi uită-te. Apoi faci și tu la fel.", // nieuw, nalezen
+    's.newcolleague.3': "Mănușile sunt în dulapul acela.", // nieuw, nalezen
+    'd.newcolleague.q': "Cred că am înțeles.", // nieuw, nalezen
+    'd.newcolleague.a': "Bine. Arată-mi.", // nieuw, nalezen
+    'c.newcolleague': "Arată, pas cu pas", // nieuw, nalezen
+    'c.newcolleague.b': "Ce a fost greu pentru tine în primele săptămâni e greu și pentru un coleg nou. Explică munca în pași mici: întâi asta, apoi aia. Nu vorbi mai repede sau mai tare: arată și lasă-l să facă după tine. Nu întreba „Snap je het?”: mulți spun „da” și când nu înțeleg. Spune în schimb „Laat eens zien” și uită-te. Spune-i unde sunt lucrurile, de exemplu toaleta, cantina și mănușile. Ai răbdare (geduld): învățatul durează, pentru toată lumea.", // nieuw, nalezen
+    'c.newcolleague.p': "Bravo! Acum pasul următor.", // nieuw, nalezen
+    'c.newcolleague.s': "Îi explici o sarcină unui coleg nou. El spune: „Ja, ja, ik snap het.” Ce faci?", // nieuw, nalezen
+    'c.newcolleague.o1': "Spui „Laat eens zien” și te uiți cum o face.", // nieuw, nalezen
+    'c.newcolleague.o2': "Spui „Goed zo” și te întorci la munca ta.", // nieuw, nalezen
+    'c.newcolleague.o3': "Explici totul încă o dată, mai repede și mai tare.", // nieuw, nalezen
+    'c.newcolleague.w': "Mulți spun „ja” și când n-au înțeles. Când el îți arată, vedeți amândoi dacă merge. E mai repede decât să repari o greșeală mai târziu.", // nieuw, nalezen
   },
 };
 

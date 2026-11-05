@@ -67,6 +67,15 @@ const PENDING_RECORDING = new Set<string>([
   'Zeventig. Zeven, nul.',
   // New lesson "Kort en duidelijk" (l.clear), 4 November 2026:
   'Ja. Ik heb nog één vraag.',
+  // New sector unit "Vervoer en bezorging" (u.delivery) and "Voedselverwerking" (l.food), 5 November 2026:
+  'Ja. Wilt u hier even tekenen?',
+  'Nee, dan heb ik geen tijd voor mijn pauze.',
+  'Hierna komt een product zonder noten.',
+  // New lessons "Je goed voelen op het werk" (l.feelwell) and "Een nieuwe collega helpen" (l.newcolleague), 5 November 2026:
+  'Niet zo goed. Ik lig vaak wakker.',
+  'Mooi. Laat eens zien.',
+  // New lesson "Weer aan het werk na ziekte" (l.backtowork), 5 November 2026:
+  'Ja, het gaat beter. Ik doe het rustig aan.',
 ]);
 
 

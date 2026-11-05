@@ -1,6 +1,8 @@
 # Vloertaal: controle van de informatie over werk en rechten
 
-*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen).*
+*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.road: 5 november 2026).*
+
+*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.backtowork: 5 november 2026).*
 
 **Terugsturen naar:** ____________________________ (naam en e-mail van de eigenaar van Vloertaal)
 
@@ -110,7 +112,7 @@ Bijna elke tip eindigt met een van deze drie vaste slotregels:
 | Slotregel (Engels, letterlijk) | Bij welke tips | Waarom deze |
 |---|---|---|
 | *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.accident, c.agency, c.aiplan, c.bsn, c.carjob, c.contract, c.diploma, c.extra, c.findwork, c.greensafe, c.health, c.illness, c.insurance, c.jobends, c.kids, c.leave, c.letters, c.payslip, c.permit, c.power, c.sick, c.site, c.transit, c.workshop, c.ww | rechten en regels uit de wet |
-| *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.gethelp, c.harvest, c.housing, c.newjob, c.rights, c.warning | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
+| *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.gethelp, c.harvest, c.housing, c.newjob, c.rights, c.road, c.warning | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
 | *Rules differ per company: ask your supervisor what the rules are where you work.* | c.callin, c.clock, c.hygiene, c.line, c.privacy, c.smoking | huisregels |
 | (geen slotregel) | c.bike, c.boundaries, c.certs, c.doctor, c.gear, c.gossip, c.interview, c.notyet, c.respect, c.unsafe | gedragstips; sommige noemen zelf een loket |
 
@@ -958,7 +960,7 @@ ______________________________________________________________
 
 ### c.leave — Holidays and emergency leave
 
-*Unit „Verlof en ziekte”, les „Days off” (`l.leave`)*
+*Unit „Verlof” (tot 5 november 2026 „Verlof en ziekte”), les „Days off” (`l.leave`)*
 
 **Samenvatting (NL):** Wettelijk min. 4 × het aantal werkdagen per week aan betaalde vrije dagen (fulltime: 20 per jaar); cao kan meer geven; verlof op tijd en schriftelijk aanvragen; bij een plotselinge noodsituatie kort verlof met loon (calamiteitenverlof); de werkgever moet in principe ja zeggen; een nee alleen om een zwaarwegende reden, schriftelijk binnen 2 weken.
 
@@ -996,7 +998,7 @@ ______________________________________________________________
 
 ### c.illness — Your rights when you are sick
 
-*Unit „Verlof en ziekte”, les „Sick at home” (`l.illness`)*
+*Unit „Ziekte” (tot 5 november 2026 in „Verlof en ziekte”), les „Sick at home” (`l.illness`)*
 
 **Samenvatting (NL):** Bij ziekte min. 70% van het loon, tot 2 jaar; cao vaak meer; max. 2 wachtdagen zonder loon, alleen als contract of cao dat zegt; de baas mag niet vragen welke ziekte; gezondheid bespreek je met de bedrijfsarts; beter melden; in het eerste jaar minstens het minimumloon; een tijdelijk contract stopt op de einddatum, ook bij ziekte; via een uitzendbureau met een uitzendbeding kan het contract stoppen als je ziek wordt, vraag dan UWV naar de Ziektewet. Uitleg: de bedrijfsarts geeft geen medische details door, alleen wat je kunt.
 
@@ -1036,7 +1038,7 @@ ______________________________________________________________
 
 ### c.kids — Your child is sick
 
-*Unit „Verlof en ziekte”, les „Children and work” (`l.kids`), in dit document sinds 4 november 2026*
+*Unit „Verlof” (tot 5 november 2026 „Verlof en ziekte”), les „Children and work” (`l.kids`), in dit document sinds 4 november 2026*
 
 **Samenvatting (NL):** Is je kind plotseling ziek, vertel het je werkgever meteen; voor de eerste uren of dagen kun je calamiteitenverlof nemen, met behoud van loon; heeft je kind langer zorg nodig, dan kun je zorgverlof vragen; ben je zwanger, dan mag je werkgever je daarom niet ontslaan; vraag op tijd naar zwangerschapsverlof en ouderschapsverlof.
 
@@ -1058,6 +1060,46 @@ ______________________________________________________________
 - „For the first hours or days you can take emergency leave (calamiteitenverlof), and your employer keeps paying you”: wij gaan uit van art. 4:1 Wazo (calamiteiten- en ander kort verzuimverlof, „naar redelijkheid”, met behoud van loon). Is „the first hours or days” een goede eenvoudige weergave?
 - „Then you can ask for care leave (zorgverlof)”: wij noemen niet dat kortdurend zorgverlof meestal 70% van het loon betaalt en langdurend zorgverlof onbetaald is (Wazo hoofdstuk 5). Kan een werknemer schade oplopen omdat dat er niet staat?
 - „Pregnant? Your employer may not fire you because of that.”: wij gaan uit van het opzegverbod tijdens de zwangerschap en het bevallingsverlof (art. 7:670 lid 2 BW) en het verbod op onderscheid naar geslacht (AWGB). Is „because of that” juist, of is de bescherming breder? En geldt hij ook als een tijdelijk contract om die reden niet wordt verlengd?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+### c.backtowork — Coming back step by step
+
+*Unit „Ziekte”, les „Back to work after illness” (`l.backtowork`), in dit document sinds 5 november 2026*
+
+**Samenvatting (NL):** Ben je beter, meld je dan beter bij je werkgever; na een langere ziekte begin je vaak stap voor stap: eerst minder uren of lichter werk; de bedrijfsarts geeft advies over wat je kunt; ben je langer ziek, dan maken jij en je werkgever samen een plan voor je terugkeer (de Wet verbetering poortwachter); zeg duidelijk wat je wel en nog niet kunt; je hoeft collega’s niet te vertellen welke ziekte je had. Uitleg: wie te veel te snel doet, kan weer ziek worden. De les gaat over goed terugkomen, niet over ziek melden.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Are you better? Tell your employer that you can work again (betermelden). After a longer illness, you often start step by step: first fewer hours, or lighter work. The company doctor (bedrijfsarts) gives advice about what you can do. Sick for a longer time? Then you and your employer make a plan together for your return. That is the law (Wet verbetering poortwachter). Say clearly what you can do, and what not yet. You do not have to tell colleagues what illness you had.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Zeg het zo (Nederlands):** „Dit kan ik al. Dat kan ik nog niet.” — *I can already do this. I cannot do that yet.*
+
+**Situatie in de les:** You were sick for three weeks. On your first day back, your supervisor asks you to lift heavy boxes. The company doctor said: only light work for now. What do you do?
+**Goede antwoord:** Say calmly that you can do light work now, and what you cannot do yet.
+**Uitleg na het antwoord (`c.backtowork.w`):** Your supervisor wants you back, and healthy. When you say clearly what you can do, they can plan the work. Doing too much too soon can make you sick again.
+
+**Uitleg bij het gesprekje (`c.backtowork.a.why`):** „Welkom terug! Gaat het weer?” → „Ja, het gaat beter. Ik doe het rustig aan.”: Asked how you are: a short yes, and that you take it slowly.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip. Hij noemt niet de weken van de poortwachter (probleemanalyse in week 6, plan van aanpak in week 8) en niet de twee jaar.
+
+**Onze eigen vraag hierbij:**
+- „Sick for a longer time? Then you and your employer make a plan together for your return. That is the law (Wet verbetering poortwachter).”: wij gaan uit van art. 7:658a BW (de werkgever werkt aan de re-integratie) en art. 7:660a BW (de werknemer werkt mee), met de probleemanalyse en het plan van aanpak uit de Regeling procesgang. Is „make a plan together” een goede eenvoudige weergave? Moet erbij dat je loon kan stoppen als je zonder goede reden niet meewerkt (art. 7:629 lid 3 BW)? Wij laten dat bewust weg: de eigenaar wil een rustige tip zonder dreiging; de Werkregels-les over ziek zijn noemt het wel.
+- „After a longer illness, you often start step by step: first fewer hours, or lighter work.”: dat is geen recht, maar de gewone praktijk op advies van de bedrijfsarts. Is „often” voorzichtig genoeg?
+- „Tell your employer that you can work again (betermelden).”: hoe en wanneer staat in het verzuimprotocol van het bedrijf. Moet dat erbij?
+- „You do not have to tell colleagues what illness you had.”: dat zegt niets over de werkgever (die de diagnose ook niet mag vragen of vastleggen, AVG); dat staat al in de tip van „Sick at home” (`c.illness`).
 
 **Oordeel deskundige:**
 
@@ -1857,6 +1899,72 @@ ______________________________________________________________
 ______________________________________________________________
 
 ---
+### c.road — Safe on the road, and fair work
+
+*Unit „Vervoer en bezorging”, les „Safe and fair on the road” (`l.road`), in dit document sinds 5 november 2026*
+
+**Samenvatting (NL):** Houd je telefoon nooit in je hand tijdens het rijden: dat is verboden; gebruik een houder voor de navigatie; neem je pauzes, ook op een drukke dag; een zwaar pakket: gebruik de steekwagen of til samen; ijs of sneeuw: rij langzaam; sommige bedrijven zeggen dat je als zelfstandige werkt, maar wie bepaalt je uren, je route en je kleding? Bepaalt het bedrijf dat allemaal, dan ben je misschien toch werknemer (in loondienst), met vaak meer rechten, zoals loon als je ziek bent; meer in de les „Papers, integration and your job”. Situatie: het bedrijf noemt je zelfstandige, maar bepaalt je uren, je route en je kleding: vraag advies.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Never hold your phone while you drive: that is forbidden. Use a holder for the navigation. Take your breaks, also on a busy day. A heavy parcel? Use the hand truck, or lift it together. Ice or snow? Drive slowly: arriving late is better than an accident. Some companies say you work as self-employed (zelfstandig). But who decides your hours, your route and your clothes? If the company decides all that, you may be an employee after all (in loondienst). Then you often have more rights, like pay when you are sick. More about this in the lesson "Papers, integration and your job".
+>
+> *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
+
+**Zeg het zo (Nederlands):** „Ik neem nu pauze. Daarna rij ik verder.” — *I am taking my break now. Then I will drive on.*
+
+**Situatie in de les:** The company calls you self-employed. But it decides your hours, your route and your clothes. What do you do?
+**Goede antwoord:** Ask for advice: maybe you are an employee.
+**Uitleg na het antwoord (`c.road.w`):** What counts is how you really work, not only the word on the contract. If the company decides how, when and where you work, you are often an employee. Then you have more rights.
+
+**⚠ Getallen en termijnen:** geen getallen in de tip (bewust geen rij- en rusttijden: de EU-regels met tachograaf gelden niet voor de meeste bestelbussen onder 3,5 ton).
+
+**Onze eigen vraag hierbij:**
+- „Never hold your phone while you drive: that is forbidden”: wij gaan uit van art. 61a RVV 1990 (in België art. 8.4 Wegverkeersreglement). Klopt dit zonder voorbehoud, ook voor de handscanner van de bezorger?
+- „Take your breaks”: wij noemen geen minuten. Voor werknemers geldt de Arbeidstijdenwet (art. 5:4), voor chauffeurs ook het Arbeidstijdenbesluit vervoer. Is het juist om voor bezorgers in een bestelbus geen getal te noemen, of is één getal (30 minuten na 5,5 uur) hier zeker genoeg?
+- „If the company decides all that, you may be an employee after all”: wij gaan uit van art. 7:610 BW en het Deliveroo-arrest (HR 24 maart 2023). Is „may be … after all” en „often more rights, like pay when you are sick” voorzichtig genoeg? Moet de EU-richtlijn platformwerk (2024/2831, omzetting uiterlijk 2 december 2026, een vermoeden van werknemerschap) erbij, of juist niet zolang de Nederlandse wet er nog niet is?
+- De slotregel stuurt naar de vakbond, het Juridisch Loket of FairWork (het bedrijf kan zelf het probleem zijn). Hoort de Belastingdienst of de Arbeidsinspectie (schijnzelfstandigheid melden) hier ook bij?
+
+### c.feelwell — Too much? You do not have to do it alone (nieuw, 5 november 2026)
+
+*Unit „Gezondheid”, les „Feeling good at work” (`l.feelwell`)*
+
+**Samenvatting (NL):** Iedereen is soms moe, gestrest of verdrietig. Werkdruk, slecht slapen door ploegendienst of je familie missen kan het zwaar maken. Je hoeft het niet alleen te doen, en zeggen dat het te veel is, is geen zwakte. Praat met iemand: je leidinggevende, de vertrouwenspersoon (als die er is), de bedrijfsarts of je huisarts. Je mag ook zelf om een gesprek met de bedrijfsarts vragen. Artsen vertellen je baas niet wat je zei. Denk je aan zelfdoding, of maak je je zorgen om iemand? Bel 113 (gratis, dag en nacht) of chat op 113.nl.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Everyone feels tired, stressed or sad sometimes. Too much work (werkdruk), bad sleep from shift work or missing your family can make it heavy. You do not have to carry it alone, and saying "it is too much" is not weak. Talk to someone you trust: your supervisor, the confidential adviser (vertrouwenspersoon, if there is one), the company doctor (bedrijfsarts) or your huisarts. You may also ask for a talk with the company doctor yourself. Doctors do not tell your boss what you said. Do you think about suicide, or do you worry about someone? Call 113 (free, day and night), or chat at 113.nl.
+
+Geen slotregel („General information …”): de tip gaat over je goed voelen en hulp vragen, zoals c.healthy.
+
+**Grondslag (onze lezing):** Arbowet art. 14 (de werknemer kan de bedrijfsarts raadplegen: het open spreekuur van het basiscontract arbodienstverlening, sinds 1 juli 2017; welk onderdeel van art. 14 precies?); medisch beroepsgeheim (WGBO, BW 7:457), en voor de bedrijfsarts: alleen wat je kunt, niet wat je hebt (zoals c.illness); Arbowet art. 3 lid 2 (beleid psychosociale arbeidsbelasting; een vertrouwenspersoon is gebruikelijk, niet verplicht); 113 Zelfmoordpreventie: zie „Wie bel je?” (h.113).
+
+**Zeg het zo (Nederlands):** „Het gaat niet zo goed. Kan ik even met je praten?” — *I am not doing so well. Can I talk to you for a moment?*
+
+**Situatie in de les:** For weeks, you sleep badly and the work is too much. You feel very tired. What do you do?  
+**Goede antwoord:** Tell your supervisor or the company doctor.  
+**Uitleg na het antwoord (`c.feelwell.w`):** Saying it early is not weak. Then you can look for a way out together, for example other shifts. You do not have to do it alone.
+
+**Onze vragen aan u:**
+1. Is „You may also ask for a talk with the company doctor yourself” juist, ook voor een uitzendkracht en voor wie geen vast contract heeft?
+2. Is „Doctors do not tell your boss what you said” juist zo kort (de bedrijfsarts geeft wel door wat je wel en niet kunt)?
+3. In België (de Belgische tip `be.c.feelwell`): de arbeidsarts (spontane raadpleging), de preventieadviseur psychosociale aspecten en 1813. Klopt „You may also ask for a talk with the occupational doctor yourself” daar?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+---
+
 ## Werkregels: gewijzigde beweringen (17 oktober 2026)
 
 De track **Werkregels** is voor mensen die al Nederlands spreken. De teksten staan alleen in het
@@ -1948,7 +2056,7 @@ komen), c.speakup (zeggen wat je dwarszit), c.no („Afspraak is afspraak"), c.c
 cv), c.phone (telefoon op het werk), c.smalltalk (praatje in de pauze), c.mistakes (fouten zijn
 normaal), c.texting (berichten naar het werk; sinds 18 oktober ook: een dienst ruilen pas als de leidinggevende of planner het goedvindt, een huisregel; de tip geeft daarbij de vraag „Mag ik mijn dienst ruilen?”), c.scams (oplichting en de bank), c.tools
 (toolboxmeeting), c.quality (kwaliteit), c.client (respect voor de cliënt), c.kitchen
-(voedselveiligheid), c.service (gasten), c.cleaning (etiket lezen), c.cleansafe (middelen niet mengen).
+(voedselveiligheid), c.service (gasten), c.cleaning (etiket lezen), c.cleansafe (middelen niet mengen), c.newcolleague (een nieuwe collega helpen: voordoen, laten nadoen, „Laat eens zien”).
 
 ---
 

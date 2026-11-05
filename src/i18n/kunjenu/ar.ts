@@ -45,7 +45,10 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "أستطيع أن أقول إن قسيمة راتبي غير صحيحة.", // nieuw, nalezen
     'kjn.u.pay.2': "أستطيع أن أقرأ كلمات مثل bruto و netto.", // nieuw, nalezen
     'kjn.u.leave.1': "أستطيع أن أطلب إجازة.", // nieuw, nalezen
-    'kjn.u.leave.2': "أستطيع أن أبلغ عن مرضي وعن عودتي إلى العمل.", // nieuw, nalezen
+    'kjn.u.leave.2': "أستطيع أن أقول إن طفلي مريض.", // nieuw, nalezen (5 nov 2026: nieuwe zin; de oude staat nu bij kjn.u.sick.1)
+    'kjn.u.sick.1': "أستطيع أن أبلغ عن مرضي وعن عودتي إلى العمل.", // nieuw, nalezen
+    'kjn.u.sick.2': "أستطيع أن أقول ما لا أستطيع فعله بعد.", // nieuw, nalezen
+    'kjn.u.sick.3': "أستطيع أن أقول إنني أعمل أنصاف أيام في البداية.", // nieuw, nalezen
     'kjn.u.contact.1': "أستطيع أن أتصل وأقول من أنا.", // nieuw, nalezen
     'kjn.u.contact.2': "أستطيع أن أطلب من شخص أن يعاود الاتصال بي.", // nieuw, nalezen
     'kjn.u.contact.3': "أستطيع أن أكتب رسالة قصيرة إلى العمل.", // nieuw, nalezen
@@ -79,6 +82,7 @@ const t: CultureTranslation = {
     'kjn.u.papers.2': "أستطيع أن أسأل كم الإيجار.", // nieuw, nalezen
     'kjn.u.health.1': "أستطيع أن أقول أين أشعر بالألم.", // nieuw, nalezen
     'kjn.u.health.2': "أستطيع أن أطلب موعدًا مع طبيب العائلة.", // nieuw, nalezen
+    'kjn.u.health.3': "أستطيع أن أقول إن العمل أصبح أكثر من طاقتي.", // nieuw, nalezen
     'kjn.u.money.1': "أستطيع أن أقول إنني لا أفهم رسالة.", // nieuw, nalezen
     'kjn.u.money.2': "أستطيع أن أقول لا لمحتال على الهاتف.", // nieuw, nalezen
     'kjn.u.travel.1': "أستطيع أن أقول كيف أذهب إلى عملي.", // nieuw, nalezen
@@ -91,6 +95,7 @@ const t: CultureTranslation = {
     'kjn.u.build.2': "أستطيع أن أطلب أدوات.", // nieuw, nalezen
     'kjn.u.factory.1': "أستطيع أن أقول إن هناك عطلًا.", // nieuw, nalezen
     'kjn.u.factory.2': "أستطيع أن أقول ما المشكلة في منتج.", // nieuw, nalezen
+    'kjn.u.factory.3': "أستطيع أن أبلغ أن عندي جرحاً صغيراً.", // nieuw, nalezen
     'kjn.u.care.1': "أستطيع أن أسأل المستفيد من الرعاية هل يمكنني مساعدته.", // nieuw, nalezen
     'kjn.u.care.2': "أستطيع أن أنقل شيئًا إلى الممرّضة.", // nieuw, nalezen
     'kjn.u.horeca.1': "أستطيع أن أسأل الضيوف ماذا يحبون أن يشربوا.", // nieuw, nalezen
@@ -103,6 +108,10 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "أستطيع أن أقول إن الكابل معطّل.", // nieuw, nalezen
     'kjn.u.garage.1': "أستطيع أن أقول إن الإطار مثقوب.", // nieuw, nalezen
     'kjn.u.garage.2': "أستطيع أن أقول إن الزبون يجب أن يوافق أولاً.", // nieuw, nalezen
+    // Vervoer en bezorging (5 nov 2026)
+    'kjn.u.delivery.1': "أستطيع أن أقول إن الزبون ليس في البيت.", // nieuw, nalezen
+    'kjn.u.delivery.2': "أستطيع أن أطلب من الجيران أن يستلموا طرداً.", // nieuw, nalezen
+    'kjn.u.delivery.3': "أستطيع أن أسأل من يقرّر مساري وأوقاتي.", // nieuw, nalezen
   },
 };
 

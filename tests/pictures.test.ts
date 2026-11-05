@@ -68,15 +68,28 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     expect(abstract).toContain('w.ontruimen');
     // 191 (4 November 2026): the six words of "Kort en duidelijk" (l.clear) are abstract.
     for (const id of ['w.kort', 'w.duidelijk', 'w.belangrijkste', 'w.rustig', 'w.teveel', 'w.vraag']) expect(abstract).toContain(id);
-    expect(abstract.length).toBe(191);
+    // 194 (5 November 2026): "het bewijs" (l.parcel), "in loondienst" and "bepalen" (l.road) are
+    // abstract; the other fifteen words of l.parcel, l.road and l.food are drawn (group36).
+    for (const id of ['w.bewijs', 'w.loondienst', 'w.bepalen']) expect(abstract).toContain(id);
+        // 203 with the three of l.parcel/l.road above (5 November 2026): four words of "Je goed voelen op het werk" (l.feelwell) and five of
+    // "Een nieuwe collega helpen" (l.newcolleague) are abstract; wakker liggen, de familie and de
+    // kast are drawn (src/pictures/groupWelzijn.tsx).
+    for (const id of ['w.werkdruk', 'w.ploegendienst', 'w.heimwee', 'w.alleen', 'w.welkom', 'w.inwerken', 'w.stap', 'w.nadoen', 'w.geduld']) expect(abstract).toContain(id);
+    for (const id of ['w.wakkerliggen', 'w.familie', 'w.kast']) expect(abstract).not.toContain(id);
+        // 206 with the twelve above (5 November 2026): "herstellen" (l.backtowork) is abstract, and "opbouwen" and "halve
+    // dagen" have a memory picture only (they count here, as w.verlof does); "licht werk", "zwaar
+    // werk" and "welkom terug" have a drawing (group38).
+    for (const id of ['w.herstellen', 'w.opbouwen', 'w.halvedagen']) expect(abstract).toContain(id);
+    expect(abstract.length).toBe(206);
     // Of the 191 (5 November 2026, the owner's trial of moving pictures, tests/motionPictures.test.ts):
     // 178 with no picture at all, 11 memory pictures ('hook') and 2 moving pictures ('motion':
     // "ontruimen" and "bijna", which were abstract). The 2 still never stand in a picture choice.
     // The second round (5 November 2026): 11 more abstract words got a moving picture only, and
     // in the last round "kiezen" (l.mychoice): 166 with no picture at all, 11 memory pictures and
-    // 14 moving pictures (still 191 abstract).
-    expect(allWords.filter((w) => w.picture === false)).toHaveLength(166);
-    expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(11);
+    // 14 moving pictures (still 191 abstract). With the new lessons of 5 November 2026 (above):
+    // 179 with no picture, 13 memory pictures (with opbouwen, halve dagen), 14 moving: 206.
+    expect(allWords.filter((w) => w.picture === false)).toHaveLength(179);
+    expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(13);
     expect(allWords.filter((w) => w.picture === 'motion').map((w) => w.id).sort()).toEqual([
       'w.automatisch', 'w.bijna', 'w.daarna', 'w.doorgeven', 'w.eerst', 'w.kiezen', 'w.ontruimen', 'w.ruilen',
       'w.tellen', 'w.uitloggen', 'w.verbeteren', 'w.verlengen', 'w.versturen', 'w.voordoen',

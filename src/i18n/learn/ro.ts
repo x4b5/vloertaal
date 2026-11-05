@@ -122,6 +122,13 @@ const t: CultureTranslation = {
     'c.email.a.why': "Întrebat dacă l-a trimis: încă nu, întâi e verificat.", // nieuw, nalezen
     'c.budget.a.why': "I se oferă „plătești mai târziu”: un nu politicos, cu motivul.", // nieuw, nalezen
     'c.healthy.a.why': "I se oferă o pastilă: un nu politicos, cu motivul.", // nieuw, nalezen
+    // Vertaalronde 5 november 2026.
+    'd.newcolleague.a.why': "„Cred” nu e încă sigur: când ceri să-ți arate, verifici că merge.", // nieuw, nalezen
+    'c.food.a.why': "Întrebarea e de ce se curăță linia: următorul produs e fără nuci.", // nieuw, nalezen
+    'c.parcel.a.why': "Întrebarea e dacă coletul e pentru persoana respectivă: da, și apoi semnătura.", // nieuw, nalezen
+    'c.road.a.why': "I se cere încă o cursă: nu, pentru că pauza e mai întâi.", // nieuw, nalezen
+    'c.backtowork.a.why': "Întrebarea e cum te simți: un „da” scurt și că o iei încet.", // nieuw, nalezen
+    'c.feelwell.a.why': "Întrebarea e cum te simți: un „nu prea” sincer e în regulă.", // nieuw, nalezen
   },
 };
 

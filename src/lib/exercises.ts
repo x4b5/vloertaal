@@ -963,7 +963,9 @@ export function buildRuleLesson(lesson: Lesson, opts: { seed?: number; review?: 
  *   one that does not fit, so the learner sets the order (allTiles). Only a sentence that fits a
  *   small phone that way (fitsAllTiles); a longer one keeps three words for each place.
  */
-export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10, front: 20, buildAll: 24 } as const;
+// front 21 (was 20) since 5 November 2026: two topics more (Vervoer en bezorging, Ziekte), so the
+// second half of the path starts one topic later.
+export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10, front: 21, buildAll: 24 } as const;
 
 /** A line of a lesson that can be built: its sentences and the lines of its chats. */
 function linesOf(lesson: Lesson): Sentence[] {

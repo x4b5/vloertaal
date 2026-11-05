@@ -50,6 +50,14 @@ export const NEAR_SYNONYMS: readonly (readonly string[])[] = [
   ['moe', 'somber'],
   // Fire alarm and evacuation (l.alarm, 4 November 2026): the exit and the way to it.
   ['de nooduitgang', 'de vluchtroute'],
+  // Feeling good at work and helping a new colleague (l.feelwell, l.newcolleague, 5 November 2026):
+  // someone in bed (asleep or awake), a family (also under its name card), a shift, too much work,
+  // and showing someone the work.
+  ['slapen', 'wakker liggen'],
+  ['de familie', 'de achternaam'],
+  ['de dienst', 'de ploegendienst'],
+  ['te veel', 'de werkdruk'],
+  ['inwerken', 'voordoen', 'laten zien'],
 ];
 
 const ARTICLES = /^(de|het|een)\s+/i;

@@ -21,6 +21,7 @@ import { be as sayings } from './units/sayings';
 import { be as social } from './units/social';
 import { be as rights } from './units/rights';
 import { be as leave } from './units/leave';
+import { be as sick } from './units/sick';
 import { be as exploit } from './units/exploit';
 import { be as grow } from './units/grow';
 import { be as health } from './units/health';
@@ -47,7 +48,7 @@ import { be as online } from './units/online';
 const BY_NL: Record<string, BeTaal | undefined> = {
   'u.firstday': firstday, 'u.tools': tools, 'u.safety': safety, 'u.warehouse': warehouse, 'u.data': data,
   'u.time': time, 'u.teamwork': teamwork, 'u.contract': contract, 'u.papers': papers, 'u.pay': pay,
-  'u.house': house, 'u.social': social, 'u.sayings': sayings, 'u.rights': rights, 'u.leave': leave, 'u.exploit': exploit,
+  'u.house': house, 'u.social': social, 'u.sayings': sayings, 'u.rights': rights, 'u.leave': leave, 'u.sick': sick, 'u.exploit': exploit,
   'u.grow': grow, 'u.health': health, 'u.money': money, 'u.travel': travel, 'u.lost': lost, 'u.shop': shop,
   'u.ai': ai, 'u.kas': kas, 'u.stage': stage, 'u.society': society, 'u.online': online,
 };

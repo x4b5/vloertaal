@@ -227,7 +227,7 @@ const t: CultureTranslation = {
     's.rights.3': 'Isto é discriminação.',
     'c.rights.q': 'Assina aqui o teu despedimento.',
     'c.rights.a': 'Não, ainda não assino.',
-    'u.leave': 'Férias e doença',
+    'u.leave': "Férias e licenças", // nieuw, nalezen
     'l.leave': 'Dias de folga',
     'w.vakantiedagen': 'os dias de férias',
     'w.verlof': 'a licença',
@@ -1699,6 +1699,108 @@ const t: CultureTranslation = {
     'c.healthy.o2': "Tomas meio comprimido, isso não é perigoso.", // nieuw, nalezen
     'c.healthy.o3': "Tomas, mas não dizes nada a ninguém no trabalho.", // nieuw, nalezen
     'c.healthy.w': "Comprimidos de um colega podem ser drogas. Podem fazer-te mal, ou fazer-te errar no trabalho. Dormir é a forma segura de te manteres alerta.", // nieuw, nalezen
+    'u.sick': "Doença", // nieuw, nalezen
+    'l.food': "Trabalhar com alimentos", // nieuw, nalezen
+    'w.mes': "a faca", // nieuw, nalezen
+    'w.snijhandschoen': "a luva anticorte (uma luva contra cortes)", // nieuw, nalezen
+    'w.vriescel': "a câmara de congelação (uma sala muito fria)", // nieuw, nalezen
+    'w.sieraden': "as joias (um anel, um relógio, brincos)", // nieuw, nalezen
+    'w.pleister': "o penso rápido (para um corte pequeno)", // nieuw, nalezen
+    'w.vlees': "a carne", // nieuw, nalezen
+    's.food.1': "Tiro as minhas joias.", // nieuw, nalezen
+    's.food.2': "Onde estão as luvas anticorte?", // nieuw, nalezen
+    's.food.3': "Na câmara de congelação uso um casaco quente.", // nieuw, nalezen
+    'c.food.q': "Porque é que estamos a limpar a linha agora?", // nieuw, nalezen
+    'c.food.a': "A seguir vem um produto sem frutos secos.", // nieuw, nalezen
+    'c.food': "Mãos limpas, alimentos seguros", // nieuw, nalezen
+    'c.food.b': "Trabalhar com alimentos tem regras de higiene rigorosas: uma rede para o cabelo, roupa de trabalho limpa, mãos lavadas e nada de joias. Estas regras são iguais para todos. Não dizem nada sobre ti: mantêm os alimentos seguros para as pessoas que os comem. Com uma faca, usa sempre a tua luva anticorte. Numa sala fria ou numa câmara de congelação, veste a roupa quente que te dão, e aquece-te na pausa. Estás doente, ou tens uma ferida na mão? Avisa antes de começares. Então podes receber um penso especial, ou outro trabalho durante algum tempo. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.food.p': "Tenho um pequeno corte na mão. Pode dar-me um penso?", // nieuw, nalezen
+    'c.food.s': "Em casa fizeste um pequeno corte no dedo. Hoje trabalhas com carne. O que fazes?", // nieuw, nalezen
+    'c.food.o1': "Dizes ao teu chefe, e pedes um penso.", // nieuw, nalezen
+    'c.food.o2': "Não dizes nada: é só um corte pequeno.", // nieuw, nalezen
+    'c.food.o3': "Pões uma luva por cima, para ninguém ver.", // nieuw, nalezen
+    'c.food.w': "Uma ferida pequena pode levar micróbios para os alimentos. Quando avisas, podes receber um penso especial ou outro trabalho durante algum tempo. Avisar é normal: ninguém te culpa por isso.", // nieuw, nalezen
+    'u.delivery': "Transporte e entregas", // nieuw, nalezen
+    'l.parcel': "Entregar encomendas", // nieuw, nalezen
+    'w.pakket': "a encomenda", // nieuw, nalezen
+    'w.bestelbus': "a carrinha de entregas", // nieuw, nalezen
+    'w.bezorgen': "entregar (levar ao cliente)", // nieuw, nalezen
+    'w.inladen': "carregar (pôr coisas na carrinha)", // nieuw, nalezen
+    'w.aanbellen': "tocar à campainha", // nieuw, nalezen
+    'w.bewijs': "a prova (algo que mostra o que aconteceu)", // nieuw, nalezen
+    's.parcel.1': "Leio cada encomenda com o scanner.", // nieuw, nalezen
+    's.parcel.2': "O cliente não está em casa.", // nieuw, nalezen
+    's.parcel.3': "Pode ficar com uma encomenda para os vizinhos?", // nieuw, nalezen
+    'c.parcel.q': "Esta encomenda é para mim?", // nieuw, nalezen
+    'c.parcel.a': "Sim. Pode assinar aqui, por favor?", // nieuw, nalezen
+    'l.road': "Seguro e justo na estrada", // nieuw, nalezen
+    'w.rijden': "conduzir", // nieuw, nalezen
+    'w.zwaar': "pesado", // nieuw, nalezen
+    'w.steekwagen': "o carrinho de carga (um carrinho para caixas pesadas)", // nieuw, nalezen
+    'w.route': "a rota (o caminho que fazes)", // nieuw, nalezen
+    'w.loondienst': "por conta de outrem (trabalhas para um patrão e recebes um salário)", // nieuw, nalezen
+    'w.bepalen': "decidir (dizer como deve ser feito)", // nieuw, nalezen
+    's.road.1': "Esta encomenda é pesada demais. Vou buscar o carrinho de carga.", // nieuw, nalezen
+    's.road.2': "Está escorregadio. Conduzo devagar.", // nieuw, nalezen
+    's.road.3': "Quem decide a minha rota e os meus horários?", // nieuw, nalezen
+    'c.road.q': "Podes fazer mais uma volta hoje?", // nieuw, nalezen
+    'c.road.a': "Não, assim não tenho tempo para a minha pausa.", // nieuw, nalezen
+    'c.parcel': "Ninguém em casa, ou uma encomenda estragada", // nieuw, nalezen
+    'c.parcel.b': "O cliente não está em casa? Segue as regras da tua empresa: tenta os vizinhos, ou leva a encomenda de volta. Não a deixes simplesmente à porta, a não ser que o cliente o tenha pedido. Uma encomenda está estragada ou molhada? Não a entregues como se nada fosse. Tira uma foto como prova, e regista isso no scanner ou na app. Dizer a verdade sobre um problema é sempre melhor do que escondê-lo. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.parcel.p': "Esta encomenda está estragada. Aqui está uma foto.", // nieuw, nalezen
+    'c.parcel.s': "O cliente não está em casa, e os vizinhos também não. O que fazes?", // nieuw, nalezen
+    'c.parcel.o1': "Registas \"não está em casa\" no scanner, e levas a encomenda de volta.", // nieuw, nalezen
+    'c.parcel.o2': "Registas como entregue, e deixas a encomenda à porta.", // nieuw, nalezen
+    'c.parcel.o3': "Escondes a encomenda atrás do caixote do lixo, para ninguém ver.", // nieuw, nalezen
+    'c.parcel.w': "Uma encomenda registada como entregue tem de estar mesmo com o cliente. Quando registas o que aconteceu de verdade, o cliente pode receber a encomenda mais tarde, e ninguém pensa que a perdeste.", // nieuw, nalezen
+    'c.road': "Seguro na estrada, e trabalho justo", // nieuw, nalezen
+    'c.road.b': "Nunca tenhas o telemóvel na mão enquanto conduzes: é proibido. Usa um suporte para a navegação. Faz as tuas pausas, também num dia com muito trabalho. Uma encomenda pesada? Usa o carrinho de carga, ou levanta-a com outra pessoa. Gelo ou neve? Conduz devagar: chegar tarde é melhor do que um acidente. Algumas empresas dizem que trabalhas como independente (zelfstandig). Mas quem decide o teu horário, a tua rota e a tua roupa? Se a empresa decide tudo isso, talvez trabalhes afinal por conta de outrem (in loondienst). Então muitas vezes tens mais direitos, como receber salário quando estás doente. Mais sobre isto na lição \"Papéis, integração e o teu trabalho\". Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.", // nieuw, nalezen
+    'c.road.p': "Agora faço a minha pausa. Depois continuo a conduzir.", // nieuw, nalezen
+    'c.road.s': "A empresa diz que és independente. Mas decide o teu horário, a tua rota e a tua roupa. O que fazes?", // nieuw, nalezen
+    'c.road.o1': "Pedes conselho: talvez trabalhes por conta de outrem.", // nieuw, nalezen
+    'c.road.o2': "Nada: o contrato diz \"independente\", por isso é assim.", // nieuw, nalezen
+    'c.road.o3': "Trabalhas mais horas, para ganhares o mesmo.", // nieuw, nalezen
+    'c.road.w': "O que conta é como trabalhas de verdade, não só a palavra no contrato. Se a empresa decide como, quando e onde trabalhas, muitas vezes trabalhas por conta de outrem. Então tens mais direitos.", // nieuw, nalezen
+    'l.feelwell': "Sentir-se bem no trabalho", // nieuw, nalezen
+    'w.werkdruk': "a pressão do trabalho (trabalho demais em pouco tempo)", // nieuw, nalezen
+    'w.wakkerliggen': "ficar acordado na cama (não consegues dormir)", // nieuw, nalezen
+    'w.ploegendienst': "o trabalho por turnos (turnos da manhã, da tarde e da noite, alternados)", // nieuw, nalezen
+    'w.heimwee': "as saudades de casa (sentes falta de casa)", // nieuw, nalezen
+    'w.familie': "a família", // nieuw, nalezen
+    'w.alleen': "sozinho", // nieuw, nalezen
+    's.feelwell.1': "Durmo mal por causa dos turnos.", // nieuw, nalezen
+    's.feelwell.2': { m: "É demais. Não consigo sozinho.", f: "É demais. Não consigo sozinha.", x: "É demais. Não consigo sem ajuda." }, // nieuw, nalezen
+    's.feelwell.3': "Tenho saudades de casa. A minha família está longe.", // nieuw, nalezen
+    'c.feelwell.q': "Estás bem?", // nieuw, nalezen
+    'c.feelwell.a': "Não muito bem. Muitas vezes não consigo dormir.", // nieuw, nalezen
+    'c.feelwell': "É demais? Não tens de passar por isto sem ajuda", // nieuw, nalezen
+    'c.feelwell.b': "Toda a gente se sente às vezes cansada, stressada ou triste. Trabalho a mais (werkdruk), dormir mal por causa dos turnos ou ter saudades da família podem tornar tudo pesado. Não tens de carregar isso sem ajuda, e dizer \"é demais\" não é fraqueza. Fala com alguém de confiança: o teu chefe, a pessoa de confiança (vertrouwenspersoon, se houver), o médico da empresa (bedrijfsarts) ou o teu médico de família (huisarts). Também podes ser tu a pedir uma conversa com o médico da empresa. Os médicos não contam ao teu patrão o que disseste. Pensas em suicídio, ou preocupa-te alguém? Liga para o 113 (grátis, de dia e de noite), ou fala por chat em 113.nl.", // nieuw, nalezen
+    'c.feelwell.p': "Não estou muito bem. Posso falar contigo um momento?", // nieuw, nalezen
+    'c.feelwell.s': { m: "Há semanas que dormes mal e o trabalho é demais. Sentes-te muito cansado. O que fazes?", f: "Há semanas que dormes mal e o trabalho é demais. Sentes-te muito cansada. O que fazes?", x: "Há semanas que dormes mal e o trabalho é demais. Sentes um grande cansaço. O que fazes?" }, // nieuw, nalezen
+    'c.feelwell.o1': "Dizes ao teu chefe ou ao médico da empresa.", // nieuw, nalezen
+    'c.feelwell.o2': "Não dizes nada, e trabalhas mais e mais depressa.", // nieuw, nalezen
+    'c.feelwell.o3': "Ficas em casa, e não dizes a ninguém porquê.", // nieuw, nalezen
+    'c.feelwell.w': "Dizer cedo não é fraqueza. Assim podem procurar juntos uma saída, por exemplo outros turnos. Não tens de fazer isto sem ajuda.", // nieuw, nalezen
+    'l.backtowork': "Voltar ao trabalho depois de uma doença", // nieuw, nalezen
+    'w.opbouwen': "aumentar aos poucos (devagar, passo a passo)", // nieuw, nalezen
+    'w.halvedagen': "meios dias (trabalhas só uma parte do dia)", // nieuw, nalezen
+    'w.lichtwerk': "o trabalho leve (não pesado)", // nieuw, nalezen
+    'w.zwaarwerk': "o trabalho pesado", // nieuw, nalezen
+    'w.herstellen': "recuperar, ficar bom outra vez", // nieuw, nalezen
+    'w.welkomterug': "bem-vindo de volta", // nieuw, nalezen
+    's.backtowork.1': "Começo com meios dias.", // nieuw, nalezen
+    's.backtowork.2': "Já consigo fazer trabalho leve. Trabalho pesado, ainda não.", // nieuw, nalezen
+    's.backtowork.3': "O médico da empresa diz: aumentar aos poucos.", // nieuw, nalezen
+    'c.backtowork.q': { m: "Bem-vindo de volta! Estás melhor?", f: "Bem-vinda de volta! Estás melhor?", x: "Bem-vindo/a de volta! Estás melhor?" }, // nieuw, nalezen
+    'c.backtowork.a': "Sim, está a correr melhor. Vou com calma.", // nieuw, nalezen
+    'c.backtowork': "Voltar passo a passo", // nieuw, nalezen
+    'c.backtowork.b': "Estás melhor? Diz ao teu empregador que já podes trabalhar outra vez (betermelden). Depois de uma doença longa, muitas vezes começas passo a passo: primeiro menos horas, ou trabalho mais leve. O médico da empresa (bedrijfsarts) dá conselhos sobre o que consegues fazer. Estás doente há muito tempo? Então tu e o teu empregador fazem juntos um plano para o teu regresso. É o que diz a lei (Wet verbetering poortwachter). Diz claramente o que consegues fazer, e o que ainda não. Não tens de contar aos colegas que doença tiveste. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.backtowork.p': "Isto já consigo fazer. Aquilo ainda não.", // nieuw, nalezen
+    'c.backtowork.s': "Estiveste doente três semanas. No teu primeiro dia de volta, o teu chefe pede-te para levantares caixas pesadas. O médico da empresa disse: por agora, só trabalho leve. O que fazes?", // nieuw, nalezen
+    'c.backtowork.o1': "Dizes com calma que agora consegues fazer trabalho leve, e o que ainda não consegues.", // nieuw, nalezen
+    'c.backtowork.o2': "Levantas as caixas na mesma: não queres criar problemas.", // nieuw, nalezen
+    'c.backtowork.o3': "Vais para casa sem dizer nada.", // nieuw, nalezen
+    'c.backtowork.w': "O teu chefe quer-te de volta, e com saúde. Quando dizes claramente o que consegues fazer, ele pode planear o trabalho. Fazer demasiado, cedo demais, pode fazer-te adoecer outra vez.", // nieuw, nalezen
   },
 };
 

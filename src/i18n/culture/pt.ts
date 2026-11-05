@@ -198,6 +198,26 @@ const t: CultureTranslation = {
     's.clear.3': 'Desculpa, falo demasiado depressa e demasiado.', // nieuw, nalezen
     'd.clear.q': 'Está claro?', // nieuw, nalezen
     'd.clear.a': 'Sim. Tenho mais uma pergunta.', // nieuw, nalezen
+    'l.newcolleague': "Ajudar um colega novo", // nieuw, nalezen
+    'w.welkom': "bem-vindo", // nieuw, nalezen
+    'w.inwerken': "ensinar o trabalho a um colega novo (nos primeiros dias)", // nieuw, nalezen
+    'w.stap': "o passo (uma pequena parte de uma tarefa)", // nieuw, nalezen
+    'w.nadoen': "imitar (fazer o que alguém te mostrou)", // nieuw, nalezen
+    'w.geduld': "a paciência", // nieuw, nalezen
+    'w.kast': "o armário", // nieuw, nalezen
+    's.newcolleague.1': "Bem-vindo! Hoje mostro-te o trabalho.", // nieuw, nalezen
+    's.newcolleague.2': "Primeiro observa. Depois fazes igual.", // nieuw, nalezen
+    's.newcolleague.3': "As luvas estão naquele armário.", // nieuw, nalezen
+    'd.newcolleague.q': "Acho que percebi.", // nieuw, nalezen
+    'd.newcolleague.a': "Boa. Mostra lá.", // nieuw, nalezen
+    'c.newcolleague': "Mostra, passo a passo", // nieuw, nalezen
+    'c.newcolleague.b': "O que foi difícil para ti nas primeiras semanas também é difícil para um colega novo. Explica o trabalho em passos pequenos: primeiro isto, depois aquilo. Não fales mais depressa nem mais alto: mostra, e deixa-o fazer a seguir a ti. Não perguntes \"Snap je het?\": muitas pessoas dizem que sim, mesmo quando não percebem. Diz antes \"Laat eens zien\", e observa. Diz-lhe onde estão as coisas, como a casa de banho, a cantina e as luvas. Tem paciência (geduld): aprender leva tempo, para toda a gente.", // nieuw, nalezen
+    'c.newcolleague.p': "Muito bem! Agora o passo seguinte.", // nieuw, nalezen
+    'c.newcolleague.s': "Explicas uma tarefa a um colega novo. Ele diz: \"Ja, ja, ik snap het.\" O que fazes?", // nieuw, nalezen
+    'c.newcolleague.o1': "Dizes \"Laat eens zien,\" e vês como ele faz.", // nieuw, nalezen
+    'c.newcolleague.o2': "Dizes \"Goed zo,\" e voltas ao teu trabalho.", // nieuw, nalezen
+    'c.newcolleague.o3': "Explicas tudo outra vez, mais depressa e mais alto.", // nieuw, nalezen
+    'c.newcolleague.w': "Muitas pessoas dizem \"ja\", mesmo quando não perceberam. Quando ele mostra, os dois veem se funciona. Isso é mais rápido do que corrigir um erro mais tarde.", // nieuw, nalezen
   },
 };
 

@@ -122,6 +122,12 @@ const t: CultureTranslation = {
     'c.email.a.why': "On demande s’il est envoyé : pas encore, il est d’abord vérifié.", // nieuw, nalezen
     'c.budget.a.why': "On propose de payer plus tard : un non poli, avec la raison.", // nieuw, nalezen
     'c.healthy.a.why': "On propose un cachet : un non poli, avec la raison.", // nieuw, nalezen
+    'd.newcolleague.a.why': "“Je crois”, ce n’est pas encore sûr : demander à voir permet de vérifier que ça marche.", // nieuw, nalezen
+    'c.food.a.why': "On demande pourquoi on nettoie la ligne : le produit suivant est sans noix.", // nieuw, nalezen
+    'c.parcel.a.why': "On demande si le colis est pour eux : oui, puis la signature.", // nieuw, nalezen
+    'c.road.a.why': "On demande une tournée de plus : non, car la pause passe d’abord.", // nieuw, nalezen
+    'c.backtowork.a.why': "On demande comment tu vas : un oui court, et que tu y vas doucement.", // nieuw, nalezen
+    'c.feelwell.a.why': "On demande comment tu vas : un “pas très bien” honnête, c’est bien.", // nieuw, nalezen
   },
 };
 

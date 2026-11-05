@@ -227,7 +227,7 @@ const t: CultureTranslation = {
     's.rights.3': 'Esto es discriminación.',
     'c.rights.q': 'Firma aquí tu despido.',
     'c.rights.a': 'No, todavía no firmo.',
-    'u.leave': 'Permisos y enfermedad',
+    'u.leave': "Permisos", // nieuw, nalezen
     'l.leave': 'Días libres',
     'w.vakantiedagen': 'los días de vacaciones',
     'w.verlof': 'el permiso',
@@ -1699,6 +1699,108 @@ const t: CultureTranslation = {
     'c.healthy.o2': "Te tomas media pastilla, eso no es peligroso.", // nieuw, nalezen
     'c.healthy.o3': "Te la tomas, pero no se lo dices a nadie en el trabajo.", // nieuw, nalezen
     'c.healthy.w': "Las pastillas de un compañero pueden ser drogas. Te pueden hacer daño o hacer que cometas errores en el trabajo. Dormir es la forma segura de estar alerta en el trabajo.", // nieuw, nalezen
+    'u.sick': "La enfermedad", // nieuw, nalezen
+    'l.food': "Trabajar con alimentos", // nieuw, nalezen
+    'w.mes': "el cuchillo", // nieuw, nalezen
+    'w.snijhandschoen': "el guante anticorte (un guante contra los cortes)", // nieuw, nalezen
+    'w.vriescel': "la cámara de congelación (una sala muy fría)", // nieuw, nalezen
+    'w.sieraden': "las joyas (un anillo, un reloj, unos pendientes)", // nieuw, nalezen
+    'w.pleister': "la tirita, la curita (para un corte pequeño)", // nieuw, nalezen
+    'w.vlees': "la carne", // nieuw, nalezen
+    's.food.1': "Me quito las joyas.", // nieuw, nalezen
+    's.food.2': "¿Dónde están los guantes anticorte?", // nieuw, nalezen
+    's.food.3': "En la cámara de congelación llevo un abrigo caliente.", // nieuw, nalezen
+    'c.food.q': "¿Por qué limpiamos ahora la línea?", // nieuw, nalezen
+    'c.food.a': "Después viene un producto sin frutos secos.", // nieuw, nalezen
+    'c.food': "Manos limpias, alimentos seguros", // nieuw, nalezen
+    'c.food.b': "Trabajar con alimentos tiene normas de higiene estrictas: una redecilla para el pelo, ropa de trabajo limpia, manos lavadas y nada de joyas. Estas normas son iguales para todos. No dicen nada sobre ti: mantienen los alimentos seguros para las personas que los comen. Con un cuchillo, lleva siempre tu guante anticorte. En una sala fría o en una cámara de congelación, ponte la ropa de abrigo que te dan, y entra en calor en tu pausa. ¿Te encuentras mal, o tienes una herida en la mano? Avísalo antes de empezar. Entonces puedes recibir una tirita especial, u otro trabajo durante un tiempo. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.food.p': "Tengo un pequeño corte en la mano. ¿Me da una tirita?", // nieuw, nalezen
+    'c.food.s': "En casa te has hecho un pequeño corte en el dedo. Hoy trabajas con carne. ¿Qué haces?", // nieuw, nalezen
+    'c.food.o1': "Se lo dices a tu encargado, y pides una tirita.", // nieuw, nalezen
+    'c.food.o2': "No dices nada: solo es un corte pequeño.", // nieuw, nalezen
+    'c.food.o3': "Te pones un guante encima, para que nadie lo vea.", // nieuw, nalezen
+    'c.food.w': "Una herida pequeña puede llevar gérmenes a los alimentos. Si lo avisas, puedes recibir una tirita especial u otro trabajo durante un tiempo. Avisarlo es normal: nadie te lo echa en cara.", // nieuw, nalezen
+    'u.delivery': "Transporte y reparto", // nieuw, nalezen
+    'l.parcel': "Repartir paquetes", // nieuw, nalezen
+    'w.pakket': "el paquete", // nieuw, nalezen
+    'w.bestelbus': "la furgoneta de reparto", // nieuw, nalezen
+    'w.bezorgen': "repartir, entregar (llevar al cliente)", // nieuw, nalezen
+    'w.inladen': "cargar (meter cosas en la furgoneta)", // nieuw, nalezen
+    'w.aanbellen': "llamar al timbre", // nieuw, nalezen
+    'w.bewijs': "la prueba (algo que muestra lo que pasó)", // nieuw, nalezen
+    's.parcel.1': "Escaneo cada paquete.", // nieuw, nalezen
+    's.parcel.2': "El cliente no está en casa.", // nieuw, nalezen
+    's.parcel.3': "¿Puede quedarse con un paquete para los vecinos?", // nieuw, nalezen
+    'c.parcel.q': "¿Este paquete es para mí?", // nieuw, nalezen
+    'c.parcel.a': "Sí. ¿Puede firmar aquí, por favor?", // nieuw, nalezen
+    'l.road': "Seguridad y trabajo justo en la carretera", // nieuw, nalezen
+    'w.rijden': "conducir", // nieuw, nalezen
+    'w.zwaar': "pesado", // nieuw, nalezen
+    'w.steekwagen': "la carretilla de mano (un carrito para cajas pesadas)", // nieuw, nalezen
+    'w.route': "la ruta (el camino que haces con el vehículo)", // nieuw, nalezen
+    'w.loondienst': "por cuenta ajena (trabajas para un jefe y cobras un sueldo)", // nieuw, nalezen
+    'w.bepalen': "decidir (decir cómo hay que hacerlo)", // nieuw, nalezen
+    's.road.1': "Este paquete pesa demasiado. Voy a buscar la carretilla.", // nieuw, nalezen
+    's.road.2': "Está resbaladizo. Conduzco despacio.", // nieuw, nalezen
+    's.road.3': "¿Quién decide mi ruta y mis horarios?", // nieuw, nalezen
+    'c.road.q': "¿Puedes hacer un reparto más hoy?", // nieuw, nalezen
+    'c.road.a': "No, entonces no tengo tiempo para mi pausa.", // nieuw, nalezen
+    'c.parcel': "Nadie en casa, o un paquete roto", // nieuw, nalezen
+    'c.parcel.b': "¿El cliente no está en casa? Sigue las normas de tu empresa: prueba con los vecinos, o llévate el paquete de vuelta. No lo dejes sin más en la puerta, salvo que el cliente lo haya pedido. ¿Un paquete está roto o mojado? No lo entregues como si no pasara nada. Haz una foto como prueba, y avísalo en el escáner o en la app. Decir la verdad sobre un problema siempre es mejor que esconderlo. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.parcel.p': "Este paquete está roto. Aquí tiene una foto.", // nieuw, nalezen
+    'c.parcel.s': "El cliente no está en casa, y los vecinos tampoco. ¿Qué haces?", // nieuw, nalezen
+    'c.parcel.o1': "Escaneas “no está en casa”, y te llevas el paquete de vuelta.", // nieuw, nalezen
+    'c.parcel.o2': "Lo escaneas como entregado, y lo dejas en la puerta.", // nieuw, nalezen
+    'c.parcel.o3': "Lo escondes detrás del contenedor, para que nadie lo vea.", // nieuw, nalezen
+    'c.parcel.w': "Un paquete escaneado como entregado tiene que estar de verdad con el cliente. Si escaneas lo que pasó de verdad, el cliente puede recibir el paquete más tarde, y nadie piensa que lo has perdido.", // nieuw, nalezen
+    'c.road': "Seguro en la carretera, y un trabajo justo", // nieuw, nalezen
+    'c.road.b': "Nunca tengas el móvil en la mano mientras conduces: está prohibido. Usa un soporte para el navegador. Haz tus pausas, también en un día con mucho trabajo. ¿Un paquete pesado? Usa la carretilla de mano, o levántalo entre dos. ¿Hielo o nieve? Conduce despacio: llegar tarde es mejor que un accidente. Algunas empresas dicen que trabajas por tu cuenta (zelfstandig). Pero ¿quién decide tus horas, tu ruta y tu ropa? Si la empresa decide todo eso, puede que en realidad trabajes por cuenta ajena (in loondienst). Entonces muchas veces tienes más derechos, como cobrar cuando estás de baja. Más sobre esto en la lección “Papeles, integración y tu trabajo”. Es información general. Para tu situación: pregunta al sindicato, al Juridisch Loket o a FairWork.", // nieuw, nalezen
+    'c.road.p': "Ahora hago mi pausa. Luego sigo conduciendo.", // nieuw, nalezen
+    'c.road.s': { m: "La empresa dice que eres autónomo. Pero decide tus horas, tu ruta y tu ropa. ¿Qué haces?", f: "La empresa dice que eres autónoma. Pero decide tus horas, tu ruta y tu ropa. ¿Qué haces?", x: "La empresa dice que trabajas por tu cuenta. Pero decide tus horas, tu ruta y tu ropa. ¿Qué haces?" }, // nieuw, nalezen
+    'c.road.o1': { m: "Pides consejo: quizá eres asalariado.", f: "Pides consejo: quizá eres asalariada.", x: "Pides consejo: quizá trabajas por cuenta ajena." }, // nieuw, nalezen
+    'c.road.o2': "Nada: el contrato dice “autónomo”, así que es así.", // nieuw, nalezen
+    'c.road.o3': "Trabajas más horas, para ganar lo mismo.", // nieuw, nalezen
+    'c.road.w': "Lo que cuenta es cómo trabajas de verdad, no solo la palabra del contrato. Si la empresa decide cómo, cuándo y dónde trabajas, muchas veces trabajas por cuenta ajena. Entonces tienes más derechos.", // nieuw, nalezen
+    'l.feelwell': "Sentirte bien en el trabajo", // nieuw, nalezen
+    'w.werkdruk': "la presión del trabajo (demasiado trabajo en poco tiempo)", // nieuw, nalezen
+    'w.wakkerliggen': "estar despierto en la cama (no puedes dormir)", // nieuw, nalezen
+    'w.ploegendienst': "el trabajo por turnos (turnos de mañana, tarde y noche que se alternan)", // nieuw, nalezen
+    'w.heimwee': "la nostalgia (echas de menos tu casa)", // nieuw, nalezen
+    'w.familie': "la familia", // nieuw, nalezen
+    'w.alleen': "solo (sin nadie)", // nieuw, nalezen
+    's.feelwell.1': "Duermo mal por el trabajo por turnos.", // nieuw, nalezen
+    's.feelwell.2': { m: "Es demasiado. No puedo con esto solo.", f: "Es demasiado. No puedo con esto sola.", x: "Es demasiado. No puedo con esto sin ayuda." }, // nieuw, nalezen
+    's.feelwell.3': "Echo de menos mi casa. Mi familia está lejos.", // nieuw, nalezen
+    'c.feelwell.q': "¿Estás bien?", // nieuw, nalezen
+    'c.feelwell.a': "No muy bien. Muchas noches no puedo dormir.", // nieuw, nalezen
+    'c.feelwell': "¿Demasiado? No tienes que hacerlo sin ayuda", // nieuw, nalezen
+    'c.feelwell.b': "Todo el mundo se siente a veces cansado, estresado o triste. Demasiado trabajo (werkdruk), dormir mal por los turnos o echar de menos a tu familia pueden hacerlo pesado. No tienes que cargar con ello sin ayuda, y decir “es demasiado” no es ser débil. Habla con alguien de confianza: tu encargado, la persona de confianza (vertrouwenspersoon, si hay una), el médico de empresa (bedrijfsarts) o tu médico de cabecera (huisarts). También puedes pedir por tu cuenta una conversación con el médico de empresa. Los médicos no le cuentan a tu jefe lo que les has dicho. ¿Piensas en el suicidio, o te preocupa alguien? Llama al 113 (gratis, de día y de noche), o chatea en 113.nl.", // nieuw, nalezen
+    'c.feelwell.p': "No estoy muy bien. ¿Puedo hablar contigo un momento?", // nieuw, nalezen
+    'c.feelwell.s': { m: "Desde hace semanas duermes mal y el trabajo es demasiado. Te sientes muy cansado. ¿Qué haces?", f: "Desde hace semanas duermes mal y el trabajo es demasiado. Te sientes muy cansada. ¿Qué haces?", x: "Desde hace semanas duermes mal y el trabajo es demasiado. Sientes mucho cansancio. ¿Qué haces?" }, // nieuw, nalezen
+    'c.feelwell.o1': "Se lo dices a tu encargado o al médico de empresa.", // nieuw, nalezen
+    'c.feelwell.o2': "No dices nada, y trabajas más y más rápido.", // nieuw, nalezen
+    'c.feelwell.o3': "Te quedas en casa, y no le dices a nadie por qué.", // nieuw, nalezen
+    'c.feelwell.w': "Decirlo pronto no es ser débil. Entonces se puede buscar una solución entre todos, por ejemplo otros turnos. No tienes que hacerlo sin ayuda.", // nieuw, nalezen
+    'l.backtowork': "Volver al trabajo después de una enfermedad", // nieuw, nalezen
+    'w.opbouwen': "ir aumentando (despacio, paso a paso)", // nieuw, nalezen
+    'w.halvedagen': "medias jornadas (trabajas una parte del día)", // nieuw, nalezen
+    'w.lichtwerk': "el trabajo ligero (no pesado)", // nieuw, nalezen
+    'w.zwaarwerk': "el trabajo pesado", // nieuw, nalezen
+    'w.herstellen': "recuperarse, ponerse bien otra vez", // nieuw, nalezen
+    'w.welkomterug': "bienvenido de nuevo", // nieuw, nalezen
+    's.backtowork.1': "Empiezo con medias jornadas.", // nieuw, nalezen
+    's.backtowork.2': "Ya puedo hacer trabajo ligero. Trabajo pesado, todavía no.", // nieuw, nalezen
+    's.backtowork.3': "El médico de empresa dice: ir aumentando despacio.", // nieuw, nalezen
+    'c.backtowork.q': { m: "¡Bienvenido de nuevo! ¿Te encuentras mejor?", f: "¡Bienvenida de nuevo! ¿Te encuentras mejor?", x: "¡Bienvenido/a de nuevo! ¿Te encuentras mejor?" }, // nieuw, nalezen
+    'c.backtowork.a': "Sí, va mejor. Me lo tomo con calma.", // nieuw, nalezen
+    'c.backtowork': "Volver paso a paso", // nieuw, nalezen
+    'c.backtowork.b': "¿Ya estás bien? Dile a tu empresa que puedes volver a trabajar (betermelden). Después de una enfermedad larga, muchas veces empiezas paso a paso: primero menos horas, o un trabajo más ligero. El médico de empresa (bedrijfsarts) te aconseja sobre lo que puedes hacer. ¿Llevas mucho tiempo de baja? Entonces haces un plan para tu vuelta junto con tu empresa. Así lo dice la ley (Wet verbetering poortwachter). Di claramente lo que puedes hacer, y lo que todavía no. No tienes que contar a tus compañeros qué enfermedad has tenido. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.", // nieuw, nalezen
+    'c.backtowork.p': "Esto ya lo puedo hacer. Eso todavía no.", // nieuw, nalezen
+    'c.backtowork.s': { m: "Has estado enfermo tres semanas. En tu primer día de vuelta, tu encargado te pide que levantes cajas pesadas. El médico de empresa dijo: por ahora, solo trabajo ligero. ¿Qué haces?", f: "Has estado enferma tres semanas. En tu primer día de vuelta, tu encargado te pide que levantes cajas pesadas. El médico de empresa dijo: por ahora, solo trabajo ligero. ¿Qué haces?", x: "Has estado de baja tres semanas. En tu primer día de vuelta, tu encargado te pide que levantes cajas pesadas. El médico de empresa dijo: por ahora, solo trabajo ligero. ¿Qué haces?" }, // nieuw, nalezen
+    'c.backtowork.o1': "Dices con calma que ahora puedes hacer trabajo ligero, y lo que todavía no puedes hacer.", // nieuw, nalezen
+    'c.backtowork.o2': "Levantas las cajas de todos modos: no quieres poner problemas.", // nieuw, nalezen
+    'c.backtowork.o3': "Te vas a casa sin decir nada.", // nieuw, nalezen
+    'c.backtowork.w': "Tu encargado quiere que vuelvas, y con buena salud. Si dices claramente lo que puedes hacer, puede organizar el trabajo. Hacer demasiado demasiado pronto puede hacer que vuelvas a enfermar.", // nieuw, nalezen
   },
 };
 

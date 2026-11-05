@@ -227,7 +227,7 @@ const t: CultureTranslation = {
     's.rights.3': 'C’est de la discrimination.',
     'c.rights.q': 'Signe ici pour ton licenciement.',
     'c.rights.a': 'Non, je ne signe pas encore.',
-    'u.leave': 'Congés et maladie',
+    'u.leave': "Congés", // nieuw, nalezen
     'l.leave': 'Les jours de congé',
     'w.vakantiedagen': 'les jours de congé (vacances)',
     'w.verlof': 'le congé',
@@ -1699,6 +1699,108 @@ const t: CultureTranslation = {
     'c.healthy.o2': "Tu prends un demi-cachet, ce n’est pas dangereux.", // nieuw, nalezen
     'c.healthy.o3': "Tu le prends, mais tu ne le dis à personne au travail.", // nieuw, nalezen
     'c.healthy.w': "Les cachets d’un collègue peuvent être de la drogue. Ils peuvent te rendre malade ou te faire faire des erreurs au travail. Dormir, c’est la façon sûre de rester alerte.", // nieuw, nalezen
+    'u.sick': "La maladie", // nieuw, nalezen
+    'l.food': "Travailler avec des aliments", // nieuw, nalezen
+    'w.mes': "le couteau", // nieuw, nalezen
+    'w.snijhandschoen': "le gant anti-coupure (un gant contre les coupures)", // nieuw, nalezen
+    'w.vriescel': "la chambre de congélation (une pièce très froide)", // nieuw, nalezen
+    'w.sieraden': "les bijoux (une bague, une montre, des boucles d’oreilles)", // nieuw, nalezen
+    'w.pleister': "le pansement (pour une petite coupure)", // nieuw, nalezen
+    'w.vlees': "la viande", // nieuw, nalezen
+    's.food.1': "J’enlève mes bijoux.", // nieuw, nalezen
+    's.food.2': "Où sont les gants anti-coupure ?", // nieuw, nalezen
+    's.food.3': "Dans la chambre de congélation, je porte une veste chaude.", // nieuw, nalezen
+    'c.food.q': "Pourquoi on nettoie la ligne maintenant ?", // nieuw, nalezen
+    'c.food.a': "Ensuite, il y a un produit sans noix.", // nieuw, nalezen
+    'c.food': "Mains propres, aliments sûrs", // nieuw, nalezen
+    'c.food.b': "Le travail avec des aliments a des règles d’hygiène strictes : un filet à cheveux, des vêtements de travail propres, des mains lavées et pas de bijoux. Ces règles sont les mêmes pour tout le monde. Elles ne disent rien sur toi : elles protègent les aliments pour les gens qui les mangent. Avec un couteau, porte toujours ton gant anti-coupure. Dans une pièce froide ou une chambre de congélation, mets les vêtements chauds qu’on te donne, et réchauffe-toi pendant ta pause. Tu es malade, ou tu as une blessure à la main ? Signale-le avant de commencer. Alors tu peux avoir un pansement spécial, ou un autre travail pendant un moment. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.food.p': "J’ai une petite coupure à la main. Je peux avoir un pansement ?", // nieuw, nalezen
+    'c.food.s': "À la maison, tu t’es un peu coupé le doigt. Aujourd’hui, tu travailles avec de la viande. Que fais-tu ?", // nieuw, nalezen
+    'c.food.o1': "Tu le dis à ton responsable, et tu demandes un pansement.", // nieuw, nalezen
+    'c.food.o2': "Tu ne dis rien : c’est juste une petite coupure.", // nieuw, nalezen
+    'c.food.o3': "Tu mets un gant par-dessus, pour que personne ne le voie.", // nieuw, nalezen
+    'c.food.w': "Une petite blessure peut apporter des microbes dans les aliments. Quand tu le signales, tu peux avoir un pansement spécial ou un autre travail pendant un moment. Le signaler est normal : personne ne te le reproche.", // nieuw, nalezen
+    'u.delivery': "Transport et livraison", // nieuw, nalezen
+    'l.parcel': "Livrer des colis", // nieuw, nalezen
+    'w.pakket': "le colis", // nieuw, nalezen
+    'w.bestelbus': "la camionnette de livraison", // nieuw, nalezen
+    'w.bezorgen': "livrer (apporter au client)", // nieuw, nalezen
+    'w.inladen': "charger (mettre des choses dans la camionnette)", // nieuw, nalezen
+    'w.aanbellen': "sonner à la porte", // nieuw, nalezen
+    'w.bewijs': "la preuve (quelque chose qui montre ce qui s’est passé)", // nieuw, nalezen
+    's.parcel.1': "Je scanne chaque colis.", // nieuw, nalezen
+    's.parcel.2': "Le client n’est pas chez lui.", // nieuw, nalezen
+    's.parcel.3': "Vous pouvez prendre un colis pour les voisins ?", // nieuw, nalezen
+    'c.parcel.q': "Ce colis est pour moi ?", // nieuw, nalezen
+    'c.parcel.a': "Oui. Vous pouvez signer ici, s’il vous plaît ?", // nieuw, nalezen
+    'l.road': "Sécurité et travail juste sur la route", // nieuw, nalezen
+    'w.rijden': "conduire", // nieuw, nalezen
+    'w.zwaar': "lourd", // nieuw, nalezen
+    'w.steekwagen': "le diable (un chariot pour les cartons lourds)", // nieuw, nalezen
+    'w.route': "la tournée, le trajet (le chemin que tu fais en voiture)", // nieuw, nalezen
+    'w.loondienst': "salarié (tu travailles pour un patron et tu reçois un salaire)", // nieuw, nalezen
+    'w.bepalen': "décider (dire comment il faut faire)", // nieuw, nalezen
+    's.road.1': "Ce colis est trop lourd. Je vais chercher le diable.", // nieuw, nalezen
+    's.road.2': "Ça glisse. Je roule doucement.", // nieuw, nalezen
+    's.road.3': "Qui décide de ma tournée et de mes horaires ?", // nieuw, nalezen
+    'c.road.q': "Tu peux faire encore une tournée aujourd’hui ?", // nieuw, nalezen
+    'c.road.a': "Non, sinon je n’ai pas le temps de faire ma pause.", // nieuw, nalezen
+    'c.parcel': "Personne à la maison, ou un colis abîmé", // nieuw, nalezen
+    'c.parcel.b': "Le client n’est pas chez lui ? Suis les règles de ton entreprise : essaie chez les voisins, ou rapporte le colis. Ne le laisse pas simplement devant la porte, sauf si le client l’a demandé. Un colis est abîmé ou mouillé ? Ne le livre pas comme si de rien n’était. Prends une photo comme preuve, et signale-le dans le scanner ou l’appli. Dire la vérité sur un problème vaut toujours mieux que le cacher. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.parcel.p': "Ce colis est abîmé. Voici une photo.", // nieuw, nalezen
+    'c.parcel.s': "Le client n’est pas chez lui, et les voisins non plus. Que fais-tu ?", // nieuw, nalezen
+    'c.parcel.o1': "Tu scannes “pas à la maison”, et tu rapportes le colis.", // nieuw, nalezen
+    'c.parcel.o2': "Tu le scannes comme livré, et tu le laisses devant la porte.", // nieuw, nalezen
+    'c.parcel.o3': "Tu le caches derrière la poubelle, pour que personne ne le voie.", // nieuw, nalezen
+    'c.parcel.w': "Un colis scanné comme livré doit vraiment être chez le client. Quand tu scannes ce qui s’est vraiment passé, le client peut recevoir son colis plus tard, et personne ne pense que tu l’as perdu.", // nieuw, nalezen
+    'c.road': "En sécurité sur la route, et un travail juste", // nieuw, nalezen
+    'c.road.b': "Ne tiens jamais ton téléphone en main quand tu conduis : c’est interdit. Utilise un support pour la navigation. Prends tes pauses, même les jours où il y a beaucoup de travail. Un colis lourd ? Utilise le diable, ou porte-le à deux. Du verglas ou de la neige ? Roule doucement : arriver en retard vaut mieux qu’un accident. Certaines entreprises disent que tu travailles à ton compte (zelfstandig). Mais qui décide de tes heures, de ta tournée et de tes vêtements ? Si c’est l’entreprise qui décide tout ça, il s’agit peut-être en fait d’un emploi salarié (in loondienst). Alors tu as souvent plus de droits, comme un salaire quand tu es malade. Plus d’informations dans la leçon “Les papiers, l’intégration et ton travail”. Informations générales. Pour ta situation : demande au syndicat, au Juridisch Loket ou à FairWork.", // nieuw, nalezen
+    'c.road.p': "Je prends ma pause maintenant. Ensuite, je repars.", // nieuw, nalezen
+    'c.road.s': { m: "L’entreprise dit que tu es indépendant. Mais c’est elle qui décide de tes heures, de ta tournée et de tes vêtements. Que fais-tu ?", f: "L’entreprise dit que tu es indépendante. Mais c’est elle qui décide de tes heures, de ta tournée et de tes vêtements. Que fais-tu ?", x: "L’entreprise dit que tu travailles à ton compte. Mais c’est elle qui décide de tes heures, de ta tournée et de tes vêtements. Que fais-tu ?" }, // nieuw, nalezen
+    'c.road.o1': { m: "Tu demandes conseil : tu es peut-être salarié.", f: "Tu demandes conseil : tu es peut-être salariée.", x: "Tu demandes conseil : c’est peut-être un emploi salarié." }, // nieuw, nalezen
+    'c.road.o2': "Rien : le contrat dit “indépendant”, donc c’est comme ça.", // nieuw, nalezen
+    'c.road.o3': "Tu travailles plus d’heures, pour gagner autant.", // nieuw, nalezen
+    'c.road.w': "Ce qui compte, c’est comment tu travailles vraiment, pas seulement le mot dans le contrat. Si l’entreprise décide comment, quand et où tu travailles, c’est souvent un emploi salarié. Alors tu as plus de droits.", // nieuw, nalezen
+    'l.feelwell': "Se sentir bien au travail", // nieuw, nalezen
+    'w.werkdruk': "la pression au travail (trop de travail en trop peu de temps)", // nieuw, nalezen
+    'w.wakkerliggen': "rester éveillé au lit (tu n’arrives pas à dormir)", // nieuw, nalezen
+    'w.ploegendienst': "le travail posté (équipes du matin, du soir et de nuit à tour de rôle)", // nieuw, nalezen
+    'w.heimwee': "le mal du pays (ta maison te manque)", // nieuw, nalezen
+    'w.familie': "la famille", // nieuw, nalezen
+    'w.alleen': "seul", // nieuw, nalezen
+    's.feelwell.1': "Je dors mal à cause du travail posté.", // nieuw, nalezen
+    's.feelwell.2': { m: "C’est trop. Je n’y arrive pas seul.", f: "C’est trop. Je n’y arrive pas seule.", x: "C’est trop. Je n’y arrive pas sans aide." }, // nieuw, nalezen
+    's.feelwell.3': "J’ai le mal du pays. Ma famille est loin.", // nieuw, nalezen
+    'c.feelwell.q': "Ça va, toi ?", // nieuw, nalezen
+    'c.feelwell.a': "Pas très bien. Souvent, je n’arrive pas à dormir.", // nieuw, nalezen
+    'c.feelwell': "C’est trop ? Tu n’as pas à porter ça sans aide", // nieuw, nalezen
+    'c.feelwell.b': "Tout le monde se sent parfois fatigué, stressé ou triste. Trop de travail (werkdruk), un mauvais sommeil à cause du travail posté ou le manque de ta famille peuvent rendre les choses lourdes. Tu n’as pas à porter ça sans aide, et dire “c’est trop” n’est pas une faiblesse. Parle à quelqu’un de confiance : ton responsable, la personne de confiance (vertrouwenspersoon, s’il y en a une), le médecin du travail (bedrijfsarts) ou ton médecin généraliste (huisarts). Tu peux aussi demander toi-même un entretien avec le médecin du travail. Les médecins ne répètent pas à ton patron ce que tu as dit. Tu penses au suicide, ou tu t’inquiètes pour quelqu’un ? Appelle le 113 (gratuit, jour et nuit), ou chatte sur 113.nl.", // nieuw, nalezen
+    'c.feelwell.p': "Ça ne va pas très bien. Je peux te parler un moment ?", // nieuw, nalezen
+    'c.feelwell.s': { m: "Depuis des semaines, tu dors mal et le travail est trop lourd. Tu te sens très fatigué. Que fais-tu ?", f: "Depuis des semaines, tu dors mal et le travail est trop lourd. Tu te sens très fatiguée. Que fais-tu ?", x: "Depuis des semaines, tu dors mal et le travail est trop lourd. Tu ressens une grande fatigue. Que fais-tu ?" }, // nieuw, nalezen
+    'c.feelwell.o1': "Tu en parles à ton responsable ou au médecin du travail.", // nieuw, nalezen
+    'c.feelwell.o2': "Tu ne dis rien, et tu travailles plus dur et plus vite.", // nieuw, nalezen
+    'c.feelwell.o3': "Tu restes à la maison, et tu ne dis à personne pourquoi.", // nieuw, nalezen
+    'c.feelwell.w': "Le dire tôt n’est pas une faiblesse. Alors vous pouvez chercher ensemble une solution, par exemple d’autres horaires d’équipe. Tu n’as pas à faire ça sans aide.", // nieuw, nalezen
+    'l.backtowork': "Reprendre le travail après une maladie", // nieuw, nalezen
+    'w.opbouwen': "augmenter petit à petit (doucement, étape par étape)", // nieuw, nalezen
+    'w.halvedagen': "les demi-journées (tu travailles une partie de la journée)", // nieuw, nalezen
+    'w.lichtwerk': "le travail léger (pas lourd)", // nieuw, nalezen
+    'w.zwaarwerk': "le travail lourd", // nieuw, nalezen
+    'w.herstellen': "guérir, se rétablir", // nieuw, nalezen
+    'w.welkomterug': "bon retour (bienvenue à nouveau)", // nieuw, nalezen
+    's.backtowork.1': "Je commence par des demi-journées.", // nieuw, nalezen
+    's.backtowork.2': "Je peux déjà faire du travail léger. Le travail lourd, pas encore.", // nieuw, nalezen
+    's.backtowork.3': "Le médecin du travail dit : reprendre petit à petit.", // nieuw, nalezen
+    'c.backtowork.q': "Bon retour ! Tu vas mieux ?", // nieuw, nalezen
+    'c.backtowork.a': "Oui, ça va mieux. J’y vais doucement.", // nieuw, nalezen
+    'c.backtowork': "Revenir étape par étape", // nieuw, nalezen
+    'c.backtowork.b': "Tu vas mieux ? Dis à ton employeur que tu peux de nouveau travailler (betermelden). Après une longue maladie, tu reprends souvent étape par étape : d’abord moins d’heures, ou un travail plus léger. Le médecin du travail (bedrijfsarts) te conseille sur ce que tu peux faire. Malade depuis longtemps ? Alors ton employeur et toi faites ensemble un plan pour ton retour. C’est la loi (Wet verbetering poortwachter). Dis clairement ce que tu peux faire, et ce que tu ne peux pas encore faire. Tu n’as pas à dire à tes collègues quelle maladie tu as eue. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nalezen
+    'c.backtowork.p': "Ça, je peux déjà le faire. Ça, pas encore.", // nieuw, nalezen
+    'c.backtowork.s': "Tu as été malade pendant trois semaines. Le premier jour de ton retour, ton responsable te demande de porter des cartons lourds. Le médecin du travail a dit : seulement du travail léger pour l’instant. Que fais-tu ?", // nieuw, nalezen
+    'c.backtowork.o1': "Tu dis calmement que tu peux faire du travail léger maintenant, et ce que tu ne peux pas encore faire.", // nieuw, nalezen
+    'c.backtowork.o2': "Tu portes quand même les cartons : tu ne veux pas faire d’histoires.", // nieuw, nalezen
+    'c.backtowork.o3': "Tu rentres chez toi sans rien dire.", // nieuw, nalezen
+    'c.backtowork.w': "Ton responsable veut te voir revenir, et en bonne santé. Quand tu dis clairement ce que tu peux faire, il peut organiser le travail. En faire trop, trop tôt, peut te rendre malade à nouveau.", // nieuw, nalezen
   },
 };
 

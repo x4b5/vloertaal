@@ -336,10 +336,15 @@ const coreUnits: Unit[] = [
       },
     ],
   },
+  // "Verlof" and "Ziekte" were one unit, "Verlof en ziekte" (u.leave), until 5 November 2026 (the
+  // owner's request: two topics, and a new lesson about coming back after an illness). u.leave keeps
+  // its id (progress and certificates stay): Days off and Children and work (leaveMore below).
+  // "Sick at home" (l.illness, same id) moved to the new unit u.sick, with "Back to work after
+  // illness" (sickMore below). Course order: Ziekte right after Verlof (workUnits).
   {
     id: 'u.leave',
-    title: 'Leave and sickness',
-    titleNl: 'Verlof en ziekte',
+    title: 'Leave',
+    titleNl: 'Verlof',
     emoji: '🌴',
     color: '#b5487a',
     lessons: [
@@ -366,6 +371,15 @@ const coreUnits: Unit[] = [
           ),
         ],
       },
+    ],
+  },
+  {
+    id: 'u.sick',
+    title: 'Illness',
+    titleNl: 'Ziekte',
+    emoji: '🩹',
+    color: '#2f7f6f',
+    lessons: [
       {
         id: 'l.illness',
         title: 'Sick at home',
@@ -1006,7 +1020,7 @@ const socialTips = [
   ),
 ];
 
-// ---- After "Leave and sickness": exploitation, calling work, diplomas, health, money, travel, losing your job ----
+// ---- After "Leave" and "Illness": exploitation, calling work, diplomas, health, money, travel, losing your job ----
 
 const laterUnits: Unit[] = [
   unit('exploit', 'Know your rights: exploitation', 'Uitbuiting herkennen', '🛑', '#9b2c2c', [
@@ -1657,6 +1671,30 @@ const sectorUnits: Unit[] = [
       ],
       [['Waarom ligt dit apart?', 'Why is this put aside?'], ['Het etiket zit scheef.', 'The label is crooked.']],
     ),
+    // "Voedselverwerking" (the owner's request, 5 November 2026): working with food, in the
+    // factory's own unit, before its mixed review. "het haarnetje", "handen wassen", "de
+    // werkkleding" and "schoon" (l.hygiene), "de koelcel", "snijden" and "de allergie"
+    // (l.kitchen), "de lopende band" (l.line) and "de hand" (l.body) are already words of other
+    // lessons: here they come in the sentences, the chat and the tip. Six new concrete words, each
+    // with a drawing (src/pictures/group36.tsx).
+    lesson(
+      'food',
+      'Working with food',
+      [
+        ['mes', 'het mes', 'the knife', '🔪'],
+        ['snijhandschoen', 'de snijhandschoen', 'the cut-resistant glove (a glove against cuts)', '🧤'],
+        ['vriescel', 'de vriescel', 'the freezer room (a very cold room)', '🥶'],
+        ['sieraden', 'de sieraden', 'the jewellery (a ring, a watch, earrings)', '💍'],
+        ['pleister', 'de pleister', 'the plaster (for a small cut)', '🩹'],
+        ['vlees', 'het vlees', 'the meat', '🥩'],
+      ],
+      [
+        ['Ik doe mijn sieraden af.', 'I am taking off my jewellery.'],
+        ['Waar zijn de snijhandschoenen?', 'Where are the cut-resistant gloves?'],
+        ['In de vriescel draag ik een warme jas.', 'In the freezer room I wear a warm coat.', ['Ik draag een warme jas in de vriescel.']],
+      ],
+      [['Waarom maken we de band nu schoon?', 'Why are we cleaning the line now?'], ['Hierna komt een product zonder noten.', 'Next comes a product without nuts.']],
+    ),
   ]),
   unit('care', 'In care', 'In de zorg', '🧓', '#9d4edd', [
     lesson(
@@ -1837,6 +1875,28 @@ const sectorTips = [
     ],
     'A wrong label can mean that all products must come back from the shops. Saying it early is what a good team member does.',
     NONE,
+  ),
+  // "Voedselverwerking" (5 November 2026). The hygiene rules are the same for everyone and are
+  // about the food, not about the person (no judgement).
+  // ⚖️ check: Who works with food and is sick (for example diarrhoea or vomiting) or has a wound or
+  // a skin infection, must report it to the company right away ⚖️ (Verordening (EG) 852/2004,
+  // bijlage II, hoofdstuk VIII, punt 2: EU law, so the same in Belgium). The tip says "report it
+  // before you start" and names no sanction; a special (blue) plaster or other work is common
+  // practice (HACCP), not a legal rule: "can".
+  tipFor(
+    'food',
+    '🧤',
+    'Clean hands, safe food',
+    'Working with food has strict hygiene rules: a hairnet, clean work clothes, washed hands and no jewellery. These rules are the same for everyone. They say nothing about you: they keep the food safe for the people who eat it. With a knife, always wear your cut-resistant glove. In a cold room or a freezer room, wear the warm clothes you get, and warm up in your break. Are you sick, or do you have a wound on your hand? Report it before you start. Then you can get a special plaster, or other work for a while.',
+    ['Ik heb een wondje aan mijn hand. Mag ik een pleister?', 'I have a small cut on my hand. May I have a plaster?'],
+    'You cut your finger a little at home. Today you work with meat. What do you do?',
+    [
+      'Tell your supervisor, and ask for a plaster.',
+      'Say nothing: it is only a small cut.',
+      'Wear a glove over it, so nobody sees it.',
+    ],
+    'A small wound can bring germs into the food. When you report it, you can get a special plaster or other work for a while. Reporting it is normal: nobody blames you for it.',
+    HOUSE_LINE,
   ),
   tipFor(
     'client',
@@ -2558,9 +2618,9 @@ const contractMore: Lesson[] = [
   ),
 ];
 
-// ---- Leave and sickness: lesson 3 (30 October 2026) ----
+// ---- Leave: lesson 2 (30 October 2026; lesson 3 of "Verlof en ziekte" until 5 November 2026) ----
 // Children and work. "het calamiteitenverlof" (w.calamiteitenverlof, l.leave) and "doorbetalen"
-// (w.doorbetalen, l.illness) are words of the other lessons of this unit: here they come in the
+// (w.doorbetalen, l.illness, now in "Ziekte") are words of other lessons: here they come in the
 // sentences and the tip.
 
 const leaveMore: Lesson[] = [
@@ -2581,6 +2641,36 @@ const leaveMore: Lesson[] = [
       ['Betaalt mijn werkgever mijn loon door?', 'Does my employer keep paying my wage?'],
     ],
     [['Waarom moet je nu weg?', 'Why do you have to leave now?'], ['De kinderopvang belde. Mijn zoon heeft koorts.', 'The daycare called. My son has a fever.']],
+  ),
+];
+
+// ---- Illness: lesson 2 (5 November 2026) ----
+// Back to work after illness (the owner's request): betermelden, the company doctor, building up
+// calmly (fewer hours or lighter work first), saying what you can and cannot do yet, and coming
+// back to your colleagues. About coming back well, not about staying home: calm, no guilt.
+// "betermelden" and "de bedrijfsarts" (l.illness), "rustig" (l.clear) and "nog niet" (l.notyet)
+// are words of other lessons: here they come in the sentences, the chat and the tip. "licht
+// werk" and "zwaar werk" are a pair with drawings; "opbouwen" and "halve dagen" have a memory
+// picture; "herstellen" has none.
+
+const sickMore: Lesson[] = [
+  lesson(
+    'backtowork',
+    'Back to work after illness',
+    [
+      ['opbouwen', 'opbouwen', 'to build up (slowly, step by step)', '📈', 'hook'],
+      ['halvedagen', 'halve dagen', 'half days (you work part of the day)', '🌗', 'hook'],
+      ['lichtwerk', 'licht werk', 'light work (not heavy)', '🪶'],
+      ['zwaarwerk', 'zwaar werk', 'heavy work', '🏋️'],
+      ['herstellen', 'herstellen', 'to recover, to get well again', '🌱', false],
+      ['welkomterug', 'welkom terug', 'welcome back', '🤗'],
+    ],
+    [
+      ['Ik begin met halve dagen.', 'I am starting with half days.'],
+      ['Licht werk kan ik al. Zwaar werk nog niet.', 'I can already do light work. Heavy work not yet.'],
+      ['De bedrijfsarts zegt: rustig opbouwen.', 'The company doctor says: build up slowly.'],
+    ],
+    [['Welkom terug! Gaat het weer?', 'Welcome back! Are you feeling better?'], ['Ja, het gaat beter. Ik doe het rustig aan.', 'Yes, it is going better. I am taking it easy.']],
   ),
 ];
 
@@ -2619,6 +2709,30 @@ const moreTips = [
       'Stay at work, and let your child wait until your shift ends.',
     ],
     'A sick child is an emergency at home. When you tell your supervisor first, they can plan the work. Emergency leave is for moments like this.',
+    ADVICE_LINE,
+  ),
+  // "Weer aan het werk na ziekte" (l.backtowork, 5 November 2026). Coming back well, no guilt.
+  // ⚖️ check: Sick for a longer time? Then you and your employer make a plan together for your
+  // return ⚖️ (Wet verbetering poortwachter: BW 7:658a, the employer works on the return; BW 7:660a,
+  // the worker helps; Regeling procesgang eerste en tweede ziektejaar: probleemanalyse by the
+  // bedrijfsarts in week 6, plan van aanpak in week 8). The tip names the law in simple words only.
+  // ⚖️ check: The company doctor gives advice about what work you can do ⚖️ (Arbowet art. 14: the
+  // bedrijfsarts advises in the verzuimbegeleiding; medical secrecy, so no diagnosis to the employer).
+  // Not a right: building up with fewer hours or lighter work is usual practice ("often"), and
+  // betermelden goes as the company's absence rules (verzuimprotocol) say. More in docs/juridische-check.md.
+  tipFor(
+    'backtowork',
+    '🤗',
+    'Coming back step by step',
+    'Are you better? Tell your employer that you can work again (betermelden). After a longer illness, you often start step by step: first fewer hours, or lighter work. The company doctor (bedrijfsarts) gives advice about what you can do. Sick for a longer time? Then you and your employer make a plan together for your return. That is the law (Wet verbetering poortwachter). Say clearly what you can do, and what not yet. You do not have to tell colleagues what illness you had.',
+    ['Dit kan ik al. Dat kan ik nog niet.', 'I can already do this. I cannot do that yet.'],
+    'You were sick for three weeks. On your first day back, your supervisor asks you to lift heavy boxes. The company doctor said: only light work for now. What do you do?',
+    [
+      'Say calmly that you can do light work now, and what you cannot do yet.',
+      'Lift the boxes anyway: you do not want to be difficult.',
+      'Go home without a word.',
+    ],
+    'Your supervisor wants you back, and healthy. When you say clearly what you can do, they can plan the work. Doing too much too soon can make you sick again.',
     ADVICE_LINE,
   ),
 ];
@@ -2876,7 +2990,7 @@ const onlineUnit = unit('online', 'Online at work', 'Online op je werk', '💻',
   ),
 ]);
 
-/** Lessons added at the end of an existing unit (Entree, 30 October 2026). */
+/** Lessons added at the end of an existing unit (Entree, 30 October 2026; l.feelwell in u.health, 5 November 2026). */
 const entreeMore: Record<string, Lesson[]> = {
   'u.grow': [
     lesson(
@@ -2975,6 +3089,33 @@ const entreeMore: Record<string, Lesson[]> = {
         ['In de pauze ga ik even wandelen.', 'In the break I go for a short walk.'],
       ],
       [['Wil je een pilletje? Dan blijf je wakker.', 'Do you want a pill? Then you stay awake.'], ['Nee, dank je. Ik werk niet onder invloed.', 'No, thank you. I do not work under the influence.']],
+    ),
+    // "Je goed voelen op het werk" (the owner's request, 5 November 2026): tired, too much work,
+    // bad sleep from shift work, homesickness, and who to talk to. In Gezondheid, after "Fit for
+    // work" (l.healthy: slapen, moe, somber), not in "Omgang met collega's": it goes on from sleep
+    // and the huisarts, and it is about how you feel, not about a colleague. "slapen", "moe" and
+    // "somber" (l.healthy), "te veel" (l.clear), "praten" (l.speakup), "de huisarts" (l.doctor),
+    // "de bedrijfsarts" (l.illness) and "de vertrouwenspersoon" (l.respect) are already words of
+    // other lessons: here they come in the sentences, the chat and the tip. Drawn: "wakker liggen"
+    // (Amina awake in bed, a clock at night) and "de familie" (a family under a heart); the other
+    // four are feelings or arrangements without one plain scene (picture: false).
+    lesson(
+      'feelwell',
+      'Feeling good at work',
+      [
+        ['werkdruk', 'de werkdruk', 'the pressure of work (too much work in too little time)', '😮‍💨', false],
+        ['wakkerliggen', 'wakker liggen', 'to lie awake (you cannot sleep)', '🛏️'],
+        ['ploegendienst', 'de ploegendienst', 'shift work (early, late and night shifts in turn)', '🔄', false],
+        ['heimwee', 'het heimwee', 'homesickness (you miss home)', '🧳', false],
+        ['familie', 'de familie', 'the family', '👨‍👩‍👧'],
+        ['alleen', 'alleen', 'alone', '🧍', false],
+      ],
+      [
+        ['Ik slaap slecht door de ploegendienst.', 'I sleep badly because of the shift work.'],
+        ['Het is te veel. Ik red het niet alleen.', 'It is too much. I cannot manage it alone.'],
+        ['Ik heb heimwee. Mijn familie is ver weg.', 'I am homesick. My family is far away.'],
+      ],
+      [['Gaat het wel met je?', 'Are you doing okay?'], ['Niet zo goed. Ik lig vaak wakker.', 'Not so good. I often lie awake.']],
     ),
   ],
 };
@@ -3225,6 +3366,37 @@ const entreeTips = [
     'Pills from a colleague can be drugs. They can make you sick, or make you make mistakes at work. Sleep is the safe way to stay awake.',
     NONE,
   ),
+  // "Je goed voelen op het werk" (5 November 2026). Warm and calm, no medical promises: who you can
+  // talk to, not what they will fix. Not about one culture: missing your family is named as one of
+  // the reasons, never as something of a country. No closing line: the tip is about feeling well
+  // and asking for help (as c.healthy); its one right is said plainly.
+  // ⚖️ check: You may also ask for a talk with the company doctor yourself ⚖️ (Arbowet art. 14: the
+  // worker can consult the bedrijfsarts, the "open spreekuur" of the basiscontract
+  // arbodienstverlening, since 1 July 2017 (which sub-clause: for the expert); as Werkregels
+  // r.l.veilig.3: "Je mag ook zelf naar de bedrijfsarts").
+  // ⚖️ check: Doctors do not tell your boss what you said ⚖️ (medisch beroepsgeheim, WGBO, BW 7:457;
+  // for the bedrijfsarts also the Wet verbetering poortwachter: only what work you can do, as
+  // c.illness.w).
+  // ⚖️ check: 113: free, day and night, also a chat on 113.nl ⚖️ (as "Wie bel je?" h.113 in
+  // src/content/regels/help.ts, with its sources).
+  // ⚖️ check: The vertrouwenspersoon "if there is one": not required by law in the Netherlands ⚖️
+  // (Arbowet art. 3 lid 2: beleid psychosociale arbeidsbelasting; a vertrouwenspersoon is usual,
+  // not compulsory; as c.respect and c.boundaries).
+  tipFor(
+    'feelwell',
+    '💬',
+    'Too much? You do not have to do it alone',
+    'Everyone feels tired, stressed or sad sometimes. Too much work (werkdruk), bad sleep from shift work or missing your family can make it heavy. You do not have to carry it alone, and saying "it is too much" is not weak. Talk to someone you trust: your supervisor, the confidential adviser (vertrouwenspersoon, if there is one), the company doctor (bedrijfsarts) or your huisarts. You may also ask for a talk with the company doctor yourself. Doctors do not tell your boss what you said. Do you think about suicide, or do you worry about someone? Call 113 (free, day and night), or chat at 113.nl.',
+    ['Het gaat niet zo goed. Kan ik even met je praten?', 'I am not doing so well. Can I talk to you for a moment?'],
+    'For weeks, you sleep badly and the work is too much. You feel very tired. What do you do?',
+    [
+      'Tell your supervisor or the company doctor.',
+      'Say nothing, and work harder and faster.',
+      'Stay at home, and tell nobody why.',
+    ],
+    'Saying it early is not weak. Then you can look for a way out together, for example other shifts. You do not have to do it alone.',
+    NONE,
+  ),
   // ⚖️ check: With Dutch nationality you may vote in every election, from 18 ⚖️ (Grondwet art. 4;
   // Kieswet art. B 1).
   // ⚖️ check: For the gemeenteraad, people from another EU country who live here may vote too, and
@@ -3306,6 +3478,103 @@ const entreeTips = [
   ),
 ];
 
+// ---- Transport and delivery (the owner's request, 5 November 2026) ----
+// A sector unit appended at the very end, so every existing course keeps its order. It is the
+// second own unit of the sector Logistiek (src/content/sectors.ts): in the path of a learner who
+// chose it, it comes right after "In het magazijn"; for the other sectors it waits with the other
+// sectors' units. Already words of other lessons, used here in a sentence, the chat or a tip
+// only: "de scanner" (l.things), "het adres" (l.bsn), "de klant" (l.checkout), "de handtekening"
+// (l.workorder), "tekenen" (l.contract), "de foto" (l.phone), "kapot" (l.handover), "de buur"
+// (l.roundsounds, as "de buren"), "tillen" (l.directions), "de pauze" (l.shift), "glad"
+// (l.cleansafe), "rustig" (l.clear), "het weer" (l.smalltalk), "de telefoon" (l.phone) and "de
+// zzp’er" and "de werknemer" (l.permit). "het busje" (l.jobends) is the van that brings workers;
+// here the delivery van is "de bestelbus".
+
+const deliveryUnit = unit('delivery', 'Transport and delivery', 'Vervoer en bezorging', '🚚', '#9a3412', [
+  lesson(
+    'parcel',
+    'Delivering parcels',
+    [
+      ['pakket', 'het pakket', 'the parcel', '📦'],
+      ['bestelbus', 'de bestelbus', 'the delivery van', '🚚'],
+      ['bezorgen', 'bezorgen', 'to deliver (bring to the customer)', '📬'],
+      ['inladen', 'inladen', 'to load (put things into the van)', '📥'],
+      ['aanbellen', 'aanbellen', 'to ring the doorbell', '🔔'],
+      ['bewijs', 'het bewijs', 'the proof (something that shows what happened)', '🧾', false],
+    ],
+    [
+      ['Ik scan elk pakket.', 'I scan every parcel.'],
+      ['De klant is niet thuis.', 'The customer is not at home.'],
+      ['Wilt u een pakket voor de buren aannemen?', 'Would you take in a parcel for the neighbours?'],
+    ],
+    [['Is dit pakket voor mij?', 'Is this parcel for me?'], ['Ja. Wilt u hier even tekenen?', 'Yes. Would you sign here, please?']],
+  ),
+  lesson(
+    'road',
+    'Safe and fair on the road',
+    [
+      ['rijden', 'rijden', 'to drive', '🛣️'],
+      ['zwaar', 'zwaar', 'heavy', '🏋️'],
+      ['steekwagen', 'de steekwagen', 'the hand truck (a trolley for heavy boxes)', '🛒'],
+      ['route', 'de route', 'the route (the way you drive)', '🗺️'],
+      ['loondienst', 'in loondienst', 'employed (you work for a boss and get a wage)', '🧑‍💼', false],
+      ['bepalen', 'bepalen', 'to decide (say how it must be done)', '👉', false],
+    ],
+    [
+      ['Dit pakket is te zwaar. Ik pak de steekwagen.', 'This parcel is too heavy. I am getting the hand truck.'],
+      ['Het is glad. Ik rij rustig.', 'It is slippery. I am driving slowly.'],
+      ['Wie bepaalt mijn route en mijn tijden?', 'Who decides my route and my times?', ['Wie bepaalt mijn tijden en mijn route?']],
+    ],
+    [['Kun je vandaag nog een rit doen?', 'Can you do one more run today?'], ['Nee, dan heb ik geen tijd voor mijn pauze.', 'No, then I have no time for my break.']],
+  ),
+]);
+
+const deliveryTips = [
+  // Company rules (where a parcel may go when nobody is home): HOUSE_LINE.
+  tipFor(
+    'parcel',
+    '📦',
+    'Not at home, or a broken parcel',
+    'Is the customer not at home? Follow the rules of your company: try the neighbours, or take the parcel back. Do not just leave it at the door, unless the customer asked for that. Is a parcel broken or wet? Do not deliver it as if nothing is wrong. Take a photo as proof, and report it in the scanner or the app. Being honest about a problem is always better than hiding it.',
+    ['Dit pakket is kapot. Hier is een foto.', 'This parcel is broken. Here is a photo.'],
+    'The customer is not at home, and the neighbours are not either. What do you do?',
+    [
+      'Scan "not at home", and take it back.',
+      'Scan it as delivered, and leave it at the door.',
+      'Hide it behind the bin, so nobody sees it.',
+    ],
+    'A parcel scanned as delivered must really be with the customer. When you scan what really happened, the customer can get the parcel later, and nobody thinks you lost it.',
+    HOUSE_LINE,
+  ),
+  // ⚖️ check: Holding a phone while you drive is forbidden ⚖️ (RVV 1990 art. 61a; in Belgium the
+  // same: Wegverkeersreglement art. 8.4). A holder for the navigation is advice, no legal claim.
+  // ⚖️ check: An employee has a right to breaks ⚖️ (Arbeidstijdenwet art. 5:4; for drivers also the
+  // Arbeidstijdenbesluit vervoer; the EU driving times with a tachograph are for trucks and vans
+  // above 3.5 t: no hours or numbers in the text).
+  // ⚖️ check: Who decides how, when and where you work counts, not the word on the contract: then
+  // you may be an employee after all (schijnzelfstandigheid; BW 7:610, Hoge Raad 24 maart 2023,
+  // Deliveroo; the EU platform work directive 2024/2831, to be in national law by 2 December 2026,
+  // is not named). Werkregels says the same (r.l.contract.4, "Stage, leerwerkbaan en zzp"); the
+  // language course's l.permit asks "Ben ik werknemer of zzp’er?": the tip points there, it does
+  // not repeat it. "zelfstandig" and "in loondienst", not "zzp’er": the same in Belgium.
+  // The company may itself be the problem: ABUSE_LINE.
+  tipFor(
+    'road',
+    '🚚',
+    'Safe on the road, and fair work',
+    'Never hold your phone while you drive: that is forbidden. Use a holder for the navigation. Take your breaks, also on a busy day. A heavy parcel? Use the hand truck, or lift it together. Ice or snow? Drive slowly: arriving late is better than an accident. Some companies say you work as self-employed (zelfstandig). But who decides your hours, your route and your clothes? If the company decides all that, you may be an employee after all (in loondienst). Then you often have more rights, like pay when you are sick. More about this in the lesson "Papers, integration and your job".',
+    ['Ik neem nu pauze. Daarna rij ik verder.', 'I am taking my break now. Then I will drive on.'],
+    'The company calls you self-employed. But it decides your hours, your route and your clothes. What do you do?',
+    [
+      'Ask for advice: maybe you are an employee.',
+      'Nothing: the contract says self-employed, so it is.',
+      'Work more hours, so you earn the same.',
+    ],
+    'What counts is how you really work, not only the word on the contract. If the company decides how, when and where you work, you are often an employee. Then you have more rights.',
+    ABUSE_LINE,
+  ),
+];
+
 // ---- Course order of everything in this file ----
 
 const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
@@ -3322,6 +3591,8 @@ export const workUnits: Unit[] = [
   sayingsUnit,
   byId('u.rights'),
   { ...byId('u.leave'), lessons: [...byId('u.leave').lessons, ...leaveMore] },
+  // "Ziekte" right after "Verlof": they were one unit until 5 November 2026 (see u.leave above).
+  { ...byId('u.sick'), lessons: [...byId('u.sick').lessons, ...sickMore] },
   // The Entree lessons in existing units (l.mychoice, l.nextstep, l.email, l.budget, l.healthy)
   // come at the end of their unit.
   ...laterUnits.map((u) => (entreeMore[u.id] ? { ...u, lessons: [...u.lessons, ...entreeMore[u.id]] } : u)),
@@ -3341,12 +3612,14 @@ export const workUnits: Unit[] = [
   stageUnit,
   societyUnit,
   onlineUnit,
+  // The newest sector unit (5 November 2026), at the very end (see "Transport and delivery" above).
+  deliveryUnit,
 ];
 
 const lessonOrder = [toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips].sort(
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

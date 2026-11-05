@@ -128,14 +128,29 @@ describe('the sentence', () => {
     // As the lesson player asks it (LessonPlayer, snapFitsAtStart).
     const fits = (s: { id: string; nl: string }) => hasClip(s.nl, voiceFor(snapColleague(s.id))) && Boolean(pl.gloss[s.id]);
     const all = teachingLessons.map((l) => l.id);
-    for (let k = 0; k < 60; k++) {
-      const day = addDays('2026-11-01', k);
-      if (!isSnapDay(day)) continue;
+    // 5 November 2026: the six lines of a day turn through all known sentences, and a stretch of
+    // them still waits for a recording (the Entree lessons, a new lesson: PENDING_RECORDING in
+    // tests/g4b3Clips.test.ts). A day whose six lines all wait has none, as in the player; with
+    // l.feelwell and l.newcolleague the days of November fell on such a stretch. So: days all
+    // round the turn (every seventh window), most of them with one, and every one there is fits.
+    const known = teachingLessons.flatMap((l) => l.sentences).length;
+    let days = 0;
+    let asked = 0;
+    for (let k = 0; k < known * SNAP_EVERY; k += 7 * SNAP_EVERY) {
+      const day = dayWhere(true, addDays('2026-11-01', k));
+      days++;
       const cards = cardsAfter(all, day);
-      const ex = snapExercise(dailyLesson(wordIds(cards).slice(0, 10), cards, day), () => 0.5, fits);
-      expect(ex, day).toBeDefined();
-      expect(fits(ex!.sentence)).toBe(true);
+      const lesson = dailyLesson(wordIds(cards).slice(0, 10), cards, day);
+      const ex = snapExercise(lesson, () => 0.5, fits);
+      if (!ex) {
+        expect(lesson.snap!.lines.some(fits), day).toBe(false);
+        continue;
+      }
+      asked++;
+      expect(fits(ex.sentence)).toBe(true);
     }
+    // 41 of 46 (5 November 2026).
+    expect(asked / days).toBeGreaterThan(0.75);
     // Nothing recorded: no "Snap je het?" (never a guess at a silent speaker).
     const day = dayWhere(true);
     const cards = cardsAfter(FIRST, day);

@@ -45,7 +45,10 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "Я можу сказати, що в моєму розрахунковому листі помилка.", // nieuw, nalezen
     'kjn.u.pay.2': "Я можу прочитати слова, як-от bruto і netto.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.leave.1': "Я можу попросити відпустку.", // nieuw, nalezen
-    'kjn.u.leave.2': "Я можу повідомити про хворобу і про одужання.", // nieuw, nalezen
+    'kjn.u.leave.2': "Я можу сказати, що моя дитина хвора.", // nieuw, nalezen
+    'kjn.u.sick.1': "Я можу повідомити про хворобу і про одужання.", // nieuw, nalezen
+    'kjn.u.sick.2': "Я можу сказати, чого ще не можу робити.", // nieuw, nalezen
+    'kjn.u.sick.3': "Я можу сказати, що спершу працюю по півдня.", // nieuw, nalezen
     'kjn.u.contact.1': "Я можу зателефонувати і сказати, хто я.", // nieuw, nalezen
     'kjn.u.contact.2': "Я можу попросити, щоб мені передзвонили.", // nieuw, nalezen
     'kjn.u.contact.3': "Я можу написати коротке повідомлення на роботу.", // nieuw, nalezen
@@ -79,6 +82,7 @@ const t: CultureTranslation = {
     'kjn.u.papers.2': "Я можу запитати, скільки коштує оренда.", // nieuw, nalezen
     'kjn.u.health.1': "Я можу сказати, де в мене болить.", // nieuw, nalezen
     'kjn.u.health.2': "Я можу попросити записати мене до сімейного лікаря.", // nieuw, nalezen
+    'kjn.u.health.3': "Я можу сказати, що роботи для мене стає забагато.", // nieuw, nalezen
     'kjn.u.money.1': "Я можу сказати, що не розумію листа.", // nieuw, nalezen
     'kjn.u.money.2': "Я можу сказати «ні» шахраю по телефону.", // nieuw, nalezen
     'kjn.u.travel.1': "Я можу розповісти, як я добираюся на роботу.", // nieuw, nalezen
@@ -91,6 +95,7 @@ const t: CultureTranslation = {
     'kjn.u.build.2': "Я можу попросити інструменти.", // nieuw, nalezen
     'kjn.u.factory.1': "Я можу сказати, що є несправність.", // nieuw, nalezen
     'kjn.u.factory.2': "Я можу сказати, що не так із виробом.", // nieuw, nalezen
+    'kjn.u.factory.3': "Я можу повідомити, що в мене невеликий поріз.", // nieuw, nalezen
     'kjn.u.care.1': "Я можу запитати клієнта, чи можу я допомогти.", // nieuw, nalezen
     'kjn.u.care.2': "Я можу щось передати медсестрі.", // nieuw, nalezen
     'kjn.u.horeca.1': "Я можу запитати гостей, що вони бажають випити.", // nieuw, nalezen
@@ -103,6 +108,10 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "Я можу сказати, що кабель зламаний.", // nieuw, nalezen
     'kjn.u.garage.1': "Я можу сказати, що шина пробита.", // nieuw, nalezen
     'kjn.u.garage.2': "Я можу сказати, що клієнт спершу має погодитися.", // nieuw, nalezen
+    // Vervoer en bezorging (5 november 2026).
+    'kjn.u.delivery.1': "Я можу сказати, що клієнта немає вдома.", // nieuw, nalezen
+    'kjn.u.delivery.2': "Я можу попросити сусідів узяти посилку.", // nieuw, nalezen
+    'kjn.u.delivery.3': "Я можу запитати, хто визначає мій маршрут і мій час.", // nieuw, nalezen
   },
 };
 

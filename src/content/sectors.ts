@@ -40,7 +40,9 @@ export interface Sector {
 }
 
 export const sectors: Sector[] = [
-  { id: 'logistics', nl: 'Logistiek', key: 'sectorLogistics', units: ['u.warehouse'], focus: ['u.safety', 'u.time'],
+  // "Vervoer en bezorging" (u.delivery, 5 November 2026): the second own unit of Logistiek (parcels,
+  // the van, the road), right after the warehouse in the sector slot.
+  { id: 'logistics', nl: 'Logistiek', key: 'sectorLogistics', units: ['u.warehouse', 'u.delivery'], focus: ['u.safety', 'u.time'],
     rules: { units: ['r.warehouse'], focus: ['r.veilig', 'r.tijd'] } },
   { id: 'construction', nl: 'Bouw', key: 'sectorConstruction', units: ['u.build'], focus: ['u.safety', 'u.tools'],
     rules: { units: ['r.build'], focus: ['r.veilig', 'r.contract'] } },
@@ -143,11 +145,13 @@ export function mainLessons(sector: SectorChoice | undefined, track: Track = 'ta
   return coursePlan(sector, track, region).main.flatMap((u) => u.lessons);
 }
 
-/** The units a sector weighs first when the learner chooses what's next: its own unit(s), then
- *  its focus units. Empty with no sector chosen (or "not sure yet"). */
+/** The units a sector weighs first when the learner chooses what's next: its (first) own unit,
+ *  then its focus units. A further own unit (Logistiek's "Vervoer en bezorging", 5 November 2026)
+ *  is not weighted: it comes in its place in the path, right after the first one, so the choices
+ *  of week 1 stay as they were. Empty with no sector chosen (or "not sure yet"). */
 export function sectorPriority(sector: SectorChoice | undefined, track: Track = 'taal'): string[] {
   const s = sectors.find((x) => x.id === sector);
-  return s ? [...ofTrack(s, track).units, ...ofTrack(s, track).focus] : [];
+  return s ? [...ofTrack(s, track).units.slice(0, 1), ...ofTrack(s, track).focus] : [];
 }
 
 /** A sector's own unit in a track (its words: the warehouse, the building site, care …). */

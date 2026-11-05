@@ -27,7 +27,7 @@ niveau**, geen toets en geen bewijs van een niveau.
 De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland, Jouw sector
 (`src/i18n/kunjenu/`, gemarkeerd met "nieuw, nalezen"). Werkregels is alleen Nederlands.
 
-## Taal (40 onderwerpen, 89 zinnen)
+## Taal (42 onderwerpen, 97 zinnen)
 
 | Onderwerp | Zinnen | Past bij |
 |---|---|---|
@@ -61,8 +61,11 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan zeggen dat ik ziek ben. | A1 · spreken |
 | Loon | Ik kan zeggen dat mijn loonstrook niet klopt. | op weg naar A2 · spreken |
 |  | Ik kan woorden als bruto en netto lezen. | op weg naar A2 · lezen |
-| Verlof en ziekte | Ik kan verlof aanvragen. | op weg naar A2 · spreken |
-|  | Ik kan me ziek melden en beter melden. | op weg naar A2 · gesprekken |
+| Verlof | Ik kan verlof aanvragen. | op weg naar A2 · spreken |
+|  | Ik kan zeggen dat mijn kind ziek is. | op weg naar A2 · gesprekken |
+| Ziekte | Ik kan me ziek melden en beter melden. | op weg naar A2 · gesprekken |
+|  | Ik kan zeggen wat ik nog niet kan. | op weg naar A2 · spreken |
+|  | Ik kan zeggen dat ik eerst halve dagen werk. | op weg naar A2 · gesprekken |
 | Bellen en appen met je werk | Ik kan bellen en zeggen wie ik ben. | A1 · gesprekken |
 |  | Ik kan vragen of iemand mij terugbelt. | op weg naar A2 · spreken |
 |  | Ik kan een kort bericht aan mijn werk schrijven. | op weg naar A2 · schrijven |
@@ -96,6 +99,7 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan vragen hoeveel de huur is. | op weg naar A2 · spreken |
 | Gezondheid | Ik kan zeggen waar ik pijn heb. | A1 · spreken |
 |  | Ik kan een afspraak bij de huisarts vragen. | op weg naar A2 · gesprekken |
+|  | Ik kan zeggen dat het werk me te veel wordt. | op weg naar A2 · spreken |
 | Geld en post | Ik kan zeggen dat ik een brief niet begrijp. | op weg naar A2 · spreken |
 |  | Ik kan nee zeggen tegen een oplichter aan de telefoon. | op weg naar A2 · gesprekken |
 | Naar je werk | Ik kan vertellen hoe ik naar mijn werk kom. | A1 · gesprekken |
@@ -108,6 +112,7 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan om gereedschap vragen. | A1 · spreken |
 | In de productie | Ik kan zeggen dat er een storing is. | A1 · spreken |
 |  | Ik kan zeggen wat er mis is met een product. | op weg naar A2 · gesprekken |
+|  | Ik kan melden dat ik een wondje heb. | A1 · spreken |
 | In de zorg | Ik kan een cliënt vragen of ik mag helpen. | op weg naar A2 · gesprekken |
 |  | Ik kan iets doorgeven aan de verpleegkundige. | op weg naar A2 · spreken |
 | In de horeca | Ik kan gasten vragen wat ze willen drinken. | A1 · gesprekken |
@@ -120,6 +125,9 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan zeggen dat een kabel kapot is. | A1 · spreken |
 | In de garage | Ik kan zeggen dat een band lek is. | A1 · spreken |
 |  | Ik kan zeggen dat de klant eerst akkoord moet zijn. | op weg naar A2 · gesprekken |
+| Vervoer en bezorging | Ik kan zeggen dat de klant niet thuis is. | A1 · spreken |
+|  | Ik kan de buren vragen een pakket aan te nemen. | op weg naar A2 · gesprekken |
+|  | Ik kan vragen wie mijn route en mijn tijden bepaalt. | op weg naar A2 · spreken |
 
 ## Werkregels (28 onderwerpen, 58 zinnen)
 

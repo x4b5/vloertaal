@@ -198,6 +198,26 @@ const t: CultureTranslation = {
     's.clear.3': 'Pardon, je parle trop vite et trop.', // nieuw, nalezen
     'd.clear.q': 'C’est clair ?', // nieuw, nalezen
     'd.clear.a': 'Oui. J’ai encore une question.', // nieuw, nalezen
+    'l.newcolleague': "Aider un nouveau collègue", // nieuw, nalezen
+    'w.welkom': "bienvenue", // nieuw, nalezen
+    'w.inwerken': "former un nouveau collègue (les premiers jours)", // nieuw, nalezen
+    'w.stap': "l’étape (une petite partie d’une tâche)", // nieuw, nalezen
+    'w.nadoen': "refaire, imiter (faire ce que quelqu’un t’a montré)", // nieuw, nalezen
+    'w.geduld': "la patience", // nieuw, nalezen
+    'w.kast': "le placard, l’armoire", // nieuw, nalezen
+    's.newcolleague.1': "Bienvenue ! Aujourd’hui, je te montre le travail.", // nieuw, nalezen
+    's.newcolleague.2': "Regarde d’abord. Ensuite, tu refais pareil.", // nieuw, nalezen
+    's.newcolleague.3': "Les gants sont dans ce placard.", // nieuw, nalezen
+    'd.newcolleague.q': "J’ai compris, je crois.", // nieuw, nalezen
+    'd.newcolleague.a': "Bien. Montre-moi.", // nieuw, nalezen
+    'c.newcolleague': "Montre-le, étape par étape", // nieuw, nalezen
+    'c.newcolleague.b': "Ce qui était difficile pour toi les premières semaines l’est aussi pour un nouveau collègue. Explique le travail en petites étapes : d’abord ceci, puis cela. Ne parle pas plus vite ni plus fort : montre, et laisse-le refaire après toi. Ne demande pas “Snap je het?” : beaucoup de gens disent oui, même quand ils ne comprennent pas. Dis plutôt “Laat eens zien”, et regarde. Dis-lui où sont les choses, comme les toilettes, la cantine et les gants. Aie de la patience (geduld) : apprendre prend du temps, pour tout le monde.", // nieuw, nalezen
+    'c.newcolleague.p': "Bravo ! Maintenant, l’étape suivante.", // nieuw, nalezen
+    'c.newcolleague.s': "Tu expliques une tâche à un nouveau collègue. Il dit : “Ja, ja, ik snap het.” Que fais-tu ?", // nieuw, nalezen
+    'c.newcolleague.o1': "Tu dis “Laat eens zien,” et tu le regardes faire.", // nieuw, nalezen
+    'c.newcolleague.o2': "Tu dis “Goed zo,” et tu retournes à ton travail.", // nieuw, nalezen
+    'c.newcolleague.o3': "Tu réexpliques tout, plus vite et plus fort.", // nieuw, nalezen
+    'c.newcolleague.w': "Beaucoup de gens disent “ja”, même quand ils n’ont pas compris. Quand il le montre, vous voyez tous les deux si ça marche. C’est plus rapide que de corriger une erreur plus tard.", // nieuw, nalezen
   },
 };
 
