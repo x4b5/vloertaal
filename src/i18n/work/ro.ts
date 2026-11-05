@@ -227,7 +227,7 @@ const t: CultureTranslation = {
     's.rights.3': 'Asta e discriminare.',
     'c.rights.q': 'Semnează aici pentru concedierea ta.',
     'c.rights.a': 'Nu, încă nu semnez.',
-    'u.leave': 'Concediu și boală',
+    'u.leave': "Concediu", // nieuw, nalezen
     'l.leave': 'Zile libere',
     'w.vakantiedagen': 'zilele de concediu',
     'w.verlof': 'concediul',
@@ -1699,6 +1699,109 @@ const t: CultureTranslation = {
     'c.healthy.o2': "Iei o jumătate de pastilă, nu e periculos.", // nieuw, nalezen
     'c.healthy.o3': "O iei, dar nu spui nimănui de la lucru.", // nieuw, nalezen
     'c.healthy.w': { m: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să rămâi treaz.", f: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să rămâi trează.", x: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să rămâi treaz / trează." }, // nieuw, nalezen
+    // Vertaalronde 5 november 2026: u.sick (l.backtowork), l.feelwell, l.food, u.delivery (l.parcel, l.road).
+    'u.sick': "Boală", // nieuw, nalezen
+    'l.backtowork': "Înapoi la muncă după boală", // nieuw, nalezen
+    'w.opbouwen': "a crește treptat (încet, pas cu pas)", // nieuw, nalezen
+    'w.halvedagen': "jumătăți de zi (lucrezi doar o parte din zi)", // nieuw, nalezen
+    'w.lichtwerk': "munca ușoară (nu e grea)", // nieuw, nalezen
+    'w.zwaarwerk': "munca grea", // nieuw, nalezen
+    'w.herstellen': "a se reface, a se face bine", // nieuw, nalezen
+    'w.welkomterug': "bine ai revenit", // nieuw, nalezen
+    's.backtowork.1': "Încep cu jumătăți de zi.", // nieuw, nalezen
+    's.backtowork.2': "Pot să fac deja muncă ușoară. Muncă grea încă nu.", // nieuw, nalezen
+    's.backtowork.3': "Medicul de medicina muncii spune: crește treptat, încet.", // nieuw, nalezen
+    'c.backtowork.q': "Bine ai revenit! Te simți mai bine?", // nieuw, nalezen
+    'c.backtowork.a': "Da, merge mai bine. O iau ușor.", // nieuw, nalezen
+    'c.backtowork': "Revii pas cu pas", // nieuw, nalezen
+    'c.backtowork.b': "Te simți mai bine? Spune-i angajatorului că poți lucra din nou (betermelden). După o boală mai lungă, de multe ori începi pas cu pas: întâi mai puține ore sau muncă mai ușoară. Medicul de medicina muncii (bedrijfsarts) te sfătuiește ce poți face. Boala durează mai mult? Atunci tu și angajatorul faceți împreună un plan pentru întoarcerea ta. Așa spune legea (Wet verbetering poortwachter). Spune clar ce poți face și ce nu încă. Nu trebuie să le spui colegilor ce boală ai avut. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.backtowork.p': "Asta pot deja. Aia încă nu pot.", // nieuw, nalezen
+    'c.backtowork.s': { m: "Ai fost bolnav trei săptămâni. În prima zi după întoarcere, șeful îți cere să ridici cutii grele. Medicul de medicina muncii a spus: deocamdată doar muncă ușoară. Ce faci?", f: "Ai fost bolnavă trei săptămâni. În prima zi după întoarcere, șeful îți cere să ridici cutii grele. Medicul de medicina muncii a spus: deocamdată doar muncă ușoară. Ce faci?", x: "Ai lipsit trei săptămâni din cauza bolii. În prima zi după întoarcere, șeful îți cere să ridici cutii grele. Medicul de medicina muncii a spus: deocamdată doar muncă ușoară. Ce faci?" }, // nieuw, nalezen
+    'c.backtowork.o1': "Spui calm că acum poți face muncă ușoară și ce nu poți face încă.", // nieuw, nalezen
+    'c.backtowork.o2': "Ridici totuși cutiile: nu vrei să faci probleme.", // nieuw, nalezen
+    'c.backtowork.o3': "Pleci acasă fără un cuvânt.", // nieuw, nalezen
+    'c.backtowork.w': "Șeful vrea să revii la muncă și să fii bine. Când spui clar ce poți face, poate planifica munca. Prea mult, prea devreme te poate îmbolnăvi din nou.", // nieuw, nalezen
+    'l.feelwell': "Să te simți bine la muncă", // nieuw, nalezen
+    'w.werkdruk': "presiunea la muncă (prea mult de lucru în prea puțin timp)", // nieuw, nalezen
+    'w.wakkerliggen': "a sta treaz în pat (nu poți dormi)", // nieuw, nalezen
+    'w.ploegendienst': "munca în schimburi (schimburi de dimineață, de după-amiază și de noapte, pe rând)", // nieuw, nalezen
+    'w.heimwee': "dorul de casă (îți lipsește casa)", // nieuw, nalezen
+    'w.familie': "familia", // nieuw, nalezen
+    'w.alleen': "singur", // nieuw, nalezen
+    's.feelwell.1': "Dorm prost din cauza muncii în schimburi.", // nieuw, nalezen
+    's.feelwell.2': { m: "E prea mult. Nu mă descurc singur.", f: "E prea mult. Nu mă descurc singură.", x: "E prea mult. Nu mă descurc fără ajutor." }, // nieuw, nalezen
+    's.feelwell.3': "Mi-e dor de casă. Familia mea e departe.", // nieuw, nalezen
+    'c.feelwell.q': "E totul în regulă cu tine?", // nieuw, nalezen
+    'c.feelwell.a': { m: "Nu prea. Des stau treaz în pat.", f: "Nu prea. Des stau trează în pat.", x: "Nu prea. Des nu pot să adorm." }, // nieuw, nalezen
+    'c.feelwell': { m: "Prea mult? Nu trebuie să faci totul singur", f: "Prea mult? Nu trebuie să faci totul singură", x: "Prea mult? Nu trebuie să faci totul fără ajutor" }, // nieuw, nalezen
+    'c.feelwell.b': "Toată lumea se simte uneori obosită, stresată sau tristă. Prea mult de lucru (werkdruk), somnul prost din cauza schimburilor sau dorul de familie pot face totul greu. Nu trebuie să duci povara fără ajutor, iar să spui „e prea mult” nu e o slăbiciune. Vorbește cu cineva în care ai încredere: cu șeful, cu persoana de încredere (vertrouwenspersoon, dacă există), cu medicul de medicina muncii (bedrijfsarts) sau cu medicul tău de familie (huisarts). Poți cere și tu o discuție cu medicul de medicina muncii. Medicii nu-i spun șefului ce le-ai spus. Te gândești la sinucidere sau îți faci griji pentru cineva? Sună la 113 (gratuit, zi și noapte) sau scrie pe chat la 113.nl.", // nieuw, nalezen
+    'c.feelwell.p': "Nu mă simt prea bine. Pot să vorbesc puțin cu tine?", // nieuw, nalezen
+    'c.feelwell.s': { m: "De câteva săptămâni dormi prost și munca e prea multă. Te simți foarte obosit. Ce faci?", f: "De câteva săptămâni dormi prost și munca e prea multă. Te simți foarte obosită. Ce faci?", x: "De câteva săptămâni dormi prost și munca e prea multă. Simți o oboseală foarte mare. Ce faci?" }, // nieuw, nalezen
+    'c.feelwell.o1': "Îi spui șefului sau medicului de medicina muncii.", // nieuw, nalezen
+    'c.feelwell.o2': "Nu spui nimic și muncești mai mult și mai repede.", // nieuw, nalezen
+    'c.feelwell.o3': "Rămâi acasă și nu spui nimănui de ce.", // nieuw, nalezen
+    'c.feelwell.w': "Să spui asta din timp nu e o slăbiciune. Atunci puteți căuta împreună o soluție, de exemplu alte schimburi. Nu trebuie să treci prin asta fără ajutor.", // nieuw, nalezen
+    'l.food': "Lucrul cu alimente", // nieuw, nalezen
+    'w.mes': "cuțitul", // nieuw, nalezen
+    'w.snijhandschoen': "mănușa anti-tăiere (o mănușă care te apără de tăieturi)", // nieuw, nalezen
+    'w.vriescel': "camera de congelare (o cameră foarte rece)", // nieuw, nalezen
+    'w.sieraden': "bijuteriile (un inel, un ceas, cercei)", // nieuw, nalezen
+    'w.pleister': "plasturele (pentru o tăietură mică)", // nieuw, nalezen
+    'w.vlees': "carnea", // nieuw, nalezen
+    's.food.1': "Îmi dau jos bijuteriile.", // nieuw, nalezen
+    's.food.2': "Unde sunt mănușile anti-tăiere?", // nieuw, nalezen
+    's.food.3': "În camera de congelare port o geacă groasă.", // nieuw, nalezen
+    'c.food.q': "De ce curățăm linia acum?", // nieuw, nalezen
+    'c.food.a': "Urmează un produs fără nuci.", // nieuw, nalezen
+    'c.food': "Mâini curate, alimente sigure", // nieuw, nalezen
+    'c.food.b': "Lucrul cu alimente are reguli stricte de igienă: boneta, haine de lucru curate, mâini spălate și fără bijuterii. Aceste reguli sunt aceleași pentru toți. Ele nu spun nimic despre tine: păstrează alimentele sigure pentru oamenii care le mănâncă. Când lucrezi cu cuțitul, poartă mereu mănușa anti-tăiere. Într-o cameră rece sau într-o cameră de congelare, poartă hainele groase pe care le primești și încălzește-te în pauză. Te simți rău sau ai o rană la mână? Anunță asta înainte să începi. Atunci poți primi un plasture special sau, pentru o vreme, altă muncă. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.food.p': "Am o tăietură mică la mână. Pot să primesc un plasture?", // nieuw, nalezen
+    'c.food.s': "Acasă te-ai tăiat puțin la deget. Azi lucrezi cu carne. Ce faci?", // nieuw, nalezen
+    'c.food.o1': "Îi spui șefului și ceri un plasture.", // nieuw, nalezen
+    'c.food.o2': "Nu spui nimic: e doar o tăietură mică.", // nieuw, nalezen
+    'c.food.o3': "Pui o mănușă peste ea, ca să nu vadă nimeni.", // nieuw, nalezen
+    'c.food.w': "O rană mică poate aduce microbi în alimente. Când o anunți, poți primi un plasture special sau, pentru o vreme, altă muncă. E normal s-o anunți: nimeni nu te învinovățește pentru asta.", // nieuw, nalezen
+    'u.delivery': "Transport și livrări", // nieuw, nalezen
+    'l.parcel': "Livrarea coletelor", // nieuw, nalezen
+    'w.pakket': "coletul", // nieuw, nalezen
+    'w.bestelbus': "duba de livrare", // nieuw, nalezen
+    'w.bezorgen': "a livra (a duce la client)", // nieuw, nalezen
+    'w.inladen': "a încărca (a pune lucrurile în dubă)", // nieuw, nalezen
+    'w.aanbellen': "a suna la ușă", // nieuw, nalezen
+    'w.bewijs': "dovada (ceva care arată ce s-a întâmplat)", // nieuw, nalezen
+    's.parcel.1': "Scanez fiecare colet.", // nieuw, nalezen
+    's.parcel.2': "Clientul nu e acasă.", // nieuw, nalezen
+    's.parcel.3': "Ați putea primi un colet pentru vecini?", // nieuw, nalezen
+    'c.parcel.q': "Coletul ăsta e pentru mine?", // nieuw, nalezen
+    'c.parcel.a': "Da. Semnați aici, vă rog.", // nieuw, nalezen
+    'l.road': "În siguranță și corect pe drum", // nieuw, nalezen
+    'w.rijden': "a conduce (o mașină)", // nieuw, nalezen
+    'w.zwaar': "greu", // nieuw, nalezen
+    'w.steekwagen': "căruciorul de mână (un cărucior pentru cutii grele)", // nieuw, nalezen
+    'w.route': "traseul (drumul pe care îl faci)", // nieuw, nalezen
+    'w.loondienst': "cu contract de muncă (lucrezi pentru un patron și primești salariu)", // nieuw, nalezen
+    'w.bepalen': "a decide (a spune cum trebuie făcut)", // nieuw, nalezen
+    's.road.1': "Coletul ăsta e prea greu. Iau căruciorul.", // nieuw, nalezen
+    's.road.2': "E alunecos. Conduc încet.", // nieuw, nalezen
+    's.road.3': "Cine decide traseul și orele mele?", // nieuw, nalezen
+    'c.road.q': "Mai poți face o cursă azi?", // nieuw, nalezen
+    'c.road.a': "Nu, atunci nu mai am timp de pauză.", // nieuw, nalezen
+    'c.parcel': "Nu e nimeni acasă sau coletul e deteriorat", // nieuw, nalezen
+    'c.parcel.b': "Clientul nu e acasă? Urmează regulile firmei tale: încearcă la vecini sau ia coletul înapoi. Nu-l lăsa pur și simplu la ușă, decât dacă clientul a cerut asta. Un colet e deteriorat sau ud? Nu-l livra ca și cum totul ar fi în regulă. Fă o poză ca dovadă și raportează în scaner sau în aplicație. E mereu mai bine să spui sincer o problemă decât s-o ascunzi. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.parcel.p': "Coletul ăsta e deteriorat. Uite o poză.", // nieuw, nalezen
+    'c.parcel.s': "Clientul nu e acasă, iar vecinii nici ei. Ce faci?", // nieuw, nalezen
+    'c.parcel.o1': "Scanezi „nu e acasă” și iei coletul înapoi.", // nieuw, nalezen
+    'c.parcel.o2': "Îl scanezi ca livrat și îl lași la ușă.", // nieuw, nalezen
+    'c.parcel.o3': "Îl ascunzi după tomberon, ca să nu-l vadă nimeni.", // nieuw, nalezen
+    'c.parcel.w': "Un colet scanat ca livrat trebuie să fie chiar la client. Când scanezi ce s-a întâmplat de fapt, clientul poate primi coletul mai târziu și nimeni nu crede că l-ai pierdut.", // nieuw, nalezen
+    'c.road': "În siguranță pe drum și muncă corectă", // nieuw, nalezen
+    'c.road.b': "Nu ține niciodată telefonul în mână când conduci: e interzis. Folosește un suport pentru navigație. Ia-ți pauzele, și într-o zi aglomerată. Un colet greu? Folosește căruciorul sau ridicați-l împreună. Gheață sau zăpadă? Condu încet: e mai bine să întârzii decât să ai un accident. Unele firme spun că lucrezi pe cont propriu (zelfstandig). Dar cine decide orele, traseul și hainele tale? Dacă firma decide toate astea, s-ar putea să lucrezi totuși cu contract de muncă (in loondienst). Atunci ai adesea mai multe drepturi, de exemplu salariu în timpul bolii. Mai multe despre asta în lecția „Acte, integrare și munca ta”. Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.", // nieuw, nalezen
+    'c.road.p': "Acum îmi iau pauza. Apoi conduc mai departe.", // nieuw, nalezen
+    'c.road.s': "Firma spune că lucrezi pe cont propriu. Dar ea decide orele, traseul și hainele tale. Ce faci?", // nieuw, nalezen
+    'c.road.o1': "Ceri un sfat: poate lucrezi de fapt cu contract de muncă.", // nieuw, nalezen
+    'c.road.o2': "Nimic: în contract scrie „pe cont propriu”, deci așa e.", // nieuw, nalezen
+    'c.road.o3': "Lucrezi mai multe ore, ca să câștigi la fel.", // nieuw, nalezen
+    'c.road.w': "Contează cum lucrezi de fapt, nu doar cuvântul din contract. Dacă firma decide cum, când și unde lucrezi, de multe ori lucrezi cu contract de muncă. Atunci ai mai multe drepturi.", // nieuw, nalezen
   },
 };
 

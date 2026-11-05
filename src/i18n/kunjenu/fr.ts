@@ -45,7 +45,7 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "Je peux dire que ma fiche de paie n’est pas juste.", // nieuw, nalezen
     'kjn.u.pay.2': "Je peux lire des mots comme bruto et netto.", // nieuw, nalezen
     'kjn.u.leave.1': "Je peux demander un congé.", // nieuw, nalezen
-    'kjn.u.leave.2': "Je peux me déclarer malade, puis annoncer mon retour.", // nieuw, nalezen
+    'kjn.u.leave.2': "Je peux dire que mon enfant est malade.", // nieuw, nalezen
     'kjn.u.contact.1': "Je peux appeler et dire qui je suis.", // nieuw, nalezen
     'kjn.u.contact.2': "Je peux demander qu’on me rappelle.", // nieuw, nalezen
     'kjn.u.contact.3': "Je peux écrire un court message à mon travail.", // nieuw, nalezen // nagelezen AI ronde 3
@@ -103,6 +103,14 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "Je peux dire qu’un câble est abîmé.", // nieuw, nalezen
     'kjn.u.garage.1': "Je peux dire qu’un pneu est crevé.", // nieuw, nalezen
     'kjn.u.garage.2': "Je peux dire que le client doit d’abord être d’accord.", // nieuw, nalezen
+    'kjn.u.sick.1': "Je peux me déclarer malade, puis annoncer mon retour.", // nieuw, nalezen
+    'kjn.u.sick.2': "Je peux dire ce que je ne peux pas encore faire.", // nieuw, nalezen
+    'kjn.u.sick.3': "Je peux dire que je travaille d’abord des demi-journées.", // nieuw, nalezen
+    'kjn.u.health.3': "Je peux dire que le travail devient trop pour moi.", // nieuw, nalezen
+    'kjn.u.factory.3': "Je peux signaler que j’ai une petite coupure.", // nieuw, nalezen
+    'kjn.u.delivery.1': "Je peux dire que le client n’est pas chez lui.", // nieuw, nalezen
+    'kjn.u.delivery.2': "Je peux demander aux voisins de prendre un colis.", // nieuw, nalezen
+    'kjn.u.delivery.3': "Je peux demander qui décide de ma tournée et de mes horaires.", // nieuw, nalezen
   },
 };
 

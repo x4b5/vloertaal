@@ -45,7 +45,7 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "Ich kann sagen, dass meine Lohnabrechnung nicht stimmt.", // nieuw, nalezen
     'kjn.u.pay.2': "Ich kann Wörter wie bruto und netto lesen.", // nieuw, nalezen
     'kjn.u.leave.1': "Ich kann Urlaub beantragen.", // nieuw, nalezen
-    'kjn.u.leave.2': "Ich kann mich krankmelden und wieder gesund melden.", // nieuw, nalezen
+    'kjn.u.leave.2': "Ich kann sagen, dass mein Kind krank ist.", // nieuw, nalezen
     'kjn.u.contact.1': "Ich kann anrufen und sagen, wer ich bin.", // nieuw, nalezen
     'kjn.u.contact.2': "Ich kann jemanden bitten, mich zurückzurufen.", // nieuw, nalezen
     'kjn.u.contact.3': "Ich kann meinem Arbeitgeber eine kurze Nachricht schreiben.", // nieuw, nalezen (AI-correctie 2 nov 2026)
@@ -103,6 +103,14 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "Ich kann sagen, dass ein Kabel kaputt ist.", // nieuw, nalezen
     'kjn.u.garage.1': "Ich kann sagen, dass ein Reifen platt ist.", // nieuw, nalezen
     'kjn.u.garage.2': "Ich kann sagen, dass der Kunde erst einverstanden sein muss.", // nieuw, nalezen
+    'kjn.u.sick.1': "Ich kann mich krankmelden und wieder gesund melden.", // nieuw, nalezen
+    'kjn.u.sick.2': "Ich kann sagen, was ich noch nicht kann.", // nieuw, nalezen
+    'kjn.u.sick.3': "Ich kann sagen, dass ich zuerst halbe Tage arbeite.", // nieuw, nalezen
+    'kjn.u.health.3': "Ich kann sagen, dass mir die Arbeit zu viel wird.", // nieuw, nalezen
+    'kjn.u.factory.3': "Ich kann melden, dass ich eine kleine Schnittwunde habe.", // nieuw, nalezen
+    'kjn.u.delivery.1': "Ich kann sagen, dass der Kunde nicht zu Hause ist.", // nieuw, nalezen
+    'kjn.u.delivery.2': "Ich kann die Nachbarn bitten, ein Paket anzunehmen.", // nieuw, nalezen
+    'kjn.u.delivery.3': "Ich kann fragen, wer meine Route und meine Zeiten bestimmt.", // nieuw, nalezen
   },
 };
 

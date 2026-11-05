@@ -45,7 +45,10 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "Umiem powiedzieć, że mój pasek wypłaty się nie zgadza.", // nieuw, nalezen
     'kjn.u.pay.2': "Umiem przeczytać słowa takie jak bruto i netto.", // nieuw, nalezen
     'kjn.u.leave.1': "Umiem poprosić o urlop.", // nieuw, nalezen
-    'kjn.u.leave.2': "Umiem zgłosić chorobę i powrót do pracy.", // nieuw, nalezen
+    'kjn.u.leave.2': "Umiem powiedzieć, że moje dziecko jest chore.", // nieuw, nalezen
+    'kjn.u.sick.1': "Umiem zgłosić chorobę i powrót do pracy.", // nieuw, nalezen
+    'kjn.u.sick.2': "Umiem powiedzieć, czego jeszcze nie mogę robić.", // nieuw, nalezen
+    'kjn.u.sick.3': "Umiem powiedzieć, że na początku pracuję po pół dnia.", // nieuw, nalezen
     'kjn.u.contact.1': "Umiem zadzwonić i powiedzieć, kim jestem.", // nieuw, nalezen
     'kjn.u.contact.2': "Umiem poprosić, żeby ktoś do mnie oddzwonił.", // nieuw, nalezen
     'kjn.u.contact.3': "Umiem napisać krótką wiadomość do pracy.", // nieuw, nalezen
@@ -79,6 +82,7 @@ const t: CultureTranslation = {
     'kjn.u.papers.2': "Umiem zapytać, ile wynosi czynsz.", // nieuw, nalezen
     'kjn.u.health.1': "Umiem powiedzieć, gdzie mnie boli.", // nieuw, nalezen
     'kjn.u.health.2': "Umiem poprosić o wizytę u lekarza rodzinnego.", // nieuw, nalezen
+    'kjn.u.health.3': "Umiem powiedzieć, że pracy jest dla mnie za dużo.", // nieuw, nalezen
     'kjn.u.money.1': "Umiem powiedzieć, że nie rozumiem listu.", // nieuw, nalezen
     'kjn.u.money.2': "Umiem odmówić oszustowi przez telefon.", // nieuw, nalezen
     'kjn.u.travel.1': "Umiem powiedzieć, jak dojeżdżam do pracy.", // nieuw, nalezen
@@ -91,6 +95,7 @@ const t: CultureTranslation = {
     'kjn.u.build.2': "Umiem poprosić o narzędzia.", // nieuw, nalezen
     'kjn.u.factory.1': "Umiem powiedzieć, że jest awaria.", // nieuw, nalezen
     'kjn.u.factory.2': "Umiem powiedzieć, co jest nie tak z produktem.", // nieuw, nalezen
+    'kjn.u.factory.3': "Umiem zgłosić, że mam małe skaleczenie.", // nieuw, nalezen
     'kjn.u.care.1': "Umiem zapytać podopiecznego, czy mogę pomóc.", // nieuw, nalezen
     'kjn.u.care.2': "Umiem coś przekazać pielęgniarce.", // nieuw, nalezen
     'kjn.u.horeca.1': "Umiem zapytać gości, co podać do picia.", // nieuw, nalezen
@@ -103,6 +108,10 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "Umiem powiedzieć, że kabel jest zepsuty.", // nieuw, nalezen
     'kjn.u.garage.1': "Umiem powiedzieć, że opona jest przebita.", // nieuw, nalezen
     'kjn.u.garage.2': "Umiem powiedzieć, że klient musi się najpierw zgodzić.", // nieuw, nalezen
+    // Vervoer en bezorging (5 november 2026).
+    'kjn.u.delivery.1': "Umiem powiedzieć, że klienta nie ma w domu.", // nieuw, nalezen
+    'kjn.u.delivery.2': "Umiem poprosić sąsiadów, żeby przyjęli paczkę.", // nieuw, nalezen
+    'kjn.u.delivery.3': "Umiem zapytać, kto decyduje o mojej trasie i moich godzinach.", // nieuw, nalezen
   },
 };
 

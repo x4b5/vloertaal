@@ -198,6 +198,27 @@ const t: CultureTranslation = {
     's.clear.3': 'Извинявай, говоря твърде бързо и твърде много.', // nieuw, nalezen
     'd.clear.q': 'Ясно ли е?', // nieuw, nalezen
     'd.clear.a': 'Да. Имам още един въпрос.', // nieuw, nalezen
+    // Vertaalronde 5 november 2026: l.newcolleague en c.newcolleague.
+    'l.newcolleague': "Помощ за нов колега", // nieuw, nalezen
+    'w.welkom': "добре дошли", // nieuw, nalezen
+    'w.inwerken': "въвеждам в работата (показвам работата на нов колега в първите дни)", // nieuw, nalezen
+    'w.stap': "стъпката (една малка част от задача)", // nieuw, nalezen
+    'w.nadoen': "повтарям след някого (правя това, което са ми показали)", // nieuw, nalezen
+    'w.geduld': "търпението", // nieuw, nalezen
+    'w.kast': "шкафът", // nieuw, nalezen
+    's.newcolleague.1': "Добре дошъл! Днес ще те въведа в работата.", // nieuw, nalezen
+    's.newcolleague.2': "Първо гледай. После повтори след мен.", // nieuw, nalezen
+    's.newcolleague.3': "Ръкавиците са в онзи шкаф.", // nieuw, nalezen
+    'd.newcolleague.q': "Мисля, че разбрах.", // nieuw, nalezen
+    'd.newcolleague.a': "Добре. Покажи ми.", // nieuw, nalezen
+    'c.newcolleague': "Покажи го, стъпка по стъпка", // nieuw, nalezen
+    'c.newcolleague.b': "Това, което ти е било трудно в първите седмици, е трудно и за новия колега. Обяснявай работата на малки стъпки: първо това, после онова. Не говори по-бързо или по-силно: покажи и го остави да повтори след теб. Не питай „Snap je het?“: много хора казват „да“, и когато не разбират. Вместо това кажи „Laat eens zien“ и гледай. Кажи му къде какво има, например тоалетната, столовата и ръкавиците. Имай търпение (geduld): ученето отнема време, за всеки.", // nieuw, nalezen
+    'c.newcolleague.p': "Браво! Сега следващата стъпка.", // nieuw, nalezen
+    'c.newcolleague.s': "Обясняваш задача на нов колега. Той казва: „Ja, ja, ik snap het.“ Какво правиш?", // nieuw, nalezen
+    'c.newcolleague.o1': "Казваш „Laat eens zien“ и гледаш как го прави.", // nieuw, nalezen
+    'c.newcolleague.o2': "Казваш „Goed zo“ и се връщаш към своята работа.", // nieuw, nalezen
+    'c.newcolleague.o3': "Обясняваш всичко още веднъж, по-бързо и по-силно.", // nieuw, nalezen
+    'c.newcolleague.w': "Много хора казват „ja“, и когато не са разбрали. Когато той го покаже, и двамата виждате дали става. Това е по-бързо, отколкото да поправяте грешка после.", // nieuw, nalezen
   },
 };
 

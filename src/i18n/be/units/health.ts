@@ -326,6 +326,14 @@ export const es: Gloss = {
     "be.c.insurance.o2": "Esperas: el seguro de tu país es suficiente.", // = c.insurance.o2
     "be.c.insurance.o3": "Usas la tarjeta del seguro de un amigo.", // = c.insurance.o3
     "be.c.insurance.w": "Sin ziekenfonds, el médico y el hospital los pagas tú. Apuntarte pronto te protege. Tu empresa o tu agencia de trabajo temporal te pueden ayudar.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.feelwell": "¿Demasiado? No tienes que hacerlo sin ayuda", // nieuw, nalezen
+    "be.c.feelwell.b": "Todo el mundo se siente a veces cansado, estresado o triste. Demasiado trabajo (werkdruk), dormir mal por los turnos o echar de menos a tu familia pueden hacerlo pesado. No tienes que cargar con ello sin ayuda, y decir “es demasiado” no es ser débil. Habla con alguien de confianza: tu encargado, la persona de confianza (vertrouwenspersoon) o el asesor de prevención (preventieadviseur psychosociale aspecten), el médico del trabajo (arbeidsarts) o tu médico de cabecera (huisarts). También puedes pedir por tu cuenta una conversación con el médico del trabajo. Los médicos no le cuentan a tu jefe lo que les has dicho. ¿Piensas en el suicidio, o te preocupa alguien? Llama al 1813 (gratis, de día y de noche), o chatea en zelfmoord1813.be.", // nieuw, nalezen
+    "be.c.feelwell.p": "No estoy muy bien. ¿Puedo hablar contigo un momento?", // nieuw, nalezen
+    "be.c.feelwell.s": { m: "Desde hace semanas duermes mal y el trabajo es demasiado. Te sientes muy cansado. ¿Qué haces?", f: "Desde hace semanas duermes mal y el trabajo es demasiado. Te sientes muy cansada. ¿Qué haces?", x: "Desde hace semanas duermes mal y el trabajo es demasiado. Sientes mucho cansancio. ¿Qué haces?" }, // nieuw, nalezen
+    "be.c.feelwell.o1": "Se lo dices a tu encargado o al médico del trabajo (arbeidsarts).", // nieuw, nalezen
+    "be.c.feelwell.o2": "No dices nada, y trabajas más y más rápido.", // nieuw, nalezen
+    "be.c.feelwell.o3": "Te quedas en casa, y no le dices a nadie por qué.", // nieuw, nalezen
+    "be.c.feelwell.w": "Decirlo pronto no es ser débil. Entonces se puede buscar una solución entre todos, por ejemplo otros turnos. No tienes que hacerlo sin ayuda.", // nieuw, nalezen
 };
 
 export const pt: Gloss = {

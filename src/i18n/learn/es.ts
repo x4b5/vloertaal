@@ -122,6 +122,12 @@ const t: CultureTranslation = {
     'c.email.a.why': "Te preguntan si lo has enviado: todavía no, primero se revisa.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.budget.a.why': "Te ofrecen pagar después: un no educado, con la razón.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.healthy.a.why': "Te ofrecen una pastilla: un no educado, con la razón.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'd.newcolleague.a.why': "“Creo” todavía no es seguro: pedir que lo enseñe comprueba que funciona.", // nieuw, nalezen
+    'c.food.a.why': "Te preguntan por qué se limpia la línea: el siguiente producto no lleva frutos secos.", // nieuw, nalezen
+    'c.parcel.a.why': "Preguntan si el paquete es suyo: sí, y luego la firma.", // nieuw, nalezen
+    'c.road.a.why': "Te piden un reparto más: no, porque primero va la pausa.", // nieuw, nalezen
+    'c.backtowork.a.why': "Te preguntan cómo estás: un sí corto, y que te lo tomas con calma.", // nieuw, nalezen
+    'c.feelwell.a.why': "Te preguntan cómo estás: un “no muy bien” sincero está bien.", // nieuw, nalezen
   },
 };
 

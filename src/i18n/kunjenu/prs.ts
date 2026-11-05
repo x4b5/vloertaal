@@ -45,7 +45,7 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "می‌توانم بگویم که ورق معاشم درست نیست.", // nieuw, nalezen
     'kjn.u.pay.2': "می‌توانم کلمه‌هایی مانند bruto و netto را بخوانم.", // nieuw, nalezen
     'kjn.u.leave.1': "می‌توانم رخصتی درخواست کنم.", // nieuw, nalezen
-    'kjn.u.leave.2': "می‌توانم مریضی و دوباره آمدنم به کار را اطلاع بدهم.", // nieuw, nalezen
+    'kjn.u.leave.2': "می‌توانم بگویم که طفلم مریض است.", // nieuw, nalezen
     'kjn.u.contact.1': "می‌توانم تیلفون کنم و بگویم که کی هستم.", // nieuw, nalezen
     'kjn.u.contact.2': "می‌توانم از کسی بخواهم که دوباره به من تیلفون کند.", // nieuw, nalezen
     'kjn.u.contact.3': "می‌توانم یک پیام کوتاه به کارم بنویسم.", // nieuw, nalezen
@@ -103,6 +103,14 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "می‌توانم بگویم که یک کیبل خراب است.", // nieuw, nalezen
     'kjn.u.garage.1': "می‌توانم بگویم که یک تایر پنچر است.", // nieuw, nalezen
     'kjn.u.garage.2': "می‌توانم بگویم که مشتری اول باید موافقه کند.", // nieuw, nalezen
+    'kjn.u.sick.1': "می‌توانم مریضی و دوباره آمدنم به کار را اطلاع بدهم.", // nieuw, nalezen
+    'kjn.u.sick.2': "می‌توانم بگویم که چه کاری را هنوز کرده نمی‌توانم.", // nieuw, nalezen
+    'kjn.u.sick.3': "می‌توانم بگویم که اول نیم روز کار می‌کنم.", // nieuw, nalezen
+    'kjn.u.health.3': "می‌توانم بگویم که کار برایم بیش از حد شده.", // nieuw, nalezen
+    'kjn.u.factory.3': "می‌توانم خبر بدهم که یک زخم کوچک دارم.", // nieuw, nalezen
+    'kjn.u.delivery.1': "می‌توانم بگویم که مشتری در خانه نیست.", // nieuw, nalezen
+    'kjn.u.delivery.2': "می‌توانم از همسایه‌ها بخواهم که یک بسته را بگیرند.", // nieuw, nalezen
+    'kjn.u.delivery.3': "می‌توانم بپرسم که کی مسیر و وقت‌های کار مرا تعیین می‌کند.", // nieuw, nalezen
   },
 };
 

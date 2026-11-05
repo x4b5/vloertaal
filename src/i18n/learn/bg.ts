@@ -122,6 +122,13 @@ const t: CultureTranslation = {
     'c.email.a.why': "Въпрос дали е изпратен: още не, първо се проверява.", // nieuw, nalezen
     'c.budget.a.why': "Предлагат „купи сега, плати после“: учтиво „не“, с причина.", // nieuw, nalezen
     'c.healthy.a.why': "Предлагат хапче: учтиво „не“, с причина.", // nieuw, nalezen
+    // Vertaalronde 5 november 2026.
+    'd.newcolleague.a.why': "„Мисля“ още не е сигурно: като помолиш да ти покаже, проверяваш дали става.", // nieuw, nalezen
+    'c.food.a.why': "Питат защо се чисти линията: следващият продукт е без ядки.", // nieuw, nalezen
+    'c.parcel.a.why': "Питат дали пратката е за тях: да, и после подписът.", // nieuw, nalezen
+    'c.road.a.why': "Искат още един курс: не, защото почивката е първо.", // nieuw, nalezen
+    'c.backtowork.a.why': "Питат как си: кратко „да“ и че не бързаш.", // nieuw, nalezen
+    'c.feelwell.a.why': "Питат как си: честното „не съвсем“ е наред.", // nieuw, nalezen
   },
 };
 

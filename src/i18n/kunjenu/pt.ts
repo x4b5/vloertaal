@@ -45,7 +45,7 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "Consigo dizer que o meu recibo de vencimento não está certo.", // nieuw, nalezen
     'kjn.u.pay.2': "Consigo ler palavras como bruto e netto.", // nieuw, nalezen
     'kjn.u.leave.1': "Consigo pedir uma licença ou férias.", // nieuw, nalezen
-    'kjn.u.leave.2': "Consigo comunicar uma baixa por doença e o meu regresso.", // nieuw, nalezen
+    'kjn.u.leave.2': "Consigo dizer que o meu filho está doente.", // nieuw, nalezen
     'kjn.u.contact.1': "Consigo telefonar e dizer quem sou.", // nieuw, nalezen
     'kjn.u.contact.2': "Consigo pedir a alguém que me ligue de volta.", // nieuw, nalezen
     'kjn.u.contact.3': "Consigo escrever uma mensagem curta para o trabalho.", // nieuw, nalezen
@@ -103,6 +103,14 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "Consigo dizer que um cabo está avariado.", // nieuw, nalezen
     'kjn.u.garage.1': "Consigo dizer que um pneu está furado.", // nieuw, nalezen
     'kjn.u.garage.2': "Consigo dizer que primeiro o cliente tem de concordar.", // nieuw, nalezen
+    'kjn.u.sick.1': "Consigo comunicar uma baixa por doença e o meu regresso.", // nieuw, nalezen
+    'kjn.u.sick.2': "Consigo dizer o que ainda não consigo fazer.", // nieuw, nalezen
+    'kjn.u.sick.3': "Consigo dizer que no início trabalho meios dias.", // nieuw, nalezen
+    'kjn.u.health.3': "Consigo dizer que o trabalho está a ser demais para mim.", // nieuw, nalezen
+    'kjn.u.factory.3': "Consigo avisar que tenho um pequeno corte.", // nieuw, nalezen
+    'kjn.u.delivery.1': "Consigo dizer que o cliente não está em casa.", // nieuw, nalezen
+    'kjn.u.delivery.2': "Consigo pedir aos vizinhos que fiquem com uma encomenda.", // nieuw, nalezen
+    'kjn.u.delivery.3': "Consigo perguntar quem decide a minha rota e os meus horários.", // nieuw, nalezen
   },
 };
 

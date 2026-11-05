@@ -227,7 +227,7 @@ const t: CultureTranslation = {
     's.rights.3': 'To jest dyskryminacja.',
     'c.rights.q': 'Podpisz tutaj swoje zwolnienie.',
     'c.rights.a': 'Nie, jeszcze tego nie podpiszę.',
-    'u.leave': 'Urlop i choroba',
+    'u.leave': "Urlop", // nieuw, nalezen
     'l.leave': 'Dni wolne',
     'w.vakantiedagen': 'dni urlopu',
     'w.verlof': 'urlop',
@@ -1699,6 +1699,109 @@ const t: CultureTranslation = {
     'c.healthy.o2': "Bierzesz pół tabletki, to nie jest niebezpieczne.", // nieuw, nalezen
     'c.healthy.o3': "Bierzesz ją, ale nikomu w pracy nie mówisz.", // nieuw, nalezen
     'c.healthy.w': "Tabletki od kolegi mogą być narkotykami. Mogą zaszkodzić twojemu zdrowiu albo sprawić, że popełnisz błędy w pracy. Wyspanie się to bezpieczny sposób, żeby nie zasypiać w pracy.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    // Vertaalronde 5 november 2026: u.sick (l.backtowork), l.feelwell, l.food, u.delivery (l.parcel, l.road).
+    'u.sick': "Choroba", // nieuw, nalezen
+    'l.backtowork': "Powrót do pracy po chorobie", // nieuw, nalezen
+    'w.opbouwen': "stopniowo zwiększać (powoli, krok po kroku)", // nieuw, nalezen
+    'w.halvedagen': "praca po pół dnia (pracujesz tylko część dnia)", // nieuw, nalezen
+    'w.lichtwerk': "lekka praca (nie ciężka)", // nieuw, nalezen
+    'w.zwaarwerk': "ciężka praca", // nieuw, nalezen
+    'w.herstellen': "wracać do zdrowia, wyzdrowieć", // nieuw, nalezen
+    'w.welkomterug': "witaj z powrotem", // nieuw, nalezen
+    's.backtowork.1': "Na początek pracuję po pół dnia.", // nieuw, nalezen
+    's.backtowork.2': "Mogę już wykonywać lekką pracę. Ciężkiej jeszcze nie.", // nieuw, nalezen
+    's.backtowork.3': "Lekarz zakładowy mówi: zwiększaj obciążenie powoli.", // nieuw, nalezen
+    'c.backtowork.q': "Witaj z powrotem! Czujesz się lepiej?", // nieuw, nalezen
+    'c.backtowork.a': "Tak, jest już lepiej. Na razie robię wszystko powoli.", // nieuw, nalezen
+    'c.backtowork': "Wracasz krok po kroku", // nieuw, nalezen
+    'c.backtowork.b': "Czujesz się lepiej? Powiedz pracodawcy, że znowu możesz pracować (betermelden). Po dłuższej chorobie często zaczynasz krok po kroku: najpierw mniej godzin albo lżejsza praca. Lekarz zakładowy (bedrijfsarts) doradza, co możesz robić. Chorujesz dłuższy czas? Wtedy ty i pracodawca razem robicie plan twojego powrotu. Tak mówi prawo (Wet verbetering poortwachter). Mów jasno, co możesz robić, a czego jeszcze nie. Nie musisz mówić kolegom, jaka to była choroba. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen
+    'c.backtowork.p': "To już mogę robić. Tego jeszcze nie mogę.", // nieuw, nalezen
+    'c.backtowork.s': { m: "Byłeś chory przez trzy tygodnie. Pierwszego dnia po powrocie przełożony prosi cię o podnoszenie ciężkich pudeł. Lekarz zakładowy powiedział: na razie tylko lekka praca. Co robisz?", f: "Byłaś chora przez trzy tygodnie. Pierwszego dnia po powrocie przełożony prosi cię o podnoszenie ciężkich pudeł. Lekarz zakładowy powiedział: na razie tylko lekka praca. Co robisz?", x: "Twoja choroba trwała trzy tygodnie. Pierwszego dnia po powrocie przełożony prosi cię o podnoszenie ciężkich pudeł. Lekarz zakładowy powiedział: na razie tylko lekka praca. Co robisz?" }, // nieuw, nalezen
+    'c.backtowork.o1': "Spokojnie mówisz, że teraz możesz wykonywać lekką pracę, i czego jeszcze nie możesz.", // nieuw, nalezen
+    'c.backtowork.o2': "I tak podnosisz pudła: nie chcesz robić problemów.", // nieuw, nalezen
+    'c.backtowork.o3': "Idziesz do domu bez słowa.", // nieuw, nalezen
+    'c.backtowork.w': "Przełożony chce mieć cię z powrotem, i to w zdrowiu. Kiedy jasno mówisz, co możesz robić, może zaplanować pracę. Za dużo i za wcześnie może sprawić, że znowu zachorujesz.", // nieuw, nalezen
+    'l.feelwell': "Dobre samopoczucie w pracy", // nieuw, nalezen
+    'w.werkdruk': "presja w pracy (za dużo pracy w za krótkim czasie)", // nieuw, nalezen
+    'w.wakkerliggen': "leżeć bez snu (nie możesz zasnąć)", // nieuw, nalezen
+    'w.ploegendienst': "praca zmianowa (na zmianę ranne, popołudniowe i nocne zmiany)", // nieuw, nalezen
+    'w.heimwee': "tęsknota za domem (tęsknisz za domem)", // nieuw, nalezen
+    'w.familie': "rodzina", // nieuw, nalezen
+    'w.alleen': "sam, samotnie", // nieuw, nalezen
+    's.feelwell.1': "Źle śpię przez pracę zmianową.", // nieuw, nalezen
+    's.feelwell.2': "To za dużo. Nie dam sobie rady w pojedynkę.", // nieuw, nalezen
+    's.feelwell.3': "Tęsknię za domem. Moja rodzina jest daleko.", // nieuw, nalezen
+    'c.feelwell.q': "Wszystko u ciebie w porządku?", // nieuw, nalezen
+    'c.feelwell.a': "Nie bardzo. Często nie mogę zasnąć w nocy.", // nieuw, nalezen
+    'c.feelwell': "Za dużo? Nie musisz radzić sobie w pojedynkę", // nieuw, nalezen
+    'c.feelwell.b': "Każdy czasem czuje się zmęczony, zestresowany albo smutny. Za dużo pracy (werkdruk), zły sen przez pracę zmianową albo tęsknota za rodziną mogą sprawić, że jest ciężko. Nie musisz dźwigać tego w pojedynkę, a powiedzieć „to za dużo” to nie słabość. Porozmawiaj z kimś, komu ufasz: z przełożonym, z osobą zaufania (vertrouwenspersoon, jeśli jest), z lekarzem zakładowym (bedrijfsarts) albo z twoim lekarzem rodzinnym (huisarts). Możesz też z własnej inicjatywy poprosić o rozmowę z lekarzem zakładowym. Lekarze nie przekazują szefowi tego, co im mówisz. Myślisz o samobójstwie albo martwisz się o kogoś? Zadzwoń pod 113 (bezpłatnie, w dzień i w nocy) albo napisz na czacie na 113.nl.", // nieuw, nalezen
+    'c.feelwell.p': "Nie czuję się najlepiej. Czy mogę chwilę z tobą porozmawiać?", // nieuw, nalezen
+    'c.feelwell.s': { m: "Od tygodni źle śpisz, a pracy jest za dużo. Czujesz się bardzo zmęczony. Co robisz?", f: "Od tygodni źle śpisz, a pracy jest za dużo. Czujesz się bardzo zmęczona. Co robisz?", x: "Od tygodni źle śpisz, a pracy jest za dużo. Bardzo brakuje ci sił. Co robisz?" }, // nieuw, nalezen
+    'c.feelwell.o1': "Mówisz o tym przełożonemu albo lekarzowi zakładowemu.", // nieuw, nalezen
+    'c.feelwell.o2': "Nic nie mówisz i pracujesz ciężej i szybciej.", // nieuw, nalezen
+    'c.feelwell.o3': "Zostajesz w domu i nikomu nie mówisz dlaczego.", // nieuw, nalezen
+    'c.feelwell.w': "Powiedzieć o tym wcześnie to nie słabość. Wtedy razem możecie szukać wyjścia, na przykład innych zmian. Nie musisz radzić sobie z tym w pojedynkę.", // nieuw, nalezen
+    'l.food': "Praca z żywnością", // nieuw, nalezen
+    'w.mes': "nóż", // nieuw, nalezen
+    'w.snijhandschoen': "rękawica antyprzecięciowa (chroni przed przecięciem)", // nieuw, nalezen
+    'w.vriescel': "mroźnia (bardzo zimne pomieszczenie)", // nieuw, nalezen
+    'w.sieraden': "biżuteria (pierścionek, zegarek, kolczyki)", // nieuw, nalezen
+    'w.pleister': "plaster (na małe skaleczenie)", // nieuw, nalezen
+    'w.vlees': "mięso", // nieuw, nalezen
+    's.food.1': "Zdejmuję biżuterię.", // nieuw, nalezen
+    's.food.2': "Gdzie są rękawice antyprzecięciowe?", // nieuw, nalezen
+    's.food.3': "W mroźni noszę ciepłą kurtkę.", // nieuw, nalezen
+    'c.food.q': "Dlaczego teraz czyścimy linię?", // nieuw, nalezen
+    'c.food.a': "Następny będzie produkt bez orzechów.", // nieuw, nalezen
+    'c.food': "Czyste ręce, bezpieczna żywność", // nieuw, nalezen
+    'c.food.b': "Przy pracy z żywnością obowiązują surowe zasady higieny: siateczka na włosy, czyste ubranie robocze, umyte ręce i żadnej biżuterii. Te zasady są takie same dla wszystkich. Nie mówią nic o tobie: chronią żywność dla ludzi, którzy ją jedzą. Przy pracy z nożem zawsze noś rękawicę antyprzecięciową. W chłodni albo w mroźni noś ciepłe ubranie, które dostajesz, i rozgrzewaj się w przerwie. Chorujesz albo masz ranę na ręce? Zgłoś to, zanim zaczniesz pracę. Wtedy możesz dostać specjalny plaster albo na jakiś czas inną pracę. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.food.p': "Mam małe skaleczenie na ręce. Czy mogę dostać plaster?", // nieuw, nalezen
+    'c.food.s': { m: "W domu lekko zaciąłeś się w palec. Dziś pracujesz z mięsem. Co robisz?", f: "W domu lekko zacięłaś się w palec. Dziś pracujesz z mięsem. Co robisz?", x: "Masz na palcu małe skaleczenie z domu. Dziś pracujesz z mięsem. Co robisz?" }, // nieuw, nalezen
+    'c.food.o1': "Mówisz przełożonemu i prosisz o plaster.", // nieuw, nalezen
+    'c.food.o2': "Nic nie mówisz: to tylko małe skaleczenie.", // nieuw, nalezen
+    'c.food.o3': "Zakładasz na to rękawicę, żeby nikt nie zobaczył.", // nieuw, nalezen
+    'c.food.w': "Mała rana może wnieść zarazki do żywności. Kiedy to zgłaszasz, możesz dostać specjalny plaster albo na jakiś czas inną pracę. Zgłoszenie to normalna rzecz: nikt nie będzie cię za to winić.", // nieuw, nalezen
+    'u.delivery': "Transport i dostawy", // nieuw, nalezen
+    'l.parcel': "Doręczanie paczek", // nieuw, nalezen
+    'w.pakket': "paczka", // nieuw, nalezen
+    'w.bestelbus': "samochód dostawczy (bus)", // nieuw, nalezen
+    'w.bezorgen': "doręczać (zanieść do klienta)", // nieuw, nalezen
+    'w.inladen': "załadować (włożyć rzeczy do busa)", // nieuw, nalezen
+    'w.aanbellen': "zadzwonić do drzwi", // nieuw, nalezen
+    'w.bewijs': "dowód (coś, co pokazuje, co się stało)", // nieuw, nalezen
+    's.parcel.1': "Skanuję każdą paczkę.", // nieuw, nalezen
+    's.parcel.2': "Klienta nie ma w domu.", // nieuw, nalezen
+    's.parcel.3': "Czy może pan/pani przyjąć paczkę dla sąsiadów?", // nieuw, nalezen
+    'c.parcel.q': "Czy ta paczka jest dla mnie?", // nieuw, nalezen
+    'c.parcel.a': "Tak. Proszę tu podpisać.", // nieuw, nalezen
+    'l.road': "Bezpiecznie i uczciwie na drodze", // nieuw, nalezen
+    'w.rijden': "jeździć, prowadzić (samochód)", // nieuw, nalezen
+    'w.zwaar': "ciężki", // nieuw, nalezen
+    'w.steekwagen': "wózek ręczny (dwukołowy wózek na ciężkie paczki)", // nieuw, nalezen
+    'w.route': "trasa (droga, którą jedziesz)", // nieuw, nalezen
+    'w.loondienst': "na etacie (pracujesz dla szefa i dostajesz pensję)", // nieuw, nalezen
+    'w.bepalen': "decydować (mówić, jak trzeba to zrobić)", // nieuw, nalezen
+    's.road.1': "Ta paczka jest za ciężka. Biorę wózek.", // nieuw, nalezen
+    's.road.2': "Jest ślisko. Jadę powoli.", // nieuw, nalezen
+    's.road.3': "Kto decyduje o mojej trasie i moich godzinach?", // nieuw, nalezen
+    'c.road.q': "Możesz dziś zrobić jeszcze jeden kurs?", // nieuw, nalezen
+    'c.road.a': "Nie, wtedy nie będę mieć czasu na przerwę.", // nieuw, nalezen
+    'c.parcel': "Nikogo nie ma w domu albo paczka jest uszkodzona", // nieuw, nalezen
+    'c.parcel.b': "Klienta nie ma w domu? Postępuj według zasad swojej firmy: spróbuj u sąsiadów albo zabierz paczkę z powrotem. Nie zostawiaj jej po prostu pod drzwiami, chyba że klient o to prosił. Paczka jest uszkodzona albo mokra? Nie doręczaj jej tak, jakby wszystko było w porządku. Zrób zdjęcie jako dowód i zgłoś to w skanerze albo w aplikacji. Uczciwość w sprawie problemu jest zawsze lepsza niż ukrywanie go. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.parcel.p': "Ta paczka jest uszkodzona. Oto zdjęcie.", // nieuw, nalezen
+    'c.parcel.s': "Klienta nie ma w domu, sąsiadów też nie. Co robisz?", // nieuw, nalezen
+    'c.parcel.o1': "Skanujesz „nie ma w domu” i zabierasz paczkę z powrotem.", // nieuw, nalezen
+    'c.parcel.o2': "Skanujesz ją jako doręczoną i zostawiasz pod drzwiami.", // nieuw, nalezen
+    'c.parcel.o3': "Chowasz ją za kosz na śmieci, żeby nikt jej nie zobaczył.", // nieuw, nalezen
+    'c.parcel.w': "Paczka zeskanowana jako doręczona musi naprawdę być u klienta. Kiedy skanujesz to, co naprawdę się stało, klient może dostać paczkę później i nikt nie pomyśli, że zaginęła przez ciebie.", // nieuw, nalezen
+    'c.road': "Bezpiecznie na drodze i uczciwa praca", // nieuw, nalezen
+    'c.road.b': "Nigdy nie trzymaj telefonu w ręce, kiedy prowadzisz: to zabronione. Do nawigacji używaj uchwytu. Rób przerwy, także w pracowity dzień. Ciężka paczka? Użyj wózka albo podnieście ją we dwoje. Lód albo śnieg? Jedź powoli: lepiej się spóźnić niż mieć wypadek. Niektóre firmy mówią, że pracujesz na własny rachunek (zelfstandig). Ale kto decyduje o twoich godzinach, trasie i ubraniu? Jeśli firma decyduje o tym wszystkim, możesz jednak pracować na etacie (in loondienst). Wtedy często masz więcej praw, na przykład pensję w czasie choroby. Więcej o tym w lekcji „Dokumenty, integracja i twoja praca”. To ogólne informacje. W twojej sytuacji zapytaj związek zawodowy, Juridisch Loket albo FairWork.", // nieuw, nalezen
+    'c.road.p': "Teraz robię przerwę. Potem jadę dalej.", // nieuw, nalezen
+    'c.road.s': "Firma mówi, że pracujesz na własny rachunek. Ale to ona decyduje o twoich godzinach, trasie i ubraniu. Co robisz?", // nieuw, nalezen
+    'c.road.o1': "Pytasz o radę: może pracujesz w rzeczywistości na etacie.", // nieuw, nalezen
+    'c.road.o2': "Nic nie robisz: w umowie jest „na własny rachunek”, więc tak jest.", // nieuw, nalezen
+    'c.road.o3': "Pracujesz więcej godzin, żeby zarobić tyle samo.", // nieuw, nalezen
+    'c.road.w': "Liczy się to, jak naprawdę pracujesz, a nie tylko słowo w umowie. Jeśli firma decyduje, jak, kiedy i gdzie pracujesz, często pracujesz na etacie. Wtedy masz więcej praw.", // nieuw, nalezen
   },
 };
 

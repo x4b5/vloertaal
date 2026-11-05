@@ -122,6 +122,12 @@ const t: CultureTranslation = {
     'c.email.a.why': "Gefragt, ob sie verschickt ist: noch nicht, sie wird erst geprüft.", // nieuw, nalezen
     'c.budget.a.why': "Später zahlen wird angeboten: ein höfliches Nein, mit dem Grund.", // nieuw, nalezen
     'c.healthy.a.why': "Eine Pille wird angeboten: ein höfliches Nein, mit dem Grund.", // nieuw, nalezen
+    'd.newcolleague.a.why': "„Glaube ich“ ist noch nicht sicher: Wer bittet, es zu zeigen, prüft, ob es klappt.", // nieuw, nalezen
+    'c.food.a.why': "Gefragt, warum die Linie geputzt wird: Das nächste Produkt hat keine Nüsse.", // nieuw, nalezen
+    'c.parcel.a.why': "Gefragt, ob das Paket für sie ist: Ja, und dann die Unterschrift.", // nieuw, nalezen
+    'c.road.a.why': "Noch eine Tour ist gefragt: Nein, weil die Pause zuerst kommt.", // nieuw, nalezen
+    'c.backtowork.a.why': "Gefragt, wie es dir geht: ein kurzes Ja, und dass du es langsam angehst.", // nieuw, nalezen
+    'c.feelwell.a.why': "Gefragt, wie es dir geht: Ein ehrliches „nicht so gut“ ist in Ordnung.", // nieuw, nalezen
   },
 };
 

@@ -122,6 +122,12 @@ const t: CultureTranslation = {
     'c.email.a.why': "Gönderildi mi diye soruluyor: daha değil, önce kontrol ediliyor.", // nieuw, nalezen
     'c.budget.a.why': "Sonra ödeme teklif ediliyor: kibar bir hayır, nedeniyle birlikte.", // nieuw, nalezen
     'c.healthy.a.why': "Hap teklif ediliyor: kibar bir hayır, nedeniyle birlikte.", // nieuw, nalezen
+    'd.newcolleague.a.why': "\"Sanırım\" henüz emin olmak değil: göstermesini istemek, işin doğru olup olmadığını kontrol eder.", // nieuw, nalezen
+    'c.food.a.why': "Bandın neden temizlendiği soruluyor: sıradaki üründe kuruyemiş yok.", // nieuw, nalezen
+    'c.parcel.a.why': "Paketin onun mu olduğu soruluyor: evet, sonra da imza.", // nieuw, nalezen
+    'c.road.a.why': "Bir sefer daha isteniyor: hayır, çünkü önce mola gelir.", // nieuw, nalezen
+    'c.backtowork.a.why': "Nasıl olduğun soruluyor: kısa bir evet, bir de işi yavaş aldığın.", // nieuw, nalezen
+    'c.feelwell.a.why': "Nasıl olduğun soruluyor: dürüst bir \"pek iyi değil\" sorun değil.", // nieuw, nalezen
   },
 };
 

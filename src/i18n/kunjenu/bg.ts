@@ -45,7 +45,10 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "Мога да кажа, че фишът ми за заплата не е верен.", // nieuw, nalezen
     'kjn.u.pay.2': "Мога да прочета думи като bruto и netto.", // nieuw, nalezen
     'kjn.u.leave.1': "Мога да поискам отпуск.", // nieuw, nalezen
-    'kjn.u.leave.2': "Мога да съобщя за болест и за връщане на работа.", // nieuw, nalezen
+    'kjn.u.leave.2': "Мога да кажа, че детето ми е болно.", // nieuw, nalezen
+    'kjn.u.sick.1': "Мога да съобщя за болест и за връщане на работа.", // nieuw, nalezen
+    'kjn.u.sick.2': "Мога да кажа какво още не мога.", // nieuw, nalezen
+    'kjn.u.sick.3': "Мога да кажа, че отначало работя половин ден.", // nieuw, nalezen
     'kjn.u.contact.1': "Мога да се обадя и да кажа кой съм.", // nieuw, nalezen
     'kjn.u.contact.2': "Мога да помоля някого да ми се обади.", // nieuw, nalezen
     'kjn.u.contact.3': "Мога да напиша кратко съобщение до работата.", // nieuw, nalezen
@@ -79,6 +82,7 @@ const t: CultureTranslation = {
     'kjn.u.papers.2': "Мога да попитам колко е наемът.", // nieuw, nalezen
     'kjn.u.health.1': "Мога да кажа къде ме боли.", // nieuw, nalezen
     'kjn.u.health.2': "Мога да поискам час при личния лекар.", // nieuw, nalezen
+    'kjn.u.health.3': "Мога да кажа, че работата ми идва в повече.", // nieuw, nalezen
     'kjn.u.money.1': "Мога да кажа, че не разбирам едно писмо.", // nieuw, nalezen
     'kjn.u.money.2': "Мога да откажа на измамник по телефона.", // nieuw, nalezen
     'kjn.u.travel.1': "Мога да кажа как стигам до работа.", // nieuw, nalezen
@@ -91,6 +95,7 @@ const t: CultureTranslation = {
     'kjn.u.build.2': "Мога да поискам инструменти.", // nieuw, nalezen
     'kjn.u.factory.1': "Мога да кажа, че има повреда.", // nieuw, nalezen
     'kjn.u.factory.2': "Мога да кажа какво не е наред с един продукт.", // nieuw, nalezen
+    'kjn.u.factory.3': "Мога да съобщя, че имам малко порязване.", // nieuw, nalezen
     'kjn.u.care.1': "Мога да попитам клиент дали мога да помогна.", // nieuw, nalezen
     'kjn.u.care.2': "Мога да предам нещо на медицинската сестра.", // nieuw, nalezen
     'kjn.u.horeca.1': "Мога да попитам гостите какво ще пият.", // nieuw, nalezen
@@ -103,6 +108,10 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "Мога да кажа, че един кабел е повреден.", // nieuw, nalezen
     'kjn.u.garage.1': "Мога да кажа, че една гума е спукана.", // nieuw, nalezen
     'kjn.u.garage.2': "Мога да кажа, че клиентът първо трябва да е съгласен.", // nieuw, nalezen
+    // Vervoer en bezorging (5 november 2026).
+    'kjn.u.delivery.1': "Мога да кажа, че клиентът не е вкъщи.", // nieuw, nalezen
+    'kjn.u.delivery.2': "Мога да помоля съседите да приемат пратка.", // nieuw, nalezen
+    'kjn.u.delivery.3': "Мога да попитам кой решава маршрута и часовете ми.", // nieuw, nalezen
   },
 };
 

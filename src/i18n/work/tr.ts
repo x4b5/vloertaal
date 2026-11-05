@@ -227,7 +227,7 @@ const t: CultureTranslation = {
     's.rights.3': 'Bu ayrımcılık.',
     'c.rights.q': 'İşten çıkarılman için buraya imza at.',
     'c.rights.a': 'Hayır, henüz imzalamıyorum.',
-    'u.leave': 'İzin ve hastalık',
+    'u.leave': "İzin", // nieuw, nalezen
     'l.leave': 'İzin günleri',
     'w.vakantiedagen': 'izin günleri (tatil)',
     'w.verlof': 'izin',
@@ -1699,6 +1699,108 @@ const t: CultureTranslation = {
     'c.healthy.o2': "Yarım hap alırsın, bu tehlikeli değil.", // nieuw, nalezen
     'c.healthy.o3': "Alırsın, ama işte kimseye söylemezsin.", // nieuw, nalezen
     'c.healthy.w': "Bir iş arkadaşından gelen haplar uyuşturucu olabilir. Seni hasta edebilir ya da işte hata yaptırabilir. Uyku, uyanık kalmanın güvenli yoludur.", // nieuw, nalezen
+    'l.food': "Gıdayla çalışmak", // nieuw, nalezen
+    'w.mes': "bıçak", // nieuw, nalezen
+    'w.snijhandschoen': "kesilmeye dayanıklı eldiven (kesiklere karşı bir eldiven)", // nieuw, nalezen
+    'w.vriescel': "dondurucu oda (çok soğuk bir oda)", // nieuw, nalezen
+    'w.sieraden': "takılar (yüzük, saat, küpe)", // nieuw, nalezen
+    'w.pleister': "yara bandı (küçük bir kesik için)", // nieuw, nalezen
+    'w.vlees': "et", // nieuw, nalezen
+    's.food.1': "Takılarımı çıkarıyorum.", // nieuw, nalezen
+    's.food.2': "Kesilmeye dayanıklı eldivenler nerede?", // nieuw, nalezen
+    's.food.3': "Dondurucu odada kalın bir mont giyiyorum.", // nieuw, nalezen
+    'c.food.q': "Bandı neden şimdi temizliyoruz?", // nieuw, nalezen
+    'c.food.a': "Sırada kuruyemişsiz bir ürün var.", // nieuw, nalezen
+    'c.food': "Temiz eller, güvenli gıda", // nieuw, nalezen
+    'c.food.b': "Gıdayla çalışmanın sıkı hijyen kuralları vardır: bone, temiz iş kıyafeti, yıkanmış eller ve takı yok. Bu kurallar herkes için aynıdır. Senin hakkında bir şey söylemezler: yiyeceği, onu yiyecek insanlar için güvenli tutarlar. Bıçakla çalışırken her zaman kesilmeye dayanıklı eldivenini tak. Soğuk bir odada veya dondurucu odada sana verilen sıcak kıyafetleri giy ve molanda ısın. Hasta mısın, ya da elinde bir yara mı var? İşe başlamadan önce bunu bildir. O zaman özel bir yara bandı ya da bir süreliğine başka bir iş alabilirsin. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.food.p': "Elimde küçük bir kesik var. Bir yara bandı alabilir miyim?", // nieuw, nalezen
+    'c.food.s': "Evde parmağını biraz kestin. Bugün etle çalışıyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.food.o1': "Amirine söyler ve bir yara bandı istersin.", // nieuw, nalezen
+    'c.food.o2': "Hiçbir şey söylemezsin: sadece küçük bir kesik.", // nieuw, nalezen
+    'c.food.o3': "Kimse görmesin diye üstüne eldiven giyersin.", // nieuw, nalezen
+    'c.food.w': "Küçük bir yara yiyeceğe mikrop bulaştırabilir. Bildirdiğinde özel bir yara bandı ya da bir süreliğine başka bir iş alabilirsin. Bildirmek normaldir: kimse seni bunun için suçlamaz.", // nieuw, nalezen
+    'u.delivery': "Taşımacılık ve teslimat", // nieuw, nalezen
+    'l.parcel': "Paket teslimatı", // nieuw, nalezen
+    'w.pakket': "paket", // nieuw, nalezen
+    'w.bestelbus': "kamyonet (dağıtım aracı)", // nieuw, nalezen
+    'w.bezorgen': "teslim etmek (müşteriye götürmek)", // nieuw, nalezen
+    'w.inladen': "yüklemek (eşyaları araca koymak)", // nieuw, nalezen
+    'w.aanbellen': "kapı zilini çalmak", // nieuw, nalezen
+    'w.bewijs': "kanıt (ne olduğunu gösteren bir şey)", // nieuw, nalezen
+    's.parcel.1': "Her paketi okutuyorum.", // nieuw, nalezen
+    's.parcel.2': "Müşteri evde değil.", // nieuw, nalezen
+    's.parcel.3': "Komşularınız için bir paket alır mısınız?", // nieuw, nalezen
+    'c.parcel.q': "Bu paket benim mi?", // nieuw, nalezen
+    'c.parcel.a': "Evet. Buraya imza atar mısınız lütfen?", // nieuw, nalezen
+    'l.road': "Yolda güvenli ve adil", // nieuw, nalezen
+    'w.rijden': "araç sürmek", // nieuw, nalezen
+    'w.zwaar': "ağır", // nieuw, nalezen
+    'w.steekwagen': "yük arabası (ağır kutular için iki tekerlekli el arabası)", // nieuw, nalezen
+    'w.route': "güzergâh (gittiğin yol)", // nieuw, nalezen
+    'w.loondienst': "maaşlı çalışan (bir patron için çalışır ve maaş alırsın)", // nieuw, nalezen
+    'w.bepalen': "belirlemek (nasıl yapılacağını söylemek)", // nieuw, nalezen
+    's.road.1': "Bu paket çok ağır. Yük arabasını getiriyorum.", // nieuw, nalezen
+    's.road.2': "Yol kaygan. Yavaş sürüyorum.", // nieuw, nalezen
+    's.road.3': "Güzergâhımı ve saatlerimi kim belirliyor?", // nieuw, nalezen
+    'c.road.q': "Bugün bir sefer daha yapabilir misin?", // nieuw, nalezen
+    'c.road.a': "Hayır, o zaman molama vaktim kalmaz.", // nieuw, nalezen
+    'c.parcel': "Evde yok ya da paket hasarlı", // nieuw, nalezen
+    'c.parcel.b': "Müşteri evde değil mi? Şirketinin kurallarına uy: komşuları dene ya da paketi geri götür. Müşteri istemediyse paketi öylece kapının önüne bırakma. Bir paket hasarlı ya da ıslak mı? Hiçbir sorun yokmuş gibi teslim etme. Kanıt olarak bir fotoğraf çek ve bunu barkod okuyucuda ya da uygulamada bildir. Bir sorun hakkında dürüst olmak, onu saklamaktan her zaman daha iyidir. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.parcel.p': "Bu paket hasarlı. İşte bir fotoğraf.", // nieuw, nalezen
+    'c.parcel.s': "Müşteri evde değil, komşular da yok. Ne yaparsın?", // nieuw, nalezen
+    'c.parcel.o1': "“Evde yok” diye okutur ve paketi geri götürürsün.", // nieuw, nalezen
+    'c.parcel.o2': "“Teslim edildi” diye okutur ve kapının önüne bırakırsın.", // nieuw, nalezen
+    'c.parcel.o3': "Kimse görmesin diye çöp kutusunun arkasına saklarsın.", // nieuw, nalezen
+    'c.parcel.w': "“Teslim edildi” diye okutulan bir paket gerçekten müşteride olmalıdır. Gerçekte ne olduysa onu okutursan, müşteri paketi sonra alabilir ve kimse onu kaybettiğini düşünmez.", // nieuw, nalezen
+    'c.road': "Yolda güvenlik ve adil çalışma", // nieuw, nalezen
+    'c.road.b': "Araç sürerken telefonunu asla elinde tutma: bu yasaktır. Navigasyon için bir telefon tutucu kullan. Yoğun bir günde de molalarını ver. Ağır bir paket mi? Yük arabasını kullan ya da birlikte kaldırın. Buz ya da kar mı var? Yavaş sür: geç varmak kazadan iyidir. Bazı şirketler serbest çalışan (zelfstandig) olarak çalıştığını söyler. Ama saatlerini, güzergâhını ve kıyafetlerini kim belirliyor? Bunların hepsini şirket belirliyorsa, aslında maaşlı çalışan (in loondienst) olabilirsin. O zaman çoğu zaman daha fazla hakkın olur, örneğin hastayken ücret almak. Bu konuda daha fazlası “Belgeler, uyum ve işin” dersinde. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.", // nieuw, nalezen
+    'c.road.p': "Şimdi molamı veriyorum. Sonra yoluma devam edeceğim.", // nieuw, nalezen
+    'c.road.s': "Şirket sana serbest çalışan diyor. Ama saatlerini, güzergâhını ve kıyafetlerini o belirliyor. Ne yaparsın?", // nieuw, nalezen
+    'c.road.o1': "Tavsiye istersin: belki de maaşlı çalışansın.", // nieuw, nalezen
+    'c.road.o2': "Hiçbir şey yapmazsın: sözleşmede serbest çalışan yazıyor, o hâlde öyledir.", // nieuw, nalezen
+    'c.road.o3': "Aynı parayı kazanmak için daha çok saat çalışırsın.", // nieuw, nalezen
+    'c.road.w': "Önemli olan, sadece sözleşmedeki kelime değil, gerçekte nasıl çalıştığındır. Şirket nasıl, ne zaman ve nerede çalışacağını belirliyorsa, çoğu zaman maaşlı çalışansın. O zaman daha fazla hakkın olur.", // nieuw, nalezen
+    'l.feelwell': "İşte iyi hissetmek", // nieuw, nalezen
+    'w.werkdruk': "iş yükü baskısı (az zamanda çok iş)", // nieuw, nalezen
+    'w.wakkerliggen': "uyanık yatmak (uyuyamıyorsun)", // nieuw, nalezen
+    'w.ploegendienst': "vardiyalı çalışma (sırayla sabah, akşam ve gece vardiyası)", // nieuw, nalezen
+    'w.heimwee': "sıla hasreti (evini özlemek)", // nieuw, nalezen
+    'w.familie': "aile", // nieuw, nalezen
+    'w.alleen': "yalnız", // nieuw, nalezen
+    's.feelwell.1': "Vardiyalı çalışma yüzünden kötü uyuyorum.", // nieuw, nalezen
+    's.feelwell.2': "Çok fazla. Tek başıma başaramıyorum.", // nieuw, nalezen
+    's.feelwell.3': "Memleketimi özledim. Ailem çok uzakta.", // nieuw, nalezen
+    'c.feelwell.q': "İyi misin?", // nieuw, nalezen
+    'c.feelwell.a': "Pek iyi değil. Geceleri sık sık uyuyamıyorum.", // nieuw, nalezen
+    'c.feelwell': "Çok mu fazla? Tek başına yapmak zorunda değilsin", // nieuw, nalezen
+    'c.feelwell.b': "Herkes bazen yorgun, stresli ya da üzgün hisseder. Çok fazla iş (werkdruk), vardiyalı çalışma yüzünden kötü uyku ya da aileni özlemek her şeyi ağırlaştırabilir. Bunu tek başına taşımak zorunda değilsin ve “bu çok fazla” demek zayıflık değildir. Güvendiğin biriyle konuş: amirin, güven danışmanı (vertrouwenspersoon, varsa), işyeri hekimi (bedrijfsarts) ya da aile hekimin (huisarts). İşyeri hekimiyle bir görüşmeyi kendin de isteyebilirsin. Doktorlar ne söylediğini patronuna anlatmaz. İntihar etmeyi mi düşünüyorsun, ya da biri için endişeleniyor musun? 113’ü ara (ücretsiz, gece gündüz) ya da 113.nl’de sohbet et.", // nieuw, nalezen
+    'c.feelwell.p': "Pek iyi değilim. Seninle biraz konuşabilir miyim?", // nieuw, nalezen
+    'c.feelwell.s': "Haftalardır kötü uyuyorsun ve iş çok fazla. Kendini çok yorgun hissediyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.feelwell.o1': "Amirine ya da işyeri hekimine söylersin.", // nieuw, nalezen
+    'c.feelwell.o2': "Hiçbir şey söylemez, daha çok ve daha hızlı çalışırsın.", // nieuw, nalezen
+    'c.feelwell.o3': "Evde kalır, kimseye nedenini söylemezsin.", // nieuw, nalezen
+    'c.feelwell.w': "Bunu erken söylemek zayıflık değildir. O zaman birlikte bir çıkış yolu arayabilirsiniz, örneğin başka vardiyalar. Bunu tek başına yapmak zorunda değilsin.", // nieuw, nalezen
+    'u.sick': "Hastalık", // nieuw, nalezen
+    'l.backtowork': "Hastalıktan sonra işe dönüş", // nieuw, nalezen
+    'w.opbouwen': "kademeli artırmak (yavaş yavaş, adım adım)", // nieuw, nalezen
+    'w.halvedagen': "yarım günler (günün sadece bir kısmında çalışırsın)", // nieuw, nalezen
+    'w.lichtwerk': "hafif iş (ağır olmayan)", // nieuw, nalezen
+    'w.zwaarwerk': "ağır iş", // nieuw, nalezen
+    'w.herstellen': "iyileşmek, yeniden sağlığına kavuşmak", // nieuw, nalezen
+    'w.welkomterug': "tekrar hoş geldin", // nieuw, nalezen
+    's.backtowork.1': "Yarım günlerle başlıyorum.", // nieuw, nalezen
+    's.backtowork.2': "Hafif işi artık yapabiliyorum. Ağır işi henüz değil.", // nieuw, nalezen
+    's.backtowork.3': "İşyeri hekimi diyor ki: yavaş yavaş artır.", // nieuw, nalezen
+    'c.backtowork.q': "Tekrar hoş geldin! Daha iyi misin?", // nieuw, nalezen
+    'c.backtowork.a': "Evet, daha iyiyim. Kendimi zorlamıyorum.", // nieuw, nalezen
+    'c.backtowork': "Adım adım geri dönmek", // nieuw, nalezen
+    'c.backtowork.b': "İyileştin mi? İşverenine yeniden çalışabileceğini bildir (betermelden). Daha uzun bir hastalıktan sonra çoğu zaman adım adım başlarsın: önce daha az saat ya da daha hafif iş. İşyeri hekimi (bedrijfsarts) neler yapabileceğin konusunda tavsiye verir. Daha uzun süre mi hastaydın? O zaman sen ve işverenin dönüşün için birlikte bir plan yaparsınız. Bu yasadır (Wet verbetering poortwachter). Neler yapabildiğini ve neleri henüz yapamadığını açıkça söyle. Hangi hastalığı geçirdiğini iş arkadaşlarına söylemek zorunda değilsin. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.backtowork.p': "Bunu artık yapabiliyorum. Şunu henüz yapamıyorum.", // nieuw, nalezen
+    'c.backtowork.s': "Üç hafta hastaydın. Döndüğün ilk gün amirin senden ağır kutuları kaldırmanı istiyor. İşyeri hekimi dedi ki: şimdilik sadece hafif iş. Ne yaparsın?", // nieuw, nalezen
+    'c.backtowork.o1': "Şimdi hafif iş yapabildiğini ve neyi henüz yapamadığını sakince söylersin.", // nieuw, nalezen
+    'c.backtowork.o2': "Yine de kutuları kaldırırsın: zorluk çıkarmak istemiyorsun.", // nieuw, nalezen
+    'c.backtowork.o3': "Tek kelime etmeden eve gidersin.", // nieuw, nalezen
+    'c.backtowork.w': "Amirin geri dönmeni istiyor, hem de sağlıklı olarak. Neler yapabildiğini açıkça söylersen, işi planlayabilir. Çok erken çok fazla iş yapmak seni yeniden hasta edebilir.", // nieuw, nalezen
   },
 };
 

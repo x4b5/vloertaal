@@ -227,7 +227,7 @@ const t: CultureTranslation = {
     's.rights.3': 'Das ist Diskriminierung.',
     'c.rights.q': 'Unterschreib hier für deine Kündigung.',
     'c.rights.a': 'Nein, ich unterschreibe noch nicht.',
-    'u.leave': 'Urlaub und Krankheit',
+    'u.leave': "Urlaub", // nieuw, nalezen
     'l.leave': 'Freie Tage',
     'w.vakantiedagen': 'die Urlaubstage',
     'w.verlof': 'der Urlaub, die Freistellung',
@@ -1699,6 +1699,108 @@ const t: CultureTranslation = {
     'c.healthy.o2': "Du nimmst eine halbe Pille, das ist nicht gefährlich.", // nieuw, nalezen
     'c.healthy.o3': "Du nimmst sie, sagst bei der Arbeit aber niemandem etwas.", // nieuw, nalezen
     'c.healthy.w': "Pillen von einem Kollegen können Drogen sein. Sie können dich krank machen oder dazu bringen, dass du bei der Arbeit Fehler machst. Schlaf ist der sichere Weg, wach zu bleiben.", // nieuw, nalezen
+    'u.sick': "Krankheit", // nieuw, nalezen
+    'l.food': "Arbeiten mit Lebensmitteln", // nieuw, nalezen
+    'w.mes': "das Messer", // nieuw, nalezen
+    'w.snijhandschoen': "der Schnittschutzhandschuh (ein Handschuh gegen Schnitte)", // nieuw, nalezen
+    'w.vriescel': "der Tiefkühlraum (ein sehr kalter Raum)", // nieuw, nalezen
+    'w.sieraden': "der Schmuck (ein Ring, eine Uhr, Ohrringe)", // nieuw, nalezen
+    'w.pleister': "das Pflaster (für einen kleinen Schnitt)", // nieuw, nalezen
+    'w.vlees': "das Fleisch", // nieuw, nalezen
+    's.food.1': "Ich lege meinen Schmuck ab.", // nieuw, nalezen
+    's.food.2': "Wo sind die Schnittschutzhandschuhe?", // nieuw, nalezen
+    's.food.3': "Im Tiefkühlraum trage ich eine warme Jacke.", // nieuw, nalezen
+    'c.food.q': "Warum putzen wir jetzt die Linie?", // nieuw, nalezen
+    'c.food.a': "Als Nächstes kommt ein Produkt ohne Nüsse.", // nieuw, nalezen
+    'c.food': "Saubere Hände, sichere Lebensmittel", // nieuw, nalezen
+    'c.food.b': "Bei der Arbeit mit Lebensmitteln gelten strenge Hygieneregeln: ein Haarnetz, saubere Arbeitskleidung, gewaschene Hände und kein Schmuck. Diese Regeln sind für alle gleich. Sie sagen nichts über dich: Sie halten die Lebensmittel sicher für die Menschen, die sie essen. Trag bei der Arbeit mit einem Messer immer deinen Schnittschutzhandschuh. Zieh in einem kalten Raum oder einem Tiefkühlraum die warme Kleidung an, die du bekommst, und wärm dich in der Pause auf. Bist du krank, oder hast du eine Wunde an der Hand? Melde es, bevor du anfängst. Dann bekommst du ein spezielles Pflaster oder für eine Weile andere Arbeit. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.food.p': "Ich habe einen kleinen Schnitt an der Hand. Kann ich ein Pflaster haben?", // nieuw, nalezen
+    'c.food.s': "Du hast dich zu Hause ein bisschen in den Finger geschnitten. Heute arbeitest du mit Fleisch. Was machst du?", // nieuw, nalezen
+    'c.food.o1': "Du sagst es deinem Vorgesetzten und fragst nach einem Pflaster.", // nieuw, nalezen
+    'c.food.o2': "Du sagst nichts: Es ist nur ein kleiner Schnitt.", // nieuw, nalezen
+    'c.food.o3': "Du ziehst einen Handschuh darüber, damit es keiner sieht.", // nieuw, nalezen
+    'c.food.w': "Eine kleine Wunde kann Keime in die Lebensmittel bringen. Wenn du es meldest, bekommst du ein spezielles Pflaster oder für eine Weile andere Arbeit. Es zu melden ist normal: Niemand macht dir einen Vorwurf.", // nieuw, nalezen
+    'u.delivery': "Transport und Zustellung", // nieuw, nalezen
+    'l.parcel': "Pakete zustellen", // nieuw, nalezen
+    'w.pakket': "das Paket", // nieuw, nalezen
+    'w.bestelbus': "der Lieferwagen", // nieuw, nalezen
+    'w.bezorgen': "zustellen (zum Kunden bringen)", // nieuw, nalezen
+    'w.inladen': "einladen (Sachen in den Wagen packen)", // nieuw, nalezen
+    'w.aanbellen': "klingeln (an der Haustür)", // nieuw, nalezen
+    'w.bewijs': "der Beweis (etwas, das zeigt, was passiert ist)", // nieuw, nalezen
+    's.parcel.1': "Ich scanne jedes Paket.", // nieuw, nalezen
+    's.parcel.2': "Der Kunde ist nicht zu Hause.", // nieuw, nalezen
+    's.parcel.3': "Würden Sie ein Paket für die Nachbarn annehmen?", // nieuw, nalezen
+    'c.parcel.q': "Ist dieses Paket für mich?", // nieuw, nalezen
+    'c.parcel.a': "Ja. Würden Sie bitte hier unterschreiben?", // nieuw, nalezen
+    'l.road': "Sicher und fair unterwegs", // nieuw, nalezen
+    'w.rijden': "fahren", // nieuw, nalezen
+    'w.zwaar': "schwer", // nieuw, nalezen
+    'w.steekwagen': "die Sackkarre (ein Wagen für schwere Kisten)", // nieuw, nalezen
+    'w.route': "die Route (der Weg, den du fährst)", // nieuw, nalezen
+    'w.loondienst': "angestellt (du arbeitest für einen Chef und bekommst Lohn)", // nieuw, nalezen
+    'w.bepalen': "bestimmen (sagen, wie es gemacht werden muss)", // nieuw, nalezen
+    's.road.1': "Dieses Paket ist zu schwer. Ich hole die Sackkarre.", // nieuw, nalezen
+    's.road.2': "Es ist glatt. Ich fahre langsam.", // nieuw, nalezen
+    's.road.3': "Wer bestimmt meine Route und meine Zeiten?", // nieuw, nalezen
+    'c.road.q': "Kannst du heute noch eine Tour fahren?", // nieuw, nalezen
+    'c.road.a': "Nein, dann habe ich keine Zeit für meine Pause.", // nieuw, nalezen
+    'c.parcel': "Nicht zu Hause, oder ein kaputtes Paket", // nieuw, nalezen
+    'c.parcel.b': "Ist der Kunde nicht zu Hause? Halte dich an die Regeln deiner Firma: Versuch es bei den Nachbarn, oder nimm das Paket wieder mit. Stell es nicht einfach vor die Tür, außer der Kunde hat darum gebeten. Ist ein Paket kaputt oder nass? Stell es nicht zu, als wäre nichts. Mach ein Foto als Beweis und melde es im Scanner oder in der App. Ehrlich über ein Problem zu sein, ist immer besser, als es zu verstecken. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.parcel.p': "Dieses Paket ist kaputt. Hier ist ein Foto.", // nieuw, nalezen
+    'c.parcel.s': "Der Kunde ist nicht zu Hause, und die Nachbarn auch nicht. Was machst du?", // nieuw, nalezen
+    'c.parcel.o1': "Du scannst „nicht zu Hause“ und nimmst das Paket wieder mit.", // nieuw, nalezen
+    'c.parcel.o2': "Du scannst es als zugestellt und lässt es vor der Tür.", // nieuw, nalezen
+    'c.parcel.o3': "Du versteckst es hinter der Mülltonne, damit es keiner sieht.", // nieuw, nalezen
+    'c.parcel.w': "Ein Paket, das als zugestellt gescannt ist, muss wirklich beim Kunden sein. Wenn du scannst, was wirklich passiert ist, kann der Kunde das Paket später bekommen, und niemand denkt, dass du es verloren hast.", // nieuw, nalezen
+    'c.road': "Sicher unterwegs, und faire Arbeit", // nieuw, nalezen
+    'c.road.b': "Halte nie dein Handy in der Hand, während du fährst: Das ist verboten. Benutze eine Halterung für das Navi. Mach deine Pausen, auch an einem vollen Tag. Ein schweres Paket? Nimm die Sackkarre, oder heb es zu zweit. Eis oder Schnee? Fahr langsam: Zu spät kommen ist besser als ein Unfall. Manche Firmen sagen, du arbeitest selbstständig (zelfstandig). Aber wer bestimmt deine Arbeitszeiten, deine Route und deine Kleidung? Wenn die Firma das alles bestimmt, bist du vielleicht doch angestellt (in loondienst). Dann hast du oft mehr Rechte, zum Beispiel Lohn, wenn du krank bist. Mehr dazu in der Lektion „Papiere, Integration und dein Job“. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nieuw, nalezen
+    'c.road.p': "Ich mache jetzt meine Pause. Dann fahre ich weiter.", // nieuw, nalezen
+    'c.road.s': "Die Firma sagt, du bist selbstständig. Aber sie bestimmt deine Arbeitszeiten, deine Route und deine Kleidung. Was machst du?", // nieuw, nalezen
+    'c.road.o1': "Du holst dir Rat: Vielleicht bist du angestellt.", // nieuw, nalezen
+    'c.road.o2': "Nichts: Im Vertrag steht „selbstständig“, also ist es so.", // nieuw, nalezen
+    'c.road.o3': "Du arbeitest mehr Stunden, damit du gleich viel verdienst.", // nieuw, nalezen
+    'c.road.w': "Es zählt, wie du wirklich arbeitest, nicht nur das Wort im Vertrag. Wenn die Firma bestimmt, wie, wann und wo du arbeitest, bist du oft angestellt. Dann hast du mehr Rechte.", // nieuw, nalezen
+    'l.feelwell': "Sich bei der Arbeit wohlfühlen", // nieuw, nalezen
+    'w.werkdruk': "der Arbeitsdruck (zu viel Arbeit in zu wenig Zeit)", // nieuw, nalezen
+    'w.wakkerliggen': "wach liegen (du kannst nicht schlafen)", // nieuw, nalezen
+    'w.ploegendienst': "die Schichtarbeit (Früh-, Spät- und Nachtschicht im Wechsel)", // nieuw, nalezen
+    'w.heimwee': "das Heimweh (du vermisst dein Zuhause)", // nieuw, nalezen
+    'w.familie': "die Familie", // nieuw, nalezen
+    'w.alleen': "allein", // nieuw, nalezen
+    's.feelwell.1': "Ich schlafe schlecht wegen der Schichtarbeit.", // nieuw, nalezen
+    's.feelwell.2': "Es ist zu viel. Ich schaffe es nicht allein.", // nieuw, nalezen
+    's.feelwell.3': "Ich habe Heimweh. Meine Familie ist weit weg.", // nieuw, nalezen
+    'c.feelwell.q': "Geht es dir gut?", // nieuw, nalezen
+    'c.feelwell.a': "Nicht so gut. Ich liege oft wach.", // nieuw, nalezen
+    'c.feelwell': "Zu viel? Du musst das nicht allein schaffen", // nieuw, nalezen
+    'c.feelwell.b': "Jeder ist manchmal müde, gestresst oder traurig. Zu viel Arbeit (werkdruk), schlechter Schlaf durch Schichtarbeit oder Sehnsucht nach deiner Familie können es schwer machen. Du musst das nicht allein tragen, und zu sagen „es ist zu viel“ ist keine Schwäche. Sprich mit jemandem, dem du vertraust: deinem Vorgesetzten, der Vertrauensperson (vertrouwenspersoon, wenn es eine gibt), dem Betriebsarzt (bedrijfsarts) oder deinem Hausarzt (huisarts). Du kannst auch selbst um ein Gespräch mit dem Betriebsarzt bitten. Ärzte erzählen deinem Chef nicht, was du gesagt hast. Denkst du an Suizid, oder machst du dir Sorgen um jemanden? Ruf 113 an (kostenlos, Tag und Nacht), oder chatte auf 113.nl.", // nieuw, nalezen
+    'c.feelwell.p': "Mir geht es nicht so gut. Kann ich kurz mit dir reden?", // nieuw, nalezen
+    'c.feelwell.s': "Seit Wochen schläfst du schlecht, und die Arbeit ist zu viel. Du bist sehr müde. Was machst du?", // nieuw, nalezen
+    'c.feelwell.o1': "Du sagst es deinem Vorgesetzten oder dem Betriebsarzt.", // nieuw, nalezen
+    'c.feelwell.o2': "Du sagst nichts und arbeitest härter und schneller.", // nieuw, nalezen
+    'c.feelwell.o3': "Du bleibst zu Hause und sagst niemandem, warum.", // nieuw, nalezen
+    'c.feelwell.w': "Es früh zu sagen ist keine Schwäche. Dann könnt ihr zusammen einen Ausweg suchen, zum Beispiel andere Schichten. Du musst das nicht allein schaffen.", // nieuw, nalezen
+    'l.backtowork': "Nach einer Krankheit zurück zur Arbeit", // nieuw, nalezen
+    'w.opbouwen': "langsam steigern (Schritt für Schritt)", // nieuw, nalezen
+    'w.halvedagen': "halbe Tage (du arbeitest nur einen Teil des Tages)", // nieuw, nalezen
+    'w.lichtwerk': "leichte Arbeit (nicht schwer)", // nieuw, nalezen
+    'w.zwaarwerk': "schwere Arbeit", // nieuw, nalezen
+    'w.herstellen': "sich erholen, wieder gesund werden", // nieuw, nalezen
+    'w.welkomterug': "willkommen zurück", // nieuw, nalezen
+    's.backtowork.1': "Ich fange mit halben Tagen an.", // nieuw, nalezen
+    's.backtowork.2': "Leichte Arbeit kann ich schon. Schwere Arbeit noch nicht.", // nieuw, nalezen
+    's.backtowork.3': "Der Betriebsarzt sagt: langsam steigern.", // nieuw, nalezen
+    'c.backtowork.q': "Willkommen zurück! Geht es dir besser?", // nieuw, nalezen
+    'c.backtowork.a': "Ja, es geht besser. Ich mache langsam.", // nieuw, nalezen
+    'c.backtowork': "Schritt für Schritt zurück", // nieuw, nalezen
+    'c.backtowork.b': "Bist du wieder gesund? Sag deinem Arbeitgeber, dass du wieder arbeiten kannst (betermelden). Nach einer längeren Krankheit fängst du oft Schritt für Schritt an: zuerst weniger Stunden oder leichtere Arbeit. Der Betriebsarzt (bedrijfsarts) berät dich, was du machen kannst. Länger krank? Dann machen du und dein Arbeitgeber zusammen einen Plan für deine Rückkehr. So steht es im Gesetz (Wet verbetering poortwachter). Sag deutlich, was du kannst und was noch nicht. Du musst Kollegen nicht sagen, welche Krankheit du hattest. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.backtowork.p': "Das kann ich schon. Das kann ich noch nicht.", // nieuw, nalezen
+    'c.backtowork.s': "Du warst drei Wochen krank. An deinem ersten Tag zurück bittet dich dein Vorgesetzter, schwere Kisten zu heben. Der Betriebsarzt hat gesagt: vorerst nur leichte Arbeit. Was machst du?", // nieuw, nalezen
+    'c.backtowork.o1': "Du sagst ruhig, dass du jetzt leichte Arbeit machen kannst und was du noch nicht kannst.", // nieuw, nalezen
+    'c.backtowork.o2': "Du hebst die Kisten trotzdem: Du willst keine Umstände machen.", // nieuw, nalezen
+    'c.backtowork.o3': "Du gehst ohne ein Wort nach Hause.", // nieuw, nalezen
+    'c.backtowork.w': "Dein Vorgesetzter will dich zurück, und zwar gesund. Wenn du deutlich sagst, was du kannst, kann er die Arbeit planen. Zu viel zu früh kann dich wieder krank machen.", // nieuw, nalezen
   },
 };
 

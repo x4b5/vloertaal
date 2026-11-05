@@ -45,7 +45,7 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "Puedo decir que mi nómina no está bien.", // nieuw, nalezen
     'kjn.u.pay.2': "Puedo leer palabras como bruto y netto.", // nieuw, nalezen
     'kjn.u.leave.1': "Puedo pedir días de permiso.", // nieuw, nalezen
-    'kjn.u.leave.2': "Puedo avisar de que estoy de baja y de que vuelvo.", // nieuw, nalezen
+    'kjn.u.leave.2': "Puedo decir que mi hijo está enfermo.", // nieuw, nalezen
     'kjn.u.contact.1': "Puedo llamar y decir quién soy.", // nieuw, nalezen
     'kjn.u.contact.2': "Puedo pedir que alguien me devuelva la llamada.", // nieuw, nalezen
     'kjn.u.contact.3': "Puedo escribir un mensaje corto al trabajo.", // nieuw, nalezen
@@ -103,6 +103,14 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "Puedo decir que un cable está roto.", // nieuw, nalezen
     'kjn.u.garage.1': "Puedo decir que un neumático está pinchado.", // nieuw, nalezen
     'kjn.u.garage.2': "Puedo decir que primero el cliente tiene que estar de acuerdo.", // nieuw, nalezen
+    'kjn.u.sick.1': "Puedo avisar de que estoy de baja y de que vuelvo.", // nieuw, nalezen
+    'kjn.u.sick.2': "Puedo decir lo que todavía no puedo hacer.", // nieuw, nalezen
+    'kjn.u.sick.3': "Puedo decir que al principio trabajo medias jornadas.", // nieuw, nalezen
+    'kjn.u.health.3': "Puedo decir que el trabajo se me hace demasiado.", // nieuw, nalezen
+    'kjn.u.factory.3': "Puedo avisar de que tengo un pequeño corte.", // nieuw, nalezen
+    'kjn.u.delivery.1': "Puedo decir que el cliente no está en casa.", // nieuw, nalezen
+    'kjn.u.delivery.2': "Puedo pedir a los vecinos que se queden con un paquete.", // nieuw, nalezen
+    'kjn.u.delivery.3': "Puedo preguntar quién decide mi ruta y mis horarios.", // nieuw, nalezen
   },
 };
 

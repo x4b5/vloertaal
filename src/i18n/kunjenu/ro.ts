@@ -45,7 +45,10 @@ const t: CultureTranslation = {
     'kjn.u.pay.1': "Pot să spun că fluturașul de salariu nu e corect.", // nieuw, nalezen
     'kjn.u.pay.2': "Pot să citesc cuvinte ca bruto și netto.", // nieuw, nalezen
     'kjn.u.leave.1': "Pot să cer concediu.", // nieuw, nalezen
-    'kjn.u.leave.2': "Pot să anunț boala și revenirea la muncă.", // nieuw, nalezen
+    'kjn.u.leave.2': "Pot să spun că copilul meu e bolnav.", // nieuw, nalezen
+    'kjn.u.sick.1': "Pot să anunț boala și revenirea la muncă.", // nieuw, nalezen
+    'kjn.u.sick.2': "Pot să spun ce nu pot face încă.", // nieuw, nalezen
+    'kjn.u.sick.3': "Pot să spun că la început lucrez jumătăți de zi.", // nieuw, nalezen
     'kjn.u.contact.1': "Pot să sun și să spun cine sunt.", // nieuw, nalezen
     'kjn.u.contact.2': "Pot să rog pe cineva să mă sune înapoi.", // nieuw, nalezen
     'kjn.u.contact.3': "Pot să scriu un mesaj scurt către serviciu.", // nieuw, nalezen
@@ -79,6 +82,7 @@ const t: CultureTranslation = {
     'kjn.u.papers.2': "Pot să întreb cât e chiria.", // nieuw, nalezen
     'kjn.u.health.1': "Pot să spun unde mă doare.", // nieuw, nalezen
     'kjn.u.health.2': "Pot să cer o programare la medicul de familie.", // nieuw, nalezen
+    'kjn.u.health.3': "Pot să spun că munca devine prea mult pentru mine.", // nieuw, nalezen
     'kjn.u.money.1': "Pot să spun că nu înțeleg o scrisoare.", // nieuw, nalezen
     'kjn.u.money.2': "Pot să-i spun nu unui escroc la telefon.", // nieuw, nalezen
     'kjn.u.travel.1': "Pot să spun cum ajung la muncă.", // nieuw, nalezen
@@ -91,6 +95,7 @@ const t: CultureTranslation = {
     'kjn.u.build.2': "Pot să cer unelte.", // nieuw, nalezen
     'kjn.u.factory.1': "Pot să spun că e o defecțiune.", // nieuw, nalezen
     'kjn.u.factory.2': "Pot să spun ce nu e în regulă cu un produs.", // nieuw, nalezen
+    'kjn.u.factory.3': "Pot să anunț că am o tăietură mică.", // nieuw, nalezen
     'kjn.u.care.1': "Pot să întreb un client dacă pot să ajut.", // nieuw, nalezen
     'kjn.u.care.2': "Pot să transmit ceva asistentei medicale.", // nieuw, nalezen
     'kjn.u.horeca.1': "Pot să întreb oaspeții ce doresc să bea.", // nieuw, nalezen
@@ -103,6 +108,10 @@ const t: CultureTranslation = {
     'kjn.u.tech.2': "Pot să spun că un cablu e stricat.", // nieuw, nalezen
     'kjn.u.garage.1': "Pot să spun că o anvelopă e spartă.", // nieuw, nalezen
     'kjn.u.garage.2': "Pot să spun că mai întâi clientul trebuie să fie de acord.", // nieuw, nalezen
+    // Vervoer en bezorging (5 november 2026).
+    'kjn.u.delivery.1': "Pot să spun că clientul nu e acasă.", // nieuw, nalezen
+    'kjn.u.delivery.2': "Pot să le cer vecinilor să primească un colet.", // nieuw, nalezen
+    'kjn.u.delivery.3': "Pot să întreb cine decide traseul și orele mele.", // nieuw, nalezen
   },
 };
 

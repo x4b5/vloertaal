@@ -122,6 +122,12 @@ const t: CultureTranslation = {
     'c.email.a.why': "پرسیده‌اند فرستاده شده یا نی: هنوز نی، اول کنترول می‌شود.", // nieuw, nalezen // nagelezen AI ronde 3
     'c.budget.a.why': "پیشنهاد «بعداً بپردازید»: یک «نی» با ادب، با دلیل.", // nieuw, nalezen // nagelezen AI ronde 3
     'c.healthy.a.why': "پیشنهاد تابلیت: یک «نی» با ادب، با دلیل.", // nieuw, nalezen // nagelezen AI ronde 3
+    'd.newcolleague.a.why': "«فکر می‌کنم» یعنی هنوز مطمئن نیست: وقتی بخواهید نشان بدهد، معلوم می‌شود که درست است یا نی.", // nieuw, nalezen
+    'c.food.a.why': "پرسیده‌اند چرا خط پاک می‌شود: محصول بعدی مغزیات ندارد.", // nieuw, nalezen
+    'c.parcel.a.why': "پرسیده‌اند که بسته از اوست یا نی: بلی، و بعد امضا.", // nieuw, nalezen
+    'c.road.a.why': "یک دور دیگر خواسته‌اند: نی، چون اول وقت تفریح است.", // nieuw, nalezen
+    'c.backtowork.a.why': "پرسیده‌اند حال تان چطور است: یک بلی کوتاه، و اینکه آهسته آهسته پیش می‌روید.", // nieuw, nalezen
+    'c.feelwell.a.why': "پرسیده‌اند حال تان چطور است: یک «زیاد خوب نی» صادقانه مشکلی ندارد.", // nieuw, nalezen
   },
 };
 

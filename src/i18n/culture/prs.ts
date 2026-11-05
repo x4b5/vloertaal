@@ -198,6 +198,26 @@ const t: CultureTranslation = {
     's.clear.3': 'ببخشید، من خیلی تیز و خیلی زیاد گپ می‌زنم.', // nieuw, nalezen
     'd.clear.q': 'واضح است؟', // nieuw, nalezen
     'd.clear.a': 'بلی. یک سوال دیگر دارم.', // nieuw, nalezen
+    'l.newcolleague': "کمک به یک همکار نو", // nieuw, nalezen
+    'w.welkom': "خوش آمدید", // nieuw, nalezen
+    'w.inwerken': "یاد دادن کار به همکار نو (در روزهای اول)", // nieuw, nalezen
+    'w.stap': "قدم، مرحله (یک بخش کوچک از یک کار)", // nieuw, nalezen
+    'w.nadoen': "تقلید کردن (کاری را که کسی به شما نشان داده، انجام دادن)", // nieuw, nalezen
+    'w.geduld': "صبر، حوصله", // nieuw, nalezen
+    'w.kast': "الماری", // nieuw, nalezen
+    's.newcolleague.1': "خوش آمدید! امروز کار را به شما نشان می‌دهم.", // nieuw, nalezen
+    's.newcolleague.2': "اول ببینید. بعد خود تان همان کار را بکنید.", // nieuw, nalezen
+    's.newcolleague.3': "دستکش‌ها در آن الماری است.", // nieuw, nalezen
+    'd.newcolleague.q': "فکر می‌کنم فهمیدم.", // nieuw, nalezen
+    'd.newcolleague.a': "خوب. نشانم بدهید.", // nieuw, nalezen
+    'c.newcolleague': "نشان بدهید، قدم به قدم", // nieuw, nalezen
+    'c.newcolleague.b': "چیزی که در هفته‌های اول برای شما سخت بود، برای یک همکار نو هم سخت است. کار را در قدم‌های کوچک توضیح بدهید: اول این، بعد آن. تیزتر یا بلندتر گپ نزنید: نشان بدهید، و بگذارید که بعد از شما همان کار را بکند. نپرسید «Snap je het?»: بسیاری از مردم بلی می‌گویند، حتی وقتی نفهمیده‌اند. به جای آن بگویید «Laat eens zien» و ببینید. بگویید که چیزها کجاست، مثل تشناب، غذاخوری و دستکش‌ها. صبر داشته باشید (geduld): یاد گرفتن برای همه وقت می‌گیرد.", // nieuw, nalezen
+    'c.newcolleague.p': "آفرین! حالا قدم بعدی.", // nieuw, nalezen
+    'c.newcolleague.s': "شما یک کار را برای یک همکار نو توضیح می‌دهید. او می‌گوید: «Ja, ja, ik snap het.» چه می‌کنید؟", // nieuw, nalezen
+    'c.newcolleague.o1': "بگویید «Laat eens zien,» و ببینید که او چطور آن را انجام می‌دهد.", // nieuw, nalezen
+    'c.newcolleague.o2': "بگویید «Goed zo,» و به کار خود برگردید.", // nieuw, nalezen
+    'c.newcolleague.o3': "همه را دوباره توضیح بدهید، تیزتر و بلندتر.", // nieuw, nalezen
+    'c.newcolleague.w': "بسیاری از مردم «ja» می‌گویند، حتی وقتی نفهمیده‌اند. وقتی او نشان می‌دهد، هر دو می‌بینید که درست است یا نی. این از درست کردن یک اشتباه در بعد، زودتر است.", // nieuw, nalezen
   },
 };
 
