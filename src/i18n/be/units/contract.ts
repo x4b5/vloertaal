@@ -642,4 +642,51 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+  'be.w.uitzendbureau': "xafiiska shaqo-qorista (interimkantoor)", // nieuw, nalezen
+  'be.s.findwork.2': "Qandaraasku ma waqti go'an buu leeyahay mise waqti aan xaddidnayn?", // nieuw, nalezen
+  'be.w.oproepkracht': "waqti-dhiman", // nieuw, nalezen
+  'be.w.proeftijd': "lacagta ogeysiiska (mushaharkaaga muddada ogeysiiska)", // nieuw, nalezen
+  'be.w.cao': "guddiga wadajirka ah (wuxuu sameeyaa xeerarka qaybtaada shaqo)", // nieuw, nalezen
+  'be.s.contract.2': "Qandaraaskaygu wuu dhammaanayaa. Goorma ayaan helayaa C4-kayga?", // nieuw, nalezen
+  'be.s.contract.3': "Guddiga wadajirka ah kee ayaan ka hooseeyaa?", // nieuw, nalezen
+  'be.w.uitzendkracht': "shaqaalaha ku meelgaarka ah (interimkracht)", // nieuw, nalezen
+  'be.w.intercedent': "qofka xiriirka ee xafiiska (xafiiska shaqo-qorista)", // nieuw, nalezen
+  'be.s.agency.1': "Waxaan ka shaqeeyaa xafiis shaqo-qoris (interimkantoor).", // nieuw, nalezen
+  'be.s.agency.2': "Berri mar kale ma helayaa qandaraas maalinle ah (qandaraas hal maalin ah)?", // nieuw, nalezen
+  'be.w.zzper': "qofka iskiis u shaqeysta (adigaa naftaada u shaqeeya)", // nieuw, nalezen
+  'be.s.permit.2': "Ma waxaan ahay shaqaale mise qof iskiis u shaqeysta?", // nieuw, nalezen
+  'be.s.permit.3': "Waxaan shaqeeyaa waqti-dhiman.", // nieuw, nalezen
+  'be.c.findwork': "Qandaraaskaaga warqad ku hel", // nieuw, nalezen
+  'be.c.findwork.b': "Had iyo jeer codso qandaraas qoran iyo koobi adiga kuu gaar ah. Qandaraas waqti go'an (bepaalde tijd) ama qandaraas waqti-dhiman ah waa inuu warqad ku qornaadaa marka aad bilowdo. Akhri intaadan saxiixin, ama qof aad aaminsan tahay ka codso inuu ku caawiyo. Maalintaada ugu horreysa ka hor, loo-shaqeeyahaagu wuxuu kuu diiwaangeliyaa nidaamka bulshada: Dimona. Xafiis shaqo-qoris (interimkantoor) lacag kuuma weydiin karo si uu shaqo kuu helo. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.findwork.p': "Ma marka hore akhrin karaa qandaraaska?", // nieuw, nalezen
+  'be.c.findwork.s': "Loo-shaqeeye cusub ayaa leh: “Hadda halkan saxiix. Goor dambe ayaad akhrin kartaa.” Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.findwork.o1': "Codso waqti aad ku akhrido, ama koobi.", // nieuw, nalezen
+  'be.c.findwork.o2': "Si dhakhso ah u saxiix, si aadan shaqada u waayin.", // nieuw, nalezen
+  'be.c.findwork.o3': "Saxiix, oo kadib codso koobi.", // nieuw, nalezen
+  'be.c.findwork.w': "Qandaraaskaagu wuxuu sheegaa waxa aad heshid iyo xuquuqdaada. Loo-shaqeeye wanaagsan wuxuu ku siiyaa waqti aad ku akhrido. Waad weydiin kartaa wax kasta oo aadan fahmin.", // nieuw, nalezen
+  'be.c.contract': "Muddo tijaabo ah ma jirto, laakiin muddo ogeysiis ayaa jirta", // nieuw, nalezen
+  'be.c.contract.b': "Muddadii tijaabada ee hore (proeftijd) hadda ma jirto. Laga bilaabo maalinta koowaad, waxaad leedahay muddo ogeysiis (opzegtermijn). Bilaha ugu horreeya way gaaban tahay. Loo-shaqeeyahaagu ma rabaa inuu joojiyo? Markaas wuxuu kuu soo diraa ogeysiis qoran, ama wuxuu ku siiyaa mushaharkaaga muddadaas (opzegvergoeding). Waqti-dhiman oo saacado is-beddela leh? Jadwalkaaga shaqada (uurrooster) hore ayaad u helaysaa: badanaa 7 maalmood oo shaqo ka hor. Qaybtaada shaqadu way gaabin kartaa, laakiin kama gaabin karto 3. Xeerarka qaybtaada shaqo waxay ka yimaadaan guddigeeda wadajirka ah (paritair comité). Shaqadaadu ma dhammaanaysaa? Codso C4-kaaga: waxaad ugu baahan tahay gargaarka shaqo la'aanta. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.contract.p': "Muddadayda ogeysiisku intee ayay le'eg tahay? Oo ma helayaa C4-kayga?", // nieuw, nalezen
+  'be.c.contract.s': "Saddex toddobaad kadib madaxaagu wuxuu leeyahay: “Ma shaqaynayso. Berri jooji. Weli waxaad ku jirtaa muddada tijaabada.” Maxaa run ah?", // nieuw, nalezen
+  'be.c.contract.o1': "Muddo tijaabo ah ma jirto: waxaad helaysaa ogeysiis ama mushaharkaaga.", // nieuw, nalezen
+  'be.c.contract.o2': "Toddobaadyada ugu horreeya, madaxu isla markiiba wuu ku joojin karaa.", // nieuw, nalezen
+  'be.c.contract.o3': "Waxba ma helaysid, maxaa yeelay saddex toddobaad oo keliya ayaad shaqaysay.", // nieuw, nalezen
+  'be.c.contract.w': "Muddadii tijaabada ee hore hadda ma jirto. Xitaa bilaha ugu horreeya, waxaad helaysaa muddo ogeysiis, ama mushaharkaaga muddadaas. Sidoo kale codso C4-kaaga. Ma hubtid? Weydii ururka shaqaalaha.", // nieuw, nalezen
+  'be.c.agency': "Xafiiskaaga shaqo-qorista ayaa ah loo-shaqeeyahaaga", // nieuw, nalezen
+  'be.c.agency.b': "Haddii aad ka shaqeyso xafiis shaqo-qoris (interimkantoor), xafiiska ayaa ah loo-shaqeeyahaaga, ma aha shirkadda aad ka shaqeyso. Qandaraaskaaga iyo mushaharkaagu waxay ka yimaadaan xafiiska. Qandaraaskaagu waa inuu warqad ku qornaadaa, ugu dambayn 2 maalmood oo shaqo kadib marka aad bilowdo. Waxaad xaq u leedahay ugu yaraan mushahar la mid ah kan shaqaalaha shirkadda ee qabta shaqo isku mid ah. Is-diiwaangelintu waa bilaash: xafiis shaqo-qoris weligii lacag kuuma weydiin karo. Qandaraasyo maalinle ah (dagcontracten) oo badan oo isku xiga waxaa la oggol yahay oo keliya sabab wanaagsan. Hayso liiskaaga saacadaha aad shaqaysay, oo ka hubi warqaddaada mushaharka (loonbrief). Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.agency.p': "Warqaddayda mushaharka waxaa ku qoran saacado aad u yar.", // nieuw, nalezen
+  'be.c.agency.s': "Warqaddaada mushaharka (loonbrief) waxaa ku qoran 32 saacadood, laakiin waxaad shaqaysay 38. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.agency.o1': "Xafiiska tus liiskaaga saacadaha oo codso inay saxaan.", // nieuw, nalezen
+  'be.c.agency.o2': "Waxba ha odhan, maxaa yeelay waa 6 saacadood oo keliya.", // nieuw, nalezen
+  'be.c.agency.o3': "Madaxa shirkadda aad ka shaqeyso ka codso inuu bixiyo 6-da saacadood.", // nieuw, nalezen
+  'be.c.agency.w': "Xafiiska shaqo-qorista ayaa ku siiya mushaharka, sidaas darteed xafiiska ayaa saxaya khaladka. Liiskaaga taariikhaha iyo saacaduhu wuu caawiyaa. Weydiintu waa xaqaaga.", // nieuw, nalezen
+  'be.c.permit': "Shaqada iyo is-dhexgalka", // nieuw, nalezen
+  'be.c.permit.b': "Ma waajib baa inaad raacdo barnaamijka is-dhexgalka (inburgering)? Flanders, Agentschap Integratie en Inburgering ayaa ku hagaya. U sheeg loo-shaqeeyahaaga, oo hore u weydii in fasallada Af-Holandiiska lagu habayn karo jadwalkaaga shaqada (uurrooster). Ma hubtid inaad halkan ka shaqayn karto? Hubi intaadan bilaabin, tusaale ahaan urur shaqaale. Loo-shaqeeyahaagu waa inuu ku diiwaangeliyaa maalintaada ugu horreysa ka hor (Dimona). Ma waxay kaa codsanayaan inaad shaqadan u qabato sidii qof iskiis u shaqeysta (zelfstandige)? Qof iskiis u shaqeysta mushahar ma helo marka uu xanuunsan yahay, gargaar shaqo la'aanna ma helo. Marka hore talo weydii. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.permit.p': "Talaadada waxaan leeyahay fasal Af-Holandiis ah. Jadwalkayga shaqadu ma tixgelin karaa taas?", // nieuw, nalezen
+  'be.c.permit.s': "Shaqo cusub ayaad bilaabaysaa. Fasalkaaga Af-Holandiisku waa subaxda Talaadada, laakiin jadwalkaaga shaqadu wuxuu ku tusayaa inaad Talaadada shaqayso. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.permit.o1': "U sheeg madaxaaga oo codso in jadwalka la beddelo.", // nieuw, nalezen
+  'be.c.permit.o2': "Ka maqnaw fasalka Af-Holandiiska, maxaa yeelay shaqada ayaa ka horraysa.", // nieuw, nalezen
+  'be.c.permit.o3': "Talaadada guriga joog adoon waxba odhan.", // nieuw, nalezen
+  'be.c.permit.w': "Is-dhexgalkaagu sidoo kale waa waajib. Loo-shaqeeyayaal badan way caawiyaan marka ay hore u ogaadaan. Hagahaaga Agentschap-ka ayaa sidoo kale kaa caawin kara inaad fasalladaada la jaanqaaddo shaqadaada.", // nieuw, nalezen
+};

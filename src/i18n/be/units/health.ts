@@ -499,4 +499,40 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+    "be.w.huisartsenpost": "adeegga dhakhtarka qoyska ee fiidka, habeenka iyo dhammaadka toddobaadka (huisartsenwachtpost)", // nieuw, nalezen
+    "be.c.doctor.q": "Adeegga dhakhtarka qoyska, maxaan kuu qabtaa?", // nieuw, nalezen
+    "be.w.premie": "lacagta xubinnimada (waxa aad siiso ziekenfonds)", // nieuw, nalezen
+    "be.w.eigenrisico": "qaybtaada (qaybta kharashka aad adigu bixiso)", // nieuw, nalezen
+    "be.w.zorgtoeslag": "caawimaad dheeraad ah oo kharashka caafimaadka (dakhli yar)", // nieuw, nalezen
+    "be.w.verzekeraar": "sanduuqa caymiska caafimaadka (ziekenfonds, mutualiteit)", // nieuw, nalezen
+    "be.s.insurance.1": "Waxaan xubin ka ahay sanduuq caymis caafimaad.", // nieuw, nalezen
+    "be.s.insurance.2": "Tan dib ma loo bixiyaa (ma la daboolaa)?", // nieuw, nalezen
+    "be.s.insurance.3": "Waxaan codsanayaa caawimaadda dheeraadka ah ee kharashka caafimaadka.", // nieuw, nalezen
+    "be.c.insurance.q": "Sanduuqee caymis caafimaad ayaad ku jirtaa?", // nieuw, nalezen
+    "be.c.insurance.a": "Ma aqaan. Waan hubin doonaa.", // nieuw, nalezen
+    "be.c.doctor": "Dhakhtar mise 112?", // nieuw, nalezen
+    "be.c.doctor.b": "Dooro dhakhtar qoys (huisarts) oo gurigaaga u dhow. Ma u baahan tahay dhakhtar fiidka, habeenka ama dhammaadka toddobaadka? Wac 1733: waxay kuu dirayaan dhakhtarka shaqada ku jira (huisartsenwachtpost). Wac 112 kaliya xaalad degdeg ah: khatar nafeed, dab, ama dambi hadda dhacaya. Daawooyinka waxaad ka helaysaa farmashiyaha (apotheek).", // nieuw, nalezen
+    "be.c.doctor.p": "Weli ma qaadataa bukaanno cusub?", // nieuw, nalezen
+    "be.c.doctor.s": "Waa habeenka Sabtida. Ilmahaagu qandho sare ayuu qabaa, laakiin wuu soo jeedaa oo si caadi ah ayuu u neefsanayaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.doctor.o1": "Wac 1733.", // nieuw, nalezen
+    "be.c.doctor.o2": "Wac 112.", // nieuw, nalezen
+    "be.c.doctor.o3": "Sug ilaa Isniinta oo waxba ha samayn.", // nieuw, nalezen
+    "be.c.doctor.w": "1733 waxay kaa caawisaa inaad hesho dhakhtar marka saacadaha shaqadu dhammaadaan. 112 waa xaaladaha degdegga ah: khatar nafeed, dab, ama dambi hadda dhacaya.", // nieuw, nalezen
+    "be.c.insurance": "Ziekenfonds-kaaga", // nieuw, nalezen
+    "be.c.insurance.b": "Beljiyam waa inaad ku biirtaa sanduuq caymis caafimaad: ziekenfonds (mutualiteit), ama Hulpkas (HZIV). Samee marka aad bilowdo shaqada. Ziekenfonds-ku wuxuu dib u bixiyaa qayb ka mid ah kharashka dhakhtarka, isbitaalka iyo daawooyinka. Qaybta aad adigu bixiso waa remgeld. Dakhli yar, waxaa laga yaabaa inaad hesho verhoogde tegemoetkoming: markaas wax yar ayaad bixinaysaa. Muddo dheer ma xanuunsan tahay? Markaas ziekenfonds-ku sidoo kale wuxuu ku siiyaa gargaar lacageed. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+    "be.c.insurance.p": "Waxaan rabaa inaan ku biiro sanduuq caymis caafimaad. Ma i caawin kartaa?", // nieuw, nalezen
+    "be.c.insurance.s": "Laba toddobaad ka hor ayaad halkan ka bilowday shaqada, weli ziekenfonds ma lihid. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.insurance.o1": "Si dhakhso ah ugu biir ziekenfonds.", // nieuw, nalezen
+    "be.c.insurance.o2": "Sug: caymiskaaga dalkaagii ayaa ku filan.", // nieuw, nalezen
+    "be.c.insurance.o3": "Isticmaal kaarka caymiska saaxiib.", // nieuw, nalezen
+    "be.c.insurance.w": "Ziekenfonds la'aan, dhakhtarka iyo isbitaalka adigaa bixinaya. Si dhakhso ah ugu biiristu way ku ilaalinaysaa. Loo-shaqeeyahaaga ama xafiiska shaqo-qorista ayaa ku caawin kara.", // nieuw, nalezen
+    "be.c.feelwell": "Ma kugu badan tahay? Keligaa uma baahnid inaad qaaddo", // nieuw, nalezen
+    "be.c.feelwell.b": "Qof walba mararka qaarkood wuu daalaa, walbahaar ayuu qabaa ama wuu murugoodaa. Shaqo aad u badan (werkdruk), hurdo xun oo shaqada wareegga ka timaadda ama qoyskaaga oo aad u xiisato ayaa culays ku keeni kara. Keligaa uma baahnid inaad qaaddo, oo odhashada “waa igu badan tahay” ma aha daciifnimo. La hadal qof aad aaminsan tahay: madaxaaga, qofka sirta la aamini karo (vertrouwenspersoon) ama la-taliyaha ka-hortagga (preventieadviseur psychosociale aspecten), dhakhtarka shaqada (arbeidsarts) ama huisarts-kaaga. Sidoo kale adigu waad codsan kartaa wadahadal dhakhtarka shaqada. Dhakhaatiirtu uma sheegaan madaxaaga waxa aad tidhi. Ma ka fikiraysaa is-dil, mise qof ayaad ka welwelsan tahay? Wac 1813 (bilaash, maalin iyo habeen), ama kula sheekayso zelfmoord1813.be.", // nieuw, nalezen
+    "be.c.feelwell.p": "Si fiican uma joogo. Wax yar ma kula hadli karaa?", // nieuw, nalezen
+    "be.c.feelwell.s": "Toddobaadyo badan ayaad si xun u seexanaysay, shaqaduna way kugu badan tahay. Aad baad u daallan tahay. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.feelwell.o1": "U sheeg madaxaaga ama arbeidsarts.", // nieuw, nalezen
+    "be.c.feelwell.o2": "Waxba ha odhan, oo si adag oo dhakhso ah u shaqee.", // nieuw, nalezen
+    "be.c.feelwell.o3": "Guriga joog, oo qofna ha u sheegin sababta.", // nieuw, nalezen
+    "be.c.feelwell.w": "Hore u sheegiddu ma aha daciifnimo. Markaas waad wada raadin kartaan xal, tusaale ahaan wareegyo shaqo oo kale. Keligaa uma baahnid inaad qaaddo.", // nieuw, nalezen
+};

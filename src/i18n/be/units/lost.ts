@@ -456,4 +456,36 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+  'be.w.ww': "C4 (warqadda loo-shaqeeyahaagu ku siiyo marka shaqadaadu dhammaato)", // nieuw, nalezen
+  'be.w.uwv': "RVA (xafiiska qaranka ee go'aamiya gargaarka shaqo la'aanta)", // nieuw, nalezen
+  'be.s.ww.1': "Waxaan iska diiwaangelinayaa VDAB.", // nieuw, nalezen
+  'be.c.ww.a': "Waxaan codsanayaa C4-kayga oo waxaan aadayaa ururka shaqaalaha.", // nieuw, nalezen
+  'be.s.jobends.2': "Waxaan talo weydiinayaa justitiehuis.", // nieuw, nalezen
+  'be.s.jobends.3': "Waxaan weydiinayaa ziekenfonds-kayga in caymiskaygu sii socdo.", // nieuw, nalezen
+  'be.s.newjob.2': "Warqadahayga mushaharka waan kaydiyaa.", // nieuw, nalezen
+  'be.c.ww': "Gargaarka shaqo la'aanta", // nieuw, nalezen
+  'be.c.ww.b': "Shaqadii ma kaa lumtay? Loo-shaqeeyahaagu wuxuu ku siinayaa C4, ugu dambayn maalintaada shaqo ee ugu dambaysa. Isla markiiba iska diiwaangeli VDAB sidii qof shaqo raadinaya. Kadib gargaarkaaga ka codso urur shaqaale (ABVV, ACV ama ACLVB), ama HVW haddii aadan xubin ahayn. Kama codsanaysid RVA laftiisa: RVA ayaa go'aamisa. Waa inaad marka hore shaqaysay muddo ku filan. Gargaarku waqti ayuu leeyahay: inta uu le'eg yahay waxay ku xiran tahay inta aad shaqaysay. Shaqada ma iska dhaaftay adigu, sabab wanaagsan la'aan? Markaas badanaa muddo gargaar ma helaysid. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.ww.p': "Waxaan rabaa inaan codsado gargaar. Maxaan sameeyaa?", // nieuw, nalezen
+  'be.c.ww.s': "Shaqadaada ayaad ka xanaaqsan tahay oo waxaad rabtaa inaad maanta iska dhaafto. Maxaa caqli ah?", // nieuw, nalezen
+  'be.c.ww.o1': "Marka hore talo weydii, intaadan iska dhaafin.", // nieuw, nalezen
+  'be.c.ww.o2': "Maanta iska dhaaf: si kastaba gargaar waad heli doontaa.", // nieuw, nalezen
+  'be.c.ww.o3': "Jooji imaanshaha shaqada adoon waxba odhan.", // nieuw, nalezen
+  'be.c.ww.w': "Iska dhaafidda shaqadu waxay muddo kaa lumin kartaa gargaarkaaga. Marka hore la hadalka madaxaaga, ururka shaqaalaha ama justitiehuis ayaa kaa caawin kara inaad hesho waddo ka wanaagsan.", // nieuw, nalezen
+  'be.c.jobends': "Shaqadaadu way dhammaanaysaa: maxaa kale oo istaagaya?", // nieuw, nalezen
+  'be.c.jobends.b': "Marka shaqadaadu dhammaato, hubi mushaharkaaga ugu dambeeya (eindafrekening), oo codso C4-kaaga. Ma tahay shaqaale xafiis (bediende)? Markaas lacagta fasaxa waxaad la helaysaa mushaharkaaga ugu dambeeya. Shaqaale gacmeed (arbeider)? Markaas waxaad helaysaa sannadka xiga, sanduuqa fasaxa (vakantiekas). Guriga ama baabuurka xafiiska shaqo-qorista ayaa isla waqtigaas istaagi kara. Qandaraaska kiradaadu xeerar u gaar ah ayuu leeyahay: talo weydii intaadan guriga ka bixin. Daryeelka caafimaadka waxaad ku caymisan tahay ziekenfonds-kaaga. Gargaarka shaqo la'aanta, badanaa caymiskaagu wuu sii jiraa. Ma guuraysaa? U sheeg gemeente-ga 8 maalmood oo shaqo gudahood. Ma ku noqonaysaa dalkaagii? Weydii ziekenfonds-kaaga. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.jobends.p': "Goorma ayaan helayaa mushaharkayga ugu dambeeya?", // nieuw, nalezen
+  'be.c.jobends.s': "Shaqadaadu waxay dhammaanaysaa Jimcaha. Xafiiska shaqo-qorista ayaa sidoo kale kuu diyaariya qolkaaga. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.jobends.o1': "Weydii waxa qandaraaska kiradaadu sheegayo, oo talo raadso.", // nieuw, nalezen
+  'be.c.jobends.o2': "Qolka ka bax Jimcaha, maxaa yeelay shaqadu way istaagaysaa.", // nieuw, nalezen
+  'be.c.jobends.o3': "Joog, oo qofna ha kala hadlin.", // nieuw, nalezen
+  'be.c.jobends.w': "Qandaraaska kiradaadu wuu ka gooni yahay qandaraaskaaga shaqada. Wuxuu sheegayaa inta aad joogi karto. Justitiehuis ayaa ku siin kara talo koowaad oo bilaash ah.", // nieuw, nalezen
+  'be.c.newjob': "Raadinta shaqo cusub", // nieuw, nalezen
+  'be.c.newjob.b': "Intaadan bixin, codso tixraac (referentie). Kaydi warqadahaaga mushaharka (loonbrieven), qandaraaskaaga iyo C4-kaaga. Cusboonaysii CV-gaaga. Shaqo ka raadi VDAB (vdab.be) iyo xafiisyada shaqo-qorista (interimkantoren). Weligaa lacag ha bixin si aad shaqo u hesho. Macluumaad guud. Xaaladdaada gaarka ah: weydii ururka shaqaalaha, justitiehuis (talo sharci oo bilaash ah) ama Payoke.", // nieuw, nalezen
+  'be.c.newjob.p': "Magacaaga ma u bixin karaa tixraac ahaan?", // nieuw, nalezen
+  'be.c.newjob.s': "Qof ayaa kuu soo bandhigay shaqo, laakiin marka hore waa inaad bixisaa 300 euro “shaqada dartiis”. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.newjob.o1': "Ha bixin. Raadso xafiis shaqo-qoris oo dhab ah.", // nieuw, nalezen
+  'be.c.newjob.o2': "Bixi, maxaa yeelay shaqo wanaagsan way u qalantaa.", // nieuw, nalezen
+  'be.c.newjob.o3': "Hadda bixi kala bar, inta kalena goor dambe.", // nieuw, nalezen
+  'be.c.newjob.w': "Lacag in shaqo laguu weydiiyo waa calaamad digniin ah. Xafiis shaqo-qoris lacag kaama qaadan karo shaqo raadinta. Shaqo waxaad sidoo kale ka raadin kartaa VDAB.", // nieuw, nalezen
+};

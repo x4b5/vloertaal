@@ -330,4 +330,27 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+  'be.c.review': "Weydii faallo (feedback), iyo tusaale", // nieuw, nalezen
+  'be.c.review.b': "Meesha aad tababarka shaqada (stage) ku qaadanayso, dadku waxay kuu sheegaan waxa si fiican u socda iyo waxa ka fiicnaan kara: faallo (feedback). Taasi waa caadi, waxayna kaa caawisaa inaad wax barato. Ma fahmin? Weydii tusaale. Adiguna weydii faallo, tusaale ahaan toddobaadkiiba mar. Ma jiraa wax si dhab ah u khaldan meesha tababarkaaga? Marka hore la hadal hagahaaga (mentor) ee shirkadda. Taasi ma caawinayso? Markaas u tag la-taliyaha tababarkaaga ee dugsiga.", // nieuw, nalezen
+  'be.c.review.p': "Maxaa si fiican u socday, maxaase ka fiicnaan kara?", // nieuw, nalezen
+  'be.c.review.s': "Hagahaagu wuxuu yidhi: “Waa inaad si taxaddar badan u shaqeysaa.” Ma garanaysid waxa uu ula jeedo. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.review.o1': "Weydii tusaale waxa aad si kale u samaynayso.", // nieuw, nalezen
+  'be.c.review.o2': "Haa dheh, oo rajee inaad adigu ogaato.", // nieuw, nalezen
+  'be.c.review.o3': "Hadda laga bilaabo aad u gaabi, si aanay waxba u khaldamin.", // nieuw, nalezen
+  'be.c.review.w': "Tusaale ayaad ku ogaanaysaa waxa aad beddelayso. Weydiintu waxay muujinaysaa inaad rabto inaad wax barato. Hagayaashu taas way jecel yihiin.", // nieuw, nalezen
+  'be.w.praktijkopleider': "hagaha (mentor: qofka kugu hagaya shirkadda)", // nieuw, nalezen
+  'be.w.pok': "heshiiska tababarka (adiga, dugsiga iyo shirkaddu ayaa saxeexa)", // nieuw, nalezen
+  'be.w.leerbedrijf': "CLB (xarun ardayda si bilaash ah u caawisa)", // nieuw, nalezen
+  'be.s.placement.2': "Waa kuma hagahaygu?", // nieuw, nalezen
+  'be.s.placement.3': "Weli ma saxeexin heshiiska tababarka.", // nieuw, nalezen
+  'be.c.placement.a': "Isniinta. Marka hore waxaynu saxeexaynaa heshiiska tababarka.", // nieuw, nalezen
+  'be.c.placement': "Marka hore saxeex, kadib bilow", // nieuw, nalezen
+  'be.c.placement.b': "Dugsiga inta badan waxaad wax ku bartaa shirkad: tababarkaaga shaqada (stage). Waxbarashada labada meelood (duaal leren), waxaad wax ku bartaa dugsiga iyo shirkad. Ka hor inta aadan bilaabin, adiga, dugsiga iyo shirkaddu waxaad saxeexaysaan heshiis: stageovereenkomst. Ma ka yar tahay 18? Markaas waalidkaa ayaa sidoo kale saxeexa. Shirkadda, hagahaaga (mentor) ayaa ku caawiya. Dugsiga, la-taliyaha tababarkaaga (stagebegeleider) ayaa ku caawiya. Dhibaato ma ka haysaa dugsiga ama tababarka? CLB ayaa ardayda u caawisa si bilaash ah oo sir ah. Ma xanuunsan tahay? Wac shirkadda ka hor waqtiga aad bilaabayso, sidoo kale u sheeg dugsiga. Xeerarku way ku kala duwan yihiin dugsi kasta: weydii la-taliyaha tababarkaaga.", // nieuw, nalezen
+  'be.c.placement.p': "Waxaan bilaabayaa oo keliya marka heshiiska tababarka la saxeexo.", // nieuw, nalezen
+  'be.c.placement.s': "Shirkaddu waxay kaa codsanaysaa inaad berri bilowdo. Weli lama saxeexin stageovereenkomst. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.placement.o1': "Weydii la-taliyaha tababarkaaga inuu marka hore heshiiska diyaariyo.", // nieuw, nalezen
+  'be.c.placement.o2': "Berri bilow, oo heshiiska saxeex markaad waqti hesho.", // nieuw, nalezen
+  'be.c.placement.o3': "Bilow, laakiin hadda ha u sheegin dugsiga.", // nieuw, nalezen
+  'be.c.placement.w': "Heshiiska stageovereenkomst wuxuu sheegaa waxa aad baranayso iyo cidda ku caawinaysa. Heshiis la saxeexay la'aantiis, tababarkaagu waxaa laga yaabaa inaanu tirsanayn. Sidaas darteed waad saxeexaysaa ka hor inta aadan bilaabin.", // nieuw, nalezen
+};

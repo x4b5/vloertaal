@@ -148,4 +148,13 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+    "be.c.smoking": "Sigaar cabbid banaanka oo keliya", // nieuw, nalezen
+    "be.c.smoking.b": "Beljiyam, sigaar cabbidda gudaha goobta shaqada sharci ahaan waa mamnuuc. Tani sidoo kale waxay khusaysaa sigaarka elektaroonigga ah (vapes). Shirkadaha qaarkood waxay leeyihiin qol gaar ah oo sigaarka: halkaas oo keliya ayaad gudaha ku cabbi kartaa. Ama banaanka ku cab, meesha loo-shaqeeyahaagu oggol yahay, badanaana nasashadaada oo keliya. Nasasho dheeraad ah oo sigaar ma aha xaq: kala hadal madaxaaga. Weligaa ha ku cabbin meel u dhow waxyaabo si fudud u gubta, sida shidaal ama sanduuqyo bakhaarka ku jira. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    "be.c.smoking.p": "Ma banaanka ku cabbi karaa sigaar nasashadayda?", // nieuw, nalezen
+    "be.c.smoking.s": "Waa qabow oo roob ayaa da'aya. Saaxiibka shaqada ayaa leh: “Qolka kaydka ku cab, qofna ma arkayo.” Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.smoking.o1": "Dheh maya, oo nasashadaada banaanka ku cab meesha sigaarka.", // nieuw, nalezen
+    "be.c.smoking.o2": "Si dhakhso ah ugu cab qolka kaydka, hal mar oo keliya.", // nieuw, nalezen
+    "be.c.smoking.o3": "Halkii, gudaha ku isticmaal vape-kaaga, maxaa yeelay taas waa la oggol yahay.", // nieuw, nalezen
+    "be.c.smoking.w": "Sigaar cabbidda gudaha waa ka soo horjeedda sharciga oo dab ayay kicin kartaa. Vape gudaha sidoo kale lama oggola. Raacidda xeerku qof walba ayay badbaadisaa.", // nieuw, nalezen
+};

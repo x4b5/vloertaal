@@ -397,4 +397,32 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+  'be.l.bsn': "Lambarkaaga diiwaanka qaranka iyo warqadahaaga", // nieuw, nalezen
+  'be.w.bsn': "lambarka diiwaanka qaranka (lambarkaaga Beljiyam)", // nieuw, nalezen
+  'be.w.identiteitsbewijs': "kaarka deganaanshaha (dadka aan Beljiyam ahayn)", // nieuw, nalezen
+  'be.w.zorgverzekering': "sanduuqa caymiska caafimaadka (mutualiteit)", // nieuw, nalezen
+  'be.s.bsn.3': "Waxaan ku galaa itsme ama eID-gayga.", // nieuw, nalezen
+  'be.c.bsn.q': "Ma arki karaa kaarkaaga deganaanshaha?", // nieuw, nalezen
+  'be.c.bsn.a': "Haa, waa kan. Lambarkayga diiwaanka qaranka ayaa ku qoran.", // nieuw, nalezen
+  'be.w.borg': "dammaanadda kirada (huurwaarborg)", // nieuw, nalezen
+  'be.w.inhouden': "ka jarid (mushaharkaaga)", // nieuw, nalezen
+  'be.s.housing.2': "Dammaanadda kirada dib ma u helayaa?", // nieuw, nalezen
+  'be.c.housing.q': "Kirada waxaan ka jaraynaa mushaharkaaga.", // nieuw, nalezen
+  'be.c.bsn': "Rijksregisternummer-kaaga: si fiican u ilaali", // nieuw, nalezen
+  'be.c.bsn.b': "Ma u timid inaad Beljiyam ku noolaato? Markaas waxaad iska diiwaangelisaa gemeente-ga cinwaankaaga. Waxaad helaysaa kaar: kaarka aqoonsiga (eID) dadka Beljiyam ah, kaarka deganaanshaha (verblijfskaart) dadka kale. Waxaa ku qoran rijksregisternummer-kaaga (lambarka diiwaanka qaranka). Weli diiwaanka kuma jirtid? Markaas waxaad helaysaa bisnummer. Lambarkaas ayaad u baahan tahay si aad u shaqeyso: loo-shaqeeyahaagu wuu ku weydiinayaa. Weligaa ha siin loo-shaqeeyahaaga kaarka laftiisa. Ma guuraysaa? U sheeg gemeente-ga 8 maalmood oo shaqo gudahood. Dowladda waxaad ku gashaa itsme ama eID-gaaga: weligaa koodhadhkaaga ha siin qof kale. Si dhakhso ah ugu biir ziekenfonds (sanduuqa caymiska caafimaadka). Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.bsn.p': "Maxaad ugu baahan tahay lambarkayga diiwaanka qaranka?", // nieuw, nalezen
+  'be.c.bsn.s': "Qof aadan aqoon ayaa WhatsApp kuugu soo bandhigay shaqo. Wuxuu kaa codsanayaa sawirka kaarkaaga deganaanshaha iyo koodhkaaga itsme. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.bsn.o1': "Weligaa ha siin koodhkaaga itsme. Marka hore hubi cidda uu yahay.", // nieuw, nalezen
+  'be.c.bsn.o2': "Wax walba si dhakhso ah u dir, si aad shaqada u hesho.", // nieuw, nalezen
+  'be.c.bsn.o3': "U dir sawirka kaarka oo keliya, ha u dirin koodhkaaga itsme.", // nieuw, nalezen
+  'be.c.bsn.w': "Haddii ay haystaan itsme-kaaga ama koobi kaarkaaga ah, dad kale ayaa magacaaga isticmaali kara, tusaale ahaan deyn ama gargaar. Loo-shaqeeye dhab ah wuxuu u baahan yahay rijksregisternummer-kaaga, laakiin weligii uma baahna koodhkaaga itsme.", // nieuw, nalezen
+  'be.c.housing': "Guri uu kuu helay loo-shaqeeyahaagu", // nieuw, nalezen
+  'be.c.housing.b': "Loo-shaqeeyahaaga ama xafiiska shaqo-qorista (interimkantoor) ma kuu diyaariyaa gurigaaga? Markaas qandaraaska kiradu waa inuu ka gooni noqdaa qandaraaska shaqada. Codso qandaraas kiro oo qoran iyo caddayn waxa aad bixiso. Loo-shaqeeyahaagu wuxuu lacag ka jari karaa mushaharkaaga oo keliya marka sharcigu oggol yahay: ka hubi loonbrief-kaaga. Flanders dammaanadda (huurwaarborg) ugu badnaan waa 3 bilood oo kiro ah, oo ku jirta koonto bangi oo xiran oo magacaaga ku qoran. Dib ayaad u helaysaa marka aad baxdo, marka laga jaro waxyeelo dhab ah. Cinwaankaaga ka diiwaangeli gemeente-ga. Guri aan badbaado lahayn, hanjabaad ama kharash aan caddaalad ahayn? CAW bilaash ayay wax u caawisaa. Shaqadaadu ma dhammaanaysaa? Talo weydii intaadan gurigaaga ka bixin. Macluumaad guud. Xaaladdaada gaarka ah: weydii ururka shaqaalaha, justitiehuis (talo sharci oo bilaash ah) ama Payoke.", // nieuw, nalezen
+  'be.c.housing.p': "Ma heli karaa caddayn inaan bixiyay?", // nieuw, nalezen
+  'be.c.housing.s': "Shaqadaadu way dhammaanaysaa. Xafiiska shaqo-qorista ayaa leh: “Berri waa inaad guriga ka baxdaa.” Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.housing.o1': "Marka hore talo weydii justitiehuis ama ururka shaqaalaha.", // nieuw, nalezen
+  'be.c.housing.o2': "Isla markiiba bax oo iska ilow dammaanaddaada.", // nieuw, nalezen
+  'be.c.housing.o3': "Joog, oo jooji ka jawaabidda xafiiska shaqo-qorista.", // nieuw, nalezen
+  'be.c.housing.w': "Qandaraaska kiradaadu wuxuu leeyahay xeerar u gaar ah, oo ka gooni ah shaqadaada. Wuxuu sheegayaa inta aad weli joogi karto. Talo bilaash ah ayaa kaa caawinaysa inaad ogaato xuquuqdaada, xitaa dammaanaddaada.", // nieuw, nalezen
+};

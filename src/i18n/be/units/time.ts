@@ -148,4 +148,13 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+    "be.c.sick": "Sida aad u sheegto inaad xanuunsan tahay", // nieuw, nalezen
+    "be.c.sick.b": "Adiga qudhaadu wac madaxaaga, ka hor inta aanu wareeggaaga shaqadu bilaabmin, haddii aanay shirkaddaadu lahayn xeer kale. Ma waxaad ka shaqeysaa xafiis shaqo-qoris (interimkantoor)? Sidoo kale u sheeg xafiiska shaqo-qorista. Uma baahnid inaad sheegto cudurka aad qabto. Inta badan waxaad u baahan tahay warqad dhakhtar (ziektebriefje), mararka qaarkood laga bilaabo maalinta koowaad: xeerarka shaqada (arbeidsreglement) ayaa sheega goorta. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+    "be.c.sick.p": "Waan xanuunsanahay. Maanta shaqada iman maayo.", // nieuw, nalezen
+    "be.c.sick.s": "Waxaad soo toosaysaa adigoo qandho qaba. Wareeggaaga shaqadu wuxuu bilaabmayaa 7:00. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.sick.o1": "Wac madaxaaga ka hor 7:00.", // nieuw, nalezen
+    "be.c.sick.o2": "Weydii saaxiibka shaqada inuu goor dambe u sheego maamulaha.", // nieuw, nalezen
+    "be.c.sick.o3": "Guriga joog oo berri wac.", // nieuw, nalezen
+    "be.c.sick.w": "Inaad adigu qudhaadu iyo waqtigii loogu talagalay sheegto inaad xanuunsan tahay waa xeerka goobaha shaqada intooda badan. Loo-shaqeeyahaagu wuu ku weydiin karaa inta ay qaadanayso, laakiin ma weydiin karo cudurka uu yahay. Weydii haddii aad u baahan tahay warqad dhakhtar.", // nieuw, nalezen
+};

@@ -170,10 +170,10 @@ export const siteSections: AboutSection[] = [
   },
   {
     id: 'a.who', emoji: '🌍', title: 'Who is it for?',
-    body: 'For everyone who is new to working in the Netherlands or Belgium. Help languages: Arabic, Tigrinya, Persian, Dari, Ukrainian, Turkish, Polish, Romanian, Bulgarian, Spanish, Portuguese, French and German.',
+    body: 'For everyone who is new to working in the Netherlands or Belgium. Help languages: Arabic, Tigrinya, Persian, Dari, Somali, Ukrainian, Turkish, Polish, Romanian, Bulgarian, Spanish, Portuguese, French and German.',
     nl: {
       title: 'Voor wie is het?',
-      body: 'Voor iedereen die nieuw is op het werk in Nederland of België. Hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans en Duits.',
+      body: 'Voor iedereen die nieuw is op het werk in Nederland of België. Hulptalen: Arabisch, Tigrinya, Perzisch, Dari, Somalisch, Oekraïens, Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans en Duits.',
     },
     nlRules: {
       title: 'Voor wie is het?',

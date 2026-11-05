@@ -578,4 +578,46 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+  'be.u.society': "Ka qaybgalka Beljiyam", // nieuw, nalezen
+  'be.l.council': "Gemeente iyo codbixinta", // nieuw, nalezen
+  'be.w.stemmen': "codbixin (codkaaga bixin)", // nieuw, nalezen
+  'be.w.gemeentehuis': "xarunta gemeente (dhismaha dowladda hoose)", // nieuw, nalezen
+  'be.w.gemeenteraad': "golaha gemeente (wuxuu go'aamiyaa arrimaha magaaladaada)", // nieuw, nalezen
+  'be.w.burgemeester': "duqa magaalada", // nieuw, nalezen
+  'be.w.oproepingsbrief': "warqadda codbixinta (waxay sheegaysaa halka iyo goorta aad codaynayso)", // nieuw, nalezen
+  'be.w.opkomstplicht': "waajibka inaad u tagto codbixinta", // nieuw, nalezen
+  'be.s.council.1': "Waan guurayaa. Cinwaankayga cusub ayaan siinayaa gemeente.", // nieuw, nalezen
+  'be.s.council.2': "Ma u codayn karaa golaha gemeente?", // nieuw, nalezen
+  'be.s.council.3': "Warqaddaydii codbixinta ayaa boostada ku timid.", // nieuw, nalezen
+  'be.c.council.q': "Axadda ma u tegaysaa codbixinta?", // nieuw, nalezen
+  'be.c.council.a': "Haa. Waxaan haystaa warqaddayda codbixinta iyo kaarkayga aqoonsiga.", // nieuw, nalezen
+  'be.l.police': "Booliiska, diidmada iyo xuquuqdaada", // nieuw, nalezen
+  'be.w.wijkagent': "askariga booliiska ee xaafaddaada", // nieuw, nalezen
+  'be.w.identiteitskaart': "kaarka aqoonsiga (eID)", // nieuw, nalezen
+  'be.w.boete': "ganaaxa (lacag aad ciqaab ahaan u bixinayso)", // nieuw, nalezen
+  'be.w.bezwaar': "diidmada (waxaad qoraal ku sheegaysaa inaadan oggolayn)", // nieuw, nalezen
+  'be.w.advocaat': "qareenka", // nieuw, nalezen
+  'be.w.recht': "xaqa (waxa sharcigu sheegayo inaad samayn karto ama heli karto)", // nieuw, nalezen
+  'be.s.police.1': "Had iyo jeer kaarkayga aqoonsiga ayaan sitaa.", // nieuw, nalezen
+  'be.s.police.2': "Waxaan rabaa inaan diidmo gudbiyo.", // nieuw, nalezen
+  'be.s.police.3': "Marka hore waxaan rabaa inaan la hadlo qareen.", // nieuw, nalezen
+  'be.c.police.q': "Ma arki karaa kaarkaaga aqoonsiga?", // nieuw, nalezen
+  'be.c.police.a': "Haa, waa kan. Maxaa socda?", // nieuw, nalezen
+  'be.c.council': "Gemeente, iyo cidda codayn karta", // nieuw, nalezen
+  'be.c.council.b': "Gemeente ayaa haysa cinwaankaaga, waxayna ku siisaa kaarkaaga aqoonsiga. Ma guuraysaa? U sheeg gemeente ee gurigaaga cusub 8 maalmood oo shaqo gudahood. Markaas wijkagent (askariga booliiska ee xaafadda) ayaa imanaya si uu u hubiyo inaad halkaas deggan tahay. Mar kasta oo 6 sannadood ah waxaa jira doorasho golaha gemeente (gemeenteraad). Dadka ka yimid waddan kale oo EU ah way u codayn karaan, dadka ka yimid meel ka baxsan EU-na waxay codayn karaan 5 sannadood oo joogitaan sharci ah kadib. Marka hore waxaad gemeente iskaga diiwaangelisaa codbixiye ahaan. Flanders kuma khasbana inaad u codayso gemeenteraad. Doorashooyinka kale, reer Beljiyamku waa inay u tagaan codbixinta (opkomstplicht). Waxaad helaysaa warqad (oproepingsbrief): la imow iyo kaarkaaga aqoonsiga. Ma hubtid? Weydii gemeente.", // nieuw, nalezen
+  'be.c.council.p': "Ma u codayn karaa gemeenteraad? Ma waajib baa inaan marka hore is diiwaangeliyo?", // nieuw, nalezen
+  'be.c.council.s': "Waxaad ka timid Marooko, lix sano ayaadna si sharci ah ugu nooshahay Gent. Ma tihid muwaadin Beljiyam ah. Dhawaan waxaa jira doorasho gemeenteraad. Waa maxay runta?", // nieuw, nalezen
+  'be.c.council.o1': "Waad codayn kartaa, kadib markaad gemeente iska diiwaangeliso.", // nieuw, nalezen
+  'be.c.council.o2': "Sidoo kale waad u codayn kartaa baarlamaanka federaalka.", // nieuw, nalezen
+  'be.c.council.o3': "Baasaboor Beljiyam la'aantii gabi ahaanba ma codayn kartid.", // nieuw, nalezen
+  'be.c.council.w': "5 sannadood oo joogitaan sharci ah kadib, waad u codayn kartaa gemeenteraad. Marka hore waa inaad iska diiwaangelisaa codbixiye ahaan. Baarlamaanka federaalka waxaad u baahan tahay dhalashada Beljiyam.", // nieuw, nalezen
+  'be.c.police': "Kaarkaaga aqoonsiga iyo xuquuqdaada", // nieuw, nalezen
+  'be.c.police.b': "Marka aad 15 jirsato, waa inaad had iyo jeer sitaa kaarkaaga aqoonsiga (ama kaarka deganaanshaha), oo aad tustaa marka booliisku weydiiyo. Ma heshay warqad uu ku jiro go'aan aadan oggolayn, tusaale ahaan ganaax ka yimid gemeente? Markaas waxaad ku jawaabi kartaa qoraal (bezwaar maken). Warqaddu waxay sheegaysaa sida, iyo ilaa goorma. Samee ka hor taariikhdaas. Qof walba waa u siman yahay sharciga hortiisa. Booliisku ma rabaa inuu ku su'aalo? Markaas marka hore waxaad la hadli kartaa qareen. Talada ugu horreysa ee qareen waa bilaash, gudaha justitiehuis. Takoor? Unia ayaa ku caawin karta.", // nieuw, nalezen
+  'be.c.police.p': "Go'aankan ma oggoli. Diidmo ayaan gudbinayaa.", // nieuw, nalezen
+  'be.c.police.s': "Gemeente ayaa warqad kuugu soo dirtay ganaax. Waxaad u malaynaysaa inaanu sax ahayn. Warqaddu waxay bixisaa taariikh aad ku jawaabto. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.police.o1': "Qoraal ku jawaab, ka hor taariikhda warqadda ku qoran.", // nieuw, nalezen
+  'be.c.police.o2': "Hal mar wac, oo sug ilaa ay dib kuu soo wacaan.", // nieuw, nalezen
+  'be.c.police.o3': "Sug: taariikhdaas kadib, iskeed ayay u joogsanaysaa.", // nieuw, nalezen
+  'be.c.police.w': "Qoraal ayaad ku jawaabtaa, ka hor taariikhda warqadda ku qoran. Taariikhdaas kadib, inta badan waa goor dambe. Justitiehuis ayaa ku siin kara talo hore oo bilaash ah.", // nieuw, nalezen
+};

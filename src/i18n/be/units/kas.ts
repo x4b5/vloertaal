@@ -148,4 +148,13 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+    "be.c.harvest": "Xawaare iyo mushahar gabal-ku-xiran", // nieuw, nalezen
+    "be.c.harvest.b": "Aqalka dhirta lagu beero badanaa waxaad ku shaqaysaa xawaare go'an (tempo). Loo-shaqeeyayaasha qaarkood waxay bixiyaan sanduuq kasta, saf kasta ama kiilo kasta: mushahar gabal-ku-xiran (stukloon). Xitaa mushahar gabal-ku-xiran, saacad kasta waa inaad hesho ugu yaraan mushaharka ugu yar ee qaybtaada: aqalka dhirta waa paritair comité 145. Dad badan waxay halkaas uga shaqeeyaan shaqaale xilliyeed (gelegenheidsarbeiders): maalin maalin, tiro maalmo xaddidan sannadkii. Maalin kasta qor saacadahaaga iyo sanduuqyadaada, oo la barbar dhig loonbrief-kaaga. Si dhakhso ah u shaqayntu waa wanaagsan tahay, laakiin si badbaado leh u shaqayntu ayaa ka horraysa. Macluumaad guud. Xaaladdaada gaarka ah: weydii ururka shaqaalaha, justitiehuis (talo sharci oo bilaash ah) ama Payoke.", // nieuw, nalezen
+    "be.c.harvest.p": "Immisa sanduuq ayaan maanta sameeyay?", // nieuw, nalezen
+    "be.c.harvest.s": "Waxaa laguu bixiyaa sanduuq kasta. Dhammaadka toddobaadka, mushaharkaagu aad buu uga hooseeyaa mushaharka ugu yar ee saacadaha aad shaqaysay. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.harvest.o1": "Tus loo-shaqeeyahaaga liiskaaga saacadaha iyo sanduuqyada.", // nieuw, nalezen
+    "be.c.harvest.o2": "Waxba ha odhan oo toddobaadka dambe si dhakhso ah u shaqee, si aad wax badan u hesho.", // nieuw, nalezen
+    "be.c.harvest.o3": "Aqbal: mushahar gabal-ku-xiran, mushahar yar waa caadi.", // nieuw, nalezen
+    "be.c.harvest.w": "Mushahar gabal-ku-xiran xitaa, waa inaad hesho ugu yaraan mushaharka ugu yar saacad kasta oo aad shaqaysay. Liiskaaga saacadaha iyo sanduuqyadu wuxuu kaa caawiyaa inaad muujiso waxa aad qabatay. Haddii aan la saxin, caawimaad weydii.", // nieuw, nalezen
+};

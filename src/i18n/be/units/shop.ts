@@ -200,4 +200,17 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+    "be.w.pinnen": "kaar ku bixin", // nieuw, nalezen
+    "be.w.bonnetje": "rasiidka", // nieuw, nalezen
+    "be.s.checkout.1": "Kaar ma ku bixinaysaa mise lacag caddaan ah?", // nieuw, nalezen
+    "be.c.checkout.q": "Halkan ma ku bixin karaa kaar?", // nieuw, nalezen
+    "be.c.checkout": "Aqoonsiga khamriga iyo tubaakada", // nieuw, nalezen
+    "be.c.checkout.b": "Looma oggola inaad biir ama khamri (wine) ka iibiso qof ka yar 16 sano, ama cabbitaanno adag ama tubaako qof ka yar 18 sano: kani waa sharciga. Ma hubtid inta uu jir yahay macmiilku? Weydii kaarkiisa aqoonsiga (identiteitskaart). Tubaakada, aqoonsi ka weydii qof kasta oo u muuqda inuu ka yar yahay 25 sano. Aqoonsi ma haysto, mise aad buu u yar yahay? Markaas ha iibin, oo edeb ku sii jir. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    "be.c.checkout.p": "Aqoonsi la'aan tan ma iibin karo.", // nieuw, nalezen
+    "be.c.checkout.s": "Nin dhallinyaro ah ayaa doonaya inuu biir iibsado. Wuxuu u muuqdaa qiyaastii 14 sano. Wuxuu leeyahay waxaan ahay 16, laakiin aqoonsi ma sito. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.checkout.o1": "Sheeg inaadan iibin karin aqoonsi la'aan.", // nieuw, nalezen
+    "be.c.checkout.o2": "Iibi, maxaa yeelay wuxuu leeyahay waxaan ahay 16.", // nieuw, nalezen
+    "be.c.checkout.o3": "Iibi, laakiin hal gasacad oo keliya.", // nieuw, nalezen
+    "be.c.checkout.w": "Aqoonsi la'aan ma ogaan kartid da'diisa. In biir laga iibiyo qof ka yar 16 waa sharci-darro, dukaankuna wuxuu heli karaa ganaax.", // nieuw, nalezen
+};

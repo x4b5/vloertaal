@@ -482,4 +482,38 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+  'be.w.calamiteitenverlof': "fasaxa sababo degdeg ah (badanaa mushahar la'aan)", // nieuw, nalezen
+  'be.w.bedrijfsarts': "dhakhtarka shaqada (dhakhtarka goobta shaqadaada)", // nieuw, nalezen
+  'be.w.wachtdag': "mushaharka la dammaanad qaaday (loo-shaqeeyahaagu wuxuu bixiyaa maalmaha ugu horreeya ee aad xanuunsan tahay)", // nieuw, nalezen
+  'be.w.doorbetalen': "warqadda xanuunka (dhakhtarkaaga ayaa ku siiya)", // nieuw, nalezen
+  'be.w.betermelden': "soo noqosho (shaqada, xanuun kadib)", // nieuw, nalezen
+  'be.s.illness.2': "Ballan ayaan la leeyahay dhakhtarka shaqada.", // nieuw, nalezen
+  'be.c.illness.a': "Taas ma rabo inaan sheego. Warqadda xanuunka ayaan haystaa.", // nieuw, nalezen
+  'be.s.kids.2': "Ma qaadan karaa fasax sababo degdeg ah?", // nieuw, nalezen
+  'be.w.zorgverlof': "fasaxa dhalashada (waalidka kale, marka ilmo dhasho)", // nieuw, nalezen
+  'be.c.leave': "Fasaxa iyo fasaxa sababo degdeg ah", // nieuw, nalezen
+  'be.c.leave.b': "Maalmahaaga fasaxa ee lacagta leh waxay ku xiran yihiin inta aad shaqaysay sannadkii hore. Sannad dhan oo waqti buuxa ah, 5 maalmood toddobaadkii? Markaas waxaad helaysaa 20 maalmood oo fasax ah. Qaybtaada shaqadu way ka badin kartaa. Shaqada ma ku cusub tahay? Weydii waxa aad heli karto sannadkaaga ugu horreeya. Taariikhaha waxaad ku heshiisaa loo-shaqeeyahaaga: weydii waqti hore, oo qoraal ahaan. Shirkadaha qaarkood waxay xirmaan dhowr toddobaad, sida fasaxa dhismaha (bouwverlof). Xaalad degdeg ah oo kedis ah, sida shil ama xanuun qoyskaaga ah? Markaas waxaad qaadan kartaa fasax sababo degdeg ah (verlof om dwingende redenen): ugu badnaan 10 maalmood sannadkii, badanaa mushahar la'aan. Aroos ama aas qoyskaaga ah? Markaas waxaad helaysaa dhowr maalmood oo fasax ah oo mushahar leh (klein verlet). Isla markiiba u sheeg loo-shaqeeyahaaga. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.leave.p': "Waxaan jeclaan lahaa inaan codsado fasax bisha Luulyo.", // nieuw, nalezen
+  'be.c.leave.s': "Waxaad rabtaa inaad xagaaga saddex toddobaad booqato qoyskaaga dibadda ku nool. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.leave.o1': "Loo-shaqeeyahaaga hore uga codso fasax, qoraal ahaan.", // nieuw, nalezen
+  'be.c.leave.o2': "Iska tag, oo madaxaaga u sheeg marka aad soo noqoto.", // nieuw, nalezen
+  'be.c.leave.o3': "Saaxiibka shaqada ka codso inuu madaxa u sheego maalinta ka horraysa.", // nieuw, nalezen
+  'be.c.leave.w': "Taariikhaha maalmahaaga fasaxa waxaad ku heshiisaa loo-shaqeeyahaaga. Hore u weydiintu waxay ku siinaysaa fursadda ugu wanaagsan ee haa. Tegitaanka haa la'aan dhibaato weyn ayay shaqada kaaga keeni kartaa.", // nieuw, nalezen
+  'be.c.illness': "Xuquuqdaada marka aad xanuunsan tahay", // nieuw, nalezen
+  'be.c.illness.b': "Ma xanuunsan tahay? Isla markiiba u sheeg loo-shaqeeyahaaga, sida ay xeerarka shaqadaadu (arbeidsreglement) sheegayaan. Badanaa waxaad u baahan tahay warqadda xanuunka (ziektebriefje) oo dhakhtarkaaga ka timaadda. Waa inay loo-shaqeeyahaaga gaartaa 2 maalmood oo shaqo gudahood, haddii aysan xeerarka shaqadaadu si kale odhan. Warqaddu ma sheegayso xanuunka aad qabto, madaxaaguna ma weydiin karo. Ma ka shaqaysay halkaas ugu yaraan 1 bil? Markaas 30-ka maalmood ee ugu horreeya waxaad helaysaa mushaharkaaga, ama inta badan (gewaarborgd loon). Ma jiraan maalmo sugitaan ah oo mushahar la'aan ah. Kadib, ziekenfonds-kaaga ayaa ku siinaya gargaar lacageed: foomkiisa waqtiga ugu dir dhakhtarka ziekenfonds-ka. Loo-shaqeeyahaagu wuxuu soo diri karaa dhakhtar kormeer (controlearts) si uu u hubiyo inaad xanuunsan tahay. Dhakhtarka shaqada (arbeidsarts) ayaa kaa caawiya inaad shaqada ku soo noqoto, oo madaxaaga wuxuu u sheegaa oo keliya shaqada aad qaban karto. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.illness.p': "Waan xanuunsanahay. Warqadda xanuunka maanta ayaan soo dirayaa.", // nieuw, nalezen
+  'be.c.illness.s': "Guriga ayaad ku xanuunsan tahay. Madaxaaga ayaa ku soo wacay oo ku weydiiyay: “Xanuunkee ayaad qabtaa?” Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.illness.o1': "Dheh waan xanuunsanahay, oo warqadda xanuunka waqtiga ku dir.", // nieuw, nalezen
+  'be.c.illness.o2': "Wax walba u sheeg, maxaa yeelay madaxaagu waa inuu ogaadaa.", // nieuw, nalezen
+  'be.c.illness.o3': "Taleefanka dhig, oo waxba ha dirin ilaa aad ka bogsato.", // nieuw, nalezen
+  'be.c.illness.w': "Uma baahnid inaad sheegto xanuunka aad qabto. Warqadda xanuunka waxay sheegtaa oo keliya inta aad xanuunsan tahay. Waa inay loo-shaqeeyahaaga gaartaa 2 maalmood oo shaqo gudahood, haddii aysan xeerarka shaqadaadu si kale odhan.", // nieuw, nalezen
+  'be.c.kids': "Ilmahaaga ayaa xanuunsan", // nieuw, nalezen
+  'be.c.kids.b': "Ilmahaaga si kedis ah ma u xanuunsaday? Isla markiiba u sheeg loo-shaqeeyahaaga. Waxaad qaadan kartaa fasax sababo degdeg ah (verlof om dwingende redenen): ugu badnaan 10 maalmood sannadkii, badanaa mushahar la'aan. Qaybtaada shaqadu way ka badin kartaa. Ilmahaagu muddo dheer ma u baahan yahay daryeel? Markaas waxaad codsan kartaa fasaxa waalidnimada (ouderschapsverlof): waad yaraysaa shaqada ama gebi ahaanba ma shaqaysid, adoo helaya gargaar ka yimaada RVA. Ma uur leedahay? Loo-shaqeeyahaagu shaqada kaama eryi karo sababtaas. Dhalashada ka hor iyo kadib waxaad helaysaa fasax (moederschapsrust), lacag ka timaadda ziekenfonds-kaaga. Lammaanahaaga ma ilmo ayuu dhalayaa? Markaas waxaad helaysaa 20 maalmood oo fasaxa dhalashada ah (geboorteverlof). Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.kids.p': "Ilmahayga ayaa xanuunsan. Maanta goor hore ma bixi karaa?", // nieuw, nalezen
+  'be.c.kids.s': "Xannaanada carruurta (kinderopvang) ayaa shaqada kaaga soo wacday. Ilmahaagu qandho ayuu qabaa oo waa inuu guriga aadaa. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.kids.o1': "U sheeg madaxaaga, oo codso fasax sababo degdeg ah.", // nieuw, nalezen
+  'be.c.kids.o2': "Bax adoon hal eray odhan, oo berri sharax.", // nieuw, nalezen
+  'be.c.kids.o3': "Shaqada joog, oo ilmahaaga u daa inuu sugo ilaa wareeggaaga shaqo dhammaado.", // nieuw, nalezen
+  'be.c.kids.w': "Ilmo xanuunsan waa xaalad degdeg ah oo guriga ah. Marka aad marka hore u sheegto madaxaaga, wuu qorshayn karaa shaqada. Fasaxan waxaa loogu talagalay xilliyada sidan oo kale ah, laakiin badanaa mushahar ma laha.", // nieuw, nalezen
+};

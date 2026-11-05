@@ -148,4 +148,13 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+    "be.c.direct": "Erayo taxaddar leh, fariin cad", // nieuw, nalezen
+    "be.c.direct.b": "Saaxiibada shaqada ee reer Flanders inta badan wax bay u sheegaan si taxaddar leh, sida “Zou je die doos daar willen zetten?”. Taasi inta badan weli waa codsi cad: samee. Saaxiibada shaqada qaarkood aad bay toos u yihiin, sida “Dat is fout”. Badanaa uma jeedaan edeb darro. Adiguna waad sheegi kartaa waxa aad u malaynayso, inta aad saaxiibtinimo ku sii jirto.", // nieuw, nalezen
+    "be.c.direct.p": "Hagaag, sidee markaa loo sameeyaa?", // nieuw, nalezen
+    "be.c.direct.s": "Saaxiib shaqo ayaa yidhi: “Nee, dat is fout. Die doos moet daar.” Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.direct.o1": "Sanduuqa meel kale dhig oo weydii sida loo sameeyo.", // nieuw, nalezen
+    "be.c.direct.o2": "Marar badan raalli-gelin bixi: saaxiibkaaga shaqadu wuu xanaaqsan yahay.", // nieuw, nalezen
+    "be.c.direct.o3": "Waxba ha odhan oo sanduuqa uga tag meesha uu yaal.", // nieuw, nalezen
+    "be.c.direct.w": "Faallada tooska ahi waxay ku saabsan tahay shaqada, ma aha adiga. Weydiinta “hoe moet het dan?” waxay muujinaysaa inaad rabto inaad wax barato.", // nieuw, nalezen
+};

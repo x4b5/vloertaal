@@ -313,4 +313,25 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+  'be.w.arbowet': "sharciga badbaadada iyo caafimaadka shaqada", // nieuw, nalezen
+  'be.w.arbeidsinspectie': "kormeerka shaqada (wuxuu hubiyaa xeerarka shaqada)", // nieuw, nalezen
+  'be.s.health.3': "Waxaan u sheegayaa kormeerka shaqada.", // nieuw, nalezen
+  'be.w.juridischloket': "justitiehuis (talada sharciga ee ugu horreysa oo bilaash ah)", // nieuw, nalezen
+  'be.c.health': "Nasashada iyo saacadaha shaqada", // nieuw, nalezen
+  'be.c.health.b': "Sharcigu wuxuu ilaaliyaa badbaadadaada iyo caafimaadkaaga shaqada (Welzijnswet). Ma ka badan 6 saacadood ayaad shaqeysaa? Markaas waxaad helaysaa nasasho. Haddii aanay qaybta shaqadaadu lahayn xeer kale, waa ugu yaraan 15 daqiiqo. Caadi ahaan waxaad shaqeysaa ugu badnaan 8 saacadood maalintii, iyo celcelis ahaan 38 saacadood toddobaadkii. Qaybta shaqadaadu waxay yeelan kartaa xeerar kale. Loo-shaqeeyahaagu waa inuu bilaash kuu siiyaa qalabka ilaalinta, sida kabaha badbaadada ama gacmo-gashiyada. Shaqo aan badbaado lahayn? U sheeg Toezicht op het Welzijn op het Werk. Saacado aad u dheer ama mushahar aad u yar? U sheeg Toezicht op de Sociale Wetten. Magacaagu sir ayuu ahaanayaa. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.health.p': "Weli nasasho ma helin.", // nieuw, nalezen
+  'be.c.health.s': "7 saacadood ayaad shaqeysay adigoon nasan. Madaxaagu wuxuu kaa codsanayaa inaad sii waddo. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.health.o1': "Sheeg inaad hadda u baahan tahay nasashadaada.", // nieuw, nalezen
+  'be.c.health.o2': "Sii wad, oo goor dambe qaado nasasho dheer.", // nieuw, nalezen
+  'be.c.health.o3': "Shaqada ka tag oo guriga aad adigoon hal eray odhan.", // nieuw, nalezen
+  'be.c.health.w': "Markaad shaqeyso in ka badan 6 saacadood, nasashadu waa sharci, ma aha deeq. Nasashadu waxay sidoo kale kaa caawisaa inaad si badbaado leh u shaqeyso.", // nieuw, nalezen
+  'be.c.rights': "Takoorka iyo shaqo ka eryidda", // nieuw, nalezen
+  'be.c.rights.b': "Takoorka shaqada waa mamnuuc, tusaale ahaan asalkaaga, diintaada, jinsigaaga, da'daada ama naafonimo darteed. Waxaad si bilaash ah ugu sheegi kartaa Unia. Adeegyada Flanders, sida VDAB, waxaad u tagtaa Vlaams Mensenrechteninstituut. Loo-shaqeeyahaagu wuu joojin karaa qandaraaskaaga, laakiin waa inuu ku siiyaa muddo ogeysiis (opzegtermijn), ama uu ku siiyo mushaharkaaga muddadaas (opzegvergoeding). Inta badan waxaad ku weydiin kartaa sababaha warqad diiwaangashan. Markay shaqadaadu dhammaato, waxaad helaysaa C4: waxaad ugu baahan tahay kaalmada shaqo la'aanta. Ha saxeexin warqad ku saabsan eryiddaada oo aadan fahmin. Marka hore caawimaad ka hel ururka shaqaalaha (ABVV, ACV ama ACLVB), wakiilka ururka ee shaqada (syndicale afgevaardigde) ama justitiehuis. Macluumaad guud. Xaaladdaada gaarka ah: weydii ururka shaqaalaha, justitiehuis (talo sharci oo bilaash ah) ama Payoke.", // nieuw, nalezen
+  'be.c.rights.p': "Marka hore waxaan rabaa inaan talo weydiisto.", // nieuw, nalezen
+  'be.c.rights.s': "Maamulahaagu wuxuu ku siinayaa warqad: “Maanta saxeex, markaas waxaad ku tagaysaa heshiis.” Si fiican uma fahmin. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.rights.o1': "Weli ha saxeexin. Waqti weydiiso oo marka hore talo raadso.", // nieuw, nalezen
+  'be.c.rights.o2': "Saxeex, maxaa yeelay maamulahu wuxuu leeyahay waa hagaag.", // nieuw, nalezen
+  'be.c.rights.o3': "Warqadda meel iska dhig oo waligaa ha ka hadlin.", // nieuw, nalezen
+  'be.c.rights.w': "Haddii aad saxeexdo, waxaad lumin kartaa xuquuq: tusaale ahaan muddadaada ogeysiiska, iyo muddo kaalmadaada shaqo la'aanta. Waqti weydiisashada si aad talo u hesho waa caadi, waana la oggol yahay.", // nieuw, nalezen
+};

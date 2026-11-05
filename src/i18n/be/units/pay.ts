@@ -332,4 +332,27 @@ export const de: Gloss = {
 };
 
 /** Somali (so): to be translated, like `de` above. */
-export const so: Gloss = {};
+export const so: Gloss = {
+    'be.w.loonstrook': "warqadda mushaharka (loonbrief)", // nieuw, nalezen
+    'be.s.payslip.2': "Warqadda mushaharkaygu sax ma aha.", // nieuw, nalezen
+    'be.c.payslip.q': "Ma heshay warqaddaada mushaharka?", // nieuw, nalezen
+    'be.w.toeslag': "gunnada, lacagta dheeraadka ah (tusaale ahaan shaqada habeenkii)", // nieuw, nalezen
+    'be.w.minimumloon': "jadwalka mushaharka ugu yar (ee qaybta shaqadaada)", // nieuw, nalezen
+    'be.s.extra.1': "Ma helayaa gunno shaqada habeenkii?", // nieuw, nalezen
+    'be.c.payslip': "Hubi loonbrief-kaaga", // nieuw, nalezen
+    'be.c.payslip.b': "Brutoloon waa mushaharkaaga ka hor inta aan waxba laga jarin. Nettoloon waa waxa ku soo gala akoonkaaga bangiga. Inta u dhexaysa laba shay ayaa laga jaraa: RSZ (sugidda bulshada, 13.07% mushaharkaaga guud) iyo bedrijfsvoorheffing (canshuurtaada oo horay looga bixiyo). Loo-shaqeeyahaagu waa inuu ku siiyaa warqadda mushaharka (loonbrief). Inta badan waxaad ku aragtaa lambarka paritair comité ee aad ka tirsan tahay: heshiisyada qaybta shaqadaada, oo ay ku jiraan mushaharka ugu yar. Ma heshaa foojarrada cuntada (maaltijdcheques)? Qayb yar adigaa iska bixiya. Loonbrief kasta ku hubi saacadaha iyo mushaharka, oo qor saacadaha aad shaqeyso. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+    'be.c.payslip.p': "Saacado badan ayaan shaqeeyay. Ma hubin kartaa?", // nieuw, nalezen
+    'be.c.payslip.s': "Loonbrief-kaagu wuxuu muujinayaa saacado ka yar intii aad shaqeysay. Maxaad samaynaysaa?", // nieuw, nalezen
+    'be.c.payslip.o1': "Tus qoraalladaada oo weydii loo-shaqeeyahaaga inuu hubiyo.", // nieuw, nalezen
+    'be.c.payslip.o2': "Waxba ha odhan, maxaa yeelay ma rabtid dhibaato.", // nieuw, nalezen
+    'be.c.payslip.o3': "Sug hal bil: loonbrief-ka xiga ayuu sax ku noqon doonaa.", // nieuw, nalezen
+    'be.c.payslip.w': "Khaladaad ayaa ku dhaca loonbrief. Wax laga weydiiyo waa caadi, waana xaqaaga. Qoraalladaada taariikhaha iyo saacadaha aad bay u caawiyaan. Weli sax ma aha? Ururka shaqaalaha ayaa ku caawin kara.", // nieuw, nalezen
+    'be.c.extra': "Lacagta fasaxa iyo gunnada dhammaadka sannadka", // nieuw, nalezen
+    'be.c.extra.b': "Waxaad heshaa lacagta fasaxa (vakantiegeld). Waxay ku xiran tahay shaqadii aad qabatay sannadkii hore. Ma waxaad tahay bediende (inta badan shaqo xafiis ama dukaan)? Markaas loo-shaqeeyahaaga ayaa bixiya: mushaharkaaga caadiga ah inta aad fasaxa ku jirto, iyo sannadkiiba mar lacag dheeraad ah (dubbel vakantiegeld). Ma waxaad tahay arbeider (inta badan shaqo gacmaha ah)? Markaas sanduuqa fasaxa (vakantiekas ama RJV) ayaa bixiya, laga bilaabo May. Qaybo shaqo oo badan ayaa sidoo kale bixiya gunno dhammaadka sannadka ah (eindejaarspremie). Mushaharkaagu waligiis kama yaraan karo kan ugu yar ee paritair comité ee aad ka tirsan tahay (barema). Saacadaha dheeraadka ahi waxay keenaan ugu yaraan 50% dheeraad ah, inta badanna waqti fasax ah goor dambe. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+    'be.c.extra.p': "Goorma ayaan helayaa lacagta fasaxayga?", // nieuw, nalezen
+    'be.c.extra.s': "Waxaad tahay arbeider warshad ka shaqeeya. Saaxiib shaqo ayaa yidhi: “May waxaad helaysaa lacag dheeraad ah, laakiin maamulaha kama timaaddo.” Waa maxay taasi?", // nieuw, nalezen
+    'be.c.extra.o1': "Lacagta fasaxa, oo ka timaadda sanduuqa fasaxa (vakantiekas).", // nieuw, nalezen
+    'be.c.extra.o2': "Hadiyad ka timid ururka shaqaalaha, oo xubnihiisa loogu talagalay.", // nieuw, nalezen
+    'be.c.extra.o3': "Mushaharka bisha 13aad oo maamuluhu qof walba siiyo.", // nieuw, nalezen
+    'be.c.extra.w': "Haddii aad tahay arbeider, sanduuqa fasaxa ayaa bixiya lacagta fasaxa, ma aha maamulaha. Waa xaqaaga, ma aha hadiyad: shaqadaada ayaad ku dhisataa. Gunnada dhammaadka sannadku waxay ku xiran tahay qaybta shaqadaada.", // nieuw, nalezen
+};
