@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { sayAs } from '../src/lib/sayAs';
+import { CAO_TAKE, minTake, sayAs } from '../src/lib/sayAs';
 
 describe('sayAs: how a voice is told to pronounce a line', () => {
   it('says "app" like the English word', () => {
@@ -20,5 +20,18 @@ describe('sayAs: how a voice is told to pronounce a line', () => {
 
   it('leaves other words alone', () => {
     for (const t of ['de appel', 'het apparaat', 'kappen', 'stappen', 'trappen', 'de apotheek', 'happen']) expect(sayAs(t)).toBe(t);
+  });
+});
+
+describe('"cao" letter by letter (the owner, 5 November 2026)', () => {
+  it('says cee-aa-oo, also with capitals and in a sentence', () => {
+    expect(sayAs('de cao')).toBe('de cee-aa-oo');
+    expect(sayAs('Welke cao geldt voor mij?')).toBe('Welke cee-aa-oo geldt voor mij?');
+    expect(sayAs('CAO')).toBe('cee-aa-oo');
+    expect(sayAs('cacao')).toBe('cacao');
+  });
+  it('needs take 5: an older recording of a line with cao is not played', () => {
+    expect(minTake('Welke cao geldt voor mij?')).toBe(CAO_TAKE);
+    expect(minTake('het loon')).toBe(0);
   });
 });

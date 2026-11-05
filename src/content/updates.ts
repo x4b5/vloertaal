@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-05',
     items: [
+      'Hoe zeg je het? De mond beweegt nu ook op een laptop of telefoon die om minder beweging vraagt (bij Windows: animatie-effecten uit). Alleen als je zelf "Rustig scherm: aan" kiest, staat hij stil. En "cao" klinkt nu als "cee-aa-oo".',
       'Nieuw onderwerp: Vervoer en bezorging (bij Logistiek). Pakketten bezorgen, de scanner, "klant niet thuis", een kapot pakket melden met een foto. En veilig en eerlijk onderweg: de steekwagen bij zware pakketten, je pauze, en wie je tijden en je route bepaalt.',
       'Nieuwe les bij In de productie: Werken met voedsel. Sieraden af, de snijhandschoen, de vriescel, allergenen, en een wondje aan je hand melden.',
       'Nieuwe les bij Gezondheid: Je goed voelen op het werk. Slecht slapen door ploegendienst, "het is te veel", heimwee, en met wie je kunt praten: je leidinggevende, de vertrouwenspersoon, de bedrijfsarts, de huisarts of 113.',

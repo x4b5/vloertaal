@@ -25,6 +25,19 @@ export function applyCalm(choice: CalmChoice | undefined): void {
   const root = document.documentElement;
   if (calmOn(choice)) root.dataset.calm = '1';
   else delete root.dataset.calm;
+  // The learner's own "Rustig scherm: aan" (not the phone's setting): see learnerWantsStill.
+  if (choice === 'on') root.dataset.calmChosen = '1';
+  else delete root.dataset.calmChosen;
+}
+
+/**
+ * The learner chose "Rustig scherm: aan" in the app. Motion that IS the lesson and that the
+ * learner starts with a tap (the mouth of "Hoe zeg je het?") only stops for this, not for the
+ * phone's "less motion" (the owner, 5 November 2026: on a laptop with Windows' animation effects
+ * off, the mouth did not move at all). WCAG 2.3.3: essential, user-started motion.
+ */
+export function learnerWantsStill(): boolean {
+  return typeof document !== 'undefined' && document.documentElement.dataset.calmChosen === '1';
 }
 
 /** No motion now: the phone asks for less motion, or "Rustig scherm" is on. */

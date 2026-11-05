@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { onSpeech, onSpeechLength } from '../lib/audio';
-import { stillMotion } from '../lib/calm';
+import { learnerWantsStill } from '../lib/calm';
 import { endPose, mixPose, REST, wordSegments, type Klank, type MouthPose, type WordSegment } from '../content/klankMond';
 
 /**
@@ -343,7 +343,9 @@ type Run = {
  * rest, the sound, hold while it sounds (it waits for the end of the recording or the phone's
  * voice), back. The example word (the owner's request, 4 November 2026): every sound of the word
  * in turn (m – uu – r, wordSegments), stretched over the recording as it plays (onSpeechLength),
- * then rest and back. With reduced motion or the calm screen (stillMotion) it never moves.
+ * then rest and back. It only never moves when the learner chose "Rustig scherm: aan" in the app
+ * (learnerWantsStill): the motion is the lesson and starts with the learner's tap, so the phone's
+ * "less motion" alone does not stop it (5 November 2026).
  */
 export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
   const [pose, setPose] = useState<MouthPose>(() => stillPose(k));
@@ -392,7 +394,7 @@ export function useMouthMotion(k: Klank, follow: string[]): MouthMotion {
     cur.raf = requestAnimationFrame(frame);
   }, [k, segs]);
   const play = useCallback((slow: Stretch, word = false) => {
-    if (stillMotion()) return;
+    if (learnerWantsStill()) return;
     const now = performance.now();
     // The tap that starts the sound and the sound's own start event come together: one motion.
     if (run.current && now - run.current.at < 150 && Boolean(run.current.word) === word) return;
