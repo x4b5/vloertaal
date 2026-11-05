@@ -83,6 +83,7 @@ export function exerciseRef(ex: Exercise): string {
     case 'match':
       return `${ex.kind} ${ex.words.map((w) => w.id).join(', ')}`;
     case 'build':
+    case 'snap':
       return `${ex.kind} ${ex.sentence.id} (${ex.sentence.nl})`;
     case 'chat':
       return `${ex.kind} ${ex.dialogue.prompt.id} (${ex.dialogue.prompt.nl})`;

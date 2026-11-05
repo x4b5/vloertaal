@@ -9,7 +9,7 @@ import type { Dialogue, Lesson, Sentence, Unit, Word } from '../content/types';
 import { dayKey } from './progress';
 import type { Track } from './track';
 import { typable } from './typable';
-import { workTryLine } from './workTry';
+import { hasName, workTryLine } from './workTry';
 import { hasPicture } from './wordPicture';
 
 /**
@@ -233,8 +233,10 @@ export function dayNumber(day: string): number {
  * the weeks every sentence of a lesson comes back, not only its first one. The chat comes from
  * the weakest (or most recent) lesson. Deterministic: the same words, cards and day give the same
  * review. `day`: today (YYYY-MM-DD); without it the first sentence of each lesson.
+ * On a "Snap je het?" day (isSnapDay) one known sentence comes at the real pace (snapLines); not
+ * in an extra round (`extra`: today's review was done already), so it comes once a day at most.
  */
-export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Lesson {
+export function dailyLesson(ids: string[], cards: Cards = {}, day?: string, opts: { extra?: boolean } = {}): Lesson {
   const words = ids.map((id) => wordById().get(id)).filter((w): w is Word => Boolean(w));
   // Sentence cards (2 at most) and a spoken sentence (1) that came along with today's words.
   const boxSentences = ids.map((id) => sentenceById().get(id)).filter((s): s is Sentence => Boolean(s)).slice(0, SENTENCE_DAILY_MAX);
@@ -312,12 +314,68 @@ export function dailyLesson(ids: string[], cards: Cards = {}, day?: string): Les
   const paired = [...wordById().values()].filter((w) => w.pair && cards[w.id] && cards[w.pair] && pictured(w.id) && pictured(w.pair));
   const earWord = paired.length ? paired[n % paired.length] : undefined;
   const partner = earWord?.pair ? wordById().get(earWord.pair) : undefined;
+  const snap = day && isSnapDay(day) && !opts.extra ? snapLines(cards, day, all) : undefined;
   return {
     id: DAILY_ID, title: 'Review today', words, sentences: all, dialogues, repeat: true, boxes, tipFrom: [...tipFrom.slice(tipTurn), ...tipFrom.slice(0, tipTurn)],
     ...(boxSentences.length ? { cardSentences: boxSentences.length } : {}),
     ...(say ? { say } : {}),
     ...(earWord && partner ? { ear: { word: earWord, partner, turn: n } } : {}),
+    ...(snap ? { snap } : {}),
   };
+}
+
+/* ---- "Snap je het?" (Taal): a known sentence at the real pace, then: do you get it? ---- */
+
+/**
+ * Learners who are ashamed not to understand nod ("Ja, oké") and then do it wrong. "Snap je het?"
+ * (the owner's request, 5 November 2026) lets them practise the other reflex in today's review: a
+ * colleague says a sentence they know at the real pace (src/lib/tempo.ts), without the text, and
+ * asks "Snap je het?". "Ja, oké." goes straight to what it means (a wrong meaning shows why asking
+ * was better); "Kunt u dat herhalen?" (the sentence of l.understand, ASK_AGAIN_ID, recorded) brings
+ * the sentence back slowly first. Asking never costs anything: only the meaning question counts,
+ * as any question does (lib/exercises.ts snapExercise).
+ *
+ * Not every day, so it stays a moment and not a routine: every SNAP_EVERY days (by the day number,
+ * so a date says whether it comes: isSnapDay), once in that day's review.
+ */
+export const SNAP_EVERY = 3;
+/** A "Snap je het?" day: one day in every SNAP_EVERY, by its day number (dayNumber). */
+export const isSnapDay = (day: string): boolean => dayNumber(day) % SNAP_EVERY === 0;
+/** The sentence on the button for asking again: "Kunt u dat herhalen?" (l.understand). */
+export const ASK_AGAIN_ID = 's.understand.1';
+/** Sentences that go along in the day's order: the first that can be heard on the phone is said. */
+const SNAP_LINES = 6;
+/** Other known sentences for the wrong meanings. */
+const SNAP_OTHERS = 6;
+
+/** The sentence "Kunt u dat herhalen?" (always in the course: l.understand). */
+export function askAgainLine(): Sentence | undefined {
+  return sentenceById().get(ASK_AGAIN_ID);
+}
+
+/**
+ * The sentences for "Snap je het?" today: those of the course that plays now (in Belgium the
+ * Belgian ones) that the learner built in a finished lesson (they have a sentence card), without
+ * a name in them (lib/workTry.ts hasName: the character's line, not one for the learner), never
+ * "Kunt u dat herhalen?" itself and none built in this review already (`skip`). In the course's
+ * order, turned by one every SNAP_EVERY days, so another sentence comes each time. Undefined when
+ * there is none, or too few for two other meanings.
+ */
+export function snapLines(cards: Cards, day: string, skip: readonly Sentence[] = []): Lesson['snap'] | undefined {
+  const skipped = new Set(skip.map((s) => s.nl));
+  const seen = new Set<string>();
+  const known = taalTeaching().flatMap((l) => l.sentences).filter((s) => {
+    if (!cards[s.id] || s.id === ASK_AGAIN_ID || hasName(s.nl) || seen.has(s.en)) return false;
+    seen.add(s.en);
+    return true;
+  });
+  if (known.length < 3) return undefined;
+  const at = Math.floor(dayNumber(day) / SNAP_EVERY) % known.length;
+  const turned = [...known.slice(at), ...known.slice(0, at)];
+  const lines = turned.filter((s) => !skipped.has(s.nl)).slice(0, SNAP_LINES);
+  if (!lines.length) return undefined;
+  const others = turned.filter((s) => !lines.includes(s)).slice(0, SNAP_OTHERS);
+  return { lines, others };
 }
 
 /**

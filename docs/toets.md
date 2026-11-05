@@ -14,13 +14,64 @@ De code staat in `src/content/toets.ts` (de vragen), `src/lib/toets.ts` en `src/
 - Op de begintab staat de toets als kleine regel onder de volgende les, niet in de plaats van de
   les. Een tik opent de uitleg met "Doe de toets" en "Later". Doet de leerling de instap niet en
   gaat hij door met de lessen, dan telt dat als "Later": het eind komt dan toch.
-- Ongeveer **10 minuten**: **21 vragen** in drie onderdelen, en aan het eind één zin hardop
-  zeggen ("Kunt u dat herhalen?"). Dat spreken telt niet mee: de leerling (en de begeleider) hoort
-  "Jij toen" en "Jij nu" naast elkaar.
+- Ongeveer **10 minuten**: eerst **5 korte vragen over de leerling** ("Durf je dit?", zie
+  hieronder), dan **21 vragen** in drie onderdelen, en aan het eind één zin hardop zeggen ("Kunt u
+  dat herhalen?"). Het spreken en "Durf je dit?" tellen niet mee: de leerling (en de begeleider)
+  hoort "Jij toen" en "Jij nu" naast elkaar, en ziet per vraag van "Durf je dit?" toen en nu.
 - **Geen cijfer**, geen "geslaagd" of "gezakt", geen ERK-niveau. De uitslag is per onderdeel een
   balk: hoeveel van de 7 vragen de leerling weet, met het gokken eruit gehaald.
 - Alles blijft op de telefoon. De app telt alleen dat een toets begon en klaar is (A of B), nooit
-  de score.
+  de score en nooit de antwoorden op "Durf je dit?".
+
+## "Durf je dit?" (sinds 5 november 2026)
+
+De toets meet wat de leerling **kan**. Maar op de werkvloer telt ook wat iemand **durft**: in het
+Nederlands iets zeggen of vragen (zelfvertrouwen, *willingness to communicate*). Daarom begint de
+toets, bij de instap én bij het eind, met vijf korte vragen over de leerling zelf.
+
+- **Eén vraag per scherm**, met een plaatje uit de lessen en de Nederlandse zin met een speaker
+  (de telefoon leest hem voor tot er een opname is; `scripts/list-clips.ts`, `x.durf.*`). Boven
+  elke vraag: "Durf je dit?". Het eerste scherm zegt ook: "Eerst 5 vragen over jou. Er is geen
+  goed of fout."
+
+  | | De vraag | Plaatje |
+  |---|---|---|
+  | 1 | Zeggen dat je iets niet begrijpt | ik begrijp het niet |
+  | 2 | Iets vragen aan je leidinggevende | de leidinggevende |
+  | 3 | Om hulp vragen | helpen |
+  | 4 | Zeggen dat iets niet veilig is | gevaar |
+  | 5 | Even praten met een collega in de pauze | praten |
+
+  Er is bewust geen vraag over ziek melden (de wens van de eigenaar).
+- **Drie antwoorden als gezichtjes**: 😟 "Nog niet", 🙂 "Een beetje", 😀 "Ja" (getekend, geen
+  emoji; Nederlands met de hulptaal eronder). Een tik is het antwoord en gaat meteen door: drie
+  dingen om op te tikken, geen "Ik weet het niet" en geen Verder.
+- **Geen goed of fout**, geen kleur, en het telt **niet mee in de score** (de balken).
+- **Bewaard** bij de uitslag van dat moment, alleen op de telefoon (`ToetsRun.durf` in
+  `src/lib/toetsState.ts`, 0 = nog niet, 1 = een beetje, 2 = ja). Het gaat mee in de back-up en is
+  weg met "Voortgang wissen". Stopt de leerling de toets halverwege, dan wordt niets bewaard (zoals
+  bij de rest van de toets).
+- **Na de instap**: alleen bewaard. De uitslag zegt in één regel: "Durf je dit? Na een paar weken
+  vragen we het nog een keer."
+- **Na het eind**: onder "Jij toen / Jij nu" per vraag het plaatje, de zin en de twee gezichtjes,
+  toen → nu (bijvoorbeeld 😟 → 🙂). Geen woorden als "meer" of "minder" en geen totaal: de
+  gezichtjes zeggen het. Ook op de pagina van de toets bij Instellingen.
+- **Eind zonder instap-antwoorden** (de instap was vóór 5 november 2026, of werd overgeslagen): dan
+  staat er niets van "Durf je dit?" op de uitslag. Gekozen omdat de vragen er zijn om een verandering
+  te laten zien; een rij "Nog niet" na vier weken, zonder de stap van toen, leest als een oordeel.
+  De antwoorden zijn wel bewaard: bij een volgende vergelijking (of later op de begeleiderskaart)
+  kunnen ze gebruikt worden.
+- **Niet geteld.** De telling blijft "toets begon" en "toets klaar" met de versie (`toets-start`,
+  `toets-done` in `src/lib/count.ts`). De privacytekst noemt dat de antwoorden op de telefoon
+  blijven.
+- Een oudere versie van de app die een uitslag met "Durf je dit?" leest, laat die antwoorden weg
+  (de rest van de uitslag blijft).
+
+**Wat het zegt en niet zegt.** Het is wat de leerling **zelf zegt** over zichzelf, geen meting.
+Iemand kan het lager of hoger inschatten dan het is, en "Ja" bij het eind betekent niet dat het
+op de werkvloer ook lukt. Het is wel een gesprek waard: vraag de leerling wat er veranderd is.
+De vragen zijn niet gevalideerd (geen bestaande vragenlijst); een NT2-docent of onderzoeker kan
+ze nakijken.
 
 ## De vragen (vorm 2, sinds november 2026)
 
@@ -140,6 +191,7 @@ Wie de toets vóór november 2026 deed, heeft een uitslag van vorm 1 op de telef
 - Of dat na 4 weken (of 3 onderwerpen) **duidelijk meer** is dan bij de start. "Meer dan toen"
   betekent: dit verschil komt bijna nooit door gokken alleen.
 - Hoe de leerling klinkt, toen en nu (de opname, zonder score).
+- Wat de leerling **zelf zegt** dat hij of zij durft, toen en nu ("Durf je dit?", zonder score).
 
 ## Wat de toets niet zegt
 
@@ -149,6 +201,7 @@ Wie de toets vóór november 2026 deed, heeft een uitslag van vorm 1 op de telef
   De toets meet dus vooral wat de cursus aanbiedt. Wie veel oefent, herkent ook de toetszinnen
   beter.
 - **Geen spreken en geen gesprek.** De opname van toen en nu telt niet mee.
+- **Niet of de leerling echt meer durft.** "Durf je dit?" is wat de leerling zelf invult.
 - **Niet hoe het op de werkvloer gaat.** Vraag dat de leerling en de collega's.
 - **"Ongeveer gelijk" is geen "niets geleerd".** Met 7 vragen per onderdeel ziet de toets alleen
   grote stappen. Een kleinere groei kan er wel zijn.
@@ -161,6 +214,7 @@ Wie de toets vóór november 2026 deed, heeft een uitslag van vorm 1 op de telef
   letterlijk uit de cursus). Dat vraagt nieuwe zinnen, vertalingen in 13 talen en opnames.
 - **Spreken meten** in de pilot: de begeleider luistert naar "Jij toen / Jij nu" en scoort 3 punten
   (verstaanbaar? volledig? vloeiend?).
-- De begeleiderskaart kan ook "Meer dan toen" of "Ongeveer gelijk" laten zien.
+- De begeleiderskaart kan ook "Meer dan toen" of "Ongeveer gelijk" laten zien, en (als de leerling
+  dat wil) "Durf je dit?" toen en nu.
 - Laat een NT2-docent of toetsdeskundige de paren A/B nakijken, en meet in de pilot hoe lang de
   toets echt duurt.

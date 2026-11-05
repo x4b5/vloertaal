@@ -12,6 +12,12 @@ export const uiEn = {
   newWord: 'New word',
   tapToHear: 'Tap to hear',
   whatDoesThisMean: 'What does this mean?',
+  /** "Snap je het?" in today's review (src/components/Exercises.tsx SnapExercise): a colleague said a known sentence at the real pace. The Dutch is on screen too. */
+  snapQuestion: 'Do you get it?',
+  snapYes: 'Yes, okay.',
+  snapGoodAsk: 'Good that you ask!',
+  snapRight: 'Well understood!',
+  snapAskBetter: 'See? Asking would have been better.',
   whichOneIs: 'Which one is “{word}”?',
   /** Title of the last lesson of every unit: words, sentences and chats from before, mixed. */
   mixLesson: 'Mixed review',
@@ -261,7 +267,9 @@ export const uiEn = {
   speakPrompt: 'Listen, then say it',
   tapToSpeak: 'Tap and speak',
   stopRecording: 'Stop',
-  micPrivacy: 'Only you hear it. Nothing is sent.',
+  /** Under the microphone: "Niemand hoort je" first, and true (nothing leaves the phone; the
+   *  owner's request, 5 November 2026: learners who do not dare to speak). */
+  micPrivacy: 'Nobody else hears you. Nothing is sent.',
   micUnavailable: 'Microphone off. Say it out loud now, then go on.',
   /** Speaking on a device that cannot record at all: self-paced, nothing recorded. */
   sayAloud: 'No microphone needed. Say it out loud, then go on.',
@@ -285,9 +293,24 @@ export const uiEn = {
   sayAgain: 'Say it again',
   /** After recording: play your own try again (the owner's request, 4 November 2026). */
   hearMine: 'Hear yourself',
+  /** "Toen en nu" (src/lib/firstVoice.ts): in the place of hearMine when this sentence's first
+   *  recording is a week old or more: plays that one, then this one (the owner's request, 5 November 2026). */
+  thenNow: 'Then and now',
+  /** Under "Toen en nu": the day of the first recording ({date}: "12 October", in each line's language). */
+  thenNowFirst: 'Your first try: {date}',
+  /* "Zeg het samen" (src/lib/chorus.ts): before recording, the voice says it slowly and the learner
+     says it along (nothing recorded); then the microphone, "Nu alleen" (the owner's request, 5 November 2026). */
+  sayTogether: 'Say it together',
+  /** Under "Zeg het samen" (no microphone is used for it). */
+  chorusHint: 'Say it at the same time as the voice. Nothing is recorded.',
+  /** Over the microphone once "Zeg het samen" is done. */
+  chorusAlone: 'Now on your own',
+  /** Bram, once, at the first "Zeg het" (src/lib/chorus.ts braveDue). */
+  speakBrave: 'Mistakes are fine. Dutch people understand you, even with mistakes.',
   speakMe: 'Me',
   speakingPractice: 'Speaking practice',
-  speakingHint: 'Say words out loud and compare. Your voice is never saved or sent.',
+  /** Since "Toen en nu" (5 November 2026) the first recording of a sentence is kept on the phone. */
+  speakingHint: 'Say words out loud and compare. Nobody else hears you: nothing is sent. Your first recording of a sentence stays on your phone, to compare later.',
   /* Offline per unit, the pocket card, text size. */
   savingOffline: 'Saving…',
   savedOffline: 'Saved offline',
@@ -444,6 +467,18 @@ export const uiEn = {
   toetsSame: 'About the same',
   toetsMoreAll: 'All together: you know more now than then.',
   toetsSameAll: 'All together: about the same as then.',
+  /* "Durf je dit?": five questions about what the learner dares, before the test's questions (the owner's request, 5 November 2026). */
+  toetsDurfIntro: 'First 5 questions about you. There is no right or wrong.',
+  toetsDurfAsk: 'Do you dare to do this?',
+  toetsDurfUnderstand: 'Say that you don’t understand something',
+  toetsDurfBoss: 'Ask your manager something',
+  toetsDurfHelp: 'Ask for help',
+  toetsDurfUnsafe: 'Say that something is not safe',
+  toetsDurfBreak: 'Have a little chat with a colleague at break',
+  toetsDurfNotYet: 'Not yet',
+  toetsDurfABit: 'A little',
+  toetsDurfYes: 'Yes',
+  toetsDurfAgain: 'In a few weeks we ask again.',
   /* "Tempo" in Settings (src/lib/tempo.ts): how fast the Dutch is played. */
   tempo: 'Speed',
   tempoCalm: 'Calm',
@@ -569,6 +604,17 @@ export const uiEn = {
   geluktAsk: 'Did you say this at work?',
   geluktYes: 'Yes, it worked',
   geluktNotYet: 'Not yet',
+  /* "Gelukt op het werk" (the owner's request, 5 November 2026; src/components/GeluktCard.tsx): after
+     "Ja, gelukt" Bram's line with how many sentences were said at work so far (geluktDoneOne: the
+     first) and where they are; the row and its list in Settings › Taal en ik, with a line on top. */
+  geluktDoneN: 'Well done! You have used {n} sentences at work.',
+  geluktDoneOne: 'Well done! You used your first sentence at work.',
+  geluktWhere: 'You can find them in Settings.',
+  geluktTitle: 'Said at work',
+  geluktListHint: 'You said these sentences at work.',
+  /* The next lesson on a lesson's result (src/components/Screens.tsx Result): about how long it
+     takes (src/lib/lessonTime.ts), the owner's request, 5 November 2026. */
+  nextMinutesN: 'about {n} min',
   /** Saving the progress on this phone failed (src/lib/progress.ts saveProgress; src/components/SaveFailedNote.tsx): once. */
   saveFailed: 'Your progress was not saved. Is your phone full? Make some room. Or go to Settings: Keep your progress.',
   /** "Bewaar je voortgang" on the home, once, where the phone may lose the progress (src/components/BackupNudge.tsx). */

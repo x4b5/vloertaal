@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Cuvânt nou',
     tapToHear: 'Atinge ca să asculți',
     whatDoesThisMean: 'Ce înseamnă asta?',
+    snapQuestion: 'Înțelegi?', // nieuw, nalezen
+    snapYes: 'Da, bine.', // nieuw, nalezen
+    snapGoodAsk: 'Bine că întrebi!', // nieuw, nalezen
+    snapRight: 'Ai înțeles bine!', // nieuw, nalezen
+    snapAskBetter: 'Vezi? Era mai bine să întrebi.', // nieuw, nalezen
     whichOneIs: 'Care dintre acestea este „{word}”?',
     mixLesson: 'Recapitulare mixtă',
     whatDoYouHear: 'Ce auzi?',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Ascultă, apoi spune',
     tapToSpeak: 'Atinge și vorbește',
     stopRecording: 'Stop',
-    micPrivacy: 'Doar tu auzi. Nimic nu este trimis.',
+    micPrivacy: "Nimeni altcineva nu te aude. Nimic nu este trimis.", // nieuw, nalezen
     micUnavailable: 'Microfonul e oprit. Spune acum cu voce tare, apoi mergi mai departe.',
     cantSpeak: 'Nu pot vorbi acum',
     soundsSame: 'Sună la fel',
     sayAgain: 'Spune din nou',
     hearMine: 'Ascultă-te', // nieuw, nalezen
+    thenNow: 'Atunci și acum', // nieuw, nalezen
+    thenNowFirst: 'Prima ta încercare: {date}', // nieuw, nalezen
+    sayTogether: "Spune-o împreună", // nieuw, nalezen
+    chorusHint: "Spune-o în același timp cu vocea. Nimic nu se înregistrează.", // nieuw, nalezen
+    chorusAlone: "Acum doar tu", // nieuw, nalezen
+    speakBrave: "Greșelile sunt în regulă. Olandezii te înțeleg și cu greșeli.", // nieuw, nalezen
     speakMe: 'Eu',
     speakingPractice: 'Exercițiu de vorbire',
-    speakingHint: 'Spune cuvintele cu voce tare și compară. Vocea ta nu este niciodată salvată sau trimisă.',
+    speakingHint: "Spune cuvintele cu voce tare și compară. Nimeni altcineva nu te aude: nimic nu este trimis. Prima ta înregistrare a unei propoziții rămâne pe telefon, ca să compari mai târziu.", // nieuw, nalezen
     savingOffline: 'Se salvează…',
     savedOffline: 'Salvat offline',
     offlineNoSpace: 'Nu este destul spațiu pe acest telefon. Șterge un subiect salvat sau eliberează spațiu.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Cam la fel', // nieuw, nalezen
     toetsMoreAll: 'Totul la un loc: acum știi mai mult decât atunci.', // nieuw, nalezen
     toetsSameAll: 'Totul la un loc: cam la fel ca atunci.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Mai întâi 5 întrebări despre tine. Nu există bine sau greșit.', // nieuw, nalezen
+    toetsDurfAsk: 'Îndrăznești să faci asta?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Să spui că nu înțelegi ceva', // nieuw, nalezen
+    toetsDurfBoss: 'Să-ți întrebi șeful ceva', // nieuw, nalezen
+    toetsDurfHelp: 'Să ceri ajutor', // nieuw, nalezen
+    toetsDurfUnsafe: 'Să spui că ceva nu e sigur', // nieuw, nalezen
+    toetsDurfBreak: 'Să vorbești puțin cu un coleg în pauză', // nieuw, nalezen
+    toetsDurfNotYet: 'Încă nu', // nieuw, nalezen
+    toetsDurfABit: 'Puțin', // nieuw, nalezen
+    toetsDurfYes: 'Da', // nieuw, nalezen
+    toetsDurfAgain: 'Peste câteva săptămâni întrebăm din nou.', // nieuw, nalezen
     tempo: 'Viteză', // nieuw, nalezen
     tempoCalm: 'Calm', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Ai spus asta la muncă?', // nieuw, nalezen
     geluktYes: 'Da, a mers', // nieuw, nalezen
     geluktNotYet: 'Încă nu', // nieuw, nalezen
+    geluktDoneN: { one: 'Bravo! Deja {n} propoziție reușită la muncă.', few: 'Bravo! Deja {n} propoziții reușite la muncă.', other: 'Bravo! Deja {n} de propoziții reușite la muncă.' }, // nieuw, nalezen
+    geluktDoneOne: 'Bravo! Prima ta propoziție la muncă a reușit.', // nieuw, nalezen
+    geluktWhere: 'Le găsești în Setări.', // nieuw, nalezen
+    geluktTitle: 'Reușit la muncă', // nieuw, nalezen
+    geluktListHint: 'Ai spus aceste propoziții la muncă.', // nieuw, nalezen
+    nextMinutesN: 'cam {n} min', // nieuw, nalezen
     saveFailed: 'Progresul tău nu a fost salvat. Telefonul e plin? Fă puțin loc. Sau mergi la Setări: „Păstrează-ți progresul”.', // nieuw, nalezen
     bewaarNudge: 'Telefonul îți poate șterge uneori progresul. De aceea, păstrează o copie.', // nieuw, nalezen
     bewaarGo: 'Salvează acum', // nieuw, nalezen

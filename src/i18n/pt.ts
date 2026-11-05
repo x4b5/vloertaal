@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Palavra nova',
     tapToHear: 'Toca para ouvir',
     whatDoesThisMean: 'O que quer dizer isto?',
+    snapQuestion: 'Percebes?', // nieuw, nalezen
+    snapYes: 'Sim, está bem.', // nieuw, nalezen
+    snapGoodAsk: 'Ainda bem que perguntas!', // nieuw, nalezen
+    snapRight: 'Bem percebido!', // nieuw, nalezen
+    snapAskBetter: 'Vês? Era melhor perguntar.', // nieuw, nalezen
     whichOneIs: 'Qual é “{word}”?',
     mixLesson: 'Revisão mista',
     whatDoYouHear: 'O que ouves?',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Ouve e depois diz',
     tapToSpeak: 'Toca e fala',
     stopRecording: 'Parar',
-    micPrivacy: 'Só tu ouves. Nada é enviado.',
+    micPrivacy: "Mais ninguém te ouve. Nada é enviado.", // nieuw, nalezen
     micUnavailable: 'Microfone desligado. Diz em voz alta agora e depois continua.',
     cantSpeak: 'Agora não posso falar',
     soundsSame: 'Soa igual',
     sayAgain: 'Diz outra vez',
     hearMine: 'Ouve-te', // nieuw, nalezen
+    thenNow: 'Antes e agora', // nieuw, nalezen
+    thenNowFirst: 'A tua primeira tentativa: {date}', // nieuw, nalezen
+    sayTogether: "Diz ao mesmo tempo", // nieuw, nalezen
+    chorusHint: "Diz ao mesmo tempo que a voz. Nada é gravado.", // nieuw, nalezen
+    chorusAlone: "Agora só tu", // nieuw, nalezen
+    speakBrave: "Errar não faz mal. Os neerlandeses percebem-te mesmo com erros.", // nieuw, nalezen
     speakMe: 'Eu',
     speakingPractice: 'Prática de fala',
-    speakingHint: 'Diz as palavras em voz alta e compara. A tua voz nunca é guardada nem enviada.',
+    speakingHint: "Diz as palavras em voz alta e compara. Mais ninguém te ouve: nada é enviado. A tua primeira gravação de uma frase fica no teu telemóvel, para comparares mais tarde.", // nieuw, nalezen
     savingOffline: 'A guardar…',
     savedOffline: 'Guardado offline',
     offlineNoSpace: 'Não há espaço suficiente neste telemóvel. Remove um tema guardado ou liberta espaço.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Mais ou menos igual', // nieuw, nalezen
     toetsMoreAll: 'No total: agora sabes mais do que antes.', // nieuw, nalezen
     toetsSameAll: 'No total: mais ou menos igual a antes.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Primeiro, 5 perguntas sobre ti. Não há certo nem errado.', // nieuw, nalezen
+    toetsDurfAsk: 'Tens coragem de fazer isto?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Dizer que não percebes uma coisa', // nieuw, nalezen
+    toetsDurfBoss: 'Perguntar algo à tua chefia', // nieuw, nalezen
+    toetsDurfHelp: 'Pedir ajuda', // nieuw, nalezen
+    toetsDurfUnsafe: 'Dizer que uma coisa não é segura', // nieuw, nalezen
+    toetsDurfBreak: 'Conversar um pouco com alguém do trabalho na pausa', // nieuw, nalezen
+    toetsDurfNotYet: 'Ainda não', // nieuw, nalezen
+    toetsDurfABit: 'Um pouco', // nieuw, nalezen
+    toetsDurfYes: 'Sim', // nieuw, nalezen
+    toetsDurfAgain: 'Daqui a umas semanas, perguntamos outra vez.', // nieuw, nalezen
     tempo: 'Velocidade', // nieuw, nalezen
     tempoCalm: 'Devagar', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Disseste isto no trabalho?', // nieuw, nalezen
     geluktYes: 'Sim, correu bem', // nieuw, nalezen
     geluktNotYet: 'Ainda não', // nieuw, nalezen
+    geluktDoneN: { one: 'Muito bem! Já conseguiste {n} frase no trabalho.', many: 'Muito bem! Já conseguiste {n} frases no trabalho.', other: 'Muito bem! Já conseguiste {n} frases no trabalho.' }, // nieuw, nalezen
+    geluktDoneOne: 'Muito bem! A tua primeira frase no trabalho correu bem.', // nieuw, nalezen
+    geluktWhere: 'Encontras as frases nas Definições.', // nieuw, nalezen
+    geluktTitle: 'Conseguido no trabalho', // nieuw, nalezen
+    geluktListHint: 'Disseste estas frases no trabalho.', // nieuw, nalezen
+    nextMinutesN: 'cerca de {n} min', // nieuw, nalezen
     saveFailed: 'O teu progresso não foi guardado. O telemóvel está cheio? Liberta algum espaço. Ou vai a Definições: «Guarda o teu progresso».', // nieuw, nalezen
     bewaarNudge: 'O telemóvel às vezes pode apagar o teu progresso. Por isso, guarda uma cópia.', // nieuw, nalezen
     bewaarGo: 'Guardar agora', // nieuw, nalezen

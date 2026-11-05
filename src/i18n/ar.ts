@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'كلمة جديدة',
     tapToHear: { m: 'اضغط للاستماع', f: 'اضغطي للاستماع' },
     whatDoesThisMean: 'ما معنى هذا؟',
+    snapQuestion: { m: 'هل فهمت؟', f: 'هل فهمتِ؟', x: 'هل الأمر مفهوم؟' }, // nieuw, nalezen
+    snapYes: 'نعم، حسناً.', // nieuw, nalezen
+    snapGoodAsk: { m: 'جيد أنك تسأل!', f: 'جيد أنكِ تسألين!', x: 'السؤال فكرة جيدة!' }, // nieuw, nalezen
+    snapRight: { m: 'فهمتَ جيداً!', f: 'فهمتِ جيداً!', x: 'فهم صحيح!' }, // nieuw, nalezen
+    snapAskBetter: { m: 'أرأيت؟ كان السؤال أفضل.', f: 'أرأيتِ؟ كان السؤال أفضل.', x: 'كان السؤال أفضل.' }, // nieuw, nalezen
     whichOneIs: 'أيٌّ منها هو «{word}»؟',
     mixLesson: 'مراجعة مختلطة',
     whatDoYouHear: { m: 'ماذا تسمع؟', f: 'ماذا تسمعين؟' },
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: { m: 'استمع، ثم قلها', f: 'استمعي، ثم قوليها' },
     tapToSpeak: { m: 'اضغط وتكلّم', f: 'اضغطي وتكلّمي' },
     stopRecording: { m: 'توقّف', f: 'توقّفي', x: 'إيقاف' }, // x: nieuw, nalezen
-    micPrivacy: { m: 'أنت فقط تسمعه. لا يُرسَل أي شيء.', f: 'أنت فقط تسمعينه. لا يُرسَل أي شيء.', x: 'لا أحد غيرك يسمعه. لا يُرسَل أي شيء.' }, // x: nieuw, nalezen
+    micPrivacy: "لا أحد غيرك يسمعك. لا يُرسَل أي شيء.", // nieuw, nalezen
     micUnavailable: { m: 'الميكروفون لا يعمل. قلها بصوت عالٍ الآن، ثم تابع.', f: 'الميكروفون لا يعمل. قوليها بصوت عالٍ الآن، ثم تابعي.' },
     cantSpeak: 'لا أستطيع التكلّم الآن',
     soundsSame: 'النطق نفسه',
     sayAgain: { m: 'قلها مرة أخرى', f: 'قوليها مرة أخرى' },
     hearMine: { m: 'استمع إلى نفسك', f: 'استمعي إلى نفسك' }, // nieuw, nalezen
+    thenNow: 'سابقاً والآن', // nieuw, nalezen
+    thenNowFirst: 'محاولتك الأولى: {date}', // nieuw, nalezen
+    sayTogether: { m: "قلها معاً", f: "قوليها معاً", x: "النطق معاً" }, // nieuw, nalezen
+    chorusHint: { m: "قلها في نفس الوقت مع الصوت. لا يُسجَّل أي شيء.", f: "قوليها في نفس الوقت مع الصوت. لا يُسجَّل أي شيء.", x: "النطق في نفس الوقت مع الصوت. لا يُسجَّل أي شيء." }, // nieuw, nalezen
+    chorusAlone: "الآن وحدك", // nieuw, nalezen
+    speakBrave: "الأخطاء مسموحة. الهولنديون يفهمونك حتى مع الأخطاء.", // nieuw, nalezen
     speakMe: 'أنا',
     speakingPractice: 'تمرين التكلّم',
-    speakingHint: { m: 'قل الكلمات بصوت عالٍ وقارن. صوتك لا يُحفَظ ولا يُرسَل أبداً.', f: 'قولي الكلمات بصوت عالٍ وقارني. صوتك لا يُحفَظ ولا يُرسَل أبداً.' },
+    speakingHint: { m: "قل الكلمات بصوت عالٍ وقارن. لا أحد غيرك يسمعك: لا يُرسَل أي شيء. يبقى أول تسجيل لك لكل جملة على هاتفك، لتقارن لاحقاً.", f: "قولي الكلمات بصوت عالٍ وقارني. لا أحد غيرك يسمعك: لا يُرسَل أي شيء. يبقى أول تسجيل لكِ لكل جملة على هاتفك، لتقارني لاحقاً.", x: "نطق الكلمات بصوت عالٍ ثم المقارنة. لا أحد غيرك يسمعك: لا يُرسَل أي شيء. يبقى أول تسجيل لكل جملة على الهاتف، للمقارنة لاحقاً." }, // nieuw, nalezen
     savingOffline: 'جارٍ الحفظ…',
     savedOffline: 'محفوظ للاستخدام بدون إنترنت',
     offlineNoSpace: { m: 'لا توجد مساحة كافية على هذا الهاتف. احذف موضوعًا محفوظًا أو أفرغ بعض المساحة.', f: 'لا توجد مساحة كافية على هذا الهاتف. احذفي موضوعًا محفوظًا أو أفرغي بعض المساحة.', x: 'لا توجد مساحة كافية على هذا الهاتف. يُرجى حذف موضوع محفوظ أو إفراغ بعض المساحة.' }, // x: nieuw, nalezen
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'تقريباً كما في السابق', // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsMoreAll: { m: 'كل شيء معاً: تعرف الآن أكثر من قبل.', f: 'كل شيء معاً: تعرفين الآن أكثر من قبل.', x: 'كل شيء معاً: المعرفة الآن أكثر من قبل.' }, // nieuw, nalezen
     toetsSameAll: 'كل شيء معاً: تقريباً كما في السابق.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'أولاً 5 أسئلة عنك. لا توجد إجابة صحيحة أو خاطئة.', // nieuw, nalezen
+    toetsDurfAsk: { m: 'هل تجرؤ على هذا؟', f: 'هل تجرئين على هذا؟', x: 'هل يمكن فعل هذا بثقة؟' }, // nieuw, nalezen
+    toetsDurfUnderstand: { m: 'أن تقول إنك لا تفهم شيئاً', f: 'أن تقولي إنكِ لا تفهمين شيئاً', x: 'قول «لا أفهم هذا»' }, // nieuw, nalezen
+    toetsDurfBoss: { m: 'أن تسأل مديرك عن شيء', f: 'أن تسألي مديركِ عن شيء', x: 'سؤال المدير عن شيء' }, // nieuw, nalezen
+    toetsDurfHelp: { m: 'أن تطلب المساعدة', f: 'أن تطلبي المساعدة', x: 'طلب المساعدة' }, // nieuw, nalezen
+    toetsDurfUnsafe: { m: 'أن تقول إن شيئاً ما غير آمن', f: 'أن تقولي إن شيئاً ما غير آمن', x: 'قول إن شيئاً ما غير آمن' }, // nieuw, nalezen
+    toetsDurfBreak: { m: 'أن تتحدث قليلاً مع زميل في الاستراحة', f: 'أن تتحدثي قليلاً مع زميل في الاستراحة', x: 'الحديث قليلاً مع زميل في الاستراحة' }, // nieuw, nalezen
+    toetsDurfNotYet: 'ليس بعد', // nieuw, nalezen
+    toetsDurfABit: 'قليلاً', // nieuw, nalezen
+    toetsDurfYes: 'نعم', // nieuw, nalezen
+    toetsDurfAgain: 'بعد بضعة أسابيع نسأل مرة أخرى.', // nieuw, nalezen
     tempo: 'السرعة', // nieuw, nalezen
     tempoCalm: 'هادئ', // nieuw, nalezen
     tempoNormal: 'عادي', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: { m: 'هل قلتَ هذا في العمل؟', f: 'هل قلتِ هذا في العمل؟', x: 'هل قلت هذا في العمل؟' }, // nieuw, nalezen
     geluktYes: 'نعم، نجح', // nieuw, nalezen
     geluktNotYet: 'ليس بعد', // nieuw, nalezen
+    geluktDoneN: { m: 'أحسنت! الجمل التي نجحت في العمل: {n}', f: 'أحسنتِ! الجمل التي نجحت في العمل: {n}', x: 'عمل رائع! الجمل التي نجحت في العمل: {n}' }, // nieuw, nalezen
+    geluktDoneOne: { m: 'أحسنت! نجحت أول جملة لك في العمل.', f: 'أحسنتِ! نجحت أول جملة لكِ في العمل.', x: 'عمل رائع! نجحت أول جملة في العمل.' }, // nieuw, nalezen
+    geluktWhere: { m: 'تجدها في الإعدادات.', f: 'تجدينها في الإعدادات.', x: 'هي في الإعدادات.' }, // nieuw, nalezen
+    geluktTitle: 'نجحت في العمل', // nieuw, nalezen
+    geluktListHint: { m: 'قلتَ هذه الجمل في العمل.', f: 'قلتِ هذه الجمل في العمل.', x: 'قيلت هذه الجمل في العمل.' }, // nieuw, nalezen
+    nextMinutesN: { zero: 'حوالي {n} دقيقة', one: 'حوالي {n} دقيقة', two: 'حوالي دقيقتين', few: 'حوالي {n} دقائق', many: 'حوالي {n} دقيقة', other: 'حوالي {n} دقيقة' }, // nieuw, nalezen
     saveFailed: 'لم يُحفظ تقدّمك. هل الهاتف ممتلئ؟ الحل: إفراغ بعض المساحة. أو في الإعدادات: «حفظ تقدمك».', // nieuw, nalezen
     bewaarNudge: { m: 'قد يمسح هاتفك تقدمك أحياناً. لذلك احفظ نسخة.', f: 'قد يمسح هاتفك تقدمك أحياناً. لذلك احفظي نسخة.', x: 'قد يمسح الهاتف التقدم أحياناً. لذلك من الأفضل حفظ نسخة.' }, // nieuw, nalezen
     bewaarGo: { m: 'احفظ الآن', f: 'احفظي الآن', x: 'الحفظ الآن' }, // nieuw, nalezen

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { findLesson, playLesson } from './content/curriculum';
 import { ensureLanguage, getHelpLanguage, isLanguageLoaded, langTag } from './i18n';
 import { setRulesCountry } from './content/rulesCourse';
@@ -10,8 +10,10 @@ import { dutchUi, trackOf, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
 import { tempoOf } from './lib/tempo';
 import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
-import { answerGelukt, geluktDue, type WorkTryLine, workTryFor } from './lib/workTry';
-import { GeluktLine, GeluktPage } from './components/GeluktCard';
+import { lessonMinutes } from './lib/lessonTime';
+import { speakingOn } from './lib/speaking';
+import { addGelukt, answerGelukt, geluktCount, geluktDue, type WorkTryLine, workTryFor } from './lib/workTry';
+import { GeluktDonePage, GeluktLine, GeluktPage } from './components/GeluktCard';
 import { ColleagueCard } from './components/ColleagueCard';
 import { applyTheme } from './lib/theme';
 import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
@@ -46,6 +48,7 @@ import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
 import { BackupNudge } from './components/BackupNudge';
 import { BridgeOffer } from './components/BridgeOffer';
 import { bridgeDue, seeBridge } from './lib/bridge';
+import { afterSpeak, braveDue, chorusDue, type SpeakEvent } from './lib/chorus';
 import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
@@ -62,6 +65,7 @@ import { ensureRegionFor, regionReady } from './lib/region';
 import { ToetsHomeLine, ToetsOfferPage, ToetsPage, ToetsPlayer, ToetsResult } from './components/Toets';
 import { recordToets, toetsAfterLesson, toetsLater, toetsOffer, versionOf, type ToetsMoment } from './lib/toets';
 import { forgetVoices, keepVoice } from './lib/toetsVoice';
+import { forgetFirstVoices } from './lib/firstVoice';
 import { Samen } from './components/Samen';
 import { CheckResult } from './components/Check';
 import { checkExercises, checkLesson, checkOffered, checkPassed, recordCheck, undoCheck } from './lib/instapCheck';
@@ -76,7 +80,7 @@ type View =
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string; workTry?: WorkTryLine }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string; workTry?: WorkTryLine }
   /** "Oefen samen" (src/components/Samen.tsx): a lesson's chats, two people on one phone, from its
    *  result; streakUp / cert: the certificate or the streak milestone still follows. */
   | { name: 'samen'; lessonId: string; streakUp?: number; cert?: string }
@@ -122,6 +126,8 @@ type View =
   | { name: 'toets-offer'; moment: ToetsMoment }
   /** "Gelukt?" (src/components/GeluktCard.tsx), from its line under the next lesson on the home. */
   | { name: 'gelukt' }
+  /** Right after "Ja, gelukt": Bram with how many sentences were said at work (n), and the sentence (nl). */
+  | { name: 'gelukt-done'; n: number; nl: string }
   /** "Laat zien hoe het gaat": the coach card (src/components/Certificate.tsx CoachCardScreen), from Settings › Taal en ik. */
   | { name: 'kaart' }
   /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): the 5 questions of a topic, and the end. */
@@ -597,6 +603,8 @@ export default function App() {
   // "Tempo" (Settings): also set during render, for the same reason as the sound.
   setTempo(tempoOf(progress));
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
+  // A lesson's "Zeg het" (src/lib/chorus.ts): met, skipped or recorded. Stable, so the exercise tells it once.
+  const onSpeak = useCallback((what: SpeakEvent) => setProgress((p) => afterSpeak(p, what)), []);
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
   useEffect(() => { applyCalm(progress.calm); }, [progress.calm]);
@@ -787,7 +795,7 @@ export default function App() {
       const daily = view.lessonId === DAILY_ID;
       // Today's review of the learner's track: words (the language course) or questions (the rules course).
       const found = daily
-        ? { lesson: track === 'regels' ? dailyRuleLesson(view.ids ?? []) : dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date())) }
+        ? { lesson: track === 'regels' ? dailyRuleLesson(view.ids ?? []) : dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date()), { extra: progress.reviewDay === dayKey(new Date()) }) }
         : playLesson(view.lessonId, progress.completed, dayNumber(dayKey(new Date())));
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
@@ -866,6 +874,9 @@ export default function App() {
           // a growing number every day, as if they were behind.
           waiting: daily && progress.lastDay && (daysBetween(progress.lastDay, today) >= 2 || restedYesterday(progress, today)) ? dueIds(next.cards ?? {}, today, track).length || undefined : undefined,
           next: upNext?.id,
+          // About how long that lesson takes ("± 6 min", src/lib/lessonTime.ts), built as it will be
+          // played: sound, sector, speaking practice and the pace after this lesson.
+          nextMinutes: upNext ? lessonMinutes(upNext, { quiet: Boolean(next.quiet), sector: next.sector, speak: track === 'taal' && speakingOn(), ...(track === 'taal' ? lessonPace(next) : {}) }) : undefined,
           cert: unitDone?.id,
           skipped: skipped || undefined,
           phrases: phrases || undefined,
@@ -903,6 +914,10 @@ export default function App() {
           report={testerMode(access)}
           reportHint={explainReport(access, track === 'regels')}
           {...(daily || track !== 'taal' ? {} : lessonPace(progress))}
+          // "Zeg het samen" and Bram's "Fouten mogen" (src/lib/chorus.ts), the owner's request, 5 November 2026.
+          speakTogether={chorusDue(progress)}
+          speakBrave={braveDue(progress)}
+          onSpeak={onSpeak}
         />
       );
     }
@@ -920,7 +935,7 @@ export default function App() {
           skipped={view.skipped}
           kind={view.kind}
           remember={view.remember}
-          next={view.next ? nextTitle(view.next, lang) : undefined}
+          next={view.next ? nextTitle(view.next, lang, view.nextMinutes) : undefined}
           lang={lang}
           onDone={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
           onPhrases={view.phrases ? () => replace({ name: 'phrasebook', streakUp: view.streakUp, cert: view.cert }) : undefined}
@@ -1065,6 +1080,8 @@ export default function App() {
               clearSave();
               forgetCertName();
               void forgetVoices();
+              // And the first recordings of "Toen en nu" (src/lib/firstVoice.ts), 5 November 2026.
+              void forgetFirstVoices();
               setProgress((p) => ({
                 ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
                 sector: p.sector, region: p.region, country: p.country, rulesNotice: p.rulesNotice, textSize: p.textSize, tempo: p.tempo, gender: p.gender, genderAsked: p.genderAsked,
@@ -1134,9 +1151,10 @@ export default function App() {
           moment={view.moment}
           lang={lang}
           onQuit={back}
-          onDone={({ tally, voice }) => {
+          onDone={({ tally, voice, durf }) => {
             const moment = view.moment;
-            setProgress((p) => recordToets(p, moment, tally, new Date()));
+            // "Durf je dit?" goes with the run, on this phone only; the count below never has it.
+            setProgress((p) => recordToets(p, moment, tally, new Date(), undefined, durf));
             // The recording stays on this phone only (src/lib/toetsVoice.ts), for "Jij toen / Jij nu".
             if (voice) void keepVoice(moment, voice);
             count('toets-done', { lesson: versionOf(moment).toLowerCase() });
@@ -1177,6 +1195,13 @@ export default function App() {
       return hulpTab();
     // The pages of the home's small lines (src/components/Route.tsx `lines`); no longer offered
     // (answered, or a history entry from before): the home.
+    case 'gelukt-done':
+      return (
+        <>
+          <GeluktDonePage n={view.n} nl={view.nl} lang={lang} onDone={back} />
+          <BottomNav current="route" onTab={tab} lang={lang} />
+        </>
+      );
     case 'toets-offer':
     case 'gelukt':
     default:
@@ -1206,7 +1231,16 @@ export default function App() {
                 line={line}
                 lang={lang}
                 onBack={back}
-                onAnswer={(worked) => { answerGelukt(worked ? 'ja' : 'nog-niet', dayKey(new Date())); setNudgeTick((n) => n + 1); back(); }}
+                onAnswer={(worked) => {
+                  const today = dayKey(new Date());
+                  answerGelukt(worked ? 'ja' : 'nog-niet', today);
+                  setNudgeTick((n) => n + 1);
+                  if (!worked) { back(); return; }
+                  // "Ja, gelukt": the sentence goes into "Gelukt op het werk" (the progress), and a
+                  // short moment says how many there are now (the owner's request, 5 November 2026).
+                  setProgress((p) => addGelukt(p, line, today));
+                  replace({ name: 'gelukt-done', n: geluktCount(addGelukt(progress, line, today)), nl: line.nl });
+                }}
               />
               <BottomNav current="route" onTab={tab} lang={lang} />
             </>
@@ -1295,9 +1329,9 @@ export default function App() {
   }
 }
 
-function nextTitle(id: string, lang: ReturnType<typeof getHelpLanguage>) {
+function nextTitle(id: string, lang: ReturnType<typeof getHelpLanguage>, minutes?: number) {
   const found = findLesson(id);
-  return found ? { ...gloss(id, found.lesson.title, lang), id } : undefined;
+  return found ? { ...gloss(id, found.lesson.title, lang), id, minutes } : undefined;
 }
 
 function adminRequested(): boolean {

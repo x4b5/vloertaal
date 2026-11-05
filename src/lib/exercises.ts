@@ -14,7 +14,7 @@ import { createRng, sample, shuffle } from './random';
 import { hasPicture, looksAlike, samePicture } from './wordPicture';
 import { type SpeakItem, withSpeaking } from './speaking';
 import { nearSynonyms } from '../content/synonyms';
-import { DAILY_ID, MADE_FROM_BOX } from './spaced';
+import { askAgainLine, DAILY_ID, MADE_FROM_BOX } from './spaced';
 import { typable } from './typable';
 import { regionTaalLessons } from '../content/regio';
 import { type LessonSaying, sayingForLesson, sayingQuestion } from '../content/sayings';
@@ -65,6 +65,10 @@ export type Exercise =
   /** "Hoe zeg je het?": the card of one sound (src/components/KlankCard.tsx), at the start of a
    *  Klanken lesson (klankStepsFor). Only looked at and listened to: never graded. */
   | { kind: 'klank'; klank: KlankId }
+  /** "Snap je het?" (today's review, lib/spaced.ts snapLines): a colleague says `sentence` at the
+   *  real pace without the text; "Ja, oké." or `ask` ("Kunt u dat herhalen?", then slowly again);
+   *  then what it means, from `options` (the sentence and two others). Only that question counts. */
+  | { kind: 'snap'; sentence: Sentence; options: Sentence[]; ask: Sentence }
   /** The work-rules track (src/content/regels): one step of a rules lesson (buildRuleLesson). */
   | RuleExercise;
 
@@ -106,7 +110,7 @@ export const GRADED_RULE_KINDS: readonly RuleKind[] = ['truefalse', 'whatdo', 'w
  * Exercises that can only be answered by hearing: the word is not on screen. They are left out
  * in "Without sound" (and skipped when the learner can't listen right now).
  */
-export const AUDIO_ONLY_KINDS: readonly Exercise['kind'][] = ['listen', 'type'];
+export const AUDIO_ONLY_KINDS: readonly Exercise['kind'][] = ['listen', 'type', 'snap'];
 
 export function needsAudio(ex: Exercise): boolean {
   return AUDIO_ONLY_KINDS.includes(ex.kind);
@@ -119,7 +123,17 @@ export function needsAudio(ex: Exercise): boolean {
 export function heardText(ex: Exercise): string | undefined {
   if (ex.kind === 'listen' || ex.kind === 'type') return ex.word.nl;
   if (ex.kind === 'build' && ex.audio) return ex.sentence.nl;
+  if (ex.kind === 'snap') return ex.sentence.nl;
   return undefined;
+}
+
+/**
+ * Does a wrong answer here come back at the end of the lesson? Every question does, except
+ * "Snap je het?": its sentence is shown and said slowly right after the answer, so asked again it
+ * would only test whether that was read (and asking must not turn into an extra question).
+ */
+export function comesBack(ex: Exercise): boolean {
+  return ex.kind !== 'snap';
 }
 
 /**
@@ -1044,6 +1058,23 @@ function reverseDialogue(lesson: Lesson): Dialogue | undefined {
  * listening question or reversed chat). Neither changes a review.
  */
 /**
+ * Today's "Snap je het?" (lib/spaced.ts snapLines): the first of the day's sentences that this
+ * phone can say in the colleague's voice and that has a meaning in the help language (`fits`, the
+ * lesson player passes it: a recording, never a guess at a silent speaker), with two other known
+ * sentences of another meaning as the wrong options. Undefined without a fitting sentence.
+ */
+export function snapExercise(lesson: Lesson, rng: () => number, fits: (s: Sentence) => boolean = () => true): Extract<Exercise, { kind: 'snap' }> | undefined {
+  const ask = askAgainLine();
+  if (!lesson.snap || !ask) return undefined;
+  const { lines, others } = lesson.snap;
+  const sentence = lines.find(fits);
+  if (!sentence) return undefined;
+  const pool = [...lines, ...others].filter((s, i, all) => s.id !== sentence.id && s.en !== sentence.en && s.nl !== sentence.nl && all.findIndex((x) => x.en === s.en) === i);
+  if (pool.length < 2) return undefined;
+  return { kind: 'snap', sentence, options: shuffle([sentence, ...sample(pool, 2, rng)], rng), ask };
+}
+
+/**
  * `recorded` (the lesson player passes hasClip, lib/audio.ts): is there a recording of this Dutch
  * line? Only with it, and with speaking on and sound on, a lesson gets "Wat zeg je?" (see withTurn).
  */
@@ -1053,7 +1084,7 @@ export function buildLesson(lesson: Lesson, opts: LessonOptions): Exercise[] {
   return sounds.length ? [...sounds, ...list] : list;
 }
 
-type LessonOptions = { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice; sayings?: boolean; fast?: boolean; easy?: boolean; recorded?: (text: string) => boolean };
+type LessonOptions = { review: boolean; seed?: number; quiet?: boolean; speak?: boolean; nonLatin?: boolean; sector?: SectorChoice; sayings?: boolean; fast?: boolean; easy?: boolean; recorded?: (text: string) => boolean; snapFits?: (s: Sentence) => boolean };
 
 /**
  * "Hoe zeg je het?" in the Klanken lessons (the owner's request, 4 November 2026): a lesson
@@ -1198,6 +1229,9 @@ function lessonExercises(lesson: Lesson, opts: LessonOptions): Exercise[] {
     for (const dialogue of dialogues) {
       out.push({ kind: 'chat', dialogue, options: chatOptions(dialogue, rng, 3, lesson) });
     }
+    // "Snap je het?" on its days (lib/spaced.ts snapLines), once, after the chat; never without sound.
+    const snap = !opts.quiet ? snapExercise(lesson, rng, opts.snapFits) : undefined;
+    if (snap) out.push(snap);
     // A spoken-sentence card (lesson.say) is said again; else a sentence or word as usual.
     if (opts.speak && !opts.quiet) return withSpeaking<Exercise>(out, lesson, (item) => ({ kind: 'speak', item }), opts.seed ?? 0, lesson.say);
     return out;

@@ -1,6 +1,7 @@
 import { tipForLesson } from '../content/culture';
 import { applyCalm } from '../lib/calm';
 import { workTryLine } from '../lib/workTry';
+import { lessonMinutes } from '../lib/lessonTime';
 import { ColleagueCard } from '../components/ColleagueCard';
 import { sayingForLesson, sayingQuestion } from '../content/sayings';
 import { findLesson } from '../content/curriculum';
@@ -20,7 +21,7 @@ import type { Access } from '../lib/access';
 import { dayKey, emptyProgress, workWeek, type Progress } from '../lib/progress';
 import { Milestone, StreakStopped } from '../components/Milestone';
 import { BootFailed } from '../components/Splash';
-import { dailyCard, dailyRuleLesson, gradedStepIds } from '../lib/spaced';
+import { askAgainLine, dailyCard, dailyRuleLesson, gradedStepIds } from '../lib/spaced';
 import { REVIEW_FIRST_ABOVE } from '../lib/pace';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
@@ -29,7 +30,7 @@ import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies } from '../content/curriculum';
 import { buildLesson, buildTiles, buildRuleLesson, forRetry, frontExercise, frontSource, RULE_KINDS, workTurn, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
-import { setSpeakShotHeard, setSpeakShotPhase, setSpeakShotRefused } from '../components/Speaking';
+import { setSpeakShotBrave, setSpeakShotChorus, setSpeakShotHeard, setSpeakShotPhase, setSpeakShotRefused, setSpeakShotThen, type ChorusState } from '../components/Speaking';
 import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
@@ -100,7 +101,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
         repeated={review ? 6 : undefined} stronger={review ? 4 : undefined}
         kind={review ? 'daily' : 'lesson'}
         remember={review ? undefined : done?.rule?.remember}
-        next={!review && next ? { en: next.title, lang: l, id: next.id } : undefined}
+        next={!review && next ? { en: next.title, lang: l, id: next.id, minutes: lessonMinutes(next) } : undefined}
       />
     );
   }
@@ -119,7 +120,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
         kept={q.get('kept') ? { right: Number(q.get('kept')!.split(',')[0]), of: Number(q.get('kept')!.split(',')[1]) } : undefined}
         waiting={Number(q.get('waiting') ?? 0)}
         kind={review ? 'daily' : q.get('mix') === '1' ? 'review' : 'lesson'}
-        next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id } : undefined}
+        next={!review && next ? { en: next.title, help: l?.gloss[next.id], lang: l, id: next.id, minutes: lessonMinutes(next, { speak: true }) } : undefined}
         onPhrases={q.get('phrases') === '1' ? () => {} : undefined}
         // &worktry=l.arrive: "Probeer het vandaag op je werk" with that lesson's sentence.
         workTry={q.get('worktry') ? workTryLine(q.get('worktry')!) : undefined}
@@ -143,7 +144,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // real screen, it reads this browser's save (vloertaal:v1) for the help language; without a save
   // only "Opnieuw beginnen" shows.
   if (shot === 'bootfailed') return <BootFailed />;
-  // "Wat ken je al?": /?shot=toets&state=offer|offer-eind|question&at=N|speak|result-instap|result-eind|page (src/dev/ToetsShot.tsx).
+  // "Wat ken je al?": /?shot=toets&state=offer|offer-eind|durf&at=N|question&at=N|speak|result-instap|result-eind|page (src/dev/ToetsShot.tsx).
   if (shot === 'toets') return <ToetsShot lang={lang} gender={gender} />;
   // "Laat zien hoe het gaat" (the coach card): /?shot=kaart&state=full|start|new (see KaartShot);
   // &name=Amina%20Yusuf (name=ask: asked first; name=none, the default: without a name). &lang=nl: Werkregels.
@@ -278,7 +279,13 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     const doneN = Number(q.get('done') ?? 8) || 8;
     const doneLessons = lang === 'nl' ? courseUnits('regels').flatMap((u) => u.lessons).slice(0, doneN) : allLessons.slice(0, doneN);
     const done = Object.fromEntries(doneLessons.map((l) => [l.id, { best: 1, times: 1 }]));
-    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, region, quiet, completed: done, gender };
+    // &gelukt=4: that many sentences said at work ("Gelukt op het werk", Settings › Taal en ik):
+    // the work sentences of the first lessons that have one, a day apart.
+    const geluktN = Number(q.get('gelukt') ?? 0);
+    const gelukt = geluktN > 0 ? (lang === 'nl' ? courseUnits('regels').flatMap((u) => u.lessons) : allLessons)
+      .map((x) => workTryLine(x.id)).filter((x) => x !== undefined).slice(0, geluktN)
+      .map((x, i) => ({ id: x.id, nl: x.nl, en: x.en, day: `2026-10-${String(10 + i).padStart(2, '0')}` })) : undefined;
+    const progress = { ...emptyProgress, onboarded: true, helpLang: (lang as LangCode) ?? null, sector, region, quiet, completed: done, gender, gelukt };
     const l = getHelpLanguage(lang as LangCode, gender);
     const zl = regionOf(region);
     const mapLink = zl ? <SocialMapLink region={zl} lang={l} onOpen={() => {}} /> : undefined;
@@ -426,6 +433,11 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   exercises.saying = { kind: 'saying', saying };
   const sayingAsk = sayingQuestion(saying);
   exercises['saying-ask'] = { kind: 'situation', tip: sayingAsk, options: sayingAsk.options };
+  // "Snap je het?" in today's review: /?shot=snap, "Draag altijd je helm." at the real pace; the
+  // right meaning is the 1st card (a wrong one the 2nd). Tap "Ja, oké." or "Kunt u dat herhalen?".
+  const shiftLine = findLesson('l.shift')!.lesson.sentences[0];
+  const askLine = askAgainLine();
+  if (askLine) exercises.snap = { kind: 'snap', sentence: lesson.sentences[0], options: [lesson.sentences[0], shiftLine, lesson.sentences[1]], ask: askLine };
   // Speaking practice: /?shot=speak (idle), speak-rec (recording), speak-compare (after recording),
   // speak-off (no microphone); &item=sentence asks a short sentence instead of a word.
   if (shot.startsWith('speak')) {
@@ -439,6 +451,16 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     // &heard=wait while it listens.
     const heard = q.get('heard');
     setSpeakShotHeard(heard === 'same' ? item.nl : heard === 'almost' ? item.nl.split(' ').slice(0, -1).join(' ') : heard ?? undefined);
+    // &then=2026-10-12 (with speak-compare): "Toen en nu", as if this sentence's first recording was
+    // made that day (src/lib/firstVoice.ts), without waiting a week; no sound.
+    const then = /^\d{4}-\d{2}-\d{2}$/.test(q.get('then') ?? '') ? q.get('then')!.split('-').map(Number) : null;
+    setSpeakShotThen(then ? new Date(then[0], then[1] - 1, then[2], 9).getTime() : undefined);
+    // &together=due|count|on|done (with speak or speak-off): "Zeg het samen" (src/lib/chorus.ts): its
+    // button, the 3-2-1 (at 2), the voice saying it (the wave), or done ("Nu alleen" over the microphone).
+    // &brave=1: Bram's one-time "Fouten mogen".
+    const together = q.get('together');
+    setSpeakShotChorus((['due', 'count', 'on', 'done'] as const).find((c): c is ChorusState => c === together));
+    setSpeakShotBrave(q.get('brave') === '1');
     // &turn=1: "Wat zeg je?" after the chat (the shift chat): the reply is what to say.
     // &work=l.gear: "Wat zeg je?" on the sentence of "Probeer het vandaag" of that lesson (its moment;
     // l.people a moment with a Dutch quote, l.hello none: the meaning).

@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Yeni kelime',
     tapToHear: 'Dinlemek için dokun',
     whatDoesThisMean: 'Bu ne demek?',
+    snapQuestion: 'Anladın mı?', // nieuw, nalezen
+    snapYes: 'Evet, tamam.', // nieuw, nalezen
+    snapGoodAsk: 'Sorman iyi oldu!', // nieuw, nalezen
+    snapRight: 'Doğru anladın!', // nieuw, nalezen
+    snapAskBetter: 'Gördün mü? Sormak daha iyiydi.', // nieuw, nalezen
     whichOneIs: 'Hangisi “{word}”?',
     mixLesson: 'Karışık tekrar',
     whatDoYouHear: 'Ne duyuyorsun?',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Dinle, sonra söyle',
     tapToSpeak: 'Dokun ve konuş',
     stopRecording: 'Dur',
-    micPrivacy: 'Sadece sen duyarsın. Hiçbir şey gönderilmez.',
+    micPrivacy: "Seni başka kimse duymaz. Hiçbir şey gönderilmez.", // nieuw, nalezen
     micUnavailable: 'Mikrofon kapalı. Şimdi sesli söyle, sonra devam et.',
     cantSpeak: 'Şu an konuşamıyorum',
     soundsSame: 'Aynı gibi',
     sayAgain: 'Tekrar söyle',
     hearMine: 'Kendini dinle', // nieuw, nalezen
+    thenNow: 'O zaman ve şimdi', // nieuw, nalezen
+    thenNowFirst: 'İlk denemen: {date}', // nieuw, nalezen
+    sayTogether: "Birlikte söyle", // nieuw, nalezen
+    chorusHint: "Sesle aynı anda söyle. Hiçbir şey kaydedilmez.", // nieuw, nalezen
+    chorusAlone: "Şimdi sadece sen", // nieuw, nalezen
+    speakBrave: "Hata yapmak sorun değil. Hollandalılar seni hatalarınla da anlar.", // nieuw, nalezen
     speakMe: 'Ben',
     speakingPractice: 'Konuşma alıştırması',
-    speakingHint: 'Kelimeleri sesli söyle ve karşılaştır. Sesin asla kaydedilmez ve gönderilmez.',
+    speakingHint: "Kelimeleri sesli söyle ve karşılaştır. Seni başka kimse duymaz: hiçbir şey gönderilmez. Bir cümleyi ilk söylediğin kayıt telefonunda kalır, sonra karşılaştırabilirsin.", // nieuw, nalezen
     savingOffline: 'Kaydediliyor…',
     savedOffline: 'İnternetsiz kullanıma kaydedildi',
     offlineNoSpace: 'Bu telefonda yeterli yer yok. Kayıtlı bir konuyu sil veya yer aç.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Aşağı yukarı aynı', // nieuw, nalezen
     toetsMoreAll: 'Genel olarak: Şimdi öncekinden daha fazla biliyorsun.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsSameAll: 'Genel olarak: Aşağı yukarı öncekiyle aynı.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Önce senin hakkında 5 soru. Doğru ya da yanlış yok.', // nieuw, nalezen
+    toetsDurfAsk: 'Bunu yapmaya cesaretin var mı?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Bir şeyi anlamadığını söylemek', // nieuw, nalezen
+    toetsDurfBoss: 'Amirine bir şey sormak', // nieuw, nalezen
+    toetsDurfHelp: 'Yardım istemek', // nieuw, nalezen
+    toetsDurfUnsafe: 'Bir şeyin güvenli olmadığını söylemek', // nieuw, nalezen
+    toetsDurfBreak: 'Molada bir iş arkadaşıyla biraz sohbet etmek', // nieuw, nalezen
+    toetsDurfNotYet: 'Henüz değil', // nieuw, nalezen
+    toetsDurfABit: 'Biraz', // nieuw, nalezen
+    toetsDurfYes: 'Evet', // nieuw, nalezen
+    toetsDurfAgain: 'Birkaç hafta sonra tekrar soracağız.', // nieuw, nalezen
     tempo: 'Hız', // nieuw, nalezen
     tempoCalm: 'Sakin', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Bunu işte söyledin mi?', // nieuw, nalezen
     geluktYes: 'Evet, oldu', // nieuw, nalezen
     geluktNotYet: 'Henüz değil', // nieuw, nalezen
+    geluktDoneN: 'Aferin! İşte şimdiye kadar {n} cümle başardın.', // nieuw, nalezen
+    geluktDoneOne: 'Aferin! İşteki ilk cümlen başarılı oldu.', // nieuw, nalezen
+    geluktWhere: 'Onları Ayarlar’da bulursun.', // nieuw, nalezen
+    geluktTitle: 'İşte başarılı', // nieuw, nalezen
+    geluktListHint: 'Bu cümleleri işte söyledin.', // nieuw, nalezen
+    nextMinutesN: 'yaklaşık {n} dk', // nieuw, nalezen
     saveFailed: 'İlerlemen kaydedilmedi. Telefonun dolu mu? Biraz yer aç. Ya da Ayarlar’a git: “İlerlemeni sakla”.', // nieuw, nalezen
     bewaarNudge: 'Telefonun bazen ilerlemeni silebilir. Bu yüzden bir kopya sakla.', // nieuw, nalezen
     bewaarGo: 'Şimdi kaydet', // nieuw, nalezen

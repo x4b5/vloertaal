@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Nowe słowo',
     tapToHear: 'Dotknij, aby usłyszeć',
     whatDoesThisMean: 'Co to znaczy?',
+    snapQuestion: 'Rozumiesz?', // nieuw, nalezen
+    snapYes: 'Tak, okej.', // nieuw, nalezen
+    snapGoodAsk: 'Dobrze, że pytasz!', // nieuw, nalezen
+    snapRight: 'Dobrze zrozumiane!', // nieuw, nalezen
+    snapAskBetter: 'Widzisz? Lepiej było zapytać.', // nieuw, nalezen
     whichOneIs: 'Które z nich to „{word}”?',
     mixLesson: 'Powtórka mieszana',
     whatDoYouHear: 'Co słyszysz?',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Posłuchaj, potem powiedz',
     tapToSpeak: 'Dotknij i mów',
     stopRecording: 'Stop',
-    micPrivacy: 'Słyszysz to tylko ty. Nic nie jest wysyłane.',
+    micPrivacy: "Nikt inny cię nie słyszy. Nic nie jest wysyłane.", // nieuw, nalezen
     micUnavailable: 'Mikrofon wyłączony. Powiedz to teraz na głos, potem idź dalej.',
     cantSpeak: 'Nie mogę teraz mówić',
     soundsSame: 'Brzmi tak samo',
     sayAgain: 'Powiedz jeszcze raz',
     hearMine: 'Posłuchaj siebie', // nieuw, nalezen
+    thenNow: 'Wtedy i teraz', // nieuw, nalezen
+    thenNowFirst: 'Pierwsza próba: {date}', // nieuw, nalezen
+    sayTogether: "Powiedz to razem", // nieuw, nalezen
+    chorusHint: "Mów w tym samym czasie co głos. Nic nie jest nagrywane.", // nieuw, nalezen
+    chorusAlone: "Teraz tylko ty", // nieuw, nalezen
+    speakBrave: "Błędy są w porządku. Holendrzy rozumieją cię także z błędami.", // nieuw, nalezen
     speakMe: 'Ja',
     speakingPractice: 'Ćwiczenie mówienia',
-    speakingHint: 'Mów słowa na głos i porównuj. Twój głos nigdy nie jest zapisywany ani wysyłany.',
+    speakingHint: "Mów słowa na głos i porównuj. Nikt inny cię nie słyszy: nic nie jest wysyłane. Twoje pierwsze nagranie zdania zostaje w telefonie, żeby porównać później.", // nieuw, nalezen
     savingOffline: 'Zapisywanie…',
     savedOffline: 'Zapisano offline',
     offlineNoSpace: 'Za mało miejsca w telefonie. Usuń zapisany temat lub zwolnij miejsce.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Mniej więcej tak samo', // nieuw, nalezen
     toetsMoreAll: 'Wszystko razem: teraz znasz więcej niż wtedy.', // nieuw, nalezen
     toetsSameAll: 'Wszystko razem: mniej więcej tak samo jak wtedy.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Najpierw 5 pytań o ciebie. Nie ma dobrych ani złych odpowiedzi.', // nieuw, nalezen
+    toetsDurfAsk: 'Czy odważysz się na to?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Powiedzieć, że czegoś nie rozumiesz', // nieuw, nalezen
+    toetsDurfBoss: 'Zapytać o coś przełożonego', // nieuw, nalezen
+    toetsDurfHelp: 'Poprosić o pomoc', // nieuw, nalezen
+    toetsDurfUnsafe: 'Powiedzieć, że coś nie jest bezpieczne', // nieuw, nalezen
+    toetsDurfBreak: 'Porozmawiać chwilę z kimś z pracy w przerwie', // nieuw, nalezen
+    toetsDurfNotYet: 'Jeszcze nie', // nieuw, nalezen
+    toetsDurfABit: 'Trochę', // nieuw, nalezen
+    toetsDurfYes: 'Tak', // nieuw, nalezen
+    toetsDurfAgain: 'Za kilka tygodni zapytamy jeszcze raz.', // nieuw, nalezen
     tempo: 'Tempo', // nieuw, nalezen
     tempoCalm: 'Spokojnie', // nieuw, nalezen
     tempoNormal: 'Normalnie', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Udało się to powiedzieć w pracy?', // nieuw, nalezen
     geluktYes: 'Tak, udało się', // nieuw, nalezen
     geluktNotYet: 'Jeszcze nie', // nieuw, nalezen
+    geluktDoneN: { one: 'Dobra robota! Już {n} zdanie udało się w pracy.', few: 'Dobra robota! Już {n} zdania udały się w pracy.', many: 'Dobra robota! Już {n} zdań udało się w pracy.', other: 'Dobra robota! Już {n} zdania udało się w pracy.' }, // nieuw, nalezen
+    geluktDoneOne: 'Dobra robota! Twoje pierwsze zdanie w pracy się udało.', // nieuw, nalezen
+    geluktWhere: 'Znajdziesz je w Ustawieniach.', // nieuw, nalezen
+    geluktTitle: 'Udało się w pracy', // nieuw, nalezen
+    geluktListHint: { m: 'Te zdania powiedziałeś w pracy.', f: 'Te zdania powiedziałaś w pracy.', x: 'Te zdania udało się powiedzieć w pracy.' }, // nieuw, nalezen
+    nextMinutesN: 'ok. {n} min', // nieuw, nalezen
     saveFailed: 'Twoje postępy nie zostały zapisane. Czy telefon jest pełny? Zrób trochę miejsca. Albo wejdź w Ustawienia: „Zachowaj swoje postępy”.', // nieuw, nalezen
     bewaarNudge: 'Telefon czasem może usunąć twoje postępy. Dlatego zachowaj kopię.', // nieuw, nalezen
     bewaarGo: 'Zapisz teraz', // nieuw, nalezen

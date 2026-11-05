@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'کلمهٔ نو',
     tapToHear: 'برای شنیدن لمس کنید',
     whatDoesThisMean: 'این چه معنی دارد؟',
+    snapQuestion: 'فهمیدید؟', // nieuw, nalezen
+    snapYes: 'بلی، خوب.', // nieuw, nalezen
+    snapGoodAsk: 'خوب است که می‌پرسید!', // nieuw, nalezen
+    snapRight: 'درست فهمیدید!', // nieuw, nalezen
+    snapAskBetter: 'دیدید؟ پرسیدن بهتر بود.', // nieuw, nalezen
     whichOneIs: 'کدام یک «{word}» است؟',
     mixLesson: 'مرور ترکیبی',
     whatDoYouHear: 'چه می‌شنوید؟',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'گوش کنید، بعد بگویید',
     tapToSpeak: 'لمس کنید و گپ بزنید',
     stopRecording: 'توقف',
-    micPrivacy: 'فقط خود شما می‌شنوید. هیچ چیزی فرستاده نمی‌شود.',
+    micPrivacy: "هیچ کس دیگر صدای شما را نمی‌شنود. هیچ چیزی فرستاده نمی‌شود.", // nieuw, nalezen
     micUnavailable: 'مایکروفون خاموش است. حالا آن را بلند بگویید، بعد ادامه بدهید.',
     cantSpeak: 'حالا نمی‌توانم گپ بزنم',
     soundsSame: 'مثل هم است',
     sayAgain: 'دوباره بگویید',
     hearMine: 'صدای خود را بشنوید', // nieuw, nalezen
+    thenNow: 'قبلاً و حالا', // nieuw, nalezen
+    thenNowFirst: 'بار اول شما: {date}', // nieuw, nalezen
+    sayTogether: "با هم بگویید", // nieuw, nalezen
+    chorusHint: "همزمان با صدا بگویید. هیچ چیزی ثبت نمی‌شود.", // nieuw, nalezen
+    chorusAlone: "حالا فقط خود شما", // nieuw, nalezen
+    speakBrave: "اشتباه کردن مشکلی ندارد. هالندی‌ها گپ شما را با اشتباه هم می‌فهمند.", // nieuw, nalezen
     speakMe: 'من',
     speakingPractice: 'تمرین گپ زدن',
-    speakingHint: 'کلمه‌ها را بلند بگویید و مقایسه کنید. صدای شما هیچ وقت ذخیره یا فرستاده نمی‌شود.',
+    speakingHint: "کلمه‌ها را بلند بگویید و مقایسه کنید. هیچ کس دیگر صدای شما را نمی‌شنود: هیچ چیزی فرستاده نمی‌شود. اولین ثبت صدای شما از هر جمله روی تلفن تان می‌ماند تا بعداً مقایسه کنید.", // nieuw, nalezen
     savingOffline: 'ذخیره می‌شود…',
     savedOffline: 'در تیلفون شما ذخیره شد', // nieuw, nalezen (AI-correctie 2 nov 2026)
     offlineNoSpace: 'جای کافی در این تیلفون نیست. یک موضوع ذخیره‌شده را پاک کنید یا جای خالی کنید.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'تقریباً مثل قبل', // nieuw, nalezen
     toetsMoreAll: 'همه با هم: حالا بیشتر از قبل می‌دانید.', // nieuw, nalezen
     toetsSameAll: 'همه با هم: تقریباً مثل قبل.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'اول 5 سوال در مورد خود شما. درست یا غلط وجود ندارد.', // nieuw, nalezen
+    toetsDurfAsk: 'جرئت می‌کنید این کار را بکنید؟', // nieuw, nalezen
+    toetsDurfUnderstand: 'بگویید که چیزی را نمی‌فهمید', // nieuw, nalezen
+    toetsDurfBoss: 'از آمر تان چیزی بپرسید', // nieuw, nalezen
+    toetsDurfHelp: 'کمک بخواهید', // nieuw, nalezen
+    toetsDurfUnsafe: 'بگویید که چیزی مصئون نیست', // nieuw, nalezen
+    toetsDurfBreak: 'در وقت استراحت کمی با یک همکار گپ بزنید', // nieuw, nalezen
+    toetsDurfNotYet: 'هنوز نه', // nieuw, nalezen
+    toetsDurfABit: 'کمی', // nieuw, nalezen
+    toetsDurfYes: 'بلی', // nieuw, nalezen
+    toetsDurfAgain: 'چند هفته بعد دوباره می‌پرسیم.', // nieuw, nalezen
     tempo: 'سرعت', // nieuw, nalezen
     tempoCalm: 'آرام', // nieuw, nalezen
     tempoNormal: 'عادی', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'این را در کار گفتید؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
     geluktYes: 'بلی، شد', // nieuw, nalezen
     geluktNotYet: 'هنوز نه', // nieuw, nalezen
+    geluktDoneN: 'آفرین! تا حال {n} جمله در کار موفق بوده.', // nieuw, nalezen
+    geluktDoneOne: 'آفرین! اولین جمله‌تان در کار موفق بود.', // nieuw, nalezen
+    geluktWhere: 'آن‌ها را در تنظیمات پیدا می‌کنید.', // nieuw, nalezen
+    geluktTitle: 'موفق در کار', // nieuw, nalezen
+    geluktListHint: 'این جمله‌ها را در کار گفتید.', // nieuw, nalezen
+    nextMinutesN: 'حدود {n} دقیقه', // nieuw, nalezen
     saveFailed: 'پیشرفت شما ذخیره نشد. آیا تیلفون پر است؟ کمی جا خالی کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
     bewaarNudge: 'تیلفون شما ممکن است گاهی پیشرفت شما را پاک کند. پس یک کاپی نگه دارید.', // nieuw, nalezen
     bewaarGo: 'همین حالا ذخیره کنید', // nieuw, nalezen

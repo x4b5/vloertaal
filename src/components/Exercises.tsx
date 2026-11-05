@@ -2,16 +2,16 @@ import { createContext, type RefObject, useContext, useEffect, useMemo, useRef, 
 import type { ChatLine } from '../content/types';
 import { sayingQuestion } from '../content/sayings';
 import { gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
-import type { HelpLanguage } from '../i18n/types';
+import type { HelpLanguage, UiKey } from '../i18n/types';
 import { checkTyped, nextTileOrder, sentenceOrders, typoMarks } from '../lib/answers';
-import { autoSpeak, sounds, speak } from '../lib/audio';
+import { autoSpeak, autoSpeakAt, onSpeech, sounds, speak } from '../lib/audio';
 import { allTiles, buildSteps, choicePictures, frontSteps, matchAsked, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, sentences, wordSize } from '../lib/dutch';
 import { Bi, HelpText } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
-import { CAST, castFor, Character, colleaguesOf, MeAvatar, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
+import { CAST, castFor, Character, colleaguesOf, MeAvatar, snapColleague, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
 import { CheckIcon, ChevronDownIcon, CloseIcon, SpeakerIcon } from './Icons';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
@@ -1104,6 +1104,174 @@ function ChatChoices({ ex, lang, locked, onAnswer, correctId, voice, onPick }: P
         </span>
       )}
     />
+  );
+}
+
+/** Tests only: the answer "Snap je het?" starts with as given (a static render cannot tap one). */
+let snapStepForTest: 'ok' | 'asked' | null = null;
+export function setSnapStepForTest(step: 'ok' | 'asked' | null): void {
+  snapStepForTest = step;
+}
+
+/** The Dutch of the lines of "Snap je het?" (their help language: the UI key). */
+const SNAP_NL: Partial<Record<UiKey, string>> = {
+  snapQuestion: 'Snap je het?',
+  snapYes: 'Ja, oké.',
+  snapGoodAsk: 'Goed dat je het vraagt!',
+  snapRight: 'Goed verstaan!',
+  snapAskBetter: 'Zie je? Even vragen was beter.',
+};
+
+/**
+ * "Snap je het?" in today's review (lib/spaced.ts snapLines; the owner's request, 5 November 2026):
+ * learners who are ashamed not to understand nod, and nodding is a risk at work. A colleague says a
+ * sentence the learner knows at the real pace (src/lib/tempo.ts), once, without the text, and asks
+ * "Snap je het?". The two answers are what you would say at work, in Dutch with the help language
+ * under it:
+ *  - "Ja, oké." → what does it mean (three meanings), at once. Right: a short "Goed verstaan!".
+ *    Wrong: "Zie je? Even vragen was beter.", and the sentence slowly, with its text and meaning.
+ *  - "Kunt u dat herhalen?" (l.understand's sentence, said in your voice) → the colleague says it
+ *    again slowly, "Goed dat je het vraagt!", then the same question.
+ * Before the question there is no speaker (a colleague does not repeat it unasked: asking is the
+ * way to hear it again); after asking one plays it slowly. At most three things to tap: the two
+ * answers, then the three meanings. Only the meaning counts (LessonPlayer), and it does not come
+ * back at the end (lib/exercises.ts comesBack): asking costs nothing.
+ */
+export function SnapExercise({ ex, lang, locked, onAnswer, verdict, run, misses }: Props<'snap'>) {
+  const { sentence, ask } = ex;
+  const them = snapColleague(sentence.id);
+  const theirVoice = voiceFor(them);
+  const myVoice = learnerVoice(lang?.gender);
+  const [step, setStep] = useState<'heard' | 'ok' | 'asked'>(() => snapStepForTest ?? 'heard');
+  const promptRef = useRef<HTMLHeadingElement>(null);
+  // Once, at the real pace, whatever the learner's tempo: as a colleague says it.
+  useEffect(() => { autoSpeakAt(sentence.nl, 'real', theirVoice); }, [sentence, theirVoice]);
+  // Asked: "Kunt u dat herhalen?" in your voice, then the sentence slowly (when your line ends, or
+  // after a few seconds when no end comes: a phone without a voice for it).
+  useEffect(() => {
+    if (step !== 'asked') return;
+    let done = false;
+    let timer = 0;
+    let off = () => {};
+    const again = () => {
+      if (done) return;
+      done = true;
+      off();
+      window.clearTimeout(timer);
+      autoSpeakAt(sentence.nl, 'slow', theirVoice);
+    };
+    off = onSpeech((text, on) => { if (text === ask.nl && !on) again(); });
+    timer = window.setTimeout(again, 4000);
+    speak(ask.nl, false, 'nl', myVoice);
+    return () => { done = true; off(); window.clearTimeout(timer); };
+  }, [step]); // eslint-disable-line react-hooks/exhaustive-deps
+  // A new question on the same screen: a screen reader starts there.
+  useEffect(() => {
+    if (step !== 'heard') promptRef.current?.focus({ preventScroll: true });
+  }, [step]);
+  // A wrong meaning: the sentence slowly, now with its text and meaning in the bubble.
+  useEffect(() => {
+    if (verdict !== 'wrong') return;
+    const t = window.setTimeout(() => autoSpeakAt(sentence.nl, 'slow', theirVoice), 450);
+    return () => window.clearTimeout(t);
+  }, [verdict]); // eslint-disable-line react-hooks/exhaustive-deps
+  const themTalking = useTalking([sentence.nl]);
+  const meTalking = useTalking(step === 'asked' ? [ask.nl] : [], false);
+  const answer = (to: 'ok' | 'asked') => {
+    if (step !== 'heard') return;
+    sounds.tap();
+    setStep(to);
+  };
+  // Number keys 1 and 2 answer, like the numbers on the two cards.
+  useEffect(() => {
+    if (step !== 'heard') return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
+      const t = document.activeElement as HTMLElement | null;
+      const free = !t || t === document.body || t.classList.contains('prompt') || Boolean(t.closest('.snap-answers'));
+      if (!free || t?.closest('[role="dialog"], [role="alertdialog"]')) return;
+      if (e.key === '1') answer('ok');
+      if (e.key === '2') answer('asked');
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  });
+  const said = step === 'ok' ? SNAP_NL.snapYes : step === 'asked' ? ask.nl : null;
+  const note: UiKey | null = step === 'asked' ? 'snapGoodAsk' : verdict === 'right' ? 'snapRight' : verdict === 'wrong' ? 'snapAskBetter' : null;
+  const answers = [
+    { id: 'ok' as const, nl: SNAP_NL.snapYes!, text: ui('snapYes', lang) },
+    { id: 'asked' as const, nl: ask.nl, text: gloss(ask.id, ask.en, lang) },
+  ];
+  return (
+    <div className="exercise snap">
+      <h2 className="prompt" tabIndex={-1} ref={promptRef}>
+        {step === 'heard'
+          ? <NlPair nlFirst nl={SNAP_NL.snapQuestion} nlClass="snap-prompt-nl" text={ui('snapQuestion', lang)} />
+          : <Bi text={ui('whatDoesThisMean', lang)} />}
+      </h2>
+      <div className="chat">
+        <div className="chat-row chat-them">
+          <span className="chat-char"><Character who={them} mood={moodFor(verdict, 'idle', true)} talking={themTalking && !meTalking} /></span>
+          <div className="chat-bubble snap-bubble">
+            {locked ? (
+              <>
+                <span className="chat-line" lang="nl">{breakable(sentence.nl)}</span>
+                <SpeakButton glyph slow text={sentence.nl} help={lang} voice={theirVoice} />
+                <span className="chat-hint">
+                  <Bi text={gloss(sentence.id, sentence.en, lang)} />
+                </span>
+              </>
+            ) : step === 'asked' ? (
+              // Asked: it may be heard again, slowly (the text still hidden: the question is what it means).
+              <SpeakButton glyph slow hideText text={sentence.nl} help={lang} voice={theirVoice} />
+            ) : (
+              <span className="chat-blank chat-blank-q snap-blank" aria-hidden>…</span>
+            )}
+          </div>
+        </div>
+        <div className="chat-row chat-me">
+          <div className="chat-bubble chat-bubble-me" aria-live="polite">
+            {said ? <span className="chat-line" lang="nl">{said}</span> : <span className="chat-blank" aria-hidden />}
+          </div>
+          <span className="chat-char"><MeAvatar className={reactClass(verdict, run, misses)} /></span>
+        </div>
+      </div>
+      {note && (
+        <p className={`snap-note snap-note-${note}`} aria-live="polite">
+          <NlPair nlFirst nl={SNAP_NL[note]} nlClass="snap-note-nl" text={ui(note, lang)} />
+        </p>
+      )}
+      {step === 'heard' ? (
+        <div className="choices choices-rows chat-choices snap-answers">
+          {answers.map((a, i) => (
+            <button key={a.id} type="button" className={`choice snap-answer snap-answer-${a.id}`} onClick={() => answer(a.id)}>
+              <span className="choice-num" aria-hidden>{i + 1}</span>
+              <span className="choice-text">
+                <span lang="nl" className="choice-nl">{a.nl}</span>
+                <Bi className="choice-gloss" text={a.text} />
+              </span>
+            </button>
+          ))}
+        </div>
+      ) : (
+        <ChoiceGrid
+          className="choices-rows snap-meanings"
+          options={ex.options}
+          correctId={sentence.id}
+          locked={locked}
+          lang={lang}
+          onAnswer={onAnswer}
+          // No STRAKS WEER: it does not come back (comesBack); the note says what to take from it.
+          stamp={false}
+          render={(o, state) => (state === 'wrong' ? (
+            <span className="choice-text">
+              <Bi className="choice-label" text={gloss(o.id, o.en, lang)} />
+              <span lang="nl" className="choice-gloss choice-gloss-nl">{breakable(o.nl)}</span>
+            </span>
+          ) : <Bi className="choice-label" text={gloss(o.id, o.en, lang)} />)}
+        />
+      )}
+    </div>
   );
 }
 

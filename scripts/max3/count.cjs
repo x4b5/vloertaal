@@ -435,6 +435,16 @@ function defineStates(LANG) {
   graded('hear-pick', 'type', 1, 0, 'ar');
   graded('chat', 'chat', 0, 1);
   graded('situation', 'situation', 0, 1);
+  // "Snap je het?" in today's review (5 November 2026): heard (two answers), "Ja, oké." (three
+  // meanings) right and wrong, "Kunt u dat herhalen?" (slowly again: the meanings) right and wrong.
+  // The right meaning is the 1st card.
+  add('lesson:snap', shot('snap'), null, { expect: '.snap-answers .snap-answer-asked' });
+  const snapAnswer = async (p, which) => { await tap(p, `.snap-answer-${which}`); await settle(p, 500); };
+  for (const which of ['ok', 'asked']) {
+    add(`lesson:snap-${which}`, shot('snap'), async (p) => { await snapAnswer(p, which); }, { expect: '.snap-meanings .choice' });
+    add(`lesson:snap-${which}:right`, shot('snap'), async (p) => { await snapAnswer(p, which); await tap(p, choice, 0); await settle(p, 900); }, { expect: '.snap-bubble .chat-line' });
+    add(`lesson:snap-${which}:wrong`, shot('snap'), async (p) => { await snapAnswer(p, which); await tap(p, choice, 1); await settle(p, 900); }, { expect: '.snap-bubble .chat-line' });
+  }
   add('lesson:situation:shown', shot('situation'), async (p) => { await reveal(p); }, { expect: '.situation-answers .choice' });
   // With the keyboard: the focus on the first answer.
   add('lesson:situation:shown-keys', shot('situation'), async (p) => { await p.focus('.situation-show'); await p.keyboard.press('Enter'); await settle(p, 500); }, { expect: '.situation-answers .choice:focus' });
@@ -568,6 +578,24 @@ function defineStates(LANG) {
   add('lesson:speak:recording', shot('speak-rec'));
   add('lesson:speak:compare', shot('speak-compare'));
   add('lesson:speak:off', shot('speak-off'));
+  // "Toen en nu" (src/lib/firstVoice.ts): "Luister naar jezelf" becomes "Toen en nu" in its place (no extra button).
+  add('lesson:speak:then-now', shot('speak-compare&then=2026-10-12'), null, { expect: '.say-then-now' });
+  add('lesson:speak:then-now-sentence', shot('speak-compare&item=sentence&then=2026-10-12', 'ar'), null, { expect: '.say-then-now' });
+  add('lesson:speak-turn:then-now', shot('speak-compare&turn=1&then=2026-10-12'), null, { expect: '.say-turn .say-then-now' });
+  // "Zeg het samen" (src/lib/chorus.ts): one big button where the microphone goes ("Zeg het liever
+  // hardop" stays), the 3-2-1 and the wave (it cannot be tapped then), then the microphone with
+  // "Nu alleen". The first time with Bram's "Fouten mogen" (a line, no button). Without a
+  // microphone it is on top of the "say it out loud" step (with Continue: at most 3); not while this
+  // phone's steps to allow the microphone are open.
+  add('lesson:speak:together', shot('speak&item=sentence&together=due&brave=1'), null, { expect: '.say-chorus' });
+  add('lesson:speak:together-count', shot('speak&item=sentence&together=count'), null, { expect: '.say-chorus-count' });
+  add('lesson:speak:together-on', shot('speak&item=sentence&together=on'), null, { expect: '.say-wave' });
+  add('lesson:speak:together-done', shot('speak&item=sentence&together=done'), null, { expect: '.say-alone' });
+  add('lesson:speak:together-run', shot('speak&item=sentence&together=due'), async (p) => { await tap(p, '.say-chorus'); await p.waitForSelector('.say-alone', { timeout: 20000 }); await settle(p); }, { expect: '.say-alone' });
+  add('lesson:speak:together-aloud', shot('speak&item=sentence&together=due'), async (p) => { await tap(p, '.say-aloud-instead'); }, { expect: '.say-chorus-off .say-chorus' });
+  add('lesson:speak:together-off', shot('speak-off&item=sentence&together=due'), null, { expect: '.say-chorus-off .say-chorus' });
+  add('lesson:speak:together-refused', shot('speak-off&item=sentence&together=due&refused=1'), null, { expect: '.say-mic-on' });
+  add('lesson:speak:together-refused-steps', shot('speak-off&item=sentence&together=due&refused=1'), async (p) => { await tap(p, '.say-mic-on'); }, { expect: '.say-retry' });
   // The browser refused the microphone: [Zet de microfoon aan], then this phone's steps with the retry.
   add('lesson:speak:refused', shot('speak-off&refused=1'), null, { expect: '.say-mic-on' });
   add('lesson:speak:refused-steps', shot('speak-off&refused=1'), async (p) => { await tap(p, '.say-mic-on'); }, { expect: '.say-retry' });
@@ -681,6 +709,13 @@ function defineStates(LANG) {
   add('toets:offer-eind-page', shot('toets&state=offer-eind-page'), null, { expect: '.toets-offer-page .toets-offer-eind .toets-do' });
   add('toets:offer-open', shot('toets&state=offer'), async (p) => { await tap(p, '.toets-line-home'); await settle(p); }, { expect: '.toets-offer-page .chrome-back' });
   add('toets:offer-later', shot('toets&state=offer'), async (p) => { await tap(p, '.toets-line-home'); await settle(p); await tap(p, '.toets-later'); await settle(p); }, { expect: '.home3:not(:has(.toets-line-home)) .bay-now' });
+  // "Durf je dit?" (5 November 2026): five screens before the questions, three faces each (the
+  // speaker and the help language's read-aloud are not counted). 0 has the line "Eerst 5 vragen".
+  add('toets:durf', shot('toets&state=durf&at=0'), null, { voices: true, expect: '.toets-durf .toets-durf-intro ~ .toets-durf-faces' });
+  add('toets:durf-last', shot('toets&state=durf&at=4'), null, { voices: true, expect: '.toets-durf:not(:has(.toets-durf-intro)) .toets-durf-face' });
+  // A tap is the answer: the face shows as picked for a moment, then the next screen (2 of 5).
+  add('toets:durf-next', shot('toets&state=durf&at=1'), async (p) => { await tap(p, '.toets-durf-face', 1); await settle(p, 700); }, { expect: '.toets-durf .toets-durf-face:not(.is-picked)' });
+  add('toets:durf-end', shot('toets&state=durf&at=0&moment=eind'), null, { expect: '.toets-durf .toets-durf-faces' });
   // Form 2 (21 questions): 0–4 listen, 5–6 build by ear, 7–11 words, 12–13 dictation, 14–18 chat,
   // 19–20 build; every question with the small link "Ik weet het niet" (.toets-idk, not counted).
   add('toets:listen', shot('toets&state=question&at=0'), null, { expect: '.toets-listen .choice' });
@@ -697,7 +732,13 @@ function defineStates(LANG) {
   add('toets:result-instap', shot('toets&state=result-instap'), null, { expect: '.toets-parts' });
   add('toets:result-eind', shot('toets&state=result-eind'), null, { expect: '.toets-voices' });
   add('toets:result-eind-growth', shot('toets&state=result-eind'), null, { expect: '.toets-growth-all' });
+  // "Durf je dit?" on the results: then and now after the end (a row per question, no taps);
+  // after the start one line; an end after a start without it (&old=1) shows nothing of it.
+  add('toets:result-eind-durf', shot('toets&state=result-eind'), null, { expect: '.toets-durf-result .toets-durf-row' });
+  add('toets:result-instap-durf', shot('toets&state=result-instap'), null, { expect: '.toets-durf-later' });
+  add('toets:result-eind-old', shot('toets&state=result-eind&old=1'), null, { expect: '.toets-result:not(:has(.toets-durf-result)) .toets-parts' });
   add('toets:page', shot('toets&state=page'), null, { expect: '.toets-page .chrome-back' });
+  add('toets:page-durf', shot('toets&state=page'), null, { expect: '.toets-page .toets-durf-row' });
   // "Laat zien hoe het gaat" (the coach card, Settings › Taal en ik): the card with Bewaar of deel and
   // Naam wijzigen; a new learner's; and the name asked first (as on the certificate).
   add('kaart:full', shot('kaart&name=Ali%20Hassan'), null, { expect: '.kaart-img' });
@@ -721,12 +762,16 @@ function defineStates(LANG) {
   add('flow:toets-page', '/', toToetsPage, { expect: '.toets-offer-page .toets-do' });
   add('flow:toets-page-back', '/', async (p) => { await toToetsPage(p); await tap(p, '.chrome-back'); await settle(p, 900); }, { expect: '.home3 .toets-line-home' });
   add('flow:toets-page-phone-back', '/', async (p) => { await toToetsPage(p); await p.goBack(); await settle(p, 900); }, { expect: '.home3 .toets-line-home' });
-  add('flow:toets-start', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
+  // Since 5 November 2026 the test starts with "Durf je dit?" (five screens, a face each), then
+  // the first listening question.
+  const durfThrough = async (p) => { for (let i = 0; i < 5; i++) { await tap(p, '.toets-durf-face', i % 3); await settle(p, 700); } };
+  add('flow:toets-start', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-durf .toets-durf-intro' });
+  add('flow:toets-durf-through', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); await durfThrough(p); }, { expect: '.toets-player .toets-listen .choice' });
   // Out of the test (✕, Stop): the home, not the offer's page (the test took its place).
   add('flow:toets-quit', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); await tap(p, '.player-top .lesson-close'); await settle(p, 600); const stop = p.locator('.sheet-stop').filter({ visible: true }); if (await stop.count()) { await stop.first().click(); await settle(p, 900); } }, { expect: '.home3 .toets-line-home' });
   add('flow:toets-later', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3:not(:has(.toets-line-home)) .bay-now' });
   // "Ik weet het niet" goes on to the next question (the second listening question).
-  add('flow:toets-idk', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); await tap(p, '.toets-idk'); await settle(p, 700); }, { expect: '.toets-player .toets-listen .choice' });
+  add('flow:toets-idk', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); await durfThrough(p); await tap(p, '.toets-idk'); await settle(p, 700); }, { expect: '.toets-player .toets-listen .choice' });
   // With words due on the home as well ([Herhaal vandaag] [1.2] [Ander onderwerp]) the line waits.
   add('flow:toets-no-room', '/', (p) => realHome(p, { ...afterFirst, cards: { 'w.hallo': { box: 1, due: '2000-01-01' }, 'w.ja': { box: 1, due: '2000-01-01' } } }), { expect: '.home3:not(:has(.toets-line-home)) .daily-due' });
   // "Laat de telefoon luisteren (proef)" (src/lib/listen.ts), with a mocked on-device API
@@ -798,13 +843,20 @@ function meldingStates(add, shot) {
   // "Gelukt?" a day after the work sentence (since 4 November 2026, verbeterplan fase 2): a line
   // under the next lesson, which stays the yellow card (in Werkregels in the place of "Over deze
   // regels", the last of the three); the line opens its page with the two answers and the back
-  // arrow; either answer gives the home without the line, Back keeps it. With words due there is
-  // no room: the line waits.
+  // arrow; "Nog niet" gives the home without the line, Back keeps it. With words due there is
+  // no room: the line waits. Since 5 November 2026 "Ja, gelukt" first gives a short moment
+  // (Bram: "Al 4 zinnen gelukt op het werk", one button Verder), then the home without the line.
   const noLine = '.home3:not(.home-offer):not(:has(.gelukt-line)) .bay-now';
   add('gelukt:home', shot('gelukt'), null, { expect: '.home3:not(.home-offer) .rb-current ~ .gelukt-line' });
   add('gelukt:page', shot('gelukt&state=page'), null, { voices: true, expect: '.gelukt-page .gelukt-card .notice-ok' });
   add('gelukt:open', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); }, { voices: true, expect: '.gelukt-page .gelukt-card .notice-ok' });
-  add('gelukt:ja', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.gelukt-card .notice-ok'); await settle(p); }, { expect: noLine });
+  add('gelukt:ja', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.gelukt-card .notice-ok'); await settle(p); }, { expect: '.gelukt-done-page .gelukt-done-go' });
+  add('gelukt:done', shot('gelukt&state=done'), null, { expect: '.gelukt-done-page .gelukt-done-go' });
+  add('gelukt:done-first', shot('gelukt&state=done&n=1'), null, { expect: '.gelukt-done-page .gelukt-done-go' });
+  add('gelukt:ja-verder', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.gelukt-card .notice-ok'); await settle(p, 1000); await tap(p, '.gelukt-done-go'); await settle(p); }, { expect: noLine });
+  // "Gelukt op het werk" in Settings › Taal en ik: the row (with sentences only) and its list.
+  add('gelukt:settings-me', shot('settings&page=me&gelukt=4'), null, { list: true, expect: '.set-rows' });
+  add('gelukt:settings-list', shot('settings&page=gelukt&gelukt=4'), null, { list: true, voices: true, expect: '.gelukt-list .gelukt-row' });
   add('gelukt:nognie', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.gelukt-card .notice-more'); await settle(p); }, { expect: noLine });
   add('gelukt:back', shot('gelukt'), async (p) => { await tap(p, '.gelukt-line'); await settle(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.home3 .gelukt-line' });
   add('gelukt:daily-due', shot('gelukt&daily=due'), null, { expect: '.home3:not(:has(.gelukt-line)) .daily-due' });
@@ -914,6 +966,8 @@ function defineRuleStates() {
   add('rule:settings', shot('settings'), null, { expect: '.max3-menu' });
   for (const pg of ['me', 'lessons', 'phone', 'language']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('rule:settings-sector', shot('settings&page=sector'), null, { list: true, expect: '.chrome-back' });
+  add('rule:gelukt-done', shot('gelukt&state=done'), null, { expect: '.gelukt-done-page .gelukt-done-go' });
+  add('rule:gelukt-list', shot('settings&page=gelukt&gelukt=3'), null, { list: true, voices: true, expect: '.gelukt-list .gelukt-row' });
   for (const pg of ['sound', 'voice', 'text', 'theme', 'reminder', 'backup']) add(`rule:settings-${pg}`, shot(`settings&page=${pg}`), null, { list: pg === 'theme', expect: '.chrome-back' });
   add('rule:settings-reminder-set', shot('settings&page=reminder'), withReminder, { expect: '.set-remind-now' });
   add('rule:settings-backup-fewer', shot('settings&page=backup'), async (p) => { await putBack(p, ['r.l.zoeken.1']); await tap(p, '.waybill-ask .danger'); }, { expect: '.waybill-fewer' });

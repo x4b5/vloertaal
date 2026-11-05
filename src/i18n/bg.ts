@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Нова дума',
     tapToHear: 'Докосни, за да чуеш',
     whatDoesThisMean: 'Какво означава това?',
+    snapQuestion: 'Разбираш ли?', // nieuw, nalezen
+    snapYes: 'Да, добре.', // nieuw, nalezen
+    snapGoodAsk: 'Добре, че питаш!', // nieuw, nalezen
+    snapRight: 'Разбра правилно!', // nieuw, nalezen
+    snapAskBetter: 'Виждаш ли? По-добре беше да попиташ.', // nieuw, nalezen
     whichOneIs: 'Кое от тези е „{word}“?',
     mixLesson: 'Смесен преговор',
     whatDoYouHear: 'Какво чуваш?',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Чуй, после го кажи',
     tapToSpeak: 'Докосни и говори',
     stopRecording: 'Стоп',
-    micPrivacy: 'Само ти го чуваш. Нищо не се изпраща.',
+    micPrivacy: "Никой друг не те чува. Нищо не се изпраща.", // nieuw, nalezen
     micUnavailable: 'Микрофонът е изключен. Кажи го на глас сега, после продължи.',
     cantSpeak: 'Сега не мога да говоря',
     soundsSame: 'Звучи еднакво',
     sayAgain: 'Кажи отново',
     hearMine: 'Чуй себе си', // nieuw, nalezen
+    thenNow: 'Тогава и сега', // nieuw, nalezen
+    thenNowFirst: 'Първият ти опит: {date}', // nieuw, nalezen
+    sayTogether: "Кажи го заедно", // nieuw, nalezen
+    chorusHint: "Казвай го едновременно с гласа. Нищо не се записва.", // nieuw, nalezen
+    chorusAlone: "Сега само ти", // nieuw, nalezen
+    speakBrave: "Грешките са наред. Нидерландците те разбират и с грешки.", // nieuw, nalezen
     speakMe: 'Аз',
     speakingPractice: 'Упражнение по говорене',
-    speakingHint: 'Казвай думите на глас и сравнявай. Гласът ти никога не се запазва и не се изпраща.',
+    speakingHint: "Казвай думите на глас и сравнявай. Никой друг не те чува: нищо не се изпраща. Първият ти запис на едно изречение остава в телефона, за да сравниш по-късно.", // nieuw, nalezen
     savingOffline: 'Запазване…',
     savedOffline: 'Запазено офлайн',
     offlineNoSpace: 'Няма достатъчно място на телефона. Изтрий запазена тема или освободи място.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Горе-долу същото', // nieuw, nalezen
     toetsMoreAll: 'Всичко заедно: сега знаеш повече от тогава.', // nieuw, nalezen
     toetsSameAll: 'Всичко заедно: горе-долу същото като тогава.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Първо 5 въпроса за теб. Няма правилно и грешно.', // nieuw, nalezen
+    toetsDurfAsk: 'Смееш ли да го направиш?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Да кажеш, че не разбираш нещо', // nieuw, nalezen
+    toetsDurfBoss: 'Да попиташ нещо началника си', // nieuw, nalezen
+    toetsDurfHelp: 'Да помолиш за помощ', // nieuw, nalezen
+    toetsDurfUnsafe: 'Да кажеш, че нещо не е безопасно', // nieuw, nalezen
+    toetsDurfBreak: 'Да си поговориш малко с колега в почивката', // nieuw, nalezen
+    toetsDurfNotYet: 'Още не', // nieuw, nalezen
+    toetsDurfABit: 'Малко', // nieuw, nalezen
+    toetsDurfYes: 'Да', // nieuw, nalezen
+    toetsDurfAgain: 'След няколко седмици ще попитаме пак.', // nieuw, nalezen
     tempo: 'Темпо', // nieuw, nalezen
     tempoCalm: 'Спокойно', // nieuw, nalezen
     tempoNormal: 'Нормално', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Каза ли това на работа?', // nieuw, nalezen
     geluktYes: 'Да, получи се', // nieuw, nalezen
     geluktNotYet: 'Още не', // nieuw, nalezen
+    geluktDoneN: { one: 'Браво! Вече {n} изречение се получи на работа.', other: 'Браво! Вече {n} изречения се получиха на работа.' }, // nieuw, nalezen
+    geluktDoneOne: 'Браво! Първото ти изречение на работа се получи.', // nieuw, nalezen
+    geluktWhere: 'Ще ги намериш в Настройки.', // nieuw, nalezen
+    geluktTitle: 'Получи се на работа', // nieuw, nalezen
+    geluktListHint: 'Тези изречения каза на работа.', // nieuw, nalezen
+    nextMinutesN: 'около {n} мин.', // nieuw, nalezen
     saveFailed: 'Напредъкът ти не е запазен. Телефонът пълен ли е? Освободи малко място. Или отвори Настройки: „Запази напредъка си“.', // nieuw, nalezen
     bewaarNudge: 'Телефонът понякога може да изтрие напредъка ти. Затова запази копие.', // nieuw, nalezen
     bewaarGo: 'Запази сега', // nieuw, nalezen

@@ -56,8 +56,8 @@ async function run<T>(mode: IDBTransactionMode, make: (s: IDBObjectStore) => IDB
   });
 }
 
-/** A Blob's bytes, also on phones without Blob.arrayBuffer (FileReader). */
-function bytesOf(blob: Blob): Promise<ArrayBuffer> {
+/** A Blob's bytes, also on phones without Blob.arrayBuffer (FileReader). Also for "Toen en nu" (src/lib/firstVoice.ts). */
+export function bytesOf(blob: Blob): Promise<ArrayBuffer> {
   if (typeof blob.arrayBuffer === 'function') return blob.arrayBuffer();
   return new Promise((resolve, reject) => {
     const r = new FileReader();

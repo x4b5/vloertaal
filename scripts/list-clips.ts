@@ -9,6 +9,7 @@ import { allRegionTips, allRegionUnits, isRegionLoaded, REGIONS, registerRegion,
 import zlPack from '../src/content/regio/zuid-limburg-pack';
 import { lessonSayings } from '../src/content/sayings';
 import { FRONT_LINES } from '../src/content/patterns';
+import { TOETS_DURF } from '../src/content/toets';
 import { tokenize } from '../src/lib/answers';
 import { sayAs } from '../src/lib/sayAs';
 import { hasDigitNumber } from '../src/lib/sayNumbers';
@@ -60,6 +61,9 @@ for (const p of phrasebookExtras) add(p.id, p.nl);
 // first ("Morgen verstuur ik de mail."). Until it is recorded the phone's voice says it.
 for (const f of FRONT_LINES) add(`${f.id}.front`, f.nl);
 add('x.sample', VOICE_SAMPLE);
+// "Durf je dit?" at the start of the test (src/content/toets.ts TOETS_DURF, 5 November 2026): the
+// situation of each question. Until it is recorded the phone's voice says it.
+for (const d of TOETS_DURF) add(`x.durf.${d.id}`, d.nl);
 // Bram introduces himself on the first tap of the app (sayFirstWord in src/lib/audio.ts): only in
 // his own voice, Thijmen; the other voices never say it.
 add('x.bram', BRAM_HELLO, [BRAM_VOICE]);
