@@ -63,7 +63,7 @@ ${[inner, extra].filter(Boolean).join('\n')}</section>`;
 
 export function coachPage(): string {
   const title = 'Gratis NT2-oefenapp voor werk | Vloertaal voor begeleiders';
-  const description = 'Zet Vloertaal in bij je taalcafé, NT2-les of op de werkvloer: gratis, zonder account, met uitleg in dertien talen en een directe link naar elk onderwerp.';
+  const description = 'Zet Vloertaal in bij je taalcafé, NT2-les of op de werkvloer: gratis, zonder account, met uitleg in veertien talen en een directe link naar elk onderwerp.';
   const data = [
     {
       '@context': 'https://schema.org',

@@ -159,3 +159,16 @@ export const de: Gloss = {
     "be.c.je.o3": "Sie möchte, dass du höflicher sprichst.", // = c.je.o3
     "be.c.je.w": "„Zeg maar je“ ist freundlich: Sie möchte weniger Abstand. In Flandern fangen viele Leute mit „u“ an, also warte, bis jemand das sagt.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+    "be.w.kantine": "qolka cuntada ee shaqada (refter)", // nieuw, nalezen
+    "be.c.je": "“Je” mise “u”?", // nieuw, nalezen
+    "be.c.je.b": "Flanders dad badan ayaa shaqada ku yidhaahda “u”, gaar ahaan bilowga: madaxa, macmiilka ama qof ka weyn. Saaxiibada shaqadu badanaa midba midka kale wuxuu ku yidhaahdaa “je”, hadalka dhexdiisana waxaad sidoo kale maqlaysaa “ge”. Haddii aadan hubin, ku bilow “u” oo dhegayso waxa kuwa kale sameeyaan.", // nieuw, nalezen
+    "be.c.je.p": "Ma kugu odhan karaa “je”?", // nieuw, nalezen
+    "be.c.je.s": "Madaxaaga cusub (naag) ayaa leh: “Zeg maar je, hoor!” Maxay ula jeeddaa?", // nieuw, nalezen
+    "be.c.je.o1": "Waxay rabtaa inaad ku tidhaahdo “je”.", // nieuw, nalezen
+    "be.c.je.o2": "Waxay kaa codsanaysaa inaad wax tidhaahdo.", // nieuw, nalezen
+    "be.c.je.o3": "Waxay rabtaa inaad si edeb badan u hadasho.", // nieuw, nalezen
+    "be.c.je.w": "“Zeg maar je” waa saaxiibtinimo: waxay rabtaa fogaan yar. Flanders dad badan waxay ku bilaabaan “u”, sidaas darteed sug ilaa qof uu sidan yidhaahdo.", // nieuw, nalezen
+};

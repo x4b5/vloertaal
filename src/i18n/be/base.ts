@@ -270,3 +270,24 @@ export const de: CultureTranslation = {
     'be.closing.abuse.nl': 'Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
   },
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: CultureTranslation = {
+  ui: {
+    beNlOnly: 'Tani waxay ku saabsan tahay Holland. Beljiyam way ka duwan tahay.', // nieuw, nalezen
+    beTaalBeta: 'Casharrada Beljiyam waa cusub yihiin, khabiir weli ma hubin.', // nieuw, nalezen
+    whoLegalBe: 'Talo koowaad oo bilaash ah oo qareen ka timid, oo ku saabsan qandaraaskaaga, mushaharkaaga ama shaqo-ka-eryid.', // nieuw, nalezen
+    whoInspectionBe: 'Soo sheeg mushahar aad u yar, ama shaqo aan qandaraas lahayn.', // nieuw, nalezen
+    whoExploitBe: 'Shaqada lagaa dhiigmiiraa, ama waxaad u malaynaysaa in lagaa dhiigmiiro.', // nieuw, nalezen
+    whoUnionBe: 'Caawimaad mushaharkaaga, qandaraaskaaga ama marka shaqadaadu dhammaato. Xubnuhu caawimaad badan ayay helaan.', // nieuw, nalezen
+    who1813Be: 'Waxaad ka fikiraysaa inaad naftaada dhammayso, ama qof kale ayaad ka welwelsan tahay. Bilaash iyo magac la\'aan.', // nieuw, nalezen
+  },
+  gloss: {
+    'be.theme.life': 'Nolosha Beljiyam', // nieuw, nalezen
+    'be.closing.advice': 'Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).', // nieuw, nalezen
+    'be.closing.abuse': 'Macluumaad guud. Xaaladdaada gaarka ah: weydii ururka shaqaalaha, justitiehuis (talo sharci oo bilaash ah) ama Payoke.', // nieuw, nalezen
+    'be.closing.advice.nl': 'Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.', // nieuw, nalezen
+    'be.closing.advice.nl2': 'Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.', // nieuw, nalezen
+    'be.closing.abuse.nl': 'Macluumaad guud. Xaaladdaada gaarka ah: weydii ururka shaqaalaha, Juridisch Loket ama FairWork.', // nieuw, nalezen
+  },
+};

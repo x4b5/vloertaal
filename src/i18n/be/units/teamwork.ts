@@ -250,3 +250,23 @@ export const de: Gloss = {
     "be.c.task.o3": "Warte, bis ein Kollege es macht.", // = c.task.o3
     "be.c.task.w": "Noch einmal fragen ist normal und dauert eine Minute. Einen Fehler zu beheben dauert viel länger. Die meisten Vorgesetzten zeigen es lieber zweimal.", // = c.task.w
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+    "be.c.speakup": "Sheeg waxa ku dhibaya", // nieuw, nalezen
+    "be.c.speakup.b": "Halkan waa caadi oo waa la ixtiraamaa in si deggan loo sheego marka ay wax ku dhibayaan. Marka hore la hadal qofka laftiisa, waqti deggan. Isticmaal jumlado “ik” ah: “Ik vind het niet fijn dat ...”. Haddii aanay waxba tarin, la hadal madaxaaga.", // nieuw, nalezen
+    "be.c.speakup.p": "Wax baa i dhibaya. Wax yar ma wada hadli karnaa?", // nieuw, nalezen
+    "be.c.speakup.s": "Saaxiib shaqo ayaa had iyo jeer shaqada culus kuu dhaafa. Taasi way ku dhibaysaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.speakup.o1": "U sheeg saaxiibka shaqada waxa ku dhibaya.", // nieuw, nalezen
+    "be.c.speakup.o2": "Aamus, oo xanaaqaagu ha sii kordho.", // nieuw, nalezen
+    "be.c.speakup.o3": "Uga cabo isaga dhammaan saaxiibada shaqada kale.", // nieuw, nalezen
+    "be.c.speakup.w": "Flanders dadku inta badan si taxaddar leh ayay u sheegaan, waqti deggan, laakiin way sheegaan. In goor hore oo si deggan loo sheego ayaa xiriirka wanaagsan ku haysa.", // nieuw, nalezen
+    "be.c.task": "Sheeg marka ay dhammaato, weydii marka aanay cadayn", // nieuw, nalezen
+    "be.c.task.b": "Madaxu inta badan wuxuu hawl ku bixiyaa erayo kooban, wuxuuna filayaa inaad sheegto marka ay dhammaato. Inaad tidhaahdo “ja” adigoo aan fahmin inta badan waxay keentaa khaladaad. Mar kale weydiinta, ama codsashada in lagu tuso, halkan waa caadi, mana aha edeb darro.", // nieuw, nalezen
+    "be.c.task.p": "Waan dhammeeyay! Maxaan hadda sameeyaa?", // nieuw, nalezen
+    "be.c.task.s": "Madaxaagu hawl ayuu si aad u dhakhso ah u sharxayaa. Kala badh oo keliya ayaad fahantay. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.task.o1": "Codso in mar kale lagu tuso.", // nieuw, nalezen
+    "be.c.task.o2": "Ku bilow kala badhka aad fahantay.", // nieuw, nalezen
+    "be.c.task.o3": "Sug ilaa saaxiib shaqo uu sameeyo.", // nieuw, nalezen
+    "be.c.task.w": "Mar kale weydiintu waa caadi, waxayna qaadataa hal daqiiqo. Khalad saxiddiisu waxay qaadataa waqti aad u badan. Madaxda badankoodu waxay doorbidaan inay laba jeer ku tusaan.", // nieuw, nalezen
+};

@@ -187,3 +187,18 @@ export const de: Gloss = {
     'be.c.letters.o3': "Du wirfst ihn weg, weil es wohl Werbung ist.", // nieuw, nalezen
     'be.c.letters.w': "Offizielle Briefe haben oft ein Datum, bis zu dem du antworten musst. Wenn du rechtzeitig antwortest, lassen sich Probleme meist leichter lösen. Vielleicht bekommst du sogar Geld zurück.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+    'be.w.belastingdienst': "FOD Financiën (xafiiska canshuurta ee dowladda federaalka)", // nieuw, nalezen
+    'be.w.terugbetalen': "dib u helid (lacag)", // nieuw, nalezen
+    'be.c.letters.a': "Haa, MyMinfin. Lacag ayaa la ii soo celinayaa.", // nieuw, nalezen
+    'be.c.letters': "Warqadaha ha iska indha tirin", // nieuw, nalezen
+    'be.c.letters.b': "Ha iska indha tirin warqadaha FOD Financiën (canshuurta), gemeente, RVA ama OCMW. Warqado badan sidoo kale waxay ku yimaadaan internetka, eBox-kaaga. Qof aad aaminsan tahay ka codso inuu kaa caawiyo akhrintooda. Warbixinta canshuurtaada (aangifte) waxaad ku samaysaa MyMinfin, adoo isticmaalaya itsme ama eID-gaaga. Badanaa waxaad helaysaa soo-jeedin hore loo buuxiyay: si fiican u hubi. FOD Financiën bilaash ayay kuu caawisaa. Carruur ma leedahay? Groeipakket waa lacag carruurtaada uga timaadda dowladda Flanders. Dhibaato lacageed? OCMW iyo CAW bilaash ayay wax u caawiyaan. Talooyin ku saabsan lacagta: wikifin.be. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+    'be.c.letters.p': "Warqad ayaa ii timid. Ma i caawin kartaa?", // nieuw, nalezen
+    'be.c.letters.s': "Warqad ayaa kaaga timid FOD Financiën. Ma fahmaysid. Maxaad samaynaysaa?", // nieuw, nalezen
+    'be.c.letters.o1': "Qof aad aaminsan tahay ka codso inuu kaa caawiyo akhriskeeda.", // nieuw, nalezen
+    'be.c.letters.o2': "Khaanad geli oo sug.", // nieuw, nalezen
+    'be.c.letters.o3': "Iska tuur, maxaa yeelay malaha waa xayaysiis.", // nieuw, nalezen
+    'be.c.letters.w': "Warqadaha rasmiga ah badanaa waxay leeyihiin taariikh aad ka hor jawaab bixiso. Haddii aad waqtiga ku jawaabto, dhibaatooyinka badanaa way fududahay in la xalliyo. Malaha xitaa lacag ayaa laguu soo celin doonaa.", // nieuw, nalezen
+};

@@ -237,3 +237,22 @@ export const de: Gloss = {
     "be.c.transit.o3": "Warte: Nur wer einen langen Vertrag hat, bekommt es.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.w": "Beim Zug muss der Arbeitgeber einen Teil deines Abos bezahlen. Bei anderen Wegen zur Arbeit hängt es von deinem Sektor ab. Danach zu fragen ist normal.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+    "be.w.inchecken": "tigidhka", // nieuw, nalezen
+    "be.w.uitchecken": "tigidhka muddada ah (abonnement)", // nieuw, nalezen
+    "be.w.bankpas": "kaarka bangiga", // nieuw, nalezen
+    "be.w.reiskosten": "lacagta safarka shaqada (oo uu bixiyo loo-shaqeeyahaagu)", // nieuw, nalezen
+    "be.s.transit.1": "Baska waxaan ku bixiyaa kaarka bangigayga.", // nieuw, nalezen
+    "be.s.transit.2": "Waxaan haystaa tigidh tareen oo muddo ah.", // nieuw, nalezen
+    "be.c.transit.a": "Maya, baska De Lijn. Albaabka hortiisa ayuu ku istaagaa.", // nieuw, nalezen
+    "be.c.transit": "Bas, tareen iyo kharashka safarka", // nieuw, nalezen
+    "be.c.transit.b": "Flanders waxaad raacdaa baska ama taraamka De Lijn, iyo tareenka NMBS. Baska lacag caddaan ah kuma bixin kartid: tigidh ka iibso app-ka, ama baska gudihiisa ku bixi kaarka bangigaaga. Ma maalin kasta ayaad u safartaa shaqada? Markaas tigidh muddo ah (abonnement) inta badan wuu ka jaban yahay. Ma tareen ayaad ku tagtaa shaqada? Markaas loo-shaqeeyahaagu wuxuu bixiyaa qayb ka mid ah tigidhkaaga tareenka ee muddada ah. Baska, taraamka ama baaskiilka, waxay ku xiran tahay qaybta shaqadaada (sector): wax ka weydii. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+    "be.c.transit.p": "Ma helayaa lacag kharashka safarkayga ah?", // nieuw, nalezen
+    "be.c.transit.s": "Maalin kasta tareen ayaad ku tagtaa shaqada. Saaxiib shaqo ayaa lacag u hela tigidhkiisa tareenka ee muddada ah, adiguse ma helid. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.transit.o1": "Weydii loo-shaqeeyahaaga lacagta tareenka.", // nieuw, nalezen
+    "be.c.transit.o2": "Waxba ha odhan, maxaa yeelay malaha adiga laguuma talagelin.", // nieuw, nalezen
+    "be.c.transit.o3": "Sug: shaqaalaha qandaraas dheer haysta oo keliya ayaa hela.", // nieuw, nalezen
+    "be.c.transit.w": "Tareenka, loo-shaqeeyuhu waa inuu bixiyaa qayb ka mid ah tigidhkaaga muddada ah. Siyaabaha kale ee safarka, waxay ku xiran tahay qaybta shaqadaada. In wax laga weydiiyo waa caadi.", // nieuw, nalezen
+};

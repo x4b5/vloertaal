@@ -6,6 +6,7 @@ import fa from '../i18n/packs/fa';
 import fr from '../i18n/packs/fr';
 import pl from '../i18n/packs/pl';
 import prs from '../i18n/packs/prs';
+import so from '../i18n/packs/so';
 import pt from '../i18n/packs/pt';
 import ro from '../i18n/packs/ro';
 import ti from '../i18n/packs/ti';
@@ -19,7 +20,7 @@ import { forGender, isPlural, type LangCode, type UiText } from '../i18n/types';
  * langPages.ts, sectorPages.ts): the same strings the app shows, so the pages add no translation
  * of their own. The default form (no gender chosen), as the app shows it before the learner picks.
  */
-const PACKS: Record<LangCode, LanguagePack> = { ar, ti, fa, prs, uk, tr, pl, ro, bg, es, pt, fr, de };
+const PACKS: Record<LangCode, LanguagePack> = { ar, ti, fa, prs, so, uk, tr, pl, ro, bg, es, pt, fr, de };
 
 export interface PackText {
   /** A UI string; throws if the language has none (a page must not show English by surprise). */

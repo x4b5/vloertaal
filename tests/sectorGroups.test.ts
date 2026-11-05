@@ -122,16 +122,16 @@ describe('a saved sector after the change', () => {
 
 describe('the new labels', () => {
   const KEYS = ['sectorGroupBuild', 'sectorTechnical', 'sectorGarage'] as const;
-  const packs = import.meta.glob('../src/i18n/{ar,ti,fa,prs,uk,tr,pl,ro,bg,es,pt,fr,de}.ts', { eager: true, import: 'default' }) as Record<string, { code: string; ui: Record<string, unknown> }>;
+  const packs = import.meta.glob('../src/i18n/{ar,ti,fa,prs,so,uk,tr,pl,ro,bg,es,pt,fr,de}.ts', { eager: true, import: 'default' }) as Record<string, { code: string; ui: Record<string, unknown> }>;
 
-  it('are in English, in Dutch and in all 13 help languages', async () => {
+  it('are in English, in Dutch and in all 14 help languages', async () => {
     const { uiNl } = await import('../src/i18n/nl');
     for (const k of KEYS) {
       expect(uiEn[k], k).toBeTruthy();
       expect((uiNl as Record<string, string>)[k], k).toBeTruthy();
     }
-    expect(Object.keys(packs)).toHaveLength(13);
-    expect(languageMeta).toHaveLength(13);
+    expect(Object.keys(packs)).toHaveLength(14);
+    expect(languageMeta).toHaveLength(14);
     for (const [file, pack] of Object.entries(packs)) {
       for (const k of KEYS) {
         const t = pack.ui[k];

@@ -19,7 +19,7 @@ import { qrSvg } from './qr';
 
 /** The Dutch names of the languages, for the coach's list (the pages say each in its own script too). */
 const DUTCH_NAME: Record<PageCode, string> = {
-  ar: 'Arabisch', ti: 'Tigrinya', fa: 'Perzisch (Farsi)', prs: 'Dari', uk: 'Oekraïens', tr: 'Turks', pl: 'Pools',
+  ar: 'Arabisch', ti: 'Tigrinya', fa: 'Perzisch (Farsi)', prs: 'Dari', so: 'Somalisch', uk: 'Oekraïens', tr: 'Turks', pl: 'Pools',
   ro: 'Roemeens', bg: 'Bulgaars', es: 'Spaans', pt: 'Portugees', fr: 'Frans', de: 'Duits', en: 'Engels',
 };
 

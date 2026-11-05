@@ -20,7 +20,7 @@ export const EXAMPLE_NOTICE_UPDATE: Update = {
   },
 };
 
-/** The example's text in the 13 help languages. */
+/** The example's text in the 14 help languages. */
 export const EXAMPLE_NOTICE_TEXTS: Record<LangCode, LangText> = {
   ar: {
     m: 'الحد الأدنى للأجور يرتفع. تحقّق في قسيمة راتبك من أنك تحصل على ما يكفي.',
@@ -33,6 +33,7 @@ export const EXAMPLE_NOTICE_TEXTS: Record<LangCode, LangText> = {
     x: 'ዝተሓተ ደሞዝ ይውስኽ ኣሎ። ኣብ ወረቐት ደሞዝኩም እኹል ከም እትረኽቡ ርኣዩ።',
   },
   fa: 'حداقل دستمزد بالا می‌رود. در فیش حقوقی خود ببینید که به اندازهٔ کافی می‌گیرید.',
+  so: 'Mushaharka ugu yar wuu kordhayaa. Ka eeg warqadda mushaharkaaga inaad helayso wax ku filan.', // nieuw, nalezen
   prs: 'حد اقل معاش بلند می‌رود. در ورق معاش خود ببینید که به اندازهٔ کافی می‌گیرید.',
   uk: 'Мінімальна зарплата зростає. Перевір у розрахунковому листку, чи ти отримуєш достатньо.',
   tr: 'Asgari ücret artıyor. Bordronda yeterince alıp almadığına bak.',

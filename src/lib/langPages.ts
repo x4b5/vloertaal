@@ -40,6 +40,7 @@ const TAGS: Record<PageCode, { tag: string; og: string }> = {
   ti: { tag: 'ti', og: 'ti_ER' },
   fa: { tag: 'fa', og: 'fa_IR' },
   prs: { tag: 'fa-AF', og: 'fa_AF' },
+  so: { tag: 'so', og: 'so_SO' },
   uk: { tag: 'uk', og: 'uk_UA' },
   tr: { tag: 'tr', og: 'tr_TR' },
   pl: { tag: 'pl', og: 'pl_PL' },

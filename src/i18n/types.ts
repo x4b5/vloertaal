@@ -656,10 +656,10 @@ export const uiEn = {
 
 export type UiKey = keyof typeof uiEn;
 
-export type LangCode = 'ar' | 'ti' | 'fa' | 'prs' | 'uk' | 'tr' | 'pl' | 'ro' | 'bg' | 'es' | 'pt' | 'fr' | 'de';
+export type LangCode = 'ar' | 'ti' | 'fa' | 'prs' | 'so' | 'uk' | 'tr' | 'pl' | 'ro' | 'bg' | 'es' | 'pt' | 'fr' | 'de';
 
 /**
- * A language the app's screens can be read in: the thirteen help languages, plus 'nl' for the
+ * A language the app's screens can be read in: the fourteen help languages, plus 'nl' for the
  * work-rules track ("Nederlands – ik spreek al Nederlands", src/lib/track.ts). 'nl' is not a
  * help language: it has no glosses of the Dutch course and is not in LANG_CODES.
  */

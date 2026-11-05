@@ -158,3 +158,16 @@ export const de: Gloss = {
     'be.c.login.o3': "Du schreibst sie auf einen Zettel, damit er sie später nutzt.", // nieuw, nalezen
     'be.c.login.w': "Mit deiner itsme kann jemand deine Steuern, Leistungen und Gesundheitsdaten sehen und ändern. Sie ist nur für dich. Du kannst dich selbst einloggen und dir dabei helfen lassen.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+    'be.s.login.3': "Koodhkayga itsme qofna ma siiyo.", // nieuw, nalezen
+    'be.c.login': "Gelitaankaagu adiga ayuu kuu gaar yahay", // nieuw, nalezen
+    'be.c.login.b': "Furahaaga sirta ah iyo itsme-kaagu adiga oo keliya ayay kuu yihiin. Qofna ha siin, xitaa loo-shaqeeyahaaga ama saaxiibka shaqada. Kombiyuutar la wadaago, had iyo jeer ka bax marka aad dhammayso. Wax yar ma tegaysaa? Xir shaashaddaada. Furaha sirta ah ma ilowday? Waaxda IT-ga (ICT-afdeling) ka codso mid cusub. Xeerarka kombiyuutarku way ku kala duwan yihiin shirkad kasta: weydii waaxda IT-ga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'be.c.login.p': "Wax yar ayaan tegayaa. Shaashaddayda ayaan xirayaa.", // nieuw, nalezen
+    'be.c.login.s': "Madaxaagu wuxuu ku weydiinayaa koodhkaaga itsme iyo furahaaga sirta ah, si uu warqadahaaga si dhakhso ah u diyaariyo. Maxaad samaynaysaa?", // nieuw, nalezen
+    'be.c.login.o1': "Dheh maya, oo adigu gal inta uu ku caawinayo.", // nieuw, nalezen
+    'be.c.login.o2': "Sii hal mar oo keliya, maxaa yeelay waa madaxaaga.", // nieuw, nalezen
+    'be.c.login.o3': "Warqad ku qor, si uu goor dambe u isticmaalo.", // nieuw, nalezen
+    'be.c.login.w': "Isagoo isticmaalaya itsme-kaaga, qof ayaa ku arki kara oo beddeli kara canshuurtaada, gargaarkaaga iyo warqadahaaga caafimaadka. Adiga oo keliya ayuu kuu yahay. Adigu waad geli kartaa, oo qof ayaad u oggolaan kartaa inuu ku caawiyo.", // nieuw, nalezen
+};

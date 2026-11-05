@@ -159,3 +159,16 @@ export const de: Gloss = {
     "be.c.keeplearning.o3": "Antworte auch auf Englisch, weil das höflicher ist.", // = c.keeplearning.o3
     "be.c.keeplearning.w": "Kollegen wechseln oft ins Englische, um nett zu sein. Wenn du um Niederländisch bittest, helfen die meisten gern. Jeden Tag ein bisschen bei der Arbeit sprechen ist einer der schnellsten Wege zu lernen.", // = c.keeplearning.w
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+    "be.w.taalhuis": "praattafel (koox aad ku tababarato ku hadalka Af-Holandiiska)", // nieuw, nalezen
+    "be.c.keeplearning": "Sii wad barashada, wax yar maalin kasta", // nieuw, nalezen
+    "be.c.keeplearning.b": "Dhowr daqiiqo maalin kasta ayaa ka faa'iido badan hal saac oo dheer toddobaadkii. Erayada cusub ee shaqada ku kaydi app-ka qoraallada ee taleefankaaga. Dhageyso Af-Holandiis fudud, tusaale ahaan Karrewiet (warar carruurta loogu talagalay, VRT) ama podcast ku hadla Af-Holandiis tartiib ah. Agentschap Integratie en Inburgering ayaa kaa caawiya inaad hesho koorso Af-Holandiis, maktabado badanna waxay leeyihiin praattafel: koox aad ku tababarato ku hadalka. Saaxiibada shaqadu inta badan waxay u wareegaan Ingiriisi si ay kuu caawiyaan. Si naxariis leh u weydii inay kula hadlaan Af-Holandiis: dadka badankoodu way jecel yihiin inay wax caawiyaan.", // nieuw, nalezen
+    "be.c.keeplearning.p": "Af-Holandiis igula hadal, markaas si dhakhso ah ayaan u baranayaa.", // nieuw, nalezen
+    "be.c.keeplearning.s": "Saaxiibada shaqadaadu had iyo jeer waxay u wareegaan Ingiriisi markay kula hadlayaan. Waxaad rabtaa inaad barato Af-Holandiis. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.keeplearning.o1": "U mahadnaq, oo weydii inay kula hadlaan Af-Holandiis.", // nieuw, nalezen
+    "be.c.keeplearning.o2": "Waxba ha odhan. Af-Holandiisku iskiis ayuu u imanayaa.", // nieuw, nalezen
+    "be.c.keeplearning.o3": "Adiguna Ingiriisi ku jawaab, maxaa yeelay taasi way ka edeb badan tahay.", // nieuw, nalezen
+    "be.c.keeplearning.w": "Saaxiibada shaqadu inta badan waxay u wareegaan Ingiriisi si ay kuu fududeeyaan. Markaad codsato Af-Holandiis, badankoodu way ku faraxsan yihiin inay ku caawiyaan. Ku hadalka wax yar maalin kasta shaqada waa mid ka mid ah siyaabaha ugu dhakhsaha badan ee wax loo barto.", // nieuw, nalezen
+};

@@ -251,3 +251,23 @@ export const de: Gloss = {
   "be.c.boundaries.o3": "Kündige, ohne jemandem zu sagen, warum.", // = c.boundaries.o3
   "be.c.boundaries.w": "Das ist unerwünschtes Verhalten, und es ist nicht deine Schuld. Der preventieadviseur hört dir vertraulich zu und hilft dir, den nächsten Schritt zu wählen. Du kannst auch mit einer vertrouwenspersoon oder der Personalabteilung sprechen.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+  "be.c.respect": "Ixtiraam qof walba", // nieuw, nalezen
+  "be.c.respect.b": "Shaqada, qof walba waa siman yahay, qof walbana waxaa loola dhaqmaa ixtiraam, jinsigiisa, asalkiisa, diintiisa ama u janjeedhsiga galmadiisu wuxuu doono ha ahaadee. Adiga ayaa go'aansada taabashada jirka. Isgacan-qaadku waa caadi, laakiin sidoo kale waxaad u salaami kartaa si kale oo edeb leh, sida madax ruxid iyo dhoolla-caddayn, oo si kooban u sharax. Kaftanka ku saabsan asalka ama diinta qof, hanjabaadda, cagajuglaynta (pesten) iyo dabeecadda galmada ee aan la rabin lama aqbalo. Waxaad u sheegi kartaa madaxaaga, ama la-taliyaha kalsoonida (vertrouwenspersoon) haddii shirkaddaadu leedahay. Waxaad sidoo kale u tegi kartaa la-taliyaha ka-hortagga (preventieadviseur psychosociale aspecten): khabiir ku takhasusay cagajuglaynta iyo rabshadaha shaqada. Loo-shaqeeye kasta waa inuu leeyahay mid.", // nieuw, nalezen
+  "be.c.respect.p": "Waxaan doorbidaa inaanan gacan qaadin, laakiin waan ku faraxsanahay inaan ku salaamo.", // nieuw, nalezen
+  "be.c.respect.s": "Saaxiib shaqo ayaa inta badan kaftan ka sameeya diintaada. Waxaad ka codsatay inuu joojiyo, laakiin wuu sii wadaa. Maxaad samaynaysaa?", // nieuw, nalezen
+  "be.c.respect.o1": "U sheeg madaxaaga ama preventieadviseur.", // nieuw, nalezen
+  "be.c.respect.o2": "La qosol isaga, si aanay dhibaato u dhicin.", // nieuw, nalezen
+  "be.c.respect.o3": "Adiguna kaftan ka samee asalkiisa.", // nieuw, nalezen
+  "be.c.respect.w": "Kaftankaas oo kale lagama aqbalo shaqada. U sheegiddu waa caadi: shirkaddu waa inay goobta shaqada ka dhigto meel ammaan u ah qof walba.", // nieuw, nalezen
+  "be.c.boundaries": "Xadka oo la dhaafo", // nieuw, nalezen
+  "be.c.boundaries.b": "Grensoverschrijdend gedrag waa dabeecad dhaafaysa xadka qof: taabasho aan la rabin, hadallo ama kaftan galmo ah, si joogto ah qof u fiirin, dirista sawirro aan la rabin, hanjabaad ama qaylo. Muhiim ma aha haddii qofka kale uu “kaftan ula jeeday”: waxa muhiimka ah waa sida ay adiga kuu dareensiinayso. Haddii aad awoodo, si cad u sheeg inaad rabto inay joogsato. Qor waxa dhacay, goorta, iyo cidda aragtay. U sheeg madaxaaga, la-taliyaha kalsoonida (vertrouwenspersoon, haddii uu jiro) ama HR. Waxaad sidoo kale u tegi kartaa la-taliyaha ka-hortagga (preventieadviseur psychosociale aspecten): khabiir ku takhasusay cagajuglaynta iyo rabshadaha shaqada. Loo-shaqeeye kasta waa inuu leeyahay mid. Loo-shaqeeyahaagu waa inuu ku ilaaliyaa, adigana laguma ciqaabi karo inaad sheegtay. Ma aragtay in arrintaasi ku dhacday saaxiib shaqo? Weydii inuu fiican yahay, oo u soo bandhig inaad markhaati u noqoto.", // nieuw, nalezen
+  "be.c.boundaries.p": "Waxaan rabaa inaad joojiso.", // nieuw, nalezen
+  "be.c.boundaries.s": "Hoggaamiyaha kooxdaadu inta badan gacantiisa ayuu saaraa dhabarkaaga, wuxuuna yidhaahdaa waxaad u egtahay “qurux badan”. Taasi waxay kugu keenaysaa raaxo la'aan. Isagaa go'aamiya wareegyadaada shaqada. Maxaad samaynaysaa?", // nieuw, nalezen
+  "be.c.boundaries.o1": "Qor oo u sheeg preventieadviseur.", // nieuw, nalezen
+  "be.c.boundaries.o2": "Waxba ha odhan, maxaa yeelay isagaa go'aamiya wareegyadaada shaqada.", // nieuw, nalezen
+  "be.c.boundaries.o3": "Shaqada iska dhaaf adigoon cidna u sheegin sababta.", // nieuw, nalezen
+  "be.c.boundaries.w": "Tani waa dabeecad aan la rabin, mana aha qaladkaaga. La-taliyaha ka-hortagga (preventieadviseur) ayaa si sir ah kuu dhageysta, wuxuuna kaa caawiyaa inaad doorato tallaabada xigta. Waxaad sidoo kale la hadli kartaa vertrouwenspersoon ama HR.", // nieuw, nalezen
+};

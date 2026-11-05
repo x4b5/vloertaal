@@ -20,6 +20,7 @@ const CODES: Record<string, LangCode> = {
   pt: 'pt',
   fr: 'fr',
   de: 'de',
+  so: 'so',
 };
 
 export function guessHelpLang(languages: readonly string[] | undefined): LangCode | null {

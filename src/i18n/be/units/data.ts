@@ -161,3 +161,16 @@ export const de: Gloss = {
     'be.c.details.o3': "Du legst auf und hoffst, dass sie den Fehler später finden.", // nieuw, nalezen
     'be.c.details.w': "Dein Name muss auf deinem Vertrag, deiner Lohnabrechnung (loonbrief) und deinem Ausweis oder deiner Aufenthaltskarte gleich sein. Dann stimmen dein Lohn und deine Steuer. Buchstabieren und noch einmal hören ist ein schneller Check.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+    'be.s.details.3': "Foomkan waxaa iska leh xafiiska canshuurta (FOD Financiën).", // nieuw, nalezen
+    'be.c.details': "Macluumaadkaaga: si sax ah u bixi", // nieuw, nalezen
+    'be.c.details.b': "Bilowga shaqo, waxaad bixisaa macluumaadkaaga: magacaaga, cinwaankaaga, lambarka taleefankaaga, taariikhda dhalashadaada iyo rijksregisternummer-kaaga (ama bisnummer). Magacaaga si tartiib ah u xarfee, xaraf xaraf. Kadib ka hubi magacaaga qandaraaskaaga iyo loonbrief-kaaga. Khalad ku jira magacaaga ama lambarkaaga wuxuu dhibaato ku keeni karaa mushaharkaaga ama canshuurtaada. Cinwaan cusub ama lambar taleefan oo cusub? U sheeg loo-shaqeeyahaaga.", // nieuw, nalezen
+    'be.c.details.p': "Aan xarfeeyo: A, L, I.", // nieuw, nalezen
+    'be.c.details.s': "Taleefanka, xafiiska shaqo-qorista (interimkantoor) ayaa qoraya magacaaga dambe. Waxaad maqlaysaa inay si khalad ah u qorayaan. Maxaad samaynaysaa?", // nieuw, nalezen
+    'be.c.details.o1': "Magacaaga si tartiib ah u xarfee oo ka codso inay dib kuugu akhriyaan.", // nieuw, nalezen
+    'be.c.details.o2': "Waxba ha odhan: khalad yar oo magacaaga ku jira dhib ma leh.", // nieuw, nalezen
+    'be.c.details.o3': "Taleefanka dhig, oo rajee inay khaladka goor dambe helaan.", // nieuw, nalezen
+    'be.c.details.w': "Magacaagu waa inuu isku mid noqdaa qandaraaskaaga, loonbrief-kaaga iyo kaarka aqoonsiga ama kaarka deganaanshaha. Markaas mushaharkaaga iyo canshuurtaadu way sax noqdaan. Xarfaynta iyo dib-u-akhrintu waa hubin degdeg ah.", // nieuw, nalezen
+};

@@ -146,3 +146,15 @@ export const de: Gloss = {
     "be.c.plain.o3": "Sie isst ein Blatt.", // = c.plain.o3
     "be.c.plain.w": "„Geen blad voor de mond nemen“ heißt: ehrlich und direkt sagen, was man denkt. Wer das sagt, warnt dich vor: Jetzt kommt eine direkte Meinung.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+    "be.c.plain": "Si toos ah u sheegid", // nieuw, nalezen
+    "be.c.plain.b": "Saaxiibada shaqada ee reer Flanders inta badan si taxaddar leh ayay u sheegaan waxa ay u malaynayaan. Mararka qaarkood waxay ku bilaabaan maahmaah: “Ik neem geen blad voor de mond.” Taas macnaheedu waa: si daacad ah ayaan u sheegayaa waxa aan u malaynayo. Markaas waxaa imanaysa fikrad toos ah, laakiin looma jeedo edeb darro. Adiguna si daacad ah ayaad u sheegi kartaa waxa aad u malaynayso, si deggan.", // nieuw, nalezen
+    "be.c.plain.p": "Ma sheegi karaa si daacad ah waxa aan u malaynayo?", // nieuw, nalezen
+    "be.c.plain.s": "Madaxaagu waxay tidhi: “Ik neem geen blad voor de mond.” Maxay ula jeeddaa?", // nieuw, nalezen
+    "be.c.plain.o1": "Si daacad ah ayay u sheegaysaa waxa ay u malaynayso.", // nieuw, nalezen
+    "be.c.plain.o2": "Ma rabto inay ka hadasho arrintaas.", // nieuw, nalezen
+    "be.c.plain.o3": "Caleen ayay cunaysaa.", // nieuw, nalezen
+    "be.c.plain.w": "“Geen blad voor de mond nemen” macnaheedu waa: si daacad ah oo toos ah u sheegid waxa aad u malaynayso. Qofka sidaas yidhaahdaa wuu kuu digayaa: hadda waxaa imanaysa fikrad toos ah.", // nieuw, nalezen
+};

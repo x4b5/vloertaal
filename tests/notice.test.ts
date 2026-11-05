@@ -187,8 +187,8 @@ describe('the notices in UPDATES', () => {
 describe('the translations are complete', () => {
   const required = allNotices().filter((n) => n.track !== 'regels').map((n) => noticeGlossId(n.id));
 
-  it('13 help languages: the card\'s texts and every notice (not only for Werkregels), nothing else', () => {
-    expect(helpLanguageSources).toHaveLength(13);
+  it('14 help languages: the card\'s texts and every notice (not only for Werkregels), nothing else', () => {
+    expect(helpLanguageSources).toHaveLength(14);
     for (const lang of helpLanguageSources) {
       for (const key of ['noticeTitle', 'noticeMore', 'noticeOk'] as const) {
         expect(allForms(lang.ui[key]).filter((f) => f.trim()).length, `${lang.code} ${key}`).toBeGreaterThan(0);
@@ -220,7 +220,7 @@ describe('the translations are complete', () => {
     expect([uiNl.noticeTitle, uiNl.noticeMore, uiNl.noticeOk]).toEqual(['Er is iets veranderd', 'Lees meer', 'Oké']);
   });
 
-  it('the example in all 13 languages (for the screenshots)', () => {
+  it('the example in all 14 languages (for the screenshots)', () => {
     expect(Object.keys(EXAMPLE_NOTICE_TEXTS).sort()).toEqual([...LANG_CODES].sort());
     for (const code of LANG_CODES) for (const f of allForms(EXAMPLE_NOTICE_TEXTS[code])) expect(f.trim(), code).toBeTruthy();
   });

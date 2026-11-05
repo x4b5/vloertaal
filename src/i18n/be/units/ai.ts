@@ -252,3 +252,23 @@ export const de: Gloss = {
     'be.c.aiprivate.o3': "Du schickst den Bericht einem Freund zum Prüfen.", // nieuw, nalezen
     'be.c.aiprivate.w': "Namen und Adressen sind persönliche Daten. Sie dürfen nicht einfach an eine andere Firma gehen. Dein Arbeitgeber weiß, welche Apps erlaubt sind.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+  'be.c.aihelp': "AI waa ku caawisaa, qof ayaa hubiya", // nieuw, nalezen
+  'be.c.aihelp.b': "Barnaamijyada AI iyo chatbot-yada, sida ChatGPT, waxay kuu turjumi karaan, kuu sharxi karaan warqad ama kaa caawin karaan qorista fariin. Taasi waa faa'iido. Laakiin AI mararka qaarkood way khaldantaa, haddana aad bay u kalsoon tahay. Waxyaabaha muhiimka ah, sida qandaraaskaaga, mushaharkaaga, daawada ama badbaadada, had iyo jeer jawaabta la hubi qof: madaxaaga, waaxda shaqaalaha, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.aihelp.p': "Tani ma sax baa? Ma ila eegi kartaa?", // nieuw, nalezen
+  'be.c.aihelp.s': "Chatbot ayaad wax ka weydiisay qandaraaskaaga. Wuxuu leeyahay lacag fasax (vakantiegeld) ma helaysid. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.aihelp.o1': "Waaxda shaqaalaha ama ururka shaqaalaha ka codso inay hubiyaan.", // nieuw, nalezen
+  'be.c.aihelp.o2': "Rumayso: chatbot-ku aad buu u kalsoon yahay.", // nieuw, nalezen
+  'be.c.aihelp.o3': "Waxba ha odhan oo iska ilow.", // nieuw, nalezen
+  'be.c.aihelp.w': "Chatbot wuu ku khaldami karaa xeerarka iyo qandaraasyada. Beljiyam shaqaale kastaa wuxuu urursadaa lacag fasax. Qof yaqaan xeerarka ayaa hubin kara.", // nieuw, nalezen
+  'be.c.aiprivate': "Fakar intaadan qorin", // nieuw, nalezen
+  'be.c.aiprivate.b': "Waxa aad ku qorto chatbot waxaa kaydin kara oo isticmaali kara shirkadda samaysay. Sidaas darteed ha ku qorin rijksregisternummer-kaaga, furaha sirta ah ama macluumaadka bangigaaga. Ha gelin magacyada ama sawirrada macaamiisha, bukaannada ama saaxiibada shaqada, ama warqadaha shaqada: taasi waa macluumaad shakhsi ah, sharciga sirta (GDPR) ayaana ilaaliya. Loo-shaqeeyayaal badan waxay leeyihiin xeerar ku saabsan AI. Marka hore weydii inaad u isticmaali karto shaqadaada. Su'aal ma ka qabtaa siraha macluumaadkaaga? Hay'adda sirta (GBA) ayaa ku caawin karta. Si caddaalad darro ah ma laguula dhaqmay, xitaa barnaamij? Unia ayaa ku caawin karta. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+  'be.c.aiprivate.p': "Ma u isticmaali karaa AI tan?", // nieuw, nalezen
+  'be.c.aiprivate.s': "Waxaad rabtaa in chatbot uu qoro warbixin ku saabsan macmiil. Warbixinta waxaa ku jira magaca iyo cinwaanka macmiilka. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.aiprivate.o1': "Marka hore weydii, oo ka saar magaca iyo cinwaanka.", // nieuw, nalezen
+  'be.c.aiprivate.o2': "Wax walba chatbot-ka geli: way ka dhakhso badan tahay.", // nieuw, nalezen
+  'be.c.aiprivate.o3': "Warbixinta u dir saaxiib si uu u hubiyo.", // nieuw, nalezen
+  'be.c.aiprivate.w': "Magacyada iyo cinwaannada waa macluumaad shakhsi ah. Si fudud uma tegi karaan shirkad kale. Loo-shaqeeyahaagu wuu og yahay barnaamijyada la oggol yahay.", // nieuw, nalezen
+};

@@ -536,3 +536,45 @@ export const de: Gloss = {
   'be.c.nextstep.o3': "Nimm irgendeinen Job, und hör für immer auf zu lernen.", // nieuw, nalezen
   'be.c.nextstep.w': "Auch Erwachsene können noch lernen. In einem CVO kannst du deinen Abschluss machen. Der VDAB hat Kurse für viele Berufe, und für Arbeitsuchende sind viele kostenlos.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+  'be.l.nextstep': "Waxbarasho sii wadid dugsiga kadib", // nieuw, nalezen
+  'be.w.waarderen': "in la aqoonsado (shahaado)", // nieuw, nalezen
+  'be.w.bijbaan': "shaqada ardayga (shaqo yar oo dugsiga la socota)", // nieuw, nalezen
+  'be.w.meeloopdag': "tababarka tijaabada ah (booqasho gaaban si aad shaqada u aragto)", // nieuw, nalezen
+  'be.w.niveau2': "dugsiga sare (dhallinyarada, ilaa qiyaastii 18)", // nieuw, nalezen
+  'be.w.startkwalificatie': "waxbarashada dadka waaweyn (dugsi dadka waaweyn, CVO)", // nieuw, nalezen
+  'be.w.bbl': "waxbarasho labo-geesood ah (waxaad wax ku barataa shirkad iyo dugsi)", // nieuw, nalezen
+  'be.w.doorstromen': "koorsada VDAB (tababar xirfadeed)", // nieuw, nalezen
+  'be.w.aanmelden': "is-qorid, is-diiwaangelin (dugsi ama koorso)", // nieuw, nalezen
+  'be.w.opendag': "maalinta albaabada furan (waxaad booqan kartaa dugsi)", // nieuw, nalezen
+  'be.s.nextstep.1': "Waxaan rabaa inaan qaato shahaadada dugsiga sare.", // nieuw, nalezen
+  'be.s.nextstep.3': "Goorma ayay tahay maalinta albaabada furan?", // nieuw, nalezen
+  'be.c.nextstep.q': "Maxaad rabtaa inaad samayso marka xigta?", // nieuw, nalezen
+  'be.c.nextstep.a': "Waxaan doortay waxbarashada labo-geesoodka ah. Markaas waan shaqaynayaa oo wax baranayaa.", // nieuw, nalezen
+  'be.c.diploma': "Shahaadadaadu way tiriisaa", // nieuw, nalezen
+  'be.c.diploma.b': "Ma haysataa shahaado dal kale ka timid? Waxaad ka codsan kartaa NARIC-Vlaanderen inay aqoonsadaan. NARIC waxay la barbar dhigtaa shahaado Flanders ah. Qaxootiga la aqoonsaday wax kuma bixiyaan tan. Shaqooyinka qaarkood, sida kalkaalisada caafimaadka, waxaad u baahan tahay aqoonsi dheeraad ah. Tababar ma looga baahan yahay shaqadaada? Markaas loo-shaqeeyahaagu waa inuu bixiyaa, waxaana lagu tiriyaa waqtiga shaqada. Shaqaale badan waxay sidoo kale xaq u leeyihiin dhowr maalmood oo tababar ah sannad kasta. Madaxaaga ama VDAB weydii koorsooyinka. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  'be.c.diploma.p': "Ma jiraan koorsooyin aan qaadan karo?", // nieuw, nalezen
+  'be.c.diploma.s': "Loo-shaqeeyahaagu wuxuu leeyahay waa inaad Sabtida samaysaa tababar badbaado oo qasab ah, mushahar la'aan. Maxaa run ah?", // nieuw, nalezen
+  'be.c.diploma.o1': "Loo-shaqeeyaha ayaa bixiya, waana waqti shaqo.", // nieuw, nalezen
+  'be.c.diploma.o2': "Tababarku had iyo jeer waa waqtigaaga firaaqada.", // nieuw, nalezen
+  'be.c.diploma.o3': "Waa inaad adigu bixisaa tababarka.", // nieuw, nalezen
+  'be.c.diploma.w': "Haddii tababar looga baahan yahay shaqadaada, loo-shaqeeyaha ayaa bixiya, waxaana lagu tiriyaa waqtiga shaqada. Haddii aysan caddayn, talo weydii.", // nieuw, nalezen
+  'be.c.mychoice': "Awoodahaagu way tirsan yihiin", // nieuw, nalezen
+  'be.c.mychoice.b': "Maxaad ku fiican tahay? Ka fikir shaqada, dugsiga iyo guriga. Daryeelka qoyska, shaqada ardayga (studentenjob) ama shaqo tabarruc ah sidoo kale way tirsan yihiin. Maxaad jeceshahay, maxaadse necbahay? Ma hubtid shaqada kugu habboon? Codso tababar tijaabo ah oo gaaban (snuffelstage), ama tag maalinta albaabada furan (opendeurdag). Dugsiga, CLB ayaa bilaash kaaga caawisa doorashada. Dadka waaweyni waxay weydiin karaan VDAB.", // nieuw, nalezen
+  'be.c.mychoice.p': "Dadka si fiican ayaan ula dhaqmaa. Guriga wax badan ayaan ka caawiyaa.", // nieuw, nalezen
+  'be.c.mychoice.s': "Dugsiga waxay ku weydiinayaan: “Maxaad ku fiican tahay?” Weligaa ma lahayn shaqo lacag leh. Maxaad leedahay?", // nieuw, nalezen
+  'be.c.mychoice.o1': "Waxa aad guriga si fiican ugu qabato, sida daryeelka dadka kale.", // nieuw, nalezen
+  'be.c.mychoice.o2': "Inaadan weli garanayn, maxaa yeelay weligaa shaqo ma lahayn.", // nieuw, nalezen
+  'be.c.mychoice.o3': "Inaad qaban karto shaqo kasta, dhammaantood.", // nieuw, nalezen
+  'be.c.mychoice.w': "Xirfadaha guriga sidoo kale way tirsan yihiin. Daryeelka, qorsheynta iyo caawinta waa xirfado loo-shaqeeyayaashu u baahan yihiin. Sheeg waxa aad samaysay, tusaale la socota.", // nieuw, nalezen
+  'be.c.nextstep': "Shahaado, xitaa adoo qof weyn ah", // nieuw, nalezen
+  'be.c.nextstep.b': "Ka yar 18, waa inaad dugsi aadaa (leerplicht). Laga bilaabo 15 ama 16, waxaad sidoo kale wax ku baran kartaa shirkad iyo dugsi: waxbarasho labo-geesood ah (duaal leren). Ma ka weyn tahay, oo weli shahaado ma lihid? Waxbarashada dadka waaweyn (volwassenenonderwijs), CVO, weli waad ku qaadan kartaa shahaadadaada dugsiga sare. Waagii hore waxaa tan loogu yeeri jiray tweedekansonderwijs. Shaqo ma raadinaysaa? VDAB waxay leedahay koorsooyin shaqooyin badan. Dadka shaqo raadinaya, qaar badan waa bilaash. Tag maalinta albaabada furan (opendeurdag), oo VDAB ka codso caawimaad. Weli dugsi ma dhigataa? Weydii CLB.", // nieuw, nalezen
+  'be.c.nextstep.p': "Ma weli qaadan karaa shahaadadayda anigoo qof weyn ah?", // nieuw, nalezen
+  'be.c.nextstep.s': "Waxaad tahay 24 jir oo ma lihid shahaadada dugsiga sare. Waxaad rabtaa shaqo ka wanaagsan. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.nextstep.o1': "Weydii VDAB ama CVO sida aad shahaadadaada u qaadan karto.", // nieuw, nalezen
+  'be.c.nextstep.o2': "Sug: 24 jir waad u weyn tahay waxbarasho.", // nieuw, nalezen
+  'be.c.nextstep.o3': "Qaado shaqo kasta, oo gebi ahaanba jooji waxbarashada.", // nieuw, nalezen
+  'be.c.nextstep.w': "Dadka waaweyni weli wax way baran karaan. CVO waxaad ku qaadan kartaa shahaadadaada. VDAB waxay leedahay koorsooyin shaqooyin badan, dadka shaqo raadinayana qaar badan waa bilaash.", // nieuw, nalezen
+};

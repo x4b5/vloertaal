@@ -12,7 +12,7 @@ import { parseAst, type Plugin } from 'vite';
  * the other languages. The source files stay as they are; tests/beLangSplit.test.ts checks it.
  */
 
-export const BE_LANGS = ['ar', 'ti', 'fa', 'prs', 'uk', 'tr', 'pl', 'ro', 'bg', 'es', 'pt', 'fr', 'de'] as const;
+export const BE_LANGS = ['ar', 'ti', 'fa', 'prs', 'so', 'uk', 'tr', 'pl', 'ro', 'bg', 'es', 'pt', 'fr', 'de'] as const;
 
 const QUERY = '?be-lang=';
 /** A language's own Belgian file: src/i18n/be/pl.ts (not base.ts or types.ts). */

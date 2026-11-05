@@ -16,7 +16,7 @@
 
 export type Status = 'nieuw, nalezen' | 'nagelezen AI' | 'ongemarkeerd' | 'nagekeken';
 
-export const LANGS = ['ar', 'ti', 'fa', 'prs', 'uk', 'tr', 'pl', 'ro', 'bg', 'es', 'pt', 'fr', 'de'] as const;
+export const LANGS = ['ar', 'ti', 'fa', 'prs', 'so', 'uk', 'tr', 'pl', 'ro', 'bg', 'es', 'pt', 'fr', 'de'] as const;
 export type Lang = (typeof LANGS)[number];
 export const isLang = (x: string): x is Lang => (LANGS as readonly string[]).includes(x);
 

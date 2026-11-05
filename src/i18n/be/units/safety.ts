@@ -159,3 +159,16 @@ export const de: Gloss = {
     "be.c.accident.o3": "Warte ab, ob der Schmerz von selbst weggeht.", // = c.accident.o3
     "be.c.accident.w": "Melde es am selben Tag, auch wenn es klein scheint: Der Schmerz kann später schlimmer werden. Dein Arbeitgeber darf dich nicht bestrafen, weil du es meldest. Du arbeitest über eine Zeitarbeitsfirma? Sag es auch dort.", // nieuw, nalezen // nagelezen AI ronde 3
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+    "be.w.bhver": "gargaaraha degdegga ah ee shirkadda", // nieuw, nalezen
+    "be.c.accident": "Sheeg shil kasta", // nieuw, nalezen
+    "be.c.accident.b": "U sheeg madaxaaga ama EHBO’er (gargaaraha degdegga ah ee shirkadda) shil kasta, xitaa mid yar. Ma waxaad ka shaqeysaa xafiis shaqo-qoris (interimkantoor)? Sidoo kale u sheeg xafiiska shaqo-qorista. Haddii ay xaalad degdeg ah tahay, marka hore wac 112. Loo-shaqeeyahaagu shilka wuxuu u sheegaa caymiskiisa shilalka shaqada (arbeidsongevallenverzekeraar): isagaa bixiya kharashka daryeelka. Shil culus waxaa sidoo kale loo sheegaa Toezicht op het Welzijn op het Werk. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+    "be.c.accident.p": "Saaxiibkay shaqada wuu dhaawacmay. Xaggee buu joogaa gargaaraha degdegga ah?", // nieuw, nalezen
+    "be.c.accident.s": "Dhabarka ayaad ku dhaawacantay adigoo wax qaadaya. Waxaad ka baqaysaa inaad shaqada waydo. Maxaad samaynaysaa?", // nieuw, nalezen
+    "be.c.accident.o1": "Isla maalintaas u sheeg madaxaaga.", // nieuw, nalezen
+    "be.c.accident.o2": "Waxba ha odhan, si aadan shaqada u waayin.", // nieuw, nalezen
+    "be.c.accident.o3": "Sug oo eeg in xanuunku iskiis u tago.", // nieuw, nalezen
+    "be.c.accident.w": "Isla maalintaas sheeg, xitaa haddii uu u muuqdo mid yar: xanuunku goor dambe wuu sii xumaan karaa. Loo-shaqeeyahaaga looma oggola inuu kuu ciqaabo inaad sheegtay. Ma waxaad ka shaqeysaa xafiis shaqo-qoris? Sidoo kale u sheeg xafiiska shaqo-qorista.", // nieuw, nalezen
+};

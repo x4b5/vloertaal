@@ -159,3 +159,16 @@ export const de: Gloss = {
   "be.c.backtowork.o3": "Du gehst ohne ein Wort nach Hause.", // nieuw, nalezen
   "be.c.backtowork.w": "Dein Vorgesetzter will dich zurück, und zwar gesund. Wenn du deutlich sagst, was du kannst, kann er die Arbeit planen. Zu viel zu früh kann dich wieder krank machen.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {
+  "be.s.backtowork.3": "Dhakhtarka shaqadu wuxuu leeyahay: si tartiib ah u kordhi.", // nieuw, nalezen
+  "be.c.backtowork": "Ku soo noqoshada tallaabo tallaabo", // nieuw, nalezen
+  "be.c.backtowork.b": "Ma ka bogsatay? U sheeg loo-shaqeeyahaaga ka hor inta aadan soo noqon, xitaa haddii ay ka horreyso taariikhda warqadda dhakhtarku sheegayso. Xanuun dheer kadib, inta badan waxaad bilaabaysaa tallaabo tallaabo: marka hore saacado yar, ama shaqo fudud. Dhakhtarka shaqada (arbeidsarts) ayaa eega shaqada aad qaban karto. Muddo dheer ma xanuunsanayd? Markaas adiga, loo-shaqeeyahaaga iyo arbeidsarts ayaa wada samayn kara qorshe aad ku soo noqonayso (re-integratietraject). Ma lacag kaalmo ah ayaad ka helaysaa ziekenfonds (sanduuqa caafimaadka)? Markaas marka hore weydii ziekenfonds, ka hor inta aadan qayb-waqti shaqeyn. Si cad u sheeg waxa aad qaban karto, iyo waxa aadan weli qaban karin. Uma baahnid inaad saaxiibada shaqada u sheegto cudurka aad qabtay. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama justitiehuis (talo sharci oo bilaash ah).", // nieuw, nalezen
+  "be.c.backtowork.p": "Tan hadda waan qaban karaa. Taas weli ma qaban karo.", // nieuw, nalezen
+  "be.c.backtowork.s": "Saddex toddobaad ayaad xanuunsanayd. Maalintaada ugu horreysa ee aad soo noqoto, madaxaagu wuxuu kaa codsanayaa inaad qaaddo sanduuqyo culus. Dhakhtarka shaqadu wuxuu yidhi: hadda shaqo fudud oo keliya. Maxaad samaynaysaa?", // nieuw, nalezen
+  "be.c.backtowork.o1": "Si deggan u sheeg inaad hadda qaban karto shaqo fudud, iyo waxa aadan weli qaban karin.", // nieuw, nalezen
+  "be.c.backtowork.o2": "Sanduuqyada si kastaba u qaad: ma rabtid inaad dhib abuurto.", // nieuw, nalezen
+  "be.c.backtowork.o3": "Guriga aad adigoon hal eray odhan.", // nieuw, nalezen
+  "be.c.backtowork.w": "Madaxaagu wuxuu rabaa inaad soo noqoto, adigoo caafimaad qaba. Markaad si cad u sheegto waxa aad qaban karto, wuu qorsheyn karaa shaqada. Shaqo badan oo goor hore ah ayaa mar kale ku xanuunin karta.", // nieuw, nalezen
+};
