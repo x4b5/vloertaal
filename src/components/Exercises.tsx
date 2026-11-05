@@ -4,7 +4,9 @@ import { sayingQuestion } from '../content/sayings';
 import { gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { checkTyped, nextTileOrder, sentenceOrders, typoMarks } from '../lib/answers';
-import { autoSpeak, autoSpeakAt, onSpeech, sounds, speak } from '../lib/audio';
+import { autoSpeak, autoSpeakAt, onSpeech, sounds, speak, surelySilent } from '../lib/audio';
+import { followSayAloud, sayMode, stillInMs, type SayMode } from '../lib/sayAloud';
+import { dutchUi } from '../lib/track';
 import { allTiles, buildSteps, choicePictures, frontSteps, matchAsked, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, sentences, wordSize } from '../lib/dutch';
@@ -12,7 +14,7 @@ import { Bi, HelpText } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
 import { CAST, castFor, Character, colleaguesOf, MeAvatar, snapColleague, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
-import { CheckIcon, ChevronDownIcon, CloseIcon, SpeakerIcon } from './Icons';
+import { CheckIcon, ChevronDownIcon, CloseIcon, MouthIcon, SpeakerIcon } from './Icons';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
@@ -198,8 +200,15 @@ function Prompt({ text, quiet = false }: { text: Bilingual; quiet?: boolean }) {
   );
 }
 
-export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
+export function IntroCard({ ex, lang, onAnswer, soundOff = false }: Props<'intro'> & {
+  /** "Zonder geluid" (or "Ik kan nu niet luisteren"): the say-it line asks to say it softly, at once. */
+  soundOff?: boolean;
+}) {
   const { word } = ex;
+  const card = useRef<HTMLDivElement>(null);
+  // "Zeg het hardop" under the card (src/lib/sayAloud.ts). Followed before the word is said
+  // (this effect runs before the one that says it), so its start is never missed.
+  const say = useSayAloud(word.nl, sayMode(soundOff, surelySilent(word.nl)), () => stillInMs(card.current?.querySelector('.word-pic')));
   // "Tap to hear" on the word cards of the first lessons only: the word plays by itself, and after
   // a few cards the big speaker says it (the owner's choice, 2 November 2026). A screen reader
   // still hears it as the card's heading.
@@ -216,7 +225,7 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
     <div className="exercise">
       <Prompt text={ui('tapToHear', lang)} quiet={!hint} />
       {/* Abstract words get no picture (it would mislead): a calm word card, word + sound + gloss. */}
-      <div className={`card intro-card ${introPicture(word) ? '' : 'intro-word-only'}`}>
+      <div ref={card} className={`card intro-card ${introPicture(word) ? '' : 'intro-word-only'}`}>
         {introPicture(word) && <WordPicture key={play} className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />}
         <div className={`intro-nl ${wordSize(word.nl)}`}>
           <span lang="nl">{breakable(word.nl)}</span>
@@ -232,7 +241,57 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
           <Bi className="intro-meaning" text={gloss(word.id, word.en, lang)} />
         )}
       </div>
+      {/* Not in the work-rules track (it has no word cards; its screens are Dutch only). */}
+      {!dutchUi(lang) && <SayAloudLine {...say} lang={lang} />}
     </div>
+  );
+}
+
+/**
+ * The say-it line's state on a word card: shown (with its text) and how often the "your turn"
+ * sign has played. Before it shows, the line keeps its place (hidden), so nothing below moves.
+ */
+function useSayAloud(text: string, mode: SayMode, stillIn: () => number): { shown: SayMode | null; pulse: number } {
+  const [shown, setShown] = useState<SayMode | null>(mode === 'quiet' ? 'quiet' : null);
+  const [pulse, setPulse] = useState(0);
+  const still = useRef(stillIn);
+  still.current = stillIn;
+  const up = useRef(shown !== null);
+  up.current = shown !== null;
+  /** The mode the line was followed in before (null: this card's first). */
+  const before = useRef<SayMode | null>(null);
+  useEffect(() => {
+    // The sound switched on or off while the line is up: it keeps its place, its text follows.
+    const was = up.current && before.current !== null && before.current !== mode;
+    before.current = mode;
+    return followSayAloud(text, mode, { shown: setShown, pulse: () => setPulse((n) => n + 1) }, { stillIn: () => still.current() }, was);
+  }, [text, mode]);
+  return { shown, pulse };
+}
+
+/** The Dutch of the two lines, written here (as NlPair's nl elsewhere): importing src/i18n/nl.ts
+ *  would put the whole Dutch UI in the start bundle (5 November 2026, the bundle-size check). */
+const SAY_NL = { sayItAloud: 'Zeg het hardop.', sayItQuietly: 'Zeg het zachtjes, of in je hoofd.' } as const;
+
+/** "Zeg het hardop." (or softly, in your head) in Dutch and the help language, with three dots
+ *  that light up after each other once ("your turn"), then stand still. Not a button. */
+function SayAloudLine({ shown, pulse, lang }: { shown: SayMode | null; pulse: number; lang?: HelpLanguage }) {
+  const key = shown === 'quiet' ? 'sayItQuietly' : 'sayItAloud';
+  const text = ui(key, lang);
+  return (
+    <p className={`say-aloud ${shown ? '' : 'is-waiting'}`} aria-hidden={shown ? undefined : true}>
+      <MouthIcon size={22} />
+      <span className="say-aloud-text">
+        {/* The Dutch keeps its own direction in a right-to-left screen (its full stop at its end,
+            also when it wraps), set to the right there (styles.css). */}
+        <span className="say-aloud-nl" lang="nl" dir="ltr">{SAY_NL[key]}</span>
+        {text.help && text.lang ? <HelpText text={text.help} lang={text.lang} /> : <span className="bi-help" lang="en">{text.en}</span>}
+      </span>
+      {/* A new key replays the dots (a new element starts its animation again). */}
+      <span key={pulse} className={`say-aloud-dots ${pulse ? 'is-pulsing' : ''}`} aria-hidden>
+        <i /><i /><i />
+      </span>
+    </p>
   );
 }
 

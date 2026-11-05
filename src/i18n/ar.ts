@@ -31,6 +31,8 @@ const lang: HelpLanguageSource = {
     locked: { m: 'أكمل الدرس السابق أولاً', f: 'أكملي الدرس السابق أولاً', x: 'يجب إكمال الدرس السابق أولاً' }, // x: nieuw, nalezen
     newWord: 'كلمة جديدة',
     tapToHear: { m: 'اضغط للاستماع', f: 'اضغطي للاستماع' },
+    sayItAloud: { m: 'قلها بصوت عالٍ.', f: 'قوليها بصوت عالٍ.', x: 'النطق بها بصوت عالٍ.' }, // nieuw, nalezen
+    sayItQuietly: { m: 'قلها بصوت خافت، أو في ذهنك.', f: 'قوليها بصوت خافت، أو في ذهنكِ.', x: 'النطق بها بصوت خافت، أو في الذهن.' }, // nieuw, nalezen
     whatDoesThisMean: 'ما معنى هذا؟',
     snapQuestion: { m: 'هل فهمت؟', f: 'هل فهمتِ؟', x: 'هل الأمر مفهوم؟' }, // nieuw, nalezen
     snapYes: 'نعم، حسناً.', // nieuw, nalezen

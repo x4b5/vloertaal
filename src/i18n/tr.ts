@@ -31,6 +31,8 @@ const lang: HelpLanguageSource = {
     locked: 'Önce bir önceki dersi bitir',
     newWord: 'Yeni kelime',
     tapToHear: 'Dinlemek için dokun',
+    sayItAloud: 'Sesli söyle.', // nieuw, nalezen
+    sayItQuietly: 'Sessizce ya da içinden söyle.', // nieuw, nalezen
     whatDoesThisMean: 'Bu ne demek?',
     snapQuestion: 'Anladın mı?', // nieuw, nalezen
     snapYes: 'Evet, tamam.', // nieuw, nalezen

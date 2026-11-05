@@ -958,7 +958,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   };
   let body: React.ReactNode;
   switch (ex.kind) {
-    case 'intro': body = <IntroCard key={key} ex={ex} {...props} />; break;
+    // "Zeg het hardop" under a new word's card asks to say it softly without sound (src/lib/sayAloud.ts).
+    case 'intro': body = <IntroCard key={key} ex={ex} {...props} soundOff={soundOff} />; break;
     case 'meaning': body = <MeaningExercise key={key} ex={ex} {...props} />; break;
     case 'dutch': body = <DutchExercise key={key} ex={ex} {...props} />; break;
     case 'listen': body = <ListenExercise key={key} ex={ex} {...props} />; break;

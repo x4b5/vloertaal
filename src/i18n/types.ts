@@ -11,6 +11,10 @@ export const uiEn = {
   locked: 'Finish the lesson before this one first',
   newWord: 'New word',
   tapToHear: 'Tap to hear',
+  // Under a new word's card, after it has sounded (src/lib/sayAloud.ts; the owner's request, 5 November 2026).
+  sayItAloud: 'Say it out loud.',
+  /** The same without sound ("Zonder geluid") or when nothing can play it. */
+  sayItQuietly: 'Say it softly, or in your head.',
   whatDoesThisMean: 'What does this mean?',
   /** "Snap je het?" in today's review (src/components/Exercises.tsx SnapExercise): a colleague said a known sentence at the real pace. The Dutch is on screen too. */
   snapQuestion: 'Do you get it?',

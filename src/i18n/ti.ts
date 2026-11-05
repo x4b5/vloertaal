@@ -31,6 +31,8 @@ const lang: HelpLanguageSource = {
     locked: { m: 'ቅድም ነቲ ዝቐደመ ትምህርቲ ወድኦ', f: 'ቅድም ነቲ ዝቐደመ ትምህርቲ ወድእዮ' },
     newWord: 'ሓድሽ ቃል',
     tapToHear: { m: 'ክትሰምዕ ጠውቕ', f: 'ክትሰምዒ ጠውቒ', x: 'ክትሰምዑ ጠውቑ' }, // x: nieuw, nalezen
+    sayItAloud: { m: 'ብዓው ኢልካ በሎ።', f: 'ብዓው ኢልኪ በልዮ።', x: 'ብዓው ኢልኩም በልዎ።' }, // nieuw, nalezen
+    sayItQuietly: { m: 'ቀስ ኢልካ በሎ፡ ወይ ኣብ ሓሳብካ።', f: 'ቀስ ኢልኪ በልዮ፡ ወይ ኣብ ሓሳብኪ።', x: 'ቀስ ኢልኩም በልዎ፡ ወይ ኣብ ሓሳብኩም።' }, // nieuw, nalezen
     whatDoesThisMean: 'እዚ እንታይ ማለት እዩ?',
     snapQuestion: { m: 'ተረዲኡካ ድዩ?', f: 'ተረዲኡኪ ድዩ?', x: 'ተረዲኡኩም ድዩ?' }, // nieuw, nalezen
     snapYes: 'እወ፣ ሕራይ።', // nieuw, nalezen
