@@ -436,6 +436,19 @@ const PENDING_RECORDING = new Set<string>([
   'Ik snap het, denk ik.',
   'Mooi. Laat eens zien.',
   'Goed zo! Nu de volgende stap.',
+  // New lesson "Weer aan het werk na ziekte" (l.backtowork, u.sick), 5 November 2026, with its tip's phrase:
+  'opbouwen',
+  'halve dagen',
+  'licht werk',
+  'zwaar werk',
+  'herstellen',
+  'welkom terug',
+  'Ik begin met halve dagen.',
+  'Licht werk kan ik al. Zwaar werk nog niet.',
+  'De bedrijfsarts zegt: rustig opbouwen.',
+  'Welkom terug! Gaat het weer?',
+  'Ja, het gaat beter. Ik doe het rustig aan.',
+  'Dit kan ik al. Dat kan ik nog niet.',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

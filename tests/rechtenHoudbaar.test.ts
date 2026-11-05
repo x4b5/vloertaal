@@ -64,10 +64,11 @@ describe('docs/juridische-check.md has every Taal tip with a legal closing line'
     return end ? [{ t, end }] : [];
   });
 
-  // 32 since 5 November 2026: c.road (Vervoer en bezorging, the abuse line).
-  it('32 tips end with the advice or the abuse line (30 of the work units, c.accident and c.sick)', () => {
-    expect(legal).toHaveLength(32);
-    for (const id of ['c.permit', 'c.kids', 'c.jobends', 'c.harvest', 'c.greensafe', 'c.workshop', 'c.power', 'c.carjob']) expect(legal.map(({ t }) => t.id)).toContain(id);
+  // 33 since 5 November 2026: c.road (Vervoer en bezorging, the abuse line) and c.backtowork
+  // ("Back to work after illness", unit Ziekte).
+  it('33 tips end with the advice or the abuse line (31 of the work units, c.accident and c.sick)', () => {
+    expect(legal).toHaveLength(33);
+    for (const id of ['c.permit', 'c.kids', 'c.jobends', 'c.harvest', 'c.greensafe', 'c.workshop', 'c.power', 'c.carjob', 'c.backtowork', 'c.road']) expect(legal.map(({ t }) => t.id)).toContain(id);
   });
 
   it('each one has its own section, with the English text and the closing line as in the app', () => {
@@ -189,9 +190,10 @@ describe('a Taal tip "about rights": one with a legal closing line', () => {
     setBeTaal(null);
   });
 
-  it('is each of the 32 tips with the advice or abuse line, a region tip with one, and no other', () => {
+  it('is each of the 33 tips with the advice or abuse line, a region tip with one, and no other', () => {
     const rights = cultureTips.filter((t) => rightsTipCountry(t) === 'nl').map((t) => t.id);
-    expect(rights).toHaveLength(32);
+    // 33 (5 November 2026): with c.road and c.backtowork.
+    expect(rights).toHaveLength(33);
     expect(rights).toEqual(expect.arrayContaining(['c.accident', 'c.sick', 'c.permit', 'c.harvest', 'c.carjob', 'c.gethelp']));
     // House rules ("ask your supervisor") and social norms (no line) are not about rights.
     for (const id of ['c.je', 'c.smoking', 'c.clock', 'c.respect']) expect(rightsTipCountry(cultureTips.find((t) => t.id === id)!), id).toBeNull();

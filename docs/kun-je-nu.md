@@ -27,7 +27,7 @@ niveau**, geen toets en geen bewijs van een niveau.
 De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland, Jouw sector
 (`src/i18n/kunjenu/`, gemarkeerd met "nieuw, nalezen"). Werkregels is alleen Nederlands.
 
-## Taal (41 onderwerpen, 94 zinnen)
+## Taal (42 onderwerpen, 97 zinnen)
 
 | Onderwerp | Zinnen | Past bij |
 |---|---|---|
@@ -61,8 +61,11 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan zeggen dat ik ziek ben. | A1 · spreken |
 | Loon | Ik kan zeggen dat mijn loonstrook niet klopt. | op weg naar A2 · spreken |
 |  | Ik kan woorden als bruto en netto lezen. | op weg naar A2 · lezen |
-| Verlof en ziekte | Ik kan verlof aanvragen. | op weg naar A2 · spreken |
-|  | Ik kan me ziek melden en beter melden. | op weg naar A2 · gesprekken |
+| Verlof | Ik kan verlof aanvragen. | op weg naar A2 · spreken |
+|  | Ik kan zeggen dat mijn kind ziek is. | op weg naar A2 · gesprekken |
+| Ziekte | Ik kan me ziek melden en beter melden. | op weg naar A2 · gesprekken |
+|  | Ik kan zeggen wat ik nog niet kan. | op weg naar A2 · spreken |
+|  | Ik kan zeggen dat ik eerst halve dagen werk. | op weg naar A2 · gesprekken |
 | Bellen en appen met je werk | Ik kan bellen en zeggen wie ik ben. | A1 · gesprekken |
 |  | Ik kan vragen of iemand mij terugbelt. | op weg naar A2 · spreken |
 |  | Ik kan een kort bericht aan mijn werk schrijven. | op weg naar A2 · schrijven |

@@ -119,9 +119,17 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan zeggen dat mijn loonstrook niet klopt.', 'A2', 'spreken', 'I can say that my payslip is not right.'],
     ['Ik kan woorden als bruto en netto lezen.', 'A2', 'lezen', 'I can read words like bruto and netto.'],
   ]),
-  onderwerp('u.leave', 'Verlof en ziekte', [
+  // "Verlof en ziekte" became two topics on 5 November 2026: the first sentence stays with Verlof
+  // (same id), the second goes to Ziekte (now kjn.u.sick.1); kjn.u.leave.2 is new (l.kids).
+  onderwerp('u.leave', 'Verlof', [
     ['Ik kan verlof aanvragen.', 'A2', 'spreken', 'I can ask for leave.'],
+    ['Ik kan zeggen dat mijn kind ziek is.', 'A2', 'gesprekken', 'I can say that my child is sick.'],
+  ]),
+  onderwerp('u.sick', 'Ziekte', [
     ['Ik kan me ziek melden en beter melden.', 'A2', 'gesprekken', 'I can call in sick and report back when I am better.'],
+    // l.backtowork "Weer aan het werk na ziekte" (5 November 2026).
+    ['Ik kan zeggen wat ik nog niet kan.', 'A2', 'spreken', 'I can say what I cannot do yet.'],
+    ['Ik kan zeggen dat ik eerst halve dagen werk.', 'A2', 'gesprekken', 'I can say that I work half days at first.'],
   ]),
   onderwerp('u.contact', 'Bellen en appen met je werk', [
     ['Ik kan bellen en zeggen wie ik ben.', 'A1', 'gesprekken', 'I can call and say who I am.'],

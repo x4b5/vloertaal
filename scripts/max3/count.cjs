@@ -390,6 +390,9 @@ function defineStates(LANG) {
   add('route:topic', shot('topic&cu=u.firstday&state=mid'), null, { list: true });
   add('route:topic-done', shot('topic&cu=u.firstday&state=shelf'), null, { list: true });
   add('route:topic-locked', shot('topic&cu=u.pay&state=mid&access=preview'), null, { list: true });
+  // "Verlof" and "Ziekte", two topics since 5 November 2026: each topic page.
+  add('route:topic-leave', shot('topic&cu=u.leave&state=mid'), null, { list: true });
+  add('route:topic-sick', shot('topic&cu=u.sick&state=mid'), null, { list: true });
   // "Luister op de werkvloer" (stap 2): only with mixes in public/audio-scenes (none committed;
   // a test mp3 for the count, docs/geluidsscenes.md). Without them these states are left out, so a
   // run on a clean checkout is not red for a feature that is not there yet. The topic page with
@@ -538,6 +541,12 @@ function defineStates(LANG) {
   // sentence to build, the chat ("Mooi. Laat eens zien.") and typing "het geduld".
   for (const [key, at] of [['word-abstract', 0], ['intro', 7], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:newcolleague-${key}`, shot(`lesson&lesson=l.newcolleague&at=${at}`));
+  }
+  // "Weer aan het werk na ziekte" (l.backtowork, seed 1, 5 November 2026): its first word card
+  // (a memory picture), "licht werk" (a new drawing), "herstellen" (abstract), the tip and its
+  // situation, listening, a picture choice, building, the chat and typing.
+  for (const [key, at] of [['intro', 0], ['word-picture', 3], ['word-abstract', 6], ['tip', 9], ['tip-say', 10], ['situation', 11], ['listen', 13], ['pick', 14], ['build', 15], ['chat', 18], ['type', 20]]) {
+    add(`lesson:backtowork-${key}`, shot(`lesson&lesson=l.backtowork&at=${at}`));
   }
   // "Getallen" (l.counting, seed 1, 4 November 2026): a number's word card (a label with its
   // digits), "what does it mean" with its partner (dertien or dertig), "which one is 47" (text

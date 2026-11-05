@@ -116,10 +116,14 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.health': L('C', 'C', 'Arbowet, Arbeidsinspectie, pauze na 5,5 uur → Welzijnswet, Arbeidswet, pauze na 6 uur, Toezicht op de Sociale Wetten'),
     'l.rights': L('B', 'C', 'het Juridisch Loket → het justitiehuis; ontslag via UWV, vaststellingsovereenkomst, FNV, WW → opzegtermijn, C4, ABVV/ACV/ACLVB'),
   } },
+  // "Verlof en ziekte" became "Verlof" (u.leave) and "Ziekte" (u.sick) on 5 November 2026.
   'u.leave': { kind: 'B', lessons: {
     'l.leave': L('B', 'B', 'het calamiteitenverlof → het verlof om dwingende redenen (zonder loon)'),
-    'l.illness': L('B', 'C', 'de bedrijfsarts → de arbeidsarts; 70% voor 2 jaar, wachtdag → gewaarborgd loon, dan het ziekenfonds'),
     'l.kids': L('B', 'B', 'calamiteitenverlof; ouderschapsverlof en zorgverlof anders geregeld (RVA)'),
+  } },
+  'u.sick': { kind: 'B', lessons: {
+    'l.illness': L('B', 'C', 'de bedrijfsarts → de arbeidsarts; 70% voor 2 jaar, wachtdag → gewaarborgd loon, dan het ziekenfonds'),
+    'l.backtowork': L('B', 'C', 'de bedrijfsarts → de arbeidsarts (zin 3); Wet verbetering poortwachter → het re-integratietraject met de arbeidsarts; deeltijds werken met een uitkering: eerst het ziekenfonds vragen. "herstellen" is in Vlaanderen ook "repareren" (de vertaling zegt "recover"; nakijken door een Vlaamse NT2-docent)'),
   } },
   'u.exploit': { kind: 'B', lessons: {
     'l.warning': L('B', 'A', 'zin "Ik krijg geen loonstrook." → loonbrief; de tip: alleen de slotregel'),

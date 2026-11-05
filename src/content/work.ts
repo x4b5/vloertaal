@@ -334,10 +334,15 @@ const coreUnits: Unit[] = [
       },
     ],
   },
+  // "Verlof" and "Ziekte" were one unit, "Verlof en ziekte" (u.leave), until 5 November 2026 (the
+  // owner's request: two topics, and a new lesson about coming back after an illness). u.leave keeps
+  // its id (progress and certificates stay): Days off and Children and work (leaveMore below).
+  // "Sick at home" (l.illness, same id) moved to the new unit u.sick, with "Back to work after
+  // illness" (sickMore below). Course order: Ziekte right after Verlof (workUnits).
   {
     id: 'u.leave',
-    title: 'Leave and sickness',
-    titleNl: 'Verlof en ziekte',
+    title: 'Leave',
+    titleNl: 'Verlof',
     emoji: '🌴',
     color: '#b5487a',
     lessons: [
@@ -364,6 +369,15 @@ const coreUnits: Unit[] = [
           ),
         ],
       },
+    ],
+  },
+  {
+    id: 'u.sick',
+    title: 'Illness',
+    titleNl: 'Ziekte',
+    emoji: '🩹',
+    color: '#2f7f6f',
+    lessons: [
       {
         id: 'l.illness',
         title: 'Sick at home',
@@ -1001,7 +1015,7 @@ const socialTips = [
   ),
 ];
 
-// ---- After "Leave and sickness": exploitation, calling work, diplomas, health, money, travel, losing your job ----
+// ---- After "Leave" and "Illness": exploitation, calling work, diplomas, health, money, travel, losing your job ----
 
 const laterUnits: Unit[] = [
   unit('exploit', 'Know your rights: exploitation', 'Uitbuiting herkennen', '🛑', '#9b2c2c', [
@@ -2599,9 +2613,9 @@ const contractMore: Lesson[] = [
   ),
 ];
 
-// ---- Leave and sickness: lesson 3 (30 October 2026) ----
+// ---- Leave: lesson 2 (30 October 2026; lesson 3 of "Verlof en ziekte" until 5 November 2026) ----
 // Children and work. "het calamiteitenverlof" (w.calamiteitenverlof, l.leave) and "doorbetalen"
-// (w.doorbetalen, l.illness) are words of the other lessons of this unit: here they come in the
+// (w.doorbetalen, l.illness, now in "Ziekte") are words of other lessons: here they come in the
 // sentences and the tip.
 
 const leaveMore: Lesson[] = [
@@ -2622,6 +2636,36 @@ const leaveMore: Lesson[] = [
       ['Betaalt mijn werkgever mijn loon door?', 'Does my employer keep paying my wage?'],
     ],
     [['Waarom moet je nu weg?', 'Why do you have to leave now?'], ['De kinderopvang belde. Mijn zoon heeft koorts.', 'The daycare called. My son has a fever.']],
+  ),
+];
+
+// ---- Illness: lesson 2 (5 November 2026) ----
+// Back to work after illness (the owner's request): betermelden, the company doctor, building up
+// calmly (fewer hours or lighter work first), saying what you can and cannot do yet, and coming
+// back to your colleagues. About coming back well, not about staying home: calm, no guilt.
+// "betermelden" and "de bedrijfsarts" (l.illness), "rustig" (l.clear) and "nog niet" (l.notyet)
+// are words of other lessons: here they come in the sentences, the chat and the tip. "licht
+// werk" and "zwaar werk" are a pair with drawings; "opbouwen" and "halve dagen" have a memory
+// picture; "herstellen" has none.
+
+const sickMore: Lesson[] = [
+  lesson(
+    'backtowork',
+    'Back to work after illness',
+    [
+      ['opbouwen', 'opbouwen', 'to build up (slowly, step by step)', '📈', 'hook'],
+      ['halvedagen', 'halve dagen', 'half days (you work part of the day)', '🌗', 'hook'],
+      ['lichtwerk', 'licht werk', 'light work (not heavy)', '🪶'],
+      ['zwaarwerk', 'zwaar werk', 'heavy work', '🏋️'],
+      ['herstellen', 'herstellen', 'to recover, to get well again', '🌱', false],
+      ['welkomterug', 'welkom terug', 'welcome back', '🤗'],
+    ],
+    [
+      ['Ik begin met halve dagen.', 'I am starting with half days.'],
+      ['Licht werk kan ik al. Zwaar werk nog niet.', 'I can already do light work. Heavy work not yet.'],
+      ['De bedrijfsarts zegt: rustig opbouwen.', 'The company doctor says: build up slowly.'],
+    ],
+    [['Welkom terug! Gaat het weer?', 'Welcome back! Are you feeling better?'], ['Ja, het gaat beter. Ik doe het rustig aan.', 'Yes, it is going better. I am taking it easy.']],
   ),
 ];
 
@@ -2660,6 +2704,30 @@ const moreTips = [
       'Stay at work, and let your child wait until your shift ends.',
     ],
     'A sick child is an emergency at home. When you tell your supervisor first, they can plan the work. Emergency leave is for moments like this.',
+    ADVICE_LINE,
+  ),
+  // "Weer aan het werk na ziekte" (l.backtowork, 5 November 2026). Coming back well, no guilt.
+  // ⚖️ check: Sick for a longer time? Then you and your employer make a plan together for your
+  // return ⚖️ (Wet verbetering poortwachter: BW 7:658a, the employer works on the return; BW 7:660a,
+  // the worker helps; Regeling procesgang eerste en tweede ziektejaar: probleemanalyse by the
+  // bedrijfsarts in week 6, plan van aanpak in week 8). The tip names the law in simple words only.
+  // ⚖️ check: The company doctor gives advice about what work you can do ⚖️ (Arbowet art. 14: the
+  // bedrijfsarts advises in the verzuimbegeleiding; medical secrecy, so no diagnosis to the employer).
+  // Not a right: building up with fewer hours or lighter work is usual practice ("often"), and
+  // betermelden goes as the company's absence rules (verzuimprotocol) say. More in docs/juridische-check.md.
+  tipFor(
+    'backtowork',
+    '🤗',
+    'Coming back step by step',
+    'Are you better? Tell your employer that you can work again (betermelden). After a longer illness, you often start step by step: first fewer hours, or lighter work. The company doctor (bedrijfsarts) gives advice about what you can do. Sick for a longer time? Then you and your employer make a plan together for your return. That is the law (Wet verbetering poortwachter). Say clearly what you can do, and what not yet. You do not have to tell colleagues what illness you had.',
+    ['Dit kan ik al. Dat kan ik nog niet.', 'I can already do this. I cannot do that yet.'],
+    'You were sick for three weeks. On your first day back, your supervisor asks you to lift heavy boxes. The company doctor said: only light work for now. What do you do?',
+    [
+      'Say calmly that you can do light work now, and what you cannot do yet.',
+      'Lift the boxes anyway: you do not want to be difficult.',
+      'Go home without a word.',
+    ],
+    'Your supervisor wants you back, and healthy. When you say clearly what you can do, they can plan the work. Doing too much too soon can make you sick again.',
     ADVICE_LINE,
   ),
 ];
@@ -3518,6 +3586,8 @@ export const workUnits: Unit[] = [
   sayingsUnit,
   byId('u.rights'),
   { ...byId('u.leave'), lessons: [...byId('u.leave').lessons, ...leaveMore] },
+  // "Ziekte" right after "Verlof": they were one unit until 5 November 2026 (see u.leave above).
+  { ...byId('u.sick'), lessons: [...byId('u.sick').lessons, ...sickMore] },
   // The Entree lessons in existing units (l.mychoice, l.nextstep, l.email, l.budget, l.healthy)
   // come at the end of their unit.
   ...laterUnits.map((u) => (entreeMore[u.id] ? { ...u, lessons: [...u.lessons, ...entreeMore[u.id]] } : u)),

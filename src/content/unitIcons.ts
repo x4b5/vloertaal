@@ -23,7 +23,9 @@ export const unitIcons: Record<string, string> = {
   'u.social': 'w.compliment',
   'u.sayings': 'w.eitje',
   'u.rights': 'i.rights',
-  'u.leave': 'w.ziekmelden',
+  // Verlof: the days off (the beach chair); Ziekte: better again, not the sick face (5 November 2026).
+  'u.leave': 'w.vakantiedagen',
+  'u.sick': 'w.betermelden',
   'u.exploit': 'w.paspoort',
   'u.contact': 'w.terugbellen',
   'u.grow': 'w.certificaat',

@@ -2,6 +2,8 @@
 
 *Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.road: 5 november 2026).*
 
+*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.backtowork: 5 november 2026).*
+
 **Terugsturen naar:** ____________________________ (naam en e-mail van de eigenaar van Vloertaal)
 
 ---
@@ -958,7 +960,7 @@ ______________________________________________________________
 
 ### c.leave — Holidays and emergency leave
 
-*Unit „Verlof en ziekte”, les „Days off” (`l.leave`)*
+*Unit „Verlof” (tot 5 november 2026 „Verlof en ziekte”), les „Days off” (`l.leave`)*
 
 **Samenvatting (NL):** Wettelijk min. 4 × het aantal werkdagen per week aan betaalde vrije dagen (fulltime: 20 per jaar); cao kan meer geven; verlof op tijd en schriftelijk aanvragen; bij een plotselinge noodsituatie kort verlof met loon (calamiteitenverlof); de werkgever moet in principe ja zeggen; een nee alleen om een zwaarwegende reden, schriftelijk binnen 2 weken.
 
@@ -996,7 +998,7 @@ ______________________________________________________________
 
 ### c.illness — Your rights when you are sick
 
-*Unit „Verlof en ziekte”, les „Sick at home” (`l.illness`)*
+*Unit „Ziekte” (tot 5 november 2026 in „Verlof en ziekte”), les „Sick at home” (`l.illness`)*
 
 **Samenvatting (NL):** Bij ziekte min. 70% van het loon, tot 2 jaar; cao vaak meer; max. 2 wachtdagen zonder loon, alleen als contract of cao dat zegt; de baas mag niet vragen welke ziekte; gezondheid bespreek je met de bedrijfsarts; beter melden; in het eerste jaar minstens het minimumloon; een tijdelijk contract stopt op de einddatum, ook bij ziekte; via een uitzendbureau met een uitzendbeding kan het contract stoppen als je ziek wordt, vraag dan UWV naar de Ziektewet. Uitleg: de bedrijfsarts geeft geen medische details door, alleen wat je kunt.
 
@@ -1036,7 +1038,7 @@ ______________________________________________________________
 
 ### c.kids — Your child is sick
 
-*Unit „Verlof en ziekte”, les „Children and work” (`l.kids`), in dit document sinds 4 november 2026*
+*Unit „Verlof” (tot 5 november 2026 „Verlof en ziekte”), les „Children and work” (`l.kids`), in dit document sinds 4 november 2026*
 
 **Samenvatting (NL):** Is je kind plotseling ziek, vertel het je werkgever meteen; voor de eerste uren of dagen kun je calamiteitenverlof nemen, met behoud van loon; heeft je kind langer zorg nodig, dan kun je zorgverlof vragen; ben je zwanger, dan mag je werkgever je daarom niet ontslaan; vraag op tijd naar zwangerschapsverlof en ouderschapsverlof.
 
@@ -1058,6 +1060,46 @@ ______________________________________________________________
 - „For the first hours or days you can take emergency leave (calamiteitenverlof), and your employer keeps paying you”: wij gaan uit van art. 4:1 Wazo (calamiteiten- en ander kort verzuimverlof, „naar redelijkheid”, met behoud van loon). Is „the first hours or days” een goede eenvoudige weergave?
 - „Then you can ask for care leave (zorgverlof)”: wij noemen niet dat kortdurend zorgverlof meestal 70% van het loon betaalt en langdurend zorgverlof onbetaald is (Wazo hoofdstuk 5). Kan een werknemer schade oplopen omdat dat er niet staat?
 - „Pregnant? Your employer may not fire you because of that.”: wij gaan uit van het opzegverbod tijdens de zwangerschap en het bevallingsverlof (art. 7:670 lid 2 BW) en het verbod op onderscheid naar geslacht (AWGB). Is „because of that” juist, of is de bescherming breder? En geldt hij ook als een tijdelijk contract om die reden niet wordt verlengd?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+### c.backtowork — Coming back step by step
+
+*Unit „Ziekte”, les „Back to work after illness” (`l.backtowork`), in dit document sinds 5 november 2026*
+
+**Samenvatting (NL):** Ben je beter, meld je dan beter bij je werkgever; na een langere ziekte begin je vaak stap voor stap: eerst minder uren of lichter werk; de bedrijfsarts geeft advies over wat je kunt; ben je langer ziek, dan maken jij en je werkgever samen een plan voor je terugkeer (de Wet verbetering poortwachter); zeg duidelijk wat je wel en nog niet kunt; je hoeft collega’s niet te vertellen welke ziekte je had. Uitleg: wie te veel te snel doet, kan weer ziek worden. De les gaat over goed terugkomen, niet over ziek melden.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Are you better? Tell your employer that you can work again (betermelden). After a longer illness, you often start step by step: first fewer hours, or lighter work. The company doctor (bedrijfsarts) gives advice about what you can do. Sick for a longer time? Then you and your employer make a plan together for your return. That is the law (Wet verbetering poortwachter). Say clearly what you can do, and what not yet. You do not have to tell colleagues what illness you had.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Zeg het zo (Nederlands):** „Dit kan ik al. Dat kan ik nog niet.” — *I can already do this. I cannot do that yet.*
+
+**Situatie in de les:** You were sick for three weeks. On your first day back, your supervisor asks you to lift heavy boxes. The company doctor said: only light work for now. What do you do?
+**Goede antwoord:** Say calmly that you can do light work now, and what you cannot do yet.
+**Uitleg na het antwoord (`c.backtowork.w`):** Your supervisor wants you back, and healthy. When you say clearly what you can do, they can plan the work. Doing too much too soon can make you sick again.
+
+**Uitleg bij het gesprekje (`c.backtowork.a.why`):** „Welkom terug! Gaat het weer?” → „Ja, het gaat beter. Ik doe het rustig aan.”: Asked how you are: a short yes, and that you take it slowly.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip. Hij noemt niet de weken van de poortwachter (probleemanalyse in week 6, plan van aanpak in week 8) en niet de twee jaar.
+
+**Onze eigen vraag hierbij:**
+- „Sick for a longer time? Then you and your employer make a plan together for your return. That is the law (Wet verbetering poortwachter).”: wij gaan uit van art. 7:658a BW (de werkgever werkt aan de re-integratie) en art. 7:660a BW (de werknemer werkt mee), met de probleemanalyse en het plan van aanpak uit de Regeling procesgang. Is „make a plan together” een goede eenvoudige weergave? Moet erbij dat je loon kan stoppen als je zonder goede reden niet meewerkt (art. 7:629 lid 3 BW)? Wij laten dat bewust weg: de eigenaar wil een rustige tip zonder dreiging; de Werkregels-les over ziek zijn noemt het wel.
+- „After a longer illness, you often start step by step: first fewer hours, or lighter work.”: dat is geen recht, maar de gewone praktijk op advies van de bedrijfsarts. Is „often” voorzichtig genoeg?
+- „Tell your employer that you can work again (betermelden).”: hoe en wanneer staat in het verzuimprotocol van het bedrijf. Moet dat erbij?
+- „You do not have to tell colleagues what illness you had.”: dat zegt niets over de werkgever (die de diagnose ook niet mag vragen of vastleggen, AVG); dat staat al in de tip van „Sick at home” (`c.illness`).
 
 **Oordeel deskundige:**
 

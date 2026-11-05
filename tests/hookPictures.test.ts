@@ -10,10 +10,11 @@ import { hasPicture, introPicture } from '../src/lib/wordPicture';
  * picture still help a hard word?). Shown on the intro card, where the gloss says what the word
  * means; never as the answer of a picture choice or in a match, where it could point to another word.
  */
-const HOOKS = ['w.huur', 'w.borg', 'w.boete', 'w.verlof', 'w.wachtdag', 'w.bruto', 'w.netto', 'w.feestdag', 'w.allergie', 'w.belasting', 'w.zorgverzekering'];
+// "opbouwen" and "halve dagen" (l.backtowork, 5 November 2026, src/pictures/group38.tsx).
+const HOOKS = ['w.huur', 'w.borg', 'w.boete', 'w.verlof', 'w.wachtdag', 'w.bruto', 'w.netto', 'w.feestdag', 'w.allergie', 'w.belasting', 'w.zorgverzekering', 'w.opbouwen', 'w.halvedagen'];
 
 describe('memory pictures', () => {
-  it('eleven hard words have one, and each has its drawing', async () => {
+  it('thirteen hard words have one, and each has its drawing', async () => {
     const hooks = allWords.filter((w) => w.picture === 'hook').map((w) => w.id);
     expect(new Set(hooks)).toEqual(new Set(HOOKS));
     const words = (await import('../src/pictures/words')).default as Record<string, unknown>;
@@ -31,7 +32,7 @@ describe('memory pictures', () => {
   });
 
   it('never stand as a picture in a choice or a match', () => {
-    for (const id of ['l.housing', 'l.payslip', 'l.leave', 'l.illness']) {
+    for (const id of ['l.housing', 'l.payslip', 'l.leave', 'l.illness', 'l.backtowork']) {
       const { lesson } = findLesson(id)!;
       for (const seed of [1, 2, 3, 7, 42]) {
         for (const ex of buildLesson(lesson, { review: false, seed })) {
