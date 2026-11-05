@@ -435,6 +435,16 @@ function defineStates(LANG) {
   graded('hear-pick', 'type', 1, 0, 'ar');
   graded('chat', 'chat', 0, 1);
   graded('situation', 'situation', 0, 1);
+  // "Snap je het?" in today's review (5 November 2026): heard (two answers), "Ja, oké." (three
+  // meanings) right and wrong, "Kunt u dat herhalen?" (slowly again: the meanings) right and wrong.
+  // The right meaning is the 1st card.
+  add('lesson:snap', shot('snap'), null, { expect: '.snap-answers .snap-answer-asked' });
+  const snapAnswer = async (p, which) => { await tap(p, `.snap-answer-${which}`); await settle(p, 500); };
+  for (const which of ['ok', 'asked']) {
+    add(`lesson:snap-${which}`, shot('snap'), async (p) => { await snapAnswer(p, which); }, { expect: '.snap-meanings .choice' });
+    add(`lesson:snap-${which}:right`, shot('snap'), async (p) => { await snapAnswer(p, which); await tap(p, choice, 0); await settle(p, 900); }, { expect: '.snap-bubble .chat-line' });
+    add(`lesson:snap-${which}:wrong`, shot('snap'), async (p) => { await snapAnswer(p, which); await tap(p, choice, 1); await settle(p, 900); }, { expect: '.snap-bubble .chat-line' });
+  }
   add('lesson:situation:shown', shot('situation'), async (p) => { await reveal(p); }, { expect: '.situation-answers .choice' });
   // With the keyboard: the focus on the first answer.
   add('lesson:situation:shown-keys', shot('situation'), async (p) => { await p.focus('.situation-show'); await p.keyboard.press('Enter'); await settle(p, 500); }, { expect: '.situation-answers .choice:focus' });

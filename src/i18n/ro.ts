@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Cuvânt nou',
     tapToHear: 'Atinge ca să asculți',
     whatDoesThisMean: 'Ce înseamnă asta?',
+    snapQuestion: 'Înțelegi?', // nieuw, nalezen
+    snapYes: 'Da, bine.', // nieuw, nalezen
+    snapGoodAsk: 'Bine că întrebi!', // nieuw, nalezen
+    snapRight: 'Ai înțeles bine!', // nieuw, nalezen
+    snapAskBetter: 'Vezi? Era mai bine să întrebi.', // nieuw, nalezen
     whichOneIs: 'Care dintre acestea este „{word}”?',
     mixLesson: 'Recapitulare mixtă',
     whatDoYouHear: 'Ce auzi?',

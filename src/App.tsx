@@ -788,7 +788,7 @@ export default function App() {
       const daily = view.lessonId === DAILY_ID;
       // Today's review of the learner's track: words (the language course) or questions (the rules course).
       const found = daily
-        ? { lesson: track === 'regels' ? dailyRuleLesson(view.ids ?? []) : dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date())) }
+        ? { lesson: track === 'regels' ? dailyRuleLesson(view.ids ?? []) : dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date()), { extra: progress.reviewDay === dayKey(new Date()) }) }
         : playLesson(view.lessonId, progress.completed, dayNumber(dayKey(new Date())));
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;

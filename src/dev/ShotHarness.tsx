@@ -20,7 +20,7 @@ import type { Access } from '../lib/access';
 import { dayKey, emptyProgress, workWeek, type Progress } from '../lib/progress';
 import { Milestone, StreakStopped } from '../components/Milestone';
 import { BootFailed } from '../components/Splash';
-import { dailyCard, dailyRuleLesson, gradedStepIds } from '../lib/spaced';
+import { askAgainLine, dailyCard, dailyRuleLesson, gradedStepIds } from '../lib/spaced';
 import { REVIEW_FIRST_ABOVE } from '../lib/pace';
 import { CAST, Character, type Mood } from '../components/Characters';
 import { getHelpLanguage } from '../i18n';
@@ -426,6 +426,11 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   exercises.saying = { kind: 'saying', saying };
   const sayingAsk = sayingQuestion(saying);
   exercises['saying-ask'] = { kind: 'situation', tip: sayingAsk, options: sayingAsk.options };
+  // "Snap je het?" in today's review: /?shot=snap, "Draag altijd je helm." at the real pace; the
+  // right meaning is the 1st card (a wrong one the 2nd). Tap "Ja, oké." or "Kunt u dat herhalen?".
+  const shiftLine = findLesson('l.shift')!.lesson.sentences[0];
+  const askLine = askAgainLine();
+  if (askLine) exercises.snap = { kind: 'snap', sentence: lesson.sentences[0], options: [lesson.sentences[0], shiftLine, lesson.sentences[1]], ask: askLine };
   // Speaking practice: /?shot=speak (idle), speak-rec (recording), speak-compare (after recording),
   // speak-off (no microphone); &item=sentence asks a short sentence instead of a word.
   if (shot.startsWith('speak')) {

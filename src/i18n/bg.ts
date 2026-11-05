@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Нова дума',
     tapToHear: 'Докосни, за да чуеш',
     whatDoesThisMean: 'Какво означава това?',
+    snapQuestion: 'Разбираш ли?', // nieuw, nalezen
+    snapYes: 'Да, добре.', // nieuw, nalezen
+    snapGoodAsk: 'Добре, че питаш!', // nieuw, nalezen
+    snapRight: 'Разбра правилно!', // nieuw, nalezen
+    snapAskBetter: 'Виждаш ли? По-добре беше да попиташ.', // nieuw, nalezen
     whichOneIs: 'Кое от тези е „{word}“?',
     mixLesson: 'Смесен преговор',
     whatDoYouHear: 'Какво чуваш?',

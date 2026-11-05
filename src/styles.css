@@ -1216,6 +1216,18 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .chat-bubble-me.wrong:has(.chat-line), .chat-bubble-me.wrong:has(.chat-line)::before { border-color: var(--red); }
 .chat-bubble-me.wrong .chat-line { color: var(--wrong-ink); }
 .chat-choices .choice-nl { font-weight: 600; }
+/* "Snap je het?" (today's review, 5 November 2026): the colleague's bubble before the text shows
+   (three dots: something was said), and the line after asking or after the answer. */
+.snap-blank { letter-spacing: 0.12em; padding-inline-end: 10px; }
+.snap-note {
+  margin: 0 0 14px; padding: 10px 14px; border: 2px solid var(--line); border-radius: 12px; background: var(--card);
+  font-weight: 600; text-align: start;
+}
+.snap-note-nl { display: block; font-size: 1.1rem; font-weight: 700; color: var(--ink-strong); }
+.snap-note .bi-help { --help-size: 0.9rem; font-weight: 500; }
+.snap-note-snapRight { border-color: var(--green); }
+.snap-note-snapAskBetter { border-color: var(--yellow-dark); }
+.snap-prompt-nl { display: block; }
 @media (min-width: 760px) {
   .chat { gap: 0; margin-bottom: 24px; }
   .chat-char { font-size: 148px; }

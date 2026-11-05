@@ -4,7 +4,7 @@ import { goKnown, markGoKnown } from '../lib/goKnown';
 import { stillMotion } from '../lib/calm';
 import { BeNote } from './BeNote';
 import { lessonNlOnly } from '../content/taalBe';
-import type { Lesson } from '../content/types';
+import type { Lesson, Sentence } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
 import { gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
@@ -23,7 +23,7 @@ export const cantBeHeard = (e: Exercise) => unheard(e, (text) => !surelySilent(t
 import { useVoices } from './useVoices';
 import { tileDiff } from '../lib/answers';
 import { breakable } from '../lib/dutch';
-import { buildLesson, forRetry, isGraded, isRuleExercise, needsAudio, readBackAt, unheard, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
+import { buildLesson, comesBack, forRetry, isGraded, isRuleExercise, needsAudio, readBackAt, unheard, wordsInSentence, type Exercise, type RuleKind } from '../lib/exercises';
 import { ChromeBack } from './ChromeBack';
 import { feedbackMeaningKey, feedbackTitle } from '../lib/feedbackTitle';
 import { offerSkipSound } from '../lib/skipSound';
@@ -35,7 +35,7 @@ import { barParts, nextMisses, nextRun, runStampFor } from '../lib/lessonRun';
 import { clearSave, loadSave, makeSave, restoreSave, writeSave } from '../lib/resume';
 import { learnerCharacter, learnerVoice, voiceFor } from '../lib/voices';
 import { nonLatinHelp, pickInsteadOfTyping, typeAsPick, writingInput } from '../lib/writing';
-import { castFor, colleaguesOf, tipCast, type CharacterId } from './Characters';
+import { castFor, colleaguesOf, snapColleague, tipCast, type CharacterId } from './Characters';
 import { Bi, HelpText } from './Bi';
 import { PlayName } from './SpeakButton';
 import { NlPair } from './NlPair';
@@ -61,6 +61,7 @@ import {
   MeaningExercise,
   TypeExercise,
   SituationExercise,
+  SnapExercise,
   TipCard,
   SayingCard,
   ComesBack,
@@ -116,6 +117,9 @@ function solution(ex: Exercise): { text: string; nl: boolean } {
     case 'payslip':
     case 'card':
       return { text: '', nl: false };
+    // "Snap je het?" says its sentence slowly itself, after a wrong meaning (SnapExercise).
+    case 'snap':
+      return { text: '', nl: false };
     default:
       return { text: ex.word.nl, nl: true };
   }
@@ -167,6 +171,8 @@ const KIND_TAG: Record<Exclude<Exercise['kind'], RuleKind>, { nl: string; key: U
   situation: { nl: 'Situatie', key: 'tagSituation', Icon: SignpostIcon },
   speak: { nl: 'Spreken', key: 'tagSpeak', Icon: MicIcon },
   klank: { nl: 'Klank', key: 'tagSound', Icon: MouthIcon },
+  // (Never shown: "Snap je het?" does not come back in the retry round, where the tag shows.)
+  snap: { nl: 'Luisteren', key: 'tagListen', Icon: EarIcon },
 };
 
 function KindTag({ kind, lang, nlLabel }: { kind: Exercise['kind']; lang?: HelpLanguage; nlLabel?: string }) {
@@ -236,6 +242,8 @@ function answerPair(ex: Exercise, lang?: HelpLanguage): { nl?: string; meaning: 
       const best = ex.tip.options.find((o) => o.best)!;
       return { meaning: gloss(best.id, best.en, lang) };
     }
+    case 'snap':
+      return { nl: ex.sentence.nl, meaning: gloss(ex.sentence.id, ex.sentence.en, lang) };
     default:
       return null;
   }
@@ -414,11 +422,15 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // "Wat zeg je?" only for a chat whose lines are recorded (public/audio-el/voices.json), checked
   // once at the start: the colleague's line and the reply are then heard, never the phone voice.
   const [recordedAtStart] = useState(() => (text: string) => hasClip(text, learnerVoice(lang?.gender)));
+  // "Snap je het?" (today's review) only with a sentence recorded in its colleague's voice (said at
+  // the real pace, a phone voice at that pace is hard even for a Dutch ear) and translated into the
+  // help language (its meaning is the question).
+  const [snapFitsAtStart] = useState(() => (s: Sentence) => hasClip(s.nl, voiceFor(snapColleague(s.id))) && (!lang || dutchUi(lang) || Boolean(lang.gloss[s.id])));
   const initial = useMemo(
     // A learner who reads only another script gets picture cards (or cards with speakers) where
     // a review would show Latin-only text cards (lib/exercises.ts readableDutch).
-    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart, sector, sayings: sayingsAtStart, ...paceAtStart, recorded: recordedAtStart }),
-    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector, sayingsAtStart, paceAtStart, recordedAtStart],
+    () => exercises ?? buildLesson(lesson, { review, seed, quiet: quietAtStart, speak: speakAtStart, nonLatin: nonLatinAtStart, sector, sayings: sayingsAtStart, ...paceAtStart, recorded: recordedAtStart, snapFits: snapFitsAtStart }),
+    [exercises, lesson, review, seed, quietAtStart, speakAtStart, nonLatinAtStart, sector, sayingsAtStart, paceAtStart, recordedAtStart, snapFitsAtStart],
   );
   // The saved place in that list, with the mistakes queued then (null: start from the top).
   // A mistake comes back in a new form made from its place in the queue (forRetry, as check() does).
@@ -785,7 +797,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       sounds.wrong();
       // A mistake comes back once at the end of the lesson; no endless loops.
       // It comes back in a new form: other order, other wrong options (lib/exercises.ts forRetry).
-      if (index < initial.length) queueRetry();
+      // ("Snap je het?" does not: its sentence is shown and said right away, comesBack.)
+      if (index < initial.length && comesBack(ex)) queueRetry();
     }
     const sol = solution(ex);
     const said = announcement(ex, answer.correct, lang, answer.almost, answer.given?.[0]);
@@ -950,6 +963,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'saying': body = <SayingCard key={key} ex={ex} {...props} />; break;
     case 'klank': body = <KlankStep key={key} ex={ex} {...props} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
+    case 'snap': body = <SnapExercise key={key} ex={ex} {...props} />; break;
     // "Laat de telefoon luisteren (proef)": the Dutch course only (never Werkregels); src/lib/listen.ts.
     // "Toen en nu" (src/lib/firstVoice.ts): the lessons keep a sentence's first recording on the phone.
     case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onRating={setSpeakRating} listen={!dutchUi(lang) && listenOn()} thenNow />; break;
@@ -1093,7 +1107,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   // built right: it stands on the answer line, its meaning and speaker are in the bubble; with
   // "Zet het vooraan" the label stays for the verb on place 2.
   const builtRight = ex.kind === 'build' && !ex.front && Boolean(answer?.correct) && !answer?.almost;
-  const answerShown = ex.kind === 'meaning' || ex.kind === 'dutch' || ex.kind === 'listen' || ex.kind === 'chat' || ex.kind === 'situation' || typePick || builtRight;
+  // "Snap je het?": the sentence, its meaning and what to learn from it are in the exercise itself.
+  const answerShown = ex.kind === 'meaning' || ex.kind === 'dutch' || ex.kind === 'listen' || ex.kind === 'chat' || ex.kind === 'situation' || ex.kind === 'snap' || typePick || builtRight;
   const cardless = Boolean(feedback) && !answer?.almost && !ruleFb && !why && answerShown;
   /** A wrong answer whose right one is already on screen, with an explanation (a chat's why): the
    *  label holds only that explanation, like a right answer with a why. */
@@ -1183,7 +1198,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       </header>
 
       {/* A wrong answer in the first round comes back at the end; in the retry round it does not (the stamp says which). */}
-      <ComesBack.Provider value={index < initial.length}>
+      <ComesBack.Provider value={index < initial.length && comesBack(ex)}>
       <div className="player-body" ref={bodyRef} inert={askQuit}>
         <div className="ex-ghost" ref={ghostRef} aria-hidden />
         {/* The first time a kind of exercise comes: a hand shows where to tap, once (ShowHow). */}

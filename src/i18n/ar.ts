@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'كلمة جديدة',
     tapToHear: { m: 'اضغط للاستماع', f: 'اضغطي للاستماع' },
     whatDoesThisMean: 'ما معنى هذا؟',
+    snapQuestion: { m: 'هل فهمت؟', f: 'هل فهمتِ؟', x: 'هل الأمر مفهوم؟' }, // nieuw, nalezen
+    snapYes: 'نعم، حسناً.', // nieuw, nalezen
+    snapGoodAsk: { m: 'جيد أنك تسأل!', f: 'جيد أنكِ تسألين!', x: 'السؤال فكرة جيدة!' }, // nieuw, nalezen
+    snapRight: { m: 'فهمتَ جيداً!', f: 'فهمتِ جيداً!', x: 'فهم صحيح!' }, // nieuw, nalezen
+    snapAskBetter: { m: 'أرأيت؟ كان السؤال أفضل.', f: 'أرأيتِ؟ كان السؤال أفضل.', x: 'كان السؤال أفضل.' }, // nieuw, nalezen
     whichOneIs: 'أيٌّ منها هو «{word}»؟',
     mixLesson: 'مراجعة مختلطة',
     whatDoYouHear: { m: 'ماذا تسمع؟', f: 'ماذا تسمعين؟' },
