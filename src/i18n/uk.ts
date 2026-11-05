@@ -31,6 +31,8 @@ const lang: HelpLanguageSource = {
     locked: 'Спочатку заверши попередній урок',
     newWord: 'Нове слово',
     tapToHear: 'Натисни, щоб почути',
+    sayItAloud: 'Скажи це вголос.', // nieuw, nalezen
+    sayItQuietly: 'Скажи це тихо або подумки.', // nieuw, nalezen
     whatDoesThisMean: 'Що це означає?',
     snapQuestion: 'Розумієш?', // nieuw, nalezen
     snapYes: 'Так, добре.', // nieuw, nalezen

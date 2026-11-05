@@ -31,6 +31,8 @@ const lang: HelpLanguageSource = {
     locked: 'اول درس قبلی را تمام کنید',
     newWord: 'کلمهٔ جدید',
     tapToHear: 'برای شنیدن ضربه بزنید',
+    sayItAloud: 'آن را بلند بگویید.', // nieuw, nalezen
+    sayItQuietly: 'آن را آرام بگویید، یا در ذهن‌تان.', // nieuw, nalezen
     whatDoesThisMean: 'این یعنی چه؟',
     snapQuestion: 'متوجه شدید؟', // nieuw, nalezen
     snapYes: 'بله، باشه.', // nieuw, nalezen

@@ -26,6 +26,8 @@ export const uiNl: Record<UiKey, UiText> = {
   locked: 'Doe eerst de les hiervoor',
   newWord: 'Nieuw',
   tapToHear: 'Tik om te luisteren',
+  sayItAloud: 'Zeg het hardop.',
+  sayItQuietly: 'Zeg het zachtjes, of in je hoofd.',
   whatDoesThisMean: 'Wat betekent dit?',
   snapQuestion: 'Snap je het?',
   snapYes: 'Ja, oké.',

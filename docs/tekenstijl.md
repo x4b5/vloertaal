@@ -97,6 +97,9 @@ The limits:
 - **Short and once**: 0.5–2 s, it plays once and starts just after the word's sound (0.4 s). A tap on
   the card's speaker says the word again and plays the movement again: no extra button (max. 3).
   No loop, at most two plays in a row, no step shorter than 0.4 s, no flashing (WCAG 2.3.1).
+- **One movement at a time** with "Zeg het hardop" under the card (src/lib/sayAloud.ts, 5 November
+  2026): its line appears once the word has sounded, but its three "your turn" dots wait until the
+  picture is still (Element.getAnimations), so the picture and the invitation never move together.
 - **It ends on a meaningful still picture**, and that still picture is the picture everywhere
   else. Draw the end; the movement only says where a part comes from.
 - **One action, at most two subjects** (two people walking out together count as one action).
