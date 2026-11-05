@@ -17,8 +17,14 @@ export interface Word {
    * borg, bruto): a memory picture, shown on the word's intro card next to the gloss, which says
    * what the word means. It does not identify the word on its own, so like an abstract word it is
    * never in a picture choice, a match, the path or a lesson icon (src/lib/wordPicture.ts).
+   *
+   * `'motion'` for a word whose meaning is a movement that the still picture alone does not show
+   * ("ontruimen": two people go out through the exit to the flag; "bijna": a bar fills and stops
+   * just before the end; the owner's trial of 5 November 2026, docs/tekenstijl.md "Beweging"). Its
+   * picture moves on the intro card only; like a memory picture, it is never in a picture choice,
+   * a match, the path or a lesson icon.
    */
-  picture?: false | 'hook';
+  picture?: false | 'hook' | 'motion';
   /**
    * What the picture looks like, when the emoji can't tell (src/lib/wordPicture.ts lookKey): a
    * family and a variant, "kalender/maandag". Words with different variants may stand side by side

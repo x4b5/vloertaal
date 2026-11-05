@@ -1,8 +1,17 @@
 import type { JSX } from 'react';
-import { Arrow, Box, Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
-import { Bust } from './bust';
+import { CastHead } from '../components/Characters';
+import { Arrow, Box, Ground, Move, PAL, SKIN, Shade, Shine } from './kit';
 
 /** Word pictures, group 4 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
+
+/** The cast's head in its 120 x 140 box, neck base placed at (x, y). */
+function Head({ who, x, y, s }: { who: 'bram'; x: number; y: number; s: number }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${s}) translate(-60 -92)`}>
+      <CastHead who={who} expr="pleased" />
+    </g>
+  );
+}
 
 /** A flat cardboard box seen from the front (for on a shelf): front, shade side, tape. */
 function FlatBox({ x, y, w, h }: { x: number; y: number; w: number; h: number }) {
@@ -241,17 +250,49 @@ export default {
     </g>
   ),
 
-  // "tillen": to lift — Bram holds a box high above his head with both arms
+  // "tillen": to lift — the safe way (the owner's request, 5 November 2026; until then Bram held
+  // the box high above his head, a risky way to lift): Bram, seen from the side, stands up
+  // straight with the box close to his body, at his hips; grey lines under the box say it came up.
+  // On the intro card (docs/tekenstijl.md "Beweging") he lifts it: from a squat, knees bent, back
+  // straight, hands at the box on the floor, up to standing. Each joint turns back into this
+  // standing pose around its own point (ankle, knee, hip, shoulder, neck), the parts nested so
+  // that they stay joined.
   'w.tillen': () => (
     <g>
-      <Ground cx={60} cy={108} rx={30} ry={3.5} />
-      <Bust who="bram" x={60} y={116} scale={0.5} expr="pleased" />
-      {/* Arms: orange sleeves from the shoulders up to the hands under the box */}
-      <path d="M45 100L31 60M75 100L87 60" stroke={PAL.orange} strokeWidth="11" strokeLinecap="round" />
-      <path d="M79 96L88 66" stroke={PAL.orangeShade} strokeWidth="4" strokeLinecap="round" opacity=".7" />
-      <Hand pose="open" x={31} y={60} rotate={-14} scale={0.48} skin={SKIN.bram} />
-      <Hand pose="open" x={87} y={60} rotate={14} scale={0.48} skin={SKIN.bram} mirror />
-      <Box x={20} y={20} w={66} h={30} depth={12} />
+      <Ground cx={66} cy={105} rx={34} ry={3.5} />
+      <Move kind="show">
+        <path d="M70 78V84M76 78V87M82 78V84" stroke={PAL.line} strokeWidth="3" strokeLinecap="round" opacity=".75" />
+      </Move>
+      {/* Ankle → shin → knee → thigh → hip → back → shoulder → arm and box; and the head */}
+      <Move kind="turn" turn={60} at={[52, 100]}>
+        <path d="M52 100L52 80" stroke={PAL.navy} strokeWidth="11" strokeLinecap="round" />
+        <Move kind="turn" turn={-145} at={[52, 80]}>
+          <Move kind="turn" turn={125} at={[52, 60]}>
+            <Move kind="turn" turn={-25} at={[52, 34]}>
+              <path d="M52 26V36" stroke={SKIN.bram[1]} strokeWidth="8" strokeLinecap="round" />
+              <Head who="bram" x={52} y={33} s={0.34} />
+            </Move>
+            <Shade color={PAL.orangeShade} opacity={1} at={[64, 48, 6, 22]}>
+              <rect x="42" y="31" width="20" height="33" rx="9" fill={PAL.orange} />
+            </Shade>
+            <path d="M43 52H61" stroke={PAL.paper} strokeWidth="3.4" />
+            <Move kind="turn" turn={-40} at={[54, 40]}>
+              <Box x={63} y={50} w={26} h={20} depth={8} />
+              <path d="M54 40L53 58L66 68" stroke={PAL.orange} strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              <path d="M56 46L55.4 56" stroke={PAL.orangeShade} strokeWidth="2" strokeLinecap="round" opacity=".7" />
+              <circle cx="68" cy="68" r="4.6" fill={SKIN.bram[0]} />
+            </Move>
+          </Move>
+        </Move>
+      </Move>
+      {/* The thigh once more, on top (the same joints): in the squat it lies in front of the body */}
+      <Move kind="turn" turn={60} at={[52, 100]}>
+        <Move kind="turn" turn={-145} at={[52, 80]}>
+          <path d="M52 80L52 63" stroke={PAL.navy} strokeWidth="12" strokeLinecap="round" />
+        </Move>
+      </Move>
+      {/* The shoe stays on the floor */}
+      <rect x="47" y="98" width="20" height="8" rx="4" fill={PAL.slateDark} />
     </g>
   ),
 

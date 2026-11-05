@@ -78,8 +78,120 @@ Light comes from the **top left**.
 
 ## Do / don't
 
-- Do reuse kit blocks and `PAL` tokens. Keep the light from the top left. Keep shapes rounded (corner radius ≥ 2). Keep pictures still (no CSS animation).
+- Do reuse kit blocks and `PAL` tokens. Keep the light from the top left. Keep shapes rounded (corner radius ≥ 2). Keep pictures still, with one exception: a moving picture on the word's intro card, only where the meaning is a movement (see "Beweging" below).
 - Don't copy emoji designs or other icon sets. Don't use gradients, filters, drop shadows, outlines, photos, `<text>`, `<image>` or external files.
+
+## Beweging: a moving picture on the intro card (trial, 5 November 2026)
+
+Pictures stand still. The one exception (the owner's "yes" to a trial, 5 November 2026):
+**movement only where the meaning is a movement.** "glad" is the foot that slides away, "tillen" is
+going up from the knees, "te laat" is the hand running past the start time. A still picture shows
+only the end of that; a short movement shows the meaning itself. Where the meaning is not a movement
+(a thing, a right, a feeling), a movement only distracts from the word and its sound.
+
+The limits:
+
+- **Only on the intro card**, where the word is first taught. In a picture choice, a match, the
+  path, the pocket cards and the lists the same picture stands still (styles.css: only a rule under
+  `.intro-card` animates).
+- **Short and once**: 0.4–2 s per movement, it plays once and starts just after the word's sound (0.4 s). A tap on
+  the card's speaker says the word again and plays the movement again: no extra button (max. 3).
+  No loop, at most two plays in a row, no step shorter than 0.4 s, no flashing (WCAG 2.3.1).
+- **It ends on a meaningful still picture**, and that still picture is the picture everywhere
+  else. Draw the end; the movement only says where a part comes from.
+- **One action, at most two subjects** (two people walking out together count as one action).
+- **CSS only**: a part is wrapped in `<Move kind=… />` (`src/pictures/kit.tsx`), a `<g class="mv-…">`
+  animated by `@keyframes` in styles.css with only a `from` frame. No SVG `<animate>` (SMIL), no
+  `requestAnimationFrame`. So with the phone's "less motion" and with "Rustig scherm" (both:
+  `animation: none !important`) nothing moves and the still picture is all there is.
+- The kinds: `from` / `slow` / `fast` (slide in from `dx`, `dy`: 1.2 s, 2 s, 0.5 s), `drop` (a
+  slide speeding up, 0.7 s: with `tip` it makes one fall, see "vallen"), `then` (the slide of `from`,
+  but after it: a second step, see "voordoen"), `steps` (a slide in three stops of 0.6 s: counting,
+  see "tellen"), `turn` and `tip` (turn `turn` degrees back into place around the point `at`, in
+  picture units: 1.4 s, or 0.7 s speeding up as a fall), `grow` (from its left edge, 1.6 s), `sag`
+  (sinks onto its bottom edge from `grow` times its height, 2 s: see "lek"), `show` (fades in at the
+  end: a tick, a mark). A joint chain nests: ankle → knee → hip → shoulder (see "tillen"). A pose
+  that is bent in the still picture bends from straight with `Bend` (group24, see "bukken"); a
+  part that goes round another (two shift cards swapping) turns around the middle and back around
+  its own centre (`Arc`, group37, see "ruilen").
+- At most two steps one after the other (`from`, then `then` or `show`): the whole picture is still
+  within 3 s.
+- An abstract word whose still picture says too little gets `picture: 'motion'`: the picture is on
+  its intro card only, never in a picture choice or a match (like `'hook'`).
+
+The trial words (tests/motionPictures.test.ts): glad, tillen (redrawn: the safe way, knees bent and
+the box close to the body, no longer above the head), ontruimen (`'motion'`), inchecken and
+uitchecken (one slide: to the reader, away from it), bijna (`'motion'`, next to the full bar of
+afmaken), langzaam and snel (one slide: 2 s for the snail, 0.5 s for the shoe; each keeps its own
+still picture so the two stay apart in a picture choice) and te laat (the hands run on from 8:00,
+Bram comes in, as on "op tijd"). Measure whether pairs are mixed up less often, and ask learners who
+read little whether the movement helps or distracts, before more words move.
+
+The second round (the owner's "go on", 5 November 2026; the same limits):
+
+| Group | Word | What moves |
+|---|---|---|
+| Body | vallen | Bram drops in from above and tips over backwards (`drop` + `tip`); "gevallen" stays still |
+| Body | bukken | redrawn the safe way (knees bent, back straight, no longer bent over at the waist): Amina goes down from standing to a squat at the low plant |
+| A to B | inklokken / uitklokken | the card goes to the time clock, then the badge's arrow goes in at the door (or out of it) |
+| A to B | inloggen | the door swings open and the arrow goes in |
+| A to B | uitloggen (`'motion'`) | the same laptop: the account (avatar) and a red arrow come out of the door |
+| A to B | ruilen (`'motion'`) | Bram's and Jada's shift cards (sun, moon) change places, one over the top, one underneath |
+| A to B | versturen (`'motion'`) | the envelope leaves the laptop's screen to the top right |
+| A to B | doorgeven (`'motion'`) | a note goes from Jada's hand to Henk's |
+| A to B | sorteren | the red tomato goes left, the green one right, from Jada's hands |
+| A to B | ophalen | Jada walks in from the left to the child at the daycare and takes its hand |
+| A becomes B | uitzetten | the finger comes to the button, then the lit screen goes dark (one fade) |
+| A becomes B | automatisch (`'motion'`) | a sliding door opens with nobody near it |
+| A becomes B | verbeteren (`'motion'`) | the pen comes to the wrong row; the cross becomes a tick |
+| A becomes B | lek | the tyre sinks onto its flat bottom, the rim with it; then the hiss lines |
+| A becomes B | mengen | the two bottles tip over the bucket, then the streams and the cross (no cloud: it would look like "de damp" of the same lesson) |
+| Time, order | eerst / daarna (`'motion'`) | a list of two jobs: the hand comes to the top one and it gets its tick / the hand goes on down to the bottom one and it gets its tick |
+| Time, order | voordoen (`'motion'`) | Henk puts a box on his stack, then Jada does the same (`then`) |
+| Time, order | verlengen (`'motion'`) | the contract's bar on a row of weeks grows past its old end (dashed) |
+| Time, order | tellen (`'motion'`) | a finger taps three boxes one by one (`steps`) |
+| Time, order | herhalen | the loop in Bram's speech bubble goes round once more |
+
+The last round (the owner: "do the rest of the words where movement helps", 5 November 2026): the
+report's "later" list and a pass over all 630 words (no words were added since the report's list),
+by the same rules; in doubt, not.
+
+| Word | What moves |
+|---|---|
+| opruimen | the hand lowers the wrench into the crate, then the sparkles |
+| afruimen | the top plate goes up from the table onto the stack on the tray |
+| inpakken | the two hands lower the product into the box |
+| afpakken | the passport goes from her open hand away to his, at an even pace (nothing rough): away from someone, which "pakken" does not say; "pakken" stays still |
+| kiezen (`'motion'`) | three cards (kinds of work): the finger goes along and stops at the middle one, then its ring and tick |
+| beter | the green arrow rises from low to high, then the sparkles (getting well again, not a feeling) |
+| duren | the hourglass runs: the top sinks, the heap grows (`sag`) |
+| verhuizen | the box comes out from the old house on its way to the new one |
+| vergrendelen | the padlock's shackle snaps shut, then the lines: to lock (the action; "op slot" stays the still padlock) |
+
+Not moved in the last round, with the reason:
+
+- **Already clear standing still, movement adds little** (in doubt, not): pakken, opschrijven,
+  tekenen, stemmen, oogsten, vakken vullen, afkeuren, luchten, stoffen, spoelen, typen, klikken,
+  ophangen, appen, posten, delen, terugbellen, inspreken, handen wassen, zoeken, vinden,
+  laten zien, optellen, repareren, overwerken, klaarleggen, reageren, nalezen.
+- **"afmaken"**: the still counterpart of "bijna" from the trial (a full bar with a tick); it stays
+  still so that the two can still be told apart and the trial stays measurable.
+- **Time words** (volgende week, vorige week, overmorgen, morgen, het uur, het kwartier, de minuut):
+  the drawn week strips and clocks already say it; the clock of "duren" is the one that runs.
+- **Up a level** (doorstromen, verder komen): a figure going up a step would be the same picture
+  for two words in two lessons, and could read as "de trap".
+- **Things** (helm, heftruck, kraan, hefbrug, lopende band, machine, boor), **blinking or
+  flashing** (alarm, stoplicht, bellen, noodstop, storing), **harsh pictures** (bloeden, snijden,
+  zagen, slijpen, vonk, aanraken, pesten), **rights, money and feelings** (cao, toeslag,
+  uitbetalen, terugbetalen, betalen, pinnen, boos, bang, somber, misschien, gebeuren, proberen)
+  and **"nog niet"** (it would look like "bijna"): as in the report.
+- The **kl.\*** words (the mouth already moves) and the sayings (zg.\*).
+
+Left out: "beginnen" (a start button on a machine, not the scene of "uitzetten"; a machine
+starting would say more than "to start" your shift). In every `'motion'` word the still picture
+would say too little or look like another word of its lesson, so it never stands in a picture
+choice; the people in those pictures are cast heads, not busts, so the word's voice stays the
+same (`pictureCast`).
 
 ## Template
 

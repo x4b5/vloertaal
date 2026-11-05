@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { CastHead } from '../components/Characters';
-import { Arrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 import { Bust } from './bust';
 
 /**
@@ -263,23 +263,32 @@ export default {
   ),
 
   // "lek": flat — a tyre seen from the side, squashed flat at the bottom, a nail in the tread
-  // and air hissing out sideways
+  // and air hissing out sideways. On the intro card (docs/tekenstijl.md "Beweging", second round,
+  // 5 November 2026) the air goes out: the tyre sinks slowly from round onto its flat bottom and
+  // the rim comes down with it; the hiss lines come at the end.
   'w.lek': () => (
     <g>
       <Ground cx={56} cy={106} rx={46} ry={4.5} />
-      {/* Tyre: round on top, squashed and bulging wide at the bottom */}
-      <path d="M14 60A40 40 0 0 1 94 60C96 76 104 92 102 98Q100 105 92 105H16Q8 105 6 98C4 92 12 76 14 60Z" fill={PAL.slate} />
-      <path d="M84 30A40 40 0 0 1 94 60C96 76 104 92 102 98Q100 105 92 105H84Z" fill="#000" opacity=".2" />
+      <Move kind="sag" grow={1.12}>
+        {/* Tyre: round on top, squashed and bulging wide at the bottom */}
+        <path d="M14 60A40 40 0 0 1 94 60C96 76 104 92 102 98Q100 105 92 105H16Q8 105 6 98C4 92 12 76 14 60Z" fill={PAL.slate} />
+        <path d="M84 30A40 40 0 0 1 94 60C96 76 104 92 102 98Q100 105 92 105H84Z" fill="#000" opacity=".2" />
+        {/* Nail in the side of the tread */}
+        <rect x="92" y="54" width="10" height="4" rx="1.5" fill={PAL.mist} transform="rotate(-10 97 56)" />
+        <rect x="101" y="49" width="4.5" height="13" rx="2" fill={PAL.steel} transform="rotate(-10 103 56)" />
+      </Move>
       {/* Side wall and rim, sitting low */}
-      <ellipse cx="54" cy="66" rx="29" ry="28" fill={PAL.slateDark} />
-      <circle cx="54" cy="66" r="21" fill={PAL.mist} />
-      <path d="M54 66V48M54 66L71 60M54 66L64 81M54 66L44 81M54 66L37 60" stroke={PAL.steel} strokeWidth="5" strokeLinecap="round" />
-      <circle cx="54" cy="66" r="6" fill={PAL.steel} />
-      <Shine d="M22 44Q30 28 46 22" color={PAL.steel} opacity={0.9} />
-      {/* Nail in the side of the tread, air hissing out to the right */}
-      <rect x="92" y="54" width="10" height="4" rx="1.5" fill={PAL.mist} transform="rotate(-10 97 56)" />
-      <rect x="101" y="49" width="4.5" height="13" rx="2" fill={PAL.steel} transform="rotate(-10 103 56)" />
-      <Motion x={98} y={70} dir={20} spread={60} n={3} len={9} gap={8} color={PAL.sky} width={3.6} />
+      <Move kind="slow" dy={-9}>
+        <ellipse cx="54" cy="66" rx="29" ry="28" fill={PAL.slateDark} />
+        <circle cx="54" cy="66" r="21" fill={PAL.mist} />
+        <path d="M54 66V48M54 66L71 60M54 66L64 81M54 66L44 81M54 66L37 60" stroke={PAL.steel} strokeWidth="5" strokeLinecap="round" />
+        <circle cx="54" cy="66" r="6" fill={PAL.steel} />
+        <Shine d="M22 44Q30 28 46 22" color={PAL.steel} opacity={0.9} />
+      </Move>
+      {/* Air hissing out to the right */}
+      <Move kind="show">
+        <Motion x={98} y={70} dir={20} spread={60} n={3} len={9} gap={8} color={PAL.sky} width={3.6} />
+      </Move>
     </g>
   ),
 

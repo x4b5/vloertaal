@@ -81,6 +81,19 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // werk" and "welkom terug" have a drawing (group38).
     for (const id of ['w.herstellen', 'w.opbouwen', 'w.halvedagen']) expect(abstract).toContain(id);
     expect(abstract.length).toBe(206);
+    // Of the 191 (5 November 2026, the owner's trial of moving pictures, tests/motionPictures.test.ts):
+    // 178 with no picture at all, 11 memory pictures ('hook') and 2 moving pictures ('motion':
+    // "ontruimen" and "bijna", which were abstract). The 2 still never stand in a picture choice.
+    // The second round (5 November 2026): 11 more abstract words got a moving picture only, and
+    // in the last round "kiezen" (l.mychoice): 166 with no picture at all, 11 memory pictures and
+    // 14 moving pictures (still 191 abstract). With the new lessons of 5 November 2026 (above):
+    // 179 with no picture, 13 memory pictures (with opbouwen, halve dagen), 14 moving: 206.
+    expect(allWords.filter((w) => w.picture === false)).toHaveLength(179);
+    expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(13);
+    expect(allWords.filter((w) => w.picture === 'motion').map((w) => w.id).sort()).toEqual([
+      'w.automatisch', 'w.bijna', 'w.daarna', 'w.doorgeven', 'w.eerst', 'w.kiezen', 'w.ontruimen', 'w.ruilen',
+      'w.tellen', 'w.uitloggen', 'w.verbeteren', 'w.verlengen', 'w.versturen', 'w.voordoen',
+    ]);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

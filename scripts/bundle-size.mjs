@@ -23,10 +23,15 @@ import { gzipSync } from 'node:zlib';
  * Limits in kB (1 kB = 1024 bytes), gzip. Set on 4 November 2026 about 10% above what the build was
  * then: start file 252 kB, start 367 kB (with React and the picture kit in assets/vendor-*.js, 71 kB,
  * and the stylesheet), dist 2942 kB.
+ * Raised on 5 November 2026 (start file 280 → 295, start 400 → 415): the lessons and tips of the
+ * course are in the start file (the path needs them), and seven new lessons came (Vervoer en
+ * bezorging, Voedselverwerking, Je goed voelen, Een nieuwe collega helpen, Weer aan het werk) at
+ * 283.8 / 403.0 kB. Next step instead of raising again: load the long tip texts only when a tip
+ * opens (docs/fasen or EIGENAAR-TODO: "ophogen of meer lui laden").
  */
 export const LIMITS = {
-  'start file': 280,
-  start: 400,
+  'start file': 295,
+  start: 415,
   dist: 3300,
 };
 

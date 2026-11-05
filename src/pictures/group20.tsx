@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
+import { Arrow, Ground, Hand, Move, PAL, SKIN, Shade, Shine } from './kit';
 import { Bust } from './bust';
 
 /**
@@ -184,6 +184,7 @@ export default {
   },
 
   // "duren": to last, to take (time) — an hourglass, the sand running from the top to the bottom.
+  // On the intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the sand runs: the top sinks, the heap grows (2 s).
   'w.duren': () => (
     <g>
       <Ground cx={60} cy={106} rx={30} ry={4} />
@@ -192,10 +193,14 @@ export default {
         <path d="M38 22H82Q82 46 64 60Q82 74 82 98H38Q38 74 56 60Q38 46 38 22Z" fill="#e3f5ff" />
       </Shade>
       {/* sand: what is left on top, the stream, the heap below */}
-      <path d="M47 38H73Q70 48 60 54Q50 48 47 38Z" fill={PAL.card} />
+      <Move kind="sag" grow={1.5}>
+        <path d="M47 38H73Q70 48 60 54Q50 48 47 38Z" fill={PAL.card} />
+      </Move>
       <path d="M60 54V88" stroke={PAL.card} strokeWidth="2.6" strokeLinecap="round" />
-      <path d="M41 97Q44 80 60 78Q76 80 79 97Z" fill={PAL.card} />
-      <path d="M66 82Q76 84 79 97H70Z" fill={PAL.cardShade} />
+      <Move kind="sag" grow={0.4}>
+        <path d="M41 97Q44 80 60 78Q76 80 79 97Z" fill={PAL.card} />
+        <path d="M66 82Q76 84 79 97H70Z" fill={PAL.cardShade} />
+      </Move>
       {/* wooden frame: top and bottom plates, two posts */}
       <rect x="30" y="12" width="60" height="10" rx="3" fill={PAL.wood} />
       <rect x="30" y="98" width="60" height="10" rx="3" fill={PAL.wood} />
