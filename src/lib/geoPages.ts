@@ -22,7 +22,7 @@ import { RULES_TOPIC_PAGES, rulesTopicPath } from './rulesPages';
 
 export { AREA_SERVED } from './plainPage';
 
-export const HELP_LANGS = 'Arabisch, Tigrinya, Perzisch, Dari, Oekraïens, Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans en Duits';
+export const HELP_LANGS = 'Arabisch, Tigrinya, Perzisch, Dari, Somalisch, Oekraïens, Turks, Pools, Roemeens, Bulgaars, Spaans, Portugees, Frans en Duits';
 
 export interface Faq { q: string; a: string }
 
@@ -30,7 +30,7 @@ export interface Faq { q: string; a: string }
 export const FAQ: readonly Faq[] = [
   { q: 'Is Vloertaal gratis?', a: 'Ja. Vloertaal is gratis: geen abonnement, geen reclame, en we verkopen geen gegevens.' },
   { q: 'Heb ik een account nodig?', a: 'Nee. Wat je leert, staat alleen op je eigen telefoon of computer. Je opent Vloertaal in de browser en kunt het op je beginscherm zetten.' },
-  { q: 'In welke talen krijg ik uitleg?', a: `Vloertaal legt het Nederlands uit in 13 talen: ${HELP_LANGS}. Of in eenvoudig Engels.` },
+  { q: 'In welke talen krijg ik uitleg?', a: `Vloertaal legt het Nederlands uit in 14 talen: ${HELP_LANGS}. Of in eenvoudig Engels.` },
   { q: 'Werkt Vloertaal ook in België?', a: 'Ja, voor Vlaanderen. Kies bij de start “België”. Dan leer je Vlaamse woorden, zoals loonbrief en interimkantoor, en in Werkregels de regels van België. De Belgische lessen zijn nieuw en nog niet nagekeken door een expert.' },
   { q: 'Wat is Werkregels?', a: 'Werkregels is voor wie al Nederlands spreekt. Je leert hoe werken in Nederland of België gaat: je loon, je contract, ziek zijn, veilig werken en je rechten. Het is algemene informatie, geen juridisch advies.' },
   { q: 'Vervangt Vloertaal een taalcursus?', a: 'Nee. Vloertaal is een extra: korte lessen van een paar minuten per dag. Een taalcursus of een taalcoach blijft nodig.' },
@@ -136,9 +136,9 @@ export function llmsTxt(): string {
   const link = (path: string, name: string, note?: string) => `- [${name}](${SITE}${path})${note ? `: ${note}` : ''}`;
   return `# Vloertaal
 
-> Vloertaal is een gratis web-app om Nederlands te leren voor je werk, in Nederland en in België (Vlaanderen), met uitleg in 13 hulptalen of in eenvoudig Engels. Geen account, geen reclame. Het is nog een testversie.
+> Vloertaal is een gratis web-app om Nederlands te leren voor je werk, in Nederland en in België (Vlaanderen), met uitleg in 14 hulptalen of in eenvoudig Engels. Geen account, geen reclame. Het is nog een testversie.
 
-In English: Vloertaal is a free web app to learn Dutch for work in the Netherlands and Belgium (Flanders), with help in 13 languages or plain English. No account, no ads. It is still a test version.
+In English: Vloertaal is a free web app to learn Dutch for work in the Netherlands and Belgium (Flanders), with help in 14 languages or plain English. No account, no ads. It is still a test version.
 
 ${about('a.what')}
 
