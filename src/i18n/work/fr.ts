@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'Les remarques et les erreurs',
     'w.fout': 'l’erreur',
     'w.compliment': 'le compliment',
-    'w.feedback': 'le retour, les remarques',
+    'w.feedback': 'le feedback, les retours (ce que quelqu’un dit de ton travail)', // nieuw, nalezen
     'w.uitleggen': 'expliquer',
     'w.leren': 'apprendre',
     'w.verbeteren': 'améliorer, corriger',

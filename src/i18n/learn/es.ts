@@ -123,6 +123,14 @@ const t: CultureTranslation = {
     'c.budget.a.why': "Te ofrecen pagar después: un no educado, con la razón.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.healthy.a.why': "Te ofrecen una pastilla: un no educado, con la razón.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'd.newcolleague.a.why': "“Creo” todavía no es seguro: pedir que lo enseñe comprueba que funciona.", // nieuw, nalezen
+    'd.explain.a.why': 'Te preguntan qué pasa: esta respuesta dice qué, y qué hace falta.', // nieuw, nalezen
+    'd.listen.a.why': 'No sabes si es una broma: preguntar es mejor que adivinar.', // nieuw, nalezen
+    'd.calm.a.why': 'Te preguntan por qué no está hecho: un motivo tranquilo, y qué va primero.', // nieuw, nalezen
+    'd.talkintime.a.why': 'Alguien pide un momento: un sí, y una pregunta para que lo pueda contar.', // nieuw, nalezen
+    'd.reachable.a.why': 'Devuelves una llamada perdida: un saludo, y por qué llamas.', // nieuw, nalezen
+    'd.getfeedback.a.why': 'Te ofrecen feedback: un sí, y que quieres hacerlo bien.', // nieuw, nalezen
+    'd.givefeedback.a.why': 'Te preguntan por el trabajo: primero lo que está bien, luego lo que puede mejorar.', // nieuw, nalezen
+    'd.meeting.a.why': 'Preguntan si hay preguntas: esta respuesta hace una, sobre el horario.', // nieuw, nalezen
     'c.food.a.why': "Te preguntan por qué se limpia la línea: el siguiente producto no lleva frutos secos.", // nieuw, nalezen
     'c.parcel.a.why': "Preguntan si el paquete es suyo: sí, y luego la firma.", // nieuw, nalezen
     'c.road.a.why': "Te piden un reparto más: no, porque primero va la pausa.", // nieuw, nalezen

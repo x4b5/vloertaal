@@ -123,6 +123,14 @@ const t: CultureTranslation = {
     'c.budget.a.why': "On propose de payer plus tard : un non poli, avec la raison.", // nieuw, nalezen
     'c.healthy.a.why': "On propose un cachet : un non poli, avec la raison.", // nieuw, nalezen
     'd.newcolleague.a.why': "“Je crois”, ce n’est pas encore sûr : demander à voir permet de vérifier que ça marche.", // nieuw, nalezen
+    'd.explain.a.why': 'On demande ce qui ne va pas : cette réponse dit quoi, et ce qu’il faut.', // nieuw, nalezen
+    'd.listen.a.why': 'Tu ne sais pas si c’est une blague : demander vaut mieux que deviner.', // nieuw, nalezen
+    'd.calm.a.why': 'On demande pourquoi ce n’est pas fini : une raison dite calmement, et ce qui passe d’abord.', // nieuw, nalezen
+    'd.talkintime.a.why': 'Quelqu’un demande un moment : un oui, et une question pour qu’il puisse raconter.', // nieuw, nalezen
+    'd.reachable.a.why': 'Tu rappelles après un appel manqué : un bonjour, et pourquoi tu appelles.', // nieuw, nalezen
+    'd.getfeedback.a.why': 'On te propose un feedback : un oui, et que tu veux bien faire.', // nieuw, nalezen
+    'd.givefeedback.a.why': 'On te demande ce que tu penses du travail : d’abord ce qui est bien, puis ce qui peut être mieux.', // nieuw, nalezen
+    'd.meeting.a.why': 'On demande s’il y a des questions : cette réponse en pose une, sur le planning.', // nieuw, nalezen
     'c.food.a.why': "On demande pourquoi on nettoie la ligne : le produit suivant est sans noix.", // nieuw, nalezen
     'c.parcel.a.why': "On demande si le colis est pour eux : oui, puis la signature.", // nieuw, nalezen
     'c.road.a.why': "On demande une tournée de plus : non, car la pause passe d’abord.", // nieuw, nalezen

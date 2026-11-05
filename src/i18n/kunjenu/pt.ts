@@ -66,6 +66,12 @@ const t: CultureTranslation = {
     'kjn.u.teamwork.1': "Consigo dizer que há uma coisa que me incomoda.", // nieuw, nalezen
     'kjn.u.teamwork.2': "Consigo dizer que não a trabalho extra, com calma.", // nieuw, nalezen
     'kjn.u.teamwork.3': "Consigo perguntar o que tenho de fazer primeiro.", // nieuw, nalezen
+    'kjn.u.communicate.1': 'Consigo explicar o que está mal.', // nieuw, nalezen
+    'kjn.u.communicate.2': 'Consigo dizer o que ouvi.', // nieuw, nalezen
+    'kjn.u.communicate.3': 'Consigo pedir uma conversa a tempo.', // nieuw, nalezen
+    'kjn.u.feedback.1': 'Consigo pedir um exemplo quando recebo feedback.', // nieuw, nalezen
+    'kjn.u.feedback.2': 'Consigo dizer com simpatia o que pode ser melhor.', // nieuw, nalezen
+    'kjn.u.feedback.3': 'Consigo fazer uma pergunta numa reunião de equipa.', // nieuw, nalezen
     'kjn.u.social.1': "Consigo conversar um pouco na pausa.", // nieuw, nalezen
     'kjn.u.social.2': "Consigo dizer que cometi um erro.", // nieuw, nalezen
     'kjn.u.social.3': "Consigo dizer que uma coisa passa o meu limite.", // nieuw, nalezen
