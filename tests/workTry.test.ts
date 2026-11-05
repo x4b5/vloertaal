@@ -106,7 +106,7 @@ describe('workTryLine', () => {
   it('takes those lines from what is there already: recorded in every voice, translated in every help language', async () => {
     const { workTryLine } = await load();
     const { helpLanguages } = await import('../src/i18n/all');
-    expect(helpLanguages).toHaveLength(13);
+    expect(helpLanguages).toHaveLength(14);
     const voices = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')).voices as { key: string; said: Record<string, string> }[];
     for (const lessonId of ['l.people', 'l.arrive', 'l.callin']) {
       const line = workTryLine(lessonId)!;

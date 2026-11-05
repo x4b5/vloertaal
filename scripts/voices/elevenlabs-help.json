@@ -7,18 +7,48 @@
     "prs": "Dari: no ElevenLabs model names it; eleven_v3 reads it as Persian. Let a Dari speaker listen before it goes live; if it sounds Iranian, record it by phone like Tigrinya."
   },
   "langs": {
-    "ar": { "model": "eleven_multilingual_v2" },
-    "ti": { "human": true },
-    "fa": { "model": "eleven_v3" },
-    "prs": { "model": "eleven_v3", "listen": true },
-    "uk": { "model": "eleven_multilingual_v2" },
-    "tr": { "model": "eleven_multilingual_v2" },
-    "pl": { "model": "eleven_multilingual_v2" },
-    "ro": { "model": "eleven_multilingual_v2" },
-    "bg": { "model": "eleven_multilingual_v2" },
-    "es": { "model": "eleven_multilingual_v2" },
-    "pt": { "model": "eleven_multilingual_v2" },
-    "fr": { "model": "eleven_multilingual_v2" },
-    "de": { "model": "eleven_multilingual_v2" }
+    "ar": {
+      "model": "eleven_multilingual_v2"
+    },
+    "ti": {
+      "human": true
+    },
+    "fa": {
+      "model": "eleven_v3"
+    },
+    "prs": {
+      "model": "eleven_v3",
+      "listen": true
+    },
+    "so": {
+      "human": true
+    },
+    "uk": {
+      "model": "eleven_multilingual_v2"
+    },
+    "tr": {
+      "model": "eleven_multilingual_v2"
+    },
+    "pl": {
+      "model": "eleven_multilingual_v2"
+    },
+    "ro": {
+      "model": "eleven_multilingual_v2"
+    },
+    "bg": {
+      "model": "eleven_multilingual_v2"
+    },
+    "es": {
+      "model": "eleven_multilingual_v2"
+    },
+    "pt": {
+      "model": "eleven_multilingual_v2"
+    },
+    "fr": {
+      "model": "eleven_multilingual_v2"
+    },
+    "de": {
+      "model": "eleven_multilingual_v2"
+    }
   }
 }

@@ -67,8 +67,8 @@ describe('sitemap', () => {
 });
 
 describe('a page per help language (docs/seo-plan.md, step 3)', () => {
-  it('has the thirteen help languages and English', () => {
-    expect(LANG_PAGES.map((p) => p.code).sort()).toEqual(['ar', 'bg', 'de', 'en', 'es', 'fa', 'fr', 'pl', 'prs', 'pt', 'ro', 'ti', 'tr', 'uk']);
+  it('has the fourteen help languages and English', () => {
+    expect(LANG_PAGES.map((p) => p.code).sort()).toEqual(['ar', 'bg', 'de', 'en', 'es', 'fa', 'fr', 'pl', 'prs', 'pt', 'ro', 'so', 'ti', 'tr', 'uk']);
   });
 
   for (const p of LANG_PAGES) {

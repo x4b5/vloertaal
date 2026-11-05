@@ -123,10 +123,10 @@ describe('the language list', () => {
     // Drawn flags, no flag emoji: the emoji font for flags alone was 709 KB on the first screen.
     expect(m).not.toMatch(/[\u{1F1E6}-\u{1F1FF}]/u);
     expect(m.match(/<svg class="lang-flag"[^>]*aria-hidden="true"/g)).toHaveLength(6);
-    expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(16);
+    expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(17);
     expect(m.match(/class="lang-flag"/g)).toHaveLength(6);
-    // A tile of letters for ar, ti, fa, prs, and for es, pt, fr and de (spoken in many countries).
-    expect(m.match(/class="lang-sample"/g)).toHaveLength(9);
+    // A tile of letters for ar, ti, fa, prs, so, and for es, pt, fr and de (spoken in many countries).
+    expect(m.match(/class="lang-sample"/g)).toHaveLength(10);
   });
 
   it('in Settings of the Dutch track: no English names under the languages', () => {

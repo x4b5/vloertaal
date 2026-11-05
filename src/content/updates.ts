@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-05',
     items: [
+      'Nieuwe hulptaal: Somalisch (Soomaali). Alle lessen, tips en schermen hebben nu ook een Somalische uitleg. De vertaling is nog niet nagekeken door een moedertaalspreker. Wie Somalisch spreekt en wil meelezen: graag!',
       'Hoe zeg je het? De mond beweegt nu ook op een laptop of telefoon die om minder beweging vraagt (bij Windows: animatie-effecten uit). Alleen als je zelf "Rustig scherm: aan" kiest, staat hij stil. En "cao" klinkt nu als "cee-aa-oo".',
       'De browser vertaalt de app niet meer automatisch. Chrome maakte van "Hij belt het" soms "Hij riem het" (het las "belt" als Engels), en dan klopte de stem niet meer met de tekst. De uitleg in je eigen taal geeft de app zelf.',
       'Nieuw onderwerp: Vervoer en bezorging (bij Logistiek). Pakketten bezorgen, de scanner, "klant niet thuis", een kapot pakket melden met een foto. En veilig en eerlijk onderweg: de steekwagen bij zware pakketten, je pauze, en wie je tijden en je route bepaalt.',
