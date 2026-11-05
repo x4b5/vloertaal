@@ -129,6 +129,15 @@ const t: CultureTranslation = {
     'c.road.a.why': "Искат още един курс: не, защото почивката е първо.", // nieuw, nalezen
     'c.backtowork.a.why': "Питат как си: кратко „да“ и че не бързаш.", // nieuw, nalezen
     'c.feelwell.a.why': "Питат как си: честното „не съвсем“ е наред.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 november 2026).
+    'd.explain.a.why': "На въпроса какво не е наред: този отговор казва какво и от какво има нужда.", // nieuw, nalezen
+    'd.listen.a.why': "Не е ясно дали е шега: по-добре питаш, отколкото да гадаеш.", // nieuw, nalezen
+    'd.calm.a.why': "На въпроса защо не е готово: спокойна причина и кое е първо.", // nieuw, nalezen
+    'd.talkintime.a.why': "Някой моли за минутка: едно „да“ и въпрос, за да може да разкаже.", // nieuw, nalezen
+    'd.reachable.a.why': "Връщаш пропуснато обаждане: поздрав и защо се обаждаш.", // nieuw, nalezen
+    'd.getfeedback.a.why': "Предлагат ти обратна връзка: едно „да“ и че искаш да го правиш добре.", // nieuw, nalezen
+    'd.givefeedback.a.why': "На въпроса за работата: първо какво е добре, после какво може да е по-добре.", // nieuw, nalezen
+    'd.meeting.a.why': "Питат за въпроси: този отговор задава един, за графика.", // nieuw, nalezen
   },
 };
 

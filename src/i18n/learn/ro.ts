@@ -129,6 +129,15 @@ const t: CultureTranslation = {
     'c.road.a.why': "I se cere încă o cursă: nu, pentru că pauza e mai întâi.", // nieuw, nalezen
     'c.backtowork.a.why': "Întrebarea e cum te simți: un „da” scurt și că o iei încet.", // nieuw, nalezen
     'c.feelwell.a.why': "Întrebarea e cum te simți: un „nu prea” sincer e în regulă.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 november 2026).
+    'd.explain.a.why': "Întrebat ce nu e în regulă: răspunsul spune ce și de ce e nevoie.", // nieuw, nalezen
+    'd.listen.a.why': "Nu știi sigur dacă e o glumă: mai bine întrebi decât să ghicești.", // nieuw, nalezen
+    'd.calm.a.why': "Întrebat de ce nu e gata: un motiv spus calm și ce vine întâi.", // nieuw, nalezen
+    'd.talkintime.a.why': "Cineva cere puțin timp: un „da” și o întrebare, ca să poată povesti.", // nieuw, nalezen
+    'd.reachable.a.why': "Suni înapoi după un apel pierdut: un salut și de ce suni.", // nieuw, nalezen
+    'd.getfeedback.a.why': "Ți se oferă feedback: un „da” și că vrei să faci treaba bine.", // nieuw, nalezen
+    'd.givefeedback.a.why': "Întrebat despre muncă: întâi ce e bine, apoi ce poate fi mai bine.", // nieuw, nalezen
+    'd.meeting.a.why': "Se cer întrebări: răspunsul pune una, despre programul de lucru.", // nieuw, nalezen
   },
 };
 

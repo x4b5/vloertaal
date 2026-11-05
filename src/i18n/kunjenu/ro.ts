@@ -112,6 +112,13 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Pot să spun că clientul nu e acasă.", // nieuw, nalezen
     'kjn.u.delivery.2': "Pot să le cer vecinilor să primească un colet.", // nieuw, nalezen
     'kjn.u.delivery.3': "Pot să întreb cine decide traseul și orele mele.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 november 2026).
+    'kjn.u.communicate.1': "Pot să explic ce nu e în regulă.", // nieuw, nalezen
+    'kjn.u.communicate.2': "Pot să spun ce am auzit.", // nieuw, nalezen
+    'kjn.u.communicate.3': "Pot să cer la timp o discuție.", // nieuw, nalezen
+    'kjn.u.feedback.1': "Pot să cer un exemplu când primesc feedback.", // nieuw, nalezen
+    'kjn.u.feedback.2': "Pot să spun prietenos ce poate fi mai bine.", // nieuw, nalezen
+    'kjn.u.feedback.3': "Pot să pun o întrebare la o ședință de echipă.", // nieuw, nalezen
   },
 };
 
