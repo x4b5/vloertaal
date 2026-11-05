@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { stillMotion } from '../lib/calm';
 import { BeNote } from './BeNote';
+import { COMMUNICATION_LESSONS } from '../content/communication';
 import { lessonNlOnly, unitNlOnly } from '../content/taalBe';
 import { Character } from './Characters';
 import { unitIcon } from '../content/unitIcons';
@@ -753,6 +754,8 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
                     {lesson.rule?.note && <span className="bay-goal bay-note" lang="nl">{lesson.rule.note}</span>}
                     {/* The language course in Belgium (docs/taal-belgie.md). */}
                     {!lesson.steps?.length && lessonNlOnly(lesson.id) && <BeNote lang={lang} inline className="bay-goal bay-note" />}
+                    {/* A lesson that trains talking with others (src/content/communication.ts). */}
+                    {COMMUNICATION_LESSONS.has(lesson.id) && <span className="bay-goal bay-comm"><span aria-hidden>💬 </span><Bi text={ui('commLabel', lang)} /></span>}
                     {saved && <ResumeChip save={saved} lang={lang} />}
                     {/* The topic's sign says "via check" once for the whole topic; a row says it
                         only when the topic as a whole was not ticked off with it. */}

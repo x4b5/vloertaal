@@ -74,7 +74,7 @@ describe('Voor begeleiders en werkgevers: in the app and on the site, from one s
   const site = coachPage();
 
   it('has the professionals’ sections, in this order', () => {
-    expect(proSections.map((s) => s.id)).toEqual(['p.what', 'p.story', 'p.beta', 'p.who', 'p.voices', 'p.privacy', 'p.facts', 'p.group', 'p.weekplan', 'p.kunjenu', 'p.entree', 'p.contact']);
+    expect(proSections.map((s) => s.id)).toEqual(['p.what', 'p.story', 'p.beta', 'p.who', 'p.voices', 'p.privacy', 'p.facts', 'p.group', 'p.comm', 'p.weekplan', 'p.kunjenu', 'p.entree', 'p.contact']);
     // In their Dutch: the mission and for whom (both tracks), not on Over; the story and the test version, as on Over.
     const body = (id: string) => proSections.find((s) => s.id === id)!.body.join(' ') + (proSections.find((s) => s.id === id)!.lines ?? []).map((l) => l.text).join(' ');
     expect(body('p.what')).toContain('aanvulling op een taalcursus of taalcoach, niet als vervanging');
