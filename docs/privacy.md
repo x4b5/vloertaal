@@ -11,7 +11,8 @@ De privacyverklaring op vloertaal.nl/privacy (`src/lib/privacyPage.ts`) zegt pre
 |---|---|---|
 | Voortgang, keuzes, certificaten | `src/lib/progress.ts` (localStorage) | Nee |
 | "Voortgang wissen" | `src/App.tsx` (`onReset`) | Wist lessen, certificaten, de naam en de toets met opnames. Hulptaal, land, sector, regio, gender, de eerste dag en de instellingen blijven staan; de privacytekst zegt dat. Alles weg: de sitegegevens in de browser wissen, of de app verwijderen |
-| Toets-uitslag en stemopnames van de toets | `src/lib/toetsVoice.ts` (IndexedDB) | Nee |
+| Toets-uitslag en de antwoorden op "Durf je dit?" | `src/lib/progress.ts` (`toets`, via `FIELDS`; localStorage) | Nee: niet geteld, ook niet als "Anoniem meetellen" aan staat. Gaat mee in de back-up en weg met "Voortgang wissen" |
+| Stemopnames van de toets | `src/lib/toetsVoice.ts` (IndexedDB) | Nee |
 | "Zeg het"-opname | `src/lib/speaking.ts` | Nee, en weg na de oefening |
 | "Laat de telefoon luisteren" | `src/lib/listen.ts` | Nee: alleen als de herkenning op het toestel gebeurt (`processLocally`) |
 | Lessen tellen | `src/lib/count.ts` | GoatCounter: alleen de les, het kwart en de minutenband |

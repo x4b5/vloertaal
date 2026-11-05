@@ -359,6 +359,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Aşağı yukarı aynı', // nieuw, nalezen
     toetsMoreAll: 'Genel olarak: Şimdi öncekinden daha fazla biliyorsun.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsSameAll: 'Genel olarak: Aşağı yukarı öncekiyle aynı.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Önce senin hakkında 5 soru. Doğru ya da yanlış yok.', // nieuw, nalezen
+    toetsDurfAsk: 'Bunu yapmaya cesaretin var mı?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Bir şeyi anlamadığını söylemek', // nieuw, nalezen
+    toetsDurfBoss: 'Amirine bir şey sormak', // nieuw, nalezen
+    toetsDurfHelp: 'Yardım istemek', // nieuw, nalezen
+    toetsDurfUnsafe: 'Bir şeyin güvenli olmadığını söylemek', // nieuw, nalezen
+    toetsDurfBreak: 'Molada bir iş arkadaşıyla biraz sohbet etmek', // nieuw, nalezen
+    toetsDurfNotYet: 'Henüz değil', // nieuw, nalezen
+    toetsDurfABit: 'Biraz', // nieuw, nalezen
+    toetsDurfYes: 'Evet', // nieuw, nalezen
+    toetsDurfAgain: 'Birkaç hafta sonra tekrar soracağız.', // nieuw, nalezen
     tempo: 'Hız', // nieuw, nalezen
     tempoCalm: 'Sakin', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen

@@ -360,6 +360,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'ዳርጋ ሓደ ዓይነት', // nieuw, nalezen
     toetsMoreAll: { m: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጥ ኢኻ።', f: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጢ ኢኺ።', x: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጡ ኢኹም።' }, // nieuw, nalezen
     toetsSameAll: 'ኩሉ ብሓባር: ዳርጋ ከም ቅድሚ።', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: { m: 'መጀመርታ 5 ሕቶታት ብዛዕባኻ። ቅኑዕ ወይ ጌጋ የለን።', f: 'መጀመርታ 5 ሕቶታት ብዛዕባኺ። ቅኑዕ ወይ ጌጋ የለን።', x: 'መጀመርታ 5 ሕቶታት ብዛዕባኹም። ቅኑዕ ወይ ጌጋ የለን።' }, // nieuw, nalezen
+    toetsDurfAsk: { m: 'እዚ ክትገብር ትደፍር ዲኻ?', f: 'እዚ ክትገብሪ ትደፍሪ ዲኺ?', x: 'እዚ ክትገብሩ ትደፍሩ ዲኹም?' }, // nieuw, nalezen
+    toetsDurfUnderstand: { m: 'ገለ ከም ዘይተረደኣካ ምዝራብ', f: 'ገለ ከም ዘይተረደኣኪ ምዝራብ', x: 'ገለ ከም ዘይተረደኣኩም ምዝራብ' }, // nieuw, nalezen
+    toetsDurfBoss: { m: 'ንሓላፊኻ ገለ ምሕታት', f: 'ንሓላፊኺ ገለ ምሕታት', x: 'ንሓላፊኹም ገለ ምሕታት' }, // nieuw, nalezen
+    toetsDurfHelp: 'ሓገዝ ምሕታት', // nieuw, nalezen
+    toetsDurfUnsafe: 'ገለ ውሑስ ከም ዘይኮነ ምዝራብ', // nieuw, nalezen
+    toetsDurfBreak: 'ኣብ ዕረፍቲ ምስ መሳርሕቲ ቁሩብ ምዝራብ', // nieuw, nalezen
+    toetsDurfNotYet: 'ገና', // nieuw, nalezen
+    toetsDurfABit: 'ቁሩብ', // nieuw, nalezen
+    toetsDurfYes: 'እወ', // nieuw, nalezen
+    toetsDurfAgain: 'ድሕሪ ቁሩብ ሰሙናት ደጊምና ክንሓትት ኢና።', // nieuw, nalezen
     tempo: 'ቅልጣፈ', // nieuw, nalezen
     tempoCalm: 'ህዱእ', // nieuw, nalezen
     tempoNormal: 'ንቡር', // nieuw, nalezen

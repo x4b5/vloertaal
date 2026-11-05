@@ -359,6 +359,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Горе-долу същото', // nieuw, nalezen
     toetsMoreAll: 'Всичко заедно: сега знаеш повече от тогава.', // nieuw, nalezen
     toetsSameAll: 'Всичко заедно: горе-долу същото като тогава.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Първо 5 въпроса за теб. Няма правилно и грешно.', // nieuw, nalezen
+    toetsDurfAsk: 'Смееш ли да го направиш?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Да кажеш, че не разбираш нещо', // nieuw, nalezen
+    toetsDurfBoss: 'Да попиташ нещо началника си', // nieuw, nalezen
+    toetsDurfHelp: 'Да помолиш за помощ', // nieuw, nalezen
+    toetsDurfUnsafe: 'Да кажеш, че нещо не е безопасно', // nieuw, nalezen
+    toetsDurfBreak: 'Да си поговориш малко с колега в почивката', // nieuw, nalezen
+    toetsDurfNotYet: 'Още не', // nieuw, nalezen
+    toetsDurfABit: 'Малко', // nieuw, nalezen
+    toetsDurfYes: 'Да', // nieuw, nalezen
+    toetsDurfAgain: 'След няколко седмици ще попитаме пак.', // nieuw, nalezen
     tempo: 'Темпо', // nieuw, nalezen
     tempoCalm: 'Спокойно', // nieuw, nalezen
     tempoNormal: 'Нормално', // nieuw, nalezen

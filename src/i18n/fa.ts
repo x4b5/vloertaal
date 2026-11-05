@@ -359,6 +359,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'تقریباً مثل قبل', // nieuw, nalezen
     toetsMoreAll: 'همه با هم: الان بیشتر از قبل می‌دانید.', // nieuw, nalezen
     toetsSameAll: 'همه با هم: تقریباً مثل قبل.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'اول 5 سؤال درباره خودتان. درست یا غلط وجود ندارد.', // nieuw, nalezen
+    toetsDurfAsk: 'جرئت می‌کنید این کار را بکنید؟', // nieuw, nalezen
+    toetsDurfUnderstand: 'بگویید که چیزی را نمی‌فهمید', // nieuw, nalezen
+    toetsDurfBoss: 'از مسئول‌تان چیزی بپرسید', // nieuw, nalezen
+    toetsDurfHelp: 'کمک بخواهید', // nieuw, nalezen
+    toetsDurfUnsafe: 'بگویید که چیزی ایمن نیست', // nieuw, nalezen
+    toetsDurfBreak: 'در زمان استراحت کمی با یک همکار حرف بزنید', // nieuw, nalezen
+    toetsDurfNotYet: 'هنوز نه', // nieuw, nalezen
+    toetsDurfABit: 'کمی', // nieuw, nalezen
+    toetsDurfYes: 'بله', // nieuw, nalezen
+    toetsDurfAgain: 'چند هفته بعد دوباره می‌پرسیم.', // nieuw, nalezen
     tempo: 'سرعت', // nieuw, nalezen
     tempoCalm: 'آرام', // nieuw, nalezen
     tempoNormal: 'عادی', // nieuw, nalezen

@@ -16,13 +16,15 @@ import { TOETS_VERSIONS } from '../content/toets';
  *   /?shot=toets&state=offer         the home after the first lesson with the test's line under
  *                                    lesson 1.2 (a tap opens its page); &state=offer-eind the end's;
  *                                    &state=offer-page and offer-eind-page: the page itself
+ *   /?shot=toets&state=durf&at=0     "Durf je dit?" (0–4; 0 with the line "Eerst 5 vragen over jou")
  *   /?shot=toets&state=question&at=0 a question (seed 1): 0–4 listening, 5–6 building by ear,
  *                                    7–11 words, 12–13 dictation, 14–18 chats, 19–20 building
  *   /?shot=toets&state=speak         the speaking task (&phase=review: comparing)
  *   /?shot=toets&state=result-instap the result after the start
  *   /?shot=toets&state=result-eind   the result after the end, then and now (with two short
  *                                    recordings put on this phone, so "Jij toen / Jij nu" shows)
- *                                    (&old=1: the start kept from form 1, 18 picks)
+ *                                    (&old=1: the start kept from form 1, 18 picks, without
+ *                                    "Durf je dit?": the end then shows nothing of it)
  *   /?shot=toets&state=page          its page under Settings (after the end)
  */
 const seven = { listen: 7, words: 7, sentences: 7 };
@@ -31,6 +33,9 @@ const picks = { listen: 5, words: 5, sentences: 5 };
  *  Woorden "Meer dan toen", Zinnen "Ongeveer gelijk" (+2, but within what guessing gives). */
 const INSTAP: ToetsRun = { day: '2026-10-02', version: 'A', right: { listen: 2, words: 3, sentences: 1 }, of: seven, form: 2, mc: picks, wrong: { listen: 2, words: 1, sentences: 3 }, idk: { listen: 3, words: 3, sentences: 3 } };
 const EIND: ToetsRun = { day: '2026-10-30', version: 'B', right: { listen: 5, words: 6, sentences: 3 }, of: seven, form: 2, mc: picks, wrong: { listen: 0, words: 0, sentences: 2 }, idk: { listen: 2, words: 1, sentences: 2 } };
+/** "Durf je dit?" then and now: more where it grew, the same where it did not. */
+INSTAP.durf = { understand: 0, boss: 0, help: 1, unsafe: 1, break: 2 };
+EIND.durf = { understand: 1, boss: 0, help: 2, unsafe: 2, break: 2 };
 /** A start kept from form 1 (18 picks, before November 2026). */
 const INSTAP_OLD: ToetsRun = { day: '2026-10-02', version: 'A', right: { listen: 2, words: 3, sentences: 1 }, of: { listen: 6, words: 6, sentences: 6 } };
 
@@ -93,6 +98,7 @@ export function ToetsShot({ lang: code, gender }: { lang: string | null; gender?
   if (state === 'offer' || state === 'offer-eind' || state === 'offer-page' || state === 'offer-eind-page') {
     return <OfferShot moment={state.startsWith('offer-eind') ? 'eind' : 'instap'} page={state.endsWith('-page')} lang={lang} />;
   }
+  if (state === 'durf') return <ToetsPlayer moment={q.get('moment') === 'eind' ? 'eind' : 'instap'} lang={lang} seed={1} durfAt={Number(q.get('at') ?? 0)} onQuit={() => {}} onDone={() => {}} />;
   if (state === 'question' || state === 'speak') {
     const at = state === 'speak' ? TOETS_VERSIONS.A.length : Number(q.get('at') ?? 0);
     return <ToetsPlayer moment={q.get('moment') === 'eind' ? 'eind' : 'instap'} lang={lang} seed={1} startAt={at} onQuit={() => {}} onDone={() => {}} />;

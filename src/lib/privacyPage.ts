@@ -11,7 +11,7 @@ import { breadcrumbs, esc, plainPage, SITE } from './plainPage';
  */
 
 /** When this text last changed. A change also goes in the logbook (src/content/updates.ts). */
-export const PRIVACY_DATE = '2026-11-04';
+export const PRIVACY_DATE = '2026-11-05';
 
 export interface PrivacySection { id: string; title: string; paras: string[] }
 
@@ -30,10 +30,12 @@ export const PRIVACY: readonly PrivacySection[] = [
     id: 'toestel',
     title: 'Wat er op je telefoon of computer staat',
     paras: [
-      'Je voortgang en je keuzes: je hulptaal, je land, waar je werkt, je lessen, je certificaten en je instellingen. Ook de uitslag van de toets “Wat ken je al?” en de opnames van je stem bij die toets. Dit staat in het geheugen van je browser, niet bij ons.',
+      // "Durf je dit?" (src/content/toets.ts TOETS_DURF, the owner's request, 5 November 2026): its
+      // answers are kept with the test's result on this phone, and never counted.
+      'Je voortgang en je keuzes: je hulptaal, je land, waar je werkt, je lessen, je certificaten en je instellingen. Ook de uitslag van de toets “Wat ken je al?”, je antwoorden op de vragen “Durf je dit?” en de opnames van je stem bij die toets. Dit staat in het geheugen van je browser, niet bij ons.',
       // What the reset keeps (src/App.tsx onReset), said plainly: "Alles weg?" promised more than it
       // does (the owner's request, 4 November 2026). Everything goes only with the browser's own wipe.
-      'Kies je bij Instellingen “Voortgang wissen”? Dan zijn je lessen, je certificaten, de naam op je certificaten, en de uitslag en de opnames van de toets weg.',
+      'Kies je bij Instellingen “Voortgang wissen”? Dan zijn je lessen, je certificaten, de naam op je certificaten, en de uitslag, je antwoorden op “Durf je dit?” en de opnames van de toets weg.',
       'Een paar dingen blijven staan, zodat je meteen opnieuw kunt beginnen: je hulptaal, je land, waar je werkt, je regio, je keuze bij “Vrouw of man?”, de dag waarop je begon en je instellingen.',
       'Wil je dat echt alles weg is? Wis dan in je browser de gegevens van de website vloertaal.nl (de sitegegevens). Staat Vloertaal als app op je telefoon? Verwijder de app dan ook.',
       'Maak je een back-up? Dan maakt je telefoon een bestand. Jij bepaalt waar dat bestand blijft.',
@@ -44,7 +46,7 @@ export const PRIVACY: readonly PrivacySection[] = [
     title: 'Wat we tellen: anoniem meetellen',
     paras: [
       'Staat “Anoniem meetellen” aan? Dan stuurt de app een korte telling naar GoatCounter, een teller zonder cookies. Zo zien we welke lessen goed gaan en waar mensen stoppen.',
-      'Per telling gaat alleen dit mee: wat er gebeurt (een les begint, stopt of is af; de toets begint of is af), welke les, in welk kwart je stopte, en ongeveer hoeveel minuten een les duurde. Niet de uitslag van de toets.',
+      'Per telling gaat alleen dit mee: wat er gebeurt (een les begint, stopt of is af; de toets begint of is af), welke les, in welk kwart je stopte, en ongeveer hoeveel minuten een les duurde. Niet de uitslag van de toets, en niet je antwoorden op “Durf je dit?”.',
       // The start, before lesson 1 (src/lib/count.ts countFirstOpen, countStartDone), the owner's
       // request, 4 November 2026. It comes before the switch can be found: say so, and what does stop it.
       'Bij de start telt de app twee dingen, één keer per telefoon: dat de app voor het eerst opent, en dat je klaar bent met de vragen van de start (tot en met de kleur). Alleen dat het gebeurde. Niet wat je koos: geen taal, geen werk, geen land, geen kleur.',
