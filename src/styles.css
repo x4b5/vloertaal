@@ -4523,6 +4523,8 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
   font-size: 1rem; line-height: 1.4; font-weight: 700; color: var(--ink, inherit);
 }
 .bay-note { font-weight: 700; }
+/* "Communicatie" under a lesson title (src/content/communication.ts): the bubble beside the word. */
+.bay-comm { display: flex; align-items: baseline; gap: 4px; }
 /* The language course in Belgium (src/components/BeNote.tsx): "Dit gaat over Nederland. In
    België is het anders." and the beta line. A calm line, not a button. */
 .be-note { display: block; color: var(--ink, inherit); }

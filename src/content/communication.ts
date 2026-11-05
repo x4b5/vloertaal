@@ -2,7 +2,7 @@
  * "Communicatie": the lessons that train talking with others at work, across the topics (the
  * owner's request, 5 November 2026: communication more firmly in the course). In the app each of
  * these lessons says "Communicatie" under its title on the topic page (a calm line, nothing to tap;
- * src/components/Route.tsx), and the page for coaches lists them (src/content/pro.ts, p.comm).
+ * src/components/Route.tsx; not in a topic where every lesson is one of them, such as Samenwerken), and the page for coaches lists them (src/content/pro.ts, p.comm).
  * The Dutch titles of the topics and lessons are here because the lessons only carry English ones
  * (tests/communication.test.ts checks the ids and the topic names against the course).
  */
