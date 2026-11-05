@@ -395,3 +395,6 @@ export const de: Gloss = {
     'be.c.housing.o3': "Du bleibst und antwortest der Zeitarbeitsfirma nicht mehr.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.housing.w': "Dein Mietvertrag hat eigene Regeln, getrennt von deinem Job. Darin steht, wie lange du noch bleiben darfst. Kostenloser Rat hilft dir, deine Rechte zu kennen, auch zur Kaution.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

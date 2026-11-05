@@ -198,3 +198,6 @@ export const de: Gloss = {
     "be.c.checkout.o3": "Verkauf es, aber nur eine Dose.", // = c.checkout.o3
     "be.c.checkout.w": "Ohne Ausweis kannst du sein Alter nicht wissen. Bier an jemanden unter 16 zu verkaufen ist gegen das Gesetz, und der Laden kann eine Strafe bekommen.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

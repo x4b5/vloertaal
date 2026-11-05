@@ -146,3 +146,6 @@ export const de: Gloss = {
     "be.c.smoking.o3": "Nimm stattdessen drinnen deine Vape, das ist ja erlaubt.", // = c.smoking.o3
     "be.c.smoking.w": "Rauchen in Gebäuden ist gegen das Gesetz und kann ein Feuer auslösen. Eine Vape drinnen ist auch nicht erlaubt. Wer sich an die Regel hält, schützt alle.", // = c.smoking.w
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

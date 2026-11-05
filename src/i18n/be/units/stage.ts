@@ -328,3 +328,6 @@ export const de: Gloss = {
   'be.c.placement.o3': "Fang an, aber sag der Schule vorerst nichts.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "In der stageovereenkomst steht, was du lernst und wer dir hilft. Ohne unterschriebene Vereinbarung zählt dein Praktikum vielleicht nicht. Darum unterschreibst du sie, bevor du anfängst.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

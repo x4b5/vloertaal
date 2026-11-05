@@ -640,3 +640,6 @@ export const de: Gloss = {
   'be.c.permit.o3': "Bleib dienstags zu Hause, ohne etwas zu sagen.", // nieuw, nalezen
   'be.c.permit.w': "Die Integration ist auch eine Pflicht. Viele Arbeitgeber helfen, wenn sie es früh wissen. Deine Begleitung beim Agentschap kann dir auch helfen, deine Kurse mit der Arbeit zu verbinden.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

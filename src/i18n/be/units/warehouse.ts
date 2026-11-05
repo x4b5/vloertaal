@@ -146,3 +146,6 @@ export const de: Gloss = {
     "be.c.direct.o3": "Sag nichts und lass den Karton, wo er ist.", // = c.direct.o3
     "be.c.direct.w": "Bei direktem Feedback geht es um die Arbeit, nicht um dich. Wenn du fragst „hoe moet het dan?“, zeigst du, dass du lernen willst.", // = c.direct.w
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

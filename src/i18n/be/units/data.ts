@@ -161,3 +161,6 @@ export const de: Gloss = {
     'be.c.details.o3': "Du legst auf und hoffst, dass sie den Fehler später finden.", // nieuw, nalezen
     'be.c.details.w': "Dein Name muss auf deinem Vertrag, deiner Lohnabrechnung (loonbrief) und deinem Ausweis oder deiner Aufenthaltskarte gleich sein. Dann stimmen dein Lohn und deine Steuer. Buchstabieren und noch einmal hören ist ein schneller Check.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

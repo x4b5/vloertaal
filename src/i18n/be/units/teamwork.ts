@@ -250,3 +250,6 @@ export const de: Gloss = {
     "be.c.task.o3": "Warte, bis ein Kollege es macht.", // = c.task.o3
     "be.c.task.w": "Noch einmal fragen ist normal und dauert eine Minute. Einen Fehler zu beheben dauert viel länger. Die meisten Vorgesetzten zeigen es lieber zweimal.", // = c.task.w
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

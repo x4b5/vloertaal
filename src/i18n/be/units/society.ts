@@ -576,3 +576,6 @@ export const de: Gloss = {
   'be.c.police.o3': 'Du wartest: Nach diesem Datum ist es von selbst vorbei.', // nieuw, nalezen
   'be.c.police.w': 'Man antwortet schriftlich, vor dem Datum im Brief. Danach ist es oft zu spät. Das Justitiehuis gibt eine erste Beratung kostenlos.', // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

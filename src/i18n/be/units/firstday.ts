@@ -159,3 +159,6 @@ export const de: Gloss = {
     "be.c.je.o3": "Sie möchte, dass du höflicher sprichst.", // = c.je.o3
     "be.c.je.w": "„Zeg maar je“ ist freundlich: Sie möchte weniger Abstand. In Flandern fangen viele Leute mit „u“ an, also warte, bis jemand das sagt.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

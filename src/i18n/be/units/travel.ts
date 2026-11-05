@@ -237,3 +237,6 @@ export const de: Gloss = {
     "be.c.transit.o3": "Warte: Nur wer einen langen Vertrag hat, bekommt es.", // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.transit.w": "Beim Zug muss der Arbeitgeber einen Teil deines Abos bezahlen. Bei anderen Wegen zur Arbeit hängt es von deinem Sektor ab. Danach zu fragen ist normal.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

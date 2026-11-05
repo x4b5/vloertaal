@@ -330,3 +330,6 @@ export const de: Gloss = {
     'be.c.extra.o3': "Ein 13. Monatsgehalt vom Chef, für alle.", // nieuw, nalezen
     'be.c.extra.w': "Bei einem arbeider zahlt die Urlaubskasse das Urlaubsgeld, nicht der Chef. Es ist dein Recht, kein Geschenk: Du baust es mit deiner Arbeit auf. Die Jahresendprämie hängt von deiner Branche ab.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

@@ -311,3 +311,6 @@ export const de: Gloss = {
   'be.c.rights.o3': 'Leg das Papier weg und sprich nie darüber.',
   'be.c.rights.w': "Wenn du unterschreibst, kannst du Rechte verlieren: zum Beispiel deine Kündigungsfrist und für eine Zeit dein Arbeitslosengeld. Um Zeit für eine Beratung zu bitten ist normal und erlaubt.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

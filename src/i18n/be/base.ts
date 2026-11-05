@@ -270,3 +270,6 @@ export const de: CultureTranslation = {
     'be.closing.abuse.nl': 'Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
   },
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: CultureTranslation = { ui: {}, gloss: {} };

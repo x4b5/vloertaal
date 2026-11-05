@@ -159,3 +159,6 @@ export const de: Gloss = {
   "be.c.backtowork.o3": "Du gehst ohne ein Wort nach Hause.", // nieuw, nalezen
   "be.c.backtowork.w": "Dein Vorgesetzter will dich zurück, und zwar gesund. Wenn du deutlich sagst, was du kannst, kann er die Arbeit planen. Zu viel zu früh kann dich wieder krank machen.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

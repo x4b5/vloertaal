@@ -146,3 +146,6 @@ export const de: Gloss = {
     "be.c.plain.o3": "Sie isst ein Blatt.", // = c.plain.o3
     "be.c.plain.w": "„Geen blad voor de mond nemen“ heißt: ehrlich und direkt sagen, was man denkt. Wer das sagt, warnt dich vor: Jetzt kommt eine direkte Meinung.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

@@ -158,3 +158,6 @@ export const de: Gloss = {
     'be.c.login.o3': "Du schreibst sie auf einen Zettel, damit er sie später nutzt.", // nieuw, nalezen
     'be.c.login.w': "Mit deiner itsme kann jemand deine Steuern, Leistungen und Gesundheitsdaten sehen und ändern. Sie ist nur für dich. Du kannst dich selbst einloggen und dir dabei helfen lassen.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

@@ -251,3 +251,6 @@ export const de: Gloss = {
   "be.c.boundaries.o3": "Kündige, ohne jemandem zu sagen, warum.", // = c.boundaries.o3
   "be.c.boundaries.w": "Das ist unerwünschtes Verhalten, und es ist nicht deine Schuld. Der preventieadviseur hört dir vertraulich zu und hilft dir, den nächsten Schritt zu wählen. Du kannst auch mit einer vertrouwenspersoon oder der Personalabteilung sprechen.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

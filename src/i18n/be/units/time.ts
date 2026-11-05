@@ -146,3 +146,6 @@ export const de: Gloss = {
     "be.c.sick.o3": "Bleib zu Hause und ruf morgen an.", // = c.sick.o3
     "be.c.sick.w": "Sich selbst und rechtzeitig krankzumelden ist an den meisten Arbeitsplätzen die Regel. Dein Arbeitgeber darf fragen, wie lange es dauert, aber nicht, welche Krankheit es ist. Frag, ob du ein ärztliches Attest brauchst.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

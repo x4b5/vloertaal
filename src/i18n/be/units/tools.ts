@@ -159,3 +159,6 @@ export const de: Gloss = {
     "be.c.keeplearning.o3": "Antworte auch auf Englisch, weil das höflicher ist.", // = c.keeplearning.o3
     "be.c.keeplearning.w": "Kollegen wechseln oft ins Englische, um nett zu sein. Wenn du um Niederländisch bittest, helfen die meisten gern. Jeden Tag ein bisschen bei der Arbeit sprechen ist einer der schnellsten Wege zu lernen.", // = c.keeplearning.w
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

@@ -146,3 +146,6 @@ export const de: Gloss = {
     "be.c.harvest.o3": "Akzeptiere es: Mit Stücklohn ist ein niedriger Lohn normal.", // = c.harvest.o3
     "be.c.harvest.w": "Auch mit Stücklohn musst du für jede gearbeitete Stunde mindestens den Mindestlohn bekommen. Deine eigene Liste mit Stunden und Kisten hilft dir zu zeigen, was du gemacht hast. Wird es nicht korrigiert, hol dir Hilfe.", // = c.harvest.w
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

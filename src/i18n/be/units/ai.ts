@@ -252,3 +252,6 @@ export const de: Gloss = {
     'be.c.aiprivate.o3': "Du schickst den Bericht einem Freund zum Prüfen.", // nieuw, nalezen
     'be.c.aiprivate.w': "Namen und Adressen sind persönliche Daten. Sie dürfen nicht einfach an eine andere Firma gehen. Dein Arbeitgeber weiß, welche Apps erlaubt sind.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

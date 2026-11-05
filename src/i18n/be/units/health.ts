@@ -497,3 +497,6 @@ export const de: Gloss = {
     "be.c.feelwell.o3": "Du bleibst zu Hause und sagst niemandem, warum.", // nieuw, nalezen
     "be.c.feelwell.w": "Es früh zu sagen ist keine Schwäche. Dann könnt ihr zusammen einen Ausweg suchen, zum Beispiel andere Schichten. Du musst das nicht allein schaffen.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

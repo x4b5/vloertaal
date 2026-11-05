@@ -187,3 +187,6 @@ export const de: Gloss = {
     'be.c.letters.o3': "Du wirfst ihn weg, weil es wohl Werbung ist.", // nieuw, nalezen
     'be.c.letters.w': "Offizielle Briefe haben oft ein Datum, bis zu dem du antworten musst. Wenn du rechtzeitig antwortest, lassen sich Probleme meist leichter lösen. Vielleicht bekommst du sogar Geld zurück.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

@@ -159,3 +159,6 @@ export const de: Gloss = {
     "be.c.accident.o3": "Warte ab, ob der Schmerz von selbst weggeht.", // = c.accident.o3
     "be.c.accident.w": "Melde es am selben Tag, auch wenn es klein scheint: Der Schmerz kann später schlimmer werden. Dein Arbeitgeber darf dich nicht bestrafen, weil du es meldest. Du arbeitest über eine Zeitarbeitsfirma? Sag es auch dort.", // nieuw, nalezen // nagelezen AI ronde 3
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

@@ -454,3 +454,6 @@ export const de: Gloss = {
   'be.c.newjob.o3': 'Zahl jetzt die Hälfte und den Rest später.',
   'be.c.newjob.w': "Geld für eine Stelle zu verlangen ist ein Warnzeichen. Eine Zeitarbeitsfirma darf dir kein Geld dafür berechnen, dass sie Arbeit für dich findet. Du kannst auch beim VDAB nach Arbeit suchen.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};

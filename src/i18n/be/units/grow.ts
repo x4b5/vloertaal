@@ -536,3 +536,6 @@ export const de: Gloss = {
   'be.c.nextstep.o3': "Nimm irgendeinen Job, und hör für immer auf zu lernen.", // nieuw, nalezen
   'be.c.nextstep.w': "Auch Erwachsene können noch lernen. In einem CVO kannst du deinen Abschluss machen. Der VDAB hat Kurse für viele Berufe, und für Arbeitsuchende sind viele kostenlos.", // nieuw, nalezen
 };
+
+/** Somali (so): to be translated, like `de` above. */
+export const so: Gloss = {};
