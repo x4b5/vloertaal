@@ -295,6 +295,24 @@ const baseTips: CultureTip[] = [
     ],
     why: { id: 'c.task.w', en: 'Asking again is normal and takes a minute. Fixing a mistake takes much longer. Most supervisors would rather show it twice.' },
   }),
+  // "Kort en duidelijk" (the owner's request, 4 November 2026). Not about one culture: "in many
+  // languages", so nobody is singled out. The job interview gets one sentence, so the tip fits the
+  // work floor and a talk with an employer or an agency alike.
+  tip({
+    id: 'c.clear',
+    lessonId: 'l.clear',
+    emoji: '🎯',
+    title: 'Say the most important thing first',
+    body: 'In many languages it is polite to tell the whole story first, and the point at the end. At work here it is the other way round: first say what is wrong or what you need, then the reason. Speak calmly, and stop after two or three sentences, so the other person can ask something. In a job interview too: first the answer, then an example. Speaking slowly is not rude here: it helps people understand you.',
+    phrase: { id: 'c.clear.p', nl: 'Sorry, ik zeg het rustig nog een keer.', en: 'Sorry, I will say it again, calmly.' },
+    situation: { id: 'c.clear.s', en: 'You come in 20 minutes late. Your supervisor asks: "Wat is er?" What do you do?', nl: 'Wat is er?' },
+    options: [
+      { id: 'c.clear.o1', en: 'First say that you are late and sorry. Then say why.', best: true },
+      { id: 'c.clear.o2', en: 'Tell everything that happened this morning, from the start.', best: false },
+      { id: 'c.clear.o3', en: 'Say nothing and quickly start working.', best: false },
+    ],
+    why: { id: 'c.clear.w', en: 'Your supervisor first wants to know what is going on. The reason comes after that. Short and calm is clear, and here it is also polite.' },
+  }),
 ];
 
 const line = (id: string, nl: string, en: string): ChatLine => ({ id, nl, en });
@@ -374,6 +392,32 @@ export const teamworkUnit: Unit = {
         chat(line('d.task.q', 'Ben je klaar?', 'Are you done?'), line('d.task.a', 'Bijna. Nog vijf minuten.', 'Almost. Five more minutes.')),
       ],
     },
+    {
+      // "Kort en duidelijk" (the owner's request, 4 November 2026: new colleagues and candidates
+      // who say a lot, fast, so it only gets unclear; in many languages the polite order is the
+      // whole story first and the point last). Here the Dutch order: the point first, then the
+      // reason, then a question. At work and in a talk such as a job interview (the tip). "eerst"
+      // and "snel" (l.task) and "kapot" are words of other lessons: here they come in the
+      // sentences. All six words are abstract (no picture).
+      id: 'l.clear',
+      title: 'Short and clear',
+      words: [
+        { id: 'w.kort', nl: 'kort', en: 'short', emoji: '✂️', picture: false },
+        { id: 'w.duidelijk', nl: 'duidelijk', en: 'clear', emoji: '🔍', picture: false },
+        { id: 'w.belangrijkste', nl: 'het belangrijkste', en: 'the most important thing', emoji: '⭐', picture: false },
+        { id: 'w.rustig', nl: 'rustig', en: 'calm, calmly', emoji: '😌', picture: false },
+        { id: 'w.teveel', nl: 'te veel', en: 'too much', emoji: '➕', picture: false },
+        { id: 'w.vraag', nl: 'de vraag', en: 'the question', emoji: '🙋', picture: false },
+      ],
+      sentences: [
+        { id: 's.clear.1', nl: 'Ik zeg het kort: de machine is kapot.', en: 'I will keep it short: the machine is broken.' },
+        { id: 's.clear.2', nl: 'Eerst het belangrijkste: ik ben ziek.', en: 'The most important thing first: I am ill.' },
+        { id: 's.clear.3', nl: 'Sorry, ik praat te snel en te veel.', en: 'Sorry, I talk too fast and too much.' },
+      ],
+      dialogues: [
+        chat(line('d.clear.q', 'Is het duidelijk?', 'Is it clear?'), line('d.clear.a', 'Ja. Ik heb nog één vraag.', 'Yes. I have one more question.')),
+      ],
+    },
   ] satisfies Lesson[],
 };
 
@@ -442,6 +486,7 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.council': [0, 3, 4], // who may vote for the gemeenteraad: EU, and outside the EU after 5 years
   'c.police': [0, 2, 3, 4], // a decision you do not agree with: object in writing, before the date
   'c.phish': [0, 5, 6, 7], // clicked anyway: change your password and call the IT department
+  'c.clear': [0, 1, 2], // the story first is polite elsewhere; here the point first, then the reason; stop after a few sentences
 };
 
 /** All tips in course order: the ones above (with the Smart tools tips after "Asking for help" and the Numbers and details tips before "Time and schedule"), then those of the work-and-rights units (src/content/work.ts). */

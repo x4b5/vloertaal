@@ -74,6 +74,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.speakup': L('A', 'B', '"Dutch colleagues prefer to hear it directly": in Vlaanderen vaker voorzichtig'),
     'l.agree': L('A', 'A'),
     'l.task': L('A', 'B', '"In the Netherlands a supervisor …"'),
+    'l.clear': L('A', 'A', 'de tip zegt "At work here" (niet "in the Netherlands"): eerst de kern geldt ook in Vlaanderen, al verpakt men het daar vaak wat voorzichtiger (nakijken door een Vlaamse NT2-docent)'),
   } },
   'u.apply': { kind: 'A', lessons: {
     'l.cv': L('A', 'A', 'de tip zegt "A CV here" (was "A Dutch CV")'),

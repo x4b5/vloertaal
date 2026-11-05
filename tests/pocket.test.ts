@@ -516,6 +516,19 @@ describe('pocket card phrases', () => {
       'Hoeveel dozen zijn er nog?',
       'Zeventig. Zeven, nul.',
       'Vier, zeven? Dus zevenenveertig?',
+      // New lesson "Kort en duidelijk" (l.clear), 4 November 2026:
+      'kort',
+      'duidelijk',
+      'het belangrijkste',
+      'rustig',
+      'te veel',
+      'de vraag',
+      'Ik zeg het kort: de machine is kapot.',
+      'Eerst het belangrijkste: ik ben ziek.',
+      'Sorry, ik praat te snel en te veel.',
+      'Is het duidelijk?',
+      'Ja. Ik heb nog één vraag.',
+      'Sorry, ik zeg het rustig nog een keer.',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

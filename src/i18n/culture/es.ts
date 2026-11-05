@@ -141,6 +141,14 @@ const t: CultureTranslation = {
     'c.task.o2': 'Empiezas por la mitad que has entendido.', // nagelezen (2e lezing)
     'c.task.o3': 'Esperas a que lo haga un compañero.',
     'c.task.w': 'Volver a preguntar es normal y lleva un minuto. Arreglar un error lleva mucho más. La mayoría de los encargados prefiere enseñarlo dos veces.',
+    'c.clear': 'Di primero lo más importante', // nieuw, nalezen
+    'c.clear.b': 'En muchos idiomas es educado contar primero toda la historia, y lo importante al final. En el trabajo aquí es al revés: primero di qué pasa o qué necesitas, luego el motivo. Habla con calma y para después de dos o tres frases, para que la otra persona pueda preguntar algo. También en una entrevista de trabajo: primero la respuesta, luego un ejemplo. Hablar despacio aquí no es de mala educación: ayuda a que te entiendan.', // nieuw, nalezen
+    'c.clear.p': 'Perdón, lo digo otra vez con calma.', // nieuw, nalezen
+    'c.clear.s': 'Llegas 20 minutos tarde. Tu encargado pregunta: “Wat is er?” ¿Qué haces?', // nieuw, nalezen
+    'c.clear.o1': 'Primero dices que llegas tarde y que lo sientes. Luego dices por qué.', // nieuw, nalezen
+    'c.clear.o2': 'Cuentas todo lo que pasó esta mañana, desde el principio.', // nieuw, nalezen
+    'c.clear.o3': 'No dices nada y empiezas a trabajar rápido.', // nieuw, nalezen
+    'c.clear.w': 'Tu encargado primero quiere saber qué pasa. El motivo viene después. Corto y tranquilo es claro, y aquí también es educado.', // nieuw, nalezen
     'u.teamwork': 'Trabajar juntos',
     'l.speakup': 'Algo me molesta',
     'w.probleem': 'el problema',
@@ -178,6 +186,18 @@ const t: CultureTranslation = {
     's.task.3': '¿Me lo puede enseñar otra vez?',
     'd.task.q': '¿Has terminado?',
     'd.task.a': 'Casi. Cinco minutos más.',
+    'l.clear': 'Corto y claro', // nieuw, nalezen
+    'w.kort': 'corto, breve', // nieuw, nalezen
+    'w.duidelijk': 'claro', // nieuw, nalezen
+    'w.belangrijkste': 'lo más importante', // nieuw, nalezen
+    'w.rustig': 'tranquilo, con calma', // nieuw, nalezen
+    'w.teveel': 'demasiado', // nieuw, nalezen
+    'w.vraag': 'la pregunta', // nieuw, nalezen
+    's.clear.1': 'Seré breve: la máquina está rota.', // nieuw, nalezen
+    's.clear.2': { m: 'Primero lo más importante: estoy enfermo.', f: 'Primero lo más importante: estoy enferma.', x: 'Primero lo más importante: estoy enfermo/a.' }, // nieuw, nalezen
+    's.clear.3': 'Perdón, hablo demasiado rápido y demasiado.', // nieuw, nalezen
+    'd.clear.q': '¿Está claro?', // nieuw, nalezen
+    'd.clear.a': 'Sí. Tengo una pregunta más.', // nieuw, nalezen
   },
 };
 

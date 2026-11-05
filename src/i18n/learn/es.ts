@@ -38,6 +38,7 @@ const t: CultureTranslation = {
     'd.speakup.a.why': "Te preguntan si algo va mal: un sí sincero está bien.",
     'd.agree.a.why': "Se puede decir que no. Proponer otro día ayuda.",
     'd.task.a.why': "Te preguntan si ya está: esta respuesta dice “casi” y cuánto falta.",
+    'd.clear.a.why': 'Te preguntan si está claro: primero sí, luego la única pregunta.', // nieuw, nalezen
     'c.cv.a.why': "Una referencia es un jefe anterior que puede hablar de tu trabajo.",
     'c.interview.a.why': "En una entrevista de trabajo, lo que cuenta es la experiencia laboral.",
     'c.findwork.a.why': "La pregunta es qué trabajo. Esta respuesta lo nombra.",

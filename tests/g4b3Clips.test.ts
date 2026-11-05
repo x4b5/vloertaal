@@ -359,6 +359,19 @@ const PENDING_RECORDING = new Set<string>([
   'Hoeveel dozen zijn er nog?',
   'Zeventig. Zeven, nul.',
   'Vier, zeven? Dus zevenenveertig?',
+  // New lesson "Kort en duidelijk" (l.clear, u.teamwork), 4 November 2026, with its tip's phrase:
+  'kort',
+  'duidelijk',
+  'het belangrijkste',
+  'rustig',
+  'te veel',
+  'de vraag',
+  'Ik zeg het kort: de machine is kapot.',
+  'Eerst het belangrijkste: ik ben ziek.',
+  'Sorry, ik praat te snel en te veel.',
+  'Is het duidelijk?',
+  'Ja. Ik heb nog één vraag.',
+  'Sorry, ik zeg het rustig nog een keer.',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

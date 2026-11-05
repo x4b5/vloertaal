@@ -505,6 +505,11 @@ function defineStates(LANG) {
   for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['tip', 9], ['tip-say', 10], ['situation', 11], ['listen', 13], ['pick', 14], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:alarm-${key}`, shot(`lesson&lesson=l.alarm&at=${at}`));
   }
+  // "Kort en duidelijk" (l.clear, seed 1, 4 November 2026): its first word card, an abstract word
+  // (all six are), the tip and "Wat is er?", a sentence to build, the chat and typing.
+  for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
+    add(`lesson:clear-${key}`, shot(`lesson&lesson=l.clear&at=${at}`));
+  }
   // "Getallen" (l.counting, seed 1, 4 November 2026): a number's word card (a label with its
   // digits), "what does it mean" with its partner (dertien or dertig), "which one is 47" (text
   // cards), the tip and its situation ("Ga naar gang zevenenveertig."), "What do you hear?" (47 or

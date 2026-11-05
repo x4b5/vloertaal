@@ -65,6 +65,8 @@ const PENDING_RECORDING = new Set<string>([
   // New lessons "Brandalarm en ontruimen" (l.alarm) and "Getallen" (l.counting), 4 November 2026:
   'Nee, mijn collega is er nog niet.',
   'Zeventig. Zeven, nul.',
+  // New lesson "Kort en duidelijk" (l.clear), 4 November 2026:
+  'Ja. Ik heb nog één vraag.',
 ]);
 
 

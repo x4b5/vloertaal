@@ -38,6 +38,7 @@ const t: CultureTranslation = {
     'd.speakup.a.why': "On demande si quelque chose ne va pas : un oui honnête, c’est bien.",
     'd.agree.a.why': "On a le droit de dire non. Proposer un autre jour aide.",
     'd.task.a.why': "On demande si c’est fini : cette réponse dit presque, et combien de temps encore.",
+    'd.clear.a.why': 'On demande si c’est clair : d’abord oui, puis la seule question.', // nieuw, nalezen
     'c.cv.a.why': "Une référence, c’est un ancien patron qui peut parler de ton travail.",
     'c.interview.a.why': "Dans un entretien d’embauche, c’est l’expérience de travail qui compte.",
     'c.findwork.a.why': "La question demande quel travail. Cette réponse le nomme.",

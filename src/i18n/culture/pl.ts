@@ -141,6 +141,14 @@ const t: CultureTranslation = {
     'c.task.o2': 'Zaczynasz od tej połowy, którą rozumiesz.', // nagelezen (2e lezing)
     'c.task.o3': 'Czekasz, aż zrobi to kolega.',
     'c.task.w': 'Zapytać jeszcze raz to normalne i zajmuje minutę. Poprawienie błędu trwa o wiele dłużej. Większość przełożonych woli pokazać coś dwa razy.',
+    'c.clear': 'Najpierw powiedz to, co najważniejsze', // nieuw, nalezen
+    'c.clear.b': 'W wielu językach uprzejmie jest najpierw opowiedzieć całą historię, a sedno powiedzieć na końcu. W pracy tutaj jest odwrotnie: najpierw powiedz, co jest nie tak albo czego potrzebujesz, potem podaj powód. Mów spokojnie i przerwij po dwóch, trzech zdaniach, żeby druga osoba mogła o coś zapytać. Także na rozmowie o pracę: najpierw odpowiedź, potem przykład. Wolne mówienie nie jest tu niegrzeczne: pomaga ludziom cię zrozumieć.', // nieuw, nalezen
+    'c.clear.p': 'Przepraszam, powiem to jeszcze raz, spokojnie.', // nieuw, nalezen
+    'c.clear.s': 'Spóźniasz się 20 minut. Przełożony pyta: „Wat is er?” Co robisz?', // nieuw, nalezen
+    'c.clear.o1': 'Najpierw przepraszasz za spóźnienie. Potem mówisz, dlaczego.', // nieuw, nalezen
+    'c.clear.o2': 'Opowiadasz od początku wszystko, co stało się dziś rano.', // nieuw, nalezen
+    'c.clear.o3': 'Nic nie mówisz i szybko zaczynasz pracę.', // nieuw, nalezen
+    'c.clear.w': 'Przełożony najpierw chce wiedzieć, co się dzieje. Powód dopiero potem. Krótko i spokojnie znaczy jasno, a tutaj też uprzejmie.', // nieuw, nalezen
     'u.teamwork': 'Współpraca', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'l.speakup': 'Coś mi przeszkadza',
     'w.probleem': 'problem',
@@ -178,6 +186,18 @@ const t: CultureTranslation = {
     's.task.3': 'Czy może mi pan/pani pokazać to jeszcze raz?',
     'd.task.q': { m: 'Skończyłeś?', f: 'Skończyłaś?', x: 'Gotowe?' }, // x: nieuw, nalezen
     'd.task.a': 'Prawie. Jeszcze pięć minut.',
+    'l.clear': 'Krótko i jasno', // nieuw, nalezen
+    'w.kort': 'krótki, krótko', // nieuw, nalezen
+    'w.duidelijk': 'jasny, jasno', // nieuw, nalezen
+    'w.belangrijkste': 'to, co najważniejsze', // nieuw, nalezen
+    'w.rustig': 'spokojny, spokojnie', // nieuw, nalezen
+    'w.teveel': 'za dużo', // nieuw, nalezen
+    'w.vraag': 'pytanie', // nieuw, nalezen
+    's.clear.1': 'Powiem krótko: maszyna jest zepsuta.', // nieuw, nalezen
+    's.clear.2': { m: 'Najpierw najważniejsze: jestem chory.', f: 'Najpierw najważniejsze: jestem chora.', x: 'Najpierw najważniejsze: jestem chory / chora.' }, // nieuw, nalezen
+    's.clear.3': 'Przepraszam, mówię za szybko i za dużo.', // nieuw, nalezen
+    'd.clear.q': 'Czy to jasne?', // nieuw, nalezen
+    'd.clear.a': 'Tak. Mam jeszcze jedno pytanie.', // nieuw, nalezen
   },
 };
 

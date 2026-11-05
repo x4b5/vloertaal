@@ -141,6 +141,14 @@ const t: CultureTranslation = {
     'c.task.o2': 'Începi cu jumătatea pe care ai înțeles-o.', // nagelezen (2e lezing)
     'c.task.o3': 'Aștepți până o face un coleg.',
     'c.task.w': 'E normal să întrebi din nou și durează un minut. Să repari o greșeală durează mult mai mult. Cei mai mulți șefi preferă să arate de două ori.',
+    'c.clear': 'Spune întâi ce e cel mai important', // nieuw, nalezen
+    'c.clear.b': 'În multe limbi e politicos să spui întâi toată povestea, iar ideea principală la sfârșit. La muncă aici e invers: spune întâi ce nu e în regulă sau de ce ai nevoie, apoi motivul. Vorbește calm și oprește-te după două-trei propoziții, ca celălalt să poată întreba ceva. Și la un interviu de angajare: întâi răspunsul, apoi un exemplu. Să vorbești încet nu e nepoliticos aici: îi ajută pe oameni să te înțeleagă.', // nieuw, nalezen
+    'c.clear.p': 'Scuze, o mai spun o dată, calm.', // nieuw, nalezen
+    'c.clear.s': 'Întârzii 20 de minute. Șeful te întreabă: „Wat is er?” Ce faci?', // nieuw, nalezen
+    'c.clear.o1': 'Spui întâi că ai întârziat și că îți pare rău. Apoi spui de ce.', // nieuw, nalezen
+    'c.clear.o2': 'Povestești de la început tot ce s-a întâmplat azi-dimineață.', // nieuw, nalezen
+    'c.clear.o3': 'Nu spui nimic și te apuci repede de lucru.', // nieuw, nalezen
+    'c.clear.w': 'Șeful vrea întâi să știe ce se întâmplă. Motivul vine după aceea. Scurt și calm înseamnă clar, iar aici e și politicos.', // nieuw, nalezen
     'u.teamwork': 'Lucrul împreună',
     'l.speakup': 'Ceva mă deranjează',
     'w.probleem': 'problema',
@@ -178,6 +186,18 @@ const t: CultureTranslation = {
     's.task.3': 'Puteți să-mi arătați încă o dată?',
     'd.task.q': 'Ai terminat?',
     'd.task.a': 'Aproape. Încă cinci minute.',
+    'l.clear': 'Scurt și clar', // nieuw, nalezen
+    'w.kort': 'scurt', // nieuw, nalezen
+    'w.duidelijk': 'clar', // nieuw, nalezen
+    'w.belangrijkste': 'cel mai important lucru', // nieuw, nalezen
+    'w.rustig': 'calm, liniștit', // nieuw, nalezen
+    'w.teveel': 'prea mult', // nieuw, nalezen
+    'w.vraag': 'întrebarea', // nieuw, nalezen
+    's.clear.1': 'O spun scurt: utilajul e stricat.', // nieuw, nalezen
+    's.clear.2': { m: 'Întâi cel mai important: sunt bolnav.', f: 'Întâi cel mai important: sunt bolnavă.', x: 'Întâi cel mai important: sunt bolnav / bolnavă.' }, // nieuw, nalezen
+    's.clear.3': 'Scuze, vorbesc prea repede și prea mult.', // nieuw, nalezen
+    'd.clear.q': 'E clar?', // nieuw, nalezen
+    'd.clear.a': 'Da. Mai am o întrebare.', // nieuw, nalezen
   },
 };
 

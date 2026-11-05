@@ -38,6 +38,7 @@ const t: CultureTranslation = {
     'd.speakup.a.why': "Gefragt, ob etwas los ist: Ein ehrliches Ja ist gut.",
     'd.agree.a.why': "Nein sagen ist erlaubt. Einen anderen Tag anbieten hilft.",
     'd.task.a.why': "Gefragt, ob es fertig ist: Diese Antwort sagt „fast“ und wie lange noch.",
+    'd.clear.a.why': 'Gefragt, ob es klar ist: zuerst ja, dann die eine Frage.', // nieuw, nalezen
     'c.cv.a.why': "Eine Referenz ist ein früherer Chef, der über die Arbeit erzählen kann.",
     'c.interview.a.why': "Im Vorstellungsgespräch zählt die Berufserfahrung.",
     'c.findwork.a.why': "Die Frage ist, welche Arbeit. Diese Antwort nennt sie.",
