@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Palabra nueva',
     tapToHear: 'Toca para escuchar',
     whatDoesThisMean: '¿Qué significa esto?',
+    snapQuestion: '¿Lo entiendes?', // nieuw, nalezen
+    snapYes: 'Sí, vale.', // nieuw, nalezen
+    snapGoodAsk: '¡Bien que lo preguntes!', // nieuw, nalezen
+    snapRight: '¡Bien entendido!', // nieuw, nalezen
+    snapAskBetter: '¿Ves? Era mejor preguntar.', // nieuw, nalezen
     whichOneIs: '¿Cuál es “{word}”?',
     mixLesson: 'Repaso mixto',
     whatDoYouHear: '¿Qué oyes?',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Escucha y luego dilo',
     tapToSpeak: 'Toca y habla',
     stopRecording: 'Parar',
-    micPrivacy: 'Solo tú lo oyes. No se envía nada.',
+    micPrivacy: "Nadie más te oye. No se envía nada.", // nieuw, nalezen
     micUnavailable: 'Micrófono apagado. Dilo ahora en voz alta y luego sigue.',
     cantSpeak: 'Ahora no puedo hablar',
     soundsSame: 'Suena igual',
     sayAgain: 'Dilo otra vez',
     hearMine: 'Escúchate', // nieuw, nalezen
+    thenNow: 'Antes y ahora', // nieuw, nalezen
+    thenNowFirst: 'Tu primer intento: {date}', // nieuw, nalezen
+    sayTogether: "Dilo a la vez", // nieuw, nalezen
+    chorusHint: "Dilo al mismo tiempo que la voz. No se graba nada.", // nieuw, nalezen
+    chorusAlone: "Ahora solo tú", // nieuw, nalezen
+    speakBrave: "Equivocarse está bien. Los neerlandeses te entienden también con errores.", // nieuw, nalezen
     speakMe: 'Yo',
     speakingPractice: 'Práctica de hablar',
-    speakingHint: 'Di palabras en voz alta y compara. Tu voz nunca se guarda ni se envía.',
+    speakingHint: "Di palabras en voz alta y compara. Nadie más te oye: no se envía nada. Tu primera grabación de una frase se queda en tu teléfono, para comparar más tarde.", // nieuw, nalezen
     savingOffline: 'Guardando…',
     savedOffline: 'Guardado sin conexión',
     offlineNoSpace: 'No hay espacio suficiente en este teléfono. Quita un tema guardado o libera espacio.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Más o menos igual', // nieuw, nalezen
     toetsMoreAll: 'En total: ahora sabes más que antes.', // nieuw, nalezen
     toetsSameAll: 'En total: más o menos igual que antes.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Primero, 5 preguntas sobre ti. No hay respuestas buenas ni malas.', // nieuw, nalezen
+    toetsDurfAsk: '¿Te atreves a hacerlo?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Decir que no entiendes algo', // nieuw, nalezen
+    toetsDurfBoss: 'Preguntar algo a tu responsable', // nieuw, nalezen
+    toetsDurfHelp: 'Pedir ayuda', // nieuw, nalezen
+    toetsDurfUnsafe: 'Decir que algo no es seguro', // nieuw, nalezen
+    toetsDurfBreak: 'Charlar un rato con alguien del trabajo en el descanso', // nieuw, nalezen
+    toetsDurfNotYet: 'Todavía no', // nieuw, nalezen
+    toetsDurfABit: 'Un poco', // nieuw, nalezen
+    toetsDurfYes: 'Sí', // nieuw, nalezen
+    toetsDurfAgain: 'Dentro de unas semanas te lo preguntamos otra vez.', // nieuw, nalezen
     tempo: 'Velocidad', // nieuw, nalezen
     tempoCalm: 'Despacio', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: '¿Lo dijiste en el trabajo?', // nieuw, nalezen
     geluktYes: 'Sí, funcionó', // nieuw, nalezen
     geluktNotYet: 'Todavía no', // nieuw, nalezen
+    geluktDoneN: { one: '¡Muy bien! Ya te salió {n} frase en el trabajo.', many: '¡Muy bien! Ya te salieron {n} frases en el trabajo.', other: '¡Muy bien! Ya te salieron {n} frases en el trabajo.' }, // nieuw, nalezen
+    geluktDoneOne: '¡Muy bien! Tu primera frase en el trabajo salió bien.', // nieuw, nalezen
+    geluktWhere: 'Las encuentras en Ajustes.', // nieuw, nalezen
+    geluktTitle: 'Logrado en el trabajo', // nieuw, nalezen
+    geluktListHint: 'Dijiste estas frases en el trabajo.', // nieuw, nalezen
+    nextMinutesN: 'unos {n} min', // nieuw, nalezen
     saveFailed: 'Tu progreso no se ha guardado. ¿Tu teléfono está lleno? Libera un poco de espacio. O ve a Ajustes: «Guarda tu progreso».', // nieuw, nalezen
     bewaarNudge: 'Tu teléfono a veces puede borrar tu progreso. Por eso, guarda una copia.', // nieuw, nalezen
     bewaarGo: 'Guardar ahora', // nieuw, nalezen

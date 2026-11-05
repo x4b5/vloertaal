@@ -10,7 +10,7 @@ import { createRng, shuffle } from './random';
 import { trackOf, trackOfId } from './track';
 import type { HelpLanguage } from '../i18n/types';
 import { typeAsPick, wantsWriting, writingInput } from './writing';
-import { TOETS_STATE_VERSION, type ToetsRun, type ToetsScore, type ToetsState } from './toetsState';
+import { TOETS_STATE_VERSION, type ToetsDurf, type ToetsRun, type ToetsScore, type ToetsState } from './toetsState';
 
 /**
  * "Wat ken je al?" (src/content/toets.ts): when it is offered, its questions, what is kept, and how
@@ -77,11 +77,15 @@ export function settingsMoment(p: Progress, today: Date, unitsDone = taalUnitsDo
   return p.toets?.skipped && toetsOffer(p, today, unitsDone) === 'eind' ? 'eind' : 'instap';
 }
 
-/** The test was done: its run is kept (a second end replaces the first). */
-export function recordToets(p: Progress, moment: ToetsMoment, tally: ToetsTally, today: Date, unitsDone = taalUnitsDone(p, today)): Progress {
+/**
+ * The test was done: its run is kept (a second end replaces the first), with the answers to
+ * "Durf je dit?" (`durf`: on this phone only, like the score; never counted).
+ */
+export function recordToets(p: Progress, moment: ToetsMoment, tally: ToetsTally, today: Date, unitsDone = taalUnitsDone(p, today), durf?: ToetsDurf): Progress {
   const day = dayKey(today);
   const t: ToetsState = p.toets ?? { v: TOETS_STATE_VERSION };
   const run: ToetsRun = { day, version: versionOf(moment), right: tally.right, of: tally.of, form: TOETS_FORM, mc: tally.mc, wrong: tally.wrong, idk: tally.idk };
+  if (durf && Object.keys(durf).length) run.durf = durf;
   if (moment === 'instap') {
     const { skipped: _, ...rest } = t;
     return { ...p, toets: { ...rest, v: TOETS_STATE_VERSION, instap: run, start: day, unitsAt: unitsDone } };
@@ -235,5 +239,5 @@ export function resultOf(q: ToetsQuestion, a: { correct: boolean; given?: string
   return a.correct ? 'right' : 'wrong';
 }
 
-export { growthOf, knownExact, knownOf, MIN_MORE, TOETS_OPTIONS, type ToetsGrowth } from './toetsState';
+export { durfThenNow, growthOf, knownExact, knownOf, MIN_MORE, TOETS_OPTIONS, type ToetsDurf, type ToetsGrowth } from './toetsState';
 export { TOETS_PARTS, type ToetsPart };

@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'ሓድሽ ቃል',
     tapToHear: { m: 'ክትሰምዕ ጠውቕ', f: 'ክትሰምዒ ጠውቒ', x: 'ክትሰምዑ ጠውቑ' }, // x: nieuw, nalezen
     whatDoesThisMean: 'እዚ እንታይ ማለት እዩ?',
+    snapQuestion: { m: 'ተረዲኡካ ድዩ?', f: 'ተረዲኡኪ ድዩ?', x: 'ተረዲኡኩም ድዩ?' }, // nieuw, nalezen
+    snapYes: 'እወ፣ ሕራይ።', // nieuw, nalezen
+    snapGoodAsk: { m: 'ምሕታትካ ጽቡቕ እዩ!', f: 'ምሕታትኪ ጽቡቕ እዩ!', x: 'ምሕታትኩም ጽቡቕ እዩ!' }, // nieuw, nalezen
+    snapRight: { m: 'ብግቡእ ተረዲኡካ!', f: 'ብግቡእ ተረዲኡኪ!', x: 'ብግቡእ ተረዲኡኩም!' }, // nieuw, nalezen
+    snapAskBetter: { m: 'ርኢኻ? ምሕታት ይሓይሽ ነይሩ።', f: 'ርኢኺ? ምሕታት ይሓይሽ ነይሩ።', x: 'ርኢኹም? ምሕታት ይሓይሽ ነይሩ።' }, // nieuw, nalezen
     whichOneIs: 'ኣየናይ እዩ «{word}»?',
     mixLesson: 'ዝተሓዋወሰ ድግግም',
     whatDoYouHear: { m: 'እንታይ ትሰምዕ ኣለኻ?', f: 'እንታይ ትሰምዒ ኣለኺ?', x: 'እንታይ ትሰምዑ ኣለኹም?' }, // x: nieuw, nalezen
@@ -231,15 +236,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: { m: 'ስማዕ፣ ድሕሪኡ በሎ', f: 'ስምዒ፣ ድሕሪኡ በልዮ' },
     tapToSpeak: { m: 'ጠውቕ እሞ ተዛረብ', f: 'ጠውቒ እሞ ተዛረቢ', x: 'ጠውቑ እሞ ተዛረቡ' }, // x: nieuw, nalezen
     stopRecording: { m: 'ደው ኣብል', f: 'ደው ኣብሊ', x: 'ደው ኣብሉ' }, // x: nieuw, nalezen
-    micPrivacy: { m: 'ንስኻ ጥራይ ኢኻ ትሰምዖ። ዋላ ሓንቲ ኣይለኣኽን።', f: 'ንስኺ ጥራይ ኢኺ ትሰምዕዮ። ዋላ ሓንቲ ኣይለኣኽን።' },
+    micPrivacy: { m: "ካልእ ሰብ ኣይሰምዓካን። ዋላ ሓንቲ ኣይለኣኽን።", f: "ካልእ ሰብ ኣይሰምዓክን። ዋላ ሓንቲ ኣይለኣኽን።", x: "ካልእ ሰብ ኣይሰምዓኩምን። ዋላ ሓንቲ ኣይለኣኽን።" }, // nieuw, nalezen
     micUnavailable: { m: 'ማይክሮፎን ጠፊኡ ኣሎ። ሕጂ ብዓው ኢልካ በሎ፡ ድሕሪኡ ቀጽል።', f: 'ማይክሮፎን ጠፊኡ ኣሎ። ሕጂ ብዓው ኢልኪ በልዮ፡ ድሕሪኡ ቀጽሊ።' },
     cantSpeak: 'ሕጂ ክዛረብ ኣይክእልን',
     soundsSame: 'ሓደ ዓይነት ይስማዕ',
     sayAgain: { m: 'ደጊምካ በሎ', f: 'ደጊምኪ በልዮ' },
     hearMine: { m: 'ንርእስኻ ስማዕ', f: 'ንርእስኺ ስምዒ' }, // nieuw, nalezen
+    thenNow: 'ቅድምን ሕጅን', // nieuw, nalezen
+    thenNowFirst: { m: 'ቀዳማይ ፈተነኻ: {date}', f: 'ቀዳማይ ፈተነኺ: {date}', x: 'ቀዳማይ ፈተነኹም: {date}' }, // nieuw, nalezen
+    sayTogether: { m: "ብሓባር በሎ", f: "ብሓባር በልዮ", x: "ብሓባር በልዎ" }, // nieuw, nalezen
+    chorusHint: { m: "ምስቲ ድምጺ ብሓንሳብ በሎ። ዋላ ሓንቲ ኣይቅዳሕን።", f: "ምስቲ ድምጺ ብሓንሳብ በልዮ። ዋላ ሓንቲ ኣይቅዳሕን።", x: "ምስቲ ድምጺ ብሓንሳብ በልዎ። ዋላ ሓንቲ ኣይቅዳሕን።" }, // nieuw, nalezen
+    chorusAlone: { m: "ሕጂ ንስኻ በይንኻ", f: "ሕጂ ንስኺ በይንኺ", x: "ሕጂ ንስኹም በይንኹም" }, // nieuw, nalezen
+    speakBrave: { m: "ጌጋ ምግባር ጸገም የብሉን። ሆላንዳውያን ምስ ጌጋታትካ እውን ይርድኡኻ እዮም።", f: "ጌጋ ምግባር ጸገም የብሉን። ሆላንዳውያን ምስ ጌጋታትኪ እውን ይርድኡኺ እዮም።", x: "ጌጋ ምግባር ጸገም የብሉን። ሆላንዳውያን ምስ ጌጋታትኩም እውን ይርድኡኹም እዮም።" }, // nieuw, nalezen
     speakMe: 'ኣነ',
     speakingPractice: 'ልምምድ ምዝራብ',
-    speakingHint: { m: 'ቃላት ብዓው ኢልካ በሎም እሞ ኣወዳድር። ድምጽካ ፈጺሙ ኣይዕቀብን ኣይለኣኽን።', f: 'ቃላት ብዓው ኢልኪ በልዮም እሞ ኣወዳድሪ። ድምጽኪ ፈጺሙ ኣይዕቀብን ኣይለኣኽን።' },
+    speakingHint: { m: "ቃላት ብዓው ኢልካ በሎም እሞ ኣወዳድር። ካልእ ሰብ ኣይሰምዓካን፡ ዋላ ሓንቲ ኣይለኣኽን። ቀዳማይ ቅዳሕ ድምጽካ ናይ ሓንቲ ሓረግ ኣብ ተሌፎንካ ይጸንሕ፣ ደሓር ንምውድዳር።", f: "ቃላት ብዓው ኢልኪ በልዮም እሞ ኣወዳድሪ። ካልእ ሰብ ኣይሰምዓክን፡ ዋላ ሓንቲ ኣይለኣኽን። ቀዳማይ ቅዳሕ ድምጽኪ ናይ ሓንቲ ሓረግ ኣብ ተሌፎንኪ ይጸንሕ፣ ደሓር ንምውድዳር።", x: "ቃላት ብዓው ኢልኩም በልዎም እሞ ኣወዳድሩ። ካልእ ሰብ ኣይሰምዓኩምን፡ ዋላ ሓንቲ ኣይለኣኽን። ቀዳማይ ቅዳሕ ድምጽኩም ናይ ሓንቲ ሓረግ ኣብ ተሌፎንኩም ይጸንሕ፣ ደሓር ንምውድዳር።" }, // nieuw, nalezen
     savingOffline: 'ይዕቀብ ኣሎ…',
     savedOffline: 'ኣብዚ ተሌፎን ተዓቂቡ', // nieuw, nalezen (AI-correctie 2 nov 2026)
     offlineNoSpace: { m: 'ኣብዚ ተሌፎን እኹል ቦታ የለን። ዝተዓቀበ ኣርእስቲ ኣልግስ ወይ ቦታ ኣጽሪ።', f: 'ኣብዚ ተሌፎን እኹል ቦታ የለን። ዝተዓቀበ ኣርእስቲ ኣልግሲ ወይ ቦታ ኣጽርዪ።' },
@@ -360,6 +371,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'ዳርጋ ሓደ ዓይነት', // nieuw, nalezen
     toetsMoreAll: { m: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጥ ኢኻ።', f: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጢ ኢኺ።', x: 'ኩሉ ብሓባር: ሕጂ ካብ ቅድሚ ዝያዳ ትፈልጡ ኢኹም።' }, // nieuw, nalezen
     toetsSameAll: 'ኩሉ ብሓባር: ዳርጋ ከም ቅድሚ።', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: { m: 'መጀመርታ 5 ሕቶታት ብዛዕባኻ። ቅኑዕ ወይ ጌጋ የለን።', f: 'መጀመርታ 5 ሕቶታት ብዛዕባኺ። ቅኑዕ ወይ ጌጋ የለን።', x: 'መጀመርታ 5 ሕቶታት ብዛዕባኹም። ቅኑዕ ወይ ጌጋ የለን።' }, // nieuw, nalezen
+    toetsDurfAsk: { m: 'እዚ ክትገብር ትደፍር ዲኻ?', f: 'እዚ ክትገብሪ ትደፍሪ ዲኺ?', x: 'እዚ ክትገብሩ ትደፍሩ ዲኹም?' }, // nieuw, nalezen
+    toetsDurfUnderstand: { m: 'ገለ ከም ዘይተረደኣካ ምዝራብ', f: 'ገለ ከም ዘይተረደኣኪ ምዝራብ', x: 'ገለ ከም ዘይተረደኣኩም ምዝራብ' }, // nieuw, nalezen
+    toetsDurfBoss: { m: 'ንሓላፊኻ ገለ ምሕታት', f: 'ንሓላፊኺ ገለ ምሕታት', x: 'ንሓላፊኹም ገለ ምሕታት' }, // nieuw, nalezen
+    toetsDurfHelp: 'ሓገዝ ምሕታት', // nieuw, nalezen
+    toetsDurfUnsafe: 'ገለ ውሑስ ከም ዘይኮነ ምዝራብ', // nieuw, nalezen
+    toetsDurfBreak: 'ኣብ ዕረፍቲ ምስ መሳርሕቲ ቁሩብ ምዝራብ', // nieuw, nalezen
+    toetsDurfNotYet: 'ገና', // nieuw, nalezen
+    toetsDurfABit: 'ቁሩብ', // nieuw, nalezen
+    toetsDurfYes: 'እወ', // nieuw, nalezen
+    toetsDurfAgain: 'ድሕሪ ቁሩብ ሰሙናት ደጊምና ክንሓትት ኢና።', // nieuw, nalezen
     tempo: 'ቅልጣፈ', // nieuw, nalezen
     tempoCalm: 'ህዱእ', // nieuw, nalezen
     tempoNormal: 'ንቡር', // nieuw, nalezen
@@ -442,6 +465,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: { m: 'ነዚ ኣብ ስራሕ ኢልካዮ ዶ?', f: 'ነዚ ኣብ ስራሕ ኢልኪዮ ዶ?', x: 'ነዚ ኣብ ስራሕ ኢልኩምዎ ዶ?' }, // nieuw, nalezen
     geluktYes: 'እወ፡ ሰሪሑ', // nieuw, nalezen
     geluktNotYet: 'ገና', // nieuw, nalezen
+    geluktDoneN: { m: 'ጽቡቕ ገይርካ! ኣብ ስራሕ ዝሰለጣ ሓረጋት: {n}', f: 'ጽቡቕ ገይርኪ! ኣብ ስራሕ ዝሰለጣ ሓረጋት: {n}', x: 'ጽቡቕ ስራሕ! ኣብ ስራሕ ዝሰለጣ ሓረጋት: {n}' }, // nieuw, nalezen
+    geluktDoneOne: { m: 'ጽቡቕ ገይርካ! ቀዳማይ ሓረግካ ኣብ ስራሕ ሰሊጡ።', f: 'ጽቡቕ ገይርኪ! ቀዳማይ ሓረግኪ ኣብ ስራሕ ሰሊጡ።', x: 'ጽቡቕ ስራሕ! ቀዳማይ ሓረግ ኣብ ስራሕ ሰሊጡ።' }, // nieuw, nalezen
+    geluktWhere: { m: 'ኣብ ምድላዋት ክትረኽቦም ትኽእል።', f: 'ኣብ ምድላዋት ክትረኽብዮም ትኽእሊ።', x: 'ኣብ ምድላዋት ይርከቡ።' }, // nieuw, nalezen
+    geluktTitle: 'ኣብ ስራሕ ሰሊጡ', // nieuw, nalezen
+    geluktListHint: { m: 'ነዞም ሓረጋት ኣብ ስራሕ ኢልካዮም።', f: 'ነዞም ሓረጋት ኣብ ስራሕ ኢልኪዮም።', x: 'እዞም ሓረጋት ኣብ ስራሕ ተባሂሎም።' }, // nieuw, nalezen
+    nextMinutesN: 'ኣስታት {n} ደቒቕ', // nieuw, nalezen
     saveFailed: 'ምዕባለኹም ኣይተዓቀበን። ተሌፎንኩም መሊኡ ድዩ? ቁሩብ ቦታ ግበሩ። ወይ ኣብ ምድላዋት: «ምዕባለኹም ዓቅቡ»።', // nieuw, nalezen
     bewaarNudge: { m: 'ተሌፎንካ ገለ ግዜ ምዕባለኻ ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅብ።', f: 'ተሌፎንኪ ገለ ግዜ ምዕባለኺ ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅቢ።', x: 'ተሌፎንኩም ገለ ግዜ ምዕባለኹም ክድምስሶ ይኽእል። ስለዚ ቅዳሕ ዓቅቡ።' }, // nieuw, nalezen
     bewaarGo: { m: 'ሕጂ ዓቅብ', f: 'ሕጂ ዓቅቢ', x: 'ሕጂ ዓቅቡ' }, // nieuw, nalezen

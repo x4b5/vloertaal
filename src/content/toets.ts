@@ -127,3 +127,40 @@ const B: ToetsItem[] = [
 ];
 
 export const TOETS_VERSIONS: Record<ToetsVersion, readonly ToetsItem[]> = { A, B };
+
+/* ---- "Durf je dit?": what the learner dares, before the questions (the owner's request, 5 November 2026) ---- */
+
+/**
+ * Five short questions about the learner, at the start of the test at both moments: not what they
+ * can, but what they dare (confidence, "willingness to communicate"). One per screen, each with a
+ * picture and its Dutch line to hear; three answers as faces. No right or wrong, not in the score,
+ * never counted (src/lib/count.ts): kept with the run on this phone only (src/lib/toetsState.ts
+ * ToetsRun.durf), and at the end shown as then and now. docs/toets.md.
+ *
+ * The owner did not want a question about calling in sick: these five are the work floor's
+ * everyday moments where speaking up is hard. `nl` is said by the speaker (scripts/list-clips.ts:
+ * the phone's voice says it until it is recorded); `picture` a word picture of the course.
+ */
+export type DurfId = 'understand' | 'boss' | 'help' | 'unsafe' | 'break';
+
+export interface DurfItem {
+  id: DurfId;
+  /** The Dutch line, shown and heard. */
+  nl: string;
+  /** Its translation (src/i18n: a UI key). */
+  key: 'toetsDurfUnderstand' | 'toetsDurfBoss' | 'toetsDurfHelp' | 'toetsDurfUnsafe' | 'toetsDurfBreak';
+  /** A word picture of the course (src/pictures). */
+  picture: string;
+}
+
+export const TOETS_DURF: readonly DurfItem[] = [
+  { id: 'understand', nl: 'Zeggen dat je iets niet begrijpt', key: 'toetsDurfUnderstand', picture: 'w.begrijpniet' },
+  { id: 'boss', nl: 'Iets vragen aan je leidinggevende', key: 'toetsDurfBoss', picture: 'w.leidinggevende' },
+  { id: 'help', nl: 'Om hulp vragen', key: 'toetsDurfHelp', picture: 'w.helpen' },
+  { id: 'unsafe', nl: 'Zeggen dat iets niet veilig is', key: 'toetsDurfUnsafe', picture: 'w.gevaar' },
+  { id: 'break', nl: 'Even praten met een collega in de pauze', key: 'toetsDurfBreak', picture: 'w.praten' },
+];
+
+/** An answer: 0 "Nog niet", 1 "Een beetje", 2 "Ja". */
+export type DurfAnswer = 0 | 1 | 2;
+export const DURF_ANSWERS: readonly DurfAnswer[] = [0, 1, 2];

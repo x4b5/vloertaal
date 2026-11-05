@@ -3,6 +3,7 @@ import { findLesson } from '../content/curriculum';
 import { taalNlId } from '../content/taalBe/ids';
 import type { ChatLine } from '../content/types';
 import { countRaw } from './count';
+import { joinGelukt, type Progress } from './progress';
 
 /**
  * "Probeer het vandaag op je werk" (components/WorkTry.tsx): at the end of a lesson, one sentence
@@ -130,8 +131,10 @@ export function workTryFor(lessonId: string, first: boolean, today: string): Wor
  * "Gelukt?" (components/GeluktCard.tsx): on a later day, the home asks whether the sentence of the
  * card was said at work. Two answers: "Ja, gelukt" closes it; "Nog niet" asks once more the next
  * day (see answerGelukt).
- * Only the lesson and the day of the card are kept, on this device. The answer is counted
- * anonymously ("/e/gelukt/ja", "/e/gelukt/nog-niet", src/lib/count.ts), with nothing else.
+ * Only the lesson and the day of the card are kept for the question, on this device. The answer
+ * is counted anonymously ("/e/gelukt/ja", "/e/gelukt/nog-niet", src/lib/count.ts), with nothing
+ * else. Since 5 November 2026 (the owner's request) "Ja, gelukt" also keeps the sentence in the
+ * progress, in "Gelukt op het werk" (addGelukt): a collection that only grows.
  */
 const ASK_KEY = 'vloertaal:work-try-ask';
 
@@ -167,3 +170,15 @@ export function answerGelukt(answer: GeluktAnswer, today?: string): void {
   }
   countRaw(`/e/gelukt/${answer}`, 'gelukt');
 }
+
+/**
+ * "Ja, gelukt": the sentence goes into "Gelukt op het werk" (Progress.gelukt), with the day
+ * (`today`, YYYY-MM-DD). A sentence that is there already stays as it was (its first day).
+ */
+export function addGelukt(p: Progress, line: WorkTryLine, today: string): Progress {
+  if (p.gelukt?.some((e) => e.id === line.id)) return p;
+  return { ...p, gelukt: joinGelukt(p.gelukt, [{ id: line.id, nl: line.nl, en: line.en, day: today }]) };
+}
+
+/** How many sentences are in "Gelukt op het werk". */
+export const geluktCount = (p: Progress): number => p.gelukt?.length ?? 0;

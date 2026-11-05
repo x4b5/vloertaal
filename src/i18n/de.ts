@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Neues Wort',
     tapToHear: 'Tippe zum Anhören',
     whatDoesThisMean: 'Was bedeutet das?',
+    snapQuestion: 'Verstehst du?', // nieuw, nalezen
+    snapYes: 'Ja, okay.', // nieuw, nalezen
+    snapGoodAsk: 'Gut, dass du fragst!', // nieuw, nalezen
+    snapRight: 'Gut verstanden!', // nieuw, nalezen
+    snapAskBetter: 'Siehst du? Fragen wäre besser gewesen.', // nieuw, nalezen
     whichOneIs: 'Welches ist „{word}“?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     mixLesson: 'Gemischte Wiederholung',
     whatDoYouHear: 'Was hörst du?',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Hör zu, dann sag es',
     tapToSpeak: 'Tippen und sprechen',
     stopRecording: 'Stopp',
-    micPrivacy: 'Nur du hörst es. Nichts wird geschickt.',
+    micPrivacy: "Niemand sonst hört dich. Nichts wird geschickt.", // nieuw, nalezen
     micUnavailable: 'Mikrofon aus. Sag es jetzt laut, dann mach weiter.',
     cantSpeak: 'Ich kann gerade nicht sprechen',
     soundsSame: 'Klingt gleich',
     sayAgain: 'Sag es noch einmal',
     hearMine: 'Hör dir zu', // nieuw, nalezen
+    thenNow: 'Damals und jetzt', // nieuw, nalezen
+    thenNowFirst: 'Dein erster Versuch: {date}', // nieuw, nalezen
+    sayTogether: "Sag es zusammen", // nieuw, nalezen
+    chorusHint: "Sag es gleichzeitig mit der Stimme. Nichts wird aufgenommen.", // nieuw, nalezen
+    chorusAlone: "Jetzt allein", // nieuw, nalezen
+    speakBrave: "Fehler sind okay. Niederländer verstehen dich auch mit Fehlern.", // nieuw, nalezen
     speakMe: 'Ich',
     speakingPractice: 'Sprechen üben',
-    speakingHint: 'Sag Wörter laut und vergleiche. Deine Stimme wird nie gespeichert oder geschickt.',
+    speakingHint: "Sag Wörter laut und vergleiche. Niemand sonst hört dich: Nichts wird geschickt. Deine erste Aufnahme eines Satzes bleibt auf deinem Handy, zum späteren Vergleichen.", // nieuw, nalezen
     savingOffline: 'Wird gespeichert…',
     savedOffline: 'Offline gespeichert',
     offlineNoSpace: 'Nicht genug Platz auf diesem Handy. Entferne ein gespeichertes Thema oder mach Platz frei.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Ungefähr gleich', // nieuw, nalezen
     toetsMoreAll: 'Alles zusammen: Du weißt jetzt mehr als damals.', // nieuw, nalezen
     toetsSameAll: 'Alles zusammen: ungefähr gleich wie damals.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Zuerst 5 Fragen über dich. Es gibt kein Richtig oder Falsch.', // nieuw, nalezen
+    toetsDurfAsk: 'Traust du dich das?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Sagen, dass du etwas nicht verstehst', // nieuw, nalezen
+    toetsDurfBoss: 'Deine Chefin oder deinen Chef etwas fragen', // nieuw, nalezen
+    toetsDurfHelp: 'Um Hilfe bitten', // nieuw, nalezen
+    toetsDurfUnsafe: 'Sagen, dass etwas nicht sicher ist', // nieuw, nalezen
+    toetsDurfBreak: 'In der Pause kurz mit Kollegen reden', // nieuw, nalezen
+    toetsDurfNotYet: 'Noch nicht', // nieuw, nalezen
+    toetsDurfABit: 'Ein bisschen', // nieuw, nalezen
+    toetsDurfYes: 'Ja', // nieuw, nalezen
+    toetsDurfAgain: 'In ein paar Wochen fragen wir noch einmal.', // nieuw, nalezen
     tempo: 'Tempo', // nieuw, nalezen
     tempoCalm: 'Ruhig', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Hast du das bei der Arbeit gesagt?', // nieuw, nalezen
     geluktYes: 'Ja, geklappt', // nieuw, nalezen
     geluktNotYet: 'Noch nicht', // nieuw, nalezen
+    geluktDoneN: { one: 'Gut gemacht! Schon {n} Satz bei der Arbeit geschafft.', other: 'Gut gemacht! Schon {n} Sätze bei der Arbeit geschafft.' }, // nieuw, nalezen
+    geluktDoneOne: 'Gut gemacht! Dein erster Satz bei der Arbeit hat geklappt.', // nieuw, nalezen
+    geluktWhere: 'Du findest sie in den Einstellungen.', // nieuw, nalezen
+    geluktTitle: 'Bei der Arbeit geschafft', // nieuw, nalezen
+    geluktListHint: 'Diese Sätze hast du bei der Arbeit gesagt.', // nieuw, nalezen
+    nextMinutesN: 'ca. {n} Min.', // nieuw, nalezen
     saveFailed: 'Dein Fortschritt wurde nicht gespeichert. Ist dein Handy voll? Mach etwas Platz frei. Oder geh zu Einstellungen: „Deinen Fortschritt sichern“.', // nieuw, nalezen
     bewaarNudge: 'Dein Handy kann deinen Fortschritt manchmal löschen. Speichere darum eine Kopie.', // nieuw, nalezen
     bewaarGo: 'Jetzt sichern', // nieuw, nalezen

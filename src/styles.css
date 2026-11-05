@@ -1216,6 +1216,18 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .chat-bubble-me.wrong:has(.chat-line), .chat-bubble-me.wrong:has(.chat-line)::before { border-color: var(--red); }
 .chat-bubble-me.wrong .chat-line { color: var(--wrong-ink); }
 .chat-choices .choice-nl { font-weight: 600; }
+/* "Snap je het?" (today's review, 5 November 2026): the colleague's bubble before the text shows
+   (three dots: something was said), and the line after asking or after the answer. */
+.snap-blank { letter-spacing: 0.12em; padding-inline-end: 10px; }
+.snap-note {
+  margin: 0 0 14px; padding: 10px 14px; border: 2px solid var(--line); border-radius: 12px; background: var(--card);
+  font-weight: 600; text-align: start;
+}
+.snap-note-nl { display: block; font-size: 1.1rem; font-weight: 700; color: var(--ink-strong); }
+.snap-note .bi-help { --help-size: 0.9rem; font-weight: 500; }
+.snap-note-snapRight { border-color: var(--green); }
+.snap-note-snapAskBetter { border-color: var(--yellow-dark); }
+.snap-prompt-nl { display: block; }
 @media (min-width: 760px) {
   .chat { gap: 0; margin-bottom: 24px; }
   .chat-char { font-size: 148px; }
@@ -1999,6 +2011,10 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .result-next-pic { flex: none; width: 44px; height: 44px; }
 .result-next-title { align-items: flex-start; text-align: start; font-weight: 650; min-width: 0; }
 .result-next-title .bi-help { font-weight: 400; color: var(--muted); }
+/* About how long the next lesson takes (src/lib/lessonTime.ts): small and calm under its title. */
+.result-next-text { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0; text-align: start; }
+.result-next-time { align-items: flex-start; font-size: 0.92rem; font-weight: 500; color: var(--muted); }
+.result-next-time .bi-help { --help-size: 0.85em; }
 @media (prefers-reduced-motion: reduce) { .result-line { animation: none; } }
 
 /* Milestone: tier stamp on the streak card, the work week, record and free days. */
@@ -5044,6 +5060,52 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .say-review-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .say-review-row > .btn { flex: 1 1 100%; }
 .say-hear-mine { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; }
+/* "Toen en nu" (src/lib/firstVoice.ts): the day of the first try, small, over its button. */
+.say-then-day { margin: 0 0 8px; text-align: center; font-size: var(--fs-small); font-weight: 700; color: var(--ink-2); }
+/* "Zeg het samen" (src/lib/chorus.ts): one big yellow button where the microphone goes; on it the
+   3-2-1, then a wave while the voice says it slowly. Then the microphone, with "Nu alleen" over it. */
+.say-chorus { width: min(100%, 22rem); min-height: 72px; padding: 10px 18px; gap: 12px; font-size: 1.15rem; }
+.say-chorus .bi { text-align: start; }
+.say-chorus .bi-help { --help-size: 0.8em; font-weight: 500; }
+.say-chorus-mark { flex: none; display: grid; place-items: center; width: 40px; height: 40px; }
+.say-chorus-count { font-size: 2rem; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+/* Running: it cannot be tapped, but it stays yellow (it is what to look at), not greyed. */
+.btn.say-chorus[aria-disabled='true'] { background: var(--yellow); color: var(--on-yellow); border-color: var(--on-yellow); cursor: default; }
+.say-wave { display: flex; align-items: center; gap: 3px; height: 30px; }
+.say-wave-bar { width: 5px; height: 30%; border-radius: 3px; background: currentColor; animation: say-wave 0.9s ease-in-out infinite; }
+.say-wave-bar:nth-child(2) { animation-delay: -0.7s; }
+.say-wave-bar:nth-child(3) { animation-delay: -0.45s; }
+.say-wave-bar:nth-child(4) { animation-delay: -0.2s; }
+.say-wave-bar:nth-child(5) { animation-delay: -0.55s; }
+@keyframes say-wave { 0%, 100% { height: 30%; } 50% { height: 100%; } }
+/* Reduced motion: the bars stand still at different heights (it still reads as "voice"). */
+@media (prefers-reduced-motion: reduce) {
+  .say-wave-bar { animation: none; }
+  .say-wave-bar:nth-child(odd) { height: 55%; }
+  .say-wave-bar:nth-child(even) { height: 90%; }
+}
+.say-chorus-hint { justify-content: center; text-align: center; margin-top: 4px; }
+.say-chorus-off { margin-top: 16px; }
+.say-alone { margin: 0 0 4px; font-size: var(--fs-small); font-weight: 700; color: var(--ink-2); text-align: center; }
+.say-alone .bi-help { --help-size: 0.85em; font-weight: 500; }
+/* Bram, once: "Fouten mogen" in a small bubble beside his head (no button). */
+.say-brave { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.say-brave-face { flex: none; display: grid; place-items: center; }
+.say-brave-line {
+  position: relative; margin: 0; padding: 8px 12px; min-width: 0;
+  background: var(--card); border: 1.5px solid var(--line); border-radius: 12px;
+  font-weight: 600; line-height: 1.25; overflow-wrap: anywhere;
+}
+.say-brave-line::before {
+  content: ''; position: absolute; top: 50%; inset-inline-start: -6px; width: 9px; height: 9px; margin-top: -5px;
+  background: var(--card); border: 0 solid var(--line); border-left-width: 1.5px; border-bottom-width: 1.5px; transform: rotate(45deg);
+}
+[dir='rtl'] .say-brave-line::before { border-width: 1.5px 1.5px 0 0; }
+.say-brave-line .bi-help { --help-size: 0.82em; font-weight: 500; color: var(--muted); }
+@media (max-height: 700px) {
+  .say-brave { margin-top: 10px; }
+  .say-chorus { min-height: 64px; }
+}
 
 /* ---- "Vloertaal rustiger", fase 1 (docs/rustiger.md): fewer things call at once ----
    1. The numbers before the options are for a keyboard; on a touch screen nobody taps "2", so

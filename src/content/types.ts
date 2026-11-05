@@ -111,6 +111,13 @@ export interface Lesson {
    * hear, its partner, and the day's turn (which of the four voices says it).
    */
   ear?: { word: Word; partner: Word; turn: number };
+  /**
+   * Today's review on a "Snap je het?" day (lib/spaced.ts snapLines): sentences the learner built
+   * in a finished lesson, in the day's order (the first one that can be heard on this phone is
+   * said at the real pace, lib/exercises.ts snapExercise), and other known sentences for the two
+   * wrong meanings.
+   */
+  snap?: { lines: Sentence[]; others: Sentence[] };
 }
 
 export interface Unit {

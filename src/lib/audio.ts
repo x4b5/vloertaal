@@ -42,6 +42,15 @@ export function autoSpeak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', 
   if (!quietAudio) speak(text, slow, lang, voice);
 }
 
+/**
+ * Dutch that starts by itself at a set pace, whatever the learner's tempo: "Snap je het?" in
+ * today's review says its sentence at the real pace, as a colleague would (the owner's request,
+ * 5 November 2026; src/components/Exercises.tsx SnapExercise). Silent in "Without sound".
+ */
+export function autoSpeakAt(text: string, pace: Pace, voice?: VoiceRef): void {
+  if (!quietAudio) speak(text, pace === 'slow', 'nl', voice, 1, pace);
+}
+
 /** speakLong() that starts by itself (a story on screen): silent in "Without sound". */
 /** Says a longer text unless sound is off; true when something is being said. */
 export function autoSpeakLong(text: string, opts: LongSpeech = {}): boolean {
@@ -441,11 +450,13 @@ function stopAll(): void {
  * `speed`: a factor on top of the pace (1 as it is, 0.25 a quarter as fast). Only "Hoe zeg je
  * het?" sets it, with its speed slider (src/components/KlankCard.tsx).
  */
-export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef, speed = 1): void {
+export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef, speed = 1, at?: Pace): void {
   const ref = voice === undefined ? preferredVoice : voice;
   const chosen = lang === 'nl' ? recordedFor(ref) : undefined;
   const found = chosen && clipFor(chosen, text);
-  const pace: Pace = lang === 'nl' ? paceFor(text, slow) : slow ? 'slow' : 'calm';
+  // `at`: a pace set by the exercise (autoSpeakAt); the line still counts as heard in the lesson.
+  const paced: Pace = lang === 'nl' ? paceFor(text, slow) : slow ? 'slow' : 'calm';
+  const pace: Pace = at ?? paced;
   if (found) {
     const { rec, id } = found;
     playClip(clipPath(rec, id), text, slow, lang, (VOICE_PACE[rec.voice.key] ?? 1) * speed, speed === 1 ? undefined : (noNet) => speakDevice(text, slow, lang, undefined, pace, noNet, speed), pace);

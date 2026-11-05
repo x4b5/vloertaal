@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'کلمهٔ جدید',
     tapToHear: 'برای شنیدن ضربه بزنید',
     whatDoesThisMean: 'این یعنی چه؟',
+    snapQuestion: 'متوجه شدید؟', // nieuw, nalezen
+    snapYes: 'بله، باشه.', // nieuw, nalezen
+    snapGoodAsk: 'خوب است که می‌پرسید!', // nieuw, nalezen
+    snapRight: 'درست فهمیدید!', // nieuw, nalezen
+    snapAskBetter: 'دیدید؟ پرسیدن بهتر بود.', // nieuw, nalezen
     whichOneIs: 'کدام یک «{word}» است؟',
     mixLesson: 'مرور ترکیبی',
     whatDoYouHear: 'چه می‌شنوید؟',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'گوش کنید، بعد بگویید',
     tapToSpeak: 'بزنید و حرف بزنید',
     stopRecording: 'توقف',
-    micPrivacy: 'فقط خودتان می‌شنوید. چیزی فرستاده نمی‌شود.',
+    micPrivacy: "هیچ‌کس دیگری صدای شما را نمی‌شنود. چیزی فرستاده نمی‌شود.", // nieuw, nalezen
     micUnavailable: 'میکروفون خاموش است. حالا آن را بلند بگویید، بعد ادامه بدهید.',
     cantSpeak: 'الان نمی‌توانم حرف بزنم',
     soundsSame: 'مثل هم شنیده می‌شود',
     sayAgain: 'دوباره بگویید',
     hearMine: 'صدای خودتان را بشنوید', // nieuw, nalezen
+    thenNow: 'قبلاً و حالا', // nieuw, nalezen
+    thenNowFirst: 'بار اول شما: {date}', // nieuw, nalezen
+    sayTogether: "با هم بگویید", // nieuw, nalezen
+    chorusHint: "همزمان با صدا بگویید. چیزی ضبط نمی‌شود.", // nieuw, nalezen
+    chorusAlone: "حالا فقط خودتان", // nieuw, nalezen
+    speakBrave: "اشتباه کردن اشکالی ندارد. هلندی‌ها حرف شما را با اشتباه هم می‌فهمند.", // nieuw, nalezen
     speakMe: 'من',
     speakingPractice: 'تمرین حرف زدن',
-    speakingHint: 'کلمه‌ها را بلند بگویید و مقایسه کنید. صدای شما هیچ‌وقت ذخیره یا فرستاده نمی‌شود.',
+    speakingHint: "کلمه‌ها را بلند بگویید و مقایسه کنید. هیچ‌کس دیگری صدای شما را نمی‌شنود: چیزی فرستاده نمی‌شود. اولین ضبط شما از هر جمله روی گوشی‌تان می‌ماند تا بعداً مقایسه کنید.", // nieuw, nalezen
     savingOffline: 'در حال ذخیره…',
     savedOffline: 'برای استفاده بدون اینترنت ذخیره شد',
     offlineNoSpace: 'جای کافی روی این گوشی نیست. یک موضوع ذخیره‌شده را پاک کنید یا جا باز کنید.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'تقریباً مثل قبل', // nieuw, nalezen
     toetsMoreAll: 'همه با هم: الان بیشتر از قبل می‌دانید.', // nieuw, nalezen
     toetsSameAll: 'همه با هم: تقریباً مثل قبل.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'اول 5 سؤال درباره خودتان. درست یا غلط وجود ندارد.', // nieuw, nalezen
+    toetsDurfAsk: 'جرئت می‌کنید این کار را بکنید؟', // nieuw, nalezen
+    toetsDurfUnderstand: 'بگویید که چیزی را نمی‌فهمید', // nieuw, nalezen
+    toetsDurfBoss: 'از مسئول‌تان چیزی بپرسید', // nieuw, nalezen
+    toetsDurfHelp: 'کمک بخواهید', // nieuw, nalezen
+    toetsDurfUnsafe: 'بگویید که چیزی ایمن نیست', // nieuw, nalezen
+    toetsDurfBreak: 'در زمان استراحت کمی با یک همکار حرف بزنید', // nieuw, nalezen
+    toetsDurfNotYet: 'هنوز نه', // nieuw, nalezen
+    toetsDurfABit: 'کمی', // nieuw, nalezen
+    toetsDurfYes: 'بله', // nieuw, nalezen
+    toetsDurfAgain: 'چند هفته بعد دوباره می‌پرسیم.', // nieuw, nalezen
     tempo: 'سرعت', // nieuw, nalezen
     tempoCalm: 'آرام', // nieuw, nalezen
     tempoNormal: 'عادی', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'این را سر کار گفتی؟', // nieuw, nalezen
     geluktYes: 'بله، شد', // nieuw, nalezen
     geluktNotYet: 'هنوز نه', // nieuw, nalezen
+    geluktDoneN: 'آفرین! تا حالا {n} جمله سر کار موفق بوده.', // nieuw, nalezen
+    geluktDoneOne: 'آفرین! اولین جمله‌ات سر کار موفق بود.', // nieuw, nalezen
+    geluktWhere: 'آن‌ها را در تنظیمات پیدا می‌کنی.', // nieuw, nalezen
+    geluktTitle: 'موفق سر کار', // nieuw, nalezen
+    geluktListHint: 'این جمله‌ها را سر کار گفتی.', // nieuw, nalezen
+    nextMinutesN: 'حدود {n} دقیقه', // nieuw, nalezen
     saveFailed: 'پیشرفت شما ذخیره نشد. آیا گوشی پر است؟ کمی جا باز کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
     bewaarNudge: 'گوشی شما ممکن است گاهی پیشرفت شما را پاک کند. پس یک نسخه نگه دارید.', // nieuw, nalezen
     bewaarGo: 'همین حالا ذخیره کنید', // nieuw, nalezen

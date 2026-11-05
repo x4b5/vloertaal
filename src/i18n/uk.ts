@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Нове слово',
     tapToHear: 'Натисни, щоб почути',
     whatDoesThisMean: 'Що це означає?',
+    snapQuestion: 'Розумієш?', // nieuw, nalezen
+    snapYes: 'Так, добре.', // nieuw, nalezen
+    snapGoodAsk: 'Добре, що питаєш!', // nieuw, nalezen
+    snapRight: 'Добре зрозуміло!', // nieuw, nalezen
+    snapAskBetter: 'Бачиш? Краще було запитати.', // nieuw, nalezen
     whichOneIs: 'Де тут «{word}»?',
     mixLesson: 'Змішане повторення',
     whatDoYouHear: 'Що ти чуєш?',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Послухай, потім скажи',
     tapToSpeak: 'Натисни й говори',
     stopRecording: 'Стоп',
-    micPrivacy: 'Чуєш тільки ти. Нічого не надсилається.',
+    micPrivacy: "Ніхто інший тебе не чує. Нічого не надсилається.", // nieuw, nalezen
     micUnavailable: 'Мікрофон вимкнено. Скажи це вголос зараз, потім продовжуй.',
     cantSpeak: 'Зараз не можу говорити',
     soundsSame: 'Звучить так само',
     sayAgain: 'Скажи ще раз',
     hearMine: 'Послухай себе', // nieuw, nalezen
+    thenNow: 'Тоді й зараз', // nieuw, nalezen
+    thenNowFirst: 'Твоя перша спроба: {date}', // nieuw, nalezen
+    sayTogether: "Скажи разом", // nieuw, nalezen
+    chorusHint: "Кажи одночасно з голосом. Нічого не записується.", // nieuw, nalezen
+    chorusAlone: "Тепер тільки ти", // nieuw, nalezen
+    speakBrave: "Помилки — це нормально. Нідерландці розуміють тебе і з помилками.", // nieuw, nalezen
     speakMe: 'Я',
     speakingPractice: 'Практика мовлення',
-    speakingHint: 'Кажи слова вголос і порівнюй. Твій голос ніколи не зберігається і не надсилається.',
+    speakingHint: "Кажи слова вголос і порівнюй. Ніхто інший тебе не чує: нічого не надсилається. Твій перший запис речення залишається в телефоні, щоб порівняти пізніше.", // nieuw, nalezen
     savingOffline: 'Зберігаємо…',
     savedOffline: 'Збережено офлайн',
     offlineNoSpace: 'На телефоні замало місця. Видали збережену тему або звільни місце.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Приблизно так само', // nieuw, nalezen
     toetsMoreAll: 'Усе разом: тепер ти знаєш більше, ніж тоді.', // nieuw, nalezen
     toetsSameAll: 'Усе разом: приблизно так само, як тоді.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Спочатку 5 запитань про тебе. Тут немає правильно чи неправильно.', // nieuw, nalezen
+    toetsDurfAsk: 'Чи наважишся ти на це?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Сказати, що ти чогось не розумієш', // nieuw, nalezen
+    toetsDurfBoss: 'Запитати щось у керівника', // nieuw, nalezen
+    toetsDurfHelp: 'Попросити про допомогу', // nieuw, nalezen
+    toetsDurfUnsafe: 'Сказати, що щось небезпечно', // nieuw, nalezen
+    toetsDurfBreak: 'Трохи поговорити з колегою на перерві', // nieuw, nalezen
+    toetsDurfNotYet: 'Ще ні', // nieuw, nalezen
+    toetsDurfABit: 'Трохи', // nieuw, nalezen
+    toetsDurfYes: 'Так', // nieuw, nalezen
+    toetsDurfAgain: 'За кілька тижнів ми запитаємо ще раз.', // nieuw, nalezen
     tempo: 'Темп', // nieuw, nalezen
     tempoCalm: 'Спокійно', // nieuw, nalezen
     tempoNormal: 'Звичайно', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Вдалося сказати це на роботі?', // nieuw, nalezen
     geluktYes: 'Так, вдалося', // nieuw, nalezen
     geluktNotYet: 'Ще ні', // nieuw, nalezen
+    geluktDoneN: { one: 'Молодець! Уже {n} речення вдалося сказати на роботі.', few: 'Молодець! Уже {n} речення вдалося сказати на роботі.', many: 'Молодець! Уже {n} речень вдалося сказати на роботі.', other: 'Молодець! Уже {n} речення вдалося сказати на роботі.' }, // nieuw, nalezen
+    geluktDoneOne: 'Молодець! Перше речення на роботі вдалося.', // nieuw, nalezen
+    geluktWhere: 'Їх можна знайти в Налаштуваннях.', // nieuw, nalezen
+    geluktTitle: 'Вдалося на роботі', // nieuw, nalezen
+    geluktListHint: { m: 'Ці речення ти сказав на роботі.', f: 'Ці речення ти сказала на роботі.', x: 'Ці речення вдалося сказати на роботі.' }, // nieuw, nalezen
+    nextMinutesN: 'близько {n} хв', // nieuw, nalezen
     saveFailed: 'Твій прогрес не збережено. Телефон заповнений? Звільни трохи місця. Або відкрий Налаштування: «Збережи свій прогрес».', // nieuw, nalezen
     bewaarNudge: 'Телефон іноді може стерти твій прогрес. Тому збережи копію.', // nieuw, nalezen
     bewaarGo: 'Зберегти зараз', // nieuw, nalezen

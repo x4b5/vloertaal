@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Nouveau mot',
     tapToHear: 'Touche pour écouter',
     whatDoesThisMean: 'Qu’est-ce que ça veut dire ?',
+    snapQuestion: 'Tu comprends ?', // nieuw, nalezen
+    snapYes: 'Oui, d’accord.', // nieuw, nalezen
+    snapGoodAsk: 'C’est bien de demander !', // nieuw, nalezen
+    snapRight: 'Bien compris !', // nieuw, nalezen
+    snapAskBetter: 'Tu vois ? Mieux valait demander.', // nieuw, nalezen
     whichOneIs: 'Lequel est “{word}” ?',
     mixLesson: 'Révision mélangée',
     whatDoYouHear: 'Qu’est-ce que tu entends ?',
@@ -230,15 +235,21 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Écoute, puis dis-le',
     tapToSpeak: 'Touche et parle',
     stopRecording: 'Stop',
-    micPrivacy: 'Personne d’autre ne l’entend. Rien n’est envoyé.',
+    micPrivacy: "Personne d’autre ne t’entend. Rien n’est envoyé.", // nieuw, nalezen
     micUnavailable: 'Micro coupé. Dis-le à voix haute maintenant, puis continue.',
     cantSpeak: 'Je ne peux pas parler maintenant',
     soundsSame: 'Ça sonne pareil',
     sayAgain: 'Redis-le',
     hearMine: 'Écoute-toi', // nieuw, nalezen
+    thenNow: 'Avant et maintenant', // nieuw, nalezen
+    thenNowFirst: 'Ton premier essai : {date}', // nieuw, nalezen
+    sayTogether: "Dis-le ensemble", // nieuw, nalezen
+    chorusHint: "Dis-le en même temps que la voix. Rien n’est enregistré.", // nieuw, nalezen
+    chorusAlone: "Maintenant, à toi", // nieuw, nalezen
+    speakBrave: "Les fautes, ce n’est pas grave. Les Néerlandais te comprennent aussi avec des fautes.", // nieuw, nalezen
     speakMe: 'Moi',
     speakingPractice: 'Pratique de l’oral',
-    speakingHint: 'Dis des mots à voix haute et compare. Ta voix n’est jamais enregistrée ni envoyée.',
+    speakingHint: "Dis des mots à voix haute et compare. Personne d’autre ne t’entend : rien n’est envoyé. Ton premier enregistrement d’une phrase reste sur ton téléphone, pour comparer plus tard.", // nieuw, nalezen
     savingOffline: 'Enregistrement…',
     savedOffline: 'Enregistré hors ligne',
     offlineNoSpace: 'Pas assez de place sur ce téléphone. Supprime un sujet enregistré ou libère de la place.',
@@ -359,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'À peu près pareil', // nieuw, nalezen
     toetsMoreAll: 'Au total : tu en sais plus qu’avant.', // nieuw, nalezen
     toetsSameAll: 'Au total : à peu près pareil qu’avant.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'D’abord 5 questions sur toi. Il n’y a pas de bonne ou de mauvaise réponse.', // nieuw, nalezen
+    toetsDurfAsk: 'Est-ce que tu oses le faire ?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Dire que tu ne comprends pas quelque chose', // nieuw, nalezen
+    toetsDurfBoss: 'Demander quelque chose à ton ou ta responsable', // nieuw, nalezen
+    toetsDurfHelp: 'Demander de l’aide', // nieuw, nalezen
+    toetsDurfUnsafe: 'Dire que quelque chose n’est pas sûr', // nieuw, nalezen
+    toetsDurfBreak: 'Discuter un peu avec quelqu’un du travail à la pause', // nieuw, nalezen
+    toetsDurfNotYet: 'Pas encore', // nieuw, nalezen
+    toetsDurfABit: 'Un peu', // nieuw, nalezen
+    toetsDurfYes: 'Oui', // nieuw, nalezen
+    toetsDurfAgain: 'Dans quelques semaines, nous te le redemandons.', // nieuw, nalezen
     tempo: 'Vitesse', // nieuw, nalezen
     tempoCalm: 'Calme', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen
@@ -441,6 +464,12 @@ const lang: HelpLanguageSource = {
     geluktAsk: 'Tu l’as dit au travail ?', // nieuw, nalezen
     geluktYes: 'Oui, ça a marché', // nieuw, nalezen
     geluktNotYet: 'Pas encore', // nieuw, nalezen
+    geluktDoneN: { one: 'Bravo ! Déjà {n} phrase réussie au travail.', many: 'Bravo ! Déjà {n} phrases réussies au travail.', other: 'Bravo ! Déjà {n} phrases réussies au travail.' }, // nieuw, nalezen
+    geluktDoneOne: 'Bravo ! Ta première phrase au travail a marché.', // nieuw, nalezen
+    geluktWhere: 'Tu les trouves dans Réglages.', // nieuw, nalezen
+    geluktTitle: 'Réussi au travail', // nieuw, nalezen
+    geluktListHint: 'Tu as dit ces phrases au travail.', // nieuw, nalezen
+    nextMinutesN: 'environ {n} min', // nieuw, nalezen
     saveFailed: 'Ta progression n’a pas été enregistrée. Ton téléphone est plein ? Libère un peu de place. Ou va dans Réglages : « Garde ta progression ».', // nieuw, nalezen
     bewaarNudge: 'Ton téléphone peut parfois effacer ta progression. Alors garde une copie.', // nieuw, nalezen
     bewaarGo: 'Garder maintenant', // nieuw, nalezen

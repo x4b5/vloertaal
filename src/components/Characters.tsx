@@ -1000,6 +1000,15 @@ export function colleaguesOf(gender?: Gender | null): CharacterId[] {
 }
 
 /**
+ * Who says the sentence of "Snap je het?" (Exercises.tsx SnapExercise): Henk or Jada, fixed per
+ * sentence. Never the learner's own character, whatever the gender question says, so the step
+ * builder and the lesson's sound know the voice without it (lessonLines.ts heardVoice).
+ */
+export function snapColleague(sentenceId: string): CharacterId {
+  return castFor(sentenceId, ['henk', 'jada']);
+}
+
+/**
  * "You" in the chats: no cast member (no hijab, no narrator's face, nobody's religion or role),
  * just the person icon of the speaking screen's "Me", kraft on kraft, in a character's box so it
  * sits where a character would. The voice still follows the gender question (learnerVoice).

@@ -17,6 +17,19 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-05',
+    items: [
+      'Toen en nu: de eerste keer dat je een zin inspreekt, bewaart je telefoon die opname. Spreek je dezelfde zin een week later of nog later weer in, dan hoor je ze naast elkaar: eerst toen, dan nu. Zo hoor je zelf dat je beter wordt.',
+      'Zeg het samen: wie niet graag hardop praat, kan eerst samen met de stem meepraten. Er wordt dan niets opgenomen. Daarna probeer je het alleen. Bram zegt één keer: "Fouten mogen. Nederlanders begrijpen je ook met fouten."',
+      'Snap je het? Af en toe zegt een collega in "Herhaal vandaag" een zin op gewone snelheid. Snap je hem niet? Zeg dan "Kunt u dat herhalen?". Dat kost nooit punten. Zo oefen je om eerlijk te vragen, in plaats van te knikken.',
+      'Gelukt op het werk: zeg je een zin echt op je werk en tik je "Ja, gelukt"? Dan komt hij in je eigen lijst, bij Instellingen › Taal en ik. Bram telt mee: "Al 4 zinnen gelukt op het werk."',
+      'Bij de volgende les staat nu hoe lang hij ongeveer duurt, bijvoorbeeld "± 6 min".',
+      'Wat ken je al? De toets begint nu met vijf vragen over wat je durft, zoals om hulp vragen of zeggen dat je iets niet begrijpt. Er is geen goed of fout. Aan het eind zie je wat je toen durfde en wat nu.',
+      'Voor begeleiders: knikken is niet altijd begrijpen. Vraag "Wat ga je nu doen?" in plaats van "Snap je het?".',
+      'Privacy: de uitleg zegt nu ook wat er nieuw op je telefoon staat: de eerste opname van een zin (Toen en nu), je zinnen bij "Gelukt op het werk" en je antwoorden op "Durf je dit?". Niets daarvan gaat naar ons, en "Voortgang wissen" haalt het weg.',
+    ],
+  },
+  {
     date: '2026-11-04',
     items: [
       'Kort en duidelijk: een nieuwe les bij Samenwerken. In veel talen vertel je eerst het hele verhaal. Op het werk hier zeg je eerst het belangrijkste, dan de reden, dan een vraag. Met een tip, ook voor een sollicitatiegesprek. Bij Werkregels staat een nieuwe vraag in de les over het sollicitatiegesprek: "Vertel eens iets over jezelf."',
