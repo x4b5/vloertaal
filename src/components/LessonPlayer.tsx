@@ -969,7 +969,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'chat': body = <ChatExercise key={key} ex={ex} {...props} />; break;
     case 'tip': body = <TipCard key={key} ex={ex} {...props} soundOff={soundOff} />; break;
     case 'saying': body = <SayingCard key={key} ex={ex} {...props} />; break;
-    case 'klank': body = <KlankStep key={key} ex={ex} {...props} />; break;
+    case 'klank': body = <KlankStep key={key} ex={ex} {...props} soundOff={soundOff} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
     case 'snap': body = <SnapExercise key={key} ex={ex} {...props} />; break;
     // "Laat de telefoon luisteren (proef)": the Dutch course only (never Werkregels); src/lib/listen.ts.
