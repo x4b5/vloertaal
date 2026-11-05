@@ -12,8 +12,6 @@ const lang: HelpLanguageSource = {
     themeSand: 'Пісок', // nieuw, nalezen
     themeHarbour: 'Порт', // nieuw, nalezen
     themeWorkwear: 'Робоча куртка', // nieuw, nalezen
-    colourTitle: 'Який колір ти хочеш?', // nieuw, nalezen
-    colourHint: 'Пізніше це можна змінити в Налаштуваннях.', // nieuw, nalezen
     themeDark: 'Темний',
     voice: 'Нідерландський голос',
     voiceAuto: 'Автоматично',

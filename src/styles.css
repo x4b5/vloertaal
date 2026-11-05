@@ -3472,8 +3472,6 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .theme-swatch-dark { background: linear-gradient(135deg, #1b1916 50%, #2f2a25 50% 72%, #ffc414 72%); }
 /* The first run's colour page: Continue pinned at the bottom of the screen, always in view, over
    the full width (the screen's own side padding taken back). */
-.colour-foot { margin: 24px -16px calc(-48px - env(safe-area-inset-bottom)); }
-@media (min-width: 640px) { .colour-foot .foot-actions { justify-content: flex-end; } .colour-foot .btn-primary { flex: 0 0 260px; } }
 /* Fixed px, so the three A's keep their steps whatever the size now is. */
 .text-size-normal { font-size: 18px; }
 .text-size-large { font-size: 24px; }

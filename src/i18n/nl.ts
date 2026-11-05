@@ -94,8 +94,6 @@ export const uiNl: Record<UiKey, UiText> = {
   themeSand: 'Zand',
   themeHarbour: 'Haven',
   themeWorkwear: 'Werkjas',
-  colourTitle: 'Welke kleur wil je?',
-  colourHint: 'Je kunt dit later veranderen bij Instellingen.',
   themeDark: 'Donker',
   voice: 'Voorleesstem', // regels: the voice reads the rules aloud
   voiceAuto: 'Automatisch',

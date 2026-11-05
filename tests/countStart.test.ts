@@ -36,7 +36,7 @@ describe('the start, counted once per device', () => {
   it('a new device counts its first open and the end of the start, each once, with only that', () => {
     setCountEnv(PROD);
     expect(countFirstOpen(true)).toBe(true);
-    // Opened again (a reload, the next day), and the start done twice (after "Voortgang wissen" the colour is asked again).
+    // Opened again (a reload, the next day), and the start done twice (after "Voortgang wissen" the start is done again).
     expect(countFirstOpen(true)).toBe(false);
     expect(countFirstOpen(false)).toBe(false);
     expect(countStartDone()).toBe(true);
@@ -55,7 +55,7 @@ describe('the start, counted once per device', () => {
   it('a reload in the middle of the start keeps its "start-af" to come', () => {
     setCountEnv(PROD);
     countFirstOpen(true);
-    // The language is chosen (onboarded), then the page reloads before the colour.
+    // The language is chosen (onboarded), then the page reloads before the country.
     expect(countFirstOpen(false)).toBe(false);
     expect(countStartDone()).toBe(true);
     expect(paths()).toEqual(['/e/eerste/geopend', '/e/eerste/start-af']);
@@ -65,7 +65,7 @@ describe('the start, counted once per device', () => {
     setCountEnv(PROD);
     expect(countFirstOpen(false)).toBe(false);
     expect(store.get('vloertaal:count-eerste')).toBe('geopend,start-af');
-    // Its colour asked again after "Voortgang wissen", or the home of a learner who began long ago.
+    // Its start done again after "Voortgang wissen", or the home of a learner who began long ago.
     expect(countStartDone()).toBe(false);
     expect(countFirstOpen(true)).toBe(false);
     expect(fetchMock).not.toHaveBeenCalled();
@@ -99,19 +99,19 @@ describe('the start, counted once per device', () => {
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
-  it('the app counts the first open when it opens, and the end of the start on Continue after the colour', () => {
+  it('the app counts the first open when it opens, and the end of the start on choosing the country', () => {
     expect([...FIRST_STEPS]).toEqual(['geopend', 'start-af']);
     const app = readFileSync('src/App.tsx', 'utf8');
     // New: no help language chosen yet. Not on the coaches' page or the owner's (#begeleiders, #beheer).
     expect(app).toContain('if (!coachesRequested() && !adminRequested()) countFirstOpen(!start.progress.onboarded);');
-    const colour = app.split('\n').find((l) => l.includes("if (step === 'colour') return <ColourScreen"))!;
-    expect(colour).toMatch(/onDone=\{\(\) => \{ setProgress\(\(p\) => \(\{ \.\.\.p, colourAsked: true \}\)\); countStartDone\(\); \}\}/);
+    const country = app.split('\n').find((l) => l.includes("if (step === 'country') return <CountryScreen"))!;
+    expect(country).toContain('onDone={(country) => { setCountry(country); countStartDone(); }}');
     expect(app.match(/countStartDone\(\)/g)).toHaveLength(1);
   });
 
   it('is what the privacy statement and the professionals’ page say', () => {
     const counting = PRIVACY.find((s) => s.id === 'tellen')!.paras.join(' ');
-    for (const fact of ['één keer per telefoon', 'voor het eerst opent', 'tot en met de kleur', 'Niet wat je koos', 'voordat je het tellen kunt uitzetten']) {
+    for (const fact of ['één keer per telefoon', 'voor het eerst opent', 'tot en met het land', 'Niet wat je koos', 'voordat je het tellen kunt uitzetten']) {
       expect(counting, fact).toContain(fact);
     }
     expect(PRIVACY.find((s) => s.id === 'kort')!.paras.join(' ')).toContain('hoeveel mensen beginnen');

@@ -3,12 +3,11 @@ import { finishLesson, lessonPlace, openAsLearner, playSteps, progress, tapUntil
 
 test('a first start, to lesson 1.1 finished', async ({ page }) => {
   await page.goto('/');
-  // The first page is the list of languages; then the sector, the country and the colour.
+  // The first page is the list of languages; then the sector and the country.
   // (A page ignores a tap that came in the moment it opened, meant for the page before: tap again.)
   await tapUntilChanged(page, page.locator('.onb-lang-list .lang-btn', { hasText: 'Türkçe' }));
   await tapUntilChanged(page, page.locator('.sector-group-row[data-group="none"]'));
   await tapUntilChanged(page, page.locator('.country-screen .max3-card').first());
-  await tapUntilChanged(page, page.locator('.colour-screen .colour-go'));
   // The home: lesson 1.1 to start.
   await page.locator('.home3 button.bay-card').click();
   await expect(page.locator('.player .lbar')).toBeVisible();

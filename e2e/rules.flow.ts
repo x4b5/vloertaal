@@ -6,9 +6,9 @@ test('the work-rules track (Werkregels), from the first start to its first quest
   // "Ik spreek al Nederlands": the last card of the language list.
   await tapUntilChanged(page, page.locator('.onb-lang-list .lang-btn-nl'));
   for (let guard = 0; guard < 12; guard++) {
-    // The first run in Dutch (sector, country, colour), "Goed om te weten" once, then the home.
+    // The first run in Dutch (sector, country), "Goed om te weten" once, then the home.
     if (await page.locator('.home3 button.bay-card').isVisible()) break;
-    const steps = ['.sector-group-row[data-group="none"]', '.country-screen .max3-card', '.colour-screen .colour-go', '.rules-notice-ok'];
+    const steps = ['.sector-group-row[data-group="none"]', '.country-screen .max3-card', '.rules-notice-ok'];
     let tapped = false;
     for (const sel of steps) {
       const b = page.locator(sel).first();

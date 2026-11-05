@@ -12,8 +12,6 @@ const lang: HelpLanguageSource = {
     themeSand: 'Piasek', // nieuw, nalezen
     themeHarbour: 'Port', // nieuw, nalezen
     themeWorkwear: 'Kurtka robocza', // nieuw, nalezen
-    colourTitle: 'Jaki kolor wybierasz?', // nieuw, nalezen
-    colourHint: 'Możesz to później zmienić w Ustawieniach.', // nieuw, nalezen
     themeDark: 'Ciemny',
     voice: 'Głos niderlandzki',
     voiceAuto: 'Automatycznie',

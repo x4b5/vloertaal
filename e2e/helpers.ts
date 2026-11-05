@@ -41,7 +41,7 @@ const today = () => {
 };
 
 /**
- * A learner who did the first run already (help language, sector, country, colour), opening the
+ * A learner who did the first run already (help language, sector, country), opening the
  * app: the home. "Wat ken je al?" passed over today, as a learner who said "later".
  */
 export async function openAsLearner(page: Page, extra: Record<string, unknown> = {}): Promise<void> {

@@ -68,8 +68,8 @@ export interface Progress {
    * page replaced was closed with ✕): it never comes back. Settings can still choose. Missing = not asked.
    */
   genderAsked?: boolean;
-  /** "Welke kleur wil je?" was answered in the first run (src/lib/onboarding.ts). Missing = not asked;
-   *  a learner who had already begun is never asked (the colour stays in Settings). */
+  /** "Welke kleur wil je?" was answered in the first run. That page is gone (5 November 2026; the
+   *  colour is only in Settings): kept so older saves still read, no longer used. */
   colourAsked?: boolean;
   /** The learner's sector ('none' = not sure yet); undefined = not asked yet (first run). */
   sector?: SectorChoice;

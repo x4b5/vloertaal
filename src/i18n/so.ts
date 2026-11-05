@@ -13,8 +13,6 @@ const lang: HelpLanguageSource = {
     themeSand: "Ciid", // nieuw, nalezen
     themeHarbour: "Deked", // nieuw, nalezen
     themeWorkwear: "Jaakadda shaqada", // nieuw, nalezen
-    colourTitle: "Midabkee ayaad rabtaa?", // nieuw, nalezen
-    colourHint: "Hadhow waad ku beddeli kartaa Dejinta.", // nieuw, nalezen
     themeDark: "Mugdi", // nieuw, nalezen
     voice: "Codka Af-Holandiiska", // nieuw, nalezen
     voiceAuto: "Si toos ah", // nieuw, nalezen

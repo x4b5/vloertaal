@@ -37,7 +37,7 @@ import { CertIcon } from './CertBadge';
 import { CertificatesCard } from './Certificate';
 import { GeluktList } from './GeluktCard';
 import { ChoiceCards, type ChoiceOption } from './Choice';
-import { colourOptions } from './Colour';
+import { colourOptions, shownColour } from './Colour';
 import { countryOptions } from './Country';
 import { ChromeBack } from './ChromeBack';
 import { UpgradeCard } from './Gate';
@@ -634,7 +634,7 @@ export function Settings({
           <ChoiceCards
             label={said(ui('theme', lang))}
             // 'auto' (an older save) is shown as the colour it gives on this device now.
-            current={progress.theme === 'auto' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : progress.theme}
+            current={shownColour(progress.theme)}
             // Stays on this page: the new colours show at once, so another choice is one tap away
             // (the owner's request, 2 November 2026; Back leads on).
             onPick={(t) => onTheme(t)}
