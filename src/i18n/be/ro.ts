@@ -15,6 +15,7 @@ import { ro as sayings } from './units/sayings';
 import { ro as social } from './units/social';
 import { ro as rights } from './units/rights';
 import { ro as leave } from './units/leave';
+import { ro as sick } from './units/sick';
 import { ro as exploit } from './units/exploit';
 import { ro as grow } from './units/grow';
 import { ro as health } from './units/health';
@@ -33,5 +34,5 @@ import { ro as online } from './units/online';
  * (./base.ts) and every unit's own file (./units). Loaded with the language's pack. A content
  * agent changes only its own unit files, never this one.
  */
-const texts: CultureTranslation = { ui: base.ui, gloss: { ...base.gloss, ...firstday, ...tools, ...safety, ...warehouse, ...data, ...time, ...teamwork, ...contract, ...papers, ...pay, ...house, ...social, ...sayings, ...rights, ...leave, ...exploit, ...grow, ...health, ...money, ...travel, ...lost, ...shop, ...ai, ...kas, ...stage, ...society, ...online } };
+const texts: CultureTranslation = { ui: base.ui, gloss: { ...base.gloss, ...firstday, ...tools, ...safety, ...warehouse, ...data, ...time, ...teamwork, ...contract, ...papers, ...pay, ...house, ...social, ...sayings, ...rights, ...leave, ...sick, ...exploit, ...grow, ...health, ...money, ...travel, ...lost, ...shop, ...ai, ...kas, ...stage, ...society, ...online } };
 export default texts;

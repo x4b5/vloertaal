@@ -122,6 +122,13 @@ const t: CultureTranslation = {
     'c.email.a.why': "ተላኢኹ ዶ ተባሂሉ: ገና፡ ቅድም ይፍተሽ።", // nieuw, nalezen
     'c.budget.a.why': "«ጸኒሕካ ክፈል» ቀሪቡ: ትሑት ኣይፋል፡ ምስ ምኽንያት።", // nieuw, nalezen
     'c.healthy.a.why': "ከኒና ቀሪቡ: ትሑት ኣይፋል፡ ምስ ምኽንያት።", // nieuw, nalezen
+    // 5 nov 2026
+    'd.newcolleague.a.why': "«ይመስለኒ» ገና ርግጸኛ ኣይኮነን: ኣርእየኒ ምባል ይሰርሕ እንተ ኾይኑ የረጋግጽ።", // nieuw, nalezen
+    'c.food.a.why': "ስለምንታይ እቲ መስመር ይጸሪ ተሓቲቱ: ዝቕጽል ፍርያት ለውዝ የብሉን።", // nieuw, nalezen
+    'c.parcel.a.why': "እቲ ጥቕሊል ናቱ ድዩ ተሓቲቱ: እወ፡ ድሕሪኡ ፊርማ።", // nieuw, nalezen
+    'c.road.a.why': "ሓደ ተወሳኺ ዙረት ተሓቲቱ: ኣይፋል፡ ቅድም ዕረፍቲ ስለ ዝመጽእ።", // nieuw, nalezen
+    'c.backtowork.a.why': "ብዛዕባ ጥዕና ተሓቲቱ: ሓጺር «እወ»፡ ቀስ ብቐስ ምኻድ ድማ።", // nieuw, nalezen
+    'c.feelwell.a.why': "ብዛዕባ ኩነታት ተሓቲቱ: ሓቀኛ «ብዙሕ ጽቡቕ ኣይኮነን» ጸገም የብሉን።", // nieuw, nalezen
   },
 };
 

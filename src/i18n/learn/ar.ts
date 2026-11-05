@@ -122,6 +122,13 @@ const t: CultureTranslation = {
     'c.email.a.why': "السؤال هل أُرسل: ليس بعد، يُراجَع أولاً.", // nieuw, nalezen
     'c.budget.a.why': "عرض «ادفع لاحقاً»: رفض مهذّب، مع السبب.", // nieuw, nalezen
     'c.healthy.a.why': "عرض حبة: رفض مهذّب، مع السبب.", // nieuw, nalezen
+    // 5 nov 2026
+    'd.newcolleague.a.why': "«أظن» يعني أنه ليس متأكداً بعد: طلب أن يُريك يتحقّق من أن الأمر يعمل.", // nieuw, nalezen
+    'c.food.a.why': "السؤال عن سبب تنظيف الخط: المنتج التالي بدون مكسّرات.", // nieuw, nalezen
+    'c.parcel.a.why': "السؤال هل الطرد له: نعم، ثم التوقيع.", // nieuw, nalezen
+    'c.road.a.why': "طلب جولة أخرى: لا، لأن الاستراحة أولاً.", // nieuw, nalezen
+    'c.backtowork.a.why': "السؤال عن الحال: «نعم» قصيرة، وأخذ الأمور بهدوء.", // nieuw, nalezen
+    'c.feelwell.a.why': "السؤال عن الحال: «ليس جيداً» بصدق أمر مقبول.", // nieuw, nalezen
   },
 };
 

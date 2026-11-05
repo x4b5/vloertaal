@@ -198,6 +198,27 @@ const t: CultureTranslation = {
     's.clear.3': 'ይቕሬታ፡ ኣዝየ ቀልጢፈ እዛረብ ኣለኹ፡ ብዙሕ ድማ እዛረብ።', // nieuw, nalezen
     'd.clear.q': 'ንጹር ድዩ?', // nieuw, nalezen
     'd.clear.a': 'እወ። ገና ሓንቲ ሕቶ ኣላትኒ።', // nieuw, nalezen
+    // Een nieuwe collega helpen (5 nov 2026)
+    'l.newcolleague': "ንሓድሽ መሳርሕቲ ምሕጋዝ", // nieuw, nalezen
+    'w.welkom': "እንቋዕ ብደሓን መጻእኩም", // nieuw, nalezen
+    'w.inwerken': "ንሓድሽ መሳርሕቲ ስራሕ ምርኣይ (ኣብ ቀዳሞት መዓልትታት)", // nieuw, nalezen
+    'w.stap': "ስጉምቲ (ንእሽቶ ክፋል ናይ ሓደ ዕማም)", // nieuw, nalezen
+    'w.nadoen': "ምድጋም (ሓደ ሰብ ዘርኣዮ ምግባር)", // nieuw, nalezen
+    'w.geduld': "ትዕግስቲ", // nieuw, nalezen
+    'w.kast': "ቁምሳጥን", // nieuw, nalezen
+    's.newcolleague.1': "እንቋዕ ብደሓን መጻእካ! ሎሚ ነቲ ስራሕ ከርእየካ እየ።", // nieuw, nalezen
+    's.newcolleague.2': "ቅድም ርአ። ድሕሪኡ ከማይ ግበሮ።", // nieuw, nalezen
+    's.newcolleague.3': "ጓንትታት ኣብቲ ቁምሳጥን ኣለዉ።", // nieuw, nalezen
+    'd.newcolleague.q': "ተረዲኡኒ፡ ይመስለኒ።", // nieuw, nalezen
+    'd.newcolleague.a': "ጽቡቕ። እስኪ ኣርእየኒ።", // nieuw, nalezen
+    'c.newcolleague': { m: "ስጉምቲ ብስጉምቲ ኣርእዮ", f: "ስጉምቲ ብስጉምቲ ኣርእይዮ", x: "ስጉምቲ ብስጉምቲ ኣርእይዎ" }, // nieuw, nalezen
+    'c.newcolleague.b': { m: "ኣብ ቀዳሞት ሰሙናትካ ንዓኻ ዘሸገረካ፡ ንሓድሽ መሳርሕቲ እውን የሸግሮ እዩ። ነቲ ስራሕ ብንኣሽቱ ስጉምትታት ግለጾ፡ ቅድም እዚ፡ ድሕሪኡ እቲ። ብቕልጡፍ ወይ ብዓው ኢልካ ኣይትዛረብ፡ ኣርእዮ፡ ድሕሪኡ ባዕሉ ክገብሮ ግደፎ። «Snap je het?» ኢልካ ኣይትሕተት፡ ብዙሓት ሰባት ዋላ እንተ ዘይተረድኦም «እወ» ይብሉ። ኣብ ክንዳኡ «Laat eens zien» በል፡ ተዓዘብ ድማ። ነገራት ኣበይ ከም ዘለዉ ንገሮ፡ ከም ሽቓቕ፡ ካንቲናን ጓንትታትን። ተዓገስ (geduld)፡ ምምሃር ንኹሉ ሰብ ግዜ ይወስድ።", f: "ኣብ ቀዳሞት ሰሙናትኪ ንዓኺ ዘሸገረኪ፡ ንሓድሽ መሳርሕቲ እውን የሸግሮ እዩ። ነቲ ስራሕ ብንኣሽቱ ስጉምትታት ግለጽዮ፡ ቅድም እዚ፡ ድሕሪኡ እቲ። ብቕልጡፍ ወይ ብዓው ኢልኪ ኣይትዛረቢ፡ ኣርእይዮ፡ ድሕሪኡ ባዕሉ ክገብሮ ግደፍዮ። «Snap je het?» ኢልኪ ኣይትሕተቲ፡ ብዙሓት ሰባት ዋላ እንተ ዘይተረድኦም «እወ» ይብሉ። ኣብ ክንዳኡ «Laat eens zien» በሊ፡ ተዓዘቢ ድማ። ነገራት ኣበይ ከም ዘለዉ ንገርዮ፡ ከም ሽቓቕ፡ ካንቲናን ጓንትታትን። ተዓገሲ (geduld)፡ ምምሃር ንኹሉ ሰብ ግዜ ይወስድ።", x: "ኣብ ቀዳሞት ሰሙናትኩም ንዓኹም ዘሸገረኩም፡ ንሓድሽ መሳርሕቲ እውን የሸግሮ እዩ። ነቲ ስራሕ ብንኣሽቱ ስጉምትታት ግለጽዎ፡ ቅድም እዚ፡ ድሕሪኡ እቲ። ብቕልጡፍ ወይ ብዓው ኢልኩም ኣይትዛረቡ፡ ኣርእይዎ፡ ድሕሪኡ ባዕሉ ክገብሮ ግደፍዎ። «Snap je het?» ኢልኩም ኣይትሕተቱ፡ ብዙሓት ሰባት ዋላ እንተ ዘይተረድኦም «እወ» ይብሉ። ኣብ ክንዳኡ «Laat eens zien» በሉ፡ ተዓዘቡ ድማ። ነገራት ኣበይ ከም ዘለዉ ንገርዎ፡ ከም ሽቓቕ፡ ካንቲናን ጓንትታትን። ተዓገሱ (geduld)፡ ምምሃር ንኹሉ ሰብ ግዜ ይወስድ።" }, // nieuw, nalezen
+    'c.newcolleague.p': "ጽቡቕ! ሕጂ እቲ ዝቕጽል ስጉምቲ።", // nieuw, nalezen
+    'c.newcolleague.s': { m: "ንሓድሽ መሳርሕቲ ሓደ ዕማም ትገልጸሉ ኣለኻ። ንሱ «Ja, ja, ik snap het.» ይብል። እንታይ ትገብር?", f: "ንሓድሽ መሳርሕቲ ሓደ ዕማም ትገልጽሉ ኣለኺ። ንሱ «Ja, ja, ik snap het.» ይብል። እንታይ ትገብሪ?", x: "ንሓድሽ መሳርሕቲ ሓደ ዕማም ትገልጽሉ ኣለኹም። ንሱ «Ja, ja, ik snap het.» ይብል። እንታይ ትገብሩ?" }, // nieuw, nalezen
+    'c.newcolleague.o1': { m: "«Laat eens zien» በል፡ ክገብሮ ድማ ተዓዘቦ።", f: "«Laat eens zien» በሊ፡ ክገብሮ ድማ ተዓዘብዮ።", x: "«Laat eens zien» በሉ፡ ክገብሮ ድማ ተዓዘብዎ።" }, // nieuw, nalezen
+    'c.newcolleague.o2': { m: "«Goed zo» በል፡ ናብ ስራሕካ ተመለስ።", f: "«Goed zo» በሊ፡ ናብ ስራሕኪ ተመለሲ።", x: "«Goed zo» በሉ፡ ናብ ስራሕኩም ተመለሱ።" }, // nieuw, nalezen
+    'c.newcolleague.o3': { m: "ኩሉ ደጊምካ ግለጽ፡ ብቕልጡፍን ብዓውን።", f: "ኩሉ ደጊምኪ ግለጺ፡ ብቕልጡፍን ብዓውን።", x: "ኩሉ ደጊምኩም ግለጹ፡ ብቕልጡፍን ብዓውን።" }, // nieuw, nalezen
+    'c.newcolleague.w': "ብዙሓት ሰባት ዋላ እንተ ዘይተረድኦም «ja» ይብሉ። ንሱ ምስ ዘርኢ፡ ክልቴኹም ይሰርሕ እንተ ኾይኑ ትርእዩ። እዚ ደሓር ጌጋ ካብ ምእራም ይቀልጥፍ።", // nieuw, nalezen
   },
 };
 
