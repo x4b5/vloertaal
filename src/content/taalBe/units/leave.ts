@@ -2,18 +2,15 @@ import { beTip } from '../helpers';
 import type { BeTaal } from '../types';
 
 /**
- * The Belgian version of "Verlof en ziekte" (u.leave), a B unit (docs/taal-belgie.md). Only what
- * differs in Flanders:
+ * The Belgian version of "Verlof" (u.leave), a B unit (docs/taal-belgie.md). Only what differs
+ * in Flanders:
  *  - l.leave: het calamiteitenverlof → het verlof om dwingende redenen (often unpaid), and the tip
  *    (20 days off after a full year, klein verlet);
- *  - l.illness: de bedrijfsarts → de arbeidsarts (the same drawing), de wachtdag → het gewaarborgd
- *    loon (there is no waiting day), doorbetalen → het ziektebriefje, betermelden → terugkomen
- *    ("betermelden" is Dutch usage: in Flanders you say that you can work again, that you come
- *    back; the same drawing; "Wat kun je nu?" says it too, `kun` below), a sentence and the chat with
- *    the arbeidsarts and the ziektebriefje, and the tip (the note within 2 working days, the
- *    gewaarborgd loon, then the ziekenfonds);
  *  - l.kids: the sentence with het calamiteitenverlof, het zorgverlof → het geboorteverlof, and
  *    the tip (verlof om dwingende redenen, ouderschapsverlof with the RVA, geboorteverlof).
+ * Until 5 November 2026 this unit was "Verlof en ziekte"; the lines and the tip of "Sick at home"
+ * (l.illness) are now in ./sick.ts, with the unit "Ziekte" (u.sick). Their ids did not change, so
+ * their translations stay in src/i18n/be/units/leave.ts.
  * The other words, sentences and chats are the same in both countries and keep their ids.
  * Translations: src/i18n/be/units/leave.ts.
  *
@@ -25,25 +22,10 @@ import type { BeTaal } from '../types';
 // ⚖️ check: Verlof om dwingende redenen: for an urgent event, like an accident or the illness of
 // your child; at most 10 days a year, in principle unpaid ⚖️ (cao nr. 45; KB 1993; aclvb.be
 // "verlof om dwingende redenen"; regels/be/units/tijd.ts).
-// ⚖️ check: There is no waiting day (carensdag) in Belgium since 1 January 2014; the first 30
-// days you get the gewaarborgd loon from your employer ⚖️ (Wet eenheidsstatuut 26 december 2013;
-// Arbeidsovereenkomstenwet art. 52 and 70; regels/be/units/ziek.ts).
-// ⚖️ check: The occupational doctor of your work is the arbeidsarts (preventieadviseur-arbeidsarts)
-// ⚖️ (Welzijnswet 4 augustus 1996; codex boek I titel 4; werk.belgie.be; ziek.ts).
-// ⚖️ check: The doctor's note (ziektebriefje, medisch getuigschrift) for your employer says no
-// illness ⚖️ (Arbeidsovereenkomstenwet art. 31; beroepsgeheim art. 458 Strafwetboek; ziek.ts).
 // ⚖️ check: Geboorteverlof: leave for the other parent after a birth ⚖️ (Arbeidsovereenkomstenwet
 // art. 30 §2; riziv.fgov.be "geboorteverlof voor werknemers"; tijd.ts).
 const lines: BeTaal['lines'] = {
   'w.calamiteitenverlof': { nl: 'het verlof om dwingende redenen', en: 'the leave for urgent reasons (often unpaid)' },
-  'w.bedrijfsarts': { nl: 'de arbeidsarts', en: 'the occupational doctor (the doctor of your work)', picture: 'same' },
-  // No picture: the Dutch "wachtdag" has a memory picture (a struck-out coin, no pay), which would
-  // say the opposite of the guaranteed wage.
-  'w.wachtdag': { nl: 'het gewaarborgd loon', en: 'the guaranteed wage (your employer pays the first days you are sick)', emoji: '💶', picture: false },
-  'w.doorbetalen': { nl: 'het ziektebriefje', en: 'the sick note (from your doctor)', emoji: '📝' },
-  'w.betermelden': { nl: 'terugkomen', en: 'to come back (to work, after an illness)', picture: 'same' },
-  's.illness.2': { nl: 'Ik heb een afspraak met de arbeidsarts.', en: 'I have an appointment with the occupational doctor.' },
-  'c.illness.a': { nl: 'Dat zeg ik liever niet. Ik heb een ziektebriefje.', en: 'I would rather not say. I have a sick note.' },
   's.kids.2': { nl: 'Mag ik verlof om dwingende redenen opnemen?', en: 'May I take leave for urgent reasons?' },
   'w.zorgverlof': { nl: 'het geboorteverlof', en: 'the birth leave (for the other parent, when a baby is born)', emoji: '👶' },
 };
@@ -85,47 +67,6 @@ const tips = [
     ],
     why: 'You agree on the dates of your days off with your employer. Asking early gives the best chance of a yes. Going without a yes can cause big trouble at work.',
   }),
-  // ⚖️ check: Tell your employer right away that you are sick; how, is in the work rules
-  // (arbeidsreglement) ⚖️ (Arbeidsovereenkomstenwet 3 juli 1978, art. 31 §2; Wet 8 april 1965 op
-  // de arbeidsreglementen; regels/be/units/ziek.ts).
-  // ⚖️ check: A doctor's note is needed when the employer asks for it or the work rules say so;
-  // it must reach the employer within 2 working days, unless the work rules or a sector agreement
-  // say another term ⚖️ (Arbeidsovereenkomstenwet art. 31 §2; ziek.ts). The days without a note
-  // (sinds 1 januari 2026: 2 keer per jaar 1 dag, not in small companies) changed recently: the
-  // tip gives no number (securex.be; vrt.be 29 december 2025; ziek.ts, bijgewerkt oktober 2026).
-  // ⚖️ check: The note says no illness; the worker does not have to give the diagnosis ⚖️ (art. 31;
-  // beroepsgeheim art. 458 Strafwetboek; ziek.ts).
-  // ⚖️ check: At least 1 month in service: the first 30 days the employer pays the gewaarborgd
-  // loon (bediende: 100%; arbeider: the first week 100%, then partly, with a supplement of the
-  // ziekenfonds) ⚖️ (Arbeidsovereenkomstenwet art. 52 and 70; cao nr. 12bis; abvvmetaal.be;
-  // securex.be; bijgewerkt oktober 2026; ziek.ts). So the tip says "your wage, or most of it".
-  // ⚖️ check: No waiting day (carensdag) since 1 January 2014 ⚖️ (Wet eenheidsstatuut; ziek.ts).
-  // ⚖️ check: After the gewaarborgd loon the ziekenfonds pays a benefit; the form (getuigschrift)
-  // goes to the adviserend arts of the ziekenfonds in time ⚖️ (inami.fgov.be "aangifte en
-  // erkenning", werknemers; cm.be; the terms differ for arbeider and bediende: no number; ziek.ts).
-  // ⚖️ check: The employer may send a controlearts; that doctor tells the employer no diagnosis ⚖️
-  // (art. 31 §3; Wet 13 juni 1999 betreffende de controlegeneeskunde; ziek.ts).
-  // ⚖️ check: The arbeidsarts has professional secrecy and only tells the employer what work you
-  // can do; they help with coming back to work (re-integratie) ⚖️ (codex boek I titel 4; ziek.ts).
-  beTip({
-    slug: 'illness',
-    lessonId: 'l.illness',
-    emoji: '👩‍⚕️',
-    title: 'Your rights when you are sick',
-    body:
-      'Sick? Tell your employer right away, as your work rules (arbeidsreglement) say. Often you need a sick note (ziektebriefje) from your doctor. It must reach your employer within 2 working days, unless your work rules say otherwise. The note does not say what illness you have, and your boss may not ask. ' +
-      'Have you worked there at least 1 month? Then the first 30 days you get your wage, or most of it (gewaarborgd loon). There are no waiting days without pay. After that, your ziekenfonds pays you a benefit: send its form to the ziekenfonds doctor in time. ' +
-      'Your employer may send a control doctor (controlearts) to check that you are sick. The occupational doctor (arbeidsarts) helps you come back to work, and only tells your boss what work you can do. ' +
-      ADVICE,
-    phrase: ['Ik ben ziek. Mijn ziektebriefje stuur ik vandaag.', 'I am sick. I am sending my sick note today.'],
-    situation: 'You are sick at home. Your boss calls and asks: "What illness do you have?" What do you do?',
-    options: [
-      'Say that you are sick, and send your sick note in time.',
-      'Tell everything, because your boss must know it.',
-      'Hang up, and send nothing until you are better.',
-    ],
-    why: 'You do not have to say what illness you have. Your sick note only says how long you are sick. It must reach your employer within 2 working days, unless your work rules say otherwise.',
-  }),
   // ⚖️ check: Child suddenly sick: verlof om dwingende redenen, at most 10 days a year, in principle
   // unpaid; sectors can give more ⚖️ (cao nr. 45; aclvb.be; gezinsbond.be; regels/be/units/tijd.ts).
   // ⚖️ check: Caring for longer: ouderschapsverlof (or another thematisch verlof), working less or
@@ -159,12 +100,4 @@ const tips = [
   }),
 ];
 
-/**
- * "Wat kun je nu?" in Belgium: "beter melden" is Dutch usage; in Flanders you say that you can work
- * again (same id, same translation: "report back when I am better").
- */
-const kun: BeTaal['kun'] = {
-  'kjn.u.leave.2': 'Ik kan me ziek melden en zeggen dat ik weer kan werken.',
-};
-
-export const be: BeTaal = { nl: 'u.leave', lines, tips, kun };
+export const be: BeTaal = { nl: 'u.leave', lines, tips };

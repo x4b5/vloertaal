@@ -68,7 +68,11 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     expect(abstract).toContain('w.ontruimen');
     // 191 (4 November 2026): the six words of "Kort en duidelijk" (l.clear) are abstract.
     for (const id of ['w.kort', 'w.duidelijk', 'w.belangrijkste', 'w.rustig', 'w.teveel', 'w.vraag']) expect(abstract).toContain(id);
-    expect(abstract.length).toBe(191);
+    // 194 (5 November 2026): "herstellen" (l.backtowork) is abstract, and "opbouwen" and "halve
+    // dagen" have a memory picture only (they count here, as w.verlof does); "licht werk", "zwaar
+    // werk" and "welkom terug" have a drawing (group38).
+    for (const id of ['w.herstellen', 'w.opbouwen', 'w.halvedagen']) expect(abstract).toContain(id);
+    expect(abstract.length).toBe(194);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

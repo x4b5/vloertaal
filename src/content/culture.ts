@@ -487,6 +487,7 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.police': [0, 2, 3, 4], // a decision you do not agree with: object in writing, before the date
   'c.phish': [0, 5, 6, 7], // clicked anyway: change your password and call the IT department
   'c.clear': [0, 1, 2], // the story first is polite elsewhere; here the point first, then the reason; stop after a few sentences
+  'c.backtowork': [0, 1, 2, 3, 7], // betermelden; step by step, fewer hours or lighter work; the company doctor; say what you can and cannot do yet
 };
 
 /** All tips in course order: the ones above (with the Smart tools tips after "Asking for help" and the Numbers and details tips before "Time and schedule"), then those of the work-and-rights units (src/content/work.ts). */

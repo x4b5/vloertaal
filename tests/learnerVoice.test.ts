@@ -67,6 +67,8 @@ const PENDING_RECORDING = new Set<string>([
   'Zeventig. Zeven, nul.',
   // New lesson "Kort en duidelijk" (l.clear), 4 November 2026:
   'Ja. Ik heb nog één vraag.',
+  // New lesson "Weer aan het werk na ziekte" (l.backtowork), 5 November 2026:
+  'Ja, het gaat beter. Ik doe het rustig aan.',
 ]);
 
 

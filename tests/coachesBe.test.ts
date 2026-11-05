@@ -58,7 +58,8 @@ describe('the coaches’ page follows the learner’s country', () => {
     expect(taal.find((o) => o.unit === 'be.u.society')?.titel).toBe('Meedoen in België');
     expect(taal.some((o) => o.unit === 'u.society')).toBe(false);
     // A B unit keeps its id and title, with its Flemish line.
-    expect(taal.find((o) => o.unit === 'u.leave')?.zinnen[1].nl).toBe('Ik kan me ziek melden en zeggen dat ik weer kan werken.');
+    // ("Ziekte", u.sick: until 5 November 2026 part of "Verlof en ziekte", u.leave.)
+    expect(taal.find((o) => o.unit === 'u.sick')?.zinnen[0].nl).toBe('Ik kan me ziek melden en zeggen dat ik weer kan werken.');
     expect(text).toContain('Ik kan zeggen dat mijn loonbrief niet klopt.');
     expect(text).not.toContain('Ik kan zeggen dat mijn loonstrook niet klopt.');
     // Werkregels: the Belgian units, with their own titles.

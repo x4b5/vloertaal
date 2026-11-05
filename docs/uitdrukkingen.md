@@ -59,8 +59,8 @@ Zinnen: "Trek aan de bel als het niet veilig is." · "Ik loop echt op mijn tandv
 | Les (onderwerp) | Zo zegt een collega het | Letterlijk | Betekenis |
 |---|---|---|---|
 | Safe and healthy work (Regels en rechten) | Hou je een oogje in het zeil? | Will you keep a little eye on the sail? | Will you watch that everything goes well and safely? |
-| Sick at home (Verlof en ziekte) | Ik voel me niet lekker. | I do not feel tasty. | I feel a bit ill. |
-| Days off (Verlof en ziekte) | Ik ga even mijn batterij opladen. | I am going to charge my battery. | I am going to rest, so I have energy again. |
+| Sick at home (Ziekte) | Ik voel me niet lekker. | I do not feel tasty. | I feel a bit ill. |
+| Days off (Verlof) | Ik ga even mijn batterij opladen. | I am going to charge my battery. | I am going to rest, so I have energy again. |
 | Warning signs (Uitbuiting herkennen) | Er is iets niet pluis. | Something is not fluffy. | Something is wrong, or not to be trusted. |
 | Your diploma and training (Diploma’s en verder komen) | Oefening baart kunst. | Practice gives birth to art. | If you practise a lot, you get good at it. |
 | Official letters (Geld en post) | Zorg dat je het zwart op wit hebt. | Ask for it black on white. | Ask for it on paper, in writing. |

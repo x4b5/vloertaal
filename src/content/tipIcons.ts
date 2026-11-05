@@ -32,6 +32,8 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '📜': 'w.diploma',
   '🌟': 'w.compliment',
   '🦹': 'w.oplichter',
+  // "Coming back step by step" (c.backtowork, 5 November 2026): the supervisor's welcome back.
+  '🤗': 'w.welkomterug',
 };
 
 const bare = (emoji: string): string => emoji.replace(/️/g, '');

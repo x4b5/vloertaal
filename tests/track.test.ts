@@ -25,9 +25,10 @@ const doneUnits = (...unitIds: string[]) =>
 /**
  * The basis course order, as before the tracks: the sector's unit takes the warehouse's slot.
  * "Getallen en gegevens" (u.data, 30 October 2026) is put in right before "Tijd en rooster", which
- * needs its numbers and dates (as "Klanken" was put in after it).
+ * needs its numbers and dates (as "Klanken" was put in after it). "Ziekte" (u.sick, 5 November
+ * 2026) right after "Verlof" (u.leave): until then they were one topic, "Verlof en ziekte".
  */
-const BASIS = ['u.firstday', 'u.help', 'u.tools', 'u.safety', '<own>', 'u.data', 'u.time', 'u.sounds', 'u.teamwork', 'u.apply', 'u.contract', 'u.papers', 'u.pay', 'u.house', 'u.social', 'u.sayings', 'u.rights', 'u.leave', 'u.exploit', 'u.contact', 'u.grow', 'u.health', 'u.money', 'u.travel', 'u.lost'];
+const BASIS = ['u.firstday', 'u.help', 'u.tools', 'u.safety', '<own>', 'u.data', 'u.time', 'u.sounds', 'u.teamwork', 'u.apply', 'u.contract', 'u.papers', 'u.pay', 'u.house', 'u.social', 'u.sayings', 'u.rights', 'u.leave', 'u.sick', 'u.exploit', 'u.contact', 'u.grow', 'u.health', 'u.money', 'u.travel', 'u.lost'];
 const SECTOR_UNITS = ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean'];
 /**
  * Basis units added after the sector units ("In de winkel", "Rekenen"): appended, so every unit

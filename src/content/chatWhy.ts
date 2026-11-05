@@ -92,6 +92,7 @@ const reasons: Record<string, string> = {
   'c.permit.a': 'A no is fine with a reason. Offering another day helps.',
   'c.body.a': 'Asked where it hurts: this reply names the place and the cause.',
   'c.kids.a': 'Asked why: this reply gives the reason, the daycare called.',
+  'c.backtowork.a': 'Asked how you are: a short yes, and that you take it slowly.',
   'c.jobends.a': 'The house goes with the job: this reply asks about the notice period.',
   // Entree in the Taal track (30 October 2026).
   'c.workorder.a': 'Not sure about a word: asking before you start is the right reply.',
