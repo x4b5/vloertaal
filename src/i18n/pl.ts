@@ -230,7 +230,7 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Posłuchaj, potem powiedz',
     tapToSpeak: 'Dotknij i mów',
     stopRecording: 'Stop',
-    micPrivacy: 'Słyszysz to tylko ty. Nic nie jest wysyłane.',
+    micPrivacy: "Nikt inny cię nie słyszy. Nic nie jest wysyłane.", // nieuw, nalezen
     micUnavailable: 'Mikrofon wyłączony. Powiedz to teraz na głos, potem idź dalej.',
     cantSpeak: 'Nie mogę teraz mówić',
     soundsSame: 'Brzmi tak samo',
@@ -238,9 +238,13 @@ const lang: HelpLanguageSource = {
     hearMine: 'Posłuchaj siebie', // nieuw, nalezen
     thenNow: 'Wtedy i teraz', // nieuw, nalezen
     thenNowFirst: 'Pierwsza próba: {date}', // nieuw, nalezen
+    sayTogether: "Powiedz to razem", // nieuw, nalezen
+    chorusHint: "Mów w tym samym czasie co głos. Nic nie jest nagrywane.", // nieuw, nalezen
+    chorusAlone: "Teraz tylko ty", // nieuw, nalezen
+    speakBrave: "Błędy są w porządku. Holendrzy rozumieją cię także z błędami.", // nieuw, nalezen
     speakMe: 'Ja',
     speakingPractice: 'Ćwiczenie mówienia',
-    speakingHint: 'Mów słowa na głos i porównuj. Twoje pierwsze nagranie zdania zostaje w telefonie, żeby porównać później. Nigdy nie jest wysyłane.', // nieuw, nalezen
+    speakingHint: "Mów słowa na głos i porównuj. Nikt inny cię nie słyszy: nic nie jest wysyłane. Twoje pierwsze nagranie zdania zostaje w telefonie, żeby porównać później.", // nieuw, nalezen
     savingOffline: 'Zapisywanie…',
     savedOffline: 'Zapisano offline',
     offlineNoSpace: 'Za mało miejsca w telefonie. Usuń zapisany temat lub zwolnij miejsce.',

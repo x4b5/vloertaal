@@ -10,6 +10,7 @@ import {
 } from '../lib/speaking';
 import { MIC_STEPS, micPlatform, micRefusedError, micSteps, watchMicPermission } from '../lib/micHelp';
 import { firstDayText, keepFirstVoice, markThenPlayed, thenVoice } from '../lib/firstVoice';
+import type { SpeakEvent } from '../lib/chorus';
 import { judge, localStatus, startListening, verdictOf, type Heard, type Listening, type Verdict } from '../lib/listen';
 import { learnerCharacter, voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
@@ -53,6 +54,20 @@ const SameIcon = ({ size }: { size?: number }) => (
     <path d="M7.6 12.4l3 3 5.8-6.4" {...stroke} />
   </Svg>
 );
+/** "Zeg het samen": two people, side by side. */
+const TogetherIcon = ({ size }: { size?: number }) => (
+  <Svg size={size}>
+    <circle cx="8" cy="8" r="3.2" {...stroke} />
+    <circle cx="16.5" cy="8" r="3.2" {...stroke} />
+    <path d="M2.8 20c.6-3.6 2.6-5.6 5.2-5.6s4.6 2 5.2 5.6M12.4 15c1-.4 2.2-.6 4.1-.6 2.6 0 4.6 2 5.2 5.6" {...stroke} />
+  </Svg>
+);
+/** "Zeg het samen" while the voice speaks: bars that move (still with reduced motion). */
+const Wave = () => (
+  <span className="say-wave" aria-hidden>
+    {[0, 1, 2, 3, 4].map((i) => <span key={i} className="say-wave-bar" />)}
+  </span>
+);
 const AgainIcon = ({ size }: { size?: number }) => (
   <Svg size={size}>
     <path d="M4.6 12a7.4 7.4 0 1 0 2.2-5.3" {...stroke} />
@@ -84,6 +99,22 @@ export function setSpeakShotThen(at: number | undefined): void {
   shotThen = at;
 }
 
+/** "Zeg het samen" (src/lib/chorus.ts): its button ('due'), the 3-2-1 ('count'), the voice saying
+ *  it while the learner says it along ('on'), then the microphone with "Nu alleen" ('done'). */
+export type ChorusState = 'due' | 'count' | 'on' | 'done';
+/** Screenshot harness only: "Zeg het samen" in this state ('count' shows the 2 of 3-2-1). */
+let shotChorus: ChorusState | undefined;
+export function setSpeakShotChorus(state: ChorusState | undefined): void {
+  shotChorus = state;
+}
+/** Screenshot harness only: Bram's one-time "Fouten mogen" line. */
+let shotBrave = false;
+export function setSpeakShotBrave(on: boolean): void {
+  shotBrave = on;
+}
+/** Each number of the 3-2-1 before "Zeg het samen" this long (ms). */
+const COUNT_MS = 750;
+
 const RING_R = 52;
 const RING_C = 2 * Math.PI * RING_R;
 
@@ -100,7 +131,7 @@ const RING_C = 2 * Math.PI * RING_R;
  *
  * `phaseForShot` fixes the phase for the screenshot harness (no microphone used).
  */
-export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepNote, phaseForShot = shotPhase, listen = false, heardForShot = shotHeard, thenNow = false, thenForShot = shotThen }: {
+export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepNote, phaseForShot = shotPhase, listen = false, heardForShot = shotHeard, thenNow = false, thenForShot = shotThen, together = false, chorusForShot = shotChorus, brave = shotBrave, onSpeak }: {
   ex: Extract<Exercise, { kind: 'speak' }>;
   lang?: HelpLanguage;
   onAnswer: (a: { correct: boolean } | null) => void;
@@ -124,6 +155,17 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   thenNow?: boolean;
   /** Screenshot harness only: the time of a first recording to show "Toen en nu" with (no sound). */
   thenForShot?: number;
+  /** "Zeg het samen" first (the lessons; src/lib/chorus.ts chorusDue): the voice says it slowly and
+   *  the learner says it along, nothing recorded; then the microphone, "Nu alleen". Never in
+   *  "Wat zeg je?" (the reply is said from memory there). */
+  together?: boolean;
+  /** Screenshot harness only: "Zeg het samen" in this state. */
+  chorusForShot?: ChorusState;
+  /** Bram's "Fouten mogen" line, once (src/lib/chorus.ts braveDue). Not in "Wat zeg je?". */
+  brave?: boolean;
+  /** The lessons: this "Zeg het" opened ('met', not "Wat zeg je?"), the learner chose "Zeg het
+   *  liever hardop" while the microphone could record ('skipped'), or recorded ('recorded'). */
+  onSpeak?: (what: SpeakEvent) => void;
 }) {
   const { item, turn, work } = ex;
   /** "Wat zeg je?" (after a chat, or on the sentence of "Probeer het vandaag"): say it first, then see and hear it. */
@@ -141,6 +183,13 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   const themVoice = them ? voiceFor(them) : undefined;
   /** "Wat zeg je?" without recording ("say it out loud"): the reply shows after "Hear the answer". */
   const [shown, setShown] = useState(false);
+  /** "Zeg het samen" (null: not offered here). Latched at the start: the lesson may stop offering
+   *  it for the next exercise while this one is open. */
+  const [chorus, setChorus] = useState<ChorusState | null>(() => (asks ? null : chorusForShot ?? (together ? 'due' : null)));
+  /** The number of the 3-2-1 on its button. */
+  const [counting, setCounting] = useState(chorusForShot === 'count' ? 2 : 3);
+  /** Bram's "Fouten mogen", latched for this exercise (it is shown once, then never again). */
+  const [braveHere] = useState(() => brave && !asks);
   // No usable microphone (none, or it failed earlier in this lesson): "say it out loud" at once.
   /** "Zeg het nog eens": the second try and after are said from memory (the Dutch hidden until the
    *  try is done; the model stays one tap away). Saying the same turn again, with less support,
@@ -258,6 +307,52 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
     themTimer.current = window.setTimeout(() => { if (alive.current) setPlaying((p) => (p === 'them' ? null : p)); }, 1600);
   }, [item.nl, voice, stopThen]);
 
+  // "Zeg het samen" (src/lib/chorus.ts): a short 3-2-1 on its button, then the voice says it slowly
+  // (the pace of the turtle) and the learner says it at the same time; the wave moves meanwhile.
+  // Nothing is recorded and no microphone is asked for. When the voice is done (or a fallback
+  // timer, for a voice that never reports its end) the microphone comes: "Nu alleen".
+  const chorusTimer = useRef(0);
+  const chorusOff = useRef<(() => void) | null>(null);
+  const endChorus = useCallback(() => {
+    window.clearTimeout(chorusTimer.current);
+    chorusOff.current?.();
+    chorusOff.current = null;
+  }, []);
+  useEffect(() => { return endChorus; }, [endChorus]);
+  const sayTogether = () => {
+    if (chorus !== 'due') return;
+    stopSpeech();
+    setChorus('count');
+    setCounting(3);
+    setStatus('3');
+    const step = (n: number) => {
+      chorusTimer.current = window.setTimeout(() => {
+        if (!alive.current) return;
+        if (n > 1) { setCounting(n - 1); setStatus(String(n - 1)); step(n - 1); return; }
+        setChorus('on');
+        setStatus(said(ui('sayTogether', lang)));
+        let done = false;
+        const finish = () => {
+          if (done) return;
+          done = true;
+          endChorus();
+          if (alive.current) { setChorus('done'); setStatus(said(ui('chorusAlone', lang))); }
+        };
+        stopSpeech();
+        chorusOff.current = onSpeech((text, on) => {
+          if (on || text !== item.nl) return;
+          window.clearTimeout(chorusTimer.current);
+          chorusTimer.current = window.setTimeout(finish, 400);
+        });
+        speak(item.nl, true, 'nl', voice);
+        chorusTimer.current = window.setTimeout(finish, Math.min(14000, 2500 + item.nl.length * 160));
+      }, COUNT_MS);
+    };
+    step(3);
+  };
+  /** "Zeg het samen" is offered or running (its button is where the microphone goes). */
+  const chorusOn = chorus === 'due' || chorus === 'count' || chorus === 'on';
+
   // "Toen en nu": the first recording of this sentence, then this try, one after the other (the
   // owner's request, 5 November 2026). Played once, it may make room when the shelf is full.
   const playThenNow = useCallback(() => {
@@ -329,6 +424,14 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   }, [thenNow, phaseForShot, item.id, stopThen]);
   /** The first recording of this exercise was offered to the shelf (kept only when it is the sentence's first). */
   const offered = useRef(false);
+  // The lessons: this "Zeg het" opened (src/lib/chorus.ts: the first one ever has Bram's line and
+  // "Zeg het samen"). Once per exercise; not "Wat zeg je?", not in a screenshot.
+  const met = useRef(false);
+  useEffect(() => {
+    if (met.current || asks || phaseForShot) return;
+    met.current = true;
+    onSpeak?.('met');
+  }, [asks, phaseForShot, onSpeak]);
 
   // Say it once when the exercise opens (not in "Without sound"); let go of everything on leave.
   // "Wat zeg je?": the colleague's line, never the reply (the learner says that first); on the
@@ -372,11 +475,11 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   useEffect(() => {
     const t = window.setTimeout(() => {
       if (!focusIsLost()) return;
-      const to = box.current?.querySelector<HTMLButtonElement>('.say-compare button, button.say-mic:not([disabled]), .say-retry') ?? document.querySelector<HTMLButtonElement>('.player-foot .btn-go:not([disabled])');
+      const to = box.current?.querySelector<HTMLButtonElement>('.say-compare button, button.say-chorus, button.say-mic:not([disabled]), .say-retry') ?? document.querySelector<HTMLButtonElement>('.player-foot .btn-go:not([disabled])');
       to?.focus({ preventScroll: true });
     }, 30);
     return () => window.clearTimeout(t);
-  }, [phase]);
+  }, [phase, chorus]);
 
   // The app goes to the background mid-recording: stop, so the microphone is not left on.
   useEffect(() => {
@@ -443,6 +546,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
       }
       urlRef.current = URL.createObjectURL(blob);
       onRecording?.(blob);
+      onSpeak?.('recorded');
       // "Toen en nu": the first time this sentence is recorded, that recording stays on the phone
       // (keepFirstVoice keeps nothing when the sentence has one already).
       if (thenNow && !offered.current) {
@@ -625,12 +729,29 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
         </div>
         {/* The model is one tap away, also after recording. Hidden while recording (its sound
             would be recorded too), its place kept. */}
-        <SpeakButton text={item.nl} voice={voice} help={lang} className={recording ? 'say-model-off' : undefined} />
+        <SpeakButton text={item.nl} voice={voice} help={lang} className={recording || chorus === 'count' || chorus === 'on' ? 'say-model-off' : undefined} />
       </div>
       )}
 
-      {listenFirst && (
+      {/* Bram, once (src/lib/chorus.ts braveDue): a line, no button. */}
+      {braveHere && tries === 0 && (listenFirst || phase === 'off') && (
+        <div className="say-brave">
+          <span className="say-brave-face" aria-hidden><Character who="bram" mood="pleased" crop="head" size={56} /></span>
+          <p className="say-brave-line"><Bi text={ui('speakBrave', lang)} /></p>
+        </div>
+      )}
+
+      {/* "Zeg het samen" in the place of the microphone (no microphone needed), until it is done. */}
+      {listenFirst && phase === 'idle' && chorusOn ? (
         <div className="say-mic-area">
+          <ChorusButton chorus={chorus} counting={counting} lang={lang} onSay={sayTogether} />
+          <button type="button" className="say-aloud-instead" onClick={() => { onSpeak?.('skipped'); endChorus(); stopSpeech(); setChorus('due'); setPhase('off'); }}>
+            <Bi text={ui('sayAloudInstead', lang)} />
+          </button>
+        </div>
+      ) : listenFirst && (
+        <div className="say-mic-area">
+          {chorus === 'done' && tries === 0 && phase === 'idle' && <p className="say-alone"><Bi text={ui('chorusAlone', lang)} /></p>}
           <button
             type="button"
             className={`say-mic ${recording ? 'is-rec' : ''}`}
@@ -662,7 +783,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
           {/* A way on without the microphone (shy, noisy floor, no permission wanted): the
               same self-paced "say it out loud" step as without a microphone. */}
           {phase === 'idle' && (
-            <button type="button" className="say-aloud-instead" onClick={() => { stopSpeech(); setPhase('off'); }}>
+            <button type="button" className="say-aloud-instead" onClick={() => { onSpeak?.('skipped'); stopSpeech(); setPhase('off'); }}>
               <Bi text={ui('sayAloudInstead', lang)} />
             </button>
           )}
@@ -703,6 +824,14 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
 
       {/* No usable microphone: still say it, out loud, at your own pace (nothing is recorded or
           graded); Continue goes on. After a failure here, one retry of the microphone. */}
+      {/* No microphone (none, refused, or "Zeg het liever hardop"): "Zeg het samen" works without one.
+          Not while this phone's steps to allow the microphone are open (the learner chose to turn
+          it on; the retry records at once, and the long steps need the room). */}
+      {phase === 'off' && chorusOn && !steps && (
+        <div className="say-mic-area say-chorus-off">
+          <ChorusButton chorus={chorus} counting={counting} lang={lang} onSay={sayTogether} />
+        </div>
+      )}
       {phase === 'off' && (
         <div className="say-off say-aloud">
           <MicOffIcon size={32} />
@@ -748,6 +877,25 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
       )}
       <div className="sr-only" role="status" lang={saidLang(ui('speakMe', lang))}>{status}</div>
     </div>
+  );
+}
+
+/**
+ * "Zeg het samen": one big button, then on it the 3-2-1 and the wave while the voice says it (it
+ * cannot be tapped meanwhile), with one line under it: say it at the same time, nothing recorded.
+ */
+function ChorusButton({ chorus, counting, lang, onSay }: { chorus: ChorusState | null; counting: number; lang?: HelpLanguage; onSay: () => void }) {
+  const busy = chorus === 'count' || chorus === 'on';
+  return (
+    <>
+      <button type="button" className={`btn btn-primary say-chorus ${busy ? `is-${chorus}` : ''}`} onClick={onSay} aria-disabled={busy || undefined}>
+        <span className="say-chorus-mark" aria-hidden>
+          {chorus === 'count' ? <span className="say-chorus-count">{counting}</span> : chorus === 'on' ? <Wave /> : <TogetherIcon size={30} />}
+        </span>
+        <Bi text={ui('sayTogether', lang)} />
+      </button>
+      <p className="say-privacy say-chorus-hint"><Bi text={ui('chorusHint', lang)} /></p>
+    </>
   );
 }
 

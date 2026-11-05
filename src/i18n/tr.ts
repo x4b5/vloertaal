@@ -230,7 +230,7 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Dinle, sonra söyle',
     tapToSpeak: 'Dokun ve konuş',
     stopRecording: 'Dur',
-    micPrivacy: 'Sadece sen duyarsın. Hiçbir şey gönderilmez.',
+    micPrivacy: "Seni başka kimse duymaz. Hiçbir şey gönderilmez.", // nieuw, nalezen
     micUnavailable: 'Mikrofon kapalı. Şimdi sesli söyle, sonra devam et.',
     cantSpeak: 'Şu an konuşamıyorum',
     soundsSame: 'Aynı gibi',
@@ -238,9 +238,13 @@ const lang: HelpLanguageSource = {
     hearMine: 'Kendini dinle', // nieuw, nalezen
     thenNow: 'O zaman ve şimdi', // nieuw, nalezen
     thenNowFirst: 'İlk denemen: {date}', // nieuw, nalezen
+    sayTogether: "Birlikte söyle", // nieuw, nalezen
+    chorusHint: "Sesle aynı anda söyle. Hiçbir şey kaydedilmez.", // nieuw, nalezen
+    chorusAlone: "Şimdi sadece sen", // nieuw, nalezen
+    speakBrave: "Hata yapmak sorun değil. Hollandalılar seni hatalarınla da anlar.", // nieuw, nalezen
     speakMe: 'Ben',
     speakingPractice: 'Konuşma alıştırması',
-    speakingHint: 'Kelimeleri sesli söyle ve karşılaştır. Bir cümleyi ilk söylediğin kayıt telefonunda kalır, sonra karşılaştırabilirsin. Asla gönderilmez.', // nieuw, nalezen
+    speakingHint: "Kelimeleri sesli söyle ve karşılaştır. Seni başka kimse duymaz: hiçbir şey gönderilmez. Bir cümleyi ilk söylediğin kayıt telefonunda kalır, sonra karşılaştırabilirsin.", // nieuw, nalezen
     savingOffline: 'Kaydediliyor…',
     savedOffline: 'İnternetsiz kullanıma kaydedildi',
     offlineNoSpace: 'Bu telefonda yeterli yer yok. Kayıtlı bir konuyu sil veya yer aç.',

@@ -230,7 +230,7 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'گوش کنید، بعد بگویید',
     tapToSpeak: 'بزنید و حرف بزنید',
     stopRecording: 'توقف',
-    micPrivacy: 'فقط خودتان می‌شنوید. چیزی فرستاده نمی‌شود.',
+    micPrivacy: "هیچ‌کس دیگری صدای شما را نمی‌شنود. چیزی فرستاده نمی‌شود.", // nieuw, nalezen
     micUnavailable: 'میکروفون خاموش است. حالا آن را بلند بگویید، بعد ادامه بدهید.',
     cantSpeak: 'الان نمی‌توانم حرف بزنم',
     soundsSame: 'مثل هم شنیده می‌شود',
@@ -238,9 +238,13 @@ const lang: HelpLanguageSource = {
     hearMine: 'صدای خودتان را بشنوید', // nieuw, nalezen
     thenNow: 'قبلاً و حالا', // nieuw, nalezen
     thenNowFirst: 'بار اول شما: {date}', // nieuw, nalezen
+    sayTogether: "با هم بگویید", // nieuw, nalezen
+    chorusHint: "همزمان با صدا بگویید. چیزی ضبط نمی‌شود.", // nieuw, nalezen
+    chorusAlone: "حالا فقط خودتان", // nieuw, nalezen
+    speakBrave: "اشتباه کردن اشکالی ندارد. هلندی‌ها حرف شما را با اشتباه هم می‌فهمند.", // nieuw, nalezen
     speakMe: 'من',
     speakingPractice: 'تمرین حرف زدن',
-    speakingHint: 'کلمه‌ها را بلند بگویید و مقایسه کنید. اولین ضبط شما از هر جمله روی گوشی‌تان می‌ماند تا بعداً مقایسه کنید. هیچ‌وقت فرستاده نمی‌شود.', // nieuw, nalezen
+    speakingHint: "کلمه‌ها را بلند بگویید و مقایسه کنید. هیچ‌کس دیگری صدای شما را نمی‌شنود: چیزی فرستاده نمی‌شود. اولین ضبط شما از هر جمله روی گوشی‌تان می‌ماند تا بعداً مقایسه کنید.", // nieuw, nalezen
     savingOffline: 'در حال ذخیره…',
     savedOffline: 'برای استفاده بدون اینترنت ذخیره شد',
     offlineNoSpace: 'جای کافی روی این گوشی نیست. یک موضوع ذخیره‌شده را پاک کنید یا جا باز کنید.',

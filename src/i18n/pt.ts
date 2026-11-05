@@ -230,7 +230,7 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Ouve e depois diz',
     tapToSpeak: 'Toca e fala',
     stopRecording: 'Parar',
-    micPrivacy: 'Só tu ouves. Nada é enviado.',
+    micPrivacy: "Mais ninguém te ouve. Nada é enviado.", // nieuw, nalezen
     micUnavailable: 'Microfone desligado. Diz em voz alta agora e depois continua.',
     cantSpeak: 'Agora não posso falar',
     soundsSame: 'Soa igual',
@@ -238,9 +238,13 @@ const lang: HelpLanguageSource = {
     hearMine: 'Ouve-te', // nieuw, nalezen
     thenNow: 'Antes e agora', // nieuw, nalezen
     thenNowFirst: 'A tua primeira tentativa: {date}', // nieuw, nalezen
+    sayTogether: "Diz ao mesmo tempo", // nieuw, nalezen
+    chorusHint: "Diz ao mesmo tempo que a voz. Nada é gravado.", // nieuw, nalezen
+    chorusAlone: "Agora só tu", // nieuw, nalezen
+    speakBrave: "Errar não faz mal. Os neerlandeses percebem-te mesmo com erros.", // nieuw, nalezen
     speakMe: 'Eu',
     speakingPractice: 'Prática de fala',
-    speakingHint: 'Diz as palavras em voz alta e compara. A tua primeira gravação de uma frase fica no teu telemóvel, para comparares mais tarde. Nunca é enviada.', // nieuw, nalezen
+    speakingHint: "Diz as palavras em voz alta e compara. Mais ninguém te ouve: nada é enviado. A tua primeira gravação de uma frase fica no teu telemóvel, para comparares mais tarde.", // nieuw, nalezen
     savingOffline: 'A guardar…',
     savedOffline: 'Guardado offline',
     offlineNoSpace: 'Não há espaço suficiente neste telemóvel. Remove um tema guardado ou liberta espaço.',

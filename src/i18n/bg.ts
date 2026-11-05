@@ -230,7 +230,7 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Чуй, после го кажи',
     tapToSpeak: 'Докосни и говори',
     stopRecording: 'Стоп',
-    micPrivacy: 'Само ти го чуваш. Нищо не се изпраща.',
+    micPrivacy: "Никой друг не те чува. Нищо не се изпраща.", // nieuw, nalezen
     micUnavailable: 'Микрофонът е изключен. Кажи го на глас сега, после продължи.',
     cantSpeak: 'Сега не мога да говоря',
     soundsSame: 'Звучи еднакво',
@@ -238,9 +238,13 @@ const lang: HelpLanguageSource = {
     hearMine: 'Чуй себе си', // nieuw, nalezen
     thenNow: 'Тогава и сега', // nieuw, nalezen
     thenNowFirst: 'Първият ти опит: {date}', // nieuw, nalezen
+    sayTogether: "Кажи го заедно", // nieuw, nalezen
+    chorusHint: "Казвай го едновременно с гласа. Нищо не се записва.", // nieuw, nalezen
+    chorusAlone: "Сега само ти", // nieuw, nalezen
+    speakBrave: "Грешките са наред. Нидерландците те разбират и с грешки.", // nieuw, nalezen
     speakMe: 'Аз',
     speakingPractice: 'Упражнение по говорене',
-    speakingHint: 'Казвай думите на глас и сравнявай. Първият ти запис на едно изречение остава в телефона, за да сравниш по-късно. Никога не се изпраща.', // nieuw, nalezen
+    speakingHint: "Казвай думите на глас и сравнявай. Никой друг не те чува: нищо не се изпраща. Първият ти запис на едно изречение остава в телефона, за да сравниш по-късно.", // nieuw, nalezen
     savingOffline: 'Запазване…',
     savedOffline: 'Запазено офлайн',
     offlineNoSpace: 'Няма достатъчно място на телефона. Изтрий запазена тема или освободи място.',

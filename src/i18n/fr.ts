@@ -230,7 +230,7 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Écoute, puis dis-le',
     tapToSpeak: 'Touche et parle',
     stopRecording: 'Stop',
-    micPrivacy: 'Personne d’autre ne l’entend. Rien n’est envoyé.',
+    micPrivacy: "Personne d’autre ne t’entend. Rien n’est envoyé.", // nieuw, nalezen
     micUnavailable: 'Micro coupé. Dis-le à voix haute maintenant, puis continue.',
     cantSpeak: 'Je ne peux pas parler maintenant',
     soundsSame: 'Ça sonne pareil',
@@ -238,9 +238,13 @@ const lang: HelpLanguageSource = {
     hearMine: 'Écoute-toi', // nieuw, nalezen
     thenNow: 'Avant et maintenant', // nieuw, nalezen
     thenNowFirst: 'Ton premier essai : {date}', // nieuw, nalezen
+    sayTogether: "Dis-le ensemble", // nieuw, nalezen
+    chorusHint: "Dis-le en même temps que la voix. Rien n’est enregistré.", // nieuw, nalezen
+    chorusAlone: "Maintenant, à toi", // nieuw, nalezen
+    speakBrave: "Les fautes, ce n’est pas grave. Les Néerlandais te comprennent aussi avec des fautes.", // nieuw, nalezen
     speakMe: 'Moi',
     speakingPractice: 'Pratique de l’oral',
-    speakingHint: 'Dis des mots à voix haute et compare. Ton premier enregistrement d’une phrase reste sur ton téléphone, pour comparer plus tard. Il n’est jamais envoyé.', // nieuw, nalezen
+    speakingHint: "Dis des mots à voix haute et compare. Personne d’autre ne t’entend : rien n’est envoyé. Ton premier enregistrement d’une phrase reste sur ton téléphone, pour comparer plus tard.", // nieuw, nalezen
     savingOffline: 'Enregistrement…',
     savedOffline: 'Enregistré hors ligne',
     offlineNoSpace: 'Pas assez de place sur ce téléphone. Supprime un sujet enregistré ou libère de la place.',
