@@ -12,8 +12,6 @@ const lang: HelpLanguageSource = {
     themeSand: 'Arena', // nieuw, nalezen
     themeHarbour: 'Puerto', // nieuw, nalezen
     themeWorkwear: 'Chaqueta de trabajo', // nieuw, nalezen
-    colourTitle: '¿Qué color quieres?', // nieuw, nalezen
-    colourHint: 'Puedes cambiarlo más tarde en Ajustes.', // nieuw, nalezen
     themeDark: 'Oscuro',
     voice: 'Voz en neerlandés',
     voiceAuto: 'Automática',

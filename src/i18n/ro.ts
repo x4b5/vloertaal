@@ -12,8 +12,6 @@ const lang: HelpLanguageSource = {
     themeSand: 'Nisip', // nieuw, nalezen
     themeHarbour: 'Port', // nieuw, nalezen
     themeWorkwear: 'Geacă de lucru', // nieuw, nalezen
-    colourTitle: 'Ce culoare vrei?', // nieuw, nalezen
-    colourHint: 'Poți schimba asta mai târziu în Setări.', // nieuw, nalezen
     themeDark: 'Întunecat',
     voice: 'Voce în olandeză',
     voiceAuto: 'Automat',

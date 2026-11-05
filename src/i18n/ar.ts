@@ -12,8 +12,6 @@ const lang: HelpLanguageSource = {
     themeSand: 'رمل', // nieuw, nalezen
     themeHarbour: 'ميناء', // nieuw, nalezen
     themeWorkwear: 'سترة العمل', // nieuw, nalezen
-    colourTitle: { m: 'أي لون تريد؟', f: 'أي لون تريدين؟', x: 'اللون المفضل' }, // nieuw, nalezen
-    colourHint: 'يمكنك تغيير هذا لاحقاً في الإعدادات.', // nieuw, nalezen
     themeDark: 'داكن',
     voice: 'الصوت الهولندي',
     voiceAuto: 'تلقائي',

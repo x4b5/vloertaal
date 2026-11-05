@@ -12,8 +12,6 @@ const lang: HelpLanguageSource = {
     themeSand: 'ሑጻ', // nieuw, nalezen
     themeHarbour: 'ወደብ', // nieuw, nalezen
     themeWorkwear: 'ናይ ስራሕ ጃኬት', // nieuw, nalezen
-    colourTitle: { m: 'ኣየናይ ሕብሪ ትደሊ?', f: 'ኣየናይ ሕብሪ ትደልዪ?', x: 'ኣየናይ ሕብሪ ትደልዩ?' }, // nieuw, nalezen
-    colourHint: { m: 'ደሓር ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ።', f: 'ደሓር ኣብ ምድላዋት ክትቅይርዮ ትኽእሊ ኢኺ።' }, // nieuw, nalezen
     themeDark: 'ጸልማት',
     voice: 'ድምጺ ሆላንድኛ',
     voiceAuto: 'ብባዕሉ',

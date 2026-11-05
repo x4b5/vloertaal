@@ -88,8 +88,6 @@ export const uiEn = {
   themeSand: 'Sand',
   themeHarbour: 'Harbour',
   themeWorkwear: 'Work jacket',
-  colourTitle: 'Which colour do you want?',
-  colourHint: 'You can change this later in Settings.',
   themeDark: 'Dark',
   voice: 'Dutch voice',
   voiceAuto: 'Automatic',
