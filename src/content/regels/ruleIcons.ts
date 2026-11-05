@@ -82,7 +82,7 @@ export const ruleIcons: Readonly<Record<string, string>> = {
   '🛠': 'w.gereedschap', // a toolbox with a hammer and a wrench
   '🏗': 'w.kraan', // a tower crane
   '🚜': 'w.heftruck', // the language track's forklift (🚜)
-  '🏋': 'w.tillen', // lifting something heavy above the head
+  '🏋': 'w.tillen', // lifting a box the safe way: knees bent, the box close to the body
   '📦': 'w.doos',
   '🗑': 'w.prullenbak',
   '🧊': 'w.koelcel', // the cold room (the language track's 🧊)

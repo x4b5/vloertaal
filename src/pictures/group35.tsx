@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Ground, PAL, Shade, Shine } from './kit';
+import { Arrow, Ground, Motion, Move, PAL, SKIN, Shade, Shine } from './kit';
 
 /**
  * Word pictures, group 35 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -11,8 +11,25 @@ import { Arrow, Ground, PAL, Shade, Shine } from './kit';
  *    "zevenenveertig". The six labels look the same apart from the digits, so a picture choice
  *    (13 or 30?) is decided by the number alone.
  *  - "Brandalarm en ontruimen" (l.alarm): the alarm bell, the escape route, the stairs, the
- *    assembly point and the fire extinguisher ("ontruimen" has no picture).
+ *    assembly point and the fire extinguisher ("ontruimen" has no still picture: since 5 November
+ *    2026 a moving one on its intro card only, `picture: 'motion'`).
  */
+
+/** A small walking person in work clothes, feet at (x, y), about 40 tall. */
+function Walker({ x, y, skin, coat, coatShade }: { x: number; y: number; skin: [string, string]; coat: string; coatShade: string }) {
+  return (
+    <g>
+      <path d={`M${x - 2} ${y - 12}L${x - 7} ${y - 1}M${x + 2} ${y - 12}L${x + 7} ${y - 1}`} stroke={PAL.navy} strokeWidth="5.4" strokeLinecap="round" />
+      <path d={`M${x - 4} ${y - 30}L${x - 9} ${y - 18}`} stroke={coatShade} strokeWidth="4.6" strokeLinecap="round" />
+      <Shade color={coatShade} opacity={1} at={[x + 8, y - 20, 4, 12]}>
+        <rect x={x - 7} y={y - 32} width="14" height="22" rx="6" fill={coat} />
+      </Shade>
+      <path d={`M${x + 4} ${y - 30}L${x + 10} ${y - 19}`} stroke={coat} strokeWidth="4.6" strokeLinecap="round" />
+      <circle cx={x} cy={y - 39} r="6.5" fill={skin[0]} />
+      <circle cx={x + 2.4} cy={y - 38} r="4" fill={skin[1]} opacity=".45" />
+    </g>
+  );
+}
 
 /** The strokes of a digit, centred on (0, 0): about 18 wide and 26 tall (as in e.cijfers). */
 const DIGIT: Readonly<Record<string, string>> = {
@@ -133,6 +150,36 @@ export default {
       <Arrow from={[96, 21]} to={[87, 30]} color={PAL.white} width={3.6} head={6} />
       <Arrow from={[24, 69]} to={[33, 60]} color={PAL.white} width={3.6} head={6} />
       <Arrow from={[96, 69]} to={[87, 60]} color={PAL.white} width={3.6} head={6} />
+    </g>
+  ),
+
+  // "ontruimen": to evacuate — two people have gone out of the building through the exit (the
+  // green sign over the door) and stand at the flag of the assembly point. A moving picture
+  // (`picture: 'motion'`, docs/tekenstijl.md "Beweging"): on the intro card they walk from the
+  // doorway to the flag. Standing still it would look like "de nooduitgang" or "de
+  // verzamelplaats" of the same lesson, so it is only on the intro card.
+  'w.ontruimen': () => (
+    <g>
+      <Ground cx={64} cy={106} rx={54} ry={3.5} />
+      {/* The building's wall, with the open exit door and the green sign over it */}
+      <Shade color={PAL.steel} opacity={0.45} at={[46, 66, 8, 44]}>
+        <rect x="8" y="24" width="36" height="82" rx="3" fill={PAL.mist} />
+      </Shade>
+      <rect x="14" y="58" width="22" height="48" rx="2" fill={PAL.slate} />
+      <path d="M36 58L46 62V103L36 106Z" fill={PAL.paperShade} />
+      <rect x="14" y="40" width="22" height="13" rx="3" fill={PAL.green} />
+      <Arrow from={[19, 46.5]} to={[31, 46.5]} color={PAL.white} width={3} head={6} />
+      {/* The flag of the assembly point */}
+      <rect x="92" y="28" width="4" height="78" rx="2" fill={PAL.steel} />
+      <path d="M96 30H110L104 38L110 46H96Z" fill={PAL.green} />
+      <path d="M96 41H108L110 46H96Z" fill={PAL.greenShade} opacity=".7" />
+      <Move kind="show">
+        <Motion x={56} y={84} dir={180} spread={24} n={2} len={8} gap={4} color={PAL.line} width={3} />
+      </Move>
+      <Move kind="from" dx={-46}>
+        <Walker x={68} y={104} skin={SKIN.amina} coat={PAL.purple} coatShade={PAL.purpleShade} />
+        <Walker x={82} y={104} skin={SKIN.bram} coat={PAL.orange} coatShade={PAL.orangeShade} />
+      </Move>
     </g>
   ),
 

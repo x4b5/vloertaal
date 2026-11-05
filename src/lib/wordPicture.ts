@@ -4,7 +4,8 @@ import type { Word } from '../content/types';
  * Does the word's picture say which word it is (a picture choice, a match, the path)? Abstract
  * words (`picture: false`: rights, rules, times, feelings) have none: they are taught with the
  * word, its sound and the gloss only. Memory pictures (`picture: 'hook'`) don't either: they help
- * to remember a hard word, but alone they could point to another word (introPicture).
+ * to remember a hard word, but alone they could point to another word (introPicture). Nor do the
+ * moving pictures of abstract words (`picture: 'motion'`): standing still, they say too little.
  * Every other word has a drawing (src/pictures).
  */
 export function hasPicture(word: Pick<Word, 'picture'>): boolean {
@@ -14,7 +15,9 @@ export function hasPicture(word: Pick<Word, 'picture'>): boolean {
 /**
  * Is a picture shown on the word's intro card? Every word with a picture, and the memory pictures
  * (`picture: 'hook'`, docs/tekenstijl.md "Geheugenplaatjes"): there the gloss says what the word
- * means, and the picture is something to hang it on.
+ * means, and the picture is something to hang it on. And the moving pictures of abstract words
+ * (`picture: 'motion'`, docs/tekenstijl.md "Beweging"): only there does the picture move, and the
+ * movement is what it says.
  */
 export function introPicture(word: Pick<Word, 'picture'>): boolean {
   return word.picture !== false;

@@ -65,6 +65,32 @@ describe('prefers-reduced-motion', () => {
   });
 });
 
+describe('moving word pictures stand still with less motion and "Rustig scherm"', () => {
+  // The trial of 5 November 2026 (docs/tekenstijl.md "Beweging", tests/motionPictures.test.ts):
+  // a few word pictures move on the intro card, by CSS animations of their parts (.mv-*) only.
+  const mv = [...css.matchAll(/([^{}]+)\{([^{}]*\banimation\s*:[^{}]*)\}/g)].filter((m) => /\.mv-/.test(m[1]));
+
+  it('they move by CSS animation only (no script, no SVG <animate>), never marked !important', () => {
+    expect(mv.length).toBeGreaterThan(0);
+    for (const m of mv) expect(m[2], m[1]).not.toMatch(/!important/);
+    const kit = readFileSync(new URL('../src/pictures/kit.tsx', import.meta.url), 'utf8');
+    expect(kit).not.toMatch(/<animate|requestAnimationFrame|\.animate\(/);
+  });
+
+  it('none of them is let back in with less motion; "Rustig scherm" switches them off too', () => {
+    for (const b of reduce) expect(b.body, 'reduced motion').not.toMatch(/\.mv-/);
+    // Rustig scherm (src/lib/calm.ts): every animation off on every element.
+    expect(css).toMatch(/:root\[data-calm\] \*, :root\[data-calm\] \*::before, :root\[data-calm\] \*::after \{\s*animation: none !important;/);
+  });
+
+  it('switched off, a picture is its still self: the keyframes only say where a part comes from', () => {
+    for (const m of mv) {
+      const name = /animation\s*:\s*([\w-]+)/.exec(m[2])![1];
+      expect(keyframes.get(name)?.trim(), name).toMatch(/^from\s*\{[^{}]*\}$/);
+    }
+  });
+});
+
 describe('no flashing (2.3.1)', () => {
   it('nothing that changes opacity repeats faster than three times a second', () => {
     for (const m of css.matchAll(/animation:\s*([\w-]+)\s+([\d.]+)(m?s)[^;]*\binfinite\b/g)) {

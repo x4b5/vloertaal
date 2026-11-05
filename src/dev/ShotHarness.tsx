@@ -757,6 +757,7 @@ function PicturesSheet() {
                   </div>
                   {w.picture === false && <span className="pics-none" lang="nl">geen plaatje</span>}
                   {w.picture === 'hook' && <span className="pics-none" lang="nl">geheugenplaatje</span>}
+                  {w.picture === 'motion' && <span className="pics-none" lang="nl">beweegt (alleen woordkaart)</span>}
                   <span className="pics-nl" lang="nl">{w.nl}</span>
                   <span className="pics-id">{w.id}</span>
                 </div>

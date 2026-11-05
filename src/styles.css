@@ -1605,6 +1605,30 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* Word pictures (src/pictures): still drawings, so the cast heads in them do not blink. */
 .word-pic { display: inline-block; flex: none; vertical-align: middle; }
 .word-pic .ch-eyes { animation: none; }
+/* Moving word pictures (the owner's trial, 5 November 2026; docs/tekenstijl.md "Beweging"): a few
+   pictures whose meaning is a movement (the foot slips, the card goes to the pole) move once on the
+   word's intro card, where the word is first taught; everywhere else (a choice, the path, the
+   pocket cards, the lists) the same picture stands still, as no rule outside .intro-card moves it.
+   A part (src/pictures/kit.tsx Move) is drawn where it ends, and the keyframes only say where it
+   comes from, so its base style is the still picture: with "less motion" or "Rustig scherm"
+   (animation: none !important, below) that is all there is. It starts just after the word's
+   sound, plays once (a tap on the card's speaker plays it again: a fresh picture), never loops
+   and no step is shorter than 0.4 s: nothing flashes (WCAG 2.3.1). Turns are about a point in the
+   picture (a knee, a clock's centre: transform-origin in its units, transform-box view-box);
+   growth is from the part's own left edge (fill-box). */
+.word-pic .mv-turn, .word-pic .mv-tip { transform-box: view-box; }
+.word-pic .mv-grow { transform-box: fill-box; transform-origin: 0 50%; }
+.intro-card .word-pic .mv-from { animation: mv-slide 1.2s cubic-bezier(0.3, 0.6, 0.35, 1) 0.4s 1 backwards; }
+.intro-card .word-pic .mv-slow { animation: mv-slide 2s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 1 backwards; }
+.intro-card .word-pic .mv-fast { animation: mv-slide 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s 1 backwards; }
+.intro-card .word-pic .mv-turn { animation: mv-turn 1.4s ease-in-out 0.4s 1 backwards; }
+.intro-card .word-pic .mv-tip { animation: mv-turn 0.7s cubic-bezier(0.55, 0, 0.7, 0.6) 0.8s 1 backwards; }
+.intro-card .word-pic .mv-grow { animation: mv-grow 1.6s cubic-bezier(0.25, 0.6, 0.3, 1) 0.4s 1 backwards; }
+.intro-card .word-pic .mv-show { animation: mv-show 0.5s ease-out 1.6s 1 backwards; }
+@keyframes mv-slide { from { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } }
+@keyframes mv-turn { from { transform: rotate(var(--mv-turn, 0deg)); } }
+@keyframes mv-grow { from { transform: scaleX(var(--mv-grow, 0.1)); } }
+@keyframes mv-show { from { opacity: 0; } }
 .word-emoji { display: inline-flex; align-items: center; justify-content: center; }
 
 /* Dev page /?shot=pictures */

@@ -187,14 +187,17 @@ export const units: Unit[] = [
         // tour on the first day, and l.danger had no room for it. "de brand" and "de nooduitgang"
         // (l.danger) are already words of another lesson; "buiten" (l.smoking) comes in the chat.
         // No BHV’er here: Belgium has none (src/content/taalBe), so the lesson and its tip stay the
-        // same in both countries. No picture for "ontruimen": people leaving a building would look like the
-        // emergency exit or the escape route. "de trap" shares the ladder's emoji (🪜), so the two
-        // drawings never stand side by side in a picture choice.
+        // same in both countries. No still picture for "ontruimen": people leaving a building would look like the
+        // emergency exit or the escape route. Since 5 November 2026 (the owner's trial of moving
+        // pictures) it has a moving one on its intro card only (`picture: 'motion'`): two people go
+        // out through the door to the flag; it is never in a picture choice, so it never stands
+        // next to "de vluchtroute", "de verzamelplaats" or "de nooduitgang". "de trap" shares the
+        // ladder's emoji (🪜), so the two drawings never stand side by side in a picture choice.
         id: 'l.alarm',
         title: 'Fire alarm and evacuation',
         words: [
           { id: 'w.alarm', nl: 'het alarm', en: 'the alarm', emoji: '🚨' },
-          { id: 'w.ontruimen', nl: 'ontruimen', en: 'to evacuate (everyone leaves the building)', emoji: '🚶‍➡️', picture: false },
+          { id: 'w.ontruimen', nl: 'ontruimen', en: 'to evacuate (everyone leaves the building)', emoji: '🚶‍➡️', picture: 'motion' },
           { id: 'w.vluchtroute', nl: 'de vluchtroute', en: 'the escape route', emoji: '🏃‍➡️' },
           { id: 'w.trap', nl: 'de trap', en: 'the stairs', emoji: '🪜' },
           { id: 'w.verzamelplaats', nl: 'de verzamelplaats', en: 'the assembly point (where everyone meets outside)', emoji: '🚩' },
