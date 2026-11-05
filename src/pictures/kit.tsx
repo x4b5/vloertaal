@@ -402,12 +402,38 @@ export function Motion({ x, y, dir = -90, spread = 60, n = 3, len = 9, gap = 6, 
   );
 }
 
+/** How a moving part moves (styles.css "Moving word pictures"): each is one CSS animation. */
+export type MoveKind = 'from' | 'slow' | 'fast' | 'turn' | 'tip' | 'grow' | 'show';
+
+/**
+ * A moving part of a word picture (the owner's trial, 5 November 2026; docs/tekenstijl.md
+ * "Beweging"). Its children are drawn where they end: that is the picture everywhere (a choice,
+ * the path, the pocket cards) and with "less motion" or "Rustig scherm". Only on the word's intro
+ * card does it move into place once, by a CSS animation of this <g> (styles.css), never by script:
+ *  - 'from' / 'slow' / 'fast': it slides in from (dx, dy) units away (one slide, three speeds);
+ *  - 'turn' / 'tip': it turns `turn` degrees back into place around `at` (a joint, a clock's centre);
+ *    'tip' is quick and speeds up, as a fall;
+ *  - 'grow': it grows from `grow` (a fraction) of its width to its full width, from its left edge;
+ *  - 'show': it appears at the end of the motion (a tick, a mark: one fade, never a flash).
+ * The <g> carries no transform attribute of its own (the animation would replace it): nest it.
+ */
+export function Move({ kind, dx = 0, dy = 0, turn = 0, at, grow = 0.1, children }: {
+  kind: MoveKind; dx?: number; dy?: number; turn?: number; at?: Pt; grow?: number; children: ReactNode;
+}) {
+  const style: Record<string, string> = {};
+  if (kind === 'from' || kind === 'slow' || kind === 'fast') Object.assign(style, { '--mv-dx': `${dx}px`, '--mv-dy': `${dy}px` });
+  if (kind === 'turn' || kind === 'tip') Object.assign(style, { '--mv-turn': `${turn}deg`, transformOrigin: `${at?.[0] ?? 60}px ${at?.[1] ?? 60}px` });
+  if (kind === 'grow') style['--mv-grow'] = String(grow);
+  return <g className={`mv-${kind}`} style={style}>{children}</g>;
+}
+
 /**
  * A clock face. `hour` (0-12, fractions allowed) and `minute` set the hands; `bells` turns it
- * into an alarm clock with two bells and feet.
+ * into an alarm clock with two bells and feet. `face` is drawn on the dial, under the hands. With
+ * `ran` (minutes), the hands run on the intro card from `ran` minutes earlier to the time (Move).
  */
-export function Clock({ cx = 60, cy = 60, r = 36, hour = 10, minute = 10, rim = PAL.sky, rimShade = PAL.skyShade, bells = false }: {
-  cx?: number; cy?: number; r?: number; hour?: number; minute?: number; rim?: string; rimShade?: string; bells?: boolean;
+export function Clock({ cx = 60, cy = 60, r = 36, hour = 10, minute = 10, rim = PAL.sky, rimShade = PAL.skyShade, bells = false, face, ran }: {
+  cx?: number; cy?: number; r?: number; hour?: number; minute?: number; rim?: string; rimShade?: string; bells?: boolean; face?: ReactNode; ran?: number;
 }) {
   const hand = (turns: number, len: number) => {
     const a = turns * 2 * Math.PI - Math.PI / 2;
@@ -435,9 +461,15 @@ export function Clock({ cx = 60, cy = 60, r = 36, hour = 10, minute = 10, rim = 
       <Shade color={PAL.paperShade} opacity={1} at={[cx + r * 1.1, cy, r * 0.55, r * 1.2]}>
         <circle cx={cx} cy={cy} r={r * 0.8} fill={PAL.white} />
       </Shade>
+      {face}
       <path d={ticks.join('')} stroke={PAL.line} strokeWidth={Math.max(2, r * 0.07)} strokeLinecap="round" />
-      <path d={hand(((hour % 12) + minute / 60) / 12, r * 0.42)} stroke={PAL.ink} strokeWidth={Math.max(3, r * 0.12)} strokeLinecap="round" />
-      <path d={hand(minute / 60, r * 0.6)} stroke={PAL.ink} strokeWidth={Math.max(2.4, r * 0.08)} strokeLinecap="round" />
+      {[
+        [((hour % 12) + minute / 60) / 12, r * 0.42, Math.max(3, r * 0.12), (ran ?? 0) / 2],
+        [minute / 60, r * 0.6, Math.max(2.4, r * 0.08), (ran ?? 0) * 6],
+      ].map(([turns, len, width, back], i) => {
+        const path = <path key={i} d={hand(turns, len)} stroke={PAL.ink} strokeWidth={width} strokeLinecap="round" />;
+        return ran ? <Move key={i} kind="turn" turn={-back} at={[cx, cy]}>{path}</Move> : path;
+      })}
       <circle cx={cx} cy={cy} r={Math.max(2.4, r * 0.09)} fill={PAL.red} />
       <Shine d={`M${cx - r * 0.72} ${cy - r * 0.28}A${r * 0.78} ${r * 0.78} 0 0 1 ${cx - r * 0.3} ${cy - r * 0.72}`} width={Math.max(2.6, r * 0.09)} opacity={0.5} />
     </g>

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, CurveArrow, Ground, Hand, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Arrow, CurveArrow, Ground, Hand, Move, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 import { Bust } from './bust';
 
 /**
@@ -202,23 +202,43 @@ export default {
     </g>
   ),
 
-  // "snel": fast — a running shoe with speed lines behind it
+  // "bijna": almost — the bar of "afmaken", filled nearly to the end: a piece is still empty, and
+  // there is no tick. A moving picture (`picture: 'motion'`, docs/tekenstijl.md "Beweging"): on
+  // the intro card the bar fills, slows down and stops just before the end. Standing still it
+  // could pass for "afmaken", so it is only on the intro card.
+  'w.bijna': () => (
+    <g>
+      <rect x="10" y="48" width="100" height="24" rx="12" fill={PAL.mist} transform="translate(0 3.5)" />
+      <rect x="10" y="48" width="100" height="24" rx="12" fill={PAL.paperShade} />
+      <Move kind="grow" grow={0.12}>
+        <rect x="14" y="52" width="78" height="16" rx="8" fill={PAL.orange} />
+        <rect x="14" y="60" width="78" height="8" rx="4" fill={PAL.orangeShade} opacity=".7" />
+        <path d="M20 56H50" stroke={PAL.orangeLight} strokeWidth="3" strokeLinecap="round" />
+      </Move>
+    </g>
+  ),
+
+  // "snel": fast — a running shoe with speed lines behind it. On the intro card (docs/tekenstijl.md
+  // "Beweging") it shoots in from the left in half a second: the same slide as the snail of
+  // "langzaam", four times faster.
   'w.snel': () => (
     <g>
       <Ground cx={66} cy={98} rx={36} ry={4} />
-      <path d="M10 52H34M6 66H30M14 80H36" stroke={PAL.line} strokeWidth="5" strokeLinecap="round" />
-      {/* Sole */}
-      <path d="M38 82H102Q110 82 108 88Q106 94 98 94H44Q36 94 36 88Z" fill={PAL.paperShade} />
-      <path d="M38 82H102Q110 82 108 86H37Z" fill={PAL.white} />
-      {/* Upper */}
-      <Shade color={PAL.skyShade} opacity={1} at={[110, 70, 16, 30]}>
-        <path d="M38 82V52Q38 46 44 46H56Q62 46 64 52L70 62Q86 66 98 70Q106 74 104 82Z" fill={PAL.sky} />
-      </Shade>
-      <path d="M38 50H52Q56 50 56 46" fill="none" stroke={PAL.skyShade} strokeWidth="3" strokeLinecap="round" />
-      <path d="M62 58L70 54M67 64L75 60M72 68L80 64" stroke={PAL.white} strokeWidth="3" strokeLinecap="round" />
-      <path d="M86 74Q96 74 103 80" fill="none" stroke={PAL.ice} strokeWidth="3" strokeLinecap="round" />
-      <path d="M42 58V76" stroke={PAL.yellow} strokeWidth="4" strokeLinecap="round" />
-      <Shine d="M44 52Q46 50 50 50" width={3} opacity={0.7} />
+      <Move kind="fast" dx={-40}>
+        <path d="M10 52H34M6 66H30M14 80H36" stroke={PAL.line} strokeWidth="5" strokeLinecap="round" />
+        {/* Sole */}
+        <path d="M38 82H102Q110 82 108 88Q106 94 98 94H44Q36 94 36 88Z" fill={PAL.paperShade} />
+        <path d="M38 82H102Q110 82 108 86H37Z" fill={PAL.white} />
+        {/* Upper */}
+        <Shade color={PAL.skyShade} opacity={1} at={[110, 70, 16, 30]}>
+          <path d="M38 82V52Q38 46 44 46H56Q62 46 64 52L70 62Q86 66 98 70Q106 74 104 82Z" fill={PAL.sky} />
+        </Shade>
+        <path d="M38 50H52Q56 50 56 46" fill="none" stroke={PAL.skyShade} strokeWidth="3" strokeLinecap="round" />
+        <path d="M62 58L70 54M67 64L75 60M72 68L80 64" stroke={PAL.white} strokeWidth="3" strokeLinecap="round" />
+        <path d="M86 74Q96 74 103 80" fill="none" stroke={PAL.ice} strokeWidth="3" strokeLinecap="round" />
+        <path d="M42 58V76" stroke={PAL.yellow} strokeWidth="4" strokeLinecap="round" />
+        <Shine d="M44 52Q46 50 50 50" width={3} opacity={0.7} />
+      </Move>
     </g>
   ),
 

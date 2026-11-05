@@ -460,6 +460,11 @@ function defineStates(LANG) {
   add('lesson:situation-voice:wrong', shot('situation'), async (p) => { await reveal(p); await tap(p, choice, 1); await settle(p, 900); }, { voices: true, expect: '.feedback-why-row .help-say' });
   add('lesson:saying-ask-voice:right', shot('saying-ask'), async (p) => { await reveal(p); await tap(p, choice, 0); await settle(p, 900); }, { voices: true, expect: '.feedback-why-row .help-say' });
   add('lesson:word-card', shot('intro'));
+  // Moving word pictures (the trial of 5 November 2026, docs/tekenstijl.md "Beweging"): their intro
+  // cards; the speaker plays the movement again, so there is no button of its own.
+  for (const id of ['glad', 'tillen', 'ontruimen', 'inchecken', 'uitchecken', 'bijna', 'langzaam', 'snel', 'telaat']) {
+    add(`lesson:word-card-moving-${id}`, shot(`intro&word=w.${id}`), null, { expect: '.intro-card .mv-from, .intro-card .mv-slow, .intro-card .mv-fast, .intro-card .mv-turn, .intro-card .mv-tip, .intro-card .mv-grow' });
+  }
   // Tester mode: the "Iets melden" flag in the header (chrome, like the ✕).
   add('lesson:report', shot('meaning&report=1'), null, { expect: '.player-top .lesson-report' });
   add('lesson:tip', shot('tip'));

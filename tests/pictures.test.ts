@@ -69,6 +69,12 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // 191 (4 November 2026): the six words of "Kort en duidelijk" (l.clear) are abstract.
     for (const id of ['w.kort', 'w.duidelijk', 'w.belangrijkste', 'w.rustig', 'w.teveel', 'w.vraag']) expect(abstract).toContain(id);
     expect(abstract.length).toBe(191);
+    // Of the 191 (5 November 2026, the owner's trial of moving pictures, tests/motionPictures.test.ts):
+    // 178 with no picture at all, 11 memory pictures ('hook') and 2 moving pictures ('motion':
+    // "ontruimen" and "bijna", which were abstract). The 2 still never stand in a picture choice.
+    expect(allWords.filter((w) => w.picture === false)).toHaveLength(178);
+    expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(11);
+    expect(allWords.filter((w) => w.picture === 'motion').map((w) => w.id).sort()).toEqual(['w.bijna', 'w.ontruimen']);
     const { lesson: hours } = findLesson('l.hours')!;
     expect(hours.words.every(hasPicture)).toBe(true);
     // Every word still has its emoji (data compatibility).

@@ -372,7 +372,10 @@ export const teamworkUnit: Unit = {
     {
       // "klaar" (w.klaar, l.shift), "laten zien" (w.latenzien, l.understood) and "nog een keer"
       // (w.nogeenkeer, l.understand) are already words of other lessons: here they come in the
-      // sentences, the chat and the tip.
+      // sentences, the chat and the tip. "bijna" has a moving picture on its intro card only
+      // (`picture: 'motion'`, the owner's trial of 5 November 2026): a bar fills and stops just
+      // before the end. Standing still, a nearly full bar would be read as "afmaken" (a full bar
+      // with a tick) in the same lesson, so it is never in a picture choice.
       id: 'l.task',
       title: 'Instructions from your supervisor',
       words: [
@@ -381,7 +384,7 @@ export const teamworkUnit: Unit = {
         { id: 'w.daarna', nl: 'daarna', en: 'after that', emoji: '⏭️', picture: false },
         { id: 'w.afmaken', nl: 'afmaken', en: 'to finish', emoji: '✅' },
         { id: 'w.snel', nl: 'snel', en: 'fast', emoji: '🏃' },
-        { id: 'w.bijna', nl: 'bijna', en: 'almost', emoji: '🤏', picture: false },
+        { id: 'w.bijna', nl: 'bijna', en: 'almost', emoji: '🤏', picture: 'motion' },
       ],
       sentences: [
         { id: 's.task.1', nl: 'Wat moet ik eerst doen?', en: 'What must I do first?' },

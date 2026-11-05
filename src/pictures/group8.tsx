@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { CastHead } from '../components/Characters';
-import { Clock, Cross, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Clock, Cross, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 8 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -242,27 +242,41 @@ const pictures: Record<string, () => JSX.Element> = {
     </g>
   ),
 
-  // "glad": slippery — a worker slips on a wet floor, next to the yellow wet-floor sign
+  // "glad": slippery — a worker slips on a wet floor, next to the yellow wet-floor sign. On the
+  // intro card (docs/tekenstijl.md "Beweging") he walks onto the wet patch upright, then his front
+  // foot shoots forward and he tips back into this pose.
   'w.glad': () => (
     <g>
       <ellipse cx="46" cy="104" rx="38" ry="6" fill={PAL.ice} />
       <path d="M22 102Q30 100 40 101" stroke={PAL.white} strokeWidth="2.4" strokeLinecap="round" opacity=".9" />
       <WetSign x={96} y={104} s={0.5} />
       {/* The slipping figure: legs fly forward, arms up */}
-      <g strokeLinecap="round" strokeLinejoin="round" fill="none">
-        <path d="M40 74L60 82L72 74" stroke={PAL.navy} strokeWidth="9" />
-        <path d="M40 74L30 90L44 98" stroke={PAL.navyShade} strokeWidth="9" />
-        <path d="M34 56L18 44M38 54L56 40" stroke={PAL.orange} strokeWidth="7.5" />
-      </g>
-      <rect x="70" y="66" width="12" height="9" rx="4" fill={PAL.slateDark} transform="rotate(-30 76 70)" />
-      <rect x="40" y="94" width="12" height="9" rx="4" fill={PAL.slateDark} transform="rotate(10 46 98)" />
-      <circle cx="16" cy="42" r="4.6" fill={SKIN.bram[0]} />
-      <circle cx="58" cy="38" r="4.6" fill={SKIN.bram[0]} />
-      <path d="M32 50Q30 66 40 76L48 70Q42 60 44 50Z" fill={PAL.orange} />
-      <rect x="28" y="48" width="18" height="28" rx="8" fill={PAL.orange} transform="rotate(-24 37 62)" />
-      <path d="M33 54L41 74" stroke="#eef5f7" strokeWidth="3.4" strokeLinecap="round" />
-      <Head who="bram" x={26} y={32} s={0.32} expr="disappointed" />
-      <Motion x={60} y={98} dir={0} spread={30} n={2} len={8} gap={6} color={PAL.sky} width={3.2} />
+      <Move kind="tip" turn={20} at={[46, 100]}>
+        <Move kind="tip" turn={36} at={[40, 74]}>
+          <path d="M40 74L60 82L72 74" stroke={PAL.navy} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <rect x="70" y="66" width="12" height="9" rx="4" fill={PAL.slateDark} transform="rotate(-30 76 70)" />
+        </Move>
+        <path d="M40 74L30 90L44 98" stroke={PAL.navyShade} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        {/* The arms fly up as he slips */}
+        <Move kind="tip" turn={-110} at={[34, 56]}>
+          <path d="M34 56L18 44" stroke={PAL.orange} strokeWidth="7.5" strokeLinecap="round" />
+          <circle cx="16" cy="42" r="4.6" fill={SKIN.bram[0]} />
+        </Move>
+        <Move kind="tip" turn={105} at={[38, 54]}>
+          <path d="M38 54L56 40" stroke={PAL.orange} strokeWidth="7.5" strokeLinecap="round" />
+          <circle cx="58" cy="38" r="4.6" fill={SKIN.bram[0]} />
+        </Move>
+        <rect x="40" y="94" width="12" height="9" rx="4" fill={PAL.slateDark} transform="rotate(10 46 98)" />
+        {/* Neck (hidden behind the raised arms in the still picture, seen while the arms come up) */}
+        <path d="M28.5 41L32.5 50" stroke={SKIN.bram[1]} strokeWidth="6.5" strokeLinecap="round" />
+        <path d="M32 50Q30 66 40 76L48 70Q42 60 44 50Z" fill={PAL.orange} />
+        <rect x="28" y="48" width="18" height="28" rx="8" fill={PAL.orange} transform="rotate(-24 37 62)" />
+        <path d="M33 54L41 74" stroke="#eef5f7" strokeWidth="3.4" strokeLinecap="round" />
+        <Head who="bram" x={26} y={32} s={0.32} expr="disappointed" />
+      </Move>
+      <Move kind="show">
+        <Motion x={60} y={98} dir={0} spread={30} n={2} len={8} gap={6} color={PAL.sky} width={3.2} />
+      </Move>
     </g>
   ),
 

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Box, Clock, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Box, Clock, CurveArrow, ExclaimMark, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 5 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -155,13 +155,24 @@ export default {
     </g>
   ),
 
-  // "te laat": too late — the red alarm clock rings past the time, Jada looks worried.
+  // "te laat": too late — the red alarm clock rings at 8:25, Bram comes in worried; the time past
+  // the start (8:00, as on "op tijd") is a red wedge on the dial. Bram since 5 November 2026 (was
+  // Jada), so "op tijd" and "te laat" are one scene with another time. On the intro card
+  // (docs/tekenstijl.md "Beweging") the hands run on from 8:00 while Bram comes in, and the wedge
+  // and the "!" come when they stop.
   'w.telaat': () => (
     <g>
-      <Bust who="jada" x={36} y={118} scale={0.56} expr="disappointed" />
-      <Clock cx={80} cy={44} r={26} hour={9} minute={25} rim={PAL.red} rimShade={PAL.redShade} bells />
+      <Move kind="from" dx={-34}>
+        <Bust who="bram" x={36} y={118} scale={0.56} expr="disappointed" />
+      </Move>
+      <Clock
+        cx={80} cy={44} r={26} hour={8} minute={25} rim={PAL.red} rimShade={PAL.redShade} bells ran={25}
+        face={<Move kind="show"><path d="M80 44V25A19 19 0 0 1 89.5 60.5Z" fill={PAL.redLight} /></Move>}
+      />
       <Motion x={80} y={44} dir={-90} spread={150} n={4} len={6} gap={36} color={PAL.red} width={3.4} />
-      <ExclaimMark x={104} y={88} size={26} />
+      <Move kind="show">
+        <ExclaimMark x={104} y={88} size={26} />
+      </Move>
     </g>
   ),
 

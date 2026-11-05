@@ -204,6 +204,10 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
   // a few cards the big speaker says it (the owner's choice, 2 November 2026). A screen reader
   // still hears it as the card's heading.
   const [hint] = useState(() => firstTimes('tap-to-hear', TAP_TO_HEAR_TIMES));
+  // A moving picture (docs/tekenstijl.md "Beweging", the owner's trial of 5 November 2026) moves
+  // once with the word's sound; a tap on the speaker says the word again and draws the picture
+  // anew (a new key), so it moves again with it. No button of its own (max. 3 per screen).
+  const [play, setPlay] = useState(0);
   useEffect(() => {
     autoSpeak(word.nl);
     onAnswer({ correct: true });
@@ -213,11 +217,11 @@ export function IntroCard({ ex, lang, onAnswer }: Props<'intro'>) {
       <Prompt text={ui('tapToHear', lang)} quiet={!hint} />
       {/* Abstract words get no picture (it would mislead): a calm word card, word + sound + gloss. */}
       <div className={`card intro-card ${introPicture(word) ? '' : 'intro-word-only'}`}>
-        {introPicture(word) && <WordPicture className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />}
+        {introPicture(word) && <WordPicture key={play} className="emoji-xl" id={word.id} emoji={word.emoji} size={140} />}
         <div className={`intro-nl ${wordSize(word.nl)}`}>
           <span lang="nl">{breakable(word.nl)}</span>
           {/* One speaker: normal speed, then slowly on the next tap (SpeakButton). */}
-          <span className="intro-sounds">
+          <span className="intro-sounds" onClickCapture={() => setPlay((n) => n + 1)}>
             <SpeakButton text={word.nl} help={lang} />
           </span>
         </div>

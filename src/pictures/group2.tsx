@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Box, Bubble, CurveArrow, Ground, Hand, PAL, QuestionMark, Shade, Shine, SKIN } from './kit';
+import { Arrow, Box, Bubble, CurveArrow, Ground, Hand, Move, PAL, QuestionMark, Shade, Shine, SKIN } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 2 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -31,24 +31,28 @@ export default {
     </g>
   ),
 
-  // "langzaam": slowly — a snail creeping along the floor
+  // "langzaam": slowly — a snail creeping along the floor. On the intro card (docs/tekenstijl.md
+  // "Beweging") it creeps a little way in 2 s: the same slide as the shoe of "snel", four times
+  // slower. (Both keep their own still picture, so the two stay apart in a picture choice.)
   'w.langzaam': () => (
     <g>
       <Ground cx={58} cy={100} rx={44} ry={4.5} />
-      {/* Body with two eye stalks */}
-      <path d="M12 100Q12 90 24 90H84Q94 90 98 80L102 66Q104 60 109 62Q113 64 111 70L106 92Q104 100 94 100Z" fill={PAL.lime} />
-      <path d="M100 66L94 48M106 64L108 46" stroke={PAL.lime} strokeWidth="4" strokeLinecap="round" />
-      <circle cx="94" cy="47" r="5.4" fill={PAL.lime} />
-      <circle cx="108" cy="45" r="5.4" fill={PAL.lime} />
-      <circle cx="95" cy="47" r="3" fill={PAL.ink} />
-      <circle cx="109" cy="45" r="3" fill={PAL.ink} />
-      <path d="M18 99H100" stroke={PAL.leaf} strokeWidth="2.4" strokeLinecap="round" />
-      {/* Shell */}
-      <Shade color={PAL.cardDark} opacity={1} at={[90, 72, 18, 36]}>
-        <circle cx="58" cy="62" r="30" fill={PAL.card} />
-      </Shade>
-      <path d="M58 62m0 -5a5 5 0 1 1 -5 5a11 11 0 0 1 11 -11a17 17 0 0 1 17 17a23 23 0 0 1 -23 23" fill="none" stroke={PAL.cardShade} strokeWidth="4.5" strokeLinecap="round" />
-      <Shine d="M36 52Q40 40 52 35" width={4} />
+      <Move kind="slow" dx={-20}>
+        {/* Body with two eye stalks */}
+        <path d="M12 100Q12 90 24 90H84Q94 90 98 80L102 66Q104 60 109 62Q113 64 111 70L106 92Q104 100 94 100Z" fill={PAL.lime} />
+        <path d="M100 66L94 48M106 64L108 46" stroke={PAL.lime} strokeWidth="4" strokeLinecap="round" />
+        <circle cx="94" cy="47" r="5.4" fill={PAL.lime} />
+        <circle cx="108" cy="45" r="5.4" fill={PAL.lime} />
+        <circle cx="95" cy="47" r="3" fill={PAL.ink} />
+        <circle cx="109" cy="45" r="3" fill={PAL.ink} />
+        <path d="M18 99H100" stroke={PAL.leaf} strokeWidth="2.4" strokeLinecap="round" />
+        {/* Shell */}
+        <Shade color={PAL.cardDark} opacity={1} at={[90, 72, 18, 36]}>
+          <circle cx="58" cy="62" r="30" fill={PAL.card} />
+        </Shade>
+        <path d="M58 62m0 -5a5 5 0 1 1 -5 5a11 11 0 0 1 11 -11a17 17 0 0 1 17 17a23 23 0 0 1 -23 23" fill="none" stroke={PAL.cardShade} strokeWidth="4.5" strokeLinecap="round" />
+        <Shine d="M36 52Q40 40 52 35" width={4} />
+      </Move>
     </g>
   ),
 

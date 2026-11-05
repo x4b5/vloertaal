@@ -1,7 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import type { Expr } from '../components/Faces';
-import { Arrow, Bubble, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Arrow, Bubble, CurveArrow, ExclaimMark, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 9 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -221,24 +221,34 @@ export default {
   ),
 
   // "inchecken": to check in — a hand holds the card against the yellow reader pole (arrow in),
-  // the reader beeps green
+  // the reader beeps green. On the intro card (docs/tekenstijl.md "Beweging") the hand brings the
+  // card to the reader, and the tick comes when it gets there.
   'w.inchecken': () => (
     <g>
       <CardPole x={86} y={60} />
-      <Hand pose="hold" x={34} y={36} rotate={90} scale={0.84} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
-      <BankCard x={56} y={26} w={28} rot={0} />
+      <Move kind="from" dx={-26}>
+        <Hand pose="hold" x={34} y={36} rotate={90} scale={0.84} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
+        <BankCard x={56} y={26} w={28} rot={0} />
+      </Move>
       <Arrow from={[14, 74]} to={[60, 74]} color={PAL.ok} width={7} head={11} />
-      <Tick x={104} y={16} r={11} />
+      <Move kind="show">
+        <Tick x={104} y={16} r={11} />
+      </Move>
     </g>
   ),
 
-  // "uitchecken": to check out — the hand takes the card away from the reader again (arrow out)
+  // "uitchecken": to check out — the hand takes the card away from the reader again (arrow out).
+  // On the intro card the same slide as "inchecken", but it starts at the reader and goes away.
   'w.uitchecken': () => (
     <g>
       <CardPole x={34} y={60} />
-      <Hand pose="hold" x={110} y={36} rotate={-90} scale={0.84} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
-      <BankCard x={64} y={26} w={28} rot={0} />
-      <Motion x={62} y={35} dir={180} spread={50} n={3} len={6} gap={6} color={PAL.line} width={3.4} />
+      <Move kind="from" dx={-28}>
+        <Hand pose="hold" x={110} y={36} rotate={-90} scale={0.84} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
+        <BankCard x={64} y={26} w={28} rot={0} />
+      </Move>
+      <Move kind="show">
+        <Motion x={62} y={35} dir={180} spread={50} n={3} len={6} gap={6} color={PAL.line} width={3.4} />
+      </Move>
       <Arrow from={[60, 74]} to={[106, 74]} color={PAL.orange} width={7} head={11} />
     </g>
   ),
