@@ -169,6 +169,13 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan rustig nee zeggen tegen extra werk.', 'A2', 'gesprekken', 'I can calmly say no to extra work.'],
     ['Ik kan vragen wat ik eerst moet doen.', 'A1', 'spreken', 'I can ask what I need to do first.'],
   ]),
+  // "Goed communiceren" (5 November 2026): l.explain, l.listen and l.talkintime (at most three: no
+  // sentence for l.calm and l.reachable).
+  onderwerp('u.communicate', 'Goed communiceren', [
+    ['Ik kan uitleggen wat er mis is.', 'A2', 'spreken', 'I can explain what is wrong.'],
+    ['Ik kan zeggen wat ik heb gehoord.', 'A2', 'gesprekken', 'I can say what I heard.'],
+    ['Ik kan op tijd vragen om een gesprek.', 'A2', 'gesprekken', 'I can ask for a talk in time.'],
+  ]),
   onderwerp('u.social', 'Omgang met collega’s', [
     ['Ik kan een praatje maken in de pauze.', 'A2', 'gesprekken', 'I can make small talk during the break.'],
     ['Ik kan zeggen dat ik een fout heb gemaakt.', 'A2', 'spreken', 'I can say that I made a mistake.'],

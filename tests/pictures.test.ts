@@ -80,15 +80,21 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // dagen" have a memory picture only (they count here, as w.verlof does); "licht werk", "zwaar
     // werk" and "welkom terug" have a drawing (group38).
     for (const id of ['w.herstellen', 'w.opbouwen', 'w.halvedagen']) expect(abstract).toContain(id);
-    expect(abstract.length).toBe(206);
+    // 224 (5 November 2026): "Goed communiceren" (u.communicate): 18 of its 30 words are abstract;
+    // stilstaan, het lampje, komen, aankijken, nadenken, ademhalen, het gesprek, opnemen, de
+    // gemiste oproep, de voicemail, het beltegoed and het bereik are drawn (group39).
+    for (const id of ['w.ietsmis', 'w.nodighebben', 'w.meteen', 'w.uitpraten', 'w.onderbreken', 'w.bedoelen', 'w.dus', 'w.doorvragen', 'w.oplossen', 'w.druk', 'w.straks', 'w.misverstand', 'w.onbekend', 'w.bespreken', 'w.zorgenmaken', 'w.oplossing', 'w.ineens', 'w.wegblijven']) expect(abstract).toContain(id);
+    for (const id of ['w.stilstaan', 'w.lampje', 'w.komen', 'w.aankijken', 'w.nadenken', 'w.ademhalen', 'w.gesprek', 'w.opnemen', 'w.gemisteoproep', 'w.voicemail', 'w.beltegoed', 'w.bereik']) expect(abstract).not.toContain(id);
+    expect(abstract.length).toBe(224);
     // Of the 191 (5 November 2026, the owner's trial of moving pictures, tests/motionPictures.test.ts):
     // 178 with no picture at all, 11 memory pictures ('hook') and 2 moving pictures ('motion':
     // "ontruimen" and "bijna", which were abstract). The 2 still never stand in a picture choice.
     // The second round (5 November 2026): 11 more abstract words got a moving picture only, and
     // in the last round "kiezen" (l.mychoice): 166 with no picture at all, 11 memory pictures and
     // 14 moving pictures (still 191 abstract). With the new lessons of 5 November 2026 (above):
-    // 179 with no picture, 13 memory pictures (with opbouwen, halve dagen), 14 moving: 206.
-    expect(allWords.filter((w) => w.picture === false)).toHaveLength(179);
+    // 179 with no picture, 13 memory pictures (with opbouwen, halve dagen), 14 moving: 206. With
+    // "Goed communiceren" 18 more with no picture: 197, and 224 in all.
+    expect(allWords.filter((w) => w.picture === false)).toHaveLength(197);
     expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(13);
     expect(allWords.filter((w) => w.picture === 'motion').map((w) => w.id).sort()).toEqual([
       'w.automatisch', 'w.bijna', 'w.daarna', 'w.doorgeven', 'w.eerst', 'w.kiezen', 'w.ontruimen', 'w.ruilen',

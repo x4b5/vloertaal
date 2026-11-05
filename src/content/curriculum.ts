@@ -1,4 +1,4 @@
-import { teamworkUnit } from './culture';
+import { communicateUnit, teamworkUnit } from './culture';
 import { dataUnit, toolsUnit, workUnits } from './work';
 import { soundsUnit } from './sounds';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';
@@ -388,6 +388,8 @@ export const units: Unit[] = [
   // learner's own sector stay early. On All topics it sits under Starten (src/content/themes.ts).
   soundsUnit,
   teamworkUnit,
+  // "Goed communiceren" (5 November 2026): right after "Samenwerken", on All topics and on the path.
+  communicateUnit,
   ...workUnits,
 ];
 
