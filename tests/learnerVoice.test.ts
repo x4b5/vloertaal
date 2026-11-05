@@ -76,6 +76,12 @@ const PENDING_RECORDING = new Set<string>([
   'Mooi. Laat eens zien.',
   // New lesson "Weer aan het werk na ziekte" (l.backtowork), 5 November 2026:
   'Ja, het gaat beter. Ik doe het rustig aan.',
+  // New unit "Goed communiceren" (u.communicate), 5 November 2026:
+  'De scanner doet het niet. Ik heb een nieuwe nodig.',
+  'Echt? Of was dat een grapje?',
+  'Sorry, het is erg druk. Wat moet eerst?',
+  'Goedemorgen. U belde mij? Sorry, ik heb het gemist.',
+  'Ja hoor. Wat is er?',
   // New unit "Feedback en overleg" (u.feedback), 5 November 2026:
   'Ja, graag. Ik wil het goed doen.',
   'Netjes! Alleen de dozen staan scheef.',

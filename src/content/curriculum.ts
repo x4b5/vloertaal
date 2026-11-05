@@ -1,4 +1,4 @@
-import { feedbackUnit, teamworkUnit } from './culture';
+import { communicateUnit, feedbackUnit, teamworkUnit } from './culture';
 import { dataUnit, toolsUnit, workUnits } from './work';
 import { soundsUnit } from './sounds';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';
@@ -388,8 +388,9 @@ export const units: Unit[] = [
   // learner's own sector stay early. On All topics it sits under Starten (src/content/themes.ts).
   soundsUnit,
   teamworkUnit,
-  // "Feedback en overleg" (5 November 2026): right after "Samenwerken". "Goed communiceren"
-  // (u.communicate) comes in between when it is merged: teamwork, communicate, feedback.
+  // "Goed communiceren" and "Feedback en overleg" (5 November 2026): right after "Samenwerken",
+  // on All topics and on the path: teamwork, communicate, feedback.
+  communicateUnit,
   feedbackUnit,
   ...workUnits,
 ];

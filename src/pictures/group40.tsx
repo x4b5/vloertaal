@@ -6,15 +6,14 @@ import { Box, Bubble, CurveArrow, Dots, Ground, Hand, Motion, PAL, SKIN, Shade, 
  * Word pictures, group 40 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
  *
  * "Feedback en overleg" (u.feedback, the owner's request, 5 November 2026):
- *  - "Feedback krijgen" (l.getfeedback): to think about it (Bram, thinking, under a thought cloud;
- *    not "praten": a cloud of small rounds, no speech tail). Its other five words are abstract.
+ *  - "Feedback krijgen" (l.getfeedback): all six words are abstract ("nadenken" is drawn in group39).
  *  - "Feedback geven" (l.givefeedback): to tape shut (a box, the tape going over its top to the
  *    roll), and a pair: neat (three boxes straight on top of each other, a sparkle) and crooked
  *    (the same three boxes, leaning). The pair differs in one thing only, the stack, so a picture
  *    choice between them is decided at a glance.
  *  - "Iets zeggen in het werkoverleg" (l.meeting): the team meeting (Henk and Amina at a table, a
  *    paper on it, a bubble between them), the idea (a lamp that is lit) and raising your hand
- *    (Jada, one hand straight up). "de beurt", "de mening" and "onderbreken" have no picture.
+ *    (Jada, one hand straight up). "de beurt", "de mening" and "de agenda" have no picture.
  */
 
 /** A table seen from the front: the top and two legs (the people sit behind it). */
@@ -48,25 +47,6 @@ function Stack({ lean = false }: { lean?: boolean }) {
 export default {
   // "nadenken": to think about something — Bram with his thinking face; a cloud of small rounds
   // goes up from his head to a thought cloud with three dots.
-  'w.nadenken': () => (
-    <g>
-      <Bust who="bram" x={46} y={120} scale={0.66} expr="thinking" />
-      <circle cx="78" cy="50" r="3.6" fill={PAL.ice} />
-      <circle cx="85" cy="40" r="5" fill={PAL.ice} />
-      <g>
-        <circle cx="84" cy="22" r="13" fill={PAL.ice} />
-        <circle cx="98" cy="20" r="12" fill={PAL.ice} />
-        <circle cx="92" cy="30" r="11" fill={PAL.ice} />
-        <circle cx="84" cy="21" r="11" fill="#e3f5ff" />
-        <circle cx="98" cy="19" r="10" fill="#e3f5ff" />
-        <circle cx="91" cy="27" r="9.5" fill="#e3f5ff" />
-        <Dots cx={91} cy={23} gap={7.5} r={2.6} />
-      </g>
-    </g>
-  ),
-
-  // "dichtplakken": to tape shut — a closed box; the tape runs over its top and down its front to
-  // the roll at the back, and a green arrow over it goes the same way.
   'w.dichtplakken': () => (
     <g>
       <Ground cx={56} cy={106} rx={46} ry={4} />

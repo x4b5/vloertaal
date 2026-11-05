@@ -16,7 +16,9 @@ const SHORT = ['c.translate', 'c.harvest', 'c.shelves', 'c.garage', 'c.illness',
   // And those of 5 November 2026 (feeling good at work, helping a new colleague).
   'c.feelwell', 'c.newcolleague',
   // "Feedback en overleg" (5 November 2026): short from the start.
-  'c.getfeedback', 'c.givefeedback', 'c.meeting'];
+  'c.getfeedback', 'c.givefeedback', 'c.meeting',
+  // "Goed communiceren" (u.communicate, 5 November 2026): short from the start.
+  'c.explain', 'c.listen', 'c.calm', 'c.talkintime', 'c.reachable'];
 const SITUATION_MAX = 18; // words, without the question at the end
 const ANSWER_MAX = 10;
 const SCREEN_MAX = 42; // the situation and its three answers together
