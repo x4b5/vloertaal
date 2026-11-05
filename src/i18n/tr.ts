@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Yeni kelime',
     tapToHear: 'Dinlemek için dokun',
     whatDoesThisMean: 'Bu ne demek?',
+    snapQuestion: 'Anladın mı?', // nieuw, nalezen
+    snapYes: 'Evet, tamam.', // nieuw, nalezen
+    snapGoodAsk: 'Sorman iyi oldu!', // nieuw, nalezen
+    snapRight: 'Doğru anladın!', // nieuw, nalezen
+    snapAskBetter: 'Gördün mü? Sormak daha iyiydi.', // nieuw, nalezen
     whichOneIs: 'Hangisi “{word}”?',
     mixLesson: 'Karışık tekrar',
     whatDoYouHear: 'Ne duyuyorsun?',

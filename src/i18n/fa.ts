@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'کلمهٔ جدید',
     tapToHear: 'برای شنیدن ضربه بزنید',
     whatDoesThisMean: 'این یعنی چه؟',
+    snapQuestion: 'متوجه شدید؟', // nieuw, nalezen
+    snapYes: 'بله، باشه.', // nieuw, nalezen
+    snapGoodAsk: 'خوب است که می‌پرسید!', // nieuw, nalezen
+    snapRight: 'درست فهمیدید!', // nieuw, nalezen
+    snapAskBetter: 'دیدید؟ پرسیدن بهتر بود.', // nieuw, nalezen
     whichOneIs: 'کدام یک «{word}» است؟',
     mixLesson: 'مرور ترکیبی',
     whatDoYouHear: 'چه می‌شنوید؟',

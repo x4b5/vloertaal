@@ -12,6 +12,12 @@ export const uiEn = {
   newWord: 'New word',
   tapToHear: 'Tap to hear',
   whatDoesThisMean: 'What does this mean?',
+  /** "Snap je het?" in today's review (src/components/Exercises.tsx SnapExercise): a colleague said a known sentence at the real pace. The Dutch is on screen too. */
+  snapQuestion: 'Do you get it?',
+  snapYes: 'Yes, okay.',
+  snapGoodAsk: 'Good that you ask!',
+  snapRight: 'Well understood!',
+  snapAskBetter: 'See? Asking would have been better.',
   whichOneIs: 'Which one is “{word}”?',
   /** Title of the last lesson of every unit: words, sentences and chats from before, mixed. */
   mixLesson: 'Mixed review',

@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'Palabra nueva',
     tapToHear: 'Toca para escuchar',
     whatDoesThisMean: '¿Qué significa esto?',
+    snapQuestion: '¿Lo entiendes?', // nieuw, nalezen
+    snapYes: 'Sí, vale.', // nieuw, nalezen
+    snapGoodAsk: '¡Bien que lo preguntes!', // nieuw, nalezen
+    snapRight: '¡Bien entendido!', // nieuw, nalezen
+    snapAskBetter: '¿Ves? Era mejor preguntar.', // nieuw, nalezen
     whichOneIs: '¿Cuál es “{word}”?',
     mixLesson: 'Repaso mixto',
     whatDoYouHear: '¿Qué oyes?',

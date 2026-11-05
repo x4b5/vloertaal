@@ -7,7 +7,7 @@ import { isWord } from '../lib/speaking';
 import { learnerCharacter, learnerVoice, voiceFor, type VoiceRef } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
 import { pictureCast } from '../pictures';
-import { CAST, castFor, colleaguesOf, tipCast, wordCast, type CharacterId } from './Characters';
+import { CAST, castFor, colleaguesOf, snapColleague, tipCast, wordCast, type CharacterId } from './Characters';
 import { findKlank } from '../content/klankMond';
 import { klankVoice, soundText } from './KlankCard';
 
@@ -76,6 +76,9 @@ export function exerciseLines(ex: Exercise, gender?: Gender): Line[] {
       const voice = klankVoice();
       return [...new Set([soundText(k, voice).text, k.word.nl])].map((text) => ({ text, voice }));
     }
+    // "Snap je het?": the colleague's sentence (at the real pace, and slowly), and "Kunt u dat herhalen?" in your voice.
+    case 'snap':
+      return [{ text: ex.sentence.nl, voice: by(snapColleague(ex.sentence.id)) }, { text: ex.ask.nl, voice: learnerVoice(gender) }];
     case 'speak': {
       const { item, turn } = ex;
       if (turn) return [{ text: turn.prompt.nl, voice: by(castFor(turn.prompt.id, colleaguesOf(gender))) }, { text: item.nl, voice: by(learnerCharacter(gender)) }];
@@ -110,8 +113,9 @@ export function lessonLines(exercises: readonly Exercise[], gender?: Gender): Li
 
 /**
  * The voice a step that can only be heard is heard in (lib/exercises.ts heardText): a sentence
- * built by ear in its speaker's voice; a listening or writing step in the learner's own.
+ * built by ear in its speaker's voice, "Snap je het?" in its colleague's; a listening or writing
+ * step in the learner's own.
  */
 export function heardVoice(ex: Exercise): VoiceRef | undefined {
-  return ex.kind === 'build' ? by(castFor(ex.sentence.id)) : undefined;
+  return ex.kind === 'build' ? by(castFor(ex.sentence.id)) : ex.kind === 'snap' ? by(snapColleague(ex.sentence.id)) : undefined;
 }

@@ -32,6 +32,11 @@ const lang: HelpLanguageSource = {
     newWord: 'ሓድሽ ቃል',
     tapToHear: { m: 'ክትሰምዕ ጠውቕ', f: 'ክትሰምዒ ጠውቒ', x: 'ክትሰምዑ ጠውቑ' }, // x: nieuw, nalezen
     whatDoesThisMean: 'እዚ እንታይ ማለት እዩ?',
+    snapQuestion: { m: 'ተረዲኡካ ድዩ?', f: 'ተረዲኡኪ ድዩ?', x: 'ተረዲኡኩም ድዩ?' }, // nieuw, nalezen
+    snapYes: 'እወ፣ ሕራይ።', // nieuw, nalezen
+    snapGoodAsk: { m: 'ምሕታትካ ጽቡቕ እዩ!', f: 'ምሕታትኪ ጽቡቕ እዩ!', x: 'ምሕታትኩም ጽቡቕ እዩ!' }, // nieuw, nalezen
+    snapRight: { m: 'ብግቡእ ተረዲኡካ!', f: 'ብግቡእ ተረዲኡኪ!', x: 'ብግቡእ ተረዲኡኩም!' }, // nieuw, nalezen
+    snapAskBetter: { m: 'ርኢኻ? ምሕታት ይሓይሽ ነይሩ።', f: 'ርኢኺ? ምሕታት ይሓይሽ ነይሩ።', x: 'ርኢኹም? ምሕታት ይሓይሽ ነይሩ።' }, // nieuw, nalezen
     whichOneIs: 'ኣየናይ እዩ «{word}»?',
     mixLesson: 'ዝተሓዋወሰ ድግግም',
     whatDoYouHear: { m: 'እንታይ ትሰምዕ ኣለኻ?', f: 'እንታይ ትሰምዒ ኣለኺ?', x: 'እንታይ ትሰምዑ ኣለኹም?' }, // x: nieuw, nalezen

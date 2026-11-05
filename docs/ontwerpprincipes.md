@@ -71,6 +71,10 @@ Gebaseerd op wat onderzoek zegt over onthouden.
 - **Veel stemmen.** Losse woorden in de vragen zegt elke keer een andere collega, en elke dag komt
   één klankpaar terug op gehoor (man of maan?), in een andere stem: zo train je je oor
   (Barcroft & Sommers 2005; HVPT).
+- **Durven vragen.** Eén op de drie dagen zegt een collega in "Herhaal vandaag" een zin die je
+  kent op echte snelheid, zonder tekst: "Snap je het?". "Ja, oké." gaat meteen naar de betekenis;
+  "Kunt u dat herhalen?" laat de zin eerst langzaam terugkomen. Vragen kost nooit punten
+  (`src/lib/spaced.ts`, `snapLines`).
 - **Laten merken dat het blijft.** Na de herhaling: "Woorden van 2 weken of langer geleden: je
   wist er nog 9 van de 10." Zelf merken dat iets lukt geeft het meeste zelfvertrouwen.
 - **Eén keer voordoen.** Bij een nieuwe soort oefening wijst een hand één keer aan waar je tikt.
