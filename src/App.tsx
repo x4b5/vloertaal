@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { findLesson, playLesson } from './content/curriculum';
 import { ensureLanguage, getHelpLanguage, isLanguageLoaded, langTag } from './i18n';
 import { setRulesCountry } from './content/rulesCourse';
@@ -46,6 +46,7 @@ import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
 import { BackupNudge } from './components/BackupNudge';
 import { BridgeOffer } from './components/BridgeOffer';
 import { bridgeDue, seeBridge } from './lib/bridge';
+import { afterSpeak, braveDue, chorusDue, type SpeakEvent } from './lib/chorus';
 import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
@@ -598,6 +599,8 @@ export default function App() {
   // "Tempo" (Settings): also set during render, for the same reason as the sound.
   setTempo(tempoOf(progress));
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
+  // A lesson's "Zeg het" (src/lib/chorus.ts): met, skipped or recorded. Stable, so the exercise tells it once.
+  const onSpeak = useCallback((what: SpeakEvent) => setProgress((p) => afterSpeak(p, what)), []);
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
   useEffect(() => { applyCalm(progress.calm); }, [progress.calm]);
@@ -904,6 +907,10 @@ export default function App() {
           report={testerMode(access)}
           reportHint={explainReport(access, track === 'regels')}
           {...(daily || track !== 'taal' ? {} : lessonPace(progress))}
+          // "Zeg het samen" and Bram's "Fouten mogen" (src/lib/chorus.ts), the owner's request, 5 November 2026.
+          speakTogether={chorusDue(progress)}
+          speakBrave={braveDue(progress)}
+          onSpeak={onSpeak}
         />
       );
     }

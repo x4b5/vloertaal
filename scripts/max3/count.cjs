@@ -582,6 +582,20 @@ function defineStates(LANG) {
   add('lesson:speak:then-now', shot('speak-compare&then=2026-10-12'), null, { expect: '.say-then-now' });
   add('lesson:speak:then-now-sentence', shot('speak-compare&item=sentence&then=2026-10-12', 'ar'), null, { expect: '.say-then-now' });
   add('lesson:speak-turn:then-now', shot('speak-compare&turn=1&then=2026-10-12'), null, { expect: '.say-turn .say-then-now' });
+  // "Zeg het samen" (src/lib/chorus.ts): one big button where the microphone goes ("Zeg het liever
+  // hardop" stays), the 3-2-1 and the wave (it cannot be tapped then), then the microphone with
+  // "Nu alleen". The first time with Bram's "Fouten mogen" (a line, no button). Without a
+  // microphone it is on top of the "say it out loud" step (with Continue: at most 3); not while this
+  // phone's steps to allow the microphone are open.
+  add('lesson:speak:together', shot('speak&item=sentence&together=due&brave=1'), null, { expect: '.say-chorus' });
+  add('lesson:speak:together-count', shot('speak&item=sentence&together=count'), null, { expect: '.say-chorus-count' });
+  add('lesson:speak:together-on', shot('speak&item=sentence&together=on'), null, { expect: '.say-wave' });
+  add('lesson:speak:together-done', shot('speak&item=sentence&together=done'), null, { expect: '.say-alone' });
+  add('lesson:speak:together-run', shot('speak&item=sentence&together=due'), async (p) => { await tap(p, '.say-chorus'); await p.waitForSelector('.say-alone', { timeout: 20000 }); await settle(p); }, { expect: '.say-alone' });
+  add('lesson:speak:together-aloud', shot('speak&item=sentence&together=due'), async (p) => { await tap(p, '.say-aloud-instead'); }, { expect: '.say-chorus-off .say-chorus' });
+  add('lesson:speak:together-off', shot('speak-off&item=sentence&together=due'), null, { expect: '.say-chorus-off .say-chorus' });
+  add('lesson:speak:together-refused', shot('speak-off&item=sentence&together=due&refused=1'), null, { expect: '.say-mic-on' });
+  add('lesson:speak:together-refused-steps', shot('speak-off&item=sentence&together=due&refused=1'), async (p) => { await tap(p, '.say-mic-on'); }, { expect: '.say-retry' });
   // The browser refused the microphone: [Zet de microfoon aan], then this phone's steps with the retry.
   add('lesson:speak:refused', shot('speak-off&refused=1'), null, { expect: '.say-mic-on' });
   add('lesson:speak:refused-steps', shot('speak-off&refused=1'), async (p) => { await tap(p, '.say-mic-on'); }, { expect: '.say-retry' });

@@ -29,7 +29,7 @@ import type { Gender, LangCode } from '../i18n/types';
 import { allLessons, allReplies } from '../content/curriculum';
 import { buildLesson, buildTiles, buildRuleLesson, forRetry, frontExercise, frontSource, RULE_KINDS, workTurn, type Exercise, type RuleExercise, type RuleKind } from '../lib/exercises';
 import { setQuietAudio } from '../lib/audio';
-import { setSpeakShotHeard, setSpeakShotPhase, setSpeakShotRefused, setSpeakShotThen } from '../components/Speaking';
+import { setSpeakShotBrave, setSpeakShotChorus, setSpeakShotHeard, setSpeakShotPhase, setSpeakShotRefused, setSpeakShotThen, type ChorusState } from '../components/Speaking';
 import { createRng } from '../lib/random';
 import { units } from '../content/curriculum';
 import { WordPicture, pictures, unitPictures } from '../pictures';
@@ -448,6 +448,12 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     // made that day (src/lib/firstVoice.ts), without waiting a week; no sound.
     const then = /^\d{4}-\d{2}-\d{2}$/.test(q.get('then') ?? '') ? q.get('then')!.split('-').map(Number) : null;
     setSpeakShotThen(then ? new Date(then[0], then[1] - 1, then[2], 9).getTime() : undefined);
+    // &together=due|count|on|done (with speak or speak-off): "Zeg het samen" (src/lib/chorus.ts): its
+    // button, the 3-2-1 (at 2), the voice saying it (the wave), or done ("Nu alleen" over the microphone).
+    // &brave=1: Bram's one-time "Fouten mogen".
+    const together = q.get('together');
+    setSpeakShotChorus((['due', 'count', 'on', 'done'] as const).find((c): c is ChorusState => c === together));
+    setSpeakShotBrave(q.get('brave') === '1');
     // &turn=1: "Wat zeg je?" after the chat (the shift chat): the reply is what to say.
     // &work=l.gear: "Wat zeg je?" on the sentence of "Probeer het vandaag" of that lesson (its moment;
     // l.people a moment with a Dutch quote, l.hello none: the meaning).

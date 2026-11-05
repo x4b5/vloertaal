@@ -63,6 +63,8 @@ export const PRIVACY: readonly PrivacySection[] = [
       'Bij “Zeg het” neem je jezelf op. Die opname gaat nergens heen, en is weg als de oefening klaar is.',
       // "Toen en nu" (src/lib/firstVoice.ts), the owner's request, 5 November 2026.
       'Eén opname blijft wel: de eerste keer dat je een zin zegt. Die blijft op je telefoon of computer, zodat je later kunt vergelijken. Zeg je dezelfde zin een week later of nog later weer? Dan hoor je bij “Toen en nu” eerst je eerste keer, en dan nu. We sturen die opname nooit naar ons of naar anderen. We bewaren hooguit 40 zinnen. Met “Voortgang wissen” zijn ze weg.',
+      // "Zeg het samen" (src/lib/chorus.ts), the owner's request, 5 November 2026: only a count and a yes.
+      'Bij “Zeg het samen” zeg je de zin tegelijk met de stem. Dan neemt de app niets op. Je telefoon onthoudt alleen hoe vaak je na elkaar het inspreken overslaat (een getal), en of je de eerste spreekoefening al hebt gehad. Zo komt “Zeg het samen” als je het inspreken overslaat. Dit blijft op je telefoon of computer. Met “Voortgang wissen” is het weg.',
       'Bij de toets “Wat ken je al?” bewaart je telefoon je opnames, zodat je later “Jij toen” en “Jij nu” kunt horen. Ze blijven op je telefoon of computer. Met “Voortgang wissen” zijn ze weg.',
       '“Laat de telefoon luisteren (proef)” staat standaard uit. Zet je het aan? Dan gebruikt de app het alleen als je telefoon het Nederlands zelf kan herkennen, zonder internet. Er gaat geen geluid en geen tekst naar ons of naar anderen.',
     ],

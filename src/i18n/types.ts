@@ -267,7 +267,9 @@ export const uiEn = {
   speakPrompt: 'Listen, then say it',
   tapToSpeak: 'Tap and speak',
   stopRecording: 'Stop',
-  micPrivacy: 'Only you hear it. Nothing is sent.',
+  /** Under the microphone: "Niemand hoort je" first, and true (nothing leaves the phone; the
+   *  owner's request, 5 November 2026: learners who do not dare to speak). */
+  micPrivacy: 'Nobody else hears you. Nothing is sent.',
   micUnavailable: 'Microphone off. Say it out loud now, then go on.',
   /** Speaking on a device that cannot record at all: self-paced, nothing recorded. */
   sayAloud: 'No microphone needed. Say it out loud, then go on.',
@@ -296,10 +298,19 @@ export const uiEn = {
   thenNow: 'Then and now',
   /** Under "Toen en nu": the day of the first recording ({date}: "12 October", in each line's language). */
   thenNowFirst: 'Your first try: {date}',
+  /* "Zeg het samen" (src/lib/chorus.ts): before recording, the voice says it slowly and the learner
+     says it along (nothing recorded); then the microphone, "Nu alleen" (the owner's request, 5 November 2026). */
+  sayTogether: 'Say it together',
+  /** Under "Zeg het samen" (no microphone is used for it). */
+  chorusHint: 'Say it at the same time as the voice. Nothing is recorded.',
+  /** Over the microphone once "Zeg het samen" is done. */
+  chorusAlone: 'Now on your own',
+  /** Bram, once, at the first "Zeg het" (src/lib/chorus.ts braveDue). */
+  speakBrave: 'Mistakes are fine. Dutch people understand you, even with mistakes.',
   speakMe: 'Me',
   speakingPractice: 'Speaking practice',
   /** Since "Toen en nu" (5 November 2026) the first recording of a sentence is kept on the phone. */
-  speakingHint: 'Say words out loud and compare. Your first recording of a sentence stays on your phone, to compare later. It is never sent.',
+  speakingHint: 'Say words out loud and compare. Nobody else hears you: nothing is sent. Your first recording of a sentence stays on your phone, to compare later.',
   /* Offline per unit, the pocket card, text size. */
   savingOffline: 'Saving…',
   savedOffline: 'Saved offline',

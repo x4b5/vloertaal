@@ -235,7 +235,7 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'گوش کنید، بعد بگویید',
     tapToSpeak: 'لمس کنید و گپ بزنید',
     stopRecording: 'توقف',
-    micPrivacy: 'فقط خود شما می‌شنوید. هیچ چیزی فرستاده نمی‌شود.',
+    micPrivacy: "هیچ کس دیگر صدای شما را نمی‌شنود. هیچ چیزی فرستاده نمی‌شود.", // nieuw, nalezen
     micUnavailable: 'مایکروفون خاموش است. حالا آن را بلند بگویید، بعد ادامه بدهید.',
     cantSpeak: 'حالا نمی‌توانم گپ بزنم',
     soundsSame: 'مثل هم است',
@@ -243,9 +243,13 @@ const lang: HelpLanguageSource = {
     hearMine: 'صدای خود را بشنوید', // nieuw, nalezen
     thenNow: 'قبلاً و حالا', // nieuw, nalezen
     thenNowFirst: 'بار اول شما: {date}', // nieuw, nalezen
+    sayTogether: "با هم بگویید", // nieuw, nalezen
+    chorusHint: "همزمان با صدا بگویید. هیچ چیزی ثبت نمی‌شود.", // nieuw, nalezen
+    chorusAlone: "حالا فقط خود شما", // nieuw, nalezen
+    speakBrave: "اشتباه کردن مشکلی ندارد. هالندی‌ها گپ شما را با اشتباه هم می‌فهمند.", // nieuw, nalezen
     speakMe: 'من',
     speakingPractice: 'تمرین گپ زدن',
-    speakingHint: 'کلمه‌ها را بلند بگویید و مقایسه کنید. اولین ثبت صدای شما از هر جمله روی تلفن تان می‌ماند تا بعداً مقایسه کنید. هیچ وقت فرستاده نمی‌شود.', // nieuw, nalezen
+    speakingHint: "کلمه‌ها را بلند بگویید و مقایسه کنید. هیچ کس دیگر صدای شما را نمی‌شنود: هیچ چیزی فرستاده نمی‌شود. اولین ثبت صدای شما از هر جمله روی تلفن تان می‌ماند تا بعداً مقایسه کنید.", // nieuw, nalezen
     savingOffline: 'ذخیره می‌شود…',
     savedOffline: 'در تیلفون شما ذخیره شد', // nieuw, nalezen (AI-correctie 2 nov 2026)
     offlineNoSpace: 'جای کافی در این تیلفون نیست. یک موضوع ذخیره‌شده را پاک کنید یا جای خالی کنید.',

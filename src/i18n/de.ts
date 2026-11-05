@@ -235,7 +235,7 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Hör zu, dann sag es',
     tapToSpeak: 'Tippen und sprechen',
     stopRecording: 'Stopp',
-    micPrivacy: 'Nur du hörst es. Nichts wird geschickt.',
+    micPrivacy: "Niemand sonst hört dich. Nichts wird geschickt.", // nieuw, nalezen
     micUnavailable: 'Mikrofon aus. Sag es jetzt laut, dann mach weiter.',
     cantSpeak: 'Ich kann gerade nicht sprechen',
     soundsSame: 'Klingt gleich',
@@ -243,9 +243,13 @@ const lang: HelpLanguageSource = {
     hearMine: 'Hör dir zu', // nieuw, nalezen
     thenNow: 'Damals und jetzt', // nieuw, nalezen
     thenNowFirst: 'Dein erster Versuch: {date}', // nieuw, nalezen
+    sayTogether: "Sag es zusammen", // nieuw, nalezen
+    chorusHint: "Sag es gleichzeitig mit der Stimme. Nichts wird aufgenommen.", // nieuw, nalezen
+    chorusAlone: "Jetzt allein", // nieuw, nalezen
+    speakBrave: "Fehler sind okay. Niederländer verstehen dich auch mit Fehlern.", // nieuw, nalezen
     speakMe: 'Ich',
     speakingPractice: 'Sprechen üben',
-    speakingHint: 'Sag Wörter laut und vergleiche. Deine erste Aufnahme eines Satzes bleibt auf deinem Handy, zum späteren Vergleichen. Sie wird nie geschickt.', // nieuw, nalezen
+    speakingHint: "Sag Wörter laut und vergleiche. Niemand sonst hört dich: Nichts wird geschickt. Deine erste Aufnahme eines Satzes bleibt auf deinem Handy, zum späteren Vergleichen.", // nieuw, nalezen
     savingOffline: 'Wird gespeichert…',
     savedOffline: 'Offline gespeichert',
     offlineNoSpace: 'Nicht genug Platz auf diesem Handy. Entferne ein gespeichertes Thema oder mach Platz frei.',

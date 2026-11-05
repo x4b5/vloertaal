@@ -15,6 +15,7 @@ import { TEXT_SIZES, type TextSize } from './textSize';
 import { CALM_CHOICES, type CalmChoice } from './calm';
 import { isTempo, type Tempo } from './tempo';
 import { readPace, type PaceState } from './pace';
+import { SKIPS_KEEP } from './chorus';
 
 export interface LessonRecord {
   /** Best accuracy so far, 0–1. */
@@ -146,6 +147,14 @@ export interface Progress {
   noticesSeen?: string[];
   /** "Wil je ook de werkregels leren?" (src/lib/bridge.ts) was answered: it does not come back. On this phone only. */
   bridgeSeen?: true;
+  /**
+   * "Zeg het samen" (src/lib/chorus.ts): the first speaking exercise of a lesson was met, so Bram's
+   * "Fouten mogen" and the first "Zeg het samen" have been offered, once. On this phone only.
+   */
+  speakMet?: true;
+  /** "Zeg het samen": speaking exercises in a row ended with "Zeg het liever hardop" while the
+   *  microphone could record (a recording sets it back to none). On this phone only: not in the backup. */
+  speakSkips?: number;
 }
 
 /** What each track keeps for itself (Progress.parked). */
@@ -277,6 +286,8 @@ const FIELDS: { [K in keyof Progress]-?: Check<Progress[K]> } = {
   firstDay: day,
   noticesSeen: (v) => (Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : undefined),
   bridgeSeen: (v) => (v === true ? true : undefined),
+  speakMet: (v) => (v === true ? true : undefined),
+  speakSkips: (v) => (isCount(v) && v >= 1 ? Math.min(SKIPS_KEEP, Math.floor(v)) : undefined),
 };
 
 /** The fields asked for that can be read, each checked (FIELDS). */

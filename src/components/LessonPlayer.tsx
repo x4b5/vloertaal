@@ -50,6 +50,7 @@ import { MicIcon, SpeakExercise } from './Speaking';
 import { isWord, resetMicForLesson, speakingOn, speakSkipped } from '../lib/speaking';
 import { listenOn } from '../lib/listen';
 import { speakCardId } from '../lib/spaced';
+import type { SpeakEvent } from '../lib/chorus';
 import {
   type Answer,
   BuildExercise,
@@ -342,7 +343,7 @@ export function LessonPlayer(props: PlayerProps) {
   return <LessonRun {...props} />;
 }
 
-function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, fresh = false, sector, sayings, report = false, reportHint: explain = false, fast = false, easy = false, check: isCheck = false }: {
+function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats, startAt = 0, backSignal = 0, quiet = false, onQuiet, resumable = false, fresh = false, sector, sayings, report = false, reportHint: explain = false, fast = false, easy = false, check: isCheck = false, speakTogether, speakBrave, onSpeak }: {
   lesson: Lesson;
   review: boolean;
   /** Fixed exercise list (used by the screenshot harness); normally built from the lesson. */
@@ -386,6 +387,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): a test, so no hand that shows where to
    *  tap (it points at the right tile, and would give the first word away). */
   check?: boolean;
+  /** "Zeg het samen" before recording in this lesson's "Zeg het" (src/lib/chorus.ts chorusDue). */
+  speakTogether?: boolean;
+  /** Bram's one-time "Fouten mogen" at this lesson's "Zeg het" (src/lib/chorus.ts braveDue). */
+  speakBrave?: boolean;
+  /** What this lesson's "Zeg het" tells (met, skipped, recorded), kept on this phone (src/lib/chorus.ts). */
+  onSpeak?: (what: SpeakEvent) => void;
 }) {
   const persist = resumable && !exercises;
   // An interrupted run of this lesson (same review mode), less than two days old.
@@ -966,7 +973,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'snap': body = <SnapExercise key={key} ex={ex} {...props} />; break;
     // "Laat de telefoon luisteren (proef)": the Dutch course only (never Werkregels); src/lib/listen.ts.
     // "Toen en nu" (src/lib/firstVoice.ts): the lessons keep a sentence's first recording on the phone.
-    case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onRating={setSpeakRating} listen={!dutchUi(lang) && listenOn()} thenNow />; break;
+    // "Zeg het samen" and Bram's "Fouten mogen" (src/lib/chorus.ts): when the lesson says so.
+    case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onRating={setSpeakRating} listen={!dutchUi(lang) && listenOn()} together={speakTogether} brave={speakBrave} onSpeak={onSpeak} thenNow />; break;
     case 'scene': body = <SceneCard key={key} ex={ex} {...props} />; break;
     case 'rule': body = <RuleCard key={key} ex={ex} {...props} />; break;
     case 'truefalse': body = <TrueFalse key={key} ex={ex} {...props} />; break;
