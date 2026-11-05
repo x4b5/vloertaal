@@ -90,6 +90,8 @@ const coreUnits: Unit[] = [
         // "het uitzendbureau" (w.uitzendbureau, l.findwork), "de uren" (w.uren, l.contract),
         // "doorgeven" (w.doorgeven, l.privacy) and "de loonstrook" (w.loonstrook, l.payslip) are
         // already words of other lessons: here they come in the sentences, the chat and the tip.
+        // "verlengen" has a moving picture on its intro card only (`picture: 'motion'`, the second
+        // round, 5 November 2026): the contract's bar on a row of weeks grows past its old end.
         id: 'l.agency',
         title: 'Working through an agency',
         words: [
@@ -97,7 +99,7 @@ const coreUnits: Unit[] = [
           { id: 'w.intercedent', nl: 'de intercedent', en: 'the agency contact person', emoji: '🧑‍💼' },
           { id: 'w.urenbriefje', nl: 'het urenbriefje', en: 'the timesheet', emoji: '🗒️' },
           { id: 'w.opdracht', nl: 'de opdracht', en: 'the assignment (the job at a company)', emoji: '📋', picture: false },
-          { id: 'w.verlengen', nl: 'verlengen', en: 'to extend (make longer)', emoji: '⏩', picture: false },
+          { id: 'w.verlengen', nl: 'verlengen', en: 'to extend (make longer)', emoji: '⏩', picture: 'motion' },
           { id: 'w.uitbetalen', nl: 'uitbetalen', en: 'to pay out', emoji: '💰', picture: false },
         ],
         sentences: [
@@ -618,8 +620,11 @@ const coreTips: CultureTip[] = [
  * ---------------------------------------------------------------------------------------- */
 
 /** A word row; a fifth `false` marks an abstract word (no picture, see Word.picture). */
-/** The fifth field: `false` for an abstract word, or the picture's own look (Word.look). */
-type WordRow = [id: string, nl: string, en: string, emoji: string, picture?: false | 'hook' | { look: string }];
+/**
+ * The fifth field: `false` for an abstract word, `'hook'` for a memory picture, `'motion'` for a
+ * moving picture on the intro card only (Word.picture), or the picture's own look (Word.look).
+ */
+type WordRow = [id: string, nl: string, en: string, emoji: string, picture?: false | 'hook' | 'motion' | { look: string }];
 type Pair = [nl: string, en: string];
 /** A sentence; `alt`: other word orders that are also right when building it (Sentence.alt). */
 type SentenceRow = [nl: string, en: string, alt?: string[]];
@@ -627,7 +632,7 @@ type SentenceRow = [nl: string, en: string, alt?: string[]];
 const lesson = (slug: string, title: string, words: WordRow[], sentences: SentenceRow[], [q, a]: [Pair, Pair]): Lesson => ({
   id: `l.${slug}`,
   title,
-  words: words.map(([id, nl, en, emoji, picture]) => ({ id: `w.${id}`, nl, en, emoji, ...(picture === false || picture === 'hook' ? { picture } : picture ?? {}) })),
+  words: words.map(([id, nl, en, emoji, picture]) => ({ id: `w.${id}`, nl, en, emoji, ...(picture === false || picture === 'hook' || picture === 'motion' ? { picture } : picture ?? {}) })),
   sentences: sentences.map(([nl, en, alt], i) => ({ id: `s.${slug}.${i + 1}`, nl, en, ...(alt ? { alt } : {}) })),
   dialogues: [chat(line(`c.${slug}.q`, ...q), line(`c.${slug}.a`, ...a))],
 });
@@ -856,7 +861,7 @@ const socialUnit = unit('social', 'Getting along', 'Omgang met collega’s', '�
       ['feedback', 'de feedback', 'the feedback', '🗨️', false],
       ['uitleggen', 'uitleggen', 'to explain', '🧑‍🏫'],
       ['leren', 'leren', 'to learn', '📚'],
-      ['verbeteren', 'verbeteren', 'to improve, to correct', '🔧', false],
+      ['verbeteren', 'verbeteren', 'to improve, to correct', '🔧', 'motion'],
     ],
     [
       ['Sorry, ik heb een fout gemaakt.', 'Sorry, I made a mistake.'],
@@ -1068,7 +1073,7 @@ const laterUnits: Unit[] = [
         ['bericht', 'het bericht', 'the message', '✉️'],
         ['app', 'de app', 'the app', '📲'],
         ['reageren', 'reageren', 'to reply, to react', '↪️', false],
-        ['ruilen', 'ruilen', 'to swap', '🔄', false],
+        ['ruilen', 'ruilen', 'to swap', '🔄', 'motion'],
         ['kijken', 'kijken', 'to look, to check', '👀'],
         ['groet', 'de groet', 'the greeting (at the end of a message)', '💌', false],
       ],
@@ -1678,7 +1683,7 @@ const sectorUnits: Unit[] = [
       [
         ['privacy', 'de privacy', 'the privacy', '🤫', false],
         ['hygiene', 'de hygiëne', 'the hygiene', '🫧', false],
-        ['doorgeven', 'doorgeven', 'to pass on (information)', '📨', false],
+        ['doorgeven', 'doorgeven', 'to pass on (information)', '📨', 'motion'],
         ['geheim', 'geheim', 'secret', '🤐', false],
         ['toestemming', 'de toestemming', 'the permission', '👌', false],
         ['gevallen', 'gevallen', 'fallen', '🤕'],
@@ -2036,7 +2041,7 @@ const numbersUnit = unit('numbers', 'Time, money and measures', 'Rekenen: tijd, 
       ['kilo', 'de kilo', 'the kilo', '🏋️'],
       ['liter', 'de liter', 'the litre', '🥛'],
       ['meter', 'de meter', 'the metre', '📏'],
-      ['tellen', 'tellen', 'to count', '🔢', false],
+      ['tellen', 'tellen', 'to count', '🔢', 'motion'],
     ],
     [
       ['Het kost zes euro vijftig.', 'It costs six euros fifty.'],
@@ -2185,7 +2190,7 @@ const aiUnit = unit('ai', 'AI and smart apps', 'Slimme apps en AI', '🤖', '#5a
       ['mens', 'de mens', 'the human, the person', '🧑'],
       ['computer', 'de computer', 'the computer', '💻'],
       ['tempo', 'het tempo', 'the (work) speed', '⚡'],
-      ['automatisch', 'automatisch', 'automatic, by itself', '⚙️', false],
+      ['automatisch', 'automatisch', 'automatic, by itself', '⚙️', 'motion'],
       ['besluit', 'het besluit', 'the decision', '⚖️', false],
     ],
     [
@@ -2837,7 +2842,7 @@ const onlineUnit = unit('online', 'Online at work', 'Online op je werk', '💻',
     'login',
     'Logging in',
     [
-      ['uitloggen', 'uitloggen', 'to log out', '🚪', false],
+      ['uitloggen', 'uitloggen', 'to log out', '🚪', 'motion'],
       ['account', 'het account', 'the account', '👤', false],
       ['scherm', 'het scherm', 'the screen', '🖥️'],
       ['vergrendelen', 'vergrendelen', 'to lock (a screen or a phone)', '🔒'],
@@ -2921,7 +2926,7 @@ const entreeMore: Record<string, Lesson[]> = {
         ['beste', 'beste', 'dear (at the start of a letter or e-mail)', '👋', false],
         ['beleefd', 'beleefd', 'polite', '🎩', false],
         ['nalezen', 'nalezen', 'to read again (to check before you send it)', '🔍', false],
-        ['versturen', 'versturen', 'to send', '📤', false],
+        ['versturen', 'versturen', 'to send', '📤', 'motion'],
       ],
       [
         ['Wat zet ik bij het onderwerp?', 'What do I put as the subject?'],

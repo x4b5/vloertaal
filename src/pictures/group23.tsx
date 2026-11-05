@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Bubble, Dots, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Arrow, Bubble, Dots, Ground, Hand, Motion, Move, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 import { Bust } from './bust';
 
 /**
@@ -51,6 +51,35 @@ function Paper({ x, y, w, h, lines = 4 }: { x: number; y: number; w: number; h: 
       {Array.from({ length: lines }, (_, i) => (
         <path key={i} d={`M${x + 6} ${y + 9 + i * 8}H${x + w - (i % 2 ? 14 : 7)}`} stroke={PAL.line} strokeWidth="2.6" strokeLinecap="round" />
       ))}
+    </g>
+  );
+}
+
+/** A laptop on the table, its screen (22..98 x 20..74) left for the picture to draw on. */
+function Laptop() {
+  return (
+    <g>
+      <Ground cy={106} rx={50} ry={4} />
+      {/* Laptop: screen, then the base */}
+      <Shade color={PAL.slateDark} opacity={1} at={[110, 50, 10, 40]}>
+        <rect x="16" y="14" width="88" height="66" rx="7" fill={PAL.slate} />
+      </Shade>
+      <rect x="22" y="20" width="76" height="54" rx="3" fill={PAL.paper} />
+      <path d="M8 84H112L106 100H14Z" fill={PAL.mist} />
+      <path d="M8 84H112V86H8Z" fill={PAL.steel} />
+      <rect x="48" y="90" width="24" height="5" rx="2.5" fill={PAL.steel} />
+      <Shine d="M20 20Q20 16 24 16" opacity={0.4} />
+    </g>
+  );
+}
+
+/** Your account on a screen: a purple avatar circle centred on (x, y). */
+function Avatar({ x, y }: { x: number; y: number }) {
+  return (
+    <g>
+      <circle cx={x} cy={y} r="13" fill={PAL.purpleLight} />
+      <circle cx={x} cy={y - 4} r="5" fill={PAL.white} />
+      <path d={`M${x - 9} ${y + 8}Q${x} ${y - 1} ${x + 9} ${y + 8}`} fill={PAL.white} />
     </g>
   );
 }
@@ -160,28 +189,44 @@ export default {
     </g>
   ),
 
-  // "inloggen": a laptop showing your account (an avatar) and a green arrow going in at a door
+  // "inloggen": a laptop showing your account (an avatar) and a green arrow going in at a door.
+  // On the intro card (docs/tekenstijl.md "Beweging", second round, 5 November 2026) the door
+  // swings open and the arrow goes in: the account goes in.
   'w.inloggen': () => (
     <g>
-      <Ground cy={106} rx={50} ry={4} />
-      {/* Laptop: screen, then the base */}
-      <Shade color={PAL.slateDark} opacity={1} at={[110, 50, 10, 40]}>
-        <rect x="16" y="14" width="88" height="66" rx="7" fill={PAL.slate} />
-      </Shade>
-      <rect x="22" y="20" width="76" height="54" rx="3" fill={PAL.paper} />
-      <path d="M8 84H112L106 100H14Z" fill={PAL.mist} />
-      <path d="M8 84H112V86H8Z" fill={PAL.steel} />
-      <rect x="48" y="90" width="24" height="5" rx="2.5" fill={PAL.steel} />
+      <Laptop />
       {/* The account: an avatar circle */}
-      <circle cx="40" cy="47" r="13" fill={PAL.purpleLight} />
-      <circle cx="40" cy="43" r="5" fill={PAL.white} />
-      <path d="M31 55Q40 46 49 55" fill={PAL.white} />
+      <Avatar x={40} y={47} />
       {/* The door, open, with the arrow going in */}
       <rect x="70" y="28" width="22" height="38" rx="2" fill={PAL.slateDark} />
+      <Move kind="grow" grow={0.2}>
+        <path d="M70 28L80 32V70L70 66Z" fill={PAL.wood} />
+        <circle cx="77.5" cy="50" r="1.6" fill={PAL.yellow} />
+      </Move>
+      <Move kind="from" dx={-14}>
+        <Arrow from={[52, 47]} to={[88, 47]} color={PAL.green} width={7} head={11} />
+      </Move>
+    </g>
+  ),
+
+  // "uitloggen": to log out — the same laptop as "inloggen" (l.aiprivate), the other way round:
+  // the account (the avatar) has come out of the door, a red arrow pointing out. A moving picture
+  // (`picture: 'motion'`, docs/tekenstijl.md "Beweging", 5 November 2026): on the intro card the
+  // avatar and the arrow come out of the door. Standing still it would be one more laptop next to
+  // "het scherm" and "vergrendelen" of the same lesson, so it is only on the intro card.
+  'w.uitloggen': () => (
+    <g>
+      <Laptop />
+      {/* The doorway; the account comes out of it, behind the open door */}
+      <rect x="70" y="28" width="22" height="38" rx="2" fill={PAL.slateDark} />
+      <Move kind="from" dx={34}>
+        <Arrow from={[64, 47]} to={[46, 47]} color={PAL.red} width={7} head={11} />
+        <Avatar x={34} y={47} />
+      </Move>
       <path d="M70 28L80 32V70L70 66Z" fill={PAL.wood} />
       <circle cx="77.5" cy="50" r="1.6" fill={PAL.yellow} />
-      <Arrow from={[52, 47]} to={[88, 47]} color={PAL.green} width={7} head={11} />
-      <Shine d="M20 20Q20 16 24 16" opacity={0.4} />
+      {/* The screen's edge right of the door, over the arrow while it is still in the doorway */}
+      <rect x="92" y="20" width="6" height="54" fill={PAL.paper} />
     </g>
   ),
 

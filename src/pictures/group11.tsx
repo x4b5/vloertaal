@@ -1,5 +1,5 @@
 import type { JSX, ReactNode } from 'react';
-import { Arrow, Bubble, Clock, CurveArrow, Dots, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Arrow, Bubble, Clock, CurveArrow, Dots, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 11 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -502,13 +502,17 @@ export default {
     </g>
   ),
 
-  // "herhalen": to repeat — Bram says it again: a repeat loop in his speech bubble.
+  // "herhalen": to repeat — Bram says it again: a repeat loop in his speech bubble. On the intro
+  // card (docs/tekenstijl.md "Beweging", second round, 5 November 2026) the loop goes round once
+  // more (half a turn: the two arrows then lie where they started), so it is said once again.
   'w.herhalen': () => (
     <g>
       <Bust who="bram" x={36} y={120} scale={0.6} expr="pleased" talk />
       <Bubble x={54} y={8} w={58} h={50} tail="left">
-        <CurveArrow from={[68, 34]} to={[98, 32]} bend={14} color={PAL.sky} width={5.5} head={10} />
-        <CurveArrow from={[98, 36]} to={[68, 38]} bend={14} color={PAL.sky} width={5.5} head={10} />
+        <Move kind="turn" turn={-180} at={[83, 35]}>
+          <CurveArrow from={[68, 34]} to={[98, 32]} bend={14} color={PAL.sky} width={5.5} head={10} />
+          <CurveArrow from={[98, 36]} to={[68, 38]} bend={14} color={PAL.sky} width={5.5} head={10} />
+        </Move>
       </Bubble>
     </g>
   ),

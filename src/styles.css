@@ -1627,19 +1627,28 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
    sound, plays once (a tap on the card's speaker plays it again: a fresh picture), never loops
    and no step is shorter than 0.4 s: nothing flashes (WCAG 2.3.1). Turns are about a point in the
    picture (a knee, a clock's centre: transform-origin in its units, transform-box view-box);
-   growth is from the part's own left edge (fill-box). */
+   growth is from the part's own left edge (fill-box). The second round (the owner's "go on", 5
+   November 2026) adds a fall (drop: the timing of tip), a second step after the first (then: it
+   starts when "from" ends, so two steps take 3 s in all, each 1.2 s), a count in three stops
+   (steps: each held 0.6 s, a calm jump, never a flash) and a sag onto the part's bottom edge. */
 .word-pic .mv-turn, .word-pic .mv-tip { transform-box: view-box; }
 .word-pic .mv-grow { transform-box: fill-box; transform-origin: 0 50%; }
+.word-pic .mv-sag { transform-box: fill-box; transform-origin: 50% 100%; }
 .intro-card .word-pic .mv-from { animation: mv-slide 1.2s cubic-bezier(0.3, 0.6, 0.35, 1) 0.4s 1 backwards; }
 .intro-card .word-pic .mv-slow { animation: mv-slide 2s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 1 backwards; }
 .intro-card .word-pic .mv-fast { animation: mv-slide 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s 1 backwards; }
+.intro-card .word-pic .mv-drop { animation: mv-slide 0.7s cubic-bezier(0.55, 0, 0.7, 0.6) 0.8s 1 backwards; }
+.intro-card .word-pic .mv-then { animation: mv-slide 1.2s cubic-bezier(0.3, 0.6, 0.35, 1) 1.8s 1 backwards; }
+.intro-card .word-pic .mv-steps { animation: mv-slide 1.8s steps(3, jump-none) 0.4s 1 backwards; }
 .intro-card .word-pic .mv-turn { animation: mv-turn 1.4s ease-in-out 0.4s 1 backwards; }
 .intro-card .word-pic .mv-tip { animation: mv-turn 0.7s cubic-bezier(0.55, 0, 0.7, 0.6) 0.8s 1 backwards; }
 .intro-card .word-pic .mv-grow { animation: mv-grow 1.6s cubic-bezier(0.25, 0.6, 0.3, 1) 0.4s 1 backwards; }
+.intro-card .word-pic .mv-sag { animation: mv-sag 2s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 1 backwards; }
 .intro-card .word-pic .mv-show { animation: mv-show 0.5s ease-out 1.6s 1 backwards; }
 @keyframes mv-slide { from { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } }
 @keyframes mv-turn { from { transform: rotate(var(--mv-turn, 0deg)); } }
 @keyframes mv-grow { from { transform: scaleX(var(--mv-grow, 0.1)); } }
+@keyframes mv-sag { from { transform: scaleY(var(--mv-sag, 1.2)); } }
 @keyframes mv-show { from { opacity: 0; } }
 .word-emoji { display: inline-flex; align-items: center; justify-content: center; }
 

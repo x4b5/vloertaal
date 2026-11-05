@@ -1,7 +1,7 @@
 import { useId, type JSX, type ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import type { Emotion, Expr } from '../components/Faces';
-import { Arrow, Box, Bubble, CurveArrow, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Box, Bubble, CurveArrow, ExclaimMark, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle, type Pt } from './kit';
 import { Bust } from './bust';
 
 /**
@@ -126,6 +126,18 @@ function House({ x, y, w, wall = PAL.paper, roof = PAL.clay, roofShade = PAL.cla
       <path d={`M${x - 3} ${y - h + 2}L${x + w / 2} ${y - h - w * 0.5}L${x + w + 3} ${y - h + 2}Z`} fill={roof} stroke={roof} strokeWidth="3" strokeLinejoin="round" />
       <path d={`M${x + w / 2} ${y - h - w * 0.5}L${x + w + 3} ${y - h + 2}H${x + w / 2}Z`} fill={roofShade} />
       <rect x={x + w * 0.38} y={y - h * 0.55} width={w * 0.26} height={h * 0.55} rx="1.5" fill={PAL.wood} />
+    </g>
+  );
+}
+
+/**
+ * A joint drawn bent by `a` degrees around `at` (a knee, a hip). On the intro card it bends from
+ * straight into this pose (docs/tekenstijl.md "Beweging"): the Move turns it back by `a` first.
+ */
+function Bend({ a, at, children }: { a: number; at: Pt; children: ReactNode }) {
+  return (
+    <g transform={`rotate(${a} ${at[0]} ${at[1]})`}>
+      <Move kind="turn" turn={-a} at={at}>{children}</Move>
     </g>
   );
 }
@@ -452,21 +464,26 @@ export default {
     );
   },
 
-  // "ophalen": to pick up (go and get someone) — a parent and a child walk home hand in hand
+  // "ophalen": to pick up (go and get someone) — a parent and a child walk home hand in hand. On
+  // the intro card (docs/tekenstijl.md "Beweging", second round, 5 November 2026) Jada walks in
+  // from the left to the child at the daycare and takes its hand: she goes and gets it.
   'w.ophalen': () => (
     <g>
       <Ground cx={56} cy={106} rx={48} ry={4} />
       <House x={88} y={104} w={22} />
-      {/* The parent (Jada): legs mid-step, body, her hand down to the child's */}
-      <path d="M38 78L32 103M46 78L52 103" stroke={TROUSERS} strokeWidth="8.5" strokeLinecap="round" />
-      <ellipse cx="30" cy="104" rx="6" ry="3.2" fill={PAL.slateDark} />
-      <ellipse cx="55" cy="104" rx="6" ry="3.2" fill={PAL.slateDark} />
-      <path d="M32 48L30 66" stroke={SKIN.jada[1]} strokeWidth="7" strokeLinecap="round" />
-      <Shade color={PAL.yellowShade} opacity={1} at={[58, 64, 7, 24]}>
-        <rect x="30" y="44" width="26" height="38" rx="9" fill="#ffc929" />
-      </Shade>
-      <path d="M53 50Q62 62 64 74" fill="none" stroke={SKIN.jada[0]} strokeWidth="7" strokeLinecap="round" />
-      <Head who="jada" x={43} y={46} s={0.44} expr="pleased" />
+      <Move kind="from" dx={-40}>
+        {/* The parent (Jada): legs mid-step, body, her hand down to the child's */}
+        <path d="M38 78L32 103M46 78L52 103" stroke={TROUSERS} strokeWidth="8.5" strokeLinecap="round" />
+        <ellipse cx="30" cy="104" rx="6" ry="3.2" fill={PAL.slateDark} />
+        <ellipse cx="55" cy="104" rx="6" ry="3.2" fill={PAL.slateDark} />
+        <path d="M32 48L30 66" stroke={SKIN.jada[1]} strokeWidth="7" strokeLinecap="round" />
+        <Shade color={PAL.yellowShade} opacity={1} at={[58, 64, 7, 24]}>
+          <rect x="30" y="44" width="26" height="38" rx="9" fill="#ffc929" />
+        </Shade>
+        <path d="M53 50Q62 62 64 74" fill="none" stroke={SKIN.jada[0]} strokeWidth="7" strokeLinecap="round" />
+        <Head who="jada" x={43} y={46} s={0.44} expr="pleased" />
+        <circle cx="64" cy="75" r="4.6" fill={SKIN.jada[0]} />
+      </Move>
       {/* The child, a school bag on the back, its hand up in hers */}
       <path d="M70 92L68 103M77 92L79 103" stroke={PAL.steel} strokeWidth="6" strokeLinecap="round" />
       <ellipse cx="67" cy="104" rx="4.6" ry="2.6" fill={PAL.slateDark} />
@@ -474,9 +491,10 @@ export default {
       <rect x="78" y="72" width="10" height="16" rx="3" fill={PAL.red} />
       <rect x="65" y="70" width="17" height="24" rx="6" fill={PAL.sky} />
       <path d="M67 74L64 76" stroke={SKIN.amina[0]} strokeWidth="5.6" strokeLinecap="round" />
-      <circle cx="64" cy="75" r="4.6" fill={SKIN.jada[0]} />
       <ChildHead x={73} y={60} r={10} skin={SKIN.amina} hair="#2e201a" />
-      <Motion x={20} y={66} dir={180} spread={50} len={7} gap={2} />
+      <Move kind="show">
+        <Motion x={20} y={66} dir={180} spread={50} len={7} gap={2} />
+      </Move>
     </g>
   ),
 
@@ -775,7 +793,10 @@ export default {
     </g>
   ),
 
-  // "sorteren": to sort — Jada puts the red tomatoes in one crate and the green ones in the other
+  // "sorteren": to sort — Jada puts the red tomatoes in one crate and the green ones in the other.
+  // On the intro card (docs/tekenstijl.md "Beweging", second round, 5 November 2026) the two
+  // tomatoes go out from her hands, the red one to the left and the green one to the right, and
+  // the arrows come when they are there.
   'w.sorteren': () => (
     <g>
       <Bust who="jada" x={60} y={84} scale={0.5} expr="thinking" bold />
@@ -789,10 +810,16 @@ export default {
         <Tomato x={88} y={76} r={6} ripe={false} />
         <Tomato x={100} y={76} r={6} ripe={false} />
       </Crate>
-      <CurveArrow from={[44, 56]} to={[28, 66]} bend={8} color={PAL.sky} width={5} head={9} />
-      <CurveArrow from={[76, 56]} to={[92, 66]} bend={-8} color={PAL.sky} width={5} head={9} />
-      <Tomato x={20} y={48} r={7} />
-      <Tomato x={100} y={48} r={7} ripe={false} />
+      <Move kind="show">
+        <CurveArrow from={[44, 56]} to={[28, 66]} bend={8} color={PAL.sky} width={5} head={9} />
+        <CurveArrow from={[76, 56]} to={[92, 66]} bend={-8} color={PAL.sky} width={5} head={9} />
+      </Move>
+      <Move kind="from" dx={30} dy={14}>
+        <Tomato x={20} y={48} r={7} />
+      </Move>
+      <Move kind="from" dx={-30} dy={14}>
+        <Tomato x={100} y={48} r={7} ripe={false} />
+      </Move>
     </g>
   ),
 
@@ -875,24 +902,45 @@ export default {
     </g>
   ),
 
-  // "bukken": to bend down — Amina bends over at the waist to reach a low plant
+  // "bukken": to bend down — the safe way (the owner's "go on", 5 November 2026; until then Amina
+  // bent over at the waist with straight legs, the way that hurts your back): Amina, seen from the
+  // side, squats with her knees bent and her back straight, and her hand reaches the low plant. On
+  // the intro card (docs/tekenstijl.md "Beweging") she goes down from standing: the figure of
+  // "tillen" (group4) the other way round, each joint bending from straight (Bend).
   'w.bukken': () => (
     <g>
-      <Ground cx={56} cy={106} rx={48} ry={4} />
-      {/* Low plant */}
-      <Plant x={22} y={104} h={26} />
-      {/* Legs */}
-      <path d="M78 64L80 102M70 66L68 102" stroke={TROUSERS} strokeWidth="10" strokeLinecap="round" />
-      <ellipse cx="84" cy="103" rx="7" ry="3.4" fill={PAL.slateDark} />
-      <ellipse cx="72" cy="103" rx="7" ry="3.4" fill={PAL.slateDark} />
-      {/* Body bent forward */}
-      <path d="M76 62L46 54" stroke={PAL.green} strokeWidth="22" strokeLinecap="round" />
-      <path d="M78 70L50 64" stroke={PAL.greenShade} strokeWidth="8" strokeLinecap="round" opacity=".7" />
-      {/* Arm reaching down to the plant */}
-      <path d="M48 56L36 88" stroke="#2f8f3e" strokeWidth="8" strokeLinecap="round" />
-      <circle cx="34" cy="92" r="5" fill={SKIN.amina[0]} />
-      <Head who="amina" x={40} y={52} s={0.4} rot={-70} expr="neutral" />
-      <Arrow from={[14, 28]} to={[14, 62]} color={PAL.sky} width={5} head={9} />
+      <Ground cx={64} cy={105} rx={40} ry={3.5} />
+      <Plant x={90} y={104} h={22} />
+      <Move kind="show">
+        <Arrow from={[18, 30]} to={[18, 62]} color={PAL.sky} width={5} head={9} />
+      </Move>
+      {/* Ankle → shin → knee → thigh → hip → back → neck and head; and the arm */}
+      <Bend a={60} at={[52, 100]}>
+        <path d="M52 100L52 80" stroke={TROUSERS} strokeWidth="11" strokeLinecap="round" />
+        <Bend a={-145} at={[52, 80]}>
+          <Bend a={125} at={[52, 60]}>
+            <Bend a={-25} at={[52, 34]}>
+              <path d="M52 26V36" stroke={SKIN.amina[1]} strokeWidth="8" strokeLinecap="round" />
+              <Head who="amina" x={52} y={34.4} s={0.34} expr="neutral" />
+            </Bend>
+            <Shade color={PAL.greenShade} opacity={1} at={[64, 48, 6, 22]}>
+              <rect x="42" y="31" width="20" height="33" rx="9" fill={PAL.green} />
+            </Shade>
+            <Bend a={-70} at={[54, 40]}>
+              <path d="M54 40L54 62" stroke="#2f8f3e" strokeWidth="8" strokeLinecap="round" />
+              <circle cx="54" cy="65" r="4.6" fill={SKIN.amina[0]} />
+            </Bend>
+          </Bend>
+        </Bend>
+      </Bend>
+      {/* The thigh once more, on top (the same joints): squatting, it lies in front of the body */}
+      <Bend a={60} at={[52, 100]}>
+        <Bend a={-145} at={[52, 80]}>
+          <path d="M52 80L52 63" stroke={TROUSERS} strokeWidth="12" strokeLinecap="round" />
+        </Bend>
+      </Bend>
+      {/* The shoe stays on the floor */}
+      <rect x="47" y="98" width="20" height="8" rx="4" fill={PAL.slateDark} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

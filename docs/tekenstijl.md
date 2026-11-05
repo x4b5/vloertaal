@@ -94,7 +94,7 @@ The limits:
 - **Only on the intro card**, where the word is first taught. In a picture choice, a match, the
   path, the pocket cards and the lists the same picture stands still (styles.css: only a rule under
   `.intro-card` animates).
-- **Short and once**: 0.5–2 s, it plays once and starts just after the word's sound (0.4 s). A tap on
+- **Short and once**: 0.4–2 s per movement, it plays once and starts just after the word's sound (0.4 s). A tap on
   the card's speaker says the word again and plays the movement again: no extra button (max. 3).
   No loop, at most two plays in a row, no step shorter than 0.4 s, no flashing (WCAG 2.3.1).
 - **It ends on a meaningful still picture**, and that still picture is the picture everywhere
@@ -104,10 +104,18 @@ The limits:
   animated by `@keyframes` in styles.css with only a `from` frame. No SVG `<animate>` (SMIL), no
   `requestAnimationFrame`. So with the phone's "less motion" and with "Rustig scherm" (both:
   `animation: none !important`) nothing moves and the still picture is all there is.
-- The kinds: `from` / `slow` / `fast` (slide in from `dx`, `dy`: 1.2 s, 2 s, 0.5 s), `turn` and `tip`
-  (turn `turn` degrees back into place around the point `at`, in picture units: 1.4 s, or 0.7 s
-  speeding up as a fall), `grow` (from its left edge, 1.6 s), `show` (fades in at the end: a tick, a
-  mark). A joint chain nests: ankle → knee → hip → shoulder (see "tillen").
+- The kinds: `from` / `slow` / `fast` (slide in from `dx`, `dy`: 1.2 s, 2 s, 0.5 s), `drop` (a
+  slide speeding up, 0.7 s: with `tip` it makes one fall, see "vallen"), `then` (the slide of `from`,
+  but after it: a second step, see "voordoen"), `steps` (a slide in three stops of 0.6 s: counting,
+  see "tellen"), `turn` and `tip` (turn `turn` degrees back into place around the point `at`, in
+  picture units: 1.4 s, or 0.7 s speeding up as a fall), `grow` (from its left edge, 1.6 s), `sag`
+  (sinks onto its bottom edge from `grow` times its height, 2 s: see "lek"), `show` (fades in at the
+  end: a tick, a mark). A joint chain nests: ankle → knee → hip → shoulder (see "tillen"). A pose
+  that is bent in the still picture bends from straight with `Bend` (group24, see "bukken"); a
+  part that goes round another (two shift cards swapping) turns around the middle and back around
+  its own centre (`Arc`, group36, see "ruilen").
+- At most two steps one after the other (`from`, then `then` or `show`): the whole picture is still
+  within 3 s.
 - An abstract word whose still picture says too little gets `picture: 'motion'`: the picture is on
   its intro card only, never in a picture choice or a match (like `'hook'`).
 
@@ -118,6 +126,37 @@ afmaken), langzaam and snel (one slide: 2 s for the snail, 0.5 s for the shoe; e
 still picture so the two stay apart in a picture choice) and te laat (the hands run on from 8:00,
 Bram comes in, as on "op tijd"). Measure whether pairs are mixed up less often, and ask learners who
 read little whether the movement helps or distracts, before more words move.
+
+The second round (the owner's "go on", 5 November 2026; the same limits):
+
+| Group | Word | What moves |
+|---|---|---|
+| Body | vallen | Bram drops in from above and tips over backwards (`drop` + `tip`); "gevallen" stays still |
+| Body | bukken | redrawn the safe way (knees bent, back straight, no longer bent over at the waist): Amina goes down from standing to a squat at the low plant |
+| A to B | inklokken / uitklokken | the card goes to the time clock, then the badge's arrow goes in at the door (or out of it) |
+| A to B | inloggen | the door swings open and the arrow goes in |
+| A to B | uitloggen (`'motion'`) | the same laptop: the account (avatar) and a red arrow come out of the door |
+| A to B | ruilen (`'motion'`) | Bram's and Jada's shift cards (sun, moon) change places, one over the top, one underneath |
+| A to B | versturen (`'motion'`) | the envelope leaves the laptop's screen to the top right |
+| A to B | doorgeven (`'motion'`) | a note goes from Jada's hand to Henk's |
+| A to B | sorteren | the red tomato goes left, the green one right, from Jada's hands |
+| A to B | ophalen | Jada walks in from the left to the child at the daycare and takes its hand |
+| A becomes B | uitzetten | the finger comes to the button, then the lit screen goes dark (one fade) |
+| A becomes B | automatisch (`'motion'`) | a sliding door opens with nobody near it |
+| A becomes B | verbeteren (`'motion'`) | the pen comes to the wrong row; the cross becomes a tick |
+| A becomes B | lek | the tyre sinks onto its flat bottom, the rim with it; then the hiss lines |
+| A becomes B | mengen | the two bottles tip over the bucket, then the streams and the cross (no cloud: it would look like "de damp" of the same lesson) |
+| Time, order | eerst / daarna (`'motion'`) | a list of two jobs: the hand comes to the top one and it gets its tick / the hand goes on down to the bottom one and it gets its tick |
+| Time, order | voordoen (`'motion'`) | Henk puts a box on his stack, then Jada does the same (`then`) |
+| Time, order | verlengen (`'motion'`) | the contract's bar on a row of weeks grows past its old end (dashed) |
+| Time, order | tellen (`'motion'`) | a finger taps three boxes one by one (`steps`) |
+| Time, order | herhalen | the loop in Bram's speech bubble goes round once more |
+
+Left out: "beginnen" (a start button on a machine, not the scene of "uitzetten"; a machine
+starting would say more than "to start" your shift). In every `'motion'` word the still picture
+would say too little or look like another word of its lesson, so it never stands in a picture
+choice; the people in those pictures are cast heads, not busts, so the word's voice stays the
+same (`pictureCast`).
 
 ## Template
 

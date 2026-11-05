@@ -141,17 +141,20 @@ function DoorBadge({ x, y, r, out }: { x: number; y: number; r: number; out: boo
       <circle cx={x} cy={y} r={r} fill={color} />
       <g transform={`translate(${x} ${y}) scale(${k})`}>
         <path d="M2 -11H10Q12 -11 12 -9V9Q12 11 10 11H2" fill="none" stroke={PAL.white} strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" />
-        {out ? (
-          <>
-            <path d="M4 0H-9" stroke={PAL.white} strokeWidth="3.8" strokeLinecap="round" />
-            <path d="M-6 -6L-13 0L-6 6" fill="none" stroke={PAL.white} strokeWidth="3.8" strokeLinecap="round" strokeLinejoin="round" />
-          </>
-        ) : (
-          <>
-            <path d="M-13 0H0" stroke={PAL.white} strokeWidth="3.8" strokeLinecap="round" />
-            <path d="M-3 -6L4 0L-3 6" fill="none" stroke={PAL.white} strokeWidth="3.8" strokeLinecap="round" strokeLinejoin="round" />
-          </>
-        )}
+        {/* On the intro card the arrow goes in at (or out of) the door once the card is at the clock */}
+        <Move kind="then" dx={out ? 9 : -9}>
+          {out ? (
+            <>
+              <path d="M4 0H-9" stroke={PAL.white} strokeWidth="3.8" strokeLinecap="round" />
+              <path d="M-6 -6L-13 0L-6 6" fill="none" stroke={PAL.white} strokeWidth="3.8" strokeLinecap="round" strokeLinejoin="round" />
+            </>
+          ) : (
+            <>
+              <path d="M-13 0H0" stroke={PAL.white} strokeWidth="3.8" strokeLinecap="round" />
+              <path d="M-3 -6L4 0L-3 6" fill="none" stroke={PAL.white} strokeWidth="3.8" strokeLinecap="round" strokeLinejoin="round" />
+            </>
+          )}
+        </Move>
       </g>
     </g>
   );
@@ -162,27 +165,37 @@ function DoorBadge({ x, y, r, out }: { x: number; y: number; r: number; out: boo
  * with an arrow into (green) or out of (red) a door. The two are built the other way round so
  * they differ at a glance: clocking in has the clock on the left at 8:00 and the green badge on
  * the right; clocking out has the clock on the right at 5:00 and the red badge on the left.
+ * On the intro card (docs/tekenstijl.md "Beweging", second round, 5 November 2026) the hand
+ * brings the card to the clock, and then the badge's arrow goes in at the door (or out of it).
  */
 function ClockingScene({ out }: { out: boolean }) {
   const color = out ? PAL.red : PAL.ok;
   return out ? (
     <g>
       <TimeClock x={64} y={30} s={0.95} card={false} hour={5} />
-      <Motion x={88} y={88} dir={180} spread={60} n={3} len={6} gap={18} color={color} width={3.2} />
-      <g transform="rotate(8 56 84)">
-        <StaffCard x={56} y={72} w={34} h={22} who="bram" />
-      </g>
-      <Hand pose="hold" x={52} y={106} rotate={60} scale={0.72} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} mirror />
+      <Move kind="show">
+        <Motion x={88} y={88} dir={180} spread={60} n={3} len={6} gap={18} color={color} width={3.2} />
+      </Move>
+      <Move kind="from" dx={-34} dy={16}>
+        <g transform="rotate(8 56 84)">
+          <StaffCard x={56} y={72} w={34} h={22} who="bram" />
+        </g>
+        <Hand pose="hold" x={52} y={106} rotate={60} scale={0.72} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} mirror />
+      </Move>
       <DoorBadge x={34} y={34} r={26} out />
     </g>
   ) : (
     <g>
       <TimeClock x={8} y={30} s={0.95} card={false} hour={8} />
-      <Motion x={32} y={88} dir={0} spread={60} n={3} len={6} gap={18} color={color} width={3.2} />
-      <g transform="rotate(-8 64 84)">
-        <StaffCard x={24} y={72} w={34} h={22} who="amina" />
-      </g>
-      <Hand pose="hold" x={62} y={106} rotate={-60} scale={0.72} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <Move kind="show">
+        <Motion x={32} y={88} dir={0} spread={60} n={3} len={6} gap={18} color={color} width={3.2} />
+      </Move>
+      <Move kind="from" dx={34} dy={16}>
+        <g transform="rotate(-8 64 84)">
+          <StaffCard x={24} y={72} w={34} h={22} who="amina" />
+        </g>
+        <Hand pose="hold" x={62} y={106} rotate={-60} scale={0.72} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      </Move>
       <DoorBadge x={86} y={34} r={26} out={false} />
     </g>
   );
@@ -317,30 +330,43 @@ const pictures: Record<string, () => JSX.Element> = {
     </g>
   ),
 
-  // "mengen": to mix — two cleaning bottles poured together into one bucket (and a red warning cross)
+  // "mengen": to mix — two cleaning bottles poured together into one bucket (and a red warning
+  // cross). On the intro card (docs/tekenstijl.md "Beweging", second round, 5 November 2026) the
+  // two bottles tip over the bucket, and then the streams and the cross come: two products
+  // together, no. No cloud rising from the bucket: it would look like "de damp" of the same lesson.
   'w.mengen': () => (
     <g>
       <Ground cx={60} cy={106} rx={26} ry={4} />
       {/* Streams meeting in the bucket */}
-      <path d="M34 44Q50 50 56 72" fill="none" stroke={PAL.sky} strokeWidth="5" strokeLinecap="round" />
-      <path d="M86 44Q70 50 64 72" fill="none" stroke={PAL.leaf} strokeWidth="5" strokeLinecap="round" />
+      <Move kind="show">
+        <path d="M34 44Q50 50 56 72" fill="none" stroke={PAL.sky} strokeWidth="5" strokeLinecap="round" />
+        <path d="M86 44Q70 50 64 72" fill="none" stroke={PAL.leaf} strokeWidth="5" strokeLinecap="round" />
+      </Move>
       <Bucket x={60} y={104} s={0.95} color={PAL.mist} shade={PAL.steel} />
-      <ellipse cx="60" cy="75.5" rx="13" ry="2.6" fill={PAL.green} opacity=".7" />
+      <Move kind="show">
+        <ellipse cx="60" cy="75.5" rx="13" ry="2.6" fill={PAL.green} opacity=".7" />
+      </Move>
       {/* Left bottle, tipped to the right */}
-      <g transform="rotate(62 26 44)">
-        <rect x="14" y="28" width="24" height="36" rx="7" fill={PAL.blue} />
-        <rect x="30" y="28" width="8" height="36" rx="4" fill={PAL.blueShade} />
-        <rect x="20" y="20" width="12" height="10" rx="2" fill={PAL.paper} />
-        <rect x="18" y="40" width="16" height="12" rx="2" fill={PAL.white} />
-      </g>
+      <Move kind="turn" turn={-62} at={[26, 44]}>
+        <g transform="rotate(62 26 44)">
+          <rect x="14" y="28" width="24" height="36" rx="7" fill={PAL.blue} />
+          <rect x="30" y="28" width="8" height="36" rx="4" fill={PAL.blueShade} />
+          <rect x="20" y="20" width="12" height="10" rx="2" fill={PAL.paper} />
+          <rect x="18" y="40" width="16" height="12" rx="2" fill={PAL.white} />
+        </g>
+      </Move>
       {/* Right bottle, tipped to the left */}
-      <g transform="rotate(-62 94 44)">
-        <rect x="82" y="28" width="24" height="36" rx="7" fill={PAL.yellow} />
-        <rect x="98" y="28" width="8" height="36" rx="4" fill={PAL.yellowShade} />
-        <rect x="88" y="20" width="12" height="10" rx="2" fill={PAL.paper} />
-        <rect x="86" y="40" width="16" height="12" rx="2" fill={PAL.white} />
-      </g>
-      <Cross x={60} y={20} r={12} />
+      <Move kind="turn" turn={62} at={[94, 44]}>
+        <g transform="rotate(-62 94 44)">
+          <rect x="82" y="28" width="24" height="36" rx="7" fill={PAL.yellow} />
+          <rect x="98" y="28" width="8" height="36" rx="4" fill={PAL.yellowShade} />
+          <rect x="88" y="20" width="12" height="10" rx="2" fill={PAL.paper} />
+          <rect x="86" y="40" width="16" height="12" rx="2" fill={PAL.white} />
+        </g>
+      </Move>
+      <Move kind="show">
+        <Cross x={60} y={20} r={12} />
+      </Move>
     </g>
   ),
 
@@ -570,11 +596,13 @@ const pictures: Record<string, () => JSX.Element> = {
   ),
 
   // "inklokken": to clock in — a hand holds the card to the time clock (8:00, on the left); a big
-  // green badge on the right, arrow into a door
+  // green badge on the right, arrow into a door. On the intro card the card goes to the clock and
+  // the arrow goes in (ClockingScene).
   'w.inklokken': () => <ClockingScene out={false} />,
 
   // "uitklokken": to clock out — the other way round: the clock (5:00) on the right, the card from
-  // the left, a big red badge with the arrow going out of the door
+  // the left, a big red badge with the arrow going out of the door. On the intro card: the same,
+  // with the arrow going out.
   'w.uitklokken': () => <ClockingScene out />,
 
   // "op tijd": on time — Bram arrives as the clock shows exactly the start time; green tick
