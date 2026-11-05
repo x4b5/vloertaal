@@ -370,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Mniej więcej tak samo', // nieuw, nalezen
     toetsMoreAll: 'Wszystko razem: teraz znasz więcej niż wtedy.', // nieuw, nalezen
     toetsSameAll: 'Wszystko razem: mniej więcej tak samo jak wtedy.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Najpierw 5 pytań o ciebie. Nie ma dobrych ani złych odpowiedzi.', // nieuw, nalezen
+    toetsDurfAsk: 'Czy odważysz się na to?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Powiedzieć, że czegoś nie rozumiesz', // nieuw, nalezen
+    toetsDurfBoss: 'Zapytać o coś przełożonego', // nieuw, nalezen
+    toetsDurfHelp: 'Poprosić o pomoc', // nieuw, nalezen
+    toetsDurfUnsafe: 'Powiedzieć, że coś nie jest bezpieczne', // nieuw, nalezen
+    toetsDurfBreak: 'Porozmawiać chwilę z kimś z pracy w przerwie', // nieuw, nalezen
+    toetsDurfNotYet: 'Jeszcze nie', // nieuw, nalezen
+    toetsDurfABit: 'Trochę', // nieuw, nalezen
+    toetsDurfYes: 'Tak', // nieuw, nalezen
+    toetsDurfAgain: 'Za kilka tygodni zapytamy jeszcze raz.', // nieuw, nalezen
     tempo: 'Tempo', // nieuw, nalezen
     tempoCalm: 'Spokojnie', // nieuw, nalezen
     tempoNormal: 'Normalnie', // nieuw, nalezen

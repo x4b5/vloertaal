@@ -144,7 +144,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   // real screen, it reads this browser's save (vloertaal:v1) for the help language; without a save
   // only "Opnieuw beginnen" shows.
   if (shot === 'bootfailed') return <BootFailed />;
-  // "Wat ken je al?": /?shot=toets&state=offer|offer-eind|question&at=N|speak|result-instap|result-eind|page (src/dev/ToetsShot.tsx).
+  // "Wat ken je al?": /?shot=toets&state=offer|offer-eind|durf&at=N|question&at=N|speak|result-instap|result-eind|page (src/dev/ToetsShot.tsx).
   if (shot === 'toets') return <ToetsShot lang={lang} gender={gender} />;
   // "Laat zien hoe het gaat" (the coach card): /?shot=kaart&state=full|start|new (see KaartShot);
   // &name=Amina%20Yusuf (name=ask: asked first; name=none, the default: without a name). &lang=nl: Werkregels.

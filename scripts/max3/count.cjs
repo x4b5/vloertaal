@@ -709,6 +709,13 @@ function defineStates(LANG) {
   add('toets:offer-eind-page', shot('toets&state=offer-eind-page'), null, { expect: '.toets-offer-page .toets-offer-eind .toets-do' });
   add('toets:offer-open', shot('toets&state=offer'), async (p) => { await tap(p, '.toets-line-home'); await settle(p); }, { expect: '.toets-offer-page .chrome-back' });
   add('toets:offer-later', shot('toets&state=offer'), async (p) => { await tap(p, '.toets-line-home'); await settle(p); await tap(p, '.toets-later'); await settle(p); }, { expect: '.home3:not(:has(.toets-line-home)) .bay-now' });
+  // "Durf je dit?" (5 November 2026): five screens before the questions, three faces each (the
+  // speaker and the help language's read-aloud are not counted). 0 has the line "Eerst 5 vragen".
+  add('toets:durf', shot('toets&state=durf&at=0'), null, { voices: true, expect: '.toets-durf .toets-durf-intro ~ .toets-durf-faces' });
+  add('toets:durf-last', shot('toets&state=durf&at=4'), null, { voices: true, expect: '.toets-durf:not(:has(.toets-durf-intro)) .toets-durf-face' });
+  // A tap is the answer: the face shows as picked for a moment, then the next screen (2 of 5).
+  add('toets:durf-next', shot('toets&state=durf&at=1'), async (p) => { await tap(p, '.toets-durf-face', 1); await settle(p, 700); }, { expect: '.toets-durf .toets-durf-face:not(.is-picked)' });
+  add('toets:durf-end', shot('toets&state=durf&at=0&moment=eind'), null, { expect: '.toets-durf .toets-durf-faces' });
   // Form 2 (21 questions): 0–4 listen, 5–6 build by ear, 7–11 words, 12–13 dictation, 14–18 chat,
   // 19–20 build; every question with the small link "Ik weet het niet" (.toets-idk, not counted).
   add('toets:listen', shot('toets&state=question&at=0'), null, { expect: '.toets-listen .choice' });
@@ -725,7 +732,13 @@ function defineStates(LANG) {
   add('toets:result-instap', shot('toets&state=result-instap'), null, { expect: '.toets-parts' });
   add('toets:result-eind', shot('toets&state=result-eind'), null, { expect: '.toets-voices' });
   add('toets:result-eind-growth', shot('toets&state=result-eind'), null, { expect: '.toets-growth-all' });
+  // "Durf je dit?" on the results: then and now after the end (a row per question, no taps);
+  // after the start one line; an end after a start without it (&old=1) shows nothing of it.
+  add('toets:result-eind-durf', shot('toets&state=result-eind'), null, { expect: '.toets-durf-result .toets-durf-row' });
+  add('toets:result-instap-durf', shot('toets&state=result-instap'), null, { expect: '.toets-durf-later' });
+  add('toets:result-eind-old', shot('toets&state=result-eind&old=1'), null, { expect: '.toets-result:not(:has(.toets-durf-result)) .toets-parts' });
   add('toets:page', shot('toets&state=page'), null, { expect: '.toets-page .chrome-back' });
+  add('toets:page-durf', shot('toets&state=page'), null, { expect: '.toets-page .toets-durf-row' });
   // "Laat zien hoe het gaat" (the coach card, Settings › Taal en ik): the card with Bewaar of deel and
   // Naam wijzigen; a new learner's; and the name asked first (as on the certificate).
   add('kaart:full', shot('kaart&name=Ali%20Hassan'), null, { expect: '.kaart-img' });
@@ -749,12 +762,16 @@ function defineStates(LANG) {
   add('flow:toets-page', '/', toToetsPage, { expect: '.toets-offer-page .toets-do' });
   add('flow:toets-page-back', '/', async (p) => { await toToetsPage(p); await tap(p, '.chrome-back'); await settle(p, 900); }, { expect: '.home3 .toets-line-home' });
   add('flow:toets-page-phone-back', '/', async (p) => { await toToetsPage(p); await p.goBack(); await settle(p, 900); }, { expect: '.home3 .toets-line-home' });
-  add('flow:toets-start', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-listen' });
+  // Since 5 November 2026 the test starts with "Durf je dit?" (five screens, a face each), then
+  // the first listening question.
+  const durfThrough = async (p) => { for (let i = 0; i < 5; i++) { await tap(p, '.toets-durf-face', i % 3); await settle(p, 700); } };
+  add('flow:toets-start', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); }, { expect: '.toets-player .toets-durf .toets-durf-intro' });
+  add('flow:toets-durf-through', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); await durfThrough(p); }, { expect: '.toets-player .toets-listen .choice' });
   // Out of the test (✕, Stop): the home, not the offer's page (the test took its place).
   add('flow:toets-quit', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); await tap(p, '.player-top .lesson-close'); await settle(p, 600); const stop = p.locator('.sheet-stop').filter({ visible: true }); if (await stop.count()) { await stop.first().click(); await settle(p, 900); } }, { expect: '.home3 .toets-line-home' });
   add('flow:toets-later', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-later'); await settle(p, 900); }, { expect: '.home3:not(:has(.toets-line-home)) .bay-now' });
   // "Ik weet het niet" goes on to the next question (the second listening question).
-  add('flow:toets-idk', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); await tap(p, '.toets-idk'); await settle(p, 700); }, { expect: '.toets-player .toets-listen .choice' });
+  add('flow:toets-idk', '/', async (p) => { await toToetsPage(p); await tap(p, '.toets-do'); await settle(p, 900); await durfThrough(p); await tap(p, '.toets-idk'); await settle(p, 700); }, { expect: '.toets-player .toets-listen .choice' });
   // With words due on the home as well ([Herhaal vandaag] [1.2] [Ander onderwerp]) the line waits.
   add('flow:toets-no-room', '/', (p) => realHome(p, { ...afterFirst, cards: { 'w.hallo': { box: 1, due: '2000-01-01' }, 'w.ja': { box: 1, due: '2000-01-01' } } }), { expect: '.home3:not(:has(.toets-line-home)) .daily-due' });
   // "Laat de telefoon luisteren (proef)" (src/lib/listen.ts), with a mocked on-device API

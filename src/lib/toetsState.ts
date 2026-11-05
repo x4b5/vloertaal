@@ -1,4 +1,4 @@
-import { TOETS_PARTS, type ToetsPart, type ToetsVersion } from '../content/toets';
+import { TOETS_DURF, TOETS_PARTS, type DurfAnswer, type DurfId, type ToetsPart, type ToetsVersion } from '../content/toets';
 
 /**
  * What the progress keeps of "Wat ken je al?" (src/content/toets.ts): per moment the day, the
@@ -12,6 +12,10 @@ import { TOETS_PARTS, type ToetsPart, type ToetsVersion } from '../content/toets
  * so nothing has to be moved: a run of form 1 (18 picks, no "Ik weet het niet") has none of them
  * and is read as `mc = of`, `wrong = of - right`, `idk = 0` (runTally), and an older app that
  * reads a run of form 2 keeps its day, version, right and of (it skips what it does not know).
+ *
+ * "Durf je dit?" (5 November 2026, src/content/toets.ts TOETS_DURF) adds `durf` to a run in the
+ * same way: optional, still `v: 1`. A run without it (before then) has no answers; an older app
+ * leaves it out.
  */
 export const TOETS_STATE_VERSION = 1;
 
@@ -33,7 +37,12 @@ export interface ToetsRun {
   wrong?: ToetsScore;
   /** Form 2: "Ik weet het niet" per part. */
   idk?: ToetsScore;
+  /** "Durf je dit?": the learner's answers (0 "Nog niet", 1 "Een beetje", 2 "Ja"). Not in the score, never counted. */
+  durf?: ToetsDurf;
 }
+
+/** The answers to "Durf je dit?", by question (src/content/toets.ts TOETS_DURF). */
+export type ToetsDurf = Partial<Record<DurfId, DurfAnswer>>;
 
 export interface ToetsState {
   v: typeof TOETS_STATE_VERSION;
@@ -61,6 +70,18 @@ function readScore(raw: unknown, max?: ToetsScore): ToetsScore | null {
   return ok('listen') && ok('words') && ok('sentences') ? { listen: r.listen as number, words: r.words as number, sentences: r.sentences as number } : null;
 }
 
+/** The answers to "Durf je dit?" that can be read (a known question, 0, 1 or 2); none: undefined. */
+export function readDurf(raw: unknown): ToetsDurf | undefined {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return undefined;
+  const r = raw as Record<string, unknown>;
+  const out: ToetsDurf = {};
+  for (const { id } of TOETS_DURF) {
+    const v = r[id];
+    if (v === 0 || v === 1 || v === 2) out[id] = v;
+  }
+  return Object.keys(out).length ? out : undefined;
+}
+
 function readRun(raw: unknown): ToetsRun | undefined {
   if (!raw || typeof raw !== 'object') return undefined;
   const r = raw as Record<string, unknown>;
@@ -76,6 +97,8 @@ function readRun(raw: unknown): ToetsRun | undefined {
   const idk = readScore(r.idk, of);
   const adds = mc && wrong && idk && (['listen', 'words', 'sentences'] as const).every((k) => right[k] + wrong[k] + idk[k] <= of[k]);
   if (isCount(r.form, 99) && r.form >= 2 && adds) Object.assign(run, { form: r.form, mc, wrong, idk });
+  const durf = readDurf(r.durf);
+  if (durf) run.durf = durf;
   return run;
 }
 
@@ -170,4 +193,18 @@ export function growthOf(before: ToetsRun, now: ToetsRun, part?: ToetsPart): Toe
   const d = share2 - share1;
   const big = Math.abs(d) * of2 >= MIN_MORE - 1e-9 && Math.abs(d) > 2 * Math.sqrt(spread);
   return !big ? 'same' : d > 0 ? 'up' : 'down';
+}
+
+/* ---- "Durf je dit?": then and now ---- */
+
+/**
+ * "Durf je dit?" then against now: per question that has an answer in both runs, the two answers
+ * (in the order of TOETS_DURF). Empty when the start has none (done before 5 November 2026, or
+ * passed over): the end then shows nothing of it (docs/toets.md, "Durf je dit?").
+ */
+export function durfThenNow(before?: ToetsRun, now?: ToetsRun): { id: DurfId; then: DurfAnswer; now: DurfAnswer }[] {
+  const a = before?.durf;
+  const b = now?.durf;
+  if (!a || !b) return [];
+  return TOETS_DURF.flatMap(({ id }) => (a[id] !== undefined && b[id] !== undefined ? [{ id, then: a[id]!, now: b[id]! }] : []));
 }

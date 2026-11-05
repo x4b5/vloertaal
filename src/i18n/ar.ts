@@ -370,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'تقريباً كما في السابق', // nieuw, nalezen (AI-correctie 2 nov 2026)
     toetsMoreAll: { m: 'كل شيء معاً: تعرف الآن أكثر من قبل.', f: 'كل شيء معاً: تعرفين الآن أكثر من قبل.', x: 'كل شيء معاً: المعرفة الآن أكثر من قبل.' }, // nieuw, nalezen
     toetsSameAll: 'كل شيء معاً: تقريباً كما في السابق.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'أولاً 5 أسئلة عنك. لا توجد إجابة صحيحة أو خاطئة.', // nieuw, nalezen
+    toetsDurfAsk: { m: 'هل تجرؤ على هذا؟', f: 'هل تجرئين على هذا؟', x: 'هل يمكن فعل هذا بثقة؟' }, // nieuw, nalezen
+    toetsDurfUnderstand: { m: 'أن تقول إنك لا تفهم شيئاً', f: 'أن تقولي إنكِ لا تفهمين شيئاً', x: 'قول «لا أفهم هذا»' }, // nieuw, nalezen
+    toetsDurfBoss: { m: 'أن تسأل مديرك عن شيء', f: 'أن تسألي مديركِ عن شيء', x: 'سؤال المدير عن شيء' }, // nieuw, nalezen
+    toetsDurfHelp: { m: 'أن تطلب المساعدة', f: 'أن تطلبي المساعدة', x: 'طلب المساعدة' }, // nieuw, nalezen
+    toetsDurfUnsafe: { m: 'أن تقول إن شيئاً ما غير آمن', f: 'أن تقولي إن شيئاً ما غير آمن', x: 'قول إن شيئاً ما غير آمن' }, // nieuw, nalezen
+    toetsDurfBreak: { m: 'أن تتحدث قليلاً مع زميل في الاستراحة', f: 'أن تتحدثي قليلاً مع زميل في الاستراحة', x: 'الحديث قليلاً مع زميل في الاستراحة' }, // nieuw, nalezen
+    toetsDurfNotYet: 'ليس بعد', // nieuw, nalezen
+    toetsDurfABit: 'قليلاً', // nieuw, nalezen
+    toetsDurfYes: 'نعم', // nieuw, nalezen
+    toetsDurfAgain: 'بعد بضعة أسابيع نسأل مرة أخرى.', // nieuw, nalezen
     tempo: 'السرعة', // nieuw, nalezen
     tempoCalm: 'هادئ', // nieuw, nalezen
     tempoNormal: 'عادي', // nieuw, nalezen

@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { describe, expect, it } from 'vitest';
 import { units } from '../src/content/curriculum';
-import { TOETS_FORM, TOETS_PARTS, TOETS_SPEAK, TOETS_VERSIONS, type ToetsVersion } from '../src/content/toets';
+import { DURF_ANSWERS, TOETS_DURF, TOETS_FORM, TOETS_PARTS, TOETS_SPEAK, TOETS_VERSIONS, type ToetsVersion } from '../src/content/toets';
 import { helpLanguageSources } from '../src/i18n/all';
 import { getHelpLanguage } from '../src/i18n';
 import { GENDERED_LANGS, isPlural, uiEn } from '../src/i18n/types';
@@ -16,7 +16,7 @@ import {
   answerMode, END_DAYS, growthOf, INSTAP_FROM_LESSONS, INSTAP_UNTIL_LESSONS, knownExact, knownOf, recordToets, resultOf, rightId, scoreOf, settingsMoment,
   speakSentence, toetsLater, toetsLine, toetsOffer, toetsQuestions, type ToetsAnswer, type ToetsQuestion, type ToetsTally,
 } from '../src/lib/toets';
-import { readToets, runTally, type ToetsRun, type ToetsScore } from '../src/lib/toetsState';
+import { durfThenNow, readDurf, readToets, runTally, type ToetsDurf, type ToetsRun, type ToetsScore } from '../src/lib/toetsState';
 
 const day = (y: number, m: number, d: number) => new Date(y, m - 1, d, 12);
 const ids = (v: ToetsVersion) => TOETS_VERSIONS[v].flatMap((i) => [i.answer, ...i.others]);
@@ -473,5 +473,181 @@ describe('"Wat ken je al?": the screens', () => {
     expect(html).toContain('Alles samen: je kent nu meer dan toen.');
     // After the start: no then and now.
     expect(renderToStaticMarkup(createElement(ToetsResult, { moment: 'instap', now: run(score(1, 3, 1), 'A'), lang, onDone: noop }))).not.toContain('toets-growth');
+  });
+});
+
+describe('"Wat ken je al?": "Durf je dit?" (5 November 2026)', () => {
+  const durfIds = TOETS_DURF.map((d) => d.id);
+  const run = (version: 'A' | 'B', durf?: ToetsDurf): ToetsRun => ({ day: version === 'A' ? '2026-10-02' : '2026-10-30', version, right: score(2, 2, 2), of: score(7, 7, 7), form: 2, mc: score(5, 5, 5), wrong: score(1, 1, 1), idk: score(2, 2, 2), ...(durf ? { durf } : {}) });
+
+  it('five questions, the agreed ones, none about calling in sick; three answers', () => {
+    expect(TOETS_DURF.map((d) => d.nl)).toEqual([
+      'Zeggen dat je iets niet begrijpt',
+      'Iets vragen aan je leidinggevende',
+      'Om hulp vragen',
+      'Zeggen dat iets niet veilig is',
+      'Even praten met een collega in de pauze',
+    ]);
+    expect(new Set(durfIds).size).toBe(5);
+    expect(TOETS_DURF.some((d) => /ziek/i.test(d.nl) || /sick/i.test(uiEn[d.key]))).toBe(false);
+    expect(DURF_ANSWERS).toEqual([0, 1, 2]);
+  });
+
+  it('every question has a drawn picture of the course (never an emoji) and its Dutch is the Dutch of its key', async () => {
+    const { default: drawn } = await import('../src/pictures/words');
+    const { uiNl } = await import('../src/i18n/nl');
+    for (const d of TOETS_DURF) {
+      expect(drawn[d.picture], d.picture).toBeTypeOf('function');
+      expect(uiNl[d.key], d.key).toBe(d.nl);
+    }
+  });
+
+  it('every new text in every help language, with an x form in the gendered ones', () => {
+    const keys = ['toetsDurfIntro', 'toetsDurfAsk', 'toetsDurfNotYet', 'toetsDurfABit', 'toetsDurfYes', 'toetsDurfAgain', ...TOETS_DURF.map((d) => d.key)] as const;
+    for (const src of helpLanguageSources) {
+      for (const k of keys) {
+        const t = src.ui[k];
+        expect(t, `${src.code} ${k}`).toBeTruthy();
+        if (typeof t === 'object' && !isPlural(t)) expect(t.x, `${src.code} ${k}`).toBeTruthy();
+      }
+    }
+    // Arabic and Tigrinya address the learner: "Durf je dit?" has its forms for man, woman and x.
+    for (const code of ['ar', 'ti'] as const) {
+      const t = helpLanguageSources.find((s) => s.code === code)!.ui.toetsDurfAsk;
+      expect(typeof t === 'object' && 'm' in t && 'f' in t && 'x' in t, code).toBe(true);
+    }
+  });
+
+  it('is kept with the run (recordToets), at both moments, never in the score', () => {
+    const answers: ToetsDurf = { understand: 0, boss: 1, help: 2, unsafe: 1, break: 0 };
+    const tally: ToetsTally = { right: score(2, 2, 2), of: score(7, 7, 7), mc: score(5, 5, 5), wrong: score(1, 1, 1), idk: score(2, 2, 2) };
+    const p = { ...emptyProgress, helpLang: 'pl', themeVersion: 2 } as Progress;
+    const start = recordToets(p, 'instap', tally, day(2026, 10, 2), 0, answers);
+    expect(start.toets?.instap?.durf).toEqual(answers);
+    expect(knownOf(start.toets!.instap!, 'listen')).toBe(1);
+    const end = recordToets(start, 'eind', tally, day(2026, 10, 30), 3, { ...answers, understand: 2 });
+    expect(end.toets?.eind?.durf?.understand).toBe(2);
+    expect(end.toets?.instap?.durf).toEqual(answers);
+    // Without answers (a test from before), as before: no durf.
+    expect('durf' in recordToets(p, 'instap', tally, day(2026, 10, 2), 0).toets!.instap!).toBe(false);
+    expect('durf' in recordToets(p, 'instap', tally, day(2026, 10, 2), 0, {}).toets!.instap!).toBe(false);
+  });
+
+  it('reads what it can: known questions with 0, 1 or 2; the rest is left out, and the run stays', () => {
+    expect(readDurf({ understand: 0, boss: 2 })).toEqual({ understand: 0, boss: 2 });
+    expect(readDurf({ understand: 3, boss: '1', ziek: 1, help: 1.5, unsafe: -1 })).toBeUndefined();
+    expect(readDurf({ understand: 1, onbekend: 2 })).toEqual({ understand: 1 });
+    expect(readDurf([0, 1, 2])).toBeUndefined();
+    expect(readDurf('ja')).toBeUndefined();
+    const r = run('A', { understand: 0, boss: 1, help: 2, unsafe: 1, break: 0 });
+    expect(readToets({ v: 1, instap: r })?.instap).toEqual(r);
+    expect(readToets({ v: 1, instap: { ...r, durf: { understand: 9 } } })?.instap).toEqual(run('A'));
+  });
+
+  it('goes along in the backup, and adding a backup keeps each moment\'s answers', () => {
+    const p: Progress = { ...emptyProgress, toets: { v: 1, instap: run('A', { understand: 0, help: 1 }) } };
+    const back = parseBackup(backupFile(p, new Date()));
+    expect(back?.toets?.instap?.durf).toEqual({ understand: 0, help: 1 });
+    const merged = mergeBackup({ ...emptyProgress, toets: { v: 1, eind: run('B', { understand: 2, help: 2 }) } }, back!);
+    expect(merged.toets?.instap?.durf).toEqual({ understand: 0, help: 1 });
+    expect(merged.toets?.eind?.durf).toEqual({ understand: 2, help: 2 });
+  });
+
+  it('then and now: each question answered at both moments, in order; nothing when the start has none', () => {
+    const a = run('A', { understand: 0, boss: 0, unsafe: 1, break: 2 });
+    const b = run('B', { break: 2, understand: 1, boss: 2, help: 2, unsafe: 1 });
+    expect(durfThenNow(a, b)).toEqual([
+      { id: 'understand', then: 0, now: 1 },
+      { id: 'boss', then: 0, now: 2 },
+      { id: 'unsafe', then: 1, now: 1 },
+      { id: 'break', then: 2, now: 2 },
+    ]);
+    expect(durfThenNow(run('A'), b)).toEqual([]);
+    expect(durfThenNow(undefined, b)).toEqual([]);
+    expect(durfThenNow(a, run('B'))).toEqual([]);
+  });
+
+  it('is never counted: the count still has only the start and the end, with the version', () => {
+    expect(readFileSync('src/lib/count.ts', 'utf8')).not.toMatch(/durf/i);
+    const app = readFileSync('src/App.tsx', 'utf8');
+    const counts = app.split('\n').filter((l) => /count\('toets-/.test(l));
+    expect(counts.length).toBe(2);
+    for (const line of counts) expect(line).not.toMatch(/durf/i);
+  });
+
+  it('the privacy texts say the answers stay on the phone and are not counted', async () => {
+    const { PRIVACY } = await import('../src/lib/privacyPage');
+    const all = PRIVACY.flatMap((s) => s.paras).join(' ');
+    expect(all).toContain('je antwoorden op de vragen “Durf je dit?”');
+    expect(all).toContain('Niet de uitslag van de toets, en niet je antwoorden op “Durf je dit?”.');
+    const { aboutSections } = await import('../src/content/about');
+    const free = aboutSections.find((s) => s.id === 'a.free')!;
+    expect(free.nl?.body).toContain('je antwoorden op “Durf je dit?”');
+    expect(free.body).toContain('your answers to “Do you dare?”');
+  });
+});
+
+describe('"Wat ken je al?": the screens of "Durf je dit?"', () => {
+  const noop = () => {};
+  const render = async (props: Record<string, unknown>, code: 'pl' | 'ar' = 'pl', gender?: 'm' | 'f' | 'x') => {
+    const { createElement } = await import('react');
+    const { renderToStaticMarkup } = await import('react-dom/server');
+    const { ToetsPlayer } = await import('../src/components/Toets');
+    return renderToStaticMarkup(createElement(ToetsPlayer, { moment: 'instap', lang: getHelpLanguage(code, gender), seed: 1, onQuit: noop, onDone: noop, ...props }));
+  };
+  const faces = (html: string) => (html.match(/class="toets-durf-face[ "]/g) ?? []).length;
+
+  it('the test starts with it: the line about it, "Durf je dit?", the Dutch with a speaker, three faces, no "Ik weet het niet"', async () => {
+    const html = await render({});
+    expect(html).toContain('toets-durf-intro');
+    expect(html).toContain('Eerst 5 vragen over jou. Er is geen goed of fout.');
+    expect(html).toContain('Najpierw 5 pytań o ciebie.');
+    expect(html).toContain('Durf je dit?');
+    expect(html).toContain('Zeggen dat je iets niet begrijpt');
+    expect(html).toContain('Powiedzieć, że czegoś nie rozumiesz');
+    expect(faces(html)).toBe(3);
+    for (const t of ['Nog niet', 'Een beetje', 'Ja', 'Jeszcze nie', 'Trochę', 'Tak']) expect(html).toContain(`>${t}<`);
+    expect(html).not.toContain('toets-idk');
+    // Counted with the test: 5 + 21 + 1 steps.
+    expect(html).toContain(`1 / ${TOETS_DURF.length + TOETS_VERSIONS.A.length + 1}`);
+  });
+
+  it('one screen per question; only the first has the line; the first question of the test then has its hint', async () => {
+    for (let i = 0; i < TOETS_DURF.length; i++) {
+      const html = await render({ durfAt: i });
+      expect(html, `durf ${i}`).toContain(TOETS_DURF[i].nl);
+      expect(faces(html), `durf ${i}`).toBe(3);
+      expect(html.includes('toets-durf-intro'), `durf ${i}`).toBe(i === 0);
+    }
+    const first = await render({ startAt: 0 });
+    expect(first).not.toContain('toets-durf');
+    expect(first).toContain('toets-idk');
+    expect(first).toContain('Nie wiesz?');
+    expect(first).toContain(`${TOETS_DURF.length + 1} / `);
+  });
+
+  it('Arabic: the forms for a woman and for x', async () => {
+    expect(await render({}, 'ar', 'f')).toContain('هل تجرئين على هذا؟');
+    expect(await render({}, 'ar', 'x')).toContain('هل يمكن فعل هذا بثقة؟');
+  });
+
+  it('the result: after the end then and now per question; after the start one line; an end without a start\'s answers: nothing', async () => {
+    const { createElement } = await import('react');
+    const { renderToStaticMarkup } = await import('react-dom/server');
+    const { ToetsResult } = await import('../src/components/Toets');
+    const lang = getHelpLanguage('pl');
+    const base = { right: score(2, 2, 2), of: score(7, 7, 7), form: 2, mc: score(5, 5, 5), wrong: score(0, 0, 0), idk: score(5, 5, 5) };
+    const a: ToetsRun = { day: '2026-10-02', version: 'A', ...base, durf: { understand: 0, boss: 0, help: 1, unsafe: 1, break: 2 } };
+    const b: ToetsRun = { day: '2026-10-30', version: 'B', ...base, durf: { understand: 1, boss: 0, help: 2, unsafe: 2, break: 2 } };
+    const end = renderToStaticMarkup(createElement(ToetsResult, { moment: 'eind', now: b, before: a, lang, onDone: noop }));
+    expect((end.match(/class="toets-durf-row"/g) ?? []).length).toBe(5);
+    expect(end).toContain('durf-face-0');
+    expect(end).toContain('Ty wtedy: Jeszcze nie. Ty teraz: Trochę.');
+    expect(end).not.toMatch(/<button[^>]*toets-durf/); // nothing to tap: only Continue
+    const old = renderToStaticMarkup(createElement(ToetsResult, { moment: 'eind', now: b, before: { ...a, durf: undefined }, lang, onDone: noop }));
+    expect(old).not.toContain('toets-durf');
+    const start = renderToStaticMarkup(createElement(ToetsResult, { moment: 'instap', now: a, lang, onDone: noop }));
+    expect(start).toContain('Durf je dit? Na een paar weken vragen we het nog een keer.');
+    expect(start).not.toContain('toets-durf-row');
   });
 });

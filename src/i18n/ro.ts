@@ -370,6 +370,18 @@ const lang: HelpLanguageSource = {
     toetsSame: 'Cam la fel', // nieuw, nalezen
     toetsMoreAll: 'Totul la un loc: acum știi mai mult decât atunci.', // nieuw, nalezen
     toetsSameAll: 'Totul la un loc: cam la fel ca atunci.', // nieuw, nalezen
+    /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
+    toetsDurfIntro: 'Mai întâi 5 întrebări despre tine. Nu există bine sau greșit.', // nieuw, nalezen
+    toetsDurfAsk: 'Îndrăznești să faci asta?', // nieuw, nalezen
+    toetsDurfUnderstand: 'Să spui că nu înțelegi ceva', // nieuw, nalezen
+    toetsDurfBoss: 'Să-ți întrebi șeful ceva', // nieuw, nalezen
+    toetsDurfHelp: 'Să ceri ajutor', // nieuw, nalezen
+    toetsDurfUnsafe: 'Să spui că ceva nu e sigur', // nieuw, nalezen
+    toetsDurfBreak: 'Să vorbești puțin cu un coleg în pauză', // nieuw, nalezen
+    toetsDurfNotYet: 'Încă nu', // nieuw, nalezen
+    toetsDurfABit: 'Puțin', // nieuw, nalezen
+    toetsDurfYes: 'Da', // nieuw, nalezen
+    toetsDurfAgain: 'Peste câteva săptămâni întrebăm din nou.', // nieuw, nalezen
     tempo: 'Viteză', // nieuw, nalezen
     tempoCalm: 'Calm', // nieuw, nalezen
     tempoNormal: 'Normal', // nieuw, nalezen

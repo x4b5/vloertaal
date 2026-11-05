@@ -467,6 +467,18 @@ export const uiEn = {
   toetsSame: 'About the same',
   toetsMoreAll: 'All together: you know more now than then.',
   toetsSameAll: 'All together: about the same as then.',
+  /* "Durf je dit?": five questions about what the learner dares, before the test's questions (the owner's request, 5 November 2026). */
+  toetsDurfIntro: 'First 5 questions about you. There is no right or wrong.',
+  toetsDurfAsk: 'Do you dare to do this?',
+  toetsDurfUnderstand: 'Say that you don’t understand something',
+  toetsDurfBoss: 'Ask your manager something',
+  toetsDurfHelp: 'Ask for help',
+  toetsDurfUnsafe: 'Say that something is not safe',
+  toetsDurfBreak: 'Have a little chat with a colleague at break',
+  toetsDurfNotYet: 'Not yet',
+  toetsDurfABit: 'A little',
+  toetsDurfYes: 'Yes',
+  toetsDurfAgain: 'In a few weeks we ask again.',
   /* "Tempo" in Settings (src/lib/tempo.ts): how fast the Dutch is played. */
   tempo: 'Speed',
   tempoCalm: 'Calm',

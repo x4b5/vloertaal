@@ -7,9 +7,10 @@ import { breakable, wordSize } from '../lib/dutch';
 import type { Exercise } from '../lib/exercises';
 import type { Progress } from '../lib/progress';
 import {
-  answerMode, growthOf, knownOf, resultOf, scoreOf, settingsMoment, speakSentence, toetsQuestions, TOETS_PARTS, versionOf,
-  type ToetsAnswer, type ToetsGrowth, type ToetsMoment, type ToetsPart, type ToetsQuestion, type ToetsTally,
+  answerMode, durfThenNow, growthOf, knownOf, resultOf, scoreOf, settingsMoment, speakSentence, toetsQuestions, TOETS_PARTS, versionOf,
+  type ToetsAnswer, type ToetsDurf, type ToetsGrowth, type ToetsMoment, type ToetsPart, type ToetsQuestion, type ToetsTally,
 } from '../lib/toets';
+import { DURF_ANSWERS, TOETS_DURF, type DurfAnswer, type DurfItem } from '../content/toets';
 import type { ToetsRun as Run } from '../lib/toetsState';
 import { loadVoice } from '../lib/toetsVoice';
 import { dutchUi } from '../lib/track';
@@ -20,7 +21,7 @@ import { castFor } from './Characters';
 import { ChromeBack } from './ChromeBack';
 import { type Answer, BuildExercise, ChatExercise, ChoiceGrid, TypeExercise } from './Exercises';
 import { HelpSay } from './HelpSay';
-import { BubblesIcon, ChevronIcon, CloseIcon, EarIcon, HourglassIcon, PictureIcon, SpeakerIcon } from './Icons';
+import { ArrowIcon, BubblesIcon, ChevronIcon, CloseIcon, EarIcon, HourglassIcon, PictureIcon, SpeakerIcon } from './Icons';
 import { NlPair } from './NlPair';
 import { SpeakExercise } from './Speaking';
 import { PlayName, SpeakButton } from './SpeakButton';
@@ -32,7 +33,9 @@ import '../toets.css';
  *  - no "right" or "wrong" while it runs: a tap is the answer (the pick shows for a moment, never
  *    its colour), then the next question; no hearts, nothing comes back, no stamps;
  *  - at most three things to tap on every screen (the ✕ is chrome, the speakers do not count);
- *  - the speaking task at the end uses the lessons' "record and compare" and is not scored.
+ *  - the speaking task at the end uses the lessons' "record and compare" and is not scored;
+ *  - before the questions, "Durf je dit?" (the owner's request, 5 November 2026): five questions
+ *    about what the learner dares, three faces each, no right or wrong, not in the score.
  */
 
 const PART: Record<ToetsPart, { nl: string; key: UiKey; Icon: (p: { size?: number }) => React.ReactElement }> = {
@@ -218,29 +221,108 @@ function Question({ q, lang, onAnswer }: { q: ToetsQuestion; lang?: HelpLanguage
 }
 
 
-/* ------------------------------------------------------------------ the test */
+/* ------------------------------------------------------------------ "Durf je dit?" */
 
-export interface ToetsOutcome { tally: ToetsTally; voice: Blob | null }
+/** The Dutch of the three answers (their translations: DURF_KEY). */
+const DURF_NL: Record<DurfAnswer, string> = { 0: 'Nog niet', 1: 'Een beetje', 2: 'Ja' };
+const DURF_KEY: Record<DurfAnswer, UiKey> = { 0: 'toetsDurfNotYet', 1: 'toetsDurfABit', 2: 'toetsDurfYes' };
 
 /**
- * The test: 21 questions (7 per part), then the speaking task. ✕ stops it (nothing is kept, the
- * card comes back). Under every question the small way out "Ik weet het niet" (a text link, like
- * "Ik kan nu niet luisteren" in the lesson: it does not count as one of the three things to tap,
- * scripts/max3/count.cjs): an honest answer, never a wrong one. `startAt` and `speakPhase` are
- * for the screenshot harness.
+ * An answer to "Durf je dit?" as a face: worried (Nog niet), a small smile (Een beetje), a wide
+ * smile (Ja). Drawn (the owner's rule: only SVG, never an emoji), in the line style of the icons,
+ * one colour for all three: no red or green, there is no right or wrong.
  */
-export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: fixedSeed }: {
+export function DurfFace({ level, size = 48 }: { level: DurfAnswer; size?: number }) {
+  const line = { fill: 'none', stroke: 'currentColor', strokeWidth: 2.6, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+  return (
+    <svg className={`icon durf-face durf-face-${level}`} viewBox="0 0 48 48" width={size} height={size} aria-hidden focusable="false">
+      <circle className="durf-face-bg" cx="24" cy="24" r="20.5" {...line} />
+      <circle cx="17.5" cy="21" r="2.4" fill="currentColor" />
+      <circle cx="30.5" cy="21" r="2.4" fill="currentColor" />
+      {level === 0 && <><path d="M12.5 15.5l6-2.6M35.5 15.5l-6-2.6" {...line} strokeWidth={2.2} /><path d="M16.5 34.5q7.5-5.5 15 0" {...line} /></>}
+      {level === 1 && <path d="M17 30.5q7 5 14 0" {...line} />}
+      {level === 2 && <path d="M14.5 28.5h19q-1 9.5-9.5 9.5t-9.5-9.5z" fill="currentColor" stroke="currentColor" strokeWidth={2.2} strokeLinejoin="round" />}
+    </svg>
+  );
+}
+
+/**
+ * One question of "Durf je dit?": "Durf je dit?", a picture, the situation (Dutch with a speaker,
+ * and what it means), and three faces. A tap is the answer: the face shows as picked for a moment,
+ * then the next screen (three things to tap, nothing else; the speakers do not count). The first
+ * screen says what this is: "Eerst 5 vragen over jou. Er is geen goed of fout."
+ */
+function DurfQuestion({ item, first, lang, onAnswer }: { item: DurfItem; first: boolean; lang?: HelpLanguage; onAnswer: (a: DurfAnswer) => void }) {
+  const [picked, setPicked] = useState<DurfAnswer | null>(null);
+  const text = ui(item.key, lang);
+  const intro = ui('toetsDurfIntro', lang);
+  const ask = ui('toetsDurfAsk', lang);
+  const tap = (a: DurfAnswer) => {
+    if (picked !== null) return;
+    setPicked(a);
+    onAnswer(a);
+  };
+  return (
+    <div className="exercise toets-durf">
+      {first && (
+        <p className="toets-calm toets-durf-intro">
+          <NlPair nlFirst nl="Eerst 5 vragen over jou. Er is geen goed of fout." nlClass="toets-durf-intro-nl" className="toets-durf-intro-help" text={intro} />
+        </p>
+      )}
+      <h2 className="prompt toets-durf-ask" tabIndex={-1}>
+        <NlPair nlFirst nl="Durf je dit?" nlClass="toets-durf-ask-nl" className="toets-durf-ask-help" text={ask} />
+      </h2>
+      <WordPicture className="toets-pic toets-durf-pic" id={item.picture} emoji="" size={104} />
+      <div className="toets-durf-line">
+        <span className="toets-durf-say"><SpeakButton text={item.nl} glyph help={lang} /></span>
+        <p className="toets-durf-text">
+          <NlPair nlFirst content dir="ltr" nl={item.nl} nlClass="toets-durf-nl" className="toets-durf-help" text={text} />
+        </p>
+        <HelpSay text={text.help} lang={lang} />
+      </div>
+      <div className="toets-durf-faces" role="group" aria-label={said(ask)} lang={saidLang(ask)}>
+        {DURF_ANSWERS.map((a) => (
+          <button key={a} type="button" className={`toets-durf-face ${picked === a ? 'is-picked' : ''}`} aria-pressed={picked === a} onClick={() => tap(a)}>
+            <DurfFace level={a} size={52} />
+            <span className="toets-durf-face-label">
+              <NlPair nlFirst nl={DURF_NL[a]} nlClass="toets-durf-face-nl" className="toets-durf-face-help" text={ui(DURF_KEY[a], lang)} />
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ the test */
+
+export interface ToetsOutcome { tally: ToetsTally; voice: Blob | null; durf: ToetsDurf }
+
+/**
+ * The test: first "Durf je dit?" (5 questions about the learner, not scored), then 21 questions
+ * (7 per part), then the speaking task. ✕ stops it (nothing is kept, the card comes back). Under
+ * every question the small way out "Ik weet het niet" (a text link, like "Ik kan nu niet
+ * luisteren" in the lesson: it does not count as one of the three things to tap,
+ * scripts/max3/count.cjs): an honest answer, never a wrong one. For the screenshot harness:
+ * `startAt` opens at a question (past "Durf je dit?"), `durfAt` at a screen of "Durf je dit?".
+ */
+export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt, durfAt, seed: fixedSeed }: {
   moment: ToetsMoment;
   lang?: HelpLanguage;
   onQuit: () => void;
   onDone: (r: ToetsOutcome) => void;
   startAt?: number;
+  durfAt?: number;
   seed?: number;
 }) {
   const [seed] = useState(() => fixedSeed ?? (Date.now() >>> 0));
   const questions = useMemo(() => toetsQuestions(versionOf(moment), seed), [moment, seed]);
   const speakEx = useMemo<Extract<Exercise, { kind: 'speak' }>>(() => ({ kind: 'speak', item: speakSentence() }), []);
-  const [index, setIndex] = useState(startAt);
+  /** The step: first the screens of "Durf je dit?", then the questions, then the speaking task. */
+  const firstQ = TOETS_DURF.length;
+  const [step, setStep] = useState(() => durfAt ?? (startAt === undefined ? 0 : firstQ + startAt));
+  const index = step - firstQ;
+  const durf = useRef<ToetsDurf>({});
   const answers = useRef<(ToetsAnswer | undefined)[]>([]);
   const busy = useRef(false);
   /** With the keyboard: the word typed so far, graded (Verder takes it). */
@@ -249,9 +331,10 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
   /** The speaking task: Continue once it can go on (said aloud, no microphone); hidden while comparing. */
   const [spoken, setSpoken] = useState(false);
   const [rating, setRating] = useState(false);
-  const total = questions.length + 1;
+  const total = firstQ + questions.length + 1;
+  const daring = step < firstQ;
   const speaking = index >= questions.length;
-  const q = questions[index];
+  const q = daring ? undefined : questions[index];
   // Decided once per question, as the lesson's own exercise decides it (a change in Settings never swaps it halfway).
   const mode = useMemo(() => (q ? answerMode(q, lang) : { pick: false, keys: false }), [q, lang]);
   const rtl = lang?.dir === 'rtl';
@@ -266,12 +349,24 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
     if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: 'auto' });
     const h = slide.current?.querySelector<HTMLElement>('.prompt');
     if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); }
-  }, [index]);
+  }, [step]);
 
   const finish = useCallback(() => {
     stopSpeech();
-    onDone({ tally: scoreOf(questions, answers.current), voice: voice.current });
+    onDone({ tally: scoreOf(questions, answers.current), voice: voice.current, durf: { ...durf.current } });
   }, [onDone, questions]);
+
+  // "Durf je dit?": the face shows as picked for a moment, then the next screen (no sound, no colour).
+  const onDurf = useCallback((a: DurfAnswer) => {
+    if (busy.current) return;
+    busy.current = true;
+    durf.current[TOETS_DURF[step].id] = a;
+    timer.current = window.setTimeout(() => {
+      busy.current = false;
+      stopSpeech();
+      setStep((i) => i + 1);
+    }, still() ? 200 : 450);
+  }, [step]);
 
   // A tap is the answer: it shows as picked for a moment (no colour, no sound of right or wrong),
   // then the next question. A second tap meanwhile does nothing. A built sentence waits a little
@@ -284,7 +379,7 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
       busy.current = false;
       stopSpeech();
       setTyped(null);
-      setIndex((i) => i + 1);
+      setStep((i) => i + 1);
     }, still() ? Math.min(wait, 250) : wait);
   }, [index, mode.pick]);
   const onAnswer = useCallback((a: Answer | null) => {
@@ -296,7 +391,7 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
 
   const onSpeakAnswer = useCallback((a: { correct: boolean } | null) => setSpoken(Boolean(a)), []);
   const onRecording = useCallback((blob: Blob) => { voice.current = blob; }, []);
-  const done = Math.min(index, total);
+  const done = Math.min(step, total);
 
   return (
     <div className={`player toets-player ${rtl ? 'player-rtl' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
@@ -323,13 +418,15 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
         <h1 className="sr-only"><NlPair nlFirst nl="Wat ken je al?" text={ui('toetsTitle', lang)} /></h1>
       </header>
       <div className="player-body">
-        <div className="ex-slide" key={index} ref={slide}>
+        <div className="ex-slide" key={step} ref={slide}>
           {/* No label for the part ("Luisteren"): the question says it. The count stays. */}
           <div className="ex-tag">
             <span className="toets-count" aria-hidden><bdi dir="ltr">{done + 1} / {total}</bdi></span>
           </div>
           {index === 0 && <p className="toets-calm"><Bi text={ui('toetsNotSure', lang)} /></p>}
-          {speaking ? (
+          {daring ? (
+            <DurfQuestion key={step} item={TOETS_DURF[step]} first={step === 0} lang={lang} onAnswer={onDurf} />
+          ) : speaking ? (
             <SpeakExercise
               ex={speakEx}
               lang={lang}
@@ -340,7 +437,7 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
             />
           ) : (
             <>
-              <Question key={index} q={q} lang={lang} onAnswer={onAnswer} />
+              <Question key={index} q={q!} lang={lang} onAnswer={onAnswer} />
               <button type="button" className="toets-idk" onClick={notKnown}>
                 <NlPair nlFirst nl="Ik weet het niet" nlClass="toets-idk-nl" className="toets-idk-help" text={ui('toetsIdk', lang)} />
               </button>
@@ -348,10 +445,10 @@ export function ToetsPlayer({ moment, lang, onQuit, onDone, startAt = 0, seed: f
           )}
         </div>
       </div>
-      <footer className={`player-foot ${(speaking && spoken && !rating) || (!speaking && typed) ? '' : 'foot-empty'}`}>
+      <footer className={`player-foot ${(speaking && spoken && !rating) || (!speaking && !daring && typed) ? '' : 'foot-empty'}`}>
         <div className="foot-inner">
           <div className="foot-actions">
-            {!speaking && typed && (
+            {!speaking && !daring && typed && (
               <button type="button" className="btn btn-go btn-primary toets-typed-go" onClick={() => record(typed.correct ? 'right' : 'wrong', 150)} dir={rtl ? 'rtl' : undefined}>
                 <Bi className="btn-label" text={ui('continue', lang)} />
                 <span className="btn-block" aria-hidden><ChevronIcon size={26} /></span>
@@ -467,6 +564,66 @@ function VoicesThenNow({ lang }: { lang?: HelpLanguage }) {
   );
 }
 
+/**
+ * "Durf je dit?" on the result of the end: per question its picture and its Dutch line, and the
+ * answer then and now as faces (😟 → 🙂), in the order of the questions. No words of more or less,
+ * no total: the faces say it, as the learner gave them. Only when the start has answers too
+ * (durfThenNow): an end on its own shows nothing of it (docs/toets.md: a row of "Nog niet" after
+ * four weeks, without the step from then, would read as a verdict).
+ */
+function DurfThenNow({ before, now, lang }: { before?: Run; now: Run; lang?: HelpLanguage }) {
+  const rows = durfThenNow(before, now);
+  if (!rows.length) return null;
+  const then = ui('toetsYouThen', lang);
+  const nowT = ui('toetsYouNow', lang);
+  return (
+    <section className="toets-durf-result" aria-labelledby="toets-durf-result-title">
+      <h2 id="toets-durf-result-title" className="toets-durf-result-title">
+        <span className="toets-part-icon" aria-hidden><DurfFace level={1} size={22} /></span>
+        <span className="toets-durf-result-name">
+          <NlPair nlFirst nl="Durf je dit?" nlClass="toets-part-nl" className="toets-part-help" text={ui('toetsDurfAsk', lang)} />
+        </span>
+      </h2>
+      <ul className="toets-durf-rows">
+        {rows.map((r) => {
+          const item = TOETS_DURF.find((d) => d.id === r.id)!;
+          const answer = (a: DurfAnswer) => said(ui(DURF_KEY[a], lang));
+          return (
+            <li key={r.id} className="toets-durf-row">
+              <WordPicture className="toets-durf-row-pic" id={item.picture} emoji="" size={40} />
+              <span className="toets-durf-row-text">
+                <NlPair nlFirst content dir="ltr" nl={item.nl} nlClass="toets-durf-row-nl" className="toets-durf-row-help" text={ui(item.key, lang)} />
+              </span>
+              <span className="toets-durf-row-faces">
+                <span className="toets-durf-then"><DurfFace level={r.then} size={30} /></span>
+                <ArrowIcon size={16} className="toets-durf-arrow" />
+                <span className="toets-durf-now"><DurfFace level={r.now} size={30} /></span>
+                <span className="sr-only">{`${said(then)}: ${answer(r.then)}. ${said(nowT)}: ${answer(r.now)}.`}</span>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
+/**
+ * After the start: "Durf je dit?" is only kept (nothing to compare yet). One calm line, like
+ * "Oefen elke dag een beetje" above it, says it comes back: "Durf je dit? Na een paar weken
+ * vragen we het nog een keer."
+ */
+function DurfLater({ lang }: { lang?: HelpLanguage }) {
+  const ask = ui('toetsDurfAsk', lang);
+  const again = ui('toetsDurfAgain', lang);
+  const text: Bilingual = { en: `${ask.en} ${again.en}`, help: ask.help && again.help ? `${ask.help} ${again.help}` : undefined, lang };
+  return (
+    <p className="result-line toets-keep toets-durf-later">
+      <NlPair nlFirst nl="Durf je dit? Na een paar weken vragen we het nog een keer." nlClass="toets-keep-nl" text={text} />
+    </p>
+  );
+}
+
 /** The result: three bars (after the end, then and now side by side), calm words, Continue (pinned). */
 export function ToetsResult({ moment, now, before, lang, onDone }: { moment: ToetsMoment; now: Run; before?: Run; lang?: HelpLanguage; onDone: () => void }) {
   const title = useRef<HTMLHeadingElement>(null);
@@ -482,11 +639,13 @@ export function ToetsResult({ moment, now, before, lang, onDone }: { moment: Toe
         </h1>
         <ToetsBars now={now} before={end ? before : undefined} lang={lang} />
         {end && <VoicesThenNow lang={lang} />}
+        {end && <DurfThenNow before={before} now={now} lang={lang} />}
         {!end && (
           <p className="result-line toets-keep">
             <NlPair nlFirst nl="Oefen elke dag een beetje. Dan leer je steeds meer." nlClass="toets-keep-nl" text={ui('toetsKeepGoing', lang)} />
           </p>
         )}
+        {!end && now.durf && <DurfLater lang={lang} />}
       </div>
       {/* Pinned to the bottom (sticky, in the flow): Continue is always in view, and at the end of
           the page the footer sits under "Jij toen / Jij nu", never over them. A soft shadow on its
@@ -574,6 +733,7 @@ export function ToetsPage({ progress, lang, onBack, onStart }: { progress: Progr
           <p className="toets-date" lang="nl"><bdi dir="ltr">{now.day.split('-').reverse().join('-')}</bdi></p>
           <ToetsBars now={now} before={before} lang={lang} />
           {t?.eind && <VoicesThenNow lang={lang} />}
+          {t?.eind && <DurfThenNow before={before} now={now} lang={lang} />}
         </>
       )}
     </div>
