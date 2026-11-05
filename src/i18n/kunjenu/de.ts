@@ -66,6 +66,12 @@ const t: CultureTranslation = {
     'kjn.u.teamwork.1': "Ich kann sagen, dass mich etwas beschäftigt.", // nieuw, nalezen
     'kjn.u.teamwork.2': "Ich kann ruhig Nein zu Extraarbeit sagen.", // nieuw, nalezen
     'kjn.u.teamwork.3': "Ich kann fragen, was ich zuerst machen muss.", // nieuw, nalezen
+    'kjn.u.communicate.1': "Ich kann erklären, was nicht stimmt.", // nieuw, nalezen
+    'kjn.u.communicate.2': "Ich kann sagen, was ich gehört habe.", // nieuw, nalezen
+    'kjn.u.communicate.3': "Ich kann rechtzeitig um ein Gespräch bitten.", // nieuw, nalezen
+    'kjn.u.feedback.1': "Ich kann bei Feedback um ein Beispiel bitten.", // nieuw, nalezen
+    'kjn.u.feedback.2': "Ich kann freundlich sagen, was besser sein kann.", // nieuw, nalezen
+    'kjn.u.feedback.3': "Ich kann in einer Teambesprechung eine Frage stellen.", // nieuw, nalezen
     'kjn.u.social.1': "Ich kann in der Pause ein bisschen plaudern.", // nieuw, nalezen
     'kjn.u.social.2': "Ich kann sagen, dass ich einen Fehler gemacht habe.", // nieuw, nalezen
     'kjn.u.social.3': "Ich kann sagen, dass mir etwas zu weit geht.", // nieuw, nalezen (AI-correctie 2 nov 2026)

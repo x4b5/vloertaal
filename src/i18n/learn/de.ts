@@ -128,6 +128,15 @@ const t: CultureTranslation = {
     'c.road.a.why': "Noch eine Tour ist gefragt: Nein, weil die Pause zuerst kommt.", // nieuw, nalezen
     'c.backtowork.a.why': "Gefragt, wie es dir geht: ein kurzes Ja, und dass du es langsam angehst.", // nieuw, nalezen
     'c.feelwell.a.why': "Gefragt, wie es dir geht: Ein ehrliches „nicht so gut“ ist in Ordnung.", // nieuw, nalezen
+    // u.communicate en u.feedback (5 november 2026).
+    'd.explain.a.why': "Gefragt, was nicht stimmt: Diese Antwort sagt, was los ist und was gebraucht wird.", // nieuw, nalezen
+    'd.listen.a.why': "Nicht sicher, ob es ein Witz ist: Fragen ist besser als raten.", // nieuw, nalezen
+    'd.calm.a.why': "Gefragt, warum es nicht fertig ist: ein ruhiger Grund, und was zuerst kommt.", // nieuw, nalezen
+    'd.talkintime.a.why': "Jemand bittet um einen Moment: ein Ja, und eine Frage, damit die Person es erzählen kann.", // nieuw, nalezen
+    'd.reachable.a.why': "Rückruf nach einem verpassten Anruf: ein Gruß, und warum du anrufst.", // nieuw, nalezen
+    'd.getfeedback.a.why': "Feedback angeboten: ein Ja, und dass du es gut machen willst.", // nieuw, nalezen
+    'd.givefeedback.a.why': "Gefragt nach der Arbeit: zuerst, was gut ist, dann, was besser sein kann.", // nieuw, nalezen
+    'd.meeting.a.why': "Gefragt nach Fragen: Diese Antwort stellt eine, über den Dienstplan.", // nieuw, nalezen
   },
 };
 

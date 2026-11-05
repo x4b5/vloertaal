@@ -440,6 +440,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'Позначити', // nieuw, nalezen
     checkVia: 'через перевірку', // nieuw, nalezen
     checkUndo: 'Усе ж пройти уроки', // nieuw, nalezen
+    commLabel: "Спілкування", // nieuw, nalezen
     shareInvite: 'Я вчу нідерландську для роботи за допомогою Vloertaal. Безкоштовно: {link}', // nieuw, nalezen (AI-correctie 2 nov 2026)
     briefjeWhat: 'Vloertaal — безкоштовний застосунок, щоб вивчати нідерландську для роботи.', // nieuw, nalezen
     briefjeHow: 'Короткі уроки на твоєму телефоні, з підказками твоєю мовою. Без акаунта.', // nieuw, nalezen

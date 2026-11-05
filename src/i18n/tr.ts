@@ -440,6 +440,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'İşaretle', // nieuw, nalezen
     checkVia: 'kontrolle', // nieuw, nalezen
     checkUndo: 'Yine de dersleri yap', // nieuw, nalezen
+    commLabel: "İletişim", // nieuw, nalezen
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen
     briefjeWhat: 'Vloertaal, iş için Hollandaca öğreten ücretsiz bir uygulamadır.', // nieuw, nalezen
     briefjeHow: 'Kendi telefonunda kısa dersler, kendi dilinde yardımla. Hesap yok.', // nieuw, nalezen

@@ -129,6 +129,15 @@ const t: CultureTranslation = {
     'c.road.a.why': "Просять ще один рейс: ні, бо спершу перерва.", // nieuw, nalezen
     'c.backtowork.a.why': "Питають, як ти: коротке «так» і що ти не поспішаєш.", // nieuw, nalezen
     'c.feelwell.a.why': "Питають, як ти: чесне «не дуже» — це нормально.", // nieuw, nalezen
+    // u.communicate en u.feedback (5 november 2026).
+    'd.explain.a.why': "Питають, що не так: ця відповідь каже, що сталося і що потрібно.", // nieuw, nalezen
+    'd.listen.a.why': "Незрозуміло, чи це жарт: краще запитати, ніж гадати.", // nieuw, nalezen
+    'd.calm.a.why': "Питають, чому не готово: спокійна причина і що робити спершу.", // nieuw, nalezen
+    'd.talkintime.a.why': "Хтось просить хвилинку: «так» і запитання, щоб людина могла розповісти.", // nieuw, nalezen
+    'd.reachable.a.why': "Передзвонюєш після пропущеного дзвінка: привітання і чому ти дзвониш.", // nieuw, nalezen
+    'd.getfeedback.a.why': "Пропонують зворотний звʼязок: «так» і що ти хочеш робити все добре.", // nieuw, nalezen
+    'd.givefeedback.a.why': "Питають про роботу: спершу що добре, потім що може бути краще.", // nieuw, nalezen
+    'd.meeting.a.why': "Питають, чи є запитання: ця відповідь ставить одне, про графік.", // nieuw, nalezen
   },
 };
 
