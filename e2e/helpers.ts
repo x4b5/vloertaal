@@ -71,14 +71,16 @@ export async function lessonPlace(page: Page): Promise<number> {
 
 /**
  * One step of a lesson, whatever is on screen: Continue when it is there, otherwise an answer
- * (the first option, a guided match, a sentence built tile by tile, speaking said out loud).
+ * (the first option, a guided match, a sentence built tile by tile, speaking said out loud, the
+ * speaker of a sound card).
  * Right or wrong does not matter: a mistake comes back once, then the lesson ends.
  */
 export async function lessonStep(page: Page): Promise<void> {
   const body = page.locator('.player-body > .ex-slide');
   const go = page.locator('.player-foot .btn-go:not([disabled])');
   if (await go.isVisible()) return tapUntilChanged(page, go);
-  for (const sel of ['.say-aloud-instead', '.situation-show']) {
+  // "Hoe zeg je het?" in a Klanken lesson: Continue comes after the word's speaker is played.
+  for (const sel of ['.say-aloud-instead', '.situation-show', '.klank-step .klank-word .speak']) {
     const b = body.locator(sel);
     if (await b.isVisible()) return tapUntilChanged(page, b);
   }
@@ -120,7 +122,7 @@ export async function lessonStep(page: Page): Promise<void> {
   const choice = body.locator('.choice:not([aria-disabled="true"])').first();
   if (await choice.isVisible()) return tapUntilChanged(page, choice);
   // Nothing to tap yet (a screen still coming in): wait until something is.
-  await expect(page.locator('.player-foot .btn-go:not([disabled]), .player-body > .ex-slide .choice, .player-body > .ex-slide .tile-with-say, .player-body > .ex-slide .say-aloud-instead, .player-body > .ex-slide .situation-show, .result-screen').first()).toBeVisible();
+  await expect(page.locator('.player-foot .btn-go:not([disabled]), .player-body > .ex-slide .choice, .player-body > .ex-slide .tile-with-say, .player-body > .ex-slide .say-aloud-instead, .player-body > .ex-slide .situation-show, .player-body > .ex-slide .klank-step .klank-word .speak, .result-screen').first()).toBeVisible();
 }
 
 /** Plays the open lesson to its end (the result screen). */

@@ -110,7 +110,8 @@ let lastSpeed = 1;
  *    letters lit. Let go and you hear the word, at the chosen speed.
  * Both run left to right in every language (the word is Dutch, and read that way).
  */
-export function KlankCard({ klank, lang, deviceSound = false, compact = false }: { klank: Klank; lang?: HelpLanguage; deviceSound?: boolean; compact?: boolean }) {
+/** `onHeard`: the learner played the sound or the word (the speaker, the mouth, the word slider). */
+export function KlankCard({ klank, lang, deviceSound = false, compact = false, onHeard }: { klank: Klank; lang?: HelpLanguage; deviceSound?: boolean; compact?: boolean; onHeard?: () => void }) {
   useVoices();
   const voice = klankVoice();
   const sound = soundText(klank, voice, deviceSound);
@@ -124,6 +125,7 @@ export function KlankCard({ klank, lang, deviceSound = false, compact = false }:
   const say = (text: string) => {
     motion.play(1 / speed, text === klank.word.nl);
     speak(text, false, 'nl', sound.voice, speed);
+    onHeard?.();
   };
   const rtl = lang?.dir === 'rtl';
   const how = klankText(klank, lang);
@@ -171,7 +173,7 @@ export function KlankCard({ klank, lang, deviceSound = false, compact = false }:
       <div className="klank-word" dir="ltr">
         <WordPicture id={klank.word.id} emoji={klank.word.emoji} size={compact ? 48 : 64} />
         <span className="klank-word-nl"><MarkedWord word={klank.word.nl} klank={klank} now={motion.part} /></span>
-        <SpeakButton text={klank.word.nl} help={lang} voice={voice} speed={speed} />
+        <SpeakButton text={klank.word.nl} help={lang} voice={voice} speed={speed} onPlay={onHeard} />
       </div>
       <label className="klank-slider klank-speed" dir="ltr">
         <span className="sr-only"><Bi text={ui('klankSpeed', lang)} /></span>

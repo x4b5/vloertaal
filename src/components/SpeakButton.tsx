@@ -27,7 +27,7 @@ export function PlayName({ text, help, say = 'playAudio', lang = 'nl' }: { text:
  * so on, alternating. After a normal play a small turtle sits on the button: the next tap is
  * slow. (`slow` makes a button that always plays slowly.)
  */
-export function SpeakButton({ text, size = 'md', slow = false, label, hideText = false, help, lang = 'nl', glyph = false, voice, long = false, needsDevice = false, className, speed }: {
+export function SpeakButton({ text, size = 'md', slow = false, label, hideText = false, help, lang = 'nl', glyph = false, voice, long = false, needsDevice = false, className, speed, onPlay }: {
   text: string;
   /** Plain blue speaker icon (as inside a speech bubble) instead of a filled button. */
   glyph?: boolean;
@@ -56,6 +56,8 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
    * every tap plays at that speed, so no turtle on a second tap.
    */
   speed?: number;
+  /** Told on every play (not on a stop): "Hoe zeg je het?" in a lesson waits for it. */
+  onPlay?: () => void;
 }) {
   // Re-checked when the phone's voices or the recorded voices arrive.
   useVoices();
@@ -89,6 +91,7 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
         if (long && lang === 'nl') speakLong(text, { slow: slow || nextSlow, voice });
         else speak(text, slow || nextSlow, lang, voice, speed);
         setPlays({ text, n: n + 1 });
+        onPlay?.();
       }}
       aria-label={label ?? (hideText ? said(play) : undefined)}
       lang={label || !hideText ? undefined : saidLang(play)}
