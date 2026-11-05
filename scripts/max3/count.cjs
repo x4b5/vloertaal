@@ -460,6 +460,12 @@ function defineStates(LANG) {
   add('lesson:situation-voice:wrong', shot('situation'), async (p) => { await reveal(p); await tap(p, choice, 1); await settle(p, 900); }, { voices: true, expect: '.feedback-why-row .help-say' });
   add('lesson:saying-ask-voice:right', shot('saying-ask'), async (p) => { await reveal(p); await tap(p, choice, 0); await settle(p, 900); }, { voices: true, expect: '.feedback-why-row .help-say' });
   add('lesson:word-card', shot('intro'));
+  // "Zeg het hardop" under the word (src/lib/sayAloud.ts, 5 November 2026): a line, not a button.
+  // Once the word has sounded; without sound ("Zeg het zachtjes, of in je hoofd.") at once; and
+  // on a moving picture, with its dots after the movement.
+  add('lesson:word-card-say', shot('intro'), async (p) => { await p.waitForSelector('.say-aloud:not(.is-waiting)', { timeout: 12000 }); }, { expect: '.intro-card ~ .say-aloud:not(.is-waiting)' });
+  add('lesson:word-card-say-quiet', shot('intro&quiet=1'), null, { expect: '.intro-card ~ .say-aloud:not(.is-waiting)' });
+  add('lesson:word-card-say-moving', shot('intro&word=w.glad'), async (p) => { await p.waitForSelector('.say-aloud:not(.is-waiting)', { timeout: 12000 }); }, { expect: '.intro-card .mv-from ~ *, .intro-card ~ .say-aloud:not(.is-waiting)' });
   // Moving word pictures (the trial of 5 November 2026, docs/tekenstijl.md "Beweging"): their intro
   // cards; the speaker plays the movement again, so there is no button of its own. The second
   // round (the owner's "go on", 5 November 2026) follows the trial's nine, then the last round.

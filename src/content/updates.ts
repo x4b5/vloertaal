@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-05',
     items: [
+      'Zeg het hardop: na het woord op de woordkaart staat nu "Zeg het hardop." Wie het woord zelf zegt, onthoudt het beter. Zonder geluid staat er "Zeg het zachtjes, of in je hoofd." Er wordt niets opgenomen.',
       'Bewegende plaatjes: nu bewegen 40 woorden even als je ze leert, zoals vallen, bukken, inklokken, ruilen, sorteren, uitzetten, mengen, eerst, daarna, voordoen en tellen. Tik op de speaker en je ziet het opnieuw. Bij "Rustig scherm" of "minder beweging" staat alles stil. Tillen en bukken laten de veilige manier zien: door je knieën, met een rechte rug.',
       'Toen en nu: de eerste keer dat je een zin inspreekt, bewaart je telefoon die opname. Spreek je dezelfde zin een week later of nog later weer in, dan hoor je ze naast elkaar: eerst toen, dan nu. Zo hoor je zelf dat je beter wordt.',
       'Zeg het samen: wie niet graag hardop praat, kan eerst samen met de stem meepraten. Er wordt dan niets opgenomen. Daarna probeer je het alleen. Bram zegt één keer: "Fouten mogen. Nederlanders begrijpen je ook met fouten."',

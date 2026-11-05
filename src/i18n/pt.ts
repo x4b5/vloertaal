@@ -31,6 +31,8 @@ const lang: HelpLanguageSource = {
     locked: 'Primeiro termina a lição anterior',
     newWord: 'Palavra nova',
     tapToHear: 'Toca para ouvir',
+    sayItAloud: 'Diz em voz alta.', // nieuw, nalezen
+    sayItQuietly: 'Diz baixinho, ou na tua cabeça.', // nieuw, nalezen
     whatDoesThisMean: 'O que quer dizer isto?',
     snapQuestion: 'Percebes?', // nieuw, nalezen
     snapYes: 'Sim, está bem.', // nieuw, nalezen

@@ -31,6 +31,8 @@ const lang: HelpLanguageSource = {
     locked: 'Termină mai întâi lecția de dinainte',
     newWord: 'Cuvânt nou',
     tapToHear: 'Atinge ca să asculți',
+    sayItAloud: 'Spune-l cu voce tare.', // nieuw, nalezen
+    sayItQuietly: 'Spune-l încet sau în gând.', // nieuw, nalezen
     whatDoesThisMean: 'Ce înseamnă asta?',
     snapQuestion: 'Înțelegi?', // nieuw, nalezen
     snapYes: 'Da, bine.', // nieuw, nalezen
