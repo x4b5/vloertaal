@@ -520,6 +520,18 @@ function defineStates(LANG) {
   for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:clear-${key}`, shot(`lesson&lesson=l.clear&at=${at}`));
   }
+  // "Je goed voelen op het werk" (l.feelwell, seed 1, 5 November 2026): an abstract word ("de
+  // werkdruk"), the drawn "wakker liggen", the tip (who to talk to, 113) and its situation, "What
+  // do you hear?", a sentence to build, the chat and typing "alleen".
+  for (const [key, at] of [['word-abstract', 0], ['intro', 1], ['tip', 9], ['tip-say', 10], ['situation', 11], ['listen', 13], ['build', 14], ['chat', 18], ['type', 20]]) {
+    add(`lesson:feelwell-${key}`, shot(`lesson&lesson=l.feelwell&at=${at}`));
+  }
+  // "Een nieuwe collega helpen" (l.newcolleague, seed 1, 5 November 2026): an abstract word
+  // ("welkom"), the drawn "de kast", the tip and its situation ("Ja, ja, ik snap het."), a
+  // sentence to build, the chat ("Mooi. Laat eens zien.") and typing "het geduld".
+  for (const [key, at] of [['word-abstract', 0], ['intro', 7], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
+    add(`lesson:newcolleague-${key}`, shot(`lesson&lesson=l.newcolleague&at=${at}`));
+  }
   // "Getallen" (l.counting, seed 1, 4 November 2026): a number's word card (a label with its
   // digits), "what does it mean" with its partner (dertien or dertig), "which one is 47" (text
   // cards), the tip and its situation ("Ga naar gang zevenenveertig."), "What do you hear?" (47 or

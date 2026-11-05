@@ -187,6 +187,8 @@ export const KUN_TAAL: KunOnderwerp[] = [
   onderwerp('u.health', 'Gezondheid', [
     ['Ik kan zeggen waar ik pijn heb.', 'A1', 'spreken', 'I can say where it hurts.'],
     ['Ik kan een afspraak bij de huisarts vragen.', 'A2', 'gesprekken', 'I can ask for an appointment with the GP.'],
+    // l.feelwell "Je goed voelen op het werk" (5 November 2026): "Het is te veel.", and asking to talk.
+    ['Ik kan zeggen dat het werk me te veel wordt.', 'A2', 'spreken', 'I can say that the work is getting too much for me.'],
   ]),
   onderwerp('u.money', 'Geld en post', [
     ['Ik kan zeggen dat ik een brief niet begrijp.', 'A2', 'spreken', 'I can say that I do not understand a letter.'],

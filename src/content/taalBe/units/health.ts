@@ -7,6 +7,9 @@ import type { BeTaal } from '../types';
  *  - l.insurance (C in the inventory, written as B: its words, sentences and chat): the
  *    zorgverzekering, het eigen risico and de zorgtoeslag → het ziekenfonds, het remgeld and de
  *    verhoogde tegemoetkoming.
+ *  - l.feelwell (5 November 2026): only its tip, with the arbeidsarts in place of the bedrijfsarts,
+ *    the preventieadviseur psychosociale aspecten next to the vertrouwenspersoon, and 1813 in place
+ *    of 113; its words, sentences and chat are the same.
  * l.body and l.healthy are the same in both countries. Translations: src/i18n/be/units/health.ts.
  *
  * Sources: the official sites (riziv.fgov.be, inami.fgov.be, socialsecurity.be) were not opened in
@@ -84,6 +87,31 @@ const tips = [
       ],
       why: 'Without a ziekenfonds, you pay the doctor and the hospital yourself. Joining quickly protects you. Your employer or interim office can help you.',
     }),
+  },
+  // ⚖️ check: You may ask for a talk with the occupational doctor yourself (spontane raadpleging) ⚖️
+  // (codex welzijn op het werk, boek I titel 4: the preventieadviseur-arbeidsarts; as Werkregels
+  // België r.be.l.veilig.4: "de arbeidsarts (je mag zelf om een gesprek vragen)"; not opened).
+  // ⚖️ check: Every employer must have a preventieadviseur psychosociale aspecten ⚖️ (Welzijnswet art.
+  // 32sexies; as the Belgian u.social tips, src/content/taalBe/units/social.ts).
+  // ⚖️ check: 1813, the Zelfmoordlijn: free and anonymous, day and night; a chat on zelfmoord1813.be
+  // ⚖️ (as "Wie bel je?" h.be.1813 in src/content/regels/help.ts, with its sources).
+  {
+    ...beTip({
+      slug: 'feelwell',
+      lessonId: 'l.feelwell',
+      emoji: '💬',
+      title: 'Too much? You do not have to do it alone',
+      body: 'Everyone feels tired, stressed or sad sometimes. Too much work (werkdruk), bad sleep from shift work or missing your family can make it heavy. You do not have to carry it alone, and saying "it is too much" is not weak. Talk to someone you trust: your supervisor, the confidential adviser (vertrouwenspersoon) or the prevention adviser (preventieadviseur psychosociale aspecten), the occupational doctor (arbeidsarts) or your huisarts. You may also ask for a talk with the occupational doctor yourself. Doctors do not tell your boss what you said. Do you think about suicide, or do you worry about someone? Call 1813 (free, day and night), or chat at zelfmoord1813.be.',
+      phrase: ['Het gaat niet zo goed. Kan ik even met je praten?', 'I am not doing so well. Can I talk to you for a moment?'],
+      situation: 'For weeks, you sleep badly and the work is too much. You feel very tired. What do you do?',
+      options: [
+        'Tell your supervisor or the arbeidsarts.',
+        'Say nothing, and work harder and faster.',
+        'Stay at home, and tell nobody why.',
+      ],
+      why: 'Saying it early is not weak. Then you can look for a way out together, for example other shifts. You do not have to do it alone.',
+    }),
+    lead: [2, 3, 6, 7],
   },
 ];
 
