@@ -6,7 +6,6 @@ import type { HelpLanguage, UiKey } from '../i18n/types';
 import { checkTyped, nextTileOrder, sentenceOrders, typoMarks } from '../lib/answers';
 import { autoSpeak, autoSpeakAt, onSpeech, sounds, speak, surelySilent } from '../lib/audio';
 import { followSayAloud, sayMode, stillInMs, type SayMode } from '../lib/sayAloud';
-import { uiNl } from '../i18n/nl';
 import { dutchUi } from '../lib/track';
 import { allTiles, buildSteps, choicePictures, frontSteps, matchAsked, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
@@ -270,10 +269,14 @@ function useSayAloud(text: string, mode: SayMode, stillIn: () => number): { show
   return { shown, pulse };
 }
 
+/** The Dutch of the two lines, written here (as NlPair's nl elsewhere): importing src/i18n/nl.ts
+ *  would put the whole Dutch UI in the start bundle (5 November 2026, the bundle-size check). */
+const SAY_NL = { sayItAloud: 'Zeg het hardop.', sayItQuietly: 'Zeg het zachtjes, of in je hoofd.' } as const;
+
 /** "Zeg het hardop." (or softly, in your head) in Dutch and the help language, with three dots
  *  that light up after each other once ("your turn"), then stand still. Not a button. */
 function SayAloudLine({ shown, pulse, lang }: { shown: SayMode | null; pulse: number; lang?: HelpLanguage }) {
-  const key: UiKey = shown === 'quiet' ? 'sayItQuietly' : 'sayItAloud';
+  const key = shown === 'quiet' ? 'sayItQuietly' : 'sayItAloud';
   const text = ui(key, lang);
   return (
     <p className={`say-aloud ${shown ? '' : 'is-waiting'}`} aria-hidden={shown ? undefined : true}>
@@ -281,7 +284,7 @@ function SayAloudLine({ shown, pulse, lang }: { shown: SayMode | null; pulse: nu
       <span className="say-aloud-text">
         {/* The Dutch keeps its own direction in a right-to-left screen (its full stop at its end,
             also when it wraps), set to the right there (styles.css). */}
-        <span className="say-aloud-nl" lang="nl" dir="ltr">{uiNl[key] as string}</span>
+        <span className="say-aloud-nl" lang="nl" dir="ltr">{SAY_NL[key]}</span>
         {text.help && text.lang ? <HelpText text={text.help} lang={text.lang} /> : <span className="bi-help" lang="en">{text.en}</span>}
       </span>
       {/* A new key replays the dots (a new element starts its animation again). */}
