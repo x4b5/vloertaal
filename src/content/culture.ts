@@ -375,13 +375,16 @@ export const teamworkUnit: Unit = {
       // sentences, the chat and the tip. "bijna" has a moving picture on its intro card only
       // (`picture: 'motion'`, the owner's trial of 5 November 2026): a bar fills and stops just
       // before the end. Standing still, a nearly full bar would be read as "afmaken" (a full bar
-      // with a tick) in the same lesson, so it is never in a picture choice.
+      // with a tick) in the same lesson, so it is never in a picture choice. "eerst" and "daarna"
+      // have one too (the second round, 5 November 2026): a list of two jobs, the hand at the top
+      // one and its tick, or the hand going on to the bottom one and its tick. Still, the two
+      // lists would only differ in a tick, so they are never in a picture choice either.
       id: 'l.task',
       title: 'Instructions from your supervisor',
       words: [
         { id: 'w.taak', nl: 'de taak', en: 'the task', emoji: '📌' },
-        { id: 'w.eerst', nl: 'eerst', en: 'first', emoji: '1️⃣', picture: false },
-        { id: 'w.daarna', nl: 'daarna', en: 'after that', emoji: '⏭️', picture: false },
+        { id: 'w.eerst', nl: 'eerst', en: 'first', emoji: '1️⃣', picture: 'motion' },
+        { id: 'w.daarna', nl: 'daarna', en: 'after that', emoji: '⏭️', picture: 'motion' },
         { id: 'w.afmaken', nl: 'afmaken', en: 'to finish', emoji: '✅' },
         { id: 'w.snel', nl: 'snel', en: 'fast', emoji: '🏃' },
         { id: 'w.bijna', nl: 'bijna', en: 'almost', emoji: '🤏', picture: 'motion' },

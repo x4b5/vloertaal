@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { CastHead } from '../components/Characters';
-import { Box, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Box, ExclaimMark, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 7 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -317,7 +317,9 @@ export default {
   ),
 
   // "vallen": to fall — Bram tumbles backwards through the air, arms and legs flung up; motion
-  // lines above him, his shadow on the floor below
+  // lines above him, his shadow on the floor below. On the intro card (docs/tekenstijl.md
+  // "Beweging", second round, 5 November 2026) he drops in from above, still nearly upright, and
+  // tips over backwards as he falls (drop and tip: one fall, speeding up); then the lines come.
   'w.vallen': () => {
     const vest = PAL.orange;
     const leg = '#2d4f78';
@@ -325,29 +327,35 @@ export default {
     return (
       <g>
         <Ground cx={58} cy={106} rx={30} ry={4} />
-        <path d="M44 12V22M58 8V20M72 10V22" stroke={PAL.line} strokeWidth="3.4" strokeLinecap="round" opacity=".75" />
-        {/* Legs (kicked up to the right) */}
-        <Capsule a={[70, 66]} b={[90, 50]} w={11} fill={leg} />
-        <Capsule a={[90, 50]} b={[100, 32]} w={11} fill={leg} />
-        <Capsule a={[66, 70]} b={[90, 66]} w={11} fill={leg} />
-        <Capsule a={[90, 66]} b={[104, 52]} w={11} fill={leg} />
-        <ellipse cx="103" cy="28" rx="5" ry="8" fill={PAL.brown} transform="rotate(30 103 28)" />
-        <ellipse cx="107" cy="48" rx="5" ry="8" fill={PAL.brown} transform="rotate(45 107 48)" />
-        {/* Far arm */}
-        <Capsule a={[50, 54]} b={[56, 34]} w={10} fill={PAL.blue} />
-        <Capsule a={[56, 34]} b={[66, 20]} w={10} fill={PAL.blue} />
-        <circle cx="68" cy="17" r="5.5" fill={sk[0]} />
-        {/* Torso: tilted back */}
-        <g transform="rotate(-58 64 68)">
-          <path d="M48 70C46 58 48 46 64 46C80 46 82 58 80 70Q64 76 48 70Z" fill={vest} transform="translate(0 0)" />
-          <rect x="46" y="56" width="36" height="5" fill="#ffe066" />
-        </g>
-        {/* Head */}
-        <Head who="bram" x={47} y={58} s={0.5} rot={-50} expr="disappointed" />
-        {/* Near arm, flung out */}
-        <Capsule a={[52, 72]} b={[34, 80]} w={10} fill={PAL.blue} />
-        <Capsule a={[34, 80]} b={[20, 70]} w={10} fill={PAL.blue} />
-        <circle cx="17" cy="67" r="5.5" fill={sk[0]} />
+        <Move kind="show">
+          <path d="M44 12V22M58 8V20M72 10V22" stroke={PAL.line} strokeWidth="3.4" strokeLinecap="round" opacity=".75" />
+        </Move>
+        <Move kind="drop" dy={-44}>
+          <Move kind="tip" turn={50} at={[62, 62]}>
+            {/* Legs (kicked up to the right) */}
+            <Capsule a={[70, 66]} b={[90, 50]} w={11} fill={leg} />
+            <Capsule a={[90, 50]} b={[100, 32]} w={11} fill={leg} />
+            <Capsule a={[66, 70]} b={[90, 66]} w={11} fill={leg} />
+            <Capsule a={[90, 66]} b={[104, 52]} w={11} fill={leg} />
+            <ellipse cx="103" cy="28" rx="5" ry="8" fill={PAL.brown} transform="rotate(30 103 28)" />
+            <ellipse cx="107" cy="48" rx="5" ry="8" fill={PAL.brown} transform="rotate(45 107 48)" />
+            {/* Far arm */}
+            <Capsule a={[50, 54]} b={[56, 34]} w={10} fill={PAL.blue} />
+            <Capsule a={[56, 34]} b={[66, 20]} w={10} fill={PAL.blue} />
+            <circle cx="68" cy="17" r="5.5" fill={sk[0]} />
+            {/* Torso: tilted back */}
+            <g transform="rotate(-58 64 68)">
+              <path d="M48 70C46 58 48 46 64 46C80 46 82 58 80 70Q64 76 48 70Z" fill={vest} transform="translate(0 0)" />
+              <rect x="46" y="56" width="36" height="5" fill="#ffe066" />
+            </g>
+            {/* Head */}
+            <Head who="bram" x={47} y={58} s={0.5} rot={-50} expr="disappointed" />
+            {/* Near arm, flung out */}
+            <Capsule a={[52, 72]} b={[34, 80]} w={10} fill={PAL.blue} />
+            <Capsule a={[34, 80]} b={[20, 70]} w={10} fill={PAL.blue} />
+            <circle cx="17" cy="67" r="5.5" fill={sk[0]} />
+          </Move>
+        </Move>
       </g>
     );
   },
@@ -442,7 +450,8 @@ export default {
     </g>
   ),
 
-  // "inpakken": to pack — two hands lower a blue product into an open cardboard box
+  // "inpakken": to pack — two hands lower a blue product into an open cardboard box. On the
+  // intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the hands lower it in from above.
   'w.inpakken': () => {
     const x = 24;
     const y = 66;
@@ -452,16 +461,20 @@ export default {
         <Ground cx={62} cy={108} rx={44} ry={4.5} />
         <Box x={x} y={y} w={w} h={38} depth={16} open />
         {/* The product going in */}
-        <Shade color={PAL.blueShade} opacity={1} at={[76, 46, 6, 30]}>
-          <rect x="38" y="30" width="34" height="38" rx="3" fill={PAL.blue} />
-        </Shade>
-        <rect x="44" y="40" width="18" height="12" rx="2" fill={PAL.paper} />
+        <Move kind="from" dy={-26}>
+          <Shade color={PAL.blueShade} opacity={1} at={[76, 46, 6, 30]}>
+            <rect x="38" y="30" width="34" height="38" rx="3" fill={PAL.blue} />
+          </Shade>
+          <rect x="44" y="40" width="18" height="12" rx="2" fill={PAL.paper} />
+        </Move>
         {/* Front flap over it */}
         <polygon points={`${x} ${y} ${x + w} ${y} ${x + w - 5} ${y - 13} ${x - 5} ${y - 13}`} fill="#f0c48a" stroke="#f0c48a" strokeWidth="2" />
         <path d={`M${x + 3} ${y + 2.2}H${x + w - 3}`} stroke="#f6d3a2" strokeWidth="2" strokeLinecap="round" />
         {/* Hands holding its sides */}
-        <Hand pose="open" x={8} y={40} rotate={90} scale={0.62} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
-        <Hand pose="open" x={102} y={40} rotate={-90} scale={0.62} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} mirror />
+        <Move kind="from" dy={-26}>
+          <Hand pose="open" x={8} y={40} rotate={90} scale={0.62} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+          <Hand pose="open" x={102} y={40} rotate={-90} scale={0.62} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} mirror />
+        </Move>
       </g>
     );
   },

@@ -403,7 +403,7 @@ export function Motion({ x, y, dir = -90, spread = 60, n = 3, len = 9, gap = 6, 
 }
 
 /** How a moving part moves (styles.css "Moving word pictures"): each is one CSS animation. */
-export type MoveKind = 'from' | 'slow' | 'fast' | 'turn' | 'tip' | 'grow' | 'show';
+export type MoveKind = 'from' | 'slow' | 'fast' | 'drop' | 'then' | 'steps' | 'turn' | 'tip' | 'grow' | 'sag' | 'show';
 
 /**
  * A moving part of a word picture (the owner's trial, 5 November 2026; docs/tekenstijl.md
@@ -411,9 +411,16 @@ export type MoveKind = 'from' | 'slow' | 'fast' | 'turn' | 'tip' | 'grow' | 'sho
  * the path, the pocket cards) and with "less motion" or "Rustig scherm". Only on the word's intro
  * card does it move into place once, by a CSS animation of this <g> (styles.css), never by script:
  *  - 'from' / 'slow' / 'fast': it slides in from (dx, dy) units away (one slide, three speeds);
+ *    'drop' is quick and speeds up, as a fall (the timing of 'tip', so the two make one fall);
+ *    'then' is the slide of 'from', but after it (a second step: someone does it after, the arrow
+ *    goes in once the card is at the clock); 'steps' gets there in three stops (counting: one,
+ *    two, three), each held about half a second;
  *  - 'turn' / 'tip': it turns `turn` degrees back into place around `at` (a joint, a clock's centre);
  *    'tip' is quick and speeds up, as a fall;
  *  - 'grow': it grows from `grow` (a fraction) of its width to its full width, from its left edge;
+ *  - 'sag': it goes from `grow` times its height to its own height, on its bottom edge: above 1
+ *    it sinks (a tyre going flat, the sand in the top of an hourglass), below 1 it rises (the
+ *    heap of sand, an arrow going up);
  *  - 'show': it appears at the end of the motion (a tick, a mark: one fade, never a flash).
  * The <g> carries no transform attribute of its own (the animation would replace it): nest it.
  */
@@ -421,9 +428,10 @@ export function Move({ kind, dx = 0, dy = 0, turn = 0, at, grow = 0.1, children 
   kind: MoveKind; dx?: number; dy?: number; turn?: number; at?: Pt; grow?: number; children: ReactNode;
 }) {
   const style: Record<string, string> = {};
-  if (kind === 'from' || kind === 'slow' || kind === 'fast') Object.assign(style, { '--mv-dx': `${dx}px`, '--mv-dy': `${dy}px` });
+  if (kind === 'from' || kind === 'slow' || kind === 'fast' || kind === 'drop' || kind === 'then' || kind === 'steps') Object.assign(style, { '--mv-dx': `${dx}px`, '--mv-dy': `${dy}px` });
   if (kind === 'turn' || kind === 'tip') Object.assign(style, { '--mv-turn': `${turn}deg`, transformOrigin: `${at?.[0] ?? 60}px ${at?.[1] ?? 60}px` });
   if (kind === 'grow') style['--mv-grow'] = String(grow);
+  if (kind === 'sag') style['--mv-sag'] = String(grow);
   return <g className={`mv-${kind}`} style={style}>{children}</g>;
 }
 

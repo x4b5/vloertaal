@@ -262,13 +262,19 @@ export default {
     </g>
   ),
 
-  // "beter": better — Bram feels well again: big smile, a green arrow going up.
+  // "beter": better — Bram feels well again: big smile, a green arrow going up. On the intro card
+  // (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the arrow rises (from his low, sick days up to well again), then the
+  // sparkles come.
   'w.beter': () => (
     <g>
       <Bust who="bram" x={46} y={118} scale={0.72} expr="joy" />
-      <CurveArrow from={[84, 92]} to={[100, 22]} bend={10} color={PAL.ok} width={8} head={13} />
-      <Sparkle x={20} y={24} r={8} />
-      <Sparkle x={78} y={18} r={5} color={PAL.yellowShade} />
+      <Move kind="sag" grow={0.25}>
+        <CurveArrow from={[84, 92]} to={[100, 22]} bend={10} color={PAL.ok} width={8} head={13} />
+      </Move>
+      <Move kind="show">
+        <Sparkle x={20} y={24} r={8} />
+        <Sparkle x={78} y={18} r={5} color={PAL.yellowShade} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

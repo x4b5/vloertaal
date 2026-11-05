@@ -467,9 +467,15 @@ function defineStates(LANG) {
   add('lesson:word-card-say-quiet', shot('intro&quiet=1'), null, { expect: '.intro-card ~ .say-aloud:not(.is-waiting)' });
   add('lesson:word-card-say-moving', shot('intro&word=w.glad'), async (p) => { await p.waitForSelector('.say-aloud:not(.is-waiting)', { timeout: 12000 }); }, { expect: '.intro-card .mv-from ~ *, .intro-card ~ .say-aloud:not(.is-waiting)' });
   // Moving word pictures (the trial of 5 November 2026, docs/tekenstijl.md "Beweging"): their intro
-  // cards; the speaker plays the movement again, so there is no button of its own.
-  for (const id of ['glad', 'tillen', 'ontruimen', 'inchecken', 'uitchecken', 'bijna', 'langzaam', 'snel', 'telaat']) {
-    add(`lesson:word-card-moving-${id}`, shot(`intro&word=w.${id}`), null, { expect: '.intro-card .mv-from, .intro-card .mv-slow, .intro-card .mv-fast, .intro-card .mv-turn, .intro-card .mv-tip, .intro-card .mv-grow' });
+  // cards; the speaker plays the movement again, so there is no button of its own. The second
+  // round (the owner's "go on", 5 November 2026) follows the trial's nine, then the last round.
+  for (const id of [
+    'glad', 'tillen', 'ontruimen', 'inchecken', 'uitchecken', 'bijna', 'langzaam', 'snel', 'telaat',
+    'vallen', 'bukken', 'inklokken', 'uitklokken', 'inloggen', 'uitloggen', 'ruilen', 'versturen', 'doorgeven', 'sorteren', 'ophalen',
+    'uitzetten', 'automatisch', 'verbeteren', 'lek', 'mengen', 'eerst', 'daarna', 'voordoen', 'verlengen', 'tellen', 'herhalen',
+    'opruimen', 'afruimen', 'inpakken', 'afpakken', 'kiezen', 'beter', 'duren', 'verhuizen', 'vergrendelen',
+  ]) {
+    add(`lesson:word-card-moving-${id}`, shot(`intro&word=w.${id}`), null, { expect: '.intro-card [class^="mv-"]' });
   }
   // Tester mode: the "Iets melden" flag in the header (chrome, like the ✕).
   add('lesson:report', shot('meaning&report=1'), null, { expect: '.player-top .lesson-report' });
