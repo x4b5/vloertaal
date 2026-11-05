@@ -31,7 +31,7 @@ describe('the note, one page per language', () => {
   it('there is a page for every help language and English, and an index', () => {
     const files = briefjeFiles().map((f) => f.fileName);
     expect(files).toEqual(['briefje/index.html', ...LANG_PAGES.map((p) => `briefje/${p.code}/index.html`)]);
-    expect(files).toHaveLength(15);
+    expect(files).toHaveLength(16);
     expect(readFileSync('vite.config.ts', 'utf8')).toContain('for (const f of briefjeFiles()) this.emitFile({ type: \'asset\', ...f });');
   });
 

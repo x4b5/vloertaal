@@ -30,11 +30,13 @@ import { gzipSync } from 'node:zlib';
  * opens (docs/fasen or EIGENAAR-TODO: "ophogen of meer lui laden").
  * dist 3300 → 3400 (also 5 November 2026): "Goed communiceren" and "Feedback en overleg" (eight
  * lessons, in 13 help languages) at 3300.5 kB. The start file stays under its limit (291.6 kB).
+ * dist 3400 → 3550 (also 5 November 2026): Somali, a 14th help language (its own pack, loaded only
+ * for a Somali learner), at 3412.3 kB. The start file did not grow with it (291.9 kB).
  */
 export const LIMITS = {
   'start file': 295,
   start: 415,
-  dist: 3400,
+  dist: 3550,
 };
 
 const gz = (buf) => gzipSync(buf, { level: 9 }).length;

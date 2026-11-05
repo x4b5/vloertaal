@@ -104,8 +104,8 @@ describe('translations where required', () => {
     expect(required.length).toBeGreaterThan(80);
   });
 
-  it('13 help languages: every required sentence and the screen texts (with the five skills), nothing else', () => {
-    expect(helpLanguageSources).toHaveLength(13);
+  it('14 help languages: every required sentence and the screen texts (with the five skills), nothing else', () => {
+    expect(helpLanguageSources).toHaveLength(14);
     for (const lang of helpLanguageSources) {
       for (const id of required) {
         const forms = allForms(lang.gloss[id]);

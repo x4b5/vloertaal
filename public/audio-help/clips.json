@@ -312,6 +312,68 @@
    "page": "land"
   }
  ],
+ "so": [
+  {
+   "id": "routeTitle",
+   "text": "Maxaad rabtaa inaad barato?",
+   "page": "route"
+  },
+  {
+   "id": "routeLearn",
+   "text": "Baro Af-Holandiiska shaqada – iyo sida shaqadu halkan u socoto",
+   "page": "route"
+  },
+  {
+   "id": "routeRules",
+   "text": "Horey ayaan ugu hadlaa Af-Holandiis: xeerarka shaqada oo keliya",
+   "page": "route"
+  },
+  {
+   "id": "langAsk",
+   "text": "Soomaali?",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessYes",
+   "text": "Haa",
+   "page": "raad"
+  },
+  {
+   "id": "langGuessOther",
+   "text": "Luqad kale",
+   "page": "raad"
+  },
+  {
+   "id": "genderTitle",
+   "text": "Naag mise nin?",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "genderHint",
+   "text": "Si luqaddaadu kuula hadasho si sax ah.",
+   "page": "vrouw-man"
+  },
+  {
+   "id": "chooseSector",
+   "text": "Xaggee ka shaqaysaa?",
+   "page": "werk"
+  },
+  {
+   "id": "sectorHint",
+   "text": "Casharrada shaqadaada ayaa goor hore imanaya. Hadhow waad ku beddeli kartaa Dejinta.",
+   "page": "werk"
+  },
+  {
+   "id": "countryTitle",
+   "text": "Dalkee ayaad ka shaqaysaa?",
+   "page": "land"
+  },
+  {
+   "id": "countryHint",
+   "text": "Waxaad helaysaa xeerarka shaqada ee dalkaas.",
+   "page": "land"
+  }
+ ],
  "uk": [
   {
    "id": "routeTitle",

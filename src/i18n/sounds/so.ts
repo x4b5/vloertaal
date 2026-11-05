@@ -47,9 +47,9 @@ const t: CultureTranslation = {
     'k.uitleg.a': "Afka fur, wax yar ka yar sida “aa”. Carrabku gadaal buu u dhaqaaqaa. Si gaaban u dheh.", // nieuw, nalezen
     'k.uitleg.aa': "Afka si ballaaran u fur. Bushimuhu way debecsan yihiin. Carrabku hoos buu u jiifaa oo waa siman yahay.", // nieuw, nalezen
     'k.uitleg.e': "Afku badh buu furan yahay, in ka badan “ee”. Bushimuhu way debecsan yihiin. Si gaaban u dheh.", // nieuw, nalezen
-    'k.uitleg.ee': "Afku badh buu furan yahay. Bushimuhu way ballaaran yihiin, sida markaad dhoola caddaynayso. Caarada carrabku waxay taabataa ilkaha hoose.", // nieuw, nalezen
+    'k.uitleg.ee': "Afku badh buu furan yahay. Bushimuhu way ballaaran yihiin, sida dhoola-caddayn. Caarada carrabku waxay taabataa ilkaha hoose.", // nieuw, nalezen
     'k.uitleg.i': "Sida “ie”, laakiin afku wax yar buu ka furan yahay oo waa debecsan yahay. Si gaaban u dheh.", // nieuw, nalezen
-    'k.uitleg.ie': "Afku ku dhowaad wuu xiran yahay. Bushimuhu way ballaaran yihiin, sida markaad dhoola caddaynayso. Carrabku sare buu u jiraa oo hore.", // nieuw, nalezen
+    'k.uitleg.ie': "Afku ku dhowaad wuu xiran yahay. Bushimuhu way ballaaran yihiin, sida dhoola-caddayn. Carrabku sare buu u jiraa oo hore.", // nieuw, nalezen
     'k.uitleg.o': "Afku wuu furan yahay. Bushimuhu wax yar bay wareegsan yihiin. Carrabku gadaal buu ku jiraa. Si gaaban u dheh.", // nieuw, nalezen
     'k.uitleg.oo': "Bushimuhu way wareegsan yihiin. Afku badh buu furan yahay. Dhammaadka bushimuhu way yaraadaan.", // nieuw, nalezen
     'k.uitleg.u': "Bushimuhu wax yar bay wareegsan yihiin, kuma adka. Carrabku hore buu u jiraa. Si gaaban u dheh.", // nieuw, nalezen

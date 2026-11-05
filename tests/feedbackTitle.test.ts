@@ -40,7 +40,7 @@ describe('the heading of the feedback label', () => {
     expect(uiEn.bestAnswerIs).toBe('The best answer is:');
     expect(uiNl.rightAnswerIs).toBe(feedbackTitle(false, 'meaning'));
     expect(uiNl.bestAnswerIs).toBe(feedbackTitle(false, 'situation'));
-    expect(helpLanguages).toHaveLength(13);
+    expect(helpLanguages).toHaveLength(14);
     for (const lang of helpLanguages) {
       for (const key of ['rightAnswerIs', 'bestAnswerIs'] as const) {
         const text = lang.ui[key];

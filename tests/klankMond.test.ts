@@ -58,7 +58,7 @@ describe('the sounds', () => {
   });
 
   it('each has a short explanation in English, Dutch and every help language', () => {
-    expect(helpLanguageSources).toHaveLength(13);
+    expect(helpLanguageSources).toHaveLength(14);
     for (const k of KLANKEN) {
       const texts: [string, unknown][] = [['en', k.how], ['nl', nlSounds.gloss[klankHowId(k.id)]], ...helpLanguageSources.map((l): [string, unknown] => [l.code, l.gloss[klankHowId(k.id)]])];
       for (const [lang, t] of texts) {

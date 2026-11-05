@@ -229,9 +229,11 @@ describe('what the recording scripts do (scripts/voices/help-todo.mjs)', () => {
     expect(m).toEqual({ langs: { ar: { routeTitle: 'C؟' }, ti: { routeTitle: 'A?' } } });
   });
 
-  it('Tigrinya is never sent to ElevenLabs (no model knows it); every other language has a model', () => {
+  it('Tigrinya and Somali are never sent to ElevenLabs (a person records them); every other language has a model', () => {
     const config = JSON.parse(readFileSync('scripts/voices/elevenlabs-help.json', 'utf8'));
     expect(config.langs.ti.human).toBe(true);
-    for (const l of languageMeta) if (l.code !== 'ti') expect(config.langs[l.code].model, l.code).toMatch(/^eleven_/);
+    // Somali (5 November 2026): no model checked yet for it, so a person records it, as Tigrinya.
+    expect(config.langs.so.human).toBe(true);
+    for (const l of languageMeta) if (l.code !== 'ti' && l.code !== 'so') expect(config.langs[l.code].model, l.code).toMatch(/^eleven_/);
   });
 });
