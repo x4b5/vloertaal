@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'الملاحظات والأخطاء',
     'w.fout': 'الخطأ',
     'w.compliment': 'المديح',
-    'w.feedback': 'الملاحظات (رأي في عملك)',
+    'w.feedback': "الملاحظات (ما يقوله شخص عن عملك)", // nieuw, nalezen
     'w.uitleggen': 'يشرح',
     'w.leren': 'يتعلّم',
     'w.verbeteren': 'يحسّن، يصحّح',

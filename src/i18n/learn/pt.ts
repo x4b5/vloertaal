@@ -123,6 +123,14 @@ const t: CultureTranslation = {
     'c.budget.a.why': "Oferecem pagar depois: um não educado, com a razão.", // nieuw, nalezen
     'c.healthy.a.why': "Oferecem um comprimido: um não educado, com a razão.", // nieuw, nalezen
     'd.newcolleague.a.why': "\"Acho\" ainda não é certeza: pedir para ver confirma que funciona.", // nieuw, nalezen
+    'd.explain.a.why': 'Perguntam o que está mal: esta resposta diz o quê, e o que é preciso.', // nieuw, nalezen
+    'd.listen.a.why': 'Não sabes se é uma piada: perguntar é melhor do que adivinhar.', // nieuw, nalezen
+    'd.calm.a.why': 'Perguntam porque não está feito: um motivo calmo, e o que vem primeiro.', // nieuw, nalezen
+    'd.talkintime.a.why': 'Alguém pede um momento: um sim, e uma pergunta para a pessoa poder contar.', // nieuw, nalezen
+    'd.reachable.a.why': 'Ligas de volta depois de uma chamada perdida: um cumprimento, e porque ligas.', // nieuw, nalezen
+    'd.getfeedback.a.why': 'Oferecem-te feedback: um sim, e que queres fazer bem.', // nieuw, nalezen
+    'd.givefeedback.a.why': 'Perguntam pelo trabalho: primeiro o que está bom, depois o que pode ser melhor.', // nieuw, nalezen
+    'd.meeting.a.why': 'Perguntam se há perguntas: esta resposta faz uma, sobre o horário.', // nieuw, nalezen
     'c.food.a.why': "Perguntam porque se limpa a linha: o produto seguinte não tem frutos secos.", // nieuw, nalezen
     'c.parcel.a.why': "Perguntam se a encomenda é para eles: sim, e depois a assinatura.", // nieuw, nalezen
     'c.road.a.why': "Pedem mais uma volta: não, porque a pausa vem primeiro.", // nieuw, nalezen

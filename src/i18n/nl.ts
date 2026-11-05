@@ -491,6 +491,8 @@ export const uiNl: Record<UiKey, UiText> = {
   checkVia: 'via check',
   checkUndo: 'Toch de lessen doen',
   // Het spoor Taal in België (docs/taal-belgie.md). Het spoor Werkregels toont ze niet.
+  // Onder een les die praten met anderen oefent (src/content/communication.ts).
+  commLabel: 'Communicatie',
   beNlOnly: 'Dit gaat over Nederland. In België is het anders.',
   beTaalBeta: 'De Belgische lessen zijn nieuw en nog niet nagekeken door een expert.',
   whoLegalBe: 'Gratis eerste advies van een advocaat over je contract of loon.',

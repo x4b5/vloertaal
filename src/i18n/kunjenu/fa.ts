@@ -111,6 +111,13 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "می‌توانم بگویم که مشتری خانه نیست.", // nieuw, nalezen
     'kjn.u.delivery.2': "می‌توانم از همسایه‌ها بخواهم یک بسته را تحویل بگیرند.", // nieuw, nalezen
     'kjn.u.delivery.3': "می‌توانم بپرسم چه کسی مسیر و ساعت‌هایم را تعیین می‌کند.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 nov 2026)
+    'kjn.u.communicate.1': "می‌توانم توضیح بدهم چه مشکلی هست.", // nieuw, nalezen
+    'kjn.u.communicate.2': "می‌توانم بگویم چه شنیدم.", // nieuw, nalezen
+    'kjn.u.communicate.3': "می‌توانم به‌موقع وقت گفت‌وگو بخواهم.", // nieuw, nalezen
+    'kjn.u.feedback.1': "می‌توانم وقتی بازخورد می‌گیرم یک مثال بخواهم.", // nieuw, nalezen
+    'kjn.u.feedback.2': "می‌توانم با مهربانی بگویم چه چیزی می‌تواند بهتر شود.", // nieuw, nalezen
+    'kjn.u.feedback.3': "می‌توانم در جلسهٔ تیم یک سؤال بپرسم.", // nieuw, nalezen
   },
 };
 

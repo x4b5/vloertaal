@@ -28,11 +28,13 @@ import { gzipSync } from 'node:zlib';
  * bezorging, Voedselverwerking, Je goed voelen, Een nieuwe collega helpen, Weer aan het werk) at
  * 283.8 / 403.0 kB. Next step instead of raising again: load the long tip texts only when a tip
  * opens (docs/fasen or EIGENAAR-TODO: "ophogen of meer lui laden").
+ * dist 3300 → 3400 (also 5 November 2026): "Goed communiceren" and "Feedback en overleg" (eight
+ * lessons, in 13 help languages) at 3300.5 kB. The start file stays under its limit (291.6 kB).
  */
 export const LIMITS = {
   'start file': 295,
   start: 415,
-  dist: 3300,
+  dist: 3400,
 };
 
 const gz = (buf) => gzipSync(buf, { level: 9 }).length;

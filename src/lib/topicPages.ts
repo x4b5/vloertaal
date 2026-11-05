@@ -42,6 +42,8 @@ export const HEADINGS: Readonly<Record<string, string>> = {
   'u.time': 'Je dienst, pauze en rooster in het Nederlands',
   'u.sounds': 'Nederlandse uitspraak oefenen: de klanken',
   'u.teamwork': 'Samenwerken en afspraken maken in het Nederlands',
+  'u.communicate': 'Goed communiceren op je werk in het Nederlands',
+  'u.feedback': 'Feedback geven en krijgen, en het werkoverleg',
   'u.apply': 'Solliciteren in het Nederlands: cv en gesprek',
   'u.contract': 'Werk zoeken en je contract: Nederlandse woorden',
   'u.papers': 'BSN, wonen en papieren: Nederlandse woorden',

@@ -218,6 +218,168 @@ const t: CultureTranslation = {
     'c.newcolleague.o2': "Dices “Goed zo,” y vuelves a tu propio trabajo.", // nieuw, nalezen
     'c.newcolleague.o3': "Lo vuelves a explicar todo, más rápido y más alto.", // nieuw, nalezen
     'c.newcolleague.w': "Mucha gente dice “ja”, también cuando no lo ha entendido. Cuando él lo hace delante de ti, ves si funciona. Eso es más rápido que arreglar un error después.", // nieuw, nalezen
+    'u.communicate': 'Comunicarse bien', // nieuw, nalezen
+    'l.explain': 'Decir qué pasa', // nieuw, nalezen
+    'w.ietsmis': 'algo va mal, pasa algo', // nieuw, nalezen
+    'w.stilstaan': 'estar parado, haberse parado (una máquina, una cinta)', // nieuw, nalezen
+    'w.lampje': 'la luz (de aviso)', // nieuw, nalezen
+    'w.komen': 'venir', // nieuw, nalezen
+    'w.nodighebben': 'necesitar', // nieuw, nalezen
+    'w.meteen': 'enseguida, ahora mismo', // nieuw, nalezen
+    's.explain.1': 'La cinta se ha parado. En la línea dos. ¿Puedes venir?', // nieuw, nalezen
+    's.explain.2': 'Hay una luz roja encendida en la máquina.', // nieuw, nalezen
+    's.explain.3': 'Es peligroso. ¿Puedes venir enseguida?', // nieuw, nalezen
+    'd.explain.q': '¿Qué pasa?', // nieuw, nalezen
+    'd.explain.a': 'El escáner no funciona. Necesito uno nuevo.', // nieuw, nalezen
+    'l.listen': 'Escuchar bien', // nieuw, nalezen
+    'w.uitpraten': 'terminar de hablar (dejar que alguien termine)', // nieuw, nalezen
+    'w.onderbreken': 'interrumpir', // nieuw, nalezen
+    'w.aankijken': 'mirar (a alguien)', // nieuw, nalezen
+    'w.bedoelen': 'querer decir', // nieuw, nalezen
+    'w.dus': 'entonces (para comprobar lo que has oído)', // nieuw, nalezen
+    'w.doorvragen': 'seguir preguntando (hasta que esté claro)', // nieuw, nalezen
+    's.listen.1': 'Entonces, ¿primero contar las cajas y luego empaquetar?', // nieuw, nalezen
+    's.listen.2': '¿Qué quieres decir con esa palabra?', // nieuw, nalezen
+    's.listen.3': 'Perdón, termina de hablar.', // nieuw, nalezen
+    'd.listen.q': 'Mañana ya empiezas a las cuatro.', // nieuw, nalezen
+    'd.listen.a': '¿En serio? ¿O era una broma?', // nieuw, nalezen
+    'l.calm': 'Mantener la calma', // nieuw, nalezen
+    'w.nadenken': 'pensar (en algo)', // nieuw, nalezen
+    'w.ademhalen': 'respirar', // nieuw, nalezen
+    'w.oplossen': 'resolver, arreglar', // nieuw, nalezen
+    'w.druk': 'con mucho trabajo (mucho que hacer)', // nieuw, nalezen
+    'w.straks': 'luego (hoy), dentro de un rato', // nieuw, nalezen
+    'w.misverstand': 'el malentendido', // nieuw, nalezen
+    's.calm.1': 'Quiero arreglarlo con calma.', // nieuw, nalezen
+    's.calm.2': '¿Puedo pensarlo un momento?', // nieuw, nalezen
+    's.calm.3': '¿Podemos hablar luego?', // nieuw, nalezen
+    'd.calm.q': '¿Por qué esto todavía no está hecho?', // nieuw, nalezen
+    'd.calm.a': 'Perdón, hay mucho trabajo. ¿Qué va primero?', // nieuw, nalezen
+    'l.talkintime': 'Hablarlo a tiempo', // nieuw, nalezen
+    'w.gesprek': 'la conversación, la charla', // nieuw, nalezen
+    'w.bespreken': 'hablar de algo, comentar', // nieuw, nalezen
+    'w.zorgenmaken': 'preocuparse', // nieuw, nalezen
+    'w.oplossing': 'la solución', // nieuw, nalezen
+    'w.ineens': 'de repente, de golpe', // nieuw, nalezen
+    'w.wegblijven': 'no presentarse (no ir al trabajo)', // nieuw, nalezen
+    's.talkintime.1': 'Hay algo que me molesta. ¿Tienes un momento?', // nieuw, nalezen
+    's.talkintime.2': 'Quiero hablar de algo contigo.', // nieuw, nalezen
+    's.talkintime.3': 'Estoy pensando en dejar el trabajo. ¿Podemos hablar primero?', // nieuw, nalezen
+    'd.talkintime.q': '¿Tienes un momento? Hay algo que me molesta.', // nieuw, nalezen
+    'd.talkintime.a': 'Claro. ¿Qué pasa?', // nieuw, nalezen
+    'l.reachable': 'Estar localizable', // nieuw, nalezen
+    'w.opnemen': 'contestar (el teléfono), atender', // nieuw, nalezen
+    'w.gemisteoproep': 'la llamada perdida', // nieuw, nalezen
+    'w.voicemail': 'el buzón de voz', // nieuw, nalezen
+    'w.beltegoed': 'el saldo del teléfono (prepago)', // nieuw, nalezen
+    'w.bereik': 'la cobertura (del teléfono)', // nieuw, nalezen
+    'w.onbekend': 'desconocido (un número desconocido)', // nieuw, nalezen
+    's.reachable.1': 'Mi neerlandés todavía no es bueno. ¿Puede hablar despacio?', // nieuw, nalezen
+    's.reachable.2': '¿Me lo puede mandar también por mensaje?', // nieuw, nalezen
+    's.reachable.3': 'Tengo un número nuevo.', // nieuw, nalezen
+    'd.reachable.q': 'Buenos días, le llamamos de planificación.', // nieuw, nalezen
+    'd.reachable.a': 'Buenos días. ¿Me ha llamado? Perdón, no pude contestar.', // nieuw, nalezen
+    'c.explain': 'Qué pasa, dónde y qué necesitas', // nieuw, nalezen
+    'c.explain.b': 'Cuando algo va mal en el trabajo, dilo en tres pasos. Primero qué pasa: “De band staat stil.” Luego dónde: “Bij lijn twee.” Luego qué necesitas: “Kun je komen?” Así la otra persona sabe qué hacer, sin muchas preguntas. ¿No sabes la palabra? Señálalo. ¿Es peligroso? Dilo primero: “Het is gevaarlijk”. ¿Un accidente? Primero busca ayuda (más en la lección “Avisar de un accidente”).', // nieuw, nalezen
+    'c.explain.p': '¿Puedes venir a echar un vistazo?', // nieuw, nalezen
+    'c.explain.s': 'El escáner de tu puesto deja de funcionar. Llamas a tu jefe de equipo. ¿Qué dices?', // nieuw, nalezen
+    'c.explain.o1': '“De scanner is kapot. Bij gang vier. Kun je komen?”', // nieuw, nalezen
+    'c.explain.o2': '“Hallo, ik heb een probleem.” Y luego esperas.', // nieuw, nalezen
+    'c.explain.o3': '“Sorry, sorry! Het is niet mijn schuld!”', // nieuw, nalezen
+    'c.explain.w': 'Ahora tu jefe de equipo sabe qué pasa, dónde, y qué necesitas. Nadie tiene que hacer primero tres preguntas.', // nieuw, nalezen
+    'c.listen': 'Primero escucha, luego comprueba', // nieuw, nalezen
+    'c.listen.b': 'Deja que la otra persona termine de hablar (uitpraten) antes de contestar. Mira a la persona que te habla: aquí, eso muestra que estás escuchando. En muchos países no se mira al jefe a los ojos, por respeto; aquí, mirarle de vez en cuando es educado. Cuando la otra persona ha terminado, repite lo que has oído: “Dus eerst …, en dan …?”. ¿No sabes bien qué significa una palabra? Pregunta: “Wat bedoel je met …?” Algunos compañeros hacen bromas con la cara seria. ¿Tienes dudas? Pregunta: “Was dat een grapje?”', // nieuw, nalezen
+    'c.listen.p': 'Espera, quiero entenderlo bien.', // nieuw, nalezen
+    'c.listen.s': 'Tu encargada te explica una tarea nueva. Quieres decir algo, pero ella todavía está hablando. ¿Qué haces?', // nieuw, nalezen
+    'c.listen.o1': 'Dejas que termine. Luego repites lo que has oído.', // nieuw, nalezen
+    'c.listen.o2': 'Empiezas a hablar enseguida, para no olvidarlo.', // nieuw, nalezen
+    'c.listen.o3': 'Dices que sí a todo y no preguntas nada.', // nieuw, nalezen
+    'c.listen.w': 'Cuando ella ha terminado, conoces toda la tarea. Repetirlo muestra que has escuchado, y ella todavía te puede corregir.', // nieuw, nalezen
+    'c.calm': 'Mantén la calma, también cuando es difícil', // nieuw, nalezen
+    'c.calm.b': 'Todo el mundo se enfada a veces, también en el trabajo. ¿Alguien se enfada contigo? Primero escucha, y mantén la calma. No tienes que contestar enseguida: “Mag ik even nadenken?”. ¿Te estás enfadando tú? Respira despacio, y di: “Kunnen we straks praten?” Luego habláis, cuando haya calma. ¿Hay mucho trabajo? Pregunta qué hay que hacer primero. Gritar, amenazar o empujar nunca está bien en el trabajo. Di que pare, y avisa a tu encargado (más en las lecciones “Respeto para todos” y “Pasarse de la raya”).', // nieuw, nalezen
+    'c.calm.p': 'Creo que es un malentendido.', // nieuw, nalezen
+    'c.calm.s': 'Un compañero está enfadado: el palé está en el sitio equivocado. Crees que no fuiste tú. ¿Qué haces?', // nieuw, nalezen
+    'c.calm.o1': 'Mantienes la calma, escuchas y luego dices lo que sabes.', // nieuw, nalezen
+    'c.calm.o2': 'Te enfadas tú también, y lo dices más alto.', // nieuw, nalezen
+    'c.calm.o3': 'Te vas y ya no le hablas.', // nieuw, nalezen
+    'c.calm.w': 'Cuando tú mantienes la calma, la otra persona muchas veces también se calma. Así podéis averiguar qué ha pasado, y resolverlo entre los dos.', // nieuw, nalezen
+    'c.talkintime': 'Háblalo cuando todavía es pequeño', // nieuw, nalezen
+    'c.talkintime.b': 'Un problema pequeño se hace grande si no hablas de él. Entonces de repente te enfadas, o de repente lo dejas. Habla a tiempo: con tu encargado, con un compañero o con una persona de confianza (vertrouwenspersoon), si la hay. Pide un momento: “Heb je even tijd?” Di en pocas palabras cuál es el problema y qué quieres. ¿Estás pensando en dejar el trabajo? Habla primero. Muchas veces hay una solución, como otro turno u otra tarea. Si te vas tú por tu cuenta, puedes perder tu prestación (uitkering), y muchas veces hay un plazo de preaviso (opzegtermijn). Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.', // nieuw, nalezen
+    'c.talkintime.p': '¿Podemos buscar una solución en común?', // nieuw, nalezen
+    'c.talkintime.s': 'Desde hace semanas tu horario es un problema. Hoy sientes mucha rabia y quieres dejarlo ya mismo. ¿Qué haces?', // nieuw, nalezen
+    'c.talkintime.o1': 'Primero pides a tu encargado una conversación.', // nieuw, nalezen
+    'c.talkintime.o2': 'Te vas ahora y no vuelves.', // nieuw, nalezen
+    'c.talkintime.o3': 'No dices nada y sigues trabajando.', // nieuw, nalezen
+    'c.talkintime.w': 'Hablar a tiempo hace que un problema siga siendo pequeño. Muchas veces hay una solución, y así muchas veces conservas tu trabajo y tus ingresos.', // nieuw, nalezen
+    'c.reachable': 'Contesta, o devuelve la llamada el mismo día', // nieuw, nalezen
+    'c.reachable.b': 'Las agencias y las empresas suelen llamar cuando hay trabajo. Muchas veces el trabajo es para la primera persona que contesta, o que devuelve la llamada. ¿Has perdido una llamada? Devuelve la llamada el mismo día. ¿No tienes el teléfono en el trabajo? Llama en tu pausa. Escucha tu buzón de voz, y ten algo de saldo (beltegoed) en el teléfono. ¿Te cuesta entender por teléfono? Dilo, y pregunta: “Kunt u het ook appen?”. ¿Alguien te pide dinero o códigos? Cuelga (más en la lección “Cuidado con las estafas”). ¿Tienes un número nuevo? Pásalo a tu trabajo, a la agencia y al ayuntamiento (gemeente).', // nieuw, nalezen
+    'c.reachable.p': 'Le llamo en mi pausa.', // nieuw, nalezen
+    'c.reachable.s': 'En tu pausa ves una llamada perdida de la agencia. ¿Qué haces?', // nieuw, nalezen
+    'c.reachable.o1': 'Devuelves la llamada ahora, en tu pausa.', // nieuw, nalezen
+    'c.reachable.o2': 'Esperas a que te vuelvan a llamar.', // nieuw, nalezen
+    'c.reachable.o3': 'Devuelves la llamada la semana que viene, cuando tienes tiempo libre.', // nieuw, nalezen
+    'c.reachable.w': 'Las agencias suelen llamar cuando hay trabajo. Si devuelves la llamada el mismo día, muestras que lo quieres, y quizás te dan el trabajo.', // nieuw, nalezen
+    'u.feedback': 'Feedback y reuniones de equipo', // nieuw, nalezen
+    'l.getfeedback': 'Recibir feedback', // nieuw, nalezen
+    'w.tip': 'el consejo (un consejo corto)', // nieuw, nalezen
+    'w.verbeterpunt': 'el punto de mejora (lo que puede ir mejor)', // nieuw, nalezen
+    'w.goedbedoeld': 'con buena intención (para ayudarte)', // nieuw, nalezen
+    'w.kritiek': 'la crítica (lo que a alguien no le parece bien)', // nieuw, nalezen
+    'w.normaal': 'normal', // nieuw, nalezen
+    'w.positief': 'positivo (sobre lo que va bien)', // nieuw, nalezen
+    's.getfeedback.1': 'Gracias, es bueno saberlo.', // nieuw, nalezen
+    's.getfeedback.2': '¿Puedes darme un ejemplo?', // nieuw, nalezen
+    's.getfeedback.3': '¿Qué puedo hacer mejor?', // nieuw, nalezen
+    'd.getfeedback.q': '¿Te puedo dar un poco de feedback?', // nieuw, nalezen
+    'd.getfeedback.a': 'Sí, por favor. Quiero hacerlo bien.', // nieuw, nalezen
+    'l.givefeedback': 'Dar feedback', // nieuw, nalezen
+    'w.dichtplakken': 'cerrar con cinta', // nieuw, nalezen
+    'w.netjes': 'ordenado, bien hecho', // nieuw, nalezen
+    'w.scheef': 'torcido, no recto', // nieuw, nalezen
+    'w.vriendelijk': 'amable', // nieuw, nalezen
+    'w.concreet': 'concreto (con un ejemplo claro)', // nieuw, nalezen
+    'w.ondervierogen': 'a solas (solo entre los dos)', // nieuw, nalezen
+    's.givefeedback.1': 'Eso lo haces bien.', // nieuw, nalezen
+    's.givefeedback.2': '¿Puedes cerrar también las cajas con cinta?', // nieuw, nalezen
+    's.givefeedback.3': 'Veo que las cajas están torcidas.', // nieuw, nalezen
+    'd.givefeedback.q': '¿Qué te parece mi trabajo?', // nieuw, nalezen
+    'd.givefeedback.a': '¡Muy ordenado! Solo que las cajas están torcidas.', // nieuw, nalezen
+    'l.meeting': 'Hablar en una reunión de equipo', // nieuw, nalezen
+    'w.werkoverleg': 'la reunión de equipo (sobre el trabajo)', // nieuw, nalezen
+    'w.beurt': 'el turno (tu momento para hablar)', // nieuw, nalezen
+    'w.idee': 'la idea', // nieuw, nalezen
+    'w.mening': 'la opinión (lo que piensas de algo)', // nieuw, nalezen
+    'w.handopsteken': 'levantar la mano', // nieuw, nalezen
+    'w.agenda': 'el orden del día (la lista de puntos de la reunión)', // nieuw, nalezen
+    's.meeting.1': '¿Puedo decir algo?', // nieuw, nalezen
+    's.meeting.2': 'Tengo una pregunta sobre el horario.', // nieuw, nalezen
+    's.meeting.3': 'Tengo una idea.', // nieuw, nalezen
+    'd.meeting.q': '¿Alguien tiene alguna pregunta?', // nieuw, nalezen
+    'd.meeting.a': 'Sí. ¿Cuándo sale el nuevo horario?', // nieuw, nalezen
+    'c.getfeedback': 'El feedback es sobre tu trabajo', // nieuw, nalezen
+    'c.getfeedback.b': 'El feedback es lo que alguien dice sobre tu trabajo: lo que va bien, y lo que puede mejorar. Es sobre tu trabajo, no sobre ti. Aquí, en el trabajo, el feedback es normal y es para ayudar. ¿No está claro qué tienes que hacer de otra forma? Pide un ejemplo. Primero escucha, y no te defiendas enseguida. Luego da las gracias, y pruébalo. También puedes pedir feedback tú: “Wat kan ik beter doen?”', // nieuw, nalezen
+    'c.getfeedback.p': 'Gracias. ¿Puedes darme un ejemplo?', // nieuw, nalezen
+    'c.getfeedback.s': 'Tu encargada mira tu trabajo y dice: “Dit kan beter.” No sabes qué quiere decir. ¿Qué haces?', // nieuw, nalezen
+    'c.getfeedback.o1': 'Das las gracias, y pides un ejemplo.', // nieuw, nalezen
+    'c.getfeedback.o2': 'Dices que de verdad lo hiciste lo mejor que pudiste.', // nieuw, nalezen
+    'c.getfeedback.o3': 'Dices que sí con la cabeza, y lo vuelves a hacer igual.', // nieuw, nalezen
+    'c.getfeedback.w': 'El feedback es para ayudarte. Un ejemplo muestra lo que ella quiere. Y un “gracias” muestra que escuchas.', // nieuw, nalezen
+    'c.givefeedback': 'Dar feedback: primero lo bueno', // nieuw, nalezen
+    'c.givefeedback.b': '¿Quieres decir algo sobre el trabajo de un compañero? Primero di lo que va bien. Luego di con amabilidad y claridad lo que puede mejorar, con un ejemplo. Dilo en un buen momento, a esa persona a solas, no cuando están todos. Di lo que ves, no lo que piensas de la persona: “Ik zie dat ...”. Sé amable: quieres ayudar, no ganar.', // nieuw, nalezen
+    'c.givefeedback.p': 'Eso lo haces bien. ¿Puedes cerrar también las cajas con cinta?', // nieuw, nalezen
+    'c.givefeedback.s': 'Un compañero nuevo se olvida de cerrar las cajas con cinta. Estáis todos en el comedor. ¿Qué haces?', // nieuw, nalezen
+    'c.givefeedback.o1': 'Más tarde, a solas: primero lo que va bien, luego las cajas.', // nieuw, nalezen
+    'c.givefeedback.o2': 'Le dices delante de todos que está mal.', // nieuw, nalezen
+    'c.givefeedback.o3': 'No dices nada, y cierras tú sus cajas.', // nieuw, nalezen
+    'c.givefeedback.w': 'A solas, él puede escuchar sin sentir vergüenza. Si primero dices lo que va bien, él escucha mejor el resto.', // nieuw, nalezen
+    'c.meeting': 'Tu voz cuenta en la reunión', // nieuw, nalezen
+    'c.meeting.b': 'Muchos equipos tienen una reunión corta sobre el trabajo (het werkoverleg). Allí tu opinión es bienvenida, también si tu neerlandés no es perfecto. Una pregunta también es una buena aportación: quizás otros también quieren saberlo. Espera tu turno, y deja que la otra persona termine. Luego levanta la mano, o di: “Mag ik iets zeggen?”. ¿No te atreves a decirlo delante del grupo? Díselo a tu encargado después de la reunión.', // nieuw, nalezen
+    'c.meeting.p': '¿Puedo decir algo? Tengo una idea.', // nieuw, nalezen
+    'c.meeting.s': 'En la reunión de equipo, tu encargada explica el nuevo horario. No entiendes cuándo empieza tu turno. ¿Qué haces?', // nieuw, nalezen
+    'c.meeting.o1': 'Cuando ella deja de hablar, haces tu pregunta.', // nieuw, nalezen
+    'c.meeting.o2': 'No dices nada, para no hacer perder el tiempo.', // nieuw, nalezen
+    'c.meeting.o3': 'Lo preguntas enseguida, mientras ella todavía está hablando.', // nieuw, nalezen
+    'c.meeting.w': 'Una pregunta es una buena aportación: quizás otros tampoco lo han entendido. Si esperas tu turno, todos lo pueden oír.', // nieuw, nalezen
   },
 };
 

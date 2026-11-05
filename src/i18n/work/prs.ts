@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'نظر دادن و اشتباه',
     'w.fout': 'اشتباه، غلطی',
     'w.compliment': 'تعریف',
-    'w.feedback': 'نظر (دربارهٔ کار)',
+    'w.feedback': "نظر دربارهٔ کار (چیزی که کسی دربارهٔ کار شما می‌گوید)", // nieuw, nalezen
     'w.uitleggen': 'توضیح دادن',
     'w.leren': 'یاد گرفتن',
     'w.verbeteren': 'بهتر کردن، اصلاح کردن',

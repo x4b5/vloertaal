@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'Geri bildirim ve hatalar',
     'w.fout': 'hata',
     'w.compliment': 'övgü, iltifat',
-    'w.feedback': 'geri bildirim',
+    'w.feedback': "geri bildirim (birinin işin hakkında söyledikleri)", // nieuw, nalezen
     'w.uitleggen': 'açıklamak',
     'w.leren': 'öğrenmek',
     'w.verbeteren': 'iyileştirmek, düzeltmek',

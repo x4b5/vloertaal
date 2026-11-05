@@ -129,6 +129,15 @@ const t: CultureTranslation = {
     'c.road.a.why': "طلب جولة أخرى: لا، لأن الاستراحة أولاً.", // nieuw, nalezen
     'c.backtowork.a.why': "السؤال عن الحال: «نعم» قصيرة، وأخذ الأمور بهدوء.", // nieuw, nalezen
     'c.feelwell.a.why': "السؤال عن الحال: «ليس جيداً» بصدق أمر مقبول.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 nov 2026)
+    'd.explain.a.why': "السؤال عن المشكلة: هذا الرد يقول ما هي، وما المطلوب.", // nieuw, nalezen
+    'd.listen.a.why': "عدم التأكد من المزحة: السؤال أفضل من التخمين.", // nieuw, nalezen
+    'd.calm.a.why': "السؤال لماذا لم ينتهِ العمل: سبب هادئ، وما يأتي أولاً.", // nieuw, nalezen
+    'd.talkintime.a.why': "شخص يطلب لحظة: «نعم»، وسؤال حتى يستطيع أن يحكي.", // nieuw, nalezen
+    'd.reachable.a.why': "معاودة الاتصال بعد مكالمة فائتة: تحية، وسبب الاتصال.", // nieuw, nalezen
+    'd.getfeedback.a.why': "عرض ملاحظات: «نعم»، والرغبة في أداء العمل جيداً.", // nieuw, nalezen
+    'd.givefeedback.a.why': "السؤال عن العمل: أولاً ما هو جيد، ثم ما يمكن أن يكون أفضل.", // nieuw, nalezen
+    'd.meeting.a.why': "السؤال عن الأسئلة: هذا الرد يطرح سؤالاً، عن جدول العمل.", // nieuw, nalezen
   },
 };
 

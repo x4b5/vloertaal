@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'Зауваження й помилки',
     'w.fout': 'помилка',
     'w.compliment': 'комплімент, похвала',
-    'w.feedback': 'зауваження, зворотний звʼязок',
+    'w.feedback': "зворотний звʼязок (що хтось каже про твою роботу)", // nieuw, nalezen
     'w.uitleggen': 'пояснювати',
     'w.leren': 'вчитися',
     'w.verbeteren': 'покращувати, виправляти',

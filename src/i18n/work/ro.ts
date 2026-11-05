@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'Feedback și greșeli',
     'w.fout': 'greșeala',
     'w.compliment': 'complimentul',
-    'w.feedback': 'feedbackul',
+    'w.feedback': "feedbackul (ce spune cineva despre munca ta)", // nieuw, nalezen
     'w.uitleggen': 'a explica',
     'w.leren': 'a învăța',
     'w.verbeteren': 'a îmbunătăți, a corecta',

@@ -218,6 +218,169 @@ const t: CultureTranslation = {
     'c.newcolleague.o2': "بگو «Goed zo,» و برگرد سر کار خودت.", // nieuw, nalezen
     'c.newcolleague.o3': "همه را دوباره توضیح بده، تندتر و بلندتر.", // nieuw, nalezen
     'c.newcolleague.w': "خیلی‌ها «ja» می‌گویند، حتی وقتی نفهمیده‌اند. وقتی او نشان می‌دهد، هر دو می‌بینید که درست کار می‌کند یا نه. این سریع‌تر از درست کردن یک اشتباه در آینده است.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 nov 2026)
+    'u.communicate': "ارتباط خوب", // nieuw, nalezen
+    'u.feedback': "بازخورد و جلسهٔ تیم", // nieuw, nalezen
+    'l.explain': "گفتن اینکه چه مشکلی هست", // nieuw, nalezen
+    'w.ietsmis': "یک چیزی درست نیست، مشکلی هست", // nieuw, nalezen
+    'w.stilstaan': "ایستادن، از کار افتادن (دستگاه، نوار نقاله)", // nieuw, nalezen
+    'w.lampje': "چراغ (چراغ هشدار)", // nieuw, nalezen
+    'w.komen': "آمدن", // nieuw, nalezen
+    'w.nodighebben': "لازم داشتن", // nieuw, nalezen
+    'w.meteen': "فوراً، همین الان", // nieuw, nalezen
+    's.explain.1': "نوار نقاله ایستاده. کنار خط دو. می‌توانی بیایی؟", // nieuw, nalezen
+    's.explain.2': "روی دستگاه یک چراغ قرمز روشن است.", // nieuw, nalezen
+    's.explain.3': "خطرناک است. می‌توانی همین الان بیایی؟", // nieuw, nalezen
+    'd.explain.q': "چه مشکلی هست؟", // nieuw, nalezen
+    'd.explain.a': "اسکنر کار نمی‌کند. یک اسکنر نو لازم دارم.", // nieuw, nalezen
+    'l.listen': "خوب گوش دادن", // nieuw, nalezen
+    'w.uitpraten': "حرف را تمام کردن (گذاشتن که کسی حرفش را تمام کند)", // nieuw, nalezen
+    'w.onderbreken': "وسط حرف کسی پریدن", // nieuw, nalezen
+    'w.aankijken': "نگاه کردن (به کسی)", // nieuw, nalezen
+    'w.bedoelen': "منظور داشتن", // nieuw, nalezen
+    'w.dus': "پس (برای چک کردن چیزی که شنیدی)", // nieuw, nalezen
+    'w.doorvragen': "بیشتر پرسیدن (تا روشن شود)", // nieuw, nalezen
+    's.listen.1': "پس اول جعبه‌ها را بشمارم، بعد بسته‌بندی کنم؟", // nieuw, nalezen
+    's.listen.2': "منظورت از این کلمه چیست؟", // nieuw, nalezen
+    's.listen.3': "ببخشید، حرفت را تمام کن.", // nieuw, nalezen
+    'd.listen.q': "فردا زود شروع می‌کنی، ساعت چهار.", // nieuw, nalezen
+    'd.listen.a': "واقعاً؟ یا شوخی بود؟", // nieuw, nalezen
+    'l.calm': "آرام ماندن", // nieuw, nalezen
+    'w.nadenken': "فکر کردن (دربارهٔ چیزی)", // nieuw, nalezen
+    'w.ademhalen': "نفس کشیدن", // nieuw, nalezen
+    'w.oplossen': "حل کردن", // nieuw, nalezen
+    'w.druk': "شلوغ (کار زیاد)", // nieuw, nalezen
+    'w.straks': "کمی بعد، بعداً (امروز)", // nieuw, nalezen
+    'w.misverstand': "سوءتفاهم", // nieuw, nalezen
+    's.calm.1': "می‌خواهم با آرامش حلش کنم.", // nieuw, nalezen
+    's.calm.2': "اجازه هست کمی فکر کنم؟", // nieuw, nalezen
+    's.calm.3': "می‌توانیم کمی بعد حرف بزنیم؟", // nieuw, nalezen
+    'd.calm.q': "چرا این هنوز تمام نشده؟", // nieuw, nalezen
+    'd.calm.a': "ببخشید، خیلی شلوغ است. اول چه کاری باید انجام شود؟", // nieuw, nalezen
+    'l.talkintime': "به‌موقع حرف زدن", // nieuw, nalezen
+    'w.gesprek': "گفت‌وگو", // nieuw, nalezen
+    'w.bespreken': "دربارهٔ چیزی حرف زدن، مطرح کردن", // nieuw, nalezen
+    'w.zorgenmaken': "نگران بودن", // nieuw, nalezen
+    'w.oplossing': "راه‌حل", // nieuw, nalezen
+    'w.ineens': "یک‌دفعه، ناگهان", // nieuw, nalezen
+    'w.wegblijven': "نیامدن (سر کار نیامدن)", // nieuw, nalezen
+    's.talkintime.1': "یک چیزی ذهنم را مشغول کرده. کمی وقت داری؟", // nieuw, nalezen
+    's.talkintime.2': "می‌خواهم دربارهٔ چیزی با تو حرف بزنم.", // nieuw, nalezen
+    's.talkintime.3': "به فکر ترک کار هستم. می‌توانیم اول حرف بزنیم؟", // nieuw, nalezen
+    'd.talkintime.q': "کمی وقت داری؟ یک چیزی ذهنم را مشغول کرده.", // nieuw, nalezen
+    'd.talkintime.a': "حتماً. چه شده؟", // nieuw, nalezen
+    'l.reachable': "در دسترس بودن", // nieuw, nalezen
+    'w.opnemen': "جواب دادن (تلفن)، برداشتن", // nieuw, nalezen
+    'w.gemisteoproep': "تماس بی‌پاسخ", // nieuw, nalezen
+    'w.voicemail': "پیام صوتی (پیغام‌گیر)", // nieuw, nalezen
+    'w.beltegoed': "شارژ تلفن (اعتبار پیش‌پرداخت)", // nieuw, nalezen
+    'w.bereik': "آنتن (گوشی)", // nieuw, nalezen
+    'w.onbekend': "ناشناس (شمارهٔ ناشناس)", // nieuw, nalezen
+    's.reachable.1': "هلندی‌ام هنوز خوب نیست. می‌شود آهسته حرف بزنید؟", // nieuw, nalezen
+    's.reachable.2': "می‌شود آن را پیام هم بدهید؟", // nieuw, nalezen
+    's.reachable.3': "یک شمارهٔ جدید دارم.", // nieuw, nalezen
+    'd.reachable.q': "صبح بخیر، از بخش برنامه‌ریزی تماس می‌گیرم.", // nieuw, nalezen
+    'd.reachable.a': "صبح بخیر. به من زنگ زده بودید؟ ببخشید، نتوانستم جواب بدهم.", // nieuw, nalezen
+    'l.getfeedback': "بازخورد گرفتن", // nieuw, nalezen
+    'w.tip': "نکته (یک توصیهٔ کوتاه)", // nieuw, nalezen
+    'w.verbeterpunt': "نکتهٔ قابل بهبود (چیزی که می‌تواند بهتر شود)", // nieuw, nalezen
+    'w.goedbedoeld': "از روی خیرخواهی (برای کمک به تو)", // nieuw, nalezen
+    'w.kritiek': "انتقاد (چیزی که کسی فکر می‌کند خوب نیست)", // nieuw, nalezen
+    'w.normaal': "عادی", // nieuw, nalezen
+    'w.positief': "مثبت (دربارهٔ چیزی که خوب پیش می‌رود)", // nieuw, nalezen
+    's.getfeedback.1': "ممنون، خوب است که بدانم.", // nieuw, nalezen
+    's.getfeedback.2': "می‌توانی یک مثال بزنی؟", // nieuw, nalezen
+    's.getfeedback.3': "چه کاری را می‌توانم بهتر انجام بدهم؟", // nieuw, nalezen
+    'd.getfeedback.q': "اجازه هست کمی به تو بازخورد بدهم؟", // nieuw, nalezen
+    'd.getfeedback.a': "بله، لطفاً. می‌خواهم کارم را خوب انجام بدهم.", // nieuw, nalezen
+    'l.givefeedback': "بازخورد دادن", // nieuw, nalezen
+    'w.dichtplakken': "با چسب بستن", // nieuw, nalezen
+    'w.netjes': "مرتب، تمیز", // nieuw, nalezen
+    'w.scheef': "کج، ناصاف", // nieuw, nalezen
+    'w.vriendelijk': "مهربان، دوستانه", // nieuw, nalezen
+    'w.concreet': "مشخص (با یک مثال روشن)", // nieuw, nalezen
+    'w.ondervierogen': "خصوصی (فقط دو نفری)", // nieuw, nalezen
+    's.givefeedback.1': "این کار را خوب انجام می‌دهی.", // nieuw, nalezen
+    's.givefeedback.2': "می‌توانی جعبه‌ها را هم چسب بزنی؟", // nieuw, nalezen
+    's.givefeedback.3': "می‌بینم که جعبه‌ها کج هستند.", // nieuw, nalezen
+    'd.givefeedback.q': "کار من را چطور می‌بینی؟", // nieuw, nalezen
+    'd.givefeedback.a': "مرتب است! فقط جعبه‌ها کج هستند.", // nieuw, nalezen
+    'l.meeting': "حرف زدن در جلسهٔ تیم", // nieuw, nalezen
+    'w.werkoverleg': "جلسهٔ تیم (دربارهٔ کار)", // nieuw, nalezen
+    'w.beurt': "نوبت (وقتی که نوبت حرف زدن توست)", // nieuw, nalezen
+    'w.idee': "ایده", // nieuw, nalezen
+    'w.mening': "نظر (چیزی که دربارهٔ آن فکر می‌کنی)", // nieuw, nalezen
+    'w.handopsteken': "دست بالا بردن", // nieuw, nalezen
+    'w.agenda': "دستور جلسه (فهرست موضوع‌های جلسه)", // nieuw, nalezen
+    's.meeting.1': "اجازه هست چیزی بگویم؟", // nieuw, nalezen
+    's.meeting.2': "دربارهٔ برنامهٔ کاری یک سؤال دارم.", // nieuw, nalezen
+    's.meeting.3': "یک ایده دارم.", // nieuw, nalezen
+    'd.meeting.q': "کسی سؤالی دارد؟", // nieuw, nalezen
+    'd.meeting.a': "بله. برنامهٔ کاری جدید کی می‌آید؟", // nieuw, nalezen
+    'c.explain': "چه، کجا، چه لازم داری", // nieuw, nalezen
+    'c.explain.b': "وقتی سر کار یک چیزی درست نیست، آن را در سه قدم بگو. اول اینکه چه مشکلی هست: «De band staat stil.». بعد کجا: «Bij lijn twee.». بعد اینکه چه لازم داری: «Kun je komen?». حالا طرف مقابل می‌داند چه کار کند، بدون سؤال‌های زیاد. کلمه‌اش را نمی‌دانی؟ با دست نشانش بده. خطرناک است؟ اول همین را بگو: «Het is gevaarlijk.». حادثه؟ اول کمک بگیر (بیشتر در درس «گزارش دادن حادثه»).", // nieuw, nalezen
+    'c.explain.p': "می‌توانی بیایی یک نگاهی بیندازی؟", // nieuw, nalezen
+    'c.explain.s': "اسکنر جای کارت از کار می‌افتد. به سرپرست تیمت زنگ می‌زنی. چه می‌گویی؟", // nieuw, nalezen
+    'c.explain.o1': "«De scanner is kapot. Bij gang vier. Kun je komen?»", // nieuw, nalezen
+    'c.explain.o2': "«Hallo, ik heb een probleem.» بعد منتظر می‌مانی.", // nieuw, nalezen
+    'c.explain.o3': "«Sorry, sorry! Het is niet mijn schuld!»", // nieuw, nalezen
+    'c.explain.w': "حالا سرپرست تیمت می‌داند چه مشکلی هست، کجاست، و تو چه لازم داری. کسی لازم نیست اول سه سؤال بپرسد.", // nieuw, nalezen
+    'c.listen': "اول گوش کن، بعد مطمئن شو", // nieuw, nalezen
+    'c.listen.b': "بگذار طرف مقابل حرفش را تمام کند (uitpraten)، بعد جواب بده. به کسی که با تو حرف می‌زند نگاه کن: اینجا این نشان می‌دهد که گوش می‌دهی. در خیلی از کشورها از روی احترام به چشم رئیس نگاه نمی‌کنند؛ اینجا گاهی نگاه کردن به او مؤدبانه است. وقتی حرف طرف مقابل تمام شد، چیزی را که شنیدی دوباره بگو: «Dus eerst …, en dan …?». مطمئن نیستی یک کلمه یعنی چه؟ بپرس: «Wat bedoel je met …?». بعضی همکاران با قیافهٔ جدی شوخی می‌کنند. مطمئن نیستی؟ بپرس: «Was dat een grapje?»", // nieuw, nalezen
+    'c.listen.p': "صبر کن، می‌خواهم خوب بفهمم.", // nieuw, nalezen
+    'c.listen.s': "سرپرستت دارد یک کار جدید را توضیح می‌دهد. می‌خواهی چیزی بگویی، ولی او هنوز حرف می‌زند. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.listen.o1': "بگذار حرفش تمام شود. بعد چیزی را که شنیدی دوباره بگو.", // nieuw, nalezen
+    'c.listen.o2': "فوراً شروع کن به حرف زدن، تا یادت نرود.", // nieuw, nalezen
+    'c.listen.o3': "برای همه چیز سر تکان بده و هیچ سؤالی نپرس.", // nieuw, nalezen
+    'c.listen.w': "وقتی حرفش تمام شد، کل کار را می‌دانی. دوباره گفتن نشان می‌دهد که گوش داده‌ای، و او هنوز می‌تواند اشتباهت را درست کند.", // nieuw, nalezen
+    'c.calm': "آرام بمان، حتی وقتی سخت است", // nieuw, nalezen
+    'c.calm.b': "همه گاهی عصبانی می‌شوند، سر کار هم. کسی از دستت عصبانی است؟ اول گوش کن، و آرام بمان. لازم نیست فوراً جواب بدهی: «Mag ik even nadenken?». خودت داری عصبانی می‌شوی؟ آرام نفس بکش، و بگو: «Kunnen we straks praten?». بعد وقتی هر دو آرام شدید حرف بزنید. خیلی شلوغ است؟ بپرس اول چه کاری باید انجام شود. داد زدن، تهدید یا هل دادن سر کار هیچ‌وقت قابل قبول نیست. بگو بس است، و به سرپرستت خبر بده (بیشتر در درس‌های «احترام به همه» و «عبور از حد و مرز»).", // nieuw, nalezen
+    'c.calm.p': "فکر می‌کنم سوءتفاهم شده.", // nieuw, nalezen
+    'c.calm.s': "یک همکار عصبانی است: پالت جای اشتباهی است. فکر می‌کنی کار تو نبوده. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.calm.o1': "آرام بمان، گوش کن، بعد بگو چه می‌دانی.", // nieuw, nalezen
+    'c.calm.o2': "تو هم عصبانی شو، و بلندتر بگو.", // nieuw, nalezen
+    'c.calm.o3': "برو و دیگر با او حرف نزن.", // nieuw, nalezen
+    'c.calm.w': "وقتی تو آرام می‌مانی، طرف مقابل هم اغلب آرام می‌شود. بعد می‌توانید بفهمید چه اتفاقی افتاده، و با هم حلش کنید.", // nieuw, nalezen
+    'c.talkintime': "تا مشکل کوچک است، درباره‌اش حرف بزن", // nieuw, nalezen
+    'c.talkintime.b': "یک مشکل کوچک وقتی درباره‌اش حرف نزنی بزرگ می‌شود. بعد یک‌دفعه عصبانی می‌شوی، یا یک‌دفعه کار را ول می‌کنی. به‌موقع حرف بزن: با سرپرستت، یک همکار یا vertrouwenspersoon (مشاور معتمد، اگر باشد). کمی وقت بخواه: «Heb je even tijd?». کوتاه بگو مشکل چیست و چه می‌خواهی. به ترک کار فکر می‌کنی؟ اول حرف بزن. اغلب راه‌حلی هست، مثل یک شیفت دیگر یا یک کار دیگر. اگر خودت کار را ترک کنی، ممکن است کمک‌هزینه‌ات (uitkering) را از دست بدهی، و اغلب یک مهلت اطلاع قبلی (opzegtermijn) هست. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
+    'c.talkintime.p': "می‌توانیم با هم دنبال یک راه‌حل بگردیم؟", // nieuw, nalezen
+    'c.talkintime.s': "چند هفته است که برنامهٔ کاری‌ات مشکل دارد. امروز عصبانی هستی و می‌خواهی همین الان کار را ول کنی. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.talkintime.o1': "اول از سرپرستت وقت گفت‌وگو بخواه.", // nieuw, nalezen
+    'c.talkintime.o2': "همین الان برو و دیگر برنگرد.", // nieuw, nalezen
+    'c.talkintime.o3': "چیزی نگو و همین‌طور ادامه بده.", // nieuw, nalezen
+    'c.talkintime.w': "به‌موقع حرف زدن مشکل را کوچک نگه می‌دارد. اغلب راه‌حلی هست، و این‌طوری اغلب کار و درآمدت را حفظ می‌کنی.", // nieuw, nalezen
+    'c.reachable': "جواب بده، یا همان روز زنگ بزن", // nieuw, nalezen
+    'c.reachable.b': "شرکت‌های کاریابی و کارفرماها اغلب وقتی کار هست زنگ می‌زنند. اغلب اولین کسی که جواب می‌دهد، یا دوباره زنگ می‌زند، کار را می‌گیرد. تماسی را از دست دادی؟ همان روز زنگ بزن. سر کار گوشی همراهت نیست؟ در وقت استراحت زنگ بزن. پیام‌های صوتی‌ات را گوش کن، و کمی شارژ (beltegoed) در گوشی‌ات نگه دار. فهمیدن پشت تلفن سخت است؟ همین را بگو، و بپرس: «Kunt u het ook appen?». کسی پول یا کد می‌خواهد؟ قطع کن (بیشتر در درس «مواظب کلاهبرداری باش»). شمارهٔ جدید داری؟ آن را به محل کارت، شرکت کاریابی و شهرداری (gemeente) بده.", // nieuw, nalezen
+    'c.reachable.p': "در وقت استراحتم به شما زنگ می‌زنم.", // nieuw, nalezen
+    'c.reachable.s': "در وقت استراحت یک تماس بی‌پاسخ از شرکت کاریابی می‌بینی. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.reachable.o1': "همین الان، در وقت استراحت، زنگ بزن.", // nieuw, nalezen
+    'c.reachable.o2': "صبر کن تا دوباره زنگ بزنند.", // nieuw, nalezen
+    'c.reachable.o3': "هفتهٔ بعد که وقت داری زنگ بزن.", // nieuw, nalezen
+    'c.reachable.w': "شرکت‌های کاریابی اغلب وقتی کار هست زنگ می‌زنند. وقتی همان روز زنگ می‌زنی، نشان می‌دهی که کار را می‌خواهی، و شاید آن را بگیری.", // nieuw, nalezen
+    'c.getfeedback': "بازخورد دربارهٔ کار توست", // nieuw, nalezen
+    'c.getfeedback.b': "بازخورد (feedback) چیزی است که کسی دربارهٔ کارت می‌گوید: چه خوب پیش می‌رود، و چه می‌تواند بهتر شود. دربارهٔ کار توست، نه دربارهٔ خودت. سر کار اینجا، بازخورد عادی است و برای کمک است. روشن نیست چه کاری را باید جور دیگری انجام بدهی؟ یک مثال بخواه. اول گوش کن، و فوراً از خودت دفاع نکن. بعد تشکر کن، و امتحانش کن. خودت هم می‌توانی بازخورد بخواهی: «Wat kan ik beter doen?»", // nieuw, nalezen
+    'c.getfeedback.p': "ممنون. می‌توانی یک مثال بزنی؟", // nieuw, nalezen
+    'c.getfeedback.s': "سرپرستت به کارت نگاه می‌کند و می‌گوید: «Dit kan beter.» نمی‌دانی منظورش چیست. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.getfeedback.o1': "تشکر کن، و یک مثال بخواه.", // nieuw, nalezen
+    'c.getfeedback.o2': "بگو که واقعاً همهٔ تلاشت را کردی.", // nieuw, nalezen
+    'c.getfeedback.o3': "سر تکان بده، و دوباره همان‌طور انجامش بده.", // nieuw, nalezen
+    'c.getfeedback.w': "بازخورد برای کمک به توست. یک مثال نشان می‌دهد او چه می‌خواهد. و یک «ممنون» نشان می‌دهد که گوش می‌دهی.", // nieuw, nalezen
+    'c.givefeedback': "بازخورد دادن: اول قسمت خوب", // nieuw, nalezen
+    'c.givefeedback.b': "می‌خواهی دربارهٔ کار یک همکار چیزی بگویی؟ اول بگو چه چیزی خوب پیش می‌رود. بعد با مهربانی و روشن بگو چه چیزی می‌تواند بهتر شود، با یک مثال. آن را در یک وقت مناسب بگو، فقط به خود آن شخص، نه وقتی همه هستند. چیزی را که می‌بینی بگو، نه نظرت دربارهٔ آن شخص را: «Ik zie dat ...». دوستانه بمان: می‌خواهی کمک کنی، نه اینکه برنده شوی.", // nieuw, nalezen
+    'c.givefeedback.p': "این کار را خوب انجام می‌دهی. می‌توانی جعبه‌ها را هم چسب بزنی؟", // nieuw, nalezen
+    'c.givefeedback.s': "یک همکار تازه یادش می‌رود جعبه‌ها را چسب بزند. همه در غذاخوری هستید. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.givefeedback.o1': "بعداً، دو نفری: اول چیزی که خوب پیش می‌رود، بعد جعبه‌ها.", // nieuw, nalezen
+    'c.givefeedback.o2': "جلوی همه به او بگو که اشتباه است.", // nieuw, nalezen
+    'c.givefeedback.o3': "چیزی نگو، و جعبه‌هایش را خودت چسب بزن.", // nieuw, nalezen
+    'c.givefeedback.w': "وقتی تنهاست، می‌تواند بدون خجالت گوش بدهد. وقتی اول بگویی چه خوب پیش می‌رود، بقیه را بهتر می‌شنود.", // nieuw, nalezen
+    'c.meeting': "صدای تو در جلسه مهم است", // nieuw, nalezen
+    'c.meeting.b': "خیلی از تیم‌ها یک جلسهٔ کوتاه دربارهٔ کار دارند (het werkoverleg). آنجا از نظر تو استقبال می‌شود، حتی وقتی هلندی‌ات کامل نیست. یک سؤال هم سهم خوبی است: شاید دیگران هم بخواهند آن را بدانند. منتظر نوبتت بمان، و بگذار طرف مقابل حرفش را تمام کند. بعد دستت را بالا ببر، یا بگو: «Mag ik iets zeggen?». جرئت نمی‌کنی جلوی گروه بگویی؟ بعد از جلسه به سرپرستت بگو.", // nieuw, nalezen
+    'c.meeting.p': "اجازه هست چیزی بگویم؟ یک ایده دارم.", // nieuw, nalezen
+    'c.meeting.s': "در جلسهٔ تیم، سرپرستت برنامهٔ کاری جدید را توضیح می‌دهد. نمی‌فهمی شیفتت کی شروع می‌شود. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.meeting.o1': "وقتی حرفش تمام شد، سؤالت را بپرس.", // nieuw, nalezen
+    'c.meeting.o2': "چیزی نگو، تا وقت تلف نشود.", // nieuw, nalezen
+    'c.meeting.o3': "همین الان بپرس، وقتی او هنوز حرف می‌زند.", // nieuw, nalezen
+    'c.meeting.w': "یک سؤال سهم خوبی است: شاید دیگران هم آن را نفهمیده باشند. وقتی منتظر نوبتت بمانی، همه می‌توانند آن را بشنوند.", // nieuw, nalezen
   },
 };
 

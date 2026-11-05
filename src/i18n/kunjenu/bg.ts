@@ -112,6 +112,13 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Мога да кажа, че клиентът не е вкъщи.", // nieuw, nalezen
     'kjn.u.delivery.2': "Мога да помоля съседите да приемат пратка.", // nieuw, nalezen
     'kjn.u.delivery.3': "Мога да попитам кой решава маршрута и часовете ми.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 november 2026).
+    'kjn.u.communicate.1': "Мога да обясня какво не е наред.", // nieuw, nalezen
+    'kjn.u.communicate.2': "Мога да повторя чутото.", // nieuw, nalezen
+    'kjn.u.communicate.3': "Мога навреме да помоля за разговор.", // nieuw, nalezen
+    'kjn.u.feedback.1': "Мога да помоля за пример, когато получавам обратна връзка.", // nieuw, nalezen
+    'kjn.u.feedback.2': "Мога любезно да кажа какво може да е по-добре.", // nieuw, nalezen
+    'kjn.u.feedback.3': "Мога да задам въпрос на екипна среща.", // nieuw, nalezen
   },
 };
 

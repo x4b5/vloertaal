@@ -66,6 +66,12 @@ const t: CultureTranslation = {
     'kjn.u.teamwork.1': "Je peux dire que quelque chose me tracasse.", // nieuw, nalezen
     'kjn.u.teamwork.2': "Je peux dire non calmement à du travail en plus.", // nieuw, nalezen
     'kjn.u.teamwork.3': "Je peux demander ce que je dois faire d’abord.", // nieuw, nalezen
+    'kjn.u.communicate.1': 'Je peux expliquer ce qui ne va pas.', // nieuw, nalezen
+    'kjn.u.communicate.2': 'Je peux dire ce que j’ai entendu.', // nieuw, nalezen
+    'kjn.u.communicate.3': 'Je peux demander un entretien à temps.', // nieuw, nalezen
+    'kjn.u.feedback.1': 'Je peux demander un exemple quand je reçois un feedback.', // nieuw, nalezen
+    'kjn.u.feedback.2': 'Je peux dire gentiment ce qui peut être mieux.', // nieuw, nalezen
+    'kjn.u.feedback.3': 'Je peux poser une question en réunion d’équipe.', // nieuw, nalezen
     'kjn.u.social.1': "Je peux discuter un peu pendant la pause.", // nieuw, nalezen
     'kjn.u.social.2': "Je peux dire que j’ai fait une erreur.", // nieuw, nalezen
     'kjn.u.social.3': "Je peux dire que quelque chose dépasse ma limite.", // nieuw, nalezen

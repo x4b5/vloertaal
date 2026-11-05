@@ -84,10 +84,14 @@ describe('Herhaal vandaag rotates sentences and chats', () => {
     // (without it 84 of 132), but 122 of 135 by 12 weeks (without it 108 of 132): more words
     // share the daily places, so the first weeks spread over more lessons. With another pattern
     // of mistakes (one in four wrong) 6 weeks bring 58.5% with it and 59.1% without.
-    expect(sentencesBy42.size / allSentences).toBeGreaterThan(0.45);
+    // 5 November 2026: "Goed communiceren" (u.communicate, 5 lessons, 15 sentences) comes right
+    // after Samenwerken, so it is one of the first 16 units: 65 of 153 by 6 weeks (42.5%), 111 of
+    // 153 by 12 weeks (72.5%), chats 35 and 46 of 51. The same effect as l.alarm: more lessons
+    // share the daily places in the first weeks. The limit is a little under.
+    expect(sentencesBy42.size / allSentences).toBeGreaterThan(0.4);
     // Both together (weak words first and l.alarm): 76% of the sentences by 12 weeks. Weak words
     // take half the places, so the sentences of the lessons that went well come back later.
-    expect(sentences.size / allSentences).toBeGreaterThan(0.72);
+    expect(sentences.size / allSentences).toBeGreaterThan(0.7);
     // After 6 weeks more than half of the chats came back (a weak lesson keeps the chat to itself:
     // with "Klanken" in the first 16 units 58%), after 12 weeks nearly all.
     expect(chatsBy42.size / allChats).toBeGreaterThan(0.55);

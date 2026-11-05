@@ -66,7 +66,8 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.loon', 'r.tijd', 'r.ziek', 'r.rekenen', 'r.afronden', 'r.duurzaam', 'r.schrijven'],
   },
   'theme.together': {
-    taal: ['u.teamwork', 'u.social', 'u.sayings'],
+    // "Goed communiceren" and "Feedback en overleg" (5 November 2026) right after Samenwerken.
+    taal: ['u.teamwork', 'u.communicate', 'u.feedback', 'u.social', 'u.sayings'],
     regels: ['r.samen'],
   },
   'theme.rights': {

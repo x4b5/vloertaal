@@ -66,6 +66,12 @@ const t: CultureTranslation = {
     'kjn.u.teamwork.1': "Bir şeyin beni rahatsız ettiğini söyleyebilirim.", // nieuw, nalezen
     'kjn.u.teamwork.2': "Fazladan işe sakin bir şekilde hayır diyebilirim.", // nieuw, nalezen
     'kjn.u.teamwork.3': "Önce ne yapmam gerektiğini sorabilirim.", // nieuw, nalezen
+    'kjn.u.communicate.1': "Neyin yanlış olduğunu anlatabilirim.", // nieuw, nalezen
+    'kjn.u.communicate.2': "Duyduğumu tekrar söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.communicate.3': "Zamanında bir görüşme isteyebilirim.", // nieuw, nalezen
+    'kjn.u.feedback.1': "Geri bildirim aldığımda bir örnek isteyebilirim.", // nieuw, nalezen
+    'kjn.u.feedback.2': "Neyin daha iyi olabileceğini nazikçe söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.feedback.3': "Ekip toplantısında bir soru sorabilirim.", // nieuw, nalezen
     'kjn.u.social.1': "Molada biraz sohbet edebilirim.", // nieuw, nalezen
     'kjn.u.social.2': "Bir hata yaptığımı söyleyebilirim.", // nieuw, nalezen
     'kjn.u.social.3': "Bir şeyin sınırımı aştığını söyleyebilirim.", // nieuw, nalezen

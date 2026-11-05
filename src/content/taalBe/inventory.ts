@@ -77,6 +77,20 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.clear': L('A', 'A', 'de tip zegt "At work here" (niet "in the Netherlands"): eerst de kern geldt ook in Vlaanderen, al verpakt men het daar vaak wat voorzichtiger (nakijken door een Vlaamse NT2-docent)'),
     'l.newcolleague': L('A', 'A', 'inwerken en de kast zeg je in Vlaanderen ook; de tip noemt geen land (nakijken door een Vlaamse NT2-docent)'),
   } },
+  // "Goed communiceren" (5 November 2026): no country in the lessons or the tips ("here", "the agency").
+  'u.communicate': { kind: 'A', lessons: {
+    'l.explain': L('A', 'A'),
+    'l.listen': L('A', 'A', 'de tip zegt "in many countries" en "here", zonder land'),
+    'l.calm': L('A', 'A', 'de tip verwijst naar de lessen over respect en grenzen (in België met de preventieadviseur)'),
+    'l.talkintime': L('A', 'A', 'de tip zegt "your benefit" en "a notice period" zonder wet of land (in België: de werkloosheidsuitkering bij vrijwillig ontslag, RVA; de opzegtermijn), en eindigt op de slotregel die de Belgische cursus zelf wisselt; de vertrouwenspersoon bestaat in België ook (naast de preventieadviseur psychosociale aspecten)'),
+    'l.reachable': L('A', 'A', 'de tip zegt "the agency" (geen uitzendbureau of interimkantoor); "appen" en "het beltegoed" zeg je in Vlaanderen ook, al hoor je ook "sms’en" en "belkrediet" (nakijken door een Vlaamse NT2-docent)'),
+  } },
+  // "Feedback en overleg" (5 November 2026): no tip names a country ("at work here"), no rule.
+  'u.feedback': { kind: 'A', lessons: {
+    'l.getfeedback': L('A', 'A', 'de tip zegt "At work here": feedback is goed bedoeld, ook in Vlaanderen, al klinkt die daar vaak voorzichtiger (zie Werkregels r.be.l.samen.1; nakijken door een Vlaamse NT2-docent)'),
+    'l.givefeedback': L('A', 'A', 'dichtplakken, netjes en scheef zeg je in Vlaanderen ook (nakijken door een Vlaamse NT2-docent)'),
+    'l.meeting': L('A', 'A', 'het werkoverleg kent men in Vlaanderen ook, vaker zegt men de (team)vergadering of het overleg (nakijken door een Vlaamse NT2-docent)'),
+  } },
   'u.apply': { kind: 'A', lessons: {
     'l.cv': L('A', 'A', 'de tip zegt "A CV here" (was "A Dutch CV")'),
     'l.interview': L('A', 'A', 'de tip zegt "Employers here" (was "Dutch employers")'),

@@ -1965,6 +1965,46 @@ ______________________________________________________________
 
 ---
 
+### c.talkintime — Talk about it while it is small (nieuw, 5 november 2026)
+
+*Unit „Goed communiceren”, les „Talk about it in time” (`l.talkintime`)*
+
+**Samenvatting (NL):** Een klein probleem wordt groot als je er niet over praat; dan word je ineens boos of stop je ineens. Praat op tijd met je leidinggevende, een collega of de vertrouwenspersoon (als die er is). Denk je erover om te stoppen? Praat eerst: er is vaak een oplossing, zoals een andere dienst of taak. Zeg je zelf op, dan **kun** je je uitkering kwijtraken, en vaak is er een opzegtermijn.
+
+**Tekst (Engels, wordt vertaald):**
+
+> A small problem gets big when you do not talk about it. Then you suddenly get angry, or you suddenly stop. Talk in time: with your supervisor, a colleague or the vertrouwenspersoon (confidential adviser, if there is one). Ask for a moment: "Heb je even tijd?" Say briefly what the problem is and what you want. Are you thinking about quitting? Talk first. There is often a solution, like another shift or another task. If you quit yourself, you can lose your benefit (uitkering), and often there is a notice period (opzegtermijn).
+>
+> *Slotregel:* General information. For your situation: ask your employer, the union or the Juridisch Loket.
+
+Met de slotregel; de Belgische cursus wisselt die zelf (be.closing.advice). De tip noemt geen wet en geen land, zodat hij in België ook geldt (inventaris: A).
+
+**Grondslag (onze lezing):** NL: zelf ontslag nemen zonder dringende reden is verwijtbare werkloosheid (WW art. 24 lid 1 onder a, lid 2 onder b): het UWV weigert de WW dan meestal blijvend (art. 27); met een dringende reden of een ontslag „in goed overleg” met een vaststellingsovereenkomst ligt het anders. De opzegtermijn van de werknemer: BW 7:672 lid 3 (in de regel 1 maand; contract of cao kan anders zeggen); bij een tijdelijk contract zonder tussentijdse opzegging kan opzeggen niet zomaar. BE: wie vrijwillig ontslag neemt zonder „wettige reden” kan geen werkloosheidsuitkering krijgen of een sanctie (schorsing) van de RVA (KB 25 november 1991, art. 51 en 52); de opzegtermijn bij ontslag door de werknemer (Arbeidsovereenkomstenwet art. 37/2). „Kan” omdat het afhangt van de reden en de situatie.
+
+**Zeg het zo (Nederlands):** „Kunnen we samen een oplossing zoeken?” — *Can we look for a solution together?*
+
+**Situatie in de les:** For weeks your schedule has been a problem. Today you are angry and want to stop at once. What do you do?  
+**Goede antwoord:** First ask your supervisor for a talk.  
+**Uitleg na het antwoord (`c.talkintime.w`):** Talking in time keeps a problem small. Often there is a solution, and so you often keep your job and your income.
+
+**Onze vragen aan u:**
+1. Is „If you quit yourself, you can lose your benefit (uitkering)” zo kort juist en niet te zwaar (NL: verwijtbare werkloosheid; BE: vrijwillig ontslag)? „uitkering” is hier de WW / werkloosheidsuitkering; een bijstandsuitkering kan ook gevolgen hebben (een maatregel van de gemeente): moet dat erbij, of is „your benefit” ruim genoeg?
+2. „often there is a notice period”: juist voor vaste én tijdelijke contracten, en voor uitzendwerk (uitzendbeding, fase A)?
+3. „Leave now and do not come back” is het foute antwoord: is het verstandig om ergens te noemen dat wegblijven zonder bericht ook tot ontslag op staande voet kan leiden, of is dat te zwaar voor deze les?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
 ## Werkregels: gewijzigde beweringen (17 oktober 2026)
 
 De track **Werkregels** is voor mensen die al Nederlands spreken. De teksten staan alleen in het

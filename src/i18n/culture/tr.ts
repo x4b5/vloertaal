@@ -218,6 +218,169 @@ const t: CultureTranslation = {
     'c.newcolleague.o2': "“Goed zo,” der ve kendi işine dönersin.", // nieuw, nalezen
     'c.newcolleague.o3': "Hepsini yeniden, daha hızlı ve daha yüksek sesle anlatırsın.", // nieuw, nalezen
     'c.newcolleague.w': "Birçok kişi anlamasa da “ja” der. O gösterince, ikiniz de işin doğru olup olmadığını görürsünüz. Bu, sonra bir hatayı düzeltmekten daha hızlıdır.", // nieuw, nalezen
+    // Vertaalronde 5 november 2026: u.communicate (Goed communiceren) en u.feedback (Feedback en overleg).
+    'u.communicate': "İyi iletişim kurmak", // nieuw, nalezen
+    'l.explain': "Neyin yanlış olduğunu söylemek", // nieuw, nalezen
+    'w.ietsmis': "bir sorun var, bir şey yanlış", // nieuw, nalezen
+    'w.stilstaan': "durmak, durmuş olmak (bir makine, bir bant)", // nieuw, nalezen
+    'w.lampje': "(uyarı) lambası", // nieuw, nalezen
+    'w.komen': "gelmek", // nieuw, nalezen
+    'w.nodighebben': "ihtiyacı olmak", // nieuw, nalezen
+    'w.meteen': "hemen, derhal", // nieuw, nalezen
+    's.explain.1': "Bant durdu. İkinci hatta. Gelebilir misin?", // nieuw, nalezen
+    's.explain.2': "Makinede kırmızı bir lamba yanıyor.", // nieuw, nalezen
+    's.explain.3': "Tehlikeli. Hemen gelebilir misin?", // nieuw, nalezen
+    'd.explain.q': "Sorun ne?", // nieuw, nalezen
+    'd.explain.a': "Barkod okuyucu çalışmıyor. Yenisine ihtiyacım var.", // nieuw, nalezen
+    'l.listen': "İyi dinlemek", // nieuw, nalezen
+    'w.uitpraten': "sözünü bitirmek (birinin sözünü bitirmesine izin vermek)", // nieuw, nalezen
+    'w.onderbreken': "sözünü kesmek", // nieuw, nalezen
+    'w.aankijken': "(birine) bakmak", // nieuw, nalezen
+    'w.bedoelen': "kastetmek, demek istemek", // nieuw, nalezen
+    'w.dus': "yani (duyduğunu kontrol etmek için)", // nieuw, nalezen
+    'w.doorvragen': "sormaya devam etmek (anlaşılana kadar)", // nieuw, nalezen
+    's.listen.1': "Yani önce kutuları sayacağım, sonra paketleyeceğim, öyle mi?", // nieuw, nalezen
+    's.listen.2': "O kelimeyle ne demek istiyorsun?", // nieuw, nalezen
+    's.listen.3': "Pardon, sen sözünü bitir.", // nieuw, nalezen
+    'd.listen.q': "Yarın daha saat dörtte başlıyorsun.", // nieuw, nalezen
+    'd.listen.a': "Gerçekten mi? Yoksa şaka mıydı?", // nieuw, nalezen
+    'l.calm': "Sakin kalmak", // nieuw, nalezen
+    'w.nadenken': "düşünmek (bir şey hakkında)", // nieuw, nalezen
+    'w.ademhalen': "nefes almak", // nieuw, nalezen
+    'w.oplossen': "çözmek, halletmek", // nieuw, nalezen
+    'w.druk': "yoğun (çok iş var)", // nieuw, nalezen
+    'w.straks': "birazdan, sonra (bugün)", // nieuw, nalezen
+    'w.misverstand': "yanlış anlaşılma", // nieuw, nalezen
+    's.calm.1': "Bunu sakince çözmek istiyorum.", // nieuw, nalezen
+    's.calm.2': "Biraz düşünebilir miyim?", // nieuw, nalezen
+    's.calm.3': "Sonra konuşabilir miyiz?", // nieuw, nalezen
+    'd.calm.q': "Bu neden hâlâ bitmedi?", // nieuw, nalezen
+    'd.calm.a': "Pardon, çok yoğunuz. Önce ne yapılmalı?", // nieuw, nalezen
+    'l.talkintime': "Zamanında konuşmak", // nieuw, nalezen
+    'w.gesprek': "görüşme, konuşma", // nieuw, nalezen
+    'w.bespreken': "konuşmak, görüşmek (bir konuyu)", // nieuw, nalezen
+    'w.zorgenmaken': "endişelenmek", // nieuw, nalezen
+    'w.oplossing': "çözüm", // nieuw, nalezen
+    'w.ineens': "birden, aniden", // nieuw, nalezen
+    'w.wegblijven': "gelmemek (işe gelmemek)", // nieuw, nalezen
+    's.talkintime.1': "Bir şey beni rahatsız ediyor. Biraz vaktin var mı?", // nieuw, nalezen
+    's.talkintime.2': "Seninle bir şey konuşmak istiyorum.", // nieuw, nalezen
+    's.talkintime.3': "İşi bırakmayı düşünüyorum. Önce konuşabilir miyiz?", // nieuw, nalezen
+    'd.talkintime.q': "Biraz vaktin var mı? Bir şey beni rahatsız ediyor.", // nieuw, nalezen
+    'd.talkintime.a': "Tabii. Ne oldu?", // nieuw, nalezen
+    'l.reachable': "Ulaşılabilir olmak", // nieuw, nalezen
+    'w.opnemen': "(telefonu) açmak, cevap vermek", // nieuw, nalezen
+    'w.gemisteoproep': "cevapsız arama", // nieuw, nalezen
+    'w.voicemail': "sesli mesaj", // nieuw, nalezen
+    'w.beltegoed': "telefon bakiyesi, kontör (ön ödemeli)", // nieuw, nalezen
+    'w.bereik': "çekim, sinyal (telefonda)", // nieuw, nalezen
+    'w.onbekend': "bilinmeyen (bilinmeyen bir numara)", // nieuw, nalezen
+    's.reachable.1': "Hollandacam henüz iyi değil. Yavaş konuşabilir misiniz?", // nieuw, nalezen
+    's.reachable.2': "Bunu mesaj olarak da gönderebilir misiniz?", // nieuw, nalezen
+    's.reachable.3': "Yeni bir numaram var.", // nieuw, nalezen
+    'd.reachable.q': "Günaydın, planlamadan arıyorum.", // nieuw, nalezen
+    'd.reachable.a': "Günaydın. Beni aramışsınız? Pardon, kaçırdım.", // nieuw, nalezen
+    'c.explain': "Ne, nerede, neye ihtiyacın var", // nieuw, nalezen
+    'c.explain.b': "İşte bir sorun olduğunda, bunu üç adımda söyle. Önce sorun ne: “De band staat stil.” Sonra nerede: “Bij lijn twee.” Sonra neye ihtiyacın var: “Kun je komen?” Böylece karşındaki kişi, çok soru sormadan ne yapacağını bilir. Onun adını bilmiyor musun? Parmağınla göster. Tehlikeli mi? Bunu ilk önce söyle: “Het is gevaarlijk.” Kaza mı oldu? Önce yardım çağır (daha fazlası “Kaza bildirmek” dersinde).", // nieuw, nalezen
+    'c.explain.p': "Gelip bir bakabilir misin?", // nieuw, nalezen
+    'c.explain.s': "Senin yerindeki barkod okuyucu çalışmayı bırakıyor. Ekip liderini arıyorsun. Ne dersin?", // nieuw, nalezen
+    'c.explain.o1': "“De scanner is kapot. Bij gang vier. Kun je komen?”", // nieuw, nalezen
+    'c.explain.o2': "“Hallo, ik heb een probleem.” Sonra beklersin.", // nieuw, nalezen
+    'c.explain.o3': "“Sorry, sorry! Het is niet mijn schuld!”", // nieuw, nalezen
+    'c.explain.w': "Artık ekip liderin neyin yanlış olduğunu, nerede olduğunu ve neye ihtiyacın olduğunu biliyor. Kimsenin önce üç soru sorması gerekmiyor.", // nieuw, nalezen
+    'c.listen': "Önce dinle, sonra kontrol et", // nieuw, nalezen
+    'c.listen.b': "Cevap vermeden önce karşındakinin sözünü bitirmesine izin ver (uitpraten). Seninle konuşan kişiye bak: burada bu, dinlediğini gösterir. Birçok ülkede saygıdan dolayı patronunun gözlerine bakmazsın; burada ara sıra ona bakmak kibarlıktır. Karşındaki sözünü bitirince, duyduğunu tekrar söyle: “Dus eerst …, en dan …?” Bir kelimenin ne demek olduğundan emin değil misin? Sor: “Wat bedoel je met …?” Bazı iş arkadaşları ciddi bir yüzle şaka yapar. Emin değil misin? Sor: “Was dat een grapje?”", // nieuw, nalezen
+    'c.listen.p': "Bekle, bunu iyi anlamak istiyorum.", // nieuw, nalezen
+    'c.listen.s': "Amirin yeni bir işi anlatıyor. Bir şey söylemek istiyorsun ama o hâlâ konuşuyor. Ne yaparsın?", // nieuw, nalezen
+    'c.listen.o1': "Sözünü bitirmesine izin verirsin. Sonra duyduğunu tekrar söylersin.", // nieuw, nalezen
+    'c.listen.o2': "Unutmamak için hemen konuşmaya başlarsın.", // nieuw, nalezen
+    'c.listen.o3': "Her şeye başını sallarsın ve hiçbir şey sormazsın.", // nieuw, nalezen
+    'c.listen.w': "Sözünü bitirdiğinde işin tamamını bilirsin. Tekrar söylemek dinlediğini gösterir, o da seni hâlâ düzeltebilir.", // nieuw, nalezen
+    'c.calm': "Zor olsa da sakin kal", // nieuw, nalezen
+    'c.calm.b': "Herkes bazen sinirlenir, işte de. Biri sana mı kızgın? Önce dinle ve sakin kal. Hemen cevap vermek zorunda değilsin: “Mag ik even nadenken?” Sen de mi sinirleniyorsun? Yavaşça nefes al ve şöyle de: “Kunnen we straks praten?” Sonra ikiniz de sakin olduğunuzda konuşun. Çok mu yoğun? Önce neyin yapılması gerektiğini sor. Bağırmak, tehdit etmek veya itmek işte asla kabul edilmez. Dur de ve amirine söyle (daha fazlası “Herkese saygı” ve “Sınırı aşmak” derslerinde).", // nieuw, nalezen
+    'c.calm.p': "Bence bu bir yanlış anlaşılma.", // nieuw, nalezen
+    'c.calm.s': "Bir iş arkadaşın kızgın: palet yanlış yerde. Bunu senin yapmadığını düşünüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.calm.o1': "Sakin kalırsın, dinlersin, sonra bildiğini söylersin.", // nieuw, nalezen
+    'c.calm.o2': "Sen de sinirlenirsin ve daha yüksek sesle söylersin.", // nieuw, nalezen
+    'c.calm.o3': "Çekip gidersin ve onunla bir daha konuşmazsın.", // nieuw, nalezen
+    'c.calm.w': "Sen sakin kalınca karşındaki de çoğu zaman sakinleşir. O zaman ne olduğunu öğrenip sorunu birlikte çözebilirsiniz.", // nieuw, nalezen
+    'c.talkintime': "Sorun küçükken konuş", // nieuw, nalezen
+    'c.talkintime.b': "Küçük bir sorun, onun hakkında konuşmazsan büyür. Sonra birden sinirlenirsin ya da birden işi bırakırsın. Zamanında konuş: amirinle, bir iş arkadaşınla veya varsa bir güven danışmanıyla (vertrouwenspersoon). Biraz zaman iste: “Heb je even tijd?” Sorunun ne olduğunu ve ne istediğini kısaca söyle. İşi bırakmayı mı düşünüyorsun? Önce konuş. Çoğu zaman bir çözüm vardır, örneğin başka bir vardiya veya başka bir iş. İşi kendin bırakırsan ödeneğini (uitkering) kaybedebilirsin ve çoğu zaman bir ihbar süresi (opzegtermijn) vardır. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.talkintime.p': "Birlikte bir çözüm arayabilir miyiz?", // nieuw, nalezen
+    'c.talkintime.s': "Haftalardır çalışma planın bir sorun. Bugün kızgınsın ve hemen bırakmak istiyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.talkintime.o1': "Önce amirinden bir görüşme istersin.", // nieuw, nalezen
+    'c.talkintime.o2': "Şimdi gidersin ve bir daha gelmezsin.", // nieuw, nalezen
+    'c.talkintime.o3': "Hiçbir şey söylemez ve öylece devam edersin.", // nieuw, nalezen
+    'c.talkintime.w': "Zamanında konuşmak bir sorunu küçük tutar. Çoğu zaman bir çözüm vardır ve böylece çoğu zaman işini ve gelirini korursun.", // nieuw, nalezen
+    'c.reachable': "Telefonu aç ya da aynı gün geri ara", // nieuw, nalezen
+    'c.reachable.b': "Ajanslar ve işverenler iş olduğunda sık sık arar. Çoğu zaman işi, telefonu ilk açan ya da ilk geri arayan kişi alır. Bir aramayı mı kaçırdın? Aynı gün geri ara. İşte telefonun yanında değil mi? Molanda geri ara. Sesli mesajlarını dinle ve telefonunda biraz kontör (beltegoed) bulundur. Telefonda anlamak zor mu? Bunu söyle ve sor: “Kunt u het ook appen?” Biri para veya kod mu istiyor? Telefonu kapat (daha fazlası “Dolandırıcılığa dikkat” dersinde). Yeni bir numara mı? Numaranı işyerine, ajansa ve belediyeye (gemeente) bildir.", // nieuw, nalezen
+    'c.reachable.p': "Sizi molamda geri arayacağım.", // nieuw, nalezen
+    'c.reachable.s': "Molanda ajanstan gelen bir cevapsız arama görüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.reachable.o1': "Şimdi, molanda geri ararsın.", // nieuw, nalezen
+    'c.reachable.o2': "Seni tekrar aramalarını beklersin.", // nieuw, nalezen
+    'c.reachable.o3': "Gelecek hafta, boş olduğunda geri ararsın.", // nieuw, nalezen
+    'c.reachable.w': "Ajanslar iş olduğunda sık sık arar. Aynı gün geri ararsan işi istediğini gösterirsin ve belki işi sen alırsın.", // nieuw, nalezen
+    'u.feedback': "Geri bildirim ve ekip toplantısı", // nieuw, nalezen
+    'l.getfeedback': "Geri bildirim almak", // nieuw, nalezen
+    'w.tip': "ipucu (kısa bir tavsiye)", // nieuw, nalezen
+    'w.verbeterpunt': "geliştirilecek nokta (daha iyi olabilecek şey)", // nieuw, nalezen
+    'w.goedbedoeld': "iyi niyetle söylenmiş (sana yardım etmek için)", // nieuw, nalezen
+    'w.kritiek': "eleştiri (birinin iyi bulmadığı şey)", // nieuw, nalezen
+    'w.normaal': "normal", // nieuw, nalezen
+    'w.positief': "olumlu (iyi giden şey hakkında)", // nieuw, nalezen
+    's.getfeedback.1': "Teşekkürler, bunu bilmek iyi oldu.", // nieuw, nalezen
+    's.getfeedback.2': "Bir örnek verebilir misin?", // nieuw, nalezen
+    's.getfeedback.3': "Neyi daha iyi yapabilirim?", // nieuw, nalezen
+    'd.getfeedback.q': "Sana biraz geri bildirim verebilir miyim?", // nieuw, nalezen
+    'd.getfeedback.a': "Evet, lütfen. İşimi iyi yapmak istiyorum.", // nieuw, nalezen
+    'l.givefeedback': "Geri bildirim vermek", // nieuw, nalezen
+    'w.dichtplakken': "bantla kapatmak", // nieuw, nalezen
+    'w.netjes': "düzgün, derli toplu", // nieuw, nalezen
+    'w.scheef': "eğri, düz değil", // nieuw, nalezen
+    'w.vriendelijk': "nazik, güler yüzlü", // nieuw, nalezen
+    'w.concreet': "somut (açık bir örnekle)", // nieuw, nalezen
+    'w.ondervierogen': "baş başa (sadece ikiniz)", // nieuw, nalezen
+    's.givefeedback.1': "Bunu iyi yapıyorsun.", // nieuw, nalezen
+    's.givefeedback.2': "Kutuları da bantla kapatabilir misin?", // nieuw, nalezen
+    's.givefeedback.3': "Kutuların eğri durduğunu görüyorum.", // nieuw, nalezen
+    'd.givefeedback.q': "İşimi nasıl buluyorsun?", // nieuw, nalezen
+    'd.givefeedback.a': "Düzgün! Sadece kutular eğri duruyor.", // nieuw, nalezen
+    'l.meeting': "Ekip toplantısında söz almak", // nieuw, nalezen
+    'w.werkoverleg': "ekip toplantısı (iş hakkında)", // nieuw, nalezen
+    'w.beurt': "sıra (konuşma sırası)", // nieuw, nalezen
+    'w.idee': "fikir", // nieuw, nalezen
+    'w.mening': "görüş (o konuda ne düşündüğün)", // nieuw, nalezen
+    'w.handopsteken': "elini kaldırmak", // nieuw, nalezen
+    'w.agenda': "gündem (toplantıdaki konuların listesi)", // nieuw, nalezen
+    's.meeting.1': "Bir şey söyleyebilir miyim?", // nieuw, nalezen
+    's.meeting.2': "Çalışma planıyla ilgili bir sorum var.", // nieuw, nalezen
+    's.meeting.3': "Bir fikrim var.", // nieuw, nalezen
+    'd.meeting.q': "Başka sorusu olan var mı?", // nieuw, nalezen
+    'd.meeting.a': "Evet. Yeni çalışma planı ne zaman gelecek?", // nieuw, nalezen
+    'c.getfeedback': "Geri bildirim işinle ilgilidir", // nieuw, nalezen
+    'c.getfeedback.b': "Geri bildirim, birinin işin hakkında söylediğidir: neyin iyi gittiği ve neyin daha iyi olabileceği. Bu senin işinle ilgilidir, seninle değil. Burada iş yerinde geri bildirim normaldir ve yardım etmek içindir. Neyi farklı yapacağın açık değil mi? Bir örnek iste. Önce dinle ve hemen kendini savunma. Sonra teşekkür et ve dene. Sen de geri bildirim isteyebilirsin: “Wat kan ik beter doen?”", // nieuw, nalezen
+    'c.getfeedback.p': "Teşekkürler. Bir örnek verebilir misin?", // nieuw, nalezen
+    'c.getfeedback.s': "Amirin işine bakıyor ve diyor ki: “Dit kan beter.” Ne demek istediğini bilmiyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.getfeedback.o1': "Teşekkür eder ve bir örnek istersin.", // nieuw, nalezen
+    'c.getfeedback.o2': "Gerçekten elinden geleni yaptığını söylersin.", // nieuw, nalezen
+    'c.getfeedback.o3': "Başını sallar ve yine aynı şekilde yaparsın.", // nieuw, nalezen
+    'c.getfeedback.w': "Geri bildirim sana yardım etmek içindir. Bir örnek, onun ne istediğini gösterir. Bir “teşekkürler” de dinlediğini gösterir.", // nieuw, nalezen
+    'c.givefeedback': "Geri bildirim vermek: önce iyi olan", // nieuw, nalezen
+    'c.givefeedback.b': "Bir iş arkadaşının işi hakkında bir şey mi söylemek istiyorsun? Önce neyin iyi gittiğini söyle. Sonra neyin daha iyi olabileceğini nazikçe ve açıkça, bir örnekle söyle. Bunu uygun bir anda, sadece o kişiye söyle, herkes oradayken değil. Kişi hakkında ne düşündüğünü değil, ne gördüğünü söyle: “Ik zie dat ...”. Nazik kal: yardım etmek istiyorsun, kazanmak değil.", // nieuw, nalezen
+    'c.givefeedback.p': "Bunu iyi yapıyorsun. Kutuları da bantla kapatabilir misin?", // nieuw, nalezen
+    'c.givefeedback.s': "Yeni bir iş arkadaşı kutuları bantlamayı unutuyor. Hepiniz yemekhanedesiniz. Ne yaparsın?", // nieuw, nalezen
+    'c.givefeedback.o1': "Sonra, baş başayken: önce iyi giden şey, sonra kutular.", // nieuw, nalezen
+    'c.givefeedback.o2': "Herkesin önünde ona yanlış yaptığını söylersin.", // nieuw, nalezen
+    'c.givefeedback.o3': "Hiçbir şey söylemez ve onun kutularını kendin bantlarsın.", // nieuw, nalezen
+    'c.givefeedback.w': "Baş başayken utanmadan dinleyebilir. Önce neyin iyi gittiğini söylersen, gerisini daha iyi duyar.", // nieuw, nalezen
+    'c.meeting': "Toplantıda senin sesin de önemli", // nieuw, nalezen
+    'c.meeting.b': "Birçok ekip, iş hakkında kısa bir toplantı yapar (het werkoverleg). Orada senin görüşün de önemlidir, Hollandacan mükemmel olmasa bile. Bir soru da iyi bir katkıdır: belki başkaları da bunu bilmek istiyordur. Sıranı bekle ve karşındakinin sözünü bitirmesine izin ver. Sonra elini kaldır ya da şöyle de: “Mag ik iets zeggen?” Bunu grupta söylemeye cesaret edemiyor musun? Toplantıdan sonra amirine söyle.", // nieuw, nalezen
+    'c.meeting.p': "Bir şey söyleyebilir miyim? Bir fikrim var.", // nieuw, nalezen
+    'c.meeting.s': "Ekip toplantısında amirin yeni çalışma planını anlatıyor. Vardiyanın ne zaman başladığını anlamıyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.meeting.o1': "O konuşmayı bitirince sorunu sorarsın.", // nieuw, nalezen
+    'c.meeting.o2': "Zaman kaybetmemek için hiçbir şey söylemezsin.", // nieuw, nalezen
+    'c.meeting.o3': "O hâlâ konuşurken hemen sorarsın.", // nieuw, nalezen
+    'c.meeting.w': "Bir soru iyi bir katkıdır: belki başkaları da anlamamıştır. Sıranı beklersen herkes onu duyabilir.", // nieuw, nalezen
   },
 };
 

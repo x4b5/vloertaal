@@ -69,6 +69,12 @@ const t: CultureTranslation = {
     'kjn.u.teamwork.1': "Я можу сказати, що мене дещо турбує.", // nieuw, nalezen
     'kjn.u.teamwork.2': "Я можу спокійно відмовитися від додаткової роботи.", // nieuw, nalezen
     'kjn.u.teamwork.3': "Я можу запитати, що мені зробити спочатку.", // nieuw, nalezen
+    'kjn.u.communicate.1': "Я можу пояснити, що не так.", // nieuw, nalezen
+    'kjn.u.communicate.2': { m: "Я можу сказати, що я почув.", f: "Я можу сказати, що я почула.", x: "Я можу переказати почуте." }, // nieuw, nalezen
+    'kjn.u.communicate.3': "Я можу вчасно попросити про розмову.", // nieuw, nalezen
+    'kjn.u.feedback.1': "Я можу попросити приклад, коли отримую зворотний звʼязок.", // nieuw, nalezen
+    'kjn.u.feedback.2': "Я можу привітно сказати, що можна зробити краще.", // nieuw, nalezen
+    'kjn.u.feedback.3': "Я можу поставити запитання на робочій нараді.", // nieuw, nalezen
     'kjn.u.social.1': "Я можу трохи поговорити з колегами на перерві.", // nieuw, nalezen
     'kjn.u.social.2': { m: "Я можу сказати, що зробив помилку.", f: "Я можу сказати, що зробила помилку.", x: "Я можу сказати, що це моя помилка." }, // nieuw, nalezen
     'kjn.u.social.3': "Я можу сказати, що щось порушує мої межі.", // nieuw, nalezen (AI-correctie 2 nov 2026)

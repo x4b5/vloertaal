@@ -219,6 +219,170 @@ const t: CultureTranslation = {
     'c.newcolleague.o2': "Spui „Goed zo” și te întorci la munca ta.", // nieuw, nalezen
     'c.newcolleague.o3': "Explici totul încă o dată, mai repede și mai tare.", // nieuw, nalezen
     'c.newcolleague.w': "Mulți spun „ja” și când n-au înțeles. Când el îți arată, vedeți amândoi dacă merge. E mai repede decât să repari o greșeală mai târziu.", // nieuw, nalezen
+    // Vertaalronde 5 november 2026: Goed communiceren (u.communicate).
+    'u.communicate': "Să comunici bine", // nieuw, nalezen
+    'l.explain': "Să spui ce nu e în regulă", // nieuw, nalezen
+    'w.ietsmis': "ceva nu e în regulă", // nieuw, nalezen
+    'w.stilstaan': "a sta, a fi oprit (un utilaj, o bandă)", // nieuw, nalezen
+    'w.lampje': "beculețul (de avertizare)", // nieuw, nalezen
+    'w.komen': "a veni", // nieuw, nalezen
+    'w.nodighebben': "a avea nevoie de", // nieuw, nalezen
+    'w.meteen': "imediat, pe loc", // nieuw, nalezen
+    's.explain.1': "Banda s-a oprit. La linia doi. Poți să vii?", // nieuw, nalezen
+    's.explain.2': "Pe utilaj e aprins un bec roșu.", // nieuw, nalezen
+    's.explain.3': "E periculos. Poți să vii imediat?", // nieuw, nalezen
+    'd.explain.q': "Ce nu e în regulă?", // nieuw, nalezen
+    'd.explain.a': "Scanerul nu merge. Am nevoie de unul nou.", // nieuw, nalezen
+    'l.listen': "Să asculți bine", // nieuw, nalezen
+    'w.uitpraten': "a termina de vorbit (a lăsa pe cineva să termine)", // nieuw, nalezen
+    'w.onderbreken': "a întrerupe", // nieuw, nalezen
+    'w.aankijken': "a se uita la (cineva)", // nieuw, nalezen
+    'w.bedoelen': "a vrea să spună, a se referi la", // nieuw, nalezen
+    'w.dus': "deci (ca să verifici ce ai auzit)", // nieuw, nalezen
+    'w.doorvragen': "a mai întreba (până e clar)", // nieuw, nalezen
+    's.listen.1': "Deci întâi număr cutiile, și apoi împachetez?", // nieuw, nalezen
+    's.listen.2': "Ce vrei să spui cu cuvântul ăsta?", // nieuw, nalezen
+    's.listen.3': "Scuze, te rog, termină ce spuneai.", // nieuw, nalezen
+    'd.listen.q': "Mâine începi deja la patru.", // nieuw, nalezen
+    'd.listen.a': "Serios? Sau era o glumă?", // nieuw, nalezen
+    'l.calm': "Să-ți păstrezi calmul", // nieuw, nalezen
+    'w.nadenken': "a se gândi (la ceva)", // nieuw, nalezen
+    'w.ademhalen': "a respira", // nieuw, nalezen
+    'w.oplossen': "a rezolva, a lămuri", // nieuw, nalezen
+    'w.druk': "aglomerat (mult de lucru)", // nieuw, nalezen
+    'w.straks': "mai târziu (azi), peste puțin", // nieuw, nalezen
+    'w.misverstand': "neînțelegerea", // nieuw, nalezen
+    's.calm.1': "Vreau să rezolv asta calm.", // nieuw, nalezen
+    's.calm.2': "Pot să mă gândesc puțin?", // nieuw, nalezen
+    's.calm.3': "Putem vorbi mai târziu?", // nieuw, nalezen
+    'd.calm.q': "De ce nu e gata încă asta?", // nieuw, nalezen
+    'd.calm.a': "Scuze, e foarte aglomerat. Ce trebuie făcut întâi?", // nieuw, nalezen
+    'l.talkintime': "Vorbește la timp despre asta", // nieuw, nalezen
+    'w.gesprek': "discuția, conversația", // nieuw, nalezen
+    'w.bespreken': "a discuta (despre ceva)", // nieuw, nalezen
+    'w.zorgenmaken': "a-ți face griji", // nieuw, nalezen
+    'w.oplossing': "soluția", // nieuw, nalezen
+    'w.ineens': "deodată, dintr-odată", // nieuw, nalezen
+    'w.wegblijven': "a lipsi (a nu veni la muncă)", // nieuw, nalezen
+    's.talkintime.1': "Ceva mă deranjează. Ai puțin timp?", // nieuw, nalezen
+    's.talkintime.2': "Vreau să discut ceva cu tine.", // nieuw, nalezen
+    's.talkintime.3': "Mă gândesc să-mi dau demisia. Putem vorbi întâi?", // nieuw, nalezen
+    'd.talkintime.q': "Ai puțin timp? Ceva mă deranjează.", // nieuw, nalezen
+    'd.talkintime.a': "Sigur. Ce s-a întâmplat?", // nieuw, nalezen
+    'l.reachable': "Să fii de găsit la telefon", // nieuw, nalezen
+    'w.opnemen': "a răspunde (la telefon)", // nieuw, nalezen
+    'w.gemisteoproep': "apelul pierdut", // nieuw, nalezen
+    'w.voicemail': "mesageria vocală", // nieuw, nalezen
+    'w.beltegoed': "creditul (pe cartelă)", // nieuw, nalezen
+    'w.bereik': "semnalul (la telefon)", // nieuw, nalezen
+    'w.onbekend': "necunoscut (un număr necunoscut)", // nieuw, nalezen
+    's.reachable.1': "Olandeza mea nu e încă bună. Puteți vorbi mai rar?", // nieuw, nalezen
+    's.reachable.2': "Puteți să mi-l trimiteți și ca mesaj?", // nieuw, nalezen
+    's.reachable.3': "Am un număr nou.", // nieuw, nalezen
+    'd.reachable.q': "Bună dimineața, sunt de la planificare.", // nieuw, nalezen
+    'd.reachable.a': "Bună dimineața. M-ați sunat? Scuze, n-am apucat să răspund.", // nieuw, nalezen
+    'c.explain': "Ce, unde, de ce ai nevoie", // nieuw, nalezen
+    'c.explain.b': "Când ceva nu e în regulă la muncă, spune-o în trei pași. Întâi ce nu e în regulă: „De band staat stil.” Apoi unde: „Bij lijn twee.” Apoi de ce ai nevoie: „Kun je komen?” Acum celălalt știe ce să facă, fără multe întrebări. Nu știi cuvântul? Arată cu degetul. E periculos? Spune asta întâi: „Het is gevaarlijk.” Un accident? Întâi cheamă ajutor (mai multe în lecția „Cum raportezi un accident”).", // nieuw, nalezen
+    'c.explain.p': "Poți să vii să te uiți?", // nieuw, nalezen
+    'c.explain.s': "Scanerul de la locul tău nu mai merge. Îl suni pe șeful de echipă. Ce spui?", // nieuw, nalezen
+    'c.explain.o1': "„De scanner is kapot. Bij gang vier. Kun je komen?”", // nieuw, nalezen
+    'c.explain.o2': "„Hallo, ik heb een probleem.” Apoi aștepți.", // nieuw, nalezen
+    'c.explain.o3': "„Sorry, sorry! Het is niet mijn schuld!”", // nieuw, nalezen
+    'c.explain.w': "Acum șeful de echipă știe ce nu e în regulă, unde și de ce ai nevoie. Nimeni nu trebuie să pună întâi trei întrebări.", // nieuw, nalezen
+    'c.listen': "Întâi ascultă, apoi verifică", // nieuw, nalezen
+    'c.listen.b': "Lasă-l pe celălalt să termine de vorbit (uitpraten) înainte să răspunzi. Uită-te la persoana care îți vorbește: aici asta arată că asculți. În multe țări nu te uiți șefului în ochi, din respect; aici e politicos să te uiți la el din când în când. Când celălalt a terminat, repetă ce ai auzit: „Dus eerst …, en dan …?” Nu știi sigur ce înseamnă un cuvânt? Întreabă: „Wat bedoel je met …?” Unii colegi fac glume cu fața serioasă. Nu știi sigur? Întreabă: „Was dat een grapje?”", // nieuw, nalezen
+    'c.listen.p': "Stai, vreau să înțeleg bine.", // nieuw, nalezen
+    'c.listen.s': "Șefa ta explică o sarcină nouă. Vrei să spui ceva, dar ea încă vorbește. Ce faci?", // nieuw, nalezen
+    'c.listen.o1': "O lași să termine. Apoi repeți ce ai auzit.", // nieuw, nalezen
+    'c.listen.o2': "Începi imediat să vorbești, ca să nu uiți.", // nieuw, nalezen
+    'c.listen.o3': "Dai din cap la tot și nu întrebi nimic.", // nieuw, nalezen
+    'c.listen.w': "Când ea a terminat, știi toată sarcina. Când repeți, arăți că ai ascultat, iar ea te mai poate corecta.", // nieuw, nalezen
+    'c.calm': "Păstrează-ți calmul, și când e greu", // nieuw, nalezen
+    'c.calm.b': "Toată lumea se enervează uneori, și la muncă. E cineva supărat pe tine? Întâi ascultă și păstrează-ți calmul. Nu trebuie să răspunzi imediat: „Mag ik even nadenken?” Te enervezi și tu? Respiră încet și spune: „Kunnen we straks praten?” Apoi vorbiți când v-ați liniștit amândoi. E foarte aglomerat? Întreabă ce trebuie făcut întâi. Țipetele, amenințările sau îmbrâncelile nu sunt niciodată în regulă la muncă. Spune stop și spune-i șefului (mai multe în lecțiile „Respect pentru toți” și „Depășirea limitelor”).", // nieuw, nalezen
+    'c.calm.p': "Cred că e o neînțelegere.", // nieuw, nalezen
+    'c.calm.s': "Un coleg e supărat: paletul e în locul greșit. Crezi că nu tu l-ai pus acolo. Ce faci?", // nieuw, nalezen
+    'c.calm.o1': "Îți păstrezi calmul, asculți, apoi spui ce știi.", // nieuw, nalezen
+    'c.calm.o2': "Te enervezi și tu și vorbești mai tare.", // nieuw, nalezen
+    'c.calm.o3': "Pleci și nu mai vorbești cu el.", // nieuw, nalezen
+    'c.calm.w': "Când îți păstrezi calmul, deseori și celălalt se calmează. Atunci puteți afla ce s-a întâmplat și puteți rezolva împreună.", // nieuw, nalezen
+    'c.talkintime': "Vorbește cât timp problema e mică", // nieuw, nalezen
+    'c.talkintime.b': "O problemă mică devine mare când nu vorbești despre ea. Apoi te enervezi deodată sau renunți deodată. Vorbește la timp: cu șeful, cu un coleg sau cu vertrouwenspersoon (persoana de încredere, dacă există). Cere puțin timp: „Heb je even tijd?” Spune pe scurt care e problema și ce vrei. Te gândești să-ți dai demisia? Vorbește întâi. Deseori există o soluție, de exemplu altă tură sau altă sarcină. Dacă demisionezi tu, poți pierde indemnizația (uitkering) și deseori există o perioadă de preaviz (opzegtermijn). Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.talkintime.p': "Putem căuta împreună o soluție?", // nieuw, nalezen
+    'c.talkintime.s': "De săptămâni întregi programul tău e o problemă. Azi te-ai enervat și vrei să renunți imediat. Ce faci?", // nieuw, nalezen
+    'c.talkintime.o1': "Întâi îi ceri șefului o discuție.", // nieuw, nalezen
+    'c.talkintime.o2': "Pleci acum și nu te mai întorci.", // nieuw, nalezen
+    'c.talkintime.o3': "Nu spui nimic și mergi mai departe.", // nieuw, nalezen
+    'c.talkintime.w': "Când vorbești la timp, problema rămâne mică. Deseori există o soluție și așa îți păstrezi de multe ori locul de muncă și venitul.", // nieuw, nalezen
+    'c.reachable': "Răspunde sau sună înapoi în aceeași zi", // nieuw, nalezen
+    'c.reachable.b': "Agențiile și angajatorii sună des când e de lucru. Deseori primește munca primul care răspunde sau sună înapoi. Ai un apel pierdut? Sună înapoi în aceeași zi. Nu ai telefonul la tine la muncă? Sună înapoi în pauză. Ascultă-ți mesageria vocală și ține puțin credit (beltegoed) pe telefon. Îți e greu să înțelegi la telefon? Spune asta și întreabă: „Kunt u het ook appen?” Cineva îți cere bani sau coduri? Închide (mai multe în lecția „Atenție la înșelătorii”). Ai un număr nou? Dă-l la muncă, la agenție și la primărie (gemeente).", // nieuw, nalezen
+    'c.reachable.p': "Vă sun înapoi în pauză.", // nieuw, nalezen
+    'c.reachable.s': "În pauză vezi un apel pierdut de la agenție. Ce faci?", // nieuw, nalezen
+    'c.reachable.o1': "Suni înapoi acum, în pauză.", // nieuw, nalezen
+    'c.reachable.o2': "Aștepți până te sună din nou.", // nieuw, nalezen
+    'c.reachable.o3': "Suni înapoi săptămâna viitoare, când ai timp liber.", // nieuw, nalezen
+    'c.reachable.w': "Agențiile sună des când e de lucru. Când suni înapoi în aceeași zi, arăți că vrei munca, și poate o primești.", // nieuw, nalezen
+    // Vertaalronde 5 november 2026: Feedback en overleg (u.feedback).
+    'u.feedback': "Feedback și ședințe de echipă", // nieuw, nalezen
+    'l.getfeedback': "Când primești feedback", // nieuw, nalezen
+    'w.tip': "sfatul (un sfat scurt)", // nieuw, nalezen
+    'w.verbeterpunt': "punctul de îmbunătățit (ce poate fi mai bine)", // nieuw, nalezen
+    'w.goedbedoeld': "cu intenție bună (ca să te ajute)", // nieuw, nalezen
+    'w.kritiek': "critica (ce crede cineva că nu e bine)", // nieuw, nalezen
+    'w.normaal': "normal", // nieuw, nalezen
+    'w.positief': "pozitiv (despre ce merge bine)", // nieuw, nalezen
+    's.getfeedback.1': "Mulțumesc, e bine de știut.", // nieuw, nalezen
+    's.getfeedback.2': "Poți să-mi dai un exemplu?", // nieuw, nalezen
+    's.getfeedback.3': "Ce pot să fac mai bine?", // nieuw, nalezen
+    'd.getfeedback.q': "Pot să-ți dau puțin feedback?", // nieuw, nalezen
+    'd.getfeedback.a': "Da, te rog. Vreau să fac treaba bine.", // nieuw, nalezen
+    'l.givefeedback': "Când dai feedback", // nieuw, nalezen
+    'w.dichtplakken': "a închide cu bandă adezivă", // nieuw, nalezen
+    'w.netjes': "îngrijit, ordonat", // nieuw, nalezen
+    'w.scheef': "strâmb, nu drept", // nieuw, nalezen
+    'w.vriendelijk': "prietenos, amabil", // nieuw, nalezen
+    'w.concreet': "concret (cu un exemplu clar)", // nieuw, nalezen
+    'w.ondervierogen': "între patru ochi (doar voi doi)", // nieuw, nalezen
+    's.givefeedback.1': "Faci asta bine.", // nieuw, nalezen
+    's.givefeedback.2': "Poți să închizi și cutiile cu bandă?", // nieuw, nalezen
+    's.givefeedback.3': "Văd că cutiile stau strâmb.", // nieuw, nalezen
+    'd.givefeedback.q': "Ce părere ai despre munca mea?", // nieuw, nalezen
+    'd.givefeedback.a': "Îngrijit! Doar cutiile stau strâmb.", // nieuw, nalezen
+    'l.meeting': "Să vorbești la ședința de echipă", // nieuw, nalezen
+    'w.werkoverleg': "ședința de echipă (despre muncă)", // nieuw, nalezen
+    'w.beurt': "rândul (momentul tău să vorbești)", // nieuw, nalezen
+    'w.idee': "ideea", // nieuw, nalezen
+    'w.mening': "părerea (ce crezi despre asta)", // nieuw, nalezen
+    'w.handopsteken': "a ridica mâna", // nieuw, nalezen
+    'w.agenda': "ordinea de zi (lista de puncte pentru ședință)", // nieuw, nalezen
+    's.meeting.1': "Pot să spun ceva?", // nieuw, nalezen
+    's.meeting.2': "Am o întrebare despre programul de lucru.", // nieuw, nalezen
+    's.meeting.3': "Am o idee.", // nieuw, nalezen
+    'd.meeting.q': "Mai are cineva o întrebare?", // nieuw, nalezen
+    'd.meeting.a': "Da. Când vine noul program de lucru?", // nieuw, nalezen
+    'c.getfeedback': "Feedbackul e despre munca ta", // nieuw, nalezen
+    'c.getfeedback.b': "Feedbackul e ce spune cineva despre munca ta: ce merge bine și ce poate fi mai bine. E despre munca ta, nu despre tine. La muncă aici, feedbackul e normal și e menit să ajute. Nu e clar ce să faci altfel? Cere un exemplu. Întâi ascultă și nu te apăra imediat. Apoi mulțumește și încearcă. Poți să ceri și tu feedback: „Wat kan ik beter doen?”", // nieuw, nalezen
+    'c.getfeedback.p': "Mulțumesc. Poți să-mi dai un exemplu?", // nieuw, nalezen
+    'c.getfeedback.s': "Șefa ta se uită la munca ta și spune: „Dit kan beter.” Nu știi ce vrea să spună. Ce faci?", // nieuw, nalezen
+    'c.getfeedback.o1': "Mulțumești și ceri un exemplu.", // nieuw, nalezen
+    'c.getfeedback.o2': "Spui că chiar ai făcut tot ce ai putut.", // nieuw, nalezen
+    'c.getfeedback.o3': "Dai din cap și o faci din nou la fel.", // nieuw, nalezen
+    'c.getfeedback.w': "Feedbackul e menit să te ajute. Un exemplu arată ce vrea ea. Iar un „mulțumesc” arată că asculți.", // nieuw, nalezen
+    'c.givefeedback': "Când dai feedback: întâi partea bună", // nieuw, nalezen
+    'c.givefeedback.b': "Vrei să spui ceva despre munca unui coleg? Întâi spune ce merge bine. Apoi spune prietenos și clar ce poate fi mai bine, cu un exemplu. Spune-o la un moment potrivit, doar acelei persoane, nu când sunt toți de față. Spune ce vezi, nu ce crezi despre persoană: „Ik zie dat ...”. Vorbește prietenos: vrei să ajuți, nu să câștigi.", // nieuw, nalezen
+    'c.givefeedback.p': "Faci asta bine. Poți să închizi și cutiile cu bandă?", // nieuw, nalezen
+    'c.givefeedback.s': "Un coleg nou uită să închidă cutiile cu bandă. Sunteți toți în cantină. Ce faci?", // nieuw, nalezen
+    'c.givefeedback.o1': "Mai târziu, între patru ochi: întâi ce merge bine, apoi cutiile.", // nieuw, nalezen
+    'c.givefeedback.o2': "Îi spui de față cu toți că e greșit.", // nieuw, nalezen
+    'c.givefeedback.o3': "Nu spui nimic și îi închizi tu cutiile.", // nieuw, nalezen
+    'c.givefeedback.w': "Între patru ochi, el poate asculta fără să-i fie rușine. Când spui întâi ce merge bine, aude mai bine restul.", // nieuw, nalezen
+    'c.meeting': "Vocea ta contează la ședință", // nieuw, nalezen
+    'c.meeting.b': "Multe echipe au o ședință scurtă despre muncă (het werkoverleg). Părerea ta e binevenită acolo, și când olandeza ta nu e perfectă. Și o întrebare e o contribuție bună: poate și alții vor să știe. Așteaptă-ți rândul și lasă-l pe celălalt să termine. Apoi ridică mâna sau spune: „Mag ik iets zeggen?” Nu îndrăznești să spui asta în grup? Spune-i șefului după ședință.", // nieuw, nalezen
+    'c.meeting.p': "Pot să spun ceva? Am o idee.", // nieuw, nalezen
+    'c.meeting.s': "La ședința de echipă, șefa explică noul program de lucru. Nu înțelegi când începe tura ta. Ce faci?", // nieuw, nalezen
+    'c.meeting.o1': "Când ea termină de vorbit, îți pui întrebarea.", // nieuw, nalezen
+    'c.meeting.o2': "Nu spui nimic, ca să nu pierzi timpul.", // nieuw, nalezen
+    'c.meeting.o3': "Întrebi imediat, cât timp ea încă vorbește.", // nieuw, nalezen
+    'c.meeting.w': "O întrebare e o contribuție bună: poate nici alții n-au înțeles. Când îți aștepți rândul, toată lumea o poate auzi.", // nieuw, nalezen
   },
 };
 

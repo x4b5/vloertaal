@@ -129,6 +129,15 @@ const t: CultureTranslation = {
     'c.road.a.why': "Prośba o jeszcze jeden kurs: nie, bo najpierw jest przerwa.", // nieuw, nalezen
     'c.backtowork.a.why': "Pytanie, jak się czujesz: krótkie „tak” i że robisz wszystko powoli.", // nieuw, nalezen
     'c.feelwell.a.why': "Pytanie, jak się czujesz: szczere „nie bardzo” jest w porządku.", // nieuw, nalezen
+    // Goed communiceren en Feedback en overleg (5 november 2026).
+    'd.explain.a.why': "Pytanie, co jest nie tak: ta odpowiedź mówi co i czego potrzeba.", // nieuw, nalezen
+    'd.listen.a.why': "Nie wiadomo, czy to żart: lepiej zapytać, niż zgadywać.", // nieuw, nalezen
+    'd.calm.a.why': "Pytanie, dlaczego to nie jest gotowe: spokojny powód i co zrobić najpierw.", // nieuw, nalezen
+    'd.talkintime.a.why': "Ktoś prosi o chwilę: „tak” i pytanie, żeby ta osoba mogła opowiedzieć.", // nieuw, nalezen
+    'd.reachable.a.why': "Oddzwaniasz po nieodebranym połączeniu: powitanie i powód telefonu.", // nieuw, nalezen
+    'd.getfeedback.a.why': "Propozycja feedbacku: „tak” i że chcesz to robić dobrze.", // nieuw, nalezen
+    'd.givefeedback.a.why': "Pytanie o pracę: najpierw co jest dobre, potem co może być lepsze.", // nieuw, nalezen
+    'd.meeting.a.why': "Pytanie, czy są pytania: ta odpowiedź zadaje jedno, o grafik.", // nieuw, nalezen
   },
 };
 

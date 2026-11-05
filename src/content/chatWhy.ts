@@ -26,6 +26,16 @@ const reasons: Record<string, string> = {
   'd.task.a': 'Asked if it is done: this reply says almost, and how long.',
   'd.clear.a': 'Asked if it is clear: yes first, then the one question.',
   'd.newcolleague.a': '"I think" is not sure yet: asking to see it checks that it works.',
+  // "Goed communiceren" (u.communicate, 5 November 2026).
+  'd.explain.a': 'Asked what is wrong: this reply says what, and what is needed.',
+  'd.listen.a': 'Not sure if it is a joke: asking is better than guessing.',
+  'd.calm.a': 'Asked why it is not done: a calm reason, and what comes first.',
+  'd.talkintime.a': 'Someone asks for a moment: a yes, and a question so they can tell it.',
+  'd.reachable.a': 'Calling back after a missed call: a greeting, and why you call.',
+  // Feedback en overleg (5 November 2026).
+  'd.getfeedback.a': 'Offered feedback: a yes, and that you want to do it well.',
+  'd.givefeedback.a': 'Asked about the work: first what is good, then what can be better.',
+  'd.meeting.a': 'Asked for questions: this reply asks one, about the roster.',
   'c.cv.a': 'A reference is a former boss who can tell about the work.',
   'c.interview.a': 'In a job interview, work experience is what counts.',
   'c.findwork.a': 'The question asks what work. This reply names it.',

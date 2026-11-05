@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'Обратна връзка и грешки',
     'w.fout': 'грешка',
     'w.compliment': 'комплимент, похвала',
-    'w.feedback': 'обратна връзка',
+    'w.feedback': "обратната връзка (какво някой казва за работата ти)", // nieuw, nalezen
     'w.uitleggen': 'обяснявам',
     'w.leren': 'уча',
     'w.verbeteren': 'подобрявам, поправям',

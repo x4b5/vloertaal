@@ -492,6 +492,7 @@ const lang: HelpLanguageSource = {
     klankSpeed: 'السرعة', // nieuw, nalezen
     klankScrub: 'الكلمة، صوتًا بصوت', // nieuw, nalezen
     tagSound: 'صوت', // nieuw, nalezen
+    commLabel: "التواصل", // nieuw, nalezen
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)

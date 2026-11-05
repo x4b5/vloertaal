@@ -555,6 +555,8 @@ export const uiEn = {
   checkVia: 'via check',
   checkUndo: 'Do the lessons anyway',
   /* The language track in Belgium (docs/taal-belgie.md; translations in src/i18n/be/base.ts). */
+  /* Under a lesson that trains talking with others (src/content/communication.ts), on the topic page. */
+  commLabel: 'Communication',
   beNlOnly: 'This is about the Netherlands. In Belgium it is different.',
   beTaalBeta: 'The Belgian lessons are new and not checked by an expert yet.',
   whoLegalBe: 'A free first advice from a lawyer, about your contract, your pay or dismissal.',

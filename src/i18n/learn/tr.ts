@@ -128,6 +128,15 @@ const t: CultureTranslation = {
     'c.road.a.why': "Bir sefer daha isteniyor: hayır, çünkü önce mola gelir.", // nieuw, nalezen
     'c.backtowork.a.why': "Nasıl olduğun soruluyor: kısa bir evet, bir de işi yavaş aldığın.", // nieuw, nalezen
     'c.feelwell.a.why': "Nasıl olduğun soruluyor: dürüst bir \"pek iyi değil\" sorun değil.", // nieuw, nalezen
+    // u.communicate en u.feedback (5 november 2026).
+    'd.explain.a.why': "Sorunun ne olduğu soruluyor: bu cevap ne olduğunu ve neye ihtiyaç olduğunu söylüyor.", // nieuw, nalezen
+    'd.listen.a.why': "Şaka olup olmadığından emin değilsin: sormak, tahmin etmekten iyidir.", // nieuw, nalezen
+    'd.calm.a.why': "Neden bitmediği soruluyor: sakin bir sebep, bir de önce ne yapılacağı.", // nieuw, nalezen
+    'd.talkintime.a.why': "Biri biraz zaman istiyor: bir evet, bir de anlatabilmesi için bir soru.", // nieuw, nalezen
+    'd.reachable.a.why': "Cevapsız bir aramadan sonra geri arıyorsun: bir selam, bir de neden aradığın.", // nieuw, nalezen
+    'd.getfeedback.a.why': "Geri bildirim teklif ediliyor: bir evet, bir de işi iyi yapmak istediğin.", // nieuw, nalezen
+    'd.givefeedback.a.why': "İş hakkında soruluyor: önce iyi olan, sonra daha iyi olabilecek şey.", // nieuw, nalezen
+    'd.meeting.a.why': "Soru olup olmadığı soruluyor: bu cevap çalışma planı hakkında bir soru soruyor.", // nieuw, nalezen
   },
 };
 

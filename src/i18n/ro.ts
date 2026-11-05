@@ -440,6 +440,7 @@ const lang: HelpLanguageSource = {
     checkMark: 'Bifează', // nieuw, nalezen
     checkVia: 'prin verificare', // nieuw, nalezen
     checkUndo: 'Totuși fă lecțiile', // nieuw, nalezen
+    commLabel: 'Comunicare', // nieuw, nalezen
     shareInvite: 'Învăț olandeză pentru munca mea cu Vloertaal. Gratuit: {link}', // nieuw, nalezen
     briefjeWhat: 'Vloertaal este o aplicație gratuită pentru a învăța olandeză pentru muncă.', // nieuw, nalezen
     briefjeHow: 'Lecții scurte pe telefonul tău, cu ajutor în limba ta. Fără cont.', // nieuw, nalezen

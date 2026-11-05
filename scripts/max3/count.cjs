@@ -393,6 +393,8 @@ function defineStates(LANG) {
   // "Verlof" and "Ziekte", two topics since 5 November 2026: each topic page.
   add('route:topic-leave', shot('topic&cu=u.leave&state=mid'), null, { list: true });
   add('route:topic-sick', shot('topic&cu=u.sick&state=mid'), null, { list: true });
+  // "Goed communiceren" (u.communicate, 5 November 2026): its topic page.
+  add('route:topic-communicate', shot('topic&cu=u.communicate&state=mid'), null, { list: true });
   // "Luister op de werkvloer" (stap 2): only with mixes in public/audio-scenes (none committed;
   // a test mp3 for the count, docs/geluidsscenes.md). Without them these states are left out, so a
   // run on a clean checkout is not red for a feature that is not there yet. The topic page with
@@ -559,11 +561,36 @@ function defineStates(LANG) {
   for (const [key, at] of [['word-abstract', 0], ['intro', 7], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:newcolleague-${key}`, shot(`lesson&lesson=l.newcolleague&at=${at}`));
   }
+  // "Goed communiceren" (u.communicate, seed 1, 5 November 2026): every screen of its five lessons
+  // (abstract and drawn word cards, "what does it mean", the tip and its situation, the match,
+  // listening, the Dutch word, building, the chat, typing) and of its mixed review.
+  for (const lesson of ['explain', 'listen', 'calm', 'talkintime', 'reachable']) {
+    for (let at = 0; at < 21; at++) add(`lesson:communicate-${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
+  }
+  for (let at = 0; at < 16; at++) add(`lesson:communicate-mix-${at}`, shot(`lesson&lesson=l.communicate.mix&at=${at}`));
   // "Weer aan het werk na ziekte" (l.backtowork, seed 1, 5 November 2026): its first word card
   // (a memory picture), "licht werk" (a new drawing), "herstellen" (abstract), the tip and its
   // situation, listening, a picture choice, building, the chat and typing.
   for (const [key, at] of [['intro', 0], ['word-picture', 3], ['word-abstract', 6], ['tip', 9], ['tip-say', 10], ['situation', 11], ['listen', 13], ['pick', 14], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:backtowork-${key}`, shot(`lesson&lesson=l.backtowork&at=${at}`));
+  }
+  // "Feedback en overleg" (u.feedback, seed 1, 5 November 2026). "Feedback krijgen" (l.getfeedback):
+  // an abstract word ("de tip"), the drawn "nadenken", the tip (what feedback is) and its situation
+  // ("Dit kan beter."), a sentence to build, the chat and typing "de kritiek".
+  for (const [key, at] of [['word-abstract', 0], ['intro', 7], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
+    add(`lesson:getfeedback-${key}`, shot(`lesson&lesson=l.getfeedback&at=${at}`));
+  }
+  // "Feedback geven" (l.givefeedback): the drawn "dichtplakken", "what does it mean" (picture
+  // cards), an abstract word ("vriendelijk"), the tip and its situation, "What do you hear?"
+  // ("netjes" or "scheef"), building the ik-zin, the chat and typing "dichtplakken".
+  for (const [key, at] of [['intro', 0], ['meaning', 2], ['word-abstract', 4], ['tip', 9], ['tip-say', 10], ['situation', 11], ['listen', 13], ['build', 17], ['chat', 18], ['type', 20]]) {
+    add(`lesson:givefeedback-${key}`, shot(`lesson&lesson=l.givefeedback&at=${at}`));
+  }
+  // "Iets zeggen in het werkoverleg" (l.meeting): the drawn "het werkoverleg" and "je hand
+  // opsteken", an abstract word ("de beurt"), the tip and its situation, building, the chat and
+  // typing "de mening".
+  for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['intro-hand', 6], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 16], ['chat', 18], ['type', 20]]) {
+    add(`lesson:meeting-${key}`, shot(`lesson&lesson=l.meeting&at=${at}`));
   }
   // "Getallen" (l.counting, seed 1, 4 November 2026): a number's word card (a label with its
   // digits), "what does it mean" with its partner (dertien or dertig), "which one is 47" (text

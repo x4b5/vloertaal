@@ -27,7 +27,7 @@ niveau**, geen toets en geen bewijs van een niveau.
 De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland, Jouw sector
 (`src/i18n/kunjenu/`, gemarkeerd met "nieuw, nalezen"). Werkregels is alleen Nederlands.
 
-## Taal (42 onderwerpen, 97 zinnen)
+## Taal (44 onderwerpen, 103 zinnen)
 
 | Onderwerp | Zinnen | Past bij |
 |---|---|---|
@@ -86,6 +86,12 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 | Samenwerken | Ik kan zeggen dat ik ergens mee zit. | op weg naar A2 · gesprekken |
 |  | Ik kan rustig nee zeggen tegen extra werk. | op weg naar A2 · gesprekken |
 |  | Ik kan vragen wat ik eerst moet doen. | A1 · spreken |
+| Goed communiceren | Ik kan uitleggen wat er mis is. | op weg naar A2 · spreken |
+|  | Ik kan zeggen wat ik heb gehoord. | op weg naar A2 · gesprekken |
+|  | Ik kan op tijd vragen om een gesprek. | op weg naar A2 · gesprekken |
+| Feedback en overleg | Ik kan om een voorbeeld vragen bij feedback. | op weg naar A2 · gesprekken |
+|  | Ik kan vriendelijk zeggen wat beter kan. | op weg naar A2 · spreken |
+|  | Ik kan in een werkoverleg een vraag stellen. | op weg naar A2 · gesprekken |
 | Omgang met collega’s | Ik kan een praatje maken in de pauze. | op weg naar A2 · gesprekken |
 |  | Ik kan zeggen dat ik een fout heb gemaakt. | op weg naar A2 · spreken |
 |  | Ik kan zeggen dat iets over mijn grens gaat. | op weg naar A2 · spreken |
@@ -129,7 +135,7 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan de buren vragen een pakket aan te nemen. | op weg naar A2 · gesprekken |
 |  | Ik kan vragen wie mijn route en mijn tijden bepaalt. | op weg naar A2 · spreken |
 
-## Werkregels (28 onderwerpen, 58 zinnen)
+## Werkregels (28 onderwerpen, 59 zinnen)
 
 | Onderwerp | Zinnen | Past bij |
 |---|---|---|
@@ -165,6 +171,7 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan kiezen wat in een sollicitatiemail hoort. | 1F · schrijven |
 | Samenwerken: de ongeschreven regels | Ik kan rustig zeggen dat ik het oneens ben. | 1F · gesprekken |
 |  | Ik kan op tijd zeggen dat iets niet lukt. | 1F · gesprekken |
+|  | Ik kan feedback rustig aannemen en vriendelijk geven. | 1F · gesprekken |
 | Problemen en je rechten | Ik kan discriminatie herkennen en melden. | 1F · lezen |
 |  | Ik kan stop zeggen als iemand over mijn grens gaat. | 1F · gesprekken |
 | Uitkering, werk en geld | Ik kan een brief van de overheid lezen. | 1F · lezen |

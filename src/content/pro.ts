@@ -1,3 +1,4 @@
+import { COMMUNICATION } from './communication';
 import { aboutSection, CONTACT_EMAIL, PRO_TITLE, STORY_DATE } from './about';
 import { updateDate } from './updateDate';
 
@@ -149,11 +150,20 @@ export const proSections: ProSection[] = [
       { lead: 'Kort en duidelijk.', text: 'Praat iemand veel en snel? In veel talen vertel je eerst het hele verhaal, en pas aan het eind de kern. De les “Kort en duidelijk” (bij Samenwerken) oefent de Nederlandse volgorde: eerst het belangrijkste, dan de reden, dan een vraag. Helpt het niet? Zeg rustig: “Stop even. Wat is het belangrijkste?” Geef daarna de tijd.' },
       // Nodding without understanding (the owner's request, 5 November 2026; the review's "Snap je het?").
       { lead: 'Knikken is niet altijd begrijpen.', text: 'Wie zich schaamt, zegt vaak “ja” of knikt, ook als hij het niet verstond. Vraag daarom niet “Snap je het?”, maar “Wat ga je nu doen?” of “Laat eens zien”. Zeg erbij dat vragen goed is. In Vloertaal oefent “Herhaal vandaag” af en toe precies dat: eerlijk zeggen “Sorry, kunt u dat herhalen?”. Werkt een leerling zelf een nieuwe collega in? De les “Een nieuwe collega helpen” (bij Samenwerken) oefent het andersom: voordoen in stappen, laten nadoen en “Laat eens zien”.' },
+      // Walking around with a problem, then stopping at once or getting angry (the owner's request, 5 November 2026; l.talkintime).
+      { lead: 'Op tijd praten.', text: 'Wordt iemand stiller, of zegt die plots “ik stop”? Vraag “Hoe gaat het echt?” en maak tijd. Zoek samen een oplossing, zoals een andere dienst of een andere taak. De les “Praat er op tijd over” (bij Goed communiceren) oefent het vanaf de kant van de leerling: “Ik zit ergens mee. Heb je even tijd?”' },
       { lead: 'Op de werkvloer.', text: 'Nieuwe collega’s leren de woorden van hun eigen werk: de veiligheidsinstructie, beschermingsmiddelen en de toolbox, het rooster en het loonstrookje. Zo kun je een instructie of een eerste werkdag voorbereiden. Vloertaal vervangt geen veiligheidsinstructie of VCA-cursus: het helpt om die beter te begrijpen.' },
       { lead: 'Naar één onderwerp.', text: 'Elk onderwerp heeft een eigen link. Met de link opent Vloertaal meteen bij dat onderwerp, ook bij de eerste les. Een nieuwe gebruiker kiest eerst nog een taal. Handig na een les over het loonstrookje of veiligheid. Hieronder staat elk onderwerp, per thema.' },
     ],
     site: [{ text: 'vloertaal.nl/pl', href: '/pl/' }, { text: 'vloertaal.nl/briefje', href: '/briefje/' }],
     extra: 'topics',
+  },
+  {
+    // "Communicatie" (the owner's request, 5 November 2026): the lessons that train talking with
+    // others, across the topics (src/content/communication.ts; the app marks them on the topic page).
+    id: 'p.comm', emoji: '💬', title: 'Communicatie: de lessen op een rij',
+    body: ['Praten met collega’s en je leidinggevende zit in veel onderwerpen. Deze lessen oefenen het: uitleggen wat er is, luisteren en terugvragen, rustig blijven, op tijd iets zeggen, feedback geven en krijgen. In de app staat bij elk van deze lessen “Communicatie”.'],
+    lines: COMMUNICATION.map((t) => ({ lead: `${t.titleNl}.`, text: t.lessons.map(([, nl]) => nl).join(', ') + '.' })),
   },
   {
     // A sober example for a group (docs/weekplan.md), after the topic links it points to.

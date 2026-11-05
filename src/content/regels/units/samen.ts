@@ -73,6 +73,20 @@ export const samenUnit: RuleUnit = {
           ],
           why: 'Iedereen maakt fouten. Een fout verbergen vinden mensen hier erger dan de fout zelf.', whyMore: 'Zeg het snel, dan kan iemand het oplossen.',
         },
+        // Redactie: feedback goed ontvangen (5 november 2026, bij "Feedback en overleg" in Taal):
+        //   luisteren, niet meteen verdedigen, om een voorbeeld vragen, bedanken. Achteraan bij de
+        //   keuzes (wd3), zodat de ids van de stappen op volgorde blijven.
+        {
+          kind: 'whatdo',
+          id: 'r.l.samen.1.wd3',
+          situation: 'Sanne zegt: "Je werkt te langzaam." Jayden weet niet wat hij anders moet doen. Wat kan Jayden het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij zegt: "Ik doe echt mijn best!"', best: false, feedback: 'Dat is waar. Maar zo weet hij nog niet wat beter kan.' },
+            { id: 'b', text: 'Hij knikt, en hij werkt verder zoals eerst.', best: false, feedback: 'Dan blijft het hetzelfde. En Sanne denkt dat hij het snapt.' },
+            { id: 'c', text: 'Hij vraagt: "Kun je een voorbeeld geven?"', best: true, feedback: 'Goed. Met een voorbeeld weet hij wat hij anders kan doen.' },
+          ],
+          why: 'Feedback is wat iemand zegt over je werk. Luister eerst. Snap je het niet? Vraag om een voorbeeld.', whyMore: 'Verdedig je niet meteen. Zeg dan: "Bedankt, dat is goed om te weten." En probeer het.',
+        },
         { kind: 'model', id: 'r.l.samen.1.mo1', context: 'Je krijgt directe feedback.', nl: 'Oké, zo dan? Fijn dat je het laat zien.' },
       ],
     },
@@ -264,6 +278,72 @@ export const samenUnit: RuleUnit = {
           why: 'Een groepsapp is voor werk. Houd je berichten kort en vriendelijk.', whyMore: "Je hoeft niet altijd meteen te antwoorden. Stuurt je baas vaak 's avonds laat? Bespreek het rustig. Deel geen berichten of foto's van collega's zonder toestemming.",
         },
         { kind: 'model', id: 'r.l.samen.4.mo1', context: 'Je bent jarig, en je neemt iets mee.', nl: 'Ik ben jarig. Ik heb taart meegenomen!' },
+      ],
+    },
+    {
+      // Les 8.5 · Feedback geven en rustig blijven (5 november 2026, de wens van de eigenaar:
+      // communicatie steviger). Feedback geven aan een collega: eerst iets goeds, dan concreet, op
+      // een rustig moment, niet waar iedereen bij is, met een ik-zin. En rustig blijven als je zelf
+      // boos bent of als feedback hard binnenkomt. Gewoontes, geen wet: geen slotregel.
+      id: 'r.l.samen.5',
+      title: 'Feedback geven en rustig blijven',
+      goal: 'Je zegt vriendelijk wat beter kan. Je blijft rustig, ook als je boos bent.',
+      remember: 'Eerst iets goeds. Dan rustig en concreet wat beter kan.',
+      steps: [
+        {
+          kind: 'scene',
+          id: 'r.l.samen.5.sc1',
+          picture: 'een magazijn. Piotr zet dozen op een pallet. Ze staan scheef. Esra kijkt.',
+          lines: [
+            'Piotr is nieuw in het magazijn.',
+            'Hij werkt hard, maar zijn dozen staan scheef.',
+            'De pallet valt bijna om.',
+            'Collega Esra ziet het. Ze is een beetje boos.',
+          ],
+        },
+        {
+          kind: 'rule',
+          id: 'r.l.samen.5.ru1',
+          emoji: '🌟',
+          title: 'Eerst iets goeds. Dan rustig en concreet wat beter kan.',
+          body: [
+            'Zeg eerst wat goed gaat.',
+            'Zeg dan concreet wat beter kan, met een voorbeeld.',
+            'Kies een rustig moment. Niet waar iedereen bij is.',
+            'Boos? Adem rustig, en praat later.',
+          ],
+          rule: 'ongeschreven',
+        },
+        {
+          kind: 'whatdo',
+          id: 'r.l.samen.5.wd1',
+          situation: 'Esra wil iets zeggen over de scheve dozen. Wat kan Esra het beste doen?',
+          options: [
+            { id: 'a', text: 'Ze roept door de hal: "Piotr, dat is helemaal fout!"', best: false, feedback: 'Dan hoort iedereen het. Piotr schaamt zich, en hij luistert minder.' },
+            { id: 'b', text: 'Ze zegt: "Je werkt snel. Zet de dozen wel recht."', best: true, feedback: 'Goed. Eerst iets goeds, dan concreet wat beter kan.' },
+            { id: 'c', text: 'Ze zegt niets, en ze zet de dozen later zelf recht.', best: false, feedback: 'Dat is aardig. Maar zo leert Piotr het niet.' },
+          ],
+          why: 'Zeg eerst wat goed gaat. Dan wat beter kan, met een voorbeeld.', whyMore: 'Zeg wat je ziet, niet wat je van de persoon vindt. Bijvoorbeeld: "Ik zie dat de dozen scheef staan."',
+        },
+        {
+          kind: 'truefalse',
+          id: 'r.l.samen.5.tf1',
+          statement: 'Feedback geef je het beste meteen, waar het hele team bij is.',
+          answer: false,
+          why: 'Feedback geef je liever onder vier ogen, op een rustig moment.', whyMore: 'Voor het hele team voelt het als een straf. Gaat het om gevaar? Dan zeg je het wel meteen.',
+        },
+        {
+          kind: 'whatdo',
+          id: 'r.l.samen.5.wd2',
+          situation: 'In het werkoverleg zegt de leidinggevende: "Piotr, jouw pallets zijn slordig." Piotr wordt boos. Wat kan Piotr het beste doen?',
+          options: [
+            { id: 'a', text: 'Hij zegt: "Dat is niet waar! Esra is veel slordiger."', best: false, feedback: 'Dan wordt het ruzie. En over Esra ging het niet.' },
+            { id: 'b', text: 'Hij loopt boos weg uit het overleg.', best: false, feedback: 'Dat snap ik. Maar dan kan niemand het met hem oplossen.' },
+            { id: 'c', text: 'Hij blijft rustig, en vraagt later om uitleg.', best: true, feedback: 'Goed. Zo blijft hij rustig, en hoort hij wat beter kan.' },
+          ],
+          why: 'Ben je boos? Adem rustig, en praat later. Dan kun je beter luisteren.', whyMore: 'Vind je het niet eerlijk? Zeg het rustig, onder vier ogen. Gebruik een ik-zin: "Ik vond het moeilijk dat ..."',
+        },
+        { kind: 'model', id: 'r.l.samen.5.mo1', context: 'Je geeft een collega feedback.', nl: 'Je werkt snel. Ik zie wel dat de dozen scheef staan.' },
       ],
     },
   ],
