@@ -11,7 +11,7 @@ import { breadcrumbs, esc, plainPage, SITE } from './plainPage';
  */
 
 /** When this text last changed. A change also goes in the logbook (src/content/updates.ts). */
-export const PRIVACY_DATE = '2026-11-04';
+export const PRIVACY_DATE = '2026-11-05';
 
 export interface PrivacySection { id: string; title: string; paras: string[] }
 
@@ -30,10 +30,10 @@ export const PRIVACY: readonly PrivacySection[] = [
     id: 'toestel',
     title: 'Wat er op je telefoon of computer staat',
     paras: [
-      'Je voortgang en je keuzes: je hulptaal, je land, waar je werkt, je lessen, je certificaten en je instellingen. Ook de uitslag van de toets “Wat ken je al?” en de opnames van je stem bij die toets. Dit staat in het geheugen van je browser, niet bij ons.',
+      'Je voortgang en je keuzes: je hulptaal, je land, waar je werkt, je lessen, je certificaten en je instellingen. Ook de uitslag van de toets “Wat ken je al?”, de opnames van je stem bij die toets, en de eerste opname van elke zin die je bij “Zeg het” zei. Dit staat in het geheugen van je browser, niet bij ons.',
       // What the reset keeps (src/App.tsx onReset), said plainly: "Alles weg?" promised more than it
       // does (the owner's request, 4 November 2026). Everything goes only with the browser's own wipe.
-      'Kies je bij Instellingen “Voortgang wissen”? Dan zijn je lessen, je certificaten, de naam op je certificaten, en de uitslag en de opnames van de toets weg.',
+      'Kies je bij Instellingen “Voortgang wissen”? Dan zijn je lessen, je certificaten, de naam op je certificaten, de uitslag en de opnames van de toets, en de opnames van “Toen en nu” weg.',
       'Een paar dingen blijven staan, zodat je meteen opnieuw kunt beginnen: je hulptaal, je land, waar je werkt, je regio, je keuze bij “Vrouw of man?”, de dag waarop je begon en je instellingen.',
       'Wil je dat echt alles weg is? Wis dan in je browser de gegevens van de website vloertaal.nl (de sitegegevens). Staat Vloertaal als app op je telefoon? Verwijder de app dan ook.',
       'Maak je een back-up? Dan maakt je telefoon een bestand. Jij bepaalt waar dat bestand blijft.',
@@ -61,6 +61,8 @@ export const PRIVACY: readonly PrivacySection[] = [
     title: 'Je stem',
     paras: [
       'Bij “Zeg het” neem je jezelf op. Die opname gaat nergens heen, en is weg als de oefening klaar is.',
+      // "Toen en nu" (src/lib/firstVoice.ts), the owner's request, 5 November 2026.
+      'Eén opname blijft wel: de eerste keer dat je een zin zegt. Die blijft op je telefoon of computer, zodat je later kunt vergelijken. Zeg je dezelfde zin een week later of nog later weer? Dan hoor je bij “Toen en nu” eerst je eerste keer, en dan nu. We sturen die opname nooit naar ons of naar anderen. We bewaren hooguit 40 zinnen. Met “Voortgang wissen” zijn ze weg.',
       'Bij de toets “Wat ken je al?” bewaart je telefoon je opnames, zodat je later “Jij toen” en “Jij nu” kunt horen. Ze blijven op je telefoon of computer. Met “Voortgang wissen” zijn ze weg.',
       '“Laat de telefoon luisteren (proef)” staat standaard uit. Zet je het aan? Dan gebruikt de app het alleen als je telefoon het Nederlands zelf kan herkennen, zonder internet. Er gaat geen geluid en geen tekst naar ons of naar anderen.',
     ],

@@ -236,9 +236,11 @@ const lang: HelpLanguageSource = {
     soundsSame: 'Sună la fel',
     sayAgain: 'Spune din nou',
     hearMine: 'Ascultă-te', // nieuw, nalezen
+    thenNow: 'Atunci și acum', // nieuw, nalezen
+    thenNowFirst: 'Prima ta încercare: {date}', // nieuw, nalezen
     speakMe: 'Eu',
     speakingPractice: 'Exercițiu de vorbire',
-    speakingHint: 'Spune cuvintele cu voce tare și compară. Vocea ta nu este niciodată salvată sau trimisă.',
+    speakingHint: 'Spune cuvintele cu voce tare și compară. Prima ta înregistrare a unei propoziții rămâne pe telefon, ca să compari mai târziu. Nu este trimisă niciodată.', // nieuw, nalezen
     savingOffline: 'Se salvează…',
     savedOffline: 'Salvat offline',
     offlineNoSpace: 'Nu este destul spațiu pe acest telefon. Șterge un subiect salvat sau eliberează spațiu.',

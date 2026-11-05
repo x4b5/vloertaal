@@ -9,6 +9,7 @@ import {
   canRecord, isWord, MAX_RECORD_MS, MIC_RETRIES, micBlocked, micRefusedNow, recordMime, setMicBlocked, setMicRefused, SILENCE_MS, speakMode,
 } from '../lib/speaking';
 import { MIC_STEPS, micPlatform, micRefusedError, micSteps, watchMicPermission } from '../lib/micHelp';
+import { firstDayText, keepFirstVoice, markThenPlayed, thenVoice } from '../lib/firstVoice';
 import { judge, localStatus, startListening, verdictOf, type Heard, type Listening, type Verdict } from '../lib/listen';
 import { learnerCharacter, voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
@@ -77,6 +78,11 @@ let shotHeard: string | undefined;
 export function setSpeakShotHeard(heard: string | undefined): void {
   shotHeard = heard;
 }
+/** Screenshot harness only: this sentence has a first recording of that time ("Toen en nu"; no sound). */
+let shotThen: number | undefined;
+export function setSpeakShotThen(at: number | undefined): void {
+  shotThen = at;
+}
 
 const RING_R = 52;
 const RING_C = 2 * Math.PI * RING_R;
@@ -87,13 +93,14 @@ const RING_C = 2 * Math.PI * RING_R;
  * yourself, compare with the speaker side by side, and rate it yourself. Never graded.
  *
  * Privacy: the recording is a Blob behind an object URL held in a ref of this component. It is
- * never uploaded and never written to storage here (only "Wat ken je al?" keeps its own copy, via
- * onRecording, on this phone: src/lib/toetsVoice.ts), and it is revoked (with the microphone released)
- * when the learner records again or the exercise closes.
+ * never uploaded. It is revoked (with the microphone released) when the learner records again or
+ * the exercise closes. Only two copies stay, on this phone only: "Wat ken je al?" keeps its own
+ * (via onRecording, src/lib/toetsVoice.ts), and in the lessons (`thenNow`) the very first recording
+ * of a sentence is kept for "Toen en nu" (src/lib/firstVoice.ts).
  *
  * `phaseForShot` fixes the phase for the screenshot harness (no microphone used).
  */
-export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepNote, phaseForShot = shotPhase, listen = false, heardForShot = shotHeard }: {
+export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepNote, phaseForShot = shotPhase, listen = false, heardForShot = shotHeard, thenNow = false, thenForShot = shotThen }: {
   ex: Extract<Exercise, { kind: 'speak' }>;
   lang?: HelpLanguage;
   onAnswer: (a: { correct: boolean } | null) => void;
@@ -111,6 +118,12 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   listen?: boolean;
   /** Screenshot harness only: what the phone "heard" (judged as usual), or 'wait'. */
   heardForShot?: string;
+  /** "Toen en nu" (the lessons; src/lib/firstVoice.ts): keep the first recording of this sentence on
+   *  the phone, and once it is a week old, "Luister naar jezelf" becomes "Toen en nu" (that one, then
+   *  this one). Off in "Wat ken je al?", which has its own "Jij toen / Jij nu". */
+  thenNow?: boolean;
+  /** Screenshot harness only: the time of a first recording to show "Toen en nu" with (no sound). */
+  thenForShot?: number;
 }) {
   const { item, turn, work } = ex;
   /** "Wat zeg je?" (after a chat, or on the sentence of "Probeer het vandaag"): say it first, then see and hear it. */
@@ -156,7 +169,11 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   /** 0–1 of the 6 seconds used, for the ring around the stop button. */
   const [used, setUsed] = useState(phaseForShot === 'recording' ? 0.35 : 0);
   const [status, setStatus] = useState('');
-  const [playing, setPlaying] = useState<'them' | 'me' | null>(null);
+  const [playing, setPlaying] = useState<'them' | 'me' | 'then' | null>(null);
+  /** "Toen en nu": the first recording of this sentence, once a week old (its URL; none in a shot). */
+  const [then, setThen] = useState<{ url?: string; at: number } | null>(thenNow && thenForShot !== undefined ? { at: thenForShot } : null);
+  /** Your try is playing as the "nu" of "Toen en nu" (its label says "Jij nu", not "Ik"). */
+  const [pair, setPair] = useState(false);
   /** The phone may listen here: the switch is on and Dutch is confirmed on this device. */
   const [canListen, setCanListen] = useState(heardForShot !== undefined);
   /** What the phone made of the last try: 'wait' while it decides; null = no listening (compare). */
@@ -190,8 +207,16 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
     streamRef.current = null;
   }, []);
 
+  /** "Toen en nu": the old recording's player (null when it is not playing, so its end does nothing). */
+  const thenRef = useRef<HTMLAudioElement | null>(null);
+  const stopThen = useCallback(() => {
+    thenRef.current?.pause();
+    thenRef.current = null;
+  }, []);
+
   /** Throw the recording away: stop it playing and revoke its URL (the Blob goes with it). */
   const discard = useCallback(() => {
+    stopThen();
     if (mineRef.current) {
       mineRef.current.pause();
       mineRef.current.removeAttribute('src');
@@ -199,7 +224,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
     }
     if (urlRef.current) URL.revokeObjectURL(urlRef.current);
     urlRef.current = null;
-  }, []);
+  }, [stopThen]);
 
   const stop = useCallback(() => {
     if (tickRef.current !== null) { window.clearInterval(tickRef.current); tickRef.current = null; }
@@ -212,23 +237,50 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
     const url = urlRef.current;
     if (!url) return;
     stopSpeech();
+    stopThen();
     mineRef.current?.pause();
     const audio = new Audio(url);
     mineRef.current = audio;
     setPlaying('me');
     audio.onended = audio.onerror = () => { if (alive.current) setPlaying((p) => (p === 'me' ? null : p)); };
     audio.play().catch(() => { if (alive.current) setPlaying(null); });
-  }, []);
+  }, [stopThen]);
 
   // (One timer: a second tap starts it again, so the first one does not end the second play early.)
   const themTimer = useRef(0);
   const playThem = useCallback(() => {
+    stopThen();
     mineRef.current?.pause();
+    setPair(false);
     setPlaying('them');
     speak(item.nl, false, 'nl', voice);
     window.clearTimeout(themTimer.current);
     themTimer.current = window.setTimeout(() => { if (alive.current) setPlaying((p) => (p === 'them' ? null : p)); }, 1600);
-  }, [item.nl, voice]);
+  }, [item.nl, voice, stopThen]);
+
+  // "Toen en nu": the first recording of this sentence, then this try, one after the other (the
+  // owner's request, 5 November 2026). Played once, it may make room when the shelf is full.
+  const playThenNow = useCallback(() => {
+    stopBoth.current?.();
+    stopSpeech();
+    stopThen();
+    mineRef.current?.pause();
+    setPair(true);
+    const url = then?.url;
+    if (!url) { playMine(); return; }
+    const audio = new Audio(url);
+    thenRef.current = audio;
+    setPlaying('then');
+    let gone = false;
+    const next = () => {
+      if (gone || thenRef.current !== audio) return;
+      gone = true;
+      window.setTimeout(() => { if (alive.current && thenRef.current === audio) playMine(); }, 300);
+    };
+    audio.onended = audio.onerror = next;
+    audio.play().catch(next);
+    void markThenPlayed(item.id);
+  }, [then, item.id, playMine, stopThen]);
 
   // After recording: the example first, then the learner's own try, without a tap (the two side
   // by side are the comparison). The example's end is heard from onSpeech; a fallback timer goes
@@ -254,6 +306,29 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   useEffect(() => {
     return () => { stopBoth.current?.(); };
   }, []);
+
+  // "Toen en nu": the first recording of this sentence, if it is a week old (none: as before).
+  useEffect(() => {
+    if (!thenNow || phaseForShot) return;
+    let on = true;
+    let url: string | undefined;
+    thenVoice(item.id).then((v) => {
+      if (!on || !v) return;
+      try {
+        url = URL.createObjectURL(v.blob);
+        setThen({ url, at: v.at });
+      } catch {
+        // No object URL: no "Toen en nu".
+      }
+    }, () => {});
+    return () => {
+      on = false;
+      stopThen();
+      if (url) URL.revokeObjectURL(url);
+    };
+  }, [thenNow, phaseForShot, item.id, stopThen]);
+  /** The first recording of this exercise was offered to the shelf (kept only when it is the sentence's first). */
+  const offered = useRef(false);
 
   // Say it once when the exercise opens (not in "Without sound"); let go of everything on leave.
   // "Wat zeg je?": the colleague's line, never the reply (the learner says that first); on the
@@ -368,6 +443,12 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
       }
       urlRef.current = URL.createObjectURL(blob);
       onRecording?.(blob);
+      // "Toen en nu": the first time this sentence is recorded, that recording stays on the phone
+      // (keepFirstVoice keeps nothing when the sentence has one already).
+      if (thenNow && !offered.current) {
+        offered.current = true;
+        void keepFirstVoice(item.id, blob);
+      }
       setPhase('review');
       setStatus(said(ui('speakMe', lang)));
       // Hear the example and then yourself right away (not in the background: stopped because
@@ -594,14 +675,24 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
               hear your own try again (the owner's request, 4 November 2026) and one to say it
               again. Continue (the footer) goes on. */}
           <p className="say-compare-note" aria-live="polite">
-            {playing && <><SpeakerIcon size={22} /><Bi text={ui(playing === 'me' ? 'speakMe' : 'speakTurnExample', lang)} /></>}
+            {playing && <><SpeakerIcon size={22} /><Bi text={ui(playing === 'then' ? 'toetsYouThen' : playing === 'me' ? (pair ? 'toetsYouNow' : 'speakMe') : 'speakTurnExample', lang)} /></>}
           </p>
           {verdict && <Heard verdict={verdict} lang={lang} />}
+          {/* "Toen en nu" (src/lib/firstVoice.ts): the day of the first try, over its button. */}
+          {then && <p className="say-then-day"><Bi text={firstDayText(ui('thenNowFirst', lang), then.at)} /></p>}
           <div className="say-review-row">
-            <button type="button" className="btn say-again say-hear-mine" onClick={() => { stopBoth.current?.(); playMine(); }} aria-pressed={playing === 'me'}>
-              <SpeakerIcon size={24} />
-              <Bi text={ui('hearMine', lang)} />
-            </button>
+            {then ? (
+              // In the place of "Luister naar jezelf" (no extra button): the first try, then this one.
+              <button type="button" className="btn say-again say-hear-mine say-then-now" onClick={playThenNow} aria-pressed={playing === 'then' || (pair && playing === 'me')}>
+                <SpeakerIcon size={24} />
+                <Bi text={ui('thenNow', lang)} />
+              </button>
+            ) : (
+              <button type="button" className="btn say-again say-hear-mine" onClick={() => { stopBoth.current?.(); setPair(false); playMine(); }} aria-pressed={playing === 'me'}>
+                <SpeakerIcon size={24} />
+                <Bi text={ui('hearMine', lang)} />
+              </button>
+            )}
             <button type="button" className="btn say-again say-again-one" onClick={again}>
               <AgainIcon size={26} />
               <Bi text={ui('sayAgain', lang)} />

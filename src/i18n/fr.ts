@@ -236,9 +236,11 @@ const lang: HelpLanguageSource = {
     soundsSame: 'Ça sonne pareil',
     sayAgain: 'Redis-le',
     hearMine: 'Écoute-toi', // nieuw, nalezen
+    thenNow: 'Avant et maintenant', // nieuw, nalezen
+    thenNowFirst: 'Ton premier essai : {date}', // nieuw, nalezen
     speakMe: 'Moi',
     speakingPractice: 'Pratique de l’oral',
-    speakingHint: 'Dis des mots à voix haute et compare. Ta voix n’est jamais enregistrée ni envoyée.',
+    speakingHint: 'Dis des mots à voix haute et compare. Ton premier enregistrement d’une phrase reste sur ton téléphone, pour comparer plus tard. Il n’est jamais envoyé.', // nieuw, nalezen
     savingOffline: 'Enregistrement…',
     savedOffline: 'Enregistré hors ligne',
     offlineNoSpace: 'Pas assez de place sur ce téléphone. Supprime un sujet enregistré ou libère de la place.',

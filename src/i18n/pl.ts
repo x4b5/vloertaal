@@ -236,9 +236,11 @@ const lang: HelpLanguageSource = {
     soundsSame: 'Brzmi tak samo',
     sayAgain: 'Powiedz jeszcze raz',
     hearMine: 'Posłuchaj siebie', // nieuw, nalezen
+    thenNow: 'Wtedy i teraz', // nieuw, nalezen
+    thenNowFirst: 'Pierwsza próba: {date}', // nieuw, nalezen
     speakMe: 'Ja',
     speakingPractice: 'Ćwiczenie mówienia',
-    speakingHint: 'Mów słowa na głos i porównuj. Twój głos nigdy nie jest zapisywany ani wysyłany.',
+    speakingHint: 'Mów słowa na głos i porównuj. Twoje pierwsze nagranie zdania zostaje w telefonie, żeby porównać później. Nigdy nie jest wysyłane.', // nieuw, nalezen
     savingOffline: 'Zapisywanie…',
     savedOffline: 'Zapisano offline',
     offlineNoSpace: 'Za mało miejsca w telefonie. Usuń zapisany temat lub zwolnij miejsce.',

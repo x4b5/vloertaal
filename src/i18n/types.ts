@@ -285,9 +285,15 @@ export const uiEn = {
   sayAgain: 'Say it again',
   /** After recording: play your own try again (the owner's request, 4 November 2026). */
   hearMine: 'Hear yourself',
+  /** "Toen en nu" (src/lib/firstVoice.ts): in the place of hearMine when this sentence's first
+   *  recording is a week old or more: plays that one, then this one (the owner's request, 5 November 2026). */
+  thenNow: 'Then and now',
+  /** Under "Toen en nu": the day of the first recording ({date}: "12 October", in each line's language). */
+  thenNowFirst: 'Your first try: {date}',
   speakMe: 'Me',
   speakingPractice: 'Speaking practice',
-  speakingHint: 'Say words out loud and compare. Your voice is never saved or sent.',
+  /** Since "Toen en nu" (5 November 2026) the first recording of a sentence is kept on the phone. */
+  speakingHint: 'Say words out loud and compare. Your first recording of a sentence stays on your phone, to compare later. It is never sent.',
   /* Offline per unit, the pocket card, text size. */
   savingOffline: 'Saving…',
   savedOffline: 'Saved offline',

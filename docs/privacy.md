@@ -10,9 +10,10 @@ De privacyverklaring op vloertaal.nl/privacy (`src/lib/privacyPage.ts`) zegt pre
 | Wat | Waar | Gaat er iets weg? |
 |---|---|---|
 | Voortgang, keuzes, certificaten | `src/lib/progress.ts` (localStorage) | Nee |
-| "Voortgang wissen" | `src/App.tsx` (`onReset`) | Wist lessen, certificaten, de naam en de toets met opnames. Hulptaal, land, sector, regio, gender, de eerste dag en de instellingen blijven staan; de privacytekst zegt dat. Alles weg: de sitegegevens in de browser wissen, of de app verwijderen |
+| "Voortgang wissen" | `src/App.tsx` (`onReset`) | Wist lessen, certificaten, de naam, de toets met opnames en de eerste opnames van "Toen en nu" (`forgetFirstVoices`). Hulptaal, land, sector, regio, gender, de eerste dag en de instellingen blijven staan; de privacytekst zegt dat. Alles weg: de sitegegevens in de browser wissen, of de app verwijderen |
 | Toets-uitslag en stemopnames van de toets | `src/lib/toetsVoice.ts` (IndexedDB) | Nee |
 | "Zeg het"-opname | `src/lib/speaking.ts` | Nee, en weg na de oefening |
+| "Toen en nu": de eerste opname van een zin bij "Zeg het" | `src/lib/firstVoice.ts` (IndexedDB `vloertaal-stem`), in `src/components/Speaking.tsx` (`thenNow`, alleen in de lessen) | Nee. Eén opname per zin (de eerste, nooit vervangen), met de tijd; hooguit 40 zinnen (vol: de oudste waarvan "Toen en nu" al gespeeld is, maakt plaats; anders wordt niets nieuws bewaard). Zonder IndexedDB (privévenster) wordt niets bewaard en werkt de oefening zoals altijd |
 | "Laat de telefoon luisteren" | `src/lib/listen.ts` | Nee: alleen als de herkenning op het toestel gebeurt (`processLocally`) |
 | Lessen tellen | `src/lib/count.ts` | GoatCounter: alleen de les, het kwart en de minutenband |
 | De start tellen | `src/lib/count.ts` (`countFirstOpen`, `countStartDone`), aangeroepen in `src/App.tsx` | GoatCounter: eenmalig per toestel `/e/eerste/geopend` (de app voor het eerst open, op een toestel dat de start nog niet begon) en `/e/eerste/start-af` (Verder bij "Welke kleur wil je?"). Niets erbij: geen taal, sector, land of kleur. Het eerste openen gaat vóórdat de leerling de knop kan vinden; Do Not Track en GPC houden het tegen, en de privacytekst zegt dat. Welke al geteld zijn, staat lokaal (`vloertaal:count-eerste`). Een toestel dat al begonnen was vóór deze telling (4 nov 2026), telt niets |

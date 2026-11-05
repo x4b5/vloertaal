@@ -5020,6 +5020,8 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .say-review-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .say-review-row > .btn { flex: 1 1 100%; }
 .say-hear-mine { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; }
+/* "Toen en nu" (src/lib/firstVoice.ts): the day of the first try, small, over its button. */
+.say-then-day { margin: 0 0 8px; text-align: center; font-size: var(--fs-small); font-weight: 700; color: var(--ink-2); }
 
 /* ---- "Vloertaal rustiger", fase 1 (docs/rustiger.md): fewer things call at once ----
    1. The numbers before the options are for a keyboard; on a touch screen nobody taps "2", so

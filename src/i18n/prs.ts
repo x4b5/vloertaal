@@ -236,9 +236,11 @@ const lang: HelpLanguageSource = {
     soundsSame: 'مثل هم است',
     sayAgain: 'دوباره بگویید',
     hearMine: 'صدای خود را بشنوید', // nieuw, nalezen
+    thenNow: 'قبلاً و حالا', // nieuw, nalezen
+    thenNowFirst: 'بار اول شما: {date}', // nieuw, nalezen
     speakMe: 'من',
     speakingPractice: 'تمرین گپ زدن',
-    speakingHint: 'کلمه‌ها را بلند بگویید و مقایسه کنید. صدای شما هیچ وقت ذخیره یا فرستاده نمی‌شود.',
+    speakingHint: 'کلمه‌ها را بلند بگویید و مقایسه کنید. اولین ثبت صدای شما از هر جمله روی تلفن تان می‌ماند تا بعداً مقایسه کنید. هیچ وقت فرستاده نمی‌شود.', // nieuw, nalezen
     savingOffline: 'ذخیره می‌شود…',
     savedOffline: 'در تیلفون شما ذخیره شد', // nieuw, nalezen (AI-correctie 2 nov 2026)
     offlineNoSpace: 'جای کافی در این تیلفون نیست. یک موضوع ذخیره‌شده را پاک کنید یا جای خالی کنید.',

@@ -951,7 +951,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'klank': body = <KlankStep key={key} ex={ex} {...props} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
     // "Laat de telefoon luisteren (proef)": the Dutch course only (never Werkregels); src/lib/listen.ts.
-    case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onRating={setSpeakRating} listen={!dutchUi(lang) && listenOn()} />; break;
+    // "Toen en nu" (src/lib/firstVoice.ts): the lessons keep a sentence's first recording on the phone.
+    case 'speak': body = <SpeakExercise key={key} ex={ex} lang={lang} onAnswer={onAnswer} onRating={setSpeakRating} listen={!dutchUi(lang) && listenOn()} thenNow />; break;
     case 'scene': body = <SceneCard key={key} ex={ex} {...props} />; break;
     case 'rule': body = <RuleCard key={key} ex={ex} {...props} />; break;
     case 'truefalse': body = <TrueFalse key={key} ex={ex} {...props} />; break;

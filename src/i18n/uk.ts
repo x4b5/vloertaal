@@ -236,9 +236,11 @@ const lang: HelpLanguageSource = {
     soundsSame: 'Звучить так само',
     sayAgain: 'Скажи ще раз',
     hearMine: 'Послухай себе', // nieuw, nalezen
+    thenNow: 'Тоді й зараз', // nieuw, nalezen
+    thenNowFirst: 'Твоя перша спроба: {date}', // nieuw, nalezen
     speakMe: 'Я',
     speakingPractice: 'Практика мовлення',
-    speakingHint: 'Кажи слова вголос і порівнюй. Твій голос ніколи не зберігається і не надсилається.',
+    speakingHint: 'Кажи слова вголос і порівнюй. Твій перший запис речення залишається в телефоні, щоб порівняти пізніше. Його ніколи не надсилають.', // nieuw, nalezen
     savingOffline: 'Зберігаємо…',
     savedOffline: 'Збережено офлайн',
     offlineNoSpace: 'На телефоні замало місця. Видали збережену тему або звільни місце.',

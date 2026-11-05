@@ -236,9 +236,11 @@ const lang: HelpLanguageSource = {
     soundsSame: 'Aynı gibi',
     sayAgain: 'Tekrar söyle',
     hearMine: 'Kendini dinle', // nieuw, nalezen
+    thenNow: 'O zaman ve şimdi', // nieuw, nalezen
+    thenNowFirst: 'İlk denemen: {date}', // nieuw, nalezen
     speakMe: 'Ben',
     speakingPractice: 'Konuşma alıştırması',
-    speakingHint: 'Kelimeleri sesli söyle ve karşılaştır. Sesin asla kaydedilmez ve gönderilmez.',
+    speakingHint: 'Kelimeleri sesli söyle ve karşılaştır. Bir cümleyi ilk söylediğin kayıt telefonunda kalır, sonra karşılaştırabilirsin. Asla gönderilmez.', // nieuw, nalezen
     savingOffline: 'Kaydediliyor…',
     savedOffline: 'İnternetsiz kullanıma kaydedildi',
     offlineNoSpace: 'Bu telefonda yeterli yer yok. Kayıtlı bir konuyu sil veya yer aç.',

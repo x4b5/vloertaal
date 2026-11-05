@@ -236,9 +236,11 @@ const lang: HelpLanguageSource = {
     soundsSame: 'Soa igual',
     sayAgain: 'Diz outra vez',
     hearMine: 'Ouve-te', // nieuw, nalezen
+    thenNow: 'Antes e agora', // nieuw, nalezen
+    thenNowFirst: 'A tua primeira tentativa: {date}', // nieuw, nalezen
     speakMe: 'Eu',
     speakingPractice: 'Prática de fala',
-    speakingHint: 'Diz as palavras em voz alta e compara. A tua voz nunca é guardada nem enviada.',
+    speakingHint: 'Diz as palavras em voz alta e compara. A tua primeira gravação de uma frase fica no teu telemóvel, para comparares mais tarde. Nunca é enviada.', // nieuw, nalezen
     savingOffline: 'A guardar…',
     savedOffline: 'Guardado offline',
     offlineNoSpace: 'Não há espaço suficiente neste telemóvel. Remove um tema guardado ou liberta espaço.',

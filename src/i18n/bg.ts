@@ -236,9 +236,11 @@ const lang: HelpLanguageSource = {
     soundsSame: 'Звучи еднакво',
     sayAgain: 'Кажи отново',
     hearMine: 'Чуй себе си', // nieuw, nalezen
+    thenNow: 'Тогава и сега', // nieuw, nalezen
+    thenNowFirst: 'Първият ти опит: {date}', // nieuw, nalezen
     speakMe: 'Аз',
     speakingPractice: 'Упражнение по говорене',
-    speakingHint: 'Казвай думите на глас и сравнявай. Гласът ти никога не се запазва и не се изпраща.',
+    speakingHint: 'Казвай думите на глас и сравнявай. Първият ти запис на едно изречение остава в телефона, за да сравниш по-късно. Никога не се изпраща.', // nieuw, nalezen
     savingOffline: 'Запазване…',
     savedOffline: 'Запазено офлайн',
     offlineNoSpace: 'Няма достатъчно място на телефона. Изтрий запазена тема или освободи място.',

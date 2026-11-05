@@ -62,6 +62,7 @@ import { ensureRegionFor, regionReady } from './lib/region';
 import { ToetsHomeLine, ToetsOfferPage, ToetsPage, ToetsPlayer, ToetsResult } from './components/Toets';
 import { recordToets, toetsAfterLesson, toetsLater, toetsOffer, versionOf, type ToetsMoment } from './lib/toets';
 import { forgetVoices, keepVoice } from './lib/toetsVoice';
+import { forgetFirstVoices } from './lib/firstVoice';
 import { Samen } from './components/Samen';
 import { CheckResult } from './components/Check';
 import { checkExercises, checkLesson, checkOffered, checkPassed, recordCheck, undoCheck } from './lib/instapCheck';
@@ -1065,6 +1066,8 @@ export default function App() {
               clearSave();
               forgetCertName();
               void forgetVoices();
+              // And the first recordings of "Toen en nu" (src/lib/firstVoice.ts), 5 November 2026.
+              void forgetFirstVoices();
               setProgress((p) => ({
                 ...emptyProgress, onboarded: p.onboarded, helpLang: p.helpLang, theme: p.theme, voice: p.voice, quiet: p.quiet,
                 sector: p.sector, region: p.region, country: p.country, rulesNotice: p.rulesNotice, textSize: p.textSize, tempo: p.tempo, gender: p.gender, genderAsked: p.genderAsked,

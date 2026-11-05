@@ -568,6 +568,10 @@ function defineStates(LANG) {
   add('lesson:speak:recording', shot('speak-rec'));
   add('lesson:speak:compare', shot('speak-compare'));
   add('lesson:speak:off', shot('speak-off'));
+  // "Toen en nu" (src/lib/firstVoice.ts): "Luister naar jezelf" becomes "Toen en nu" in its place (no extra button).
+  add('lesson:speak:then-now', shot('speak-compare&then=2026-10-12'), null, { expect: '.say-then-now' });
+  add('lesson:speak:then-now-sentence', shot('speak-compare&item=sentence&then=2026-10-12', 'ar'), null, { expect: '.say-then-now' });
+  add('lesson:speak-turn:then-now', shot('speak-compare&turn=1&then=2026-10-12'), null, { expect: '.say-turn .say-then-now' });
   // The browser refused the microphone: [Zet de microfoon aan], then this phone's steps with the retry.
   add('lesson:speak:refused', shot('speak-off&refused=1'), null, { expect: '.say-mic-on' });
   add('lesson:speak:refused-steps', shot('speak-off&refused=1'), async (p) => { await tap(p, '.say-mic-on'); }, { expect: '.say-retry' });

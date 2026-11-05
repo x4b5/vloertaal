@@ -237,9 +237,11 @@ const lang: HelpLanguageSource = {
     soundsSame: 'ሓደ ዓይነት ይስማዕ',
     sayAgain: { m: 'ደጊምካ በሎ', f: 'ደጊምኪ በልዮ' },
     hearMine: { m: 'ንርእስኻ ስማዕ', f: 'ንርእስኺ ስምዒ' }, // nieuw, nalezen
+    thenNow: 'ቅድምን ሕጅን', // nieuw, nalezen
+    thenNowFirst: { m: 'ቀዳማይ ፈተነኻ: {date}', f: 'ቀዳማይ ፈተነኺ: {date}', x: 'ቀዳማይ ፈተነኹም: {date}' }, // nieuw, nalezen
     speakMe: 'ኣነ',
     speakingPractice: 'ልምምድ ምዝራብ',
-    speakingHint: { m: 'ቃላት ብዓው ኢልካ በሎም እሞ ኣወዳድር። ድምጽካ ፈጺሙ ኣይዕቀብን ኣይለኣኽን።', f: 'ቃላት ብዓው ኢልኪ በልዮም እሞ ኣወዳድሪ። ድምጽኪ ፈጺሙ ኣይዕቀብን ኣይለኣኽን።' },
+    speakingHint: { m: 'ቃላት ብዓው ኢልካ በሎም እሞ ኣወዳድር። ቀዳማይ ቅዳሕ ድምጽካ ናይ ሓንቲ ሓረግ ኣብ ተሌፎንካ ይጸንሕ፣ ደሓር ንምውድዳር። ፈጺሙ ኣይለኣኽን።', f: 'ቃላት ብዓው ኢልኪ በልዮም እሞ ኣወዳድሪ። ቀዳማይ ቅዳሕ ድምጽኪ ናይ ሓንቲ ሓረግ ኣብ ተሌፎንኪ ይጸንሕ፣ ደሓር ንምውድዳር። ፈጺሙ ኣይለኣኽን።' }, // nieuw, nalezen
     savingOffline: 'ይዕቀብ ኣሎ…',
     savedOffline: 'ኣብዚ ተሌፎን ተዓቂቡ', // nieuw, nalezen (AI-correctie 2 nov 2026)
     offlineNoSpace: { m: 'ኣብዚ ተሌፎን እኹል ቦታ የለን። ዝተዓቀበ ኣርእስቲ ኣልግስ ወይ ቦታ ኣጽሪ።', f: 'ኣብዚ ተሌፎን እኹል ቦታ የለን። ዝተዓቀበ ኣርእስቲ ኣልግሲ ወይ ቦታ ኣጽርዪ።' },
