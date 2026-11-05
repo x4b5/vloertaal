@@ -15,6 +15,8 @@ export const unitIcons: Record<string, string> = {
   'u.time': 'w.uren',
   // A calmer own icon (three stacked hands): the word picture "samen" was busy at 32-44 px.
   'u.teamwork': 'i.teamwork',
+  // Feedback en overleg (5 November 2026): the team meeting, two at a table (group40).
+  'u.feedback': 'w.werkoverleg',
   'u.apply': 'w.cv',
   'u.contract': 'w.contract',
   'u.papers': 'w.gemeente',

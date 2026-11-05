@@ -565,6 +565,24 @@ function defineStates(LANG) {
   for (const [key, at] of [['intro', 0], ['word-picture', 3], ['word-abstract', 6], ['tip', 9], ['tip-say', 10], ['situation', 11], ['listen', 13], ['pick', 14], ['build', 15], ['chat', 18], ['type', 20]]) {
     add(`lesson:backtowork-${key}`, shot(`lesson&lesson=l.backtowork&at=${at}`));
   }
+  // "Feedback en overleg" (u.feedback, seed 1, 5 November 2026). "Feedback krijgen" (l.getfeedback):
+  // an abstract word ("de tip"), the drawn "nadenken", the tip (what feedback is) and its situation
+  // ("Dit kan beter."), a sentence to build, the chat and typing "de kritiek".
+  for (const [key, at] of [['word-abstract', 0], ['intro', 7], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 15], ['chat', 18], ['type', 20]]) {
+    add(`lesson:getfeedback-${key}`, shot(`lesson&lesson=l.getfeedback&at=${at}`));
+  }
+  // "Feedback geven" (l.givefeedback): the drawn "dichtplakken", "what does it mean" (picture
+  // cards), an abstract word ("vriendelijk"), the tip and its situation, "What do you hear?"
+  // ("netjes" or "scheef"), building the ik-zin, the chat and typing "dichtplakken".
+  for (const [key, at] of [['intro', 0], ['meaning', 2], ['word-abstract', 4], ['tip', 9], ['tip-say', 10], ['situation', 11], ['listen', 13], ['build', 17], ['chat', 18], ['type', 20]]) {
+    add(`lesson:givefeedback-${key}`, shot(`lesson&lesson=l.givefeedback&at=${at}`));
+  }
+  // "Iets zeggen in het werkoverleg" (l.meeting): the drawn "het werkoverleg" and "je hand
+  // opsteken", an abstract word ("de beurt"), the tip and its situation, building, the chat and
+  // typing "de mening".
+  for (const [key, at] of [['intro', 0], ['word-abstract', 1], ['intro-hand', 6], ['tip', 9], ['tip-say', 10], ['situation', 11], ['build', 16], ['chat', 18], ['type', 20]]) {
+    add(`lesson:meeting-${key}`, shot(`lesson&lesson=l.meeting&at=${at}`));
+  }
   // "Getallen" (l.counting, seed 1, 4 November 2026): a number's word card (a label with its
   // digits), "what does it mean" with its partner (dertien or dertig), "which one is 47" (text
   // cards), the tip and its situation ("Ga naar gang zevenenveertig."), "What do you hear?" (47 or

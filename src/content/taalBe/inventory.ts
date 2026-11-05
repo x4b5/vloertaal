@@ -77,6 +77,12 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.clear': L('A', 'A', 'de tip zegt "At work here" (niet "in the Netherlands"): eerst de kern geldt ook in Vlaanderen, al verpakt men het daar vaak wat voorzichtiger (nakijken door een Vlaamse NT2-docent)'),
     'l.newcolleague': L('A', 'A', 'inwerken en de kast zeg je in Vlaanderen ook; de tip noemt geen land (nakijken door een Vlaamse NT2-docent)'),
   } },
+  // "Feedback en overleg" (5 November 2026): no tip names a country ("at work here"), no rule.
+  'u.feedback': { kind: 'A', lessons: {
+    'l.getfeedback': L('A', 'A', 'de tip zegt "At work here": feedback is goed bedoeld, ook in Vlaanderen, al klinkt die daar vaak voorzichtiger (zie Werkregels r.be.l.samen.1; nakijken door een Vlaamse NT2-docent)'),
+    'l.givefeedback': L('A', 'A', 'dichtplakken, netjes en scheef zeg je in Vlaanderen ook (nakijken door een Vlaamse NT2-docent)'),
+    'l.meeting': L('A', 'A', 'het werkoverleg kent men in Vlaanderen ook, vaker zegt men de (team)vergadering of het overleg (nakijken door een Vlaamse NT2-docent)'),
+  } },
   'u.apply': { kind: 'A', lessons: {
     'l.cv': L('A', 'A', 'de tip zegt "A CV here" (was "A Dutch CV")'),
     'l.interview': L('A', 'A', 'de tip zegt "Employers here" (was "Dutch employers")'),

@@ -19,6 +19,9 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.data': ['u.firstday', 'u.time'],
   'u.time': ['u.leave', 'u.contact'],
   'u.teamwork': ['u.social', 'u.firstday'],
+  // Feedback en overleg (5 November 2026): Samenwerken (speaking up, agreements) and Omgang met
+  // collega's (feedback and mistakes).
+  'u.feedback': ['u.teamwork', 'u.social'],
   'u.apply': ['u.contract', 'u.grow'],
   'u.contract': ['u.apply', 'u.pay'],
   'u.papers': ['u.money', 'u.contract'],
@@ -86,6 +89,8 @@ const relatedWords: Record<string, string[]> = {
   'u.shop': ['w.rekening', 'w.doos'],
   'u.numbers': ['w.pauze', 'w.uurloon'],
   'u.delivery': ['w.scanner', 'w.ongeluk'],
+  // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).
+  'u.feedback': ['w.praten', 'w.feedback'],
 };
 
 export const MIX_TITLE = 'Mixed review';

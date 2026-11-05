@@ -182,6 +182,10 @@ export const zegHetWrong: Record<string, readonly [{ text: string; feedback: str
     { text: 'Ik ben jarig. Wat hebben jullie voor mij gekocht?', feedback: 'Hier neem je zelf iets mee als je jarig bent.' },
     { text: 'Ik ben jarig, maar ik zeg het maar niet.', feedback: 'Dat mag. Maar collega\'s vinden het vaak leuk om te weten.' },
   ],
+  'r.l.samen.5.mo1': [
+    { text: 'Jij doet alles fout. Kijk nou naar die dozen!', feedback: 'Dat klinkt boos. Zeg eerst iets goeds, dan wat beter kan.' },
+    { text: 'Het is wel goed zo. Laat maar zitten.', feedback: 'Dan leert je collega het niet. Zeg rustig wat beter kan.' },
+  ],
   'r.l.rechten.1.mo1': [
     { text: 'Iedereen hier is tegen mij. Jullie zijn allemaal racisten!', feedback: 'Dat klinkt boos. Dan is een goed gesprek moeilijk.' },
     { text: 'Ik merk het wel, maar ik zeg er niets van. Het gaat wel.', feedback: 'Dan verandert er niets. Je mag erover praten.' },

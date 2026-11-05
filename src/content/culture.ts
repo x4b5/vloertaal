@@ -331,6 +331,57 @@ const baseTips: CultureTip[] = [
     ],
     why: { id: 'c.newcolleague.w', en: 'Many people say "ja", also when they did not understand. When he shows it, you both see if it works. That is quicker than fixing a mistake later.' },
   }),
+  // "Feedback en overleg" (u.feedback, the owner's request, 5 November 2026): communication more
+  // firmly in the course. Three tips about habits, no rules, so no closing line; none names a
+  // country ("at work here"). They follow "Direct is not rude" (c.direct: the direct way of
+  // speaking) and "Mistakes are normal" (c.mistakes: saying your own mistake) without repeating
+  // them: here what the word "feedback" means and how you take it (c.getfeedback), how you give it
+  // yourself (c.givefeedback), and speaking up in a team meeting (c.meeting).
+  tip({
+    id: 'c.getfeedback',
+    lessonId: 'l.getfeedback',
+    emoji: '👂',
+    title: 'Feedback is about your work',
+    body: 'Feedback is what someone says about your work: what goes well, and what can be better. It is about your work, not about you. At work here, feedback is normal and meant to help. Not clear what to do differently? Ask for an example. Listen first, and do not defend yourself straight away. Then say thank you, and try it. You may also ask for feedback yourself: "Wat kan ik beter doen?"',
+    phrase: { id: 'c.getfeedback.p', nl: 'Bedankt. Kun je een voorbeeld geven?', en: 'Thanks. Can you give an example?' },
+    situation: { id: 'c.getfeedback.s', en: 'Your supervisor looks at your work and says: "Dit kan beter." You do not know what she means. What do you do?', nl: 'Dit kan beter.' },
+    options: [
+      { id: 'c.getfeedback.o1', en: 'Say thank you, and ask for an example.', best: true },
+      { id: 'c.getfeedback.o2', en: 'Say that you really did your best.', best: false },
+      { id: 'c.getfeedback.o3', en: 'Nod, and do it the same way again.', best: false },
+    ],
+    why: { id: 'c.getfeedback.w', en: 'Feedback is meant to help you. An example shows what she wants. And a "thank you" shows that you listen.' },
+  }),
+  tip({
+    id: 'c.givefeedback',
+    lessonId: 'l.givefeedback',
+    emoji: '🌟',
+    title: 'Giving feedback: first the good part',
+    body: 'Do you want to say something about a colleague’s work? First say what goes well. Then say kindly and clearly what can be better, with one example. Say it at a good moment, to that person alone, not when everyone is there. Say what you see, not what you think of the person: "Ik zie dat ...". Stay friendly: you want to help, not to win.',
+    phrase: { id: 'c.givefeedback.p', nl: 'Dat doe je goed. Kun je de dozen ook dichtplakken?', en: 'You do that well. Can you also tape the boxes shut?' },
+    situation: { id: 'c.givefeedback.s', en: 'A new colleague forgets to tape the boxes. You are all in the canteen. What do you do?' },
+    options: [
+      { id: 'c.givefeedback.o1', en: 'Later, alone: first what goes well, then the boxes.', best: true },
+      { id: 'c.givefeedback.o2', en: 'Tell him in front of everyone that it is wrong.', best: false },
+      { id: 'c.givefeedback.o3', en: 'Say nothing, and tape his boxes yourself.', best: false },
+    ],
+    why: { id: 'c.givefeedback.w', en: 'Alone, he can listen without feeling ashamed. When you first say what goes well, he hears the rest better.' },
+  }),
+  tip({
+    id: 'c.meeting',
+    lessonId: 'l.meeting',
+    emoji: '🗣️',
+    title: 'Your voice counts in the meeting',
+    body: 'Many teams have a short meeting about the work (het werkoverleg). Your opinion is welcome there, also when your Dutch is not perfect. A question is a good contribution too: maybe others want to know it as well. Wait for your turn, and let the other person finish. Then raise your hand, or say: "Mag ik iets zeggen?" Do you not dare to say it in the group? Tell your supervisor after the meeting.',
+    phrase: { id: 'c.meeting.p', nl: 'Mag ik iets zeggen? Ik heb een idee.', en: 'May I say something? I have an idea.' },
+    situation: { id: 'c.meeting.s', en: 'In the team meeting, your supervisor explains the new roster. You do not understand when your shift starts. What do you do?' },
+    options: [
+      { id: 'c.meeting.o1', en: 'When she stops talking, ask your question.', best: true },
+      { id: 'c.meeting.o2', en: 'Say nothing, so you do not waste time.', best: false },
+      { id: 'c.meeting.o3', en: 'Ask it at once, while she is still talking.', best: false },
+    ],
+    why: { id: 'c.meeting.w', en: 'A question is a good contribution: maybe others did not understand it either. When you wait for your turn, everyone can hear it.' },
+  }),
 ];
 
 const line = (id: string, nl: string, en: string): ChatLine => ({ id, nl, en });
@@ -474,6 +525,101 @@ export const teamworkUnit: Unit = {
   ] satisfies Lesson[],
 };
 
+/**
+ * "Feedback en overleg" (the owner's request, 5 November 2026: communication more firmly in the
+ * course, and getting feedback and the word "feedback" itself were missing). In the theme
+ * "Samenwerken", right after "Samenwerken" (u.teamwork) in the course; "Goed communiceren"
+ * (u.communicate, built at the same time) goes in between when the two are merged: teamwork,
+ * communicate, feedback. Three lessons: getting feedback, giving it, speaking up in a team meeting.
+ *
+ * "de feedback" itself is a word of "Feedback and mistakes" (w.feedback, l.mistakes, Omgang met
+ * collega's): its card says what it means, and here the word comes back in the chat of the first
+ * lesson, in the tip that explains it (c.getfeedback) and in the mixed review (src/content/review.ts).
+ */
+export const feedbackUnit: Unit = {
+  id: 'u.feedback',
+  title: 'Feedback and team meetings',
+  titleNl: 'Feedback en overleg',
+  emoji: '💬',
+  color: '#5a4a8a',
+  lessons: [
+    {
+      // Getting feedback: listen, ask for an example, say thank you, try it. "het voorbeeld" (l.review,
+      // u.stage) and "beter" (l.sick) are words of other lessons: here they come in the sentences.
+      // "Wat kan ik beter doen?" is also a sentence of "Feedback on your placement" (s.review.1, the
+      // same recording); here at the work floor, with "je" ("Kun je een voorbeeld geven?") where the
+      // placement lesson says "u". Drawn: "nadenken" (Bram, thinking); the other five are abstract.
+      id: 'l.getfeedback',
+      title: 'Getting feedback',
+      words: [
+        { id: 'w.tip', nl: 'de tip', en: 'the tip (a short piece of advice)', emoji: '💡', picture: false },
+        { id: 'w.verbeterpunt', nl: 'het verbeterpunt', en: 'the point to improve (what can be better)', emoji: '🎯', picture: false },
+        { id: 'w.goedbedoeld', nl: 'goed bedoeld', en: 'well meant (to help you)', emoji: '💛', picture: false },
+        { id: 'w.kritiek', nl: 'de kritiek', en: 'the criticism (what someone thinks is not good)', emoji: '🗯️', picture: false },
+        { id: 'w.normaal', nl: 'normaal', en: 'normal', emoji: '🆗', picture: false },
+        { id: 'w.nadenken', nl: 'nadenken', en: 'to think (about something)', emoji: '🤔' },
+      ],
+      sentences: [
+        { id: 's.getfeedback.1', nl: 'Bedankt, dat is goed om te weten.', en: 'Thanks, that is good to know.' },
+        { id: 's.getfeedback.2', nl: 'Kun je een voorbeeld geven?', en: 'Can you give an example?' },
+        { id: 's.getfeedback.3', nl: 'Wat kan ik beter doen?', en: 'What can I do better?' },
+      ],
+      dialogues: [
+        chat(line('d.getfeedback.q', 'Mag ik je wat feedback geven?', 'May I give you some feedback?'), line('d.getfeedback.a', 'Ja, graag. Ik wil het goed doen.', 'Yes, please. I want to do it well.')),
+      ],
+    },
+    {
+      // Giving feedback: first what goes well, then concrete and kind, at a good moment, alone, with
+      // an "ik zie dat"-sentence. "de doos" (l.things) and "goed" are words of other lessons: here they
+      // come in the sentences. "netjes" and "scheef" are a pair of drawings (a straight stack, a
+      // leaning one), "dichtplakken" a box with the tape going over it; the other three are abstract.
+      id: 'l.givefeedback',
+      title: 'Giving feedback',
+      words: [
+        { id: 'w.dichtplakken', nl: 'dichtplakken', en: 'to tape shut', emoji: '📦' },
+        { id: 'w.netjes', nl: 'netjes', en: 'neat, tidy', emoji: '✨' },
+        { id: 'w.scheef', nl: 'scheef', en: 'crooked, not straight', emoji: '📐' },
+        { id: 'w.vriendelijk', nl: 'vriendelijk', en: 'friendly, kind', emoji: '🙂', picture: false },
+        { id: 'w.concreet', nl: 'concreet', en: 'concrete, specific (with a clear example)', emoji: '🔎', picture: false },
+        { id: 'w.ondervierogen', nl: 'onder vier ogen', en: 'in private (just the two of you)', emoji: '👥', picture: false },
+      ],
+      sentences: [
+        { id: 's.givefeedback.1', nl: 'Dat doe je goed.', en: 'You do that well.' },
+        { id: 's.givefeedback.2', nl: 'Kun je de dozen ook dichtplakken?', en: 'Can you also tape the boxes shut?' },
+        { id: 's.givefeedback.3', nl: 'Ik zie dat de dozen scheef staan.', en: 'I see that the boxes are not straight.' },
+      ],
+      dialogues: [
+        chat(line('d.givefeedback.q', 'Hoe vind je mijn werk?', 'What do you think of my work?'), line('d.givefeedback.a', 'Netjes! Alleen de dozen staan scheef.', 'Neat! Only the boxes are not straight.')),
+      ],
+    },
+    {
+      // Speaking up in the team meeting (het werkoverleg; on a building site the toolbox meeting,
+      // c.tools): wait for your turn, ask something, give an idea. "de vraag" (l.clear), "zeggen" and
+      // "het rooster" (l.clock) are words of other lessons: here they come in the sentences and the
+      // chat. Drawn: the meeting (two at a table), the idea (a lamp that lights up) and raising your
+      // hand; "de beurt", "de mening" and "onderbreken" are abstract.
+      id: 'l.meeting',
+      title: 'Speaking up in a team meeting',
+      words: [
+        { id: 'w.werkoverleg', nl: 'het werkoverleg', en: 'the team meeting (about the work)', emoji: '🪑' },
+        { id: 'w.beurt', nl: 'de beurt', en: 'the turn (your moment to speak)', emoji: '🔁', picture: false },
+        { id: 'w.idee', nl: 'het idee', en: 'the idea', emoji: '💡' },
+        { id: 'w.mening', nl: 'de mening', en: 'the opinion (what you think about it)', emoji: '💭', picture: false },
+        { id: 'w.handopsteken', nl: 'je hand opsteken', en: 'to raise your hand', emoji: '✋' },
+        { id: 'w.onderbreken', nl: 'onderbreken', en: 'to interrupt (talk while someone else is talking)', emoji: '✂️', picture: false },
+      ],
+      sentences: [
+        { id: 's.meeting.1', nl: 'Mag ik iets zeggen?', en: 'May I say something?' },
+        { id: 's.meeting.2', nl: 'Ik heb een vraag over het rooster.', en: 'I have a question about the roster.' },
+        { id: 's.meeting.3', nl: 'Ik heb een idee.', en: 'I have an idea.' },
+      ],
+      dialogues: [
+        chat(line('d.meeting.q', 'Heeft iemand nog een vraag?', 'Does anyone have a question?'), line('d.meeting.a', 'Ja. Wanneer komt het nieuwe rooster?', 'Yes. When does the new roster come?')),
+      ],
+    },
+  ] satisfies Lesson[],
+};
+
 /** The "Smart tools" unit sits right after "Asking for help" (l.understand), so its tips do too. */
 const isToolsTip = (t: CultureTip) => toolsUnit.lessons.some((l) => l.id === t.lessonId);
 const afterHelp = baseTips.findIndex((t) => t.lessonId === 'l.understand') + 1;
@@ -546,6 +692,9 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.newcolleague': [0, 2, 3, 4], // what was hard for you is hard for them; show it, let them copy it; not "Snap je het?" but "Laat eens zien"
   'c.feelwell': [2, 3, 6, 7], // not alone, not weak; who to talk to; thoughts of suicide: 113
   'c.backtowork': [0, 1, 2, 3, 7], // betermelden; step by step, fewer hours or lighter work; the company doctor; say what you can and cannot do yet
+  'c.getfeedback': [0, 1, 2, 3, 4], // what feedback is; about your work, not you; normal and meant to help; not clear? ask for an example
+  'c.givefeedback': [0, 1, 2, 3], // first what goes well; then kindly what can be better; a good moment, alone
+  'c.meeting': [0, 1, 2, 3, 4], // the werkoverleg; your opinion is welcome; a question is a contribution; wait for your turn, then speak
 };
 
 /** All tips in course order: the ones above (with the Smart tools tips after "Asking for help" and the Numbers and details tips before "Time and schedule"), then those of the work-and-rights units (src/content/work.ts). */

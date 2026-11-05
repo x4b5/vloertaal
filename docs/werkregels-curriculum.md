@@ -94,11 +94,11 @@ Zie ook de meetlat voor A2-niveau: [`taal-a2.md`](taal-a2.md).
 | 5 | Werktijden, pauze en vrij | 5.1 Je rooster en je werktijden · 5.2 Pauze · 5.3 Overwerk en nee zeggen · 5.4 Vrij vragen en verlof · 5.5 Kinderen en zorg |
 | 6 | Ziek zijn | 6.1 Je ziekmelden · 6.2 Je rechten als je ziek bent · 6.3 Langer ziek en weer beter · 6.4 Ziek en naar je eigen land |
 | 7 | Veilig en gezond werken | 7.1 Beschermende spullen en uitleg · 7.2 Onveilig? Zeg het en stop · 7.3 Een ongeluk, of te veel stress · 7.4 Fit voor je werk: slapen, eten, bewegen · 7.5 Alcohol, drugs en je werk |
-| 8 | Samenwerken: de ongeschreven regels | 8.1 Direct zeggen en feedback · 8.2 Het oneens zijn · 8.3 Afspraak is afspraak · 8.4 Koffie, verjaardagen en je telefoon |
+| 8 | Samenwerken: de ongeschreven regels | 8.1 Direct zeggen en feedback · 8.2 Het oneens zijn · 8.3 Afspraak is afspraak · 8.4 Koffie, verjaardagen en je telefoon · 8.5 Feedback geven en rustig blijven |
 | 9 | Problemen en je rechten | 9.1 Discriminatie · 9.2 Grensoverschrijdend gedrag · 9.3 Uitbuiting en oplichting · 9.4 Ontslag en het einde van je baan |
 | 10 | Uitkering, werk en geld | 10.1 Werk kwijt: WW · 10.2 Van uitkering naar werk · 10.3 Belasting terug en je post · 10.4 Schulden: vroeg hulp vragen · 10.5 Je werk stopt: regel dit · 10.6 Je geld per maand: vaste lasten en sparen · 10.7 Kopen, abonnementen en ruilen · 10.8 Werkloos en terug naar je land |
 
-**10 units, 46 lessen.** Les 5.5 en 10.5 kwamen erbij op 30 oktober 2026, les 7.4, 7.5, 10.6 en 10.7 in de tweede Entree-ronde (deel 7), en les 3.5, 4.4, 6.4 en 10.8 voor arbeidsmigranten (deel 8, 31 oktober 2026). Na de Entree-units 11–17 komen nog unit 18 (Schrijven op je werk) en unit 19 (Jouw weg: kiezen en verder leren), ook in deel 7. Unit 3 is ook de unit voor herintreders en starters: stage, proeftijd,
+**10 units, 47 lessen.** Les 8.5 kwam erbij op 5 november 2026 (met een vierde vraag bij 8.1: feedback goed ontvangen). Les 5.5 en 10.5 kwamen erbij op 30 oktober 2026, les 7.4, 7.5, 10.6 en 10.7 in de tweede Entree-ronde (deel 7), en les 3.5, 4.4, 6.4 en 10.8 voor arbeidsmigranten (deel 8, 31 oktober 2026). Na de Entree-units 11–17 komen nog unit 18 (Schrijven op je werk) en unit 19 (Jouw weg: kiezen en verder leren), ook in deel 7. Unit 3 is ook de unit voor herintreders en starters: stage, proeftijd,
 uitzendwerk en zzp. Volgorde: zoeken → beginnen → afspraken → geld → tijd → ziekte → veiligheid →
 samenwerken → problemen → uitkering. Units 8 en 9 kunnen ook eerder; ze bouwen niet op elkaar.
 
@@ -1525,8 +1525,8 @@ bedrijfsarts · een vakbond of het Juridisch Loket (bij schade).
 
 ## Unit 8 · Samenwerken: de ongeschreven regels
 
-*In deze unit: direct zijn, feedback, het oneens zijn, afspraken, koffie, verjaardagen, je telefoon
-en de groepsapp. Deze regels staan nergens op papier. Ze verschillen ook per team.*
+*In deze unit: direct zijn, feedback krijgen en geven, rustig blijven, het oneens zijn, afspraken,
+koffie, verjaardagen, je telefoon en de groepsapp. Deze regels staan nergens op papier. Ze verschillen ook per team.*
 
 ### Les 8.1 · Direct zeggen en feedback
 
@@ -1567,6 +1567,21 @@ beter? Jij mag ook zeggen wat je nodig hebt. Bereid het voor met een paar vragen
 
 **Goed antwoord: B.**
 **Waarom:** Iedereen maakt fouten. Zeg het snel, dan kan iemand het oplossen. Een fout verbergen vinden mensen hier veel erger dan de fout zelf.
+
+**Vraag 4 · Wat is het beste?** (5 november 2026: feedback goed ontvangen.) Sanne zegt: "Je werkt te
+langzaam." Jayden weet niet wat hij anders moet doen. Wat kan Jayden het beste doen?
+
+- **A.** Hij zegt: "Ik doe echt mijn best!"
+  → *Dat is waar. Maar zo weet hij nog niet wat beter kan.*
+- **B.** Hij knikt, en hij werkt verder zoals eerst.
+  → *Dan blijft het hetzelfde. En Sanne denkt dat hij het snapt.*
+- **C.** Hij vraagt: "Kun je een voorbeeld geven?"
+  → *Goed. Met een voorbeeld weet hij wat hij anders kan doen.*
+
+**Goed antwoord: C.**
+**Waarom:** Feedback is wat iemand zegt over je werk. Luister eerst. Snap je het niet? Vraag om een
+voorbeeld. Verdedig je niet meteen. Zeg dan: "Bedankt, dat is goed om te weten." En probeer het.
+(België: Sanne zegt het voorzichtig, "Misschien kun je wat sneller werken?", en Jayden zegt "Merci".)
 
 **Zo zeg je het:** "Oké, zo dan? Fijn dat je het laat zien."
 
@@ -1713,6 +1728,62 @@ foto's van collega's zonder toestemming.
 **Zo zeg je het:** "Ik ben jarig. Ik heb taart meegenomen!"
 
 **Onthoud:** Jarig? Dan trakteer je zelf.
+
+---
+
+### Les 8.5 · Feedback geven en rustig blijven
+
+*Nieuw op 5 november 2026 (de wens van de eigenaar: communicatie steviger, bij "Feedback en
+overleg" in Taal). Gewoontes, geen wet: geen slotregel. België: dezelfde les, het werkoverleg heet
+er de vergadering.*
+
+**Leerdoel:** je zegt vriendelijk wat beter kan. Je blijft rustig, ook als je boos bent.
+
+**Scène** · *Beeld: een magazijn. Piotr zet dozen op een pallet. Ze staan scheef. Esra kijkt.*
+
+> Piotr is nieuw in het magazijn. Hij werkt hard, maar zijn dozen staan scheef. De pallet valt bijna
+> om. Collega Esra ziet het. Ze is een beetje boos.
+
+**Regelkaart** · *Eerst iets goeds. Dan rustig en concreet wat beter kan.* Zeg eerst wat goed gaat.
+Zeg dan concreet wat beter kan, met een voorbeeld. Kies een rustig moment. Niet waar iedereen bij
+is. Boos? Adem rustig, en praat later.
+
+**Vraag 1 · Wat is het beste?** Esra wil iets zeggen over de scheve dozen. Wat kan Esra het beste doen?
+
+- **A.** Ze roept door de hal: "Piotr, dat is helemaal fout!"
+  → *Dan hoort iedereen het. Piotr schaamt zich, en hij luistert minder.*
+- **B.** Ze zegt: "Je werkt snel. Zet de dozen wel recht."
+  → *Goed. Eerst iets goeds, dan concreet wat beter kan.*
+- **C.** Ze zegt niets, en ze zet de dozen later zelf recht.
+  → *Dat is aardig. Maar zo leert Piotr het niet.*
+
+**Goed antwoord: B.**
+**Waarom:** Zeg eerst wat goed gaat. Dan wat beter kan, met een voorbeeld. Zeg wat je ziet, niet wat
+je van de persoon vindt. Bijvoorbeeld: "Ik zie dat de dozen scheef staan."
+
+**Vraag 2 · Waar of niet waar?** "Feedback geef je het beste meteen, waar het hele team bij is."
+
+**Antwoord: niet waar.**
+**Waarom:** Feedback geef je liever onder vier ogen, op een rustig moment. Voor het hele team voelt
+het als een straf. Gaat het om gevaar? Dan zeg je het wel meteen.
+
+**Vraag 3 · Wat is het beste?** In het werkoverleg zegt de leidinggevende: "Piotr, jouw pallets zijn
+slordig." Piotr wordt boos. Wat kan Piotr het beste doen?
+
+- **A.** Hij zegt: "Dat is niet waar! Esra is veel slordiger."
+  → *Dan wordt het ruzie. En over Esra ging het niet.*
+- **B.** Hij loopt boos weg uit het overleg.
+  → *Dat snap ik. Maar dan kan niemand het met hem oplossen.*
+- **C.** Hij blijft rustig, en vraagt later om uitleg.
+  → *Goed. Zo blijft hij rustig, en hoort hij wat beter kan.*
+
+**Goed antwoord: C.**
+**Waarom:** Ben je boos? Adem rustig, en praat later. Dan kun je beter luisteren. Vind je het niet
+eerlijk? Zeg het rustig, onder vier ogen. Gebruik een ik-zin: "Ik vond het moeilijk dat ..."
+
+**Zo zeg je het:** "Je werkt snel. Ik zie wel dat de dozen scheef staan."
+
+**Onthoud:** Eerst iets goeds. Dan rustig en concreet wat beter kan.
 
 ---
 

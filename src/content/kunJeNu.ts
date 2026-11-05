@@ -169,6 +169,12 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan rustig nee zeggen tegen extra werk.', 'A2', 'gesprekken', 'I can calmly say no to extra work.'],
     ['Ik kan vragen wat ik eerst moet doen.', 'A1', 'spreken', 'I can ask what I need to do first.'],
   ]),
+  // "Feedback en overleg" (5 November 2026): getting feedback, giving it, the team meeting.
+  onderwerp('u.feedback', 'Feedback en overleg', [
+    ['Ik kan om een voorbeeld vragen bij feedback.', 'A2', 'gesprekken', 'I can ask for an example when I get feedback.'],
+    ['Ik kan vriendelijk zeggen wat beter kan.', 'A2', 'spreken', 'I can say kindly what can be better.'],
+    ['Ik kan in een werkoverleg een vraag stellen.', 'A2', 'gesprekken', 'I can ask a question in a team meeting.'],
+  ]),
   onderwerp('u.social', 'Omgang met collega’s', [
     ['Ik kan een praatje maken in de pauze.', 'A2', 'gesprekken', 'I can make small talk during the break.'],
     ['Ik kan zeggen dat ik een fout heb gemaakt.', 'A2', 'spreken', 'I can say that I made a mistake.'],
@@ -325,6 +331,8 @@ export const KUN_REGELS: KunOnderwerp[] = [
   onderwerp('r.samen', 'Samenwerken: de ongeschreven regels', [
     ['Ik kan rustig zeggen dat ik het oneens ben.', '1F', 'gesprekken'],
     ['Ik kan op tijd zeggen dat iets niet lukt.', '1F', 'gesprekken'],
+    // 8.5 "Feedback geven en rustig blijven" and the new step of 8.1 (5 November 2026).
+    ['Ik kan feedback rustig aannemen en vriendelijk geven.', '1F', 'gesprekken'],
   ]),
   // Je rechten
   onderwerp('r.rechten', 'Problemen en je rechten', [

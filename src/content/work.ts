@@ -872,7 +872,9 @@ const socialUnit = unit('social', 'Getting along', 'Omgang met collega’s', '�
     [
       ['fout', 'de fout', 'the mistake', '❌'],
       ['compliment', 'het compliment', 'the compliment', '👏'],
-      ['feedback', 'de feedback', 'the feedback', '🗨️', false],
+      // "de feedback" says on its card what it is (5 November 2026, with "Feedback en overleg",
+      // u.feedback, whose tip c.getfeedback explains it further): what someone says about your work.
+      ['feedback', 'de feedback', 'the feedback (what someone says about your work)', '🗨️', false],
       ['uitleggen', 'uitleggen', 'to explain', '🧑‍🏫'],
       ['leren', 'leren', 'to learn', '📚'],
       ['verbeteren', 'verbeteren', 'to improve, to correct', '🔧', 'motion'],
