@@ -3,9 +3,64 @@
 Voor de eigenaar. Zo neem je de Nederlandse zinnen en woorden op die nog geen mp3 hebben.
 Het gaat om het spoor Taal. Werkregels gebruikt de stem van de telefoon en valt hierbuiten.
 
-De opnames staan in `public/audio-el/<stem>/<id>.mp3` (stemmen: thijmen, daniel, ariel, noa).
-De lijst van alle zinnen staat in `public/audio/clips.json`. Dat bestand maak je met `npm run clips`;
-daar is geen sleutel voor nodig.
+De opnames staan in `public/audio-el/<stem>/<id>.mp3` (stemmen: thijmen, daniel, ariel, noa;
+de Vlaamse: philip, hans, evie, sare). De lijst van alle zinnen staat in `public/audio/clips.json`.
+Dat bestand maak je met `npm run clips`; daar is geen sleutel voor nodig.
+
+## Stand van de stemmen (bijgewerkt 8 november 2026)
+
+Sinds 8 november 2026 spreken de personages met nieuwe stemmen op model **Eleven v4**
+(`take` 3 in `scripts/voices/elevenlabs.json`). Een clip die nog met de oude stem of het oude
+model is opgenomen, telt in `missing.mjs` als *outdated*; een clip die nooit is opgenomen als
+*missing*. Beide samen is wat nog moet.
+
+| Personage | Nederland (sleutel → stem) | België (sleutel → stem) |
+|---|---|---|
+| Bram | `thijmen` → Thijmen | `philip` → Philip |
+| Henk | `daniel` → Simon | `hans` → Hans |
+| Amina | `ariel` → Sandrine | `evie` → Evie |
+| Jada | `noa` → Iris | `sare` → Sare |
+
+De sleutels van de Nederlandse stemmen bleven gelijk; alleen de stem erachter veranderde.
+
+**Nederlandse stemmen**
+
+| Groep | Wat | Stand |
+|---|---|---|
+| `w.` | woorden | ✅ v4 (PR #324) |
+| `t.` | losse tegels | ✅ v4 (PR #324) |
+| `rg.` `zg.` `d.` `x.` `p.` | regiowoorden, gezegdes, gesprekjes, Bram, "Bel 112!" | ✅ v4 (PR #328) |
+| `s.` | zinnen | ⏳ nog oude stem, deels nooit opgenomen |
+| `c.` | chats | ⏳ nog oude stem |
+| `be.` | Belgische route | blijft zo: krijgt de Vlaamse stemmen |
+
+**Vlaamse stemmen** (alleen voor wie in België werkt; zie `src/lib/voices.ts`). Wat een Vlaamse
+stem nog niet heeft, speelt de Nederlandse stem van hetzelfde personage.
+
+| Groep | Wat | Stand |
+|---|---|---|
+| `be.w.` | Belgische woorden | ✅ alle vier (PR #330) |
+| `be.s.` | Belgische zinnen | ✅ Philip, Hans, Evie · ⏳ Sare 21 van 38 (tegoed op, 8 nov) |
+| `be.c.` | Belgische chats | ⏳ |
+| alle andere | woorden, tegels, zinnen | ⏳ ronde 2, ±38.000 tekens per stem |
+
+**Zo meet je de stand opnieuw** (zonder sleutel):
+
+```sh
+node scripts/voices/missing.mjs --counts                   # de vier Nederlandse stemmen
+node scripts/voices/missing.mjs --counts --voice philip    # één Vlaamse stem
+```
+
+**Let op bij het opnemen.**
+- Een Vlaamse stem neemt alleen op als je hem noemt: `voices` = `philip,hans,evie,sare`. Een run
+  voor "alle stemmen" slaat ze over, zodat hij nooit per ongeluk dubbel kost.
+- `check` schat de kosten op het aantal letters. Werkelijk betaalden we op 8 november ±48% van
+  de schatting (Nederlands) en ±33% (Vlaamse woorden). Kijk na elke portie naar het tegoed.
+- Het tegoed dat `check` direct na een run toont, loopt achter: op 8 november stond er na een
+  run nog 1.679, terwijl er werkelijk bijna niets meer over was. Houd ruim marge aan.
+- Stopt een run halverwege (tegoed op), dan staan de al betaalde opnames in de bijlage van die
+  run (*Artifacts → elevenlabs-all*): haal ze terug met `gh run download <id> --name elevenlabs-all`
+  en zet de mp3's en `voices.json` terug in `public/audio-el/`.
 
 ## 1. Kijk wat er ontbreekt (zonder sleutel)
 
