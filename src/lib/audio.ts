@@ -299,18 +299,26 @@ const clipIn = (r: Recorded, text: string) => r.clips[text.trim()] ?? r.plain[pl
 
 /**
  * The recording to play for this text: the chosen voice if it has the line, else (a Flemish
- * voice) the same character's Dutch twin, else another recorded voice of the same gender
- * (ElevenLabs before Piper; a voice of the same country first), so a man never suddenly sounds
- * like a woman or the other way round. New lines may exist in only some voices.
+ * voice) another Flemish voice of the same gender, then the same character's Dutch twin, else
+ * another recorded voice of the same gender (ElevenLabs before Piper; a voice of the same country
+ * first), so a man never suddenly sounds like a woman or the other way round. New lines may exist
+ * in only some voices. Flemish before the twin: the owner chose a Flemish sound over two different
+ * men while only Philip is fully recorded (8 November 2026), so for now he speaks for Henk too.
  */
 function clipFor(rec: Recorded, text: string): { rec: Recorded; id: string } | undefined {
   const own = clipIn(rec, text);
   if (own) return { rec, id: own };
+  const gender = rec.voice.gender;
+  const others = recorded.filter((o) => o !== rec && (!gender || o.voice.gender === gender));
+  if (rec.voice.country) {
+    for (const other of others.filter((o) => o.voice.country === rec.voice.country)) {
+      const id = clipIn(other, text);
+      if (id) return { rec: other, id };
+    }
+  }
   const twin = rec.voice.twin ? recorded.find((r) => r.voice.key === rec.voice.twin) : undefined;
   const twinId = twin && clipIn(twin, text);
   if (twin && twinId) return { rec: twin, id: twinId };
-  const gender = rec.voice.gender;
-  const others = recorded.filter((o) => o !== rec && (!gender || o.voice.gender === gender));
   for (const other of [...others.filter((o) => o.voice.country === rec.voice.country), ...others.filter((o) => o.voice.country !== rec.voice.country)]) {
     const id = clipIn(other, text);
     if (id) return { rec: other, id };

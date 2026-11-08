@@ -4,8 +4,9 @@ import { setCastCountry, voiceFor } from '../src/lib/voices';
 
 /**
  * Flemish voices for learners who work in Belgium (the owner's request, 8 November 2026): the cast
- * speaks with its Flemish voice there, and a line that voice has not recorded yet is played by the
- * character's Dutch twin, never by another character's voice.
+ * speaks with its Flemish voice there, and a line that voice has not recorded yet is played by
+ * another Flemish voice of the same gender (for now Philip speaks for Henk too: the owner chose a
+ * Flemish sound over two different men, 8 November 2026), else by the character's Dutch twin.
  */
 
 const nl = (key: string, gender: string, said: Record<string, string>) => ({ key, label: key, gender, said });
@@ -50,6 +51,16 @@ describe('Flemish voices (src/lib/voices.ts setCastCountry)', () => {
     setRecordedIndex(index, null);
     expect(clipUrl('de helm', 'piper:hans')).toBe('./audio-el/daniel/w.helm.mp3');
     expect(clipUrl('de helm', 'piper:philip')).toBe('./audio-el/thijmen/w.helm.mp3');
+  });
+
+  it('prefers another Flemish voice of the same gender over the Dutch twin', () => {
+    const withPhilip: ElevenIndex = {
+      voices: index.voices.map((v) => (v.key === 'philip' ? { ...v, said: { ...v.said, 'w.helm': 'de helm' } } : v)),
+    };
+    setRecordedIndex(withPhilip, null);
+    expect(clipUrl('de helm', 'piper:hans')).toBe('./audio-el/philip/w.helm.mp3');
+    // A woman's Flemish voice never speaks for a man.
+    expect(clipUrl('de helm', 'piper:ariel')).toBe('./audio-el/ariel/w.helm.mp3');
   });
 
   it('never lets a Dutch voice borrow a Flemish recording while a Dutch one exists', () => {
