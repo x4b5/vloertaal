@@ -70,9 +70,10 @@ export const WHAT_BESIDE = 'Vloertaal past naast wat er al is, zoals Oefenen.nl,
 
 /**
  * 'p.story': the reason, written for professionals (the learner's About keeps its own plain text,
- * 'a.story'). No second "Hoi, ik ben Xavier": the lead already says it.
+ * 'a.story'). No second "Hoi, ik ben Xavier": the lead already says it. The owner's own words
+ * (8 November 2026), the frustration named so a job coach recognises it.
  */
-export const PRO_STORY = 'In mijn werk als arbeidsbemiddelaar zie ik regelmatig dat een plaatsing stukloopt op taal. Iemand begrijpt een instructie niet goed, of durft niet te vragen wat iets betekent. Vloertaal is een poging om dat iets makkelijker te maken: de taal van het werk oefenen, op de eigen telefoon, naast wat er al is. Ik bouw de app in mijn vrije tijd. De app zou ik graag samen verder ontwikkelen: met professionals, werkgevers en uiteraard de doelgroep zelf.';
+export const PRO_STORY = 'In mijn werk begeleid ik kandidaten naar en op het werk. Helaas loopt een plaatsing wel eens stuk. En taal is hierin vaak een grote factor. Iemand begrijpt een instructie niet goed, of durft niet te vragen wat iets betekent. En om eerlijk te zijn: dat kan me frustreren. “Wat als we meer hadden ingezet op taal en dan specifiek gericht op werk?” Vloertaal is een poging om dat iets makkelijker te maken: de taal van het werk oefenen, op de eigen telefoon, naast wat er al is. Ik bouw de app in mijn vrije tijd. De app zou ik graag samen verder ontwikkelen: met professionals, werkgevers en uiteraard de doelgroep zelf.';
 
 /** 'p.story', second paragraph: the costs, and the question about a subsidy or fund. */
 export const PRO_COSTS = 'De kosten zijn op dit moment nog beperkt. Als ze hoger worden, is een subsidie of fonds waarschijnlijk nodig, en daar zou ik graag hulp bij hebben. Ken je iemand die me daarbij zou kunnen helpen? Dan hoor ik dat graag.';
