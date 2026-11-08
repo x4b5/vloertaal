@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { Fragment, type ReactNode } from 'react';
 import { langTag, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { allMatches } from '../lib/matches';
@@ -113,5 +113,37 @@ export function isolateLatin(text: string): ReactNode {
   }
   if (!parts.length) return text;
   if (last < text.length) parts.push(text.slice(last));
+  return parts;
+}
+
+/**
+ * A tip's line with its Dutch key terms in bold ("bedrijfsarts", "uitzendbureau"): the words the
+ * learner will hear at work, the same in every help language (the owner, 8 November 2026). Only
+ * the first time a term is on the page (`seen` is shared by the page's lines), whole words only,
+ * any case. The rest is shown as HelpText shows it (a Latin run isolated in a non-Latin script).
+ */
+export function withTerms(text: string, lang: HelpLanguage | undefined, terms: readonly string[], seen: Set<string>): ReactNode {
+  const isolate = Boolean(lang && (lang.dir === 'rtl' || !LATIN_SCRIPT.has(lang.code)));
+  const plain = (t: string, k: number) => <Fragment key={k}>{iconize(isolate ? isolateLatin(t) : t)}</Fragment>;
+  const todo = terms.filter((t) => !seen.has(t.toLowerCase()));
+  if (!todo.length) return plain(text, 0);
+  const esc = [...todo].sort((a, b) => b.length - a.length).map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  // The letter before is matched (not looked behind: an old iPhone cannot, tests/oldPhones.test.ts).
+  const re = new RegExp(`(^|[^\\p{L}\\p{N}])(${esc.join('|')})(?![\\p{L}\\p{N}])`, 'giu');
+  const parts: ReactNode[] = [];
+  let last = 0;
+  for (const m of allMatches(text, re)) {
+    const word = m[2];
+    const key = word.toLowerCase();
+    const term = todo.find((t) => t.toLowerCase() === key);
+    if (!term || seen.has(key)) continue;
+    seen.add(key);
+    const at = (m.index ?? 0) + m[1].length;
+    if (at > last) parts.push(plain(text.slice(last, at), last));
+    const bold = <strong className="tip-term" lang="nl">{word}</strong>;
+    parts.push(isolate ? <bdi key={`t${at}`} dir="ltr">{bold}</bdi> : <Fragment key={`t${at}`}>{bold}</Fragment>);
+    last = at + word.length;
+  }
+  if (last < text.length) parts.push(plain(text.slice(last), last));
   return parts;
 }

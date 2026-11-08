@@ -2314,6 +2314,8 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .tip-lines .tip-line + .tip-line { margin-top: 0.4em; }
 .tip-lines .tip-line:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.12em; }
 .tip-lines > .bi-help { margin-top: 4px; }
+/* A tip's Dutch key term ("bedrijfsarts"): bold, once on the page (Bi.tsx withTerms). */
+.tip-term { font-weight: 700; color: var(--ink); }
 
 /* The footer: a soft shadow on its top edge while the exercise goes on underneath it, and no
    longer pinned when it would fill half the screen (it then scrolls with the page). */
