@@ -10,7 +10,7 @@ import {
 } from '../lib/speaking';
 import { MIC_STEPS, micPlatform, micRefusedError, micSteps, watchMicPermission } from '../lib/micHelp';
 import { firstDayText, keepFirstVoice, markThenPlayed, thenVoice } from '../lib/firstVoice';
-import type { SpeakEvent } from '../lib/chorus';
+import { BRAVE_LINES, type BraveLine, type SpeakEvent } from '../lib/chorus';
 import { judge, localStatus, startListening, verdictOf, type Heard, type Listening, type Verdict } from '../lib/listen';
 import { learnerCharacter, voiceFor } from '../lib/voices';
 import { hasPicture } from '../lib/wordPicture';
@@ -107,10 +107,10 @@ let shotChorus: ChorusState | undefined;
 export function setSpeakShotChorus(state: ChorusState | undefined): void {
   shotChorus = state;
 }
-/** Screenshot harness only: Bram's one-time "Fouten mogen" line. */
-let shotBrave = false;
+/** Screenshot harness only: Bram's first line. */
+let shotBrave: BraveLine | null = null;
 export function setSpeakShotBrave(on: boolean): void {
-  shotBrave = on;
+  shotBrave = on ? BRAVE_LINES[0] : null;
 }
 /** Each number of the 3-2-1 before "Zeg het samen" this long (ms). */
 const COUNT_MS = 750;
@@ -161,8 +161,8 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   together?: boolean;
   /** Screenshot harness only: "Zeg het samen" in this state. */
   chorusForShot?: ChorusState;
-  /** Bram's "Fouten mogen" line, once (src/lib/chorus.ts braveDue). Not in "Wat zeg je?". */
-  brave?: boolean;
+  /** Bram's line, if any (src/lib/chorus.ts braveLine). Not in "Wat zeg je?". */
+  brave?: BraveLine | null;
   /** The lessons: this "Zeg het" opened ('met', not "Wat zeg je?"), the learner chose "Zeg het
    *  liever hardop" while the microphone could record ('skipped'), or recorded ('recorded'). */
   onSpeak?: (what: SpeakEvent) => void;
@@ -189,7 +189,7 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
   /** The number of the 3-2-1 on its button. */
   const [counting, setCounting] = useState(chorusForShot === 'count' ? 2 : 3);
   /** Bram's "Fouten mogen", latched for this exercise (it is shown once, then never again). */
-  const [braveHere] = useState(() => brave && !asks);
+  const [braveHere] = useState(() => (asks ? null : brave));
   // No usable microphone (none, or it failed earlier in this lesson): "say it out loud" at once.
   /** "Zeg het nog eens": the second try and after are said from memory (the Dutch hidden until the
    *  try is done; the model stays one tap away). Saying the same turn again, with less support,
@@ -733,11 +733,11 @@ export function SpeakExercise({ ex, lang, onAnswer, onRating, onRecording, keepN
       </div>
       )}
 
-      {/* Bram, once (src/lib/chorus.ts braveDue): a line, no button. */}
+      {/* Bram (src/lib/chorus.ts braveLine): a line, no button. */}
       {braveHere && tries === 0 && (listenFirst || phase === 'off') && (
         <div className="say-brave">
           <span className="say-brave-face" aria-hidden><Character who="bram" mood="pleased" crop="head" size={56} /></span>
-          <p className="say-brave-line"><Bi text={ui('speakBrave', lang)} /></p>
+          <p className="say-brave-line"><Bi text={ui(braveHere, lang)} /></p>
         </div>
       )}
 

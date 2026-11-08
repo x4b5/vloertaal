@@ -7,6 +7,7 @@ import { findCourseUnit, isRulesLessonAnyCountry, unitOfLesson } from '../conten
 import { rulesCourseUnits } from '../content/rulesCourse';
 import type { Card, Cards } from './spaced';
 import { mergeToets, readToets, type ToetsState } from './toetsState';
+import { readReasons, type ReasonId } from './reason';
 
 /** The country the learner works in (Settings): the work rules are those of the Netherlands. */
 export type Country = 'nl' | 'be';
@@ -162,6 +163,10 @@ export interface Progress {
    * with "Voortgang wissen". Only on this phone. Missing = none yet.
    */
   gelukt?: GeluktEntry[];
+  /** "Waarom leer jij Nederlands?" (src/lib/reason.ts): the learner's own reasons, one or two. On this phone only: not in the backup. */
+  reasons?: ReasonId[];
+  /** The reason card was answered or put off ("Later"): it does not come back. On this phone only. */
+  reasonAsked?: true;
 }
 
 /** A sentence said at work: its id (for the translation), its Dutch, what it means in English
@@ -325,6 +330,8 @@ const FIELDS: { [K in keyof Progress]-?: Check<Progress[K]> } = {
   speakMet: (v) => (v === true ? true : undefined),
   speakSkips: (v) => (isCount(v) && v >= 1 ? Math.min(SKIPS_KEEP, Math.floor(v)) : undefined),
   gelukt: readGelukt,
+  reasons: readReasons,
+  reasonAsked: (v) => (v === true ? true : undefined),
 };
 
 /** The fields asked for that can be read, each checked (FIELDS). */

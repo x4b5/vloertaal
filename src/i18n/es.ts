@@ -246,7 +246,18 @@ const lang: HelpLanguageSource = {
     sayTogether: "Dilo a la vez", // nieuw, nalezen
     chorusHint: "Dilo al mismo tiempo que la voz. No se graba nada.", // nieuw, nalezen
     chorusAlone: "Ahora solo tú", // nieuw, nalezen
-    speakBrave: "Equivocarse está bien. Los neerlandeses te entienden también con errores.", // nieuw, nalezen
+    speakBrave: "Los errores son parte de aprender. ¿No te entienden? Dilo otra vez.", // nieuw, nalezen
+    speakBrave2: "¿Nervioso? Es normal. Dilo de todos modos.", // nieuw, nalezen
+    speakBrave3: "No tienes que decirlo perfecto. Solo inténtalo.", // nieuw, nalezen
+    reasonTitle: "¿Por qué aprendes neerlandés?", // nieuw, nalezen
+    reasonHint: "Elige uno o dos.", // nieuw, nalezen
+    reasonDone: "Listo", // nieuw, nalezen
+    reasonWork: "Hacer bien mi trabajo", // nieuw, nalezen
+    reasonKids: "Mis hijos", // nieuw, nalezen
+    reasonColleagues: "Hablar con mis compañeros", // nieuw, nalezen
+    reasonArrange: "Arreglar las cosas yo mismo", // nieuw, nalezen
+    reasonJob: "Un trabajo mejor", // nieuw, nalezen
+    reasonHome: "Sentirme en casa en los Países Bajos", // nieuw, nalezen
     speakMe: 'Yo',
     speakingPractice: 'Práctica de hablar',
     speakingHint: "Di palabras en voz alta y compara. Nadie más te oye: no se envía nada. Tu primera grabación de una frase se queda en tu teléfono, para comparar más tarde.", // nieuw, nalezen

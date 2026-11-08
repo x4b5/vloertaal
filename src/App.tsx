@@ -20,6 +20,8 @@ import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
 import { News } from './components/News';
 import { NoticeCard } from './components/NoticeCard';
+import { ReasonCard } from './components/ReasonCard';
+import { reasonDue, withReasons } from './lib/reason';
 import { noticeFor, seeNotice } from './lib/notice';
 import { NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } from './components/RulesHelp';
 import { GenderScreen } from './components/Gender';
@@ -47,7 +49,7 @@ import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
 import { BackupNudge } from './components/BackupNudge';
 import { BridgeOffer } from './components/BridgeOffer';
 import { bridgeDue, seeBridge } from './lib/bridge';
-import { afterSpeak, braveDue, chorusDue, type SpeakEvent } from './lib/chorus';
+import { afterSpeak, braveLine, chorusDue, type SpeakEvent } from './lib/chorus';
 import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
@@ -922,7 +924,7 @@ export default function App() {
           {...(daily || track !== 'taal' ? {} : lessonPace(progress))}
           // "Zeg het samen" and Bram's "Fouten mogen" (src/lib/chorus.ts), the owner's request, 5 November 2026.
           speakTogether={chorusDue(progress)}
-          speakBrave={braveDue(progress)}
+          speakBrave={braveLine(progress, Object.keys(progress.completed).length)}
           onSpeak={onSpeak}
         />
       );
@@ -1278,6 +1280,8 @@ export default function App() {
       const lessonsDone = knownLessons(progress.completed);
       const bridge = !notice && bridgeDue(progress);
       const nudge = !notice && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
+      // "Waarom leer jij Nederlands?" (src/lib/reason.ts): after 3 lessons, once, when no other card waits.
+      const reason = !notice && !bridge && !nudge && reasonDue(progress, lessonsDone);
       const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
       return (
         <>
@@ -1327,6 +1331,8 @@ export default function App() {
                 onKeep={() => { nudgeClosed(lessonsDone); go({ name: 'settings', page: 'backup' }); }}
                 onLater={() => { nudgeClosed(lessonsDone); setNudgeTick((n) => n + 1); }}
               />
+            ) : reason ? (
+              <ReasonCard lang={lang} onDone={(ids) => setProgress((p) => withReasons(p, ids))} />
             ) : undefined}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />
