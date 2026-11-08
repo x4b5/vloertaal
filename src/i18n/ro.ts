@@ -506,6 +506,7 @@ const lang: HelpLanguageSource = {
     'u.firstday': 'Prima zi de muncă',
     'u.help': 'Cum ceri ajutor',
     'u.safety': 'Siguranța pe primul loc',
+    'u.emergency': "Când ceva nu merge bine", // nieuw, nalezen
     'u.warehouse': 'În depozit',
     'u.time': 'Timp și program',
 

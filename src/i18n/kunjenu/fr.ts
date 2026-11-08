@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "Je peux distinguer des mots comme man et maan.", // nieuw, nalezen
     'kjn.u.sounds.2': "Je peux répéter des phrases courtes avec des sons difficiles.", // nieuw, nalezen
     'kjn.u.safety.1': "Je peux comprendre un avertissement comme “Pas op!”.", // nieuw, nalezen // nagelezen AI 31 okt
-    'kjn.u.safety.2': "Je peux signaler un accident.", // nieuw, nalezen
-    'kjn.u.safety.3': "Je peux dire que je n’ai pas encore appris quelque chose.", // nieuw, nalezen
+    'kjn.u.safety.2': "Je peux dire que je n’ai pas encore appris quelque chose.", // nieuw, nalezen
+    'kjn.u.emergency.1': "Je peux demander où se trouve l’extincteur.", // nieuw, nalezen
+    'kjn.u.emergency.2': "Je peux signaler un accident.", // nieuw, nalezen
     'kjn.u.apply.1': "Je peux dire quelle expérience j’ai.", // nieuw, nalezen
     'kjn.u.apply.2': "Je peux parler de moi dans un entretien d’embauche.", // nieuw, nalezen
     'kjn.u.contract.1': "Je peux demander combien d’heures je travaille par semaine.", // nieuw, nalezen

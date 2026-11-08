@@ -54,7 +54,7 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.start'],
   },
   'theme.safe': {
-    taal: ['u.safety'],
+    taal: ['u.safety', 'u.emergency'],
     regels: ['r.veilig'],
   },
   'theme.find': {

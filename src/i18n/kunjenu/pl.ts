@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "Słyszę różnicę między słowami takimi jak man i maan.", // nieuw, nalezen
     'kjn.u.sounds.2': "Umiem powtórzyć krótkie zdania z trudnymi dźwiękami.", // nieuw, nalezen
     'kjn.u.safety.1': "Rozumiem ostrzeżenie takie jak „Pas op!”.", // nieuw, nalezen
-    'kjn.u.safety.2': "Umiem zgłosić wypadek.", // nieuw, nalezen
-    'kjn.u.safety.3': "Umiem powiedzieć, że jeszcze mnie tego nie nauczono.", // nieuw, nalezen
+    'kjn.u.safety.2': "Umiem powiedzieć, że jeszcze mnie tego nie nauczono.", // nieuw, nalezen
+    'kjn.u.emergency.1': "Umiem zapytać, gdzie wisi gaśnica.", // nieuw, nalezen
+    'kjn.u.emergency.2': "Umiem zgłosić wypadek.", // nieuw, nalezen
     'kjn.u.apply.1': "Umiem powiedzieć, jakie mam doświadczenie.", // nieuw, nalezen
     'kjn.u.apply.2': "Umiem opowiedzieć o sobie na rozmowie o pracę.", // nieuw, nalezen
     'kjn.u.contract.1': "Umiem zapytać, ile godzin tygodniowo pracuję.", // nieuw, nalezen

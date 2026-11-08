@@ -2,12 +2,12 @@ import { beTip } from '../helpers';
 import type { BeTaal } from '../types';
 
 /**
- * The Belgian version of "Veiligheid" (u.safety), a B unit (docs/taal-belgie.md). Only l.accident
- * differs: de BHV'er → de EHBO'er (the first-aider the employer names); the employer reports an
+ * The Belgian version of "Als het misgaat" (u.emergency; part of "Veiligheid", u.safety, until
+ * 8 November 2026), a B unit (docs/taal-belgie.md). Only l.accident differs: de BHV'er → de EHBO'er (the first-aider the employer names); the employer reports an
  * accident to its arbeidsongevallenverzekeraar, and a serious one to Toezicht op het Welzijn op het
  * Werk (not the Nederlandse Arbeidsinspectie); the preventieadviseur helps the employer with
- * safety. The other lessons are the same in both countries. Translations:
- * src/i18n/be/units/safety.ts.
+ * safety. l.alarm is the same in both countries, and so is all of "Veiligheid" (now an A unit).
+ * Translations: src/i18n/be/units/emergency.ts.
  */
 
 const BE_ADVICE = 'General information. For your situation: ask your employer, the union or the justitiehuis (free legal advice).';
@@ -49,4 +49,4 @@ const tips = [
   },
 ];
 
-export const be: BeTaal = { nl: 'u.safety', lines, tips };
+export const be: BeTaal = { nl: 'u.emergency', lines, tips };

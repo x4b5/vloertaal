@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "Consigo distinguir palavras como man e maan.", // nieuw, nalezen
     'kjn.u.sounds.2': "Consigo repetir frases curtas com sons difíceis.", // nieuw, nalezen
     'kjn.u.safety.1': "Consigo perceber um aviso como «Pas op!».", // nieuw, nalezen
-    'kjn.u.safety.2': "Consigo comunicar um acidente.", // nieuw, nalezen
-    'kjn.u.safety.3': "Consigo dizer que ainda não aprendi uma coisa.", // nieuw, nalezen
+    'kjn.u.safety.2': "Consigo dizer que ainda não aprendi uma coisa.", // nieuw, nalezen
+    'kjn.u.emergency.1': "Consigo perguntar onde está o extintor.", // nieuw, nalezen
+    'kjn.u.emergency.2': "Consigo comunicar um acidente.", // nieuw, nalezen
     'kjn.u.apply.1': "Consigo dizer que experiência tenho.", // nieuw, nalezen
     'kjn.u.apply.2': "Consigo falar de mim numa entrevista de emprego.", // nieuw, nalezen
     'kjn.u.contract.1': "Consigo perguntar quantas horas trabalho por semana.", // nieuw, nalezen

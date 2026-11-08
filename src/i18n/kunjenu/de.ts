@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "Ich kann Wörter wie man und maan unterscheiden.", // nieuw, nalezen
     'kjn.u.sounds.2': "Ich kann kurze Sätze mit schwierigen Lauten nachsprechen.", // nieuw, nalezen
     'kjn.u.safety.1': "Ich kann eine Warnung wie „Pas op!“ verstehen.", // nieuw, nalezen
-    'kjn.u.safety.2': "Ich kann einen Unfall melden.", // nieuw, nalezen
-    'kjn.u.safety.3': "Ich kann sagen, dass ich etwas noch nicht gelernt habe.", // nieuw, nalezen
+    'kjn.u.safety.2': "Ich kann sagen, dass ich etwas noch nicht gelernt habe.", // nieuw, nalezen
+    'kjn.u.emergency.1': "Ich kann fragen, wo der Feuerlöscher hängt.", // nieuw, nalezen
+    'kjn.u.emergency.2': "Ich kann einen Unfall melden.", // nieuw, nalezen
     'kjn.u.apply.1': "Ich kann sagen, welche Erfahrung ich habe.", // nieuw, nalezen
     'kjn.u.apply.2': "Ich kann im Vorstellungsgespräch etwas über mich erzählen.", // nieuw, nalezen
     'kjn.u.contract.1': "Ich kann fragen, wie viele Stunden pro Woche ich arbeite.", // nieuw, nalezen

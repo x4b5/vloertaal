@@ -8,7 +8,7 @@ import { beTaalOn } from './live';
 import type { BeLine, BeTaal } from './types';
 import { be as firstday } from './units/firstday';
 import { be as tools } from './units/tools';
-import { be as safety } from './units/safety';
+import { be as emergency } from './units/emergency';
 import { be as warehouse } from './units/warehouse';
 import { be as data } from './units/data';
 import { be as time } from './units/time';
@@ -46,7 +46,7 @@ import { be as online } from './units/online';
 
 /** Each Belgian file by the id of its Dutch unit. */
 const BY_NL: Record<string, BeTaal | undefined> = {
-  'u.firstday': firstday, 'u.tools': tools, 'u.safety': safety, 'u.warehouse': warehouse, 'u.data': data,
+  'u.firstday': firstday, 'u.tools': tools, 'u.emergency': emergency, 'u.warehouse': warehouse, 'u.data': data,
   'u.time': time, 'u.teamwork': teamwork, 'u.contract': contract, 'u.papers': papers, 'u.pay': pay,
   'u.house': house, 'u.social': social, 'u.sayings': sayings, 'u.rights': rights, 'u.leave': leave, 'u.sick': sick, 'u.exploit': exploit,
   'u.grow': grow, 'u.health': health, 'u.money': money, 'u.travel': travel, 'u.lost': lost, 'u.shop': shop,

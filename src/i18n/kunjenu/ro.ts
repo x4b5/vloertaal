@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "Pot să deosebesc cuvinte ca man și maan.", // nieuw, nalezen
     'kjn.u.sounds.2': "Pot să repet propoziții scurte cu sunete grele.", // nieuw, nalezen
     'kjn.u.safety.1': "Pot să înțeleg un avertisment ca „Pas op!”.", // nieuw, nalezen
-    'kjn.u.safety.2': "Pot să raportez un accident.", // nieuw, nalezen
-    'kjn.u.safety.3': "Pot să spun că nu am învățat încă ceva.", // nieuw, nalezen
+    'kjn.u.safety.2': "Pot să spun că nu am învățat încă ceva.", // nieuw, nalezen
+    'kjn.u.emergency.1': "Pot să întreb unde este stingătorul.", // nieuw, nalezen
+    'kjn.u.emergency.2': "Pot să raportez un accident.", // nieuw, nalezen
     'kjn.u.apply.1': "Pot să spun ce experiență am.", // nieuw, nalezen
     'kjn.u.apply.2': "Pot să vorbesc despre mine la un interviu de angajare.", // nieuw, nalezen
     'kjn.u.contract.1': "Pot să întreb câte ore pe săptămână lucrez.", // nieuw, nalezen

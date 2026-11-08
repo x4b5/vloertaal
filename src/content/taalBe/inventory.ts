@@ -44,12 +44,15 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.understood': L('A', 'A'),
     'l.keeplearning': L('B', 'B', 'het Taalhuis → het Huis van het Nederlands; NOS Jeugdjournaal → Karrewiet (VRT)'),
   } },
-  'u.safety': { kind: 'B', lessons: {
+  // "Veiligheid" became "Veiligheid" (u.safety) and "Als het misgaat" (u.emergency) on 8 November 2026.
+  'u.safety': { kind: 'A', lessons: {
     'l.gear': L('A', 'A'),
     'l.danger': L('A', 'A'),
+    'l.notyet': L('A', 'A'),
+  } },
+  'u.emergency': { kind: 'B', lessons: {
     'l.alarm': L('A', 'A', 'geen BHV’er in de les of de tip; in Vlaanderen hoor je ook evacueren en de vluchtweg (nakijken door een Vlaamse NT2-docent)'),
     'l.accident': L('B', 'B', 'de BHV’er → de EHBO’er; Nederlandse Arbeidsinspectie → Toezicht op het Welzijn op het Werk; arbeidsongevallenverzekeraar'),
-    'l.notyet': L('A', 'A'),
   } },
   'u.warehouse': { kind: 'B', lessons: {
     'l.things': L('A', 'B', 'tip "Direct is not rude": Vlaamse collega’s zijn vaak minder direct'),

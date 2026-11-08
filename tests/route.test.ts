@@ -34,9 +34,10 @@ describe('route: one block at a time', () => {
   it('offers the next 3 unfinished units in course order, the recommended one first', () => {
     expect(nextChoices('none', done('u.firstday')).map((u) => u.id)).toEqual(['u.help', 'u.tools', 'u.safety']);
     // Finished units are skipped, wherever they are.
-    expect(nextChoices('none', done('u.firstday', 'u.tools')).map((u) => u.id)).toEqual(['u.help', 'u.safety', 'u.warehouse']);
-    // The own sector unit comes in its slot (right after Safety), then "Getallen en gegevens".
-    expect(nextChoices('construction', done('u.firstday', 'u.help', 'u.tools')).map((u) => u.id)).toEqual(['u.safety', 'u.build', 'u.data']);
+    expect(nextChoices('none', done('u.firstday', 'u.tools')).map((u) => u.id)).toEqual(['u.help', 'u.safety', 'u.emergency']);
+    // Safety is recommended, then the sector's weighted units; "Als het misgaat" (out of Safety
+    // since 8 November 2026) is recommended once Safety is done (see "choose next" below).
+    expect(nextChoices('construction', done('u.firstday', 'u.help', 'u.tools')).map((u) => u.id)).toEqual(['u.safety', 'u.build', 'u.emergency']);
   });
 
   it('includes the unfinished current block when the learner chooses another topic', () => {
@@ -95,9 +96,12 @@ describe('route: "choose next" weighs the sector', () => {
     expect(choices('production')).toEqual(['u.safety', 'u.help', 'u.factory']);
     expect(choices('cleaning')).toEqual(['u.time', 'u.help', 'u.clean']);
     expect(choices('care')).toEqual(['u.teamwork', 'u.help', 'u.care']);
-    // The focus unit done: the sector's own unit is recommended (the words of that work in week 1),
-    // the next unit in course order right after it.
-    expect(nextChoices('logistics', done('u.firstday', 'u.safety')).map((u) => u.id)).toEqual(['u.warehouse', 'u.help', 'u.time']);
+    // Safety done: its second half "Als het misgaat" (one unit until 8 November 2026) comes next,
+    // still in week 1 (FOCUS_FOLLOW_UP).
+    expect(nextChoices('logistics', done('u.firstday', 'u.safety')).map((u) => u.id)).toEqual(['u.emergency', 'u.help', 'u.warehouse']);
+    // Both done: the sector's own unit is recommended (the words of that work in week 1), the next
+    // unit in course order right after it.
+    expect(nextChoices('logistics', done('u.firstday', 'u.safety', 'u.emergency')).map((u) => u.id)).toEqual(['u.warehouse', 'u.help', 'u.time']);
     // The global course order is not changed (saved progress keeps its place).
     expect(coursePlan('logistics').main.slice(0, 4).map((u) => u.id)).toEqual(['u.firstday', 'u.help', 'u.tools', 'u.safety']);
     // No sector: plain course order.

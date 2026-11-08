@@ -83,10 +83,16 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan korte zinnen met lastige klanken nazeggen.', 'A1', 'spreken', 'I can repeat short sentences with difficult sounds.'],
   ]),
   // Veilig werken
+  // "Veiligheid" became two topics on 8 November 2026: the accident sentence went to "Als het
+  // misgaat" (was kjn.u.safety.2, now kjn.u.emergency.2), so the not-yet one is kjn.u.safety.2;
+  // the translations moved along. kjn.u.emergency.1 is new (l.alarm, s.alarm.1).
   onderwerp('u.safety', 'Veiligheid', [
     ['Ik kan een waarschuwing als "Pas op!" verstaan.', 'A1', 'luisteren', 'I can understand a warning like "Pas op!".'],
-    ['Ik kan een ongeluk melden.', 'A2', 'spreken', 'I can report an accident.'],
     ['Ik kan zeggen dat ik iets nog niet geleerd heb.', 'A2', 'gesprekken', 'I can say that I have not learned something yet.'],
+  ]),
+  onderwerp('u.emergency', 'Als het misgaat', [
+    ['Ik kan vragen waar de brandblusser hangt.', 'A1', 'spreken', 'I can ask where the fire extinguisher is.'],
+    ['Ik kan een ongeluk melden.', 'A2', 'spreken', 'I can report an accident.'],
   ]),
   // Werk vinden
   onderwerp('u.apply', 'Solliciteren', [

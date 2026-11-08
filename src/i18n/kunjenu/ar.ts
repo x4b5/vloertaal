@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "أستطيع أن أميز بين كلمات مثل man و maan.", // nieuw, nalezen
     'kjn.u.sounds.2': "أستطيع أن أكرر جملًا قصيرة فيها أصوات صعبة.", // nieuw, nalezen
     'kjn.u.safety.1': "أستطيع أن أفهم تحذيرًا مثل «Pas op!».", // nieuw, nalezen
-    'kjn.u.safety.2': "أستطيع أن أبلغ عن حادث.", // nieuw, nalezen
-    'kjn.u.safety.3': "أستطيع أن أقول إنني لم أتعلم هذا الشيء بعد.", // nieuw, nalezen
+    'kjn.u.safety.2': "أستطيع أن أقول إنني لم أتعلم هذا الشيء بعد.", // nieuw, nalezen
+    'kjn.u.emergency.1': "أستطيع أن أسأل أين طفاية الحريق.", // nieuw, nalezen
+    'kjn.u.emergency.2': "أستطيع أن أبلغ عن حادث.", // nieuw, nalezen
     'kjn.u.apply.1': "أستطيع أن أقول ما هي خبرتي.", // nieuw, nalezen
     'kjn.u.apply.2': "أستطيع أن أتحدث عن نفسي في مقابلة عمل.", // nieuw, nalezen
     'kjn.u.contract.1': "أستطيع أن أسأل كم ساعة أعمل في الأسبوع.", // nieuw, nalezen

@@ -2,7 +2,7 @@ import type { CultureTranslation } from '../culture/types';
 import { so as base } from './base';
 import { so as firstday } from './units/firstday';
 import { so as tools } from './units/tools';
-import { so as safety } from './units/safety';
+import { so as emergency } from './units/emergency';
 import { so as warehouse } from './units/warehouse';
 import { so as data } from './units/data';
 import { so as time } from './units/time';
@@ -34,5 +34,5 @@ import { so as online } from './units/online';
  * (./base.ts) and every unit's own file (./units). Loaded with the language's pack. A content
  * agent changes only its own unit files, never this one.
  */
-const texts: CultureTranslation = { ui: base.ui, gloss: { ...base.gloss, ...firstday, ...tools, ...safety, ...warehouse, ...data, ...time, ...teamwork, ...contract, ...papers, ...pay, ...house, ...social, ...sayings, ...rights, ...leave, ...sick, ...exploit, ...grow, ...health, ...money, ...travel, ...lost, ...shop, ...ai, ...kas, ...stage, ...society, ...online } };
+const texts: CultureTranslation = { ui: base.ui, gloss: { ...base.gloss, ...firstday, ...tools, ...emergency, ...warehouse, ...data, ...time, ...teamwork, ...contract, ...papers, ...pay, ...house, ...social, ...sayings, ...rights, ...leave, ...sick, ...exploit, ...grow, ...health, ...money, ...travel, ...lost, ...shop, ...ai, ...kas, ...stage, ...society, ...online } };
 export default texts;

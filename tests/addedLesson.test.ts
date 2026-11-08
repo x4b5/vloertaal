@@ -13,8 +13,8 @@ const teach = (u: string) => all(u).filter((l) => !l.endsWith('.mix'));
 const today = new Date(2026, 9, 18, 10);
 
 describe('a lesson added to a unit the learner already finished', () => {
-  // Safety finished on 1 October, before l.accident was added to it.
-  const completed = done(...all('u.safety').filter((id) => id !== 'l.accident'));
+  // Safety finished on 1 October, before l.notyet was added to it (18 October 2026).
+  const completed = done(...all('u.safety').filter((id) => id !== 'l.notyet'));
   const p: Progress = { ...emptyProgress, onboarded: true, sector: 'logistics', completed, certs: { 'u.safety': '2026-10-01' }, currentUnit: 'u.safety' };
 
   it('keeps the certificate earned then, with its date', () => {
@@ -23,17 +23,21 @@ describe('a lesson added to a unit the learner already finished', () => {
 
   it('offers the new lesson, and finishing it gives no second certificate', () => {
     expect(currentBlock(p, today, 'full')?.id).toBe('u.safety');
-    expect(unitJustDone(completed, { ...completed, ...done('l.accident') }, 'l.accident', p.certs)).toBeUndefined();
+    expect(unitJustDone(completed, { ...completed, ...done('l.notyet') }, 'l.notyet', p.certs)).toBeUndefined();
     // Without a certificate yet, finishing the unit still gives one.
-    expect(unitJustDone(completed, { ...completed, ...done('l.accident') }, 'l.accident', {})?.id).toBe('u.safety');
+    expect(unitJustDone(completed, { ...completed, ...done('l.notyet') }, 'l.notyet', {})?.id).toBe('u.safety');
   });
 });
 
 describe('the sector\'s own unit while the first focus unit waits for its mixed review', () => {
-  it('logistics, building and factory work: the own unit comes next, not the general order', () => {
+  it('logistics, building and factory work: "Als het misgaat", then the own unit, not the general order', () => {
     for (const sector of ['logistics', 'construction', 'production'] as const) {
-      const completed = { ...done(...all('u.firstday')), ...done(...teach('u.safety')) };
-      const next = currentBlock({ completed, currentUnit: 'u.safety', reviewDay: '2026-10-18', sector }, today, 'full')?.id;
+      // Safety waits for its review: its second half comes next (FOCUS_FOLLOW_UP, 8 November 2026).
+      const safetyTaught = { ...done(...all('u.firstday')), ...done(...teach('u.safety')) };
+      expect(currentBlock({ completed: safetyTaught, currentUnit: 'u.safety', reviewDay: '2026-10-18', sector }, today, 'full')?.id, sector).toBe('u.emergency');
+      // "Als het misgaat" waits for its review: the own unit comes next.
+      const completed = { ...done(...all('u.firstday')), ...done(...all('u.safety')), ...done(...teach('u.emergency')) };
+      const next = currentBlock({ completed, currentUnit: 'u.emergency', reviewDay: '2026-10-18', sector }, today, 'full')?.id;
       expect(sectorOwnUnit(sector), sector).toBeTruthy();
       expect(next, sector).toBe(sectorOwnUnit(sector));
     }
