@@ -29,14 +29,15 @@ export const trialLessonAllowed = (lessonId: string, track: Track = 'taal') => l
 /**
  * The first run, one question per page, in this order: the help language, "Woman or man?" (only
  * for a help language with gender, so the password page already talks to you in the right
- * form), the password, the sector, "In welk land werk je?" (both tracks), then "Welke kleur wil
- * je?" (the four colours of Settings > Weergave). 'done' is the home.
+ * form), the password, the sector, then "In welk land werk je?" (both tracks). 'done' is the home.
+ * No colour page (the owner's choice, 5 November 2026): every learner starts in Zand, and Settings >
+ * Weergave has the four colours.
  */
-export type OnbStep = 'language' | 'gender' | 'gate' | 'sector' | 'country' | 'colour' | 'done';
-export const ONB_ORDER: readonly OnbStep[] = ['language', 'gender', 'gate', 'sector', 'country', 'colour', 'done'];
+export type OnbStep = 'language' | 'gender' | 'gate' | 'sector' | 'country' | 'done';
+export const ONB_ORDER: readonly OnbStep[] = ['language', 'gender', 'gate', 'sector', 'country', 'done'];
 export const stepIndex = (s: OnbStep) => ONB_ORDER.indexOf(s);
 
-type OnbProgress = Pick<Progress, 'onboarded' | 'helpLang' | 'gender' | 'genderAsked' | 'sector'> & Partial<Pick<Progress, 'country' | 'colourAsked' | 'completed' | 'xp'>>;
+type OnbProgress = Pick<Progress, 'onboarded' | 'helpLang' | 'gender' | 'genderAsked' | 'sector'> & Partial<Pick<Progress, 'country' | 'completed' | 'xp'>>;
 
 /** Has the learner begun (a lesson done, or points)? Then the first run is over. */
 const started = (p: Partial<Pick<Progress, 'completed' | 'xp'>>) => Object.keys(p.completed ?? {}).length > 0 || (p.xp ?? 0) > 0;
@@ -64,8 +65,6 @@ export function onboardingStep(p: OnbProgress, access: Access | null, gateAgain 
   // The first run: the country right after the sector. A learner who began before this question
   // gets it on opening the home instead (shouldAskCountry), without a way back.
   if (p.country === undefined && !started(p)) return 'country';
-  // Last: the colour. Only in the first run; a learner who began finds it in Settings.
-  if (!p.colourAsked && !started(p)) return 'colour';
   return 'done';
 }
 
@@ -81,8 +80,6 @@ export function previousStep(step: OnbStep, p: OnbProgress): OnbStep | null {
       return OPEN_TO_ALL ? previousStep('gate', p) : 'gate';
     case 'country':
       return 'sector';
-    case 'colour':
-      return 'country';
     default:
       return null;
   }

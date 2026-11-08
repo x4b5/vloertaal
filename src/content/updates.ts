@@ -17,6 +17,12 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-08',
+    items: [
+      'De start is korter: de vraag "Welke kleur wil je?" is weg. Iedereen begint in Zand. Een andere kleur kies je bij Instellingen › Weergave.',
+    ],
+  },
+  {
     date: '2026-11-05',
     items: [
       'Hoe zeg je het? in een les over klanken: de knop om verder te gaan komt pas als je de klank of het woord hebt beluisterd. Eerst luisteren, dan door. Staat het geluid uit, dan kun je meteen verder.',

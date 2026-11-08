@@ -25,7 +25,6 @@ import { NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } 
 import { GenderScreen } from './components/Gender';
 import { shouldAskGender } from './lib/askGender';
 import { onboardingStep, previousStep, shouldAskCountry, stepIndex, trialLessonAllowed, type OnbStep } from './lib/onboarding';
-import { ColourScreen, shownColour } from './components/Colour';
 import { CountryScreen } from './components/Country';
 import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
@@ -770,12 +769,10 @@ export default function App() {
   }
   // Two steps of at most three cards; the first step's arrow goes back to the password page.
   if (step === 'sector') return <SectorScreen lang={lang} onDone={setSector} onBack={onbBack} />;
-  // Right after the sector: "In welk land werk je?" (two cards; Settings can change it later).
-  if (step === 'country') return <CountryScreen lang={lang} onDone={setCountry} onBack={onbBack} />;
-  // Last: "Welke kleur wil je?" (the four colours of Settings > Weergave).
-  // A tap shows the colour at once (the page stays); Continue ends the first run.
-  // Continue there is the end of the start: counted once per device (src/lib/count.ts countStartDone).
-  if (step === 'colour') return <ColourScreen lang={lang} current={shownColour(progress.theme)} onPick={(theme) => setProgress((p) => ({ ...p, theme }))} onDone={() => { setProgress((p) => ({ ...p, colourAsked: true })); countStartDone(); }} onBack={onbBack} />;
+  // Right after the sector: "In welk land werk je?" (two cards; Settings can change it later), the
+  // last page of the first run (no colour page: Zand, and Settings > Weergave has the colours).
+  // Its choice is the end of the start: counted once per device (src/lib/count.ts countStartDone).
+  if (step === 'country') return <CountryScreen lang={lang} onDone={(country) => { setCountry(country); countStartDone(); }} onBack={onbBack} />;
   // A learner from before the gender question (or who switched to a help language with gender
   // later): asked once on its own page on opening the home, without a way back.
   if (view.name === 'home' && shouldAskGender(progress)) {

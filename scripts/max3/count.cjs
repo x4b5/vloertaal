@@ -238,13 +238,9 @@ function defineStates(LANG) {
   // The first run: after "Weet ik nog niet" the country page, its back arrow to the sector.
   add('flow:country', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.sector-group-row[data-group="none"]'); await settle(p, 900); }, { expect: '.country-screen .chrome-back' });
   add('flow:country-back', '/', async (p) => { await firstRun({ gender: 'm', genderAsked: true })(p); await tap(p, '.sector-group-row[data-group="none"]'); await settle(p, 900); await tap(p, '.chrome-back'); await settle(p); }, { list: true, expect: '.sector-groups' });
-  // Then the colour (the last first-run page): a tap shows the colour at once and the page stays;
-  // Continue agrees and leads to the home (the owner's request, 2 November 2026).
-  const toColour = async (p) => { await firstRun({ gender: 'm', genderAsked: true, sector: 'none' })(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); };
-  add('flow:country-home', '/', toColour, { list: true, expect: '.colour-screen .max3-card.picked' });
-  add('flow:colour-pick', '/', async (p) => { await toColour(p); await tap(p, '.colour-screen .max3-card', 1); await settle(p); }, { list: true, expect: 'html[data-theme="haven"] .colour-screen .colour-go' });
-  add('flow:colour-home', '/', async (p) => { await toColour(p); await tap(p, '.colour-screen .max3-card', 3); await settle(p); await tap(p, '.colour-go'); await settle(p, 900); }, { expect: 'html[data-theme="dark"] .home3' });
-  add('flow:colour-back', '/', async (p) => { await toColour(p); await tap(p, '.chrome-back'); await settle(p); }, { expect: '.country-screen' });
+  // The country is the last first-run page (no colour page since 5 November 2026): a tap leads to the home, in Zand.
+  const toHome = async (p) => { await firstRun({ gender: 'm', genderAsked: true, sector: 'none' })(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); };
+  add('flow:country-home', '/', toHome, { expect: 'html[data-theme="light"] .home3' });
   // A learner from before the country question: a one-time page on opening the home (no back).
   add('flow:old-country', '/', firstRun({ gender: 'm', genderAsked: true, sector: 'none', completed: { 'l.hello': { best: 1, times: 1 } } }), { expect: '.country-screen' });
   // A learner from before the gender question: a one-time page instead of the home card (no back).
@@ -1078,11 +1074,8 @@ function defineRuleStates() {
   add('flow:nl-gate-phone-back', RULES, async (p) => { await toNlGate(p); await p.goBack(); await settle(p); }, { list: true, expect: '.onb-lang-list' });
   const nlNotSure = async (p) => { await toNlGate(p); await tap(p, '.sector-group-row[data-group="none"]'); await settle(p, 900); };
   add('flow:nl-country', RULES, nlNotSure, { expect: '.country-screen' });
-  // After the country the colour (a tap shows it, Verder agrees), then once "Goed om te weten"
-  // (rules:notice, [Ik snap het]), then the home.
-  const nlColour = async (p) => { await nlNotSure(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); };
-  add('flow:nl-colour', RULES, nlColour, { list: true, expect: '.colour-screen .colour-go' });
-  const nlNotice = async (p) => { await nlColour(p); await tap(p, '.colour-go'); await settle(p, 900); };
+  // After the country (the last first-run page) once "Goed om te weten" (rules:notice, [Ik snap het]), then the home.
+  const nlNotice = async (p) => { await nlNotSure(p); await tap(p, '.country-screen .max3-card', 0); await settle(p, 900); };
   add('flow:nl-notice', RULES, nlNotice, { expect: '.rules-notice-ok' });
   add('flow:nl-home', RULES, async (p) => { await nlNotice(p); await tap(p, '.rules-notice-ok'); await settle(p, 900); }, { expect: '.home3' });
   // "Goed om te weten" already seen (rulesNotice): else that page comes first, before the home.

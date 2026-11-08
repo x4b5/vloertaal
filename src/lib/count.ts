@@ -198,7 +198,7 @@ export function countDayMilestones(practisedDays: number): number[] {
  * The start, before lesson 1 (the owner's request, 4 November 2026: from 29 October until then
  * nothing was counted before a finished lesson, so who stopped in the first run could not be seen).
  * Each device counts, once: the app opened for the first time ("/e/eerste/geopend"), and the first
- * run done, past "Welke kleur wil je?" ("/e/eerste/start-af"). With "/e/dag/1" that is a funnel:
+ * run done, past "In welk land werk je?" ("/e/eerste/start-af"). With "/e/dag/1" that is a funnel:
  * how many new, how many through the start, how many with a lesson. Only that it happened: no help
  * language, no sector, no country, no colour, no date, no id.
  */
@@ -247,7 +247,7 @@ export function countFirstOpen(isNew: boolean): boolean {
   return false;
 }
 
-/** The first run is done: Continue on "Welke kleur wil je?" (src/App.tsx). "/e/eerste/start-af", once per device. */
+/** The first run is done: the country chosen, the last first-run page (src/App.tsx). "/e/eerste/start-af", once per device. */
 export function countStartDone(): boolean {
   return countFirstSteps(['start-af']).length > 0;
 }

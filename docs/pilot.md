@@ -138,7 +138,7 @@ toestel-id.
 | Wat wordt geteld | Pad in GoatCounter |
 |---|---|
 | De app voor het eerst open | `/e/eerste/geopend`: één keer per toestel, op een toestel dat de start nog niet begon (sinds 4 november 2026) |
-| De start afgerond | `/e/eerste/start-af`: één keer per toestel, na Verder bij „Welke kleur wil je?” (sinds 4 november 2026) |
+| De start afgerond | `/e/eerste/start-af`: één keer per toestel, na de keuze bij „In welk land werk je?” (sinds 5 november 2026; daarvoor na „Welke kleur wil je?”) |
 | Les gestart | `/e/lesson-start/l-cv` (de herhaling van de dag: `/e/lesson-start/daily`) |
 | Les gestopt | `/e/lesson-quit/l-cv/q2`: met het kwart van de les waarin iemand op ✕ → Stoppen tikte (q1 tot q4) |
 | Les afgerond | `/e/lesson-done/l-cv/t2-5`: met hoe lang ongeveer (`t0-2`, `t2-5`, `t5-10`, `t10plus` minuten; de tijd dat de app weg was telt niet) |
@@ -165,7 +165,7 @@ als gestopt; dat zie je alleen aan het verschil tussen gestart en afgerond.
 
 **Haken mensen af bij de start?** Zet `/e/eerste/geopend` naast `/e/eerste/start-af` en `/e/dag/1`.
 Bijvoorbeeld 100 geopend, 80 door de start, 60 met les 1 af: dan haken er 20 af in de vragen van de
-start (taal, vrouw of man, werk, land, kleur), en 20 tussen de start en het eind van les 1. Wélke
+start (taal, vrouw of man, werk, land), en 20 tussen de start en het eind van les 1. Wélke
 vraag mensen kost (bijvoorbeeld de kleur), zegt de telling niet: dat ziet u alleen op het
 waarneemformulier van dag 1.
 
@@ -187,7 +187,7 @@ Zo ziet u na een paar weken of er iets verandert, zonder elke dag te kijken.
 | Getal | Pad in GoatCounter | Wat het zegt |
 |---|---|---|
 | Geopend | `/e/eerste/geopend` | nieuwe toestellen: de starters |
-| Start af | `/e/eerste/start-af` | door de vragen van de start, tot en met de kleur |
+| Start af | `/e/eerste/start-af` | door de vragen van de start, tot en met het land |
 | Dag 1 | `/e/dag/1` | de eerste les af |
 | Dag 2 | `/e/dag/2` | terug op een tweede dag |
 | Dag 7 | `/e/dag/7` | 7 dagen met een les |
