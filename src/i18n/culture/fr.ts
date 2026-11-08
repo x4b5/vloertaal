@@ -46,7 +46,7 @@ const t: CultureTranslation = {
     'c.ask.o3': 'Excuse-toi pour ton néerlandais et commence à travailler.', // nagelezen (2e lezing)
     'c.ask.w': 'Ici, les responsables s’attendent à des questions. Mieux vaut demander deux fois que faire une erreur.', // nieuw, nalezen
     'c.gear': 'Les règles de sécurité sont pour tout le monde',
-    'c.gear.b': 'Les règles sur les casques, les chaussures et les gants ne sont pas des conseils : tout le monde les suit, même le patron. Ton employeur doit te donner gratuitement l’équipement de protection dont tu as besoin. Un équipement qui ne te va pas te protège mal, alors demande ta taille : “Heb je dit ook in mijn maat?”', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.gear.b': 'Les règles sur les casques, les chaussures et les gants ne sont pas des conseils : tout le monde les suit, même le patron. Ton employeur doit te donner gratuitement l’équipement de protection dont tu as besoin. Un équipement qui ne te va pas te protège mal. Alors demande ta taille : “Heb je dit ook in mijn maat?”',
     'c.gear.p': 'Mes gants sont abîmés. Où est-ce que j’en trouve de nouveaux ?',
     'c.gear.s': 'Tes gants sont déchirés. Que fais-tu ?',
     'c.gear.o1': 'Demande des gants neufs à ton responsable.',
@@ -134,7 +134,7 @@ const t: CultureTranslation = {
     'c.no.o3': 'Dis oui : on ne peut pas dire non à un chef.', // nagelezen (2e lezing)
     'c.no.w': 'Un “nee” clair est respecté. Dire “ja” et ne pas venir casse beaucoup plus la confiance.',
     'c.task': 'Dis quand c’est fini, demande quand ce n’est pas clair',
-    'c.task.b': 'Aux Pays-Bas, un responsable donne souvent une tâche en quelques mots, et il attend que tu dises quand c’est fini. Dire “ja” quand tu n’as pas compris cause souvent des erreurs. Redemander, ou demander qu’on te montre, est normal ici et pas impoli.',
+    'c.task.b': 'Aux Pays-Bas, un responsable donne souvent une tâche en quelques mots. Quand c’est fini, tu le dis. Dire “ja” quand tu n’as pas compris cause souvent des erreurs. Redemander, ou demander qu’on te montre, est normal ici et pas impoli.',
     'c.task.p': 'Fini ! Qu’est-ce que je dois faire maintenant ?',
     'c.task.s': 'Ton responsable explique une tâche très vite. Tu n’as compris que la moitié. Que fais-tu ?',
     'c.task.o1': 'Demande à le voir encore une fois.', // nagelezen (2e lezing)
@@ -142,7 +142,7 @@ const t: CultureTranslation = {
     'c.task.o3': 'Attends qu’un collègue le fasse.',
     'c.task.w': 'Redemander est normal et prend une minute. Réparer une erreur prend bien plus de temps. La plupart des responsables préfèrent montrer deux fois.',
     'c.clear': 'Dis d’abord le plus important', // nieuw, nalezen
-    'c.clear.b': 'Dans beaucoup de langues, il est poli de raconter d’abord toute l’histoire, et l’essentiel à la fin. Au travail ici, c’est l’inverse : dis d’abord ce qui ne va pas ou ce dont tu as besoin, puis la raison. Parle calmement, et arrête-toi après deux ou trois phrases, pour que l’autre puisse poser une question. Dans un entretien d’embauche aussi : d’abord la réponse, puis un exemple. Parler lentement n’est pas impoli ici : ça aide les gens à te comprendre.', // nieuw, nalezen
+    'c.clear.b': 'Dans beaucoup de langues, il est poli de raconter d’abord toute l’histoire, et l’essentiel à la fin. Au travail ici, c’est l’inverse. Dis d’abord ce qui ne va pas ou ce dont tu as besoin. Ensuite, donne la raison. Parle calmement, et arrête-toi après deux ou trois phrases, pour que l’autre puisse poser une question. Dans un entretien d’embauche aussi : d’abord la réponse, puis un exemple. Parler lentement n’est pas impoli ici : ça aide les gens à te comprendre.',
     'c.clear.p': 'Pardon, je le redis calmement.', // nieuw, nalezen
     'c.clear.s': 'Tu arrives avec 20 minutes de retard. Ton responsable demande : “Wat is er?” Que fais-tu ?', // nieuw, nalezen
     'c.clear.o1': 'Dis d’abord que tu es en retard et excuse-toi. Puis dis pourquoi.', // nieuw, nalezen
@@ -288,7 +288,7 @@ const t: CultureTranslation = {
     'c.explain.o3': '“Sorry, sorry! Het is niet mijn schuld!”', // nieuw, nalezen
     'c.explain.w': 'Maintenant ton chef d’équipe sait ce qui ne va pas, où, et ce dont tu as besoin. Personne ne doit d’abord poser trois questions.', // nieuw, nalezen
     'c.listen': 'D’abord écouter, puis vérifier', // nieuw, nalezen
-    'c.listen.b': 'Laisse l’autre finir de parler (uitpraten) avant de répondre. Regarde la personne qui te parle : ici, ça montre que tu écoutes. Dans beaucoup de pays, on ne regarde pas son chef dans les yeux, par respect ; ici, le regarder de temps en temps est poli. Quand l’autre a fini, répète ce que tu as entendu : “Dus eerst …, en dan …?” Tu ne sais pas bien ce qu’un mot veut dire ? Demande : “Wat bedoel je met …?” Certains collègues font des blagues avec un air sérieux. Tu as un doute ? Demande : “Was dat een grapje?”', // nieuw, nalezen
+    'c.listen.b': 'Laisse l’autre finir de parler (uitpraten) avant de répondre. Regarde la personne qui te parle : ici, ça montre que tu écoutes. Dans beaucoup de pays, on ne regarde pas son chef dans les yeux. C’est un signe de respect. Ici, le regarder de temps en temps est poli. Quand l’autre a fini, répète ce que tu as entendu : “Dus eerst …, en dan …?” Tu ne sais pas bien ce qu’un mot veut dire ? Demande : “Wat bedoel je met …?” Certains collègues font des blagues avec un air sérieux. Tu as un doute ? Demande : “Was dat een grapje?”',
     'c.listen.p': 'Attends, je veux bien comprendre.', // nieuw, nalezen
     'c.listen.s': 'Ta responsable explique une nouvelle tâche. Tu veux dire quelque chose, mais elle parle encore. Que fais-tu ?', // nieuw, nalezen
     'c.listen.o1': 'Laisse-la finir. Puis répète ce que tu as entendu.', // nieuw, nalezen

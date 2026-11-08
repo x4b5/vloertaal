@@ -46,7 +46,7 @@ const t: CultureTranslation = {
     'c.ask.o3': 'Pides perdón por tu neerlandés y empiezas a trabajar.', // nagelezen (2e lezing)
     'c.ask.w': 'Aquí los encargados esperan preguntas. Es mejor preguntar dos veces que cometer un error.', // nieuw, nalezen
     'c.gear': 'Las normas de seguridad son para todos',
-    'c.gear.b': 'Las normas sobre cascos, zapatos y guantes no son una sugerencia: todos las cumplen, también el jefe. Tu empresa te tiene que dar gratis el equipo de protección que necesitas. Un equipo que no te queda bien no te protege bien, así que pide tu talla: “Heb je dit ook in mijn maat?”',
+    'c.gear.b': 'Las normas sobre cascos, zapatos y guantes no son una sugerencia: todos las cumplen, también el jefe. Tu empresa te tiene que dar gratis el equipo de protección que necesitas. Un equipo que no te queda bien no te protege bien. Así que pide tu talla: “Heb je dit ook in mijn maat?”',
     'c.gear.p': 'Mis guantes están rotos. ¿Dónde consigo unos nuevos?',
     'c.gear.s': 'Tus guantes están rotos. ¿Qué haces?',
     'c.gear.o1': 'Pides guantes nuevos a tu encargado.',
@@ -134,7 +134,7 @@ const t: CultureTranslation = {
     'c.no.o3': 'Dices que sí: a un jefe no se le puede decir que no.', // nagelezen (2e lezing)
     'c.no.w': 'Un “nee” claro se respeta. Decir “ja” y no ir rompe mucho más la confianza.',
     'c.task': 'Di cuándo has terminado, pregunta cuando no está claro',
-    'c.task.b': 'En los Países Bajos, un encargado muchas veces da una tarea con pocas palabras y espera que digas cuándo has terminado. Decir “ja” cuando no lo has entendido muchas veces lleva a errores. Volver a preguntar, o pedir que te lo enseñen, aquí es normal y no es de mala educación.',
+    'c.task.b': 'En los Países Bajos, un encargado muchas veces da una tarea con pocas palabras. Cuando has terminado, lo dices. Decir “ja” cuando no lo has entendido muchas veces lleva a errores. Volver a preguntar, o pedir que te lo enseñen, aquí es normal y no es de mala educación.',
     'c.task.p': '¡Listo! ¿Qué tengo que hacer ahora?',
     'c.task.s': 'Tu encargado te explica una tarea muy rápido. Solo has entendido la mitad. ¿Qué haces?',
     'c.task.o1': 'Pides que te lo enseñen una vez más.', // nagelezen (2e lezing)
@@ -142,7 +142,7 @@ const t: CultureTranslation = {
     'c.task.o3': 'Esperas a que lo haga un compañero.',
     'c.task.w': 'Volver a preguntar es normal y lleva un minuto. Arreglar un error lleva mucho más. La mayoría de los encargados prefiere enseñarlo dos veces.',
     'c.clear': 'Di primero lo más importante', // nieuw, nalezen
-    'c.clear.b': 'En muchos idiomas es educado contar primero toda la historia, y lo importante al final. En el trabajo aquí es al revés: primero di qué pasa o qué necesitas, luego el motivo. Habla con calma y para después de dos o tres frases, para que la otra persona pueda preguntar algo. También en una entrevista de trabajo: primero la respuesta, luego un ejemplo. Hablar despacio aquí no es de mala educación: ayuda a que te entiendan.', // nieuw, nalezen
+    'c.clear.b': 'En muchos idiomas es educado contar primero toda la historia, y lo importante al final. En el trabajo aquí es al revés. Primero di qué pasa o qué necesitas. Luego da el motivo. Habla con calma y para después de dos o tres frases, para que la otra persona pueda preguntar algo. También en una entrevista de trabajo: primero la respuesta, luego un ejemplo. Hablar despacio aquí no es de mala educación: ayuda a que te entiendan.',
     'c.clear.p': 'Perdón, lo digo otra vez con calma.', // nieuw, nalezen
     'c.clear.s': 'Llegas 20 minutos tarde. Tu encargado pregunta: “Wat is er?” ¿Qué haces?', // nieuw, nalezen
     'c.clear.o1': 'Primero dices que llegas tarde y que lo sientes. Luego dices por qué.', // nieuw, nalezen
@@ -288,7 +288,7 @@ const t: CultureTranslation = {
     'c.explain.o3': '“Sorry, sorry! Het is niet mijn schuld!”', // nieuw, nalezen
     'c.explain.w': 'Ahora tu jefe de equipo sabe qué pasa, dónde, y qué necesitas. Nadie tiene que hacer primero tres preguntas.', // nieuw, nalezen
     'c.listen': 'Primero escucha, luego comprueba', // nieuw, nalezen
-    'c.listen.b': 'Deja que la otra persona termine de hablar (uitpraten) antes de contestar. Mira a la persona que te habla: aquí, eso muestra que estás escuchando. En muchos países no se mira al jefe a los ojos, por respeto; aquí, mirarle de vez en cuando es educado. Cuando la otra persona ha terminado, repite lo que has oído: “Dus eerst …, en dan …?”. ¿No sabes bien qué significa una palabra? Pregunta: “Wat bedoel je met …?” Algunos compañeros hacen bromas con la cara seria. ¿Tienes dudas? Pregunta: “Was dat een grapje?”', // nieuw, nalezen
+    'c.listen.b': 'Deja que la otra persona termine de hablar (uitpraten) antes de contestar. Mira a la persona que te habla: aquí, eso muestra que estás escuchando. En muchos países no se mira al jefe a los ojos. Es una señal de respeto. Aquí, mirarle de vez en cuando es educado. Cuando la otra persona ha terminado, repite lo que has oído: “Dus eerst …, en dan …?”. ¿No sabes bien qué significa una palabra? Pregunta: “Wat bedoel je met …?” Algunos compañeros hacen bromas con la cara seria. ¿Tienes dudas? Pregunta: “Was dat een grapje?”',
     'c.listen.p': 'Espera, quiero entenderlo bien.', // nieuw, nalezen
     'c.listen.s': 'Tu encargada te explica una tarea nueva. Quieres decir algo, pero ella todavía está hablando. ¿Qué haces?', // nieuw, nalezen
     'c.listen.o1': 'Dejas que termine. Luego repites lo que has oído.', // nieuw, nalezen

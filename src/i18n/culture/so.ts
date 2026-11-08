@@ -47,7 +47,7 @@ const t: CultureTranslation = {
     'c.ask.o3': "Raali gelin ka bixi Af-Holandiiskaaga oo bilow shaqada.", // nieuw, nalezen
     'c.ask.w': "Madaxda halkan waxay filayaan su'aalo. Waxaa fiican inaad laba jeer weydiiso intii aad khalad samayn lahayd.", // nieuw, nalezen
     'c.gear': "Xeerarka ammaanku waa qof walba", // nieuw, nalezen
-    'c.gear.b': "Xeerarka ku saabsan koofiyadaha adag, kabaha iyo gacmo-gashiyada ma aha talo keliya: qof walba wuu raacaa, xitaa madaxa. Loo-shaqeeyahaagu waa inuu ku siiyaa qalabka ilaalinta ee aad u baahan tahay, bilaash. Qalab aan kugu habboonayn si fiican kuuma ilaaliyo, sidaas darteed weydii cabbirkaaga: “Heb je dit ook in mijn maat?”", // nieuw, nalezen
+    'c.gear.b': "Xeerarka ku saabsan koofiyadaha adag, kabaha iyo gacmo-gashiyada ma aha talo keliya: qof walba wuu raacaa, xitaa madaxa. Loo-shaqeeyahaagu waa inuu ku siiyaa qalabka ilaalinta ee aad u baahan tahay, bilaash. Qalab aan kugu habboonayn si fiican kuuma ilaaliyo. Sidaas darteed weydii cabbirkaaga: “Heb je dit ook in mijn maat?”",
     'c.gear.p': "Gacmo-gashiyadaydu way jeexmeen. Xaggee ka helaa kuwo cusub?", // nieuw, nalezen
     'c.gear.s': "Gacmo-gashiyadaadu way jeexmeen. Maxaad samaynaysaa?", // nieuw, nalezen
     'c.gear.o1': "Madaxaaga ka codso gacmo-gashiyo cusub.", // nieuw, nalezen
@@ -135,7 +135,7 @@ const t: CultureTranslation = {
     'c.no.o3': "Dheh haa: madaxa maya laguma dhihi karo.", // nieuw, nalezen
     'c.no.w': "“Nee” cad waa la qaddariyaa. Inaad tiraahdo “ja” oo aadan iman waxay aad u jebisaa kalsoonida.", // nieuw, nalezen
     'c.task': "Sheeg marka ay dhammaato, weydii marka aysan caddayn", // nieuw, nalezen
-    'c.task.b': "Holland madaxu inta badan hawl ayuu ku siiyaa ereyo yar, wuxuuna filayaa inaad sheegto marka ay dhammaato. Inaad tiraahdo “ja” marka aadan fahmin inta badan waxay keentaa khaladaad. Mar kale weydiintu, ama inaad codsato in lagu tuso, halkan waa caadi, edeb darrana ma aha.", // nieuw, nalezen
+    'c.task.b': "Holland madaxu inta badan hawl ayuu ku siiyaa ereyo yar. Marka ay dhammaato, adigu waad sheegtaa. Inaad tiraahdo “ja” marka aadan fahmin inta badan waxay keentaa khaladaad. Mar kale weydiintu, ama inaad codsato in lagu tuso, halkan waa caadi, edeb darrana ma aha.",
     'c.task.p': "Waan dhammeeyay! Hadda maxaan sameeyaa?", // nieuw, nalezen
     'c.task.s': "Madaxaagu hawl ayuu si aad u dhakhso ah u sharxayaa. Badh keliya ayaad fahantay. Maxaad samaynaysaa?", // nieuw, nalezen
     'c.task.o1': "Codso in mar kale lagu tuso.", // nieuw, nalezen
@@ -143,7 +143,7 @@ const t: CultureTranslation = {
     'c.task.o3': "Sug ilaa saaxiib shaqo sameeyo.", // nieuw, nalezen
     'c.task.w': "Mar kale weydiintu waa caadi, waxayna qaadataa hal daqiiqo. Khalad hagaajintiisu wax aad uga dheer ayay qaadataa. Madaxda intooda badan waxay doorbidaan inay laba jeer ku tusaan.", // nieuw, nalezen
     'c.clear': "Marka hore sheeg waxa ugu muhiimsan", // nieuw, nalezen
-    'c.clear.b': "Luqado badan waa edeb in marka hore sheekada oo dhan la sheego, ujeeddadana dhammaadka. Halkan shaqada waa lid: marka hore sheeg waxa qaldan ama waxa aad u baahan tahay, kadib sababta. Si deggan u hadal, oo jooji laba ama saddex jumladood kadib, si qofka kale wax u weydiiyo. Wareysiga shaqada sidoo kale: marka hore jawaabta, kadib tusaale. Si tartiib ah u hadlid halkan edeb darro ma aha: waxay ka caawisaa dadka inay ku fahmaan.", // nieuw, nalezen
+    'c.clear.b': "Luqado badan waa edeb in marka hore sheekada oo dhan la sheego, ujeeddadana dhammaadka. Halkan shaqada waa lid. Marka hore sheeg waxa qaldan ama waxa aad u baahan tahay. Kadib sheeg sababta. Si deggan u hadal, oo jooji laba ama saddex jumladood kadib, si qofka kale wax u weydiiyo. Wareysiga shaqada sidoo kale: marka hore jawaabta, kadib tusaale. Si tartiib ah u hadlid halkan edeb darro ma aha: waxay ka caawisaa dadka inay ku fahmaan.",
     'c.clear.p': "Waan ka xumahay, mar kale ayaan si deggan u sheegayaa.", // nieuw, nalezen
     'c.clear.s': "Waxaad soo gashay adigoo 20 daqiiqo daahay. Madaxaagu wuxuu ku weydiiyay: “Wat is er?” Maxaad samaynaysaa?", // nieuw, nalezen
     'c.clear.o1': "Marka hore sheeg inaad daahday oo aad ka xumahay. Kadib sheeg sababta.", // nieuw, nalezen
@@ -289,7 +289,7 @@ const t: CultureTranslation = {
     'c.explain.o3': "“Sorry, sorry! Het is niet mijn schuld!”", // nieuw, nalezen
     'c.explain.w': "Hadda hoggaamiyaha kooxdaadu wuu garanayaa waxa qaldan, meesha uu yahay, iyo waxaad u baahan tahay. Qofna uma baahna inuu marka hore saddex su'aalood weydiiyo.", // nieuw, nalezen
     'c.listen': "Marka hore dhegeyso, kadib hubi", // nieuw, nalezen
-    'c.listen.b': "U oggolow qofka kale inuu hadalka dhammeeyo (uitpraten) ka hor intaadan jawaabin. Eeg qofka kula hadlaya: halkan, taasi waxay muujinaysaa inaad dhegeysanayso. Dalal badan madaxaaga indhaha kuma eegtid, ixtiraam darteed; halkan, inaad mar mar eegto waa edeb. Marka qofka kale dhammeeyo, dib u sheeg waxaad maqashay: “Dus eerst …, en dan …?” Ma hubtid waxa erey macnihiisu yahay? Weydii: “Wat bedoel je met …?” Saaxiibada shaqada qaarkood waxay kaftamaan iyagoo weji dhab ah leh. Ma hubtid? Weydii: “Was dat een grapje?”", // nieuw, nalezen
+    'c.listen.b': "U oggolow qofka kale inuu hadalka dhammeeyo (uitpraten) ka hor intaadan jawaabin. Eeg qofka kula hadlaya: halkan, taasi waxay muujinaysaa inaad dhegeysanayso. Dalal badan madaxaaga indhaha kuma eegtid. Taasi waa calaamad ixtiraam. Halkan, inaad mar mar eegto waa edeb. Marka qofka kale dhammeeyo, dib u sheeg waxaad maqashay: “Dus eerst …, en dan …?” Ma hubtid waxa erey macnihiisu yahay? Weydii: “Wat bedoel je met …?” Saaxiibada shaqada qaarkood waxay kaftamaan iyagoo weji dhab ah leh. Ma hubtid? Weydii: “Was dat een grapje?”",
     'c.listen.p': "Sug, waxaan rabaa inaan si fiican u fahmo.", // nieuw, nalezen
     'c.listen.s': "Madaxaagu waxay sharraxaysaa hawl cusub. Waxaad rabtaa inaad wax tiraahdo, laakiin weli way hadlaysaa. Maxaad samaynaysaa?", // nieuw, nalezen
     'c.listen.o1': "U oggolow inay dhammayso. Kadib dib u sheeg waxaad maqashay.", // nieuw, nalezen
