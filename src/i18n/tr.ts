@@ -540,6 +540,7 @@ const lang: HelpLanguageSource = {
 
     // Unit: Safety first
     'u.safety': 'Önce güvenlik',
+    'u.emergency': "Bir şeyler ters gittiğinde", // nieuw, nalezen
     'l.gear': 'Koruyucu ekipman',
     'w.helm': 'baret',
     'w.handschoenen': 'eldivenler',

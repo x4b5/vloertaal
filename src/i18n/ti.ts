@@ -507,6 +507,7 @@ const lang: HelpLanguageSource = {
     'u.firstday': 'ቀዳማይ መዓልቲ ስራሕ',
     'u.help': 'ሓገዝ ምሕታት',
     'u.safety': 'ድሕንነት ቅድሚ ኩሉ',
+    'u.emergency': "ገለ ነገር ምስ ዝጋገ", // nieuw, nalezen
     'u.warehouse': 'ኣብ መኽዘን',
     'u.time': 'ግዜን መደብ ስራሕን',
 

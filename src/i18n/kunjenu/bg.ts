@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "Мога да различа думи като man и maan.", // nieuw, nalezen
     'kjn.u.sounds.2': "Мога да повторя кратки изречения с трудни звуци.", // nieuw, nalezen
     'kjn.u.safety.1': "Мога да разбера предупреждение като „Pas op!“.", // nieuw, nalezen
-    'kjn.u.safety.2': "Мога да съобщя за злополука.", // nieuw, nalezen
-    'kjn.u.safety.3': "Мога да кажа, че още не са ме научили на нещо.", // nieuw, nalezen
+    'kjn.u.safety.2': "Мога да кажа, че още не са ме научили на нещо.", // nieuw, nalezen
+    'kjn.u.emergency.1': "Мога да попитам къде е пожарогасителят.", // nieuw, nalezen
+    'kjn.u.emergency.2': "Мога да съобщя за злополука.", // nieuw, nalezen
     'kjn.u.apply.1': "Мога да кажа какъв опит имам.", // nieuw, nalezen
     'kjn.u.apply.2': "Мога да разкажа за себе си на интервю за работа.", // nieuw, nalezen
     'kjn.u.contract.1': "Мога да попитам колко часа седмично работя.", // nieuw, nalezen

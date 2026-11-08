@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "“man” ve “maan” gibi kelimeleri ayırt edebilirim.", // nieuw, nalezen
     'kjn.u.sounds.2': "Zor sesler içeren kısa cümleleri tekrar edebilirim.", // nieuw, nalezen
     'kjn.u.safety.1': "“Pas op!” gibi bir uyarıyı anlayabilirim.", // nieuw, nalezen
-    'kjn.u.safety.2': "Bir kazayı bildirebilirim.", // nieuw, nalezen
-    'kjn.u.safety.3': "Bir şeyi henüz öğrenmediğimi söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.safety.2': "Bir şeyi henüz öğrenmediğimi söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.emergency.1': "Yangın söndürücünün nerede olduğunu sorabilirim.", // nieuw, nalezen
+    'kjn.u.emergency.2': "Bir kazayı bildirebilirim.", // nieuw, nalezen
     'kjn.u.apply.1': "Ne tür deneyimim olduğunu anlatabilirim.", // nieuw, nalezen
     'kjn.u.apply.2': "İş görüşmesinde kendimden bahsedebilirim.", // nieuw, nalezen
     'kjn.u.contract.1': "Haftada kaç saat çalıştığımı sorabilirim.", // nieuw, nalezen

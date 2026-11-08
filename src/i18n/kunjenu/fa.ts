@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "می‌توانم کلمه‌هایی مثل man و maan را از هم تشخیص بدهم.", // nieuw, nalezen
     'kjn.u.sounds.2': "می‌توانم جمله‌های کوتاه با صداهای سخت را تکرار کنم.", // nieuw, nalezen
     'kjn.u.safety.1': "می‌توانم هشداری مثل «Pas op!» را بفهمم.", // nieuw, nalezen
-    'kjn.u.safety.2': "می‌توانم یک حادثه را گزارش بدهم.", // nieuw, nalezen
-    'kjn.u.safety.3': "می‌توانم بگویم که چیزی را هنوز یاد نگرفته‌ام.", // nieuw, nalezen
+    'kjn.u.safety.2': "می‌توانم بگویم که چیزی را هنوز یاد نگرفته‌ام.", // nieuw, nalezen
+    'kjn.u.emergency.1': "می‌توانم بپرسم کپسول آتش‌نشانی کجاست.", // nieuw, nalezen
+    'kjn.u.emergency.2': "می‌توانم یک حادثه را گزارش بدهم.", // nieuw, nalezen
     'kjn.u.apply.1': "می‌توانم بگویم چه تجربه‌ای دارم.", // nieuw, nalezen
     'kjn.u.apply.2': "می‌توانم در مصاحبهٔ کاری دربارهٔ خودم حرف بزنم.", // nieuw, nalezen
     'kjn.u.contract.1': "می‌توانم بپرسم هفته‌ای چند ساعت کار می‌کنم.", // nieuw, nalezen

@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "Puedo distinguir palabras como man y maan.", // nieuw, nalezen
     'kjn.u.sounds.2': "Puedo repetir frases cortas con sonidos difíciles.", // nieuw, nalezen
     'kjn.u.safety.1': "Puedo entender un aviso como «Pas op!».", // nieuw, nalezen
-    'kjn.u.safety.2': "Puedo avisar de un accidente.", // nieuw, nalezen
-    'kjn.u.safety.3': "Puedo decir que todavía no he aprendido algo.", // nieuw, nalezen
+    'kjn.u.safety.2': "Puedo decir que todavía no he aprendido algo.", // nieuw, nalezen
+    'kjn.u.emergency.1': "Puedo preguntar dónde está el extintor.", // nieuw, nalezen
+    'kjn.u.emergency.2': "Puedo avisar de un accidente.", // nieuw, nalezen
     'kjn.u.apply.1': "Puedo contar qué experiencia tengo.", // nieuw, nalezen
     'kjn.u.apply.2': "Puedo hablar de mí en una entrevista de trabajo.", // nieuw, nalezen
     'kjn.u.contract.1': "Puedo preguntar cuántas horas trabajo a la semana.", // nieuw, nalezen

@@ -506,6 +506,7 @@ const lang: HelpLanguageSource = {
     'u.firstday': 'روز اول کار',
     'u.help': 'کمک خواستن',
     'u.safety': 'اول ایمنی',
+    'u.emergency': "وقتی کدام حادثه رخ می‌دهد", // nieuw, nalezen
     'u.warehouse': 'در گدام',
     'u.time': 'وقت و تقسیم اوقات کار',
 

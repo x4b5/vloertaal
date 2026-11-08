@@ -540,6 +540,7 @@ const lang: HelpLanguageSource = {
 
     // Unit: Safety first
     'u.safety': "Ammaanku waa koowaad", // nieuw, nalezen
+    'u.emergency': "Marka wax khaldamaan", // nieuw, nalezen
     'l.gear': "Qalabka badbaadada", // nieuw, nalezen
     'w.helm': "koofiyadda adag", // nieuw, nalezen
     'w.handschoenen': "galoofyada", // nieuw, nalezen

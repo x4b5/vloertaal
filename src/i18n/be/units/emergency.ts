@@ -1,6 +1,6 @@
 import type { Gloss } from '../types';
 
-// The translations of the Belgian version of u.safety (src/content/taalBe/units/safety.ts), one
+// The translations of the Belgian version of u.emergency (src/content/taalBe/units/emergency.ts), one
 // object per help language. "// nieuw, nalezen": a new translation, not yet read by a native speaker.
 // "// = <id>": the same text as the Dutch translation of that id (src/i18n), unchanged.
 

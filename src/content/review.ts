@@ -15,6 +15,8 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.tools': ['u.help', 'u.contact'],
   'u.sounds': ['u.firstday', 'u.help'],
   'u.safety': ['u.build', 'u.factory'],
+  // Als het misgaat (out of Veiligheid, 8 November 2026): safety, and health (the doctor, hurt).
+  'u.emergency': ['u.safety', 'u.health'],
   'u.warehouse': ['u.safety', 'u.time'],
   'u.data': ['u.firstday', 'u.time'],
   'u.time': ['u.leave', 'u.contact'],

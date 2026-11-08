@@ -540,6 +540,7 @@ const lang: HelpLanguageSource = {
 
     // Unit: Safety first
     'u.safety': 'Безпека понад усе',
+    'u.emergency': "Коли щось іде не так", // nieuw, nalezen
     'l.gear': 'Засоби захисту',
     'w.helm': 'каска',
     'w.handschoenen': 'рукавиці',

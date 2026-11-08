@@ -55,7 +55,8 @@ describe('the new sectors Techniek and Garage', () => {
     for (const [sector, own] of [['technical', 'u.tech'], ['garage', 'u.garage']] as const) {
       const { main, other } = coursePlan(sector);
       expect(main[3].id).toBe('u.safety');
-      expect(main[4].id, sector).toBe(own);
+      expect(main[4].id).toBe('u.emergency');
+      expect(main[5].id, sector).toBe(own);
       expect(other.map((u) => u.id)).not.toContain(own);
       expect(main.length + other.length).toBe(units.length);
     }

@@ -95,7 +95,7 @@ export function isOtherSector(unitId: string, sector: SectorChoice | undefined):
   return own !== undefined && own !== sector;
 }
 
-/** The slot for the learner's own sector unit(s): where the warehouse unit sits in the course (05, right after Safety). */
+/** The slot for the learner's own sector unit(s): where the warehouse unit sits in the course (06, right after Safety and Als het misgaat). */
 const SECTOR_SLOT = 'u.warehouse';
 /** In the work-rules track the own sector unit(s) come right after this basis unit ("Veilig werken"). */
 const RULES_SLOT_AFTER = 'r.veilig';
@@ -165,6 +165,13 @@ export function sectorFirstFocus(sector: SectorChoice | undefined, track: Track 
   const s = sectors.find((x) => x.id === sector);
   return s ? ofTrack(s, track).focus[0] : undefined;
 }
+
+/**
+ * A focus unit split in two keeps both halves together in the recommendation: "Als het misgaat"
+ * (fire alarm, accidents) was part of Veiligheid until 8 November 2026 and still comes in week 1,
+ * before the sector's own unit.
+ */
+export const FOCUS_FOLLOW_UP: Readonly<Record<string, string>> = { 'u.safety': 'u.emergency' };
 
 /**
  * The sector choice in two small steps: first a list of one kind of row (the three kinds of work
