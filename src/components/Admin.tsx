@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ChromeBack } from './ChromeBack';
 import { COUNTER, countingOn, mayCount } from '../lib/count';
 import { adminUnlocked, checkAdminPassword, lockAdmin } from '../lib/adminLock';
+import { AdminLessons } from './AdminLessons';
 
 interface Credits {
   tier: string;
@@ -19,10 +20,16 @@ const date = (iso: string) =>
  * Hidden page for the app owner (open with #beheer): ElevenLabs credits left this
  * month, written to credits.json at build time (scripts/fetch-credits.mjs). Dutch only on purpose.
  */
-export function Admin({ onBack }: { onBack: () => void }) {
+interface AdminProps {
+  onBack: () => void;
+  /** Opens a lesson to look through: no progress saved, nothing counted. */
+  onLesson: (lessonId: string) => void;
+}
+
+export function Admin({ onBack, onLesson }: AdminProps) {
   const [open, setOpen] = useState(adminUnlocked);
   if (!open) return <AdminLock onBack={onBack} onOpen={() => setOpen(true)} />;
-  return <AdminPage onBack={onBack} onLock={() => { lockAdmin(); setOpen(false); }} />;
+  return <AdminPage onBack={onBack} onLesson={onLesson} onLock={() => { lockAdmin(); setOpen(false); }} />;
 }
 
 /** The password form in front of the admin page (src/lib/adminLock.ts). */
@@ -66,7 +73,7 @@ function AdminLock({ onBack, onOpen }: { onBack: () => void; onOpen: () => void 
   );
 }
 
-function AdminPage({ onBack, onLock }: { onBack: () => void; onLock: () => void }) {
+function AdminPage({ onBack, onLesson, onLock }: AdminProps & { onLock: () => void }) {
   const [credits, setCredits] = useState<Credits | null | 'missing'>(null);
 
   useEffect(() => {
@@ -103,6 +110,9 @@ function AdminPage({ onBack, onLock }: { onBack: () => void; onLock: () => void 
           <p className="muted small">Bijgewerkt op {date(credits.updatedAt)}. Ververst bij elke publicatie.</p>
         </div>
       )}
+      <h2>Alle lessen</h2>
+      <p className="muted small">Een les die je hier opent, telt niet mee: geen voortgang, geen teller. Na afloop kom je hier terug.</p>
+      <AdminLessons onLesson={onLesson} />
       <h2>Anoniem meetellen</h2>
       <div className="admin-card">
         <p>

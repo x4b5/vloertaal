@@ -268,7 +268,7 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   if (shot === 'gender') return <GenderShot lang={(lang as LangCode) ?? 'pl'} gender={gender} greet={q.get('greet') === '1'} />;
   if (shot === 'rulesnotice') return <RulesNoticeScreen country={q.get('country') === 'be' ? 'be' : undefined} lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} />;
   if (shot === 'phrasebook') return <Phrasebook lang={getHelpLanguage(lang as LangCode, gender)} onBack={() => {}} />;
-  if (shot === 'admin') return <Admin onBack={() => {}} />;
+  if (shot === 'admin') return <Admin onLesson={() => {}} onBack={() => {}} />;
   // &novoice=1 (the work-rules track): the line that this phone has no Dutch voice, on the home
   // and on Settings › Geluid, whatever the browser has.
   forceNoVoiceNoteForShot(q.get('novoice') === '1');
