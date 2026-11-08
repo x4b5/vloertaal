@@ -6,9 +6,10 @@ import { useLayoutEffect, type RefObject } from 'react';
  * 640 px high, src/styles.css); when none fits, the CSS size stays. The room under a short tip was
  * mostly empty, so the text takes it (the owner's request, 4 November 2026). On 8 November 2026
  * larger again, and also on a phone in Safari with its bars (under 640 px high), where the text
- * stayed small with half the page empty.
+ * stayed small with half the page empty. Up to 2rem was too large (the owner, 8 November 2026):
+ * at most 1.4rem.
  */
-export const FIT_STEPS = [2, 1.9, 1.8, 1.7, 1.6, 1.5, 1.4, 1.3, 1.2, 1.1] as const;
+export const FIT_STEPS = [1.4, 1.35, 1.3, 1.25, 1.2, 1.15, 1.1] as const;
 
 /** Space kept between the text's end and the Continue bar. */
 const FIT_GAP = 12;
