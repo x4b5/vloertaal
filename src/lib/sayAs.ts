@@ -8,7 +8,9 @@ import { sayNumbers } from './sayNumbers';
 
 // A tile (one word on its own) that a voice says wrong as it is written (the owner, 8 November
 // 2026): "tot." was read as the abbreviation "total"; "wc" and "digid" are spelled out.
-const ALONE: Record<string, string> = { tot: 'tot!', wc: 'wee-cee', digid: 'die-gie-dee' };
+const ALONE: Record<string, string> = { tot: 'tot!', wc: 'wee cee', digid: 'die-gie-dee' };
+// A tile fixed again later gets a higher take: "wee-cee" still came out English (take 7).
+const TILE_TAKE: Record<string, number> = { wc: 8 };
 // Tiles whose recording came out wrong by chance ("ben", or English "trap"): recorded again as
 // they are written (the owner listened, 8 November 2026).
 const REDO = new Set(['ben', 'heb', 'per', 'trap', 'band']);
@@ -42,6 +44,6 @@ export const CAO_TAKE = 5;
 export const ALONE_TAKE = 7;
 export function minTake(text: string): number {
   const tile = text.trim().toLowerCase();
-  if (ALONE[tile] || REDO.has(tile)) return ALONE_TAKE;
+  if (ALONE[tile] || REDO.has(tile)) return TILE_TAKE[tile] ?? ALONE_TAKE;
   return /\bcao('s)?\b/i.test(text) ? CAO_TAKE : 0;
 }

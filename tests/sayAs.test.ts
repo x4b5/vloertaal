@@ -43,7 +43,8 @@ describe('a word that reads as an abbreviation when it stands alone (the owner, 
   });
 
   it('spells the tiles "wc" and "digid" out', () => {
-    expect(sayAs('wc')).toBe('wee-cee');
+    expect(sayAs('wc')).toBe('wee cee');
+    expect(minTake('wc')).toBe(ALONE_TAKE + 1);
     expect(sayAs('digid')).toBe('die-gie-dee');
   });
 
