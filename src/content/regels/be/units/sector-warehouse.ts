@@ -60,7 +60,7 @@ export const be: BeUnit = {
             id: 'r.be.l.warehouse.1.wd1',
             situation: 'Jayden heeft geen opleiding voor de heftruck. Wat kan Jayden het beste doen?',
             options: [
-              { id: 'a', text: 'Hij rijdt heel langzaam. Dan kan er niets gebeuren.', best: false, feedback: 'Dat is logisch. Maar ook langzaam kan het misgaan.' },
+              { id: 'a', text: 'Hij rijdt heel langzaam. Dan kan er niets gebeuren.', best: false, feedback: 'Dat snap ik. Maar ook langzaam kan het misgaan.' },
               { id: 'b', text: 'Hij rijdt, want de collega zegt dat het mag.', best: false, feedback: 'Zijn collega kan dat niet beslissen.' },
               { id: 'c', text: 'Hij zegt: "Ik mag niet rijden. Kan iemand anders?"', best: true, feedback: 'Goed. Zonder opleiding rijd je niet.' },
             ],
@@ -81,7 +81,7 @@ export const be: BeUnit = {
             situation: 'Jayden moet naar de andere kant van het magazijn. Over de rijbaan van de heftrucks is het korter. Wat kan Jayden het beste doen?',
             options: [
               { id: 'a', text: 'Hij loopt over de looppaden, ook al is het verder.', best: true, feedback: 'Goed. Daar zijn voetgangers veilig.' },
-              { id: 'b', text: 'Hij loopt over de rijbaan, en hij kijkt goed uit.', best: false, feedback: 'Dat is logisch. Maar een bestuurder ziet hem misschien niet.' },
+              { id: 'b', text: 'Hij loopt over de rijbaan, en hij kijkt goed uit.', best: false, feedback: 'Dat snap ik. Maar een bestuurder ziet hem misschien niet.' },
               { id: 'c', text: 'Hij loopt over de rijbaan, met zijn fluohesje aan.', best: false, feedback: 'Het hesje helpt. Maar de rijbaan is niet om te lopen.' },
             ],
             why: 'Loop altijd over de looppaden. Een bestuurder van een heftruck ziet niet alles. Moet je toch oversteken? Zoek oogcontact met de bestuurder. Loop nooit vlak achter een heftruck.',

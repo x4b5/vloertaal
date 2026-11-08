@@ -76,7 +76,7 @@ export const stageUnit: RuleUnit = {
           id: 'r.l.stage.1.wd2',
           situation: 'Het bedrijf zegt: "Dat papiertje van school komt later wel. Begin maandag maar." Wat kan Jayden het beste doen?',
           options: [
-            { id: 'a', text: 'Hij begint maandag. Het papier komt later wel.', best: false, feedback: 'Dat is logisch. Maar dan telt zijn stage misschien niet mee.' },
+            { id: 'a', text: 'Hij begint maandag. Het papier komt later wel.', best: false, feedback: 'Dat snap ik. Maar dan telt zijn stage misschien niet mee.' },
             { id: 'b', text: 'Hij vraagt eerst aan school of de POK klaar is.', best: true, feedback: 'Goed. Dan weet hij zeker dat alles klopt.' },
             { id: 'c', text: 'Hij zoekt meteen een ander stagebedrijf.', best: false, feedback: 'Dat hoeft niet. Eerst even vragen.' },
           ],
@@ -217,7 +217,7 @@ export const stageUnit: RuleUnit = {
           id: 'r.l.stage.3.wd1',
           situation: 'Wat doet Kevin?',
           options: [
-            { id: 'a', text: 'Hij blijft gewoon gaan. Over 2 maanden is het klaar.', best: false, feedback: 'Dat is logisch. Maar dan leert hij weinig.' },
+            { id: 'a', text: 'Hij blijft gewoon gaan. Over 2 maanden is het klaar.', best: false, feedback: 'Dat snap ik. Maar dan leert hij weinig.' },
             { id: 'b', text: 'Hij stopt met de stage, zonder iets te zeggen.', best: false, feedback: 'Niet doen. Dan heeft hij misschien een probleem met school.' },
             { id: 'c', text: 'Hij praat met zijn praktijkopleider, en ook met school.', best: true, feedback: 'Goed. Zo kan er iets veranderen.' },
           ],

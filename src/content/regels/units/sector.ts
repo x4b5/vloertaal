@@ -64,7 +64,7 @@ export const buildUnit: RuleUnit = {
           id: 'r.l.build.1.wd1',
           situation: 'Mohammed krijgt geen veiligheidsschoenen. Hij heeft alleen gewone sneakers. Wat kan Mohammed het beste doen?',
           options: [
-            { id: 'a', text: 'Hij werkt op zijn sneakers. Het is maar voor één dag.', best: false, feedback: 'Dat is logisch. Maar een spijker gaat zo door een sneaker.' },
+            { id: 'a', text: 'Hij werkt op zijn sneakers. Het is maar voor één dag.', best: false, feedback: 'Dat snap ik. Maar een spijker gaat zo door een sneaker.' },
             { id: 'b', text: 'Hij koopt zelf schoenen, en betaalt ze van zijn loon.', best: false, feedback: 'Goed bedoeld. Maar zijn werkgever moet ze gratis geven.' },
             { id: 'c', text: 'Hij vraagt de uitvoerder om veiligheidsschoenen.', best: true, feedback: 'Goed. De uitvoerder is de baas op de bouwplaats. Die regelt dit.' },
           ],
@@ -132,7 +132,7 @@ export const buildUnit: RuleUnit = {
           id: 'r.l.build.2.wd1',
           situation: 'Kevin wil de plaat halen. Wat kan Kevin het beste doen?',
           options: [
-            { id: 'a', text: 'Hij loopt snel onder het blok door. Het hangt toch vast.', best: false, feedback: 'Dat is logisch. Maar een last kan altijd vallen.' },
+            { id: 'a', text: 'Hij loopt snel onder het blok door. Het hangt toch vast.', best: false, feedback: 'Dat snap ik. Maar een last kan altijd vallen.' },
             { id: 'b', text: 'Hij loopt om, ook al duurt dat langer.', best: true, feedback: 'Goed. Onder een hangende last loop je nooit.' },
             { id: 'c', text: 'Hij roept naar de kraanmachinist dat hij eraan komt.', best: false, feedback: 'Goed bedoeld. Maar onder de last blijft het gevaarlijk.' },
           ],
@@ -221,7 +221,7 @@ export const careUnit: RuleUnit = {
           id: 'r.l.care.1.wd1',
           situation: 'Dewi heeft net een cliënt geholpen. Ze moet meteen naar de volgende. Wat kan Dewi het beste doen?',
           options: [
-            { id: 'a', text: 'Ze loopt meteen door. Haar handen zien er schoon uit.', best: false, feedback: 'Dat is logisch. Maar bacteriën zie je niet.' },
+            { id: 'a', text: 'Ze loopt meteen door. Haar handen zien er schoon uit.', best: false, feedback: 'Dat snap ik. Maar bacteriën zie je niet.' },
             { id: 'b', text: 'Ze trekt alleen een paar nieuwe handschoenen aan.', best: false, feedback: 'Handschoenen helpen. Maar ook haar handen moeten schoon zijn.' },
             { id: 'c', text: 'Ze maakt eerst haar handen schoon.', best: true, feedback: 'Goed. Zo neemt ze geen bacteriën mee.' },
           ],
@@ -305,7 +305,7 @@ export const careUnit: RuleUnit = {
           situation: 'Fatima moet medicijnen geven. Ze heeft dat nog nooit geleerd. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze vraagt eerst uitleg aan een ervaren collega.', best: true, feedback: 'Goed. Je geeft alleen medicijnen als je het geleerd hebt.' },
-            { id: 'b', text: 'Ze geeft ze toch. Het staat allemaal op de lijst.', best: false, feedback: 'Dat is logisch. Maar zonder uitleg kan ze een fout maken.' },
+            { id: 'b', text: 'Ze geeft ze toch. Het staat allemaal op de lijst.', best: false, feedback: 'Dat snap ik. Maar zonder uitleg kan ze een fout maken.' },
             { id: 'c', text: 'Ze legt de pillen op tafel. Meneer neemt ze zelf wel.', best: false, feedback: 'Dan weet niemand of hij ze echt neemt.' },
           ],
           why: 'Geef alleen medicijnen als je het geleerd hebt, en als het mag van je werk.', whyMore: 'Check altijd de lijst: de juiste persoon, het juiste medicijn, de juiste tijd. Weet je het niet zeker? Vraag het eerst.',
@@ -409,7 +409,7 @@ export const horecaUnit: RuleUnit = {
           id: 'r.l.horeca.1.wd1',
           situation: 'Een bak saus staat al 2 uur op het aanrecht. Het is warm in de keuken. Wat kan Jayden het beste doen?',
           options: [
-            { id: 'a', text: 'Hij zet de bak snel terug in de koelkast.', best: false, feedback: 'Dat is logisch. Maar misschien is de saus al niet meer goed.' },
+            { id: 'a', text: 'Hij zet de bak snel terug in de koelkast.', best: false, feedback: 'Dat snap ik. Maar misschien is de saus al niet meer goed.' },
             { id: 'b', text: 'Hij vraagt de chef wat ermee moet.', best: true, feedback: 'Goed. De chef weet wat de regels zijn.' },
             { id: 'c', text: 'Hij ruikt eraan. Ruikt het goed, dan gebruikt hij het.', best: false, feedback: 'Bacteriën ruik je niet altijd.' },
           ],
@@ -586,7 +586,7 @@ export const cleanUnit: RuleUnit = {
           situation: "Fatima werkt alleen in het gebouw. Het is 10 uur 's avonds. Wat kan Fatima het beste doen?",
           options: [
             { id: 'a', text: 'Ze spreekt met haar leidinggevende af hoe ze hulp vraagt.', best: true, feedback: 'Goed. Dan weet iemand waar ze is.' },
-            { id: 'b', text: 'Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.', best: false, feedback: 'Dat is logisch. Maar alleen loopt ze meer gevaar.' },
+            { id: 'b', text: 'Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.', best: false, feedback: 'Dat snap ik. Maar alleen loopt ze meer gevaar.' },
             { id: 'c', text: 'Ze neemt haar zoon mee, voor de veiligheid.', best: false, feedback: 'Dat snap ik. Maar haar werkgever moet dit regelen.' },
           ],
           why: 'Werk je alleen? Dan moet je werkgever zorgen dat je hulp kunt krijgen.', whyMore: 'Spreek af wie je belt als er iets is. Zorg dat je telefoon opgeladen is.',
@@ -596,7 +596,7 @@ export const cleanUnit: RuleUnit = {
           id: 'r.l.clean.1.wa1',
           question: 'Je krijgt geen handschoenen voor een sterk middel. Wie vraag je het eerst?',
           options: [
-            { id: 'a', who: 'collega', best: false, feedback: 'Een collega heeft misschien een paar. Maar je werk moet ze geven.' },
+            { id: 'a', who: 'collega', best: false, feedback: 'Een collega heeft misschien een paar. Maar je werkgever moet ze geven.' },
             { id: 'b', who: 'leidinggevende', best: true, feedback: 'Goed. Je leidinggevende moet zorgen voor gratis handschoenen.' },
             { id: 'c', who: 'huisarts', best: false, feedback: 'De huisarts helpt als je klachten hebt. Voorkom het liever.' },
           ],
@@ -760,7 +760,7 @@ export const factoryUnit: RuleUnit = {
           id: 'r.l.factory.1.wd2',
           situation: 'Een kap van de machine is kapot. Zonder kap gaat het werk sneller. Wat kan Sanne het beste doen?',
           options: [
-            { id: 'a', text: 'Ze werkt door zonder kap. Ze let extra goed op.', best: false, feedback: 'Dat is logisch. Maar de kap is er voor haar handen.' },
+            { id: 'a', text: 'Ze werkt door zonder kap. Ze let extra goed op.', best: false, feedback: 'Dat snap ik. Maar de kap is er voor haar handen.' },
             { id: 'b', text: 'Ze plakt de kap met tape vast, en werkt door.', best: false, feedback: 'Goed bedoeld. Maar zo is het niet veilig genoeg.' },
             { id: 'c', text: 'Ze stopt, en ze meldt de kapotte kap bij Henk.', best: true, feedback: 'Goed. Een machine zonder goede beveiliging is gevaarlijk.' },
           ],
@@ -828,7 +828,7 @@ export const factoryUnit: RuleUnit = {
           id: 'r.l.factory.2.tf1',
           statement: 'Na een nachtdienst mag je meteen weer een dienst draaien.',
           answer: false,
-          why: 'Na een nachtdienst heb je lang rust nodig. Kijk ook in je cao.', whyMore: "Stopt je nachtdienst na 2 uur 's nachts? Dan heb je minstens 14 uur rust. Tussen 2 gewone diensten zit meestal minstens 11 uur.",
+          why: 'Na een nachtdienst heb je veel rust nodig. Kijk ook in je cao.', whyMore: "Stopt je nachtdienst na 2 uur 's nachts? Dan heb je minstens 14 uur rust. Tussen 2 gewone diensten zit meestal minstens 11 uur.",
         },
         {
           kind: 'whatdo',
@@ -920,7 +920,7 @@ export const warehouseUnit: RuleUnit = {
           id: 'r.l.warehouse.1.wd1',
           situation: 'Jayden heeft geen opleiding voor de heftruck. Wat kan Jayden het beste doen?',
           options: [
-            { id: 'a', text: 'Hij rijdt heel langzaam. Dan kan er niets gebeuren.', best: false, feedback: 'Dat is logisch. Maar ook langzaam kan het misgaan.' },
+            { id: 'a', text: 'Hij rijdt heel langzaam. Dan kan er niets gebeuren.', best: false, feedback: 'Dat snap ik. Maar ook langzaam kan het misgaan.' },
             { id: 'b', text: 'Hij rijdt, want de collega zegt dat het mag.', best: false, feedback: 'Zijn collega kan dat niet beslissen.' },
             { id: 'c', text: 'Hij zegt: "Ik mag niet rijden. Kan iemand anders?"', best: true, feedback: 'Goed. Zonder opleiding rijd je niet.' },
           ],
@@ -941,7 +941,7 @@ export const warehouseUnit: RuleUnit = {
           situation: 'Jayden moet naar de andere kant van het magazijn. Over de rijbaan van de heftrucks is het korter. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij loopt over de looppaden, ook al is het verder.', best: true, feedback: 'Goed. Daar zijn voetgangers veilig.' },
-            { id: 'b', text: 'Hij loopt over de rijbaan, en hij kijkt goed uit.', best: false, feedback: 'Dat is logisch. Maar een bestuurder ziet hem misschien niet.' },
+            { id: 'b', text: 'Hij loopt over de rijbaan, en hij kijkt goed uit.', best: false, feedback: 'Dat snap ik. Maar een bestuurder ziet hem misschien niet.' },
             { id: 'c', text: 'Hij loopt over de rijbaan, met zijn hesje aan.', best: false, feedback: 'Het hesje helpt. Maar de rijbaan is niet om te lopen.' },
           ],
           why: 'Een bestuurder van een heftruck ziet niet alles. Loop dus over de looppaden.', whyMore: 'Moet je toch oversteken? Zoek oogcontact met de bestuurder. Loop nooit vlak achter een heftruck.',
@@ -1100,7 +1100,7 @@ export const kasUnit: RuleUnit = {
           id: 'r.l.kas.1.wd1',
           situation: 'Piotr wordt duizelig. Zijn rij is nog niet af. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Hij maakt eerst zijn rij helemaal af. Daarna gaat hij drinken.', best: false, feedback: 'Dat is logisch. Maar duizelig zijn is een waarschuwing.' },
+            { id: 'a', text: 'Hij maakt eerst zijn rij helemaal af. Daarna gaat hij drinken.', best: false, feedback: 'Dat snap ik. Maar duizelig zijn is een waarschuwing.' },
             { id: 'b', text: 'Hij stopt, drinkt water en zegt het tegen zijn leidinggevende.', best: true, feedback: 'Goed. Zo wordt het niet erger.' },
             { id: 'c', text: 'Hij gaat even op de grond zitten, tussen de planten.', best: false, feedback: 'Even zitten helpt. Maar in de kas blijft het heet.' },
           ],
@@ -1308,7 +1308,7 @@ export const techniekUnit: RuleUnit = {
           situation: 'Op de werkbank liggen veel spanen. Sanne wil ze weghalen. Wat kan Sanne het beste doen?',
           options: [
             { id: 'a', text: 'Ze veegt ze weg met een borstel.', best: true, feedback: 'Goed. Zo snijdt ze haar handen niet.' },
-            { id: 'b', text: 'Ze blaast ze weg met de luchtslang.', best: false, feedback: 'Dat is logisch. Maar dan vliegen de spanen alle kanten op.' },
+            { id: 'b', text: 'Ze blaast ze weg met de luchtslang.', best: false, feedback: 'Dat snap ik. Maar dan vliegen de spanen alle kanten op.' },
             { id: 'c', text: 'Ze veegt ze met haar hand in de bak.', best: false, feedback: 'Spanen zijn scherp. Zo snijdt ze in haar hand.' },
           ],
           why: 'Metalen spanen zijn scherp en soms heet. Pak ze niet met je blote hand.', whyMore: 'Gebruik een borstel of een kwast. Blaas ze niet weg met de luchtslang. Dan vliegen ze in iemands oog.',
@@ -1459,7 +1459,7 @@ export const werkplaatsUnit: RuleUnit = {
           id: 'r.l.werkplaats.1.wd1',
           situation: 'Malik wil snel onder de auto kijken. Wat kan Malik het beste doen?',
           options: [
-            { id: 'a', text: 'Hij kruipt er snel onder. Het duurt maar even.', best: false, feedback: 'Dat is logisch. Maar een krik kan wegzakken.' },
+            { id: 'a', text: 'Hij kruipt er snel onder. Het duurt maar even.', best: false, feedback: 'Dat snap ik. Maar een krik kan wegzakken.' },
             { id: 'b', text: 'Hij zet een tweede krik naast de eerste.', best: false, feedback: 'Goed bedoeld. Maar ook twee krikken staan niet vast.' },
             { id: 'c', text: 'Hij vraagt of de auto eerst op bokken kan.', best: true, feedback: 'Goed. Op bokken staat de auto vast.' },
           ],

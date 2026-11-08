@@ -59,6 +59,7 @@ const t: CultureTranslation = {
     'c.boundaries.a.why': "Se uma piada magoa, podes pedir com clareza que parem.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.health.a.why': "Uma pausa protege a saúde, por isso faz-se.",
     'c.rights.a.why': "Um despedimento nunca se assina logo. Primeiro pede-se conselho.",
+    'c.mustmay.a.why': "Voluntário quer dizer que podes escolher: trabalhar no sábado não é preciso.", // nieuw, nalezen
     'c.leave.a.why': "Quando? Esta resposta dá um mês e quanto tempo.",
     'c.illness.a.why': "Os detalhes médicos são para o médico da empresa, não para o chefe.",
     'c.warning.a.why': "Um empregador pode copiar um passaporte, mas não pode ficar com ele.",

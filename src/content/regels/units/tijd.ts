@@ -214,7 +214,7 @@ export const tijdUnit: RuleUnit = {
           emoji: '🕔',
           title: 'Overwerk? Schrijf de uren op, met datum en tijd.',
           body: [
-            'Je moet niet altijd overwerken. Het hangt af van je contract en je cao.',
+            'Je hoeft niet altijd over te werken. Het hangt af van je contract en je cao.',
             'Schrijf je extra uren op, met datum en tijd.',
             'Check daarna je loonstrook.',
             'Krijg je extra uren contant, buiten je loonstrook om? Dat is zwart werk.',

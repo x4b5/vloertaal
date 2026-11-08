@@ -1774,6 +1774,26 @@
     "c.road.o1": "Ask for advice: maybe you are an employee.",
     "c.road.o2": "Nothing: the contract says self-employed, so it is.",
     "c.road.o3": "Work more hours, so you earn the same.",
-    "c.road.w": "What counts is how you really work, not only the word on the contract. If the company decides how, when and where you work, you are often an employee. Then you have more rights."
+    "c.road.w": "What counts is how you really work, not only the word on the contract. If the company decides how, when and where you work, you are often an employee. Then you have more rights.",
+    "l.mustmay": "Must, or may you choose?",
+    "w.moeten": "to have to, must",
+    "w.niethoeven": "not to have to",
+    "w.nodig": "needed, necessary",
+    "w.vrijwillig": "voluntary, by choice",
+    "w.keuze": "the choice",
+    "w.regel": "the rule",
+    "s.mustmay.1": "Do I have to sign this?",
+    "s.mustmay.2": "No, you do not have to sign.",
+    "s.mustmay.3": "That is the rule: a helmet is compulsory.",
+    "c.mustmay.q": "Do I have to work overtime on Saturday?",
+    "c.mustmay.a": "No, that is not necessary. It is voluntary.",
+    "c.mustmay": "Moet, hoeft niet, mag niet",
+    "c.mustmay.b": "In Dutch, the opposite of \"moeten\" is \"niet hoeven\". \"Je moet tekenen\" means: you have no choice. \"Je hoeft niet te tekenen\" means: you may choose. \"Je mag niet tekenen\" means: it is forbidden. Careful: in English, \"must not\" means \"mag niet\". In many languages, \"not must\" means \"hoeft niet\". Not sure? Ask it.",
+    "c.mustmay.p": "Do I have to, or do I have a choice?",
+    "c.mustmay.s": "Your team leader says: \"Je hoeft zaterdag niet te komen.\" What does he mean?",
+    "c.mustmay.o1": "You do not have to come on Saturday. You may choose.",
+    "c.mustmay.o2": "You are not allowed to come on Saturday.",
+    "c.mustmay.o3": "You must come on Saturday.",
+    "c.mustmay.w": "\"Niet hoeven\" means it is not compulsory: you may choose. \"Niet mogen\" would mean it is forbidden."
   }
 }

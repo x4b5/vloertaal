@@ -169,7 +169,7 @@ export const loonUnit: RuleUnit = {
           situation: 'Op de loonstrook staat "inhouding huisvesting". Piotr heeft daar nooit iets over getekend. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij vraagt waar hij daarvoor getekend heeft.', best: true, feedback: 'Goed. Zonder zijn handtekening mag het meestal niet.' },
-            { id: 'b', text: 'Hij denkt: dat hoort er vast bij, iedereen heeft het.', best: false, feedback: 'Dat is logisch. Maar het mag niet zomaar.' },
+            { id: 'b', text: 'Hij denkt: dat hoort er vast bij, iedereen heeft het.', best: false, feedback: 'Dat snap ik. Maar het mag niet zomaar.' },
             { id: 'c', text: 'Hij vraagt een voorschot om het verschil te betalen.', best: false, feedback: 'Dan leent hij geld dat misschien van hem is.' },
           ],
           why: 'Je werkgever mag niet zomaar geld van je loon afhalen. Daar moet je eerst schriftelijk mee instemmen.', whyMore: 'Zo\'n inhouding is geld dat je baas van je loon afhaalt. Ook als je instemt, zijn er grenzen. Klopt het niet? Vraag hulp.',

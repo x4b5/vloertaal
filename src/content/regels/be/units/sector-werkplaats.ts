@@ -57,7 +57,7 @@ export const be: BeUnit = {
             id: 'r.be.l.werkplaats.1.wd1',
             situation: 'Malik wil snel onder de auto kijken. Wat kan Malik het beste doen?',
             options: [
-              { id: 'a', text: 'Hij kruipt er snel onder. Het duurt maar even.', best: false, feedback: 'Dat is logisch. Maar een krik kan wegzakken.' },
+              { id: 'a', text: 'Hij kruipt er snel onder. Het duurt maar even.', best: false, feedback: 'Dat snap ik. Maar een krik kan wegzakken.' },
               { id: 'b', text: 'Hij zet een tweede krik naast de eerste.', best: false, feedback: 'Goed bedoeld. Maar ook twee krikken staan niet vast.' },
               { id: 'c', text: 'Hij vraagt of de auto eerst op bokken kan.', best: true, feedback: 'Goed. Op bokken staat de auto vast.' },
             ],

@@ -227,6 +227,18 @@ const t: CultureTranslation = {
     's.rights.3': "Tani waa takoor.", // nieuw, nalezen
     'c.rights.q': "Halkan u saxeex shaqo ka eryiddaada.", // nieuw, nalezen
     'c.rights.a': "Maya, weli ma saxeexayo.", // nieuw, nalezen
+    'l.mustmay': "Ma khasab baa, mise waad dooran kartaa?", // nieuw, nalezen
+    'w.moeten': "waa in (la sameeyo), khasab", // nieuw, nalezen
+    'w.niethoeven': "khasab ma aha, looma baahna", // nieuw, nalezen
+    'w.nodig': "loo baahan yahay, lagama maarmaan", // nieuw, nalezen
+    'w.vrijwillig': "ikhtiyaari, adiga ayaa dooranaya", // nieuw, nalezen
+    'w.keuze': "doorashada", // nieuw, nalezen
+    'w.regel': "xeerka", // nieuw, nalezen
+    's.mustmay.1': "Ma khasab baa inaan tan saxiixo?", // nieuw, nalezen
+    's.mustmay.2': "Maya, uma baahnid inaad saxiixdo.", // nieuw, nalezen
+    's.mustmay.3': "Taasi waa xeerka: koofiyadda adag waa khasab.", // nieuw, nalezen
+    'c.mustmay.q': "Ma khasab baa inaan Sabtida saacado dheeraad ah shaqeeyo?", // nieuw, nalezen
+    'c.mustmay.a': "Maya, looma baahna. Waa ikhtiyaari.", // nieuw, nalezen
     'u.leave': "Fasaxa", // nieuw, nalezen
     'l.leave': "Maalmaha fasaxa", // nieuw, nalezen
     'w.vakantiedagen': "maalmaha fasaxa (safarka)", // nieuw, nalezen
@@ -696,6 +708,14 @@ const t: CultureTranslation = {
     'c.rights.o2': "Saxiix, maxaa yeelay madaxa ayaa yiri waa caadi.", // nieuw, nalezen
     'c.rights.o3': "Warqadda meel dhig oo waligaa ha ka hadlin.", // nieuw, nalezen
     'c.rights.w': "Wax khaldan ma ku jiraan? Markaas waxaad lumin kartaa xuquuq, tusaale ahaan gunnada shaqo la'aanta (WW). In aad waqti u weydiisato talo waa caadi waana la oggol yahay.", // nieuw, nalezen
+    'c.mustmay': "Moet, hoeft niet, mag niet", // nieuw, nalezen
+    'c.mustmay.b': "Af-Holandiiska, liddiga “moeten” waa “niet hoeven”. “Je moet tekenen” macnaheedu waa: doorasho ma lihid. “Je hoeft niet te tekenen” macnaheedu waa: waad dooran kartaa. “Je mag niet tekenen” macnaheedu waa: waa mamnuuc. Digniin: Af-Ingiriisiga, “must not” macnaheedu waa “mag niet”. Luqado badan, “khasab ma aha” macnaheedu waa “hoeft niet”. Ma hubtid? Weydii.", // nieuw, nalezen
+    'c.mustmay.p': "Ma khasab baa, mise doorasho ayaan leeyahay?", // nieuw, nalezen
+    'c.mustmay.s': "Hoggaamiyaha kooxdaadu wuxuu yiri: “Je hoeft zaterdag niet te komen.” Muxuu ula jeedaa?", // nieuw, nalezen
+    'c.mustmay.o1': "Khasab kuguma aha inaad Sabtida timaaddo. Waad dooran kartaa.", // nieuw, nalezen
+    'c.mustmay.o2': "Laguuma oggola inaad Sabtida timaaddo.", // nieuw, nalezen
+    'c.mustmay.o3': "Waa inaad Sabtida timaaddaa.", // nieuw, nalezen
+    'c.mustmay.w': "“Niet hoeven” macnaheedu waa khasab ma aha: waad dooran kartaa. “Niet mogen” macnaheedu wuxuu noqon lahaa waa mamnuuc.", // nieuw, nalezen
     'c.leave': "Fasaxyada iyo fasaxa degdegga ah", // nieuw, nalezen
     'c.leave.b': "Sharci ahaan waxaad heshaa maalmo fasax ah oo lacag leh: ugu yaraan 4 jeer maalmaha aad toddobaadkii shaqeyso. Waqti buuxa, 5 maalmood toddobaadkii? Markaas ugu yaraan 20 maalmood sannadkii. Cao waxay ku siin kartaa wax ka badan. Fasax codso waqti hore, oo qoraal ku codso. Xaalad degdeg ah oo kedis ah, sida shil ama xanuun qoyskaaga ku dhacay? Markaas waxaad heli kartaa fasax gaaban oo lacag leh (calamiteitenverlof). Isla markiiba u sheeg loo-shaqeeyahaaga. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
     'c.leave.p': "Waxaan jeclaan lahaa inaan fasax u codsado bisha July.", // nieuw, nalezen

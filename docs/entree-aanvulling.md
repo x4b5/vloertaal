@@ -132,7 +132,7 @@ vragen en een klacht.*
 **Vraag 1 · Wat is het beste?** Waar zet Kevin de nieuwe melk?
 
 - **A.** Vooraan. Dan ziet het schap er vers uit.
-  → *Dat is logisch. Maar dan blijft de oude melk staan.*
+  → *Dat snap ik. Maar dan blijft de oude melk staan.*
 - **B.** Achteraan. De oude melk blijft vooraan staan.
   → *Goed. Zo gaat de oude melk het eerst weg.*
 - **C.** Ergens waar plek is. Klanten kiezen zelf wel.
@@ -157,7 +157,7 @@ Voor sommige gekoelde producten gelden andere regels ⚖️ (NVWA). Daarom: "vra
 - **A.** Hij zegt sorry en schuift de containers aan de kant.
   → *Goed. Het pad moet vrij zijn voor klanten.*
 - **B.** Hij vraagt de klant om even om te lopen.
-  → *Dat is logisch. Maar het pad is er voor de klant.*
+  → *Dat snap ik. Maar het pad is er voor de klant.*
 - **C.** Hij werkt snel door. Over 5 minuten is hij klaar.
   → *Dan moet de klant wachten. En iemand kan vallen.*
 
@@ -200,7 +200,7 @@ Breng de klant naar iemand die het wel weet. Dat heet doorverwijzen.
 - **A.** Ze stopt even, kijkt de klant aan en luistert.
   → *Goed. In een winkel gaat de klant voor.*
 - **B.** Ze zegt "moment" en maakt eerst haar doos leeg.
-  → *Dat is logisch. Maar dan moet de klant lang wachten.*
+  → *Dat snap ik. Maar dan moet de klant lang wachten.*
 - **C.** Ze wijst naar de servicebalie, zonder iets te zeggen.
   → *Dat kan onvriendelijk lijken.*
 
@@ -624,7 +624,7 @@ school heb je ook iemand: de stagebegeleider of bpv-begeleider. Die komt vaak ee
 **Vraag 3 · Wat is het beste?** Het bedrijf zegt: "Dat papiertje van school komt later wel. Begin maandag maar." Wat kan Jayden het beste doen?
 
 - **A.** Hij begint maandag. Het papier komt later wel.
-  → *Dat is logisch. Maar dan telt zijn stage misschien niet mee.*
+  → *Dat snap ik. Maar dan telt zijn stage misschien niet mee.*
 - **B.** Hij vraagt eerst aan school of de POK klaar is.
   → *Goed. Dan weet hij zeker dat alles klopt.*
 - **C.** Hij zoekt meteen een ander stagebedrijf.
@@ -704,7 +704,7 @@ De school beslist over je examen. Het bedrijf geeft zijn oordeel ⚖️.
 **Vraag 1 · Wat is het beste?** Wat doet Kevin?
 
 - **A.** Hij blijft gewoon gaan. Over 2 maanden is het klaar.
-  → *Dat is logisch. Maar dan leert hij weinig.*
+  → *Dat snap ik. Maar dan leert hij weinig.*
 - **B.** Hij stopt met de stage, zonder iets te zeggen.
   → *Niet doen. Dan heeft hij misschien een probleem met school.*
 - **C.** Hij praat met zijn praktijkopleider, en ook met school.
@@ -869,7 +869,7 @@ geen BSN, wachtwoord of namen van klanten in een chatbot.
 - **A.** Hij gaat met de brief naar HR, en vraagt hoe het zit.
   → *Goed. Een mens van zijn werk weet hoe het echt zit.*
 - **B.** Hij gelooft de chatbot. Die weet het vast.
-  → *Dat is logisch. Maar AI kan het mis hebben, ook als het zeker klinkt.*
+  → *Dat snap ik. Maar AI kan het mis hebben, ook als het zeker klinkt.*
 - **C.** Hij belt boos naar zijn werk. Hij wil zijn geld.
   → *Eerst checken. Het antwoord van de chatbot kan fout zijn.*
 
@@ -1059,7 +1059,7 @@ Loket · bij bedreiging: de politie.
 - **A.** Hij laat rustig zijn ID zien.
   → *Goed. Dat moet als de politie erom vraagt.*
 - **B.** Hij zegt: "Ik heb niets gedaan," en loopt weg.
-  → *Dat is logisch. Maar dan kan hij een boete krijgen.*
+  → *Dat snap ik. Maar dan kan hij een boete krijgen.*
 - **C.** Hij zegt dat zijn ID thuis ligt. Dat is niet waar.
   → *Niet doen. Dan maakt hij het moeilijker voor zichzelf.*
 
@@ -1166,7 +1166,7 @@ anders doet.
 - **A.** Ze doet uit wat uit mag, en ze meldt de kraan.
   → *Goed. Zo bespaart ze energie en water.*
 - **B.** Ze laat alles zo. Het is niet haar gebouw.
-  → *Dat is logisch. Maar een lek kost veel water.*
+  → *Dat snap ik. Maar een lek kost veel water.*
 - **C.** Ze probeert de kraan zelf te maken.
   → *Goed bedoeld. Maar dat is niet haar werk.*
 
@@ -1234,7 +1234,7 @@ ga je pas in als het mag ⚖️. Spuiten mag je alleen met een opleiding en een 
 **Vraag 1 · Wat is het beste?** Piotr wordt duizelig. Zijn rij is nog niet af. Wat kan Piotr het beste doen?
 
 - **A.** Hij maakt eerst zijn rij helemaal af. Daarna gaat hij drinken.
-  → *Dat is logisch. Maar duizelig zijn is een waarschuwing.*
+  → *Dat snap ik. Maar duizelig zijn is een waarschuwing.*
 - **B.** Hij stopt, drinkt water en zegt het tegen zijn leidinggevende.
   → *Goed. Zo wordt het niet erger.*
 - **C.** Hij gaat even op de grond zitten, tussen de planten.

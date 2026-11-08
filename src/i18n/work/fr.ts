@@ -227,6 +227,18 @@ const t: CultureTranslation = {
     's.rights.3': 'C’est de la discrimination.',
     'c.rights.q': 'Signe ici pour ton licenciement.',
     'c.rights.a': 'Non, je ne signe pas encore.',
+    'l.mustmay': 'Tu dois, ou tu peux choisir ?', // nieuw, nalezen
+    'w.moeten': 'devoir, être obligé de', // nieuw, nalezen
+    'w.niethoeven': 'ne pas avoir à, ne pas avoir besoin de', // nieuw, nalezen
+    'w.nodig': 'nécessaire', // nieuw, nalezen
+    'w.vrijwillig': 'volontaire, au choix', // nieuw, nalezen
+    'w.keuze': 'le choix', // nieuw, nalezen
+    'w.regel': 'la règle', // nieuw, nalezen
+    's.mustmay.1': 'Est-ce que je dois signer ça ?', // nieuw, nalezen
+    's.mustmay.2': 'Non, tu n’as pas besoin de signer.', // nieuw, nalezen
+    's.mustmay.3': 'C’est la règle : le casque est obligatoire.', // nieuw, nalezen
+    'c.mustmay.q': 'Est-ce que je dois faire des heures sup samedi ?', // nieuw, nalezen
+    'c.mustmay.a': 'Non, ce n’est pas nécessaire. C’est volontaire.', // nieuw, nalezen
     'u.leave': "Congés", // nieuw, nalezen
     'l.leave': 'Les jours de congé',
     'w.vakantiedagen': 'les jours de congé (vacances)',
@@ -696,6 +708,14 @@ const t: CultureTranslation = {
     'c.rights.o2': 'Signe, parce que le patron dit que c’est bon.',
     'c.rights.o3': 'Range le papier et n’en parle jamais.',
     'c.rights.w': 'Il y a une erreur dedans ? Alors tu peux perdre des droits, par exemple à l’allocation chômage (WW). Demander du temps pour avoir un conseil est normal et permis.', // nieuw, nalezen
+    'c.mustmay': 'Moet, hoeft niet, mag niet', // nieuw, nalezen
+    'c.mustmay.b': 'En néerlandais, le contraire de “moeten” est “niet hoeven”. “Je moet tekenen” veut dire : tu n’as pas le choix. “Je hoeft niet te tekenen” veut dire : tu peux choisir. “Je mag niet tekenen” veut dire : c’est interdit. Attention : en anglais, “must not” veut dire “mag niet”. En français aussi, “tu ne dois pas” veut dire “mag niet”, et “hoeft niet” veut dire “tu n’as pas besoin”. Tu as un doute ? Demande.', // nieuw, nalezen
+    'c.mustmay.p': 'Je dois le faire, ou j’ai le choix ?', // nieuw, nalezen
+    'c.mustmay.s': 'Ton chef d’équipe dit : “Je hoeft zaterdag niet te komen.” Qu’est-ce qu’il veut dire ?', // nieuw, nalezen
+    'c.mustmay.o1': 'Tu n’as pas besoin de venir samedi. Tu peux choisir.', // nieuw, nalezen
+    'c.mustmay.o2': 'Tu n’as pas le droit de venir samedi.', // nieuw, nalezen
+    'c.mustmay.o3': 'Tu dois venir samedi.', // nieuw, nalezen
+    'c.mustmay.w': '“Niet hoeven” veut dire que ce n’est pas obligatoire : tu peux choisir. “Niet mogen” voudrait dire que c’est interdit.', // nieuw, nalezen
     'c.leave': 'Les vacances et le congé d’urgence',
     'c.leave.b': 'La loi te donne des jours de congé payés : au moins 4 fois le nombre de jours que tu travailles par semaine. À temps plein, 5 jours par semaine ? Alors au moins 20 jours par an. Une cao peut donner plus. Demande ton congé à temps, et par écrit. Une urgence soudaine, comme un accident ou une maladie dans ta famille ? Alors tu peux avoir un court congé payé (calamiteitenverlof). Préviens tout de suite ton employeur. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
     'c.leave.p': 'Je voudrais demander un congé pour juillet.',

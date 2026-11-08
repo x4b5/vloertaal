@@ -334,6 +334,33 @@ const coreUnits: Unit[] = [
           ),
         ],
       },
+      // "Moet het of mag het?" (8 November 2026, the NT2 review): the opposite of "moeten" is "niet
+      // hoeven", not "niet moeten" (a classic trap: German "muss nicht", English "must not"). At the
+      // end of the unit, so no existing lesson changes place. "mogen", "verboden", "verplicht", "kiezen"
+      // and "overwerken" were taught before: the sentences use them, the words here are new.
+      {
+        id: 'l.mustmay',
+        title: 'Must, or may you choose?',
+        words: [
+          { id: 'w.moeten', nl: 'moeten', en: 'to have to, must', emoji: '🟥', picture: false },
+          { id: 'w.niethoeven', nl: 'niet hoeven', en: 'not to have to', emoji: '⬜', picture: false },
+          { id: 'w.nodig', nl: 'nodig', en: 'needed, necessary', emoji: '❗', picture: false },
+          { id: 'w.vrijwillig', nl: 'vrijwillig', en: 'voluntary, by choice', emoji: '🙋', picture: false },
+          { id: 'w.keuze', nl: 'de keuze', en: 'the choice', emoji: '🤔', picture: false },
+          { id: 'w.regel', nl: 'de regel', en: 'the rule', emoji: '📜', picture: false },
+        ],
+        sentences: [
+          { id: 's.mustmay.1', nl: 'Moet ik dit tekenen?', en: 'Do I have to sign this?' },
+          { id: 's.mustmay.2', nl: 'Nee, je hoeft niet te tekenen.', en: 'No, you do not have to sign.' },
+          { id: 's.mustmay.3', nl: 'Dat is de regel: een helm is verplicht.', en: 'That is the rule: a helmet is compulsory.' },
+        ],
+        dialogues: [
+          chat(
+            line('c.mustmay.q', 'Moet ik zaterdag overwerken?', 'Do I have to work overtime on Saturday?'),
+            line('c.mustmay.a', 'Nee, dat is niet nodig. Het is vrijwillig.', 'No, that is not necessary. It is voluntary.'),
+          ),
+        ],
+      },
     ],
   },
   // "Verlof" and "Ziekte" were one unit, "Verlof en ziekte" (u.leave), until 5 November 2026 (the
@@ -590,6 +617,21 @@ const coreTips: CultureTip[] = [
     ],
     why: { id: 'c.rights.w', en: 'Is something wrong in it? Then you can lose rights, for example to unemployment benefit (WW). Asking for time to get advice is normal and allowed.' },
   }, ABUSE_LINE),
+  tip({
+    id: 'c.mustmay',
+    lessonId: 'l.mustmay',
+    emoji: '⚖️',
+    title: 'Moet, hoeft niet, mag niet',
+    body: 'In Dutch, the opposite of "moeten" is "niet hoeven". "Je moet tekenen" means: you have no choice. "Je hoeft niet te tekenen" means: you may choose. "Je mag niet tekenen" means: it is forbidden. Careful: in English, "must not" means "mag niet". In many languages, "not must" means "hoeft niet". Not sure? Ask it.',
+    phrase: { id: 'c.mustmay.p', nl: 'Moet het, of heb ik een keuze?', en: 'Do I have to, or do I have a choice?' },
+    situation: { id: 'c.mustmay.s', en: 'Your team leader says: "Je hoeft zaterdag niet te komen." What does he mean?', nl: 'Je hoeft zaterdag niet te komen.', ask: 'which' },
+    options: [
+      { id: 'c.mustmay.o1', en: 'You do not have to come on Saturday. You may choose.', best: true },
+      { id: 'c.mustmay.o2', en: 'You are not allowed to come on Saturday.', best: false },
+      { id: 'c.mustmay.o3', en: 'You must come on Saturday.', best: false },
+    ],
+    why: { id: 'c.mustmay.w', en: '"Niet hoeven" means it is not compulsory: you may choose. "Niet mogen" would mean it is forbidden.' },
+  }, ''),
   tip({
     id: 'c.leave',
     lessonId: 'l.leave',

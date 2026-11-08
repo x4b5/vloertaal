@@ -1527,3 +1527,24 @@ Graag nakijken:
 - **ar**: de titel باختصار ووضوح; de x-vormen zijn wat stijf (zoals bij `c.alarm`).
 - **fa/prs**: fa روشن است؟ (of واضح است؟); prs بس کنید en چه گپ است (spreektaal).
 - **es** "Seré breve" (vrij), **fr** "Je fais court" (spreektaal), **de** "Vorstellungsgespräch" (lang woord).
+
+## Nieuwe les "Moet het of mag het?" (l.mustmay, 8 november 2026)
+
+Uit de NT2-review: de ontkenning van *moeten* is *niet hoeven*. Alles met AI vertaald en nog niet door
+een moedertaalspreker gecontroleerd. Nieuwe ids:
+
+- Les en woorden (`src/i18n/work/<taal>.ts`, Engelse bron in `work/en.json`): `l.mustmay`, `w.moeten`,
+  `w.niethoeven`, `w.nodig`, `w.vrijwillig`, `w.keuze`, `w.regel`; zinnen `s.mustmay.1`–`3`; gesprekje
+  `c.mustmay.q`, `c.mustmay.a`; tip `c.mustmay` met `.b`, `.p`, `.s`, `.o1`–`.o3`, `.w`.
+- Uitleg bij het gesprekje (`src/i18n/learn/<taal>.ts`): `c.mustmay.a.why`.
+
+Zin 6 van de tip (`c.mustmay.b`) gaat in de meeste talen over de valkuil in die taal zelf. Nalezen:
+
+- **ro**: "nu trebuie" is dubbelzinnig (vaak "mag niet"); daarom overal "nu e nevoie" voor *niet hoeven*.
+- **bg**: "не трябва" betekent meestal "mag niet"; zin 6 waarschuwt daarvoor ("не е нужно").
+- **fr**: "tu ne dois pas" = "mag niet"; zin 6 is langer dan de rest (mag eventueel korter).
+- **fa/prs**: «نباید» = "mag niet", «لازم نیست» = "hoeft niet".
+- **so**: de hele set is het minst zeker ("ikhtiyaari", "khasab").
+- **ti**: «ግድን ምዃን» / «ግድን ዘይምዃን», «ሓላፊ ጉጅለኻ» (teamleider), «ኣይፍቀደልካን» in `o2`.
+- **ar**: de x-vormen zijn onpersoonlijk ("التوقيع غير لازم"); misschien in zin 6 ook waarschuwen dat «لا يجب» als verbod klinkt.
+- **pt/es** `o2`: "é proibido" / "está prohibido" toegevoegd, omdat "não podes" / "no puedes" ook "lukt niet" kan zijn.

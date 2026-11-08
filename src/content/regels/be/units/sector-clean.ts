@@ -79,7 +79,7 @@ export const be: BeUnit = {
             situation: "Fatima werkt alleen in het gebouw. Het is 10 uur 's avonds. Wat kan Fatima het beste doen?",
             options: [
               { id: 'a', text: 'Ze spreekt met haar ploegbaas af hoe ze hulp vraagt.', best: true, feedback: 'Goed. Dan weet iemand waar ze is.' },
-              { id: 'b', text: 'Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.', best: false, feedback: 'Dat is logisch. Maar alleen loopt ze meer gevaar.' },
+              { id: 'b', text: 'Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.', best: false, feedback: 'Dat snap ik. Maar alleen loopt ze meer gevaar.' },
               { id: 'c', text: 'Ze neemt haar zoon mee, voor de veiligheid.', best: false, feedback: 'Dat snap ik. Maar haar werkgever moet dit regelen.' },
             ],
             why: 'Werk je alleen? Dan moet je werkgever zorgen dat je hulp kunt krijgen. Spreek af wie je belt als er iets is. Zorg dat je gsm opgeladen is.',
@@ -89,7 +89,7 @@ export const be: BeUnit = {
             id: 'r.be.l.clean.1.wa1',
             question: 'Je krijgt geen handschoenen voor een sterk middel. Wie vraag je het eerst?',
             options: [
-              { id: 'a', who: 'collega', best: false, feedback: 'Een collega heeft misschien een paar. Maar je werk moet ze geven.' },
+              { id: 'a', who: 'collega', best: false, feedback: 'Een collega heeft misschien een paar. Maar je werkgever moet ze geven.' },
               { id: 'b', who: 'leidinggevende', best: true, feedback: 'Goed. Je leidinggevende moet zorgen voor gratis handschoenen.' },
               { id: 'c', who: 'huisarts', best: false, feedback: 'De huisarts helpt als je klachten hebt. Voorkom het liever.' },
             ],

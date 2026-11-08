@@ -227,6 +227,18 @@ const t: CultureTranslation = {
     's.rights.3': 'እዚ ኣድልዎ እዩ።',
     'c.rights.q': { m: 'ንምስጓግካ ኣብዚ ፈርም።', f: 'ንምስጓግኪ ኣብዚ ፈርሚ።', x: 'ንምስጓግኩም ኣብዚ ፈርሙ።' }, // x: nieuw, nalezen
     'c.rights.a': 'ኣይፋል፡ ገና ኣይፍርምን እየ።',
+    'l.mustmay': { m: 'ግድን ድዩ፡ ወይስ ክትመርጽ ትኽእል?', f: 'ግድን ድዩ፡ ወይስ ክትመርጺ ትኽእሊ?', x: 'ግድን ድዩ፡ ወይስ ክትመርጹ ትኽእሉ?' }, // nieuw, nalezen
+    'w.moeten': 'ግድን ምዃን', // nieuw, nalezen
+    'w.niethoeven': 'ግድን ዘይምዃን', // nieuw, nalezen
+    'w.nodig': 'ኣድላዪ', // nieuw, nalezen
+    'w.vrijwillig': 'ብድሌት፡ ብምርጫ', // nieuw, nalezen
+    'w.keuze': 'ምርጫ', // nieuw, nalezen
+    'w.regel': 'ሕጊ', // nieuw, nalezen
+    's.mustmay.1': 'ነዚ ክፍርሞ ግድን ድዩ?', // nieuw, nalezen
+    's.mustmay.2': { m: 'ኣይፋል፡ ክትፍርም ግድን ኣይኮነን።', f: 'ኣይፋል፡ ክትፍርሚ ግድን ኣይኮነን።', x: 'ኣይፋል፡ ክትፍርሙ ግድን ኣይኮነን።' }, // nieuw, nalezen
+    's.mustmay.3': 'እዚ እዩ ሕጊ፡ ሄልመት ግዴታ እዩ።', // nieuw, nalezen
+    'c.mustmay.q': 'ቀዳም ተወሳኺ ሰዓት ክሰርሕ ግድን ድዩ?', // nieuw, nalezen
+    'c.mustmay.a': 'ኣይፋል፡ ኣየድልን እዩ። ብድሌት እዩ።', // nieuw, nalezen
     'u.leave': "ዕረፍቲ", // nieuw, nalezen (5 nov 2026: nu alleen "Leave"; Ziekte is u.sick)
     'l.leave': 'መዓልትታት ዕረፍቲ',
     'w.vakantiedagen': 'መዓልትታት ዕረፍቲ (በዓል)',
@@ -696,6 +708,14 @@ const t: CultureTranslation = {
     'c.rights.o2': { m: 'ሓላፊ ጽቡቕ እዩ ስለ ዝበለ፡ ፈርሞ።', f: 'ሓላፊ ጽቡቕ እዩ ስለ ዝበለ፡ ፈርምዮ።' },
     'c.rights.o3': { m: 'ነቲ ወረቐት ኣልግሶ እሞ ፈጺምካ ብዛዕባኡ ኣይትዛረብ።', f: 'ነቲ ወረቐት ኣልግስዮ እሞ ፈጺምኪ ብዛዕባኡ ኣይትዛረቢ።' },
     'c.rights.w': { m: 'ኣብኡ ጌጋ ነገር እንተሎ፡ መሰላት ከተጥፍእ ትኽእል ኢኻ፡ ንኣብነት ናይ ሓገዝ ስራሕ ኣልቦነት (WW)። ምኽሪ ንምውሳድ ግዜ ምሕታት ልሙድን ዝፍቀድን እዩ።', f: 'ኣብኡ ጌጋ ነገር እንተሎ፡ መሰላት ከተጥፍኢ ትኽእሊ ኢኺ፡ ንኣብነት ናይ ሓገዝ ስራሕ ኣልቦነት (WW)። ምኽሪ ንምውሳድ ግዜ ምሕታት ልሙድን ዝፍቀድን እዩ።', x: 'ኣብኡ ጌጋ ነገር እንተሎ፡ መሰላት ከተጥፍኡ ትኽእሉ ኢኹም፡ ንኣብነት ናይ ሓገዝ ስራሕ ኣልቦነት (WW)። ምኽሪ ንምውሳድ ግዜ ምሕታት ልሙድን ዝፍቀድን እዩ።' }, // nieuw, nalezen
+    'c.mustmay': 'ግድን፡ ግድን ኣይኮነን፡ ክልኩል', // nieuw, nalezen
+    'c.mustmay.b': { m: 'ብሆላንድኛ፡ ተጻራሪ «moeten» «niet hoeven» እዩ። «Je moet tekenen» ማለት፡ ምርጫ የብልካን። «Je hoeft niet te tekenen» ማለት፡ ክትመርጽ ትኽእል ኢኻ። «Je mag niet tekenen» ማለት፡ ክልኩል እዩ። ተጠንቀቕ፡ ብእንግሊዝኛ «must not» ማለት «mag niet» እዩ። ብትግርኛ፡ «ግድን ኣይኮነን» ማለት «hoeft niet» እዩ። ርግጸኛ ኣይኮንካን? ሕተት።', f: 'ብሆላንድኛ፡ ተጻራሪ «moeten» «niet hoeven» እዩ። «Je moet tekenen» ማለት፡ ምርጫ የብልክን። «Je hoeft niet te tekenen» ማለት፡ ክትመርጺ ትኽእሊ ኢኺ። «Je mag niet tekenen» ማለት፡ ክልኩል እዩ። ተጠንቀቒ፡ ብእንግሊዝኛ «must not» ማለት «mag niet» እዩ። ብትግርኛ፡ «ግድን ኣይኮነን» ማለት «hoeft niet» እዩ። ርግጸኛ ኣይኮንክን? ሕተቲ።', x: 'ብሆላንድኛ፡ ተጻራሪ «moeten» «niet hoeven» እዩ። «Je moet tekenen» ማለት፡ ምርጫ የብልኩምን። «Je hoeft niet te tekenen» ማለት፡ ክትመርጹ ትኽእሉ ኢኹም። «Je mag niet tekenen» ማለት፡ ክልኩል እዩ። ተጠንቀቑ፡ ብእንግሊዝኛ «must not» ማለት «mag niet» እዩ። ብትግርኛ፡ «ግድን ኣይኮነን» ማለት «hoeft niet» እዩ። ርግጸኛታት ኣይኮንኩምን? ሕተቱ።' }, // nieuw, nalezen
+    'c.mustmay.p': 'ግድን ድዩ፡ ወይስ ምርጫ ኣለኒ?', // nieuw, nalezen
+    'c.mustmay.s': { m: 'ሓላፊ ጉጅለኻ «Je hoeft zaterdag niet te komen.» ይብለካ። እንታይ ማለቱ እዩ?', f: 'ሓላፊ ጉጅለኺ «Je hoeft zaterdag niet te komen.» ይብለኪ። እንታይ ማለቱ እዩ?', x: 'ሓላፊ ጉጅለኹም «Je hoeft zaterdag niet te komen.» ይብለኩም። እንታይ ማለቱ እዩ?' }, // nieuw, nalezen
+    'c.mustmay.o1': { m: 'ቀዳም ክትመጽእ ግድን ኣይኮነን። ክትመርጽ ትኽእል ኢኻ።', f: 'ቀዳም ክትመጽኢ ግድን ኣይኮነን። ክትመርጺ ትኽእሊ ኢኺ።', x: 'ቀዳም ክትመጹ ግድን ኣይኮነን። ክትመርጹ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
+    'c.mustmay.o2': { m: 'ቀዳም ክትመጽእ ኣይፍቀደልካን እዩ።', f: 'ቀዳም ክትመጽኢ ኣይፍቀደልክን እዩ።', x: 'ቀዳም ክትመጹ ኣይፍቀደልኩምን እዩ።' }, // nieuw, nalezen
+    'c.mustmay.o3': { m: 'ቀዳም ክትመጽእ ኣለካ።', f: 'ቀዳም ክትመጽኢ ኣለኪ።', x: 'ቀዳም ክትመጹ ኣለኩም።' }, // nieuw, nalezen
+    'c.mustmay.w': { m: '«Niet hoeven» ማለት ግዴታ ኣይኮነን፡ ክትመርጽ ትኽእል ኢኻ። «Niet mogen» ግን ክልኩል እዩ ማለት እዩ።', f: '«Niet hoeven» ማለት ግዴታ ኣይኮነን፡ ክትመርጺ ትኽእሊ ኢኺ። «Niet mogen» ግን ክልኩል እዩ ማለት እዩ።', x: '«Niet hoeven» ማለት ግዴታ ኣይኮነን፡ ክትመርጹ ትኽእሉ ኢኹም። «Niet mogen» ግን ክልኩል እዩ ማለት እዩ።' }, // nieuw, nalezen
     'c.leave': 'ዕረፍትን ናይ ህጹጽ ኩነታት ፍቓድን',
     'c.leave.b': { m: 'ብሕጊ ደሞዝ ዘለዎ መዓልትታት ዕረፍቲ ትረኽብ፡ እንተ ወሓደ ኣብ ሰሙን እትሰርሓሉ መዓልትታት 4 ግዜ። ምሉእ ግዜ፡ ኣብ ሰሙን 5 መዓልቲ ትሰርሕ ዲኻ? ሽዑ ኣብ ዓመት እንተ ወሓደ 20 መዓልቲ። cao ዝያዳ ክህብ ይኽእል። ፍቓድ ብግዜን ብጽሑፍን ሕተት። ሃንደበታዊ ህጹጽ ኩነታት፡ ከም ሓደጋ ወይ ሕማም ኣብ ስድራኻ? ሽዑ ደሞዝ ዘለዎ ሓጺር ፍቓድ (calamiteitenverlof) ክትረኽብ ትኽእል ኢኻ። ብኡብኡ ንኣስራሒኻ ንገሮ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተት።', f: 'ብሕጊ ደሞዝ ዘለዎ መዓልትታት ዕረፍቲ ትረኽቢ፡ እንተ ወሓደ ኣብ ሰሙን እትሰርሕሉ መዓልትታት 4 ግዜ። ምሉእ ግዜ፡ ኣብ ሰሙን 5 መዓልቲ ትሰርሒ ዲኺ? ሽዑ ኣብ ዓመት እንተ ወሓደ 20 መዓልቲ። cao ዝያዳ ክህብ ይኽእል። ፍቓድ ብግዜን ብጽሑፍን ሕተቲ። ሃንደበታዊ ህጹጽ ኩነታት፡ ከም ሓደጋ ወይ ሕማም ኣብ ስድራኺ? ሽዑ ደሞዝ ዘለዎ ሓጺር ፍቓድ (calamiteitenverlof) ክትረኽቢ ትኽእሊ ኢኺ። ብኡብኡ ንኣስራሒኺ ንገርዮ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቲ።' },
     'c.leave.p': 'ንሓምለ ፍቓድ ክሓትት ደስ ይብለኒ።',

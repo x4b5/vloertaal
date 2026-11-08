@@ -227,6 +227,18 @@ const t: CultureTranslation = {
     's.rights.3': 'Asta e discriminare.',
     'c.rights.q': 'Semnează aici pentru concedierea ta.',
     'c.rights.a': 'Nu, încă nu semnez.',
+    'l.mustmay': 'Trebuie sau poți alege?', // nieuw, nalezen
+    'w.moeten': 'a trebui, a fi obligat', // nieuw, nalezen
+    'w.niethoeven': 'a nu fi nevoie, a nu fi obligat', // nieuw, nalezen
+    'w.nodig': 'necesar, nevoie', // nieuw, nalezen
+    'w.vrijwillig': 'voluntar, la alegere', // nieuw, nalezen
+    'w.keuze': 'alegerea', // nieuw, nalezen
+    'w.regel': 'regula', // nieuw, nalezen
+    's.mustmay.1': 'Trebuie să semnez asta?', // nieuw, nalezen
+    's.mustmay.2': 'Nu, nu e nevoie să semnezi.', // nieuw, nalezen
+    's.mustmay.3': 'Asta e regula: casca e obligatorie.', // nieuw, nalezen
+    'c.mustmay.q': 'Trebuie să fac ore suplimentare sâmbătă?', // nieuw, nalezen
+    'c.mustmay.a': 'Nu, nu e nevoie. E voluntar.', // nieuw, nalezen
     'u.leave': "Concediu", // nieuw, nalezen
     'l.leave': 'Zile libere',
     'w.vakantiedagen': 'zilele de concediu',
@@ -696,6 +708,14 @@ const t: CultureTranslation = {
     'c.rights.o2': 'O semnezi, pentru că șeful spune că e în regulă.',
     'c.rights.o3': 'Pui hârtia deoparte și nu mai vorbești niciodată despre ea.',
     'c.rights.w': 'E ceva greșit în document? Atunci poți pierde drepturi, de exemplu dreptul la ajutorul de șomaj (WW). E normal și permis să ceri timp ca să te sfătuiești.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.mustmay': 'Moet, hoeft niet, mag niet', // nieuw, nalezen
+    'c.mustmay.b': 'În olandeză, opusul lui „moeten” este „niet hoeven”. „Je moet tekenen” înseamnă: nu ai de ales. „Je hoeft niet te tekenen” înseamnă: poți alege. „Je mag niet tekenen” înseamnă: e interzis. Atenție: în engleză, „must not” înseamnă „mag niet”. În română, „nu trebuie” e o capcană: „hoeft niet” înseamnă „nu e nevoie”. Nu știi sigur? Întreabă.', // nieuw, nalezen
+    'c.mustmay.p': 'Trebuie sau am de ales?', // nieuw, nalezen
+    'c.mustmay.s': 'Șeful tău de echipă spune: „Je hoeft zaterdag niet te komen.” Ce vrea să spună?', // nieuw, nalezen
+    'c.mustmay.o1': 'Nu e nevoie să vii sâmbătă. Poți alege.', // nieuw, nalezen
+    'c.mustmay.o2': 'Nu ai voie să vii sâmbătă.', // nieuw, nalezen
+    'c.mustmay.o3': 'Trebuie să vii sâmbătă.', // nieuw, nalezen
+    'c.mustmay.w': '„Niet hoeven” înseamnă că nu e obligatoriu: poți alege. „Niet mogen” ar însemna că e interzis.', // nieuw, nalezen
     'c.leave': 'Concediu și concediu pentru urgențe',
     'c.leave.b': 'Prin lege ai zile libere plătite: cel puțin de 4 ori numărul de zile pe care le lucrezi pe săptămână. Normă întreagă, 5 zile pe săptămână? Atunci cel puțin 20 de zile pe an. Un cao poate da mai multe. Cere concediu din timp și în scris. O urgență neașteptată, ca un accident sau o boală în familie? Atunci poți primi un concediu scurt plătit (calamiteitenverlof). Anunță-ți imediat angajatorul. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.',
     'c.leave.p': 'Aș vrea să cer concediu pentru iulie.',

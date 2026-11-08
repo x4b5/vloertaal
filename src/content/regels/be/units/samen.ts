@@ -61,7 +61,7 @@ export const be: BeUnit = {
             situation: 'Sanne zei het vriendelijk en voorzichtig. Wat kan Jayden het beste doen?',
             options: [
               { id: 'a', text: 'Hij zegt: "Oké, zo dan?" En hij doet het opnieuw.', best: true, feedback: 'Goed. Hij laat zien dat hij wil leren.' },
-              { id: 'b', text: 'Hij denkt: het is maar een idee. Hij doet het zoals eerst.', best: false, feedback: 'Dat is logisch. Maar Sanne bedoelde: doe het anders.' },
+              { id: 'b', text: 'Hij denkt: het is maar een idee. Hij doet het zoals eerst.', best: false, feedback: 'Dat snap ik. Maar Sanne bedoelde: doe het anders.' },
               { id: 'c', text: 'Hij zegt: "Zo deed ik het bij mijn vorige werk."', best: false, feedback: 'Dat mag hij zeggen. Maar hier wil ze het anders.' },
             ],
             why: 'Veel Vlamingen zeggen kritiek liever voorzichtig. "Misschien" of "probeer eens" is dan toch een vraag. Weet je het niet zeker? Vraag het gewoon: "Wil je dat ik het anders doe?" Het gaat over het werk, niet over jou.',
@@ -223,7 +223,7 @@ export const be: BeUnit = {
             id: 'r.be.l.samen.3.wd2',
             situation: 'Sanne vraagt: "Kun je dit vóór 3 uur af hebben?" Jij weet: dat haal je niet.',
             options: [
-              { id: 'a', text: 'Je zegt ja. Je doet je best en ziet wel.', best: false, feedback: 'Dat is logisch. Maar dan rekent Sanne op 3 uur.' },
+              { id: 'a', text: 'Je zegt ja. Je doet je best en ziet wel.', best: false, feedback: 'Dat snap ik. Maar dan rekent Sanne op 3 uur.' },
               { id: 'b', text: 'Je zegt eerlijk: "3 uur lukt niet. 4 uur wel."', best: true, feedback: 'Goed. Nu kan Sanne plannen.' },
               { id: 'c', text: 'Je zegt niets, en je werkt extra snel door.', best: false, feedback: 'Dan weet Sanne niet wat ze kan verwachten.' },
             ],

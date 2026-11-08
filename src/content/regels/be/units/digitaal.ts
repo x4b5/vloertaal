@@ -171,7 +171,7 @@ export const be: BeUnit = {
           {
             kind: 'whoask',
             id: 'r.be.l.digitaal.2.wa1',
-            question: 'Je klikte op je werk op een nep-link. Je account doet raar. Wie meld je het?',
+            question: 'Je klikte op je werk op een nep-link. Je account doet raar. Aan wie meld je het?',
             options: [
               { id: 'a', who: 'hr', best: false, feedback: 'De personeelsdienst gaat over je contract en loon. Je account is voor ICT.' },
               { id: 'b', who: 'collega', best: false, feedback: 'Een collega kan je account niet beveiligen.' },
@@ -222,7 +222,7 @@ export const be: BeUnit = {
             situation: 'Wat doet Malik?',
             options: [
               { id: 'a', text: 'Hij vraagt de personeelsdienst hoe het zit.', best: true, feedback: 'Goed. Een mens van zijn werk weet hoe het echt zit.' },
-              { id: 'b', text: 'Hij gelooft de chatbot. Die weet het vast.', best: false, feedback: 'Dat is logisch. Maar AI kan het mis hebben, ook als het zeker klinkt.' },
+              { id: 'b', text: 'Hij gelooft de chatbot. Die weet het vast.', best: false, feedback: 'Dat snap ik. Maar AI kan het mis hebben, ook als het zeker klinkt.' },
               { id: 'c', text: 'Hij belt boos naar zijn werk. Hij wil zijn geld.', best: false, feedback: 'Eerst checken. Het antwoord van de chatbot kan fout zijn.' },
             ],
             why: 'AI kan een brief goed uitleggen. Maar AI maakt ook fouten, en klinkt toch zeker. Gaat het om je contract of je loon? Check het bij een mens. Bijvoorbeeld bij de personeelsdienst of de vakbond.',

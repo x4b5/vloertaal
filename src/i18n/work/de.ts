@@ -227,6 +227,18 @@ const t: CultureTranslation = {
     's.rights.3': 'Das ist Diskriminierung.',
     'c.rights.q': 'Unterschreib hier für deine Kündigung.',
     'c.rights.a': 'Nein, ich unterschreibe noch nicht.',
+    'l.mustmay': 'Musst du, oder darfst du wählen?', // nieuw, nalezen
+    'w.moeten': 'müssen', // nieuw, nalezen
+    'w.niethoeven': 'nicht müssen', // nieuw, nalezen
+    'w.nodig': 'nötig, notwendig', // nieuw, nalezen
+    'w.vrijwillig': 'freiwillig', // nieuw, nalezen
+    'w.keuze': 'die Wahl', // nieuw, nalezen
+    'w.regel': 'die Regel', // nieuw, nalezen
+    's.mustmay.1': 'Muss ich das unterschreiben?', // nieuw, nalezen
+    's.mustmay.2': 'Nein, du musst nicht unterschreiben.', // nieuw, nalezen
+    's.mustmay.3': 'Das ist die Regel: Ein Helm ist Pflicht.', // nieuw, nalezen
+    'c.mustmay.q': 'Muss ich am Samstag Überstunden machen?', // nieuw, nalezen
+    'c.mustmay.a': 'Nein, das ist nicht nötig. Es ist freiwillig.', // nieuw, nalezen
     'u.leave': "Urlaub", // nieuw, nalezen
     'l.leave': 'Freie Tage',
     'w.vakantiedagen': 'die Urlaubstage',
@@ -696,6 +708,14 @@ const t: CultureTranslation = {
     'c.rights.o2': 'Unterschreib, der Chef sagt ja, es ist in Ordnung.',
     'c.rights.o3': 'Leg das Papier weg und sprich nie darüber.',
     'c.rights.w': 'Steht darin etwas Falsches? Dann kannst du Rechte verlieren, zum Beispiel auf Arbeitslosengeld (WW). Um Zeit für eine Beratung zu bitten ist normal und erlaubt.', // nieuw, nalezen
+    'c.mustmay': 'Moet, hoeft niet, mag niet', // nieuw, nalezen
+    'c.mustmay.b': 'Auf Niederländisch ist das Gegenteil von „moeten“ „niet hoeven“. „Je moet tekenen“ heißt: Du hast keine Wahl. „Je hoeft niet te tekenen“ heißt: Du darfst wählen. „Je mag niet tekenen“ heißt: Es ist verboten. Achtung: Auf Englisch heißt „must not“ „mag niet“. Auf Deutsch heißt „muss nicht“ „hoeft niet“. Nicht sicher? Frag nach.', // nieuw, nalezen
+    'c.mustmay.p': 'Muss ich, oder habe ich die Wahl?', // nieuw, nalezen
+    'c.mustmay.s': 'Dein Teamleiter sagt: „Je hoeft zaterdag niet te komen.“ Was meint er?', // nieuw, nalezen
+    'c.mustmay.o1': 'Du musst am Samstag nicht kommen. Du darfst wählen.', // nieuw, nalezen
+    'c.mustmay.o2': 'Du darfst am Samstag nicht kommen.', // nieuw, nalezen
+    'c.mustmay.o3': 'Du musst am Samstag kommen.', // nieuw, nalezen
+    'c.mustmay.w': '„Niet hoeven“ heißt: Es ist keine Pflicht, du darfst wählen. „Niet mogen“ würde heißen: Es ist verboten.', // nieuw, nalezen
     'c.leave': 'Urlaub und Sonderurlaub für Notfälle',
     'c.leave.b': 'Nach dem Gesetz bekommst du bezahlte freie Tage: mindestens 4-mal so viele Tage, wie du pro Woche arbeitest. Vollzeit, 5 Tage pro Woche? Dann mindestens 20 Tage im Jahr. Ein Tarifvertrag (cao) kann mehr geben. Beantrage Urlaub rechtzeitig und schriftlich. Ein plötzlicher Notfall, zum Beispiel ein Unfall oder eine Krankheit in deiner Familie? Dann kannst du kurzen bezahlten Sonderurlaub bekommen (calamiteitenverlof). Sag es sofort deinem Arbeitgeber. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.leave.p': 'Ich möchte gern Urlaub für Juli beantragen.',
