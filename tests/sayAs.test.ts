@@ -34,4 +34,10 @@ describe('"cao" letter by letter (the owner, 5 November 2026)', () => {
     expect(minTake('Welke cao geldt voor mij?')).toBe(CAO_TAKE);
     expect(minTake('het loon')).toBe(0);
   });
+  it('makes the tile "ben" again (heard as "din", 8 November 2026), and not the sentences with it', () => {
+    expect(minTake('ben')).toBe(6);
+    expect(minTake('Ben')).toBe(6);
+    expect(minTake('Hallo, ik ben nieuw.')).toBe(0);
+    expect(minTake('benen')).toBe(0);
+  });
 });

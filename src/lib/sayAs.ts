@@ -28,6 +28,11 @@ export function sayAs(text: string): string {
  * round makes them again. 0: any take will do.
  */
 export const CAO_TAKE = 5;
+/**
+ * Single clips heard said wrong, by their text (any case): the take that makes them again. "ben"
+ * (the tile of "Hallo, ik ben nieuw."): the owner heard "din" (8 November 2026).
+ */
+const RETAKE: Readonly<Record<string, number>> = { ben: 6 };
 export function minTake(text: string): number {
-  return /\bcao('s)?\b/i.test(text) ? CAO_TAKE : 0;
+  return Math.max(/\bcao('s)?\b/i.test(text) ? CAO_TAKE : 0, RETAKE[text.trim().toLowerCase()] ?? 0);
 }

@@ -102,6 +102,8 @@ writeFileSync(
         id,
         text,
         ...(say !== text ? { say, take: takeFor(text) } : {}),
+        // A clip heard said wrong (sayAs.ts minTake, e.g. "ben"): the next round makes it again.
+        ...(say === text && minTake(text) ? { take: minTake(text) } : {}),
         ...(onlyVoices.has(id) ? { voices: onlyVoices.get(id) } : {}),
       };
     }),
