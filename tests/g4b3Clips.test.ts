@@ -548,6 +548,19 @@ const PENDING_RECORDING = new Set<string>([
   'Heeft iemand nog een vraag?',
   'Ja. Wanneer komt het nieuwe rooster?',
   'Mag ik iets zeggen? Ik heb een idee.',
+  // New lesson "Moet het of mag het?" (l.mustmay, 8 November 2026, the NT2 review):
+  'moeten',
+  'niet hoeven',
+  'nodig',
+  'vrijwillig',
+  'de keuze',
+  'de regel',
+  'Moet ik dit tekenen?',
+  'Nee, je hoeft niet te tekenen.',
+  'Dat is de regel: een helm is verplicht.',
+  'Moet ik zaterdag overwerken?',
+  'Nee, dat is niet nodig. Het is vrijwillig.',
+  'Moet het, of heb ik een keuze?',
 ]);
 
 describe('recorded clips (G4 b3)', () => {

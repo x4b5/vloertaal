@@ -56,6 +56,7 @@ const reasons: Record<string, string> = {
   'c.boundaries.a': 'A joke that hurts may be stopped, clearly.',
   'c.health.a': 'A break protects health, so it is taken.',
   'c.rights.a': 'A dismissal is never signed at once. Advice comes first.',
+  'c.mustmay.a': 'Voluntary means you may choose: working on Saturday is not needed.',
   'c.leave.a': 'When? This reply gives a month and how long.',
   'c.illness.a': 'Medical details are for the company doctor, not the boss.',
   'c.warning.a': 'An employer may copy a passport, not keep it.',
