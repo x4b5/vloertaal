@@ -13,7 +13,7 @@ import { groupByTheme } from '../content/themes';
 import { ThemeHeadRow } from './Themes';
 import { COACH_FACTS } from '../content/facts';
 import { CONTACT_EMAIL } from '../content/about';
-import { PRO_LEAD, PRO_TITLE, proSections, type ProSection } from '../content/pro';
+import { COACH_PITCH, COACH_WHY, PRO_LEAD, PRO_TITLE, proSections, type ProSection } from '../content/pro';
 import { KUN_REGELS, KUN_TAAL, kunOnderwerpenNu, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 
 /**
@@ -74,6 +74,7 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
         <ChromeBack lang={lang} onBack={onBack} />
         <h1 tabIndex={-1}>{PRO_TITLE}</h1>
       </div>
+      <p><strong>{COACH_PITCH}</strong> {COACH_WHY}</p>
       <p>{PRO_LEAD}</p>
       {proSections.map((s) => <Section key={s.id} s={s}>{s.extra === 'topics' ? topics : s.extra === 'facts' ? <Facts /> : s.extra === 'kunjenu' ? <KunTabel /> : null}</Section>)}
     </div>
