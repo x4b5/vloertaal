@@ -6,7 +6,7 @@ import { gloss } from '../src/i18n';
 
 /** Whole word, any case (as withTerms in src/components/Bi.tsx matches it). */
 const has = (text: string, term: string) =>
-  new RegExp(`(?<![\\p{L}\\p{N}])${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}\\p{N}])`, 'iu').test(text);
+  new RegExp(`(?:^|[^\\p{L}\\p{N}])${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}\\p{N}])`, 'iu').test(text);
 
 /** The English sentences on the tip's page. */
 const shown = (id: string) => {

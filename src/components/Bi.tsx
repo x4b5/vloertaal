@@ -128,19 +128,21 @@ export function withTerms(text: string, lang: HelpLanguage | undefined, terms: r
   const todo = terms.filter((t) => !seen.has(t.toLowerCase()));
   if (!todo.length) return plain(text, 0);
   const esc = [...todo].sort((a, b) => b.length - a.length).map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-  const re = new RegExp(`(?<![\\p{L}\\p{N}])(?:${esc.join('|')})(?![\\p{L}\\p{N}])`, 'giu');
+  // The letter before is matched (not looked behind: an old iPhone cannot, tests/oldPhones.test.ts).
+  const re = new RegExp(`(^|[^\\p{L}\\p{N}])(${esc.join('|')})(?![\\p{L}\\p{N}])`, 'giu');
   const parts: ReactNode[] = [];
   let last = 0;
   for (const m of allMatches(text, re)) {
-    const key = m[0].toLowerCase();
+    const word = m[2];
+    const key = word.toLowerCase();
     const term = todo.find((t) => t.toLowerCase() === key);
     if (!term || seen.has(key)) continue;
     seen.add(key);
-    const at = m.index ?? 0;
+    const at = (m.index ?? 0) + m[1].length;
     if (at > last) parts.push(plain(text.slice(last, at), last));
-    const bold = <strong className="tip-term" lang="nl">{m[0]}</strong>;
+    const bold = <strong className="tip-term" lang="nl">{word}</strong>;
     parts.push(isolate ? <bdi key={`t${at}`} dir="ltr">{bold}</bdi> : <Fragment key={`t${at}`}>{bold}</Fragment>);
-    last = at + m[0].length;
+    last = at + word.length;
   }
   if (last < text.length) parts.push(plain(text.slice(last), last));
   return parts;
