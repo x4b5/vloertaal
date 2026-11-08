@@ -22,6 +22,7 @@ import { News } from './components/News';
 import { NoticeCard } from './components/NoticeCard';
 import { ReasonCard } from './components/ReasonCard';
 import { reasonDue, withReasons } from './lib/reason';
+import { setCastCountry } from './lib/voices';
 import { noticeFor, seeNotice } from './lib/notice';
 import { NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } from './components/RulesHelp';
 import { GenderScreen } from './components/Gender';
@@ -596,6 +597,8 @@ export default function App() {
     });
   }, [progress.cards]);
   useEffect(() => { setPreferredVoice(progress.voice); }, [progress.voice]);
+  // Belgium: the Flemish cast (src/lib/voices.ts). Set while rendering, as the voices are picked then.
+  setCastCountry(progress.country);
   // Set during render, not in an effect: a child's effect (an exercise that would say its word)
   // runs before the parent's, and must already know that sound is off.
   setQuietAudio(Boolean(progress.quiet));

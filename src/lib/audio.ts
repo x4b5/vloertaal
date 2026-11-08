@@ -66,6 +66,10 @@ export interface RecordedVoice {
   modelCard?: string;
   /** Set when loading: who made the recordings. */
   engine?: 'ElevenLabs' | 'Piper';
+  /** A voice for one country only (the Flemish voices: 'be'); none = the Dutch cast. */
+  country?: 'be';
+  /** The Dutch voice of the same character, played where this voice has no recording yet. */
+  twin?: string;
 }
 
 export interface RecordedIndex {
@@ -122,7 +126,8 @@ const recordedListeners = new Set<() => void>();
 
 /** Voices recorded ahead of time: ElevenLabs first, then Piper (built in CI). Empty when none. */
 export function recordedVoices(): RecordedVoice[] {
-  return recorded.map((r) => r.voice);
+  // The Flemish voices come with the country (src/lib/voices.ts), not as a choice in Settings.
+  return recorded.filter((r) => !r.voice.country).map((r) => r.voice);
 }
 
 export function onRecordedVoices(fn: () => void): () => void {
@@ -293,16 +298,20 @@ export function clipUrl(text: string, voice?: VoiceRef): string | undefined {
 const clipIn = (r: Recorded, text: string) => r.clips[text.trim()] ?? r.plain[plainText(text)];
 
 /**
- * The recording to play for this text: the chosen voice if it has the line, else another
- * recorded voice of the same gender (ElevenLabs before Piper), so a man never suddenly
- * sounds like a woman or the other way round. New lines may exist in only some voices.
+ * The recording to play for this text: the chosen voice if it has the line, else (a Flemish
+ * voice) the same character's Dutch twin, else another recorded voice of the same gender
+ * (ElevenLabs before Piper; a voice of the same country first), so a man never suddenly sounds
+ * like a woman or the other way round. New lines may exist in only some voices.
  */
 function clipFor(rec: Recorded, text: string): { rec: Recorded; id: string } | undefined {
   const own = clipIn(rec, text);
   if (own) return { rec, id: own };
+  const twin = rec.voice.twin ? recorded.find((r) => r.voice.key === rec.voice.twin) : undefined;
+  const twinId = twin && clipIn(twin, text);
+  if (twin && twinId) return { rec: twin, id: twinId };
   const gender = rec.voice.gender;
-  for (const other of recorded) {
-    if (other === rec || (gender && other.voice.gender !== gender)) continue;
+  const others = recorded.filter((o) => o !== rec && (!gender || o.voice.gender === gender));
+  for (const other of [...others.filter((o) => o.voice.country === rec.voice.country), ...others.filter((o) => o.voice.country !== rec.voice.country)]) {
     const id = clipIn(other, text);
     if (id) return { rec: other, id };
   }

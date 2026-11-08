@@ -310,7 +310,7 @@ describe('rules content: model sentences and recorded clips', () => {
     const withClip = models.filter((m) => clipTexts.includes(m.nl));
     expect(withClip.map((m) => m.id)).toEqual(['r.l.veilig.1.mo1', 'r.l.veilig.2.mo1', 'r.l.digitaal.3.mo1']);
     // Each of them is recorded in every voice, so the voice a learner picks has it too.
-    for (const m of withClip) for (const v of eleven.voices) expect(Object.values(v.said), `${m.id} ${v.key}`).toContain(m.nl);
+    for (const m of withClip) for (const v of eleven.voices.filter((x) => !x.country)) expect(Object.values(v.said), `${m.id} ${v.key}`).toContain(m.nl);
   });
 
   it('catches a slip of a space, a punctuation mark or a capital', () => {

@@ -37,6 +37,9 @@ describe('the short recorded-voice index', () => {
     for (const [i, v] of long.voices.entries()) {
       expect(back.voices[i].label).toBe(v.label);
       expect(back.voices[i].gender).toBe(v.gender);
+      // A Flemish voice keeps its country and its Dutch twin (src/lib/audio.ts clipFor).
+      expect((back.voices[i] as { country?: string }).country).toBe((v as { country?: string }).country);
+      expect((back.voices[i] as { twin?: string }).twin).toBe((v as { twin?: string }).twin);
       expect(back.voices[i].said).toEqual(v.said);
       for (const id of Object.keys(v.said)) expect(back.voices[i].takes?.[id] ?? 1, `${v.key} ${id}`).toBe(v.takes?.[id] ?? 1);
     }
