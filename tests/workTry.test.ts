@@ -107,7 +107,8 @@ describe('workTryLine', () => {
     const { workTryLine } = await load();
     const { helpLanguages } = await import('../src/i18n/all');
     expect(helpLanguages).toHaveLength(14);
-    const voices = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')).voices as { key: string; said: Record<string, string> }[];
+    // The Dutch cast: a Flemish voice (country) records only what it is asked to.
+    const voices = (JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')).voices as { key: string; country?: string; said: Record<string, string> }[]).filter((v) => !v.country);
     for (const lessonId of ['l.people', 'l.arrive', 'l.callin']) {
       const line = workTryLine(lessonId)!;
       for (const v of voices) expect(Object.values(v.said), `${v.key}: ${line.nl}`).toContain(line.nl);

@@ -74,7 +74,8 @@ describe('"Wat ken je al?": the items', () => {
   });
 
   it('every line has a recording in every voice (no line still to be recorded)', () => {
-    const voices = JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')).voices as { said: Record<string, string> }[];
+    // The Dutch cast: a Flemish voice (country) records only what it is asked to.
+    const voices = (JSON.parse(readFileSync('public/audio-el/voices.json', 'utf8')).voices as { country?: string; said: Record<string, string> }[]).filter((v) => !v.country);
     const plain = (t: string) => t.trim().toLowerCase().replace(/[.!?…,]+$/, '');
     const lines = [...new Set([...texts('A'), ...texts('B'), speakSentence().nl])];
     for (const v of voices) {

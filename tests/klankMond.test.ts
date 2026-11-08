@@ -81,7 +81,8 @@ describe('the sounds', () => {
     for (const k of KLANKEN) {
       expect(words[k.word.id], k.word.id).toBeTruthy();
       expect([k.letters, k.also].some((l) => l && k.word.nl.includes(l)), k.id).toBe(true);
-      for (const v of index.voices) expect(said(v.key).has(k.word.nl), `${v.key}: ${k.word.nl}`).toBe(true);
+      // The Dutch cast (a Flemish voice records only what it is asked to: src/lib/voices.ts).
+      for (const v of index.voices.filter((x) => !x.country)) expect(said(v.key).has(k.word.nl), `${v.key}: ${k.word.nl}`).toBe(true);
     }
     // Short against long: the same word where the course has one (man – maan).
     expect([byId.a.word.nl, byId.aa.word.nl]).toEqual(['man', 'maan']);
