@@ -36,14 +36,14 @@ De sleutels van de Nederlandse stemmen bleven gelijk; alleen de stem erachter ve
 
 **Vlaamse stemmen** (alleen voor wie in België werkt; zie `src/lib/voices.ts`). Wat een Vlaamse
 stem nog niet heeft, speelt eerst een andere Vlaamse stem van hetzelfde geslacht (zo spreekt
-Philip voorlopig ook voor Henk), en anders de Nederlandse stem van hetzelfde personage.
+Philip voorlopig ook voor Henk, en Evie voor Jada), en anders de Nederlandse stem van hetzelfde personage.
 
 | Groep | Wat | Stand |
 |---|---|---|
 | `be.w.` | Belgische woorden | ✅ alle vier (PR #330) |
 | `be.s.` | Belgische zinnen | ✅ alle vier |
-| `be.c.` | Belgische chats | ✅ Philip · ⏳ Evie, Hans, Sare |
-| alle andere | woorden, tegels, zinnen | ✅ Philip (8 nov, ±17.000 credits) · ⏳ Evie, Hans, Sare |
+| `be.c.` | Belgische chats | ✅ Philip, Evie · ⏳ Hans, Sare |
+| alle andere | woorden, tegels, zinnen | ✅ Philip, Evie (8 nov, ±17.000 credits elk) · ⏳ Hans, Sare |
 
 **Zo meet je de stand opnieuw** (zonder sleutel):
 
