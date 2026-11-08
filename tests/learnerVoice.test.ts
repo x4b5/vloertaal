@@ -17,6 +17,8 @@ const chats = [...allLessons, ...allRegionUnits('taal').flatMap((u) => u.lessons
  *  Zuid-Limburg": recorded on the next 'Record ElevenLabs voices' run (the phone voice says them meanwhile). */
 const PENDING_RECORDING = new Set<string>([
   // Add a new reply here until the next 'Record ElevenLabs voices' run.
+  // New lesson "Moet het of mag het?" (l.mustmay, 8 November 2026):
+  'Nee, dat is niet nodig. Het is vrijwillig.',
   'Ik ben het niet met je eens.',
   'Morgen om zeven uur.',
   // New lesson "Een ongeluk melden" (l.accident, 17 October 2026):

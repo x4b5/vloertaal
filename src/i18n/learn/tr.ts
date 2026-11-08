@@ -59,6 +59,7 @@ const t: CultureTranslation = {
     'c.boundaries.a.why': "İncitici bir şaka açıkça durdurulabilir.",
     'c.health.a.why': "Mola sağlığı korur, bu yüzden verilir.",
     'c.rights.a.why': "İşten çıkarma asla hemen imzalanmaz. Önce danışılır.",
+    'c.mustmay.a.why': "Gönüllü, seçebilirsin demek: cumartesi çalışmak gerekli değil.",
     'c.leave.a.why': "Ne zaman? Bu cevap bir ay ve süre veriyor.",
     'c.illness.a.why': "Tıbbi ayrıntılar patron için değil, işyeri hekimi içindir.",
     'c.warning.a.why': "İşveren pasaportun kopyasını alabilir, pasaportu tutamaz.",

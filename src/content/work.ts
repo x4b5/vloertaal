@@ -334,6 +334,33 @@ const coreUnits: Unit[] = [
           ),
         ],
       },
+      // "Moet het of mag het?" (8 November 2026, the NT2 review): the opposite of "moeten" is "niet
+      // hoeven", not "niet moeten" (a classic trap: German "muss nicht", English "must not"). At the
+      // end of the unit, so no existing lesson changes place. "mogen", "verboden", "verplicht", "kiezen"
+      // and "overwerken" were taught before: the sentences use them, the words here are new.
+      {
+        id: 'l.mustmay',
+        title: 'Must, or may you choose?',
+        words: [
+          { id: 'w.moeten', nl: 'moeten', en: 'to have to, must', emoji: '🟥', picture: false },
+          { id: 'w.niethoeven', nl: 'niet hoeven', en: 'not to have to', emoji: '⬜', picture: false },
+          { id: 'w.nodig', nl: 'nodig', en: 'needed, necessary', emoji: '❗', picture: false },
+          { id: 'w.vrijwillig', nl: 'vrijwillig', en: 'voluntary, by choice', emoji: '🙋', picture: false },
+          { id: 'w.keuze', nl: 'de keuze', en: 'the choice', emoji: '🤔', picture: false },
+          { id: 'w.regel', nl: 'de regel', en: 'the rule', emoji: '📜', picture: false },
+        ],
+        sentences: [
+          { id: 's.mustmay.1', nl: 'Moet ik dit tekenen?', en: 'Do I have to sign this?' },
+          { id: 's.mustmay.2', nl: 'Nee, je hoeft niet te tekenen.', en: 'No, you do not have to sign.' },
+          { id: 's.mustmay.3', nl: 'Dat is de regel: een helm is verplicht.', en: 'That is the rule: a helmet is compulsory.' },
+        ],
+        dialogues: [
+          chat(
+            line('c.mustmay.q', 'Moet ik zaterdag overwerken?', 'Do I have to work overtime on Saturday?'),
+            line('c.mustmay.a', 'Nee, dat is niet nodig. Het is vrijwillig.', 'No, that is not necessary. It is voluntary.'),
+          ),
+        ],
+      },
     ],
   },
   // "Verlof" and "Ziekte" were one unit, "Verlof en ziekte" (u.leave), until 5 November 2026 (the
@@ -470,7 +497,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.bsn',
     emoji: '🔢',
     title: 'Your BSN: keep it safe',
-    body: 'You get a BSN (burgerservicenummer) when you register at the municipality (gemeente). Here only for a short time? Then you register at an RNI desk. You need your BSN to work, for tax, for health insurance and for a bank account. Your employer needs your ID and your BSN. Do not give your BSN or a copy of your ID to people who do not need it: ask why they need it. Moving? Register your new address at the gemeente within 5 days. DigiD is your login for government websites: never give it to someone else. Do you live or work here? Then you usually must have Dutch health insurance (zorgverzekering). Arrange it quickly.',
+    body: 'You get a BSN (burgerservicenummer) when you register at the municipality (gemeente). Here only for a short time? Then you register at an RNI desk. You need your BSN to work, for tax, for health insurance and for a bank account. Your employer needs your ID and your BSN. Do not give your BSN or a copy of your ID to just anyone. First ask why they need it. Moving? Register your new address at the gemeente within 5 days. DigiD is your login for government websites: never give it to someone else. Do you live or work here? Then you usually must have Dutch health insurance (zorgverzekering). Arrange it quickly.',
     phrase: { id: 'c.bsn.p', nl: 'Waarom heeft u mijn BSN nodig?', en: 'Why do you need my BSN?' },
     situation: { id: 'c.bsn.s', en: 'A stranger offers you a job on WhatsApp. He wants your passport photo and DigiD login. What do you do?' },
     options: [
@@ -580,7 +607,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.rights',
     emoji: '✊',
     title: 'Discrimination and dismissal',
-    body: 'Discrimination at work is forbidden, for example because of your origin, religion or gender. Your employer cannot simply fire you: normally they need permission from UWV or a judge, or your agreement. (In a trial period or at the end of a temporary contract, other rules apply.) Do not sign a paper about your dismissal that you do not understand. Did you sign an agreement to end your job (vaststellingsovereenkomst)? Then you can usually still cancel it in writing within 14 days. Get help first from the union (for example FNV), a discrimination help desk or the Juridisch Loket (free legal advice).',
+    body: 'Discrimination at work is forbidden, for example because of your origin, religion or gender. Your employer cannot simply fire you: normally they need permission from UWV or a judge, or your agreement. (In a trial period or at the end of a temporary contract, other rules apply.) Do not sign a paper about your dismissal that you do not understand. Did you sign an agreement to end your job (vaststellingsovereenkomst)? Then you can usually still cancel it in writing within 14 days. Get help first. Go to the union (for example FNV), a discrimination help desk or the Juridisch Loket. The Juridisch Loket gives free legal advice.',
     phrase: { id: 'c.rights.p', nl: 'Ik wil eerst advies vragen.', en: 'I want to ask for advice first.' },
     situation: { id: 'c.rights.s', en: 'Your boss gives you a paper: "Sign today, then you leave by agreement." You do not understand it well. What do you do?' },
     options: [
@@ -590,6 +617,21 @@ const coreTips: CultureTip[] = [
     ],
     why: { id: 'c.rights.w', en: 'Is something wrong in it? Then you can lose rights, for example to unemployment benefit (WW). Asking for time to get advice is normal and allowed.' },
   }, ABUSE_LINE),
+  tip({
+    id: 'c.mustmay',
+    lessonId: 'l.mustmay',
+    emoji: '⚖️',
+    title: 'Moet, hoeft niet, mag niet',
+    body: 'In Dutch, the opposite of "moeten" is "niet hoeven". "Je moet tekenen" means: you have no choice. "Je hoeft niet te tekenen" means: you may choose. "Je mag niet tekenen" means: it is forbidden. Careful: in English, "must not" means "mag niet". In many languages, "not must" means "hoeft niet". Not sure? Ask it.',
+    phrase: { id: 'c.mustmay.p', nl: 'Moet het, of heb ik een keuze?', en: 'Do I have to, or do I have a choice?' },
+    situation: { id: 'c.mustmay.s', en: 'Your team leader says: "Je hoeft zaterdag niet te komen." What does he mean?', nl: 'Je hoeft zaterdag niet te komen.', ask: 'which' },
+    options: [
+      { id: 'c.mustmay.o1', en: 'You do not have to come on Saturday. You may choose.', best: true },
+      { id: 'c.mustmay.o2', en: 'You are not allowed to come on Saturday.', best: false },
+      { id: 'c.mustmay.o3', en: 'You must come on Saturday.', best: false },
+    ],
+    why: { id: 'c.mustmay.w', en: '"Niet hoeven" means it is not compulsory: you may choose. "Niet mogen" would mean it is forbidden.' },
+  }, ''),
   tip({
     id: 'c.leave',
     lessonId: 'l.leave',
@@ -616,7 +658,7 @@ const coreTips: CultureTip[] = [
     lessonId: 'l.illness',
     emoji: '👩‍⚕️',
     title: 'Your rights when you are sick',
-    body: 'When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have: you talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (betermelden). In the first year you get at least the minimum wage. A temporary contract stops on its end date, also when you are sick. Working through an agency? If your contract has an agency clause (uitzendbeding), it can end when you get sick. Then ask UWV about the Ziektewet, or ask a union.',
+    body: 'When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have. You talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (betermelden). In the first year you get at least the minimum wage. A temporary contract stops on its end date, also when you are sick. Working through an agency? If your contract has an agency clause (uitzendbeding), it can end when you get sick. Then ask UWV about the Ziektewet, or ask a union.',
     phrase: { id: 'c.illness.p', nl: 'Ik ben weer beter. Ik kom morgen werken.', en: 'I am better again. I will come to work tomorrow.' },
     situation: { id: 'c.illness.s', en: 'You are sick for a week. Your employer sends you to the company doctor. What do you do?' },
     options: [
@@ -979,7 +1021,7 @@ const socialTips = [
     'respect',
     '🫂',
     'Respect for everyone',
-    'At work, everyone is equal and everyone is treated with respect, whatever their gender, origin, religion or sexual orientation. You decide about physical contact. A handshake is common, but you may also greet in another polite way, like a nod and a smile, and explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.',
+    'At work, everyone is equal and everyone is treated with respect, whatever their gender, origin, religion or sexual orientation. You decide about physical contact. A handshake is common. But you may also greet in another polite way, like a nod and a smile. Then explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.',
     ['Ik geef liever geen hand, maar ik groet je graag.', 'I prefer not to shake hands, but I am happy to greet you.'],
     'A colleague often makes jokes about your religion. You asked him to stop, but he goes on. What do you do?',
     [
@@ -994,7 +1036,7 @@ const socialTips = [
     'gossip',
     '🤫',
     'Gossip and social media',
-    'Talking behind a colleague’s back (roddelen) harms the trust in a team. Do you have a problem with someone? Talk to that person, or to your supervisor. Online, the same rules apply as at work: do not post photos, videos or messages about colleagues, clients or the company without permission. Your boss can see what you post, and it can stay online for years. Many teams have a group chat (groepsapp) for work: keep it about work, and do not share screenshots of it with others. Sharing private things of a colleague or mocking someone online is bullying too.',
+    'Talking behind a colleague’s back (roddelen) harms the trust in a team. Do you have a problem with someone? Talk to that person, or to your supervisor. Online, the same rules apply as at work. Do not post anything about colleagues, clients or the company without permission. That includes photos, videos and messages. Your boss can see what you post, and it can stay online for years. Many teams have a group chat (groepsapp) for work: keep it about work, and do not share screenshots of it with others. Sharing private things of a colleague or mocking someone online is bullying too.',
     ['Dat wil ik niet online hebben.', 'I do not want that online.'],
     'A colleague films you when you slip on the wet floor. He wants to put the video on TikTok. What do you do?',
     [
@@ -1009,7 +1051,7 @@ const socialTips = [
     'boundaries',
     '🛑',
     'Crossing the line',
-    'Grensoverschrijdend gedrag is behaviour that crosses someone’s boundary: unwanted touching, sexual remarks or jokes, staring, sending unwanted pictures, threats or shouting. It does not matter if the other person "meant it as a joke": what counts is how it feels to you. If you can, say clearly that you want it to stop. Write down what happened, when, and who saw it. Tell your supervisor, the confidential adviser (vertrouwenspersoon, if there is one) or HR. Your employer must protect you, and you may not be punished for reporting it. Did you see it happen to a colleague? Ask if they are okay, and offer to be a witness.',
+    'Grensoverschrijdend gedrag is behaviour that crosses someone’s boundary. For example: unwanted touching, sexual remarks or jokes, staring, unwanted pictures, threats or shouting. It does not matter if the other person "meant it as a joke": what counts is how it feels to you. If you can, say clearly that you want it to stop. Write down what happened, when, and who saw it. Tell your supervisor, the confidential adviser (vertrouwenspersoon, if there is one) or HR. Your employer must protect you, and you may not be punished for reporting it. Did you see it happen to a colleague? Ask if they are okay, and offer to be a witness.',
     ['Ik wil dat je stopt.', 'I want you to stop.'],
     'Your team leader often puts his hand on your back and says you look "pretty". It makes you feel uncomfortable. He decides your shifts. What do you do?',
     [
@@ -1357,7 +1399,7 @@ const laterTips = [
     'warning',
     '⛓️',
     'Signs of exploitation',
-    'Watch out for these signs. Your employer keeps your passport or ID: that is not allowed, you keep your own ID and an employer may only make a copy. You get much less pay than agreed, or no payslip. You must pay off a big debt to the employer or agency. You must work extremely long hours, without a choice. Someone threatens you, or uses your housing to put pressure on you. This is not normal and not allowed.',
+    'Watch out for these signs. Your employer keeps your passport or ID. That is not allowed: you keep your own ID. An employer may only make a copy. You get much less pay than agreed, or no payslip. You must pay off a big debt to the employer or agency. You must work extremely long hours, without a choice. Someone threatens you, or uses your housing to put pressure on you. This is not normal and not allowed.',
     ['Ik wil mijn paspoort terug.', 'I want my passport back.'],
     'On your first day, the agency says: "We keep your passport, for safety." What do you do?',
     [
@@ -2269,7 +2311,7 @@ const aiTips = [
     'aihelp',
     '🤖',
     'AI helps, a person checks',
-    'AI apps and chatbots, like ChatGPT, can translate, explain a letter or help you write a message. That is useful. But AI sometimes makes mistakes, and still sounds very sure. For important things, like your contract, your pay, medicine or safety, always check the answer with a person: your supervisor, HR or the Juridisch Loket.',
+    'AI apps and chatbots, like ChatGPT, can translate, explain a letter or help you write a message. That is useful. But AI sometimes makes mistakes, and still sounds very sure. Is it about your contract, your pay, medicine or safety? Then always check the answer with a person. For example your supervisor, HR or the Juridisch Loket.',
     ['Klopt dit? Kunt u even meekijken?', 'Is this right? Could you have a look with me?'],
     'You ask a chatbot about your contract. It says you get no holiday pay. What do you do?',
     [
@@ -2314,7 +2356,7 @@ const aiTips = [
     'aiplan',
     '⚖️',
     'Who decided this?',
-    'More and more companies let an app or a computer make the roster, count your speed with the scanner, or decide things. You may ask which information about you is collected. Is there a big decision about you, like fewer hours, a warning or dismissal? Ask who decided it. When a computer made such a decision on its own, you may ask a person to look at it again and explain it. Write down your own hours.',
+    'More and more companies let an app or a computer decide things. For example, it makes the roster or counts your speed with the scanner. You may ask which information about you is collected. Is there a big decision about you, like fewer hours, a warning or dismissal? Ask who decided it. Did a computer make that decision on its own? Then you may ask a person to check it again and explain it. Write down your own hours.',
     ['Kan een mens hier even naar kijken?', 'Can a person have a look at this?'],
     'The planning app gives you far fewer hours next month. Nobody tells you why. What do you do?',
     [
@@ -2474,7 +2516,7 @@ const toolsTips = [
     'translate',
     '🌐',
     'Translation apps: smart, but check',
-    'A translation app, like Google Translate, helps a lot. You can type, speak, or use conversation mode to talk with a colleague. With the camera you can translate signs, notes and instructions. On many phones, WhatsApp can also translate messages. Use your phone only where it is safe and allowed: not near machines or forklifts, and ask first (more in the lesson "Your phone at work"). Apps make mistakes. For important things, like your contract, a letter or a safety instruction, also ask a person to explain it. Do not take photos of confidential work papers without permission.',
+    'A translation app, like Google Translate, helps a lot. You can type, speak, or use conversation mode to talk with a colleague. With the camera you can translate signs, notes and instructions. On many phones, WhatsApp can also translate messages. Use your phone only where it is safe and allowed. Never near machines or forklifts. Always ask first. Apps make mistakes. For important things, like your contract, a letter or a safety instruction, also ask a person to explain it. Do not take photos of confidential work papers without permission.',
     ['Mag ik mijn telefoon gebruiken om te vertalen?', 'May I use my phone to translate?'],
     'Your supervisor gives you safety instructions in Dutch. You understand only a few words. What do you do?',
     [
@@ -2570,7 +2612,7 @@ const dataTips = [
     'details',
     '🔠',
     'Your details: give them right',
-    'At the start of a job, you give your details: your name, address, phone number, date of birth and BSN. Spell your name slowly, letter by letter. Then check your name on your contract and your payslip. A mistake in your name or BSN can give problems with your pay or tax. New address or phone number? Tell your employer.',
+    'At the start of a job, you give your details. That is your name, address, phone number, date of birth and BSN. Spell your name slowly, letter by letter. Then check your name on your contract and your payslip. A mistake in your name or BSN can give problems with your pay or tax. New address or phone number? Tell your employer.',
     ['Ik spel het even: A, L, I.', 'Let me spell it: A, L, I.'],
     'On the phone, the agency writes down your last name. You hear that they write it wrong. What do you do?',
     [
@@ -3388,7 +3430,7 @@ const entreeTips = [
     'feelwell',
     '💬',
     'Too much? You do not have to do it alone',
-    'Everyone feels tired, stressed or sad sometimes. Too much work (werkdruk), bad sleep from shift work or missing your family can make it heavy. You do not have to carry it alone, and saying "it is too much" is not weak. Talk to someone you trust: your supervisor, the confidential adviser (vertrouwenspersoon, if there is one), the company doctor (bedrijfsarts) or your huisarts. You may also ask for a talk with the company doctor yourself. Doctors do not tell your boss what you said. Do you think about suicide, or do you worry about someone? Call 113 (free, day and night), or chat at 113.nl.',
+    'Everyone feels tired, stressed or sad sometimes. Too much work (werkdruk), bad sleep from shift work or missing your family can make it heavy. You do not have to carry it alone, and saying "it is too much" is not weak. Talk to someone you trust. For example your supervisor, the company doctor (bedrijfsarts) or your huisarts. Or the confidential adviser (vertrouwenspersoon), if your company has one. You may also ask for a talk with the company doctor yourself. Doctors do not tell your boss what you said. Do you think about suicide, or do you worry about someone? Call 113 (free, day and night), or chat at 113.nl.',
     ['Het gaat niet zo goed. Kan ik even met je praten?', 'I am not doing so well. Can I talk to you for a moment?'],
     'For weeks, you sleep badly and the work is too much. You feel very tired. What do you do?',
     [
@@ -3409,7 +3451,7 @@ const entreeTips = [
     'council',
     '🗳️',
     'Who may vote?',
-    'In the Netherlands you choose who decides, by voting. The gemeenteraad decides about your town. The Tweede Kamer makes the laws for the whole country. With Dutch nationality, you may vote in every election, from 18. For the gemeenteraad, more people may vote: people from another EU country who live here, and people from outside the EU after 5 years of legal stay. The gemeente sends you a voting pass (stempas). Bring it with your ID. Not sure if you may vote? Ask the gemeente.',
+    'In the Netherlands you choose who decides, by voting. The gemeenteraad decides about your town. The Tweede Kamer makes the laws for the whole country. With Dutch nationality, you may vote in every election, from 18. More people may vote for the gemeenteraad. People from another EU country who live here may vote. People from outside the EU may vote after 5 years of legal stay. The gemeente sends you a voting pass (stempas). Bring it with your ID. Not sure if you may vote? Ask the gemeente.',
     ['Mag ik stemmen voor de gemeenteraad?', 'May I vote for the gemeenteraad?'],
     'You are from Morocco and have lived here legally for six years, without Dutch nationality. What is true?',
     [
@@ -3432,7 +3474,7 @@ const entreeTips = [
     'police',
     '👮',
     'Your ID and your rights',
-    'From 14, you must show your ID when the police ask for it. So always carry it with you. Do you get a letter with a decision you do not agree with, for example from the gemeente or the UWV? Then you can object (bezwaar maken) in writing. Do it before the date in the letter. The police and the judge must treat everyone equally. Arrested? You may ask for a lawyer. The Juridisch Loket gives free advice.',
+    'From 14, you must show your ID when the police ask for it. So always carry it with you. Did you get a letter from the gemeente or the UWV, for example? Do you not agree with the decision in it? Then you can object (bezwaar maken) in writing. Do it before the date in the letter. The police and the judge must treat everyone equally. Arrested? You may ask for a lawyer. The Juridisch Loket gives free advice.',
     ['Ik ben het niet eens met dit besluit. Ik maak bezwaar.', 'I do not agree with this decision. I am objecting.'],
     'You get a letter from the gemeente. You do not agree with their decision. The letter says you have six weeks. What do you do?',
     [

@@ -59,6 +59,7 @@ const t: CultureTranslation = {
     'c.boundaries.a.why': "Einen Witz, der wehtut, darf man klar stoppen.",
     'c.health.a.why': "Eine Pause schützt die Gesundheit, darum nimmt man sie.",
     'c.rights.a.why': "Eine Kündigung unterschreibt man nie sofort. Zuerst kommt eine Beratung.",
+    'c.mustmay.a.why': "Freiwillig heißt: Du darfst wählen. Arbeit am Samstag ist nicht nötig.", // nieuw, nalezen
     'c.leave.a.why': "Wann? Diese Antwort nennt einen Monat und wie lange.",
     'c.illness.a.why': "Medizinische Details sind für den Betriebsarzt, nicht für den Chef.",
     'c.warning.a.why': "Ein Arbeitgeber darf den Pass kopieren, aber nicht behalten.",

@@ -142,7 +142,7 @@ export const zoekenUnit: RuleUnit = {
           id: 'r.l.zoeken.2.tf1',
           statement: 'Een foto op je cv mag, maar hoeft niet.',
           answer: true,
-          why: 'Een foto mag, maar hoeft niet. Je hoeft ook je geloof niet te noemen.', whyMore: 'Een cv is kort: 1 of 2 bladzijden.',
+          why: 'Een foto mag, maar hoeft niet. Je hoeft ook je geloof niet te noemen.', whyMore: 'Hoeft niet betekent: het is niet verplicht. Je mag zelf kiezen. Een cv is kort: 1 of 2 bladzijden.',
         },
         {
           kind: 'whatdo',

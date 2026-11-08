@@ -61,7 +61,7 @@ export const be: BeUnit = {
             id: 'r.be.l.kas.1.wd1',
             situation: 'Piotr wordt duizelig. Zijn rij is nog niet af. Wat kan Piotr het beste doen?',
             options: [
-              { id: 'a', text: 'Hij maakt eerst zijn rij helemaal af. Daarna gaat hij drinken.', best: false, feedback: 'Dat is logisch. Maar duizelig zijn is een waarschuwing.' },
+              { id: 'a', text: 'Hij maakt eerst zijn rij helemaal af. Daarna gaat hij drinken.', best: false, feedback: 'Dat snap ik. Maar duizelig zijn is een waarschuwing.' },
               { id: 'b', text: 'Hij stopt, drinkt water en zegt het tegen zijn ploegbaas.', best: true, feedback: 'Goed. Zo wordt het niet erger.' },
               { id: 'c', text: 'Hij gaat even op de grond zitten, tussen de planten.', best: false, feedback: 'Even zitten helpt. Maar in de serre blijft het heet.' },
             ],

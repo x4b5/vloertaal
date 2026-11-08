@@ -179,7 +179,7 @@ export const be: BeUnit = {
             situation: 'Op de loonbrief staat "afhouding huisvesting". Nadia heeft daar nooit iets over getekend. Wat kan Nadia het beste doen?',
             options: [
               { id: 'a', text: 'Ze vraagt waarom dat bedrag van haar loon af gaat.', best: true, feedback: 'Goed. Een baas mag niet zomaar iets afhouden.' },
-              { id: 'b', text: 'Ze denkt: dat hoort er vast bij, iedereen heeft het.', best: false, feedback: 'Dat is logisch. Maar het mag niet zomaar.' },
+              { id: 'b', text: 'Ze denkt: dat hoort er vast bij, iedereen heeft het.', best: false, feedback: 'Dat snap ik. Maar het mag niet zomaar.' },
               { id: 'c', text: 'Ze vraagt een voorschot om het verschil te betalen.', best: false, feedback: 'Dan leent ze geld dat misschien van haar is.' },
             ],
             why: 'Je baas mag niet zomaar geld van je loon afhouden. De wet zegt wat wel mag, zoals RSZ en belasting. Klopt het niet? Vraag hulp bij een vakbond.',

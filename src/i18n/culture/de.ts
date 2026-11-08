@@ -134,7 +134,7 @@ const t: CultureTranslation = {
     'c.no.o3': 'Sag ja: Zum Chef kann man nicht nein sagen.', // nagelezen (2e lezing)
     'c.no.w': 'Ein klares „nee“ wird respektiert. „Ja“ sagen und nicht kommen zerstört das Vertrauen viel mehr.',
     'c.task': 'Sag, wenn es fertig ist, frag, wenn es nicht klar ist',
-    'c.task.b': 'In den Niederlanden gibt ein Vorgesetzter eine Aufgabe oft in wenigen Worten und erwartet, dass du sagst, wenn sie fertig ist. „Ja“ sagen, wenn du es nicht verstanden hast, führt oft zu Fehlern. Noch einmal fragen oder bitten, dass man es dir zeigt, ist hier normal und nicht unhöflich.',
+    'c.task.b': 'In den Niederlanden gibt ein Vorgesetzter eine Aufgabe oft in wenigen Worten. Wenn sie fertig ist, sagst du es. „Ja“ sagen, wenn du es nicht verstanden hast, führt oft zu Fehlern. Noch einmal fragen oder bitten, dass man es dir zeigt, ist hier normal und nicht unhöflich.',
     'c.task.p': 'Fertig! Was soll ich jetzt machen?',
     'c.task.s': 'Dein Vorgesetzter erklärt eine Aufgabe sehr schnell. Du hast nur die Hälfte verstanden. Was machst du?',
     'c.task.o1': 'Bitte darum, es noch einmal zu sehen.', // nagelezen (2e lezing)
@@ -142,7 +142,7 @@ const t: CultureTranslation = {
     'c.task.o3': 'Warte, bis ein Kollege es macht.',
     'c.task.w': 'Noch einmal fragen ist normal und dauert eine Minute. Einen Fehler zu beheben dauert viel länger. Die meisten Vorgesetzten zeigen es lieber zweimal.',
     'c.clear': 'Sag zuerst das Wichtigste', // nieuw, nalezen
-    'c.clear.b': 'In vielen Sprachen ist es höflich, zuerst die ganze Geschichte zu erzählen und das Wichtigste am Ende. Bei der Arbeit hier ist es umgekehrt: Sag zuerst, was nicht stimmt oder was du brauchst, dann den Grund. Sprich ruhig und hör nach zwei oder drei Sätzen auf, damit die andere Person etwas fragen kann. Auch im Vorstellungsgespräch: zuerst die Antwort, dann ein Beispiel. Langsam sprechen ist hier nicht unhöflich: Es hilft anderen, dich zu verstehen.', // nieuw, nalezen
+    'c.clear.b': 'In vielen Sprachen ist es höflich, zuerst die ganze Geschichte zu erzählen und das Wichtigste am Ende. Bei der Arbeit hier ist es umgekehrt. Sag zuerst, was nicht stimmt oder was du brauchst. Dann nenn den Grund. Sprich ruhig und hör nach zwei oder drei Sätzen auf, damit die andere Person etwas fragen kann. Auch im Vorstellungsgespräch: zuerst die Antwort, dann ein Beispiel. Langsam sprechen ist hier nicht unhöflich: Es hilft anderen, dich zu verstehen.',
     'c.clear.p': 'Entschuldigung, ich sage es noch einmal in Ruhe.', // nieuw, nalezen
     'c.clear.s': 'Du kommst 20 Minuten zu spät. Dein Vorgesetzter fragt: „Wat is er?“ Was machst du?', // nieuw, nalezen
     'c.clear.o1': 'Sag zuerst, dass du zu spät bist und dass es dir leidtut. Dann sag, warum.', // nieuw, nalezen
@@ -289,7 +289,7 @@ const t: CultureTranslation = {
     'c.explain.o3': "„Sorry, sorry! Het is niet mijn schuld!“", // nieuw, nalezen
     'c.explain.w': "Jetzt weiß dein Teamleiter, was nicht stimmt, wo es ist und was du brauchst. Niemand muss zuerst drei Fragen stellen.", // nieuw, nalezen
     'c.listen': "Erst zuhören, dann nachprüfen", // nieuw, nalezen
-    'c.listen.b': "Lass die andere Person ausreden (uitpraten), bevor du antwortest. Schau die Person an, die mit dir spricht: Hier zeigt das, dass du zuhörst. In vielen Ländern schaut man dem Chef aus Respekt nicht in die Augen; hier ist es höflich, ihn ab und zu anzusehen. Wenn die andere Person fertig ist, sag, was du gehört hast: „Dus eerst …, en dan …?“ Du weißt nicht genau, was ein Wort bedeutet? Frag: „Wat bedoel je met …?“ Manche Kollegen machen Witze mit ernstem Gesicht. Nicht sicher? Frag: „Was dat een grapje?“", // nieuw, nalezen
+    'c.listen.b': "Lass die andere Person ausreden (uitpraten), bevor du antwortest. Schau die Person an, die mit dir spricht: Hier zeigt das, dass du zuhörst. In vielen Ländern schaut man dem Chef nicht in die Augen. Das ist ein Zeichen von Respekt. Hier ist es höflich, ihn ab und zu anzusehen. Wenn die andere Person fertig ist, sag, was du gehört hast: „Dus eerst …, en dan …?“ Du weißt nicht genau, was ein Wort bedeutet? Frag: „Wat bedoel je met …?“ Manche Kollegen machen Witze mit ernstem Gesicht. Nicht sicher? Frag: „Was dat een grapje?“",
     'c.listen.p': "Moment, ich will es richtig verstehen.", // nieuw, nalezen
     'c.listen.s': "Deine Vorgesetzte erklärt eine neue Aufgabe. Du willst etwas sagen, aber sie spricht noch. Was machst du?", // nieuw, nalezen
     'c.listen.o1': "Lass sie ausreden. Dann sag, was du gehört hast.", // nieuw, nalezen

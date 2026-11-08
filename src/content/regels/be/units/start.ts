@@ -199,7 +199,7 @@ export const be: BeUnit = {
             id: 'r.be.l.start.3.wd1',
             situation: 'Piotr snapt het niet goed. Wat kan Piotr het beste doen?',
             options: [
-              { id: 'a', text: 'Hij knikt, en hij kijkt straks hoe de anderen het doen.', best: false, feedback: 'Dat is logisch. Maar zo kan hij een fout maken.' },
+              { id: 'a', text: 'Hij knikt, en hij kijkt straks hoe de anderen het doen.', best: false, feedback: 'Dat snap ik. Maar zo kan hij een fout maken.' },
               { id: 'b', text: 'Hij zegt "ja", en hij vraagt het later aan iemand anders.', best: false, feedback: 'Dan denkt Mark dat het goed gaat.' },
               { id: 'c', text: 'Hij zegt: "Nog eens graag, wat trager."', best: true, feedback: 'Goed. Zo leert hij het meteen goed.' },
             ],

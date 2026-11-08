@@ -59,6 +59,7 @@ const t: CultureTranslation = {
     'c.boundaries.a.why': "Kaftan wax dhibaya waa la joojin karaa, si cad.", // nieuw, nalezen
     'c.health.a.why': "Nasashadu waxay ilaalisaa caafimaadka, sidaas darteed waa la qaataa.", // nieuw, nalezen
     'c.rights.a.why': "Eryid (ontslag) weligeed isla markiiba lama saxiixo. Talo ayaa marka hore timaada.", // nieuw, nalezen
+    'c.mustmay.a.why': "Ikhtiyaari macnaheedu waa waad dooran kartaa: Sabtida in la shaqeeyo looma baahna.", // nieuw, nalezen
     'c.leave.a.why': "Goorma? Jawaabtani waxay bixinaysaa bil iyo inta ay le'eg tahay.", // nieuw, nalezen
     'c.illness.a.why': "Faahfaahinta caafimaadka waxaa leh dhakhtarka shirkadda, ma aha madaxa.", // nieuw, nalezen
     'c.warning.a.why': "Loo-shaqeeyuhu wuu koobiyayn karaa baasaboorka, laakiin ma hayn karo.", // nieuw, nalezen

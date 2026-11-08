@@ -1,7 +1,7 @@
 import { createContext, type RefObject, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import type { ChatLine } from '../content/types';
 import { sayingQuestion } from '../content/sayings';
-import { gloss, said as srText, saidLang, ui, type Bilingual } from '../i18n';
+import { gloss, langTag, said as srText, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
 import { checkTyped, nextTileOrder, sentenceOrders, typoMarks } from '../lib/answers';
 import { autoSpeak, autoSpeakAt, onSpeech, sounds, speak, surelySilent } from '../lib/audio';
@@ -10,7 +10,7 @@ import { dutchUi } from '../lib/track';
 import { allTiles, buildSteps, choicePictures, frontSteps, matchAsked, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, sentences, wordSize } from '../lib/dutch';
-import { Bi, HelpText } from './Bi';
+import { Bi, HelpText, withTerms } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
 import { CAST, castFor, Character, colleaguesOf, MeAvatar, snapColleague, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
@@ -1404,7 +1404,7 @@ export function TipCard({ ex, lang, onAnswer, soundOff = false }: Props<'tip'> &
       {isTaalBeId(tip.id) && <BeNote lang={lang} kind="beta" />}
       {/* The first sentences (the lead); the whole tip is in Hulp › Zo werkt het hier. On a page of
           its own (part 'read') without the "…": that only made the learner look for more here. */}
-      <TipBody text={say ? shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} />
+      <TipBody text={say ? shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} terms={tip.terms} />
       {say && phrase}
       {/* How old the explanation is: in view, a calm line (a warning stays visible, docs/rustiger.md). */}
       {notes.stale && <p className="be-note be-note-beta tip-law-stale" role="note"><Bi text={notes.stale} /></p>}
@@ -1530,7 +1530,9 @@ export function shortTip(text: Bilingual, n = TIP_SENTENCES, lead?: readonly num
 }
 
 /** The tip's text (no "more" button: Continue is the only choice on a tip). */
-function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
+function TipBody({ text, lang, terms = [] }: { text: Bilingual; lang?: HelpLanguage; terms?: readonly string[] }) {
+  // The Dutch key terms in bold, once on the page, in the large text only (not in the small English).
+  const seen = new Set<string>();
   return (
     <div className="tip-body">
       <div className="help-say-row">
@@ -1540,12 +1542,22 @@ function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
             // block), English small under it.
             <span className="bi bi-swap tip-lines" dir={text.lang.dir === 'rtl' ? 'rtl' : undefined}>
               <span className="bi-en">
-                {helpLines(text.help).map((line, i) => <HelpText key={i} className="tip-line" text={line} lang={text.lang!} />)}
+                {helpLines(text.help).map((line, i) => (
+                  <span key={i} className="tip-line" lang={langTag(text.lang!.code)} dir={text.lang!.dir}>{withTerms(line, text.lang!, terms, seen)}</span>
+                ))}
               </span>
               <span className="bi-help" lang="en" dir={text.lang.dir === 'rtl' ? 'ltr' : undefined}>{text.en}</span>
             </span>
           ) : (
-            <Bi text={text} />
+            // English only, or Dutch only (the work-rules track): one sentence per line too, as
+            // easy-read guidelines advise (the owner, 8 November 2026).
+            <span className="bi tip-lines">
+              <span className="bi-en" lang={text.lang?.code === 'nl' ? 'nl' : 'en'}>
+                {helpLines(text.lang?.code === 'nl' ? text.help ?? text.en : text.en).map((line, i) => (
+                  <span key={i} className="tip-line">{withTerms(line, undefined, terms, seen)}</span>
+                ))}
+              </span>
+            </span>
           )}
         </p>
         <HelpSay text={text.help} lang={lang} />

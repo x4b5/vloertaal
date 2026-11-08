@@ -66,7 +66,7 @@ export const be: BeUnit = {
             id: 'r.be.l.care.1.wd1',
             situation: 'Dewi heeft net een bewoner geholpen. Ze moet meteen naar de volgende. Wat kan Dewi het beste doen?',
             options: [
-              { id: 'a', text: 'Ze loopt door. Haar handen lijken schoon.', best: false, feedback: 'Dat is logisch. Maar bacteriën zie je niet.' },
+              { id: 'a', text: 'Ze loopt door. Haar handen lijken schoon.', best: false, feedback: 'Dat snap ik. Maar bacteriën zie je niet.' },
               { id: 'b', text: 'Ze trekt alleen een paar nieuwe handschoenen aan.', best: false, feedback: 'Handschoenen helpen. Maar ook haar handen moeten schoon zijn.' },
               { id: 'c', text: 'Ze maakt eerst haar handen schoon.', best: true, feedback: 'Goed. Zo neemt ze geen bacteriën mee.' },
             ],
@@ -150,7 +150,7 @@ export const be: BeUnit = {
             situation: 'Fatima moet medicijnen geven. Ze heeft dat nog nooit geleerd. Wat kan Fatima het beste doen?',
             options: [
               { id: 'a', text: 'Ze vraagt eerst uitleg aan een ervaren collega.', best: true, feedback: 'Goed. Je geeft alleen medicijnen als je het geleerd hebt.' },
-              { id: 'b', text: 'Ze geeft ze toch. Het staat allemaal op de lijst.', best: false, feedback: 'Dat is logisch. Maar zonder uitleg kan ze een fout maken.' },
+              { id: 'b', text: 'Ze geeft ze toch. Het staat allemaal op de lijst.', best: false, feedback: 'Dat snap ik. Maar zonder uitleg kan ze een fout maken.' },
               { id: 'c', text: 'Ze legt de pillen op tafel. Meneer neemt ze zelf wel.', best: false, feedback: 'Dan weet niemand of hij ze echt neemt.' },
             ],
             why: 'Geef alleen medicijnen als je het geleerd hebt. En als het mag van je werk. Check altijd de lijst. Juiste persoon, juist medicijn, juiste tijd? Weet je het niet zeker? Vraag het eerst.',

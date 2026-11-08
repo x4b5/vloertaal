@@ -119,7 +119,7 @@ export const duurzaamUnit: RuleUnit = {
           situation: 'Wat doet Dewi?',
           options: [
             { id: 'a', text: 'Ze doet uit wat uit mag, en ze meldt de kraan.', best: true, feedback: 'Goed. Zo bespaart ze energie en water.' },
-            { id: 'b', text: 'Ze laat alles zo. Het is niet haar gebouw.', best: false, feedback: 'Dat is logisch. Maar een lek kost veel water.' },
+            { id: 'b', text: 'Ze laat alles zo. Het is niet haar gebouw.', best: false, feedback: 'Dat snap ik. Maar een lek kost veel water.' },
             { id: 'c', text: 'Ze probeert de kraan zelf te maken.', best: false, feedback: 'Goed bedoeld. Maar dat is niet haar werk.' },
           ],
           why: 'Doe lampen en apparaten uit als dat mag. Meld een lek meteen.', whyMore: 'Vraag wat aan moet blijven, zoals de noodverlichting. Zelf repareren doe je alleen als dat jouw werk is.',

@@ -46,7 +46,7 @@ const t: CultureTranslation = {
     'c.ask.o3': 'Îți ceri scuze pentru olandeza ta și te apuci de lucru.', // nagelezen (2e lezing)
     'c.ask.w': 'Aici, șefii se așteaptă la întrebări. E mai bine să întrebi de două ori decât să greșești.', // nieuw, nalezen
     'c.gear': 'Regulile de siguranță sunt pentru toți',
-    'c.gear.b': 'Regulile despre cască, încălțăminte și mănuși nu sunt doar o sugestie: toți le respectă, și șeful. Angajatorul trebuie să-ți dea gratuit echipamentul de protecție de care ai nevoie. Echipamentul care nu ți se potrivește nu te protejează bine, așa că cere mărimea ta: „Heb je dit ook in mijn maat?”',
+    'c.gear.b': 'Regulile despre cască, încălțăminte și mănuși nu sunt doar o sugestie: toți le respectă, și șeful. Angajatorul trebuie să-ți dea gratuit echipamentul de protecție de care ai nevoie. Echipamentul care nu ți se potrivește nu te protejează bine. Așa că cere mărimea ta: „Heb je dit ook in mijn maat?”',
     'c.gear.p': 'Mi s-au stricat mănușile. De unde iau altele noi?',
     'c.gear.s': 'Mănușile tale sunt rupte. Ce faci?',
     'c.gear.o1': 'Îi ceri șefului mănuși noi.',
@@ -134,7 +134,7 @@ const t: CultureTranslation = {
     'c.no.o3': 'Spui da: șefului nu-i poți spune nu.', // nagelezen (2e lezing)
     'c.no.w': 'Un „nee” clar e respectat. Să spui „ja” și să nu vii strică mult mai mult încrederea.',
     'c.task': 'Spune când ai terminat, întreabă când nu e clar',
-    'c.task.b': 'În Olanda, un șef dă adesea o sarcină în câteva cuvinte și se așteaptă să spui când ai terminat. Dacă spui „ja” când nu ai înțeles, apar des greșeli. Să întrebi din nou sau să ceri să ți se arate e normal aici și nu e nepoliticos.',
+    'c.task.b': 'În Olanda, un șef dă adesea o sarcină în câteva cuvinte. Când ai terminat, spui asta. Dacă spui „ja” când nu ai înțeles, apar des greșeli. Să întrebi din nou sau să ceri să ți se arate e normal aici și nu e nepoliticos.',
     'c.task.p': 'Gata! Ce să fac acum?',
     'c.task.s': 'Șeful îți explică o sarcină foarte repede. Ai înțeles doar jumătate. Ce faci?',
     'c.task.o1': 'Ceri să-ți arate încă o dată.', // nagelezen (2e lezing)
@@ -142,7 +142,7 @@ const t: CultureTranslation = {
     'c.task.o3': 'Aștepți până o face un coleg.',
     'c.task.w': 'E normal să întrebi din nou și durează un minut. Să repari o greșeală durează mult mai mult. Cei mai mulți șefi preferă să arate de două ori.',
     'c.clear': 'Spune întâi ce e cel mai important', // nieuw, nalezen
-    'c.clear.b': 'În multe limbi e politicos să spui întâi toată povestea, iar ideea principală la sfârșit. La muncă aici e invers: spune întâi ce nu e în regulă sau de ce ai nevoie, apoi motivul. Vorbește calm și oprește-te după două-trei propoziții, ca celălalt să poată întreba ceva. Și la un interviu de angajare: întâi răspunsul, apoi un exemplu. Să vorbești încet nu e nepoliticos aici: îi ajută pe oameni să te înțeleagă.', // nieuw, nalezen
+    'c.clear.b': 'În multe limbi e politicos să spui întâi toată povestea, iar ideea principală la sfârșit. La muncă aici e invers. Spune întâi ce nu e în regulă sau de ce ai nevoie. Apoi spune motivul. Vorbește calm și oprește-te după două-trei propoziții, ca celălalt să poată întreba ceva. Și la un interviu de angajare: întâi răspunsul, apoi un exemplu. Să vorbești încet nu e nepoliticos aici: îi ajută pe oameni să te înțeleagă.',
     'c.clear.p': 'Scuze, o mai spun o dată, calm.', // nieuw, nalezen
     'c.clear.s': 'Întârzii 20 de minute. Șeful te întreabă: „Wat is er?” Ce faci?', // nieuw, nalezen
     'c.clear.o1': 'Spui întâi că ai întârziat și că îți pare rău. Apoi spui de ce.', // nieuw, nalezen
@@ -290,7 +290,7 @@ const t: CultureTranslation = {
     'c.explain.o3': "„Sorry, sorry! Het is niet mijn schuld!”", // nieuw, nalezen
     'c.explain.w': "Acum șeful de echipă știe ce nu e în regulă, unde și de ce ai nevoie. Nimeni nu trebuie să pună întâi trei întrebări.", // nieuw, nalezen
     'c.listen': "Întâi ascultă, apoi verifică", // nieuw, nalezen
-    'c.listen.b': "Lasă-l pe celălalt să termine de vorbit (uitpraten) înainte să răspunzi. Uită-te la persoana care îți vorbește: aici asta arată că asculți. În multe țări nu te uiți șefului în ochi, din respect; aici e politicos să te uiți la el din când în când. Când celălalt a terminat, repetă ce ai auzit: „Dus eerst …, en dan …?” Nu știi sigur ce înseamnă un cuvânt? Întreabă: „Wat bedoel je met …?” Unii colegi fac glume cu fața serioasă. Nu știi sigur? Întreabă: „Was dat een grapje?”", // nieuw, nalezen
+    'c.listen.b': "Lasă-l pe celălalt să termine de vorbit (uitpraten) înainte să răspunzi. Uită-te la persoana care îți vorbește: aici asta arată că asculți. În multe țări nu te uiți șefului în ochi. Acesta e un semn de respect. Aici e politicos să te uiți la el din când în când. Când celălalt a terminat, repetă ce ai auzit: „Dus eerst …, en dan …?” Nu știi sigur ce înseamnă un cuvânt? Întreabă: „Wat bedoel je met …?” Unii colegi fac glume cu fața serioasă. Nu știi sigur? Întreabă: „Was dat een grapje?”",
     'c.listen.p': "Stai, vreau să înțeleg bine.", // nieuw, nalezen
     'c.listen.s': "Șefa ta explică o sarcină nouă. Vrei să spui ceva, dar ea încă vorbește. Ce faci?", // nieuw, nalezen
     'c.listen.o1': "O lași să termine. Apoi repeți ce ai auzit.", // nieuw, nalezen

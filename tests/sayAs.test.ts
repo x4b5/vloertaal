@@ -34,6 +34,12 @@ describe('"cao" letter by letter (the owner, 5 November 2026)', () => {
     expect(minTake('Welke cao geldt voor mij?')).toBe(CAO_TAKE);
     expect(minTake('het loon')).toBe(0);
   });
+  it('makes the tile "ben" again (heard as "din", 8 November 2026), and not the sentences with it', () => {
+    expect(minTake('ben')).toBe(ALONE_TAKE);
+    expect(minTake('Ben')).toBe(ALONE_TAKE);
+    expect(minTake('Hallo, ik ben nieuw.')).toBe(0);
+    expect(minTake('benen')).toBe(0);
+  });
 });
 
 describe('a word that reads as an abbreviation when it stands alone (the owner, 8 November 2026)', () => {

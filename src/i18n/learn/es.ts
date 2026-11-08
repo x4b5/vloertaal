@@ -59,6 +59,7 @@ const t: CultureTranslation = {
     'c.boundaries.a.why': "Una broma que hace daño se puede parar, con claridad.",
     'c.health.a.why': "Una pausa protege la salud, por eso se toma.",
     'c.rights.a.why': "Un despido nunca se firma enseguida. Primero, pide consejo.",
+    'c.mustmay.a.why': "Voluntario significa que puedes elegir: trabajar el sábado no hace falta.", // nieuw, nalezen
     'c.leave.a.why': "¿Cuándo? Esta respuesta da un mes y cuánto tiempo.",
     'c.illness.a.why': "Los detalles médicos son para el médico de empresa, no para el jefe.",
     'c.warning.a.why': "La empresa puede copiar un pasaporte, pero no quedárselo.",

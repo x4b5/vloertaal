@@ -207,7 +207,7 @@ export const samenUnit: RuleUnit = {
           id: 'r.l.samen.3.wd2',
           situation: 'Sanne vraagt: "Kun je dit vóór 3 uur af hebben?" Jij weet: dat haal je niet.',
           options: [
-            { id: 'a', text: 'Je zegt ja. Je doet je best en ziet wel.', best: false, feedback: 'Dat is logisch. Maar dan rekent Sanne op 3 uur.' },
+            { id: 'a', text: 'Je zegt ja. Je doet je best en ziet wel.', best: false, feedback: 'Dat snap ik. Maar dan rekent Sanne op 3 uur.' },
             { id: 'b', text: 'Je zegt eerlijk: "3 uur lukt niet. 4 uur wel."', best: true, feedback: 'Goed. Nu kan Sanne plannen.' },
             { id: 'c', text: 'Je zegt niets, en je werkt extra snel door.', best: false, feedback: 'Dan weet Sanne niet wat ze kan verwachten.' },
           ],
@@ -264,7 +264,7 @@ export const samenUnit: RuleUnit = {
           id: 'r.l.samen.4.tf1',
           statement: 'Je mag je telefoon altijd gebruiken, als je werk maar af is.',
           answer: false,
-          why: 'Bij veel werk mag je telefoon niet tijdens het werk. Gebruik hem in je pauze.', whyMore: 'Bijvoorbeeld bij machines, in de zorg of met eten. Wacht je op een belangrijk telefoontje? Zeg het vooraf tegen je leidinggevende.',
+          why: 'In veel banen mag je je telefoon niet gebruiken tijdens het werk. Gebruik hem in je pauze.', whyMore: 'Bijvoorbeeld bij machines, in de zorg of met eten. Wacht je op een belangrijk telefoontje? Zeg het vooraf tegen je leidinggevende.',
         },
         {
           kind: 'whatdo',

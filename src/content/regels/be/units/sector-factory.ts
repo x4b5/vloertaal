@@ -83,7 +83,7 @@ export const be: BeUnit = {
             id: 'r.be.l.factory.1.wd2',
             situation: 'Een kap van de machine is kapot. Zonder kap gaat het werk sneller. Wat kan Sanne het beste doen?',
             options: [
-              { id: 'a', text: 'Ze werkt door zonder kap. Ze let extra goed op.', best: false, feedback: 'Dat is logisch. Maar de kap is er voor haar handen.' },
+              { id: 'a', text: 'Ze werkt door zonder kap. Ze let extra goed op.', best: false, feedback: 'Dat snap ik. Maar de kap is er voor haar handen.' },
               { id: 'b', text: 'Ze plakt de kap met tape vast, en werkt door.', best: false, feedback: 'Goed bedoeld. Maar zo is het niet veilig genoeg.' },
               { id: 'c', text: 'Ze stopt, en ze meldt de kapotte kap bij Jan.', best: true, feedback: 'Goed. Een machine zonder goede beveiliging is gevaarlijk.' },
             ],

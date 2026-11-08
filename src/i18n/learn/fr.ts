@@ -59,6 +59,7 @@ const t: CultureTranslation = {
     'c.boundaries.a.why': "Une blague qui fait mal, on peut l’arrêter, clairement.",
     'c.health.a.why': "Une pause protège la santé, alors on la prend.",
     'c.rights.a.why': "On ne signe jamais un licenciement tout de suite. D’abord, on demande conseil.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.mustmay.a.why': "Volontaire veut dire qu’on peut choisir : travailler le samedi n’est pas nécessaire.", // nieuw, nalezen
     'c.leave.a.why': "Quand ? Cette réponse donne un mois et la durée.",
     'c.illness.a.why': "Les détails médicaux sont pour le médecin du travail, pas pour le patron.",
     'c.warning.a.why': "Un employeur peut copier un passeport, pas le garder.",

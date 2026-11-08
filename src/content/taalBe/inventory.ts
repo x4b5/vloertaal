@@ -132,6 +132,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.rights': { kind: 'B', lessons: {
     'l.health': L('C', 'C', 'Arbowet, Arbeidsinspectie, pauze na 5,5 uur → Welzijnswet, Arbeidswet, pauze na 6 uur, Toezicht op de Sociale Wetten'),
     'l.rights': L('B', 'C', 'het Juridisch Loket → het justitiehuis; ontslag via UWV, vaststellingsovereenkomst, FNV, WW → opzegtermijn, C4, ABVV/ACV/ACLVB'),
+    'l.mustmay': L('A', 'A', 'moeten, niet hoeven, mogen: dezelfde taal in Vlaanderen'),
   } },
   // "Verlof en ziekte" became "Verlof" (u.leave) and "Ziekte" (u.sick) on 5 November 2026.
   'u.leave': { kind: 'B', lessons: {
