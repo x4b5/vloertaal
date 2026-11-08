@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { CAO_TAKE, minTake, sayAs } from '../src/lib/sayAs';
+import { ALONE_TAKE, CAO_TAKE, minTake, sayAs } from '../src/lib/sayAs';
 
 describe('sayAs: how a voice is told to pronounce a line', () => {
   it('says "app" like the English word', () => {
@@ -33,5 +33,22 @@ describe('"cao" letter by letter (the owner, 5 November 2026)', () => {
   it('needs take 5: an older recording of a line with cao is not played', () => {
     expect(minTake('Welke cao geldt voor mij?')).toBe(CAO_TAKE);
     expect(minTake('het loon')).toBe(0);
+  });
+});
+
+describe('a word that reads as an abbreviation when it stands alone (the owner, 8 November 2026)', () => {
+  it('says the tile "tot" with an exclamation mark, not "tot." (= "total")', () => {
+    expect(sayAs('tot')).toBe('tot!');
+    expect(sayAs('Tot')).toBe('Tot!');
+  });
+
+  it('leaves the word alone inside a line', () => {
+    expect(sayAs('tot ziens')).toBe('tot ziens');
+    expect(sayAs('Ik werk tot vijf uur.')).toBe('Ik werk tot vijf uur.');
+  });
+
+  it('asks for a new recording of the tile, not of the line', () => {
+    expect(minTake('tot')).toBe(ALONE_TAKE);
+    expect(minTake('tot ziens')).toBe(0);
   });
 });

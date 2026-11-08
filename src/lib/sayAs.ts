@@ -6,11 +6,17 @@
  */
 import { sayNumbers } from './sayNumbers';
 
+// A word that a voice reads as an abbreviation when it stands alone with a full stop (a tile):
+// "tot." became "total" (the owner, 8 November 2026). It gets this ending instead of the stop.
+const ALONE: Record<string, string> = { tot: '!' };
+
 const APP = /\b(groeps|vertaal)?app(en|e|je|jes|t|te|s)?\b/gi;
 
 /** "appen" → "eppen" (short e before a vowel), "app" → "ep", "groepsapp" → "groepsep". Times,
  *  amounts and the signs of a sum are said as words too (src/lib/sayNumbers.ts). */
 export function sayAs(text: string): string {
+  const alone = ALONE[text.trim().toLowerCase()];
+  if (alone) return text.trim() + alone;
   // "ID" (identity card) is said letter by letter: "ie-dee"; so is "cao" ("cee-aa-oo", the owner,
   // 5 November 2026: the voices said it as one word).
   return sayNumbers(text).replace(/\bID\b/g, 'ie-dee').replace(/\bcao('s)?\b/gi, (_m, s: string | undefined) => `cee-aa-oo${s ? "'s" : ''}`).replace(APP, (_m, pre: string | undefined, end: string | undefined) => {
@@ -28,6 +34,9 @@ export function sayAs(text: string): string {
  * round makes them again. 0: any take will do.
  */
 export const CAO_TAKE = 5;
+/** Take 6: the words in ALONE, said as an abbreviation before 8 November 2026 ("tot." → "total"). */
+export const ALONE_TAKE = 6;
 export function minTake(text: string): number {
+  if (ALONE[text.trim().toLowerCase()]) return ALONE_TAKE;
   return /\bcao('s)?\b/i.test(text) ? CAO_TAKE : 0;
 }
