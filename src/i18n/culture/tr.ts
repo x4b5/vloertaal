@@ -46,7 +46,7 @@ const t: CultureTranslation = {
     'c.ask.o3': 'Hollandacan için özür diler ve işe başlarsın.', // nagelezen (2e lezing)
     'c.ask.w': 'Burada amirler soru bekler. Hata yapmaktansa iki kez sormak daha iyidir.', // nieuw, nalezen
     'c.gear': 'Güvenlik kuralları herkes için',
-    'c.gear.b': 'Baret, ayakkabı ve eldiven kuralları bir öneri değildir: herkes uyar, patron da. İşverenin ihtiyacın olan koruyucu ekipmanı sana ücretsiz vermek zorundadır. Üstüne olmayan ekipman seni iyi korumaz, o yüzden kendi bedenini iste: “Heb je dit ook in mijn maat?”',
+    'c.gear.b': 'Baret, ayakkabı ve eldiven kuralları bir öneri değildir: herkes uyar, patron da. İşverenin ihtiyacın olan koruyucu ekipmanı sana ücretsiz vermek zorundadır. Üstüne olmayan ekipman seni iyi korumaz. O yüzden kendi bedenini iste: “Heb je dit ook in mijn maat?”',
     'c.gear.p': 'Eldivenlerim yırtıldı. Yenilerini nereden alabilirim?',
     'c.gear.s': 'Eldivenlerin yırtık. Ne yaparsın?',
     'c.gear.o1': 'Amirinden yeni eldiven istersin.',
@@ -134,7 +134,7 @@ const t: CultureTranslation = {
     'c.no.o3': 'Evet dersin: patrona hayır denmez.', // nagelezen (2e lezing)
     'c.no.w': 'Net bir “nee” saygı görür. “ja” deyip gelmemek güveni çok daha fazla bozar.',
     'c.task': 'Bitince söyle, anlamadığında sor',
-    'c.task.b': 'Hollanda’da amir bir işi çoğu zaman birkaç kelimeyle verir ve iş bitince söylemeni bekler. Anlamadığın hâlde “ja” demek çoğu zaman hatalara yol açar. Tekrar sormak ya da göstermesini istemek burada normaldir, kabalık değildir.',
+    'c.task.b': 'Hollanda’da amir bir işi çoğu zaman birkaç kelimeyle verir. İş bitince bunu söylersin. Anlamadığın hâlde “ja” demek çoğu zaman hatalara yol açar. Tekrar sormak ya da göstermesini istemek burada normaldir, kabalık değildir.',
     'c.task.p': 'Bitti! Şimdi ne yapayım?',
     'c.task.s': 'Amirin bir işi çok hızlı anlatıyor. Sadece yarısını anladın. Ne yaparsın?',
     'c.task.o1': 'Bir kez daha göstermesini istersin.', // nagelezen (2e lezing)
@@ -142,7 +142,7 @@ const t: CultureTranslation = {
     'c.task.o3': 'Bir iş arkadaşın yapana kadar beklersin.',
     'c.task.w': 'Tekrar sormak normaldir ve bir dakika sürer. Bir hatayı düzeltmek çok daha uzun sürer. Çoğu amir bir şeyi iki kez göstermeyi tercih eder.',
     'c.clear': 'En önemli şeyi önce söyle', // nieuw, nalezen
-    'c.clear.b': 'Birçok dilde önce bütün hikâyeyi anlatmak, asıl konuyu sona bırakmak kibarlıktır. Burada iş yerinde ise tam tersi: önce neyin yanlış olduğunu ya da neye ihtiyacın olduğunu söyle, sonra sebebini. Sakin konuş ve iki üç cümleden sonra dur, böylece karşındaki kişi bir şey sorabilir. İş görüşmesinde de öyle: önce cevap, sonra bir örnek. Yavaş konuşmak burada kabalık değil: insanların seni anlamasına yardımcı olur.', // nieuw, nalezen
+    'c.clear.b': 'Birçok dilde önce bütün hikâyeyi anlatmak, asıl konuyu sona bırakmak kibarlıktır. Burada iş yerinde ise tam tersi. Önce neyin yanlış olduğunu ya da neye ihtiyacın olduğunu söyle. Sonra sebebini söyle. Sakin konuş ve iki üç cümleden sonra dur, böylece karşındaki kişi bir şey sorabilir. İş görüşmesinde de öyle: önce cevap, sonra bir örnek. Yavaş konuşmak burada kabalık değil: insanların seni anlamasına yardımcı olur.',
     'c.clear.p': 'Pardon, bir kez daha sakince söyleyeyim.', // nieuw, nalezen
     'c.clear.s': 'İşe 20 dakika geç geliyorsun. Amirin soruyor: “Wat is er?” Ne yaparsın?', // nieuw, nalezen
     'c.clear.o1': 'Önce geç kaldığını söyler ve özür dilersin. Sonra nedenini söylersin.', // nieuw, nalezen
@@ -289,7 +289,7 @@ const t: CultureTranslation = {
     'c.explain.o3': "“Sorry, sorry! Het is niet mijn schuld!”", // nieuw, nalezen
     'c.explain.w': "Artık ekip liderin neyin yanlış olduğunu, nerede olduğunu ve neye ihtiyacın olduğunu biliyor. Kimsenin önce üç soru sorması gerekmiyor.", // nieuw, nalezen
     'c.listen': "Önce dinle, sonra kontrol et", // nieuw, nalezen
-    'c.listen.b': "Cevap vermeden önce karşındakinin sözünü bitirmesine izin ver (uitpraten). Seninle konuşan kişiye bak: burada bu, dinlediğini gösterir. Birçok ülkede saygıdan dolayı patronunun gözlerine bakmazsın; burada ara sıra ona bakmak kibarlıktır. Karşındaki sözünü bitirince, duyduğunu tekrar söyle: “Dus eerst …, en dan …?” Bir kelimenin ne demek olduğundan emin değil misin? Sor: “Wat bedoel je met …?” Bazı iş arkadaşları ciddi bir yüzle şaka yapar. Emin değil misin? Sor: “Was dat een grapje?”", // nieuw, nalezen
+    'c.listen.b': "Cevap vermeden önce karşındakinin sözünü bitirmesine izin ver (uitpraten). Seninle konuşan kişiye bak: burada bu, dinlediğini gösterir. Birçok ülkede patronunun gözlerine bakmazsın. Bu bir saygı işaretidir. Burada ara sıra ona bakmak kibarlıktır. Karşındaki sözünü bitirince, duyduğunu tekrar söyle: “Dus eerst …, en dan …?” Bir kelimenin ne demek olduğundan emin değil misin? Sor: “Wat bedoel je met …?” Bazı iş arkadaşları ciddi bir yüzle şaka yapar. Emin değil misin? Sor: “Was dat een grapje?”",
     'c.listen.p': "Bekle, bunu iyi anlamak istiyorum.", // nieuw, nalezen
     'c.listen.s': "Amirin yeni bir işi anlatıyor. Bir şey söylemek istiyorsun ama o hâlâ konuşuyor. Ne yaparsın?", // nieuw, nalezen
     'c.listen.o1': "Sözünü bitirmesine izin verirsin. Sonra duyduğunu tekrar söylersin.", // nieuw, nalezen
