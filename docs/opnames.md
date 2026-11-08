@@ -52,6 +52,14 @@ node scripts/voices/missing.mjs --counts --voice philip    # één Vlaamse stem
 ```
 
 **Let op bij het opnemen.**
+- Het script zet de taal vast op Nederlands (`language_code: nl`) en geeft losse tegels (`t.`)
+  géén zinnetje vooraf mee. Zonder taal schoten woorden als "heb", "band" en "wc" naar het
+  Engels; met het zinnetje gingen losse woordjes als "ben" en "per" mis (8 november 2026).
+- Klinkt een tegel fout door de spelling, geef hem een uitspraak in `src/lib/sayAs.ts`
+  (`ALONE`: "tot" → "tot!", want "tot." werd "total"). Was het pech, zet hem in `REDO`.
+  Beide verhogen de take, zodat de volgende run hem opnieuw maakt en de oude niet meer speelt.
+- Controleren zonder credits: laat Whisper de mp3's uitschrijven en luister alleen wat afwijkt.
+  Reken op veel vals alarm bij losse woordjes (van 70 verdachte tegels waren er 6 echt fout).
 - Een Vlaamse stem neemt alleen op als je hem noemt: `voices` = `philip,hans,evie,sare`. Een run
   voor "alle stemmen" slaat ze over, zodat hij nooit per ongeluk dubbel kost.
 - `check` schat de kosten op het aantal letters. Werkelijk betaalden we op 8 november ±48% van
