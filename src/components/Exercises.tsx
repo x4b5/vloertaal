@@ -10,7 +10,7 @@ import { dutchUi } from '../lib/track';
 import { allTiles, buildSteps, choicePictures, frontSteps, matchAsked, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, sentences, wordSize } from '../lib/dutch';
-import { Bi, HelpText } from './Bi';
+import { Bi, HelpText, iconize } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
 import { CAST, castFor, Character, colleaguesOf, MeAvatar, snapColleague, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
@@ -1545,7 +1545,15 @@ function TipBody({ text, lang }: { text: Bilingual; lang?: HelpLanguage }) {
               <span className="bi-help" lang="en" dir={text.lang.dir === 'rtl' ? 'ltr' : undefined}>{text.en}</span>
             </span>
           ) : (
-            <Bi text={text} />
+            // English only, or Dutch only (the work-rules track): one sentence per line too, as
+            // easy-read guidelines advise (the owner, 8 November 2026).
+            <span className="bi tip-lines">
+              <span className="bi-en" lang={text.lang?.code === 'nl' ? 'nl' : 'en'}>
+                {helpLines(text.lang?.code === 'nl' ? text.help ?? text.en : text.en).map((line, i) => (
+                  <span key={i} className="tip-line">{iconize(line)}</span>
+                ))}
+              </span>
+            </span>
           )}
         </p>
         <HelpSay text={text.help} lang={lang} />
