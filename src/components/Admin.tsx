@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ChromeBack } from './ChromeBack';
 import { COUNTER, countingOn, mayCount } from '../lib/count';
+import { adminUnlocked, checkAdminPassword, lockAdmin } from '../lib/adminLock';
 
 interface Credits {
   tier: string;
@@ -19,6 +20,53 @@ const date = (iso: string) =>
  * month, written to credits.json at build time (scripts/fetch-credits.mjs). Dutch only on purpose.
  */
 export function Admin({ onBack }: { onBack: () => void }) {
+  const [open, setOpen] = useState(adminUnlocked);
+  if (!open) return <AdminLock onBack={onBack} onOpen={() => setOpen(true)} />;
+  return <AdminPage onBack={onBack} onLock={() => { lockAdmin(); setOpen(false); }} />;
+}
+
+/** The password form in front of the admin page (src/lib/adminLock.ts). */
+function AdminLock({ onBack, onOpen }: { onBack: () => void; onOpen: () => void }) {
+  const [value, setValue] = useState('');
+  const [wrong, setWrong] = useState(false);
+  const [busy, setBusy] = useState(false);
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setBusy(true);
+    const ok = await checkAdminPassword(value);
+    setBusy(false);
+    if (ok) onOpen();
+    else setWrong(true);
+  };
+
+  return (
+    <div className="screen admin" lang="nl">
+      <div className="screen-head">
+        <ChromeBack onBack={onBack} />
+        <h1>Beheer</h1>
+      </div>
+      <form className="admin-card" onSubmit={submit}>
+        <label htmlFor="admin-pw">Wachtwoord</label>
+        <input
+          id="admin-pw"
+          className="pw-input"
+          type="password"
+          value={value}
+          onChange={(e) => { setValue(e.target.value); setWrong(false); }}
+          autoComplete="current-password"
+          autoFocus
+          aria-invalid={wrong}
+          aria-describedby={wrong ? 'admin-pw-err' : undefined}
+        />
+        {wrong && <p id="admin-pw-err" className="pw-error" role="alert">Dat wachtwoord klopt niet.</p>}
+        <button type="submit" className="btn btn-primary" disabled={!value.trim() || busy}>Openen</button>
+      </form>
+    </div>
+  );
+}
+
+function AdminPage({ onBack, onLock }: { onBack: () => void; onLock: () => void }) {
   const [credits, setCredits] = useState<Credits | null | 'missing'>(null);
 
   useEffect(() => {
@@ -76,6 +124,7 @@ export function Admin({ onBack }: { onBack: () => void }) {
         nieuwe zinnen kost credits. Met een gratis abonnement stopt ElevenLabs als de credits op zijn; er wordt
         nooit iets afgeschreven.
       </p>
+      <button type="button" className="btn" onClick={onLock}>Vergrendelen</button>
     </div>
   );
 }

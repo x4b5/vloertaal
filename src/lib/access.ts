@@ -69,7 +69,7 @@ export const normalizePassword = (input: string) =>
 /** The old normalising (trimmed, lower case), for hashes made before the separators were dropped. */
 const legacyNormalize = (input: string) => westernDigits(input).trim().toLowerCase();
 
-async function sha256Hex(text: string): Promise<string> {
+export async function sha256Hex(text: string): Promise<string> {
   const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
   return [...new Uint8Array(bytes)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
