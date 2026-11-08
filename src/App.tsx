@@ -76,7 +76,7 @@ type View =
   | { name: 'home' }
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
   /** fresh: "Start again" (the saved place is kept until the first answer, see LessonPlayer). */
-  | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean }
+  | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean; admin?: boolean }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
   | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string; workTry?: WorkTryLine }
@@ -581,7 +581,7 @@ export default function App() {
   useEffect(() => {
     lessonClock.current = startClock();
     lessonStarted.current = new Date();
-    if (lessonOpen) count('lesson-start', { lesson: lessonOpen });
+    if (lessonOpen && !(view.name === 'lesson' && view.admin)) count('lesson-start', { lesson: lessonOpen });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonOpen]);
   // Learners from before "Herhaal vandaag" get cards for the words they already learned.
@@ -733,7 +733,14 @@ export default function App() {
   }
   if ((!langReady || (progress.onboarded && !picsReady) || !introDone) && view.name !== 'admin') return <Splash failed={langFailed || stalled} onRetry={() => location.reload()} lang={progress.helpLang} />;
   if (view.name === 'admin') {
-    return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
+    // A lesson from the list gets its own entry without #beheer, so Back (or its end) returns
+    // to #beheer, whose hashchange opens this page again.
+    const openLesson = (lessonId: string) => {
+      const lesson: View = { name: 'lesson', lessonId, review: false, admin: true };
+      history.pushState({ view: lesson, depth: 1 } satisfies Entry, '', location.pathname + location.search);
+      setView(lesson);
+    };
+    return <Admin onLesson={openLesson} onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
 
   // First run, one question per page: the language (an app to learn Dutch can't start in Dutch;
@@ -797,6 +804,8 @@ export default function App() {
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped, made, almost, written }: LessonResult) => {
+        // Opened from #beheer: a look-through, so nothing is saved or counted; back to the list.
+        if (view.admin) { leaving.current = true; back(); return; }
         const now = practisedAt(lessonStarted.current, new Date(), progress.lastDay);
         const today = dayKey(now);
         const cards = progress.cards ?? {};
@@ -899,7 +908,7 @@ export default function App() {
           quiet={Boolean(progress.quiet)}
           onQuiet={setQuiet}
           onQuit={({ step, steps }) => {
-            count('lesson-quit', { lesson: view.lessonId, quarter: quarterOf(step, steps) });
+            if (!view.admin) count('lesson-quit', { lesson: view.lessonId, quarter: quarterOf(step, steps) });
             leaving.current = true;
             back();
           }}
