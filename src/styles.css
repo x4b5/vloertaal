@@ -35,9 +35,9 @@
   --kraft-dark: #6e5530;
   --green: #137a55;
   --red: #c2412d;
-  /* Speaker buttons and icons: the icon 3:1 on its own blue tint, white on blue 4.5:1
-     (was #1592db: 2.3:1 on the tint, white on it 3.4:1). Dark keeps #1592db. */
-  --blue: #1179b6;
+  /* Speaker buttons and icons: a calm work-trouser blue, still clearly "listen". White on it
+     6.2:1, the icon 5:1 on its own tint (was #1179b6: 4.7 and 3.9). Dark keeps #1592db. */
+  --blue: #2c6690;
   --orange: #ff7a00;
 
   /* Semantic */
@@ -59,7 +59,7 @@
   /* What is done in the lesson bar: kraft tape (was the soft edge colour), 3:1 on the floor and
      the empty track. */
   --progress: #8f6a3a;
-  --blue-hover: #1284c7;
+  --blue-hover: #33719e;
   --on-go: #fff;            /* the tick and cross on the green and red dots */
   --on-green: #ffffff;
   --on-blue: #ffffff;
@@ -320,6 +320,8 @@ button:disabled { cursor: default; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 
 h1, h2 { margin: 0.4em 0; line-height: 1.2; }
+/* One heavy weight for the whole app: 600 stays clearly bold for weak readers, without shouting. */
+h1, h2, h3, h4, b, strong, th { font-weight: 600; }
 h1 { font-size: 1.6rem; }
 h2 { font-size: 1.25rem; }
 .muted { color: var(--muted); }
@@ -354,7 +356,7 @@ h2 { font-size: 1.25rem; }
   position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 52px; padding: 12px 24px;
   border: 2px solid var(--edge); border-radius: var(--radius);
-  font-weight: 650; font-size: 1.05rem; letter-spacing: 0;
+  font-weight: 600; font-size: 1.05rem; letter-spacing: 0;
   transition: transform 0.06s, background-color 0.15s;
 }
 .btn:active:not(:disabled) { transform: translateY(1px); filter: brightness(0.96); }
@@ -400,12 +402,12 @@ h2 { font-size: 1.25rem; }
 .screen { padding: calc(16px + env(safe-area-inset-top)) 16px calc(48px + env(safe-area-inset-bottom)); }
 /* Screen head: an outlined square back button and the bilingual title. */
 .screen-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-.screen-head h1 { margin: 0.2em 0; font-size: 1.5rem; font-weight: 650; }
+.screen-head h1 { margin: 0.2em 0; font-size: 1.5rem; font-weight: 600; }
 .screen-head h1 .bi-help { --help-size: 0.62em; font-weight: 400; }
 .screen-head .icon-btn { flex: none; margin-inline-start: -8px; width: 44px; height: 44px; }
 .screen-head .icon-btn:hover { background: var(--concrete-2); }
 /* Section headings inside a screen: plain, with the help language underneath. */
-.screen > h2 { margin: 32px 0 12px; font-size: 1.1rem; font-weight: 650; }
+.screen > h2 { margin: 32px 0 12px; font-size: 1.1rem; font-weight: 600; }
 .screen > h2 .bi-help { --help-size: 0.8em; font-weight: 400; }
 .screen > .muted { line-height: 1.45; }
 
@@ -414,7 +416,7 @@ h2 { font-size: 1.25rem; }
 .hero { text-align: center; padding: 8px 0 0; }
 .hero h1 { font-size: 2.4rem; color: var(--ink); margin: 0; letter-spacing: -0.02em; }
 .tagline { font-weight: 500; font-size: 1.05rem; color: var(--muted); margin: 6px 0 0; }
-.onboarding-title { margin: 36px 0 4px; font-size: 1.45rem; font-weight: 650; text-align: center; }
+.onboarding-title { margin: 36px 0 4px; font-size: 1.45rem; font-weight: 600; text-align: center; }
 @keyframes bob { 50% { transform: translateY(-2px); } }
 
 .lang-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 16px 0; }
@@ -432,7 +434,7 @@ h2 { font-size: 1.25rem; }
 .lang-grid-compact .lang-native { font-size: 1.05rem; }
 .lang-grid-compact .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.15rem; }
 .lang-grid-compact .lang-check { top: 10px; inset-inline-end: 10px; width: 24px; height: 24px; }
-.lang-native { font-size: 1.2rem; font-weight: 650; line-height: 1.2; overflow-wrap: anywhere; }
+.lang-native { font-size: 1.2rem; font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; }
 .lang-native:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: 1.3rem; }
 .lang-en { font-size: 0.85rem; color: var(--muted); }
 .lang-beta { color: var(--muted); }
@@ -491,11 +493,11 @@ h2 { font-size: 1.25rem; }
   position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 16px;
   padding: calc(10px + env(safe-area-inset-top)) 16px 10px; background: var(--bg);
 }
-.brand { display: inline-flex; align-items: center; gap: 8px; margin: 0; margin-inline-end: auto; font-weight: 700; color: var(--ink); font-size: 1.25rem; line-height: inherit; }
+.brand { display: inline-flex; align-items: center; gap: 8px; margin: 0; margin-inline-end: auto; font-weight: 600; color: var(--ink); font-size: 1.25rem; line-height: inherit; }
 .topbar-wordmark { display: none; }
 .stat { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--ink-2); white-space: nowrap; }
 .stat .icon { color: var(--ink-3); }
-.stat-num { font-size: 1.05rem; font-weight: 650; color: var(--ink); font-variant-numeric: tabular-nums; }
+.stat-num { font-size: 1.05rem; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
 .stat-unit { font-size: 0.85rem; }
 @media (max-width: 370px) { .stat-unit { display: none; } .topbar { gap: 12px; } }
 @media (min-width: 560px) { .topbar-wordmark { display: inline; } }
@@ -532,7 +534,7 @@ h2 { font-size: 1.25rem; }
 .bay-marker {
   position: relative; z-index: 1; justify-self: center; display: grid; place-items: center;
   width: 36px; height: 36px; border-radius: 50%;
-  font-family: var(--stencil); font-weight: 800; font-size: 1.25rem; line-height: 1; padding-top: 2px;
+  font-family: var(--stencil); font-weight: 600; font-size: 1.25rem; line-height: 1; padding-top: 2px;
 }
 .bay-done .bay-marker { background: var(--solid); color: var(--on-solid-mark); padding: 0; }
 .bay-now .bay-marker { width: 44px; height: 44px; font-size: 1.5rem; background: var(--yellow); color: var(--on-yellow); border: 2px solid var(--on-yellow); }
@@ -560,12 +562,12 @@ h2 { font-size: 1.25rem; }
   padding: 20px 18px 18px; overflow: hidden;
 }
 .bay-now .bay-card:hover { background: var(--yellow-hover); }
-.bay-now .bay-title { font-size: 1.45rem; font-weight: 650; line-height: 1.15; }
+.bay-now .bay-title { font-size: 1.45rem; font-weight: 600; line-height: 1.15; }
 .bay-now .bay-title .bi-help { color: var(--on-yellow-soft); --help-size: 0.68em; margin-top: 4px; }
 .bay-start {
   align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; margin-top: 12px;
   min-height: 48px; padding: 8px 14px 8px 20px; border-radius: 10px;
-  background: var(--on-yellow); color: var(--on-yellow-paper); font-weight: 650; font-size: 1.1rem;
+  background: var(--on-yellow); color: var(--on-yellow-paper); font-weight: 600; font-size: 1.1rem;
 }
 .bay-start .icon { color: var(--yellow); }
 .bay-char { position: absolute; right: 4px; bottom: -6px; line-height: 0; pointer-events: none; }
@@ -619,7 +621,7 @@ h2 { font-size: 1.25rem; }
   color: var(--ink); background: var(--tag-bg); text-decoration: none;
 }
 .player-top .lesson-report:hover { background: var(--concrete-2); }
-.lesson-report-label { font-size: 0.85rem; font-weight: 650; line-height: 1; }
+.lesson-report-label { font-size: 0.85rem; font-weight: 600; line-height: 1; }
 /* Once: what "Melden" is for, a note under the header at the flag's end (not tappable). */
 .player-top > .report-hint {
   position: absolute; top: calc(100% + 6px); inset-inline-end: 12px; z-index: 30;
@@ -713,7 +715,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .tag {
   display: inline-block; padding: 3px 8px; border-radius: 4px;
   background: var(--tag-bg); color: var(--tag-ink);
-  font-weight: 600; font-size: 0.8rem; line-height: 1.2; letter-spacing: 0.06em; text-transform: uppercase;
+  font-weight: 600; font-size: 0.85rem; line-height: 1.2; letter-spacing: 0.01em;
 }
 .ex-tag { flex-wrap: wrap; row-gap: 4px; }
 
@@ -757,10 +759,10 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .feedback-text { flex: 1; min-width: 0; }
 /* Heading: the help language first and large; under it the Dutch words and the English. */
 .feedback-head { display: flex; flex-direction: column; gap: 2px; }
-.feedback-help { font-size: 1.25rem; font-weight: 700; line-height: 1.25; color: var(--ink); }
+.feedback-help { font-size: 1.25rem; font-weight: 600; line-height: 1.25; color: var(--ink); }
 .feedback-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.32rem; }
 .feedback-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
-.feedback-title { font-size: 1.05rem; font-weight: 700; line-height: 1.2; color: var(--ink); letter-spacing: -0.01em; }
+.feedback-title { font-size: 1.05rem; font-weight: 600; line-height: 1.2; color: var(--ink); letter-spacing: 0; }
 .feedback-en { font-size: 0.92rem; font-weight: 500; color: var(--muted); }
 .feedback-sep { color: var(--ink-3); font-weight: 500; }
 /* English only: the Dutch words are the heading, the English under them. */
@@ -783,8 +785,8 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 }
 .run-label-tape { display: none; }
 .run-label .flame-icon { flex: none; }
-.run-label-n { font-family: var(--stencil); font-weight: 800; font-size: 1.45rem; line-height: 1; letter-spacing: -0.01em; }
-.run-label-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; font-size: 0.95rem; font-weight: 650; line-height: 1.2; }
+.run-label-n { font-family: var(--stencil); font-weight: 600; font-size: 1.45rem; line-height: 1; letter-spacing: 0; }
+.run-label-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; font-size: 0.95rem; font-weight: 600; line-height: 1.2; }
 @keyframes run-label {
   0% { transform: translateY(-6px); opacity: 0; }
   14%, 86% { transform: none; opacity: 1; }
@@ -809,12 +811,12 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 }
 @keyframes up { from { transform: translateY(10px); opacity: 0; } }
 
-.prompt { font-size: var(--fs-question); font-weight: 650; margin: 4px 0 16px; color: var(--ink-strong); letter-spacing: -0.01em; }
+.prompt { font-size: var(--fs-question); font-weight: 600; margin: 4px 0 16px; color: var(--ink-strong); letter-spacing: 0; }
 .prompt .bi-help { --help-size: 0.6em; font-weight: 400; letter-spacing: 0; }
 .card { border: 2px solid var(--line); border-radius: var(--radius); padding: 24px; text-align: center; background: var(--card); }
 .intro-card { display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .emoji-xl { font-size: 96px; line-height: 1; }
-.intro-nl { display: flex; align-items: center; gap: 10px; font-size: 2rem; font-weight: 700; flex-wrap: wrap; justify-content: center; }
+.intro-nl { display: flex; align-items: center; gap: 10px; font-size: 2rem; font-weight: 600; flex-wrap: wrap; justify-content: center; }
 .intro-nl > span { min-width: 0; max-width: 100%; overflow-wrap: anywhere; text-align: center; }
 .intro-nl.len-m { font-size: clamp(1.6rem, 7.6vw, 2rem); }
 .intro-nl.len-l { font-size: clamp(1.4rem, 6.6vw, 2rem); }
@@ -838,7 +840,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .say-aloud.is-waiting { visibility: hidden; }
 .say-aloud > .icon { flex: none; color: var(--ink-3); }
 .say-aloud-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; text-align: start; }
-.say-aloud-nl { font-size: 1.05rem; font-weight: 650; color: var(--ink); }
+.say-aloud-nl { font-size: 1.05rem; font-weight: 600; color: var(--ink); }
 [dir='rtl'] .say-aloud-nl { text-align: right; }
 .say-aloud .bi-help { --help-size: 0.92rem; color: var(--ink-2); }
 .say-aloud-dots { display: inline-flex; align-items: center; gap: 5px; flex: none; color: var(--ink-3); }
@@ -875,7 +877,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 }
 .speaker-bubble .speak { width: 48px; height: 48px; font-size: 1.1rem; }
 .speaker-nl {
-  min-width: 0; font-size: clamp(1.4rem, 7vw, var(--fs-word)); font-weight: 650; color: var(--ink-strong); letter-spacing: -0.01em; line-height: 1.15;
+  min-width: 0; font-size: clamp(1.4rem, 7vw, var(--fs-word)); font-weight: 600; color: var(--ink-strong); letter-spacing: 0; line-height: 1.15;
   overflow-wrap: anywhere; hyphens: manual;
 }
 /* Long Dutch words (wordSize in lib/dutch.ts): a smaller word, and on phones a smaller
@@ -907,7 +909,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .choice-num {
   flex: none; display: grid; place-items: center; width: 40px; height: 40px; padding-top: 2px;
   border: 2px solid transparent; border-radius: 8px; background: var(--track); color: var(--ink-2);
-  font-family: var(--stencil); font-weight: 800; font-size: 1.4rem; line-height: 1;
+  font-family: var(--stencil); font-weight: 600; font-size: 1.4rem; line-height: 1;
   transition: background-color 0.12s, border-color 0.12s, color 0.12s;
 }
 .choice-num .icon { margin-top: -2px; }
@@ -938,7 +940,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .choices-rows .choice-label .bi-help { --help-size: 0.85em; margin-top: 2px; }
 .choice-nl { font-size: var(--fs-answer); min-width: 0; overflow-wrap: anywhere; }
 /* "Which one is …?" without pictures: Dutch words on text cards. */
-.choices-words .choice-nl { font-size: var(--fs-answer); font-weight: 650; }
+.choices-words .choice-nl { font-size: var(--fs-answer); font-weight: 600; }
 /* Room for the stamp on a checked row, so it never covers the words: a smaller stamp that sits
    inside the card (never clipped), and the text stops short of it. */
 .choices:not(.choices-pics) .stamp { width: 62px; height: 62px; margin-top: -31px; right: 8px; }
@@ -954,13 +956,13 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   border: 3px solid currentColor; border-radius: 50%;
   box-shadow: inset 0 0 0 3px transparent, inset 0 0 0 4.5px currentColor;
   color: var(--green); background: color-mix(in srgb, var(--card) 55%, transparent);
-  font-family: var(--stencil); font-weight: 800; line-height: 0.9; text-transform: uppercase;
+  font-family: var(--stencil); font-weight: 600; line-height: 0.9; text-transform: uppercase;
   rotate: -12deg; pointer-events: none;
   /* Lands 60 ms after Check, after the colour change. */
   animation: stamp-in 0.16s var(--ease-out) 0.06s both;
 }
 .stamp-word { font-size: 1.75rem; letter-spacing: 0.02em; }
-.stamp-sub { font-family: 'Lexend Variable', sans-serif; font-weight: 700; font-size: 0.7rem; margin-top: 3px; }
+.stamp-sub { font-family: 'Lexend Variable', sans-serif; font-weight: 600; font-size: 0.7rem; margin-top: 3px; }
 .stamp-wrong { color: var(--red); rotate: 9deg; }
 .stamp-wrong .stamp-word { font-size: 1.3rem; text-align: center; }
 @keyframes stamp-in { from { transform: scale(1.04); opacity: 0; } }
@@ -1078,7 +1080,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .pair-tiles { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 4px; }
 .ftile {
   padding: 3px 9px 4px; border: 2px solid var(--edge); border-radius: 6px; background: var(--card);
-  font-size: 1.1rem; font-weight: 650; line-height: 1.25; color: var(--ink-strong);
+  font-size: 1.1rem; font-weight: 600; line-height: 1.25; color: var(--ink-strong);
 }
 .ftile-miss { text-decoration: underline 3px var(--wrong-ink); text-decoration-skip-ink: none; text-underline-offset: 4px; }
 .answer-right .tile { border-color: var(--green); }
@@ -1108,7 +1110,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   border: 2px solid var(--line); border-radius: var(--radius); background: var(--card);
 }
 .phrase-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.phrase-nl { font-size: 1.25rem; font-weight: 650; overflow-wrap: anywhere; }
+.phrase-nl { font-size: 1.25rem; font-weight: 600; overflow-wrap: anywhere; }
 
 /* Result: lesson complete */
 #root:has(.result-screen) { max-width: none; }
@@ -1118,7 +1120,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .result-screen { overflow-x: clip; }
 .result-hero { position: relative; }
 /* A calm entrance: the title and the cards fade up 8 px; the KLAAR stamp lands once. */
-.result-title { margin: 8px 0 0; animation: calm-up 0.3s 0.1s var(--ease-out) both; font-size: 2rem; font-weight: 650; color: var(--ink); letter-spacing: -0.01em; }
+.result-title { margin: 8px 0 0; animation: calm-up 0.3s 0.1s var(--ease-out) both; font-size: 2rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
 @keyframes calm-up { from { transform: translateY(8px); opacity: 0; } }
 .result-title .bi-help { --help-size: 0.6em; font-weight: 400; color: var(--muted); }
 .result-stats {
@@ -1145,7 +1147,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   display: flex; align-items: center; gap: 10px; padding-top: 8px; border-top: 2px dashed var(--line);
   color: var(--tone-ink);
 }
-.stat-card-value { display: inline-block; font-family: var(--stencil); font-size: 2.6rem; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+.stat-card-value { display: inline-block; font-family: var(--stencil); font-size: 2.6rem; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
 .stat-card-body .icon { transform-origin: 50% 60%; }
 /* The numbers are shown directly (no pop, no count). */
 .result-screen .foot-actions .btn-primary { min-height: 60px; }
@@ -1245,7 +1247,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   margin: 0 0 14px; padding: 10px 14px; border: 2px solid var(--line); border-radius: 12px; background: var(--card);
   font-weight: 600; text-align: start;
 }
-.snap-note-nl { display: block; font-size: 1.1rem; font-weight: 700; color: var(--ink-strong); }
+.snap-note-nl { display: block; font-size: 1.1rem; font-weight: 600; color: var(--ink-strong); }
 .snap-note .bi-help { --help-size: 0.9rem; font-weight: 500; }
 .snap-note-snapRight { border-color: var(--green); }
 .snap-note-snapAskBetter { border-color: var(--yellow-dark); }
@@ -1297,7 +1299,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   margin: 16px auto 0; max-width: 420px; padding: 12px 14px; text-align: start;
   background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
 }
-.milestone-fact-title { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin: 0 0 4px; font-weight: 650; }
+.milestone-fact-title { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin: 0 0 4px; font-weight: 600; }
 .milestone-fact-nl { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
 .milestone-fact-text { font-size: 1.05rem; line-height: 1.45; }
 /* Voor begeleiders: the facts with their sources. */
@@ -1381,12 +1383,12 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* The flame is a still icon. */
 .streak-flame { flex: none; }
 .streak-num {
-  min-width: 1ch; font-family: var(--stencil); font-size: 6rem; font-weight: 800; line-height: 1; color: var(--ink);
+  min-width: 1ch; font-family: var(--stencil); font-size: 6rem; font-weight: 600; line-height: 1; color: var(--ink);
   font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
 }
-.streak-unit { font-family: var(--stencil); font-weight: 800; font-size: 1.8rem; color: var(--muted); align-self: flex-end; padding-bottom: 10px; text-transform: uppercase; }
+.streak-unit { font-family: var(--stencil); font-weight: 600; font-size: 1.8rem; color: var(--muted); align-self: flex-end; padding-bottom: 10px; text-transform: uppercase; }
 .streak-line {
-  max-width: 30em; margin: 8px 0 0; font-size: 1.45rem; font-weight: 700; color: var(--ink-strong); letter-spacing: -0.01em;
+  max-width: 30em; margin: 8px 0 0; font-size: 1.45rem; font-weight: 600; color: var(--ink-strong); letter-spacing: 0;
 }
 .streak-line .bi-help { --help-size: 0.66em; font-weight: 500; letter-spacing: 0; margin-top: 4px; }
 .milestone-foot { padding-top: 20px; padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
@@ -1428,12 +1430,12 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 
 /* Hidden admin page (#beheer) */
 .admin-card { border: 2px solid var(--edge); border-radius: 6px; padding: 20px; margin: 12px 0 20px; background: var(--card); box-shadow: 6px 6px 0 var(--label-shadow); }
-.admin-big { font-family: var(--stencil); font-size: 3.4rem; font-weight: 800; color: var(--ink); line-height: 1.1; }
+.admin-big { font-family: var(--stencil); font-size: 3.4rem; font-weight: 600; color: var(--ink); line-height: 1.1; }
 .admin-bar { margin: 14px 0; }
 .admin code { background: var(--input-bg); padding: 1px 6px; border-radius: 6px; }
 
 /* Logo */
-.wordmark { font-family: 'Lexend Variable', 'Lexend', system-ui, sans-serif; font-weight: 700; color: var(--ink-strong); letter-spacing: -0.02em; }
+.wordmark { font-family: 'Lexend Variable', 'Lexend', system-ui, sans-serif; font-weight: 700; /* the logo: keeps its own weight */ color: var(--ink-strong); letter-spacing: -0.02em; }
 .wordmark-dot { color: var(--yellow); }
 /* "Nederlands" in the language list: what the work-rules track teaches (src/i18n/meta.ts NL_MORE). */
 /* "Ik spreek al Nederlands" is the work-rules track, not a help language: in the kraft colour of
@@ -1462,12 +1464,12 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 /* Its page: the field and the button on the whole width, the address selectable. */
 .missing-lang { display: flex; flex-direction: column; gap: 12px; }
 .missing-lang .onboarding-title { margin-top: 16px; }
-.missing-label { font-weight: 650; margin-top: 8px; }
+.missing-label { font-weight: 600; margin-top: 8px; }
 .missing-input { flex: none; padding-inline-end: 16px; }
 .missing-go { width: 100%; text-decoration: none; }
 .missing-small { font-size: 0.9rem; }
-.missing-mail { font-weight: 650; color: var(--ink); user-select: all; }
-.missing-thanks { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 8px 0 0; font-size: 1.3rem; font-weight: 650; }
+.missing-mail { font-weight: 600; color: var(--ink); user-select: all; }
+.missing-thanks { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 8px 0 0; font-size: 1.3rem; font-weight: 600; }
 /* A box that scrolls inside, with its own scroll bar that is always there (ScrollBox): a phone
    hides its scroll bar until you scroll. The bar is a track with a handle; drag it, or tap the
    track to move a box-height. Its touch area is wider than the line you see. */
@@ -1527,14 +1529,14 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .onb-nl-dock .lang-nl-more { margin-top: 2px; }
 .lang-nl-tag {
   display: inline-block; align-self: flex-start; margin-bottom: 4px; padding: 2px 8px; border-radius: 4px;
-  background: var(--tag-bg); color: var(--tag-ink); font-size: 0.75rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--tag-bg); color: var(--tag-ink); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.01em;
 }
 .lang-nl-more { display: block; margin-top: 4px; font-size: 0.85rem; line-height: 1.3; color: var(--muted); }
 /* The whole app is a test version (Logo.tsx APP_BETA): a small tag after the name, in the body font. */
 .wordmark-beta {
-  display: inline-block; margin-inline-start: 0.35em; padding: 0.1em 0.4em 0.05em; vertical-align: 0.35em;
-  border: 1.5px solid var(--ink-3); border-radius: 4px; color: var(--muted);
-  font-family: inherit; font-size: max(0.32em, 0.68rem); font-weight: 650; letter-spacing: 0.06em; line-height: 1.2; text-transform: uppercase;
+  display: inline-block; margin-inline-start: 0.3em; vertical-align: 0.4em;
+  color: var(--muted);
+  font-family: inherit; font-size: max(0.36em, 0.8rem); font-weight: 500; letter-spacing: 0.01em; line-height: 1.2;
 }
 .brand .logo-mark, .hero-logo .logo-mark { flex: none; border-radius: 22%; }
 /* The logo and the name are one picture: the same way round in a right-to-left language. */
@@ -1550,7 +1552,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   background: var(--tag-bg); border: 0; font-size: 1.4rem; line-height: 1;
   font-family: 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Emoji', sans-serif;
 }
-.tip-badge-nl { font-weight: 650; font-size: 1.05rem; line-height: 1.1; }
+.tip-badge-nl { font-weight: 600; font-size: 1.05rem; line-height: 1.1; }
 .tip-badge-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .tip-title { margin-top: 4px; }
 .tip-body { font-size: 1.1rem; line-height: 1.5; margin: 0 0 20px; }
@@ -1565,7 +1567,7 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
   background: var(--tag-bg); color: var(--tag-ink);
 }
 .tip-say-label .bi { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
-.tip-say-label .bi-en { font-weight: 650; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.tip-say-label .bi-en { font-weight: 600; font-size: 0.85rem; letter-spacing: 0.01em; }
 .tip-say-label .bi-help { color: var(--tag-ink); --help-size: 0.85rem; font-weight: 600; }
 .tip-say-row { display: flex; align-items: flex-end; gap: 10px; }
 .tip-char { flex: none; display: flex; justify-content: center; }
@@ -1573,12 +1575,12 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .tip-bubble { flex: 1; min-width: 0; margin-bottom: 0; display: flex; align-items: flex-start; gap: 10px; padding-block: 10px; padding-inline: 14px 10px; }
 .tip-bubble::before { top: auto; bottom: 22px; }
 .tip-phrase { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.tip-phrase-nl { font-weight: 700; font-size: 1.2rem; }
+.tip-phrase-nl { font-weight: 600; font-size: 1.2rem; }
 /* A saying (src/content/sayings.ts): on a new word's card, and the "Zo zeggen ze het" card. The
    literal line is small and muted (what the words say), the meaning is the word's meaning. */
 .saying-lines { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; }
 .saying-lines p { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; }
-.saying-label { font-size: 0.85rem; font-weight: 650; color: var(--muted); }
+.saying-label { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
 .saying-label .bi { gap: 0; }
 .saying-literal { font-size: 1.05rem; color: var(--muted); font-style: italic; }
 .saying-literal > .bi { font-style: italic; }
@@ -1681,13 +1683,13 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .pics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
 .pics-cell { border: 2px solid var(--line); border-radius: 16px; padding: 10px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .pics-row { display: flex; align-items: flex-end; gap: 10px; }
-.pics-nl { font-weight: 700; }
+.pics-nl { font-weight: 600; }
 .pics-id { font-size: 0.75rem; color: var(--muted); font-family: ui-monospace, monospace; }
 .pics-missing { opacity: 0.55; }
 /* Abstract words: no picture in the course; the stored emoji is shown greyed for reference. */
 .pics-abstract { background: var(--line); border-style: dashed; }
 .pics-abstract .pics-row { filter: grayscale(1); opacity: 0.35; }
-.pics-none { font-size: 0.8rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.pics-none { font-size: 0.85rem; font-weight: 600; color: var(--muted); letter-spacing: 0.01em; }
 /* Drawn word pictures scale with their slot */
 svg.pic-emoji { width: min(110px, 72%); height: auto; aspect-ratio: 1; }
 svg.emoji-xl { width: 140px; height: 140px; }
@@ -1713,7 +1715,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .about-nl {
   flex: none; min-width: 52px; min-height: 44px; padding: 0 12px; border-radius: 12px; cursor: pointer;
   border: 2px solid var(--line); background: var(--card); color: var(--ink);
-  font: inherit; font-weight: 750; font-size: 1rem; letter-spacing: 0.04em;
+  font: inherit; font-weight: 600; font-size: 1rem; letter-spacing: 0.04em;
 }
 .about-nl[aria-pressed='true'] { background: var(--yellow, #f5c518); border-color: var(--yellow, #f5c518); color: var(--on-yellow); }
 .about-nl:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
@@ -1740,7 +1742,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
   position: absolute; inset: 0 0 auto; height: 10px;
   background: repeating-linear-gradient(-45deg, var(--yellow) 0 10px, var(--on-yellow) 10px 20px);
 }
-.sheet-title { margin: 0 0 6px; font-size: 1.5rem; font-weight: 700; color: var(--ink-strong); }
+.sheet-title { margin: 0 0 6px; font-size: 1.5rem; font-weight: 600; color: var(--ink-strong); }
 .sheet-title .bi-help { --help-size: 0.7em; font-weight: 500; }
 .sheet-hint { margin: 0 0 18px; color: var(--muted); font-size: 1rem; }
 .sheet-actions { display: flex; flex-direction: column; gap: 10px; }
@@ -1773,7 +1775,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .nav-label { font-size: 0.8rem; font-weight: 500; line-height: 1.1; }
 .nav-tab-on { color: var(--ink); }
 .nav-tab-on .nav-icon { background: var(--yellow); color: var(--on-yellow); }
-.nav-tab-on .nav-label { font-weight: 650; }
+.nav-tab-on .nav-label { font-weight: 600; }
 .nav-tab:hover:not(.nav-tab-on) { color: var(--ink); }
 .nav-tab:hover:not(.nav-tab-on) .nav-icon { background: var(--track); }
 .nav-tab:focus-visible { outline-offset: -3px; }
@@ -1797,7 +1799,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .hub-icon { flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 8px; background: var(--red-bg); }
 .hub-tips .hub-icon { background: var(--tag-bg); }
 .hub-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
-.hub-nl { font-weight: 650; font-size: 1.2rem; line-height: 1.2; }
+.hub-nl { font-weight: 600; font-size: 1.2rem; line-height: 1.2; }
 .hub-text .bi { font-weight: 400; color: var(--ink-2); }
 .hub-card > .icon:last-child { flex: none; color: var(--ink-3); }
 
@@ -1824,7 +1826,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .gate-logo { display: flex; align-items: center; gap: 12px; }
 .gate-logo .wordmark { font-size: 2.2rem; }
 .gate-tag { margin: 6px 0 26px; color: var(--muted); font-size: 0.9rem; }
-.gate-title { margin: 0 0 14px; font-size: clamp(1.25rem, 5.6vw, 1.45rem); font-weight: 650; line-height: 1.2; }
+.gate-title { margin: 0 0 14px; font-size: clamp(1.25rem, 5.6vw, 1.45rem); font-weight: 600; line-height: 1.2; }
 .gate-title .bi-help { --help-size: 0.78em; font-weight: 400; margin-top: 2px; }
 @media (max-width: 360px) { .gate-sign { padding-inline: 16px; } .gate-logo .wordmark { font-size: 1.9rem; } }
 
@@ -1857,12 +1859,12 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .upgrade-title { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 6px; font-size: 1.15rem; }
 .upgrade-title > .icon { flex: none; margin-top: 2px; }
-.upgrade-nl { font-weight: 650; font-size: 1.15rem; line-height: 1.2; }
+.upgrade-nl { font-weight: 600; font-size: 1.15rem; line-height: 1.2; }
 .upgrade-hint { margin: 0 0 12px; color: var(--muted); }
 /* Where to ask for a code: the address, one tap opens a mail with the subject filled in. */
 .upgrade-mail {
   display: inline-flex; align-items: center; gap: 8px; margin: -4px 0 14px; padding: 6px 2px;
-  color: var(--ink); font-weight: 700; text-decoration: underline; text-underline-offset: 0.15em;
+  color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 0.15em;
 }
 .full-only-note {
   display: flex; align-items: center; gap: 8px; width: 100%; min-height: 44px; margin: 6px 0 0; padding: 6px 0;
@@ -1874,7 +1876,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .unlocked-note {
   display: flex; align-items: center; gap: 10px; margin: 0 0 12px; padding: 10px 14px;
   color: var(--right-ink); background: var(--green-bg); border: 2px solid currentColor; border-radius: 12px;
-  font-weight: 700; animation: calm-up 0.3s var(--ease-out) both;
+  font-weight: 600; animation: calm-up 0.3s var(--ease-out) both;
 }
 .unlocked-note > .icon { flex: none; }
 .unlocked-note .unlocked-help { color: var(--ink); font-weight: 500; }
@@ -1883,7 +1885,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
    next step, a big yellow card like a lesson's. */
 .full-only-big {
   display: flex; align-items: center; gap: 14px; width: 100%; min-height: 96px; margin: 12px 0 4px;
-  padding: 18px; text-align: start; font: inherit; font-weight: 650; color: var(--on-yellow);
+  padding: 18px; text-align: start; font: inherit; font-weight: 600; color: var(--on-yellow);
   background: var(--yellow); border: 2.5px solid var(--on-yellow); border-radius: 14px; cursor: pointer;
 }
 .full-only-big:hover { background: var(--yellow-hover); }
@@ -1929,7 +1931,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 
 /* About: links for coaches, folded away under the About texts. */
 .coach-links { border-top: 2px dashed var(--line); padding: 14px 0 6px; }
-.coach-links summary { cursor: pointer; font-weight: 650; font-size: 1.05rem; padding: 4px 0; }
+.coach-links summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; padding: 4px 0; }
 .coach-links ul { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
 .coach-links li { display: flex; align-items: center; gap: 10px; min-height: 48px; }
 .coach-icon { flex: none; width: 32px; height: 32px; }
@@ -1953,10 +1955,10 @@ svg.emoji-xl { width: 140px; height: 140px; }
   background: var(--yellow); color: var(--on-yellow);
 }
 .daily-n {
-  flex: none; min-width: 1ch; font-family: var(--stencil); font-weight: 800; font-size: 2.6rem; line-height: 1;
+  flex: none; min-width: 1ch; font-family: var(--stencil); font-weight: 600; font-size: 2.6rem; line-height: 1;
   color: var(--ink); font-variant-numeric: tabular-nums;
 }
-.daily-title { flex: 1; min-width: 0; font-size: 1.15rem; font-weight: 650; line-height: 1.2; }
+.daily-title { flex: 1; min-width: 0; font-size: 1.15rem; font-weight: 600; line-height: 1.2; }
 .daily-title.bi-swap > .bi-help { --help-size: 0.78em; font-weight: 500; color: var(--muted); }
 .daily-title .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.08em; }
 .daily-go { flex: none; color: var(--ink-3); }
@@ -2027,12 +2029,12 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .result-line {
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 8px;
-  margin: 6px 0 0; max-width: 440px; font-weight: 650; animation: result-go 0.4s 1.2s var(--ease-out) both;
+  margin: 6px 0 0; max-width: 440px; font-weight: 600; animation: result-go 0.4s 1.2s var(--ease-out) both;
 }
 .result-line .bi-help { --help-size: 0.85em; }
 /* After the review: ▲ and the number big in green, "words stronger" in the help language. */
 .result-stronger { flex-wrap: nowrap; gap: 12px; font-size: 1.15rem; color: var(--ink); }
-.stronger-n { display: inline-flex; align-items: center; gap: 4px; font-family: var(--stencil); font-weight: 800; font-size: 2.2rem; line-height: 1; color: var(--right-ink); }
+.stronger-n { display: inline-flex; align-items: center; gap: 4px; font-family: var(--stencil); font-weight: 600; font-size: 2.2rem; line-height: 1; color: var(--right-ink); }
 .stronger-arrow { font-size: 0.5em; }
 .result-stronger .bi { align-items: flex-start; text-align: start; }
 .result-stronger .bi-help { --help-size: 0.78em; font-weight: 500; color: var(--muted); }
@@ -2040,7 +2042,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .result-next { flex-wrap: nowrap; gap: 10px; margin-top: 16px; font-size: 1.05rem; color: var(--ink); }
 .result-next-arrow { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--tag-bg); color: var(--tag-ink); }
 .result-next-pic { flex: none; width: 44px; height: 44px; }
-.result-next-title { align-items: flex-start; text-align: start; font-weight: 650; min-width: 0; }
+.result-next-title { align-items: flex-start; text-align: start; font-weight: 600; min-width: 0; }
 .result-next-title .bi-help { font-weight: 400; color: var(--muted); }
 /* About how long the next lesson takes (src/lib/lessonTime.ts): small and calm under its title. */
 .result-next-text { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0; text-align: start; }
@@ -2057,7 +2059,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
   display: grid; place-items: center; padding: 5px 9px 4px;
   border: 3px solid currentColor; border-radius: 6px; box-shadow: inset 0 0 0 2px var(--card), inset 0 0 0 3.5px currentColor;
   background: color-mix(in srgb, var(--card) 70%, transparent); color: var(--stamp-ink); rotate: 9deg;
-  font-family: var(--stencil); font-weight: 800; font-size: 1.35rem; line-height: 1; text-transform: uppercase; white-space: nowrap;
+  font-family: var(--stencil); font-weight: 600; font-size: 1.35rem; line-height: 1; text-transform: uppercase; white-space: nowrap;
   animation: stamp-in 0.16s 0.7s var(--ease-out) both;
 }
 
@@ -2066,7 +2068,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .milestone .week-gloss.bi { flex-direction: row; flex-wrap: wrap; gap: 0 6px; align-items: baseline; }
 .week-row { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
 .week-day { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; }
-.week-letter { font-size: 0.95rem; font-weight: 650; color: var(--ink-2); line-height: 1.2; }
+.week-letter { font-size: 0.95rem; font-weight: 600; color: var(--ink-2); line-height: 1.2; }
 .week-letter:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.05rem; }
 /* An unlit day: the border at 3:1 or more against the card and the floor, in both themes. */
 .week-tile {
@@ -2096,7 +2098,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .fact-tag {
   display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px 3px; border-radius: 3px;
   background: var(--tag-bg); color: var(--tag-ink);
-  font-family: var(--stencil); font-weight: 800; font-size: 1.15rem; line-height: 1; letter-spacing: 0.04em;
+  font-family: var(--stencil); font-weight: 600; font-size: 1.15rem; line-height: 1; letter-spacing: 0.04em;
 }
 .fact-free .icon { margin-top: -2px; }
 .fact-gloss { font-size: 0.95rem; font-weight: 600; color: var(--ink); max-width: 26em; line-height: 1.3; }
@@ -2149,18 +2151,18 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .keep-card .bi-help { text-align: start; }
 .keep-head { display: flex; flex-direction: column; gap: 2px; }
 /* The Dutch name small (a label to learn), the help language large, English small. */
-.keep-nl { font-size: 0.85rem; font-weight: 650; line-height: 1.25; color: var(--muted); hyphens: manual; overflow-wrap: normal; }
-.keep-gloss { font-size: 1.2rem; font-weight: 700; line-height: 1.25; color: var(--ink-strong); }
+.keep-nl { font-size: 0.85rem; font-weight: 600; line-height: 1.25; color: var(--muted); hyphens: manual; overflow-wrap: normal; }
+.keep-gloss { font-size: 1.2rem; font-weight: 600; line-height: 1.25; color: var(--ink-strong); }
 .keep-gloss.bi-swap > .bi-help { --help-size: 0.74em; font-weight: 500; color: var(--ink-2); }
 .keep-hint { margin: 0; font-size: 0.9rem; line-height: 1.4; color: var(--muted); }
-.keep-ok { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--right-ink); font-weight: 650; }
+.keep-ok { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--right-ink); font-weight: 600; }
 .keep-note { margin: 0; }
 .keep-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-.keep-btn { flex-direction: column; gap: 0; width: 100%; min-height: 58px; padding: 8px 12px; font-weight: 650; line-height: 1.2; }
+.keep-btn { flex-direction: column; gap: 0; width: 100%; min-height: 58px; padding: 8px 12px; font-weight: 600; line-height: 1.2; }
 .keep-card .keep-btn .bi { align-items: center; }
 /* House rule: the help language large, the Dutch a small label (buttons, chips, "other time"). */
 .keep-btn > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; opacity: 0.9; }
-.keep-btn-gloss { font-size: 1.05rem; font-weight: 650; }
+.keep-btn-gloss { font-size: 1.05rem; font-weight: 600; }
 .keep-btn-gloss.bi-swap .bi-help { display: none; }
 .keep-link {
   display: inline-flex; align-items: center; gap: 6px; align-self: center; min-height: 44px; padding: 4px 8px;
@@ -2191,11 +2193,11 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .ios-num {
   position: absolute; top: 4px; inset-inline-start: 8px;
-  font-family: var(--stencil); font-weight: 800; font-size: 1.25rem; line-height: 1; color: var(--ink-3);
+  font-family: var(--stencil); font-weight: 600; font-size: 1.25rem; line-height: 1; color: var(--ink-3);
 }
 .ios-pic { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--card); color: var(--ink); border: 2px solid var(--line); }
 .ios-nl { order: 3; font-size: 0.74rem; font-weight: 500; line-height: 1.2; color: var(--muted); overflow-wrap: normal; hyphens: manual; }
-.ios-gloss { font-size: 0.9rem; font-weight: 650; color: var(--ink); }
+.ios-gloss { font-size: 0.9rem; font-weight: 600; color: var(--ink); }
 .ios-gloss.bi-swap > .bi-help { --help-size: 0.82em; font-weight: 500; color: var(--muted); }
 .keep-card .ios-gloss.bi { align-items: center; }
 .ios-gloss .bi-help { --help-min: 12px; }
@@ -2209,9 +2211,9 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .remind-chip:hover { border-color: var(--ink-3); }
 .remind-chip.picked { background: var(--yellow); color: var(--on-yellow); border-color: var(--on-yellow); }
-.remind-time { font-family: var(--stencil); font-weight: 800; font-size: 1.7rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.remind-time { font-family: var(--stencil); font-weight: 600; font-size: 1.7rem; line-height: 1; font-variant-numeric: tabular-nums; }
 .remind-nl { order: 3; font-size: 0.74rem; font-weight: 500; line-height: 1.2; color: var(--muted); }
-.remind-gloss { font-size: 0.95rem; font-weight: 650; color: var(--ink); }
+.remind-gloss { font-size: 0.95rem; font-weight: 600; color: var(--ink); }
 .remind-gloss.bi-swap > .bi-help { --help-size: 0.8em; font-weight: 500; color: var(--muted); }
 .keep-card .remind-chip .bi { align-items: center; }
 /* On the yellow of the chosen chip every line is dark ink (7:1 or more), in both themes. */
@@ -2223,10 +2225,10 @@ svg.emoji-xl { width: 140px; height: 140px; }
   border: 2px dashed var(--line); border-radius: 10px;
 }
 .remind-own.picked { border-style: solid; border-color: var(--edge-strong); }
-.remind-own-text { display: flex; flex-direction: column; gap: 1px; font-weight: 650; font-size: 0.95rem; min-width: 0; }
+.remind-own-text { display: flex; flex-direction: column; gap: 1px; font-weight: 600; font-size: 0.95rem; min-width: 0; }
 .remind-own-text > span[lang='nl'] { order: 2; font-size: 0.78rem; font-weight: 500; color: var(--muted); }
 .remind-own input {
-  flex: none; min-height: 44px; padding: 6px 10px; font: inherit; font-size: 1.15rem; font-weight: 650;
+  flex: none; min-height: 44px; padding: 6px 10px; font: inherit; font-size: 1.15rem; font-weight: 600;
   color: var(--ink); background: var(--input-bg); border: 2px solid var(--line); border-radius: 8px;
 }
 .remind-own input:focus { outline: 3px solid var(--focus); outline-offset: 2px; border-color: var(--edge-strong); box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 55%, transparent); }
@@ -2242,7 +2244,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .waybill-tag {
   position: absolute; top: 14px; inset-inline-end: 12px; padding: 3px 7px 2px;
   border: 2px solid var(--tag-ink); border-radius: 3px; color: var(--tag-ink); rotate: -4deg;
-  font-family: var(--stencil); font-weight: 800; font-size: 0.85rem; line-height: 1; letter-spacing: 0.08em; text-transform: uppercase;
+  font-family: var(--stencil); font-weight: 600; font-size: 0.85rem; line-height: 1; letter-spacing: 0.08em; text-transform: uppercase;
 }
 .waybill .keep-head { padding-inline-end: 92px; }
 .waybill-lines {
@@ -2251,11 +2253,11 @@ svg.emoji-xl { width: 140px; height: 140px; }
 }
 .waybill-lines div { display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .waybill-lines div + div { border-inline-start: 2px dashed var(--kraft); }
-.waybill-lines dt { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tag-ink); }
-.waybill-lines dd { margin: 0; font-family: var(--stencil); font-weight: 800; font-size: 1.9rem; line-height: 1; color: var(--ink); }
+.waybill-lines dt { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tag-ink); }
+.waybill-lines dd { margin: 0; font-family: var(--stencil); font-weight: 600; font-size: 1.9rem; line-height: 1; color: var(--ink); }
 .waybill .btn-ghost { background: var(--card); }
 .waybill-ask { display: flex; flex-direction: column; gap: 10px; padding: 12px; background: var(--card); border: 2px solid var(--edge); border-radius: 8px; }
-.waybill-ask-nl { margin: 0; font-weight: 650; }
+.waybill-ask-nl { margin: 0; font-weight: 600; }
 
 /* ---- Round 2: understanding without reading ---- */
 /* Buttons in the learner's language, a pictogram per exercise, pictures and sound in the
@@ -2293,7 +2295,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
   padding: 3px 10px 3px 6px; text-transform: none; letter-spacing: 0;
 }
 .tag-icon { display: grid; place-items: center; }
-.tag-nl { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }
+.tag-nl { letter-spacing: 0.01em; font-size: 0.85rem; }
 .tag-help {
   min-width: 0; padding-left: 7px; border-left: 2px solid color-mix(in srgb, var(--tag-ink) 35%, transparent);
   font-size: var(--help-min); font-weight: 600; line-height: 1.25; overflow-wrap: anywhere;
@@ -2340,7 +2342,7 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .hear-pick-pic { flex: none; animation: rm-fade 0.2s ease-out both; }
 .hear-pick-choices .choice-nl { font-size: var(--fs-answer); }
 /* The retry chip: HERHALEN, the help language large, and how many are left. */
-.tag-repeat .tag-count { font-weight: 650; font-variant-numeric: tabular-nums; }
+.tag-repeat .tag-count { font-weight: 600; font-variant-numeric: tabular-nums; }
 /* A help-language text read aloud by the device's own voice (when it has one). */
 .help-say {
   /* A pill with a globe and a speech bubble, in ink, not the Dutch speaker's
@@ -2611,18 +2613,18 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .cert-logo { flex: none; width: 8.5cqw; height: 8.5cqw; }
 .cert-logo svg { display: block; width: 100%; height: 100%; }
 .cert-brand { display: flex; flex-direction: column; gap: 0.6cqw; min-width: 0; }
-.cert-kicker { font-family: var(--stencil); font-weight: 800; font-size: 4.2cqw; line-height: 1; letter-spacing: 0.06em; text-transform: uppercase; }
+.cert-kicker { font-family: var(--stencil); font-weight: 600; font-size: 4.2cqw; line-height: 1; letter-spacing: 0.06em; text-transform: uppercase; }
 .cert-sub { font-size: 1.5cqw; font-weight: 500; color: #4a5058; letter-spacing: 0.02em; }
 .cert-unit {
   flex: none; margin-inline-start: auto; padding: 0.5cqw 1.4cqw; rotate: 2deg;
-  font-family: var(--stencil); font-weight: 800; font-size: 2.6cqw; line-height: 1.15; letter-spacing: 0.08em; text-transform: uppercase;
+  font-family: var(--stencil); font-weight: 600; font-size: 2.6cqw; line-height: 1.15; letter-spacing: 0.08em; text-transform: uppercase;
   background: #ffc414; border: 0.25cqw solid #1e2226;
 }
 .cert-body { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; padding-top: 1.6cqw; }
-.cert-label { font-size: 1.15cqw; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #7e5428; }
+.cert-label { font-size: 1.15cqw; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #7e5428; }
 .cert-to { display: flex; align-items: baseline; gap: 1cqw; margin: 0 0 0.6cqw; }
-.cert-name { font-size: 3cqw; font-weight: 700; overflow-wrap: anywhere; }
-.cert-title { margin: 0; font-size: 6.4cqw; font-weight: 800; line-height: 1.02; letter-spacing: -0.02em; color: #1e2226; }
+.cert-name { font-size: 3cqw; font-weight: 600; overflow-wrap: anywhere; }
+.cert-title { margin: 0; font-size: 6.4cqw; font-weight: 600; line-height: 1.02; letter-spacing: -0.02em; color: #1e2226; }
 .cert-title span {
   padding: 0 0.1em; margin: 0 -0.1em;
   background: linear-gradient(transparent 62%, #ffc414 62%, #ffc414 92%, transparent 92%);
@@ -2640,7 +2642,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .cert-meta { margin: 1.8cqw 0 0; font-size: 1.45cqw; font-weight: 500; color: #4a5058; }
 .cert-foot { position: relative; display: flex; align-items: flex-end; justify-content: space-between; min-height: 9cqw; }
 .cert-date { display: flex; flex-direction: column; gap: 0.8cqw; margin: 0; }
-.cert-date-v { font-size: 2.1cqw; font-weight: 700; }
+.cert-date-v { font-size: 2.1cqw; font-weight: 600; }
 .cert-sign { position: relative; width: 30cqw; margin-inline-end: 9cqw; color: #1f4f9c; }
 .cert-signature { display: block; width: 100%; height: auto; margin-bottom: -0.4cqw; }
 .cert-rule { display: block; border-top: 0.18cqw solid #1e2226; }
@@ -2658,7 +2660,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   color: var(--ink); background: var(--input-bg); border: 2px solid var(--edge); border-radius: 10px;
 }
 .cert-practice { display: flex; flex-direction: column; gap: 2px; margin: 18px 0 0; font-size: 0.9rem; line-height: 1.35; color: var(--muted); }
-.cert-practice > span[lang='nl'] { font-weight: 650; color: var(--ink-2); }
+.cert-practice > span[lang='nl'] { font-weight: 600; color: var(--ink-2); }
 .cert-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
 .cert-btn { justify-content: flex-start; gap: 12px; min-height: 66px; padding: 10px 14px; text-align: start; }
 .cert-btn > svg { flex: none; }
@@ -2679,7 +2681,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .cert-earned-line { margin-top: 22px; }
 .cert-earned-nl { display: block; }
 .cert-earned-line .bi { margin-top: 8px; font-size: 0.72em; font-weight: 500; }
-.cert-earned-unit { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 10px 0 0; font-size: 1.05rem; font-weight: 650; }
+.cert-earned-unit { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 10px 0 0; font-size: 1.05rem; font-weight: 600; }
 .cert-earned-hint { font-size: 0.95rem; font-weight: 400; color: var(--muted); }
 .cert-earned-actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 10px; }
 .milestone-foot .cert-earned-actions .btn { min-height: 62px; }
@@ -2692,7 +2694,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* On a finished unit's sign: a calm chip, not a stamp. */
 .cert-badge {
   align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; margin-top: 6px;
-  min-height: 40px; padding: 4px 8px 4px 10px; font-size: 0.88rem; font-weight: 650; line-height: 1;
+  min-height: 40px; padding: 4px 8px 4px 10px; font-size: 0.88rem; font-weight: 600; line-height: 1;
   color: var(--ink); background: var(--card); border: 1.5px solid var(--line); border-radius: 999px;
 }
 .cert-badge:hover { border-color: var(--ink-3); }
@@ -2709,7 +2711,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 }
 .cert-row:hover { border-color: var(--ink-3); }
 .cert-row-text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
-.cert-row-nl { font-weight: 650; line-height: 1.25; }
+.cert-row-nl { font-weight: 600; line-height: 1.25; }
 .cert-row-date { font-size: 0.9375rem; color: var(--muted); }
 
 /* "Anoniem meetellen" (Settings): a switch, on by default. */
@@ -2723,7 +2725,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   background: var(--card); border: 2px solid var(--edge); transition: transform 0.15s var(--ease-out);
 }
 /* A fixed size: the switch is, so "Aan" never runs under the knob with larger text. */
-.count-state { position: absolute; top: 50%; right: 10px; translate: 0 -50%; font-size: 13px; font-weight: 700; line-height: 1; color: var(--muted); }
+.count-state { position: absolute; top: 50%; right: 10px; translate: 0 -50%; font-size: 13px; font-weight: 600; line-height: 1; color: var(--muted); }
 .count-switch.on { background: var(--yellow); border-color: var(--on-yellow); }
 .count-switch.on .count-knob { transform: translateX(38px); background: var(--on-yellow); border-color: var(--on-yellow); }
 .count-switch.on .count-state { right: auto; left: 12px; color: var(--on-yellow); }
@@ -2752,11 +2754,11 @@ html:has(.topbar) { scroll-padding-top: 72px; }
    "Ga verder" in place of Start, and a quiet "Opnieuw beginnen" under the card. */
 .resume-meta { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; margin-top: 2px; font-size: 0.95rem; line-height: 1; }
 .resume-ring { flex: none; display: block; }
-.resume-n { font-variant-numeric: tabular-nums; font-weight: 800; white-space: nowrap; letter-spacing: 0.01em; }
+.resume-n { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; letter-spacing: 0.01em; }
 .bay-resume { gap: 8px; max-width: 100%; min-width: 0; margin-top: 4px; padding-inline: 14px 8px; text-align: start; }
 .bay-resume > .icon { flex: none; }
 .resume-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; line-height: 1.15; }
-.resume-nl { font-weight: 700; font-size: 1.05rem; white-space: nowrap; }
+.resume-nl { font-weight: 600; font-size: 1.05rem; white-space: nowrap; }
 .bay-now .bay-resume { padding-inline: 12px 6px; }
 @media (max-width: 380px) { .bay-now .resume-nl { font-size: 1rem; } }
 /* Under the Dutch: the help language, the English small under it. */
@@ -2818,7 +2820,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
    sentence over three lines; a one-line sentence is centred on the 44 px button. */
 .pair-say:has(> .replay-btn) > :not(.replay-btn) { padding-top: max(0px, calc((44px - 1lh) / 2)); }
 .pair-say .pair-tiles { margin: 0; }
-.pair-nl { font-size: 1.15rem; font-weight: 650; color: var(--ink-strong); overflow-wrap: anywhere; }
+.pair-nl { font-size: 1.15rem; font-weight: 600; color: var(--ink-strong); overflow-wrap: anywhere; }
 .replay-btn {
   flex: none; display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
   border: none; border-radius: 10px; background: var(--blue); color: var(--on-blue); cursor: pointer;
@@ -2826,14 +2828,14 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .replay-btn:active { transform: translateY(1px); filter: brightness(0.94); }
 /* The speaker, as on every listen button (a blue square, SpeakButton's look). */
 .replay-btn svg { margin: 0; }
-.pair-gloss { display: block; font-size: 1.15rem; font-weight: 650; line-height: 1.3; color: var(--ink); }
+.pair-gloss { display: block; font-size: 1.15rem; font-weight: 600; line-height: 1.3; color: var(--ink); }
 .pair-gloss:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.22rem; }
 .pair-en { font-size: 0.85rem; font-weight: 500; color: var(--muted); }
 /* The speaker at the right edge of the label (the check is at the left); the Dutch takes the room. */
 .pair-say > :not(.replay-btn) { flex: 1; min-width: 0; }
 
 /* Tip card: the heading in the help language large, the Dutch name a small label. */
-.tip-badge-swap .tip-badge-main { font-size: 1.05rem; font-weight: 650; color: var(--ink); line-height: 1.2; }
+.tip-badge-swap .tip-badge-main { font-size: 1.05rem; font-weight: 600; color: var(--ink); line-height: 1.2; }
 .tip-badge-swap .tip-badge-main.bi-swap > .bi-help { --help-size: 0.75em; font-weight: 500; }
 .tip-badge-swap .tip-badge-nl { font-size: 0.8rem; font-weight: 500; color: var(--muted); }
 @media (max-width: 759px) {
@@ -2877,7 +2879,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
    ignores taps for 700 ms). Both stat cards pop in together, so no card is ever alone. */
 .result-go { animation: none; }
 .result .stat-card, .result .stat-green, .result .stat-orange { animation-delay: 0.2s; }
-.streak-unit-help { font-family: inherit; text-transform: none; font-size: 1.35rem; font-weight: 700; letter-spacing: 0; color: var(--ink-2); }
+.streak-unit-help { font-family: inherit; text-transform: none; font-size: 1.35rem; font-weight: 600; letter-spacing: 0; color: var(--ink-2); }
 .stopped-count .streak-unit-help { font-size: 1.2rem; }
 /* The week without weekday names in the help language: a dot per day, today ringed. */
 .week-dot { display: block; width: 8px; height: 8px; margin: 4px 0 3px; border-radius: 50%; background: var(--ink-3); }
@@ -2888,14 +2890,14 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 /* Certificate screen and "Certificaat behaald": the help language large on every control, the
    Dutch a small label under it (the certificate document itself stays Dutch). */
 .cert-screen .screen-head h1 { display: flex; flex-direction: column; gap: 2px; }
-.cert-screen .screen-head h1 .bi { order: 1; font-size: 1em; font-weight: 650; }
+.cert-screen .screen-head h1 .bi { order: 1; font-size: 1em; font-weight: 600; }
 .cert-screen .screen-head h1 .bi.bi-swap > .bi-help { --help-size: 0.55em; }
 .cert-screen .screen-head h1 .cert-screen-nl { order: 2; font-size: 0.55em; font-weight: 500; color: var(--muted); }
 .cert-btn-text > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; opacity: 0.9; }
-.cert-btn-text > .cert-btn-gloss { order: 1; font-size: 1.08rem; font-weight: 650; opacity: 1; }
+.cert-btn-text > .cert-btn-gloss { order: 1; font-size: 1.08rem; font-weight: 600; opacity: 1; }
 .cert-btn-text > .cert-btn-gloss.bi-swap > .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.1em; }
 .cert-later > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; }
-.cert-later > .cert-btn-gloss { order: 1; font-size: 1.05rem; font-weight: 650; opacity: 1; }
+.cert-later > .cert-btn-gloss { order: 1; font-size: 1.05rem; font-weight: 600; opacity: 1; }
 .cert-rename { flex-direction: column; gap: 0; text-decoration: none; }
 
 /* "Laat zien hoe het gaat": the coach card (src/components/Certificate.tsx CoachCardScreen). The
@@ -2921,11 +2923,11 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .kaart-wait { aspect-ratio: 1200 / 1500; }
 .kaart-text { margin: 0; padding: 16px; background: #fffdf8; color: #1e2226; border: 2px solid #1e2226; border-radius: 4px; line-height: 1.5; text-align: left; }
 .kaart-legend { margin-top: 20px; }
-.kaart-legend-head { display: flex; flex-direction: column; gap: 2px; margin: 0 0 8px; font-weight: 650; }
+.kaart-legend-head { display: flex; flex-direction: column; gap: 2px; margin: 0 0 8px; font-weight: 600; }
 .kaart-legend-head > .kaart-legend-nl { order: 2; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
 .kaart-legend-rows { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .kaart-legend-rows > li { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
-.kaart-legend-label { font-weight: 700; }
+.kaart-legend-label { font-weight: 600; }
 .kaart-legend-help { color: var(--ink-2); }
 .kaart-keep { display: flex; flex-direction: column; gap: 2px; margin: 14px 0 0; font-size: 0.9rem; line-height: 1.4; color: var(--muted); }
 .kaart-keep > .kaart-keep-nl { order: 2; font-size: 0.85rem; }
@@ -2934,9 +2936,9 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   .cert-screen.kaart-screen > .kaart-figure { display: block !important; }
 }
 .cert-rename > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; color: var(--muted); }
-.cert-rename .keep-link-gloss { order: 1; font-size: 1.02rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.cert-rename .keep-link-gloss { order: 1; font-size: 1.02rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .cert-earned-line { display: flex; flex-direction: column; align-items: center; }
-.cert-earned-line .bi { order: 1; margin-top: 0; font-size: 1em; font-weight: 650; }
+.cert-earned-line .bi { order: 1; margin-top: 0; font-size: 1em; font-weight: 600; }
 .cert-earned-line .bi.bi-swap > .bi-help { --help-size: 0.6em; font-weight: 500; }
 .cert-earned-line .cert-earned-nl { order: 2; margin-top: 6px; font-size: 0.6em; font-weight: 500; color: var(--muted); }
 
@@ -2945,11 +2947,11 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .sector-title { gap: 4px; }
 .sector-title > .bi { order: 1; }
 .sector-title-nl { order: 2; font-size: 0.95rem; font-weight: 500; color: var(--muted); }
-.sector-title-nl + .bi .bi-en { font-size: 1.45rem; font-weight: 650; color: var(--ink); }
+.sector-title-nl + .bi .bi-en { font-size: 1.45rem; font-weight: 600; color: var(--ink); }
 .sector-title-nl + .bi .bi-help { --help-size: 0.9rem; }
 .sector-btn .lang-names { display: flex; flex-direction: column; gap: 1px; }
 .sector-btn .lang-names > .lang-native { order: 2; font-size: 0.82rem; font-weight: 500; color: var(--muted); }
-.sector-btn .lang-names > .sector-names { order: 1; font-size: 1.12rem; font-weight: 650; line-height: 1.2; }
+.sector-btn .lang-names > .sector-names { order: 1; font-size: 1.12rem; font-weight: 600; line-height: 1.2; }
 .sector-btn .sector-names .bi-en { color: var(--ink); }
 .sector-btn .sector-names.bi-swap > .bi-help { --help-size: 0.78rem; }
 .lang-grid-compact .sector-btn .lang-names > .sector-names { font-size: 1rem; }
@@ -2963,7 +2965,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .beta-note { display: flex; align-items: flex-start; gap: 8px; margin: 8px 0 0; font-size: 0.95rem; color: var(--ink-2); }
 .beta-chip, .lang-beta {
   flex: none; padding: 1px 6px; border: 1.5px solid var(--ink-3); border-radius: 4px;
-  font-size: 0.7rem; font-weight: 650; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted);
+  font-size: 0.8rem; font-weight: 500; letter-spacing: 0.01em; color: var(--muted);
 }
 .beta-chip { margin-top: 2px; }
 .lang-beta-tag { display: flex; align-items: center; flex-wrap: wrap; gap: 2px 6px; margin-top: 2px; }
@@ -2971,7 +2973,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 
 /* Path: the done card keeps one line ("Practise again" in the help language only). */
 .bay-again-label.bi-swap > .bi-help { display: none; }
-.cert-later > span[lang='nl']:only-child { font-size: 1.05rem; font-weight: 650; }
+.cert-later > span[lang='nl']:only-child { font-size: 1.05rem; font-weight: 600; }
 /* Right to left: Bram stands at the card's end like the picture (both on the left). Room for him
    only where he stands (the home's path); a topic page's card has no colleague, so its text uses
    the whole width. */
@@ -3046,7 +3048,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
    yellow, not only a colour), beside its speaker; the meaning under it. */
 .build-front-line { flex: 1 1 150px; min-width: 0; text-align: left; font-size: 1.2rem; font-weight: 600; line-height: 1.35; color: var(--ink-strong); }
 .build-front-mark {
-  padding: 1px 5px; border-radius: 5px; background: var(--yellow); color: var(--on-yellow); font-weight: 800;
+  padding: 1px 5px; border-radius: 5px; background: var(--yellow); color: var(--on-yellow); font-weight: 600;
   -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
 .build-front .build-gloss { flex-basis: 100%; font-size: 1.1rem; }
@@ -3062,7 +3064,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .type-input { text-align: center; }
 .type-display {
   flex: 1; min-width: 0; min-height: 64px; display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem; font-weight: 650; letter-spacing: 0.03em; line-height: 1.2; overflow-wrap: anywhere; color: var(--ink-strong);
+  font-size: 1.6rem; font-weight: 600; letter-spacing: 0.03em; line-height: 1.2; overflow-wrap: anywhere; color: var(--ink-strong);
 }
 .type-display.type-empty { color: var(--ink-3); }
 .type-caret { display: inline-block; width: 2px; height: 1.2em; margin-inline-start: 2px; background: var(--ink); animation: caret 1.05s steps(1) infinite; }
@@ -3070,7 +3072,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .letter-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
 .letter-tile {
   min-width: 50px; height: 54px; padding: 0 12px; display: grid; place-items: center;
-  font-size: 1.55rem; font-weight: 650; line-height: 1; color: var(--ink-strong);
+  font-size: 1.55rem; font-weight: 600; line-height: 1; color: var(--ink-strong);
   background: var(--card); border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 10px;
   transition: transform 0.1s var(--ease-out), background-color 0.12s;
 }
@@ -3101,12 +3103,12 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .choice-gloss.bi-swap > .bi-help { --help-size: 0.85em; }
 .choice.faded .choice-gloss { color: var(--muted); }
 /* A wrong pick's Dutch word under its meaning ("What does it mean?"): Dutch, so a little bolder. */
-.choice-gloss-nl { font-weight: 650; }
+.choice-gloss-nl { font-weight: 600; }
 
 /* A situation that quotes Dutch: the line with its speaker on top of the bubble. */
 .situation-quote { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
 .situation-says { flex-direction: column; align-items: stretch; gap: 2px; }
-.situation-nl { font-weight: 700; font-size: 1.05rem; line-height: 1.25; color: var(--ink-strong); }
+.situation-nl { font-weight: 600; font-size: 1.05rem; line-height: 1.25; color: var(--ink-strong); }
 .situation-quote .speak-glyph { flex: none; }
 /* The Dutch quoted in its own place in the situation's text (Exercises.tsx SituationText). */
 .situation-lines > .bi-en { display: flex; flex-direction: column; gap: 4px; }
@@ -3150,7 +3152,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .stamp.stamp-wrong .stamp-sub {
   position: absolute; top: calc(100% + 3px); left: auto; right: auto; inset-inline-end: -4px; rotate: -3deg;
   width: max-content; min-width: calc(100% + 8px); max-width: none; margin: 0; white-space: nowrap; text-align: center;
-  font-size: 0.66rem; font-weight: 650; line-height: 1.15; color: var(--wrong-ink);
+  font-size: 0.66rem; font-weight: 600; line-height: 1.15; color: var(--wrong-ink);
 }
 .stamp.stamp-wrong .stamp-sub:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.76rem; }
 /* A picture card: the line under the ring would run over the picture (unreadable on a dark
@@ -3230,7 +3232,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   background: var(--bg); border: 2px solid var(--line);
 }
 .rb-titles { display: flex; flex-direction: column; min-width: 0; }
-.rb-title { margin: 0; font-size: 1.35rem; font-weight: 650; line-height: 1.2; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+.rb-title { margin: 0; font-size: 1.35rem; font-weight: 600; line-height: 1.2; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
 .rb-title .rb-main:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.08em; }
 .rb-sub { color: var(--muted); font-size: 0.92rem; line-height: 1.3; }
 .rb-nl { color: var(--faint); font-size: 0.85rem; }
@@ -3241,7 +3243,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .rb-bar-fill { display: block; height: 100%; border-radius: 3px; background: var(--right-ink); }
 /* A block-level fill starts at the inline start on its own: the right in RTL, like the lesson bar. */
 .rb-count { flex: none; display: inline-flex; align-items: baseline; gap: 5px; color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
-.rb-count-n { color: var(--ink); font-weight: 650; font-variant-numeric: tabular-nums; unicode-bidi: isolate; }
+.rb-count-n { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; unicode-bidi: isolate; }
 /* A coach link: the block lights up for a moment (the existing unit-mark keyframes). */
 .rb-marked { animation: unit-mark 4s ease-out both; }
 @media (prefers-reduced-motion: reduce) { .rb-marked { animation: none; background: color-mix(in srgb, var(--yellow) 18%, var(--card)); } }
@@ -3250,7 +3252,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .route .bays.rb-lessons { padding-top: 14px; gap: 8px; }
 .rb-lessons .bay-done .bay-card { min-height: 56px; padding-block: 8px; }
 .rb-lessons .bay-done .bay-pic { width: 36px; height: 36px; }
-.rb-lessons .bay-done .bay-title { font-size: 0.98rem; font-weight: 550; }
+.rb-lessons .bay-done .bay-title { font-size: 0.98rem; font-weight: 500; }
 .rb-lessons .bay-done .bay-marker { width: 30px; height: 30px; }
 .rb-lessons .bay-locked .bay-card { min-height: 44px; }
 .rb-lessons .bay-locked .bay-pic { width: 32px; height: 32px; opacity: 0.55; }
@@ -3271,7 +3273,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 
 /* The choice of the next block: a heading and 3 cards; the first is the recommended one. */
 .rb-choose { margin-top: 4px; }
-.rb-choose-title { margin: 6px 0 14px; font-size: 1.4rem; font-weight: 650; line-height: 1.2; }
+.rb-choose-title { margin: 6px 0 14px; font-size: 1.4rem; font-weight: 600; line-height: 1.2; }
 .rb-choose-title .bi-help { --help-size: 0.62em; font-weight: 400; color: var(--muted); }
 .rb-choose-title .bi-en:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 1.08em; }
 .rb-choices { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
@@ -3289,14 +3291,14 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   background: var(--bg); border: 2px solid var(--line);
 }
 .rb-choice-text { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
-.rb-choice-title { font-size: 1.15rem; font-weight: 650; line-height: 1.2; overflow-wrap: anywhere; }
+.rb-choice-title { font-size: 1.15rem; font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; }
 .rb-choice-title .bi-help { --help-size: 0.78em; font-weight: 400; color: var(--muted); }
 .rb-choice-go { flex: none; color: var(--ink-3); }
 .rb-choice-locked { background: transparent; color: var(--muted); }
 .rb-choice-locked .rb-choice-pic { opacity: 0.6; }
 .rb-rec-chip {
   display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 999px;
-  background: var(--yellow); color: var(--on-yellow); font-size: 0.8rem; font-weight: 650; line-height: 1.4;
+  background: var(--yellow); color: var(--on-yellow); font-size: 0.8rem; font-weight: 600; line-height: 1.4;
 }
 .rb-rec-word:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.88rem; }
 .rb-choose .full-only-note { padding-inline-start: 4px; }
@@ -3324,7 +3326,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .say-card { display: flex; align-items: center; gap: 14px; padding: 14px 16px; text-align: start; }
 .say-pic { flex: none; width: 76px; height: 76px; }
 .say-words { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
-.say-nl { font-size: 1.45rem; font-weight: 700; line-height: 1.2; color: var(--ink-strong); overflow-wrap: anywhere; }
+.say-nl { font-size: 1.45rem; font-weight: 600; line-height: 1.2; color: var(--ink-strong); overflow-wrap: anywhere; }
 .say-meaning { font-size: 1.1rem; }
 .say-meaning .bi-help { --help-size: 0.8em; color: var(--muted); }
 .say-card .speak { flex: none; }
@@ -3379,7 +3381,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .say-play.is-playing { border-color: var(--blue); box-shadow: inset 0 0 0 2px var(--blue); }
 .say-face { grid-area: face; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--track); overflow: hidden; }
 .say-face-me { background: var(--kraft-light); color: var(--kraft-dark); }
-.say-who { grid-area: who; font-weight: 650; font-size: 1.05rem; text-align: center; }
+.say-who { grid-area: who; font-weight: 600; font-size: 1.05rem; text-align: center; }
 .say-who .bi-help { --help-size: 0.8em; font-weight: 400; color: var(--muted); }
 
 /* Rate yourself: no score, no stamp. "Sounds the same" goes on; "again" listens and tries again. */
@@ -3387,7 +3389,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
 .say-rate-btn {
   display: flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 64px; padding: 8px 10px; border: 2px solid; border-radius: var(--radius);
-  font: inherit; font-weight: 650; text-align: center; cursor: pointer;
+  font: inherit; font-weight: 600; text-align: center; cursor: pointer;
 }
 .say-rate-btn .icon { flex: none; }
 .say-rate-btn .bi { text-align: start; }
@@ -3460,7 +3462,7 @@ html:has(.topbar) { scroll-padding-top: 72px; }
   :root[data-text='xl'] .say-rate { grid-template-columns: minmax(0, 1fr); }
 }
 /* The colour of its tile (ink; dark ink on the yellow picked tile, also in dark mode). */
-.text-size-a { font-weight: 700; line-height: 1; color: inherit; }
+.text-size-a { font-weight: 600; line-height: 1; color: inherit; }
 /* Settings > Weergave: each colour as a round swatch of its floor and its strong colour. Fixed
    colours on purpose: a swatch shows that palette, whatever the current one is. */
 .theme-swatch { display: block; width: 40px; height: 40px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--edge); }
@@ -3519,10 +3521,10 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .pocket-titles { display: flex; flex-direction: column; min-width: 0; }
 .pocket-tab {
   align-self: flex-start; padding: 2px 8px; border-radius: 6px; background: var(--yellow); color: var(--on-yellow);
-  font-family: var(--stencil); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+  font-family: var(--stencil); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
 }
 .pocket-tab-no { margin-inline-end: 2px; }
-.pocket-title { margin: 3px 0 0; font-size: 1.15rem; font-weight: 700; line-height: 1.15; }
+.pocket-title { margin: 3px 0 0; font-size: 1.15rem; font-weight: 600; line-height: 1.15; }
 .pocket-sub { font-size: 0.9rem; color: var(--muted); }
 .pocket-list { list-style: none; margin: 0; padding: 0; }
 .pocket-row { display: flex; align-items: center; gap: 12px; padding: 9px 0; }
@@ -3531,9 +3533,9 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   flex: none; display: grid; place-items: center; width: 64px; height: 64px; border-radius: 12px;
   background: color-mix(in srgb, var(--kraft-light) 55%, var(--card));
 }
-.pocket-no { font-family: var(--stencil); font-weight: 800; font-size: 2rem; color: var(--faint); }
+.pocket-no { font-family: var(--stencil); font-weight: 600; font-size: 2rem; color: var(--faint); }
 .pocket-text { flex: 1; display: flex; flex-direction: column; gap: 1px; min-width: 0; }
-.pocket-nl { font-size: 1.12rem; font-weight: 700; line-height: 1.2; overflow-wrap: break-word; }
+.pocket-nl { font-size: 1.12rem; font-weight: 600; line-height: 1.2; overflow-wrap: break-word; }
 .pocket-help { font-size: max(var(--help-min), 0.95rem); line-height: 1.3; color: var(--ink); }
 .pocket-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: max(var(--help-min), 1.04rem); }
 .pocket-en { font-size: 0.78rem; color: var(--faint); line-height: 1.25; }
@@ -3676,7 +3678,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .match-cards .match-en { flex-direction: row; justify-content: flex-start; align-items: center; gap: 12px; padding: 10px 14px; text-align: start; min-height: 68px; }
 .match-cards .match-en .bi { align-items: flex-start; }
 .match-text { display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; }
-.match-made { font-size: var(--fs-small); font-weight: 700; color: var(--right-ink); }
+.match-made { font-size: var(--fs-small); font-weight: 600; color: var(--right-ink); }
 .match-check { display: grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 50%; color: var(--on-go); background: var(--go-right); }
 .match-cards .match.matched { opacity: 0.55; }
 .match-on { animation: up 0.2s var(--ease-out) both; }
@@ -3720,7 +3722,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .max3-card.danger .max3-pic { background: var(--red-bg); color: var(--red); }
 .max3-pic .word-pic { width: 52px; height: 52px; }
 .max3-names { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
-.max3-help { font-size: 1.12rem; font-weight: 650; line-height: 1.25; overflow-wrap: anywhere; }
+.max3-help { font-size: 1.12rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
 .max3-help .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--ink-2); }
 .max3-nl { font-size: 0.85rem; color: var(--muted); line-height: 1.25; }
 .max3-check, .max3-chev { flex: none; color: var(--ink-2); }
@@ -3753,7 +3755,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* First run: the language guess ("Polski?" [Yes] [Other language]) and the list's way back. */
 .lang-guess-q {
   display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 40px 0 6px;
-  font-size: 2rem; font-weight: 700; text-align: center;
+  font-size: 2rem; font-weight: 600; text-align: center;
 }
 .lang-guess .max3-cards { margin-top: 22px; }
 /* The guess page: the back arrow on its own row, so it never lies over the logo (dark on the dark tile). */
@@ -3781,9 +3783,9 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 }
 .set-row.danger .set-row-icon { background: var(--red-bg); color: var(--red); }
 .set-row-icon .text-size-a { font-size: 20px; }
-.set-en { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.04em; }
+.set-en { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; }
 .set-row-names { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
-.set-row-help { font-size: 1.02rem; font-weight: 650; line-height: 1.25; overflow-wrap: anywhere; }
+.set-row-help { font-size: 1.02rem; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
 .set-row-help .bi-help { --help-size: 0.78rem; font-weight: 400; color: var(--ink-2); }
 .set-row-nl { font-size: 0.8rem; color: var(--muted); }
 .set-row-value {
@@ -3795,9 +3797,9 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .set-rows-big .set-row { min-height: 84px; padding: 14px; }
 .set-rows-big .set-row-icon { width: 52px; height: 52px; border-radius: 14px; }
 .set-rows-big .set-row-help { font-size: 1.15rem; }
-.set-time { font-size: 0.95rem; font-weight: 800; font-variant-numeric: tabular-nums; }
-.set-pick { font-size: 0.95rem; font-weight: 800; }
-.set-face { font-size: 1.6rem; font-weight: 700; line-height: 1; }
+.set-time { font-size: 0.95rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.set-pick { font-size: 0.95rem; font-weight: 600; }
+.set-face { font-size: 1.6rem; font-weight: 600; line-height: 1; }
 /* A card reused as a setting's page: the page head already names it. */
 .max3-settings > .keep-card { margin-top: 14px; }
 .max3-settings > .keep-card > .keep-head, .max3-settings .cert-list-icon { display: none; }
@@ -3825,7 +3827,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .bay-restart:hover { background: var(--concrete-2); }
 .bay-restart .icon { flex: none; color: var(--ink-2); }
 .bay-restart-text { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; text-align: start; line-height: 1.2; }
-.bay-restart-label { font-size: 1.02rem; font-weight: 650; }
+.bay-restart-label { font-size: 1.02rem; font-weight: 600; }
 .bay-restart-label .bi-help { --help-size: 0.8em; font-weight: 500; }
 .bay-restart-nl { font-size: 0.8rem; font-weight: 500; color: var(--muted); }
 /* "Without sound" is on: a small muted speaker beside the logo (a sign, not a button). */
@@ -3871,7 +3873,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .topic-now { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
 .topic-pic { flex: none; width: 44px; height: 44px; }
 .topic-text { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
-.topic-title { font-size: 1.02rem; font-weight: 650; line-height: 1.2; overflow-wrap: anywhere; }
+.topic-title { font-size: 1.02rem; font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; }
 .topic-title .bi-help { --help-size: 0.8em; font-weight: 400; color: var(--muted); }
 .topic-text .rb-count { font-size: 0.9375rem; }
 .topic-end { flex: none; display: grid; place-items: center; color: var(--ink-3); }
@@ -3885,7 +3887,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
    a list (All topics, the certificates, the coaches page). Not a button: no card, no border. */
 .theme-head { list-style: none; margin: 16px 0 0; padding: 0 2px; }
 .theme-head:first-child { margin-top: 2px; }
-.theme-title { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 1rem; font-weight: 650; line-height: 1.2; color: var(--ink-2); }
+.theme-title { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 1rem; font-weight: 600; line-height: 1.2; color: var(--ink-2); }
 .theme-emoji { flex: none; font-size: 1.3rem; line-height: 1; }
 .theme-names { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; overflow-wrap: anywhere; }
 /* The Dutch name: at least 15px and --muted (ink-2: over 4.5:1 on the floor, light and dark). */
@@ -3922,18 +3924,18 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 }
 .offline-saved .offline-status-icon { color: var(--right-ink); background: var(--green-bg); }
 .offline-status-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.offline-status-topic { font-weight: 650; }
+.offline-status-topic { font-weight: 600; }
 .offline-status-topic .bi-help { --help-size: 0.8em; font-weight: 400; color: var(--muted); }
 .offline-status-line { color: var(--muted); }
-.offline-status-line b { font-weight: 650; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.offline-status-line b { font-weight: 600; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .offline-status.offline-error { color: var(--warn-ink); background: var(--warn-bg); border-inline-start: 5px solid var(--kraft); }
 .offline-card .count-row .keep-head { min-width: 0; }
 
 /* After the first day: the reminder and home-screen offer, one small page at a time. */
 .keep3-page { justify-content: flex-start; gap: 10px; padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
 .keep3-title { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 8px 0 0; max-width: 26em; }
-.keep3-nl { font-size: 0.85rem; font-weight: 650; color: var(--muted); }
-.keep3-gloss { font-size: 1.45rem; font-weight: 700; line-height: 1.2; color: var(--ink-strong); }
+.keep3-nl { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.keep3-gloss { font-size: 1.45rem; font-weight: 600; line-height: 1.2; color: var(--ink-strong); }
 .keep3-gloss .bi-help { --help-size: 0.62em; font-weight: 500; color: var(--ink-2); margin-top: 4px; }
 .keep3-hint { margin: 0; max-width: 26em; font-size: 0.92rem; line-height: 1.4; color: var(--muted); }
 .keep3-actions { display: flex; flex-direction: column; align-items: stretch; gap: 10px; width: 100%; max-width: 420px; margin-top: 14px; }
@@ -3944,11 +3946,11 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .keep3-btn-text.keep3-center { flex: 1; align-items: center; text-align: center; }
 .keep3-page .keep3-btn-text .bi { align-items: flex-start; }
 .keep3-page .keep3-center .bi { align-items: center; }
-.keep3-btn-gloss { order: 1; font-size: 1.1rem; font-weight: 650; }
+.keep3-btn-gloss { order: 1; font-size: 1.1rem; font-weight: 600; }
 .keep3-btn-gloss .bi-help { --help-size: 0.78em; font-weight: 500; }
 .keep3-btn-nl { order: 2; font-size: 0.8rem; font-weight: 500; opacity: 0.85; }
 .keep3-time {
-  flex: none; font-family: var(--stencil); font-weight: 800; font-size: 1.6rem; line-height: 1;
+  flex: none; font-family: var(--stencil); font-weight: 600; font-size: 1.6rem; line-height: 1;
   font-variant-numeric: tabular-nums; unicode-bidi: isolate;
 }
 .btn-primary .keep3-btn-nl, .btn-primary .keep3-btn-gloss .bi-help { color: var(--on-yellow-soft); }
@@ -3964,7 +3966,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .keep3-time-btn .keep3-time { min-width: 3.1ch; }
 .keep3-added { justify-content: center; flex-wrap: wrap; text-align: center; font-size: 0.95rem; }
 .keep3-added .bi { align-items: center; }
-.keep3-added-big { font-size: 1.6rem; font-family: var(--stencil); font-weight: 800; }
+.keep3-added-big { font-size: 1.6rem; font-family: var(--stencil); font-weight: 600; }
 /* The time asked for, not confirmed: no green "done" (the app cannot know it is in the calendar). */
 .keep3-asked { color: var(--ink); }
 .keep3-ios { width: 100%; max-width: 420px; margin-top: 10px; }
@@ -3992,7 +3994,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .cert-name-done .bi { align-items: center; }
 .cert-no-name { flex-direction: column; gap: 0; text-decoration: none; }
 .cert-no-name > span[lang='nl'] { order: 2; font-size: 0.8rem; font-weight: 500; color: var(--muted); }
-.cert-no-name .keep-link-gloss { order: 1; font-size: 1rem; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.cert-no-name .keep-link-gloss { order: 1; font-size: 1rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .cert-no-name .bi { align-items: center; }
 /* Right to left: a Dutch line keeps its own direction ("Vrouw of man?", not "?Vrouw of man"). */
 [dir='rtl'] .set-row-nl[lang='nl'], [dir='rtl'] .max3-nl[lang='nl'], [dir='rtl'] .max3-title-nl[lang='nl'], [dir='rtl'] .sector-title-nl[lang='nl'] { direction: ltr; unicode-bidi: isolate; }
@@ -4063,7 +4065,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* Speaking: a quiet outlined choice under the mic, for saying it out loud without recording. */
 .say-aloud-instead {
   display: inline-flex; align-items: center; justify-content: center; min-height: 48px; margin-top: 10px; padding: 8px 16px;
-  background: none; border: 2px solid var(--ink-3); border-radius: 12px; color: var(--ink); font: inherit; font-weight: 650; cursor: pointer;
+  background: none; border: 2px solid var(--ink-3); border-radius: 12px; color: var(--ink); font: inherit; font-weight: 600; cursor: pointer;
 }
 .say-aloud-instead .bi-help { --help-size: 0.85em; font-weight: 500; }
 .say-aloud-instead:active { transform: translateY(1px); }
@@ -4089,7 +4091,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* "Polski?": the guessed language's own name, very large, where the flag was. */
 .lang-guess-q { display: flex; justify-content: center; }
 .lang-guess-name {
-  font-size: clamp(2.2rem, 12vw, 3.4rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.01em;
+  font-size: clamp(2.2rem, 12vw, 3.4rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.01em;
   hyphens: none; overflow-wrap: normal; word-break: normal; text-align: center;
 }
 .lang-guess-name:is([lang='ar'], [lang='fa'], [lang='prs'], [lang='ti']) { font-size: clamp(2.4rem, 13vw, 3.7rem); }
@@ -4128,7 +4130,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 /* The milestone's tier stamp ("3 OP RIJ"): a small line in the help language under the Dutch. */
 .tier-stamp-sub {
   display: block; max-width: 8.5rem; margin-top: 3px;
-  font-family: 'Lexend Variable', sans-serif; font-weight: 700; font-size: 0.72rem; line-height: 1.15;
+  font-family: 'Lexend Variable', sans-serif; font-weight: 600; font-size: 0.72rem; line-height: 1.15;
   text-transform: none; white-space: normal; text-align: center; overflow-wrap: anywhere;
 }
 .tier-stamp-sub:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.8rem; }
@@ -4136,12 +4138,12 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .result-phrases { width: 100%; max-width: 420px; min-height: 72px; margin: 18px 0 0; padding: 10px 12px; gap: 12px; }
 .result-phrases .hub-icon { width: 48px; height: 48px; color: var(--wrong-ink); }
 .result-phrases .hub-nl { font-size: 1rem; color: var(--muted); font-weight: 600; }
-.result-phrases .hub-text .bi { align-items: flex-start; text-align: start; color: var(--ink); font-weight: 650; font-size: 1.1rem; }
+.result-phrases .hub-text .bi { align-items: flex-start; text-align: start; color: var(--ink); font-weight: 600; font-size: 1.1rem; }
 /* The reminder's "Kies zelf": a row like the two times, with the phone's own time field at its end. */
 .keep3-own { cursor: pointer; }
 .keep3-own-input {
   flex: none; min-width: 6.2em; min-height: 48px; padding: 6px 8px;
-  font: inherit; font-family: var(--stencil); font-weight: 800; font-size: 1.35rem; color: var(--ink);
+  font: inherit; font-family: var(--stencil); font-weight: 600; font-size: 1.35rem; color: var(--ink);
   background: var(--card); border: 2px solid var(--choice-edge); border-radius: 8px;
 }
 .keep3-own-input:focus-visible { outline: 3px solid var(--focus, #1592db); outline-offset: 2px; }
@@ -4168,7 +4170,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
   background: var(--card); border: 1.5px solid var(--line); border-radius: 12px;
   color: var(--ink); line-height: 1.25; text-align: start; overflow-wrap: break-word;
 }
-.onb-greet-nl { display: block; font-weight: 650; font-size: max(15px, 0.95rem); }
+.onb-greet-nl { display: block; font-weight: 600; font-size: max(15px, 0.95rem); }
 .onb-greet-help { display: block; margin-top: 1px; color: var(--muted); font-weight: 500; font-size: max(14px, 0.85rem); }
 .onb-greet-help:is([lang='ti'], [lang='ar'], [lang='fa'], [lang='prs']) { font-size: max(15px, 0.93rem); line-height: 1.35; }
 /* The tail points at Bram, level with his head. */
@@ -4233,7 +4235,7 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 }
 .linked-locked-pic { flex: none; width: 44px; height: 44px; }
 .linked-locked-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
-.linked-locked-title { font-weight: 650; font-size: 1rem; }
+.linked-locked-title { font-weight: 600; font-size: 1rem; }
 .linked-locked-title .bi-help { --help-size: 0.8rem; font-weight: 400; color: var(--muted); }
 .linked-locked-full { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--tag-ink); }
 .linked-locked-go { flex: none; color: var(--ink-3); }
@@ -4407,7 +4409,7 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 .chat-bubble-ask.right .chat-line { color: var(--right-ink); }
 .chat-bubble-ask.wrong, .chat-bubble-ask.wrong::before { border-color: var(--red); border-style: solid; }
 .chat-bubble-ask.wrong .chat-line { color: var(--wrong-ink); }
-.chat-blank-q { width: auto; height: auto; margin: 0; background: none; font-size: 1.6rem; font-weight: 700; line-height: 1; color: var(--ink-3); }
+.chat-blank-q { width: auto; height: auto; margin: 0; background: none; font-size: 1.6rem; font-weight: 600; line-height: 1; color: var(--ink-3); }
 /* A sentence built by ear: the big speaker is the question until the end. */
 .build-by-ear .build-bubble { gap: 12px; }
 
@@ -4433,7 +4435,7 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
   /* At least the flag's box; it grows with larger text instead of cutting the letters. */
   display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 24px;
   border-radius: 6px; background: var(--track); color: var(--muted);
-  font-size: 0.82rem; font-weight: 650; line-height: 1; white-space: nowrap;
+  font-size: 0.82rem; font-weight: 600; line-height: 1; white-space: nowrap;
 }
 .lang-sample:is([lang='ar'], [lang='fa'], [lang='prs']) { font-size: 0.95rem; }
 .lang-grid-compact .lang-mark { min-width: 30px; min-height: 22px; }
@@ -4469,7 +4471,7 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
   content: ''; position: absolute; left: -9px; top: 50%; width: 16px; height: 16px; margin-top: -8px;
   background: var(--card); border-left: 2px solid var(--edge); border-bottom: 2px solid var(--edge); transform: rotate(45deg);
 }
-.rule-narrator { min-width: 0; font-size: 1.0625rem; font-weight: 650; color: var(--ink-strong); }
+.rule-narrator { min-width: 0; font-size: 1.0625rem; font-weight: 600; color: var(--ink-strong); }
 .rule-stage-say .speak-glyph { order: -1; }
 /* Without a speaker (no Dutch voice on the phone) the bubble's point covers the first letter
    ("3ram vertelt"): more room at the start. */
@@ -4493,7 +4495,7 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 }
 .rule-kind, .rule-key {
   display: inline-flex; align-items: center; gap: 6px; min-height: 30px; padding: 3px 10px; border-radius: 4px;
-  font-size: 0.95rem; font-weight: 650; line-height: 1.2;
+  font-size: 0.95rem; font-weight: 600; line-height: 1.2;
 }
 .rule-kind-geschreven { background: var(--solid); color: var(--on-solid); }
 .rule-kind-ongeschreven { background: var(--tag-bg); color: var(--tag-ink); }
@@ -4518,9 +4520,9 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 /* At the top of a Dutch lesson in the Belgian course ("Deze les gaat nog over Nederland."). */
 .rule-country-note {
   margin: 0 0 12px; padding: 8px 12px; border-radius: 10px; border: 2px solid var(--line, #d8d2c2);
-  font-size: 1rem; line-height: 1.4; font-weight: 700; color: var(--ink, inherit);
+  font-size: 1rem; line-height: 1.4; font-weight: 600; color: var(--ink, inherit);
 }
-.bay-note { font-weight: 700; }
+.bay-note { font-weight: 600; }
 /* "Communicatie" under a lesson title (src/content/communication.ts): the bubble beside the word. */
 .bay-comm { display: flex; align-items: baseline; gap: 4px; }
 /* The language course in Belgium (src/components/BeNote.tsx): "Dit gaat over Nederland. In
@@ -4528,7 +4530,7 @@ html:has(.cert-earned) { scroll-padding-bottom: 150px; }
 .be-note { display: block; color: var(--ink, inherit); }
 p.be-note {
   margin: 8px 0 12px; padding: 8px 12px; border-radius: 10px; border: 2px solid var(--line, #d8d2c2);
-  font-size: 0.95rem; line-height: 1.4; font-weight: 700;
+  font-size: 0.95rem; line-height: 1.4; font-weight: 600;
 }
 .be-note .bi-help { font-weight: 400; }
 p.be-note-beta { font-weight: 400; border-style: dashed; color: var(--muted); }
@@ -4543,7 +4545,7 @@ p.tip-law-stale { margin: 12px 0 4px; }
 /* True or false: two cards side by side. */
 .choices-tf { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .choices-tf .choice { min-height: 76px; min-width: 0; }
-.tf-label { min-width: 0; font-size: 1.3rem; font-weight: 700; line-height: 1.15; overflow-wrap: break-word; }
+.tf-label { min-width: 0; font-size: 1.3rem; font-weight: 600; line-height: 1.15; overflow-wrap: break-word; }
 
 /* Answer rows of a rules question; an option said out loud has its speaker beside it. */
 .rule-options .choice-label { min-width: 0; }
@@ -4568,7 +4570,7 @@ p.tip-law-stale { margin: 12px 0 4px; }
 .rule-say-card .tip-say-row { align-items: center; }
 .rule-me { flex-direction: column; align-items: center; gap: 2px; }
 .rule-me .ch { height: 64px; width: auto; }
-.rule-me-name { font-size: 0.95rem; font-weight: 650; color: var(--muted); }
+.rule-me-name { font-size: 0.95rem; font-weight: 600; color: var(--muted); }
 .rule-say-card .tip-bubble { align-items: center; }
 .tip-phrase-nl.rule-model-nl { font-size: 1.2rem; line-height: 1.35; overflow-wrap: break-word; }
 
@@ -4580,8 +4582,8 @@ p.tip-law-stale { margin: 12px 0 4px; }
 }
 .slip::before { content: ''; position: absolute; left: 10px; right: 10px; top: 6px; border-top: 2px dashed var(--line); }
 .slip-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0 10px; padding: 6px 4px 6px; border-bottom: 2px solid var(--edge); }
-.slip-title { font-family: var(--stencil); font-weight: 800; font-size: 1.5rem; line-height: 1.1; letter-spacing: 0.04em; text-transform: uppercase; }
-.slip-period { font-size: 1.0625rem; font-weight: 650; color: var(--muted); }
+.slip-title { font-family: var(--stencil); font-weight: 600; font-size: 1.5rem; line-height: 1.1; letter-spacing: 0.04em; text-transform: uppercase; }
+.slip-period { font-size: 1.0625rem; font-weight: 600; color: var(--muted); }
 .slip-rows { margin: 4px 0 0; }
 .slip-row {
   position: relative; display: flex; align-items: baseline; justify-content: space-between; gap: 0 12px;
@@ -4590,9 +4592,9 @@ p.tip-law-stale { margin: 12px 0 4px; }
 }
 .slip-row:last-child { border-bottom: 0; }
 .slip-row dt { flex: 1 1 auto; min-width: 0; overflow-wrap: break-word; }
-.slip-row dd { flex: none; margin: 0; font-weight: 650; white-space: nowrap; }
-.slip-netto { margin-top: 2px; border-top: 2px solid var(--edge); font-weight: 700; }
-.slip-row.slip-hit { background: var(--yellow); color: var(--on-yellow); font-weight: 700; }
+.slip-row dd { flex: none; margin: 0; font-weight: 600; white-space: nowrap; }
+.slip-netto { margin-top: 2px; border-top: 2px solid var(--edge); font-weight: 600; }
+.slip-row.slip-hit { background: var(--yellow); color: var(--on-yellow); font-weight: 600; }
 .slip-row.slip-hit::before {
   content: ''; position: absolute; left: -14px; top: 50%; margin-top: -7px;
   border: 7px solid transparent; border-left-color: var(--yellow-dark);
@@ -4619,9 +4621,9 @@ p.tip-law-stale { margin: 12px 0 4px; }
 }
 .result-remember-label {
   grid-column: 1; justify-self: start; padding: 2px 8px; border-radius: 4px;
-  background: var(--yellow); color: var(--on-yellow); font-size: 0.85rem; font-weight: 700; line-height: 1.2;
+  background: var(--yellow); color: var(--on-yellow); font-size: 0.85rem; font-weight: 600; line-height: 1.2;
 }
-.result-remember-text { grid-column: 1; margin: 0; font-size: 1.05rem; font-weight: 650; line-height: 1.35; color: var(--ink-strong); }
+.result-remember-text { grid-column: 1; margin: 0; font-size: 1.05rem; font-weight: 600; line-height: 1.35; color: var(--ink-strong); }
 .result-remember .speak-glyph { grid-column: 2; grid-row: 1 / span 2; }
 @media (prefers-reduced-motion: reduce) { .result-remember { animation: none; } }
 
@@ -4629,8 +4631,8 @@ p.tip-law-stale { margin: 12px 0 4px; }
    or two people talking for a sentence to say), the Dutch a little smaller (a rule is longer than a word, there is no
    English line under it). */
 .pocket-list-rules .pocket-pic { width: 46px; height: 46px; border-radius: 10px; }
-.pocket-list-rules .pocket-nl { font-size: 1.04rem; font-weight: 650; line-height: 1.3; }
-.pocket-row-rule .pocket-nl { font-weight: 750; }
+.pocket-list-rules .pocket-nl { font-size: 1.04rem; font-weight: 600; line-height: 1.3; }
+.pocket-row-rule .pocket-nl { font-weight: 600; }
 .pocket-list-rules .pocket-pic .word-pic { width: 40px; height: 40px; }
 @media (max-width: 380px) {
   .pocket-list-rules .pocket-pic { width: 42px; height: 42px; }
@@ -4645,7 +4647,7 @@ p.tip-law-stale { margin: 12px 0 4px; }
 }
 .rules-disclaimer-icon { flex: none; margin-top: 1px; color: var(--ink-2); }
 .rules-disclaimer p { margin: 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; font-size: 1rem; line-height: 1.45; }
-.rules-disclaimer-line:first-child { font-weight: 650; }
+.rules-disclaimer-line:first-child { font-weight: 600; }
 /* "Goed om te weten" once, the first time the work-rules track opens; the line above its lessons. */
 .rules-notice { gap: 16px; }
 .rules-notice-card { font-size: 1.05rem; }
@@ -4656,7 +4658,7 @@ p.tip-law-stale { margin: 12px 0 4px; }
 .tips-note { display: flex; align-items: flex-start; gap: 8px; color: var(--muted); font-size: 0.88rem; line-height: 1.4; }
 .tips-note .icon { flex: none; margin-top: 1px; }
 .tip .tips-note { margin: 10px 0 0; }
-.rh-title { margin: 0; font-size: 1.3rem; font-weight: 650; }
+.rh-title { margin: 0; font-size: 1.3rem; font-weight: 600; }
 .rh-hint { margin: 4px 0 12px; }
 .rh-rows { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .rh-card {
@@ -4672,10 +4674,10 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .about-privacy-link { display: inline-flex; flex-direction: column; gap: 2px; margin: 4px 0 0; color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .about-privacy-nl { font-weight: 500; }
 .rh-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
-.rh-name { font-weight: 700; font-size: 1.1rem; line-height: 1.25; overflow-wrap: anywhere; }
+.rh-name { font-weight: 600; font-size: 1.1rem; line-height: 1.25; overflow-wrap: anywhere; }
 .rh-when { font-size: 1rem; line-height: 1.4; color: var(--ink-2); }
 .rh-show { font-size: 1rem; line-height: 1.35; color: var(--muted); }
-.rh-show-link { font-weight: 700; color: var(--ink-strong); font-variant-numeric: tabular-nums; letter-spacing: 0.01em; }
+.rh-show-link { font-weight: 600; color: var(--ink-strong); font-variant-numeric: tabular-nums; letter-spacing: 0.01em; }
 .rh-go { flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--yellow); color: var(--on-yellow); }
 .rh-go-say { background: transparent; }
 .rules-shelf-link { margin-top: 4px; }
@@ -4687,25 +4689,25 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .words-hub .social-map-link { margin-top: 0; }
 .sm-title { display: flex; flex-direction: column; gap: 2px; }
 .sm-title-nl { font-size: 0.9rem; font-weight: 600; color: var(--faint); }
-.sm-region { margin: -6px 0 12px; font-weight: 650; color: var(--ink-2); }
+.sm-region { margin: -6px 0 12px; font-weight: 600; color: var(--ink-2); }
 .sm-note .bi { font-weight: 400; color: var(--ink-2); }
 .sm-note-nl { display: block; }
 .sm-checked { font-weight: 400; color: var(--muted); font-variant-numeric: tabular-nums; }
 .sm-head { list-style: none; margin: 14px 2px 0; }
 .sm-head:first-child { margin-top: 2px; }
-.sm-head-title { display: flex; flex-direction: column; gap: 1px; margin: 0; font-size: 1.1rem; font-weight: 650; line-height: 1.25; color: var(--ink-2); overflow-wrap: anywhere; }
+.sm-head-title { display: flex; flex-direction: column; gap: 1px; margin: 0; font-size: 1.1rem; font-weight: 600; line-height: 1.25; color: var(--ink-2); overflow-wrap: anywhere; }
 .sm-head-help .bi-en { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
 .sm-area { font-size: 0.88rem; line-height: 1.3; color: var(--muted); }
 .sm-wrong { margin: 4px 0 0; line-height: 1.45; color: var(--ink-2); }
-.sm-wrong a { color: inherit; font-weight: 700; text-underline-offset: 0.15em; overflow-wrap: anywhere; }
+.sm-wrong a { color: inherit; font-weight: 600; text-underline-offset: 0.15em; overflow-wrap: anywhere; }
 .sm-wrong .bi { display: block; margin-top: 2px; color: var(--muted); }
 .region-places { margin-top: 10px; color: var(--muted); }
 /* A dialect word card (les ZL.4): the Limburgish word stands out from its Dutch meaning. */
-.dialect-word { font-weight: 750; font-style: italic; }
+.dialect-word { font-weight: 600; font-style: italic; }
 /* Alle regels: the topic names as headings inside the one list. */
 .shelf-unit { list-style: none; }
 .shelf-list .shelf-unit:not(:first-child) { margin-top: 10px; }
-.shelf-unit-title { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 1.1rem; font-weight: 650; color: var(--ink-2); }
+.shelf-unit-title { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 1.1rem; font-weight: 600; color: var(--ink-2); }
 /* Alle regels: a rule's drawing (or emoji) at the start of its row. */
 .tips-pic { flex: none; display: grid; place-items: center; width: 36px; height: 36px; }
 .shelf-title { flex: 1; min-width: 0; line-height: 1.3; }
@@ -4722,13 +4724,13 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .no-voice-note > .icon { flex: none; margin-top: 1px; color: var(--ink-3); }
 .max3-setting .no-voice-note { margin-top: 16px; }
 /* The work-rules track's onboarding question (Waar werk je?): one Dutch line, at the main line's size. */
-.sector-title .sector-title-solo .bi-en { font-size: 1.45rem; font-weight: 650; color: var(--ink); }
+.sector-title .sector-title-solo .bi-en { font-size: 1.45rem; font-weight: 600; color: var(--ink); }
 
 /* Over: the date of the newest update (src/content/updates.ts) as plain text, where there is no
    "Wat is er nieuw?" row. */
 .about-updated { margin: 8px 0 24px; text-align: center; }
 .about-foot { display: flex; flex-direction: column; align-items: center; gap: 16px; margin: 8px 0 32px; text-align: center; }
-.about-europe { display: inline-flex; align-items: center; gap: 10px; min-block-size: 44px; color: inherit; font-weight: 700; text-decoration: none; }
+.about-europe { display: inline-flex; align-items: center; gap: 10px; min-block-size: 44px; color: inherit; font-weight: 600; text-decoration: none; }
 .about-europe:hover span { text-decoration: underline; text-underline-offset: 3px; }
 .about-europe svg { flex: none; }
 .about-maker { display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 0; font-size: 0.85rem; color: var(--muted); }
@@ -4771,7 +4773,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* Voor begeleiders en werkgevers (src/content/pro.ts): lines with a bold start, the one mail link,
    and the topic list inside its section. */
 .pro-lines { margin: 0 0 10px; padding-inline-start: 1.2em; display: flex; flex-direction: column; gap: 8px; line-height: 1.55; }
-.pro-mail { color: inherit; font-weight: 700; text-underline-offset: 0.15em; white-space: nowrap; }
+.pro-mail { color: inherit; font-weight: 600; text-underline-offset: 0.15em; white-space: nowrap; }
 .pro-section .coach-links { border-top: 0; padding-top: 4px; }
 /* Over: the button to that page, its Dutch name over the help language's. */
 .coach-link-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
@@ -4910,13 +4912,13 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .say-heard-wait { background: var(--card); color: var(--muted); border-inline-start-color: var(--line); }
 .say-heard-icon { flex: none; display: inline-flex; }
 .say-heard .bi-help { --help-size: 0.8em; font-weight: 400; }
-.say-heard-word { font-weight: 800; color: var(--ink-strong); }
+.say-heard-word { font-weight: 600; color: var(--ink-strong); }
 .say-heard-ok .say-heard-word { color: inherit; }
 .listen-actions .keep-btn { min-height: 52px; }
 /* Lessons at the learner's level (src/lib/pace.ts): "Wil je sneller?" on the result, and the plain
    line after many mistakes. */
 .result-easier, .result-faster { flex-direction: column; gap: 2px; }
-.result-pair-nl { display: block; font-weight: 700; }
+.result-pair-nl { display: block; font-weight: 600; }
 .result-faster {
   display: flex; align-items: center; text-align: center; margin: 0 auto 10px; max-width: 460px;
   animation: result-go 0.4s 1.2s var(--ease-out) both;
@@ -4926,7 +4928,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .result-faster-hint { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
 .result-faster-actions { flex-wrap: nowrap; }
 .result-faster-actions .btn { min-height: 56px; flex: 1 1 0; flex-direction: column; gap: 0; }
-.result-faster-actions .btn > span[lang='nl'] { font-weight: 700; font-size: 1.1rem; }
+.result-faster-actions .btn > span[lang='nl'] { font-weight: 600; font-size: 1.1rem; }
 @media (prefers-reduced-motion: reduce) { .result-faster { animation: none; } }
 /* A low screen, or large text on a phone: the question and Ja/Nee only (the explanation line
    made the pinned footer cover almost the whole result). Settings › Sneller leren explains it. */
@@ -4973,27 +4975,27 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   box-shadow: 5px 5px 0 var(--label-shadow);
 }
 .kun-head { display: flex; flex-direction: column; gap: 2px; margin: 0; font-size: 1.2rem; line-height: 1.25; }
-.kun-head .kun-head-nl { font-weight: 800; }
+.kun-head .kun-head-nl { font-weight: 600; }
 .kun-head .kun-head-help { font-size: 0.85em; font-weight: 500; }
 .kun-list { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
 .kun-row { display: flex; align-items: flex-start; gap: 10px; }
 .kun-row > .icon { flex: none; margin-top: 3px; color: var(--right-ink); }
 .kun-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.kun-nl { font-weight: 700; line-height: 1.3; }
+.kun-nl { font-weight: 600; line-height: 1.3; }
 .kun-help { line-height: 1.35; color: var(--ink-2); }
 .kun-tag { font-size: 0.85rem; color: var(--muted); }
 .kun-note { display: flex; flex-direction: column; gap: 2px; margin: 0; font-size: 0.9rem; line-height: 1.35; color: var(--muted); }
 /* The table on "Voor begeleiders en werkgevers" (src/components/Coaches.tsx), one fold per track. */
 .kun-details { margin-top: 10px; }
 .kun-details > summary {
-  display: flex; align-items: center; min-height: 44px; padding: 6px 10px; cursor: pointer; font-weight: 700;
+  display: flex; align-items: center; min-height: 44px; padding: 6px 10px; cursor: pointer; font-weight: 600;
   border: 2px solid var(--line); border-radius: 10px;
 }
 .kun-details > summary:hover { border-color: var(--ink-3); }
 .kun-table { width: 100%; margin-top: 8px; border-collapse: collapse; font-size: 0.9rem; line-height: 1.35; }
 .kun-table th, .kun-table td { padding: 6px; text-align: start; vertical-align: top; border-bottom: 1px solid var(--line); }
 .kun-table thead th { font-size: 0.8rem; color: var(--muted); }
-.kun-table tbody th { font-weight: 650; }
+.kun-table tbody th { font-weight: 600; }
 .kun-table td:last-child { white-space: nowrap; color: var(--muted); }
 
 /* Larger text with a back arrow (the sector's second step): the wordmark stays small enough to
@@ -5007,12 +5009,12 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .topic-tools .check-open, .topic-tools .check-undo { flex: 1 1 100%; }
 .check-open { border-color: var(--yellow); }
 .check-open-icon { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--yellow); color: var(--on-yellow); }
-.unit-tool-nl { font-weight: 700; }
+.unit-tool-nl { font-weight: 600; }
 /* "via check": calm text beside a topic or lesson ticked off with the check, never a button. */
 .via-check {
   display: inline-flex; align-items: center; flex-wrap: wrap; gap: 4px; align-self: flex-start;
   padding: 2px 8px; border-radius: 999px; background: var(--tag-bg); color: var(--tag-ink);
-  font-size: 0.8rem; font-weight: 650; line-height: 1.3;
+  font-size: 0.8rem; font-weight: 600; line-height: 1.3;
 }
 .via-check-help { font-weight: 400; }
 .via-check-help::before { content: '· '; }
@@ -5026,7 +5028,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .check-result-actions .btn { min-height: 56px; flex: 1 1 0; min-width: 0; flex-direction: column; gap: 0; }
 /* No chevron here: the same padding on both sides (and both buttons share the width). */
 .check-result-actions .btn.btn-go, .check-result-actions .btn.btn-ghost { padding-inline: 10px; overflow-wrap: anywhere; }
-.check-result-actions .btn > span[lang='nl'] { font-weight: 700; font-size: 1.05rem; }
+.check-result-actions .btn > span[lang='nl'] { font-weight: 600; font-size: 1.05rem; }
 .check-result-foot .check-go { flex: 1 1 100%; }
 
 /* A speaker in a sentence ("Tik op [speaker]"): the app's own icon, on the text line (src/components/Bi.tsx iconize). */
@@ -5034,13 +5036,13 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 
 /* "Probeer het vandaag op je werk" (src/components/WorkTry.tsx): the "Onthoud" label of a rules
    result, with the meaning under the sentence and the speaker beside all three lines. */
-.result-worktry .worktry-label-nl { font-weight: 700; }
+.result-worktry .worktry-label-nl { font-weight: 600; }
 .result-worktry .worktry-gloss { grid-column: 1; --help-size: 0.9rem; color: var(--ink); }
 .result-worktry .speak-glyph { grid-row: 1 / span 3; }
 /* As an if-then plan: "Als:" with the moment, then "Zeg dan:" with the sentence; the speaker beside
    the sentence (rows: label, moment, "Zeg dan", sentence, meaning). */
 .result-worktry .worktry-when { grid-column: 1; margin: 4px 0 0; display: flex; flex-direction: column; gap: 1px; }
-.result-worktry .worktry-kicker { grid-column: 1; font-size: var(--fs-small); font-weight: 700; color: var(--muted); line-height: 1.25; }
+.result-worktry .worktry-kicker { grid-column: 1; font-size: var(--fs-small); font-weight: 600; color: var(--muted); line-height: 1.25; }
 .result-worktry .worktry-when-text { font-size: 1rem; color: var(--ink-2); line-height: 1.35; --help-size: 1rem; }
 .result-worktry:has(.worktry-when) > .worktry-kicker { margin-top: 6px; }
 .result-worktry:has(.worktry-when) .speak-glyph { grid-row: 4 / span 2; }
@@ -5062,7 +5064,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* "Wat zeg je?" on the sentence of "Probeer het vandaag" (`work`): "When:" small above the moment,
    as on the card; with no moment, the meaning on a card of its own. */
 .say-work-when { flex-direction: column; align-items: flex-start; gap: 4px; }
-.say-work-kicker { font-size: var(--fs-small); font-weight: 700; color: var(--muted); line-height: 1.25; }
+.say-work-kicker { font-size: var(--fs-small); font-weight: 600; color: var(--muted); line-height: 1.25; }
 .say-work-meaning { padding: 14px 16px; margin-bottom: 12px; font-weight: 600; font-size: 1.0625rem; line-height: 1.4; }
 /* "Zeg het zo" on a page of its own (the tip's second page): the phrase big, the title small above it. */
 .tip-page-say .tip-title-small { font-size: 1.05rem; color: var(--muted); }
@@ -5084,22 +5086,22 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* After recording (Speaking.tsx): the example and your try play by themselves; this line says
    which one is playing. One button to say it again; the footer's Continue goes on. */
 /* Speaking, "say it again": from memory (the Dutch hidden until the try is done). */
-.say-memory { margin: 0 0 4px; font-size: var(--fs-small); font-weight: 700; color: var(--ink-2); }
-.say-compare-note { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 30px; margin: 4px 0 10px; color: var(--muted); font-weight: 700; }
+.say-memory { margin: 0 0 4px; font-size: var(--fs-small); font-weight: 600; color: var(--ink-2); }
+.say-compare-note { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 30px; margin: 4px 0 10px; color: var(--muted); font-weight: 600; }
 .say-again-one { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 56px; }
 /* After recording: "Hear yourself" and "Say it again" under each other, each label on one line. */
 .say-review-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .say-review-row > .btn { flex: 1 1 100%; }
 .say-hear-mine { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; }
 /* "Toen en nu" (src/lib/firstVoice.ts): the day of the first try, small, over its button. */
-.say-then-day { margin: 0 0 8px; text-align: center; font-size: var(--fs-small); font-weight: 700; color: var(--ink-2); }
+.say-then-day { margin: 0 0 8px; text-align: center; font-size: var(--fs-small); font-weight: 600; color: var(--ink-2); }
 /* "Zeg het samen" (src/lib/chorus.ts): one big yellow button where the microphone goes; on it the
    3-2-1, then a wave while the voice says it slowly. Then the microphone, with "Nu alleen" over it. */
 .say-chorus { width: min(100%, 22rem); min-height: 72px; padding: 10px 18px; gap: 12px; font-size: 1.15rem; }
 .say-chorus .bi { text-align: start; }
 .say-chorus .bi-help { --help-size: 0.8em; font-weight: 500; }
 .say-chorus-mark { flex: none; display: grid; place-items: center; width: 40px; height: 40px; }
-.say-chorus-count { font-size: 2rem; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+.say-chorus-count { font-size: 2rem; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
 /* Running: it cannot be tapped, but it stays yellow (it is what to look at), not greyed. */
 .btn.say-chorus[aria-disabled='true'] { background: var(--yellow); color: var(--on-yellow); border-color: var(--on-yellow); cursor: default; }
 .say-wave { display: flex; align-items: center; gap: 3px; height: 30px; }
@@ -5117,7 +5119,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 }
 .say-chorus-hint { justify-content: center; text-align: center; margin-top: 4px; }
 .say-chorus-off { margin-top: 16px; }
-.say-alone { margin: 0 0 4px; font-size: var(--fs-small); font-weight: 700; color: var(--ink-2); text-align: center; }
+.say-alone { margin: 0 0 4px; font-size: var(--fs-small); font-weight: 600; color: var(--ink-2); text-align: center; }
 .say-alone .bi-help { --help-size: 0.85em; font-weight: 500; }
 /* Bram, once: "Fouten mogen" in a small bubble beside his head (no button). */
 .say-brave { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
@@ -5202,7 +5204,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .topbar { justify-content: flex-end; }
 /* 7. The bottom bar: every icon with its word under it (the tab you are on in bold). */
 .nav-help-only { font-size: 0.8rem; font-weight: 500; color: var(--ink-2); }
-.nav-tab-on .nav-help-only { font-weight: 650; color: var(--ink); }
+.nav-tab-on .nav-help-only { font-weight: 600; color: var(--ink); }
 .bottom-nav .nav-tab { min-height: 60px; }
 
 /* ---- "Vloertaal rustiger", fase 2 (docs/rustiger.md) ----
@@ -5239,7 +5241,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 96px;
   margin: 4px 0 14px; padding: 10px 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
 }
-.calm-preview-stats { display: inline-flex; align-items: center; gap: 6px; font-weight: 650; color: var(--ink); }
+.calm-preview-stats { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--ink); }
 .calm-preview-stats .icon { color: var(--ink-3); }
 :root[data-calm] .calm-preview-stats { visibility: hidden; }
 .calm-preview-figure { display: block; animation: calm-bob 1.8s ease-in-out infinite; transform-origin: 50% 90%; }
@@ -5286,7 +5288,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 }
 .colleague-card-title { margin: 0 0 8px; font-size: var(--fs-question); line-height: 1.25; color: var(--ink-strong); }
 .colleague-card-lines { margin: 0; padding-inline-start: 1.2em; display: flex; flex-direction: column; gap: 6px; font-size: var(--fs-answer); line-height: 1.4; color: var(--ink); }
-.colleague-card-thanks { margin: 10px 0 0; font-weight: 700; color: var(--ink); }
+.colleague-card-thanks { margin: 10px 0 0; font-weight: 600; color: var(--ink); }
 .colleague-card-site { font-weight: 500; color: var(--muted); }
 .colleague-share { width: 100%; }
 
@@ -5300,7 +5302,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   border: 2px solid var(--edge-strong); border-radius: 5px; background: var(--card); color: var(--ink-strong);
 }
 .kaart-rights[aria-pressed='true'] .kaart-rights-box { background: var(--yellow); }
-.kaart-rights-nl { font-weight: 650; }
+.kaart-rights-nl { font-weight: 600; }
 
 /* After a review: what stayed (src/components/Screens.tsx, lib/spaced.ts keptCount). */
 .result-line.result-kept { flex-wrap: nowrap; gap: 10px; text-align: start; margin-inline: auto; }
@@ -5338,7 +5340,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .verb-mark { padding: 0 3px; border-radius: 4px; box-shadow: inset 0 0 0 2px var(--ink-strong); }
 .ftile.ftile-verb { box-shadow: inset 0 0 0 2px var(--ink-strong); }
 .feedback-verb { display: flex; align-items: center; flex-wrap: wrap; gap: 2px 8px; margin: 6px 0 0; font-size: var(--fs-small); color: var(--ink-2); }
-.feedback-verb-nl { font-weight: 700; color: var(--ink); }
+.feedback-verb-nl { font-weight: 600; color: var(--ink); }
 
 /* Typed almost right (src/components/Exercises.tsx TypeWriting): the part that differs is marked in
    the learner's own answer, with a wavy underline as a spelling checker does (not only a colour). */
@@ -5414,7 +5416,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .home-line-icon { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--yellow); color: var(--on-yellow); }
 .home-line-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .home-line-nl { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
-.home-line-help { font-size: 1rem; font-weight: 650; line-height: 1.25; }
+.home-line-help { font-size: 1rem; font-weight: 600; line-height: 1.25; }
 .home-line-help.bi-swap > .bi-help { --help-size: 0.8em; font-weight: 400; color: var(--muted); }
 .home-line-quote { font-size: 0.95rem; font-weight: 600; color: var(--ink-2); overflow-wrap: anywhere; }
 .home-line-quote::before { content: '„'; }
