@@ -144,7 +144,7 @@ De tips staan in de volgorde van de lessen in de app.
 
 **Tekst (Engels, wordt vertaald):**
 
-> Rules about helmets, shoes and gloves are not a suggestion: everyone follows them, also the boss. Your employer must give you the protective gear you need, for free. Gear that does not fit does not protect you well, so ask for your size: "Heb je dit ook in mijn maat?"
+> Rules about helmets, shoes and gloves are not a suggestion: everyone follows them, also the boss. Your employer must give you the protective gear you need, for free. Gear that does not fit does not protect you well. So ask for your size: "Heb je dit ook in mijn maat?"
 >
 > *(geen slotregel)*
 
@@ -533,7 +533,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> You get a BSN (burgerservicenummer) when you register at the municipality (gemeente). Here only for a short time? Then you register at an RNI desk. You need your BSN to work, for tax, for health insurance and for a bank account. Your employer needs your ID and your BSN. Do not give your BSN or a copy of your ID to people who do not need it: ask why they need it. Moving? Register your new address at the gemeente within 5 days. DigiD is your login for government websites: never give it to someone else. Do you live or work here? Then you usually must have Dutch health insurance (zorgverzekering). Arrange it quickly.
+> You get a BSN (burgerservicenummer) when you register at the municipality (gemeente). Here only for a short time? Then you register at an RNI desk. You need your BSN to work, for tax, for health insurance and for a bank account. Your employer needs your ID and your BSN. Do not give your BSN or a copy of your ID to just anyone. First ask why they need it. Moving? Register your new address at the gemeente within 5 days. DigiD is your login for government websites: never give it to someone else. Do you live or work here? Then you usually must have Dutch health insurance (zorgverzekering). Arrange it quickly.
 >
 > *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
@@ -785,7 +785,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> At work, everyone is equal and everyone is treated with respect, whatever their gender, origin, religion or sexual orientation. You decide about physical contact. A handshake is common, but you may also greet in another polite way, like a nod and a smile, and explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.
+> At work, everyone is equal and everyone is treated with respect, whatever their gender, origin, religion or sexual orientation. You decide about physical contact. A handshake is common. But you may also greet in another polite way, like a nod and a smile. Then explain it briefly. Jokes about someone’s origin or religion, threats, bullying (pesten) and unwanted sexual behaviour are not accepted. You can report it to your supervisor, or to a confidential adviser (vertrouwenspersoon) if your company has one.
 >
 > *(geen slotregel)*
 
@@ -816,7 +816,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> Talking behind a colleague’s back (roddelen) harms the trust in a team. Do you have a problem with someone? Talk to that person, or to your supervisor. Online, the same rules apply as at work: do not post photos, videos or messages about colleagues, clients or the company without permission. Your boss can see what you post, and it can stay online for years. Many teams have a group chat (groepsapp) for work: keep it about work, and do not share screenshots of it with others. Sharing private things of a colleague or mocking someone online is bullying too.
+> Talking behind a colleague’s back (roddelen) harms the trust in a team. Do you have a problem with someone? Talk to that person, or to your supervisor. Online, the same rules apply as at work. Do not post anything about colleagues, clients or the company without permission. That includes photos, videos and messages. Your boss can see what you post, and it can stay online for years. Many teams have a group chat (groepsapp) for work: keep it about work, and do not share screenshots of it with others. Sharing private things of a colleague or mocking someone online is bullying too.
 >
 > *(geen slotregel)*
 
@@ -849,7 +849,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> Grensoverschrijdend gedrag is behaviour that crosses someone’s boundary: unwanted touching, sexual remarks or jokes, staring, sending unwanted pictures, threats or shouting. It does not matter if the other person "meant it as a joke": what counts is how it feels to you. If you can, say clearly that you want it to stop. Write down what happened, when, and who saw it. Tell your supervisor, the confidential adviser (vertrouwenspersoon, if there is one) or HR. Your employer must protect you, and you may not be punished for reporting it. Did you see it happen to a colleague? Ask if they are okay, and offer to be a witness.
+> Grensoverschrijdend gedrag is behaviour that crosses someone’s boundary. For example: unwanted touching, sexual remarks or jokes, staring, unwanted pictures, threats or shouting. It does not matter if the other person "meant it as a joke": what counts is how it feels to you. If you can, say clearly that you want it to stop. Write down what happened, when, and who saw it. Tell your supervisor, the confidential adviser (vertrouwenspersoon, if there is one) or HR. Your employer must protect you, and you may not be punished for reporting it. Did you see it happen to a colleague? Ask if they are okay, and offer to be a witness.
 >
 > *(geen slotregel)*
 
@@ -928,7 +928,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> Discrimination at work is forbidden, for example because of your origin, religion or gender. Your employer cannot simply fire you: normally they need permission from UWV or a judge, or your agreement. (In a trial period or at the end of a temporary contract, other rules apply.) Do not sign a paper about your dismissal that you do not understand. Did you sign an agreement to end your job (vaststellingsovereenkomst)? Then you can usually still cancel it in writing within 14 days. Get help first from the union (for example FNV), a discrimination help desk or the Juridisch Loket (free legal advice).
+> Discrimination at work is forbidden, for example because of your origin, religion or gender. Your employer cannot simply fire you: normally they need permission from UWV or a judge, or your agreement. (In a trial period or at the end of a temporary contract, other rules apply.) Do not sign a paper about your dismissal that you do not understand. Did you sign an agreement to end your job (vaststellingsovereenkomst)? Then you can usually still cancel it in writing within 14 days. Get help first. Go to the union (for example FNV), a discrimination help desk or the Juridisch Loket. The Juridisch Loket gives free legal advice.
 >
 > *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
 
@@ -1004,7 +1004,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have: you talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (betermelden). In the first year you get at least the minimum wage. A temporary contract stops on its end date, also when you are sick. Working through an agency? If your contract has an agency clause (uitzendbeding), it can end when you get sick. Then ask UWV about the Ziektewet, or ask a union.
+> When you are sick, your employer must pay at least 70% of your wage, for up to 2 years. A cao often gives more. There can be up to 2 waiting days (wachtdagen) without pay, but only if your contract or cao says so. Your boss may not ask what illness you have. You talk about your health and your work with the company doctor (bedrijfsarts). Call your employer when you are better (betermelden). In the first year you get at least the minimum wage. A temporary contract stops on its end date, also when you are sick. Working through an agency? If your contract has an agency clause (uitzendbeding), it can end when you get sick. Then ask UWV about the Ziektewet, or ask a union.
 >
 > *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
@@ -1121,7 +1121,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> Watch out for these signs. Your employer keeps your passport or ID: that is not allowed, you keep your own ID and an employer may only make a copy. You get much less pay than agreed, or no payslip. You must pay off a big debt to the employer or agency. You must work extremely long hours, without a choice. Someone threatens you, or uses your housing to put pressure on you. This is not normal and not allowed.
+> Watch out for these signs. Your employer keeps your passport or ID. That is not allowed: you keep your own ID. An employer may only make a copy. You get much less pay than agreed, or no payslip. You must pay off a big debt to the employer or agency. You must work extremely long hours, without a choice. Someone threatens you, or uses your housing to put pressure on you. This is not normal and not allowed.
 >
 > *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
 
@@ -1676,7 +1676,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> More and more companies let an app or a computer make the roster, count your speed with the scanner, or decide things. You may ask which information about you is collected. Is there a big decision about you, like fewer hours, a warning or dismissal? Ask who decided it. When a computer made such a decision on its own, you may ask a person to look at it again and explain it. Write down your own hours.
+> More and more companies let an app or a computer decide things. For example, it makes the roster or counts your speed with the scanner. You may ask which information about you is collected. Is there a big decision about you, like fewer hours, a warning or dismissal? Ask who decided it. Did a computer make that decision on its own? Then you may ask a person to check it again and explain it. Write down your own hours.
 >
 > *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
@@ -1933,7 +1933,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> Everyone feels tired, stressed or sad sometimes. Too much work (werkdruk), bad sleep from shift work or missing your family can make it heavy. You do not have to carry it alone, and saying "it is too much" is not weak. Talk to someone you trust: your supervisor, the confidential adviser (vertrouwenspersoon, if there is one), the company doctor (bedrijfsarts) or your huisarts. You may also ask for a talk with the company doctor yourself. Doctors do not tell your boss what you said. Do you think about suicide, or do you worry about someone? Call 113 (free, day and night), or chat at 113.nl.
+> Everyone feels tired, stressed or sad sometimes. Too much work (werkdruk), bad sleep from shift work or missing your family can make it heavy. You do not have to carry it alone, and saying "it is too much" is not weak. Talk to someone you trust. For example your supervisor, the company doctor (bedrijfsarts) or your huisarts. Or the confidential adviser (vertrouwenspersoon), if your company has one. You may also ask for a talk with the company doctor yourself. Doctors do not tell your boss what you said. Do you think about suicide, or do you worry about someone? Call 113 (free, day and night), or chat at 113.nl.
 
 Geen slotregel („General information …”): de tip gaat over je goed voelen en hulp vragen, zoals c.healthy.
 

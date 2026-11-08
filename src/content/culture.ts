@@ -110,7 +110,7 @@ const baseTips: CultureTip[] = [
     lessonId: 'l.gear',
     emoji: '⛑️',
     title: 'Safety rules are for everyone',
-    body: 'Rules about helmets, shoes and gloves are not a suggestion: everyone follows them, also the boss. Your employer must give you the protective gear you need, for free. Gear that does not fit does not protect you well, so ask for your size: "Heb je dit ook in mijn maat?"',
+    body: 'Rules about helmets, shoes and gloves are not a suggestion: everyone follows them, also the boss. Your employer must give you the protective gear you need, for free. Gear that does not fit does not protect you well. So ask for your size: "Heb je dit ook in mijn maat?"',
     phrase: { id: 'c.gear.p', nl: 'Mijn handschoenen zijn kapot. Waar krijg ik nieuwe?', en: 'My gloves are broken. Where do I get new ones?' },
     situation: { id: 'c.gear.s', en: 'Your gloves are torn. What do you do?' },
     options: [
@@ -285,7 +285,7 @@ const baseTips: CultureTip[] = [
     lessonId: 'l.task',
     emoji: '✅',
     title: 'Say when it is done, ask when it is not clear',
-    body: 'In the Netherlands a supervisor often gives a task in a few words, and expects you to say when it is done. Saying "ja" when you did not understand often leads to mistakes. Asking again, or asking to be shown, is normal here and not rude.',
+    body: 'In the Netherlands a supervisor often gives a task in a few words. When it is done, you say so. Saying "ja" when you did not understand often leads to mistakes. Asking again, or asking to be shown, is normal here and not rude.',
     phrase: { id: 'c.task.p', nl: 'Klaar! Wat moet ik nu doen?', en: 'Done! What must I do now?' },
     situation: { id: 'c.task.s', en: 'Your supervisor explains a task very fast. You understood only half. What do you do?' },
     options: [
@@ -303,7 +303,7 @@ const baseTips: CultureTip[] = [
     lessonId: 'l.clear',
     emoji: '🎯',
     title: 'Say the most important thing first',
-    body: 'In many languages it is polite to tell the whole story first, and the point at the end. At work here it is the other way round: first say what is wrong or what you need, then the reason. Speak calmly, and stop after two or three sentences, so the other person can ask something. In a job interview too: first the answer, then an example. Speaking slowly is not rude here: it helps people understand you.',
+    body: 'In many languages it is polite to tell the whole story first, and the point at the end. At work here it is the other way round. First say what is wrong or what you need. Then give the reason. Speak calmly, and stop after two or three sentences, so the other person can ask something. In a job interview too: first the answer, then an example. Speaking slowly is not rude here: it helps people understand you.',
     phrase: { id: 'c.clear.p', nl: 'Sorry, ik zeg het rustig nog een keer.', en: 'Sorry, I will say it again, calmly.' },
     situation: { id: 'c.clear.s', en: 'You come in 20 minutes late. Your supervisor asks: "Wat is er?" What do you do?', nl: 'Wat is er?' },
     options: [
@@ -363,7 +363,7 @@ const baseTips: CultureTip[] = [
     lessonId: 'l.listen',
     emoji: '👂',
     title: 'Listen first, then check',
-    body: 'Let the other person finish talking (uitpraten) before you answer. Look at the person who talks to you: here, that shows that you are listening. In many countries you do not look your boss in the eyes, out of respect; here, looking at them now and then is polite. When the other person has finished, say back what you heard: "Dus eerst …, en dan …?" Not sure what a word means? Ask: "Wat bedoel je met …?" Some colleagues make jokes with a serious face. Not sure? Ask: "Was dat een grapje?"',
+    body: 'Let the other person finish talking (uitpraten) before you answer. Look at the person who talks to you: here, that shows that you are listening. In many countries you do not look your boss in the eyes. That is a sign of respect. Here, looking at them now and then is polite. When the other person has finished, say back what you heard: "Dus eerst …, en dan …?" Not sure what a word means? Ask: "Wat bedoel je met …?" Some colleagues make jokes with a serious face. Not sure? Ask: "Was dat een grapje?"',
     phrase: { id: 'c.listen.p', nl: 'Wacht, ik wil het goed begrijpen.', en: 'Wait, I want to understand it well.' },
     situation: { id: 'c.listen.s', en: 'Your supervisor explains a new task. You want to say something, but she is still talking. What do you do?' },
     options: [
@@ -894,12 +894,12 @@ const beforeTime = baseTips.findIndex((t) => t.lessonId === 'l.shift');
  */
 export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.accident': [0, 1, 2, 3], // tell your supervisor; through an agency: tell the agency too; 112 first
-  'c.translate': [0, 4, 6], // ask first; ask a person to explain important papers
+  'c.translate': [0, 4, 5, 6, 8], // ask first; ask a person to explain important papers
   'c.understood': [0, 2, 4], // say back: "Dus ik moet eerst …?"
   'c.keeplearning': [0, 4, 5], // colleagues switch to English; ask them to speak Dutch
   'c.cv': [1, 4, 5], // be honest; ask someone to check your Dutch
   'c.interview': [0, 2, 3], // asking questions yourself is normal
-  'c.bsn': [0, 5, 8], // ask why they need it; never give your DigiD
+  'c.bsn': [0, 5, 6, 9], // ask why they need it; never give your DigiD
   'c.housing': [2, 10, 11, 13], // proof of payment; job ends: advice first (Juridisch Loket)
   'c.jobends': [0, 2, 3, 4], // final pay; agency insurance stops, arrange your own; the rental contract has its own rules (the chat asks about its notice period)
   'c.agency': [0, 2, 4], // the agency is your employer; the same pay as the company's workers; keep your own list of hours
@@ -908,12 +908,12 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.smoking': [0, 2, 3], // only outside, in your break
   'c.hygiene': [0, 2, 3], // a medicine that makes you sleepy: tell your supervisor
   'c.smalltalk': [0, 2, 6, 7], // welcome at the table; "Gefeliciteerd!"
-  'c.respect': [1, 2, 3, 4], // another polite greeting; report jokes and bullying
-  'c.gossip': [0, 3, 4], // nothing online without permission
-  'c.boundaries': [0, 2, 3, 4], // say stop; write it down; tell the vertrouwenspersoon
-  'c.rights': [1, 3, 6], // do not sign; get help first
+  'c.respect': [1, 2, 3, 4, 5, 6], // another polite greeting; report jokes and bullying
+  'c.gossip': [0, 3, 4, 5, 6], // nothing online without permission
+  'c.boundaries': [0, 1, 3, 4, 5], // say stop; write it down; tell the vertrouwenspersoon
+  'c.rights': [1, 3, 6, 7, 8], // do not sign; get help first
   'c.leave': [0, 1, 2, 4], // ask for leave in time, in writing
-  'c.illness': [0, 3, 4], // the company doctor; call when you are better
+  'c.illness': [0, 3, 4, 5], // the company doctor; call when you are better
   'c.gethelp': [2, 3, 4, 5, 6], // Arbeidsinspectie, 0800-7000, Juridisch Loket, 112
   'c.texting': [0, 1, 2, 5], // the example message (one sentence: quotes are never split); a swap needs the supervisor's yes first
   'c.diploma': [3, 4, 5], // required training is paid working time; ask about courses
@@ -930,10 +930,10 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.service': [0, 1, 2, 3], // not sure? say that you will check
   'c.cleansafe': [0, 1, 3, 4], // the wet-floor sign
   'c.counting': [3, 4, 5], // the last digit first (vijfentwintig); 47 and 74; dertien or dertig
-  'c.aihelp': [0, 2, 3], // AI makes mistakes; check important things (your contract) with a person
+  'c.aihelp': [0, 2, 3, 4, 5], // AI makes mistakes; check important things (your contract) with a person
   'c.aiprivate': [0, 2, 4], // no names of customers; ask first if you may use AI
   'c.aifake': [0, 1, 3], // a voice can be fake; hang up and call back yourself
-  'c.aiplan': [0, 2, 3, 4], // a big decision: ask who decided it, and ask a person to look again
+  'c.aiplan': [0, 1, 3, 4, 5, 6], // a big decision: ask who decided it, and ask a person to look again
   'c.harvest': [1, 2, 4], // piece rate: still the minimum wage per hour; write down hours and crates
   'c.greensafe': [0, 4, 5, 6], // a sprayed greenhouse: the sign at the door, wait for your supervisor
   'c.workorder': [0, 2, 3], // something not clear? ask before you start
@@ -942,25 +942,30 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.nextstep': [0, 1, 3, 4], // level 2; the bbl: work and school, you need a job or a place
   'c.email': [0, 1, 2, 3], // a greeting, what and when, your name
   'c.healthy': [0, 3, 5], // under the influence: dangerous and forbidden; talk to your huisarts
-  'c.council': [0, 3, 4], // who may vote for the gemeenteraad: EU, and outside the EU after 5 years
-  'c.police': [0, 2, 3, 4], // a decision you do not agree with: object in writing, before the date
+  'c.council': [0, 3, 4, 5, 6], // who may vote for the gemeenteraad: EU, and outside the EU after 5 years
+  'c.police': [0, 2, 3, 4, 5], // a decision you do not agree with: object in writing, before the date
   'c.phish': [0, 5, 6, 7], // clicked anyway: change your password and call the IT department
-  'c.clear': [0, 1, 2], // the story first is polite elsewhere; here the point first, then the reason; stop after a few sentences
+  'c.clear': [0, 1, 2, 3, 4], // the story first is polite elsewhere; here the point first, then the reason; stop after a few sentences
   'c.food': [0, 1, 2, 5, 6], // the hygiene rules are for everyone and for the food; a wound or sick: report it
   'c.parcel': [0, 1, 3, 5], // not at home: the company's rules; broken: a photo as proof, report it
   'c.road': [0, 2, 7, 8, 9], // no phone in your hand; breaks; who decides your hours and route: maybe an employee
   'c.newcolleague': [0, 2, 3, 4], // what was hard for you is hard for them; show it, let them copy it; not "Snap je het?" but "Laat eens zien"
-  'c.feelwell': [2, 3, 6, 7], // not alone, not weak; who to talk to; thoughts of suicide: 113
+  'c.feelwell': [2, 3, 4, 5, 8, 9], // not alone, not weak; who to talk to; thoughts of suicide: 113
   'c.backtowork': [0, 1, 2, 3, 7], // betermelden; step by step, fewer hours or lighter work; the company doctor; say what you can and cannot do yet
   // "Goed communiceren" (u.communicate, 5 November 2026).
   'c.explain': [0, 1, 2, 3], // the three steps: what is wrong, where, what you need
-  'c.listen': [0, 1, 2, 3], // let them finish; look at them (in many countries not, out of respect); then say back what you heard
+  'c.listen': [0, 1, 2, 3, 4, 5], // let them finish; look at them (in many countries not, out of respect); then say back what you heard
   'c.calm': [0, 1, 2, 3], // everyone gets angry; someone angry at you: listen first, stay calm; you need not answer at once
   'c.talkintime': [0, 1, 5, 6, 7], // a small problem gets big; then suddenly angry or quitting; thinking of quitting: talk first, there is often a solution
   'c.reachable': [1, 2, 3, 4, 5], // the first who picks up or calls back gets the job; missed call: the same day; no phone at work: in your break
   'c.getfeedback': [0, 1, 2, 3, 4], // what feedback is; about your work, not you; normal and meant to help; not clear? ask for an example
   'c.givefeedback': [0, 1, 2, 3], // first what goes well; then kindly what can be better; a good moment, alone
   'c.meeting': [0, 1, 2, 3, 4], // the werkoverleg; your opinion is welcome; a question is a contribution; wait for your turn, then speak
+  // The first three sentences, with one of them split in two or three (short sentences, 8 November 2026).
+  'c.warning': [0, 1, 2, 3, 4],
+  'c.gear': [0, 1, 2, 3],
+  'c.task': [0, 1, 2, 3],
+  'c.details': [0, 1, 2, 3],
 };
 
 /** All tips in course order: the ones above (with the Smart tools tips after "Asking for help" and the Numbers and details tips before "Time and schedule"), then those of the work-and-rights units (src/content/work.ts). */
