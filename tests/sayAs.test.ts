@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { CAO_TAKE, minTake, sayAs } from '../src/lib/sayAs';
+import { ALONE_TAKE, CAO_TAKE, minTake, sayAs } from '../src/lib/sayAs';
 
 describe('sayAs: how a voice is told to pronounce a line', () => {
   it('says "app" like the English word', () => {
@@ -35,9 +35,40 @@ describe('"cao" letter by letter (the owner, 5 November 2026)', () => {
     expect(minTake('het loon')).toBe(0);
   });
   it('makes the tile "ben" again (heard as "din", 8 November 2026), and not the sentences with it', () => {
-    expect(minTake('ben')).toBe(6);
-    expect(minTake('Ben')).toBe(6);
+    expect(minTake('ben')).toBe(ALONE_TAKE);
+    expect(minTake('Ben')).toBe(ALONE_TAKE);
     expect(minTake('Hallo, ik ben nieuw.')).toBe(0);
     expect(minTake('benen')).toBe(0);
+  });
+});
+
+describe('a word that reads as an abbreviation when it stands alone (the owner, 8 November 2026)', () => {
+  it('says the tile "tot" with an exclamation mark, not "tot." (= "total")', () => {
+    expect(sayAs('tot')).toBe('tot!');
+    expect(sayAs('Tot')).toBe('tot!');
+  });
+
+  it('spells the tiles "wc" and "digid" out', () => {
+    expect(sayAs('wc')).toBe('wee cee');
+    expect(minTake('wc')).toBe(ALONE_TAKE + 1);
+    expect(sayAs('digid')).toBe('die-gie-dee');
+  });
+
+  it('leaves the word alone inside a line', () => {
+    expect(sayAs('tot ziens')).toBe('tot ziens');
+    expect(sayAs('Ik werk tot vijf uur.')).toBe('Ik werk tot vijf uur.');
+  });
+
+  it('asks for a new recording of the tile, not of the line', () => {
+    expect(minTake('tot')).toBe(ALONE_TAKE);
+    expect(minTake('tot ziens')).toBe(0);
+  });
+
+  it('records again the tiles that came out wrong, as they are written', () => {
+    for (const t of ['ben', 'heb', 'per', 'trap', 'band']) {
+      expect(sayAs(t)).toBe(t);
+      expect(minTake(t)).toBe(ALONE_TAKE);
+    }
+    expect(minTake('Ik ben Ali.')).toBe(0);
   });
 });

@@ -85,7 +85,7 @@ if (cost > maxCredits) throw new Error(`Would spend ${cost} credits, more than M
 // like a question; a full stop makes it a plain statement. Only the spoken text changes.
 const spoken = (text) => (/[.!?…]$/.test(text.trim()) ? text.trim() : `${text.trim()}.`);
 
-async function tts(voice, text) {
+async function tts(voice, text, id) {
   for (let attempt = 1; ; attempt++) {
     const res = await fetch(`${API}/text-to-speech/${voice.voiceId}?output_format=${config.format}`, {
       method: 'POST',
@@ -93,9 +93,12 @@ async function tts(voice, text) {
       body: JSON.stringify({
         text: spoken(text),
         model_id: config.model,
-        // Context (not spoken) so even one-word clips are read as Dutch; a finished statement,
-        // so the clip does not sound like a quoted, unfinished word.
-        previous_text: 'Dit is een les Nederlands.',
+        // Dutch, also for a word that is English too ("band", "heb"); the voices drifted to English.
+        language_code: 'nl',
+        // Context (not spoken), so a line is read as Dutch and as a finished statement. Not for a
+        // tile (one word on its own): there it made the voice say "ben" and "per" wrong (the owner
+        // listened, 8 November 2026).
+        ...(id.startsWith('t.') ? {} : { previous_text: 'Dit is een les Nederlands.' }),
         voice_settings: { stability: 0.5, similarity_boost: 0.75, style: 0, use_speaker_boost: true },
       }),
     });
@@ -125,7 +128,7 @@ try {
   for (const { voice, clip } of todo) {
     mkdirSync(`${OUT}/${voice.key}`, { recursive: true });
     // `say`: how the line is pronounced when the spelling would mislead the voice ("app" → "ep").
-    writeFileSync(`${OUT}/${voice.key}/${clip.id}.mp3`, await tts(voice, clip.say ?? clip.text));
+    writeFileSync(`${OUT}/${voice.key}/${clip.id}.mp3`, await tts(voice, clip.say ?? clip.text, clip.id));
     (said[voice.key] ??= {})[clip.id] = clip.text;
     (takes[voice.key] ??= {})[clip.id] = Math.max(take, clip.take ?? 0);
     if (++done % 20 === 0) { save(); console.log(`${done}/${todo.length}`); }

@@ -6,11 +6,22 @@
  */
 import { sayNumbers } from './sayNumbers';
 
+// A tile (one word on its own) that a voice says wrong as it is written (the owner, 8 November
+// 2026): "tot." was read as the abbreviation "total"; "wc" and "digid" are spelled out.
+const ALONE: Record<string, string> = { tot: 'tot!', wc: 'wee cee', digid: 'die-gie-dee' };
+// A tile fixed again later gets a higher take: "wee-cee" still came out English (take 7).
+const TILE_TAKE: Record<string, number> = { wc: 8 };
+// Tiles whose recording came out wrong by chance ("ben", or English "trap"): recorded again as
+// they are written (the owner listened, 8 November 2026).
+const REDO = new Set(['ben', 'heb', 'per', 'trap', 'band']);
+
 const APP = /\b(groeps|vertaal)?app(en|e|je|jes|t|te|s)?\b/gi;
 
 /** "appen" → "eppen" (short e before a vowel), "app" → "ep", "groepsapp" → "groepsep". Times,
  *  amounts and the signs of a sum are said as words too (src/lib/sayNumbers.ts). */
 export function sayAs(text: string): string {
+  const alone = ALONE[text.trim().toLowerCase()];
+  if (alone) return alone;
   // "ID" (identity card) is said letter by letter: "ie-dee"; so is "cao" ("cee-aa-oo", the owner,
   // 5 November 2026: the voices said it as one word).
   return sayNumbers(text).replace(/\bID\b/g, 'ie-dee').replace(/\bcao('s)?\b/gi, (_m, s: string | undefined) => `cee-aa-oo${s ? "'s" : ''}`).replace(APP, (_m, pre: string | undefined, end: string | undefined) => {
@@ -28,11 +39,11 @@ export function sayAs(text: string): string {
  * round makes them again. 0: any take will do.
  */
 export const CAO_TAKE = 5;
-/**
- * Single clips heard said wrong, by their text (any case): the take that makes them again. "ben"
- * (the tile of "Hallo, ik ben nieuw."): the owner heard "din" (8 November 2026).
- */
-const RETAKE: Readonly<Record<string, number>> = { ben: 6 };
+/** Take 7: the tiles in ALONE and REDO, said wrong before 8 November 2026 ("tot." → "total"), now
+ *  recorded with the language set to Dutch and without the context line (scripts/voices/elevenlabs.mjs). */
+export const ALONE_TAKE = 7;
 export function minTake(text: string): number {
-  return Math.max(/\bcao('s)?\b/i.test(text) ? CAO_TAKE : 0, RETAKE[text.trim().toLowerCase()] ?? 0);
+  const tile = text.trim().toLowerCase();
+  if (ALONE[tile] || REDO.has(tile)) return TILE_TAKE[tile] ?? ALONE_TAKE;
+  return /\bcao('s)?\b/i.test(text) ? CAO_TAKE : 0;
 }
