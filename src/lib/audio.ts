@@ -362,9 +362,10 @@ function emitSpeech(text: string, speaking: boolean, slow: boolean): void {
  * (1.0x, the phone's voice about 0.95); in the later themes a line played a second time in a
  * lesson plays at the real pace too. The rates live in src/lib/tempo.ts.
  */
-/** Some recorded voices speak slower by nature; this evens them out (Noa reads noticeably
- *  slower than the others, so she plays a bit faster). */
-const VOICE_PACE: Record<string, number> = { noa: 1.2 };
+/** Some recorded voices speak slower by nature; this evens them out. The 'noa' slot (Jada) is
+ *  Iris since November 2026: on Eleven v4 she is only a little slower than the others (about 5%),
+ *  where Noa needed 1.2. */
+const VOICE_PACE: Record<string, number> = { noa: 1.05 };
 /** The work-rules track: the phone's voice at an easy but normal pace there (about 0.9), and
  *  no tempo setting or faster replay. The turtle tap stays slow in both tracks. */
 let rulesTrack = false;
