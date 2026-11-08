@@ -45,7 +45,7 @@ describe('About: questions or a mistake (contact)', () => {
     ];
     for (const [name, html] of pages) {
       expect(html, name).toContain(`href="mailto:${CONTACT_EMAIL}"`);
-      expect(html, name).toContain(`${LINK} style="color:inherit;font-weight:700;text-underline-offset:0.15em;white-space:nowrap">${CONTACT_EMAIL}</a>`);
+      expect(html, name).toContain(`${LINK} style="color:inherit;font-weight:600;text-underline-offset:0.15em;white-space:nowrap">${CONTACT_EMAIL}</a>`);
       // One link: in the main line only, not again in the small English line under it.
       expect(links(html), name).toHaveLength(1);
     }
