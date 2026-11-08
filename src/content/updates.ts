@@ -17,6 +17,12 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-08',
+    items: [
+      'Bram moedigt vaker aan. Wie twee keer achter elkaar "Zeg het" overslaat, ziet Bram nu bij elke spreekopdracht, met steeds een andere zin: "Fouten horen bij leren. Niet begrepen? Zeg het nog een keer.", "Spannend? Dat hoort erbij. Zeg het toch." of "Je hoeft het niet perfect te zeggen. Probeer het gewoon." Spreek je weer in, dan stopt het. De oude zin "Nederlanders begrijpen je ook met fouten" is weg: dat klopt niet altijd.',
+    ],
+  },
+  {
     date: '2026-11-05',
     items: [
       'Hoe zeg je het? in een les over klanken: de knop om verder te gaan komt pas als je de klank of het woord hebt beluisterd. Eerst luisteren, dan door. Staat het geluid uit, dan kun je meteen verder.',

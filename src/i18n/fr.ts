@@ -246,7 +246,18 @@ const lang: HelpLanguageSource = {
     sayTogether: "Dis-le ensemble", // nieuw, nalezen
     chorusHint: "Dis-le en même temps que la voix. Rien n’est enregistré.", // nieuw, nalezen
     chorusAlone: "Maintenant, à toi", // nieuw, nalezen
-    speakBrave: "Les fautes, ce n’est pas grave. Les Néerlandais te comprennent aussi avec des fautes.", // nieuw, nalezen
+    speakBrave: "Les erreurs font partie de l'apprentissage. Pas compris ? Redis-le une fois.", // nieuw, nalezen
+    speakBrave2: "Stressé ? C'est normal. Dis-le quand même.", // nieuw, nalezen
+    speakBrave3: "Pas besoin de le dire parfaitement. Essaie, c'est tout.", // nieuw, nalezen
+    reasonTitle: "Pourquoi apprends-tu le néerlandais ?", // nieuw, nalezen
+    reasonHint: "Choisis-en un ou deux.", // nieuw, nalezen
+    reasonDone: "Terminé", // nieuw, nalezen
+    reasonWork: "Bien faire mon travail", // nieuw, nalezen
+    reasonKids: "Mes enfants", // nieuw, nalezen
+    reasonColleagues: "Parler avec mes collègues", // nieuw, nalezen
+    reasonArrange: "Régler les choses moi-même", // nieuw, nalezen
+    reasonJob: "Un meilleur travail", // nieuw, nalezen
+    reasonHome: "Me sentir chez moi aux Pays-Bas", // nieuw, nalezen
     speakMe: 'Moi',
     speakingPractice: 'Pratique de l’oral',
     speakingHint: "Dis des mots à voix haute et compare. Personne d’autre ne t’entend : rien n’est envoyé. Ton premier enregistrement d’une phrase reste sur ton téléphone, pour comparer plus tard.", // nieuw, nalezen

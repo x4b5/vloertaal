@@ -20,6 +20,8 @@ import { LessonPlayer, type LessonResult } from './components/LessonPlayer';
 import { About, BottomNav, Onboarding, Phrasebook, Result, Tips, TopBar, WordsHub, type Tab } from './components/Screens';
 import { News } from './components/News';
 import { NoticeCard } from './components/NoticeCard';
+import { ReasonCard } from './components/ReasonCard';
+import { reasonDue, withReasons } from './lib/reason';
 import { setCastCountry } from './lib/voices';
 import { noticeFor, seeNotice } from './lib/notice';
 import { NoVoiceNote, RulesHelp, RulesNoticeScreen, RulesPathNote, RulesShelf } from './components/RulesHelp';
@@ -48,7 +50,7 @@ import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
 import { BackupNudge } from './components/BackupNudge';
 import { BridgeOffer } from './components/BridgeOffer';
 import { bridgeDue, seeBridge } from './lib/bridge';
-import { afterSpeak, braveDue, chorusDue, type SpeakEvent } from './lib/chorus';
+import { afterSpeak, braveLine, chorusDue, type SpeakEvent } from './lib/chorus';
 import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
@@ -77,7 +79,7 @@ type View =
   | { name: 'home' }
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
   /** fresh: "Start again" (the saved place is kept until the first answer, see LessonPlayer). */
-  | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean }
+  | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean; admin?: boolean }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
   | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string; workTry?: WorkTryLine }
@@ -582,7 +584,7 @@ export default function App() {
   useEffect(() => {
     lessonClock.current = startClock();
     lessonStarted.current = new Date();
-    if (lessonOpen) count('lesson-start', { lesson: lessonOpen });
+    if (lessonOpen && !(view.name === 'lesson' && view.admin)) count('lesson-start', { lesson: lessonOpen });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonOpen]);
   // Learners from before "Herhaal vandaag" get cards for the words they already learned.
@@ -736,7 +738,14 @@ export default function App() {
   }
   if ((!langReady || (progress.onboarded && !picsReady) || !introDone) && view.name !== 'admin') return <Splash failed={langFailed || stalled} onRetry={() => location.reload()} lang={progress.helpLang} />;
   if (view.name === 'admin') {
-    return <Admin onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
+    // A lesson from the list gets its own entry without #beheer, so Back (or its end) returns
+    // to #beheer, whose hashchange opens this page again.
+    const openLesson = (lessonId: string) => {
+      const lesson: View = { name: 'lesson', lessonId, review: false, admin: true };
+      history.pushState({ view: lesson, depth: 1 } satisfies Entry, '', location.pathname + location.search);
+      setView(lesson);
+    };
+    return <Admin onLesson={openLesson} onBack={() => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname); setView(HOME); }} />;
   }
 
   // First run, one question per page: the language (an app to learn Dutch can't start in Dutch;
@@ -800,6 +809,8 @@ export default function App() {
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
       const finish = ({ accuracy, review, right, total, words: results, skipped, made, almost, written }: LessonResult) => {
+        // Opened from #beheer: a look-through, so nothing is saved or counted; back to the list.
+        if (view.admin) { leaving.current = true; back(); return; }
         const now = practisedAt(lessonStarted.current, new Date(), progress.lastDay);
         const today = dayKey(now);
         const cards = progress.cards ?? {};
@@ -902,7 +913,7 @@ export default function App() {
           quiet={Boolean(progress.quiet)}
           onQuiet={setQuiet}
           onQuit={({ step, steps }) => {
-            count('lesson-quit', { lesson: view.lessonId, quarter: quarterOf(step, steps) });
+            if (!view.admin) count('lesson-quit', { lesson: view.lessonId, quarter: quarterOf(step, steps) });
             leaving.current = true;
             back();
           }}
@@ -916,7 +927,7 @@ export default function App() {
           {...(daily || track !== 'taal' ? {} : lessonPace(progress))}
           // "Zeg het samen" and Bram's "Fouten mogen" (src/lib/chorus.ts), the owner's request, 5 November 2026.
           speakTogether={chorusDue(progress)}
-          speakBrave={braveDue(progress)}
+          speakBrave={braveLine(progress, Object.keys(progress.completed).length)}
           onSpeak={onSpeak}
         />
       );
@@ -1272,6 +1283,8 @@ export default function App() {
       const lessonsDone = knownLessons(progress.completed);
       const bridge = !notice && bridgeDue(progress);
       const nudge = !notice && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
+      // "Waarom leer jij Nederlands?" (src/lib/reason.ts): after 3 lessons, once, when no other card waits.
+      const reason = !notice && !bridge && !nudge && reasonDue(progress, lessonsDone);
       const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
       return (
         <>
@@ -1321,6 +1334,8 @@ export default function App() {
                 onKeep={() => { nudgeClosed(lessonsDone); go({ name: 'settings', page: 'backup' }); }}
                 onLater={() => { nudgeClosed(lessonsDone); setNudgeTick((n) => n + 1); }}
               />
+            ) : reason ? (
+              <ReasonCard lang={lang} onDone={(ids) => setProgress((p) => withReasons(p, ids))} />
             ) : undefined}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />

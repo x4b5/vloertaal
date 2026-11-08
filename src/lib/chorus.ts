@@ -11,7 +11,7 @@ import type { Progress } from './progress';
  * Not in every exercise (it makes the lesson longer); a lesson has one "Zeg het" (lib/speaking.ts),
  * so "the first of a lesson" would be every one. It comes
  *  - once, in the first "Zeg het" of a lesson the learner ever meets (Progress.speakMet), so every
- *    learner knows the step is there; Bram's "Fouten mogen" (one line, no button) comes with it;
+ *    learner knows the step is there; one of Bram's lines (one line, no button) comes with it;
  *  - always for a learner who skipped the recording the last SHY_AFTER times in a row ("Zeg het
  *    liever hardop" while the microphone could record; Progress.speakSkips), until they record
  *    once again. A microphone that failed or was refused is not the learner's choice: not counted.
@@ -40,9 +40,24 @@ export function chorusDue(p: SpeakState): boolean {
   return !p.speakMet || speakShy(p);
 }
 
-/** Bram's "Fouten mogen. Nederlanders begrijpen je ook met fouten.": once, at the first "Zeg het". */
-export function braveDue(p: SpeakState): boolean {
-  return !p.speakMet;
+/**
+ * Bram's lines (a nudge in the spirit of ACT: the nerves may come along, say it anyway). They are
+ * for the learner who does not dare (they skip), not for the one who talks freely with many
+ * mistakes, so each line is true for them and gives something to do. Not "Dutch people understand
+ * you, even with mistakes": they often do not (the owner, 8 November 2026).
+ */
+export const BRAVE_LINES = ['speakBrave', 'speakBrave2', 'speakBrave3'] as const;
+export type BraveLine = (typeof BRAVE_LINES)[number];
+
+/**
+ * Bram's line at this "Zeg het", or null: the first line at the first "Zeg het" ever; for a shy
+ * learner (speakShy) at every "Zeg het", a different line lesson by lesson (`lessonsDone`, the
+ * number of finished lessons), until they record again.
+ */
+export function braveLine(p: SpeakState, lessonsDone: number): BraveLine | null {
+  if (!p.speakMet) return BRAVE_LINES[0];
+  if (!speakShy(p)) return null;
+  return BRAVE_LINES[((lessonsDone % BRAVE_LINES.length) + BRAVE_LINES.length) % BRAVE_LINES.length];
 }
 
 /** The progress after a lesson's "Zeg het" told something (the same object when nothing changes). */

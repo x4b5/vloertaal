@@ -32,10 +32,10 @@ export const PRIVACY: readonly PrivacySection[] = [
     paras: [
       // "Durf je dit?" (src/content/toets.ts TOETS_DURF, the owner's request, 5 November 2026): its
       // answers are kept with the test's result on this phone, and never counted.
-      'Je voortgang en je keuzes: je hulptaal, je land, waar je werkt, je lessen, je certificaten, de zinnen die je op je werk hebt gezegd (“Gelukt op het werk”) en je instellingen. Ook de uitslag van de toets “Wat ken je al?”, je antwoorden op de vragen “Durf je dit?”, de opnames van je stem bij die toets, en de eerste opname van elke zin die je bij “Zeg het” zei. Dit staat in het geheugen van je browser, niet bij ons.',
+      'Je voortgang en je keuzes: je hulptaal, je land, waar je werkt, je lessen, je certificaten, de zinnen die je op je werk hebt gezegd (“Gelukt op het werk”), waarom je Nederlands leert (als je dat hebt gekozen) en je instellingen. Ook de uitslag van de toets “Wat ken je al?”, je antwoorden op de vragen “Durf je dit?”, de opnames van je stem bij die toets, en de eerste opname van elke zin die je bij “Zeg het” zei. Dit staat in het geheugen van je browser, niet bij ons.',
       // What the reset keeps (src/App.tsx onReset), said plainly: "Alles weg?" promised more than it
       // does (the owner's request, 4 November 2026). Everything goes only with the browser's own wipe.
-      'Kies je bij Instellingen “Voortgang wissen”? Dan zijn je lessen, je certificaten, de naam op je certificaten, je zinnen bij “Gelukt op het werk”, de uitslag, je antwoorden op “Durf je dit?” en de opnames van de toets, en de opnames van “Toen en nu” weg.',
+      'Kies je bij Instellingen “Voortgang wissen”? Dan zijn je lessen, je certificaten, de naam op je certificaten, je zinnen bij “Gelukt op het werk”, waarom je Nederlands leert, de uitslag, je antwoorden op “Durf je dit?” en de opnames van de toets, en de opnames van “Toen en nu” weg.',
       'Een paar dingen blijven staan, zodat je meteen opnieuw kunt beginnen: je hulptaal, je land, waar je werkt, je regio, je keuze bij “Vrouw of man?”, de dag waarop je begon en je instellingen.',
       'Wil je dat echt alles weg is? Wis dan in je browser de gegevens van de website vloertaal.nl (de sitegegevens). Staat Vloertaal als app op je telefoon? Verwijder de app dan ook.',
       'Maak je een back-up? Dan maakt je telefoon een bestand. Jij bepaalt waar dat bestand blijft.',

@@ -1,6 +1,6 @@
 import { CONTACT_EMAIL } from '../content/about';
 import { COACH_FACTS } from '../content/facts';
-import { PRO_LEAD, proSections, type ProSection } from '../content/pro';
+import { COACH_PITCH, COACH_WHY, PRO_LEAD, proSections, type ProSection } from '../content/pro';
 import { THEMES } from '../content/themes';
 import { KUN_REGELS, KUN_TAAL, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 import { languageNav } from './langPages';
@@ -62,8 +62,8 @@ ${[inner, extra].filter(Boolean).join('\n')}</section>`;
 }
 
 export function coachPage(): string {
-  const title = 'Gratis NT2-oefenapp voor werk | Vloertaal voor begeleiders';
-  const description = 'Zet Vloertaal in bij je taalcafé, NT2-les of op de werkvloer: gratis, zonder account, met uitleg in veertien talen en een directe link naar elk onderwerp.';
+  const title = 'Vloertaal voor jobcoaches: de werkvloer in eigen taal';
+  const description = `${COACH_PITCH} ${COACH_WHY}`;
   const data = [
     {
       '@context': 'https://schema.org',
@@ -80,8 +80,9 @@ export function coachPage(): string {
   return plainPage(
     { path: COACH_PATH, lang: 'nl', title, description, ogLocale: 'nl_NL', data },
     `<h1>Vloertaal voor begeleiders en werkgevers</h1>
-<p class="lead">${esc(PRO_LEAD)}</p>
+<p class="lead"><strong>${esc(COACH_PITCH)}</strong> ${esc(COACH_WHY)}</p>
 <a class="cta" href="/">Open Vloertaal →</a>
+<p>${text(PRO_LEAD)}</p>
 ${proSections.map(section).join('\n')}
 <footer>
 <h2>Per sector</h2>
