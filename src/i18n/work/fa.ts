@@ -227,6 +227,18 @@ const t: CultureTranslation = {
     's.rights.3': 'این تبعیض است.',
     'c.rights.q': 'اینجا را برای اخراجت امضا کن.',
     'c.rights.a': 'نه، هنوز امضا نمی‌کنم.',
+    'l.mustmay': 'باید، یا می‌توانی انتخاب کنی؟', // nieuw, nalezen
+    'w.moeten': 'باید، مجبور بودن', // nieuw, nalezen
+    'w.niethoeven': 'لازم نبودن، مجبور نبودن', // nieuw, nalezen
+    'w.nodig': 'لازم، ضروری', // nieuw, nalezen
+    'w.vrijwillig': 'داوطلبانه، اختیاری', // nieuw, nalezen
+    'w.keuze': 'انتخاب', // nieuw, nalezen
+    'w.regel': 'قانون، قاعده', // nieuw, nalezen
+    's.mustmay.1': 'باید این را امضا کنم؟', // nieuw, nalezen
+    's.mustmay.2': 'نه، لازم نیست امضا کنی.', // nieuw, nalezen
+    's.mustmay.3': 'قانون این است: کلاه ایمنی اجباری است.', // nieuw, nalezen
+    'c.mustmay.q': 'باید شنبه اضافه‌کاری کنم؟', // nieuw, nalezen
+    'c.mustmay.a': 'نه، لازم نیست. اختیاری است.', // nieuw, nalezen
     'u.leave': "مرخصی", // nieuw, nalezen
     'l.leave': 'روزهای مرخصی',
     'w.vakantiedagen': 'روزهای مرخصی (تعطیلات)',
@@ -696,6 +708,14 @@ const t: CultureTranslation = {
     'c.rights.o2': 'امضایش کن، چون رئیس می‌گوید مشکلی نیست.',
     'c.rights.o3': 'کاغذ را کنار بگذار و هیچ‌وقت درباره‌اش حرف نزن.',
     'c.rights.w': 'اگر چیزی در آن اشتباه باشد، ممکن است حق‌هایی را از دست بدهی، مثلاً حق گرفتن بیمهٔ بیکاری (WW). وقت خواستن برای مشورت گرفتن عادی و مجاز است.', // nieuw, nalezen
+    'c.mustmay': 'باید، لازم نیست، نباید', // nieuw, nalezen
+    'c.mustmay.b': 'در هلندی، عکسِ «moeten» می‌شود «niet hoeven». «Je moet tekenen» یعنی: چاره‌ای نداری. «Je hoeft niet te tekenen» یعنی: می‌توانی خودت انتخاب کنی. «Je mag niet tekenen» یعنی: ممنوع است. مواظب باش: در انگلیسی، «must not» یعنی «mag niet». در فارسی هم «نباید» یعنی «mag niet»، و «لازم نیست» یعنی «hoeft niet». مطمئن نیستی؟ بپرس.', // nieuw, nalezen
+    'c.mustmay.p': 'باید، یا حق انتخاب دارم؟', // nieuw, nalezen
+    'c.mustmay.s': 'سرپرست تیمت می‌گوید: «Je hoeft zaterdag niet te komen.» منظورش چیست؟', // nieuw, nalezen
+    'c.mustmay.o1': 'لازم نیست شنبه بیایی. خودت انتخاب می‌کنی.', // nieuw, nalezen
+    'c.mustmay.o2': 'اجازه نداری شنبه بیایی.', // nieuw, nalezen
+    'c.mustmay.o3': 'باید شنبه بیایی.', // nieuw, nalezen
+    'c.mustmay.w': '«Niet hoeven» یعنی اجباری نیست: می‌توانی انتخاب کنی. «Niet mogen» یعنی ممنوع است.', // nieuw, nalezen
     'c.leave': 'تعطیلات و مرخصی اضطراری',
     'c.leave.b': 'طبق قانون روزهای مرخصی با حقوق داری: دست‌کم ۴ برابر روزهایی که در هفته کار می‌کنی. تمام‌وقت، هفته‌ای ۵ روز؟ پس دست‌کم ۲۰ روز در سال. یک cao می‌تواند بیشتر بدهد. مرخصی را به موقع و کتبی درخواست کن. یک وضعیت اضطراری ناگهانی، مثل حادثه یا بیماری در خانواده‌ات؟ پس می‌توانی مرخصی کوتاه با حقوق (calamiteitenverlof) بگیری. فوراً به کارفرمایت بگو. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.',
     'c.leave.p': 'می‌خواهم برای ژوئیه مرخصی بگیرم.',

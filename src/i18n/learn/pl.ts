@@ -59,6 +59,7 @@ const t: CultureTranslation = {
     'c.boundaries.a.why': "Żart, który rani, można wyraźnie przerwać.",
     'c.health.a.why': "Przerwa chroni zdrowie, więc się ją bierze.",
     'c.rights.a.why': "Papieru o zwolnieniu nigdy nie podpisuje się od razu. Najpierw porada.",
+    'c.mustmay.a.why': "Dobrowolne znaczy, że możesz wybrać: praca w sobotę nie jest potrzebna.",
     'c.leave.a.why': "Kiedy? Ta odpowiedź podaje miesiąc i jak długo.",
     'c.illness.a.why': "Szczegóły medyczne są dla lekarza zakładowego, nie dla szefa.",
     'c.warning.a.why': "Pracodawca może skopiować paszport, ale nie może go zatrzymać.",

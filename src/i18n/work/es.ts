@@ -227,6 +227,18 @@ const t: CultureTranslation = {
     's.rights.3': 'Esto es discriminación.',
     'c.rights.q': 'Firma aquí tu despido.',
     'c.rights.a': 'No, todavía no firmo.',
+    'l.mustmay': '¿Tienes que, o puedes elegir?', // nieuw, nalezen
+    'w.moeten': 'tener que, deber', // nieuw, nalezen
+    'w.niethoeven': 'no tener que', // nieuw, nalezen
+    'w.nodig': 'necesario', // nieuw, nalezen
+    'w.vrijwillig': 'voluntario, por elección propia', // nieuw, nalezen
+    'w.keuze': 'la elección', // nieuw, nalezen
+    'w.regel': 'la regla, la norma', // nieuw, nalezen
+    's.mustmay.1': '¿Tengo que firmar esto?', // nieuw, nalezen
+    's.mustmay.2': 'No, no tienes que firmar.', // nieuw, nalezen
+    's.mustmay.3': 'Es la norma: el casco es obligatorio.', // nieuw, nalezen
+    'c.mustmay.q': '¿Tengo que hacer horas extra el sábado?', // nieuw, nalezen
+    'c.mustmay.a': 'No, no hace falta. Es voluntario.', // nieuw, nalezen
     'u.leave': "Permisos", // nieuw, nalezen
     'l.leave': 'Días libres',
     'w.vakantiedagen': 'los días de vacaciones',
@@ -696,6 +708,14 @@ const t: CultureTranslation = {
     'c.rights.o2': 'Lo firmas, porque el jefe dice que está bien.',
     'c.rights.o3': 'Guardas el papel y nunca hablas de ello.',
     'c.rights.w': '¿Hay algo mal en el papel? Entonces puedes perder derechos, por ejemplo a la prestación por desempleo (WW). Pedir tiempo para buscar consejo es normal y está permitido.', // nieuw, nalezen
+    'c.mustmay': 'Moet, hoeft niet, mag niet', // nieuw, nalezen
+    'c.mustmay.b': 'En neerlandés, lo contrario de “moeten” es “niet hoeven”. “Je moet tekenen” significa: no tienes elección. “Je hoeft niet te tekenen” significa: puedes elegir. “Je mag niet tekenen” significa: está prohibido. Cuidado: en inglés, “must not” significa “mag niet”. En español, “no tienes que” significa “hoeft niet”. ¿Tienes dudas? Pregunta.', // nieuw, nalezen
+    'c.mustmay.p': '¿Tengo que hacerlo, o puedo elegir?', // nieuw, nalezen
+    'c.mustmay.s': 'Tu jefe de equipo dice: “Je hoeft zaterdag niet te komen.” ¿Qué quiere decir?', // nieuw, nalezen
+    'c.mustmay.o1': 'No tienes que venir el sábado. Puedes elegir.', // nieuw, nalezen
+    'c.mustmay.o2': 'No puedes venir el sábado: está prohibido.', // nieuw, nalezen
+    'c.mustmay.o3': 'Tienes que venir el sábado.', // nieuw, nalezen
+    'c.mustmay.w': '“Niet hoeven” significa que no es obligatorio: puedes elegir. “Niet mogen” significaría que está prohibido.', // nieuw, nalezen
     'c.leave': 'Vacaciones y permiso por emergencia',
     'c.leave.b': 'Por ley tienes días libres pagados: como mínimo 4 veces los días que trabajas por semana. ¿Trabajas a jornada completa, 5 días a la semana? Entonces como mínimo 20 días al año. Un cao puede dar más. Pide las vacaciones a tiempo y por escrito. ¿Una emergencia de repente, como un accidente o una enfermedad en tu familia? Entonces puedes tener un permiso corto pagado (calamiteitenverlof). Avisa enseguida a tu empresa. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
     'c.leave.p': 'Me gustaría pedir vacaciones para julio.',

@@ -59,6 +59,7 @@ const t: CultureTranslation = {
     'c.boundaries.a.why': "Ai voie să oprești o glumă care rănește. Spune-o clar.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.health.a.why': "Pauza protejează sănătatea, așa că se ia.",
     'c.rights.a.why': "O concediere nu se semnează niciodată pe loc. Întâi se cere sfat.",
+    'c.mustmay.a.why': "Voluntar înseamnă că poți alege: nu e nevoie să lucrezi sâmbătă.", // nieuw, nalezen
     'c.leave.a.why': "Când? Acest răspuns dă o lună și cât timp.",
     'c.illness.a.why': "Detaliile medicale sunt pentru medicul de medicina muncii, nu pentru șef.",
     'c.warning.a.why': "Angajatorul poate copia pașaportul, nu îl poate păstra.",
