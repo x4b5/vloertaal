@@ -26,6 +26,38 @@
       "label": "Iris",
       "gender": "female",
       "voiceId": "7bUjekA3fJWJxU5oaRYK"
+    },
+    {
+      "key": "philip",
+      "label": "Philip",
+      "gender": "male",
+      "country": "be",
+      "twin": "thijmen",
+      "voiceId": "oBrJBCgJsPgZQkOMHL7K"
+    },
+    {
+      "key": "hans",
+      "label": "Hans",
+      "gender": "male",
+      "country": "be",
+      "twin": "daniel",
+      "voiceId": "s7Z6uboUuE4Nd8Q2nye6"
+    },
+    {
+      "key": "evie",
+      "label": "Evie",
+      "gender": "female",
+      "country": "be",
+      "twin": "ariel",
+      "voiceId": "D50w2srwVohKTPx9X6Th"
+    },
+    {
+      "key": "sare",
+      "label": "Sare",
+      "gender": "female",
+      "country": "be",
+      "twin": "noa",
+      "voiceId": "1o47RdEHSLs7UxKVywkX"
     }
   ]
 }

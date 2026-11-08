@@ -31,7 +31,8 @@ const said = Object.fromEntries(index.voices.map((v) => [v.key, v.said ?? {}]));
 const takes = Object.fromEntries(index.voices.map((v) => [v.key, v.takes ?? {}]));
 const take = Number(config.take ?? 1);
 
-const voices = config.voices.filter((v) => !onlyVoice || v.key.toLowerCase() === onlyVoice || v.label.toLowerCase() === onlyVoice);
+// The Flemish voices ("country") only when named, as in elevenlabs.mjs.
+const voices = config.voices.filter((v) => (onlyVoice ? v.key.toLowerCase() === onlyVoice || v.label.toLowerCase() === onlyVoice : !v.country));
 if (!voices.length) {
   console.error(`No voice "${onlyVoice}". Known voices: ${config.voices.map((v) => v.key).join(', ')}.`);
   process.exit(1);

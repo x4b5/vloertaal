@@ -22,8 +22,11 @@ if (!key) throw new Error('ELEVENLABS_API_KEY is not set.');
 const config = JSON.parse(readFileSync('scripts/voices/elevenlabs.json', 'utf8'));
 const clips = JSON.parse(readFileSync('public/audio/clips.json', 'utf8'));
 // Voice names are matched without case ("Thijmen" = "thijmen"), by key or label.
+// A voice for one country (the Flemish voices, "country": "be") is recorded only when named, so
+// a run for "all voices" never doubles its cost by accident: VOICES=philip,hans,evie,sare.
 const wantedNames = only.map((o) => o.toLowerCase());
-const voices = config.voices.filter((v) => !wantedNames.length || wantedNames.includes(v.key.toLowerCase()) || wantedNames.includes(v.label.toLowerCase()));
+const voices = config.voices.filter((v) =>
+  wantedNames.length ? wantedNames.includes(v.key.toLowerCase()) || wantedNames.includes(v.label.toLowerCase()) : !v.country);
 if (wantedNames.length && !voices.length) {
   throw new Error(`No voice matches "${only.join(', ')}". Known voices: ${config.voices.map((v) => v.key).join(', ')}.`);
 }
@@ -110,8 +113,8 @@ const save = () => {
   const index = {
     voices: config.voices
       .filter((v) => said[v.key] && Object.keys(said[v.key]).length)
-      .map(({ key, label, gender }) => ({
-        key, label, gender, license: 'ElevenLabs (paid plan, commercial use)', said: said[key], takes: takes[key] ?? {},
+      .map(({ key, label, gender, country, twin }) => ({
+        key, label, gender, ...(country ? { country, twin } : {}), license: 'ElevenLabs (paid plan, commercial use)', said: said[key], takes: takes[key] ?? {},
       })),
   };
   writeFileSync(indexPath, JSON.stringify(index, null, 1));
