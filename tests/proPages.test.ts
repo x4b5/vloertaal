@@ -5,7 +5,7 @@ import { Coaches } from '../src/components/Coaches';
 import { About } from '../src/components/Screens';
 import { aboutIds, aboutSection, aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE, siteSections } from '../src/content/about';
 import { COACH_FACTS } from '../src/content/facts';
-import { ENTREE_UNITS, PRO_LEAD, proSections } from '../src/content/pro';
+import { COACH_PITCH, COACH_WHY, ENTREE_UNITS, PRO_LEAD, proSections } from '../src/content/pro';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import { getHelpLanguage, helpLanguageSources, registerPack, ui } from '../src/i18n/all';
 import nlPack from '../src/i18n/packs/nl';
@@ -95,6 +95,8 @@ describe('Voor begeleiders en werkgevers: in the app and on the site, from one s
     const s = textOf(site);
     for (const page of [a, s]) {
       expect(page).toContain(PRO_LEAD);
+      expect(page).toContain(COACH_PITCH);
+      expect(page).toContain(COACH_WHY);
       for (const sec of proSections) {
         expect(page, sec.id).toContain(sec.title);
         for (const p of sec.body) expect(page, sec.id).toContain(p);

@@ -41,7 +41,16 @@ export interface ProSection {
 export { PRO_TITLE };
 
 /**
- * Under the title: the question first, so whoever arrives (for example from a poster) sees at once
+ * Under the title, before anything else: what Vloertaal is, in one sentence a job coach can repeat
+ * after hearing it once (positioning of 8 November 2026: for whoever keeps a placement going, not a
+ * language app). "Kandidaten" is the coaches' and recruiters' own word; "werkvloer" covers both the
+ * language and the unwritten rules. The second sentence is for whoever asks why.
+ */
+export const COACH_PITCH = 'Een gratis app die kandidaten de werkvloer uitlegt, in hun eigen taal.';
+export const COACH_WHY = 'Zodat een plaatsing niet stukloopt op een instructie of een ongeschreven regel.';
+
+/**
+ * After the pitch: the question, so whoever arrives (for example from a poster) sees at once
  * what we ask. Modest, as a question; what Vloertaal is follows in 'p.what', the reason in 'p.story'.
  */
 export const PRO_LEAD = 'Hoi, ik ben Xavier. Ik ben op dit moment bezig met het bouwen van Vloertaal, een oefenapp voor Nederlands op het werk. Graag zou ik daar de blik van professionals op willen: taalprofessionals, en experts op het gebied van de arbeidsmarkt en wet- en regelgeving. Zou je de app eens willen bekijken en laten weten wat beter kan, inhoudelijk of didactisch? En als het past: zou je deelnemers ermee willen laten oefenen? De app is grotendeels met behulp van AI gebouwd en nog niet door vakmensen nagekeken. Juist daarom is elke opmerking waardevol. Reageren kan via hoi@vloertaal.nl of via het vlaggetje Melden in een les.';
