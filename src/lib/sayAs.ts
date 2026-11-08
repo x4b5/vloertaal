@@ -37,8 +37,9 @@ export function sayAs(text: string): string {
  * round makes them again. 0: any take will do.
  */
 export const CAO_TAKE = 5;
-/** Take 6: the tiles in ALONE and REDO, said wrong before 8 November 2026 ("tot." → "total"). */
-export const ALONE_TAKE = 6;
+/** Take 7: the tiles in ALONE and REDO, said wrong before 8 November 2026 ("tot." → "total"), now
+ *  recorded with the language set to Dutch and without the context line (scripts/voices/elevenlabs.mjs). */
+export const ALONE_TAKE = 7;
 export function minTake(text: string): number {
   const tile = text.trim().toLowerCase();
   if (ALONE[tile] || REDO.has(tile)) return ALONE_TAKE;
