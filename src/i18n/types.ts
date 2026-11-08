@@ -308,7 +308,9 @@ export const uiEn = {
   /** Over the microphone once "Zeg het samen" is done. */
   chorusAlone: 'Now on your own',
   /** Bram, once, at the first "Zeg het" (src/lib/chorus.ts braveDue). */
-  speakBrave: 'Mistakes are fine. Dutch people understand you, even with mistakes.',
+  speakBrave: "Mistakes are part of learning. Not understood? Say it once more.",
+  speakBrave2: "Nervous? That is normal. Say it anyway.",
+  speakBrave3: "You don't have to say it perfectly. Just try.",
   speakMe: 'Me',
   speakingPractice: 'Speaking practice',
   /** Since "Toen en nu" (5 November 2026) the first recording of a sentence is kept on the phone. */

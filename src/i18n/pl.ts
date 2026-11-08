@@ -246,7 +246,9 @@ const lang: HelpLanguageSource = {
     sayTogether: "Powiedz to razem", // nieuw, nalezen
     chorusHint: "Mów w tym samym czasie co głos. Nic nie jest nagrywane.", // nieuw, nalezen
     chorusAlone: "Teraz tylko ty", // nieuw, nalezen
-    speakBrave: "Błędy są w porządku. Holendrzy rozumieją cię także z błędami.", // nieuw, nalezen
+    speakBrave: "Błędy są częścią nauki. Nie zrozumieli cię? Powiedz to jeszcze raz.", // nieuw, nalezen
+    speakBrave2: "Stresujesz się? To normalne. Powiedz to mimo to.", // nieuw, nalezen
+    speakBrave3: "Nie musisz mówić idealnie. Po prostu spróbuj.", // nieuw, nalezen
     speakMe: 'Ja',
     speakingPractice: 'Ćwiczenie mówienia',
     speakingHint: "Mów słowa na głos i porównuj. Nikt inny cię nie słyszy: nic nie jest wysyłane. Twoje pierwsze nagranie zdania zostaje w telefonie, żeby porównać później.", // nieuw, nalezen

@@ -246,7 +246,9 @@ const lang: HelpLanguageSource = {
     sayTogether: "Spune-o împreună", // nieuw, nalezen
     chorusHint: "Spune-o în același timp cu vocea. Nimic nu se înregistrează.", // nieuw, nalezen
     chorusAlone: "Acum doar tu", // nieuw, nalezen
-    speakBrave: "Greșelile sunt în regulă. Olandezii te înțeleg și cu greșeli.", // nieuw, nalezen
+    speakBrave: "Greșelile fac parte din învățare. Nu te-au înțeles? Spune încă o dată.", // nieuw, nalezen
+    speakBrave2: "Emoții? E normal. Spune totuși.", // nieuw, nalezen
+    speakBrave3: "Nu trebuie să spui perfect. Doar încearcă.", // nieuw, nalezen
     speakMe: 'Eu',
     speakingPractice: 'Exercițiu de vorbire',
     speakingHint: "Spune cuvintele cu voce tare și compară. Nimeni altcineva nu te aude: nimic nu este trimis. Prima ta înregistrare a unei propoziții rămâne pe telefon, ca să compari mai târziu.", // nieuw, nalezen

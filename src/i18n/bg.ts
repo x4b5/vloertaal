@@ -246,7 +246,9 @@ const lang: HelpLanguageSource = {
     sayTogether: "Кажи го заедно", // nieuw, nalezen
     chorusHint: "Казвай го едновременно с гласа. Нищо не се записва.", // nieuw, nalezen
     chorusAlone: "Сега само ти", // nieuw, nalezen
-    speakBrave: "Грешките са наред. Нидерландците те разбират и с грешки.", // nieuw, nalezen
+    speakBrave: "Грешките са част от ученето. Не те разбраха? Кажи го още веднъж.", // nieuw, nalezen
+    speakBrave2: "Притеснен ли си? Това е нормално. Кажи го въпреки това.", // nieuw, nalezen
+    speakBrave3: "Не е нужно да го казваш перфектно. Просто опитай.", // nieuw, nalezen
     speakMe: 'Аз',
     speakingPractice: 'Упражнение по говорене',
     speakingHint: "Казвай думите на глас и сравнявай. Никой друг не те чува: нищо не се изпраща. Първият ти запис на едно изречение остава в телефона, за да сравниш по-късно.", // nieuw, nalezen

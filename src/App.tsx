@@ -47,7 +47,7 @@ import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
 import { BackupNudge } from './components/BackupNudge';
 import { BridgeOffer } from './components/BridgeOffer';
 import { bridgeDue, seeBridge } from './lib/bridge';
-import { afterSpeak, braveDue, chorusDue, type SpeakEvent } from './lib/chorus';
+import { afterSpeak, braveLine, chorusDue, type SpeakEvent } from './lib/chorus';
 import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
 import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
@@ -913,7 +913,7 @@ export default function App() {
           {...(daily || track !== 'taal' ? {} : lessonPace(progress))}
           // "Zeg het samen" and Bram's "Fouten mogen" (src/lib/chorus.ts), the owner's request, 5 November 2026.
           speakTogether={chorusDue(progress)}
-          speakBrave={braveDue(progress)}
+          speakBrave={braveLine(progress, Object.keys(progress.completed).length)}
           onSpeak={onSpeak}
         />
       );

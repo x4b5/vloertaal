@@ -246,7 +246,9 @@ const lang: HelpLanguageSource = {
     sayTogether: "با هم بگویید", // nieuw, nalezen
     chorusHint: "همزمان با صدا بگویید. چیزی ضبط نمی‌شود.", // nieuw, nalezen
     chorusAlone: "حالا فقط خودتان", // nieuw, nalezen
-    speakBrave: "اشتباه کردن اشکالی ندارد. هلندی‌ها حرف شما را با اشتباه هم می‌فهمند.", // nieuw, nalezen
+    speakBrave: "اشتباه بخشی از یادگیری است. متوجه نشدند؟ یک بار دیگر بگو.", // nieuw, nalezen
+    speakBrave2: "استرس داری؟ عادی است. باز هم بگو.", // nieuw, nalezen
+    speakBrave3: "لازم نیست کامل بگویی. فقط امتحان کن.", // nieuw, nalezen
     speakMe: 'من',
     speakingPractice: 'تمرین حرف زدن',
     speakingHint: "کلمه‌ها را بلند بگویید و مقایسه کنید. هیچ‌کس دیگری صدای شما را نمی‌شنود: چیزی فرستاده نمی‌شود. اولین ضبط شما از هر جمله روی گوشی‌تان می‌ماند تا بعداً مقایسه کنید.", // nieuw, nalezen

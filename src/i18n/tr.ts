@@ -246,7 +246,9 @@ const lang: HelpLanguageSource = {
     sayTogether: "Birlikte söyle", // nieuw, nalezen
     chorusHint: "Sesle aynı anda söyle. Hiçbir şey kaydedilmez.", // nieuw, nalezen
     chorusAlone: "Şimdi sadece sen", // nieuw, nalezen
-    speakBrave: "Hata yapmak sorun değil. Hollandalılar seni hatalarınla da anlar.", // nieuw, nalezen
+    speakBrave: "Hatalar öğrenmenin bir parçası. Anlaşılmadı mı? Bir kez daha söyle.", // nieuw, nalezen
+    speakBrave2: "Heyecanlı mısın? Bu normal. Yine de söyle.", // nieuw, nalezen
+    speakBrave3: "Mükemmel söylemek zorunda değilsin. Sadece dene.", // nieuw, nalezen
     speakMe: 'Ben',
     speakingPractice: 'Konuşma alıştırması',
     speakingHint: "Kelimeleri sesli söyle ve karşılaştır. Seni başka kimse duymaz: hiçbir şey gönderilmez. Bir cümleyi ilk söylediğin kayıt telefonunda kalır, sonra karşılaştırabilirsin.", // nieuw, nalezen

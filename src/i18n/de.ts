@@ -246,7 +246,9 @@ const lang: HelpLanguageSource = {
     sayTogether: "Sag es zusammen", // nieuw, nalezen
     chorusHint: "Sag es gleichzeitig mit der Stimme. Nichts wird aufgenommen.", // nieuw, nalezen
     chorusAlone: "Jetzt allein", // nieuw, nalezen
-    speakBrave: "Fehler sind okay. Niederländer verstehen dich auch mit Fehlern.", // nieuw, nalezen
+    speakBrave: "Fehler gehören zum Lernen. Nicht verstanden? Sag es noch einmal.", // nieuw, nalezen
+    speakBrave2: "Aufgeregt? Das ist normal. Sag es trotzdem.", // nieuw, nalezen
+    speakBrave3: "Du musst es nicht perfekt sagen. Probier es einfach.", // nieuw, nalezen
     speakMe: 'Ich',
     speakingPractice: 'Sprechen üben',
     speakingHint: "Sag Wörter laut und vergleiche. Niemand sonst hört dich: Nichts wird geschickt. Deine erste Aufnahme eines Satzes bleibt auf deinem Handy, zum späteren Vergleichen.", // nieuw, nalezen
