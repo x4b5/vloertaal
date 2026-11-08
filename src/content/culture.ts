@@ -40,6 +40,8 @@ export interface CultureTip {
    * stays on the "Zo werkt het hier" page.
    */
   lead?: readonly number[];
+  /** The Dutch key terms shown in bold on the tip's page (TIP_TERMS). */
+  terms?: readonly string[];
 }
 
 const tip = (t: CultureTip) => t;
@@ -963,6 +965,64 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.meeting': [0, 1, 2, 3, 4], // the werkoverleg; your opinion is welcome; a question is a contribution; wait for your turn, then speak
 };
 
+/**
+ * The Dutch key terms of a tip, in bold on its page (at most two): the words the learner will
+ * hear at work ("bedrijfsarts", "uitzendbureau"), which stay Dutch in every help language, so
+ * the bold needs no translation work (the owner, 8 November 2026). Not brand names, people's
+ * names or whole sentences. Each term is in the English text of the page (tests/tipTerms.test.ts).
+ */
+export const TIP_TERMS: Readonly<Record<string, readonly string[]>> = {
+  'c.je': ['je', 'u'],
+  'c.arrive': ['buddy'],
+  'c.accident': ['BHV’er'],
+  'c.counting': ['vijfentwintig'],
+  'c.details': ['BSN'],
+  'c.no': ['dat lukt niet'],
+  'c.listen': ['uitpraten'],
+  'c.meeting': ['werkoverleg'],
+  'c.findwork': ['uitzendbureau'],
+  'c.contract': ['proeftijd'],
+  'c.agency': ['uitzendbureau'],
+  'c.permit': ['inburgering'],
+  'c.bsn': ['BSN', 'DigiD'],
+  'c.housing': ['Juridisch Loket'],
+  'c.payslip': ['bruto', 'netto'],
+  'c.extra': ['vakantiegeld', 'minimumloon'],
+  'c.respect': ['pesten', 'vertrouwenspersoon'],
+  'c.gossip': ['roddelen'],
+  'c.boundaries': ['grensoverschrijdend gedrag', 'vertrouwenspersoon'],
+  'c.rights': ['UWV', 'Juridisch Loket'],
+  'c.kids': ['calamiteitenverlof'],
+  'c.illness': ['bedrijfsarts', 'betermelden'],
+  'c.backtowork': ['betermelden', 'bedrijfsarts'],
+  'c.gethelp': ['Juridisch Loket'],
+  'c.certs': ['VCA', 'heftruckcertificaat'],
+  'c.nextstep': ['mbo', 'startkwalificatie'],
+  'c.doctor': ['huisarts', 'huisartsenpost'],
+  'c.insurance': ['eigen risico'],
+  'c.healthy': ['huisarts'],
+  'c.feelwell': ['vertrouwenspersoon', 'bedrijfsarts'],
+  'c.letters': ['Belastingdienst', 'gemeente'],
+  'c.transit': ['reiskostenvergoeding'],
+  'c.ww': ['WW', 'UWV'],
+  'c.jobends': ['eindafrekening'],
+  'c.newjob': ['referentie'],
+  'c.tools': ['toolbox'],
+  'c.line': ['storing', 'noodstop'],
+  'c.client': ['u', 'je'],
+  'c.service': ['u', 'je'],
+  'c.hours': ['half acht'],
+  'c.harvest': ['stukloon'],
+  'c.greensafe': ['spuitmiddelen'],
+  'c.workorder': ['werkbon'],
+  'c.power': ['onder spanning'],
+  'c.placement': ['stage', 'praktijkopleider'],
+  'c.council': ['gemeenteraad'],
+  'c.police': ['bezwaar maken'],
+  'c.login': ['DigiD'],
+  'c.road': ['zelfstandig', 'in loondienst'],
+};
+
 /** All tips in course order: the ones above (with the Smart tools tips after "Asking for help" and the Numbers and details tips before "Time and schedule"), then those of the work-and-rights units (src/content/work.ts). */
 export const cultureTips: CultureTip[] = [
   ...baseTips.slice(0, afterHelp),
@@ -971,7 +1031,11 @@ export const cultureTips: CultureTip[] = [
   ...workTips.filter(isDataTip),
   ...baseTips.slice(beforeTime),
   ...workTips.filter((t) => !isToolsTip(t) && !isDataTip(t)),
-].map((t) => (TIP_LEADS[t.id] ? { ...t, lead: TIP_LEADS[t.id] } : t));
+].map((t) => ({
+  ...t,
+  ...(TIP_LEADS[t.id] ? { lead: TIP_LEADS[t.id] } : {}),
+  ...(TIP_TERMS[t.id] ? { terms: TIP_TERMS[t.id] } : {}),
+}));
 
 /**
  * Whether the person in a tip's situation is a woman ('f'), a man ('m') or not said (null),
