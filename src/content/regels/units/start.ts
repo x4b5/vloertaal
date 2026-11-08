@@ -53,7 +53,7 @@ export const startUnit: RuleUnit = {
             { id: 'b', text: 'Haar paspoort, om bij de baas achter te laten.', best: false, feedback: 'Niet doen. Haar paspoort houdt ze altijd zelf.' },
             { id: 'c', text: 'Alleen haar telefoon. De rest staat online.', best: false, feedback: 'Haar werkgever moet haar ID echt zien.' },
           ],
-          why: 'Je werkgever moet je ID-kaart of paspoort zien en een kopie maken. Je ID geef je nooit af.', whyMore: 'Hij heeft ook je BSN nodig. Je BSN is je burgerservicenummer: je persoonlijke nummer bij de overheid. Het staat op je ID-kaart.',
+          why: 'Je werkgever moet je ID-kaart of paspoort zien en een kopie maken. Je ID geef je nooit af.', whyMore: 'Hij heeft ook je BSN nodig. Je BSN is je burgerservicenummer: je persoonlijke nummer bij de overheid. Het staat op een Nederlandse ID-kaart of paspoort. Heb je die niet? Dan staat het in de brief van de gemeente.',
         },
         {
           kind: 'whatdo',
@@ -177,7 +177,7 @@ export const startUnit: RuleUnit = {
           id: 'r.l.start.3.wd1',
           situation: 'Piotr snapt het niet goed. Wat kan Piotr het beste doen?',
           options: [
-            { id: 'a', text: 'Hij knikt, en hij kijkt straks hoe de anderen het doen.', best: false, feedback: 'Dat is logisch. Maar zo kan hij een fout maken.' },
+            { id: 'a', text: 'Hij knikt, en hij kijkt straks hoe de anderen het doen.', best: false, feedback: 'Dat snap ik. Maar zo kan hij een fout maken.' },
             { id: 'b', text: 'Hij zegt "ja", en hij vraagt het later aan iemand anders.', best: false, feedback: 'Dan denkt Mark dat het goed gaat.' },
             { id: 'c', text: 'Hij zegt: "Nog een keer graag, iets langzamer."', best: true, feedback: 'Goed. Zo leert hij het meteen goed.' },
           ],

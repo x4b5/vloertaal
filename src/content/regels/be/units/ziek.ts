@@ -92,7 +92,7 @@ export const be: BeUnit = {
             id: 'r.be.l.ziek.1.wd2',
             situation: 'Jayden is 3 dagen ziek. Hij krijgt een ziektebriefje van de dokter. Wat kan Jayden het beste doen?',
             options: [
-              { id: 'a', text: 'Hij bewaart het thuis, voor als de chef erom vraagt.', best: false, feedback: 'Dat is logisch. Maar zijn baas moet het snel krijgen.' },
+              { id: 'a', text: 'Hij bewaart het thuis, voor als de chef erom vraagt.', best: false, feedback: 'Dat snap ik. Maar zijn baas moet het snel krijgen.' },
               { id: 'b', text: 'Hij bezorgt het snel aan zijn werk.', best: true, feedback: 'Goed. Meestal moet het binnen 2 werkdagen bij zijn baas zijn.' },
               { id: 'c', text: 'Hij stuurt het alleen naar zijn ziekenfonds.', best: false, feedback: 'Bij een korte ziekte gaat het briefje eerst naar je werk.' },
             ],

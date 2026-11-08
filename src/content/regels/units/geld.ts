@@ -188,7 +188,7 @@ export const geldUnit: RuleUnit = {
           situation: 'Fatima moet nog inburgeren. Ze heeft op dinsdag taalles. Haar nieuwe rooster heeft ook diensten op dinsdag. Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze vertelt het aan haar werkgever en aan de gemeente.', best: true, feedback: 'Goed. Dan kunnen ze samen een rooster zoeken.' },
-            { id: 'b', text: 'Ze stopt met de taalles. Werk gaat nu voor.', best: false, feedback: 'Dat is logisch. Maar de gemeente moet het weten, want inburgeren moet.' },
+            { id: 'b', text: 'Ze stopt met de taalles. Werk gaat nu voor.', best: false, feedback: 'Dat snap ik. Maar de gemeente moet het weten, want inburgeren moet.' },
             { id: 'c', text: 'Ze werkt op dinsdag, en ze zegt niets tegen de gemeente.', best: false, feedback: 'Dan mist ze lessen. Dat kan problemen geven.' },
           ],
           why: 'Werk en inburgering kunnen vaak samen. De gemeente maakt met je een plan.', whyMore: 'Inburgeren betekent: je leert Nederlands en hoe Nederland werkt. Voor veel nieuwkomers is dat verplicht. Vertel het je werkgever en de gemeente op tijd.',
@@ -333,7 +333,7 @@ export const geldUnit: RuleUnit = {
           situation: 'Esra heeft nieuw werk. Ze wil haar schulden aanpakken. Wat kan Esra het beste doen?',
           options: [
             { id: 'a', text: 'Ze maakt een lijst: wat moet ze aan wie betalen?', best: true, feedback: 'Goed. Met een overzicht kan iemand haar helpen.' },
-            { id: 'b', text: 'Ze betaalt eerst wie het vaakst belt of mailt.', best: false, feedback: 'Dat is logisch. Maar dat is niet altijd de belangrijkste.' },
+            { id: 'b', text: 'Ze betaalt eerst wie het vaakst belt of mailt.', best: false, feedback: 'Dat snap ik. Maar dat is niet altijd de belangrijkste.' },
             { id: 'c', text: 'Ze betaalt elke schuld een klein beetje tegelijk.', best: false, feedback: 'Goed bedoeld. Maar sommige rekeningen gaan voor.' },
           ],
           why: 'Zo zie je wat je aan wie moet. Betaal eerst je huur, energie en zorgverzekering.', whyMore: 'Een nieuwe lening maakt het vaak erger.',

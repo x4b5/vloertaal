@@ -87,7 +87,7 @@ export const veiligUnit: RuleUnit = {
           question: 'Je handschoenen zijn kapot. Bij wie vraag je nieuwe?',
           options: [
             { id: 'a', who: 'leidinggevende', best: true, feedback: 'Goed. Je uitvoerder of leidinggevende regelt nieuwe spullen.' },
-            { id: 'b', who: 'collega', best: false, feedback: 'Een collega kan je helpen zoeken. Maar je werk moet ze geven.' },
+            { id: 'b', who: 'collega', best: false, feedback: 'Een collega kan je helpen zoeken. Maar je werkgever moet ze geven.' },
             { id: 'c', who: 'arbeidsinspectie', best: false, feedback: 'Pas als je werkgever niets doet. Vraag het eerst zelf.' },
           ],
           why: 'Vraag nieuwe spullen aan je uitvoerder of leidinggevende. Je krijgt ze gratis.',
@@ -322,7 +322,7 @@ export const veiligUnit: RuleUnit = {
           id: 'r.l.veilig.4.wd1',
           situation: 'Kevin kan bijna niet meer opletten. Hij moet zo een zware kar rijden. Wat kan Kevin het beste doen?',
           options: [
-            { id: 'a', text: 'Hij drinkt nog een blikje energiedrank. Dan gaat het wel.', best: false, feedback: 'Dat helpt maar kort. Daarna is hij vaak nog moeier.' },
+            { id: 'a', text: 'Hij drinkt nog een blikje energiedrank. Dan gaat het wel.', best: false, feedback: 'Dat helpt maar kort. Daarna is hij vaak nog vermoeider.' },
             { id: 'b', text: 'Hij zegt tegen zijn leidinggevende dat hij te moe is.', best: true, feedback: 'Goed. Dan kan zijn leidinggevende hem ander werk geven.' },
             { id: 'c', text: 'Hij zegt niets, en hij werkt gewoon wat langzamer.', best: false, feedback: 'Dat snap ik. Maar moe zijn geeft snel fouten en ongelukken.' },
           ],

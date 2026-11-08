@@ -130,7 +130,7 @@ export const be: BeUnit = {
             situation: 'Wat doet Dewi?',
             options: [
               { id: 'a', text: 'Ze doet uit wat uit mag, en ze meldt de kraan.', best: true, feedback: 'Goed. Zo bespaart ze energie en water.' },
-              { id: 'b', text: 'Ze laat alles zo. Het is niet haar gebouw.', best: false, feedback: 'Dat is logisch. Maar een lek kost veel water.' },
+              { id: 'b', text: 'Ze laat alles zo. Het is niet haar gebouw.', best: false, feedback: 'Dat snap ik. Maar een lek kost veel water.' },
               { id: 'c', text: 'Ze probeert de kraan zelf te maken.', best: false, feedback: 'Goed bedoeld. Maar dat is niet haar werk.' },
             ],
             why: 'Doe lampen en toestellen uit als dat mag. Vraag wat aan moet blijven, zoals de noodverlichting. Meld een lek meteen. Zelf herstellen doe je alleen als dat jouw werk is.',

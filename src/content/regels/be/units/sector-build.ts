@@ -67,7 +67,7 @@ export const be: BeUnit = {
             id: 'r.be.l.build.1.wd1',
             situation: 'Mohammed krijgt geen veiligheidsschoenen. Hij heeft alleen gewone sneakers. Wat kan Mohammed het beste doen?',
             options: [
-              { id: 'a', text: 'Hij werkt op zijn sneakers. Het is maar voor één dag.', best: false, feedback: 'Dat is logisch. Maar een nagel gaat zo door een sneaker.' },
+              { id: 'a', text: 'Hij werkt op zijn sneakers. Het is maar voor één dag.', best: false, feedback: 'Dat snap ik. Maar een nagel gaat zo door een sneaker.' },
               { id: 'b', text: 'Hij koopt zelf schoenen, en betaalt ze van zijn loon.', best: false, feedback: 'Goed bedoeld. Maar zijn werkgever moet ze gratis geven.' },
               { id: 'c', text: 'Hij vraagt de werfleider om veiligheidsschoenen.', best: true, feedback: 'Goed. De werfleider is de baas op de werf. Die regelt dit.' },
             ],
@@ -136,7 +136,7 @@ export const be: BeUnit = {
             id: 'r.be.l.build.2.wd1',
             situation: 'Kevin wil de plaat halen. Wat kan Kevin het beste doen?',
             options: [
-              { id: 'a', text: 'Hij loopt snel onder het blok door. Het hangt toch vast.', best: false, feedback: 'Dat is logisch. Maar een last kan altijd vallen.' },
+              { id: 'a', text: 'Hij loopt snel onder het blok door. Het hangt toch vast.', best: false, feedback: 'Dat snap ik. Maar een last kan altijd vallen.' },
               { id: 'b', text: 'Hij loopt om, ook al duurt dat langer.', best: true, feedback: 'Goed. Onder een hangende last loop je nooit.' },
               { id: 'c', text: 'Hij roept naar de kraanman dat hij eraan komt.', best: false, feedback: 'Goed bedoeld. Maar onder de last blijft het gevaarlijk.' },
             ],

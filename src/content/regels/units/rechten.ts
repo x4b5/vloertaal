@@ -143,7 +143,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.2.wd1',
           situation: 'Dewi wil dat het stopt. Wat kan Dewi het beste doen?',
           options: [
-            { id: 'a', text: 'Ze lacht mee. Dan houdt het vanzelf wel op.', best: false, feedback: 'Dat is logisch. Maar vaak gaat het dan juist door.' },
+            { id: 'a', text: 'Ze lacht mee. Dan houdt het vanzelf wel op.', best: false, feedback: 'Dat snap ik. Maar vaak gaat het dan juist door.' },
             { id: 'b', text: 'Ze zegt duidelijk: "Stop. Ik wil dit niet."', best: true, feedback: 'Goed. Dan weet hij het, en anderen horen het ook.' },
             { id: 'c', text: 'Ze gaat hem uit de weg, en ze zegt niets.', best: false, feedback: 'Dat lost het niet op. Hulp vragen mag.' },
           ],
@@ -225,7 +225,7 @@ export const rechtenUnit: RuleUnit = {
           situation: 'Piotr is bang dat hij zijn werk en zijn kamer kwijtraakt. Wat kan Piotr het beste doen?',
           options: [
             { id: 'a', text: 'Hij zoekt hulp, ook al is hij bang.', best: true, feedback: 'Goed. Er zijn mensen die hem kunnen helpen.' },
-            { id: 'b', text: 'Hij wacht af. Het wordt vast beter als hij hard werkt.', best: false, feedback: 'Dat is logisch. Maar dit gaat meestal niet vanzelf over.' },
+            { id: 'b', text: 'Hij wacht af. Het wordt vast beter als hij hard werkt.', best: false, feedback: 'Dat snap ik. Maar dit gaat meestal niet vanzelf over.' },
             { id: 'c', text: 'Hij vraagt de baas beleefd om iets meer loon.', best: false, feedback: 'Mag. Maar het paspoort en de uren blijven een probleem.' },
           ],
           why: 'Uitbuiting is niet normaal, en het mag niet. Ben je in gevaar? Bel 112.', whyMore: 'Iedereen die in Nederland werkt, kan hulp krijgen. Je kunt het melden bij de Arbeidsinspectie, ook zonder je naam.',
@@ -286,7 +286,7 @@ export const rechtenUnit: RuleUnit = {
           id: 'r.l.rechten.4.sc1',
           picture: 'Sanne aan een tafel tegenover haar baas. Voor haar ligt een papier met een pen.',
           lines: [
-            'Sanne werkt 2 jaar bij een webshop.',
+            'Sanne werkt al 2 jaar bij een webshop.',
             'Haar baas roept haar binnen.',
             'Hij zegt: "We moeten bezuinigen. Teken dit maar, dan regelen we het netjes."',
             'Het papier heet een vaststellingsovereenkomst.',

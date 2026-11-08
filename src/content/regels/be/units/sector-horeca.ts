@@ -69,7 +69,7 @@ export const be: BeUnit = {
             id: 'r.be.l.horeca.1.wd1',
             situation: 'Een bak saus staat al 2 uur op het aanrecht. Het is warm in de keuken. Wat kan Jayden het beste doen?',
             options: [
-              { id: 'a', text: 'Hij zet de bak snel terug in de koelkast.', best: false, feedback: 'Dat is logisch. Maar misschien is de saus al niet meer goed.' },
+              { id: 'a', text: 'Hij zet de bak snel terug in de koelkast.', best: false, feedback: 'Dat snap ik. Maar misschien is de saus al niet meer goed.' },
               { id: 'b', text: 'Hij vraagt de chef wat ermee moet.', best: true, feedback: 'Goed. De chef weet wat de regels zijn.' },
               { id: 'c', text: 'Hij ruikt eraan. Ruikt het goed? Dan is het oké.', best: false, feedback: 'Bacteriën ruik je niet altijd.' },
             ],

@@ -241,7 +241,7 @@ export const be: BeUnit = {
             situation: 'Wat doet Jayden?',
             options: [
               { id: 'a', text: 'Hij laat rustig zijn identiteitskaart zien.', best: true, feedback: 'Goed. Dat moet als de politie erom vraagt.' },
-              { id: 'b', text: 'Hij zegt: "Ik heb niets gedaan," en loopt weg.', best: false, feedback: 'Dat is logisch. Maar dan kan hij een boete krijgen.' },
+              { id: 'b', text: 'Hij zegt: "Ik heb niets gedaan," en loopt weg.', best: false, feedback: 'Dat snap ik. Maar dan kan hij een boete krijgen.' },
               { id: 'c', text: 'Hij zegt dat zijn kaart thuis ligt. Dat is niet waar.', best: false, feedback: 'Niet doen. Dan maakt hij het moeilijker voor zichzelf.' },
             ],
             why: 'Vanaf 15 jaar moet je je identiteitskaart altijd bij je hebben. Vraagt de politie erom? Dan laat je hem zien. Heb je hem niet bij? Dan kan je een boete krijgen. Vond je het niet eerlijk? Je kan later een klacht indienen.',

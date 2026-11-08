@@ -232,7 +232,7 @@ export const meedoenUnit: RuleUnit = {
           situation: 'Wat doet Jayden?',
           options: [
             { id: 'a', text: 'Hij laat rustig zijn ID zien.', best: true, feedback: 'Goed. Dat moet als de politie erom vraagt.' },
-            { id: 'b', text: 'Hij zegt: "Ik heb niets gedaan," en loopt weg.', best: false, feedback: 'Dat is logisch. Maar dan kan hij een boete krijgen.' },
+            { id: 'b', text: 'Hij zegt: "Ik heb niets gedaan," en loopt weg.', best: false, feedback: 'Dat snap ik. Maar dan kan hij een boete krijgen.' },
             { id: 'c', text: 'Hij zegt dat zijn ID thuis ligt. Dat is niet waar.', best: false, feedback: 'Niet doen. Dan maakt hij het moeilijker voor zichzelf.' },
           ],
           why: 'Vanaf 14 jaar moet je je ID laten zien als de politie erom vraagt.', whyMore: 'Dat heet de identificatieplicht. Geen ID bij je? Dan kun je een boete krijgen. Vond je het niet eerlijk? Je kunt later een klacht indienen bij de politie.',

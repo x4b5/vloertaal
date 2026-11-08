@@ -52,7 +52,7 @@ export const winkelUnit: RuleUnit = {
           id: 'r.l.winkel.1.wd1',
           situation: 'Waar zet Kevin de nieuwe melk?',
           options: [
-            { id: 'a', text: 'Vooraan. Dan ziet het schap er vers uit.', best: false, feedback: 'Dat is logisch. Maar dan blijft de oude melk staan.' },
+            { id: 'a', text: 'Vooraan. Dan ziet het schap er vers uit.', best: false, feedback: 'Dat snap ik. Maar dan blijft de oude melk staan.' },
             { id: 'b', text: 'Achteraan. De oude melk blijft vooraan staan.', best: true, feedback: 'Goed. Zo gaat de oude melk het eerst weg.' },
             { id: 'c', text: 'Ergens waar plek is. Klanten kiezen zelf wel.', best: false, feedback: 'Dan raakt de oude melk over de datum.' },
           ],
@@ -77,7 +77,7 @@ export const winkelUnit: RuleUnit = {
           situation: 'Kevin zet drie rolcontainers in het pad. Een klant met een rollator wil erlangs. Wat kan Kevin het beste doen?',
           options: [
             { id: 'a', text: 'Hij zegt sorry en schuift de containers aan de kant.', best: true, feedback: 'Goed. Het pad moet vrij zijn voor klanten.' },
-            { id: 'b', text: 'Hij vraagt de klant om even om te lopen.', best: false, feedback: 'Dat is logisch. Maar het pad is er voor de klant.' },
+            { id: 'b', text: 'Hij vraagt de klant om even om te lopen.', best: false, feedback: 'Dat snap ik. Maar het pad is er voor de klant.' },
             { id: 'c', text: 'Hij werkt snel door. Over 5 minuten is hij klaar.', best: false, feedback: 'Dan moet de klant wachten. En iemand kan vallen.' },
           ],
           why: "Houd de paden vrij. Dat is veiliger voor klanten en collega's.", whyMore: 'Nooduitgangen moeten altijd vrij zijn. Zet lege dozen en folie meteen weg.',
@@ -145,7 +145,7 @@ export const winkelUnit: RuleUnit = {
           situation: 'Fatima is druk bezig. Een klant zegt: "Mag ik u iets vragen?" Wat kan Fatima het beste doen?',
           options: [
             { id: 'a', text: 'Ze stopt even, kijkt de klant aan en luistert.', best: true, feedback: 'Goed. In een winkel gaat de klant voor.' },
-            { id: 'b', text: 'Ze zegt "moment" en maakt eerst haar doos leeg.', best: false, feedback: 'Dat is logisch. Maar dan moet de klant lang wachten.' },
+            { id: 'b', text: 'Ze zegt "moment" en maakt eerst haar doos leeg.', best: false, feedback: 'Dat snap ik. Maar dan moet de klant lang wachten.' },
             { id: 'c', text: 'Ze wijst naar de servicebalie, zonder iets te zeggen.', best: false, feedback: 'Dat kan onvriendelijk lijken.' },
           ],
           why: 'In een winkel gaat de klant voor. Stop even met je werk.', whyMore: 'Kijk de klant aan en groet. Tegen klanten zeg je meestal "u".',
@@ -254,7 +254,7 @@ export const winkelUnit: RuleUnit = {
         {
           kind: 'whoask',
           id: 'r.l.winkel.3.wa1',
-          question: 'Aan het eind van je dienst kom je geld tekort in de kassa. Wie zeg je het?',
+          question: 'Aan het eind van je dienst kom je geld tekort in de kassa. Tegen wie zeg je het?',
           options: [
             { id: 'a', who: 'collega', best: false, feedback: 'Een collega kan het niet oplossen. Zeg het tegen je leidinggevende.' },
             { id: 'b', who: 'politie', best: false, feedback: 'Een tekort in de kassa is geen zaak voor de politie.' },

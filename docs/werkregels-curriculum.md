@@ -50,7 +50,8 @@ Daarna komt altijd het waarom. Nooit "Fout!" in het rood, nooit een strafpunt.
 
 **Feedback bij "wat doe je?".** Elk antwoord heeft een eigen zin feedback. De goede: *"Goed."* plus
 de reden. De andere: rustig zeggen wat er mis kan gaan, zonder schuld ("Dit kan problemen geven",
-"Dat snap ik, maar ...").
+"Dat snap ik, maar ..."). Niet *"Dat is logisch"* of *"Klopt"*: wie vooral het begin hoort, denkt
+dan dat het antwoord goed is (NT2-review, 8 november 2026: 58 keer vervangen door "Dat snap ik").
 
 **Regelkaart.** In de app komt na de scène een kaart met de regel van de les. Staat er hieronder een
 *Regelkaart* bij een les, dan is dat de tekst van die kaart, precies zoals in de app.
@@ -427,7 +428,7 @@ normaal.
 **Vraag 1 · Wat is het beste?** Piotr snapt het niet goed. Wat kan Piotr het beste doen?
 
 - **A.** Hij knikt, en hij kijkt straks hoe de anderen het doen.
-  → *Dat is logisch. Maar zo kan hij een fout maken.*
+  → *Dat snap ik. Maar zo kan hij een fout maken.*
 - **B.** Hij zegt "ja", en hij vraagt het later aan iemand anders.
   → *Dan denkt Mark dat het goed gaat.*
 - **C.** Hij zegt: "Nog een keer graag, iets langzamer."
@@ -679,7 +680,7 @@ regelt zelf je belasting, je verzekering en je pensioen. Meer per uur is dus nie
 - **A.** Hij vraagt advies. Misschien is hij gewoon werknemer.
   → *Goed. Dan weet hij welke rechten hij heeft.*
 - **B.** Hij vindt het prima. Zo gaat het bij bezorgers.
-  → *Dat is logisch. Maar dan mist hij misschien rechten.*
+  → *Dat snap ik. Maar dan mist hij misschien rechten.*
 - **C.** Hij koopt alvast zelf een fiets en een tas.
   → *Wacht daar nog even mee. Eerst advies vragen.*
 
@@ -811,7 +812,7 @@ De meeste werkgevers geven elke maand een loonstrook, vaak in een app. Bewaar ze
 - **A.** Hij vraagt waar hij daarvoor getekend heeft.
   → *Goed. Zonder zijn handtekening mag het meestal niet.*
 - **B.** Hij denkt: dat hoort er vast bij, iedereen heeft het.
-  → *Dat is logisch. Maar het mag niet zomaar.*
+  → *Dat snap ik. Maar het mag niet zomaar.*
 - **C.** Hij vraagt een voorschot om het verschil te betalen.
   → *Dan leent hij geld dat misschien van hem is.*
 
@@ -1667,7 +1668,7 @@ agenda in je telefoon helpt om niets te vergeten.
 **Vraag 3 · Wat is het beste?** Sanne vraagt: "Kun je dit vóór 3 uur af hebben?" Jij weet: dat haal je niet.
 
 - **A.** Je zegt ja. Je doet je best en ziet wel.
-  → *Dat is logisch. Maar dan rekent Sanne op 3 uur.*
+  → *Dat snap ik. Maar dan rekent Sanne op 3 uur.*
 - **B.** Je zegt eerlijk: "3 uur lukt niet. 4 uur wel."
   → *Goed. Nu kan Sanne plannen.*
 - **C.** Je zegt niets, en je werkt extra snel door.
@@ -1864,7 +1865,7 @@ voelt.
 **Vraag 2 · Wat is het beste?** Dewi wil dat het stopt. Wat kan Dewi het beste doen?
 
 - **A.** Ze lacht mee. Dan houdt het vanzelf wel op.
-  → *Dat is logisch. Maar vaak gaat het dan juist door.*
+  → *Dat snap ik. Maar vaak gaat het dan juist door.*
 - **B.** Ze zegt duidelijk: "Stop. Ik wil dit niet."
   → *Goed. Dan weet hij het, en anderen horen het ook.*
 - **C.** Ze gaat hem uit de weg, en ze zegt niets.
@@ -1918,7 +1919,7 @@ is een duidelijk teken van uitbuiting.
 - **A.** Hij zoekt hulp, ook al is hij bang.
   → *Goed. Er zijn mensen die hem kunnen helpen.*
 - **B.** Hij wacht af. Het wordt vast beter als hij hard werkt.
-  → *Dat is logisch. Maar dit gaat meestal niet vanzelf over.*
+  → *Dat snap ik. Maar dit gaat meestal niet vanzelf over.*
 - **C.** Hij vraagt de baas beleefd om iets meer loon.
   → *Mag. Maar het paspoort en de uren blijven een probleem.*
 
@@ -2138,7 +2139,7 @@ kinderopvang. Dan kies je met de juiste cijfers.
 - **A.** Ze vertelt het aan haar werkgever en aan de gemeente.
   → *Goed. Dan kunnen ze samen een rooster zoeken.*
 - **B.** Ze stopt met de taalles. Werk gaat nu voor.
-  → *Dat is logisch. Maar de gemeente moet het weten, want inburgeren moet.*
+  → *Dat snap ik. Maar de gemeente moet het weten, want inburgeren moet.*
 - **C.** Ze werkt op dinsdag, en ze zegt niets tegen de gemeente.
   → *Dan mist ze lessen. Dat kan problemen geven.*
 
@@ -2235,7 +2236,7 @@ altijd voor jou. Dat heet de beslagvrije voet ⚖️. Check of dat bedrag klopt.
 - **A.** Ze maakt een lijst: wat moet ze aan wie betalen?
   → *Goed. Met een overzicht kan iemand haar helpen.*
 - **B.** Ze betaalt eerst wie het vaakst belt of mailt.
-  → *Dat is logisch. Maar dat is niet altijd de belangrijkste.*
+  → *Dat snap ik. Maar dat is niet altijd de belangrijkste.*
 - **C.** Ze betaalt elke schuld een klein beetje tegelijk.
   → *Goed bedoeld. Maar sommige rekeningen gaan voor.*
 
@@ -2455,7 +2456,7 @@ wet ⚖️. Maar veel bedrijven laten je zonder VCA niet op de bouwplaats. Vraag
 **Vraag 2 · Wat is het beste?** Mohammed krijgt geen veiligheidsschoenen. Hij heeft alleen gewone sneakers. Wat kan Mohammed het beste doen?
 
 - **A.** Hij werkt op zijn sneakers. Het is maar voor één dag.
-  → *Dat is logisch. Maar een spijker gaat zo door een sneaker.*
+  → *Dat snap ik. Maar een spijker gaat zo door een sneaker.*
 - **B.** Hij koopt zelf schoenen, en betaalt ze van zijn loon.
   → *Goed bedoeld. Maar zijn werkgever moet ze gratis geven.*
 - **C.** Hij vraagt de uitvoerder om veiligheidsschoenen.
@@ -2493,7 +2494,7 @@ Arbeidsinspectie.
 **Vraag 1 · Wat is het beste?** Kevin wil de plaat halen. Wat kan Kevin het beste doen?
 
 - **A.** Hij loopt snel onder het blok door. Het hangt toch vast.
-  → *Dat is logisch. Maar een last kan altijd vallen.*
+  → *Dat snap ik. Maar een last kan altijd vallen.*
 - **B.** Hij loopt om, ook al duurt dat langer.
   → *Goed. Onder een hangende last loop je nooit.*
 - **C.** Hij roept naar de kraanmachinist dat hij eraan komt.
@@ -2553,7 +2554,7 @@ Lang haar draag je vast.
 **Vraag 2 · Wat is het beste?** Dewi heeft net een cliënt geholpen. Ze moet meteen naar de volgende. Wat kan Dewi het beste doen?
 
 - **A.** Ze loopt meteen door. Haar handen zien er schoon uit.
-  → *Dat is logisch. Maar bacteriën zie je niet.*
+  → *Dat snap ik. Maar bacteriën zie je niet.*
 - **B.** Ze trekt alleen een paar nieuwe handschoenen aan.
   → *Handschoenen helpen. Maar ook haar handen moeten schoon zijn.*
 - **C.** Ze maakt eerst haar handen schoon.
@@ -2603,7 +2604,7 @@ toestemming. Ook niet thuis of online. Volg de regels van je werk.
 - **A.** Ze vraagt eerst uitleg aan een ervaren collega.
   → *Goed. Je geeft alleen medicijnen als je het geleerd hebt.*
 - **B.** Ze geeft ze toch. Het staat allemaal op de lijst.
-  → *Dat is logisch. Maar zonder uitleg kan ze een fout maken.*
+  → *Dat snap ik. Maar zonder uitleg kan ze een fout maken.*
 - **C.** Ze legt de pillen op tafel. Meneer neemt ze zelf wel.
   → *Dan weet niemand of hij ze echt neemt.*
 
@@ -2668,7 +2669,7 @@ werken. Een inspecteur van de NVWA komt soms kijken.
 **Vraag 2 · Wat is het beste?** Een bak saus staat al 2 uur op het aanrecht. Het is warm in de keuken. Wat kan Jayden het beste doen?
 
 - **A.** Hij zet de bak snel terug in de koelkast.
-  → *Dat is logisch. Maar misschien is de saus al niet meer goed.*
+  → *Dat snap ik. Maar misschien is de saus al niet meer goed.*
 - **B.** Hij vraagt de chef wat ermee moet.
   → *Goed. De chef weet wat de regels zijn.*
 - **C.** Hij ruikt eraan. Ruikt het goed, dan gebruikt hij het.
@@ -2788,7 +2789,7 @@ gratis ⚖️.
 - **A.** Ze spreekt met haar leidinggevende af hoe ze hulp vraagt.
   → *Goed. Dan weet iemand waar ze is.*
 - **B.** Ze werkt gewoon door. Er gebeurt toch bijna nooit iets.
-  → *Dat is logisch. Maar alleen loopt ze meer gevaar.*
+  → *Dat snap ik. Maar alleen loopt ze meer gevaar.*
 - **C.** Ze neemt haar zoon mee, voor de veiligheid.
   → *Dat snap ik. Maar haar werkgever moet dit regelen.*
 
@@ -2890,7 +2891,7 @@ een ander eraf.
 **Vraag 3 · Wat is het beste?** Een kap van de machine is kapot. Zonder kap gaat het werk sneller. Wat kan Sanne het beste doen?
 
 - **A.** Ze werkt door zonder kap. Ze let extra goed op.
-  → *Dat is logisch. Maar de kap is er voor haar handen.*
+  → *Dat snap ik. Maar de kap is er voor haar handen.*
 - **B.** Ze plakt de kap met tape vast, en werkt door.
   → *Goed bedoeld. Maar zo is het niet veilig genoeg.*
 - **C.** Ze stopt, en ze meldt de kapotte kap bij Henk.
@@ -2976,7 +2977,7 @@ Arbeidsinspectie.
 **Vraag 1 · Wat is het beste?** Jayden heeft geen opleiding voor de heftruck. Wat kan Jayden het beste doen?
 
 - **A.** Hij rijdt heel langzaam. Dan kan er niets gebeuren.
-  → *Dat is logisch. Maar ook langzaam kan het misgaan.*
+  → *Dat snap ik. Maar ook langzaam kan het misgaan.*
 - **B.** Hij rijdt, want de collega zegt dat het mag.
   → *Zijn collega kan dat niet beslissen.*
 - **C.** Hij zegt: "Ik mag niet rijden. Kan iemand anders?"
@@ -2998,7 +2999,7 @@ cursus.
 - **A.** Hij loopt over de looppaden, ook al is het verder.
   → *Goed. Daar zijn voetgangers veilig.*
 - **B.** Hij loopt over de rijbaan, en hij kijkt goed uit.
-  → *Dat is logisch. Maar een bestuurder ziet hem misschien niet.*
+  → *Dat snap ik. Maar een bestuurder ziet hem misschien niet.*
 - **C.** Hij loopt over de rijbaan, met zijn hesje aan.
   → *Het hesje helpt. Maar de rijbaan is niet om te lopen.*
 
@@ -3817,7 +3818,7 @@ Sanne het beste doen?
 - **A.** Ze veegt ze weg met een borstel.
   → *Goed. Zo snijdt ze haar handen niet.*
 - **B.** Ze blaast ze weg met de luchtslang.
-  → *Dat is logisch. Maar dan vliegen de spanen alle kanten op.*
+  → *Dat snap ik. Maar dan vliegen de spanen alle kanten op.*
 - **C.** Ze veegt ze met haar hand in de bak.
   → *Spanen zijn scherp. Zo snijdt ze in haar hand.*
 
@@ -3922,7 +3923,7 @@ collega · de Nederlandse Arbeidsinspectie.
 **Vraag 1 · Wat is het beste?** Malik wil snel onder de auto kijken. Wat kan Malik het beste doen?
 
 - **A.** Hij kruipt er snel onder. Het duurt maar even.
-  → *Dat is logisch. Maar een krik kan wegzakken.*
+  → *Dat snap ik. Maar een krik kan wegzakken.*
 - **B.** Hij zet een tweede krik naast de eerste.
   → *Goed bedoeld. Maar ook twee krikken staan niet vast.*
 - **C.** Hij vraagt of de auto eerst op bokken kan.
