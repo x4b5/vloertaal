@@ -249,6 +249,15 @@ const lang: HelpLanguageSource = {
     speakBrave: "Fehler gehören zum Lernen. Nicht verstanden? Sag es noch einmal.", // nieuw, nalezen
     speakBrave2: "Aufgeregt? Das ist normal. Sag es trotzdem.", // nieuw, nalezen
     speakBrave3: "Du musst es nicht perfekt sagen. Probier es einfach.", // nieuw, nalezen
+    reasonTitle: "Warum lernst du Niederländisch?", // nieuw, nalezen
+    reasonHint: "Wähle eins oder zwei.", // nieuw, nalezen
+    reasonDone: "Fertig", // nieuw, nalezen
+    reasonWork: "Meine Arbeit gut machen", // nieuw, nalezen
+    reasonKids: "Meine Kinder", // nieuw, nalezen
+    reasonColleagues: "Mit Kollegen reden", // nieuw, nalezen
+    reasonArrange: "Dinge selbst regeln", // nieuw, nalezen
+    reasonJob: "Eine bessere Arbeit", // nieuw, nalezen
+    reasonHome: "Mich in den Niederlanden zu Hause fühlen", // nieuw, nalezen
     speakMe: 'Ich',
     speakingPractice: 'Sprechen üben',
     speakingHint: "Sag Wörter laut und vergleiche. Niemand sonst hört dich: Nichts wird geschickt. Deine erste Aufnahme eines Satzes bleibt auf deinem Handy, zum späteren Vergleichen.", // nieuw, nalezen

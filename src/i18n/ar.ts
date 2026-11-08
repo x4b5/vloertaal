@@ -249,6 +249,15 @@ const lang: HelpLanguageSource = {
     speakBrave: "الأخطاء جزء من التعلّم. لم يفهموك؟ قلها مرة أخرى.", // nieuw, nalezen
     speakBrave2: "متوتر؟ هذا طبيعي. قلها على أي حال.", // nieuw, nalezen
     speakBrave3: "لا يجب أن تقولها بشكل مثالي. فقط جرّب.", // nieuw, nalezen
+    reasonTitle: "لماذا تتعلّم الهولندية؟", // nieuw, nalezen
+    reasonHint: "اختر واحدًا أو اثنين.", // nieuw, nalezen
+    reasonDone: "تم", // nieuw, nalezen
+    reasonWork: "أن أقوم بعملي جيدًا", // nieuw, nalezen
+    reasonKids: "أطفالي", // nieuw, nalezen
+    reasonColleagues: "التحدث مع الزملاء", // nieuw, nalezen
+    reasonArrange: "أن أنجز أموري بنفسي", // nieuw, nalezen
+    reasonJob: "عمل أفضل", // nieuw, nalezen
+    reasonHome: "أن أشعر أنني في بيتي في هولندا", // nieuw, nalezen
     speakMe: 'أنا',
     speakingPractice: 'تمرين التكلّم',
     speakingHint: { m: "قل الكلمات بصوت عالٍ وقارن. لا أحد غيرك يسمعك: لا يُرسَل أي شيء. يبقى أول تسجيل لك لكل جملة على هاتفك، لتقارن لاحقاً.", f: "قولي الكلمات بصوت عالٍ وقارني. لا أحد غيرك يسمعك: لا يُرسَل أي شيء. يبقى أول تسجيل لكِ لكل جملة على هاتفك، لتقارني لاحقاً.", x: "نطق الكلمات بصوت عالٍ ثم المقارنة. لا أحد غيرك يسمعك: لا يُرسَل أي شيء. يبقى أول تسجيل لكل جملة على الهاتف، للمقارنة لاحقاً." }, // nieuw, nalezen

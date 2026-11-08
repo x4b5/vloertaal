@@ -249,6 +249,15 @@ const lang: HelpLanguageSource = {
     speakBrave: "اشتباه بخشی از آموختن است. نفهمیدند؟ یک بار دیگر بگو.", // nieuw, nalezen
     speakBrave2: "تشویش داری؟ عادی است. باز هم بگو.", // nieuw, nalezen
     speakBrave3: "لازم نیست بی‌نقص بگویی. فقط کوشش کن.", // nieuw, nalezen
+    reasonTitle: "چرا هالندی یاد می‌گیری؟", // nieuw, nalezen
+    reasonHint: "یکی یا دو تا را انتخاب کن.", // nieuw, nalezen
+    reasonDone: "تمام", // nieuw, nalezen
+    reasonWork: "کارم را خوب انجام بدهم", // nieuw, nalezen
+    reasonKids: "اولادهایم", // nieuw, nalezen
+    reasonColleagues: "با همکاران گپ بزنم", // nieuw, nalezen
+    reasonArrange: "کارهایم را خودم انجام بدهم", // nieuw, nalezen
+    reasonJob: "کار بهتر", // nieuw, nalezen
+    reasonHome: "در هالند احساس کنم در خانهٔ خود هستم", // nieuw, nalezen
     speakMe: 'من',
     speakingPractice: 'تمرین گپ زدن',
     speakingHint: "کلمه‌ها را بلند بگویید و مقایسه کنید. هیچ کس دیگر صدای شما را نمی‌شنود: هیچ چیزی فرستاده نمی‌شود. اولین ثبت صدای شما از هر جمله روی تلفن تان می‌ماند تا بعداً مقایسه کنید.", // nieuw, nalezen

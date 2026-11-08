@@ -249,6 +249,15 @@ const lang: HelpLanguageSource = {
     speakBrave: "Hatalar öğrenmenin bir parçası. Anlaşılmadı mı? Bir kez daha söyle.", // nieuw, nalezen
     speakBrave2: "Heyecanlı mısın? Bu normal. Yine de söyle.", // nieuw, nalezen
     speakBrave3: "Mükemmel söylemek zorunda değilsin. Sadece dene.", // nieuw, nalezen
+    reasonTitle: "Neden Felemenkçe öğreniyorsun?", // nieuw, nalezen
+    reasonHint: "Bir veya iki tane seç.", // nieuw, nalezen
+    reasonDone: "Tamam", // nieuw, nalezen
+    reasonWork: "İşimi iyi yapmak", // nieuw, nalezen
+    reasonKids: "Çocuklarım", // nieuw, nalezen
+    reasonColleagues: "İş arkadaşlarımla konuşmak", // nieuw, nalezen
+    reasonArrange: "İşlerimi kendim halletmek", // nieuw, nalezen
+    reasonJob: "Daha iyi bir iş", // nieuw, nalezen
+    reasonHome: "Hollanda'da kendimi evimde hissetmek", // nieuw, nalezen
     speakMe: 'Ben',
     speakingPractice: 'Konuşma alıştırması',
     speakingHint: "Kelimeleri sesli söyle ve karşılaştır. Seni başka kimse duymaz: hiçbir şey gönderilmez. Bir cümleyi ilk söylediğin kayıt telefonunda kalır, sonra karşılaştırabilirsin.", // nieuw, nalezen

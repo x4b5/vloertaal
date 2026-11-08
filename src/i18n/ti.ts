@@ -250,6 +250,15 @@ const lang: HelpLanguageSource = {
     speakBrave: "ጌጋታት ክፋል ናይ ምምሃር እዮም። ኣይተረድኡኻን? ሓንሳብ ደጊምካ በሎ።", // nieuw, nalezen
     speakBrave2: "ትሻቐል ዶ? እዚ ንቡር እዩ። ግን በሎ።", // nieuw, nalezen
     speakBrave3: "ብፍጹም ክትብሎ የብልካን። ፈትን ጥራይ።", // nieuw, nalezen
+    reasonTitle: "ስለምንታይ ኢኻ ሆላንድኛ ትመሃር?", // nieuw, nalezen
+    reasonHint: "ሓደ ወይ ክልተ ምረጽ።", // nieuw, nalezen
+    reasonDone: "ተወዲኡ", // nieuw, nalezen
+    reasonWork: "ስራሐይ ብጽቡቕ ምስራሕ", // nieuw, nalezen
+    reasonKids: "ደቀይ", // nieuw, nalezen
+    reasonColleagues: "ምስ መሳርሕተይ ምዝራብ", // nieuw, nalezen
+    reasonArrange: "ነገራት ባዕለይ ምፍጻም", // nieuw, nalezen
+    reasonJob: "ዝሓሸ ስራሕ", // nieuw, nalezen
+    reasonHome: "ኣብ ሆላንድ ከም ገዛይ ምስማዕ", // nieuw, nalezen
     speakMe: 'ኣነ',
     speakingPractice: 'ልምምድ ምዝራብ',
     speakingHint: { m: "ቃላት ብዓው ኢልካ በሎም እሞ ኣወዳድር። ካልእ ሰብ ኣይሰምዓካን፡ ዋላ ሓንቲ ኣይለኣኽን። ቀዳማይ ቅዳሕ ድምጽካ ናይ ሓንቲ ሓረግ ኣብ ተሌፎንካ ይጸንሕ፣ ደሓር ንምውድዳር።", f: "ቃላት ብዓው ኢልኪ በልዮም እሞ ኣወዳድሪ። ካልእ ሰብ ኣይሰምዓክን፡ ዋላ ሓንቲ ኣይለኣኽን። ቀዳማይ ቅዳሕ ድምጽኪ ናይ ሓንቲ ሓረግ ኣብ ተሌፎንኪ ይጸንሕ፣ ደሓር ንምውድዳር።", x: "ቃላት ብዓው ኢልኩም በልዎም እሞ ኣወዳድሩ። ካልእ ሰብ ኣይሰምዓኩምን፡ ዋላ ሓንቲ ኣይለኣኽን። ቀዳማይ ቅዳሕ ድምጽኩም ናይ ሓንቲ ሓረግ ኣብ ተሌፎንኩም ይጸንሕ፣ ደሓር ንምውድዳር።" }, // nieuw, nalezen

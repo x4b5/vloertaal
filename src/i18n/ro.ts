@@ -249,6 +249,15 @@ const lang: HelpLanguageSource = {
     speakBrave: "Greșelile fac parte din învățare. Nu te-au înțeles? Spune încă o dată.", // nieuw, nalezen
     speakBrave2: "Emoții? E normal. Spune totuși.", // nieuw, nalezen
     speakBrave3: "Nu trebuie să spui perfect. Doar încearcă.", // nieuw, nalezen
+    reasonTitle: "De ce înveți neerlandeză?", // nieuw, nalezen
+    reasonHint: "Alege unul sau două.", // nieuw, nalezen
+    reasonDone: "Gata", // nieuw, nalezen
+    reasonWork: "Să-mi fac bine munca", // nieuw, nalezen
+    reasonKids: "Copiii mei", // nieuw, nalezen
+    reasonColleagues: "Să vorbesc cu colegii", // nieuw, nalezen
+    reasonArrange: "Să rezolv singur lucrurile", // nieuw, nalezen
+    reasonJob: "Un loc de muncă mai bun", // nieuw, nalezen
+    reasonHome: "Să mă simt acasă în Țările de Jos", // nieuw, nalezen
     speakMe: 'Eu',
     speakingPractice: 'Exercițiu de vorbire',
     speakingHint: "Spune cuvintele cu voce tare și compară. Nimeni altcineva nu te aude: nimic nu este trimis. Prima ta înregistrare a unei propoziții rămâne pe telefon, ca să compari mai târziu.", // nieuw, nalezen

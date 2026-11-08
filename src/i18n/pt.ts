@@ -249,6 +249,15 @@ const lang: HelpLanguageSource = {
     speakBrave: "Errar faz parte de aprender. Não entenderam? Diga mais uma vez.", // nieuw, nalezen
     speakBrave2: "Nervoso? É normal. Diga mesmo assim.", // nieuw, nalezen
     speakBrave3: "Não precisa dizer perfeito. É só tentar.", // nieuw, nalezen
+    reasonTitle: "Por que você aprende holandês?", // nieuw, nalezen
+    reasonHint: "Escolha um ou dois.", // nieuw, nalezen
+    reasonDone: "Pronto", // nieuw, nalezen
+    reasonWork: "Fazer bem o meu trabalho", // nieuw, nalezen
+    reasonKids: "Meus filhos", // nieuw, nalezen
+    reasonColleagues: "Conversar com os colegas", // nieuw, nalezen
+    reasonArrange: "Resolver as coisas sozinho", // nieuw, nalezen
+    reasonJob: "Um trabalho melhor", // nieuw, nalezen
+    reasonHome: "Me sentir em casa na Holanda", // nieuw, nalezen
     speakMe: 'Eu',
     speakingPractice: 'Prática de fala',
     speakingHint: "Diz as palavras em voz alta e compara. Mais ninguém te ouve: nada é enviado. A tua primeira gravação de uma frase fica no teu telemóvel, para comparares mais tarde.", // nieuw, nalezen
