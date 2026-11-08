@@ -38,6 +38,7 @@ export const HEADINGS: Readonly<Record<string, string>> = {
   'u.help': 'Hulp vragen op je werk in het Nederlands',
   'u.tools': 'Vertaalapp en andere slimme hulp bij Nederlands',
   'u.safety': 'Veiligheid op het werk: woorden en zinnen',
+  'u.emergency': 'Brandalarm en een ongeluk melden: woorden',
   'u.data': 'Je naam spellen, getallen en de datum',
   'u.time': 'Je dienst, pauze en rooster in het Nederlands',
   'u.sounds': 'Nederlandse uitspraak oefenen: de klanken',

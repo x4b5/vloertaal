@@ -27,6 +27,8 @@ type Voice = ElevenIndex['voices'][number];
 export type PackedVoice = Omit<Voice, 'said' | 'takes'> & {
   /** Clip ids of `said` this voice has no recording of. */
   without?: string[];
+  /** Instead of `without`, for a voice with few recordings (a Flemish voice): the clip ids it has. */
+  only?: string[];
   /** Its own text, where it differs from `said`. */
   differs?: Record<string, string>;
   /** Its own take, where it differs from `takes`/`take`. */
@@ -60,10 +62,11 @@ const mostCommon = <T>(values: T[]): T => {
 function voiceSaid(p: PackedVoices, v: PackedVoice): Record<string, string> {
   if (v.full) return v.full;
   const without = new Set(v.without ?? []);
+  const only = v.only ? new Set(v.only) : null;
   const last = new Set(v.last ?? []);
   const said: Record<string, string> = {};
   const text = (id: string) => v.differs?.[id] ?? p.said[id];
-  for (const id of Object.keys(p.said)) if (!without.has(id) && !last.has(id)) said[id] = text(id);
+  for (const id of Object.keys(p.said)) if ((only ? only.has(id) : !without.has(id)) && !last.has(id)) said[id] = text(id);
   for (const id of v.last ?? []) said[id] = text(id);
   return said;
 }
@@ -87,7 +90,9 @@ export function packVoices(index: ElevenIndex): PackedVoices {
     const { said: own, takes: _ownTakes, ...fields } = v;
     const out: PackedVoice = { ...fields };
     const without = ids.filter((id) => !(id in own));
-    if (without.length) out.without = without;
+    // Fewer clips than it lacks: list what it has (shorter).
+    if (without.length * 2 > ids.length) out.only = ids.filter((id) => id in own);
+    else if (without.length) out.without = without;
     const differs = Object.fromEntries(Object.entries(own).filter(([id, t]) => t !== said[id]));
     if (Object.keys(differs).length) out.differs = differs;
     const ownTakes = Object.fromEntries(Object.keys(own).filter((id) => takeOf(v, id) !== (takes[id] ?? take)).map((id) => [id, takeOf(v, id)]));
@@ -100,6 +105,7 @@ export function packVoices(index: ElevenIndex): PackedVoices {
     if (last.length) out.last = last;
     if (clipMaps(voiceSaid(p, out)) !== clipMaps(own)) {
       delete out.without;
+      delete out.only;
       delete out.differs;
       delete out.last;
       out.full = own;
@@ -114,7 +120,7 @@ export function unpackVoices(data: PackedVoices | ElevenIndex): ElevenIndex {
   if (!('packed' in data)) return data;
   return {
     voices: data.voices.map((v) => {
-      const { without: _w, differs: _d, ownTakes, last: _l, full: _f, ...fields } = v;
+      const { without: _w, only: _o, differs: _d, ownTakes, last: _l, full: _f, ...fields } = v;
       const said = voiceSaid(data, v);
       const takes = Object.fromEntries(Object.keys(said).map((id) => [id, ownTakes?.[id] ?? data.takes[id] ?? data.take]));
       return { ...fields, said, takes };

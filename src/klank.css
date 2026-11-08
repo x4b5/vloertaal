@@ -10,9 +10,9 @@
   width: 100%; padding: 6px 8px 0; border: 0; border-radius: var(--radius);
   background: none; color: var(--ink); cursor: pointer;
 }
-.klank-letters { font-size: 3.6rem; line-height: 1; font-weight: 750; letter-spacing: 0.04em; }
+.klank-letters { font-size: 3.6rem; line-height: 1; font-weight: 600; letter-spacing: 0.04em; }
 /* The other spelling of the same sound (ij / ei, ou / au): smaller and quieter beside it. */
-.klank-also { font-size: 0.6em; font-weight: 650; color: var(--ink-2); letter-spacing: 0; }
+.klank-also { font-size: 0.6em; font-weight: 600; color: var(--ink-2); letter-spacing: 0; }
 .klank-play .mouth {
   display: block; max-width: 100%; height: auto;
   border-radius: 28px; background: var(--concrete);
@@ -26,7 +26,7 @@
 /* ui: where it starts and where it ends, small. */
 .klank-steps { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--muted); }
 .klank-steps .mouth { border-radius: 14px; background: var(--concrete); border: 2px solid var(--line); }
-.klank-arrow { font-size: 1.6rem; font-weight: 700; }
+.klank-arrow { font-size: 1.6rem; font-weight: 600; }
 [dir='rtl'] .klank-arrow { transform: scaleX(-1); }
 
 .klank-how { margin: 0; max-width: 24rem; text-align: center; font-size: var(--fs-answer); line-height: 1.4; }
@@ -37,8 +37,8 @@
   display: flex; align-items: center; justify-content: center; gap: 12px;
   width: 100%; padding-top: 12px; border-top: 2px solid var(--line);
 }
-.klank-word-nl { font-size: var(--fs-word); font-weight: 700; }
-.klank-mark { color: var(--right-ink); font-weight: 800; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+.klank-word-nl { font-size: var(--fs-word); font-weight: 600; }
+.klank-mark { color: var(--right-ink); font-weight: 600; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
 /* The letters of the sound the mouth makes now, while it says the whole word (m – uu – r). */
 .klank-now { background: var(--yellow); color: var(--on-yellow); border-radius: 6px; padding: 0 3px; margin: 0 -3px; }
 
@@ -61,8 +61,8 @@
   width: 30px; height: 30px; border-radius: 50%; background: var(--blue); border: 3px solid var(--card); box-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
 }
 .klank-slider input[type='range']:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 8px; }
-.klank-speed-now { min-width: 2.6em; font-weight: 750; font-size: 1.15rem; color: var(--ink); text-align: end; }
-.klank-scrub-parts { display: flex; padding: 0 10px; font-size: 1.15rem; font-weight: 700; color: var(--ink); }
+.klank-speed-now { min-width: 2.6em; font-weight: 600; font-size: 1.15rem; color: var(--ink); text-align: end; }
+.klank-scrub-parts { display: flex; padding: 0 10px; font-size: 1.15rem; font-weight: 600; color: var(--ink); }
 .klank-scrub-parts > span { flex-basis: 0; text-align: center; }
 
 /* In a lesson (LessonPlayer): a smaller mouth and less room, so the card and Continue fit a small phone. */
@@ -90,7 +90,7 @@
 .klank-row .klank-also { display: block; font-size: 0.55em; margin-top: 2px; }
 .klank-row .klank-slash { display: none; }
 .klank-row .mouth { border-radius: 14px; background: var(--concrete); }
-.klank-row-word { display: flex; align-items: center; gap: 8px; font-size: 1.2rem; font-weight: 650; justify-self: end; min-width: 0; }
+.klank-row-word { display: flex; align-items: center; gap: 8px; font-size: 1.2rem; font-weight: 600; justify-self: end; min-width: 0; }
 /* The row under Hulp: the mouth is its icon. */
 .hub-klank .hub-icon { background: var(--concrete); overflow: hidden; }
 .klank-hub-mouth { display: block; }

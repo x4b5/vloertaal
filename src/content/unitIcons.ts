@@ -10,6 +10,8 @@ export const unitIcons: Record<string, string> = {
   'u.tools': 'w.vertaalapp',
   'u.sounds': 'w.kl.maan',
   'u.safety': 'w.helm',
+  // Als het misgaat (8 November 2026): the alarm bell.
+  'u.emergency': 'w.alarm',
   'u.warehouse': 'w.doos',
   'u.data': 'w.naam',
   'u.time': 'w.uren',

@@ -1,7 +1,7 @@
 import { nlId } from '../content/regels/be/ids';
 import { courseUnits, findCourseUnit, unitOfLesson } from '../content/courses';
 import { isMixLesson } from '../content/review';
-import { coursePlan, sectorFirstFocus, sectorOwnUnit, sectorPriority, type SectorChoice } from '../content/sectors';
+import { coursePlan, FOCUS_FOLLOW_UP, sectorFirstFocus, sectorOwnUnit, sectorPriority, type SectorChoice } from '../content/sectors';
 import type { UiCode } from '../i18n/types';
 import { trackOf, type Track } from './track';
 import type { Lesson, Unit } from '../content/types';
@@ -139,7 +139,9 @@ export function nextChoices(sector: SectorChoice | undefined, completed: Complet
   // Recommended first: the sector's first focus unit (Safety in week 1 for warehouse, building and
   // factory work), and once that is done the sector's own unit (the words of that work: a carer
   // gets the care words in week 1, not only after the basis units).
-  const firsts = [sectorFirstFocus(sector, track), sectorOwnUnit(sector, track)].filter(Boolean);
+  // A split focus unit brings its second half along, right after it (FOCUS_FOLLOW_UP).
+  const focus = sectorFirstFocus(sector, track);
+  const firsts = [focus, focus && FOCUS_FOLLOW_UP[focus], sectorOwnUnit(sector, track)].filter(Boolean);
   // A focus unit with only its mixed review left gives way to the next one here (it still comes
   // after the lead, below), so the sector's own unit is not skipped while that review waits.
   const first = firsts.map((id) => open.find((u) => nlId(u.id) === id)).filter((u): u is Unit => Boolean(u) && !onlyMixLeft(u!, completed)).slice(0, 1);

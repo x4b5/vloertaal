@@ -12,12 +12,13 @@ describe('sectors', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it('puts the own sector unit in slot 05 (after Safety); everything in course order with none', () => {
+  it('puts the own sector unit in slot 06 (after Safety and Als het misgaat); everything in course order with none', () => {
     // Smart tools is unit 03 for everyone, right after "Asking for help".
     expect(units.slice(0, 4).map((u) => u.id)).toEqual(['u.firstday', 'u.help', 'u.tools', 'u.safety']);
     const { main, other } = coursePlan('construction');
     expect(main[3].id).toBe('u.safety');
-    expect(main[4].id).toBe('u.build');
+    expect(main[4].id).toBe('u.emergency');
+    expect(main[5].id).toBe('u.build');
     expect(main.filter((u) => u.id === 'u.build')).toHaveLength(1);
     expect(main.some((u) => u.id === 'u.warehouse')).toBe(false);
     expect(other.map((u) => u.id).sort()).toEqual(['u.care', 'u.clean', 'u.delivery', 'u.factory', 'u.garage', 'u.horeca', 'u.kas', 'u.shop', 'u.tech', 'u.warehouse']);
@@ -25,10 +26,10 @@ describe('sectors', () => {
     // The basis units keep their course order around it.
     const basis = main.filter((u) => !unitSector(u.id));
     expect(basis).toEqual(units.filter((u) => !unitSector(u.id)));
-    expect(coursePlan('care').main[4].id).toBe('u.care');
-    expect(coursePlan('logistics').main[4].id).toBe('u.warehouse');
+    expect(coursePlan('care').main[5].id).toBe('u.care');
+    expect(coursePlan('logistics').main[5].id).toBe('u.warehouse');
     // Logistiek has two own units since 5 November 2026: "Vervoer en bezorging" right after the warehouse.
-    expect(coursePlan('logistics').main[5].id).toBe('u.delivery');
+    expect(coursePlan('logistics').main[6].id).toBe('u.delivery');
     for (const s of ['none', undefined] as const) {
       expect(coursePlan(s).main).toEqual(units);
       expect(coursePlan(s).other).toEqual([]);
@@ -40,8 +41,9 @@ describe('sectors', () => {
     const build = unit('u.build');
     const warehouse = unit('u.warehouse');
     const after = units[units.indexOf(warehouse) + 1];
-    const safetyDone = Object.fromEntries(safety.lessons.map((l) => [l.id, {}]));
-    // Construction: Safety done → "Op de bouw" (slot 05) is next; the unit after the warehouse waits for it.
+    // Both safety topics (one until 8 November 2026): Veiligheid and Als het misgaat.
+    const safetyDone = Object.fromEntries([...safety.lessons, ...unit('u.emergency').lessons].map((l) => [l.id, {}]));
+    // Construction: both done → "Op de bouw" (slot 06) is next; the unit after the warehouse waits for it.
     expect(isNextInCourse(build.lessons[0].id, safetyDone, 'full', 'construction')).toBe(true);
     expect(isNextInCourse(after.lessons[0].id, safetyDone, 'full', 'construction')).toBe(false);
     const buildDone = { ...safetyDone, ...Object.fromEntries(build.lessons.map((l) => [l.id, {}])) };

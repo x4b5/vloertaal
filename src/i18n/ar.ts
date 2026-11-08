@@ -246,7 +246,18 @@ const lang: HelpLanguageSource = {
     sayTogether: { m: "قلها معاً", f: "قوليها معاً", x: "النطق معاً" }, // nieuw, nalezen
     chorusHint: { m: "قلها في نفس الوقت مع الصوت. لا يُسجَّل أي شيء.", f: "قوليها في نفس الوقت مع الصوت. لا يُسجَّل أي شيء.", x: "النطق في نفس الوقت مع الصوت. لا يُسجَّل أي شيء." }, // nieuw, nalezen
     chorusAlone: "الآن وحدك", // nieuw, nalezen
-    speakBrave: "الأخطاء مسموحة. الهولنديون يفهمونك حتى مع الأخطاء.", // nieuw, nalezen
+    speakBrave: "الأخطاء جزء من التعلّم. لم يفهموك؟ قلها مرة أخرى.", // nieuw, nalezen
+    speakBrave2: "متوتر؟ هذا طبيعي. قلها على أي حال.", // nieuw, nalezen
+    speakBrave3: "لا يجب أن تقولها بشكل مثالي. فقط جرّب.", // nieuw, nalezen
+    reasonTitle: "لماذا تتعلّم الهولندية؟", // nieuw, nalezen
+    reasonHint: "اختر واحدًا أو اثنين.", // nieuw, nalezen
+    reasonDone: "تم", // nieuw, nalezen
+    reasonWork: "أن أقوم بعملي جيدًا", // nieuw, nalezen
+    reasonKids: "أطفالي", // nieuw, nalezen
+    reasonColleagues: "التحدث مع الزملاء", // nieuw, nalezen
+    reasonArrange: "أن أنجز أموري بنفسي", // nieuw, nalezen
+    reasonJob: "عمل أفضل", // nieuw, nalezen
+    reasonHome: "أن أشعر أنني في بيتي في هولندا", // nieuw, nalezen
     speakMe: 'أنا',
     speakingPractice: 'تمرين التكلّم',
     speakingHint: { m: "قل الكلمات بصوت عالٍ وقارن. لا أحد غيرك يسمعك: لا يُرسَل أي شيء. يبقى أول تسجيل لك لكل جملة على هاتفك، لتقارن لاحقاً.", f: "قولي الكلمات بصوت عالٍ وقارني. لا أحد غيرك يسمعك: لا يُرسَل أي شيء. يبقى أول تسجيل لكِ لكل جملة على هاتفك، لتقارني لاحقاً.", x: "نطق الكلمات بصوت عالٍ ثم المقارنة. لا أحد غيرك يسمعك: لا يُرسَل أي شيء. يبقى أول تسجيل لكل جملة على الهاتف، للمقارنة لاحقاً." }, // nieuw, nalezen
@@ -506,6 +517,7 @@ const lang: HelpLanguageSource = {
     'u.firstday': 'اليوم الأول في العمل',
     'u.help': 'طلب المساعدة',
     'u.safety': 'السلامة أولاً',
+    'u.emergency': "عندما يحدث خطأ", // nieuw, nalezen
     'u.warehouse': 'في المستودع',
     'u.time': 'الوقت وجدول العمل',
 

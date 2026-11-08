@@ -7,7 +7,7 @@ import { ui } from '../src/i18n';
 import { uiEn } from '../src/i18n/types';
 import { uiNl } from '../src/i18n/nl';
 import { findLesson } from '../src/content/curriculum';
-import { afterSpeak, braveDue, chorusDue, SHY_AFTER, SKIPS_KEEP, speakShy, type SpeakEvent } from '../src/lib/chorus';
+import { afterSpeak, BRAVE_LINES, braveLine, chorusDue, SHY_AFTER, SKIPS_KEEP, speakShy, type SpeakEvent } from '../src/lib/chorus';
 import { backupFile, emptyProgress, parseBackup, progressFrom, type Progress } from '../src/lib/progress';
 import type { Exercise } from '../src/lib/exercises';
 import { PRIVACY } from '../src/lib/privacyPage';
@@ -22,13 +22,22 @@ const run = (...events: SpeakEvent[]) => events.reduce<Progress>((p, e) => after
 describe('when "Zeg het samen" comes (src/lib/chorus.ts)', () => {
   it('comes at the first "Zeg het" ever, with Bram\'s line, and then not at every one', () => {
     expect(chorusDue(emptyProgress)).toBe(true);
-    expect(braveDue(emptyProgress)).toBe(true);
+    expect(braveLine(emptyProgress, 0)).toBe('speakBrave');
     const met = run('met');
     expect(met.speakMet).toBe(true);
     expect(chorusDue(met)).toBe(false);
-    expect(braveDue(met)).toBe(false);
-    // Bram's line never again, whatever happens next.
-    expect(braveDue(run('met', 'skipped', 'skipped', 'recorded', 'met'))).toBe(false);
+    expect(braveLine(met, 1)).toBeNull();
+    // Recorded again: no longer shy, so no line.
+    expect(braveLine(run('met', 'skipped', 'skipped', 'recorded', 'met'), 4)).toBeNull();
+  });
+
+  it('brings Bram back for a shy learner, a different line lesson by lesson', () => {
+    const shy = run('met', 'skipped', 'skipped');
+    const lines = [0, 1, 2, 3].map((n) => braveLine(shy, n));
+    expect(lines.every((l) => l !== null && BRAVE_LINES.includes(l))).toBe(true);
+    expect(new Set(lines.slice(0, 3)).size).toBe(3);
+    expect(lines[3]).toBe(lines[0]);
+    expect(braveLine(run('met', 'skipped'), 2)).toBeNull();
   });
 
   it(`comes at every "Zeg het" after ${SHY_AFTER} skips in a row, until the learner records again`, () => {
@@ -86,9 +95,9 @@ const sentence: Speak = { kind: 'speak', item: hello.sentences[0] };
 const dialogue = hello.dialogues![0];
 const turn: Speak = { kind: 'speak', item: { ...dialogue.reply }, turn: dialogue };
 const pl = getHelpLanguage('pl');
-const render = (ex: Speak, props: { phase?: 'idle' | 'off' | 'review'; together?: boolean; chorus?: ChorusState; brave?: boolean } = {}) =>
+const render = (ex: Speak, props: { phase?: 'idle' | 'off' | 'review'; together?: boolean; chorus?: ChorusState; brave?: (typeof BRAVE_LINES)[number] } = {}) =>
   renderToStaticMarkup(createElement(SpeakExercise, {
-    ex, lang: pl, onAnswer: () => {}, phaseForShot: props.phase ?? 'idle', together: props.together, chorusForShot: props.chorus, brave: props.brave ?? false,
+    ex, lang: pl, onAnswer: () => {}, phaseForShot: props.phase ?? 'idle', together: props.together, chorusForShot: props.chorus, brave: props.brave ?? null,
   }));
 /** The buttons that count (the Dutch speaker never does). */
 const taps = (html: string) => (html.match(/<button/g) ?? []).length - (html.match(/<button[^>]*class="[^"]*\bspeak\b/g) ?? []).length;
@@ -147,16 +156,18 @@ describe('"Zeg het samen" on screen (Speaking.tsx)', () => {
 
 describe('Bram, once: "Fouten mogen"', () => {
   it('is a line with his face, no button', () => {
-    const with_ = render(sentence, { together: true, brave: true });
+    const with_ = render(sentence, { together: true, brave: 'speakBrave2' });
     const without = render(sentence, { together: true });
     expect(with_).toContain('say-brave');
-    expect(with_).toContain(ui('speakBrave', pl).help!);
+    expect(with_).toContain(ui('speakBrave2', pl).help!);
     expect(taps(with_)).toBe(taps(without));
-    expect(render(turn, { brave: true })).not.toContain('say-brave');
+    expect(render(turn, { brave: 'speakBrave' })).not.toContain('say-brave');
   });
 
   it('says it in Dutch as the owner asked', () => {
-    expect(uiNl.speakBrave).toBe('Fouten mogen. Nederlanders begrijpen je ook met fouten.');
+    expect(uiNl.speakBrave).toBe('Fouten horen bij leren. Niet begrepen? Zeg het nog een keer.');
+    expect(uiNl.speakBrave2).toBe('Spannend? Dat hoort erbij. Zeg het toch.');
+    expect(uiNl.speakBrave3).toBe('Je hoeft het niet perfect te zeggen. Probeer het gewoon.');
     expect(uiNl.sayTogether).toBe('Zeg het samen');
     expect(uiNl.chorusAlone).toBe('Nu alleen');
   });

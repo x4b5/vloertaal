@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "Я чую різницю між словами, як-от man і maan.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.sounds.2': "Я можу повторити короткі речення зі складними звуками.", // nieuw, nalezen
     'kjn.u.safety.1': "Я розумію попередження, як-от «Pas op!».", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'kjn.u.safety.2': "Я можу повідомити про нещасний випадок.", // nieuw, nalezen
-    'kjn.u.safety.3': "Я можу сказати, що мене цього ще не навчили.", // nieuw, nalezen
+    'kjn.u.safety.2': "Я можу сказати, що мене цього ще не навчили.", // nieuw, nalezen
+    'kjn.u.emergency.1': "Я можу запитати, де висить вогнегасник.", // nieuw, nalezen
+    'kjn.u.emergency.2': "Я можу повідомити про нещасний випадок.", // nieuw, nalezen
     'kjn.u.apply.1': "Я можу розповісти, який у мене досвід.", // nieuw, nalezen
     'kjn.u.apply.2': "Я можу розповісти про себе на співбесіді.", // nieuw, nalezen
     'kjn.u.contract.1': "Я можу запитати, скільки годин на тиждень я працюю.", // nieuw, nalezen

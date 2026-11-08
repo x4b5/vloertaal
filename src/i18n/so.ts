@@ -246,7 +246,18 @@ const lang: HelpLanguageSource = {
     sayTogether: "Wada jir u dheh", // nieuw, nalezen
     chorusHint: "Ku dheh isla waqtiga codka. Waxba lama duubayo.", // nieuw, nalezen
     chorusAlone: "Hadda adiga keligaa", // nieuw, nalezen
-    speakBrave: "Khaladaadku waa caadi. Dadka Holandiiska ah way ku fahmayaan, xitaa haddii aad khaladaad samayso.", // nieuw, nalezen
+    speakBrave: "Khaladaadku waa qayb ka mid ah barashada. Lagama fahmin? Mar kale dheh.", // nieuw, nalezen
+    speakBrave2: "Ma walwalsan tahay? Taasi waa caadi. Haddana dheh.", // nieuw, nalezen
+    speakBrave3: "Uma baahnid inaad si qumman u dhahdo. Isku day oo keliya.", // nieuw, nalezen
+    reasonTitle: "Maxaad u baranaysaa Nederlandiska?", // nieuw, nalezen
+    reasonHint: "Dooro mid ama laba.", // nieuw, nalezen
+    reasonDone: "Dhammaad", // nieuw, nalezen
+    reasonWork: "Inaan shaqadayda si fiican u qabto", // nieuw, nalezen
+    reasonKids: "Carruurtayda", // nieuw, nalezen
+    reasonColleagues: "Inaan la hadlo asxaabta shaqada", // nieuw, nalezen
+    reasonArrange: "Inaan arrimahayga keligay qabsado", // nieuw, nalezen
+    reasonJob: "Shaqo ka wanaagsan", // nieuw, nalezen
+    reasonHome: "Inaan Nederland gurigayga ku dareemo", // nieuw, nalezen
     speakMe: "Aniga", // nieuw, nalezen
     speakingPractice: "Tababarka hadalka", // nieuw, nalezen
     speakingHint: "Erayo kor u dheh oo isbarbar dhig. Qof kale kuma maqlo: waxba lama diro. Duubistaada ugu horreysa ee weedh kasta waxay ku jiraysaa taleefankaaga, si aad hadhow isbarbar dhigto.", // nieuw, nalezen
@@ -540,6 +551,7 @@ const lang: HelpLanguageSource = {
 
     // Unit: Safety first
     'u.safety': "Ammaanku waa koowaad", // nieuw, nalezen
+    'u.emergency': "Marka wax khaldamaan", // nieuw, nalezen
     'l.gear': "Qalabka badbaadada", // nieuw, nalezen
     'w.helm': "koofiyadda adag", // nieuw, nalezen
     'w.handschoenen': "galoofyada", // nieuw, nalezen

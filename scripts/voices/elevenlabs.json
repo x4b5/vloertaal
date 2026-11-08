@@ -1,6 +1,6 @@
 {
-  "take": 2,
-  "model": "eleven_multilingual_v2",
+  "take": 3,
+  "model": "eleven_v4",
   "format": "mp3_44100_64",
   "voices": [
     {
@@ -11,21 +11,53 @@
     },
     {
       "key": "daniel",
-      "label": "Daniel",
+      "label": "Simon",
       "gender": "male",
-      "voiceId": "mxrI8vmSNrwqRL0G7yhl"
+      "voiceId": "DuGBHZQRdhfc7aC5qK8x"
     },
     {
       "key": "ariel",
-      "label": "Ariël",
+      "label": "Sandrine",
       "gender": "female",
-      "voiceId": "3fjjbhBA9yI42Aoj0o18"
+      "voiceId": "MDB5TTttFQpqUo9sJd2G"
     },
     {
       "key": "noa",
-      "label": "Noa",
+      "label": "Iris",
       "gender": "female",
-      "voiceId": "94W4cf0CMSgymY1uoRiX"
+      "voiceId": "7bUjekA3fJWJxU5oaRYK"
+    },
+    {
+      "key": "philip",
+      "label": "Philip",
+      "gender": "male",
+      "country": "be",
+      "twin": "thijmen",
+      "voiceId": "oBrJBCgJsPgZQkOMHL7K"
+    },
+    {
+      "key": "hans",
+      "label": "Hans",
+      "gender": "male",
+      "country": "be",
+      "twin": "daniel",
+      "voiceId": "s7Z6uboUuE4Nd8Q2nye6"
+    },
+    {
+      "key": "evie",
+      "label": "Evie",
+      "gender": "female",
+      "country": "be",
+      "twin": "ariel",
+      "voiceId": "D50w2srwVohKTPx9X6Th"
+    },
+    {
+      "key": "sare",
+      "label": "Sare",
+      "gender": "female",
+      "country": "be",
+      "twin": "noa",
+      "voiceId": "1o47RdEHSLs7UxKVywkX"
     }
   ]
 }

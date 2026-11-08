@@ -95,10 +95,11 @@ describe('Getallen (l.counting)', () => {
 });
 
 describe('Brandalarm en ontruimen (l.alarm)', () => {
-  it('is in Veiligheid right after "Danger!", with the evacuation words', () => {
+  // Part of Veiligheid until 8 November 2026; now the first lesson of "Als het misgaat".
+  it('opens "Als het misgaat", right after Veiligheid, with the evacuation words', () => {
     const ids = alarm.unit.lessons.map((l) => l.id);
-    expect(alarm.unit.id).toBe('u.safety');
-    expect(ids.indexOf('l.alarm')).toBe(ids.indexOf('l.danger') + 1);
+    expect(alarm.unit.id).toBe('u.emergency');
+    expect(ids.indexOf('l.alarm')).toBe(0);
     expect(alarm.lesson.words.map((w) => w.nl)).toEqual(['het alarm', 'ontruimen', 'de vluchtroute', 'de trap', 'de verzamelplaats', 'de brandblusser']);
     expect(alarm.lesson.sentences).toHaveLength(3);
     // The emergency exit and the escape route are never offered as wrong answers for each other.
@@ -123,7 +124,7 @@ describe('Brandalarm en ontruimen (l.alarm)', () => {
     const tip = tipForLesson('l.alarm')!;
     const texts = [...alarm.lesson.words.map((w) => w.nl), ...alarm.lesson.sentences.map((s) => s.nl), tip.body, tip.phrase.nl];
     expect(texts.join(' ')).not.toMatch(/BHV/);
-    expect(TAAL_BE_INVENTORY['u.safety'].lessons['l.alarm']).toMatchObject({ items: 'A', tip: 'A' });
+    expect(TAAL_BE_INVENTORY['u.emergency'].lessons['l.alarm']).toMatchObject({ items: 'A', tip: 'A' });
     expect(TAAL_BE_INVENTORY['u.data'].lessons['l.counting']).toMatchObject({ items: 'A', tip: 'A' });
     const be = beTaalUnits().flatMap((u) => u.lessons);
     expect(be.find((l) => l.id === 'l.alarm')).toBe(alarm.lesson);

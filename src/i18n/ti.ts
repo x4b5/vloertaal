@@ -247,7 +247,18 @@ const lang: HelpLanguageSource = {
     sayTogether: { m: "ብሓባር በሎ", f: "ብሓባር በልዮ", x: "ብሓባር በልዎ" }, // nieuw, nalezen
     chorusHint: { m: "ምስቲ ድምጺ ብሓንሳብ በሎ። ዋላ ሓንቲ ኣይቅዳሕን።", f: "ምስቲ ድምጺ ብሓንሳብ በልዮ። ዋላ ሓንቲ ኣይቅዳሕን።", x: "ምስቲ ድምጺ ብሓንሳብ በልዎ። ዋላ ሓንቲ ኣይቅዳሕን።" }, // nieuw, nalezen
     chorusAlone: { m: "ሕጂ ንስኻ በይንኻ", f: "ሕጂ ንስኺ በይንኺ", x: "ሕጂ ንስኹም በይንኹም" }, // nieuw, nalezen
-    speakBrave: { m: "ጌጋ ምግባር ጸገም የብሉን። ሆላንዳውያን ምስ ጌጋታትካ እውን ይርድኡኻ እዮም።", f: "ጌጋ ምግባር ጸገም የብሉን። ሆላንዳውያን ምስ ጌጋታትኪ እውን ይርድኡኺ እዮም።", x: "ጌጋ ምግባር ጸገም የብሉን። ሆላንዳውያን ምስ ጌጋታትኩም እውን ይርድኡኹም እዮም።" }, // nieuw, nalezen
+    speakBrave: "ጌጋታት ክፋል ናይ ምምሃር እዮም። ኣይተረድኡኻን? ሓንሳብ ደጊምካ በሎ።", // nieuw, nalezen
+    speakBrave2: "ትሻቐል ዶ? እዚ ንቡር እዩ። ግን በሎ።", // nieuw, nalezen
+    speakBrave3: "ብፍጹም ክትብሎ የብልካን። ፈትን ጥራይ።", // nieuw, nalezen
+    reasonTitle: "ስለምንታይ ኢኻ ሆላንድኛ ትመሃር?", // nieuw, nalezen
+    reasonHint: "ሓደ ወይ ክልተ ምረጽ።", // nieuw, nalezen
+    reasonDone: "ተወዲኡ", // nieuw, nalezen
+    reasonWork: "ስራሐይ ብጽቡቕ ምስራሕ", // nieuw, nalezen
+    reasonKids: "ደቀይ", // nieuw, nalezen
+    reasonColleagues: "ምስ መሳርሕተይ ምዝራብ", // nieuw, nalezen
+    reasonArrange: "ነገራት ባዕለይ ምፍጻም", // nieuw, nalezen
+    reasonJob: "ዝሓሸ ስራሕ", // nieuw, nalezen
+    reasonHome: "ኣብ ሆላንድ ከም ገዛይ ምስማዕ", // nieuw, nalezen
     speakMe: 'ኣነ',
     speakingPractice: 'ልምምድ ምዝራብ',
     speakingHint: { m: "ቃላት ብዓው ኢልካ በሎም እሞ ኣወዳድር። ካልእ ሰብ ኣይሰምዓካን፡ ዋላ ሓንቲ ኣይለኣኽን። ቀዳማይ ቅዳሕ ድምጽካ ናይ ሓንቲ ሓረግ ኣብ ተሌፎንካ ይጸንሕ፣ ደሓር ንምውድዳር።", f: "ቃላት ብዓው ኢልኪ በልዮም እሞ ኣወዳድሪ። ካልእ ሰብ ኣይሰምዓክን፡ ዋላ ሓንቲ ኣይለኣኽን። ቀዳማይ ቅዳሕ ድምጽኪ ናይ ሓንቲ ሓረግ ኣብ ተሌፎንኪ ይጸንሕ፣ ደሓር ንምውድዳር።", x: "ቃላት ብዓው ኢልኩም በልዎም እሞ ኣወዳድሩ። ካልእ ሰብ ኣይሰምዓኩምን፡ ዋላ ሓንቲ ኣይለኣኽን። ቀዳማይ ቅዳሕ ድምጽኩም ናይ ሓንቲ ሓረግ ኣብ ተሌፎንኩም ይጸንሕ፣ ደሓር ንምውድዳር።" }, // nieuw, nalezen
@@ -507,6 +518,7 @@ const lang: HelpLanguageSource = {
     'u.firstday': 'ቀዳማይ መዓልቲ ስራሕ',
     'u.help': 'ሓገዝ ምሕታት',
     'u.safety': 'ድሕንነት ቅድሚ ኩሉ',
+    'u.emergency': "ገለ ነገር ምስ ዝጋገ", // nieuw, nalezen
     'u.warehouse': 'ኣብ መኽዘን',
     'u.time': 'ግዜን መደብ ስራሕን',
 

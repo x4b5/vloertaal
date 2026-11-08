@@ -27,8 +27,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "ከም man ከምኡውን maan ዝኣመሰሉ ቃላት ክፈልዮም እኽእል እየ።", // nieuw, nalezen
     'kjn.u.sounds.2': "ከቢድ ድምጺ ዘለዎም ሓጸርቲ ሓረጋት ክደግሞም እኽእል እየ።", // nieuw, nalezen
     'kjn.u.safety.1': "ከም «Pas op!» ዝኣመሰለ መጠንቀቕታ ክርድኦ እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.safety.2': "ሓደጋ ክሕብር እኽእል እየ።", // nieuw, nalezen
-    'kjn.u.safety.3': "ገና ዘይተማሃርክዎ ነገር ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.safety.2': "ገና ዘይተማሃርክዎ ነገር ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.emergency.1': "መጥፋእቲ ሓዊ ኣበይ ከም ዘሎ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.emergency.2': "ሓደጋ ክሕብር እኽእል እየ።", // nieuw, nalezen
     'kjn.u.apply.1': "እንታይ ተመኩሮ ከም ዘለኒ ክነግር እኽእል እየ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.apply.2': "ኣብ ቃለ-መሕትት ስራሕ ብዛዕባ ርእሰይ ክዛረብ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.contract.1': "ኣብ ሰሙን ክንደይ ሰዓት ከም ዝሰርሕ ክሓትት እኽእል እየ።", // nieuw, nalezen

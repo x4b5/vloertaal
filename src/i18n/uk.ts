@@ -246,7 +246,18 @@ const lang: HelpLanguageSource = {
     sayTogether: "Скажи разом", // nieuw, nalezen
     chorusHint: "Кажи одночасно з голосом. Нічого не записується.", // nieuw, nalezen
     chorusAlone: "Тепер тільки ти", // nieuw, nalezen
-    speakBrave: "Помилки — це нормально. Нідерландці розуміють тебе і з помилками.", // nieuw, nalezen
+    speakBrave: "Помилки — це частина навчання. Тебе не зрозуміли? Скажи ще раз.", // nieuw, nalezen
+    speakBrave2: "Хвилюєшся? Це нормально. Все одно скажи.", // nieuw, nalezen
+    speakBrave3: "Не треба казати ідеально. Просто спробуй.", // nieuw, nalezen
+    reasonTitle: "Чому ти вчиш нідерландську?", // nieuw, nalezen
+    reasonHint: "Обери одне або два.", // nieuw, nalezen
+    reasonDone: "Готово", // nieuw, nalezen
+    reasonWork: "Добре виконувати роботу", // nieuw, nalezen
+    reasonKids: "Мої діти", // nieuw, nalezen
+    reasonColleagues: "Говорити з колегами", // nieuw, nalezen
+    reasonArrange: "Самому вирішувати справи", // nieuw, nalezen
+    reasonJob: "Краща робота", // nieuw, nalezen
+    reasonHome: "Почуватися вдома в Нідерландах", // nieuw, nalezen
     speakMe: 'Я',
     speakingPractice: 'Практика мовлення',
     speakingHint: "Кажи слова вголос і порівнюй. Ніхто інший тебе не чує: нічого не надсилається. Твій перший запис речення залишається в телефоні, щоб порівняти пізніше.", // nieuw, nalezen
@@ -540,6 +551,7 @@ const lang: HelpLanguageSource = {
 
     // Unit: Safety first
     'u.safety': 'Безпека понад усе',
+    'u.emergency': "Коли щось іде не так", // nieuw, nalezen
     'l.gear': 'Засоби захисту',
     'w.helm': 'каска',
     'w.handschoenen': 'рукавиці',

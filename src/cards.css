@@ -25,9 +25,9 @@
 /* The row still to work out: a dashed "?" box; after Check it holds the answer, lit up. */
 .card-q {
   display: inline-grid; place-items: center; min-width: 2.4em; padding: 0 8px;
-  border: 2px dashed var(--edge); border-radius: 6px; font-weight: 800; line-height: 1.35;
+  border: 2px dashed var(--edge); border-radius: 6px; font-weight: 600; line-height: 1.35;
 }
-.slip.card .card-todo { margin-top: 2px; border-top: 2px solid var(--edge); font-weight: 700; }
+.slip.card .card-todo { margin-top: 2px; border-top: 2px solid var(--edge); font-weight: 600; }
 .slip.card .card-todo.slip-hit dd { animation: card-reveal 0.35s var(--ease-out) both; }
 @keyframes card-reveal { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .slip.card .card-todo.slip-hit dd { animation: none; } }
@@ -65,9 +65,9 @@
   border: 2px solid var(--edge); border-radius: 6px; background: var(--kraft);
 }
 .card-werkbon .slip-row { flex-direction: column; align-items: stretch; gap: 0; padding: 6px 6px; }
-.card-werkbon .slip-row dt { font-size: 0.95rem; font-weight: 650; color: var(--muted); }
+.card-werkbon .slip-row dt { font-size: 0.95rem; font-weight: 600; color: var(--muted); }
 .card-werkbon .slip-row.slip-hit dt { color: inherit; }
-.slip.card.card-werkbon .slip-row dd { flex: none; text-align: start; font-weight: 650; }
+.slip.card.card-werkbon .slip-row dd { flex: none; text-align: start; font-weight: 600; }
 
 /* The feedback of a sum: "Zo reken je het" and its steps, with a speaker. */
 .rule-fb-sum { display: flex; align-items: flex-start; gap: 10px; margin: 10px 0 0; }

@@ -31,8 +31,27 @@ const CAST_VOICES: Record<string, VoiceRef[]> = {
   jada: ['piper:noa', DEVICE],
 };
 
+/**
+ * Learners who work in Belgium (Progress.country 'be') hear the Flemish cast (8 November 2026),
+ * each with the Dutch voice behind it: until a Flemish voice has recordings the Dutch one speaks,
+ * and a line it lacks is played by that Dutch twin (clipFor in audio.ts).
+ */
+const CAST_VOICES_BE: Record<string, VoiceRef[]> = {
+  bram: ['piper:philip', `piper:${BRAM_VOICE}`, DEVICE],
+  henk: ['piper:hans', 'piper:daniel', DEVICE],
+  amina: ['piper:evie', 'piper:ariel', DEVICE],
+  jada: ['piper:sare', 'piper:noa', DEVICE],
+};
+
+let castCountry: 'nl' | 'be' = 'nl';
+
+/** The country the cast speaks for (set from Progress.country by the app). */
+export function setCastCountry(country?: string | null): void {
+  castCountry = country === 'be' ? 'be' : 'nl';
+}
+
 export function voiceFor(who: string): VoiceRef {
-  const options = CAST_VOICES[who];
+  const options = (castCountry === 'be' ? CAST_VOICES_BE : CAST_VOICES)[who];
   if (!options) return null;
   return options.find((r) => !r?.startsWith('piper:') || hasRecordedVoice(r.slice(6))) ?? DEVICE;
 }

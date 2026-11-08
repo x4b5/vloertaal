@@ -246,7 +246,18 @@ const lang: HelpLanguageSource = {
     sayTogether: "با هم بگویید", // nieuw, nalezen
     chorusHint: "همزمان با صدا بگویید. هیچ چیزی ثبت نمی‌شود.", // nieuw, nalezen
     chorusAlone: "حالا فقط خود شما", // nieuw, nalezen
-    speakBrave: "اشتباه کردن مشکلی ندارد. هالندی‌ها گپ شما را با اشتباه هم می‌فهمند.", // nieuw, nalezen
+    speakBrave: "اشتباه بخشی از آموختن است. نفهمیدند؟ یک بار دیگر بگو.", // nieuw, nalezen
+    speakBrave2: "تشویش داری؟ عادی است. باز هم بگو.", // nieuw, nalezen
+    speakBrave3: "لازم نیست بی‌نقص بگویی. فقط کوشش کن.", // nieuw, nalezen
+    reasonTitle: "چرا هالندی یاد می‌گیری؟", // nieuw, nalezen
+    reasonHint: "یکی یا دو تا را انتخاب کن.", // nieuw, nalezen
+    reasonDone: "تمام", // nieuw, nalezen
+    reasonWork: "کارم را خوب انجام بدهم", // nieuw, nalezen
+    reasonKids: "اولادهایم", // nieuw, nalezen
+    reasonColleagues: "با همکاران گپ بزنم", // nieuw, nalezen
+    reasonArrange: "کارهایم را خودم انجام بدهم", // nieuw, nalezen
+    reasonJob: "کار بهتر", // nieuw, nalezen
+    reasonHome: "در هالند احساس کنم در خانهٔ خود هستم", // nieuw, nalezen
     speakMe: 'من',
     speakingPractice: 'تمرین گپ زدن',
     speakingHint: "کلمه‌ها را بلند بگویید و مقایسه کنید. هیچ کس دیگر صدای شما را نمی‌شنود: هیچ چیزی فرستاده نمی‌شود. اولین ثبت صدای شما از هر جمله روی تلفن تان می‌ماند تا بعداً مقایسه کنید.", // nieuw, nalezen
@@ -506,6 +517,7 @@ const lang: HelpLanguageSource = {
     'u.firstday': 'روز اول کار',
     'u.help': 'کمک خواستن',
     'u.safety': 'اول ایمنی',
+    'u.emergency': "وقتی کدام حادثه رخ می‌دهد", // nieuw, nalezen
     'u.warehouse': 'در گدام',
     'u.time': 'وقت و تقسیم اوقات کار',
 

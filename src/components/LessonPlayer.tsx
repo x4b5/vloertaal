@@ -50,7 +50,7 @@ import { MicIcon, SpeakExercise } from './Speaking';
 import { isWord, resetMicForLesson, speakingOn, speakSkipped } from '../lib/speaking';
 import { listenOn } from '../lib/listen';
 import { speakCardId } from '../lib/spaced';
-import type { SpeakEvent } from '../lib/chorus';
+import type { BraveLine, SpeakEvent } from '../lib/chorus';
 import {
   type Answer,
   BuildExercise,
@@ -389,8 +389,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   check?: boolean;
   /** "Zeg het samen" before recording in this lesson's "Zeg het" (src/lib/chorus.ts chorusDue). */
   speakTogether?: boolean;
-  /** Bram's one-time "Fouten mogen" at this lesson's "Zeg het" (src/lib/chorus.ts braveDue). */
-  speakBrave?: boolean;
+  /** Bram's line at this lesson's "Zeg het", if any (src/lib/chorus.ts braveLine). */
+  speakBrave?: BraveLine | null;
   /** What this lesson's "Zeg het" tells (met, skipped, recorded), kept on this phone (src/lib/chorus.ts). */
   onSpeak?: (what: SpeakEvent) => void;
 }) {

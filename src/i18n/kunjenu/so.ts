@@ -26,8 +26,9 @@ const t: CultureTranslation = {
     'kjn.u.sounds.1': "Waan maqli karaa farqiga u dhexeeya ereyada sida man iyo maan.", // nieuw, nalezen
     'kjn.u.sounds.2': "Waan ku celin karaa jumlado gaagaaban oo leh codad adag.", // nieuw, nalezen
     'kjn.u.safety.1': "Waan fahmi karaa digniin sida “Pas op!”.", // nieuw, nalezen
-    'kjn.u.safety.2': "Waan sheegi karaa shil dhacay.", // nieuw, nalezen
-    'kjn.u.safety.3': "Waan sheegi karaa inaanan weli wax baran.", // nieuw, nalezen
+    'kjn.u.safety.2': "Waan sheegi karaa inaanan weli wax baran.", // nieuw, nalezen
+    'kjn.u.emergency.1': "Waan weydiin karaa meesha dab-demiyuhu yaal.", // nieuw, nalezen
+    'kjn.u.emergency.2': "Waan sheegi karaa shil dhacay.", // nieuw, nalezen
     'kjn.u.apply.1': "Waan sheegi karaa waayo-aragnimada aan leeyahay.", // nieuw, nalezen
     'kjn.u.apply.2': "Waan ka hadli karaa naftayda wareysiga shaqada.", // nieuw, nalezen
     'kjn.u.contract.1': "Waan weydiin karaa immisa saacadood ayaan toddobaadkii shaqaynayaa.", // nieuw, nalezen

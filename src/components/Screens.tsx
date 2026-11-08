@@ -606,7 +606,7 @@ function withMailLink(text: string, plain: (part: string) => React.ReactNode = (
   return parts.map((part, i) => (
     <Fragment key={i}>
       {i > 0 && (
-        <a href={`mailto:${CONTACT_EMAIL}`} dir="ltr" lang={dutchOnly ? undefined : 'en'} style={{ color: 'inherit', fontWeight: 700, textUnderlineOffset: '0.15em', whiteSpace: 'nowrap' }}>
+        <a href={`mailto:${CONTACT_EMAIL}`} dir="ltr" lang={dutchOnly ? undefined : 'en'} style={{ color: 'inherit', fontWeight: 600, textUnderlineOffset: '0.15em', whiteSpace: 'nowrap' }}>
           {CONTACT_EMAIL}
         </a>
       )}

@@ -41,7 +41,16 @@ export interface ProSection {
 export { PRO_TITLE };
 
 /**
- * Under the title: the question first, so whoever arrives (for example from a poster) sees at once
+ * Under the title, before anything else: what Vloertaal is, in one sentence a job coach can repeat
+ * after hearing it once (positioning of 8 November 2026: for whoever keeps a placement going, not a
+ * language app). "Kandidaten" is the coaches' and recruiters' own word; "werkvloer" covers both the
+ * language and the unwritten rules. The second sentence is for whoever asks why.
+ */
+export const COACH_PITCH = 'Een gratis app die kandidaten de werkvloer uitlegt, in hun eigen taal.';
+export const COACH_WHY = 'Zodat een plaatsing niet stukloopt op een instructie of een ongeschreven regel.';
+
+/**
+ * After the pitch: the question, so whoever arrives (for example from a poster) sees at once
  * what we ask. Modest, as a question; what Vloertaal is follows in 'p.what', the reason in 'p.story'.
  */
 export const PRO_LEAD = 'Hoi, ik ben Xavier. Ik ben op dit moment bezig met het bouwen van Vloertaal, een oefenapp voor Nederlands op het werk. Graag zou ik daar de blik van professionals op willen: taalprofessionals, en experts op het gebied van de arbeidsmarkt en wet- en regelgeving. Zou je de app eens willen bekijken en laten weten wat beter kan, inhoudelijk of didactisch? En als het past: zou je deelnemers ermee willen laten oefenen? De app is grotendeels met behulp van AI gebouwd en nog niet door vakmensen nagekeken. Juist daarom is elke opmerking waardevol. Reageren kan via hoi@vloertaal.nl of via het vlaggetje Melden in een les.';
@@ -61,9 +70,10 @@ export const WHAT_BESIDE = 'Vloertaal past naast wat er al is, zoals Oefenen.nl,
 
 /**
  * 'p.story': the reason, written for professionals (the learner's About keeps its own plain text,
- * 'a.story'). No second "Hoi, ik ben Xavier": the lead already says it.
+ * 'a.story'). No second "Hoi, ik ben Xavier": the lead already says it. The owner's own words
+ * (8 November 2026), the frustration named so a job coach recognises it.
  */
-export const PRO_STORY = 'In mijn werk als arbeidsbemiddelaar zie ik regelmatig dat een plaatsing stukloopt op taal. Iemand begrijpt een instructie niet goed, of durft niet te vragen wat iets betekent. Vloertaal is een poging om dat iets makkelijker te maken: de taal van het werk oefenen, op de eigen telefoon, naast wat er al is. Ik bouw de app in mijn vrije tijd. De app zou ik graag samen verder ontwikkelen: met professionals, werkgevers en uiteraard de doelgroep zelf.';
+export const PRO_STORY = 'In mijn werk begeleid ik kandidaten naar en op het werk. Helaas loopt een plaatsing wel eens stuk. En taal is hierin vaak een grote factor. Iemand begrijpt een instructie niet goed, of durft niet te vragen wat iets betekent. En om eerlijk te zijn: dat kan me frustreren. “Wat als we meer hadden ingezet op taal en dan specifiek gericht op werk?” Vloertaal is een poging om dat iets makkelijker te maken: de taal van het werk oefenen, op de eigen telefoon, naast wat er al is. Ik bouw de app in mijn vrije tijd. De app zou ik graag samen verder ontwikkelen: met professionals, werkgevers en uiteraard de doelgroep zelf.';
 
 /** 'p.story', second paragraph: the costs, and the question about a subsidy or fund. */
 export const PRO_COSTS = 'De kosten zijn op dit moment nog beperkt. Als ze hoger worden, is een subsidie of fonds waarschijnlijk nodig, en daar zou ik graag hulp bij hebben. Ken je iemand die me daarbij zou kunnen helpen? Dan hoor ik dat graag.';
