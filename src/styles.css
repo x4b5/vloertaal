@@ -5074,12 +5074,16 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
    (an iPhone in Chrome is about 660 px high); the longest tips, also in Ukrainian and Arabic,
    still end above the Continue bar at 375 × 640. */
 @media (min-height: 640px) {
-  /* --tip-fit: as large as the room above Continue allows, up to 1.7rem (useFitText.ts, the
-     owner's request, 4 November 2026); a long tip keeps 1.25rem. The title grows with it. */
-  .tip-page-read .tip-title { font-size: min(2rem, calc(var(--tip-fit, 1.25rem) * 1.28)); }
-  .tip-page-read .tip-body { font-size: var(--tip-fit, 1.25rem); line-height: 1.5; }
+  .tip-page-read .tip-title { font-size: 1.6rem; }
+  .tip-page-read .tip-body { font-size: 1.25rem; line-height: 1.5; }
   .tip-page-read .tip-body .bi-help { --help-size: 0.82em; }
 }
+/* --tip-fit: as large as the room above Continue allows, up to 2rem (useFitText.ts, the owner's
+   request, 4 and 8 November 2026), on any screen height: the hook only sets it when the whole tip
+   still ends above Continue. A long tip keeps the size above. The title grows with it. */
+.tip-page-read[data-fit] .tip-title { font-size: min(2.2rem, calc(var(--tip-fit) * 1.2)); }
+.tip-page-read[data-fit] .tip-body { font-size: var(--tip-fit); line-height: 1.45; }
+.tip-page-read[data-fit] .tip-body .bi-help { --help-size: 0.82em; }
 
 /* After recording (Speaking.tsx): the example and your try play by themselves; this line says
    which one is playing. One button to say it again; the footer's Continue goes on. */

@@ -2,17 +2,19 @@ import { useLayoutEffect, type RefObject } from 'react';
 
 /**
  * The sizes a tip's explanation may grow to (rem, largest first), on its own page ("Zo werkt het
- * hier"). Below the last one the CSS size stays (1.25rem, src/styles.css). The room under a short
- * tip was mostly empty, so the text takes it (the owner's request, 4 November 2026); a long tip
- * keeps the size it had and scrolls, as before.
+ * hier"). Only sizes above the CSS size are tried (1.0625rem on a short phone screen, 1.25rem from
+ * 640 px high, src/styles.css); when none fits, the CSS size stays. The room under a short tip was
+ * mostly empty, so the text takes it (the owner's request, 4 November 2026). On 8 November 2026
+ * larger again, and also on a phone in Safari with its bars (under 640 px high), where the text
+ * stayed small with half the page empty.
  */
-export const FIT_STEPS = [1.7, 1.6, 1.5, 1.4, 1.3] as const;
+export const FIT_STEPS = [2, 1.9, 1.8, 1.7, 1.6, 1.5, 1.4, 1.3, 1.2, 1.1] as const;
 
 /** Space kept between the text's end and the Continue bar. */
 const FIT_GAP = 12;
 
 /**
- * Sets `--tip-fit` on the element to the largest size from FIT_STEPS at which the whole element
+ * Sets `--tip-fit` (and `data-fit`, which turns it on in the CSS) on the element to the largest size from FIT_STEPS at which the whole element
  * still ends above the lesson's Continue bar (`.player-foot`), or removes it when none fits. Runs
  * again on a resize, a new text size (Settings > Tekst sets the root font size) and when the
  * fonts have loaded. In rem, so the steps grow with a larger text size too.
@@ -21,14 +23,22 @@ export function useFitText(ref: RefObject<HTMLElement | null>, on: boolean, key:
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el || !on) return;
+    const off = () => { el.style.removeProperty('--tip-fit'); delete el.dataset.fit; };
     const fit = () => {
       const foot = document.querySelector<HTMLElement>('.player-foot');
       const limit = (foot ? foot.getBoundingClientRect().top : window.innerHeight) - FIT_GAP;
+      // The CSS size of the text: never fit below it.
+      off();
+      const body = el.querySelector<HTMLElement>('.tip-body');
+      const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      const base = body ? parseFloat(getComputedStyle(body).fontSize) / rem : 0;
       for (const step of FIT_STEPS) {
+        if (step <= base) break;
         el.style.setProperty('--tip-fit', `${step}rem`);
+        el.dataset.fit = '';
         if (el.getBoundingClientRect().bottom <= limit) return;
       }
-      el.style.removeProperty('--tip-fit');
+      off();
     };
     fit();
     let live = true;
