@@ -39,7 +39,12 @@ describe('"cao" letter by letter (the owner, 5 November 2026)', () => {
 describe('a word that reads as an abbreviation when it stands alone (the owner, 8 November 2026)', () => {
   it('says the tile "tot" with an exclamation mark, not "tot." (= "total")', () => {
     expect(sayAs('tot')).toBe('tot!');
-    expect(sayAs('Tot')).toBe('Tot!');
+    expect(sayAs('Tot')).toBe('tot!');
+  });
+
+  it('spells the tiles "wc" and "digid" out', () => {
+    expect(sayAs('wc')).toBe('wee-cee');
+    expect(sayAs('digid')).toBe('die-gie-dee');
   });
 
   it('leaves the word alone inside a line', () => {
@@ -50,5 +55,13 @@ describe('a word that reads as an abbreviation when it stands alone (the owner, 
   it('asks for a new recording of the tile, not of the line', () => {
     expect(minTake('tot')).toBe(ALONE_TAKE);
     expect(minTake('tot ziens')).toBe(0);
+  });
+
+  it('records again the tiles that came out wrong, as they are written', () => {
+    for (const t of ['ben', 'heb', 'per', 'trap', 'band']) {
+      expect(sayAs(t)).toBe(t);
+      expect(minTake(t)).toBe(ALONE_TAKE);
+    }
+    expect(minTake('Ik ben Ali.')).toBe(0);
   });
 });

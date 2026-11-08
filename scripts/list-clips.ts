@@ -89,7 +89,8 @@ for (const u of units)
 // it was said digit by digit ("één één twee"). Take 4: the clips with "app" ("vertaalapp",
 // "groepsapp"): the voice still said "ap" in take 2 (checked with a transcription on 1 Nov 2026).
 const SAY_TAKE = 2;
-// Take 5 (minTake, src/lib/sayAs.ts): "cao", said as one word before; now "cee-aa-oo".
+// Take 5 (minTake, src/lib/sayAs.ts): "cao", said as one word before; now "cee-aa-oo". Take 6:
+// tiles said wrong, also those recorded again as they are written ("ben"), so without a `say`.
 const takeFor = (text: string) => (minTake(text) || (/app/i.test(text) ? 4 : hasDigitNumber(text) ? 3 : SAY_TAKE));
 
 mkdirSync('public/audio', { recursive: true });
@@ -101,7 +102,7 @@ writeFileSync(
       return {
         id,
         text,
-        ...(say !== text ? { say, take: takeFor(text) } : {}),
+        ...(say !== text ? { say, take: takeFor(text) } : minTake(text) ? { take: minTake(text) } : {}),
         ...(onlyVoices.has(id) ? { voices: onlyVoices.get(id) } : {}),
       };
     }),
