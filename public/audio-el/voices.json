@@ -17798,7 +17798,24 @@
     "be.s.nextstep.1": "Ik wil mijn diploma secundair onderwijs halen.",
     "be.s.nextstep.3": "Wanneer is de opendeurdag?",
     "be.s.insurance.1": "Ik ben lid van een ziekenfonds.",
-    "be.s.insurance.2": "Wordt dit terugbetaald?"
+    "be.s.insurance.2": "Wordt dit terugbetaald?",
+    "be.s.insurance.3": "Ik vraag de verhoogde tegemoetkoming aan.",
+    "be.s.transit.1": "Ik betaal in de bus met mijn bankkaart.",
+    "be.s.transit.2": "Ik heb een abonnement voor de trein.",
+    "be.s.ww.1": "Ik schrijf me in bij de VDAB.",
+    "be.s.jobends.2": "Ik vraag advies in het justitiehuis.",
+    "be.s.jobends.3": "Ik vraag mijn ziekenfonds of mijn verzekering doorloopt.",
+    "be.s.newjob.2": "Ik bewaar mijn loonbrieven.",
+    "be.s.checkout.1": "Betaalt u met de kaart of contant?",
+    "be.s.placement.2": "Wie is mijn mentor?",
+    "be.s.placement.3": "Ik heb de stageovereenkomst nog niet getekend.",
+    "be.s.council.1": "Ik verhuis. Ik geef mijn nieuwe adres door aan de gemeente.",
+    "be.s.council.2": "Mag ik stemmen voor de gemeenteraad?",
+    "be.s.council.3": "Mijn oproepingsbrief kwam met de post.",
+    "be.s.police.1": "Ik heb mijn identiteitskaart altijd bij me.",
+    "be.s.police.3": "Ik wil eerst met een advocaat praten.",
+    "be.s.login.3": "Mijn itsme-code geef ik aan niemand.",
+    "be.s.transit.1.front": "In de bus betaal ik met mijn bankkaart."
    },
    "takes": {
     "be.w.kantine": 3,
@@ -17875,7 +17892,24 @@
     "be.s.nextstep.1": 3,
     "be.s.nextstep.3": 3,
     "be.s.insurance.1": 3,
-    "be.s.insurance.2": 3
+    "be.s.insurance.2": 3,
+    "be.s.insurance.3": 3,
+    "be.s.transit.1": 3,
+    "be.s.transit.2": 3,
+    "be.s.ww.1": 3,
+    "be.s.jobends.2": 3,
+    "be.s.jobends.3": 3,
+    "be.s.newjob.2": 3,
+    "be.s.checkout.1": 3,
+    "be.s.placement.2": 3,
+    "be.s.placement.3": 3,
+    "be.s.council.1": 3,
+    "be.s.council.2": 3,
+    "be.s.council.3": 3,
+    "be.s.police.1": 3,
+    "be.s.police.3": 3,
+    "be.s.login.3": 3,
+    "be.s.transit.1.front": 3
    }
   }
  ]
