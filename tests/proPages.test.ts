@@ -111,12 +111,15 @@ describe('Voor begeleiders en werkgevers: in the app and on the site, from one s
     expect(app.match(/<h1[\s>]/g)).toHaveLength(1);
     expect(app).toContain(`<h1 tabindex="-1">${PRO_TITLE}</h1>`);
     expect(app.match(/href="mailto:/g)).toHaveLength(1);
-    // Outside the topic list: the mail link and "Start de demo" (src/lib/demo.ts, November 2026),
-    // three taps with the back arrow (chrome), the house rule's most.
+    // Outside the topic list: the mail link, "Start de demo" (src/lib/demo.ts, November 2026) and
+    // "Stuur door aan een collega" (9 November 2026), four taps with the back arrow (chrome). One
+    // over the house rule's three, by the owner's choice (9 November 2026): the rule is for learners,
+    // this page is for professionals.
     const outside = app.replace(/<ul class="coach-links[\s\S]*?<\/ul>(?=<\/section>)/, '');
     expect(outside.match(/<a\b/g)).toHaveLength(1);
-    expect(outside.match(/<button\b/g) ?? []).toHaveLength(2);
+    expect(outside.match(/<button\b/g) ?? []).toHaveLength(3);
     expect(outside).toContain('Start de demo');
+    expect(outside).toContain('Stuur door aan een collega');
     expect(outside).toContain('chrome-back');
   });
 

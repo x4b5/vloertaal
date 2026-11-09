@@ -82,6 +82,26 @@ export const COACH_PITCH = 'Een gratis app die kandidaten de werkvloer uitlegt, 
 export const COACH_WHY = 'Zodat een plaatsing niet stukloopt op een instructie of een ongeschreven regel.';
 
 /**
+ * "Stuur door aan een collega" (the owner's request, 9 November 2026: more exposure, through the
+ * coaches first, as one coach reaches many candidates). From one coach to another, so in their
+ * words, not the owner's; the link is the professionals' page (src/lib/paths.ts COACH_PATH).
+ */
+export const COACH_SHARE = {
+  title: 'Vloertaal',
+  text: `Misschien iets voor jouw kandidaten: Vloertaal. ${COACH_PITCH}`,
+  url: 'https://vloertaal.nl/voor-begeleiders/',
+} as const;
+
+/** The same message as a WhatsApp and a mail link (the website has no share sheet of its own). */
+export function coachShareLinks(): { whatsapp: string; mail: string } {
+  const message = `${COACH_SHARE.text} ${COACH_SHARE.url}`;
+  return {
+    whatsapp: `https://wa.me/?text=${encodeURIComponent(message)}`,
+    mail: `mailto:?subject=${encodeURIComponent(COACH_SHARE.title)}&body=${encodeURIComponent(message)}`,
+  };
+}
+
+/**
  * After the pitch: the question, so whoever arrives (for example from a poster) sees at once
  * what we ask. Modest, as a question; what Vloertaal is follows in 'p.what', the reason in 'p.story'.
  */

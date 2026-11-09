@@ -1,6 +1,6 @@
 import { CONTACT_EMAIL } from '../content/about';
 import { COACH_FACTS } from '../content/facts';
-import { COACH_PITCH, COACH_WHY, PRO_LEAD, proLayout, proSections, type ProBlock, type ProSection } from '../content/pro';
+import { COACH_PITCH, COACH_WHY, coachShareLinks, PRO_LEAD, proLayout, proSections, type ProBlock, type ProSection } from '../content/pro';
 import { THEMES } from '../content/themes';
 import { KUN_REGELS, KUN_TAAL, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 import { languageNav } from './langPages';
@@ -69,6 +69,12 @@ ${b.sections.map(section).join('\n')}
 </details>`;
 }
 
+/** "Stuur door aan een collega": WhatsApp or mail, the message ready (src/content/pro.ts COACH_SHARE). */
+function shareLine(): string {
+  const { whatsapp, mail } = coachShareLinks();
+  return `<p class="share"><strong>Stuur door aan een collega:</strong> <a href="${esc(whatsapp)}">WhatsApp</a> · <a href="${esc(mail)}">Mail</a></p>`;
+}
+
 export function coachPage(): string {
   const title = 'Vloertaal voor jobcoaches: de werkvloer in eigen taal';
   const description = `${COACH_PITCH} ${COACH_WHY}`;
@@ -90,6 +96,7 @@ export function coachPage(): string {
     `<h1>Vloertaal voor begeleiders en werkgevers</h1>
 <p class="lead"><strong>${esc(COACH_PITCH)}</strong> ${esc(COACH_WHY)}</p>
 <a class="cta" href="/">Open Vloertaal →</a>
+${shareLine()}
 <p>${text(PRO_LEAD)}</p>
 ${proLayout().map(block).join('\n')}
 <footer>
