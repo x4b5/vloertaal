@@ -5499,6 +5499,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 }
 .demo-bar-next { background: var(--yellow); color: var(--on-yellow); border-color: var(--yellow); }
 #root:has(> .demo-bar) .screen { padding-top: 16px; }
+.coach-send { width: 100%; margin: 4px 0 0; gap: 8px; color: var(--ink); border-color: var(--ink-3); }
 .coach-demo { margin: 12px 0 18px; padding: 12px 14px; background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); }
 .coach-demo h2 { margin-top: 0; }
 .coach-demo-btn { width: 100%; }

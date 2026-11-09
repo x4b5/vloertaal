@@ -15,7 +15,7 @@ import { groupByTheme } from '../content/themes';
 import { ThemeHeadRow } from './Themes';
 import { COACH_FACTS } from '../content/facts';
 import { CONTACT_EMAIL } from '../content/about';
-import { COACH_PITCH, COACH_WHY, PRO_LEAD, PRO_TITLE, proLayout, type ProSection } from '../content/pro';
+import { COACH_PITCH, COACH_SHARE, COACH_WHY, PRO_LEAD, PRO_TITLE, proLayout, type ProSection } from '../content/pro';
 import { KUN_REGELS, KUN_TAAL, kunOnderwerpenNu, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 
 /**
@@ -28,8 +28,9 @@ import { KUN_REGELS, KUN_TAAL, kunOnderwerpenNu, niveauLabel, type KunOnderwerp 
  * The link per topic opens Vloertaal at that topic, to send a learner by WhatsApp or e-mail,
  * grouped by theme under plain header rows (src/content/themes.ts). One kind of row with one tap
  * each (a list, the named exception to "at most three"). Shares with the phone's share sheet, or
- * copies the link. Outside the list one thing to tap: the mail address (the site's other links stay
- * text here). Also straight from the address with #begeleiders (App.tsx), without a language
+ * copies the link. Outside the list: the mail address, the demo and "Stuur door aan een collega" (one
+ * over the house rule of three, the owner's choice of 9 November 2026: this page is for professionals;
+ * the site's other links stay text here). Also straight from the address with #begeleiders (App.tsx), without a language
  * choice or code first.
  */
 export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner's help language: the back arrow says Back in it too. */ lang?: HelpLanguage }) {
@@ -77,6 +78,7 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
         <h1 tabIndex={-1}>{PRO_TITLE}</h1>
       </div>
       <p><strong>{COACH_PITCH}</strong> {COACH_WHY}</p>
+      <ShareWithColleague />
       <ShowCandidate />
       <p>{PRO_LEAD}</p>
       {proLayout().map((block) => {
@@ -202,5 +204,33 @@ function ShowCandidate() {
       )}
       {failed && <p className="coach-demo-note" role="alert">Dit lukt niet op deze telefoon: de browser bewaart niets.</p>}
     </section>
+  );
+}
+
+/**
+ * "Stuur door aan een collega" (src/content/pro.ts COACH_SHARE): the phone's share sheet with the
+ * message and the professionals' page, else the message copied. Under the pitch, before the demo.
+ */
+export function ShareWithColleague() {
+  const [copied, setCopied] = useState(false);
+  const message = `${COACH_SHARE.text} ${COACH_SHARE.url}`;
+  const send = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: COACH_SHARE.title, text: COACH_SHARE.text, url: COACH_SHARE.url });
+        return;
+      }
+      await navigator.clipboard.writeText(message);
+      setCopied(true);
+    } catch (e) {
+      // The coach closed the share sheet: nothing more to do.
+      if ((e as DOMException | undefined)?.name === 'AbortError') return;
+      window.prompt('Kopieer dit bericht:', message);
+    }
+  };
+  return (
+    <button type="button" className="btn btn-ghost coach-send" onClick={send}>
+      {copied ? <><CheckIcon size={18} /> Gekopieerd: plak het in WhatsApp of een mail</> : 'Stuur door aan een collega'}
+    </button>
   );
 }
