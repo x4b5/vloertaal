@@ -7,6 +7,8 @@ import type { Unit } from '../content/types';
 import { unitLink } from '../lib/unitLink';
 import { WordPicture } from '../pictures';
 import { CheckIcon } from './Icons';
+import { loadAccess } from '../lib/access';
+import { demoOn, restartApp, startDemo } from '../lib/demo';
 import { ChromeBack } from './ChromeBack';
 import type { HelpLanguage } from '../i18n/types';
 import { groupByTheme } from '../content/themes';
@@ -75,6 +77,7 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
         <h1 tabIndex={-1}>{PRO_TITLE}</h1>
       </div>
       <p><strong>{COACH_PITCH}</strong> {COACH_WHY}</p>
+      <ShowCandidate />
       <p>{PRO_LEAD}</p>
       {proSections.map((s) => <Section key={s.id} s={s}>{s.extra === 'topics' ? topics : s.extra === 'facts' ? <Facts /> : s.extra === 'kunjenu' ? <KunTabel /> : null}</Section>)}
     </div>
@@ -159,4 +162,31 @@ function withMail(text: string): ReactNode {
       {part}
     </Fragment>
   ));
+}
+
+/**
+ * "Laat de app zien aan een kandidaat" (src/lib/demo.ts): one button. Only with the full version
+ * on this phone (the page itself is open to anyone, and the demo opens every lesson).
+ */
+function ShowCandidate() {
+  const [failed, setFailed] = useState(false);
+  const full = loadAccess() === 'full';
+  if (demoOn()) return null;
+  return (
+    <section className="coach-demo" aria-labelledby="coach-demo-title">
+      <h2 id="coach-demo-title">Laat de app zien aan een kandidaat</h2>
+      <p>
+        Alle lessen staan open, en er wordt niets bewaard. Met <strong>Volgende kandidaat</strong> begint de
+        app weer bij de taalkeuze. Met <strong>Stoppen</strong> krijg je je eigen voortgang terug.
+      </p>
+      {full ? (
+        <button type="button" className="btn btn-primary coach-demo-btn" onClick={() => (startDemo() ? restartApp() : setFailed(true))}>
+          Start de demo
+        </button>
+      ) : (
+        <p className="coach-demo-note">Dit kan met de volledige versie. Vul eerst je code in bij Instellingen, Deze telefoon.</p>
+      )}
+      {failed && <p className="coach-demo-note" role="alert">Dit lukt niet op deze telefoon: de browser bewaart niets.</p>}
+    </section>
+  );
 }

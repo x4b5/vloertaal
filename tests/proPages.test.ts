@@ -106,15 +106,17 @@ describe('Voor begeleiders en werkgevers: in the app and on the site, from one s
     }
   });
 
-  it('the app: Dutch, one h1 ready for the focus, one mail link, the rest of the taps in the topic list', () => {
+  it('the app: Dutch, one h1 ready for the focus, one mail link and the demo, the rest of the taps in the topic list', () => {
     expect(app).toMatch(/^<div class="screen coaches" lang="nl" dir="ltr">/);
     expect(app.match(/<h1[\s>]/g)).toHaveLength(1);
     expect(app).toContain(`<h1 tabindex="-1">${PRO_TITLE}</h1>`);
     expect(app.match(/href="mailto:/g)).toHaveLength(1);
-    // Outside the topic list: no other links or buttons (the back arrow is chrome).
+    // Outside the topic list: the mail link and "Start de demo" (src/lib/demo.ts, November 2026),
+    // three taps with the back arrow (chrome), the house rule's most.
     const outside = app.replace(/<ul class="coach-links[\s\S]*?<\/ul>(?=<\/section>)/, '');
     expect(outside.match(/<a\b/g)).toHaveLength(1);
-    expect(outside.match(/<button\b/g) ?? []).toHaveLength(1);
+    expect(outside.match(/<button\b/g) ?? []).toHaveLength(2);
+    expect(outside).toContain('Start de demo');
     expect(outside).toContain('chrome-back');
   });
 

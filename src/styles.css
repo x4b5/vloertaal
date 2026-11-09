@@ -5472,3 +5472,22 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .rule-fb-more-body > p { flex: 1; min-width: 0; }
 .rules-disclaimer > p { flex: 1; }
 .rules-disclaimer > .speak-glyph { flex: none; margin-top: -4px; }
+
+/* The coaches' demonstration (src/lib/demo.ts): the bar above every screen, and its start on the
+   coaches' page. The bar is in the page's flow (never covers a head or the lesson's bar). */
+.demo-bar {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: calc(8px + env(safe-area-inset-top)) 12px 8px;
+  background: var(--solid); color: var(--on-solid); font-size: 0.95rem;
+}
+.demo-bar-label { font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin-inline-end: auto; }
+.demo-bar-btn {
+  min-height: 40px; padding: 6px 12px; border-radius: 10px; font-weight: 600;
+  border: 2px solid currentColor; background: transparent; color: inherit;
+}
+.demo-bar-next { background: var(--yellow); color: var(--on-yellow); border-color: var(--yellow); }
+#root:has(> .demo-bar) .screen { padding-top: 16px; }
+.coach-demo { margin: 12px 0 18px; padding: 12px 14px; background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); }
+.coach-demo h2 { margin-top: 0; }
+.coach-demo-btn { width: 100%; }
+.coach-demo-note { color: var(--ink-2); }

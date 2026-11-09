@@ -1,4 +1,5 @@
 import { nlId } from '../content/regels/be/ids';
+import { demoOn } from './demo';
 import { courseUnits, findCourseUnit, unitOfLesson } from '../content/courses';
 import { isMixLesson } from '../content/review';
 import { coursePlan, FOCUS_FOLLOW_UP, sectorFirstFocus, sectorOwnUnit, sectorPriority, type SectorChoice } from '../content/sectors';
@@ -224,5 +225,7 @@ export type HomeLessonState = 'now' | 'done' | 'later';
 export function homeLessonState(unit: Unit, lessonId: string, completed: Completed, access: Access = 'full'): HomeLessonState {
   if (completed[lessonId]) return 'done';
   if (!unitAllowed(unit.id, access) || !lessonAllowed(lessonId, access)) return 'later';
+  // The coaches' demonstration (src/lib/demo.ts): every lesson can be started from the home too.
+  if (demoOn()) return 'now';
   return blockNext(unit, completed)?.id === lessonId ? 'now' : 'later';
 }
