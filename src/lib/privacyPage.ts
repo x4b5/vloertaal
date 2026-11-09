@@ -53,6 +53,8 @@ export const PRIVACY: readonly PrivacySection[] = [
       'Het eerste openen telt de app meteen, dus voordat je het tellen kunt uitzetten. Wil je dat niet? Vraag je browser dan om niet gevolgd te worden (zie hieronder). Je telefoon onthoudt wat al geteld is.',
       'De app telt ook of mensen terugkomen. Dat gebeurt één keer per telefoon: op je 1e, 2e, 7e, 14e en 28e dag met een les. Alleen dat getal gaat mee, geen datum. Je telefoon onthoudt welke dagen al geteld zijn.',
       'Vraagt de app “Heb je dit op je werk gezegd?”? Dan telt hij alleen je antwoord: “ja” of “nog niet”. Niet welke zin, niet wie.',
+      // Sending it on (src/lib/count.ts countShare, countArrival), the owner's request, 9 November 2026.
+      'Stuur je Vloertaal door aan een collega? Dan telt de app alleen dát er doorgestuurd is, en vanaf welke plek: de pagina voor begeleiders, na de demo, of je collegakaart. Opent iemand zo’n gedeelde link, dan telt de app ook dat, één keer. Niet naar wie, niet via welke app, niet wie het opende.',
       'Geeft de app een fout? Dan telt hij ook dat: de soort fout, een korte code en een korte, opgeschoonde foutmelding uit de code. Geen tekst die jij hebt getypt, niet waar je was in de app. Hooguit drie fouten per bezoek.',
       'Er gaat nooit iets mee over jou: geen naam, geen hulptaal, geen land, geen sector, geen nummer en geen antwoorden. GoatCounter ziet bij elke telling je IP-adres en je browser, zoals elke website. Wij zien alleen de aantallen.',
       'Uitzetten kan bij Instellingen › “Anoniem meetellen”. Vraagt je browser om niet gevolgd te worden (Do Not Track of Global Privacy Control)? Dan telt de app niets.',

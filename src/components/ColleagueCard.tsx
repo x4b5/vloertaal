@@ -1,5 +1,6 @@
 import { gloss, ui } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
+import { countShare } from '../lib/count';
 import { breakable } from '../lib/dutch';
 import { Bi } from './Bi';
 import { ChromeBack } from './ChromeBack';
@@ -37,14 +38,18 @@ export const COLLEAGUE_PHRASES = [
   { id: 'c.keeplearning.a', nl: 'Nee, liever Nederlands. Ik wil oefenen.', en: 'No, Dutch please. I want to practise.' },
 ] as const;
 
+/** The link in the shared card: "via=collega" counts an arrival (src/lib/count.ts countArrival). */
+export const COLLEAGUE_LINK = 'https://vloertaal.nl/?via=collega';
+
 /** The card as one text, to share. */
 export function colleagueCardText(): string {
-  return [COLLEAGUE_CARD.title, '', ...COLLEAGUE_CARD.lines.map((l) => `• ${l}`), '', `${COLLEAGUE_CARD.thanks} (vloertaal.nl)`].join('\n');
+  return [COLLEAGUE_CARD.title, '', ...COLLEAGUE_CARD.lines.map((l) => `• ${l}`), '', `${COLLEAGUE_CARD.thanks} ${COLLEAGUE_LINK}`].join('\n');
 }
 
 export function ColleagueCard({ lang, onBack }: { lang?: HelpLanguage; onBack: () => void }) {
   const canShare = typeof navigator !== 'undefined' && typeof navigator.share === 'function';
   const share = () => {
+    countShare('collegakaart');
     navigator.share({ title: 'Vloertaal', text: colleagueCardText() }).catch(() => {
       // Cancelled, or not allowed: the card is on the screen to show.
     });
