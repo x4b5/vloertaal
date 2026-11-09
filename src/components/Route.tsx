@@ -173,8 +173,10 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
     const u = unitIndex(unit);
     return (
       <ol className="bays rb-lessons">
-        {unit.lessons.map((lesson, i) => {
+        {unit.lessons.map((lesson, i, all) => {
           const state = homeLessonState(unit, lesson.id, completed, access);
+          // Bram by the first yellow card only (in a coach's demo every lesson is one, src/lib/demo.ts).
+          const bram = state === 'now' && !first && all.find((l) => homeLessonState(unit, l.id, completed, access) === 'now')?.id === lesson.id;
           const icon = lessonIcon(lesson);
           const title = gloss(lesson.titleId ?? lesson.id, lesson.title, lang);
           const saved = state === 'now' && saves[lesson.id]?.review === false ? saves[lesson.id] : undefined;
@@ -201,7 +203,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                 )}
               </span>
               {/* Bram stands by the yellow card only (not by a lesson that comes second). */}
-              {state === 'now' && !first && <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>}
+              {bram && <span className="bay-char" aria-hidden><Character who="bram" mood="idle" size={118} /></span>}
             </>
           );
           // (Not next to either daily card, "Herhaal vandaag" or "Extra ronde": as counted in `taps`.)
@@ -209,7 +211,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
           return (
             <li
               key={lesson.id}
-              className={`bay bay-${css} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''} ${state === 'now' && !first ? 'bay-with-char' : ''}`}
+              className={`bay bay-${css} ${saved ? 'bay-saved' : ''} ${justDone && state === 'done' && lesson.id === justDone ? 'bay-arrived' : ''} ${justDone && state === 'now' ? 'bay-pop' : ''} ${bram ? 'bay-with-char' : ''}`}
             >
               <span className="bay-marker" aria-hidden>{state === 'done' ? <CheckIcon size={18} /> : i + 1}</span>
               {state === 'now' ? (
