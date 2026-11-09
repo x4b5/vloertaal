@@ -185,8 +185,8 @@ function defineStates(LANG) {
   add('onb:language', shot('language', null), null, { list: true }); // no guess from the phone: the list
   add('onb:language-guess', shot(`language&guess=${LANG}`, null)); // "Polski?" [Yes] [Other language]
   add('onb:language-list', shot(`language&guess=${LANG}&list=1`, null), null, { list: true, expect: '.chrome-back' }); // the list, with Back
-  // A phone set to Dutch: "Spreek je Nederlands?" first, Ja and Nee (review, 9 November 2026).
-  add('onb:nl-question', shot('language&nl=1', null), null, { expect: '.nl-question .nl-q-no' });
+  // A phone set to Dutch: the list with "Ik spreek al Nederlands" on top (review, 9 November 2026).
+  add('onb:language-nl-top', shot('language&nl=1', null), null, { list: true, expect: '.onb-nl-top .lang-btn-nl' });
   add('onb:gate', shot('gate'));
   add('onb:gate-typed', shot('gate'), async (p) => { await p.fill('.pw-input', 'abc'); await settle(p, 200); });
   add('onb:gate-try', shot('gate&try=1'), async (p) => { await p.fill('.pw-input', 'abc'); await settle(p, 200); }, { expect: '.gate-try' });
@@ -209,11 +209,11 @@ function defineStates(LANG) {
   };
   // The real first page is the language (since 1 November 2026); "Ik spreek al Nederlands" is the
   // last card of the list (since 2 November 2026; before, a page "Wat wil je leren?" followed).
-  // The test browser is Dutch: the real first page asks "Spreek je Nederlands?" (since 9 November
-  // 2026); "Nee" leads to the list.
-  const toLangs = async (p) => { if (await p.$('.nl-question')) { await tap(p, '.nl-q-no'); await settle(p); } };
+  // The test browser is Dutch: the real first page is the list, "Ik spreek al Nederlands" on top
+  // (since 9 November 2026).
+  const toLangs = async () => {};
   const pickLang = async (p, name) => { await toLangs(p); await tapText(p, 'button', name); await settle(p); };
-  add('flow:nl-question', '/', null, { expect: '.nl-question .nl-q-yes' });
+  add('flow:language-nl-top', '/', null, { list: true, expect: '.onb-nl-top .lang-btn-nl' });
   add('flow:language', '/', toLangs, { list: true });
   add('flow:lang-list', '/', async (p) => { await toLangs(p); if (await p.$('.lang-guess')) { await tap(p, '.lang-guess .max3-card', 1); await settle(p); } }, { list: true, expect: '.onb-lang-list .lang-btn-nl' });
   // "Is your language missing?" (since 2 November 2026): a field and Send, then thanks and back.
@@ -1073,13 +1073,7 @@ function defineRuleStates() {
     await p.reload(); await settle(p, 900);
   };
   // "Ik spreek al Nederlands": the last card of the language list (since 2 November 2026).
-  // The test browser is Dutch: "Spreek je Nederlands?" first (since 9 November 2026). Its Ja is the
-  // way in for a phone set to Dutch; the list (after Nee) keeps "Ik spreek al Nederlands" for the rest.
-  const toNlList = async (p) => {
-    if (await p.$('.nl-question')) { await tap(p, '.nl-q-no'); await settle(p); }
-    if (await p.$('.lang-guess')) { await tap(p, '.lang-guess .max3-card', 1); await settle(p); }
-  };
-  add('flow:nl-question-yes', RULES, async (p) => { await tap(p, '.nl-q-yes'); await settle(p); }, { list: true, expect: '.sector-groups' });
+  const toNlList = async (p) => { if (await p.$('.lang-guess')) { await tap(p, '.lang-guess .max3-card', 1); await settle(p); } };
   const toNlGate = async (p) => { await toNlList(p); await tap(p, '.lang-btn-nl'); await settle(p); };
   add('flow:nl-language', RULES, toNlList, { list: true, expect: '.lang-btn-nl' });
   // Open to all (OPEN_TO_ALL): after "Ik spreek al Nederlands" the sector, no code page.

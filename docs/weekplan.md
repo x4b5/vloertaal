@@ -57,8 +57,8 @@ loonstrook" in Werkregels, en andersom (`src/content/trackTwins.ts`).
 
 ## Werkregels
 
-Voor wie al Nederlands spreekt (een telefoon op Nederlands vraagt "Spreek je Nederlands?"; anders
-kies je onder de talen "Ik spreek al Nederlands"). Er is een briefje in het Nederlands:
+Voor wie al Nederlands spreekt (kies bij de talen "Ik spreek al Nederlands"; op een telefoon die op
+Nederlands staat, staat die keuze bovenaan). Er is een briefje in het Nederlands:
 [vloertaal.nl/briefje/nl](https://vloertaal.nl/briefje/nl/). Hetzelfde ritme,
 zonder toets. De begeleiderskaart werkt ook daar, met de onderwerpen en lessen van Werkregels.
 

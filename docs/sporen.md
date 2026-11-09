@@ -12,9 +12,11 @@ kandidaat weten welk spoor die volgt.
 
 ## Gedaan: fase 0 (9 november 2026, zonder het model te veranderen)
 
-- **"Spreek je Nederlands?"** als eerste vraag op een telefoon die Nederlands voorop zet
-  (`src/lib/langGuess.ts` `dutchFirst`, `Screens.tsx` `DutchQuestion`). Nederlands groot, Engels
-  klein. Ja is Werkregels, Nee gaat naar de talen. `vloertaal.nl/?taal=nl` stelt de vraag ook.
+- **"Ik spreek al Nederlands" bovenaan** op een telefoon die Nederlands voorop zet
+  (`src/lib/langGuess.ts` `dutchFirst`): meteen de talenlijst, met die kaart bovenaan in plaats van
+  onderaan. Eerst was dit de vraag "Spreek je Nederlands?", maar die kan juist wie geen Nederlands
+  leest niet lezen (de eigenaar, 9 november). Elke taal staat in het eigen schrift: zo vindt
+  iedereen de eigen taal. `vloertaal.nl/?taal=nl` zet de kaart ook bovenaan.
 - **"Naar Werkregels?"**: wie vanuit Taal wisselt, ziet eerst wat er verandert (Instellingen, pagina
   `switch`): alles Nederlands, hulptaal uit, regels herhalen in plaats van woorden, voortgang blijft.
 - **Werkregels met een sector** begint bij "Je eerste dag"; "Werk zoeken" komt na "Samenwerken"

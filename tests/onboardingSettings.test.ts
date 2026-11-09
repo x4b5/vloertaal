@@ -38,33 +38,31 @@ describe('the first-run language guess', () => {
     expect(guessHelpLang([])).toBeNull();
     expect(guessHelpLang(undefined)).toBeNull();
   });
-  it('asks "Spreek je Nederlands?" first only when Dutch comes before any help language', () => {
+  it('puts "Ik spreek al Nederlands" on top only when Dutch comes before any help language', () => {
     expect(dutchFirst(['nl-NL'])).toBe(true);
     expect(dutchFirst(['nl-BE', 'fr-BE'])).toBe(true);
     // English is passed over, as in the guess: a Dutch speaker with an English phone.
     expect(dutchFirst(['en-GB', 'nl-NL'])).toBe(true);
-    // A help language first: its own guess ("Polski?"), no Dutch question.
+    // A help language first: its own guess ("Polski?"), Dutch stays at the bottom.
     expect(dutchFirst(['pl-PL', 'nl-NL'])).toBe(false);
     expect(dutchFirst(['en-US'])).toBe(false);
     expect(dutchFirst([])).toBe(false);
     expect(dutchFirst(undefined)).toBe(false);
   });
-  it('the Dutch question is Dutch with English under it, Ja the work rules and Nee the languages', () => {
+  it('a phone set to Dutch: the list at once, the Dutch card on top, never a question only Dutch speakers can read', () => {
     const page = renderToStaticMarkup(createElement(Onboarding, { onDone: () => {}, guess: 'pl', dutch: true }));
-    expect(page).toContain('Spreek je Nederlands?');
-    expect(page).toContain('Do you speak Dutch?');
-    expect(page).toContain('je loon, je contract en je rechten');
-    expect(page).toContain('No: choose your language');
-    // Not yet the guess of the help language: that comes after "Nee".
-    expect(page).not.toContain('Polski');
-    // Back from the next page: the list, not the question again.
-    const back = renderToStaticMarkup(createElement(Onboarding, { onDone: () => {}, guess: null, dutch: true, startWithList: true }));
-    expect(back).not.toContain('Spreek je Nederlands?');
-    expect(back).toContain('chrome-back');
-    // Without the Dutch question nothing changes: the list at once, no way back.
+    expect(page).toContain('onb-nl-top');
+    expect(page).toContain('lang-btn-nl');
+    // Every language in the list, in its own script; no guess page in between.
+    expect(page).toContain('Polski');
+    expect(page).toContain('العربية');
+    expect(page.indexOf('lang-btn-nl')).toBeLessThan(page.indexOf('Polski'));
+    // The first page: no back arrow.
+    expect(page).not.toContain('chrome-back');
+    // Without Dutch first nothing changes: the card at the bottom.
     const plain = renderToStaticMarkup(createElement(Onboarding, { onDone: () => {}, guess: null, dutch: false }));
-    expect(plain).not.toContain('Spreek je Nederlands?');
-    expect(plain).not.toContain('chrome-back');
+    expect(plain).not.toContain('onb-nl-top');
+    expect(plain.indexOf('lang-btn-nl')).toBeGreaterThan(plain.indexOf('Polski'));
   });
   it('every guess can be asked in its own language', () => {
     for (const l of helpLanguages) {

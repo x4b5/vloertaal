@@ -1456,6 +1456,8 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .onb-lang-list > .scroll-box:last-child { margin-bottom: 24px; }
 /* Room under the box for the arrow on its edge. */
 .onb-nl-dock { margin-top: 30px; }
+/* A phone that puts Dutch first: the card on top, under the logo (Screens.tsx Onboarding). */
+.onb-lang-list .onb-nl-dock.onb-nl-top { margin-top: 14px; }
 /* "Is your language missing?": not a language, so a dashed card on the whole width, after English. */
 .lang-btn.lang-btn-missing { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 12px; border-style: dashed; background: transparent; text-align: start; }
 .lang-btn-missing .lang-mark { color: var(--muted); }
@@ -3769,9 +3771,6 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .lang-guess .max3-cards { margin-top: 22px; }
 /* The guess page: the back arrow on its own row, so it never lies over the logo (dark on the dark tile). */
 .lang-guess > .chrome-head { margin-bottom: 0; }
-/* "Spreek je Nederlands?" (Screens.tsx DutchQuestion): the English small under the Dutch question. */
-.nl-question .lang-guess-q { gap: 4px; }
-.nl-q-en { font-size: 1rem; font-weight: 400; color: var(--muted); }
 
 /* The password field shows what is typed and has no eye any more. */
 .pw-input { padding-inline-end: 16px; }

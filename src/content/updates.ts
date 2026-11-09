@@ -19,7 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-09',
     items: [
-      'Staat je telefoon op Nederlands? Dan vraagt de app eerst, in het Nederlands: "Spreek je Nederlands?" Ja: je leert hoe werken hier gaat (Werkregels). Nee: je kiest je taal, zoals altijd.',
+      'Staat je telefoon op Nederlands? Dan zie je bij de start meteen alle talen, met "Ik spreek al Nederlands" (Werkregels) bovenaan. Wie een andere taal spreekt, vindt de eigen taal in de lijst, in het eigen schrift.',
       'Van Nederlands leren naar Werkregels wisselen? Dan zie je eerst wat er verandert: alles wordt Nederlands, je hulptaal gaat uit, en je herhaalt regels in plaats van woorden. Je voortgang blijft bewaard, en terug wisselen kan altijd. Tik op "Ja, naar Werkregels" of op Annuleren.',
       'Werkregels: zei je bij de start waar je werkt? Dan begin je nu bij "Je eerste dag", niet bij "Werk zoeken". "Werk zoeken" komt later in je lespad. Koos je "Weet ik nog niet", dan blijft het zoals het was.',
       'Nieuw bij Hulp: "Voor je begeleider". Eén tik, en je ziet de kaart die je aan je docent, coach of baas kunt laten zien. Jij kiest wat je laat zien.',

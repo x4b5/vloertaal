@@ -70,7 +70,7 @@ describe('the note, one page per language', () => {
     expect(svgModules(html)).toEqual(qrCode('https://vloertaal.nl/werkregels/', 'Q').modules);
     // The index lists it, and points to it for who speaks Dutch already.
     expect(briefjeIndexPage()).toContain('href="/briefje/nl/"');
-    // The page it points to opens the app at "Spreek je Nederlands?".
+    // The page it points to opens the app with "Ik spreek al Nederlands" on top.
     expect(rulesPage()).toContain('<a class="cta" href="/?taal=nl">');
   });
 

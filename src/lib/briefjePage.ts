@@ -128,7 +128,7 @@ export function briefjePage(code: PageCode): string {
  * The note in plain Dutch, for a learner who speaks Dutch already (Werkregels): until 9 November
  * 2026 there was only a link for them, while a student who reads with difficulty is helped most by
  * a note with a QR code (review, 9 November 2026). It points to vloertaal.nl/werkregels, whose
- * button opens the app at "Spreek je Nederlands?" (src/lib/sectorPages.ts rulesPage).
+ * button opens the app with "Ik spreek al Nederlands" on top (src/lib/sectorPages.ts rulesPage).
  */
 export const BRIEFJE_NL = {
   what: 'Vloertaal is een gratis app over werk in Nederland.',

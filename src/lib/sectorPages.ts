@@ -115,7 +115,7 @@ ${footer(page.path)}`,
 }
 
 /** /werkregels: the work-rules track for who speaks Dutch already, every unit and its lessons. Its
- *  button opens the app at "Spreek je Nederlands?" (?taal=nl, src/lib/langGuess.ts phoneDutchFirst);
+ *  button opens the app with "Ik spreek al Nederlands" on top (?taal=nl, src/lib/langGuess.ts phoneDutchFirst);
  *  the Dutch dag-1 note points here (src/lib/briefjePage.ts briefjeNlPage). */
 export function rulesPage(): string {
   const all = [...rulesUnits, ...sectorRulesUnits];

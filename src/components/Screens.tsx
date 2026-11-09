@@ -162,51 +162,6 @@ export function NlCard({ onPick }: { onPick: () => void }) {
 }
 
 /**
- * "Spreek je Nederlands?": the first page on a phone that puts Dutch first (src/lib/langGuess.ts
- * dutchFirst), before the help languages. A learner who speaks Dutch reads Dutch from the first
- * screen on, and the choice says what it gives; until then that learner met an English page and
- * had to find "Ik spreek al Nederlands" under the list (review, 9 November 2026). The question is
- * Dutch with the English small under it, and "Nee" says it in English too: a newcomer may have a
- * phone set to Dutch. Ja is the work-rules track, Nee goes on to the guess or the list.
- */
-export function DutchQuestion({ onYes, onNo }: { onYes: () => void; onNo: () => void }) {
-  // Nothing is chosen yet: the English stays next to every line.
-  useEffect(() => { applyEnglish(null); }, []);
-  const card = (id: string, main: string, sub: string, subLang: 'nl' | 'en', icon: React.ReactNode, onPick: () => void, next = false) => (
-    <div className="max3-card-wrap">
-      {/* The first page: no tap guard (useFreshCards), there is no page before it to tap on. */}
-      <button type="button" className={`max3-card nl-q-${id}`} onClick={onPick}>
-        <span className="max3-pic" aria-hidden>{icon}</span>
-        <span className="max3-names">
-          <span className="bi max3-help"><span className="bi-en" lang="nl">{main}</span></span>
-          <span className="max3-nl" lang={subLang}>{sub}</span>
-        </span>
-        {next && <ChevronIcon size={22} className="max3-chev" />}
-      </button>
-    </div>
-  );
-  return (
-    <div className="screen onboarding max3-page lang-guess nl-question" lang="nl">
-      <div className="hero">
-        <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
-        <p className="tagline onb-tagline">
-          <span className="bi bi-swap"><span className="bi-en" lang="nl">Nederlands voor op de werkvloer</span><span className="bi-help" lang="en">Dutch for the work floor</span></span>
-        </p>
-      </div>
-      <h2 className="lang-guess-q onboarding-title">
-        <span className="lang-guess-name" lang="nl">Spreek je Nederlands?</span>
-        <span className="nl-q-en" lang="en">Do you speak Dutch?</span>
-      </h2>
-      <div className="onb-say"><SpeakButton text="Spreek je Nederlands?" /></div>
-      <div className="max3-cards" role="group" aria-label="Spreek je Nederlands?">
-        {card('yes', 'Ja', 'Dan leer je hoe werken hier gaat: je loon, je contract en je rechten.', 'nl', <CheckIcon size={30} />, onYes)}
-        {card('no', 'Nee', 'No: choose your language', 'en', <GlobeIcon size={30} />, onNo, true)}
-      </div>
-    </div>
-  );
-}
-
-/**
  * Beside a language's name: its flag where a flag is not sensitive, else a calm tile with a few
  * letters of its script, the same size (src/i18n/meta.ts LangMeta.flag says why). Decoration only.
  */
@@ -229,37 +184,26 @@ function LangMark({ code }: { code: UiCode | null }) {
  * name in its own script (the list is the one place with more than three choices), one under the
  * other in a box that scrolls inside (ScrollBox). Under the box, at the bottom of the screen,
  * "Ik spreek al Nederlands": the work-rules track (the owner's choice, 2 November 2026; before,
- * a page "Wat wil je leren?" came after the language). On a phone that puts Dutch first, "Spreek je
- * Nederlands?" comes before all of it (DutchQuestion, 9 November 2026). The gender question, the
- * sector and the country follow on their own pages (App.tsx).
+ * a page "Wat wil je leren?" came after the language). On a phone that puts Dutch first, the list
+ * comes at once with that card on top (9 November 2026). The gender question, the sector and the
+ * country follow on their own pages (App.tsx).
  */
 export function Onboarding({ onDone, guess = phoneHelpLang(), dutch = phoneDutchFirst(), startWithList = false }: {
   onDone: (code: UiCode | null) => void;
   /** The guessed help language (from navigator.languages); null = no guess, the list right away. */
   guess?: LangCode | null;
-  /** The phone puts Dutch first (src/lib/langGuess.ts dutchFirst): "Spreek je Nederlands?" comes first. */
+  /** The phone puts Dutch first (src/lib/langGuess.ts dutchFirst): the list at once, "Ik spreek al Nederlands" on top. */
   dutch?: boolean;
   /** Back from the next page: open on the list (the guess was already seen). */
   startWithList?: boolean;
 }) {
-  const [list, setList] = useState(startWithList || !guess);
-  /** "Spreek je Nederlands?" is a page of this first run (only with the work-rules track on). */
-  const nlOffered = dutch && rulesTrackOn();
-  /** It is showing now: first, unless the learner came back from the next page. */
-  const [askNl, setAskNl] = useState(nlOffered && !startWithList);
+  /** The phone puts Dutch first: the list at once, with "Ik spreek al Nederlands" at the top. Not a
+   *  question in Dutch: who does not read Dutch could not read it either (the owner, 9 November
+   *  2026). Every name in the list is in its own script, so everyone finds their own. */
+  const nlTop = dutch && rulesTrackOn();
+  const [list, setList] = useState(startWithList || !guess || nlTop);
   /** "Is your language missing?" open (its own page, with its own history entry). */
   const [missing, setMissing] = useState(false);
-  // "Nee" on the Dutch question has its own history entry: the phone's Back returns to the question.
-  // Before the list's entry (effects run in this order), so the two nest.
-  useEffect(() => {
-    if (!nlOffered || askNl) return;
-    if (!(history.state as { nlNo?: number } | null)?.nlNo) pushSubStep({ nlNo: 1 });
-    const onPop = () => { if (!(history.state as { nlNo?: number } | null)?.nlNo) setAskNl(true); };
-    window.addEventListener('popstate', onPop);
-    return () => window.removeEventListener('popstate', onPop);
-  }, [nlOffered, askNl]);
-  /** Back to the Dutch question from the page after it (the guess, or the list without a guess). */
-  const backToNl = () => ((history.state as { nlNo?: number } | null)?.nlNo ? history.back() : setAskNl(true));
   useEffect(() => {
     if (!missing) return;
     if (!(history.state as { missing?: number } | null)?.missing) pushSubStep({ missing: 1 });
@@ -271,7 +215,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), dutch = phoneDutch
   // Nothing is chosen yet: the English stays next to every line.
   useEffect(() => { applyEnglish(null); }, []);
   // The list after the guess has its own history entry: the phone's Back returns to the guess.
-  const hasGuess = Boolean(guess);
+  const hasGuess = Boolean(guess) && !nlTop;
   useEffect(() => {
     if (!list || !hasGuess) return;
     if (!(history.state as { langList?: number } | null)?.langList) pushSubStep({ langList: 1 });
@@ -294,17 +238,20 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), dutch = phoneDutch
   const gMeta = langMeta(guess);
   const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
   if (missing) return <MissingLanguage onBack={closeMissing} />;
-  if (askNl) return <DutchQuestion onYes={() => onDone('nl')} onNo={() => setAskNl(false)} />;
   if (list || !g) {
     return (
       <div className="screen onboarding max3-page onb-lang-list">
-        {g
-          ? <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />
-          : nlOffered && <ChromeHead onBack={backToNl} />}
+        {g && !nlTop && <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />}
         <div className="hero">
           <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
           <p className="tagline" lang="en">{ui('appTagline').en}</p>
         </div>
+        {/* A phone that puts Dutch first: "Ik spreek al Nederlands" on top, above the question. */}
+        {nlTop && (
+          <div className="onb-nl-dock onb-nl-top">
+            <NlCard onPick={() => onDone('nl')} />
+          </div>
+        )}
         <h2 className="onboarding-title" lang="en">{ui('chooseLanguage').en}</h2>
         {/* The languages in a framed box that scrolls inside, with a scroll bar that is always
             there (the owner's request, 2 November 2026: a clear menu); under it, outside the box,
@@ -312,7 +259,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), dutch = phoneDutch
         <ScrollBox className="lang-box" moreLabel="More languages">
           <LanguagePicker onPick={onDone} onMissing={() => setMissing(true)} />
         </ScrollBox>
-        {rulesTrackOn() && (
+        {rulesTrackOn() && !nlTop && (
           <div className="onb-nl-dock">
             <NlCard onPick={() => onDone('nl')} />
           </div>
@@ -323,7 +270,6 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), dutch = phoneDutch
   const q = g.dir === 'rtl' ? '\u061f' : '?';
   return (
     <div className="screen onboarding max3-page lang-guess">
-      {nlOffered && <ChromeHead onBack={backToNl} />}
       <div className="hero">
         <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
         {/* What the app is, in the guessed language (large), the English small under it. */}
