@@ -19,6 +19,8 @@
  * - when the browser asks not to be tracked (Do Not Track, Global Privacy Control).
  */
 
+import { demoOn } from './demo';
+
 /** The owner's GoatCounter site; its root is also the dashboard. */
 export const COUNTER: string = (import.meta.env.VITE_COUNTER_URL as string | undefined) || 'https://vloertaal.goatcounter.com';
 
@@ -254,7 +256,9 @@ export function countStartDone(): boolean {
 
 /** Counts one event (one request). A no-op unless mayCount(). */
 export function count(event: CountEvent, dims: CountDims = {}): boolean {
-  if (!mayCount()) return false;
+  // Not in a coach's demonstration (src/lib/demo.ts): one coach showing a lesson ten times is not
+  // ten learners. Errors (countRaw) still count: a demo can find a bug as well as a learner.
+  if (!mayCount() || demoOn()) return false;
   const base = COUNTER.replace(/\/+$/, '');
   send(`${base}/count?p=${encodeURIComponent(countPath(event, dims))}&e=true&t=${encodeURIComponent(event)}`);
   return true;

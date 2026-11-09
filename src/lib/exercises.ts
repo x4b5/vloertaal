@@ -1,4 +1,5 @@
 import { allCountriesTaalUnits, allDialogues, allLessons, allReplies, allWords, teachingLessons } from '../content/curriculum';
+import { demoOn } from './demo';
 import { isMixLesson } from '../content/review';
 import { coursePlan, mainLessons, type SectorChoice } from '../content/sectors';
 import { courseUnits, unitOfLesson } from '../content/courses';
@@ -1385,6 +1386,8 @@ export function withTurn(list: Exercise[], dialogue: Dialogue, instead: readonly
 export function isUnlocked(lessonId: string, completed: Record<string, unknown>, access: Access = 'full'): boolean {
   // The access level wins over progress: a preview never opens a later unit.
   if (!lessonAllowed(lessonId, access)) return false;
+  // The coaches' demonstration (src/lib/demo.ts): every lesson open, to show any topic at once.
+  if (demoOn()) return true;
   // Every unit can be entered at its first lesson (a coach can send a learner to one topic);
   // inside a unit the lessons open in order. (Either course: lesson ids never clash.)
   const unit = unitOfLesson(lessonId);

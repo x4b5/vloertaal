@@ -3,6 +3,8 @@ import { createRoot, type Root } from 'react-dom/client';
 import App from './App';
 import { BootFailed, Crashed, Splash } from './components/Splash';
 import { SaveFailedNote } from './components/SaveFailedNote';
+import { DemoBar } from './components/DemoBar';
+import { demoOn } from './lib/demo';
 import { startScreens } from './lazyScreens';
 import { loadProgress } from './lib/progress';
 import { readTesterParam } from './lib/report';
@@ -77,7 +79,8 @@ const render = (node: ReactNode) => {
   // The links for search engines under the splash (src/lib/siteLinks.ts): the app has its own ways.
   document.getElementById('site-links')?.remove();
   root ??= createRoot(document.getElementById('root')!);
-  root.render(<StrictMode><Crashed>{node}</Crashed></StrictMode>);
+  // A coach's demonstration: its bar above every screen, also above a screen that broke (src/lib/demo.ts).
+  root.render(<StrictMode>{demoOn() && <DemoBar />}<Crashed>{node}</Crashed></StrictMode>);
 };
 /**
  * Anything that goes wrong on the way to the first screen: the screen that says the app can't
