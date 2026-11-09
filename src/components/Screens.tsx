@@ -782,7 +782,7 @@ export function About({ lang, onCoaches, onNews, dutch: dutchStart }: {
       {/* Without "Wat is er nieuw?" (a test, a screenshot): the newest update's date as plain text. */}
       {!onNews && lastUpdate && <p className="about-updated muted small"><Bi text={lastUpdatedText(lastUpdate, lang)} /></p>}
       {/* Which deploy runs on this phone (the commit; src/lib/appUpdate.ts loads a newer one). */}
-      <p className="about-version muted small" dir="ltr" lang="nl">Versie {(import.meta.env.VITE_BUILD as string | undefined) ?? 'dev'}</p>
+      <p className="about-version muted small" dir="ltr" lang="nl">Versie {versionText((import.meta.env.VITE_BUILD as string | undefined) ?? 'dev', import.meta.env.VITE_BUILD_DATE as string | undefined)}</p>
       <AboutFooter />
     </div>
   );
@@ -1162,4 +1162,12 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
       </ul>
     </div>
   );
+}
+
+/** "9 november 2026 · abc1234": the day the version was built, then its commit (just the commit without a day). */
+export function versionText(build: string, day?: string): string {
+  const d = day && /^\d{4}-\d{2}-\d{2}$/.test(day) ? new Date(`${day}T12:00:00Z`) : null;
+  if (!d || Number.isNaN(d.getTime())) return build;
+  const date = new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(d);
+  return `${date} · ${build}`;
 }

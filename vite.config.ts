@@ -279,7 +279,12 @@ export const failOnDynamicImportWarnings: NonNullable<Rolldown.InputOptions['onL
 export default defineConfig({
   base: './',
   // Which build a learner and a tester's report see (buildVersion).
-  define: { 'import.meta.env.VITE_BUILD': JSON.stringify(buildVersion()) },
+  // And the day it was built ("Versie 9 november 2026 · abc1234"): a coach can tell at a glance
+  // whether a phone runs the newest version (feedback from a job coach, November 2026).
+  define: {
+    'import.meta.env.VITE_BUILD': JSON.stringify(buildVersion()),
+    'import.meta.env.VITE_BUILD_DATE': JSON.stringify(new Date().toISOString().slice(0, 10)),
+  },
   css: {
     lightningcss: {
       // The CSS minifier writes media queries the old way, (max-width: 380px), never (width<=380px)

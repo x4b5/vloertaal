@@ -30,3 +30,12 @@ describe('the version of a build', () => {
     expect(buildVersion()).toMatch(/^([0-9a-f]{7,40}|dev)$/);
   });
 });
+
+describe('"Versie" in Info: the day it was built, then the commit (November 2026)', () => {
+  it('reads as a Dutch date a coach can compare', async () => {
+    const { versionText } = await import('../src/components/Screens');
+    expect(versionText('abc1234', '2026-11-09')).toBe('9 november 2026 · abc1234');
+    expect(versionText('dev')).toBe('dev');
+    expect(versionText('abc1234', 'nonsense')).toBe('abc1234');
+  });
+});
