@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { demoOn, learnerKey, nextCandidate, startDemo, stopDemo } from '../src/lib/demo';
+import { demoJustStopped, demoOn, forgetDemoStopped, learnerKey, nextCandidate, startDemo, stopDemo } from '../src/lib/demo';
 import { isUnlocked } from '../src/lib/exercises';
 import { allCourseUnits } from '../src/content/courses';
 
@@ -58,6 +58,21 @@ describe('the coaches\' demonstration (November 2026)', () => {
     expect(localStorage.getItem('vloertaal:show-english')).toBe('1');
     expect(localStorage.getItem('vloertaal:greeted')).toBeNull();
     expect([...Array(localStorage.length).keys()].map((i) => localStorage.key(i)).some((k) => k?.startsWith('vloertaal-demo'))).toBe(false);
+  });
+
+  it('after "Stoppen" the coaches page asks once about a colleague (the owner, 9 November 2026)', () => {
+    expect(demoJustStopped()).toBe(false);
+    startDemo();
+    nextCandidate();
+    expect(demoJustStopped()).toBe(false);
+    stopDemo();
+    expect(demoJustStopped()).toBe(true);
+    // Once: the page forgets it when shown.
+    forgetDemoStopped();
+    expect(demoJustStopped()).toBe(false);
+    // Stopping when no demo runs asks nothing.
+    stopDemo();
+    expect(demoJustStopped()).toBe(false);
   });
 
   it('starting twice does not overwrite the coach\'s saved copy with a candidate\'s', () => {

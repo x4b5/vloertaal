@@ -1,4 +1,4 @@
-import { Fragment, useState, type ReactNode } from 'react';
+import { Fragment, useEffect, useState, type ReactNode } from 'react';
 import { taalCourseUnits } from '../content/curriculum';
 import { rulesCourseUnits } from '../content/rulesCourse';
 import { taalNlId } from '../content/taalBe/ids';
@@ -8,7 +8,7 @@ import { unitLink } from '../lib/unitLink';
 import { WordPicture } from '../pictures';
 import { CheckIcon, ChevronDownIcon } from './Icons';
 import { loadAccess } from '../lib/access';
-import { demoOn, restartApp, startDemo } from '../lib/demo';
+import { demoJustStopped, demoOn, forgetDemoStopped, restartApp, startDemo } from '../lib/demo';
 import { ChromeBack } from './ChromeBack';
 import type { HelpLanguage } from '../i18n/types';
 import { groupByTheme } from '../content/themes';
@@ -213,6 +213,9 @@ function ShowCandidate() {
  */
 export function ShareWithColleague() {
   const [copied, setCopied] = useState(false);
+  // Right after a demo (src/lib/demo.ts demoJustStopped): the question, once.
+  const [afterDemo] = useState(demoJustStopped);
+  useEffect(() => { if (afterDemo) forgetDemoStopped(); }, [afterDemo]);
   const message = `${COACH_SHARE.text} ${COACH_SHARE.url}`;
   const send = async () => {
     try {
@@ -228,9 +231,17 @@ export function ShareWithColleague() {
       window.prompt('Kopieer dit bericht:', message);
     }
   };
-  return (
-    <button type="button" className="btn btn-ghost coach-send" onClick={send}>
+  const button = (
+    <button type="button" className={afterDemo ? 'btn btn-primary coach-send' : 'btn btn-ghost coach-send'} onClick={send}>
       {copied ? <><CheckIcon size={18} /> Gekopieerd: plak het in WhatsApp of een mail</> : 'Stuur door aan een collega'}
     </button>
+  );
+  if (!afterDemo) return button;
+  return (
+    <section className="coach-demo coach-after-demo" aria-labelledby="coach-after-demo-title">
+      <h2 id="coach-after-demo-title">Gelukt?</h2>
+      <p>Ken je een collega die dit ook kan gebruiken?</p>
+      {button}
+    </section>
   );
 }
