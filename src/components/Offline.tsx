@@ -56,6 +56,15 @@ export const DownloadDoneIcon = ({ size = 22 }: IconProps) => (
 );
 
 /** A small card with a picture and two lines: the pocket card. */
+/** Two people side by side: "Voor je collega" on the first certificate (src/components/Certificate.tsx). */
+export const ColleagueIcon = ({ size = 22 }: IconProps) => (
+  <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
+    <circle cx="8.5" cy="8" r="3" {...line} />
+    <circle cx="16" cy="9" r="2.5" {...line} />
+    <path d="M3 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M14.5 14.2c.5-.2 1-.2 1.5-.2 2.8 0 5 2 5 5" {...line} />
+  </svg>
+);
+
 export const PocketIcon = ({ size = 22 }: IconProps) => (
   <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
     <rect x="3" y="5" width="18" height="14" rx="2.5" {...line} />
