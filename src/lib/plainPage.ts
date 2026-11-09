@@ -30,6 +30,10 @@ export const STYLE = `
   ul.lines li { margin: 4px 0; }
   table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
   th, td { padding: 6px 8px; border: 1px solid var(--line); text-align: start; vertical-align: top; }
+  details.drawer { margin: 0 0 16px; }
+  details.drawer > summary { cursor: pointer; padding: 14px 20px; background: var(--card); border: 2px solid var(--line); border-radius: 12px; font-size: 1.2rem; font-weight: 700; }
+  details.drawer[open] > summary { margin-bottom: 12px; }
+  details.drawer > section { margin-inline-start: 12px; }
   .remember { font-weight: 600; }
   .signed { color: var(--ink2); font-size: 0.95rem; }
   .cta { display: block; margin: 20px 0 24px; padding: 16px; border-radius: 10px; background: var(--yellow); color: #1e2226; border: 2px solid #1e2226; font-weight: 700; font-size: 1.2rem; text-align: center; text-decoration: none; }

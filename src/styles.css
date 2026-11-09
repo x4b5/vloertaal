@@ -4987,6 +4987,18 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .kun-help { line-height: 1.35; color: var(--ink-2); }
 .kun-tag { font-size: 0.85rem; color: var(--muted); }
 .kun-note { display: flex; flex-direction: column; gap: 2px; margin: 0; font-size: 0.9rem; line-height: 1.35; color: var(--muted); }
+/* "Voor begeleiders en werkgevers": three drawers between the open sections (src/content/pro.ts PRO_DRAWERS). */
+.pro-drawer { border-top: 2px dashed var(--line); }
+.pro-drawer > summary {
+  display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 10px 0; cursor: pointer;
+  list-style: none; font-size: 1.15rem; font-weight: 600;
+}
+.pro-drawer > summary::-webkit-details-marker { display: none; }
+.pro-drawer > summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+.pro-drawer-title { flex: 1; }
+.pro-drawer > summary .icon { flex: none; color: var(--ink-3); transition: transform 0.15s ease; }
+.pro-drawer[open] > summary .icon { transform: rotate(180deg); }
+.pro-drawer > .about-section:first-of-type { border-top: 0; padding-top: 0; }
 /* The table on "Voor begeleiders en werkgevers" (src/components/Coaches.tsx), one fold per track. */
 .kun-details { margin-top: 10px; }
 .kun-details > summary {

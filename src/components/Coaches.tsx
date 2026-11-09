@@ -6,7 +6,7 @@ import { unitIcon } from '../content/unitIcons';
 import type { Unit } from '../content/types';
 import { unitLink } from '../lib/unitLink';
 import { WordPicture } from '../pictures';
-import { CheckIcon } from './Icons';
+import { CheckIcon, ChevronDownIcon } from './Icons';
 import { loadAccess } from '../lib/access';
 import { demoOn, restartApp, startDemo } from '../lib/demo';
 import { ChromeBack } from './ChromeBack';
@@ -15,7 +15,7 @@ import { groupByTheme } from '../content/themes';
 import { ThemeHeadRow } from './Themes';
 import { COACH_FACTS } from '../content/facts';
 import { CONTACT_EMAIL } from '../content/about';
-import { COACH_PITCH, COACH_WHY, PRO_LEAD, PRO_TITLE, proSections, type ProSection } from '../content/pro';
+import { COACH_PITCH, COACH_WHY, PRO_LEAD, PRO_TITLE, proLayout, type ProSection } from '../content/pro';
 import { KUN_REGELS, KUN_TAAL, kunOnderwerpenNu, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 
 /**
@@ -79,7 +79,21 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
       <p><strong>{COACH_PITCH}</strong> {COACH_WHY}</p>
       <ShowCandidate />
       <p>{PRO_LEAD}</p>
-      {proSections.map((s) => <Section key={s.id} s={s}>{s.extra === 'topics' ? topics : s.extra === 'facts' ? <Facts /> : s.extra === 'kunjenu' ? <KunTabel /> : null}</Section>)}
+      {proLayout().map((block) => {
+        const section = (s: ProSection) => <Section key={s.id} s={s}>{s.extra === 'topics' ? topics : s.extra === 'facts' ? <Facts /> : s.extra === 'kunjenu' ? <KunTabel /> : null}</Section>;
+        if (block.kind === 'open') return section(block.section);
+        // A drawer: closed at first, its sections inside (the page was about twenty screens long).
+        return (
+          <details key={block.id} className="pro-drawer">
+            <summary>
+              <span className="about-emoji" aria-hidden><WordPicture id="" emoji={block.emoji} size={30} /></span>
+              <span className="pro-drawer-title">{block.title}</span>
+              <ChevronDownIcon size={22} />
+            </summary>
+            {block.sections.map(section)}
+          </details>
+        );
+      })}
     </div>
   );
 }
