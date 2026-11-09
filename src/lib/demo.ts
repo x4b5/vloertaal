@@ -20,6 +20,9 @@
 
 const ON = 'vloertaal-demo:on';
 const OWN = 'vloertaal-demo:own';
+/** Set by "Stoppen" in this tab only (sessionStorage: the demo leaves nothing on the phone): the
+ *  coaches page asks once about a colleague. Not a learner key, so never wiped. */
+const STOPPED = 'vloertaal-demo:stopped';
 
 /** Keys of the phone, not of its learner: never put away, never wiped. */
 const DEVICE_KEYS = new Set([
@@ -51,6 +54,14 @@ function local(): Storage | null {
   }
 }
 
+function session(): Storage | null {
+  try {
+    return typeof sessionStorage === 'undefined' ? null : sessionStorage;
+  } catch {
+    return null;
+  }
+}
+
 function keysOf(store: Storage): string[] {
   const out: string[] = [];
   for (let i = 0; i < store.length; i++) {
@@ -62,7 +73,7 @@ function keysOf(store: Storage): string[] {
 
 /** Wipes the learner's keys (both storages): the app starts as on a new phone. */
 function wipeLearner(): void {
-  for (const store of [local(), (() => { try { return sessionStorage; } catch { return null; } })()]) {
+  for (const store of [local(), session()]) {
     if (!store) continue;
     for (const k of keysOf(store)) if (learnerKey(k)) store.removeItem(k);
   }
@@ -115,10 +126,31 @@ export function stopDemo(): void {
   }
   store.removeItem(OWN);
   store.removeItem(ON);
+  try { session()?.setItem(STOPPED, '1'); } catch { /* then the page just does not ask */ }
 }
 
-/** Back to the start of the app (no screen restored), after one of the above. */
-export function restartApp(): void {
-  try { history.replaceState(null, '', location.pathname); } catch { /* keep the address */ }
+/**
+ * Did a demo just stop? Then the coaches page, where "Stoppen" leads, asks above "Stuur door aan
+ * een collega" whether the coach knows a colleague who could use it (the owner's request,
+ * 9 November 2026: more exposure, through the coaches first). Right after the demo the coach has
+ * just seen it work.
+ */
+export function demoJustStopped(): boolean {
+  try {
+    return session()?.getItem(STOPPED) === '1';
+  } catch {
+    return false;
+  }
+}
+
+/** The question was shown: next time the page is as always. */
+export function forgetDemoStopped(): void {
+  try { session()?.removeItem(STOPPED); } catch { /* nothing to forget */ }
+}
+
+/** Back to the start of the app (no screen restored), after one of the above; `hash` opens a page
+ *  (#begeleiders after "Stoppen"). */
+export function restartApp(hash = ''): void {
+  try { history.replaceState(null, '', location.pathname + hash); } catch { /* keep the address */ }
   location.reload();
 }
