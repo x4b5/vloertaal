@@ -360,6 +360,7 @@ const lang: HelpLanguageSource = {
     bootFailed: 'Vloertaal nie może się uruchomić.', // nieuw, nalezen
     bootFailedHint: 'Najpierw zachowaj swoje postępy. Potem zacznij od nowa.', // nieuw, nalezen
     startOver: 'Zacznij od nowa', // nieuw, nalezen
+    crashed: 'Coś poszło nie tak. Twoje postępy są zapisane.', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'Co już znasz?', // nieuw, nalezen
     toetsOffer: 'Około 10 minut. Nie ma ocen. To tylko dla ciebie.', // nieuw, nalezen

@@ -342,6 +342,9 @@ export function Settings({
   /** The current value shown on a row. */
   const value = (p: SettingsPage): ReactNode => {
     switch (p) {
+      // The help language on "Taal en ik" itself, so a coach sees at once where to change it
+      // (feedback from a job coach, November 2026); in Werkregels there is none to show.
+      case 'me': return dutchUi(lang) ? null : value('language');
       case 'route': return dutchUi(lang) ? <span className="set-row-value" lang="nl">Werkregels</span> : <Value text={say('routeLearnShort')} />;
       case 'language': return lang ? <span className="set-row-value" lang={langTag(lang.code)} dir={lang.dir}>{lang.nativeName}</span> : <span className="set-row-value" lang="en">English</span>;
       case 'gender': return progress.gender ? <Value text={say(progress.gender === 'f' ? 'genderWoman' : progress.gender === 'm' ? 'genderMan' : 'genderNone')} /> : null;

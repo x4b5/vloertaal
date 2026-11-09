@@ -401,6 +401,7 @@ export const uiNl: Record<UiKey, UiText> = {
   bootFailed: 'Vloertaal kan niet starten.', // nieuw, nalezen
   bootFailedHint: 'Bewaar eerst je voortgang. Begin daarna opnieuw.', // nieuw, nalezen
   startOver: 'Opnieuw beginnen', // nieuw, nalezen
+  crashed: 'Er ging iets mis. Je voortgang is bewaard.', // nieuw, nalezen
   // "Wat ken je al?" (alleen in het spoor Taal; hier voor de volledigheid)
   toetsTitle: 'Wat ken je al?',
   toetsOffer: 'Ongeveer 10 minuten. Je krijgt geen cijfer. Het is alleen voor jou.',

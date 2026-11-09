@@ -360,6 +360,7 @@ const lang: HelpLanguageSource = {
     bootFailed: 'تعذّر تشغيل Vloertaal.', // nieuw, nalezen
     bootFailedHint: { m: 'احفظ تقدمك أولاً. ثم ابدأ من جديد.', f: 'احفظي تقدمك أولاً. ثم ابدئي من جديد.', x: 'من المهم حفظ التقدم أولاً، ثم البدء من جديد.' }, // nieuw, nalezen
     startOver: { m: 'ابدأ من جديد', f: 'ابدئي من جديد', x: 'البدء من جديد' }, // nieuw, nalezen
+    crashed: 'حدث خطأ ما. تقدّمك محفوظ.', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: { m: 'ماذا تعرف بالفعل؟', f: 'ماذا تعرفين بالفعل؟', x: 'ما الذي أعرفه بالفعل؟' }, // nieuw, nalezen
     toetsOffer: 'حوالي 10 دقائق. لا توجد درجات. إنه لك فقط.', // nieuw, nalezen (AI-correctie 2 nov 2026)
