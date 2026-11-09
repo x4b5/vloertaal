@@ -1,5 +1,5 @@
 import { Component, useEffect, useRef, useState, type ReactNode } from 'react';
-import { ensureLanguage, getHelpLanguage, isLanguageLoaded, type Bilingual } from '../i18n';
+import { ensureLanguage, getHelpLanguage, isLanguageLoaded, ui, type Bilingual } from '../i18n';
 import { langMeta, langTag, metaLanguage, NL_META } from '../i18n/meta';
 import { uiEn, type UiCode, type UiKey } from '../i18n/types';
 import { dutchUi } from '../lib/track';
@@ -9,7 +9,7 @@ import { AlertIcon, CheckIcon, CrateIcon, RestartIcon } from './Icons';
 import { CAST } from './Characters';
 import { LogoMark } from './Logo';
 import { NlPair } from './NlPair';
-import { reportError } from '../lib/errors';
+import { errorPath, reportError } from '../lib/errors';
 
 /**
  * The calm start screen while a help language's texts load: the same as the static splash in
@@ -177,10 +177,11 @@ const markUsed = () => { used = true; };
  * screen's file that did not load has its own guard (src/lazyScreens.tsx), so this one only sees
  * real errors.
  */
-export class Crashed extends Component<{ children: ReactNode }, { failed: boolean; atStart?: boolean }> {
-  state = { failed: false, atStart: false };
-  static getDerivedStateFromError() {
-    return { failed: true, atStart: !used };
+export class Crashed extends Component<{ children: ReactNode }, { failed: boolean; atStart?: boolean; code?: string }> {
+  state = { failed: false, atStart: false, code: undefined as string | undefined };
+  static getDerivedStateFromError(error: unknown) {
+    // The same code the error is counted under (/e/fout/scherm/<code>), so a coach can pass it on.
+    return { failed: true, atStart: !used, code: errorPath('scherm', error)?.path.split('/').pop() };
   }
   componentDidMount() {
     window.addEventListener('pointerdown', markUsed, true);
@@ -197,6 +198,32 @@ export class Crashed extends Component<{ children: ReactNode }, { failed: boolea
   }
   render() {
     if (!this.state.failed) return this.props.children;
-    return this.state.atStart ? <BootFailed /> : <Splash failed onRetry={reloadHome} />;
+    return this.state.atStart ? <BootFailed /> : <CrashedScreen code={this.state.code} />;
   }
+}
+
+/**
+ * A screen broke after the learner used the app (a bug, not the connection): "Er ging iets mis.
+ * Je voortgang is bewaard." in Dutch and the help language, a short code to pass on, and "Try
+ * again" (back to the home). Until November 2026 it said "Niet geladen. Is er internet?", which
+ * sent a coach looking for a connection problem that was not there.
+ */
+export function CrashedScreen({ code }: { code?: string }) {
+  const saved = loadProgress();
+  const dutch = saved.helpLang === 'nl';
+  // The help language's texts are here (the app ran until now); in the Dutch track, Dutch only.
+  const lang = getHelpLanguage(saved.helpLang, saved.gender) ?? (dutch ? metaLanguage(NL_META) : undefined);
+  const retry = ui('retry', lang);
+  const retryLabel = dutch ? NL_META.ui.retry : `${NL_META.ui.retry} · ${retry.help ?? retry.en}`;
+  return (
+    <Splash lang={saved.helpLang ?? null}>
+      <p className="boot-failed" role="alert">
+        <Said nl="Er ging iets mis. Je voortgang is bewaard." text={ui('crashed', lang)} />
+      </p>
+      {code && <p className="boot-hint boot-code" lang="nl" dir="ltr">Code: <span translate="no">{code}</span></p>}
+      <button type="button" className="boot-retry" onClick={reloadHome} aria-label={retryLabel} title={retryLabel}>
+        <RestartIcon size={28} />
+      </button>
+    </Splash>
+  );
 }

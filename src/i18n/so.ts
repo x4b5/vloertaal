@@ -360,6 +360,7 @@ const lang: HelpLanguageSource = {
     bootFailed: "Vloertaal ma bilaabmi karo.", // nieuw, nalezen
     bootFailedHint: "Marka hore kaydi horumarkaaga. Kadib dib u bilow.", // nieuw, nalezen
     startOver: "Dib u bilow", // nieuw, nalezen
+    crashed: 'Wax baa khaldamay. Horumarkaaga waa la kaydiyay.', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: "Maxaad horey u taqaan?", // nieuw, nalezen
     toetsOffer: "Qiyaastii 10 daqiiqo. Dhibco ma jiraan. Adiga oo keliya ayay kuu tahay.", // nieuw, nalezen

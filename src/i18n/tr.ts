@@ -360,6 +360,7 @@ const lang: HelpLanguageSource = {
     bootFailed: 'Vloertaal başlatılamıyor.', // nieuw, nalezen
     bootFailedHint: 'Önce ilerlemeni sakla. Sonra baştan başla.', // nieuw, nalezen
     startOver: 'Baştan başla', // nieuw, nalezen
+    crashed: 'Bir şeyler ters gitti. İlerlemen kayıtlı.', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'Neleri zaten biliyorsun?', // nieuw, nalezen
     toetsOffer: 'Yaklaşık 10 dakika. Not yok. Sadece senin için.', // nieuw, nalezen

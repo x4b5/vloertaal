@@ -361,6 +361,7 @@ const lang: HelpLanguageSource = {
     bootFailed: 'Vloertaal ክጅምር ኣይከኣለን።', // nieuw, nalezen
     bootFailedHint: { m: 'መጀመርታ ምዕባለኻ ዓቅብ። ድሕሪኡ ካብ መጀመርታ ጀምር።', f: 'መጀመርታ ምዕባለኺ ዓቅቢ። ድሕሪኡ ካብ መጀመርታ ጀምሪ።', x: 'መጀመርታ ምዕባለኹም ዓቅቡ። ድሕሪኡ ካብ መጀመርታ ጀምሩ።' }, // nieuw, nalezen
     startOver: { m: 'ካብ መጀመርታ ጀምር', f: 'ካብ መጀመርታ ጀምሪ', x: 'ካብ መጀመርታ ጀምሩ' }, // nieuw, nalezen
+    crashed: 'ገለ ጸገም ኣጋጢሙ። ምዕባለኹም ተዓቂቡ ኣሎ።', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: { m: 'ድሮ እንታይ ትፈልጥ?', f: 'ድሮ እንታይ ትፈልጢ?', x: 'ድሮ እንታይ ትፈልጡ?' }, // nieuw, nalezen
     toetsOffer: { m: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኻ ጥራይ እዩ።', f: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኺ ጥራይ እዩ።', x: 'ኣስታት 10 ደቒቕ። ነጥቢ የለን። ንዓኹም ጥራይ እዩ።' }, // nieuw, nalezen

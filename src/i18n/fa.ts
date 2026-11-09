@@ -360,6 +360,7 @@ const lang: HelpLanguageSource = {
     bootFailed: 'Vloertaal اجرا نمی‌شود.', // nieuw, nalezen
     bootFailedHint: 'اول پیشرفت خود را نگه دارید. بعد از نو شروع کنید.', // nieuw, nalezen
     startOver: 'از نو شروع کنید', // nieuw, nalezen
+    crashed: 'مشکلی پیش آمد. پیشرفت شما ذخیره شده است.', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'از قبل چه می‌دانید؟', // nieuw, nalezen // nagelezen AI 31 okt
     toetsOffer: 'حدود 10 دقیقه. نمره‌ای در کار نیست. فقط برای خودتان است.', // nieuw, nalezen // nagelezen AI 31 okt

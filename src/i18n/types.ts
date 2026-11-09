@@ -459,6 +459,8 @@ export const uiEn = {
   bootFailed: 'Vloertaal can’t start.',
   bootFailedHint: 'Keep your progress first. Then start again.',
   startOver: 'Start again',
+  /* The screen after a crash (src/components/Splash.tsx Crashed): not "Is the internet on?"; under it a short code to pass on. */
+  crashed: 'Something went wrong. Your progress is kept.',
   /* "Wat ken je al?": a short test at the start and after 4 weeks (src/components/Toets.tsx). */
   toetsTitle: 'What do you know already?',
   toetsOffer: 'About 10 minutes. There are no marks. It is just for you.',

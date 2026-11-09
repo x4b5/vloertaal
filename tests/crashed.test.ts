@@ -1,7 +1,7 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { BootFailed, Crashed } from '../src/components/Splash';
+import { BootFailed, Crashed, CrashedScreen } from '../src/components/Splash';
 import { emptyProgress } from '../src/lib/progress';
 // Every help language's texts, as on a phone where the start got that far.
 import '../src/i18n/all';
@@ -23,9 +23,9 @@ describe('a drawing error', () => {
 
   it('at the start (nothing tapped yet): the screen that says so, not "Is er internet?" and its "Try again" (4 November 2026)', () => {
     // Its "Try again" only led back to the same error.
-    expect(Crashed.getDerivedStateFromError()).toEqual({ failed: true, atStart: true });
+    expect(Crashed.getDerivedStateFromError(new Error('broken screen'))).toMatchObject({ failed: true, atStart: true });
     const guard = new Crashed({ children: createElement(Broken) });
-    guard.state = Crashed.getDerivedStateFromError();
+    guard.state = Crashed.getDerivedStateFromError(new Error('broken screen'));
     const html = renderToStaticMarkup(guard.render() as React.ReactElement);
     expect(html).toContain('Vloertaal kan niet starten.');
     expect(html).not.toContain('Niet geladen');
@@ -85,5 +85,36 @@ describe('"Vloertaal kan niet starten": two ways out', () => {
     const html = renderToStaticMarkup(createElement(BootFailed));
     expect(html.match(/Vloertaal kan niet starten/g)).toHaveLength(1);
     expect(html).not.toContain('lang="en"');
+  });
+});
+
+describe('"Er ging iets mis": a screen that broke after the learner used the app (November 2026)', () => {
+  const store = new Map<string, string>();
+  const g = globalThis as { localStorage?: unknown };
+  let before: unknown;
+  beforeEach(() => {
+    before = g.localStorage;
+    store.clear();
+    g.localStorage = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v), removeItem: (k: string) => void store.delete(k) };
+  });
+  afterEach(() => { g.localStorage = before; });
+
+  it('says something went wrong, not "Is er internet?", in Dutch and the help language, with a code to pass on', () => {
+    store.set('vloertaal:v1', JSON.stringify({ ...emptyProgress, onboarded: true, helpLang: 'uk', gender: 'f' }));
+    const state = Crashed.getDerivedStateFromError(new Error('broken screen'));
+    expect(state.code).toMatch(/^[0-9a-f]{8}$/);
+    const html = renderToStaticMarkup(createElement(CrashedScreen, { code: state.code }));
+    expect(html).toContain('Er ging iets mis. Je voortgang is bewaard.');
+    expect(html).toContain('Щось пішло не так.');
+    expect(html).toContain(`Code: <span translate="no">${state.code}</span>`);
+    expect(html).toContain('boot-retry');
+    expect(html).not.toContain('Niet geladen');
+  });
+
+  it('the work-rules track reads it in Dutch only', () => {
+    store.set('vloertaal:v1', JSON.stringify({ ...emptyProgress, onboarded: true, helpLang: 'nl' }));
+    const html = renderToStaticMarkup(createElement(CrashedScreen, { code: 'abcd1234' }));
+    expect(html.match(/Er ging iets mis/g)).toHaveLength(1);
+    expect(html).not.toContain('Something went wrong');
   });
 });

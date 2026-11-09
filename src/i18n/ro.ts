@@ -360,6 +360,7 @@ const lang: HelpLanguageSource = {
     bootFailed: 'Vloertaal nu poate porni.', // nieuw, nalezen
     bootFailedHint: 'Mai întâi păstrează-ți progresul. Apoi începe din nou.', // nieuw, nalezen
     startOver: 'Începe din nou', // nieuw, nalezen
+    crashed: 'Ceva nu a mers bine. Progresul tău este salvat.', // nieuw, nalezen
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'Ce știi deja?', // nieuw, nalezen
     toetsOffer: 'Cam 10 minute. Nu primești note. Este doar pentru tine.', // nieuw, nalezen
