@@ -36,6 +36,38 @@ export interface ProSection {
    * je nu?" (src/content/kunJeNu.ts: topic, sentences, what they fit).
    */
   extra?: 'facts' | 'topics' | 'kunjenu';
+  /** The drawer the section folds into (PRO_DRAWERS); none = always open. */
+  drawer?: ProDrawerId;
+}
+
+export type ProDrawerId = 'use' | 'background' | 'privacy';
+
+/**
+ * The page was twelve open sections, about twenty phone screens (the owner, 9 November 2026: "heel
+ * veel tekst"). What Vloertaal is and how to reach us stay open; the rest folds into these three
+ * drawers, in this order. Three of one kind: the list exception of "at most three things to tap".
+ */
+export const PRO_DRAWERS: { id: ProDrawerId; emoji: string; title: string }[] = [
+  { id: 'use', emoji: '👥', title: 'Zo zet je het in' },
+  { id: 'background', emoji: '👋', title: 'Achtergrond' },
+  { id: 'privacy', emoji: '🔒', title: 'Privacy en testen' },
+];
+
+export type ProBlock =
+  | { kind: 'open'; section: ProSection }
+  | { kind: 'drawer'; id: ProDrawerId; emoji: string; title: string; sections: ProSection[] };
+
+/** The page in order: the first open section, the drawers, then the other open sections. */
+export function proLayout(sections: ProSection[] = proSections): ProBlock[] {
+  const open = sections.filter((s) => !s.drawer);
+  const drawers: ProBlock[] = PRO_DRAWERS
+    .map((d) => ({ kind: 'drawer' as const, ...d, sections: sections.filter((s) => s.drawer === d.id) }))
+    .filter((d) => d.sections.length > 0);
+  return [
+    ...open.slice(0, 1).map((section) => ({ kind: 'open' as const, section })),
+    ...drawers,
+    ...open.slice(1).map((section) => ({ kind: 'open' as const, section })),
+  ];
 }
 
 export { PRO_TITLE };
@@ -97,11 +129,11 @@ export const proSections: ProSection[] = [
   },
   {
     // The owner's reason, for professionals, signed and dated as on Over; it leads into the test version.
-    id: 'p.story', emoji: story.emoji, title: story.nl.title,
+    drawer: 'background', id: 'p.story', emoji: story.emoji, title: story.nl.title,
     body: [PRO_STORY, PRO_COSTS, `${story.signed} · ${updateDate(STORY_DATE)}`],
   },
   {
-    id: 'p.beta', emoji: beta.emoji, title: 'Een testversie: wie test er?',
+    drawer: 'privacy', id: 'p.beta', emoji: beta.emoji, title: 'Een testversie: wie test er?',
     body: [
       beta.nl.body,
       'We testen in kleine groepen: leerlingen oefenen een week op hun eigen telefoon, met hun eigen begeleider erbij. Alle lessen staan open voor iedereen. Je hebt geen code of account nodig.',
@@ -111,7 +143,7 @@ export const proSections: ProSection[] = [
     ],
   },
   {
-    id: 'p.who', emoji: who.emoji, title: who.nl.title,
+    drawer: 'background', id: 'p.who', emoji: who.emoji, title: who.nl.title,
     body: ['Vloertaal heeft twee lespaden. De leerling kiest er een bij de eerste keer, met de taal.'],
     lines: [
       { lead: 'Taal.', text: `${who.nl.body} Zonder hulptaal is de uitleg in eenvoudig Engels.` },
@@ -120,14 +152,14 @@ export const proSections: ProSection[] = [
     site: [{ text: 'Werkregels.', href: '/werkregels/' }],
   },
   {
-    id: 'p.voices', emoji: '🔊', title: 'De stemmen en de bronnen',
+    drawer: 'background', id: 'p.voices', emoji: '🔊', title: 'De stemmen en de bronnen',
     body: [
       'Elk personage heeft een eigen Nederlandse stem: Bram praat met de stem van Thijmen, Henk met Daniel, Amina met Ariël en Jada met Noa. Deze stemmen zijn gemaakt met AI (ElevenLabs). Heeft een zin nog geen opname? Dan hoor je de stem van je eigen telefoon of computer.',
       'De tips over regels en rechten zijn geschreven met de informatie van de overheid en officiële instanties, zoals de Rijksoverheid, UWV, de Nederlandse Arbeidsinspectie, de Belastingdienst en het Juridisch Loket. De teksten zijn bijgewerkt in oktober 2026. Het blijft algemene informatie, geen juridisch advies. De bronnen van de cijfers staan hieronder bij de feiten.',
     ],
   },
   {
-    id: 'p.privacy', emoji: '🔒', title: 'Privacy: geen account, weinig tellen',
+    drawer: 'privacy', id: 'p.privacy', emoji: '🔒', title: 'Privacy: geen account, weinig tellen',
     body: [
       'Een leerling heeft geen account nodig: geen naam, geen e-mailadres, geen wachtwoord. Wat een leerling leert, staat alleen op de eigen telefoon of computer. Wij kunnen dat niet zien, en jij als begeleider ook niet: je ziet alleen wat de leerling zelf laat zien. Wil je weten hoe het gaat? Vraag of de leerling de begeleiderskaart wil laten zien (Instellingen › Taal en ik › “Laat zien hoe het gaat”). Die kaart maakt de telefoon zelf, als plaatje. De leerling kiest zelf: laten zien, bewaren of sturen. De certificaten laten zien welke onderwerpen af zijn.',
       // The rules for whoever asks to see the card, above all an employer (the owner's request,
@@ -142,12 +174,12 @@ export const proSections: ProSection[] = [
     ],
   },
   {
-    id: 'p.facts', emoji: '📊', title: 'Waarom Nederlands leren? De feiten',
+    drawer: 'background', id: 'p.facts', emoji: '📊', title: 'Waarom Nederlands leren? De feiten',
     body: [],
     extra: 'facts',
   },
   {
-    id: 'p.group', emoji: '👥', title: 'Zo zet je het in, ook met een groep',
+    drawer: 'use', id: 'p.group', emoji: '👥', title: 'Zo zet je het in, ook met een groep',
     body: [],
     lines: [
       { lead: 'Op de eigen telefoon.', text: 'Stuur de link in de taal van je leerling, bijvoorbeeld vloertaal.nl/pl voor Poolse collega’s: de app vraagt dan meteen ‘Polski?’. De leerling kiest zelf een sector. Geen account, geen app-winkel.' },
@@ -171,13 +203,13 @@ export const proSections: ProSection[] = [
   {
     // "Communicatie" (the owner's request, 5 November 2026): the lessons that train talking with
     // others, across the topics (src/content/communication.ts; the app marks them on the topic page).
-    id: 'p.comm', emoji: '💬', title: 'Communicatie: de lessen op een rij',
+    drawer: 'use', id: 'p.comm', emoji: '💬', title: 'Communicatie: de lessen op een rij',
     body: ['Praten met collega’s en je leidinggevende zit in veel onderwerpen. Deze lessen oefenen het: uitleggen wat er is, luisteren en terugvragen, rustig blijven, op tijd iets zeggen, feedback geven en krijgen. In de app staat bij elk van deze lessen “Communicatie”.'],
     lines: COMMUNICATION.map((t) => ({ lead: `${t.titleNl}.`, text: t.lessons.map(([, nl]) => nl).join(', ') + '.' })),
   },
   {
     // A sober example for a group (docs/weekplan.md), after the topic links it points to.
-    id: 'p.weekplan', emoji: '🗓️', title: 'Een voorbeeld: vier weken met een groep',
+    drawer: 'use', id: 'p.weekplan', emoji: '🗓️', title: 'Een voorbeeld: vier weken met een groep',
     body: ['Een voorbeeld, geen voorschrift: pas het aan je groep aan. Reken op ongeveer drie keer tien minuten oefenen per week, op de eigen telefoon. Vloertaal is daarbij een aanvulling op je les of begeleiding.'],
     lines: [
       // The test comes after the first lesson (src/lib/toets.ts INSTAP_FROM_LESSONS), 4 November 2026.
@@ -192,7 +224,7 @@ export const proSections: ProSection[] = [
   },
   {
     // "Wat kun je nu?" (src/content/kunJeNu.ts, werkplan stap 2.6): the table follows (extra).
-    id: 'p.kunjenu', emoji: '✅', title: 'Wat kun je nu? Zinnen per onderwerp',
+    drawer: 'use', id: 'p.kunjenu', emoji: '✅', title: 'Wat kun je nu? Zinnen per onderwerp',
     body: [
       'Bij elk onderwerp staan 2 of 3 korte zinnen over wat de leerling na de lessen kan, zoals “Ik kan zeggen dat ik ziek ben.” Ze staan op het certificaat-scherm, en als ze passen ook op het certificaat zelf. De begeleiderskaart laat zien hoeveel zinnen het zijn.',
       'Bij elke zin staat waar hij bij past: een niveau en een vaardigheid. Bij Taal is dat A1 of “op weg naar A2” van het ERK, bij Werkregels 1F. De Taal-route gaat van A0 naar A1, op weg naar A2. Wie hem afmaakt, heeft dus nog geen A2. Dat helpt om de app in je les in te passen. Het is geen officieel niveau en geen toets. De zinnen zijn nog niet nagekeken door een NT2-docent.',
@@ -200,7 +232,7 @@ export const proSections: ProSection[] = [
     extra: 'kunjenu',
   },
   {
-    id: 'p.entree', emoji: '🎓', title: 'Entree en mbo',
+    drawer: 'use', id: 'p.entree', emoji: '🎓', title: 'Entree en mbo',
     body: [
       'Vloertaal past naast de Entree-opleiding (mbo niveau 1) en andere mbo-opleidingen, als korte, vaste oefening: als voorbereiding op de stage (bpv), bij loopbaan en burgerschap, of als huiswerk van tien minuten. Het vervangt geen les. Elke les van Werkregels eindigt met een regel om in de klas te bespreken.',
       `Voor studenten die al Nederlands spreken, heeft Werkregels lessen speciaal voor Entree: ${ENTREE_UNITS.slice(0, -1).join(', ')} en ${ENTREE_UNITS.at(-1)}. Bij Taal staan onder meer “In de winkel” en “Rekenen: tijd, geld, maten”.`,

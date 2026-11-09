@@ -1,6 +1,6 @@
 import { CONTACT_EMAIL } from '../content/about';
 import { COACH_FACTS } from '../content/facts';
-import { COACH_PITCH, COACH_WHY, PRO_LEAD, proSections, type ProSection } from '../content/pro';
+import { COACH_PITCH, COACH_WHY, PRO_LEAD, proLayout, proSections, type ProBlock, type ProSection } from '../content/pro';
 import { THEMES } from '../content/themes';
 import { KUN_REGELS, KUN_TAAL, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 import { languageNav } from './langPages';
@@ -61,6 +61,14 @@ function section(s: ProSection): string {
 ${[inner, extra].filter(Boolean).join('\n')}</section>`;
 }
 
+/** An open section, or a drawer (closed at first) with its sections inside (src/content/pro.ts proLayout). */
+function block(b: ProBlock): string {
+  if (b.kind === 'open') return section(b.section);
+  return `<details class="drawer"><summary>${esc(b.title)}</summary>
+${b.sections.map(section).join('\n')}
+</details>`;
+}
+
 export function coachPage(): string {
   const title = 'Vloertaal voor jobcoaches: de werkvloer in eigen taal';
   const description = `${COACH_PITCH} ${COACH_WHY}`;
@@ -83,7 +91,7 @@ export function coachPage(): string {
 <p class="lead"><strong>${esc(COACH_PITCH)}</strong> ${esc(COACH_WHY)}</p>
 <a class="cta" href="/">Open Vloertaal →</a>
 <p>${text(PRO_LEAD)}</p>
-${proSections.map(section).join('\n')}
+${proLayout().map(block).join('\n')}
 <footer>
 <h2>Per sector</h2>
 ${sectorNav()}
