@@ -1,4 +1,5 @@
 import { CONTACT_EMAIL } from '../content/about';
+import { COUNTER_SITE, VIA } from './countSite';
 import { COACH_FACTS } from '../content/facts';
 import { COACH_PITCH, COACH_WHY, coachShareLinks, PRO_LEAD, proLayout, proSections, type ProBlock, type ProSection } from '../content/pro';
 import { THEMES } from '../content/themes';
@@ -72,7 +73,21 @@ ${b.sections.map(section).join('\n')}
 /** "Stuur door aan een collega": WhatsApp or mail, the message ready (src/content/pro.ts COACH_SHARE). */
 function shareLine(): string {
   const { whatsapp, mail } = coachShareLinks();
-  return `<p class="share"><strong>Stuur door aan een collega:</strong> <a href="${esc(whatsapp)}">WhatsApp</a> · <a href="${esc(mail)}">Mail</a></p>`;
+  return `<p class="share"><strong>Stuur door aan een collega:</strong> <a href="${esc(whatsapp)}" data-deel="whatsapp">WhatsApp</a> · <a href="${esc(mail)}" data-deel="mail">Mail</a></p>`;
+}
+
+/**
+ * The page's only counting, under the app's rules (src/lib/count.ts): an arrival through a shared
+ * link ("?via=begeleider") and a tap on WhatsApp or Mail above. Only on vloertaal.nl, not with
+ * "Anoniem meetellen" off on this phone or when the browser asks not to be tracked; only where,
+ * never who (the owner's request, 9 November 2026: does sending it on work?).
+ */
+function shareCounting(): string {
+  const via = JSON.stringify(VIA);
+  return `<script>(function(){try{if(!/^(www\\.)?vloertaal\\.nl$/.test(location.hostname)||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true||localStorage.getItem('vloertaal:count-off')==='1')return}catch(e){return}
+function c(p,t){try{fetch('${COUNTER_SITE}/count?p='+encodeURIComponent(p)+'&e=true&t='+t,{mode:'no-cors',keepalive:true,credentials:'omit',cache:'no-store',referrerPolicy:'no-referrer'}).catch(function(){})}catch(e){}}
+var v=new URLSearchParams(location.search).get('via');if(${via}.indexOf(v)>-1)c('/e/via/'+v,'via');
+document.querySelectorAll('a[data-deel]').forEach(function(a){a.addEventListener('click',function(){c('/e/deel/website-'+a.getAttribute('data-deel'),'deel')})})})()</script>`;
 }
 
 export function coachPage(): string {
@@ -105,7 +120,8 @@ ${sectorNav()}
 <h2>In de eigen taal van je leerlingen</h2>
 ${languageNav()}
 <p><a href="${GROEP_PATH}">Groepsoverzicht (zonder namen)</a> · <a href="/intro/">Waarom Vloertaal?</a> · <a href="/nieuw/">Wat is er nieuw?</a></p>
-</footer>`,
+</footer>
+${shareCounting()}`,
   );
 }
 

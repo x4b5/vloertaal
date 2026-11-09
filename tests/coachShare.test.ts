@@ -10,7 +10,7 @@ import { SITE } from '../src/lib/plainPage';
  */
 describe('Voor begeleiders: send it on to a colleague', () => {
   it('sends the professionals page, with the pitch', () => {
-    expect(COACH_SHARE.url).toBe(`${SITE}${COACH_PATH}`);
+    expect(COACH_SHARE.url).toBe(`${SITE}${COACH_PATH}?via=begeleider`);
     expect(COACH_SHARE.text).toContain(COACH_PITCH);
   });
 

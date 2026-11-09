@@ -20,9 +20,10 @@
  */
 
 import { demoOn } from './demo';
+import { COUNTER_SITE, VIA } from './countSite';
 
 /** The owner's GoatCounter site; its root is also the dashboard. */
-export const COUNTER: string = (import.meta.env.VITE_COUNTER_URL as string | undefined) || 'https://vloertaal.goatcounter.com';
+export const COUNTER: string = (import.meta.env.VITE_COUNTER_URL as string | undefined) || COUNTER_SITE;
 
 export type CountEvent = 'lesson-start' | 'lesson-quit' | 'lesson-done' | 'review-done' | 'unit-done'
   /** "Wat ken je al?" started and finished (src/components/Toets.tsx): with the version (a, b) as
@@ -262,4 +263,32 @@ export function count(event: CountEvent, dims: CountDims = {}): boolean {
   const base = COUNTER.replace(/\/+$/, '');
   send(`${base}/count?p=${encodeURIComponent(countPath(event, dims))}&e=true&t=${encodeURIComponent(event)}`);
   return true;
+}
+
+/**
+ * Sending Vloertaal on (the owner's request, 9 November 2026: does it work?). Only where the share
+ * button was tapped ("/e/deel/begeleider"): the coaches page, the same button right after a demo,
+ * the learner's colleague card. Not in a demonstration.
+ */
+export type ShareSpot = 'begeleider' | 'na-demo' | 'collegakaart';
+export function countShare(spot: ShareSpot): boolean {
+  if (demoOn()) return false;
+  return countRaw(`/e/deel/${spot}`, 'deel');
+}
+
+export { VIA };
+
+/**
+ * Someone opened a shared link ("?via=collega"): "/e/via/collega", once per open. Only the values
+ * we put in our own links count; anything else in the address is ignored.
+ */
+export function countArrival(search: string): boolean {
+  let via: string | null = null;
+  try {
+    via = new URLSearchParams(search).get('via');
+  } catch {
+    return false;
+  }
+  if (!via || !(VIA as readonly string[]).includes(via) || demoOn()) return false;
+  return countRaw(`/e/via/${via}`, 'via');
 }

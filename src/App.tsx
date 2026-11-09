@@ -54,7 +54,7 @@ import { afterSpeak, braveLine, chorusDue, type SpeakEvent } from './lib/chorus'
 import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
 import { colleagueAtCertificate, earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
-import { clockMinutes, count, countDayMilestones, countFirstOpen, countStartDone, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
+import { clockMinutes, count, countDayMilestones, countArrival, countFirstOpen, countStartDone, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
 import { explainReport, testerMode } from './lib/report';
 import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpdate';
 import { clearSave } from './lib/resume';
@@ -204,6 +204,8 @@ export default function App() {
   // (#begeleiders, #beheer): a coach's look is not a new learner.
   useEffect(() => {
     if (!coachesRequested() && !adminRequested()) countFirstOpen(!start.progress.onboarded);
+    // Opened through a link someone shared ("?via=collega", src/lib/count.ts countArrival).
+    countArrival(typeof location === 'undefined' ? '' : location.search);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   /** "Je reeks is gestopt bij N": shown once on this open, before the path. */
   const [stopped, setStopped] = useState<number | null>(start.stopped);

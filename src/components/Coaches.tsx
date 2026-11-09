@@ -9,6 +9,7 @@ import { WordPicture } from '../pictures';
 import { CheckIcon, ChevronDownIcon } from './Icons';
 import { loadAccess } from '../lib/access';
 import { demoJustStopped, demoOn, forgetDemoStopped, restartApp, startDemo } from '../lib/demo';
+import { countShare } from '../lib/count';
 import { ChromeBack } from './ChromeBack';
 import type { HelpLanguage } from '../i18n/types';
 import { groupByTheme } from '../content/themes';
@@ -218,6 +219,7 @@ export function ShareWithColleague() {
   useEffect(() => { if (afterDemo) forgetDemoStopped(); }, [afterDemo]);
   const message = `${COACH_SHARE.text} ${COACH_SHARE.url}`;
   const send = async () => {
+    countShare(afterDemo ? 'na-demo' : 'begeleider');
     try {
       if (navigator.share) {
         await navigator.share({ title: COACH_SHARE.title, text: COACH_SHARE.text, url: COACH_SHARE.url });

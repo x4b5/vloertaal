@@ -89,7 +89,8 @@ export const COACH_WHY = 'Zodat een plaatsing niet stukloopt op een instructie o
 export const COACH_SHARE = {
   title: 'Vloertaal',
   text: `Misschien iets voor jouw kandidaten: Vloertaal. ${COACH_PITCH}`,
-  url: 'https://vloertaal.nl/voor-begeleiders/',
+  // "via=begeleider": an arrival through this link is counted (src/lib/count.ts countArrival).
+  url: 'https://vloertaal.nl/voor-begeleiders/?via=begeleider',
 } as const;
 
 /** The same message as a WhatsApp and a mail link (the website has no share sheet of its own). */
@@ -189,7 +190,7 @@ export const proSections: ProSection[] = [
       'Spreken met “Laat de telefoon luisteren (proef)”: dit staat standaard uit, en de leerling kan het alleen aanzetten op een telefoon die Nederlands zelf kan herkennen, zonder internet. De app gebruikt de herkenning alleen als de browser bevestigt dat die op het toestel gebeurt (processLocally). Kan dat niet, dan is de proef er niet. Er gaat geen geluid en geen tekst naar ons of naar anderen. De telefoon zegt alleen of hij de zin verstond, nooit een cijfer of “fout”.',
       // All that src/lib/count.ts sends, as /privacy says it: since 4 November 2026 also the start
       // (once per phone) and the answer to "Gelukt?" (src/lib/workTry.ts), which this "Alleen" left out.
-      'Wat telt de app? Alleen hoe vaak een les begint, stopt of af is: welke les, in welk kwart iemand stopte, en ongeveer hoeveel minuten een les duurde. Hoeveel telefoons de app voor het eerst openen en de vragen van de start afmaken (tot en met het land): elke telefoon telt dat één keer, zonder wat de leerling koos. Of leerlingen terugkomen: elke telefoon telt één keer de 1e, 2e, 7e, 14e en 28e dag waarop de leerling een les deed, alleen met dat getal, zonder datum of nummer. En hoe vaak de toets “Wat ken je al?” begint en af is (instap of eind), zonder de uitslag. Het antwoord op “Heb je dit op je werk gezegd?”: alleen “ja” of “nog niet”. Dat gaat zonder cookies, met GoatCounter. En of de app ergens een fout geeft: de soort fout, een korte code en een opgeschoonde foutmelding uit de code, nooit wat de leerling typte (hooguit drie per bezoek). Er gaat niets mee over de leerling: geen hulptaal, geen sector, geen naam en geen nummer.',
+      'Wat telt de app? Alleen hoe vaak een les begint, stopt of af is: welke les, in welk kwart iemand stopte, en ongeveer hoeveel minuten een les duurde. Hoeveel telefoons de app voor het eerst openen en de vragen van de start afmaken (tot en met het land): elke telefoon telt dat één keer, zonder wat de leerling koos. Of leerlingen terugkomen: elke telefoon telt één keer de 1e, 2e, 7e, 14e en 28e dag waarop de leerling een les deed, alleen met dat getal, zonder datum of nummer. En hoe vaak de toets “Wat ken je al?” begint en af is (instap of eind), zonder de uitslag. Het antwoord op “Heb je dit op je werk gezegd?”: alleen “ja” of “nog niet”. Of Vloertaal wordt doorgestuurd: alleen dát het gebeurt en vanaf welke plek (deze pagina, na de demo, de collegakaart), en één keer als iemand zo’n gedeelde link opent; niet naar wie. Dat gaat zonder cookies, met GoatCounter. En of de app ergens een fout geeft: de soort fout, een korte code en een opgeschoonde foutmelding uit de code, nooit wat de leerling typte (hooguit drie per bezoek). Er gaat niets mee over de leerling: geen hulptaal, geen sector, geen naam en geen nummer.',
       'De leerling kan het tellen uitzetten bij Instellingen (“Anoniem meetellen”). Vraagt de browser om niet gevolgd te worden (Do Not Track of Global Privacy Control)? Dan telt de app niets. Melden opent een gewone mail: er gaat pas iets naar ons als de leerling die zelf verstuurt. Alles op een rij: vloertaal.nl/privacy.',
     ],
   },
