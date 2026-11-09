@@ -23,6 +23,25 @@ export function preferredVoiceRef(): VoiceRef {
   return preferredVoice;
 }
 
+let voiceCountry: 'nl' | 'be' = 'nl';
+
+/** The country the learner works in (set with the cast, setCastCountry in voices.ts). */
+export function setVoiceCountry(country: 'nl' | 'be'): void {
+  voiceCountry = country;
+}
+
+/**
+ * The voice for lines without a character (words, tiles, the test): the learner's choice, but in
+ * Belgium the Flemish voice whose Dutch twin that choice is (Thijmen → Philip, Sandrine → Evie),
+ * so the words sound Flemish too, not only the chats (the owner's report, 9 November 2026).
+ */
+function ownVoice(): VoiceRef {
+  if (voiceCountry !== 'be') return preferredVoice;
+  const dutch = recordedFor(preferredVoice);
+  const flemish = dutch && recorded.find((r) => r.voice.country === 'be' && r.voice.twin === dutch.voice.key);
+  return flemish ? `piper:${flemish.voice.key}` : preferredVoice;
+}
+
 /**
  * "Without sound" (the learner's setting): nothing plays by itself and there are no effect
  * sounds. A speaker button the learner taps still plays (they may wear earphones).
@@ -290,7 +309,7 @@ const clipPath = (rec: Recorded, id: string) => `${rec.base}/${rec.voice.key}/${
  * Used to save a unit's sound for offline use.
  */
 export function clipUrl(text: string, voice?: VoiceRef): string | undefined {
-  const chosen = recordedFor(voice === undefined ? preferredVoice : voice);
+  const chosen = recordedFor(voice === undefined ? ownVoice() : voice);
   const found = chosen && clipFor(chosen, text);
   return found ? clipPath(found.rec, found.id) : undefined;
 }
@@ -470,7 +489,7 @@ function stopAll(): void {
  * het?" sets it, with its speed slider (src/components/KlankCard.tsx).
  */
 export function speak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef, speed = 1, at?: Pace): void {
-  const ref = voice === undefined ? preferredVoice : voice;
+  const ref = voice === undefined ? ownVoice() : voice;
   const chosen = lang === 'nl' ? recordedFor(ref) : undefined;
   const found = chosen && clipFor(chosen, text);
   // `at`: a pace set by the exercise (autoSpeakAt); the line still counts as heard in the lesson.
@@ -524,7 +543,7 @@ export interface LongSpeech {
  * Returns false when nothing can say it (no clip, no Dutch phone voice): then nothing plays.
  */
 export function speakLong(text: string, opts: LongSpeech = {}): boolean {
-  const ref = opts.voice === undefined ? preferredVoice : opts.voice;
+  const ref = opts.voice === undefined ? ownVoice() : opts.voice;
   const slow = Boolean(opts.slow);
   const chosen = recordedFor(ref);
   const found = chosen && clipFor(chosen, text);

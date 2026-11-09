@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { clipUrl, recordedVoices, setRecordedIndex, type ElevenIndex } from '../src/lib/audio';
+import { clipUrl, recordedVoices, setPreferredVoice, setRecordedIndex, type ElevenIndex } from '../src/lib/audio';
 import { setCastCountry, voiceFor } from '../src/lib/voices';
 
 /**
@@ -66,6 +66,37 @@ describe('Flemish voices (src/lib/voices.ts setCastCountry)', () => {
   it('never lets a Dutch voice borrow a Flemish recording while a Dutch one exists', () => {
     setRecordedIndex(index, null);
     expect(clipUrl('de gsm', 'piper:daniel')).toBe('./audio-el/thijmen/be.w.gsm.mp3');
+  });
+
+  describe("the learner's own voice (words, tiles: Settings › Voice)", () => {
+    const full: ElevenIndex = {
+      voices: [
+        ...index.voices.map((v) => (v.key === 'philip' ? { ...v, said: { ...v.said, 'w.helm': 'de helm' } } : v)),
+        be('evie', 'female', 'ariel', { 'w.helm': 'de helm' }),
+      ],
+    };
+
+    it('speaks Flemish in Belgium when the learner left it on "Automatic"', () => {
+      setRecordedIndex(full, null);
+      setCastCountry('be');
+      expect(clipUrl('de helm')).toBe('./audio-el/philip/w.helm.mp3');
+    });
+
+    it('turns the Dutch man or woman from Settings into the Flemish one in Belgium', () => {
+      setRecordedIndex(full, null);
+      setPreferredVoice('piper:thijmen');
+      setCastCountry('be');
+      expect(clipUrl('de helm')).toBe('./audio-el/philip/w.helm.mp3');
+      setPreferredVoice('piper:ariel');
+      expect(clipUrl('de helm')).toBe('./audio-el/evie/w.helm.mp3');
+      setPreferredVoice(null);
+    });
+
+    it('keeps the Dutch voice in the Netherlands', () => {
+      setRecordedIndex(full, null);
+      setCastCountry('nl');
+      expect(clipUrl('de helm')).toBe('./audio-el/thijmen/w.helm.mp3');
+    });
   });
 
   it('leaves the Flemish voices out of the voice choice in Settings', () => {
