@@ -24,6 +24,8 @@ export interface ProSection {
   id: string;
   emoji: string;
   title: string;
+  /** A paragraph before the others, as plain text (no mail link of its own): the owner's request. */
+  lead?: string;
   /** Paragraphs. */
   body: string[];
   /** Lines with a bold start, after the paragraphs. */
@@ -78,6 +80,18 @@ export { PRO_TITLE };
  * language app). "Kandidaten" is the coaches' and recruiters' own word; "werkvloer" covers both the
  * language and the unwritten rules. The second sentence is for whoever asks why.
  */
+/**
+ * "In drie stappen": right under the pitch, before the demo and everything else, so a coach who
+ * wants to start reads how first (review, 9 November 2026: the page opened with a request to review
+ * the app, and "Zo zet je het in" was folded away). The same on the site and in the app.
+ */
+export const COACH_STEPS_TITLE = 'In drie stappen';
+export const COACH_STEPS: { lead: string; text: string }[] = [
+  { lead: 'Stuur de link, of print het briefje.', text: 'Stuur de link in de taal van je kandidaat, bijvoorbeeld vloertaal.nl/pl. Of print op vloertaal.nl/briefje een A4 met een QR-code. Spreekt je kandidaat al Nederlands? Dan is er een briefje in het Nederlands.' },
+  { lead: 'Doe samen de eerste les.', text: 'Een paar minuten, op de eigen telefoon. Daarna oefent je kandidaat zelf, een paar minuten per dag.' },
+  { lead: 'Kijk elke week samen naar de kaart.', text: 'Je kandidaat tikt op Hulp en dan op “Voor je begeleider”, en kiest zelf wat je ziet. Praat over wat lukte en wat lastig was. Past een onderwerp bij het werk? Stuur de link van dat onderwerp (bij “Zo zet je het in”). Die werkt in Taal en in Werkregels.' },
+];
+
 export const COACH_PITCH = 'Een gratis app die kandidaten de werkvloer uitlegt, in hun eigen taal.';
 export const COACH_WHY = 'Zodat een plaatsing niet stukloopt op een instructie of een ongeschreven regel.';
 
@@ -216,7 +230,7 @@ export const proSections: ProSection[] = [
       // Walking around with a problem, then stopping at once or getting angry (the owner's request, 5 November 2026; l.talkintime).
       { lead: 'Op tijd praten.', text: 'Wordt iemand stiller, of zegt die plots “ik stop”? Vraag “Hoe gaat het echt?” en maak tijd. Zoek samen een oplossing, zoals een andere dienst of een andere taak. De les “Praat er op tijd over” (bij Goed communiceren) oefent het vanaf de kant van de leerling: “Ik zit ergens mee. Heb je even tijd?”' },
       { lead: 'Op de werkvloer.', text: 'Nieuwe collega’s leren de woorden van hun eigen werk: de veiligheidsinstructie, beschermingsmiddelen en de toolbox, het rooster en het loonstrookje. Zo kun je een instructie of een eerste werkdag voorbereiden. Vloertaal vervangt geen veiligheidsinstructie of VCA-cursus: het helpt om die beter te begrijpen.' },
-      { lead: 'Naar één onderwerp.', text: 'Elk onderwerp heeft een eigen link. Met de link opent Vloertaal meteen bij dat onderwerp, ook bij de eerste les. Een nieuwe gebruiker kiest eerst nog een taal. Handig na een les over het loonstrookje of veiligheid. Hieronder staat elk onderwerp, per thema.' },
+      { lead: 'Naar één onderwerp.', text: 'Elk onderwerp heeft een eigen link. Met de link opent Vloertaal meteen bij dat onderwerp, ook bij de eerste les. Een nieuwe gebruiker kiest eerst nog een taal. De link werkt voor iedereen: wie Werkregels volgt, komt bij hetzelfde onderwerp in Werkregels. Handig na een les over het loonstrookje of veiligheid. Hieronder staat elk onderwerp, per thema.' },
     ],
     site: [{ text: 'vloertaal.nl/pl', href: '/pl/' }, { text: 'vloertaal.nl/briefje', href: '/briefje/' }],
     extra: 'topics',
@@ -236,7 +250,7 @@ export const proSections: ProSection[] = [
       // The test comes after the first lesson (src/lib/toets.ts INSTAP_FROM_LESSONS), 4 November 2026.
       { lead: 'Week 1.', text: 'Samen beginnen. Ieder kiest een taal en doet de eerste les van thema 1, Starten. Daarna biedt de app de toets “Wat ken je al?” aan (ongeveer 10 minuten, zonder cijfer).' },
       { lead: 'Week 2 en 3.', text: 'Zelf oefenen, ongeveer drie keer tien minuten per week. Past een onderwerp bij het werk? Stuur de link van dat onderwerp (de links staan hierboven, bij “Zo zet je het in”).' },
-      { lead: 'Elke week.', text: 'Kijk één keer samen naar de begeleiderskaart (Instellingen › Taal en ik › “Laat zien hoe het gaat”). De leerling laat de kaart zelf zien. Praat over wat lukte en wat lastig was. De kaart geeft geen cijfer en geen niveau.' },
+      { lead: 'Elke week.', text: 'Kijk één keer samen naar de begeleiderskaart (Hulp › “Voor je begeleider”). De leerling laat de kaart zelf zien. Praat over wat lukte en wat lastig was. De kaart geeft geen cijfer en geen niveau.' },
       { lead: 'Week 4.', text: 'De eindtoets. De app biedt die zelf aan na 4 weken of na 3 onderwerpen; hij staat ook bij Instellingen › Lessen › “Wat ken je al?”. Kijk daarna samen naar “Jij toen” en “Jij nu”.' },
       { lead: 'Werkregels.', text: 'Voor wie al Nederlands spreekt: hetzelfde ritme, zonder toets. De begeleiderskaart werkt ook daar.' },
       { lead: 'Voor de hele groep.', text: 'Neem de getallen van de kaarten over op vloertaal.nl/groep: onderwerpen af, dagen geoefend en de toets. Onderaan elke kaart staat een korte code met die getallen, die je kunt plakken. De pagina maakt de totalen van de groep, zoals het gemiddelde en hoeveel deelnemers terugkwamen. Zonder namen, en er gaat niets naar een server. Handig voor een verslag aan een gemeente of fonds.' },
@@ -263,6 +277,9 @@ export const proSections: ProSection[] = [
   {
     // Last, like the learner's About: the address is the page's mail link (one tap).
     id: 'p.contact', emoji: '✉️', title: 'Meedoen of meedenken?',
+    // The owner's request to look along (PRO_LEAD), here at the end since 9 November 2026: a coach
+    // who wants to start reads the three steps first. Without its own mail link (one is enough).
+    lead: PRO_LEAD,
     body: [`Zou je Vloertaal willen gebruiken met een groep, of wil je meekijken? Of heb je een vraag of een fout gevonden? Mail dan naar ${CONTACT_EMAIL}.`],
   },
 ];

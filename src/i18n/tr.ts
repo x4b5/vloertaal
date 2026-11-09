@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Nerede çalışıyorsun?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Hangi ülkede çalışıyorsun?',
-    countryHint: 'O ülkenin iş kurallarını görürsün.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'O ülkenin kelimelerini ve ipuçlarını görürsün.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: 'Hollanda',
     countryBe: 'Belçika (Flandra)', // nieuw, nalezen (AI-correctie 2 nov 2026)
     tipsNote: 'Bu ipuçları Hollanda’daki iş hakkında. Genel bilgidir, hukuki danışmanlık değildir.',
@@ -221,6 +221,11 @@ const lang: HelpLanguageSource = {
     routeLearn: 'İş için Hollandaca ve burada işin nasıl yürüdüğünü öğren', // nieuw, nalezen
     routeRules: 'Hollandaca biliyorum: sadece iş kuralları', // nieuw, nalezen
     routeLearnShort: 'Hollandaca öğren', // nieuw, nalezen
+    switchTitle: 'Werkregels’e geçilsin mi?', // nieuw, nalezen
+    switchDutch: 'Her şey Hollandaca olur. Yardım dilin kapanır.', // nieuw, nalezen
+    switchReview: 'Geri dönene kadar kelimeleri değil, kuralları tekrar edersin.', // nieuw, nalezen
+    switchKept: 'İlerlemen kayıtlı kalır. Buradan geri dönebilirsin.', // nieuw, nalezen
+    switchGo: 'Evet, Werkregels’e geç', // nieuw, nalezen
     byTheme: 'Temaya göre',
     inOrder: 'Sırayla',
     searchTopics: 'Konu ara', // nieuw, nalezen
@@ -461,6 +466,7 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'İş arkadaşın için', // nieuw, nalezen
     colleagueCardHint: 'Bunu Hollandaca konuşan bir iş arkadaşına göster. Pratik yapmana nasıl yardım edebileceği yazıyor.', // nieuw, nalezen
     colleagueShare: 'İş arkadaşına gönder', // nieuw, nalezen
+    forCoach: 'Danışmanın için', // nieuw, nalezen
     coachCardRights: 'Haklarınla ilgili konuları adıyla göster', // nieuw, nalezen
     speakFromMemory: 'Şimdi ezberden: Hollandacası neydi?', // nieuw, nalezen
     keptNofM: '2 hafta veya daha önceki kelimeler: {m} kelimeden {n} tanesini hâlâ biliyordun.', // nieuw, nalezen

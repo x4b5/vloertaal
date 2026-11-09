@@ -127,11 +127,20 @@ export function coursePlan(sector: SectorChoice | undefined, track: Track = 'taa
   };
 }
 
+/** "Werk zoeken" opens the rules course. Who said where they work starts with the first day
+ *  instead, as in the language course, and meets "Werk zoeken" after this unit (review,
+ *  9 November 2026: "Waar werk je? Bouw" was followed by "Waar vind je werk?"). */
+const RULES_SEARCH = 'r.zoeken';
+const RULES_SEARCH_AFTER = 'r.samen';
+
 function rulesPlan(sector: SectorChoice | undefined): { main: Unit[]; other: Unit[] } {
   const all = courseUnits('regels');
   if (!sector || sector === 'none') return { main: all, other: [] };
   const own = all.filter((u) => unitSector(u.id) === sector);
-  const basis = all.filter((u) => unitSector(u.id) === undefined);
+  const search = all.filter((u) => nlId(u.id) === RULES_SEARCH);
+  const rest = all.filter((u) => unitSector(u.id) === undefined && nlId(u.id) !== RULES_SEARCH);
+  const after = rest.findIndex((u) => nlId(u.id) === RULES_SEARCH_AFTER);
+  const basis = after >= 0 ? [...rest.slice(0, after + 1), ...search, ...rest.slice(after + 1)] : [...rest, ...search];
   const slot = basis.findIndex((u) => nlId(u.id) === RULES_SLOT_AFTER);
   const at = slot >= 0 ? slot + 1 : basis.length;
   return {

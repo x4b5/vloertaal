@@ -148,6 +148,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   lessons: { nl: 'Lessen', key: 'settingsLessons', icon: <RouteIcon size={26} /> },
   phone: { nl: 'Deze telefoon', key: 'settingsPhone', icon: <PhoneIcon size={26} /> },
   route: { nl: 'Wat wil je leren?', key: 'routeTitle', icon: <WordPicture id="w.hallo" emoji="🗣️" size={26} /> },
+  switch: { nl: 'Naar Werkregels?', key: 'switchTitle', icon: null },
   language: { nl: 'Hulptaal', key: 'helpLanguage', icon: <GlobeIcon size={24} /> },
   gender: { nl: 'Vrouw of man?', key: 'genderTitle', icon: <NeutralIcon size={24} /> },
   sector: { nl: 'Waar werk je?', key: 'chooseSector', icon: <SectorIcon id="logistics" size={24} /> },
@@ -281,14 +282,15 @@ export function Settings({
   /** The page on screen now: a file that comes after Back (another page) does nothing either. */
   const pageNow = useRef(page);
   pageNow.current = page;
-  const pickLanguage = (code: UiCode | null) => {
+  /** `steps`: pages back up after the switch (2 from "Naar Werkregels?", back to Taal en ik). */
+  const pickLanguage = (code: UiCode | null, steps = 1) => {
     wanted.current = code;
     const on = page;
     const take = () => {
       if (!shown.current || wanted.current !== code || pageNow.current !== on) return;
       setNotHere(null);
       onLang(code);
-      answered();
+      answered(steps);
     };
     if (isLanguageLoaded(code)) { take(); return; }
     ensureLanguage(code).then(take, () => {
@@ -409,21 +411,43 @@ export function Settings({
         return rowsOf(settingsRows(page as SettingsList, ctx));
       case 'route':
         // Two cards: "Nederlands leren" leads on to the help language (in Werkregels: to choose one
-        // first; already there: the check, and back), "Ik spreek al Nederlands" is Werkregels.
+        // first; already there: the check, and back), "Ik spreek al Nederlands" is Werkregels. From
+        // the language course it leads on to "Naar Werkregels?" first, which says what changes
+        // (review, 9 November 2026: one tap used to switch the whole app to Dutch, unasked).
         return (
           <ChoiceCards
             label={said(ui('routeTitle', lang))}
             current={dutchUi(lang) ? 'regels' : 'taal'}
             onPick={(id) => {
-              if (id === 'regels') pickLanguage('nl');
+              if (id === 'regels') { if (dutchUi(lang)) pickLanguage('nl'); else onPage('switch'); }
               else if (dutchUi(lang)) onPage('language');
               else answered();
             }}
             options={[
               { id: 'taal', nl: 'Nederlands leren', text: say('routeLearn'), picture: <WordPicture id="w.hallo" emoji="🗣️" size={52} />, next: dutchUi(lang) },
-              { id: 'regels', nl: 'Ik spreek al Nederlands', text: say('routeRules'), picture: <WordPicture id="w.contract" emoji="📘" size={52} /> },
+              { id: 'regels', nl: 'Ik spreek al Nederlands', text: say('routeRules'), picture: <WordPicture id="w.contract" emoji="📘" size={52} />, next: !dutchUi(lang) },
             ]}
           />
+        );
+      case 'switch':
+        // What changes, in the help language with the Dutch under it; then "Ja, naar Werkregels"
+        // (back to Taal en ik, now in Dutch) or Annuleren (back to the question). Two buttons.
+        return (
+          <>
+            <ul className="switch-lines">
+              <li><GlobeIcon size={24} /><span><NlPair nl="Alles wordt Nederlands. Je hulptaal gaat uit." nlClass="switch-nl" text={say('switchDutch')} /></span></li>
+              <li><RouteIcon size={24} /><span><NlPair nl="Tot je terug wisselt, herhaal je regels, geen woorden." nlClass="switch-nl" text={say('switchReview')} /></span></li>
+              <li><CheckIcon size={24} /><span><NlPair nl="Je voortgang blijft bewaard. Terug wisselen kan hier." nlClass="switch-nl" text={say('switchKept')} /></span></li>
+            </ul>
+            <div className="reset-actions">
+              <button type="button" className="btn btn-primary keep-btn switch-go" onClick={() => pickLanguage('nl', 2)}>
+                <NlPair nlFirst nl="Ja, naar Werkregels" className="keep-btn-gloss" text={say('switchGo')} />
+              </button>
+              <button type="button" className="btn btn-ghost keep-btn switch-cancel" onClick={() => onReturn(1)}>
+                <NlPair nlFirst nl="Annuleren" className="keep-btn-gloss" text={say('cancel')} />
+              </button>
+            </div>
+          </>
         );
       case 'language':
         return (

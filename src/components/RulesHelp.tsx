@@ -16,6 +16,7 @@ import type { Progress } from '../lib/progress';
 import { dutchUi } from '../lib/track';
 import { Bi } from './Bi';
 import { ChromeBack } from './ChromeBack';
+import { CoachHubCard } from './CoachHubCard';
 import { CallIcon, ChevronIcon, GlobeIcon, InfoIcon, SpeakerOffIcon } from './Icons';
 import { InfoGlyph, RULE_KIND_TAG } from './RuleSteps';
 import { SpeakButton } from './SpeakButton';
@@ -33,12 +34,14 @@ import { WordPicture } from '../pictures';
  * your own vertrouwenspersoon) has one speaker instead, which is not counted, and is hidden when
  * nothing can say it. Outside the list: the one link to the shelf.
  */
-export function RulesHelp({ lang, country, onShelf, onBack, after }: {
+export function RulesHelp({ lang, country, onShelf, onCoach, onBack, after }: {
   lang?: HelpLanguage;
   /** Works in Belgium ('be'): a note that the rules are the Netherlands', and the Belgian rows. */
   country?: 'nl' | 'be';
   /** "Alle regels": the rule cards of finished lessons. */
   onShelf: () => void;
+  /** "Voor je begeleider": the coach card, one tap away (Screens.tsx CoachHubCard). */
+  onCoach?: () => void;
   /** One more link below it (the region's Sociale kaart, src/components/SocialMap.tsx). */
   after?: React.ReactNode;
   /** Opened from the first lesson's result (not the tab): a back arrow. */
@@ -72,6 +75,7 @@ export function RulesHelp({ lang, country, onShelf, onBack, after }: {
         </span>
         <ChevronIcon size={24} />
       </button>
+      {onCoach && <CoachHubCard lang={lang} onOpen={onCoach} />}
       {after}
     </div>
   );

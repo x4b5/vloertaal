@@ -114,7 +114,9 @@ ${footer(page.path)}`,
   );
 }
 
-/** /werkregels: the work-rules track for who speaks Dutch already, every unit and its lessons. */
+/** /werkregels: the work-rules track for who speaks Dutch already, every unit and its lessons. Its
+ *  button opens the app at "Spreek je Nederlands?" (?taal=nl, src/lib/langGuess.ts phoneDutchFirst);
+ *  the Dutch dag-1 note points here (src/lib/briefjePage.ts briefjeNlPage). */
 export function rulesPage(): string {
   const all = [...rulesUnits, ...sectorRulesUnits];
   const lessons = all.reduce((n, u) => n + u.lessons.length, 0);
@@ -136,7 +138,7 @@ export function rulesPage(): string {
     { path: RULES_PATH, lang: 'nl', title, description, ogLocale: 'nl_NL', data },
     `<h1>Werkregels: hoe werken in Nederland gaat</h1>
 <p class="lead">Vloertaal Werkregels is voor wie al Nederlands spreekt en in Nederland werkt of werk zoekt. Je leert de regels van de wet en je contract, en de regels die nergens staan maar die iedereen kent. In korte lessen: een verhaal, de regel, en dan kies je zelf wat je doet. ${all.length} onderwerpen, ${lessons} lessen. Gratis, zonder account.</p>
-<a class="cta" href="/">Open Vloertaal en kies “Ik spreek al Nederlands” →</a>
+<a class="cta" href="/?taal=nl">Open Vloertaal Werkregels →</a>
 ${all
   .map(
     (u, i) => `<section aria-labelledby="u${i}"><h2 id="u${i}"><a href="${rulesTopicPath(u.id)}">${esc(u.title)}</a></h2>
@@ -145,7 +147,7 @@ ${all
   )
   .join('\n')}
 <section aria-labelledby="note"><h2 id="note">Goed om te weten</h2><p>${esc(RULES_DISCLAIMER.join(' '))}</p></section>
-<a class="cta" href="/">Open Vloertaal en kies “Ik spreek al Nederlands” →</a>
+<a class="cta" href="/?taal=nl">Open Vloertaal Werkregels →</a>
 ${footer(RULES_PATH)}`,
   );
 }

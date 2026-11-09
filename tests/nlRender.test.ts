@@ -122,9 +122,12 @@ describe('the language list', () => {
     expect(m.match(/<button/g)).toHaveLength(17);
     // Drawn flags, no flag emoji: the emoji font for flags alone was 709 KB on the first screen.
     expect(m).not.toMatch(/[\u{1F1E6}-\u{1F1FF}]/u);
-    expect(m.match(/<svg class="lang-flag"[^>]*aria-hidden="true"/g)).toHaveLength(6);
-    expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(17);
-    expect(m.match(/class="lang-flag"/g)).toHaveLength(6);
+    // Five flags: the work-rules card has a contract instead of the Dutch flag (it is no language;
+    // review, 9 November 2026).
+    expect(m.match(/<svg class="lang-flag"[^>]*aria-hidden="true"/g)).toHaveLength(5);
+    expect(m.match(/class="lang-mark" aria-hidden="true"/g)).toHaveLength(16);
+    expect(m.match(/class="lang-mark lang-mark-rules" aria-hidden="true"/g)).toHaveLength(1);
+    expect(m.match(/class="lang-flag"/g)).toHaveLength(5);
     // A tile of letters for ar, ti, fa, prs, so, and for es, pt, fr and de (spoken in many countries).
     expect(m.match(/class="lang-sample"/g)).toHaveLength(10);
   });

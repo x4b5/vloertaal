@@ -115,6 +115,11 @@ export const uiNl: Record<UiKey, UiText> = {
   routeLearn: 'Nederlands leren voor je werk, en hoe werk hier gaat',
   routeRules: 'Ik spreek al Nederlands: alleen de werkregels',
   routeLearnShort: 'Nederlands leren',
+  switchTitle: 'Naar Werkregels?', // nieuw, nalezen
+  switchDutch: 'Alles wordt Nederlands. Je hulptaal gaat uit.', // nieuw, nalezen
+  switchReview: 'Tot je terug wisselt, herhaal je regels, geen woorden.', // nieuw, nalezen
+  switchKept: 'Je voortgang blijft bewaard. Terug wisselen kan hier.', // nieuw, nalezen
+  switchGo: 'Ja, naar Werkregels', // nieuw, nalezen
   byTheme: 'Op thema',
   inOrder: 'Op volgorde',
   searchTopics: 'Zoek een onderwerp',
@@ -524,6 +529,7 @@ export const uiNl: Record<UiKey, UiText> = {
   colleagueCard: 'Voor je collega',
   colleagueCardHint: 'Laat dit zien aan een collega die Nederlands spreekt. Hier staat hoe die je kan helpen oefenen.',
   colleagueShare: 'Stuur naar je collega',
+  forCoach: 'Voor je begeleider', // nieuw, nalezen
   coachCardRights: 'Onderwerpen over je rechten bij naam tonen',
   speakFromMemory: 'Nu uit je hoofd: hoe was het ook alweer?',
   keptNofM: 'Woorden van 2 weken of langer geleden: je wist er nog {n} van de {m}.',

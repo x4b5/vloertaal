@@ -3,8 +3,8 @@ import { tapUntilChanged } from './helpers';
 
 test('the work-rules track (Werkregels), from the first start to its first question', async ({ page }) => {
   await page.goto('/');
-  // "Ik spreek al Nederlands": the last card of the language list.
-  await tapUntilChanged(page, page.locator('.onb-lang-list .lang-btn-nl'));
+  // The test phone is Dutch: "Spreek je Nederlands?" first, and Ja is the work-rules track.
+  await tapUntilChanged(page, page.locator('.nl-question .nl-q-yes'));
   for (let guard = 0; guard < 12; guard++) {
     // The first run in Dutch (sector, country), "Goed om te weten" once, then the home.
     if (await page.locator('.home3 button.bay-card').isVisible()) break;

@@ -1796,6 +1796,8 @@ svg.emoji-xl { width: 140px; height: 140px; }
   background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
 }
 .hub-card:hover { border-color: var(--ink-3); }
+/* Hulp: the pages behind it as one list (Screens.tsx WordsHub). */
+.hub-links { list-style: none; margin: 0; padding: 0; }
 .hub-icon { flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 8px; background: var(--red-bg); }
 .hub-tips .hub-icon { background: var(--tag-bg); }
 .hub-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
@@ -2180,6 +2182,11 @@ svg.emoji-xl { width: 140px; height: 140px; }
 .reset-wipe-text > span[lang='nl'] { opacity: 1; }
 .keep-hint-code { color: var(--ink-2); font-weight: 600; }
 .reset-actions { margin-top: 18px; }
+/* "Naar Werkregels?" (Settings, page 'switch'): what changes, one line each with its icon. */
+.switch-lines { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.switch-lines li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; align-items: start; font-size: 1.05rem; line-height: 1.4; }
+.switch-lines li > .icon { margin-top: 2px; color: var(--ink-2); }
+.switch-lines .switch-nl { display: block; margin-top: 2px; font-size: 0.9rem; color: var(--muted); }
 .reset-keep { min-height: 64px; }
 .set-remind-now { display: flex; align-items: center; gap: 8px; }
 
@@ -3762,6 +3769,9 @@ button.unit-tool:hover { border-color: var(--ink-3); }
 .lang-guess .max3-cards { margin-top: 22px; }
 /* The guess page: the back arrow on its own row, so it never lies over the logo (dark on the dark tile). */
 .lang-guess > .chrome-head { margin-bottom: 0; }
+/* "Spreek je Nederlands?" (Screens.tsx DutchQuestion): the English small under the Dutch question. */
+.nl-question .lang-guess-q { gap: 4px; }
+.nl-q-en { font-size: 1rem; font-weight: 400; color: var(--muted); }
 
 /* The password field shows what is typed and has no eye any more. */
 .pw-input { padding-inline-end: 16px; }
@@ -4775,6 +4785,9 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 /* Voor begeleiders en werkgevers (src/content/pro.ts): lines with a bold start, the one mail link,
    and the topic list inside its section. */
 .pro-lines { margin: 0 0 10px; padding-inline-start: 1.2em; display: flex; flex-direction: column; gap: 8px; line-height: 1.55; }
+/* "In drie stappen" (Coaches.tsx): the three steps, numbered, right under the pitch. */
+.coach-steps-list { margin: 0 0 6px; padding-inline-start: 1.4em; display: flex; flex-direction: column; gap: 10px; line-height: 1.55; }
+.coach-steps-list li::marker { font-weight: 700; }
 .pro-mail { color: inherit; font-weight: 600; text-underline-offset: 0.15em; white-space: nowrap; }
 .pro-section .coach-links { border-top: 0; padding-top: 4px; }
 /* Over: the button to that page, its Dutch name over the help language's. */

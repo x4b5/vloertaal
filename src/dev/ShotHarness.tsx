@@ -255,9 +255,10 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   }
   // Screens outside the lesson flow (phase-3 house-style review).
   // The language: /?shot=language is the list (no guess); &guess=pl asks "Polski?" first;
-  // &guess=pl&list=1 is the list opened from "Other language" (with Back).
+  // &guess=pl&list=1 is the list opened from "Other language" (with Back). &nl=1 asks "Spreek je
+  // Nederlands?" first (a phone set to Dutch); without it never, whatever the browser's language.
   if (shot === 'onboarding' || shot === 'language') {
-    return <Onboarding onDone={() => {}} guess={(q.get('guess') as LangCode | null) ?? null} startWithList={q.get('list') === '1'} />;
+    return <Onboarding onDone={() => {}} guess={(q.get('guess') as LangCode | null) ?? null} dutch={q.get('nl') === '1'} startWithList={q.get('list') === '1'} />;
   }
   // "Voor begeleiders" (from About): a link per topic.
   if (shot === 'coaches') return <Coaches onBack={() => {}} />;

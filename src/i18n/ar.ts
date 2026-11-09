@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     chooseSector: { m: 'أين تعمل؟', f: 'أين تعملين؟', x: 'مجال عملك' }, // x: nieuw, nalezen
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: { m: 'في أي بلد تعمل؟', f: 'في أي بلد تعملين؟', x: 'بلد العمل' }, // x: nieuw, nalezen
-    countryHint: { m: 'ستحصل على قواعد العمل في هذا البلد.', f: 'ستحصلين على قواعد العمل في هذا البلد.', x: 'اختيار بلد العمل يعطي قواعد العمل في هذا البلد.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: { m: 'ستحصل على كلمات ونصائح هذا البلد.', f: 'ستحصلين على كلمات ونصائح هذا البلد.', x: 'اختيار بلد العمل يعطي كلمات ونصائح هذا البلد.' }, // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: 'هولندا',
     countryBe: 'بلجيكا (فلاندرز)',
     tipsNote: 'هذه النصائح عن العمل في هولندا. معلومات عامة، وليست استشارة قانونية.',
@@ -221,6 +221,11 @@ const lang: HelpLanguageSource = {
     routeLearn: 'تعلّم الهولندية للعمل، وكيف يسير العمل هنا', // nieuw, nalezen
     routeRules: 'أتكلّم الهولندية: قواعد العمل فقط', // nieuw, nalezen
     routeLearnShort: 'تعلّم الهولندية', // nieuw, nalezen
+    switchTitle: 'الانتقال إلى Werkregels؟', // nieuw, nalezen
+    switchDutch: 'سيصبح كل شيء باللغة الهولندية. تتوقف لغة المساعدة.', // nieuw, nalezen
+    switchReview: 'حتى العودة، تكون المراجعة للقواعد وليس للكلمات.', // nieuw, nalezen
+    switchKept: 'يبقى تقدّمك محفوظاً. يمكن العودة من هنا.', // nieuw, nalezen
+    switchGo: 'نعم، إلى Werkregels', // nieuw, nalezen
     byTheme: 'حسب الأقسام',
     inOrder: 'بالترتيب',
     searchTopics: 'البحث عن موضوع', // nieuw, nalezen
@@ -460,6 +465,7 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'لزميل في العمل', // nieuw, nalezen
     colleagueCardHint: { m: 'اعرضْ هذا على زميل يتكلّم الهولندية. فيه كيف يمكنه أن يساعدكَ على التمرين.', f: 'اعرضي هذا على زميل يتكلّم الهولندية. فيه كيف يمكنه أن يساعدكِ على التمرين.', x: 'يمكن عرض هذا على زميل يتكلّم الهولندية. فيه كيف يمكنه المساعدة في التمرين.' }, // nieuw, nalezen
     colleagueShare: { m: 'أرسِلها إلى زميلك', f: 'أرسِليها إلى زميلك', x: 'إرسالها إلى زميل' }, // nieuw, nalezen
+    forCoach: 'لمن يرافقك في العمل', // nieuw, nalezen
     coachCardRights: 'إظهار أسماء المواضيع عن حقوقك', // nieuw, nalezen
     speakFromMemory: 'الآن من الذاكرة: كيف كانت بالهولندية؟', // nieuw, nalezen
     keptNofM: { m: 'كلمات من قبل أسبوعين أو أكثر: ما زلتَ تعرف {n} من {m}.', f: 'كلمات من قبل أسبوعين أو أكثر: ما زلتِ تعرفين {n} من {m}.', x: 'كلمات من قبل أسبوعين أو أكثر: ما زالت {n} من {m} معروفة.' }, // nieuw, nalezen

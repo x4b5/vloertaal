@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'در کجا کار می‌کنید؟',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'در کدام کشور کار می‌کنید؟',
-    countryHint: 'قوانین کار همان کشور را می‌بینید.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'کلمات و نکته‌های همان کشور را می‌بینید.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: 'هالند',
     countryBe: 'بلجیم (فلاندر)',
     tipsNote: 'این نکته‌ها در باره کار در هالند است. معلومات عمومی است، نه مشوره حقوقی.',
@@ -221,6 +221,11 @@ const lang: HelpLanguageSource = {
     routeLearn: 'آموختن هالندی برای کار، و اینکه کار در اینجا چگونه است', // nieuw, nalezen
     routeRules: 'هالندی را بلد هستم: فقط قوانین کار', // nieuw, nalezen
     routeLearnShort: 'آموختن هالندی', // nieuw, nalezen
+    switchTitle: 'رفتن به Werkregels؟', // nieuw, nalezen
+    switchDutch: 'همه چیز هالندی می‌شود. زبان کمکی شما خاموش می‌شود.', // nieuw, nalezen
+    switchReview: 'تا وقتی که برنگردید، قوانین را مرور می‌کنید، نه کلمات را.', // nieuw, nalezen
+    switchKept: 'پیشرفت شما ذخیره می‌ماند. از همین‌جا می‌توانید دوباره برگردید.', // nieuw, nalezen
+    switchGo: 'بلی، به Werkregels', // nieuw, nalezen
     byTheme: 'بر اساس بخش‌ها',
     inOrder: 'به ترتیب',
     searchTopics: 'جستجوی موضوع', // nieuw, nalezen
@@ -460,6 +465,7 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'برای همکار شما', // nieuw, nalezen
     colleagueCardHint: 'این را به همکاری که هالندی گپ می‌زند نشان دهید. در آن نوشته است که چگونه می‌تواند در تمرین به شما کمک کند.', // nieuw, nalezen
     colleagueShare: 'به همکار تان بفرستید', // nieuw, nalezen
+    forCoach: 'برای رهنمای شما', // nieuw, nalezen
     coachCardRights: 'موضوعات مربوط به حقوق شما با نام نشان داده شود', // nieuw, nalezen
     speakFromMemory: 'حالا از یاد: به هالندی چه بود؟', // nieuw, nalezen
     keptNofM: 'کلمه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را می‌دانستید.', // nieuw, nalezen

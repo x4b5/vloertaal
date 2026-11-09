@@ -42,6 +42,36 @@ export function askedHelpLang(search: string): LangCode | null {
   return asked ? (Object.values(CODES).find((c) => c === asked) ?? null) : null;
 }
 
+/**
+ * Does the phone put Dutch first, before any help language? Then the first run asks "Spreek je
+ * Nederlands?" before the help languages (src/components/Screens.tsx Onboarding): a learner who
+ * speaks Dutch no longer meets an English page first (review, 9 November 2026). English and other
+ * languages the app has no help for are passed over, as in guessHelpLang. A newcomer whose phone
+ * is set to Dutch answers "Nee" and goes on to the guess or the list.
+ */
+export function dutchFirst(languages: readonly string[] | undefined): boolean {
+  for (const tag of languages ?? []) {
+    const base = tag.toLowerCase().replace(/_/g, '-').split('-')[0];
+    if (base === 'nl') return true;
+    if (CODES[base]) return false;
+  }
+  return false;
+}
+
+/**
+ * The Dutch question for this phone: vloertaal.nl/?taal=nl asks it (the link on the Dutch page and
+ * the Dutch dag-1 note), another ?taal= never does, else the phone's own languages decide.
+ */
+export function phoneDutchFirst(): boolean {
+  if (typeof location !== 'undefined') {
+    const asked = new URLSearchParams(location.search).get('taal')?.toLowerCase();
+    if (asked === 'nl') return true;
+    if (askedHelpLang(location.search)) return false;
+  }
+  if (typeof navigator === 'undefined') return false;
+  return dutchFirst(navigator.languages?.length ? navigator.languages : [navigator.language].filter(Boolean));
+}
+
 /** The guess for this phone (none outside a browser): the language a page asked for, else the phone's. */
 export function phoneHelpLang(): LangCode | null {
   if (typeof location !== 'undefined') {

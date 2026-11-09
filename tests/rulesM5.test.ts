@@ -18,7 +18,7 @@ import { earnCertificates } from '../src/lib/certificate';
 import { onboardingStep, previousStep, tryLessonId, trialLessonAllowed } from '../src/lib/onboarding';
 import { emptyProgress, type Progress } from '../src/lib/progress';
 import { REMINDER_TITLE, REMINDER_TITLE_RULES, reminderIcs } from '../src/lib/reminder';
-import { currentBlock, routeNextLesson } from '../src/lib/route';
+import { currentBlock, routeNextLesson, routeOrder } from '../src/lib/route';
 import { settingsRows, type SettingsPage } from '../src/lib/settingsMenu';
 import { dailyCard } from '../src/lib/spaced';
 import { trackOf } from '../src/lib/track';
@@ -283,6 +283,18 @@ describe('the first run in Dutch: language → (no gender) → code → sector �
     expect(onboardingStep({ ...p, sector: 'none' }, 'full')).toBe('country');
     expect(onboardingStep({ ...p, sector: 'none', country: 'be' }, 'full')).toBe('done');
     expect(previousStep('gate', { ...p, sector: 'none' })).toBe('language');
+  });
+
+  it('starts who said where they work at the first day, not at "Werk zoeken" (review, 9 November 2026)', () => {
+    const fresh = (sector: Progress['sector']) => currentBlock({ ...emptyProgress, onboarded: true, helpLang: 'nl', sector, completed: {} })?.id;
+    expect(fresh('construction')).toBe('r.start');
+    expect(fresh('care')).toBe('r.start');
+    // "Weet ik nog niet": maybe looking for work, so the course as it is.
+    expect(fresh('none')).toBe('r.zoeken');
+    // "Werk zoeken" stays in the path, right after the unwritten rules of working together.
+    const order = routeOrder('construction', 'regels').map((u) => u.id);
+    expect(order.indexOf('r.zoeken')).toBe(order.indexOf('r.samen') + 1);
+    expect(order.filter((id) => id === 'r.zoeken')).toHaveLength(1);
   });
 
   it('tries the first lesson of the first unit (Werk zoeken 1)', () => {

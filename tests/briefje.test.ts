@@ -4,7 +4,8 @@ import { proSections } from '../src/content/pro';
 import { helpLanguageSources } from '../src/i18n/all';
 import { uiNl } from '../src/i18n/nl';
 import { allForms, uiEn } from '../src/i18n/types';
-import { briefjeFiles, briefjeIndexPage, briefjePage, briefjePath, qrAddress, shownAddress } from '../src/lib/briefjePage';
+import { BRIEFJE_NL, briefjeFiles, briefjeIndexPage, briefjeNlPage, briefjePage, briefjePath, qrAddress, shownAddress } from '../src/lib/briefjePage';
+import { rulesPage } from '../src/lib/sectorPages';
 import { coachPage } from '../src/lib/coachPage';
 import { LANG_PAGES } from '../src/lib/langPages';
 import { packText } from '../src/lib/pageTexts';
@@ -30,8 +31,8 @@ function svgModules(html: string): boolean[][] {
 describe('the note, one page per language', () => {
   it('there is a page for every help language and English, and an index', () => {
     const files = briefjeFiles().map((f) => f.fileName);
-    expect(files).toEqual(['briefje/index.html', ...LANG_PAGES.map((p) => `briefje/${p.code}/index.html`)]);
-    expect(files).toHaveLength(16);
+    expect(files).toEqual(['briefje/index.html', ...LANG_PAGES.map((p) => `briefje/${p.code}/index.html`), 'briefje/nl/index.html']);
+    expect(files).toHaveLength(17);
     expect(readFileSync('vite.config.ts', 'utf8')).toContain('for (const f of briefjeFiles()) this.emitFile({ type: \'asset\', ...f });');
   });
 
@@ -59,6 +60,19 @@ describe('the note, one page per language', () => {
       expect(html).toContain(`aria-label="QR-code: vloertaal.nl/${page.code}"`);
     });
   }
+
+  it('nl: a note in plain Dutch for who speaks Dutch already, to vloertaal.nl/werkregels (review, 9 November 2026)', () => {
+    const html = briefjeNlPage();
+    const text = unescape(html);
+    expect(html).toContain('<html lang="nl" dir="ltr">');
+    for (const line of Object.values(BRIEFJE_NL)) expect(text).toContain(line);
+    expect(html).toContain('<p class="adres"><a href="/werkregels/">vloertaal.nl/werkregels</a></p>');
+    expect(svgModules(html)).toEqual(qrCode('https://vloertaal.nl/werkregels/', 'Q').modules);
+    // The index lists it, and points to it for who speaks Dutch already.
+    expect(briefjeIndexPage()).toContain('href="/briefje/nl/"');
+    // The page it points to opens the app at "Spreek je Nederlands?".
+    expect(rulesPage()).toContain('<a class="cta" href="/?taal=nl">');
+  });
 
   it('the QR codes read back to their address (tests/qr.test.ts reads every module; here: black on white, big enough)', () => {
     const html = briefjePage('pl');

@@ -138,7 +138,8 @@ describe('a page per sector and for Werkregels (docs/seo-plan.md, step 4)', () =
 
       it('has one h1, a way into the app, and links to the other pages', () => {
         expect(html.match(/<h1>/g)).toHaveLength(1);
-        expect(html).toMatch(/class="cta" href="\/(\?unit=[a-z]+)?"/);
+        // Werkregels opens the app at "Spreek je Nederlands?" (?taal=nl, 9 November 2026).
+        expect(html).toMatch(/class="cta" href="\/(\?unit=[a-z]+|\?taal=nl)?"/);
         for (const other of SECTOR_PAGES) expect(html).toContain(`href="${other.path}"`);
         expect(html).toContain('href="/pl/"');
       });

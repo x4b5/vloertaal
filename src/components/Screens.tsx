@@ -54,7 +54,8 @@ import { useVoices } from './useVoices';
 import { voiceCreditLine, voiceCredits } from '../lib/voiceCredits';
 import { setTesterSwitch, testerSwitch } from '../lib/report';
 import { ChoiceCards } from './Choice';
-import { phoneHelpLang } from '../lib/langGuess';
+import { phoneDutchFirst, phoneHelpLang } from '../lib/langGuess';
+import { CoachHubCard } from './CoachHubCard';
 import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { KlankHubIcon } from './KlankScreens';
@@ -148,7 +149,8 @@ export const NL_KNOWN = 'Ik spreek al Nederlands';
 export function NlCard({ onPick }: { onPick: () => void }) {
   return (
     <button type="button" className="lang-btn lang-btn-nl" onClick={onPick} lang="nl">
-      <LangMark code="nl" />
+      {/* The contract of the work rules, not the Dutch flag: this is no language (review, 9 November 2026). */}
+      <span className="lang-mark lang-mark-rules" aria-hidden><WordPicture id="w.contract" emoji="📘" size={30} /></span>
       <span className="lang-names">
         <span className="lang-nl-tag">Werkregels</span>
         <span className="lang-native">{NL_KNOWN}</span>
@@ -156,6 +158,51 @@ export function NlCard({ onPick }: { onPick: () => void }) {
         <span className="lang-nl-more"><bdi dir="ltr">{NL_MORE}</bdi></span>
       </span>
     </button>
+  );
+}
+
+/**
+ * "Spreek je Nederlands?": the first page on a phone that puts Dutch first (src/lib/langGuess.ts
+ * dutchFirst), before the help languages. A learner who speaks Dutch reads Dutch from the first
+ * screen on, and the choice says what it gives; until then that learner met an English page and
+ * had to find "Ik spreek al Nederlands" under the list (review, 9 November 2026). The question is
+ * Dutch with the English small under it, and "Nee" says it in English too: a newcomer may have a
+ * phone set to Dutch. Ja is the work-rules track, Nee goes on to the guess or the list.
+ */
+export function DutchQuestion({ onYes, onNo }: { onYes: () => void; onNo: () => void }) {
+  // Nothing is chosen yet: the English stays next to every line.
+  useEffect(() => { applyEnglish(null); }, []);
+  const card = (id: string, main: string, sub: string, subLang: 'nl' | 'en', icon: React.ReactNode, onPick: () => void, next = false) => (
+    <div className="max3-card-wrap">
+      {/* The first page: no tap guard (useFreshCards), there is no page before it to tap on. */}
+      <button type="button" className={`max3-card nl-q-${id}`} onClick={onPick}>
+        <span className="max3-pic" aria-hidden>{icon}</span>
+        <span className="max3-names">
+          <span className="bi max3-help"><span className="bi-en" lang="nl">{main}</span></span>
+          <span className="max3-nl" lang={subLang}>{sub}</span>
+        </span>
+        {next && <ChevronIcon size={22} className="max3-chev" />}
+      </button>
+    </div>
+  );
+  return (
+    <div className="screen onboarding max3-page lang-guess nl-question" lang="nl">
+      <div className="hero">
+        <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
+        <p className="tagline onb-tagline">
+          <span className="bi bi-swap"><span className="bi-en" lang="nl">Nederlands voor op de werkvloer</span><span className="bi-help" lang="en">Dutch for the work floor</span></span>
+        </p>
+      </div>
+      <h2 className="lang-guess-q onboarding-title">
+        <span className="lang-guess-name" lang="nl">Spreek je Nederlands?</span>
+        <span className="nl-q-en" lang="en">Do you speak Dutch?</span>
+      </h2>
+      <div className="onb-say"><SpeakButton text="Spreek je Nederlands?" /></div>
+      <div className="max3-cards" role="group" aria-label="Spreek je Nederlands?">
+        {card('yes', 'Ja', 'Dan leer je hoe werken hier gaat: je loon, je contract en je rechten.', 'nl', <CheckIcon size={30} />, onYes)}
+        {card('no', 'Nee', 'No: choose your language', 'en', <GlobeIcon size={30} />, onNo, true)}
+      </div>
+    </div>
   );
 }
 
@@ -182,19 +229,37 @@ function LangMark({ code }: { code: UiCode | null }) {
  * name in its own script (the list is the one place with more than three choices), one under the
  * other in a box that scrolls inside (ScrollBox). Under the box, at the bottom of the screen,
  * "Ik spreek al Nederlands": the work-rules track (the owner's choice, 2 November 2026; before,
- * a page "Wat wil je leren?" came after the language). The gender question, the sector and the
- * country follow on their own pages (App.tsx).
+ * a page "Wat wil je leren?" came after the language). On a phone that puts Dutch first, "Spreek je
+ * Nederlands?" comes before all of it (DutchQuestion, 9 November 2026). The gender question, the
+ * sector and the country follow on their own pages (App.tsx).
  */
-export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = false }: {
+export function Onboarding({ onDone, guess = phoneHelpLang(), dutch = phoneDutchFirst(), startWithList = false }: {
   onDone: (code: UiCode | null) => void;
   /** The guessed help language (from navigator.languages); null = no guess, the list right away. */
   guess?: LangCode | null;
+  /** The phone puts Dutch first (src/lib/langGuess.ts dutchFirst): "Spreek je Nederlands?" comes first. */
+  dutch?: boolean;
   /** Back from the next page: open on the list (the guess was already seen). */
   startWithList?: boolean;
 }) {
   const [list, setList] = useState(startWithList || !guess);
+  /** "Spreek je Nederlands?" is a page of this first run (only with the work-rules track on). */
+  const nlOffered = dutch && rulesTrackOn();
+  /** It is showing now: first, unless the learner came back from the next page. */
+  const [askNl, setAskNl] = useState(nlOffered && !startWithList);
   /** "Is your language missing?" open (its own page, with its own history entry). */
   const [missing, setMissing] = useState(false);
+  // "Nee" on the Dutch question has its own history entry: the phone's Back returns to the question.
+  // Before the list's entry (effects run in this order), so the two nest.
+  useEffect(() => {
+    if (!nlOffered || askNl) return;
+    if (!(history.state as { nlNo?: number } | null)?.nlNo) pushSubStep({ nlNo: 1 });
+    const onPop = () => { if (!(history.state as { nlNo?: number } | null)?.nlNo) setAskNl(true); };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [nlOffered, askNl]);
+  /** Back to the Dutch question from the page after it (the guess, or the list without a guess). */
+  const backToNl = () => ((history.state as { nlNo?: number } | null)?.nlNo ? history.back() : setAskNl(true));
   useEffect(() => {
     if (!missing) return;
     if (!(history.state as { missing?: number } | null)?.missing) pushSubStep({ missing: 1 });
@@ -229,10 +294,13 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   const gMeta = langMeta(guess);
   const g = gMeta ? getHelpLanguage(gMeta.code) ?? metaLanguage(gMeta) : undefined;
   if (missing) return <MissingLanguage onBack={closeMissing} />;
+  if (askNl) return <DutchQuestion onYes={() => onDone('nl')} onNo={() => setAskNl(false)} />;
   if (list || !g) {
     return (
       <div className="screen onboarding max3-page onb-lang-list">
-        {g && <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />}
+        {g
+          ? <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />
+          : nlOffered && <ChromeHead onBack={backToNl} />}
         <div className="hero">
           <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
           <p className="tagline" lang="en">{ui('appTagline').en}</p>
@@ -255,6 +323,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   const q = g.dir === 'rtl' ? '\u061f' : '?';
   return (
     <div className="screen onboarding max3-page lang-guess">
+      {nlOffered && <ChromeHead onBack={backToNl} />}
       <div className="hero">
         <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
         {/* What the app is, in the guessed language (large), the English small under it. */}
@@ -389,13 +458,15 @@ export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab:
 
 /** "Hulp" tab: opens straight onto the emergency phrases; the workplace tips are below them.
  *  `after`: one more link below them (the region's Sociale kaart, src/components/SocialMap.tsx). */
-export function WordsHub({ lang, onTips, onKlanken, onColleague, after }: {
+export function WordsHub({ lang, onTips, onKlanken, onColleague, onCoach, after }: {
   lang?: HelpLanguage;
   onTips: () => void;
   /** "Hoe zeg je het?": every sound card (src/components/KlankScreens.tsx). */
   onKlanken?: () => void;
   /** "Voor je collega" (src/components/ColleagueCard.tsx). */
   onColleague?: () => void;
+  /** "Voor je begeleider": the coach card ("Laat zien hoe het gaat"), one tap from Hulp. */
+  onCoach?: () => void;
   after?: React.ReactNode;
 }) {
   return (
@@ -408,31 +479,44 @@ export function WordsHub({ lang, onTips, onKlanken, onColleague, after }: {
       </div>
       <p className="muted hub-hint"><Bi text={ui('phrasebookHint', lang)} /><HelpSay text={ui('phrasebookHint', lang).help} lang={lang} /></p>
       <PhraseList lang={lang} />
-      <button type="button" className="hub-card hub-tips" onClick={onTips}>
-        <span className="hub-icon" aria-hidden><WordPicture id="w.afspraak" emoji="💡" size={34} /></span>
-        <span className="hub-text">
-          <NlPair nlFirst nl="Zo werkt het hier" nlClass="hub-nl" text={ui('cultureTips', lang)} />
-        </span>
-        <ChevronIcon size={24} />
-      </button>
-      {onKlanken && (
-        <button type="button" className="hub-card hub-klank" onClick={onKlanken}>
-          <span className="hub-icon" aria-hidden><KlankHubIcon /></span>
-          <span className="hub-text">
-            <NlPair nlFirst nl="Hoe zeg je het?" nlClass="hub-nl" text={ui('klankTitle', lang)} />
-          </span>
-          <ChevronIcon size={24} />
-        </button>
-      )}
-      {onColleague && (
-        <button type="button" className="hub-card hub-colleague" onClick={onColleague}>
-          <span className="hub-icon" aria-hidden><WordPicture id="w.collega" emoji="🧑‍🤝‍🧑" size={34} /></span>
-          <span className="hub-text">
-            <NlPair nlFirst nl="Voor je collega" nlClass="hub-nl" text={ui('colleagueCard', lang)} />
-          </span>
-          <ChevronIcon size={24} />
-        </button>
-      )}
+      {/* The pages behind Hulp, one kind of row each: a list (the named exception to "at most three",
+          since "Voor je begeleider" made it four; review, 9 November 2026). */}
+      <ul className="hub-links">
+        <li>
+          <button type="button" className="hub-card hub-tips" onClick={onTips}>
+            <span className="hub-icon" aria-hidden><WordPicture id="w.afspraak" emoji="💡" size={34} /></span>
+            <span className="hub-text">
+              <NlPair nlFirst nl="Zo werkt het hier" nlClass="hub-nl" text={ui('cultureTips', lang)} />
+            </span>
+            <ChevronIcon size={24} />
+          </button>
+        </li>
+        {onKlanken && (
+          <li>
+            <button type="button" className="hub-card hub-klank" onClick={onKlanken}>
+              <span className="hub-icon" aria-hidden><KlankHubIcon /></span>
+              <span className="hub-text">
+                <NlPair nlFirst nl="Hoe zeg je het?" nlClass="hub-nl" text={ui('klankTitle', lang)} />
+              </span>
+              <ChevronIcon size={24} />
+            </button>
+          </li>
+        )}
+        {onColleague && (
+          <li>
+            <button type="button" className="hub-card hub-colleague" onClick={onColleague}>
+              <span className="hub-icon" aria-hidden><WordPicture id="w.collega" emoji="🧑‍🤝‍🧑" size={34} /></span>
+              <span className="hub-text">
+                <NlPair nlFirst nl="Voor je collega" nlClass="hub-nl" text={ui('colleagueCard', lang)} />
+              </span>
+              <ChevronIcon size={24} />
+            </button>
+          </li>
+        )}
+        {/* The coach card one tap away (review, 9 November 2026: three taps deep in Settings, every
+            week, for every learner). The same card as Settings › Taal en ik › "Laat zien hoe het gaat". */}
+        {onCoach && <li><CoachHubCard lang={lang} onOpen={onCoach} /></li>}
+      </ul>
       <WorkContacts lang={lang} />
       {after}
     </div>

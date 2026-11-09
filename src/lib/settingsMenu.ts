@@ -7,7 +7,10 @@ export type SettingsList = 'me' | 'lessons' | 'phone';
 
 export type SettingsPage =
   | SettingsList
-  | 'route' | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'sector-shop' | 'region' | 'country' | 'english' | 'certificates'
+  | 'route'
+  /** "Naar Werkregels?": what changes, before the switch from the language course (review, 9 November 2026). */
+  | 'switch'
+  | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'sector-shop' | 'region' | 'country' | 'english' | 'certificates'
   | 'sound' | 'voice' | 'tempo' | 'speaking' | 'writing' | 'text' | 'theme'
   /** "Rustig scherm" (src/lib/calm.ts), from Lessen, under Weergave. */
   | 'calm'
@@ -31,6 +34,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   lessons: null,
   phone: null,
   route: 'me',
+  switch: 'route',
   language: 'me',
   gender: 'me',
   sector: 'me',

@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     sector: "Shaqadaada", // nieuw, nalezen
     chooseSector: "Xaggee ka shaqaysaa?", // nieuw, nalezen
     countryTitle: "Dalkee ayaad ka shaqaysaa?", // nieuw, nalezen
-    countryHint: "Waxaad helaysaa xeerarka shaqada ee dalkaas.", // nieuw, nalezen
+    countryHint: 'Waxaad helaysaa erayada iyo talooyinka dalkaas.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: "Holland", // nieuw, nalezen
     countryBe: "Beljiyam (Flanders)", // nieuw, nalezen
     tipsNote: "Talooyinkan waxay ku saabsan yihiin shaqada Holland. Macluumaad guud, maaha talo sharci.", // nieuw, nalezen
@@ -221,6 +221,11 @@ const lang: HelpLanguageSource = {
     routeLearn: "Baro Af-Holandiiska shaqada – iyo sida shaqadu halkan u socoto", // nieuw, nalezen
     routeRules: "Horey ayaan ugu hadlaa Af-Holandiis: xeerarka shaqada oo keliya", // nieuw, nalezen
     routeLearnShort: "Baro Af-Holandiis", // nieuw, nalezen
+    switchTitle: 'U gudub Werkregels?', // nieuw, nalezen
+    switchDutch: 'Wax walba waxay noqonayaan Af-Holandiis. Luqadda caawintu way baxaysaa.', // nieuw, nalezen
+    switchReview: 'Ilaa aad dib ugu noqoto, waxaad dib u eegaysaa xeerarka, ma aha erayada.', // nieuw, nalezen
+    switchKept: 'Horumarkaagu wuu kaydsanaanayaa. Halkan ayaad dib uga noqon kartaa.', // nieuw, nalezen
+    switchGo: 'Haa, u gudub Werkregels', // nieuw, nalezen
     byTheme: "Qaybo ahaan", // nieuw, nalezen
     inOrder: "Siday isugu xigaan", // nieuw, nalezen
     searchTopics: "Raadi mawduuc", // nieuw, nalezen
@@ -461,6 +466,7 @@ const lang: HelpLanguageSource = {
     colleagueCard: "Saaxiibkaaga shaqada", // nieuw, nalezen
     colleagueCardHint: "Tan tus saaxiibka shaqada ee ku hadla Af-Holandiis. Waxay sheegaysaa sida uu kaaga caawin karo tababarka.", // nieuw, nalezen
     colleagueShare: "U dir saaxiibkaaga shaqada", // nieuw, nalezen
+    forCoach: 'Loogu talagalay hagahaaga', // nieuw, nalezen
     coachCardRights: "Magacyada mawduucyada xuquuqdaada ku saabsan tus", // nieuw, nalezen
     speakFromMemory: "Hadda xusuustaada ka dheh: maxay ahayd Af-Holandiis?", // nieuw, nalezen
     keptNofM: "Erayada 2 toddobaad ama ka badan ka hor: weli waxaad taqaanay {n} ka mid ah {m}.", // nieuw, nalezen

@@ -16,7 +16,7 @@ import { groupByTheme } from '../content/themes';
 import { ThemeHeadRow } from './Themes';
 import { COACH_FACTS } from '../content/facts';
 import { CONTACT_EMAIL } from '../content/about';
-import { COACH_PITCH, COACH_SHARE, COACH_WHY, PRO_LEAD, PRO_TITLE, proLayout, type ProSection } from '../content/pro';
+import { COACH_PITCH, COACH_SHARE, COACH_STEPS, COACH_STEPS_TITLE, COACH_WHY, PRO_TITLE, proLayout, type ProSection } from '../content/pro';
 import { KUN_REGELS, KUN_TAAL, kunOnderwerpenNu, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 
 /**
@@ -79,9 +79,15 @@ export function Coaches({ onBack, lang }: { onBack: () => void; /** The learner'
         <h1 tabIndex={-1}>{PRO_TITLE}</h1>
       </div>
       <p><strong>{COACH_PITCH}</strong> {COACH_WHY}</p>
-      <ShareWithColleague />
+      {/* How to start, first (review, 9 November 2026); the owner's request is in "Meedoen of meedenken?". */}
+      <section className="about-section pro-section coach-steps" aria-labelledby="pro-steps">
+        <h2 id="pro-steps"><span>{COACH_STEPS_TITLE}</span></h2>
+        <ol className="coach-steps-list">
+          {COACH_STEPS.map((st) => <li key={st.lead}><strong>{st.lead}</strong> {st.text}</li>)}
+        </ol>
+      </section>
       <ShowCandidate />
-      <p>{PRO_LEAD}</p>
+      <ShareWithColleague />
       {proLayout().map((block) => {
         const section = (s: ProSection) => <Section key={s.id} s={s}>{s.extra === 'topics' ? topics : s.extra === 'facts' ? <Facts /> : s.extra === 'kunjenu' ? <KunTabel /> : null}</Section>;
         if (block.kind === 'open') return section(block.section);
@@ -112,6 +118,7 @@ function Section({ s, children }: { s: ProSection; children?: ReactNode }) {
         {!facts && <span className="about-emoji" aria-hidden><WordPicture id="" emoji={s.emoji} size={30} /></span>}
         <span>{s.title}</span>
       </h2>
+      {s.lead && <p>{s.lead}</p>}
       {s.body.map((p) => <p key={p}>{withMail(p)}</p>)}
       {s.lines && (
         <ul className="pro-lines">

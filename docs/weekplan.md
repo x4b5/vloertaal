@@ -20,8 +20,8 @@ werken beter dan af en toe lang.
 
 ## De begeleiderskaart
 
-De leerling opent **Instellingen › Taal en ik › Laat zien hoe het gaat**. De telefoon maakt dan
-zelf een kaart, als plaatje, in het Nederlands:
+De leerling tikt op **Hulp › Voor je begeleider** (of **Instellingen › Taal en ik › Laat zien hoe
+het gaat**). De telefoon maakt dan zelf een kaart, als plaatje, in het Nederlands:
 
 - de naam die de leerling zelf invult (mag leeg);
 - het spoor (Taal of Werkregels);
@@ -52,10 +52,14 @@ links staan op de pagina voor begeleiders: in de app via **Over → Voor begelei
 en op [vloertaal.nl/voor-begeleiders](https://vloertaal.nl/voor-begeleiders), bij "Zo zet je het
 in, ook met een groep". Een link heeft deze vorm: `vloertaal.nl/?unit=safety` (Veiligheid),
 `vloertaal.nl/?unit=pay` (Loon), voor Werkregels `vloertaal.nl/?unit=r.loon` (Loon in Werkregels).
+Een link werkt voor iedereen: wie Werkregels volgt en de link van Loon krijgt, komt bij "Loon en
+loonstrook" in Werkregels, en andersom (`src/content/trackTwins.ts`).
 
 ## Werkregels
 
-Voor wie al Nederlands spreekt (kies bij de start "Ik spreek al Nederlands"): hetzelfde ritme,
+Voor wie al Nederlands spreekt (een telefoon op Nederlands vraagt "Spreek je Nederlands?"; anders
+kies je onder de talen "Ik spreek al Nederlands"). Er is een briefje in het Nederlands:
+[vloertaal.nl/briefje/nl](https://vloertaal.nl/briefje/nl/). Hetzelfde ritme,
 zonder toets. De begeleiderskaart werkt ook daar, met de onderwerpen en lessen van Werkregels.
 
 ## Na vier weken

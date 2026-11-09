@@ -43,6 +43,7 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
+import { trackTwin } from './content/trackTwins';
 import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, knownLessons, loadProgress, saveProgress, practisedAt, settleStreak, stoppedToTell, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dueIds, gradedStepIds, seedCards, strongerCount, keptCount, addLessonSentences, dailyIds, reviewResults, seedSentenceCards, wordResultCount } from './lib/spaced';
 import { gloss } from './i18n';
@@ -132,7 +133,8 @@ type View =
   /** Right after "Ja, gelukt": Bram with how many sentences were said at work (n), and the sentence (nl). */
   | { name: 'gelukt-done'; n: number; nl: string }
   /** "Laat zien hoe het gaat": the coach card (src/components/Certificate.tsx CoachCardScreen), from Settings › Taal en ik. */
-  | { name: 'kaart' }
+  /** fromHelp: opened from "Voor je begeleider" on the Hulp tab (that tab stays lit). */
+  | { name: 'kaart'; fromHelp?: boolean }
   /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): the 5 questions of a topic, and the end. */
   | { name: 'check'; unit: string; seed: number }
   | { name: 'check-result'; unit: string; right: number; total: number }
@@ -649,10 +651,14 @@ export default function App() {
     // on its Belgian twin, and the other way round (src/content/courses.ts rulesTwinHere).
     const twin = rulesTwinHere(focusUnit);
     if (twin !== focusUnit) { setFocusUnit(twin); return; }
+    // A link to the other track's topic opens the same topic in the learner's own track ("Loon"
+    // and "Loon en loonstrook", src/content/trackTwins.ts): a coach need not know who follows which.
+    const own = trackTwin(focusUnit, trackOf(progress));
+    if (own && own !== focusUnit) { setFocusUnit(own); return; }
     linkHandled.current = true;
     const unit = findUnit(focusUnit);
-    // A topic this app or this track does not have (a link to the other track's topic): the home
-    // stays on the learner's own block.
+    // A topic this app or this track does not have (the other track's topic without a twin): the
+    // home stays on the learner's own block.
     if (!unit || trackOfId(unit.id) !== trackOf(progress)) {
       setFocusUnit(null);
       forgetLinkedUnit();
@@ -720,8 +726,8 @@ export default function App() {
   const hulpTab = () => (
     <>
       {track === 'regels'
-        ? <RulesHelp lang={lang} country={progress.country} onShelf={() => go({ name: 'tips' })} after={mapLink} />
-        : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} onKlanken={() => go({ name: 'klanken' })} onColleague={() => go({ name: 'colleague' })} after={mapLink} />}
+        ? <RulesHelp lang={lang} country={progress.country} onShelf={() => go({ name: 'tips' })} onCoach={() => go({ name: 'kaart', fromHelp: true })} after={mapLink} />
+        : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} onKlanken={() => go({ name: 'klanken' })} onColleague={() => go({ name: 'colleague' })} onCoach={() => go({ name: 'kaart', fromHelp: true })} after={mapLink} />}
       <BottomNav current="words" onTab={tab} lang={lang} />
     </>
   );
@@ -1188,7 +1194,7 @@ export default function App() {
       return (
         <>
           <CoachCardScreen progress={progress} lang={lang} onBack={back} />
-          <BottomNav current="me" onTab={tab} lang={lang} />
+          <BottomNav current={view.fromHelp ? 'words' : 'me'} onTab={tab} lang={lang} />
         </>
       );
     case 'toets-page':

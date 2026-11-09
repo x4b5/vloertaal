@@ -77,17 +77,17 @@
   },
   {
    "id": "countryHint",
-   "text": "اختيار بلد العمل يعطي قواعد العمل في هذا البلد.",
+   "text": "اختيار بلد العمل يعطي كلمات ونصائح هذا البلد.",
    "page": "land"
   },
   {
    "id": "countryHint.f",
-   "text": "ستحصلين على قواعد العمل في هذا البلد.",
+   "text": "ستحصلين على كلمات ونصائح هذا البلد.",
    "page": "land"
   },
   {
    "id": "countryHint.m",
-   "text": "ستحصل على قواعد العمل في هذا البلد.",
+   "text": "ستحصل على كلمات ونصائح هذا البلد.",
    "page": "land"
   }
  ],
@@ -174,17 +174,17 @@
   },
   {
    "id": "countryHint",
-   "text": "ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም።",
+   "text": "ቃላትን ምኽርታትን ናይታ ሃገር ክትረኽቡ ኢኹም።",
    "page": "land"
   },
   {
    "id": "countryHint.f",
-   "text": "ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ።",
+   "text": "ቃላትን ምኽርታትን ናይታ ሃገር ክትረኽቢ ኢኺ።",
    "page": "land"
   },
   {
    "id": "countryHint.m",
-   "text": "ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ።",
+   "text": "ቃላትን ምኽርታትን ናይታ ሃገር ክትረክብ ኢኻ።",
    "page": "land"
   }
  ],
@@ -246,7 +246,7 @@
   },
   {
    "id": "countryHint",
-   "text": "قوانین کار همان کشور را می‌بینید.",
+   "text": "کلمات و نکته‌های همان کشور را می‌بینید.",
    "page": "land"
   }
  ],
@@ -308,7 +308,7 @@
   },
   {
    "id": "countryHint",
-   "text": "قوانین کار همان کشور را می‌بینید.",
+   "text": "کلمات و نکته‌های همان کشور را می‌بینید.",
    "page": "land"
   }
  ],
@@ -370,7 +370,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Waxaad helaysaa xeerarka shaqada ee dalkaas.",
+   "text": "Waxaad helaysaa erayada iyo talooyinka dalkaas.",
    "page": "land"
   }
  ],
@@ -432,7 +432,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Ти отримаєш правила роботи цієї країни.",
+   "text": "Ти отримаєш слова й поради цієї країни.",
    "page": "land"
   }
  ],
@@ -494,7 +494,7 @@
   },
   {
    "id": "countryHint",
-   "text": "O ülkenin iş kurallarını görürsün.",
+   "text": "O ülkenin kelimelerini ve ipuçlarını görürsün.",
    "page": "land"
   }
  ],
@@ -556,7 +556,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Dostaniesz zasady pracy tego kraju.",
+   "text": "Dostaniesz słowa i wskazówki tego kraju.",
    "page": "land"
   }
  ],
@@ -618,7 +618,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Primești regulile de muncă din acea țară.",
+   "text": "Primești cuvintele și sfaturile din acea țară.",
    "page": "land"
   }
  ],
@@ -680,7 +680,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Ще получиш правилата за работа в нея.",
+   "text": "Ще получиш думите и съветите за нея.",
    "page": "land"
   }
  ],
@@ -742,7 +742,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Así recibes las reglas de trabajo de ese país.",
+   "text": "Así recibes las palabras y los consejos de ese país.",
    "page": "land"
   }
  ],
@@ -804,7 +804,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Recebes as regras de trabalho desse país.",
+   "text": "Recebes as palavras e as dicas desse país.",
    "page": "land"
   }
  ],
@@ -866,7 +866,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Tu reçois alors les règles du travail de ce pays.",
+   "text": "Tu reçois alors les mots et les conseils de ce pays.",
    "page": "land"
   }
  ],
@@ -928,7 +928,7 @@
   },
   {
    "id": "countryHint",
-   "text": "Dann bekommst du die Arbeitsregeln dieses Landes.",
+   "text": "Dann bekommst du die Wörter und Tipps dieses Landes.",
    "page": "land"
   }
  ]
