@@ -3,7 +3,7 @@
  * are named "piper:<key>" (a historical prefix); "device" is the phone's own voice.
  */
 import type { Gender } from '../i18n/types';
-import { hasRecordedVoice } from './audio';
+import { hasRecordedVoice, setVoiceCountry } from './audio';
 
 export type VoiceRef = string | null;
 
@@ -48,6 +48,7 @@ let castCountry: 'nl' | 'be' = 'nl';
 /** The country the cast speaks for (set from Progress.country by the app). */
 export function setCastCountry(country?: string | null): void {
   castCountry = country === 'be' ? 'be' : 'nl';
+  setVoiceCountry(castCountry);
 }
 
 export function voiceFor(who: string): VoiceRef {
