@@ -19,7 +19,7 @@ import { CertIcon } from './CertBadge';
 import { CheckIcon, ChevronIcon, PencilIcon } from './Icons';
 import { ChromeBack } from './ChromeBack';
 import { LogoMark } from './Logo';
-import { PocketIcon } from './Offline';
+import { ColleagueIcon, PocketIcon } from './Offline';
 import { groupByTheme } from '../content/themes';
 import { useFocusWhenLost } from './useFocusLost';
 import { ThemeHeadRow } from './Themes';
@@ -358,8 +358,11 @@ function KunSkill({ z, lang }: { z: KunZin; lang?: HelpLanguage }) {
  * "Certificaat behaald": shown once, after the result of a unit's last lesson. The milestone
  * shell (Bram, one line, the footer button), with the certificate preview and Bekijk / Later.
  */
-export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector, region, completed }: {
+export function CertEarned({ unit, day, lang, onView, onLater, onPocket, onColleague, sector, region, completed }: {
   unit: Unit;
+  /** With the first certificate (src/lib/certificate.ts colleagueAtCertificate): "Voor je collega"
+   *  in place of the pocket card, so the screen keeps three things to tap. */
+  onColleague?: () => void;
   completed?: Record<string, unknown>;
   sector?: SectorChoice;
   region?: string;
@@ -386,7 +389,7 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector,
           <span lang="nl">{unit.titleNl}</span>
           <Bi className="cert-earned-hint" text={ui('certEarnedHint', lang)} />
         </p>
-        {onPocket && <PocketLink lang={lang} onOpen={onPocket} />}
+        {onColleague ? <ColleagueLink lang={lang} onOpen={onColleague} /> : onPocket && <PocketLink lang={lang} onOpen={onPocket} />}
       </div>
       <footer className="player-foot milestone-foot">
         <div className="foot-inner">
@@ -406,6 +409,17 @@ export function CertEarned({ unit, day, lang, onView, onLater, onPocket, sector,
         </div>
       </footer>
     </div>
+  );
+}
+
+/** "Voor je collega" (src/components/ColleagueCard.tsx), with the first certificate: show it to a colleague. */
+function ColleagueLink({ lang, onOpen }: { lang?: HelpLanguage; onOpen: () => void }) {
+  return (
+    <button type="button" className="unit-tool pocket-open cert-pocket cert-colleague" onClick={onOpen} dir={lang?.dir === 'rtl' ? 'rtl' : undefined}>
+      <ColleagueIcon />
+      <span className="unit-tool-text"><Bi className="unit-tool-label" text={ui('colleagueCard', lang)} /></span>
+      <ChevronIcon size={18} />
+    </button>
   );
 }
 

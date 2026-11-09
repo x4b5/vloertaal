@@ -87,6 +87,16 @@ export function earnedCertificates(p: Progress, now = new Date(), track: Track =
     .map((unit) => ({ unit, day: p.certs?.[unit.id] ?? dayKey(now) }));
 }
 
+/**
+ * "Voor je collega" in place of the pocket card, with the first certificate only (the owner's
+ * request, 9 November 2026: more exposure). A colleague on the floor helps the learner practise
+ * and sees vloertaal.nl on the card (src/components/ColleagueCard.tsx). Not in Werkregels: those
+ * learners speak Dutch already, and the card asks for help with Dutch.
+ */
+export function colleagueAtCertificate(p: Progress, now = new Date()): boolean {
+  return trackOf(p) === 'taal' && earnedCertificates(p, now).length === 1;
+}
+
 /** A unit by id, in either course (ids never clash). */
 export function findUnit(id: string): Unit | undefined {
   return findCourseUnit(id);

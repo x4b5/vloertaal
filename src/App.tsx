@@ -53,7 +53,7 @@ import { bridgeDue, seeBridge } from './lib/bridge';
 import { afterSpeak, braveLine, chorusDue, type SpeakEvent } from './lib/chorus';
 import { nudgeClosed, nudgeDue, nudgeEnv, nudgeRecord, progressAtRisk } from './lib/backupNudge';
 import { SAYINGS_FROM } from './content/sayings';
-import { earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
+import { colleagueAtCertificate, earnCertificates, findUnit, forgetCertName, unitDone, unitJustDone } from './lib/certificate';
 import { clockMinutes, count, countDayMilestones, countFirstOpen, countStartDone, pauseClock, quarterOf, resumeClock, startClock } from './lib/count';
 import { explainReport, testerMode } from './lib/report';
 import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpdate';
@@ -100,7 +100,8 @@ type View =
    *  certificate or the streak milestone still follows. */
   | { name: 'phrasebook'; streakUp?: number; cert?: string }
   | { name: 'tips' }
-  | { name: 'colleague' }
+  /** fromCert: opened from the first "Certificaat behaald", so the day-streak milestone still follows. */
+  | { name: 'colleague'; fromCert?: boolean; streakUp?: number }
   /** "Hoe zeg je het?" (src/components/KlankScreens.tsx): every sound card, from the Hulp tab; one card. */
   | { name: 'klanken' }
   | { name: 'klank'; id: string }
@@ -978,7 +979,8 @@ export default function App() {
       const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
       return view.name === 'cert-earned' ? (
         <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} completed={progress.completed} region={progress.region} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
-          onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })} />
+          onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })}
+          onColleague={colleagueAtCertificate(progress) ? () => replace({ name: 'colleague', fromCert: true, streakUp: view.streakUp }) : undefined} />
       ) : (
         <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} completed={progress.completed} region={progress.region} onBack={onward} />
       );
@@ -1038,7 +1040,8 @@ export default function App() {
     case 'coaches':
       return <Coaches onBack={back} lang={lang} />;
     case 'colleague':
-      return <ColleagueCard lang={lang} onBack={back} />;
+      // From the first certificate: on as after the pocket card (the streak milestone, or onward).
+      return <ColleagueCard lang={lang} onBack={view.fromCert ? () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson()) : back} />;
     case 'klanken':
       return <KlankOverview lang={lang} onBack={back} onOpen={(id) => go({ name: 'klank', id })} />;
     case 'klank':
