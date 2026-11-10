@@ -32,11 +32,16 @@ import { gzipSync } from 'node:zlib';
  * lessons, in 13 help languages) at 3300.5 kB. The start file stays under its limit (291.6 kB).
  * dist 3400 → 3550 (also 5 November 2026): Somali, a 14th help language (its own pack, loaded only
  * for a Somali learner), at 3412.3 kB. The start file did not grow with it (291.9 kB).
+ * dist 3550 → 3600 (10 November 2026, the owner's choice): the review's fase 0 to 2 (docs/sporen.md),
+ * new texts in 14 help languages and the work rules' key lines in Polish, Romanian and Bulgarian
+ * (each loaded only when needed), at 3580.6 kB; it was over already (3552.7 kB). The start file went
+ * down instead, 298.3 → 290.2 kB: the sentences of "Wat zeg je?" (src/content/regels/zegHetData.ts)
+ * come with the work rules' pack, not with every first screen.
  */
 export const LIMITS = {
   'start file': 295,
   start: 415,
-  dist: 3550,
+  dist: 3600,
 };
 
 const gz = (buf) => gzipSync(buf, { level: 9 }).length;

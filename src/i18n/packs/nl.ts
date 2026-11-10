@@ -3,6 +3,8 @@ import { registerRulesCourse } from '../../content/courses';
 import { rulesUnits, sectorRulesUnits } from '../../content/regels';
 import { toCourseUnits } from '../../content/regels/course';
 import { beCourseUnits } from '../../content/regels/be';
+import { registerZegHet } from '../../content/regels/zegHet';
+import { ZEG_HET_NL } from '../../content/regels/zegHetData';
 import sounds from '../sounds/nl';
 import type { LanguagePack } from './types';
 
@@ -17,6 +19,8 @@ import type { LanguagePack } from './types';
 // The Belgian course (docs/werkregels-belgie.md) beside it: played for progress.country 'be'
 // once it is switched on (src/content/regels/be/live.ts).
 registerRulesCourse(toCourseUnits([...rulesUnits, ...sectorRulesUnits]), beCourseUnits());
+// "Wat zeg je?" in a review of this course (src/content/regels/zegHet.ts): with the course, not in the start file.
+registerZegHet(ZEG_HET_NL);
 // The regions' work-rules units are not here: they come with the region's own file, only for a
 // learner of that region (src/content/regio ensureRegion).
 

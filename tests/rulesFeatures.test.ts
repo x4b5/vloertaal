@@ -1,4 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest';
+import { registerZegHet } from '../src/content/regels/zegHet';
+import { ZEG_HET_NL } from '../src/content/regels/zegHetData';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import { toCourseUnits } from '../src/content/regels/course';
 import { courseUnits, findLessonIn, learnedItems, registerRulesCourse } from '../src/content/courses';
@@ -19,7 +21,8 @@ import { POCKET_SIZE, pocketPhrases } from '../src/lib/pocket';
  */
 
 const TODAY = '2026-10-15';
-beforeAll(() => registerRulesCourse(toCourseUnits([...rulesUnits, ...sectorRulesUnits])));
+// The rules course and its "Wat zeg je?" sentences, as the rules pack registers them (src/i18n/packs/nl.ts).
+beforeAll(() => { registerRulesCourse(toCourseUnits([...rulesUnits, ...sectorRulesUnits])); registerZegHet(ZEG_HET_NL); });
 
 const rc = () => courseUnits('regels');
 const unit = (id: string): Unit => rc().find((u) => u.id === id)!;
