@@ -15,6 +15,10 @@ import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
 import { CAST, castFor, Character, colleaguesOf, MeAvatar, snapColleague, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
 import { CheckIcon, ChevronDownIcon, CloseIcon, MouthIcon, SpeakerIcon } from './Icons';
+import { findKlank } from '../content/klankMond';
+import { hardKlank } from '../lib/wordKlank';
+import { KlankCard } from './KlankCard';
+import { Mouth } from './Mouth';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
 import { learnerVoice, voiceFor } from '../lib/voices';
 import { WordPicture } from '../pictures';
@@ -241,10 +245,51 @@ export function IntroCard({ ex, lang, onAnswer, soundOff = false }: Props<'intro
         ) : (
           <Bi className="intro-meaning" text={gloss(word.id, word.en, lang)} />
         )}
+        {/* A hard Dutch sound in the word (ui, eu, uu, ij, ou, oe): a small mouth that opens its card. */}
+        <KlankBadge nl={word.nl} lang={lang} />
       </div>
       {/* Not in the work-rules track (it has no word cards; its screens are Dutch only). */}
       {!dutchUi(lang) && <SayAloudLine {...say} lang={lang} />}
     </div>
+  );
+}
+
+let klankOpenForTest = false;
+/** Screenshots only (src/dev/ShotHarness.tsx &klank=open): the sound's card already open. */
+export function setKlankOpenForTest(open: boolean): void {
+  klankOpenForTest = open;
+}
+
+/**
+ * The small mouth on a word card (the owner's request, 10 November 2026): only for a word with a
+ * sound many learners find hard (src/lib/wordKlank.ts hardKlank), its letters beside a still mouth.
+ * A tap opens that sound's card of "Hoe zeg je het?" (src/components/KlankCard.tsx) over the
+ * lesson, with the mouth that shows how to make it; Continue closes it. One thing to tap.
+ */
+function KlankBadge({ nl, lang }: { nl: string; lang?: HelpLanguage }) {
+  const id = hardKlank(nl);
+  const klank = id ? findKlank(id) : undefined;
+  const [open, setOpen] = useState(klankOpenForTest);
+  if (!klank) return null;
+  return (
+    <>
+      <button type="button" className="klank-badge" onClick={() => setOpen(true)} aria-label={`${srText(ui('klankTitle', lang))} ${klank.letters}`}>
+        <Mouth pose={klank.start} size={34} className="klank-badge-mouth" />
+        <span className="klank-badge-letters" lang="nl">{klank.letters}</span>
+        <Bi className="klank-badge-label" text={ui('klankTitle', lang)} />
+      </button>
+      {open && (
+        <div className="sheet-backdrop" onClick={() => setOpen(false)}>
+          <div className="sheet klank-sheet" role="dialog" aria-modal="true" aria-label={`${srText(ui('klankTitle', lang))} ${klank.letters}`} onClick={(e) => e.stopPropagation()}>
+            <span className="sheet-hazard" aria-hidden />
+            <KlankCard klank={klank} lang={lang} compact />
+            <button type="button" className="btn btn-go btn-primary klank-sheet-done" onClick={() => setOpen(false)}>
+              <Bi className="btn-label" text={ui('continue', lang)} />
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

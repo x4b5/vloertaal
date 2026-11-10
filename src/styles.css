@@ -821,6 +821,19 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .intro-nl.len-m { font-size: clamp(1.6rem, 7.6vw, 2rem); }
 .intro-nl.len-l { font-size: clamp(1.4rem, 6.6vw, 2rem); }
 .intro-meaning { font-size: 1.25rem; font-weight: 600; align-items: center; }
+/* The small mouth on a word card with a hard sound (src/lib/wordKlank.ts): the mouth, the letters
+   and "Hoe zeg je het?"; a tap opens the sound's card in a sheet. Quiet: a thin border, no fill. */
+.klank-badge {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 4px 14px 4px 6px;
+  border: 2px solid var(--line); border-radius: 999px; background: transparent; color: inherit; font: inherit; cursor: pointer;
+}
+.klank-badge:hover { border-color: var(--ink-3); }
+.klank-badge-mouth { flex: none; border-radius: 50%; }
+.klank-badge-letters { font-weight: 700; font-size: 1.15rem; }
+.klank-badge-label { font-size: 0.9rem; color: var(--muted); text-align: start; }
+.klank-badge-label .bi-help { --help-size: 0.95em; }
+.klank-sheet { max-height: 92vh; max-height: 92dvh; overflow-y: auto; }
+.klank-sheet-done { width: 100%; margin-top: 12px; }
 /* Abstract word (no picture): a calm word card, the Dutch word big and the gloss under a rule. */
 .intro-word-only { padding: 40px 20px 32px; gap: 18px; }
 .intro-word-only .intro-nl { font-size: 2.6rem; }

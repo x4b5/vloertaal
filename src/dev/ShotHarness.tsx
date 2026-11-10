@@ -62,6 +62,7 @@ import { MeldingShot } from './MeldingShot';
 import { GeluktShot } from './GeluktShot';
 import { BridgeShot } from './BridgeShot';
 import { KlankShot } from './KlankShot';
+import { setKlankOpenForTest } from '../components/Exercises';
 
 /**
  * Development-only page that opens one exercise in a fixed state, so screens can be
@@ -386,6 +387,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
     );
   }
   const [helm, handschoenen, schoenen, hesje] = lesson.words;
+  // &klank=open: the word card's sound card already open (src/lib/wordKlank.ts, e.g. &word=w.keuken).
+  setKlankOpenForTest(q.get('klank') === 'open');
   // &word=w.veiligheidsschoenen puts any course word in the spotlight (long-word checks).
   const allWords = units.flatMap((u) => u.lessons.flatMap((l) => l.words));
   const focus = allWords.find((w) => w.id === word);
