@@ -9,6 +9,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      all:
+        description: "Alle pagina's van de sitemap sturen, niet alleen de veranderde"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -37,4 +42,4 @@ jobs:
       - name: Build this version
         run: npm run build
       - name: Send the new and changed pages
-        run: node scripts/indexnow.mjs ../dist-before dist --wait
+        run: node scripts/indexnow.mjs ../dist-before dist --wait ${{ inputs.all && '--all' || '' }}
