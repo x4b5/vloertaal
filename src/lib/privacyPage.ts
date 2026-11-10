@@ -11,7 +11,7 @@ import { breadcrumbs, esc, plainPage, SITE } from './plainPage';
  */
 
 /** When this text last changed. A change also goes in the logbook (src/content/updates.ts). */
-export const PRIVACY_DATE = '2026-11-05';
+export const PRIVACY_DATE = '2026-11-10';
 
 export interface PrivacySection { id: string; title: string; paras: string[] }
 
@@ -55,6 +55,8 @@ export const PRIVACY: readonly PrivacySection[] = [
       'Vraagt de app “Heb je dit op je werk gezegd?”? Dan telt hij alleen je antwoord: “ja” of “nog niet”. Niet welke zin, niet wie.',
       // Sending it on (src/lib/count.ts countShare, countArrival), the owner's request, 9 November 2026.
       'Stuur je Vloertaal door aan een collega? Dan telt de app alleen dát er doorgestuurd is, en vanaf welke plek: de pagina voor begeleiders, na de demo, of je collegakaart. Opent iemand zo’n gedeelde link, dan telt de app ook dat, één keer. Niet naar wie, niet via welke app, niet wie het opende.',
+      // "Wat vind je van Vloertaal?" (src/lib/feel.ts), the owner's request, 10 November 2026.
+      'Na je 3e en je 15e les vraagt de app één keer wat je van Vloertaal vindt, met drie gezichtjes. Tik je er een aan? Dan telt de app alleen welk gezichtje, en of het na de 3e of de 15e les was. Geen tekst, geen naam. Je hoeft niets te kiezen: met “Verder” ga je gewoon door. Staat het tellen uit? Dan vraagt de app het niet.',
       'Geeft de app een fout? Dan telt hij ook dat: de soort fout, een korte code en een korte, opgeschoonde foutmelding uit de code. Geen tekst die jij hebt getypt, niet waar je was in de app. Hooguit drie fouten per bezoek.',
       'Er gaat nooit iets mee over jou: geen naam, geen hulptaal, geen land, geen sector, geen nummer en geen antwoorden. GoatCounter ziet bij elke telling je IP-adres en je browser, zoals elke website. Wij zien alleen de aantallen.',
       'Uitzetten kan bij Instellingen › “Anoniem meetellen”. Vraagt je browser om niet gevolgd te worden (Do Not Track of Global Privacy Control)? Dan telt de app niets.',

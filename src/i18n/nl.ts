@@ -475,6 +475,11 @@ export const uiNl: Record<UiKey, UiText> = {
   easierNext: 'De volgende les is wat korter.',
   fasterSetting: 'Sneller leren',
   fasterSettingHint: 'Aan: minder uitleg in nieuwe lessen, en het Nederlands op normaal tempo. Uit: zoals eerst.',
+  feelAsk: 'Wat vind je van Vloertaal?',
+  feelGood: 'Goed',
+  feelOk: 'Gaat wel',
+  feelBad: 'Niet goed',
+  feelThanks: 'Dank je wel! Zo kunnen we Vloertaal beter maken.',
   tempoFasterHint: 'Sneller leren: minder uitleg in nieuwe lessen, en het Nederlands op normaal tempo.',
   // "Wat kun je nu?": zinnen per onderwerp (src/content/kunJeNu.ts)
   kunJeNu: 'Wat kun je nu?',

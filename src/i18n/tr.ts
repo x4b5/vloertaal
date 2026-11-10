@@ -434,6 +434,11 @@ const lang: HelpLanguageSource = {
     easierNext: 'Sonraki ders biraz daha kısa.', // nieuw, nalezen
     fasterSetting: 'Daha hızlı öğren', // nieuw, nalezen
     fasterSettingHint: 'Açık: yeni derslerde daha az açıklama ve Hollandaca normal hızda. Kapalı: eskisi gibi.', // nieuw, nalezen
+    feelAsk: 'Vloertaal hakkında ne düşünüyorsun?', // nieuw, nalezen
+    feelGood: 'İyi', // nieuw, nalezen
+    feelOk: 'İdare eder', // nieuw, nalezen
+    feelBad: 'İyi değil', // nieuw, nalezen
+    feelThanks: 'Teşekkürler! Bu, Vloertaal’ı daha iyi yapmamıza yardım ediyor.', // nieuw, nalezen
     tempoFasterHint: 'Daha hızlı öğren: yeni derslerde daha az açıklama ve Hollandaca normal hızda.', // nieuw, nalezen
     samenTitle: 'Birlikte pratik yapın', // nieuw, nalezen
     samenRowHint: 'İki kişi, tek telefon', // nieuw, nalezen

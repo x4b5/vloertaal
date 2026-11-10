@@ -434,6 +434,11 @@ const lang: HelpLanguageSource = {
     easierNext: "Casharka xiga wax yar ayuu ka gaaban yahay.", // nieuw, nalezen
     fasterSetting: "Si dhakhso ah u baro", // nieuw, nalezen
     fasterSettingHint: "Shidan: sharax ka yar casharrada cusub, iyo Af-Holandiiska oo xawaare caadi ah. Dansan: sidii hore.", // nieuw, nalezen
+    feelAsk: 'Maxaad ka qabtaa Vloertaal?', // nieuw, nalezen
+    feelGood: 'Wanaagsan', // nieuw, nalezen
+    feelOk: 'Caadi', // nieuw, nalezen
+    feelBad: 'Ma wanaagsana', // nieuw, nalezen
+    feelThanks: 'Mahadsanid! Tani waxay naga caawinaysaa inaan Vloertaal hagaajinno.', // nieuw, nalezen
     tempoFasterHint: "Si dhakhso ah u baro: sharax ka yar casharrada cusub, iyo Af-Holandiiska oo xawaare caadi ah.", // nieuw, nalezen
     samenTitle: "Wada barta", // nieuw, nalezen
     samenRowHint: "Laba qof, hal taleefan", // nieuw, nalezen
