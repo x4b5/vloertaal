@@ -241,3 +241,5 @@ Uit de SEO/GEO-check van 10 november: de basis was sterk, maar elke hulptaal had
 - De eerste keer stuurt het (bijna) alle pagina's, omdat deze ronde elke pagina verandert.
 - Een nieuwe sleutel moet IndexNow eerst controleren. De eerste run (10 november) kreeg daarom `403 SiteVerificationNotCompleted`. Het script probeert het dan nog 4 keer, 5 minuten na elkaar. Lukt het dan nog niet, dan geeft de taak een waarschuwing (niet rood). Start de taak dan later opnieuw: Actions › IndexNow › Re-run jobs. Elk ander nee (verkeerde sleutel, fout verzoek) blijft wel rood.
 - Alles opnieuw sturen, veranderd of niet: Actions › IndexNow › Run workflow, vink "Alle pagina's" aan.
+
+**Webfilters (10 november 2026).** Op een werklaptop blokkeerde Microsoft Defender vloertaal.nl, omdat de site nog geen categorie had. Begeleiders en werkgevers lopen daar ook tegenaan. Hoe je vloertaal.nl bij elk filterbedrijf de categorie *Education* geeft, staat met een checklist in `docs/webfilters.md`.
