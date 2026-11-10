@@ -72,6 +72,7 @@ import { AboutFooter } from './AboutFooter';
 import { aboutDutchRemembered, rememberAboutDutch } from '../lib/aboutDutch';
 import { WorkTry } from './WorkTry';
 import type { WorkTryLine } from '../lib/workTry';
+import type { Face } from '../lib/feel';
 
 /** The help languages in the list in alphabetical order of their English name (the line under each
  *  native name, and what the page is in before a language is chosen): Arabic, Bulgarian, Dari … */
@@ -896,10 +897,23 @@ export function StatCard({ tone, label, icon, value, final, done, foot }: {
   );
 }
 
+/** The three faces of "Wat vind je van Vloertaal?": the face counted, its emoji, its name (said and shown). */
+const FEEL_FACES: readonly [Face, string, 'feelBad' | 'feelOk' | 'feelGood'][] = [
+  ['niet-blij', '🙁', 'feelBad'],
+  ['gewoon', '😐', 'feelOk'],
+  ['blij', '🙂', 'feelGood'],
+];
+
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, kept, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, easier = false, workTry }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, kept, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, onFeel, feltShot, easier = false, workTry }: {
+  /** "Wat vind je van Vloertaal?" (src/lib/feel.ts), after the 3rd and 15th lesson: three faces
+   *  above Continue, a list of one kind (Continue stays: not answering is always possible). A tap
+   *  counts the face and says thank you. */
+  onFeel?: (face: Face) => void;
+  /** Screenshots only (src/dev/NiveauShot.tsx): a face already tapped. */
+  feltShot?: Face;
   /** "Probeer het vandaag op je werk" (src/components/WorkTry.tsx, lib/workTry.ts): one sentence
    *  of the lesson, with a speaker. Not a button. */
   workTry?: WorkTryLine;
@@ -975,6 +989,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
     return () => window.removeEventListener('keydown', onKey);
   }, [onDone, onFaster]);
   const answerFaster = (yes: boolean) => { if (!ready.current || !onFaster) return; onFaster(yes); onDone(); };
+  const [felt, setFelt] = useState<Face | null>(feltShot ?? null);
+  const answerFeel = (face: Face) => { if (!ready.current || !onFeel || felt) return; onFeel(face); setFelt(face); };
   // While "Wil je sneller?" waits for Ja or Nee, no samen row: a tap there would leave the question
   // unanswered (it counts as asked once shown). The row comes back after the next lesson.
   const showSamen = Boolean(onSamen) && !onFaster;
@@ -985,7 +1001,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   // Today's review is not the day's end (the next lesson waits): "Review finished!", not "Done for today".
   const title = kind === 'lesson' ? ui('lessonComplete', lang) : ui('reviewComplete', lang);
   return (
-    <div className={`player result-screen ${onFaster ? 'result-asks' : ''}`}>
+    <div className={`player result-screen ${onFaster || onFeel ? 'result-asks' : ''}`}>
       <div className="player-body result">
         <div className="result-hero">
           {/* Bram (the one with the thumb up) says one calm line. */}
@@ -1064,7 +1080,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
         {/* (Not while "Wil je sneller?" asks: the question needs the room. Not with the row to the
             emergency phrases after the first lesson either: on a small phone that row went half
             under Verder; the home shows the next lesson anyway.) */}
-        {next && !onFaster && !onPhrases && (
+        {next && !onFaster && !onPhrases && !onFeel && (
           <p className="result-line result-next" dir={rtl ? 'rtl' : undefined}>
             {/* Said, not shown (no aria-label on a <p>): "Next:" before the title. */}
             <span className="sr-only" lang={saidLang(ui('nextUp', lang))}>{`${said(ui('nextUp', lang))}: `}</span>
@@ -1126,6 +1142,28 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             <div className="result-faster" dir={rtl ? 'rtl' : undefined}>
               <h2 className="result-faster-ask"><NlPair nlFirst nlClass="result-pair-nl" nl="Wil je sneller?" text={ui('fasterAsk', lang)} /></h2>
               <p className="result-faster-hint"><Bi text={ui('fasterHint', lang)} /></p>
+            </div>
+          )}
+          {/* After the 3rd and 15th lesson: what the learner thinks of the app, three faces. */}
+          {onFeel && !onFaster && (
+            <div className="result-feel" dir={rtl ? 'rtl' : undefined}>
+              {felt ? (
+                <p className="result-feel-thanks" role="status"><NlPair nlFirst nlClass="result-pair-nl" nl="Dank je wel!" text={ui('feelThanks', lang)} /></p>
+              ) : (
+                <>
+                  <h2 className="result-feel-ask"><NlPair nlFirst nlClass="result-pair-nl" nl="Wat vind je van Vloertaal?" text={ui('feelAsk', lang)} /></h2>
+                  <ul className="feel-faces">
+                    {FEEL_FACES.map(([face, emoji, key]) => (
+                      <li key={face}>
+                        <button type="button" className={`feel-face feel-${face}`} onClick={() => answerFeel(face)} aria-label={said(ui(key, lang))}>
+                          <span className="feel-emoji" aria-hidden>{emoji}</span>
+                          <Bi className="feel-label" text={ui(key, lang)} />
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </div>
           )}
           {onFaster ? (

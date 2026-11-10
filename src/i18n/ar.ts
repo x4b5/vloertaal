@@ -434,6 +434,11 @@ const lang: HelpLanguageSource = {
     easierNext: 'الدرس التالي أقصر قليلاً.', // nieuw, nalezen
     fasterSetting: 'التعلّم بسرعة أكبر', // nieuw, nalezen
     fasterSettingHint: 'تشغيل: شرح أقل في الدروس الجديدة، والهولندية بسرعة عادية. إيقاف: كما كان من قبل.', // nieuw, nalezen
+    feelAsk: 'ما رأيك في Vloertaal؟', // nieuw, nalezen
+    feelGood: 'جيد', // nieuw, nalezen
+    feelOk: 'مقبول', // nieuw, nalezen
+    feelBad: 'ليس جيدًا', // nieuw, nalezen
+    feelThanks: 'شكرًا! هذا يساعدنا على تحسين Vloertaal.', // nieuw, nalezen
     tempoFasterHint: 'التعلّم بسرعة أكبر: شرح أقل في الدروس الجديدة، والهولندية بسرعة عادية.', // nieuw, nalezen
     samenTitle: 'التمرين معاً', // nieuw, nalezen
     samenRowHint: 'شخصان، هاتف واحد', // nieuw, nalezen

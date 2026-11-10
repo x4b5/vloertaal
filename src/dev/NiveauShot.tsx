@@ -14,6 +14,8 @@ import { dailyLesson, speakCardId } from '../lib/spaced';
  *    with "Wil je sneller?" (Ja / Nee in place of Continue);
  *    (&samen=1: the "Oefen samen" row is hidden while the question waits);
  *  - &state=easier: the result after many mistakes, with "De volgende les is wat korter.";
+ *  - &state=feel: the result after the 3rd lesson, with "Wat vind je van Vloertaal?" and three
+ *    faces above Continue (src/lib/feel.ts); &felt=1: after a face was tapped ("Dank je wel!");
  *  - &state=daily&at=N: today's review with two sentence cards to build and a spoken sentence
  *    (&at= the step; the first build is at the number of words + 2).
  * Settings › Lessen › Tempo (Rustig, Normaal, Sneller leren): /?shot=settings&page=tempo.
@@ -22,6 +24,7 @@ export function NiveauShot({ lang, gender, q }: { lang: string | null; gender?: 
   const l = getHelpLanguage(lang as LangCode, gender);
   const state = q.get('state') ?? 'faster';
   const next = findLesson('l.understand')?.lesson;
+  if (state === 'feel') return <FeelShot lang={l} felt={q.get('felt') === '1'} />;
   if (state === 'faster' || state === 'easier') {
     const faster = state === 'faster';
     return (
@@ -35,6 +38,16 @@ export function NiveauShot({ lang, gender, q }: { lang: string | null; gender?: 
     );
   }
   return <DailyShot lang={l} at={Number(q.get('at') ?? 0)} />;
+}
+
+function FeelShot({ lang, felt }: { lang: ReturnType<typeof getHelpLanguage>; felt: boolean }) {
+  return (
+    <Result
+      right={10} total={12} newWords={6} words={18} lang={lang} onDone={() => {}}
+      onFeel={() => {}}
+      feltShot={felt ? 'blij' : undefined}
+    />
+  );
 }
 
 function DailyShot({ lang, at }: { lang: ReturnType<typeof getHelpLanguage>; at: number }) {

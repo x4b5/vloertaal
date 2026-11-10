@@ -43,6 +43,7 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
+import { countFeel, feelDue, type FeelAt, markFeelAsked } from './lib/feel';
 import { rulesTwinOf, trackTwin } from './content/trackTwins';
 import { oneAppOn } from './lib/oneApp';
 import { oneDailyCard, oneDailyIds, oneDailyLesson } from './lib/oneReview';
@@ -85,7 +86,7 @@ type View =
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean; admin?: boolean }
   /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; easier?: boolean; samen?: string; workTry?: WorkTryLine }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; feel?: FeelAt; easier?: boolean; samen?: string; workTry?: WorkTryLine }
   /** "Oefen samen" (src/components/Samen.tsx): a lesson's chats, two people on one phone, from its
    *  result; streakUp / cert: the certificate or the streak milestone still follows. */
   | { name: 'samen'; lessonId: string; streakUp?: number; cert?: string }
@@ -865,6 +866,10 @@ export default function App() {
         // "Wil je sneller?" is not asked on the result that shows the emergency phrases (one more thing to tap).
         const askFaster = Boolean(paced?.ask) && !phrases;
         if (paced?.ask && !askFaster) next.pace = { ...next.pace, asked: undefined };
+        // "Wat vind je van Vloertaal?" (src/lib/feel.ts): after the 3rd and the 15th finished lesson,
+        // a lesson done for the first time; not with the emergency phrases or "Wil je sneller?" (one question a screen).
+        const feel = !daily && !phrases && !askFaster && !progress.completed[view.lessonId] ? feelDue(Object.keys(next.completed).length) : undefined;
+        if (feel) markFeelAsked(feel);
         setProgress(next);
         keepDue.current = Boolean(access) && !keepOffered();
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
@@ -916,15 +921,16 @@ export default function App() {
           skipped: skipped || undefined,
           phrases: phrases || undefined,
           askFaster: askFaster || undefined,
+          feel,
           easier: paced?.easier || undefined,
           // "Oefen samen": after a lesson of the language track with chats (not after the first
           // lesson: its row to the emergency phrases is enough for one screen).
-          samen: !daily && !phrases && track === 'taal' && hasSamen(found.lesson) ? view.lessonId : undefined,
+          samen: !daily && !phrases && !feel && track === 'taal' && hasSamen(found.lesson) ? view.lessonId : undefined,
           // A rules lesson: its "Onthoud" line under the numbers.
           remember: daily ? undefined : found.lesson.rule?.remember,
           // "Probeer het vandaag op je werk": after a lesson's first time, once a day, in both
           // tracks (lib/workTry.ts); not while "Wil je sneller?" needs the room.
-          workTry: daily || reviewing || askFaster ? undefined : workTryFor(view.lessonId, !progress.completed[view.lessonId], today),
+          workTry: daily || reviewing || askFaster || feel ? undefined : workTryFor(view.lessonId, !progress.completed[view.lessonId], today),
         });
       };
       return (
@@ -976,6 +982,7 @@ export default function App() {
           onPhrases={view.phrases ? () => replace({ name: 'phrasebook', streakUp: view.streakUp, cert: view.cert }) : undefined}
           easier={view.easier}
           onFaster={view.askFaster ? (yes) => setProgress((p) => setFaster(p, yes, dayKey(new Date()))) : undefined}
+          onFeel={view.feel ? (face) => countFeel(view.feel!, face) : undefined}
           onSamen={view.samen ? () => replace({ name: 'samen', lessonId: view.samen!, streakUp: view.streakUp, cert: view.cert }) : undefined}
           workTry={view.workTry}
         />

@@ -538,6 +538,12 @@ export const uiEn = {
   easierNext: 'The next lesson is a bit shorter.',
   fasterSetting: 'Learn faster',
   fasterSettingHint: 'On: less explanation in new lessons, and the Dutch at normal speed. Off: as before.',
+  // "Wat vind je van Vloertaal?" after the 3rd and 15th lesson (src/lib/feel.ts): three faces, counted anonymously.
+  feelAsk: 'What do you think of Vloertaal?',
+  feelGood: 'Good',
+  feelOk: 'So-so',
+  feelBad: 'Not good',
+  feelThanks: 'Thank you! This helps us make Vloertaal better.',
   tempoFasterHint: 'Learn faster: less explanation in new lessons, and the Dutch at normal speed.',
   /* "Wat kun je nu?": can-do sentences per topic (src/content/kunJeNu.ts), on the certificate screen and the coach card. */
   kunJeNu: 'What can you do now?',

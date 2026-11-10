@@ -434,6 +434,11 @@ const lang: HelpLanguageSource = {
     easierNext: 'La prochaine leçon est un peu plus courte.', // nieuw, nalezen
     fasterSetting: 'Apprendre plus vite', // nieuw, nalezen
     fasterSettingHint: 'Activé : moins d’explications dans les nouvelles leçons et le néerlandais à vitesse normale. Désactivé : comme avant.', // nieuw, nalezen
+    feelAsk: 'Que penses-tu de Vloertaal ?', // nieuw, nalezen
+    feelGood: 'Bien', // nieuw, nalezen
+    feelOk: 'Moyen', // nieuw, nalezen
+    feelBad: 'Pas bien', // nieuw, nalezen
+    feelThanks: 'Merci ! Cela nous aide à améliorer Vloertaal.', // nieuw, nalezen
     tempoFasterHint: 'Apprendre plus vite : moins d’explications dans les nouvelles leçons et le néerlandais à vitesse normale.', // nieuw, nalezen
     samenTitle: 'S’entraîner à deux', // nieuw, nalezen
     samenRowHint: 'Deux personnes, un téléphone', // nieuw, nalezen

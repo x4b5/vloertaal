@@ -867,6 +867,9 @@ function defineStates(LANG) {
   // with its sentence cards (a sentence to build, the spoken sentence).
   add('niveau:faster', shot('niveau&state=faster'), null, { expect: '.result-faster' });
   add('niveau:easier', shot('niveau&state=easier'), null, { expect: '.result-easier' });
+  // "Wat vind je van Vloertaal?" (src/lib/feel.ts): three faces, a list of one kind, above Continue; and the thanks after a tap.
+  add('niveau:feel', shot('niveau&state=feel'), null, { expect: '.feel-faces', list: true });
+  add('niveau:feel-thanks', shot('niveau&state=feel&felt=1'), null, { expect: '.result-feel-thanks' });
   // "Sneller leren" is the third choice of Tempo (2 November 2026).
   add('niveau:setting', shot('settings&page=tempo'), null, { expect: '.max3-hint' });
   add('niveau:daily-build', shot('niveau&state=daily&at=8'), null, { expect: '.player' });
