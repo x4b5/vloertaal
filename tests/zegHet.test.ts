@@ -3,7 +3,8 @@ import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import { toCourseUnits } from '../src/content/regels/course';
 import { findLessonIn, registerRulesCourse } from '../src/content/courses';
 import { zlRegelsUnit } from '../src/content/regio/zuid-limburg-regels';
-import { modelQuestion, zegHetWrong } from '../src/content/regels/zegHet';
+import { modelQuestion, registerZegHet, zegHetWrong } from '../src/content/regels/zegHet';
+import { ZEG_HET_NL } from '../src/content/regels/zegHetData';
 import type { RuleStep } from '../src/content/regels/types';
 import { buildLesson } from '../src/lib/exercises';
 import { dailyRuleLesson, gradedStepIds } from '../src/lib/spaced';
@@ -18,7 +19,8 @@ const models: Model[] = [...rulesUnits, ...sectorRulesUnits, zlRegelsUnit]
   .filter((s): s is Model => s.kind === 'model');
 const words = (t: string) => t.split(/\s+/).filter((w) => /[\p{L}\d]/u.test(w)).length;
 
-beforeAll(() => registerRulesCourse(toCourseUnits([...rulesUnits, ...sectorRulesUnits])));
+// The sentences come with the rules pack (src/i18n/packs/nl.ts registerZegHet): here by hand.
+beforeAll(() => { registerRulesCourse(toCourseUnits([...rulesUnits, ...sectorRulesUnits])); registerZegHet(ZEG_HET_NL); });
 
 describe('every model sentence has two wrong ones', () => {
   it('for every model step of the course and the region', () => {
