@@ -91,6 +91,7 @@ for (const u of units)
 const SAY_TAKE = 2;
 // Take 5 (minTake, src/lib/sayAs.ts): "cao", said as one word before; now "cee-aa-oo". Take 7:
 // tiles said wrong, also those recorded again as they are written ("ben"), so without a `say`.
+// Take 9: every line with "app", now said "epp" and in Dutch (APP_TAKE, 10 November 2026).
 const takeFor = (text: string) => (minTake(text) || (/app/i.test(text) ? 4 : hasDigitNumber(text) ? 3 : SAY_TAKE));
 
 mkdirSync('public/audio', { recursive: true });

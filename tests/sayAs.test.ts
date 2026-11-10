@@ -1,16 +1,25 @@
 import { describe, expect, it } from 'vitest';
-import { ALONE_TAKE, CAO_TAKE, minTake, sayAs } from '../src/lib/sayAs';
+import { ALONE_TAKE, APP_TAKE, CAO_TAKE, minTake, sayAs } from '../src/lib/sayAs';
 
 describe('sayAs: how a voice is told to pronounce a line', () => {
-  it('says "app" like the English word', () => {
-    expect(sayAs('de app')).toBe('de ep');
-    expect(sayAs('Ik kijk elke dag in de app.')).toBe('Ik kijk elke dag in de ep.');
-    expect(sayAs('de vertaalapp')).toBe('de vertaalep');
-    expect(sayAs('de groepsapp')).toBe('de groepsep');
-    expect(sayAs('Oké, ik app in de pauze.')).toBe('Oké, ik ep in de pauze.');
+  it('says "app" like the English word, always "epp" (never "ep.", read as "episode")', () => {
+    expect(sayAs('app')).toBe('epp');
+    expect(sayAs('de app')).toBe('de epp');
+    expect(sayAs('Ik kijk elke dag in de app.')).toBe('Ik kijk elke dag in de epp.');
+    expect(sayAs('Elke dag kijk ik in de app.')).toBe('Elke dag kijk ik in de epp.');
+    expect(sayAs('de vertaalapp')).toBe('de vertaalepp');
+    expect(sayAs('de groepsapp')).toBe('de groepsepp');
+    expect(sayAs('Oké, ik app in de pauze.')).toBe('Oké, ik epp in de pauze.');
     expect(sayAs('appen')).toBe('eppen');
-    expect(sayAs('Hij stuurt een appje.')).toBe('Hij stuurt een epje.');
-    expect(sayAs('Ze appt de chef.')).toBe('Ze ept de chef.');
+    expect(sayAs('Hij stuurt een appje.')).toBe('Hij stuurt een eppje.');
+    expect(sayAs('Ze appt de chef.')).toBe('Ze eppt de chef.');
+    for (const t of ['app', 'de app', 'Ik kijk elke dag in de app.']) expect(sayAs(t)).not.toMatch(/\bep\b/);
+  });
+  it('needs take 9: the older clips with "app" (said wrong, 10 November 2026) are not played', () => {
+    expect(minTake('app')).toBe(APP_TAKE);
+    expect(minTake('Ik kijk elke dag in de app.')).toBe(APP_TAKE);
+    expect(minTake('de groepsapp')).toBe(APP_TAKE);
+    expect(minTake('de appel')).toBe(0);
   });
 
   it('says "ID" letter by letter', () => {
