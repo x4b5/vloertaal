@@ -603,6 +603,13 @@ export const uiEn = {
   colleagueShare: 'Send it to your colleague',
   /* "Voor je begeleider" (the Hulp tab): opens the coach card ("Laat zien hoe het gaat"). */
   forCoach: 'For your coach',
+  /* "Eén app" (src/lib/oneApp.ts): the work rules beside a language topic, the offer at 80%, "no help language", the coach card's new lines. */
+  rulesInDutch: 'How work goes here, in simple Dutch. Your phone reads it aloud.',
+  bridgeTextOne: 'You know a lot of Dutch now. With every topic you can also read how work goes here, in simple Dutch.',
+  noHelpLanguage: 'None: I speak Dutch',
+  kaartSaid: 'Sentences said at work',
+  kaartHard: 'Words that are still hard',
+  kaartRules: 'Lessons about how work goes here',
   /* The coach card (src/components/Certificate.tsx CoachCardScreen): a topic about rights named or not. */
   coachCardRights: 'Show topics about your rights by name',
   /* Speaking (src/components/Speaking.tsx): "say it again" is said from memory. */

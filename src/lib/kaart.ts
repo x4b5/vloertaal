@@ -1,5 +1,5 @@
 import { rulesCountry } from '../content/rulesCourse';
-import { findLesson } from '../content/curriculum';
+import { findItem, findLesson } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
 import { TOETS_PARTS, type ToetsPart } from '../content/toets';
 import { certDate, earnedCertificates, hasCheck, unitDone } from './certificate';
@@ -67,6 +67,33 @@ export interface KaartData {
   date: string;
   /** A topic about the learner's rights is among what the card would name (see RIGHTS_UNIT). */
   hasRights?: boolean;
+  /**
+   * "Eén app" (src/lib/oneApp.ts) only, what a coach most wants to talk about: the sentences said at
+   * work ("Ja, gelukt", Progress.gelukt: how many, the last two in Dutch), the words still hard (at
+   * most KAART_HARD, see hardWords) and the lessons of "Zo werkt het hier" done in the language course.
+   */
+  gezegd?: { n: number; last: string[] };
+  lastig?: string[];
+  regels?: number;
+}
+
+/** At most this many words on the card's line "Nog lastig". */
+export const KAART_HARD = 3;
+
+/**
+ * The words still hard: word cards in the lowest box (src/lib/spaced.ts), once a review has been
+ * done at all (before that every new word is in that box). The ones that are due longest first:
+ * those keep coming back. Their Dutch only; nothing else about the answers leaves the phone.
+ */
+export function hardWords(p: Pick<Progress, 'cards' | 'reviewDay'>): string[] {
+  if (!p.reviewDay) return [];
+  return Object.entries(p.cards ?? {})
+    .filter(([id, c]) => c.box === 1 && /^(be\.)?w\./.test(id))
+    .sort(([, a], [, b]) => (a.due < b.due ? -1 : a.due > b.due ? 1 : 0))
+    .map(([id]) => findItem(id)?.nl)
+    .filter((nl): nl is string => Boolean(nl))
+    .filter((nl, i, all) => all.indexOf(nl) === i)
+    .slice(0, KAART_HARD);
 }
 
 /**
@@ -127,7 +154,7 @@ function toetsOf(run: ToetsRun): KaartToets {
 
 /** The card's fields, from the progress on this phone, the learner's name and today.
  *  `showRights`: name topics about rights (see RIGHTS_UNIT); off by default. */
-export function kaartData(p: Progress, name: string, today: Date, showRights = false): KaartData {
+export function kaartData(p: Progress, name: string, today: Date, showRights = false, oneApp = false): KaartData {
   const track = trackOf(p);
   const earned = earnedCertificates(p, today, track);
   // Topics ticked off with a check: done, without a certificate (said so on the card).
@@ -168,6 +195,19 @@ export function kaartData(p: Progress, name: string, today: Date, showRights = f
     ...(toets ? { toets } : {}),
     date: certDate(dayKey(today)),
     ...(hasRights ? { hasRights } : {}),
+    ...(oneApp ? oneAppLines(p, track) : {}),
+  };
+}
+
+/** The card's lines of "Eén app" (each only when there is something to say). */
+function oneAppLines(p: Progress, track: Track): Pick<KaartData, 'gezegd' | 'lastig' | 'regels'> {
+  const said = p.gelukt ?? [];
+  const lastig = track === 'taal' ? hardWords(p) : [];
+  const regels = track === 'taal' ? Object.keys(p.completed).filter((id) => trackOfId(id) === 'regels').length : 0;
+  return {
+    ...(said.length ? { gezegd: { n: said.length, last: said.slice(-2).reverse().map((g) => g.nl) } } : {}),
+    ...(lastig.length ? { lastig } : {}),
+    ...(regels ? { regels } : {}),
   };
 }
 
@@ -207,6 +247,10 @@ export function kaartRows(d: KaartData): KaartRow[] {
       more: [d.kunVoorbeeld ? `Per onderwerp op het certificaat, zoals: ${d.kunVoorbeeld}` : 'Per onderwerp op het certificaat.'],
     }] : []),
     { label: 'Dagen geoefend', value: `${d.days} ${d.days === 1 ? 'dag' : 'dagen'} in de laatste 4 weken` },
+    // "Eén app": what was said at work, what is still hard, and the lessons about work here.
+    ...(d.gezegd ? [{ label: 'Gezegd op het werk', value: `${d.gezegd.n} ${d.gezegd.n === 1 ? 'zin' : 'zinnen'}`, more: d.gezegd.last.map((s) => `“${s}”`) }] : []),
+    ...(d.lastig ? [{ label: 'Nog lastig', value: d.lastig.join(', ') }] : []),
+    ...(d.regels ? [{ label: 'Zo werkt het hier', value: `${d.regels} ${d.regels === 1 ? 'les' : 'lessen'} over hoe werken hier gaat` }] : []),
     {
       label: 'Laatste les',
       value: d.lastLesson ? [d.lastLesson.text, d.lastLesson.date].filter(Boolean).join(' · ') : 'nog geen',

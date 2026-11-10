@@ -467,6 +467,12 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: { m: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእዮ። ከመይ ጌሩ ክሕግዘካ ከም ዝኽእል ተጻሒፉ ኣሎ።', f: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእይዮ። ከመይ ጌሩ ክሕግዘኪ ከም ዝኽእል ተጻሒፉ ኣሎ።', x: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእዩዎ። ከመይ ጌሩ ክሕግዘኩም ከም ዝኽእል ተጻሒፉ ኣሎ።' }, // nieuw, nalezen
     colleagueShare: { m: 'ናብ ብጻይካ ስደዶ', f: 'ናብ ብጻይኪ ስደድዮ', x: 'ናብ ብጻይኩም ስደዱዎ' }, // nieuw, nalezen
     forCoach: 'ንኣማኻሪኹም', // nieuw, nalezen
+    rulesInDutch: 'ስራሕ ኣብዚ ከመይ ከም ዝኸይድ፡ ብቐሊል ሆላንድኛ። ተሌፎን ብድምጺ የንብቦ።', // nieuw, nalezen
+    bridgeTextOne: { m: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጥ ኢኻ። ኣብ ነፍሲ ወከፍ ኣርእስቲ ስራሕ ኣብዚ ከመይ ከም ዝኸይድ እውን ብቐሊል ሆላንድኛ ከተንብብ ትኽእል ኢኻ።', f: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጢ ኢኺ። ኣብ ነፍሲ ወከፍ ኣርእስቲ ስራሕ ኣብዚ ከመይ ከም ዝኸይድ እውን ብቐሊል ሆላንድኛ ከተንብቢ ትኽእሊ ኢኺ።', x: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጡ ኢኹም። ኣብ ነፍሲ ወከፍ ኣርእስቲ ስራሕ ኣብዚ ከመይ ከም ዝኸይድ እውን ብቐሊል ሆላንድኛ ከተንብቡ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
+    noHelpLanguage: 'የለን፡ ሆላንድኛ እዛረብ እየ', // nieuw, nalezen
+    kaartSaid: 'ኣብ ስራሕ ዝተባህሉ ሓረጋት', // nieuw, nalezen
+    kaartHard: 'ገና ዘጸግሙ ቃላት', // nieuw, nalezen
+    kaartRules: 'ትምህርቲ ብዛዕባ ስራሕ ኣብዚ ከመይ ከም ዝኸይድ', // nieuw, nalezen
     coachCardRights: 'ኣርእስታት ብዛዕባ መሰላት ብስሞም ምርኣይ', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'ሕጂ ብልቢ፡ ብሆላንድኛ እንታይ ነይሩ?', // nieuw, nalezen
     keptNofM: { m: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጥ ኔርካ።', f: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጢ ኔርኪ።', x: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጡ ኔርኩም።' }, // nieuw, nalezen

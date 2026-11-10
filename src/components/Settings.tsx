@@ -5,6 +5,7 @@ import { REGIONS, regionMetaOf, regionsOn, type RegionChoice } from '../content/
 import { ensureLanguage, hasGender, isLanguageLoaded, langTag, said, saidLang, ui, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiCode } from '../i18n/types';
 import { dutchUi, rulesTrackOn } from '../lib/track';
+import { oneAppOn } from '../lib/oneApp';
 import { WordPicture } from '../pictures';
 import { NlPair } from './NlPair';
 import type { Access } from '../lib/access';
@@ -331,7 +332,9 @@ export function Settings({
     install: installWay() !== null,
     offline: offlineSupported(),
     rules: dutchUi(lang),
-    routes: rulesTrackOn(),
+    // "Eén app" (src/lib/oneApp.ts): no question "Wat wil je leren?"; the help language is one row,
+    // with "Geen: ik spreek Nederlands" as its last choice.
+    routes: rulesTrackOn() && !oneAppOn(),
     recorded: recorded.length > 0,
     // Only when the regions are offered (src/content/regio regionsOn) and the app can store one.
     region: regionsOn() && Boolean(onRegion),
@@ -348,7 +351,7 @@ export function Settings({
       // (feedback from a job coach, November 2026); in Werkregels there is none to show.
       case 'me': return dutchUi(lang) ? null : value('language');
       case 'route': return dutchUi(lang) ? <span className="set-row-value" lang="nl">Werkregels</span> : <Value text={say('routeLearnShort')} />;
-      case 'language': return lang ? <span className="set-row-value" lang={langTag(lang.code)} dir={lang.dir}>{lang.nativeName}</span> : <span className="set-row-value" lang="en">English</span>;
+      case 'language': return dutchUi(lang) && oneAppOn() ? <span className="set-row-value" lang="nl">Geen</span> : lang ? <span className="set-row-value" lang={langTag(lang.code)} dir={lang.dir}>{lang.nativeName}</span> : <span className="set-row-value" lang="en">English</span>;
       case 'gender': return progress.gender ? <Value text={say(progress.gender === 'f' ? 'genderWoman' : progress.gender === 'm' ? 'genderMan' : 'genderNone')} /> : null;
       case 'sector': {
         const s = sectors.find((x) => x.id === progress.sector);
@@ -464,7 +467,14 @@ export function Settings({
                 scrolls inside, with its own scroll bar (the owner's request, 2 November 2026);
                 the chosen one in view on opening. */}
             <ScrollBox className="lang-box" moreLabel={said(ui('scrollDown', lang))} moreLang={saidLang(ui('scrollDown', lang))} reveal=".lang-btn.picked">
-              <LanguagePicker current={progress.helpLang} onPick={pickLanguage} showBeta lang={lang} />
+              <LanguagePicker
+                current={progress.helpLang}
+                // "Geen" from the language course: first what changes ("Naar Werkregels?").
+                onPick={(code) => (code === 'nl' && !dutchUi(lang) ? onPage('switch') : pickLanguage(code))}
+                showBeta
+                lang={lang}
+                none={oneAppOn() && rulesTrackOn()}
+              />
             </ScrollBox>
             {lang && !lang.reviewed && (
               <p className="beta-note">

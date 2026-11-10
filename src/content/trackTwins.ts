@@ -1,4 +1,6 @@
 import { trackOfId, type Track } from '../lib/track';
+import { findCourseUnit, rulesTwinHere } from './courses';
+import type { Unit } from './types';
 import { nlId } from './regels/be/ids';
 import { taalNlId } from './taalBe/ids';
 
@@ -67,4 +69,14 @@ export function trackTwin(unitId: string, track: Track): string | undefined {
   }
   const id = nlId(unitId);
   return TRACK_TWINS.find(([, regels]) => regels === id)?.[0];
+}
+
+/**
+ * "Eén app" (src/lib/oneApp.ts): the work-rules topic a language topic has beside it ("Zo werkt het
+ * hier" on its topic page), in the course of the learner's country; undefined without a twin, or
+ * while the rules course is not loaded.
+ */
+export function rulesTwinOf(taalUnitId: string): Unit | undefined {
+  const twin = trackTwin(taalUnitId, 'regels');
+  return twin ? findCourseUnit(rulesTwinHere(twin)) : undefined;
 }

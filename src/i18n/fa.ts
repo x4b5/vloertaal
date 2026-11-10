@@ -466,6 +466,12 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'این را به همکاری که هلندی صحبت می‌کند نشان دهید. در آن نوشته که چطور می‌تواند در تمرین به شما کمک کند.', // nieuw, nalezen
     colleagueShare: 'برای همکارتان بفرستید', // nieuw, nalezen
     forCoach: 'برای مربی شما', // nieuw, nalezen
+    rulesInDutch: 'کار اینجا چطور است، به هلندی ساده. گوشی آن را بلند می‌خواند.', // nieuw, nalezen
+    bridgeTextOne: 'حالا هلندی زیادی بلدید. در هر موضوع می‌توانید بخوانید کار اینجا چطور است، به هلندی ساده.', // nieuw, nalezen
+    noHelpLanguage: 'هیچ: هلندی صحبت می‌کنم', // nieuw, nalezen
+    kaartSaid: 'جمله‌هایی که سر کار گفتید', // nieuw, nalezen
+    kaartHard: 'کلماتی که هنوز سخت است', // nieuw, nalezen
+    kaartRules: 'درس‌هایی درباره اینکه کار اینجا چطور است', // nieuw, nalezen
     coachCardRights: 'موضوع‌های مربوط به حق‌های شما با نام نشان داده شود', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'حالا از حفظ: به هلندی چه بود؟', // nieuw, nalezen
     keptNofM: 'واژه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را بلد بودید.', // nieuw, nalezen

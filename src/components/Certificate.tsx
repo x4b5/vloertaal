@@ -1,3 +1,4 @@
+import { oneAppOn } from '../lib/oneApp';
 import { dutchUi } from '../lib/track';
 import { Fragment, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { gloss, langTag, ui, said, saidLang } from '../i18n';
@@ -483,10 +484,14 @@ export function CertificatesCard({ progress, lang, onOpen }: {
 /* ---- "Laat zien hoe het gaat": the coach card ---- */
 
 /** What each line of the coach card means, in the help language (the card itself is Dutch). */
-const KAART_LEGEND: { nl: string; key: UiKey; toets?: boolean; kun?: boolean }[] = [
+const KAART_LEGEND: { nl: string; key: UiKey; toets?: boolean; kun?: boolean; field?: 'gezegd' | 'lastig' | 'regels' }[] = [
   { nl: 'Onderwerpen af', key: 'coachTopics' },
   { nl: 'Wat kun je nu?', key: 'coachCanDo', kun: true },
   { nl: 'Dagen geoefend', key: 'coachDays' },
+  // "Eén app" (src/lib/oneApp.ts): only when the card has the line.
+  { nl: 'Gezegd op het werk', key: 'kaartSaid', field: 'gezegd' },
+  { nl: 'Nog lastig', key: 'kaartHard', field: 'lastig' },
+  { nl: 'Zo werkt het hier', key: 'kaartRules', field: 'regels' },
   { nl: 'Laatste les', key: 'coachLast' },
   { nl: 'Toets “Wat ken je al?”', key: 'toetsTitle', toets: true },
   { nl: 'Code voor het groepsoverzicht', key: 'coachCode' },
@@ -513,7 +518,7 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
   const [today] = useState(() => fixedToday ?? new Date());
   /** Topics about rights by name (off: "een onderwerp over je rechten", src/lib/kaart.ts RIGHTS_UNIT). */
   const [showRights, setShowRights] = useState(false);
-  const data = useMemo(() => ({ ...kaartData(progress, name, today, showRights), helpCode: lang?.code }), [progress, name, today, showRights, lang?.code]);
+  const data = useMemo(() => ({ ...kaartData(progress, name, today, showRights, oneAppOn()), helpCode: lang?.code }), [progress, name, today, showRights, lang?.code]);
   const key = JSON.stringify(data);
   const [png, setPng] = useState<{ key: string; blob: Blob; url: string; box: KaartNameBox } | null>(null);
   const [failed, setFailed] = useState(false);
@@ -636,7 +641,7 @@ export function CoachCardScreen({ progress, lang, onBack, today: fixedToday }: {
       <section className="kaart-legend" dir={rtl ? 'rtl' : undefined} aria-label={said(ui('coachCardWhat', lang))}>
         <p className="kaart-legend-head"><NlPair nlFirst nl="Op de kaart, in het Nederlands:" nlClass="kaart-legend-nl" text={ui('coachCardWhat', lang)} /></p>
         <ul className="kaart-legend-rows">
-          {KAART_LEGEND.filter((r) => (!r.toets || data.toets) && (!r.kun || data.kunZinnen > 0)).map((r) => (
+          {KAART_LEGEND.filter((r) => (!r.toets || data.toets) && (!r.kun || data.kunZinnen > 0) && (!r.field || data[r.field])).map((r) => (
             <li key={r.key}>
               {/* The work-rules track: the screen is Dutch, so the line's own explanation only. */}
               {!dutchUi(lang) && <span className="kaart-legend-label" lang="nl" dir="ltr">{r.nl}</span>}

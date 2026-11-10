@@ -467,6 +467,12 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Zeig das einem Kollegen, der Niederländisch spricht. Dort steht, wie er dir beim Üben helfen kann.', // nieuw, nalezen
     colleagueShare: 'An deinen Kollegen schicken', // nieuw, nalezen
     forCoach: 'Für deinen Coach', // nieuw, nalezen
+    rulesInDutch: 'Wie Arbeit hier läuft, in einfachem Niederländisch. Das Handy liest es vor.', // nieuw, nalezen
+    bridgeTextOne: 'Du kannst jetzt viel Niederländisch. Bei jedem Thema kannst du auch lesen, wie Arbeit hier läuft, in einfachem Niederländisch.', // nieuw, nalezen
+    noHelpLanguage: 'Keine: Ich spreche Niederländisch', // nieuw, nalezen
+    kaartSaid: 'Sätze, die du bei der Arbeit gesagt hast', // nieuw, nalezen
+    kaartHard: 'Wörter, die noch schwer sind', // nieuw, nalezen
+    kaartRules: 'Lektionen dazu, wie Arbeit hier läuft', // nieuw, nalezen
     coachCardRights: 'Namen der Themen über deine Rechte zeigen', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'Jetzt aus dem Kopf: Was hieß es auf Niederländisch?', // nieuw, nalezen
     keptNofM: 'Wörter, die du vor 2 Wochen oder früher gelernt hast: Du wusstest noch {n} von {m}.', // nieuw, nalezen (AI-correctie 2 nov 2026)

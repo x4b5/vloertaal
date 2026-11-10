@@ -5518,3 +5518,15 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .coach-demo h2 { margin-top: 0; }
 .coach-demo-btn { width: 100%; }
 .coach-demo-note { color: var(--ink-2); }
+
+/* "Eén app" (src/lib/oneApp.ts) */
+/* "Zo werkt het hier" under a language topic's lessons (Route.tsx RulesTwinLessons). */
+.topic-rules { margin-top: 26px; }
+.topic-rules-title { display: flex; flex-direction: column; gap: 2px; font-size: 1.15rem; margin: 0 0 4px; }
+.topic-rules-title .topic-rules-nl { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.topic-rules-hint { margin: 0 0 12px; font-size: 0.92rem; }
+/* Fase 2: a rule's title and its "Onthoud" in the help language, under the Dutch (src/i18n/regelHulp). */
+.rule-title-help { margin: 4px 0 8px; font-size: 1.02rem; line-height: 1.4; color: var(--ink-2); }
+.result-remember-help { margin: 4px 0 0; color: var(--ink-2); }
+/* The help language's last choice in Settings: "Geen: ik spreek Nederlands". */
+.lang-btn-none .lang-mark { min-width: 34px; }

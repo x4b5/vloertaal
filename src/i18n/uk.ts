@@ -467,6 +467,12 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Покажи це колезі, який говорить нідерландською. Тут написано, як він може допомогти тобі практикуватися.', // nieuw, nalezen
     colleagueShare: 'Надіслати колезі', // nieuw, nalezen
     forCoach: 'Для твого наставника', // nieuw, nalezen
+    rulesInDutch: 'Як тут влаштована робота, простою нідерландською. Телефон читає вголос.', // nieuw, nalezen
+    bridgeTextOne: 'Ти вже знаєш багато нідерландської. У кожній темі можна також прочитати, як тут влаштована робота, простою нідерландською.', // nieuw, nalezen
+    noHelpLanguage: 'Жодної: я говорю нідерландською', // nieuw, nalezen
+    kaartSaid: 'Речення, сказані на роботі', // nieuw, nalezen
+    kaartHard: 'Слова, які ще важкі', // nieuw, nalezen
+    kaartRules: 'Уроки про те, як тут влаштована робота', // nieuw, nalezen
     coachCardRights: 'Показувати назви тем про твої права', // nieuw, nalezen
     speakFromMemory: 'Тепер напам’ять: як це було нідерландською?', // nieuw, nalezen
     keptNofM: 'Слова двотижневої давності й старші: ти ще пам’ятаєш {n} з {m}.', // nieuw, nalezen

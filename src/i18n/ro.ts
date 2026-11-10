@@ -467,6 +467,12 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Arată asta unui coleg care vorbește olandeză. Scrie cum te poate ajuta să exersezi.', // nieuw, nalezen
     colleagueShare: 'Trimite-l colegului', // nieuw, nalezen
     forCoach: 'Pentru îndrumătorul tău', // nieuw, nalezen
+    rulesInDutch: 'Cum se lucrează aici, în olandeză simplă. Telefonul citește cu voce tare.', // nieuw, nalezen
+    bridgeTextOne: 'Acum știi multă olandeză. La fiecare temă poți citi și cum se lucrează aici, în olandeză simplă.', // nieuw, nalezen
+    noHelpLanguage: 'Niciuna: vorbesc olandeză', // nieuw, nalezen
+    kaartSaid: 'Propoziții spuse la muncă', // nieuw, nalezen
+    kaartHard: 'Cuvinte care sunt încă grele', // nieuw, nalezen
+    kaartRules: 'Lecții despre cum se lucrează aici', // nieuw, nalezen
     coachCardRights: 'Arată pe nume subiectele despre drepturile tale', // nieuw, nalezen
     speakFromMemory: 'Acum din memorie: cum era în olandeză?', // nieuw, nalezen
     keptNofM: 'Cuvinte de acum 2 săptămâni sau mai vechi: încă știai {n} din {m}.', // nieuw, nalezen

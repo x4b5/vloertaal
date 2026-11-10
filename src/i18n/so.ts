@@ -467,6 +467,12 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: "Tan tus saaxiibka shaqada ee ku hadla Af-Holandiis. Waxay sheegaysaa sida uu kaaga caawin karo tababarka.", // nieuw, nalezen
     colleagueShare: "U dir saaxiibkaaga shaqada", // nieuw, nalezen
     forCoach: 'Loogu talagalay hagahaaga', // nieuw, nalezen
+    rulesInDutch: 'Sida shaqadu halkan u socoto, Af-Holandiis fudud. Taleefanku kor ayuu u akhriyaa.', // nieuw, nalezen
+    bridgeTextOne: 'Hadda Af-Holandiis badan ayaad taqaan. Mawduuc kasta waxaad sidoo kale ka akhrin kartaa sida shaqadu halkan u socoto, Af-Holandiis fudud.', // nieuw, nalezen
+    noHelpLanguage: 'Midna: Af-Holandiis ayaan ku hadlaa', // nieuw, nalezen
+    kaartSaid: 'Weedho aad ka tidhi shaqada', // nieuw, nalezen
+    kaartHard: 'Erayo weli adag', // nieuw, nalezen
+    kaartRules: 'Casharro ku saabsan sida shaqadu halkan u socoto', // nieuw, nalezen
     coachCardRights: "Magacyada mawduucyada xuquuqdaada ku saabsan tus", // nieuw, nalezen
     speakFromMemory: "Hadda xusuustaada ka dheh: maxay ahayd Af-Holandiis?", // nieuw, nalezen
     keptNofM: "Erayada 2 toddobaad ama ka badan ka hor: weli waxaad taqaanay {n} ka mid ah {m}.", // nieuw, nalezen

@@ -530,6 +530,12 @@ export const uiNl: Record<UiKey, UiText> = {
   colleagueCardHint: 'Laat dit zien aan een collega die Nederlands spreekt. Hier staat hoe die je kan helpen oefenen.',
   colleagueShare: 'Stuur naar je collega',
   forCoach: 'Voor je begeleider', // nieuw, nalezen
+  rulesInDutch: 'Hoe werken hier gaat, in eenvoudig Nederlands. De telefoon leest voor.', // nieuw, nalezen
+  bridgeTextOne: 'Je kent nu veel Nederlands. Bij elk onderwerp kun je nu ook lezen hoe werken hier gaat, in eenvoudig Nederlands.', // nieuw, nalezen
+  noHelpLanguage: 'Geen: ik spreek Nederlands', // nieuw, nalezen
+  kaartSaid: 'Zinnen die je op het werk zei', // nieuw, nalezen
+  kaartHard: 'Woorden die nog lastig zijn', // nieuw, nalezen
+  kaartRules: 'Lessen over hoe werken hier gaat', // nieuw, nalezen
   coachCardRights: 'Onderwerpen over je rechten bij naam tonen',
   speakFromMemory: 'Nu uit je hoofd: hoe was het ook alweer?',
   keptNofM: 'Woorden van 2 weken of langer geleden: je wist er nog {n} van de {m}.',

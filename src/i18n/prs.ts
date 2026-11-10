@@ -466,6 +466,12 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'این را به همکاری که هالندی گپ می‌زند نشان دهید. در آن نوشته است که چگونه می‌تواند در تمرین به شما کمک کند.', // nieuw, nalezen
     colleagueShare: 'به همکار تان بفرستید', // nieuw, nalezen
     forCoach: 'برای رهنمای شما', // nieuw, nalezen
+    rulesInDutch: 'کار در اینجا چگونه است، به هالندی ساده. تیلفون آن را بلند می‌خواند.', // nieuw, nalezen
+    bridgeTextOne: 'حالا هالندی زیاد می‌دانید. در هر موضوع می‌توانید بخوانید که کار در اینجا چگونه است، به هالندی ساده.', // nieuw, nalezen
+    noHelpLanguage: 'هیچ: هالندی گپ می‌زنم', // nieuw, nalezen
+    kaartSaid: 'جمله‌هایی که در کار گفتید', // nieuw, nalezen
+    kaartHard: 'کلماتی که هنوز سخت است', // nieuw, nalezen
+    kaartRules: 'درس‌هایی در باره اینکه کار در اینجا چگونه است', // nieuw, nalezen
     coachCardRights: 'موضوعات مربوط به حقوق شما با نام نشان داده شود', // nieuw, nalezen
     speakFromMemory: 'حالا از یاد: به هالندی چه بود؟', // nieuw, nalezen
     keptNofM: 'کلمه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را می‌دانستید.', // nieuw, nalezen

@@ -612,8 +612,64 @@ export function AllTopics({ progress, lang, access = 'full', onBack, onOpen }: {
  * and the certificate once the topic is finished) and its lessons. Done lessons can be practised
  * again here; the next one says Start (or Continue when it was stopped halfway).
  */
-export function TopicPage({ unit, progress, lang, access = 'full', onBack, onStart, onRestart, onPocket, onCertificate, onUpgrade, onCheck, onUndoCheck, onScene, focus = false, unlocked = false }: {
+/**
+ * "Zo werkt het hier" on a topic page of the language course ("Eén app", src/lib/oneApp.ts): the
+ * lessons of its work-rules twin (src/content/trackTwins.ts), in plain Dutch with a voice, played
+ * without leaving the language course. One more list of one kind of row (no extra taps). Its
+ * lessons open in order, as everywhere (isUnlocked); the learner's own path does not move.
+ */
+function RulesTwinLessons({ unit, completed, access, lang, onStart }: {
   unit: Unit;
+  completed: Progress['completed'];
+  access: Access;
+  lang?: HelpLanguage;
+  onStart: (lessonId: string, review: boolean) => void;
+}) {
+  const rtl = lang?.dir === 'rtl';
+  return (
+    <section className="topic-rules" aria-labelledby="topic-rules-title" dir={rtl ? 'rtl' : undefined}>
+      <h2 id="topic-rules-title" className="topic-rules-title">
+        <NlPair nlFirst nl="Zo werkt het hier" nlClass="topic-rules-nl" text={ui('cultureTips', lang)} />
+      </h2>
+      <p className="muted topic-rules-hint"><Bi text={ui('rulesInDutch', lang)} /></p>
+      <ol className="bays rb-lessons topic-lessons topic-rules-lessons" data-list="rules">
+        {unit.lessons.map((lesson, i) => {
+          const record = completed[lesson.id];
+          const open = isUnlocked(lesson.id, completed, access);
+          const state = !open ? 'locked' : record ? 'done' : 'open';
+          const icon = lessonIcon(lesson);
+          return (
+            <li key={lesson.id} className={`bay bay-${state}`}>
+              <span className="bay-marker" aria-hidden>{state === 'done' ? <CheckIcon size={18} /> : i + 1}</span>
+              <button
+                type="button"
+                className="bay-card"
+                disabled={!open}
+                onClick={() => onStart(lesson.id, Boolean(record))}
+                aria-label={`${lesson.title}${open ? (record ? ` · ${said(ui('practice', lang))}` : ` · ${said(ui('start', lang))}`) : ` (${said(ui('locked', lang))})`}`}
+              >
+                {icon && <WordPicture className="bay-pic" id={icon.id} emoji={icon.emoji} size={48} />}
+                <span className="bay-text" dir="ltr">
+                  <span className="bi bay-title"><span className="bi-en" lang="nl">{lesson.title}</span></span>
+                  {lesson.rule?.goal && <span className="bay-goal" lang="nl">{lesson.rule.goal}</span>}
+                </span>
+                {state === 'open' && <ChevronIcon size={22} className="bay-chev" />}
+                {state === 'done' && <CheckIcon size={18} className="bay-chev" />}
+                {state === 'locked' && <HourglassIcon size={18} className="bay-lock bay-wait" />}
+              </button>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  );
+}
+
+export function TopicPage({ unit, rulesTwin, progress, lang, access = 'full', onBack, onStart, onRestart, onPocket, onCertificate, onUpgrade, onCheck, onUndoCheck, onScene, focus = false, unlocked = false }: {
+  unit: Unit;
+  /** "Eén app" (src/lib/oneApp.ts): the work-rules topic beside this language topic, its lessons
+   *  under "Zo werkt het hier" (in plain Dutch, with a voice), playable from here. */
+  rulesTwin?: Unit;
   progress: Progress;
   lang?: HelpLanguage;
   access?: Access;
@@ -796,6 +852,7 @@ export function TopicPage({ unit, progress, lang, access = 'full', onBack, onSta
             </li>
           ))}
         </ol>
+        {rulesTwin && allowed && <RulesTwinLessons unit={rulesTwin} completed={completed} access={access} lang={lang} onStart={onStart} />}
       </div>
     </div>
   );

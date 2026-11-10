@@ -56,6 +56,7 @@ import { setTesterSwitch, testerSwitch } from '../lib/report';
 import { ChoiceCards } from './Choice';
 import { phoneDutchFirst, phoneHelpLang } from '../lib/langGuess';
 import { CoachHubCard } from './CoachHubCard';
+import { useRuleHelp } from '../i18n/regelHulp';
 import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { KlankHubIcon } from './KlankScreens';
@@ -75,7 +76,10 @@ import type { WorkTryLine } from '../lib/workTry';
  *  native name, and what the page is in before a language is chosen): Arabic, Bulgarian, Dari … */
 const PICKER_ORDER = [...languageMeta].sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
-export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang, onMissing }: {
+export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang, onMissing, none = false }: {
+  /** "Eén app" (src/lib/oneApp.ts, Settings): a last row "Geen: ik spreek Nederlands" ('nl'), the
+   *  help language off, as one more choice of the same list instead of a question of its own. */
+  none?: boolean;
   /** First run: a last card "Is your language missing?" (src/lib/missingLang.ts). */
   onMissing?: () => void;
   /** The help language in use (Settings): the "in review" tag is written in it. */
@@ -123,6 +127,16 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`} role="group" aria-label={said(ask)}>
       {PICKER_ORDER.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
       {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
+      {none && (
+        <button key="nl" type="button" className={`lang-btn lang-btn-none ${current === 'nl' ? 'picked' : ''}`} onClick={() => onPick('nl')} aria-pressed={current === 'nl'}>
+          <span className="lang-mark lang-mark-rules" aria-hidden><WordPicture id="w.contract" emoji="📘" size={26} /></span>
+          <span className="lang-names">
+            <span className="lang-native" lang="nl">Geen: ik spreek Nederlands</span>
+            {!dutch && lang?.ui.noHelpLanguage && <HelpText className="lang-en" text={lang.ui.noHelpLanguage as string} lang={lang} />}
+          </span>
+          {current === 'nl' && <CheckIcon size={20} className="lang-check" />}
+        </button>
+      )}
       {/* Not a language: a dashed card on the whole width, after English. */}
       {onMissing && (
         <button key="missing" type="button" className="lang-btn lang-btn-missing" onClick={onMissing} lang="en">
@@ -931,6 +945,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   lang?: HelpLanguage;
   onDone: () => void;
 }) {
+  // Fase 2 ("Eén app"): the "Onthoud" in the help language too, under the Dutch (src/i18n/regelHulp).
+  const rememberHelp = useRuleHelp(lang)(remember ?? '');
   // The cards pop in together with their final numbers: a still frame never shows "0 / 11"
   // or "+0" (the numbers are what the learner came for, not a counter).
   const shownRight = right;
@@ -1007,6 +1023,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           <div className="result-remember" lang="nl">
             <span className="result-remember-label">Onthoud</span>
             <p className="result-remember-text">{remember}</p>
+            {rememberHelp && lang && <p className="result-remember-help" lang={langTag(lang.code)} dir={lang.dir}>{rememberHelp}</p>}
             <SpeakButton text={remember} long needsDevice glyph help={lang} />
           </div>
         )}

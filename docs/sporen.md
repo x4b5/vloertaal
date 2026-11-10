@@ -30,15 +30,55 @@ kandidaat weten welk spoor die volgt.
 - **Kleine dingen**: de Werkregels-kaart onder de talen heeft een contract in plaats van de
   Nederlandse vlag; de landvraag in Taal zegt "de woorden en tips van dat land".
 
+## Gebouwd: fase 1 en 2, achter de schakelaar "Eén app" (10 november 2026)
+
+Alles hieronder staat **uit** op vloertaal.nl (`ONE_APP_LIVE = false` in `src/lib/oneApp.ts`), omdat
+de pilot loopt en de vertaalde regels nog niet juridisch zijn nagekeken. Aanzetten voor één telefoon:
+open `vloertaal.nl/?nieuw=1` (blijft bewaard op die telefoon); uitzetten met `?nieuw=0`. Voor
+iedereen aanzetten: zet `ONE_APP_LIVE` op `true`, en zet dan een regel in het logboek
+(`src/content/updates.ts`), bijvoorbeeld de tekst onderaan deze pagina.
+
+**Fase 1: hulptaal los van inhoud**
+- **Zo werkt het hier bij elk Taal-onderwerp** (`Route.tsx` `RulesTwinLessons`): onder de taallessen
+  staan de lessen van het tweeling-onderwerp uit Werkregels (`src/content/trackTwins.ts`), in
+  eenvoudig Nederlands met stem. Een Taal-leerling speelt ze zonder van spoor te wisselen; het eigen
+  lespad schuift niet mee. Het Nederlandse pakket (met de regellessen) laadt dan op de achtergrond.
+- **Eén herhaling** (`src/lib/oneReview.ts`): "Herhaal vandaag" brengt na de woorden ook hooguit 3
+  regelvragen terug van de regellessen die de leerling deed.
+- **Hulptaal is één rij** in Instellingen › Taal en ik, ook in Werkregels; de vraag "Wat wil je
+  leren?" is weg. De laatste keuze van de lijst is "Geen: ik spreek Nederlands" (intern nog steeds
+  `helpLang: 'nl'`, dus geen omzetting van opgeslagen voortgang nodig). Vanuit Taal komt eerst
+  "Naar Werkregels?" met wat er verandert.
+- **Het aanbod bij 80%** leidt naar een onderwerp met Zo werkt het hier, niet naar een wissel.
+- **De begeleiderskaart** toont ook: gezegd op het werk (Gelukt), nog lastig (woorden die na een
+  herhaling nog in het eerste vak zitten, `hardWords` in `src/lib/kaart.ts`) en het aantal lessen
+  Zo werkt het hier. De leerling ziet de kaart nog steeds eerst zelf.
+
+**Fase 2: de regels in de eigen taal**
+- De titel van elke regelkaart en elke Onthoud-zin van de Nederlandse cursus (90 zinnen) in het
+  **Pools, Roemeens en Bulgaars** (`src/i18n/regelHulp/`), onder het Nederlands. Met AI vertaald en
+  met een terugvertaling gecontroleerd; **nog niet** door een moedertaalspreker of jurist.
+- Opgezocht via de Nederlandse zin: verandert die, dan valt de vertaling weg tot hij opnieuw is
+  vertaald (`tests/oneApp.test.ts` zegt welke).
+- Punten om na te kijken die de vertalers zelf noemden: "Haast en een knop?" (onduidelijk zonder
+  context), "Uit als het mag, dicht als het kan", "WW meenemen?" (naar een ander land),
+  "cliënt" in de zorg, "zorg" in het cv (mantelzorg of betaalde zorg), "ontslag" (ook zelf
+  opzeggen), "Op het werk zeg je meestal "je"".
+
+**Logboekregel voor als het aangaat** (concept): "Bij elk onderwerp staat nu ook *Zo werkt het hier*:
+de regels van het werk, in eenvoudig Nederlands, met voorlezen. In het Pools, Roemeens en Bulgaars
+staat de kern ook in je eigen taal. Je hulptaal kies je bij Instellingen › Taal en ik; wie al
+Nederlands spreekt, kiest daar *Geen*."
+
 ## Nog te doen
 
-- **Fase 1: hulptaal los van inhoud.** De hulptaal wordt een gewone instelling, met "geen". Het
-  lespad leest de soort les uit de onderwerpen. Regellessen speelbaar met elke hulptaal (eerst in het
-  Nederlands, met stem), één herhaling voor woorden en regels, de brug van 80% wordt geleidelijk.
-  Opgeslagen `helpLang: 'nl'` wordt "geen hulptaal". Het spoor zit op ongeveer 150 plekken in 40
-  bestanden (`trackOf`, `isRules`, `dutchUi`, `=== 'regels'`).
-- **De kaart toont wat telt**: gezegd op het werk (Gelukt), nog lastig, en een korte check per
-  onderwerp over rechten, ook in Werkregels.
-- **Fase 2, na de juridische controle**: regelkaart en Onthoud-zin in de hulptalen, eerst Pools,
-  Roemeens en Bulgaars, te beginnen bij de lessen voor wie uit een ander land komt.
-- **Eerst testen**: de start met vijf Nederlandstalige Entree-studenten en vijf taalleerders.
+- **Voor het aanzetten**: de test met vijf Nederlandstalige Entree-studenten en vijf taalleerders,
+  met `?nieuw=1`; de juridische check van de regels (`docs/juridische-check.md`); de vertalingen
+  laten nalezen door moedertaalsprekers.
+- **Meer talen** voor fase 2 (Arabisch, Oekraïens, Turks, Tigrinya …) en de Belgische cursus
+  (`r.be.*`), die nog geen vertaalde regels heeft.
+- **De korte check per onderwerp over rechten** op de kaart (de vijf vragen van "Ik ken dit al"
+  bestaan al; nog niet voor Werkregels).
+- **Opruimen na het aanzetten**: het spoor zit nog op ongeveer 150 plekken in de code (`trackOf`,
+  `isRules`, `dutchUi`, `=== 'regels'`); met de schakelaar aan blijft dat werken, maar één model is
+  eenvoudiger te onderhouden.

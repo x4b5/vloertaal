@@ -467,6 +467,12 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Pokaż to koledze z pracy, który mówi po niderlandzku. Jest tu napisane, jak może ci pomóc ćwiczyć.', // nieuw, nalezen
     colleagueShare: 'Wyślij koledze', // nieuw, nalezen
     forCoach: 'Dla twojego opiekuna', // nieuw, nalezen
+    rulesInDutch: 'Jak tu wygląda praca, prostym niderlandzkim. Telefon czyta na głos.', // nieuw, nalezen
+    bridgeTextOne: 'Znasz już dużo niderlandzkiego. Przy każdym temacie możesz też przeczytać, jak tu wygląda praca, prostym niderlandzkim.', // nieuw, nalezen
+    noHelpLanguage: 'Brak: mówię po niderlandzku', // nieuw, nalezen
+    kaartSaid: 'Zdania powiedziane w pracy', // nieuw, nalezen
+    kaartHard: 'Słowa, które są jeszcze trudne', // nieuw, nalezen
+    kaartRules: 'Lekcje o tym, jak tu wygląda praca', // nieuw, nalezen
     coachCardRights: 'Pokazuj nazwy tematów o twoich prawach', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'Teraz z pamięci: jak to było po niderlandzku?', // nieuw, nalezen
     keptNofM: 'Słowa sprzed 2 tygodni lub dawniej: pamiętasz jeszcze {n} z {m}.', // nieuw, nalezen

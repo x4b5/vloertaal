@@ -467,6 +467,12 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Mostra isto a um colega que fala neerlandês. Diz como te pode ajudar a praticar.', // nieuw, nalezen
     colleagueShare: 'Envia ao teu colega', // nieuw, nalezen
     forCoach: 'Para o teu orientador', // nieuw, nalezen
+    rulesInDutch: 'Como funciona o trabalho aqui, em neerlandês simples. O telemóvel lê em voz alta.', // nieuw, nalezen
+    bridgeTextOne: 'Já sabes muito neerlandês. Em cada tema também podes ler como funciona o trabalho aqui, em neerlandês simples.', // nieuw, nalezen
+    noHelpLanguage: 'Nenhuma: falo neerlandês', // nieuw, nalezen
+    kaartSaid: 'Frases ditas no trabalho', // nieuw, nalezen
+    kaartHard: 'Palavras que ainda são difíceis', // nieuw, nalezen
+    kaartRules: 'Lições sobre como funciona o trabalho aqui', // nieuw, nalezen
     coachCardRights: 'Mostrar pelo nome os temas sobre os teus direitos', // nieuw, nalezen
     speakFromMemory: 'Agora de memória: como era em neerlandês?', // nieuw, nalezen
     keptNofM: 'Palavras de há 2 semanas ou mais: ainda sabias {n} de {m}.', // nieuw, nalezen

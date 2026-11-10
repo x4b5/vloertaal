@@ -467,6 +467,12 @@ const lang: HelpLanguageSource = {
     colleagueCardHint: 'Bunu Hollandaca konuşan bir iş arkadaşına göster. Pratik yapmana nasıl yardım edebileceği yazıyor.', // nieuw, nalezen
     colleagueShare: 'İş arkadaşına gönder', // nieuw, nalezen
     forCoach: 'Danışmanın için', // nieuw, nalezen
+    rulesInDutch: 'Burada işin nasıl yürüdüğü, basit Hollandaca. Telefonun sesli okur.', // nieuw, nalezen
+    bridgeTextOne: 'Artık çok Hollandaca biliyorsun. Her konuda burada işin nasıl yürüdüğünü de basit Hollandaca okuyabilirsin.', // nieuw, nalezen
+    noHelpLanguage: 'Yok: Hollandaca konuşuyorum', // nieuw, nalezen
+    kaartSaid: 'İşte söylediğin cümleler', // nieuw, nalezen
+    kaartHard: 'Hâlâ zor olan kelimeler', // nieuw, nalezen
+    kaartRules: 'Burada işin nasıl yürüdüğüyle ilgili dersler', // nieuw, nalezen
     coachCardRights: 'Haklarınla ilgili konuları adıyla göster', // nieuw, nalezen
     speakFromMemory: 'Şimdi ezberden: Hollandacası neydi?', // nieuw, nalezen
     keptNofM: '2 hafta veya daha önceki kelimeler: {m} kelimeden {n} tanesini hâlâ biliyordun.', // nieuw, nalezen

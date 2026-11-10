@@ -8,6 +8,7 @@ import { demoOn } from './lib/demo';
 import { startScreens } from './lazyScreens';
 import { loadProgress } from './lib/progress';
 import { readTesterParam } from './lib/report';
+import { readOneAppParam } from './lib/oneApp';
 import { reportError, watchErrors } from './lib/errors';
 import { watchForUpdates } from './lib/appUpdate';
 import { applyTheme } from './lib/theme';
@@ -32,6 +33,8 @@ import './cards.css';
 const params = new URLSearchParams(location.search);
 // vloertaal.nl/?test: this phone shows "Iets melden" in lessons (testers; ?test=0 off). src/lib/report.ts
 readTesterParam(location.search);
+// vloertaal.nl/?nieuw=1: "Eén app" on for this phone (fase 1 en 2, off on the site; ?nieuw=0 off). src/lib/oneApp.ts
+readOneAppParam(location.search);
 // Where the app goes wrong, counted without anything about the learner (src/lib/errors.ts).
 watchErrors();
 
