@@ -17,6 +17,18 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-09',
+    items: [
+      'Staat je telefoon op Nederlands? Dan zie je bij de start meteen alle talen, met "Ik spreek al Nederlands" (Werkregels) bovenaan. Wie een andere taal spreekt, vindt de eigen taal in de lijst, in het eigen schrift.',
+      'Van Nederlands leren naar Werkregels wisselen? Dan zie je eerst wat er verandert: alles wordt Nederlands, je hulptaal gaat uit, en je herhaalt regels in plaats van woorden. Je voortgang blijft bewaard, en terug wisselen kan altijd. Tik op "Ja, naar Werkregels" of op Annuleren.',
+      'Werkregels: zei je bij de start waar je werkt? Dan begin je nu bij "Je eerste dag", niet bij "Werk zoeken". "Werk zoeken" komt later in je lespad. Koos je "Weet ik nog niet", dan blijft het zoals het was.',
+      'Nieuw bij Hulp: "Voor je begeleider". Eén tik, en je ziet de kaart die je aan je docent, coach of baas kunt laten zien. Jij kiest wat je laat zien.',
+      'Voor begeleiders: een link naar een onderwerp werkt nu voor iedereen. Stuur je de link van Loon naar iemand die Werkregels volgt, dan opent "Loon en loonstrook", en andersom. Eerder gebeurde er dan niets.',
+      'Voor begeleiders: de pagina voor begeleiders begint nu met "In drie stappen": stuur de link of print het briefje, doe samen de eerste les, en kijk elke week samen naar de kaart. En er is een briefje in het Nederlands, voor wie al Nederlands spreekt (vloertaal.nl/briefje/nl).',
+      'De kaart "Ik spreek al Nederlands" onder de talen heeft geen Nederlandse vlag meer: het is geen taal, maar Werkregels. En bij "In welk land werk je?" staat in Taal nu dat je de woorden en tips van dat land krijgt.',
+    ],
+  },
+  {
     date: '2026-11-08',
     items: [
       'Bram moedigt vaker aan. Wie twee keer achter elkaar "Zeg het" overslaat, ziet Bram nu bij elke spreekopdracht, met steeds een andere zin: "Fouten horen bij leren. Niet begrepen? Zeg het nog een keer.", "Spannend? Dat hoort erbij. Zeg het toch." of "Je hoeft het niet perfect te zeggen. Probeer het gewoon." Spreek je weer in, dan stopt het. De oude zin "Nederlanders begrijpen je ook met fouten" is weg: dat klopt niet altijd.',

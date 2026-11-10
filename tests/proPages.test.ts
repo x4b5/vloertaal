@@ -5,7 +5,7 @@ import { Coaches } from '../src/components/Coaches';
 import { About } from '../src/components/Screens';
 import { aboutIds, aboutSection, aboutRules, aboutSections, CONTACT_EMAIL, PRO_TITLE, siteSections } from '../src/content/about';
 import { COACH_FACTS } from '../src/content/facts';
-import { COACH_PITCH, COACH_WHY, ENTREE_UNITS, PRO_LEAD, proSections } from '../src/content/pro';
+import { COACH_PITCH, COACH_STEPS, COACH_STEPS_TITLE, COACH_WHY, ENTREE_UNITS, PRO_LEAD, proSections } from '../src/content/pro';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import { getHelpLanguage, helpLanguageSources, registerPack, ui } from '../src/i18n/all';
 import nlPack from '../src/i18n/packs/nl';
@@ -88,6 +88,19 @@ describe('Voor begeleiders en werkgevers: in the app and on the site, from one s
     expect(body('p.contact')).toContain(CONTACT_EMAIL);
     // The contact comes last ("Ons adres staat onderaan deze pagina" in the test version's text).
     expect(proSections.at(-1)!.id).toBe('p.contact');
+  });
+
+  it('starts with "In drie stappen", and has the request to look along at the end (review, 9 November 2026)', () => {
+    for (const page of [textOf(app), textOf(site)]) {
+      const steps = page.indexOf(COACH_STEPS_TITLE);
+      expect(steps).toBeGreaterThan(page.indexOf(COACH_WHY));
+      for (const st of COACH_STEPS) expect(page).toContain(`${st.lead} ${st.text}`);
+      // The request comes after the steps and every drawer, in "Meedoen of meedenken?".
+      expect(page.indexOf(PRO_LEAD)).toBeGreaterThan(page.indexOf('Entree en mbo'));
+      expect(page.indexOf(PRO_LEAD)).toBeGreaterThan(page.indexOf('Meedoen of meedenken?'));
+    }
+    // In the app the steps come before the demo.
+    expect(textOf(app).indexOf(COACH_STEPS_TITLE)).toBeLessThan(textOf(app).indexOf('Start de demo'));
   });
 
   it('shows every title, paragraph and line on both, and the facts with their sources', () => {

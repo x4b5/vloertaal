@@ -124,9 +124,54 @@ export function briefjePage(code: PageCode): string {
   );
 }
 
+/**
+ * The note in plain Dutch, for a learner who speaks Dutch already (Werkregels): until 9 November
+ * 2026 there was only a link for them, while a student who reads with difficulty is helped most by
+ * a note with a QR code (review, 9 November 2026). It points to vloertaal.nl/werkregels, whose
+ * button opens the app with "Ik spreek al Nederlands" on top (src/lib/sectorPages.ts rulesPage).
+ */
+export const BRIEFJE_NL = {
+  what: 'Vloertaal is een gratis app over werk in Nederland.',
+  how: 'Je leert de regels: je loon, je contract, ziek zijn en je rechten. Korte lessen op je eigen telefoon. De telefoon leest voor. Geen account.',
+  open: 'Open op je telefoon:',
+} as const;
+/** The Dutch note's own page. */
+export const BRIEFJE_NL_PATH = `${BRIEFJE_PATH}nl/`;
+/** Where it points: the work rules' page, as printed and in the QR code. */
+export const BRIEFJE_NL_SHOWN = `vloertaal.nl${RULES_PATH.replace(/\/$/, '')}`;
+export const BRIEFJE_NL_QR = `${SITE}${RULES_PATH}`;
+
+export function briefjeNlPage(): string {
+  const body = `<div class="scherm" lang="nl" dir="ltr">
+<p><strong>Voor begeleiders:</strong> print dit briefje op A4 (staand) en geef het aan je leerling. Test de QR-code eerst met je eigen telefoon.</p>
+<p><button type="button" onclick="window.print()">Print dit briefje</button> · <a href="${BRIEFJE_PATH}">Andere taal</a></p>
+</div>
+<article class="briefje" dir="ltr">
+<h1>${esc(BRIEFJE_NL.what)}</h1>
+<p class="hoe">${esc(BRIEFJE_NL.how)}</p>
+<div class="open">
+<p>${esc(BRIEFJE_NL.open)}</p>
+<p class="adres"><a href="${RULES_PATH}">${esc(BRIEFJE_NL_SHOWN)}</a></p>
+<div class="qr">${qrSvg(BRIEFJE_NL_QR, `QR-code: ${BRIEFJE_NL_SHOWN}`)}</div>
+</div>
+</article>
+<footer><p><a href="${BRIEFJE_PATH}">Alle talen</a> · <a href="${COACH_PATH}">Voor begeleiders en werkgevers</a> · <a href="${PRIVACY_PATH}">Privacy</a></p></footer>
+<style>${PAGE_STYLE}</style>`;
+  return plainPage(
+    {
+      path: BRIEFJE_NL_PATH, lang: 'nl', ogLocale: 'nl_NL', noindex: true,
+      title: 'Briefje: Nederlands | Vloertaal',
+      description: `${BRIEFJE_NL.what} ${BRIEFJE_NL_SHOWN}`,
+    },
+    body,
+  );
+}
+
 /** /briefje/: what the note is, and a link per language. */
 export function briefjeIndexPage(): string {
-  const items = LANG_PAGES.map((p) => `<li><a href="${briefjePath(p.code)}"><span lang="${p.tag}" dir="${p.dir}">${esc(p.nativeName)}</span> · ${esc(DUTCH_NAME[p.code])}</a></li>`).join('\n');
+  const items = LANG_PAGES.map((p) => `<li><a href="${briefjePath(p.code)}"><span lang="${p.tag}" dir="${p.dir}">${esc(p.nativeName)}</span> · ${esc(DUTCH_NAME[p.code])}</a></li>`).join('\n')
+    // Last: in Dutch, for who speaks Dutch already (Werkregels).
+    + `\n<li><a href="${BRIEFJE_NL_PATH}"><span lang="nl">Nederlands</span> · al Nederlands spreken (Werkregels)</a></li>`;
   const body = `<h1>Een briefje voor dag 1</h1>
 <p class="lead">Print het briefje in de taal van je leerling, op A4. Daarop staat in die taal en in het Nederlands wat Vloertaal is, de link en een QR-code, in grote letters. De leerling houdt het briefje: zo vindt hij of zij de app later terug, ook op een andere telefoon.</p>
 <section aria-labelledby="talen"><h2 id="talen">Kies de taal</h2>
@@ -137,7 +182,7 @@ ${items}
 <ul class="lines">
 <li>Open het briefje en kies Printen (Ctrl+P, of in het menu van je browser): A4, staand.</li>
 <li>Test de QR-code eerst met je eigen telefoon. Hij opent de pagina van Vloertaal in die taal, met de knop om te beginnen.</li>
-<li>Spreekt je leerling al Nederlands? Geef dan de link <a href="${RULES_PATH}">vloertaal.nl/werkregels</a>.</li>
+<li>Spreekt je leerling al Nederlands? Print dan <a href="${BRIEFJE_NL_PATH}">het briefje in het Nederlands</a>, of geef de link <a href="${RULES_PATH}">vloertaal.nl/werkregels</a>.</li>
 </ul></section>
 <footer><p><a href="${COACH_PATH}">Voor begeleiders en werkgevers</a> · <a href="${PRIVACY_PATH}">Privacy</a></p></footer>
 <style>${PAGE_STYLE}</style>`;
@@ -156,5 +201,6 @@ export function briefjeFiles(): { fileName: string; source: string }[] {
   return [
     { fileName: `${BRIEFJE_PATH.slice(1)}index.html`, source: briefjeIndexPage() },
     ...LANG_PAGES.map((p) => ({ fileName: `${briefjePath(p.code).slice(1)}index.html`, source: briefjePage(p.code) })),
+    { fileName: `${BRIEFJE_NL_PATH.slice(1)}index.html`, source: briefjeNlPage() },
   ];
 }

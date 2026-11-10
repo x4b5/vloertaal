@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Unde lucrezi?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'În ce țară lucrezi?',
-    countryHint: 'Primești regulile de muncă din acea țară.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Primești cuvintele și sfaturile din acea țară.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: 'Olanda',
     countryBe: 'Belgia (Flandra)',
     tipsNote: 'Aceste sfaturi sunt despre munca în Olanda. Informații generale, nu consultanță juridică.',
@@ -221,6 +221,11 @@ const lang: HelpLanguageSource = {
     routeLearn: 'Învață olandeză pentru muncă și cum se lucrează aici', // nieuw, nalezen
     routeRules: 'Vorbesc deja olandeză: doar regulile muncii', // nieuw, nalezen
     routeLearnShort: 'Învață olandeză', // nieuw, nalezen
+    switchTitle: 'Treci la Werkregels?', // nieuw, nalezen
+    switchDutch: 'Totul va fi în olandeză. Limba de ajutor se oprește.', // nieuw, nalezen
+    switchReview: 'Până te întorci, repeți reguli, nu cuvinte.', // nieuw, nalezen
+    switchKept: 'Progresul tău rămâne salvat. Te poți întoarce de aici.', // nieuw, nalezen
+    switchGo: 'Da, treci la Werkregels', // nieuw, nalezen
     byTheme: 'Pe teme',
     inOrder: 'În ordine',
     searchTopics: 'Caută un subiect', // nieuw, nalezen
@@ -461,6 +466,13 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'Pentru colegul tău', // nieuw, nalezen
     colleagueCardHint: 'Arată asta unui coleg care vorbește olandeză. Scrie cum te poate ajuta să exersezi.', // nieuw, nalezen
     colleagueShare: 'Trimite-l colegului', // nieuw, nalezen
+    forCoach: 'Pentru îndrumătorul tău', // nieuw, nalezen
+    rulesInDutch: 'Cum se lucrează aici, în olandeză simplă. Telefonul citește cu voce tare.', // nieuw, nalezen
+    bridgeTextOne: 'Acum știi multă olandeză. La fiecare temă poți citi și cum se lucrează aici, în olandeză simplă.', // nieuw, nalezen
+    noHelpLanguage: 'Niciuna: vorbesc olandeză', // nieuw, nalezen
+    kaartSaid: 'Propoziții spuse la muncă', // nieuw, nalezen
+    kaartHard: 'Cuvinte care sunt încă grele', // nieuw, nalezen
+    kaartRules: 'Lecții despre cum se lucrează aici', // nieuw, nalezen
     coachCardRights: 'Arată pe nume subiectele despre drepturile tale', // nieuw, nalezen
     speakFromMemory: 'Acum din memorie: cum era în olandeză?', // nieuw, nalezen
     keptNofM: 'Cuvinte de acum 2 săptămâni sau mai vechi: încă știai {n} din {m}.', // nieuw, nalezen

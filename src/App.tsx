@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { findLesson, playLesson } from './content/curriculum';
+import { findLesson, playLesson, taalCourseUnits } from './content/curriculum';
 import { ensureLanguage, getHelpLanguage, isLanguageLoaded, langTag } from './i18n';
 import { setRulesCountry } from './content/rulesCourse';
 import { Splash } from './components/Splash';
@@ -43,7 +43,10 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
-import { type Country, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, knownLessons, loadProgress, saveProgress, practisedAt, settleStreak, stoppedToTell, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
+import { rulesTwinOf, trackTwin } from './content/trackTwins';
+import { oneAppOn } from './lib/oneApp';
+import { oneDailyCard, oneDailyIds, oneDailyLesson } from './lib/oneReview';
+import { type Country, type Progress, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, knownLessons, loadProgress, saveProgress, practisedAt, settleStreak, stoppedToTell, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dueIds, gradedStepIds, seedCards, strongerCount, keptCount, addLessonSentences, dailyIds, reviewResults, seedSentenceCards, wordResultCount } from './lib/spaced';
 import { gloss } from './i18n';
 import { isInstalled, keepStorageAgain, persistStorage } from './lib/install';
@@ -132,7 +135,8 @@ type View =
   /** Right after "Ja, gelukt": Bram with how many sentences were said at work (n), and the sentence (nl). */
   | { name: 'gelukt-done'; n: number; nl: string }
   /** "Laat zien hoe het gaat": the coach card (src/components/Certificate.tsx CoachCardScreen), from Settings › Taal en ik. */
-  | { name: 'kaart' }
+  /** fromHelp: opened from "Voor je begeleider" on the Hulp tab (that tab stays lit). */
+  | { name: 'kaart'; fromHelp?: boolean }
   /** "Ik ken dit al: korte check" (src/lib/instapCheck.ts): the 5 questions of a topic, and the end. */
   | { name: 'check'; unit: string; seed: number }
   | { name: 'check-result'; unit: string; right: number; total: number }
@@ -491,6 +495,18 @@ export default function App() {
     );
     return () => { live = false; };
   }, [progress.helpLang, langReady, langTry]);
+  // "Eén app" (src/lib/oneApp.ts): a learner of the language course gets the work-rules lessons too,
+  // so their file (the Dutch pack, which registers the rules course) loads in the background. The
+  // screens stay in the help language. Without it, or offline, the topic pages are as before.
+  const oneApp = oneAppOn();
+  const [rulesHere, setRulesHere] = useState(() => isLanguageLoaded('nl'));
+  const learnsLanguage = trackOf(progress) === 'taal';
+  useEffect(() => {
+    if (!oneApp || rulesHere || !learnsLanguage || !langReady) return;
+    let live = true;
+    ensureLanguage('nl').then(() => { if (live) setRulesHere(true); }, () => {});
+    return () => { live = false; };
+  }, [oneApp, rulesHere, learnsLanguage, langReady]);
   // A file that failed to load is not fetched again by the browser in this page: back online (or
   // on the retry button) the page reloads, which is quick and keeps everything.
   useEffect(() => {
@@ -649,10 +665,14 @@ export default function App() {
     // on its Belgian twin, and the other way round (src/content/courses.ts rulesTwinHere).
     const twin = rulesTwinHere(focusUnit);
     if (twin !== focusUnit) { setFocusUnit(twin); return; }
+    // A link to the other track's topic opens the same topic in the learner's own track ("Loon"
+    // and "Loon en loonstrook", src/content/trackTwins.ts): a coach need not know who follows which.
+    const own = trackTwin(focusUnit, trackOf(progress));
+    if (own && own !== focusUnit) { setFocusUnit(own); return; }
     linkHandled.current = true;
     const unit = findUnit(focusUnit);
-    // A topic this app or this track does not have (a link to the other track's topic): the home
-    // stays on the learner's own block.
+    // A topic this app or this track does not have (the other track's topic without a twin): the
+    // home stays on the learner's own block.
     if (!unit || trackOfId(unit.id) !== trackOf(progress)) {
       setFocusUnit(null);
       forgetLinkedUnit();
@@ -720,8 +740,8 @@ export default function App() {
   const hulpTab = () => (
     <>
       {track === 'regels'
-        ? <RulesHelp lang={lang} country={progress.country} onShelf={() => go({ name: 'tips' })} after={mapLink} />
-        : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} onKlanken={() => go({ name: 'klanken' })} onColleague={() => go({ name: 'colleague' })} after={mapLink} />}
+        ? <RulesHelp lang={lang} country={progress.country} onShelf={() => go({ name: 'tips' })} onCoach={() => go({ name: 'kaart', fromHelp: true })} after={mapLink} />
+        : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} onKlanken={() => go({ name: 'klanken' })} onColleague={() => go({ name: 'colleague' })} onCoach={() => go({ name: 'kaart', fromHelp: true })} after={mapLink} />}
       <BottomNav current="words" onTab={tab} lang={lang} />
     </>
   );
@@ -807,7 +827,7 @@ export default function App() {
       const daily = view.lessonId === DAILY_ID;
       // Today's review of the learner's track: words (the language course) or questions (the rules course).
       const found = daily
-        ? { lesson: track === 'regels' ? dailyRuleLesson(view.ids ?? []) : dailyLesson(view.ids ?? [], progress.cards, dayKey(new Date()), { extra: progress.reviewDay === dayKey(new Date()) }) }
+        ? { lesson: track === 'regels' ? dailyRuleLesson(view.ids ?? []) : (oneApp ? oneDailyLesson : dailyLesson)(view.ids ?? [], progress.cards ?? {}, dayKey(new Date()), { extra: progress.reviewDay === dayKey(new Date()) }) }
         : playLesson(view.lessonId, progress.completed, dayNumber(dayKey(new Date())));
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
@@ -827,7 +847,8 @@ export default function App() {
             : addLessonSentences(addLessonWords(cards, found.lesson.words, results, today, written), found.lesson.sentences, results, today) }, now);
         // The lesson's unit is the current block while it is unfinished (see src/lib/route.ts).
         // (A lesson done before, practised again, leaves the block where it is.)
-        if (!daily && !progress.completed[view.lessonId]) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
+        // ("Eén app": a lesson of "Zo werkt het hier" played from the language course leaves its path as it is.)
+        if (!daily && !progress.completed[view.lessonId] && trackOfId(view.lessonId) === track) next.currentUnit = blockAfterLesson(progress.currentUnit, view.lessonId, next.completed);
         // "Wat ken je al?" left on its line under the lesson until its last day on offer: passed over (as "Later").
         if (!daily) { const passed = toetsAfterLesson(progress, next, now); if (passed !== next) next.toets = passed.toets; }
         // The very first lesson: its result shows, once, where the emergency phrases are.
@@ -1007,6 +1028,7 @@ export default function App() {
           <TopicPage
             key={unit.id}
             unit={unit}
+            rulesTwin={oneApp && rulesHere && track === 'taal' ? rulesTwinOf(unit.id) : undefined}
             progress={progress}
             lang={lang}
             access={acc}
@@ -1188,7 +1210,7 @@ export default function App() {
       return (
         <>
           <CoachCardScreen progress={progress} lang={lang} onBack={back} />
-          <BottomNav current="me" onTab={tab} lang={lang} />
+          <BottomNav current={view.fromHelp ? 'words' : 'me'} onTab={tab} lang={lang} />
         </>
       );
     case 'toets-page':
@@ -1290,7 +1312,10 @@ export default function App() {
       const nudge = !notice && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
       // "Waarom leer jij Nederlands?" (src/lib/reason.ts): after 3 lessons, once, when no other card waits.
       const reason = !notice && !bridge && !nudge && reasonDue(progress, lessonsDone);
-      const daily = Object.keys(progress.completed).length || progress.reviewDay ? dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track) : null;
+      // "Eén app": the language course's review counts the rule questions of "Zo werkt het hier" too.
+      const daily = Object.keys(progress.completed).length || progress.reviewDay
+        ? (oneApp && track === 'taal' ? oneDailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track))
+        : null;
       return (
         <>
           <TopBar
@@ -1310,7 +1335,7 @@ export default function App() {
             daily={daily}
             arrived={arrived}
             onArrived={() => setArrived(null)}
-            onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: track === 'regels' ? dailyRuleIds(progress.cards ?? {}, dayKey(new Date())) : dailyIds(progress.cards ?? {}, dayKey(new Date())) })}
+            onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: track === 'regels' ? dailyRuleIds(progress.cards ?? {}, dayKey(new Date())) : (oneApp ? oneDailyIds : dailyIds)(progress.cards ?? {}, dayKey(new Date())) })}
             access={acc}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
             focusUnit={focusUnit}
@@ -1329,7 +1354,9 @@ export default function App() {
             ) : bridge ? (
               <BridgeOffer
                 lang={lang}
-                onGo={() => { setProgress((p) => seeBridge(p)); go({ name: 'settings', page: 'route' }); }}
+                one={oneApp && rulesHere}
+                // "Eén app": no switch of track, but a topic with its "Zo werkt het hier" lessons.
+                onGo={() => { setProgress((p) => seeBridge(p)); const unit = oneApp && rulesHere ? bridgeTopic(progress.completed) : undefined; go(unit ? { name: 'topic', unit } : { name: 'settings', page: 'route' }); }}
                 onLater={() => setProgress((p) => seeBridge(p))}
               />
             ) : nudge ? (
@@ -1352,6 +1379,13 @@ export default function App() {
 function nextTitle(id: string, lang: ReturnType<typeof getHelpLanguage>, minutes?: number) {
   const found = findLesson(id);
   return found ? { ...gloss(id, found.lesson.title, lang), id, minutes } : undefined;
+}
+
+/** "Eén app": the topic the offer at 80% opens: the last finished topic of the language course with
+ *  "Zo werkt het hier" beside it, else the first that has it. */
+function bridgeTopic(completed: Progress['completed']): string | undefined {
+  const withRules = taalCourseUnits().filter((u) => rulesTwinOf(u.id));
+  return [...withRules].reverse().find((u) => unitDone(u, completed))?.id ?? withRules[0]?.id;
 }
 
 function adminRequested(): boolean {

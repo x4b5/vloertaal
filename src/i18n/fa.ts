@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'کجا کار می‌کنید؟',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'در کدام کشور کار می‌کنید؟',
-    countryHint: 'قوانین کار همان کشور را می‌بینید.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'کلمات و نکته‌های همان کشور را می‌بینید.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: 'هلند',
     countryBe: 'بلژیک (فلاندر)',
     tipsNote: 'این نکته‌ها درباره کار در هلند است. اطلاعات کلی است، نه مشاوره حقوقی.',
@@ -221,6 +221,11 @@ const lang: HelpLanguageSource = {
     routeLearn: 'یادگیری هلندی برای کار، و اینکه کار اینجا چطور است', // nieuw, nalezen
     routeRules: 'هلندی بلدم: فقط قوانین کار', // nieuw, nalezen
     routeLearnShort: 'یادگیری هلندی', // nieuw, nalezen
+    switchTitle: 'رفتن به Werkregels؟', // nieuw, nalezen
+    switchDutch: 'همه چیز هلندی می‌شود. زبان کمکی شما خاموش می‌شود.', // nieuw, nalezen
+    switchReview: 'تا وقتی برنگردید، قوانین را مرور می‌کنید، نه کلمات را.', // nieuw, nalezen
+    switchKept: 'پیشرفت شما ذخیره می‌ماند. از همین‌جا می‌توانید برگردید.', // nieuw, nalezen
+    switchGo: 'بله، به Werkregels', // nieuw, nalezen
     byTheme: 'بر اساس بخش‌ها',
     inOrder: 'به ترتیب',
     searchTopics: 'جستجوی موضوع', // nieuw, nalezen
@@ -460,6 +465,13 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'برای همکارتان', // nieuw, nalezen
     colleagueCardHint: 'این را به همکاری که هلندی صحبت می‌کند نشان دهید. در آن نوشته که چطور می‌تواند در تمرین به شما کمک کند.', // nieuw, nalezen
     colleagueShare: 'برای همکارتان بفرستید', // nieuw, nalezen
+    forCoach: 'برای مربی شما', // nieuw, nalezen
+    rulesInDutch: 'کار اینجا چطور است، به هلندی ساده. گوشی آن را بلند می‌خواند.', // nieuw, nalezen
+    bridgeTextOne: 'حالا هلندی زیادی بلدید. در هر موضوع می‌توانید بخوانید کار اینجا چطور است، به هلندی ساده.', // nieuw, nalezen
+    noHelpLanguage: 'هیچ: هلندی صحبت می‌کنم', // nieuw, nalezen
+    kaartSaid: 'جمله‌هایی که سر کار گفتید', // nieuw, nalezen
+    kaartHard: 'کلماتی که هنوز سخت است', // nieuw, nalezen
+    kaartRules: 'درس‌هایی درباره اینکه کار اینجا چطور است', // nieuw, nalezen
     coachCardRights: 'موضوع‌های مربوط به حق‌های شما با نام نشان داده شود', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'حالا از حفظ: به هلندی چه بود؟', // nieuw, nalezen
     keptNofM: 'واژه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را بلد بودید.', // nieuw, nalezen

@@ -1,3 +1,4 @@
+import { useRuleHelp } from '../i18n/regelHulp';
 import { useEffect, useRef } from 'react';
 import type { HelpLanguage } from '../i18n/types';
 import type { CardRow, CardType, DrawnCard, RuleCharacter } from '../content/regels/types';
@@ -5,7 +6,7 @@ import { cardSpeech, payslipCard } from '../content/regels/course';
 import { askWhoCard } from '../content/regels/askWho';
 import { ruleIconId } from '../content/regels/ruleIcons';
 import { ruleAdviceLine, ruleStaleLine } from '../content/regels/disclaimer';
-import { said, ui } from '../i18n';
+import { langTag, said, ui } from '../i18n';
 import { autoSpeakLong, surelySilent } from '../lib/audio';
 import { sayMode } from '../lib/sayAloud';
 import { sentences } from '../lib/dutch';
@@ -153,6 +154,8 @@ export function RuleCard({ ex, lang, onAnswer }: RuleProps<'rule'>) {
   const advice = step.rule === 'geschreven' ? ruleAdviceLine(step.id) : undefined;
   // The law check more than 90 days old: its month and where to look (src/content/lawAge.ts).
   const stale = step.rule === 'geschreven' ? ruleStaleLine(step.id) : undefined;
+  // Fase 2 ("Eén app"): the title in the help language too, under the Dutch (src/i18n/regelHulp).
+  const help = useRuleHelp(lang)(step.title);
   return (
     <div className="exercise rule-card">
       <div className="rule-badges">
@@ -168,6 +171,7 @@ export function RuleCard({ ex, lang, onAnswer }: RuleProps<'rule'>) {
       <div className="rule-label">
         <span className="rule-label-tape" aria-hidden />
         <h2 className="prompt rule-title" lang="nl">{step.title}</h2>
+        {help && lang && <p className="rule-title-help" lang={langTag(lang.code)} dir={lang.dir}>{help}</p>}
         <div className="rule-body">
           {/* A dialect word card (regio): no speaker, the words marked as Limburgish. */}
           <p lang="nl">{step.body.map((line, i) => <span key={i} className="rule-line">{step.dialect ? <DialectLine line={line} /> : line}</span>)}</p>

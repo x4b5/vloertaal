@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Де ти працюєш?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'У якій країні ти працюєш?',
-    countryHint: 'Ти отримаєш правила роботи цієї країни.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Ти отримаєш слова й поради цієї країни.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: 'Нідерланди',
     countryBe: 'Бельгія (Фландрія)',
     tipsNote: 'Ці поради — про роботу в Нідерландах. Це загальна інформація, а не юридична порада.',
@@ -221,6 +221,11 @@ const lang: HelpLanguageSource = {
     routeLearn: 'Вивчати нідерландську для роботи і те, як тут влаштована робота', // nieuw, nalezen
     routeRules: 'Я вже говорю нідерландською: лише правила роботи', // nieuw, nalezen
     routeLearnShort: 'Вивчати нідерландську', // nieuw, nalezen
+    switchTitle: 'Перейти до Werkregels?', // nieuw, nalezen
+    switchDutch: 'Усе буде нідерландською. Мова підказок вимкнеться.', // nieuw, nalezen
+    switchReview: 'Поки не повернешся, ти повторюєш правила, а не слова.', // nieuw, nalezen
+    switchKept: 'Твій поступ збережеться. Повернутися можна тут.', // nieuw, nalezen
+    switchGo: 'Так, до Werkregels', // nieuw, nalezen
     byTheme: 'За розділами',
     inOrder: 'По порядку',
     searchTopics: 'Пошук теми', // nieuw, nalezen
@@ -461,6 +466,13 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'Для колеги', // nieuw, nalezen
     colleagueCardHint: 'Покажи це колезі, який говорить нідерландською. Тут написано, як він може допомогти тобі практикуватися.', // nieuw, nalezen
     colleagueShare: 'Надіслати колезі', // nieuw, nalezen
+    forCoach: 'Для твого наставника', // nieuw, nalezen
+    rulesInDutch: 'Як тут влаштована робота, простою нідерландською. Телефон читає вголос.', // nieuw, nalezen
+    bridgeTextOne: 'Ти вже знаєш багато нідерландської. У кожній темі можна також прочитати, як тут влаштована робота, простою нідерландською.', // nieuw, nalezen
+    noHelpLanguage: 'Жодної: я говорю нідерландською', // nieuw, nalezen
+    kaartSaid: 'Речення, сказані на роботі', // nieuw, nalezen
+    kaartHard: 'Слова, які ще важкі', // nieuw, nalezen
+    kaartRules: 'Уроки про те, як тут влаштована робота', // nieuw, nalezen
     coachCardRights: 'Показувати назви тем про твої права', // nieuw, nalezen
     speakFromMemory: 'Тепер напам’ять: як це було нідерландською?', // nieuw, nalezen
     keptNofM: 'Слова двотижневої давності й старші: ти ще пам’ятаєш {n} з {m}.', // nieuw, nalezen

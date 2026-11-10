@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Où travailles-tu ?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Dans quel pays travailles-tu ?',
-    countryHint: 'Tu reçois alors les règles du travail de ce pays.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Tu reçois alors les mots et les conseils de ce pays.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: 'Pays-Bas',
     countryBe: 'Belgique (Flandre)',
     tipsNote: 'Ces conseils parlent du travail aux Pays-Bas. Ce sont des informations générales, pas un conseil juridique.',
@@ -221,6 +221,11 @@ const lang: HelpLanguageSource = {
     routeLearn: 'Apprendre le néerlandais pour le travail, et comment le travail se passe ici', // nieuw, nalezen
     routeRules: 'Je parle déjà néerlandais : seulement les règles du travail', // nieuw, nalezen
     routeLearnShort: 'Apprendre le néerlandais', // nieuw, nalezen
+    switchTitle: 'Passer à Werkregels ?', // nieuw, nalezen
+    switchDutch: 'Tout sera en néerlandais. Ta langue d’aide s’arrête.', // nieuw, nalezen
+    switchReview: 'Jusqu’à ton retour, tu révises des règles, pas des mots.', // nieuw, nalezen
+    switchKept: 'Ta progression reste enregistrée. Tu peux revenir ici.', // nieuw, nalezen
+    switchGo: 'Oui, aller à Werkregels', // nieuw, nalezen
     byTheme: 'Par thème',
     inOrder: 'Dans l’ordre',
     searchTopics: 'Chercher un sujet', // nieuw, nalezen
@@ -461,6 +466,13 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'Pour ton collègue', // nieuw, nalezen
     colleagueCardHint: 'Montre ceci à un collègue qui parle néerlandais. Il y est écrit comment il peut t’aider à t’entraîner.', // nieuw, nalezen
     colleagueShare: 'Envoie-le à ton collègue', // nieuw, nalezen
+    forCoach: 'Pour ton conseiller', // nieuw, nalezen
+    rulesInDutch: 'Comment le travail se passe ici, en néerlandais simple. Le téléphone le lit à voix haute.', // nieuw, nalezen
+    bridgeTextOne: 'Tu connais maintenant beaucoup de néerlandais. Pour chaque thème, tu peux aussi lire comment le travail se passe ici, en néerlandais simple.', // nieuw, nalezen
+    noHelpLanguage: 'Aucune : je parle néerlandais', // nieuw, nalezen
+    kaartSaid: 'Phrases dites au travail', // nieuw, nalezen
+    kaartHard: 'Mots encore difficiles', // nieuw, nalezen
+    kaartRules: 'Leçons sur la façon dont le travail se passe ici', // nieuw, nalezen
     coachCardRights: 'Afficher le nom des sujets sur tes droits', // nieuw, nalezen
     speakFromMemory: 'Maintenant de mémoire : c’était quoi en néerlandais ?', // nieuw, nalezen
     keptNofM: 'Mots d’il y a 2 semaines ou plus : tu en connaissais encore {n} sur {m}.', // nieuw, nalezen

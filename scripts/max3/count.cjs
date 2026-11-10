@@ -185,6 +185,8 @@ function defineStates(LANG) {
   add('onb:language', shot('language', null), null, { list: true }); // no guess from the phone: the list
   add('onb:language-guess', shot(`language&guess=${LANG}`, null)); // "Polski?" [Yes] [Other language]
   add('onb:language-list', shot(`language&guess=${LANG}&list=1`, null), null, { list: true, expect: '.chrome-back' }); // the list, with Back
+  // A phone set to Dutch: the list with "Ik spreek al Nederlands" on top (review, 9 November 2026).
+  add('onb:language-nl-top', shot('language&nl=1', null), null, { list: true, expect: '.onb-nl-top .lang-btn-nl' });
   add('onb:gate', shot('gate'));
   add('onb:gate-typed', shot('gate'), async (p) => { await p.fill('.pw-input', 'abc'); await settle(p, 200); });
   add('onb:gate-try', shot('gate&try=1'), async (p) => { await p.fill('.pw-input', 'abc'); await settle(p, 200); }, { expect: '.gate-try' });
@@ -207,13 +209,16 @@ function defineStates(LANG) {
   };
   // The real first page is the language (since 1 November 2026); "Ik spreek al Nederlands" is the
   // last card of the list (since 2 November 2026; before, a page "Wat wil je leren?" followed).
+  // The test browser is Dutch: the real first page is the list, "Ik spreek al Nederlands" on top
+  // (since 9 November 2026).
   const toLangs = async () => {};
-  const pickLang = async (p, name) => { await tapText(p, 'button', name); await settle(p); };
+  const pickLang = async (p, name) => { await toLangs(p); await tapText(p, 'button', name); await settle(p); };
+  add('flow:language-nl-top', '/', null, { list: true, expect: '.onb-nl-top .lang-btn-nl' });
   add('flow:language', '/', toLangs, { list: true });
-  add('flow:lang-list', '/', async (p) => { if (await p.$('.lang-guess')) { await tap(p, '.lang-guess .max3-card', 1); await settle(p); } }, { list: true, expect: '.onb-lang-list .lang-btn-nl' });
+  add('flow:lang-list', '/', async (p) => { await toLangs(p); if (await p.$('.lang-guess')) { await tap(p, '.lang-guess .max3-card', 1); await settle(p); } }, { list: true, expect: '.onb-lang-list .lang-btn-nl' });
   // "Is your language missing?" (since 2 November 2026): a field and Send, then thanks and back.
-  add('flow:missing-lang', '/', async (p) => { await tap(p, '.lang-btn-missing'); await settle(p); }, { expect: '.missing-input' });
-  add('flow:missing-lang-back', '/', async (p) => { await tap(p, '.lang-btn-missing'); await settle(p); await p.goBack(); await settle(p); }, { list: true, expect: '.onb-lang-list' });
+  add('flow:missing-lang', '/', async (p) => { await toLangs(p); await tap(p, '.lang-btn-missing'); await settle(p); }, { expect: '.missing-input' });
+  add('flow:missing-lang-back', '/', async (p) => { await toLangs(p); await tap(p, '.lang-btn-missing'); await settle(p); await p.goBack(); await settle(p); }, { list: true, expect: '.onb-lang-list' });
   // The language picked: "Woman or man?" first for a help language with gender, then the sector.
   // Open to all since 28 October 2026 (src/lib/access.ts OPEN_TO_ALL): no password page in the
   // first run any more (the page itself is still checked with ?shot=gate, onb:gate*).

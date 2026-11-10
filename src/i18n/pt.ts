@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Onde trabalhas?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Em que país trabalhas?',
-    countryHint: 'Recebes as regras de trabalho desse país.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Recebes as palavras e as dicas desse país.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: 'Países Baixos',
     countryBe: 'Bélgica (Flandres)',
     tipsNote: 'Estas dicas são sobre o trabalho nos Países Baixos. Informação geral, não é aconselhamento jurídico.',
@@ -221,6 +221,11 @@ const lang: HelpLanguageSource = {
     routeLearn: 'Aprender neerlandês para o trabalho, e como funciona o trabalho aqui', // nieuw, nalezen
     routeRules: 'Já falo neerlandês: só as regras do trabalho', // nieuw, nalezen
     routeLearnShort: 'Aprender neerlandês', // nieuw, nalezen
+    switchTitle: 'Mudar para Werkregels?', // nieuw, nalezen
+    switchDutch: 'Tudo fica em neerlandês. A tua língua de ajuda desliga-se.', // nieuw, nalezen
+    switchReview: 'Até voltares, revês regras, não palavras.', // nieuw, nalezen
+    switchKept: 'O teu progresso fica guardado. Podes voltar aqui.', // nieuw, nalezen
+    switchGo: 'Sim, ir para Werkregels', // nieuw, nalezen
     byTheme: 'Por capítulo',
     inOrder: 'Por ordem',
     searchTopics: 'Procurar um tema', // nieuw, nalezen
@@ -461,6 +466,13 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'Para o teu colega', // nieuw, nalezen
     colleagueCardHint: 'Mostra isto a um colega que fala neerlandês. Diz como te pode ajudar a praticar.', // nieuw, nalezen
     colleagueShare: 'Envia ao teu colega', // nieuw, nalezen
+    forCoach: 'Para o teu orientador', // nieuw, nalezen
+    rulesInDutch: 'Como funciona o trabalho aqui, em neerlandês simples. O telemóvel lê em voz alta.', // nieuw, nalezen
+    bridgeTextOne: 'Já sabes muito neerlandês. Em cada tema também podes ler como funciona o trabalho aqui, em neerlandês simples.', // nieuw, nalezen
+    noHelpLanguage: 'Nenhuma: falo neerlandês', // nieuw, nalezen
+    kaartSaid: 'Frases ditas no trabalho', // nieuw, nalezen
+    kaartHard: 'Palavras que ainda são difíceis', // nieuw, nalezen
+    kaartRules: 'Lições sobre como funciona o trabalho aqui', // nieuw, nalezen
     coachCardRights: 'Mostrar pelo nome os temas sobre os teus direitos', // nieuw, nalezen
     speakFromMemory: 'Agora de memória: como era em neerlandês?', // nieuw, nalezen
     keptNofM: 'Palavras de há 2 semanas ou mais: ainda sabias {n} de {m}.', // nieuw, nalezen

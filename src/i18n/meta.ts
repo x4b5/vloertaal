@@ -61,8 +61,9 @@ export const LANG_CODES: readonly LangCode[] = languageMeta.map((l) => l.code);
 /**
  * "Nederlands – ik spreek al Nederlands": the work-rules track (src/lib/track.ts). Not a help
  * language, so not in languageMeta (or LANG_CODES): the language list shows it as its own option,
- * only while RULES_TRACK is on, and the phone's languages never guess it (many learners have
- * a Dutch phone).
+ * only while RULES_TRACK is on. The phone's languages never guess it as a help language: a phone
+ * that puts Dutch first gets the list at once with this card on top (src/lib/langGuess.ts
+ * dutchFirst), never a question in Dutch, which a newcomer with a Dutch phone could not read.
  */
 export const NL_META: LangMeta<'nl'> = {
   code: 'nl',

@@ -8,6 +8,8 @@ import '../melding.css';
 
 /** The card's Dutch line (also read aloud). */
 export const BRIDGE_NL = 'Je kent nu veel Nederlands. Wil je ook de werkregels leren? Dan is alles in het Nederlands.';
+/** "Eén app" (src/lib/oneApp.ts): no switch, the rules are beside each topic. */
+export const BRIDGE_NL_ONE = 'Je kent nu veel Nederlands. Bij elk onderwerp kun je nu ook lezen hoe werken hier gaat, in eenvoudig Nederlands.';
 
 /**
  * "Van Taal naar Werkregels" (src/lib/bridge.ts): a calm card at the top of the home, once, in the
@@ -16,9 +18,10 @@ export const BRIDGE_NL = 'Je kent nu veel Nederlands. Wil je ook de werkregels l
  * in the help language, then [Ja, laat zien] (that Settings page, where the learner chooses) and
  * [Later]; with "Ander onderwerp" under it, three things to tap.
  */
-export function BridgeOffer({ lang, onGo, onLater }: { lang?: HelpLanguage; onGo: () => void; onLater: () => void }) {
+export function BridgeOffer({ lang, onGo, onLater, one = false }: { lang?: HelpLanguage; onGo: () => void; onLater: () => void; /** "Eén app": the lessons beside each topic, not a switch. */ one?: boolean }) {
   const rtl = lang?.dir === 'rtl';
-  const text = ui('bridgeText', lang);
+  const text = ui(one ? 'bridgeTextOne' : 'bridgeText', lang);
+  const nl = one ? BRIDGE_NL_ONE : BRIDGE_NL;
   return (
     <section className="notice-card bridge-card" aria-labelledby="bridge-title" dir={rtl ? 'rtl' : undefined}>
       <div className="notice-head">
@@ -29,10 +32,10 @@ export function BridgeOffer({ lang, onGo, onLater }: { lang?: HelpLanguage; onGo
       </div>
       <div className="notice-text">
         <p className="notice-line">
-          <NlPair nlFirst content dir="ltr" nl={BRIDGE_NL} nlClass="notice-text-nl" className="notice-text-help" text={text} />
+          <NlPair nlFirst content dir="ltr" nl={nl} nlClass="notice-text-nl" className="notice-text-help" text={text} />
         </p>
         <span className="notice-say">
-          <SpeakButton text={BRIDGE_NL} long needsDevice help={lang} />
+          <SpeakButton text={nl} long needsDevice help={lang} />
           <HelpSay text={text.help} lang={lang} />
         </span>
       </div>

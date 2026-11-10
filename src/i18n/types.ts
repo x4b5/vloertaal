@@ -111,6 +111,12 @@ export const uiEn = {
   routeLearn: "Learn Dutch for work, and how work goes here",
   routeRules: "I already speak Dutch: only the work rules",
   routeLearnShort: "Learn Dutch",
+  /* "Naar Werkregels?" (Settings, page 'switch'): what changes before the switch from the language course. */
+  switchTitle: 'Switch to Werkregels?',
+  switchDutch: 'Everything will be in Dutch. Your help language goes off.',
+  switchReview: 'Until you switch back, you review rules, not words.',
+  switchKept: 'Your progress stays saved. You can switch back here.',
+  switchGo: 'Yes, go to Werkregels',
   topicsOrder: "Show the topics",
   byTheme: "By theme",
   inOrder: "In order",
@@ -129,7 +135,7 @@ export const uiEn = {
   sector: 'Your work',
   chooseSector: 'Where do you work?',
   countryTitle: 'Which country do you work in?',
-  countryHint: 'You get the work rules of that country.',
+  countryHint: 'You get the words and tips of that country.',
   countryNl: 'The Netherlands',
   countryBe: 'Belgium (Flanders)',
   tipsNote: 'These tips are about work in the Netherlands. General information, not legal advice.',
@@ -595,6 +601,15 @@ export const uiEn = {
   colleagueCard: 'For your colleague',
   colleagueCardHint: 'Show this to a colleague who speaks Dutch. It says how they can help you practise.',
   colleagueShare: 'Send it to your colleague',
+  /* "Voor je begeleider" (the Hulp tab): opens the coach card ("Laat zien hoe het gaat"). */
+  forCoach: 'For your coach',
+  /* "Eén app" (src/lib/oneApp.ts): the work rules beside a language topic, the offer at 80%, "no help language", the coach card's new lines. */
+  rulesInDutch: 'How work goes here, in simple Dutch. Your phone reads it aloud.',
+  bridgeTextOne: 'You know a lot of Dutch now. With every topic you can also read how work goes here, in simple Dutch.',
+  noHelpLanguage: 'None: I speak Dutch',
+  kaartSaid: 'Sentences said at work',
+  kaartHard: 'Words that are still hard',
+  kaartRules: 'Lessons about how work goes here',
   /* The coach card (src/components/Certificate.tsx CoachCardScreen): a topic about rights named or not. */
   coachCardRights: 'Show topics about your rights by name',
   /* Speaking (src/components/Speaking.tsx): "say it again" is said from memory. */

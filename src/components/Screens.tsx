@@ -54,7 +54,9 @@ import { useVoices } from './useVoices';
 import { voiceCreditLine, voiceCredits } from '../lib/voiceCredits';
 import { setTesterSwitch, testerSwitch } from '../lib/report';
 import { ChoiceCards } from './Choice';
-import { phoneHelpLang } from '../lib/langGuess';
+import { phoneDutchFirst, phoneHelpLang } from '../lib/langGuess';
+import { CoachHubCard } from './CoachHubCard';
+import { useRuleHelp } from '../i18n/regelHulp';
 import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
 import { KlankHubIcon } from './KlankScreens';
@@ -74,7 +76,10 @@ import type { WorkTryLine } from '../lib/workTry';
  *  native name, and what the page is in before a language is chosen): Arabic, Bulgarian, Dari … */
 const PICKER_ORDER = [...languageMeta].sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
-export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang, onMissing }: {
+export function LanguagePicker({ current, onPick, showBeta = false, compact = false, lang, onMissing, none = false }: {
+  /** "Eén app" (src/lib/oneApp.ts, Settings): a last row "Geen: ik spreek Nederlands" ('nl'), the
+   *  help language off, as one more choice of the same list instead of a question of its own. */
+  none?: boolean;
   /** First run: a last card "Is your language missing?" (src/lib/missingLang.ts). */
   onMissing?: () => void;
   /** The help language in use (Settings): the "in review" tag is written in it. */
@@ -122,6 +127,16 @@ export function LanguagePicker({ current, onPick, showBeta = false, compact = fa
     <div className={`lang-grid ${compact ? 'lang-grid-compact' : ''}`} role="group" aria-label={said(ask)}>
       {PICKER_ORDER.map((l) => option(l.code, l.nativeName, dutch ? null : l.name, l.dir, showBeta && !l.reviewed && !dutch))}
       {option(null, 'English', ui('englishOnly').en, 'ltr', false, lang?.ui.englishOnly)}
+      {none && (
+        <button key="nl" type="button" className={`lang-btn lang-btn-none ${current === 'nl' ? 'picked' : ''}`} onClick={() => onPick('nl')} aria-pressed={current === 'nl'}>
+          <span className="lang-mark lang-mark-rules" aria-hidden><WordPicture id="w.contract" emoji="📘" size={26} /></span>
+          <span className="lang-names">
+            <span className="lang-native" lang="nl">Geen: ik spreek Nederlands</span>
+            {!dutch && lang?.ui.noHelpLanguage && <HelpText className="lang-en" text={lang.ui.noHelpLanguage as string} lang={lang} />}
+          </span>
+          {current === 'nl' && <CheckIcon size={20} className="lang-check" />}
+        </button>
+      )}
       {/* Not a language: a dashed card on the whole width, after English. */}
       {onMissing && (
         <button key="missing" type="button" className="lang-btn lang-btn-missing" onClick={onMissing} lang="en">
@@ -148,7 +163,8 @@ export const NL_KNOWN = 'Ik spreek al Nederlands';
 export function NlCard({ onPick }: { onPick: () => void }) {
   return (
     <button type="button" className="lang-btn lang-btn-nl" onClick={onPick} lang="nl">
-      <LangMark code="nl" />
+      {/* The contract of the work rules, not the Dutch flag: this is no language (review, 9 November 2026). */}
+      <span className="lang-mark lang-mark-rules" aria-hidden><WordPicture id="w.contract" emoji="📘" size={30} /></span>
       <span className="lang-names">
         <span className="lang-nl-tag">Werkregels</span>
         <span className="lang-native">{NL_KNOWN}</span>
@@ -182,17 +198,24 @@ function LangMark({ code }: { code: UiCode | null }) {
  * name in its own script (the list is the one place with more than three choices), one under the
  * other in a box that scrolls inside (ScrollBox). Under the box, at the bottom of the screen,
  * "Ik spreek al Nederlands": the work-rules track (the owner's choice, 2 November 2026; before,
- * a page "Wat wil je leren?" came after the language). The gender question, the sector and the
+ * a page "Wat wil je leren?" came after the language). On a phone that puts Dutch first, the list
+ * comes at once with that card on top (9 November 2026). The gender question, the sector and the
  * country follow on their own pages (App.tsx).
  */
-export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = false }: {
+export function Onboarding({ onDone, guess = phoneHelpLang(), dutch = phoneDutchFirst(), startWithList = false }: {
   onDone: (code: UiCode | null) => void;
   /** The guessed help language (from navigator.languages); null = no guess, the list right away. */
   guess?: LangCode | null;
+  /** The phone puts Dutch first (src/lib/langGuess.ts dutchFirst): the list at once, "Ik spreek al Nederlands" on top. */
+  dutch?: boolean;
   /** Back from the next page: open on the list (the guess was already seen). */
   startWithList?: boolean;
 }) {
-  const [list, setList] = useState(startWithList || !guess);
+  /** The phone puts Dutch first: the list at once, with "Ik spreek al Nederlands" at the top. Not a
+   *  question in Dutch: who does not read Dutch could not read it either (the owner, 9 November
+   *  2026). Every name in the list is in its own script, so everyone finds their own. */
+  const nlTop = dutch && rulesTrackOn();
+  const [list, setList] = useState(startWithList || !guess || nlTop);
   /** "Is your language missing?" open (its own page, with its own history entry). */
   const [missing, setMissing] = useState(false);
   useEffect(() => {
@@ -206,7 +229,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   // Nothing is chosen yet: the English stays next to every line.
   useEffect(() => { applyEnglish(null); }, []);
   // The list after the guess has its own history entry: the phone's Back returns to the guess.
-  const hasGuess = Boolean(guess);
+  const hasGuess = Boolean(guess) && !nlTop;
   useEffect(() => {
     if (!list || !hasGuess) return;
     if (!(history.state as { langList?: number } | null)?.langList) pushSubStep({ langList: 1 });
@@ -232,11 +255,17 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
   if (list || !g) {
     return (
       <div className="screen onboarding max3-page onb-lang-list">
-        {g && <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />}
+        {g && !nlTop && <ChromeHead onBack={() => ((history.state as { langList?: number } | null)?.langList ? history.back() : setList(false))} />}
         <div className="hero">
           <h1 className="hero-logo"><LogoMark size={52} /><Wordmark /></h1>
           <p className="tagline" lang="en">{ui('appTagline').en}</p>
         </div>
+        {/* A phone that puts Dutch first: "Ik spreek al Nederlands" on top, above the question. */}
+        {nlTop && (
+          <div className="onb-nl-dock onb-nl-top">
+            <NlCard onPick={() => onDone('nl')} />
+          </div>
+        )}
         <h2 className="onboarding-title" lang="en">{ui('chooseLanguage').en}</h2>
         {/* The languages in a framed box that scrolls inside, with a scroll bar that is always
             there (the owner's request, 2 November 2026: a clear menu); under it, outside the box,
@@ -244,7 +273,7 @@ export function Onboarding({ onDone, guess = phoneHelpLang(), startWithList = fa
         <ScrollBox className="lang-box" moreLabel="More languages">
           <LanguagePicker onPick={onDone} onMissing={() => setMissing(true)} />
         </ScrollBox>
-        {rulesTrackOn() && (
+        {rulesTrackOn() && !nlTop && (
           <div className="onb-nl-dock">
             <NlCard onPick={() => onDone('nl')} />
           </div>
@@ -389,13 +418,15 @@ export function BottomNav({ current, onTab, lang }: { current: Tab; onTab: (tab:
 
 /** "Hulp" tab: opens straight onto the emergency phrases; the workplace tips are below them.
  *  `after`: one more link below them (the region's Sociale kaart, src/components/SocialMap.tsx). */
-export function WordsHub({ lang, onTips, onKlanken, onColleague, after }: {
+export function WordsHub({ lang, onTips, onKlanken, onColleague, onCoach, after }: {
   lang?: HelpLanguage;
   onTips: () => void;
   /** "Hoe zeg je het?": every sound card (src/components/KlankScreens.tsx). */
   onKlanken?: () => void;
   /** "Voor je collega" (src/components/ColleagueCard.tsx). */
   onColleague?: () => void;
+  /** "Voor je begeleider": the coach card ("Laat zien hoe het gaat"), one tap from Hulp. */
+  onCoach?: () => void;
   after?: React.ReactNode;
 }) {
   return (
@@ -408,31 +439,44 @@ export function WordsHub({ lang, onTips, onKlanken, onColleague, after }: {
       </div>
       <p className="muted hub-hint"><Bi text={ui('phrasebookHint', lang)} /><HelpSay text={ui('phrasebookHint', lang).help} lang={lang} /></p>
       <PhraseList lang={lang} />
-      <button type="button" className="hub-card hub-tips" onClick={onTips}>
-        <span className="hub-icon" aria-hidden><WordPicture id="w.afspraak" emoji="💡" size={34} /></span>
-        <span className="hub-text">
-          <NlPair nlFirst nl="Zo werkt het hier" nlClass="hub-nl" text={ui('cultureTips', lang)} />
-        </span>
-        <ChevronIcon size={24} />
-      </button>
-      {onKlanken && (
-        <button type="button" className="hub-card hub-klank" onClick={onKlanken}>
-          <span className="hub-icon" aria-hidden><KlankHubIcon /></span>
-          <span className="hub-text">
-            <NlPair nlFirst nl="Hoe zeg je het?" nlClass="hub-nl" text={ui('klankTitle', lang)} />
-          </span>
-          <ChevronIcon size={24} />
-        </button>
-      )}
-      {onColleague && (
-        <button type="button" className="hub-card hub-colleague" onClick={onColleague}>
-          <span className="hub-icon" aria-hidden><WordPicture id="w.collega" emoji="🧑‍🤝‍🧑" size={34} /></span>
-          <span className="hub-text">
-            <NlPair nlFirst nl="Voor je collega" nlClass="hub-nl" text={ui('colleagueCard', lang)} />
-          </span>
-          <ChevronIcon size={24} />
-        </button>
-      )}
+      {/* The pages behind Hulp, one kind of row each: a list (the named exception to "at most three",
+          since "Voor je begeleider" made it four; review, 9 November 2026). */}
+      <ul className="hub-links">
+        <li>
+          <button type="button" className="hub-card hub-tips" onClick={onTips}>
+            <span className="hub-icon" aria-hidden><WordPicture id="w.afspraak" emoji="💡" size={34} /></span>
+            <span className="hub-text">
+              <NlPair nlFirst nl="Zo werkt het hier" nlClass="hub-nl" text={ui('cultureTips', lang)} />
+            </span>
+            <ChevronIcon size={24} />
+          </button>
+        </li>
+        {onKlanken && (
+          <li>
+            <button type="button" className="hub-card hub-klank" onClick={onKlanken}>
+              <span className="hub-icon" aria-hidden><KlankHubIcon /></span>
+              <span className="hub-text">
+                <NlPair nlFirst nl="Hoe zeg je het?" nlClass="hub-nl" text={ui('klankTitle', lang)} />
+              </span>
+              <ChevronIcon size={24} />
+            </button>
+          </li>
+        )}
+        {onColleague && (
+          <li>
+            <button type="button" className="hub-card hub-colleague" onClick={onColleague}>
+              <span className="hub-icon" aria-hidden><WordPicture id="w.collega" emoji="🧑‍🤝‍🧑" size={34} /></span>
+              <span className="hub-text">
+                <NlPair nlFirst nl="Voor je collega" nlClass="hub-nl" text={ui('colleagueCard', lang)} />
+              </span>
+              <ChevronIcon size={24} />
+            </button>
+          </li>
+        )}
+        {/* The coach card one tap away (review, 9 November 2026: three taps deep in Settings, every
+            week, for every learner). The same card as Settings › Taal en ik › "Laat zien hoe het gaat". */}
+        {onCoach && <li><CoachHubCard lang={lang} onOpen={onCoach} /></li>}
+      </ul>
       <WorkContacts lang={lang} />
       {after}
     </div>
@@ -901,6 +945,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
   lang?: HelpLanguage;
   onDone: () => void;
 }) {
+  // Fase 2 ("Eén app"): the "Onthoud" in the help language too, under the Dutch (src/i18n/regelHulp).
+  const rememberHelp = useRuleHelp(lang)(remember ?? '');
   // The cards pop in together with their final numbers: a still frame never shows "0 / 11"
   // or "+0" (the numbers are what the learner came for, not a counter).
   const shownRight = right;
@@ -977,6 +1023,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           <div className="result-remember" lang="nl">
             <span className="result-remember-label">Onthoud</span>
             <p className="result-remember-text">{remember}</p>
+            {rememberHelp && lang && <p className="result-remember-help" lang={langTag(lang.code)} dir={lang.dir}>{rememberHelp}</p>}
             <SpeakButton text={remember} long needsDevice glyph help={lang} />
           </div>
         )}

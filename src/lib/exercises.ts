@@ -1083,6 +1083,10 @@ export function snapExercise(lesson: Lesson, rng: () => number, fits: (s: Senten
  * line? Only with it, and with speaking on and sound on, a lesson gets "Wat zeg je?" (see withTurn).
  */
 export function buildLesson(lesson: Lesson, opts: LessonOptions): Exercise[] {
+  // "Eén app" (src/lib/oneReview.ts): today's review of words with rule questions after them.
+  if (lesson.id === DAILY_ID && lesson.words.length && lesson.steps?.length) {
+    return [...buildLesson({ ...lesson, steps: undefined }, opts), ...buildRuleLesson({ ...lesson, words: [] }, { seed: opts.seed, review: true })];
+  }
   const list = lessonExercises(lesson, opts);
   const sounds = klankStepsFor(lesson, opts.review);
   return sounds.length ? [...sounds, ...list] : list;

@@ -1,7 +1,7 @@
 import { CONTACT_EMAIL } from '../content/about';
 import { COUNTER_SITE, VIA } from './countSite';
 import { COACH_FACTS } from '../content/facts';
-import { COACH_PITCH, COACH_WHY, coachShareLinks, PRO_LEAD, proLayout, proSections, type ProBlock, type ProSection } from '../content/pro';
+import { COACH_PITCH, COACH_STEPS, COACH_STEPS_TITLE, COACH_WHY, coachShareLinks, PRO_LEAD, proLayout, proSections, type ProBlock, type ProSection } from '../content/pro';
 import { THEMES } from '../content/themes';
 import { KUN_REGELS, KUN_TAAL, niveauLabel, type KunOnderwerp } from '../content/kunJeNu';
 import { languageNav } from './langPages';
@@ -42,6 +42,7 @@ function kunTables(): string {
 function section(s: ProSection): string {
   const id = s.id.slice(2);
   let inner = [
+    ...(s.lead ? [`<p>${text(s.lead)}</p>`] : []),
     ...s.body.map((p) => `<p>${text(p)}</p>`),
     s.lines ? `<ul class="lines">${s.lines.map((l) => `<li><strong>${esc(l.lead)}</strong> ${text(l.text)}</li>`).join('')}</ul>` : '',
   ].join('\n');
@@ -60,6 +61,15 @@ function section(s: ProSection): string {
         : '';
   return `<section aria-labelledby="${id}"><h2 id="${id}">${esc(s.title)}</h2>
 ${[inner, extra].filter(Boolean).join('\n')}</section>`;
+}
+
+/** "In drie stappen" (src/content/pro.ts COACH_STEPS), first on the page, with the two addresses as links. */
+function stepsSection(): string {
+  const linked = (t: string) => text(t)
+    .replace('vloertaal.nl/pl', '<a href="/pl/">vloertaal.nl/pl</a>')
+    .replace('vloertaal.nl/briefje', '<a href="/briefje/">vloertaal.nl/briefje</a>');
+  return `<section aria-labelledby="steps"><h2 id="steps">${esc(COACH_STEPS_TITLE)}</h2>
+<ol class="lines">${COACH_STEPS.map((st) => `<li><strong>${esc(st.lead)}</strong> ${linked(st.text)}</li>`).join('')}</ol></section>`;
 }
 
 /** An open section, or a drawer (closed at first) with its sections inside (src/content/pro.ts proLayout). */
@@ -111,8 +121,8 @@ export function coachPage(): string {
     `<h1>Vloertaal voor begeleiders en werkgevers</h1>
 <p class="lead"><strong>${esc(COACH_PITCH)}</strong> ${esc(COACH_WHY)}</p>
 <a class="cta" href="/">Open Vloertaal →</a>
+${stepsSection()}
 ${shareLine()}
-<p>${text(PRO_LEAD)}</p>
 ${proLayout().map(block).join('\n')}
 <footer>
 <h2>Per sector</h2>

@@ -97,7 +97,7 @@ const lang: HelpLanguageSource = {
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: { m: 'ኣብ ኣየናይ ሃገር ኢኻ ትሰርሕ?', f: 'ኣብ ኣየናይ ሃገር ኢኺ ትሰርሒ?', x: 'ኣብ ኣየናይ ሃገር ኢኹም ትሰርሑ?' }, // x: nieuw, nalezen
     // nagelezen (2e lezing)
-    countryHint: { m: 'ሕግታት ስራሕ ናይታ ሃገር ክትረክብ ኢኻ።', f: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቢ ኢኺ።', x: 'ሕግታት ስራሕ ናይታ ሃገር ክትረኽቡ ኢኹም።' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: { m: 'ቃላትን ምኽርታትን ናይታ ሃገር ክትረክብ ኢኻ።', f: 'ቃላትን ምኽርታትን ናይታ ሃገር ክትረኽቢ ኢኺ።', x: 'ቃላትን ምኽርታትን ናይታ ሃገር ክትረኽቡ ኢኹም።' }, // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: 'ኔዘርላንድ',
     countryBe: 'ቤልጅዩም (ፍላንደርስ)',
     tipsNote: 'እዞም ምኽርታት ብዛዕባ ስራሕ ኣብ ኔዘርላንድ እዮም። ሓፈሻዊ ሓበሬታ እዩ፡ ሕጋዊ ምኽሪ ኣይኮነን።',
@@ -222,6 +222,11 @@ const lang: HelpLanguageSource = {
     routeLearn: 'ንስራሕ ሆላንድኛ ምምሃርን ስራሕ ኣብዚ ከመይ ከም ዝኸይድን', // nieuw, nalezen
     routeRules: 'ሆላንድኛ እዛረብ እየ፡ ሕግታት ስራሕ ጥራይ', // nieuw, nalezen
     routeLearnShort: 'ሆላንድኛ ምምሃር', // nieuw, nalezen
+    switchTitle: 'ናብ Werkregels ምቕያር?', // nieuw, nalezen
+    switchDutch: 'ኩሉ ብሆላንድኛ ክኸውን እዩ። ቋንቋ ሓገዝ ደው ይብል።', // nieuw, nalezen
+    switchReview: 'ክሳብ እትምለሱ፡ ቃላት ዘይኮነስ ሕግታት ኢኹም እትደግሙ።', // nieuw, nalezen
+    switchKept: 'ምዕባለኹም ተዓቂቡ ይጸንሕ። ካብዚ ክትምለሱ ትኽእሉ ኢኹም።', // nieuw, nalezen
+    switchGo: 'እወ፡ ናብ Werkregels', // nieuw, nalezen
     byTheme: 'ብክፍልታት',
     inOrder: 'ብቕደም ሰዓብ',
     searchTopics: 'ምድላይ ኣርእስቲ', // nieuw, nalezen
@@ -461,6 +466,13 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'ንብጻይ ስራሕ', // nieuw, nalezen
     colleagueCardHint: { m: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእዮ። ከመይ ጌሩ ክሕግዘካ ከም ዝኽእል ተጻሒፉ ኣሎ።', f: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእይዮ። ከመይ ጌሩ ክሕግዘኪ ከም ዝኽእል ተጻሒፉ ኣሎ።', x: 'እዚ ንሆላንድኛ ዝዛረብ ብጻይ ስራሕ ኣርእዩዎ። ከመይ ጌሩ ክሕግዘኩም ከም ዝኽእል ተጻሒፉ ኣሎ።' }, // nieuw, nalezen
     colleagueShare: { m: 'ናብ ብጻይካ ስደዶ', f: 'ናብ ብጻይኪ ስደድዮ', x: 'ናብ ብጻይኩም ስደዱዎ' }, // nieuw, nalezen
+    forCoach: 'ንኣማኻሪኹም', // nieuw, nalezen
+    rulesInDutch: 'ስራሕ ኣብዚ ከመይ ከም ዝኸይድ፡ ብቐሊል ሆላንድኛ። ተሌፎን ብድምጺ የንብቦ።', // nieuw, nalezen
+    bridgeTextOne: { m: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጥ ኢኻ። ኣብ ነፍሲ ወከፍ ኣርእስቲ ስራሕ ኣብዚ ከመይ ከም ዝኸይድ እውን ብቐሊል ሆላንድኛ ከተንብብ ትኽእል ኢኻ።', f: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጢ ኢኺ። ኣብ ነፍሲ ወከፍ ኣርእስቲ ስራሕ ኣብዚ ከመይ ከም ዝኸይድ እውን ብቐሊል ሆላንድኛ ከተንብቢ ትኽእሊ ኢኺ።', x: 'ሕጂ ብዙሕ ሆላንድኛ ትፈልጡ ኢኹም። ኣብ ነፍሲ ወከፍ ኣርእስቲ ስራሕ ኣብዚ ከመይ ከም ዝኸይድ እውን ብቐሊል ሆላንድኛ ከተንብቡ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
+    noHelpLanguage: 'የለን፡ ሆላንድኛ እዛረብ እየ', // nieuw, nalezen
+    kaartSaid: 'ኣብ ስራሕ ዝተባህሉ ሓረጋት', // nieuw, nalezen
+    kaartHard: 'ገና ዘጸግሙ ቃላት', // nieuw, nalezen
+    kaartRules: 'ትምህርቲ ብዛዕባ ስራሕ ኣብዚ ከመይ ከም ዝኸይድ', // nieuw, nalezen
     coachCardRights: 'ኣርእስታት ብዛዕባ መሰላት ብስሞም ምርኣይ', // nieuw, nalezen (AI-correctie 2 nov 2026)
     speakFromMemory: 'ሕጂ ብልቢ፡ ብሆላንድኛ እንታይ ነይሩ?', // nieuw, nalezen
     keptNofM: { m: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጥ ኔርካ።', f: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጢ ኔርኪ።', x: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጡ ኔርኩም።' }, // nieuw, nalezen

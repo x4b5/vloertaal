@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Къде работиш?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'В коя държава работиш?',
-    countryHint: 'Ще получиш правилата за работа в нея.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    countryHint: 'Ще получиш думите и съветите за нея.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
     countryNl: 'Нидерландия',
     countryBe: 'Белгия (Фландрия)',
     tipsNote: 'Тези съвети са за работа в Нидерландия. Обща информация, не е правен съвет.',
@@ -221,6 +221,11 @@ const lang: HelpLanguageSource = {
     routeLearn: 'Нидерландски за работа и как се работи тук', // nieuw, nalezen
     routeRules: 'Вече говоря нидерландски: само правилата в работата', // nieuw, nalezen
     routeLearnShort: 'Учене на нидерландски', // nieuw, nalezen
+    switchTitle: 'Към Werkregels?', // nieuw, nalezen
+    switchDutch: 'Всичко ще е на нидерландски. Езикът за помощ се изключва.', // nieuw, nalezen
+    switchReview: 'Докато не се върнеш, преговаряш правила, а не думи.', // nieuw, nalezen
+    switchKept: 'Напредъкът ти остава запазен. Можеш да се върнеш оттук.', // nieuw, nalezen
+    switchGo: 'Да, към Werkregels', // nieuw, nalezen
     byTheme: 'По раздели',
     inOrder: 'По ред',
     searchTopics: 'Търсене на тема', // nieuw, nalezen
@@ -461,6 +466,13 @@ const lang: HelpLanguageSource = {
     colleagueCard: 'За колегата', // nieuw, nalezen
     colleagueCardHint: 'Покажи това на колега, който говори нидерландски. Там пише как може да ти помогне да се упражняваш.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     colleagueShare: 'Изпрати на колегата', // nieuw, nalezen
+    forCoach: 'За твоя наставник', // nieuw, nalezen
+    rulesInDutch: 'Как се работи тук, на прост нидерландски. Телефонът чете на глас.', // nieuw, nalezen
+    bridgeTextOne: 'Вече знаеш много нидерландски. При всяка тема можеш да прочетеш и как се работи тук, на прост нидерландски.', // nieuw, nalezen
+    noHelpLanguage: 'Без: говоря нидерландски', // nieuw, nalezen
+    kaartSaid: 'Изречения, казани на работа', // nieuw, nalezen
+    kaartHard: 'Думи, които още са трудни', // nieuw, nalezen
+    kaartRules: 'Уроци за това как се работи тук', // nieuw, nalezen
     coachCardRights: 'Показвай по име темите за твоите права', // nieuw, nalezen
     speakFromMemory: 'Сега наизуст: как беше на нидерландски?', // nieuw, nalezen
     keptNofM: 'Думи отпреди 2 седмици или повече: още помниш {n} от {m}.', // nieuw, nalezen
