@@ -12,7 +12,7 @@ import { sitemap } from '../src/lib/sitemap';
 import { PAGE_TIPS, pageTip, TIP_PAGES, tipPage, tipPath, tipsIndexPage, tipsIndexPath, tipSlug, WAITS_FOR_LAW_CHECK } from '../src/lib/tipPages';
 import { rightsTipCountry } from '../src/lib/tipText';
 // @ts-expect-error: a plain .mjs script without types
-import { changedPaths, findKey, messages, pagesOf, pathOf, sitemapPaths } from '../scripts/indexnow.mjs';
+import { changedPaths, findKey, messages, pagesOf, pathOf, RETRIES, RETRY_MS, sitemapPaths, verdict } from '../scripts/indexnow.mjs';
 
 /* The SEO/GEO round of 10 November 2026 (docs/seo-plan.md): steps 2 to 5. */
 
@@ -167,10 +167,25 @@ describe('step 5: IndexNow', () => {
     expect(messages(Array.from({ length: 10_001 }, (_, i) => `/${i}/`), 'k').length).toBe(2);
   });
 
+  it('waits while IndexNow still checks a new key, and fails on any other refusal', () => {
+    expect(verdict(200)).toBe('ok');
+    expect(verdict(202)).toBe('ok');
+    // The first run's answer (10 November 2026).
+    expect(verdict(403, '{"errorCode":"SiteVerificationNotCompleted","message":"Site Verification is not completed. Please wait for some time for the verification to complete and try again.","details":null}')).toBe('wait');
+    expect(verdict(403, '{"errorCode":"UserForbiddedToAccessSite"}')).toBe('fail');
+    expect(verdict(422, 'URLs which don\'t belong to the host')).toBe('fail');
+    expect(verdict(429)).toBe('fail');
+    // About 20 minutes of trying, within the job's time.
+    expect(RETRIES * RETRY_MS).toBe(20 * 60_000);
+  });
+
   it('runs after every push to main, with the build before and after', () => {
     const wf = readFileSync('.github/workflows/indexnow.yml', 'utf8');
     expect(wf).toMatch(/push:\s*\n\s*branches: \[main\]/);
     expect(wf).toContain('fetch-depth: 2');
     expect(wf).toContain('node scripts/indexnow.mjs ../dist-before dist --wait');
+    // By hand, everything at once (after a run that could not send).
+    expect(wf).toMatch(/workflow_dispatch:\s*\n\s*inputs:\s*\n\s*all:/);
+    expect(wf).toContain("${{ inputs.all && '--all' || '' }}");
   });
 });

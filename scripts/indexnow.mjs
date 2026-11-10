@@ -6,9 +6,11 @@
 // and the one after it. Only pages in the sitemap count, and only those whose HTML changed or is
 // new, so a push that changes nothing on the site sends nothing.
 //
-//   node scripts/indexnow.mjs <dist-before> <dist-after> [--dry-run] [--wait]
+//   node scripts/indexnow.mjs <dist-before> <dist-after> [--dry-run] [--wait] [--all]
 //
 //  --dry-run  only print what would be sent
+//  --all      send every page of the sitemap, changed or not (Actions › IndexNow › Run workflow,
+//             "Alle pagina's": after a run that could not send, e.g. while the key was checked)
 //  --wait     first wait (at most 20 minutes) until the site serves the new version of the first
 //             changed page: statichost.eu builds the site by itself after the push.
 //
@@ -70,6 +72,22 @@ export function messages(paths, key) {
   return out;
 }
 
+/**
+ * What an answer of IndexNow means: 'ok' (200 OK, or 202 Accepted: the key is still being checked),
+ * 'wait' (403 SiteVerificationNotCompleted: a new key that IndexNow has not checked yet; the first
+ * run after the key came, 10 November 2026, got this: try again later), or 'fail' (anything else:
+ * a wrong key, a bad request).
+ */
+export function verdict(status, text = '') {
+  if (status === 200 || status === 202) return 'ok';
+  if (status === 403 && text.includes('SiteVerificationNotCompleted')) return 'wait';
+  return 'fail';
+}
+
+/** While the key is being checked: try again this many times, this long apart (about 20 minutes in all). */
+export const RETRIES = 4;
+export const RETRY_MS = 5 * 60_000;
+
 async function waitForLive(path, html, minutes = 20) {
   const until = Date.now() + minutes * 60_000;
   while (Date.now() < until) {
@@ -94,8 +112,9 @@ if (isMain) {
   }
   const key = findKey();
   const after = pagesOf(afterDir);
-  const paths = changedPaths(pagesOf(beforeDir), after, sitemapPaths(readFileSync(join(afterDir, 'sitemap.xml'), 'utf8')));
-  console.log(`IndexNow: ${paths.length} new or changed page(s)`);
+  const inSitemap = sitemapPaths(readFileSync(join(afterDir, 'sitemap.xml'), 'utf8'));
+  const paths = args.includes('--all') ? inSitemap.filter((p) => after.has(p)) : changedPaths(pagesOf(beforeDir), after, inSitemap);
+  console.log(`IndexNow: ${paths.length} ${args.includes('--all') ? 'page(s) of the sitemap' : 'new or changed page(s)'}`);
   for (const p of paths.slice(0, 30)) console.log(`  ${p}`);
   if (paths.length > 30) console.log(`  … and ${paths.length - 30} more`);
   if (paths.length === 0 || args.includes('--dry-run')) process.exit(0);
@@ -104,12 +123,25 @@ if (isMain) {
     console.log(`::warning title=IndexNow::${paths[0]} still showed the old version after 20 minutes; sending anyway.`);
   }
   for (const body of messages(paths, key)) {
-    const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json; charset=utf-8' }, body: JSON.stringify(body) });
-    // 200 OK and 202 Accepted are both fine (202: the key is still being checked).
-    if (res.status !== 200 && res.status !== 202) {
-      console.error(`::error title=IndexNow::${res.status} ${await res.text()}`);
-      process.exit(1);
+    for (let attempt = 0; ; attempt++) {
+      const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json; charset=utf-8' }, body: JSON.stringify(body) });
+      const text = res.status === 200 || res.status === 202 ? '' : await res.text();
+      const v = verdict(res.status, text);
+      if (v === 'ok') {
+        console.log(`IndexNow: sent ${body.urlList.length} address(es), ${res.status}`);
+        break;
+      }
+      if (v === 'fail') {
+        console.error(`::error title=IndexNow::${res.status} ${text}`);
+        process.exit(1);
+      }
+      if (attempt >= RETRIES) {
+        // Not a fault of the site: IndexNow is still checking the key. Not red; run the job again later.
+        console.log(`::warning title=IndexNow::IndexNow is still checking the key (${res.status} SiteVerificationNotCompleted). Nothing sent; run this job again later (Actions › IndexNow › Re-run jobs).`);
+        process.exit(0);
+      }
+      console.log(`IndexNow: the key is still being checked (403); trying again in ${RETRY_MS / 60_000} minutes (${attempt + 1}/${RETRIES}).`);
+      await new Promise((r) => setTimeout(r, RETRY_MS));
     }
-    console.log(`IndexNow: sent ${body.urlList.length} address(es), ${res.status}`);
   }
 }
