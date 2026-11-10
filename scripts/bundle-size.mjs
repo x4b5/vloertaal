@@ -40,11 +40,15 @@ import { gzipSync } from 'node:zlib';
  * (each loaded only when needed), at 3580.6 kB; it was over already (3552.7 kB). The start file went
  * down instead, 298.3 → 290.2 kB: the sentences of "Wat zeg je?" (src/content/regels/zegHetData.ts)
  * come with the work rules' pack, not with every first screen.
+ * dist 3600 → 3650 (10 November 2026): the SEO/GEO round (#356: questions and answers on the 56
+ * work-rules pages, the publisher on every page, a sitemap of 1300 addresses) and "Wat vind je van
+ * Vloertaal?" (#357) at 3610.1 kB. Nothing of it is in the first screen (start file 291.2 kB); the
+ * 1140 tip pages have their own limit below. The size check on main was red from #356 on.
  */
 export const LIMITS = {
   'start file': 295,
   start: 415,
-  dist: 3600,
+  dist: 3650,
   // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
   'tip pages': 4300,
 };
