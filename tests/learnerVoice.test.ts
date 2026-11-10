@@ -17,6 +17,10 @@ const chats = [...allLessons, ...allRegionUnits('taal').flatMap((u) => u.lessons
  *  Zuid-Limburg": recorded on the next 'Record ElevenLabs voices' run (the phone voice says them meanwhile). */
 const PENDING_RECORDING = new Set<string>([
   // Add a new reply here until the next 'Record ElevenLabs voices' run.
+  // Replies with "app": said "epp" from take 9 (src/lib/sayAs.ts APP_TAKE, 10 November 2026); the
+  // older clips do not play until they are recorded again.
+  'Oké, ik app in de pauze.',
+  'Ja, ik reageer meteen in de app.',
   // New lesson "Moet het of mag het?" (l.mustmay, 8 November 2026):
   'Nee, dat is niet nodig. Het is vrijwillig.',
   'Ik ben het niet met je eens.',

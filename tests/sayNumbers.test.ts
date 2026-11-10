@@ -74,7 +74,7 @@ describe('sayNumbers: sums and units', () => {
   });
 
   it('is what the phone voice gets (sayAs), together with "app"', () => {
-    expect(sayAs('Open de app om 7.30 uur.')).toBe('Open de ep om half acht.');
+    expect(sayAs('Open de app om 7.30 uur.')).toBe('Open de epp om half acht.');
     expect(sayAs('Je krijgt 6,60 euro terug.')).toBe('Je krijgt 6 euro 60 terug.');
   });
 });

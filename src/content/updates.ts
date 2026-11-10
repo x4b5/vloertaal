@@ -17,6 +17,12 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-10',
+    items: [
+      'Het woord "app" klonk niet goed, alleen en in zinnen als "Ik kijk elke dag in de app.". De stem krijgt het nu als "epp" en in het Nederlands. Tot de nieuwe opnames er zijn, leest de stem van je telefoon die zinnen voor.',
+    ],
+  },
+  {
     date: '2026-11-09',
     items: [
       'Staat je telefoon op Nederlands? Dan zie je bij de start meteen alle talen, met "Ik spreek al Nederlands" (Werkregels) bovenaan. Wie een andere taal spreekt, vindt de eigen taal in de lijst, in het eigen schrift.',
