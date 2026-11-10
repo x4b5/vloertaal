@@ -5,6 +5,7 @@
  */
 import { units, beTaalUnits, phrasebookExtras } from '../../src/content/curriculum';
 import { cultureTips, type CultureTip } from '../../src/content/culture';
+import { abroadLine } from '../../src/content/abroad';
 import { aboutSections, siteSections } from '../../src/content/about';
 import { chatWhy, chatWhyIds } from '../../src/content/chatWhy';
 import { THEMES, themeOf } from '../../src/content/themes';
@@ -105,6 +106,9 @@ export function idIndex(): Map<string, IdInfo> {
     const where = (what: string) => taal(u, `tip, ${what}`);
     add(t.id, { nl: '', en: t.title, waar: where('titel'), rank: r, land });
     add(`${t.id}.b`, { nl: '', en: t.body, waar: where('tekst'), rank: r, land });
+    // "Uit een ander land?" under the tip (src/content/abroad.ts).
+    const abroad = abroadLine(t);
+    if (abroad) add(abroad.id, { nl: '', en: abroad.en, waar: where('uit een ander land'), rank: r, land });
     add(t.phrase.id, { nl: t.phrase.nl, en: t.phrase.en, waar: where('zin om te zeggen'), rank: r, land });
     add(t.situation.id, { nl: t.situation.nl ?? '', en: t.situation.en, waar: where('situatie'), rank: r, land });
     t.options.forEach((o, i) => add(o.id, { nl: '', en: o.en, waar: where(`keuze ${i + 1}${o.best ? ' (de goede)' : ''}`), rank: r, land }));

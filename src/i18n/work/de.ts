@@ -598,6 +598,7 @@ const t: CultureTranslation = {
     'c.contract.w': 'Eine Probezeit in einem Vertrag von 6 Monaten oder kürzer gilt nicht. Ruhig nachfragen ist normal. Wenn die Antwort nicht klar ist, hol dir Rat bei der Gewerkschaft oder beim Juridisch Loket.',
     'c.agency': 'Deine Zeitarbeitsfirma ist dein Arbeitgeber',
     'c.agency.b': 'Wenn du über eine Zeitarbeitsfirma (uitzendbureau) arbeitest, ist die Zeitarbeitsfirma dein Arbeitgeber, nicht die Firma, in der du arbeitest. Dein Vertrag und dein Lohn kommen von der Zeitarbeitsfirma, und es gibt einen Tarifvertrag für Zeitarbeitskräfte (uitzend-cao). Du hast ein Recht auf denselben Lohn wie die Mitarbeiter der Firma, die dieselbe Arbeit machen. Du bekommst auch Urlaubsgeld (vakantiegeld) und sammelst freie Tage an. Führ deine eigene Liste mit den Stunden, die du gearbeitet hast, und prüfe sie auf deiner Lohnabrechnung. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
+    'c.agency.x': 'Hat dich ein Arbeitgeber aus einem anderen Land für eine Zeit hierher geschickt? Dann bist du entsandt (gedetacheerd). Frag deinen Arbeitgeber nach deiner A1-Bescheinigung: Sie zeigt, wo du versichert bist. Hier bekommst du trotzdem mindestens den niederländischen Mindestlohn.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.agency.p': 'Auf meiner Lohnabrechnung stehen zu wenige Stunden.',
     'c.agency.s': 'Auf deiner Lohnabrechnung stehen 32 Stunden, aber du hast 38 gearbeitet. Was machst du?',
     'c.agency.o1': 'Zeig der Zeitarbeitsfirma deine Stundenliste und bitte um Korrektur.', // nagelezen (2e lezing)
@@ -726,6 +727,7 @@ const t: CultureTranslation = {
     'c.leave.w': 'Dein Arbeitgeber muss meistens Ja sagen. Er darf nur aus einem sehr wichtigen Grund Nein sagen, und dann schriftlich innerhalb von 2 Wochen. Wer früh fragt, hat die besten Chancen auf ein Ja.', // nagelezen (2e lezing)
     'c.illness': 'Deine Rechte, wenn du krank bist',
     'c.illness.b': 'Wenn du krank bist, muss dein Arbeitgeber mindestens 70 % deines Lohns zahlen, bis zu 2 Jahre lang. Ein Tarifvertrag (cao) gibt oft mehr. Es kann bis zu 2 Karenztage (wachtdagen) ohne Lohn geben, aber nur, wenn das in deinem Vertrag oder im Tarifvertrag steht. Dein Chef darf nicht fragen, welche Krankheit du hast. Über deine Gesundheit und deine Arbeit sprichst du mit dem Betriebsarzt (bedrijfsarts). Ruf deinen Arbeitgeber an, wenn du wieder gesund bist (betermelden). Im ersten Jahr bekommst du mindestens den Mindestlohn. Ein befristeter Vertrag endet am Enddatum, auch wenn du krank bist. Arbeitest du über eine Zeitarbeitsfirma? Wenn dein Vertrag eine Zeitarbeitsklausel (uitzendbeding) hat, kann er enden, wenn du krank wirst. Frag dann beim UWV nach der Ziektewet, oder frag bei einer Gewerkschaft. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
+    'c.illness.x': 'Du bist krank und willst in dein Heimatland? Frag zuerst deinen Arbeitgeber oder die Agentur. Ohne Erlaubnis kann dein Lohn gestoppt werden. Gib dort deine Adresse an und geh ans Telefon.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.illness.p': 'Ich bin wieder gesund. Ich komme morgen zur Arbeit.',
     'c.illness.s': 'Du bist eine Woche krank. Dein Arbeitgeber schickt dich zum Betriebsarzt. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.illness.o1': 'Geh hin und sprich über deine Gesundheit und Arbeit.', // nieuw, nalezen (AI-correctie 2 nov 2026)
@@ -830,6 +832,7 @@ const t: CultureTranslation = {
     'c.transit.w': 'Fahrtkostenerstattung hängt vom Arbeitgeber oder vom Tarifvertrag ab. Danach zu fragen ist normal und hilft dir, deine Rechte zu kennen.',
     'c.ww': 'Arbeitslosengeld (WW)',
     'c.ww.b': 'Arbeit verloren? Beantrage so schnell wie möglich WW beim UWV, innerhalb einer Woche nach deinem ersten Tag ohne Arbeit. Meistens musst du mindestens 26 der letzten 36 Wochen gearbeitet haben. Wenn du selbst kündigst, bekommst du meistens kein WW. Melde dich auf werk.nl als arbeitssuchend. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
+    'c.ww.x': 'Du suchst Arbeit in einem anderen EU-Land? Manchmal kannst du dein WW mitnehmen. Beantrage vor der Abreise bei UWV das Formular U2. Ohne U2 endet dein WW.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.ww.p': 'Ich möchte Arbeitslosengeld beantragen. Was muss ich tun?',
     'c.ww.s': 'Du bist wütend wegen deiner Arbeit und willst heute kündigen. Was ist klug?',
     'c.ww.o1': 'Lass dich zuerst beraten, bevor du kündigst.', // nagelezen (2e lezing)

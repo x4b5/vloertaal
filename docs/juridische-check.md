@@ -2102,6 +2102,19 @@ normaal), c.texting (berichten naar het werk; sinds 18 oktober ook: een dienst r
 
 ## Ondertekening
 
+## Uit een ander land (10 november 2026)
+
+Onder drie tips staat een korte alinea voor wie uit een ander land komt (`src/content/abroad.ts`). Dezelfde
+feiten als de Werkregels-lessen r.l.ziek.4, r.l.geld.8 en r.l.contract.5.
+
+- **c.illness.x** · *Sick and want to go to your home country? Ask your employer or the agency first. Without
+  permission your pay can stop. Give your address there and answer your phone.* ⚖️ BW 7:629 lid 3; Ziektewet.
+- **c.ww.x** · *Looking for work in another EU country? You can sometimes take your WW with you. Ask UWV for
+  form U2 before you leave. Without U2 your WW stops.* ⚖️ Vo. (EG) 883/2004 art. 64.
+- **c.agency.x** · *Did an employer from another country send you here for a while? Then you are posted
+  (gedetacheerd). Ask your employer for your A1 form: it shows where you are insured. Here you still get at
+  least the Dutch minimum wage.* ⚖️ Vo. (EG) 883/2004 art. 12; WagwEU.
+
 Gecontroleerd door: ____________________________
 
 Organisatie: ____________________________

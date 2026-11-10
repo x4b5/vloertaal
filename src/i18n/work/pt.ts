@@ -598,6 +598,7 @@ const t: CultureTranslation = {
     'c.contract.w': 'Um período experimental num contrato de 6 meses ou menos não conta. Perguntar com calma é normal. Se a resposta não for clara, pede conselho ao sindicato ou ao Juridisch Loket.',
     'c.agency': 'A tua agência é o teu empregador',
     'c.agency.b': 'Se trabalhas através de uma agência de trabalho temporário (uitzendbureau), o teu empregador é a agência, não a empresa onde trabalhas. O teu contrato e o teu salário vêm da agência, e há uma cao para trabalhadores temporários (uitzend-cao). Tens direito ao mesmo salário que os trabalhadores da empresa que fazem o mesmo trabalho. Também recebes subsídio de férias (vakantiegeld) e acumulas dias de férias. Faz a tua própria lista das horas que trabalhaste e confirma-as no recibo de vencimento. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
+    'c.agency.x': 'Um empregador de outro país enviou-te para cá por algum tempo? Então trabalhas aqui em destacamento (gedetacheerd). Pede ao teu empregador o documento A1: mostra onde tens seguro. Aqui recebes na mesma pelo menos o salário mínimo neerlandês.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.agency.p': 'O meu recibo de vencimento tem horas a menos.',
     'c.agency.s': 'O teu recibo de vencimento diz 32 horas, mas trabalhaste 38. O que fazes?',
     'c.agency.o1': 'Mostras a tua lista de horas à agência e pedes que corrijam.', // nagelezen (2e lezing)
@@ -726,6 +727,7 @@ const t: CultureTranslation = {
     'c.leave.w': 'Normalmente, o teu empregador tem de dizer que sim. Só pode dizer que não por um motivo muito importante, e então por escrito dentro de 2 semanas. Pedir cedo dá a melhor hipótese de um sim.', // nagelezen (2e lezing)
     'c.illness': 'Os teus direitos quando estás doente',
     'c.illness.b': 'Quando estás doente, o teu empregador tem de pagar pelo menos 70% do teu salário, até 2 anos. Uma cao muitas vezes dá mais. Pode haver até 2 dias de espera (wachtdagen) sem pagamento, mas só se o teu contrato ou a cao o disserem. O teu patrão não pode perguntar que doença tens. Falas da tua saúde e do teu trabalho com o médico da empresa (bedrijfsarts). Liga ao teu empregador quando estiveres melhor (betermelden). No primeiro ano recebes pelo menos o salário mínimo. Um contrato a termo acaba na data de fim, mesmo quando estás doente. Trabalhas através de uma agência? Se o teu contrato tiver uma cláusula de agência (uitzendbeding), pode acabar quando ficas doente. Então pergunta ao UWV sobre a Ziektewet, ou pergunta a um sindicato. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
+    'c.illness.x': 'Estás de baixa e queres ir ao teu país? Pergunta primeiro ao teu empregador ou à agência. Sem autorização, o teu salário pode parar. Dá a tua morada lá e atende o telefone.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.illness.p': 'Já estou melhor. Amanhã venho trabalhar.',
     'c.illness.s': 'Estás doente há uma semana. O teu empregador manda-te ao médico da empresa. O que fazes?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.illness.o1': 'Vais, e falas sobre a tua saúde e o teu trabalho.', // nieuw, nalezen (AI-correctie 2 nov 2026)
@@ -830,6 +832,7 @@ const t: CultureTranslation = {
     'c.transit.w': 'O subsídio de transporte depende do empregador ou da cao. Perguntar é normal e ajuda-te a conhecer os teus direitos.',
     'c.ww': 'Subsídio de desemprego (WW)',
     'c.ww.b': 'Perdeste o emprego? Pede o WW no UWV o mais depressa possível, no prazo de uma semana a contar do teu primeiro dia sem trabalho. Normalmente tens de ter trabalhado pelo menos 26 das últimas 36 semanas. Se te despedires tu, normalmente não recebes WW. Inscreve-te como pessoa à procura de emprego em werk.nl. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
+    'c.ww.x': 'Procuras trabalho noutro país da UE? Às vezes podes levar o teu WW contigo. Antes de partires, pede à UWV o formulário U2. Sem U2, o teu WW para.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.ww.p': 'Quero pedir o subsídio de desemprego. O que tenho de fazer?',
     'c.ww.s': 'O teu trabalho irrita-te e queres despedir-te hoje. O que é sensato?',
     'c.ww.o1': 'Pedes conselho primeiro, antes de te despedires.', // nagelezen (2e lezing)

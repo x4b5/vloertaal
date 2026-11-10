@@ -30,6 +30,7 @@ import { BeNote } from './BeNote';
 import { tipNlOnly } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
 import { rightsTipNotes, splitClosing, tipBody } from '../lib/tipText';
+import { AbroadLine } from './AbroadLine';
 import { dropAsk } from '../lib/dropAsk';
 import { firstTimes, STAMP_LATER_TIMES, TAP_TO_HEAR_TIMES } from '../lib/firstTimes';
 
@@ -1405,6 +1406,8 @@ export function TipCard({ ex, lang, onAnswer, soundOff = false }: Props<'tip'> &
       {/* The first sentences (the lead); the whole tip is in Hulp › Zo werkt het hier. On a page of
           its own (part 'read') without the "…": that only made the learner look for more here. */}
       <TipBody text={say ? shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl) : noEllipsis(shortTip(text.body, TIP_SENTENCES, tip.lead, tip.phrase.nl))} lang={lang} terms={tip.terms} />
+      {/* For who came from another country (src/content/abroad.ts): sick and home, WW abroad, A1. */}
+      <AbroadLine tip={tip} lang={lang} />
       {say && phrase}
       {/* How old the explanation is: in view, a calm line (a warning stays visible, docs/rustiger.md). */}
       {notes.stale && <p className="be-note be-note-beta tip-law-stale" role="note"><Bi text={notes.stale} /></p>}

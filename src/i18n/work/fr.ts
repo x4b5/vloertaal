@@ -598,6 +598,7 @@ const t: CultureTranslation = {
     'c.contract.w': 'Une période d’essai dans un contrat de 6 mois ou moins ne compte pas. Poser calmement la question est normal. Si la réponse n’est pas claire, demande conseil au syndicat ou au Juridisch Loket.',
     'c.agency': 'Ton agence est ton employeur',
     'c.agency.b': 'Si tu travailles via une agence d’intérim (uitzendbureau), l’agence est ton employeur, pas l’entreprise où tu travailles. Ton contrat et ton salaire viennent de l’agence, et il y a une cao pour les intérimaires (uitzend-cao). Tu as droit au même salaire que les travailleurs de l’entreprise qui font le même travail. Tu reçois aussi une prime de vacances (vakantiegeld) et tu accumules des jours de congé. Note toi-même tes heures de travail, et vérifie-les sur ta fiche de paie. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.agency.x': 'Ton employeur d’un autre pays te fait travailler ici pour un temps ? Alors tu es en détachement (gedetacheerd). Demande-lui ton formulaire A1 : il montre où tu as ton assurance. Ici, tu reçois quand même au moins le salaire minimum néerlandais.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.agency.p': 'Sur ma fiche de paie, il y a trop peu d’heures.',
     'c.agency.s': 'Ta fiche de paie indique 32 heures, mais tu as travaillé 38 heures. Que fais-tu ?',
     'c.agency.o1': 'Montre ta propre liste d’heures à l’agence et demande de corriger.', // nagelezen (2e lezing)
@@ -726,6 +727,7 @@ const t: CultureTranslation = {
     'c.leave.w': 'Ton employeur doit en général dire oui. Il ne peut refuser que pour une raison très importante, et il doit alors le faire par écrit dans les 2 semaines. Demander tôt donne le plus de chances d’avoir un oui.', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.illness': 'Tes droits quand tu es malade',
     'c.illness.b': 'Quand tu es malade, ton employeur doit payer au moins 70 % de ton salaire, pendant 2 ans au maximum. Une cao donne souvent plus. Il peut y avoir jusqu’à 2 jours de carence (wachtdagen) sans salaire, mais seulement si ton contrat ou ta cao le dit. Ton patron n’a pas le droit de demander quelle maladie tu as. Tu parles de ta santé et de ton travail avec le médecin du travail (bedrijfsarts). Appelle ton employeur quand tu vas mieux (betermelden). La première année, tu reçois au moins le salaire minimum. Un contrat temporaire s’arrête à sa date de fin, même pendant une maladie. Tu travailles via une agence ? Si ton contrat a une clause d’intérim (uitzendbeding), il peut s’arrêter quand tu tombes malade. Alors pose tes questions sur la Ziektewet à l’UWV, ou demande à un syndicat. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
+    'c.illness.x': 'Tu es en arrêt maladie et tu veux aller dans ton pays ? Demande d’abord à ton employeur ou à l’agence. Sans accord, ton salaire peut s’arrêter. Donne ton adresse là-bas et réponds au téléphone.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.illness.p': 'Je vais mieux. Je viens travailler demain.',
     'c.illness.s': 'Tu es malade depuis une semaine. Ton employeur t’envoie chez le médecin du travail. Que fais-tu ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.illness.o1': 'Vas-y, et parle de ta santé et de ton travail.', // nieuw, nalezen (AI-correctie 2 nov 2026)
@@ -830,6 +832,7 @@ const t: CultureTranslation = {
     'c.transit.w': 'Le remboursement des frais de trajet dépend de l’employeur ou de la cao. Poser la question est normal et t’aide à connaître tes droits.',
     'c.ww': 'L’allocation chômage (WW)',
     'c.ww.b': 'Tu as perdu ton emploi ? Demande la WW à l’UWV le plus vite possible, dans la semaine après ton premier jour sans travail. En général, tu dois avoir travaillé au moins 26 des 36 dernières semaines. Si tu démissionnes toi-même, en général tu n’as pas la WW. Inscris-toi comme demandeur d’emploi sur werk.nl. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.',
+    'c.ww.x': 'Tu cherches du travail dans un autre pays de l’UE ? Parfois, tu peux emporter ton WW. Avant de partir, demande le formulaire U2 à l’UWV. Sans U2, ton WW s’arrête.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.ww.p': 'Je veux demander l’allocation chômage. Qu’est-ce que je dois faire ?',
     'c.ww.s': 'Ton travail t’énerve et tu veux démissionner aujourd’hui. Que vaut-il mieux faire ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.ww.o1': 'Demande d’abord conseil, avant de démissionner.', // nagelezen (2e lezing)

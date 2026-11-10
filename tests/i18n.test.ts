@@ -1,3 +1,4 @@
+import { abroadIds } from '../src/content/abroad';
 import { describe, expect, it } from 'vitest';
 import { allLessons, teachingLessons, phrasebookExtras, phrasebookIds, findItem, units } from '../src/content/curriculum';
 import { aboutIds } from '../src/content/about';
@@ -29,6 +30,8 @@ const contentIds = [
   ...cultureIds,
   // Tips of the work-and-rights units (src/content/work.ts).
   ...workIds,
+  // "Uit een ander land?" under three tips (src/content/abroad.ts).
+  ...abroadIds,
   // Sayings (src/content/sayings.ts): what their words say, and the sayings in later lessons.
   ...sayingsIds,
   // The About page (src/content/about.ts).
