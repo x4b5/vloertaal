@@ -8,6 +8,7 @@ import { BELGIUM_PATH, COACH_PATH, PRIVACY_PATH, RULES_PATH, TOPICS_PATH } from 
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
 import { SECTOR_PAGES } from './sectorPages';
 import { TOPIC_PAGES } from './topicPages';
+import { tipsIndexPath } from './tipPages';
 import { RULES_TOPIC_PAGES, rulesTopicPath } from './rulesPages';
 
 /**
@@ -172,6 +173,12 @@ ${SECTOR_PAGES.map((p) => link(p.path, p.name)).join('\n')}
 ## In je eigen taal
 
 ${LANG_PAGES.map((p) => link(p.path, p.nativeName)).join('\n')}
+
+## Tips over werken hier, in je eigen taal
+
+Hoe het op een Nederlandse werkvloer meestal gaat (je of u, op tijd komen, zeggen wat onveilig is …), per tip een pagina in elke hulptaal. Nog zonder de tips over rechten: die wachten op de controle door een expert.
+
+${LANG_PAGES.map((p) => link(tipsIndexPath(p.code), p.nativeName)).join('\n')}
 
 ## Werkregels per onderwerp
 

@@ -111,6 +111,32 @@ export const AREA_SERVED = [
   { '@type': 'Country', name: 'België', identifier: 'BE' },
 ];
 
+/**
+ * Profiles of Vloertaal elsewhere (LinkedIn, Facebook …), for schema.org sameAs: they tell search
+ * engines and AI assistants that those pages and this site are the same maker. Only real, used
+ * profiles; none yet. Add a full https:// address here and it shows on every page.
+ */
+export const SAME_AS: readonly string[] = [];
+
+/**
+ * Who is behind Vloertaal (structured data, step 4 of the SEO/GEO round): the name, the site, the
+ * address to write to, and the maker as the About page already says it ("Hoi, ik ben Xavier. Ik
+ * werk als arbeidsbemiddelaar."): first name only. Also in index.html, under the same @id.
+ */
+export const ORG_DATA = {
+  '@type': 'Organization',
+  '@id': `${SITE}/#org`,
+  name: 'Vloertaal',
+  url: `${SITE}/`,
+  logo: `${SITE}/icon-512.png`,
+  email: 'hoi@vloertaal.nl',
+  description: 'Gratis app om Nederlands te leren voor je werk in Nederland en België, met uitleg in 14 talen.',
+  founder: { '@type': 'Person', name: 'Xavier', jobTitle: 'Arbeidsbemiddelaar' },
+  contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: 'hoi@vloertaal.nl', availableLanguage: ['nl', 'en'] },
+  areaServed: AREA_SERVED,
+  ...(SAME_AS.length ? { sameAs: [...SAME_AS] } : {}),
+};
+
 /** What every page is about: the free web app (structured data). */
 export const APP_DATA = {
   '@type': 'WebApplication',
@@ -122,6 +148,8 @@ export const APP_DATA = {
   isAccessibleForFree: true,
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
   areaServed: AREA_SERVED,
+  // Short here (this goes on every page): the whole ORG_DATA is on the start page (index.html) and the language pages.
+  publisher: { '@type': 'Organization', '@id': ORG_DATA['@id'], name: ORG_DATA.name, url: ORG_DATA.url },
 };
 
 /** "Vloertaal › Bouw" for search results (structured data). */

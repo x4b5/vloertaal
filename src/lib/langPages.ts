@@ -2,7 +2,7 @@ import { aboutSection, STORY_DATE } from '../content/about';
 import { dateLocale, updateDate } from '../content/updateDate';
 import { units } from '../content/curriculum';
 import { THEME_UNITS, THEMES } from '../content/themes';
-import { APP_DATA, esc, plainPage, SITE } from './plainPage';
+import { APP_DATA, esc, ORG_DATA, plainPage, SITE } from './plainPage';
 import { languageMeta } from '../i18n/meta';
 import { uiNl } from '../i18n/nl';
 import { type LangCode, uiEn } from '../i18n/types';
@@ -68,12 +68,12 @@ export function hreflangLinks(): string {
 }
 
 /** A page's texts: the help language's, or the app's own English. */
-function texts(code: PageCode): { tagline: string; start: string; topics: string; title: (id: string) => string; body: (id: string) => string; gloss: (id: string) => string | undefined } {
+function texts(code: PageCode): { tagline: string; start: string; topics: string; tips: string; tipsHint: string; title: (id: string) => string; body: (id: string) => string; gloss: (id: string) => string | undefined } {
   if (code === 'en') {
     const find = aboutSection;
     const words = new Map(units.flatMap((u) => u.lessons.flatMap((l) => l.words)).map((w) => [w.id, w.en]));
     const theme = (id: string) => THEMES.find((t) => t.id === id)?.title;
-    return { tagline: uiEn.appTagline, start: uiEn.start, topics: uiEn.allTopics, title: (id) => find(id).title, body: (id) => find(id).body, gloss: (id) => theme(id) ?? words.get(id) };
+    return { tagline: uiEn.appTagline, start: uiEn.start, topics: uiEn.allTopics, tips: uiEn.cultureTips, tipsHint: uiEn.cultureTipsHint, title: (id) => find(id).title, body: (id) => find(id).body, gloss: (id) => theme(id) ?? words.get(id) };
   }
   const p = packText(code);
   const one = (id: string) => {
@@ -81,7 +81,7 @@ function texts(code: PageCode): { tagline: string; start: string; topics: string
     if (t === undefined) throw new Error(`langPages: ${code} has no text for ${id}`);
     return t;
   };
-  return { tagline: p.ui('appTagline'), start: p.ui('start'), topics: p.ui('allTopics'), title: one, body: (id) => one(`${id}.b`), gloss: p.gloss };
+  return { tagline: p.ui('appTagline'), start: p.ui('start'), topics: p.ui('allTopics'), tips: p.ui('cultureTips'), tipsHint: p.ui('cultureTipsHint'), title: one, body: (id) => one(`${id}.b`), gloss: p.gloss };
 }
 
 /** The search result's line: the first sentences of "What is Vloertaal?" that fit in 160 characters. */
@@ -95,6 +95,9 @@ export function describe(body: string, max = 160): string {
   out = out.trim();
   return out || `${body.slice(0, max - 1).trimEnd()}…`;
 }
+
+/** The first sentence of a text ("How things usually go at a Dutch workplace."), or all of it. */
+export const firstSentence = (s: string): string => /^[^.!?。؟።]*[.!?。؟።]/.exec(s)?.[0] ?? s;
 
 /** The language list's name for a screen reader, in the page's language ("Kies je taal" on the Dutch pages). */
 function navLabel(current?: PageCode): string {
@@ -155,22 +158,27 @@ export function langPage(code: PageCode): string {
   // has no guess, so the app's own list of languages shows.
   const app = code === 'en' ? '/' : `/?taal=${code}`;
   const arrow = page.dir === 'rtl' ? '←' : '→';
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: t.tagline,
-    url: `${SITE}${page.path}`,
-    description,
-    inLanguage: page.tag,
-    isPartOf: { '@type': 'WebSite', name: 'Vloertaal', url: `${SITE}/` },
-    about: APP_DATA,
-  };
+  const data = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: t.tagline,
+      url: `${SITE}${page.path}`,
+      description,
+      inLanguage: page.tag,
+      isPartOf: { '@type': 'WebSite', name: 'Vloertaal', url: `${SITE}/` },
+      about: APP_DATA,
+    },
+    // Who is behind it, on the page that tells it ("Waarom Vloertaal?", signed by the maker).
+    { '@context': 'https://schema.org', ...ORG_DATA },
+  ];
   return plainPage(
     { path: page.path, lang: page.tag, dir: page.dir, title, description, ogLocale: page.ogLocale, ogAlt: `Vloertaal – ${t.tagline}`, links: hreflangLinks(), data },
     `<h1>${esc(t.tagline)}</h1>
 <a class="cta" href="${app}">${esc(t.start)} ${arrow}</a>
 ${sections}
 ${topicsSection(t, page.dir)}
+<section aria-labelledby="tips"><h2 id="tips">${esc(t.tips)}</h2><p>${esc(firstSentence(t.tipsHint))}</p><p><a href="/${code}/tip/">${esc(t.tips)} ${arrow}</a></p></section>
 <a class="cta" href="${app}">${esc(t.start)} ${arrow}</a>
 <footer>
 ${languageNav(code)}

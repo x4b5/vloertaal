@@ -8,7 +8,10 @@
 //  - start: everything the first screen downloads before it can draw (the start file, the files it
 //    imports, the stylesheet);
 //  - dist: every file of the build except the recorded sound (*.mp3, which grows with each
-//    recording and is fetched per clip), so also the help languages, pictures and site pages.
+//    recording and is fetched per clip), so also the help languages, pictures and site pages;
+//  - tip pages: the workplace tips as web pages in every language (/pl/tip/…, src/lib/tipPages.ts),
+//    over a thousand small pages for search engines. No phone downloads them with the app (the
+//    service worker does not keep them), so they have a limit of their own and do not count in dist.
 //
 // Raising a limit is allowed, but on purpose: say why in the pull request. The owner's request,
 // 4 November 2026 (fase 3, "snel op een goedkope telefoon").
@@ -42,7 +45,12 @@ export const LIMITS = {
   'start file': 295,
   start: 415,
   dist: 3600,
+  // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
+  'tip pages': 4300,
 };
+
+/** A page of the workplace tips (/pl/tip/, /pl/tip/<tip>/): counted on its own, see above. */
+export const isTipPage = (file) => /^[a-z]{2,3}\/tip\//.test(file);
 
 const gz = (buf) => gzipSync(buf, { level: 9 }).length;
 const kb = (n) => (n / 1024).toFixed(1);
@@ -70,6 +78,7 @@ export function measure(dist) {
   const size = (file) => gz(readFileSync(join(dist, file)));
   let all = 0;
   let audio = 0;
+  let tips = 0;
   const files = [];
   const visit = (dir) => {
     for (const name of readdirSync(dir)) {
@@ -78,8 +87,12 @@ export function measure(dist) {
       else if (name.endsWith('.mp3')) audio += statSync(path).size;
       else {
         const n = /\.(png|ico|woff2?|mp3)$/.test(name) ? statSync(path).size : gz(readFileSync(path));
-        all += n;
-        files.push([relative(dist, path).replace(/\\/g, '/'), n]);
+        const file = relative(dist, path).replace(/\\/g, '/');
+        if (isTipPage(file)) tips += n;
+        else {
+          all += n;
+          files.push([file, n]);
+        }
       }
     }
   };
@@ -87,7 +100,7 @@ export function measure(dist) {
   return {
     entry,
     startFiles: [...start].sort(),
-    sizes: { 'start file': size(entry), start: [...start].reduce((a, f) => a + size(f), 0), dist: all },
+    sizes: { 'start file': size(entry), start: [...start].reduce((a, f) => a + size(f), 0), dist: all, 'tip pages': tips },
     audio,
     largest: files.sort((a, b) => b[1] - a[1]).slice(0, 12),
   };
