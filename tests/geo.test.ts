@@ -71,9 +71,10 @@ describe('/llms.txt', () => {
     expect(txt.startsWith('# Vloertaal\n\n> ')).toBe(true);
   });
 
-  it('links every page of the sitemap', () => {
+  it('links every page of the sitemap (the tips through their list per language)', () => {
     for (const p of PAGES) {
-      if (p === '/intro/' || p === '/nieuw/' || p === '/') expect(txt).toContain(`https://vloertaal.nl${p})`);
+      if (/^\/[a-z]{2,3}\/tip\/[^/]+\/$/.test(p)) expect(txt).toContain(`(https://vloertaal.nl${p.replace(/[^/]+\/$/, '')})`);
+      else if (p === '/intro/' || p === '/nieuw/' || p === '/') expect(txt).toContain(`https://vloertaal.nl${p})`);
       else expect(txt).toContain(`(https://vloertaal.nl${p})`);
     }
   });

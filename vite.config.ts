@@ -21,6 +21,7 @@ import { groepPage } from './src/lib/groepPage';
 import { briefjeFiles } from './src/lib/briefjePage';
 import { RULES_TOPIC_PAGES, rulesTopicPage } from './src/lib/rulesPages';
 import { sitemap } from './src/lib/sitemap';
+import { TIP_PAGES, tipPage, tipsIndexPage } from './src/lib/tipPages';
 import { TOPIC_PAGES, topicPage, topicsIndexPage } from './src/lib/topicPages';
 import { packVoices } from './src/lib/voicesIndex';
 
@@ -130,7 +131,7 @@ function introPagePlugin(): Plugin {
 /**
  * vloertaal.nl/pl, /ar, /uk … /en: what Vloertaal is, in each help language (src/lib/langPages.ts);
  * /bouw, /logistiek … and /werkregels in Dutch (src/lib/sectorPages.ts); /onderwerpen and a page per
- * topic (src/lib/topicPages.ts); /voor-begeleiders and its /groep (src/lib/groepPage.ts); /belgie and /llms.txt (src/lib/geoPages.ts);
+ * topic (src/lib/topicPages.ts); the workplace tips per language, /pl/tip/… (src/lib/tipPages.ts); /voor-begeleiders and its /groep (src/lib/groepPage.ts); /belgie and /llms.txt (src/lib/geoPages.ts);
  * a 404 page; and the sitemap that lists them all (src/lib/sitemap.ts).
  */
 function langPagesPlugin(): Plugin {
@@ -139,6 +140,8 @@ function langPagesPlugin(): Plugin {
     apply: 'build',
     generateBundle() {
       for (const p of LANG_PAGES) this.emitFile({ type: 'asset', fileName: `${p.code}/index.html`, source: langPage(p.code) });
+      for (const p of LANG_PAGES) this.emitFile({ type: 'asset', fileName: `${p.code}/tip/index.html`, source: tipsIndexPage(p.code) });
+      for (const t of TIP_PAGES) this.emitFile({ type: 'asset', fileName: `${t.path.slice(1)}index.html`, source: tipPage(t.code, t.tip) });
       for (const p of SECTOR_PAGES) this.emitFile({ type: 'asset', fileName: `${p.path.slice(1)}index.html`, source: sectorPage(p.id) });
       this.emitFile({ type: 'asset', fileName: 'werkregels/index.html', source: rulesPage() });
       this.emitFile({ type: 'asset', fileName: 'belgie/index.html', source: belgiumPage() });

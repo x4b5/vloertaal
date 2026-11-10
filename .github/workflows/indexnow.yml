@@ -1,0 +1,40 @@
+name: IndexNow
+
+# After a push to main, tell Bing and the other IndexNow search engines which pages of vloertaal.nl
+# are new or changed (scripts/indexnow.mjs). The site itself is built and published by
+# statichost.eu (see deploy.yml); this job builds the version before and after the push, compares
+# the pages, waits until the new version is live, and then sends the changed addresses.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build the version before the push
+        run: |
+          git worktree add ../before HEAD^
+          # A build that fails leaves an empty "before": then every page counts as new.
+          (cd ../before && npm ci && npm run build && mv dist ../dist-before) || mkdir -p ../dist-before
+      - name: Build this version
+        run: npm run build
+      - name: Send the new and changed pages
+        run: node scripts/indexnow.mjs ../dist-before dist --wait

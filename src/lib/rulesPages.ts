@@ -1,6 +1,7 @@
 import { rulesUnits, sectorRulesUnits } from '../content/regels';
 import { beRulesUnits, beSectorRulesUnits } from '../content/regels/be';
-import { RULES_DISCLAIMER, RULES_DISCLAIMER_BE } from '../content/regels/disclaimer';
+import { LAW_CHECKED } from '../content/lawChecked';
+import { RULES_CHECKED, RULES_DISCLAIMER, RULES_DISCLAIMER_BE } from '../content/regels/disclaimer';
 import type { RuleUnit } from '../content/regels/types';
 import { linkRows } from './linkRows';
 import { BELGIUM_PATH, RULES_PATH } from './paths';
@@ -47,6 +48,7 @@ export function rulesTopicPage(page: RulesTopicPage): string {
   const siblings = RULES_TOPIC_PAGES.filter((p) => p.country === country && p.unit.id !== unit.id);
   const disclaimer = (country === 'be' ? RULES_DISCLAIMER_BE : RULES_DISCLAIMER).join(' ');
   const index = country === 'be' ? BELGIUM_PATH : RULES_PATH;
+  const facts = lessons.flatMap((l) => l.steps.flatMap((s) => (s.kind === 'truefalse' ? [s] : [])));
   const data = [
     {
       '@context': 'https://schema.org',
@@ -61,8 +63,26 @@ export function rulesTopicPage(page: RulesTopicPage): string {
       spatialCoverage: { '@type': 'Country', name: where },
       audience: { '@type': 'EducationalAudience', educationalRole: 'student' },
       isAccessibleForFree: true,
+      // The day of the last monthly law check (src/content/lawChecked.ts), shown as "Bijgewerkt".
+      dateModified: LAW_CHECKED,
       isPartOf: APP_DATA,
     },
+    // "Waar of niet waar?" as questions and answers, for search engines and AI assistants: the
+    // same statements and why as on the page (Google shows no rich result for it any more, others
+    // do read it).
+    ...(facts.length
+      ? [{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          inLanguage: country === 'be' ? 'nl-BE' : 'nl',
+          dateModified: LAW_CHECKED,
+          mainEntity: facts.map((f) => ({
+            '@type': 'Question',
+            name: `Waar of niet waar: ${f.statement}`,
+            acceptedAnswer: { '@type': 'Answer', text: `${f.answer ? 'Waar.' : 'Niet waar.'} ${f.why}` },
+          })),
+        }]
+      : []),
     breadcrumbs(
       ...(country === 'be' ? [{ name: 'België', path: BELGIUM_PATH }] : []),
       { name: 'Werkregels', path: country === 'be' ? `${BELGIUM_PATH}#rules` : RULES_PATH },
@@ -82,6 +102,7 @@ ${facts.length ? `<h3>Waar of niet waar?</h3><ul class="lines">${facts.map((f) =
     { path: page.path, lang: country === 'be' ? 'nl-BE' : 'nl', title, description, ogLocale: country === 'be' ? 'nl_BE' : 'nl_NL', data },
     `<h1>${esc(unit.title)}</h1>
 <p class="lead">Zo gaat het in ${where}, in gewoon Nederlands. Dit onderwerp heeft ${lessons.length} korte lessen in Vloertaal Werkregels: een verhaal, de regel, en dan kies je zelf wat je doet.</p>
+<p class="signed">Bijgewerkt: <time datetime="${LAW_CHECKED}">${RULES_CHECKED}</time></p>
 <a class="cta" href="/?unit=${encodeURIComponent(unit.id)}">Oefen dit in Vloertaal →</a>
 ${lessonHtml}
 <section aria-labelledby="note"><h2 id="note">Goed om te weten</h2><p>${esc(disclaimer)}</p></section>

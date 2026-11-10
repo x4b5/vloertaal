@@ -214,3 +214,28 @@ Verder heeft elke pagina:
 - een plek in de sitemap en in `llms.txt`.
 
 De teksten komen uit de lessen zelf, dus de pagina's groeien mee. Zolang de Belgische feiten nog niet door een expert zijn nagekeken, zegt de disclaimer dat op elke pagina.
+
+## SEO/GEO-ronde 10 november 2026 (stap 2 tot 5)
+
+Uit de SEO/GEO-check van 10 november: de basis was sterk, maar elke hulptaal had maar één pagina, vragen en antwoorden stonden alleen op `/` en `/belgie/`, een datum stond maar op één pagina, er stond niets over wie erachter zit, en zoekmachines hoorden niet wanneer er iets nieuws was. Tests: `tests/seoRound.test.ts`.
+
+**Stap 2: de tips als pagina's, in elke taal, eerst zonder rechten** (`src/lib/tipPages.ts`).
+- Elke tip van "Zo werkt het hier" heeft een pagina in elke hulptaal en in het Engels: `/pl/tip/first-names-and-a-handshake/` enz. Per taal is er een lijst: `/pl/tip/`. Die staat op de taalpagina (`/pl/`), in de sitemap en in `llms.txt`.
+- Op de pagina: de tip, de Nederlandse zin ("Zeg het zo") met vertaling, de situatie met de keuzes, het beste antwoord en waarom, en een knop die de app in die taal bij dat onderwerp opent (`/?taal=pl&unit=…`). Onderaan: "algemene informatie, geen juridisch advies" en "vertaling nog niet nagekeken".
+- De versies van een tip verwijzen naar elkaar (`hreflang`); de Engelse is `x-default`. Het adres is in elke taal hetzelfde (de Engelse titel), zodat je de versies makkelijk naast elkaar legt.
+- **Nog niet:** de tips over rechten (die eindigen met "vraag je werkgever, de vakbond of het Juridisch Loket", `rightsTipCountry`) en zeven tips met een wetsregel erin (`WAITS_FOR_LAW_CHECK`: politie, stemmen, AI en het Juridisch Loket, betaalde pauze, fiets, leeftijd voor alcohol, stagecontract). Die komen erbij na de controle van `docs/werkregels-bronnen.md`: haal dan het filter weg. Nu zijn het 76 tips × 15 talen = 1140 pagina's.
+- Grootte: de tippagina's hebben een eigen grens in `scripts/bundle-size.mjs` ("tip pages", 4300 kB). Geen telefoon downloadt ze met de app, dus ze tellen niet mee in "dist".
+
+**Stap 3: vragen en antwoorden en een datum op de Werkregels-pagina's** (`src/lib/rulesPages.ts`).
+- Elke `/werkregels/<onderwerp>/` en `/belgie/werkregels/<onderwerp>/` met "Waar of niet waar?" heeft nu ook `FAQPage`-gegevens met dezelfde uitspraken en uitleg.
+- Bovenaan staat "Bijgewerkt: <maand jaar>", de maand van de laatste wetscheck (`LAW_CHECKED`), en in de gegevens staat `dateModified`. Die datum verandert alleen als de wetscheck echt gedaan is, niet bij elke build.
+
+**Stap 4: wie erachter zit** (`ORG_DATA` in `src/lib/plainPage.ts`, ook in `index.html`).
+- Een `Organization`: naam, site, logo, e-mail (hoi@vloertaal.nl), een korte beschrijving, Nederland en België, en de maker zoals de Over-pagina het al zegt: Xavier, arbeidsbemiddelaar (alleen de voornaam).
+- Volledig op `/` en op elke taalpagina. Op de andere pagina's staat een korte verwijzing (`publisher`), om ze klein te houden.
+- `SAME_AS` is leeg. Komt er een profiel dat je echt gebruikt (LinkedIn, Facebook …)? Zet het volledige adres daar, dan staat het op elke pagina. Een leeg of slapend profiel helpt niet.
+
+**Stap 5: IndexNow** (`scripts/indexnow.mjs`, `.github/workflows/indexnow.yml`).
+- Na elke push naar main bouwt GitHub de versie van vóór en ná de push en vergelijkt de pagina's. Daarna wacht het tot statichost.eu de nieuwe versie online heeft, en stuurt de nieuwe en veranderde adressen uit de sitemap naar IndexNow. Bing, Yandex, Seznam en Naver lezen ze dan opnieuw. Google doet niet mee; daar blijven de sitemap en Search Console.
+- De sleutel is het bestand `public/<sleutel>.txt` (geen geheim). Proberen zonder te versturen: `node scripts/indexnow.mjs <dist-voor> <dist-na> --dry-run`.
+- De eerste keer stuurt het (bijna) alle pagina's, omdat deze ronde elke pagina verandert.

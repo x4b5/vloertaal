@@ -31,8 +31,8 @@ export interface PackText {
 
 export function packText(code: LangCode): PackText {
   const p = PACKS[code];
-  const ui: Record<string, UiText> = { ...p.base.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui };
-  const gloss: Record<string, UiText> = { ...p.base.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.about.gloss, ...p.learn.gloss };
+  const ui: Record<string, UiText> = { ...p.base.ui, ...p.culture.ui, ...p.work.ui, ...p.about.ui, ...p.learn.ui };
+  const gloss: Record<string, UiText> = { ...p.base.gloss, ...p.culture.gloss, ...p.work.gloss, ...p.sayings.gloss, ...p.about.gloss, ...p.learn.gloss };
   const plain = (t: UiText | undefined) => (t === undefined || isPlural(t) ? undefined : forGender(t));
   return {
     ui: (key) => {

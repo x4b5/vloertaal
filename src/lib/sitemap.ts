@@ -5,12 +5,13 @@ import { BELGIUM_PATH, COACH_PATH, PRIVACY_PATH, RULES_PATH, TOPICS_PATH } from 
 import { SECTOR_PAGES } from './sectorPages';
 import { TOPIC_PAGES } from './topicPages';
 import { RULES_TOPIC_PAGES } from './rulesPages';
+import { TIP_PAGES, tipsIndexPath } from './tipPages';
 
 /**
  * vloertaal.nl/sitemap.xml, made at build time: every page a search engine should read. The app
  * itself is one address (/); the plain pages beside it are made by vite.config.ts.
  */
-export const PAGES: readonly string[] = ['/', '/intro/', '/nieuw/', ...LANG_PAGES.map((p) => p.path), ...SECTOR_PAGES.map((p) => p.path), RULES_PATH, BELGIUM_PATH, COACH_PATH, TOPICS_PATH, ...TOPIC_PAGES.map((t) => t.path), ...RULES_TOPIC_PAGES.map((p) => p.path), PRIVACY_PATH];
+export const PAGES: readonly string[] = ['/', '/intro/', '/nieuw/', ...LANG_PAGES.map((p) => p.path), ...SECTOR_PAGES.map((p) => p.path), RULES_PATH, BELGIUM_PATH, COACH_PATH, TOPICS_PATH, ...TOPIC_PAGES.map((t) => t.path), ...RULES_TOPIC_PAGES.map((p) => p.path), ...LANG_PAGES.map((p) => tipsIndexPath(p.code)), ...TIP_PAGES.map((t) => t.path), PRIVACY_PATH];
 
 /**
  * When a page last changed, where that is known for sure (/nieuw: its newest entry). Left out

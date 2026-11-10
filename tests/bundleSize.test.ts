@@ -58,7 +58,7 @@ describe('the size check after the build', () => {
   });
 
   it('has a limit for each part, and CI runs it after the build', () => {
-    expect(Object.keys(LIMITS).sort()).toEqual(['dist', 'start', 'start file']);
+    expect(Object.keys(LIMITS).sort()).toEqual(['dist', 'start', 'start file', 'tip pages']);
     const ci = readFileSync('.github/workflows/deploy.yml', 'utf8');
     expect(ci.indexOf('npm run size')).toBeGreaterThan(ci.indexOf('npm run build'));
     expect(JSON.parse(readFileSync('package.json', 'utf8')).scripts.size).toBe('node scripts/bundle-size.mjs');
