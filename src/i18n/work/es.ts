@@ -598,6 +598,7 @@ const t: CultureTranslation = {
     'c.contract.w': 'Un periodo de prueba en un contrato de 6 meses o menos no vale. Preguntar con calma es normal. Si la respuesta no es clara, pide consejo al sindicato o al Juridisch Loket.',
     'c.agency': 'Tu agencia es tu empleador',
     'c.agency.b': 'Si trabajas a través de una agencia de trabajo temporal (uitzendbureau), la agencia es tu empleador, no la empresa donde trabajas. Tu contrato y tu sueldo vienen de la agencia, y hay un cao para trabajadores temporales (uitzend-cao). Tienes derecho al mismo sueldo que los trabajadores de la empresa que hacen el mismo trabajo. También recibes la paga de vacaciones (vakantiegeld) y vas sumando días libres. Lleva tu propia lista de las horas que trabajaste, y compruébalas en tu nómina. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
+    'c.agency.x': '¿Una empresa de otro país te ha enviado aquí por un tiempo? Entonces trabajas aquí en desplazamiento (gedetacheerd). Pide a tu empleador el certificado A1: muestra dónde tienes seguro. Aquí recibes al menos el salario mínimo neerlandés.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.agency.p': 'En mi nómina hay muy pocas horas.',
     'c.agency.s': 'Tu nómina dice 32 horas, pero trabajaste 38. ¿Qué haces?',
     'c.agency.o1': 'Enseñas tu lista de horas a la agencia y pides que lo corrijan.', // nagelezen (2e lezing)
@@ -726,6 +727,7 @@ const t: CultureTranslation = {
     'c.leave.w': 'Normalmente tu empresa tiene que decir que sí. Solo puede decir que no por un motivo muy importante, y entonces por escrito en 2 semanas. Pedirlo pronto te da más posibilidades de un sí.', // nagelezen (2e lezing)
     'c.illness': 'Tus derechos durante una enfermedad',
     'c.illness.b': 'Durante una enfermedad, tu empresa te tiene que pagar como mínimo el 70 % de tu sueldo, hasta 2 años. Un cao muchas veces da más. Puede haber hasta 2 días de espera (wachtdagen) sin sueldo, pero solo si lo dice tu contrato o tu cao. Tu jefe no te puede preguntar qué enfermedad tienes. De tu salud y tu trabajo hablas con el médico de empresa (bedrijfsarts). Llama a tu empresa cuando ya estés bien (betermelden). El primer año recibes como mínimo el salario mínimo. Un contrato temporal termina en su fecha de fin, también durante una enfermedad. ¿Trabajas a través de una agencia? Si tu contrato tiene una cláusula de agencia (uitzendbeding), puede terminar si tienes una enfermedad. Entonces pregunta al UWV por la Ziektewet, o pregunta a un sindicato. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
+    'c.illness.x': '¿Estás de baja y quieres ir a tu país? Pregunta primero a tu empleador o a la agencia. Sin permiso, tu sueldo puede pararse. Da tu dirección allí y contesta el teléfono.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.illness.p': 'Ya estoy bien. Mañana vengo a trabajar.',
     'c.illness.s': { m: 'Llevas una semana enfermo. Tu empresa te manda al médico de empresa. ¿Qué haces?', f: 'Llevas una semana enferma. Tu empresa te manda al médico de empresa. ¿Qué haces?', x: 'Llevas una semana de baja. Tu empresa te manda al médico de empresa. ¿Qué haces?' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.illness.o1': 'Vas, y hablas sobre tu salud y tu trabajo.', // nieuw, nalezen (AI-correctie 2 nov 2026)
@@ -830,6 +832,7 @@ const t: CultureTranslation = {
     'c.transit.w': 'La compensación por gastos de viaje depende de la empresa o del cao. Preguntar es normal y te ayuda a conocer tus derechos.',
     'c.ww': 'La prestación por desempleo (WW)',
     'c.ww.b': '¿Has perdido tu trabajo? Pide la WW al UWV lo antes posible, en un plazo de una semana después de tu primer día sin trabajo. Normalmente tienes que haber trabajado al menos 26 de las últimas 36 semanas. Si dejas tu trabajo por tu cuenta, normalmente no recibes la WW. Inscríbete como persona que busca trabajo en werk.nl. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
+    'c.ww.x': '¿Buscas trabajo en otro país de la UE? A veces puedes llevarte tu WW. Antes de irte, pide a UWV el formulario U2. Sin U2, tu WW se para.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.ww.p': 'Quiero pedir la prestación por desempleo. ¿Qué tengo que hacer?',
     'c.ww.s': 'Tu trabajo te enfada y quieres dejarlo hoy. ¿Qué es lo más sensato?',
     'c.ww.o1': 'Primero pides consejo, antes de dejar el trabajo.', // nagelezen (2e lezing)

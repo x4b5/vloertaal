@@ -56,6 +56,7 @@ import { setTesterSwitch, testerSwitch } from '../lib/report';
 import { ChoiceCards } from './Choice';
 import { phoneDutchFirst, phoneHelpLang } from '../lib/langGuess';
 import { CoachHubCard } from './CoachHubCard';
+import { AbroadLine } from './AbroadLine';
 import { useRuleHelp } from '../i18n/regelHulp';
 import { FlameIcon } from './StreakArt';
 import { PhraseList } from './Phrases';
@@ -1195,6 +1196,7 @@ export function Tips({ progress, lang, onBack, access = 'full' }: { progress: Pr
                 {tipNlOnly(t) && <BeNote lang={lang} />}
                 <p><Bi text={tipBody(t, lang)} /></p>
                 <HelpSay text={tipBody(t, lang).help} lang={lang} />
+                <AbroadLine tip={t} lang={lang} />
                 <RightsTipNotes tip={t} lang={lang} />
                 <div className="phrase">
                   <div className="phrase-text">

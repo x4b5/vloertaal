@@ -19,6 +19,7 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-10',
     items: [
+      'Uit een ander land? Bij drie tips staat nu wat je moet weten als je uit een ander land komt, in je eigen taal: ziek en naar je eigen land (vraag het eerst), je WW meenemen naar een ander EU-land (formulier U2), en gedetacheerd werken (de A1-verklaring). Je vindt ze in de lessen over ziek zijn, werk kwijt en werken via een uitzendbureau, en bij Hulp › Zo werkt het hier. Nog niet nagekeken door een expert.',
       'Het woord "app" klonk niet goed, alleen en in zinnen als "Ik kijk elke dag in de app.". De stem krijgt het nu als "epp" en in het Nederlands. Tot de nieuwe opnames er zijn, leest de stem van je telefoon die zinnen voor.',
     ],
   },

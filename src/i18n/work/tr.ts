@@ -598,6 +598,7 @@ const t: CultureTranslation = {
     'c.contract.w': '6 ay veya daha kısa bir sözleşmedeki deneme süresi geçerli değildir. Sakince sormak normaldir. Cevap net değilse sendikadan veya Juridisch Loket’ten tavsiye al.',
     'c.agency': 'İşverenin ajanstır',
     'c.agency.b': 'Geçici iş ajansı (uitzendbureau) üzerinden çalışıyorsan, işverenin ajanstır, çalıştığın şirket değil. Sözleşmen ve maaşın ajanstan gelir ve geçici işçiler için bir cao (uitzend-cao) vardır. Aynı işi yapan şirket çalışanlarıyla aynı ücreti alma hakkın var. Ayrıca tatil parası (vakantiegeld) alırsın ve izin günleri biriktirirsin. Çalıştığın saatlerin kendi listesini tut ve bunları maaş bordronda kontrol et. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
+    'c.agency.x': 'Başka bir ülkedeki işveren seni bir süreliğine buraya mı gönderdi? O zaman görevlendirilmiş (gedetacheerd) çalışıyorsun. İşverenden A1 belgesini iste: nerede sigortalı olduğunu gösterir. Burada yine de en az Hollanda asgari ücretini alırsın.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.agency.p': 'Maaş bordromda saatler eksik.',
     'c.agency.s': 'Maaş bordronda 32 saat yazıyor, ama sen 38 saat çalıştın. Ne yaparsın?',
     'c.agency.o1': 'Kendi saat listeni ajansa gösterir ve düzeltmesini istersin.', // nagelezen (2e lezing)
@@ -726,6 +727,7 @@ const t: CultureTranslation = {
     'c.leave.w': 'İşveren genellikle evet demek zorundadır. Sadece çok önemli bir sebeple hayır diyebilir, o zaman da 2 hafta içinde yazılı olarak. Erken sormak “evet” cevabı için en iyi şansı verir.', // nagelezen (2e lezing)
     'c.illness': 'Hastayken hakların',
     'c.illness.b': 'Hasta olduğunda işveren 2 yıla kadar maaşının en az %70’ini ödemek zorundadır. Bir cao çoğu zaman daha fazlasını verir. Ücretsiz en fazla 2 bekleme günü (wachtdagen) olabilir, ama sadece sözleşmende veya cao’da yazıyorsa. Patronun hangi hastalığın olduğunu soramaz. Sağlığını ve işini işyeri hekimiyle (bedrijfsarts) konuşursun. İyileşince işverenini ara (betermelden). İlk yıl en az asgari ücret alırsın. Süreli bir sözleşme, hasta olsan da bitiş tarihinde biter. Bir ajans üzerinden mi çalışıyorsun? Sözleşmende ajans maddesi (uitzendbeding) varsa, hastalanınca sözleşmen bitebilir. O zaman UWV’ye Ziektewet’i sor veya sendikaya sor. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
+    'c.illness.x': 'Hastasın ve kendi ülkene gitmek mi istiyorsun? Önce işverenine veya ajansa sor. İzinsiz gidersen maaşın durabilir. Oradaki adresini ver ve telefonu aç.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.illness.p': 'İyileştim. Yarın işe geliyorum.',
     'c.illness.s': 'Bir haftadır hastasın. İşverenin seni işyeri hekimine gönderiyor. Ne yaparsın?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.illness.o1': 'Gider, sağlığın ve işin hakkında konuşursun.', // nieuw, nalezen (AI-correctie 2 nov 2026)
@@ -830,6 +832,7 @@ const t: CultureTranslation = {
     'c.transit.w': 'Yol parası işverene veya cao’ya bağlıdır. Bunu sormak normaldir ve haklarını bilmene yardım eder.',
     'c.ww': 'İşsizlik maaşı (WW)',
     'c.ww.b': 'İşini mi kaybettin? WW için mümkün olan en kısa sürede, işsiz kaldığın ilk günden sonraki bir hafta içinde UWV’ye başvur. Genelde son 36 haftanın en az 26’sında çalışmış olman gerekir. İşinden kendin ayrılırsan genelde WW alamazsın. werk.nl sitesinde iş arayan olarak kaydol. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
+    'c.ww.x': 'Başka bir AB ülkesinde iş mi arıyorsun? WW’yi bazen yanında götürebilirsin. Gitmeden önce UWV’den U2 formunu iste. U2 olmadan WW’n durur.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
     'c.ww.p': 'İşsizlik maaşına başvurmak istiyorum. Ne yapmalıyım?',
     'c.ww.s': 'İşine kızgınsın ve bugün istifa etmek istiyorsun. Akıllıca olan ne?',
     'c.ww.o1': 'Ayrılmadan önce tavsiye alırsın.', // nagelezen (2e lezing)
