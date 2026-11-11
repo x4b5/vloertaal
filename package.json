@@ -21,6 +21,7 @@
     "scenes:lines": "tsx scripts/scene-lines.ts",
     "splash": "tsx scripts/splash-html.ts",
     "kunjenu": "tsx scripts/kun-je-nu.ts",
+    "overzicht": "tsx scripts/overzicht.ts",
     "review:export": "tsx scripts/review/export.ts",
     "review:import": "tsx scripts/review/import.ts"
   },
