@@ -1,3 +1,4 @@
+import { KEYS, STORES } from './storageKeys';
 import { tipForLesson } from '../content/culture';
 import { findItem, phrasebookIds, teachingLessons } from '../content/curriculum';
 import { courseUnits } from '../content/courses';
@@ -26,8 +27,8 @@ import { loadedPicturesUrl } from '../pictures';
  * What is saved is listed on this device only (localStorage), so a unit can be removed again
  * without touching what another saved unit still needs. Nothing leaves the phone.
  */
-export const OFFLINE_CACHE = 'vloertaal-offline-v1';
-const KEY = 'vloertaal:offline';
+export const OFFLINE_CACHE = STORES.offlineCache;
+const KEY = KEYS.offline;
 /** A unit's clip is about 8 kB (many are single words): for the size shown before saving. */
 const CLIP_BYTES = 8_000;
 
@@ -496,7 +497,7 @@ export function showOfflineStateForShot(unitId: string, state: OfflineState): vo
 
 /* ---- "Keep lessons on this phone": one switch in Settings → This phone ---- */
 
-const AUTO_KEY = 'vloertaal:offline-auto';
+const AUTO_KEY = KEYS.offlineAuto;
 
 /** The switch while storage is blocked: it holds for this visit. */
 let autoMemory: boolean | null = null;

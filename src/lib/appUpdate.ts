@@ -1,3 +1,5 @@
+import { KEYS } from './storageKeys';
+
 /**
  * A new version while the app stays open. An app on the home screen is seldom started fresh: the
  * phone keeps it in memory and brings it back, so it would keep running the version it started
@@ -52,7 +54,7 @@ export async function newerOnServer(running: string | null, fetchPage: () => Pro
 
 /** The server version this tab reloaded for already, and when (sessionStorage): once per version
  *  for a while (a phone keeps the app open for days: then it tries again). */
-const RELOADED_FOR = 'vloertaal:update-for';
+const RELOADED_FOR = KEYS.updateFor;
 const AGAIN_AFTER = 30 * 60 * 1000;
 
 /**
@@ -129,7 +131,7 @@ export function screenChanged(): void {
   void check?.();
 }
 
-const RELOADED = 'vloertaal:update-reload';
+const RELOADED = KEYS.updateReload;
 /** At most one reload by itself per this many ms (a file that keeps failing must not loop). */
 const RELOAD_GAP = 2 * 60 * 1000;
 

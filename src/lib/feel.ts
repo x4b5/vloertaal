@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import { countRaw, mayCount } from './count';
 import { demoOn } from './demo';
 
@@ -23,7 +24,7 @@ export const FACES = ['niet-blij', 'gewoon', 'blij'] as const;
 export type Face = (typeof FACES)[number];
 
 /** The moments already asked on this device ("3,15"). */
-const KEY = 'vloertaal:gevoel';
+const KEY = KEYS.feel;
 
 function storage(): Storage | null {
   try {

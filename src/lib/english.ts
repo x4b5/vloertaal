@@ -1,3 +1,5 @@
+import { KEYS } from './storageKeys';
+
 /**
  * English as a bridge, or not. With a help language chosen, the screens show only that language
  * (calmer to read); the small English line next to it is hidden. The Settings switch "Show
@@ -8,7 +10,7 @@
  * line of a bilingual pair (.bi-swap > .bi-help, .bi-sep) and every element marked en-support
  * (an English line placed next to a help line by hand). Stored on this device only.
  */
-const KEY = 'vloertaal:show-english';
+const KEY = KEYS.showEnglish;
 export const EN_OFF_CLASS = 'en-off';
 
 /** The choice for this visit when the device can't store it (private mode). */

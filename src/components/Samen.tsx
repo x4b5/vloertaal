@@ -1,3 +1,4 @@
+import { KEYS } from '../lib/storageKeys';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Dialogue } from '../content/types';
 import { fillN, gloss, ui } from '../i18n';
@@ -25,7 +26,7 @@ export function samenColleague(line: SamenTurn['line'], lang?: HelpLanguage): Ch
 }
 
 /** The translation shown under each turn: on unless the viewer turned it off (only a convenience). */
-const HELP_KEY = 'vloertaal:samen-help';
+const HELP_KEY = KEYS.samenHelp;
 function helpOn(): boolean {
   try { return localStorage.getItem(HELP_KEY) !== '0'; } catch { return true; }
 }

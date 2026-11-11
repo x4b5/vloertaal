@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import { isBeId } from '../content/regels/be/ids';
 import { allCourseUnits, courseUnits, findCourseUnit, ruleCards } from '../content/courses';
 import { findLesson } from '../content/curriculum';
@@ -179,7 +180,7 @@ export function unitIndex(unit: Unit, sector?: SectorChoice, track: Track = trac
 
 /* ---- The learner's name on the certificate: asked once, kept on this device only. ---- */
 
-const NAME_KEY = 'vloertaal:cert-name';
+const NAME_KEY = KEYS.certName;
 
 /** The name; '' = asked, and left empty; null = never asked. */
 export function loadCertName(): string | null {

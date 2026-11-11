@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import { levenshtein } from './answers';
 import { sayNumbers } from './sayNumbers';
 
@@ -103,7 +104,7 @@ export async function installLocal(): Promise<boolean> {
 
 /* ---- The switch (this device; off unless the learner turned it on) ---- */
 
-const KEY = 'vloertaal:listen';
+const KEY = KEYS.listen;
 let memory: boolean | null = null;
 
 export function listenOn(): boolean {

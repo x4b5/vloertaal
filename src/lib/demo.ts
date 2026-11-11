@@ -1,3 +1,5 @@
+import { DEVICE_KEYS, KEYS } from './storageKeys';
+
 /**
  * "Laat de app zien aan een kandidaat": the demonstration mode for coaches (a job coach's
  * feedback, November 2026). A coach shows Vloertaal on their own phone to one candidate after
@@ -18,28 +20,11 @@
  * saved lessons, the reminder in the calendar, the counting switch, the tester and admin marks.
  */
 
-const ON = 'vloertaal-demo:on';
-const OWN = 'vloertaal-demo:own';
+const ON = KEYS.demoOn;
+const OWN = KEYS.demoOwn;
 /** Set by "Stoppen" in this tab only (sessionStorage: the demo leaves nothing on the phone): the
  *  coaches page asks once about a colleague. Not a learner key, so never wiped. */
-const STOPPED = 'vloertaal-demo:stopped';
-
-/** Keys of the phone, not of its learner: never put away, never wiped. */
-const DEVICE_KEYS = new Set([
-  'vloertaal.access',
-  'vloertaal:offline',
-  'vloertaal:offline-auto',
-  'vloertaal:persist',
-  'vloertaal:persist-asked',
-  'vloertaal:count-off',
-  'vloertaal:tester',
-  'vloertaal:admin',
-  'vloertaal:reminder-uid',
-  'vloertaal:reminder-time',
-  'vloertaal:reminder-seq',
-  'vloertaal:update-for',
-  'vloertaal:update-reload',
-]);
+const STOPPED = KEYS.demoStopped;
 
 /** A key of the learner on this phone (their progress, language, settings): what a demo puts away. */
 export function learnerKey(key: string): boolean {

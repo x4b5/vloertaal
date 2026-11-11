@@ -1,8 +1,10 @@
+import { KEYS } from './storageKeys';
+
 /**
  * The About page's "NL" toggle: every section in plain Dutch instead of the help language (or
  * English). Remembered on this phone only; private mode or blocked storage just starts it off.
  */
-const KEY = 'vloertaal:aboutNl';
+const KEY = KEYS.aboutNl;
 
 export function aboutDutchRemembered(): boolean {
   try { return localStorage.getItem(KEY) === '1'; } catch { return false; }

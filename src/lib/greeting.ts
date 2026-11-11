@@ -14,6 +14,7 @@
  *  6. later visits: a streak of 2+                     "Day N in a row."
  *  7. otherwise                                        "Good to see you."
  */
+import { KEYS } from './storageKeys';
 import { daysBetween, dayKey, doneToday, currentStreak, type Progress } from './progress';
 import type { UiKey } from '../i18n/types';
 
@@ -83,7 +84,7 @@ export function greetingInput(p: Progress, today: Date, due: number, first: bool
 export const restedYesterday = (p: Pick<Progress, 'rest'>, todayKey: string): boolean =>
   (p.rest ?? []).some((d) => daysBetween(d, todayKey) === 1);
 
-const GREETED_KEY = 'vloertaal:greeted';
+const GREETED_KEY = KEYS.greeted;
 
 /** Was the home already shown today on this phone? (Private mode: every visit counts as the first.) */
 export function greetedToday(today: Date): boolean {

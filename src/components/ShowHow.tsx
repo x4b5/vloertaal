@@ -1,3 +1,4 @@
+import { KEYS } from '../lib/storageKeys';
 import { useEffect, useState, type RefObject } from 'react';
 
 /**
@@ -15,7 +16,7 @@ import { useEffect, useState, type RefObject } from 'react';
  */
 export type HowKind = 'build' | 'match' | 'type';
 
-const KEY = 'vloertaal:shown-how';
+const KEY = KEYS.shownHow;
 let memory: string[] = [];
 
 function shown(): string[] {

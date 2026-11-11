@@ -1,3 +1,4 @@
+import { KEYS } from '../lib/storageKeys';
 import { WordPicture } from '../pictures';
 import { stillMotion } from '../lib/calm';
 import { useEffect, useState } from 'react';
@@ -135,7 +136,7 @@ export function WeekRow({ days, lang }: {
 }
 
 /** The reminder and home-screen cards are offered once, after the first day's milestone. */
-const KEEP_OFFERED = 'vloertaal.keepOffered';
+const KEEP_OFFERED = KEYS.keepOffered;
 export function keepOffered(): boolean {
   try { return localStorage.getItem(KEEP_OFFERED) === '1'; } catch { return false; }
 }

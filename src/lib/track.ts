@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import type { HelpLanguage, UiCode } from '../i18n/types';
 
 /**
@@ -29,8 +30,8 @@ export function setRulesTrack(on: boolean | null): void {
 function devFlag(): boolean {
   if (!import.meta.env?.DEV || typeof location === 'undefined') return false;
   try {
-    if (new URLSearchParams(location.search).get('rules') === '1') sessionStorage.setItem('vloertaal:rules', '1');
-    return sessionStorage.getItem('vloertaal:rules') === '1';
+    if (new URLSearchParams(location.search).get('rules') === '1') sessionStorage.setItem(KEYS.rules, '1');
+    return sessionStorage.getItem(KEYS.rules) === '1';
   } catch {
     return new URLSearchParams(location.search).get('rules') === '1';
   }

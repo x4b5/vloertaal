@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import type { Gender, UiCode } from '../i18n/types';
 import { LANG_CODES } from '../i18n/meta';
 import { rulesTrackOn, trackOf, trackOfLang, type Track } from './track';
@@ -208,7 +209,7 @@ export const emptyProgress: Progress = {
   completed: {},
 };
 
-const KEY = 'vloertaal:v1';
+const KEY = KEYS.progress;
 
 /* ---- What is saved, read field by field: one check per field, for the progress on this phone
    (loadProgress) and in a backup file (parseBackup) alike. Until 4 November 2026 each had its

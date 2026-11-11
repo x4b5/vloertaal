@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import { sha256Hex } from './access';
 
 /**
@@ -11,7 +12,7 @@ const ADMIN_HASH = 'f64bffcc79949608c0987a155756d99a1f1f84c1198251bff5d860f6edc4
 /** For the dev server and tests only: a production build drops it. */
 const DEV_PASSWORD = import.meta.env.DEV ? 'testbeheer' : null;
 
-const KEY = 'vloertaal:admin';
+const KEY = KEYS.admin;
 
 export function adminUnlocked(): boolean {
   try { return localStorage.getItem(KEY) === '1'; } catch { return false; }

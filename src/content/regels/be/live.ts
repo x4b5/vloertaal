@@ -1,3 +1,5 @@
+import { KEYS } from '../../../lib/storageKeys';
+
 /**
  * The Belgian work rules (docs/werkregels-belgie.md) are behind this flag until an expert has
  * checked every `// ⚖️ check:` fact in src/content/regels/be. Off: a learner in Belgium plays the
@@ -19,8 +21,8 @@ export function setBeRules(on: boolean | null): void {
 export function devFlag(): boolean {
   if (!import.meta.env?.DEV || typeof location === 'undefined') return false;
   try {
-    if (new URLSearchParams(location.search).get('be') === '1') sessionStorage.setItem('vloertaal:be', '1');
-    return sessionStorage.getItem('vloertaal:be') === '1';
+    if (new URLSearchParams(location.search).get('be') === '1') sessionStorage.setItem(KEYS.be, '1');
+    return sessionStorage.getItem(KEYS.be) === '1';
   } catch {
     return new URLSearchParams(location.search).get('be') === '1';
   }

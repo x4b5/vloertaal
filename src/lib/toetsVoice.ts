@@ -1,3 +1,4 @@
+import { STORES } from './storageKeys';
 import type { ToetsMoment } from './toets';
 
 /**
@@ -10,7 +11,7 @@ import type { ToetsMoment } from './toets';
  * Stored as bytes plus their type (not as a Blob): older Safari could not keep a Blob in IndexedDB.
  */
 
-const DB = 'vloertaal-toets';
+const DB = STORES.toetsDb;
 const STORE = 'stem';
 
 function idb(): IDBFactory | null {

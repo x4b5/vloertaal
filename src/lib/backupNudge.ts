@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import { isInAppBrowser, isInstalled, isIos, persistAnswer, type PersistAnswer } from './install';
 
 /**
@@ -44,7 +45,7 @@ export interface NudgeRecord {
   closed: boolean;
 }
 
-export const NUDGE_KEY = 'vloertaal:backup-nudge';
+export const NUDGE_KEY = KEYS.backupNudge;
 
 export function nudgeRecord(): NudgeRecord | null {
   try {

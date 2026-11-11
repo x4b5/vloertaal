@@ -1,9 +1,11 @@
+import { KEYS } from './storageKeys';
+
 /**
  * A hint shown only the first few times on this phone (the owner's choice, 2 November 2026: what
  * comes back on every screen is skipped, also when it matters once). Counted per hint, on the
  * device only (localStorage); without storage, for this visit.
  */
-const KEY = 'vloertaal:first-times';
+const KEY = KEYS.firstTimes;
 let memory: Record<string, number> = {};
 
 function counts(): Record<string, number> {

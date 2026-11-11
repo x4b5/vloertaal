@@ -1,10 +1,12 @@
+import { KEYS } from './storageKeys';
+
 /**
  * How "Alle onderwerpen" shows the topics: by theme (the default) or in the order of the path.
  * Kept on this device only (a convenience: a private window simply shows the themes again).
  */
 export type TopicsOrder = 'theme' | 'route';
 
-const KEY = 'vloertaal:topicsOrder';
+const KEY = KEYS.topicsOrder;
 
 export function loadTopicsOrder(): TopicsOrder {
   try {
