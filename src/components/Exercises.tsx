@@ -16,7 +16,7 @@ import { NlPair } from './NlPair';
 import { CAST, castFor, Character, colleaguesOf, MeAvatar, snapColleague, type CharacterId, type Mood, tipCast, useTalking, wordCast } from './Characters';
 import { CheckIcon, ChevronDownIcon, CloseIcon, MouthIcon, SpeakerIcon } from './Icons';
 import { findKlank } from '../content/klankMond';
-import { hardKlank } from '../lib/wordKlank';
+import { hardKlank, klankBadgeDue, markKlankBadgeShown } from '../lib/wordKlank';
 import { KlankCard } from './KlankCard';
 import { Mouth } from './Mouth';
 import { BUILD_FORGIVEN_TAPS, cheerFor, matchStart, matchTap, stepGrade, type MatchState } from '../lib/lessonRun';
@@ -264,11 +264,21 @@ export function setKlankOpenForTest(open: boolean): void {
  * The small mouth on a word card (the owner's request, 10 November 2026): only for a word with a
  * sound many learners find hard (src/lib/wordKlank.ts hardKlank), its letters beside a still mouth.
  * A tap opens that sound's card of "Hoe zeg je het?" (src/components/KlankCard.tsx) over the
- * lesson, with the mouth that shows how to make it; Continue closes it. One thing to tap.
+ * lesson, with the mouth that shows how to make it; Continue closes it. One thing to tap. Only
+ * the first few word cards of each sound show it (klankBadgeDue).
  */
 function KlankBadge({ nl, lang }: { nl: string; lang?: HelpLanguage }) {
-  const id = hardKlank(nl);
-  const klank = id ? findKlank(id) : undefined;
+  // Decided once per card: the first BADGE_TIMES word cards of a sound show its mouth (lib/wordKlank.ts).
+  const [klank] = useState(() => {
+    const id = hardKlank(nl);
+    return id && (klankOpenForTest || klankBadgeDue(id)) ? findKlank(id) : undefined;
+  });
+  const counted = useRef(false);
+  useEffect(() => {
+    if (!klank || counted.current || klankOpenForTest) return;
+    counted.current = true;
+    markKlankBadgeShown(klank.id);
+  }, [klank]);
   const [open, setOpen] = useState(klankOpenForTest);
   if (!klank) return null;
   return (

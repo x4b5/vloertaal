@@ -5,7 +5,9 @@ import type { KlankId } from '../content/klankMond';
  * 10 November 2026): a tap opens the card of that sound ("Hoe zeg je het?", src/components/
  * KlankCard.tsx), with the mouth that shows how to make it. Only the sounds many learners find
  * hard and that have a card: ui, eu, uu, ij/ei, ou/au, oe. One per word (the first by HARD's
- * order), so the card keeps one thing to tap. Most words get none.
+ * order), so the card keeps one thing to tap. Most words get none. Shown only the first
+ * BADGE_TIMES times per sound (klankBadgeDue): after that the learner knows the sound, and its card
+ * stays under Hulp › Hoe zeg je het?.
  *
  * Read from the spelling, left to right, the longest letter group first ("moeilijk" is m-oei-l-ijk,
  * not m-o-ei-…): Dutch spelling says a vowel quite reliably, except in loanwords. Those are in
@@ -68,4 +70,45 @@ export function hardKlank(nl: string): KlankId | undefined {
   const words = nl.toLowerCase().normalize('NFC').split(/[^a-zà-ÿ-]+/).filter(Boolean);
   const found = new Set(words.flatMap(soundsOf));
   return HARD.find((k) => found.has(k));
+}
+
+/** How often a sound's mouth shows on word cards, at most. */
+export const BADGE_TIMES = 3;
+const BADGE_KEY = 'vloertaal:klank-op-woordkaart';
+
+function storage(): Storage | null {
+  try {
+    return typeof localStorage === 'undefined' ? null : localStorage;
+  } catch {
+    return null;
+  }
+}
+
+function shownCounts(s: Storage): Partial<Record<KlankId, number>> {
+  try {
+    const v = JSON.parse(s.getItem(BADGE_KEY) ?? '{}') as unknown;
+    return v && typeof v === 'object' ? (v as Partial<Record<KlankId, number>>) : {};
+  } catch {
+    return {};
+  }
+}
+
+/** Does the mouth of this sound still show on a word card? (Yes when the phone cannot remember: it is only a help.) */
+export function klankBadgeDue(id: KlankId): boolean {
+  const s = storage();
+  if (!s) return true;
+  return (shownCounts(s)[id] ?? 0) < BADGE_TIMES;
+}
+
+/** A word card showed the mouth of this sound once more. */
+export function markKlankBadgeShown(id: KlankId): void {
+  const s = storage();
+  if (!s) return;
+  try {
+    const counts = shownCounts(s);
+    counts[id] = (counts[id] ?? 0) + 1;
+    s.setItem(BADGE_KEY, JSON.stringify(counts));
+  } catch {
+    // Blocked storage: the mouth keeps showing, which does no harm.
+  }
 }

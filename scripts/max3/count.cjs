@@ -495,6 +495,9 @@ function defineStates(LANG) {
   add('lesson:saying', shot('saying'));
   add('lesson:saying-long', shot('saying&saying=l.measures'));
   add('lesson:word-card-saying', shot('intro&word=w.blad'));
+  // A word with a hard sound (src/lib/wordKlank.ts): the small mouth under the word, and its sound's card open over the lesson.
+  add('lesson:word-card-klank', shot('intro&word=w.ziekenhuis'), null, { expect: '.klank-badge' });
+  add('lesson:word-card-klank-open', shot('intro&word=w.ziekenhuis&klank=open'), null, { expect: '.klank-sheet' });
   // Klanken (src/content/sounds.ts): the picture choice and "What do you hear?" offer the word's pair
   // (two places on since 4 November 2026: the lesson starts with its two sound cards).
   add('lesson:sounds-pick', shot('lesson&lesson=l.shortlong&at=10'));

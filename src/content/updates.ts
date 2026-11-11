@@ -17,6 +17,12 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-11',
+    items: [
+      'Zit er in een nieuw woord een lastige klank, zoals ui, eu, uu, ij, ou of oe? Dan staat er op het woordkaartje een klein mondje met die letters. Tik erop, en je ziet hoe je mond die klank maakt. Dat mondje zie je de eerste 3 keer per klank. Daarna vind je alle klanken bij Hulp › Hoe zeg je het?.',
+    ],
+  },
+  {
     date: '2026-11-10',
     items: [
       'Na je 3e en je 15e les vraagt de app één keer: "Wat vind je van Vloertaal?", in je eigen taal, met drie gezichtjes. Eén tik is genoeg, en overslaan kan altijd met Verder. We tellen alleen welk gezichtje, zonder naam. Zo zien we of de app je helpt.',
