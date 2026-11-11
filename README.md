@@ -175,10 +175,16 @@ src/i18n/             per hulptaal: UI-teksten (<taal>.ts) en vertalingen per on
 src/lib/              oefeningen, lespad, herhalen, voortgang, audio, toegang, telling, offline
 src/components/       schermen en oefeningen
 src/dev/              screenshot-harnas (alleen in ontwikkeling)
+src/overzicht/        de kaart van de app: schakelaars, momenten, schermen, opslag (maakt docs/overzicht.md)
 scripts/              opnamelijst, iconen, max-3-telscript
 tests/                vitest: logica, volledigheid en vorm van alle vertalingen
 docs/                 pilot, livegang, vertaal- en juridische controle, ontwerpkeuzes
 ```
+
+**Overzicht:** [`docs/overzicht.md`](docs/overzicht.md) zegt in gewone taal wat aan en uit staat, wat de app uit
+zichzelf laat zien, welke schermen er zijn en wat de telefoon onthoudt. De app maakt het zelf
+(`npm run overzicht`); `npm test` faalt als er een scherm, schakelaar of opslagsleutel bij komt
+zonder regel in `src/overzicht/`.
 
 **Les toevoegen:** voeg een `Lesson` toe in `curriculum.ts` of `work.ts` en vul in elke hulptaal de
 nieuwe id's aan. `npm test` faalt zolang er in een taal iets ontbreekt. Neem daarna de stemmen op.

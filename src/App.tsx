@@ -79,7 +79,7 @@ import type { Exercise } from './lib/exercises';
 import { hasSamen, samenDialogues } from './lib/samen';
 import { KlankOverview, KlankPage } from './components/KlankScreens';
 
-type View =
+export type View =
   | { name: 'home' }
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
   /** fresh: "Start again" (the saved place is kept until the first answer, see LessonPlayer). */
