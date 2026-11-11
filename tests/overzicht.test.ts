@@ -2,10 +2,11 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { overzichtMarkdown } from '../src/overzicht/markdown';
-import { HOME_CARD_ORDER, MOMENTS, PLACES } from '../src/overzicht/moments';
+import { AFTER_RESULT_STEP, HOME_CARD_ORDER, MOMENTS, PLACES } from '../src/overzicht/moments';
 import { SCREENS } from '../src/overzicht/screens';
 import { IN_BACKUP, STORED_KEYS } from '../src/overzicht/storageKeys';
 import { SWITCHES } from '../src/overzicht/switches';
+import { afterLessonSteps } from '../src/lib/afterLesson';
 import { backupFile, emptyProgress } from '../src/lib/progress';
 
 /**
@@ -101,6 +102,13 @@ describe('what the app shows of its own accord', () => {
     expect([...at].sort((a, b) => a - b)).toEqual(at);
     const cards = MOMENTS.filter((m) => m.plek === 'thuis-kaart').map((m) => `${m.code.split(',')[0]}(`);
     expect(cards).toEqual([...HOME_CARD_ORDER]);
+  });
+
+  it('the screens after the result are in the order of src/lib/afterLesson.ts', () => {
+    const steps = afterLessonSteps({ cert: 'u.pay', streakUp: 3 }).map((s) => AFTER_RESULT_STEP[s.name]);
+    const listed = MOMENTS.filter((m) => m.plek === 'na-uitslag').map((m) => m.id);
+    expect(steps.every(Boolean)).toBe(true);
+    expect(listed.slice(0, steps.length)).toEqual(steps);
   });
 });
 

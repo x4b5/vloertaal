@@ -11,7 +11,8 @@ import { END_DAYS, END_UNITS, INSTAP_FROM_LESSONS, INSTAP_UNTIL_LESSONS } from '
  * Everything the app shows of its own accord: a card, a question, an offer (docs/overzicht.md,
  * "Wat de app uit zichzelf laat zien"). The numbers come from the code. The order within a place
  * is the order in src/App.tsx today, written out by hand: App.tsx does not read this list yet.
- * tests/overzicht.test.ts checks the order of the cards on the home against App.tsx.
+ * tests/overzicht.test.ts checks the order of the cards on the home against App.tsx, and the order
+ * after the result against src/lib/afterLesson.ts.
  */
 export type Place = 'openen' | 'thuis-kaart' | 'thuis-regel' | 'uitslag' | 'na-uitslag' | 'in-de-les';
 
@@ -55,8 +56,8 @@ export const MOMENTS: Moment[] = [
   { id: 'samen', plek: 'uitslag', naam: 'Oefen samen', wanneer: 'Alleen in Taal, na een les met gesprekjes. Niet samen met de noodzinnen of de gezichtjes.', onthoudt: 'Elke keer.', code: 'hasSamen, src/lib/samen.ts' },
   { id: 'probeer', plek: 'uitslag', naam: 'Probeer het vandaag op je werk', wanneer: 'Na een les die de leerling voor het eerst doet. Niet samen met "Wil je sneller?" of de gezichtjes.', onthoudt: 'Hooguit één keer per dag (losse sleutel vloertaal:work-try).', code: 'workTryFor, src/lib/workTry.ts' },
 
-  { id: 'certificaat', plek: 'na-uitslag', naam: 'Certificaat behaald', wanneer: 'De les maakte een onderwerp af. Daarna het certificaat of het spiekkaartje; bij het eerste certificaat in Taal "Voor je collega".', onthoudt: 'Eén keer per onderwerp (in de voortgang).', code: 'unitJustDone, src/lib/certificate.ts' },
-  { id: 'dagen-op-rij', plek: 'na-uitslag', naam: 'Dagen op rij', wanneer: `Na de eerste les van de dag, als de reeks omhoog ging. Bij ${list(STREAK_TIERS)} dagen met een "Wist je dat?". Niet met "Rustig scherm".`, onthoudt: 'Elke dag hooguit één keer.', code: 'streakWentUp, src/lib/progress.ts' },
+  { id: 'certificaat', plek: 'na-uitslag', naam: 'Certificaat behaald', wanneer: 'De les maakte een onderwerp af. Daarna het certificaat of het spiekkaartje; bij het eerste certificaat in Taal "Voor je collega".', onthoudt: 'Eén keer per onderwerp (in de voortgang).', code: 'afterLessonSteps, src/lib/afterLesson.ts' },
+  { id: 'dagen-op-rij', plek: 'na-uitslag', naam: 'Dagen op rij', wanneer: `Na de eerste les van de dag, als de reeks omhoog ging. Bij ${list(STREAK_TIERS)} dagen met een "Wist je dat?". Niet met "Rustig scherm".`, onthoudt: 'Elke dag hooguit één keer.', code: 'afterLessonSteps, src/lib/afterLesson.ts' },
   { id: 'blijf-oefenen', plek: 'na-uitslag', naam: 'Zo blijf je oefenen', wanneer: 'Het aanbod van een herinnering en de app op het beginscherm.', onthoudt: 'Eén keer (losse sleutel vloertaal.keepOffered).', code: 'keepOffered, src/lib/keepOffered.ts' },
 
   { id: 'zeg-samen', plek: 'in-de-les', naam: 'Zeg het samen', wanneer: `Voor het opnemen: bij de eerste spreekoefening ooit, of als de leerling ${SHY_AFTER} spreekoefeningen achter elkaar oversloeg.`, onthoudt: 'In de voortgang.', code: 'chorusDue, src/lib/chorus.ts' },
@@ -66,3 +67,6 @@ export const MOMENTS: Moment[] = [
 
 /** The cards on the home, first to last: the order tests/overzicht.test.ts finds in src/App.tsx. */
 export const HOME_CARD_ORDER = ['noticeFor(', 'bridgeDue(', 'nudgeDue(', 'reasonDue('] as const;
+
+/** The moments after the result that are steps of src/lib/afterLesson.ts, by the step's name. */
+export const AFTER_RESULT_STEP: Record<string, string> = { 'cert-earned': 'certificaat', streak: 'dagen-op-rij' };

@@ -42,6 +42,7 @@ import { isMixLesson } from './content/review';
 import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
+import { type AfterStep, afterLessonSteps, nextAfter } from './lib/afterLesson';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { countFeel, feelDue, type FeelAt, markFeelAsked } from './lib/feel';
 import { rulesTwinOf, trackTwin } from './content/trackTwins';
@@ -84,28 +85,30 @@ export type View =
   /** ids: the words of today's review (lessonId DAILY_ID), fixed when it starts. */
   /** fresh: "Start again" (the saved place is kept until the first answer, see LessonPlayer). */
   | { name: 'lesson'; lessonId: string; review: boolean; ids?: string[]; fresh?: boolean; admin?: boolean }
-  /** streakUp: the day streak reached this number with this lesson, so the milestone follows. */
+  /** after: the screens that follow this result, in order (src/lib/afterLesson.ts). A screen opened
+   *  on the way (samen, phrasebook, certificate, pocket, colleague) carries what is left in `after`. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; streakUp?: number; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; cert?: string; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; feel?: FeelAt; easier?: boolean; samen?: string; workTry?: WorkTryLine }
+  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; after: AfterStep[]; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; feel?: FeelAt; easier?: boolean; samen?: string; workTry?: WorkTryLine }
   /** "Oefen samen" (src/components/Samen.tsx): a lesson's chats, two people on one phone, from its
-   *  result; streakUp / cert: the certificate or the streak milestone still follows. */
-  | { name: 'samen'; lessonId: string; streakUp?: number; cert?: string }
+   *  result; after: the certificate or the streak milestone still follows. */
+  | { name: 'samen'; lessonId: string; after?: AfterStep[] }
   /** "Certificaat behaald": once, after the result of a unit's last lesson (then the streak, if it went up). */
-  | { name: 'cert-earned'; unit: string; streakUp?: number }
-  /** A unit's certificate; streakUp: opened from "Certificaat behaald", the streak milestone still follows. */
-  | { name: 'certificate'; unit: string; streakUp?: number }
+  | { name: 'cert-earned'; unit: string; after?: AfterStep[] }
+  /** A unit's certificate; after: opened from "Certificaat behaald", the streak milestone still follows. */
+  | { name: 'certificate'; unit: string; after?: AfterStep[] }
   /** A unit's pocket card ("Spiekkaartje"): its five most useful phrases. */
-  | { name: 'pocket'; unit: string; streakUp?: number }
+  | { name: 'pocket'; unit: string; after?: AfterStep[] }
   | { name: 'streak'; streak: number }
   /** The reminder and home-screen offer, once, at the end of the first lesson with the code (G4 r5). */
   | { name: 'keep' }
   | { name: 'words' }
-  /** The emergency phrases. streakUp / cert: opened from the first lesson's result, so the
+  /** The emergency phrases. after: opened from the first lesson's result, so the
    *  certificate or the streak milestone still follows. */
-  | { name: 'phrasebook'; streakUp?: number; cert?: string }
+  | { name: 'phrasebook'; after?: AfterStep[] }
   | { name: 'tips' }
-  /** fromCert: opened from the first "Certificaat behaald", so the day-streak milestone still follows. */
-  | { name: 'colleague'; fromCert?: boolean; streakUp?: number }
+  /** after: opened from the first "Certificaat behaald" (also when nothing is left: an empty
+   *  list), so the day-streak milestone still follows; without it: opened from the Hulp tab. */
+  | { name: 'colleague'; after?: AfterStep[] }
   /** "Hoe zeg je het?" (src/components/KlankScreens.tsx): every sound card, from the Hulp tab; one card. */
   | { name: 'klanken' }
   | { name: 'klank'; id: string }
@@ -160,7 +163,7 @@ const current = (): Entry | null => {
 /** A screen a reload would not bring back: a lesson, its result and what follows it (the reminder
  *  offer too: its calendar file sends the learner away and back), the admin page. */
 const passing = (v: View) => v.name === 'lesson' || v.name === 'result' || v.name === 'check' || v.name === 'check-result' || v.name === 'toets' || v.name === 'toets-result' || v.name === 'streak' || v.name === 'cert-earned' || v.name === 'keep' || v.name === 'admin'
-  || (v.name === 'phrasebook' && Boolean(v.streakUp || v.cert)) || v.name === 'samen';
+  || (v.name === 'phrasebook' && Boolean(v.after?.length)) || v.name === 'samen';
 /** After a reload: back on the screen you were on, but a lesson or its result starts over at home. */
 const restored = (): View => {
   const v = current()?.view;
@@ -724,6 +727,14 @@ export default function App() {
     toRoute.current = false;
     if (route) tab('route'); else back();
   };
+  /** On from a screen after a lesson: the next of the list (src/lib/afterLesson.ts), which takes
+   *  the rest along, or the end. Also the way back of a certificate, pocket card or emergency
+   *  phrases opened from elsewhere: nothing waits then, so it is the end (afterLesson: back). */
+  const onward = (after?: AfterStep[]) => {
+    const step = nextAfter(after);
+    if (!step) return afterLesson();
+    replace(step.next.name === 'cert-earned' ? { ...step.next, after: step.rest } : step.next);
+  };
   /** "Wat ken je al?" starts (counted without any result: only that it started, and which version).
    *  `instead`: from the offer's own page, which the test replaces (its end goes back home). */
   const startToets = (moment: ToetsMoment, instead = false) => {
@@ -903,7 +914,7 @@ export default function App() {
         // not "+0 new words", under a review title.
         const reviewing = daily || view.review || isMixLesson(found.lesson) || Boolean(found.lesson.repeat);
         replace({
-          name: 'result', right, total, newWords: words - before, words, streakUp,
+          name: 'result', right, total, newWords: words - before, words, after: afterLessonSteps({ cert: unitDone?.id, streakUp }),
           kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
           repeated: daily ? wordResultCount(results) || (found.lesson.steps?.length ?? found.lesson.words.length) : reviewing ? wordResultCount(results) || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
@@ -917,7 +928,6 @@ export default function App() {
           // About how long that lesson takes ("± 6 min", src/lib/lessonTime.ts), built as it will be
           // played: sound, sector, speaking practice and the pace after this lesson.
           nextMinutes: upNext ? lessonMinutes(upNext, { quiet: Boolean(next.quiet), sector: next.sector, speak: track === 'taal' && speakingOn(), ...(track === 'taal' ? lessonPace(next) : {}) }) : undefined,
-          cert: unitDone?.id,
           skipped: skipped || undefined,
           phrases: phrases || undefined,
           askFaster: askFaster || undefined,
@@ -978,12 +988,12 @@ export default function App() {
           remember={view.remember}
           next={view.next ? nextTitle(view.next, lang, view.nextMinutes) : undefined}
           lang={lang}
-          onDone={() => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())}
-          onPhrases={view.phrases ? () => replace({ name: 'phrasebook', streakUp: view.streakUp, cert: view.cert }) : undefined}
+          onDone={() => onward(view.after)}
+          onPhrases={view.phrases ? () => replace({ name: 'phrasebook', after: view.after }) : undefined}
           easier={view.easier}
           onFaster={view.askFaster ? (yes) => setProgress((p) => setFaster(p, yes, dayKey(new Date()))) : undefined}
           onFeel={view.feel ? (face) => countFeel(view.feel!, face) : undefined}
-          onSamen={view.samen ? () => replace({ name: 'samen', lessonId: view.samen!, streakUp: view.streakUp, cert: view.cert }) : undefined}
+          onSamen={view.samen ? () => replace({ name: 'samen', lessonId: view.samen!, after: view.after }) : undefined}
           workTry={view.workTry}
         />
       );
@@ -1006,19 +1016,19 @@ export default function App() {
       if (!unit) return null;
       const day = progress.certs?.[unit.id] ?? dayKey(new Date());
       // After "Certificaat behaald", the day-streak milestone still follows (once per day).
-      const onward = () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
+      const on = () => onward(view.after);
       return view.name === 'cert-earned' ? (
-        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} completed={progress.completed} region={progress.region} onView={() => replace({ name: 'certificate', unit: unit.id, streakUp: view.streakUp })} onLater={onward}
-          onPocket={() => replace({ name: 'pocket', unit: unit.id, streakUp: view.streakUp })}
-          onColleague={colleagueAtCertificate(progress) ? () => replace({ name: 'colleague', fromCert: true, streakUp: view.streakUp }) : undefined} />
+        <CertEarned unit={unit} day={day} lang={lang} sector={progress.sector} completed={progress.completed} region={progress.region} onView={() => replace({ name: 'certificate', unit: unit.id, after: view.after })} onLater={on}
+          onPocket={() => replace({ name: 'pocket', unit: unit.id, after: view.after })}
+          onColleague={colleagueAtCertificate(progress) ? () => replace({ name: 'colleague', after: view.after ?? [] }) : undefined} />
       ) : (
-        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} completed={progress.completed} region={progress.region} onBack={onward} />
+        <CertificateScreen unit={unit} day={day} lang={lang} sector={progress.sector} completed={progress.completed} region={progress.region} onBack={on} />
       );
     }
     case 'pocket': {
       const unit = findUnit(view.unit);
       // From "Certificaat behaald": the day-streak milestone still follows.
-      return unit ? <PocketCardScreen unit={unit} lang={lang} sector={progress.sector} region={progress.region} onBack={() => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson())} /> : null;
+      return unit ? <PocketCardScreen unit={unit} lang={lang} sector={progress.sector} region={progress.region} onBack={() => onward(view.after)} /> : null;
     }
     case 'all':
       return (
@@ -1072,7 +1082,7 @@ export default function App() {
       return <Coaches onBack={back} lang={lang} />;
     case 'colleague':
       // From the first certificate: on as after the pocket card (the streak milestone, or onward).
-      return <ColleagueCard lang={lang} onBack={view.fromCert ? () => (view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson()) : back} />;
+      return <ColleagueCard lang={lang} onBack={view.after ? () => onward(view.after) : back} />;
     case 'klanken':
       return <KlankOverview lang={lang} onBack={back} onOpen={(id) => go({ name: 'klank', id })} />;
     case 'klank':
@@ -1083,18 +1093,18 @@ export default function App() {
       return <News onBack={back} lang={lang} />;
     case 'samen': {
       // From a lesson's result: back and "Klaar" go on to the certificate or the streak milestone.
-      const onward = () => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
+      const on = () => onward(view.after);
       const dialogues = samenDialogues(findLesson(view.lessonId, 'taal')?.lesson);
       if (!dialogues.length) return null;
-      return <Samen dialogues={dialogues} lang={lang} onBack={onward} onDone={onward} />;
+      return <Samen dialogues={dialogues} lang={lang} onBack={on} onDone={on} />;
     }
     case 'phrasebook': {
       // From the first lesson's result: back goes on to the certificate or the streak milestone.
-      const onward = () => (view.cert ? replace({ name: 'cert-earned', unit: view.cert, streakUp: view.streakUp }) : view.streakUp ? replace({ name: 'streak', streak: view.streakUp }) : afterLesson());
+      const on = () => onward(view.after);
       // The work-rules track: its Hulp page ("Wie bel je?") instead of the emergency phrases.
       return track === 'regels'
-        ? <RulesHelp lang={lang} country={progress.country} onBack={onward} onShelf={() => go({ name: 'tips' })} />
-        : <Phrasebook lang={lang} onBack={onward} />;
+        ? <RulesHelp lang={lang} country={progress.country} onBack={on} onShelf={() => go({ name: 'tips' })} />
+        : <Phrasebook lang={lang} onBack={on} />;
     }
     case 'settings': {
       const up = view.up ?? 0;

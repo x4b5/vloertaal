@@ -85,8 +85,8 @@ Achter elkaar, in deze volgorde. Daarna terug naar Route.
 
 |  | Wat de leerling leest | Wanneer | Hoe vaak | In de code |
 | --- | --- | --- | --- | --- |
-| 1 | **Certificaat behaald** | De les maakte een onderwerp af. Daarna het certificaat of het spiekkaartje; bij het eerste certificaat in Taal "Voor je collega". | Eén keer per onderwerp (in de voortgang). | `unitJustDone, src/lib/certificate.ts` |
-| 2 | **Dagen op rij** | Na de eerste les van de dag, als de reeks omhoog ging. Bij 3, 7, 14 en 30 dagen met een "Wist je dat?". Niet met "Rustig scherm". | Elke dag hooguit één keer. | `streakWentUp, src/lib/progress.ts` |
+| 1 | **Certificaat behaald** | De les maakte een onderwerp af. Daarna het certificaat of het spiekkaartje; bij het eerste certificaat in Taal "Voor je collega". | Eén keer per onderwerp (in de voortgang). | `afterLessonSteps, src/lib/afterLesson.ts` |
+| 2 | **Dagen op rij** | Na de eerste les van de dag, als de reeks omhoog ging. Bij 3, 7, 14 en 30 dagen met een "Wist je dat?". Niet met "Rustig scherm". | Elke dag hooguit één keer. | `afterLessonSteps, src/lib/afterLesson.ts` |
 | 3 | **Zo blijf je oefenen** | Het aanbod van een herinnering en de app op het beginscherm. | Eén keer (losse sleutel vloertaal.keepOffered). | `keepOffered, src/lib/keepOffered.ts` |
 
 ### In een les of op een onderwerp
@@ -100,6 +100,8 @@ Kleine hulp, op het moment zelf.
 | 3 | **Ik ken dit al: korte check** | Op de pagina van een onderwerp: alleen in Taal, bij een deel van de thema's, na een goede eerste toets, als er nog lessen open zijn. | Eén check per onderwerp (in de voortgang). | `checkOffered, src/lib/instapCheck.ts` |
 
 De volgorde van de kaarten op Route staat nu nog in `src/App.tsx` (`noticeFor`, dan `bridgeDue`, dan `nudgeDue`, dan `reasonDue`). De test bewaakt dat deze lijst dezelfde volgorde heeft.
+
+De volgorde na de uitslag staat op één plek: `src/lib/afterLesson.ts`. Ook die bewaakt de test.
 
 Niet in deze lijst, want altijd aanwezig: de zin van Bram, de herhaling van vandaag, en in Werkregels de regel "Over deze regels".
 

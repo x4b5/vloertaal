@@ -57,6 +57,8 @@ export function overzichtMarkdown(): string {
   out.push(
     `De volgorde van de kaarten op Route staat nu nog in \`src/App.tsx\` (${HOME_CARD_ORDER.map((c) => `\`${c.slice(0, -1)}\``).join(', dan ')}). De test bewaakt dat deze lijst dezelfde volgorde heeft.`,
     '',
+    'De volgorde na de uitslag staat op één plek: `src/lib/afterLesson.ts`. Ook die bewaakt de test.',
+    '',
     'Niet in deze lijst, want altijd aanwezig: de zin van Bram, de herhaling van vandaag, en in Werkregels de regel "Over deze regels".',
     '',
   );
