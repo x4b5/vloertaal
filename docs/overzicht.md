@@ -51,7 +51,7 @@ De hulptaal bepaalt de cursus. Deze tabel is het antwoord van de app zelf: één
 | Wat "Herhaal vandaag" terugbrengt | woorden | regelvragen | woorden en regelvragen |
 | Het tabblad Hulp | noodzinnen en tips | "Wie bel je?" en de regelkaarten | noodzinnen en tips |
 
-Nog niet alle schermen vragen het aan deze functie: `src/App.tsx` wel, de andere bestanden volgen stap voor stap. Tot dan leiden die het zelf af uit de hulptaal, met dezelfde uitkomst.
+Wat een leerling krijgt, vragen de schermen aan deze functie. Een test houdt tegen dat een bestand het rechtstreeks uit het spoor afleidt. Wat wel overal mag: de cursus als lijst opvragen ("geef de onderwerpen van Taal").
 
 ## 3. Wat de app uit zichzelf laat zien
 

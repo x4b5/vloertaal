@@ -1,6 +1,7 @@
 import { isBeId } from '../content/regels/be/ids';
 import { allCourseUnits, courseUnits, findCourseUnit, ruleCards } from '../content/courses';
 import { findLesson } from '../content/curriculum';
+import { learnsDutch } from './learner';
 import { trackOf, trackOfId, type Track } from './track';
 import { isMixLesson } from '../content/review';
 import type { Unit, Word } from '../content/types';
@@ -94,7 +95,7 @@ export function earnedCertificates(p: Progress, now = new Date(), track: Track =
  * learners speak Dutch already, and the card asks for help with Dutch.
  */
 export function colleagueAtCertificate(p: Progress, now = new Date()): boolean {
-  return trackOf(p) === 'taal' && earnedCertificates(p, now).length === 1;
+  return learnsDutch(p) && earnedCertificates(p, now).length === 1;
 }
 
 /** A unit by id, in either course (ids never clash). */

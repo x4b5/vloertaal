@@ -7,7 +7,8 @@ import { earnedCertificates } from './certificate';
 import { buildTiles } from './exercises';
 import { dayKey, daysBetween, type Progress } from './progress';
 import { createRng, shuffle } from './random';
-import { trackOf, trackOfId } from './track';
+import { learnsDutch } from './learner';
+import { trackOfId } from './track';
 import type { HelpLanguage } from '../i18n/types';
 import { typeAsPick, wantsWriting, writingInput } from './writing';
 import { TOETS_STATE_VERSION, type ToetsDurf, type ToetsRun, type ToetsScore, type ToetsState } from './toetsState';
@@ -57,7 +58,7 @@ function addDays(day: string, n: number): string {
 
 /** Which moment the home offers today (null: none). */
 export function toetsOffer(p: Progress, today: Date, unitsDone = taalUnitsDone(p, today)): ToetsMoment | null {
-  if (trackOf(p) !== 'taal') return null;
+  if (!learnsDutch(p)) return null;
   const t = p.toets;
   if (!t?.instap && !t?.skipped) {
     const n = taalLessons(p.completed);

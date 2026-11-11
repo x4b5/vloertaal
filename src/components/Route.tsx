@@ -26,6 +26,7 @@ import { useScenesAfter } from './useScenes';
 import { ChromeBack } from './ChromeBack';
 import { NlPair } from './NlPair';
 import { dutchUi, trackOf } from '../lib/track';
+import { learnsDutch } from '../lib/learner';
 import { RestartButton, ResumeChip, resumeLabel } from './Resume';
 import { DailyReview } from './Screens';
 import { lessonPace, reviewFirst } from '../lib/pace';
@@ -188,7 +189,7 @@ export function Route({ progress, lang, access = 'full', daily, onDaily, onStart
                     5 November 2026): only on the yellow card, not for a lesson stopped halfway (its
                     chip says what is left), and not in the compact block under "Herhaal vandaag". */}
                 {state === 'now' && !saved && !first && !dailyDue && (
-                  <Bi className="bay-goal bay-time" text={fillCount('nextMinutesN', lessonMinutes(lesson, { quiet: Boolean(progress.quiet), sector, speak: track === 'taal' && speakingOn(), ...(track === 'taal' ? lessonPace(progress) : {}) }), lang)} />
+                  <Bi className="bay-goal bay-time" text={fillCount('nextMinutesN', lessonMinutes(lesson, { quiet: Boolean(progress.quiet), sector, speak: learnsDutch(progress) && speakingOn(), ...(learnsDutch(progress) ? lessonPace(progress) : {}) }), lang)} />
                 )}
                 {/* In Belgium: a Dutch lesson that differs there (docs/taal-belgie.md). */}
                 {lessonNlOnly(lesson.id) && <BeNote lang={lang} inline className="bay-goal bay-note" />}

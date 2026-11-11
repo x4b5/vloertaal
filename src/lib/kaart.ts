@@ -8,6 +8,7 @@ import { checkDay } from './instapCheck';
 import { kunAantal, kunJeNu } from '../content/kunJeNu';
 import { groepCode } from './groepCode';
 import { dayKey, type Progress } from './progress';
+import { learnsDutch } from './learner';
 import { trackOf, trackOfId, type Track } from './track';
 import { knownOf, type ToetsRun } from './toetsState';
 
@@ -177,14 +178,14 @@ export function kaartData(p: Progress, name: string, today: Date, showRights = f
   const voorbeeld = example ? kunJeNu(example.unit.id)[0]?.nl : undefined;
   const lastUnitId = last ? findLesson(last)?.unit.id : undefined;
   const hasRights = latest.slice(0, 3).some((e) => isRightsUnit(e.unit.id)) || Boolean(lastUnitId && isRightsUnit(lastUnitId));
-  const t = track === 'taal' ? p.toets : undefined;
+  const t = learnsDutch(p) ? p.toets : undefined;
   const toets = t?.instap || t?.eind
     ? { ...(t.instap ? { instap: toetsOf(t.instap) } : {}), ...(t.eind ? { eind: toetsOf(t.eind) } : {}) }
     : undefined;
   return {
     name: name.trim(),
     track,
-    ...(track === 'regels' && rulesCountry() === 'be' ? { be: true } : {}),
+    ...(!learnsDutch(p) && rulesCountry() === 'be' ? { be: true } : {}),
     unitsDone: done.length,
     viaCheck: checked.length,
     lastUnits: latest.slice(0, 3).map((e) => (hidden(e.unit.id) ? RIGHTS_TOPIC : e.check ? `${e.unit.titleNl} (via check)` : e.unit.titleNl)),
@@ -195,15 +196,15 @@ export function kaartData(p: Progress, name: string, today: Date, showRights = f
     ...(toets ? { toets } : {}),
     date: certDate(dayKey(today)),
     ...(hasRights ? { hasRights } : {}),
-    ...(oneApp ? oneAppLines(p, track) : {}),
+    ...(oneApp ? oneAppLines(p) : {}),
   };
 }
 
 /** The card's lines of "Eén app" (each only when there is something to say). */
-function oneAppLines(p: Progress, track: Track): Pick<KaartData, 'gezegd' | 'lastig' | 'regels'> {
+function oneAppLines(p: Progress): Pick<KaartData, 'gezegd' | 'lastig' | 'regels'> {
   const said = p.gelukt ?? [];
-  const lastig = track === 'taal' ? hardWords(p) : [];
-  const regels = track === 'taal' ? Object.keys(p.completed).filter((id) => trackOfId(id) === 'regels').length : 0;
+  const lastig = learnsDutch(p) ? hardWords(p) : [];
+  const regels = learnsDutch(p) ? Object.keys(p.completed).filter((id) => trackOfId(id) === 'regels').length : 0;
   return {
     ...(said.length ? { gezegd: { n: said.length, last: said.slice(-2).reverse().map((g) => g.nl) } } : {}),
     ...(lastig.length ? { lastig } : {}),
