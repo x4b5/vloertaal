@@ -1,4 +1,6 @@
+import { LEARNER_KINDS, LEARNER_ROWS } from './learners';
 import { MOMENTS, PLACES, momentsAt, type Place } from './moments';
+import type { Learner } from '../lib/learner';
 import { GROUPS, SCREENS, START_STEPS, TABS } from './screens';
 import { IN_BACKUP, KIND_NL, STORED_KEYS, STORE_NL, type Kind } from './storageKeys';
 import { ADDRESSES, SWITCHES } from './switches';
@@ -27,12 +29,13 @@ export function overzichtMarkdown(): string {
     '> De bron staat in `src/overzicht/`. Komt er een scherm, een schakelaar of een opslagsleutel bij',
     '> zonder regel hier, dan falen de tests.',
     '',
-    'Vier lijsten, in gewone taal:',
+    'Vijf lijsten, in gewone taal:',
     '',
     `1. [Wat staat aan en uit](#1-wat-staat-aan-en-uit): ${SWITCHES.length} schakelaars`,
-    `2. [Wat de app uit zichzelf laat zien](#2-wat-de-app-uit-zichzelf-laat-zien): ${MOMENTS.length} momenten`,
-    `3. [Alle schermen](#3-alle-schermen): ${screens.length} schermen`,
-    `4. [Wat de telefoon onthoudt](#4-wat-de-telefoon-onthoudt): ${STORED_KEYS.length} plekken`,
+    `2. [Wie krijgt wat](#2-wie-krijgt-wat): ${LEARNER_KINDS.length} soorten leerlingen`,
+    `3. [Wat de app uit zichzelf laat zien](#3-wat-de-app-uit-zichzelf-laat-zien): ${MOMENTS.length} momenten`,
+    `4. [Alle schermen](#4-alle-schermen): ${screens.length} schermen`,
+    `5. [Wat de telefoon onthoudt](#5-wat-de-telefoon-onthoudt): ${STORED_KEYS.length} plekken`,
     '',
   );
 
@@ -46,7 +49,24 @@ export function overzichtMarkdown(): string {
   out.push(table(['Adres op vloertaal.nl', 'Wat het doet'], ADDRESSES.map((a) => [`\`${a.adres}\``, a.wat])));
   out.push('');
 
-  out.push('## 2. Wat de app uit zichzelf laat zien', '');
+  out.push('## 2. Wie krijgt wat', '');
+  out.push(
+    'De hulptaal bepaalt de cursus. Deze tabel is het antwoord van de app zelf: één functie (`learnerOf` in `src/lib/learner.ts`) zegt per leerling wat die krijgt.',
+    '',
+  );
+  const keys = Object.keys(LEARNER_ROWS) as (keyof Learner)[];
+  const answer = <K extends keyof Learner>(k: K, me: Learner) => LEARNER_ROWS[k].antwoord(me[k]);
+  out.push(table(['', ...LEARNER_KINDS.map((k) => `**${k.naam}**`)], [
+    ['Kiest bij de start', ...LEARNER_KINDS.map((k) => k.kiest)],
+    ...keys.map((k) => [LEARNER_ROWS[k].vraag, ...LEARNER_KINDS.map((kind) => answer(k, kind.me))]),
+  ]));
+  out.push(
+    '',
+    'Nog niet alle schermen vragen het aan deze functie: `src/App.tsx` wel, de andere bestanden volgen stap voor stap. Tot dan leiden die het zelf af uit de hulptaal, met dezelfde uitkomst.',
+    '',
+  );
+
+  out.push('## 3. Wat de app uit zichzelf laat zien', '');
   out.push('Alles wat de leerling niet zelf opzoekt: een kaart, een vraag, een aanbod. Per plek staat wat voorgaat.', '');
   for (const plek of PLACE_ORDER) {
     const here = momentsAt(plek);
@@ -61,7 +81,7 @@ export function overzichtMarkdown(): string {
     '',
   );
 
-  out.push('## 3. Alle schermen', '');
+  out.push('## 4. Alle schermen', '');
   out.push('### De vier tabbladen onderaan', '', ...Object.values(TABS).map((t) => `- ${t}`), '');
   out.push('### De start, één vraag per pagina', '', ...Object.values(START_STEPS).map((t, i) => `${i + 1}. ${t}`), '');
   for (const groep of GROUPS) {
@@ -71,7 +91,7 @@ export function overzichtMarkdown(): string {
     out.push('');
   }
 
-  out.push('## 4. Wat de telefoon onthoudt', '');
+  out.push('## 5. Wat de telefoon onthoudt', '');
   out.push(
     'Alles blijft op de telefoon. Er gaat niets naar een server.',
     '',

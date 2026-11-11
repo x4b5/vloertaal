@@ -110,6 +110,17 @@ describe('what the app shows of its own accord', () => {
   });
 });
 
+describe('who gets what', () => {
+  it('the table asks the passport itself, for the three kinds of learner', async () => {
+    const { LEARNER_KINDS, LEARNER_ROWS } = await import('../src/overzicht/learners');
+    const { learnerOf } = await import('../src/lib/learner');
+    expect(LEARNER_KINDS.map((k) => k.me)).toEqual([learnerOf({ helpLang: 'pl' }, false), learnerOf({ helpLang: 'nl' }, false), learnerOf({ helpLang: 'pl' }, true)]);
+    // Every answer of the passport has a row, and every row an answer in words.
+    expect(Object.keys(LEARNER_ROWS).sort()).toEqual(Object.keys(LEARNER_KINDS[0].me).sort());
+    for (const kind of LEARNER_KINDS) for (const [key, row] of Object.entries(LEARNER_ROWS)) expect((row.antwoord as (v: unknown) => string)(kind.me[key as keyof typeof kind.me]), `${kind.naam} ${key}`).toBeTruthy();
+  });
+});
+
 describe('the screens', () => {
   it('every screen has a name, what is on it and how to get there', () => {
     for (const [id, s] of Object.entries(SCREENS)) {
