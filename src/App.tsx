@@ -43,6 +43,7 @@ import { restedYesterday } from './lib/greeting';
 import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, saveAccess, unitAllowed } from './lib/access';
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { type AfterStep, afterLessonSteps, nextAfter } from './lib/afterLesson';
+import { HOME_CARDS, RESULT_QUESTIONS, firstDue, rowFits } from './lib/momentOrder';
 import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { countFeel, feelDue, type FeelAt, markFeelAsked } from './lib/feel';
 import { rulesTwinOf, trackTwin } from './content/trackTwins';
@@ -875,11 +876,18 @@ export default function App() {
           if (paced.easier) next.cards = reviewSoon(next.cards ?? {}, results, today);
         }
         // "Wil je sneller?" is not asked on the result that shows the emergency phrases (one more thing to tap).
-        const askFaster = Boolean(paced?.ask) && !phrases;
-        if (paced?.ask && !askFaster) next.pace = { ...next.pace, asked: undefined };
         // "Wat vind je van Vloertaal?" (src/lib/feel.ts): after the 3rd and the 15th finished lesson,
-        // a lesson done for the first time; not with the emergency phrases or "Wil je sneller?" (one question a screen).
-        const feel = !daily && !phrases && !askFaster && !progress.completed[view.lessonId] ? feelDue(Object.keys(next.completed).length) : undefined;
+        // a lesson done for the first time; not with the emergency phrases or "Wil je sneller?".
+        // One question a screen: the first that is due, in the order of src/lib/momentOrder.ts.
+        const due: { feel?: FeelAt } = {};
+        const question = firstDue(RESULT_QUESTIONS, {
+          phrases: () => phrases,
+          faster: () => paced?.ask,
+          feel: () => (due.feel = !daily && !progress.completed[view.lessonId] ? feelDue(Object.keys(next.completed).length) : undefined),
+        });
+        const askFaster = question === 'faster';
+        if (paced?.ask && !askFaster) next.pace = { ...next.pace, asked: undefined };
+        const feel = question === 'feel' ? due.feel : undefined;
         if (feel) markFeelAsked(feel);
         setProgress(next);
         keepDue.current = Boolean(access) && !keepOffered();
@@ -935,12 +943,12 @@ export default function App() {
           easier: paced?.easier || undefined,
           // "Oefen samen": after a lesson of the language track with chats (not after the first
           // lesson: its row to the emergency phrases is enough for one screen).
-          samen: !daily && !phrases && !feel && track === 'taal' && hasSamen(found.lesson) ? view.lessonId : undefined,
+          samen: !daily && rowFits('samen', question) && track === 'taal' && hasSamen(found.lesson) ? view.lessonId : undefined,
           // A rules lesson: its "Onthoud" line under the numbers.
           remember: daily ? undefined : found.lesson.rule?.remember,
           // "Probeer het vandaag op je werk": after a lesson's first time, once a day, in both
           // tracks (lib/workTry.ts); not while "Wil je sneller?" needs the room.
-          workTry: daily || reviewing || askFaster || feel ? undefined : workTryFor(view.lessonId, !progress.completed[view.lessonId], today),
+          workTry: daily || reviewing || !rowFits('workTry', question) ? undefined : workTryFor(view.lessonId, !progress.completed[view.lessonId], today),
         });
       };
       return (
@@ -1325,10 +1333,14 @@ export default function App() {
       // a line can wait for days, a card is closed with one tap.)
       const notice = noticeFor(progress, new Date());
       const lessonsDone = knownLessons(progress.completed);
-      const bridge = !notice && bridgeDue(progress);
-      const nudge = !notice && !bridge && nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv()));
       // "Waarom leer jij Nederlands?" (src/lib/reason.ts): after 3 lessons, once, when no other card waits.
-      const reason = !notice && !bridge && !nudge && reasonDue(progress, lessonsDone);
+      // Which goes first: the order of src/lib/momentOrder.ts (HOME_CARDS).
+      const card = firstDue(HOME_CARDS, {
+        notice: () => notice,
+        bridge: () => bridgeDue(progress),
+        nudge: () => nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv())),
+        reason: () => reasonDue(progress, lessonsDone),
+      });
       // "Eén app": the language course's review counts the rule questions of "Zo werkt het hier" too.
       const daily = Object.keys(progress.completed).length || progress.reviewDay
         ? (oneApp && track === 'taal' ? oneDailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track))
@@ -1361,14 +1373,14 @@ export default function App() {
             note={<NoVoiceNote lang={lang} once />}
             lines={lines}
             unlocked={unlockedShown}
-            offer={notice ? (
+            offer={card === 'notice' && notice ? (
               <NoticeCard
                 notice={notice}
                 lang={lang}
                 onMore={() => { setProgress((p) => seeNotice(p, notice.id, new Date())); go({ name: 'news' }); }}
                 onOk={() => setProgress((p) => seeNotice(p, notice.id, new Date()))}
               />
-            ) : bridge ? (
+            ) : card === 'bridge' ? (
               <BridgeOffer
                 lang={lang}
                 one={oneApp && rulesHere}
@@ -1376,14 +1388,14 @@ export default function App() {
                 onGo={() => { setProgress((p) => seeBridge(p)); const unit = oneApp && rulesHere ? bridgeTopic(progress.completed) : undefined; go(unit ? { name: 'topic', unit } : { name: 'settings', page: 'route' }); }}
                 onLater={() => setProgress((p) => seeBridge(p))}
               />
-            ) : nudge ? (
+            ) : card === 'nudge' ? (
               <BackupNudge
                 lang={lang}
                 lessons={lessonsDone}
                 onKeep={() => { nudgeClosed(lessonsDone); go({ name: 'settings', page: 'backup' }); }}
                 onLater={() => { nudgeClosed(lessonsDone); setNudgeTick((n) => n + 1); }}
               />
-            ) : reason ? (
+            ) : card === 'reason' ? (
               <ReasonCard lang={lang} onDone={(ids) => setProgress((p) => withReasons(p, ids))} />
             ) : undefined}
           />

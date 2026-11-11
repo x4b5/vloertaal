@@ -1,4 +1,4 @@
-import { HOME_CARD_ORDER, MOMENTS, PLACES, type Place } from './moments';
+import { MOMENTS, PLACES, momentsAt, type Place } from './moments';
 import { GROUPS, SCREENS, START_STEPS, TABS } from './screens';
 import { IN_BACKUP, KIND_NL, STORED_KEYS, STORE_NL, type Kind } from './storageKeys';
 import { ADDRESSES, SWITCHES } from './switches';
@@ -49,15 +49,13 @@ export function overzichtMarkdown(): string {
   out.push('## 2. Wat de app uit zichzelf laat zien', '');
   out.push('Alles wat de leerling niet zelf opzoekt: een kaart, een vraag, een aanbod. Per plek staat wat voorgaat.', '');
   for (const plek of PLACE_ORDER) {
-    const here = MOMENTS.filter((m) => m.plek === plek);
+    const here = momentsAt(plek);
     out.push(`### ${PLACES[plek].titel}`, '', PLACES[plek].regel, '');
     out.push(table(['', 'Wat de leerling leest', 'Wanneer', 'Hoe vaak', 'In de code'], here.map((m, i) => [String(i + 1), `**${m.naam}**`, m.wanneer, m.onthoudt, `\`${m.code}\``])));
     out.push('');
   }
   out.push(
-    `De volgorde van de kaarten op Route staat nu nog in \`src/App.tsx\` (${HOME_CARD_ORDER.map((c) => `\`${c.slice(0, -1)}\``).join(', dan ')}). De test bewaakt dat deze lijst dezelfde volgorde heeft.`,
-    '',
-    'De volgorde na de uitslag staat op één plek: `src/lib/afterLesson.ts`. Ook die bewaakt de test.',
+    'Wat voorgaat staat op twee plekken in de code, en de app leest ze zelf: `src/lib/momentOrder.ts` (de kaarten op Route, en de vragen en rijen op de uitslag) en `src/lib/afterLesson.ts` (na de uitslag). Deze lijst volgt die volgorde vanzelf.',
     '',
     'Niet in deze lijst, want altijd aanwezig: de zin van Bram, de herhaling van vandaag, en in Werkregels de regel "Over deze regels".',
     '',
