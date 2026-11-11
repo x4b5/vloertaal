@@ -2,11 +2,12 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { overzichtMarkdown } from '../src/overzicht/markdown';
-import { AFTER_RESULT_STEP, HOME_CARD_ORDER, MOMENTS, PLACES } from '../src/overzicht/moments';
+import { AFTER_RESULT_STEP, MOMENTS, PLACES, momentsAt } from '../src/overzicht/moments';
 import { SCREENS } from '../src/overzicht/screens';
 import { IN_BACKUP, STORED_KEYS } from '../src/overzicht/storageKeys';
 import { SWITCHES } from '../src/overzicht/switches';
 import { afterLessonSteps } from '../src/lib/afterLesson';
+import { HOME_CARDS, RESULT_QUESTIONS, RESULT_ROW_HIDDEN_BY } from '../src/lib/momentOrder';
 import { backupFile, emptyProgress } from '../src/lib/progress';
 
 /**
@@ -93,15 +94,12 @@ describe('what the app shows of its own accord', () => {
     }
   });
 
-  // Until App.tsx reads the order from the list itself: the cards on the home stand in the list
-  // in the order App.tsx tries them (each next one only when the ones before are not due).
-  it('the cards on the home are in the order of src/App.tsx', () => {
-    const app = read('src/App.tsx');
-    const at = HOME_CARD_ORDER.map((call) => app.indexOf(`= ${call}`) >= 0 ? app.indexOf(`= ${call}`) : app.indexOf(`&& ${call}`));
-    expect(at.every((i) => i > 0)).toBe(true);
-    expect([...at].sort((a, b) => a - b)).toEqual(at);
-    const cards = MOMENTS.filter((m) => m.plek === 'thuis-kaart').map((m) => `${m.code.split(',')[0]}(`);
-    expect(cards).toEqual([...HOME_CARD_ORDER]);
+  it('the cards on the home and the result follow the app\'s own order (src/lib/momentOrder.ts)', () => {
+    expect(momentsAt('thuis-kaart').map((m) => m.key)).toEqual([...HOME_CARDS]);
+    expect(momentsAt('uitslag').map((m) => m.key)).toEqual([...RESULT_QUESTIONS, ...Object.keys(RESULT_ROW_HIDDEN_BY)]);
+    // Each of those names is one moment, and a row says which questions it makes room for.
+    for (const key of [...HOME_CARDS, ...RESULT_QUESTIONS, ...Object.keys(RESULT_ROW_HIDDEN_BY)]) expect(MOMENTS.filter((m) => m.key === key), key).toHaveLength(1);
+    expect(momentsAt('uitslag').find((m) => m.key === 'samen')!.wanneer).toMatch(/Maakt plaats voor "Naar de noodzinnen" en "Wat vind je van Vloertaal\?"\.$/);
   });
 
   it('the screens after the result are in the order of src/lib/afterLesson.ts', () => {

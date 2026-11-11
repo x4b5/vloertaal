@@ -69,15 +69,15 @@ Alleen zolang er plek is: hooguit drie dingen om op te tikken.
 
 ### Op de uitslag na een les
 
-Hooguit één vraag per scherm: de noodzinnen gaan voor "Wil je sneller?", en die gaat voor de gezichtjes. De laatste twee zijn rijen, geen vragen; wanneer ze vervallen staat erbij.
+Hooguit één vraag per scherm: van de vragen gaat de bovenste voor. De rijen eronder zijn geen vragen; bij elke rij staat voor welke vraag ze plaatsmaakt.
 
 |  | Wat de leerling leest | Wanneer | Hoe vaak | In de code |
 | --- | --- | --- | --- | --- |
 | 1 | **Naar de noodzinnen** | Op de uitslag van de eerste les. | Eén keer (in de voortgang). | `phrases, src/App.tsx` |
 | 2 | **Wil je sneller?** | Alleen in Taal, na 3 lessen achter elkaar zonder fout. | Eén keer (in de voortgang). | `paceAfterLesson, src/lib/pace.ts` |
 | 3 | **Wat vind je van Vloertaal?** | Na de 3e en 15e les, met drie gezichtjes. | Losse sleutel vloertaal:gevoel. | `feelDue, src/lib/feel.ts` |
-| 4 | **Oefen samen** | Alleen in Taal, na een les met gesprekjes. Niet samen met de noodzinnen of de gezichtjes. | Elke keer. | `hasSamen, src/lib/samen.ts` |
-| 5 | **Probeer het vandaag op je werk** | Na een les die de leerling voor het eerst doet. Niet samen met "Wil je sneller?" of de gezichtjes. | Hooguit één keer per dag (losse sleutel vloertaal:work-try). | `workTryFor, src/lib/workTry.ts` |
+| 4 | **Oefen samen** | Alleen in Taal, na een les met gesprekjes. Maakt plaats voor "Naar de noodzinnen" en "Wat vind je van Vloertaal?". | Elke keer. | `hasSamen, src/lib/samen.ts` |
+| 5 | **Probeer het vandaag op je werk** | Na een les die de leerling voor het eerst doet. Maakt plaats voor "Wil je sneller?" en "Wat vind je van Vloertaal?". | Hooguit één keer per dag (losse sleutel vloertaal:work-try). | `workTryFor, src/lib/workTry.ts` |
 
 ### Na de uitslag
 
@@ -99,9 +99,7 @@ Kleine hulp, op het moment zelf.
 | 2 | **Het handje doet het voor** | De eerste keer bij zin bouwen, paren verbinden en typen. | Eén keer per soort oefening (losse sleutel vloertaal:shown-how). | `src/components/ShowHow.tsx` |
 | 3 | **Ik ken dit al: korte check** | Op de pagina van een onderwerp: alleen in Taal, bij een deel van de thema's, na een goede eerste toets, als er nog lessen open zijn. | Eén check per onderwerp (in de voortgang). | `checkOffered, src/lib/instapCheck.ts` |
 
-De volgorde van de kaarten op Route staat nu nog in `src/App.tsx` (`noticeFor`, dan `bridgeDue`, dan `nudgeDue`, dan `reasonDue`). De test bewaakt dat deze lijst dezelfde volgorde heeft.
-
-De volgorde na de uitslag staat op één plek: `src/lib/afterLesson.ts`. Ook die bewaakt de test.
+Wat voorgaat staat op twee plekken in de code, en de app leest ze zelf: `src/lib/momentOrder.ts` (de kaarten op Route, en de vragen en rijen op de uitslag) en `src/lib/afterLesson.ts` (na de uitslag). Deze lijst volgt die volgorde vanzelf.
 
 Niet in deze lijst, want altijd aanwezig: de zin van Bram, de herhaling van vandaag, en in Werkregels de regel "Over deze regels".
 
