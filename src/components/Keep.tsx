@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { stillMotion } from '../lib/calm';
 import { learnedItems } from '../content/courses';
 import { dutchUi, trackOf, trackOfLang } from '../lib/track';
+import { learnsDutch } from '../lib/learner';
 import { fillCount, ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { installWay, onInstallChange, promptInstall, type InstallWay } from '../lib/install';
@@ -21,7 +22,7 @@ import { useFocusWhenLost } from './useFocusLost';
 
 /** The reminder's line in the help language (none in the work-rules track: its screens are Dutch). */
 export function reminderHelp(lang?: HelpLanguage): string | undefined {
-  return trackOfLang(lang?.code) === 'taal' ? ui('remindEvent', lang).help : undefined;
+  return dutchUi(lang) ? undefined : ui('remindEvent', lang).help;
 }
 
 /**
@@ -290,7 +291,7 @@ export function BackupCard({ progress, lang, onRestore }: {
   const lessons = knownLessons(progress.completed);
   const theirs = found ? knownLessons(found.completed ?? {}) : 0;
   // Words learned, or in the work-rules track rules learned.
-  const rules = trackOf(progress) === 'regels';
+  const rules = !learnsDutch(progress);
   const words = learnedItems(trackOf(progress), progress.completed);
   const download = () => {
     const now = new Date();

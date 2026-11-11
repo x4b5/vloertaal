@@ -1,5 +1,7 @@
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { learnerOf } from '../src/lib/learner';
+import { learnerOf, learnsDutch } from '../src/lib/learner';
 import { trackOf } from '../src/lib/track';
 
 /**
@@ -46,5 +48,34 @@ describe('the passport and the track', () => {
         expect(me.learnsDutch).toBe(!me.learnsRules);
       }
     }
+  });
+});
+
+describe('the first question on its own', () => {
+  it('is the passport\'s answer, whatever "Eén app" says', () => {
+    for (const helpLang of ['nl', 'pl', 'ar', null] as const) {
+      expect(learnsDutch({ helpLang })).toBe(learnerOf({ helpLang }, false).learnsDutch);
+      expect(learnsDutch({ helpLang })).toBe(learnerOf({ helpLang }, true).learnsDutch);
+    }
+    expect(learnsDutch({})).toBe(true);
+  });
+});
+
+describe('the rest of the app', () => {
+  /** Every .ts/.tsx file of the app itself (not the dev harness). */
+  function appFiles(dir = 'src'): string[] {
+    return readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
+      const path = join(dir, e.name).replace(/\\/g, '/');
+      if (e.isDirectory()) return path === 'src/dev' ? [] : appFiles(path);
+      return /\.tsx?$/.test(e.name) ? [path] : [];
+    });
+  }
+
+  // "Which course?" as a list to pick from is fine everywhere (courseUnits(trackOf(p))). What a
+  // learner gets because of it is the passport's to say: no file concludes it from the track itself.
+  it('asks the passport, and does not conclude from the learner\'s track itself', () => {
+    const own = new Set(['src/lib/track.ts', 'src/lib/learner.ts']);
+    const concludes = /trackOf\([^()]*\)\s*[!=]==\s*'(?:taal|regels)'|\bisRules\(/;
+    expect(appFiles().filter((f) => !own.has(f) && concludes.test(readFileSync(f, 'utf8')))).toEqual([]);
   });
 });

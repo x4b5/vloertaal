@@ -1,6 +1,7 @@
 import { mainLessons } from '../content/sectors';
 import type { Progress } from './progress';
-import { rulesTrackOn, trackOf } from './track';
+import { learnsDutch } from './learner';
+import { rulesTrackOn } from './track';
 
 /**
  * "Van Taal naar Werkregels" (stap 3): once most of the language course is done, the home offers
@@ -14,7 +15,7 @@ export const BRIDGE_SHARE = 0.8;
 
 /** Is the offer due on the home? Only in the language track, with Werkregels on, not seen before. */
 export function bridgeDue(p: Progress): boolean {
-  if (!rulesTrackOn() || trackOf(p) !== 'taal' || p.bridgeSeen) return false;
+  if (!rulesTrackOn() || !learnsDutch(p) || p.bridgeSeen) return false;
   const lessons = mainLessons(p.sector, 'taal');
   if (!lessons.length) return false;
   const done = lessons.filter((l) => p.completed[l.id]).length;

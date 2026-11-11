@@ -6,7 +6,7 @@ import { hasCheck, isCheckRecord } from './certificate';
 import { buildTiles, chatOptions, dutchExercise, options, type Exercise } from './exercises';
 import { dayKey, type LessonRecord, type Progress } from './progress';
 import { createRng, shuffle } from './random';
-import { trackOf } from './track';
+import { learnsDutch } from './learner';
 import { knownOf } from './toetsState';
 
 export { hasCheck, lessonViaCheck } from './certificate';
@@ -80,7 +80,7 @@ export function checkLessons(unit: Unit, completed: Completed): Lesson[] {
 /** The topic page offers the check: the language track, a high enough start test, a topic of
  *  CHECK_THEMES with lessons left that a check can tick off, and no check in it yet. */
 export function checkOffered(p: Progress, unit: Unit): boolean {
-  return trackOf(p) === 'taal' && checkLevel(p) && checkTopic(unit) && !hasCheck(unit, p.completed) && checkLessons(unit, p.completed).length > 0;
+  return learnsDutch(p) && checkLevel(p) && checkTopic(unit) && !hasCheck(unit, p.completed) && checkLessons(unit, p.completed).length > 0;
 }
 
 /** The check passed: at least CHECK_PASS right the first time. */

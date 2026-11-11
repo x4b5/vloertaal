@@ -1,6 +1,6 @@
 import type { UiCode } from '../i18n/types';
 import { oneAppOn } from './oneApp';
-import { type Track, trackOf } from './track';
+import { type Track, isRules, trackOf } from './track';
 
 /**
  * The learner's "passport": what this learner gets, worked out in one place (docs/overzicht.md,
@@ -30,10 +30,16 @@ export interface Learner {
   help: 'phrases' | 'whoToCall';
 }
 
+/**
+ * The passport's first question on its own, for code that needs only this one (a moment that is
+ * only for the language course: the test, the short check, the offer of the work rules).
+ */
+export const learnsDutch = (p: { helpLang?: UiCode | null }): boolean => !isRules(p);
+
 /** The passport of the learner with this help language. `oneApp`: "Eén app" on for this phone. */
 export function learnerOf(p: { helpLang?: UiCode | null }, oneApp: boolean = oneAppOn()): Learner {
   const track = trackOf(p);
-  const learnsRules = track === 'regels';
+  const learnsRules = !learnsDutch(p);
   const rulesBeside = oneApp && !learnsRules;
   return {
     track,
