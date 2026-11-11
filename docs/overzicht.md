@@ -4,12 +4,13 @@
 > De bron staat in `src/overzicht/`. Komt er een scherm, een schakelaar of een opslagsleutel bij
 > zonder regel hier, dan falen de tests.
 
-Vier lijsten, in gewone taal:
+Vijf lijsten, in gewone taal:
 
 1. [Wat staat aan en uit](#1-wat-staat-aan-en-uit): 6 schakelaars
-2. [Wat de app uit zichzelf laat zien](#2-wat-de-app-uit-zichzelf-laat-zien): 18 momenten
-3. [Alle schermen](#3-alle-schermen): 33 schermen
-4. [Wat de telefoon onthoudt](#4-wat-de-telefoon-onthoudt): 47 plekken
+2. [Wie krijgt wat](#2-wie-krijgt-wat): 3 soorten leerlingen
+3. [Wat de app uit zichzelf laat zien](#3-wat-de-app-uit-zichzelf-laat-zien): 18 momenten
+4. [Alle schermen](#4-alle-schermen): 33 schermen
+5. [Wat de telefoon onthoudt](#5-wat-de-telefoon-onthoudt): 47 plekken
 
 ## 1. Wat staat aan en uit
 
@@ -35,7 +36,24 @@ Omzetten: verander `true` of `false` in het bestand uit de laatste kolom, en zet
 | `#begeleiders` | Opent de pagina voor begeleiders. |
 | `#beheer` | Opent de beheerpagina (met wachtwoord). |
 
-## 2. Wat de app uit zichzelf laat zien
+## 2. Wie krijgt wat
+
+De hulptaal bepaalt de cursus. Deze tabel is het antwoord van de app zelf: één functie (`learnerOf` in `src/lib/learner.ts`) zegt per leerling wat die krijgt.
+
+|  | **Taal** | **Werkregels** | **Taal met "Eén app" aan** |
+| --- | --- | --- | --- |
+| Kiest bij de start | een hulptaal (of alleen Engels) | "Ik spreek al Nederlands" | een hulptaal, op een telefoon met ?nieuw=1 |
+| Welke cursus (lespad, onderwerpen, voortgang) | Taal | Werkregels | Taal |
+| Leert Nederlands: woorden, zinnen, gesprekjes, met spreken, tempo en "Oefen samen" | ja | nee | ja |
+| De cursus is de werkregels: verhalen, regelkaarten, "wat doe je?" | nee | ja | nee |
+| Leest de app alleen in het Nederlands | nee | ja | nee |
+| "Zo werkt het hier" bij de Taal-onderwerpen: de lessen van Werkregels erbij | nee | nee | ja |
+| Wat "Herhaal vandaag" terugbrengt | woorden | regelvragen | woorden en regelvragen |
+| Het tabblad Hulp | noodzinnen en tips | "Wie bel je?" en de regelkaarten | noodzinnen en tips |
+
+Nog niet alle schermen vragen het aan deze functie: `src/App.tsx` wel, de andere bestanden volgen stap voor stap. Tot dan leiden die het zelf af uit de hulptaal, met dezelfde uitkomst.
+
+## 3. Wat de app uit zichzelf laat zien
 
 Alles wat de leerling niet zelf opzoekt: een kaart, een vraag, een aanbod. Per plek staat wat voorgaat.
 
@@ -103,7 +121,7 @@ Wat voorgaat staat op twee plekken in de code, en de app leest ze zelf: `src/lib
 
 Niet in deze lijst, want altijd aanwezig: de zin van Bram, de herhaling van vandaag, en in Werkregels de regel "Over deze regels".
 
-## 3. Alle schermen
+## 4. Alle schermen
 
 ### De vier tabbladen onderaan
 
@@ -184,7 +202,7 @@ Niet in deze lijst, want altijd aanwezig: de zin van Bram, de herhaling van vand
 | **Voor begeleiders** | Een link per onderwerp om te sturen, en de demo. | Over, of vloertaal.nl/#begeleiders. |
 | **Beheer** | Voor de eigenaar, met wachtwoord: het tegoed voor de stemmen, en elke les bekijken. | vloertaal.nl/#beheer. |
 
-## 4. Wat de telefoon onthoudt
+## 5. Wat de telefoon onthoudt
 
 Alles blijft op de telefoon. Er gaat niets naar een server.
 

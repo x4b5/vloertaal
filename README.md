@@ -181,7 +181,7 @@ tests/                vitest: logica, volledigheid en vorm van alle vertalingen
 docs/                 pilot, livegang, vertaal- en juridische controle, ontwerpkeuzes
 ```
 
-**Overzicht:** [`docs/overzicht.md`](docs/overzicht.md) zegt in gewone taal wat aan en uit staat, wat de app uit
+**Overzicht:** [`docs/overzicht.md`](docs/overzicht.md) zegt in gewone taal wat aan en uit staat, wie wat krijgt, wat de app uit
 zichzelf laat zien, welke schermen er zijn en wat de telefoon onthoudt. De app maakt het zelf
 (`npm run overzicht`); `npm test` faalt als er een scherm, schakelaar of opslagsleutel bij komt
 zonder regel in `src/overzicht/`.

@@ -6,7 +6,7 @@ import { Splash } from './components/Splash';
 import { loadPictures, usePicturesLoaded } from './pictures';
 import type { UiCode } from './i18n/types';
 import { isPlayable, learnedItems, rulesTwinHere } from './content/courses';
-import { dutchUi, trackOf, trackOfId } from './lib/track';
+import { dutchUi, trackOfId } from './lib/track';
 import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
 import { tempoOf } from './lib/tempo';
 import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
@@ -48,6 +48,7 @@ import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
 import { countFeel, feelDue, type FeelAt, markFeelAsked } from './lib/feel';
 import { rulesTwinOf, trackTwin } from './content/trackTwins';
 import { oneAppOn } from './lib/oneApp';
+import { learnerOf } from './lib/learner';
 import { oneDailyCard, oneDailyIds, oneDailyLesson } from './lib/oneReview';
 import { type Country, type Progress, bestStreak, completeDaily, completeLesson, currentStreak, dayKey, daysBetween, doneToday, emptyProgress, knownLessons, loadProgress, saveProgress, practisedAt, settleStreak, stoppedToTell, streakWentUp, switchTrack, withFirstDay, workWeek } from './lib/progress';
 import { DAILY_ID, addLessonItems, addLessonWords, applyReview, dailyCard, dailyLesson, dayNumber, dailyRuleIds, dailyRuleLesson, dueIds, gradedStepIds, seedCards, strongerCount, keptCount, addLessonSentences, dailyIds, reviewResults, seedSentenceCards, wordResultCount } from './lib/spaced';
@@ -503,15 +504,15 @@ export default function App() {
   // "Eén app" (src/lib/oneApp.ts): a learner of the language course gets the work-rules lessons too,
   // so their file (the Dutch pack, which registers the rules course) loads in the background. The
   // screens stay in the help language. Without it, or offline, the topic pages are as before.
-  const oneApp = oneAppOn();
+  /** What this learner gets (src/lib/learner.ts): the screens ask it, they do not conclude it from the track. */
+  const me = learnerOf(progress, oneAppOn());
   const [rulesHere, setRulesHere] = useState(() => isLanguageLoaded('nl'));
-  const learnsLanguage = trackOf(progress) === 'taal';
   useEffect(() => {
-    if (!oneApp || rulesHere || !learnsLanguage || !langReady) return;
+    if (!me.rulesBeside || rulesHere || !langReady) return;
     let live = true;
     ensureLanguage('nl').then(() => { if (live) setRulesHere(true); }, () => {});
     return () => { live = false; };
-  }, [oneApp, rulesHere, learnsLanguage, langReady]);
+  }, [me.rulesBeside, rulesHere, langReady]);
   // A file that failed to load is not fetched again by the browser in this page: back online (or
   // on the retry button) the page reloads, which is quick and keeps everything.
   useEffect(() => {
@@ -627,7 +628,7 @@ export default function App() {
   // runs before the parent's, and must already know that sound is off.
   setQuietAudio(Boolean(progress.quiet));
   // The phone's voice reads at an easier, normal pace in the work-rules track (lib/audio.ts).
-  setDeviceRate(trackOf(progress));
+  setDeviceRate(me.track);
   // "Tempo" (Settings): also set during render, for the same reason as the sound.
   setTempo(tempoOf(progress));
   const setQuiet = (quiet: boolean) => setProgress((p) => ({ ...p, quiet }));
@@ -672,13 +673,13 @@ export default function App() {
     if (twin !== focusUnit) { setFocusUnit(twin); return; }
     // A link to the other track's topic opens the same topic in the learner's own track ("Loon"
     // and "Loon en loonstrook", src/content/trackTwins.ts): a coach need not know who follows which.
-    const own = trackTwin(focusUnit, trackOf(progress));
+    const own = trackTwin(focusUnit, me.track);
     if (own && own !== focusUnit) { setFocusUnit(own); return; }
     linkHandled.current = true;
     const unit = findUnit(focusUnit);
     // A topic this app or this track does not have (the other track's topic without a twin): the
     // home stays on the learner's own block.
-    if (!unit || trackOfId(unit.id) !== trackOf(progress)) {
+    if (!unit || trackOfId(unit.id) !== me.track) {
       setFocusUnit(null);
       forgetLinkedUnit();
       return;
@@ -706,7 +707,7 @@ export default function App() {
 
   const setLang = (code: UiCode | null) => setProgress((p) => ({ ...switchTrack(p, code), onboarded: true }));
   /** The learner's track: the Dutch course, or the work-rules track with the screens in Dutch ('nl'). */
-  const track = trackOf(progress);
+  const track = me.track;
   /** "Try one lesson first": lesson 1.1 (of the learner's track), its result, then the password page again. */
   // "No code?": the sneak preview (the first lesson of each theme), without a code; the code
   // for the full version can still be entered later (Settings, or a locked topic).
@@ -752,7 +753,7 @@ export default function App() {
   /** The Hulp tab. The work-rules track: who to call, and "Alle regels" (instead of the emergency phrases). */
   const hulpTab = () => (
     <>
-      {track === 'regels'
+      {me.help === 'whoToCall'
         ? <RulesHelp lang={lang} country={progress.country} onShelf={() => go({ name: 'tips' })} onCoach={() => go({ name: 'kaart', fromHelp: true })} after={mapLink} />
         : <WordsHub lang={lang} onTips={() => go({ name: 'tips' })} onKlanken={() => go({ name: 'klanken' })} onColleague={() => go({ name: 'colleague' })} onCoach={() => go({ name: 'kaart', fromHelp: true })} after={mapLink} />}
       <BottomNav current="words" onTab={tab} lang={lang} />
@@ -829,7 +830,7 @@ export default function App() {
   // A learner from before the country question: asked once on opening the home, without a way back.
   if (view.name === 'home' && shouldAskCountry(progress)) return <CountryScreen lang={lang} onDone={setCountry} />;
   // The work-rules track, the first time it opens: "Goed om te weten" on its own page, once.
-  if (view.name === 'home' && track === 'regels' && !progress.rulesNotice) {
+  if (view.name === 'home' && me.learnsRules && !progress.rulesNotice) {
     return <RulesNoticeScreen country={progress.country} lang={lang} onDone={() => setProgress((p) => ({ ...p, rulesNotice: true }))} />;
   }
   // From here on there is access (a code, or the sneak preview without one).
@@ -840,7 +841,7 @@ export default function App() {
       const daily = view.lessonId === DAILY_ID;
       // Today's review of the learner's track: words (the language course) or questions (the rules course).
       const found = daily
-        ? { lesson: track === 'regels' ? dailyRuleLesson(view.ids ?? []) : (oneApp ? oneDailyLesson : dailyLesson)(view.ids ?? [], progress.cards ?? {}, dayKey(new Date()), { extra: progress.reviewDay === dayKey(new Date()) }) }
+        ? { lesson: me.review === 'rules' ? dailyRuleLesson(view.ids ?? []) : (me.review === 'both' ? oneDailyLesson : dailyLesson)(view.ids ?? [], progress.cards ?? {}, dayKey(new Date()), { extra: progress.reviewDay === dayKey(new Date()) }) }
         : playLesson(view.lessonId, progress.completed, dayNumber(dayKey(new Date())));
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
@@ -853,7 +854,7 @@ export default function App() {
         const next = earnCertificates(daily
           // (Its review day is the day it was started for, with that day's words: one begun at
           // 23:58 and finished after midnight leaves today's own review to do.)
-          ? { ...completeDaily(progress, accuracy, now), reviewDay: dayKey(lessonStarted.current), cards: track === 'regels' ? applyReview(cards, results, today) : applyReview(cards, reviewResults(results, view.ids ?? []), today, made, almost, written) }
+          ? { ...completeDaily(progress, accuracy, now), reviewDay: dayKey(lessonStarted.current), cards: me.review === 'rules' ? applyReview(cards, results, today) : applyReview(cards, reviewResults(results, view.ids ?? []), today, made, almost, written) }
           : { ...completeLesson(progress, view.lessonId, accuracy, review, now), cards: found.lesson.steps?.length
             // A rules lesson: its questions get a card (by step id), for "Herhaal vandaag" of that track.
             ? addLessonItems(cards, gradedStepIds(found.lesson), results, today)
@@ -869,7 +870,7 @@ export default function App() {
         const phrases = !daily && !progress.phrasesShown && Object.keys(progress.completed).every((id) => trialLessonAllowed(id, track));
         if (phrases) next.phrasesShown = true;
         // The pace (src/lib/pace.ts): a lesson of the language track, not today's review.
-        const paced = !daily && track === 'taal' && !found.lesson.steps?.length ? paceAfterLesson(progress.pace, right, total, today) : undefined;
+        const paced = !daily && me.learnsDutch && !found.lesson.steps?.length ? paceAfterLesson(progress.pace, right, total, today) : undefined;
         if (paced) {
           next.pace = paced.pace;
           // Many mistakes: what went wrong comes back in today's review already.
@@ -927,7 +928,7 @@ export default function App() {
           repeated: daily ? wordResultCount(results) || (found.lesson.steps?.length ?? found.lesson.words.length) : reviewing ? wordResultCount(results) || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
           // What stayed: words last practised two weeks ago or longer, how many still known (language track).
-          kept: daily && track === 'taal' ? keptCount(cards, results) : undefined,
+          kept: daily && me.learnsDutch ? keptCount(cards, results) : undefined,
           // Still due after today's review, only for who was away 2 days or more ("they come in the
           // next days"): a learner who practises every day and learns many words a day would read
           // a growing number every day, as if they were behind.
@@ -935,7 +936,7 @@ export default function App() {
           next: upNext?.id,
           // About how long that lesson takes ("± 6 min", src/lib/lessonTime.ts), built as it will be
           // played: sound, sector, speaking practice and the pace after this lesson.
-          nextMinutes: upNext ? lessonMinutes(upNext, { quiet: Boolean(next.quiet), sector: next.sector, speak: track === 'taal' && speakingOn(), ...(track === 'taal' ? lessonPace(next) : {}) }) : undefined,
+          nextMinutes: upNext ? lessonMinutes(upNext, { quiet: Boolean(next.quiet), sector: next.sector, speak: me.learnsDutch && speakingOn(), ...(me.learnsDutch ? lessonPace(next) : {}) }) : undefined,
           skipped: skipped || undefined,
           phrases: phrases || undefined,
           askFaster: askFaster || undefined,
@@ -943,7 +944,7 @@ export default function App() {
           easier: paced?.easier || undefined,
           // "Oefen samen": after a lesson of the language track with chats (not after the first
           // lesson: its row to the emergency phrases is enough for one screen).
-          samen: !daily && rowFits('samen', question) && track === 'taal' && hasSamen(found.lesson) ? view.lessonId : undefined,
+          samen: !daily && rowFits('samen', question) && me.learnsDutch && hasSamen(found.lesson) ? view.lessonId : undefined,
           // A rules lesson: its "Onthoud" line under the numbers.
           remember: daily ? undefined : found.lesson.rule?.remember,
           // "Probeer het vandaag op je werk": after a lesson's first time, once a day, in both
@@ -971,8 +972,8 @@ export default function App() {
           sector={progress.sector}
           sayings={Boolean(progress.completed[SAYINGS_FROM])}
           report={testerMode(access)}
-          reportHint={explainReport(access, track === 'regels')}
-          {...(daily || track !== 'taal' ? {} : lessonPace(progress))}
+          reportHint={explainReport(access, me.readsDutch)}
+          {...(daily || !me.learnsDutch ? {} : lessonPace(progress))}
           // "Zeg het samen" and Bram's "Fouten mogen" (src/lib/chorus.ts), the owner's request, 5 November 2026.
           speakTogether={chorusDue(progress)}
           speakBrave={braveLine(progress, Object.keys(progress.completed).length)}
@@ -1053,7 +1054,7 @@ export default function App() {
           <TopicPage
             key={unit.id}
             unit={unit}
-            rulesTwin={oneApp && rulesHere && track === 'taal' ? rulesTwinOf(unit.id) : undefined}
+            rulesTwin={me.rulesBeside && rulesHere ? rulesTwinOf(unit.id) : undefined}
             progress={progress}
             lang={lang}
             access={acc}
@@ -1075,14 +1076,14 @@ export default function App() {
     }
     case 'tips':
       // The work-rules track: "Alle regels", the rule cards of its finished lessons.
-      return track === 'regels'
+      return me.help === 'whoToCall'
         ? <RulesShelf progress={progress} lang={lang} onBack={back} />
         : <Tips progress={progress} lang={lang} onBack={back} access={acc} />;
     case 'about':
       return (
         <>
           {/* The coaches' page lists the language course's topics: not offered in the work-rules track. */}
-          <About lang={lang} onCoaches={track === 'regels' ? undefined : () => go({ name: 'coaches' })} onNews={() => go({ name: 'news' })} />
+          <About lang={lang} onCoaches={me.learnsRules ? undefined : () => go({ name: 'coaches' })} onNews={() => go({ name: 'news' })} />
           <BottomNav current="about" onTab={tab} lang={lang} />
         </>
       );
@@ -1110,7 +1111,7 @@ export default function App() {
       // From the first lesson's result: back goes on to the certificate or the streak milestone.
       const on = () => onward(view.after);
       // The work-rules track: its Hulp page ("Wie bel je?") instead of the emergency phrases.
-      return track === 'regels'
+      return me.help === 'whoToCall'
         ? <RulesHelp lang={lang} country={progress.country} onBack={on} onShelf={() => go({ name: 'tips' })} />
         : <Phrasebook lang={lang} onBack={on} />;
     }
@@ -1343,7 +1344,7 @@ export default function App() {
       });
       // "Eén app": the language course's review counts the rule questions of "Zo werkt het hier" too.
       const daily = Object.keys(progress.completed).length || progress.reviewDay
-        ? (oneApp && track === 'taal' ? oneDailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track))
+        ? (me.review === 'both' ? oneDailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay) : dailyCard(progress.cards ?? {}, dayKey(new Date()), progress.reviewDay, track))
         : null;
       return (
         <>
@@ -1364,7 +1365,7 @@ export default function App() {
             daily={daily}
             arrived={arrived}
             onArrived={() => setArrived(null)}
-            onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: track === 'regels' ? dailyRuleIds(progress.cards ?? {}, dayKey(new Date())) : (oneApp ? oneDailyIds : dailyIds)(progress.cards ?? {}, dayKey(new Date())) })}
+            onDaily={() => go({ name: 'lesson', lessonId: DAILY_ID, review: true, ids: me.review === 'rules' ? dailyRuleIds(progress.cards ?? {}, dayKey(new Date())) : (me.review === 'both' ? oneDailyIds : dailyIds)(progress.cards ?? {}, dayKey(new Date())) })}
             access={acc}
             onUpgrade={() => go({ name: 'settings', upgrade: true })}
             focusUnit={focusUnit}
@@ -1383,9 +1384,9 @@ export default function App() {
             ) : card === 'bridge' ? (
               <BridgeOffer
                 lang={lang}
-                one={oneApp && rulesHere}
+                one={me.rulesBeside && rulesHere}
                 // "Eén app": no switch of track, but a topic with its "Zo werkt het hier" lessons.
-                onGo={() => { setProgress((p) => seeBridge(p)); const unit = oneApp && rulesHere ? bridgeTopic(progress.completed) : undefined; go(unit ? { name: 'topic', unit } : { name: 'settings', page: 'route' }); }}
+                onGo={() => { setProgress((p) => seeBridge(p)); const unit = me.rulesBeside && rulesHere ? bridgeTopic(progress.completed) : undefined; go(unit ? { name: 'topic', unit } : { name: 'settings', page: 'route' }); }}
                 onLater={() => setProgress((p) => seeBridge(p))}
               />
             ) : card === 'nudge' ? (
