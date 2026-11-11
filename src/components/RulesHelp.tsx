@@ -1,3 +1,4 @@
+import { KEYS } from '../lib/storageKeys';
 import { useEffect, useRef, useState } from 'react';
 import { courseUnits, ruleCards } from '../content/courses';
 import { withRegion } from '../content/regio';
@@ -276,7 +277,7 @@ export function shelfGroups(units: Unit[], completed: Record<string, unknown>) {
     .filter((g) => g.rules.length > 0);
 }
 
-const NOTED_KEY = 'vloertaal:no-voice-noted';
+const NOTED_KEY = KEYS.noVoiceNoted;
 /** Screenshots (src/dev/ShotHarness.tsx, &novoice=1): the line shows whatever this phone has. */
 let shotForced = false;
 export function forceNoVoiceNoteForShot(on: boolean): void { shotForced = on; }

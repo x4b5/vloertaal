@@ -1,9 +1,11 @@
+import { KEYS } from './storageKeys';
+
 /**
  * The lesson's Continue button says "Verder" only until it has been used once ("Vloertaal
  * rustiger": after that the arrow is clear). Remembered on this phone; a screen reader always
  * hears the word (aria-label). "Controleer" (typing) keeps its word: it does something else.
  */
-const KEY = 'vloertaal:go-known';
+const KEY = KEYS.goKnown;
 let memory = false;
 
 export function goKnown(): boolean {

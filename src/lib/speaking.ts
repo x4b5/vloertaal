@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import type { Lesson, Sentence, Word } from '../content/types';
 import { tokenize } from './answers';
 import { createRng } from './random';
@@ -11,7 +12,7 @@ import { createRng } from './random';
  * the device is the on/off switch below and whether the microphone was refused this visit.
  */
 
-const KEY = 'vloertaal:speaking';
+const KEY = KEYS.speaking;
 
 /** The Settings switch "Speaking practice": on unless the learner turned it off (this device). */
 /** The switch while storage is blocked (private mode): it holds for this visit. */

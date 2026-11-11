@@ -1,3 +1,4 @@
+import { STORES } from './storageKeys';
 import type { Bilingual } from '../i18n';
 import { dateLocale } from '../content/updateDate';
 import { bytesOf } from './toetsVoice';
@@ -42,7 +43,7 @@ export interface VoiceShelf {
   clear(): Promise<boolean>;
 }
 
-const DB = 'vloertaal-stem';
+const DB = STORES.firstVoiceDb;
 const VOICES = 'opname';
 const METAS = 'wanneer';
 
@@ -92,7 +93,7 @@ async function inTx<T>(mode: IDBTransactionMode, work: (voices: IDBObjectStore, 
   });
 }
 
-/** The shelf on this phone: IndexedDB (database "vloertaal-stem"). */
+/** The shelf on this phone: IndexedDB (the database STORES.firstVoiceDb). */
 export const phoneShelf: VoiceShelf = {
   list: () => inTx<Record<string, VoiceMeta>>('readonly', (_v, metas, done) => {
     const out: Record<string, VoiceMeta> = {};

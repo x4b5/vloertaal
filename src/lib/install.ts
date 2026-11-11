@@ -1,3 +1,5 @@
+import { KEYS } from './storageKeys';
+
 /**
  * "Zet Vloertaal op je beginscherm" and keeping progress safe on the phone.
  * The browser's install prompt (Android, Chrome) fires once, early; it is caught here as soon as
@@ -90,7 +92,7 @@ export async function promptInstall(): Promise<boolean> {
  */
 export type PersistAnswer = 'granted' | 'denied';
 
-export const PERSIST_ANSWER_KEY = 'vloertaal:persist';
+export const PERSIST_ANSWER_KEY = KEYS.persist;
 
 export function persistAnswer(): PersistAnswer | null {
   try {
@@ -123,7 +125,7 @@ export function persistStorage(): Promise<PersistAnswer | null> {
   }
 }
 
-const PERSIST_KEY = 'vloertaal:persist-asked';
+const PERSIST_KEY = KEYS.persistAsked;
 
 /**
  * After a finished lesson, and when the app is opened from the home screen: ask again to keep

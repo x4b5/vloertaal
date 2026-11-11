@@ -19,6 +19,7 @@
  * - when the browser asks not to be tracked (Do Not Track, Global Privacy Control).
  */
 
+import { KEYS } from './storageKeys';
 import { demoOn } from './demo';
 import { COUNTER_SITE, VIA } from './countSite';
 
@@ -62,7 +63,7 @@ export const resumeClock = (c: LessonClock, now = Date.now()): LessonClock => (c
 /** Minutes on screen up to now. */
 export const clockMinutes = (c: LessonClock, now = Date.now()): number => pauseClock(c, now).ms / 60000;
 
-const OFF_KEY = 'vloertaal:count-off';
+const OFF_KEY = KEYS.countOff;
 
 interface Env {
   prod: boolean;
@@ -169,7 +170,7 @@ export function countRaw(path: string, title: string): boolean {
  */
 export const DAY_MILESTONES = [1, 2, 7, 14, 28] as const;
 /** The milestones already handled on this device ("1,2,7"), so each is counted at most once. */
-const DAYS_KEY = 'vloertaal:count-dagen';
+const DAYS_KEY = KEYS.countDays;
 
 /**
  * After a finished lesson: counts the milestones `practisedDays` (the different days with a lesson,
@@ -208,7 +209,7 @@ export function countDayMilestones(practisedDays: number): number[] {
 export const FIRST_STEPS = ['geopend', 'start-af'] as const;
 export type FirstStep = (typeof FIRST_STEPS)[number];
 /** The steps already handled on this device ("geopend,start-af"), so each is counted at most once. */
-const FIRST_KEY = 'vloertaal:count-eerste';
+const FIRST_KEY = KEYS.countFirst;
 
 /**
  * Marks `steps` as handled on this device and counts those not handled before, under the same rules

@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import type { HelpLanguage } from '../i18n/types';
 import { NON_LATIN_HELP } from './letters';
 
@@ -8,7 +9,7 @@ import { NON_LATIN_HELP } from './letters';
  * leren schrijven" (Settings) brings back real dictation with letter tiles. Stored on this
  * device only, under its own key.
  */
-const KEY = 'vloertaal:learn-writing';
+const KEY = KEYS.learnWriting;
 
 /** The choices while storage is blocked (private mode): they hold for this visit. */
 let wantsMemory: boolean | null = null;
@@ -60,7 +61,7 @@ export function typeAsPick(ex: { options?: readonly unknown[]; pick?: true }, la
  * Settings (the writing setting), stored on this device under its own key; it replaces the
  * "letters / keyboard" switch that used to sit inside the exercise.
  */
-const INPUT_KEY = 'vloertaal:writing-input';
+const INPUT_KEY = KEYS.writingInput;
 export type WritingInput = 'tiles' | 'keys';
 
 export function writingInput(lang?: HelpLanguage): WritingInput {

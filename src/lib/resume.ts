@@ -1,3 +1,5 @@
+import { KEYS } from './storageKeys';
+
 /**
  * Resume an interrupted lesson. A lesson is built from a seed (buildLesson), so the save keeps
  * the seed instead of the exercises: the same seed rebuilds the same list, and the mistakes that
@@ -5,7 +7,7 @@
  * device only; a save older than two days is dropped.
  */
 
-const KEY = 'vloertaal:resume';
+const KEY = KEYS.resume;
 /** A save older than this is not offered any more (and is removed). */
 export const RESUME_MAX_AGE = 2 * 24 * 60 * 60 * 1000;
 

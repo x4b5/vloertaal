@@ -4,6 +4,7 @@
  * a filled-in Google Calendar page instead (googleCalendarUrl).
  */
 
+import { KEYS } from './storageKeys';
 import type { Track } from './track';
 
 /** Bram, the mascot, says it: calm, one line, the time it takes. */
@@ -157,7 +158,7 @@ function calendar(method: 'PUBLISH' | 'CANCEL', time: string, appUrl: string, no
  *  saves a backup with it, without this file (src/components/Splash.tsx BootFailed). */
 export { saveFile } from './backupShare';
 
-const REMINDER_KEY = 'vloertaal:reminder-time';
+const REMINDER_KEY = KEYS.reminderTime;
 
 /** The time of the daily reminder last put in the calendar on this phone (null: none yet). */
 export function reminderTime(): string | null {
@@ -177,8 +178,8 @@ export function forgetReminder(): void {
 /** The calendar event's identity: its UID and its version (SEQUENCE, higher on every new file). */
 export interface ReminderEvent { uid: string; sequence: number }
 
-const UID_KEY = 'vloertaal:reminder-uid';
-const SEQ_KEY = 'vloertaal:reminder-seq';
+const UID_KEY = KEYS.reminderUid;
+const SEQ_KEY = KEYS.reminderSeq;
 
 /** A random id, from the phone's crypto where it has one. */
 function randomId(): string {

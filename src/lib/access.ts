@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import { nlId } from '../content/regels/be/ids';
 import { allCourseUnits, courseUnits } from '../content/courses';
 import { THEMES, themeUnitIds } from '../content/themes';
@@ -84,7 +85,7 @@ export async function checkPassword(input: string): Promise<Access | null> {
   return null;
 }
 
-const KEY = 'vloertaal.access';
+const KEY = KEYS.access;
 
 /**
  * Open to all (since 28 October 2026): every phone has the full version, without a code. The

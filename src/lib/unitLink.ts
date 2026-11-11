@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import { units } from '../content/curriculum';
 import { trackOfId } from './track';
 
@@ -28,7 +29,7 @@ export function unitFromSearch(search: string): string | null {
   return knownUnit(id) ? id : null;
 }
 
-const KEY = 'vloertaal.linkedUnit';
+const KEY = KEYS.linkedUnit;
 
 /** Keeps the linked unit on this phone until the path has shown it (the first run may be reloaded). */
 export function rememberLinkedUnit(id: string): void {

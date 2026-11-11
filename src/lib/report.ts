@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import { CONTACT_EMAIL } from '../content/about';
 import type { Access } from './access';
 import { type Exercise, isRuleExercise } from './exercises';
@@ -17,7 +18,7 @@ import { type Exercise, isRuleExercise } from './exercises';
  * It is a tool, not a step of the lesson: like the ✕ it is not one of the three things to tap.
  */
 
-const KEY = 'vloertaal:tester';
+const KEY = KEYS.tester;
 
 /** ?test=0 switches the flag off for this phone, ?test (or ?test=1) on again. Called once at the start. */
 export function readTesterParam(search: string): void {
@@ -145,7 +146,7 @@ export function reportMail(p: ReportPlace): string {
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-const HINT_KEY = 'vloertaal:report-hint';
+const HINT_KEY = KEYS.reportHint;
 
 /** The first time on this phone the flag shows: say what it is for (once; then remembered). */
 export function firstReportHint(): boolean {

@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import { tipForLesson } from '../content/culture';
 import { findLesson } from '../content/curriculum';
 import { taalNlId } from '../content/taalBe/ids';
@@ -98,7 +99,7 @@ export function workTryLine(lessonId: string): WorkTryLine | undefined {
 }
 
 /** The day the card last showed, on this device only (a lost value only shows it once more). */
-const KEY = 'vloertaal:work-try';
+const KEY = KEYS.workTry;
 let dayMemory: string | null = null;
 
 function shownOn(): string | null {
@@ -136,7 +137,7 @@ export function workTryFor(lessonId: string, first: boolean, today: string): Wor
  * else. Since 5 November 2026 (the owner's request) "Ja, gelukt" also keeps the sentence in the
  * progress, in "Gelukt op het werk" (addGelukt): a collection that only grows.
  */
-const ASK_KEY = 'vloertaal:work-try-ask';
+const ASK_KEY = KEYS.workTryAsk;
 
 export type GeluktAnswer = 'ja' | 'nog-niet';
 

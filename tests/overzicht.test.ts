@@ -25,10 +25,10 @@ function appFiles(dir = 'src'): string[] {
   });
 }
 
-/** A key of local or session storage as the code writes it: 'vloertaal:…', 'vloertaal.…', 'vloertaal-demo:…'. */
-const KEY_LITERAL = /['"`](vloertaal(?:-demo)?[:.][A-Za-z][A-Za-z0-9:_-]*)['"`]/g;
-/** The site's own name, not a key. */
-const NOT_A_KEY = new Set(['vloertaal.nl']);
+/** A name on the phone written out as a string: 'vloertaal:…', 'vloertaal.…', 'vloertaal-demo:…', a database or the cache. */
+const KEY_LITERAL = /['"`](vloertaal(?:-demo|-toets|-stem|-offline-v1)?(?:[:.][A-Za-z][A-Za-z0-9:_-]*)?)['"`]/g;
+/** Not a key: the site's own name, and the name of the app in the backup file (BACKUP_APP). */
+const NOT_A_KEY = new Set(['vloertaal.nl', 'vloertaal']);
 
 describe('docs/overzicht.md', () => {
   it('is what `npm run overzicht` writes now', () => {
@@ -37,25 +37,71 @@ describe('docs/overzicht.md', () => {
 });
 
 describe('what the phone remembers', () => {
-  const inCode = new Map<string, Set<string>>();
-  for (const file of appFiles()) {
-    for (const m of read(file).matchAll(KEY_LITERAL)) {
-      if (NOT_A_KEY.has(m[1])) continue;
-      if (!inCode.has(m[1])) inCode.set(m[1], new Set());
-      inCode.get(m[1])!.add(file);
+  it('no file writes a key out itself: every name comes from src/lib/storageKeys.ts', () => {
+    const written: string[] = [];
+    for (const file of appFiles()) {
+      if (file === 'src/lib/storageKeys.ts') continue;
+      for (const m of read(file).matchAll(KEY_LITERAL)) if (!NOT_A_KEY.has(m[1])) written.push(`${file}: ${m[1]}`);
     }
-  }
-  const web = STORED_KEYS.filter((k) => k.store === 'telefoon' || k.store === 'tabblad');
-
-  it('every key in the code has a line in the register', () => {
-    const known = new Set(STORED_KEYS.map((k) => k.key));
-    expect([...inCode.keys()].filter((k) => !known.has(k))).toEqual([]);
+    expect(written).toEqual([]);
   });
 
-  it('every line in the register is a key the code still uses, in the file it names', () => {
-    for (const k of web) expect([...(inCode.get(k.key) ?? [])], k.key).toContain(k.file);
-    // The recordings and the saved lessons: their names stand in their own files.
-    for (const k of STORED_KEYS.filter((s) => s.store === 'databank' || s.store === 'cache')) expect(read(k.file), k.key).toContain(`'${k.key}'`);
+  it('every line names the file that uses the key', () => {
+    for (const k of STORED_KEYS) expect(read(k.file), `${k.ref} in ${k.file}`).toMatch(new RegExp(`\\b${k.ref.replace('.', '\\.')}\\b`));
+  });
+
+  it('the names on the phone are the ones of 12 November 2026 (a changed name loses what is kept under it)', () => {
+    expect(Object.fromEntries(STORED_KEYS.map((k) => [k.ref, k.key]))).toMatchInlineSnapshot(`
+      {
+        "KEYS.aboutNl": "vloertaal:aboutNl",
+        "KEYS.access": "vloertaal.access",
+        "KEYS.admin": "vloertaal:admin",
+        "KEYS.backupNudge": "vloertaal:backup-nudge",
+        "KEYS.be": "vloertaal:be",
+        "KEYS.certName": "vloertaal:cert-name",
+        "KEYS.countDays": "vloertaal:count-dagen",
+        "KEYS.countFirst": "vloertaal:count-eerste",
+        "KEYS.countOff": "vloertaal:count-off",
+        "KEYS.demoOn": "vloertaal-demo:on",
+        "KEYS.demoOwn": "vloertaal-demo:own",
+        "KEYS.demoStopped": "vloertaal-demo:stopped",
+        "KEYS.feel": "vloertaal:gevoel",
+        "KEYS.firstTimes": "vloertaal:first-times",
+        "KEYS.goKnown": "vloertaal:go-known",
+        "KEYS.greeted": "vloertaal:greeted",
+        "KEYS.keepOffered": "vloertaal.keepOffered",
+        "KEYS.learnWriting": "vloertaal:learn-writing",
+        "KEYS.linkedUnit": "vloertaal.linkedUnit",
+        "KEYS.listen": "vloertaal:listen",
+        "KEYS.noVoiceNoted": "vloertaal:no-voice-noted",
+        "KEYS.offline": "vloertaal:offline",
+        "KEYS.offlineAuto": "vloertaal:offline-auto",
+        "KEYS.oneApp": "vloertaal:nieuw",
+        "KEYS.persist": "vloertaal:persist",
+        "KEYS.persistAsked": "vloertaal:persist-asked",
+        "KEYS.progress": "vloertaal:v1",
+        "KEYS.reminderSeq": "vloertaal:reminder-seq",
+        "KEYS.reminderTime": "vloertaal:reminder-time",
+        "KEYS.reminderUid": "vloertaal:reminder-uid",
+        "KEYS.reportHint": "vloertaal:report-hint",
+        "KEYS.resume": "vloertaal:resume",
+        "KEYS.rules": "vloertaal:rules",
+        "KEYS.samenHelp": "vloertaal:samen-help",
+        "KEYS.showEnglish": "vloertaal:show-english",
+        "KEYS.shownHow": "vloertaal:shown-how",
+        "KEYS.speaking": "vloertaal:speaking",
+        "KEYS.tester": "vloertaal:tester",
+        "KEYS.topicsOrder": "vloertaal:topicsOrder",
+        "KEYS.updateFor": "vloertaal:update-for",
+        "KEYS.updateReload": "vloertaal:update-reload",
+        "KEYS.workTry": "vloertaal:work-try",
+        "KEYS.workTryAsk": "vloertaal:work-try-ask",
+        "KEYS.writingInput": "vloertaal:writing-input",
+        "STORES.firstVoiceDb": "vloertaal-stem",
+        "STORES.offlineCache": "vloertaal-offline-v1",
+        "STORES.toetsDb": "vloertaal-toets",
+      }
+    `);
   });
 
   it('no key twice, and every line says what it is', () => {

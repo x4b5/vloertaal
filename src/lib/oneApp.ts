@@ -1,3 +1,5 @@
+import { KEYS } from './storageKeys';
+
 /**
  * "Eén app" (docs/sporen.md, fase 1 en 2): the help language apart from what the learner learns.
  * With it on:
@@ -17,7 +19,7 @@
  */
 export const ONE_APP_LIVE: boolean = false;
 
-const KEY = 'vloertaal:nieuw';
+const KEY = KEYS.oneApp;
 let forced: boolean | null = null;
 
 /** Tests and screenshots: on, off, or back to the phone's own switch (null). */

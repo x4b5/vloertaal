@@ -1,3 +1,4 @@
+import { KEYS } from './storageKeys';
 import { CONTACT_EMAIL } from '../content/about';
 import { COUNTER_SITE, VIA } from './countSite';
 import { COACH_FACTS } from '../content/facts';
@@ -94,7 +95,7 @@ function shareLine(): string {
  */
 function shareCounting(): string {
   const via = JSON.stringify(VIA);
-  return `<script>(function(){try{if(!/^(www\\.)?vloertaal\\.nl$/.test(location.hostname)||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true||localStorage.getItem('vloertaal:count-off')==='1')return}catch(e){return}
+  return `<script>(function(){try{if(!/^(www\\.)?vloertaal\\.nl$/.test(location.hostname)||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true||localStorage.getItem('${KEYS.countOff}')==='1')return}catch(e){return}
 function c(p,t){try{fetch('${COUNTER_SITE}/count?p='+encodeURIComponent(p)+'&e=true&t='+t,{mode:'no-cors',keepalive:true,credentials:'omit',cache:'no-store',referrerPolicy:'no-referrer'}).catch(function(){})}catch(e){}}
 var v=new URLSearchParams(location.search).get('via');if(${via}.indexOf(v)>-1)c('/e/via/'+v,'via');
 document.querySelectorAll('a[data-deel]').forEach(function(a){a.addEventListener('click',function(){c('/e/deel/website-'+a.getAttribute('data-deel'),'deel')})})})()</script>`;
