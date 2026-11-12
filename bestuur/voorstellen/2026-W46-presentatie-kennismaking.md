@@ -9,105 +9,83 @@ bronnen:
   - docs/weekplan.md
 ---
 
-# Kennismaking: Vloertaal voor begeleiders
+# Kennismaking: meebouwen aan Vloertaal
 
-Voor een online gesprek van 30 minuten: ongeveer 10 minuten dia's, 10 minuten de app zelf, 10
-minuten vragen. Negen dia's. Per dia: de tekst op de dia, en wat ik erbij zeg.
+Voor een online gesprek van 30 minuten. Het doel is niet de app verkopen, maar horen wat zij zien
+en of ze willen meebouwen. Daarom eerst zij aan het woord, en pas daarna kort het prototype, zodat
+wat er al is hun ideeën zo min mogelijk stuurt. Ongeveer een derde vertellen, twee derde luisteren.
+Zeven dia's.
 
-## 1. Vloertaal
+## 1. Vloertaal: een prototype
 
-**Op de dia:** Nederlands voor op de werkvloer, met hulp in je eigen taal. vloertaal.nl
+**Op de dia:** Vloertaal. Een prototype, en ik zoek medebouwers.
 
-**Ik zeg:** Wie ik ben, en dat ik dit in mijn vrije tijd maak, naast mijn baan.
+**Ik zeg:** Wie ik ben, en dat ik dit in mijn vrije tijd maak, naast mijn baan. Dat het echt nog
+een eerste versie is. Ik kom niet iets aanbieden: ik wil vooral van jullie horen wat er nodig is.
 
-## 2. Waarom ik dit maak
-
-**Op de dia:** Iemand knikt bij een instructie, maar heeft hem niet verstaan.
-
-**Ik zeg:** In mijn werk zie ik dat een plaatsing daarop kan stuklopen, terwijl het werk zelf wel
-lukt. Herkennen jullie dat? Laat hier een stilte vallen: het antwoord is het begin van het gesprek.
-
-## 3. Wat het is
+## 2. Eerst jullie
 
 **Op de dia:**
-- Een gratis webapp op de eigen telefoon
-- Geen account, geen reclame, geen verdienmodel
-- Ook als lezen moeilijk gaat: alles kan worden voorgelezen
+- Waar loopt het op de werkvloer vast op taal?
+- Wat doen jullie er nu aan, en wat werkt?
+- Wat zou een kandidaat zelf willen kunnen?
 
-**Ik zeg:** Je opent vloertaal.nl en je begint. Er hoeft niets geïnstalleerd te worden.
+**Ik zeg:** Nog niets over de app. Vragen stellen en luisteren, ongeveer tien minuten. Aantekeningen
+maken, ook van de woorden die ze gebruiken.
 
-## 4. Twee sporen
+## 3. Het idee
 
-**Op de dia:**
-- **Taal:** voor wie (bijna) geen Nederlands spreekt, met uitleg in een hulptaal
-- **Werkregels (bèta):** voor wie al Nederlands spreekt: loon, contract, ziek zijn, rechten
+**Op de dia:** Nederlands voor op de werkvloer, op de eigen telefoon, met hulp in je eigen taal.
 
-**Ik zeg:** De hulptalen: onder meer Arabisch, Tigrinya, Dari, Perzisch, Oekraïens en Turks. Ook
-Pools, Roemeens en Bulgaars, en Spaans, Portugees, Frans en Duits. Voor de rest is er Engels.
+**Ik zeg:** Hoe het idee ontstond. Eén of twee zinnen, geen aantallen.
 
-## 5. Wat erin zit
-
-**Op de dia:**
-- Spoor Taal: 40 onderwerpen, 144 lessen, in 8 thema's
-- Van de eerste werkdag en veilig werken tot je rechten
-- Per sector: logistiek, bouw, productie, zorg, horeca, schoonmaak, tuinbouw, techniek, garage
-
-**Ik zeg:** Het gaat om korte gesprekken van de werkvloer: een instructie opvolgen, je ziek
-melden, vragen als je iets niet snapt. En om de ongeschreven regels: 99 tips over hoe het hier gaat.
-
-## 6. Zo ziet een les eruit
+## 4. Het prototype
 
 **Op de dia:** alleen de titel. Hier ga ik naar vloertaal.nl.
 
-**Ik laat zien:** taal kiezen, de eerste les van "Eerste werkdag", een woord met plaatje en
-uitspraak, een gesprekje, de uitleg in de hulptaal. Daarna kort het spoor Werkregels.
+**Ik laat zien** (hooguit vijf minuten): taal kiezen, het begin van één les, de uitleg in de
+hulptaal. Vooraf zeggen: "Kijk kritisch mee: wat klopt niet met wat jullie net vertelden?"
 
-## 7. Voor de begeleider
-
-**Op de dia:**
-- De leerling kan een begeleiderskaart laten zien: wat is er gedaan, op hoeveel dagen geoefend
-- Geen oordeel en geen niveau
-- De begeleider ziet alleen wat de leerling zelf laat zien
-
-**Ik zeg:** Er is geen dashboard en geen volgsysteem. Dat is een keuze. Er is geen account en geen
-cookie, de voortgang staat alleen op de telefoon. Ik tel alleen anoniem, bijvoorbeeld dat een les
-is afgerond. Daar gaat niets over de leerling in mee.
-
-## 8. Eerlijk: waar het nu staat
+## 5. Wat het nog niet is
 
 **Op de dia:**
-- Een bètaversie
-- De vertalingen en de teksten over regels en rechten zijn nog niet nagekeken door experts en
-  moedertaalsprekers
-- Een aanvulling op een taalcursus of coach, geen vervanging
+- Een eerste versie, nog niet nagekeken door experts en moedertaalsprekers
+- Geen bewijs dat het werkt: dat moeten we samen uitzoeken
+- Een aanvulling op een cursus of begeleider, geen vervanging
 
-**Ik zeg:** Sinds 15 oktober 2026 loopt een pilot met leerlingen. Of de app iets doet voor werk of
-taal, weet ik nog niet: dat is een verwachting. Daarom zoek ik mensen die kritisch meekijken.
+**Ik zeg:** Sinds 15 oktober 2026 proberen de eerste leerlingen het. Wat het oplevert, weet ik nog
+niet.
 
-## 9. Wat ik jullie vraag
+## 6. Wat maakt het waardevol?
 
 **Op de dia:**
-- Wat missen jullie kandidaten op de werkvloer aan taal?
-- Willen een of twee begeleiders het proberen met een paar kandidaten?
-- Wat moet er anders voordat jullie het zouden gebruiken?
+- Voor de deelnemer
+- Voor de begeleider
+- Voor de werkgever
 
-**Ik zeg:** Een voorbeeld van vier weken met een groep staat klaar: ongeveer drie keer tien minuten
-oefenen per week, en één kort moment per week samen. Ik hoor graag wat niet werkt.
+**Ik zeg:** Per groep één vraag: wat zou dit voor hen de moeite waard maken? Wat moet er anders,
+wat moet erbij, wat mag eruit?
+
+## 7. Meebouwen
+
+**Op de dia:** Willen jullie meebouwen?
+
+**Ik zeg:** Wat meebouwen kan zijn, bijvoorbeeld: af en toe kritisch meekijken, of het met een paar
+kandidaten proberen en vertellen wat er gebeurt. Vragen wat zij zelf zouden willen, en wat een
+volgende stap is.
 
 ## Waarom dit, waarom nu
 
-Er komen online kennismakingsgesprekken aan met organisaties die werkzoekenden begeleiden. Eén
-vast verhaal van tien minuten houdt de gesprekken vergelijkbaar en laat tijd over voor de app en
-voor luisteren.
+Er komen online kennismakingsgesprekken aan met organisaties die werkzoekenden begeleiden. Het doel
+van die gesprekken is feedback en medebouwers vinden, niet de app aanprijzen. Wie eerst hoort wat
+er al is, denkt daarin mee; wie eerst zelf vertelt, brengt eigen ideeën in.
 
 ## Controleer zelf
 
-- **De telling van de talen.** De README noemt 14 talen in de tabel, de updates spreken van "13
-  hulptalen" (Engels telt daar niet mee). Kies één manier van zeggen. Op dia 4 staat nu geen getal.
-- **Dia 9, de tweede vraag.** Proberen met kandidaten kost jou tijd (uitleg, vragen, een
-  terugblik). Hoeveel organisaties tegelijk kun je aan naast je werk?
-- **Dia 8, de pilot.** Wil je iets zeggen over hoe de pilot loopt? Er staan geen uitkomsten in de
-  repo, dus die staan hier ook niet.
-- **Dia 2.** De zin over knikken komt uit je eigen mails, niet uit de repo. Klopt hij zo?
-- **Je eigen rol op dia 1.** Hoe je jezelf voorstelt, en dat Vloertaal los staat van je werkgever.
+- **Dia 1, je eigen rol.** Hoe je jezelf voorstelt, en of je zegt dat Vloertaal los staat van je
+  werkgever.
+- **Dia 3, het ontstaan.** Dat verhaal komt van jou; het staat niet in de repo.
+- **Dia 7, wat meebouwen is.** Hoeveel tijd kun je naast je werk geven aan organisaties die
+  meebouwen, en hoeveel organisaties tegelijk?
+- **Dia 5, de pilot.** Wil je iets zeggen over hoe die loopt? Er staan geen uitkomsten in de repo.
 - **Per gesprek.** Wat je over de gesprekspartner weet, vul je zelf in, buiten de repo.

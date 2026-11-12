@@ -44,11 +44,17 @@ de naam komt. Nooit aan een persoon of organisatie bij naam.
 
 **Presentaties.** Alleen als Xavier of de secretaris erom vraagt, voor een kennismakingsgesprek
 met een soort organisatie ("een re-integratiebedrijf", "een taalhuis").
+- Het doel van zo'n gesprek is feedback en medebouwers vinden, niet de app aanprijzen. Vloertaal is
+  een prototype en wordt zo genoemd.
 - Eén bestand: het verhaal per dia (titel, hooguit 3 regels tekst, wat Xavier erbij zegt). Hooguit
-  10 dia's, voor ongeveer 10 minuten praten. Daarna is er tijd voor de app zelf en voor vragen.
-- De app laten zien gaat voor op dia's: zet in het verhaal waar Xavier naar vloertaal.nl gaat.
-- Het slot is een concrete vraag aan de ander en een paar vragen om te luisteren. Geen aanbod dat
-  Xavier tijd kost zonder dat hij het zelf koos: zet de keuze onder "Controleer zelf".
+  8 dia's. Ongeveer een derde vertellen, twee derde luisteren.
+- Eerst vragen, dan tonen: de ander vertelt wat hij ziet vóór Xavier de app laat zien, zodat wat er
+  al is hun ideeën niet stuurt. Geen aantallen om indruk te maken (lessen, tips, sectoren).
+- De app laten zien gaat voor op dia's, en kort: zet in het verhaal waar Xavier naar vloertaal.nl
+  gaat.
+- Het slot is de vraag of ze willen meebouwen, en wat de app waardevol maakt voor de deelnemer, de
+  begeleider en de werkgever. Geen aanbod dat Xavier tijd kost zonder dat hij het zelf koos: zet
+  de keuze onder "Controleer zelf".
 - Schrijf voor een soort organisatie, nooit voor een organisatie of persoon bij naam. Wat Xavier
   over de gesprekspartner weet, vult hij zelf in, buiten de repo.
 - Bestaat er al een presentatie voor dit soort organisatie? Werk die bij; schrijf geen tweede.
