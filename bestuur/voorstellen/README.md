@@ -8,7 +8,7 @@ Naam: `2026-W47-linkedin-ziekmelden.md` (week, soort, een of twee woorden).
 
 ```markdown
 ---
-soort: linkedin        # linkedin | mail | kalender
+soort: linkedin        # linkedin | mail | presentatie | kalender
 status: concept        # concept | goedgekeurd | afgekeurd | geplaatst
 week: 2026-W47
 voor: werkgevers       # voor wie is het bedoeld
