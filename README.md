@@ -179,6 +179,8 @@ src/overzicht/        de kaart van de app: schakelaars, momenten, schermen, opsl
 scripts/              opnamelijst, iconen, max-3-telscript
 tests/                vitest: logica, volledigheid en vorm van alle vertalingen
 docs/                 pilot, livegang, vertaal- en juridische controle, ontwerpkeuzes
+bestuur/              het bestuur: AI-agenten die concepten en een weekagenda voorbereiden
+                      (bestuur/README.md); de rollen zelf staan in .claude/
 ```
 
 **Overzicht:** [`docs/overzicht.md`](docs/overzicht.md) zegt in gewone taal wat aan en uit staat, wie wat krijgt, wat de app uit

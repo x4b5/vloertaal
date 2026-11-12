@@ -1,0 +1,48 @@
+name: Bestuur
+
+# A pull request of the board (bestuur/README.md) may only change files in bestuur/. The weekly
+# cycle (.claude/skills/weekcyclus) opens it with a title that starts with "Bestuur "; any file
+# outside bestuur/ in such a pull request FAILS this check. Why a hard stop: main publishes itself
+# to vloertaal.nl, and the board's agents write drafts, never the app. Any other pull request is
+# not looked at.
+# Standard parts only: actions/checkout and git diff. No secrets.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  bestuur:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Alleen bestanden in bestuur/?
+        # The title comes in as an environment variable, never pasted into the script.
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          case "$PR_TITLE" in
+            "Bestuur "*) ;;
+            *) echo "Geen pull request van het bestuur: niet gecontroleerd."; exit 0 ;;
+          esac
+          # The changes of this pull request only (from where it left the base branch).
+          if ! changed="$(git diff --name-only "$BASE_SHA...$HEAD_SHA")"; then
+            echo "::error title=Bestuur::Kon de wijzigingen niet lezen. Niet mergen voor dit is nagekeken."
+            exit 1
+          fi
+          outside="$(printf '%s\n' "$changed" | grep -v '^bestuur/' | grep -v '^$' || true)"
+          if [ -z "$outside" ]; then
+            echo "Alleen bestanden in bestuur/ veranderd."
+            exit 0
+          fi
+          n="$(printf '%s\n' "$outside" | wc -l | tr -d ' ')"
+          echo "::error title=Bestuur schrijft buiten bestuur/::Deze pull request van het bestuur verandert $n bestand(en) buiten bestuur/. Het bestuur schrijft alleen concepten; de app is niet van het bestuur (bestuur/CLAUDE.md). Haal die wijzigingen eruit, of geef de pull request een andere titel als dit bewust is."
+          printf 'Buiten bestuur/:\n%s\n' "$outside"
+          exit 1
