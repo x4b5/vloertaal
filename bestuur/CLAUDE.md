@@ -68,6 +68,7 @@ Een week zonder beslispunten is een goede week. Maak geen werk om werk te maken:
 
 - hooguit **5 beslispunten** op de agenda;
 - hooguit **2 LinkedIn-concepten** en **1 mailconcept** per week;
+- een **presentatie** alleen als Xavier erom vraagt, en hooguit één per soort organisatie;
 - een logboekregel is één zin; een rapport dat niemand leest, schrijf je niet.
 
 ## Geheugen

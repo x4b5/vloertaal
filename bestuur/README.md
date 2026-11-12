@@ -41,7 +41,7 @@ Iets meegeven voor de week? `/weekcyclus een taalhuis wil testen, schrijf een ma
 | Rol | Wat | Waar | Mag |
 |---|---|---|---|
 | **Secretaris** | zet de week in gang, controleert, schrijft de agenda, legt besluiten vast | `.claude/skills/weekcyclus/` en `.claude/skills/besluit/` | lezen, en schrijven in `bestuur/` |
-| **Marketing en communicatie** | LinkedIn-concepten, mailconcepten, de contentkalender | `.claude/agents/marketing-communicatie.md` | lezen, en schrijven in `voorstellen/` en het eigen logboek |
+| **Marketing en communicatie** | LinkedIn-concepten, mailconcepten, presentaties, de contentkalender | `.claude/agents/marketing-communicatie.md` | lezen, en schrijven in `voorstellen/` en het eigen logboek |
 
 ### De sloten
 
