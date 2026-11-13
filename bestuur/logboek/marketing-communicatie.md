@@ -15,3 +15,4 @@ Het nieuwste bovenaan. Per week hooguit 3 regels. Ouder dan 8 weken haal je weg.
 
 - De rol is opgezet. Nog niets geschreven.
 - Presentatie geschreven voor een kennismakingsgesprek met een re-integratiebedrijf, op verzoek van Xavier: er komen online gesprekken aan.
+- Die presentatie bijgewerkt op verzoek van Xavier: tijd per dia, vragen naar wat er echt gebeurde, en de reactie direct na de demo.
