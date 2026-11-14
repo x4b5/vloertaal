@@ -1,6 +1,6 @@
 import { allWords, findItem } from '../content/curriculum';
 import { isMixLesson } from '../content/review';
-import { tipForLesson } from '../content/culture';
+import { tipForLesson } from './tips';
 import { ruleCards } from '../content/courses';
 import { rulePicture } from '../content/regels/ruleIcons';
 import type { RuleStep } from '../content/regels/types';

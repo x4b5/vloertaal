@@ -299,7 +299,7 @@ export default defineConfig({
   },
   // `npm test`: only this checkout's tests (not the copies in .claude/worktrees), and time for the
   // tests that walk all the content on a busy machine (5 s was too tight: tests/exercises.test.ts).
-  test: { exclude: ['.claude/**', 'node_modules/**', 'dist/**'], testTimeout: 15000 },
+  test: { exclude: ['.claude/**', 'node_modules/**', 'dist/**'], testTimeout: 15000, setupFiles: ['tests/setup.tips.ts'] },
   plugins: [react(), beLangSplit(), nonBlockingCss(), lazyScreenLinks(), voicesIndexFile(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
   build: {
     // Old, cheap phones (Android 7–10 with an old Chrome or Samsung Internet, iPhones on iOS 13–15):

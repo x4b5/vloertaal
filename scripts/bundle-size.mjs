@@ -58,11 +58,15 @@ import { gzipSync } from 'node:zlib';
  * Mac: the two differ by almost 1 kB), so main was red. The tips now have files of their own
  * (src/content/workTips.ts, cultureTipsBase.ts), which by itself adds 0.6 kB; the next step loads
  * them after the first screen. Set both back to 305 / 425 or lower with that step.
+ * start file 307 → 280 and start 427 → 400 (14 November 2026): that step. The "Zo werkt het hier"
+ * tips (138 tips with their long texts, 43.9 kB) load apart from the start, next to the word
+ * pictures (src/lib/tips.ts; tests/tipsLoket.test.ts keeps them out), at 261.7 / 381.7 kB on a Mac
+ * (GitHub measures almost 1 kB more). The limits are lower than before the tips moved, with room
+ * for the basis units to grow to four lessons: a lesson without its tip is about 0.3 kB.
  */
 export const LIMITS = {
-  // TEMPORARY, see above: back to 305 / 425 or lower when the tips load on demand.
-  'start file': 307,
-  start: 427,
+  'start file': 280,
+  start: 400,
   dist: 3850,
   // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
   // 14 November 2026: 93 tips in 15 languages at 4746 kB; later that day 97 tips at 4900 kB.

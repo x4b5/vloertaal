@@ -2,7 +2,7 @@ import { useEffect, useId, useLayoutEffect, useState } from 'react';
 import { stillMotion } from '../lib/calm';
 import { onSpeech } from '../lib/audio';
 import { FACES, type Emotion, type Expr, type TalkFrame } from './Faces';
-import { tipGender, type CultureTip } from '../content/culture';
+import { tipGender, type CultureTip } from '../content/tipTypes';
 import type { Gender } from '../i18n/types';
 import { learnerCharacter } from '../lib/voices';
 

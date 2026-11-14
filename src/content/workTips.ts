@@ -1,4 +1,4 @@
-import { ADVICE_LINE } from './adviceLine';
+import { ABUSE_LINE, ADVICE_LINE, HOUSE_LINE } from './adviceLine';
 import type { CultureTip, SituationAsk } from './culture';
 import { sayingsTips } from './sayings';
 import { dataUnit, toolsUnit, workUnits } from './work';
@@ -19,15 +19,7 @@ type Pair = [nl: string, en: string];
 /** Closing line of most tips: this is general information, not advice for one person (src/content/adviceLine.ts). */
 export { ADVICE_LINE };
 
-/**
- * Closing line of the tips where the employer or agency may itself be the problem (exploitation,
- * housing pressure, dismissal, discrimination): never send the learner back to the employer.
- * FairWork (fairwork.nu) is the Dutch NGO for exploited (migrant) workers.
- */
-export const ABUSE_LINE = 'General information. For your situation: ask the union, the Juridisch Loket or FairWork.';
-
-/** Closing line of the house-rules tips: these rules are set per company. */
-export const HOUSE_LINE = 'Rules differ per company: ask your supervisor what the rules are where you work.';
+export { ABUSE_LINE, HOUSE_LINE };
 
 const tip = (t: CultureTip, end = ADVICE_LINE): CultureTip => ({ ...t, body: end ? `${t.body} ${end}` : t.body });
 

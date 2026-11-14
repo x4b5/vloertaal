@@ -1,5 +1,5 @@
 import { KEYS } from './storageKeys';
-import { tipForLesson } from '../content/culture';
+import { tipForLesson } from './tips';
 import { findLesson } from '../content/curriculum';
 import { taalNlId } from '../content/taalBe/ids';
 import type { ChatLine } from '../content/types';
