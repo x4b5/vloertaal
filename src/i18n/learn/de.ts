@@ -125,6 +125,23 @@ const t: CultureTranslation = {
     'c.healthy.a.why': "Eine Pille wird angeboten: ein höfliches Nein, mit dem Grund.", // nieuw, nalezen
     'd.newcolleague.a.why': "„Glaube ich“ ist noch nicht sicher: Wer bittet, es zu zeigen, prüft, ob es klappt.", // nieuw, nalezen
     'c.food.a.why': "Gefragt, warum die Linie geputzt wird: Das nächste Produkt hat keine Nüsse.", // nieuw, nalezen
+    'c.measure.a.why': "Gefragt, wie breit: eine Zahl mit der Einheit, und aufgeschrieben.", // nieuw, nalezen
+    'c.siteday.a.why': "Gefragt, wo das Holz hinkommt: ein Ort, und wo der ist.", // nieuw, nalezen
+    'c.shifts.a.why': "Gefragt, was passiert ist: Ja, und was, und wie lange.", // nieuw, nalezen
+    'c.signals.a.why': "Gefragt, wie es ihm geht: was du siehst, und dass es neu ist.", // nieuw, nalezen
+    'c.transfer.a.why': "Gebeten, einen Menschen zu heben: nicht allein, zuerst kommt der Lifter.", // nieuw, nalezen
+    'c.dishes.a.why': "Gefragt nach sauberen Gläsern: Ja, und wann sie kommen.", // nieuw, nalezen
+    'c.rush.a.why': "Ein Auftrag vom Chef: wiederholt, damit er weiß, dass du es gehört hast.", // nieuw, nalezen
+    'c.rounds.a.why': "Gefragt, ob das Büro fertig ist: Nein, mit dem Grund.", // nieuw, nalezen
+    'c.colours.a.why': "Gefragt nach einem Tuch: Nein, weil Rot für die Toilette ist.", // nieuw, nalezen
+    'c.shophelp.a.why': "Gefragt nach Milch: nicht „nein“, sondern im Lager nachschauen.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "Ein wütender Kunde: ruhige Worte, und ein Kollege kommt.", // nieuw, nalezen
+    'c.plantcare.a.why': "Gefragt, welche du pflückst: Die Farbe zeigt, was reif ist.", // nieuw, nalezen
+    'c.outdoors.a.why': "Ein Gewitter kommt: Aufhören und reingehen ist die sichere Wahl.", // nieuw, nalezen
+    'c.drawing.a.why': "Gefragt, ob es passt: Nein, und noch einmal messen statt Gewalt.", // nieuw, nalezen
+    'c.weld.a.why': "Gefragt, ob du es anfassen darfst: noch nicht, heißes Metall muss erst abkühlen.", // nieuw, nalezen
+    'c.carparts.a.why': "Gefragt, was du hörst: welches Teil, und was es macht.", // nieuw, nalezen
+    'c.carsafe.a.why': "Gefragt, ob du anfangen darfst: noch nicht, weil das Auto elektrisch ist.", // nieuw, nalezen
     'c.parcel.a.why': "Gefragt, ob das Paket für sie ist: Ja, und dann die Unterschrift.", // nieuw, nalezen
     'c.road.a.why': "Noch eine Tour ist gefragt: Nein, weil die Pause zuerst kommt.", // nieuw, nalezen
     'c.backtowork.a.why': "Gefragt, wie es dir geht: ein kurzes Ja, und dass du es langsam angehst.", // nieuw, nalezen

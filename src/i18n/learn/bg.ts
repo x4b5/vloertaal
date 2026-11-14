@@ -128,6 +128,23 @@ const t: CultureTranslation = {
     'c.food.a.why': "Питат защо се чисти линията: следващият продукт е без ядки.", // nieuw, nalezen
     'c.parcel.a.why': "Питат дали пратката е за тях: да, и после подписът.", // nieuw, nalezen
     'c.road.a.why': "Искат още един курс: не, защото почивката е първо.", // nieuw, nalezen
+    'c.measure.a.why': "Питат колко широко: число с мерната единица, и го записваш.", // nieuw, nalezen
+    'c.siteday.a.why': "Питат къде да отиде дървото: място, и къде е то.", // nieuw, nalezen
+    'c.shifts.a.why': "Питат какво е станало: да, и какво, и колко време.", // nieuw, nalezen
+    'c.signals.a.why': "Питат как е той: какво виждаш, и че е ново.", // nieuw, nalezen
+    'c.transfer.a.why': "Молят те да вдигнеш човек: не без помощ, първо идва подемникът.", // nieuw, nalezen
+    'c.dishes.a.why': "Питат за чисти чаши: да, и кога идват.", // nieuw, nalezen
+    'c.rush.a.why': "Задача от главния готвач: отговаряш, за да знае, че го чу.", // nieuw, nalezen
+    'c.rounds.a.why': "Питат дали офисът е готов: не, с причината.", // nieuw, nalezen
+    'c.colours.a.why': "Питат за кърпа: не, защото червената е за тоалетната.", // nieuw, nalezen
+    'c.shophelp.a.why': "Питат за мляко: не просто „не“, а поглеждаш в склада.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "Ядосан клиент: спокойни думи, и идва колега.", // nieuw, nalezen
+    'c.plantcare.a.why': "Питат кои да берат: цветът показва кое е узряло.", // nieuw, nalezen
+    'c.outdoors.a.why': "Идва буря: да спреш и да влезеш вътре е безопасният избор.", // nieuw, nalezen
+    'c.drawing.a.why': "Питат дали пасва: не, и мериш пак, преди да насилваш.", // nieuw, nalezen
+    'c.weld.a.why': "Питат дали може да го вземат: още не, горещият метал първо трябва да изстине.", // nieuw, nalezen
+    'c.carparts.a.why': "Питат какво чуваш: коя част и какво прави.", // nieuw, nalezen
+    'c.carsafe.a.why': "Питат дали може да започнат работа: още не, защото колата е електрическа.", // nieuw, nalezen
     'c.backtowork.a.why': "Питат как си: кратко „да“ и че не бързаш.", // nieuw, nalezen
     'c.feelwell.a.why': "Питат как си: честното „не съвсем“ е наред.", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 november 2026).

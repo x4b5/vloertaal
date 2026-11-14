@@ -128,6 +128,23 @@ const t: CultureTranslation = {
     'c.food.a.why': "Pytanie, dlaczego czyści się linię: następny produkt jest bez orzechów.", // nieuw, nalezen
     'c.parcel.a.why': "Pytanie, czy paczka jest dla tej osoby: tak, a potem podpis.", // nieuw, nalezen
     'c.road.a.why': "Prośba o jeszcze jeden kurs: nie, bo najpierw jest przerwa.", // nieuw, nalezen
+    'c.measure.a.why': "Pytanie, jak szerokie: liczba z jednostką i zapisana.", // nieuw, nalezen
+    'c.siteday.a.why': "Pytanie, gdzie ma trafić drewno: miejsce i gdzie ono jest.", // nieuw, nalezen
+    'c.shifts.a.why': "Pytanie, co się stało: tak, co i jak długo.", // nieuw, nalezen
+    'c.signals.a.why': "Pytanie, jak on się czuje: co widzisz i że to coś nowego.", // nieuw, nalezen
+    'c.transfer.a.why': "Prośba o podniesienie człowieka: nie w pojedynkę, najpierw podnośnik.", // nieuw, nalezen
+    'c.dishes.a.why': "Pytanie o czyste szklanki: tak i kiedy będą.", // nieuw, nalezen
+    'c.rush.a.why': "Polecenie szefa kuchni: powtórzone, żeby wiedział, że słyszysz.", // nieuw, nalezen
+    'c.rounds.a.why': "Pytanie, czy biuro jest zrobione: nie, z powodem.", // nieuw, nalezen
+    'c.colours.a.why': "Pytanie o ściereczkę: nie, bo czerwona jest do toalety.", // nieuw, nalezen
+    'c.shophelp.a.why': "Pytanie o mleko: nie samo „nie”, tylko sprawdzenie w magazynie.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "Zdenerwowany klient: spokojne słowa i przychodzi kolega.", // nieuw, nalezen
+    'c.plantcare.a.why': "Pytanie, które zbierać: kolor mówi, co jest dojrzałe.", // nieuw, nalezen
+    'c.outdoors.a.why': "Idzie burza: przerwać pracę i iść do środka to bezpieczny wybór.", // nieuw, nalezen
+    'c.drawing.a.why': "Pytanie, czy pasuje: nie, i ponowny pomiar zamiast siły.", // nieuw, nalezen
+    'c.weld.a.why': "Pytanie, czy można to wziąć: jeszcze nie, gorący metal musi ostygnąć.", // nieuw, nalezen
+    'c.carparts.a.why': "Pytanie, co słyszysz: która część i co robi.", // nieuw, nalezen
+    'c.carsafe.a.why': "Pytanie, czy można zacząć pracę: jeszcze nie, bo samochód jest elektryczny.", // nieuw, nalezen
     'c.backtowork.a.why': "Pytanie, jak się czujesz: krótkie „tak” i że robisz wszystko powoli.", // nieuw, nalezen
     'c.feelwell.a.why': "Pytanie, jak się czujesz: szczere „nie bardzo” jest w porządku.", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 november 2026).

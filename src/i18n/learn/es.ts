@@ -135,6 +135,23 @@ const t: CultureTranslation = {
     'c.food.a.why': "Te preguntan por qué se limpia la línea: el siguiente producto no lleva frutos secos.", // nieuw, nalezen
     'c.parcel.a.why': "Preguntan si el paquete es suyo: sí, y luego la firma.", // nieuw, nalezen
     'c.road.a.why': "Te piden un reparto más: no, porque primero va la pausa.", // nieuw, nalezen
+    'c.measure.a.why': "Te preguntan el ancho: un número con su unidad, y lo apuntas.", // nieuw, nalezen
+    'c.siteday.a.why': "Te preguntan dónde va la madera: un sitio, y dónde está.", // nieuw, nalezen
+    'c.shifts.a.why': "Te preguntan qué ha pasado: sí, qué, y cuánto tiempo.", // nieuw, nalezen
+    'c.signals.a.why': "Te preguntan cómo está: lo que ves, y que es nuevo.", // nieuw, nalezen
+    'c.transfer.a.why': "Te piden levantar a una persona: sin ayuda no, primero va la grúa.", // nieuw, nalezen
+    'c.dishes.a.why': "Te preguntan por vasos limpios: sí, y cuándo llegan.", // nieuw, nalezen
+    'c.rush.a.why': "Un pedido del chef: lo repites, y así sabe que lo has oído.", // nieuw, nalezen
+    'c.rounds.a.why': "Te preguntan si la oficina está hecha: no, y el motivo.", // nieuw, nalezen
+    'c.colours.a.why': "Te preguntan por un paño: no, porque el rojo es para el inodoro.", // nieuw, nalezen
+    'c.shophelp.a.why': "Te preguntan por leche: no dices “no”, vas a mirar en el almacén.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "Un cliente enfadado: palabras tranquilas, y viene un compañero.", // nieuw, nalezen
+    'c.plantcare.a.why': "Te preguntan cuáles recoger: el color dice cuál está maduro.", // nieuw, nalezen
+    'c.outdoors.a.why': "Viene una tormenta: parar e ir dentro es lo seguro.", // nieuw, nalezen
+    'c.drawing.a.why': "Te preguntan si encaja: no, y mides otra vez antes de usar la fuerza.", // nieuw, nalezen
+    'c.weld.a.why': "Te preguntan si pueden cogerlo: todavía no, el metal caliente tiene que enfriarse.", // nieuw, nalezen
+    'c.carparts.a.why': "Te preguntan qué oyes: qué pieza, y qué hace.", // nieuw, nalezen
+    'c.carsafe.a.why': "Te preguntan si pueden empezar: todavía no, porque el coche es eléctrico.", // nieuw, nalezen
     'c.backtowork.a.why': "Te preguntan cómo estás: un sí corto, y que te lo tomas con calma.", // nieuw, nalezen
     'c.feelwell.a.why': "Te preguntan cómo estás: un “no muy bien” sincero está bien.", // nieuw, nalezen
   },

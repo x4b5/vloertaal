@@ -128,6 +128,23 @@ const t: CultureTranslation = {
     'c.food.a.why': "Питають, чому чистять лінію: наступний продукт без горіхів.", // nieuw, nalezen
     'c.parcel.a.why': "Питають, чи посилка для них: так, а потім підпис.", // nieuw, nalezen
     'c.road.a.why': "Просять ще один рейс: ні, бо спершу перерва.", // nieuw, nalezen
+    'c.measure.a.why': "Питають, якої ширини: число з одиницею, і його записано.", // nieuw, nalezen
+    'c.siteday.a.why': "Питають, куди покласти дерево: місце і де воно.", // nieuw, nalezen
+    'c.shifts.a.why': "Питають, що сталося: так, що саме і як довго.", // nieuw, nalezen
+    'c.signals.a.why': "Питають, як він: що ти бачиш і що це нове.", // nieuw, nalezen
+    'c.transfer.a.why': "Просять підняти людину: не самотужки, спершу підйомник.", // nieuw, nalezen
+    'c.dishes.a.why': "Питають про чисті склянки: так, і коли вони будуть.", // nieuw, nalezen
+    'c.rush.a.why': "Доручення від шефа: відповідь, щоб він знав, що його почули.", // nieuw, nalezen
+    'c.rounds.a.why': "Питають, чи офіс прибрано: ні, і причина.", // nieuw, nalezen
+    'c.colours.a.why': "Питають про серветку: ні, бо червона — для туалету.", // nieuw, nalezen
+    'c.shophelp.a.why': "Питають про молоко: не «ні», а подивитися на складі.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "Сердитий покупець: спокійні слова, і приходить колега.", // nieuw, nalezen
+    'c.plantcare.a.why': "Питають, які збирати: колір показує, що стигле.", // nieuw, nalezen
+    'c.outdoors.a.why': "Насувається гроза: зупинитися й піти всередину — безпечний вибір.", // nieuw, nalezen
+    'c.drawing.a.why': "Питають, чи підходить: ні, і ще раз поміряти, перш ніж застосовувати силу.", // nieuw, nalezen
+    'c.weld.a.why': "Питають, чи можна брати: ще ні, гарячий метал має охолонути.", // nieuw, nalezen
+    'c.carparts.a.why': "Питають, що ти чуєш: яка частина і що вона робить.", // nieuw, nalezen
+    'c.carsafe.a.why': "Питають, чи можна починати: ще ні, бо це електромобіль.", // nieuw, nalezen
     'c.backtowork.a.why': "Питають, як ти: коротке «так» і що ти не поспішаєш.", // nieuw, nalezen
     'c.feelwell.a.why': "Питають, як ти: чесне «не дуже» — це нормально.", // nieuw, nalezen
     // u.communicate en u.feedback (5 november 2026).

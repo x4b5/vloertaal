@@ -135,6 +135,23 @@ const t: CultureTranslation = {
     'c.food.a.why': "On demande pourquoi on nettoie la ligne : le produit suivant est sans noix.", // nieuw, nalezen
     'c.parcel.a.why': "On demande si le colis est pour eux : oui, puis la signature.", // nieuw, nalezen
     'c.road.a.why': "On demande une tournée de plus : non, car la pause passe d’abord.", // nieuw, nalezen
+    'c.measure.a.why': "On demande la largeur : un chiffre avec son unité, et tu le notes.", // nieuw, nalezen
+    'c.siteday.a.why': "On demande où va le bois : un endroit, et où il se trouve.", // nieuw, nalezen
+    'c.shifts.a.why': "On demande ce qui s’est passé : oui, et quoi, et pendant combien de temps.", // nieuw, nalezen
+    'c.signals.a.why': "On demande comment il va : ce que tu vois, et que c’est nouveau.", // nieuw, nalezen
+    'c.transfer.a.why': "On demande de soulever une personne : pas sans aide, d’abord le lève-personne.", // nieuw, nalezen
+    'c.dishes.a.why': "On demande des verres propres : oui, et quand ils arrivent.", // nieuw, nalezen
+    'c.rush.a.why': "Un ordre du chef : tu le répètes, pour qu’il sache que tu as entendu.", // nieuw, nalezen
+    'c.rounds.a.why': "On demande si le bureau est fait : non, avec la raison.", // nieuw, nalezen
+    'c.colours.a.why': "On demande pour un chiffon : non, car le rouge est pour les toilettes.", // nieuw, nalezen
+    'c.shophelp.a.why': "On demande du lait : pas “non”, mais aller voir dans la réserve.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "Un client en colère : des mots calmes, et un collègue arrive.", // nieuw, nalezen
+    'c.plantcare.a.why': "On demande lesquelles cueillir : la couleur dit ce qui est mûr.", // nieuw, nalezen
+    'c.outdoors.a.why': "Un orage arrive : arrêter et rentrer, c’est le choix sûr.", // nieuw, nalezen
+    'c.drawing.a.why': "On demande si ça rentre : non, et mesurer encore avant de forcer.", // nieuw, nalezen
+    'c.weld.a.why': "On demande de le prendre : pas encore, le métal chaud doit refroidir.", // nieuw, nalezen
+    'c.carparts.a.why': "On demande ce que tu entends : quelle pièce, et ce qu’elle fait.", // nieuw, nalezen
+    'c.carsafe.a.why': "On demande de commencer le travail : pas encore, car la voiture est électrique.", // nieuw, nalezen
     'c.backtowork.a.why': "On demande comment tu vas : un oui court, et que tu y vas doucement.", // nieuw, nalezen
     'c.feelwell.a.why': "On demande comment tu vas : un “pas très bien” honnête, c’est bien.", // nieuw, nalezen
   },

@@ -17,6 +17,26 @@ const chats = [...allLessons, ...allRegionUnits('taal').flatMap((u) => u.lessons
  *  Zuid-Limburg": recorded on the next 'Record ElevenLabs voices' run (the phone voice says them meanwhile). */
 const PENDING_RECORDING = new Set<string>([
   // Add a new reply here until the next 'Record ElevenLabs voices' run.
+  // Every sector unit at four lessons (17 new lessons, 14 November 2026):
+  'Negentig centimeter. Ik schrijf het op.',
+  'In de container bij de ingang.',
+  'Ja. De band stond een half uur stil.',
+  'Hij is verward. Dat is anders dan gisteren.',
+  'Niet alleen. Ik pak de tillift.',
+  'Ja, ik breng ze meteen.',
+  'Ja, chef. Ik kom eraan.',
+  'Nee, daar werkt nog iemand.',
+  'Nee, de rode is alleen voor de wc.',
+  'Ik kijk even voor u in het magazijn.',
+  'Ik begrijp het. Ik haal even mijn collega.',
+  'Alleen de rode. De groene zijn nog niet rijp.',
+  'We stoppen en gaan naar binnen.',
+  'Nee. Ik meet het nog een keer.',
+  'Nee, wacht. Het moet eerst afkoelen.',
+  'De motor maakt een raar geluid.',
+  'Nog niet. Het is een elektrische auto.',
+  'Ik kijk even voor u in het magazijn.',
+  'Ik begrijp het. Ik haal even mijn collega.',
   // Replies with "app": said "epp" from take 9 (src/lib/sayAs.ts APP_TAKE, 10 November 2026); the
   // older clips do not play until they are recorded again.
   'Oké, ik app in de pauze.',

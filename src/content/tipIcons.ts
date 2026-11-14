@@ -33,6 +33,17 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🌟': 'w.compliment',
   '🦹': 'w.oplichter',
   '🚚': 'w.bestelbus',
+  // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
+  '📏': 'w.rolmaat',
+  '🛏': 'w.bed',
+  '♨': 'w.heet',
+  '🟥': 'w.rood',
+  '⛈': 'w.onweer',
+  '📐': 'w.tekening',
+  '🔥': 'w.lassen',
+  '💺': 'w.stoel',
+  '🟧': 'w.oranje',
+  '🤒': 'w.koorts',
   // "Coming back step by step" (c.backtowork, 5 November 2026): the supervisor's welcome back.
   '🤗': 'w.welkomterug',
   // "Stay calm, also when it is hard" (c.calm, 5 November 2026): a slow breath out (group39).

@@ -128,6 +128,23 @@ const t: CultureTranslation = {
     'c.food.a.why': "السؤال عن سبب تنظيف الخط: المنتج التالي بدون مكسّرات.", // nieuw, nalezen
     'c.parcel.a.why': "السؤال هل الطرد له: نعم، ثم التوقيع.", // nieuw, nalezen
     'c.road.a.why': "طلب جولة أخرى: لا، لأن الاستراحة أولاً.", // nieuw, nalezen
+    'c.measure.a.why': "السؤال عن العرض: رقم مع وحدته، ومكتوب.", // nieuw, nalezen
+    'c.siteday.a.why': "السؤال أين يوضع الخشب: مكان، وأين هو.", // nieuw, nalezen
+    'c.shifts.a.why': "السؤال عمّا حدث: نعم، وماذا، ولأي مدة.", // nieuw, nalezen
+    'c.signals.a.why': "السؤال عن حاله: هذا الرد يقول ما يُرى، وأن الأمر جديد.", // nieuw, nalezen
+    'c.transfer.a.why': "طلب رفع شخص: ليس بدون مساعدة، الرافعة أولاً.", // nieuw, nalezen
+    'c.dishes.a.why': "السؤال عن كؤوس نظيفة: نعم، ومتى تأتي.", // nieuw, nalezen
+    'c.rush.a.why': "طلب من الشيف: تكراره يبيّن له أنه سُمع.", // nieuw, nalezen
+    'c.rounds.a.why': "السؤال هل نُظّف المكتب: لا، مع السبب.", // nieuw, nalezen
+    'c.colours.a.why': "السؤال عن قطعة قماش: لا، لأن الحمراء للمرحاض.", // nieuw, nalezen
+    'c.shophelp.a.why': "السؤال عن الحليب: ليس «لا»، بل نظرة في المخزن.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "زبون غاضب: كلمات هادئة، وزميل يأتي.", // nieuw, nalezen
+    'c.plantcare.a.why': "السؤال ماذا يُقطف: اللون يبيّن ما هو ناضج.", // nieuw, nalezen
+    'c.outdoors.a.why': "عاصفة رعدية قادمة: التوقّف والدخول هو الاختيار الآمن.", // nieuw, nalezen
+    'c.drawing.a.why': "السؤال هل يناسب: لا، والقياس من جديد قبل استعمال القوة.", // nieuw, nalezen
+    'c.weld.a.why': "السؤال هل يمكن أخذه: ليس بعد، المعدن الساخن يجب أن يبرد.", // nieuw, nalezen
+    'c.carparts.a.why': "السؤال عمّا يُسمع: أي قطعة، وماذا تفعل.", // nieuw, nalezen
+    'c.carsafe.a.why': "السؤال عن بدء العمل: ليس بعد، لأن السيارة كهربائية.", // nieuw, nalezen
     'c.backtowork.a.why': "السؤال عن الحال: «نعم» قصيرة، وأخذ الأمور بهدوء.", // nieuw, nalezen
     'c.feelwell.a.why': "السؤال عن الحال: «ليس جيداً» بصدق أمر مقبول.", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 nov 2026)

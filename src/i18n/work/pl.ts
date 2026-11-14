@@ -1825,6 +1825,347 @@ const t: CultureTranslation = {
     'c.road.o2': "Nic nie robisz: w umowie jest „na własny rachunek”, więc tak jest.", // nieuw, nalezen
     'c.road.o3': "Pracujesz więcej godzin, żeby zarobić tyle samo.", // nieuw, nalezen
     'c.road.w': "Liczy się to, jak naprawdę pracujesz, a nie tylko słowo w umowie. Jeśli firma decyduje, jak, kiedy i gdzie pracujesz, często pracujesz na etacie. Wtedy masz więcej praw.", // nieuw, nalezen
+    // Vertaalronde 14 november 2026: zeventien sectorlessen (bouw, productie, zorg, horeca, schoonmaak, winkel, groen, metaal, garage).
+    'l.measure': "Mierzenie", // nieuw, nalezen
+    'w.rolmaat': "miarka zwijana", // nieuw, nalezen
+    'w.waterpas': "poziomica (pokazuje, czy coś jest równo)", // nieuw, nalezen
+    'w.meten': "mierzyć", // nieuw, nalezen
+    'w.rechtlijn': "prosty (nie krzywy)", // nieuw, nalezen
+    'w.plank': "deska", // nieuw, nalezen
+    'w.schroef': "wkręt", // nieuw, nalezen
+    's.measure.1': "Jak długa jest ta deska?", // nieuw, nalezen
+    's.measure.2': "Ściana nie jest prosta.", // nieuw, nalezen
+    's.measure.3': "Mierzę to dwa razy.", // nieuw, nalezen
+    'c.measure.q': "Jak szerokie to ma być?", // nieuw, nalezen
+    'c.measure.a': "Dziewięćdziesiąt centymetrów. Zapisuję to.", // nieuw, nalezen
+    'c.measure': "Dwa razy mierz, raz tnij", // nieuw, nalezen
+    'c.measure.b': "Na budowie wymiary są często w milimetrach. Dlatego „dziewięćset” może znaczyć 90 centymetrów. Nie masz pewności? Zapytaj: „To milimetry czy centymetry?” Powtórz liczbę na głos i ją zapisz. Zmierz dwa razy, zanim zaczniesz ciąć albo wiercić: za krótka deska zostaje za krótka. Zdarzył ci się błąd? Powiedz to od razu. Wtedy zespół może to jeszcze naprawić i kosztuje to mniej.", // nieuw, nalezen
+    'c.measure.p': "To jest w milimetrach czy w centymetrach?", // nieuw, nalezen
+    'c.measure.s': { m: "Kolega podaje wymiar. Nie usłyszałeś go dobrze. Co robisz?", f: "Kolega podaje wymiar. Nie usłyszałaś go dobrze. Co robisz?", x: "Kolega podaje wymiar. Nie było go dobrze słychać. Co robisz?" }, // nieuw, nalezen
+    'c.measure.o1': "Powtarzasz liczbę i pytasz, czy się zgadza.", // nieuw, nalezen
+    'c.measure.o2': "Tniesz deskę według tego, co ci się wydaje.", // nieuw, nalezen
+    'c.measure.o3': "Czekasz, aż sam przyjdzie zobaczyć.", // nieuw, nalezen
+    'c.measure.w': "Zły wymiar kosztuje materiał i czas. Powtórzenie liczby trwa dwie sekundy i na budowie robi to każdy.", // nieuw, nalezen
+    'l.siteday': "Porządek na budowie", // nieuw, nalezen
+    'w.bouwplaats': "budowa, plac budowy", // nieuw, nalezen
+    'w.uitvoerder': "kierownik budowy (szef na budowie)", // nieuw, nalezen
+    'w.keet': "barak na budowie (na przerwy i zebrania)", // nieuw, nalezen
+    'w.afval': "odpady, śmieci", // nieuw, nalezen
+    'w.container': "kontener (bardzo duży pojemnik na odpady)", // nieuw, nalezen
+    'w.struikelen': "potknąć się (zahaczyć o coś nogą i upaść)", // nieuw, nalezen
+    's.siteday.1': "Odpady idą do kontenera.", // nieuw, nalezen
+    's.siteday.2': "Kierownik budowy jest w baraku.", // nieuw, nalezen
+    's.siteday.3': "Uwaga, tu można się potknąć.", // nieuw, nalezen
+    'c.siteday.q': "Gdzie ma trafić to drewno?", // nieuw, nalezen
+    'c.siteday.a': "Do kontenera przy wejściu.", // nieuw, nalezen
+    'c.siteday': "Porządek na budowie to bezpieczna budowa", // nieuw, nalezen
+    'c.siteday.b': "Na budowie sprzątanie jest częścią pracy, dla każdego. Przez luźne deski, kable i odpady ludzie potykają się i upadają. Dlatego sprzątaj swoje miejsce w ciągu dnia, nie tylko na koniec. Odpady się sortuje: drewno, gruz i metal często idą do różnych kontenerów. Nie wiesz, do którego? Zapytaj. Widzisz wystający gwóźdź albo dziurę bez przykrycia? Napraw to, jeśli możesz to zrobić bezpiecznie, albo powiedz kierownikowi budowy (de uitvoerder). Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.siteday.p': "Posprzątam to. Wtedy nikt się nie potknie.", // nieuw, nalezen
+    'c.siteday.s': "Na przejściu leżą deski z gwoździami. Nie są twoje. Co robisz?", // nieuw, nalezen
+    'c.siteday.o1': "Odsuwasz je na bok albo mówisz kierownikowi budowy.", // nieuw, nalezen
+    'c.siteday.o2': "Przechodzisz nad nimi: to nie twoje deski.", // nieuw, nalezen
+    'c.siteday.o3': "Czekasz: ktoś inny je sprzątnie.", // nieuw, nalezen
+    'c.siteday.w': "Wszyscy chodzą tymi samymi przejściami. Kto widzi zagrożenie, coś z nim robi: na budowie to normalne.", // nieuw, nalezen
+    'l.shifts': "Przekazanie zmiany", // nieuw, nalezen
+    'w.vroegedienst': "zmiana poranna", // nieuw, nalezen
+    'w.latedienst': "zmiana popołudniowa", // nieuw, nalezen
+    'w.nachtdienst': "zmiana nocna", // nieuw, nalezen
+    'w.overdracht': "przekazanie zmiany (mówisz następnej zmianie, co się działo)", // nieuw, nalezen
+    'w.aflossen': "zmienić kogoś (przychodzi następna osoba, a ty możesz iść)", // nieuw, nalezen
+    'w.teamleider': "kierownik zespołu", // nieuw, nalezen
+    's.shifts.1': "W tym tygodniu mam zmianę popołudniową.", // nieuw, nalezen
+    's.shifts.2': "Kto mnie zmienia?", // nieuw, nalezen
+    's.shifts.3': "Maszyna numer dwa miała awarię.", // nieuw, nalezen
+    'c.shifts.q': "Czy na twojej zmianie coś się stało?", // nieuw, nalezen
+    'c.shifts.a': "Tak. Linia stała przez pół godziny.", // nieuw, nalezen
+    'c.shifts': "Powiedz następnej zmianie", // nieuw, nalezen
+    'c.shifts.b': "Fabryka często pracuje dzień i noc, na zmiany. Na koniec twojej zmiany kolega przejmuje twoje miejsce. Nie wychodź tak po prostu: poczekaj, aż kolega przyjdzie. Powiedz w kilku słowach, co się działo: awaria, zły produkt, coś, co nie jest skończone. Wiele firm ma do tego także listę albo ekran. Problem, którego nie przekażesz, wraca na następnej zmianie i wtedy nikt nie wie dlaczego. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.shifts.p': "Maszyna miała awarię. Teraz znowu działa.", // nieuw, nalezen
+    'c.shifts.s': "Twoja zmiana się skończyła. Kolega spóźnia się pięć minut. Co robisz?", // nieuw, nalezen
+    'c.shifts.o1': "Czekasz i mówisz kierownikowi zespołu.", // nieuw, nalezen
+    'c.shifts.o2': "Idziesz do domu: twoja zmiana się skończyła.", // nieuw, nalezen
+    'c.shifts.o3': "Zatrzymujesz maszynę i wychodzisz.", // nieuw, nalezen
+    'c.shifts.w': "Pracująca maszyna nie może zostać sama. Kiedy czekasz i to zgłaszasz, praca idzie dalej bezpiecznie, a kierownik zespołu może to rozwiązać.", // nieuw, nalezen
+    'l.signals': "Powiedz, co widzisz", // nieuw, nalezen
+    'w.duizelig': "kręci się w głowie (zawroty głowy)", // nieuw, nalezen
+    'w.misselijk': "niedobrze (czujesz, że zaraz zwymiotujesz)", // nieuw, nalezen
+    'w.benauwd': "duszno, brak tchu", // nieuw, nalezen
+    'w.koorts': "gorączka", // nieuw, nalezen
+    'w.verward': "zdezorientowany (osoba nie wie, gdzie jest)", // nieuw, nalezen
+    'w.anders': "inaczej (nie tak jak zwykle)", // nieuw, nalezen
+    's.signals.1': "Pani ma zawroty głowy.", // nieuw, nalezen
+    's.signals.2': "Pan dzisiaj nie je.", // nieuw, nalezen
+    's.signals.3': "Możesz przyjść i zobaczyć?", // nieuw, nalezen
+    'c.signals.q': "Jak się czuje pan Jansen?", // nieuw, nalezen
+    'c.signals.a': "Jest zdezorientowany. To inaczej niż wczoraj.", // nieuw, nalezen
+    'c.signals': "Widzisz podopiecznego codziennie", // nieuw, nalezen
+    'c.signals.b': "Często to właśnie ty najwięcej widzisz podopiecznego. Dlatego to ty najwcześniej zauważasz, że coś jest inaczej: mniej je, bardziej go boli, jest zdezorientowany, ma duszności. Nie musisz wiedzieć, co to jest. Powiedz, co widzisz, i powiedz, kiedy to było. Powiedz o tym pielęgniarce tego samego dnia i zapisz to, jeśli to twoje zadanie. Wygląda to poważnie? Nie czekaj: od razu zawołaj pielęgniarkę. Lepiej o jeden raz za dużo niż o jeden raz za mało.", // nieuw, nalezen
+    'c.signals.p': "Pani nie je i ma zawroty głowy. Zwykle tak nie jest.", // nieuw, nalezen
+    'c.signals.s': "Podopieczna jest dziś cicha i nie chce jeść. Zwykle dużo mówi. Co robisz?", // nieuw, nalezen
+    'c.signals.o1': "Jeszcze dziś mówisz pielęgniarce, co widzisz.", // nieuw, nalezen
+    'c.signals.o2': "Czekasz kilka dni: może to minie.", // nieuw, nalezen
+    'c.signals.o3': "Dajesz jej tabletkę z szafki.", // nieuw, nalezen
+    'c.signals.w': "Mała zmiana może być pierwszym znakiem choroby. To nie ty decydujesz, co to jest: robi to pielęgniarka. Ale ona może coś zrobić tylko wtedy, gdy jej o tym powiesz.", // nieuw, nalezen
+    'l.transfer': "Pomoc przy wstawaniu", // nieuw, nalezen
+    'w.tillift': "podnośnik (maszyna, która podnosi człowieka)", // nieuw, nalezen
+    'w.rollator': "balkonik na kółkach, rollator", // nieuw, nalezen
+    'w.bed': "łóżko", // nieuw, nalezen
+    'w.opstaan': "wstawać, wstać", // nieuw, nalezen
+    'w.gaanzitten': "usiąść", // nieuw, nalezen
+    'w.voorzichtig': "ostrożnie, delikatnie", // nieuw, nalezen
+    's.transfer.1': "Pomogę panu/pani wstać.", // nieuw, nalezen
+    's.transfer.2': "Chce pan/pani na chwilę usiąść?", // nieuw, nalezen
+    's.transfer.3': "Najpierw przyniosę podnośnik.", // nieuw, nalezen
+    'c.transfer.q': "Możesz podnieść panią z łóżka?", // nieuw, nalezen
+    'c.transfer.a': "Nie w pojedynkę. Przyniosę podnośnik.", // nieuw, nalezen
+    'c.transfer': "Najpierw powiedz, potem pomóż", // nieuw, nalezen
+    'c.transfer.b': "Zanim dotkniesz podopiecznego, powiedz, co zamierzasz zrobić: „Ik help u nu met opstaan.” Wtedy podopieczny się nie przestraszy i może pomagać. Pozwól podopiecznemu robić to, co jeszcze potrafi: dzięki temu zachowuje siły. Nie podnoś człowieka w pojedynkę. Używaj sprzętu, który jest na miejscu, na przykład podnośnika, i pracuj tak, jak ci pokazano. Nikt ci jeszcze nie pokazał? Najpierw zapytaj. Twoje plecy muszą wytrzymać całe życie zawodowe. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.transfer.p': "Teraz pomogę panu/pani wstać. Możemy zaczynać?", // nieuw, nalezen
+    'c.transfer.s': "Podopieczna chce wstać z łóżka. Nie umiesz jeszcze obsługiwać podnośnika. Co robisz?", // nieuw, nalezen
+    'c.transfer.o1': "Prosisz kolegę, który zna podnośnik.", // nieuw, nalezen
+    'c.transfer.o2': "Podnosisz ją w pojedynkę: nie jest ciężka.", // nieuw, nalezen
+    'c.transfer.o3': "Próbujesz użyć podnośnika: to nie może być trudne.", // nieuw, nalezen
+    'c.transfer.w': "Złe podnoszenie człowieka może zrobić krzywdę podopiecznemu i twoim plecom. Poproszenie kolegi zajmuje kilka minut. Upadek może kosztować miesiące.", // nieuw, nalezen
+    'l.dishes': "Zmywanie", // nieuw, nalezen
+    'w.afwas': "zmywanie, brudne naczynia", // nieuw, nalezen
+    'w.vaatwasser': "zmywarka", // nieuw, nalezen
+    'w.bord': "talerz", // nieuw, nalezen
+    'w.glas': "szklanka, szkło", // nieuw, nalezen
+    'w.bestek': "sztućce (nóż, widelec i łyżka)", // nieuw, nalezen
+    'w.afdrogen': "wycierać do sucha (ścierką)", // nieuw, nalezen
+    's.dishes.1': "Zmywarka skończyła.", // nieuw, nalezen
+    's.dishes.2': "Uwaga, stłukła się szklanka.", // nieuw, nalezen
+    's.dishes.3': "Nie ma już czystych sztućców.", // nieuw, nalezen
+    'c.dishes.q': "Są jeszcze czyste szklanki?", // nieuw, nalezen
+    'c.dishes.a': "Tak, zaraz je przyniosę.", // nieuw, nalezen
+    'c.dishes': "Stłuczone szkło: powiedz od razu", // nieuw, nalezen
+    'c.dishes.b': "W kuchni szkło się tłucze. To normalne i nikt się o to nie gniewa. Ale powiedz to od razu, głośno i wyraźnie: „Glas!” Nie zbieraj kawałków gołymi rękami: użyj zmiotki. Szkło spadło blisko jedzenia albo do lodu? Wtedy to jedzenie albo ten lód trzeba wyrzucić, w całości. Mały kawałek szkła w posiłku jest bardzo niebezpieczny dla gościa. Szkło idzie do osobnego pojemnika, a nie do worka, który ktoś potem podnosi. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.dishes.p': "Uwaga, szkło! Zaraz to sprzątnę.", // nieuw, nalezen
+    'c.dishes.s': "Szklanka tłucze się nad lodem do napojów. Jest bardzo duży ruch. Co robisz?", // nieuw, nalezen
+    'c.dishes.o1': "Mówisz o tym i wyrzucasz cały lód.", // nieuw, nalezen
+    'c.dishes.o2': "Wyjmujesz kawałki, które widać.", // nieuw, nalezen
+    'c.dishes.o3': "Nic nie mówisz: teraz jest za duży ruch.", // nieuw, nalezen
+    'c.dishes.w': "Małych kawałków szkła w lodzie nie widać. Nowy lód kosztuje mało. Gość ze szkłem w napoju może się poważnie zranić.", // nieuw, nalezen
+    'l.rush': "Kiedy jest duży ruch", // nieuw, nalezen
+    'w.heet': "gorący, gorąco", // nieuw, nalezen
+    'w.chef': "szef kuchni (kieruje kuchnią)", // nieuw, nalezen
+    'w.terras': "taras, ogródek (stoliki na zewnątrz)", // nieuw, nalezen
+    'w.tafel': "stół, stolik", // nieuw, nalezen
+    'w.dienblad': "taca", // nieuw, nalezen
+    'w.wachten': "czekać", // nieuw, nalezen
+    's.rush.1': "Gorące! Przechodzę za tobą.", // nieuw, nalezen
+    's.rush.2': "Stolik numer sześć czeka na jedzenie.", // nieuw, nalezen
+    's.rush.3': "Zanoszę to na taras.", // nieuw, nalezen
+    'c.rush.q': "Możesz obsłużyć stolik numer cztery?", // nieuw, nalezen
+    'c.rush.a': "Tak, szefie. Już idę.", // nieuw, nalezen
+    'c.rush': "Krótkie słowa, kiedy jest duży ruch", // nieuw, nalezen
+    'c.rush.b': "Kiedy jest duży ruch, ludzie w kuchni mówią krótkimi słowami: „Heet!”, „Achter!”, „Tafel zes!” To nie jest niegrzeczne. Tak jest szybko i bezpiecznie: każdy wie, gdzie są gorące garnki i noże. Ty też wołaj „Heet!” albo „Achter!”, kiedy przechodzisz za kimś. Słyszysz polecenie? Powtórz je: „Ja, chef.” Wtedy szef kuchni wie, że to do ciebie dotarło. Ktoś był dla ciebie szorstki w tym pośpiechu? Często mija to, kiedy ruch się kończy. Dalej jest nieprzyjemnie? Wtedy porozmawiaj o tym w spokojnej chwili.", // nieuw, nalezen
+    'c.rush.p': "Z tyłu! Mam gorący garnek.", // nieuw, nalezen
+    'c.rush.s': "Jest bardzo duży ruch. Szef kuchni woła: „Tafel zes, nu!” Nie mówi proszę. Co robisz?", // nieuw, nalezen
+    'c.rush.o1': "Mówisz „Ja, chef” i to robisz.", // nieuw, nalezen
+    'c.rush.o2': "Przerywasz pracę i mówisz, że jest niegrzeczny.", // nieuw, nalezen
+    'c.rush.o3': "Robisz to, ale nic nie odpowiadasz.", // nieuw, nalezen
+    'c.rush.w': "W pośpiechu krótkie słowa są normalne i nie są przeciwko tobie. Powtórzenie pokazuje, że polecenie do ciebie dotarło. Dzięki temu kuchnia pracuje szybko i bezpiecznie.", // nieuw, nalezen
+    'l.rounds': "Twoja runda", // nieuw, nalezen
+    'w.kantoor': "biuro", // nieuw, nalezen
+    'w.verdieping': "piętro (1. albo 2. piętro budynku)", // nieuw, nalezen
+    'w.gang': "korytarz", // nieuw, nalezen
+    'w.toiletpapier': "papier toaletowy", // nieuw, nalezen
+    'w.zeep': "mydło", // nieuw, nalezen
+    'w.bijvullen': "uzupełniać, dolewać", // nieuw, nalezen
+    's.rounds.1': "Zaczynam na drugim piętrze.", // nieuw, nalezen
+    's.rounds.2': "Papier toaletowy się skończył.", // nieuw, nalezen
+    's.rounds.3': "Uzupełniam mydło.", // nieuw, nalezen
+    'c.rounds.q': "Biuro numer trzy już zrobione?", // nieuw, nalezen
+    'c.rounds.a': "Nie, ktoś tam jeszcze pracuje.", // nieuw, nalezen
+    'c.rounds': "Sprzątanie tam, gdzie ludzie pracują", // nieuw, nalezen
+    'c.rounds.b': "Często sprzątasz, kiedy inni ludzie jeszcze pracują. Przywitaj się i zapytaj: „Mag ik hier even schoonmaken?” Większość ludzi się zgadza. Ktoś ma zebranie albo rozmawia przez telefon? Wtedy wróć później. Nie przesuwaj papierów na biurku i ich nie czytaj: sprzątaj dookoła nich. Na swoją rundę masz ustalony czas. Czasu jest za mało, żeby zrobić to dobrze? Nie pomijaj pomieszczeń po cichu. Powiedz przełożonemu, czego nie udało ci się zrobić i dlaczego.", // nieuw, nalezen
+    'c.rounds.p': "Dzień dobry. Czy mogę tu chwilę posprzątać?", // nieuw, nalezen
+    'c.rounds.s': "Twoja runda trwa dziś dłużej: jedno pomieszczenie było bardzo brudne. Dwa biura nie są zrobione. Co robisz?", // nieuw, nalezen
+    'c.rounds.o1': "Mówisz przełożonemu, które dwa i dlaczego.", // nieuw, nalezen
+    'c.rounds.o2': "Idziesz do domu i liczysz, że nikt nie zauważy.", // nieuw, nalezen
+    'c.rounds.o3': "Robisz je bardzo szybko, bez podłóg.", // nieuw, nalezen
+    'c.rounds.w': "Klient, który zastaje brudne biuro, składa skargę. Przełożony, który o tym wie, może to wyjaśnić albo dać ci więcej czasu. Powiedzieć o tym to nie porażka.", // nieuw, nalezen
+    'l.colours': "Kolory i ściereczki", // nieuw, nalezen
+    'w.doek': "ściereczka, ścierka", // nieuw, nalezen
+    'w.spons': "gąbka", // nieuw, nalezen
+    'w.rood': "czerwony", // nieuw, nalezen
+    'w.blauw': "niebieski", // nieuw, nalezen
+    'w.geel': "żółty", // nieuw, nalezen
+    'w.groen': "zielony", // nieuw, nalezen
+    's.colours.1': "Czerwona ściereczka jest do toalety.", // nieuw, nalezen
+    's.colours.2': "Weź czystą ściereczkę.", // nieuw, nalezen
+    's.colours.3': "Jakiego koloru tu używam?", // nieuw, nalezen
+    'c.colours.q': "Mogę użyć tej ściereczki do biurka?", // nieuw, nalezen
+    'c.colours.a': "Nie, czerwona jest tylko do toalety.", // nieuw, nalezen
+    'c.colours': "Każdy kolor ma swoje miejsce", // nieuw, nalezen
+    'c.colours.b': "Wiele firm sprzątających pracuje z kolorami. Każdy kolor ściereczki, gąbki i wiadra jest do jednego miejsca. Często czerwony jest do toalety, a niebieski do biurek i stołów. Dzięki temu brud z toalety nie trafia na biurko ani do kuchni. Kolory mogą być inne w każdej firmie, więc zapytaj pierwszego dnia. Ściereczka jest brudna albo spadła na podłogę? Weź czystą. Zużyte ściereczki idą do worka na pranie, a nie z powrotem na wózek. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.colours.p': "Który kolor jest tu do toalety?", // nieuw, nalezen
+    'c.colours.s': "Niebieskie ściereczki ci się skończyły. Musisz jeszcze wyczyścić trzy biurka. Masz tylko czerwone ściereczki. Co robisz?", // nieuw, nalezen
+    'c.colours.o1': "Najpierw idziesz po nowe niebieskie ściereczki.", // nieuw, nalezen
+    'c.colours.o2': "Używasz czerwonej ściereczki: czyste to czyste.", // nieuw, nalezen
+    'c.colours.o3': "Używasz jednej niebieskiej ściereczki jeszcze raz do wszystkich trzech.", // nieuw, nalezen
+    'c.colours.w': "System kolorów działa tylko wtedy, gdy wszyscy zawsze się go trzymają. Wtedy nikt nie musi się zastanawiać, gdzie ściereczka już była.", // nieuw, nalezen
+    'l.shophelp': "Pomoc klientowi", // nieuw, nalezen
+    'w.aanbieding': "promocja (taniej przez krótki czas)", // nieuw, nalezen
+    'w.korting': "zniżka, rabat (płacisz mniej)", // nieuw, nalezen
+    'w.uitverkocht': "wyprzedane", // nieuw, nalezen
+    'w.magazijn': "magazyn, zaplecze", // nieuw, nalezen
+    'w.tas': "torba", // nieuw, nalezen
+    'w.bestellen': "zamawiać", // nieuw, nalezen
+    's.shophelp.1': "Przepraszam, to jest wyprzedane.", // nieuw, nalezen
+    's.shophelp.2': "Czy chce pan/pani do tego torbę?", // nieuw, nalezen
+    's.shophelp.3': "Ta kawa jest w promocji.", // nieuw, nalezen
+    'c.shophelp.q': "Czy jest jeszcze mleko?", // nieuw, nalezen
+    'c.shophelp.a': "Sprawdzę dla pana/pani w magazynie.", // nieuw, nalezen
+    'c.shophelp': "„Nie wiem” to nie koniec", // nieuw, nalezen
+    'c.shophelp.b': "Klient o coś pyta, a ty nie znasz odpowiedzi. Nic nie szkodzi: nikt nie wie wszystkiego. Ale nie mów tylko „nee” albo „weet ik niet” i nie odchodź. Powiedz: „Ik vraag het even voor u” i zawołaj kolegę. Produkt jest wyprzedany? Powiedz, kiedy znowu będzie, albo pokaż coś podobnego. Patrz na klienta i przywitaj się, także wtedy, gdy właśnie wykładasz towar na półki. Nie rozumiesz pytania? Poproś klienta, żeby powtórzył je powoli.", // nieuw, nalezen
+    'c.shophelp.p': "Tego nie wiem. Zapytam dla pana/pani.", // nieuw, nalezen
+    'c.shophelp.s': "Klientka pyta o produkt. Nie znasz tego słowa. Co robisz?", // nieuw, nalezen
+    'c.shophelp.o1': "Mówisz: „Ik vraag het even voor u.”", // nieuw, nalezen
+    'c.shophelp.o2': "Mówisz „nee” i pracujesz dalej.", // nieuw, nalezen
+    'c.shophelp.o3': "Pokazujesz gdzieś ręką, żeby sobie poszła.", // nieuw, nalezen
+    'c.shophelp.w': "Klientowi nie przeszkadza, że jesteś tu od niedawna albo dopiero uczysz się niderlandzkiego. Klientowi przeszkadza, kiedy nie dostaje pomocy. Zawołanie kolegi to dobra obsługa.", // nieuw, nalezen
+    'l.shoptrouble': "Trudne chwile", // nieuw, nalezen
+    'w.bedrijfsleider': "kierownik sklepu", // nieuw, nalezen
+    'w.beveiliger': "ochroniarz", // nieuw, nalezen
+    'w.dief': "złodziej", // nieuw, nalezen
+    'w.stelen': "kraść", // nieuw, nalezen
+    'w.schreeuwen': "krzyczeć", // nieuw, nalezen
+    'w.geldterug': "zwrot pieniędzy", // nieuw, nalezen
+    's.shoptrouble.1': "Zawołam kierownika sklepu.", // nieuw, nalezen
+    's.shoptrouble.2': "Proszę nie krzyczeć.", // nieuw, nalezen
+    's.shoptrouble.3': "Myślę, że ktoś coś kradnie.", // nieuw, nalezen
+    'c.shoptrouble.q': "Chcę teraz dostać zwrot pieniędzy!", // nieuw, nalezen
+    'c.shoptrouble.a': "Rozumiem. Zawołam kolegę.", // nieuw, nalezen
+    'c.shoptrouble': "Zdenerwowany klient albo złodziej: ty jesteś na pierwszym miejscu", // nieuw, nalezen
+    'c.shoptrouble.b': "Czasem klient się denerwuje albo widzisz, że ktoś kradnie. Twoje bezpieczeństwo jest najważniejsze, zawsze. Przy zdenerwowanym kliencie: zachowaj spokój, nie krzycz na niego i zawołaj kierownika sklepu. Nie musisz tego rozwiązywać w pojedynkę. Widzisz złodzieja? Nie biegnij za nim, nie zatrzymuj go siłą i nie zasłaniaj drzwi. Dobrze zapamiętaj, co widzisz, i od razu powiedz kierownikowi albo ochroniarzowi. Rzeczy można zastąpić. Ciebie nie. Czujesz potem strach? Porozmawiaj o tym z przełożonym. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.shoptrouble.p': "Widzę, że ktoś wkłada coś do swojej torby.", // nieuw, nalezen
+    'c.shoptrouble.s': "Mężczyzna wkłada butelkę pod kurtkę i idzie do wyjścia. Co robisz?", // nieuw, nalezen
+    'c.shoptrouble.o1': "Mówisz kierownikowi albo ochroniarzowi.", // nieuw, nalezen
+    'c.shoptrouble.o2': "Biegniesz za nim i łapiesz go za rękę.", // nieuw, nalezen
+    'c.shoptrouble.o3': "Stajesz przed drzwiami.", // nieuw, nalezen
+    'c.shoptrouble.w': "Zatrzymany złodziej może stać się agresywny. Kierownik i ochroniarz wiedzą, co robić. Żaden produkt nie jest wart tego, żeby stała ci się krzywda.", // nieuw, nalezen
+    'l.plantcare': "Dbanie o roślinę", // nieuw, nalezen
+    'w.plantblad': "liść", // nieuw, nalezen
+    'w.stengel': "łodyga", // nieuw, nalezen
+    'w.bloem': "kwiat", // nieuw, nalezen
+    'w.knippen': "ciąć (nożyczkami)", // nieuw, nalezen
+    'w.tomaat': "pomidor", // nieuw, nalezen
+    'w.rijp': "dojrzały (gotowy do zbioru)", // nieuw, nalezen
+    's.plantcare.1': "Ten pomidor nie jest jeszcze dojrzały.", // nieuw, nalezen
+    's.plantcare.2': "Odcinam liść.", // nieuw, nalezen
+    's.plantcare.3': "Łodyga jest złamana.", // nieuw, nalezen
+    'c.plantcare.q': "Które pomidory zbieram?", // nieuw, nalezen
+    'c.plantcare.a': "Tylko czerwone. Zielone nie są jeszcze dojrzałe.", // nieuw, nalezen
+    'c.plantcare': "Czyste ręce, zdrowe rośliny", // nieuw, nalezen
+    'c.plantcare.b': "Rośliny też mogą chorować. Wirus przechodzi z rośliny na roślinę na rękach, rękawicach, nożach i ubraniu. W szklarni jedna chora roślina może oznaczać, że trzeba wyrzucić tysiące roślin. Dlatego przy wejściu są surowe zasady: umyj ręce, noś ubranie robocze firmy i przejdź przez wanienkę do dezynfekcji butów. W wielu szklarniach nie wolno mieć w swoim jedzeniu własnych pomidorów, papryki ani ogórków. Widzisz roślinę, która dziwnie wygląda? Nie dotykaj jej. Powiedz przełożonemu, w którym to rzędzie. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.plantcare.p': "W rzędzie dwunastym jest chora roślina.", // nieuw, nalezen
+    'c.plantcare.s': "Widzisz roślinę z dziwnymi żółtymi plamami. Co robisz?", // nieuw, nalezen
+    'c.plantcare.o1': "Zostawiasz ją i mówisz przełożonemu.", // nieuw, nalezen
+    'c.plantcare.o2': "Wyrywasz ją i zabierasz ze sobą.", // nieuw, nalezen
+    'c.plantcare.o3': "Odcinasz liście z plamami.", // nieuw, nalezen
+    'c.plantcare.w': "Kiedy dotykasz chorej rośliny, wirus idzie z tobą do następnych roślin. Twój przełożony wie, jak ją bezpiecznie usunąć.", // nieuw, nalezen
+    'l.outdoors': "Praca na zewnątrz", // nieuw, nalezen
+    'w.land': "pole (gdzie rośliny rosną na zewnątrz)", // nieuw, nalezen
+    'w.regen': "deszcz", // nieuw, nalezen
+    'w.zon': "słońce", // nieuw, nalezen
+    'w.laarzen': "kalosze, wysokie buty", // nieuw, nalezen
+    'w.regenpak': "ubranie przeciwdeszczowe (kurtka i spodnie na deszcz)", // nieuw, nalezen
+    'w.onweer': "burza", // nieuw, nalezen
+    's.outdoors.1': "Pada deszcz. Zakładam ubranie przeciwdeszczowe.", // nieuw, nalezen
+    's.outdoors.2': "Moje kalosze są mokre.", // nieuw, nalezen
+    's.outdoors.3': "Słońce dziś mocno grzeje.", // nieuw, nalezen
+    'c.outdoors.q': "Idzie burza. Co robimy?", // nieuw, nalezen
+    'c.outdoors.a': "Przerywamy pracę i idziemy do środka.", // nieuw, nalezen
+    'c.outdoors': "Słońce, deszcz i burza", // nieuw, nalezen
+    'c.outdoors.b': "Na zewnątrz pracujesz przy każdej pogodzie. W słońcu: zakryj głowę i skórę, używaj kremu z filtrem i często pij wodę. W deszczu: noś ubranie przeciwdeszczowe i kalosze, a w przerwie załóż suche ubranie. Od wilgoci i zimna chorujesz i pracujesz wolniej. Słychać grzmoty? Wtedy przerwij pracę i idź do środka albo do samochodu lub busa. Nie pod drzewo i nie na otwarte pole. Potrzebujesz do pracy ubrania na deszcz albo kaloszy? Zapytaj o nie pracodawcę, zanim kupisz je za swoje pieniądze.", // nieuw, nalezen
+    'c.outdoors.p': "Będzie burza. Idziemy do środka?", // nieuw, nalezen
+    'c.outdoors.s': "Jesteś na polu. Słyszysz grzmot blisko. Twój rząd jest prawie skończony. Co robisz?", // nieuw, nalezen
+    'c.outdoors.o1': "Przerywasz pracę i idziesz do środka albo do busa.", // nieuw, nalezen
+    'c.outdoors.o2': "Najpierw szybko kończysz rząd.", // nieuw, nalezen
+    'c.outdoors.o3': "Czekasz pod dużym drzewem.", // nieuw, nalezen
+    'c.outdoors.w': "Piorun uderza w najwyższy punkt, a na płaskim polu to jesteś ty. Rząd może poczekać kwadrans.", // nieuw, nalezen
+    'l.drawing': "Rysunek i wymiar", // nieuw, nalezen
+    'w.tekening': "rysunek (pokazuje, jaka ma być część)", // nieuw, nalezen
+    'w.maat': "wymiar, rozmiar", // nieuw, nalezen
+    'w.millimeter': "milimetr", // nieuw, nalezen
+    'w.schuifmaat': "suwmiarka (mierzy bardzo dokładnie)", // nieuw, nalezen
+    'w.passen': "pasować", // nieuw, nalezen
+    'w.bout': "śruba", // nieuw, nalezen
+    's.drawing.1': "Jaki jest wymiar na rysunku?", // nieuw, nalezen
+    's.drawing.2': "Ta część nie pasuje.", // nieuw, nalezen
+    's.drawing.3': "Jest o dwa milimetry za duża.", // nieuw, nalezen
+    'c.drawing.q': "Czy śruba pasuje?", // nieuw, nalezen
+    'c.drawing.a': "Nie. Zmierzę to jeszcze raz.", // nieuw, nalezen
+    'c.drawing': "Decyduje rysunek", // nieuw, nalezen
+    'c.drawing.b': "W warsztacie robisz to, co jest na rysunku, a nie to, co wygląda mniej więcej dobrze. Wymiary są w milimetrach i jeden milimetr może być za dużo. Część nie pasuje? Nie używaj siły i nie powiększaj otworu „tylko trochę”. Zmierz jeszcze raz i spójrz na rysunek. Nie umiesz odczytać rysunku albo brakuje wymiaru? Zapytaj, zanim zaczniesz. Pytanie kosztuje minutę. Zła część kosztuje materiał i godziny pracy.", // nieuw, nalezen
+    'c.drawing.p': "Nie mogę odczytać tego wymiaru. Możesz spojrzeć?", // nieuw, nalezen
+    'c.drawing.s': "Część nie pasuje: jest o jeden milimetr za duża. Młotkiem dałoby się ją wbić. Co robisz?", // nieuw, nalezen
+    'c.drawing.o1': "Mierzysz jeszcze raz i pytasz, co robić.", // nieuw, nalezen
+    'c.drawing.o2': "Wbijasz ją młotkiem.", // nieuw, nalezen
+    'c.drawing.o3': "Zeszlifowujesz kawałek i nic nie mówisz.", // nieuw, nalezen
+    'c.drawing.w': "Część, która wchodzi na siłę, może później pęknąć, u klienta. Kiedy to zgłaszasz, można znaleźć przyczynę.", // nieuw, nalezen
+    'l.weld': "Spawanie i praca na gorąco", // nieuw, nalezen
+    'w.lassen': "spawać (łączyć metal bardzo wysoką temperaturą)", // nieuw, nalezen
+    'w.laskap': "maska spawalnicza", // nieuw, nalezen
+    'w.rook': "dym", // nieuw, nalezen
+    'w.afzuiging': "wyciąg (zabiera dym)", // nieuw, nalezen
+    'w.afkoelen': "stygnąć, ostygnąć", // nieuw, nalezen
+    'w.brandwond': "oparzenie (rana od gorąca)", // nieuw, nalezen
+    's.weld.1': "Zakładam maskę spawalniczą.", // nieuw, nalezen
+    's.weld.2': "Włącz wyciąg.", // nieuw, nalezen
+    's.weld.3': "Uwaga, metal jest jeszcze gorący.", // nieuw, nalezen
+    'c.weld.q': "Mogę to już wziąć do ręki?", // nieuw, nalezen
+    'c.weld.a': "Nie, poczekaj. To musi najpierw ostygnąć.", // nieuw, nalezen
+    'c.weld': "Gorący metal wygląda na zimny", // nieuw, nalezen
+    'c.weld.b': "Spawanie daje bardzo jasne światło. Nie patrz w nie bez maski spawalniczej, także z daleka: możesz poparzyć oczy, a czujesz to dopiero po kilku godzinach. Kolega spawa blisko ciebie? Odwróć wzrok albo stań za osłoną. Metal zaraz po spawaniu albo szlifowaniu wygląda normalnie, ale jest bardzo gorący. Nie bierz go gołymi rękami. Dym spawalniczy szkodzi płucom: włącz wyciąg. Oparzenie? Od razu chłodź je wodą, co najmniej dziesięć minut, i zgłoś to. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.weld.p': "Czy to już ostygło?", // nieuw, nalezen
+    'c.weld.s': "Kolega spawa obok ciebie. Nie masz na sobie maski spawalniczej. Co robisz?", // nieuw, nalezen
+    'c.weld.o1': "Odwracasz wzrok i stajesz za osłoną.", // nieuw, nalezen
+    'c.weld.o2': "Patrzysz przez chwilę: można się czegoś nauczyć.", // nieuw, nalezen
+    'c.weld.o3': "Przymykasz oczy do połowy.", // nieuw, nalezen
+    'c.weld.w': "Światło spawania parzy oczy, także z boku i z daleka. Ból czujesz dopiero później, często w nocy.", // nieuw, nalezen
+    'l.carparts': "Części samochodu", // nieuw, nalezen
+    'w.motor': "silnik", // nieuw, nalezen
+    'w.motorkap': "maska (pokrywa nad silnikiem)", // nieuw, nalezen
+    'w.rem': "hamulec", // nieuw, nalezen
+    'w.lamp': "światło, lampa", // nieuw, nalezen
+    'w.ruitenwisser': "wycieraczka (szyby)", // nieuw, nalezen
+    'w.stoel': "fotel, krzesło", // nieuw, nalezen
+    's.carparts.1': "Otwórz maskę.", // nieuw, nalezen
+    's.carparts.2': "Lewe przednie światło jest zepsute.", // nieuw, nalezen
+    's.carparts.3': "Hamulce hałasują.", // nieuw, nalezen
+    'c.carparts.q': "Co słyszysz?", // nieuw, nalezen
+    'c.carparts.a': "Silnik wydaje dziwny dźwięk.", // nieuw, nalezen
+    'c.carparts': "Samochód należy do klienta", // nieuw, nalezen
+    'c.carparts.b': "Samochód w warsztacie nie jest twój: należy do klienta. Zanim wsiądziesz, załóż pokrowiec na fotel i na kierownicę, a w środku pracuj czystymi rękami. Zostaw fotel, lusterka i radio tak, jak były. Trzeba było przesunąć fotel? Ustaw go z powrotem. Nie dotykaj rzeczy osobistych w samochodzie. Zdarzyła ci się rysa albo plama? Od razu powiedz przełożonemu. Klient, który znajdzie to w domu, już nie wróci.", // nieuw, nalezen
+    'c.carparts.p': { m: "Zrobiłem rysę. Przepraszam.", f: "Zrobiłam rysę. Przepraszam.", x: "To przeze mnie ta rysa. Przepraszam." }, // nieuw, nalezen
+    'c.carparts.s': "Robisz małą rysę na drzwiach samochodu klienta. Nikt tego nie widział. Co robisz?", // nieuw, nalezen
+    'c.carparts.o1': "Od razu mówisz przełożonemu.", // nieuw, nalezen
+    'c.carparts.o2': "Nic nie mówisz: jest bardzo mała.", // nieuw, nalezen
+    'c.carparts.o3': "Wycierasz ją szmatką i masz nadzieję, że zniknie.", // nieuw, nalezen
+    'c.carparts.w': "Każdemu zdarza się czasem błąd. Warsztat może naprawić rysę albo uczciwie powiedzieć o niej klientowi. Ukryta rysa kosztuje warsztat dobre imię.", // nieuw, nalezen
+    'l.carsafe': "Benzyna, gaz i prąd", // nieuw, nalezen
+    'w.krik': "lewarek (podnosi jedną stronę samochodu)", // nieuw, nalezen
+    'w.benzine': "benzyna", // nieuw, nalezen
+    'w.elektrischeauto': "samochód elektryczny", // nieuw, nalezen
+    'w.oranje': "pomarańczowy", // nieuw, nalezen
+    'w.morsen': "rozlać", // nieuw, nalezen
+    'w.lap': "szmata (ścierka do brudnej pracy)", // nieuw, nalezen
+    's.carsafe.1': "Czuję benzynę.", // nieuw, nalezen
+    's.carsafe.2': "Rozlał się olej. Idę po szmatę.", // nieuw, nalezen
+    's.carsafe.3': "Nie dotykam pomarańczowych kabli.", // nieuw, nalezen
+    'c.carsafe.q': "Mogę pracować przy tym samochodzie?", // nieuw, nalezen
+    'c.carsafe.a': "Jeszcze nie. To samochód elektryczny.", // nieuw, nalezen
+    'c.carsafe': "Pomarańczowe kable i pracujące silniki", // nieuw, nalezen
+    'c.carsafe.b': "Samochód elektryczny albo hybrydowy ma akumulator o bardzo wysokim napięciu. Kable do niego są pomarańczowe. Nie dotykaj ich i ich nie odłączaj: najpierw mechanik ze specjalnym przeszkoleniem musi zabezpieczyć samochód. Przy samochodzie stoi tabliczka albo pachołek? Wtedy trzymaj się z daleka. Silnik, który pracuje w zamkniętym pomieszczeniu, wytwarza gaz, którego nie czuć i nie widać, a który może zabić. Dlatego: załóż wąż do odciągu spalin albo otwórz drzwi warsztatu. Czujesz benzynę? Żadnych iskier i żadnego palenia. Od razu powiedz przełożonemu. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.carsafe.p': "Czy ten samochód jest już zabezpieczony?", // nieuw, nalezen
+    'c.carsafe.s': "Musisz wymienić koło w samochodzie elektrycznym. Pod samochodem widzisz luźny pomarańczowy kabel. Co robisz?", // nieuw, nalezen
+    'c.carsafe.o1': "Niczego nie dotykasz i wołasz przeszkolonego mechanika.", // nieuw, nalezen
+    'c.carsafe.o2': "Wpychasz kabel z powrotem ręką.", // nieuw, nalezen
+    'c.carsafe.o3': "Wpychasz go z powrotem suchą szmatką.", // nieuw, nalezen
+    'c.carsafe.w': "Akumulator samochodu elektrycznego ma dość prądu, żeby zabić, także gdy samochód jest wyłączony. Tych części może dotykać tylko osoba po przeszkoleniu.", // nieuw, nalezen
   },
 };
 
