@@ -381,6 +381,23 @@ const t: CultureTranslation = {
     'c.meeting.o2': "Sag nichts, damit du keine Zeit verschwendest.", // nieuw, nalezen
     'c.meeting.o3': "Frag sofort, während sie noch spricht.", // nieuw, nalezen
     'c.meeting.w': "Eine Frage ist ein guter Beitrag: Vielleicht haben andere es auch nicht verstanden. Wenn du wartest, bis du dran bist, können alle sie hören.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking': "Fehlt ein Artikel? Sag es", // nieuw, nalezen
+    'c.picking.b': "Ist das Fach leer, oder ist der Artikel nicht da? Nimm keinen anderen Artikel, der gleich aussieht: Dann bekommt der Kunde das Falsche. Sag es deinem Teamleiter, oder melde es im Scanner. Prüfe die Nummer auf dem Aufkleber, nicht nur die Farbe oder das Bild. Genau arbeiten ist wichtiger als schnell arbeiten.", // nieuw, nalezen
+    'c.picking.p': "Dieser Artikel fehlt. Was soll ich tun?", // nieuw, nalezen
+    'c.picking.s': "Das Fach ist leer. Im Fach daneben liegt ein Artikel, der fast gleich aussieht. Was machst du?", // nieuw, nalezen
+    'c.picking.o1': "Melde, dass der Artikel fehlt.", // nieuw, nalezen
+    'c.picking.o2': "Nimm den anderen Artikel: Er sieht gleich aus.", // nieuw, nalezen
+    'c.picking.o3': "Lass den Artikel aus und sag nichts.", // nieuw, nalezen
+    'c.picking.w': "Ein falscher Artikel kommt zurück, und das kostet mehr Zeit als fragen. Wenn du es meldest, kann jemand das Fach auffüllen oder die Bestellung ändern.", // nieuw, nalezen
+    'c.loading': "Nie hinter einen Lkw, der rückwärts fährt", // nieuw, nalezen
+    'c.loading.b': "Der Fahrer kann hinter dem Lkw nicht alles sehen. Geh nie hinter einem Lkw vorbei, der rückwärts fährt, und stell dich nicht zwischen den Lkw und das Tor. Warte, bis der Lkw steht und der Fahrer dich gesehen hat. Fehlt beim Abladen eine Palette, oder ist eine kaputt? Sag es, bevor der Fahrer wegfährt.", // nieuw, nalezen
+    'c.loading.p': "Warte kurz. Der Lkw fährt rückwärts.", // nieuw, nalezen
+    'c.loading.s': "Ein Lkw fährt rückwärts an das Tor. Du willst schnell hinter ihm vorbeigehen. Was machst du?", // nieuw, nalezen
+    'c.loading.o1': "Warte, bis der Lkw steht.", // nieuw, nalezen
+    'c.loading.o2': "Lauf hinter ihm vorbei: Du bist schnell genug.", // nieuw, nalezen
+    'c.loading.o3': "Geh hinter ihm vorbei und wink dem Fahrer.", // nieuw, nalezen
+    'c.loading.w': "Hinter einem Lkw ist ein Bereich, den der Fahrer nicht sehen kann. Warten kostet eine Minute. Ein Unfall dort ist sehr schlimm.", // nieuw, nalezen
   },
 };
 

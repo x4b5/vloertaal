@@ -706,6 +706,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': 'Dzwoń pod 112!',
     'p.hurt': { m: 'Jestem ranny.', f: 'Jestem ranna.', x: 'Jestem ranny / ranna.' },
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "Zbieranie zamówień", // nieuw, nalezen
+    'w.artikel': "artykuł (jeden produkt)", // nieuw, nalezen
+    'w.vak': "przegródka (jedno miejsce na regale)", // nieuw, nalezen
+    'w.sticker': "naklejka, etykieta", // nieuw, nalezen
+    'w.verzamelen': "zbierać", // nieuw, nalezen
+    'w.ontbreken': "brakować (tego nie ma)", // nieuw, nalezen
+    'w.locatie': "lokalizacja (kod miejsca, na przykład A-12)", // nieuw, nalezen
+    's.picking.1': "Zbieram artykuły do tego zamówienia.", // nieuw, nalezen
+    's.picking.2': "Tego artykułu brakuje. Przegródka jest pusta.", // nieuw, nalezen
+    's.picking.3': "Naklejka musi być na kartonie.", // nieuw, nalezen
+    'c.picking.q': "Która to lokalizacja?", // nieuw, nalezen
+    'c.picking.a': "Alejka trzy, przegródka dwanaście.", // nieuw, nalezen
+    'l.loading': "Załadunek i rozładunek", // nieuw, nalezen
+    'w.vrachtwagen': "ciężarówka", // nieuw, nalezen
+    'w.chauffeur': "kierowca", // nieuw, nalezen
+    'w.lossen': "rozładować (wyjąć rzeczy z ciężarówki)", // nieuw, nalezen
+    'w.pompwagen': "wózek paletowy, paleciak (ręczny wózek, który podnosi paletę)", // nieuw, nalezen
+    'w.folie': "folia (cienki plastik wokół palety)", // nieuw, nalezen
+    'w.vrachtbrief': "list przewozowy (papier, na którym jest napisane, co jest w ciężarówce)", // nieuw, nalezen
+    's.loading.1': "Ciężarówka stoi przy drzwiach numer cztery.", // nieuw, nalezen
+    's.loading.2': "Najpierw rozładowujemy te palety.", // nieuw, nalezen
+    's.loading.3': "Kierowca czeka na list przewozowy.", // nieuw, nalezen
+    'c.loading.q': "Czy ta paleta jest gotowa?", // nieuw, nalezen
+    'c.loading.a': "Nie, trzeba ją jeszcze owinąć folią.", // nieuw, nalezen
   },
 };
 

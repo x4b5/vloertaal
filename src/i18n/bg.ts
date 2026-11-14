@@ -703,6 +703,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': 'Обади се на 112!',
     'p.hurt': { m: 'Ранен съм.', f: 'Ранена съм.', x: 'Имам нараняване.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "Събиране на поръчки", // nieuw, nalezen
+    'w.artikel': "артикулът (един продукт)", // nieuw, nalezen
+    'w.vak': "клетката (едно място на стелажа)", // nieuw, nalezen
+    'w.sticker': "стикерът, етикетът", // nieuw, nalezen
+    'w.verzamelen': "събирам", // nieuw, nalezen
+    'w.ontbreken': "липсва (няма го)", // nieuw, nalezen
+    'w.locatie': "локацията (кодът на мястото, например A-12)", // nieuw, nalezen
+    's.picking.1': "Събирам артикулите за тази поръчка.", // nieuw, nalezen
+    's.picking.2': "Този артикул липсва. Клетката е празна.", // nieuw, nalezen
+    's.picking.3': "Стикерът трябва да е на кашона.", // nieuw, nalezen
+    'c.picking.q': "Коя е локацията?", // nieuw, nalezen
+    'c.picking.a': "Пътека три, клетка дванайсет.", // nieuw, nalezen
+    'l.loading': "Товарене и разтоварване", // nieuw, nalezen
+    'w.vrachtwagen': "камионът", // nieuw, nalezen
+    'w.chauffeur': "шофьорът", // nieuw, nalezen
+    'w.lossen': "разтоварвам (вадя нещата от камиона)", // nieuw, nalezen
+    'w.pompwagen': "палетната количка (ръчна количка, която вдига палет)", // nieuw, nalezen
+    'w.folie': "фолиото (тънка пластмаса около палет)", // nieuw, nalezen
+    'w.vrachtbrief': "товарителницата (листът, на който пише какво има в камиона)", // nieuw, nalezen
+    's.loading.1': "Камионът е на врата четири.", // nieuw, nalezen
+    's.loading.2': "Първо разтоварваме тези палети.", // nieuw, nalezen
+    's.loading.3': "Шофьорът чака товарителницата.", // nieuw, nalezen
+    'c.loading.q': "Готов ли е този палет?", // nieuw, nalezen
+    'c.loading.a': "Не, трябва още да се увие с фолио.", // nieuw, nalezen
   },
 };
 

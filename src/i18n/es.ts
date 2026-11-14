@@ -706,6 +706,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': '¡Llama al 112!',
     'p.hurt': { m: 'Estoy herido.', f: 'Estoy herida.', x: 'Estoy herido/a.' },
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "Preparar pedidos", // nieuw, nalezen
+    'w.artikel': "el artículo (un producto)", // nieuw, nalezen
+    'w.vak': "el hueco (un sitio en la estantería)", // nieuw, nalezen
+    'w.sticker': "la pegatina, la etiqueta", // nieuw, nalezen
+    'w.verzamelen': "recoger, reunir", // nieuw, nalezen
+    'w.ontbreken': "faltar (no está)", // nieuw, nalezen
+    'w.locatie': "la ubicación (el código del sitio, como A-12)", // nieuw, nalezen
+    's.picking.1': "Recojo los artículos de este pedido.", // nieuw, nalezen
+    's.picking.2': "Falta este artículo. El hueco está vacío.", // nieuw, nalezen
+    's.picking.3': "La pegatina tiene que ir en la caja.", // nieuw, nalezen
+    'c.picking.q': "¿Qué ubicación es?", // nieuw, nalezen
+    'c.picking.a': "Pasillo tres, hueco doce.", // nieuw, nalezen
+    'l.loading': "Cargar y descargar", // nieuw, nalezen
+    'w.vrachtwagen': "el camión", // nieuw, nalezen
+    'w.chauffeur': "el conductor", // nieuw, nalezen
+    'w.lossen': "descargar (sacar las cosas del camión)", // nieuw, nalezen
+    'w.pompwagen': "la transpaleta (un carro de mano que levanta un palé)", // nieuw, nalezen
+    'w.folie': "el film (plástico fino alrededor de un palé)", // nieuw, nalezen
+    'w.vrachtbrief': "el albarán (el papel que dice qué hay en el camión)", // nieuw, nalezen
+    's.loading.1': "El camión está en la puerta cuatro.", // nieuw, nalezen
+    's.loading.2': "Primero descargamos estos palés.", // nieuw, nalezen
+    's.loading.3': "El conductor espera el albarán.", // nieuw, nalezen
+    'c.loading.q': "¿Este palé está listo?", // nieuw, nalezen
+    'c.loading.a': "No, todavía hay que ponerle film.", // nieuw, nalezen
   },
 };
 

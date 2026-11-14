@@ -336,6 +336,56 @@ export const units: Unit[] = [
           },
         ],
       },
+      // "Collecting orders" and "Loading and unloading" (l.picking, l.loading, 14 November 2026, the
+      // owner's request: the two units of Logistiek grow to four lessons as well). Already words of
+      // other lessons, used here in a sentence or the chat only: "de bestelling" (l.service), "de
+      // doos" and "de pallet" (l.things), "leeg" and "de deur".
+      {
+        id: 'l.picking',
+        title: 'Collecting orders',
+        words: [
+          { id: 'w.artikel', nl: 'het artikel', en: 'the item (one product)', emoji: '🏷️' },
+          { id: 'w.vak', nl: 'het vak', en: 'the slot (one place in the rack)', emoji: '🔲' },
+          { id: 'w.sticker', nl: 'de sticker', en: 'the sticker, the label', emoji: '🔖' },
+          { id: 'w.verzamelen', nl: 'verzamelen', en: 'to collect, to pick', emoji: '🧺' },
+          { id: 'w.ontbreken', nl: 'ontbreken', en: 'to be missing (it is not there)', emoji: '❓' },
+          { id: 'w.locatie', nl: 'de locatie', en: 'the location (the code of the place, like A-12)', emoji: '📍' },
+        ],
+        sentences: [
+          { id: 's.picking.1', nl: 'Ik verzamel de artikelen voor deze bestelling.', en: 'I am collecting the items for this order.' },
+          { id: 's.picking.2', nl: 'Dit artikel ontbreekt. Het vak is leeg.', en: 'This item is missing. The slot is empty.' },
+          { id: 's.picking.3', nl: 'De sticker moet op de doos.', en: 'The sticker must go on the box.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.picking.q', nl: 'Welke locatie is het?', en: 'Which location is it?' },
+            reply: { id: 'c.picking.a', nl: 'Gang drie, vak twaalf.', en: 'Aisle three, slot twelve.' },
+          },
+        ],
+      },
+      {
+        id: 'l.loading',
+        title: 'Loading and unloading',
+        words: [
+          { id: 'w.vrachtwagen', nl: 'de vrachtwagen', en: 'the truck, the lorry', emoji: '🚛' },
+          { id: 'w.chauffeur', nl: 'de chauffeur', en: 'the driver', emoji: '🧑‍✈️' },
+          { id: 'w.lossen', nl: 'lossen', en: 'to unload (take things out of the truck)', emoji: '📤' },
+          { id: 'w.pompwagen', nl: 'de pompwagen', en: 'the pallet truck (a hand cart that lifts a pallet)', emoji: '🛒' },
+          { id: 'w.folie', nl: 'de folie', en: 'the wrap (thin plastic around a pallet)', emoji: '🎞️' },
+          { id: 'w.vrachtbrief', nl: 'de vrachtbrief', en: 'the waybill (the paper that says what is in the truck)', emoji: '📄' },
+        ],
+        sentences: [
+          { id: 's.loading.1', nl: 'De vrachtwagen staat bij deur vier.', en: 'The truck is at door four.' },
+          { id: 's.loading.2', nl: 'We lossen eerst deze pallets.', en: 'We unload these pallets first.' },
+          { id: 's.loading.3', nl: 'De chauffeur wacht op de vrachtbrief.', en: 'The driver is waiting for the waybill.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.loading.q', nl: 'Is deze pallet klaar?', en: 'Is this pallet ready?' },
+            reply: { id: 'c.loading.a', nl: 'Nee, er moet nog folie om.', en: 'No, it still needs wrap around it.' },
+          },
+        ],
+      },
     ],
   },
   // Numbers and details (your name spelled, phone number, days and dates): right before "Time and

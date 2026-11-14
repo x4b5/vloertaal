@@ -151,6 +151,11 @@ const t: CultureTranslation = {
     'd.getfeedback.a.why': "Faallo (feedback) ayaa laguu soo bandhigay: haa, iyo inaad rabto inaad si fiican u samayso.", // nieuw, nalezen
     'd.givefeedback.a.why': "Waxaa la weydiiyay shaqada: marka hore waxa fiican, kadib waxa ka sii fiicnaan kara.", // nieuw, nalezen
     'd.meeting.a.why': "Waxaa la weydiiyay su'aalo: jawaabtani mid bay weydiinaysaa, oo ku saabsan jadwalka.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "Waxaa la weydiiyay goobta: marinka iyo booska.", // nieuw, nalezen
+    'c.loading.a.why': "Waxaa la weydiiyay in baaleetku diyaar yahay: maya, iyo waxa uu weli u baahan yahay.", // nieuw, nalezen
+    'c.vancheck.a.why': "Waxaa la weydiiyay in baabuurku fiican yahay: maya, iyo waxa jaban.", // nieuw, nalezen
+    'c.delay.a.why': "Waxaa la weydiiyay meesha aad joogto: meesha, iyo inta aad daahayso.", // nieuw, nalezen
   },
 };
 export default t;

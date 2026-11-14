@@ -49,14 +49,18 @@ import { gzipSync } from 'node:zlib';
  * 14 help languages, 95 word pictures and 17 × 15 tip pages, at 302.5 / 422.6 / 3797.0 / 4745.7 kB.
  * The lessons and tips are in the start file, so it grew with them (+2.5%). The next step is still
  * the one named above: load the long tip texts only when a tip opens, instead of raising again.
+ * tip pages 4800 → 5000 (14 November 2026, the owner's choice): Logistiek at four lessons per unit,
+ * 4 new tips = 60 pages, at 304.1 / 424.1 / 3836.4 / 4899.5 kB. Only the tip pages limit moved: they
+ * are separate web pages, not part of what a learner's phone loads. The three other limits are
+ * nearly reached, so no more lessons before the tip texts load on demand.
  */
 export const LIMITS = {
   'start file': 305,
   start: 425,
   dist: 3850,
   // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
-  // 14 November 2026: 93 tips in 15 languages at 4746 kB.
-  'tip pages': 4800,
+  // 14 November 2026: 93 tips in 15 languages at 4746 kB; later that day 97 tips at 4900 kB.
+  'tip pages': 5000,
 };
 
 /** A page of the workplace tips (/pl/tip/, /pl/tip/<tip>/): counted on its own, see above. */

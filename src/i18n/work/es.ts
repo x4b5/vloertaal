@@ -2164,6 +2164,47 @@ const t: CultureTranslation = {
     'c.carsafe.o2': "Empujas el cable a su sitio con la mano.", // nieuw, nalezen
     'c.carsafe.o3': "Lo empujas a su sitio con un paño seco.", // nieuw, nalezen
     'c.carsafe.w': "La batería de un coche eléctrico tiene corriente suficiente para matar, también con el coche apagado. Solo alguien con la formación puede tocar estas piezas.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.vancheck': "Revisar la furgoneta", // nieuw, nalezen
+    'w.schade': "el daño", // nieuw, nalezen
+    'w.deuk': "la abolladura", // nieuw, nalezen
+    'w.spiegel': "el espejo", // nieuw, nalezen
+    'w.tanken': "repostar (echar combustible a la furgoneta)", // nieuw, nalezen
+    'w.opladen': "cargar (una furgoneta eléctrica, un móvil)", // nieuw, nalezen
+    'w.parkeren': "aparcar", // nieuw, nalezen
+    's.vancheck.1': "Hay una abolladura en la puerta.", // nieuw, nalezen
+    's.vancheck.2': "Este daño ya estaba.", // nieuw, nalezen
+    's.vancheck.3': "Primero todavía tengo que repostar.", // nieuw, nalezen
+    'c.vancheck.q': "¿Está todo bien con la furgoneta de reparto?", // nieuw, nalezen
+    'c.vancheck.a': "No, el espejo está roto.", // nieuw, nalezen
+    'c.vancheck': "Mira antes de conducir", // nieuw, nalezen
+    'c.vancheck.b': "Da una vuelta a la furgoneta antes de tu primer reparto. ¿Ves una abolladura, un arañazo o un espejo roto? Haz una foto, y avísalo antes de salir. Así todos saben que el daño ya estaba. ¿Ha pasado algo durante tu reparto? Avísalo el mismo día, también cuando es pequeño. Esconder un daño trae problemas más grandes después. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.vancheck.p': "La furgoneta de reparto tiene un daño. Aquí tiene una foto.", // nieuw, nalezen
+    'c.vancheck.s': "Por la mañana ves una abolladura nueva en la furgoneta. No la has hecho tú. ¿Qué haces?", // nieuw, nalezen
+    'c.vancheck.o1': "Haces una foto, y lo avisas antes de conducir.", // nieuw, nalezen
+    'c.vancheck.o2': "No dices nada: la abolladura no es tuya.", // nieuw, nalezen
+    'c.vancheck.o3': "Esperas a ver si alguien pregunta por ella.", // nieuw, nalezen
+    'c.vancheck.w': "Si lo avisas antes de conducir, nadie puede pensar que lo has hecho tú. Una foto con la hora está clara para todos.", // nieuw, nalezen
+    'l.delay': "Retrasos en la carretera", // nieuw, nalezen
+    'w.file': "el atasco", // nieuw, nalezen
+    'w.vertraging': "el retraso (llegas más tarde de lo previsto)", // nieuw, nalezen
+    'w.omleiding': "el desvío (otro camino, porque la carretera está cortada)", // nieuw, nalezen
+    'w.navigatie': "el navegador (la app que muestra el camino)", // nieuw, nalezen
+    'w.planner': "el planificador (la persona que hace las rutas)", // nieuw, nalezen
+    'w.retour': "la devolución (un paquete que vuelve)", // nieuw, nalezen
+    's.delay.1': "Estoy en un atasco.", // nieuw, nalezen
+    's.delay.2': "Tengo media hora de retraso.", // nieuw, nalezen
+    's.delay.3': "Este paquete vuelve.", // nieuw, nalezen
+    'c.delay.q': "¿Dónde estás ahora?", // nieuw, nalezen
+    'c.delay.a': "En el desvío. Llego diez minutos más tarde.", // nieuw, nalezen
+    'c.delay': "¿Llegas tarde? Dilo a tiempo", // nieuw, nalezen
+    'c.delay.b': "Un atasco o una carretera cortada no es culpa tuya. Pero díselo al planificador en cuanto sepas que vas a llegar tarde. Así el planificador puede avisar a los clientes, o cambiar la ruta. Primero para en un sitio seguro: no llames con el móvil en la mano mientras conduces. Y no conduzcas más rápido para recuperar el tiempo. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.delay.p': "Estoy en un atasco. Llego media hora más tarde.", // nieuw, nalezen
+    'c.delay.s': "Una carretera está cortada. El desvío te cuesta treinta minutos. ¿Qué haces?", // nieuw, nalezen
+    'c.delay.o1': "Se lo dices al planificador en cuanto puedes parar de forma segura.", // nieuw, nalezen
+    'c.delay.o2': "Conduces más rápido para recuperar el tiempo.", // nieuw, nalezen
+    'c.delay.o3': "No dices nada: quizá nadie lo nota.", // nieuw, nalezen
+    'c.delay.w': "Si el planificador lo sabe pronto, los clientes se enteran y nadie espera para nada. Conducir más rápido es peligroso, y casi no se gana tiempo.", // nieuw, nalezen
   },
 };
 

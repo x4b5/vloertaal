@@ -20,6 +20,7 @@ export const UPDATES: Update[] = [
     date: '2026-11-14',
     items: [
       'Elke sector heeft nu vier lessen in Taal: er zijn 17 lessen bij. Bouw: meten, en een opgeruimde bouwplaats. Productie: je dienst overdragen. Zorg: zeggen wat je ziet, en iemand helpen opstaan. Horeca: de afwas, en korte woorden als het druk is. Schoonmaak: je ronde, en kleuren en doeken. Winkel: een klant helpen, en lastige momenten. Tuinbouw: de plant verzorgen, en buiten werken. Techniek: de tekening en de maat, en lassen. Garage: onderdelen van de auto, en veilig met benzine en elektrische auto’s.',
+      'Ook Logistiek heeft nu vier lessen per onderwerp. In het magazijn: bestellingen verzamelen, en laden en lossen. Vervoer en bezorging: de bus nakijken, en vertraging onderweg.',
       'Bij elke nieuwe les hoort een tip van "Zo werkt het hier", in alle hulptalen. De vertalingen zijn nog niet nagekeken door een moedertaalspreker. De stemmen volgen: tot dan leest de stem van je telefoon de nieuwe zinnen voor.',
     ],
   },

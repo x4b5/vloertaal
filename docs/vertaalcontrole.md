@@ -1604,3 +1604,57 @@ Per taal, wat de vertaler zelf het minst zeker vond:
 - **ti**: `w.plank` «ሰሌዳ» (het bestand gebruikt «ጣውላ» al voor tafel en plank); `w.meten` «ምዕቃን» (elders «ልክዕ/መለክዒ»); Italiaanse leenwoorden uit de werkplaats: `w.waterpas` «ሊቨሎ», `w.schroef` «ቪተ», `w.bout` «ቡሎን», `w.motorkap` «ኮፋኖ», `w.rem` «ፍሬኖ», `w.krik` «ክሪክ»; `w.tillift` zelf gevormd; `w.keet` «ኬት» en `w.container` «ኮንተይነር» getranslitereerd; `w.oranje` «ኣራንሾኒ» (of «ብርቱኳናዊ»); `w.glas` «ብርጭቆ» (of «ብኬሪ»); `w.duizelig` en `w.misselijk` omschreven; paprika, komkommer, voetbad, zonnebrand, lasscherm, afzuiging: eigen omschrijvingen; de vrouwelijke en meervoudsvormen in de gebiedende wijs zijn uit een sjabloon opgebouwd: steekproef door een moedertaalspreker nodig.
 - **tr**: `c.measure.b` "dokuz yüz" en de voorbeeldvraag zijn vertaald (stonden Engels in de bron); `w.tillift` "kaldırma lifti" (ook "hasta lifti"); `w.uitvoerder` "şantiye şefi (şantiyedeki amir)"; `w.aflossen` en `w.overdracht` misschien te formeel; `w.afzuiging` "duman emme sistemi" (of "aspiratör"); `c.plantcare.b` "ayak dezenfektan havuzu"; `c.rush.b` "an order" als opdracht; `w.heet` "sıcak, kızgın" ("kızgın" is ook "boos"); `w.latedienst` "akşam vardiyası"; `c.weld.b` "paravan"; `c.carparts.b` "tamirhane".
 - **uk**: `w.verdieping` en `s.rounds.1`: "de tweede verdieping" is "третього поверху" (Oekraïners tellen de begane grond als eerste; uitleg staat bij het woord): klopt dat, en is het niet verwarrend?; `w.uitvoerder` "виконроб, прораб"; `w.doek` "серветка, ганчірка" tegenover `w.lap` "ганчірка"; `w.bedrijfsleider` "керівник магазину"; in de winkel "покупець", elders "клієнт"; duizelig, misselijk, benauwd en verward omschreven met werkwoorden; `c.rush.w` vrij vertaald; `c.carsafe.b` "дуже сильним струмом"; `w.tillift` "підйомник"; `c.shoptrouble` titel en "Тебе — ні." (toon).
+
+## Logistiek: vier lessen per onderwerp (14 november 2026)
+
+Op verzoek van de eigenaar: ook de twee onderwerpen van Logistiek hebben nu vier lessen. Alles met
+AI vertaald en nog niet door een moedertaalspreker gecontroleerd. De nieuwe lessen:
+
+| Onderwerp | Nieuwe lessen |
+|---|---|
+| `u.warehouse` | `l.picking` (Bestellingen verzamelen), `l.loading` (Laden en lossen) |
+| `u.delivery` | `l.vancheck` (De bus nakijken), `l.delay` (Vertraging onderweg) |
+
+Nieuwe ids, per les hetzelfde patroon (84 sleutels per taal, allemaal gemarkeerd met "nieuw,
+nalezen"):
+
+- `l.picking` en `l.loading`: les, woorden, zinnen en gesprekje in `src/i18n/<taal>.ts`; de tip
+  (`c.<les>` met `.b`, `.p`, `.s`, `.o1`–`.o3`, `.w`) in `src/i18n/culture/<taal>.ts` (Engelse bron
+  in `culture/en.json`).
+- `l.vancheck` en `l.delay`: alles in `src/i18n/work/<taal>.ts` (Engelse bron in `work/en.json`).
+- Uitleg bij het gesprekje (`src/i18n/learn/<taal>.ts`): `c.<les>.a.why` (4 per taal).
+
+Voor alle talen:
+
+- **Het vak en de locatie** (`w.vak`, `w.locatie`): in bijna elke taal was er geen vast woord voor
+  één plek in de stelling. Blijven de twee woorden goed uit elkaar?
+- **Vakwoorden uit het magazijn**: de pompwagen, de folie, de vrachtbrief. Vaak is het gewone woord
+  gekozen, niet de vakterm.
+- **De planner** (`w.planner`, `c.delay.*`): een persoon, geen programma. In veel talen alleen de
+  mannelijke vorm.
+- **De deuk** (`w.deuk`): in meerdere talen onzeker of boekachtig.
+- **De antwoorden bij de tips**: in sommige talen (de, fr, fa) staan `c.picking.o*` en
+  `c.loading.o*` in de gebiedende wijs en `c.vancheck.o*` en `c.delay.o*` in de jij-vorm. Dat volgt
+  het bestand waar de tip in staat, maar het verschilt dus binnen één sector.
+- **De juridische kant**: geen van de vier tips noemt een recht of een bedrag, en `c.vancheck` zegt
+  bewust niet wie schade betaalt. "Niet bellen met de telefoon in je hand" in `c.delay.b` is
+  dezelfde regel als in `c.road` (daar nagekeken).
+- **België**: zie `src/content/taalBe/inventory.ts` (de transpallet, de camion, de bestelwagen, de
+  bluts, de wegomlegging, de gps): nakijken door een Vlaamse NT2-docent.
+
+Per taal, wat de vertaler zelf het minst zeker vond:
+
+- **ar**: `w.deuk` «الانبعاج» (formeel) met «الطعجة» (dialect); `w.artikel` «السلعة» en `w.vak` «الخانة» (nieuw naast «المنتج» en «رف التخزين»); `w.folie` «غلاف البلاستيك», `w.vrachtbrief` «ورقة الشحن», `w.pompwagen` «عربة البالِت»; `w.planner` «المخطِّط» (het minst zeker), `w.omleiding` «التحويلة», `w.retour` «المرتجع»; de antwoorden `c.*.o1`–`o3` staan als zelfstandige werkwoordsvorm, niet in man- en vrouwvorm.
+- **bg**: `w.vak` "клетката"; `w.ontbreken` "липсва (няма го)" staat in de derde persoon (de andere werkwoorden in de eerste); `w.planner` "диспечерът"; `w.omleiding` "обходният път"; de x-vormen van `c.vancheck.s` en `.w`.
+- **de**: `w.locatie` "der Lagerplatz"; `w.planner` "der Planer / die Planerin" (in de logistiek gewoner: "Disponent"); `c.loading.a` "Nein, da muss noch Folie drum." (spreektaal); `l.picking` "Bestellungen zusammenstellen" ("kommissionieren" bewust vermeden).
+- **es**: `w.vak` "el hueco"; `w.vrachtbrief` "el albarán" (formeel: "la carta de porte"); `w.pompwagen` "la transpaleta", `w.folie` "el film"; `w.planner` "el planificador" (alleen mannelijk); `s.delay.3` "Este paquete vuelve." gebruikt het woord "la devolución" niet.
+- **fa**: `w.vak` «خانهٔ قفسه» («خانه» is ook "huis"); `w.deuk` «فرورفتگی» (boekachtig); `w.folie` «سلفون», `w.pompwagen` «جک پالت»; `w.retour` «مرجوعی», `w.omleiding` «مسیر انحرافی».
+- **fr**: `w.vak` "la case"; `w.vrachtbrief` "la lettre de voiture" (formeel; eenvoudiger: "le bon de livraison"); `w.spiegel` "le rétroviseur, le miroir"; `s.delay.3` "Ce colis repart en retour."; `w.planner` "le planificateur" (alleen mannelijk).
+- **pl**: `w.vak` "przegródka" (of "miejsce", "półka"); `w.planner` "planista" (of "dyspozytor"); "drzwi" voor de laaddeur (`s.loading.1`, `c.loading.b`, `.s`; in een magazijn vaak "brama" of "rampa"); "zepsute lusterko" (`c.vancheck.a`, `.b`); `s.delay.3` "Ta paczka idzie do zwrotu."
+- **prs**: `w.file` «راه‌بندی، بیروبار ترافیک»; `w.vrachtwagen` «لاری» en `w.chauffeur` «دریور»; `w.deuk` «فرورفتگی»; `c.picking.a` «راهروی سه» terwijl `w.gang` «دهلیز» is; `w.folie` «پلاستیک پیچ», `w.planner` «پلان‌گذار», `w.omleiding` «راه بدیل», `w.tanken` «تیل انداختن» (zelf gekozen).
+- **pt** (Europees Portugees, tu-vorm): `w.vak` "o lugar (um espaço na estante)"; "scanner" in `c.picking.b` naast "o leitor (scanner)" bij `w.scanner`; `w.file` "o engarrafamento"; `w.pompwagen` "o porta-paletes", `w.folie` "a película", `w.vrachtbrief` "a guia de transporte", `w.deuk` "a amolgadela"; `w.planner` "o planeador".
+- **ro**: `c.picking.a` "culoarul" voor het gangpad (`w.gang` is "holul, coridorul"); `w.schade` "dauna" en `w.deuk` "îndoitura"; `w.vak` "locul" naast `w.locatie` "locația"; `s.delay.3` "Coletul ăsta merge retur." (koerierstaal); `w.vrachtbrief` "scrisoarea de transport", `w.pompwagen` "transpaletul".
+- **so**: `w.deuk` "godanka" en "xagtin" (kras) in `c.vancheck.b` (het minst zeker); `w.opladen` "dab gelin"; `w.vak` "booska" naast `w.stelling`; `w.file` "saxmadda baabuurta", `w.omleiding` "jid-leexinta", `w.folie` "balaastigga duubista", `w.vrachtbrief` "warqadda xamuulka" (zelf gevormd); de doos is "kartoonka" (elders ook "sanduuq"), de scanner "iskaanarka" (elders ook "iskaanerka").
+- **ti** (het minst zeker van alle talen): `w.deuk` «ጎድጓድ (ብማህረምቲ ዝኣተወ)» is een omschrijving; `w.vak` «ክፍሊ», `w.locatie` «ቦታ», `w.artikel` «ኣቕሓ»; de bestelbus en de vrachtwagen zijn vrouwelijk («እታ ቫን»); `w.file` «ምጭንናቕ ትራፊክ», `w.omleiding` «መተካእታ መገዲ», `w.retour` «ተመላሲ», `w.lossen` «ምርጋፍ», `w.folie` «ፕላስቲክ መጠቕለሊ», `w.parkeren` «ፓርክ ምግባር»; de werkwoordsvormen in `c.delay.a`, `.p`, `c.loading.o2`, `.o3` en `c.vancheck.s`, `.w`.
+- **tr**: `w.omleiding` "alternatif güzergâh"; `w.vak` "göz"; `w.locatie` "konum" (in een magazijn vaak "lokasyon" of "adres"); `w.lossen` "indirmek, boşaltmak"; `w.vrachtbrief` "irsaliye", `w.pompwagen` "transpalet".
+- **uk**: `w.vak` "комірка"; `w.planner` "диспетчер"; `w.pompwagen` "рокла" (spreektaal); de teamleider is "керівник команди" (in `c.explain` "бригадир"); `c.picking.a` "Ряд три, комірка дванадцять."

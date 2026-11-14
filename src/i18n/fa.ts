@@ -703,6 +703,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': 'با 112 تماس بگیر!',
     'p.hurt': 'من زخمی شده‌ام.',
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "جمع کردن سفارش‌ها", // nieuw, nalezen
+    'w.artikel': "کالا (یک محصول)", // nieuw, nalezen
+    'w.vak': "خانهٔ قفسه (یک جا در قفسه)", // nieuw, nalezen
+    'w.sticker': "استیکر، برچسب", // nieuw, nalezen
+    'w.verzamelen': "جمع کردن، برداشتن", // nieuw, nalezen
+    'w.ontbreken': "نبودن، کم بودن (آنجا نیست)", // nieuw, nalezen
+    'w.locatie': "محل (کد جا، مثل A-12)", // nieuw, nalezen
+    's.picking.1': "کالاهای این سفارش را جمع می‌کنم.", // nieuw, nalezen
+    's.picking.2': "این کالا نیست. خانهٔ قفسه خالی است.", // nieuw, nalezen
+    's.picking.3': "برچسب باید روی جعبه باشد.", // nieuw, nalezen
+    'c.picking.q': "کدام محل است؟", // nieuw, nalezen
+    'c.picking.a': "راهروی سه، خانهٔ دوازده.", // nieuw, nalezen
+    'l.loading': "بار زدن و خالی کردن بار", // nieuw, nalezen
+    'w.vrachtwagen': "کامیون", // nieuw, nalezen
+    'w.chauffeur': "راننده", // nieuw, nalezen
+    'w.lossen': "خالی کردن بار (چیزها را از کامیون بیرون آوردن)", // nieuw, nalezen
+    'w.pompwagen': "جک پالت (چرخ دستی‌ای که پالت را بلند می‌کند)", // nieuw, nalezen
+    'w.folie': "سلفون (پلاستیک نازک دور پالت)", // nieuw, nalezen
+    'w.vrachtbrief': "بارنامه (کاغذی که می‌گوید داخل کامیون چیست)", // nieuw, nalezen
+    's.loading.1': "کامیون کنار درِ چهار است.", // nieuw, nalezen
+    's.loading.2': "اول این پالت‌ها را خالی می‌کنیم.", // nieuw, nalezen
+    's.loading.3': "راننده منتظر بارنامه است.", // nieuw, nalezen
+    'c.loading.q': "این پالت آماده است؟", // nieuw, nalezen
+    'c.loading.a': "نه، هنوز باید دورش سلفون پیچیده شود.", // nieuw, nalezen
   },
 };
 

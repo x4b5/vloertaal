@@ -2165,6 +2165,47 @@ const t: CultureTranslation = {
     'c.carsafe.o2': "Kabloyu elinle geri itersin.", // nieuw, nalezen
     'c.carsafe.o3': "Kuru bir bezle geri itersin.", // nieuw, nalezen
     'c.carsafe.w': "Elektrikli bir arabanın bataryasında, araba kapalıyken bile öldürecek kadar elektrik vardır. Bu parçalara sadece eğitimi olan kişi dokunabilir.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.vancheck': "Kamyoneti kontrol etmek", // nieuw, nalezen
+    'w.schade': "hasar", // nieuw, nalezen
+    'w.deuk': "göçük", // nieuw, nalezen
+    'w.spiegel': "ayna", // nieuw, nalezen
+    'w.tanken': "yakıt almak (kamyonete yakıt koymak)", // nieuw, nalezen
+    'w.opladen': "şarj etmek (elektrikli bir kamyonet, bir telefon)", // nieuw, nalezen
+    'w.parkeren': "park etmek", // nieuw, nalezen
+    's.vancheck.1': "Kapıda bir göçük var.", // nieuw, nalezen
+    's.vancheck.2': "Bu hasar zaten vardı.", // nieuw, nalezen
+    's.vancheck.3': "Önce daha yakıt almam gerekiyor.", // nieuw, nalezen
+    'c.vancheck.q': "Kamyonette her şey yolunda mı?", // nieuw, nalezen
+    'c.vancheck.a': "Hayır, ayna kırık.", // nieuw, nalezen
+    'c.vancheck': "Sürmeden önce bak", // nieuw, nalezen
+    'c.vancheck.b': "İlk seferinden önce kamyonetin etrafında bir tur at. Bir göçük, bir çizik ya da kırık bir ayna mı görüyorsun? Bir fotoğraf çek ve yola çıkmadan önce bildir. Böylece herkes hasarın zaten orada olduğunu bilir. Seferin sırasında bir şey mi oldu? Küçük olsa bile aynı gün bildir. Hasarı saklamak sonra daha büyük sorunlar çıkarır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.vancheck.p': "Kamyonette hasar var. İşte bir fotoğraf.", // nieuw, nalezen
+    'c.vancheck.s': "Sabah kamyonette yeni bir göçük görüyorsun. Onu sen yapmadın. Ne yaparsın?", // nieuw, nalezen
+    'c.vancheck.o1': "Bir fotoğraf çeker ve sürmeden önce bildirirsin.", // nieuw, nalezen
+    'c.vancheck.o2': "Hiçbir şey söylemezsin: bu senin göçüğün değil.", // nieuw, nalezen
+    'c.vancheck.o3': "Bekler ve birinin sorup sormayacağına bakarsın.", // nieuw, nalezen
+    'c.vancheck.w': "Sürmeden önce bildirirsen, kimse bunu senin yaptığını düşünemez. Saati olan bir fotoğraf herkes için açıktır.", // nieuw, nalezen
+    'l.delay': "Yolda gecikmeler", // nieuw, nalezen
+    'w.file': "trafik sıkışıklığı", // nieuw, nalezen
+    'w.vertraging': "gecikme (planlanandan daha geç kalırsın)", // nieuw, nalezen
+    'w.omleiding': "alternatif güzergâh (yol kapalı olduğu için başka bir yol)", // nieuw, nalezen
+    'w.navigatie': "navigasyon (yolu gösteren uygulama)", // nieuw, nalezen
+    'w.planner': "planlamacı (güzergâhları yapan kişi)", // nieuw, nalezen
+    'w.retour': "iade (geri giden bir paket)", // nieuw, nalezen
+    's.delay.1': "Trafik sıkışıklığındayım.", // nieuw, nalezen
+    's.delay.2': "Yarım saat gecikmem var.", // nieuw, nalezen
+    's.delay.3': "Bu paket iade olarak geri gidiyor.", // nieuw, nalezen
+    'c.delay.q': "Şimdi neredesin?", // nieuw, nalezen
+    'c.delay.a': "Alternatif güzergâhtayım. On dakika geç kalacağım.", // nieuw, nalezen
+    'c.delay': "Geç mi kalıyorsun? Zamanında söyle", // nieuw, nalezen
+    'c.delay.b': "Trafik sıkışıklığı ya da kapalı bir yol senin suçun değil. Ama geç kalacağını öğrenir öğrenmez planlamacıya söyle. O zaman planlamacı müşterilere haber verebilir ya da güzergâhı değiştirebilir. Önce güvenli bir yerde dur: araç sürerken telefon elindeyken arama yapma. Ve zamanı geri kazanmak için daha hızlı sürme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.delay.p': "Trafik sıkışıklığındayım. Yarım saat geç kalacağım.", // nieuw, nalezen
+    'c.delay.s': "Bir yol kapalı. Alternatif güzergâh sana otuz dakika kaybettiriyor. Ne yaparsın?", // nieuw, nalezen
+    'c.delay.o1': "Güvenli şekilde durabildiğin anda planlamacıya söylersin.", // nieuw, nalezen
+    'c.delay.o2': "Zamanı geri kazanmak için daha hızlı sürersin.", // nieuw, nalezen
+    'c.delay.o3': "Hiçbir şey söylemezsin: belki kimse fark etmez.", // nieuw, nalezen
+    'c.delay.w': "Planlamacı bunu erken öğrenirse, müşteriler haber alır ve kimse boşuna beklemez. Daha hızlı sürmek tehlikelidir ve neredeyse hiç zaman kazandırmaz.", // nieuw, nalezen
   },
 };
 

@@ -706,6 +706,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': 'Liga para o 112!',
     'p.hurt': { m: 'Estou ferido.', f: 'Estou ferida.', x: 'Magoei-me.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "Preparar pedidos", // nieuw, nalezen
+    'w.artikel': "o artigo (um produto)", // nieuw, nalezen
+    'w.vak': "o lugar (um espaço na estante)", // nieuw, nalezen
+    'w.sticker': "o autocolante, a etiqueta", // nieuw, nalezen
+    'w.verzamelen': "juntar, recolher", // nieuw, nalezen
+    'w.ontbreken': "faltar (não está lá)", // nieuw, nalezen
+    'w.locatie': "a localização (o código do sítio, como A-12)", // nieuw, nalezen
+    's.picking.1': "Estou a juntar os artigos deste pedido.", // nieuw, nalezen
+    's.picking.2': "Este artigo falta. O lugar está vazio.", // nieuw, nalezen
+    's.picking.3': "O autocolante tem de ir na caixa.", // nieuw, nalezen
+    'c.picking.q': "Qual é a localização?", // nieuw, nalezen
+    'c.picking.a': "Corredor três, lugar doze.", // nieuw, nalezen
+    'l.loading': "Carregar e descarregar", // nieuw, nalezen
+    'w.vrachtwagen': "o camião", // nieuw, nalezen
+    'w.chauffeur': "o motorista", // nieuw, nalezen
+    'w.lossen': "descarregar (tirar as coisas do camião)", // nieuw, nalezen
+    'w.pompwagen': "o porta-paletes (um carrinho de mão que levanta uma palete)", // nieuw, nalezen
+    'w.folie': "a película (plástico fino à volta de uma palete)", // nieuw, nalezen
+    'w.vrachtbrief': "a guia de transporte (o papel que diz o que está no camião)", // nieuw, nalezen
+    's.loading.1': "O camião está na porta quatro.", // nieuw, nalezen
+    's.loading.2': "Descarregamos primeiro estas paletes.", // nieuw, nalezen
+    's.loading.3': "O motorista está à espera da guia de transporte.", // nieuw, nalezen
+    'c.loading.q': "Esta palete está pronta?", // nieuw, nalezen
+    'c.loading.a': "Não, ainda falta pôr a película à volta.", // nieuw, nalezen
   },
 };
 

@@ -2164,6 +2164,47 @@ const t: CultureTranslation = {
     'c.carsafe.o2': "Tu repousses le câble avec la main.", // nieuw, nalezen
     'c.carsafe.o3': "Tu le repousses avec un chiffon sec.", // nieuw, nalezen
     'c.carsafe.w': "La batterie d’une voiture électrique a assez de courant pour tuer, même quand la voiture est éteinte. Seule une personne qui a la formation peut toucher ces pièces.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.vancheck': "Vérifier la camionnette", // nieuw, nalezen
+    'w.schade': "le dégât", // nieuw, nalezen
+    'w.deuk': "la bosse", // nieuw, nalezen
+    'w.spiegel': "le rétroviseur, le miroir", // nieuw, nalezen
+    'w.tanken': "faire le plein (mettre du carburant dans la camionnette)", // nieuw, nalezen
+    'w.opladen': "recharger (une camionnette électrique, un téléphone)", // nieuw, nalezen
+    'w.parkeren': "se garer", // nieuw, nalezen
+    's.vancheck.1': "Il y a une bosse sur la portière.", // nieuw, nalezen
+    's.vancheck.2': "Ce dégât était déjà là.", // nieuw, nalezen
+    's.vancheck.3': "Je dois encore faire le plein d’abord.", // nieuw, nalezen
+    'c.vancheck.q': "Tout va bien avec la camionnette de livraison ?", // nieuw, nalezen
+    'c.vancheck.a': "Non, le rétroviseur est cassé.", // nieuw, nalezen
+    'c.vancheck': "Regarde avant de rouler", // nieuw, nalezen
+    'c.vancheck.b': "Fais le tour de la camionnette avant ta première tournée. Tu vois une bosse, une rayure ou un rétroviseur cassé ? Prends une photo, et signale-le avant de partir. Comme ça, tout le monde sait que le dégât était déjà là. Il s’est passé quelque chose pendant ta tournée ? Signale-le le jour même, même si c’est petit. Cacher un dégât donne de plus gros problèmes plus tard. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.vancheck.p': "Il y a un dégât sur la camionnette de livraison. Voici une photo.", // nieuw, nalezen
+    'c.vancheck.s': "Le matin, tu vois une nouvelle bosse sur la camionnette. Ce n’est pas toi qui l’as faite. Que fais-tu ?", // nieuw, nalezen
+    'c.vancheck.o1': "Tu prends une photo, et tu le signales avant de rouler.", // nieuw, nalezen
+    'c.vancheck.o2': "Tu ne dis rien : ce n’est pas ta bosse.", // nieuw, nalezen
+    'c.vancheck.o3': "Tu attends de voir si quelqu’un pose la question.", // nieuw, nalezen
+    'c.vancheck.w': "Quand tu le signales avant de rouler, personne ne peut penser que c’est toi. Une photo avec l’heure est claire pour tout le monde.", // nieuw, nalezen
+    'l.delay': "Les retards sur la route", // nieuw, nalezen
+    'w.file': "le bouchon, l’embouteillage", // nieuw, nalezen
+    'w.vertraging': "le retard (tu arrives plus tard que prévu)", // nieuw, nalezen
+    'w.omleiding': "la déviation (une autre route, parce que la route est fermée)", // nieuw, nalezen
+    'w.navigatie': "la navigation, le GPS (l’appli qui montre le chemin)", // nieuw, nalezen
+    'w.planner': "le planificateur (la personne qui fait les tournées)", // nieuw, nalezen
+    'w.retour': "le retour (un colis qui repart)", // nieuw, nalezen
+    's.delay.1': "Je suis dans un bouchon.", // nieuw, nalezen
+    's.delay.2': "J’ai une demi-heure de retard.", // nieuw, nalezen
+    's.delay.3': "Ce colis repart en retour.", // nieuw, nalezen
+    'c.delay.q': "Tu es où maintenant ?", // nieuw, nalezen
+    'c.delay.a': "À la déviation. J’aurai dix minutes de retard.", // nieuw, nalezen
+    'c.delay': "En retard ? Dis-le à temps", // nieuw, nalezen
+    'c.delay.b': "Un bouchon ou une route fermée, ce n’est pas ta faute. Mais préviens le planificateur dès que tu sais que tu seras en retard. Alors le planificateur peut prévenir les clients, ou changer la tournée. Arrête-toi d’abord à un endroit sûr : n’appelle pas avec le téléphone en main quand tu conduis. Et ne roule pas plus vite pour rattraper le temps. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.delay.p': "Je suis dans un bouchon. J’aurai une demi-heure de retard.", // nieuw, nalezen
+    'c.delay.s': "Une route est fermée. La déviation te coûte trente minutes. Que fais-tu ?", // nieuw, nalezen
+    'c.delay.o1': "Tu préviens le planificateur dès que tu peux t’arrêter en sécurité.", // nieuw, nalezen
+    'c.delay.o2': "Tu roules plus vite pour rattraper le temps.", // nieuw, nalezen
+    'c.delay.o3': "Tu ne dis rien : peut-être que personne ne le remarque.", // nieuw, nalezen
+    'c.delay.w': "Quand le planificateur le sait tôt, les clients sont prévenus et personne n’attend pour rien. Rouler plus vite est dangereux, et ça ne fait presque pas gagner de temps.", // nieuw, nalezen
   },
 };
 

@@ -706,6 +706,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': 'Appelle le 112 !',
     'p.hurt': { m: 'Je suis blessé.', f: 'Je suis blessée.', x: 'J’ai une blessure.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "Préparer les commandes", // nieuw, nalezen
+    'w.artikel': "l’article (un produit)", // nieuw, nalezen
+    'w.vak': "la case (une place dans le rayonnage)", // nieuw, nalezen
+    'w.sticker': "l’autocollant, l’étiquette", // nieuw, nalezen
+    'w.verzamelen': "rassembler, ramasser", // nieuw, nalezen
+    'w.ontbreken': "manquer (ce n’est pas là)", // nieuw, nalezen
+    'w.locatie': "l’emplacement (le code de l’endroit, comme A-12)", // nieuw, nalezen
+    's.picking.1': "Je rassemble les articles de cette commande.", // nieuw, nalezen
+    's.picking.2': "Cet article manque. La case est vide.", // nieuw, nalezen
+    's.picking.3': "L’autocollant doit aller sur le carton.", // nieuw, nalezen
+    'c.picking.q': "C’est quel emplacement ?", // nieuw, nalezen
+    'c.picking.a': "Allée trois, case douze.", // nieuw, nalezen
+    'l.loading': "Charger et décharger", // nieuw, nalezen
+    'w.vrachtwagen': "le camion", // nieuw, nalezen
+    'w.chauffeur': "le chauffeur", // nieuw, nalezen
+    'w.lossen': "décharger (sortir les choses du camion)", // nieuw, nalezen
+    'w.pompwagen': "le transpalette (un chariot à main qui soulève une palette)", // nieuw, nalezen
+    'w.folie': "le film (du plastique fin autour d’une palette)", // nieuw, nalezen
+    'w.vrachtbrief': "la lettre de voiture (le papier qui dit ce qu’il y a dans le camion)", // nieuw, nalezen
+    's.loading.1': "Le camion est à la porte quatre.", // nieuw, nalezen
+    's.loading.2': "On décharge d’abord ces palettes.", // nieuw, nalezen
+    's.loading.3': "Le chauffeur attend la lettre de voiture.", // nieuw, nalezen
+    'c.loading.q': "Cette palette est prête ?", // nieuw, nalezen
+    'c.loading.a': "Non, il faut encore mettre du film autour.", // nieuw, nalezen
   },
 };
 

@@ -2166,6 +2166,47 @@ const t: CultureTranslation = {
     'c.carsafe.o2': "Wpychasz kabel z powrotem ręką.", // nieuw, nalezen
     'c.carsafe.o3': "Wpychasz go z powrotem suchą szmatką.", // nieuw, nalezen
     'c.carsafe.w': "Akumulator samochodu elektrycznego ma dość prądu, żeby zabić, także gdy samochód jest wyłączony. Tych części może dotykać tylko osoba po przeszkoleniu.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.vancheck': "Sprawdzanie busa", // nieuw, nalezen
+    'w.schade': "uszkodzenie, szkoda", // nieuw, nalezen
+    'w.deuk': "wgniecenie", // nieuw, nalezen
+    'w.spiegel': "lusterko, lustro", // nieuw, nalezen
+    'w.tanken': "tankować (wlać paliwo do busa)", // nieuw, nalezen
+    'w.opladen': "ładować (elektrycznego busa, telefon)", // nieuw, nalezen
+    'w.parkeren': "parkować", // nieuw, nalezen
+    's.vancheck.1': "Na drzwiach jest wgniecenie.", // nieuw, nalezen
+    's.vancheck.2': "To uszkodzenie już było.", // nieuw, nalezen
+    's.vancheck.3': "Muszę jeszcze najpierw zatankować.", // nieuw, nalezen
+    'c.vancheck.q': "Czy z busem wszystko w porządku?", // nieuw, nalezen
+    'c.vancheck.a': "Nie, lusterko jest zepsute.", // nieuw, nalezen
+    'c.vancheck': "Obejrzyj, zanim pojedziesz", // nieuw, nalezen
+    'c.vancheck.b': "Obejdź busa dookoła przed pierwszym kursem. Widzisz wgniecenie, rysę albo zepsute lusterko? Zrób zdjęcie i zgłoś to, zanim odjedziesz. Wtedy wszyscy wiedzą, że to uszkodzenie już było. Coś się stało w czasie kursu? Zgłoś to tego samego dnia, także wtedy, gdy to drobiazg. Ukrywanie uszkodzeń daje później większe problemy. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.vancheck.p': "Na busie jest uszkodzenie. Oto zdjęcie.", // nieuw, nalezen
+    'c.vancheck.s': { m: "Rano widzisz na busie nowe wgniecenie. Nie ty je zrobiłeś. Co robisz?", f: "Rano widzisz na busie nowe wgniecenie. Nie ty je zrobiłaś. Co robisz?", x: "Rano widzisz na busie nowe wgniecenie. To nie przez ciebie. Co robisz?" }, // nieuw, nalezen
+    'c.vancheck.o1': "Robisz zdjęcie i zgłaszasz to, zanim pojedziesz.", // nieuw, nalezen
+    'c.vancheck.o2': "Nic nie mówisz: to nie twoje wgniecenie.", // nieuw, nalezen
+    'c.vancheck.o3': "Czekasz, czy ktoś o to zapyta.", // nieuw, nalezen
+    'c.vancheck.w': { m: "Kiedy zgłaszasz to, zanim pojedziesz, nikt nie pomyśli, że to ty to zrobiłeś. Zdjęcie z godziną jest jasne dla wszystkich.", f: "Kiedy zgłaszasz to, zanim pojedziesz, nikt nie pomyśli, że to ty to zrobiłaś. Zdjęcie z godziną jest jasne dla wszystkich.", x: "Kiedy zgłaszasz to, zanim pojedziesz, nikt nie pomyśli, że to przez ciebie. Zdjęcie z godziną jest jasne dla wszystkich." }, // nieuw, nalezen
+    'l.delay': "Opóźnienia na drodze", // nieuw, nalezen
+    'w.file': "korek (na drodze)", // nieuw, nalezen
+    'w.vertraging': "opóźnienie (jesteś później, niż było w planie)", // nieuw, nalezen
+    'w.omleiding': "objazd (inna droga, bo droga jest zamknięta)", // nieuw, nalezen
+    'w.navigatie': "nawigacja (aplikacja, która pokazuje drogę)", // nieuw, nalezen
+    'w.planner': "planista (osoba, która układa trasy)", // nieuw, nalezen
+    'w.retour': "zwrot (paczka, która wraca)", // nieuw, nalezen
+    's.delay.1': "Stoję w korku.", // nieuw, nalezen
+    's.delay.2': "Mam pół godziny opóźnienia.", // nieuw, nalezen
+    's.delay.3': "Ta paczka idzie do zwrotu.", // nieuw, nalezen
+    'c.delay.q': "Gdzie teraz jesteś?", // nieuw, nalezen
+    'c.delay.a': "Przy objeździe. Będę dziesięć minut później.", // nieuw, nalezen
+    'c.delay': "Spóźnisz się? Powiedz na czas", // nieuw, nalezen
+    'c.delay.b': "Korek albo zamknięta droga to nie twoja wina. Ale powiedz planiście, gdy tylko wiesz, że się spóźnisz. Wtedy planista może powiadomić klientów albo zmienić trasę. Najpierw zatrzymaj się w bezpiecznym miejscu: nie dzwoń z telefonem w ręce, kiedy prowadzisz. I nie jedź szybciej, żeby nadrobić czas. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.delay.p': "Stoję w korku. Będę pół godziny później.", // nieuw, nalezen
+    'c.delay.s': "Droga jest zamknięta. Objazd zabiera ci trzydzieści minut. Co robisz?", // nieuw, nalezen
+    'c.delay.o1': "Mówisz planiście, gdy tylko możesz bezpiecznie się zatrzymać.", // nieuw, nalezen
+    'c.delay.o2': "Jedziesz szybciej, żeby nadrobić czas.", // nieuw, nalezen
+    'c.delay.o3': "Nic nie mówisz: może nikt nie zauważy.", // nieuw, nalezen
+    'c.delay.w': "Kiedy planista wie o tym wcześnie, klienci się dowiadują i nikt nie czeka na próżno. Szybsza jazda jest niebezpieczna i prawie nie daje czasu.", // nieuw, nalezen
   },
 };
 

@@ -380,6 +380,23 @@ const t: CultureTranslation = {
     'c.meeting.o2': 'Não dizes nada, para não perder tempo.', // nieuw, nalezen
     'c.meeting.o3': 'Perguntas logo, enquanto ela ainda está a falar.', // nieuw, nalezen
     'c.meeting.w': 'Uma pergunta é um bom contributo: talvez outros também não tenham percebido. Quando esperas pela tua vez, todos podem ouvir.', // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking': "Falta um artigo? Diz", // nieuw, nalezen
+    'c.picking.b': "O lugar está vazio, ou o artigo não está lá? Não leves outro artigo que parece igual: assim o cliente recebe a coisa errada. Diz ao teu chefe de equipa, ou regista isso no scanner. Vê o número no autocolante, não só a cor ou a imagem. Trabalhar com exatidão é mais importante do que trabalhar depressa.", // nieuw, nalezen
+    'c.picking.p': "Este artigo falta. O que tenho de fazer?", // nieuw, nalezen
+    'c.picking.s': "O lugar está vazio. No lugar ao lado há um artigo que parece quase igual. O que fazes?", // nieuw, nalezen
+    'c.picking.o1': "Avisas que o artigo falta.", // nieuw, nalezen
+    'c.picking.o2': "Levas o outro artigo: parece igual.", // nieuw, nalezen
+    'c.picking.o3': "Saltas o artigo e não dizes nada.", // nieuw, nalezen
+    'c.picking.w': "Um artigo errado volta para trás, e isso custa mais tempo do que perguntar. Quando avisas, alguém pode encher o lugar ou mudar o pedido.", // nieuw, nalezen
+    'c.loading': "Nunca atrás de um camião em marcha-atrás", // nieuw, nalezen
+    'c.loading.b': "O motorista não consegue ver tudo atrás do camião. Nunca passes atrás de um camião que anda de marcha-atrás, e não fiques entre o camião e a porta. Espera até o camião estar parado e o motorista te ter visto. Falta uma palete, ou está estragada, quando descarregas? Diz antes de o motorista se ir embora.", // nieuw, nalezen
+    'c.loading.p': "Espera um momento. O camião está a andar de marcha-atrás.", // nieuw, nalezen
+    'c.loading.s': "Um camião anda de marcha-atrás até à porta. Queres atravessar depressa por trás dele. O que fazes?", // nieuw, nalezen
+    'c.loading.o1': "Esperas até o camião estar parado.", // nieuw, nalezen
+    'c.loading.o2': { m: "Passas a correr por trás: és rápido o suficiente.", f: "Passas a correr por trás: és rápida o suficiente.", x: "Passas a correr por trás: és rápido/a o suficiente." }, // nieuw, nalezen
+    'c.loading.o3': "Passas por trás e acenas ao motorista.", // nieuw, nalezen
+    'c.loading.w': "Atrás de um camião há um sítio que o motorista não consegue ver. Esperar custa um minuto. Um acidente ali é muito grave.", // nieuw, nalezen
   },
 };
 

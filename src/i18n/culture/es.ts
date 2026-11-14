@@ -380,6 +380,23 @@ const t: CultureTranslation = {
     'c.meeting.o2': 'No dices nada, para no hacer perder el tiempo.', // nieuw, nalezen
     'c.meeting.o3': 'Lo preguntas enseguida, mientras ella todavía está hablando.', // nieuw, nalezen
     'c.meeting.w': 'Una pregunta es una buena aportación: quizás otros tampoco lo han entendido. Si esperas tu turno, todos lo pueden oír.', // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking': "¿Falta un artículo? Dilo", // nieuw, nalezen
+    'c.picking.b': "¿El hueco está vacío, o el artículo no está? No cojas otro artículo que se parece: entonces el cliente recibe lo que no es. Díselo a tu jefe de equipo, o avísalo en el escáner. Mira el número de la pegatina, no solo el color o la foto. Trabajar con exactitud es más importante que trabajar rápido.", // nieuw, nalezen
+    'c.picking.p': "Falta este artículo. ¿Qué tengo que hacer?", // nieuw, nalezen
+    'c.picking.s': "El hueco está vacío. En el hueco de al lado hay un artículo que es casi igual. ¿Qué haces?", // nieuw, nalezen
+    'c.picking.o1': "Avisas de que falta el artículo.", // nieuw, nalezen
+    'c.picking.o2': "Coges el otro artículo: parece igual.", // nieuw, nalezen
+    'c.picking.o3': "Te saltas el artículo y no dices nada.", // nieuw, nalezen
+    'c.picking.w': "Un artículo equivocado vuelve, y eso cuesta más tiempo que preguntar. Si avisas, alguien puede llenar el hueco o cambiar el pedido.", // nieuw, nalezen
+    'c.loading': "Nunca detrás de un camión que va marcha atrás", // nieuw, nalezen
+    'c.loading.b': "El conductor no puede ver todo lo que hay detrás del camión. Nunca pases por detrás de un camión que va marcha atrás, y no te pongas entre el camión y la puerta. Espera hasta que el camión esté parado y el conductor te haya visto. ¿Falta un palé o está roto cuando descargas? Dilo antes de que el conductor se vaya.", // nieuw, nalezen
+    'c.loading.p': "Espera un momento. El camión va marcha atrás.", // nieuw, nalezen
+    'c.loading.s': "Un camión va marcha atrás hacia la puerta. Quieres cruzar rápido por detrás. ¿Qué haces?", // nieuw, nalezen
+    'c.loading.o1': "Esperas hasta que el camión esté parado.", // nieuw, nalezen
+    'c.loading.o2': { m: "Pasas corriendo por detrás: eres lo bastante rápido.", f: "Pasas corriendo por detrás: eres lo bastante rápida.", x: "Pasas corriendo por detrás: corres lo bastante rápido." }, // nieuw, nalezen
+    'c.loading.o3': "Pasas por detrás y saludas al conductor con la mano.", // nieuw, nalezen
+    'c.loading.w': "Detrás de un camión hay un sitio que el conductor no puede ver. Esperar cuesta un minuto. Un accidente ahí es muy grave.", // nieuw, nalezen
   },
 };
 

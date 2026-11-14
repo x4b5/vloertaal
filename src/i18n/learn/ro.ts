@@ -156,6 +156,11 @@ const t: CultureTranslation = {
     'd.getfeedback.a.why': "Ți se oferă feedback: un „da” și că vrei să faci treaba bine.", // nieuw, nalezen
     'd.givefeedback.a.why': "Întrebat despre muncă: întâi ce e bine, apoi ce poate fi mai bine.", // nieuw, nalezen
     'd.meeting.a.why': "Se cer întrebări: răspunsul pune una, despre programul de lucru.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "Întrebarea e care e locația: răspunsul spune culoarul și locul.", // nieuw, nalezen
+    'c.loading.a.why': "Întrebat dacă paletul e gata: răspunsul spune „nu” și ce mai trebuie.", // nieuw, nalezen
+    'c.vancheck.a.why': "Întrebat dacă duba e în regulă: răspunsul spune „nu” și ce e stricat.", // nieuw, nalezen
+    'c.delay.a.why': "Întrebat unde ești: răspunsul spune locul și cu cât întârzii.", // nieuw, nalezen
   },
 };
 

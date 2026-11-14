@@ -703,6 +703,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': 'اتَّصِلْ بـ 112!',
     'p.hurt': { m: 'أنا مصاب.', f: 'أنا مصابة.' },
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "جمع الطلبات", // nieuw, nalezen
+    'w.artikel': "السلعة (منتج واحد)", // nieuw, nalezen
+    'w.vak': "الخانة (مكان واحد في رف التخزين)", // nieuw, nalezen
+    'w.sticker': "الملصق، الستيكر", // nieuw, nalezen
+    'w.verzamelen': "يجمع، يلتقط", // nieuw, nalezen
+    'w.ontbreken': "ينقص (غير موجود)", // nieuw, nalezen
+    'w.locatie': "الموقع (رمز المكان، مثل A-12)", // nieuw, nalezen
+    's.picking.1': "أجمع السلع لهذا الطلب.", // nieuw, nalezen
+    's.picking.2': "هذه السلعة ناقصة. الخانة فارغة.", // nieuw, nalezen
+    's.picking.3': "الملصق يجب أن يكون على الصندوق.", // nieuw, nalezen
+    'c.picking.q': "أي موقع هو؟", // nieuw, nalezen
+    'c.picking.a': "الممر ثلاثة، الخانة اثنا عشر.", // nieuw, nalezen
+    'l.loading': "التحميل والتفريغ", // nieuw, nalezen
+    'w.vrachtwagen': "الشاحنة", // nieuw, nalezen
+    'w.chauffeur': "السائق", // nieuw, nalezen
+    'w.lossen': "يفرّغ (يُخرج الأشياء من الشاحنة)", // nieuw, nalezen
+    'w.pompwagen': "عربة البالِت (عربة يدوية ترفع المنصة الخشبية)", // nieuw, nalezen
+    'w.folie': "غلاف البلاستيك (بلاستيك رقيق حول المنصة الخشبية)", // nieuw, nalezen
+    'w.vrachtbrief': "ورقة الشحن (الورقة التي تقول ما يوجد في الشاحنة)", // nieuw, nalezen
+    's.loading.1': "الشاحنة عند الباب أربعة.", // nieuw, nalezen
+    's.loading.2': "نفرّغ هذه المنصات أولاً.", // nieuw, nalezen
+    's.loading.3': "السائق ينتظر ورقة الشحن.", // nieuw, nalezen
+    'c.loading.q': "هل هذه المنصة جاهزة؟", // nieuw, nalezen
+    'c.loading.a': "لا، ما زالت تحتاج غلاف البلاستيك حولها.", // nieuw, nalezen
   },
 };
 

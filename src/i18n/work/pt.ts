@@ -2164,6 +2164,47 @@ const t: CultureTranslation = {
     'c.carsafe.o2': "Empurras o cabo para o sítio com a mão.", // nieuw, nalezen
     'c.carsafe.o3': "Empurras o cabo para o sítio com um pano seco.", // nieuw, nalezen
     'c.carsafe.w': "A bateria de um carro elétrico tem corrente suficiente para matar, mesmo com o carro desligado. Só quem tem a formação pode tocar nestas peças.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.vancheck': "Verificar a carrinha", // nieuw, nalezen
+    'w.schade': "o dano", // nieuw, nalezen
+    'w.deuk': "a amolgadela", // nieuw, nalezen
+    'w.spiegel': "o espelho", // nieuw, nalezen
+    'w.tanken': "abastecer (pôr combustível na carrinha)", // nieuw, nalezen
+    'w.opladen': "carregar (uma carrinha elétrica, um telemóvel)", // nieuw, nalezen
+    'w.parkeren': "estacionar", // nieuw, nalezen
+    's.vancheck.1': "Há uma amolgadela na porta.", // nieuw, nalezen
+    's.vancheck.2': "Este dano já lá estava.", // nieuw, nalezen
+    's.vancheck.3': "Primeiro ainda tenho de abastecer.", // nieuw, nalezen
+    'c.vancheck.q': "Está tudo bem com a carrinha de entregas?", // nieuw, nalezen
+    'c.vancheck.a': "Não, o espelho está partido.", // nieuw, nalezen
+    'c.vancheck': "Olha antes de conduzir", // nieuw, nalezen
+    'c.vancheck.b': "Dá uma volta à carrinha antes da tua primeira volta de entregas. Vês uma amolgadela, um risco ou um espelho partido? Tira uma foto, e avisa antes de arrancares. Assim todos sabem que o dano já lá estava. Aconteceu alguma coisa durante a tua volta? Avisa no mesmo dia, também quando é pequeno. Esconder um dano dá problemas maiores mais tarde. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.vancheck.p': "A carrinha de entregas tem um dano. Aqui está uma foto.", // nieuw, nalezen
+    'c.vancheck.s': "De manhã vês uma amolgadela nova na carrinha. Não foste tu que a fizeste. O que fazes?", // nieuw, nalezen
+    'c.vancheck.o1': "Tiras uma foto, e avisas antes de conduzir.", // nieuw, nalezen
+    'c.vancheck.o2': "Não dizes nada: a amolgadela não é tua.", // nieuw, nalezen
+    'c.vancheck.o3': "Esperas para ver se alguém pergunta por ela.", // nieuw, nalezen
+    'c.vancheck.w': "Quando avisas antes de conduzir, ninguém pode pensar que foste tu. Uma foto com a hora é clara para todos.", // nieuw, nalezen
+    'l.delay': "Atrasos na estrada", // nieuw, nalezen
+    'w.file': "o engarrafamento", // nieuw, nalezen
+    'w.vertraging': "o atraso (chegas mais tarde do que o previsto)", // nieuw, nalezen
+    'w.omleiding': "o desvio (outro caminho, porque a estrada está cortada)", // nieuw, nalezen
+    'w.navigatie': "a navegação (a app que mostra o caminho)", // nieuw, nalezen
+    'w.planner': "o planeador (a pessoa que faz as rotas)", // nieuw, nalezen
+    'w.retour': "a devolução (uma encomenda que volta para trás)", // nieuw, nalezen
+    's.delay.1': "Estou num engarrafamento.", // nieuw, nalezen
+    's.delay.2': "Tenho meia hora de atraso.", // nieuw, nalezen
+    's.delay.3': "Esta encomenda volta para trás.", // nieuw, nalezen
+    'c.delay.q': "Onde estás agora?", // nieuw, nalezen
+    'c.delay.a': "No desvio. Chego dez minutos mais tarde.", // nieuw, nalezen
+    'c.delay': "Vais chegar tarde? Diz a tempo", // nieuw, nalezen
+    'c.delay.b': "Um engarrafamento ou uma estrada cortada não é culpa tua. Mas diz ao planeador logo que saibas que vais chegar tarde. Assim o planeador pode avisar os clientes, ou mudar a rota. Para primeiro num sítio seguro: não ligues com o telemóvel na mão enquanto conduzes. E não conduzas mais depressa para recuperar o tempo. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.delay.p': "Estou num engarrafamento. Chego meia hora mais tarde.", // nieuw, nalezen
+    'c.delay.s': "Uma estrada está cortada. O desvio custa-te trinta minutos. O que fazes?", // nieuw, nalezen
+    'c.delay.o1': "Dizes ao planeador logo que possas parar em segurança.", // nieuw, nalezen
+    'c.delay.o2': "Conduzes mais depressa para recuperar o tempo.", // nieuw, nalezen
+    'c.delay.o3': "Não dizes nada: talvez ninguém repare.", // nieuw, nalezen
+    'c.delay.w': "Quando o planeador sabe cedo, os clientes ficam a saber e ninguém espera para nada. Conduzir mais depressa é perigoso, e quase não se ganha tempo.", // nieuw, nalezen
   },
 };
 

@@ -156,6 +156,11 @@ const t: CultureTranslation = {
     'd.getfeedback.a.why': "Предлагат ти обратна връзка: едно „да“ и че искаш да го правиш добре.", // nieuw, nalezen
     'd.givefeedback.a.why': "На въпроса за работата: първо какво е добре, после какво може да е по-добре.", // nieuw, nalezen
     'd.meeting.a.why': "Питат за въпроси: този отговор задава един, за графика.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "Питат коя е локацията: пътеката и клетката.", // nieuw, nalezen
+    'c.loading.a.why': "Питат дали палетът е готов: не, и какво още му трябва.", // nieuw, nalezen
+    'c.vancheck.a.why': "Питат дали всичко е наред с буса: не, и какво е счупено.", // nieuw, nalezen
+    'c.delay.a.why': "Питат къде си: мястото и с колко ще закъснееш.", // nieuw, nalezen
   },
 };
 

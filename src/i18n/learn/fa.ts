@@ -155,6 +155,11 @@ const t: CultureTranslation = {
     'd.getfeedback.a.why': "پیشنهاد بازخورد: یک بله، و اینکه می‌خواهی کار را خوب انجام بدهی.", // nieuw, nalezen
     'd.givefeedback.a.why': "پرسیده‌اند کارش چطور است: اول چیزی که خوب است، بعد چیزی که می‌تواند بهتر شود.", // nieuw, nalezen
     'd.meeting.a.why': "پرسیده‌اند سؤالی هست: این جواب یک سؤال می‌پرسد، دربارهٔ برنامهٔ کاری.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "پرسیده‌اند کدام محل: راهرو و خانهٔ قفسه.", // nieuw, nalezen
+    'c.loading.a.why': "پرسیده‌اند پالت آماده است یا نه: نه، و اینکه هنوز چه لازم دارد.", // nieuw, nalezen
+    'c.vancheck.a.why': "پرسیده‌اند ون خوب است یا نه: نه، و اینکه چه چیزی خراب است.", // nieuw, nalezen
+    'c.delay.a.why': "پرسیده‌اند کجایی: جا، و اینکه چقدر دیر می‌رسی.", // nieuw, nalezen
   },
 };
 

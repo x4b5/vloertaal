@@ -2164,6 +2164,47 @@ const t: CultureTranslation = {
     'c.carsafe.o2': "Fiilada gacantaada dib ugu riix.", // nieuw, nalezen
     'c.carsafe.o3': "Maro qallalan dib ugu riix.", // nieuw, nalezen
     'c.carsafe.w': "Baytariga baabuurka korontada wuxuu leeyahay koronto ku filan inay qof disho, xitaa marka baabuurku demsan yahay. Qof tababarka leh oo keliya ayaa taaban kara qaybahan.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.vancheck': "Hubinta baabuurka", // nieuw, nalezen
+    'w.schade': "waxyeellada", // nieuw, nalezen
+    'w.deuk': "godanka", // nieuw, nalezen
+    'w.spiegel': "muraayadda", // nieuw, nalezen
+    'w.tanken': "shidaal ku shubid (baabuurka shidaal ku shub)", // nieuw, nalezen
+    'w.opladen': "dab gelin (baabuur koronto ku shaqeeya, taleefan)", // nieuw, nalezen
+    'w.parkeren': "baarkin", // nieuw, nalezen
+    's.vancheck.1': "Albaabka godan ayaa ku yaal.", // nieuw, nalezen
+    's.vancheck.2': "Waxyeelladani hore ayay u jirtay.", // nieuw, nalezen
+    's.vancheck.3': "Marka hore waa inaan shidaal ku shubto.", // nieuw, nalezen
+    'c.vancheck.q': "Baabuurka gaarsiintu ma wada fiican yahay?", // nieuw, nalezen
+    'c.vancheck.a': "Maya, muraayaddu waa jaban tahay.", // nieuw, nalezen
+    'c.vancheck': "Eeg ka hor inta aadan wadin", // nieuw, nalezen
+    'c.vancheck.b': "Ku wareeg baabuurka ka hor safarkaaga ugu horreeya. Ma aragtaa godan, xagtin ama muraayad jaban? Sawir ka qaad, oo sheeg ka hor inta aadan dhaqaaqin. Markaas qof walba wuu ogyahay in waxyeelladu hore u jirtay. Wax ma dhaceen intii aad safarka ku jirtay? Sheeg isla maalintaas, xitaa haddii ay yar tahay. Qarinta waxyeelladu waxay hadhow keentaa dhibaatooyin ka waaweyn. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.vancheck.p': "Baabuurka gaarsiinta waxyeello ayaa gaartay. Waa kan sawir.", // nieuw, nalezen
+    'c.vancheck.s': "Subaxdii waxaad baabuurka ku aragtaa godan cusub. Adigu ma aadan samayn. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.vancheck.o1': "Sawir ka qaad, oo sheeg ka hor inta aadan wadin.", // nieuw, nalezen
+    'c.vancheck.o2': "Waxba ha oran: adigu ma aadan samayn.", // nieuw, nalezen
+    'c.vancheck.o3': "Sug oo eeg in qof wax ka weydiiyo.", // nieuw, nalezen
+    'c.vancheck.w': "Marka aad sheegto ka hor inta aadan wadin, qofna ma malayn karo inaad adigu samaysay. Sawir waqtigu ku qoran yahay qof walba wuu u cad yahay.", // nieuw, nalezen
+    'l.delay': "Daahitaanka waddada", // nieuw, nalezen
+    'w.file': "saxmadda baabuurta", // nieuw, nalezen
+    'w.vertraging': "daahitaanka (waad ka dambaysaa qorshihii)", // nieuw, nalezen
+    'w.omleiding': "jid-leexinta (waddo kale, sababtoo ah waddadii waa xiran tahay)", // nieuw, nalezen
+    'w.navigatie': "navigeshanka (app-ka jidka tusa)", // nieuw, nalezen
+    'w.planner': "qorsheeyaha (qofka jidadka sameeya)", // nieuw, nalezen
+    'w.retour': "soo-celinta (baakad dib u noqonaysa)", // nieuw, nalezen
+    's.delay.1': "Saxmad baabuur ayaan ku jiraa.", // nieuw, nalezen
+    's.delay.2': "Nus saac ayaan daahayaa.", // nieuw, nalezen
+    's.delay.3': "Baakaddani dib ayay u noqonaysaa.", // nieuw, nalezen
+    'c.delay.q': "Xaggee joogtaa hadda?", // nieuw, nalezen
+    'c.delay.a': "Jid-leexinta agteeda. Toban daqiiqo ayaan daahayaa.", // nieuw, nalezen
+    'c.delay': "Ma daahaysaa? Waqtigeeda sheeg", // nieuw, nalezen
+    'c.delay.b': "Saxmad baabuur ama waddo xiran adiga khaladkaaga ma aha. Laakiin u sheeg qorsheeyaha isla marka aad ogaato inaad daahayso. Markaas qorsheeyuhu wuu u sheegi karaa macaamiisha, ama jidka wuu beddeli karaa. Marka hore meel ammaan ah istaag: ha wicin adigoo taleefanka gacanta ku haya oo wadaya. Hana u wadin si ka dhakhso badan si aad waqtiga u soo ceshato. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.delay.p': "Saxmad baabuur ayaan ku jiraa. Nus saac ayaan daahayaa.", // nieuw, nalezen
+    'c.delay.s': "Waddo ayaa xiran. Jid-leexintu waxay kaa qaadanaysaa soddon daqiiqo. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.delay.o1': "U sheeg qorsheeyaha isla marka aad si ammaan ah u istaagi karto.", // nieuw, nalezen
+    'c.delay.o2': "Si ka dhakhso badan u wad si aad waqtiga u soo ceshato.", // nieuw, nalezen
+    'c.delay.o3': "Waxba ha oran: waxaa laga yaabaa inaan qofna ogaan.", // nieuw, nalezen
+    'c.delay.w': "Marka qorsheeyuhu goor hore ogaado, macaamiishu way maqlaan, qofna si aan loo baahnayn uma sugo. Xawaare ku wadiddu waa khatar, waqti ku dhowaad waxba kama soo ceshato.", // nieuw, nalezen
   },
 };
 

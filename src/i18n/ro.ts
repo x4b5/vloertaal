@@ -703,6 +703,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': 'Sună la 112!',
     'p.hurt': { m: 'Sunt rănit.', f: 'Sunt rănită.', x: 'M-am rănit.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "Adunarea comenzilor", // nieuw, nalezen
+    'w.artikel': "articolul (un singur produs)", // nieuw, nalezen
+    'w.vak': "locul (un singur loc în raft)", // nieuw, nalezen
+    'w.sticker': "autocolantul, eticheta", // nieuw, nalezen
+    'w.verzamelen': "a aduna, a strânge", // nieuw, nalezen
+    'w.ontbreken': "a lipsi (nu e acolo)", // nieuw, nalezen
+    'w.locatie': "locația (codul locului, de exemplu A-12)", // nieuw, nalezen
+    's.picking.1': "Adun articolele pentru comanda asta.", // nieuw, nalezen
+    's.picking.2': "Articolul ăsta lipsește. Locul e gol.", // nieuw, nalezen
+    's.picking.3': "Autocolantul trebuie pus pe cutie.", // nieuw, nalezen
+    'c.picking.q': "Care e locația?", // nieuw, nalezen
+    'c.picking.a': "Culoarul trei, locul doisprezece.", // nieuw, nalezen
+    'l.loading': "Încărcare și descărcare", // nieuw, nalezen
+    'w.vrachtwagen': "camionul", // nieuw, nalezen
+    'w.chauffeur': "șoferul", // nieuw, nalezen
+    'w.lossen': "a descărca (a scoate lucrurile din camion)", // nieuw, nalezen
+    'w.pompwagen': "transpaletul (un cărucior de mână care ridică un palet)", // nieuw, nalezen
+    'w.folie': "folia (plastic subțire în jurul unui palet)", // nieuw, nalezen
+    'w.vrachtbrief': "scrisoarea de transport (hârtia pe care scrie ce e în camion)", // nieuw, nalezen
+    's.loading.1': "Camionul e la ușa patru.", // nieuw, nalezen
+    's.loading.2': "Descărcăm întâi paleții ăștia.", // nieuw, nalezen
+    's.loading.3': "Șoferul așteaptă scrisoarea de transport.", // nieuw, nalezen
+    'c.loading.q': "E gata paletul ăsta?", // nieuw, nalezen
+    'c.loading.a': "Nu, mai trebuie pusă folie în jurul lui.", // nieuw, nalezen
   },
 };
 

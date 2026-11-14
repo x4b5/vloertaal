@@ -706,6 +706,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': 'Дзвони 112!',
     'p.hurt': { m: 'Я поранений.', f: 'Я поранена.', x: 'У мене травма.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "Збирання замовлень", // nieuw, nalezen
+    'w.artikel': "товар (один продукт)", // nieuw, nalezen
+    'w.vak': "комірка (одне місце на стелажі)", // nieuw, nalezen
+    'w.sticker': "наліпка, етикетка", // nieuw, nalezen
+    'w.verzamelen': "збирати", // nieuw, nalezen
+    'w.ontbreken': "не вистачати (цього немає)", // nieuw, nalezen
+    'w.locatie': "локація (код місця, наприклад A-12)", // nieuw, nalezen
+    's.picking.1': "Я збираю товари для цього замовлення.", // nieuw, nalezen
+    's.picking.2': "Цього товару немає. Комірка порожня.", // nieuw, nalezen
+    's.picking.3': "Наліпка має бути на коробці.", // nieuw, nalezen
+    'c.picking.q': "Яка це локація?", // nieuw, nalezen
+    'c.picking.a': "Ряд три, комірка дванадцять.", // nieuw, nalezen
+    'l.loading': "Завантаження і розвантаження", // nieuw, nalezen
+    'w.vrachtwagen': "вантажівка", // nieuw, nalezen
+    'w.chauffeur': "водій", // nieuw, nalezen
+    'w.lossen': "розвантажувати (виймати речі з вантажівки)", // nieuw, nalezen
+    'w.pompwagen': "рокла (ручний візок, який піднімає піддон)", // nieuw, nalezen
+    'w.folie': "плівка (тонкий пластик навколо піддона)", // nieuw, nalezen
+    'w.vrachtbrief': "накладна (папір, де написано, що є у вантажівці)", // nieuw, nalezen
+    's.loading.1': "Вантажівка стоїть біля дверей номер чотири.", // nieuw, nalezen
+    's.loading.2': "Спершу ми розвантажуємо ці піддони.", // nieuw, nalezen
+    's.loading.3': "Водій чекає на накладну.", // nieuw, nalezen
+    'c.loading.q': "Цей піддон готовий?", // nieuw, nalezen
+    'c.loading.a': "Ні, його ще треба обмотати плівкою.", // nieuw, nalezen
   },
 };
 
