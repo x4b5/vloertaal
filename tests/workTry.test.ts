@@ -20,9 +20,13 @@ function storage(broken = false) {
   });
 }
 
-/** A fresh module each test: the day kept in memory (no storage) starts empty. */
+/**
+ * A fresh module each test: the day kept in memory (no storage) starts empty. The tips are fresh
+ * too then, so they are loaded again, as the app does before any lesson (src/lib/tips.ts).
+ */
 async function load() {
   vi.resetModules();
+  await (await import('../src/lib/tips')).loadTips();
   return import('../src/lib/workTry');
 }
 
@@ -134,6 +138,7 @@ describe('"Probeer het vandaag" never has a name in it (4 November 2026)', () =>
 
   it('in both tracks, both countries and a region: no name of the cast or of anyone the lessons name', async () => {
     vi.resetModules();
+    await (await import('../src/lib/tips')).loadTips();
     await import('./regionLoaded');
     await import('../src/i18n/packs/nl');
     const { allRegionTips, allRegionUnits, setRegionsOn } = await import('../src/content/regio');

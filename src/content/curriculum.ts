@@ -1,4 +1,4 @@
-import { communicateUnit, feedbackUnit, teamworkUnit } from './culture';
+import { communicateUnit, feedbackUnit, teamworkUnit } from './cultureUnits';
 import { dataUnit, toolsUnit, workUnits } from './work';
 import { soundsUnit } from './sounds';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';

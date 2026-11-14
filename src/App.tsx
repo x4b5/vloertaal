@@ -4,6 +4,7 @@ import { ensureLanguage, getHelpLanguage, isLanguageLoaded, langTag } from './i1
 import { setRulesCountry } from './content/rulesCourse';
 import { Splash } from './components/Splash';
 import { loadPictures, usePicturesLoaded } from './pictures';
+import { loadTips, useTipsLoaded } from './lib/tips';
 import type { UiCode } from './i18n/types';
 import { isPlayable, learnedItems, rulesTwinHere } from './content/courses';
 import { dutchUi, trackOfId } from './lib/track';
@@ -548,11 +549,19 @@ export default function App() {
     setLangFailed(false);
     loadPictures().catch((e: unknown) => { void recoverFromLoadError(e).then((reloading) => { if (!reloading) setLangFailed(true); }); });
   }, [picsReady, progress.onboarded, langTry]);
+  // The "Zo werkt het hier" tips (their own file too, src/lib/tips.ts): the same wait, so no lesson
+  // starts without its tip.
+  const tipsReady = useTipsLoaded();
+  useEffect(() => {
+    if (tipsReady || !progress.onboarded) return;
+    setLangFailed(false);
+    loadTips().catch((e: unknown) => { void recoverFromLoadError(e).then((reloading) => { if (!reloading) setLangFailed(true); }); });
+  }, [tipsReady, progress.onboarded, langTry]);
   // A file that neither comes nor fails (a connection that hangs): after a while the splash offers
   // "Try again" too (a reload), and still goes on by itself if the file comes after all.
   // Only a button: no reload when the connection comes back (that is for a file that failed), and
   // nothing left behind once the file is here.
-  const waiting = !langReady || (progress.onboarded && !picsReady);
+  const waiting = !langReady || (progress.onboarded && (!picsReady || !tipsReady));
   const [stalled, setStalled] = useState(false);
   useEffect(() => {
     if (!waiting || langFailed) return;
@@ -773,7 +782,7 @@ export default function App() {
     const leave = () => { history.replaceState({ view: HOME, depth: 0 } satisfies Entry, '', location.pathname + location.search); setCoachDirect(false); setView(HOME); };
     return <Coaches onBack={leave} lang={langReady && progress.onboarded ? lang : undefined} />;
   }
-  if ((!langReady || (progress.onboarded && !picsReady) || !introDone) && view.name !== 'admin') return <Splash failed={langFailed || stalled} onRetry={() => location.reload()} lang={progress.helpLang} />;
+  if ((!langReady || (progress.onboarded && (!picsReady || !tipsReady)) || !introDone) && view.name !== 'admin') return <Splash failed={langFailed || stalled} onRetry={() => location.reload()} lang={progress.helpLang} />;
   if (view.name === 'admin') {
     // A lesson from the list gets its own entry without #beheer, so Back (or its end) returns
     // to #beheer, whose hashchange opens this page again.

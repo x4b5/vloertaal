@@ -3,7 +3,7 @@ import { lawCheckMonth, lawCheckStale } from '../content/lawAge';
 import { taalBeActive } from '../content/taalBe';
 import { isTaalBeId } from '../content/taalBe/ids';
 import { dateLocale } from '../content/updateDate';
-import { ABUSE_LINE, ADVICE_LINE } from '../content/workTips';
+import { ABUSE_LINE, ADVICE_LINE } from '../content/adviceLine';
 import { gloss, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 
