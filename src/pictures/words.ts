@@ -36,6 +36,15 @@ import group38 from './group38';
 import group37 from './group37';
 import group39 from './group39';
 import group40 from './group40';
+import group41 from './group41';
+import group42 from './group42';
+import group43 from './group43';
+import group44 from './group44';
+import group45 from './group45';
+import group46 from './group46';
+import group47 from './group47';
+import group48 from './group48';
+import group49 from './group49';
 
 /** Every word picture, keyed by word id (and the sayings' pictures, by saying id "zg.*"): one file, loaded on demand (./index.ts loadPictures). */
 const words: Record<string, () => JSX.Element> = {
@@ -76,6 +85,16 @@ const words: Record<string, () => JSX.Element> = {
   ...group37,
   ...group39,
   ...group40,
+  // The sector lessons of 14 November 2026: one group per sector.
+  ...group41,
+  ...group42,
+  ...group43,
+  ...group44,
+  ...group45,
+  ...group46,
+  ...group47,
+  ...group48,
+  ...group49,
 };
 export default words;
 export const url: string = import.meta.url;

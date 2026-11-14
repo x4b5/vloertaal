@@ -36,6 +36,7 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['zorgverzekering', 4],
   ['belastingdienst', 9],
   ['verpleegkundige', 8],
+  ['bedrijfsleider', 8],
   ['valbeveiliging', 3],
   ['ouderschapsverlof', 11],
   ['telefoonnummer', 7],

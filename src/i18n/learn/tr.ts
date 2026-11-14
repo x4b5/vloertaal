@@ -129,6 +129,23 @@ const t: CultureTranslation = {
     'c.road.a.why': "Bir sefer daha isteniyor: hayır, çünkü önce mola gelir.", // nieuw, nalezen
     'c.backtowork.a.why': "Nasıl olduğun soruluyor: kısa bir evet, bir de işi yavaş aldığın.", // nieuw, nalezen
     'c.feelwell.a.why': "Nasıl olduğun soruluyor: dürüst bir \"pek iyi değil\" sorun değil.", // nieuw, nalezen
+    'c.measure.a.why': "Genişlik soruluyor: birimiyle bir sayı, bir de not almak.", // nieuw, nalezen
+    'c.siteday.a.why': "Tahtaların nereye gideceği soruluyor: bir yer, bir de o yerin nerede olduğu.", // nieuw, nalezen
+    'c.shifts.a.why': "Ne olduğu soruluyor: evet, ne olduğu ve ne kadar sürdüğü.", // nieuw, nalezen
+    'c.signals.a.why': "Nasıl olduğu soruluyor: ne gördüğün, bir de bunun yeni olduğu.", // nieuw, nalezen
+    'c.transfer.a.why': "Bir insanı kaldırman isteniyor: tek başına değil, önce kaldırma lifti.", // nieuw, nalezen
+    'c.dishes.a.why': "Temiz bardak soruluyor: evet, bir de ne zaman geleceği.", // nieuw, nalezen
+    'c.rush.a.why': "Şef bir iş söylüyor: tekrar ediyorsun, böylece duyduğunu bilir.", // nieuw, nalezen
+    'c.rounds.a.why': "Ofisin yapılıp yapılmadığı soruluyor: hayır, sebebiyle birlikte.", // nieuw, nalezen
+    'c.colours.a.why': "Bir bez soruluyor: hayır, çünkü kırmızı tuvalet içindir.", // nieuw, nalezen
+    'c.shophelp.a.why': "Süt soruluyor: \"hayır\" değil, depoya bakmak.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "Kızgın bir müşteri: sakin sözler, bir de bir iş arkadaşı geliyor.", // nieuw, nalezen
+    'c.plantcare.a.why': "Hangilerini toplayacağın soruluyor: renk, neyin olgun olduğunu söyler.", // nieuw, nalezen
+    'c.outdoors.a.why': "Fırtına geliyor: durmak ve içeri girmek güvenli seçimdir.", // nieuw, nalezen
+    'c.drawing.a.why': "Uyup uymadığı soruluyor: hayır, zorlamadan önce yeniden ölçmek.", // nieuw, nalezen
+    'c.weld.a.why': "Almak için izin isteniyor: henüz değil, sıcak metal önce soğumalı.", // nieuw, nalezen
+    'c.carparts.a.why': "Ne duyduğun soruluyor: hangi parça ve ne yaptığı.", // nieuw, nalezen
+    'c.carsafe.a.why': "İşe başlamak için izin isteniyor: henüz değil, çünkü araba elektrikli.", // nieuw, nalezen
     // u.communicate en u.feedback (5 november 2026).
     'd.explain.a.why': "Sorunun ne olduğu soruluyor: bu cevap ne olduğunu ve neye ihtiyaç olduğunu söylüyor.", // nieuw, nalezen
     'd.listen.a.why': "Şaka olup olmadığından emin değilsin: sormak, tahmin etmekten iyidir.", // nieuw, nalezen

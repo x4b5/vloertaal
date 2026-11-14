@@ -1677,6 +1677,43 @@ const sectorUnits: Unit[] = [
       ],
       [['Kun je even op het dak helpen?', 'Can you help on the roof for a moment?'], ['Ja, maar eerst mijn valbeveiliging.', 'Yes, but first my fall protection.']],
     ),
+    // "Measuring" (l.measure, 14 November 2026, the owner's request: every sector unit grows to four lessons).
+    lesson(
+      'measure',
+      'Measuring',
+      [
+        ['rolmaat', 'de rolmaat', 'the tape measure', '📏'],
+        ['waterpas', 'de waterpas', 'the spirit level (it shows if something is straight)', '⚖️'],
+        ['meten', 'meten', 'to measure', '📐'],
+        ['rechtlijn', 'recht', 'straight (not crooked)', '➖'],
+        ['plank', 'de plank', 'the plank, the board', '🪵'],
+        ['schroef', 'de schroef', 'the screw', '🪛'],
+      ],
+      [
+        ['Hoe lang is deze plank?', 'How long is this plank?'],
+        ['De muur is niet recht.', 'The wall is not straight.'],
+        ['Ik meet het twee keer.', 'I measure it twice.'],
+      ],
+      [['Hoe breed moet het zijn?', 'How wide must it be?'], ['Negentig centimeter. Ik schrijf het op.', 'Ninety centimetres. I am writing it down.']],
+    ),
+    lesson(
+      'siteday',
+      'A tidy building site',
+      [
+        ['bouwplaats', 'de bouwplaats', 'the building site', '🚧'],
+        ['uitvoerder', 'de uitvoerder', 'the site manager (the boss on the building site)', '👷'],
+        ['keet', 'de keet', 'the site cabin (for breaks and meetings)', '🏠'],
+        ['afval', 'het afval', 'the waste, the rubbish', '🗑️'],
+        ['container', 'de container', 'the skip (a very big bin for waste)', '🚛'],
+        ['struikelen', 'struikelen', 'to trip (fall over something)', '🤸'],
+      ],
+      [
+        ['Het afval gaat in de container.', 'The waste goes in the skip.'],
+        ['De uitvoerder is in de keet.', 'The site manager is in the cabin.'],
+        ['Pas op, hier kun je struikelen.', 'Careful, you can trip here.'],
+      ],
+      [['Waar moet dit hout naartoe?', 'Where must this wood go?'], ['In de container bij de ingang.', 'In the skip at the entrance.']],
+    ),
   ]),
   unit('factory', 'In the factory', 'In de productie', '🏭', '#4b5563', [
     lesson(
@@ -1739,6 +1776,25 @@ const sectorUnits: Unit[] = [
       ],
       [['Waarom maken we de band nu schoon?', 'Why are we cleaning the line now?'], ['Hierna komt een product zonder noten.', 'Next comes a product without nuts.']],
     ),
+    // "Handing over your shift" (l.shifts, 14 November 2026, the owner's request: every sector unit grows to four lessons).
+    lesson(
+      'shifts',
+      'Handing over your shift',
+      [
+        ['vroegedienst', 'de vroege dienst', 'the early shift', '🌅'],
+        ['latedienst', 'de late dienst', 'the late shift', '🌇'],
+        ['nachtdienst', 'de nachtdienst', 'the night shift', '🌙'],
+        ['overdracht', 'de overdracht', 'the handover (you tell the next shift what happened)', '🤝', false],
+        ['aflossen', 'aflossen', 'to take over from (the next person comes, and you can go)', '🔄', false],
+        ['teamleider', 'de teamleider', 'the team leader', '🧑‍💼'],
+      ],
+      [
+        ['Ik heb deze week late dienst.', 'I have the late shift this week.'],
+        ['Wie lost mij af?', 'Who takes over from me?'],
+        ['Machine twee had een storing.', 'Machine two had a fault.'],
+      ],
+      [['Is er iets gebeurd in jouw dienst?', 'Did anything happen in your shift?'], ['Ja. De band stond een half uur stil.', 'Yes. The line stood still for half an hour.']],
+    ),
   ]),
   unit('care', 'In care', 'In de zorg', '🧓', '#9d4edd', [
     lesson(
@@ -1780,6 +1836,43 @@ const sectorUnits: Unit[] = [
         ['Nee, dat mag ik niet. Ik haal de verpleegkundige.', 'No, I am not allowed to. I will get the nurse.'],
       ],
     ),
+    // "Say what you see" (l.signals, 14 November 2026, the owner's request: every sector unit grows to four lessons).
+    lesson(
+      'signals',
+      'Say what you see',
+      [
+        ['duizelig', 'duizelig', 'dizzy', '😵‍💫'],
+        ['misselijk', 'misselijk', 'sick (you feel you must throw up)', '🤢'],
+        ['benauwd', 'benauwd', 'short of breath', '😮‍💨'],
+        ['koorts', 'de koorts', 'the fever', '🤒'],
+        ['verward', 'verward', 'confused (the person does not know where they are)', '😕', false],
+        ['anders', 'anders', 'different (not as normal)', '🔀', false],
+      ],
+      [
+        ['Mevrouw is duizelig.', 'The lady is dizzy.'],
+        ['Meneer eet vandaag niet.', 'The gentleman is not eating today.'],
+        ['Kun je even komen kijken?', 'Can you come and have a look?'],
+      ],
+      [['Hoe gaat het met meneer Jansen?', 'How is Mr Jansen doing?'], ['Hij is verward. Dat is anders dan gisteren.', 'He is confused. That is different from yesterday.']],
+    ),
+    lesson(
+      'transfer',
+      'Helping someone get up',
+      [
+        ['tillift', 'de tillift', 'the hoist (a machine that lifts a person)', '🏗️'],
+        ['rollator', 'de rollator', 'the walking frame with wheels', '🦯'],
+        ['bed', 'het bed', 'the bed', '🛏️'],
+        ['opstaan', 'opstaan', 'to get up, to stand up', '🧍'],
+        ['gaanzitten', 'gaan zitten', 'to sit down', '🪑'],
+        ['voorzichtig', 'voorzichtig', 'careful, gentle', '🫶', false],
+      ],
+      [
+        ['Ik help u met opstaan.', 'I will help you get up.'],
+        ['Wilt u even gaan zitten?', 'Would you like to sit down for a moment?'],
+        ['Ik pak eerst de tillift.', 'First I will get the hoist.'],
+      ],
+      [['Kun je mevrouw even uit bed tillen?', 'Can you lift the lady out of bed?'], ['Niet alleen. Ik pak de tillift.', 'Not on my own. I will get the hoist.']],
+    ),
   ]),
   unit('horeca', 'In hospitality', 'In de horeca', '🍽️', '#b45309', [
     lesson(
@@ -1818,6 +1911,43 @@ const sectorUnits: Unit[] = [
       ],
       [['Mogen we de rekening?', 'May we have the bill?'], ['Natuurlijk, ik kom eraan.', 'Of course, I am coming.']],
     ),
+    // "Washing up" (l.dishes, 14 November 2026, the owner's request: every sector unit grows to four lessons).
+    lesson(
+      'dishes',
+      'Washing up',
+      [
+        ['afwas', 'de afwas', 'the washing-up, the dishes', '🧽'],
+        ['vaatwasser', 'de vaatwasser', 'the dishwasher', '🫧'],
+        ['bord', 'het bord', 'the plate', '🍽️'],
+        ['glas', 'het glas', 'the glass', '🥛'],
+        ['bestek', 'het bestek', 'the cutlery (knife, fork and spoon)', '🍴'],
+        ['afdrogen', 'afdrogen', 'to dry (with a cloth)', '🧻'],
+      ],
+      [
+        ['De vaatwasser is klaar.', 'The dishwasher is finished.'],
+        ['Pas op, er is een glas gebroken.', 'Careful, a glass has broken.'],
+        ['Er is geen schoon bestek meer.', 'There is no clean cutlery left.'],
+      ],
+      [['Zijn er nog schone glazen?', 'Are there any clean glasses left?'], ['Ja, ik breng ze meteen.', 'Yes, I will bring them right away.']],
+    ),
+    lesson(
+      'rush',
+      'When it is busy',
+      [
+        ['heet', 'heet', 'hot', '♨️'],
+        ['chef', 'de chef', 'the chef (the boss of the kitchen)', '👨‍🍳'],
+        ['terras', 'het terras', 'the terrace (tables outside)', '⛱️'],
+        ['tafel', 'de tafel', 'the table', '🪑'],
+        ['dienblad', 'het dienblad', 'the tray', '🍱'],
+        ['wachten', 'wachten', 'to wait', '⏳', false],
+      ],
+      [
+        ['Heet! Ik kom achter je langs.', 'Hot! I am passing behind you.'],
+        ['Tafel zes wacht op het eten.', 'Table six is waiting for the food.'],
+        ['Ik breng dit naar het terras.', 'I am taking this to the terrace.'],
+      ],
+      [['Kun je tafel vier doen?', 'Can you do table four?'], ['Ja, chef. Ik kom eraan.', 'Yes, chef. I am coming.']],
+    ),
   ]),
   unit('clean', 'Cleaning', 'Schoonmaken', '🧽', '#0e7490', [
     lesson(
@@ -1855,6 +1985,43 @@ const sectorUnits: Unit[] = [
         ['Meng nooit schoonmaakmiddelen.', 'Never mix cleaning products.'],
       ],
       [['Mag ik hier lopen?', 'May I walk here?'], ['Pas op, de vloer is nog glad.', 'Careful, the floor is still slippery.']],
+    ),
+    // "Your round" (l.rounds, 14 November 2026, the owner's request: every sector unit grows to four lessons).
+    lesson(
+      'rounds',
+      'Your round',
+      [
+        ['kantoor', 'het kantoor', 'the office', '🏢'],
+        ['verdieping', 'de verdieping', 'the floor (the 1st or 2nd floor of a building)', '🔢'],
+        ['gang', 'de gang', 'the hallway, the corridor', '🚪'],
+        ['toiletpapier', 'het toiletpapier', 'the toilet paper', '🧻'],
+        ['zeep', 'de zeep', 'the soap', '🧼'],
+        ['bijvullen', 'bijvullen', 'to refill, to top up', '➕'],
+      ],
+      [
+        ['Ik begin op de tweede verdieping.', 'I start on the second floor.'],
+        ['Het toiletpapier is op.', 'The toilet paper has run out.'],
+        ['Ik vul de zeep bij.', 'I am refilling the soap.'],
+      ],
+      [['Heb je kantoor drie al gedaan?', 'Have you done office three yet?'], ['Nee, daar werkt nog iemand.', 'No, someone is still working there.']],
+    ),
+    lesson(
+      'colours',
+      'Colours and cloths',
+      [
+        ['doek', 'de doek', 'the cloth', '🧣'],
+        ['spons', 'de spons', 'the sponge', '🧽'],
+        ['rood', 'rood', 'red', '🟥'],
+        ['blauw', 'blauw', 'blue', '🟦'],
+        ['geel', 'geel', 'yellow', '🟨'],
+        ['groen', 'groen', 'green', '🟩'],
+      ],
+      [
+        ['De rode doek is voor de wc.', 'The red cloth is for the toilet.'],
+        ['Pak een schone doek.', 'Take a clean cloth.'],
+        ['Welke kleur gebruik ik hier?', 'Which colour do I use here?'],
+      ],
+      [['Mag ik deze doek voor het bureau gebruiken?', 'May I use this cloth for the desk?'], ['Nee, de rode is alleen voor de wc.', 'No, the red one is only for the toilet.']],
     ),
   ]),
 ];
@@ -2074,6 +2241,43 @@ const shopUnit = unit('shop', 'In the shop', 'In de winkel', '🛒', '#2a9d8f', 
       ['Mag ik even uw ID zien?', 'May I see your ID, please?'],
     ],
     [['Kan ik hier pinnen?', 'Can I pay by card here?'], ['Ja hoor, dat kan.', 'Yes, sure, you can.']],
+  ),
+  // "Helping a customer" (l.shophelp, 14 November 2026, the owner's request: every sector unit grows to four lessons).
+  lesson(
+    'shophelp',
+    'Helping a customer',
+    [
+      ['aanbieding', 'de aanbieding', 'the special offer (cheaper for a short time)', '🔖'],
+      ['korting', 'de korting', 'the discount (you pay less)', '💸'],
+      ['uitverkocht', 'uitverkocht', 'sold out', '🚫'],
+      ['magazijn', 'het magazijn', 'the stockroom, the warehouse', '📦'],
+      ['tas', 'de tas', 'the bag', '🛍️'],
+      ['bestellen', 'bestellen', 'to order', '📝'],
+    ],
+    [
+      ['Dat is helaas uitverkocht.', 'Sorry, that is sold out.'],
+      ['Wilt u er een tas bij?', 'Would you like a bag with it?'],
+      ['Deze koffie is in de aanbieding.', 'This coffee is on special offer.'],
+    ],
+    [['Hebt u nog melk?', 'Do you have any milk left?'], ['Ik kijk even voor u in het magazijn.', 'I will have a look in the stockroom for you.']],
+  ),
+  lesson(
+    'shoptrouble',
+    'Difficult moments',
+    [
+      ['bedrijfsleider', 'de bedrijfsleider', 'the store manager', '🧑‍💼'],
+      ['beveiliger', 'de beveiliger', 'the security guard', '💂'],
+      ['dief', 'de dief', 'the thief', '🥷'],
+      ['stelen', 'stelen', 'to steal', '🫳'],
+      ['schreeuwen', 'schreeuwen', 'to shout', '🗣️'],
+      ['geldterug', 'geld terug', 'money back', '↩️'],
+    ],
+    [
+      ['Ik haal de bedrijfsleider erbij.', 'I will get the store manager.'],
+      ['Wilt u niet schreeuwen, alstublieft?', 'Please do not shout.'],
+      ['Ik denk dat iemand iets steelt.', 'I think someone is stealing something.'],
+    ],
+    [['Ik wil nu mijn geld terug!', 'I want my money back now!'], ['Ik begrijp het. Ik haal even mijn collega.', 'I understand. I will get my colleague.']],
   ),
 ]);
 
@@ -2409,6 +2613,44 @@ const kasUnit = unit('kas', 'In the greenhouse', 'In de kas', '🌱', '#4d7c0f',
       ['Waar staat de plukkar?', 'Where is the picking trolley?'],
     ],
     [['Mag ik in kas drie werken?', 'May I work in greenhouse three?'], ['Nee, nog niet. Die is net bespoten.', 'No, not yet. It was just sprayed.']],
+  ),
+  // "Caring for the plant" (l.plantcare, 14 November 2026, the owner's request: every sector unit grows to four lessons).
+  lesson(
+    'plantcare',
+    'Caring for the plant',
+    [
+      // The id is not 'blad': that is the saying "geen blad voor de mond nemen" (l.plain).
+    ['plantblad', 'het blad', 'the leaf', '🍃'],
+      ['stengel', 'de stengel', 'the stem', '🌿'],
+      ['bloem', 'de bloem', 'the flower', '🌼'],
+      ['knippen', 'knippen', 'to cut (with scissors)', '✂️'],
+      ['tomaat', 'de tomaat', 'the tomato', '🍅'],
+      ['rijp', 'rijp', 'ripe (ready to pick)', '🔴'],
+    ],
+    [
+      ['Deze tomaat is nog niet rijp.', 'This tomato is not ripe yet.'],
+      ['Ik knip het blad weg.', 'I am cutting the leaf away.'],
+      ['De stengel is gebroken.', 'The stem is broken.'],
+    ],
+    [['Welke tomaten pluk ik?', 'Which tomatoes do I pick?'], ['Alleen de rode. De groene zijn nog niet rijp.', 'Only the red ones. The green ones are not ripe yet.']],
+  ),
+  lesson(
+    'outdoors',
+    'Working outside',
+    [
+      ['land', 'het land', 'the field (where plants grow outside)', '🌾'],
+      ['regen', 'de regen', 'the rain', '🌧️'],
+      ['zon', 'de zon', 'the sun', '☀️'],
+      ['laarzen', 'de laarzen', 'the boots', '🥾'],
+      ['regenpak', 'het regenpak', 'the rain suit (a jacket and trousers against rain)', '🧥'],
+      ['onweer', 'het onweer', 'the thunderstorm', '⛈️'],
+    ],
+    [
+      ['Het regent. Ik trek mijn regenpak aan.', 'It is raining. I am putting on my rain suit.'],
+      ['Mijn laarzen zijn nat.', 'My boots are wet.'],
+      ['De zon is fel vandaag.', 'The sun is strong today.'],
+    ],
+    [['Er komt onweer. Wat doen we?', 'A thunderstorm is coming. What do we do?'], ['We stoppen en gaan naar binnen.', 'We stop and go inside.']],
   ),
 ]);
 
@@ -2873,6 +3115,43 @@ const techUnit = unit('tech', 'In the workshop', 'In de werkplaats', '🔩', '#5
     ],
     [['Kun je die lamp even vervangen?', 'Can you replace that lamp?'], ['Is de stroom eraf? Anders wacht ik op de elektricien.', 'Is the power off? If not, I will wait for the electrician.']],
   ),
+  // "The drawing and the measure" (l.drawing, 14 November 2026, the owner's request: every sector unit grows to four lessons).
+  lesson(
+    'drawing',
+    'The drawing and the measure',
+    [
+      ['tekening', 'de tekening', 'the drawing (it shows how the part must be)', '📐'],
+      ['maat', 'de maat', 'the measure, the size', '📏'],
+      ['millimeter', 'de millimeter', 'the millimetre', '🔬', false],
+      ['schuifmaat', 'de schuifmaat', 'the caliper (it measures very exactly)', '🗜️'],
+      ['passen', 'passen', 'to fit', '🧩'],
+      ['bout', 'de bout', 'the bolt', '🔩'],
+    ],
+    [
+      ['Wat is de maat op de tekening?', 'What is the measure on the drawing?'],
+      ['Dit onderdeel past niet.', 'This part does not fit.'],
+      ['Het is twee millimeter te groot.', 'It is two millimetres too big.'],
+    ],
+    [['Past de bout?', 'Does the bolt fit?'], ['Nee. Ik meet het nog een keer.', 'No. I will measure it one more time.']],
+  ),
+  lesson(
+    'weld',
+    'Welding and hot work',
+    [
+      ['lassen', 'lassen', 'to weld (join metal with great heat)', '🔥'],
+      ['laskap', 'de laskap', 'the welding helmet', '🥽'],
+      ['rook', 'de rook', 'the smoke', '🌫️'],
+      ['afzuiging', 'de afzuiging', 'the extraction (it takes the smoke away)', '🌬️'],
+      ['afkoelen', 'afkoelen', 'to cool down', '❄️'],
+      ['brandwond', 'de brandwond', 'the burn (a wound from heat)', '🩹'],
+    ],
+    [
+      ['Ik zet mijn laskap op.', 'I am putting on my welding helmet.'],
+      ['Zet de afzuiging aan.', 'Switch on the extraction.'],
+      ['Pas op, het metaal is nog heet.', 'Careful, the metal is still hot.'],
+    ],
+    [['Mag ik dit al pakken?', 'May I pick this up already?'], ['Nee, wacht. Het moet eerst afkoelen.', 'No, wait. It must cool down first.']],
+  ),
 ]);
 
 const garageUnit = unit('garage', 'In the garage', 'In de garage', '🚗', '#1f6f8b', [
@@ -2911,6 +3190,43 @@ const garageUnit = unit('garage', 'In the garage', 'In de garage', '🚗', '#1f6
       ['Mag ik een proefrit maken?', 'May I take a test drive?'],
     ],
     [['De remmen zijn ook slecht. Doe je die meteen?', 'The brakes are bad too. Will you do them right away?'], ['Eerst vraag ik het aan de chef. De klant moet akkoord zijn.', 'First I ask my supervisor. The customer must agree.']],
+  ),
+  // "Parts of the car" (l.carparts, 14 November 2026, the owner's request: every sector unit grows to four lessons).
+  lesson(
+    'carparts',
+    'Parts of the car',
+    [
+      ['motor', 'de motor', 'the engine', '⚙️'],
+      ['motorkap', 'de motorkap', 'the bonnet (the cover over the engine)', '🚘'],
+      ['rem', 'de rem', 'the brake', '🛑'],
+      ['lamp', 'de lamp', 'the light, the lamp', '💡'],
+      ['ruitenwisser', 'de ruitenwisser', 'the windscreen wiper', '🌧️'],
+      ['stoel', 'de stoel', 'the seat, the chair', '💺'],
+    ],
+    [
+      ['Doe de motorkap open.', 'Open the bonnet.'],
+      ['De lamp links voor is kapot.', 'The front left light is broken.'],
+      ['De remmen maken lawaai.', 'The brakes are making noise.'],
+    ],
+    [['Wat hoor je?', 'What do you hear?'], ['De motor maakt een raar geluid.', 'The engine makes a strange sound.']],
+  ),
+  lesson(
+    'carsafe',
+    'Petrol, gas and power',
+    [
+      ['krik', 'de krik', 'the jack (it lifts one side of the car)', '🔧'],
+      ['benzine', 'de benzine', 'the petrol', '⛽'],
+      ['elektrischeauto', 'de elektrische auto', 'the electric car', '🚙'],
+      ['oranje', 'oranje', 'orange', '🟧'],
+      ['morsen', 'morsen', 'to spill', '💦'],
+      ['lap', 'de lap', 'the rag (a cloth for dirty work)', '🧽'],
+    ],
+    [
+      ['Ik ruik benzine.', 'I smell petrol.'],
+      ['Er is olie gemorst. Ik pak een lap.', 'Oil has been spilled. I am getting a rag.'],
+      ['De oranje kabels raak ik niet aan.', 'I do not touch the orange cables.'],
+    ],
+    [['Mag ik aan deze auto werken?', 'May I work on this car?'], ['Nog niet. Het is een elektrische auto.', 'Not yet. It is an electric car.']],
   ),
 ]);
 
@@ -3619,6 +3935,290 @@ const deliveryTips = [
   ),
 ];
 
+// ---- Every sector unit at four lessons (the owner's request, 14 November 2026) ----
+// One tip per new sector lesson (the lessons themselves stand in their own units above). None of
+// them states a right or an amount: they are about how the work is done (NONE) or about rules that
+// differ per company (HOUSE_LINE). The short situations are in tests/situationLength.test.ts.
+
+const sectorFourTips = [
+  // Bouw.
+  tipFor(
+    'measure',
+    '📏',
+    'Measure twice, saw once',
+    'On a building site, measures are often in millimetres. So "nine hundred" can mean 90 centimetres. Not sure? Ask: "Is that millimetres or centimetres?" Say the number back, and write it down. Measure twice before you saw or drill: a plank that is too short stays too short. Did you make a mistake? Say it right away. Then the team can still fix it, and it costs less.',
+    ['Is dat in millimeters of in centimeters?', 'Is that in millimetres or in centimetres?'],
+    'Your colleague calls a measure. You did not hear it well. What do you do?',
+    [
+      'Say the number back, and ask if it is right.',
+      'Saw the plank at what you think you heard.',
+      'Wait until he comes to look himself.',
+    ],
+    'A wrong measure costs material and time. Saying the number back takes two seconds, and everyone on a building site does it.',
+    NONE,
+  ),
+  tipFor(
+    'siteday',
+    '🧹',
+    'A tidy site is a safe site',
+    'On a building site, tidying up is part of the job, for everyone. Loose planks, cables and waste make people trip and fall. So clear your own place during the day, not only at the end. Waste is sorted: wood, stone and metal often go in different skips. Not sure which one? Ask. Do you see a nail sticking out, or a hole without a cover? Fix it if you can do that safely, or tell the site manager (de uitvoerder).',
+    ['Ik ruim dit even op. Dan struikelt er niemand.', 'I will clear this up. Then nobody trips.'],
+    'Planks with nails lie on the path. They are not yours. What do you do?',
+    [
+      'Move them aside, or tell the site manager.',
+      'Step over them: they are not your planks.',
+      'Wait: someone else will clear them.',
+    ],
+    'Everyone uses the same paths. Who sees a danger, does something about it: that is normal on a building site.',
+    HOUSE_LINE,
+  ),
+  // Productie.
+  tipFor(
+    'shifts',
+    '🤝',
+    'Tell the next shift',
+    'A factory often runs day and night, in shifts. At the end of your shift, a colleague takes over your place. Do not just leave: wait until your colleague is there. Tell in a few words what happened: a fault, a product that was wrong, something that is not finished. Many companies also have a list or a screen for this. A problem you do not pass on comes back in the next shift, and then nobody knows why.',
+    ['De machine had een storing. Nu werkt hij weer.', 'The machine had a fault. Now it works again.'],
+    'Your shift is over. Your colleague is five minutes late. What do you do?',
+    [
+      'Wait, and tell the team leader.',
+      'Go home: your shift is over.',
+      'Stop the machine and leave.',
+    ],
+    'A running machine may not stand alone. When you wait and report it, the work goes on safely, and the team leader can solve it.',
+    HOUSE_LINE,
+  ),
+  // Zorg. What a helper may do differs per home and per training: the tips say "tell the nurse" and
+  // "work the way you were shown", and name no task or rule by law.
+  tipFor(
+    'signals',
+    '🤒',
+    'You see the client every day',
+    'You are often the one who sees a client the most. So you notice it first when something is different: eating less, more pain, confused, short of breath. You do not have to know what it is. Say what you see, and say when you saw it. Tell the nurse the same day, and write it down if that is your task. Does it look serious? Do not wait: call the nurse right away. Better one time too many than one time too few.',
+    ['Mevrouw eet niet en is duizelig. Dat is anders dan normaal.', 'The lady is not eating and is dizzy. That is different from normal.'],
+    'A client is quiet today and does not want to eat. Normally she talks a lot. What do you do?',
+    [
+      'Tell the nurse what you see, today.',
+      'Wait a few days: maybe it passes.',
+      'Give her a pill from the cupboard.',
+    ],
+    'A small change can be the first sign of an illness. You do not decide what it is: the nurse does. But she can only act if you tell her.',
+    NONE,
+  ),
+  tipFor(
+    'transfer',
+    '🛏️',
+    'Tell first, then help',
+    'Before you touch a client, say what you are going to do: "Ik help u nu met opstaan." Then the client is not startled, and can help along. Let the client do what they can still do: that keeps them strong. Do not lift a person on your own. Use the aids that are there, like the hoist, and work the way you were shown. Not shown yet? Ask first. Your back must last a whole working life.',
+    ['Ik help u nu met opstaan. Bent u er klaar voor?', 'I will help you get up now. Are you ready?'],
+    'A client wants to get out of bed. You have not learned to use the hoist yet. What do you do?',
+    [
+      'Ask a colleague who knows the hoist.',
+      'Lift her yourself: she is not heavy.',
+      'Try the hoist: it cannot be hard.',
+    ],
+    'Lifting a person the wrong way can hurt the client and your back. Asking a colleague takes a few minutes. A fall can take months.',
+    HOUSE_LINE,
+  ),
+  // Horeca.
+  tipFor(
+    'dishes',
+    '🥛',
+    'Broken glass: say it right away',
+    'In a kitchen, glass breaks. That is normal, and nobody is angry about it. But say it right away, loud and clear: "Glas!" Do not pick up the pieces with your bare hands: use a brush. Did glass fall near food, or in the ice? Then that food or that ice must be thrown away, all of it. A small piece of glass in a meal is very dangerous for a guest. Glass goes in its own bin, not in a bag that someone lifts.',
+    ['Pas op, glas! Ik ruim het meteen op.', 'Careful, glass! I will clear it up right away.'],
+    'A glass breaks above the ice for the drinks. It is very busy. What do you do?',
+    [
+      'Say it, and throw away all the ice.',
+      'Take out the pieces you can see.',
+      'Say nothing: it is too busy now.',
+    ],
+    'You cannot see small pieces of glass in ice. New ice costs little. A guest with glass in a drink can get badly hurt.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'rush',
+    '♨️',
+    'Short words when it is busy',
+    'When it is busy, people in a kitchen talk in short words: "Heet!", "Achter!", "Tafel zes!" That is not rude. It is fast and safe: everyone knows where the hot pans and the knives are. Call "Heet!" or "Achter!" yourself when you pass behind someone. Did you hear an order? Say it back: "Ja, chef." Then the chef knows you heard it. Was someone short with you in the rush? Often that is over after the service. Does it stay unpleasant? Then talk about it at a quiet moment.',
+    ['Achter! Ik heb een hete pan.', 'Behind! I have a hot pan.'],
+    'It is very busy. The chef calls: "Tafel zes, nu!" He does not say please. What do you do?',
+    [
+      'Say "Ja, chef", and do it.',
+      'Stop, and say that he is rude.',
+      'Do it, but say nothing back.',
+    ],
+    'In the rush, short is normal and not meant personally. Saying it back shows that you heard it. That keeps the kitchen fast and safe.',
+    NONE,
+  ),
+  // Schoonmaak.
+  tipFor(
+    'rounds',
+    '🏢',
+    'Cleaning where people work',
+    'Often you clean while other people are still at work. Greet them, and ask: "Mag ik hier even schoonmaken?" Most people say yes. Is someone in a meeting or on the phone? Then come back later. Do not move papers on a desk, and do not read them: clean around them. You have a set time for your round. Is the time too short to do it well? Do not skip rooms in silence. Tell your supervisor what you could not do, and why.',
+    ['Goedemiddag. Mag ik hier even schoonmaken?', 'Good afternoon. May I clean here for a moment?'],
+    'Your round takes longer today: one room was very dirty. Two offices are not done. What do you do?',
+    [
+      'Tell your supervisor which two, and why.',
+      'Go home, and hope nobody sees it.',
+      'Do them very fast, without the floors.',
+    ],
+    'A customer who finds a dirty office complains. A supervisor who knows about it can explain it, or give you more time. Telling it is not failing.',
+    NONE,
+  ),
+  // The colours differ per company (often red for the toilet and blue for desks): "often", and ask.
+  tipFor(
+    'colours',
+    '🟥',
+    'Every colour has its place',
+    'Many cleaning companies work with colours. Each colour of cloth, sponge and bucket is for one place. Often red is for the toilet, and blue is for desks and tables. This way, dirt from the toilet does not get onto a desk or into a kitchen. The colours can be different at each company, so ask on your first day. Is a cloth dirty, or did it fall on the floor? Take a clean one. Used cloths go in the laundry bag, not back on the cart.',
+    ['Welke kleur is hier voor de wc?', 'Which colour is for the toilet here?'],
+    'Your blue cloths are finished. You must still clean three desks. You only have red cloths. What do you do?',
+    [
+      'Get new blue cloths first.',
+      'Use a red cloth: clean is clean.',
+      'Use one blue cloth again for all three.',
+    ],
+    'A colour system only works when everyone always follows it. Then nobody has to wonder where a cloth has been.',
+    HOUSE_LINE,
+  ),
+  // Winkel.
+  tipFor(
+    'shophelp',
+    '🛍️',
+    '"I do not know" is not the end',
+    'A customer asks something and you do not know the answer. That is fine: nobody knows everything. But do not say only "nee" or "weet ik niet", and do not walk away. Say: "Ik vraag het even voor u", and get a colleague. Is a product sold out? Say when it comes in again, or show something like it. Look at the customer and greet them, also when you are busy stocking shelves. Did you not understand the question? Ask the customer to say it again, slowly.',
+    ['Dat weet ik niet. Ik vraag het even voor u.', 'I do not know that. I will ask for you.'],
+    'A customer asks for a product. You do not know the word. What do you do?',
+    [
+      'Say: "Ik vraag het even voor u."',
+      'Say "nee", and go on working.',
+      'Point somewhere, so she walks away.',
+    ],
+    'A customer does not mind that you are new or still learning Dutch. A customer does mind getting no help. Getting a colleague is good service.',
+    NONE,
+  ),
+  // What a shop worker may do with a thief differs per company (and holding someone is a matter
+  // for the law): the tip says "do not hold, tell the manager or the guard", and names no right.
+  tipFor(
+    'shoptrouble',
+    '🛡️',
+    'An angry customer or a thief: you come first',
+    'Sometimes a customer gets angry, or you see someone stealing. Your safety comes first, always. With an angry customer: stay calm, do not shout back, and get the store manager. You do not have to solve it alone. Do you see a thief? Do not run after them, do not hold them, and do not block the door. Look well at what you see, and tell the manager or the security guard right away. Things can be replaced. You cannot. Were you scared afterwards? Talk about it with your supervisor.',
+    ['Ik zie iemand die iets in zijn tas stopt.', 'I see someone putting something in his bag.'],
+    'A man puts a bottle under his coat and walks to the exit. What do you do?',
+    [
+      'Tell the manager or the guard.',
+      'Run after him and hold his arm.',
+      'Stand in front of the door.',
+    ],
+    'A thief who is stopped can get violent. The manager and the guard know what to do. No product is worth getting hurt for.',
+    HOUSE_LINE,
+  ),
+  // Tuinbouw. Plant hygiene (hands, clothes, a foot bath, no own tomatoes or peppers) is a company
+  // rule against plant viruses, not a law for the worker: HOUSE_LINE.
+  tipFor(
+    'plantcare',
+    '🧼',
+    'Clean hands, healthy plants',
+    'Plants can get sick too. A virus goes from plant to plant on hands, gloves, knives and clothes. In a greenhouse, one sick plant can mean that thousands of plants must go. That is why there are strict rules at the door: wash your hands, wear the work clothes of the company, and walk through the foot bath. Many greenhouses do not allow your own tomatoes, peppers or cucumbers in your lunch. Do you see a plant that looks strange? Do not touch it. Tell your supervisor which row it is.',
+    ['In rij twaalf staat een zieke plant.', 'There is a sick plant in row twelve.'],
+    'You see a plant with strange yellow spots. What do you do?',
+    [
+      'Leave it, and tell your supervisor.',
+      'Pull it out and take it with you.',
+      'Cut off the leaves with spots.',
+    ],
+    'When you touch a sick plant, the virus goes with you to the next plants. Your supervisor knows how to take it away safely.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'outdoors',
+    '⛈️',
+    'Sun, rain and thunder',
+    'Outside, you work in all kinds of weather. In the sun: cover your head and your skin, use sunscreen, and drink water often. In the rain: wear your rain suit and boots, and put on dry clothes in your break. Wet and cold make you sick and slow. Is there thunder? Then stop and go inside, or into a car or a van. Not under a tree, and not in an open field. Do you need rain clothes or boots for the work? Ask your employer about them before you buy them yourself.',
+    ['Het gaat onweren. Zullen we naar binnen gaan?', 'There is going to be thunder. Shall we go inside?'],
+    'You are on the field. You hear thunder nearby. Your row is almost finished. What do you do?',
+    [
+      'Stop, and go inside or into the van.',
+      'Finish the row quickly first.',
+      'Wait under the big tree.',
+    ],
+    'Lightning hits the highest point, and on a flat field that is you. The row can wait a quarter of an hour.',
+    NONE,
+  ),
+  // Techniek.
+  tipFor(
+    'drawing',
+    '📐',
+    'The drawing decides',
+    'In a workshop you make what the drawing says, not what looks about right. The measures are in millimetres, and one millimetre can be too much. Does a part not fit? Do not use force, and do not make the hole bigger "just a little". Measure again, and look at the drawing. Can you not read the drawing, or is a measure missing? Ask before you start. A question costs a minute. A wrong part costs material and hours.',
+    ['Ik kan deze maat niet lezen. Kun je even kijken?', 'I cannot read this measure. Can you have a look?'],
+    'A part does not fit: it is one millimetre too big. With a hammer it would go in. What do you do?',
+    [
+      'Measure again, and ask what to do.',
+      'Hit it in with the hammer.',
+      'Grind a bit off, and say nothing.',
+    ],
+    'A part that goes in with force can break later, at the customer. When you report it, the cause can be found.',
+    NONE,
+  ),
+  // Cooling a burn with water for at least ten minutes is the common first-aid advice (Het Oranje
+  // Kruis, the Brandwondenstichting): advice, no legal claim. Who may weld, and where, differs per
+  // company: HOUSE_LINE.
+  tipFor(
+    'weld',
+    '🔥',
+    'Hot metal looks cold',
+    'Welding gives very bright light. Do not look into it without a welding helmet, also not from a distance: your eyes can burn, and you feel it only hours later. Is a colleague welding near you? Look away, or stand behind the screen. Metal that was just welded or ground looks normal, but it is very hot. Do not pick it up with bare hands. Welding smoke is bad for your lungs: switch on the extraction. A burn? Cool it with water right away, for at least ten minutes, and report it.',
+    ['Is dit al afgekoeld?', 'Has this cooled down yet?'],
+    'A colleague is welding next to you. You have no welding helmet on. What do you do?',
+    [
+      'Look away, and stand behind the screen.',
+      'Watch for a moment: you can learn from it.',
+      'Close your eyes halfway.',
+    ],
+    'The light of welding burns your eyes, also from the side and from a distance. You feel the pain only later, often at night.',
+    HOUSE_LINE,
+  ),
+  // Garage.
+  tipFor(
+    'carparts',
+    '💺',
+    'The car belongs to the customer',
+    'A car in the garage is not yours: it is the customer’s. Put a cover on the seat and on the steering wheel before you get in, and work with clean hands inside. Leave the seat, the mirrors and the radio the way they were. Did you have to move the seat? Put it back. Do not touch personal things in the car. Did you make a scratch or a stain? Tell your supervisor right away. A customer who finds it at home does not come back.',
+    ['Ik heb een kras gemaakt. Het spijt me.', 'I made a scratch. I am sorry.'],
+    'You make a small scratch on a customer’s car door. Nobody saw it. What do you do?',
+    [
+      'Tell your supervisor right away.',
+      'Say nothing: it is very small.',
+      'Rub it away with a cloth, and hope.',
+    ],
+    'Everyone makes a mistake sometimes. A garage can repair a scratch, or tell the customer honestly. A hidden scratch costs the garage its good name.',
+    NONE,
+  ),
+  // ⚖️ check: Work on the high-voltage system of an electric or hybrid car is only for people with
+  // the right training (NEN 9140; the employer appoints them). The tip says "only a mechanic with
+  // special training" and names no norm. Exhaust gas indoors (carbon monoxide): extraction or open
+  // doors is common practice, no legal claim in the text.
+  tipFor(
+    'carsafe',
+    '🟧',
+    'Orange cables and running engines',
+    'An electric or hybrid car has a battery with very high power. The cables for it are orange. Do not touch or loosen them: a mechanic with special training must make the car safe first. Is there a sign or a cone at the car? Then stay away. An engine that runs inside makes a gas that you cannot smell or see, and it can kill. So: put the exhaust hose on, or open the doors. Do you smell petrol? No sparks and no smoking. Tell your supervisor right away.',
+    ['Is deze auto al veilig gemaakt?', 'Has this car been made safe yet?'],
+    'You must change a wheel on an electric car. Under the car you see a loose orange cable. What do you do?',
+    [
+      'Touch nothing, and get the trained mechanic.',
+      'Push the cable back with your hand.',
+      'Push it back with a dry cloth.',
+    ],
+    'The battery of an electric car has enough power to kill, also when the car is off. Only someone with the training may touch these parts.',
+    HOUSE_LINE,
+  ),
+];
+
 // ---- Course order of everything in this file ----
 
 const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
@@ -3663,7 +4263,7 @@ export const workUnits: Unit[] = [
 const lessonOrder = [toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips].sort(
+export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

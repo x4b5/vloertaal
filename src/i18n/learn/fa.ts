@@ -129,6 +129,23 @@ const t: CultureTranslation = {
     'c.road.a.why': "یک سرویس دیگر خواسته‌اند: نه، چون اول استراحت است.", // nieuw, nalezen
     'c.backtowork.a.why': "پرسیده‌اند حالت چطور است: یک بلهٔ کوتاه، و اینکه آرام‌آرام پیش می‌روی.", // nieuw, nalezen
     'c.feelwell.a.why': "پرسیده‌اند حالت چطور است: یک «نه چندان» صادقانه اشکالی ندارد.", // nieuw, nalezen
+    'c.measure.a.why': "پرسیده‌اند پهنا چقدر: یک عدد با واحدش، و نوشتن آن.", // nieuw, nalezen
+    'c.siteday.a.why': "پرسیده‌اند چوب کجا برود: یک جا، و اینکه آن جا کجاست.", // nieuw, nalezen
+    'c.shifts.a.why': "پرسیده‌اند چه اتفاقی افتاد: بله، و چه چیزی، و چه مدت.", // nieuw, nalezen
+    'c.signals.a.why': "پرسیده‌اند حالش چطور است: چیزی که می‌بینی، و اینکه تازه است.", // nieuw, nalezen
+    'c.transfer.a.why': "خواسته‌اند کسی را بلند کنی: تنهایی نه، اول بالابر.", // nieuw, nalezen
+    'c.dishes.a.why': "لیوان تمیز خواسته‌اند: بله، و اینکه کِی می‌رسد.", // nieuw, nalezen
+    'c.rush.a.why': "دستور سرآشپز: تکرارش می‌کنی، تا بداند شنیده‌ای.", // nieuw, nalezen
+    'c.rounds.a.why': "پرسیده‌اند دفتر تمیز شده یا نه: نه، با دلیل.", // nieuw, nalezen
+    'c.colours.a.why': "دربارهٔ یک دستمال پرسیده‌اند: نه، چون قرمز برای توالت است.", // nieuw, nalezen
+    'c.shophelp.a.why': "شیر خواسته‌اند: نه یک «نه»، بلکه نگاه کردن در انبار.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "مشتری عصبانی: کلمه‌های آرام، و یک همکار می‌آید.", // nieuw, nalezen
+    'c.plantcare.a.why': "پرسیده‌اند کدام را بچینند: رنگ نشان می‌دهد کدام رسیده است.", // nieuw, nalezen
+    'c.outdoors.a.why': "رعد و برق در راه است: دست کشیدن و داخل رفتن کار ایمن است.", // nieuw, nalezen
+    'c.drawing.a.why': "پرسیده‌اند جا می‌رود یا نه: نه، و دوباره اندازه گرفتن قبل از زور زدن.", // nieuw, nalezen
+    'c.weld.a.why': "پرسیده‌اند می‌شود برداشت یا نه: هنوز نه، فلز داغ باید اول خنک شود.", // nieuw, nalezen
+    'c.carparts.a.why': "پرسیده‌اند چه می‌شنوی: کدام قطعه، و چه می‌کند.", // nieuw, nalezen
+    'c.carsafe.a.why': "پرسیده‌اند می‌شود کار را شروع کرد: هنوز نه، چون ماشین برقی است.", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 nov 2026)
     'd.explain.a.why': "پرسیده‌اند چه مشکلی هست: این جواب می‌گوید چه شده، و چه لازم است.", // nieuw, nalezen
     'd.listen.a.why': "مطمئن نیستی شوخی است یا نه: پرسیدن بهتر از حدس زدن است.", // nieuw, nalezen

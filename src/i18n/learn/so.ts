@@ -122,6 +122,23 @@ const t: CultureTranslation = {
     'c.healthy.a.why': "Kaniini ayaa la soo bandhigay: maya edeb leh, oo sabab leh.", // nieuw, nalezen
     'd.newcolleague.a.why': "“Waxaan u malaynayaa” weli lama hubo: inaad codsato inuu ku tuso ayaa hubinaysa inay shaqaynayso.", // nieuw, nalezen
     'c.food.a.why': "Waxaa la weydiiyay sababta khadka loo nadiifinayo: badeecada xigta looska kuma jiro.", // nieuw, nalezen
+    'c.measure.a.why': "Waxaa la weydiiyay ballaca: tiro iyo halbeeggeeda, oo la qoray.", // nieuw, nalezen
+    'c.siteday.a.why': "Waxaa la weydiiyay meesha alwaaxdu aadayso: meel, iyo halka ay ku taal.", // nieuw, nalezen
+    'c.shifts.a.why': "Waxaa la weydiiyay wixii dhacay: haa, waxa dhacay, iyo muddada.", // nieuw, nalezen
+    'c.signals.a.why': "Waxaa la weydiiyay sida uu yahay: waxa aad aragto, iyo inay cusub tahay.", // nieuw, nalezen
+    'c.transfer.a.why': "Waxaa la codsaday in qof la qaado: keligaa maya, wiishka dadka ayaa ka horreeya.", // nieuw, nalezen
+    'c.dishes.a.why': "Waxaa la weydiiyay galaasyo nadiif ah: haa, iyo goorta ay imanayaan.", // nieuw, nalezen
+    'c.rush.a.why': "Amar shefka ka yimid: dib ayaa loo yiri, si uu u ogaado inaad maqashay.", // nieuw, nalezen
+    'c.rounds.a.why': "Waxaa la weydiiyay in xafiiska la dhammeeyay: maya, iyo sababta.", // nieuw, nalezen
+    'c.colours.a.why': "Waxaa la weydiiyay maro: maya, sababtoo ah casaanka waxaa leh musqusha.", // nieuw, nalezen
+    'c.shophelp.a.why': "Waxaa la weydiiyay caano: ma aha “maya”, ee bakhaarka ayaa la eegayaa.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "Macmiil xanaaqsan: erayo deggan, saaxiib shaqona wuu imanayaa.", // nieuw, nalezen
+    'c.plantcare.a.why': "Waxaa la weydiiyay kuwa la gurayo: midabka ayaa sheega waxa bislaaday.", // nieuw, nalezen
+    'c.outdoors.a.why': "Onkod ayaa soo socda: in la joojiyo oo gudaha la galo ayaa ah doorashada ammaanka ah.", // nieuw, nalezen
+    'c.drawing.a.why': "Waxaa la weydiiyay inuu ku habboon yahay: maya, oo mar kale ayaa la cabbirayaa ka hor inta aan xoog la isticmaalin.", // nieuw, nalezen
+    'c.weld.a.why': "Waxaa la weydiiyay in la qaadi karo: weli maya, birta kulul waa inay marka hore qabowdaa.", // nieuw, nalezen
+    'c.carparts.a.why': "Waxaa la weydiiyay waxa aad maqlayso: qaybta, iyo waxa ay samaynayso.", // nieuw, nalezen
+    'c.carsafe.a.why': "Waxaa la weydiiyay in shaqada la bilaabi karo: weli maya, sababtoo ah baabuurku waa koronto.", // nieuw, nalezen
     'c.parcel.a.why': "Waxaa la weydiiyay in baakaddu iyaga u tahay: haa, kadibna saxiixa.", // nieuw, nalezen
     'c.road.a.why': "Waxaa la weydiiyay hal safar oo kale: maya, sababtoo ah nasashada ayaa ka horraysa.", // nieuw, nalezen
     'c.backtowork.a.why': "Waxaa lagu weydiiyay sidaad tahay: haa gaaban, iyo inaad si tartiib ah u qaadanayso.", // nieuw, nalezen

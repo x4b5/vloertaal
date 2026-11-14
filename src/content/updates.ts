@@ -17,6 +17,13 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-14',
+    items: [
+      'Elke sector heeft nu vier lessen in Taal: er zijn 17 lessen bij. Bouw: meten, en een opgeruimde bouwplaats. Productie: je dienst overdragen. Zorg: zeggen wat je ziet, en iemand helpen opstaan. Horeca: de afwas, en korte woorden als het druk is. Schoonmaak: je ronde, en kleuren en doeken. Winkel: een klant helpen, en lastige momenten. Tuinbouw: de plant verzorgen, en buiten werken. Techniek: de tekening en de maat, en lassen. Garage: onderdelen van de auto, en veilig met benzine en elektrische auto’s.',
+      'Bij elke nieuwe les hoort een tip van "Zo werkt het hier", in alle hulptalen. De vertalingen zijn nog niet nagekeken door een moedertaalspreker. De stemmen volgen: tot dan leest de stem van je telefoon de nieuwe zinnen voor.',
+    ],
+  },
+  {
     date: '2026-11-10',
     items: [
       'Na je 3e en je 15e les vraagt de app één keer: "Wat vind je van Vloertaal?", in je eigen taal, met drie gezichtjes. Eén tik is genoeg, en overslaan kan altijd met Verder. We tellen alleen welk gezichtje, zonder naam. Zo zien we of de app je helpt.',

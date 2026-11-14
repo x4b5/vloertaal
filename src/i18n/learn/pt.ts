@@ -137,6 +137,23 @@ const t: CultureTranslation = {
     'c.road.a.why': "Pedem mais uma volta: não, porque a pausa vem primeiro.", // nieuw, nalezen
     'c.backtowork.a.why': "Perguntam como estás: um sim curto, e que vais com calma.", // nieuw, nalezen
     'c.feelwell.a.why': "Perguntam como estás: um \"não muito bem\" sincero está bem.", // nieuw, nalezen
+    'c.measure.a.why': "Perguntam a largura: um número com a unidade, e fica escrito.", // nieuw, nalezen
+    'c.siteday.a.why': "Perguntam para onde vai a madeira: um sítio, e onde fica.", // nieuw, nalezen
+    'c.shifts.a.why': "Perguntam o que aconteceu: sim, o quê, e durante quanto tempo.", // nieuw, nalezen
+    'c.signals.a.why': "Perguntam como ele está: o que vês, e que é novo.", // nieuw, nalezen
+    'c.transfer.a.why': "Pedem para levantar uma pessoa: sem ajuda não, primeiro vem o elevador.", // nieuw, nalezen
+    'c.dishes.a.why': "Perguntam por copos limpos: sim, e quando chegam.", // nieuw, nalezen
+    'c.rush.a.why': "Uma ordem do chefe de cozinha: repetida, para ele saber que ouviste.", // nieuw, nalezen
+    'c.rounds.a.why': "Perguntam se o escritório está feito: não, com a razão.", // nieuw, nalezen
+    'c.colours.a.why': "Perguntam por um pano: não, porque o vermelho é para a casa de banho.", // nieuw, nalezen
+    'c.shophelp.a.why': "Perguntam por leite: não um \"não\", mas ir ver ao armazém.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "Um cliente zangado: palavras calmas, e vem um colega.", // nieuw, nalezen
+    'c.plantcare.a.why': "Perguntam quais apanhar: a cor diz o que está maduro.", // nieuw, nalezen
+    'c.outdoors.a.why': "Vem aí trovoada: parar e ir para dentro é a escolha segura.", // nieuw, nalezen
+    'c.drawing.a.why': "Perguntam se encaixa: não, e medir outra vez antes de fazer força.", // nieuw, nalezen
+    'c.weld.a.why': "Perguntam se já se pode pegar: ainda não, o metal quente tem de arrefecer.", // nieuw, nalezen
+    'c.carparts.a.why': "Perguntam o que ouves: que peça, e o que ela faz.", // nieuw, nalezen
+    'c.carsafe.a.why': "Perguntam se se pode começar: ainda não, porque o carro é elétrico.", // nieuw, nalezen
   },
 };
 

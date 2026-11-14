@@ -182,27 +182,38 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.build': { kind: 'A', lessons: {
     'l.tools': L('A', 'A'),
     'l.site': L('A', 'A', 'LMRA bestaat ook in België; alleen de slotregel'),
+    'l.measure': L('A', 'A'),
+    'l.siteday': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: de uitvoerder heet in Vlaanderen vaak de werfleider, de bouwplaats de werf'),
   } },
   'u.factory': { kind: 'A', lessons: {
     'l.line': L('A', 'A'),
     'l.quality': L('A', 'A'),
     'l.food': L('A', 'A', 'de meldplicht bij ziekte of een wond komt uit de EU-hygiëneverordening (852/2004): ook in België'),
+    'l.shifts': L('A', 'A', 'nakijken: in Vlaanderen zegt men vaak de vroege, de late en de nachtploeg'),
   } },
   'u.care': { kind: 'A', lessons: {
     'l.client': L('A', 'A'),
     'l.privacy': L('A', 'A'),
+    'l.signals': L('A', 'A'),
+    'l.transfer': L('A', 'A'),
   } },
   'u.horeca': { kind: 'A', lessons: {
     'l.kitchen': L('A', 'A', 'HACCP en de autocontrole gelden ook in België'),
     'l.service': L('A', 'A'),
+    'l.dishes': L('A', 'A'),
+    'l.rush': L('A', 'A'),
   } },
   'u.clean': { kind: 'A', lessons: {
     'l.cleaning': L('A', 'A'),
     'l.cleansafe': L('A', 'A'),
+    'l.rounds': L('A', 'A'),
+    'l.colours': L('A', 'A', 'nakijken: in Vlaanderen zegt men vaak de vod of de dweil voor de doek'),
   } },
   'u.shop': { kind: 'B', lessons: {
     'l.shelves': L('A', 'A'),
     'l.checkout': L('B', 'B', 'pinnen → met je kaart betalen; bier en wijn vanaf 16, sterke drank en tabak vanaf 18'),
+    'l.shophelp': L('A', 'A', 'nakijken: de aanbieding heet in Vlaanderen vaak de promotie of de actie'),
+    'l.shoptrouble': L('A', 'A', 'nakijken: de bedrijfsleider heet in Vlaanderen vaak de winkelverantwoordelijke of de gerant'),
   } },
   'u.numbers': { kind: 'A', lessons: {
     'l.hours': L('A', 'A'),
@@ -217,6 +228,8 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.kas': { kind: 'B', lessons: {
     'l.harvest': L('A', 'B', 'stukloon en minimumloon (rijksoverheid.nl) → seizoensarbeid, PC 145'),
     'l.greensafe': L('A', 'A', 'alleen de slotregel'),
+    'l.plantcare': L('A', 'A'),
+    'l.outdoors': L('A', 'A'),
   } },
   'u.finish': { kind: 'A', lessons: {
     'l.workorder': L('A', 'A'),
@@ -225,10 +238,14 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.tech': { kind: 'A', lessons: {
     'l.workshop': L('A', 'A', 'alleen de slotregel'),
     'l.power': L('A', 'A', 'alleen de slotregel'),
+    'l.drawing': L('A', 'A'),
+    'l.weld': L('A', 'A', 'alleen de slotregel'),
   } },
   'u.garage': { kind: 'A', lessons: {
     'l.garage': L('A', 'A'),
     'l.carjob': L('A', 'A', 'alleen de slotregel'),
+    'l.carparts': L('A', 'A'),
+    'l.carsafe': L('A', 'A', 'alleen de slotregel; de opleiding voor werk aan hoogspanning in een auto heet in België anders (geen norm in de tekst)'),
   } },
   'u.stage': { kind: 'B', lessons: {
     'l.placement': L('C', 'C', 'POK, praktijkopleider, stagebegeleider, bpv → stageovereenkomst, mentor, school'),

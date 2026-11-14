@@ -128,6 +128,23 @@ const t: CultureTranslation = {
     'c.food.a.why': "Întrebarea e de ce se curăță linia: următorul produs e fără nuci.", // nieuw, nalezen
     'c.parcel.a.why': "Întrebarea e dacă coletul e pentru persoana respectivă: da, și apoi semnătura.", // nieuw, nalezen
     'c.road.a.why': "I se cere încă o cursă: nu, pentru că pauza e mai întâi.", // nieuw, nalezen
+    'c.measure.a.why': "Întrebarea e cât de lat: un număr cu unitatea lui, și notat.", // nieuw, nalezen
+    'c.siteday.a.why': "Întrebarea e unde merge lemnul: un loc, și unde e locul acela.", // nieuw, nalezen
+    'c.shifts.a.why': "Întrebarea e ce s-a întâmplat: da, și ce anume, și cât timp.", // nieuw, nalezen
+    'c.signals.a.why': "Întrebarea e cum îi merge: ce se vede, și că e ceva nou.", // nieuw, nalezen
+    'c.transfer.a.why': "Ți se cere să ridici o persoană: nu fără ajutor, întâi vine liftul.", // nieuw, nalezen
+    'c.dishes.a.why': "Se cer pahare curate: da, și când vin.", // nieuw, nalezen
+    'c.rush.a.why': "O comandă de la bucătarul-șef: repetată, ca el să știe că ai auzit.", // nieuw, nalezen
+    'c.rounds.a.why': "Întrebarea e dacă biroul e făcut: nu, cu motivul.", // nieuw, nalezen
+    'c.colours.a.why': "Întrebarea e despre o lavetă: nu, pentru că roșu e pentru toaletă.", // nieuw, nalezen
+    'c.shophelp.a.why': "Se cere lapte: nu un „nu”, ci te uiți în depozit.", // nieuw, nalezen
+    'c.shoptrouble.a.why': "Un client furios: cuvinte calme, și vine un coleg.", // nieuw, nalezen
+    'c.plantcare.a.why': "Întrebarea e ce se culege: culoarea arată ce e copt.", // nieuw, nalezen
+    'c.outdoors.a.why': "Vine furtuna: să te oprești și să intri înăuntru e alegerea sigură.", // nieuw, nalezen
+    'c.drawing.a.why': "Întrebarea e dacă se potrivește: nu, și măsori din nou înainte să forțezi.", // nieuw, nalezen
+    'c.weld.a.why': "Întrebarea e dacă se poate lua în mână: încă nu, metalul fierbinte trebuie să se răcească.", // nieuw, nalezen
+    'c.carparts.a.why': "Întrebarea e ce auzi: care piesă, și ce face.", // nieuw, nalezen
+    'c.carsafe.a.why': "Întrebarea e dacă poți începe lucrul: încă nu, pentru că mașina e electrică.", // nieuw, nalezen
     'c.backtowork.a.why': "Întrebarea e cum te simți: un „da” scurt și că o iei încet.", // nieuw, nalezen
     'c.feelwell.a.why': "Întrebarea e cum te simți: un „nu prea” sincer e în regulă.", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 november 2026).

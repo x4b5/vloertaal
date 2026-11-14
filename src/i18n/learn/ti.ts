@@ -128,6 +128,23 @@ const t: CultureTranslation = {
     'c.food.a.why': "ስለምንታይ እቲ መስመር ይጸሪ ተሓቲቱ: ዝቕጽል ፍርያት ለውዝ የብሉን።", // nieuw, nalezen
     'c.parcel.a.why': "እቲ ጥቕሊል ናቱ ድዩ ተሓቲቱ: እወ፡ ድሕሪኡ ፊርማ።", // nieuw, nalezen
     'c.road.a.why': "ሓደ ተወሳኺ ዙረት ተሓቲቱ: ኣይፋል፡ ቅድም ዕረፍቲ ስለ ዝመጽእ።", // nieuw, nalezen
+    'c.measure.a.why': "ስፍሓቱ ክንደይ ተሓቲቱ: ቁጽሪ ምስ መዐቀኒኡ፡ ተጻሒፉ ድማ።", // nieuw, nalezen
+    'c.siteday.a.why': "እቲ ዕንጨይቲ ናበይ ተሓቲቱ: ቦታ፡ ኣበይ ምዃኑ ድማ።", // nieuw, nalezen
+    'c.shifts.a.why': "እንታይ ኣጋጢሙ ተሓቲቱ: እወ፡ እንታይ፡ ንኽንደይ ግዜ ድማ።", // nieuw, nalezen
+    'c.signals.a.why': "ከመይ ከም ዘሎ ተሓቲቱ: እቲ ዝርአ፡ ሓድሽ ምዃኑ ድማ።", // nieuw, nalezen
+    'c.transfer.a.why': "ሰብ ምልዓል ተሓቲቱ: በይኑ ኣይኮነን፡ ቅድም እታ መልዓሊት ማሽን ትመጽእ።", // nieuw, nalezen
+    'c.dishes.a.why': "ጽሩይ ብርጭቆታት ተሓቲቱ: እወ፡ መዓስ ከም ዝመጹ ድማ።", // nieuw, nalezen
+    'c.rush.a.why': "ትእዛዝ ካብ ሸፍ: ተደጊሙ፡ ከም ዝተሰምዐ ክፈልጥ።", // nieuw, nalezen
+    'c.rounds.a.why': "እቲ ቤት ጽሕፈት ተገይሩ ድዩ ተሓቲቱ: ኣይፋል፡ ምስ ምኽንያት።", // nieuw, nalezen
+    'c.colours.a.why': "ብዛዕባ ጨርቂ ተሓቲቱ: ኣይፋል፡ ቀይሕ ንሽቓቕ ስለ ዝኾነ።", // nieuw, nalezen
+    'c.shophelp.a.why': "ጸባ ተሓቲቱ: «ኣይፋል» ዘይኮነ፡ ኣብ መኽዘን ምርኣይ።", // nieuw, nalezen
+    'c.shoptrouble.a.why': "ዝሓረቐ ዓሚል: ህዱእ ቃላት፡ ብጻይ ስራሕ ድማ ይመጽእ።", // nieuw, nalezen
+    'c.plantcare.a.why': "ኣየኖት ክቕንጠባ ተሓቲቱ: እቲ ሕብሪ ዝበሰለ ኣየናይ ምዃኑ ይነግር።", // nieuw, nalezen
+    'c.outdoors.a.why': "ነጎዳ ይመጽእ ኣሎ: ደው ምባልን ናብ ውሽጢ ምእታውን ውሑስ ምርጫ እዩ።", // nieuw, nalezen
+    'c.drawing.a.why': "ብልክዕ ይኣቱ ድዩ ተሓቲቱ: ኣይፋል፡ ቅድሚ ሓይሊ ምጥቃም ድማ እንደገና ምዕቃን።", // nieuw, nalezen
+    'c.weld.a.why': "ምልዓል ተሓቲቱ: ገና፡ ውዑይ ሓጺን ክዝሕል ኣለዎ።", // nieuw, nalezen
+    'c.carparts.a.why': "እንታይ ከም ዝስማዕ ተሓቲቱ: ኣየናይ ኣካል፡ እንታይ ከም ዝገብር ድማ።", // nieuw, nalezen
+    'c.carsafe.a.why': "ስራሕ ምጅማር ተሓቲቱ: ገና፡ እታ መኪና ናይ ኤሌክትሪክ ስለ ዝኾነት።", // nieuw, nalezen
     'c.backtowork.a.why': "ብዛዕባ ጥዕና ተሓቲቱ: ሓጺር «እወ»፡ ቀስ ብቐስ ምኻድ ድማ።", // nieuw, nalezen
     'c.feelwell.a.why': "ብዛዕባ ኩነታት ተሓቲቱ: ሓቀኛ «ብዙሕ ጽቡቕ ኣይኮነን» ጸገም የብሉን።", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 nov 2026)

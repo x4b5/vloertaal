@@ -1548,3 +1548,59 @@ Zin 6 van de tip (`c.mustmay.b`) gaat in de meeste talen over de valkuil in die 
 - **ti**: «ግድን ምዃን» / «ግድን ዘይምዃን», «ሓላፊ ጉጅለኻ» (teamleider), «ኣይፍቀደልካን» in `o2`.
 - **ar**: de x-vormen zijn onpersoonlijk ("التوقيع غير لازم"); misschien in zin 6 ook waarschuwen dat «لا يجب» als verbod klinkt.
 - **pt/es** `o2`: "é proibido" / "está prohibido" toegevoegd, omdat "não podes" / "no puedes" ook "lukt niet" kan zijn.
+
+## Elke sector vier lessen: 17 nieuwe lessen (14 november 2026)
+
+Op verzoek van de eigenaar: elk sectoronderwerp in Taal heeft nu vier lessen. Alles met AI vertaald
+en nog niet door een moedertaalspreker gecontroleerd. De nieuwe lessen:
+
+| Sector | Onderwerp | Nieuwe lessen |
+|---|---|---|
+| Bouw | `u.build` | `l.measure` (Meten), `l.siteday` (Een opgeruimde bouwplaats) |
+| Productie | `u.factory` | `l.shifts` (Je dienst overdragen) |
+| Zorg | `u.care` | `l.signals` (Zeg wat je ziet), `l.transfer` (Iemand helpen opstaan) |
+| Horeca | `u.horeca` | `l.dishes` (De afwas), `l.rush` (Als het druk is) |
+| Schoonmaak | `u.clean` | `l.rounds` (Je ronde), `l.colours` (Kleuren en doeken) |
+| Winkel | `u.shop` | `l.shophelp` (Een klant helpen), `l.shoptrouble` (Lastige momenten) |
+| Tuinbouw | `u.kas` | `l.plantcare` (De plant verzorgen), `l.outdoors` (Buiten werken) |
+| Techniek | `u.tech` | `l.drawing` (De tekening en de maat), `l.weld` (Lassen en heet werk) |
+| Garage | `u.garage` | `l.carparts` (Onderdelen van de auto), `l.carsafe` (Benzine, gas en stroom) |
+
+Nieuwe ids, per les hetzelfde patroon:
+
+- Les en woorden (`src/i18n/work/<taal>.ts`, Engelse bron in `work/en.json`): `l.<les>`, zes `w.*`,
+  zinnen `s.<les>.1`–`3`, gesprekje `c.<les>.q` en `c.<les>.a`; tip `c.<les>` met `.b`, `.p`, `.s`,
+  `.o1`–`.o3`, `.w`. Samen 340 sleutels per taal, allemaal gemarkeerd met "nieuw, nalezen".
+- Uitleg bij het gesprekje (`src/i18n/learn/<taal>.ts`): `c.<les>.a.why` (17 per taal).
+
+Voor alle talen graag nakijken:
+
+- **Vakwoorden zonder vast woord** in veel talen: de tillift, de keet, de uitvoerder, de afzuiging,
+  het voetbad bij de kas (`c.plantcare.b`), het lasscherm (`c.weld.b`), en het verschil tussen
+  de schroef en de bout, en tussen de doek en de lap.
+- **"Heel veel stroom"** in `c.carsafe.b` en `.w`: in de meeste talen bewust eenvoudig gehouden
+  (technisch: hoge spanning).
+- **Nederlandse citaten in de tips** blijven Nederlands ("Heet!", "Achter!", "Ja, chef.", "Glas!",
+  "Mag ik hier even schoonmaken?", "Ik vraag het even voor u").
+- **De juridische kant**: geen van de 17 tips noemt een recht of een bedrag. Eén ⚖️ in de code bij
+  `c.carsafe` (werken aan de hoogspanning van een elektrische auto alleen met opleiding, NEN 9140):
+  laat een deskundige die zin nalezen.
+- **België**: zie `src/content/taalBe/inventory.ts` (de werfleider, de vroege/late ploeg, de vod,
+  de promotie, de winkelverantwoordelijke): nakijken door een Vlaamse NT2-docent.
+
+Per taal, wat de vertaler zelf het minst zeker vond:
+
+- **ar**: de x-vormen van de 17 tips zijn onpersoonlijk en lezen stijf (`c.shoptrouble.b` en `c.carparts.b` het meest); `w.schuifmaat` "القدمة ذات الورنية" (verschilt per land); `w.bout` "المسمار الملولب" naast `w.schroef` "البرغي"; `w.uitvoerder` "مسؤول الموقع", `w.keet` "كابينة الموقع"; `w.tillift` "رافعة الأشخاص" ("الرافعة" is ook de hefbrug); `w.krik` "الكريك", `w.laarzen` "الجزمة" (spreektaal); `w.afzuiging` "الشفط", `w.laskap` "قناع اللحام"; cliënt en klant in de mannelijke vorm aangesproken; in de tips staat de punt ná het aanhalingsteken van een Nederlands citaat (voor de zinsplitser).
+- **bg**: `c.transfer.p` "Готови ли сте?" (beleefdheidsvorm); `c.transfer.a` als enige in man-, vrouw- en x-vorm; `w.tillift` "подемникът за хора" (hetzelfde woord als de hefbrug; misschien "лифт за пациенти"); `w.uitvoerder` "ръководителят на обекта"; `w.keet` "фургонът"; `w.glas` "чашата (от стъкло)" naast "стъкло" in de tip; `c.rush.b` "след смяната" voor "na de service"; `c.plantcare.b` voetbad omschreven; `c.carsafe.b` "много високо напрежение"; duizelig, misselijk en benauwd zijn geen bijvoeglijke naamwoorden in het Bulgaars.
+- **de**: `w.uitvoerder` "der Bauleiter" (of "Polier"); `w.keet` "der Bauwagen"; `w.tillift` "der Lifter" (vakterm "Patientenlifter"); `w.bout` "der Bolzen, die dicke Schraube"; `w.beveiliger` "der Wachmann" (mannelijk); `w.bedrijfsleider` "der Filialleiter"; `c.rush.b` "kurz angebunden" (idiomatisch); `c.plantcare.b` "Fußbad"; `c.carsafe.b` "Batterie mit sehr starkem Strom" (bewust eenvoudig, technisch "Hochvolt"); `c.signals.b` "als Erste oder Erster" (leest zwaar).
+- **es**: `c.transfer.p` "¿Empezamos?" voor "Bent u er klaar voor?"; `w.uitvoerder` "el jefe de obra"; `w.bedrijfsleider` "el gerente de la tienda" (in Spanje gewoner: "encargado"); `w.tillift` "la grúa (…)"; `c.plantcare.b` voetbad omschreven; `c.carsafe.b` "una corriente muy fuerte"; `w.heet` en `s.rush.1` "¡Quema!" (of "¡Caliente!"); `c.transfer.a` in man-, vrouw- en x-vorm; "una clienta" waar de zin met "zij" verdergaat; `w.schuifmaat` "el calibre, el pie de rey", `w.bout` "el perno", `c.measure` "Mide dos veces, sierra una".
+- **fa**: `w.schroef` «پیچ» en `w.bout` «پیچ مهره‌خور (بولت)»; `w.uitvoerder` «مسئول کارگاه»; `w.keet` «کانکس کارگاه», `w.container` «کانتینر زباله»; `w.tillift` «بالابر بیمار», `w.rollator` «واکر چرخ‌دار»; `w.aanbieding` «پیشنهاد ویژه» (of «حراج»); `l.rounds` «دور کاری تو»; `w.afzuiging` «هواکش»; `c.weld.b` «پردهٔ محافظ»; `c.measure.b` het getal als «90» en de vraag indirect; in vijf tips (measure, transfer, dishes, rush, rounds) staat het Nederlandse citaat midden in de zin (de zinsplitser knipt anders verkeerd); duizelig, misselijk en benauwd als zelfstandig naamwoord of werkwoord.
+- **fr**: `w.doek` en `w.lap` zijn allebei "le chiffon" (vakterm "lavette"); `w.overdracht` "la transmission", `w.aflossen` "relever, remplacer" (ook "la relève"); `w.uitvoerder` "le chef de chantier", `w.keet` "la baraque de chantier"; `w.bedrijfsleider` "le gérant du magasin"; `w.passen` "rentrer, aller" (spreektaal); `w.maat` "la mesure" (vakterm "la cote"); `c.rush.b` "le coup de feu" (keukenjargon); `c.transfer.p` "C’est bon pour vous ?"; `c.plantcare.b` "le bac qui désinfecte les chaussures"; `c.carsafe.b` "une batterie avec un courant très fort"; duizelig, misselijk en benauwd in de mannelijke vorm.
+- **pl**: `w.schroef` "wkręt" en `w.bout` "śruba" (in de volksmond heet een schroef ook "śruba"); `w.latedienst` "zmiana popołudniowa"; `l.rounds` "Twoja runda" (spreektaal); `c.transfer.p` "Możemy zaczynać?"; "pan/pani" met schuine streep in `s.transfer.1` en de winkelzinnen; `c.plantcare.b` "wanienka do dezynfekcji butów"; `w.krik` "lewarek"; `c.carsafe.b` "otwórz drzwi warsztatu"; `c.rush.p` "garnek"; duizelig en benauwd omschreven, `w.verward` alleen mannelijk; man- en vrouwvorm bij `c.measure.s` en `c.carparts.p`.
+- **prs**: `w.waterpas` «آب‌ترازو» (of «تراز», «لیول»); `w.uitvoerder` «آمر ساحه» en `w.keet` «اتاقک ساحه» (zelf gevormd); `w.doek` «تکهٔ پاک‌کاری» tegenover `w.lap` «لته» (misschien «دستمال»); `w.tillift` «لیفت مریض»; `w.bedrijfsleider` «آمر دکان»; `w.latedienst` «نوبت کاری بعد از ظهر»; `w.afzuiging` «دودکش برقی» (kan op een schoorsteen lijken); `w.motor` «ماشین موتر (انجن)», `w.motorkap` «بانت»; `w.schuifmaat` «کولیس», `w.bout` «بولت»; `c.plantcare.b` voetbad, paprika en komkommer.
+- **pt** (Europees Portugees, tu-vorm): `w.tillift` "o elevador de transferência" (of "grua"); `w.keet` "a barraca da obra"; `w.uitvoerder` "o encarregado da obra"; `w.aflossen` "render" (misschien onbekend); `c.weld.b` "painel de proteção" voor het lasscherm; `c.plantcare.b` "banho de desinfeção para os pés"; `c.carparts.*` "garagem" (in Portugal gewoner: "oficina"); zorgcliënt is "cliente" in de tips en "o utente" als woord; `c.transfer.p` mannelijke u-vorm tegen de cliënt; `w.bout` "o parafuso com porca".
+- **ro**: `w.tillift` "liftul pentru pacienți"; `w.uitvoerder` "șeful de șantier"; `w.keet` "baraca de șantier", `w.container` "o ladă foarte mare"; `w.waterpas` "nivela, bolobocul"; `w.vroegedienst` en `w.latedienst` "tura de dimineață / de după-amiază" (ook "schimbul 1/2"), `s.shifts.2` "Cine mă schimbă?"; `l.rounds` "Tura ta de curățenie" (botst licht met "tură" als dienst); `w.doek` "laveta, cârpa" tegenover `w.lap` "cârpa"; `c.plantcare.b` voetbad; `w.afzuiging` "aspirația", `w.bout` "bolțul, șurubul cu piuliță"; `c.carsafe.p` klinkt letterlijk; `c.transfer.a` in man-, vrouw- en x-vorm.
+- **so** (de hele set is het minst zeker): `w.dienblad` "siiniyadda"; `w.waterpas` "miisaanka biyaha"; `w.schroef` "musmaarka la maroojiyo" naast `w.bout` "boolka"; `w.tillift` "wiishka dadka" ("wiish" is ook de hefbrug); `w.keet` omschreven; `w.aanbieding` "dalabka gaarka ah" ("dalab" kan ook "bestelling" zijn); `w.oranje` "oranji"; `w.laskap` "koofiyadda alxanka", `w.afzuiging` "qiiq-nuugaha" (zelf gevormd); `w.benauwd`, `w.misselijk`; `c.carparts.*` "xagtin" (kras), `w.lap` "calalka".
+- **ti**: `w.plank` «ሰሌዳ» (het bestand gebruikt «ጣውላ» al voor tafel en plank); `w.meten` «ምዕቃን» (elders «ልክዕ/መለክዒ»); Italiaanse leenwoorden uit de werkplaats: `w.waterpas` «ሊቨሎ», `w.schroef` «ቪተ», `w.bout` «ቡሎን», `w.motorkap` «ኮፋኖ», `w.rem` «ፍሬኖ», `w.krik` «ክሪክ»; `w.tillift` zelf gevormd; `w.keet` «ኬት» en `w.container` «ኮንተይነር» getranslitereerd; `w.oranje` «ኣራንሾኒ» (of «ብርቱኳናዊ»); `w.glas` «ብርጭቆ» (of «ብኬሪ»); `w.duizelig` en `w.misselijk` omschreven; paprika, komkommer, voetbad, zonnebrand, lasscherm, afzuiging: eigen omschrijvingen; de vrouwelijke en meervoudsvormen in de gebiedende wijs zijn uit een sjabloon opgebouwd: steekproef door een moedertaalspreker nodig.
+- **tr**: `c.measure.b` "dokuz yüz" en de voorbeeldvraag zijn vertaald (stonden Engels in de bron); `w.tillift` "kaldırma lifti" (ook "hasta lifti"); `w.uitvoerder` "şantiye şefi (şantiyedeki amir)"; `w.aflossen` en `w.overdracht` misschien te formeel; `w.afzuiging` "duman emme sistemi" (of "aspiratör"); `c.plantcare.b` "ayak dezenfektan havuzu"; `c.rush.b` "an order" als opdracht; `w.heet` "sıcak, kızgın" ("kızgın" is ook "boos"); `w.latedienst` "akşam vardiyası"; `c.weld.b` "paravan"; `c.carparts.b` "tamirhane".
+- **uk**: `w.verdieping` en `s.rounds.1`: "de tweede verdieping" is "третього поверху" (Oekraïners tellen de begane grond als eerste; uitleg staat bij het woord): klopt dat, en is het niet verwarrend?; `w.uitvoerder` "виконроб, прораб"; `w.doek` "серветка, ганчірка" tegenover `w.lap` "ганчірка"; `w.bedrijfsleider` "керівник магазину"; in de winkel "покупець", elders "клієнт"; duizelig, misselijk, benauwd en verward omschreven met werkwoorden; `c.rush.w` vrij vertaald; `c.carsafe.b` "дуже сильним струмом"; `w.tillift` "підйомник"; `c.shoptrouble` titel en "Тебе — ні." (toon).
