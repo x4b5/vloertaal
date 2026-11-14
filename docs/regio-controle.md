@@ -151,3 +151,86 @@ Het is geen bewijs dat de pagina nu zo is. Open de pagina één keer.
     gratis is (les ZL.5, doc 7.26).
 12. **Kredietbank Limburg:** welk nummer is het goede, 045-560 5705 of 088-101 99 99? (Alleen het
     088-nummer zou in de rij mogen.)
+
+## Derde ronde: 14 november 2026, op de eigen sites
+
+De eerste twee rondes (15 en 16 oktober) konden de sites zelf niet openen. Op 14 november zijn alle
+45 rijen van de sociale kaart geopend op de site van de organisatie zelf (home, contact en de
+pagina van de dienst). Een zoekresultaat, een gids of een nieuwsbericht telde niet als bewijs.
+
+| Uitkomst | Rijen | Wat ermee is gedaan |
+|---|---|---|
+| Klopt | 26 | `source: 'official'`, `checked` 14 november |
+| Aanpassen | 15 | aangepast zoals de eigen site het zegt, daarna `official` |
+| Niet te bevestigen | 4 | zie hieronder |
+| Bestaat niet meer | 0 | |
+
+**Stand na deze ronde: 41 van de 44 rijen staan op `official`.** De regio kan pas aan als dat alle
+rijen zijn (`tests/regio.test.ts`).
+
+### Aangepast
+
+- **Huisartsenspoedpost Geleen:** heet op de eigen site "Spoedpost Sittard-Geleen" (Meditta), aan
+  een eigen adres in Geleen, niet bij het ziekenhuis. Alleen op afspraak, na bellen.
+- **Bijstand Parkstad:** Brunssum en Landgraaf lopen via ISD BOL, Kerkrade doet het zelf. Heerlen:
+  eerst werk.nl, dan online melden met DigiD; de gemeente belt terug.
+- **Kredietbank Limburg:** inloop alleen in Maastricht, het Heuvelland en Sittard-Geleen; Parkstad
+  op afspraak. Het algemene nummer 088-101 9999 staat erbij (vraag 12 hierboven).
+- **Welzijn Westelijke Mijnstreek:** de organisatie is Partners in Welzijn (vraag 8 hierboven).
+- **Buurtteams Heerlen:** eigen site en landelijk nummer; de pagina op heerlen.nl bestaat niet meer.
+- **Impuls Kerkrade:** eigen site toegevoegd (vraag 7 hierboven). **Alcander:** "een maatje" eruit.
+- **Grensarbeid:** eigen site (grenzarbeit.eu); "vacatures en cv" werd "zoeken en sollicitatie".
+- **GrensInfoPunt Maastricht:** langskomen alleen op afspraak. **Aken:** "vooral voor Duitsland"
+  stond niet op de site; de zin is neutraler.
+- **Bibliotheek Maastricht:** het woord "digiTAALpunt" staat nergens meer; site is
+  bibliotheekmaastricht.nl.
+- **Namen:** "Vidar" (niet "en WSP Westelijke Mijnstreek"), "WSP Parkstad" (WerkvoorHeerlen is een
+  eigen stichting), "FNV" (niet "FNV Limburg").
+- **Schuldhulp:** "De gemeente moet je helpen" werd "Vraag hulp bij je gemeente" (besluit eigenaar:
+  het "moet" staat niet op rijksoverheid.nl).
+- **Juridisch Loket:** persoonlijk advies bij een laag inkomen én weinig spaargeld.
+
+### Geschrapt
+
+- De rij **"Parkstad en Westelijke Mijnstreek: vraag bij je gemeente wie je begeleidt"**
+  (nieuwkomers): noemde geen organisatie, dus niet na te kijken (besluit eigenaar).
+
+### Nog open (houden de regio tegen)
+
+1. **Adelante** (adelante-zorggroep.nl): de site gaf op 14 november een foutpagina, ook in een
+   gewone browser. Opnieuw proberen.
+2. **De Domijnen** (dedomijnen.nl): fout 500 op elke pagina, ook in een gewone browser. Opnieuw
+   proberen.
+3. **Keurmerk uitzendbureaus:** "Voor werk betaal je nooit" is geschrapt (een recht, zonder bron).
+   SNA en ABU zijn bevestigd; wat een NBBU-lidmaatschap controleert nog niet.
+
+### De huisartsenspoedposten (uitgezocht op 14 november)
+
+De kaart stuurde iedereen in "Maastricht en Heuvelland" naar de post bij het MUMC+. Dat klopte niet
+voor Gulpen-Wittem en Vaals:
+
+- De post volgt de **huisartspraktijk**, niet het woonadres.
+- De lijst van aangesloten praktijken op hapmaastricht.nl (51 praktijken) heeft er geen in
+  Gulpen-Wittem of Vaals; wel in Maastricht, Eijsden-Margraten, Meerssen en Valkenburg aan de Geul.
+- Zes praktijken in Gulpen (2), Mechelen, Wijlre en Vaals (2) noemen op hun eigen site de post in
+  Heerlen, met het nummer van die post.
+- De site van de post in Heerlen noemt zelf geen werkgebied (de lijst met praktijken is daar een
+  lege proefpagina). Het bewijs komt dus van de praktijken.
+
+Aangepast: de rij Maastricht noemt de vier gemeenten; de rij Heerlen staat nu ook onder Maastricht
+en Heuvelland, met "ook voor wie een huisarts heeft in Gulpen-Wittem of Vaals". De regioles zei "de
+post van je eigen streek" en "bij Zuyderland in Geleen"; dat is nu "de post die bij je eigen
+huisarts hoort" en "in Geleen" (de post daar zit niet bij het ziekenhuis). Niet nagekeken: een
+praktijk in Epen, Vijlen of Lemiers, en één praktijk in Gulpen zonder eigen site.
+
+### Bij rijen die kloppen, om te weten
+
+- **Werkcentrum Zuid-Limburg:** nog één locatie, in Maastricht; Parkstad en de Westelijke Mijnstreek
+  alleen online.
+- **Sociale Zaken Maastricht Heuvelland:** helpt ook mensen zonder uitkering aan werk; de rij is
+  smaller dan de site. Algemeen nummer 14 043 staat er niet bij.
+- **WerkvoorHeerlen** en **ISD BOL** hebben geen eigen rij (ISD BOL heeft alleen een lokaal nummer).
+- **Thuis in Limburg:** "gratis" staat op de inschrijfpagina; jaarlijks verlengen alleen in een
+  folder van juni 2022.
+- **Wtta:** de SNA-site zegt dat de toelatingsplicht vanaf 1 januari 2028 wordt gehandhaafd (het
+  loket is open sinds 1 november 2026); in de code stond 2027.
