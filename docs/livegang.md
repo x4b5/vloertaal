@@ -131,6 +131,9 @@ export const REGIONS_LIVE: boolean = true;   // was: false
 
 **Eerst afvinken:**
 
+- **Stand 14 november 2026:** 41 van de 44 regels van de sociale kaart staan op `official`
+  (derde ronde, op de eigen sites: `docs/regio-controle.md`). Open: Adelante, De Domijnen en het
+  keurmerk voor uitzendbureaus.
 - [ ] Elke regel van de sociale kaart (`src/content/regio/zuid-limburg.ts`) is nagekeken: naam,
       telefoonnummer, website en wanneer je er terecht kunt. Zet daarna bij elke regel
       `source: 'official'`. Een test laat de regio pas aangaan als dat bij alle regels zo is.

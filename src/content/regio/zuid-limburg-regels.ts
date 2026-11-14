@@ -415,7 +415,7 @@ export const zlRegelsUnit: RuleUnit = {
             { id: 'b', text: 'Ze belt de huisartsenpost.', best: true, feedback: 'Goed. Die helpt ’s avonds, ’s nachts en in het weekend.' },
             { id: 'c', text: 'Ze wacht tot maandag en kijkt op internet.', best: false, feedback: 'Bij hoge koorts bij een kind kan ze beter nu bellen.' },
           ],
-          why: 'Is je huisarts dicht en kan het niet wachten? Bel dan de huisartsenpost. Bel eerst, ga er niet zomaar heen. In Zuid-Limburg zijn er drie posten. Ze zitten bij het MUMC+ in Maastricht, en bij Zuyderland in Heerlen en Geleen. Je belt de post van je eigen streek. Het nummer staat op de site van je huisarts. Bij levensgevaar bel je 112.',
+          why: 'Is je huisarts dicht en kan het niet wachten? Bel dan de huisartsenpost. Bel eerst, ga er niet zomaar heen. In Zuid-Limburg zijn er drie posten: in Maastricht, in Heerlen en in Geleen. Je belt de post die bij je eigen huisarts hoort. Het nummer staat op de site van je huisarts. Bij levensgevaar bel je 112.',
         },
         // ⚖️ check: elke gemeente moet helpen ⚖️; gratis ⚖️; de Kredietbank Limburg voor veel gemeenten ⚖️;
         //   vrijwilligers voor post en geld ⚖️ (doc 7.19, 7.26).

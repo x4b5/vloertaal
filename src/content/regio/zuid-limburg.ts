@@ -146,6 +146,8 @@ export const zlTaalTips: CultureTip[] = [
  * then has no tap); no commercial brands, agencies by name or loose addresses.
  */
 const C = '2026-10-15';
+/** 14 November 2026: the day each row was opened on the organisation's own site (docs/regio-controle.md, third round). */
+const N = '2026-11-14';
 
 export const zlSocialMap: SocialMapEntry[] = [
   // ---- Gemeente ----
@@ -156,21 +158,21 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.maastricht', category: 'gemeente', emoji: '🏛️',
     name: 'Gemeente Maastricht: GemeenteLoket (Mosae Forum)',
     when: 'Inschrijven, verhuizen, paspoort of id-kaart. Op afspraak.',
-    url: 'https://www.gemeentemaastricht.nl', tel: '14 043', area: ['mh'], checked: C, source: 'other',
+    url: 'https://www.gemeentemaastricht.nl', tel: '14 043', area: ['mh'], checked: N, source: 'official',
   },
   {
     // 16-10: heerlen.nl/contact and /openingstijden-stadskantoor (search result): Stadskantoor, 14045, op afspraak.
     id: 'rg.zl.k.heerlen', category: 'gemeente', emoji: '🏛️',
     name: 'Gemeente Heerlen: Stadskantoor',
     when: 'Inschrijven, verhuizen, paspoort. Op afspraak.',
-    url: 'https://www.heerlen.nl', tel: '14 045', area: ['parkstad'], checked: C, source: 'other',
+    url: 'https://www.heerlen.nl', tel: '14 045', area: ['parkstad'], checked: N, source: 'official',
   },
   {
     // 16-10: kerkrade.nl/contact (search result): Burgerplein in the Stadskantoor, only by appointment, 14 045.
     id: 'rg.zl.k.kerkrade', category: 'gemeente', emoji: '🏛️',
     name: 'Gemeente Kerkrade: Burgerplein',
     when: 'Inschrijven, verhuizen, paspoort. Op afspraak.',
-    url: 'https://www.kerkrade.nl', tel: '14 045', area: ['parkstad'], checked: C, source: 'other',
+    url: 'https://www.kerkrade.nl', tel: '14 045', area: ['parkstad'], checked: N, source: 'official',
   },
   {
     // 16-10: sittard-geleen.nl/adressen-en-openingstijden and /contact (search result): 14 046; the Stadswinkel
@@ -179,14 +181,14 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.sittardgeleen', category: 'gemeente', emoji: '🏛️',
     name: 'Gemeente Sittard-Geleen: Stadswinkel Geleen',
     when: 'Inschrijven, verhuizen, paspoort. Op afspraak.',
-    url: 'https://www.sittard-geleen.nl', tel: '14 046', area: ['wm'], checked: C, source: 'other',
+    url: 'https://www.sittard-geleen.nl', tel: '14 046', area: ['wm'], checked: N, source: 'official',
   },
   {
     // ⚖️ check: not checked per gemeente.
     id: 'rg.zl.k.gemeenten', category: 'gemeente', emoji: '🏘️',
     name: 'Andere gemeenten (Valkenburg, Vaals, Landgraaf, Beek, …)',
     when: 'Inschrijven, verhuizen, paspoort: kijk op de site van je eigen gemeente.',
-    area: ['mh', 'parkstad', 'wm'], checked: C, source: 'other',
+    area: ['mh', 'parkstad', 'wm'], checked: N, source: 'official',
   },
   // ---- Juridisch advies ----
   // Not listed: "Juridisch Loket Heerlen, Huis van het Recht" (doc 7.14). 16-10: juridischloket.nl/contact/heerlen
@@ -197,8 +199,8 @@ export const zlSocialMap: SocialMapEntry[] = [
     //   Personal advice only below the income limit (Wrb): the second sentence was added.
     id: 'rg.zl.k.juridischloket', category: 'juridisch', emoji: '⚖️',
     name: 'Het Juridisch Loket',
-    when: 'Gratis informatie over je contract, je loon, ontslag, huur of schulden. Heb je een laag inkomen? Dan krijg je ook persoonlijk advies.',
-    url: 'https://www.juridischloket.nl', tel: '0800-8020', area: ['all'], checked: C, source: 'other',
+    when: 'Gratis informatie over je contract, je loon, ontslag, huur of schulden. Heb je een laag inkomen en weinig spaargeld? Dan krijg je ook persoonlijk advies.',
+    url: 'https://www.juridischloket.nl', tel: '0800-8020', area: ['all'], checked: N, source: 'official',
   },
   // ---- Werk ----
   {
@@ -206,7 +208,7 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.uwv', category: 'werk', emoji: '📄',
     name: 'UWV en werk.nl',
     when: 'Werk kwijt, WW, inschrijven als werkzoekende, vacatures.',
-    url: 'https://www.werk.nl', area: ['all'], checked: C, source: 'other',
+    url: 'https://www.werk.nl', area: ['all'], checked: N, source: 'official',
   },
   {
     // The name was confirmed by the owner (15-10-2026). 16-10: werkcentrumzuidlimburg.nl (search result): free
@@ -214,7 +216,7 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.werkcentrum', category: 'werk', emoji: '🧭',
     name: 'Werkcentrum Zuid-Limburg',
     when: 'Je zoekt werk: hulp bij werk zoeken, solliciteren en een opleiding.',
-    url: 'https://www.werkcentrumzuidlimburg.nl', area: ['all'], checked: C, source: 'other',
+    url: 'https://www.werkcentrumzuidlimburg.nl', area: ['all'], checked: N, source: 'official',
   },
   // The Werkgeversservicepunt (WSP) Zuid-Limburg is for employers, not for the learner: it only sent a
   // job seeker on to the Werkcentrum above. Taken off the map (the owner's choice, 2 November 2026).
@@ -225,23 +227,23 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.werkmh', category: 'werk', emoji: '💼',
     name: 'Sociale Zaken Maastricht Heuvelland',
     when: 'Je zoekt werk en je hebt een uitkering van de gemeente. Voor Maastricht, Meerssen, Vaals, Valkenburg en Gulpen-Wittem.',
-    url: 'https://www.socialezaken-mh.nl', area: ['mh'], checked: C, source: 'other',
+    url: 'https://www.socialezaken-mh.nl', area: ['mh'], checked: N, source: 'official',
   },
   {
     // ⚖️ check: who does it now (the regulation ended on 15-06-2024, doc 7.7). 16-10: wspparkstad.nl (search
     //   result) is active: people with bijstand are guided to paid work, for the Parkstad gemeenten. WerkvoorHeerlen
     //   is only in a letter of the gemeente Heerlen (April 2024), its own site was not found.
     id: 'rg.zl.k.wspparkstad', category: 'werk', emoji: '💼',
-    name: 'WSP Parkstad en WerkvoorHeerlen',
-    when: 'Je zoekt werk vanuit de bijstand in Parkstad.',
-    url: 'https://www.wspparkstad.nl', area: ['parkstad'], checked: C, source: 'other',
+    name: 'WSP Parkstad',
+    when: 'Je hebt bijstand of een Sw-indicatie en je zoekt werk. Voor Heerlen, Kerkrade, Landgraaf, Brunssum, Beekdaelen, Simpelveld en Voerendaal.',
+    url: 'https://www.wspparkstad.nl', area: ['parkstad'], checked: N, source: 'official',
   },
   {
     // 16-10: vidar.nl (search result): work and income for Sittard-Geleen, Stein and Beek. WSP Westelijke Mijnstreek not checked.
     id: 'rg.zl.k.werkwm', category: 'werk', emoji: '💼',
-    name: 'Vidar en WSP Westelijke Mijnstreek',
+    name: 'Vidar',
     when: 'Werk en inkomen in Sittard-Geleen, Beek en Stein.',
-    url: 'https://www.vidar.nl', area: ['wm'], checked: C, source: 'other',
+    url: 'https://www.vidar.nl', area: ['wm'], checked: N, source: 'official',
   },
   // ---- Bijstand ----
   {
@@ -251,28 +253,28 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.bijstandmh', category: 'bijstand', emoji: '🪙',
     name: 'Sociale Zaken Maastricht Heuvelland',
     when: 'Je hebt te weinig geld om van te leven. Voor Maastricht, Meerssen, Vaals, Valkenburg en Gulpen-Wittem. Je vraagt bijstand aan via werk.nl, met DigiD. Woon je in Eijsden-Margraten? Vraag het bij je eigen gemeente.',
-    url: 'https://www.socialezaken-mh.nl', area: ['mh'], checked: C, source: 'other',
+    url: 'https://www.socialezaken-mh.nl', area: ['mh'], checked: N, source: 'official',
   },
   {
     // 16-10: heerlen.nl/bijstandsuitkering-aanvragen (search result): first werk.nl, then online, with a phone talk.
     //   No help desk for bijstand on the Maanplein was found, so the line stays general.
     id: 'rg.zl.k.bijstandheerlen', category: 'bijstand', emoji: '🪙',
     name: 'Gemeente Heerlen: werk en inkomen',
-    when: 'Bijstand aanvragen. Lukt het online niet? Vraag om hulp bij de gemeente.',
-    url: 'https://www.heerlen.nl', tel: '14 045', area: ['parkstad'], checked: C, source: 'other',
+    when: 'Bijstand aanvragen. Schrijf je eerst in op werk.nl. Meld je daarna online bij de gemeente, met DigiD. De gemeente belt je.',
+    url: 'https://www.heerlen.nl', tel: '14 045', area: ['parkstad'], checked: N, source: 'official',
   },
   {
     // 16-10: vidar.nl/onderwerpen/regelen/uitkeringen/bijstandsuitkering-aanvragen (search result).
     id: 'rg.zl.k.bijstandwm', category: 'bijstand', emoji: '🪙',
     name: 'Vidar',
     when: 'Bijstand in Sittard-Geleen, Beek en Stein.',
-    url: 'https://www.vidar.nl', area: ['wm'], checked: C, source: 'other',
+    url: 'https://www.vidar.nl', area: ['wm'], checked: N, source: 'official',
   },
   {
     id: 'rg.zl.k.bijstandgemeenten', category: 'bijstand', emoji: '🏘️',
     name: 'Andere gemeenten',
-    when: 'Kerkrade, Landgraaf, Brunssum en andere: vraag het bij je eigen gemeente.',
-    area: ['parkstad'], checked: C, source: 'other',
+    when: 'Kerkrade: vraag het bij je gemeente. Brunssum en Landgraaf: vraag het bij ISD BOL. Andere gemeenten: vraag het bij je eigen gemeente.',
+    area: ['parkstad'], checked: N, source: 'official',
   },
   // ---- Uitzendbureaus ----
   {
@@ -280,7 +282,9 @@ export const zlSocialMap: SocialMapEntry[] = [
     //   (search result): the SNA-keurmerk and its public register are there.
     id: 'rg.zl.k.keurmerk', category: 'uitzend', emoji: '🏢',
     name: 'Een uitzendbureau met een keurmerk',
-    when: 'Kies een bureau met een keurmerk: SNA, of lid van ABU of NBBU. Voor werk betaal je nooit.',
+    // 14-11: "Voor werk betaal je nooit" stood here: a claim about a right, on none of the three sites, so it
+    //   is out. SNA and ABU are confirmed on their own sites; what an NBBU membership checks is not yet.
+    when: 'Kies een bureau met een keurmerk: SNA, of lid van ABU of NBBU.',
     url: 'https://www.normeringarbeid.nl', area: ['all'], checked: C, source: 'other',
   },
   // ---- Buurt en welzijn ----
@@ -290,7 +294,7 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.trajekt', category: 'buurt', emoji: '🏡',
     name: 'Trajekt',
     when: 'Welzijnswerk in Maastricht en het Heuvelland. Hulp in je wijk als je niet weet waar je heen moet.',
-    url: 'https://www.trajekt.nl', area: ['mh'], checked: C, source: 'other',
+    url: 'https://www.trajekt.nl', area: ['mh'], checked: N, source: 'official',
   },
   {
     // Since 1 May 2024 ⚖️, carried out by Stichting Incluzio (doc 7.5). 16-10: en.heerlen.nl/buurtteam.html (search
@@ -298,16 +302,16 @@ export const zlSocialMap: SocialMapEntry[] = [
     //   once it is read on the page (it is national, so it fits the rule).
     id: 'rg.zl.k.buurtteamsheerlen', category: 'buurt', emoji: '🏡',
     name: 'Buurtteams Heerlen',
-    when: 'Hulp in je buurt in Heerlen: bij zorg, geld, opvoeding of eenzaamheid. Bel en vraag naar je buurtteam.',
-    url: 'https://www.heerlen.nl', tel: '14 045', area: ['parkstad'], checked: C, source: 'other',
+    when: 'Hulp in je buurt in Heerlen: bij zorg, geld, opvoeding of eenzaamheid. Gratis. Bel, of ga naar een buurtpunt bij jou in de buurt.',
+    url: 'https://www.buurtteamsheerlen.nl', tel: '088-298 6395', area: ['parkstad'], checked: N, source: 'official',
   },
   {
     // ⚖️ check: does Alcander still do the welfare work after 2026 (doc 7.5)? 16-10: alcander.nl (search result):
     //   "brede welzijnsorganisatie voor de gemeente Heerlen". Nuth and Voerendaal were not found: taken out.
     id: 'rg.zl.k.alcander', category: 'buurt', emoji: '🤝',
     name: 'Alcander',
-    when: 'Welzijnswerk en buurtcentra in Heerlen. Activiteiten, vrijwilligers, een maatje.',
-    url: 'https://www.alcander.nl', area: ['parkstad'], checked: C, source: 'other',
+    when: 'Welzijnswerk en buurtcentra in Heerlen. Activiteiten en vrijwilligerswerk in je buurt.',
+    url: 'https://www.alcander.nl', area: ['parkstad'], checked: N, source: 'official',
   },
   {
     // No web address: impulskerkrade.nl is only in a Stadsjournaal of Kerkrade from 2020 (doc 7.17). ⚖️ check
@@ -315,14 +319,14 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.impuls', category: 'buurt', emoji: '🤝',
     name: 'Impuls',
     when: 'Welzijnswerk in Kerkrade.',
-    area: ['parkstad'], checked: C, source: 'other',
+    url: 'https://www.impulskerkrade.nl', area: ['parkstad'], checked: N, source: 'official',
   },
   {
     // ⚖️ check: the organisation was not found (doc 7.17). 16-10: still not found (Partners in Welzijn: only data of 2019).
     id: 'rg.zl.k.welzijnwm', category: 'buurt', emoji: '🏡',
-    name: 'Westelijke Mijnstreek',
-    when: 'Vraag bij de gemeente naar het sociaal team of het welzijnswerk in je wijk.',
-    url: 'https://www.sittard-geleen.nl', tel: '14 046', area: ['wm'], checked: C, source: 'other',
+    name: 'Partners in Welzijn (PIW)',
+    when: 'Welzijnswerk in de Westelijke Mijnstreek. Hulp bij vragen over geld, opvoeden, ouder worden of je buurt.',
+    url: 'https://www.partners-in-welzijn.nl', area: ['wm'], checked: N, source: 'official',
   },
   // ---- Schulden ----
   {
@@ -330,23 +334,23 @@ export const zlSocialMap: SocialMapEntry[] = [
     //   gemeente om mij te helpen bij schulden?" (search result): "Voor gratis advies en hulp … gaat u naar uw gemeente."
     id: 'rg.zl.k.schuldhulp', category: 'schulden', emoji: '🏛️',
     name: 'Je gemeente',
-    when: 'Je kunt je rekeningen niet meer betalen. De gemeente moet je helpen. Dat is gratis.',
-    area: ['all'], checked: C, source: 'other',
+    when: 'Je kunt je rekeningen niet meer betalen. Vraag hulp bij je gemeente. Dat is gratis.',
+    area: ['all'], checked: N, source: 'official',
   },
   {
     // Not in the row: a regional number (doc 7.19). 16-10: kredietbanklimburg.nl (search result): schuldhulp and
     //   budgetbeheer for the gemeenten, inloopspreekuren; the numbers on its pages differ (045-560 5705, 088-101 99 99).
     id: 'rg.zl.k.kredietbank', category: 'schulden', emoji: '💶',
     name: 'Kredietbank Limburg',
-    when: 'Hulp bij schulden en budgetbeheer, voor de gemeente. Er zijn inloopspreekuren.',
-    url: 'https://www.kredietbanklimburg.nl', area: ['all'], checked: C, source: 'other',
+    when: 'Hulp bij schulden en budgetbeheer, voor je gemeente. In Maastricht, het Heuvelland en Sittard-Geleen zijn inloopspreekuren. In Parkstad maak je een afspraak.',
+    url: 'https://www.kredietbanklimburg.nl', tel: '088-101 9999', area: ['all'], checked: N, source: 'official',
   },
   {
     // 16-10: geldfit.nl (search result): 0800-8115, free and anonymous, also WhatsApp and chat.
     id: 'rg.zl.k.geldfit', category: 'schulden', emoji: '💶',
     name: 'Geldfit',
     when: 'Je weet niet zeker of je geldzorgen hebt. Gratis en anoniem.',
-    url: 'https://www.geldfit.nl', tel: '0800-8115', area: ['all'], checked: C, source: 'other',
+    url: 'https://www.geldfit.nl', tel: '0800-8115', area: ['all'], checked: N, source: 'official',
   },
   {
     // 16-10: humanitas.nl/afdeling/maastricht-heuvelland, /parkstad, /westelijke-mijnstreek (search result):
@@ -354,7 +358,7 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.humanitas', category: 'schulden', emoji: '📬',
     name: 'Humanitas: thuisadministratie',
     when: 'Een vrijwilliger helpt je met je post en je geld.',
-    url: 'https://www.humanitas.nl', area: ['mh', 'parkstad', 'wm'], checked: C, source: 'other',
+    url: 'https://www.humanitas.nl', area: ['mh', 'parkstad', 'wm'], checked: N, source: 'official',
   },
   // ---- Taal leren ----
   {
@@ -362,15 +366,15 @@ export const zlSocialMap: SocialMapEntry[] = [
     //   computer at the "digiTAALpunt+" (not called Taalhuis), a weekly taalcafé, no library card needed.
     id: 'rg.zl.k.centreceramique', category: 'taal', emoji: '📚',
     name: 'Centre Céramique: bibliotheek Maastricht',
-    when: 'Gratis hulp bij Nederlands en de computer. Vraag naar het digiTAALpunt. Er is ook een taalcafé.',
-    url: 'https://www.centreceramique.nl', area: ['mh'], checked: C, source: 'other',
+    when: 'Gratis hulp bij Nederlands en de computer. Je hoeft geen lid te zijn. Er is ook een taalcafé.',
+    url: 'https://www.bibliotheekmaastricht.nl', area: ['mh'], checked: N, source: 'official',
   },
   {
     // 16-10: schunck.nl/bibliotheek/leren-en-ontwikkelen/taalhuis (search result): Taalhuis, free taalcafés.
     id: 'rg.zl.k.schunck', category: 'taal', emoji: '📚',
     name: 'SCHUNCK: bibliotheek en Taalhuis Heerlen',
     when: 'Gratis hulp bij Nederlands, lezen en de computer.',
-    url: 'https://www.schunck.nl', area: ['parkstad'], checked: C, source: 'other',
+    url: 'https://www.schunck.nl', area: ['parkstad'], checked: N, source: 'official',
   },
   {
     // 16-10 (doc 7.20): dedomijnen.nl is the own site (search result, "De Domijnen - Dé culturele instelling in
@@ -386,47 +390,53 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.112', category: 'zorg', emoji: '🚨',
     name: '112',
     when: 'Levensgevaar, brand, of een misdrijf dat nu gebeurt.',
-    tel: '112', area: ['all'], checked: C, source: 'other',
+    tel: '112', area: ['all'], checked: N, source: 'official',
   },
   // The huisartsenposten: no regional number until it is checked (doc 7.3, owner's answer 4). 16-10: each post has
   // its own site (search results), now the row's web address, so the tap goes to the page with the number:
   // hapmaastricht.nl (043-750 0123, also on mumc.nl/contact-verwijzer; 043-387 7777 is older), huisartsenspoedpost-
   // ozl.nl (045-577 8844), spoedzorgmeditta.nl (Geleen, 046-400 99 25). ⚖️ check: open them and read the numbers.
   {
+    // 14-11: the post follows your GP's practice, not your address. hapmaastricht.nl/aangesloten-praktijken: 51
+    //   practices, in Maastricht, Eijsden-Margraten, Meerssen and Valkenburg aan de Geul; none in Gulpen-Wittem
+    //   or Vaals, although the post calls itself "Maastricht en Heuvelland". Those go to Heerlen (next row).
     id: 'rg.zl.k.hapmaastricht', category: 'zorg', emoji: '🏥',
     name: 'Huisartsenspoedpost Maastricht en Heuvelland (bij het MUMC+)',
-    when: 'Je huisarts is dicht en het kan niet wachten. Bel eerst. Het nummer staat op de site.',
-    url: 'https://hapmaastricht.nl', area: ['mh'], checked: C, source: 'other',
+    when: 'Je huisarts is dicht en het kan niet wachten. Bel eerst. Het nummer staat op de site. Voor wie een huisarts heeft in Maastricht, Eijsden-Margraten, Meerssen of Valkenburg.',
+    url: 'https://hapmaastricht.nl', area: ['mh'], checked: N, source: 'official',
   },
   {
     // 16-10: huisartsenspoedpost-ozl.nl (search result): on the Spoedplein of Zuyderland, Heerlen.
+    // 14-11: also the post of the GP practices in Gulpen-Wittem and Vaals: six practices there (Gulpen twice,
+    //   Mechelen, Wijlre, Vaals twice) name this post and its number on their own sites. The post's own site
+    //   states no area (its list of practices is a placeholder), so the proof is the practices' sites.
     id: 'rg.zl.k.hapheerlen', category: 'zorg', emoji: '🏥',
     name: 'Huisartsenspoedpost Oostelijk Zuid-Limburg (bij Zuyderland Heerlen)',
-    when: 'Je huisarts is dicht en het kan niet wachten. Bel eerst.',
-    url: 'https://huisartsenspoedpost-ozl.nl', area: ['parkstad'], checked: C, source: 'other',
+    when: 'Je huisarts is dicht en het kan niet wachten. Bel eerst. Ook voor wie een huisarts heeft in Gulpen-Wittem of Vaals.',
+    url: 'https://huisartsenspoedpost-ozl.nl', area: ['parkstad', 'mh'], checked: N, source: 'official',
   },
   {
     // ⚖️ check: is the post in Geleen still open (the SEH there closed; doc 7.3)? 16-10: zuyderland.nl/spoedzorg and
     //   spoedzorgmeditta.nl (search result): yes, "Spoedpost Westelijke Mijnstreek", Demystraat in Geleen, on
     //   appointment after a call. ⚖️ check: is that on the Zuyderland site ("bij Zuyderland Geleen")?
     id: 'rg.zl.k.hapgeleen', category: 'zorg', emoji: '🏥',
-    name: 'Huisartsenspoedpost Westelijke Mijnstreek (bij Zuyderland Geleen)',
-    when: 'Je huisarts is dicht en het kan niet wachten. Bel eerst de post van je eigen streek.',
-    url: 'https://spoedzorgmeditta.nl', area: ['wm'], checked: C, source: 'other',
+    name: 'Huisartsenspoedpost Sittard-Geleen (Spoedpost Meditta, in Geleen)',
+    when: 'Je huisarts is dicht en het kan niet wachten. Bel eerst: je komt alleen op afspraak. Kies op de site Sittard-Geleen.',
+    url: 'https://spoedzorgmeditta.nl', area: ['wm'], checked: N, source: 'official',
   },
   {
     // 16-10: mumc.nl (search result): the academic hospital; outpatient clinics need a referral.
     id: 'rg.zl.k.mumc', category: 'zorg', emoji: '🏥',
     name: 'MUMC+ (Maastricht UMC+)',
     when: 'Het ziekenhuis van de universiteit in Maastricht. Meestal ga je erheen met een verwijzing.',
-    url: 'https://www.mumc.nl', area: ['mh'], checked: C, source: 'other',
+    url: 'https://www.mumc.nl', area: ['mh'], checked: N, source: 'official',
   },
   {
     // 16-10: zuyderland.nl/contact (search result): 088 459 77 77 for both sites, Heerlen and Sittard-Geleen.
     id: 'rg.zl.k.zuyderland', category: 'zorg', emoji: '🏥',
     name: 'Zuyderland Medisch Centrum (Heerlen en Sittard-Geleen)',
     when: 'Ziekenhuis op twee plekken. Meestal ga je erheen met een verwijzing.',
-    url: 'https://www.zuyderland.nl', tel: '088-459 7777', area: ['parkstad', 'wm'], checked: C, source: 'other',
+    url: 'https://www.zuyderland.nl', tel: '088-459 7777', area: ['parkstad', 'wm'], checked: N, source: 'official',
   },
   {
     // A rehabilitation centre, not a neighbourhood team (doc 7.5): under Zorg, only with a referral.
@@ -445,30 +455,30 @@ export const zlSocialMap: SocialMapEntry[] = [
   {
     id: 'rg.zl.k.gipmaastricht', category: 'grens', emoji: '🌍',
     name: 'GrensInfoPunt Maastricht',
-    when: 'Je woont of werkt over de grens, of je wilt dat. Gratis advies over belasting, uitkering, pensioen en zorgverzekering.',
-    url: 'https://grenzinfo.eu/emrm', area: ['all'], checked: C, source: 'other',
+    when: 'Je woont of werkt over de grens, of je wilt dat. Gratis advies over belasting, uitkering, pensioen en zorgverzekering. Langskomen alleen op afspraak.',
+    url: 'https://grenzinfo.eu/emrm', area: ['all'], checked: N, source: 'official',
   },
   {
     id: 'rg.zl.k.gipaachen', category: 'grens', emoji: '🌍',
     name: 'GrenzInfoPunkt Aachen-Eurode (Aken en Herzogenrath)',
-    when: 'Hetzelfde, vooral voor werk of wonen in Duitsland. Op afspraak.',
-    url: 'https://grenzinfo.eu/emra', area: ['all'], checked: C, source: 'other',
+    when: 'Hetzelfde advies, voor werk of wonen over de grens met Duitsland. Op afspraak.',
+    url: 'https://grenzinfo.eu/emra', area: ['all'], checked: N, source: 'official',
   },
   {
     // 16-10: grenzinfo.eu/emrm/?p=15532 (search result): Grensarbeid (Kerkrade & Maastricht), help with vacancies
     //   and a cv for NL, BE and DE; spreekuren in Maastricht (Werkcentrum), Heerlen and Sittard-Geleen.
     id: 'rg.zl.k.grensarbeid', category: 'grens', emoji: '🧳',
     name: 'Grensarbeid (Kerkrade en Maastricht)',
-    when: 'Je zoekt werk in België, Duitsland of Nederland. Hulp met vacatures en je cv.',
-    url: 'https://grenzinfo.eu/emrm', area: ['all'], checked: C, source: 'other',
+    when: 'Je zoekt werk over de grens: in België, Duitsland of Nederland. Hulp bij het zoeken en bij je sollicitatie.',
+    url: 'https://grenzarbeit.eu', area: ['all'], checked: N, source: 'official',
   },
   // ---- Vakbond ----
   {
     // 088-368 0368 is the national contact centre (doc 7.15). 16-10: fnv.nl/service-contact (search result): yes, workdays 8.30-17.30.
     id: 'rg.zl.k.fnv', category: 'vakbond', emoji: '✊',
-    name: 'FNV Limburg',
+    name: 'FNV',
     when: 'Je bent lid, of je wilt lid worden. Hulp bij je contract, je loon of een conflict.',
-    url: 'https://www.fnv.nl', tel: '088-368 0368', area: ['all'], checked: C, source: 'other',
+    url: 'https://www.fnv.nl', tel: '088-368 0368', area: ['all'], checked: N, source: 'official',
   },
   {
     // 16-10: cnv.nl/contact (search result): only national contact (030, not a number for the row); no office or
@@ -476,7 +486,7 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.cnv', category: 'vakbond', emoji: '✊',
     name: 'CNV',
     when: 'Ook een vakbond. Je bent lid, of je wilt lid worden. Hulp bij je werk en je contract.',
-    url: 'https://www.cnv.nl', area: ['all'], checked: C, source: 'other',
+    url: 'https://www.cnv.nl', area: ['all'], checked: N, source: 'official',
   },
   // ---- Nieuwkomers met een verblijfsvergunning ----
   {
@@ -487,15 +497,10 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.refugeeteam', category: 'nieuwkomers', emoji: '🧭',
     name: 'Refugee Team',
     when: 'Begeleiding voor statushouders in Maastricht en het Heuvelland.',
-    url: 'https://refugeeteam.nl', area: ['mh'], checked: C, source: 'other',
+    url: 'https://refugeeteam.nl', area: ['mh'], checked: N, source: 'official',
   },
-  {
-    // 16-10: still not found who does it in Parkstad and the Westelijke Mijnstreek.
-    id: 'rg.zl.k.nieuwkomers', category: 'nieuwkomers', emoji: '🏘️',
-    name: 'Parkstad en Westelijke Mijnstreek',
-    when: 'Vraag bij je gemeente wie je begeleidt.',
-    area: ['parkstad', 'wm'], checked: C, source: 'other',
-  },
+  // 14-11: the row "Parkstad en Westelijke Mijnstreek: vraag bij je gemeente wie je begeleidt" is out: it named
+  //   no organisation, so it could not be checked, and the gemeente rows above say the same.
   // ---- Huiselijk geweld ----
   {
     // 16-10: veiligthuis.nl (search result): 0800-2000, free, day and night, also anonymous; danger now: 112.
@@ -503,13 +508,13 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.veiligthuis', category: 'veilig', emoji: '🛡️',
     name: 'Veilig Thuis',
     when: 'Je voelt je niet veilig thuis, of je maakt je zorgen om iemand. Gratis, dag en nacht, ook anoniem.',
-    url: 'https://www.veiligthuis.nl', tel: '0800-2000', area: ['all'], checked: C, source: 'other',
+    url: 'https://www.veiligthuis.nl', tel: '0800-2000', area: ['all'], checked: N, source: 'official',
   },
   {
     id: 'rg.zl.k.112veilig', category: 'veilig', emoji: '🚨',
     name: '112',
     when: 'Er is nu gevaar.',
-    tel: '112', area: ['all'], checked: C, source: 'other',
+    tel: '112', area: ['all'], checked: N, source: 'official',
   },
   // ---- Wonen ----
   {
@@ -519,7 +524,7 @@ export const zlSocialMap: SocialMapEntry[] = [
     id: 'rg.zl.k.thuisinlimburg', category: 'wonen', emoji: '🏠',
     name: 'Thuis in Limburg',
     when: 'Een huurhuis zoeken bij een woningcorporatie. Gratis inschrijven, elk jaar verlengen. Geen internet? De corporaties helpen je.',
-    url: 'https://www.thuisinlimburg.nl', area: ['all'], checked: C, source: 'other',
+    url: 'https://www.thuisinlimburg.nl', area: ['all'], checked: N, source: 'official',
   },
 ];
 
