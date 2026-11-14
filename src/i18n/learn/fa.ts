@@ -164,6 +164,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "پرسیده‌اند می‌دانی چطور یا نه: نه، هنوز نه، و روراست گفته شده.", // nieuw, nalezen
     'c.mayask.a.why': "پرسیده‌اند سؤالی داری یا نه: بله، و اول اینکه وقت هست یا نه.", // nieuw, nalezen
     'c.whereis.a.why': "پرسیده‌اند می‌توانی پیدایش کنی یا نه: نه، و خواهشِ نشان دادنش.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "خواسته‌اند چیزی را نگه دارد: بله، و می‌پرسد کجا بگذارد.", // nieuw, nalezen
+    'c.onoff.a.why': "پرسیده‌اند در بسته است یا نه: نه، و الان آن را می‌بندد.", // nieuw, nalezen
+    'c.fillempty.a.why': "پرسیده‌اند پر شده یا نه: بله، و آن را خالی می‌کند.", // nieuw, nalezen
+    'c.order.a.why': "خواسته‌اند الان انجامش بدهد: بله، و می‌پرسد بعدش چه.", // nieuw, nalezen
   },
 };
 

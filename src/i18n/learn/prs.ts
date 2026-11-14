@@ -164,6 +164,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "پرسیده‌اند می‌دانید چطور یا نی: نی، هنوز نی، و راست گفته شده.", // nieuw, nalezen
     'c.mayask.a.why': "پرسیده‌اند سوال دارید یا نی: بلی، و اول اینکه وقت هست یا نی.", // nieuw, nalezen
     'c.whereis.a.why': "پرسیده‌اند پیدا کرده می‌توانید یا نی: نی، و خواهش اینکه نشان بدهند.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "خواستند که چیزی را بگیرد: بلی، و می‌پرسد کجا بگذارد.", // nieuw, nalezen
+    'c.onoff.a.why': "پرسیدند که دروازه بسته است یا نی: نی، و حالا آن را بسته می‌کند.", // nieuw, nalezen
+    'c.fillempty.a.why': "پرسیدند که پر شده یا نی: بلی، و آن را خالی می‌کند.", // nieuw, nalezen
+    'c.order.a.why': "خواستند که حالا انجامش بدهد: بلی، و می‌پرسد بعد از آن چه.", // nieuw, nalezen
   },
 };
 

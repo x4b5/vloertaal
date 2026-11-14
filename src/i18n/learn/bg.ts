@@ -165,6 +165,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "На въпроса дали знаеш как: не, още не, казано честно.", // nieuw, nalezen
     'c.mayask.a.why': "На въпроса дали имаш въпрос: да, а първо дали има време.", // nieuw, nalezen
     'c.whereis.a.why': "На въпроса дали можеш да го намериш: не, и молба да го посочат.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "Молят да се подържи нещо: „да“ и въпрос къде да се сложи.", // nieuw, nalezen
+    'c.onoff.a.why': "Питат дали вратата е затворена: „не“, и я затварят сега.", // nieuw, nalezen
+    'c.fillempty.a.why': "Питат дали вече е пълен: „да“, и го изпразват.", // nieuw, nalezen
+    'c.order.a.why': "Молят да се направи сега: „да“ и въпрос какво следва.", // nieuw, nalezen
   },
 };
 

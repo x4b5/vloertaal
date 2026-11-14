@@ -2205,6 +2205,88 @@ const t: CultureTranslation = {
     'c.delay.o2': "Du fährst schneller, um die Zeit aufzuholen.", // nieuw, nalezen
     'c.delay.o3': "Du sagst nichts: Vielleicht merkt es niemand.", // nieuw, nalezen
     'c.delay.w': "Wenn der Planer es früh weiß, erfahren es die Kunden, und niemand wartet umsonst. Schneller fahren ist gefährlich, und es bringt fast keine Zeit.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'u.do': "Anweisungen", // nieuw, nalezen
+    'l.putdown': "Stell es da hin", // nieuw, nalezen
+    'w.zetten': "stellen (etwas, das steht: ein Karton, ein Eimer)", // nieuw, nalezen
+    'w.leggen': "legen (etwas, das flach liegt)", // nieuw, nalezen
+    'w.brengen': "bringen (an einen Ort oder zu einer Person)", // nieuw, nalezen
+    'w.geven': "geben", // nieuw, nalezen
+    'w.vasthouden': "festhalten, halten", // nieuw, nalezen
+    'w.loslaten': "loslassen", // nieuw, nalezen
+    's.putdown.1': "Stell es da hin.", // nieuw, nalezen
+    's.putdown.2': "Bring das in die Kantine.", // nieuw, nalezen
+    's.putdown.3': "Halt das mal kurz.", // nieuw, nalezen
+    'c.putdown.q': "Kannst du das kurz halten?", // nieuw, nalezen
+    'c.putdown.a': "Ja. Wo soll ich es hinstellen?", // nieuw, nalezen
+    'c.putdown': "Sag, dass du es hast", // nieuw, nalezen
+    'c.putdown.b': "Tragt ihr etwas zusammen, oder gibt dir ein Kollege etwas Schweres? Sag „Ik heb hem“, wenn du es gut hältst. Dann weiß dein Kollege, dass er sicher loslassen kann. Willst du selbst loslassen? Frag zuerst: „Heb je hem?“ Und warte auf die Antwort. Das ist an jedem Arbeitsplatz normal. So fällt nichts auf Füße und Hände.", // nieuw, nalezen
+    'c.putdown.p': "Ich habe es. Du kannst loslassen.", // nieuw, nalezen
+    'c.putdown.s': "Ein Kollege gibt dir einen schweren Karton. Du hältst ihn noch nicht gut. Was machst du?", // nieuw, nalezen
+    'c.putdown.o1': "Du sagst „wacht“ und hältst ihn zuerst besser.", // nieuw, nalezen
+    'c.putdown.o2': "Du sagst nichts: Er sieht es schon.", // nieuw, nalezen
+    'c.putdown.o3': "Du nimmst ihn schnell, damit er nicht wartet.", // nieuw, nalezen
+    'c.putdown.w': "Dein Kollege lässt los, wenn er denkt, dass du ihn hast. Ein Wort gibt dir die Zeit, ihn gut zu halten.", // nieuw, nalezen
+    'l.onoff': "An und aus, auf und zu", // nieuw, nalezen
+    'w.aanzetten': "einschalten, anmachen", // nieuw, nalezen
+    'w.opendoen': "aufmachen, öffnen", // nieuw, nalezen
+    'w.dichtdoen': "zumachen, schließen", // nieuw, nalezen
+    'w.drukken': "drücken (einen Knopf)", // nieuw, nalezen
+    'w.draaien': "drehen", // nieuw, nalezen
+    'w.stoppen': "stoppen, aufhören", // nieuw, nalezen
+    's.onoff.1': "Mach die Tür zu.", // nieuw, nalezen
+    's.onoff.2': "Drück auf den Knopf.", // nieuw, nalezen
+    's.onoff.3': "Stopp! Mach es aus.", // nieuw, nalezen
+    'c.onoff.q': "Ist die Tür zu?", // nieuw, nalezen
+    'c.onoff.a': "Nein. Ich mache sie jetzt zu.", // nieuw, nalezen
+    'c.onoff': "Stopp heißt Stopp", // nieuw, nalezen
+    'c.onoff.b': "Ruft jemand „Stop!“? Hör sofort auf, auch wenn du nicht weißt, warum. Frag danach. Ein kurzes, lautes Wort ist hier kein Ärger: So schützen sich Kollegen gegenseitig. Siehst du selbst etwas Gefährliches? Ruf auch „Stop!“, auch zu jemandem, der schon seit Jahren hier arbeitet. Niemand findet das komisch.", // nieuw, nalezen
+    'c.onoff.p': "Stopp! Warte kurz.", // nieuw, nalezen
+    'c.onoff.s': "Du schaltest eine Maschine ein. Ein Kollege ruft „Stop!“. Du siehst kein Problem. Was machst du?", // nieuw, nalezen
+    'c.onoff.o1': "Du hörst sofort auf und fragst danach, warum.", // nieuw, nalezen
+    'c.onoff.o2': "Du machst weiter: Du siehst kein Problem.", // nieuw, nalezen
+    'c.onoff.o3': "Du fragst zuerst, warum du aufhören sollst.", // nieuw, nalezen
+    'c.onoff.w': "Dein Kollege sieht vielleicht etwas, das du nicht siehst. Erst stoppen, dann reden: So bleiben alle sicher.", // nieuw, nalezen
+    'l.fillempty': "Schieben, ziehen, füllen", // nieuw, nalezen
+    'w.duwen': "schieben", // nieuw, nalezen
+    'w.trekken': "ziehen", // nieuw, nalezen
+    'w.vullen': "füllen", // nieuw, nalezen
+    'w.leegmaken': "leeren, leer machen", // nieuw, nalezen
+    'w.schoonmaken': "sauber machen, putzen", // nieuw, nalezen
+    'w.vol': "voll", // nieuw, nalezen
+    's.fillempty.1': "Nicht schieben, sondern ziehen.", // nieuw, nalezen
+    's.fillempty.2': "Der hier ist voll. Mach ihn leer.", // nieuw, nalezen
+    's.fillempty.3': "Mach das mal kurz sauber.", // nieuw, nalezen
+    'c.fillempty.q': "Ist er schon voll?", // nieuw, nalezen
+    'c.fillempty.a': "Ja. Ich mache ihn leer.", // nieuw, nalezen
+    'c.fillempty': "Fertig? Sag es", // nieuw, nalezen
+    'c.fillempty.b': "Bist du mit einer Aufgabe fertig? Sag es: „Ik ben klaar.“ Und frag, was du als Nächstes tun kannst. Still warten, bis dich jemand sieht, kann so aussehen, als ob du nicht arbeiten willst, auch wenn das nicht stimmt. Kollegen, die nach der nächsten Aufgabe fragen, bekommen nach einer Weile oft interessantere Arbeit. Willst du etwas Neues lernen? Frag auch das: „Mag ik dat ook leren?“", // nieuw, nalezen
+    'c.fillempty.p': "Ich bin fertig. Was kann ich noch machen?", // nieuw, nalezen
+    'c.fillempty.s': "Du bist mit deiner Aufgabe fertig. Dein Vorgesetzter ist mit etwas anderem beschäftigt. Was machst du?", // nieuw, nalezen
+    'c.fillempty.o1': "Du sagst, dass du fertig bist, und fragst, was als Nächstes kommt.", // nieuw, nalezen
+    'c.fillempty.o2': "Du wartest, bis dein Vorgesetzter dich sieht.", // nieuw, nalezen
+    'c.fillempty.o3': "Du machst Pause: Deine Arbeit ist fertig.", // nieuw, nalezen
+    'c.fillempty.w': "Ein Vorgesetzter kann nicht alles sehen. Wenn du sagst, dass du fertig bist, geht die Arbeit weiter, und du zeigst, dass du mehr machen willst.", // nieuw, nalezen
+    'l.order': "Erst das hier, dann das da", // nieuw, nalezen
+    'w.nu': "jetzt", // nieuw, nalezen
+    'w.dan': "dann", // nieuw, nalezen
+    'w.altijd': "immer", // nieuw, nalezen
+    'w.genoeg': "genug", // nieuw, nalezen
+    'w.meer': "mehr", // nieuw, nalezen
+    'w.alles': "alles", // nieuw, nalezen
+    's.order.1': "Erst das hier, dann das da.", // nieuw, nalezen
+    's.order.2': "Das ist genug.", // nieuw, nalezen
+    's.order.3': "Mach das immer so.", // nieuw, nalezen
+    'c.order.q': "Kannst du das jetzt machen?", // nieuw, nalezen
+    'c.order.a': "Ja. Erst das, und dann?", // nieuw, nalezen
+    'c.order': "Viele Aufgaben auf einmal? Frag, was zuerst kommt", // nieuw, nalezen
+    'c.order.b': "Manchmal bekommst du drei Aufgaben in einem Satz. Das ist schwer zu merken, auch für Leute, die gut Niederländisch sprechen. Frag, welche zuerst kommt: „Wat moet ik eerst doen?“ Du darfst die Aufgaben auch aufschreiben, oder sie an den Fingern abzählen und noch einmal sagen. Hast du eine vergessen? Geh zurück und frag. Das ist besser als raten.", // nieuw, nalezen
+    'c.order.p': "Das ist viel. Was soll ich zuerst machen?", // nieuw, nalezen
+    'c.order.s': "Dein Vorgesetzter gibt dir drei Aufgaben, sehr schnell. Du merkst dir nur die erste. Was machst du?", // nieuw, nalezen
+    'c.order.o1': "Du bittest sofort darum, die Aufgaben noch einmal zu hören.", // nieuw, nalezen
+    'c.order.o2': "Du machst die erste und hoffst, dass dir der Rest wieder einfällt.", // nieuw, nalezen
+    'c.order.o3': "Du machst nichts: Du weißt nicht alle drei.", // nieuw, nalezen
+    'c.order.w': "Sofort fragen kostet zehn Sekunden. Später ist dein Vorgesetzter vielleicht weg, und dann wartest du oder rätst.", // nieuw, nalezen
   },
 };
 

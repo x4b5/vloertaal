@@ -1712,3 +1712,59 @@ Per taal, wat de vertaler zelf het minst zeker vond:
 - **ti** (heeft een volledige lezing nodig, niet alleen deze punten): wat de leerling tegen een collega zegt, staat in de beleefde meervoudsvorm (elders in het bestand in mannelijk enkelvoud); `w.moeilijk` «ኣጸጋሚ»; `w.storen` «ምርባሽ», `w.twijfelen` «ምጥርጣር», `w.aanwijzen` «ምምልካት»; de grammatica van `s.howto.3` en de titel `c.howto`; "de kantine" als leenwoord «ካንቲን»; «ከም ብሓድሽ» in `c.howto.b` (in plaats van «እንደገና», dat naar het Amhaars neigt).
 - **tr**: "Soracağın bir şey var mı?" ("sorun" bewust vermeden: betekent ook "probleem"); "Pardon, rahatsız ediyorum."; `w.aanwijzen` "parmakla göstermek" (met de vinger wijzen kan onbeleefd klinken); `w.twijfelen` "tereddüt etmek" (moeilijk woord).
 - **uk**: `w.moeilijk` "складний" en `w.makkelijk` "простий, легкий" ("важкий" is ook zwaar); `w.kwijt` "загублений" naast de zin "Я заблукав / заблукала"; `w.aanwijzen` "показувати рукою" terwijl het gesprekje "Можеш показати, де це?" zegt.
+
+## Nieuw onderwerp: Instructies (14 november 2026)
+
+Een nieuw basisonderwerp in Taal, direct na "Hulp vragen": `u.do` (Instructies). De cursus leerde
+de gewone doe-woorden van een opdracht nergens aan. Alles met AI vertaald en nog niet door een
+moedertaalspreker gecontroleerd. De lessen:
+
+| Les | Titel | Woorden |
+|---|---|---|
+| `l.putdown` | Zet het daar neer | zetten, leggen, brengen, geven, vasthouden, loslaten |
+| `l.onoff` | Aan en uit, open en dicht | aanzetten, opendoen, dichtdoen, drukken, draaien, stoppen |
+| `l.fillempty` | Duwen, trekken, vullen | duwen, trekken, vullen, leegmaken, schoonmaken, vol |
+| `l.order` | Eerst dit, dan dat | nu, dan, altijd, genoeg, meer, alles |
+
+Nieuwe ids (85 sleutels per taal in `src/i18n/work/<taal>.ts` en `learn/<taal>.ts`, allemaal
+gemarkeerd met "nieuw, nalezen"): de titel `u.do`; per les `l.<les>`, zes `w.*`, `s.<les>.1`–`3`,
+`c.<les>.q` en `.a`, de tip `c.<les>` met `.b`, `.p`, `.s`, `.o1`–`.o3`, `.w`, en `c.<les>.a.why`.
+Daarnaast twee "Ik kan"-zinnen in `src/i18n/kunjenu/<taal>.ts`: `kjn.u.do.1` en `kjn.u.do.2`.
+
+Voor alle talen:
+
+- **"Zetten" en "leggen"** zijn in veel talen één werkwoord (es, fr, bg, fa, so, ar). Het verschil
+  staat dan alleen tussen haakjes: iets dat staat, iets dat ligt.
+- **"Aanzetten" en "opendoen"**, **"uitzetten" en "dichtdoen"** vallen in het Turks samen
+  (açmak, kapatmak); "Stop! Zet het uit." kan daar ook "doe het dicht" zijn.
+- **"Duwen" en "drukken"** vallen samen in het Somalisch (riixid) en schuren in het Duits
+  (schieben, drücken).
+- **"Trekken"** is in het Spaans "tirar", dat ook "weggooien" betekent: daar staat "hacia ti" bij.
+- **"Stop!"** is in de zinnen vertaald (¡Para!, Stopp!, Dur!, ایست!, Joogso!), maar blijft
+  Nederlands waar de tip het citeert. Is de vertaalde uitroep het woord dat je op de werkvloer hoort?
+- **"Het", "dit" en "hem"** in de Nederlandse zinnen noemen bewust geen ding. Talen met
+  woordgeslacht moesten kiezen (de: "Der hier / ihn", pl: "Ten jest pełny", ro en es wisselen).
+- **De titel van het onderwerp** is in meerdere talen niet "instructies" maar het woord voor een
+  gesproken opdracht (uk "Вказівки", pl "Polecenia", bg "Указания", fr "Les consignes"), omdat
+  `w.instructie` daar de geschreven handleiding is.
+- **De tips**: geen recht en geen bedrag. `c.onoff` zegt dat iedereen "Stop!" mag roepen (een
+  gewoonte, geen recht); `c.fillempty` zegt dat wie om de volgende taak vraagt "vaak" interessanter
+  werk krijgt (een verwachting, geen belofte).
+- **België**: zie `src/content/taalBe/inventory.ts` ("kuisen" naast "schoonmaken").
+
+Per taal, wat de vertaler zelf het minst zeker vond:
+
+- **ar**: `w.duwen` «يدفع (إلى الأمام)» (zonder haakjes ook "betalen"); `w.loslaten` «يُفلت، يترك من يده» terwijl de zinnen «يترك» gebruiken (ook "achterlaten"); de titel `c.onoff` «توقَّفْ تعني توقَّفْ»; `w.leggen` «يضع (شيئاً بشكل مسطّح، ممدوداً)»; de x-vormen van `l.putdown` en `c.putdown` lezen stijf.
+- **bg**: `w.zetten` en `w.leggen` allebei "слагам" ("полагам" is wat formeel); `u.do` "Указания"; de leidinggevende is "началникът"; "стола" (de kantine) is ook "de stoel"; de aoristus in `c.fillempty.s`.
+- **de**: "Der hier / ihn / er" in `s.fillempty.2` en het gesprekje; `w.duwen` "schieben" (bij deuren zegt men "drücken", dat is al `w.drukken`); "Stopp heißt Stopp"; `c.onoff.b` "ist hier kein Ärger"; `s.order.1` "Erst das hier, dann das da".
+- **es**: `w.trekken` "tirar (hacia ti), jalar"; de titel `c.onoff` "Stop significa parar"; "¡Para!" voor "Stop!"; `w.leggen` "poner, colocar (…)"; `c.order.o2` "confías en recordar el resto".
+- **fa**: «ایست!» voor "Stop!" (of «بایست!», «صبر کن!»); `w.leggen` «گذاشتن، خواباندن»; de antwoorden staan in de gebiedende wijs (de lessen van vanochtend in de tegenwoordige tijd); `c.fillempty.q` «پر شده؟».
+- **fr**: `u.do` "Les consignes"; `w.zetten` en `w.leggen` allebei rond "poser"; "Stop, c’est stop"; `s.order.1` "D’abord ceci, ensuite cela" (gesproken: "D’abord ça, après ça"); "on" in twee `.a.why`-regels.
+- **pl**: `u.do` "Polecenia"; `w.aanzetten` "włączyć" (voltooid, de andere werkwoorden onvoltooid); `c.fillempty.b` "może to wyglądać tak, że nie chcesz pracować"; `c.onoff.b` "dbają o swoje bezpieczeństwo" (of "o siebie nawzajem"); "Ten jest pełny" (mannelijk).
+- **prs**: `w.loslaten` «ایلا کردن» (spreektaal uit Kabul); `w.duwen` «تیله کردن», `w.trekken` «کش کردن»; zinnen en gesprekjes in de «تو»-vorm, tips in «شما»; «ایستاد شو!» voor "Stop!"; `u.do` «هدایت‌ها»; `w.leggen` «هموار ماندن».
+- **pt** (Europees Portugees, tu-vorm): `w.drukken` "carregar (num botão)" (ook het woord voor opladen); "Já o tenho." voor "Ik heb hem"; aangehechte voornaamwoorden in `c.onoff.a` en `c.fillempty.a`; "Para! Desliga isso."; `s.order.2` "Isso é suficiente." (gesproken: "Isso chega.").
+- **ro**: het voornaamwoord voor "het" wisselt (Pune-l, s-o pun, Îl țin, o ții); `c.onoff.s` "utilaj"; `w.aanzetten` "a porni"; `c.onoff.b` "așa se țin colegii în siguranță unii pe alții"; "treabă" voor taak.
+- **so**: `w.duwen` "riixid, durkin" naast `w.drukken` "riixid (badhan)"; `w.zetten` en `w.leggen` allebei "dhigid"; "Joogso waa joogso"; `c.fillempty.q` "Durba ma buuxsamay?" en `w.vol` "buuxa"; "kartoon" naast "sanduuq" voor de doos.
+- **ti** (heeft een volledige lezing nodig): `w.loslaten` «ምልቃቕ» en de vervoegingen ervan (of «ምግዳፍ»); `w.draaien` «ምዝዋር፡ ምጥዋይ» («ምዝዋር» is elders "rijden"); `w.leegmaken` «ባዶ ምግባር» (elders «ኣራግፍ»); de gebiedende wijs met voorwerp in `s.onoff.1`, `.2`, `s.fillempty.1`, `.3`; `w.brengen` «ምብጻሕ፡ ምውሳድ» («ምውሳድ» is ook `w.pakken`).
+- **tr**: `w.aanzetten` "çalıştırmak, açmak (bir makineyi, ışığı)" (haakjes toegevoegd); `s.onoff.3` "Dur! Onu kapat."; `c.fillempty.q` "Doldu mu?"; `w.dan` "sonra"; "Nereye koyayım?" en "Önce ne yapayım?".
+- **uk**: `u.do` "Вказівки"; "Я тримаю" voor "Ik heb hem"; `w.stoppen` "зупинятися, зупиняти" naast "Стоп!"; de x-vormen in `c.fillempty.*` ("все готово").

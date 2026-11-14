@@ -30,7 +30,8 @@ const doneUnits = (...unitIds: string[]) =>
  * "Goed communiceren" (u.communicate, 5 November 2026) right after "Samenwerken" (u.teamwork),
  * then "Feedback en overleg" (u.feedback).
  */
-const BASIS = ['u.firstday', 'u.help', 'u.tools', 'u.safety', 'u.emergency', '<own>', 'u.data', 'u.time', 'u.sounds', 'u.teamwork', 'u.communicate', 'u.feedback', 'u.apply', 'u.contract', 'u.papers', 'u.pay', 'u.house', 'u.social', 'u.sayings', 'u.rights', 'u.leave', 'u.sick', 'u.exploit', 'u.contact', 'u.grow', 'u.health', 'u.money', 'u.travel', 'u.lost'];
+// 'u.do' (Instructies, right after Hulp vragen) since 14 November 2026.
+const BASIS = ['u.firstday', 'u.help', 'u.do', 'u.tools', 'u.safety', 'u.emergency', '<own>', 'u.data', 'u.time', 'u.sounds', 'u.teamwork', 'u.communicate', 'u.feedback', 'u.apply', 'u.contract', 'u.papers', 'u.pay', 'u.house', 'u.social', 'u.sayings', 'u.rights', 'u.leave', 'u.sick', 'u.exploit', 'u.contact', 'u.grow', 'u.health', 'u.money', 'u.travel', 'u.lost'];
 const SECTOR_UNITS = ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean'];
 /**
  * Basis units added after the sector units ("In de winkel", "Rekenen"): appended, so every unit
@@ -87,8 +88,8 @@ const TAAL_ORDER: Record<string, string[]> = {
 
 /** The 3 choices after lesson 1.1, as before the tracks. */
 const TAAL_CHOICES: Record<string, string[]> = {
-  undefined: ['u.firstday', 'u.help', 'u.tools'],
-  none: ['u.firstday', 'u.help', 'u.tools'],
+  undefined: ['u.firstday', 'u.help', 'u.do'],
+  none: ['u.firstday', 'u.help', 'u.do'],
   logistics: ['u.safety', 'u.firstday', 'u.warehouse'],
   construction: ['u.safety', 'u.firstday', 'u.build'],
   production: ['u.safety', 'u.firstday', 'u.factory'],

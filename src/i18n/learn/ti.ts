@@ -165,6 +165,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "ብኸመይ ከም ዝግበር ይፍለጥ ድዩ ምስ ዝሕተት፡ እዚ መልሲ ብቕንዕና «ኣይፋል፡ ገና» ይብል።", // nieuw, nalezen
     'c.mayask.a.why': "ሕቶ ኣሎ ድዩ ምስ ዝሕተት፡ እዚ መልሲ «እወ» ይብል፡ ቅድም ድማ ግዜ እንተሎ ይሓትት።", // nieuw, nalezen
     'c.whereis.a.why': "ክርከብ ይከኣል ድዩ ምስ ዝሕተት፡ እዚ መልሲ «ኣይፋል» ይብል፡ ክምልከት ድማ ይሓትት።", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "ገለ ነገር ምሓዝ ተሓቲቱ: እወ፡ ኣበይ ከም ዝቕመጥ ድማ።", // nieuw, nalezen
+    'c.onoff.a.why': "እቲ ማዕጾ ተዓጽዩ ድዩ ተሓቲቱ: ኣይፋል፡ ሕጂ ምዕጻዉ ድማ።", // nieuw, nalezen
+    'c.fillempty.a.why': "ድሮ መሊኡ ድዩ ተሓቲቱ: እወ፡ ባዶ ምግባሩ ድማ።", // nieuw, nalezen
+    'c.order.a.why': "ሕጂ ክግበር ተሓቲቱ: እወ፡ ድሕሪኡ እንታይ ከም ዝመጽእ ድማ።", // nieuw, nalezen
   },
 };
 

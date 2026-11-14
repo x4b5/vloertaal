@@ -12,6 +12,8 @@ import type { Dialogue, Lesson, Sentence, Unit, Word } from './types';
 export const relatedUnits: Record<string, [string, string]> = {
   'u.firstday': ['u.help', 'u.teamwork'],
   'u.help': ['u.firstday', 'u.tools'],
+  // Instructies (14 November 2026): asking how and where (Hulp vragen), and the first names and places.
+  'u.do': ['u.help', 'u.firstday'],
   'u.tools': ['u.help', 'u.contact'],
   'u.sounds': ['u.firstday', 'u.help'],
   'u.safety': ['u.build', 'u.factory'],

@@ -18,6 +18,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "Мога да попитам при кого да се явя.", // nieuw, nalezen
     'kjn.u.help.1': "Мога да кажа, че не разбирам.", // nieuw, nalezen
     'kjn.u.help.2': "Мога да помоля някого да говори по-бавно.", // nieuw, nalezen
+    'kjn.u.do.1': "Мога да разбера кратко указание като „Zet het neer“.", // nieuw, nalezen
+    'kjn.u.do.2': { m: "Мога да кажа, че съм приключил със задача.", f: "Мога да кажа, че съм приключила със задача.", x: "Мога да кажа, че задачата е готова." }, // nieuw, nalezen
     'kjn.u.tools.1': "Мога да помоля някого да го запише или да го покаже.", // nieuw, nalezen
     'kjn.u.tools.2': "Мога да повторя указанието, за да проверя дали разбирам.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Мога да кажа, че искам да упражнявам нидерландски.", // nieuw, nalezen

@@ -1,5 +1,5 @@
 import type { CultureTip } from './tipTypes';
-import { dataUnit, toolsUnit } from './work';
+import { dataUnit, doUnit, toolsUnit } from './work';
 import { baseTips } from './cultureTipsBase';
 import { workTips } from './workTips';
 import { allRegionTips } from './regio';
@@ -17,7 +17,7 @@ export { tipGender } from './tipTypes';
 export { communicateUnit, feedbackUnit, teamworkUnit } from './cultureUnits';
 
 /** The "Smart tools" unit sits right after "Asking for help" (l.understand), so its tips do too. */
-const isToolsTip = (t: CultureTip) => toolsUnit.lessons.some((l) => l.id === t.lessonId);
+const isToolsTip = (t: CultureTip) => [doUnit, toolsUnit].some((u) => u.lessons.some((l) => l.id === t.lessonId));
 // After the last lesson of "Asking for help" (l.whereis since 14 November 2026, l.understand before).
 const afterHelp = baseTips.findIndex((t) => t.lessonId === 'l.whereis') + 1;
 /** "Numbers and details" sits right before "Time and schedule" (l.shift), so its tips do too. */

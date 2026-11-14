@@ -68,6 +68,10 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan zeggen dat ik het niet begrijp.', 'A1', 'gesprekken', 'I can say that I do not understand.'],
     ['Ik kan vragen of iemand langzamer praat.', 'A1', 'spreken', 'I can ask someone to speak more slowly.'],
   ]),
+  onderwerp('u.do', 'Instructies', [
+    ['Ik kan een korte opdracht verstaan, zoals "Zet het neer".', 'A1', 'luisteren', 'I can understand a short instruction, like "Zet het neer".'],
+    ['Ik kan zeggen dat ik klaar ben met een taak.', 'A1', 'gesprekken', 'I can say that I am done with a task.'],
+  ]),
   onderwerp('u.tools', 'Slimme hulpmiddelen', [
     ['Ik kan vragen of iemand het opschrijft of laat zien.', 'A1', 'spreken', 'I can ask someone to write it down or show me.'],
     ['Ik kan een opdracht herhalen om te checken.', 'A2', 'gesprekken', 'I can repeat an instruction to check I understood.'],

@@ -54,6 +54,13 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '👀': 'w.kijken',
   '🕐': 'w.tijd',
   '🚪': 'w.uitgang',
+  // "Instructies" (u.do, 14 November 2026): something goes from hand to hand (c.putdown: "geven";
+  // c.onoff's 🛑 is the stop sign of the work rules), "Ik ben klaar" (c.fillempty: the tick of
+  // "klaar"; the lesson's own words are push, pull, fill) and which job comes first (c.order: the
+  // list of "eerst"; the words of l.order have no picture).
+  '🤲': 'w.geven',
+  '✔': 'w.klaar',
+  '📑': 'w.eerst',
   // "Coming back step by step" (c.backtowork, 5 November 2026): the supervisor's welcome back.
   '🤗': 'w.welkomterug',
   // "Stay calm, also when it is hard" (c.calm, 5 November 2026): a slow breath out (group39).

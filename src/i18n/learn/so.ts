@@ -160,6 +160,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "Waxaa lagu weydiiyay inaad taqaan sida: maya, weli maya, si daacad ah.", // nieuw, nalezen
     'c.mayask.a.why': "Waxaa lagu weydiiyay inaad su'aal qabto: haa, marka horena in waqti jiro.", // nieuw, nalezen
     'c.whereis.a.why': "Waxaa lagu weydiiyay inaad heli karto: maya, iyo codsi ah in laguu tilmaamo.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "Waxaa la weydiistay inuu wax hayo: haa, iyo meesha la dhigayo.", // nieuw, nalezen
+    'c.onoff.a.why': "Waxaa la weydiiyay in albaabku xiran yahay: maya, oo hadda ayuu xirayaa.", // nieuw, nalezen
+    'c.fillempty.a.why': "Waxaa la weydiiyay in uu buuxsamay: haa, oo wuu faaruqinayaa.", // nieuw, nalezen
+    'c.order.a.why': "Waxaa la weydiistay inuu hadda sameeyo: haa, iyo waxa ku xiga.", // nieuw, nalezen
   },
 };
 export default t;

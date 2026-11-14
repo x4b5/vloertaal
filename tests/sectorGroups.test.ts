@@ -54,9 +54,10 @@ describe('the new sectors Techniek and Garage', () => {
   it('put their unit in the own sector slot, and under "Andere sectoren" for the others', () => {
     for (const [sector, own] of [['technical', 'u.tech'], ['garage', 'u.garage']] as const) {
       const { main, other } = coursePlan(sector);
-      expect(main[3].id).toBe('u.safety');
-      expect(main[4].id).toBe('u.emergency');
-      expect(main[5].id, sector).toBe(own);
+      // One place later since "Instructies" (u.do, 14 November 2026).
+      expect(main[4].id).toBe('u.safety');
+      expect(main[5].id).toBe('u.emergency');
+      expect(main[6].id, sector).toBe(own);
       expect(other.map((u) => u.id)).not.toContain(own);
       expect(main.length + other.length).toBe(units.length);
     }

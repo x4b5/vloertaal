@@ -18,6 +18,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "می‌توانم بپرسم که نزد چه کسی خود را معرفی کنم.", // nieuw, nalezen
     'kjn.u.help.1': "می‌توانم بگویم که نمی‌فهمم.", // nieuw, nalezen
     'kjn.u.help.2': "می‌توانم از کسی بخواهم که آهسته‌تر گپ بزند.", // nieuw, nalezen
+    'kjn.u.do.1': "می‌توانم یک هدایت کوتاه مانند «Zet het neer» را بفهمم.", // nieuw, nalezen
+    'kjn.u.do.2': "می‌توانم بگویم که کارم خلاص شده.", // nieuw, nalezen
     'kjn.u.tools.1': "می‌توانم از کسی بخواهم که آن را بنویسد یا نشانم بدهد.", // nieuw, nalezen
     'kjn.u.tools.2': "می‌توانم یک هدایت را دوباره بگویم تا مطمئن شوم که درست فهمیده‌ام.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "می‌توانم بگویم که می‌خواهم هالندی تمرین کنم.", // nieuw, nalezen

@@ -1,7 +1,7 @@
 import { ABUSE_LINE, ADVICE_LINE, HOUSE_LINE } from './adviceLine';
 import type { CultureTip, SituationAsk } from './culture';
 import { sayingsTips } from './sayings';
-import { dataUnit, toolsUnit, workUnits } from './work';
+import { dataUnit, doUnit, toolsUnit, workUnits } from './work';
 
 /**
  * The "Zo werkt het hier" tips of the units in ./work.ts: one tip per lesson, with its long texts
@@ -1027,6 +1027,71 @@ const kasTips = [
   ),
 ];
 
+// "Instructions" (u.do, 14 November 2026). Social norms and how colleagues keep each other safe:
+// no tip states a right or an amount (NONE).
+const doTips = [
+  tipFor(
+    'putdown',
+    '🤲',
+    'Say that you have it',
+    'Do you carry something together, or does a colleague hand you something heavy? Say "Ik heb hem" when you hold it well. Then your colleague knows that it is safe to let go. Do you want to let go yourself? Ask first: "Heb je hem?" And wait for the answer. This is normal on every work floor. It keeps things from falling on feet and hands.',
+    ['Ik heb hem. Laat maar los.', 'I have it. You can let go.'],
+    'A colleague hands you a heavy box. You do not hold it well yet. What do you do?',
+    [
+      'Say "wacht", and hold it better first.',
+      'Say nothing: he will see it.',
+      'Take it fast, so he does not wait.',
+    ],
+    'Your colleague lets go when he thinks that you have it. One word gives you the time to hold it well.',
+    NONE,
+  ),
+  tipFor(
+    'onoff',
+    '🛑',
+    'Stop means stop',
+    'Does someone call "Stop!"? Stop at once, also when you do not know why. Ask afterwards. A short, loud word is not anger here: it is how colleagues keep each other safe. Do you see something dangerous yourself? Call "Stop!" too, also to someone who has worked here for years. Nobody finds that strange.',
+    ['Stop! Wacht even.', 'Stop! Wait a moment.'],
+    'You switch a machine on. A colleague calls "Stop!". You do not see a problem. What do you do?',
+    [
+      'Stop at once, and ask why afterwards.',
+      'Go on: you do not see a problem.',
+      'Ask first why you must stop.',
+    ],
+    'Your colleague may see something that you do not see. First stop, then talk: that keeps everyone safe.',
+    NONE,
+  ),
+  tipFor(
+    'fillempty',
+    '✔️',
+    'Done? Say it',
+    'Are you done with a task? Say it: "Ik ben klaar." And ask what you can do next. Waiting quietly until someone sees you can look as if you do not want to work, also when that is not true. Colleagues who ask for the next task often get more interesting work after a while. Do you want to learn something new? Ask that too: "Mag ik dat ook leren?"',
+    ['Ik ben klaar. Wat kan ik nog doen?', 'I am done. What else can I do?'],
+    'You are done with your task. Your supervisor is busy with something else. What do you do?',
+    [
+      'Say that you are done, and ask what is next.',
+      'Wait until your supervisor sees you.',
+      'Take a break: your work is finished.',
+    ],
+    'A supervisor cannot see everything. When you say that you are done, the work goes on, and you show that you want to do more.',
+    NONE,
+  ),
+  tipFor(
+    'order',
+    '📑',
+    'Many tasks at once? Ask what comes first',
+    'Sometimes you get three tasks in one sentence. That is hard to remember, also for people who speak Dutch well. Ask which one comes first: "Wat moet ik eerst doen?" You may also write the tasks down, or count them on your fingers and say them back. Did you forget one? Go back and ask. That is better than guessing.',
+    ['Dat is veel. Wat moet ik eerst doen?', 'That is a lot. What must I do first?'],
+    'Your supervisor gives you three tasks, very fast. You remember only the first one. What do you do?',
+    [
+      'Ask right away to hear the tasks once more.',
+      'Do the first one, and hope you remember the rest.',
+      'Do nothing: you do not know all three.',
+    ],
+    'Asking at once costs ten seconds. Later your supervisor may be gone, and then you wait or guess.',
+    NONE,
+  ),
+];
+
 const toolsTips = [
   tipFor(
     'translate',
@@ -1889,10 +1954,10 @@ const sectorFourTips = [
   ),
 ];
 
-const lessonOrder = [toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
+const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

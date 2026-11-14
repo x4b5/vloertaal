@@ -18,6 +18,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "Je peux demander à qui je dois me présenter.", // nieuw, nalezen
     'kjn.u.help.1': "Je peux dire que je ne comprends pas.", // nieuw, nalezen
     'kjn.u.help.2': "Je peux demander à quelqu’un de parler plus lentement.", // nieuw, nalezen
+    'kjn.u.do.1': "Je peux comprendre une consigne courte, comme “Zet het neer”.", // nieuw, nalezen
+    'kjn.u.do.2': "Je peux dire que j’ai fini une tâche.", // nieuw, nalezen
     'kjn.u.tools.1': "Je peux demander à quelqu’un de l’écrire ou de me le montrer.", // nieuw, nalezen
     'kjn.u.tools.2': "Je peux répéter une consigne pour vérifier que j’ai compris.", // nieuw, nalezen
     'kjn.u.tools.3': "Je peux dire que je veux pratiquer le néerlandais.", // nieuw, nalezen

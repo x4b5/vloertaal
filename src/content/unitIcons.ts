@@ -7,6 +7,8 @@ import { nlId } from './regels/be/ids';
 export const unitIcons: Record<string, string> = {
   'u.firstday': 'w.hallo',
   'u.help': 'i.help',
+  // Instructies (14 November 2026): a hand that points to where it must go (an own icon).
+  'u.do': 'i.do',
   'u.tools': 'w.vertaalapp',
   'u.sounds': 'w.kl.maan',
   'u.safety': 'w.helm',

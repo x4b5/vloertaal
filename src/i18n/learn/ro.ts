@@ -165,6 +165,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "Întrebarea e dacă știi cum: nu, încă nu, spus sincer.", // nieuw, nalezen
     'c.mayask.a.why': "Întrebarea e dacă ai o întrebare: da, și întâi dacă e timp.", // nieuw, nalezen
     'c.whereis.a.why': "Întrebarea e dacă găsești: nu, și o rugăminte să ți se arate.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "Rugămintea e să țină ceva: da, și întreabă unde să-l pună.", // nieuw, nalezen
+    'c.onoff.a.why': "Întrebarea e dacă ușa e închisă: nu, și o închide acum.", // nieuw, nalezen
+    'c.fillempty.a.why': "Întrebarea e dacă e plin: da, și îl golește.", // nieuw, nalezen
+    'c.order.a.why': "Rugămintea e să o facă acum: da, și întreabă ce vine după.", // nieuw, nalezen
   },
 };
 

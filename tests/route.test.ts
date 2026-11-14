@@ -32,20 +32,20 @@ describe('route: one block at a time', () => {
   });
 
   it('offers the next 3 unfinished units in course order, the recommended one first', () => {
-    expect(nextChoices('none', done('u.firstday')).map((u) => u.id)).toEqual(['u.help', 'u.tools', 'u.safety']);
+    expect(nextChoices('none', done('u.firstday')).map((u) => u.id)).toEqual(['u.help', 'u.do', 'u.tools']);
     // Finished units are skipped, wherever they are.
-    expect(nextChoices('none', done('u.firstday', 'u.tools')).map((u) => u.id)).toEqual(['u.help', 'u.safety', 'u.emergency']);
+    expect(nextChoices('none', done('u.firstday', 'u.tools')).map((u) => u.id)).toEqual(['u.help', 'u.do', 'u.safety']);
     // Safety is recommended, then the sector's weighted units; "Als het misgaat" (out of Safety
     // since 8 November 2026) is recommended once Safety is done (see "choose next" below).
-    expect(nextChoices('construction', done('u.firstday', 'u.help', 'u.tools')).map((u) => u.id)).toEqual(['u.safety', 'u.build', 'u.emergency']);
+    expect(nextChoices('construction', done('u.firstday', 'u.help', 'u.do', 'u.tools')).map((u) => u.id)).toEqual(['u.safety', 'u.build', 'u.emergency']);
   });
 
   it('includes the unfinished current block when the learner chooses another topic', () => {
     const completed = { ...done('u.firstday', 'u.help'), ...lesson('l.payslip') };
     const list = nextChoices('none', completed, 'u.pay');
-    expect(list.map((u) => u.id)).toEqual(['u.tools', 'u.safety', 'u.pay']);
+    expect(list.map((u) => u.id)).toEqual(['u.do', 'u.tools', 'u.pay']);
     // Already among the first 3: nothing changes.
-    expect(nextChoices('none', lesson('l.hello'), 'u.firstday').map((u) => u.id)).toEqual(['u.firstday', 'u.help', 'u.tools']);
+    expect(nextChoices('none', lesson('l.hello'), 'u.firstday').map((u) => u.id)).toEqual(['u.firstday', 'u.help', 'u.do']);
   });
 
   it('fills up with the other sectors, and is empty when everything is done', () => {
@@ -103,10 +103,10 @@ describe('route: "choose next" weighs the sector', () => {
     // unit in course order right after it.
     expect(nextChoices('logistics', done('u.firstday', 'u.safety', 'u.emergency')).map((u) => u.id)).toEqual(['u.warehouse', 'u.help', 'u.time']);
     // The global course order is not changed (saved progress keeps its place).
-    expect(coursePlan('logistics').main.slice(0, 4).map((u) => u.id)).toEqual(['u.firstday', 'u.help', 'u.tools', 'u.safety']);
+    expect(coursePlan('logistics').main.slice(0, 5).map((u) => u.id)).toEqual(['u.firstday', 'u.help', 'u.do', 'u.tools', 'u.safety']);
     // No sector: plain course order.
-    expect(choices('none')).toEqual(['u.help', 'u.tools', 'u.safety']);
-    expect(choices(undefined)).toEqual(['u.help', 'u.tools', 'u.safety']);
+    expect(choices('none')).toEqual(['u.help', 'u.do', 'u.tools']);
+    expect(choices(undefined)).toEqual(['u.help', 'u.do', 'u.tools']);
   });
 
   it('gives different sectors different choices', () => {
@@ -115,7 +115,7 @@ describe('route: "choose next" weighs the sector', () => {
   });
 
   it('skips weighted units that are done and fills up in course order', () => {
-    expect(nextChoices('care', done('u.firstday', 'u.care', 'u.teamwork')).map((u) => u.id)).toEqual(['u.help', 'u.health', 'u.tools']);
+    expect(nextChoices('care', done('u.firstday', 'u.care', 'u.teamwork')).map((u) => u.id)).toEqual(['u.help', 'u.health', 'u.do']);
     // Care: once Working together is done, the care words come first (not only after the basis units).
     expect(nextChoices('care', done('u.firstday', 'u.teamwork')).map((u) => u.id)).toEqual(['u.care', 'u.help', 'u.health']);
   });
@@ -124,7 +124,7 @@ describe('route: "choose next" weighs the sector', () => {
 describe('route: at most 3 choices on the home', () => {
   it('offers 2 suggestions after a finished block ("Other topic" is the third)', () => {
     expect(HOME_SUGGESTIONS).toBe(2);
-    expect(homeSuggestions('none', done('u.firstday')).map((u) => u.id)).toEqual(['u.help', 'u.tools']);
+    expect(homeSuggestions('none', done('u.firstday')).map((u) => u.id)).toEqual(['u.help', 'u.do']);
     expect(homeSuggestions('logistics', done('u.firstday')).map((u) => u.id)).toEqual(['u.safety', 'u.help']);
     expect(homeSuggestions('none', done(...units.map((u) => u.id)))).toEqual([]);
   });
@@ -177,7 +177,7 @@ describe('route: no day is only review', () => {
     // The mixed review stays: the unit is not finished, and it is still among the choices.
     expect(nextChoices('logistics', newDone, undefined, 5).map((u) => u.id)).toContain('u.firstday');
     // The recommended choice always brings new lessons; the mixed review comes right after it.
-    expect(nextChoices('none', newDone).map((u) => u.id)).toEqual(['u.help', 'u.firstday', 'u.tools']);
+    expect(nextChoices('none', newDone).map((u) => u.id)).toEqual(['u.help', 'u.firstday', 'u.do']);
   });
 
   it('never goes past a mixed review the learner picked, nor out of the preview', () => {

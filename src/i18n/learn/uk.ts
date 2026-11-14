@@ -165,6 +165,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "Питають, чи ти знаєш, як: ні, ще ні, сказано чесно.", // nieuw, nalezen
     'c.mayask.a.why': "Питають, чи є питання: так, а спершу — чи є час.", // nieuw, nalezen
     'c.whereis.a.why': "Питають, чи можеш ти це знайти: ні, і прохання показати, де це.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "Просять потримати: «так» і питання, куди це поставити.", // nieuw, nalezen
+    'c.onoff.a.why': "Питають, чи двері зачинені: «ні», і їх зачиняють зараз.", // nieuw, nalezen
+    'c.fillempty.a.why': "Питають, чи він уже повний: «так», і його спорожняють.", // nieuw, nalezen
+    'c.order.a.why': "Просять зробити це зараз: «так» і питання, що потім.", // nieuw, nalezen
   },
 };
 

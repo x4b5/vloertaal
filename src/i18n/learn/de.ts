@@ -164,6 +164,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "Gefragt, ob man weiß, wie es geht: Diese Antwort sagt ehrlich nein, noch nicht.", // nieuw, nalezen
     'c.mayask.a.why': "Gefragt, ob es eine Frage gibt: Ja, und zuerst die Frage, ob Zeit ist.", // nieuw, nalezen
     'c.whereis.a.why': "Gefragt, ob man es findet: Nein, und die Bitte, es zu zeigen.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "Gebeten, etwas zu halten: Ja, und die Frage, wohin damit.", // nieuw, nalezen
+    'c.onoff.a.why': "Gefragt, ob die Tür zu ist: Nein, und sie wird jetzt zugemacht.", // nieuw, nalezen
+    'c.fillempty.a.why': "Gefragt, ob er voll ist: Ja, und er wird geleert.", // nieuw, nalezen
+    'c.order.a.why': "Gebeten, es jetzt zu machen: Ja, und die Frage, was danach kommt.", // nieuw, nalezen
   },
 };
 

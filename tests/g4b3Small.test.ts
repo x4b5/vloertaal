@@ -38,9 +38,10 @@ describe('G4 b3 smaller items', () => {
 
   it('numbers a certificate as the learner\'s own path does', () => {
     const build = units.find((u) => u.id === 'u.build')!;
-    // Construction: "Op de bouw" is the 6th topic on that learner's path (after Als het misgaat).
-    expect(unitIndex(build, 'construction')).toBe(5);
-    expect(certData(build, '2026-10-15', '', undefined, 'construction').unitNo).toBe('06');
+    // Construction: "Op de bouw" is the 7th topic on that learner's path (after Als het misgaat;
+    // the 6th until "Instructies" came, 14 November 2026).
+    expect(unitIndex(build, 'construction')).toBe(6);
+    expect(certData(build, '2026-10-15', '', undefined, 'construction').unitNo).toBe('07');
     // Without a sector: the order of the whole course.
     expect(certData(build, '2026-10-15', '').unitNo).toBe(String(units.indexOf(build) + 1).padStart(2, '0'));
     expect(unitIndex(units[0], 'construction')).toBe(0);

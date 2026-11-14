@@ -25,6 +25,9 @@ import { addDays, dailyCard, dailyLesson, dailyWordIds, dueIds, type Cards } fro
  * dailyWordIds): w.herhalen (box 1, due today) takes the place of w.ondertiteling (box 4). With
  * one word other, the random numbers give other questions and options; the sentence and the chat
  * are the same.
+ * Then (14 November 2026) "Instructies" (u.do) came right after "Hulp vragen": the lessons after
+ * it sit one place later, so the sentences that turn per day are the next ones of the same lessons
+ * (s.understood.3 for .2, s.translate.2 for .1). The words and the chat are the same.
  */
 
 const TODAY = '2026-10-15';

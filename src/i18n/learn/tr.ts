@@ -164,6 +164,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "Nasıl yapıldığının bilinip bilinmediği soruluyor: bu cevap dürüstçe \"hayır, henüz değil\" diyor.", // nieuw, nalezen
     'c.mayask.a.why': "Bir soru olup olmadığı soruluyor: bu cevap \"evet\" diyor ve önce vakit olup olmadığını soruyor.", // nieuw, nalezen
     'c.whereis.a.why': "Bulunup bulunamadığı soruluyor: bu cevap \"hayır\" diyor ve gösterilmesini istiyor.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "Bir şeyi tutması isteniyor: evet, ve nereye koyacağını soruyor.", // nieuw, nalezen
+    'c.onoff.a.why': "Kapının kapalı olup olmadığı soruluyor: hayır, ve şimdi kapatıyor.", // nieuw, nalezen
+    'c.fillempty.a.why': "Dolu olup olmadığı soruluyor: evet, ve boşaltıyor.", // nieuw, nalezen
+    'c.order.a.why': "Şimdi yapması isteniyor: evet, ve sonra ne geldiğini soruyor.", // nieuw, nalezen
   },
 };
 

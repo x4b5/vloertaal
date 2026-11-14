@@ -18,6 +18,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "Puedo preguntar a quién me tengo que presentar.", // nieuw, nalezen
     'kjn.u.help.1': "Puedo decir que no entiendo.", // nieuw, nalezen
     'kjn.u.help.2': "Puedo pedir que alguien hable más despacio.", // nieuw, nalezen
+    'kjn.u.do.1': "Puedo entender una instrucción corta, como «Zet het neer».", // nieuw, nalezen
+    'kjn.u.do.2': "Puedo decir que he terminado una tarea.", // nieuw, nalezen
     'kjn.u.tools.1': "Puedo pedir que alguien lo escriba o me lo enseñe.", // nieuw, nalezen
     'kjn.u.tools.2': "Puedo repetir una instrucción para comprobar que la he entendido.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Puedo decir que quiero practicar neerlandés.", // nieuw, nalezen

@@ -2207,6 +2207,88 @@ const t: CultureTranslation = {
     'c.delay.o2': "Jedziesz szybciej, żeby nadrobić czas.", // nieuw, nalezen
     'c.delay.o3': "Nic nie mówisz: może nikt nie zauważy.", // nieuw, nalezen
     'c.delay.w': "Kiedy planista wie o tym wcześnie, klienci się dowiadują i nikt nie czeka na próżno. Szybsza jazda jest niebezpieczna i prawie nie daje czasu.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'u.do': "Polecenia", // nieuw, nalezen
+    'l.putdown': "Postaw to tam", // nieuw, nalezen
+    'w.zetten': "stawiać (coś, co stoi: karton, wiadro)", // nieuw, nalezen
+    'w.leggen': "kłaść (coś, co leży płasko)", // nieuw, nalezen
+    'w.brengen': "przynosić, zanosić (w jakieś miejsce albo do kogoś)", // nieuw, nalezen
+    'w.geven': "dawać", // nieuw, nalezen
+    'w.vasthouden': "trzymać", // nieuw, nalezen
+    'w.loslaten': "puszczać", // nieuw, nalezen
+    's.putdown.1': "Postaw to tam.", // nieuw, nalezen
+    's.putdown.2': "Zanieś to do stołówki.", // nieuw, nalezen
+    's.putdown.3': "Potrzymaj to przez chwilę.", // nieuw, nalezen
+    'c.putdown.q': "Możesz to przez chwilę potrzymać?", // nieuw, nalezen
+    'c.putdown.a': "Tak. Gdzie mam to postawić?", // nieuw, nalezen
+    'c.putdown': "Powiedz, że trzymasz", // nieuw, nalezen
+    'c.putdown.b': "Niesiecie coś razem albo kolega podaje ci coś ciężkiego? Powiedz „Ik heb hem”, kiedy dobrze to trzymasz. Wtedy kolega wie, że może bezpiecznie puścić. A jeśli to ty chcesz puścić? Najpierw zapytaj: „Heb je hem?” I poczekaj na odpowiedź. To normalne w każdym miejscu pracy. Dzięki temu nic nie spada na stopy i ręce.", // nieuw, nalezen
+    'c.putdown.p': "Trzymam. Możesz puścić.", // nieuw, nalezen
+    'c.putdown.s': "Kolega podaje ci ciężki karton. Jeszcze nie trzymasz go dobrze. Co robisz?", // nieuw, nalezen
+    'c.putdown.o1': "Mówisz „wacht” i najpierw chwytasz lepiej.", // nieuw, nalezen
+    'c.putdown.o2': "Nic nie mówisz: on to zobaczy.", // nieuw, nalezen
+    'c.putdown.o3': "Bierzesz szybko, żeby nie czekał.", // nieuw, nalezen
+    'c.putdown.w': "Kolega puszcza, kiedy myśli, że już trzymasz. Jedno słowo daje ci czas, żeby dobrze chwycić.", // nieuw, nalezen
+    'l.onoff': "Włączone i wyłączone, otwarte i zamknięte", // nieuw, nalezen
+    'w.aanzetten': "włączyć", // nieuw, nalezen
+    'w.opendoen': "otwierać", // nieuw, nalezen
+    'w.dichtdoen': "zamykać", // nieuw, nalezen
+    'w.drukken': "naciskać (przycisk)", // nieuw, nalezen
+    'w.draaien': "kręcić, obracać", // nieuw, nalezen
+    'w.stoppen': "zatrzymać (się), przestać", // nieuw, nalezen
+    's.onoff.1': "Zamknij drzwi.", // nieuw, nalezen
+    's.onoff.2': "Naciśnij przycisk.", // nieuw, nalezen
+    's.onoff.3': "Stop! Wyłącz to.", // nieuw, nalezen
+    'c.onoff.q': "Czy drzwi są zamknięte?", // nieuw, nalezen
+    'c.onoff.a': "Nie. Teraz je zamykam.", // nieuw, nalezen
+    'c.onoff': "Stop znaczy stop", // nieuw, nalezen
+    'c.onoff.b': "Ktoś woła „Stop!”? Zatrzymaj się od razu, także wtedy, gdy nie wiesz dlaczego. Zapytaj potem. Krótkie, głośne słowo to tutaj nie złość: tak koledzy dbają o swoje bezpieczeństwo. A jeśli to ty widzisz coś niebezpiecznego? Też zawołaj „Stop!”, także do kogoś, kto pracuje tu od lat. Nikogo to nie dziwi.", // nieuw, nalezen
+    'c.onoff.p': "Stop! Poczekaj chwilę.", // nieuw, nalezen
+    'c.onoff.s': "Włączasz maszynę. Kolega woła „Stop!”. Nie widzisz problemu. Co robisz?", // nieuw, nalezen
+    'c.onoff.o1': "Zatrzymujesz się od razu, a potem pytasz dlaczego.", // nieuw, nalezen
+    'c.onoff.o2': "Robisz dalej: nie widzisz problemu.", // nieuw, nalezen
+    'c.onoff.o3': "Najpierw pytasz, dlaczego masz się zatrzymać.", // nieuw, nalezen
+    'c.onoff.w': "Kolega może widzieć coś, czego ty nie widzisz. Najpierw się zatrzymaj, potem rozmawiaj: tak wszyscy są bezpieczni.", // nieuw, nalezen
+    'l.fillempty': "Pchaj, ciągnij, napełniaj", // nieuw, nalezen
+    'w.duwen': "pchać", // nieuw, nalezen
+    'w.trekken': "ciągnąć", // nieuw, nalezen
+    'w.vullen': "napełniać", // nieuw, nalezen
+    'w.leegmaken': "opróżniać", // nieuw, nalezen
+    'w.schoonmaken': "czyścić, sprzątać", // nieuw, nalezen
+    'w.vol': "pełny", // nieuw, nalezen
+    's.fillempty.1': "Nie pchaj, tylko ciągnij.", // nieuw, nalezen
+    's.fillempty.2': "Ten jest pełny. Opróżnij go.", // nieuw, nalezen
+    's.fillempty.3': "Wyczyść to, proszę.", // nieuw, nalezen
+    'c.fillempty.q': "Jest już pełny?", // nieuw, nalezen
+    'c.fillempty.a': "Tak. Opróżniam go.", // nieuw, nalezen
+    'c.fillempty': "Gotowe? Powiedz to", // nieuw, nalezen
+    'c.fillempty.b': { m: "Skończyłeś zadanie? Powiedz to: „Ik ben klaar.” I zapytaj, co możesz robić dalej. Kiedy cicho czekasz, aż ktoś cię zobaczy, może to wyglądać tak, że nie chcesz pracować, także wtedy, gdy to nieprawda. Koledzy, którzy pytają o następne zadanie, po jakimś czasie często dostają ciekawszą pracę. Chcesz nauczyć się czegoś nowego? Zapytaj też o to: „Mag ik dat ook leren?”", f: "Skończyłaś zadanie? Powiedz to: „Ik ben klaar.” I zapytaj, co możesz robić dalej. Kiedy cicho czekasz, aż ktoś cię zobaczy, może to wyglądać tak, że nie chcesz pracować, także wtedy, gdy to nieprawda. Koledzy, którzy pytają o następne zadanie, po jakimś czasie często dostają ciekawszą pracę. Chcesz nauczyć się czegoś nowego? Zapytaj też o to: „Mag ik dat ook leren?”", x: "Zadanie gotowe? Powiedz to: „Ik ben klaar.” I zapytaj, co możesz robić dalej. Kiedy cicho czekasz, aż ktoś cię zobaczy, może to wyglądać tak, że nie chcesz pracować, także wtedy, gdy to nieprawda. Koledzy, którzy pytają o następne zadanie, po jakimś czasie często dostają ciekawszą pracę. Chcesz nauczyć się czegoś nowego? Zapytaj też o to: „Mag ik dat ook leren?”" }, // nieuw, nalezen
+    'c.fillempty.p': { m: "Skończyłem. Co jeszcze mogę zrobić?", f: "Skończyłam. Co jeszcze mogę zrobić?", x: "Gotowe. Co jeszcze mogę zrobić?" }, // nieuw, nalezen
+    'c.fillempty.s': { m: "Skończyłeś swoje zadanie. Przełożony jest zajęty czymś innym. Co robisz?", f: "Skończyłaś swoje zadanie. Przełożony jest zajęty czymś innym. Co robisz?", x: "Twoje zadanie jest gotowe. Przełożony jest zajęty czymś innym. Co robisz?" }, // nieuw, nalezen
+    'c.fillempty.o1': { m: "Mówisz, że skończyłeś, i pytasz, co dalej.", f: "Mówisz, że skończyłaś, i pytasz, co dalej.", x: "Mówisz, że wszystko gotowe, i pytasz, co dalej." }, // nieuw, nalezen
+    'c.fillempty.o2': "Czekasz, aż przełożony cię zobaczy.", // nieuw, nalezen
+    'c.fillempty.o3': "Robisz sobie przerwę: twoja praca jest skończona.", // nieuw, nalezen
+    'c.fillempty.w': { m: "Przełożony nie może widzieć wszystkiego. Kiedy mówisz, że skończyłeś, praca idzie dalej, a ty pokazujesz, że chcesz robić więcej.", f: "Przełożony nie może widzieć wszystkiego. Kiedy mówisz, że skończyłaś, praca idzie dalej, a ty pokazujesz, że chcesz robić więcej.", x: "Przełożony nie może widzieć wszystkiego. Kiedy mówisz, że wszystko gotowe, praca idzie dalej, a ty pokazujesz, że chcesz robić więcej." }, // nieuw, nalezen
+    'l.order': "Najpierw to, potem tamto", // nieuw, nalezen
+    'w.nu': "teraz", // nieuw, nalezen
+    'w.dan': "potem", // nieuw, nalezen
+    'w.altijd': "zawsze", // nieuw, nalezen
+    'w.genoeg': "dość, wystarczy", // nieuw, nalezen
+    'w.meer': "więcej", // nieuw, nalezen
+    'w.alles': "wszystko", // nieuw, nalezen
+    's.order.1': "Najpierw to, potem tamto.", // nieuw, nalezen
+    's.order.2': "To wystarczy.", // nieuw, nalezen
+    's.order.3': "Zawsze rób to tak.", // nieuw, nalezen
+    'c.order.q': "Możesz to teraz zrobić?", // nieuw, nalezen
+    'c.order.a': "Tak. Najpierw to, a potem?", // nieuw, nalezen
+    'c.order': "Dużo zadań naraz? Zapytaj, co najpierw", // nieuw, nalezen
+    'c.order.b': { m: "Czasem dostajesz trzy zadania w jednym zdaniu. Trudno to zapamiętać, także ludziom, którzy dobrze mówią po niderlandzku. Zapytaj, które jest pierwsze: „Wat moet ik eerst doen?” Możesz też zapisać zadania albo policzyć je na palcach i powtórzyć. Zapomniałeś o jednym? Wróć i zapytaj. To lepsze niż zgadywanie.", f: "Czasem dostajesz trzy zadania w jednym zdaniu. Trudno to zapamiętać, także ludziom, którzy dobrze mówią po niderlandzku. Zapytaj, które jest pierwsze: „Wat moet ik eerst doen?” Możesz też zapisać zadania albo policzyć je na palcach i powtórzyć. Zapomniałaś o jednym? Wróć i zapytaj. To lepsze niż zgadywanie.", x: "Czasem dostajesz trzy zadania w jednym zdaniu. Trudno to zapamiętać, także ludziom, którzy dobrze mówią po niderlandzku. Zapytaj, które jest pierwsze: „Wat moet ik eerst doen?” Możesz też zapisać zadania albo policzyć je na palcach i powtórzyć. Nie pamiętasz jednego? Wróć i zapytaj. To lepsze niż zgadywanie." }, // nieuw, nalezen
+    'c.order.p': "To dużo. Co mam zrobić najpierw?", // nieuw, nalezen
+    'c.order.s': "Przełożony daje ci trzy zadania, bardzo szybko. Pamiętasz tylko pierwsze. Co robisz?", // nieuw, nalezen
+    'c.order.o1': "Od razu prosisz o powtórzenie zadań.", // nieuw, nalezen
+    'c.order.o2': "Robisz pierwsze i masz nadzieję, że przypomnisz sobie resztę.", // nieuw, nalezen
+    'c.order.o3': "Nic nie robisz: nie znasz wszystkich trzech.", // nieuw, nalezen
+    'c.order.w': "Pytanie od razu zajmuje dziesięć sekund. Później przełożonego może już nie być, a wtedy czekasz albo zgadujesz.", // nieuw, nalezen
   },
 };
 

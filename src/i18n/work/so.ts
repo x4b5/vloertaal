@@ -2205,6 +2205,88 @@ const t: CultureTranslation = {
     'c.delay.o2': "Si ka dhakhso badan u wad si aad waqtiga u soo ceshato.", // nieuw, nalezen
     'c.delay.o3': "Waxba ha oran: waxaa laga yaabaa inaan qofna ogaan.", // nieuw, nalezen
     'c.delay.w': "Marka qorsheeyuhu goor hore ogaado, macaamiishu way maqlaan, qofna si aan loo baahnayn uma sugo. Xawaare ku wadiddu waa khatar, waqti ku dhowaad waxba kama soo ceshato.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'u.do': "Tilmaamaha", // nieuw, nalezen
+    'l.putdown': "Halkaas dhig", // nieuw, nalezen
+    'w.zetten': "dhigid (wax taagan: kartoon, baaldi)", // nieuw, nalezen
+    'w.leggen': "dhigid, jiifin (wax fidsan oo jiifa)", // nieuw, nalezen
+    'w.brengen': "geyn, keenid (meel ama qof)", // nieuw, nalezen
+    'w.geven': "siin", // nieuw, nalezen
+    'w.vasthouden': "hayn", // nieuw, nalezen
+    'w.loslaten': "sii deyn", // nieuw, nalezen
+    's.putdown.1': "Halkaas dhig.", // nieuw, nalezen
+    's.putdown.2': "Tan gee makhaayadda shaqada.", // nieuw, nalezen
+    's.putdown.3': "Tan wax yar ii hay.", // nieuw, nalezen
+    'c.putdown.q': "Tan wax yar ma ii hayn kartaa?", // nieuw, nalezen
+    'c.putdown.a': "Haa. Xaggee waa inaan dhigo?", // nieuw, nalezen
+    'c.putdown': "Sheeg inaad hayso", // nieuw, nalezen
+    'c.putdown.b': "Ma wax baad wada qaadaysaan, mise saaxiib shaqo ayaa wax culus kuu dhiibaya? Dheh “Ik heb hem” marka aad si fiican u hayso. Markaas saaxiibkaaga shaqadu wuu ogyahay inay ammaan tahay inuu sii daayo. Ma adiga ayaa doonaya inaad sii dayso? Marka hore weydii: “Heb je hem?” Oo jawaabta sug. Tani waa caadi goob kasta oo shaqo. Waxay ka hortagtaa in wax ku dhacaan lugaha iyo gacmaha.", // nieuw, nalezen
+    'c.putdown.p': "Waan hayaa. Waad sii dayn kartaa.", // nieuw, nalezen
+    'c.putdown.s': "Saaxiib shaqo ayaa kartoon culus kuu dhiibaya. Weli si fiican uma haysid. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.putdown.o1': "Dheh “wacht”, oo marka hore si ka fiican u qabo.", // nieuw, nalezen
+    'c.putdown.o2': "Waxba ha oran: isagaa arki doona.", // nieuw, nalezen
+    'c.putdown.o3': "Si dhakhso ah u qaado, si uusan u sugin.", // nieuw, nalezen
+    'c.putdown.w': "Saaxiibkaaga shaqadu wuu sii daayaa marka uu u maleeyo inaad hayso. Hal eray ayaa ku siinaya waqti aad si fiican ugu qabato.", // nieuw, nalezen
+    'l.onoff': "Shidan iyo demsan, furan iyo xiran", // nieuw, nalezen
+    'w.aanzetten': "shidid", // nieuw, nalezen
+    'w.opendoen': "furid", // nieuw, nalezen
+    'w.dichtdoen': "xirid", // nieuw, nalezen
+    'w.drukken': "riixid (badhan)", // nieuw, nalezen
+    'w.draaien': "wareejin", // nieuw, nalezen
+    'w.stoppen': "joogsasho, joojin", // nieuw, nalezen
+    's.onoff.1': "Albaabka xir.", // nieuw, nalezen
+    's.onoff.2': "Badhanka riix.", // nieuw, nalezen
+    's.onoff.3': "Joogso! Demi.", // nieuw, nalezen
+    'c.onoff.q': "Albaabku ma xiran yahay?", // nieuw, nalezen
+    'c.onoff.a': "Maya. Hadda ayaan xirayaa.", // nieuw, nalezen
+    'c.onoff': "Joogso waa joogso", // nieuw, nalezen
+    'c.onoff.b': "Ma qof baa ku dhawaaqay “Stop!”? Isla markiiba joogso, xitaa marka aadan garanayn sababta. Kadib weydii. Eray gaaban oo cod dheer halkan cadho ma aha: waa sida ay saaxiibbada shaqadu isu ilaaliyaan. Ma adiga ayaa arkay wax khatar ah? Adiguna ku dhawaaq “Stop!”, xitaa qof sannado badan halkan ka shaqaynayay. Qofna la yaabi maayo.", // nieuw, nalezen
+    'c.onoff.p': "Joogso! Wax yar sug.", // nieuw, nalezen
+    'c.onoff.s': "Mashiin ayaad shidaysaa. Saaxiib shaqo ayaa ku dhawaaqay “Stop!”. Dhibaato ma aragtid. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.onoff.o1': "Isla markiiba joogso, kadibna weydii sababta.", // nieuw, nalezen
+    'c.onoff.o2': "Sii wad: dhibaato ma aragtid.", // nieuw, nalezen
+    'c.onoff.o3': "Marka hore weydii sababta aad u joogsanayso.", // nieuw, nalezen
+    'c.onoff.w': "Saaxiibkaaga shaqadu waxaa laga yaabaa inuu arko wax aadan arkayn. Marka hore joogso, kadib hadal: taasi waxay qof walba ka dhigtaa ammaan.", // nieuw, nalezen
+    'l.fillempty': "Riix, jiid, buuxi", // nieuw, nalezen
+    'w.duwen': "riixid, durkin", // nieuw, nalezen
+    'w.trekken': "jiidid", // nieuw, nalezen
+    'w.vullen': "buuxin", // nieuw, nalezen
+    'w.leegmaken': "faaruqin", // nieuw, nalezen
+    'w.schoonmaken': "nadiifin", // nieuw, nalezen
+    'w.vol': "buuxa", // nieuw, nalezen
+    's.fillempty.1': "Ha riixin, jiid.", // nieuw, nalezen
+    's.fillempty.2': "Kani waa buuxa. Faaruqi.", // nieuw, nalezen
+    's.fillempty.3': "Tan nadiifi, fadlan.", // nieuw, nalezen
+    'c.fillempty.q': "Durba ma buuxsamay?", // nieuw, nalezen
+    'c.fillempty.a': "Haa. Waan faaruqinayaa.", // nieuw, nalezen
+    'c.fillempty': "Ma dhammaysay? Sheeg", // nieuw, nalezen
+    'c.fillempty.b': "Ma dhammaysay hawl? Sheeg: “Ik ben klaar.” Oo weydii waxa aad kadib qaban karto. Inaad aamusnaan ku sugto ilaa qof ku arko waxay u ekaan kartaa inaadan doonayn inaad shaqeyso, xitaa marka aysan run ahayn. Saaxiibbada shaqada ee weydiiya hawsha xigta waxay inta badan muddo kadib helaan shaqo ka xiiso badan. Ma doonaysaa inaad wax cusub barato? Taasna weydii: “Mag ik dat ook leren?”", // nieuw, nalezen
+    'c.fillempty.p': "Waan dhammeeyay. Maxaan kale oo qaban karaa?", // nieuw, nalezen
+    'c.fillempty.s': "Hawshaadii waad dhammaysay. Madaxaagu wax kale ayuu ku mashquulsan yahay. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.fillempty.o1': "Sheeg inaad dhammaysay, oo weydii waxa xiga.", // nieuw, nalezen
+    'c.fillempty.o2': "Sug ilaa madaxaagu ku arko.", // nieuw, nalezen
+    'c.fillempty.o3': "Naso: shaqadaadii way dhammaatay.", // nieuw, nalezen
+    'c.fillempty.w': "Madaxu wax walba ma arki karo. Marka aad sheegto inaad dhammaysay, shaqadu way sii socotaa, waxaadna muujinaysaa inaad doonayso inaad wax badan qabato.", // nieuw, nalezen
+    'l.order': "Marka hore tan, kadib taas", // nieuw, nalezen
+    'w.nu': "hadda", // nieuw, nalezen
+    'w.dan': "kadib, markaas", // nieuw, nalezen
+    'w.altijd': "mar walba, had iyo jeer", // nieuw, nalezen
+    'w.genoeg': "ku filan", // nieuw, nalezen
+    'w.meer': "ka badan, dheeraad", // nieuw, nalezen
+    'w.alles': "wax walba", // nieuw, nalezen
+    's.order.1': "Marka hore tan, kadib taas.", // nieuw, nalezen
+    's.order.2': "Taasi waa ku filan tahay.", // nieuw, nalezen
+    's.order.3': "Tan mar walba sidan u samee.", // nieuw, nalezen
+    'c.order.q': "Tan hadda ma samayn kartaa?", // nieuw, nalezen
+    'c.order.a': "Haa. Marka hore tan, kadibna?", // nieuw, nalezen
+    'c.order': "Hawlo badan hal mar? Weydii tan ugu horraysa", // nieuw, nalezen
+    'c.order.b': "Mararka qaarkood saddex hawlood ayaa hal weedh lagugu siiyaa. Taas way adag tahay in la xusuusto, xitaa dadka Af-Holandiiska si fiican ugu hadla. Weydii midda ugu horraysa: “Wat moet ik eerst doen?” Waxaad kaloo hawlaha qori kartaa, ama farahaaga ku tirin kartaa oo dib u sheegi kartaa. Ma mid baad illowday? Dib u noqo oo weydii. Taasi waa ka fiican tahay qiyaas.", // nieuw, nalezen
+    'c.order.p': "Taasi waa badan tahay. Maxaan marka hore sameeyaa?", // nieuw, nalezen
+    'c.order.s': "Madaxaagu saddex hawlood ayuu ku siiyay, si aad u dhakhso badan. Midda koowaad oo keliya ayaad xusuusataa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.order.o1': "Isla markiiba codso in hawlaha mar kale laguu sheego.", // nieuw, nalezen
+    'c.order.o2': "Midda koowaad samee, oo rajee inaad inta kale xusuusato.", // nieuw, nalezen
+    'c.order.o3': "Waxba ha samayn: saddexdaba ma wada taqaan.", // nieuw, nalezen
+    'c.order.w': "Inaad isla markiiba weydiiso waxay qaadataa toban ilbiriqsi. Hadhow madaxaagu waa laga yaabaa inuu tago, markaasna waad sugaysaa ama waad qiyaasaysaa.", // nieuw, nalezen
   },
 };
 

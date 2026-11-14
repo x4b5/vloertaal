@@ -47,6 +47,7 @@ import group48 from './group48';
 import group49 from './group49';
 import group50 from './group50';
 import group51 from './group51';
+import group52 from './group52';
 
 /** Every word picture, keyed by word id (and the sayings' pictures, by saying id "zg.*"): one file, loaded on demand (./index.ts loadPictures). */
 const words: Record<string, () => JSX.Element> = {
@@ -101,6 +102,8 @@ const words: Record<string, () => JSX.Element> = {
   ...group50,
   // The three lessons that bring "Hulp vragen" to four (l.howto, l.mayask, l.whereis).
   ...group51,
+  // The basis unit "Instructies" (u.do: l.putdown, l.onoff, l.fillempty; l.order has no pictures).
+  ...group52,
 };
 export default words;
 export const url: string = import.meta.url;

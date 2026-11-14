@@ -2206,6 +2206,88 @@ const t: CultureTranslation = {
     'c.delay.o2': "Conduci mai repede ca să recuperezi timpul.", // nieuw, nalezen
     'c.delay.o3': "Nu spui nimic: poate nu observă nimeni.", // nieuw, nalezen
     'c.delay.w': "Când planificatorul află din timp, clienții sunt anunțați și nimeni nu așteaptă degeaba. Să conduci mai repede e periculos și nu câștigi aproape deloc timp.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'u.do': "Instrucțiuni", // nieuw, nalezen
+    'l.putdown': "Pune-l acolo", // nieuw, nalezen
+    'w.zetten': "a pune (ceva care stă în picioare: o cutie, o găleată)", // nieuw, nalezen
+    'w.leggen': "a pune, a așeza (ceva care stă culcat)", // nieuw, nalezen
+    'w.brengen': "a aduce, a duce (într-un loc sau la o persoană)", // nieuw, nalezen
+    'w.geven': "a da", // nieuw, nalezen
+    'w.vasthouden': "a ține", // nieuw, nalezen
+    'w.loslaten': "a da drumul", // nieuw, nalezen
+    's.putdown.1': "Pune-l jos acolo.", // nieuw, nalezen
+    's.putdown.2': "Du asta la cantină.", // nieuw, nalezen
+    's.putdown.3': "Ține asta puțin.", // nieuw, nalezen
+    'c.putdown.q': "Poți să ții asta puțin?", // nieuw, nalezen
+    'c.putdown.a': "Da. Unde trebuie s-o pun?", // nieuw, nalezen
+    'c.putdown': "Spune că îl ții", // nieuw, nalezen
+    'c.putdown.b': "Cărați ceva împreună sau un coleg îți dă ceva greu? Spune „Ik heb hem” când îl ții bine. Atunci colegul tău știe că poate să dea drumul în siguranță. Vrei să dai tu drumul? Întreabă mai întâi: „Heb je hem?” Și așteaptă răspunsul. Așa e normal la orice loc de muncă. Așa nu cad lucrurile pe picioare și pe mâini.", // nieuw, nalezen
+    'c.putdown.p': "Îl țin. Poți să dai drumul.", // nieuw, nalezen
+    'c.putdown.s': "Un coleg îți dă o cutie grea. Încă nu o ții bine. Ce faci?", // nieuw, nalezen
+    'c.putdown.o1': "Spui „wacht” și întâi o prinzi mai bine.", // nieuw, nalezen
+    'c.putdown.o2': "Nu spui nimic: o să vadă el.", // nieuw, nalezen
+    'c.putdown.o3': "O iei repede, ca să nu aștepte.", // nieuw, nalezen
+    'c.putdown.w': "Colegul tău dă drumul când crede că o ții. Un singur cuvânt îți dă timp să o prinzi bine.", // nieuw, nalezen
+    'l.onoff': "Pornit și oprit, deschis și închis", // nieuw, nalezen
+    'w.aanzetten': "a porni", // nieuw, nalezen
+    'w.opendoen': "a deschide", // nieuw, nalezen
+    'w.dichtdoen': "a închide", // nieuw, nalezen
+    'w.drukken': "a apăsa (un buton)", // nieuw, nalezen
+    'w.draaien': "a învârti, a roti", // nieuw, nalezen
+    'w.stoppen': "a opri, a se opri", // nieuw, nalezen
+    's.onoff.1': "Închide ușa.", // nieuw, nalezen
+    's.onoff.2': "Apasă butonul.", // nieuw, nalezen
+    's.onoff.3': "Stop! Oprește-l.", // nieuw, nalezen
+    'c.onoff.q': "E închisă ușa?", // nieuw, nalezen
+    'c.onoff.a': "Nu. O închid acum.", // nieuw, nalezen
+    'c.onoff': "Stop înseamnă stop", // nieuw, nalezen
+    'c.onoff.b': "Strigă cineva „Stop!”? Oprește-te imediat, și când nu știi de ce. Întreabă după aceea. Un cuvânt scurt, spus tare, nu e furie aici: așa se țin colegii în siguranță unii pe alții. Vezi chiar tu ceva periculos? Strigă și tu „Stop!”, și cuiva care lucrează aici de ani de zile. Nimănui nu i se pare ciudat.", // nieuw, nalezen
+    'c.onoff.p': "Stop! Stai puțin.", // nieuw, nalezen
+    'c.onoff.s': "Pornești un utilaj. Un coleg strigă „Stop!”. Tu nu vezi nicio problemă. Ce faci?", // nieuw, nalezen
+    'c.onoff.o1': "Te oprești imediat și întrebi de ce după aceea.", // nieuw, nalezen
+    'c.onoff.o2': "Continui: nu vezi nicio problemă.", // nieuw, nalezen
+    'c.onoff.o3': "Întrebi mai întâi de ce trebuie să te oprești.", // nieuw, nalezen
+    'c.onoff.w': "Colegul tău poate vedea ceva ce tu nu vezi. Întâi te oprești, apoi vorbiți: așa sunt toți în siguranță.", // nieuw, nalezen
+    'l.fillempty': "Împinge, trage, umple", // nieuw, nalezen
+    'w.duwen': "a împinge", // nieuw, nalezen
+    'w.trekken': "a trage", // nieuw, nalezen
+    'w.vullen': "a umple", // nieuw, nalezen
+    'w.leegmaken': "a goli", // nieuw, nalezen
+    'w.schoonmaken': "a curăța", // nieuw, nalezen
+    'w.vol': "plin", // nieuw, nalezen
+    's.fillempty.1': "Nu împinge, trage.", // nieuw, nalezen
+    's.fillempty.2': "Ăsta e plin. Golește-l.", // nieuw, nalezen
+    's.fillempty.3': "Curăță asta, te rog.", // nieuw, nalezen
+    'c.fillempty.q': "E deja plin?", // nieuw, nalezen
+    'c.fillempty.a': "Da. Îl golesc.", // nieuw, nalezen
+    'c.fillempty': "Ai terminat? Spune", // nieuw, nalezen
+    'c.fillempty.b': "Ai terminat o treabă? Spune: „Ik ben klaar.” Și întreabă ce poți face mai departe. Dacă aștepți în liniște până te vede cineva, poate părea că nu vrei să muncești, chiar dacă nu e adevărat. Colegii care cer următoarea treabă primesc des, după un timp, muncă mai interesantă. Vrei să înveți ceva nou? Întreabă și asta: „Mag ik dat ook leren?”", // nieuw, nalezen
+    'c.fillempty.p': "Am terminat. Ce mai pot face?", // nieuw, nalezen
+    'c.fillempty.s': "Ți-ai terminat treaba. Șeful tău e ocupat cu altceva. Ce faci?", // nieuw, nalezen
+    'c.fillempty.o1': "Spui că ai terminat și întrebi ce urmează.", // nieuw, nalezen
+    'c.fillempty.o2': "Aștepți până te vede șeful.", // nieuw, nalezen
+    'c.fillempty.o3': "Iei o pauză: treaba ta e gata.", // nieuw, nalezen
+    'c.fillempty.w': "Un șef nu poate vedea tot. Când spui că ai terminat, munca merge mai departe și arăți că vrei să faci mai mult.", // nieuw, nalezen
+    'l.order': "Întâi asta, apoi aia", // nieuw, nalezen
+    'w.nu': "acum", // nieuw, nalezen
+    'w.dan': "apoi", // nieuw, nalezen
+    'w.altijd': "mereu, întotdeauna", // nieuw, nalezen
+    'w.genoeg': "destul", // nieuw, nalezen
+    'w.meer': "mai mult", // nieuw, nalezen
+    'w.alles': "tot, totul", // nieuw, nalezen
+    's.order.1': "Întâi asta, apoi aia.", // nieuw, nalezen
+    's.order.2': "Asta e destul.", // nieuw, nalezen
+    's.order.3': "Fă asta mereu așa.", // nieuw, nalezen
+    'c.order.q': "Poți să faci asta acum?", // nieuw, nalezen
+    'c.order.a': "Da. Întâi asta, și apoi?", // nieuw, nalezen
+    'c.order': "Multe treburi deodată? Întreabă ce e întâi", // nieuw, nalezen
+    'c.order.b': "Uneori primești trei treburi într-o singură propoziție. E greu de ținut minte, și pentru cei care vorbesc bine olandeza. Întreabă care e prima: „Wat moet ik eerst doen?” Poți și să-ți notezi treburile, sau să le numeri pe degete și să le spui înapoi. Ai uitat una? Du-te înapoi și întreabă. E mai bine decât să ghicești.", // nieuw, nalezen
+    'c.order.p': "E mult. Ce trebuie să fac întâi?", // nieuw, nalezen
+    'c.order.s': "Șeful îți dă trei treburi, foarte repede. Ții minte doar prima. Ce faci?", // nieuw, nalezen
+    'c.order.o1': "Ceri imediat să auzi treburile încă o dată.", // nieuw, nalezen
+    'c.order.o2': "O faci pe prima și speri să-ți amintești restul.", // nieuw, nalezen
+    'c.order.o3': "Nu faci nimic: nu le știi pe toate trei.", // nieuw, nalezen
+    'c.order.w': "Să întrebi imediat durează zece secunde. Mai târziu șeful poate să fie plecat, și atunci aștepți sau ghicești.", // nieuw, nalezen
   },
 };
 

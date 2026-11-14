@@ -163,6 +163,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "On demande si tu sais comment : non, pas encore, dit honnêtement.", // nieuw, nalezen
     'c.mayask.a.why': "On demande si tu as une question : oui, et d’abord s’il y a le temps.", // nieuw, nalezen
     'c.whereis.a.why': "On demande si tu trouves : non, et une demande de montrer du doigt.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "On te demande de tenir quelque chose : oui, et où le poser.", // nieuw, nalezen
+    'c.onoff.a.why': "On demande si la porte est fermée : non, et on la ferme maintenant.", // nieuw, nalezen
+    'c.fillempty.a.why': "On demande s’il est plein : oui, et on le vide.", // nieuw, nalezen
+    'c.order.a.why': "On te demande de le faire maintenant : oui, et ce qui vient après.", // nieuw, nalezen
   },
 };
 
