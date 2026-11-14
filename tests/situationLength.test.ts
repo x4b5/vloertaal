@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { cultureTips } from '../src/content/culture';
-import { workTips } from '../src/content/work';
+import { workTips } from '../src/content/workTips';
 
 /**
  * "What do you do?": not too much text at once (the owner's feedback, 2 November 2026). The

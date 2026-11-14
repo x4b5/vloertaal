@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { cultureTips } from '../src/content/culture';
-import { ABUSE_LINE, ADVICE_LINE } from '../src/content/work';
+import { ABUSE_LINE, ADVICE_LINE } from '../src/content/workTips';
 import { helpLanguageSources } from '../src/i18n/all';
 import { allForms } from '../src/i18n/types';
 

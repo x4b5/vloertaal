@@ -450,7 +450,7 @@ export const UPCOMING_LAW: UpcomingLaw[] = [
     ],
     change: 'Taal: de tips over proeftijd en oproepwerk (c.contract), uitzendwerk (c.agency) en ziek zijn als uitzendkracht (c.illness) herschrijven, met hun situaties en de vertalingen; de ⚖️-comments met "flexwerkers" daarboven bijwerken. Werkregels (contract.ts): de ketenregeling (r.l.contract.2) en oproepwerk en uitzendloon (r.l.contract.3); de comments "Redactie" daar weghalen. Daarna een update met een melding (loon en rechten, NL, beide sporen).',
     ids: ['c.contract', 'c.agency', 'c.illness', 'r.l.contract.2', 'r.l.contract.3'],
-    files: ['src/content/work.ts', 'src/content/regels/units/contract.ts'],
+    files: ['src/content/work.ts', 'src/content/workTips.ts', 'src/content/regels/units/contract.ts'],
     source: 'Stb. 2026, 205; inwerkingtredingsbesluit Stb. 2026, 206 (docs/werkregels-bronnen.md). De datums komen uit secundaire bronnen: check het Staatsblad.',
   },
   {
@@ -463,7 +463,7 @@ export const UPCOMING_LAW: UpcomingLaw[] = [
     ],
     change: 'Taal: de tip over uitzendwerk (c.agency) noemt dat een bureau een toelating moet hebben, en hoe je dat checkt (het register van de NAU). Werkregels (contract.ts): de les over oproepwerk en uitzendloon (r.l.contract.3); de comment "Redactie" met "Wtta" daar bijwerken en weghalen. Daarna een update. Nog niet zeker: de precieze datums van de aanvraag (een internetconsultatie van 8 okt 2026 wijzigt de eisen).',
     ids: ['c.agency', 'r.l.contract.3'],
-    files: ['src/content/work.ts', 'src/content/regels/units/contract.ts'],
+    files: ['src/content/work.ts', 'src/content/workTips.ts', 'src/content/regels/units/contract.ts'],
     source: 'rijksoverheid.nl (aanpak misstanden bij uitzendbureaus; nieuws 8 okt 2026 "internetconsultatie wijziging eisen wanneer bedrijven personeel mogen uitlenen"), kvk.nl (Wtta). Gezocht 31 okt 2026, de pagina\'s zelf niet geopend: check het Staatsblad.',
   },
   {
@@ -475,7 +475,7 @@ export const UPCOMING_LAW: UpcomingLaw[] = [
     ],
     change: 'Taal: de tip over wonen via het bureau (c.housing). Werkregels: de vragen over huur van je loon (r.l.loon.2.wd2 in loon.ts, r.l.kas.2.wd2 in sector.ts). Eerst een plan: het is nog een wetsvoorstel, gekoppeld aan de Wet passende huur; de datum kan schuiven. Daarna een update met een melding (loon, NL).',
     ids: ['c.housing', 'r.l.loon.2.wd2', 'r.l.kas.2.wd2'],
-    files: ['src/content/work.ts', 'src/content/regels/units/loon.ts', 'src/content/regels/units/sector.ts'],
+    files: ['src/content/work.ts', 'src/content/workTips.ts', 'src/content/regels/units/loon.ts', 'src/content/regels/units/sector.ts'],
     source: 'rijksoverheid.nl nieuws 10 sept 2026; Kamerbrief SZW 10 sept 2026 (nr. 2026-0000293074). Eerder plan (2025): later afschaffen; 30 okt 2025 bleef de regeling nog bestaan (rijksoverheid.nl). Gezocht 31 okt 2026, niet in het Staatsblad.',
   },
   {

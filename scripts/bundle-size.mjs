@@ -53,10 +53,16 @@ import { gzipSync } from 'node:zlib';
  * 4 new tips = 60 pages, at 304.1 / 424.1 / 3836.4 / 4899.5 kB. Only the tip pages limit moved: they
  * are separate web pages, not part of what a learner's phone loads. The three other limits are
  * nearly reached, so no more lessons before the tip texts load on demand.
+ * start file 305 → 307 and start 425 → 427 (14 November 2026, the owner's choice, TEMPORARY): with
+ * the four Logistiek lessons the build on GitHub came to 305.0 / 425.0 kB (304.1 / 424.1 kB on a
+ * Mac: the two differ by almost 1 kB), so main was red. The tips now have files of their own
+ * (src/content/workTips.ts, cultureTipsBase.ts), which by itself adds 0.6 kB; the next step loads
+ * them after the first screen. Set both back to 305 / 425 or lower with that step.
  */
 export const LIMITS = {
-  'start file': 305,
-  start: 425,
+  // TEMPORARY, see above: back to 305 / 425 or lower when the tips load on demand.
+  'start file': 307,
+  start: 427,
   dist: 3850,
   // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
   // 14 November 2026: 93 tips in 15 languages at 4746 kB; later that day 97 tips at 4900 kB.

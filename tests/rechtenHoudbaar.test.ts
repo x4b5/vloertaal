@@ -16,7 +16,7 @@ import { setRulesCountry } from '../src/content/rulesCourse';
 import { beTaalTips, taalBeActive } from '../src/content/taalBe';
 import { setBeTaal } from '../src/content/taalBe/live';
 import { LAW_CHECKED } from '../src/content/updates';
-import { ABUSE_LINE, ADVICE_LINE } from '../src/content/work';
+import { ABUSE_LINE, ADVICE_LINE } from '../src/content/workTips';
 import { getHelpLanguage, registerPack, ui } from '../src/i18n';
 import { helpLanguages } from '../src/i18n/all';
 import { BE_ABUSE_LINE, BE_ADVICE_LINE, rightsTipCountry, rightsTipNotes } from '../src/lib/tipText';
