@@ -731,6 +731,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "Le chauffeur attend la lettre de voiture.", // nieuw, nalezen
     'c.loading.q': "Cette palette est prête ?", // nieuw, nalezen
     'c.loading.a': "Non, il faut encore mettre du film autour.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "Comment on fait ça ?", // nieuw, nalezen
+    'w.hoe': "comment", // nieuw, nalezen
+    'w.zo': "comme ça, de cette façon", // nieuw, nalezen
+    'w.moeilijk': "difficile", // nieuw, nalezen
+    'w.makkelijk': "facile", // nieuw, nalezen
+    'w.weten': "savoir", // nieuw, nalezen
+    'w.klopt': "c’est correct", // nieuw, nalezen
+    's.howto.1': "Comment on fait ça ?", // nieuw, nalezen
+    's.howto.2': "C’est difficile pour moi.", // nieuw, nalezen
+    's.howto.3': "Je fais bien comme ça ?", // nieuw, nalezen
+    'c.howto.q': "Tu sais comment on fait ça ?", // nieuw, nalezen
+    'c.howto.a': "Non, je ne sais pas encore.", // nieuw, nalezen
+    'l.mayask': "Je peux demander quelque chose ?", // nieuw, nalezen
+    'w.vragen': "demander", // nieuw, nalezen
+    'w.wie': "qui", // nieuw, nalezen
+    'w.even': "un moment", // nieuw, nalezen
+    'w.tijd': "le temps", // nieuw, nalezen
+    'w.storen': "déranger (quelqu’un qui est occupé)", // nieuw, nalezen
+    'w.twijfelen': "douter (tu ne sais pas bien)", // nieuw, nalezen
+    's.mayask.1': "Je peux demander quelque chose ?", // nieuw, nalezen
+    's.mayask.2': "Pardon de déranger.", // nieuw, nalezen
+    's.mayask.3': "Qui peut m’aider ?", // nieuw, nalezen
+    'c.mayask.q': "Tu as une question ?", // nieuw, nalezen
+    'c.mayask.a': "Oui. Tu as un moment ?", // nieuw, nalezen
+    'l.whereis': "C’est où ?", // nieuw, nalezen
+    'w.hier': "ici", // nieuw, nalezen
+    'w.daar': "là, là-bas", // nieuw, nalezen
+    'w.kwijt': "perdu (tu ne le trouves pas)", // nieuw, nalezen
+    'w.uitgang': "la sortie", // nieuw, nalezen
+    'w.aanwijzen': "montrer du doigt (montrer où c’est)", // nieuw, nalezen
+    'w.naast': "à côté de", // nieuw, nalezen
+    's.whereis.1': { m: "Je suis perdu.", f: "Je suis perdue.", x: "J’ai perdu mon chemin." }, // nieuw, nalezen
+    's.whereis.2': "Où est la sortie ?", // nieuw, nalezen
+    's.whereis.3': "Les toilettes sont là, à côté de la cantine.", // nieuw, nalezen
+    'c.whereis.q': "Tu trouves ?", // nieuw, nalezen
+    'c.whereis.a': "Non. Tu peux me montrer du doigt ?", // nieuw, nalezen
   },
 };
 

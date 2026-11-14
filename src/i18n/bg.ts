@@ -728,6 +728,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "Шофьорът чака товарителницата.", // nieuw, nalezen
     'c.loading.q': "Готов ли е този палет?", // nieuw, nalezen
     'c.loading.a': "Не, трябва още да се увие с фолио.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "Как се прави това?", // nieuw, nalezen
+    'w.hoe': "как", // nieuw, nalezen
+    'w.zo': "така, по този начин", // nieuw, nalezen
+    'w.moeilijk': "труден", // nieuw, nalezen
+    'w.makkelijk': "лесен", // nieuw, nalezen
+    'w.weten': "знам", // nieuw, nalezen
+    'w.klopt': "вярно е", // nieuw, nalezen
+    's.howto.1': "Как се прави това?", // nieuw, nalezen
+    's.howto.2': "Това е трудно за мен.", // nieuw, nalezen
+    's.howto.3': "Добре ли го правя така?", // nieuw, nalezen
+    'c.howto.q': "Знаеш ли как се прави това?", // nieuw, nalezen
+    'c.howto.a': "Не, това още не го знам.", // nieuw, nalezen
+    'l.mayask': "Може ли да попитам нещо?", // nieuw, nalezen
+    'w.vragen': "питам", // nieuw, nalezen
+    'w.wie': "кой", // nieuw, nalezen
+    'w.even': "за малко", // nieuw, nalezen
+    'w.tijd': "времето", // nieuw, nalezen
+    'w.storen': "преча (на някого, който е зает)", // nieuw, nalezen
+    'w.twijfelen': "колебая се (не знаеш със сигурност)", // nieuw, nalezen
+    's.mayask.1': "Може ли да попитам нещо?", // nieuw, nalezen
+    's.mayask.2': "Извинявай, че преча.", // nieuw, nalezen
+    's.mayask.3': "Кой може да ми помогне?", // nieuw, nalezen
+    'c.mayask.q': "Имаш ли въпрос?", // nieuw, nalezen
+    'c.mayask.a': "Да. Имаш ли малко време?", // nieuw, nalezen
+    'l.whereis': "Къде е?", // nieuw, nalezen
+    'w.hier': "тук", // nieuw, nalezen
+    'w.daar': "там", // nieuw, nalezen
+    'w.kwijt': "изгубен (не можеш да го намериш)", // nieuw, nalezen
+    'w.uitgang': "изходът", // nieuw, nalezen
+    'w.aanwijzen': "посочвам (показвам къде е)", // nieuw, nalezen
+    'w.naast': "до", // nieuw, nalezen
+    's.whereis.1': "Загубих се.", // nieuw, nalezen
+    's.whereis.2': "Къде е изходът?", // nieuw, nalezen
+    's.whereis.3': "Тоалетната е там, до стола.", // nieuw, nalezen
+    'c.whereis.q': "Можеш ли да го намериш?", // nieuw, nalezen
+    'c.whereis.a': "Не. Можеш ли да го посочиш?", // nieuw, nalezen
   },
 };
 

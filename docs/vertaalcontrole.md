@@ -1658,3 +1658,57 @@ Per taal, wat de vertaler zelf het minst zeker vond:
 - **ti** (het minst zeker van alle talen): `w.deuk` «ጎድጓድ (ብማህረምቲ ዝኣተወ)» is een omschrijving; `w.vak` «ክፍሊ», `w.locatie` «ቦታ», `w.artikel` «ኣቕሓ»; de bestelbus en de vrachtwagen zijn vrouwelijk («እታ ቫን»); `w.file` «ምጭንናቕ ትራፊክ», `w.omleiding` «መተካእታ መገዲ», `w.retour` «ተመላሲ», `w.lossen` «ምርጋፍ», `w.folie` «ፕላስቲክ መጠቕለሊ», `w.parkeren` «ፓርክ ምግባር»; de werkwoordsvormen in `c.delay.a`, `.p`, `c.loading.o2`, `.o3` en `c.vancheck.s`, `.w`.
 - **tr**: `w.omleiding` "alternatif güzergâh"; `w.vak` "göz"; `w.locatie` "konum" (in een magazijn vaak "lokasyon" of "adres"); `w.lossen` "indirmek, boşaltmak"; `w.vrachtbrief` "irsaliye", `w.pompwagen` "transpalet".
 - **uk**: `w.vak` "комірка"; `w.planner` "диспетчер"; `w.pompwagen` "рокла" (spreektaal); de teamleider is "керівник команди" (in `c.explain` "бригадир"); `c.picking.a` "Ряд три, комірка дванадцять."
+
+## Hulp vragen: vier lessen (14 november 2026)
+
+Op verzoek van de eigenaar groeien de basisonderwerpen naar vier lessen, één onderwerp per ronde.
+De eerste ronde: "Hulp vragen" (`u.help`) had één les en heeft er nu vier. Alles met AI vertaald en
+nog niet door een moedertaalspreker gecontroleerd. De nieuwe lessen:
+
+| Les | Titel |
+|---|---|
+| `l.howto` | Hoe moet dit? |
+| `l.mayask` | Mag ik iets vragen? |
+| `l.whereis` | Waar is het? |
+
+Nieuwe ids, per les hetzelfde patroon (63 sleutels per taal, allemaal gemarkeerd met "nieuw,
+nalezen"):
+
+- Les, woorden, zinnen en gesprekje in `src/i18n/<taal>.ts`; de tip (`c.<les>` met `.b`, `.p`, `.s`,
+  `.o1`–`.o3`, `.w`) in `src/i18n/culture/<taal>.ts` (Engelse bron in `culture/en.json`).
+- Uitleg bij het gesprekje (`src/i18n/learn/<taal>.ts`): `c.<les>.a.why` (3 per taal).
+
+Voor alle talen:
+
+- **"Fout werk moet opnieuw"** (`c.howto.b`): de Engelse bron zei eerst "a mistake must be done
+  again", wat letterlijk vertaald leest als "je moet de fout nog een keer maken". De bron is nu
+  "work that is wrong must be done again"; ar, ti, de, tr en ro zijn daarop aangepast. Lees die zin
+  in elke taal na.
+- **"Kwijt"** (`w.kwijt`, `s.whereis.1`): bijna geen taal heeft er één woord voor. Het woord is
+  meestal "verloren (je kunt het niet vinden)", de zin "ik ben verdwaald": woord en zin delen dan
+  geen stam.
+- **"Moeilijk"** (`w.moeilijk`): in meerdere talen betekent het gewone woord ook "zwaar" (`c.limits`);
+  daarom is soms een ander woord gekozen.
+- **"Twijfelen"** en **"aanwijzen"**: de uitleg tussen haakjes is in veel talen zo geschreven dat er
+  geen man- of vrouwvorm nodig is; dat leest soms stijf.
+- **De toon naar een collega**: "Sorry dat ik stoor" en "Heb je even tijd?" staan in sommige talen
+  (fr, prs, ti) in een andere aanspreekvorm dan de tip ernaast.
+- **België**: "de kantine" in `s.whereis.3` en `c.whereis.p` heet in Vlaanderen vaak "de refter"
+  (zie `src/content/taalBe/inventory.ts`).
+
+Per taal, wat de vertaler zelf het minst zeker vond:
+
+- **ar**: de x-vormen van `c.howto.b`, `c.mayask.b` en `c.whereis.b` zijn onpersoonlijk en lezen stijf; "أضعت الطريق" voor "Ik ben de weg kwijt" (of "ضللت الطريق"); "هل عندك قليل من الوقت؟" voor "Heb je even tijd?" (gewoner misschien "هل عندك دقيقة؟"); `c.whereis.o3` "بملابسك العادية". Vijf regels hebben alleen een man- en vrouwvorm, zoals het bestand elders doet.
+- **bg**: "столът" (de kantine, uit een eerdere les) is ook "de stoel": `s.whereis.3` en `c.whereis.p` kunnen verkeerd gelezen worden; `w.kwijt` "изгубен" (mannelijk); `w.twijfelen` "колебая се"; `w.klopt` "вярно е" (of "точно така").
+- **de**: `c.howto.b` "Nachprüfen ist hier normal" (of "Nachfragen"); `c.howto.a.why`; `w.kwijt` "verloren, weg", de zin is "Ich habe mich verlaufen."; `w.aanwijzen` "auf etwas zeigen".
+- **es**: `w.twijfelen` "dudar (no lo sabes seguro)"; `w.klopt` "eso es correcto" (of "así es"); `c.whereis.a` "¿Puedes señalarlo?"; `c.whereis.w` "Si buscas por tu cuenta".
+- **fa**: `w.zo` «این‌طور، این‌جوری» (het tweede is spreektaal); `w.kwijt` «گم‌شده»; `c.howto.w` vrij vertaald; `c.howto.a.why` «روراست گفته شده»; `w.naast` «کنارِ» (met ezafe).
+- **fr**: de titel `c.whereis` "Tu as perdu ton chemin ? Demande" (lang); "Pardon de déranger." zonder tu of vous; "montrer du doigt" (`w.aanwijzen`, `c.whereis.a`); `c.whereis.s` "ton service"; de twee `.a.why`-regels zijn erg kort.
+- **pl**: de x-vorm van "Ik ben de weg kwijt" is "Nie mogę znaleźć drogi"; `w.twijfelen` "mieć wątpliwości"; `c.whereis.a` "Możesz to wskazać?" (wat stijf).
+- **prs**: `w.moeilijk` «مشکل» (Farsi: «سخت»); «مصئونیت» voor veiligheid (zelf gevormd); `c.mayask.p` formeel en `c.mayask.a` informeel voor dezelfde Nederlandse zin; «پالیدن» en «شرم است» in `c.whereis.o2`; `w.uitgang` «دروازهٔ خروج».
+- **pt** (Europees Portugees, tu-vorm): "Desculpa incomodar." (of "interromper"); "chata" in `c.mayask.b` (spreektaal); `w.daar` alleen "ali"; `l.whereis` "Onde é?".
+- **ro**: `c.whereis.q` "Găsești?" (erg kort); `w.moeilijk` "greu, dificil"; `c.mayask.b` "Pe nimeni nu supără o întrebare."; `w.twijfelen` "a avea îndoieli".
+- **so**: `w.storen` "dhibid" (misschien sterker dan storen); `l.whereis` "Waa xaggee?"; `w.naast` "agtiisa, dhinaciisa" (met bezitsuitgang); `w.weten` "ogaan" terwijl het gesprekje "taqaan" gebruikt; `c.whereis.o3` en `s.howto.3` op woordvolgorde.
+- **ti** (heeft een volledige lezing nodig, niet alleen deze punten): wat de leerling tegen een collega zegt, staat in de beleefde meervoudsvorm (elders in het bestand in mannelijk enkelvoud); `w.moeilijk` «ኣጸጋሚ»; `w.storen` «ምርባሽ», `w.twijfelen` «ምጥርጣር», `w.aanwijzen` «ምምልካት»; de grammatica van `s.howto.3` en de titel `c.howto`; "de kantine" als leenwoord «ካንቲን»; «ከም ብሓድሽ» in `c.howto.b` (in plaats van «እንደገና», dat naar het Amhaars neigt).
+- **tr**: "Soracağın bir şey var mı?" ("sorun" bewust vermeden: betekent ook "probleem"); "Pardon, rahatsız ediyorum."; `w.aanwijzen` "parmakla göstermek" (met de vinger wijzen kan onbeleefd klinken); `w.twijfelen` "tereddüt etmek" (moeilijk woord).
+- **uk**: `w.moeilijk` "складний" en `w.makkelijk` "простий, легкий" ("важкий" is ook zwaar); `w.kwijt` "загублений" naast de zin "Я заблукав / заблукала"; `w.aanwijzen` "показувати рукою" terwijl het gesprekje "Можеш показати, де це?" zegt.

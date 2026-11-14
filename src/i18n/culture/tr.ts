@@ -398,6 +398,31 @@ const t: CultureTranslation = {
     'c.loading.o2': "Arkasından koşarsın: yeterince hızlısın.", // nieuw, nalezen
     'c.loading.o3': "Arkasından yürür ve şoföre el sallarsın.", // nieuw, nalezen
     'c.loading.w': "Kamyonun arkası, şoförün göremediği bir yerdir. Beklemek bir dakikanı alır. Orada bir kaza çok ciddidir.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto': "Doğru yaptığını kontrol et", // nieuw, nalezen
+    'c.howto.b': "Bir işin nasıl yapılacağından emin değil misin? Nasıl yapıldığını sor ya da bir iş arkadaşından işine kısaca bakmasını iste. Burada kontrol etmek normaldir, bir hafta ya da bir ay sonra bile. Tahmin etmek sormaktan daha çok zaman alır: hatalı iş yeniden yapılmalıdır. “Doe ik het zo goed?” iş arkadaşlarının duymayı sevdiği bir sorudur.", // nieuw, nalezen
+    'c.howto.p': "Doğru mu diye bir bakar mısın?", // nieuw, nalezen
+    'c.howto.s': "Yeni bir iş yapıyorsun. Doğru yaptığından emin değilsin. Ne yaparsın?", // nieuw, nalezen
+    'c.howto.o1': "Bir iş arkadaşından bakmasını istersin.", // nieuw, nalezen
+    'c.howto.o2': "Devam edersin: belki doğrudur.", // nieuw, nalezen
+    'c.howto.o3': "Durur ve biri gelene kadar beklersin.", // nieuw, nalezen
+    'c.howto.w': "Bir iş arkadaşının kısa bir bakışı sonradan çok işten kurtarır. Ve işi daha hızlı öğrenirsin.", // nieuw, nalezen
+    'c.mayask': "Sormak için doğru zaman", // nieuw, nalezen
+    'c.mayask.b': "Konu güvenlik mi, ya da şu anda bir şey ters gidebilir mi? Hemen sor, iş arkadaşın meşgul olsa bile. Acil değil mi? İş arkadaşın işini bitirene kadar bekle ve sonra sor: “Heb je even tijd?” Soracağın birçok küçük şey mi var? Bunları yaz ve hepsini birlikte sor. Kimse bir soruyu can sıkıcı bulmaz. Bir hata daha çok zaman alır.", // nieuw, nalezen
+    'c.mayask.p': "Pardon, rahatsız ediyorum. Biraz vaktin var mı?", // nieuw, nalezen
+    'c.mayask.s': "İş arkadaşın telefonda konuşuyor. Acil olmayan bir şey sormak istiyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.mayask.o1': "Görüşme bitene kadar bekler, sonra sorarsın.", // nieuw, nalezen
+    'c.mayask.o2': "Şimdi sorarsın: soru sormak her zaman iyidir.", // nieuw, nalezen
+    'c.mayask.o3': "Sormazsın: iş arkadaşın meşgul.", // nieuw, nalezen
+    'c.mayask.w': "Biraz beklemek saygı gösterir ve cevabını yine de alırsın. Sadece tehlike bekleyemez.", // nieuw, nalezen
+    'c.whereis': "Kayboldun mu? Sor yeter", // nieuw, nalezen
+    'c.whereis.b': "Yeni bir iş yeri büyüktür ve birçok kapı birbirine benzer. Kimse bir günde her şeyi bulmanı beklemez. Bir odayı, bir aleti ya da birini bulamıyor musun? Gördüğün ilk iş arkadaşına sor. Birçok iş arkadaşı seninle birlikte yürür ya da yolu gösterir. Çıkışların nerede olduğunu biliyor musun? İlk gününde sor: bu senin güvenliğin için.", // nieuw, nalezen
+    'c.whereis.p': "Yolumu kaybettim. Yemekhane nerede?", // nieuw, nalezen
+    'c.whereis.s': "İkinci günün. Soyunma odasını bulamıyorsun ve vardiyan beş dakika sonra başlıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.whereis.o1': "Gördüğün ilk iş arkadaşına sorarsın.", // nieuw, nalezen
+    'c.whereis.o2': "Aramaya devam edersin: tekrar sormak utanç verici.", // nieuw, nalezen
+    'c.whereis.o3': "Kendi kıyafetlerinle işe başlarsın.", // nieuw, nalezen
+    'c.whereis.w': "Sormak on saniye sürer. Tek başına aramak geç kalmana neden olabilir. İş arkadaşları yeni bir yerde yol bulmanın zor olduğunu bilir.", // nieuw, nalezen
   },
 };
 

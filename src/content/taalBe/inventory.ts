@@ -38,6 +38,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   } },
   'u.help': { kind: 'A', lessons: {
     'l.understand': L('A', 'A', 'de tip zegt "Supervisors here" (was "Dutch supervisors")'),
+    'l.howto': L('A', 'A'),
+    'l.mayask': L('A', 'A'),
+    'l.whereis': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: in Vlaanderen zegt men ook "de refter" (de kantine; de zin en de tip noemen de kantine)'),
   } },
   'u.tools': { kind: 'B', lessons: {
     'l.translate': L('A', 'A'),

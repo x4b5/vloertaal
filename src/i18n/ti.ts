@@ -729,6 +729,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "እቲ ዘዋሪ ነታ ወረቐት ጽዕነት ይጽበ ኣሎ።", // nieuw, nalezen
     'c.loading.q': "እዚ ፓለት ተዳልዩ ድዩ?", // nieuw, nalezen
     'c.loading.a': "ኣይፋል፡ ገና ፕላስቲክ መጠቕለሊ ክግበረሉ ኣለዎ።", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "እዚ ብኸመይ ይግበር?", // nieuw, nalezen
+    'w.hoe': "ከመይ", // nieuw, nalezen
+    'w.zo': "ከምዚ፡ ብኸምዚ", // nieuw, nalezen
+    'w.moeilijk': "ኣጸጋሚ፡ ከቢድ", // nieuw, nalezen
+    'w.makkelijk': "ቀሊል", // nieuw, nalezen
+    'w.weten': "ምፍላጥ", // nieuw, nalezen
+    'w.klopt': "ቅኑዕ እዩ", // nieuw, nalezen
+    's.howto.1': "እዚ ብኸመይ ይግበር?", // nieuw, nalezen
+    's.howto.2': "እዚ ንዓይ ኣጸጋሚ እዩ።", // nieuw, nalezen
+    's.howto.3': "ከምዚ ጽቡቕ ድየ ዝገብሮ ዘለኹ?", // nieuw, nalezen
+    'c.howto.q': { m: "እዚ ብኸመይ ከም ዝግበር ትፈልጥ ዲኻ?", f: "እዚ ብኸመይ ከም ዝግበር ትፈልጢ ዲኺ?", x: "እዚ ብኸመይ ከም ዝግበር ትፈልጡ ዲኹም?" }, // nieuw, nalezen
+    'c.howto.a': "ኣይፋል፡ ገና ኣይፈልጦን እየ።", // nieuw, nalezen
+    'l.mayask': "ገለ ክሓትት ይኽእል ዶ?", // nieuw, nalezen
+    'w.vragen': "ምሕታት", // nieuw, nalezen
+    'w.wie': "መን", // nieuw, nalezen
+    'w.even': "ንሓጺር ግዜ", // nieuw, nalezen
+    'w.tijd': "ግዜ", // nieuw, nalezen
+    'w.storen': "ምርባሽ (ንስራሕ ሒዙ ዘሎ ሰብ)", // nieuw, nalezen
+    'w.twijfelen': "ምጥርጣር (ርግጸኛ ዘይምዃን)", // nieuw, nalezen
+    's.mayask.1': "ገለ ክሓትት ይኽእል ዶ?", // nieuw, nalezen
+    's.mayask.2': "ይቕሬታ፡ ስለ ዝረበሽኩኹም።", // nieuw, nalezen
+    's.mayask.3': "መን ክሕግዘኒ ይኽእል?", // nieuw, nalezen
+    'c.mayask.q': { m: "ሕቶ ኣለካ ድዩ?", f: "ሕቶ ኣለኪ ድዩ?", x: "ሕቶ ኣለኩም ድዩ?" }, // nieuw, nalezen
+    'c.mayask.a': "እወ። ቁሩብ ግዜ ኣለኩም ድዩ?", // nieuw, nalezen
+    'l.whereis': "ኣበይ ኣሎ?", // nieuw, nalezen
+    'w.hier': "ኣብዚ", // nieuw, nalezen
+    'w.daar': "ኣብኡ", // nieuw, nalezen
+    'w.kwijt': "ዝጠፍአ (ክርከብ ዘይከኣለ)", // nieuw, nalezen
+    'w.uitgang': "መውጽኢ", // nieuw, nalezen
+    'w.aanwijzen': "ምምልካት (ኣበይ ከም ዘሎ ምሕባር)", // nieuw, nalezen
+    'w.naast': "ኣብ ጎድኒ", // nieuw, nalezen
+    's.whereis.1': "መገዲ ጠፊኡኒ።", // nieuw, nalezen
+    's.whereis.2': "መውጽኢ ኣበይ ኣሎ?", // nieuw, nalezen
+    's.whereis.3': "ሽቓቕ ኣብኡ ኣሎ፡ ኣብ ጎድኒ እቲ ካንቲን።", // nieuw, nalezen
+    'c.whereis.q': { m: "ክትረኽቦ ትኽእል ዲኻ?", f: "ክትረኽብዮ ትኽእሊ ዲኺ?", x: "ክትረኽብዎ ትኽእሉ ዲኹም?" }, // nieuw, nalezen
+    'c.whereis.a': "ኣይፋል። ከተመልክቱለይ ትኽእሉ ዶ?", // nieuw, nalezen
   },
 };
 

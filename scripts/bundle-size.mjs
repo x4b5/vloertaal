@@ -63,14 +63,21 @@ import { gzipSync } from 'node:zlib';
  * pictures (src/lib/tips.ts; tests/tipsLoket.test.ts keeps them out), at 261.7 / 381.7 kB on a Mac
  * (GitHub measures almost 1 kB more). The limits are lower than before the tips moved, with room
  * for the basis units to grow to four lessons: a lesson without its tip is about 0.3 kB.
+ * dist 3850 → 4350 and tip pages 5000 → 6500 (14 November 2026, the owner's choice): the basis units
+ * grow to four lessons, about 40 lessons, one unit at a time ("Hulp vragen" first, three lessons).
+ * A lesson with its tip in 14 help languages is about 11 kB of dist and 15 tip pages (about 50 kB).
+ * Raised once for the whole round instead of at every unit; neither is what a first screen waits
+ * for (a learner loads one help language, and no phone loads the tip pages): start file and start
+ * keep their own, lower limits.
  */
 export const LIMITS = {
   'start file': 280,
   start: 400,
-  dist: 3850,
+  dist: 4350,
   // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
   // 14 November 2026: 93 tips in 15 languages at 4746 kB; later that day 97 tips at 4900 kB.
-  'tip pages': 5000,
+  // 14 November 2026: room for the basis units at four lessons (see above).
+  'tip pages': 6500,
 };
 
 /** A page of the workplace tips (/pl/tip/, /pl/tip/<tip>/): counted on its own, see above. */

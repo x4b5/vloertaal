@@ -400,6 +400,31 @@ const t: CultureTranslation = {
     'c.loading.o2': { m: "Przebiegasz za nią: jesteś wystarczająco szybki.", f: "Przebiegasz za nią: jesteś wystarczająco szybka.", x: "Przebiegasz za nią: biegasz wystarczająco szybko." }, // nieuw, nalezen
     'c.loading.o3': "Przechodzisz za nią i machasz do kierowcy.", // nieuw, nalezen
     'c.loading.w': "Za ciężarówką jest miejsce, którego kierowca nie widzi. Czekanie kosztuje minutę. Wypadek w tym miejscu jest bardzo poważny.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto': "Sprawdź, czy robisz to dobrze", // nieuw, nalezen
+    'c.howto.b': "Nie masz pewności, jak trzeba zrobić zadanie? Zapytaj, jak, albo poproś kolegę, żeby na chwilę spojrzał na twoją pracę. Sprawdzanie jest tu normalne, także po tygodniu albo po miesiącu. Zgadywanie kosztuje więcej czasu niż pytanie: pracę z błędem trzeba zrobić jeszcze raz. „Doe ik het zo goed?” to pytanie, które koledzy lubią słyszeć.", // nieuw, nalezen
+    'c.howto.p': "Spojrzysz na chwilę, czy jest dobrze?", // nieuw, nalezen
+    'c.howto.s': "Robisz nowe zadanie. Nie masz pewności, czy robisz je dobrze. Co robisz?", // nieuw, nalezen
+    'c.howto.o1': "Prosisz kolegę, żeby na to spojrzał.", // nieuw, nalezen
+    'c.howto.o2': "Robisz dalej: może jest dobrze.", // nieuw, nalezen
+    'c.howto.o3': "Przerywasz i czekasz, aż ktoś przyjdzie.", // nieuw, nalezen
+    'c.howto.w': "Jedno krótkie spojrzenie kolegi oszczędza później dużo pracy. I szybciej nauczysz się tego zadania.", // nieuw, nalezen
+    'c.mayask': "Dobry moment na pytanie", // nieuw, nalezen
+    'c.mayask.b': "Chodzi o bezpieczeństwo albo coś może zaraz pójść źle? Zapytaj od razu, także wtedy, gdy kolega jest zajęty. To nie jest pilne? Poczekaj, aż kolega skończy, i wtedy zapytaj: „Heb je even tijd?” Masz dużo małych pytań? Zapisz je i zadaj wszystkie razem. Pytanie nikogo nie denerwuje. Błąd kosztuje więcej czasu.", // nieuw, nalezen
+    'c.mayask.p': "Przepraszam, że przeszkadzam. Masz chwilę?", // nieuw, nalezen
+    'c.mayask.s': "Twój kolega rozmawia przez telefon. Masz pytanie, które nie jest pilne. Co robisz?", // nieuw, nalezen
+    'c.mayask.o1': "Czekasz, aż rozmowa się skończy, i wtedy pytasz.", // nieuw, nalezen
+    'c.mayask.o2': "Pytasz teraz: pytanie jest zawsze dobre.", // nieuw, nalezen
+    'c.mayask.o3': "Nie pytasz: kolega jest zajęty.", // nieuw, nalezen
+    'c.mayask.w': "Chwila czekania pokazuje szacunek, a odpowiedź i tak dostaniesz. Tylko niebezpieczeństwo nie może czekać.", // nieuw, nalezen
+    'c.whereis': { m: "Zgubiłeś się? Po prostu zapytaj", f: "Zgubiłaś się? Po prostu zapytaj", x: "Nie możesz znaleźć drogi? Po prostu zapytaj" }, // nieuw, nalezen
+    'c.whereis.b': "Nowe miejsce pracy jest duże, a wiele drzwi wygląda tak samo. Nikt nie oczekuje, że po jednym dniu wszystko znajdziesz. Nie możesz znaleźć pomieszczenia, narzędzia albo osoby? Zapytaj pierwszego kolegę, którego zobaczysz. Wielu kolegów pójdzie z tobą albo wskaże drogę. Wiesz, gdzie są wyjścia? Zapytaj o to pierwszego dnia: to dla twojego bezpieczeństwa.", // nieuw, nalezen
+    'c.whereis.p': { m: "Zgubiłem się. Gdzie jest stołówka?", f: "Zgubiłam się. Gdzie jest stołówka?", x: "Nie mogę znaleźć drogi. Gdzie jest stołówka?" }, // nieuw, nalezen
+    'c.whereis.s': "To twój drugi dzień. Nie możesz znaleźć szatni, a twoja zmiana zaczyna się za pięć minut. Co robisz?", // nieuw, nalezen
+    'c.whereis.o1': "Pytasz pierwszego kolegę, którego widzisz.", // nieuw, nalezen
+    'c.whereis.o2': "Szukasz dalej: pytać jeszcze raz to wstyd.", // nieuw, nalezen
+    'c.whereis.o3': "Zaczynasz pracę we własnym ubraniu.", // nieuw, nalezen
+    'c.whereis.w': "Pytanie zajmuje dziesięć sekund. Gdy szukasz bez pomocy, możesz się spóźnić. Koledzy wiedzą, że w nowym miejscu trudno znaleźć drogę.", // nieuw, nalezen
   },
 };
 

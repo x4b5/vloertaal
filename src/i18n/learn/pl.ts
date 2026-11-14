@@ -161,6 +161,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "Pytanie, czy paleta jest gotowa: nie, i czego jeszcze potrzebuje.", // nieuw, nalezen
     'c.vancheck.a.why': "Pytanie, czy z busem wszystko w porządku: nie, i co jest zepsute.", // nieuw, nalezen
     'c.delay.a.why': "Pytanie, gdzie jesteś: miejsce i ile się spóźnisz.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "Pytanie, czy wiesz, jak: nie, jeszcze nie, powiedziane szczerze.", // nieuw, nalezen
+    'c.mayask.a.why': "Pytanie, czy masz pytanie: tak, a najpierw, czy jest czas.", // nieuw, nalezen
+    'c.whereis.a.why': "Pytanie, czy możesz to znaleźć: nie, i prośba o wskazanie.", // nieuw, nalezen
   },
 };
 

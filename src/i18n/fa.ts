@@ -728,6 +728,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "راننده منتظر بارنامه است.", // nieuw, nalezen
     'c.loading.q': "این پالت آماده است؟", // nieuw, nalezen
     'c.loading.a': "نه، هنوز باید دورش سلفون پیچیده شود.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "این را چطور انجام بدهم؟", // nieuw, nalezen
+    'w.hoe': "چطور", // nieuw, nalezen
+    'w.zo': "این‌طور، این‌جوری", // nieuw, nalezen
+    'w.moeilijk': "سخت", // nieuw, nalezen
+    'w.makkelijk': "آسان", // nieuw, nalezen
+    'w.weten': "دانستن", // nieuw, nalezen
+    'w.klopt': "درست است", // nieuw, nalezen
+    's.howto.1': "این را چطور باید انجام بدهم؟", // nieuw, nalezen
+    's.howto.2': "این برای من سخت است.", // nieuw, nalezen
+    's.howto.3': "این‌طور درست انجام می‌دهم؟", // nieuw, nalezen
+    'c.howto.q': "می‌دانی این چطور انجام می‌شود؟", // nieuw, nalezen
+    'c.howto.a': "نه، هنوز این را نمی‌دانم.", // nieuw, nalezen
+    'l.mayask': "می‌توانم چیزی بپرسم؟", // nieuw, nalezen
+    'w.vragen': "پرسیدن", // nieuw, nalezen
+    'w.wie': "چه کسی، کی", // nieuw, nalezen
+    'w.even': "یک لحظه", // nieuw, nalezen
+    'w.tijd': "وقت", // nieuw, nalezen
+    'w.storen': "مزاحم شدن (مزاحم کسی که سرش شلوغ است)", // nieuw, nalezen
+    'w.twijfelen': "شک داشتن (مطمئن نیستی)", // nieuw, nalezen
+    's.mayask.1': "می‌توانم چیزی بپرسم؟", // nieuw, nalezen
+    's.mayask.2': "ببخشید که مزاحم می‌شوم.", // nieuw, nalezen
+    's.mayask.3': "چه کسی می‌تواند به من کمک کند؟", // nieuw, nalezen
+    'c.mayask.q': "سؤالی داری؟", // nieuw, nalezen
+    'c.mayask.a': "بله. یک لحظه وقت داری؟", // nieuw, nalezen
+    'l.whereis': "کجاست؟", // nieuw, nalezen
+    'w.hier': "اینجا", // nieuw, nalezen
+    'w.daar': "آنجا", // nieuw, nalezen
+    'w.kwijt': "گم‌شده (نمی‌توانی پیدایش کنی)", // nieuw, nalezen
+    'w.uitgang': "خروجی", // nieuw, nalezen
+    'w.aanwijzen': "نشان دادن (نشان بدهی کجاست)", // nieuw, nalezen
+    'w.naast': "کنارِ", // nieuw, nalezen
+    's.whereis.1': "راه را گم کرده‌ام.", // nieuw, nalezen
+    's.whereis.2': "خروجی کجاست؟", // nieuw, nalezen
+    's.whereis.3': "دستشویی آنجاست، کنار غذاخوری.", // nieuw, nalezen
+    'c.whereis.q': "می‌توانی پیدایش کنی؟", // nieuw, nalezen
+    'c.whereis.a': "نه. می‌توانی نشانش بدهی؟", // nieuw, nalezen
   },
 };
 

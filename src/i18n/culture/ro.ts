@@ -400,6 +400,31 @@ const t: CultureTranslation = {
     'c.loading.o2': { m: "Alergi prin spatele lui: ești destul de rapid.", f: "Alergi prin spatele lui: ești destul de rapidă.", x: "Alergi prin spatele lui: te miști destul de repede." }, // nieuw, nalezen
     'c.loading.o3': "Mergi prin spatele lui și îi faci semn cu mâna șoferului.", // nieuw, nalezen
     'c.loading.w': "În spatele unui camion e un loc pe care șoferul nu îl poate vedea. Așteptarea costă un minut. Un accident acolo e foarte grav.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto': "Verifică dacă faci bine", // nieuw, nalezen
+    'c.howto.b': { m: "Nu ești sigur cum trebuie făcută o sarcină? Întreabă cum sau roagă un coleg să se uite puțin la munca ta. Aici e normal să verifici, chiar și după o săptămână sau o lună. Ghicitul costă mai mult timp decât întrebatul: ce e greșit trebuie făcut din nou. „Doe ik het zo goed?” e o întrebare pe care colegii o aud cu plăcere.", f: "Nu ești sigură cum trebuie făcută o sarcină? Întreabă cum sau roagă un coleg să se uite puțin la munca ta. Aici e normal să verifici, chiar și după o săptămână sau o lună. Ghicitul costă mai mult timp decât întrebatul: ce e greșit trebuie făcut din nou. „Doe ik het zo goed?” e o întrebare pe care colegii o aud cu plăcere.", x: "Nu știi sigur cum trebuie făcută o sarcină? Întreabă cum sau roagă un coleg să se uite puțin la munca ta. Aici e normal să verifici, chiar și după o săptămână sau o lună. Ghicitul costă mai mult timp decât întrebatul: ce e greșit trebuie făcut din nou. „Doe ik het zo goed?” e o întrebare pe care colegii o aud cu plăcere." }, // nieuw, nalezen
+    'c.howto.p': "Vrei să te uiți puțin dacă e bine?", // nieuw, nalezen
+    'c.howto.s': { m: "Faci o sarcină nouă. Nu ești sigur că o faci bine. Ce faci?", f: "Faci o sarcină nouă. Nu ești sigură că o faci bine. Ce faci?", x: "Faci o sarcină nouă. Nu știi sigur dacă o faci bine. Ce faci?" }, // nieuw, nalezen
+    'c.howto.o1': "Rogi un coleg să se uite.", // nieuw, nalezen
+    'c.howto.o2': "Mergi mai departe: poate e bine.", // nieuw, nalezen
+    'c.howto.o3': "Te oprești și aștepți până vine cineva.", // nieuw, nalezen
+    'c.howto.w': "O privire scurtă a unui coleg te scutește de multă muncă mai târziu. Și înveți sarcina mai repede.", // nieuw, nalezen
+    'c.mayask': "Momentul potrivit să întrebi", // nieuw, nalezen
+    'c.mayask.b': "E vorba de siguranță sau poate merge ceva prost chiar acum? Întreabă imediat, chiar și când colegul tău e ocupat. Nu e urgent? Așteaptă până când colegul tău a terminat și apoi întreabă: „Heb je even tijd?” Ai multe întrebări mici? Scrie-le și pune-le pe toate odată. Pe nimeni nu supără o întrebare. O greșeală costă mai mult timp.", // nieuw, nalezen
+    'c.mayask.p': "Scuze că deranjez. Ai puțin timp?", // nieuw, nalezen
+    'c.mayask.s': "Colegul tău vorbește la telefon. Ai o întrebare care nu e urgentă. Ce faci?", // nieuw, nalezen
+    'c.mayask.o1': "Aștepți până se termină convorbirea, apoi întrebi.", // nieuw, nalezen
+    'c.mayask.o2': "Întrebi acum: o întrebare e mereu bună.", // nieuw, nalezen
+    'c.mayask.o3': "Nu întrebi: colegul tău e ocupat.", // nieuw, nalezen
+    'c.mayask.w': "Dacă aștepți puțin, arăți respect și tot primești răspunsul. Doar pericolul nu poate aștepta.", // nieuw, nalezen
+    'c.whereis': "Te-ai rătăcit? Întreabă", // nieuw, nalezen
+    'c.whereis.b': "Un loc de muncă nou e mare și multe uși arată la fel. Nimeni nu se așteaptă să găsești totul după o zi. Nu găsești o încăpere, o unealtă sau o persoană? Întreabă primul coleg pe care îl vezi. Mulți colegi merg cu tine sau îți arată drumul. Știi unde sunt ieșirile? Întreabă în prima ta zi: e pentru siguranța ta.", // nieuw, nalezen
+    'c.whereis.p': "M-am rătăcit. Unde este cantina?", // nieuw, nalezen
+    'c.whereis.s': "E a doua ta zi. Nu găsești vestiarul, iar tura ta începe în cinci minute. Ce faci?", // nieuw, nalezen
+    'c.whereis.o1': "Întrebi primul coleg pe care îl vezi.", // nieuw, nalezen
+    'c.whereis.o2': "Cauți mai departe: e jenant să întrebi iar.", // nieuw, nalezen
+    'c.whereis.o3': "Începi munca în hainele tale.", // nieuw, nalezen
+    'c.whereis.w': { m: "Să întrebi durează zece secunde. Dacă cauți singur, poți întârzia. Colegii știu că e greu să te descurci într-un loc nou.", f: "Să întrebi durează zece secunde. Dacă cauți singură, poți întârzia. Colegii știu că e greu să te descurci într-un loc nou.", x: "Să întrebi durează zece secunde. Dacă cauți pe cont propriu, poți întârzia. Colegii știu că e greu să te descurci într-un loc nou." }, // nieuw, nalezen
   },
 };
 

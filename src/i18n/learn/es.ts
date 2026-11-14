@@ -159,6 +159,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "Te preguntan si el palé está listo: no, y qué le falta todavía.", // nieuw, nalezen
     'c.vancheck.a.why': "Te preguntan si la furgoneta está bien: no, y qué está roto.", // nieuw, nalezen
     'c.delay.a.why': "Te preguntan dónde estás: el sitio, y cuánto más tarde llegas.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "Te preguntan si sabes cómo: no, todavía no, y lo dices con sinceridad.", // nieuw, nalezen
+    'c.mayask.a.why': "Te preguntan si tienes una pregunta: sí, y primero preguntas si hay tiempo.", // nieuw, nalezen
+    'c.whereis.a.why': "Te preguntan si lo encuentras: no, y pides que te lo señalen.", // nieuw, nalezen
   },
 };
 

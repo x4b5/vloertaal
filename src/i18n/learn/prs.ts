@@ -160,6 +160,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "پرسیده‌اند پالت آماده است یا نی: نی، و اینکه هنوز به چه ضرورت دارد.", // nieuw, nalezen
     'c.vancheck.a.why': "پرسیده‌اند موتر خوب است یا نی: نی، و اینکه چه خراب است.", // nieuw, nalezen
     'c.delay.a.why': "پرسیده‌اند کجا هستید: جای، و اینکه چقدر ناوقت می‌رسید.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "پرسیده‌اند می‌دانید چطور یا نی: نی، هنوز نی، و راست گفته شده.", // nieuw, nalezen
+    'c.mayask.a.why': "پرسیده‌اند سوال دارید یا نی: بلی، و اول اینکه وقت هست یا نی.", // nieuw, nalezen
+    'c.whereis.a.why': "پرسیده‌اند پیدا کرده می‌توانید یا نی: نی، و خواهش اینکه نشان بدهند.", // nieuw, nalezen
   },
 };
 

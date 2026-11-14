@@ -731,6 +731,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "O motorista está à espera da guia de transporte.", // nieuw, nalezen
     'c.loading.q': "Esta palete está pronta?", // nieuw, nalezen
     'c.loading.a': "Não, ainda falta pôr a película à volta.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "Como se faz isto?", // nieuw, nalezen
+    'w.hoe': "como", // nieuw, nalezen
+    'w.zo': "assim, desta maneira", // nieuw, nalezen
+    'w.moeilijk': "difícil", // nieuw, nalezen
+    'w.makkelijk': "fácil", // nieuw, nalezen
+    'w.weten': "saber", // nieuw, nalezen
+    'w.klopt': "está certo", // nieuw, nalezen
+    's.howto.1': "Como se faz isto?", // nieuw, nalezen
+    's.howto.2': "Isto é difícil para mim.", // nieuw, nalezen
+    's.howto.3': "Estou a fazer bem assim?", // nieuw, nalezen
+    'c.howto.q': "Sabes como se faz isto?", // nieuw, nalezen
+    'c.howto.a': "Não, isso ainda não sei.", // nieuw, nalezen
+    'l.mayask': "Posso perguntar uma coisa?", // nieuw, nalezen
+    'w.vragen': "perguntar", // nieuw, nalezen
+    'w.wie': "quem", // nieuw, nalezen
+    'w.even': "um momento", // nieuw, nalezen
+    'w.tijd': "o tempo", // nieuw, nalezen
+    'w.storen': "incomodar (alguém que está ocupado)", // nieuw, nalezen
+    'w.twijfelen': "duvidar (não tens a certeza)", // nieuw, nalezen
+    's.mayask.1': "Posso perguntar uma coisa?", // nieuw, nalezen
+    's.mayask.2': "Desculpa incomodar.", // nieuw, nalezen
+    's.mayask.3': "Quem me pode ajudar?", // nieuw, nalezen
+    'c.mayask.q': "Tens uma pergunta?", // nieuw, nalezen
+    'c.mayask.a': "Sim. Tens um momento?", // nieuw, nalezen
+    'l.whereis': "Onde é?", // nieuw, nalezen
+    'w.hier': "aqui", // nieuw, nalezen
+    'w.daar': "ali", // nieuw, nalezen
+    'w.kwijt': "perdido (não o encontras)", // nieuw, nalezen
+    'w.uitgang': "a saída", // nieuw, nalezen
+    'w.aanwijzen': "apontar (mostrar onde está)", // nieuw, nalezen
+    'w.naast': "ao lado de", // nieuw, nalezen
+    's.whereis.1': { m: "Estou perdido.", f: "Estou perdida.", x: "Perdi-me." }, // nieuw, nalezen
+    's.whereis.2': "Onde é a saída?", // nieuw, nalezen
+    's.whereis.3': "A casa de banho é ali, ao lado da cantina.", // nieuw, nalezen
+    'c.whereis.q': "Consegues encontrar?", // nieuw, nalezen
+    'c.whereis.a': "Não. Podes apontar?", // nieuw, nalezen
   },
 };
 

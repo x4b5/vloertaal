@@ -397,6 +397,31 @@ const t: CultureTranslation = {
     'c.loading.o2': { m: "Pasas corriendo por detrás: eres lo bastante rápido.", f: "Pasas corriendo por detrás: eres lo bastante rápida.", x: "Pasas corriendo por detrás: corres lo bastante rápido." }, // nieuw, nalezen
     'c.loading.o3': "Pasas por detrás y saludas al conductor con la mano.", // nieuw, nalezen
     'c.loading.w': "Detrás de un camión hay un sitio que el conductor no puede ver. Esperar cuesta un minuto. Un accidente ahí es muy grave.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto': "Comprueba si lo haces bien", // nieuw, nalezen
+    'c.howto.b': "¿No sabes bien cómo hay que hacer una tarea? Pregunta cómo, o pide a un compañero que mire tu trabajo un momento. Comprobar es normal aquí, también después de una semana o un mes. Adivinar cuesta más tiempo que preguntar: si hay un error, hay que hacerlo otra vez. “Doe ik het zo goed?” es una pregunta que a los compañeros les gusta oír.", // nieuw, nalezen
+    'c.howto.p': "¿Miras un momento si está bien?", // nieuw, nalezen
+    'c.howto.s': { m: "Haces una tarea nueva. No estás seguro de hacerla bien. ¿Qué haces?", f: "Haces una tarea nueva. No estás segura de hacerla bien. ¿Qué haces?", x: "Haces una tarea nueva. No estás seguro/a de hacerla bien. ¿Qué haces?" }, // nieuw, nalezen
+    'c.howto.o1': "Pides a un compañero que la mire.", // nieuw, nalezen
+    'c.howto.o2': "Sigues: a lo mejor está bien.", // nieuw, nalezen
+    'c.howto.o3': "Paras y esperas hasta que venga alguien.", // nieuw, nalezen
+    'c.howto.w': "Una mirada corta de un compañero ahorra mucho trabajo después. Y aprendes la tarea más rápido.", // nieuw, nalezen
+    'c.mayask': "El buen momento para preguntar", // nieuw, nalezen
+    'c.mayask.b': "¿Es sobre seguridad, o algo puede salir mal ahora mismo? Pregunta enseguida, también cuando tu compañero está ocupado. ¿No es urgente? Espera hasta que tu compañero haya terminado, y entonces pregunta: “Heb je even tijd?” ¿Tienes muchas preguntas pequeñas? Apúntalas y hazlas todas juntas. A nadie le molesta una pregunta. Un error cuesta más tiempo.", // nieuw, nalezen
+    'c.mayask.p': "Perdón por molestar. ¿Tienes un momento?", // nieuw, nalezen
+    'c.mayask.s': "Tu compañero está hablando por teléfono. Tienes una pregunta que no es urgente. ¿Qué haces?", // nieuw, nalezen
+    'c.mayask.o1': "Esperas hasta que termine la llamada y luego preguntas.", // nieuw, nalezen
+    'c.mayask.o2': "Preguntas ahora: una pregunta siempre está bien.", // nieuw, nalezen
+    'c.mayask.o3': "No preguntas: tu compañero está ocupado.", // nieuw, nalezen
+    'c.mayask.w': "Esperar un momento muestra respeto, y recibes tu respuesta igual. Solo el peligro no puede esperar.", // nieuw, nalezen
+    'c.whereis': "¿Te has perdido? Pregunta", // nieuw, nalezen
+    'c.whereis.b': "Un lugar de trabajo nuevo es grande, y muchas puertas se parecen. Nadie espera que lo encuentres todo después de un día. ¿No encuentras una sala, una herramienta o a una persona? Pregunta al primer compañero que veas. Muchos compañeros te acompañan o te señalan el camino. ¿Sabes dónde están las salidas? Pregúntalo el primer día: es por tu seguridad.", // nieuw, nalezen
+    'c.whereis.p': "Me he perdido. ¿Dónde está el comedor?", // nieuw, nalezen
+    'c.whereis.s': "Es tu segundo día. No encuentras el vestuario, y tu turno empieza en cinco minutos. ¿Qué haces?", // nieuw, nalezen
+    'c.whereis.o1': "Preguntas al primer compañero que ves.", // nieuw, nalezen
+    'c.whereis.o2': "Sigues buscando: volver a preguntar da vergüenza.", // nieuw, nalezen
+    'c.whereis.o3': "Empiezas a trabajar con tu propia ropa.", // nieuw, nalezen
+    'c.whereis.w': "Preguntar cuesta diez segundos. Si buscas por tu cuenta, puedes llegar tarde. Los compañeros saben que en un sitio nuevo es difícil encontrar el camino.", // nieuw, nalezen
   },
 };
 

@@ -728,6 +728,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "دریور منتظر بارنامه است.", // nieuw, nalezen
     'c.loading.q': "این پالت آماده است؟", // nieuw, nalezen
     'c.loading.a': "نی، هنوز باید دور آن پلاستیک پیچانده شود.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "این را چطور انجام بدهم؟", // nieuw, nalezen
+    'w.hoe': "چطور", // nieuw, nalezen
+    'w.zo': "همین‌طور، این رقم", // nieuw, nalezen
+    'w.moeilijk': "مشکل", // nieuw, nalezen
+    'w.makkelijk': "آسان", // nieuw, nalezen
+    'w.weten': "دانستن", // nieuw, nalezen
+    'w.klopt': "درست است", // nieuw, nalezen
+    's.howto.1': "این را چطور باید انجام بدهم؟", // nieuw, nalezen
+    's.howto.2': "این برای من مشکل است.", // nieuw, nalezen
+    's.howto.3': "این‌طور درست انجام می‌دهم؟", // nieuw, nalezen
+    'c.howto.q': "می‌دانی این چطور انجام می‌شود؟", // nieuw, nalezen
+    'c.howto.a': "نی، این را هنوز نمی‌دانم.", // nieuw, nalezen
+    'l.mayask': "می‌توانم یک چیز بپرسم؟", // nieuw, nalezen
+    'w.vragen': "پرسیدن", // nieuw, nalezen
+    'w.wie': "کی", // nieuw, nalezen
+    'w.even': "یک لحظه", // nieuw, nalezen
+    'w.tijd': "وقت", // nieuw, nalezen
+    'w.storen': "مزاحم شدن (مزاحم کسی که مصروف است)", // nieuw, nalezen
+    'w.twijfelen': "شک داشتن (مطمئن نیستید)", // nieuw, nalezen
+    's.mayask.1': "می‌توانم یک چیز بپرسم؟", // nieuw, nalezen
+    's.mayask.2': "ببخشید که مزاحم می‌شوم.", // nieuw, nalezen
+    's.mayask.3': "کی می‌تواند به من کمک کند؟", // nieuw, nalezen
+    'c.mayask.q': "سوال داری؟", // nieuw, nalezen
+    'c.mayask.a': "بلی. یک لحظه وقت داری؟", // nieuw, nalezen
+    'l.whereis': "کجاست؟", // nieuw, nalezen
+    'w.hier': "اینجا", // nieuw, nalezen
+    'w.daar': "آنجا", // nieuw, nalezen
+    'w.kwijt': "گم (پیدا کرده نمی‌توانید)", // nieuw, nalezen
+    'w.uitgang': "دروازهٔ خروج", // nieuw, nalezen
+    'w.aanwijzen': "نشان دادن (نشان بدهید که کجاست)", // nieuw, nalezen
+    'w.naast': "پهلوی", // nieuw, nalezen
+    's.whereis.1': "راه را گم کرده‌ام.", // nieuw, nalezen
+    's.whereis.2': "دروازهٔ خروج کجاست؟", // nieuw, nalezen
+    's.whereis.3': "تشناب آنجاست، پهلوی طعام‌خانه.", // nieuw, nalezen
+    'c.whereis.q': "پیدا کرده می‌توانی؟", // nieuw, nalezen
+    'c.whereis.a': "نی. نشان داده می‌توانی؟", // nieuw, nalezen
   },
 };
 

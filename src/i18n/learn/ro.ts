@@ -161,6 +161,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "Întrebat dacă paletul e gata: răspunsul spune „nu” și ce mai trebuie.", // nieuw, nalezen
     'c.vancheck.a.why': "Întrebat dacă duba e în regulă: răspunsul spune „nu” și ce e stricat.", // nieuw, nalezen
     'c.delay.a.why': "Întrebat unde ești: răspunsul spune locul și cu cât întârzii.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "Întrebarea e dacă știi cum: nu, încă nu, spus sincer.", // nieuw, nalezen
+    'c.mayask.a.why': "Întrebarea e dacă ai o întrebare: da, și întâi dacă e timp.", // nieuw, nalezen
+    'c.whereis.a.why': "Întrebarea e dacă găsești: nu, și o rugăminte să ți se arate.", // nieuw, nalezen
   },
 };
 

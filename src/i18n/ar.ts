@@ -728,6 +728,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "السائق ينتظر ورقة الشحن.", // nieuw, nalezen
     'c.loading.q': "هل هذه المنصة جاهزة؟", // nieuw, nalezen
     'c.loading.a': "لا، ما زالت تحتاج غلاف البلاستيك حولها.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "كيف أفعل هذا؟", // nieuw, nalezen
+    'w.hoe': "كيف", // nieuw, nalezen
+    'w.zo': "هكذا، بهذه الطريقة", // nieuw, nalezen
+    'w.moeilijk': "صعب", // nieuw, nalezen
+    'w.makkelijk': "سهل", // nieuw, nalezen
+    'w.weten': "يعرف", // nieuw, nalezen
+    'w.klopt': "هذا صحيح", // nieuw, nalezen
+    's.howto.1': "كيف أفعل هذا؟", // nieuw, nalezen
+    's.howto.2': "هذا صعب عليّ.", // nieuw, nalezen
+    's.howto.3': "هل أفعله هكذا بشكل صحيح؟", // nieuw, nalezen
+    'c.howto.q': { m: "هل تعرف كيف تفعل هذا؟", f: "هل تعرفين كيف تفعلين هذا؟" }, // nieuw, nalezen
+    'c.howto.a': "لا، لا أعرف ذلك بعد.", // nieuw, nalezen
+    'l.mayask': "هل يمكنني أن أسأل شيئاً؟", // nieuw, nalezen
+    'w.vragen': "يسأل", // nieuw, nalezen
+    'w.wie': "مَن", // nieuw, nalezen
+    'w.even': "لحظة، لوقت قصير", // nieuw, nalezen
+    'w.tijd': "الوقت", // nieuw, nalezen
+    'w.storen': "يزعج (شخصاً مشغولاً)", // nieuw, nalezen
+    'w.twijfelen': "يشكّ (ليس متأكداً)", // nieuw, nalezen
+    's.mayask.1': "هل يمكنني أن أسأل شيئاً؟", // nieuw, nalezen
+    's.mayask.2': { m: "آسف على الإزعاج.", f: "آسفة على الإزعاج." }, // nieuw, nalezen
+    's.mayask.3': "من يستطيع أن يساعدني؟", // nieuw, nalezen
+    'c.mayask.q': "هل عندك سؤال؟", // nieuw, nalezen
+    'c.mayask.a': "نعم. هل عندك قليل من الوقت؟", // nieuw, nalezen
+    'l.whereis': "أين هو؟", // nieuw, nalezen
+    'w.hier': "هنا", // nieuw, nalezen
+    'w.daar': "هناك", // nieuw, nalezen
+    'w.kwijt': "ضائع (لا يمكن إيجاده)", // nieuw, nalezen
+    'w.uitgang': "المخرج", // nieuw, nalezen
+    'w.aanwijzen': "يشير إلى (يُري أين هو)", // nieuw, nalezen
+    'w.naast': "بجانب", // nieuw, nalezen
+    's.whereis.1': "أضعت الطريق.", // nieuw, nalezen
+    's.whereis.2': "أين المخرج؟", // nieuw, nalezen
+    's.whereis.3': "المرحاض هناك، بجانب المقصف.", // nieuw, nalezen
+    'c.whereis.q': { m: "هل تستطيع أن تجده؟", f: "هل تستطيعين أن تجديه؟" }, // nieuw, nalezen
+    'c.whereis.a': "لا. هل يمكنك أن تشير إليه؟", // nieuw, nalezen
   },
 };
 

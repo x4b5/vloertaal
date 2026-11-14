@@ -125,6 +125,79 @@ export const units: Unit[] = [
           },
         ],
       },
+      // "How do I do this?", "May I ask something?" and "Where is it?" (l.howto, l.mayask, l.whereis,
+      // 14 November 2026, the owner's request: the basis units grow to four lessons, one unit at a
+      // time). Already words of earlier lessons, used here in a sentence or the chat only: "helpen"
+      // and "de wc" (l.understand), "de kantine" and "vinden" (l.arrive).
+      {
+        id: 'l.howto',
+        title: 'How do I do this?',
+        words: [
+          { id: 'w.hoe', nl: 'hoe', en: 'how', emoji: '❓', picture: false },
+          { id: 'w.zo', nl: 'zo', en: 'like this, this way', emoji: '👆', picture: false },
+          { id: 'w.moeilijk', nl: 'moeilijk', en: 'difficult', emoji: '😓', picture: 'hook' },
+          { id: 'w.makkelijk', nl: 'makkelijk', en: 'easy', emoji: '😌', picture: 'hook' },
+          { id: 'w.weten', nl: 'weten', en: 'to know', emoji: '💡', picture: false },
+          { id: 'w.klopt', nl: 'dat klopt', en: 'that is right', emoji: '✅', picture: false },
+        ],
+        sentences: [
+          { id: 's.howto.1', nl: 'Hoe moet dit?', en: 'How do I do this?' },
+          { id: 's.howto.2', nl: 'Dit is moeilijk voor mij.', en: 'This is difficult for me.' },
+          { id: 's.howto.3', nl: 'Doe ik het zo goed?', en: 'Am I doing it right like this?' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.howto.q', nl: 'Weet je hoe dit moet?', en: 'Do you know how to do this?' },
+            reply: { id: 'c.howto.a', nl: 'Nee, dat weet ik nog niet.', en: 'No, I do not know that yet.' },
+          },
+        ],
+      },
+      {
+        id: 'l.mayask',
+        title: 'May I ask something?',
+        words: [
+          { id: 'w.vragen', nl: 'vragen', en: 'to ask', emoji: '🙋' },
+          { id: 'w.wie', nl: 'wie', en: 'who', emoji: '🧑' },
+          { id: 'w.even', nl: 'even', en: 'for a moment', emoji: '⏱️', picture: false },
+          { id: 'w.tijd', nl: 'de tijd', en: 'the time', emoji: '🕐' },
+          { id: 'w.storen', nl: 'storen', en: 'to disturb (someone who is busy)', emoji: '✋' },
+          { id: 'w.twijfelen', nl: 'twijfelen', en: 'to doubt (you are not sure)', emoji: '🤔', picture: false },
+        ],
+        sentences: [
+          { id: 's.mayask.1', nl: 'Mag ik iets vragen?', en: 'May I ask something?' },
+          { id: 's.mayask.2', nl: 'Sorry dat ik stoor.', en: 'Sorry to disturb you.' },
+          { id: 's.mayask.3', nl: 'Wie kan mij helpen?', en: 'Who can help me?' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.mayask.q', nl: 'Heb je een vraag?', en: 'Do you have a question?' },
+            reply: { id: 'c.mayask.a', nl: 'Ja. Heb je even tijd?', en: 'Yes. Do you have a moment?' },
+          },
+        ],
+      },
+      {
+        id: 'l.whereis',
+        title: 'Where is it?',
+        words: [
+          { id: 'w.hier', nl: 'hier', en: 'here', emoji: '📌' },
+          { id: 'w.daar', nl: 'daar', en: 'there', emoji: '👉' },
+          { id: 'w.kwijt', nl: 'kwijt', en: 'lost (you cannot find it)', emoji: '🔍' },
+          { id: 'w.uitgang', nl: 'de uitgang', en: 'the exit', emoji: '🚪' },
+          { id: 'w.aanwijzen', nl: 'aanwijzen', en: 'to point at (show where it is)', emoji: '☝️' },
+          { id: 'w.naast', nl: 'naast', en: 'next to', emoji: '↔️' },
+        ],
+        sentences: [
+          { id: 's.whereis.1', nl: 'Ik ben de weg kwijt.', en: 'I have lost my way.' },
+          { id: 's.whereis.2', nl: 'Waar is de uitgang?', en: 'Where is the exit?' },
+          { id: 's.whereis.3', nl: 'De wc is daar, naast de kantine.', en: 'The toilet is there, next to the canteen.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.whereis.q', nl: 'Kun je het vinden?', en: 'Can you find it?' },
+            reply: { id: 'c.whereis.a', nl: 'Nee. Kun je het aanwijzen?', en: 'No. Can you point at it?' },
+          },
+        ],
+      },
     ],
   },
   // Smart tools (translation apps, captions, keep learning): unit 03, right after "Asking for help".

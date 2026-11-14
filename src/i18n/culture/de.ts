@@ -398,6 +398,31 @@ const t: CultureTranslation = {
     'c.loading.o2': "Lauf hinter ihm vorbei: Du bist schnell genug.", // nieuw, nalezen
     'c.loading.o3': "Geh hinter ihm vorbei und wink dem Fahrer.", // nieuw, nalezen
     'c.loading.w': "Hinter einem Lkw ist ein Bereich, den der Fahrer nicht sehen kann. Warten kostet eine Minute. Ein Unfall dort ist sehr schlimm.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto': "Prüfe, ob du es richtig machst", // nieuw, nalezen
+    'c.howto.b': "Bist du nicht sicher, wie eine Aufgabe geht? Frag, wie es geht, oder bitte einen Kollegen, kurz auf deine Arbeit zu schauen. Nachprüfen ist hier normal, auch nach einer Woche oder einem Monat. Raten kostet mehr Zeit als fragen: Was falsch ist, muss man noch einmal machen. „Doe ik het zo goed?“ ist eine Frage, die Kollegen gern hören.", // nieuw, nalezen
+    'c.howto.p': "Schaust du kurz, ob es richtig ist?", // nieuw, nalezen
+    'c.howto.s': "Du machst eine neue Aufgabe. Du bist nicht sicher, ob du sie richtig machst. Was machst du?", // nieuw, nalezen
+    'c.howto.o1': "Bitte einen Kollegen, darauf zu schauen.", // nieuw, nalezen
+    'c.howto.o2': "Mach weiter: Vielleicht ist es richtig.", // nieuw, nalezen
+    'c.howto.o3': "Hör auf und warte, bis jemand kommt.", // nieuw, nalezen
+    'c.howto.w': "Ein kurzer Blick von einem Kollegen spart später viel Arbeit. Und du lernst die Aufgabe schneller.", // nieuw, nalezen
+    'c.mayask': "Der richtige Moment zum Fragen", // nieuw, nalezen
+    'c.mayask.b': "Geht es um Sicherheit, oder kann gerade jetzt etwas schiefgehen? Frag sofort, auch wenn dein Kollege beschäftigt ist. Ist es nicht dringend? Warte, bis dein Kollege fertig ist, und frag dann: „Heb je even tijd?“ Hast du viele kleine Fragen? Schreib sie auf und stell sie zusammen. Niemand findet eine Frage lästig. Ein Fehler kostet mehr Zeit.", // nieuw, nalezen
+    'c.mayask.p': "Entschuldigung, dass ich störe. Hast du kurz Zeit?", // nieuw, nalezen
+    'c.mayask.s': "Dein Kollege telefoniert. Du hast eine Frage, die nicht dringend ist. Was machst du?", // nieuw, nalezen
+    'c.mayask.o1': "Warte, bis das Gespräch vorbei ist, und frag dann.", // nieuw, nalezen
+    'c.mayask.o2': "Frag jetzt: Eine Frage ist immer gut.", // nieuw, nalezen
+    'c.mayask.o3': "Frag nicht: Dein Kollege ist beschäftigt.", // nieuw, nalezen
+    'c.mayask.w': "Kurz warten zeigt Respekt, und du bekommst deine Antwort trotzdem. Nur Gefahr kann nicht warten.", // nieuw, nalezen
+    'c.whereis': "Verlaufen? Frag einfach", // nieuw, nalezen
+    'c.whereis.b': "Ein neuer Arbeitsplatz ist groß, und viele Türen sehen gleich aus. Niemand erwartet, dass du nach einem Tag alles findest. Findest du einen Raum, ein Werkzeug oder eine Person nicht? Frag den ersten Kollegen, den du siehst. Viele Kollegen gehen mit dir mit oder zeigen dir den Weg. Weißt du, wo die Ausgänge sind? Frag an deinem ersten Tag: Das ist für deine Sicherheit.", // nieuw, nalezen
+    'c.whereis.p': "Ich habe mich verlaufen. Wo ist die Kantine?", // nieuw, nalezen
+    'c.whereis.s': "Es ist dein zweiter Tag. Du findest den Umkleideraum nicht, und deine Schicht fängt in fünf Minuten an. Was machst du?", // nieuw, nalezen
+    'c.whereis.o1': "Frag den ersten Kollegen, den du siehst.", // nieuw, nalezen
+    'c.whereis.o2': "Such weiter: Noch einmal fragen ist peinlich.", // nieuw, nalezen
+    'c.whereis.o3': "Fang in deiner eigenen Kleidung an zu arbeiten.", // nieuw, nalezen
+    'c.whereis.w': "Fragen dauert zehn Sekunden. Wenn du allein suchst, kommst du vielleicht zu spät. Kollegen wissen, dass man sich an einem neuen Ort schwer zurechtfindet.", // nieuw, nalezen
   },
 };
 

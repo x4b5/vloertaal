@@ -160,6 +160,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "Paletin hazır olup olmadığı soruluyor: bu cevap “hayır” diyor ve daha ne gerektiğini söylüyor.", // nieuw, nalezen
     'c.vancheck.a.why': "Kamyonetin iyi olup olmadığı soruluyor: bu cevap “hayır” diyor ve neyin kırık olduğunu söylüyor.", // nieuw, nalezen
     'c.delay.a.why': "Nerede olduğun soruluyor: bu cevap yeri ve ne kadar geç kalacağını söylüyor.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "Nasıl yapıldığının bilinip bilinmediği soruluyor: bu cevap dürüstçe \"hayır, henüz değil\" diyor.", // nieuw, nalezen
+    'c.mayask.a.why': "Bir soru olup olmadığı soruluyor: bu cevap \"evet\" diyor ve önce vakit olup olmadığını soruyor.", // nieuw, nalezen
+    'c.whereis.a.why': "Bulunup bulunamadığı soruluyor: bu cevap \"hayır\" diyor ve gösterilmesini istiyor.", // nieuw, nalezen
   },
 };
 
