@@ -383,6 +383,23 @@ const t: CultureTranslation = {
     'c.meeting.o2': "Nu spui nimic, ca să nu pierzi timpul.", // nieuw, nalezen
     'c.meeting.o3': "Întrebi imediat, cât timp ea încă vorbește.", // nieuw, nalezen
     'c.meeting.w': "O întrebare e o contribuție bună: poate nici alții n-au înțeles. Când îți aștepți rândul, toată lumea o poate auzi.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking': "Lipsește un articol? Spune", // nieuw, nalezen
+    'c.picking.b': "Locul e gol sau articolul nu e acolo? Nu lua alt articol care arată la fel: atunci clientul primește lucrul greșit. Spune-i șefului de echipă sau raportează în scaner. Verifică numărul de pe autocolant, nu doar culoarea sau poza. E mai important să lucrezi exact decât să lucrezi repede.", // nieuw, nalezen
+    'c.picking.p': "Articolul ăsta lipsește. Ce trebuie să fac?", // nieuw, nalezen
+    'c.picking.s': "Locul e gol. În locul de alături e un articol care arată aproape la fel. Ce faci?", // nieuw, nalezen
+    'c.picking.o1': "Raportezi că articolul lipsește.", // nieuw, nalezen
+    'c.picking.o2': "Iei celălalt articol: arată la fel.", // nieuw, nalezen
+    'c.picking.o3': "Sari peste articol și nu spui nimic.", // nieuw, nalezen
+    'c.picking.w': "Un articol greșit vine înapoi, iar asta costă mai mult timp decât o întrebare. Când raportezi, cineva poate umple locul sau poate schimba comanda.", // nieuw, nalezen
+    'c.loading': "Niciodată în spatele unui camion care dă cu spatele", // nieuw, nalezen
+    'c.loading.b': "Șoferul nu poate vedea tot ce e în spatele camionului. Nu merge niciodată în spatele unui camion care dă cu spatele și nu sta între camion și ușă. Așteaptă până când camionul stă pe loc și șoferul te-a văzut. Lipsește un palet sau e deteriorat când descarci? Spune înainte să plece șoferul.", // nieuw, nalezen
+    'c.loading.p': "Așteaptă puțin. Camionul dă cu spatele.", // nieuw, nalezen
+    'c.loading.s': "Un camion dă cu spatele spre ușă. Vrei să treci repede prin spatele lui. Ce faci?", // nieuw, nalezen
+    'c.loading.o1': "Aștepți până când camionul stă pe loc.", // nieuw, nalezen
+    'c.loading.o2': { m: "Alergi prin spatele lui: ești destul de rapid.", f: "Alergi prin spatele lui: ești destul de rapidă.", x: "Alergi prin spatele lui: te miști destul de repede." }, // nieuw, nalezen
+    'c.loading.o3': "Mergi prin spatele lui și îi faci semn cu mâna șoferului.", // nieuw, nalezen
+    'c.loading.w': "În spatele unui camion e un loc pe care șoferul nu îl poate vedea. Așteptarea costă un minut. Un accident acolo e foarte grav.", // nieuw, nalezen
   },
 };
 

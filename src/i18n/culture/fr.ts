@@ -380,6 +380,23 @@ const t: CultureTranslation = {
     'c.meeting.o2': 'Ne dis rien, pour ne pas perdre de temps.', // nieuw, nalezen
     'c.meeting.o3': 'Demande tout de suite, pendant qu’elle parle encore.', // nieuw, nalezen
     'c.meeting.w': 'Une question est une bonne contribution : d’autres n’ont peut-être pas compris non plus. Quand tu attends ton tour, tout le monde peut l’entendre.', // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking': "Un article manque ? Dis-le", // nieuw, nalezen
+    'c.picking.b': "La case est vide, ou l’article n’est pas là ? Ne prends pas un autre article qui ressemble : sinon le client reçoit la mauvaise chose. Dis-le à ton chef d’équipe, ou signale-le dans le scanner. Vérifie le numéro sur l’autocollant, pas seulement la couleur ou l’image. Travailler avec précision est plus important que travailler vite.", // nieuw, nalezen
+    'c.picking.p': "Cet article manque. Qu’est-ce que je dois faire ?", // nieuw, nalezen
+    'c.picking.s': "La case est vide. Dans la case d’à côté, il y a un article presque pareil. Que fais-tu ?", // nieuw, nalezen
+    'c.picking.o1': "Signale que l’article manque.", // nieuw, nalezen
+    'c.picking.o2': "Prends l’autre article : il est pareil.", // nieuw, nalezen
+    'c.picking.o3': "Saute l’article et ne dis rien.", // nieuw, nalezen
+    'c.picking.w': "Un mauvais article revient, et ça prend plus de temps que de demander. Quand tu le signales, quelqu’un peut remplir la case ou changer la commande.", // nieuw, nalezen
+    'c.loading': "Jamais derrière un camion qui recule", // nieuw, nalezen
+    'c.loading.b': { m: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vu. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte.", f: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vue. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte.", x: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vu / vue. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte." }, // nieuw, nalezen
+    'c.loading.p': "Attends un moment. Le camion recule.", // nieuw, nalezen
+    'c.loading.s': "Un camion recule vers la porte. Tu veux vite traverser derrière lui. Que fais-tu ?", // nieuw, nalezen
+    'c.loading.o1': "Attends que le camion soit à l’arrêt.", // nieuw, nalezen
+    'c.loading.o2': "Cours derrière : tu es assez rapide.", // nieuw, nalezen
+    'c.loading.o3': "Passe derrière et fais signe au chauffeur.", // nieuw, nalezen
+    'c.loading.w': "Derrière un camion, il y a un endroit que le chauffeur ne peut pas voir. Attendre coûte une minute. Un accident à cet endroit est très grave.", // nieuw, nalezen
   },
 };
 

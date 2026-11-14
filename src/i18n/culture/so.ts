@@ -381,6 +381,23 @@ const t: CultureTranslation = {
     'c.meeting.o2': "Waxba ha oran, si aadan waqti u lumin.", // nieuw, nalezen
     'c.meeting.o3': "Isla markiiba weydii, inta ay weli hadlayso.", // nieuw, nalezen
     'c.meeting.w': "Su'aashu waa wax-ku-biirin wanaagsan: malaha kuwa kale iyaguna ma ay fahmin. Marka aad sugto kaalintaada, qof walba wuu maqli karaa.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking': "Shay ma maqan yahay? Sheeg", // nieuw, nalezen
+    'c.picking.b': "Boosku ma madhan yahay, mise shaygu halkaas ma yaal? Ha qaadan shay kale oo u eg: markaas macmiilku wuxuu helayaa wax khaldan. U sheeg hoggaamiyaha kooxdaada, ama ku sheeg iskaanarka. Hubi lambarka istiikarka ku qoran, ma aha midabka ama sawirka oo keliya. Inaad si sax ah u shaqeyso ayaa ka muhiimsan inaad dhakhso u shaqeyso.", // nieuw, nalezen
+    'c.picking.p': "Shaygani waa maqan yahay. Maxaan sameeyaa?", // nieuw, nalezen
+    'c.picking.s': "Boosku waa madhan yahay. Booska ku xiga waxaa ku jira shay ku dhowaad la mid ah. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.picking.o1': "Sheeg in shaygu maqan yahay.", // nieuw, nalezen
+    'c.picking.o2': "Qaado shayga kale: waa isku eg yihiin.", // nieuw, nalezen
+    'c.picking.o3': "Shayga ka bood oo waxba ha oran.", // nieuw, nalezen
+    'c.picking.w': "Shay khaldan dib ayuu u soo noqdaa, taasina waxay qaadataa waqti ka badan weydiinta. Marka aad sheegto, qof ayaa booska buuxin kara ama dalabka beddeli kara.", // nieuw, nalezen
+    'c.loading': "Weligaa ha marin gaari xamuul oo dib u socda gadaashiisa", // nieuw, nalezen
+    'c.loading.b': "Darawalku ma arki karo wax walba oo gaariga xamuulka gadaashiisa ah. Weligaa ha marin gadaasha gaari xamuul oo dib u socda, hana istaagin inta u dhaxaysa gaariga iyo albaabka. Sug ilaa gaarigu istaago oo darawalku ku arko. Baaleet ma maqan yahay ama ma jaban yahay marka aad dejinayso? Sheeg ka hor inta uusan darawalku tegin.", // nieuw, nalezen
+    'c.loading.p': "Wax yar sug. Gaariga xamuulku dib ayuu u socdaa.", // nieuw, nalezen
+    'c.loading.s': "Gaari xamuul ayaa dib ugu socda albaabka. Waxaad rabtaa inaad dhakhso gadaashiisa uga gudubto. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.loading.o1': "Sug ilaa gaarigu istaago.", // nieuw, nalezen
+    'c.loading.o2': "Gadaashiisa orod ku mar: dhakhso ayaad tahay.", // nieuw, nalezen
+    'c.loading.o3': "Gadaashiisa mar oo darawalka u gacan haadi.", // nieuw, nalezen
+    'c.loading.w': "Gaariga xamuulka gadaashiisu waa meel uusan darawalku arki karin. Sugiddu waxay qaadataa hal daqiiqo. Shil halkaas ka dhaca aad buu u daran yahay.", // nieuw, nalezen
   },
 };
 export default t;

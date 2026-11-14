@@ -155,6 +155,11 @@ const t: CultureTranslation = {
     'd.getfeedback.a.why': "Feedback angeboten: ein Ja, und dass du es gut machen willst.", // nieuw, nalezen
     'd.givefeedback.a.why': "Gefragt nach der Arbeit: zuerst, was gut ist, dann, was besser sein kann.", // nieuw, nalezen
     'd.meeting.a.why': "Gefragt nach Fragen: Diese Antwort stellt eine, über den Dienstplan.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "Gefragt nach dem Lagerplatz: der Gang und das Fach.", // nieuw, nalezen
+    'c.loading.a.why': "Gefragt, ob die Palette fertig ist: nein, und was noch fehlt.", // nieuw, nalezen
+    'c.vancheck.a.why': "Gefragt, ob der Lieferwagen in Ordnung ist: nein, und was kaputt ist.", // nieuw, nalezen
+    'c.delay.a.why': "Gefragt, wo du bist: der Ort, und wie viel später du kommst.", // nieuw, nalezen
   },
 };
 

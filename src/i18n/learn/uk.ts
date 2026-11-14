@@ -156,6 +156,11 @@ const t: CultureTranslation = {
     'd.getfeedback.a.why': "Пропонують зворотний звʼязок: «так» і що ти хочеш робити все добре.", // nieuw, nalezen
     'd.givefeedback.a.why': "Питають про роботу: спершу що добре, потім що може бути краще.", // nieuw, nalezen
     'd.meeting.a.why': "Питають, чи є запитання: ця відповідь ставить одне, про графік.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "Питають, яка локація: ряд і комірка.", // nieuw, nalezen
+    'c.loading.a.why': "Питають, чи піддон готовий: ні, і що ще треба зробити.", // nieuw, nalezen
+    'c.vancheck.a.why': "Питають, чи з фургоном усе гаразд: ні, і що зламано.", // nieuw, nalezen
+    'c.delay.a.why': "Питають, де ти: місце і на скільки запізнишся.", // nieuw, nalezen
   },
 };
 

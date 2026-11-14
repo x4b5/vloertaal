@@ -706,6 +706,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': "112'yi ara!",
     'p.hurt': 'Yaralandım.',
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "Sipariş toplama", // nieuw, nalezen
+    'w.artikel': "ürün (tek bir parça)", // nieuw, nalezen
+    'w.vak': "göz (raftaki tek bir yer)", // nieuw, nalezen
+    'w.sticker': "etiket, çıkartma", // nieuw, nalezen
+    'w.verzamelen': "toplamak", // nieuw, nalezen
+    'w.ontbreken': "eksik olmak (yerinde yok)", // nieuw, nalezen
+    'w.locatie': "konum (yerin kodu, örneğin A-12)", // nieuw, nalezen
+    's.picking.1': "Bu siparişin ürünlerini topluyorum.", // nieuw, nalezen
+    's.picking.2': "Bu ürün eksik. Göz boş.", // nieuw, nalezen
+    's.picking.3': "Etiket kutunun üstüne yapıştırılmalı.", // nieuw, nalezen
+    'c.picking.q': "Hangi konum?", // nieuw, nalezen
+    'c.picking.a': "Üçüncü koridor, on ikinci göz.", // nieuw, nalezen
+    'l.loading': "Yükleme ve boşaltma", // nieuw, nalezen
+    'w.vrachtwagen': "kamyon", // nieuw, nalezen
+    'w.chauffeur': "şoför", // nieuw, nalezen
+    'w.lossen': "indirmek, boşaltmak (eşyaları kamyondan çıkarmak)", // nieuw, nalezen
+    'w.pompwagen': "transpalet (paleti kaldıran bir el arabası)", // nieuw, nalezen
+    'w.folie': "streç film (paletin etrafındaki ince plastik)", // nieuw, nalezen
+    'w.vrachtbrief': "irsaliye (kamyonda ne olduğunu yazan kâğıt)", // nieuw, nalezen
+    's.loading.1': "Kamyon dört numaralı kapıda.", // nieuw, nalezen
+    's.loading.2': "Önce bu paletleri indiriyoruz.", // nieuw, nalezen
+    's.loading.3': "Şoför irsaliyeyi bekliyor.", // nieuw, nalezen
+    'c.loading.q': "Bu palet hazır mı?", // nieuw, nalezen
+    'c.loading.a': "Hayır, daha etrafına streç film sarılması gerekiyor.", // nieuw, nalezen
   },
 };
 

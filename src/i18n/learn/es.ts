@@ -154,6 +154,11 @@ const t: CultureTranslation = {
     'c.carsafe.a.why': "Te preguntan si pueden empezar: todavía no, porque el coche es eléctrico.", // nieuw, nalezen
     'c.backtowork.a.why': "Te preguntan cómo estás: un sí corto, y que te lo tomas con calma.", // nieuw, nalezen
     'c.feelwell.a.why': "Te preguntan cómo estás: un “no muy bien” sincero está bien.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "Te preguntan qué ubicación: el pasillo y el hueco.", // nieuw, nalezen
+    'c.loading.a.why': "Te preguntan si el palé está listo: no, y qué le falta todavía.", // nieuw, nalezen
+    'c.vancheck.a.why': "Te preguntan si la furgoneta está bien: no, y qué está roto.", // nieuw, nalezen
+    'c.delay.a.why': "Te preguntan dónde estás: el sitio, y cuánto más tarde llegas.", // nieuw, nalezen
   },
 };
 

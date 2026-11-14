@@ -156,6 +156,11 @@ const t: CultureTranslation = {
     'd.getfeedback.a.why': "ርእይቶ ቀሪቡ: «እወ»፡ ብጽቡቕ ክግበር ከም ዝድለ ድማ።", // nieuw, nalezen
     'd.givefeedback.a.why': "ብዛዕባ ስራሕ ተሓቲቱ: ቅድም እቲ ጽቡቕ፡ ድሕሪኡ እቲ ክመሓየሽ ዝኽእል።", // nieuw, nalezen
     'd.meeting.a.why': "ሕቶታት ተሓቲቱ: እዚ መልሲ ብዛዕባ መደብ ስራሕ ሓደ ሕቶ ይሓትት።", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "ኣየናይ ቦታ ምዃኑ ተሓቲቱ: እቲ ኮሪደርን እቲ ክፍልን።", // nieuw, nalezen
+    'c.loading.a.why': "እቲ ፓለት ተዳልዩ ድዩ ተሓቲቱ: ኣይፋል፡ ገና እንታይ ከም ዘድልዮ ድማ።", // nieuw, nalezen
+    'c.vancheck.a.why': "እታ ቫን ደሓን እንተ ኾነት ተሓቲቱ: ኣይፋል፡ እንታይ ከም ዝተሰብረ ድማ።", // nieuw, nalezen
+    'c.delay.a.why': "ኣበይ ምህላው ተሓቲቱ: እቲ ቦታ፡ ክንደይ ምድንጓይ ከም ዘሎ ድማ።", // nieuw, nalezen
   },
 };
 

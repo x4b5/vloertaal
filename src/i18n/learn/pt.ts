@@ -154,6 +154,11 @@ const t: CultureTranslation = {
     'c.weld.a.why': "Perguntam se já se pode pegar: ainda não, o metal quente tem de arrefecer.", // nieuw, nalezen
     'c.carparts.a.why': "Perguntam o que ouves: que peça, e o que ela faz.", // nieuw, nalezen
     'c.carsafe.a.why': "Perguntam se se pode começar: ainda não, porque o carro é elétrico.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "Perguntam qual é a localização: o corredor e o lugar.", // nieuw, nalezen
+    'c.loading.a.why': "Perguntam se a palete está pronta: não, e o que ainda falta.", // nieuw, nalezen
+    'c.vancheck.a.why': "Perguntam se a carrinha está bem: não, e o que está partido.", // nieuw, nalezen
+    'c.delay.a.why': "Perguntam onde estás: o sítio, e quanto mais tarde chegas.", // nieuw, nalezen
   },
 };
 

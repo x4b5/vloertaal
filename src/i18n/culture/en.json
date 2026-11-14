@@ -284,6 +284,22 @@
     "s.reachable.2": "Can you also send it as a message?",
     "s.reachable.3": "I have a new number.",
     "d.reachable.q": "Good morning, this is the planning office.",
-    "d.reachable.a": "Good morning. You called me? Sorry, I missed it."
+    "d.reachable.a": "Good morning. You called me? Sorry, I missed it.",
+    "c.picking": "Missing item? Say it",
+    "c.picking.b": "Is the slot empty, or is the item not there? Do not take another item that looks the same: then the customer gets the wrong thing. Say it to your team leader, or report it in the scanner. Check the number on the sticker, not only the colour or the picture. Working exactly is more important than working fast.",
+    "c.picking.p": "This item is missing. What must I do?",
+    "c.picking.s": "The slot is empty. In the slot next to it is an item that looks almost the same. What do you do?",
+    "c.picking.o1": "Report that the item is missing.",
+    "c.picking.o2": "Take the other item: it looks the same.",
+    "c.picking.o3": "Skip the item and say nothing.",
+    "c.picking.w": "A wrong item comes back, and that costs more time than asking. When you report it, someone can fill the slot or change the order.",
+    "c.loading": "Never behind a reversing truck",
+    "c.loading.b": "The driver cannot see everything behind the truck. Never walk behind a truck that drives backwards, and do not stand between the truck and the door. Wait until the truck stands still and the driver has seen you. Is a pallet missing or broken when you unload? Say it before the driver leaves.",
+    "c.loading.p": "Wait a moment. The truck is driving backwards.",
+    "c.loading.s": "A truck drives backwards to the door. You want to cross behind it quickly. What do you do?",
+    "c.loading.o1": "Wait until the truck stands still.",
+    "c.loading.o2": "Run behind it: you are fast enough.",
+    "c.loading.o3": "Walk behind it and wave at the driver.",
+    "c.loading.w": "Behind a truck is a place the driver cannot see. Waiting costs one minute. An accident there is very serious."
   }
 }

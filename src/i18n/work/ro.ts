@@ -2165,6 +2165,47 @@ const t: CultureTranslation = {
     'c.carsafe.o2': "Împingi cablul la loc cu mâna.", // nieuw, nalezen
     'c.carsafe.o3': "Îl împingi la loc cu o cârpă uscată.", // nieuw, nalezen
     'c.carsafe.w': "Bateria unei mașini electrice are destulă putere ca să omoare, și când mașina e oprită. Doar cineva cu instruire are voie să atingă aceste piese.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.vancheck': "Verificarea dubei", // nieuw, nalezen
+    'w.schade': "dauna", // nieuw, nalezen
+    'w.deuk': "îndoitura", // nieuw, nalezen
+    'w.spiegel': "oglinda", // nieuw, nalezen
+    'w.tanken': "a alimenta (a pune combustibil în dubă)", // nieuw, nalezen
+    'w.opladen': "a încărca (o dubă electrică, un telefon)", // nieuw, nalezen
+    'w.parkeren': "a parca", // nieuw, nalezen
+    's.vancheck.1': "E o îndoitură în ușă.", // nieuw, nalezen
+    's.vancheck.2': "Dauna asta era deja acolo.", // nieuw, nalezen
+    's.vancheck.3': "Mai trebuie întâi să alimentez.", // nieuw, nalezen
+    'c.vancheck.q': "E totul în regulă cu duba?", // nieuw, nalezen
+    'c.vancheck.a': "Nu, oglinda e stricată.", // nieuw, nalezen
+    'c.vancheck': "Uită-te înainte să pleci la drum", // nieuw, nalezen
+    'c.vancheck.b': "Mergi în jurul dubei înainte de prima cursă. Vezi o îndoitură, o zgârietură sau o oglindă stricată? Fă o poză și raportează înainte să pleci. Atunci toată lumea știe că dauna era deja acolo. S-a întâmplat ceva în timpul cursei? Raportează în aceeași zi, și când e ceva mic. Dacă ascunzi o daună, apar probleme mai mari mai târziu. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.vancheck.p': "Duba are o daună. Uite o poză.", // nieuw, nalezen
+    'c.vancheck.s': "Dimineața vezi o îndoitură nouă la dubă. Nu tu ai făcut-o. Ce faci?", // nieuw, nalezen
+    'c.vancheck.o1': "Faci o poză și raportezi înainte să pleci.", // nieuw, nalezen
+    'c.vancheck.o2': "Nu spui nimic: nu e îndoitura ta.", // nieuw, nalezen
+    'c.vancheck.o3': "Aștepți să vezi dacă întreabă cineva.", // nieuw, nalezen
+    'c.vancheck.w': "Când raportezi înainte să pleci, nimeni nu poate crede că tu ai făcut-o. O poză cu ora e clară pentru toată lumea.", // nieuw, nalezen
+    'l.delay': "Întârzieri pe drum", // nieuw, nalezen
+    'w.file': "ambuteiajul", // nieuw, nalezen
+    'w.vertraging': "întârzierea (ajungi mai târziu decât era planificat)", // nieuw, nalezen
+    'w.omleiding': "ruta ocolitoare (alt drum, pentru că drumul e închis)", // nieuw, nalezen
+    'w.navigatie': "navigația (aplicația care arată drumul)", // nieuw, nalezen
+    'w.planner': "planificatorul (persoana care face traseele)", // nieuw, nalezen
+    'w.retour': "returul (un colet care se întoarce)", // nieuw, nalezen
+    's.delay.1': "Stau în ambuteiaj.", // nieuw, nalezen
+    's.delay.2': "Am o întârziere de jumătate de oră.", // nieuw, nalezen
+    's.delay.3': "Coletul ăsta merge retur.", // nieuw, nalezen
+    'c.delay.q': "Unde ești acum?", // nieuw, nalezen
+    'c.delay.a': "La ruta ocolitoare. Ajung cu zece minute mai târziu.", // nieuw, nalezen
+    'c.delay': "Întârzii? Spune din timp", // nieuw, nalezen
+    'c.delay.b': "Un ambuteiaj sau un drum închis nu e vina ta. Dar spune-i planificatorului imediat ce știi că vei întârzia. Atunci planificatorul poate anunța clienții sau poate schimba traseul. Oprește întâi într-un loc sigur: nu suna cu telefonul în mână în timp ce conduci. Și nu conduce mai repede ca să recuperezi timpul. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.delay.p': "Stau în ambuteiaj. Ajung cu jumătate de oră mai târziu.", // nieuw, nalezen
+    'c.delay.s': "Un drum e închis. Ruta ocolitoare te costă treizeci de minute. Ce faci?", // nieuw, nalezen
+    'c.delay.o1': "Îi spui planificatorului imediat ce poți opri în siguranță.", // nieuw, nalezen
+    'c.delay.o2': "Conduci mai repede ca să recuperezi timpul.", // nieuw, nalezen
+    'c.delay.o3': "Nu spui nimic: poate nu observă nimeni.", // nieuw, nalezen
+    'c.delay.w': "Când planificatorul află din timp, clienții sunt anunțați și nimeni nu așteaptă degeaba. Să conduci mai repede e periculos și nu câștigi aproape deloc timp.", // nieuw, nalezen
   },
 };
 

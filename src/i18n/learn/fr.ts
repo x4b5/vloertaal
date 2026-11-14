@@ -154,6 +154,11 @@ const t: CultureTranslation = {
     'c.carsafe.a.why': "On demande de commencer le travail : pas encore, car la voiture est électrique.", // nieuw, nalezen
     'c.backtowork.a.why': "On demande comment tu vas : un oui court, et que tu y vas doucement.", // nieuw, nalezen
     'c.feelwell.a.why': "On demande comment tu vas : un “pas très bien” honnête, c’est bien.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "On demande quel emplacement : l’allée et la case.", // nieuw, nalezen
+    'c.loading.a.why': "On demande si la palette est prête : non, et ce qu’il faut encore.", // nieuw, nalezen
+    'c.vancheck.a.why': "On demande si la camionnette va bien : non, et ce qui est cassé.", // nieuw, nalezen
+    'c.delay.a.why': "On demande où tu es : l’endroit, et combien de retard tu auras.", // nieuw, nalezen
   },
 };
 

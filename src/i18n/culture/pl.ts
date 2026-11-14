@@ -383,6 +383,23 @@ const t: CultureTranslation = {
     'c.meeting.o2': "Nic nie mówisz, żeby nie tracić czasu.", // nieuw, nalezen
     'c.meeting.o3': "Pytasz od razu, kiedy ona jeszcze mówi.", // nieuw, nalezen
     'c.meeting.w': "Pytanie to dobry wkład: może inni też tego nie zrozumieli. Kiedy czekasz na swoją kolej, wszyscy mogą je usłyszeć.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking': "Brakuje artykułu? Powiedz o tym", // nieuw, nalezen
+    'c.picking.b': "Przegródka jest pusta albo artykułu w niej nie ma? Nie bierz innego artykułu, który wygląda tak samo: wtedy klient dostanie nie to, co trzeba. Powiedz o tym kierownikowi zespołu albo zgłoś to w skanerze. Sprawdzaj numer na naklejce, a nie tylko kolor albo obrazek. Dokładna praca jest ważniejsza niż szybka praca.", // nieuw, nalezen
+    'c.picking.p': "Tego artykułu brakuje. Co mam zrobić?", // nieuw, nalezen
+    'c.picking.s': "Przegródka jest pusta. W przegródce obok leży artykuł, który wygląda prawie tak samo. Co robisz?", // nieuw, nalezen
+    'c.picking.o1': "Zgłaszasz, że artykułu brakuje.", // nieuw, nalezen
+    'c.picking.o2': "Bierzesz ten drugi artykuł: wygląda tak samo.", // nieuw, nalezen
+    'c.picking.o3': "Pomijasz artykuł i nic nie mówisz.", // nieuw, nalezen
+    'c.picking.w': "Zły artykuł wraca, a to kosztuje więcej czasu niż pytanie. Kiedy to zgłaszasz, ktoś może uzupełnić przegródkę albo zmienić zamówienie.", // nieuw, nalezen
+    'c.loading': "Nigdy za cofającą ciężarówką", // nieuw, nalezen
+    'c.loading.b': "Kierowca nie widzi wszystkiego za ciężarówką. Nigdy nie przechodź za ciężarówką, która cofa, i nie stawaj między ciężarówką a drzwiami. Poczekaj, aż ciężarówka się zatrzyma i kierowca cię zobaczy. Przy rozładunku brakuje palety albo jest uszkodzona? Powiedz o tym, zanim kierowca odjedzie.", // nieuw, nalezen
+    'c.loading.p': "Poczekaj chwilę. Ciężarówka cofa.", // nieuw, nalezen
+    'c.loading.s': "Ciężarówka cofa do drzwi. Chcesz szybko przejść za nią. Co robisz?", // nieuw, nalezen
+    'c.loading.o1': "Czekasz, aż ciężarówka się zatrzyma.", // nieuw, nalezen
+    'c.loading.o2': { m: "Przebiegasz za nią: jesteś wystarczająco szybki.", f: "Przebiegasz za nią: jesteś wystarczająco szybka.", x: "Przebiegasz za nią: biegasz wystarczająco szybko." }, // nieuw, nalezen
+    'c.loading.o3': "Przechodzisz za nią i machasz do kierowcy.", // nieuw, nalezen
+    'c.loading.w': "Za ciężarówką jest miejsce, którego kierowca nie widzi. Czekanie kosztuje minutę. Wypadek w tym miejscu jest bardzo poważny.", // nieuw, nalezen
   },
 };
 

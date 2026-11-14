@@ -2164,6 +2164,47 @@ const t: CultureTranslation = {
     'c.carsafe.o2': "Schieb das Kabel mit der Hand zurück.", // nieuw, nalezen
     'c.carsafe.o3': "Schieb es mit einem trockenen Tuch zurück.", // nieuw, nalezen
     'c.carsafe.w': "Die Batterie eines Elektroautos hat genug Strom, um zu töten, auch wenn das Auto aus ist. Nur wer die Ausbildung hat, darf diese Teile anfassen.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.vancheck': "Den Lieferwagen prüfen", // nieuw, nalezen
+    'w.schade': "der Schaden", // nieuw, nalezen
+    'w.deuk': "die Delle", // nieuw, nalezen
+    'w.spiegel': "der Spiegel", // nieuw, nalezen
+    'w.tanken': "tanken (Kraftstoff in den Lieferwagen füllen)", // nieuw, nalezen
+    'w.opladen': "aufladen (einen Elektro-Lieferwagen, ein Handy)", // nieuw, nalezen
+    'w.parkeren': "parken", // nieuw, nalezen
+    's.vancheck.1': "In der Tür ist eine Delle.", // nieuw, nalezen
+    's.vancheck.2': "Dieser Schaden war schon da.", // nieuw, nalezen
+    's.vancheck.3': "Ich muss erst noch tanken.", // nieuw, nalezen
+    'c.vancheck.q': "Ist mit dem Lieferwagen alles in Ordnung?", // nieuw, nalezen
+    'c.vancheck.a': "Nein, der Spiegel ist kaputt.", // nieuw, nalezen
+    'c.vancheck': "Erst schauen, dann fahren", // nieuw, nalezen
+    'c.vancheck.b': "Geh vor deiner ersten Tour einmal um den Lieferwagen herum. Siehst du eine Delle, einen Kratzer oder einen kaputten Spiegel? Mach ein Foto und melde es, bevor du losfährst. Dann wissen alle, dass der Schaden schon da war. Ist auf deiner Tour etwas passiert? Melde es am selben Tag, auch wenn es klein ist. Einen Schaden zu verstecken, macht später größere Probleme. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.vancheck.p': "Am Lieferwagen ist ein Schaden. Hier ist ein Foto.", // nieuw, nalezen
+    'c.vancheck.s': "Am Morgen siehst du eine neue Delle im Lieferwagen. Du hast sie nicht gemacht. Was machst du?", // nieuw, nalezen
+    'c.vancheck.o1': "Du machst ein Foto und meldest es, bevor du fährst.", // nieuw, nalezen
+    'c.vancheck.o2': "Du sagst nichts: Es ist nicht deine Delle.", // nieuw, nalezen
+    'c.vancheck.o3': "Du wartest ab, ob jemand danach fragt.", // nieuw, nalezen
+    'c.vancheck.w': "Wenn du es meldest, bevor du fährst, kann niemand denken, dass du es warst. Ein Foto mit der Uhrzeit ist für alle klar.", // nieuw, nalezen
+    'l.delay': "Verspätungen unterwegs", // nieuw, nalezen
+    'w.file': "der Stau", // nieuw, nalezen
+    'w.vertraging': "die Verspätung (du bist später als geplant)", // nieuw, nalezen
+    'w.omleiding': "die Umleitung (ein anderer Weg, weil die Straße gesperrt ist)", // nieuw, nalezen
+    'w.navigatie': "das Navi (die App, die den Weg zeigt)", // nieuw, nalezen
+    'w.planner': "der Planer / die Planerin (die Person, die die Routen macht)", // nieuw, nalezen
+    'w.retour': "die Retoure (ein Paket, das zurückgeht)", // nieuw, nalezen
+    's.delay.1': "Ich stehe im Stau.", // nieuw, nalezen
+    's.delay.2': "Ich habe eine halbe Stunde Verspätung.", // nieuw, nalezen
+    's.delay.3': "Dieses Paket geht als Retoure zurück.", // nieuw, nalezen
+    'c.delay.q': "Wo bist du jetzt?", // nieuw, nalezen
+    'c.delay.a': "Bei der Umleitung. Ich komme zehn Minuten später.", // nieuw, nalezen
+    'c.delay': "Zu spät? Sag rechtzeitig Bescheid", // nieuw, nalezen
+    'c.delay.b': "Ein Stau oder eine gesperrte Straße ist nicht deine Schuld. Aber sag dem Planer Bescheid, sobald du weißt, dass du später kommst. Dann kann der Planer den Kunden Bescheid sagen oder die Route ändern. Halte zuerst an einem sicheren Ort an: Telefoniere nicht mit dem Handy in der Hand, während du fährst. Und fahr nicht schneller, um die Zeit wieder aufzuholen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.delay.p': "Ich stehe im Stau. Ich komme eine halbe Stunde später.", // nieuw, nalezen
+    'c.delay.s': "Eine Straße ist gesperrt. Die Umleitung kostet dich dreißig Minuten. Was machst du?", // nieuw, nalezen
+    'c.delay.o1': "Du sagst dem Planer Bescheid, sobald du sicher anhalten kannst.", // nieuw, nalezen
+    'c.delay.o2': "Du fährst schneller, um die Zeit aufzuholen.", // nieuw, nalezen
+    'c.delay.o3': "Du sagst nichts: Vielleicht merkt es niemand.", // nieuw, nalezen
+    'c.delay.w': "Wenn der Planer es früh weiß, erfahren es die Kunden, und niemand wartet umsonst. Schneller fahren ist gefährlich, und es bringt fast keine Zeit.", // nieuw, nalezen
   },
 };
 

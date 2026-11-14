@@ -381,6 +381,23 @@ const t: CultureTranslation = {
     'c.meeting.o2': "Zaman kaybetmemek için hiçbir şey söylemezsin.", // nieuw, nalezen
     'c.meeting.o3': "O hâlâ konuşurken hemen sorarsın.", // nieuw, nalezen
     'c.meeting.w': "Bir soru iyi bir katkıdır: belki başkaları da anlamamıştır. Sıranı beklersen herkes onu duyabilir.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking': "Ürün eksik mi? Söyle", // nieuw, nalezen
+    'c.picking.b': "Göz boş mu, ya da ürün yerinde yok mu? Aynı görünen başka bir ürünü alma: o zaman müşteri yanlış şeyi alır. Bunu ekip liderine söyle ya da barkod okuyucuda bildir. Etiketteki numarayı kontrol et, sadece rengi ya da resmi değil. Doğru çalışmak, hızlı çalışmaktan daha önemlidir.", // nieuw, nalezen
+    'c.picking.p': "Bu ürün eksik. Ne yapmalıyım?", // nieuw, nalezen
+    'c.picking.s': "Göz boş. Yanındaki gözde neredeyse aynı görünen bir ürün var. Ne yaparsın?", // nieuw, nalezen
+    'c.picking.o1': "Ürünün eksik olduğunu bildirirsin.", // nieuw, nalezen
+    'c.picking.o2': "Diğer ürünü alırsın: aynı görünüyor.", // nieuw, nalezen
+    'c.picking.o3': "Ürünü atlar ve hiçbir şey söylemezsin.", // nieuw, nalezen
+    'c.picking.w': "Yanlış ürün geri gelir ve bu, sormaktan daha çok zaman alır. Bildirdiğinde biri gözü doldurabilir ya da siparişi değiştirebilir.", // nieuw, nalezen
+    'c.loading': "Geri giden kamyonun arkasına asla geçme", // nieuw, nalezen
+    'c.loading.b': "Şoför kamyonun arkasındaki her şeyi göremez. Geri giden bir kamyonun arkasından asla yürüme ve kamyonla kapının arasında durma. Kamyon durana ve şoför seni görene kadar bekle. İndirirken bir palet eksik ya da hasarlı mı? Şoför gitmeden önce söyle.", // nieuw, nalezen
+    'c.loading.p': "Biraz bekle. Kamyon geri gidiyor.", // nieuw, nalezen
+    'c.loading.s': "Bir kamyon kapıya doğru geri geri geliyor. Arkasından hızlıca karşıya geçmek istiyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.loading.o1': "Kamyon durana kadar beklersin.", // nieuw, nalezen
+    'c.loading.o2': "Arkasından koşarsın: yeterince hızlısın.", // nieuw, nalezen
+    'c.loading.o3': "Arkasından yürür ve şoföre el sallarsın.", // nieuw, nalezen
+    'c.loading.w': "Kamyonun arkası, şoförün göremediği bir yerdir. Beklemek bir dakikanı alır. Orada bir kaza çok ciddidir.", // nieuw, nalezen
   },
 };
 

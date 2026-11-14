@@ -155,6 +155,11 @@ const t: CultureTranslation = {
     'd.getfeedback.a.why': "Geri bildirim teklif ediliyor: bir evet, bir de işi iyi yapmak istediğin.", // nieuw, nalezen
     'd.givefeedback.a.why': "İş hakkında soruluyor: önce iyi olan, sonra daha iyi olabilecek şey.", // nieuw, nalezen
     'd.meeting.a.why': "Soru olup olmadığı soruluyor: bu cevap çalışma planı hakkında bir soru soruyor.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "Hangi konum olduğu soruluyor: bu cevap koridoru ve gözü söylüyor.", // nieuw, nalezen
+    'c.loading.a.why': "Paletin hazır olup olmadığı soruluyor: bu cevap “hayır” diyor ve daha ne gerektiğini söylüyor.", // nieuw, nalezen
+    'c.vancheck.a.why': "Kamyonetin iyi olup olmadığı soruluyor: bu cevap “hayır” diyor ve neyin kırık olduğunu söylüyor.", // nieuw, nalezen
+    'c.delay.a.why': "Nerede olduğun soruluyor: bu cevap yeri ve ne kadar geç kalacağını söylüyor.", // nieuw, nalezen
   },
 };
 

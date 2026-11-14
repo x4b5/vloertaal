@@ -44,6 +44,10 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '💺': 'w.stoel',
   '🟧': 'w.oranje',
   '🤒': 'w.koorts',
+  // The logistics lessons of 14 November 2026: the truck you never walk behind (c.loading), and
+  // the damage you take a photo of before you drive (c.vancheck).
+  '🚛': 'w.vrachtwagen',
+  '📸': 'w.schade',
   // "Coming back step by step" (c.backtowork, 5 November 2026): the supervisor's welcome back.
   '🤗': 'w.welkomterug',
   // "Stay calm, also when it is hard" (c.calm, 5 November 2026): a slow breath out (group39).

@@ -57,6 +57,8 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.warehouse': { kind: 'B', lessons: {
     'l.things': L('A', 'B', 'tip "Direct is not rude": Vlaamse collega’s zijn vaak minder direct'),
     'l.directions': L('A', 'A'),
+    'l.picking': L('A', 'A'),
+    'l.loading': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: in Vlaanderen zegt men vaak "de transpallet" (de pompwagen) en "de camion" (de vrachtwagen wordt begrepen)'),
   } },
   'u.data': { kind: 'B', lessons: {
     'l.counting': L('A', 'A', 'getallen zijn in Vlaanderen dezelfde'),
@@ -262,6 +264,8 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.delivery': { kind: 'A', lessons: {
     'l.parcel': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: in Vlaanderen zegt men vaak "de bestelwagen" (de bestelbus wordt begrepen)'),
     'l.road': L('A', 'A', 'de tip zegt "zelfstandig" en "in loondienst" (niet "zzp’er"); telefoon in de hand verboden ook in België (Wegverkeersreglement art. 8.4); alleen de slotregel; nakijken: in Vlaanderen vaak "de steekkar"'),
+    'l.vancheck': L('A', 'A', 'alleen de slotregel; nakijken: in Vlaanderen vaak "de bestelwagen" en "de bluts" (de deuk wordt begrepen)'),
+    'l.delay': L('A', 'A', 'telefoon in de hand verboden ook in België (Wegverkeersreglement art. 8.4); alleen de slotregel; nakijken: in Vlaanderen ook "de wegomlegging" (de omleiding) en "de gps" (de navigatie)'),
   } },
 };
 

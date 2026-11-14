@@ -704,6 +704,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': { m: 'ናብ 112 ደውል!', f: 'ናብ 112 ደውሊ!', x: 'ናብ 112 ደውሉ!' },
     'p.hurt': 'ተጎዲአ ኣለኹ።',
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "ትእዛዛት ምእካብ", // nieuw, nalezen
+    'w.artikel': "ኣቕሓ (ሓደ ፍርያት)", // nieuw, nalezen
+    'w.vak': "ክፍሊ (ኣብ መደርደሪ ሓደ ቦታ)", // nieuw, nalezen
+    'w.sticker': "ስቲከር፡ ኤቲኬት", // nieuw, nalezen
+    'w.verzamelen': "ምእካብ፡ ምልቃም", // nieuw, nalezen
+    'w.ontbreken': "ምጉዳል (ኣብኡ የለን)", // nieuw, nalezen
+    'w.locatie': "ቦታ (ኮድ ናይቲ ቦታ፡ ከም A-12)", // nieuw, nalezen
+    's.picking.1': "ንዚ ትእዛዝ ዝኸውን ኣቕሑ እእክብ ኣለኹ።", // nieuw, nalezen
+    's.picking.2': "እዚ ኣቕሓ ጎዲሉ ኣሎ። እቲ ክፍሊ ጥርሑ እዩ።", // nieuw, nalezen
+    's.picking.3': "እቲ ስቲከር ኣብ ልዕሊ እቲ ሳጹን ክኸውን ኣለዎ።", // nieuw, nalezen
+    'c.picking.q': "ኣየናይ ቦታ እዩ?", // nieuw, nalezen
+    'c.picking.a': "ኮሪደር ሰለስተ፡ ክፍሊ ዓሰርተው ክልተ።", // nieuw, nalezen
+    'l.loading': "ምጽዓንን ምርጋፍን", // nieuw, nalezen
+    'w.vrachtwagen': "ናይ ጽዕነት መኪና", // nieuw, nalezen
+    'w.chauffeur': "ዘዋሪ መኪና", // nieuw, nalezen
+    'w.lossen': "ምርጋፍ (ነገራት ካብ ናይ ጽዕነት መኪና ምውጻእ)", // nieuw, nalezen
+    'w.pompwagen': "ናይ ፓለት ዓረብያ (ፓለት እተልዕል ናይ ኢድ ዓረብያ)", // nieuw, nalezen
+    'w.folie': "ፕላስቲክ መጠቕለሊ (ኣብ ዙርያ ፓለት ዝግበር ረቂቕ ፕላስቲክ)", // nieuw, nalezen
+    'w.vrachtbrief': "ወረቐት ጽዕነት (ኣብታ መኪና እንታይ ከም ዘሎ እትነግር ወረቐት)", // nieuw, nalezen
+    's.loading.1': "እታ ናይ ጽዕነት መኪና ኣብ ማዕጾ ኣርባዕተ ኣላ።", // nieuw, nalezen
+    's.loading.2': "ቅድም ነዞም ፓለታት ነራግፎም።", // nieuw, nalezen
+    's.loading.3': "እቲ ዘዋሪ ነታ ወረቐት ጽዕነት ይጽበ ኣሎ።", // nieuw, nalezen
+    'c.loading.q': "እዚ ፓለት ተዳልዩ ድዩ?", // nieuw, nalezen
+    'c.loading.a': "ኣይፋል፡ ገና ፕላስቲክ መጠቕለሊ ክግበረሉ ኣለዎ።", // nieuw, nalezen
   },
 };
 

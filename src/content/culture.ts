@@ -222,6 +222,38 @@ const baseTips: CultureTip[] = [
     ],
     why: { id: 'c.limits.w', en: 'Asking for help is normal teamwork. An injured back costs much more than a minute of help.' },
   }),
+  // The two warehouse lessons of 14 November 2026 (l.picking, l.loading). No tip states a right or
+  // an amount: both are about how the work is done.
+  tip({
+    id: 'c.picking',
+    lessonId: 'l.picking',
+    emoji: '📋',
+    title: 'Missing item? Say it',
+    body: 'Is the slot empty, or is the item not there? Do not take another item that looks the same: then the customer gets the wrong thing. Say it to your team leader, or report it in the scanner. Check the number on the sticker, not only the colour or the picture. Working exactly is more important than working fast.',
+    phrase: { id: 'c.picking.p', nl: 'Dit artikel ontbreekt. Wat moet ik doen?', en: 'This item is missing. What must I do?' },
+    situation: { id: 'c.picking.s', en: 'The slot is empty. In the slot next to it is an item that looks almost the same. What do you do?' },
+    options: [
+      { id: 'c.picking.o1', en: 'Report that the item is missing.', best: true },
+      { id: 'c.picking.o2', en: 'Take the other item: it looks the same.', best: false },
+      { id: 'c.picking.o3', en: 'Skip the item and say nothing.', best: false },
+    ],
+    why: { id: 'c.picking.w', en: 'A wrong item comes back, and that costs more time than asking. When you report it, someone can fill the slot or change the order.' },
+  }),
+  tip({
+    id: 'c.loading',
+    lessonId: 'l.loading',
+    emoji: '🚛',
+    title: 'Never behind a reversing truck',
+    body: 'The driver cannot see everything behind the truck. Never walk behind a truck that drives backwards, and do not stand between the truck and the door. Wait until the truck stands still and the driver has seen you. Is a pallet missing or broken when you unload? Say it before the driver leaves.',
+    phrase: { id: 'c.loading.p', nl: 'Wacht even. De vrachtwagen rijdt achteruit.', en: 'Wait a moment. The truck is driving backwards.' },
+    situation: { id: 'c.loading.s', en: 'A truck drives backwards to the door. You want to cross behind it quickly. What do you do?' },
+    options: [
+      { id: 'c.loading.o1', en: 'Wait until the truck stands still.', best: true },
+      { id: 'c.loading.o2', en: 'Run behind it: you are fast enough.', best: false },
+      { id: 'c.loading.o3', en: 'Walk behind it and wave at the driver.', best: false },
+    ],
+    why: { id: 'c.loading.w', en: 'Behind a truck is a place the driver cannot see. Waiting costs one minute. An accident there is very serious.' },
+  }),
   tip({
     id: 'c.time',
     lessonId: 'l.shift',

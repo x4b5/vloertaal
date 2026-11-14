@@ -706,6 +706,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': "Wac 112!", // nieuw, nalezen
     'p.hurt': "Waan dhaawacmay.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "Ururinta dalabyada", // nieuw, nalezen
+    'w.artikel': "shayga (hal alaab)", // nieuw, nalezen
+    'w.vak': "booska (hal meel oo khaanadaha ka mid ah)", // nieuw, nalezen
+    'w.sticker': "istiikarka, calaamadda", // nieuw, nalezen
+    'w.verzamelen': "ururin, soo qaadid", // nieuw, nalezen
+    'w.ontbreken': "maqnaan (halkaas ma yaal)", // nieuw, nalezen
+    'w.locatie': "goobta (koodhka meesha, sida A-12)", // nieuw, nalezen
+    's.picking.1': "Waxaan ururinayaa shayada dalabkan.", // nieuw, nalezen
+    's.picking.2': "Shaygani waa maqan yahay. Boosku waa madhan yahay.", // nieuw, nalezen
+    's.picking.3': "Istiikarka waa in kartoonka lagu dhejiyaa.", // nieuw, nalezen
+    'c.picking.q': "Waa goobtee?", // nieuw, nalezen
+    'c.picking.a': "Marinka saddex, booska laba iyo toban.", // nieuw, nalezen
+    'l.loading': "Raridda iyo dejinta", // nieuw, nalezen
+    'w.vrachtwagen': "gaariga xamuulka", // nieuw, nalezen
+    'w.chauffeur': "darawalka", // nieuw, nalezen
+    'w.lossen': "dejin (alaabta ka soo saar gaariga xamuulka)", // nieuw, nalezen
+    'w.pompwagen': "gaariga baaleetka (gaari gacan oo baaleet kor u qaada)", // nieuw, nalezen
+    'w.folie': "balaastigga duubista (balaastig khafiif ah oo baaleetka lagu duubo)", // nieuw, nalezen
+    'w.vrachtbrief': "warqadda xamuulka (warqadda sheegta waxa gaariga xamuulka ku jira)", // nieuw, nalezen
+    's.loading.1': "Gaariga xamuulku wuxuu taagan yahay albaabka afar.", // nieuw, nalezen
+    's.loading.2': "Marka hore baaleetyadan ayaan dejinaynaa.", // nieuw, nalezen
+    's.loading.3': "Darawalku wuxuu sugayaa warqadda xamuulka.", // nieuw, nalezen
+    'c.loading.q': "Baaleetkani ma diyaar baa?", // nieuw, nalezen
+    'c.loading.a': "Maya, weli waa in balaastig lagu duubaa.", // nieuw, nalezen
   },
 };
 

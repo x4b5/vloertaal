@@ -706,6 +706,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': 'Ruf 112 an!',
     'p.hurt': 'Ich bin verletzt.',
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "Bestellungen zusammenstellen", // nieuw, nalezen
+    'w.artikel': "der Artikel (ein Produkt)", // nieuw, nalezen
+    'w.vak': "das Fach (ein Platz im Regal)", // nieuw, nalezen
+    'w.sticker': "der Aufkleber, das Etikett", // nieuw, nalezen
+    'w.verzamelen': "sammeln, zusammensuchen", // nieuw, nalezen
+    'w.ontbreken': "fehlen (es ist nicht da)", // nieuw, nalezen
+    'w.locatie': "der Lagerplatz (der Code vom Platz, zum Beispiel A-12)", // nieuw, nalezen
+    's.picking.1': "Ich sammle die Artikel für diese Bestellung.", // nieuw, nalezen
+    's.picking.2': "Dieser Artikel fehlt. Das Fach ist leer.", // nieuw, nalezen
+    's.picking.3': "Der Aufkleber muss auf den Karton.", // nieuw, nalezen
+    'c.picking.q': "Welcher Lagerplatz ist es?", // nieuw, nalezen
+    'c.picking.a': "Gang drei, Fach zwölf.", // nieuw, nalezen
+    'l.loading': "Laden und Abladen", // nieuw, nalezen
+    'w.vrachtwagen': "der Lkw, der Lastwagen", // nieuw, nalezen
+    'w.chauffeur': "der Fahrer / die Fahrerin", // nieuw, nalezen
+    'w.lossen': "abladen, entladen (Sachen aus dem Lkw holen)", // nieuw, nalezen
+    'w.pompwagen': "der Hubwagen (ein Handwagen, der eine Palette anhebt)", // nieuw, nalezen
+    'w.folie': "die Folie (dünnes Plastik um eine Palette)", // nieuw, nalezen
+    'w.vrachtbrief': "der Frachtbrief (das Papier, auf dem steht, was im Lkw ist)", // nieuw, nalezen
+    's.loading.1': "Der Lkw steht an Tor vier.", // nieuw, nalezen
+    's.loading.2': "Wir laden zuerst diese Paletten ab.", // nieuw, nalezen
+    's.loading.3': "Der Fahrer wartet auf den Frachtbrief.", // nieuw, nalezen
+    'c.loading.q': "Ist diese Palette fertig?", // nieuw, nalezen
+    'c.loading.a': "Nein, da muss noch Folie drum.", // nieuw, nalezen
   },
 };
 

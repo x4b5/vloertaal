@@ -3887,6 +3887,46 @@ const deliveryUnit = unit('delivery', 'Transport and delivery', 'Vervoer en bezo
     ],
     [['Kun je vandaag nog een rit doen?', 'Can you do one more run today?'], ['Nee, dan heb ik geen tijd voor mijn pauze.', 'No, then I have no time for my break.']],
   ),
+  // "Checking the van" and "Delays on the road" (l.vancheck, l.delay, 14 November 2026, the owner's
+  // request: the two units of Logistiek grow to four lessons as well). Already words of other
+  // lessons, used here in a sentence or the chat only: "de deur", "kapot" (l.handover), "de
+  // bestelbus" and "het pakket" (l.parcel).
+  lesson(
+    'vancheck',
+    'Checking the van',
+    [
+      ['schade', 'de schade', 'the damage', '💥'],
+      ['deuk', 'de deuk', 'the dent', '🚗'],
+      ['spiegel', 'de spiegel', 'the mirror', '🪞'],
+      ['tanken', 'tanken', 'to fill up (put fuel in the van)', '⛽'],
+      ['opladen', 'opladen', 'to charge (an electric van, a phone)', '🔌'],
+      ['parkeren', 'parkeren', 'to park', '🅿️'],
+    ],
+    [
+      ['Er zit een deuk in de deur.', 'There is a dent in the door.'],
+      ['Deze schade was er al.', 'This damage was already there.'],
+      ['Ik moet eerst nog tanken.', 'I still have to fill up first.'],
+    ],
+    [['Is alles goed met de bestelbus?', 'Is everything fine with the van?'], ['Nee, de spiegel is kapot.', 'No, the mirror is broken.']],
+  ),
+  lesson(
+    'delay',
+    'Delays on the road',
+    [
+      ['file', 'de file', 'the traffic jam', '🚗'],
+      ['vertraging', 'de vertraging', 'the delay (you are later than planned)', '⏳'],
+      ['omleiding', 'de omleiding', 'the diversion (another road, because the road is closed)', '↪️'],
+      ['navigatie', 'de navigatie', 'the navigation (the app that shows the way)', '🧭'],
+      ['planner', 'de planner', 'the planner (the person who makes the routes)', '🗓️'],
+      ['retour', 'het retour', 'the return (a parcel that goes back)', '↩️'],
+    ],
+    [
+      ['Ik sta in de file.', 'I am in a traffic jam.'],
+      ['Ik heb een half uur vertraging.', 'I have a delay of half an hour.'],
+      ['Dit pakket gaat retour.', 'This parcel goes back.'],
+    ],
+    [['Waar ben je nu?', 'Where are you now?'], ['Bij de omleiding. Ik ben tien minuten later.', 'At the diversion. I will be ten minutes later.']],
+  ),
 ]);
 
 const deliveryTips = [
@@ -3932,6 +3972,40 @@ const deliveryTips = [
     ],
     'What counts is how you really work, not only the word on the contract. If the company decides how, when and where you work, you are often an employee. Then you have more rights.',
     ABUSE_LINE,
+  ),
+  // The two lessons of 14 November 2026. Neither tip states a right or an amount, and neither says
+  // who pays for damage: they are about reporting. How to report differs per company: HOUSE_LINE.
+  tipFor(
+    'vancheck',
+    '📸',
+    'Look before you drive',
+    'Walk around the van before your first run. Do you see a dent, a scratch or a broken mirror? Take a photo, and report it before you drive away. Then everyone knows the damage was already there. Did something happen during your run? Report it the same day, also when it is small. Hiding damage gives bigger problems later.',
+    ['Er zit schade aan de bestelbus. Hier is een foto.', 'There is damage on the van. Here is a photo.'],
+    'In the morning you see a new dent in the van. You did not make it. What do you do?',
+    [
+      'Take a photo, and report it before you drive.',
+      'Say nothing: it is not your dent.',
+      'Wait and see if someone asks about it.',
+    ],
+    'When you report it before you drive, nobody can think you did it. A photo with the time is clear for everyone.',
+    HOUSE_LINE,
+  ),
+  // "Not with the phone in your hand while you drive": the same rule as in c.road above (⚖️ checked
+  // there: RVV 1990 art. 61a; Belgium: Wegverkeersreglement art. 8.4).
+  tipFor(
+    'delay',
+    '📞',
+    'Late? Say it in time',
+    'A traffic jam or a closed road is not your fault. But tell the planner as soon as you know that you will be late. Then the planner can tell the customers, or change the route. Stop in a safe place first: do not call with the phone in your hand while you drive. And do not drive faster to win back the time.',
+    ['Ik sta in de file. Ik ben een half uur later.', 'I am in a traffic jam. I will be half an hour later.'],
+    'A road is closed. The diversion costs you thirty minutes. What do you do?',
+    [
+      'Tell the planner as soon as you can stop safely.',
+      'Drive faster, so you win back the lost time.',
+      'Say nothing: maybe nobody notices.',
+    ],
+    'When the planner knows it early, the customers hear it and nobody waits for nothing. Driving faster is dangerous, and it wins almost no time.',
+    HOUSE_LINE,
   ),
 ];
 

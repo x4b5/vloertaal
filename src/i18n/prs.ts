@@ -703,6 +703,31 @@ const lang: HelpLanguageSource = {
     // Emergency phrases (phrasebook only)
     'p.call112': 'به 112 زنگ بزن!',
     'p.hurt': 'من زخمی شده‌ام.',
+    // Logistiek at four lessons per unit (14 November 2026).
+    'l.picking': "جمع کردن فرمایش‌ها", // nieuw, nalezen
+    'w.artikel': "جنس (یک محصول)", // nieuw, nalezen
+    'w.vak': "خانهٔ رف (یک جای در رف)", // nieuw, nalezen
+    'w.sticker': "ستیکر، لیبل", // nieuw, nalezen
+    'w.verzamelen': "جمع کردن، برداشتن", // nieuw, nalezen
+    'w.ontbreken': "نبودن، کم بودن (آنجا نیست)", // nieuw, nalezen
+    'w.locatie': "موقعیت (کود جای، مثل A-12)", // nieuw, nalezen
+    's.picking.1': "جنس‌های این فرمایش را جمع می‌کنم.", // nieuw, nalezen
+    's.picking.2': "این جنس نیست. خانهٔ رف خالی است.", // nieuw, nalezen
+    's.picking.3': "ستیکر باید سر قطی باشد.", // nieuw, nalezen
+    'c.picking.q': "کدام موقعیت است؟", // nieuw, nalezen
+    'c.picking.a': "راهروی سه، خانهٔ دوازده.", // nieuw, nalezen
+    'l.loading': "بار کردن و خالی کردن بار", // nieuw, nalezen
+    'w.vrachtwagen': "لاری (موتر باربری کلان)", // nieuw, nalezen
+    'w.chauffeur': "دریور", // nieuw, nalezen
+    'w.lossen': "خالی کردن بار (چیزها را از لاری کشیدن)", // nieuw, nalezen
+    'w.pompwagen': "کراچی پالت (کراچی دستی که پالت را بلند می‌کند)", // nieuw, nalezen
+    'w.folie': "پلاستیک پیچ (پلاستیک نازک دور پالت)", // nieuw, nalezen
+    'w.vrachtbrief': "بارنامه (کاغذی که می‌گوید در لاری چه است)", // nieuw, nalezen
+    's.loading.1': "لاری پیش دروازهٔ چهار است.", // nieuw, nalezen
+    's.loading.2': "اول این پالت‌ها را خالی می‌کنیم.", // nieuw, nalezen
+    's.loading.3': "دریور منتظر بارنامه است.", // nieuw, nalezen
+    'c.loading.q': "این پالت آماده است؟", // nieuw, nalezen
+    'c.loading.a': "نی، هنوز باید دور آن پلاستیک پیچانده شود.", // nieuw, nalezen
   },
 };
 

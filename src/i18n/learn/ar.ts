@@ -156,6 +156,11 @@ const t: CultureTranslation = {
     'd.getfeedback.a.why': "عرض ملاحظات: «نعم»، والرغبة في أداء العمل جيداً.", // nieuw, nalezen
     'd.givefeedback.a.why': "السؤال عن العمل: أولاً ما هو جيد، ثم ما يمكن أن يكون أفضل.", // nieuw, nalezen
     'd.meeting.a.why': "السؤال عن الأسئلة: هذا الرد يطرح سؤالاً، عن جدول العمل.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "السؤال عن الموقع: الممر والخانة.", // nieuw, nalezen
+    'c.loading.a.why': "السؤال هل المنصة جاهزة: لا، وما ينقصها بعد.", // nieuw, nalezen
+    'c.vancheck.a.why': "السؤال هل الشاحنة بخير: لا، وما هو المكسور.", // nieuw, nalezen
+    'c.delay.a.why': "السؤال عن المكان: المكان، ومدة التأخير.", // nieuw, nalezen
   },
 };
 

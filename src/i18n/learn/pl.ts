@@ -156,6 +156,11 @@ const t: CultureTranslation = {
     'd.getfeedback.a.why': "Propozycja feedbacku: „tak” i że chcesz to robić dobrze.", // nieuw, nalezen
     'd.givefeedback.a.why': "Pytanie o pracę: najpierw co jest dobre, potem co może być lepsze.", // nieuw, nalezen
     'd.meeting.a.why': "Pytanie, czy są pytania: ta odpowiedź zadaje jedno, o grafik.", // nieuw, nalezen
+    // Logistiek at four lessons per unit (14 November 2026).
+    'c.picking.a.why': "Pytanie, która lokalizacja: alejka i przegródka.", // nieuw, nalezen
+    'c.loading.a.why': "Pytanie, czy paleta jest gotowa: nie, i czego jeszcze potrzebuje.", // nieuw, nalezen
+    'c.vancheck.a.why': "Pytanie, czy z busem wszystko w porządku: nie, i co jest zepsute.", // nieuw, nalezen
+    'c.delay.a.why': "Pytanie, gdzie jesteś: miejsce i ile się spóźnisz.", // nieuw, nalezen
   },
 };
 

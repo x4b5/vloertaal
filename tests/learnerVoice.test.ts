@@ -112,6 +112,11 @@ const PENDING_RECORDING = new Set<string>([
   'Ja, graag. Ik wil het goed doen.',
   'Netjes! Alleen de dozen staan scheef.',
   'Ja. Wanneer komt het nieuwe rooster?',
+  // Logistiek at four lessons per unit (l.picking, l.loading, l.vancheck, l.delay, 14 November 2026):
+  'Gang drie, vak twaalf.',
+  'Nee, er moet nog folie om.',
+  'Nee, de spiegel is kapot.',
+  'Bij de omleiding. Ik ben tien minuten later.',
 ]);
 
 
