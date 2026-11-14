@@ -17,7 +17,7 @@ import zlPack from '../../src/content/regio/zuid-limburg-pack';
 import { uiEn } from '../../src/i18n/types';
 import { uiNl } from '../../src/i18n/nl';
 import type { Lesson, Unit } from '../../src/content/types';
-import { ADVICE_LINE, ABUSE_LINE } from '../../src/content/work';
+import { ADVICE_LINE, ABUSE_LINE } from '../../src/content/workTips';
 import { BE_ADVICE_LINE, BE_ABUSE_LINE } from '../../src/lib/tipText';
 import { KLANKEN, klankHowId } from '../../src/content/klankMond';
 import klankNl from '../../src/i18n/sounds/nl';

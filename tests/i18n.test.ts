@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { allLessons, teachingLessons, phrasebookExtras, phrasebookIds, findItem, units } from '../src/content/curriculum';
 import { aboutIds } from '../src/content/about';
 import { cultureIds, cultureTips } from '../src/content/culture';
-import { workIds } from '../src/content/work';
+import { workIds } from '../src/content/workTips';
 import { sayingsIds } from '../src/content/sayings';
 import { chatWhyIds } from '../src/content/chatWhy';
 import { getHelpLanguage, gloss, hasGender, helpLanguageSources, helpLanguages, ui } from '../src/i18n/all';

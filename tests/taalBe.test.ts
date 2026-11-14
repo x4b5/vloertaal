@@ -13,7 +13,7 @@ import { BE_TAAL_UNITS, TAAL_BE_INVENTORY } from '../src/content/taalBe/inventor
 import { setBeTaal } from '../src/content/taalBe/live';
 import type { BeTaal } from '../src/content/taalBe/types';
 import { mixLessonId } from '../src/content/review';
-import { ABUSE_LINE, ADVICE_LINE } from '../src/content/work';
+import { ABUSE_LINE, ADVICE_LINE } from '../src/content/workTips';
 import { helpRowsFor } from '../src/content/regels/help';
 import { workContacts } from '../src/components/Screens';
 import { themeText } from '../src/components/Themes';

@@ -12,7 +12,7 @@ import type { BeTaal } from '../types';
  * agent B.)
  */
 
-/** The closing line of the house-rules tips (src/content/work.ts HOUSE_LINE, written out). */
+/** The closing line of the house-rules tips (src/content/workTips.ts HOUSE_LINE, written out). */
 const HOUSE = 'Rules differ per company: ask your supervisor what the rules are where you work.';
 
 const tips = [
