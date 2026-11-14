@@ -36,6 +36,7 @@ export function slugOf(titleNl: string): string {
 export const HEADINGS: Readonly<Record<string, string>> = {
   'u.firstday': 'Je eerste werkdag: Nederlandse woorden en zinnen',
   'u.help': 'Hulp vragen op je werk in het Nederlands',
+  'u.do': 'Instructies op het werk in het Nederlands',
   'u.tools': 'Vertaalapp en andere slimme hulp bij Nederlands',
   'u.safety': 'Veiligheid op het werk: woorden en zinnen',
   'u.emergency': 'Brandalarm en een ongeluk melden: woorden',

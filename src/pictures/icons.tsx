@@ -1,11 +1,20 @@
 import type { JSX } from 'react';
-import { Ground, PAL, SKIN, Shade, Shine } from './kit';
+import { Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
 import unitBanners from './units';
 
 /** Unit icons that no word picture covers (abstract topics). Same style as the word pictures. */
 const iconPictures: Record<string, () => JSX.Element> = {
   // Asking for help: a raised hand and a question bubble (the old unit banner).
   'i.help': unitBanners['u.help'],
+  // Instructions (u.do): a hand points to the spot on the floor: "zet het daar neer". No box and
+  // no dotted ring (that is the word picture "aanwijzen"), no pin (that is "daar").
+  'i.do': () => (
+    <g>
+      <ellipse cx="88" cy="94" rx="20" ry="6.5" fill="none" stroke={PAL.sky} strokeWidth="4.5" />
+      <ellipse cx="88" cy="94" rx="8" ry="2.6" fill={PAL.sky} />
+      <Hand pose="point" x={28} y={38} rotate={128} scale={1.15} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
+    </g>
+  ),
   // Rules and rights: a balance scale.
   'i.rights': () => (
     <g>

@@ -18,6 +18,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "Geldiğimde kime haber vermem gerektiğini sorabilirim.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.help.1': "Anlamadığımı söyleyebilirim.", // nieuw, nalezen
     'kjn.u.help.2': "Birinden daha yavaş konuşmasını isteyebilirim.", // nieuw, nalezen
+    'kjn.u.do.1': "“Zet het neer” gibi kısa bir talimatı anlayabilirim.", // nieuw, nalezen
+    'kjn.u.do.2': "Bir işi bitirdiğimi söyleyebilirim.", // nieuw, nalezen
     'kjn.u.tools.1': "Birinden yazmasını ya da göstermesini isteyebilirim.", // nieuw, nalezen
     'kjn.u.tools.2': "Anladığımı kontrol etmek için bir talimatı tekrar edebilirim.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Hollandaca pratik yapmak istediğimi söyleyebilirim.", // nieuw, nalezen

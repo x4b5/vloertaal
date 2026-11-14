@@ -38,7 +38,8 @@ const MAX_WITHOUT_X: Record<string, number> = {
   ti: 377,
   // 587 with "Hulp vragen" at four lessons (14 November 2026): four lines the learner says ("I"),
   // where Arabic has no natural neutral form.
-  ar: 587,
+  // 589 with "Instructies" (u.do, 14 November 2026): two chat questions to the learner.
+  ar: 589,
 };
 
 interface Gendered {

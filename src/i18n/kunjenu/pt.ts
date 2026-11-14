@@ -18,6 +18,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "Consigo perguntar a quem me devo apresentar.", // nieuw, nalezen
     'kjn.u.help.1': "Consigo dizer que não percebo.", // nieuw, nalezen
     'kjn.u.help.2': "Consigo pedir a alguém que fale mais devagar.", // nieuw, nalezen
+    'kjn.u.do.1': "Consigo perceber uma instrução curta, como «Zet het neer».", // nieuw, nalezen
+    'kjn.u.do.2': "Consigo dizer que acabei uma tarefa.", // nieuw, nalezen
     'kjn.u.tools.1': "Consigo pedir a alguém que escreva ou me mostre.", // nieuw, nalezen
     'kjn.u.tools.2': "Consigo repetir uma instrução para confirmar que percebi.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Consigo dizer que quero praticar neerlandês.", // nieuw, nalezen

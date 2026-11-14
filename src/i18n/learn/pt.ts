@@ -163,6 +163,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "Perguntam se sabes como: não, ainda não, dito com honestidade.", // nieuw, nalezen
     'c.mayask.a.why': "Perguntam se tens uma pergunta: sim, e primeiro se há tempo.", // nieuw, nalezen
     'c.whereis.a.why': "Perguntam se consegues encontrar: não, e um pedido para apontar.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "Pedem para segurar uma coisa: sim, e pergunta onde a pôr.", // nieuw, nalezen
+    'c.onoff.a.why': "Perguntam se a porta está fechada: não, e fecha-a agora.", // nieuw, nalezen
+    'c.fillempty.a.why': "Perguntam se está cheio: sim, e esvazia-o.", // nieuw, nalezen
+    'c.order.a.why': "Pedem para fazer isto agora: sim, e pergunta o que vem depois.", // nieuw, nalezen
   },
 };
 

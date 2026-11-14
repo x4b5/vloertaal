@@ -18,6 +18,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "ናብ መን ክቐርብ ከም ዘለኒ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.help.1': "ከም ዘይተረደኣኒ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.help.2': "ሓደ ሰብ ቀስ ኢሉ ክዛረብ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.do.1': "ከም «Zet het neer» ዝኣመሰለ ሓጺር መምርሒ ክርድኦ እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.do.2': "ሓደ ዕማም ከም ዝወዳእኩ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.tools.1': "ሓደ ሰብ ክጽሕፎ ወይ ከርእየኒ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.tools.2': "ከም ዝተረዳእኩ ንምርግጋጽ ዝተዋህበኒ መምርሒ ደጊመ ክብሎ እኽእል እየ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "ሆላንድኛ ክለማመድ ከም ዝደሊ ክብል እኽእል እየ።", // nieuw, nalezen

@@ -1,5 +1,5 @@
 import { communicateUnit, feedbackUnit, teamworkUnit } from './cultureUnits';
-import { dataUnit, toolsUnit, workUnits } from './work';
+import { dataUnit, doUnit, toolsUnit, workUnits } from './work';
 import { soundsUnit } from './sounds';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
@@ -200,7 +200,9 @@ export const units: Unit[] = [
       },
     ],
   },
-  // Smart tools (translation apps, captions, keep learning): unit 03, right after "Asking for help".
+  // Instructions (the plain verbs of an instruction, 14 November 2026): right after "Asking for help".
+  doUnit,
+  // Smart tools (translation apps, captions, keep learning): right after "Instructions".
   toolsUnit,
   {
     id: 'u.safety',

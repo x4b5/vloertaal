@@ -165,6 +165,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "Pytanie, czy wiesz, jak: nie, jeszcze nie, powiedziane szczerze.", // nieuw, nalezen
     'c.mayask.a.why': "Pytanie, czy masz pytanie: tak, a najpierw, czy jest czas.", // nieuw, nalezen
     'c.whereis.a.why': "Pytanie, czy możesz to znaleźć: nie, i prośba o wskazanie.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "Prośba o potrzymanie: tak, i pytanie, gdzie to postawić.", // nieuw, nalezen
+    'c.onoff.a.why': "Pytanie, czy drzwi są zamknięte: nie, i właśnie się je zamyka.", // nieuw, nalezen
+    'c.fillempty.a.why': "Pytanie, czy jest już pełny: tak, i właśnie się go opróżnia.", // nieuw, nalezen
+    'c.order.a.why': "Prośba, żeby zrobić to teraz: tak, i pytanie, co potem.", // nieuw, nalezen
   },
 };
 

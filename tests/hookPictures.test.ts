@@ -14,10 +14,13 @@ import { hasPicture, introPicture } from '../src/lib/wordPicture';
 const HOOKS = ['w.huur', 'w.borg', 'w.boete', 'w.verlof', 'w.wachtdag', 'w.bruto', 'w.netto', 'w.feestdag', 'w.allergie', 'w.belasting', 'w.zorgverzekering', 'w.opbouwen', 'w.halvedagen',
   // "moeilijk" and "makkelijk" (l.howto, 14 November 2026, src/pictures/group51.tsx): a pair, a knot
   // against a straight line; alone neither picture says its word.
-  'w.moeilijk', 'w.makkelijk'];
+  'w.moeilijk', 'w.makkelijk',
+  // "stoppen" (l.onoff, 14 November 2026, src/pictures/group52.tsx): also to stop working, to quit;
+  // as a pictured word its red bar took over the picture of "Ik denk erover om te stoppen".
+  'w.stoppen'];
 
 describe('memory pictures', () => {
-  it('fifteen hard words have one, and each has its drawing', async () => {
+  it('sixteen hard words have one, and each has its drawing', async () => {
     const hooks = allWords.filter((w) => w.picture === 'hook').map((w) => w.id);
     expect(new Set(hooks)).toEqual(new Set(HOOKS));
     const words = (await import('../src/pictures/words')).default as Record<string, unknown>;
@@ -35,7 +38,7 @@ describe('memory pictures', () => {
   });
 
   it('never stand as a picture in a choice or a match', () => {
-    for (const id of ['l.housing', 'l.payslip', 'l.leave', 'l.illness', 'l.backtowork', 'l.howto']) {
+    for (const id of ['l.housing', 'l.payslip', 'l.leave', 'l.illness', 'l.backtowork', 'l.howto', 'l.onoff']) {
       const { lesson } = findLesson(id)!;
       for (const seed of [1, 2, 3, 7, 42]) {
         for (const ex of buildLesson(lesson, { review: false, seed })) {

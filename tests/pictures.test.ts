@@ -96,7 +96,13 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // only. The other ten words are drawn (group51).
     for (const id of ['w.hoe', 'w.zo', 'w.weten', 'w.klopt', 'w.even', 'w.twijfelen', 'w.moeilijk', 'w.makkelijk']) expect(abstract).toContain(id);
     for (const id of ['w.vragen', 'w.wie', 'w.tijd', 'w.storen', 'w.hier', 'w.daar', 'w.kwijt', 'w.uitgang', 'w.aanwijzen', 'w.naast']) expect(abstract).not.toContain(id);
-    expect(abstract.length).toBe(257);
+    // 264 with "Instructies" (u.do, 14 November 2026): the six words of l.order (nu, dan, altijd,
+    // genoeg, meer, alles) have no picture: function words, and as pictured words they would take
+    // over the pictures of other lessons' sentences (sentencePicture). "stoppen" has a memory
+    // picture only (it also means to quit). The other seventeen words are drawn (group52).
+    for (const id of ['w.nu', 'w.dan', 'w.altijd', 'w.genoeg', 'w.meer', 'w.alles', 'w.stoppen']) expect(abstract).toContain(id);
+    for (const id of ['w.zetten', 'w.leggen', 'w.brengen', 'w.geven', 'w.vasthouden', 'w.loslaten', 'w.aanzetten', 'w.opendoen', 'w.dichtdoen', 'w.drukken', 'w.draaien', 'w.duwen', 'w.trekken', 'w.vullen', 'w.leegmaken', 'w.schoonmaken', 'w.vol']) expect(abstract).not.toContain(id);
+    expect(abstract.length).toBe(264);
     // Of the 191 (5 November 2026, the owner's trial of moving pictures, tests/motionPictures.test.ts):
     // 178 with no picture at all, 11 memory pictures ('hook') and 2 moving pictures ('motion':
     // "ontruimen" and "bijna", which were abstract). The 2 still never stand in a picture choice.
@@ -107,9 +113,10 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // "Goed communiceren" 18 and "Feedback en overleg" 12 more with no picture: 209, and 236 in all.
     // "Moet het of mag het?" (8 November 2026) 6 more: 215, and 242 in all.
     // The sector lessons of 14 November 2026: 7 more, 222. "Hulp vragen" at four lessons: 6 more
-    // with no picture (228) and 2 more memory pictures (moeilijk, makkelijk: 15).
-    expect(allWords.filter((w) => w.picture === false)).toHaveLength(228);
-    expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(15);
+    // with no picture (228) and 2 more memory pictures (moeilijk, makkelijk: 15). "Instructies":
+    // 6 more with no picture (234) and 1 more memory picture (stoppen: 16).
+    expect(allWords.filter((w) => w.picture === false)).toHaveLength(234);
+    expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(16);
     expect(allWords.filter((w) => w.picture === 'motion').map((w) => w.id).sort()).toEqual([
       'w.automatisch', 'w.bijna', 'w.daarna', 'w.doorgeven', 'w.eerst', 'w.kiezen', 'w.ontruimen', 'w.ruilen',
       'w.tellen', 'w.uitloggen', 'w.verbeteren', 'w.verlengen', 'w.versturen', 'w.voordoen',

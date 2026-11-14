@@ -18,6 +18,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "Umiem zapytać, u kogo mam się zgłosić.", // nieuw, nalezen
     'kjn.u.help.1': "Umiem powiedzieć, że nie rozumiem.", // nieuw, nalezen
     'kjn.u.help.2': "Umiem poprosić, żeby ktoś mówił wolniej.", // nieuw, nalezen
+    'kjn.u.do.1': "Rozumiem krótkie polecenie takie jak „Zet het neer”.", // nieuw, nalezen
+    'kjn.u.do.2': { m: "Umiem powiedzieć, że skończyłem zadanie.", f: "Umiem powiedzieć, że skończyłam zadanie.", x: "Umiem powiedzieć, że zadanie jest gotowe." }, // nieuw, nalezen
     'kjn.u.tools.1': "Umiem poprosić, żeby ktoś to zapisał albo pokazał.", // nieuw, nalezen
     'kjn.u.tools.2': "Umiem powtórzyć polecenie, żeby sprawdzić, czy dobrze rozumiem.", // nieuw, nalezen
     'kjn.u.tools.3': "Umiem powiedzieć, że chcę ćwiczyć niderlandzki.", // nieuw, nalezen

@@ -1681,6 +1681,91 @@ const kasUnit = unit('kas', 'In the greenhouse', 'In de kas', '🌱', '#4d7c0f',
   ),
 ]);
 
+// ---- Instructions (14 November 2026): a basis unit right after "Asking for help", before "Smart
+// tools", spliced in by curriculum.ts. The app's own problem starts with "does not understand an
+// instruction", and the plain verbs of an instruction (zetten, leggen, duwen, trekken, opendoen,
+// stoppen) were a word in no lesson: only nouns per sector. The spoken forms, as a colleague says
+// them: "opendoen" and "dichtdoen" (not "openen", "sluiten"), "leegmaken" (not "legen"). The
+// sentences have "het", "dit" and "hem" where a later unit names the thing (the box, the machine).
+// Already words of other lessons, used here in a sentence or the chat only: "daar", "zo" and "de
+// kantine" (earlier lessons), "eerst" (l.task), "uitzetten" (l.phone), "klaar" (l.shift) and "de
+// deur" (l.roundsounds).
+
+export const doUnit = unit('do', 'Instructions', 'Instructies', '👉', '#b45309', [
+  lesson(
+    'putdown',
+    'Put it there',
+    [
+      ['zetten', 'zetten', 'to put (something that stands: a box, a bucket)', '📥'],
+      ['leggen', 'leggen', 'to put, to lay (something that lies flat)', '📄'],
+      ['brengen', 'brengen', 'to bring, to take (to a place or a person)', '🚶'],
+      ['geven', 'geven', 'to give', '🤲'],
+      ['vasthouden', 'vasthouden', 'to hold', '✊'],
+      ['loslaten', 'loslaten', 'to let go', '🖐️'],
+    ],
+    [
+      ['Zet het daar neer.', 'Put it down there.'],
+      ['Breng dit naar de kantine.', 'Take this to the canteen.'],
+      ['Hou dit even vast.', 'Hold this for a moment.'],
+    ],
+    [['Kun je dit even vasthouden?', 'Can you hold this for a moment?'], ['Ja. Waar moet ik het zetten?', 'Yes. Where must I put it?']],
+  ),
+  lesson(
+    'onoff',
+    'On and off, open and closed',
+    [
+      ['aanzetten', 'aanzetten', 'to switch on', '🔛'],
+      ['opendoen', 'opendoen', 'to open', '📂'],
+      ['dichtdoen', 'dichtdoen', 'to close', '📁'],
+      ['drukken', 'drukken', 'to press (a button)', '👇'],
+      ['draaien', 'draaien', 'to turn', '🔄'],
+      ['stoppen', 'stoppen', 'to stop', '🛑', 'hook'],
+    ],
+    [
+      ['Doe de deur dicht.', 'Close the door.'],
+      ['Druk op de knop.', 'Press the button.'],
+      ['Stop! Zet het uit.', 'Stop! Switch it off.'],
+    ],
+    [['Is de deur dicht?', 'Is the door closed?'], ['Nee. Ik doe hem nu dicht.', 'No. I am closing it now.']],
+  ),
+  lesson(
+    'fillempty',
+    'Push, pull, fill',
+    [
+      ['duwen', 'duwen', 'to push', '➡️'],
+      ['trekken', 'trekken', 'to pull', '⬅️'],
+      ['vullen', 'vullen', 'to fill', '🚰'],
+      ['leegmaken', 'leegmaken', 'to empty', '🗑️'],
+      ['schoonmaken', 'schoonmaken', 'to clean', '🧽'],
+      ['vol', 'vol', 'full', '🪣'],
+    ],
+    [
+      ['Niet duwen, maar trekken.', 'Do not push, pull.'],
+      ['Deze is vol. Maak hem leeg.', 'This one is full. Empty it.'],
+      ['Maak dit even schoon.', 'Clean this, please.'],
+    ],
+    [['Is hij al vol?', 'Is it full already?'], ['Ja. Ik maak hem leeg.', 'Yes. I am emptying it.']],
+  ),
+  lesson(
+    'order',
+    'First this, then that',
+    [
+      ['nu', 'nu', 'now', '⏰', false],
+      ['dan', 'dan', 'then', '⏩', false],
+      ['altijd', 'altijd', 'always', '♾️', false],
+      ['genoeg', 'genoeg', 'enough', '👌', false],
+      ['meer', 'meer', 'more', '➕', false],
+      ['alles', 'alles', 'everything', '💯', false],
+    ],
+    [
+      ['Eerst dit, dan dat.', 'First this, then that.'],
+      ['Dat is genoeg.', 'That is enough.'],
+      ['Doe dit altijd zo.', 'Always do this like this.'],
+    ],
+    [['Kun je dit nu doen?', 'Can you do this now?'], ['Ja. Eerst dit, en dan?', 'Yes. First this, and then?']],
+  ),
+]);
+
 // ---- Smart tools (a basis unit right after "Asking for help", spliced in by curriculum.ts) ----
 
 export const toolsUnit = unit('tools', 'Smart tools', 'Slimme hulpmiddelen', '📱', '#d1495b', [

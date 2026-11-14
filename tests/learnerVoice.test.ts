@@ -121,6 +121,11 @@ const PENDING_RECORDING = new Set<string>([
   'Nee, dat weet ik nog niet.',
   'Ja. Heb je even tijd?',
   'Nee. Kun je het aanwijzen?',
+  // "Instructies", a new basis unit (u.do: l.putdown, l.onoff, l.fillempty, l.order, 14 November 2026):
+  'Ja. Waar moet ik het zetten?',
+  'Nee. Ik doe hem nu dicht.',
+  'Ja. Ik maak hem leeg.',
+  'Ja. Eerst dit, en dan?',
 ]);
 
 

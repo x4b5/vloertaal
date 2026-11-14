@@ -17,6 +17,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "Waan weydiin karaa cidda aan u tagayo.", // nieuw, nalezen
     'kjn.u.help.1': "Waan sheegi karaa inaanan fahmin.", // nieuw, nalezen
     'kjn.u.help.2': "Waan ka codsan karaa qof inuu si tartiib ah u hadlo.", // nieuw, nalezen
+    'kjn.u.do.1': "Waan fahmi karaa tilmaan gaaban sida “Zet het neer”.", // nieuw, nalezen
+    'kjn.u.do.2': "Waan sheegi karaa inaan hawl dhammeeyay.", // nieuw, nalezen
     'kjn.u.tools.1': "Waan ka codsan karaa qof inuu qoro ama i tuso.", // nieuw, nalezen
     'kjn.u.tools.2': "Waan ku celin karaa amar si aan u hubiyo inaan fahmay.", // nieuw, nalezen
     'kjn.u.tools.3': "Waan sheegi karaa inaan rabo inaan ku tababarto Af-Holandiis.", // nieuw, nalezen

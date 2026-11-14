@@ -18,6 +18,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "Я можу запитати, до кого мені звернутися.", // nieuw, nalezen
     'kjn.u.help.1': "Я можу сказати, що не розумію.", // nieuw, nalezen
     'kjn.u.help.2': "Я можу попросити говорити повільніше.", // nieuw, nalezen
+    'kjn.u.do.1': "Я розумію коротку вказівку, як-от «Zet het neer».", // nieuw, nalezen
+    'kjn.u.do.2': { m: "Я можу сказати, що закінчив завдання.", f: "Я можу сказати, що закінчила завдання.", x: "Я можу сказати, що завдання готове." }, // nieuw, nalezen
     'kjn.u.tools.1': "Я можу попросити записати це або показати.", // nieuw, nalezen
     'kjn.u.tools.2': "Я можу повторити вказівку, щоб перевірити розуміння.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Я можу сказати, що хочу практикувати нідерландську.", // nieuw, nalezen

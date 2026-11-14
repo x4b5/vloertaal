@@ -163,6 +163,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "Te preguntan si sabes cómo: no, todavía no, y lo dices con sinceridad.", // nieuw, nalezen
     'c.mayask.a.why': "Te preguntan si tienes una pregunta: sí, y primero preguntas si hay tiempo.", // nieuw, nalezen
     'c.whereis.a.why': "Te preguntan si lo encuentras: no, y pides que te lo señalen.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "Te piden que sujetes algo: sí, y pregunta dónde ponerlo.", // nieuw, nalezen
+    'c.onoff.a.why': "Te preguntan si la puerta está cerrada: no, y la cierra ahora.", // nieuw, nalezen
+    'c.fillempty.a.why': "Te preguntan si está lleno: sí, y lo vacía.", // nieuw, nalezen
+    'c.order.a.why': "Te piden hacerlo ahora: sí, y pregunta qué viene después.", // nieuw, nalezen
   },
 };
 

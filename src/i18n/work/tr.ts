@@ -2206,6 +2206,88 @@ const t: CultureTranslation = {
     'c.delay.o2': "Zamanı geri kazanmak için daha hızlı sürersin.", // nieuw, nalezen
     'c.delay.o3': "Hiçbir şey söylemezsin: belki kimse fark etmez.", // nieuw, nalezen
     'c.delay.w': "Planlamacı bunu erken öğrenirse, müşteriler haber alır ve kimse boşuna beklemez. Daha hızlı sürmek tehlikelidir ve neredeyse hiç zaman kazandırmaz.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'u.do': "Talimatlar", // nieuw, nalezen
+    'l.putdown': "Onu oraya koy", // nieuw, nalezen
+    'w.zetten': "koymak (dik duran bir şey: kutu, kova)", // nieuw, nalezen
+    'w.leggen': "koymak, yatırmak (düz yatan bir şey)", // nieuw, nalezen
+    'w.brengen': "getirmek, götürmek (bir yere ya da bir kişiye)", // nieuw, nalezen
+    'w.geven': "vermek", // nieuw, nalezen
+    'w.vasthouden': "tutmak", // nieuw, nalezen
+    'w.loslaten': "bırakmak", // nieuw, nalezen
+    's.putdown.1': "Onu oraya koy.", // nieuw, nalezen
+    's.putdown.2': "Bunu yemekhaneye götür.", // nieuw, nalezen
+    's.putdown.3': "Bunu bir saniye tut.", // nieuw, nalezen
+    'c.putdown.q': "Bunu bir saniye tutar mısın?", // nieuw, nalezen
+    'c.putdown.a': "Evet. Nereye koyayım?", // nieuw, nalezen
+    'c.putdown': "Tuttuğunu söyle", // nieuw, nalezen
+    'c.putdown.b': "Bir şeyi birlikte mi taşıyorsunuz, ya da bir iş arkadaşın sana ağır bir şey mi veriyor? Onu iyi tuttuğunda “Ik heb hem” de. O zaman iş arkadaşın bırakmanın güvenli olduğunu bilir. Kendin mi bırakmak istiyorsun? Önce sor: “Heb je hem?” Ve cevabı bekle. Bu her iş yerinde normaldir. Böylece eşyalar ayaklara ve ellere düşmez.", // nieuw, nalezen
+    'c.putdown.p': "Tuttum. Bırakabilirsin.", // nieuw, nalezen
+    'c.putdown.s': "Bir iş arkadaşın sana ağır bir kutu veriyor. Onu henüz iyi tutmuyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.putdown.o1': "“wacht” der ve önce daha iyi tutarsın.", // nieuw, nalezen
+    'c.putdown.o2': "Hiçbir şey söylemezsin: o görür.", // nieuw, nalezen
+    'c.putdown.o3': "Hızlıca alırsın, o beklemesin diye.", // nieuw, nalezen
+    'c.putdown.w': "İş arkadaşın, senin tuttuğunu düşündüğünde bırakır. Tek bir kelime sana iyi tutman için zaman verir.", // nieuw, nalezen
+    'l.onoff': "Çalıştır ve durdur, aç ve kapat", // nieuw, nalezen
+    'w.aanzetten': "çalıştırmak, açmak (bir makineyi, ışığı)", // nieuw, nalezen
+    'w.opendoen': "açmak", // nieuw, nalezen
+    'w.dichtdoen': "kapatmak", // nieuw, nalezen
+    'w.drukken': "basmak (bir düğmeye)", // nieuw, nalezen
+    'w.draaien': "çevirmek", // nieuw, nalezen
+    'w.stoppen': "durmak, durdurmak", // nieuw, nalezen
+    's.onoff.1': "Kapıyı kapat.", // nieuw, nalezen
+    's.onoff.2': "Düğmeye bas.", // nieuw, nalezen
+    's.onoff.3': "Dur! Onu kapat.", // nieuw, nalezen
+    'c.onoff.q': "Kapı kapalı mı?", // nieuw, nalezen
+    'c.onoff.a': "Hayır. Şimdi kapatıyorum.", // nieuw, nalezen
+    'c.onoff': "Dur demek dur demektir", // nieuw, nalezen
+    'c.onoff.b': "Biri “Stop!” diye mi bağırıyor? Hemen dur, nedenini bilmesen bile. Sonra sor. Kısa ve yüksek sesli bir kelime burada öfke değildir: iş arkadaşları birbirini böyle güvende tutar. Kendin mi tehlikeli bir şey görüyorsun? Sen de “Stop!” diye bağır, yıllardır burada çalışan birine bile. Kimse bunu garip bulmaz.", // nieuw, nalezen
+    'c.onoff.p': "Dur! Bir saniye bekle.", // nieuw, nalezen
+    'c.onoff.s': "Bir makineyi çalıştırıyorsun. Bir iş arkadaşın “Stop!” diye bağırıyor. Sen bir sorun görmüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.onoff.o1': "Hemen durursun ve nedenini sonra sorarsın.", // nieuw, nalezen
+    'c.onoff.o2': "Devam edersin: bir sorun görmüyorsun.", // nieuw, nalezen
+    'c.onoff.o3': "Önce neden durman gerektiğini sorarsın.", // nieuw, nalezen
+    'c.onoff.w': "İş arkadaşın senin görmediğin bir şeyi görüyor olabilir. Önce dur, sonra konuş: bu herkesi güvende tutar.", // nieuw, nalezen
+    'l.fillempty': "İt, çek, doldur", // nieuw, nalezen
+    'w.duwen': "itmek", // nieuw, nalezen
+    'w.trekken': "çekmek", // nieuw, nalezen
+    'w.vullen': "doldurmak", // nieuw, nalezen
+    'w.leegmaken': "boşaltmak", // nieuw, nalezen
+    'w.schoonmaken': "temizlemek", // nieuw, nalezen
+    'w.vol': "dolu", // nieuw, nalezen
+    's.fillempty.1': "İtme, çek.", // nieuw, nalezen
+    's.fillempty.2': "Bu dolu. Onu boşalt.", // nieuw, nalezen
+    's.fillempty.3': "Bunu bir temizle.", // nieuw, nalezen
+    'c.fillempty.q': "Doldu mu?", // nieuw, nalezen
+    'c.fillempty.a': "Evet. Boşaltıyorum.", // nieuw, nalezen
+    'c.fillempty': "Bitti mi? Söyle", // nieuw, nalezen
+    'c.fillempty.b': "Bir işi bitirdin mi? Söyle: “Ik ben klaar.” Ve sonra ne yapabileceğini sor. Biri seni görene kadar sessizce beklemek, doğru olmasa bile, çalışmak istemiyormuşsun gibi görünebilir. Sıradaki işi soran iş arkadaşları bir süre sonra çoğu zaman daha ilginç işler alır. Yeni bir şey öğrenmek mi istiyorsun? Onu da sor: “Mag ik dat ook leren?”", // nieuw, nalezen
+    'c.fillempty.p': "Bitirdim. Başka ne yapabilirim?", // nieuw, nalezen
+    'c.fillempty.s': "İşini bitirdin. Amirin başka bir şeyle meşgul. Ne yaparsın?", // nieuw, nalezen
+    'c.fillempty.o1': "Bitirdiğini söyler ve sırada ne olduğunu sorarsın.", // nieuw, nalezen
+    'c.fillempty.o2': "Amirin seni görene kadar beklersin.", // nieuw, nalezen
+    'c.fillempty.o3': "Mola verirsin: işin bitti.", // nieuw, nalezen
+    'c.fillempty.w': "Bir amir her şeyi göremez. Bitirdiğini söylediğinde iş devam eder ve daha fazlasını yapmak istediğini gösterirsin.", // nieuw, nalezen
+    'l.order': "Önce bu, sonra şu", // nieuw, nalezen
+    'w.nu': "şimdi", // nieuw, nalezen
+    'w.dan': "sonra", // nieuw, nalezen
+    'w.altijd': "her zaman", // nieuw, nalezen
+    'w.genoeg': "yeterli, yeter", // nieuw, nalezen
+    'w.meer': "daha fazla", // nieuw, nalezen
+    'w.alles': "her şey", // nieuw, nalezen
+    's.order.1': "Önce bu, sonra şu.", // nieuw, nalezen
+    's.order.2': "Bu kadar yeter.", // nieuw, nalezen
+    's.order.3': "Bunu her zaman böyle yap.", // nieuw, nalezen
+    'c.order.q': "Bunu şimdi yapabilir misin?", // nieuw, nalezen
+    'c.order.a': "Evet. Önce bu, peki sonra?", // nieuw, nalezen
+    'c.order': "Aynı anda çok iş mi? Önce hangisi, sor", // nieuw, nalezen
+    'c.order.b': "Bazen tek bir cümlede üç iş alırsın. Bunu akılda tutmak zordur, Hollandacayı iyi konuşanlar için bile. Hangisinin önce geldiğini sor: “Wat moet ik eerst doen?” İşleri yazabilir, ya da parmaklarınla sayıp geri söyleyebilirsin. Birini mi unuttun? Geri dön ve sor. Bu, tahmin etmekten daha iyidir.", // nieuw, nalezen
+    'c.order.p': "Bu çok fazla. Önce ne yapayım?", // nieuw, nalezen
+    'c.order.s': "Amirin sana çok hızlı üç iş veriyor. Sadece ilkini hatırlıyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.order.o1': "Hemen işleri bir kez daha söylemesini istersin.", // nieuw, nalezen
+    'c.order.o2': "İlkini yapar ve gerisini hatırlamayı umarsın.", // nieuw, nalezen
+    'c.order.o3': "Hiçbir şey yapmazsın: üçünü de bilmiyorsun.", // nieuw, nalezen
+    'c.order.w': "Hemen sormak on saniye sürer. Sonra amirin gitmiş olabilir, o zaman ya beklersin ya da tahmin edersin.", // nieuw, nalezen
   },
 };
 

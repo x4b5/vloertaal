@@ -2205,6 +2205,88 @@ const t: CultureTranslation = {
     'c.delay.o2': "تندتر می‌رانی تا وقت را جبران کنی.", // nieuw, nalezen
     'c.delay.o3': "چیزی نمی‌گویی: شاید کسی نفهمد.", // nieuw, nalezen
     'c.delay.w': "وقتی برنامه‌ریز زود بداند، مشتری‌ها خبردار می‌شوند و کسی بیخودی منتظر نمی‌ماند. تند راندن خطرناک است، و تقریباً هیچ وقتی هم جبران نمی‌کند.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'u.do': "دستورها", // nieuw, nalezen
+    'l.putdown': "آنجا بگذارش", // nieuw, nalezen
+    'w.zetten': "گذاشتن (چیزی که می‌ایستد: جعبه، سطل)", // nieuw, nalezen
+    'w.leggen': "گذاشتن، خواباندن (چیزی که صاف و خوابیده قرار می‌گیرد)", // nieuw, nalezen
+    'w.brengen': "بردن، آوردن (به یک جا یا پیش کسی)", // nieuw, nalezen
+    'w.geven': "دادن", // nieuw, nalezen
+    'w.vasthouden': "نگه داشتن", // nieuw, nalezen
+    'w.loslaten': "ول کردن، رها کردن", // nieuw, nalezen
+    's.putdown.1': "آن را آنجا بگذار.", // nieuw, nalezen
+    's.putdown.2': "این را به غذاخوری ببر.", // nieuw, nalezen
+    's.putdown.3': "این را یک لحظه نگه دار.", // nieuw, nalezen
+    'c.putdown.q': "می‌توانی این را یک لحظه نگه داری؟", // nieuw, nalezen
+    'c.putdown.a': "بله. کجا باید بگذارمش؟", // nieuw, nalezen
+    'c.putdown': "بگو که آن را گرفته‌ای", // nieuw, nalezen
+    'c.putdown.b': "چیزی را با هم حمل می‌کنید، یا همکاری چیز سنگینی به دستت می‌دهد؟ وقتی آن را خوب گرفته‌ای، بگو «Ik heb hem». آن وقت همکارت می‌داند که می‌تواند بی‌خطر ول کند. خودت می‌خواهی ول کنی؟ اول بپرس: «Heb je hem?» و منتظر جواب بمان. این در هر محل کاری عادی است. این‌طور چیزی روی پا و دست کسی نمی‌افتد.", // nieuw, nalezen
+    'c.putdown.p': "گرفتمش. می‌توانی ول کنی.", // nieuw, nalezen
+    'c.putdown.s': "همکاری یک جعبهٔ سنگین به دستت می‌دهد. هنوز آن را خوب نگرفته‌ای. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.putdown.o1': "بگو «wacht» و اول بهتر بگیرش.", // nieuw, nalezen
+    'c.putdown.o2': "چیزی نگو: خودش می‌بیند.", // nieuw, nalezen
+    'c.putdown.o3': "زود بگیرش تا منتظر نماند.", // nieuw, nalezen
+    'c.putdown.w': "همکارت وقتی فکر کند آن را گرفته‌ای، ول می‌کند. یک کلمه به تو وقت می‌دهد که آن را خوب بگیری.", // nieuw, nalezen
+    'l.onoff': "روشن و خاموش، باز و بسته", // nieuw, nalezen
+    'w.aanzetten': "روشن کردن", // nieuw, nalezen
+    'w.opendoen': "باز کردن", // nieuw, nalezen
+    'w.dichtdoen': "بستن", // nieuw, nalezen
+    'w.drukken': "فشار دادن (یک دکمه)", // nieuw, nalezen
+    'w.draaien': "چرخاندن", // nieuw, nalezen
+    'w.stoppen': "ایستادن، دست نگه داشتن", // nieuw, nalezen
+    's.onoff.1': "در را ببند.", // nieuw, nalezen
+    's.onoff.2': "دکمه را فشار بده.", // nieuw, nalezen
+    's.onoff.3': "ایست! خاموشش کن.", // nieuw, nalezen
+    'c.onoff.q': "در بسته است؟", // nieuw, nalezen
+    'c.onoff.a': "نه. الان می‌بندمش.", // nieuw, nalezen
+    'c.onoff': "ایست یعنی ایست", // nieuw, nalezen
+    'c.onoff.b': "کسی داد می‌زند «Stop!»؟ فوراً دست نگه دار، حتی وقتی نمی‌دانی چرا. بعداً بپرس. اینجا یک کلمهٔ کوتاه و بلند نشانهٔ عصبانیت نیست: همکارها این‌طور مواظب ایمنی همدیگر هستند. خودت چیز خطرناکی می‌بینی؟ تو هم داد بزن «Stop!»، حتی به کسی که سال‌هاست اینجا کار می‌کند. هیچ‌کس این را عجیب نمی‌داند.", // nieuw, nalezen
+    'c.onoff.p': "ایست! یک لحظه صبر کن.", // nieuw, nalezen
+    'c.onoff.s': "دستگاهی را روشن می‌کنی. همکاری داد می‌زند «Stop!». مشکلی نمی‌بینی. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.onoff.o1': "فوراً دست نگه دار و بعداً بپرس چرا.", // nieuw, nalezen
+    'c.onoff.o2': "ادامه بده: مشکلی نمی‌بینی.", // nieuw, nalezen
+    'c.onoff.o3': "اول بپرس چرا باید دست نگه داری.", // nieuw, nalezen
+    'c.onoff.w': "شاید همکارت چیزی ببیند که تو نمی‌بینی. اول دست نگه دار، بعد حرف بزن: این‌طور همه ایمن می‌مانند.", // nieuw, nalezen
+    'l.fillempty': "هل دادن، کشیدن، پر کردن", // nieuw, nalezen
+    'w.duwen': "هل دادن", // nieuw, nalezen
+    'w.trekken': "کشیدن", // nieuw, nalezen
+    'w.vullen': "پر کردن", // nieuw, nalezen
+    'w.leegmaken': "خالی کردن", // nieuw, nalezen
+    'w.schoonmaken': "تمیز کردن", // nieuw, nalezen
+    'w.vol': "پر", // nieuw, nalezen
+    's.fillempty.1': "هل نده، بکش.", // nieuw, nalezen
+    's.fillempty.2': "این یکی پر است. خالی‌اش کن.", // nieuw, nalezen
+    's.fillempty.3': "لطفاً این را تمیز کن.", // nieuw, nalezen
+    'c.fillempty.q': "پر شده؟", // nieuw, nalezen
+    'c.fillempty.a': "بله. خالی‌اش می‌کنم.", // nieuw, nalezen
+    'c.fillempty': "تمام شد؟ بگو", // nieuw, nalezen
+    'c.fillempty.b': "کارت تمام شد؟ بگو: «Ik ben klaar.» و بپرس بعد چه کار می‌توانی بکنی. اگر ساکت منتظر بمانی تا کسی تو را ببیند، ممکن است این‌طور به نظر بیاید که نمی‌خواهی کار کنی، حتی وقتی این درست نیست. همکارهایی که کار بعدی را می‌پرسند، بعد از مدتی اغلب کارهای جالب‌تری می‌گیرند. می‌خواهی چیز تازه‌ای یاد بگیری؟ این را هم بپرس: «Mag ik dat ook leren?»", // nieuw, nalezen
+    'c.fillempty.p': "کارم تمام شد. دیگر چه کار می‌توانم بکنم؟", // nieuw, nalezen
+    'c.fillempty.s': "کارت تمام شده. سرپرستت مشغول کار دیگری است. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.fillempty.o1': "بگو که کارت تمام شده و بپرس کار بعدی چیست.", // nieuw, nalezen
+    'c.fillempty.o2': "صبر کن تا سرپرستت تو را ببیند.", // nieuw, nalezen
+    'c.fillempty.o3': "استراحت کن: کارت تمام شده.", // nieuw, nalezen
+    'c.fillempty.w': "سرپرست نمی‌تواند همه‌چیز را ببیند. وقتی می‌گویی کارت تمام شده، کار ادامه پیدا می‌کند و نشان می‌دهی که می‌خواهی بیشتر کار کنی.", // nieuw, nalezen
+    'l.order': "اول این، بعد آن", // nieuw, nalezen
+    'w.nu': "الان، حالا", // nieuw, nalezen
+    'w.dan': "بعد", // nieuw, nalezen
+    'w.altijd': "همیشه", // nieuw, nalezen
+    'w.genoeg': "کافی، بس", // nieuw, nalezen
+    'w.meer': "بیشتر", // nieuw, nalezen
+    'w.alles': "همه‌چیز", // nieuw, nalezen
+    's.order.1': "اول این، بعد آن.", // nieuw, nalezen
+    's.order.2': "همین کافی است.", // nieuw, nalezen
+    's.order.3': "این را همیشه این‌طور انجام بده.", // nieuw, nalezen
+    'c.order.q': "می‌توانی این را الان انجام بدهی؟", // nieuw, nalezen
+    'c.order.a': "بله. اول این، و بعد؟", // nieuw, nalezen
+    'c.order': "چند کار با هم؟ بپرس اول کدام", // nieuw, nalezen
+    'c.order.b': "گاهی در یک جمله سه کار به تو می‌دهند. به خاطر سپردنش سخت است، حتی برای کسانی که هلندی را خوب حرف می‌زنند. بپرس کدام اول است: «Wat moet ik eerst doen?» می‌توانی کارها را هم بنویسی، یا با انگشت‌هایت بشماری و دوباره بگویی‌شان. یکی را فراموش کردی؟ برگرد و بپرس. این بهتر از حدس زدن است.", // nieuw, nalezen
+    'c.order.p': "این زیاد است. اول باید چه کار کنم؟", // nieuw, nalezen
+    'c.order.s': "سرپرستت خیلی تند سه کار به تو می‌دهد. فقط اولی یادت مانده. چه کار می‌کنی؟", // nieuw, nalezen
+    'c.order.o1': "همان موقع بخواه که کارها را یک بار دیگر بگوید.", // nieuw, nalezen
+    'c.order.o2': "اولی را انجام بده و امیدوار باش بقیه یادت بیاید.", // nieuw, nalezen
+    'c.order.o3': "هیچ کاری نکن: هر سه را نمی‌دانی.", // nieuw, nalezen
+    'c.order.w': "همان موقع پرسیدن ده ثانیه وقت می‌گیرد. بعداً شاید سرپرستت رفته باشد، و آن وقت یا منتظر می‌مانی یا حدس می‌زنی.", // nieuw, nalezen
   },
 };
 

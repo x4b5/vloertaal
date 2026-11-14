@@ -42,6 +42,12 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.mayask': L('A', 'A'),
     'l.whereis': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: in Vlaanderen zegt men ook "de refter" (de kantine; de zin en de tip noemen de kantine)'),
   } },
+  'u.do': { kind: 'A', lessons: {
+    'l.putdown': L('A', 'A'),
+    'l.onoff': L('A', 'A'),
+    'l.fillempty': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: "kuisen" naast "schoonmaken"'),
+    'l.order': L('A', 'A'),
+  } },
   'u.tools': { kind: 'B', lessons: {
     'l.translate': L('A', 'A'),
     'l.understood': L('A', 'A'),

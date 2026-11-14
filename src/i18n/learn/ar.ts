@@ -165,6 +165,11 @@ const t: CultureTranslation = {
     'c.howto.a.why': "السؤال: هل الطريقة معروفة؟ هذا الرد يقول بصدق: لا، ليس بعد.", // nieuw, nalezen
     'c.mayask.a.why': "السؤال: هل هناك سؤال؟ هذا الرد يقول نعم، ويسأل أولاً إن كان هناك وقت.", // nieuw, nalezen
     'c.whereis.a.why': "السؤال: هل يمكن إيجاده؟ هذا الرد يقول لا، ويطلب الإشارة إليه.", // nieuw, nalezen
+    // "Instructies", a new basis unit (u.do, 14 November 2026).
+    'c.putdown.a.why': "طلب الإمساك بشيء: نعم، وأين يوضع.", // nieuw, nalezen
+    'c.onoff.a.why': "السؤال هل الباب مغلق: لا، وإغلاقه الآن.", // nieuw, nalezen
+    'c.fillempty.a.why': "السؤال هل صار ممتلئاً: نعم، وإفراغه.", // nieuw, nalezen
+    'c.order.a.why': "طلب فعله الآن: نعم، وماذا يأتي بعده.", // nieuw, nalezen
   },
 };
 

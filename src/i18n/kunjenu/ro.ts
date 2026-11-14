@@ -18,6 +18,8 @@ const t: CultureTranslation = {
     'kjn.u.firstday.2': "Pot să întreb la cine trebuie să mă prezint.", // nieuw, nalezen
     'kjn.u.help.1': "Pot să spun că nu înțeleg.", // nieuw, nalezen
     'kjn.u.help.2': "Pot să rog pe cineva să vorbească mai rar.", // nieuw, nalezen
+    'kjn.u.do.1': "Pot să înțeleg o instrucțiune scurtă, ca „Zet het neer”.", // nieuw, nalezen
+    'kjn.u.do.2': "Pot să spun că am terminat o treabă.", // nieuw, nalezen
     'kjn.u.tools.1': "Pot să rog pe cineva să scrie sau să-mi arate.", // nieuw, nalezen
     'kjn.u.tools.2': "Pot să repet o instrucțiune ca să verific dacă am înțeles.", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'kjn.u.tools.3': "Pot să spun că vreau să exersez olandeza.", // nieuw, nalezen
