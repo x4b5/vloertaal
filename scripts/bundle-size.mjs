@@ -44,13 +44,19 @@ import { gzipSync } from 'node:zlib';
  * work-rules pages, the publisher on every page, a sitemap of 1300 addresses) and "Wat vind je van
  * Vloertaal?" (#357) at 3610.1 kB. Nothing of it is in the first screen (start file 291.2 kB); the
  * 1140 tip pages have their own limit below. The size check on main was red from #356 on.
+ * start file 295 → 305, start 415 → 425, dist 3650 → 3850 and tip pages 4300 → 4800 (14 November
+ * 2026, the owner's choice): every sector unit at four lessons, 17 new lessons with their tips in
+ * 14 help languages, 95 word pictures and 17 × 15 tip pages, at 302.5 / 422.6 / 3797.0 / 4745.7 kB.
+ * The lessons and tips are in the start file, so it grew with them (+2.5%). The next step is still
+ * the one named above: load the long tip texts only when a tip opens, instead of raising again.
  */
 export const LIMITS = {
-  'start file': 295,
-  start: 415,
-  dist: 3650,
+  'start file': 305,
+  start: 425,
+  dist: 3850,
   // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
-  'tip pages': 4300,
+  // 14 November 2026: 93 tips in 15 languages at 4746 kB.
+  'tip pages': 4800,
 };
 
 /** A page of the workplace tips (/pl/tip/, /pl/tip/<tip>/): counted on its own, see above. */
