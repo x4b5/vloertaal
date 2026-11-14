@@ -156,6 +156,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "Waxaa la weydiiyay in baaleetku diyaar yahay: maya, iyo waxa uu weli u baahan yahay.", // nieuw, nalezen
     'c.vancheck.a.why': "Waxaa la weydiiyay in baabuurku fiican yahay: maya, iyo waxa jaban.", // nieuw, nalezen
     'c.delay.a.why': "Waxaa la weydiiyay meesha aad joogto: meesha, iyo inta aad daahayso.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "Waxaa lagu weydiiyay inaad taqaan sida: maya, weli maya, si daacad ah.", // nieuw, nalezen
+    'c.mayask.a.why': "Waxaa lagu weydiiyay inaad su'aal qabto: haa, marka horena in waqti jiro.", // nieuw, nalezen
+    'c.whereis.a.why': "Waxaa lagu weydiiyay inaad heli karto: maya, iyo codsi ah in laguu tilmaamo.", // nieuw, nalezen
   },
 };
 export default t;

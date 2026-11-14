@@ -168,11 +168,17 @@ describe('instap op niveau: no certificate via the check', () => {
 
   it('comes once every lesson "via check" was done for real', () => {
     let p = recordCheck(learner(), unit('u.help'), today);
-    const [a, b] = ids('u.help');
-    const before = completeLesson(p, a, 1, false, today);
-    expect(unitJustDone(p.completed, before.completed, a)).toBeUndefined();
-    p = completeLesson(before, b, 1, false, today);
-    expect(unitJustDone(before.completed, p.completed, b)?.id).toBe('u.help');
+    // Every lesson of the unit but the last (four lessons and the review since 14 November 2026).
+    const all = ids('u.help');
+    const last = all[all.length - 1];
+    let before = p;
+    for (const id of all.slice(0, -1)) {
+      const next = completeLesson(before, id, 1, false, today);
+      expect(unitJustDone(before.completed, next.completed, id)).toBeUndefined();
+      before = next;
+    }
+    p = completeLesson(before, last, 1, false, today);
+    expect(unitJustDone(before.completed, p.completed, last)?.id).toBe('u.help');
     expect(earnCertificates(p, today).certs?.['u.help']).toBe('2026-10-30');
   });
 });

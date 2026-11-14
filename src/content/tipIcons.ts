@@ -48,6 +48,12 @@ export const tipIcons: Readonly<Record<string, string>> = {
   // the damage you take a photo of before you drive (c.vancheck).
   '🚛': 'w.vrachtwagen',
   '📸': 'w.schade',
+  // "Hulp vragen" at four lessons (14 November 2026): a colleague looks at your work (c.howto:
+  // the eyes of "kijken"), the moment your colleague has time (c.mayask: the watch of "de tijd";
+  // not ⏱, which the work rules draw as the pay per hour) and the way out (c.whereis).
+  '👀': 'w.kijken',
+  '🕐': 'w.tijd',
+  '🚪': 'w.uitgang',
   // "Coming back step by step" (c.backtowork, 5 November 2026): the supervisor's welcome back.
   '🤗': 'w.welkomterug',
   // "Stay calm, also when it is hard" (c.calm, 5 November 2026): a slow breath out (group39).

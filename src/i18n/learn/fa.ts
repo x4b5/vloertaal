@@ -160,6 +160,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "پرسیده‌اند پالت آماده است یا نه: نه، و اینکه هنوز چه لازم دارد.", // nieuw, nalezen
     'c.vancheck.a.why': "پرسیده‌اند ون خوب است یا نه: نه، و اینکه چه چیزی خراب است.", // nieuw, nalezen
     'c.delay.a.why': "پرسیده‌اند کجایی: جا، و اینکه چقدر دیر می‌رسی.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "پرسیده‌اند می‌دانی چطور یا نه: نه، هنوز نه، و روراست گفته شده.", // nieuw, nalezen
+    'c.mayask.a.why': "پرسیده‌اند سؤالی داری یا نه: بله، و اول اینکه وقت هست یا نه.", // nieuw, nalezen
+    'c.whereis.a.why': "پرسیده‌اند می‌توانی پیدایش کنی یا نه: نه، و خواهشِ نشان دادنش.", // nieuw, nalezen
   },
 };
 

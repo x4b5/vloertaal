@@ -161,6 +161,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "Питат дали палетът е готов: не, и какво още му трябва.", // nieuw, nalezen
     'c.vancheck.a.why': "Питат дали всичко е наред с буса: не, и какво е счупено.", // nieuw, nalezen
     'c.delay.a.why': "Питат къде си: мястото и с колко ще закъснееш.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "На въпроса дали знаеш как: не, още не, казано честно.", // nieuw, nalezen
+    'c.mayask.a.why': "На въпроса дали имаш въпрос: да, а първо дали има време.", // nieuw, nalezen
+    'c.whereis.a.why': "На въпроса дали можеш да го намериш: не, и молба да го посочат.", // nieuw, nalezen
   },
 };
 

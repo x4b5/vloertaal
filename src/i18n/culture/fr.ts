@@ -397,6 +397,31 @@ const t: CultureTranslation = {
     'c.loading.o2': "Cours derrière : tu es assez rapide.", // nieuw, nalezen
     'c.loading.o3': "Passe derrière et fais signe au chauffeur.", // nieuw, nalezen
     'c.loading.w': "Derrière un camion, il y a un endroit que le chauffeur ne peut pas voir. Attendre coûte une minute. Un accident à cet endroit est très grave.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto': "Vérifie si tu fais bien", // nieuw, nalezen
+    'c.howto.b': "Tu ne sais pas bien comment faire une tâche ? Demande comment, ou demande à un collègue de regarder ton travail un moment. Vérifier, c’est normal ici, même après une semaine ou un mois. Deviner prend plus de temps que demander : s’il y a une erreur, il faut refaire. “Doe ik het zo goed?” est une question que les collègues aiment entendre.", // nieuw, nalezen
+    'c.howto.p': "Tu peux regarder un moment si c’est bien ?", // nieuw, nalezen
+    'c.howto.s': { m: "Tu fais une nouvelle tâche. Tu n’es pas sûr de bien la faire. Que fais-tu ?", f: "Tu fais une nouvelle tâche. Tu n’es pas sûre de bien la faire. Que fais-tu ?", x: "Tu fais une nouvelle tâche. Tu n’es pas sûr / sûre de bien la faire. Que fais-tu ?" }, // nieuw, nalezen
+    'c.howto.o1': "Demande à un collègue de regarder.", // nieuw, nalezen
+    'c.howto.o2': "Continue : c’est peut-être bien.", // nieuw, nalezen
+    'c.howto.o3': "Arrête et attends que quelqu’un vienne.", // nieuw, nalezen
+    'c.howto.w': "Un petit coup d’œil d’un collègue évite beaucoup de travail plus tard. Et tu apprends la tâche plus vite.", // nieuw, nalezen
+    'c.mayask': "Le bon moment pour demander", // nieuw, nalezen
+    'c.mayask.b': "C’est une question de sécurité, ou quelque chose peut mal tourner tout de suite ? Demande tout de suite, même quand ton collègue est occupé. Ce n’est pas urgent ? Attends que ton collègue ait fini, puis demande : “Heb je even tijd?” Tu as beaucoup de petites questions ? Écris-les et pose-les ensemble. Personne ne trouve une question gênante. Une erreur coûte plus de temps.", // nieuw, nalezen
+    'c.mayask.p': "Pardon de déranger. Tu as un moment ?", // nieuw, nalezen
+    'c.mayask.s': "Ton collègue est au téléphone. Tu as une question qui n’est pas urgente. Que fais-tu ?", // nieuw, nalezen
+    'c.mayask.o1': "Attends la fin de l’appel, puis demande.", // nieuw, nalezen
+    'c.mayask.o2': "Demande maintenant : une question, c’est toujours bien.", // nieuw, nalezen
+    'c.mayask.o3': "Ne demande pas : ton collègue est occupé.", // nieuw, nalezen
+    'c.mayask.w': "Attendre un moment montre du respect, et tu as quand même ta réponse. Seul le danger ne peut pas attendre.", // nieuw, nalezen
+    'c.whereis': "Tu as perdu ton chemin ? Demande", // nieuw, nalezen
+    'c.whereis.b': "Un nouveau lieu de travail est grand, et beaucoup de portes se ressemblent. Personne n’attend que tu trouves tout après un jour. Tu ne trouves pas une salle, un outil ou une personne ? Demande au premier collègue que tu vois. Beaucoup de collègues t’accompagnent, ou te montrent le chemin. Tu sais où sont les sorties ? Demande-le le premier jour : c’est pour ta sécurité.", // nieuw, nalezen
+    'c.whereis.p': { m: "Je suis perdu. Où est la cantine ?", f: "Je suis perdue. Où est la cantine ?", x: "J’ai perdu mon chemin. Où est la cantine ?" }, // nieuw, nalezen
+    'c.whereis.s': "C’est ton deuxième jour. Tu ne trouves pas le vestiaire, et ton service commence dans cinq minutes. Que fais-tu ?", // nieuw, nalezen
+    'c.whereis.o1': "Demande au premier collègue que tu vois.", // nieuw, nalezen
+    'c.whereis.o2': "Continue à chercher : c’est gênant de redemander.", // nieuw, nalezen
+    'c.whereis.o3': "Commence le travail avec tes propres vêtements.", // nieuw, nalezen
+    'c.whereis.w': "Demander prend dix secondes. Chercher sans aide peut te mettre en retard. Les collègues savent qu’il est difficile de trouver son chemin dans un nouvel endroit.", // nieuw, nalezen
   },
 };
 

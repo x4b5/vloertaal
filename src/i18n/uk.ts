@@ -731,6 +731,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "Водій чекає на накладну.", // nieuw, nalezen
     'c.loading.q': "Цей піддон готовий?", // nieuw, nalezen
     'c.loading.a': "Ні, його ще треба обмотати плівкою.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "Як це зробити?", // nieuw, nalezen
+    'w.hoe': "як", // nieuw, nalezen
+    'w.zo': "так, ось так", // nieuw, nalezen
+    'w.moeilijk': "складний", // nieuw, nalezen
+    'w.makkelijk': "простий, легкий", // nieuw, nalezen
+    'w.weten': "знати", // nieuw, nalezen
+    'w.klopt': "це правильно", // nieuw, nalezen
+    's.howto.1': "Як це зробити?", // nieuw, nalezen
+    's.howto.2': "Це для мене складно.", // nieuw, nalezen
+    's.howto.3': "Я так правильно роблю?", // nieuw, nalezen
+    'c.howto.q': "Ти знаєш, як це робити?", // nieuw, nalezen
+    'c.howto.a': "Ні, цього я ще не знаю.", // nieuw, nalezen
+    'l.mayask': "Можна щось запитати?", // nieuw, nalezen
+    'w.vragen': "питати", // nieuw, nalezen
+    'w.wie': "хто", // nieuw, nalezen
+    'w.even': "на хвилинку", // nieuw, nalezen
+    'w.tijd': "час", // nieuw, nalezen
+    'w.storen': "заважати (тому, хто зайнятий)", // nieuw, nalezen
+    'w.twijfelen': "сумніватися (ти не знаєш напевно)", // nieuw, nalezen
+    's.mayask.1': "Можна щось запитати?", // nieuw, nalezen
+    's.mayask.2': "Вибач, що заважаю.", // nieuw, nalezen
+    's.mayask.3': "Хто може мені допомогти?", // nieuw, nalezen
+    'c.mayask.q': "У тебе є питання?", // nieuw, nalezen
+    'c.mayask.a': "Так. Маєш хвилинку?", // nieuw, nalezen
+    'l.whereis': "Де це?", // nieuw, nalezen
+    'w.hier': "тут", // nieuw, nalezen
+    'w.daar': "там", // nieuw, nalezen
+    'w.kwijt': "загублений (ти не можеш це знайти)", // nieuw, nalezen
+    'w.uitgang': "вихід", // nieuw, nalezen
+    'w.aanwijzen': "показувати рукою (показати, де це)", // nieuw, nalezen
+    'w.naast': "біля, поруч із", // nieuw, nalezen
+    's.whereis.1': { m: "Я заблукав.", f: "Я заблукала.", x: "Я не можу знайти дорогу." }, // nieuw, nalezen
+    's.whereis.2': "Де вихід?", // nieuw, nalezen
+    's.whereis.3': "Туалет там, біля їдальні.", // nieuw, nalezen
+    'c.whereis.q': "Можеш це знайти?", // nieuw, nalezen
+    'c.whereis.a': "Ні. Можеш показати, де це?", // nieuw, nalezen
   },
 };
 

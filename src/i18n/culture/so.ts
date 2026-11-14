@@ -398,6 +398,31 @@ const t: CultureTranslation = {
     'c.loading.o2': "Gadaashiisa orod ku mar: dhakhso ayaad tahay.", // nieuw, nalezen
     'c.loading.o3': "Gadaashiisa mar oo darawalka u gacan haadi.", // nieuw, nalezen
     'c.loading.w': "Gaariga xamuulka gadaashiisu waa meel uusan darawalku arki karin. Sugiddu waxay qaadataa hal daqiiqo. Shil halkaas ka dhaca aad buu u daran yahay.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto': "Hubi inaad si sax ah u samaynayso", // nieuw, nalezen
+    'c.howto.b': "Ma hubtid sida hawl loo qabto? Weydii sida, ama saaxiib shaqo ka codso inuu wax yar eego shaqadaada. Hubintu halkan waa caadi, xataa hal toddobaad ama hal bil kadib. Qiyaasiddu waxay qaadataa waqti ka badan weydiinta: shaqo khaldan waa in mar kale la qabtaa. “Doe ik het zo goed?” waa su'aal ay saaxiibbada shaqadu jecel yihiin inay maqlaan.", // nieuw, nalezen
+    'c.howto.p': "Wax yar ma eegi kartaa inay sax tahay?", // nieuw, nalezen
+    'c.howto.s': "Waxaad qabanaysaa hawl cusub. Ma hubtid inaad si sax ah u qabanayso. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.howto.o1': "Saaxiib shaqo ka codso inuu eego.", // nieuw, nalezen
+    'c.howto.o2': "Sii wad: malaha waa sax.", // nieuw, nalezen
+    'c.howto.o3': "Jooji oo sug ilaa qof yimaado.", // nieuw, nalezen
+    'c.howto.w': "Hal eegmo gaaban oo saaxiib shaqo ayaa kaa badbaadinaysa shaqo badan oo dambe. Hawshana si ka dhakhso badan ayaad u baranaysaa.", // nieuw, nalezen
+    'c.mayask': "Waqtiga saxda ah ee wax la weydiiyo", // nieuw, nalezen
+    'c.mayask.b': "Ma ammaanka ayay ku saabsan tahay, mise wax baa hadda khaldami kara? Isla markiiba weydii, xataa marka saaxiibkaaga shaqadu mashquul yahay. Degdeg ma aha? Sug ilaa saaxiibkaaga shaqadu dhammeeyo, kadibna weydii: “Heb je even tijd?” Su'aalo yaryar oo badan ma qabtaa? Qor oo mar keliya wada weydii. Cidna su'aal kama xumaato. Khalad ayaa waqti ka badan qaata.", // nieuw, nalezen
+    'c.mayask.p': "Waan ka xumahay inaan ku dhibo. Wax yar oo waqti ah ma haysaa?", // nieuw, nalezen
+    'c.mayask.s': "Saaxiibkaaga shaqadu taleefan ayuu ku hadlayaa. Waxaad qabtaa su'aal aan degdeg ahayn. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.mayask.o1': "Sug ilaa wicitaanku dhammaado, kadibna weydii.", // nieuw, nalezen
+    'c.mayask.o2': "Hadda weydii: su'aal had iyo jeer waa wanaagsan tahay.", // nieuw, nalezen
+    'c.mayask.o3': "Ha weydiin: saaxiibkaaga shaqadu waa mashquul.", // nieuw, nalezen
+    'c.mayask.w': "In yar oo aad sugto waxay muujinaysaa ixtiraam, jawaabtaadana weli waad helaysaa. Khatarta oo keliya ayaan sugi karin.", // nieuw, nalezen
+    'c.whereis': "Ma lumtay? Iska weydii", // nieuw, nalezen
+    'c.whereis.b': "Goob shaqo oo cusub way weyn tahay, albaabbo badanna waa isku eg yihiin. Cidna kaama filayso inaad wax walba hesho hal maalin kadib. Ma heli kartid qol, qalab ama qof? Weydii saaxiibka shaqada ee ugu horreeya ee aad aragto. Saaxiibbo shaqo oo badan ayaa ku raaca, ama jidka kuu tilmaama. Ma taqaan meesha ay albaabbada laga baxo ku yaalliin? Weydii maalintaada ugu horraysa: taasi waa ammaankaaga.", // nieuw, nalezen
+    'c.whereis.p': "Jidkii ayaa iga lumay. Xaggee ayay ku taal makhaayadda shaqadu?", // nieuw, nalezen
+    'c.whereis.s': "Waa maalintaada labaad. Ma heli kartid qolka dharka lagu beddesho, wareeggaaga shaqaduna wuxuu bilaabmayaa shan daqiiqo kadib. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.whereis.o1': "Weydii saaxiibka shaqada ee ugu horreeya ee aad aragto.", // nieuw, nalezen
+    'c.whereis.o2': "Sii wad raadinta: mar kale weydiintu waa ceeb.", // nieuw, nalezen
+    'c.whereis.o3': "Shaqada ku bilow dharkaaga gaarka ah.", // nieuw, nalezen
+    'c.whereis.w': "Weydiintu waxay qaadataa toban ilbiriqsi. Inaad keligaa raadiso way ku daahin kartaa. Saaxiibbada shaqadu way og yihiin in meel cusub ay adag tahay in jidka laga helo.", // nieuw, nalezen
   },
 };
 export default t;

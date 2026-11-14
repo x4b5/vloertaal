@@ -161,6 +161,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "እቲ ፓለት ተዳልዩ ድዩ ተሓቲቱ: ኣይፋል፡ ገና እንታይ ከም ዘድልዮ ድማ።", // nieuw, nalezen
     'c.vancheck.a.why': "እታ ቫን ደሓን እንተ ኾነት ተሓቲቱ: ኣይፋል፡ እንታይ ከም ዝተሰብረ ድማ።", // nieuw, nalezen
     'c.delay.a.why': "ኣበይ ምህላው ተሓቲቱ: እቲ ቦታ፡ ክንደይ ምድንጓይ ከም ዘሎ ድማ።", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "ብኸመይ ከም ዝግበር ይፍለጥ ድዩ ምስ ዝሕተት፡ እዚ መልሲ ብቕንዕና «ኣይፋል፡ ገና» ይብል።", // nieuw, nalezen
+    'c.mayask.a.why': "ሕቶ ኣሎ ድዩ ምስ ዝሕተት፡ እዚ መልሲ «እወ» ይብል፡ ቅድም ድማ ግዜ እንተሎ ይሓትት።", // nieuw, nalezen
+    'c.whereis.a.why': "ክርከብ ይከኣል ድዩ ምስ ዝሕተት፡ እዚ መልሲ «ኣይፋል» ይብል፡ ክምልከት ድማ ይሓትት።", // nieuw, nalezen
   },
 };
 

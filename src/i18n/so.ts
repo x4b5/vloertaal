@@ -731,6 +731,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "Darawalku wuxuu sugayaa warqadda xamuulka.", // nieuw, nalezen
     'c.loading.q': "Baaleetkani ma diyaar baa?", // nieuw, nalezen
     'c.loading.a': "Maya, weli waa in balaastig lagu duubaa.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "Sideen tan u sameeyaa?", // nieuw, nalezen
+    'w.hoe': "sidee", // nieuw, nalezen
+    'w.zo': "sidan, habkan", // nieuw, nalezen
+    'w.moeilijk': "adag", // nieuw, nalezen
+    'w.makkelijk': "fudud", // nieuw, nalezen
+    'w.weten': "ogaan", // nieuw, nalezen
+    'w.klopt': "waa sax", // nieuw, nalezen
+    's.howto.1': "Sideen tan u sameeyaa?", // nieuw, nalezen
+    's.howto.2': "Tani way igu adag tahay.", // nieuw, nalezen
+    's.howto.3': "Ma si fiican ayaan sidan u samaynayaa?", // nieuw, nalezen
+    'c.howto.q': "Ma taqaan sida tan loo sameeyo?", // nieuw, nalezen
+    'c.howto.a': "Maya, taas weli ma aqaan.", // nieuw, nalezen
+    'l.mayask': "Wax ma ku weydiin karaa?", // nieuw, nalezen
+    'w.vragen': "weydiin", // nieuw, nalezen
+    'w.wie': "yaa", // nieuw, nalezen
+    'w.even': "wax yar, in yar", // nieuw, nalezen
+    'w.tijd': "waqtiga", // nieuw, nalezen
+    'w.storen': "dhibid (qof mashquul ah oo la dhibo)", // nieuw, nalezen
+    'w.twijfelen': "shakiyid (ma hubtid)", // nieuw, nalezen
+    's.mayask.1': "Wax ma ku weydiin karaa?", // nieuw, nalezen
+    's.mayask.2': "Waan ka xumahay inaan ku dhibo.", // nieuw, nalezen
+    's.mayask.3': "Yaa i caawin kara?", // nieuw, nalezen
+    'c.mayask.q': "Su'aal ma qabtaa?", // nieuw, nalezen
+    'c.mayask.a': "Haa. Wax yar oo waqti ah ma haysaa?", // nieuw, nalezen
+    'l.whereis': "Waa xaggee?", // nieuw, nalezen
+    'w.hier': "halkan", // nieuw, nalezen
+    'w.daar': "halkaas", // nieuw, nalezen
+    'w.kwijt': "lumay (ma heli kartid)", // nieuw, nalezen
+    'w.uitgang': "albaabka laga baxo", // nieuw, nalezen
+    'w.aanwijzen': "tilmaamid (muuji meesha uu ku yaal)", // nieuw, nalezen
+    'w.naast': "agtiisa, dhinaciisa", // nieuw, nalezen
+    's.whereis.1': "Jidkii ayaa iga lumay.", // nieuw, nalezen
+    's.whereis.2': "Xaggee ayuu ku yaal albaabka laga baxo?", // nieuw, nalezen
+    's.whereis.3': "Musqushu halkaas ayay ku taal, makhaayadda shaqada agteeda.", // nieuw, nalezen
+    'c.whereis.q': "Ma heli kartaa?", // nieuw, nalezen
+    'c.whereis.a': "Maya. Ma ii tilmaami kartaa?", // nieuw, nalezen
   },
 };
 

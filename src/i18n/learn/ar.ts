@@ -161,6 +161,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "السؤال هل المنصة جاهزة: لا، وما ينقصها بعد.", // nieuw, nalezen
     'c.vancheck.a.why': "السؤال هل الشاحنة بخير: لا، وما هو المكسور.", // nieuw, nalezen
     'c.delay.a.why': "السؤال عن المكان: المكان، ومدة التأخير.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "السؤال: هل الطريقة معروفة؟ هذا الرد يقول بصدق: لا، ليس بعد.", // nieuw, nalezen
+    'c.mayask.a.why': "السؤال: هل هناك سؤال؟ هذا الرد يقول نعم، ويسأل أولاً إن كان هناك وقت.", // nieuw, nalezen
+    'c.whereis.a.why': "السؤال: هل يمكن إيجاده؟ هذا الرد يقول لا، ويطلب الإشارة إليه.", // nieuw, nalezen
   },
 };
 

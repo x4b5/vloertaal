@@ -18,7 +18,8 @@ export { communicateUnit, feedbackUnit, teamworkUnit } from './cultureUnits';
 
 /** The "Smart tools" unit sits right after "Asking for help" (l.understand), so its tips do too. */
 const isToolsTip = (t: CultureTip) => toolsUnit.lessons.some((l) => l.id === t.lessonId);
-const afterHelp = baseTips.findIndex((t) => t.lessonId === 'l.understand') + 1;
+// After the last lesson of "Asking for help" (l.whereis since 14 November 2026, l.understand before).
+const afterHelp = baseTips.findIndex((t) => t.lessonId === 'l.whereis') + 1;
 /** "Numbers and details" sits right before "Time and schedule" (l.shift), so its tips do too. */
 const isDataTip = (t: CultureTip) => dataUnit.lessons.some((l) => l.id === t.lessonId);
 const beforeTime = baseTips.findIndex((t) => t.lessonId === 'l.shift');

@@ -161,6 +161,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "Питають, чи піддон готовий: ні, і що ще треба зробити.", // nieuw, nalezen
     'c.vancheck.a.why': "Питають, чи з фургоном усе гаразд: ні, і що зламано.", // nieuw, nalezen
     'c.delay.a.why': "Питають, де ти: місце і на скільки запізнишся.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "Питають, чи ти знаєш, як: ні, ще ні, сказано чесно.", // nieuw, nalezen
+    'c.mayask.a.why': "Питають, чи є питання: так, а спершу — чи є час.", // nieuw, nalezen
+    'c.whereis.a.why': "Питають, чи можеш ти це знайти: ні, і прохання показати, де це.", // nieuw, nalezen
   },
 };
 

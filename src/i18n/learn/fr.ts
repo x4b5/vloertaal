@@ -159,6 +159,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "On demande si la palette est prête : non, et ce qu’il faut encore.", // nieuw, nalezen
     'c.vancheck.a.why': "On demande si la camionnette va bien : non, et ce qui est cassé.", // nieuw, nalezen
     'c.delay.a.why': "On demande où tu es : l’endroit, et combien de retard tu auras.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "On demande si tu sais comment : non, pas encore, dit honnêtement.", // nieuw, nalezen
+    'c.mayask.a.why': "On demande si tu as une question : oui, et d’abord s’il y a le temps.", // nieuw, nalezen
+    'c.whereis.a.why': "On demande si tu trouves : non, et une demande de montrer du doigt.", // nieuw, nalezen
   },
 };
 

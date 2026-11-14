@@ -91,7 +91,12 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // 242 with "Moet het of mag het?" (l.mustmay, 8 November 2026): its 6 words are abstract.
     // 249 with the sector lessons of 14 November 2026: de overdracht, aflossen, verward, anders,
     // voorzichtig, wachten and de millimeter.
-    expect(abstract.length).toBe(249);
+    // 257 with "Hulp vragen" at four lessons (l.howto, l.mayask, l.whereis, 14 November 2026): hoe, zo,
+    // weten, dat klopt, even and twijfelen have no picture; moeilijk and makkelijk a memory picture
+    // only. The other ten words are drawn (group51).
+    for (const id of ['w.hoe', 'w.zo', 'w.weten', 'w.klopt', 'w.even', 'w.twijfelen', 'w.moeilijk', 'w.makkelijk']) expect(abstract).toContain(id);
+    for (const id of ['w.vragen', 'w.wie', 'w.tijd', 'w.storen', 'w.hier', 'w.daar', 'w.kwijt', 'w.uitgang', 'w.aanwijzen', 'w.naast']) expect(abstract).not.toContain(id);
+    expect(abstract.length).toBe(257);
     // Of the 191 (5 November 2026, the owner's trial of moving pictures, tests/motionPictures.test.ts):
     // 178 with no picture at all, 11 memory pictures ('hook') and 2 moving pictures ('motion':
     // "ontruimen" and "bijna", which were abstract). The 2 still never stand in a picture choice.
@@ -101,9 +106,10 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // 179 with no picture, 13 memory pictures (with opbouwen, halve dagen), 14 moving: 206. With
     // "Goed communiceren" 18 and "Feedback en overleg" 12 more with no picture: 209, and 236 in all.
     // "Moet het of mag het?" (8 November 2026) 6 more: 215, and 242 in all.
-    // The sector lessons of 14 November 2026: 7 more, 222.
-    expect(allWords.filter((w) => w.picture === false)).toHaveLength(222);
-    expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(13);
+    // The sector lessons of 14 November 2026: 7 more, 222. "Hulp vragen" at four lessons: 6 more
+    // with no picture (228) and 2 more memory pictures (moeilijk, makkelijk: 15).
+    expect(allWords.filter((w) => w.picture === false)).toHaveLength(228);
+    expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(15);
     expect(allWords.filter((w) => w.picture === 'motion').map((w) => w.id).sort()).toEqual([
       'w.automatisch', 'w.bijna', 'w.daarna', 'w.doorgeven', 'w.eerst', 'w.kiezen', 'w.ontruimen', 'w.ruilen',
       'w.tellen', 'w.uitloggen', 'w.verbeteren', 'w.verlengen', 'w.versturen', 'w.voordoen',

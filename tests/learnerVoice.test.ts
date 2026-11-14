@@ -117,6 +117,10 @@ const PENDING_RECORDING = new Set<string>([
   'Nee, er moet nog folie om.',
   'Nee, de spiegel is kapot.',
   'Bij de omleiding. Ik ben tien minuten later.',
+  // "Hulp vragen" at four lessons (l.howto, l.mayask, l.whereis, 14 November 2026):
+  'Nee, dat weet ik nog niet.',
+  'Ja. Heb je even tijd?',
+  'Nee. Kun je het aanwijzen?',
 ]);
 
 

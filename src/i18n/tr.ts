@@ -731,6 +731,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "Şoför irsaliyeyi bekliyor.", // nieuw, nalezen
     'c.loading.q': "Bu palet hazır mı?", // nieuw, nalezen
     'c.loading.a': "Hayır, daha etrafına streç film sarılması gerekiyor.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "Bu nasıl yapılır?", // nieuw, nalezen
+    'w.hoe': "nasıl", // nieuw, nalezen
+    'w.zo': "böyle, bu şekilde", // nieuw, nalezen
+    'w.moeilijk': "zor", // nieuw, nalezen
+    'w.makkelijk': "kolay", // nieuw, nalezen
+    'w.weten': "bilmek", // nieuw, nalezen
+    'w.klopt': "bu doğru", // nieuw, nalezen
+    's.howto.1': "Bu nasıl yapılır?", // nieuw, nalezen
+    's.howto.2': "Bu benim için zor.", // nieuw, nalezen
+    's.howto.3': "Böyle doğru mu yapıyorum?", // nieuw, nalezen
+    'c.howto.q': "Bunun nasıl yapıldığını biliyor musun?", // nieuw, nalezen
+    'c.howto.a': "Hayır, bunu henüz bilmiyorum.", // nieuw, nalezen
+    'l.mayask': "Bir şey sorabilir miyim?", // nieuw, nalezen
+    'w.vragen': "sormak", // nieuw, nalezen
+    'w.wie': "kim", // nieuw, nalezen
+    'w.even': "biraz, kısa bir süre", // nieuw, nalezen
+    'w.tijd': "zaman", // nieuw, nalezen
+    'w.storen': "rahatsız etmek (meşgul olan birini)", // nieuw, nalezen
+    'w.twijfelen': "tereddüt etmek (emin değilsin)", // nieuw, nalezen
+    's.mayask.1': "Bir şey sorabilir miyim?", // nieuw, nalezen
+    's.mayask.2': "Pardon, rahatsız ediyorum.", // nieuw, nalezen
+    's.mayask.3': "Bana kim yardım edebilir?", // nieuw, nalezen
+    'c.mayask.q': "Soracağın bir şey var mı?", // nieuw, nalezen
+    'c.mayask.a': "Evet. Biraz vaktin var mı?", // nieuw, nalezen
+    'l.whereis': "Nerede?", // nieuw, nalezen
+    'w.hier': "burada", // nieuw, nalezen
+    'w.daar': "orada", // nieuw, nalezen
+    'w.kwijt': "kayıp (bulamıyorsun)", // nieuw, nalezen
+    'w.uitgang': "çıkış", // nieuw, nalezen
+    'w.aanwijzen': "parmakla göstermek (nerede olduğunu göstermek)", // nieuw, nalezen
+    'w.naast': "yanında", // nieuw, nalezen
+    's.whereis.1': "Yolumu kaybettim.", // nieuw, nalezen
+    's.whereis.2': "Çıkış nerede?", // nieuw, nalezen
+    's.whereis.3': "Tuvalet orada, yemekhanenin yanında.", // nieuw, nalezen
+    'c.whereis.q': "Bulabiliyor musun?", // nieuw, nalezen
+    'c.whereis.a': "Hayır. Gösterebilir misin?", // nieuw, nalezen
   },
 };
 

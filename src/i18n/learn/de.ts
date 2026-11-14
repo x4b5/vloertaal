@@ -160,6 +160,10 @@ const t: CultureTranslation = {
     'c.loading.a.why': "Gefragt, ob die Palette fertig ist: nein, und was noch fehlt.", // nieuw, nalezen
     'c.vancheck.a.why': "Gefragt, ob der Lieferwagen in Ordnung ist: nein, und was kaputt ist.", // nieuw, nalezen
     'c.delay.a.why': "Gefragt, wo du bist: der Ort, und wie viel später du kommst.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'c.howto.a.why': "Gefragt, ob man weiß, wie es geht: Diese Antwort sagt ehrlich nein, noch nicht.", // nieuw, nalezen
+    'c.mayask.a.why': "Gefragt, ob es eine Frage gibt: Ja, und zuerst die Frage, ob Zeit ist.", // nieuw, nalezen
+    'c.whereis.a.why': "Gefragt, ob man es findet: Nein, und die Bitte, es zu zeigen.", // nieuw, nalezen
   },
 };
 

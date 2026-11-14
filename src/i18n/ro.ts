@@ -728,6 +728,43 @@ const lang: HelpLanguageSource = {
     's.loading.3': "Șoferul așteaptă scrisoarea de transport.", // nieuw, nalezen
     'c.loading.q': "E gata paletul ăsta?", // nieuw, nalezen
     'c.loading.a': "Nu, mai trebuie pusă folie în jurul lui.", // nieuw, nalezen
+    // "Hulp vragen" at four lessons (14 November 2026).
+    'l.howto': "Cum se face asta?", // nieuw, nalezen
+    'w.hoe': "cum", // nieuw, nalezen
+    'w.zo': "așa, în felul ăsta", // nieuw, nalezen
+    'w.moeilijk': "greu, dificil", // nieuw, nalezen
+    'w.makkelijk': "ușor", // nieuw, nalezen
+    'w.weten': "a ști", // nieuw, nalezen
+    'w.klopt': "așa e, e corect", // nieuw, nalezen
+    's.howto.1': "Cum se face asta?", // nieuw, nalezen
+    's.howto.2': "Asta e greu pentru mine.", // nieuw, nalezen
+    's.howto.3': "Fac bine așa?", // nieuw, nalezen
+    'c.howto.q': "Știi cum se face asta?", // nieuw, nalezen
+    'c.howto.a': "Nu, asta nu știu încă.", // nieuw, nalezen
+    'l.mayask': "Pot să întreb ceva?", // nieuw, nalezen
+    'w.vragen': "a întreba", // nieuw, nalezen
+    'w.wie': "cine", // nieuw, nalezen
+    'w.even': "puțin, un moment", // nieuw, nalezen
+    'w.tijd': "timpul", // nieuw, nalezen
+    'w.storen': "a deranja (pe cineva care e ocupat)", // nieuw, nalezen
+    'w.twijfelen': "a avea îndoieli (nu știi sigur)", // nieuw, nalezen
+    's.mayask.1': "Pot să întreb ceva?", // nieuw, nalezen
+    's.mayask.2': "Scuze că deranjez.", // nieuw, nalezen
+    's.mayask.3': "Cine mă poate ajuta?", // nieuw, nalezen
+    'c.mayask.q': "Ai o întrebare?", // nieuw, nalezen
+    'c.mayask.a': "Da. Ai puțin timp?", // nieuw, nalezen
+    'l.whereis': "Unde este?", // nieuw, nalezen
+    'w.hier': "aici", // nieuw, nalezen
+    'w.daar': "acolo", // nieuw, nalezen
+    'w.kwijt': "pierdut (nu îl găsești)", // nieuw, nalezen
+    'w.uitgang': "ieșirea", // nieuw, nalezen
+    'w.aanwijzen': "a arăta cu degetul (a arăta unde este)", // nieuw, nalezen
+    'w.naast': "lângă", // nieuw, nalezen
+    's.whereis.1': "M-am rătăcit.", // nieuw, nalezen
+    's.whereis.2': "Unde este ieșirea?", // nieuw, nalezen
+    's.whereis.3': "Toaleta e acolo, lângă cantină.", // nieuw, nalezen
+    'c.whereis.q': "Găsești?", // nieuw, nalezen
+    'c.whereis.a': "Nu. Poți să-mi arăți?", // nieuw, nalezen
   },
 };
 
