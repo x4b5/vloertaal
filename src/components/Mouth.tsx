@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { onSpeech, onSpeechLength } from '../lib/audio';
 import { learnerWantsStill } from '../lib/calm';
+import { CLIP_TAIL_S, spokenMs } from '../lib/clipTime';
 import { endPose, mixPose, REST, wordSegments, type Klank, type MouthPose, type WordSegment } from '../content/klankMond';
 
 /**
@@ -228,8 +229,8 @@ export function poseAtTime(k: Klank, t: number, slow: Stretch, holdEnd?: number)
 /** Every sound of a word at this many ms per weight unit, when the word's length is not known (the phone's voice). */
 export const WORD_UNIT_MS = 95;
 
-/** The silence an ElevenLabs recording ends with (measured: 0.3–0.35 s at the recorded rate), not part of the word. */
-export const CLIP_TAIL_S = 0.32;
+// The recording's silent end and its spoken length now live in src/lib/clipTime.ts (the word light uses them too).
+export { CLIP_TAIL_S, spokenMs };
 
 /** The steps around a word: the mouth goes from the word's last sound to rest, waits, and back to the card's sound. */
 export const WORD_STEPS = { release: 240, pause: 300, back: 420 };
@@ -241,9 +242,6 @@ const WORD_MOVE_SHARE = 0.45;
 /** How long the word is said, in ms, when nothing reports it: the sum of its sounds. */
 export const nominalWordMs = (segs: WordSegment[], slow: Stretch) =>
   segs.reduce((n, s) => n + s.weight, 0) * WORD_UNIT_MS * stretchOf(slow);
-
-/** The word's spoken part of a recording, in ms as played: the clip without its silent end, at its rate. */
-export const spokenMs = (clipSeconds: number, rate: number) => Math.max(250, ((clipSeconds - CLIP_TAIL_S) / (rate || 1)) * 1000);
 
 /** Where a sound of a word is `u` (0–1) through it: its start, gliding to its end (ui, ij, ou fully; ee, eu, oo at the end). */
 function segmentPose(seg: WordSegment, u: number): MouthPose {

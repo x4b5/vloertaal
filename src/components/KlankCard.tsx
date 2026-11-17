@@ -6,11 +6,13 @@ import { DEVICE, voiceFor, type VoiceRef } from '../lib/voices';
 import { WordPicture } from '../pictures';
 import { klankHowId, partLetters, wordSegments, type Klank } from '../content/klankMond';
 import { Bi } from './Bi';
-import { SlowIcon } from './Icons';
 import { Mouth, MouthAnimation, useMouthMotion } from './Mouth';
 import { MouthSide } from './MouthSide';
 import { PlayName, SpeakButton } from './SpeakButton';
 import { useVoices } from './useVoices';
+import { useSpeakSpeed } from './useSpeakSpeed';
+import { SpeedSlider } from './SpeedSlider';
+import { SPEED_MIN, SPEED_STEP, speedLabel } from '../lib/speakSpeed';
 import '../klank.css';
 
 /**
@@ -96,10 +98,8 @@ export function GlideSteps({ klank, size = 72 }: { klank: Klank; size?: number }
   );
 }
 
-/** The speed of the sound and the mouth: from as it is (1) to a quarter (the slider's left end). Kept while the app is open, from card to card. */
-export const SPEED_MIN = 0.25;
-export const SPEED_STEP = 0.05;
-let lastSpeed = 1;
+/** The speed of the sound and the mouth: one value for the whole app (src/lib/speakSpeed.ts), kept while the app is open, from card to card. */
+export { SPEED_MIN, SPEED_STEP, speedLabel };
 
 /**
  * The two sliders of the card (the owner's request, 4 November 2026, instead of "Langzaam"):
@@ -116,11 +116,7 @@ export function KlankCard({ klank, lang, deviceSound = false, compact = false, o
   const voice = klankVoice();
   const sound = soundText(klank, voice, deviceSound);
   const motion = useMouthMotion(klank, [sound.text, klank.word.nl]);
-  const [speed, setSpeedState] = useState(lastSpeed);
-  const setSpeed = (v: number) => {
-    lastSpeed = v;
-    setSpeedState(v);
-  };
+  const [speed] = useSpeakSpeed();
   const [at, setAt] = useState<number | null>(null);
   const say = (text: string) => {
     motion.play(1 / speed, text === klank.word.nl);
@@ -175,22 +171,7 @@ export function KlankCard({ klank, lang, deviceSound = false, compact = false, o
         <span className="klank-word-nl"><MarkedWord word={klank.word.nl} klank={klank} now={motion.part} /></span>
         <SpeakButton text={klank.word.nl} help={lang} voice={voice} speed={speed} onPlay={onHeard} />
       </div>
-      <label className="klank-slider klank-speed" dir="ltr">
-        <span className="sr-only"><Bi text={ui('klankSpeed', lang)} /></span>
-        <SlowIcon size={28} />
-        <input
-          type="range" min={SPEED_MIN} max={1} step={SPEED_STEP} value={speed}
-          onChange={(e) => setSpeed(Number(e.currentTarget.value))}
-        />
-        <span className="klank-speed-now" aria-hidden>{speedLabel(speed)}</span>
-      </label>
+      <SpeedSlider lang={lang} />
     </div>
   );
-}
-
-/** The speed as shown beside the slider: 1×, ¾×, ½×, ¼× (and 0.6× between). */
-export function speedLabel(v: number): string {
-  const named: Record<string, string> = { '1': '1×', '0.75': '¾×', '0.5': '½×', '0.25': '¼×' };
-  const key = String(Math.round(v * 100) / 100);
-  return named[key] ?? `${key.replace(/^0/, '')}×`;
 }

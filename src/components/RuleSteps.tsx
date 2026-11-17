@@ -8,6 +8,7 @@ import { ruleIconId } from '../content/regels/ruleIcons';
 import { ruleAdviceLine, ruleStaleLine } from '../content/regels/disclaimer';
 import { langTag, said, ui } from '../i18n';
 import { autoSpeakLong, surelySilent } from '../lib/audio';
+import { getSpeakSpeed } from '../lib/speakSpeed';
 import { sayMode } from '../lib/sayAloud';
 import { sentences } from '../lib/dutch';
 import type { Exercise, RuleExercise, RuleKind } from '../lib/exercises';
@@ -16,6 +17,9 @@ import { Character, MeAvatar, useTalking } from './Characters';
 import { type Answer, ChoiceGrid, moodFor, reactClass, SayAloudLine, useSayAloud } from './Exercises';
 import { CheckIcon, InfoIcon } from './Icons';
 import { SpeakButton } from './SpeakButton';
+import { SpokenWords } from './SpokenWords';
+import { SpeedSlider } from './SpeedSlider';
+import { useSpeakSpeed } from './useSpeakSpeed';
 import { DialectLine } from './Dialect';
 import { WordPicture } from '../pictures';
 
@@ -51,8 +55,8 @@ const NAMES: Record<RuleCharacter, string> = { bram: 'Bram', amina: 'Amina', hen
 /** One Dutch speaker for a text block (hidden when nothing can say it). `name`: what a screen
  *  reader calls it ("Afspelen: Rooster") when the whole text is right beside it anyway (a drawn
  *  card: its rows are read as a list, not twice); default "Afspelen: <the text>". */
-function Say({ text, lang, voice, glyph = true, name }: { text: string; lang?: HelpLanguage; voice?: VoiceRef; glyph?: boolean; name?: string }) {
-  return <SpeakButton text={text} long needsDevice glyph={glyph} help={lang} voice={voice} label={name ? speakerName(name, lang) : undefined} />;
+function Say({ text, lang, voice, glyph = true, name, speed }: { text: string; lang?: HelpLanguage; voice?: VoiceRef; glyph?: boolean; name?: string; speed?: number }) {
+  return <SpeakButton text={text} long needsDevice glyph={glyph} help={lang} voice={voice} label={name ? speakerName(name, lang) : undefined} speed={speed} />;
 }
 
 /** The screen-reader name of a speaker that reads a whole drawn card: "Afspelen: Loonstrook, Maart". */
@@ -305,11 +309,18 @@ export function WhoAsk({ ex, lang, locked, onAnswer, verdict, run, misses }: Rul
 }
 
 /** "Zo zeg je het": the situation, and the Dutch sentence "you" say, in a speech bubble. */
-export function ModelLine({ ex, lang, onAnswer, soundOff = false }: RuleProps<'model'> & { soundOff?: boolean }) {
+export function ModelLine({ ex, lang, onAnswer, soundOff = false, onSayShown }: RuleProps<'model'> & {
+  soundOff?: boolean;
+  /** The say-it line has shown: Continue comes a moment later (src/lib/goHold.ts). */
+  onSayShown?: () => void;
+}) {
   const { step } = ex;
   // "Zeg het hardop" under the sentence (the owner, 5 November 2026), in Dutch only: it plays by
   // itself, so the line shows when it has sounded (src/lib/sayAloud.ts), softly without sound.
+  // The speed chosen on the slider (src/lib/speakSpeed.ts), shared with the other cards that have one.
+  const [speed] = useSpeakSpeed();
   const sayLine = useSayAloud(step.nl, sayMode(soundOff, surelySilent(step.nl)), () => 0);
+  useEffect(() => { if (sayLine.shown) onSayShown?.(); }, [sayLine.shown]); // eslint-disable-line react-hooks/exhaustive-deps
   // "You" say it: a neutral person icon, with the voice of the learner's character. A recording
   // of the exact sentence is used when there is one (most "Zo zeg je het" lines of the course
   // tips have one); otherwise the phone's voice.
@@ -319,7 +330,8 @@ export function ModelLine({ ex, lang, onAnswer, soundOff = false }: RuleProps<'m
   useEffect(() => {
     onAnswer({ correct: true });
     if (said.current === step.nl) return;
-    if (autoSpeakLong(step.nl, { voice })) said.current = step.nl;
+    // At the speed the learner chose on the slider below (read now: a change of the slider does not say it again).
+    if (autoSpeakLong(step.nl, { voice, speed: getSpeakSpeed() })) said.current = step.nl;
   }, [step, voice, onAnswer]);
   return (
     <div className="exercise rule-model">
@@ -332,10 +344,12 @@ export function ModelLine({ ex, lang, onAnswer, soundOff = false }: RuleProps<'m
         <div className="tip-say-row">
           <span className="tip-char rule-me"><MeAvatar /><span className="rule-me-name" lang="nl">Jij</span></span>
           <div className="speaker-bubble tip-bubble">
-            <span className="tip-phrase-nl rule-model-nl" lang="nl">{step.nl}</span>
-            <Say text={step.nl} lang={lang} voice={voice} />
+            <span className="tip-phrase-nl rule-model-nl" lang="nl"><SpokenWords text={step.nl} /></span>
+            <Say text={step.nl} lang={lang} voice={voice} speed={speed} />
           </div>
         </div>
+        {/* Slow the voice down to say it along with the lit words. */}
+        <SpeedSlider lang={lang} />
         <SayAloudLine {...sayLine} lang={lang} dutchOnly />
       </div>
     </div>

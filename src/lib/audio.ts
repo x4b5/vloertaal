@@ -57,8 +57,8 @@ export function setQuietAudio(quiet: boolean): void {
  * Speech that starts by itself (a new word on screen, the right answer after Check, a tile or
  * card that says its word when picked). Silent in "Without sound"; buttons use speak().
  */
-export function autoSpeak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef): void {
-  if (!quietAudio) speak(text, slow, lang, voice);
+export function autoSpeak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef, speed = 1): void {
+  if (!quietAudio) speak(text, slow, lang, voice, speed);
 }
 
 /**
@@ -532,6 +532,8 @@ export interface LongSpeech {
   /** Who says it (a character's voice); default: the learner's chosen voice. */
   voice?: VoiceRef;
   slow?: boolean;
+  /** The speed the learner chose (src/lib/speakSpeed.ts): 1 as it is, down to a quarter. */
+  speed?: number;
 }
 
 /**
@@ -545,22 +547,23 @@ export interface LongSpeech {
 export function speakLong(text: string, opts: LongSpeech = {}): boolean {
   const ref = opts.voice === undefined ? ownVoice() : opts.voice;
   const slow = Boolean(opts.slow);
+  const speed = opts.speed ?? 1;
   const chosen = recordedFor(ref);
   const found = chosen && clipFor(chosen, text);
   const pace = paceFor(text, slow);
   if (found) {
     const { rec, id } = found;
     // A broken file: the phone reads the whole block instead (still one voice for the block).
-    playClip(clipPath(rec, id), text, slow, 'nl', VOICE_PACE[rec.voice.key] ?? 1, (noNet) => {
-      if (!speakSentences(text, slow, deviceUriFor(ref), pace) && noNet) soundNeedsInternet();
+    playClip(clipPath(rec, id), text, slow, 'nl', (VOICE_PACE[rec.voice.key] ?? 1) * speed, (noNet) => {
+      if (!speakSentences(text, slow, deviceUriFor(ref), pace, speed) && noNet) soundNeedsInternet();
     }, pace);
     return true;
   }
-  return speakSentences(text, slow, deviceUriFor(ref), pace);
+  return speakSentences(text, slow, deviceUriFor(ref), pace, speed);
 }
 
 /** The phone's Dutch voice, one queued utterance per sentence (see speakLong). */
-function speakSentences(text: string, slow: boolean, voiceURI: string | undefined, pace: Pace = slow ? 'slow' : 'calm'): boolean {
+function speakSentences(text: string, slow: boolean, voiceURI: string | undefined, pace: Pace = slow ? 'slow' : 'calm', speed = 1): boolean {
   stopAll();
   if (!speechAvailable() || !hasDutchVoice()) return false;
   const synth = window.speechSynthesis;
@@ -573,7 +576,7 @@ function speakSentences(text: string, slow: boolean, voiceURI: string | undefine
     const u = new SpeechSynthesisUtterance(sayAs(part));
     u.lang = 'nl-NL';
     if (voice) u.voice = voice;
-    u.rate = deviceRateFor(pace, rulesTrack);
+    u.rate = Math.max(0.1, deviceRateFor(pace, rulesTrack) * speed);
     // The first sentence is reported right away (some phones never fire onstart).
     if (i > 0) u.onstart = () => { if (mine()) emitSpeech(part, true, slow); };
     u.onend = u.onerror = () => {

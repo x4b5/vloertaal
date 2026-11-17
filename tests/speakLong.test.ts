@@ -192,3 +192,43 @@ describe('speakLong', () => {
     expect(synth.spoken).toHaveLength(3);
   });
 });
+
+describe('the chosen speed (src/lib/speakSpeed.ts: 1 as it is, down to a quarter)', () => {
+  it('slows the phone voice, sentence by sentence', () => {
+    audio.speakLong('Een zin. Nog een zin.');
+    const normal = synth.spoken[0].rate;
+    synth.spoken = [];
+    audio.speakLong('Een zin. Nog een zin.', { speed: 0.5 });
+    expect(synth.spoken).toHaveLength(2);
+    synth.spoken.forEach((u) => expect(u.rate).toBeCloseTo(normal * 0.5, 5));
+  });
+
+  it('slows a recording of the whole text too', () => {
+    audio.speakLong('Stop! Dit is niet veilig.');
+    const normal = clips[0].audio.playbackRate;
+    clips.length = 0;
+    audio.speakLong('Stop! Dit is niet veilig.', { speed: 0.5 });
+    expect(clips).toHaveLength(1);
+    expect(clips[0].audio.playbackRate).toBeCloseTo(normal * 0.5, 5);
+  });
+
+  it('is as it is without a speed', () => {
+    audio.speakLong('Een zin.', { speed: 1 });
+    const withOne = synth.spoken[0].rate;
+    synth.spoken = [];
+    audio.speakLong('Een zin.');
+    expect(synth.spoken[0].rate).toBe(withOne);
+  });
+
+  it('never makes the phone voice slower than it can speak', () => {
+    audio.speakLong('Een zin.', { slow: true, speed: 0.01 });
+    expect(synth.spoken[0].rate).toBeGreaterThanOrEqual(0.1);
+  });
+
+  it('an automatic line (the answer after Check) can be given the speed too', () => {
+    audio.autoSpeak('hallo');
+    const normal = synth.spoken[synth.spoken.length - 1].rate;
+    audio.autoSpeak('hallo', false, 'nl', undefined, 0.5);
+    expect(synth.spoken[synth.spoken.length - 1].rate).toBeCloseTo(normal * 0.5, 5);
+  });
+});

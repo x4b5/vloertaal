@@ -10,6 +10,10 @@ import { dutchUi } from '../lib/track';
 import { allTiles, buildSteps, choicePictures, frontSteps, matchAsked, sentencePicture, tileLabel, typedLookalikes, type Exercise } from '../lib/exercises';
 import { shuffle } from '../lib/random';
 import { breakable, sentences, wordSize } from '../lib/dutch';
+import { SpokenWords, useWordLight } from './SpokenWords';
+import { SpeedSlider } from './SpeedSlider';
+import { useSpeakSpeed } from './useSpeakSpeed';
+import { tilesMatchLine } from '../lib/wordLight';
 import { Bi, HelpText, withTerms } from './Bi';
 import { InfoMore } from './InfoMore';
 import { NlPair } from './NlPair';
@@ -201,15 +205,18 @@ function Prompt({ text, quiet = false }: { text: Bilingual; quiet?: boolean }) {
   );
 }
 
-export function IntroCard({ ex, lang, onAnswer, soundOff = false }: Props<'intro'> & {
+export function IntroCard({ ex, lang, onAnswer, soundOff = false, onSayShown }: Props<'intro'> & {
   /** "Zonder geluid" (or "Ik kan nu niet luisteren"): the say-it line asks to say it softly, at once. */
   soundOff?: boolean;
+  /** The say-it line has shown: Continue comes a moment later (src/lib/goHold.ts). */
+  onSayShown?: () => void;
 }) {
   const { word } = ex;
   const card = useRef<HTMLDivElement>(null);
   // "Zeg het hardop" under the card (src/lib/sayAloud.ts). Followed before the word is said
   // (this effect runs before the one that says it), so its start is never missed.
   const say = useSayAloud(word.nl, sayMode(soundOff, surelySilent(word.nl)), () => stillInMs(card.current?.querySelector('.word-pic')));
+  useEffect(() => { if (say.shown) onSayShown?.(); }, [say.shown]); // eslint-disable-line react-hooks/exhaustive-deps
   // "Tap to hear" on the word cards of the first lessons only: the word plays by itself, and after
   // a few cards the big speaker says it (the owner's choice, 2 November 2026). A screen reader
   // still hears it as the card's heading.
@@ -781,6 +788,11 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   // building it), and the new sentence once it is built; else the sentence, held back as before.
   const bubbleSay = front ? (complete || locked ? ex.sentence.nl : front.nl) : ex.sentence.nl;
   const sayShown = Boolean(front) || byEar || wrongs.length > 0 || complete || locked;
+  // The built sentence is played by itself once it is right (src/components/LessonPlayer.tsx): the tile of
+  // the word being said lights up, when the tiles are the words of that very line (not another order).
+  const lit = useWordLight(bubbleSay, complete && tilesMatchLine(words, bubbleSay));
+  // The speed chosen on the slider that shows when the sentence is done (src/lib/speakSpeed.ts).
+  const [speed] = useSpeakSpeed();
   const tileButton = (t: string, label: string, slot?: number) => {
     const key = slot === undefined ? t : `#${slot}`;
     return (
@@ -830,7 +842,9 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
           {pic && !front && <WordPicture className="build-pic" id={pic.id} emoji={pic.emoji} size={56} />}
           {front && <FrontLine nl={front.nl} phrase={front.phrase} />}
           {(!byEar || complete || locked) && <Bi className="bubble-text build-gloss" text={gloss(ex.sentence.id, ex.sentence.en, lang)} />}
-          {sayShown && !byEar && <SpeakButton glyph text={bubbleSay} help={lang} voice={voiceFor(who)} />}
+          {/* "Zet het vooraan": the Dutch line as it was is in this bubble, so its speaker stays with it.
+              Otherwise the speaker plays the Dutch sentence: it stands with the tiles (answer line). */}
+          {sayShown && !byEar && front && <SpeakButton glyph text={bubbleSay} help={lang} voice={voiceFor(who)} />}
         </div>
       </div>
       {/* The sentence so far (not tappable), with a dashed slot where the next word goes. */}
@@ -841,9 +855,17 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
         {verdict === 'right' && (
           <span className="sr-only" lang={saidLang(ui('correctAnswer', lang))}>{srText(ui('correctAnswer', lang))}</span>
         )}
-        {words.slice(0, at).map((w, i) => <span key={i} className="tile tile-placed">{breakable(w)}</span>)}
+        {words.slice(0, at).map((w, i) => <span key={i} className={i === lit ? 'tile tile-placed tile-lit' : 'tile tile-placed'}>{breakable(w)}</span>)}
         {!complete && <span className="tile-next" aria-hidden />}
+        {/* The replay speaker, at the end of the Dutch sentence. Not read out with the sentence (live region off). */}
+        {sayShown && !byEar && !front && (
+          <span className="answer-say" aria-live="off">
+            <SpeakButton glyph text={bubbleSay} help={lang} voice={voiceFor(who)} speed={speed} />
+          </span>
+        )}
       </div>
+      {/* Done: the tiles are gone from below, so there is room to slow the voice down and say the sentence along. */}
+      {(complete || locked) && !front && <SpeedSlider lang={lang} />}
       {/* All the tiles at once (later units): one row per tile, each in its own place; a placed
           one leaves an empty spot of its size. Written small, as at the first place (tileLabel). */}
       {!complete && bank && (
@@ -1343,14 +1365,19 @@ export function SnapExercise({ ex, lang, locked, onAnswer, verdict, run, misses 
 }
 
 /** "How it works here": one Dutch workplace custom, with the sentence to use. Not graded. */
-export function TipCard({ ex, lang, onAnswer, soundOff = false }: Props<'tip'> & {
+export function TipCard({ ex, lang, onAnswer, soundOff = false, onSayShown }: Props<'tip'> & {
   /** "Zonder geluid" (or "Ik kan nu niet luisteren"): the say-it line asks to say it softly. */
   soundOff?: boolean;
+  /** The say-it line has shown: Continue comes a moment later (src/lib/goHold.ts). */
+  onSayShown?: () => void;
 }) {
   const { tip, part } = ex;
+  // The speed chosen on the slider of the "Zeg het zo" page (src/lib/speakSpeed.ts), shared with "Hoe zeg je het?".
+  const [speed] = useSpeakSpeed();
   // "Zeg het hardop" under "Zeg het zo" too (the owner, 5 November 2026): at once (the phrase does
   // not play by itself), the "your turn" sign after the learner has heard it.
   const sayLine = useSayAloud(tip.phrase.nl, sayMode(soundOff, surelySilent(tip.phrase.nl)), () => 0, true);
+  useEffect(() => { if (part === 'say' && sayLine.shown) onSayShown?.(); }, [part, sayLine.shown]); // eslint-disable-line react-hooks/exhaustive-deps
   const talking = useTalking([tip.phrase.nl]);
   useEffect(() => { onAnswer({ correct: true }); }, [tip, part, onAnswer]);
   // On its own page the explanation grows into the room above Continue (src/components/useFitText.ts).
@@ -1374,11 +1401,13 @@ export function TipCard({ ex, lang, onAnswer, soundOff = false }: Props<'tip'> &
         <span className="tip-char"><Character who={tipCast(tip, lang?.gender)} talking={talking} size={part === 'say' ? 120 : 96} /></span>
         <div className="speaker-bubble tip-bubble">
           <span className="tip-phrase">
-            <NlPair content nlFirst nl={breakable(tip.phrase.nl)} nlClass="tip-phrase-nl" text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
+            <NlPair content nlFirst nl={<SpokenWords text={tip.phrase.nl} />} nlClass="tip-phrase-nl" text={gloss(tip.phrase.id, tip.phrase.en, lang)} />
           </span>
-          <SpeakButton glyph text={tip.phrase.nl} help={lang} voice={voiceFor(tipCast(tip, lang?.gender))} />
+          <SpeakButton glyph text={tip.phrase.nl} help={lang} voice={voiceFor(tipCast(tip, lang?.gender))} speed={part === 'say' ? speed : undefined} />
         </div>
       </div>
+      {/* Slow the voice down to say it along with the lit words. */}
+      {part === 'say' && <SpeedSlider lang={lang} />}
       {part === 'say' && !dutchUi(lang) && <SayAloudLine {...sayLine} lang={lang} />}
     </div>
   );

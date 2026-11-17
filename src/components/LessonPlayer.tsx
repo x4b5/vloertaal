@@ -9,6 +9,8 @@ import type { SectorChoice } from '../content/sectors';
 import { gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, endLessonPace, hasClip, onSoundNeedsInternet, sounds, speak, startLessonPace, stopSpeech, surelySilent } from '../lib/audio';
+import { getSpeakSpeed } from '../lib/speakSpeed';
+import { goClass, goHeld, goHoldId, goOpenedKey, shouldHoldGo, startGoHold, type GoHold } from '../lib/goHold';
 import { realPaceReplay } from '../lib/tempo';
 import { unitOfLesson } from '../content/courses';
 import { prepareLessonSound } from '../lib/lessonClips';
@@ -813,7 +815,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // The answer is said by the character on screen, so a woman never speaks with a man's voice:
     // in a chat the right reply is "your" line (Amina); a built sentence belongs to its speaker.
     const who = answerVoice(ex, lang?.gender);
-    if (sol.nl) later(answer.correct ? 700 : 450, () => autoSpeak(sol.text, false, 'nl', voiceFor(who)));
+    if (sol.nl) later(answer.correct ? 700 : 450, () => autoSpeak(sol.text, false, 'nl', voiceFor(who), ex.kind === 'build' ? getSpeakSpeed() : 1));
   }
   checkRef.current = check;
 
@@ -944,6 +946,22 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const verdict: 'right' | 'wrong' | undefined = checked && answer && isGraded(ex) ? (answer.correct ? 'right' : 'wrong') : undefined;
   const props = { lang, locked: checked, onAnswer, verdict, run, misses };
   const key = `${index}`;
+  // Continue comes a moment after "Zeg het hardop" on a card that asks it (src/lib/goHold.ts): invisible
+  // meanwhile (its place is kept), only the first time the card comes by, and never for long.
+  const holdId = goHoldId(ex, lang);
+  const [goOpened, setGoOpened] = useState('');
+  const [sayTick, setSayTick] = useState(0);
+  const goHold = useRef<GoHold | null>(null);
+  const held = goHeld(holdId, key, goOpened);
+  useEffect(() => {
+    if (holdId === undefined || !shouldHoldGo(holdId)) return undefined;
+    const h = startGoHold(holdId, () => setGoOpened(goOpenedKey(key, holdId)));
+    goHold.current = h;
+    return () => { h.stop(); goHold.current = null; };
+  }, [key, holdId]);
+  // The card tells that its say-it line has shown (after its own effects: the hold exists by then).
+  useEffect(() => { if (sayTick > 0) goHold.current?.shown(); }, [sayTick]);
+  const onSayShown = () => setSayTick((n) => n + 1);
   // The footer button changes under the finger (Check becomes Continue; Continue brings a card
   // that answers itself, as a new word does): the second tap of a double tap is not a new tap.
   const footChanged = useRef(0);
@@ -951,6 +969,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   /** "Verder" only until the button has been used once (src/lib/goKnown.ts); then the arrow alone. */
   const [knowsGo, setKnowsGo] = useState(goKnown);
   const footTap = () => {
+    if (held) return;
     if (performance.now() - footChanged.current < 300) return;
     if (checked || autoContinue) { if (!knowsGo) { markGoKnown(); setKnowsGo(true); } }
     if (checked) next();
@@ -959,7 +978,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   let body: React.ReactNode;
   switch (ex.kind) {
     // "Zeg het hardop" under a new word's card asks to say it softly without sound (src/lib/sayAloud.ts).
-    case 'intro': body = <IntroCard key={key} ex={ex} {...props} soundOff={soundOff} />; break;
+    case 'intro': body = <IntroCard key={key} ex={ex} {...props} soundOff={soundOff} onSayShown={onSayShown} />; break;
     case 'meaning': body = <MeaningExercise key={key} ex={ex} {...props} />; break;
     case 'dutch': body = <DutchExercise key={key} ex={ex} {...props} />; break;
     case 'listen': body = <ListenExercise key={key} ex={ex} {...props} />; break;
@@ -967,7 +986,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'build': body = <BuildExercise key={key} ex={ex} {...props} />; break;
     case 'type': body = <TypeExercise key={key} ex={ex} {...props} />; break;
     case 'chat': body = <ChatExercise key={key} ex={ex} {...props} />; break;
-    case 'tip': body = <TipCard key={key} ex={ex} {...props} soundOff={soundOff} />; break;
+    case 'tip': body = <TipCard key={key} ex={ex} {...props} soundOff={soundOff} onSayShown={onSayShown} />; break;
     case 'saying': body = <SayingCard key={key} ex={ex} {...props} />; break;
     case 'klank': body = <KlankStep key={key} ex={ex} {...props} soundOff={soundOff} />; break;
     case 'situation': body = <SituationExercise key={key} ex={ex} {...props} />; break;
@@ -981,7 +1000,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     case 'truefalse': body = <TrueFalse key={key} ex={ex} {...props} />; break;
     case 'whatdo': body = <WhatDo key={key} ex={ex} {...props} />; break;
     case 'whoask': body = <WhoAsk key={key} ex={ex} {...props} />; break;
-    case 'model': body = <ModelLine key={key} ex={ex} {...props} soundOff={soundOff} />; break;
+    case 'model': body = <ModelLine key={key} ex={ex} {...props} soundOff={soundOff} onSayShown={onSayShown} />; break;
     case 'payslip': body = <PayslipStep key={key} ex={ex} {...props} />; break;
     case 'card': body = <CardStep key={key} ex={ex} {...props} />; break;
   }
@@ -1314,9 +1333,9 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
             {showGo && <button
               key={key}
               type="button"
-              className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'} ${goIsContinue && knowsGo ? 'btn-icon-only' : ''}`}
+              className={`btn btn-go ${checked && swapped && outcome ? `btn-${outcome} btn-swap` : 'btn-primary'} ${goIsContinue && knowsGo ? 'btn-icon-only' : ''} ${goClass(holdId, key, goOpened)}`}
               dir={rtl ? 'rtl' : undefined}
-              disabled={!answer}
+              disabled={!answer || held}
               onClick={footTap}
               ref={goRef}
               aria-label={goIsContinue && knowsGo ? said(ui('continue', lang)) : undefined}
