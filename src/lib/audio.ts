@@ -57,8 +57,8 @@ export function setQuietAudio(quiet: boolean): void {
  * Speech that starts by itself (a new word on screen, the right answer after Check, a tile or
  * card that says its word when picked). Silent in "Without sound"; buttons use speak().
  */
-export function autoSpeak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef): void {
-  if (!quietAudio) speak(text, slow, lang, voice);
+export function autoSpeak(text: string, slow = false, lang: 'nl' | 'en' = 'nl', voice?: VoiceRef, speed = 1): void {
+  if (!quietAudio) speak(text, slow, lang, voice, speed);
 }
 
 /**
@@ -360,7 +360,8 @@ function dutchVoice(uri?: string | null): SpeechSynthesisVoice | undefined {
   return voices.find((v) => v.voiceURI === uri) ?? voices[0];
 }
 
-type SpeechListener = (text: string, speaking: boolean, slow: boolean) => void;
+/** `speed`: the factor this sound was given (1 as it is, 0.25 a quarter as fast); the word light stretches its guess by it. */
+type SpeechListener = (text: string, speaking: boolean, slow: boolean, speed?: number) => void;
 const speechListeners = new Set<SpeechListener>();
 
 /** Follow what is being spoken (characters move their mouth along). Returns an unsubscribe. */
@@ -386,10 +387,10 @@ let speechTurn = 0;
 
 /** The lines that started and did not end yet: a stop ends them (a talking mouth, a speaker button). */
 const sounding = new Map<string, boolean>();
-function emitSpeech(text: string, speaking: boolean, slow: boolean): void {
+function emitSpeech(text: string, speaking: boolean, slow: boolean, speed = 1): void {
   if (speaking) sounding.set(text, slow);
   else sounding.delete(text);
-  speechListeners.forEach((fn) => fn(text, speaking, slow));
+  speechListeners.forEach((fn) => fn(text, speaking, slow, speed));
 }
 
 /**
@@ -532,6 +533,8 @@ export interface LongSpeech {
   /** Who says it (a character's voice); default: the learner's chosen voice. */
   voice?: VoiceRef;
   slow?: boolean;
+  /** The speed the learner chose (src/lib/speakSpeed.ts): 1 as it is, down to a quarter. */
+  speed?: number;
 }
 
 /**
@@ -545,22 +548,23 @@ export interface LongSpeech {
 export function speakLong(text: string, opts: LongSpeech = {}): boolean {
   const ref = opts.voice === undefined ? ownVoice() : opts.voice;
   const slow = Boolean(opts.slow);
+  const speed = opts.speed ?? 1;
   const chosen = recordedFor(ref);
   const found = chosen && clipFor(chosen, text);
   const pace = paceFor(text, slow);
   if (found) {
     const { rec, id } = found;
     // A broken file: the phone reads the whole block instead (still one voice for the block).
-    playClip(clipPath(rec, id), text, slow, 'nl', VOICE_PACE[rec.voice.key] ?? 1, (noNet) => {
-      if (!speakSentences(text, slow, deviceUriFor(ref), pace) && noNet) soundNeedsInternet();
+    playClip(clipPath(rec, id), text, slow, 'nl', (VOICE_PACE[rec.voice.key] ?? 1) * speed, (noNet) => {
+      if (!speakSentences(text, slow, deviceUriFor(ref), pace, speed) && noNet) soundNeedsInternet();
     }, pace);
     return true;
   }
-  return speakSentences(text, slow, deviceUriFor(ref), pace);
+  return speakSentences(text, slow, deviceUriFor(ref), pace, speed);
 }
 
 /** The phone's Dutch voice, one queued utterance per sentence (see speakLong). */
-function speakSentences(text: string, slow: boolean, voiceURI: string | undefined, pace: Pace = slow ? 'slow' : 'calm'): boolean {
+function speakSentences(text: string, slow: boolean, voiceURI: string | undefined, pace: Pace = slow ? 'slow' : 'calm', speed = 1): boolean {
   stopAll();
   if (!speechAvailable() || !hasDutchVoice()) return false;
   const synth = window.speechSynthesis;
@@ -573,9 +577,9 @@ function speakSentences(text: string, slow: boolean, voiceURI: string | undefine
     const u = new SpeechSynthesisUtterance(sayAs(part));
     u.lang = 'nl-NL';
     if (voice) u.voice = voice;
-    u.rate = deviceRateFor(pace, rulesTrack);
+    u.rate = Math.max(0.1, deviceRateFor(pace, rulesTrack) * speed);
     // The first sentence is reported right away (some phones never fire onstart).
-    if (i > 0) u.onstart = () => { if (mine()) emitSpeech(part, true, slow); };
+    if (i > 0) u.onstart = () => { if (mine()) emitSpeech(part, true, slow, speed); };
     u.onend = u.onerror = () => {
       if (!mine()) return;
       emitSpeech(part, false, slow);
@@ -583,8 +587,8 @@ function speakSentences(text: string, slow: boolean, voiceURI: string | undefine
     };
     synth.speak(u);
   });
-  emitSpeech(text, true, slow);
-  emitSpeech(parts[0], true, slow);
+  emitSpeech(text, true, slow, speed);
+  emitSpeech(parts[0], true, slow, speed);
   return true;
 }
 
@@ -710,7 +714,7 @@ function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: s
     if ((noNet || isOffline()) && e?.error !== 'interrupted' && e?.error !== 'canceled') soundNeedsInternet();
   };
   synth.speak(u);
-  emitSpeech(text, true, slow);
+  emitSpeech(text, true, slow, speed);
 }
 
 // Voices load asynchronously in some browsers; touching the list early warms it up.

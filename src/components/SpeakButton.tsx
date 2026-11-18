@@ -88,7 +88,7 @@ export function SpeakButton({ text, size = 'md', slow = false, label, hideText =
       aria-pressed={long ? stoppable : undefined}
       onClick={() => {
         if (stoppable) { stopSaying(text); return; }
-        if (long && lang === 'nl') speakLong(text, { slow: slow || nextSlow, voice });
+        if (long && lang === 'nl') speakLong(text, { slow: slow || nextSlow, voice, speed });
         else speak(text, slow || nextSlow, lang, voice, speed);
         setPlays({ text, n: n + 1 });
         onPlay?.();
