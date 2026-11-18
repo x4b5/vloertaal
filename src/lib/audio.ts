@@ -360,7 +360,8 @@ function dutchVoice(uri?: string | null): SpeechSynthesisVoice | undefined {
   return voices.find((v) => v.voiceURI === uri) ?? voices[0];
 }
 
-type SpeechListener = (text: string, speaking: boolean, slow: boolean) => void;
+/** `speed`: the factor this sound was given (1 as it is, 0.25 a quarter as fast); the word light stretches its guess by it. */
+type SpeechListener = (text: string, speaking: boolean, slow: boolean, speed?: number) => void;
 const speechListeners = new Set<SpeechListener>();
 
 /** Follow what is being spoken (characters move their mouth along). Returns an unsubscribe. */
@@ -386,10 +387,10 @@ let speechTurn = 0;
 
 /** The lines that started and did not end yet: a stop ends them (a talking mouth, a speaker button). */
 const sounding = new Map<string, boolean>();
-function emitSpeech(text: string, speaking: boolean, slow: boolean): void {
+function emitSpeech(text: string, speaking: boolean, slow: boolean, speed = 1): void {
   if (speaking) sounding.set(text, slow);
   else sounding.delete(text);
-  speechListeners.forEach((fn) => fn(text, speaking, slow));
+  speechListeners.forEach((fn) => fn(text, speaking, slow, speed));
 }
 
 /**
@@ -578,7 +579,7 @@ function speakSentences(text: string, slow: boolean, voiceURI: string | undefine
     if (voice) u.voice = voice;
     u.rate = Math.max(0.1, deviceRateFor(pace, rulesTrack) * speed);
     // The first sentence is reported right away (some phones never fire onstart).
-    if (i > 0) u.onstart = () => { if (mine()) emitSpeech(part, true, slow); };
+    if (i > 0) u.onstart = () => { if (mine()) emitSpeech(part, true, slow, speed); };
     u.onend = u.onerror = () => {
       if (!mine()) return;
       emitSpeech(part, false, slow);
@@ -586,8 +587,8 @@ function speakSentences(text: string, slow: boolean, voiceURI: string | undefine
     };
     synth.speak(u);
   });
-  emitSpeech(text, true, slow);
-  emitSpeech(parts[0], true, slow);
+  emitSpeech(text, true, slow, speed);
+  emitSpeech(parts[0], true, slow, speed);
   return true;
 }
 
@@ -713,7 +714,7 @@ function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: s
     if ((noNet || isOffline()) && e?.error !== 'interrupted' && e?.error !== 'canceled') soundNeedsInternet();
   };
   synth.speak(u);
-  emitSpeech(text, true, slow);
+  emitSpeech(text, true, slow, speed);
 }
 
 // Voices load asynchronously in some browsers; touching the list early warms it up.

@@ -37,6 +37,12 @@ describe('SpeedSlider', () => {
     expect(slow).toContain('½×');
   });
 
+  it('tells a screen reader the speed as it is written on screen ("½×"), not the raw 0.5', () => {
+    expect(renderToStaticMarkup(createElement(SpeedSlider, {}))).toContain('aria-valuetext="1×"');
+    setSpeakSpeed(0.5);
+    expect(renderToStaticMarkup(createElement(SpeedSlider, {}))).toContain('aria-valuetext="½×"');
+  });
+
   it('has a name for a screen reader, in the help language', () => {
     const pl = getHelpLanguage('pl')!;
     const html = renderToStaticMarkup(createElement(SpeedSlider, { lang: pl }));
@@ -110,6 +116,7 @@ describe('the slider under the built sentence ("Make this sentence in Dutch")', 
     const exercises = readFileSync('src/components/Exercises.tsx', 'utf8');
     expect(exercises).toContain('voice={voiceFor(who)} speed={speed} />');
     const player = readFileSync('src/components/LessonPlayer.tsx', 'utf8');
-    expect(player).toContain("autoSpeak(sol.text, false, 'nl', voiceFor(who), ex.kind === 'build' ? getSpeakSpeed() : 1)");
+    // Only where the slider is on screen: "Zet het vooraan" (front) has none, so its answer plays as it is.
+    expect(player).toContain("autoSpeak(sol.text, false, 'nl', voiceFor(who), ex.kind === 'build' && !ex.front ? getSpeakSpeed() : 1)");
   });
 });

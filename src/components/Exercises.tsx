@@ -1477,7 +1477,7 @@ export function SayingCard({ ex, lang, onAnswer }: Props<'saying'>) {
       <div className="tip-say-row">
         <span className="tip-char"><Character who={who} talking={talking} size={96} /></span>
         <div className="speaker-bubble tip-bubble">
-          <span className="tip-phrase"><span lang="nl" className="tip-phrase-nl saying-nl">{breakable(saying.nl)}</span></span>
+          <span className="tip-phrase"><span lang="nl" className="tip-phrase-nl saying-nl"><SpokenWords text={saying.nl} /></span></span>
           <SpeakButton glyph text={saying.nl} help={lang} voice={voiceFor(who)} />
         </div>
       </div>

@@ -9,7 +9,7 @@ import type { SectorChoice } from '../content/sectors';
 import { gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
 import { autoSpeak, endLessonPace, hasClip, onSoundNeedsInternet, sounds, speak, startLessonPace, stopSpeech, surelySilent } from '../lib/audio';
-import { getSpeakSpeed } from '../lib/speakSpeed';
+import { getSpeakSpeed, resetSpeakSpeed } from '../lib/speakSpeed';
 import { goClass, goHeld, goHoldId, goOpenedKey, shouldHoldGo, startGoHold, type GoHold } from '../lib/goHold';
 import { realPaceReplay } from '../lib/tempo';
 import { unitOfLesson } from '../content/courses';
@@ -413,6 +413,10 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     startLessonPace(paceKey, on);
     return on;
   });
+  // A lesson starts at normal speed: a quarter left over from "Hoe zeg je het?" must not slow it.
+  useEffect(() => {
+    resetSpeakSpeed();
+  }, []);
   useEffect(() => {
     startLessonPace(paceKey, realReplay);
     return () => endLessonPace(paceKey);
@@ -815,7 +819,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     // The answer is said by the character on screen, so a woman never speaks with a man's voice:
     // in a chat the right reply is "your" line (Amina); a built sentence belongs to its speaker.
     const who = answerVoice(ex, lang?.gender);
-    if (sol.nl) later(answer.correct ? 700 : 450, () => autoSpeak(sol.text, false, 'nl', voiceFor(who), ex.kind === 'build' ? getSpeakSpeed() : 1));
+    // The chosen speed only where its slider is on screen: "Zet het vooraan" (front) has none, so it plays as it is.
+    if (sol.nl) later(answer.correct ? 700 : 450, () => autoSpeak(sol.text, false, 'nl', voiceFor(who), ex.kind === 'build' && !ex.front ? getSpeakSpeed() : 1));
   }
   checkRef.current = check;
 

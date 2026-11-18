@@ -1,5 +1,6 @@
+import { readFileSync } from 'node:fs';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { getSpeakSpeed, onSpeakSpeed, setSpeakSpeed, SPEED_MIN, SPEED_STEP, speedLabel } from '../src/lib/speakSpeed';
+import { getSpeakSpeed, onSpeakSpeed, resetSpeakSpeed, setSpeakSpeed, SPEED_MIN, SPEED_STEP, speedLabel } from '../src/lib/speakSpeed';
 
 /*
  * The speed a learner chose for the Dutch they hear (src/lib/speakSpeed.ts): from as it is (1) to a
@@ -60,5 +61,20 @@ describe('the chosen speed', () => {
     setSpeakSpeed(0.5);
     setSpeakSpeed(Number.NaN);
     expect(getSpeakSpeed()).toBe(0.5);
+  });
+
+  it('goes back to as it is for a new lesson, and tells those who listen', () => {
+    setSpeakSpeed(0.25);
+    const heard: number[] = [];
+    const off = onSpeakSpeed(() => heard.push(getSpeakSpeed()));
+    resetSpeakSpeed();
+    expect(getSpeakSpeed()).toBe(1);
+    expect(heard).toEqual([1]);
+    off();
+  });
+
+  it('is what a lesson does when it starts (a quarter left from "Hoe zeg je het?" must not slow the next lesson)', () => {
+    const player = readFileSync('src/components/LessonPlayer.tsx', 'utf8');
+    expect(player).toMatch(/useEffect\(\(\) => \{\s*resetSpeakSpeed\(\);\s*\}, \[\]\);/);
   });
 });

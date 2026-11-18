@@ -26,6 +26,11 @@ export function setSpeakSpeed(next: number): void {
   listeners.forEach((fn) => fn());
 }
 
+/** Back to as it is (1): a new lesson starts at normal speed, whatever a quarter was left from before. */
+export function resetSpeakSpeed(): void {
+  setSpeakSpeed(1);
+}
+
 /** Told when the speed changes. Returns an unsubscribe. */
 export function onSpeakSpeed(fn: () => void): () => void {
   listeners.add(fn);

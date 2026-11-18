@@ -173,6 +173,14 @@ describe('the Continue button in the lesson (goHeld, goClass)', () => {
     expect(goClass('intro:w.hesje', '7', '')).toBe('');
   });
 
+  it('keeps a held Continue in the accessibility tree: invisible by opacity, never by visibility (a screen reader hears "not available", not nothing)', () => {
+    const css = readFileSync('src/styles.css', 'utf8');
+    const rule = css.match(/\.btn-go\.btn-held\s*\{([^}]*)\}/)?.[1] ?? '';
+    expect(rule).toContain('opacity: 0');
+    expect(rule).toContain('pointer-events: none');
+    expect(rule).not.toContain('visibility');
+  });
+
   it('is what the lesson player uses for its footer button (held: invisible and not tappable)', () => {
     const src = readFileSync('src/components/LessonPlayer.tsx', 'utf8');
     expect(src).toContain('goHeld(holdId, key, goOpened)');

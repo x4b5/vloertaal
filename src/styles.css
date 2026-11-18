@@ -385,8 +385,10 @@ h2 { font-size: 1.25rem; }
 .btn-go { animation: btn-in 0.2s var(--ease-out) both; }
 .btn-go.btn-swap { transition: transform 0.06s; animation: btn-press 0.12s var(--ease-out) both; }
 /* Continue held back for a moment on a card that asks to say something out loud (src/lib/goHold.ts):
-   invisible, but its place is kept, so nothing moves; then it comes in softly. */
-.btn-go.btn-held { visibility: hidden; opacity: 0; animation: none; }
+   invisible, but its place is kept, so nothing moves; then it comes in softly. Invisible by opacity,
+   not visibility: the button is `disabled` meanwhile (no tap, no focus), and a screen reader still
+   finds it, as "not available", instead of a card with no way on. */
+.btn-go.btn-held { opacity: 0; pointer-events: none; animation: none; }
 .btn-go.btn-came { animation: btn-came 0.4s var(--ease-out) both; }
 @keyframes btn-came { from { opacity: 0; } }
 @keyframes btn-in { from { opacity: 0.25; } }

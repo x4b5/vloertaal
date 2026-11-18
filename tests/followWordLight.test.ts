@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { followWordLight, type WordLightEnv } from '../src/lib/followWordLight';
 import { CLIP_TAIL_S } from '../src/lib/clipTime';
 import { wordTimes } from '../src/lib/wordLight';
+import { setSpeakSpeed } from '../src/lib/speakSpeed';
 
 /*
  * The word light follows one line while it is said (the owner's request, 17 November 2026;
@@ -11,9 +12,10 @@ import { wordTimes } from '../src/lib/wordLight';
 
 const TEXT = 'Staat de proeftijd in mijn contract?';
 
-type SpeechFn = (text: string, speaking: boolean, slow: boolean) => void;
+type SpeechFn = (text: string, speaking: boolean, slow: boolean, speed?: number) => void;
 type LengthFn = (text: string, seconds: number, rate: number) => void;
 
+/** `speed`: the speed the sound was really given (the speech event carries it). */
 function world(speed = 1) {
   const speech = new Set<SpeechFn>();
   const length = new Set<LengthFn>();
@@ -25,14 +27,13 @@ function world(speed = 1) {
     now: () => now,
     frame: (fn) => { frames.push(fn); return frames.length; },
     cancelFrame: () => { frames = []; },
-    speed: () => speed,
   };
   const lit: number[] = [];
   return {
     env,
     lit,
     on: (i: number) => { lit.push(i); },
-    start: (text = TEXT, slow = false) => speech.forEach((fn) => fn(text, true, slow)),
+    start: (text = TEXT, slow = false) => speech.forEach((fn) => fn(text, true, slow, speed)),
     end: (text = TEXT) => speech.forEach((fn) => fn(text, false, false)),
     /** The clip reports it plays, `ms` long once its silent end is taken off (rate 1). */
     length: (ms: number, text = TEXT) => length.forEach((fn) => fn(text, ms / 1000 + CLIP_TAIL_S, 1)),
@@ -129,6 +130,40 @@ describe('followWordLight', () => {
     expect(w.lit[w.lit.length - 1]).toBe(-1);
   });
 
+  it('still follows a recording whose length arrives after the guess has run out (a clip that starts late)', () => {
+    const w = world();
+    followWordLight(TEXT, w.on, w.env);
+    w.start();
+    w.advance(20000); // the guess is long over: the light is out, but the clip has not started yet
+    expect(w.lit[w.lit.length - 1]).toBe(-1);
+    w.length(3000); // now the clip really starts
+    expect(w.lit[w.lit.length - 1]).toBe(0);
+    const times = wordTimes(TEXT, 3000);
+    w.advance(times[2].start + 1);
+    expect(w.lit[w.lit.length - 1]).toBe(2);
+  });
+
+  it('ignores a length that arrives after the line has ended', () => {
+    const w = world();
+    followWordLight(TEXT, w.on, w.env);
+    w.start();
+    w.end();
+    w.length(3000);
+    w.advance(100);
+    expect(w.lit[w.lit.length - 1]).toBe(-1);
+  });
+
+  it('does not light a line of one word: a light that moves from word to word has nothing to move over', () => {
+    const w = world();
+    const stop = followWordLight('Werk', w.on, w.env);
+    w.start('Werk');
+    w.length(800, 'Werk');
+    w.advance(100);
+    expect(w.lit).toEqual([]);
+    expect(w.waiting()).toBe(0);
+    stop();
+  });
+
   it('ignores a length when nothing is being said', () => {
     const w = world();
     followWordLight(TEXT, w.on, w.env);
@@ -167,6 +202,24 @@ describe('followWordLight', () => {
     full.start();
     full.advance(375);
     expect(half.lit[half.lit.length - 1]).toBe(full.lit[full.lit.length - 1]);
+  });
+
+  it('follows the speed the sound was given, not the slider: a card without a slider plays at normal speed even when the slider was left at a quarter', () => {
+    const lastLit = () => {
+      const w = world(1);
+      followWordLight(TEXT, w.on, w.env);
+      w.start();
+      w.advance(375);
+      return w.lit[w.lit.length - 1];
+    };
+    const withSliderAtOne = lastLit();
+    // The card says its line at 1; the slider (from another card) still stands at 0.25.
+    setSpeakSpeed(0.25);
+    try {
+      expect(lastLit()).toBe(withSliderAtOne);
+    } finally {
+      setSpeakSpeed(1);
+    }
   });
 
   it('a length that is reported already counts the speed (the recording plays at that rate): it is not slowed twice', () => {

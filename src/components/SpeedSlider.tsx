@@ -20,6 +20,7 @@ export function SpeedSlider({ lang }: { lang?: HelpLanguage }) {
       <SlowIcon size={28} />
       <input
         type="range" min={SPEED_MIN} max={1} step={SPEED_STEP} value={speed}
+        aria-valuetext={speedLabel(speed)}
         onChange={(e) => setSpeed(Number(e.currentTarget.value))}
       />
       <span className="klank-speed-now" aria-hidden>{speedLabel(speed)}</span>
