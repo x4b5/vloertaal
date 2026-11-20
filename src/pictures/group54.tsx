@@ -5,7 +5,7 @@ import { Ground, PAL, Shade, Shine, r1 } from './kit';
  * Word pictures, group 54 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
  *
  * Lesson "Tiles, glue and the centre line" (u.afbouw), ported one to one from the drawings the
- * owner approved (.vak/goedgekeurd/*.art.txt):
+ * owner approved on 20 November 2026:
  *  - the tile: one flat tile seen at an angle, an ice-blue face, its blue thickness on the front
  *    and side, two light streaks on the glaze;
  *  - the tile glue: a paper bag with a stitched top and a white label showing a blue tile, a grey heap
@@ -45,7 +45,7 @@ export default {
   // thickness, an ice-blue face with two light streaks on the glaze.
   'w.tegel': () => (
     <g>
-      {/* Ground shadow, exactly as approved (blad3) */}
+      {/* Ground shadow, exactly as approved */}
       <path d="M8.6 87.7L82.6 87.7L113.1 47.6L39.2 47.6Z" fill="#000" opacity="0.14" />
       <path d="M12.3 84.7L79.5 84.7L79.5 76.9L12.3 76.9Z" fill={PAL.sky} />
       <path d="M79.5 84.7L107.7 47.8L107.7 39.9L79.5 76.9Z" fill={PAL.skyShade} />
@@ -105,7 +105,7 @@ export default {
         <path d="M21 59H52M68 59H99" />
         <path d="M26.5 53.5L21 59L26.5 64.5M46.5 53.5L52 59L46.5 64.5M73.5 53.5L68 59L73.5 64.5M93.5 53.5L99 59L93.5 64.5" strokeLinejoin="round" />
       </g>
-      {/* The centre line, exactly as approved (blad4) */}
+      {/* The centre line, exactly as approved */}
       <path d="M60 12V106" fill="none" stroke={PAL.red} strokeWidth="5.5" strokeLinecap="round" />
     </g>
   ),

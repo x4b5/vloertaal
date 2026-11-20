@@ -6,7 +6,7 @@ import { Arrow, Ground, PAL, Shade, Shine, r1 } from './kit';
  *
  * The lesson "Plastering" (u.afbouw): six tools of the plasterer. Where depth makes a tool clearer
  * it gets the slanted view of the approved tiling tools (a light top, a darker front and right
- * side, a shadow on the ground); the filling knife is flat, straight on, as on the teacher's sheet.
+ * side, a shadow on the ground); the filling knife is flat, straight on.
  *
  *  - the plastering trowel (de stucspaan): a big flat grey steel plate seen at an angle, its thin
  *    edge showing, an arched wooden grip on two dark posts, a lump of plaster on its front corner

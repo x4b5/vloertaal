@@ -5,7 +5,7 @@ import { Ground, PAL, Shine, r1 } from './kit';
  * Word pictures, group 53 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
  *
  * Lesson "The tiler's tools" (u.afbouw), ported faithfully from the drawings approved by the owner
- * (.vak/goedgekeurd/*.art.txt):
+ * on 20 November 2026:
  *  - the notched trowel: a grey steel blade with square teeth and a wooden grip, standing on a
  *    white glue plate that its teeth have combed into ridges;
  *  - the trowel: a flat pointed steel blade with a straight back and a dark depth edge, a bent neck
