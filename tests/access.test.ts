@@ -100,7 +100,8 @@ describe('access', () => {
       // Starten opens the course's very first lesson; the taal track has a handful of themes plus 6 sectors.
       expect(sampleLessons('taal')[0]).toBe(courseUnits('taal')[0].lessons[0].id);
       expect(sampleLessons('taal').length).toBeGreaterThan(8);
-      expect(sampleLessons('taal').length).toBeLessThan(20);
+      // 20 since 20 November 2026: Bouw has three own topics in Jouw sector.
+      expect(sampleLessons('taal').length).toBeLessThan(21);
     });
 
     it('locks the rest, whatever the progress says; the daily review stays open', () => {

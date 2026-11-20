@@ -43,6 +43,9 @@ export const pocketPicks: Record<string, string[]> = {
   'u.rights': ['c.rights.p', 'c.rights.a', 'c.health.p', 's.health.3', 's.health.1'],
   'u.exploit': ['c.warning.p', 'c.gethelp.p', 's.gethelp.1', 's.gethelp.2', 's.warning.1'],
   'u.health': ['s.doctor.1', 'c.doctor.p', 's.doctor.3', 's.doctor.2', 's.insurance.2'],
+  // Metselen, hout en vastmaken (20 November 2026): six lessons, five places; the tips' lines,
+  // without "Ik teken het eerst af." (l.square).
+  'u.ruwbouw': ['c.brick.p', 'c.wall.p', 'c.wood.p', 'c.screw.p', 'c.fix.p'],
 };
 
 /** A tip's phrase longer than this does not fit the card (two lines at most). */

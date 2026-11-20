@@ -4,6 +4,7 @@ import { uiEn } from '../i18n/types';
 import { describe, firstSentence, LANG_PAGES, languageNav, type LangPage, type PageCode } from './langPages';
 import { packText } from './pageTexts';
 import { APP_DATA, breadcrumbs, esc, plainPage, SITE } from './plainPage';
+import { translationPending } from '../content/translationPending';
 import { rightsTipCountry } from './tipText';
 
 /**
@@ -27,8 +28,9 @@ export const WAITS_FOR_LAW_CHECK: readonly string[] = [
   'c.placement', // the placement contract
 ];
 
-/** A tip that gets a page now: no rights, no rule of law (see above). */
-export const pageTip = (t: CultureTip): boolean => rightsTipCountry(t) === null && !WAITS_FOR_LAW_CHECK.includes(t.id);
+/** A tip that gets a page now: no rights, no rule of law (see above), and its translations are in
+ *  (src/content/translationPending.ts). */
+export const pageTip = (t: CultureTip): boolean => rightsTipCountry(t) === null && !WAITS_FOR_LAW_CHECK.includes(t.id) && !translationPending(t.id);
 
 /** "First names and a handshake" → "first-names-and-a-handshake"; the same in every language, so the versions of a tip are easy to pair. */
 export const tipSlug = (t: CultureTip): string =>

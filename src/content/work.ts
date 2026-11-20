@@ -1363,11 +1363,12 @@ const sectorUnits: Unit[] = [
 // The second own unit of the sector Bouw (src/content/sectors.ts): the finishing work after the
 // building site of "Op de bouw". In the path of a learner who chose Bouw it comes right after "Op
 // de bouw"; in every other course it is appended at the very end (workUnits below), so no
-// existing course changes. Its lessons stand in their own list, in course order: the next lessons
-// (paint, prep) are added at its end, each with its tip in src/content/workTips.ts (afbouwTips).
+// existing course changes. Its lessons stand in their own list, in course order, each with its tip
+// in src/content/workTips.ts (afbouwTips).
 // Already words of other lessons, used here in a sentence or the chat only: "de emmer"
 // (l.cleaning), "de deur" and "de muur" (u.sounds), "snijden" and "wachten". The drawings:
-// src/pictures/group53.tsx (l.tiletools), group54.tsx (l.tiling) and group55.tsx (l.plaster).
+// src/pictures/group53.tsx (l.tiletools), group54.tsx (l.tiling), group55.tsx (l.plaster),
+// group56.tsx (l.paint) and group57.tsx (l.prep).
 
 const afbouwLessons: Lesson[] = [
   lesson(
@@ -1424,9 +1425,166 @@ const afbouwLessons: Lesson[] = [
     ],
     [['Is de muur al droog?', 'Is the wall dry yet?'], ['Nee, wacht nog een dag.', 'No, wait another day.']],
   ),
+  lesson(
+    'paint',
+    'Painting',
+    [
+      ['verf', 'de verf', 'the paint', '🎨'],
+      ['kwast', 'de kwast', 'the paintbrush (a wide brush)', '🖌️'],
+      ['penseel', 'het penseel', 'the small brush (for corners and edges)', '🖍️'],
+      ['roerstok', 'de roerstok', 'the stirring stick', '🥢'],
+      ['tape', 'de tape', 'the masking tape', '🩹'],
+      ['strijkvaatje', 'het strijkvaatje', 'the paint kettle (a small pot you hold while painting)', '🫙'],
+    ],
+    [
+      ['Roer de verf eerst goed om.', 'Stir the paint well first.'],
+      ['Plak de rand af met tape.', 'Mask the edge with tape.'],
+      ['Doe een beetje verf in het strijkvaatje.', 'Put a little paint in the paint kettle.'],
+    ],
+    [['Welke kwast pak ik?', 'Which brush do I take?'], ['De brede voor de muur, het penseel voor de hoekjes.', 'The wide one for the wall, the small brush for the corners.']],
+  ),
+  // "het plamuurmes" and "het spackmes" (l.plaster) are nearly the same tool: the same emoji, so a
+  // picture choice never offers the two side by side.
+  lesson(
+    'prep',
+    'Getting ready to paint',
+    [
+      ['plamuurmes', 'het plamuurmes', 'the putty knife (to fill holes)', '🔪'],
+      ['schuurpapier', 'het schuurpapier', 'the sandpaper', '🧻'],
+      ['verfkrabber', 'de verfkrabber', 'the paint scraper', '🪒'],
+      ['stoffertje', 'het stoffertje', 'the small brush (to sweep dust)', '🧹'],
+      ['schuren', 'schuren', 'to sand', '🤚'],
+      ['afplakken', 'afplakken', 'to mask off (cover an edge with tape)', '🪟'],
+    ],
+    [
+      ['Krab eerst de oude verf eraf.', 'First scrape off the old paint.'],
+      ['Schuur het hout glad.', 'Sand the wood smooth.'],
+      ['Veeg het stof weg met het stoffertje.', 'Sweep the dust away with the small brush.'],
+    ],
+    [['Mag ik al verven?', 'May I paint already?'], ['Nee, eerst schuren en het gat dichtmaken.', 'No, first sand and fill the hole.']],
+  ),
 ];
 
 const afbouwUnit = unit('afbouw', 'Tiles, plaster and paint', 'Tegels, stuc en verf', '🖌️', '#0f6e8c', afbouwLessons);
+
+// ---- Bricks, wood and fixing (the owner's request, 20 November 2026) ----
+// The third own unit of the sector Bouw (src/content/sectors.ts): bricklaying, wood and fixing
+// things. In the path of a learner who chose Bouw it comes right after "Tegels, stuc en verf"; in
+// every other course it is appended at the very end (workUnits below), so no existing course
+// changes. The drawings: src/pictures/group58.tsx to group63.tsx. Two screwdrivers (l.screw,
+// l.fix) and the hand brushes (de handveger, het stoffertje of l.prep) share an emoji on purpose:
+// they look alike, so a picture choice never offers them side by side.
+
+const ruwbouwUnit = unit('ruwbouw', 'Bricks, wood and fixing', 'Metselen, hout en vastmaken', '🧱', '#a4452c', [
+  lesson(
+    'brick',
+    'Bricklaying',
+    [
+      ['speciekuip', 'de speciekuip', 'the mortar tub', '🛁'],
+      ['metseltroffel', 'de metseltroffel', 'the brick trowel', '🥄'],
+      ['baksteen', 'de baksteen', 'the brick', '🧱'],
+      ['cement', 'het cement', 'the cement', '🪨'],
+      ['voegijzer', 'het voegijzer', 'the jointer (to smooth the joints between bricks)', '〰️'],
+      ['handveger', 'de handveger', 'the hand brush', '🧹'],
+    ],
+    [
+      ['Er zit nog cement in de speciekuip.', 'There is still cement in the mortar tub.'],
+      ['Maak de voeg glad met het voegijzer.', 'Make the joint smooth with the jointer.'],
+      ['Veeg de muur schoon met de handveger.', 'Brush the wall clean with the hand brush.'],
+    ],
+    [['Hoeveel bakstenen heb je nog?', 'How many bricks do you have left?'], ['Nog één pallet. Genoeg voor vandaag.', 'One more pallet. Enough for today.']],
+  ),
+  lesson(
+    'wall',
+    'A straight wall',
+    [
+      ['metseltouw', 'het metseltouw', 'the brick line (a string for a straight row)', '🧵'],
+      ['klos', 'de klos', 'the line block (holds the string at the corner)', '🪵'],
+      ['lagenmaatlat', 'de lagenmaatlat', 'the gauge rod (shows the height of each row)', '📏'],
+      ['profiel', 'het profiel', 'the corner profile (a straight post at the end of the wall)', '🪧'],
+      ['kop', 'de kop', 'the header (the short end of a brick)', '◾'],
+      ['strek', 'de strek', 'the stretcher (the long side of a brick)', '↔️'],
+    ],
+    [
+      ['Span het metseltouw strak.', 'Pull the brick line tight.'],
+      ['Het profiel moet recht staan.', 'The corner profile must stand straight.'],
+      ['Leg de steen met de strek naar buiten.', 'Lay the brick with the long side facing out.'],
+    ],
+    [['Hoe hoog moet deze laag?', 'How high must this row be?'], ['Kijk op de lagenmaatlat.', 'Look at the gauge rod.']],
+  ),
+  lesson(
+    'wood',
+    'Working with wood',
+    [
+      ['handzaag', 'de handzaag', 'the handsaw', '🪚'],
+      ['kapzaag', 'de kapzaag', 'the tenon saw (a small saw with a stiff back)', '🗡️'],
+      ['houtbeitel', 'de houtbeitel', 'the wood chisel', '🪓'],
+      ['handschaaf', 'de handschaaf', 'the hand plane', '🧈'],
+      ['timmermanshamer', 'de timmermanshamer', 'the carpenter’s hammer', '🔨'],
+      ['houtenhamer', 'de houten hamer', 'the mallet (a wooden hammer)', '🥁'],
+    ],
+    [
+      ['Zaag de plank op maat.', 'Saw the plank to size.'],
+      ['Schaaf de rand glad.', 'Plane the edge smooth.'],
+      ['Sla met de houten hamer op de beitel.', 'Hit the chisel with the mallet.'],
+    ],
+    [['Welke zaag moet ik hebben?', 'Which saw do I need?'], ['De kapzaag, voor dit kleine stuk.', 'The tenon saw, for this small piece.']],
+  ),
+  lesson(
+    'square',
+    'Marking out',
+    [
+      ['winkelhaak', 'de winkelhaak', 'the try square (shows a right angle)', '📐'],
+      ['verstekhaak', 'de verstekhaak', 'the mitre square (45 degrees)', '↘️'],
+      ['zwaaihaak', 'de zwaaihaak', 'the sliding bevel (you set the angle yourself)', '🔄'],
+      ['kruishout', 'het kruishout', 'the marking gauge (draws a line along the edge)', '🎚️'],
+      ['passer', 'de passer', 'the compasses (draw a circle)', '⭕'],
+      ['aftekenen', 'aftekenen', 'to mark out (draw where you will cut)', '✏️'],
+    ],
+    [
+      ['Teken de lijn af met de winkelhaak.', 'Mark the line with the try square.'],
+      ['Zet de zwaaihaak op de goede hoek.', 'Set the sliding bevel to the right angle.'],
+      ['Teken een cirkel met de passer.', 'Draw a circle with the compasses.'],
+    ],
+    [['Is de hoek recht?', 'Is the angle square?'], ['Ja, de winkelhaak past precies.', 'Yes, the try square fits exactly.']],
+  ),
+  lesson(
+    'screw',
+    'Drills and screws',
+    [
+      ['accuboor', 'de accuboor', 'the cordless drill', '🔋'],
+      ['boormachine', 'de boormachine', 'the power drill (with a cable)', '🔌'],
+      ['bitje', 'het bitje', 'the screwdriver bit', '✴️'],
+      ['plug', 'de plug', 'the wall plug', '🧷'],
+      ['schroevendraaier', 'de schroevendraaier', 'the screwdriver', '🪛'],
+      ['spijker', 'de spijker', 'the nail', '📌'],
+    ],
+    [
+      ['Boor een gat en doe er een plug in.', 'Drill a hole and put a wall plug in it.'],
+      ['Welk bitje hoort bij deze schroef?', 'Which bit goes with this screw?'],
+      ['Sla de spijker in het hout.', 'Hammer the nail into the wood.'],
+    ],
+    [['Waar is de accuboor?', 'Where is the cordless drill?'], ['Aan de lader, hij is bijna vol.', 'On the charger, it is almost full.']],
+  ),
+  lesson(
+    'fix',
+    'Fixing things',
+    [
+      ['bevestigen', 'bevestigen', 'to fix (attach something firmly to a wall)', '🖼️'],
+      ['vastzetten', 'vastzetten', 'to tighten (turn until it is tight)', '🔩'],
+      ['lijmen', 'lijmen', 'to glue', '🧴'],
+      ['inbussleutel', 'de inbussleutel', 'the Allen key (hex key)', '🗝️'],
+      ['kruisschroevendraaier', 'de kruisschroevendraaier', 'the Phillips screwdriver (cross tip)', '🪛'],
+      ['platteschroevendraaier', 'de platte schroevendraaier', 'the flat screwdriver', '➖'],
+    ],
+    [
+      ['Bevestig de plank aan de muur.', 'Fix the shelf to the wall.'],
+      ['Zet de bout vast met de inbussleutel.', 'Tighten the bolt with the Allen key.'],
+      ['Pak de platte schroevendraaier, niet de kruis.', 'Take the flat screwdriver, not the cross one.'],
+    ],
+    [['Hoe maak ik deze plank vast?', 'How do I fix this shelf?'], ['Met twee pluggen en twee schroeven.', 'With two wall plugs and two screws.']],
+  ),
+]);
 
 // ---- In the shop, and Time, money and measures (docs/entree-aanvulling.md, part 5) ----
 // Basis units (no sector of their own), after the sector units: the course of every existing
@@ -1584,6 +1742,63 @@ const numbersUnit = unit('numbers', 'Time, money and measures', 'Rekenen: tijd, 
       ['Ik heb veertig dozen geteld.', 'I counted forty boxes.'],
     ],
     [['Hoe lang is die plank?', 'How long is that plank?'], ['Precies twee meter.', 'Exactly two metres.']],
+  ),
+  // Shapes, angles and sizes (the owner's request, 20 November 2026): three lessons before the
+  // mixed review, drawn as the shapes themselves (src/pictures/group64.tsx to group66.tsx). "de
+  // meter" (l.measures) and "de centimeter" share an emoji: they look alike (a ruler).
+  lesson(
+    'shapes',
+    'Shapes',
+    [
+      ['vierkant', 'het vierkant', 'the square', '🟥'],
+      ['rechthoek', 'de rechthoek', 'the rectangle', '🟩'],
+      ['driehoek', 'de driehoek', 'the triangle', '🔺'],
+      ['cirkel', 'de cirkel', 'the circle', '🟠'],
+      ['kubus', 'de kubus', 'the cube', '🧊'],
+      ['balk', 'de balk', 'the block, the cuboid (a long box shape)', '🟨'],
+    ],
+    [
+      ['De tegel is een vierkant.', 'The tile is a square.'],
+      ['Deze kamer is een rechthoek.', 'This room is a rectangle.'],
+      ['Een baksteen heeft de vorm van een balk.', 'A brick has the shape of a cuboid.'],
+    ],
+    [['Is het een vierkant?', 'Is it a square?'], ['Nee, een rechthoek. Hij is langer dan breed.', 'No, a rectangle. It is longer than it is wide.']],
+  ),
+  lesson(
+    'angles',
+    'Angles and round shapes',
+    [
+      ['hoek', 'de hoek', 'the angle', '📐'],
+      ['graad', 'de graad', 'the degree (°)', '🌗'],
+      ['geodriehoek', 'de geodriehoek', 'the set square with a protractor', '🔻'],
+      ['boog', 'de boog', 'the arch, the curve', '🌈'],
+      ['cilinder', 'de cilinder', 'the cylinder', '🛢️'],
+      ['parallellogram', 'het parallellogram', 'the parallelogram', '🔶'],
+    ],
+    [
+      ['Deze hoek is negentig graden.', 'This angle is ninety degrees.'],
+      ['Meet de hoek met de geodriehoek.', 'Measure the angle with the set square.'],
+      ['De buis heeft de vorm van een cilinder.', 'The pipe has the shape of a cylinder.'],
+    ],
+    [['Hoeveel graden is deze hoek?', 'How many degrees is this angle?'], ['Vijfenveertig. De helft van een rechte hoek.', 'Forty-five. Half a right angle.']],
+  ),
+  lesson(
+    'size',
+    'Length, area and volume',
+    [
+      ['lengte', 'de lengte', 'the length', '↔️'],
+      ['breedte', 'de breedte', 'the width', '↗️'],
+      ['hoogte', 'de hoogte', 'the height', '↕️'],
+      ['oppervlakte', 'de oppervlakte', 'the area (length times width, in square metres)', '🏁'],
+      ['inhoud', 'de inhoud', 'the volume (length times width times height)', '🫗'],
+      ['centimeter', 'de centimeter', 'the centimetre', '📏'],
+    ],
+    [
+      ['De oppervlakte is de lengte keer de breedte.', 'The area is the length times the width.'],
+      ['De inhoud is lengte keer breedte keer hoogte.', 'The volume is length times width times height.'],
+      ['Tien millimeter is één centimeter.', 'Ten millimetres is one centimetre.'],
+    ],
+    [['Hoeveel vierkante meter is de vloer?', 'How many square metres is the floor?'], ['Vier bij vijf meter, dus twintig vierkante meter.', 'Four by five metres, so twenty square metres.']],
   ),
 ]);
 
@@ -2613,5 +2828,7 @@ export const workUnits: Unit[] = [
   deliveryUnit,
   // Bouw's second own unit (20 November 2026), at the very end (see "Tiles, plaster and paint" above).
   afbouwUnit,
+  // Bouw's third own unit (20 November 2026), at the very end (see "Bricks, wood and fixing" above).
+  ruwbouwUnit,
 ];
 

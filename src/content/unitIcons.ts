@@ -62,6 +62,8 @@ export const unitIcons: Record<string, string> = {
   'u.delivery': 'w.bestelbus',
   // Tegels, stuc en verf (20 November 2026): the notched trowel, the tiler's own tool (group53).
   'u.afbouw': 'w.lijmkam',
+  // Metselen, hout en vastmaken (20 November 2026): the brick (group58).
+  'u.ruwbouw': 'w.baksteen',
 };
 
 /**

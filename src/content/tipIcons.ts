@@ -39,6 +39,19 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🪮': 'w.lijmkam',
   '➕': 'w.tegelkruisje',
   '🔳': 'w.stucspaan',
+  // The next lessons of 20 November 2026 (l.paint, l.prep, u.ruwbouw and the shapes of u.numbers):
+  // each tip shows a word of its own lesson.
+  '🖌': 'w.kwast',
+  '🧻': 'w.schuurpapier',
+  '🧱': 'w.baksteen',
+  '🧵': 'w.metseltouw',
+  '🪚': 'w.handzaag',
+  '✏': 'w.aftekenen',
+  '🪛': 'w.schroevendraaier',
+  '🔩': 'w.vastzetten',
+  '⬜': 'w.vierkant',
+  '🔺': 'w.geodriehoek',
+  '🏁': 'w.oppervlakte',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

@@ -130,6 +130,18 @@ const PENDING_RECORDING = new Set<string>([
   'Bij de emmer, naast de deur.',
   'In het midden, op de hartlijn.',
   'Nee, wacht nog een dag.',
+  // l.paint, l.prep, "Metselen, hout en vastmaken" and three lessons of Rekenen (20 November 2026):
+  'De brede voor de muur, het penseel voor de hoekjes.',
+  'Nee, eerst schuren en het gat dichtmaken.',
+  'Nog één pallet. Genoeg voor vandaag.',
+  'Kijk op de lagenmaatlat.',
+  'De kapzaag, voor dit kleine stuk.',
+  'Ja, de winkelhaak past precies.',
+  'Aan de lader, hij is bijna vol.',
+  'Met twee pluggen en twee schroeven.',
+  'Nee, een rechthoek. Hij is langer dan breed.',
+  'Vijfenveertig. De helft van een rechte hoek.',
+  'Vier bij vijf meter, dus twintig vierkante meter.',
 ]);
 
 

@@ -284,6 +284,12 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan vragen waar ik met de tegels begin.', 'A1', 'gesprekken', 'I can ask where I start with the tiles.'],
     ['Ik kan zeggen dat de muur nog niet droog is.', 'A1', 'spreken', 'I can say that the wall is not dry yet.'],
   ]),
+  // Metselen, hout en vastmaken (20 November 2026): two lines for now; the translations follow
+  // with those of its lessons (src/content/translationPending.ts).
+  onderwerp('u.ruwbouw', 'Metselen, hout en vastmaken', [
+    ['Ik kan om gereedschap vragen, zoals de handzaag of de accuboor.', 'A1', 'spreken', 'I can ask for tools like the handsaw or the cordless drill.'],
+    ['Ik kan vragen hoe ik een plank aan de muur vastmaak.', 'A1', 'gesprekken', 'I can ask how I fix a shelf to the wall.'],
+  ]),
 ];
 
 /** Spoor Werkregels (alleen Nederlands): per onderwerp, in de volgorde van de thema's. */

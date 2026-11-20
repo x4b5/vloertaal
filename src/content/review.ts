@@ -67,6 +67,8 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.delivery': ['u.warehouse', 'u.safety'],
   // Tegels, stuc en verf (20 November 2026): the building site (measuring, the spirit level) and safety.
   'u.afbouw': ['u.build', 'u.safety'],
+  // Metselen, hout en vastmaken (20 November 2026): the building site and the finishing work.
+  'u.ruwbouw': ['u.build', 'u.afbouw'],
 };
 
 /**
@@ -99,6 +101,8 @@ const relatedWords: Record<string, string[]> = {
   'u.delivery': ['w.scanner', 'w.ongeluk'],
   // Tegels, stuc en verf: the spirit level of "Meten" (the tiler checks every row with it) and the helmet.
   'u.afbouw': ['w.waterpas', 'w.helm'],
+  // Metselen, hout en vastmaken: the spirit level (a straight wall) and the tiler's folding ruler.
+  'u.ruwbouw': ['w.waterpas', 'w.duimstok'],
   // Goed communiceren: angry (l.speakup) and slowly (l.understand), what the lessons are about.
   'u.communicate': ['w.boos', 'w.langzaam'],
   // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).
