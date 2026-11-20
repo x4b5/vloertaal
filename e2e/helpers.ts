@@ -41,8 +41,8 @@ const today = () => {
 };
 
 /**
- * A learner who did the first run already (help language, sector, country), opening the
- * app: the home. "Wat ken je al?" passed over today, as a learner who said "later".
+ * A learner who did the first run already (help language, sector, country, and the page "use
+ * this one phone" read), opening the app: the home. "Wat ken je al?" passed over today, as a learner who said "later".
  */
 export async function openAsLearner(page: Page, extra: Record<string, unknown> = {}): Promise<void> {
   // Before the app's own script, once (a reload later keeps what the app saved since): set
@@ -52,7 +52,7 @@ export async function openAsLearner(page: Page, extra: Record<string, unknown> =
     localStorage.setItem('e2e:seeded', '1');
     localStorage.setItem('vloertaal.access', 'full');
     localStorage.setItem('vloertaal:v1', JSON.stringify({
-      onboarded: true, helpLang: 'tr', sector: 'none', country: 'nl', colourAsked: true, completed: {},
+      onboarded: true, helpLang: 'tr', sector: 'none', country: 'nl', phoneNotice: true, colourAsked: true, completed: {},
       toets: { v: 1, skipped: day, start: day, unitsAt: 0 }, ...x,
     }));
   }, [extra, today()] as const);
