@@ -2287,6 +2287,67 @@ const t: CultureTranslation = {
     'c.order.o2': "Du machst die erste und hoffst, dass dir der Rest wieder einfällt.", // nieuw, nalezen
     'c.order.o3': "Du machst nichts: Du weißt nicht alle drei.", // nieuw, nalezen
     'c.order.w': "Sofort fragen kostet zehn Sekunden. Später ist dein Vorgesetzter vielleicht weg, und dann wartest du oder rätst.", // nieuw, nalezen
+    'u.afbouw': "Fliesen, Putz und Farbe", // nieuw, nalezen
+    'l.tiletools': "Das Werkzeug zum Fliesenlegen", // nieuw, nalezen
+    'w.lijmkam': "die Zahnkelle (verteilt den Fliesenkleber in Rillen)", // nieuw, nalezen
+    'w.troffel': "die Kelle", // nieuw, nalezen
+    'w.tegelsnijder': "der Fliesenschneider", // nieuw, nalezen
+    'w.nijptang': "die Beißzange (um kleine Stücke von einer Fliese abzuzwicken)", // nieuw, nalezen
+    'w.mixer': "das Rührgerät (rührt Kleber oder Putz im Eimer an)", // nieuw, nalezen
+    'w.duimstok': "der Zollstock", // nieuw, nalezen
+    's.tiletools.1': "Gib mir mal kurz die Zahnkelle.", // nieuw, nalezen
+    's.tiletools.2': "Ich schneide die Fliese mit dem Fliesenschneider.", // nieuw, nalezen
+    's.tiletools.3': "Miss zuerst mit dem Zollstock.", // nieuw, nalezen
+    'c.tiletools.q': "Wo ist das Rührgerät?", // nieuw, nalezen
+    'c.tiletools.a': "Beim Eimer, neben der Tür.", // nieuw, nalezen
+    'c.tiletools': "Mach dein Werkzeug sauber, bevor der Kleber hart ist", // nieuw, nalezen
+    'c.tiletools.b': "Fliesenkleber und Putz werden schnell hart, auch an deinem Werkzeug. Mach die Zahnkelle, die Kelle und das Rührgerät also sofort in einem Eimer Wasser sauber, auch vor deiner Pause. Harter Kleber geht nicht mehr ab, und eine Zahnkelle mit hartem Kleber macht schlechte Rillen. Kipp das schmutzige Wasser nicht in ein Waschbecken oder einen Abfluss: Die verstopfen. Frag, wohin das Wasser darf. Das Rührgerät: Halt es mit zwei Händen, und lass es langsam anlaufen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.tiletools.p': "Ich mache kurz die Zahnkelle sauber.", // nieuw, nalezen
+    'c.tiletools.s': "Es ist Zeit für deine Pause. Deine Zahnkelle ist voll mit nassem Kleber. Was machst du?", // nieuw, nalezen
+    'c.tiletools.o1': "Wasch sie in Wasser ab, dann mach Pause.", // nieuw, nalezen
+    'c.tiletools.o2': "Lass sie liegen: Du machst sie nach der Arbeit sauber.", // nieuw, nalezen
+    'c.tiletools.o3': "Steck sie in den Eimer mit Kleber.", // nieuw, nalezen
+    'c.tiletools.w': "Fliesenkleber wird auch in deiner Pause hart. Eine saubere Zahnkelle macht gute Rillen, und die Fliesen halten gut. Harter Kleber daran ist viel Arbeit, oder ein neues Werkzeug.", // nieuw, nalezen
+    'l.tiling': "Fliesen, Kleber und die Mittellinie", // nieuw, nalezen
+    'w.tegel': "die Fliese", // nieuw, nalezen
+    'w.tegellijm': "der Fliesenkleber", // nieuw, nalezen
+    'w.tegelkruisje': "das Fugenkreuz (ein kleines Kreuz zwischen den Fliesen)", // nieuw, nalezen
+    'w.hartlijn': "die Mittellinie (dort fängst du mit den Fliesen an)", // nieuw, nalezen
+    'w.tegelplaat': "die Übungsplatte (eine Platte, auf der du das Fliesenlegen übst)", // nieuw, nalezen
+    'w.potlood': "der Bleistift", // nieuw, nalezen
+    's.tiling.1': "Der Fliesenkleber ist noch nass.", // nieuw, nalezen
+    's.tiling.2': "Setz ein Fugenkreuz zwischen die Fliesen.", // nieuw, nalezen
+    's.tiling.3': "Zeichne zuerst die Mittellinie mit dem Bleistift.", // nieuw, nalezen
+    'c.tiling.q': "Wo fange ich mit den Fliesen an?", // nieuw, nalezen
+    'c.tiling.a': "In der Mitte, auf der Mittellinie.", // nieuw, nalezen
+    'c.tiling': "Fang an der Mittellinie an, mit wenig Kleber", // nieuw, nalezen
+    'c.tiling.b': "Beim Fliesenlegen fängt man nicht in einer Ecke an. Du zeichnest zuerst die Mittellinie, mit einem Bleistift und der Wasserwaage, und fängst dort an. Dann sind die geschnittenen Fliesen an beiden Enden gleich groß. Trag nur so viel Kleber auf, wie du in kurzer Zeit mit Fliesen belegen kannst. Kleber, der zu lange steht, bekommt eine trockene Haut, und dann halten die Fliesen nicht gut. Setz an jede Kreuzung ein Fugenkreuz, so werden alle Fugen gleich. Prüf oft mit der Wasserwaage: Eine schiefe Fliese ist jetzt leicht zu richten, und morgen schwer.", // nieuw, nalezen
+    'c.tiling.p': "Ich trage nicht zu viel Kleber auf einmal auf.", // nieuw, nalezen
+    'c.tiling.s': "Nach einem langen Telefongespräch hat der Kleber an der Wand eine trockene Haut. Was machst du?", // nieuw, nalezen
+    'c.tiling.o1': "Kratz ihn ab, und trag frischen Kleber auf.", // nieuw, nalezen
+    'c.tiling.o2': "Drück die Fliesen trotzdem hinein.", // nieuw, nalezen
+    'c.tiling.o3': "Mach ihn mit einem Schwamm nass, und mach weiter.", // nieuw, nalezen
+    'c.tiling.w': "Kleber mit einer trockenen Haut hält eine Fliese nicht gut. Später kann sich die Fliese lösen, und dann muss die Arbeit noch einmal gemacht werden.", // nieuw, nalezen
+    'l.plaster': "Verputzen", // nieuw, nalezen
+    'w.stucspaan': "die Glättkelle (eine flache Kelle aus Stahl, um den Putz glatt zu machen)", // nieuw, nalezen
+    'w.oplegspaan': "das Putzbrett (ein flaches Brett, auf dem du den Putz hältst)", // nieuw, nalezen
+    'w.spackmes': "der Spachtel (ein breites, flaches Messer)", // nieuw, nalezen
+    'w.rei': "die Richtlatte (eine lange, gerade Latte, um den Putz gerade abzuziehen)", // nieuw, nalezen
+    'w.sponsspaan': "das Schwammbrett", // nieuw, nalezen
+    'w.hoekprofiel': "das Eckprofil (ein Streifen aus Metall für eine gerade Ecke)", // nieuw, nalezen
+    's.plaster.1': "Setz zuerst das Eckprofil auf die Ecke.", // nieuw, nalezen
+    's.plaster.2': "Mach die Wand mit der Glättkelle glatt.", // nieuw, nalezen
+    's.plaster.3': "Zieh die Richtlatte über die Wand.", // nieuw, nalezen
+    'c.plaster.q': "Ist die Wand schon trocken?", // nieuw, nalezen
+    'c.plaster.a': "Nein, warte noch einen Tag.", // nieuw, nalezen
+    'c.plaster': "Putz braucht Zeit zum Trocknen", // nieuw, nalezen
+    'c.plaster.b': "Frischer Putz bleibt lange nass. Eine nasse Wand ist dunkler als eine trockene. Der Maler kann erst anfangen, wenn die Wand überall trocken ist, und das kann Tage oder Wochen dauern. Trockne sie nicht schneller mit einem Heizgerät: Dann kann der Putz reißen. Will jemand zu früh streichen? Sag, dass die Wand noch nicht trocken ist. Und bevor du anfängst, deck den Boden, die Fenster und die Steckdosen ab: Putz geht schwer wieder ab.", // nieuw, nalezen
+    'c.plaster.p': "Die Wand ist noch nass. Du kannst noch nicht streichen.", // nieuw, nalezen
+    'c.plaster.s': "Der Maler will morgen anfangen. Der neue Putz hat noch dunkle Flecken. Was machst du?", // nieuw, nalezen
+    'c.plaster.o1': "Sag dem Maler: Die Wand ist noch nicht trocken.", // nieuw, nalezen
+    'c.plaster.o2': "Stell heute Abend ein Heizgerät davor.", // nieuw, nalezen
+    'c.plaster.o3': "Sag nichts: Der Maler sieht es schon.", // nieuw, nalezen
+    'c.plaster.w': "Dunkle Flecken heißen, dass der Putz noch nass ist. Farbe auf einer nassen Wand kann abgehen, und ein Heizgerät kann Risse machen. Warten kostet weniger, als alles noch einmal zu machen.", // nieuw, nalezen
   },
 };
 

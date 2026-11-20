@@ -51,6 +51,14 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['zevenenveertig', 7],
   ['vierenzeventig', 6],
   ['verzamelplaats', 8],
+  // Tegels, stuc en verf (u.afbouw, 20 November 2026): the tiler's and plasterer's compounds, shown
+  // big on a word card.
+  ['tegelsnijder', 5],
+  ['tegelkruisje', 5],
+  ['tegelkruisjes', 5],
+  ['hoekprofiel', 4],
+  ['sponsspaan', 5],
+  ['oplegspaan', 5],
 ];
 
 export const SHY = '\u00ad';

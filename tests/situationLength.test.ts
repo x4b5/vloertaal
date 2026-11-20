@@ -21,7 +21,9 @@ const SHORT = ['c.translate', 'c.harvest', 'c.shelves', 'c.garage', 'c.illness',
   'c.explain', 'c.listen', 'c.calm', 'c.talkintime', 'c.reachable',
   // Every sector unit at four lessons (14 November 2026): short from the start.
   'c.measure', 'c.siteday', 'c.shifts', 'c.signals', 'c.transfer', 'c.dishes', 'c.rush', 'c.rounds', 'c.colours', 'c.shophelp', 'c.shoptrouble',
-  'c.plantcare', 'c.outdoors', 'c.drawing', 'c.weld', 'c.carparts', 'c.carsafe'];
+  'c.plantcare', 'c.outdoors', 'c.drawing', 'c.weld', 'c.carparts', 'c.carsafe',
+  // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): short from the start.
+  'c.tiletools', 'c.tiling', 'c.plaster'];
 const SITUATION_MAX = 18; // words, without the question at the end
 const ANSWER_MAX = 10;
 const SCREEN_MAX = 42; // the situation and its three answers together

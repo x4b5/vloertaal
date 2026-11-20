@@ -165,6 +165,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Waxaa la weydiiyay in albaabku xiran yahay: maya, oo hadda ayuu xirayaa.", // nieuw, nalezen
     'c.fillempty.a.why': "Waxaa la weydiiyay in uu buuxsamay: haa, oo wuu faaruqinayaa.", // nieuw, nalezen
     'c.order.a.why': "Waxaa la weydiistay inuu hadda sameeyo: haa, iyo waxa ku xiga.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Waxaa la weydiiyay meesha uu yaal mashiinka qasa: meel, iyo waxa u dhow.", // nieuw, nalezen
+    'c.tiling.a.why': "Waxaa la weydiiyay meesha laga bilaabo: bartamaha, xariiqda dhexe.", // nieuw, nalezen
+    'c.plaster.a.why': "Waxaa la weydiiyay in derbigu qallalay: maya, iyo inta la sugayo.", // nieuw, nalezen
   },
 };
 export default t;

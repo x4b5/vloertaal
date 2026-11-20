@@ -554,6 +554,12 @@ function defineStates(LANG) {
   for (const lesson of ['parcel', 'road', 'food']) {
     for (let at = 0; at < 21; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
   }
+  // "Tegels, stuc en verf" (u.afbouw, seed 1, 20 November 2026): every step of its lessons (word
+  // cards with the new drawings of group53-55, picture and listen choices, the tip and its
+  // situation, the sentences, the chat, typing). The next lessons of the unit join this list.
+  for (const lesson of ['tiletools', 'tiling', 'plaster']) {
+    for (let at = 0; at < 21; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
+  }
   // "Je goed voelen op het werk" (l.feelwell, seed 1, 5 November 2026): an abstract word ("de
   // werkdruk"), the drawn "wakker liggen", the tip (who to talk to, 113) and its situation, "What
   // do you hear?", a sentence to build, the chat and typing "alleen".

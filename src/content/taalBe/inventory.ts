@@ -276,6 +276,13 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.vancheck': L('A', 'A', 'alleen de slotregel; nakijken: in Vlaanderen vaak "de bestelwagen" en "de bluts" (de deuk wordt begrepen)'),
     'l.delay': L('A', 'A', 'telefoon in de hand verboden ook in België (Wegverkeersreglement art. 8.4); alleen de slotregel; nakijken: in Vlaanderen ook "de wegomlegging" (de omleiding) en "de gps" (de navigatie)'),
   } },
+  // Tegels, stuc en verf (20 November 2026): how the work is done, the same in Belgium. The tips
+  // name no rule, right or amount. Flemish words to check, by a Flemish NT2 teacher.
+  'u.afbouw': { kind: 'A', lessons: {
+    'l.tiletools': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: de tegelzetter heet in Vlaanderen ook zo, de lijmkam wordt begrepen; de troffel heet vaak "het truweel", de duimstok vaak "de plooimeter"'),
+    'l.tiling': L('A', 'A', 'nakijken: de tegel, de tegellijm en de hartlijn zijn hetzelfde; het tegelkruisje heet soms "het voegkruisje"'),
+    'l.plaster': L('A', 'A', 'nakijken: stukadoren heet in Vlaanderen vaak "plafonneren" of "pleisteren" (de stukadoor: de plafonneerder); "stuc" in de titel wordt begrepen; het spackmes heet ook "het plamuurmes"'),
+  } },
 };
 
 /** The units of the inventory that need a Belgian version (B or C). */

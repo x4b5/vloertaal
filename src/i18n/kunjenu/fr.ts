@@ -120,6 +120,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Je peux dire que le client n’est pas chez lui.", // nieuw, nalezen
     'kjn.u.delivery.2': "Je peux demander aux voisins de prendre un colis.", // nieuw, nalezen
     'kjn.u.delivery.3': "Je peux demander qui décide de ma tournée et de mes horaires.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Je peux demander la spatule crantée ou la truelle.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Je peux demander où je commence avec les carreaux.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Je peux dire que le mur n’est pas encore sec.", // nieuw, nalezen
   },
 };
 

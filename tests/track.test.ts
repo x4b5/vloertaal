@@ -58,7 +58,11 @@ const LATE_OWN = ['u.tech', 'u.garage'];
  * "Vervoer en bezorging" (5 November 2026): appended after everything else, the second own unit of
  * Logistiek (right after the warehouse in its slot); for the other sectors it waits at the very end.
  */
-const NEWEST_SECTOR_UNITS = ['u.delivery'];
+/**
+ * "Tegels, stuc en verf" (20 November 2026): appended after that, the second own unit of Bouw
+ * (right after "Op de bouw" in its slot); for the other sectors it waits at the very end.
+ */
+const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw'];
 const expectedOrder = (own: string | string[] | null) => {
   const main = BASIS.flatMap((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
@@ -75,7 +79,7 @@ const TAAL_ORDER: Record<string, string[]> = {
   undefined: expectedOrder(null),
   none: expectedOrder(null),
   logistics: expectedOrder(['u.warehouse', 'u.delivery']),
-  construction: expectedOrder('u.build'),
+  construction: expectedOrder(['u.build', 'u.afbouw']),
   production: expectedOrder('u.factory'),
   care: expectedOrder('u.care'),
   hospitality: expectedOrder('u.horeca'),

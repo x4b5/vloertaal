@@ -48,6 +48,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
 ]
 `;
 
@@ -99,6 +100,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
 ]
 `;
 
@@ -111,6 +113,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.safety",
   "u.emergency",
   "u.build",
+  "u.afbouw",
   "u.data",
   "u.time",
   "u.sounds",
@@ -201,6 +204,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.kas",
   "u.tech",
   "u.delivery",
+  "u.afbouw",
 ]
 `;
 
@@ -252,6 +256,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
 ]
 `;
 
@@ -303,6 +308,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
 ]
 `;
 
@@ -354,6 +360,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.kas",
   "u.tech",
   "u.garage",
+  "u.afbouw",
 ]
 `;
 
@@ -405,6 +412,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.society",
   "u.online",
   "u.delivery",
+  "u.afbouw",
 ]
 `;
 
@@ -456,6 +464,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
 ]
 `;
 
@@ -507,6 +516,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
 ]
 `;
 
@@ -558,6 +568,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.kas",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
 ]
 `;
 
@@ -609,5 +620,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.society",
   "u.online",
   "u.delivery",
+  "u.afbouw",
 ]
 `;

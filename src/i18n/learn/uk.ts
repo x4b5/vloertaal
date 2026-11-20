@@ -170,6 +170,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Питають, чи двері зачинені: «ні», і їх зачиняють зараз.", // nieuw, nalezen
     'c.fillempty.a.why': "Питають, чи він уже повний: «так», і його спорожняють.", // nieuw, nalezen
     'c.order.a.why': "Просять зробити це зараз: «так» і питання, що потім.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Питають, де міксер: місце і що поруч із ним.", // nieuw, nalezen
+    'c.tiling.a.why': "Питають, звідки починати: посередині, на осьовій лінії.", // nieuw, nalezen
+    'c.plaster.a.why': "Питають, чи стіна суха: «ні», і скільки чекати.", // nieuw, nalezen
   },
 };
 

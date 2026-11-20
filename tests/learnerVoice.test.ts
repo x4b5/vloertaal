@@ -126,6 +126,10 @@ const PENDING_RECORDING = new Set<string>([
   'Nee. Ik doe hem nu dicht.',
   'Ja. Ik maak hem leeg.',
   'Ja. Eerst dit, en dan?',
+  // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026):
+  'Bij de emmer, naast de deur.',
+  'In het midden, op de hartlijn.',
+  'Nee, wacht nog een dag.',
 ]);
 
 

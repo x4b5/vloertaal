@@ -119,6 +119,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Waan sheegi karaa in macmiilku aanu guriga joogin.", // nieuw, nalezen
     'kjn.u.delivery.2': "Waan ka codsan karaa deriska inay baakad ii qaataan.", // nieuw, nalezen
     'kjn.u.delivery.3': "Waan weydiin karaa cidda go'aamisa jidkayga iyo waqtiyadayda.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Waan weydiisan karaa malqaacadda ilkaha leh ama malqaacadda dhismaha.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Waan weydiin karaa meesha aan jaajuurka ka bilaabo.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Waan sheegi karaa in derbigu aanu weli qallalin.", // nieuw, nalezen
   },
 };
 export default t;

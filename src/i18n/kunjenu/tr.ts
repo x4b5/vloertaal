@@ -120,6 +120,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Müşterinin evde olmadığını söyleyebilirim.", // nieuw, nalezen
     'kjn.u.delivery.2': "Komşulardan bir paketi teslim almalarını isteyebilirim.", // nieuw, nalezen
     'kjn.u.delivery.3': "Güzergâhımı ve saatlerimi kimin belirlediğini sorabilirim.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Dişli malayı ya da malayı isteyebilirim.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Fayanslara nereden başlayacağımı sorabilirim.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Duvarın henüz kurumadığını söyleyebilirim.", // nieuw, nalezen
   },
 };
 

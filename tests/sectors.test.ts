@@ -48,7 +48,13 @@ describe('sectors', () => {
     expect(isNextInCourse(build.lessons[0].id, safetyDone, 'full', 'construction')).toBe(true);
     expect(isNextInCourse(after.lessons[0].id, safetyDone, 'full', 'construction')).toBe(false);
     const buildDone = { ...safetyDone, ...Object.fromEntries(build.lessons.map((l) => [l.id, {}])) };
-    expect(isNextInCourse(after.lessons[0].id, buildDone, 'full', 'construction')).toBe(true);
+    // Bouw has a second own unit since 20 November 2026: "Tegels, stuc en verf" comes right after
+    // "Op de bouw"; the unit after the warehouse waits for it too.
+    const afbouw = unit('u.afbouw');
+    expect(isNextInCourse(afbouw.lessons[0].id, buildDone, 'full', 'construction')).toBe(true);
+    expect(isNextInCourse(after.lessons[0].id, buildDone, 'full', 'construction')).toBe(false);
+    const afbouwDone = { ...buildDone, ...Object.fromEntries(afbouw.lessons.map((l) => [l.id, {}])) };
+    expect(isNextInCourse(after.lessons[0].id, afbouwDone, 'full', 'construction')).toBe(true);
     // Without a sector: course order, the warehouse comes after Safety as before.
     expect(isNextInCourse(warehouse.lessons[0].id, safetyDone, 'full')).toBe(true);
     expect(isNextInCourse(build.lessons[0].id, safetyDone, 'full')).toBe(false);

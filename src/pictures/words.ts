@@ -48,6 +48,9 @@ import group49 from './group49';
 import group50 from './group50';
 import group51 from './group51';
 import group52 from './group52';
+import group53 from './group53';
+import group54 from './group54';
+import group55 from './group55';
 
 /** Every word picture, keyed by word id (and the sayings' pictures, by saying id "zg.*"): one file, loaded on demand (./index.ts loadPictures). */
 const words: Record<string, () => JSX.Element> = {
@@ -104,6 +107,10 @@ const words: Record<string, () => JSX.Element> = {
   ...group51,
   // The basis unit "Instructies" (u.do: l.putdown, l.onoff, l.fillempty; l.order has no pictures).
   ...group52,
+  // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): l.tiletools, l.tiling and l.plaster.
+  ...group53,
+  ...group54,
+  ...group55,
 };
 export default words;
 export const url: string = import.meta.url;

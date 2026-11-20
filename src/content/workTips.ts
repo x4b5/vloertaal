@@ -1954,10 +1954,65 @@ const sectorFourTips = [
   ),
 ];
 
+// ---- Tiles, plaster and paint (u.afbouw, the owner's request, 20 November 2026) ----
+// One tip per lesson, in the order of the unit's lessons in ./work.ts (afbouwLessons): the tips of
+// the next lessons are added at the end. None of them states a right, a law or an amount: they are
+// about how the work is done (NONE), or about rules that differ per company or site (HOUSE_LINE).
+// The short situations are in tests/situationLength.test.ts.
+
+const afbouwTips = [
+  // Where the dirty water may go differs per site: HOUSE_LINE.
+  tipFor(
+    'tiletools',
+    '🪮',
+    'Clean your tools before the glue is hard',
+    'Tile glue and plaster get hard fast, also on your tools. So clean the notched trowel, the trowel and the mixer in a bucket of water right away, also before your break. Hard glue does not come off, and a notched trowel with hard glue makes bad ridges. Do not pour the dirty water into a sink or a drain: it gets blocked. Ask where the water may go. The mixer: hold it with two hands, and start it slowly.',
+    ['Ik maak de lijmkam even schoon.', 'I am just cleaning the notched trowel.'],
+    'It is time for your break. Your notched trowel is full of wet glue. What do you do?',
+    [
+      'Clean it in water, then take your break.',
+      'Leave it: you clean it after work.',
+      'Put it in the bucket of glue.',
+    ],
+    'Tile glue gets hard in your break too. A clean notched trowel makes good ridges, and the tiles stick well. Hard glue on it is a lot of work, or a new tool.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'tiling',
+    '➕',
+    'Start at the centre line, with a little glue',
+    'A tiler does not start in a corner. You draw the centre line first, with a pencil and the spirit level, and you start there. Then the cut tiles at both ends are the same size. Spread only as much glue as you can cover with tiles in a short time. Glue that stands too long gets a dry skin, and then the tiles do not stick well. Put a spacer at every crossing, so all the joints are the same. Check often with the spirit level: a crooked tile is easy to fix now, and hard to fix tomorrow.',
+    ['Ik smeer niet te veel lijm tegelijk.', 'I do not spread too much glue at once.'],
+    'After a long phone call, the glue on the wall has a dry skin. What do you do?',
+    [
+      'Scrape it off, and spread fresh glue.',
+      'Press the tiles into it anyway.',
+      'Make it wet with a sponge, and go on.',
+    ],
+    'Glue with a dry skin does not hold a tile well. Later the tile can come loose, and then the work must be done again.',
+    NONE,
+  ),
+  tipFor(
+    'plaster',
+    '🔳',
+    'Plaster needs time to dry',
+    'Fresh plaster stays wet for a long time. A wet wall is darker than a dry one. The painter can only start when the wall is dry everywhere, and that can take days or weeks. Do not dry it faster with a heater: then the plaster can crack. Does someone want to paint too early? Say that the wall is not dry yet. And before you start, cover the floor, the windows and the sockets: plaster is hard to get off.',
+    ['De muur is nog nat. Je kunt nog niet verven.', 'The wall is still wet. You cannot paint yet.'],
+    'The painter wants to start tomorrow. The new plaster still has dark spots. What do you do?',
+    [
+      'Tell the painter: the wall is not dry yet.',
+      'Put a heater in front of it tonight.',
+      'Say nothing: the painter will see it.',
+    ],
+    'Dark spots mean that the plaster is still wet. Paint on a wet wall can come loose, and a heater can make cracks. Waiting costs less than doing it again.',
+    NONE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

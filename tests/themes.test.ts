@@ -173,8 +173,9 @@ describe('the screens show the themes as plain headers (never a button)', () => 
     const one = none(done('u.warehouse'));
     expect(one).toContain('theme-check');
     expect(one).toMatch(/· 1 \/ 1 /);
-    // With a sector, "Jouw sector" holds only the own topic.
-    const m = html(createElement(AllTopics, { progress: progress({ sector: 'construction', completed: done('u.build') }), lang: pl(), onBack: () => {}, onOpen: () => {} }));
+    // With a sector, "Jouw sector" holds only the own topics (Bouw has two since 20 November 2026:
+    // "Op de bouw" and "Tegels, stuc en verf").
+    const m = html(createElement(AllTopics, { progress: progress({ sector: 'construction', completed: done('u.build', 'u.afbouw') }), lang: pl(), onBack: () => {}, onOpen: () => {} }));
     expect(m.match(/<li class="theme-head[^"]*" data-theme="theme.sector"[\s\S]*?<\/li>/)![0]).toContain('theme-check');
   });
 

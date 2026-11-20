@@ -2288,6 +2288,67 @@ const t: CultureTranslation = {
     'c.order.o2': "O faci pe prima și speri să-ți amintești restul.", // nieuw, nalezen
     'c.order.o3': "Nu faci nimic: nu le știi pe toate trei.", // nieuw, nalezen
     'c.order.w': "Să întrebi imediat durează zece secunde. Mai târziu șeful poate să fie plecat, și atunci aștepți sau ghicești.", // nieuw, nalezen
+    'u.afbouw': "Plăci, tencuială și vopsea", // nieuw, nalezen
+    'l.tiletools': "Sculele pentru montat plăci", // nieuw, nalezen
+    'w.lijmkam': "gletiera zimțată (întinde adezivul pentru plăci în dungi)", // nieuw, nalezen
+    'w.troffel': "mistria", // nieuw, nalezen
+    'w.tegelsnijder': "mașina de tăiat plăci", // nieuw, nalezen
+    'w.nijptang': "cleștele (rupi cu el bucăți mici dintr-o placă)", // nieuw, nalezen
+    'w.mixer': "mixerul (amestecă adezivul sau tencuiala în găleată)", // nieuw, nalezen
+    'w.duimstok': "metrul pliant", // nieuw, nalezen
+    's.tiletools.1': "Dă-mi puțin gletiera zimțată.", // nieuw, nalezen
+    's.tiletools.2': "Tai placa cu mașina de tăiat plăci.", // nieuw, nalezen
+    's.tiletools.3': "Măsoară întâi cu metrul pliant.", // nieuw, nalezen
+    'c.tiletools.q': "Unde e mixerul?", // nieuw, nalezen
+    'c.tiletools.a': "La găleată, lângă ușă.", // nieuw, nalezen
+    'c.tiletools': "Curăță sculele înainte să se întărească adezivul", // nieuw, nalezen
+    'c.tiletools.b': "Adezivul pentru plăci și tencuiala se întăresc repede, și pe scule. Așa că spală imediat gletiera zimțată, mistria și mixerul într-o găleată cu apă, și înainte de pauză. Adezivul întărit nu mai iese, iar o gletieră zimțată cu adeziv întărit face dungi proaste. Nu turna apa murdară în chiuvetă sau în scurgere: se înfundă. Întreabă unde se poate arunca apa. Mixerul: ține-l cu ambele mâini și pornește-l încet. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.tiletools.p': "Curăț repede gletiera zimțată.", // nieuw, nalezen
+    'c.tiletools.s': "E timpul de pauză. Gletiera zimțată e plină de adeziv ud. Ce faci?", // nieuw, nalezen
+    'c.tiletools.o1': "O speli în apă, apoi iei pauza.", // nieuw, nalezen
+    'c.tiletools.o2': "O lași: o speli după lucru.", // nieuw, nalezen
+    'c.tiletools.o3': "O pui în găleata cu adeziv.", // nieuw, nalezen
+    'c.tiletools.w': "Adezivul se întărește și în pauză. O gletieră curată face dungi bune, iar plăcile se lipesc bine. Adezivul întărit pe ea înseamnă multă muncă, sau o sculă nouă.", // nieuw, nalezen
+    'l.tiling': "Plăci, adeziv și linia de mijloc", // nieuw, nalezen
+    'w.tegel': "placa (de faianță sau de gresie)", // nieuw, nalezen
+    'w.tegellijm': "adezivul pentru plăci", // nieuw, nalezen
+    'w.tegelkruisje': "cruciulița (o cruce mică între plăci)", // nieuw, nalezen
+    'w.hartlijn': "linia de mijloc (de la ea începi să pui plăcile)", // nieuw, nalezen
+    'w.tegelplaat': "panoul de exerciții (un panou pe care exersezi montarea plăcilor)", // nieuw, nalezen
+    'w.potlood': "creionul", // nieuw, nalezen
+    's.tiling.1': "Adezivul pentru plăci e încă ud.", // nieuw, nalezen
+    's.tiling.2': "Pune o cruciuliță între plăci.", // nieuw, nalezen
+    's.tiling.3': "Trasează întâi linia de mijloc cu creionul.", // nieuw, nalezen
+    'c.tiling.q': "De unde încep cu plăcile?", // nieuw, nalezen
+    'c.tiling.a': "Din mijloc, de pe linia de mijloc.", // nieuw, nalezen
+    'c.tiling': "Începe de la linia de mijloc, cu puțin adeziv", // nieuw, nalezen
+    'c.tiling.b': "La plăci nu se începe dintr-un colț. Întâi trasezi linia de mijloc, cu un creion și cu nivela, și începi de acolo. Atunci plăcile tăiate de la cele două capete au aceeași mărime. Întinde doar atâta adeziv cât poți acoperi cu plăci în scurt timp. Adezivul care stă prea mult face o pieliță uscată, și atunci plăcile nu se lipesc bine. Pune o cruciuliță la fiecare încrucișare, ca toate rosturile să fie la fel. Verifică des cu nivela: o placă strâmbă e ușor de îndreptat acum, și greu mâine.", // nieuw, nalezen
+    'c.tiling.p': "Nu întind prea mult adeziv deodată.", // nieuw, nalezen
+    'c.tiling.s': "După o convorbire lungă la telefon, adezivul de pe perete are o pieliță uscată. Ce faci?", // nieuw, nalezen
+    'c.tiling.o1': "Îl razi și întinzi adeziv proaspăt.", // nieuw, nalezen
+    'c.tiling.o2': "Pui plăcile pe el oricum.", // nieuw, nalezen
+    'c.tiling.o3': "Îl uzi cu un burete și continui.", // nieuw, nalezen
+    'c.tiling.w': "Adezivul cu pieliță uscată nu ține bine placa. Mai târziu placa se poate desprinde, și atunci lucrarea trebuie făcută din nou.", // nieuw, nalezen
+    'l.plaster': "Tencuirea", // nieuw, nalezen
+    'w.stucspaan': "gletiera netedă (o drișcă plată din oțel cu care netezești tencuiala)", // nieuw, nalezen
+    'w.oplegspaan': "paleta pentru tencuială (o placă plată pe care ții tencuiala)", // nieuw, nalezen
+    'w.spackmes': "șpaclul (un cuțit lat și plat)", // nieuw, nalezen
+    'w.rei': "dreptarul (o bară lungă și dreaptă cu care tragi tencuiala drept)", // nieuw, nalezen
+    'w.sponsspaan': "drișca cu burete", // nieuw, nalezen
+    'w.hoekprofiel': "coltarul (o bandă de metal pentru un colț drept)", // nieuw, nalezen
+    's.plaster.1': "Pune întâi coltarul pe colț.", // nieuw, nalezen
+    's.plaster.2': "Netezește peretele cu gletiera.", // nieuw, nalezen
+    's.plaster.3': "Trage dreptarul pe perete.", // nieuw, nalezen
+    'c.plaster.q': "S-a uscat deja peretele?", // nieuw, nalezen
+    'c.plaster.a': "Nu, mai așteaptă o zi.", // nieuw, nalezen
+    'c.plaster': "Tencuiala are nevoie de timp să se usuce", // nieuw, nalezen
+    'c.plaster.b': "Tencuiala proaspătă rămâne udă mult timp. Un perete ud e mai închis la culoare decât unul uscat. Zugravul poate începe doar când peretele e uscat peste tot, și asta poate dura zile sau săptămâni. Nu-l usca mai repede cu un încălzitor: atunci tencuiala poate crăpa. Cineva vrea să vopsească prea devreme? Spune că peretele nu e încă uscat. Și înainte să începi, acoperă podeaua, ferestrele și prizele: tencuiala se scoate greu.", // nieuw, nalezen
+    'c.plaster.p': "Peretele e încă ud. Nu poți vopsi încă.", // nieuw, nalezen
+    'c.plaster.s': "Zugravul vrea să înceapă mâine. Tencuiala nouă mai are pete închise la culoare. Ce faci?", // nieuw, nalezen
+    'c.plaster.o1': "Îi spui zugravului: peretele nu e încă uscat.", // nieuw, nalezen
+    'c.plaster.o2': "Pui un încălzitor în fața lui la noapte.", // nieuw, nalezen
+    'c.plaster.o3': "Nu spui nimic: o să vadă zugravul.", // nieuw, nalezen
+    'c.plaster.w': "Petele închise înseamnă că tencuiala e încă udă. Vopseaua pe un perete ud se poate desprinde, iar un încălzitor poate face crăpături. Să aștepți costă mai puțin decât să faci totul din nou.", // nieuw, nalezen
   },
 };
 

@@ -1359,6 +1359,75 @@ const sectorUnits: Unit[] = [
   ]),
 ];
 
+// ---- Tiles, plaster and paint (the owner's request, 20 November 2026) ----
+// The second own unit of the sector Bouw (src/content/sectors.ts): the finishing work after the
+// building site of "Op de bouw". In the path of a learner who chose Bouw it comes right after "Op
+// de bouw"; in every other course it is appended at the very end (workUnits below), so no
+// existing course changes. Its lessons stand in their own list, in course order: the next lessons
+// (paint, prep) are added at its end, each with its tip in src/content/workTips.ts (afbouwTips).
+// Already words of other lessons, used here in a sentence or the chat only: "de emmer"
+// (l.cleaning), "de deur" and "de muur" (u.sounds), "snijden" and "wachten". The drawings:
+// src/pictures/group53.tsx (l.tiletools), group54.tsx (l.tiling) and group55.tsx (l.plaster).
+
+const afbouwLessons: Lesson[] = [
+  lesson(
+    'tiletools',
+    'The tiler’s tools',
+    [
+      ['lijmkam', 'de lijmkam', 'the notched trowel (spreads tile glue in ridges)', '🪮'],
+      ['troffel', 'de troffel', 'the trowel', '🧱'],
+      ['tegelsnijder', 'de tegelsnijder', 'the tile cutter', '✂️'],
+      ['nijptang', 'de nijptang', 'the pincers (to nip small bits off a tile)', '🗜️'],
+      ['mixer', 'de mixer', 'the paddle mixer (stirs glue or plaster in a bucket)', '🌀'],
+      ['duimstok', 'de duimstok', 'the folding ruler', '📏'],
+    ],
+    [
+      ['Geef me de lijmkam even.', 'Give me the notched trowel for a moment.', ['Geef me even de lijmkam.']],
+      ['Ik snijd de tegel met de tegelsnijder.', 'I cut the tile with the tile cutter.'],
+      ['Meet eerst met de duimstok.', 'Measure with the folding ruler first.'],
+    ],
+    [['Waar is de mixer?', 'Where is the mixer?'], ['Bij de emmer, naast de deur.', 'By the bucket, next to the door.']],
+  ),
+  lesson(
+    'tiling',
+    'Tiles, glue and the centre line',
+    [
+      ['tegel', 'de tegel', 'the tile', '🔲'],
+      ['tegellijm', 'de tegellijm', 'the tile glue', '🪣'],
+      ['tegelkruisje', 'het tegelkruisje', 'the tile spacer (a small cross between the tiles)', '➕'],
+      ['hartlijn', 'de hartlijn', 'the centre line (you start tiling from it)', '↕️'],
+      ['tegelplaat', 'de tegelplaat', 'the tiling board (a board to practise setting tiles)', '🟦'],
+      ['potlood', 'het potlood', 'the pencil', '✏️'],
+    ],
+    [
+      ['De tegellijm is nog nat.', 'The tile glue is still wet.'],
+      ['Zet een tegelkruisje tussen de tegels.', 'Put a tile spacer between the tiles.'],
+      ['Teken eerst de hartlijn met het potlood.', 'First draw the centre line with the pencil.'],
+    ],
+    [['Waar begin ik met de tegels?', 'Where do I start with the tiles?'], ['In het midden, op de hartlijn.', 'In the middle, on the centre line.']],
+  ),
+  lesson(
+    'plaster',
+    'Plastering',
+    [
+      ['stucspaan', 'de stucspaan', 'the plastering trowel (a flat steel float to smooth plaster)', '🔳'],
+      ['oplegspaan', 'de oplegspaan', 'the hawk (a flat board you hold the plaster on)', '🟫'],
+      ['spackmes', 'het spackmes', 'the filling knife (a wide flat knife)', '🔪'],
+      ['rei', 'de rei', 'the straightedge (a long straight bar to level plaster)', '📐'],
+      ['sponsspaan', 'de sponsspaan', 'the sponge float', '🧽'],
+      ['hoekprofiel', 'het hoekprofiel', 'the corner bead (a metal strip for a straight corner)', '📎'],
+    ],
+    [
+      ['Zet eerst het hoekprofiel op de hoek.', 'First put the corner bead on the corner.'],
+      ['Maak de muur glad met de stucspaan.', 'Make the wall smooth with the plastering trowel.'],
+      ['Trek de rei over de muur.', 'Pull the straightedge over the wall.'],
+    ],
+    [['Is de muur al droog?', 'Is the wall dry yet?'], ['Nee, wacht nog een dag.', 'No, wait another day.']],
+  ),
+];
+
+const afbouwUnit = unit('afbouw', 'Tiles, plaster and paint', 'Tegels, stuc en verf', '🖌️', '#0f6e8c', afbouwLessons);
+
 // ---- In the shop, and Time, money and measures (docs/entree-aanvulling.md, part 5) ----
 // Basis units (no sector of their own), after the sector units: the course of every existing
 // sector keeps its order, the two units come at the end of it.
@@ -2542,5 +2611,7 @@ export const workUnits: Unit[] = [
   onlineUnit,
   // The newest sector unit (5 November 2026), at the very end (see "Transport and delivery" above).
   deliveryUnit,
+  // Bouw's second own unit (20 November 2026), at the very end (see "Tiles, plaster and paint" above).
+  afbouwUnit,
 ];
 

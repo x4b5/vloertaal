@@ -168,6 +168,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Perguntam se a porta está fechada: não, e fecha-a agora.", // nieuw, nalezen
     'c.fillempty.a.why': "Perguntam se está cheio: sim, e esvazia-o.", // nieuw, nalezen
     'c.order.a.why': "Pedem para fazer isto agora: sim, e pergunta o que vem depois.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Perguntam onde está o misturador: um sítio, e o que está perto.", // nieuw, nalezen
+    'c.tiling.a.why': "Perguntam por onde começar: no meio, na linha central.", // nieuw, nalezen
+    'c.plaster.a.why': "Perguntam se a parede está seca: não, e quanto tempo esperar.", // nieuw, nalezen
   },
 };
 

@@ -121,6 +121,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Я можу сказати, що клієнта немає вдома.", // nieuw, nalezen
     'kjn.u.delivery.2': "Я можу попросити сусідів узяти посилку.", // nieuw, nalezen
     'kjn.u.delivery.3': "Я можу запитати, хто визначає мій маршрут і мій час.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Я можу попросити зубчастий шпатель або кельму.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Я можу запитати, звідки мені починати класти плитку.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Я можу сказати, що стіна ще не суха.", // nieuw, nalezen
   },
 };
 

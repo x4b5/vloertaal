@@ -115,6 +115,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Pot să spun că clientul nu e acasă.", // nieuw, nalezen
     'kjn.u.delivery.2': "Pot să le cer vecinilor să primească un colet.", // nieuw, nalezen
     'kjn.u.delivery.3': "Pot să întreb cine decide traseul și orele mele.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Pot să cer gletiera zimțată sau mistria.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Pot să întreb de unde încep cu plăcile.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Pot să spun că peretele nu e încă uscat.", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 november 2026).
     'kjn.u.communicate.1': "Pot să explic ce nu e în regulă.", // nieuw, nalezen
     'kjn.u.communicate.2': "Pot să spun ce am auzit.", // nieuw, nalezen

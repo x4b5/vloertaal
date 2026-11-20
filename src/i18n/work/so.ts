@@ -2287,6 +2287,67 @@ const t: CultureTranslation = {
     'c.order.o2': "Midda koowaad samee, oo rajee inaad inta kale xusuusato.", // nieuw, nalezen
     'c.order.o3': "Waxba ha samayn: saddexdaba ma wada taqaan.", // nieuw, nalezen
     'c.order.w': "Inaad isla markiiba weydiiso waxay qaadataa toban ilbiriqsi. Hadhow madaxaagu waa laga yaabaa inuu tago, markaasna waad sugaysaa ama waad qiyaasaysaa.", // nieuw, nalezen
+    'u.afbouw': "Jaajuur, malaas iyo rinji", // nieuw, nalezen
+    'l.tiletools': "Qalabka qofka jaajuurka dhiga", // nieuw, nalezen
+    'w.lijmkam': "malqaacadda ilkaha leh (xabagta jaajuurka xariiqyo ku fidisa)", // nieuw, nalezen
+    'w.troffel': "malqaacadda dhismaha", // nieuw, nalezen
+    'w.tegelsnijder': "qalabka jaajuurka lagu jaro", // nieuw, nalezen
+    'w.nijptang': "biinsada (lagu gooyo jajab yar oo jaajuurka ah)", // nieuw, nalezen
+    'w.mixer': "mashiinka qasa (xabag ama malaas ku qasa baaldi dhexdiisa)", // nieuw, nalezen
+    'w.duimstok': "mitirka laablaabma", // nieuw, nalezen
+    's.tiletools.1': "Malqaacadda ilkaha leh ii soo dhiib wax yar.", // nieuw, nalezen
+    's.tiletools.2': "Jaajuurka waxaan ku jaraa qalabka jaajuurka lagu jaro.", // nieuw, nalezen
+    's.tiletools.3': "Marka hore ku cabbir mitirka laablaabma.", // nieuw, nalezen
+    'c.tiletools.q': "Xaggee buu yaal mashiinka qasa?", // nieuw, nalezen
+    'c.tiletools.a': "Baaldiga agtiisa, albaabka dhinaciisa.", // nieuw, nalezen
+    'c.tiletools': "Nadiifi qalabkaaga inta xabagtu aanay adkaan", // nieuw, nalezen
+    'c.tiletools.b': "Xabagta jaajuurka iyo malaasku si dhakhso ah ayay u adkaadaan, xataa qalabkaaga dushiisa. Sidaas darteed malqaacadda ilkaha leh, malqaacadda iyo mashiinka qasa isla markiiba ku nadiifi baaldi biyo ah, xataa ka hor nasashadaada. Xabag adkaatay ma baxdo, malqaacad ilkaha leh oo xabag adag ku taallana waxay samaysaa xariiqyo xun. Biyaha wasakhda ah ha ku shubin weelka gacmaha lagu dhaqdo ama dhuunta biyaha: way xirmaysaa. Weydii meesha biyaha lagu shubi karo. Mashiinka qasa: laba gacmood ku qabo, oo si tartiib ah u shid. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.tiletools.p': "Malqaacadda ilkaha leh ayaan nadiifinayaa.", // nieuw, nalezen
+    'c.tiletools.s': "Waa waqtigii nasashadaada. Malqaacaddaada ilkaha leh waxaa ka buuxa xabag qoyan. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.tiletools.o1': "Biyo ku nadiifi, kadibna naso.", // nieuw, nalezen
+    'c.tiletools.o2': "Iska daa: shaqada kadib ayaad nadiifinaysaa.", // nieuw, nalezen
+    'c.tiletools.o3': "Ku rid baaldiga xabagta.", // nieuw, nalezen
+    'c.tiletools.w': "Xabagta jaajuurku xataa nasashadaada way adkaataa. Malqaacad ilkaha leh oo nadiif ah waxay samaysaa xariiqyo wanaagsan, jaajuurkuna si fiican ayuu u dhegaa. Xabag adag oo ku taal waa shaqo badan, ama qalab cusub.", // nieuw, nalezen
+    'l.tiling': "Jaajuur, xabag iyo xariiqda dhexe", // nieuw, nalezen
+    'w.tegel': "jaajuurka", // nieuw, nalezen
+    'w.tegellijm': "xabagta jaajuurka", // nieuw, nalezen
+    'w.tegelkruisje': "kala-dhigaha jaajuurka (qalab yar oo + u eg oo jaajuurrada dhexdooda la geliyo)", // nieuw, nalezen
+    'w.hartlijn': "xariiqda dhexe (jaajuurka halkaas ayaa laga bilaabaa)", // nieuw, nalezen
+    'w.tegelplaat': "looxa tababarka jaajuurka (loox lagu barto dhigista jaajuurka)", // nieuw, nalezen
+    'w.potlood': "qalin qoriga", // nieuw, nalezen
+    's.tiling.1': "Xabagta jaajuurku weli waa qoyan tahay.", // nieuw, nalezen
+    's.tiling.2': "Kala-dhige geli jaajuurrada dhexdooda.", // nieuw, nalezen
+    's.tiling.3': "Marka hore xariiqda dhexe ku sawir qalin qoriga.", // nieuw, nalezen
+    'c.tiling.q': "Jaajuurka xaggee baan ka bilaabaa?", // nieuw, nalezen
+    'c.tiling.a': "Bartamaha, xariiqda dhexe.", // nieuw, nalezen
+    'c.tiling': "Ka bilow xariiqda dhexe, xabag yar", // nieuw, nalezen
+    'c.tiling.b': "Qofka jaajuurka dhigaa kama bilaabo gees. Marka hore waxaad sawirtaa xariiqda dhexe, qalin qori iyo miisaanka biyaha, halkaasna waad ka bilowdaa. Markaas jaajuurrada la jaray ee labada dhinac waa isku cabbir. Xabag mari inta aad jaajuur ku dabooli karto waqti gaaban oo keliya. Xabagta muddo dheer taal waxaa ku sameysma diir qalalan, markaas jaajuurku si fiican uma dhego. Kala-dhige geli meel kasta oo xariiqyadu isku gooyaan, si dhammaan kala-goysyadu isku mid u noqdaan. Inta badan ku hubi miisaanka biyaha: jaajuur qalloocan hadda way fududahay in la hagaajiyo, berrina way adag tahay.", // nieuw, nalezen
+    'c.tiling.p': "Xabag badan hal mar ma marinayo.", // nieuw, nalezen
+    'c.tiling.s': "Wicitaan taleefan oo dheer kadib, xabagta derbiga ku taal waxaa ku sameysmay diir qalalan. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.tiling.o1': "Xoq, oo xabag cusub mari.", // nieuw, nalezen
+    'c.tiling.o2': "Jaajuurka si kastaba ugu riix.", // nieuw, nalezen
+    'c.tiling.o3': "Isbuunyo ku qoy, oo sii wad.", // nieuw, nalezen
+    'c.tiling.w': "Xabag diir qalalan leh si fiican uma hayso jaajuurka. Hadhow jaajuurku wuu ka soo bixi karaa, markaas shaqada mar kale ayaa la qabanayaa.", // nieuw, nalezen
+    'l.plaster': "Malaasid", // nieuw, nalezen
+    'w.stucspaan': "malqaacadda malaaska (bir siman oo malaaska lagu simo)", // nieuw, nalezen
+    'w.oplegspaan': "looxa malaaska (loox siman oo malaaska lagu haysto)", // nieuw, nalezen
+    'w.spackmes': "mindida buuxinta (mindi ballaaran oo siman)", // nieuw, nalezen
+    'w.rei': "ulka toosan (ul dheer oo toosan oo malaaska lagu simo)", // nieuw, nalezen
+    'w.sponsspaan': "malqaacadda isbuunyada leh", // nieuw, nalezen
+    'w.hoekprofiel': "birta geeska (bir dhuuban oo gees toosan samaysa)", // nieuw, nalezen
+    's.plaster.1': "Marka hore birta geeska saar geeska.", // nieuw, nalezen
+    's.plaster.2': "Derbiga ku sim malqaacadda malaaska.", // nieuw, nalezen
+    's.plaster.3': "Ulka toosan derbiga dul jiid.", // nieuw, nalezen
+    'c.plaster.q': "Derbigu ma qallalay?", // nieuw, nalezen
+    'c.plaster.a': "Maya, sug maalin kale.", // nieuw, nalezen
+    'c.plaster': "Malaasku waqti ayuu u baahan yahay si uu u qallalo", // nieuw, nalezen
+    'c.plaster.b': "Malaas cusub muddo dheer ayuu qoyan yahay. Derbi qoyan wuu ka madow yahay mid qallalan. Rinjiiluhu wuxuu bilaabi karaa oo keliya marka derbigu meel kasta ka qallalo, taasina waxay qaadan kartaa maalmo ama toddobaadyo. Ha ku qallajin si dhakhso ah kuleyliye: markaas malaasku wuu dildillaaci karaa. Qof ma rabaa inuu rinjiyeeyo goor aad u hore? Dheh in derbigu aanu weli qallalin. Oo ka hor intaadan bilaabin, dabool dhulka, daaqadaha iyo godadka korontada: malaaska way adag tahay in la saaro.", // nieuw, nalezen
+    'c.plaster.p': "Derbigu weli waa qoyan yahay. Weli ma rinjiyeyn kartid.", // nieuw, nalezen
+    'c.plaster.s': "Rinjiiluhu wuxuu rabaa inuu berri bilaabo. Malaaska cusub weli waxaa ku yaal baro madow. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.plaster.o1': "U sheeg rinjiilaha: derbigu weli ma qallalin.", // nieuw, nalezen
+    'c.plaster.o2': "Caawa kuleyliye hor dhig.", // nieuw, nalezen
+    'c.plaster.o3': "Waxba ha odhan: rinjiiluhu wuu arki doonaa.", // nieuw, nalezen
+    'c.plaster.w': "Barooyinka madow waxay muujiyaan in malaasku weli qoyan yahay. Rinjiga derbi qoyan wuu ka soo bixi karaa, kuleyliyena wuxuu samayn karaa dildillaac. Sugiddu way ka jaban tahay in shaqada mar kale la qabto.", // nieuw, nalezen
   },
 };
 

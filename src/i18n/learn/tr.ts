@@ -169,6 +169,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Kapının kapalı olup olmadığı soruluyor: hayır, ve şimdi kapatıyor.", // nieuw, nalezen
     'c.fillempty.a.why': "Dolu olup olmadığı soruluyor: evet, ve boşaltıyor.", // nieuw, nalezen
     'c.order.a.why': "Şimdi yapması isteniyor: evet, ve sonra ne geldiğini soruyor.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Mikserin nerede olduğu soruluyor: bir yer, bir de yakınında ne olduğu.", // nieuw, nalezen
+    'c.tiling.a.why': "Nereden başlanacağı soruluyor: ortadan, orta çizgiden.", // nieuw, nalezen
+    'c.plaster.a.why': "Duvarın kuru olup olmadığı soruluyor: hayır, bir de ne kadar bekleneceği.", // nieuw, nalezen
   },
 };
 

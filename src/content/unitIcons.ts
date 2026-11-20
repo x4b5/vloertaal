@@ -60,6 +60,8 @@ export const unitIcons: Record<string, string> = {
   'u.online': 'w.computer',
   // Vervoer en bezorging: the delivery van (not "het busje" of l.jobends, the van that brings workers).
   'u.delivery': 'w.bestelbus',
+  // Tegels, stuc en verf (20 November 2026): the notched trowel, the tiler's own tool (group53).
+  'u.afbouw': 'w.lijmkam',
 };
 
 /**

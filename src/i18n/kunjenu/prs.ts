@@ -114,6 +114,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "می‌توانم بگویم که مشتری در خانه نیست.", // nieuw, nalezen
     'kjn.u.delivery.2': "می‌توانم از همسایه‌ها بخواهم که یک بسته را بگیرند.", // nieuw, nalezen
     'kjn.u.delivery.3': "می‌توانم بپرسم که کی مسیر و وقت‌های کار مرا تعیین می‌کند.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "می‌توانم کرندی دندانه‌دار یا کرندی را بخواهم.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "می‌توانم بپرسم که با کاشی‌ها از کجا شروع کنم.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "می‌توانم بگویم که دیوار هنوز خشک نیست.", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 nov 2026)
     'kjn.u.communicate.1': "می‌توانم توضیح بدهم که چه مشکل است.", // nieuw, nalezen
     'kjn.u.communicate.2': "می‌توانم بگویم که چه شنیدم.", // nieuw, nalezen
