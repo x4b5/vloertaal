@@ -271,7 +271,7 @@ describe('switching between the tracks keeps all progress', () => {
   });
 });
 
-describe('the first run in Dutch: language → (no gender) → code → sector → country → home', () => {
+describe('the first run in Dutch: language → (no gender) → code → sector → country → one phone → home', () => {
   const p = { ...emptyProgress, onboarded: true, helpLang: 'nl' as const };
   it('skips the gender page both ways', () => {
     expect(shouldAskGender(p)).toBe(false);
@@ -281,7 +281,8 @@ describe('the first run in Dutch: language → (no gender) → code → sector �
     expect(onboardingStep(p, 'full')).toBe('sector');
     expect(previousStep('sector', p)).toBe(OPEN_TO_ALL ? 'language' : 'gate');
     expect(onboardingStep({ ...p, sector: 'none' }, 'full')).toBe('country');
-    expect(onboardingStep({ ...p, sector: 'none', country: 'be' }, 'full')).toBe('done');
+    expect(onboardingStep({ ...p, sector: 'none', country: 'be' }, 'full')).toBe('phone');
+    expect(onboardingStep({ ...p, sector: 'none', country: 'be', phoneNotice: true }, 'full')).toBe('done');
     expect(previousStep('gate', { ...p, sector: 'none' })).toBe('language');
   });
 

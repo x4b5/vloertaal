@@ -136,6 +136,8 @@ export const uiEn = {
   chooseSector: 'Where do you work?',
   countryTitle: 'Which country do you work in?',
   countryHint: 'You get the words and tips of that country.',
+  onePhoneTitle: 'What you learn is only on this phone.',
+  onePhoneText: 'Always use this phone.',
   countryNl: 'The Netherlands',
   countryBe: 'Belgium (Flanders)',
   tipsNote: 'These tips are about work in the Netherlands. General information, not legal advice.',

@@ -97,6 +97,8 @@ const lang: HelpLanguageSource = {
     chooseSector: "Xaggee ka shaqaysaa?", // nieuw, nalezen
     countryTitle: "Dalkee ayaad ka shaqaysaa?", // nieuw, nalezen
     countryHint: 'Waxaad helaysaa erayada iyo talooyinka dalkaas.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
+    onePhoneTitle: "Waxa aad baranayso waxay ku jiraan taleefankan oo keliya.", // nieuw, nalezen (één telefoon, 20 nov 2026)
+    onePhoneText: "Had iyo jeer isticmaal taleefankan.", // nieuw, nalezen (één telefoon, 20 nov 2026)
     countryNl: "Holland", // nieuw, nalezen
     countryBe: "Beljiyam (Flanders)", // nieuw, nalezen
     tipsNote: "Talooyinkan waxay ku saabsan yihiin shaqada Holland. Macluumaad guud, maaha talo sharci.", // nieuw, nalezen

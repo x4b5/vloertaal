@@ -137,7 +137,8 @@ Niet in deze lijst, want altijd aanwezig: de zin van Bram, de herhaling van vand
 3. De code. Staat uit zolang alles open is voor iedereen.
 4. In welke sector werk je (of wil je werken)?
 5. In welk land werk je: Nederland of België?
-6. Klaar: de app opent het lespad.
+6. Geen vraag maar een mededeling met één knop: wat je leert, staat alleen op deze telefoon.
+7. Klaar: de app opent het lespad.
 
 ### Leren
 

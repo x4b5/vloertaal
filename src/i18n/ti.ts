@@ -98,6 +98,8 @@ const lang: HelpLanguageSource = {
     countryTitle: { m: 'ኣብ ኣየናይ ሃገር ኢኻ ትሰርሕ?', f: 'ኣብ ኣየናይ ሃገር ኢኺ ትሰርሒ?', x: 'ኣብ ኣየናይ ሃገር ኢኹም ትሰርሑ?' }, // x: nieuw, nalezen
     // nagelezen (2e lezing)
     countryHint: { m: 'ቃላትን ምኽርታትን ናይታ ሃገር ክትረክብ ኢኻ።', f: 'ቃላትን ምኽርታትን ናይታ ሃገር ክትረኽቢ ኢኺ።', x: 'ቃላትን ምኽርታትን ናይታ ሃገር ክትረኽቡ ኢኹም።' }, // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
+    onePhoneTitle: { m: 'ምዕባለኻ ኣብዚ ተሌፎን ጥራይ እዩ ዘሎ።', f: 'ምዕባለኺ ኣብዚ ተሌፎን ጥራይ እዩ ዘሎ።', x: 'ምዕባለኹም ኣብዚ ተሌፎን ጥራይ እዩ ዘሎ።' }, // nieuw, nalezen (één telefoon, 20 nov 2026)
+    onePhoneText: { m: 'ኩሉ ግዜ ነዚ ተሌፎን ተጠቐም።', f: 'ኩሉ ግዜ ነዚ ተሌፎን ተጠቐሚ።', x: 'ኩሉ ግዜ ነዚ ተሌፎን ተጠቐሙ።' }, // nieuw, nalezen (één telefoon, 20 nov 2026)
     countryNl: 'ኔዘርላንድ',
     countryBe: 'ቤልጅዩም (ፍላንደርስ)',
     tipsNote: 'እዞም ምኽርታት ብዛዕባ ስራሕ ኣብ ኔዘርላንድ እዮም። ሓፈሻዊ ሓበሬታ እዩ፡ ሕጋዊ ምኽሪ ኣይኮነን።',

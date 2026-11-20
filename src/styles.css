@@ -467,6 +467,13 @@ h2 { font-size: 1.25rem; }
 .sector-hint { margin: 10px auto 0; max-width: 34em; text-align: center; color: var(--muted); font-size: 0.95rem; line-height: 1.4; }
 .sector-hint .bi { align-items: center; }
 .sector-hint .bi-en { color: var(--ink-2); }
+/* "Use this one phone": the last page of the first run. A big phone, two lines, one button. */
+.one-phone-pic { display: flex; justify-content: center; margin: 28px 0 0; color: var(--ink-2); }
+.one-phone-title { margin-top: 18px; }
+.one-phone-title .bi, .one-phone-text .bi { align-items: center; }
+.one-phone-text { margin: 14px auto 0; max-width: 22em; text-align: center; font-size: 1.15rem; line-height: 1.4; color: var(--ink); }
+.one-phone-say { display: flex; justify-content: center; min-height: 8px; margin-top: 10px; }
+.one-phone-ok { width: 100%; margin-top: 28px; }
 .sector-btn { min-height: 0; }
 .sector-icon {
   display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px;

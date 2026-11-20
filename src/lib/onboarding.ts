@@ -29,15 +29,16 @@ export const trialLessonAllowed = (lessonId: string, track: Track = 'taal') => l
 /**
  * The first run, one question per page, in this order: the help language, "Woman or man?" (only
  * for a help language with gender, so the password page already talks to you in the right
- * form), the password, the sector, then "In welk land werk je?" (both tracks). 'done' is the
- * home. The colour is not asked in the first run (since 5 November 2026): Zand until the learner
- * picks another in Settings > Weergave.
+ * form), the password, the sector, then "In welk land werk je?" (both tracks), and last a page
+ * that is not a question: "use this one phone" (since 20 November 2026; there is no back end, so
+ * what a learner does lives on one device). 'done' is the home. The colour is not asked in the
+ * first run (since 5 November 2026): Zand until the learner picks another in Settings > Weergave.
  */
-export type OnbStep = 'language' | 'gender' | 'gate' | 'sector' | 'country' | 'done';
-export const ONB_ORDER: readonly OnbStep[] = ['language', 'gender', 'gate', 'sector', 'country', 'done'];
+export type OnbStep = 'language' | 'gender' | 'gate' | 'sector' | 'country' | 'phone' | 'done';
+export const ONB_ORDER: readonly OnbStep[] = ['language', 'gender', 'gate', 'sector', 'country', 'phone', 'done'];
 export const stepIndex = (s: OnbStep) => ONB_ORDER.indexOf(s);
 
-type OnbProgress = Pick<Progress, 'onboarded' | 'helpLang' | 'gender' | 'genderAsked' | 'sector'> & Partial<Pick<Progress, 'country' | 'completed' | 'xp'>>;
+type OnbProgress = Pick<Progress, 'onboarded' | 'helpLang' | 'gender' | 'genderAsked' | 'sector'> & Partial<Pick<Progress, 'country' | 'phoneNotice' | 'completed' | 'xp'>>;
 
 /** Has the learner begun (a lesson done, or points)? Then the first run is over. */
 const started = (p: Partial<Pick<Progress, 'completed' | 'xp'>>) => Object.keys(p.completed ?? {}).length > 0 || (p.xp ?? 0) > 0;
@@ -65,6 +66,8 @@ export function onboardingStep(p: OnbProgress, access: Access | null, gateAgain 
   // The first run: the country right after the sector. A learner who began before this question
   // gets it on opening the home instead (shouldAskCountry), without a way back.
   if (p.country === undefined && !started(p)) return 'country';
+  // Then, once: "use this one phone". Not for a learner who already began: they are on it.
+  if (!p.phoneNotice && !started(p)) return 'phone';
   return 'done';
 }
 
@@ -80,6 +83,8 @@ export function previousStep(step: OnbStep, p: OnbProgress): OnbStep | null {
       return OPEN_TO_ALL ? previousStep('gate', p) : 'gate';
     case 'country':
       return 'sector';
+    case 'phone':
+      return 'country';
     default:
       return null;
   }

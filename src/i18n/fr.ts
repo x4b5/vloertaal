@@ -97,6 +97,8 @@ const lang: HelpLanguageSource = {
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'Dans quel pays travailles-tu ?',
     countryHint: 'Tu reçois alors les mots et les conseils de ce pays.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
+    onePhoneTitle: 'Ce que tu apprends est seulement sur ce téléphone.', // nieuw, nalezen (één telefoon, 20 nov 2026)
+    onePhoneText: 'Utilise toujours ce téléphone.', // nieuw, nalezen (één telefoon, 20 nov 2026)
     countryNl: 'Pays-Bas',
     countryBe: 'Belgique (Flandre)',
     tipsNote: 'Ces conseils parlent du travail aux Pays-Bas. Ce sont des informations générales, pas un conseil juridique.',
