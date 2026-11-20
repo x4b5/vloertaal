@@ -31,6 +31,7 @@ export const START_STEPS: Record<OnbStep, string> = {
   gate: 'De code. Staat uit zolang alles open is voor iedereen.',
   sector: 'In welke sector werk je (of wil je werken)?',
   country: 'In welk land werk je: Nederland of België?',
+  phone: 'Geen vraag maar een mededeling met één knop: wat je leert, staat alleen op deze telefoon.',
   done: 'Klaar: de app opent het lespad.',
 };
 

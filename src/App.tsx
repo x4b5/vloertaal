@@ -30,6 +30,7 @@ import { GenderScreen } from './components/Gender';
 import { shouldAskGender } from './lib/askGender';
 import { onboardingStep, previousStep, shouldAskCountry, stepIndex, trialLessonAllowed, type OnbStep } from './lib/onboarding';
 import { CountryScreen } from './components/Country';
+import { OnePhoneScreen } from './components/OnePhone';
 import type { SettingsPage } from './lib/settingsMenu';
 import { AllTopics, Route, TopicPage } from './components/Route';
 import { useAutoOffline } from './components/Offline';
@@ -828,9 +829,15 @@ export default function App() {
   // Two steps of at most three cards; the first step's arrow goes back to the password page.
   if (step === 'sector') return <SectorScreen lang={lang} onDone={setSector} onBack={onbBack} />;
   // Last, right after the sector: "In welk land werk je?" (two cards; Settings can change it later).
-  // The colour is not asked here: Settings > Weergave. The country is the end of the start:
-  // counted once per device (src/lib/count.ts countStartDone).
+  // The colour is not asked here: Settings > Weergave. The country is the last question, and the
+  // end of the start as it is counted, once per device (src/lib/count.ts countStartDone; the
+  // privacy statement says "tot en met het land").
   if (step === 'country') return <CountryScreen lang={lang} onDone={(country) => { setCountry(country); countStartDone(); }} onBack={onbBack} />;
+  // Not a question: "use this one phone", a page with one button (there is no back end, so what a
+  // learner does lives on this device). Not counted.
+  if (step === 'phone') {
+    return <OnePhoneScreen lang={lang} onDone={() => setProgress((p) => ({ ...p, phoneNotice: true }))} onBack={onbBack} />;
+  }
   // A learner from before the gender question (or who switched to a help language with gender
   // later): asked once on its own page on opening the home, without a way back.
   if (view.name === 'home' && shouldAskGender(progress)) {

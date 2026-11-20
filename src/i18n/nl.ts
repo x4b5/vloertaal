@@ -137,6 +137,8 @@ export const uiNl: Record<UiKey, UiText> = {
   chooseSector: 'Waar werk je?',
   countryTitle: 'In welk land werk je?',
   countryHint: 'Je krijgt de werkregels van dat land.',
+  onePhoneTitle: 'Wat je leert, staat alleen op deze telefoon.',
+  onePhoneText: 'Gebruik steeds deze telefoon.',
   countryNl: 'Nederland',
   countryBe: 'België (Vlaanderen)',
   tipsNote: 'Deze tips gaan over werk in Nederland. Algemene informatie, geen juridisch advies.',

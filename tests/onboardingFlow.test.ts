@@ -2,9 +2,11 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { units } from '../src/content/curriculum';
-import { getHelpLanguage } from '../src/i18n/all';
+import { getHelpLanguage, registerPack } from '../src/i18n/all';
+import nlPack from '../src/i18n/packs/nl';
 import { Gate } from '../src/components/Gate';
 import { CountryScreen } from '../src/components/Country';
+import { OnePhoneScreen } from '../src/components/OnePhone';
 import { shownColour } from '../src/components/Colour';
 import {
   ONB_ORDER,
@@ -27,9 +29,10 @@ describe('first-run order: language, gender (gendered only), password, sector', 
     expect(onboardingStep(pl, null)).toBe('gender');
     expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true }, null)).toBe('gate');
     expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true }, 'preview')).toBe('sector');
-    // Then "In welk land werk je?" and then the home (no colour page).
+    // Then "In welk land werk je?", the page "use this one phone" and then the home (no colour page).
     expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none' }, 'preview')).toBe('country');
-    expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none', country: 'be' }, 'preview')).toBe('done');
+    expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none', country: 'be' }, 'preview')).toBe('phone');
+    expect(onboardingStep({ ...pl, gender: 'f', genderAsked: true, sector: 'none', country: 'be', phoneNotice: true }, 'preview')).toBe('done');
   });
 
   it('goes straight to the password for a help language without gender, and for English only', () => {
@@ -57,7 +60,7 @@ describe('first-run order: language, gender (gendered only), password, sector', 
   });
 
   it('a learner from before the gender question with a sector keeps the one-time page (not a first-run step)', () => {
-    const old = { ...fresh, onboarded: true, helpLang: 'pl' as const, sector: 'none' as const, country: 'nl' as const };
+    const old = { ...fresh, onboarded: true, helpLang: 'pl' as const, sector: 'none' as const, country: 'nl' as const, phoneNotice: true };
     expect(onboardingStep(old, 'full')).toBe('done');
   });
 });
@@ -69,7 +72,8 @@ describe('"In welk land werk je?": right after the sector, in both tracks', () =
       const p = { ...fresh, onboarded: true, helpLang, sector: 'construction' as const, completed: {}, xp: 0 };
       expect(onboardingStep(p, 'full'), String(helpLang)).toBe('country');
       expect(shouldAskCountry(p)).toBe(false);
-      expect(onboardingStep({ ...p, country: 'nl' }, 'full')).toBe('done');
+      expect(onboardingStep({ ...p, country: 'nl' }, 'full')).toBe('phone');
+      expect(onboardingStep({ ...p, country: 'nl', phoneNotice: true }, 'full')).toBe('done');
     }
     expect(previousStep('country', { ...fresh, onboarded: true, helpLang: 'tr' })).toBe('sector');
     expect(stepIndex('sector')).toBeLessThan(stepIndex('country'));
@@ -202,14 +206,57 @@ describe('the first Dutch word on the first tap', () => {
   });
 });
 
-describe('no colour in the first run (5 November 2026)', () => {
+describe('"Use this one phone": a page of its own, the last of the first run (20 November 2026)', () => {
+  // Without a back end what a learner does lives on one device. The password page said so in a
+  // small line, but that page is skipped while the app is open to all, and a line under a
+  // question is read over: a page with one button, so nobody starts without having seen it.
   const p = { ...fresh, onboarded: true, helpLang: 'tr' as const, sector: 'none' as const, country: 'nl' as const, completed: {}, xp: 0 };
+  const done = { best: 1, times: 1 };
 
-  it('the country is the last page: after it the home, without a colour page', () => {
+  it('comes after the country, once, and back goes to the country', () => {
+    expect(onboardingStep(p, 'full')).toBe('phone');
+    expect(onboardingStep({ ...p, phoneNotice: true }, 'full')).toBe('done');
+    expect(previousStep('phone', p)).toBe('country');
+    expect(stepIndex('country')).toBeLessThan(stepIndex('phone'));
+    expect(stepIndex('phone')).toBeLessThan(stepIndex('done'));
+  });
+
+  it('is not shown to a learner who already began: they are on their phone already', () => {
+    expect(onboardingStep({ ...p, completed: { [TRY_LESSON_ID]: done } }, 'full')).toBe('done');
+    expect(onboardingStep({ ...p, xp: 10 }, 'full')).toBe('done');
+  });
+
+  it('says it in the help language, with one button to go on and the back arrow', () => {
+    const tr = getHelpLanguage('tr', 'f');
+    const page = renderToStaticMarkup(createElement(OnePhoneScreen, { lang: tr, onDone: () => {}, onBack: () => {} }));
+    expect(page).toContain('one-phone-ok');
+    expect(page).toContain(tr!.ui.noticeOk!);
+    expect(page).toContain('chrome-back');
+    expect((page.match(/<button/g) ?? []).filter((b) => b).length).toBeLessThanOrEqual(3); // back, read aloud, go on
+    // English until the help language has the two lines.
+    expect(page).toContain(tr!.ui.onePhoneTitle ?? 'What you learn is only on this phone.');
+    expect(page).toContain(tr!.ui.onePhoneText ?? 'Always use this phone.');
+  });
+
+  it('in Dutch: the two sentences as agreed', () => {
+    registerPack(nlPack);
+    const nl = getHelpLanguage('nl');
+    const page = renderToStaticMarkup(createElement(OnePhoneScreen, { lang: nl, onDone: () => {}, onBack: () => {} }));
+    expect(page).toContain('Wat je leert, staat alleen op deze telefoon.');
+    expect(page).toContain('Gebruik steeds deze telefoon.');
+    expect(page.indexOf('Wat je leert')).toBeLessThan(page.indexOf('Gebruik steeds'));
+    expect(page.indexOf('Gebruik steeds')).toBeLessThan(page.indexOf('one-phone-ok'));
+  });
+});
+
+describe('no colour in the first run (5 November 2026)', () => {
+  const p = { ...fresh, onboarded: true, helpLang: 'tr' as const, sector: 'none' as const, country: 'nl' as const, phoneNotice: true, completed: {}, xp: 0 };
+
+  it('the country is the last question: after it "use this one phone" and the home, without a colour page', () => {
     expect(onboardingStep(p, 'full')).toBe('done');
     expect(onboardingStep({ ...p, country: undefined }, 'full')).toBe('country');
     expect(ONB_ORDER).not.toContain('colour');
-    expect(ONB_ORDER.slice(-2)).toEqual(['country', 'done']);
+    expect(ONB_ORDER.slice(-3)).toEqual(['country', 'phone', 'done']);
   });
 
   it('an older "auto" shows as the colour it gives on this device', () => {

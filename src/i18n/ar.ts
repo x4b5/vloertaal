@@ -97,6 +97,8 @@ const lang: HelpLanguageSource = {
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: { m: 'في أي بلد تعمل؟', f: 'في أي بلد تعملين؟', x: 'بلد العمل' }, // x: nieuw, nalezen
     countryHint: { m: 'ستحصل على كلمات ونصائح هذا البلد.', f: 'ستحصلين على كلمات ونصائح هذا البلد.', x: 'اختيار بلد العمل يعطي كلمات ونصائح هذا البلد.' }, // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
+    onePhoneTitle: 'تقدمك في التعلم موجود على هذا الهاتف فقط.', // nieuw, nalezen (één telefoon, 20 nov 2026)
+    onePhoneText: { m: 'استخدم هذا الهاتف دائماً.', f: 'استخدمي هذا الهاتف دائماً.', x: 'يُفضَّل استخدام هذا الهاتف دائماً.' }, // nieuw, nalezen (één telefoon, 20 nov 2026)
     countryNl: 'هولندا',
     countryBe: 'بلجيكا (فلاندرز)',
     tipsNote: 'هذه النصائح عن العمل في هولندا. معلومات عامة، وليست استشارة قانونية.',

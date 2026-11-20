@@ -90,6 +90,8 @@ export interface Progress {
   /** "Goed om te weten" (the work rules are general information, about the Netherlands) was
    *  read, on its own page the first time the work-rules track opened. Missing = not yet. */
   rulesNotice?: boolean;
+  /** The first-run page "use this one phone" was read (its button tapped): shown once. */
+  phoneNotice?: boolean;
   xp: number;
   streak: number;
   /** Local date (YYYY-MM-DD) of the last finished lesson. */
@@ -303,6 +305,7 @@ const FIELDS: { [K in keyof Progress]-?: Check<Progress[K]> } = {
   region: (v) => (isRegionChoice(v) ? v : undefined),
   country: (v) => (isCountry(v) ? v : undefined),
   rulesNotice: bool,
+  phoneNotice: bool,
   xp: count,
   streak: count,
   lastDay: day,
