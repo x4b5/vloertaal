@@ -139,6 +139,8 @@ export function ShotHarness({ shot, lang, word }: { shot: string; lang: string |
   }
   // The streak stopped at 12 (record 21), shown once on the next open.
   if (shot === 'stopped') return <StreakStopped streak={12} best={21} lang={getHelpLanguage(lang as LangCode, gender)} onDone={() => {}} />;
+  // &ids=w.a,w.b: only those pictures, also ones no lesson uses yet (drawn ahead of their lessons).
+  if (shot === 'pictures' && q.get('ids')) return <PictureIds ids={q.get('ids')!.split(',')} />;
   if (shot === 'pictures') return <PicturesSheet />;
   // "Vloertaal kan niet starten" (src/components/Splash.tsx BootFailed): /?shot=bootfailed. As the
   // real screen, it reads this browser's save (vloertaal:v1) for the help language; without a save
@@ -730,6 +732,32 @@ function SettingsShot({ progress: start, access }: { progress: Progress; access:
 function GenderShot({ lang, gender, greet }: { lang: LangCode; gender?: Gender; greet?: boolean }) {
   const [picked, setPicked] = useState(gender);
   return <GenderScreen lang={getHelpLanguage(lang, picked)} current={picked} onDone={setPicked} greet={greet} />;
+}
+
+/** Some word pictures by id, at 160, 120 and 48 px, on a light and on a dark card: to review
+ *  drawings before their lessons exist (/?shot=pictures&ids=w.a,w.b). */
+function PictureIds({ ids }: { ids: string[] }) {
+  return (
+    <div className="pics-page">
+      <div className="pics-grid">
+        {ids.map((id) => (
+          <div key={id} className="pics-cell">
+            <div className="pics-row">
+              <WordPicture id={id} emoji="❓" size={160} />
+            </div>
+            <div className="pics-row">
+              <WordPicture id={id} emoji="❓" size={120} />
+              <WordPicture id={id} emoji="❓" size={48} />
+              <div style={{ background: '#2b2f33', borderRadius: 12, padding: 4 }}>
+                <WordPicture id={id} emoji="❓" size={48} />
+              </div>
+            </div>
+            <span className="pics-id">{id}{pictures[id] ? '' : ' (ontbreekt)'}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 /** Every word of the course with its picture at 120 px and 48 px, grouped by unit, plus the

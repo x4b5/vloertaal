@@ -49,6 +49,7 @@ import group50 from './group50';
 import group51 from './group51';
 import group52 from './group52';
 import groupMaken from './groupMaken';
+import groupTechniek from './groupTechniek';
 import group53 from './group53';
 import group54 from './group54';
 import group55 from './group55';
@@ -122,6 +123,9 @@ const words: Record<string, () => JSX.Element> = {
   // Making (Productie), "Machines en gereedschap": 24 tool and machine words of 20 November 2026,
   // drawn ahead of their four lessons (u.machines).
   ...groupMaken,
+  // Techniek, "Elektra, leidingen en metaal": 24 words of 21 November 2026, drawn ahead of their
+  // four lessons.
+  ...groupTechniek,
   // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): l.tiletools, l.tiling and l.plaster.
   ...group53,
   ...group54,
