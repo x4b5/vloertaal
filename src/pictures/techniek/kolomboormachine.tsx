@@ -19,10 +19,10 @@ const block = (x: number, y: number, w: number, h: number, d: number, front: str
 };
 
 /** The feed handle: three spokes with red balls round the hub on the head's right side. */
-const HUB: [number, number] = [84, 34];
+const HUB: [number, number] = [88, 38];
 const SPOKES = [-35, 85, 205].map((a) => {
   const t = (a * Math.PI) / 180;
-  return [r1(HUB[0] + 19 * Math.cos(t)), r1(HUB[1] + 19 * Math.sin(t))] as [number, number];
+  return [r1(HUB[0] + 21 * Math.cos(t)), r1(HUB[1] + 21 * Math.sin(t))] as [number, number];
 });
 
 export default {
@@ -31,33 +31,33 @@ export default {
   // pointing down at the table and the three-spoke feed handle with red balls on its right side.
   'w.kolomboormachine': () => (
     <g strokeLinejoin="round">
-      <Ground cx={60} cy={104} rx={40} ry={4} />
+      <Ground cx={56} cy={105} rx={44} ry={4} />
       {/* The base */}
-      {block(24, 94, 56, 8, 16, PAL.slate, PAL.steel, PAL.slateDark)}
+      {block(18, 94, 66, 10, 16, PAL.slate, PAL.steel, PAL.slateDark)}
       {/* The column */}
-      <rect x="61" y="30" width="11" height="58" fill={PAL.mist} />
-      <rect x="67.5" y="30" width="4.5" height="58" fill={PAL.steel} />
+      <rect x="60" y="34" width="13" height="54" fill={PAL.mist} />
+      <rect x="67.5" y="34" width="5.5" height="54" fill={PAL.steel} />
       {/* The table on the column, with its collar */}
-      <rect x="59" y="74" width="15" height="8" rx="2" fill={PAL.slate} />
-      {block(28, 72, 40, 5, 14, PAL.slate, PAL.line, PAL.slateDark)}
+      <rect x="58" y="74" width="17" height="10" rx="2" fill={PAL.slate} />
+      {block(24, 72, 46, 6, 14, PAL.slate, PAL.line, PAL.slateDark)}
       {/* The motor on top of the head, then the head */}
-      <rect x="54" y="11" width="18" height="10" fill={PAL.slate} />
-      <rect x="65" y="11" width="7" height="10" fill={PAL.slateDark} />
-      <ellipse cx="63" cy="11" rx="9" ry="3" fill={PAL.steel} />
-      {block(28, 24, 48, 20, 12, PAL.green, PAL.leaf, PAL.greenShade)}
-      <Shine d="M33 30H52" color={PAL.lime} width={3} opacity={0.75} />
+      <rect x="52" y="14" width="20" height="9" fill={PAL.slate} />
+      <rect x="64" y="14" width="8" height="9" fill={PAL.slateDark} />
+      <ellipse cx="62" cy="14" rx="10" ry="2.6" fill={PAL.steel} />
+      {block(18, 26, 60, 24, 12, PAL.green, PAL.leaf, PAL.greenShade)}
+      <Shine d="M24 32H48" color={PAL.lime} width={3.4} opacity={0.75} />
       {/* The quill, the chuck and the bit pointing down at the table */}
-      <rect x="45" y="44" width="10" height="6" fill={PAL.steel} />
-      <path d="M43.5 50H56.5L54 58H46Z" fill={PAL.slate} />
-      <path d="M48.4 58H51.6V64.5L50 67.5L48.4 64.5Z" fill={PAL.slateDark} />
+      <rect x="41" y="50" width="12" height="6" fill={PAL.steel} />
+      <path d="M39.5 56H54.5L51.5 63H42.5Z" fill={PAL.slate} />
+      <path d="M45.4 63H48.6V67.5L47 70.5L45.4 67.5Z" fill={PAL.slateDark} />
       {/* The feed handle */}
       {SPOKES.map(([x, y], i) => (
-        <path key={`s${i}`} d={`M${HUB[0]} ${HUB[1]}L${x} ${y}`} stroke={PAL.slate} strokeWidth="3.2" strokeLinecap="round" />
+        <path key={`s${i}`} d={`M${HUB[0]} ${HUB[1]}L${x} ${y}`} stroke={PAL.slate} strokeWidth="4" strokeLinecap="round" />
       ))}
       {SPOKES.map(([x, y], i) => (
-        <circle key={`b${i}`} cx={x} cy={y} r="4.5" fill={PAL.red} />
+        <circle key={`b${i}`} cx={x} cy={y} r="5.5" fill={PAL.red} />
       ))}
-      <circle cx={HUB[0]} cy={HUB[1]} r="5" fill={PAL.steel} />
+      <circle cx={HUB[0]} cy={HUB[1]} r="6" fill={PAL.steel} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;
