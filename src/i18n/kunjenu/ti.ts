@@ -115,6 +115,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "እቲ ዓሚል ኣብ ገዛ ከም ዘየለ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.delivery.2': "ንጎረባብቲ ሓደ ጥቕሊል ክቕበሉ ክሓቶም እኽእል እየ።", // nieuw, nalezen
     'kjn.u.delivery.3': "መስመረይን ሰዓታተይን መን ከም ዝውስኖ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.afbouw.1': "ኣስናን ዘለዎ ማንካ ወይ ማንካ ህንጻ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.afbouw.2': "ሸክላ ካበይ ከም ዝጅምር ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.afbouw.3': "እቲ መንደቕ ገና ከም ዘይነቐጸ ክብል እኽእል እየ።", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 nov 2026)
     'kjn.u.communicate.1': "እንታይ ጸገም ከም ዘሎ ክገልጽ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.communicate.2': "ዝሰማዕክዎ ክብል እኽእል እየ።", // nieuw, nalezen
@@ -122,6 +125,11 @@ const t: CultureTranslation = {
     'kjn.u.feedback.1': "ርእይቶ ምስ ዝወሃበኒ ኣብነት ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.feedback.2': "እንታይ ክመሓየሽ ከም ዝኽእል ብሕያውነት ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.feedback.3': "ኣብ ኣኼባ ጉጅለ ሕቶ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "መጋዝ ኢድ ወይ ብባተሪ ዝሰርሕ መሰርሒ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "ሰሌዳ ብኸመይ ከም ዝትክሎ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.machines.1': "እቲ መከላኸሊ ማሽን ከም ዝተበላሸወ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.machines.2': "ክንደይ ግዜ ናሙና ከም ዝወስድ ክሓትት እኽእል እየ።", // nieuw, nalezen
   },
 };
 

@@ -120,6 +120,14 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Je peux dire que le client n’est pas chez lui.", // nieuw, nalezen
     'kjn.u.delivery.2': "Je peux demander aux voisins de prendre un colis.", // nieuw, nalezen
     'kjn.u.delivery.3': "Je peux demander qui décide de ma tournée et de mes horaires.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Je peux demander la spatule crantée ou la truelle.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Je peux demander où je commence avec les carreaux.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Je peux dire que le mur n’est pas encore sec.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "Je peux demander la scie égoïne ou la perceuse sans fil.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Je peux demander comment fixer une planche.", // nieuw, nalezen
+    'kjn.u.machines.1': "Je peux dire que le carter de protection est cassé.", // nieuw, nalezen
+    'kjn.u.machines.2': "Je peux demander tous les combien je prends un échantillon.", // nieuw, nalezen
   },
 };
 

@@ -278,6 +278,24 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan de buren vragen een pakket aan te nemen.', 'A2', 'gesprekken', 'I can ask the neighbours to take in a parcel.'],
     ['Ik kan vragen wie mijn route en mijn tijden bepaalt.', 'A2', 'spreken', 'I can ask who decides my route and my times.'],
   ]),
+  // Tegels, stuc en verf (20 November 2026): one line per lesson, the next lessons add theirs.
+  onderwerp('u.afbouw', 'Tegels, stuc en verf', [
+    ['Ik kan om de lijmkam of de troffel vragen.', 'A1', 'spreken', 'I can ask for the notched trowel or the trowel.'],
+    ['Ik kan vragen waar ik met de tegels begin.', 'A1', 'gesprekken', 'I can ask where I start with the tiles.'],
+    ['Ik kan zeggen dat de muur nog niet droog is.', 'A1', 'spreken', 'I can say that the wall is not dry yet.'],
+  ]),
+  // Metselen, hout en vastmaken (20 November 2026): two lines for now; the translations follow
+  // with those of its lessons (src/content/translationPending.ts).
+  onderwerp('u.ruwbouw', 'Metselen, hout en vastmaken', [
+    ['Ik kan om de handzaag of de accuboor vragen.', 'A1', 'spreken', 'I can ask for the handsaw or the cordless drill.'],
+    ['Ik kan vragen hoe ik een plank vastmaak.', 'A1', 'gesprekken', 'I can ask how I fix a plank.'],
+  ]),
+  // Machines en gereedschap (21 November 2026): two lines; the translations follow with those of
+  // its lessons (src/content/translationPending.ts).
+  onderwerp('u.machines', 'Machines en gereedschap', [
+    ['Ik kan zeggen dat de afscherming kapot is.', 'A1', 'spreken', 'I can say that the machine guard is broken.'],
+    ['Ik kan vragen hoe vaak ik een monster neem.', 'A1', 'gesprekken', 'I can ask how often I take a sample.'],
+  ]),
 ];
 
 /** Spoor Werkregels (alleen Nederlands): per onderwerp, in de volgorde van de thema's. */

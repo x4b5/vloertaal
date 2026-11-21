@@ -115,6 +115,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "أستطيع أن أقول إن الزبون ليس في البيت.", // nieuw, nalezen
     'kjn.u.delivery.2': "أستطيع أن أطلب من الجيران أن يستلموا طرداً.", // nieuw, nalezen
     'kjn.u.delivery.3': "أستطيع أن أسأل من يقرّر مساري وأوقاتي.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "أستطيع أن أطلب المسطرين المسنّن أو المسطرين.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "أستطيع أن أسأل من أين أبدأ بالبلاط.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "أستطيع أن أقول إن الحائط لم يجفّ بعد.", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 nov 2026)
     'kjn.u.communicate.1': "أستطيع أن أشرح ما المشكلة.", // nieuw, nalezen
     'kjn.u.communicate.2': "أستطيع أن أقول ما سمعته.", // nieuw, nalezen
@@ -122,6 +125,11 @@ const t: CultureTranslation = {
     'kjn.u.feedback.1': "أستطيع أن أطلب مثالاً عندما أتلقى ملاحظات.", // nieuw, nalezen
     'kjn.u.feedback.2': "أستطيع أن أقول بلطف ما يمكن أن يكون أفضل.", // nieuw, nalezen
     'kjn.u.feedback.3': "أستطيع أن أطرح سؤالاً في اجتماع الفريق.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "أستطيع أن أطلب المنشار اليدوي أو المثقاب اللاسلكي.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "أستطيع أن أسأل كيف أثبّت لوحاً خشبياً.", // nieuw, nalezen
+    'kjn.u.machines.1': "أستطيع أن أقول إن الغطاء الواقي مكسور.", // nieuw, nalezen
+    'kjn.u.machines.2': "أستطيع أن أسأل كم مرة آخذ عيّنة.", // nieuw, nalezen
   },
 };
 

@@ -115,6 +115,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Pot să spun că clientul nu e acasă.", // nieuw, nalezen
     'kjn.u.delivery.2': "Pot să le cer vecinilor să primească un colet.", // nieuw, nalezen
     'kjn.u.delivery.3': "Pot să întreb cine decide traseul și orele mele.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Pot să cer gletiera zimțată sau mistria.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Pot să întreb de unde încep cu plăcile.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Pot să spun că peretele nu e încă uscat.", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 november 2026).
     'kjn.u.communicate.1': "Pot să explic ce nu e în regulă.", // nieuw, nalezen
     'kjn.u.communicate.2': "Pot să spun ce am auzit.", // nieuw, nalezen
@@ -122,6 +125,11 @@ const t: CultureTranslation = {
     'kjn.u.feedback.1': "Pot să cer un exemplu când primesc feedback.", // nieuw, nalezen
     'kjn.u.feedback.2': "Pot să spun prietenos ce poate fi mai bine.", // nieuw, nalezen
     'kjn.u.feedback.3': "Pot să pun o întrebare la o ședință de echipă.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "Pot să cer fierăstrăul de mână sau bormașina cu acumulator.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Pot să întreb cum fixez o scândură.", // nieuw, nalezen
+    'kjn.u.machines.1': "Pot să spun că apărătoarea de protecție e stricată.", // nieuw, nalezen
+    'kjn.u.machines.2': "Pot să întreb cât de des iau o probă.", // nieuw, nalezen
   },
 };
 

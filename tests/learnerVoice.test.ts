@@ -126,6 +126,27 @@ const PENDING_RECORDING = new Set<string>([
   'Nee. Ik doe hem nu dicht.',
   'Ja. Ik maak hem leeg.',
   'Ja. Eerst dit, en dan?',
+  // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026):
+  'Bij de emmer, naast de deur.',
+  'In het midden, op de hartlijn.',
+  'Nee, wacht nog een dag.',
+  // l.paint, l.prep, "Metselen, hout en vastmaken" and three lessons of Rekenen (20 November 2026):
+  'De brede voor de muur, het penseel voor de hoekjes.',
+  'Nee, eerst schuren en het gat dichtmaken.',
+  'Nog één pallet. Genoeg voor vandaag.',
+  'Kijk op de lagenmaatlat.',
+  'De kapzaag, voor dit kleine stuk.',
+  'Ja, de winkelhaak past precies.',
+  'Aan de lader, hij is bijna vol.',
+  'Met twee pluggen en twee schroeven.',
+  'Nee, een rechthoek. Hij is langer dan breed.',
+  'Vijfenveertig. De helft van een rechte hoek.',
+  'Vier bij vijf meter, dus twintig vierkante meter.',
+  // "Machines en gereedschap" (u.machines, 21 November 2026):
+  'De sensor ziet de doos niet goed.',
+  'Elk uur één. Schrijf het op de lijst.',
+  'Twaalf. Dat staat op de lijst.',
+  'Elke maandag, voor de eerste dienst.',
 ]);
 
 

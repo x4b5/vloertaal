@@ -48,6 +48,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
 ]
 `;
 
@@ -99,6 +102,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
 ]
 `;
 
@@ -111,6 +117,8 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.safety",
   "u.emergency",
   "u.build",
+  "u.afbouw",
+  "u.ruwbouw",
   "u.data",
   "u.time",
   "u.sounds",
@@ -150,6 +158,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.machines",
 ]
 `;
 
@@ -201,6 +210,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.kas",
   "u.tech",
   "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
 ]
 `;
 
@@ -252,6 +264,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
 ]
 `;
 
@@ -303,6 +318,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
 ]
 `;
 
@@ -354,6 +372,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.kas",
   "u.tech",
   "u.garage",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
 ]
 `;
 
@@ -405,6 +426,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.society",
   "u.online",
   "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
 ]
 `;
 
@@ -417,6 +441,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.safety",
   "u.emergency",
   "u.factory",
+  "u.machines",
   "u.data",
   "u.time",
   "u.sounds",
@@ -456,6 +481,8 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
 ]
 `;
 
@@ -507,6 +534,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.tech",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
 ]
 `;
 
@@ -558,6 +588,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.kas",
   "u.garage",
   "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
 ]
 `;
 
@@ -609,5 +642,8 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.society",
   "u.online",
   "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
 ]
 `;

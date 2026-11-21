@@ -170,6 +170,26 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "እቲ ማዕጾ ተዓጽዩ ድዩ ተሓቲቱ: ኣይፋል፡ ሕጂ ምዕጻዉ ድማ።", // nieuw, nalezen
     'c.fillempty.a.why': "ድሮ መሊኡ ድዩ ተሓቲቱ: እወ፡ ባዶ ምግባሩ ድማ።", // nieuw, nalezen
     'c.order.a.why': "ሕጂ ክግበር ተሓቲቱ: እወ፡ ድሕሪኡ እንታይ ከም ዝመጽእ ድማ።", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "ሚክሰር ኣበይ ከም ዘሎ ተሓቲቱ: ቦታ፡ ኣብ ጥቓኡ እንታይ ከም ዘሎ ድማ።", // nieuw, nalezen
+    'c.tiling.a.why': "ካበይ ከም ዝጅመር ተሓቲቱ: ኣብ ማእከል፡ ኣብቲ ማእከላይ መስመር።", // nieuw, nalezen
+    'c.plaster.a.why': "እቲ መንደቕ ነቒጹ እንተ ኾይኑ ተሓቲቱ: ኣይፋል፡ ክንደይ ክጽበ ከም ዘለዎ ድማ።", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "ርቡዕ እንተ ኾይኑ ተሓቲቱ: ኣይፋል፡ ነዊሕ ርቡዕ፡ ስለምንታይ ድማ።", // nieuw, nalezen
+    'c.angles.a.why': "ክንደይ ዲግሪ ተሓቲቱ: እቲ ቁጽሪ፡ ፈረቓ እንታይ ምዃኑ ድማ።", // nieuw, nalezen
+    'c.size.a.why': "እቲ መሬት ክንደይ ዓቢ ምዃኑ ተሓቲቱ: እቲ ሕሳብ፡ እቲ መልሲ ድማ።", // nieuw, nalezen
+    'c.paint.a.why': "ኣየናይ ብርሽ ተሓቲቱ: ገፊሕ ንመንደቕ፡ ንእሽቶ ድማ ንኩርናዓት።", // nieuw, nalezen
+    'c.prep.a.why': "ክቕባእ ይከኣል እንተ ኾይኑ ተሓቲቱ: ኣይፋል፡ ቅድም እንታይ ከም ዝመጽእ ድማ።", // nieuw, nalezen
+    'c.brick.a.why': "ክንደይ ጡብ ከም ዝተረፈ ተሓቲቱ: ሓደ ፓለት፡ ከም ዝኣክል ድማ።", // nieuw, nalezen
+    'c.wall.a.why': "እቲ መስርዕ ክንደይ ብራኸ ክኸውን ከም ዘለዎ ተሓቲቱ: ኣበይ ክርአ ከም ዝከኣል።", // nieuw, nalezen
+    'c.wood.a.why': "ኣየናይ መጋዝ ተሓቲቱ: እቲ ንእሽቶ መጋዝ፡ ስለምንታይ ድማ።", // nieuw, nalezen
+    'c.square.a.why': "እቲ ኩርናዕ ቀጥታዊ እንተ ኾይኑ ተሓቲቱ: እወ፡ ብኸመይ ከም ዝፍለጥ ድማ።", // nieuw, nalezen
+    'c.screw.a.why': "እቲ መሰርሒ ኣበይ ከም ዘሎ ተሓቲቱ: ቦታ፡ ዳርጋ ከም ዝመልአ ድማ።", // nieuw, nalezen
+    'c.fix.a.why': "እቲ መደርደሪ ብኸመይ ከም ዝትከል ተሓቲቱ: ብእንታይ፡ ክንደይ ድማ።", // nieuw, nalezen
+    'c.atmachine.a.why': "ስለምንታይ ደው ከም ዝብል ተሓቲቱ: እቲ ሰንሰር፡ እንታይ ከም ዘይርኢ ድማ።", // nieuw, nalezen
+    'c.inspect.a.why': "ክንደይ ግዜ ተሓቲቱ: ኣብ ሰዓት ሓደ ግዜ፡ ኣበይ ከም ዝጽሓፍ ድማ።", // nieuw, nalezen
+    'c.packing.a.why': "ኣብ ሓደ ሳጹን ክንደይ ተሓቲቱ: እቲ ቁጽሪ፡ ኣበይ ከም ዝተጻሕፈ ድማ።", // nieuw, nalezen
+    'c.upkeep.a.why': "መዓስ ተሓቲቱ: መዓልቲ ሰሙን፡ ኣብታ መዓልቲ እቲ ህሞት ድማ።", // nieuw, nalezen
   },
 };
 

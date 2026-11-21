@@ -170,6 +170,26 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Питат дали вратата е затворена: „не“, и я затварят сега.", // nieuw, nalezen
     'c.fillempty.a.why': "Питат дали вече е пълен: „да“, и го изпразват.", // nieuw, nalezen
     'c.order.a.why': "Молят да се направи сега: „да“ и въпрос какво следва.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Питат къде е миксерът: място, и какво има близо до него.", // nieuw, nalezen
+    'c.tiling.a.why': "Питат откъде да се започне: от средата, на централната линия.", // nieuw, nalezen
+    'c.plaster.a.why': "Питат дали стената е суха: „не“, и колко да се чака.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "Питат дали е квадрат: „не“, правоъгълник, и защо.", // nieuw, nalezen
+    'c.angles.a.why': "Питат колко градуса: числото, и на какво е половината.", // nieuw, nalezen
+    'c.size.a.why': "Питат колко голям е подът: сметката, и отговорът.", // nieuw, nalezen
+    'c.paint.a.why': "Питат коя четка: широката за стената, малката за ъглите.", // nieuw, nalezen
+    'c.prep.a.why': "Питат дали може да се боядисва: „не“, и какво е първо.", // nieuw, nalezen
+    'c.brick.a.why': "Питат колко тухли са останали: един палет, и че стига.", // nieuw, nalezen
+    'c.wall.a.why': "Питат колко висока трябва да е редицата: къде може да се види.", // nieuw, nalezen
+    'c.wood.a.why': "Питат кой трион: гърбовият трион, и защо.", // nieuw, nalezen
+    'c.square.a.why': "Питат дали ъгълът е прав: „да“, и откъде се знае.", // nieuw, nalezen
+    'c.screw.a.why': "Питат къде е винтовертът: място, и че е почти зареден.", // nieuw, nalezen
+    'c.fix.a.why': "Питат как да се закрепи рафтът: с какво, и с колко.", // nieuw, nalezen
+    'c.atmachine.a.why': "Питат защо спира: сензорът, и какво не вижда.", // nieuw, nalezen
+    'c.inspect.a.why': "Питат колко често: веднъж на час, и къде да се запише.", // nieuw, nalezen
+    'c.packing.a.why': "Питат колко в един кашон: числото, и къде пише.", // nieuw, nalezen
+    'c.upkeep.a.why': "Питат кога: денят от седмицата, и моментът в този ден.", // nieuw, nalezen
   },
 };
 

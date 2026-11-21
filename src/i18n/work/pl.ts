@@ -2289,6 +2289,370 @@ const t: CultureTranslation = {
     'c.order.o2': "Robisz pierwsze i masz nadzieję, że przypomnisz sobie resztę.", // nieuw, nalezen
     'c.order.o3': "Nic nie robisz: nie znasz wszystkich trzech.", // nieuw, nalezen
     'c.order.w': "Pytanie od razu zajmuje dziesięć sekund. Później przełożonego może już nie być, a wtedy czekasz albo zgadujesz.", // nieuw, nalezen
+    'u.afbouw': "Płytki, tynk i farba", // nieuw, nalezen
+    'l.tiletools': "Narzędzia glazurnika", // nieuw, nalezen
+    'w.lijmkam': "paca zębata (rozprowadza klej do płytek w równe rowki)", // nieuw, nalezen
+    'w.troffel': "kielnia", // nieuw, nalezen
+    'w.tegelsnijder': "przecinarka do płytek", // nieuw, nalezen
+    'w.nijptang': "szczypce do płytek (do odłamywania małych kawałków płytki)", // nieuw, nalezen
+    'w.mixer': "mieszadło (miesza klej albo tynk w wiadrze)", // nieuw, nalezen
+    'w.duimstok': "metrówka, miarka składana", // nieuw, nalezen
+    's.tiletools.1': "Podaj mi na chwilę pacę zębatą.", // nieuw, nalezen
+    's.tiletools.2': "Tnę płytkę przecinarką do płytek.", // nieuw, nalezen
+    's.tiletools.3': "Najpierw zmierz metrówką.", // nieuw, nalezen
+    'c.tiletools.q': "Gdzie jest mieszadło?", // nieuw, nalezen
+    'c.tiletools.a': "Przy wiadrze, obok drzwi.", // nieuw, nalezen
+    'c.tiletools': "Umyj narzędzia, zanim klej stwardnieje", // nieuw, nalezen
+    'c.tiletools.b': "Klej do płytek i tynk szybko twardnieją, także na narzędziach. Dlatego od razu myj pacę zębatą, kielnię i mieszadło w wiadrze z wodą, także przed przerwą. Twardy klej nie schodzi, a paca zębata z twardym klejem robi złe rowki. Nie wylewaj brudnej wody do zlewu ani do odpływu: zatka się. Zapytaj, gdzie można wylać wodę. Mieszadło trzymaj obiema rękami i włączaj je powoli. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.tiletools.p': "Szybko umyję pacę zębatą.", // nieuw, nalezen
+    'c.tiletools.s': "Jest czas na przerwę. Twoja paca zębata jest pełna mokrego kleju. Co robisz?", // nieuw, nalezen
+    'c.tiletools.o1': "Myjesz ją w wodzie i idziesz na przerwę.", // nieuw, nalezen
+    'c.tiletools.o2': "Zostawiasz ją: umyjesz ją po pracy.", // nieuw, nalezen
+    'c.tiletools.o3': "Wkładasz ją do wiadra z klejem.", // nieuw, nalezen
+    'c.tiletools.w': "Klej do płytek twardnieje też w czasie przerwy. Czysta paca zębata robi dobre rowki i płytki dobrze się trzymają. Twardy klej na niej to dużo pracy albo nowe narzędzie.", // nieuw, nalezen
+    'l.tiling': "Płytki, klej i linia środkowa", // nieuw, nalezen
+    'w.tegel': "płytka", // nieuw, nalezen
+    'w.tegellijm': "klej do płytek", // nieuw, nalezen
+    'w.tegelkruisje': "krzyżyk dystansowy (mały krzyżyk między płytkami)", // nieuw, nalezen
+    'w.hartlijn': "linia środkowa, oś (od niej zaczyna się układać płytki)", // nieuw, nalezen
+    'w.tegelplaat': "płyta do ćwiczeń (płyta, na której ćwiczy się układanie płytek)", // nieuw, nalezen
+    'w.potlood': "ołówek", // nieuw, nalezen
+    's.tiling.1': "Klej do płytek jest jeszcze mokry.", // nieuw, nalezen
+    's.tiling.2': "Włóż krzyżyk między płytki.", // nieuw, nalezen
+    's.tiling.3': "Najpierw narysuj ołówkiem linię środkową.", // nieuw, nalezen
+    'c.tiling.q': "Gdzie zaczynam układać płytki?", // nieuw, nalezen
+    'c.tiling.a': "Pośrodku, na linii środkowej.", // nieuw, nalezen
+    'c.tiling': "Zacznij od linii środkowej, z małą ilością kleju", // nieuw, nalezen
+    'c.tiling.b': "Glazurnik nie zaczyna w rogu. Najpierw rysujesz linię środkową, ołówkiem i poziomicą, i tam zaczynasz. Wtedy docinane płytki na obu końcach mają taki sam rozmiar. Nakładaj tylko tyle kleju, ile zdążysz szybko przykryć płytkami. Na kleju, który stoi za długo, robi się sucha skórka i wtedy płytki słabo się trzymają. Na każdym skrzyżowaniu włóż krzyżyk, żeby wszystkie fugi były takie same. Często sprawdzaj poziomicą: krzywą płytkę łatwo poprawić teraz, a trudno jutro.", // nieuw, nalezen
+    'c.tiling.p': "Nie nakładam za dużo kleju naraz.", // nieuw, nalezen
+    'c.tiling.s': "Po długiej rozmowie przez telefon klej na ścianie ma suchą skórkę. Co robisz?", // nieuw, nalezen
+    'c.tiling.o1': "Zdrapujesz go i nakładasz świeży klej.", // nieuw, nalezen
+    'c.tiling.o2': "I tak wciskasz w niego płytki.", // nieuw, nalezen
+    'c.tiling.o3': "Zwilżasz go gąbką i pracujesz dalej.", // nieuw, nalezen
+    'c.tiling.w': "Klej z suchą skórką słabo trzyma płytkę. Później płytka może odpaść i wtedy trzeba zrobić pracę jeszcze raz.", // nieuw, nalezen
+    'l.plaster': "Tynkowanie", // nieuw, nalezen
+    'w.stucspaan': "paca tynkarska (płaska stalowa paca do wygładzania tynku)", // nieuw, nalezen
+    'w.oplegspaan': "deska tynkarska (płaska deska, na której trzymasz tynk)", // nieuw, nalezen
+    'w.spackmes': "szpachla (szeroki, płaski nóż)", // nieuw, nalezen
+    'w.rei': "łata tynkarska (długa prosta listwa do wyrównywania tynku)", // nieuw, nalezen
+    'w.sponsspaan': "paca z gąbką", // nieuw, nalezen
+    'w.hoekprofiel': "narożnik tynkarski (metalowa listwa, żeby róg był prosty)", // nieuw, nalezen
+    's.plaster.1': "Najpierw załóż narożnik na róg.", // nieuw, nalezen
+    's.plaster.2': "Wygładź ścianę pacą tynkarską.", // nieuw, nalezen
+    's.plaster.3': "Przeciągnij łatę po ścianie.", // nieuw, nalezen
+    'c.plaster.q': "Czy ściana jest już sucha?", // nieuw, nalezen
+    'c.plaster.a': "Nie, poczekaj jeszcze jeden dzień.", // nieuw, nalezen
+    'c.plaster': "Tynk potrzebuje czasu, żeby wyschnąć", // nieuw, nalezen
+    'c.plaster.b': "Świeży tynk długo jest mokry. Mokra ściana jest ciemniejsza niż sucha. Malarz może zacząć dopiero wtedy, gdy ściana jest wszędzie sucha, a to może trwać dni albo tygodnie. Nie susz jej szybciej nagrzewnicą: wtedy tynk może popękać. Ktoś chce malować za wcześnie? Powiedz, że ściana nie jest jeszcze sucha. A zanim zaczniesz, przykryj podłogę, okna i gniazdka: tynk trudno usunąć.", // nieuw, nalezen
+    'c.plaster.p': "Ściana jest jeszcze mokra. Nie możesz jeszcze malować.", // nieuw, nalezen
+    'c.plaster.s': "Malarz chce zacząć jutro. Nowy tynk ma jeszcze ciemne plamy. Co robisz?", // nieuw, nalezen
+    'c.plaster.o1': "Mówisz malarzowi: ściana nie jest jeszcze sucha.", // nieuw, nalezen
+    'c.plaster.o2': "Na noc stawiasz przed nią nagrzewnicę.", // nieuw, nalezen
+    'c.plaster.o3': "Nic nie mówisz: malarz sam to zobaczy.", // nieuw, nalezen
+    'c.plaster.w': "Ciemne plamy znaczą, że tynk jest jeszcze mokry. Farba na mokrej ścianie może odpaść, a nagrzewnica może zrobić pęknięcia. Czekanie kosztuje mniej niż robienie wszystkiego jeszcze raz.", // nieuw, nalezen
+    // l.paint and l.prep (u.afbouw), "Metselen, hout en vastmaken" (u.ruwbouw), three lessons of Rekenen (u.numbers) and "Machines en gereedschap" (u.machines), 20-21 November 2026.
+    'u.ruwbouw': "Murowanie, drewno i mocowanie", // nieuw, nalezen
+    'u.machines': "Maszyny i narzędzia", // nieuw, nalezen
+    'l.shapes': "Kształty", // nieuw, nalezen
+    'w.vierkant': "kwadrat", // nieuw, nalezen
+    'w.rechthoek': "prostokąt", // nieuw, nalezen
+    'w.driehoek': "trójkąt", // nieuw, nalezen
+    'w.cirkel': "koło, okrąg", // nieuw, nalezen
+    'w.kubus': "sześcian", // nieuw, nalezen
+    'w.balk': "prostopadłościan (długi kształt jak pudełko)", // nieuw, nalezen
+    's.shapes.1': "Płytka jest kwadratem.", // nieuw, nalezen
+    's.shapes.2': "Ten pokój jest prostokątem.", // nieuw, nalezen
+    's.shapes.3': "Cegła ma kształt prostopadłościanu.", // nieuw, nalezen
+    'c.shapes.q': "Czy to kwadrat?", // nieuw, nalezen
+    'c.shapes.a': "Nie, prostokąt. Jest dłuższy niż szerszy.", // nieuw, nalezen
+    'c.shapes': "Sprawdź prostokąt dwiema liniami na ukos", // nieuw, nalezen
+    'c.shapes.b': "Pokój, podłoga albo rama to często prostokąt. Ale czy rogi są naprawdę proste? Jest łatwy sposób, żeby to sprawdzić. Zmierz od jednego rogu do rogu naprzeciwko. Potem zmierz między dwoma pozostałymi rogami. Czy obie długości są takie same? To rogi są dobre. Nie są takie same? To kształt jest trochę krzywy i płytki albo podłoga nie będą dobrze pasować. Powiedz przełożonemu, zanim zaczniesz.", // nieuw, nalezen
+    'c.shapes.p': "Te dwa wymiary nie są takie same.", // nieuw, nalezen
+    'c.shapes.s': "Mierzysz podłogę od rogu do rogu, w obie strony. Jeden wymiar jest dłuższy. Co robisz?", // nieuw, nalezen
+    'c.shapes.o1': "Mówisz przełożonemu, zanim zaczniesz.", // nieuw, nalezen
+    'c.shapes.o2': "Zaczynasz w rogu, będzie dobrze.", // nieuw, nalezen
+    'c.shapes.o3': "Mierzysz jeszcze raz tylko jeden bok.", // nieuw, nalezen
+    'c.shapes.w': "Dwie różne długości znaczą, że rogi nie są proste. Wtedy płytki albo deski nie pasują. Lepiej wiedzieć to, zanim zaczniesz.", // nieuw, nalezen
+    'l.angles': "Kąty i okrągłe kształty", // nieuw, nalezen
+    'w.hoek': "kąt", // nieuw, nalezen
+    'w.graad': "stopień (°)", // nieuw, nalezen
+    'w.geodriehoek': "ekierka z kątomierzem", // nieuw, nalezen
+    'w.boog': "łuk", // nieuw, nalezen
+    'w.cilinder': "walec", // nieuw, nalezen
+    'w.parallellogram': "równoległobok", // nieuw, nalezen
+    's.angles.1': "Ten kąt ma dziewięćdziesiąt stopni.", // nieuw, nalezen
+    's.angles.2': "Zmierz kąt ekierką.", // nieuw, nalezen
+    's.angles.3': "Rura ma kształt walca.", // nieuw, nalezen
+    'c.angles.q': "Ile stopni ma ten kąt?", // nieuw, nalezen
+    'c.angles.a': "Czterdzieści pięć. Połowa kąta prostego.", // nieuw, nalezen
+    'c.angles': "Sprawdź duży róg liczbami 3, 4 i 5", // nieuw, nalezen
+    'c.angles.b': "Na budowie często sprawdzasz kąt prosty: ściana na podłodze, róg pokoju. Mały róg sprawdzasz kątownikiem albo ekierką. Na duży róg jest stary sposób. Zmierz 3 metry wzdłuż jednego boku i 4 metry wzdłuż drugiego boku, i zrób znak w obu miejscach. Czy od znaku do znaku jest dokładnie 5 metrów? To kąt ma 90 stopni. Mniejsze liczby też działają: 30, 40 i 50 centymetrów.", // nieuw, nalezen
+    'c.angles.p': "Ten kąt nie jest prosty.", // nieuw, nalezen
+    'c.angles.s': "Musisz sprawdzić duży róg nowej ściany. Twój kątownik jest o wiele za mały. Co robisz?", // nieuw, nalezen
+    'c.angles.o1': "Mierzysz 3, 4 i 5 metrów.", // nieuw, nalezen
+    'c.angles.o2': "Patrzysz na to z daleka.", // nieuw, nalezen
+    'c.angles.o3': "I tak używasz małego kątownika.", // nieuw, nalezen
+    'c.angles.w': "Liczbami 3, 4 i 5 możesz dokładnie sprawdzić duży róg, tylko miarą zwijaną. Na oko róg może wyglądać dobrze, a i tak być krzywy.", // nieuw, nalezen
+    'l.size': "Długość, powierzchnia i objętość", // nieuw, nalezen
+    'w.lengte': "długość", // nieuw, nalezen
+    'w.breedte': "szerokość", // nieuw, nalezen
+    'w.hoogte': "wysokość", // nieuw, nalezen
+    'w.oppervlakte': "powierzchnia (długość razy szerokość, w metrach kwadratowych)", // nieuw, nalezen
+    'w.inhoud': "objętość (długość razy szerokość razy wysokość)", // nieuw, nalezen
+    'w.centimeter': "centymetr", // nieuw, nalezen
+    's.size.1': "Powierzchnia to długość razy szerokość.", // nieuw, nalezen
+    's.size.2': "Objętość to długość razy szerokość razy wysokość.", // nieuw, nalezen
+    's.size.3': "Dziesięć milimetrów to jeden centymetr.", // nieuw, nalezen
+    'c.size.q': "Ile metrów kwadratowych ma podłoga?", // nieuw, nalezen
+    'c.size.a': "Cztery na pięć metrów, czyli dwadzieścia metrów kwadratowych.", // nieuw, nalezen
+    'c.size': "Policz, ile potrzebujesz, i dodaj trochę", // nieuw, nalezen
+    'c.size.b': "Ile płytek, ile farby, ile piasku? Liczysz to z powierzchni albo objętości. Powierzchnia: długość razy szerokość, w metrach kwadratowych. Objętość: długość razy szerokość razy wysokość, w metrach sześciennych. Mierz wszystko w tej samej jednostce: wszystko w metrach albo wszystko w centymetrach. Zapisz wymiary, nie trzymaj ich w głowie. Potem dodaj trochę więcej, na docinane kawałki i na błędy. Nie masz pewności? Poproś kolegę, żeby sprawdził twoje obliczenie.", // nieuw, nalezen
+    'c.size.p': "Zapisuję wymiary.", // nieuw, nalezen
+    'c.size.s': { m: "Zmierzyłeś podłogę. Dziś musisz zamówić płytki. Co robisz?", f: "Zmierzyłaś podłogę. Dziś musisz zamówić płytki. Co robisz?", x: "Podłoga jest już zmierzona. Dziś musisz zamówić płytki. Co robisz?" }, // nieuw, nalezen
+    'c.size.o1': "Liczysz powierzchnię i dodajesz trochę.", // nieuw, nalezen
+    'c.size.o2': "Zamawiasz dokładnie powierzchnię, ani jednej płytki więcej.", // nieuw, nalezen
+    'c.size.o3': "Zgadujesz: przecież znasz tę podłogę.", // nieuw, nalezen
+    'c.size.w': "Zawsze docinasz kilka płytek, a kilka się łamie. Z małym zapasem nie musisz przerywać w połowie i zamawiać jeszcze raz.", // nieuw, nalezen
+    'l.paint': "Malowanie", // nieuw, nalezen
+    'w.verf': "farba", // nieuw, nalezen
+    'w.kwast': "pędzel (szeroki pędzel)", // nieuw, nalezen
+    'w.penseel': "mały pędzelek (do rogów i krawędzi)", // nieuw, nalezen
+    'w.roerstok': "mieszadełko, patyk do mieszania", // nieuw, nalezen
+    'w.tape': "taśma malarska", // nieuw, nalezen
+    'w.strijkvaatje': "kubełek malarski (mały pojemnik, który trzymasz w ręce przy malowaniu)", // nieuw, nalezen
+    's.paint.1': "Najpierw dobrze wymieszaj farbę.", // nieuw, nalezen
+    's.paint.2': "Oklej krawędź taśmą.", // nieuw, nalezen
+    's.paint.3': "Nalej trochę farby do kubełka.", // nieuw, nalezen
+    'c.paint.q': "Który pędzel mam wziąć?", // nieuw, nalezen
+    'c.paint.a': "Szeroki do ściany, mały pędzelek do rogów.", // nieuw, nalezen
+    'c.paint': "Dobrze wymieszaj i maluj od góry do dołu", // nieuw, nalezen
+    'c.paint.b': "Farba, która długo stała, jest gęsta na dnie puszki. Dlatego najpierw dobrze ją wymieszaj mieszadełkiem, aż kolor będzie wszędzie taki sam. Nie maluj z dużej puszki: nalej trochę farby do kubełka i znowu zamknij puszkę. Wtedy farba zostaje dobra. Maluj od góry do dołu, żeby zacieki spadały na mokrą farbę i żeby można je było jeszcze rozprowadzić pędzlem. Szerokiego pędzla używaj do ściany, a małego pędzelka do rogów. Na koniec od razu umyj pędzle.", // nieuw, nalezen
+    'c.paint.p': "Najpierw dobrze mieszam farbę.", // nieuw, nalezen
+    'c.paint.s': "Otwierasz starą puszkę farby. Na górze farba jest rzadka, na dnie gęsta. Co robisz?", // nieuw, nalezen
+    'c.paint.o1': "Najpierw dobrze ją mieszasz mieszadełkiem.", // nieuw, nalezen
+    'c.paint.o2': "Malujesz rzadką farbą z góry.", // nieuw, nalezen
+    'c.paint.o3': "Dolewasz wody, aż będzie wszędzie rzadka.", // nieuw, nalezen
+    'c.paint.w': "Część koloru jest na dnie puszki. Bez mieszania na ścianie będą plamy i pasy.", // nieuw, nalezen
+    'l.prep': "Przygotowanie do malowania", // nieuw, nalezen
+    'w.plamuurmes': "szpachelka (do wypełniania dziur)", // nieuw, nalezen
+    'w.schuurpapier': "papier ścierny", // nieuw, nalezen
+    'w.verfkrabber': "skrobak do farby", // nieuw, nalezen
+    'w.stoffertje': "miotełka (mała szczotka do zmiatania kurzu)", // nieuw, nalezen
+    'w.schuren': "szlifować (papierem ściernym)", // nieuw, nalezen
+    'w.afplakken': "okleić (zakryć krawędź taśmą)", // nieuw, nalezen
+    's.prep.1': "Najpierw zeskrob starą farbę.", // nieuw, nalezen
+    's.prep.2': "Wyszlifuj drewno na gładko.", // nieuw, nalezen
+    's.prep.3': "Zmieć kurz miotełką.", // nieuw, nalezen
+    'c.prep.q': "Mogę już malować?", // nieuw, nalezen
+    'c.prep.a': "Nie, najpierw szlifowanie i zaszpachlowanie dziury.", // nieuw, nalezen
+    'c.prep': "Dobre malowanie zaczyna się przed farbą", // nieuw, nalezen
+    'c.prep.b': "Farba słabo trzyma się na brudzie, kurzu albo luźnej starej farbie. Dlatego najpierw zeskrob luźną farbę skrobakiem. Dziury wypełnij szpachlówką i szpachelką, i poczekaj, aż szpachlówka wyschnie. Potem wyszlifuj to na gładko. Po szlifowaniu zmieć kurz miotełką, także z krawędzi. Na końcu oklej to, co musi zostać czyste, na przykład okna i gniazdka. Przy szlifowaniu jest drobny pył: noś maskę przeciwpyłową i zapytaj, jaką. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.prep.p': "Najpierw szlifowanie, potem malowanie.", // nieuw, nalezen
+    'c.prep.s': { m: "Zeszlifowałeś drzwi. Jest na nich jeszcze kurz. Kolega chce teraz malować. Co robisz?", f: "Zeszlifowałaś drzwi. Jest na nich jeszcze kurz. Kolega chce teraz malować. Co robisz?", x: "Drzwi są już zeszlifowane. Jest na nich jeszcze kurz. Kolega chce teraz malować. Co robisz?" }, // nieuw, nalezen
+    'c.prep.o1': "Najpierw zmiatasz kurz miotełką.", // nieuw, nalezen
+    'c.prep.o2': "Pozwalasz mu malować: farba przykryje kurz.", // nieuw, nalezen
+    'c.prep.o3': "Ścierasz kurz ręką.", // nieuw, nalezen
+    'c.prep.w': "Farba na kurzu słabo się trzyma. Później odpada płatami i wtedy trzeba zrobić całą pracę jeszcze raz.", // nieuw, nalezen
+    'l.brick': "Murowanie", // nieuw, nalezen
+    'w.speciekuip': "kastra na zaprawę", // nieuw, nalezen
+    'w.metseltroffel': "kielnia murarska", // nieuw, nalezen
+    'w.baksteen': "cegła", // nieuw, nalezen
+    'w.cement': "cement", // nieuw, nalezen
+    'w.voegijzer': "fugówka (do wygładzania spoin między cegłami)", // nieuw, nalezen
+    'w.handveger': "zmiotka, szczotka ręczna", // nieuw, nalezen
+    's.brick.1': "W kastrze jest jeszcze cement.", // nieuw, nalezen
+    's.brick.2': "Wygładź spoinę fugówką.", // nieuw, nalezen
+    's.brick.3': "Zmieć mur do czysta zmiotką.", // nieuw, nalezen
+    'c.brick.q': "Ile cegieł ci jeszcze zostało?", // nieuw, nalezen
+    'c.brick.a': "Jeszcze jedna paleta. Wystarczy na dziś.", // nieuw, nalezen
+    'c.brick': "Utrzymuj mur w czystości podczas pracy", // nieuw, nalezen
+    'c.brick.b': "Zaprawa jest mokra, kiedy układasz cegły, i twardnieje w kilka godzin. Dlatego pracuj czysto. Zaprawę, która wychodzi ze spoiny, od razu zeskrob kielnią. Spoiny wygładzaj fugówką, kiedy zaprawa jest trochę sztywna, a nie wtedy, gdy jest jeszcze mokra. Potem zmieć mur zmiotką. Twardą zaprawę z przodu cegły bardzo trudno usunąć. Na koniec dnia przykryj górę muru, żeby deszcz nie wypłukał zaprawy.", // nieuw, nalezen
+    'c.brick.p': "Wygładzam spoiny.", // nieuw, nalezen
+    'c.brick.s': "Na koniec dnia z przodu cegieł jest zaprawa. Co robisz?", // nieuw, nalezen
+    'c.brick.o1': "Zmiatasz ją teraz, zanim stwardnieje.", // nieuw, nalezen
+    'c.brick.o2': "Zostawiasz ją: wyczyścisz to w przyszłym tygodniu.", // nieuw, nalezen
+    'c.brick.o3': "Myjesz mur dużą ilością wody.", // nieuw, nalezen
+    'c.brick.w': "Świeża zaprawa łatwo schodzi szczotką. Twarda zaprawa zostaje na cegle i wtedy mur nie wygląda dobrze.", // nieuw, nalezen
+    'l.wall': "Prosty mur", // nieuw, nalezen
+    'w.metseltouw': "sznurek murarski (sznurek do prostej warstwy)", // nieuw, nalezen
+    'w.klos': "uchwyt do sznurka (trzyma sznurek na rogu)", // nieuw, nalezen
+    'w.lagenmaatlat': "łata z podziałką warstw (pokazuje wysokość każdej warstwy)", // nieuw, nalezen
+    'w.profiel': "profil narożny, kierownica (prosty słupek na końcu muru)", // nieuw, nalezen
+    'w.kop': "główka (krótki koniec cegły)", // nieuw, nalezen
+    'w.strek': "wozówka (długi bok cegły)", // nieuw, nalezen
+    's.wall.1': "Naciągnij mocno sznurek murarski.", // nieuw, nalezen
+    's.wall.2': "Profil narożny musi stać prosto.", // nieuw, nalezen
+    's.wall.3': "Połóż cegłę długim bokiem na zewnątrz.", // nieuw, nalezen
+    'c.wall.q': "Jak wysoka musi być ta warstwa?", // nieuw, nalezen
+    'c.wall.a': "Popatrz na łatę z podziałką.", // nieuw, nalezen
+    'c.wall': "Sznurek trzyma mur w linii prostej", // nieuw, nalezen
+    'c.wall.b': "Murarz nie muruje na oko. Najpierw na obu końcach muru stoją prosto profile narożne. Między nimi mocno naciągasz sznurek murarski, na wysokości następnej warstwy. Każdą cegłę układaj wzdłuż sznurka, ale nie odpychaj sznurka. Łata z podziałką pokazuje, jak wysoka musi być każda warstwa. Często sprawdzaj poziomicą. Krzywą cegłę łatwo poprawić, kiedy zaprawa jest mokra, a bardzo trudno jutro.", // nieuw, nalezen
+    'c.wall.p': "Czy sznurek jest mocno naciągnięty?", // nieuw, nalezen
+    'c.wall.s': "Sznurek murarski jest luźny i trochę zwisa pośrodku. Co robisz?", // nieuw, nalezen
+    'c.wall.o1': "Najpierw mocno go naciągasz, potem pracujesz dalej.", // nieuw, nalezen
+    'c.wall.o2': "I tak układasz cegły pod nim.", // nieuw, nalezen
+    'c.wall.o3': "Układasz cegły na oko.", // nieuw, nalezen
+    'c.wall.w': "Luźny sznurek zwisa pośrodku, więc warstwa też zwisa. Mocno naciągnięty sznurek daje prostą warstwę.", // nieuw, nalezen
+    'l.wood': "Praca z drewnem", // nieuw, nalezen
+    'w.handzaag': "piła ręczna", // nieuw, nalezen
+    'w.kapzaag': "piła grzbietnica (mała piła ze sztywnym grzbietem)", // nieuw, nalezen
+    'w.houtbeitel': "dłuto do drewna", // nieuw, nalezen
+    'w.handschaaf': "strug ręczny", // nieuw, nalezen
+    'w.timmermanshamer': "młotek ciesielski", // nieuw, nalezen
+    'w.houtenhamer': "pobijak (drewniany młotek)", // nieuw, nalezen
+    's.wood.1': "Przytnij deskę na wymiar.", // nieuw, nalezen
+    's.wood.2': "Zestrugaj krawędź na gładko.", // nieuw, nalezen
+    's.wood.3': "Uderzaj pobijakiem w dłuto.", // nieuw, nalezen
+    'c.wood.q': "Jakiej piły potrzebuję?", // nieuw, nalezen
+    'c.wood.a': "Grzbietnicy, do tego małego kawałka.", // nieuw, nalezen
+    'c.wood': "Za krótkiego już nie naprawisz", // nieuw, nalezen
+    'c.wood.b': "Drewna, które jest ucięte za krótko, nie da się znowu przedłużyć. Dlatego mierz dwa razy i narysuj linię, zanim zaczniesz piłować. Piłuj obok linii, po stronie kawałka, którego nie potrzebujesz. Trzymaj drewno nieruchomo: na stole warsztatowym albo ściskiem, a nie na kolanie. Niech piła robi pracę, długimi, spokojnymi ruchami. Dłuto pchaj od siebie i od drugiej ręki. I dbaj o to, żeby dłuto i strug były ostre: tępe narzędzie łatwiej się ześlizguje.", // nieuw, nalezen
+    'c.wood.p': "Zmierzę to jeszcze raz.", // nieuw, nalezen
+    'c.wood.s': { m: "Musisz przyciąć deskę na wymiar. Zmierzyłeś ją raz, szybko. Co robisz?", f: "Musisz przyciąć deskę na wymiar. Zmierzyłaś ją raz, szybko. Co robisz?", x: "Musisz przyciąć deskę na wymiar. Jest zmierzona tylko raz, szybko. Co robisz?" }, // nieuw, nalezen
+    'c.wood.o1': "Mierzysz jeszcze raz, potem rysujesz linię.", // nieuw, nalezen
+    'c.wood.o2': "Piłujesz teraz: pewnie jest dobrze.", // nieuw, nalezen
+    'c.wood.o3': "Piłujesz na oko, bez linii.", // nieuw, nalezen
+    'c.wood.w': "Za długi kawałek możesz jeszcze raz przyciąć, za krótkiego nie naprawisz. Ponowne mierzenie to minuta; nowa deska to dużo więcej.", // nieuw, nalezen
+    'l.square': "Trasowanie", // nieuw, nalezen
+    'w.winkelhaak': "kątownik (pokazuje kąt prosty)", // nieuw, nalezen
+    'w.verstekhaak': "kątownik do ukosów (45 stopni)", // nieuw, nalezen
+    'w.zwaaihaak': "kątownik nastawny (sam ustawiasz kąt)", // nieuw, nalezen
+    'w.kruishout': "znacznik stolarski (rysuje linię wzdłuż krawędzi)", // nieuw, nalezen
+    'w.passer': "cyrkiel (rysuje koło)", // nieuw, nalezen
+    'w.aftekenen': "trasować, zaznaczać (narysować, gdzie będziesz ciąć)", // nieuw, nalezen
+    's.square.1': "Zaznacz linię kątownikiem.", // nieuw, nalezen
+    's.square.2': "Ustaw kątownik nastawny na dobry kąt.", // nieuw, nalezen
+    's.square.3': "Narysuj koło cyrklem.", // nieuw, nalezen
+    'c.square.q': "Czy kąt jest prosty?", // nieuw, nalezen
+    'c.square.a': "Tak, kątownik pasuje dokładnie.", // nieuw, nalezen
+    'c.square': "Zaznaczaj od jednej prostej krawędzi", // nieuw, nalezen
+    'c.square.b': "Zanim zaczniesz piłować albo wiercić, zaznaczasz gdzie. Używaj ostrego ołówka: gruba linia nie jest dokładna. Wybierz jedną prostą krawędź drewna i wszystko mierz od tej krawędzi. Grubą część kątownika mocno do niej przyciśnij i rysuj linię wzdłuż stali. Narysuj mały krzyżyk na kawałku, którego nie użyjesz. Potem piłujesz obok linii, po stronie krzyżyka.", // nieuw, nalezen
+    'c.square.p': "Najpierw to zaznaczę.", // nieuw, nalezen
+    'c.square.s': "Twój ołówek jest tępy i robi grubą linię. Chcesz zaznaczyć coś na desce. Co robisz?", // nieuw, nalezen
+    'c.square.o1': "Najpierw ostrzysz ołówek, potem rysujesz.", // nieuw, nalezen
+    'c.square.o2': "I tak rysujesz linię, jest dobrze.", // nieuw, nalezen
+    'c.square.o3': "Zaznaczasz to paznokciem.", // nieuw, nalezen
+    'c.square.w': "Gruba linia ma kilka milimetrów szerokości. Wtedy nie wiesz, gdzie piłować, i kawałek nie jest dokładny.", // nieuw, nalezen
+    'l.screw': "Wiertarki i wkręty", // nieuw, nalezen
+    'w.accuboor': "wiertarko-wkrętarka akumulatorowa", // nieuw, nalezen
+    'w.boormachine': "wiertarka (z kablem)", // nieuw, nalezen
+    'w.bitje': "bit, końcówka do wkrętarki", // nieuw, nalezen
+    'w.plug': "kołek rozporowy", // nieuw, nalezen
+    'w.schroevendraaier': "śrubokręt", // nieuw, nalezen
+    'w.spijker': "gwóźdź", // nieuw, nalezen
+    's.screw.1': "Wywierć dziurę i włóż do niej kołek.", // nieuw, nalezen
+    's.screw.2': "Który bit pasuje do tego wkrętu?", // nieuw, nalezen
+    's.screw.3': "Wbij gwóźdź w drewno.", // nieuw, nalezen
+    'c.screw.q': "Gdzie jest wkrętarka?", // nieuw, nalezen
+    'c.screw.a': "Na ładowarce, jest prawie naładowana.", // nieuw, nalezen
+    'c.screw': "Popatrz, zanim zaczniesz wiercić", // nieuw, nalezen
+    'c.screw.b': "Zanim zaczniesz wiercić w ścianie, pomyśl, co jest za nią. Rury i kable często idą prosto w górę, w dół albo w bok od gniazdka albo włącznika. Zapytaj, gdzie są, albo sprawdź wykrywaczem. Wybierz wiertło tej samej wielkości co kołek i wywierć dziurę trochę głębszą niż kołek. Używaj dobrego bitu do wkrętu: zły bit się ześlizguje i niszczy łeb wkrętu. Przy wierceniu noś okulary ochronne.", // nieuw, nalezen
+    'c.screw.p': "Mogę tu wiercić?", // nieuw, nalezen
+    'c.screw.s': "Musisz wywiercić dziurę tuż nad gniazdkiem. Co robisz?", // nieuw, nalezen
+    'c.screw.o1': "Najpierw pytasz, gdzie idzie kabel.", // nieuw, nalezen
+    'c.screw.o2': "Wiercisz: tam nigdy nie ma kabla.", // nieuw, nalezen
+    'c.screw.o3': "Wiercisz powoli, wtedy jest bezpiecznie.", // nieuw, nalezen
+    'c.screw.w': "Kabel często idzie prosto w górę od gniazdka. Wiercenie w kabel jest niebezpieczne, a naprawa to dużo pracy.", // nieuw, nalezen
+    'l.fix': "Mocowanie", // nieuw, nalezen
+    'w.bevestigen': "mocować, przymocować (mocno przymocować coś do ściany)", // nieuw, nalezen
+    'w.vastzetten': "dokręcić (kręcić, aż będzie mocno)", // nieuw, nalezen
+    'w.lijmen': "kleić", // nieuw, nalezen
+    'w.inbussleutel': "klucz imbusowy (klucz sześciokątny)", // nieuw, nalezen
+    'w.kruisschroevendraaier': "śrubokręt krzyżakowy (końcówka w krzyżyk)", // nieuw, nalezen
+    'w.platteschroevendraaier': "śrubokręt płaski", // nieuw, nalezen
+    's.fix.1': "Przymocuj półkę do ściany.", // nieuw, nalezen
+    's.fix.2': "Dokręć śrubę kluczem imbusowym.", // nieuw, nalezen
+    's.fix.3': "Weź śrubokręt płaski, nie krzyżakowy.", // nieuw, nalezen
+    'c.fix.q': "Jak mam przymocować tę półkę?", // nieuw, nalezen
+    'c.fix.a': "Dwoma kołkami i dwoma wkrętami.", // nieuw, nalezen
+    'c.fix': "Mocno, ale nie za mocno", // nieuw, nalezen
+    'c.fix.b': "Wkręt albo śruba musi być mocno dokręcona, ale nie za mocno. Kręcisz za mocno, a gwint się niszczy albo drewno pęka. Kręć, aż się już nie rusza, i wtedy przestań. Na wkrętarce najpierw przekręć pierścień z liczbami na małą liczbę. Półka na ścianie potrzebuje kołków, które pasują do ściany: do kamienia potrzebne są inne kołki niż do cienkiej ścianki z płyty. Klej potrzebuje czasu: dociśnij części do siebie, przytrzymaj je ściskiem i poczekaj, aż klej wyschnie.", // nieuw, nalezen
+    'c.fix.p': "Czy półka jest dobrze przymocowana?", // nieuw, nalezen
+    'c.fix.s': { m: "Skleiłeś dwa kawałki drewna. Kolega chce od razu tego używać. Co robisz?", f: "Skleiłaś dwa kawałki drewna. Kolega chce od razu tego używać. Co robisz?", x: "Dwa kawałki drewna są świeżo sklejone. Kolega chce od razu tego używać. Co robisz?" }, // nieuw, nalezen
+    'c.fix.o1': "Mówisz: klej musi najpierw wyschnąć.", // nieuw, nalezen
+    'c.fix.o2': "Pozwalasz mu tego używać: klej jest szybki.", // nieuw, nalezen
+    'c.fix.o3': "Trzymasz to w rękach przez minutę.", // nieuw, nalezen
+    'c.fix.w': "Mokry klej jeszcze nie trzyma. Użyjesz tego za wcześnie, a części znowu się rozejdą. Wtedy musisz zaczynać od nowa.", // nieuw, nalezen
+    'l.atmachine': "Przy maszynie", // nieuw, nalezen
+    'w.bedieningspaneel': "panel sterowania (przyciski i ekran maszyny)", // nieuw, nalezen
+    'w.startknop': "przycisk start (zielony)", // nieuw, nalezen
+    'w.hendel': "dźwignia", // nieuw, nalezen
+    'w.afscherming': "osłona maszyny (osłona na ruchomych częściach)", // nieuw, nalezen
+    'w.sensor': "czujnik (widzi, czy coś tam jest)", // nieuw, nalezen
+    'w.signaallamp': "lampa sygnalizacyjna (kolorowe lampki na górze maszyny)", // nieuw, nalezen
+    's.atmachine.1': "Naciśnij zielony przycisk start.", // nieuw, nalezen
+    's.atmachine.2': "Lampa sygnalizacyjna jest czerwona. Jest awaria.", // nieuw, nalezen
+    's.atmachine.3': "Nigdy nie zdejmuj osłony maszyny.", // nieuw, nalezen
+    'c.atmachine.q': "Dlaczego maszyna ciągle się zatrzymuje?", // nieuw, nalezen
+    'c.atmachine.a': "Czujnik nie widzi dobrze kartonu.", // nieuw, nalezen
+    'c.atmachine': "Osłona zostaje na miejscu", // nieuw, nalezen
+    'c.atmachine.b': "Ruchome części maszyny mogą w niecałą sekundę wciągnąć rękę, rękaw albo włosy. Po to jest osłona. Nigdy jej nie zdejmuj i nigdy nie sięgaj za nią, kiedy maszyna pracuje. Osłona albo czujnik nie działa? Wtedy maszyna nie jest bezpieczna: zatrzymaj ją i powiedz kierownikowi zespołu. Coś się zablokowało? Najpierw zatrzymaj maszynę i dopilnuj, żeby nikt nie mógł jej włączyć, kiedy pracujesz. Jak to się robi, jest różne w każdej firmie: poproś o wyjaśnienie, zanim zaczniesz. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.atmachine.p': "Osłona maszyny jest zepsuta.", // nieuw, nalezen
+    'c.atmachine.s': "Karton utknął w maszynie, tuż za osłoną. Maszyna pracuje. Co robisz?", // nieuw, nalezen
+    'c.atmachine.o1': "Najpierw zatrzymujesz maszynę, potem wołasz pomoc.", // nieuw, nalezen
+    'c.atmachine.o2': "Szybko sięgasz ręką i wyciągasz karton.", // nieuw, nalezen
+    'c.atmachine.o3': "Otwierasz osłonę, kiedy maszyna pracuje.", // nieuw, nalezen
+    'c.atmachine.w': "Pracująca maszyna może wciągnąć twoją rękę, zanim zdążysz zareagować. Zatrzymanie jej to chwila; zraniona ręka to miesiące.", // nieuw, nalezen
+    'l.inspect': "Mierzenie i sprawdzanie", // nieuw, nalezen
+    'w.weegschaal': "waga", // nieuw, nalezen
+    'w.meetklok': "czujnik zegarowy (mierzy bardzo małe różnice)", // nieuw, nalezen
+    'w.loep': "lupa", // nieuw, nalezen
+    'w.monster': "próbka (jeden produkt, który bierzesz do sprawdzenia)", // nieuw, nalezen
+    'w.afkeurbak': "pojemnik na braki (na produkty, które nie są dobre)", // nieuw, nalezen
+    'w.teller': "licznik (liczy produkty)", // nieuw, nalezen
+    's.inspect.1': "Połóż produkt na wadze.", // nieuw, nalezen
+    's.inspect.2': "Ten produkt jest uszkodzony. Idzie do pojemnika na braki.", // nieuw, nalezen
+    's.inspect.3': "Patrzę na etykietę przez lupę.", // nieuw, nalezen
+    'c.inspect.q': "Jak często mam brać próbkę?", // nieuw, nalezen
+    'c.inspect.a': "Jedną co godzinę. Zapisz to na liście.", // nieuw, nalezen
+    'c.inspect': "Zapisuj, co sprawdzasz", // nieuw, nalezen
+    'c.inspect.b': "W fabryce sprawdzasz produkty w czasie pracy: ważysz je, mierzysz je albo dokładnie je oglądasz. Każde sprawdzenie od razu zapisz na liście, z godziną. Nie później, z pamięci. Jeden produkt nie jest dobry? Włóż go do pojemnika na braki i dokładnie obejrzyj następne. Więcej produktów jest złych? Wtedy coś jest nie tak z maszyną. Od razu powiedz kierownikowi zespołu. Problem, który wcześnie się znajdzie, ratuje dużo produktów. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.inspect.p': "Więcej produktów jest złych.", // nieuw, nalezen
+    'c.inspect.s': "Waga pokazuje, że trzy produkty po kolei są za lekkie. Co robisz?", // nieuw, nalezen
+    'c.inspect.o1': "Od razu mówisz kierownikowi zespołu.", // nieuw, nalezen
+    'c.inspect.o2': "Kładziesz je z powrotem na linię.", // nieuw, nalezen
+    'c.inspect.o3': "Nic nie mówisz: tak się zdarza.", // nieuw, nalezen
+    'c.inspect.w': "Trzy złe produkty po kolei wskazują na problem w maszynie. Im szybciej powiesz, tym mniej produktów się zmarnuje.", // nieuw, nalezen
+    'l.packing': "Pakowanie", // nieuw, nalezen
+    'w.verpakking': "opakowanie", // nieuw, nalezen
+    'w.krimpfolie': "folia termokurczliwa (folia, która od ciepła mocno się obkurcza)", // nieuw, nalezen
+    'w.sealmachine': "zgrzewarka (zamyka opakowanie ciepłem)", // nieuw, nalezen
+    'w.vulmateriaal': "wypełniacz (poduszki powietrzne albo papier w kartonie)", // nieuw, nalezen
+    'w.afbreekmes': "nożyk z łamanym ostrzem", // nieuw, nalezen
+    'w.tapepistool': "podajnik do taśmy (pistolet do taśmy)", // nieuw, nalezen
+    's.packing.1': "Włóż wypełniacz do kartonu.", // nieuw, nalezen
+    's.packing.2': "Zamknij karton podajnikiem do taśmy.", // nieuw, nalezen
+    's.packing.3': "Zgrzewarka jest gorąca. Uwaga!", // nieuw, nalezen
+    'c.packing.q': "Ile produktów idzie do jednego kartonu?", // nieuw, nalezen
+    'c.packing.a': "Dwanaście. Tak jest napisane na liście.", // nieuw, nalezen
+    'c.packing': "Tnij od siebie", // nieuw, nalezen
+    'c.packing.b': "Pakowanie to szybka praca, a nożyk z łamanym ostrzem jest bardzo ostry. Zawsze tnij od siebie i od drugiej ręki. Po każdym cięciu chowaj ostrze, także wtedy, gdy odkładasz nożyk na chwilę. Tępy kawałek ostrza odłamuj ostrożnie i wyrzucaj go do pojemnika na stare ostrza, a nie do zwykłego kosza. Zgrzewarka i opalarka do folii termokurczliwej robią się bardzo gorące: nie dotykaj gorących części. I sprawdzaj każdy karton: dobry produkt, dobra liczba i prosto naklejona etykieta. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.packing.p': "Najpierw chowam ostrze.", // nieuw, nalezen
+    'c.packing.s': "Na chwilę kładziesz nożyk na stole. Ostrze jest jeszcze wysunięte. Co robisz?", // nieuw, nalezen
+    'c.packing.o1': "Najpierw chowasz ostrze.", // nieuw, nalezen
+    'c.packing.o2': "Zostawiasz go: zaraz znowu będzie ci potrzebny.", // nieuw, nalezen
+    'c.packing.o3': "Wkładasz go tak do kieszeni.", // nieuw, nalezen
+    'c.packing.w': "Wysunięte ostrze na stole albo w kieszeni może skaleczyć ciebie albo kolegę. Schowanie go trwa sekundę.", // nieuw, nalezen
+    'l.upkeep': "Konserwacja", // nieuw, nalezen
+    'w.persluchtpistool': "pistolet na sprężone powietrze", // nieuw, nalezen
+    'w.steeksleutel': "klucz płaski", // nieuw, nalezen
+    'w.oliekannetje': "oliwiarka", // nieuw, nalezen
+    'w.smeerpistool': "smarownica", // nieuw, nalezen
+    'w.lekbak': "taca na olej (łapie cieknący olej)", // nieuw, nalezen
+    'w.poetsdoek': "czyściwo, szmata do czyszczenia", // nieuw, nalezen
+    's.upkeep.1': "Cieknie olej. Podstaw pod to tacę na olej.", // nieuw, nalezen
+    's.upkeep.2': "Wytrzyj olej szmatą do czyszczenia.", // nieuw, nalezen
+    's.upkeep.3': "Nigdy nie kieruj pistoletu na sprężone powietrze na nikogo.", // nieuw, nalezen
+    'c.upkeep.q': "Kiedy smarujemy maszynę?", // nieuw, nalezen
+    'c.upkeep.a': "W każdy poniedziałek, przed pierwszą zmianą.", // nieuw, nalezen
+    'c.upkeep': "Czysta maszyna pokazuje swoje problemy", // nieuw, nalezen
+    'c.upkeep.b': "Mała konserwacja to często część pracy: wycieranie, oliwienie i smarowanie. Rób to tylko wtedy, gdy maszyna jest wyłączona, i gdy wiesz, jak to robić. Czystą maszynę łatwo sprawdzić: od razu widzisz wyciek albo luźną część. Olej na podłodze jest śliski. Podstaw tacę pod wyciek, wytrzyj podłogę i powiedz kierownikowi zespołu. Zaolejone szmaty wyrzucaj do specjalnego pojemnika. Nigdy nie kieruj pistoletu na sprężone powietrze na człowieka i nigdy nie czyść nim ubrania ani skóry. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.upkeep.p': "Z maszyny cieknie olej.", // nieuw, nalezen
+    'c.upkeep.s': "Widzisz małą kałużę oleju pod maszyną. Co robisz?", // nieuw, nalezen
+    'c.upkeep.o1': "Podstawiasz tacę na olej i zgłaszasz to.", // nieuw, nalezen
+    'c.upkeep.o2': "Zostawiasz to: to tylko trochę.", // nieuw, nalezen
+    'c.upkeep.o3': "Kładziesz na to trochę papieru i pracujesz dalej.", // nieuw, nalezen
+    'c.upkeep.w': "Wyciek robi się coraz większy, a na oleju na podłodze ludzie się ślizgają. Wcześnie znaleziony, to mała naprawa.", // nieuw, nalezen
   },
 };
 

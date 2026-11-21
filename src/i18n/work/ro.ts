@@ -2288,6 +2288,370 @@ const t: CultureTranslation = {
     'c.order.o2': "O faci pe prima și speri să-ți amintești restul.", // nieuw, nalezen
     'c.order.o3': "Nu faci nimic: nu le știi pe toate trei.", // nieuw, nalezen
     'c.order.w': "Să întrebi imediat durează zece secunde. Mai târziu șeful poate să fie plecat, și atunci aștepți sau ghicești.", // nieuw, nalezen
+    'u.afbouw': "Plăci, tencuială și vopsea", // nieuw, nalezen
+    'l.tiletools': "Sculele pentru montat plăci", // nieuw, nalezen
+    'w.lijmkam': "gletiera zimțată (întinde adezivul pentru plăci în dungi)", // nieuw, nalezen
+    'w.troffel': "mistria", // nieuw, nalezen
+    'w.tegelsnijder': "mașina de tăiat plăci", // nieuw, nalezen
+    'w.nijptang': "cleștele (rupi cu el bucăți mici dintr-o placă)", // nieuw, nalezen
+    'w.mixer': "mixerul (amestecă adezivul sau tencuiala în găleată)", // nieuw, nalezen
+    'w.duimstok': "metrul pliant", // nieuw, nalezen
+    's.tiletools.1': "Dă-mi puțin gletiera zimțată.", // nieuw, nalezen
+    's.tiletools.2': "Tai placa cu mașina de tăiat plăci.", // nieuw, nalezen
+    's.tiletools.3': "Măsoară întâi cu metrul pliant.", // nieuw, nalezen
+    'c.tiletools.q': "Unde e mixerul?", // nieuw, nalezen
+    'c.tiletools.a': "La găleată, lângă ușă.", // nieuw, nalezen
+    'c.tiletools': "Curăță sculele înainte să se întărească adezivul", // nieuw, nalezen
+    'c.tiletools.b': "Adezivul pentru plăci și tencuiala se întăresc repede, și pe scule. Așa că spală imediat gletiera zimțată, mistria și mixerul într-o găleată cu apă, și înainte de pauză. Adezivul întărit nu mai iese, iar o gletieră zimțată cu adeziv întărit face dungi proaste. Nu turna apa murdară în chiuvetă sau în scurgere: se înfundă. Întreabă unde se poate arunca apa. Mixerul: ține-l cu ambele mâini și pornește-l încet. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.tiletools.p': "Curăț repede gletiera zimțată.", // nieuw, nalezen
+    'c.tiletools.s': "E timpul de pauză. Gletiera zimțată e plină de adeziv ud. Ce faci?", // nieuw, nalezen
+    'c.tiletools.o1': "O speli în apă, apoi iei pauza.", // nieuw, nalezen
+    'c.tiletools.o2': "O lași: o speli după lucru.", // nieuw, nalezen
+    'c.tiletools.o3': "O pui în găleata cu adeziv.", // nieuw, nalezen
+    'c.tiletools.w': "Adezivul se întărește și în pauză. O gletieră curată face dungi bune, iar plăcile se lipesc bine. Adezivul întărit pe ea înseamnă multă muncă, sau o sculă nouă.", // nieuw, nalezen
+    'l.tiling': "Plăci, adeziv și linia de mijloc", // nieuw, nalezen
+    'w.tegel': "placa (de faianță sau de gresie)", // nieuw, nalezen
+    'w.tegellijm': "adezivul pentru plăci", // nieuw, nalezen
+    'w.tegelkruisje': "cruciulița (o cruce mică între plăci)", // nieuw, nalezen
+    'w.hartlijn': "linia de mijloc (de la ea începi să pui plăcile)", // nieuw, nalezen
+    'w.tegelplaat': "panoul de exerciții (un panou pe care exersezi montarea plăcilor)", // nieuw, nalezen
+    'w.potlood': "creionul", // nieuw, nalezen
+    's.tiling.1': "Adezivul pentru plăci e încă ud.", // nieuw, nalezen
+    's.tiling.2': "Pune o cruciuliță între plăci.", // nieuw, nalezen
+    's.tiling.3': "Trasează întâi linia de mijloc cu creionul.", // nieuw, nalezen
+    'c.tiling.q': "De unde încep cu plăcile?", // nieuw, nalezen
+    'c.tiling.a': "Din mijloc, de pe linia de mijloc.", // nieuw, nalezen
+    'c.tiling': "Începe de la linia de mijloc, cu puțin adeziv", // nieuw, nalezen
+    'c.tiling.b': "La plăci nu se începe dintr-un colț. Întâi trasezi linia de mijloc, cu un creion și cu nivela, și începi de acolo. Atunci plăcile tăiate de la cele două capete au aceeași mărime. Întinde doar atâta adeziv cât poți acoperi cu plăci în scurt timp. Adezivul care stă prea mult face o pieliță uscată, și atunci plăcile nu se lipesc bine. Pune o cruciuliță la fiecare încrucișare, ca toate rosturile să fie la fel. Verifică des cu nivela: o placă strâmbă e ușor de îndreptat acum, și greu mâine.", // nieuw, nalezen
+    'c.tiling.p': "Nu întind prea mult adeziv deodată.", // nieuw, nalezen
+    'c.tiling.s': "După o convorbire lungă la telefon, adezivul de pe perete are o pieliță uscată. Ce faci?", // nieuw, nalezen
+    'c.tiling.o1': "Îl razi și întinzi adeziv proaspăt.", // nieuw, nalezen
+    'c.tiling.o2': "Pui plăcile pe el oricum.", // nieuw, nalezen
+    'c.tiling.o3': "Îl uzi cu un burete și continui.", // nieuw, nalezen
+    'c.tiling.w': "Adezivul cu pieliță uscată nu ține bine placa. Mai târziu placa se poate desprinde, și atunci lucrarea trebuie făcută din nou.", // nieuw, nalezen
+    'l.plaster': "Tencuirea", // nieuw, nalezen
+    'w.stucspaan': "gletiera netedă (o drișcă plată din oțel cu care netezești tencuiala)", // nieuw, nalezen
+    'w.oplegspaan': "paleta pentru tencuială (o placă plată pe care ții tencuiala)", // nieuw, nalezen
+    'w.spackmes': "șpaclul (un cuțit lat și plat)", // nieuw, nalezen
+    'w.rei': "dreptarul (o bară lungă și dreaptă cu care tragi tencuiala drept)", // nieuw, nalezen
+    'w.sponsspaan': "drișca cu burete", // nieuw, nalezen
+    'w.hoekprofiel': "coltarul (o bandă de metal pentru un colț drept)", // nieuw, nalezen
+    's.plaster.1': "Pune întâi coltarul pe colț.", // nieuw, nalezen
+    's.plaster.2': "Netezește peretele cu gletiera.", // nieuw, nalezen
+    's.plaster.3': "Trage dreptarul pe perete.", // nieuw, nalezen
+    'c.plaster.q': "S-a uscat deja peretele?", // nieuw, nalezen
+    'c.plaster.a': "Nu, mai așteaptă o zi.", // nieuw, nalezen
+    'c.plaster': "Tencuiala are nevoie de timp să se usuce", // nieuw, nalezen
+    'c.plaster.b': "Tencuiala proaspătă rămâne udă mult timp. Un perete ud e mai închis la culoare decât unul uscat. Zugravul poate începe doar când peretele e uscat peste tot, și asta poate dura zile sau săptămâni. Nu-l usca mai repede cu un încălzitor: atunci tencuiala poate crăpa. Cineva vrea să vopsească prea devreme? Spune că peretele nu e încă uscat. Și înainte să începi, acoperă podeaua, ferestrele și prizele: tencuiala se scoate greu.", // nieuw, nalezen
+    'c.plaster.p': "Peretele e încă ud. Nu poți vopsi încă.", // nieuw, nalezen
+    'c.plaster.s': "Zugravul vrea să înceapă mâine. Tencuiala nouă mai are pete închise la culoare. Ce faci?", // nieuw, nalezen
+    'c.plaster.o1': "Îi spui zugravului: peretele nu e încă uscat.", // nieuw, nalezen
+    'c.plaster.o2': "Pui un încălzitor în fața lui la noapte.", // nieuw, nalezen
+    'c.plaster.o3': "Nu spui nimic: o să vadă zugravul.", // nieuw, nalezen
+    'c.plaster.w': "Petele închise înseamnă că tencuiala e încă udă. Vopseaua pe un perete ud se poate desprinde, iar un încălzitor poate face crăpături. Să aștepți costă mai puțin decât să faci totul din nou.", // nieuw, nalezen
+    // l.paint and l.prep (u.afbouw), "Metselen, hout en vastmaken" (u.ruwbouw), three lessons of Rekenen (u.numbers) and "Machines en gereedschap" (u.machines), 20-21 November 2026.
+    'u.ruwbouw': "Zidărie, lemn și fixare", // nieuw, nalezen
+    'u.machines': "Mașini și scule", // nieuw, nalezen
+    'l.shapes': "Forme", // nieuw, nalezen
+    'w.vierkant': "pătratul", // nieuw, nalezen
+    'w.rechthoek': "dreptunghiul", // nieuw, nalezen
+    'w.driehoek': "triunghiul", // nieuw, nalezen
+    'w.cirkel': "cercul", // nieuw, nalezen
+    'w.kubus': "cubul", // nieuw, nalezen
+    'w.balk': "paralelipipedul (o formă ca o cutie lungă)", // nieuw, nalezen
+    's.shapes.1': "Placa e un pătrat.", // nieuw, nalezen
+    's.shapes.2': "Camera asta e un dreptunghi.", // nieuw, nalezen
+    's.shapes.3': "O cărămidă are forma unui paralelipiped.", // nieuw, nalezen
+    'c.shapes.q': "E un pătrat?", // nieuw, nalezen
+    'c.shapes.a': "Nu, un dreptunghi. E mai lung decât lat.", // nieuw, nalezen
+    'c.shapes': "Verifică un dreptunghi cu două linii în cruce", // nieuw, nalezen
+    'c.shapes.b': "O cameră, o podea sau un cadru e adesea un dreptunghi. Dar colțurile sunt chiar drepte? Există o verificare simplă. Măsoară dintr-un colț până în colțul opus. Apoi măsoară între celelalte două colțuri. Cele două lungimi sunt la fel? Atunci colțurile sunt drepte. Nu sunt la fel? Atunci forma e puțin strâmbă, iar plăcile sau podeaua nu se vor potrivi bine. Spune-i șefului înainte să începi.", // nieuw, nalezen
+    'c.shapes.p': "Aceste două măsuri nu sunt la fel.", // nieuw, nalezen
+    'c.shapes.s': "Măsori o podea din colț în colț, în ambele direcții. Una e mai lungă. Ce faci?", // nieuw, nalezen
+    'c.shapes.o1': "Îi spui șefului înainte să începi.", // nieuw, nalezen
+    'c.shapes.o2': "Începi dintr-un colț, o să fie bine.", // nieuw, nalezen
+    'c.shapes.o3': "Măsori din nou doar o latură.", // nieuw, nalezen
+    'c.shapes.w': "Două lungimi diferite înseamnă că colțurile nu sunt drepte. Atunci plăcile sau scândurile nu se potrivesc. E mai bine să știi asta înainte să începi.", // nieuw, nalezen
+    'l.angles': "Unghiuri și forme rotunde", // nieuw, nalezen
+    'w.hoek': "unghiul", // nieuw, nalezen
+    'w.graad': "gradul (°)", // nieuw, nalezen
+    'w.geodriehoek': "echerul cu raportor", // nieuw, nalezen
+    'w.boog': "arcul, curba", // nieuw, nalezen
+    'w.cilinder': "cilindrul", // nieuw, nalezen
+    'w.parallellogram': "paralelogramul", // nieuw, nalezen
+    's.angles.1': "Unghiul ăsta are nouăzeci de grade.", // nieuw, nalezen
+    's.angles.2': "Măsoară unghiul cu echerul cu raportor.", // nieuw, nalezen
+    's.angles.3': "Țeava are forma unui cilindru.", // nieuw, nalezen
+    'c.angles.q': "Câte grade are unghiul ăsta?", // nieuw, nalezen
+    'c.angles.a': "Patruzeci și cinci. Jumătate dintr-un unghi drept.", // nieuw, nalezen
+    'c.angles': "Verifică un colț mare cu 3, 4 și 5", // nieuw, nalezen
+    'c.angles.b': "Pe șantier verifici des un unghi drept: un perete pe o podea, colțul unei camere. Un colț mic îl verifici cu un echer de tâmplărie sau cu un echer cu raportor. Pentru un colț mare există un truc vechi. Măsoară 3 metri pe o latură și 4 metri pe cealaltă latură, și fă un semn la amândouă. De la un semn la celălalt sunt exact 5 metri? Atunci unghiul are 90 de grade. Merge și mai mic: 30, 40 și 50 de centimetri.", // nieuw, nalezen
+    'c.angles.p': "Unghiul ăsta nu e drept.", // nieuw, nalezen
+    'c.angles.s': "Trebuie să verifici un colț mare al unui perete nou. Echerul tău e mult prea mic. Ce faci?", // nieuw, nalezen
+    'c.angles.o1': "Măsori 3, 4 și 5 metri.", // nieuw, nalezen
+    'c.angles.o2': "Te uiți la el de departe.", // nieuw, nalezen
+    'c.angles.o3': "Folosești totuși echerul mic.", // nieuw, nalezen
+    'c.angles.w': "Cu 3, 4 și 5 poți verifica exact un colț mare, doar cu o ruletă. Din ochi, un colț poate să pară drept și totuși să fie greșit.", // nieuw, nalezen
+    'l.size': "Lungime, suprafață și volum", // nieuw, nalezen
+    'w.lengte': "lungimea", // nieuw, nalezen
+    'w.breedte': "lățimea", // nieuw, nalezen
+    'w.hoogte': "înălțimea", // nieuw, nalezen
+    'w.oppervlakte': "suprafața, aria (lungimea înmulțită cu lățimea, în metri pătrați)", // nieuw, nalezen
+    'w.inhoud': "volumul (lungimea înmulțită cu lățimea și cu înălțimea)", // nieuw, nalezen
+    'w.centimeter': "centimetrul", // nieuw, nalezen
+    's.size.1': "Suprafața este lungimea înmulțită cu lățimea.", // nieuw, nalezen
+    's.size.2': "Volumul este lungimea înmulțită cu lățimea și cu înălțimea.", // nieuw, nalezen
+    's.size.3': "Zece milimetri fac un centimetru.", // nieuw, nalezen
+    'c.size.q': "Câți metri pătrați are podeaua?", // nieuw, nalezen
+    'c.size.a': "Patru pe cinci metri, deci douăzeci de metri pătrați.", // nieuw, nalezen
+    'c.size': "Calculează ce îți trebuie, apoi pune puțin în plus", // nieuw, nalezen
+    'c.size.b': "Câte plăci, câtă vopsea, cât nisip? Calculezi cu suprafața sau cu volumul. Suprafața: lungimea înmulțită cu lățimea, în metri pătrați. Volumul: lungimea înmulțită cu lățimea și cu înălțimea, în metri cubi. Măsoară totul în aceeași unitate: totul în metri sau totul în centimetri. Notează măsurile, nu le ține în minte. Apoi adaugă puțin în plus, pentru bucățile tăiate și pentru greșeli. Nu știi sigur? Roagă un coleg să-ți verifice calculul.", // nieuw, nalezen
+    'c.size.p': "Notez măsurile.", // nieuw, nalezen
+    'c.size.s': "Ai măsurat podeaua. Trebuie să comanzi plăcile azi. Ce faci?", // nieuw, nalezen
+    'c.size.o1': "Calculezi suprafața și adaugi puțin în plus.", // nieuw, nalezen
+    'c.size.o2': "Comanzi exact suprafața, nicio placă în plus.", // nieuw, nalezen
+    'c.size.o3': "Ghicești: ai văzut podeaua.", // nieuw, nalezen
+    'c.size.w': "Mereu tai câteva plăci, și unele se sparg. Cu puțin în plus nu trebuie să te oprești la jumătate și să comanzi din nou.", // nieuw, nalezen
+    'l.paint': "Vopsirea", // nieuw, nalezen
+    'w.verf': "vopseaua", // nieuw, nalezen
+    'w.kwast': "pensula (o pensulă lată)", // nieuw, nalezen
+    'w.penseel': "pensula mică (pentru colțuri și margini)", // nieuw, nalezen
+    'w.roerstok': "bățul de amestecat", // nieuw, nalezen
+    'w.tape': "banda de mascare", // nieuw, nalezen
+    'w.strijkvaatje': "găletușa de vopsea (un vas mic pe care îl ții în mână când vopsești)", // nieuw, nalezen
+    's.paint.1': "Amestecă întâi bine vopseaua.", // nieuw, nalezen
+    's.paint.2': "Acoperă marginea cu bandă de mascare.", // nieuw, nalezen
+    's.paint.3': "Pune puțină vopsea în găletușă.", // nieuw, nalezen
+    'c.paint.q': "Ce pensulă iau?", // nieuw, nalezen
+    'c.paint.a': "Pe cea lată pentru perete, pensula mică pentru colțuri.", // nieuw, nalezen
+    'c.paint': "Amestecă bine și vopsește de sus în jos", // nieuw, nalezen
+    'c.paint.b': "Vopseaua care a stat o vreme e groasă pe fundul cutiei. Așa că amestec-o întâi bine, cu un băț de amestecat, până când culoarea e la fel peste tot. Nu vopsi din cutia mare: pune puțină vopsea în găletușă și închide din nou cutia. Așa vopseaua rămâne bună. Vopsește de sus în jos, ca picăturile să cadă pe vopsea udă și să le mai poți întinde cu pensula. Folosește pensula lată pentru perete și pensula mică pentru colțuri. La sfârșit, curăță imediat pensulele.", // nieuw, nalezen
+    'c.paint.p': "Întâi amestec bine vopseaua.", // nieuw, nalezen
+    'c.paint.s': "Deschizi o cutie veche de vopsea. Sus e subțire, jos e groasă. Ce faci?", // nieuw, nalezen
+    'c.paint.o1': "O amesteci întâi bine, cu bățul.", // nieuw, nalezen
+    'c.paint.o2': "Vopsești cu vopseaua subțire de deasupra.", // nieuw, nalezen
+    'c.paint.o3': "Adaugi apă până e subțire peste tot.", // nieuw, nalezen
+    'c.paint.w': "O parte din culoare stă pe fundul cutiei. Fără amestecat, peretele rămâne cu pete și dungi.", // nieuw, nalezen
+    'l.prep': "Pregătirea pentru vopsit", // nieuw, nalezen
+    'w.plamuurmes': "șpaclul pentru chit (umpli găuri cu el)", // nieuw, nalezen
+    'w.schuurpapier': "hârtia abrazivă, șmirghelul", // nieuw, nalezen
+    'w.verfkrabber': "răzuitoarea de vopsea", // nieuw, nalezen
+    'w.stoffertje': "mătura mică de mână (pentru praf)", // nieuw, nalezen
+    'w.schuren': "a șlefui", // nieuw, nalezen
+    'w.afplakken': "a masca (a acoperi o margine cu bandă)", // nieuw, nalezen
+    's.prep.1': "Întâi răzuiește vopseaua veche.", // nieuw, nalezen
+    's.prep.2': "Șlefuiește lemnul până e neted.", // nieuw, nalezen
+    's.prep.3': "Mătură praful cu mătura mică.", // nieuw, nalezen
+    'c.prep.q': "Pot să vopsesc deja?", // nieuw, nalezen
+    'c.prep.a': "Nu, întâi șlefuiești și astupi gaura.", // nieuw, nalezen
+    'c.prep': "O vopsire bună începe înainte de vopsea", // nieuw, nalezen
+    'c.prep.b': "Vopseaua nu se prinde bine pe murdărie, praf sau vopsea veche care se desprinde. Așa că întâi răzuiește vopseaua desprinsă cu răzuitoarea. Umple găurile cu chit și cu șpaclul, și lasă chitul să se usuce. Apoi șlefuiește până e neted. După șlefuire, mătură praful cu mătura mică, și de pe margini. La sfârșit, maschează ce trebuie să rămână curat, de exemplu ferestrele și prizele. Șlefuirea face praf fin: poartă o mască de praf și întreabă care. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.prep.p': "Întâi șlefuim, apoi vopsim.", // nieuw, nalezen
+    'c.prep.s': "Ai șlefuit ușa. Mai e praf pe ea. Colegul tău vrea să vopsească acum. Ce faci?", // nieuw, nalezen
+    'c.prep.o1': "Întâi mături praful, cu mătura mică.", // nieuw, nalezen
+    'c.prep.o2': "Îl lași să vopsească: vopseaua acoperă praful.", // nieuw, nalezen
+    'c.prep.o3': "Ștergi praful cu mâna.", // nieuw, nalezen
+    'c.prep.w': "Vopseaua pe praf nu se prinde bine. Mai târziu se desprinde în fulgi, și atunci toată munca trebuie făcută din nou.", // nieuw, nalezen
+    'l.brick': "Zidăria", // nieuw, nalezen
+    'w.speciekuip': "cada pentru mortar", // nieuw, nalezen
+    'w.metseltroffel': "mistria de zidar", // nieuw, nalezen
+    'w.baksteen': "cărămida", // nieuw, nalezen
+    'w.cement': "cimentul", // nieuw, nalezen
+    'w.voegijzer': "rostuitorul (netezește rosturile dintre cărămizi)", // nieuw, nalezen
+    'w.handveger': "peria de mână", // nieuw, nalezen
+    's.brick.1': "Mai e mortar în cadă.", // nieuw, nalezen
+    's.brick.2': "Netezește rostul cu rostuitorul.", // nieuw, nalezen
+    's.brick.3': "Curăță zidul cu peria de mână.", // nieuw, nalezen
+    'c.brick.q': "Câte cărămizi mai ai?", // nieuw, nalezen
+    'c.brick.a': "Încă un palet. Destul pentru azi.", // nieuw, nalezen
+    'c.brick': "Ține zidul curat în timp ce lucrezi", // nieuw, nalezen
+    'c.brick.b': "Mortarul e ud când pui cărămizile și se întărește în câteva ore. Așa că lucrează curat. Ia imediat cu mistria mortarul care iese din rost. Netezește rosturile cu rostuitorul când mortarul e puțin tare, nu când e încă ud. Apoi perie zidul cu peria de mână. Mortarul întărit pe fața unei cărămizi se scoate foarte greu. La sfârșitul zilei, acoperă partea de sus a zidului, ca ploaia să nu spele mortarul.", // nieuw, nalezen
+    'c.brick.p': "Netezesc rosturile.", // nieuw, nalezen
+    'c.brick.s': "La sfârșitul zilei e mortar pe fața cărămizilor. Ce faci?", // nieuw, nalezen
+    'c.brick.o1': "Îl periezi acum, înainte să se întărească.", // nieuw, nalezen
+    'c.brick.o2': "Îl lași: îl cureți săptămâna viitoare.", // nieuw, nalezen
+    'c.brick.o3': "Speli zidul cu multă apă.", // nieuw, nalezen
+    'c.brick.w': "Mortarul proaspăt se ia ușor cu peria. Mortarul întărit rămâne pe cărămidă, și atunci zidul nu arată bine.", // nieuw, nalezen
+    'l.wall': "Un zid drept", // nieuw, nalezen
+    'w.metseltouw': "sfoara de zidar (o sfoară pentru un rând drept)", // nieuw, nalezen
+    'w.klos': "suportul de sfoară (ține sfoara la colț)", // nieuw, nalezen
+    'w.lagenmaatlat': "rigla pentru rânduri (arată înălțimea fiecărui rând)", // nieuw, nalezen
+    'w.profiel': "profilul de colț (un stâlp drept la capătul zidului)", // nieuw, nalezen
+    'w.kop': "capul cărămizii (partea scurtă a unei cărămizi)", // nieuw, nalezen
+    'w.strek': "lungul cărămizii (partea lungă a unei cărămizi)", // nieuw, nalezen
+    's.wall.1': "Întinde bine sfoara de zidar.", // nieuw, nalezen
+    's.wall.2': "Profilul de colț trebuie să stea drept.", // nieuw, nalezen
+    's.wall.3': "Pune cărămida cu partea lungă spre exterior.", // nieuw, nalezen
+    'c.wall.q': "Cât de înalt trebuie să fie rândul ăsta?", // nieuw, nalezen
+    'c.wall.a': "Uită-te pe rigla pentru rânduri.", // nieuw, nalezen
+    'c.wall': "Sfoara ține zidul drept", // nieuw, nalezen
+    'c.wall.b': "Un zidar nu construiește din ochi. Întâi profilele de colț stau drepte la ambele capete ale zidului. Între ele întinzi bine sfoara de zidar, la înălțimea rândului următor. Pune fiecare cărămidă de-a lungul sforii, dar nu împinge sfoara. Rigla pentru rânduri arată cât de înalt trebuie să fie fiecare rând. Verifică des cu nivela. O cărămidă strâmbă e ușor de îndreptat cât mortarul e ud, și foarte greu mâine.", // nieuw, nalezen
+    'c.wall.p': "E bine întinsă sfoara?", // nieuw, nalezen
+    'c.wall.s': "Sfoara de zidar e slabă și atârnă puțin la mijloc. Ce faci?", // nieuw, nalezen
+    'c.wall.o1': "Întâi o întinzi bine, apoi continui.", // nieuw, nalezen
+    'c.wall.o2': "Pui totuși cărămizile sub ea.", // nieuw, nalezen
+    'c.wall.o3': "Pui cărămizile din ochi.", // nieuw, nalezen
+    'c.wall.w': "O sfoară slabă atârnă la mijloc, așa că atârnă și rândul. O sfoară bine întinsă dă un rând drept.", // nieuw, nalezen
+    'l.wood': "Lucrul cu lemnul", // nieuw, nalezen
+    'w.handzaag': "fierăstrăul de mână", // nieuw, nalezen
+    'w.kapzaag': "fierăstrăul cu spate (un fierăstrău mic cu spatele rigid)", // nieuw, nalezen
+    'w.houtbeitel': "dalta pentru lemn", // nieuw, nalezen
+    'w.handschaaf': "rindeaua", // nieuw, nalezen
+    'w.timmermanshamer': "ciocanul de dulgher", // nieuw, nalezen
+    'w.houtenhamer': "maiul (un ciocan de lemn)", // nieuw, nalezen
+    's.wood.1': "Taie scândura la măsură.", // nieuw, nalezen
+    's.wood.2': "Dă la rindea marginea până e netedă.", // nieuw, nalezen
+    's.wood.3': "Lovește dalta cu maiul.", // nieuw, nalezen
+    'c.wood.q': "Ce fierăstrău îmi trebuie?", // nieuw, nalezen
+    'c.wood.a': "Fierăstrăul cu spate, pentru bucata asta mică.", // nieuw, nalezen
+    'c.wood': "Prea scurt nu se mai repară", // nieuw, nalezen
+    'c.wood.b': "Lemnul tăiat prea scurt nu mai poate fi făcut lung. Așa că măsoară de două ori și trage linia înainte să tai. Taie lângă linie, pe partea bucății de care nu ai nevoie. Ține lemnul nemișcat: pe un banc de lucru sau cu o clemă, nu pe genunchi. Lasă fierăstrăul să lucreze, cu mișcări lungi și calme. Împinge dalta departe de corp și de cealaltă mână. Și ține dalta și rindeaua ascuțite: o sculă tocită alunecă mai ușor.", // nieuw, nalezen
+    'c.wood.p': "O mai măsor o dată.", // nieuw, nalezen
+    'c.wood.s': "Trebuie să tai o scândură la măsură. Ai măsurat-o o dată, repede. Ce faci?", // nieuw, nalezen
+    'c.wood.o1': "Măsori din nou, apoi tragi linia.", // nieuw, nalezen
+    'c.wood.o2': "O tai acum: probabil e bine.", // nieuw, nalezen
+    'c.wood.o3': "O tai din ochi, fără linie.", // nieuw, nalezen
+    'c.wood.w': "Prea lung poți tăia din nou, prea scurt nu mai poți repara. Să măsori din nou durează un minut; o scândură nouă costă mult mai mult.", // nieuw, nalezen
+    'l.square': "Trasarea", // nieuw, nalezen
+    'w.winkelhaak': "echerul de tâmplărie (arată un unghi drept)", // nieuw, nalezen
+    'w.verstekhaak': "echerul pentru tăieri oblice (45 de grade)", // nieuw, nalezen
+    'w.zwaaihaak': "echerul reglabil (unghiul îl potrivești tu)", // nieuw, nalezen
+    'w.kruishout': "graminul (trage o linie de-a lungul marginii)", // nieuw, nalezen
+    'w.passer': "compasul (desenezi un cerc cu el)", // nieuw, nalezen
+    'w.aftekenen': "a trasa (a desena unde vei tăia)", // nieuw, nalezen
+    's.square.1': "Trasează linia cu echerul de tâmplărie.", // nieuw, nalezen
+    's.square.2': "Pune echerul reglabil la unghiul potrivit.", // nieuw, nalezen
+    's.square.3': "Desenează un cerc cu compasul.", // nieuw, nalezen
+    'c.square.q': "Unghiul e drept?", // nieuw, nalezen
+    'c.square.a': "Da, echerul se potrivește exact.", // nieuw, nalezen
+    'c.square': "Trasează de la o margine dreaptă", // nieuw, nalezen
+    'c.square.b': "Înainte să tai sau să dai o gaură, trasezi unde. Folosește un creion ascuțit: o linie groasă nu e exactă. Alege o margine dreaptă a lemnului și măsoară totul de la marginea aceea. Ține partea groasă a echerului strâns lipită de ea și trage linia de-a lungul oțelului. Desenează o cruce mică pe bucata pe care nu o folosești. Apoi tai lângă linie, pe partea cu crucea.", // nieuw, nalezen
+    'c.square.p': "Întâi trasez.", // nieuw, nalezen
+    'c.square.s': "Creionul tău e tocit și face o linie groasă. Vrei să trasezi pe o scândură. Ce faci?", // nieuw, nalezen
+    'c.square.o1': "Întâi ascuți creionul, apoi desenezi.", // nieuw, nalezen
+    'c.square.o2': "Tragi totuși linia, e bine așa.", // nieuw, nalezen
+    'c.square.o3': "Faci semnul cu unghia.", // nieuw, nalezen
+    'c.square.w': "O linie groasă are câțiva milimetri lățime. Atunci nu știi unde să tai, iar bucata nu iese exactă.", // nieuw, nalezen
+    'l.screw': "Bormașini și șuruburi", // nieuw, nalezen
+    'w.accuboor': "bormașina cu acumulator", // nieuw, nalezen
+    'w.boormachine': "bormașina (cu cablu)", // nieuw, nalezen
+    'w.bitje': "bitul (vârful de înșurubat)", // nieuw, nalezen
+    'w.plug': "diblul", // nieuw, nalezen
+    'w.schroevendraaier': "șurubelnița", // nieuw, nalezen
+    'w.spijker': "cuiul", // nieuw, nalezen
+    's.screw.1': "Dă o gaură și pune un diblu în ea.", // nieuw, nalezen
+    's.screw.2': "Ce bit merge la șurubul ăsta?", // nieuw, nalezen
+    's.screw.3': "Bate cuiul în lemn.", // nieuw, nalezen
+    'c.screw.q': "Unde e bormașina cu acumulator?", // nieuw, nalezen
+    'c.screw.a': "La încărcător, e aproape plină.", // nieuw, nalezen
+    'c.screw': "Uită-te înainte să dai o gaură", // nieuw, nalezen
+    'c.screw.b': "Înainte să dai o gaură în perete, gândește-te ce e în spatele lui. Țevile și cablurile merg des drept în sus, în jos sau în lateral de la o priză sau un întrerupător. Întreabă unde sunt, sau verifică cu un detector. Alege un burghiu de aceeași mărime ca diblul și dă gaura puțin mai adâncă decât diblul. Folosește bitul potrivit pentru șurub: un bit greșit alunecă și strică capul șurubului. Poartă ochelari de protecție când dai găuri.", // nieuw, nalezen
+    'c.screw.p': "Pot să dau o gaură aici?", // nieuw, nalezen
+    'c.screw.s': "Trebuie să dai o gaură chiar deasupra unei prize. Ce faci?", // nieuw, nalezen
+    'c.screw.o1': "Întrebi întâi pe unde trece cablul.", // nieuw, nalezen
+    'c.screw.o2': "Dai gaura: nu e niciodată un cablu acolo.", // nieuw, nalezen
+    'c.screw.o3': "Dai gaura încet, atunci e sigur.", // nieuw, nalezen
+    'c.screw.w': "Un cablu merge des drept în sus de la o priză. Să dai gaura în el e periculos, iar reparația e multă muncă.", // nieuw, nalezen
+    'l.fix': "Fixarea", // nieuw, nalezen
+    'w.bevestigen': "a fixa (a prinde bine ceva de perete)", // nieuw, nalezen
+    'w.vastzetten': "a strânge (rotești până e strâns)", // nieuw, nalezen
+    'w.lijmen': "a lipi (cu adeziv)", // nieuw, nalezen
+    'w.inbussleutel': "cheia imbus (cheie hexagonală)", // nieuw, nalezen
+    'w.kruisschroevendraaier': "șurubelnița în cruce (vârf în formă de cruce)", // nieuw, nalezen
+    'w.platteschroevendraaier': "șurubelnița dreaptă (cu vârf plat)", // nieuw, nalezen
+    's.fix.1': "Fixează raftul pe perete.", // nieuw, nalezen
+    's.fix.2': "Strânge bolțul cu cheia imbus.", // nieuw, nalezen
+    's.fix.3': "Ia șurubelnița dreaptă, nu pe cea în cruce.", // nieuw, nalezen
+    'c.fix.q': "Cum fixez raftul ăsta?", // nieuw, nalezen
+    'c.fix.a': "Cu două dibluri și două șuruburi.", // nieuw, nalezen
+    'c.fix': "Strâns, dar nu prea strâns", // nieuw, nalezen
+    'c.fix.b': "Un șurub sau un bolț trebuie să fie strâns, dar nu prea strâns. Dacă strângi prea tare, se strică filetul sau crapă lemnul. Rotește până nu se mai mișcă, apoi oprește-te. La bormașina cu acumulator, rotește întâi inelul cu numere la un număr mic. Un raft pe perete are nevoie de dibluri potrivite pentru perete: piatra are nevoie de alte dibluri decât un perete subțire din plăci. Adezivul are nevoie de timp: presează piesele una pe alta, ține-le cu o clemă și așteaptă până se usucă adezivul.", // nieuw, nalezen
+    'c.fix.p': "E bine fixat raftul?", // nieuw, nalezen
+    'c.fix.s': "Ai lipit două bucăți de lemn. Colegul tău vrea să le folosească imediat. Ce faci?", // nieuw, nalezen
+    'c.fix.o1': "Spui: întâi trebuie să se usuce adezivul.", // nieuw, nalezen
+    'c.fix.o2': "Îl lași să le folosească: adezivul e rapid.", // nieuw, nalezen
+    'c.fix.o3': "Le ții un minut în mâini.", // nieuw, nalezen
+    'c.fix.w': "Adezivul ud încă nu ține. Dacă le folosești prea devreme, piesele se desprind din nou. Atunci trebuie să începi din nou.", // nieuw, nalezen
+    'l.atmachine': "La mașină", // nieuw, nalezen
+    'w.bedieningspaneel': "panoul de comandă (butoanele și ecranul unei mașini)", // nieuw, nalezen
+    'w.startknop': "butonul de pornire (verde)", // nieuw, nalezen
+    'w.hendel': "maneta", // nieuw, nalezen
+    'w.afscherming': "apărătoarea de protecție (un capac peste piesele care se mișcă)", // nieuw, nalezen
+    'w.sensor': "senzorul (vede dacă e ceva acolo)", // nieuw, nalezen
+    'w.signaallamp': "lampa de semnalizare (lumini colorate deasupra unei mașini)", // nieuw, nalezen
+    's.atmachine.1': "Apasă butonul verde de pornire.", // nieuw, nalezen
+    's.atmachine.2': "Lampa de semnalizare e roșie. E o defecțiune.", // nieuw, nalezen
+    's.atmachine.3': "Nu scoate niciodată apărătoarea de protecție.", // nieuw, nalezen
+    'c.atmachine.q': "De ce se tot oprește mașina?", // nieuw, nalezen
+    'c.atmachine.a': "Senzorul nu vede bine cutia.", // nieuw, nalezen
+    'c.atmachine': "Apărătoarea rămâne pe loc", // nieuw, nalezen
+    'c.atmachine.b': "Piesele care se mișcă la o mașină pot trage înăuntru o mână, o mânecă sau părul în mai puțin de o secundă. Pentru asta e apărătoarea. Nu o scoate niciodată și nu băga niciodată mâna în spatele ei cât timp mașina merge. O apărătoare sau un senzor nu funcționează? Atunci mașina nu e sigură: oprește-o și spune-i șefului de echipă. S-a blocat ceva? Întâi oprește mașina și asigură-te că nimeni nu o poate porni cât lucrezi. Cum se face asta diferă de la o firmă la alta: cere explicații înainte să începi. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.atmachine.p': "Apărătoarea de protecție e stricată.", // nieuw, nalezen
+    'c.atmachine.s': "O cutie s-a blocat în mașină, chiar în spatele apărătoarei. Mașina merge. Ce faci?", // nieuw, nalezen
+    'c.atmachine.o1': "Întâi oprești mașina, apoi chemi ajutor.", // nieuw, nalezen
+    'c.atmachine.o2': "Bagi repede mâna și scoți cutia.", // nieuw, nalezen
+    'c.atmachine.o3': "Deschizi apărătoarea cât timp mașina merge.", // nieuw, nalezen
+    'c.atmachine.w': "O mașină care merge îți poate trage mâna înainte să apuci să reacționezi. Să o oprești durează o clipă; o mână rănită se vindecă în luni.", // nieuw, nalezen
+    'l.inspect': "Măsurare și verificare", // nieuw, nalezen
+    'w.weegschaal': "cântarul", // nieuw, nalezen
+    'w.meetklok': "comparatorul (măsoară diferențe foarte mici)", // nieuw, nalezen
+    'w.loep': "lupa", // nieuw, nalezen
+    'w.monster': "proba (un produs pe care îl scoți ca să-l verifici)", // nieuw, nalezen
+    'w.afkeurbak': "lada de rebuturi (pentru produsele care nu sunt bune)", // nieuw, nalezen
+    'w.teller': "contorul (numără produsele)", // nieuw, nalezen
+    's.inspect.1': "Pune produsul pe cântar.", // nieuw, nalezen
+    's.inspect.2': "Produsul ăsta e deteriorat. Merge în lada de rebuturi.", // nieuw, nalezen
+    's.inspect.3': "Mă uit la etichetă cu lupa.", // nieuw, nalezen
+    'c.inspect.q': "Cât de des iau o probă?", // nieuw, nalezen
+    'c.inspect.a': "Una în fiecare oră. Scrie-o pe listă.", // nieuw, nalezen
+    'c.inspect': "Notează ce verifici", // nieuw, nalezen
+    'c.inspect.b': "Într-o fabrică verifici produsele în timpul lucrului: le cântărești, le măsori sau te uiți atent la ele. Notează imediat fiecare verificare pe listă, cu ora. Nu mai târziu, din memorie. Un produs nu e bun? Pune-l în lada de rebuturi și uită-te atent la următoarele. Mai multe produse sunt greșite? Atunci e ceva în neregulă cu mașina. Spune-i imediat șefului de echipă. O problemă găsită devreme salvează multe produse. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.inspect.p': "Mai multe produse sunt greșite.", // nieuw, nalezen
+    'c.inspect.s': "Cântarul arată că trei produse la rând sunt prea ușoare. Ce faci?", // nieuw, nalezen
+    'c.inspect.o1': "Îi spui imediat șefului de echipă.", // nieuw, nalezen
+    'c.inspect.o2': "Le pui înapoi pe bandă.", // nieuw, nalezen
+    'c.inspect.o3': "Nu spui nimic: se mai întâmplă.", // nieuw, nalezen
+    'c.inspect.w': "Trei produse greșite la rând arată o problemă la mașină. Cu cât spui mai repede, cu atât se pierd mai puține produse.", // nieuw, nalezen
+    'l.packing': "Ambalarea", // nieuw, nalezen
+    'w.verpakking': "ambalajul", // nieuw, nalezen
+    'w.krimpfolie': "folia termocontractabilă (folie de plastic care se strânge la căldură)", // nieuw, nalezen
+    'w.sealmachine': "mașina de sigilat (închide un pachet cu căldură)", // nieuw, nalezen
+    'w.vulmateriaal': "materialul de umplutură (perne de aer sau hârtie într-o cutie)", // nieuw, nalezen
+    'w.afbreekmes': "cutterul (cuțit cu lamă care se rupe)", // nieuw, nalezen
+    'w.tapepistool': "dispenserul de bandă adezivă", // nieuw, nalezen
+    's.packing.1': "Pune material de umplutură în cutie.", // nieuw, nalezen
+    's.packing.2': "Închide cutia cu dispenserul de bandă.", // nieuw, nalezen
+    's.packing.3': "Mașina de sigilat e fierbinte. Atenție!", // nieuw, nalezen
+    'c.packing.q': "Câte produse intră într-o cutie?", // nieuw, nalezen
+    'c.packing.a': "Douăsprezece. Scrie pe listă.", // nieuw, nalezen
+    'c.packing': "Taie în direcția opusă corpului", // nieuw, nalezen
+    'c.packing.b': "Ambalarea e o muncă rapidă, iar cutterul e foarte ascuțit. Taie mereu în direcția opusă corpului și celeilalte mâini. Bagă lama înapoi după fiecare tăietură, și când lași cutterul jos pentru o clipă. Rupe cu grijă o bucată tocită de lamă și arunc-o în cutia pentru lame vechi, nu în coșul de gunoi obișnuit. Mașina de sigilat și pistolul cu aer cald pentru folia termocontractabilă se încing foarte tare: nu atinge părțile fierbinți. Și verifică fiecare cutie: produsul potrivit, numărul potrivit și eticheta dreaptă. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.packing.p': "Întâi bag lama înapoi.", // nieuw, nalezen
+    'c.packing.s': "Pui cutterul pe masă pentru o clipă. Lama e încă afară. Ce faci?", // nieuw, nalezen
+    'c.packing.o1': "Întâi bagi lama înapoi.", // nieuw, nalezen
+    'c.packing.o2': "Îl lași așa: îți trebuie din nou imediat.", // nieuw, nalezen
+    'c.packing.o3': "Îl pui așa în buzunar.", // nieuw, nalezen
+    'c.packing.w': "O lamă deschisă pe masă sau în buzunar te poate tăia pe tine sau pe un coleg. Să o bagi înapoi durează o secundă.", // nieuw, nalezen
+    'l.upkeep': "Întreținerea", // nieuw, nalezen
+    'w.persluchtpistool': "pistolul de aer comprimat", // nieuw, nalezen
+    'w.steeksleutel': "cheia fixă", // nieuw, nalezen
+    'w.oliekannetje': "oliera", // nieuw, nalezen
+    'w.smeerpistool': "pompa de gresare (pentru unsoare)", // nieuw, nalezen
+    'w.lekbak': "tava de scurgere (prinde uleiul care curge)", // nieuw, nalezen
+    'w.poetsdoek': "cârpa de curățat", // nieuw, nalezen
+    's.upkeep.1': "Curge ulei. Pune tava de scurgere dedesubt.", // nieuw, nalezen
+    's.upkeep.2': "Șterge uleiul cu o cârpă.", // nieuw, nalezen
+    's.upkeep.3': "Nu îndrepta niciodată pistolul de aer comprimat spre cineva.", // nieuw, nalezen
+    'c.upkeep.q': "Când gresăm mașina?", // nieuw, nalezen
+    'c.upkeep.a': "În fiecare luni, înainte de prima tură.", // nieuw, nalezen
+    'c.upkeep': "O mașină curată își arată problemele", // nieuw, nalezen
+    'c.upkeep.b': "Întreținerea mică face des parte din muncă: șters, uns cu ulei și gresat. Fă asta doar când mașina e oprită și când ai învățat cum. O mașină curată e ușor de verificat: vezi imediat o scurgere sau o piesă slăbită. Uleiul pe jos e alunecos. Pune o tavă de scurgere sub scurgere, șterge podeaua și spune-i șefului de echipă. Aruncă cârpele cu ulei în coșul special. Nu îndrepta niciodată pistolul de aer comprimat spre o persoană și nu-ți curăța niciodată hainele sau pielea cu el. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.upkeep.p': "Mașina pierde ulei.", // nieuw, nalezen
+    'c.upkeep.s': "Vezi o băltoacă mică de ulei sub mașină. Ce faci?", // nieuw, nalezen
+    'c.upkeep.o1': "Pui o tavă de scurgere dedesubt și anunți.", // nieuw, nalezen
+    'c.upkeep.o2': "O lași: e doar puțin.", // nieuw, nalezen
+    'c.upkeep.o3': "Pui niște hârtie peste ea și continui.", // nieuw, nalezen
+    'c.upkeep.w': "O scurgere se mărește, iar uleiul pe jos îi face pe oameni să alunece. Găsită devreme, e o reparație mică.", // nieuw, nalezen
   },
 };
 

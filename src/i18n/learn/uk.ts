@@ -170,6 +170,26 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Питають, чи двері зачинені: «ні», і їх зачиняють зараз.", // nieuw, nalezen
     'c.fillempty.a.why': "Питають, чи він уже повний: «так», і його спорожняють.", // nieuw, nalezen
     'c.order.a.why': "Просять зробити це зараз: «так» і питання, що потім.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Питають, де міксер: місце і що поруч із ним.", // nieuw, nalezen
+    'c.tiling.a.why': "Питають, звідки починати: посередині, на осьовій лінії.", // nieuw, nalezen
+    'c.plaster.a.why': "Питають, чи стіна суха: «ні», і скільки чекати.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "Питають, чи це квадрат: «ні», прямокутник, і чому.", // nieuw, nalezen
+    'c.angles.a.why': "Питають, скільки градусів: число і половина чого це.", // nieuw, nalezen
+    'c.size.a.why': "Питають, яка велика підлога: розрахунок і відповідь.", // nieuw, nalezen
+    'c.paint.a.why': "Питають, яку кисть: широку для стіни, маленьку для кутів.", // nieuw, nalezen
+    'c.prep.a.why': "Питають, чи можна фарбувати: «ні», і що спочатку.", // nieuw, nalezen
+    'c.brick.a.why': "Питають, скільки цеглин залишилося: один піддон, і що цього досить.", // nieuw, nalezen
+    'c.wall.a.why': "Питають, якої висоти має бути ряд: де це можна побачити.", // nieuw, nalezen
+    'c.wood.a.why': "Питають, яку пилку: пилку з обушком, і чому.", // nieuw, nalezen
+    'c.square.a.why': "Питають, чи кут прямий: «так», і звідки це відомо.", // nieuw, nalezen
+    'c.screw.a.why': "Питають, де дриль: місце, і що він майже заряджений.", // nieuw, nalezen
+    'c.fix.a.why': "Питають, як закріпити полицю: чим і скільки.", // nieuw, nalezen
+    'c.atmachine.a.why': "Питають, чому машина зупиняється: датчик, і що він не бачить.", // nieuw, nalezen
+    'c.inspect.a.why': "Питають, як часто: раз на годину, і де це записати.", // nieuw, nalezen
+    'c.packing.a.why': "Питають, скільки в коробку: число, і де це написано.", // nieuw, nalezen
+    'c.upkeep.a.why': "Питають, коли: день тижня і момент того дня.", // nieuw, nalezen
   },
 };
 

@@ -121,6 +121,14 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Я можу сказати, що клієнта немає вдома.", // nieuw, nalezen
     'kjn.u.delivery.2': "Я можу попросити сусідів узяти посилку.", // nieuw, nalezen
     'kjn.u.delivery.3': "Я можу запитати, хто визначає мій маршрут і мій час.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Я можу попросити зубчастий шпатель або кельму.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Я можу запитати, звідки мені починати класти плитку.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Я можу сказати, що стіна ще не суха.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "Я можу попросити ножівку або акумуляторний дриль.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Я можу запитати, як закріпити дошку.", // nieuw, nalezen
+    'kjn.u.machines.1': "Я можу сказати, що захисний кожух зламаний.", // nieuw, nalezen
+    'kjn.u.machines.2': "Я можу запитати, як часто брати зразок.", // nieuw, nalezen
   },
 };
 

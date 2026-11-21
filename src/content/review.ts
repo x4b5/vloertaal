@@ -65,6 +65,12 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.online': ['u.ai', 'u.money'],
   // Vervoer en bezorging (5 November 2026): the warehouse (the scanner, the boxes) and safety (the road).
   'u.delivery': ['u.warehouse', 'u.safety'],
+  // Tegels, stuc en verf (20 November 2026): the building site (measuring, the spirit level) and safety.
+  'u.afbouw': ['u.build', 'u.safety'],
+  // Metselen, hout en vastmaken (20 November 2026): the building site and the finishing work.
+  'u.ruwbouw': ['u.build', 'u.afbouw'],
+  // Machines en gereedschap (21 November 2026): the factory (the line, quality) and safety.
+  'u.machines': ['u.factory', 'u.safety'],
 };
 
 /**
@@ -95,6 +101,12 @@ const relatedWords: Record<string, string[]> = {
   'u.shop': ['w.rekening', 'w.doos'],
   'u.numbers': ['w.pauze', 'w.uurloon'],
   'u.delivery': ['w.scanner', 'w.ongeluk'],
+  // Tegels, stuc en verf: the spirit level of "Meten" (the tiler checks every row with it) and the helmet.
+  'u.afbouw': ['w.waterpas', 'w.helm'],
+  // Metselen, hout en vastmaken: the spirit level (a straight wall) and the tiler's folding ruler.
+  'u.ruwbouw': ['w.waterpas', 'w.duimstok'],
+  // Machines en gereedschap: the machine and the emergency stop of "De band en machines".
+  'u.machines': ['w.machine', 'w.noodstop'],
   // Goed communiceren: angry (l.speakup) and slowly (l.understand), what the lessons are about.
   'u.communicate': ['w.boos', 'w.langzaam'],
   // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).

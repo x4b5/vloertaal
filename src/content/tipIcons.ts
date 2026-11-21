@@ -33,6 +33,30 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🌟': 'w.compliment',
   '🦹': 'w.oplichter',
   '🚚': 'w.bestelbus',
+  // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): the comb of the notched trowel (c.tiletools:
+  // clean it before the glue is hard), the plus of the tile spacer (c.tiling) and the flat steel
+  // plate of the plastering trowel, with its lump of plaster (c.plaster: plaster needs time to dry).
+  '🪮': 'w.lijmkam',
+  '➕': 'w.tegelkruisje',
+  '🔳': 'w.stucspaan',
+  // The next lessons of 20 November 2026 (l.paint, l.prep, u.ruwbouw and the shapes of u.numbers):
+  // each tip shows a word of its own lesson.
+  '🖌': 'w.kwast',
+  '🧻': 'w.schuurpapier',
+  '🧱': 'w.baksteen',
+  '🧵': 'w.metseltouw',
+  '🪚': 'w.handzaag',
+  '✏': 'w.aftekenen',
+  '🪛': 'w.schroevendraaier',
+  '🔩': 'w.vastzetten',
+  '⬜': 'w.vierkant',
+  '🔺': 'w.geodriehoek',
+  '🏁': 'w.oppervlakte',
+  // Machines en gereedschap (u.machines, 21 November 2026): each tip shows a word of its own lesson.
+  '🚧': 'w.afscherming',
+  '🔬': 'w.loep',
+  '🎁': 'w.verpakking',
+  '💧': 'w.lekbak',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

@@ -968,9 +968,11 @@ export function buildRuleLesson(lesson: Lesson, opts: { seed?: number; review?: 
 // front 21 (was 20) since 5 November 2026: two topics more (Vervoer en bezorging, Ziekte), so the
 // second half of the path starts one topic later. front 22 since "Goed communiceren" and "Feedback
 // en overleg" (also 5 November 2026): two topics more early on the path. front 23 since
-// "Instructies" (14 November 2026): one topic more. The early steps (4, 7, 10) count topics done,
+// "Instructies" (14 November 2026): one topic more. front 24 and buildAll 25 since "Metselen,
+// hout en vastmaken" (20 November 2026): one topic more, and buildAll stays one step after front;
+// front 25 and buildAll 26 since "Machines en gereedschap" (21 November 2026), the same way. The early steps (4, 7, 10) count topics done,
 // so they stay: a learner has still had that many topics before each step.
-export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10, front: 23, buildAll: 24 } as const;
+export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10, front: 25, buildAll: 26 } as const;
 
 /** A line of a lesson that can be built: its sentences and the lines of its chats. */
 function linesOf(lesson: Lesson): Sentence[] {

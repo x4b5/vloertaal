@@ -1954,10 +1954,315 @@ const sectorFourTips = [
   ),
 ];
 
+// ---- Tiles, plaster and paint (u.afbouw, the owner's request, 20 November 2026) ----
+// One tip per lesson, in the order of the unit's lessons in ./work.ts (afbouwLessons): the tips of
+// the next lessons are added at the end. None of them states a right, a law or an amount: they are
+// about how the work is done (NONE), or about rules that differ per company or site (HOUSE_LINE).
+// The short situations are in tests/situationLength.test.ts.
+
+const afbouwTips = [
+  // Where the dirty water may go differs per site: HOUSE_LINE.
+  tipFor(
+    'tiletools',
+    '🪮',
+    'Clean your tools before the glue is hard',
+    'Tile glue and plaster get hard fast, also on your tools. So clean the notched trowel, the trowel and the mixer in a bucket of water right away, also before your break. Hard glue does not come off, and a notched trowel with hard glue makes bad ridges. Do not pour the dirty water into a sink or a drain: it gets blocked. Ask where the water may go. The mixer: hold it with two hands, and start it slowly.',
+    ['Ik maak de lijmkam even schoon.', 'I am just cleaning the notched trowel.'],
+    'It is time for your break. Your notched trowel is full of wet glue. What do you do?',
+    [
+      'Clean it in water, then take your break.',
+      'Leave it: you clean it after work.',
+      'Put it in the bucket of glue.',
+    ],
+    'Tile glue gets hard in your break too. A clean notched trowel makes good ridges, and the tiles stick well. Hard glue on it is a lot of work, or a new tool.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'tiling',
+    '➕',
+    'Start at the centre line, with a little glue',
+    'A tiler does not start in a corner. You draw the centre line first, with a pencil and the spirit level, and you start there. Then the cut tiles at both ends are the same size. Spread only as much glue as you can cover with tiles in a short time. Glue that stands too long gets a dry skin, and then the tiles do not stick well. Put a spacer at every crossing, so all the joints are the same. Check often with the spirit level: a crooked tile is easy to fix now, and hard to fix tomorrow.',
+    ['Ik smeer niet te veel lijm tegelijk.', 'I do not spread too much glue at once.'],
+    'After a long phone call, the glue on the wall has a dry skin. What do you do?',
+    [
+      'Scrape it off, and spread fresh glue.',
+      'Press the tiles into it anyway.',
+      'Make it wet with a sponge, and go on.',
+    ],
+    'Glue with a dry skin does not hold a tile well. Later the tile can come loose, and then the work must be done again.',
+    NONE,
+  ),
+  tipFor(
+    'plaster',
+    '🔳',
+    'Plaster needs time to dry',
+    'Fresh plaster stays wet for a long time. A wet wall is darker than a dry one. The painter can only start when the wall is dry everywhere, and that can take days or weeks. Do not dry it faster with a heater: then the plaster can crack. Does someone want to paint too early? Say that the wall is not dry yet. And before you start, cover the floor, the windows and the sockets: plaster is hard to get off.',
+    ['De muur is nog nat. Je kunt nog niet verven.', 'The wall is still wet. You cannot paint yet.'],
+    'The painter wants to start tomorrow. The new plaster still has dark spots. What do you do?',
+    [
+      'Tell the painter: the wall is not dry yet.',
+      'Put a heater in front of it tonight.',
+      'Say nothing: the painter will see it.',
+    ],
+    'Dark spots mean that the plaster is still wet. Paint on a wet wall can come loose, and a heater can make cracks. Waiting costs less than doing it again.',
+    NONE,
+  ),
+];
+
+// ---- Painting, bricks, wood, fixing and shapes (the owner's request, 20 November 2026) ----
+// One tip per new lesson: l.paint and l.prep (u.afbouw), the six lessons of u.ruwbouw and l.shapes,
+// l.angles and l.size (u.numbers). The list is sorted into course order below. None of them states
+// a right, a law or an amount: they are about how the work is done (NONE), or about rules that
+// differ per company (HOUSE_LINE). The short situations are in tests/situationLength.test.ts.
+
+const bouwMoreTips = [
+  tipFor(
+    'paint',
+    '🖌️',
+    'Stir well, and paint from the top down',
+    'Paint that stood still for a while is thick at the bottom of the tin. So stir it well first, with a stirring stick, until the colour is the same everywhere. Do not paint from the big tin: put a little paint in the paint kettle, and close the tin again. Then the paint stays good. Paint from the top down, so drips land on wet paint and you can still brush them away. Use the wide brush for the wall and the small brush for the corners. At the end, clean the brushes right away.',
+    ['Ik roer de verf eerst goed om.', 'I stir the paint well first.'],
+    'You open an old tin of paint. On top it is thin, at the bottom thick. What do you do?',
+    [
+      'Stir it well first, with the stick.',
+      'Paint with the thin paint on top.',
+      'Add water until it is thin everywhere.',
+    ],
+    'Part of the colour sits at the bottom of the tin. Without stirring, the wall gets spots and stripes.',
+    NONE,
+  ),
+  // Which dust mask, and where the dust goes, differ per company: HOUSE_LINE.
+  tipFor(
+    'prep',
+    '🧻',
+    'Good paint work starts before the paint',
+    'Paint does not stick well on dirt, dust or loose old paint. So first scrape the loose paint off with the paint scraper. Fill holes with filler and the putty knife, and let the filler dry. Then sand it smooth. After sanding, sweep the dust away with the small brush, also from the edges. Last, mask off what must stay clean, like windows and sockets. Sanding makes fine dust: wear a dust mask, and ask which one.',
+    ['Eerst schuren, dan verven.', 'First sand, then paint.'],
+    'You sanded the door. There is still dust on it. Your colleague wants to paint now. What do you do?',
+    [
+      'Sweep the dust off first, with the brush.',
+      'Let them paint: the paint covers the dust.',
+      'Wipe the dust off with your hand.',
+    ],
+    'Paint on dust does not stick well. Later it comes off in flakes, and then all the work must be done again.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'brick',
+    '🧱',
+    'Keep the wall clean while you work',
+    'Mortar is wet when you lay the bricks, and it gets hard in a few hours. So work clean. Scrape the mortar that comes out of the joint off with the trowel right away. Smooth the joints with the jointer when the mortar is a little stiff, not when it is still wet. Then brush the wall with the hand brush. Hard mortar on the front of a brick is very hard to get off. At the end of the day, cover the top of the wall, so rain does not wash the mortar out.',
+    ['Ik maak de voegen glad.', 'I smooth the joints.'],
+    'At the end of the day there is mortar on the front of the bricks. What do you do?',
+    [
+      'Brush it off now, before it is hard.',
+      'Leave it: you clean it next week.',
+      'Wash the wall with a lot of water.',
+    ],
+    'Fresh mortar comes off easily with a brush. Hard mortar stays on the brick, and then the wall does not look good.',
+    NONE,
+  ),
+  tipFor(
+    'wall',
+    '🧵',
+    'The line keeps the wall straight',
+    'A bricklayer does not build by eye. First the corner profiles stand straight at both ends of the wall. Between them you pull the brick line tight, at the height of the next row. Lay every brick along the line, but do not push the line away. The gauge rod shows how high each row must be. Check often with the spirit level. A crooked brick is easy to fix while the mortar is wet, and very hard to fix tomorrow.',
+    ['Is het metseltouw strak?', 'Is the brick line tight?'],
+    'The brick line is loose and hangs a little in the middle. What do you do?',
+    [
+      'Pull it tight first, then go on.',
+      'Lay the bricks under it anyway.',
+      'Lay the bricks by eye.',
+    ],
+    'A loose line hangs in the middle, so the row hangs too. A tight line gives a straight row.',
+    NONE,
+  ),
+  tipFor(
+    // Not "Measure twice, saw once": that is the title of c.measure (l.measure), and a tip's
+    // title gives its page address on the site (src/lib/tipPages.ts tipSlug).
+    'wood',
+    '🪚',
+    'Too short cannot be fixed',
+    'Wood that is sawn too short cannot be made long again. So measure twice, and draw the line before you saw. Saw next to the line, on the side of the piece you do not need. Hold the wood still: on a workbench or with a clamp, not on your knee. Let the saw do the work, with long, calm strokes. Push a chisel away from your body and your other hand. And keep the chisel and the plane sharp: a blunt tool slips more easily.',
+    ['Ik meet het nog een keer.', 'I measure it one more time.'],
+    'You must saw a plank to size. You measured it once, quickly. What do you do?',
+    [
+      'Measure again, then draw the line.',
+      'Saw it now: it is probably right.',
+      'Saw it by eye, without a line.',
+    ],
+    'Too long you can saw again, too short you cannot fix. Measuring again takes a minute; a new plank takes much more.',
+    NONE,
+  ),
+  tipFor(
+    'square',
+    '✏️',
+    'Mark from one straight edge',
+    'Before you saw or drill, you mark out where. Use a sharp pencil: a thick line is not exact. Choose one straight edge of the wood, and measure everything from that edge. Hold the thick part of the try square tight against it, and draw the line along the steel. Draw a small cross on the piece you will not use. Then you saw next to the line, on the side of the cross.',
+    ['Ik teken het eerst af.', 'I mark it out first.'],
+    'Your pencil is blunt and makes a thick line. You want to mark a plank. What do you do?',
+    [
+      'Sharpen the pencil first, then draw.',
+      'Draw the line anyway, it is fine.',
+      'Mark it with your fingernail.',
+    ],
+    'A thick line is a few millimetres wide. Then you do not know where to saw, and the piece is not exact.',
+    NONE,
+  ),
+  tipFor(
+    'screw',
+    '🪛',
+    'Look before you drill',
+    'Before you drill in a wall, think about what is behind it. Pipes and cables often run straight up, down or across from a socket or a switch. Ask where they are, or check with a detector. Choose a drill the same size as the wall plug, and drill the hole a little deeper than the plug. Use the right bit for the screw: a wrong bit slips and ruins the head of the screw. Wear safety glasses when you drill.',
+    ['Mag ik hier boren?', 'May I drill here?'],
+    'You must drill a hole right above a socket. What do you do?',
+    [
+      'Ask first where the cable runs.',
+      'Drill: there is never a cable.',
+      'Drill slowly, then it is safe.',
+    ],
+    'A cable often runs straight up from a socket. Drilling into it is dangerous, and the repair is a lot of work.',
+    NONE,
+  ),
+  tipFor(
+    'fix',
+    '🔩',
+    'Tight, but not too tight',
+    'A screw or a bolt must be tight, but not too tight. Turn too hard, and the thread breaks or the wood splits. Turn until it does not move any more, then stop. On a cordless drill, first turn the ring with the numbers to a low number. A shelf on the wall needs plugs that fit the wall: stone needs other plugs than a thin board wall. Glue needs time: press the parts together, hold them with a clamp, and wait until the glue is dry.',
+    ['Zit de plank goed vast?', 'Is the shelf fixed well?'],
+    'You glued two pieces of wood. Your colleague wants to use it right away. What do you do?',
+    [
+      'Say: the glue must dry first.',
+      'Let them use it: glue is fast.',
+      'Hold it in your hands for a minute.',
+    ],
+    'Wet glue does not hold yet. Use it too early, and the parts come loose again. Then you must start again.',
+    NONE,
+  ),
+  tipFor(
+    'shapes',
+    '⬜',
+    'Check a rectangle with two lines across',
+    'A room, a floor or a frame is often a rectangle. But are the corners really square? There is an easy check. Measure from one corner to the corner across. Then measure between the other two corners. Are the two lengths the same? Then the corners are right. Not the same? Then the shape leans a little, and tiles or a floor will not fit well. Tell your supervisor before you start.',
+    ['Deze twee maten zijn niet gelijk.', 'These two measurements are not the same.'],
+    'You measure a floor from corner to corner, both ways. One is longer. What do you do?',
+    [
+      'Tell your supervisor before you start.',
+      'Start in a corner, it will be fine.',
+      'Measure only one side again.',
+    ],
+    'Two different lengths mean the corners are not square. Then tiles or planks do not fit. It is better to know that before you start.',
+    NONE,
+  ),
+  tipFor(
+    'angles',
+    '🔺',
+    'Check a big corner with 3, 4 and 5',
+    'On a building site you often check a right angle: a wall on a floor, a corner of a room. A small corner you check with a try square or a set square. For a big corner there is an old trick. Measure 3 metres along one side and 4 metres along the other side, and make a mark at both. Is it exactly 5 metres from mark to mark? Then the angle is 90 degrees. Smaller works too: 30, 40 and 50 centimetres.',
+    ['Deze hoek is niet recht.', 'This angle is not square.'],
+    'You must check a big corner of a new wall. Your square is much too small. What do you do?',
+    [
+      'Measure 3, 4 and 5 metres.',
+      'Look at it from far away.',
+      'Use the small square anyway.',
+    ],
+    'With 3, 4 and 5 you can check a big corner exactly, with only a tape measure. By eye, a corner can look right and still be wrong.',
+    NONE,
+  ),
+  tipFor(
+    'size',
+    '🏁',
+    'Work out what you need, then add a little',
+    'How many tiles, how much paint, how much sand? You work it out with the area or the volume. Area: the length times the width, in square metres. Volume: the length times the width times the height, in cubic metres. Measure everything in the same unit: all in metres, or all in centimetres. Write the measurements down, do not keep them in your head. Then add a little extra, for the cut pieces and for mistakes. Not sure? Ask a colleague to check your sum.',
+    ['Ik schrijf de maten op.', 'I write down the measurements.'],
+    'You measured the floor. You must order the tiles today. What do you do?',
+    [
+      'Work out the area, and add a little.',
+      'Order the area, not one tile more.',
+      'Guess: you have seen the floor.',
+    ],
+    'You always cut some tiles, and some break. With a little extra, you do not have to stop halfway and order again.',
+    NONE,
+  ),
+];
+
+// ---- Machines and tools (u.machines, the owner's request, 21 November 2026) ----
+// One tip per lesson of the second own unit of Productie (./work.ts machinesUnit). None of them
+// states a right, a law or an amount: they are about how the work is done (NONE), or about rules
+// that differ per company (HOUSE_LINE: how a machine is locked, which list, which bin). The short
+// situations are in tests/situationLength.test.ts.
+
+const machinesTips = [
+  // How a machine is made safe before you reach in (lockout) differs per company: HOUSE_LINE.
+  tipFor(
+    'atmachine',
+    '🚧',
+    'The guard stays on',
+    'The moving parts of a machine can pull in a hand, a sleeve or hair in less than a second. The guard is there for that. Never take it away, and never reach behind it while the machine runs. Does a guard or a sensor not work? Then the machine is not safe: stop it and tell your team leader. Is something stuck? First stop the machine, and make sure nobody can start it while you work. How that is done differs per company: ask for the explanation before you start.',
+    ['De afscherming is kapot.', 'The machine guard is broken.'],
+    'A box is stuck in the machine, right behind the guard. The machine runs. What do you do?',
+    [
+      'Stop the machine first, then get help.',
+      'Reach in quickly and pull the box out.',
+      'Open the guard while it runs.',
+    ],
+    'A running machine can pull your hand in before you can react. Stopping it takes a moment; a hurt hand takes months.',
+    HOUSE_LINE,
+  ),
+  // Which list and how often you check differ per company: HOUSE_LINE.
+  tipFor(
+    'inspect',
+    '🔬',
+    'Write down what you check',
+    'In a factory you check the products during the work: you weigh them, you measure them, or you look at them closely. Write every check on the list right away, with the time. Not later, from memory. Is one product not right? Put it in the reject bin and look carefully at the next ones. Are more products wrong? Then something is wrong with the machine. Tell your team leader right away. A problem that is found early saves a lot of products.',
+    ['Er zijn meer producten fout.', 'More products are wrong.'],
+    'The scales show that three products in a row are too light. What do you do?',
+    [
+      'Tell your team leader right away.',
+      'Put them back on the line.',
+      'Say nothing: it happens.',
+    ],
+    'Three wrong products in a row point to a problem in the machine. The sooner you tell, the fewer products go to waste.',
+    HOUSE_LINE,
+  ),
+  // Where the old blades go differs per company: HOUSE_LINE.
+  tipFor(
+    'packing',
+    '🎁',
+    'Cut away from your body',
+    'Packing is fast work, and a snap-off knife is very sharp. Always cut away from your body and away from your other hand. Push the blade back in after every cut, also when you put the knife down for a moment. Snap off a blunt piece carefully, and throw it in the box for old blades, not in the normal bin. The sealing machine and the heat gun for shrink wrap get very hot: do not touch the hot parts. And check every box: the right product, the right number, and the label straight.',
+    ['Ik schuif het mes eerst terug.', 'I push the knife back in first.'],
+    'You put the snap-off knife on the table for a moment. The blade is still out. What do you do?',
+    [
+      'Push the blade back in first.',
+      'Leave it: you need it again soon.',
+      'Put it in your pocket like this.',
+    ],
+    'An open blade on a table or in a pocket can cut you or a colleague. Pushing it back takes one second.',
+    HOUSE_LINE,
+  ),
+  // Who may do which maintenance, and where oily rags go, differ per company: HOUSE_LINE.
+  tipFor(
+    'upkeep',
+    '💧',
+    'A clean machine shows its problems',
+    'Small maintenance is often part of the work: wiping, oiling and greasing. Only do it when the machine is off, and when you have learned how. A clean machine is easy to check: you see a leak or a loose part right away. Oil on the floor is slippery. Put a drip tray under a leak, wipe the floor, and tell your team leader. Throw oily rags in the special bin. Never point an air blow gun at a person, and never clean your clothes or skin with it.',
+    ['De machine lekt olie.', 'The machine is leaking oil.'],
+    'You see a small pool of oil under the machine. What do you do?',
+    [
+      'Put a drip tray under it, and report it.',
+      'Leave it: it is only a little.',
+      'Put some paper on it, and go on.',
+    ],
+    'A leak gets bigger, and oil on the floor makes people slip. Found early, it is a small repair.',
+    HOUSE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

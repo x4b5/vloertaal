@@ -169,6 +169,26 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "پرسیدند که دروازه بسته است یا نی: نی، و حالا آن را بسته می‌کند.", // nieuw, nalezen
     'c.fillempty.a.why': "پرسیدند که پر شده یا نی: بلی، و آن را خالی می‌کند.", // nieuw, nalezen
     'c.order.a.why': "خواستند که حالا انجامش بدهد: بلی، و می‌پرسد بعد از آن چه.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "پرسیده‌اند مکسر کجاست: یک جای، و چیزی که نزدیک آن است.", // nieuw, nalezen
+    'c.tiling.a.why': "پرسیده‌اند از کجا شروع کند: در وسط، بالای خط وسط.", // nieuw, nalezen
+    'c.plaster.a.why': "پرسیده‌اند دیوار خشک شده یا نی: نی، و چقدر صبر کند.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "پرسیده‌اند که مربع است یا نی: نی، مستطیل، و چرا.", // nieuw, nalezen
+    'c.angles.a.why': "پرسیده‌اند چند درجه است: عدد، و نیم چه چیز است.", // nieuw, nalezen
+    'c.size.a.why': "پرسیده‌اند فرش چقدر کلان است: حساب، و جواب.", // nieuw, nalezen
+    'c.paint.a.why': "پرسیده‌اند کدام برس: پهن برای دیوار، خورد برای کنج‌ها.", // nieuw, nalezen
+    'c.prep.a.why': "پرسیده‌اند رنگ کرده می‌تواند یا نی: نی، و اول چه کار است.", // nieuw, nalezen
+    'c.brick.a.why': "پرسیده‌اند چند خشت مانده: یک پالت، و اینکه بس است.", // nieuw, nalezen
+    'c.wall.a.why': "پرسیده‌اند ردیف چقدر بلند باشد: جایی که آن را دیده می‌تواند.", // nieuw, nalezen
+    'c.wood.a.why': "پرسیده‌اند کدام اره: ارهٔ پشت‌دار، و چرا.", // nieuw, nalezen
+    'c.square.a.why': "پرسیده‌اند زاویه راست است یا نی: بلی، و از کجا می‌داند.", // nieuw, nalezen
+    'c.screw.a.why': "پرسیده‌اند برمه کجاست: یک جای، و اینکه تقریباً پر است.", // nieuw, nalezen
+    'c.fix.a.why': "پرسیده‌اند رف را چطور محکم کند: با چه چیز، و چند تا.", // nieuw, nalezen
+    'c.atmachine.a.why': "پرسیده‌اند چرا ایستاد می‌شود: سنسور، و چه چیز را نمی‌بیند.", // nieuw, nalezen
+    'c.inspect.a.why': "پرسیده‌اند چند وقت یک بار: ساعتی یک بار، و کجا نوشته کند.", // nieuw, nalezen
+    'c.packing.a.why': "پرسیده‌اند در هر قطی چند تا: عدد، و کجا نوشته است.", // nieuw, nalezen
+    'c.upkeep.a.why': "پرسیده‌اند کی: روز هفته، و وقت آن در همان روز.", // nieuw, nalezen
   },
 };
 

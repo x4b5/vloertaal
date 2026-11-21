@@ -120,6 +120,14 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Ich kann sagen, dass der Kunde nicht zu Hause ist.", // nieuw, nalezen
     'kjn.u.delivery.2': "Ich kann die Nachbarn bitten, ein Paket anzunehmen.", // nieuw, nalezen
     'kjn.u.delivery.3': "Ich kann fragen, wer meine Route und meine Zeiten bestimmt.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Ich kann nach der Zahnkelle oder der Kelle fragen.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Ich kann fragen, wo ich mit den Fliesen anfange.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Ich kann sagen, dass die Wand noch nicht trocken ist.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "Ich kann nach der Handsäge oder dem Akkuschrauber fragen.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Ich kann fragen, wie ich ein Brett befestige.", // nieuw, nalezen
+    'kjn.u.machines.1': "Ich kann sagen, dass die Schutzabdeckung kaputt ist.", // nieuw, nalezen
+    'kjn.u.machines.2': "Ich kann fragen, wie oft ich eine Probe nehme.", // nieuw, nalezen
   },
 };
 

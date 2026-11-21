@@ -22,7 +22,7 @@ describe('sectors', () => {
     expect(main[6].id).toBe('u.build');
     expect(main.filter((u) => u.id === 'u.build')).toHaveLength(1);
     expect(main.some((u) => u.id === 'u.warehouse')).toBe(false);
-    expect(other.map((u) => u.id).sort()).toEqual(['u.care', 'u.clean', 'u.delivery', 'u.factory', 'u.garage', 'u.horeca', 'u.kas', 'u.shop', 'u.tech', 'u.warehouse']);
+    expect(other.map((u) => u.id).sort()).toEqual(['u.care', 'u.clean', 'u.delivery', 'u.factory', 'u.garage', 'u.horeca', 'u.kas', 'u.machines', 'u.shop', 'u.tech', 'u.warehouse']);
     expect(main.length + other.length).toBe(units.length);
     // The basis units keep their course order around it.
     const basis = main.filter((u) => !unitSector(u.id));
@@ -48,7 +48,18 @@ describe('sectors', () => {
     expect(isNextInCourse(build.lessons[0].id, safetyDone, 'full', 'construction')).toBe(true);
     expect(isNextInCourse(after.lessons[0].id, safetyDone, 'full', 'construction')).toBe(false);
     const buildDone = { ...safetyDone, ...Object.fromEntries(build.lessons.map((l) => [l.id, {}])) };
-    expect(isNextInCourse(after.lessons[0].id, buildDone, 'full', 'construction')).toBe(true);
+    // Bouw has a second own unit since 20 November 2026: "Tegels, stuc en verf" comes right after
+    // "Op de bouw"; the unit after the warehouse waits for it too.
+    const afbouw = unit('u.afbouw');
+    expect(isNextInCourse(afbouw.lessons[0].id, buildDone, 'full', 'construction')).toBe(true);
+    expect(isNextInCourse(after.lessons[0].id, buildDone, 'full', 'construction')).toBe(false);
+    const afbouwDone = { ...buildDone, ...Object.fromEntries(afbouw.lessons.map((l) => [l.id, {}])) };
+    // And "Metselen, hout en vastmaken" (the same day) right after that.
+    const ruwbouw = unit('u.ruwbouw');
+    expect(isNextInCourse(ruwbouw.lessons[0].id, afbouwDone, 'full', 'construction')).toBe(true);
+    expect(isNextInCourse(after.lessons[0].id, afbouwDone, 'full', 'construction')).toBe(false);
+    const ruwbouwDone = { ...afbouwDone, ...Object.fromEntries(ruwbouw.lessons.map((l) => [l.id, {}])) };
+    expect(isNextInCourse(after.lessons[0].id, ruwbouwDone, 'full', 'construction')).toBe(true);
     // Without a sector: course order, the warehouse comes after Safety as before.
     expect(isNextInCourse(warehouse.lessons[0].id, safetyDone, 'full')).toBe(true);
     expect(isNextInCourse(build.lessons[0].id, safetyDone, 'full')).toBe(false);

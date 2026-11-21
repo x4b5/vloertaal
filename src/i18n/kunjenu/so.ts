@@ -119,6 +119,14 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Waan sheegi karaa in macmiilku aanu guriga joogin.", // nieuw, nalezen
     'kjn.u.delivery.2': "Waan ka codsan karaa deriska inay baakad ii qaataan.", // nieuw, nalezen
     'kjn.u.delivery.3': "Waan weydiin karaa cidda go'aamisa jidkayga iyo waqtiyadayda.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Waan weydiisan karaa malqaacadda ilkaha leh ama malqaacadda dhismaha.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Waan weydiin karaa meesha aan jaajuurka ka bilaabo.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Waan sheegi karaa in derbigu aanu weli qallalin.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "Waan weydiisan karaa miinshaarka gacanta ama dariilka baytariga.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Waan weydiin karaa sida aan looxa u xiro.", // nieuw, nalezen
+    'kjn.u.machines.1': "Waan sheegi karaa in daboolka ilaalintu jaban yahay.", // nieuw, nalezen
+    'kjn.u.machines.2': "Waan weydiin karaa intee jeer ayaan muunad qaataa.", // nieuw, nalezen
   },
 };
 export default t;

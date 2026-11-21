@@ -169,6 +169,26 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Gefragt, ob die Tür zu ist: Nein, und sie wird jetzt zugemacht.", // nieuw, nalezen
     'c.fillempty.a.why': "Gefragt, ob er voll ist: Ja, und er wird geleert.", // nieuw, nalezen
     'c.order.a.why': "Gebeten, es jetzt zu machen: Ja, und die Frage, was danach kommt.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Gefragt, wo das Rührgerät ist: ein Ort, und was in der Nähe ist.", // nieuw, nalezen
+    'c.tiling.a.why': "Gefragt, wo man anfängt: in der Mitte, auf der Mittellinie.", // nieuw, nalezen
+    'c.plaster.a.why': "Gefragt, ob die Wand trocken ist: Nein, und wie lange man noch warten muss.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "Gefragt, ob es ein Quadrat ist: Nein, ein Rechteck, und warum.", // nieuw, nalezen
+    'c.angles.a.why': "Gefragt, wie viel Grad: die Zahl, und wovon es die Hälfte ist.", // nieuw, nalezen
+    'c.size.a.why': "Gefragt, wie groß der Boden ist: die Rechnung, und das Ergebnis.", // nieuw, nalezen
+    'c.paint.a.why': "Gefragt, welcher Pinsel: breit für die Wand, klein für die Ecken.", // nieuw, nalezen
+    'c.prep.a.why': "Gefragt, ob man streichen darf: Nein, und was zuerst kommt.", // nieuw, nalezen
+    'c.brick.a.why': "Gefragt, wie viele Steine noch da sind: eine Palette, und dass es genug ist.", // nieuw, nalezen
+    'c.wall.a.why': "Gefragt, wie hoch die Reihe sein muss: wo man es sehen kann.", // nieuw, nalezen
+    'c.wood.a.why': "Gefragt, welche Säge: die Rückensäge, und warum.", // nieuw, nalezen
+    'c.square.a.why': "Gefragt, ob der Winkel rechtwinklig ist: Ja, und woran man es sieht.", // nieuw, nalezen
+    'c.screw.a.why': "Gefragt, wo der Akkuschrauber ist: ein Ort, und dass er fast voll ist.", // nieuw, nalezen
+    'c.fix.a.why': "Gefragt, wie man das Regalbrett befestigt: womit, und wie viele.", // nieuw, nalezen
+    'c.atmachine.a.why': "Gefragt, warum sie anhält: der Sensor, und was er nicht sieht.", // nieuw, nalezen
+    'c.inspect.a.why': "Gefragt, wie oft: einmal pro Stunde, und wo man es aufschreibt.", // nieuw, nalezen
+    'c.packing.a.why': "Gefragt, wie viele pro Karton: die Zahl, und wo sie steht.", // nieuw, nalezen
+    'c.upkeep.a.why': "Gefragt, wann: der Wochentag, und der Moment an diesem Tag.", // nieuw, nalezen
   },
 };
 
