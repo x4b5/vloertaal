@@ -188,6 +188,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "On demande tous les combien : une fois par heure, et où le noter.", // nieuw, nalezen
     'c.packing.a.why': "On demande combien par carton : le nombre, et où c’est écrit.", // nieuw, nalezen
     'c.upkeep.a.why': "On demande quand : le jour de la semaine, et le moment dans ce jour.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "On demande quel fil va où : la même couleur avec la même couleur.", // nieuw, nalezen
+    'c.testing.a.why': "On demande si on peut l’ouvrir : non, et qui le fait.", // nieuw, nalezen
+    'c.pipes.a.why': "On demande si ça fuit encore : un peu, et ce qu’on fait pour ça.", // nieuw, nalezen
+    'c.metalwork.a.why': "On demande pourquoi c’est coupant : il y a encore une bavure.", // nieuw, nalezen
   },
 };
 

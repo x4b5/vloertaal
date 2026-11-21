@@ -127,6 +127,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "Waan weydiin karaa sida aan looxa u xiro.", // nieuw, nalezen
     'kjn.u.machines.1': "Waan sheegi karaa in daboolka ilaalintu jaban yahay.", // nieuw, nalezen
     'kjn.u.machines.2': "Waan weydiin karaa intee jeer ayaan muunad qaataa.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "Waan weydiin karaa inaan furi karo sanduuqa fiyuusyada.", // nieuw, nalezen
+    'kjn.u.install.2': "Waan sheegi karaa in isku-xiraha tuubadu daadanayo.", // nieuw, nalezen
   },
 };
 export default t;

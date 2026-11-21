@@ -129,6 +129,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "Я можу запитати, як закріпити дошку.", // nieuw, nalezen
     'kjn.u.machines.1': "Я можу сказати, що захисний кожух зламаний.", // nieuw, nalezen
     'kjn.u.machines.2': "Я можу запитати, як часто брати зразок.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "Я можу запитати, чи можна мені відкрити електрощиток.", // nieuw, nalezen
+    'kjn.u.install.2': "Я можу сказати, що фітинг протікає.", // nieuw, nalezen
   },
 };
 

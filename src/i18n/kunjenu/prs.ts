@@ -129,6 +129,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "می‌توانم بپرسم که یک تخته را چطور محکم کنم.", // nieuw, nalezen
     'kjn.u.machines.1': "می‌توانم بگویم که پوش محافظ ماشین خراب است.", // nieuw, nalezen
     'kjn.u.machines.2': "می‌توانم بپرسم که چند وقت یک بار نمونه بگیرم.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "می‌توانم بپرسم که اجازه دارم جعبهٔ فیوز را باز کنم یا نی.", // nieuw, nalezen
+    'kjn.u.install.2': "می‌توانم بگویم که یک اتصال نل چکه می‌کند.", // nieuw, nalezen
   },
 };
 

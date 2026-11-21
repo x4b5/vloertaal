@@ -128,6 +128,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "Je peux demander comment fixer une planche.", // nieuw, nalezen
     'kjn.u.machines.1': "Je peux dire que le carter de protection est cassé.", // nieuw, nalezen
     'kjn.u.machines.2': "Je peux demander tous les combien je prends un échantillon.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "Je peux demander si j’ai le droit d’ouvrir le tableau électrique.", // nieuw, nalezen
+    'kjn.u.install.2': "Je peux dire qu’un raccord fuit.", // nieuw, nalezen
   },
 };
 

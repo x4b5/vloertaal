@@ -2259,10 +2259,80 @@ const machinesTips = [
   ),
 ];
 
+// ---- Electrics, pipes and metal (u.install, the owner's request, 21 November 2026) ----
+// One tip per lesson of the second own unit of Techniek (./work.ts installUnit). None of them
+// states a right, a law or an amount: they are about how the work is done (NONE), or about rules
+// that differ per company (HOUSE_LINE: who may work on power, and how it is locked). The short
+// situations are in tests/situationLength.test.ts.
+
+const installTips = [
+  tipFor(
+    'wiring',
+    '🟤',
+    'Colours tell what a wire does',
+    'In a building the wires have fixed colours. Brown (sometimes black or grey) brings the power. Blue goes back. Green and yellow is the earth: it protects people, and it is never used for anything else. Connect the same colour to the same colour. Strip only as much as fits in the connector: no bare copper may stick out. Push the wire in, then pull it softly to check that it is fixed. Not sure which wire is which? Stop and ask.',
+    ['Welke kleur is de aarde?', 'Which colour is the earth?'],
+    'You connect a lamp. A piece of copper sticks out of the connector. What do you do?',
+    [
+      'Cut it shorter, and connect again.',
+      'Leave it: the lamp works.',
+      'Put a piece of tape around it.',
+    ],
+    'Bare copper outside the connector can touch something. That can give a shock or a short circuit, also months later.',
+    NONE,
+  ),
+  // Who may work on power, and how a circuit is locked, differ per company: HOUSE_LINE.
+  tipFor(
+    'testing',
+    '🔒',
+    'Off, locked, measured',
+    'Before you work on electrics, take three steps. Switch it off: the right circuit breaker in the fuse box, not only the switch on the wall. Lock it: put your own padlock on it and keep the key with you, so nobody can switch it on again. Measure: check with a voltage tester or a multimeter that there is really no power. Only then you start. Does a breaker trip again and again? Do not keep switching it on: tell your supervisor. Only do electrical work when you have been told that you may.',
+    ['Er staat geen stroom meer op.', 'There is no power on it any more.'],
+    'You switched off the breaker. A colleague says: "Start now, it is off." What do you do?',
+    [
+      'Lock it, and measure first.',
+      'Start: your colleague knows it.',
+      'Touch the wire quickly to check.',
+    ],
+    'Sometimes the wrong breaker is off, or someone switches it on again. A lock and a measurement show that it is really safe.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'pipes',
+    '🚰',
+    'Water off first, and a bucket ready',
+    'Before you open a water pipe, close the stopcock. Then open a tap lower down, so the pipe gets empty. Put a bucket and a cloth under the place where you work. Cut a copper pipe with a pipe cutter, not with a saw: the end stays round and clean. Tighten a fitting firmly, but not too hard. When you are finished, open the water slowly and look for drops. A small leak that you leave becomes water damage.',
+    ['Is het water dicht?', 'Is the water off?'],
+    'You made a new fitting. You open the water. One small drop falls every minute. What do you do?',
+    [
+      'Close the water, and tighten or redo it.',
+      'Leave it: it is only one drop.',
+      'Put a bucket under it and go home.',
+    ],
+    'One drop a minute is many litres a week. The water can damage the floor or the ceiling below.',
+    NONE,
+  ),
+  tipFor(
+    'metalwork',
+    '🗜️',
+    'Clamp it, never hold it',
+    'At the pillar drill, never hold a small part in your hand. The drill can grab it and turn it round very fast. Clamp it in the vice. Tie long hair back, and wear no gloves at a turning drill: it can pull a glove in. Wear safety glasses. After sawing or drilling, metal has a burr: a sharp edge. File it off before you take the part in your hand or pass it on. Sweep metal chips away with a brush, not with your hand.',
+    ['Ik zet het eerst vast.', 'I clamp it first.'],
+    'You must drill a hole in a small piece of metal. The vice is on another bench. What do you do?',
+    [
+      'Get the vice, and clamp the piece.',
+      'Hold it tight with your hand.',
+      'Put on gloves and hold it.',
+    ],
+    'A drill can grab a small part and spin it round. Then it hits your hand. In the vice it stays still.',
+    NONE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

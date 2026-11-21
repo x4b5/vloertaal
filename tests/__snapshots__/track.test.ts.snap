@@ -51,6 +51,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.afbouw",
   "u.ruwbouw",
   "u.machines",
+  "u.install",
 ]
 `;
 
@@ -105,6 +106,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.afbouw",
   "u.ruwbouw",
   "u.machines",
+  "u.install",
 ]
 `;
 
@@ -159,6 +161,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.garage",
   "u.delivery",
   "u.machines",
+  "u.install",
 ]
 `;
 
@@ -213,6 +216,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.afbouw",
   "u.ruwbouw",
   "u.machines",
+  "u.install",
 ]
 `;
 
@@ -267,6 +271,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.afbouw",
   "u.ruwbouw",
   "u.machines",
+  "u.install",
 ]
 `;
 
@@ -321,6 +326,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.afbouw",
   "u.ruwbouw",
   "u.machines",
+  "u.install",
 ]
 `;
 
@@ -375,6 +381,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.afbouw",
   "u.ruwbouw",
   "u.machines",
+  "u.install",
 ]
 `;
 
@@ -429,6 +436,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.afbouw",
   "u.ruwbouw",
   "u.machines",
+  "u.install",
 ]
 `;
 
@@ -483,6 +491,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.delivery",
   "u.afbouw",
   "u.ruwbouw",
+  "u.install",
 ]
 `;
 
@@ -537,6 +546,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.afbouw",
   "u.ruwbouw",
   "u.machines",
+  "u.install",
 ]
 `;
 
@@ -549,6 +559,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.safety",
   "u.emergency",
   "u.tech",
+  "u.install",
   "u.data",
   "u.time",
   "u.sounds",
@@ -645,5 +656,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.afbouw",
   "u.ruwbouw",
   "u.machines",
+  "u.install",
 ]
 `;

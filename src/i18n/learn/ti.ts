@@ -190,6 +190,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "ክንደይ ግዜ ተሓቲቱ: ኣብ ሰዓት ሓደ ግዜ፡ ኣበይ ከም ዝጽሓፍ ድማ።", // nieuw, nalezen
     'c.packing.a.why': "ኣብ ሓደ ሳጹን ክንደይ ተሓቲቱ: እቲ ቁጽሪ፡ ኣበይ ከም ዝተጻሕፈ ድማ።", // nieuw, nalezen
     'c.upkeep.a.why': "መዓስ ተሓቲቱ: መዓልቲ ሰሙን፡ ኣብታ መዓልቲ እቲ ህሞት ድማ።", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "ኣየናይ ሽቦ ናበይ ከም ዝኸይድ ተሓቲቱ: ተመሳሳሊ ሕብሪ ምስ ተመሳሳሊ ሕብሪ።", // nieuw, nalezen
+    'c.testing.a.why': "ክኽፈት ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ መን ከም ዝገብሮ ድማ።", // nieuw, nalezen
+    'c.pipes.a.why': "ገና የፍስስ ድዩ ተሓቲቱ: ቁሩብ፡ እንታይ ከም ዝግበረሉ ድማ።", // nieuw, nalezen
+    'c.metalwork.a.why': "ስለምንታይ በሊሕ ከም ዝኾነ ተሓቲቱ: ገና በሊሕ ተረፍ ኣለዎ።", // nieuw, nalezen
   },
 };
 

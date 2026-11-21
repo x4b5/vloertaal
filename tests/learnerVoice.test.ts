@@ -147,6 +147,11 @@ const PENDING_RECORDING = new Set<string>([
   'Elk uur één. Schrijf het op de lijst.',
   'Twaalf. Dat staat op de lijst.',
   'Elke maandag, voor de eerste dienst.',
+  // "Elektra, leidingen en metaal" (u.install, 21 November 2026):
+  'Bruin bij bruin, blauw bij blauw.',
+  'Nee, dat doet de elektricien.',
+  'Een beetje. Ik draai hem nog wat vaster.',
+  'Er zit nog een braam aan.',
 ]);
 
 

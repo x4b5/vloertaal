@@ -57,6 +57,11 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🔬': 'w.loep',
   '🎁': 'w.verpakking',
   '💧': 'w.lekbak',
+  // Elektra, leidingen en metaal (u.install, 21 November 2026): each tip shows a word of its own lesson.
+  '🟤': 'w.draad',
+  '🔒': 'w.hangslot',
+  '🚰': 'w.afsluiter',
+  '🗜': 'w.bankschroef',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

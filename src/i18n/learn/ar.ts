@@ -190,6 +190,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "السؤال كم مرة: مرة كل ساعة، وأين تُكتب.", // nieuw, nalezen
     'c.packing.a.why': "السؤال كم في الصندوق: العدد، وأين هو مكتوب.", // nieuw, nalezen
     'c.upkeep.a.why': "السؤال متى: يوم الأسبوع، والوقت في ذلك اليوم.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "السؤال أيّ سلك يذهب إلى أين: كل لون مع اللون نفسه.", // nieuw, nalezen
+    'c.testing.a.why': "السؤال هل يُسمح بفتحها: لا، ومن يفعل ذلك.", // nieuw, nalezen
+    'c.pipes.a.why': "السؤال هل ما زالت تسرّب: قليلاً، وما العمل.", // nieuw, nalezen
+    'c.metalwork.a.why': "السؤال لماذا هي حادّة: ما زالت عليها زائدة حادّة.", // nieuw, nalezen
   },
 };
 

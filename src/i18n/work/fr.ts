@@ -2651,6 +2651,88 @@ const t: CultureTranslation = {
     'c.upkeep.o2': "Tu laisses : c’est juste un peu.", // nieuw, nalezen
     'c.upkeep.o3': "Tu mets du papier dessus, et tu continues.", // nieuw, nalezen
     'c.upkeep.w': "Une fuite devient plus grande, et l’huile par terre fait glisser les gens. Trouvée tôt, c’est une petite réparation.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'u.install': "Électricité, tuyaux et métal", // nieuw, nalezen
+    'l.wiring': "Le câblage", // nieuw, nalezen
+    'w.draad': "le fil (un fil, à l’intérieur d’un câble)", // nieuw, nalezen
+    'w.stopcontact': "la prise de courant (dans le mur)", // nieuw, nalezen
+    'w.schakelaar': "l’interrupteur (pour la lumière)", // nieuw, nalezen
+    'w.lasklem': "le connecteur à levier (il relie des fils)", // nieuw, nalezen
+    'w.striptang': "la pince à dénuder", // nieuw, nalezen
+    'w.kabelgoot': "la goulotte (un canal pour les câbles)", // nieuw, nalezen
+    's.wiring.1': "Dénude le fil sur un centimètre.", // nieuw, nalezen
+    's.wiring.2': "Fixe les fils dans le connecteur à levier.", // nieuw, nalezen
+    's.wiring.3': "Les câbles vont dans la goulotte.", // nieuw, nalezen
+    'c.wiring.q': "Quel fil va où ?", // nieuw, nalezen
+    'c.wiring.a': "Marron avec marron, bleu avec bleu.", // nieuw, nalezen
+    'c.wiring': "Les couleurs disent à quoi sert un fil", // nieuw, nalezen
+    'c.wiring.b': "Dans un bâtiment, les fils ont des couleurs fixes. Le marron (parfois noir ou gris) amène le courant. Le bleu sert au retour. Le vert et jaune, c’est la terre : elle protège les personnes, et on ne l’utilise jamais pour autre chose. Branche la même couleur avec la même couleur. Dénude seulement ce qui rentre dans le connecteur : aucun bout de cuivre nu ne doit dépasser. Pousse le fil dedans, puis tire doucement dessus pour vérifier qu’il est bien fixé. Tu ne sais pas quel fil est lequel ? Arrête-toi et demande.", // nieuw, nalezen
+    'c.wiring.p': "Quelle est la couleur de la terre ?", // nieuw, nalezen
+    'c.wiring.s': "Tu branches une lampe. Un bout de cuivre dépasse du connecteur. Que fais-tu ?", // nieuw, nalezen
+    'c.wiring.o1': "Tu le coupes plus court, et tu rebranches.", // nieuw, nalezen
+    'c.wiring.o2': "Tu laisses : la lampe marche.", // nieuw, nalezen
+    'c.wiring.o3': "Tu mets un bout de ruban adhésif autour.", // nieuw, nalezen
+    'c.wiring.w': "Du cuivre nu hors du connecteur peut toucher quelque chose. Ça peut donner une décharge ou un court-circuit, même des mois plus tard.", // nieuw, nalezen
+    'l.testing': "Mesurer et travailler en sécurité", // nieuw, nalezen
+    'w.multimeter': "le multimètre (il mesure le courant)", // nieuw, nalezen
+    'w.spanningzoeker': "le tournevis testeur (un tournevis avec une petite lampe)", // nieuw, nalezen
+    'w.meterkast': "le tableau électrique", // nieuw, nalezen
+    'w.zekering': "le disjoncteur (il coupe le courant quand il y a un problème)", // nieuw, nalezen
+    'w.hangslot': "le cadenas", // nieuw, nalezen
+    'w.aardedraad': "le fil de terre (vert et jaune)", // nieuw, nalezen
+    's.testing.1': "Le disjoncteur a sauté.", // nieuw, nalezen
+    's.testing.2': "Mets un cadenas sur l’interrupteur.", // nieuw, nalezen
+    's.testing.3': "Mesure d’abord avec le multimètre.", // nieuw, nalezen
+    'c.testing.q': "Je peux ouvrir le tableau électrique ?", // nieuw, nalezen
+    'c.testing.a': "Non, c’est l’électricien qui le fait.", // nieuw, nalezen
+    'c.testing': "Coupé, verrouillé, mesuré", // nieuw, nalezen
+    'c.testing.b': "Avant de travailler sur l’électricité, fais trois étapes. Coupe : le bon disjoncteur dans le tableau électrique, pas seulement l’interrupteur au mur. Verrouille : mets ton propre cadenas dessus et garde la clé sur toi, pour que personne ne puisse remettre le courant. Mesure : vérifie avec un tournevis testeur ou un multimètre qu’il n’y a vraiment plus de courant. Seulement après, tu commences. Un disjoncteur saute encore et encore ? Ne le remets pas sans arrêt : dis-le à ton responsable. Fais un travail électrique seulement quand on t’a dit que tu en as le droit. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.testing.p': "Il n’y a plus de courant dessus.", // nieuw, nalezen
+    'c.testing.s': "Tu as coupé le disjoncteur. Un collègue dit : “Commence maintenant, c’est coupé.” Que fais-tu ?", // nieuw, nalezen
+    'c.testing.o1': "Tu verrouilles, et tu mesures d’abord.", // nieuw, nalezen
+    'c.testing.o2': "Tu commences : ton collègue le sait.", // nieuw, nalezen
+    'c.testing.o3': "Tu touches vite le fil pour vérifier.", // nieuw, nalezen
+    'c.testing.w': "Parfois, ce n’est pas le bon disjoncteur qui est coupé, ou quelqu’un le remet. Un cadenas et une mesure montrent que c’est vraiment sûr.", // nieuw, nalezen
+    'l.pipes': "Les tuyaux et l’eau", // nieuw, nalezen
+    'w.buis': "le tuyau", // nieuw, nalezen
+    'w.koppeling': "le raccord (il relie deux tuyaux)", // nieuw, nalezen
+    'w.pijpsnijder': "le coupe-tube", // nieuw, nalezen
+    'w.waterpomptang': "la pince multiprise", // nieuw, nalezen
+    'w.afsluiter': "le robinet d’arrêt (il coupe l’eau)", // nieuw, nalezen
+    'w.teflontape': "le ruban téflon (un ruban blanc pour le filetage d’un tuyau)", // nieuw, nalezen
+    's.pipes.1': "Ferme le robinet d’arrêt.", // nieuw, nalezen
+    's.pipes.2': "Coupe le tuyau avec le coupe-tube.", // nieuw, nalezen
+    's.pipes.3': "Enroule du ruban téflon autour du filetage.", // nieuw, nalezen
+    'c.pipes.q': "Le raccord fuit encore ?", // nieuw, nalezen
+    'c.pipes.a': "Un peu. Je vais le serrer encore un peu.", // nieuw, nalezen
+    'c.pipes': "D’abord couper l’eau, et un seau prêt", // nieuw, nalezen
+    'c.pipes.b': "Avant d’ouvrir un tuyau d’eau, ferme le robinet d’arrêt. Ensuite, ouvre un robinet plus bas, pour que le tuyau se vide. Mets un seau et un chiffon sous l’endroit où tu travailles. Coupe un tuyau en cuivre avec un coupe-tube, pas avec une scie : le bout reste rond et propre. Serre bien un raccord, mais pas trop fort. Quand tu as fini, ouvre l’eau doucement et cherche des gouttes. Une petite fuite que tu laisses devient un dégât des eaux.", // nieuw, nalezen
+    'c.pipes.p': "L’eau est coupée ?", // nieuw, nalezen
+    'c.pipes.s': "Tu as fait un nouveau raccord. Tu ouvres l’eau. Une petite goutte tombe chaque minute. Que fais-tu ?", // nieuw, nalezen
+    'c.pipes.o1': "Tu fermes l’eau, et tu resserres ou tu refais le raccord.", // nieuw, nalezen
+    'c.pipes.o2': "Tu laisses : c’est juste une goutte.", // nieuw, nalezen
+    'c.pipes.o3': "Tu mets un seau dessous et tu rentres chez toi.", // nieuw, nalezen
+    'c.pipes.w': "Une goutte par minute, c’est beaucoup de litres par semaine. L’eau peut abîmer le sol ou le plafond en dessous.", // nieuw, nalezen
+    'l.metalwork': "Travailler le métal", // nieuw, nalezen
+    'w.bankschroef': "l’étau (il tient une pièce serrée sur l’établi)", // nieuw, nalezen
+    'w.vijl': "la lime (pour rendre le métal lisse à la main)", // nieuw, nalezen
+    'w.ijzerzaag': "la scie à métaux (une scie pour le métal)", // nieuw, nalezen
+    'w.kolomboormachine': "la perceuse à colonne (une grande perceuse sur un pied)", // nieuw, nalezen
+    'w.draadtap': "le taraud (il fait un filetage dans un trou)", // nieuw, nalezen
+    'w.braam': "la bavure (un bord coupant après la coupe du métal)", // nieuw, nalezen
+    's.metalwork.1': "Serre le métal dans l’étau.", // nieuw, nalezen
+    's.metalwork.2': "Enlève la bavure avec la lime.", // nieuw, nalezen
+    's.metalwork.3': "Garde tes mains loin du foret.", // nieuw, nalezen
+    'c.metalwork.q': "Pourquoi le bord est si coupant ?", // nieuw, nalezen
+    'c.metalwork.a': "Il y a encore une bavure.", // nieuw, nalezen
+    'c.metalwork': "Serre la pièce, ne la tiens jamais", // nieuw, nalezen
+    'c.metalwork.b': "À la perceuse à colonne, ne tiens jamais une petite pièce dans ta main. Le foret peut l’attraper et la faire tourner très vite. Serre-la dans l’étau. Attache les cheveux longs, et ne porte pas de gants près d’un foret qui tourne : il peut attirer un gant. Porte des lunettes de sécurité. Après avoir scié ou percé, le métal a une bavure : un bord coupant. Lime-la avant de prendre la pièce dans ta main ou de la passer à quelqu’un. Enlève les copeaux de métal avec une brosse, pas avec ta main.", // nieuw, nalezen
+    'c.metalwork.p': "Je serre d’abord la pièce.", // nieuw, nalezen
+    'c.metalwork.s': "Tu dois percer un trou dans un petit morceau de métal. L’étau est sur un autre établi. Que fais-tu ?", // nieuw, nalezen
+    'c.metalwork.o1': "Tu vas chercher l’étau, et tu serres la pièce.", // nieuw, nalezen
+    'c.metalwork.o2': "Tu la tiens bien avec ta main.", // nieuw, nalezen
+    'c.metalwork.o3': "Tu mets des gants et tu la tiens.", // nieuw, nalezen
+    'c.metalwork.w': "Un foret peut attraper une petite pièce et la faire tourner. Alors elle frappe ta main. Dans l’étau, elle ne bouge pas.", // nieuw, nalezen
   },
 };
 

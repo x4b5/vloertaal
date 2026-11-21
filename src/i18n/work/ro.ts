@@ -2652,6 +2652,88 @@ const t: CultureTranslation = {
     'c.upkeep.o2': "O lași: e doar puțin.", // nieuw, nalezen
     'c.upkeep.o3': "Pui niște hârtie peste ea și continui.", // nieuw, nalezen
     'c.upkeep.w': "O scurgere se mărește, iar uleiul pe jos îi face pe oameni să alunece. Găsită devreme, e o reparație mică.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'u.install': "Electricitate, țevi și metal", // nieuw, nalezen
+    'l.wiring': "Cablajul", // nieuw, nalezen
+    'w.draad': "firul (un fir din interiorul unui cablu)", // nieuw, nalezen
+    'w.stopcontact': "priza (în perete)", // nieuw, nalezen
+    'w.schakelaar': "întrerupătorul (pentru lumină)", // nieuw, nalezen
+    'w.lasklem': "clema de conexiune (unește firele)", // nieuw, nalezen
+    'w.striptang': "cleștele de dezizolat", // nieuw, nalezen
+    'w.kabelgoot': "canalul pentru cabluri (un jgheab pentru cabluri)", // nieuw, nalezen
+    's.wiring.1': "Dezizolează firul un centimetru.", // nieuw, nalezen
+    's.wiring.2': "Fixează firele în clema de conexiune.", // nieuw, nalezen
+    's.wiring.3': "Cablurile merg în canalul pentru cabluri.", // nieuw, nalezen
+    'c.wiring.q': "Care fir unde merge?", // nieuw, nalezen
+    'c.wiring.a': "Maro la maro, albastru la albastru.", // nieuw, nalezen
+    'c.wiring': "Culorile spun ce face un fir", // nieuw, nalezen
+    'c.wiring.b': "Într-o clădire, firele au culori fixe. Maro (uneori negru sau gri) aduce curentul. Albastru merge înapoi. Verde-galben e împământarea: îi protejează pe oameni și nu se folosește niciodată pentru altceva. Leagă aceeași culoare la aceeași culoare. Dezizolează doar cât intră în clemă: nu are voie să iasă cupru gol. Împinge firul înăuntru, apoi trage ușor de el ca să verifici că e fixat. Nu știi sigur care fir e care? Oprește-te și întreabă.", // nieuw, nalezen
+    'c.wiring.p': "Ce culoare are împământarea?", // nieuw, nalezen
+    'c.wiring.s': "Legi o lampă. O bucată de cupru iese din clemă. Ce faci?", // nieuw, nalezen
+    'c.wiring.o1': "Tai firul mai scurt și îl legi din nou.", // nieuw, nalezen
+    'c.wiring.o2': "Îl lași așa: lampa merge.", // nieuw, nalezen
+    'c.wiring.o3': "Pui o bucată de bandă izolatoare în jurul lui.", // nieuw, nalezen
+    'c.wiring.w': "Cuprul gol din afara clemei poate atinge ceva. Asta poate da un șoc electric sau un scurtcircuit, chiar și după câteva luni.", // nieuw, nalezen
+    'l.testing': "Măsurare și lucru în siguranță", // nieuw, nalezen
+    'w.multimeter': "multimetrul (măsoară curentul)", // nieuw, nalezen
+    'w.spanningzoeker': "creionul de tensiune (o șurubelniță cu un beculeț)", // nieuw, nalezen
+    'w.meterkast': "tabloul electric", // nieuw, nalezen
+    'w.zekering': "siguranța automată (oprește curentul când e ceva în neregulă)", // nieuw, nalezen
+    'w.hangslot': "lacătul", // nieuw, nalezen
+    'w.aardedraad': "firul de împământare (verde-galben)", // nieuw, nalezen
+    's.testing.1': "Siguranța a sărit.", // nieuw, nalezen
+    's.testing.2': "Pune un lacăt pe întrerupător.", // nieuw, nalezen
+    's.testing.3': "Măsoară întâi cu multimetrul.", // nieuw, nalezen
+    'c.testing.q': "Pot să deschid tabloul electric?", // nieuw, nalezen
+    'c.testing.a': "Nu, asta o face electricianul.", // nieuw, nalezen
+    'c.testing': "Oprit, încuiat, măsurat", // nieuw, nalezen
+    'c.testing.b': "Înainte să lucrezi la instalația electrică, fă trei pași. Oprește: siguranța potrivită din tabloul electric, nu doar întrerupătorul de pe perete. Încuie: pune lacătul tău pe ea și ține cheia la tine, ca nimeni să nu o poată porni din nou. Măsoară: verifică cu un creion de tensiune sau cu un multimetru că într-adevăr nu e curent. Abia apoi începi. O siguranță sare iar și iar? Nu o tot porni din nou: spune-i șefului. Fă lucrări electrice doar când ți s-a spus că ai voie. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.testing.p': "Nu mai e curent pe el.", // nieuw, nalezen
+    'c.testing.s': "Ai oprit siguranța. Un coleg zice: „Începe acum, e oprit.” Ce faci?", // nieuw, nalezen
+    'c.testing.o1': "Pui lacătul și întâi măsori.", // nieuw, nalezen
+    'c.testing.o2': "Începi: colegul tău știe.", // nieuw, nalezen
+    'c.testing.o3': "Atingi repede firul ca să verifici.", // nieuw, nalezen
+    'c.testing.w': "Uneori e oprită siguranța greșită, sau cineva o pornește din nou. Un lacăt și o măsurare arată că e într-adevăr sigur.", // nieuw, nalezen
+    'l.pipes': "Țevi și apă", // nieuw, nalezen
+    'w.buis': "țeava", // nieuw, nalezen
+    'w.koppeling': "racordul (unește două țevi)", // nieuw, nalezen
+    'w.pijpsnijder': "dispozitivul de tăiat țevi", // nieuw, nalezen
+    'w.waterpomptang': "cleștele papagal", // nieuw, nalezen
+    'w.afsluiter': "robinetul de oprire (închide apa)", // nieuw, nalezen
+    'w.teflontape': "banda de teflon (bandă albă pentru filetul unei țevi)", // nieuw, nalezen
+    's.pipes.1': "Închide robinetul de oprire.", // nieuw, nalezen
+    's.pipes.2': "Taie țeava cu dispozitivul de tăiat țevi.", // nieuw, nalezen
+    's.pipes.3': "Înfășoară bandă de teflon pe filet.", // nieuw, nalezen
+    'c.pipes.q': "Mai pierde apă racordul?", // nieuw, nalezen
+    'c.pipes.a': "Puțin. Îl mai strâng un pic.", // nieuw, nalezen
+    'c.pipes': "Întâi apa oprită și o găleată pregătită", // nieuw, nalezen
+    'c.pipes.b': "Înainte să deschizi o țeavă de apă, închide robinetul de oprire. Apoi deschide un robinet mai jos, ca să se golească țeava. Pune o găleată și o cârpă sub locul unde lucrezi. Taie o țeavă de cupru cu dispozitivul de tăiat țevi, nu cu fierăstrăul: capătul rămâne rotund și curat. Strânge bine un racord, dar nu prea tare. Când ai terminat, dă drumul la apă încet și uită-te după picături. O scurgere mică pe care o lași devine o pagubă cauzată de apă.", // nieuw, nalezen
+    'c.pipes.p': "Apa e oprită?", // nieuw, nalezen
+    'c.pipes.s': "Ai făcut un racord nou. Dai drumul la apă. Cade o picătură mică în fiecare minut. Ce faci?", // nieuw, nalezen
+    'c.pipes.o1': "Închizi apa și strângi racordul sau îl refaci.", // nieuw, nalezen
+    'c.pipes.o2': "Îl lași: e doar o picătură.", // nieuw, nalezen
+    'c.pipes.o3': "Pui o găleată dedesubt și pleci acasă.", // nieuw, nalezen
+    'c.pipes.w': "O picătură pe minut înseamnă mulți litri pe săptămână. Apa poate strica podeaua sau tavanul de dedesubt.", // nieuw, nalezen
+    'l.metalwork': "Prelucrarea metalului", // nieuw, nalezen
+    'w.bankschroef': "menghina (ține o piesă strâns pe bancul de lucru)", // nieuw, nalezen
+    'w.vijl': "pila (ca să netezești metalul de mână)", // nieuw, nalezen
+    'w.ijzerzaag': "bomfaierul (fierăstrău pentru metal)", // nieuw, nalezen
+    'w.kolomboormachine': "mașina de găurit cu coloană (o bormașină mare pe un suport)", // nieuw, nalezen
+    'w.draadtap': "tarodul (taie un filet într-o gaură)", // nieuw, nalezen
+    'w.braam': "bavura (o margine ascuțită după ce tai metal)", // nieuw, nalezen
+    's.metalwork.1': "Prinde metalul în menghină.", // nieuw, nalezen
+    's.metalwork.2': "Pilește bavura.", // nieuw, nalezen
+    's.metalwork.3': "Ține mâinile departe de burghiu.", // nieuw, nalezen
+    'c.metalwork.q': "De ce e marginea așa de ascuțită?", // nieuw, nalezen
+    'c.metalwork.a': "Mai are o bavură.", // nieuw, nalezen
+    'c.metalwork': "Prinde piesa, nu o ține niciodată în mână", // nieuw, nalezen
+    'c.metalwork.b': "La mașina de găurit cu coloană, nu ține niciodată o piesă mică în mână. Burghiul o poate prinde și o poate învârti foarte repede. Prinde-o în menghină. Leagă-ți părul lung la spate și nu purta mănuși la un burghiu care se învârte: poate trage mănușa înăuntru. Poartă ochelari de protecție. După tăiat sau găurit, metalul are o bavură: o margine ascuțită. Pilește-o înainte să iei piesa în mână sau să o dai mai departe. Strânge bucățelele de metal cu o perie, nu cu mâna.", // nieuw, nalezen
+    'c.metalwork.p': "Întâi o prind în menghină.", // nieuw, nalezen
+    'c.metalwork.s': "Trebuie să dai o gaură într-o bucată mică de metal. Menghina e pe alt banc de lucru. Ce faci?", // nieuw, nalezen
+    'c.metalwork.o1': "Aduci menghina și prinzi piesa în ea.", // nieuw, nalezen
+    'c.metalwork.o2': "O ții strâns cu mâna.", // nieuw, nalezen
+    'c.metalwork.o3': "Îți pui mănuși și o ții.", // nieuw, nalezen
+    'c.metalwork.w': "Un burghiu poate prinde o piesă mică și o poate învârti. Atunci îți lovește mâna. În menghină, piesa stă pe loc.", // nieuw, nalezen
   },
 };
 

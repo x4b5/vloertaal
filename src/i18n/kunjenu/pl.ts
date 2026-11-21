@@ -130,6 +130,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "Umiem zapytać, jak przymocować półkę.", // nieuw, nalezen
     'kjn.u.machines.1': "Umiem powiedzieć, że osłona maszyny jest zepsuta.", // nieuw, nalezen
     'kjn.u.machines.2': "Umiem zapytać, jak często mam brać próbkę.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "Umiem zapytać, czy mogę otworzyć skrzynkę z bezpiecznikami.", // nieuw, nalezen
+    'kjn.u.install.2': "Umiem powiedzieć, że złączka cieknie.", // nieuw, nalezen
   },
 };
 

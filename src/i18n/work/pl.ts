@@ -2653,6 +2653,88 @@ const t: CultureTranslation = {
     'c.upkeep.o2': "Zostawiasz to: to tylko trochę.", // nieuw, nalezen
     'c.upkeep.o3': "Kładziesz na to trochę papieru i pracujesz dalej.", // nieuw, nalezen
     'c.upkeep.w': "Wyciek robi się coraz większy, a na oleju na podłodze ludzie się ślizgają. Wcześnie znaleziony, to mała naprawa.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'u.install': "Elektryka, rury i metal", // nieuw, nalezen
+    'l.wiring': "Podłączanie przewodów", // nieuw, nalezen
+    'w.draad': "przewód (jeden przewód w kablu)", // nieuw, nalezen
+    'w.stopcontact': "gniazdko (w ścianie)", // nieuw, nalezen
+    'w.schakelaar': "włącznik (do światła)", // nieuw, nalezen
+    'w.lasklem': "szybkozłączka (łączy przewody)", // nieuw, nalezen
+    'w.striptang': "ściągacz izolacji", // nieuw, nalezen
+    'w.kabelgoot': "korytko kablowe (kanał na kable)", // nieuw, nalezen
+    's.wiring.1': "Zdejmij z przewodu jeden centymetr izolacji.", // nieuw, nalezen
+    's.wiring.2': "Zamocuj przewody w szybkozłączce.", // nieuw, nalezen
+    's.wiring.3': "Kable idą do korytka kablowego.", // nieuw, nalezen
+    'c.wiring.q': "Który przewód idzie gdzie?", // nieuw, nalezen
+    'c.wiring.a': "Brązowy do brązowego, niebieski do niebieskiego.", // nieuw, nalezen
+    'c.wiring': "Kolory mówią, do czego jest przewód", // nieuw, nalezen
+    'c.wiring.b': "W budynku przewody mają stałe kolory. Brązowy (czasem czarny albo szary) doprowadza prąd. Niebieski prowadzi go z powrotem. Żółto-zielony to uziemienie: chroni ludzi i nigdy nie używa się go do niczego innego. Łącz ten sam kolor z tym samym kolorem. Zdejmuj tylko tyle izolacji, ile wchodzi do złączki: goła miedź nie może wystawać. Wciśnij przewód, a potem lekko za niego pociągnij, żeby sprawdzić, czy dobrze siedzi. Nie wiesz, który przewód jest który? Przerwij pracę i zapytaj.", // nieuw, nalezen
+    'c.wiring.p': "Jaki kolor ma uziemienie?", // nieuw, nalezen
+    'c.wiring.s': "Podłączasz lampę. Ze złączki wystaje kawałek miedzi. Co robisz?", // nieuw, nalezen
+    'c.wiring.o1': "Skracasz go i podłączasz jeszcze raz.", // nieuw, nalezen
+    'c.wiring.o2': "Zostawiasz tak: lampa działa.", // nieuw, nalezen
+    'c.wiring.o3': "Owijasz go kawałkiem taśmy.", // nieuw, nalezen
+    'c.wiring.w': "Goła miedź poza złączką może czegoś dotknąć. To może spowodować porażenie prądem albo zwarcie, także po kilku miesiącach.", // nieuw, nalezen
+    'l.testing': "Bezpieczne mierzenie i praca", // nieuw, nalezen
+    'w.multimeter': "multimetr (mierzy prąd)", // nieuw, nalezen
+    'w.spanningzoeker': "próbnik napięcia (śrubokręt z małą lampką)", // nieuw, nalezen
+    'w.meterkast': "skrzynka z bezpiecznikami", // nieuw, nalezen
+    'w.zekering': "bezpiecznik (wyłącza prąd, kiedy coś jest nie tak)", // nieuw, nalezen
+    'w.hangslot': "kłódka", // nieuw, nalezen
+    'w.aardedraad': "przewód uziemiający (żółto-zielony)", // nieuw, nalezen
+    's.testing.1': "Bezpiecznik się wyłączył.", // nieuw, nalezen
+    's.testing.2': "Załóż kłódkę na wyłącznik.", // nieuw, nalezen
+    's.testing.3': "Najpierw zmierz multimetrem.", // nieuw, nalezen
+    'c.testing.q': "Czy mogę otworzyć skrzynkę z bezpiecznikami?", // nieuw, nalezen
+    'c.testing.a': "Nie, to robi elektryk.", // nieuw, nalezen
+    'c.testing': "Wyłączone, zablokowane, zmierzone", // nieuw, nalezen
+    'c.testing.b': "Zanim zaczniesz pracę przy elektryce, zrób trzy kroki. Wyłącz: właściwy bezpiecznik w skrzynce z bezpiecznikami, nie tylko włącznik na ścianie. Zablokuj: załóż na niego swoją kłódkę i trzymaj klucz przy sobie, żeby nikt nie mógł znowu włączyć prądu. Zmierz: sprawdź próbnikiem napięcia albo multimetrem, że naprawdę nie ma prądu. Dopiero wtedy zaczynasz. Bezpiecznik ciągle się wyłącza? Nie włączaj go raz za razem: powiedz przełożonemu. Pracuj przy elektryce tylko wtedy, gdy ktoś ci na to pozwolił. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.testing.p': "Nie ma już na tym prądu.", // nieuw, nalezen
+    'c.testing.s': { m: "Wyłączyłeś bezpiecznik. Kolega mówi: „Zaczynaj, jest wyłączony.” Co robisz?", f: "Wyłączyłaś bezpiecznik. Kolega mówi: „Zaczynaj, jest wyłączony.” Co robisz?", x: "Bezpiecznik jest wyłączony. Kolega mówi: „Zaczynaj, jest wyłączony.” Co robisz?" }, // nieuw, nalezen
+    'c.testing.o1': "Zakładasz kłódkę i najpierw mierzysz.", // nieuw, nalezen
+    'c.testing.o2': "Zaczynasz: kolega to wie.", // nieuw, nalezen
+    'c.testing.o3': "Szybko dotykasz przewodu, żeby sprawdzić.", // nieuw, nalezen
+    'c.testing.w': "Czasem wyłączony jest zły bezpiecznik albo ktoś go znowu włącza. Kłódka i pomiar pokazują, że jest naprawdę bezpiecznie.", // nieuw, nalezen
+    'l.pipes': "Rury i woda", // nieuw, nalezen
+    'w.buis': "rura", // nieuw, nalezen
+    'w.koppeling': "złączka (łączy dwie rury)", // nieuw, nalezen
+    'w.pijpsnijder': "obcinak do rur", // nieuw, nalezen
+    'w.waterpomptang': "szczypce nastawne", // nieuw, nalezen
+    'w.afsluiter': "zawór odcinający (zamyka wodę)", // nieuw, nalezen
+    'w.teflontape': "taśma teflonowa (biała taśma na gwint rury)", // nieuw, nalezen
+    's.pipes.1': "Zakręć zawór odcinający.", // nieuw, nalezen
+    's.pipes.2': "Utnij rurę obcinakiem do rur.", // nieuw, nalezen
+    's.pipes.3': "Owiń gwint taśmą teflonową.", // nieuw, nalezen
+    'c.pipes.q': "Czy złączka jeszcze cieknie?", // nieuw, nalezen
+    'c.pipes.a': "Trochę. Dokręcę ją jeszcze mocniej.", // nieuw, nalezen
+    'c.pipes': "Najpierw zakręć wodę i przygotuj wiadro", // nieuw, nalezen
+    'c.pipes.b': "Zanim otworzysz rurę z wodą, zakręć zawór odcinający. Potem odkręć kran niżej, żeby rura się opróżniła. Pod miejscem, w którym pracujesz, postaw wiadro i połóż szmatę. Rurę miedzianą tnij obcinakiem do rur, nie piłą: koniec zostaje okrągły i czysty. Dokręcaj złączkę mocno, ale nie za mocno. Kiedy skończysz, powoli odkręć wodę i szukaj kropli. Z małego wycieku, który zostawisz, robią się szkody od wody.", // nieuw, nalezen
+    'c.pipes.p': "Czy woda jest zakręcona?", // nieuw, nalezen
+    'c.pipes.s': { m: "Założyłeś nową złączkę. Odkręcasz wodę. Co minutę spada jedna mała kropla. Co robisz?", f: "Założyłaś nową złączkę. Odkręcasz wodę. Co minutę spada jedna mała kropla. Co robisz?", x: "Nowa złączka jest założona. Odkręcasz wodę. Co minutę spada jedna mała kropla. Co robisz?" }, // nieuw, nalezen
+    'c.pipes.o1': "Zakręcasz wodę i dokręcasz złączkę albo robisz ją od nowa.", // nieuw, nalezen
+    'c.pipes.o2': "Zostawiasz tak: to tylko jedna kropla.", // nieuw, nalezen
+    'c.pipes.o3': "Podstawiasz wiadro i idziesz do domu.", // nieuw, nalezen
+    'c.pipes.w': "Jedna kropla na minutę to wiele litrów na tydzień. Woda może zniszczyć podłogę albo sufit piętro niżej.", // nieuw, nalezen
+    'l.metalwork': "Obróbka metalu", // nieuw, nalezen
+    'w.bankschroef': "imadło (mocno trzyma część na stole warsztatowym)", // nieuw, nalezen
+    'w.vijl': "pilnik (do ręcznego wygładzania metalu)", // nieuw, nalezen
+    'w.ijzerzaag': "piłka do metalu (piła do cięcia metalu)", // nieuw, nalezen
+    'w.kolomboormachine': "wiertarka kolumnowa (duża wiertarka na stojaku)", // nieuw, nalezen
+    'w.draadtap': "gwintownik (nacina gwint w otworze)", // nieuw, nalezen
+    'w.braam': "zadzior (ostra krawędź po cięciu metalu)", // nieuw, nalezen
+    's.metalwork.1': "Zamocuj metal w imadle.", // nieuw, nalezen
+    's.metalwork.2': "Spiłuj zadzior.", // nieuw, nalezen
+    's.metalwork.3': "Trzymaj ręce z dala od wiertła.", // nieuw, nalezen
+    'c.metalwork.q': "Dlaczego krawędź jest taka ostra?", // nieuw, nalezen
+    'c.metalwork.a': "Jest na niej jeszcze zadzior.", // nieuw, nalezen
+    'c.metalwork': "Zamocuj, nigdy nie trzymaj w ręce", // nieuw, nalezen
+    'c.metalwork.b': "Przy wiertarce kolumnowej nigdy nie trzymaj małej części w ręce. Wiertło może ją złapać i bardzo szybko nią obrócić. Zamocuj ją w imadle. Zwiąż długie włosy i nie noś rękawic przy obracającym się wiertle: może wciągnąć rękawicę. Noś okulary ochronne. Po piłowaniu albo wierceniu metal ma zadzior: ostrą krawędź. Spiłuj go, zanim weźmiesz część do ręki albo komuś ją podasz. Wióry metalowe zmiataj szczotką, nie ręką.", // nieuw, nalezen
+    'c.metalwork.p': "Najpierw to zamocuję.", // nieuw, nalezen
+    'c.metalwork.s': "Musisz wywiercić otwór w małym kawałku metalu. Imadło jest na innym stole. Co robisz?", // nieuw, nalezen
+    'c.metalwork.o1': "Przynosisz imadło i mocujesz w nim kawałek.", // nieuw, nalezen
+    'c.metalwork.o2': "Mocno trzymasz go ręką.", // nieuw, nalezen
+    'c.metalwork.o3': "Zakładasz rękawice i trzymasz go.", // nieuw, nalezen
+    'c.metalwork.w': "Wiertło może złapać małą część i nią zakręcić. Wtedy uderza ona w twoją rękę. W imadle się nie rusza.", // nieuw, nalezen
   },
 };
 

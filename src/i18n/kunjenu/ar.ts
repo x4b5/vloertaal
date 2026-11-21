@@ -130,6 +130,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "أستطيع أن أسأل كيف أثبّت لوحاً خشبياً.", // nieuw, nalezen
     'kjn.u.machines.1': "أستطيع أن أقول إن الغطاء الواقي مكسور.", // nieuw, nalezen
     'kjn.u.machines.2': "أستطيع أن أسأل كم مرة آخذ عيّنة.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "أستطيع أن أسأل هل يمكنني أن أفتح لوحة الكهرباء.", // nieuw, nalezen
+    'kjn.u.install.2': "أستطيع أن أقول إن وصلة تسرّب.", // nieuw, nalezen
   },
 };
 

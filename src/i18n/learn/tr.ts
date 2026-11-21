@@ -189,6 +189,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "Ne sıklıkla olduğu soruluyor: saatte bir, bir de nereye yazılacağı.", // nieuw, nalezen
     'c.packing.a.why': "Bir kutuya kaç tane girdiği soruluyor: sayı, bir de nerede yazdığı.", // nieuw, nalezen
     'c.upkeep.a.why': "Ne zaman olduğu soruluyor: haftanın günü, bir de o gün hangi an.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "Hangi telin nereye gittiği soruluyor: aynı renk aynı renge.", // nieuw, nalezen
+    'c.testing.a.why': "Açıp açamayacağı soruluyor: hayır, bir de bunu kimin yaptığı.", // nieuw, nalezen
+    'c.pipes.a.why': "Hâlâ sızdırıp sızdırmadığı soruluyor: biraz, bir de bunun için ne yapılacağı.", // nieuw, nalezen
+    'c.metalwork.a.why': "Neden keskin olduğu soruluyor: üstünde hâlâ çapak var.", // nieuw, nalezen
   },
 };
 

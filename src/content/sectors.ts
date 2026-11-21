@@ -65,7 +65,8 @@ export const sectors: Sector[] = [
   // Techniek (metaal, elektro, installatie) and the garage (mobiliteit), from the Entree rounds
   // (30 October 2026, docs/werkregels-curriculum.md deel 7): sparks, noise and power (Safety), and
   // the work order (Je werk afronden). Appended, so every existing sector keeps its path.
-  { id: 'technical', nl: 'Techniek', key: 'sectorTechnical', units: ['u.tech'], focus: ['u.safety', 'u.finish'],
+  // "Elektra, leidingen en metaal" (u.install, 21 November 2026): the second own unit of Techniek.
+  { id: 'technical', nl: 'Techniek', key: 'sectorTechnical', units: ['u.tech', 'u.install'], focus: ['u.safety', 'u.finish'],
     rules: { units: ['r.techniek'], focus: ['r.veilig', 'r.afronden'] } },
   { id: 'garage', nl: 'Garage', key: 'sectorGarage', units: ['u.garage'], focus: ['u.safety', 'u.finish'],
     rules: { units: ['r.werkplaats'], focus: ['r.veilig', 'r.afronden'] } },

@@ -2652,6 +2652,88 @@ const t: CultureTranslation = {
     'c.upkeep.o2': "Bırakırsın: sadece biraz.", // nieuw, nalezen
     'c.upkeep.o3': "Üstüne biraz kâğıt koyar ve devam edersin.", // nieuw, nalezen
     'c.upkeep.w': "Bir sızıntı büyür ve yerdeki yağ insanları kaydırır. Erken bulunursa küçük bir onarımdır.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'u.install': "Elektrik, borular ve metal", // nieuw, nalezen
+    'l.wiring': "Kablo bağlantısı", // nieuw, nalezen
+    'w.draad': "tel (bir kablonun içindeki tek tel)", // nieuw, nalezen
+    'w.stopcontact': "priz (duvarda)", // nieuw, nalezen
+    'w.schakelaar': "anahtar (ışık için)", // nieuw, nalezen
+    'w.lasklem': "klemens (telleri birleştirir)", // nieuw, nalezen
+    'w.striptang': "kablo sıyırma pensesi", // nieuw, nalezen
+    'w.kabelgoot': "kablo kanalı (kablolar için bir kanal)", // nieuw, nalezen
+    's.wiring.1': "Telin ucundan bir santimetre sıy.", // nieuw, nalezen
+    's.wiring.2': "Telleri klemense sabitle.", // nieuw, nalezen
+    's.wiring.3': "Kablolar kablo kanalına girer.", // nieuw, nalezen
+    'c.wiring.q': "Hangi tel nereye gidiyor?", // nieuw, nalezen
+    'c.wiring.a': "Kahverengi kahverengiye, mavi maviye.", // nieuw, nalezen
+    'c.wiring': "Renkler telin ne yaptığını söyler", // nieuw, nalezen
+    'c.wiring.b': "Bir binada tellerin sabit renkleri vardır. Kahverengi (bazen siyah ya da gri) elektriği getirir. Mavi geri döner. Yeşil-sarı topraktır: insanları korur ve asla başka bir şey için kullanılmaz. Aynı rengi aynı renge bağla. Sadece klemense sığacak kadar sıy: dışarıda hiç çıplak bakır kalmamalı. Teli içeri it, sonra sabit olduğunu kontrol etmek için hafifçe çek. Hangi telin hangisi olduğundan emin değil misin? Dur ve sor.", // nieuw, nalezen
+    'c.wiring.p': "Toprak hangi renk?", // nieuw, nalezen
+    'c.wiring.s': "Bir lamba bağlıyorsun. Klemensten bir parça bakır dışarı çıkıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.wiring.o1': "Teli kısaltır ve yeniden bağlarsın.", // nieuw, nalezen
+    'c.wiring.o2': "Bırakırsın: lamba çalışıyor.", // nieuw, nalezen
+    'c.wiring.o3': "Etrafına bir parça bant sararsın.", // nieuw, nalezen
+    'c.wiring.w': "Klemensin dışındaki çıplak bakır bir şeye değebilir. Bu, elektrik çarpmasına ya da kısa devreye yol açabilir, aylar sonra bile.", // nieuw, nalezen
+    'l.testing': "Ölçmek ve güvenli çalışmak", // nieuw, nalezen
+    'w.multimeter': "multimetre (elektriği ölçer)", // nieuw, nalezen
+    'w.spanningzoeker': "kontrol kalemi (küçük lambalı bir tornavida)", // nieuw, nalezen
+    'w.meterkast': "sigorta kutusu", // nieuw, nalezen
+    'w.zekering': "sigorta (bir sorun olduğunda elektriği keser)", // nieuw, nalezen
+    'w.hangslot': "asma kilit", // nieuw, nalezen
+    'w.aardedraad': "toprak teli (yeşil-sarı)", // nieuw, nalezen
+    's.testing.1': "Sigorta attı.", // nieuw, nalezen
+    's.testing.2': "Şaltere bir asma kilit tak.", // nieuw, nalezen
+    's.testing.3': "Önce multimetreyle ölç.", // nieuw, nalezen
+    'c.testing.q': "Sigorta kutusunu açabilir miyim?", // nieuw, nalezen
+    'c.testing.a': "Hayır, onu elektrikçi yapar.", // nieuw, nalezen
+    'c.testing': "Kapalı, kilitli, ölçülmüş", // nieuw, nalezen
+    'c.testing.b': "Elektrik işine başlamadan önce üç adım at. Kapat: sigorta kutusundaki doğru sigortayı, sadece duvardaki anahtarı değil. Kilitle: üstüne kendi asma kilidini tak ve anahtarı yanında tut, böylece kimse onu yeniden açamaz. Ölç: bir kontrol kalemi ya da multimetreyle gerçekten elektrik olmadığını kontrol et. Ancak ondan sonra başlarsın. Bir sigorta tekrar tekrar mı atıyor? Onu açmaya devam etme: amirine söyle. Elektrik işini sadece yapabileceğin söylendiyse yap. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.testing.p': "Artık üzerinde elektrik yok.", // nieuw, nalezen
+    'c.testing.s': "Sigortayı kapattın. Bir iş arkadaşın diyor ki: “Şimdi başla, kapalı.” Ne yaparsın?", // nieuw, nalezen
+    'c.testing.o1': "Kilitler ve önce ölçersin.", // nieuw, nalezen
+    'c.testing.o2': "Başlarsın: iş arkadaşın biliyor.", // nieuw, nalezen
+    'c.testing.o3': "Kontrol etmek için tele hızlıca dokunursun.", // nieuw, nalezen
+    'c.testing.w': "Bazen yanlış sigorta kapalıdır ya da biri onu yeniden açar. Bir kilit ve bir ölçüm, gerçekten güvenli olduğunu gösterir.", // nieuw, nalezen
+    'l.pipes': "Borular ve su", // nieuw, nalezen
+    'w.buis': "boru", // nieuw, nalezen
+    'w.koppeling': "rakor (iki boruyu birleştirir)", // nieuw, nalezen
+    'w.pijpsnijder': "boru kesici", // nieuw, nalezen
+    'w.waterpomptang': "papağan pense", // nieuw, nalezen
+    'w.afsluiter': "vana (suyu keser)", // nieuw, nalezen
+    'w.teflontape': "teflon bant (borunun dişi için beyaz bant)", // nieuw, nalezen
+    's.pipes.1': "Vanayı kapat.", // nieuw, nalezen
+    's.pipes.2': "Boruyu boru kesiciyle kes.", // nieuw, nalezen
+    's.pipes.3': "Dişin etrafına teflon bant sar.", // nieuw, nalezen
+    'c.pipes.q': "Rakor hâlâ sızdırıyor mu?", // nieuw, nalezen
+    'c.pipes.a': "Biraz. Biraz daha sıkacağım.", // nieuw, nalezen
+    'c.pipes': "Önce su kapalı, bir de kova hazır", // nieuw, nalezen
+    'c.pipes.b': "Bir su borusunu açmadan önce vanayı kapat. Sonra daha aşağıdaki bir musluğu aç, böylece boru boşalır. Çalıştığın yerin altına bir kova ve bir bez koy. Bakır boruyu testereyle değil, boru kesiciyle kes: uç yuvarlak ve temiz kalır. Rakoru sıkıca sık, ama fazla sert değil. İşin bitince suyu yavaşça aç ve damla olup olmadığına bak. Bıraktığın küçük bir sızıntı su hasarına dönüşür.", // nieuw, nalezen
+    'c.pipes.p': "Su kapalı mı?", // nieuw, nalezen
+    'c.pipes.s': "Yeni bir rakor taktın. Suyu açıyorsun. Her dakika küçük bir damla düşüyor. Ne yaparsın?", // nieuw, nalezen
+    'c.pipes.o1': "Suyu kapatır, rakoru sıkar ya da yeniden yaparsın.", // nieuw, nalezen
+    'c.pipes.o2': "Bırakırsın: sadece bir damla.", // nieuw, nalezen
+    'c.pipes.o3': "Altına bir kova koyar ve eve gidersin.", // nieuw, nalezen
+    'c.pipes.w': "Dakikada bir damla, haftada birçok litre eder. Su, yere ya da alttaki tavana zarar verebilir.", // nieuw, nalezen
+    'l.metalwork': "Metal işleme", // nieuw, nalezen
+    'w.bankschroef': "mengene (bir parçayı tezgâhta sıkıca tutar)", // nieuw, nalezen
+    'w.vijl': "eğe (metali elle düzeltmek için)", // nieuw, nalezen
+    'w.ijzerzaag': "demir testeresi (metal için bir testere)", // nieuw, nalezen
+    'w.kolomboormachine': "sütunlu matkap (ayaklı büyük bir matkap)", // nieuw, nalezen
+    'w.draadtap': "kılavuz (bir deliğe diş açar)", // nieuw, nalezen
+    'w.braam': "çapak (metali kestikten sonra kalan keskin kenar)", // nieuw, nalezen
+    's.metalwork.1': "Metali mengeneye sıkıştır.", // nieuw, nalezen
+    's.metalwork.2': "Çapağı eğeyle al.", // nieuw, nalezen
+    's.metalwork.3': "Ellerini matkaptan uzak tut.", // nieuw, nalezen
+    'c.metalwork.q': "Kenar neden bu kadar keskin?", // nieuw, nalezen
+    'c.metalwork.a': "Üstünde hâlâ çapak var.", // nieuw, nalezen
+    'c.metalwork': "Sıkıştır, asla elle tutma", // nieuw, nalezen
+    'c.metalwork.b': "Sütunlu matkapta küçük bir parçayı asla elinde tutma. Matkap onu yakalayıp çok hızlı döndürebilir. Onu mengeneye sıkıştır. Uzun saçını bağla ve dönen bir matkapta eldiven giyme: eldiveni içeri çekebilir. Koruyucu gözlük tak. Testereyle kestikten ya da deldikten sonra metalde çapak olur: keskin bir kenar. Parçayı eline almadan ya da birine vermeden önce onu eğeyle al. Metal talaşlarını elinle değil, bir fırçayla süpür.", // nieuw, nalezen
+    'c.metalwork.p': "Önce onu sıkıştırıyorum.", // nieuw, nalezen
+    'c.metalwork.s': "Küçük bir metal parçasına delik delmen gerekiyor. Mengene başka bir tezgâhta. Ne yaparsın?", // nieuw, nalezen
+    'c.metalwork.o1': "Mengeneyi getirir ve parçayı sıkıştırırsın.", // nieuw, nalezen
+    'c.metalwork.o2': "Elinle sıkıca tutarsın.", // nieuw, nalezen
+    'c.metalwork.o3': "Eldiven giyer ve tutarsın.", // nieuw, nalezen
+    'c.metalwork.w': "Matkap küçük bir parçayı yakalayıp döndürebilir. O zaman parça eline çarpar. Mengenede ise yerinde durur.", // nieuw, nalezen
   },
 };
 

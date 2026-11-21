@@ -562,8 +562,8 @@ function defineStates(LANG) {
   }
   // The next lessons of 20 November 2026 (l.paint and l.prep of u.afbouw, the six of "Metselen,
   // hout en vastmaken", the shapes of Rekenen) and "Machines en gereedschap" (u.machines, 21
-  // November 2026): every step, the same way (seed 1).
-  for (const lesson of ['paint', 'prep', 'brick', 'wall', 'wood', 'square', 'screw', 'fix', 'shapes', 'angles', 'size', 'atmachine', 'inspect', 'packing', 'upkeep']) {
+  // November 2026) and "Elektra, leidingen en metaal" (u.install, the same day): every step, the same way (seed 1).
+  for (const lesson of ['paint', 'prep', 'brick', 'wall', 'wood', 'square', 'screw', 'fix', 'shapes', 'angles', 'size', 'atmachine', 'inspect', 'packing', 'upkeep', 'wiring', 'testing', 'pipes', 'metalwork']) {
     for (let at = 0; at < 21; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
   }
   // "Je goed voelen op het werk" (l.feelwell, seed 1, 5 November 2026): an abstract word ("de

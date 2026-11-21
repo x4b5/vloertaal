@@ -66,6 +66,8 @@ export const unitIcons: Record<string, string> = {
   'u.ruwbouw': 'w.baksteen',
   // Machines en gereedschap (21 November 2026): the control panel (groupMaken).
   'u.machines': 'w.bedieningspaneel',
+  // Elektra, leidingen en metaal (21 November 2026): the socket (groupTechniek).
+  'u.install': 'w.stopcontact',
 };
 
 /**
