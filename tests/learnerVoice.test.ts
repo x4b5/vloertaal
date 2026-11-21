@@ -142,6 +142,11 @@ const PENDING_RECORDING = new Set<string>([
   'Nee, een rechthoek. Hij is langer dan breed.',
   'Vijfenveertig. De helft van een rechte hoek.',
   'Vier bij vijf meter, dus twintig vierkante meter.',
+  // "Machines en gereedschap" (u.machines, 21 November 2026):
+  'De sensor ziet de doos niet goed.',
+  'Elk uur één. Schrijf het op de lijst.',
+  'Twaalf. Dat staat op de lijst.',
+  'Elke maandag, voor de eerste dienst.',
 ]);
 
 

@@ -64,6 +64,8 @@ export const unitIcons: Record<string, string> = {
   'u.afbouw': 'w.lijmkam',
   // Metselen, hout en vastmaken (20 November 2026): the brick (group58).
   'u.ruwbouw': 'w.baksteen',
+  // Machines en gereedschap (21 November 2026): the control panel (groupMaken).
+  'u.machines': 'w.bedieningspaneel',
 };
 
 /**

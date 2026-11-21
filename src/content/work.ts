@@ -1586,6 +1586,92 @@ const ruwbouwUnit = unit('ruwbouw', 'Bricks, wood and fixing', 'Metselen, hout e
   ),
 ]);
 
+// ---- Machines and tools (the owner's request, 21 November 2026) ----
+// The second own unit of the sector Productie (src/content/sectors.ts): working at the machine,
+// checking the products, packing and small maintenance. In the path of a learner who chose
+// Productie it comes right after "In de productie"; in every other course it is appended at the
+// very end (workUnits below), so no existing course changes. Already words of other lessons, used
+// here in a sentence or the chat only: "de machine", "de storing", "inpakken", "het product",
+// "beschadigd", "het etiket" and "de lijst" (u.factory), "de doos" (l.things), "de dienst"
+// (l.shift) and "de olie". The drawings: src/pictures/groupMaken.tsx (one file per word in
+// src/pictures/maken). The snap-off knife shares the emoji of "het mes" (l.food) on purpose: they
+// look alike, so a picture choice never offers them side by side.
+
+const machinesUnit = unit('machines', 'Machines and tools', 'Machines en gereedschap', '🎛️', '#3f6e8c', [
+  lesson(
+    'atmachine',
+    'At the machine',
+    [
+      ['bedieningspaneel', 'het bedieningspaneel', 'the control panel (the buttons and screen of a machine)', '🎛️'],
+      ['startknop', 'de startknop', 'the start button (green)', '🟢'],
+      ['hendel', 'de hendel', 'the lever', '🕹️'],
+      ['afscherming', 'de afscherming', 'the machine guard (a cover over the moving parts)', '🛡️'],
+      ['sensor', 'de sensor', 'the sensor (it sees if something is there)', '📡'],
+      ['signaallamp', 'de signaallamp', 'the signal light (coloured lights on top of a machine)', '🚨'],
+    ],
+    [
+      ['Druk op de groene startknop.', 'Press the green start button.'],
+      ['De signaallamp is rood. Er is een storing.', 'The signal light is red. There is a fault.'],
+      ['Haal de afscherming nooit weg.', 'Never take the machine guard away.'],
+    ],
+    [['Waarom stopt de machine steeds?', 'Why does the machine keep stopping?'], ['De sensor ziet de doos niet goed.', 'The sensor does not see the box well.']],
+  ),
+  lesson(
+    'inspect',
+    'Measuring and checking',
+    [
+      ['weegschaal', 'de weegschaal', 'the scales', '⚖️'],
+      ['meetklok', 'de meetklok', 'the dial gauge (measures very small differences)', '⏱️'],
+      ['loep', 'de loep', 'the magnifying glass', '🔍'],
+      ['monster', 'het monster', 'the sample (one product you take out to check)', '🫙'],
+      ['afkeurbak', 'de afkeurbak', 'the reject bin (for products that are not good)', '🗑️'],
+      ['teller', 'de teller', 'the counter (it counts the products)', '🔢'],
+    ],
+    [
+      ['Leg het product op de weegschaal.', 'Put the product on the scales.'],
+      ['Dit product is beschadigd. Het gaat in de afkeurbak.', 'This product is damaged. It goes in the reject bin.'],
+      ['Ik kijk met de loep naar het etiket.', 'I look at the label with the magnifying glass.'],
+    ],
+    [['Hoe vaak neem ik een monster?', 'How often do I take a sample?'], ['Elk uur één. Schrijf het op de lijst.', 'One every hour. Write it on the list.']],
+  ),
+  lesson(
+    'packing',
+    'Packing',
+    [
+      ['verpakking', 'de verpakking', 'the packaging', '🎁'],
+      ['krimpfolie', 'de krimpfolie', 'the shrink wrap (plastic film that gets tight with heat)', '🌯'],
+      ['sealmachine', 'de sealmachine', 'the sealing machine (closes a pack with heat)', '♨️'],
+      ['vulmateriaal', 'het vulmateriaal', 'the filling material (air cushions or paper in a box)', '☁️'],
+      ['afbreekmes', 'het afbreekmes', 'the snap-off knife', '🔪'],
+      ['tapepistool', 'het tapepistool', 'the tape gun', '🎞️'],
+    ],
+    [
+      ['Doe vulmateriaal in de doos.', 'Put filling material in the box.'],
+      ['Sluit de doos met het tapepistool.', 'Close the box with the tape gun.'],
+      ['De sealmachine is heet. Pas op!', 'The sealing machine is hot. Watch out!'],
+    ],
+    [['Hoeveel producten gaan er in een doos?', 'How many products go in a box?'], ['Twaalf. Dat staat op de lijst.', 'Twelve. It says so on the list.']],
+  ),
+  lesson(
+    'upkeep',
+    'Maintenance',
+    [
+      ['persluchtpistool', 'het persluchtpistool', 'the air blow gun', '💨'],
+      ['steeksleutel', 'de steeksleutel', 'the open-end spanner', '🔧'],
+      ['oliekannetje', 'het oliekannetje', 'the oil can', '🛢️'],
+      ['smeerpistool', 'het smeerpistool', 'the grease gun', '🧈'],
+      ['lekbak', 'de lekbak', 'the drip tray (it catches leaking oil)', '💧'],
+      ['poetsdoek', 'de poetsdoek', 'the cleaning rag', '🧣'],
+    ],
+    [
+      ['Er lekt olie. Zet de lekbak eronder.', 'Oil is leaking. Put the drip tray under it.'],
+      ['Veeg de olie weg met een poetsdoek.', 'Wipe the oil away with a cleaning rag.'],
+      ['Richt het persluchtpistool nooit op iemand.', 'Never point the air blow gun at someone.'],
+    ],
+    [['Wanneer smeren we de machine?', 'When do we grease the machine?'], ['Elke maandag, voor de eerste dienst.', 'Every Monday, before the first shift.']],
+  ),
+]);
+
 // ---- In the shop, and Time, money and measures (docs/entree-aanvulling.md, part 5) ----
 // Basis units (no sector of their own), after the sector units: the course of every existing
 // sector keeps its order, the two units come at the end of it.
@@ -2830,5 +2916,7 @@ export const workUnits: Unit[] = [
   afbouwUnit,
   // Bouw's third own unit (20 November 2026), at the very end (see "Bricks, wood and fixing" above).
   ruwbouwUnit,
+  // Productie's second own unit (21 November 2026), at the very end (see "Machines and tools" above).
+  machinesUnit,
 ];
 

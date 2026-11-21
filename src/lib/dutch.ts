@@ -69,6 +69,9 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['inbussleutel', 5],
   ['strijkvaatje', 6],
   ['schuurpapier', 6],
+  // Machines en gereedschap (21 November 2026).
+  ['bedieningspaneel', 10],
+  ['persluchtpistool', [4, 9]],
 ];
 
 export const SHY = '\u00ad';

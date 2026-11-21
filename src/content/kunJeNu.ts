@@ -287,8 +287,14 @@ export const KUN_TAAL: KunOnderwerp[] = [
   // Metselen, hout en vastmaken (20 November 2026): two lines for now; the translations follow
   // with those of its lessons (src/content/translationPending.ts).
   onderwerp('u.ruwbouw', 'Metselen, hout en vastmaken', [
-    ['Ik kan om de handzaag of de accuboor vragen.', 'A1', 'spreken', 'I can ask for tools like the handsaw or the cordless drill.'],
+    ['Ik kan om de handzaag of de accuboor vragen.', 'A1', 'spreken', 'I can ask for the handsaw or the cordless drill.'],
     ['Ik kan vragen hoe ik een plank vastmaak.', 'A1', 'gesprekken', 'I can ask how I fix a plank.'],
+  ]),
+  // Machines en gereedschap (21 November 2026): two lines; the translations follow with those of
+  // its lessons (src/content/translationPending.ts).
+  onderwerp('u.machines', 'Machines en gereedschap', [
+    ['Ik kan zeggen dat de afscherming kapot is.', 'A1', 'spreken', 'I can say that the machine guard is broken.'],
+    ['Ik kan vragen hoe vaak ik een monster neem.', 'A1', 'gesprekken', 'I can ask how often I take a sample.'],
   ]),
 ];
 

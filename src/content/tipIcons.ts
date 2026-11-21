@@ -52,6 +52,11 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '⬜': 'w.vierkant',
   '🔺': 'w.geodriehoek',
   '🏁': 'w.oppervlakte',
+  // Machines en gereedschap (u.machines, 21 November 2026): each tip shows a word of its own lesson.
+  '🚧': 'w.afscherming',
+  '🔬': 'w.loep',
+  '🎁': 'w.verpakking',
+  '💧': 'w.lekbak',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

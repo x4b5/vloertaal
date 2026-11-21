@@ -2184,10 +2184,83 @@ const bouwMoreTips = [
   ),
 ];
 
+// ---- Machines and tools (u.machines, the owner's request, 21 November 2026) ----
+// One tip per lesson of the second own unit of Productie (./work.ts machinesUnit). None of them
+// states a right, a law or an amount: they are about how the work is done (NONE), or about rules
+// that differ per company (HOUSE_LINE: how a machine is locked, which list, which bin). The short
+// situations are in tests/situationLength.test.ts.
+
+const machinesTips = [
+  // How a machine is made safe before you reach in (lockout) differs per company: HOUSE_LINE.
+  tipFor(
+    'atmachine',
+    '🚧',
+    'The guard stays on',
+    'The moving parts of a machine can pull in a hand, a sleeve or hair in less than a second. The guard is there for that. Never take it away, and never reach behind it while the machine runs. Does a guard or a sensor not work? Then the machine is not safe: stop it and tell your team leader. Is something stuck? First stop the machine, and make sure nobody can start it while you work. How that is done differs per company: ask for the explanation before you start.',
+    ['De afscherming is kapot.', 'The machine guard is broken.'],
+    'A box is stuck in the machine, right behind the guard. The machine runs. What do you do?',
+    [
+      'Stop the machine first, then get help.',
+      'Reach in quickly and pull the box out.',
+      'Open the guard while it runs.',
+    ],
+    'A running machine can pull your hand in before you can react. Stopping it takes a moment; a hurt hand takes months.',
+    HOUSE_LINE,
+  ),
+  // Which list and how often you check differ per company: HOUSE_LINE.
+  tipFor(
+    'inspect',
+    '🔬',
+    'Write down what you check',
+    'In a factory you check the products during the work: you weigh them, you measure them, or you look at them closely. Write every check on the list right away, with the time. Not later, from memory. Is one product not right? Put it in the reject bin and look carefully at the next ones. Are more products wrong? Then something is wrong with the machine. Tell your team leader right away. A problem that is found early saves a lot of products.',
+    ['Er zijn meer producten fout.', 'More products are wrong.'],
+    'The scales show that three products in a row are too light. What do you do?',
+    [
+      'Tell your team leader right away.',
+      'Put them back on the line.',
+      'Say nothing: it happens.',
+    ],
+    'Three wrong products in a row point to a problem in the machine. The sooner you tell, the fewer products go to waste.',
+    HOUSE_LINE,
+  ),
+  // Where the old blades go differs per company: HOUSE_LINE.
+  tipFor(
+    'packing',
+    '🎁',
+    'Cut away from your body',
+    'Packing is fast work, and a snap-off knife is very sharp. Always cut away from your body and away from your other hand. Push the blade back in after every cut, also when you put the knife down for a moment. Snap off a blunt piece carefully, and throw it in the box for old blades, not in the normal bin. The sealing machine and the heat gun for shrink wrap get very hot: do not touch the hot parts. And check every box: the right product, the right number, and the label straight.',
+    ['Ik schuif het mes eerst terug.', 'I push the knife back in first.'],
+    'You put the snap-off knife on the table for a moment. The blade is still out. What do you do?',
+    [
+      'Push the blade back in first.',
+      'Leave it: you need it again soon.',
+      'Put it in your pocket like this.',
+    ],
+    'An open blade on a table or in a pocket can cut you or a colleague. Pushing it back takes one second.',
+    HOUSE_LINE,
+  ),
+  // Who may do which maintenance, and where oily rags go, differ per company: HOUSE_LINE.
+  tipFor(
+    'upkeep',
+    '💧',
+    'A clean machine shows its problems',
+    'Small maintenance is often part of the work: wiping, oiling and greasing. Only do it when the machine is off, and when you have learned how. A clean machine is easy to check: you see a leak or a loose part right away. Oil on the floor is slippery. Put a drip tray under a leak, wipe the floor, and tell your team leader. Throw oily rags in the special bin. Never point an air blow gun at a person, and never clean your clothes or skin with it.',
+    ['De machine lekt olie.', 'The machine is leaking oil.'],
+    'You see a small pool of oil under the machine. What do you do?',
+    [
+      'Put a drip tray under it, and report it.',
+      'Leave it: it is only a little.',
+      'Put some paper on it, and go on.',
+    ],
+    'A leak gets bigger, and oil on the floor makes people slip. Found early, it is a small repair.',
+    HOUSE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

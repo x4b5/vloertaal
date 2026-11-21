@@ -17,6 +17,16 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-21',
+    items: [
+      'Bouw: Tegels, stuc en verf heeft nu vijf lessen. Nieuw: verven, en het werk voor het verven (schuren, plamuren, afplakken).',
+      'Nieuw onderwerp in Taal voor de Bouw: Metselen, hout en vastmaken. Wie Bouw kiest, krijgt het direct na Tegels, stuc en verf. Zes lessen: metselen, een rechte muur, werken met hout, aftekenen, boren en schroeven, en vastzetten.',
+      'Nieuw onderwerp in Taal voor de Productie: Machines en gereedschap. Wie Productie kiest, krijgt het direct na In de productie. Vier lessen: aan de machine, meten en keuren, inpakken, en onderhoud. Met vier tips van "Zo werkt het hier": de afscherming blijft erop, schrijf op wat je controleert, snijd van je af, en een schone machine laat zien wat er mis is.',
+      'Rekenen heeft drie lessen meer: vormen, hoeken en ronde vormen, en lengte, oppervlakte en inhoud.',
+      'Elk nieuw woord heeft een eigen tekening. De vertaling in de hulptalen volgt: tot dan staat bij deze lessen het Engels. De stemmen volgen ook: tot dan leest de stem van je telefoon de nieuwe zinnen voor.',
+    ],
+  },
+  {
     date: '2026-11-20',
     items: [
       'Nieuw bij de start, na de vraag over het land: een eigen pagina met één knop. Daar staat: "Wat je leert, staat alleen op deze telefoon. Gebruik steeds deze telefoon." Vloertaal heeft geen account. Wie op een andere telefoon verdergaat, begint daar opnieuw, of neemt de voortgang mee als bestand (Instellingen, "Bewaar je voortgang"). In alle hulptalen; de vertalingen zijn nog niet nagekeken door een moedertaalspreker.',

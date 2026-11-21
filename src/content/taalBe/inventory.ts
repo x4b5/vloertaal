@@ -299,6 +299,14 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.screw': L('A', 'A', 'nakijken: de Vlaamse woorden voor de accuboor en de plug'),
     'l.fix': L('A', 'A', 'nakijken: het Vlaamse woord voor de inbussleutel'),
   } },
+  // Machines en gereedschap (21 November 2026): how the work is done, the same in Belgium. The
+  // tips name no rule, right or amount. Flemish words to check.
+  'u.machines': { kind: 'A', lessons: {
+    'l.atmachine': L('A', 'A', 'nakijken: de Vlaamse woorden voor het bedieningspaneel en de afscherming ("de beveiliging"?)'),
+    'l.inspect': L('A', 'A', 'nakijken: de meetklok en de afkeurbak; "het staal" voor het monster'),
+    'l.packing': L('A', 'A', 'nakijken: het afbreekmes heet in Vlaanderen vaak "de cutter"; het tapepistool, de sealmachine'),
+    'l.upkeep': L('A', 'A', 'nakijken: de steeksleutel, het smeerpistool ("het vetspuit"?), de poetsdoek ("de poetslap")'),
+  } },
 };
 
 /** The units of the inventory that need a Belgian version (B or C). */

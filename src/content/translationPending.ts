@@ -11,10 +11,12 @@ export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
   'paint', 'prep',
   'brick', 'wall', 'wood', 'square', 'screw', 'fix',
   'shapes', 'angles', 'size',
+  // "Machines en gereedschap" (u.machines, 21 November 2026).
+  'atmachine', 'inspect', 'packing', 'upkeep',
 ];
 
 /** Units whose title waits for its translations too. */
-const PENDING_UNITS: readonly string[] = ['u.ruwbouw'];
+const PENDING_UNITS: readonly string[] = ['u.ruwbouw', 'u.machines'];
 
 const pendingIds = new Set<string>(PENDING_UNITS);
 for (const l of workUnits.flatMap((u) => u.lessons)) {
