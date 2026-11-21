@@ -51,6 +51,24 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['zevenenveertig', 7],
   ['vierenzeventig', 6],
   ['verzamelplaats', 8],
+  // Tegels, stuc en verf (u.afbouw, 20 November 2026): the tiler's and plasterer's compounds, shown
+  // big on a word card.
+  ['tegelsnijder', 5],
+  ['tegelkruisje', 5],
+  ['tegelkruisjes', 5],
+  ['hoekprofiel', 4],
+  ['sponsspaan', 5],
+  ['oplegspaan', 5],
+  // Metselen, hout en vastmaken and the shapes of Rekenen (20 November 2026).
+  ['schroevendraaier', 9],
+  ['kruisschroevendraaier', [5, 14]],
+  ['timmermanshamer', 10],
+  ['parallellogram', 10],
+  ['metseltroffel', 6],
+  ['lagenmaatlat', [5, 9]],
+  ['inbussleutel', 5],
+  ['strijkvaatje', 6],
+  ['schuurpapier', 6],
 ];
 
 export const SHY = '\u00ad';

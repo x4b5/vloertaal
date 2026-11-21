@@ -168,6 +168,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "On demande si la porte est fermée : non, et on la ferme maintenant.", // nieuw, nalezen
     'c.fillempty.a.why': "On demande s’il est plein : oui, et on le vide.", // nieuw, nalezen
     'c.order.a.why': "On te demande de le faire maintenant : oui, et ce qui vient après.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "On demande où est le malaxeur : un endroit, et ce qui est tout près.", // nieuw, nalezen
+    'c.tiling.a.why': "On demande où commencer : au milieu, sur la ligne d’axe.", // nieuw, nalezen
+    'c.plaster.a.why': "On demande si le mur est sec : non, et combien de temps attendre.", // nieuw, nalezen
   },
 };
 

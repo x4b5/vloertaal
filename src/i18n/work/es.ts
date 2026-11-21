@@ -2287,6 +2287,67 @@ const t: CultureTranslation = {
     'c.order.o2': "Haces la primera, y confías en recordar el resto.", // nieuw, nalezen
     'c.order.o3': "No haces nada: no sabes las tres.", // nieuw, nalezen
     'c.order.w': "Preguntar enseguida cuesta diez segundos. Más tarde tu encargado quizá ya no está, y entonces esperas o adivinas.", // nieuw, nalezen
+    'u.afbouw': "Azulejos, yeso y pintura", // nieuw, nalezen
+    'l.tiletools': "Las herramientas del alicatador", // nieuw, nalezen
+    'w.lijmkam': "la llana dentada (extiende el cemento cola en surcos)", // nieuw, nalezen
+    'w.troffel': "la paleta, la cuchara de albañil", // nieuw, nalezen
+    'w.tegelsnijder': "la cortadora de azulejos", // nieuw, nalezen
+    'w.nijptang': "las tenazas (para quitar trocitos de un azulejo)", // nieuw, nalezen
+    'w.mixer': "la batidora (mezcla el cemento cola o el yeso en un cubo)", // nieuw, nalezen
+    'w.duimstok': "el metro plegable", // nieuw, nalezen
+    's.tiletools.1': "Pásame la llana dentada un momento.", // nieuw, nalezen
+    's.tiletools.2': "Corto el azulejo con la cortadora de azulejos.", // nieuw, nalezen
+    's.tiletools.3': "Mide primero con el metro plegable.", // nieuw, nalezen
+    'c.tiletools.q': "¿Dónde está la batidora?", // nieuw, nalezen
+    'c.tiletools.a': "Junto al cubo, al lado de la puerta.", // nieuw, nalezen
+    'c.tiletools': "Limpia tus herramientas antes de que se endurezca el cemento cola", // nieuw, nalezen
+    'c.tiletools.b': "El cemento cola y el yeso se endurecen rápido, también en tus herramientas. Así que limpia enseguida la llana dentada, la paleta y la batidora en un cubo de agua, también antes de tu pausa. El cemento cola duro no se quita, y una llana dentada con cemento cola duro hace malos surcos. No tires el agua sucia en un fregadero ni en un desagüe: se atasca. Pregunta dónde se puede echar el agua. La batidora: sujétala con las dos manos, y ponla en marcha despacio. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.tiletools.p': "Estoy limpiando un momento la llana dentada.", // nieuw, nalezen
+    'c.tiletools.s': "Es la hora de tu pausa. Tu llana dentada está llena de cemento cola fresco. ¿Qué haces?", // nieuw, nalezen
+    'c.tiletools.o1': "La limpias en agua, y luego haces tu pausa.", // nieuw, nalezen
+    'c.tiletools.o2': "La dejas así: la limpias después del trabajo.", // nieuw, nalezen
+    'c.tiletools.o3': "La metes en el cubo de cemento cola.", // nieuw, nalezen
+    'c.tiletools.w': "El cemento cola también se endurece durante tu pausa. Una llana dentada limpia hace buenos surcos, y los azulejos se pegan bien. Con cemento cola duro, limpiarla es mucho trabajo, o necesitas una herramienta nueva.", // nieuw, nalezen
+    'l.tiling': "Azulejos, cemento cola y la línea central", // nieuw, nalezen
+    'w.tegel': "el azulejo, la baldosa", // nieuw, nalezen
+    'w.tegellijm': "el cemento cola (el pegamento para azulejos)", // nieuw, nalezen
+    'w.tegelkruisje': "la cruceta, el separador (una pequeña cruz entre los azulejos)", // nieuw, nalezen
+    'w.hartlijn': "la línea central (desde ella empiezas a colocar los azulejos)", // nieuw, nalezen
+    'w.tegelplaat': "el tablero de práctica (un tablero para practicar la colocación de azulejos)", // nieuw, nalezen
+    'w.potlood': "el lápiz", // nieuw, nalezen
+    's.tiling.1': "El cemento cola todavía está húmedo.", // nieuw, nalezen
+    's.tiling.2': "Pon una cruceta entre los azulejos.", // nieuw, nalezen
+    's.tiling.3': "Primero traza la línea central con el lápiz.", // nieuw, nalezen
+    'c.tiling.q': "¿Por dónde empiezo con los azulejos?", // nieuw, nalezen
+    'c.tiling.a': "En el medio, en la línea central.", // nieuw, nalezen
+    'c.tiling': "Empieza en la línea central, con poco cemento cola", // nieuw, nalezen
+    'c.tiling.b': "Un alicatador no empieza en una esquina. Primero trazas la línea central, con un lápiz y el nivel, y empiezas allí. Así los azulejos cortados de los dos extremos tienen el mismo tamaño. Extiende solo el cemento cola que puedas cubrir con azulejos en poco tiempo. Al cemento cola que espera demasiado se le forma una piel seca, y entonces los azulejos no se pegan bien. Pon una cruceta en cada cruce, para que todas las juntas sean iguales. Comprueba a menudo con el nivel: un azulejo torcido es fácil de arreglar ahora, y difícil de arreglar mañana.", // nieuw, nalezen
+    'c.tiling.p': "No extiendo demasiado cemento cola a la vez.", // nieuw, nalezen
+    'c.tiling.s': "Después de una llamada larga, el cemento cola de la pared tiene una piel seca. ¿Qué haces?", // nieuw, nalezen
+    'c.tiling.o1': "Lo raspas, y extiendes cemento cola nuevo.", // nieuw, nalezen
+    'c.tiling.o2': "Aprietas los azulejos encima de todos modos.", // nieuw, nalezen
+    'c.tiling.o3': "Lo mojas con una esponja, y sigues.", // nieuw, nalezen
+    'c.tiling.w': "El cemento cola con una piel seca no sujeta bien un azulejo. Más tarde el azulejo se puede soltar, y entonces hay que hacer el trabajo otra vez.", // nieuw, nalezen
+    'l.plaster': "Enlucir paredes", // nieuw, nalezen
+    'w.stucspaan': "la llana de acero (una llana plana para alisar el yeso)", // nieuw, nalezen
+    'w.oplegspaan': "el esparavel (una tabla plana en la que sostienes el yeso)", // nieuw, nalezen
+    'w.spackmes': "la espátula (un cuchillo ancho y plano)", // nieuw, nalezen
+    'w.rei': "la regla (una barra larga y recta para nivelar el yeso)", // nieuw, nalezen
+    'w.sponsspaan': "la llana de esponja, el fratás de esponja", // nieuw, nalezen
+    'w.hoekprofiel': "el guardavivos, el esquinero (una tira de metal para una esquina recta)", // nieuw, nalezen
+    's.plaster.1': "Primero pon el guardavivos en la esquina.", // nieuw, nalezen
+    's.plaster.2': "Alisa la pared con la llana de acero.", // nieuw, nalezen
+    's.plaster.3': "Pasa la regla por la pared.", // nieuw, nalezen
+    'c.plaster.q': "¿Ya está seca la pared?", // nieuw, nalezen
+    'c.plaster.a': "No, espera un día más.", // nieuw, nalezen
+    'c.plaster': "El yeso necesita tiempo para secarse", // nieuw, nalezen
+    'c.plaster.b': "El yeso nuevo sigue húmedo durante mucho tiempo. Una pared húmeda es más oscura que una seca. El pintor solo puede empezar cuando la pared está seca por todas partes, y eso puede tardar días o semanas. No la seques más rápido con un calefactor: entonces el yeso se puede agrietar. ¿Alguien quiere pintar demasiado pronto? Di que la pared todavía no está seca. Y antes de empezar, tapa el suelo, las ventanas y los enchufes: el yeso es difícil de quitar.", // nieuw, nalezen
+    'c.plaster.p': "La pared todavía está húmeda. Todavía no se puede pintar.", // nieuw, nalezen
+    'c.plaster.s': "El pintor quiere empezar mañana. El yeso nuevo todavía tiene manchas oscuras. ¿Qué haces?", // nieuw, nalezen
+    'c.plaster.o1': "Le dices al pintor: la pared todavía no está seca.", // nieuw, nalezen
+    'c.plaster.o2': "Esta noche le pones un calefactor delante.", // nieuw, nalezen
+    'c.plaster.o3': "No dices nada: el pintor ya lo verá.", // nieuw, nalezen
+    'c.plaster.w': "Las manchas oscuras quieren decir que el yeso todavía está húmedo. La pintura en una pared húmeda se puede despegar, y un calefactor puede hacer grietas. Esperar cuesta menos que hacerlo otra vez.", // nieuw, nalezen
   },
 };
 

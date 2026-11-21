@@ -86,6 +86,7 @@ export const TIP_LEADS: Readonly<Record<string, readonly number[]>> = {
   'c.food': [0, 1, 2, 5, 6], // the hygiene rules are for everyone and for the food; a wound or sick: report it
   'c.parcel': [0, 1, 3, 5], // not at home: the company's rules; broken: a photo as proof, report it
   'c.road': [0, 2, 7, 8, 9], // no phone in your hand; breaks; who decides your hours and route: maybe an employee
+  'c.tiling': [0, 1, 3, 4], // start at the centre line; a little glue at a time, glue with a dry skin does not hold
   'c.newcolleague': [0, 2, 3, 4], // what was hard for you is hard for them; show it, let them copy it; not "Snap je het?" but "Laat eens zien"
   'c.feelwell': [2, 3, 4, 5, 8, 9], // not alone, not weak; who to talk to; thoughts of suicide: 113
   'c.backtowork': [0, 1, 2, 3, 7], // betermelden; step by step, fewer hours or lighter work; the company doctor; say what you can and cannot do yet

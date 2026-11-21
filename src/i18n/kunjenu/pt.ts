@@ -120,6 +120,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Consigo dizer que o cliente não está em casa.", // nieuw, nalezen
     'kjn.u.delivery.2': "Consigo pedir aos vizinhos que fiquem com uma encomenda.", // nieuw, nalezen
     'kjn.u.delivery.3': "Consigo perguntar quem decide a minha rota e os meus horários.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Consigo pedir a talocha dentada ou a colher de pedreiro.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Consigo perguntar por onde começo com os azulejos.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Consigo dizer que a parede ainda não está seca.", // nieuw, nalezen
   },
 };
 

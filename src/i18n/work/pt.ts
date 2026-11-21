@@ -2287,6 +2287,67 @@ const t: CultureTranslation = {
     'c.order.o2': "Fazes a primeira, e esperas lembrar-te do resto.", // nieuw, nalezen
     'c.order.o3': "Não fazes nada: não sabes as três.", // nieuw, nalezen
     'c.order.w': "Perguntar logo custa dez segundos. Mais tarde o teu chefe pode já não estar lá, e então ficas à espera ou a adivinhar.", // nieuw, nalezen
+    'u.afbouw': "Azulejos, estuque e pintura", // nieuw, nalezen
+    'l.tiletools': "As ferramentas do ladrilhador", // nieuw, nalezen
+    'w.lijmkam': "a talocha dentada (espalha o cimento-cola em sulcos)", // nieuw, nalezen
+    'w.troffel': "a colher de pedreiro", // nieuw, nalezen
+    'w.tegelsnijder': "o cortador de azulejos", // nieuw, nalezen
+    'w.nijptang': "a torquês (para tirar pedacinhos de um azulejo)", // nieuw, nalezen
+    'w.mixer': "o misturador (mistura o cimento-cola ou o estuque num balde)", // nieuw, nalezen
+    'w.duimstok': "o metro articulado", // nieuw, nalezen
+    's.tiletools.1': "Passa-me aí a talocha dentada.", // nieuw, nalezen
+    's.tiletools.2': "Corto o azulejo com o cortador de azulejos.", // nieuw, nalezen
+    's.tiletools.3': "Mede primeiro com o metro articulado.", // nieuw, nalezen
+    'c.tiletools.q': "Onde está o misturador?", // nieuw, nalezen
+    'c.tiletools.a': "Ao pé do balde, ao lado da porta.", // nieuw, nalezen
+    'c.tiletools': "Limpa as ferramentas antes de o cimento-cola endurecer", // nieuw, nalezen
+    'c.tiletools.b': "O cimento-cola e o estuque endurecem depressa, também nas ferramentas. Por isso, limpa logo a talocha dentada, a colher e o misturador num balde de água, também antes da tua pausa. O cimento-cola duro já não sai, e uma talocha dentada com cimento-cola duro faz sulcos maus. Não deites a água suja num lava-loiça nem num ralo: fica entupido. Pergunta onde se pode deitar a água. O misturador: segura-o com as duas mãos, e liga-o devagar. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.tiletools.p': "Estou só a limpar a talocha dentada.", // nieuw, nalezen
+    'c.tiletools.s': "É a hora da tua pausa. A tua talocha dentada está cheia de cimento-cola fresco. O que fazes?", // nieuw, nalezen
+    'c.tiletools.o1': "Limpa-la em água, e depois fazes a pausa.", // nieuw, nalezen
+    'c.tiletools.o2': "Deixa-la assim: limpas depois do trabalho.", // nieuw, nalezen
+    'c.tiletools.o3': "Mete-la no balde do cimento-cola.", // nieuw, nalezen
+    'c.tiletools.w': "O cimento-cola também endurece durante a pausa. Uma talocha dentada limpa faz bons sulcos, e os azulejos colam bem. Com cimento-cola duro, limpá-la dá muito trabalho, ou precisas de uma ferramenta nova.", // nieuw, nalezen
+    'l.tiling': "Azulejos, cimento-cola e a linha central", // nieuw, nalezen
+    'w.tegel': "o azulejo, o ladrilho", // nieuw, nalezen
+    'w.tegellijm': "o cimento-cola (a cola para azulejos)", // nieuw, nalezen
+    'w.tegelkruisje': "a cruzeta, o espaçador (uma pequena cruz entre os azulejos)", // nieuw, nalezen
+    'w.hartlijn': "a linha central (começas a assentar os azulejos a partir dela)", // nieuw, nalezen
+    'w.tegelplaat': "a placa de treino (uma placa para treinar a assentar azulejos)", // nieuw, nalezen
+    'w.potlood': "o lápis", // nieuw, nalezen
+    's.tiling.1': "O cimento-cola ainda está molhado.", // nieuw, nalezen
+    's.tiling.2': "Põe uma cruzeta entre os azulejos.", // nieuw, nalezen
+    's.tiling.3': "Primeiro risca a linha central com o lápis.", // nieuw, nalezen
+    'c.tiling.q': "Por onde começo com os azulejos?", // nieuw, nalezen
+    'c.tiling.a': "No meio, na linha central.", // nieuw, nalezen
+    'c.tiling': "Começa na linha central, com pouco cimento-cola", // nieuw, nalezen
+    'c.tiling.b': "Um ladrilhador não começa num canto. Primeiro riscas a linha central, com um lápis e o nível, e começas aí. Assim, os azulejos cortados nas duas pontas ficam do mesmo tamanho. Espalha só o cimento-cola que consegues cobrir com azulejos em pouco tempo. O cimento-cola que fica muito tempo parado ganha uma pele seca, e então os azulejos não colam bem. Põe uma cruzeta em cada cruzamento, para todas as juntas ficarem iguais. Verifica muitas vezes com o nível: um azulejo torto é fácil de corrigir agora, e difícil de corrigir amanhã.", // nieuw, nalezen
+    'c.tiling.p': "Não espalho cimento-cola demais de uma vez.", // nieuw, nalezen
+    'c.tiling.s': "Depois de uma chamada longa, o cimento-cola na parede tem uma pele seca. O que fazes?", // nieuw, nalezen
+    'c.tiling.o1': "Raspa-lo, e espalhas cimento-cola novo.", // nieuw, nalezen
+    'c.tiling.o2': "Assentas os azulejos nele na mesma.", // nieuw, nalezen
+    'c.tiling.o3': "Molha-lo com uma esponja, e continuas.", // nieuw, nalezen
+    'c.tiling.w': "Cimento-cola com uma pele seca não segura bem um azulejo. Mais tarde o azulejo pode descolar, e então é preciso fazer o trabalho outra vez.", // nieuw, nalezen
+    'l.plaster': "Estucar", // nieuw, nalezen
+    'w.stucspaan': "a talocha de aço (uma talocha plana para alisar o estuque)", // nieuw, nalezen
+    'w.oplegspaan': "o porta-massa (uma tábua plana onde seguras o estuque)", // nieuw, nalezen
+    'w.spackmes': "a espátula (uma faca larga e plana)", // nieuw, nalezen
+    'w.rei': "a régua (uma barra comprida e direita para nivelar o estuque)", // nieuw, nalezen
+    'w.sponsspaan': "a talocha de esponja", // nieuw, nalezen
+    'w.hoekprofiel': "a cantoneira (uma tira de metal para uma esquina direita)", // nieuw, nalezen
+    's.plaster.1': "Primeiro põe a cantoneira na esquina.", // nieuw, nalezen
+    's.plaster.2': "Alisa a parede com a talocha de aço.", // nieuw, nalezen
+    's.plaster.3': "Passa a régua pela parede.", // nieuw, nalezen
+    'c.plaster.q': "A parede já está seca?", // nieuw, nalezen
+    'c.plaster.a': "Não, espera mais um dia.", // nieuw, nalezen
+    'c.plaster': "O estuque precisa de tempo para secar", // nieuw, nalezen
+    'c.plaster.b': "O estuque novo fica molhado durante muito tempo. Uma parede molhada é mais escura do que uma seca. O pintor só pode começar quando a parede estiver seca em todo o lado, e isso pode levar dias ou semanas. Não seques mais depressa com um aquecedor: o estuque pode rachar. Alguém quer pintar cedo demais? Diz que a parede ainda não está seca. E antes de começares, tapa o chão, as janelas e as tomadas: o estuque é difícil de tirar.", // nieuw, nalezen
+    'c.plaster.p': "A parede ainda está molhada. Ainda não se pode pintar.", // nieuw, nalezen
+    'c.plaster.s': "O pintor quer começar amanhã. O estuque novo ainda tem manchas escuras. O que fazes?", // nieuw, nalezen
+    'c.plaster.o1': "Dizes ao pintor: a parede ainda não está seca.", // nieuw, nalezen
+    'c.plaster.o2': "Pões um aquecedor à frente dela esta noite.", // nieuw, nalezen
+    'c.plaster.o3': "Não dizes nada: o pintor vai ver.", // nieuw, nalezen
+    'c.plaster.w': "Manchas escuras querem dizer que o estuque ainda está molhado. A tinta numa parede molhada pode descolar, e um aquecedor pode fazer rachas. Esperar custa menos do que fazer tudo outra vez.", // nieuw, nalezen
   },
 };
 

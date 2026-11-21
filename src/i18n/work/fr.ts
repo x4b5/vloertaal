@@ -2287,6 +2287,67 @@ const t: CultureTranslation = {
     'c.order.o2': "Tu fais la première, et tu espères te souvenir du reste.", // nieuw, nalezen
     'c.order.o3': "Tu ne fais rien : tu ne connais pas les trois.", // nieuw, nalezen
     'c.order.w': "Demander tout de suite prend dix secondes. Plus tard, ton responsable sera peut-être parti, et alors tu attends ou tu devines.", // nieuw, nalezen
+    'u.afbouw': "Carrelage, plâtre et peinture", // nieuw, nalezen
+    'l.tiletools': "Les outils pour le carrelage", // nieuw, nalezen
+    'w.lijmkam': "la spatule crantée (elle étale la colle à carrelage en sillons)", // nieuw, nalezen
+    'w.troffel': "la truelle", // nieuw, nalezen
+    'w.tegelsnijder': "le coupe-carreau", // nieuw, nalezen
+    'w.nijptang': "la pince à rogner (pour enlever des petits morceaux d’un carreau)", // nieuw, nalezen
+    'w.mixer': "le malaxeur (il mélange la colle ou le plâtre dans un seau)", // nieuw, nalezen
+    'w.duimstok': "le mètre pliant", // nieuw, nalezen
+    's.tiletools.1': "Passe-moi la spatule crantée une seconde.", // nieuw, nalezen
+    's.tiletools.2': "Je coupe le carreau avec le coupe-carreau.", // nieuw, nalezen
+    's.tiletools.3': "Mesure d’abord avec le mètre pliant.", // nieuw, nalezen
+    'c.tiletools.q': "Où est le malaxeur ?", // nieuw, nalezen
+    'c.tiletools.a': "Près du seau, à côté de la porte.", // nieuw, nalezen
+    'c.tiletools': "Nettoie tes outils avant que la colle durcisse", // nieuw, nalezen
+    'c.tiletools.b': "La colle à carrelage et le plâtre durcissent vite, aussi sur tes outils. Alors nettoie tout de suite la spatule crantée, la truelle et le malaxeur dans un seau d’eau, aussi avant ta pause. La colle dure ne part plus, et une spatule crantée avec de la colle dure fait de mauvais sillons. Ne vide pas l’eau sale dans un évier ou dans une évacuation : ça se bouche. Demande où l’eau peut aller. Le malaxeur : tiens-le à deux mains, et démarre-le doucement. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.tiletools.p': "Je nettoie vite la spatule crantée.", // nieuw, nalezen
+    'c.tiletools.s': "C’est l’heure de ta pause. Ta spatule crantée est pleine de colle fraîche. Que fais-tu ?", // nieuw, nalezen
+    'c.tiletools.o1': "Tu la nettoies dans l’eau, puis tu prends ta pause.", // nieuw, nalezen
+    'c.tiletools.o2': "Tu la laisses : tu la nettoies après le travail.", // nieuw, nalezen
+    'c.tiletools.o3': "Tu la mets dans le seau de colle.", // nieuw, nalezen
+    'c.tiletools.w': "La colle à carrelage durcit aussi pendant ta pause. Une spatule crantée propre fait de bons sillons, et les carreaux collent bien. De la colle dure dessus, c’est beaucoup de travail, ou un nouvel outil.", // nieuw, nalezen
+    'l.tiling': "Carreaux, colle et ligne d’axe", // nieuw, nalezen
+    'w.tegel': "le carreau", // nieuw, nalezen
+    'w.tegellijm': "la colle à carrelage", // nieuw, nalezen
+    'w.tegelkruisje': "le croisillon (une petite croix entre les carreaux)", // nieuw, nalezen
+    'w.hartlijn': "la ligne d’axe (on commence le carrelage à partir de cette ligne)", // nieuw, nalezen
+    'w.tegelplaat': "la plaque d’exercice (une plaque pour s’entraîner à poser des carreaux)", // nieuw, nalezen
+    'w.potlood': "le crayon", // nieuw, nalezen
+    's.tiling.1': "La colle à carrelage est encore humide.", // nieuw, nalezen
+    's.tiling.2': "Mets un croisillon entre les carreaux.", // nieuw, nalezen
+    's.tiling.3': "Trace d’abord la ligne d’axe avec le crayon.", // nieuw, nalezen
+    'c.tiling.q': "Je commence où, avec les carreaux ?", // nieuw, nalezen
+    'c.tiling.a': "Au milieu, sur la ligne d’axe.", // nieuw, nalezen
+    'c.tiling': "Commence à la ligne d’axe, avec peu de colle", // nieuw, nalezen
+    'c.tiling.b': "On ne commence pas le carrelage dans un coin. Tu traces d’abord la ligne d’axe, avec un crayon et le niveau à bulle, et tu commences là. Comme ça, les carreaux coupés aux deux bouts ont la même taille. N’étale que la colle que tu peux couvrir de carreaux en peu de temps. La colle qui attend trop longtemps fait une peau sèche, et alors les carreaux ne collent pas bien. Mets un croisillon à chaque croisement, pour que tous les joints soient pareils. Vérifie souvent avec le niveau à bulle : un carreau de travers est facile à corriger maintenant, et difficile demain.", // nieuw, nalezen
+    'c.tiling.p': "Je n’étale pas trop de colle à la fois.", // nieuw, nalezen
+    'c.tiling.s': "Après un long coup de téléphone, la colle sur le mur a une peau sèche. Que fais-tu ?", // nieuw, nalezen
+    'c.tiling.o1': "Tu l’enlèves, et tu étales de la colle fraîche.", // nieuw, nalezen
+    'c.tiling.o2': "Tu poses quand même les carreaux dessus.", // nieuw, nalezen
+    'c.tiling.o3': "Tu la mouilles avec une éponge, et tu continues.", // nieuw, nalezen
+    'c.tiling.w': "La colle avec une peau sèche ne tient pas bien un carreau. Plus tard, le carreau peut se décoller, et alors il faut refaire le travail.", // nieuw, nalezen
+    'l.plaster': "Le plâtrage", // nieuw, nalezen
+    'w.stucspaan': "la lisseuse (une plaque plate en acier pour lisser le plâtre)", // nieuw, nalezen
+    'w.oplegspaan': "la planche à enduit (une planche plate où tu tiens le plâtre)", // nieuw, nalezen
+    'w.spackmes': "le couteau à enduire (un couteau large et plat)", // nieuw, nalezen
+    'w.rei': "la règle de plâtrier (une longue barre droite pour niveler le plâtre)", // nieuw, nalezen
+    'w.sponsspaan': "la taloche éponge", // nieuw, nalezen
+    'w.hoekprofiel': "la cornière d’angle (une bande de métal pour faire un coin bien droit)", // nieuw, nalezen
+    's.plaster.1': "Mets d’abord la cornière sur le coin.", // nieuw, nalezen
+    's.plaster.2': "Lisse le mur avec la lisseuse.", // nieuw, nalezen
+    's.plaster.3': "Tire la règle sur le mur.", // nieuw, nalezen
+    'c.plaster.q': "Le mur est déjà sec ?", // nieuw, nalezen
+    'c.plaster.a': "Non, attends encore un jour.", // nieuw, nalezen
+    'c.plaster': "Le plâtre a besoin de temps pour sécher", // nieuw, nalezen
+    'c.plaster.b': "Le plâtre frais reste mouillé longtemps. Un mur mouillé est plus foncé qu’un mur sec. Le peintre peut commencer seulement quand le mur est sec partout, et ça peut prendre des jours ou des semaines. Ne le sèche pas plus vite avec un chauffage : le plâtre peut alors se fissurer. Quelqu’un veut peindre trop tôt ? Dis que le mur n’est pas encore sec. Et avant de commencer, couvre le sol, les fenêtres et les prises : le plâtre est difficile à enlever.", // nieuw, nalezen
+    'c.plaster.p': "Le mur est encore mouillé. Tu ne peux pas encore peindre.", // nieuw, nalezen
+    'c.plaster.s': "Le peintre veut commencer demain. Le nouveau plâtre a encore des taches foncées. Que fais-tu ?", // nieuw, nalezen
+    'c.plaster.o1': "Tu dis au peintre : le mur n’est pas encore sec.", // nieuw, nalezen
+    'c.plaster.o2': "Tu mets un chauffage devant ce soir.", // nieuw, nalezen
+    'c.plaster.o3': "Tu ne dis rien : le peintre va le voir.", // nieuw, nalezen
+    'c.plaster.w': "Des taches foncées veulent dire que le plâtre est encore mouillé. La peinture sur un mur mouillé peut se décoller, et un chauffage peut faire des fissures. Attendre coûte moins cher que tout refaire.", // nieuw, nalezen
   },
 };
 

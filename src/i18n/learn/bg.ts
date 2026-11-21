@@ -170,6 +170,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Питат дали вратата е затворена: „не“, и я затварят сега.", // nieuw, nalezen
     'c.fillempty.a.why': "Питат дали вече е пълен: „да“, и го изпразват.", // nieuw, nalezen
     'c.order.a.why': "Молят да се направи сега: „да“ и въпрос какво следва.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Питат къде е миксерът: място, и какво има близо до него.", // nieuw, nalezen
+    'c.tiling.a.why': "Питат откъде да се започне: от средата, на централната линия.", // nieuw, nalezen
+    'c.plaster.a.why': "Питат дали стената е суха: „не“, и колко да се чака.", // nieuw, nalezen
   },
 };
 

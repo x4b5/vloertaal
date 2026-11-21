@@ -169,6 +169,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "پرسیدند که دروازه بسته است یا نی: نی، و حالا آن را بسته می‌کند.", // nieuw, nalezen
     'c.fillempty.a.why': "پرسیدند که پر شده یا نی: بلی، و آن را خالی می‌کند.", // nieuw, nalezen
     'c.order.a.why': "خواستند که حالا انجامش بدهد: بلی، و می‌پرسد بعد از آن چه.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "پرسیده‌اند مکسر کجاست: یک جای، و چیزی که نزدیک آن است.", // nieuw, nalezen
+    'c.tiling.a.why': "پرسیده‌اند از کجا شروع کند: در وسط، بالای خط وسط.", // nieuw, nalezen
+    'c.plaster.a.why': "پرسیده‌اند دیوار خشک شده یا نی: نی، و چقدر صبر کند.", // nieuw, nalezen
   },
 };
 

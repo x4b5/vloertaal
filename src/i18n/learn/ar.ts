@@ -170,6 +170,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "السؤال هل الباب مغلق: لا، وإغلاقه الآن.", // nieuw, nalezen
     'c.fillempty.a.why': "السؤال هل صار ممتلئاً: نعم، وإفراغه.", // nieuw, nalezen
     'c.order.a.why': "طلب فعله الآن: نعم، وماذا يأتي بعده.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "السؤال أين الخلّاط: مكان، وما هو قريب منه.", // nieuw, nalezen
+    'c.tiling.a.why': "السؤال من أين البداية: في الوسط، على الخط الأوسط.", // nieuw, nalezen
+    'c.plaster.a.why': "السؤال هل جفّ الحائط: لا، وكم مدة الانتظار.", // nieuw, nalezen
   },
 };
 

@@ -115,6 +115,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "Umiem powiedzieć, że klienta nie ma w domu.", // nieuw, nalezen
     'kjn.u.delivery.2': "Umiem poprosić sąsiadów, żeby przyjęli paczkę.", // nieuw, nalezen
     'kjn.u.delivery.3': "Umiem zapytać, kto decyduje o mojej trasie i moich godzinach.", // nieuw, nalezen
+    'kjn.u.afbouw.1': "Umiem poprosić o pacę zębatą albo kielnię.", // nieuw, nalezen
+    'kjn.u.afbouw.2': "Umiem zapytać, gdzie zaczynam układać płytki.", // nieuw, nalezen
+    'kjn.u.afbouw.3': "Umiem powiedzieć, że ściana nie jest jeszcze sucha.", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 november 2026).
     'kjn.u.communicate.1': "Umiem wyjaśnić, co jest nie tak.", // nieuw, nalezen
     'kjn.u.communicate.2': "Umiem powtórzyć to, co ktoś mi powiedział.", // nieuw, nalezen

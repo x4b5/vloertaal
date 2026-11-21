@@ -170,6 +170,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Pytanie, czy drzwi są zamknięte: nie, i właśnie się je zamyka.", // nieuw, nalezen
     'c.fillempty.a.why': "Pytanie, czy jest już pełny: tak, i właśnie się go opróżnia.", // nieuw, nalezen
     'c.order.a.why': "Prośba, żeby zrobić to teraz: tak, i pytanie, co potem.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Pytanie, gdzie jest mieszadło: miejsce i co jest blisko.", // nieuw, nalezen
+    'c.tiling.a.why': "Pytanie, gdzie zacząć: pośrodku, na linii środkowej.", // nieuw, nalezen
+    'c.plaster.a.why': "Pytanie, czy ściana jest sucha: nie, i jak długo czekać.", // nieuw, nalezen
   },
 };
 

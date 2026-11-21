@@ -170,6 +170,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "እቲ ማዕጾ ተዓጽዩ ድዩ ተሓቲቱ: ኣይፋል፡ ሕጂ ምዕጻዉ ድማ።", // nieuw, nalezen
     'c.fillempty.a.why': "ድሮ መሊኡ ድዩ ተሓቲቱ: እወ፡ ባዶ ምግባሩ ድማ።", // nieuw, nalezen
     'c.order.a.why': "ሕጂ ክግበር ተሓቲቱ: እወ፡ ድሕሪኡ እንታይ ከም ዝመጽእ ድማ።", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "ሚክሰር ኣበይ ከም ዘሎ ተሓቲቱ: ቦታ፡ ኣብ ጥቓኡ እንታይ ከም ዘሎ ድማ።", // nieuw, nalezen
+    'c.tiling.a.why': "ካበይ ከም ዝጅመር ተሓቲቱ: ኣብ ማእከል፡ ኣብቲ ማእከላይ መስመር።", // nieuw, nalezen
+    'c.plaster.a.why': "እቲ መንደቕ ነቒጹ እንተ ኾይኑ ተሓቲቱ: ኣይፋል፡ ክንደይ ክጽበ ከም ዘለዎ ድማ።", // nieuw, nalezen
   },
 };
 

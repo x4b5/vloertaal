@@ -2288,6 +2288,67 @@ const t: CultureTranslation = {
     'c.order.o2': "İlkini yapar ve gerisini hatırlamayı umarsın.", // nieuw, nalezen
     'c.order.o3': "Hiçbir şey yapmazsın: üçünü de bilmiyorsun.", // nieuw, nalezen
     'c.order.w': "Hemen sormak on saniye sürer. Sonra amirin gitmiş olabilir, o zaman ya beklersin ya da tahmin edersin.", // nieuw, nalezen
+    'u.afbouw': "Fayans, sıva ve boya", // nieuw, nalezen
+    'l.tiletools': "Fayansçının aletleri", // nieuw, nalezen
+    'w.lijmkam': "dişli mala, tarak (fayans yapıştırıcısını çizgi çizgi yayar)", // nieuw, nalezen
+    'w.troffel': "mala", // nieuw, nalezen
+    'w.tegelsnijder': "fayans kesici", // nieuw, nalezen
+    'w.nijptang': "kerpeten (fayanstan küçük parçalar koparmak için)", // nieuw, nalezen
+    'w.mixer': "mikser, karıştırıcı (kovada yapıştırıcı ya da sıva karıştırır)", // nieuw, nalezen
+    'w.duimstok': "katlanır metre", // nieuw, nalezen
+    's.tiletools.1': "Bana dişli malayı bir ver.", // nieuw, nalezen
+    's.tiletools.2': "Fayansı fayans kesiciyle kesiyorum.", // nieuw, nalezen
+    's.tiletools.3': "Önce katlanır metreyle ölç.", // nieuw, nalezen
+    'c.tiletools.q': "Mikser nerede?", // nieuw, nalezen
+    'c.tiletools.a': "Kovanın orada, kapının yanında.", // nieuw, nalezen
+    'c.tiletools': "Yapıştırıcı sertleşmeden aletlerini temizle", // nieuw, nalezen
+    'c.tiletools.b': "Fayans yapıştırıcısı ve sıva çabuk sertleşir, aletlerinin üstünde de. Bu yüzden dişli malayı, malayı ve mikseri hemen bir kova suda temizle, moladan önce de. Sertleşmiş yapıştırıcı çıkmaz ve üstünde sert yapıştırıcı olan dişli mala kötü çizgiler yapar. Kirli suyu lavaboya ya da gidere dökme: tıkanır. Suyun nereye dökülebileceğini sor. Mikser: iki elinle tut ve yavaş çalıştır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.tiletools.p': "Dişli malayı bir temizliyorum.", // nieuw, nalezen
+    'c.tiletools.s': "Mola zamanı. Dişli malan ıslak yapıştırıcıyla dolu. Ne yaparsın?", // nieuw, nalezen
+    'c.tiletools.o1': "Suda temizler, sonra molaya çıkarsın.", // nieuw, nalezen
+    'c.tiletools.o2': "Bırakırsın: iş bitince temizlersin.", // nieuw, nalezen
+    'c.tiletools.o3': "Yapıştırıcı kovasına koyarsın.", // nieuw, nalezen
+    'c.tiletools.w': "Fayans yapıştırıcısı molada da sertleşir. Temiz bir dişli mala iyi çizgiler yapar ve fayanslar iyi yapışır. Üstünde sertleşmiş yapıştırıcı olursa çok iş çıkar, ya da yeni bir alet gerekir.", // nieuw, nalezen
+    'l.tiling': "Fayans, yapıştırıcı ve orta çizgi", // nieuw, nalezen
+    'w.tegel': "fayans, karo", // nieuw, nalezen
+    'w.tegellijm': "fayans yapıştırıcısı", // nieuw, nalezen
+    'w.tegelkruisje': "derz artısı (fayansların arasına konan küçük artı)", // nieuw, nalezen
+    'w.hartlijn': "orta çizgi, aks (fayansa ondan başlanır)", // nieuw, nalezen
+    'w.tegelplaat': "fayans levhası (fayans döşemeyi çalışmak için bir levha)", // nieuw, nalezen
+    'w.potlood': "kurşun kalem", // nieuw, nalezen
+    's.tiling.1': "Fayans yapıştırıcısı hâlâ ıslak.", // nieuw, nalezen
+    's.tiling.2': "Fayansların arasına derz artısı koy.", // nieuw, nalezen
+    's.tiling.3': "Önce kurşun kalemle orta çizgiyi çiz.", // nieuw, nalezen
+    'c.tiling.q': "Fayanslara nereden başlıyorum?", // nieuw, nalezen
+    'c.tiling.a': "Ortadan, orta çizgiden.", // nieuw, nalezen
+    'c.tiling': "Orta çizgiden başla, az yapıştırıcıyla", // nieuw, nalezen
+    'c.tiling.b': "Fayansçı bir köşeden başlamaz. Önce kurşun kalem ve su terazisiyle orta çizgiyi çizersin ve oradan başlarsın. O zaman iki uçtaki kesik fayanslar aynı boyda olur. Sadece kısa sürede fayansla kapatabileceğin kadar yapıştırıcı sür. Çok uzun bekleyen yapıştırıcının üstünde kuru bir kabuk oluşur ve o zaman fayanslar iyi yapışmaz. Her kesişme noktasına bir derz artısı koy, böylece bütün derzler aynı olur. Sık sık su terazisiyle kontrol et: eğri bir fayansı şimdi düzeltmek kolay, yarın zor.", // nieuw, nalezen
+    'c.tiling.p': "Bir seferde çok fazla yapıştırıcı sürmüyorum.", // nieuw, nalezen
+    'c.tiling.s': "Uzun bir telefon konuşmasından sonra duvardaki yapıştırıcının üstünde kuru bir kabuk var. Ne yaparsın?", // nieuw, nalezen
+    'c.tiling.o1': "Kazıyıp alır, taze yapıştırıcı sürersin.", // nieuw, nalezen
+    'c.tiling.o2': "Fayansları yine de üstüne bastırırsın.", // nieuw, nalezen
+    'c.tiling.o3': "Süngerle ıslatır ve devam edersin.", // nieuw, nalezen
+    'c.tiling.w': "Üstünde kuru kabuk olan yapıştırıcı fayansı iyi tutmaz. Sonra fayans yerinden çıkabilir ve o zaman iş yeniden yapılmalıdır.", // nieuw, nalezen
+    'l.plaster': "Sıva yapmak", // nieuw, nalezen
+    'w.stucspaan': "perdah malası (sıvayı düzlemek için düz çelik mala)", // nieuw, nalezen
+    'w.oplegspaan': "sıvacı tablası (üstünde sıva tutulan düz levha)", // nieuw, nalezen
+    'w.spackmes': "spatula (geniş, düz bir bıçak)", // nieuw, nalezen
+    'w.rei': "mastar (sıvayı düzlemek için uzun, düz bir çubuk)", // nieuw, nalezen
+    'w.sponsspaan': "sünger mala", // nieuw, nalezen
+    'w.hoekprofiel': "köşe profili (düz bir köşe için metal şerit)", // nieuw, nalezen
+    's.plaster.1': "Önce köşe profilini köşeye koy.", // nieuw, nalezen
+    's.plaster.2': "Duvarı perdah malasıyla pürüzsüz yap.", // nieuw, nalezen
+    's.plaster.3': "Mastarı duvarın üstünden çek.", // nieuw, nalezen
+    'c.plaster.q': "Duvar kurudu mu?", // nieuw, nalezen
+    'c.plaster.a': "Hayır, bir gün daha bekle.", // nieuw, nalezen
+    'c.plaster': "Sıvanın kuruması zaman alır", // nieuw, nalezen
+    'c.plaster.b': "Yeni sıva uzun süre ıslak kalır. Islak bir duvar, kuru bir duvardan daha koyudur. Boyacı ancak duvar her yerde kuruyunca başlayabilir ve bu günler ya da haftalar sürebilir. Isıtıcıyla daha hızlı kurutma: o zaman sıva çatlayabilir. Biri çok erken mi boyamak istiyor? Duvarın henüz kurumadığını söyle. Başlamadan önce de zemini, pencereleri ve prizleri ört: sıva zor çıkar.", // nieuw, nalezen
+    'c.plaster.p': "Duvar hâlâ ıslak. Henüz boyayamazsın.", // nieuw, nalezen
+    'c.plaster.s': "Boyacı yarın başlamak istiyor. Yeni sıvada hâlâ koyu lekeler var. Ne yaparsın?", // nieuw, nalezen
+    'c.plaster.o1': "Boyacıya söylersin: duvar henüz kuru değil.", // nieuw, nalezen
+    'c.plaster.o2': "Bu gece önüne bir ısıtıcı koyarsın.", // nieuw, nalezen
+    'c.plaster.o3': "Bir şey söylemezsin: boyacı görür.", // nieuw, nalezen
+    'c.plaster.w': "Koyu lekeler, sıvanın hâlâ ıslak olduğunu gösterir. Islak duvardaki boya kalkabilir ve ısıtıcı çatlak yapabilir. Beklemek, işi yeniden yapmaktan daha ucuzdur.", // nieuw, nalezen
   },
 };
 

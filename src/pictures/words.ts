@@ -49,6 +49,20 @@ import group50 from './group50';
 import group51 from './group51';
 import group52 from './group52';
 import groupMaken from './groupMaken';
+import group53 from './group53';
+import group54 from './group54';
+import group55 from './group55';
+import group56 from './group56';
+import group57 from './group57';
+import group58 from './group58';
+import group59 from './group59';
+import group60 from './group60';
+import group61 from './group61';
+import group62 from './group62';
+import group63 from './group63';
+import group64 from './group64';
+import group65 from './group65';
+import group66 from './group66';
 
 /** Every word picture, keyed by word id (and the sayings' pictures, by saying id "zg.*"): one file, loaded on demand (./index.ts loadPictures). */
 const words: Record<string, () => JSX.Element> = {
@@ -108,6 +122,24 @@ const words: Record<string, () => JSX.Element> = {
   // Making (Productie), "Machines en gereedschap": 24 tool and machine words of 20 November 2026,
   // drawn ahead of their four lessons (u.machines).
   ...groupMaken,
+  // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): l.tiletools, l.tiling and l.plaster.
+  ...group53,
+  ...group54,
+  ...group55,
+  // l.paint and l.prep (u.afbouw, 20 November 2026).
+  ...group56,
+  ...group57,
+  // "Metselen, hout en vastmaken" (u.ruwbouw, 20 November 2026): l.brick to l.fix.
+  ...group58,
+  ...group59,
+  ...group60,
+  ...group61,
+  ...group62,
+  ...group63,
+  // Rekenen (u.numbers, 20 November 2026): l.shapes, l.angles and l.size.
+  ...group64,
+  ...group65,
+  ...group66,
 };
 export default words;
 export const url: string = import.meta.url;

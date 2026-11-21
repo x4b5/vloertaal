@@ -229,6 +229,10 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.numbers': { kind: 'A', lessons: {
     'l.hours': L('A', 'A'),
     'l.measures': L('A', 'A'),
+    // Shapes, angles and sizes (20 November 2026): the same words in Belgium.
+    'l.shapes': L('A', 'A'),
+    'l.angles': L('A', 'A'),
+    'l.size': L('A', 'A'),
   } },
   'u.ai': { kind: 'B', lessons: {
     'l.aihelp': L('A', 'B', 'het Juridisch Loket; "In the Netherlands almost every worker gets holiday pay"'),
@@ -275,6 +279,25 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.road': L('A', 'A', 'de tip zegt "zelfstandig" en "in loondienst" (niet "zzp’er"); telefoon in de hand verboden ook in België (Wegverkeersreglement art. 8.4); alleen de slotregel; nakijken: in Vlaanderen vaak "de steekkar"'),
     'l.vancheck': L('A', 'A', 'alleen de slotregel; nakijken: in Vlaanderen vaak "de bestelwagen" en "de bluts" (de deuk wordt begrepen)'),
     'l.delay': L('A', 'A', 'telefoon in de hand verboden ook in België (Wegverkeersreglement art. 8.4); alleen de slotregel; nakijken: in Vlaanderen ook "de wegomlegging" (de omleiding) en "de gps" (de navigatie)'),
+  } },
+  // Tegels, stuc en verf (20 November 2026): how the work is done, the same in Belgium. The tips
+  // name no rule, right or amount. Flemish words to check, by a Flemish NT2 teacher.
+  'u.afbouw': { kind: 'A', lessons: {
+    'l.tiletools': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: de tegelzetter heet in Vlaanderen ook zo, de lijmkam wordt begrepen; de troffel heet vaak "het truweel", de duimstok vaak "de plooimeter"'),
+    'l.tiling': L('A', 'A', 'nakijken: de tegel, de tegellijm en de hartlijn zijn hetzelfde; het tegelkruisje heet soms "het voegkruisje"'),
+    'l.plaster': L('A', 'A', 'nakijken: stukadoren heet in Vlaanderen vaak "plafonneren" of "pleisteren" (de stukadoor: de plafonneerder); "stuc" in de titel wordt begrepen; het spackmes heet ook "het plamuurmes"'),
+    'l.paint': L('A', 'A', 'nakijken: de kwast en het penseel zijn hetzelfde; het strijkvaatje wordt begrepen'),
+    'l.prep': L('A', 'A', 'nakijken: het schuurpapier en schuren zijn hetzelfde; het plamuurmes heet ook "het spackmes"'),
+  } },
+  // Metselen, hout en vastmaken (20 November 2026): how the work is done, the same in Belgium. The
+  // tips name no rule, right or amount. Flemish words to check.
+  'u.ruwbouw': { kind: 'A', lessons: {
+    'l.brick': L('A', 'A', 'nakijken: de metseltroffel heet in Vlaanderen vaak "het truweel"; ook het Vlaamse woord voor de speciekuip'),
+    'l.wall': L('A', 'A', 'nakijken: de Vlaamse woorden voor het metseltouw, de klos en de lagenmaatlat'),
+    'l.wood': L('A', 'A', 'nakijken: de Vlaamse woorden voor de kapzaag en de handschaaf'),
+    'l.square': L('A', 'A', 'nakijken: de Vlaamse woorden voor de winkelhaak, de zwaaihaak en het kruishout'),
+    'l.screw': L('A', 'A', 'nakijken: de Vlaamse woorden voor de accuboor en de plug'),
+    'l.fix': L('A', 'A', 'nakijken: het Vlaamse woord voor de inbussleutel'),
   } },
 };
 

@@ -2289,6 +2289,67 @@ const t: CultureTranslation = {
     'c.order.o2': "Robisz pierwsze i masz nadzieję, że przypomnisz sobie resztę.", // nieuw, nalezen
     'c.order.o3': "Nic nie robisz: nie znasz wszystkich trzech.", // nieuw, nalezen
     'c.order.w': "Pytanie od razu zajmuje dziesięć sekund. Później przełożonego może już nie być, a wtedy czekasz albo zgadujesz.", // nieuw, nalezen
+    'u.afbouw': "Płytki, tynk i farba", // nieuw, nalezen
+    'l.tiletools': "Narzędzia glazurnika", // nieuw, nalezen
+    'w.lijmkam': "paca zębata (rozprowadza klej do płytek w równe rowki)", // nieuw, nalezen
+    'w.troffel': "kielnia", // nieuw, nalezen
+    'w.tegelsnijder': "przecinarka do płytek", // nieuw, nalezen
+    'w.nijptang': "szczypce do płytek (do odłamywania małych kawałków płytki)", // nieuw, nalezen
+    'w.mixer': "mieszadło (miesza klej albo tynk w wiadrze)", // nieuw, nalezen
+    'w.duimstok': "metrówka, miarka składana", // nieuw, nalezen
+    's.tiletools.1': "Podaj mi na chwilę pacę zębatą.", // nieuw, nalezen
+    's.tiletools.2': "Tnę płytkę przecinarką do płytek.", // nieuw, nalezen
+    's.tiletools.3': "Najpierw zmierz metrówką.", // nieuw, nalezen
+    'c.tiletools.q': "Gdzie jest mieszadło?", // nieuw, nalezen
+    'c.tiletools.a': "Przy wiadrze, obok drzwi.", // nieuw, nalezen
+    'c.tiletools': "Umyj narzędzia, zanim klej stwardnieje", // nieuw, nalezen
+    'c.tiletools.b': "Klej do płytek i tynk szybko twardnieją, także na narzędziach. Dlatego od razu myj pacę zębatą, kielnię i mieszadło w wiadrze z wodą, także przed przerwą. Twardy klej nie schodzi, a paca zębata z twardym klejem robi złe rowki. Nie wylewaj brudnej wody do zlewu ani do odpływu: zatka się. Zapytaj, gdzie można wylać wodę. Mieszadło trzymaj obiema rękami i włączaj je powoli. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.tiletools.p': "Szybko umyję pacę zębatą.", // nieuw, nalezen
+    'c.tiletools.s': "Jest czas na przerwę. Twoja paca zębata jest pełna mokrego kleju. Co robisz?", // nieuw, nalezen
+    'c.tiletools.o1': "Myjesz ją w wodzie i idziesz na przerwę.", // nieuw, nalezen
+    'c.tiletools.o2': "Zostawiasz ją: umyjesz ją po pracy.", // nieuw, nalezen
+    'c.tiletools.o3': "Wkładasz ją do wiadra z klejem.", // nieuw, nalezen
+    'c.tiletools.w': "Klej do płytek twardnieje też w czasie przerwy. Czysta paca zębata robi dobre rowki i płytki dobrze się trzymają. Twardy klej na niej to dużo pracy albo nowe narzędzie.", // nieuw, nalezen
+    'l.tiling': "Płytki, klej i linia środkowa", // nieuw, nalezen
+    'w.tegel': "płytka", // nieuw, nalezen
+    'w.tegellijm': "klej do płytek", // nieuw, nalezen
+    'w.tegelkruisje': "krzyżyk dystansowy (mały krzyżyk między płytkami)", // nieuw, nalezen
+    'w.hartlijn': "linia środkowa, oś (od niej zaczyna się układać płytki)", // nieuw, nalezen
+    'w.tegelplaat': "płyta do ćwiczeń (płyta, na której ćwiczy się układanie płytek)", // nieuw, nalezen
+    'w.potlood': "ołówek", // nieuw, nalezen
+    's.tiling.1': "Klej do płytek jest jeszcze mokry.", // nieuw, nalezen
+    's.tiling.2': "Włóż krzyżyk między płytki.", // nieuw, nalezen
+    's.tiling.3': "Najpierw narysuj ołówkiem linię środkową.", // nieuw, nalezen
+    'c.tiling.q': "Gdzie zaczynam układać płytki?", // nieuw, nalezen
+    'c.tiling.a': "Pośrodku, na linii środkowej.", // nieuw, nalezen
+    'c.tiling': "Zacznij od linii środkowej, z małą ilością kleju", // nieuw, nalezen
+    'c.tiling.b': "Glazurnik nie zaczyna w rogu. Najpierw rysujesz linię środkową, ołówkiem i poziomicą, i tam zaczynasz. Wtedy docinane płytki na obu końcach mają taki sam rozmiar. Nakładaj tylko tyle kleju, ile zdążysz szybko przykryć płytkami. Na kleju, który stoi za długo, robi się sucha skórka i wtedy płytki słabo się trzymają. Na każdym skrzyżowaniu włóż krzyżyk, żeby wszystkie fugi były takie same. Często sprawdzaj poziomicą: krzywą płytkę łatwo poprawić teraz, a trudno jutro.", // nieuw, nalezen
+    'c.tiling.p': "Nie nakładam za dużo kleju naraz.", // nieuw, nalezen
+    'c.tiling.s': "Po długiej rozmowie przez telefon klej na ścianie ma suchą skórkę. Co robisz?", // nieuw, nalezen
+    'c.tiling.o1': "Zdrapujesz go i nakładasz świeży klej.", // nieuw, nalezen
+    'c.tiling.o2': "I tak wciskasz w niego płytki.", // nieuw, nalezen
+    'c.tiling.o3': "Zwilżasz go gąbką i pracujesz dalej.", // nieuw, nalezen
+    'c.tiling.w': "Klej z suchą skórką słabo trzyma płytkę. Później płytka może odpaść i wtedy trzeba zrobić pracę jeszcze raz.", // nieuw, nalezen
+    'l.plaster': "Tynkowanie", // nieuw, nalezen
+    'w.stucspaan': "paca tynkarska (płaska stalowa paca do wygładzania tynku)", // nieuw, nalezen
+    'w.oplegspaan': "deska tynkarska (płaska deska, na której trzymasz tynk)", // nieuw, nalezen
+    'w.spackmes': "szpachla (szeroki, płaski nóż)", // nieuw, nalezen
+    'w.rei': "łata tynkarska (długa prosta listwa do wyrównywania tynku)", // nieuw, nalezen
+    'w.sponsspaan': "paca z gąbką", // nieuw, nalezen
+    'w.hoekprofiel': "narożnik tynkarski (metalowa listwa, żeby róg był prosty)", // nieuw, nalezen
+    's.plaster.1': "Najpierw załóż narożnik na róg.", // nieuw, nalezen
+    's.plaster.2': "Wygładź ścianę pacą tynkarską.", // nieuw, nalezen
+    's.plaster.3': "Przeciągnij łatę po ścianie.", // nieuw, nalezen
+    'c.plaster.q': "Czy ściana jest już sucha?", // nieuw, nalezen
+    'c.plaster.a': "Nie, poczekaj jeszcze jeden dzień.", // nieuw, nalezen
+    'c.plaster': "Tynk potrzebuje czasu, żeby wyschnąć", // nieuw, nalezen
+    'c.plaster.b': "Świeży tynk długo jest mokry. Mokra ściana jest ciemniejsza niż sucha. Malarz może zacząć dopiero wtedy, gdy ściana jest wszędzie sucha, a to może trwać dni albo tygodnie. Nie susz jej szybciej nagrzewnicą: wtedy tynk może popękać. Ktoś chce malować za wcześnie? Powiedz, że ściana nie jest jeszcze sucha. A zanim zaczniesz, przykryj podłogę, okna i gniazdka: tynk trudno usunąć.", // nieuw, nalezen
+    'c.plaster.p': "Ściana jest jeszcze mokra. Nie możesz jeszcze malować.", // nieuw, nalezen
+    'c.plaster.s': "Malarz chce zacząć jutro. Nowy tynk ma jeszcze ciemne plamy. Co robisz?", // nieuw, nalezen
+    'c.plaster.o1': "Mówisz malarzowi: ściana nie jest jeszcze sucha.", // nieuw, nalezen
+    'c.plaster.o2': "Na noc stawiasz przed nią nagrzewnicę.", // nieuw, nalezen
+    'c.plaster.o3': "Nic nie mówisz: malarz sam to zobaczy.", // nieuw, nalezen
+    'c.plaster.w': "Ciemne plamy znaczą, że tynk jest jeszcze mokry. Farba na mokrej ścianie może odpaść, a nagrzewnica może zrobić pęknięcia. Czekanie kosztuje mniej niż robienie wszystkiego jeszcze raz.", // nieuw, nalezen
   },
 };
 

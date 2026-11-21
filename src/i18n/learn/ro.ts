@@ -170,6 +170,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Întrebarea e dacă ușa e închisă: nu, și o închide acum.", // nieuw, nalezen
     'c.fillempty.a.why': "Întrebarea e dacă e plin: da, și îl golește.", // nieuw, nalezen
     'c.order.a.why': "Rugămintea e să o facă acum: da, și întreabă ce vine după.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Întrebarea e unde e mixerul: un loc, și ce e aproape de el.", // nieuw, nalezen
+    'c.tiling.a.why': "Întrebarea e de unde să înceapă: din mijloc, de pe linia de mijloc.", // nieuw, nalezen
+    'c.plaster.a.why': "Întrebarea e dacă peretele e uscat: nu, și cât să mai aștepte.", // nieuw, nalezen
   },
 };
 

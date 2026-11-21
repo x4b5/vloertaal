@@ -115,6 +115,9 @@ const t: CultureTranslation = {
     'kjn.u.delivery.1': "እቲ ዓሚል ኣብ ገዛ ከም ዘየለ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.delivery.2': "ንጎረባብቲ ሓደ ጥቕሊል ክቕበሉ ክሓቶም እኽእል እየ።", // nieuw, nalezen
     'kjn.u.delivery.3': "መስመረይን ሰዓታተይን መን ከም ዝውስኖ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.afbouw.1': "ኣስናን ዘለዎ ማንካ ወይ ማንካ ህንጻ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.afbouw.2': "ሸክላ ካበይ ከም ዝጅምር ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.afbouw.3': "እቲ መንደቕ ገና ከም ዘይነቐጸ ክብል እኽእል እየ።", // nieuw, nalezen
     // Goed communiceren en Feedback en overleg (5 nov 2026)
     'kjn.u.communicate.1': "እንታይ ጸገም ከም ዘሎ ክገልጽ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.communicate.2': "ዝሰማዕክዎ ክብል እኽእል እየ።", // nieuw, nalezen

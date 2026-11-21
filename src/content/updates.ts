@@ -20,6 +20,8 @@ export const UPDATES: Update[] = [
     date: '2026-11-20',
     items: [
       'Nieuw bij de start, na de vraag over het land: een eigen pagina met één knop. Daar staat: "Wat je leert, staat alleen op deze telefoon. Gebruik steeds deze telefoon." Vloertaal heeft geen account. Wie op een andere telefoon verdergaat, begint daar opnieuw, of neemt de voortgang mee als bestand (Instellingen, "Bewaar je voortgang"). In alle hulptalen; de vertalingen zijn nog niet nagekeken door een moedertaalspreker.',
+      'Nieuw onderwerp in Taal voor de Bouw: Tegels, stuc en verf. Wie Bouw kiest, krijgt het direct na Op de bouw. Drie lessen: het gereedschap van de tegelzetter (de lijmkam, de troffel, de tegelsnijder), tegels zetten vanaf de hartlijn, en stukadoren. Met drie tips van "Zo werkt het hier": maak je gereedschap schoon voor de lijm hard is, begin op de hartlijn met een beetje lijm, en stuc moet eerst goed droog zijn. Elk woord heeft een eigen tekening.',
+      'Bij de nieuwe lessen hoort een vertaling in alle hulptalen. Die is nog niet nagekeken door een moedertaalspreker. De stemmen volgen: tot dan leest de stem van je telefoon de nieuwe zinnen voor.',
     ],
   },
   {

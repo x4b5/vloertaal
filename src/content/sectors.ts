@@ -44,7 +44,10 @@ export const sectors: Sector[] = [
   // the van, the road), right after the warehouse in the sector slot.
   { id: 'logistics', nl: 'Logistiek', key: 'sectorLogistics', units: ['u.warehouse', 'u.delivery'], focus: ['u.safety', 'u.time'],
     rules: { units: ['r.warehouse'], focus: ['r.veilig', 'r.tijd'] } },
-  { id: 'construction', nl: 'Bouw', key: 'sectorConstruction', units: ['u.build'], focus: ['u.safety', 'u.tools'],
+  // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): the second own unit of Bouw (the finishing
+  // work: tiles, plaster, paint), right after "Op de bouw" in the sector slot; "Metselen, hout en
+  // vastmaken" (u.ruwbouw, the same day) right after it.
+  { id: 'construction', nl: 'Bouw', key: 'sectorConstruction', units: ['u.build', 'u.afbouw', 'u.ruwbouw'], focus: ['u.safety', 'u.tools'],
     rules: { units: ['r.build'], focus: ['r.veilig', 'r.contract'] } },
   { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory'], focus: ['u.safety', 'u.tools'],
     rules: { units: ['r.factory'], focus: ['r.veilig', 'r.tijd'] } },

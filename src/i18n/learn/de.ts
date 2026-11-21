@@ -169,6 +169,10 @@ const t: CultureTranslation = {
     'c.onoff.a.why': "Gefragt, ob die Tür zu ist: Nein, und sie wird jetzt zugemacht.", // nieuw, nalezen
     'c.fillempty.a.why': "Gefragt, ob er voll ist: Ja, und er wird geleert.", // nieuw, nalezen
     'c.order.a.why': "Gebeten, es jetzt zu machen: Ja, und die Frage, was danach kommt.", // nieuw, nalezen
+    // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
+    'c.tiletools.a.why': "Gefragt, wo das Rührgerät ist: ein Ort, und was in der Nähe ist.", // nieuw, nalezen
+    'c.tiling.a.why': "Gefragt, wo man anfängt: in der Mitte, auf der Mittellinie.", // nieuw, nalezen
+    'c.plaster.a.why': "Gefragt, ob die Wand trocken ist: Nein, und wie lange man noch warten muss.", // nieuw, nalezen
   },
 };
 
