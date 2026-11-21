@@ -86,7 +86,8 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     // "Tegels, stuc en verf" and "Metselen, hout en vastmaken": own units of Bouw (20 November 2026).
     // "Machines en gereedschap": the second own unit of Productie (21 November 2026).
     // "Elektra, leidingen en metaal": the second own unit of Techniek (21 November 2026).
-    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas', 'u.tech', 'u.garage', 'u.shop', 'u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install'],
+    // "Assemblage en montage": the third own unit of Productie (21 November 2026).
+    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas', 'u.tech', 'u.garage', 'u.shop', 'u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage'],
     regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean', 'r.kas', 'r.techniek', 'r.werkplaats', 'r.winkel'],
   },
 };

@@ -301,6 +301,11 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan vragen of ik de meterkast mag openmaken.', 'A1', 'gesprekken', 'I can ask if I may open the fuse box.'],
     ['Ik kan zeggen dat een koppeling lekt.', 'A1', 'spreken', 'I can say that a fitting is leaking.'],
   ]),
+  // Assemblage en montage (21 November 2026): two lines.
+  onderwerp('u.montage', 'Assemblage en montage', [
+    ['Ik kan zeggen dat de onderdelenbak bijna leeg is.', 'A1', 'spreken', 'I can say that the parts bin is almost empty.'],
+    ['Ik kan vragen hoe vast een bout moet.', 'A1', 'gesprekken', 'I can ask how tight a bolt must be.'],
+  ]),
 ];
 
 /** Spoor Werkregels (alleen Nederlands): per onderwerp, in de volgorde van de thema's. */

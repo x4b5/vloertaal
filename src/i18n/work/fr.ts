@@ -2733,6 +2733,88 @@ const t: CultureTranslation = {
     'c.metalwork.o2': "Tu la tiens bien avec ta main.", // nieuw, nalezen
     'c.metalwork.o3': "Tu mets des gants et tu la tiens.", // nieuw, nalezen
     'c.metalwork.w': "Un foret peut attraper une petite pièce et la faire tourner. Alors elle frappe ta main. Dans l’étau, elle ne bouge pas.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'u.montage': "Assemblage et montage", // nieuw, nalezen
+    'l.assembly': "À la chaîne de montage", // nieuw, nalezen
+    'w.werkinstructie': "l’instruction de travail (une feuille avec les étapes)", // nieuw, nalezen
+    'w.onderdelenbak': "le bac à pièces", // nieuw, nalezen
+    'w.mal': "le gabarit (il tient la pièce au bon endroit)", // nieuw, nalezen
+    'w.rolbaan': "le convoyeur à rouleaux", // nieuw, nalezen
+    'w.montagetafel': "la table de montage", // nieuw, nalezen
+    'w.voetpedaal': "la pédale (un interrupteur sur lequel tu appuies avec le pied)", // nieuw, nalezen
+    's.assembly.1': "Lis d’abord l’instruction de travail.", // nieuw, nalezen
+    's.assembly.2': "Le bac à pièces est presque vide.", // nieuw, nalezen
+    's.assembly.3': "Mets la pièce dans le gabarit.", // nieuw, nalezen
+    'c.assembly.q': "C’est quelle étape maintenant ?", // nieuw, nalezen
+    'c.assembly.a': "L’étape quatre. Regarde l’instruction de travail.", // nieuw, nalezen
+    'c.assembly': "Suis les étapes, toujours dans le même ordre", // nieuw, nalezen
+    'c.assembly.b': "Sur une chaîne de montage, chaque étape a sa place et son ordre. L’instruction de travail les montre, souvent avec des images. Fais les étapes chaque fois dans le même ordre, aussi quand tu penses connaître une façon plus rapide. Un autre ordre peut donner un produit qui a l’air bien mais qui ne marche pas. Un bac est presque vide ? Dis-le à temps, pour que la chaîne ne s’arrête pas. Tu vois une étape qui pourrait être mieux ? Dis-le à ton chef d’équipe : alors on peut la changer pour tout le monde.", // nieuw, nalezen
+    'c.assembly.p': "J’ai besoin de nouvelles pièces.", // nieuw, nalezen
+    'c.assembly.s': "Tu as trouvé une façon plus rapide de faire l’étape trois. L’instruction de travail dit autre chose. Que fais-tu ?", // nieuw, nalezen
+    'c.assembly.o1': "Tu demandes d’abord à ton chef d’équipe.", // nieuw, nalezen
+    'c.assembly.o2': "À partir de maintenant, tu fais à ta façon.", // nieuw, nalezen
+    'c.assembly.o3': "Tu apprends ta façon à tes collègues.", // nieuw, nalezen
+    'c.assembly.w': "L’ordre a souvent une raison que tu ne vois pas. Si ta façon est meilleure, on peut la changer pour tout le monde.", // nieuw, nalezen
+    'l.fastening': "Visser et fixer", // nieuw, nalezen
+    'w.schroefmachine': "la visseuse (elle est suspendue au-dessus de la chaîne)", // nieuw, nalezen
+    'w.momentsleutel': "la clé dynamométrique (elle fait clic quand le boulon est assez serré)", // nieuw, nalezen
+    'w.tiewrap': "le collier de serrage", // nieuw, nalezen
+    'w.sluitring': "la rondelle", // nieuw, nalezen
+    'w.klinknagel': "le rivet", // nieuw, nalezen
+    'w.popnageltang': "la pince à riveter", // nieuw, nalezen
+    's.fastening.1': "Serre le boulon avec la clé dynamométrique.", // nieuw, nalezen
+    's.fastening.2': "N’oublie pas la rondelle.", // nieuw, nalezen
+    's.fastening.3': "Attache les câbles ensemble avec un collier de serrage.", // nieuw, nalezen
+    'c.fastening.q': "Ce boulon doit être serré comment ?", // nieuw, nalezen
+    'c.fastening.a': "Jusqu’à ce que la clé dynamométrique fasse clic.", // nieuw, nalezen
+    'c.fastening': "Le clic suffit", // nieuw, nalezen
+    'c.fastening.b': "Une clé dynamométrique fait clic quand un boulon est assez serré. Arrête-toi au clic : ne tourne pas plus. Trop serré peut casser le boulon ou la pièce, et pas assez serré peut se détacher. La visseuse marche de la même façon : elle s’arrête toute seule. Mets chaque rondelle à sa place : une rondelle qui manque est difficile à voir plus tard. Compte tes boulons. Il en reste un, ou il t’en manque un ? Alors il y a un problème : dis-le à ton chef d’équipe.", // nieuw, nalezen
+    'c.fastening.p': "Il reste un boulon.", // nieuw, nalezen
+    'c.fastening.s': "Ta clé dynamométrique a fait clic. Le boulon te semble encore un peu desserré. Que fais-tu ?", // nieuw, nalezen
+    'c.fastening.o1': "Tu t’arrêtes, et tu demandes à ton chef d’équipe.", // nieuw, nalezen
+    'c.fastening.o2': "Tu tournes encore un peu à la main.", // nieuw, nalezen
+    'c.fastening.o3': "Tu prends une clé plus longue.", // nieuw, nalezen
+    'c.fastening.w': "Le clic est réglé sur la bonne force. Si ça ne semble pas bon, la clé doit peut-être être contrôlée. Tourner plus peut casser le boulon.", // nieuw, nalezen
+    'l.handling': "Lever et déplacer", // nieuw, nalezen
+    'w.takel': "le palan (il soulève les pièces lourdes avec une chaîne)", // nieuw, nalezen
+    'w.hijshaak': "le crochet de levage", // nieuw, nalezen
+    'w.tilhulp': "le manipulateur (il tient une pièce par aspiration)", // nieuw, nalezen
+    'w.onderdelenkar': "le chariot à pièces", // nieuw, nalezen
+    'w.draaitafel': "le plateau tournant (tu tournes la pièce, pas toi-même)", // nieuw, nalezen
+    'w.rolcontainer': "le roll (une grande cage sur roues)", // nieuw, nalezen
+    's.handling.1': "Ne soulève pas ça sans aide. Utilise le palan.", // nieuw, nalezen
+    's.handling.2': "Le crochet de levage est bien fermé ?", // nieuw, nalezen
+    's.handling.3': "Pousse le chariot à pièces, ne le tire pas.", // nieuw, nalezen
+    'c.handling.q': "Je peux me mettre sous le palan ?", // nieuw, nalezen
+    'c.handling.a': "Non, jamais sous une charge suspendue.", // nieuw, nalezen
+    'c.handling': "Laisse le palan faire le travail lourd", // nieuw, nalezen
+    'c.handling.b': "Les pièces lourdes se lèvent avec un palan ou un manipulateur, pas avec ton dos. Contrôle le crochet avant de lever : le linguet doit se fermer. Lève doucement, et garde tes mains et tes pieds loin de la charge. Ne reste et ne passe jamais sous une charge suspendue. Utilise le plateau tournant pour tourner une pièce : comme ça, tu n’as pas besoin de tordre ton dos. Pousse un chariot ou un roll : tu vois où tu vas, et ton dos travaille moins. Utilise un palan seulement quand tu as appris comment faire. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.handling.p': "J’utilise le palan.", // nieuw, nalezen
+    'c.handling.s': "Une pièce est très lourde. Le palan est occupé encore dix minutes. Que fais-tu ?", // nieuw, nalezen
+    'c.handling.o1': "Tu attends le palan.", // nieuw, nalezen
+    'c.handling.o2': "Tu la soulèves sans aide, vite.", // nieuw, nalezen
+    'c.handling.o3': "Tu la traînes sur le sol.", // nieuw, nalezen
+    'c.handling.w': "Une pièce lourde peut te faire mal au dos en une seconde. Dix minutes d’attente, c’est mieux que des mois de douleur.", // nieuw, nalezen
+    'l.finalcheck': "Le contrôle final", // nieuw, nalezen
+    'w.typeplaatje': "la plaque signalétique (une petite plaque en métal avec le type et le numéro)", // nieuw, nalezen
+    'w.stempel': "le tampon", // nieuw, nalezen
+    'w.testbank': "le banc d’essai", // nieuw, nalezen
+    'w.goedkeursticker': "l’autocollant de conformité (un autocollant vert : le produit est bon)", // nieuw, nalezen
+    'w.kras': "la rayure", // nieuw, nalezen
+    'w.barst': "la fissure", // nieuw, nalezen
+    's.finalcheck.1': "La plaque signalétique est de travers.", // nieuw, nalezen
+    's.finalcheck.2': "Il y a une rayure sur ce produit.", // nieuw, nalezen
+    's.finalcheck.3': "Sans autocollant de conformité, il ne part pas.", // nieuw, nalezen
+    'c.finalcheck.q': "Ce produit est bon ?", // nieuw, nalezen
+    'c.finalcheck.a': "Non, il y a une fissure dedans.", // nieuw, nalezen
+    'c.finalcheck': "Seuls les bons produits ont l’autocollant", // nieuw, nalezen
+    'c.finalcheck.b': "Le contrôle final est la dernière chance de trouver une erreur avant que le client la trouve. Contrôle chaque point de la liste, aussi quand il y a beaucoup de travail. Une petite rayure ou une fissure se rate facilement : regarde sous une bonne lumière, et de plus d’un côté. Mets l’autocollant de conformité ou le tampon seulement quand chaque point est bon. Tu as un doute ? Mets le produit de côté et demande. Une erreur trouvée ici coûte peu, et une erreur chez le client coûte cher. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.finalcheck.p': "Ce produit va de côté.", // nieuw, nalezen
+    'c.finalcheck.s': "Il y a beaucoup de travail sur la chaîne. Tu vois une petite rayure sur un produit, sous l’étiquette. Que fais-tu ?", // nieuw, nalezen
+    'c.finalcheck.o1': "Tu le mets de côté, et tu le dis à ton chef d’équipe.", // nieuw, nalezen
+    'c.finalcheck.o2': "Tu mets l’autocollant : c’est petit.", // nieuw, nalezen
+    'c.finalcheck.o3': "Tu déplaces l’étiquette sur la rayure.", // nieuw, nalezen
+    'c.finalcheck.w': "Une petite rayure peut être le signe d’un problème sur la chaîne. La cacher envoie juste le problème chez le client.", // nieuw, nalezen
   },
 };
 

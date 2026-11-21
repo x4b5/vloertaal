@@ -131,6 +131,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "Sigorta kutusunu açıp açamayacağımı sorabilirim.", // nieuw, nalezen
     'kjn.u.install.2': "Bir rakorun sızdırdığını söyleyebilirim.", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "Parça kutusunun neredeyse boş olduğunu söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.montage.2': "Bir cıvatanın ne kadar sıkı olması gerektiğini sorabilirim.", // nieuw, nalezen
   },
 };
 

@@ -194,6 +194,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "Açıp açamayacağı soruluyor: hayır, bir de bunu kimin yaptığı.", // nieuw, nalezen
     'c.pipes.a.why': "Hâlâ sızdırıp sızdırmadığı soruluyor: biraz, bir de bunun için ne yapılacağı.", // nieuw, nalezen
     'c.metalwork.a.why': "Neden keskin olduğu soruluyor: üstünde hâlâ çapak var.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "Hangi adım olduğu soruluyor: numarası ve nereye bakılacağı.", // nieuw, nalezen
+    'c.fastening.a.why': "Ne kadar sıkı olacağı soruluyor: anahtar tık edene kadar.", // nieuw, nalezen
+    'c.handling.a.why': "Orada durulup durulamayacağı soruluyor: hayır, asla, bir de nedeni.", // nieuw, nalezen
+    'c.finalcheck.a.why': "İyi olup olmadığı soruluyor: hayır, bir de neyinin yanlış olduğu.", // nieuw, nalezen
   },
 };
 

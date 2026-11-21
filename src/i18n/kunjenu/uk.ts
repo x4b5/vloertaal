@@ -132,6 +132,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "Я можу запитати, чи можна мені відкрити електрощиток.", // nieuw, nalezen
     'kjn.u.install.2': "Я можу сказати, що фітинг протікає.", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "Я можу сказати, що ящик для деталей майже порожній.", // nieuw, nalezen
+    'kjn.u.montage.2': "Я можу запитати, як туго треба затягнути болт.", // nieuw, nalezen
   },
 };
 

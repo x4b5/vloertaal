@@ -131,6 +131,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "Je peux demander si j’ai le droit d’ouvrir le tableau électrique.", // nieuw, nalezen
     'kjn.u.install.2': "Je peux dire qu’un raccord fuit.", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "Je peux dire que le bac à pièces est presque vide.", // nieuw, nalezen
+    'kjn.u.montage.2': "Je peux demander à quel point un boulon doit être serré.", // nieuw, nalezen
   },
 };
 

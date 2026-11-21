@@ -73,6 +73,8 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.machines': ['u.factory', 'u.safety'],
   // Elektra, leidingen en metaal (21 November 2026): the workshop (power off first) and safety.
   'u.install': ['u.tech', 'u.safety'],
+  // Assemblage en montage (21 November 2026): the machines and the factory.
+  'u.montage': ['u.machines', 'u.factory'],
 };
 
 /**
@@ -111,6 +113,8 @@ const relatedWords: Record<string, string[]> = {
   'u.machines': ['w.machine', 'w.noodstop'],
   // Elektra, leidingen en metaal: the cable and the power of "Eerst de stroom eraf".
   'u.install': ['w.kabel', 'w.stroom'],
+  // Assemblage en montage: the part and the bolt (of other lessons, used in its sentences).
+  'u.montage': ['w.onderdeel', 'w.bout'],
   // Goed communiceren: angry (l.speakup) and slowly (l.understand), what the lessons are about.
   'u.communicate': ['w.boos', 'w.langzaam'],
   // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).

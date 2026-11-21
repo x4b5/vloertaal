@@ -195,6 +195,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "السؤال هل يُسمح بفتحها: لا، ومن يفعل ذلك.", // nieuw, nalezen
     'c.pipes.a.why': "السؤال هل ما زالت تسرّب: قليلاً، وما العمل.", // nieuw, nalezen
     'c.metalwork.a.why': "السؤال لماذا هي حادّة: ما زالت عليها زائدة حادّة.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "السؤال أيّ خطوة: الرقم، وأين يُنظر.", // nieuw, nalezen
+    'c.fastening.a.why': "السؤال كم يُشدّ: حتى يُصدر المفتاح طقّته.", // nieuw, nalezen
+    'c.handling.a.why': "السؤال هل يُسمح بالوقوف هناك: لا، أبداً، والسبب.", // nieuw, nalezen
+    'c.finalcheck.a.why': "السؤال هل هو جيد: لا، وما الخطأ فيه.", // nieuw, nalezen
   },
 };
 

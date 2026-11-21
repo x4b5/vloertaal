@@ -62,6 +62,11 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🔒': 'w.hangslot',
   '🚰': 'w.afsluiter',
   '🗜': 'w.bankschroef',
+  // Assemblage en montage (u.montage, 21 November 2026): each tip shows a word of its own lesson.
+  '🗒': 'w.werkinstructie',
+  '🔧': 'w.momentsleutel',
+  '🪝': 'w.hijshaak',
+  '☑': 'w.goedkeursticker',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

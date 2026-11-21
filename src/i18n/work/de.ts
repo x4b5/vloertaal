@@ -2733,6 +2733,88 @@ const t: CultureTranslation = {
     'c.metalwork.o2': "Halt es mit der Hand gut fest.", // nieuw, nalezen
     'c.metalwork.o3': "Zieh Handschuhe an und halt es fest.", // nieuw, nalezen
     'c.metalwork.w': "Ein Bohrer kann ein kleines Teil packen und herumschleudern. Dann trifft es deine Hand. Im Schraubstock bleibt es still liegen.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'u.montage': "Montage", // nieuw, nalezen
+    'l.assembly': "Am Montageband", // nieuw, nalezen
+    'w.werkinstructie': "die Arbeitsanweisung (ein Blatt mit den Schritten)", // nieuw, nalezen
+    'w.onderdelenbak': "die Teilekiste", // nieuw, nalezen
+    'w.mal': "die Vorrichtung (sie hält das Teil an der richtigen Stelle)", // nieuw, nalezen
+    'w.rolbaan': "die Rollenbahn", // nieuw, nalezen
+    'w.montagetafel': "der Montagetisch", // nieuw, nalezen
+    'w.voetpedaal': "das Fußpedal (ein Schalter, den du mit dem Fuß drückst)", // nieuw, nalezen
+    's.assembly.1': "Lies zuerst die Arbeitsanweisung.", // nieuw, nalezen
+    's.assembly.2': "Die Teilekiste ist fast leer.", // nieuw, nalezen
+    's.assembly.3': "Leg das Teil in die Vorrichtung.", // nieuw, nalezen
+    'c.assembly.q': "Welcher Schritt kommt jetzt?", // nieuw, nalezen
+    'c.assembly.a': "Schritt vier. Schau in die Arbeitsanweisung.", // nieuw, nalezen
+    'c.assembly': "Halte dich an die Schritte, immer in der gleichen Reihenfolge", // nieuw, nalezen
+    'c.assembly.b': "Am Montageband hat jeder Schritt seinen Platz und seine Reihenfolge. Die Arbeitsanweisung zeigt sie, oft mit Bildern. Mach die Schritte jedes Mal in der gleichen Reihenfolge, auch wenn du glaubst, dass es schneller geht. Eine andere Reihenfolge kann ein Produkt ergeben, das gut aussieht, aber nicht funktioniert. Ist eine Kiste fast leer? Sag es rechtzeitig, damit das Band nicht stehen bleibt. Siehst du einen Schritt, der besser sein könnte? Sag es deinem Teamleiter: Dann kann es für alle geändert werden.", // nieuw, nalezen
+    'c.assembly.p': "Ich brauche neue Teile.", // nieuw, nalezen
+    'c.assembly.s': "Du hast einen schnelleren Weg für Schritt drei gefunden. In der Arbeitsanweisung steht etwas anderes. Was machst du?", // nieuw, nalezen
+    'c.assembly.o1': "Frag zuerst deinen Teamleiter.", // nieuw, nalezen
+    'c.assembly.o2': "Mach es ab jetzt auf deine Art.", // nieuw, nalezen
+    'c.assembly.o3': "Bring deinen Kollegen deine Art bei.", // nieuw, nalezen
+    'c.assembly.w': "Die Reihenfolge hat oft einen Grund, den du nicht siehst. Wenn deine Art besser ist, kann sie für alle geändert werden.", // nieuw, nalezen
+    'l.fastening': "Verschrauben und befestigen", // nieuw, nalezen
+    'w.schroefmachine': "der Elektroschrauber (er hängt über dem Band)", // nieuw, nalezen
+    'w.momentsleutel': "der Drehmomentschlüssel (er klickt, wenn der Bolzen fest genug ist)", // nieuw, nalezen
+    'w.tiewrap': "der Kabelbinder", // nieuw, nalezen
+    'w.sluitring': "die Unterlegscheibe", // nieuw, nalezen
+    'w.klinknagel': "die Niete", // nieuw, nalezen
+    'w.popnageltang': "die Nietzange", // nieuw, nalezen
+    's.fastening.1': "Zieh den Bolzen mit dem Drehmomentschlüssel fest.", // nieuw, nalezen
+    's.fastening.2': "Vergiss die Unterlegscheibe nicht.", // nieuw, nalezen
+    's.fastening.3': "Binde die Kabel mit einem Kabelbinder zusammen.", // nieuw, nalezen
+    'c.fastening.q': "Wie fest muss dieser Bolzen sein?", // nieuw, nalezen
+    'c.fastening.a': "Bis der Drehmomentschlüssel klickt.", // nieuw, nalezen
+    'c.fastening': "Der Klick reicht", // nieuw, nalezen
+    'c.fastening.b': "Ein Drehmomentschlüssel klickt, wenn ein Bolzen fest genug ist. Hör beim Klick auf: Dreh nicht weiter. Zu fest kann den Bolzen oder das Teil kaputt machen, und zu locker kann sich lösen. Der Elektroschrauber funktioniert genauso: Er hört von selbst auf. Leg jede Unterlegscheibe an ihren Platz: Eine fehlende Scheibe sieht man später kaum. Zähl deine Bolzen. Ist einer übrig, oder brauchst du noch einen? Dann stimmt etwas nicht: Sag es deinem Teamleiter.", // nieuw, nalezen
+    'c.fastening.p': "Ein Bolzen ist übrig.", // nieuw, nalezen
+    'c.fastening.s': "Dein Drehmomentschlüssel hat geklickt. Der Bolzen fühlt sich für dich noch etwas locker an. Was machst du?", // nieuw, nalezen
+    'c.fastening.o1': "Hör auf, und frag deinen Teamleiter.", // nieuw, nalezen
+    'c.fastening.o2': "Dreh ihn mit der Hand noch etwas weiter.", // nieuw, nalezen
+    'c.fastening.o3': "Nimm einen längeren Schlüssel.", // nieuw, nalezen
+    'c.fastening.w': "Der Klick ist auf die richtige Kraft eingestellt. Wenn es sich falsch anfühlt, muss der Schlüssel vielleicht geprüft werden. Weiterdrehen kann den Bolzen kaputt machen.", // nieuw, nalezen
+    'l.handling': "Heben und bewegen", // nieuw, nalezen
+    'w.takel': "der Kettenzug (er hebt schwere Teile mit einer Kette)", // nieuw, nalezen
+    'w.hijshaak': "der Lasthaken", // nieuw, nalezen
+    'w.tilhulp': "die Hebehilfe (sie hält ein Teil mit Saugkraft)", // nieuw, nalezen
+    'w.onderdelenkar': "der Teilewagen", // nieuw, nalezen
+    'w.draaitafel': "der Drehtisch (du drehst das Teil, nicht dich selbst)", // nieuw, nalezen
+    'w.rolcontainer': "der Rollcontainer (ein hoher Gitterwagen auf Rädern)", // nieuw, nalezen
+    's.handling.1': "Heb das nicht allein. Nimm den Kettenzug.", // nieuw, nalezen
+    's.handling.2': "Ist der Lasthaken richtig zu?", // nieuw, nalezen
+    's.handling.3': "Schieb den Teilewagen, zieh ihn nicht.", // nieuw, nalezen
+    'c.handling.q': "Darf ich unter dem Kettenzug stehen?", // nieuw, nalezen
+    'c.handling.a': "Nein, nie unter einer hängenden Last.", // nieuw, nalezen
+    'c.handling': "Lass den Kettenzug die schwere Arbeit machen", // nieuw, nalezen
+    'c.handling.b': "Schwere Teile hebt man mit einem Kettenzug oder einer Hebehilfe, nicht mit deinem Rücken. Prüf den Haken, bevor du hebst: Die Sicherung muss schließen. Heb langsam, und halt deine Hände und Füße von der Last weg. Steh oder geh nie unter einer hängenden Last. Nimm den Drehtisch, um ein Teil zu drehen: Dann musst du deinen Rücken nicht verdrehen. Schieb einen Wagen oder einen Rollcontainer: Du siehst, wohin du gehst, und dein Rücken hat weniger Arbeit. Benutz einen Kettenzug nur, wenn du gelernt hast, wie es geht. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.handling.p': "Ich nehme den Kettenzug.", // nieuw, nalezen
+    'c.handling.s': "Ein Teil ist sehr schwer. Der Kettenzug ist noch zehn Minuten besetzt. Was machst du?", // nieuw, nalezen
+    'c.handling.o1': "Warte auf den Kettenzug.", // nieuw, nalezen
+    'c.handling.o2': "Heb es allein, schnell.", // nieuw, nalezen
+    'c.handling.o3': "Zieh es über den Boden.", // nieuw, nalezen
+    'c.handling.w': "Ein schweres Teil kann deinem Rücken in einer Sekunde schaden. Zehn Minuten warten ist besser als monatelange Schmerzen.", // nieuw, nalezen
+    'l.finalcheck': "Die Endkontrolle", // nieuw, nalezen
+    'w.typeplaatje': "das Typenschild (ein kleines Metallschild mit dem Typ und der Nummer)", // nieuw, nalezen
+    'w.stempel': "der Stempel", // nieuw, nalezen
+    'w.testbank': "der Prüfstand", // nieuw, nalezen
+    'w.goedkeursticker': "der OK-Aufkleber (ein grüner Aufkleber: Das Produkt ist gut)", // nieuw, nalezen
+    'w.kras': "der Kratzer", // nieuw, nalezen
+    'w.barst': "der Riss", // nieuw, nalezen
+    's.finalcheck.1': "Das Typenschild sitzt schief.", // nieuw, nalezen
+    's.finalcheck.2': "Auf diesem Produkt ist ein Kratzer.", // nieuw, nalezen
+    's.finalcheck.3': "Ohne OK-Aufkleber geht es nicht raus.", // nieuw, nalezen
+    'c.finalcheck.q': "Ist dieses Produkt in Ordnung?", // nieuw, nalezen
+    'c.finalcheck.a': "Nein, da ist ein Riss drin.", // nieuw, nalezen
+    'c.finalcheck': "Nur gute Produkte bekommen den Aufkleber", // nieuw, nalezen
+    'c.finalcheck.b': "Die Endkontrolle ist die letzte Chance, einen Fehler zu finden, bevor der Kunde ihn findet. Prüf jeden Punkt auf der Liste, auch wenn viel los ist. Einen kleinen Kratzer oder Riss übersieht man leicht: Schau bei gutem Licht, und von mehr als einer Seite. Mach den OK-Aufkleber oder den Stempel nur drauf, wenn jeder Punkt in Ordnung ist. Nicht sicher? Leg das Produkt zur Seite und frag. Ein Fehler, der hier gefunden wird, kostet wenig, und ein Fehler beim Kunden kostet viel. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.finalcheck.p': "Dieses Produkt kommt zur Seite.", // nieuw, nalezen
+    'c.finalcheck.s': "Am Band ist viel los. Du siehst einen kleinen Kratzer auf einem Produkt, unter dem Etikett. Was machst du?", // nieuw, nalezen
+    'c.finalcheck.o1': "Leg es zur Seite, und sag es deinem Teamleiter.", // nieuw, nalezen
+    'c.finalcheck.o2': "Kleb den Aufkleber drauf: Der Kratzer ist klein.", // nieuw, nalezen
+    'c.finalcheck.o3': "Schieb das Etikett über den Kratzer.", // nieuw, nalezen
+    'c.finalcheck.w': "Ein kleiner Kratzer kann ein Zeichen für ein Problem am Band sein. Wer ihn versteckt, schiebt das Problem nur zum Kunden.", // nieuw, nalezen
   },
 };
 

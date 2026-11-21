@@ -101,8 +101,8 @@ describe('access', () => {
       expect(sampleLessons('taal')[0]).toBe(courseUnits('taal')[0].lessons[0].id);
       expect(sampleLessons('taal').length).toBeGreaterThan(8);
       // 20 since 20 November 2026: Bouw has three own topics in Jouw sector; 21 since Productie has
-      // two (21 November 2026); 22 since Techniek has two (the same day).
-      expect(sampleLessons('taal').length).toBeLessThan(23);
+      // two (21 November 2026); 22 since Techniek has two, 23 since Productie has three (the same day).
+      expect(sampleLessons('taal').length).toBeLessThan(24);
     });
 
     it('locks the rest, whatever the progress says; the daily review stays open', () => {

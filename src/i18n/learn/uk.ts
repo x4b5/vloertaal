@@ -195,6 +195,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "Питають, чи можна відкрити: «ні», і хто це робить.", // nieuw, nalezen
     'c.pipes.a.why': "Питають, чи ще протікає: трохи, і що з цим зробити.", // nieuw, nalezen
     'c.metalwork.a.why': "Питають, чому гострий: на ньому ще є задирка.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "Питають, який крок: номер, і куди дивитися.", // nieuw, nalezen
+    'c.fastening.a.why': "Питають, як туго: поки ключ не клацне.", // nieuw, nalezen
+    'c.handling.a.why': "Питають, чи можна там стояти: ні, ніколи, і чому.", // nieuw, nalezen
+    'c.finalcheck.a.why': "Питають, чи він хороший: ні, і що з ним не так.", // nieuw, nalezen
   },
 };
 

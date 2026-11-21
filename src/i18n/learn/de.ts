@@ -194,6 +194,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "Gefragt, ob man ihn aufmachen darf: Nein, und wer es macht.", // nieuw, nalezen
     'c.pipes.a.why': "Gefragt, ob es noch undicht ist: ein bisschen, und was man dagegen tut.", // nieuw, nalezen
     'c.metalwork.a.why': "Gefragt, warum sie scharf ist: Es ist noch ein Grat dran.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "Gefragt, welcher Schritt: die Nummer, und wo man nachschaut.", // nieuw, nalezen
+    'c.fastening.a.why': "Gefragt, wie fest: bis der Schlüssel klickt.", // nieuw, nalezen
+    'c.handling.a.why': "Gefragt, ob man dort stehen darf: Nein, nie, und warum.", // nieuw, nalezen
+    'c.finalcheck.a.why': "Gefragt, ob es in Ordnung ist: Nein, und was damit nicht stimmt.", // nieuw, nalezen
   },
 };
 

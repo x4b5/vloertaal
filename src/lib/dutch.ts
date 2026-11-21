@@ -75,6 +75,10 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   // Elektra, leidingen en metaal (21 November 2026).
   ['spanningzoeker', 8],
   ['kolomboormachine', [5, 9]],
+  // Assemblage en montage (21 November 2026).
+  ['werkinstructie', 4],
+  ['schroefmachine', 7],
+  ['goedkeursticker', 8],
 ];
 
 export const SHY = '\u00ad';

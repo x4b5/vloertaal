@@ -195,6 +195,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "Întrebarea e dacă e voie să fie deschis: nu, și cine o face.", // nieuw, nalezen
     'c.pipes.a.why': "Întrebarea e dacă mai curge: puțin, și ce se face.", // nieuw, nalezen
     'c.metalwork.a.why': "Întrebarea e de ce e ascuțită: mai e o bavură pe ea.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "Întrebarea e ce pas: numărul, și unde să se uite.", // nieuw, nalezen
+    'c.fastening.a.why': "Întrebarea e cât de strâns: până face cheia clic.", // nieuw, nalezen
+    'c.handling.a.why': "Întrebarea e dacă e voie să stea acolo: nu, niciodată, și de ce.", // nieuw, nalezen
+    'c.finalcheck.a.why': "Întrebarea e dacă e bun: nu, și ce defect are.", // nieuw, nalezen
   },
 };
 

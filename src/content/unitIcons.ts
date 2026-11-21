@@ -68,6 +68,8 @@ export const unitIcons: Record<string, string> = {
   'u.machines': 'w.bedieningspaneel',
   // Elektra, leidingen en metaal (21 November 2026): the socket (groupTechniek).
   'u.install': 'w.stopcontact',
+  // Assemblage en montage (21 November 2026): the torque wrench (groupMontage).
+  'u.montage': 'w.momentsleutel',
 };
 
 /**

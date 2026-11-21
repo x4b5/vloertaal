@@ -193,6 +193,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "On demande si on peut l’ouvrir : non, et qui le fait.", // nieuw, nalezen
     'c.pipes.a.why': "On demande si ça fuit encore : un peu, et ce qu’on fait pour ça.", // nieuw, nalezen
     'c.metalwork.a.why': "On demande pourquoi c’est coupant : il y a encore une bavure.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "On demande quelle étape : le numéro, et où regarder.", // nieuw, nalezen
+    'c.fastening.a.why': "On demande à quel point serrer : jusqu’au clic de la clé.", // nieuw, nalezen
+    'c.handling.a.why': "On demande si on peut se mettre là : non, jamais, et pourquoi.", // nieuw, nalezen
+    'c.finalcheck.a.why': "On demande si c’est bon : non, et ce qui ne va pas.", // nieuw, nalezen
   },
 };
 

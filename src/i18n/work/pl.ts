@@ -2735,6 +2735,88 @@ const t: CultureTranslation = {
     'c.metalwork.o2': "Mocno trzymasz go ręką.", // nieuw, nalezen
     'c.metalwork.o3': "Zakładasz rękawice i trzymasz go.", // nieuw, nalezen
     'c.metalwork.w': "Wiertło może złapać małą część i nią zakręcić. Wtedy uderza ona w twoją rękę. W imadle się nie rusza.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'u.montage': "Montaż", // nieuw, nalezen
+    'l.assembly': "Na linii montażowej", // nieuw, nalezen
+    'w.werkinstructie': "instrukcja stanowiskowa (kartka z krokami)", // nieuw, nalezen
+    'w.onderdelenbak': "pojemnik na części", // nieuw, nalezen
+    'w.mal': "przyrząd montażowy (trzyma część we właściwym miejscu)", // nieuw, nalezen
+    'w.rolbaan': "przenośnik rolkowy", // nieuw, nalezen
+    'w.montagetafel': "stół montażowy", // nieuw, nalezen
+    'w.voetpedaal': "pedał nożny (przełącznik, który naciskasz stopą)", // nieuw, nalezen
+    's.assembly.1': "Najpierw przeczytaj instrukcję stanowiskową.", // nieuw, nalezen
+    's.assembly.2': "Pojemnik na części jest prawie pusty.", // nieuw, nalezen
+    's.assembly.3': "Włóż część do przyrządu montażowego.", // nieuw, nalezen
+    'c.assembly.q': "Który krok jest teraz?", // nieuw, nalezen
+    'c.assembly.a': "Krok czwarty. Popatrz do instrukcji stanowiskowej.", // nieuw, nalezen
+    'c.assembly': "Rób kroki zawsze w tej samej kolejności", // nieuw, nalezen
+    'c.assembly.b': "Na linii montażowej każdy krok ma swoje miejsce i swoją kolejność. Pokazuje je instrukcja stanowiskowa, często ze zdjęciami. Rób kroki za każdym razem w tej samej kolejności, także wtedy, gdy myślisz, że znasz szybszy sposób. Inna kolejność może dać produkt, który dobrze wygląda, ale nie działa. Pojemnik jest prawie pusty? Powiedz to na czas, żeby linia nie stanęła. Widzisz krok, który można zrobić lepiej? Powiedz kierownikowi zespołu: wtedy można to zmienić dla wszystkich.", // nieuw, nalezen
+    'c.assembly.p': "Potrzebuję nowych części.", // nieuw, nalezen
+    'c.assembly.s': { m: "Znalazłeś szybszy sposób na krok trzeci. W instrukcji stanowiskowej jest napisane coś innego. Co robisz?", f: "Znalazłaś szybszy sposób na krok trzeci. W instrukcji stanowiskowej jest napisane coś innego. Co robisz?", x: "Znasz szybszy sposób na krok trzeci. W instrukcji stanowiskowej jest napisane coś innego. Co robisz?" }, // nieuw, nalezen
+    'c.assembly.o1': "Najpierw pytasz kierownika zespołu.", // nieuw, nalezen
+    'c.assembly.o2': "Od teraz robisz to po swojemu.", // nieuw, nalezen
+    'c.assembly.o3': "Uczysz kolegów swojego sposobu.", // nieuw, nalezen
+    'c.assembly.w': "Kolejność często ma powód, którego nie widzisz. Jeśli twój sposób jest lepszy, można go zmienić dla wszystkich.", // nieuw, nalezen
+    'l.fastening': "Skręcanie i łączenie", // nieuw, nalezen
+    'w.schroefmachine': "wkrętarka (wisi nad linią)", // nieuw, nalezen
+    'w.momentsleutel': "klucz dynamometryczny (klika, kiedy śruba jest dokręcona wystarczająco mocno)", // nieuw, nalezen
+    'w.tiewrap': "opaska zaciskowa (do kabli)", // nieuw, nalezen
+    'w.sluitring': "podkładka", // nieuw, nalezen
+    'w.klinknagel': "nit", // nieuw, nalezen
+    'w.popnageltang': "nitownica", // nieuw, nalezen
+    's.fastening.1': "Dokręć śrubę kluczem dynamometrycznym.", // nieuw, nalezen
+    's.fastening.2': "Nie zapomnij o podkładce.", // nieuw, nalezen
+    's.fastening.3': "Zwiąż kable opaską zaciskową.", // nieuw, nalezen
+    'c.fastening.q': "Jak mocno trzeba dokręcić tę śrubę?", // nieuw, nalezen
+    'c.fastening.a': "Aż klucz dynamometryczny kliknie.", // nieuw, nalezen
+    'c.fastening': "Kliknięcie wystarczy", // nieuw, nalezen
+    'c.fastening.b': "Klucz dynamometryczny klika, kiedy śruba jest dokręcona wystarczająco mocno. Przy kliknięciu przestań: nie kręć dalej. Za mocno dokręcona śruba może pęknąć albo zniszczyć część, a za luźna może odpaść. Wkrętarka działa tak samo: sama się zatrzymuje. Wkładaj każdą podkładkę na swoje miejsce: brakującą podkładkę później trudno zobaczyć. Licz swoje śruby. Jedna zostaje albo brakuje ci jednej? Wtedy coś jest nie tak: powiedz kierownikowi zespołu.", // nieuw, nalezen
+    'c.fastening.p': "Została jedna śruba.", // nieuw, nalezen
+    'c.fastening.s': "Twój klucz dynamometryczny kliknął. Śruba wydaje ci się jeszcze trochę luźna. Co robisz?", // nieuw, nalezen
+    'c.fastening.o1': "Przerywasz i pytasz kierownika zespołu.", // nieuw, nalezen
+    'c.fastening.o2': "Dokręcasz ją jeszcze trochę ręką.", // nieuw, nalezen
+    'c.fastening.o3': "Bierzesz dłuższy klucz.", // nieuw, nalezen
+    'c.fastening.w': "Kliknięcie jest ustawione na właściwą siłę. Jeśli coś wydaje się nie tak, może trzeba sprawdzić klucz. Dalsze kręcenie może złamać śrubę.", // nieuw, nalezen
+    'l.handling': "Podnoszenie i przenoszenie", // nieuw, nalezen
+    'w.takel': "wciągnik (podnosi ciężkie części na łańcuchu)", // nieuw, nalezen
+    'w.hijshaak': "hak do podnoszenia", // nieuw, nalezen
+    'w.tilhulp': "podnośnik podciśnieniowy (trzyma część przyssawką)", // nieuw, nalezen
+    'w.onderdelenkar': "wózek na części", // nieuw, nalezen
+    'w.draaitafel': "stół obrotowy (obracasz część, a nie siebie)", // nieuw, nalezen
+    'w.rolcontainer': "wózek klatkowy (wysoka klatka na kółkach)", // nieuw, nalezen
+    's.handling.1': "Nie podnoś tego w pojedynkę. Użyj wciągnika.", // nieuw, nalezen
+    's.handling.2': "Czy hak jest dobrze zamknięty?", // nieuw, nalezen
+    's.handling.3': "Pchaj wózek na części, nie ciągnij go.", // nieuw, nalezen
+    'c.handling.q': "Czy mogę stać pod wciągnikiem?", // nieuw, nalezen
+    'c.handling.a': "Nie, nigdy pod wiszącym ładunkiem.", // nieuw, nalezen
+    'c.handling': "Niech ciężką pracę robi wciągnik", // nieuw, nalezen
+    'c.handling.b': "Ciężkie części podnosi się wciągnikiem albo podnośnikiem podciśnieniowym, a nie plecami. Zanim zaczniesz podnosić, sprawdź hak: zapadka musi się zamykać. Podnoś powoli i trzymaj ręce i stopy z dala od ładunku. Nigdy nie stój i nie chodź pod wiszącym ładunkiem. Do obracania części używaj stołu obrotowego: wtedy nie musisz skręcać pleców. Wózek albo wózek klatkowy pchaj: widzisz, gdzie idziesz, a plecy mają mniej pracy. Używaj wciągnika tylko wtedy, gdy wiesz, jak to robić. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.handling.p': "Używam wciągnika.", // nieuw, nalezen
+    'c.handling.s': "Część jest bardzo ciężka. Wciągnik jest zajęty jeszcze przez dziesięć minut. Co robisz?", // nieuw, nalezen
+    'c.handling.o1': "Czekasz na wciągnik.", // nieuw, nalezen
+    'c.handling.o2': "Szybko podnosisz ją w pojedynkę.", // nieuw, nalezen
+    'c.handling.o3': "Ciągniesz ją po podłodze.", // nieuw, nalezen
+    'c.handling.w': "Ciężka część może w jedną sekundę uszkodzić ci plecy. Dziesięć minut czekania jest lepsze niż miesiące bólu.", // nieuw, nalezen
+    'l.finalcheck': "Kontrola końcowa", // nieuw, nalezen
+    'w.typeplaatje': "tabliczka znamionowa (mała metalowa tabliczka z typem i numerem)", // nieuw, nalezen
+    'w.stempel': "pieczątka", // nieuw, nalezen
+    'w.testbank': "stanowisko testowe", // nieuw, nalezen
+    'w.goedkeursticker': "naklejka OK (zielona naklejka: produkt jest dobry)", // nieuw, nalezen
+    'w.kras': "rysa", // nieuw, nalezen
+    'w.barst': "pęknięcie", // nieuw, nalezen
+    's.finalcheck.1': "Tabliczka znamionowa jest krzywo przymocowana.", // nieuw, nalezen
+    's.finalcheck.2': "Na tym produkcie jest rysa.", // nieuw, nalezen
+    's.finalcheck.3': "Bez naklejki OK to nie wychodzi.", // nieuw, nalezen
+    'c.finalcheck.q': "Czy ten produkt jest dobry?", // nieuw, nalezen
+    'c.finalcheck.a': "Nie, jest w nim pęknięcie.", // nieuw, nalezen
+    'c.finalcheck': "Naklejkę dostają tylko dobre produkty", // nieuw, nalezen
+    'c.finalcheck.b': "Kontrola końcowa to ostatnia szansa, żeby znaleźć błąd, zanim znajdzie go klient. Sprawdź każdy punkt na liście, także wtedy, gdy jest dużo pracy. Małą rysę albo pęknięcie łatwo przeoczyć: patrz przy dobrym świetle i z więcej niż jednej strony. Naklejkę OK albo pieczątkę daj dopiero wtedy, gdy każdy punkt jest dobry. Masz wątpliwości? Odłóż produkt na bok i zapytaj. Błąd znaleziony tutaj kosztuje mało, a błąd u klienta kosztuje dużo. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.finalcheck.p': "Ten produkt idzie na bok.", // nieuw, nalezen
+    'c.finalcheck.s': "Na linii jest dużo pracy. Widzisz małą rysę na produkcie, pod etykietą. Co robisz?", // nieuw, nalezen
+    'c.finalcheck.o1': "Odkładasz go na bok i mówisz kierownikowi zespołu.", // nieuw, nalezen
+    'c.finalcheck.o2': "Naklejasz naklejkę: rysa jest mała.", // nieuw, nalezen
+    'c.finalcheck.o3': "Przesuwasz etykietę na rysę.", // nieuw, nalezen
+    'c.finalcheck.w': "Mała rysa może być znakiem problemu na linii. Ukrycie jej tylko przenosi problem do klienta.", // nieuw, nalezen
   },
 };
 

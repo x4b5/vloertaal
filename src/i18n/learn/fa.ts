@@ -194,6 +194,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "پرسیده‌اند اجازه دارد بازش کند یا نه: نه، و اینکه چه کسی این کار را می‌کند.", // nieuw, nalezen
     'c.pipes.a.why': "پرسیده‌اند هنوز نشت می‌کند یا نه: کمی، و کاری که برایش انجام می‌دهد.", // nieuw, nalezen
     'c.metalwork.a.why': "پرسیده‌اند چرا تیز است: هنوز پلیسه دارد.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "پرسیده‌اند کدام مرحله: شماره‌اش، و کجا باید نگاه کرد.", // nieuw, nalezen
+    'c.fastening.a.why': "پرسیده‌اند چقدر سفت: تا وقتی آچار تق صدا بدهد.", // nieuw, nalezen
+    'c.handling.a.why': "پرسیده‌اند اجازه دارد آنجا بایستد یا نه: نه، هیچ‌وقت، و چرا.", // nieuw, nalezen
+    'c.finalcheck.a.why': "پرسیده‌اند سالم است یا نه: نه، و چه ایرادی دارد.", // nieuw, nalezen
   },
 };
 

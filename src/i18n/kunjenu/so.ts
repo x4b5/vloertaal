@@ -130,6 +130,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "Waan weydiin karaa inaan furi karo sanduuqa fiyuusyada.", // nieuw, nalezen
     'kjn.u.install.2': "Waan sheegi karaa in isku-xiraha tuubadu daadanayo.", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "Waan sheegi karaa in weelka qaybuhu ku dhowaad madhan yahay.", // nieuw, nalezen
+    'kjn.u.montage.2': "Waan weydiin karaa intee le'eg in bool la adkeeyo.", // nieuw, nalezen
   },
 };
 export default t;

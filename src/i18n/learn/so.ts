@@ -190,6 +190,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "Waxaa la weydiiyay in la furi karo: maya, iyo cidda samaysa.", // nieuw, nalezen
     'c.pipes.a.why': "Waxaa la weydiiyay inuu weli daadanayo: wax yar, iyo waxa laga qabanayo.", // nieuw, nalezen
     'c.metalwork.a.why': "Waxaa la weydiiyay sababta uu u fiiqan yahay: weli geeso fiiqan ayaa ku yaal.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "Waxaa la weydiiyay tallaabadee: lambarka, iyo meesha la eego.", // nieuw, nalezen
+    'c.fastening.a.why': "Waxaa la weydiiyay intee le'eg in la adkeeyo: ilaa furaha xooggu dhawaaqo.", // nieuw, nalezen
+    'c.handling.a.why': "Waxaa la weydiiyay in halkaas la istaagi karo: maya, weligaa, iyo sababta.", // nieuw, nalezen
+    'c.finalcheck.a.why': "Waxaa la weydiiyay inay fiican tahay: maya, iyo waxa ka khaldan.", // nieuw, nalezen
   },
 };
 export default t;
