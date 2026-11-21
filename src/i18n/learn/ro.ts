@@ -190,6 +190,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "Întrebarea e cât de des: o dată pe oră, și unde se notează.", // nieuw, nalezen
     'c.packing.a.why': "Întrebarea e câte într-o cutie: numărul, și unde scrie.", // nieuw, nalezen
     'c.upkeep.a.why': "Întrebarea e când: ziua din săptămână, și momentul din acea zi.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "Întrebarea e ce fir unde merge: aceeași culoare la aceeași culoare.", // nieuw, nalezen
+    'c.testing.a.why': "Întrebarea e dacă e voie să fie deschis: nu, și cine o face.", // nieuw, nalezen
+    'c.pipes.a.why': "Întrebarea e dacă mai curge: puțin, și ce se face.", // nieuw, nalezen
+    'c.metalwork.a.why': "Întrebarea e de ce e ascuțită: mai e o bavură pe ea.", // nieuw, nalezen
   },
 };
 

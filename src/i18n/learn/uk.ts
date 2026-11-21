@@ -190,6 +190,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "Питають, як часто: раз на годину, і де це записати.", // nieuw, nalezen
     'c.packing.a.why': "Питають, скільки в коробку: число, і де це написано.", // nieuw, nalezen
     'c.upkeep.a.why': "Питають, коли: день тижня і момент того дня.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "Питають, який провід куди: однаковий колір до однакового кольору.", // nieuw, nalezen
+    'c.testing.a.why': "Питають, чи можна відкрити: «ні», і хто це робить.", // nieuw, nalezen
+    'c.pipes.a.why': "Питають, чи ще протікає: трохи, і що з цим зробити.", // nieuw, nalezen
+    'c.metalwork.a.why': "Питають, чому гострий: на ньому ще є задирка.", // nieuw, nalezen
   },
 };
 

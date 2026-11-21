@@ -189,6 +189,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "پرسیده‌اند چند وقت یک بار: ساعتی یک بار، و کجا نوشته کند.", // nieuw, nalezen
     'c.packing.a.why': "پرسیده‌اند در هر قطی چند تا: عدد، و کجا نوشته است.", // nieuw, nalezen
     'c.upkeep.a.why': "پرسیده‌اند کی: روز هفته، و وقت آن در همان روز.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "پرسیده‌اند کدام سیم کجا می‌رود: هر رنگ به همان رنگ.", // nieuw, nalezen
+    'c.testing.a.why': "پرسیده‌اند اجازه دارد آن را باز کند یا نی: نی، و چه کسی این کار را می‌کند.", // nieuw, nalezen
+    'c.pipes.a.why': "پرسیده‌اند هنوز چکه می‌کند یا نی: کمی، و چه کاری برایش می‌کند.", // nieuw, nalezen
+    'c.metalwork.a.why': "پرسیده‌اند چرا تیز است: هنوز پلیسه دارد.", // nieuw, nalezen
   },
 };
 

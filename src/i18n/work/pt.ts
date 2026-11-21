@@ -2651,6 +2651,88 @@ const t: CultureTranslation = {
     'c.upkeep.o2': "Deixas estar: é só um bocadinho.", // nieuw, nalezen
     'c.upkeep.o3': "Pões um bocado de papel em cima, e continuas.", // nieuw, nalezen
     'c.upkeep.w': "Uma fuga fica maior, e o óleo no chão faz as pessoas escorregar. Encontrada cedo, é uma reparação pequena.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'u.install': "Eletricidade, canos e metal", // nieuw, nalezen
+    'l.wiring': "Ligar fios", // nieuw, nalezen
+    'w.draad': "o fio (um fio dentro de um cabo)", // nieuw, nalezen
+    'w.stopcontact': "a tomada (na parede)", // nieuw, nalezen
+    'w.schakelaar': "o interruptor (da luz)", // nieuw, nalezen
+    'w.lasklem': "o ligador de alavanca (junta fios)", // nieuw, nalezen
+    'w.striptang': "o alicate descarnador", // nieuw, nalezen
+    'w.kabelgoot': "a calha (um canal para cabos)", // nieuw, nalezen
+    's.wiring.1': "Descarna um centímetro do fio.", // nieuw, nalezen
+    's.wiring.2': "Prende os fios no ligador de alavanca.", // nieuw, nalezen
+    's.wiring.3': "Os cabos vão na calha.", // nieuw, nalezen
+    'c.wiring.q': "Que fio vai para onde?", // nieuw, nalezen
+    'c.wiring.a': "Castanho com castanho, azul com azul.", // nieuw, nalezen
+    'c.wiring': "As cores dizem para que serve um fio", // nieuw, nalezen
+    'c.wiring.b': "Num edifício, os fios têm cores fixas. O castanho (às vezes preto ou cinzento) traz a corrente. O azul é o retorno. O verde e amarelo é a terra: protege as pessoas, e nunca se usa para mais nada. Liga a mesma cor à mesma cor. Descarna só o que cabe no ligador: não pode ficar cobre à vista. Mete o fio, e depois puxa-o devagar para ver se está preso. Não sabes que fio é qual? Para e pergunta.", // nieuw, nalezen
+    'c.wiring.p': "De que cor é a terra?", // nieuw, nalezen
+    'c.wiring.s': "Estás a ligar um candeeiro. Um bocado de cobre sai do ligador. O que fazes?", // nieuw, nalezen
+    'c.wiring.o1': "Cortas o fio mais curto, e ligas outra vez.", // nieuw, nalezen
+    'c.wiring.o2': "Deixas estar: o candeeiro funciona.", // nieuw, nalezen
+    'c.wiring.o3': "Pões um bocado de fita-cola à volta.", // nieuw, nalezen
+    'c.wiring.w': "O cobre à vista fora do ligador pode tocar em alguma coisa. Isso pode dar um choque ou um curto-circuito, também meses depois.", // nieuw, nalezen
+    'l.testing': "Medir e trabalhar em segurança", // nieuw, nalezen
+    'w.multimeter': "o multímetro (mede a corrente)", // nieuw, nalezen
+    'w.spanningzoeker': "o busca-polos (uma chave de fendas com uma pequena luz)", // nieuw, nalezen
+    'w.meterkast': "o quadro elétrico", // nieuw, nalezen
+    'w.zekering': "o disjuntor (desliga a corrente quando há um problema)", // nieuw, nalezen
+    'w.hangslot': "o cadeado", // nieuw, nalezen
+    'w.aardedraad': "o fio de terra (verde e amarelo)", // nieuw, nalezen
+    's.testing.1': "O disjuntor disparou.", // nieuw, nalezen
+    's.testing.2': "Põe um cadeado no interruptor.", // nieuw, nalezen
+    's.testing.3': "Mede primeiro com o multímetro.", // nieuw, nalezen
+    'c.testing.q': "Posso abrir o quadro elétrico?", // nieuw, nalezen
+    'c.testing.a': "Não, quem faz isso é o eletricista.", // nieuw, nalezen
+    'c.testing': "Desligado, trancado, medido", // nieuw, nalezen
+    'c.testing.b': "Antes de trabalhares na eletricidade, segue três passos. Desliga: o disjuntor certo no quadro elétrico, não só o interruptor na parede. Tranca: põe lá o teu próprio cadeado, e fica com a chave contigo, para ninguém o poder voltar a ligar. Mede: verifica com um busca-polos ou um multímetro que não há mesmo corrente. Só então começas. Um disjuntor dispara uma e outra vez? Não o continues a ligar: avisa o teu chefe. Só faças trabalhos elétricos quando te disseram que podes. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.testing.p': "Já não há corrente.", // nieuw, nalezen
+    'c.testing.s': "Desligaste o disjuntor. Um colega diz: \"Começa já, está desligado.\" O que fazes?", // nieuw, nalezen
+    'c.testing.o1': "Trancas, e primeiro medes.", // nieuw, nalezen
+    'c.testing.o2': "Começas: o teu colega sabe.", // nieuw, nalezen
+    'c.testing.o3': "Tocas no fio rapidamente para verificar.", // nieuw, nalezen
+    'c.testing.w': "Às vezes está desligado o disjuntor errado, ou alguém volta a ligá-lo. Um cadeado e uma medição mostram que é mesmo seguro.", // nieuw, nalezen
+    'l.pipes': "Canos e água", // nieuw, nalezen
+    'w.buis': "o tubo", // nieuw, nalezen
+    'w.koppeling': "a união (junta dois tubos)", // nieuw, nalezen
+    'w.pijpsnijder': "o corta-tubos", // nieuw, nalezen
+    'w.waterpomptang': "o alicate de bomba (alicate ajustável)", // nieuw, nalezen
+    'w.afsluiter': "a torneira de passagem (fecha a água)", // nieuw, nalezen
+    'w.teflontape': "a fita de teflon (fita branca para a rosca de um tubo)", // nieuw, nalezen
+    's.pipes.1': "Fecha a torneira de passagem.", // nieuw, nalezen
+    's.pipes.2': "Corta o tubo com o corta-tubos.", // nieuw, nalezen
+    's.pipes.3': "Enrola fita de teflon à volta da rosca.", // nieuw, nalezen
+    'c.pipes.q': "A união ainda está a pingar?", // nieuw, nalezen
+    'c.pipes.a': "Um bocadinho. Vou apertá-la mais um pouco.", // nieuw, nalezen
+    'c.pipes': "Primeiro fecha a água, e tem um balde pronto", // nieuw, nalezen
+    'c.pipes.b': "Antes de abrires um cano de água, fecha a torneira de passagem. Depois abre uma torneira mais abaixo, para o cano esvaziar. Põe um balde e um pano por baixo do sítio onde trabalhas. Corta um tubo de cobre com um corta-tubos, não com uma serra: a ponta fica redonda e limpa. Aperta bem uma união, mas não com força demais. Quando acabares, abre a água devagar e procura pingos. Uma pequena fuga que deixas ficar acaba em estragos de água.", // nieuw, nalezen
+    'c.pipes.p': "A água está fechada?", // nieuw, nalezen
+    'c.pipes.s': "Fizeste uma união nova. Abres a água. Cai um pingo pequeno por minuto. O que fazes?", // nieuw, nalezen
+    'c.pipes.o1': "Fechas a água, e apertas ou fazes de novo.", // nieuw, nalezen
+    'c.pipes.o2': "Deixas estar: é só um pingo.", // nieuw, nalezen
+    'c.pipes.o3': "Pões um balde por baixo e vais para casa.", // nieuw, nalezen
+    'c.pipes.w': "Um pingo por minuto são muitos litros por semana. A água pode estragar o chão ou o teto do andar de baixo.", // nieuw, nalezen
+    'l.metalwork': "Trabalhar o metal", // nieuw, nalezen
+    'w.bankschroef': "o torno de bancada (prende bem uma peça na bancada)", // nieuw, nalezen
+    'w.vijl': "a lima (para alisar o metal à mão)", // nieuw, nalezen
+    'w.ijzerzaag': "a serra de arco (uma serra para metal)", // nieuw, nalezen
+    'w.kolomboormachine': "o engenho de furar (um berbequim grande num pé)", // nieuw, nalezen
+    'w.draadtap': "o macho de roscar (abre uma rosca num furo)", // nieuw, nalezen
+    'w.braam': "a rebarba (uma aresta afiada depois de cortar metal)", // nieuw, nalezen
+    's.metalwork.1': "Prende o metal no torno de bancada.", // nieuw, nalezen
+    's.metalwork.2': "Lima a rebarba.", // nieuw, nalezen
+    's.metalwork.3': "Mantém as mãos longe da broca.", // nieuw, nalezen
+    'c.metalwork.q': "Porque é que a aresta está tão afiada?", // nieuw, nalezen
+    'c.metalwork.a': "Ainda tem uma rebarba.", // nieuw, nalezen
+    'c.metalwork': "Prende a peça, nunca a segures na mão", // nieuw, nalezen
+    'c.metalwork.b': "No engenho de furar, nunca segures uma peça pequena na mão. A broca pode agarrá-la e pô-la a rodar muito depressa. Prende-a no torno de bancada. Apanha o cabelo comprido, e não uses luvas com uma broca a rodar: pode puxar a luva. Usa óculos de proteção. Depois de serrar ou furar, o metal tem uma rebarba: uma aresta afiada. Tira-a com a lima antes de pegares na peça ou de a passares a alguém. Limpa as aparas de metal com uma escova, não com a mão.", // nieuw, nalezen
+    'c.metalwork.p': "Primeiro prendo a peça.", // nieuw, nalezen
+    'c.metalwork.s': "Tens de fazer um furo numa peça pequena de metal. O torno de bancada está noutra bancada. O que fazes?", // nieuw, nalezen
+    'c.metalwork.o1': "Vais buscar o torno, e prendes a peça.", // nieuw, nalezen
+    'c.metalwork.o2': "Seguras a peça com força na mão.", // nieuw, nalezen
+    'c.metalwork.o3': "Pões luvas e seguras a peça.", // nieuw, nalezen
+    'c.metalwork.w': "Uma broca pode agarrar uma peça pequena e pô-la a rodar. Então bate-te na mão. No torno de bancada, fica parada.", // nieuw, nalezen
   },
 };
 

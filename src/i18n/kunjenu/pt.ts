@@ -128,6 +128,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "Consigo perguntar como fixo uma prateleira.", // nieuw, nalezen
     'kjn.u.machines.1': "Consigo dizer que a proteção da máquina está partida.", // nieuw, nalezen
     'kjn.u.machines.2': "Consigo perguntar de quanto em quanto tempo tiro uma amostra.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "Consigo perguntar se posso abrir o quadro elétrico.", // nieuw, nalezen
+    'kjn.u.install.2': "Consigo dizer que uma união está a pingar.", // nieuw, nalezen
   },
 };
 

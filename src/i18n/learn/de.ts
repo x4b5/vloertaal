@@ -189,6 +189,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "Gefragt, wie oft: einmal pro Stunde, und wo man es aufschreibt.", // nieuw, nalezen
     'c.packing.a.why': "Gefragt, wie viele pro Karton: die Zahl, und wo sie steht.", // nieuw, nalezen
     'c.upkeep.a.why': "Gefragt, wann: der Wochentag, und der Moment an diesem Tag.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "Gefragt, welcher Draht wohin kommt: die gleiche Farbe an die gleiche Farbe.", // nieuw, nalezen
+    'c.testing.a.why': "Gefragt, ob man ihn aufmachen darf: Nein, und wer es macht.", // nieuw, nalezen
+    'c.pipes.a.why': "Gefragt, ob es noch undicht ist: ein bisschen, und was man dagegen tut.", // nieuw, nalezen
+    'c.metalwork.a.why': "Gefragt, warum sie scharf ist: Es ist noch ein Grat dran.", // nieuw, nalezen
   },
 };
 

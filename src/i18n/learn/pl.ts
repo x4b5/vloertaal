@@ -190,6 +190,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "Pytanie, jak często: raz na godzinę, i gdzie to zapisać.", // nieuw, nalezen
     'c.packing.a.why': "Pytanie, ile do kartonu: liczba i gdzie to jest napisane.", // nieuw, nalezen
     'c.upkeep.a.why': "Pytanie, kiedy: dzień tygodnia i pora tego dnia.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "Pytanie, który przewód gdzie: ten sam kolor do tego samego koloru.", // nieuw, nalezen
+    'c.testing.a.why': "Pytanie, czy można to otworzyć: nie, i kto to robi.", // nieuw, nalezen
+    'c.pipes.a.why': "Pytanie, czy jeszcze cieknie: trochę, i co się z tym robi.", // nieuw, nalezen
+    'c.metalwork.a.why': "Pytanie, dlaczego jest ostra: jest na niej jeszcze zadzior.", // nieuw, nalezen
   },
 };
 

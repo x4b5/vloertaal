@@ -188,6 +188,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "Perguntam de quanto em quanto tempo: uma vez por hora, e onde escrever.", // nieuw, nalezen
     'c.packing.a.why': "Perguntam quantos por caixa: o número, e onde está escrito.", // nieuw, nalezen
     'c.upkeep.a.why': "Perguntam quando: o dia da semana, e o momento nesse dia.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "Perguntam que fio vai para onde: a mesma cor com a mesma cor.", // nieuw, nalezen
+    'c.testing.a.why': "Perguntam se podes abrir: não, e quem o faz.", // nieuw, nalezen
+    'c.pipes.a.why': "Perguntam se ainda pinga: um bocadinho, e o que vais fazer.", // nieuw, nalezen
+    'c.metalwork.a.why': "Perguntam porque está afiada: ainda tem uma rebarba.", // nieuw, nalezen
   },
 };
 

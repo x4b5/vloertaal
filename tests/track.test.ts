@@ -64,7 +64,8 @@ const LATE_OWN = ['u.tech', 'u.garage'];
  */
 /** "Metselen, hout en vastmaken" (20 November 2026): the third own unit of Bouw, right after it. */
 /** "Machines en gereedschap" (21 November 2026): the second own unit of Productie, after those. */
-const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines'];
+/** "Elektra, leidingen en metaal" (21 November 2026): the second own unit of Techniek, after those. */
+const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install'];
 const expectedOrder = (own: string | string[] | null) => {
   const main = BASIS.flatMap((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
@@ -87,7 +88,7 @@ const TAAL_ORDER: Record<string, string[]> = {
   hospitality: expectedOrder('u.horeca'),
   cleaning: expectedOrder('u.clean'),
   horticulture: expectedOrder('u.kas'),
-  technical: expectedOrder('u.tech'),
+  technical: expectedOrder(['u.tech', 'u.install']),
   garage: expectedOrder('u.garage'),
   retail: expectedOrder('u.shop'),
 };

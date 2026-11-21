@@ -1672,6 +1672,90 @@ const machinesUnit = unit('machines', 'Machines and tools', 'Machines en gereeds
   ),
 ]);
 
+// ---- Electrics, pipes and metal (the owner's request, 21 November 2026) ----
+// The second own unit of the sector Techniek (src/content/sectors.ts): wiring, measuring and
+// working safely on power, pipes and water, and metalwork. In the path of a learner who chose
+// Techniek it comes right after "In de werkplaats"; in every other course it is appended at the
+// very end (workUnits below), so no existing course changes. Already words of other lessons, used
+// here in a sentence or the chat only: "de kabel", "de stroom" and "de elektricien" (l.power),
+// "de boor" and "lekken". The drawings: src/pictures/groupTechniek.tsx (one file per word in
+// src/pictures/techniek).
+
+const installUnit = unit('install', 'Electrics, pipes and metal', 'Elektra, leidingen en metaal', '⚡', '#5b4a9e', [
+  lesson(
+    'wiring',
+    'Wiring',
+    [
+      ['draad', 'de draad', 'the wire (one wire, inside a cable)', '🧶'],
+      ['stopcontact', 'het stopcontact', 'the socket (in the wall)', '🔌'],
+      ['schakelaar', 'de schakelaar', 'the switch (for the light)', '💡'],
+      ['lasklem', 'de lasklem', 'the lever connector (joins wires)', '🟧'],
+      ['striptang', 'de striptang', 'the wire stripper', '✂️'],
+      ['kabelgoot', 'de kabelgoot', 'the cable duct (a channel for cables)', '🗄️'],
+    ],
+    [
+      ['Strip de draad een centimeter.', 'Strip one centimetre off the wire.'],
+      ['Zet de draden vast in de lasklem.', 'Fix the wires in the lever connector.'],
+      ['De kabels gaan in de kabelgoot.', 'The cables go in the cable duct.'],
+    ],
+    [['Welke draad gaat waar?', 'Which wire goes where?'], ['Bruin bij bruin, blauw bij blauw.', 'Brown to brown, blue to blue.']],
+  ),
+  lesson(
+    'testing',
+    'Measuring and working safely',
+    [
+      ['multimeter', 'de multimeter', 'the multimeter (it measures power)', '📟'],
+      ['spanningzoeker', 'de spanningzoeker', 'the voltage tester (a screwdriver with a small lamp)', '🖊️'],
+      ['meterkast', 'de meterkast', 'the fuse box', '🗃️'],
+      ['zekering', 'de zekering', 'the circuit breaker (it switches off the power when something is wrong)', '🔘'],
+      ['hangslot', 'het hangslot', 'the padlock', '🔒'],
+      ['aardedraad', 'de aardedraad', 'the earth wire (green and yellow)', '🟩'],
+    ],
+    [
+      ['De zekering is eruit.', 'The circuit breaker has tripped.'],
+      ['Doe een hangslot op de schakelaar.', 'Put a padlock on the switch.'],
+      ['Meet eerst met de multimeter.', 'First measure with the multimeter.'],
+    ],
+    [['Mag ik de meterkast openmaken?', 'May I open the fuse box?'], ['Nee, dat doet de elektricien.', 'No, the electrician does that.']],
+  ),
+  lesson(
+    'pipes',
+    'Pipes and water',
+    [
+      ['buis', 'de buis', 'the pipe', '➖'],
+      ['koppeling', 'de koppeling', 'the fitting (it joins two pipes)', '🔗'],
+      ['pijpsnijder', 'de pijpsnijder', 'the pipe cutter', '⭕'],
+      ['waterpomptang', 'de waterpomptang', 'the slip-joint pliers', '🦀'],
+      ['afsluiter', 'de afsluiter', 'the stopcock (it shuts off the water)', '🚰'],
+      ['teflontape', 'de teflontape', 'the thread tape (white tape for the thread of a pipe)', '⚪'],
+    ],
+    [
+      ['Draai de afsluiter dicht.', 'Close the stopcock.'],
+      ['Snijd de buis met de pijpsnijder.', 'Cut the pipe with the pipe cutter.'],
+      ['Wikkel teflontape om de schroefdraad.', 'Wrap thread tape around the thread.'],
+    ],
+    [['Lekt de koppeling nog?', 'Is the fitting still leaking?'], ['Een beetje. Ik draai hem nog wat vaster.', 'A little. I will tighten it a bit more.']],
+  ),
+  lesson(
+    'metalwork',
+    'Working metal',
+    [
+      ['bankschroef', 'de bankschroef', 'the vice (it holds a part tight on the workbench)', '🗜️'],
+      ['vijl', 'de vijl', 'the file (to make metal smooth by hand)', '🪒'],
+      ['ijzerzaag', 'de ijzerzaag', 'the hacksaw (a saw for metal)', '🪚'],
+      ['kolomboormachine', 'de kolomboormachine', 'the pillar drill (a big drill on a stand)', '🛠️'],
+      ['draadtap', 'de draadtap', 'the tap (it cuts a thread in a hole)', '🔩'],
+      ['braam', 'de braam', 'the burr (a sharp edge after cutting metal)', '⚠️'],
+    ],
+    [
+      ['Zet het metaal vast in de bankschroef.', 'Clamp the metal in the vice.'],
+      ['Vijl de braam eraf.', 'File the burr off.'],
+      ['Houd je handen weg van de boor.', 'Keep your hands away from the drill.'],
+    ],
+    [['Waarom is de rand zo scherp?', 'Why is the edge so sharp?'], ['Er zit nog een braam aan.', 'There is still a burr on it.']],
+  ),
+]);
+
 // ---- In the shop, and Time, money and measures (docs/entree-aanvulling.md, part 5) ----
 // Basis units (no sector of their own), after the sector units: the course of every existing
 // sector keeps its order, the two units come at the end of it.
@@ -2918,5 +3002,7 @@ export const workUnits: Unit[] = [
   ruwbouwUnit,
   // Productie's second own unit (21 November 2026), at the very end (see "Machines and tools" above).
   machinesUnit,
+  // Techniek's second own unit (21 November 2026), at the very end (see "Electrics, pipes and metal" above).
+  installUnit,
 ];
 

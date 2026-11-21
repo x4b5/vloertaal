@@ -2651,6 +2651,88 @@ const t: CultureTranslation = {
     'c.upkeep.o2': "Iska daa: waa wax yar oo keliya.", // nieuw, nalezen
     'c.upkeep.o3': "Warqad dul saar, oo sii wad.", // nieuw, nalezen
     'c.upkeep.w': "Daadashadu way weynaataa, saliidda dhulka ku jirtaana dadka ayay simbiriirixisaa. Haddii goor hore la helo, waa hagaajin yar.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'u.install': "Koronto, tuubooyin iyo bir", // nieuw, nalezen
+    'l.wiring': "Isku xidhka siligyada", // nieuw, nalezen
+    'w.draad': "siligga (hal silig, fiilada gudaheeda)", // nieuw, nalezen
+    'w.stopcontact': "god korontada (derbiga ku yaal)", // nieuw, nalezen
+    'w.schakelaar': "badhanka (nalka loogu talagalay)", // nieuw, nalezen
+    'w.lasklem': "isku-xiraha siligyada (wuxuu isku xiraa siligyada)", // nieuw, nalezen
+    'w.striptang': "biinsada siligga lagu qaawiyo", // nieuw, nalezen
+    'w.kabelgoot': "marinka fiilooyinka (jid loogu talagalay fiilooyinka)", // nieuw, nalezen
+    's.wiring.1': "Siligga hal sentimitir ka qaawi.", // nieuw, nalezen
+    's.wiring.2': "Siligyada ku adkee isku-xiraha.", // nieuw, nalezen
+    's.wiring.3': "Fiilooyinku waxay galaan marinka fiilooyinka.", // nieuw, nalezen
+    'c.wiring.q': "Siliggee meeshee ayuu galaa?", // nieuw, nalezen
+    'c.wiring.a': "Bunni iyo bunni, buluug iyo buluug.", // nieuw, nalezen
+    'c.wiring': "Midabku wuxuu sheegaa waxa siliggu qabto", // nieuw, nalezen
+    'c.wiring.b': "Dhismaha gudihiisa siligyadu waxay leeyihiin midabyo go'an. Bunnigu (mararka qaar madow ama cawl) wuxuu keenaa korontada. Buluuggu wuu soo noqdaa. Cagaarka iyo jaallaha waa dhulka: wuxuu ilaaliyaa dadka, weligiisna wax kale looma isticmaalo. Midab ku xir midabkiisa. Qaawi oo keliya inta ku filan isku-xiraha: naxaas qaawan waa inaysan ka soo bixin. Siligga gudaha u riix, kadib si tartiib ah u jiid si aad u hubiso inuu adag yahay. Ma hubtid siliggu kee yahay? Jooji oo weydii.", // nieuw, nalezen
+    'c.wiring.p': "Dhulku waa midabkee?", // nieuw, nalezen
+    'c.wiring.s': "Waxaad xiraysaa laambad. Gabal naxaas ah ayaa ka soo baxaya isku-xiraha. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.wiring.o1': "Gaabi, oo mar kale xir.", // nieuw, nalezen
+    'c.wiring.o2': "Iska daa: laambaddu way shaqaynaysaa.", // nieuw, nalezen
+    'c.wiring.o3': "Cajalad ku duub.", // nieuw, nalezen
+    'c.wiring.w': "Naxaas qaawan oo ka baxsan isku-xiraha wax ayay taaban kartaa. Taasi waxay keeni kartaa koronto ku qabata ama gaagaabin koronto, xitaa bilo kadib.", // nieuw, nalezen
+    'l.testing': "Cabbirid iyo shaqo ammaan ah", // nieuw, nalezen
+    'w.multimeter': "multimiitarka (wuxuu cabbiraa korontada)", // nieuw, nalezen
+    'w.spanningzoeker': "baaraha korontada (maroojiye leh nal yar)", // nieuw, nalezen
+    'w.meterkast': "sanduuqa fiyuusyada", // nieuw, nalezen
+    'w.zekering': "fiyuuska (wuxuu damiyaa korontada marka wax khaldan yihiin)", // nieuw, nalezen
+    'w.hangslot': "qufulka", // nieuw, nalezen
+    'w.aardedraad': "siligga dhulka (cagaar iyo jaalle)", // nieuw, nalezen
+    's.testing.1': "Fiyuusku wuu dhacay.", // nieuw, nalezen
+    's.testing.2': "Badhanka quful ku xir.", // nieuw, nalezen
+    's.testing.3': "Marka hore ku cabbir multimiitarka.", // nieuw, nalezen
+    'c.testing.q': "Ma furi karaa sanduuqa fiyuusyada?", // nieuw, nalezen
+    'c.testing.a': "Maya, farsamayaqaanka korontada ayaa sameeya.", // nieuw, nalezen
+    'c.testing': "Dami, qufuli, cabbir", // nieuw, nalezen
+    'c.testing.b': "Ka hor intaadan koronto ka shaqayn, qaad saddex tallaabo. Dami: fiyuuska saxda ah ee sanduuqa fiyuusyada, ma aha oo keliya badhanka derbiga. Qufuli: ku xir qufulkaaga, furahana adigu hay, si aan qofna mar kale u shidin. Cabbir: ku hubi baaraha korontada ama multimiitarka in aysan dhab ahaantii koronto jirin. Markaas oo keliya ayaad bilaabaysaa. Fiyuus ma mar kasta ayuu dhacaa? Ha sii shidin: u sheeg madaxaaga. Shaqo koronto samee oo keliya marka laguu sheego inaad samayn karto. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.testing.p': "Hadda koronto kuma jirto.", // nieuw, nalezen
+    'c.testing.s': "Waxaad damisay fiyuuska. Saaxiib shaqo ayaa yiri: “Hadda bilow, waa demsan yahay.” Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.testing.o1': "Qufuli, oo marka hore cabbir.", // nieuw, nalezen
+    'c.testing.o2': "Bilow: saaxiibkaaga shaqadu wuu og yahay.", // nieuw, nalezen
+    'c.testing.o3': "Siligga si dhakhso ah u taabo si aad u hubiso.", // nieuw, nalezen
+    'c.testing.w': "Mararka qaar fiyuus khaldan ayaa la damiyaa, ama qof ayaa mar kale shida. Quful iyo cabbir ayaa muujiya inay dhab ahaantii ammaan tahay.", // nieuw, nalezen
+    'l.pipes': "Tuubooyin iyo biyo", // nieuw, nalezen
+    'w.buis': "tuubada", // nieuw, nalezen
+    'w.koppeling': "isku-xiraha tuubada (wuxuu isku xiraa laba tuubo)", // nieuw, nalezen
+    'w.pijpsnijder': "jaraha tuubada", // nieuw, nalezen
+    'w.waterpomptang': "biinsada tuubooyinka", // nieuw, nalezen
+    'w.afsluiter': "waalka biyaha (wuxuu xiraa biyaha)", // nieuw, nalezen
+    'w.teflontape': "cajaladda xarriiqyada (cajalad cad oo loogu talagalay xarriiqyada tuubada)", // nieuw, nalezen
+    's.pipes.1': "Xir waalka biyaha.", // nieuw, nalezen
+    's.pipes.2': "Tuubada ku jar jaraha tuubada.", // nieuw, nalezen
+    's.pipes.3': "Cajaladda xarriiqyada ku duub xarriiqyada.", // nieuw, nalezen
+    'c.pipes.q': "Isku-xiraha weli ma daadanayaa?", // nieuw, nalezen
+    'c.pipes.a': "Wax yar. Waxaan sii adkaynayaa in yar.", // nieuw, nalezen
+    'c.pipes': "Marka hore biyaha xir, baaldina diyaari", // nieuw, nalezen
+    'c.pipes.b': "Ka hor intaadan furin tuubo biyo, xir waalka biyaha. Kadib fur qasabad ka hoosaysa, si tuubadu u madhato. Baaldi iyo maro dhig meesha aad ka shaqaynayso hoosteeda. Tuubada naxaasta ah ku jar jaraha tuubada, ha ku jarin miinshaar: afku wuxuu ahaanayaa wareeg oo nadiif ah. Isku-xiraha si adag u maroojii, laakiin aan aad u xoog badnayn. Marka aad dhammayso, biyaha si tartiib ah u fur oo dhibco raadi. Daadasho yar oo aad iska dhaafto waxay noqotaa waxyeello biyo.", // nieuw, nalezen
+    'c.pipes.p': "Biyaha ma la xiray?", // nieuw, nalezen
+    'c.pipes.s': "Waxaad samaysay isku-xire cusub. Biyaha ayaad furaysaa. Daqiiqad kasta dhibic yar ayaa dhacda. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.pipes.o1': "Biyaha xir, oo adkee ama dib u samee.", // nieuw, nalezen
+    'c.pipes.o2': "Iska daa: waa hal dhibic oo keliya.", // nieuw, nalezen
+    'c.pipes.o3': "Baaldi hoos dhig oo guriga aad.", // nieuw, nalezen
+    'c.pipes.w': "Hal dhibic daqiiqaddii waa litirro badan toddobaadkii. Biyuhu waxay waxyeelayn karaan dhulka ama saqafka hoose.", // nieuw, nalezen
+    'l.metalwork': "Ka shaqaynta birta", // nieuw, nalezen
+    'w.bankschroef': "qabtaha miiska (wuxuu qayb si adag ugu hayaa miiska shaqada)", // nieuw, nalezen
+    'w.vijl': "soofaha (birta gacanta lagu simo)", // nieuw, nalezen
+    'w.ijzerzaag': "miinshaarka birta (miinshaar loogu talagalay birta)", // nieuw, nalezen
+    'w.kolomboormachine': "dariilka taagan (dariil weyn oo istaag saaran)", // nieuw, nalezen
+    'w.draadtap': "xarriiq-sameeyaha (wuxuu god ku sameeyaa xarriiqyo)", // nieuw, nalezen
+    'w.braam': "geeska fiiqan (cidhif fiiqan oo ka hara jaridda birta)", // nieuw, nalezen
+    's.metalwork.1': "Birta ku adkee qabtaha miiska.", // nieuw, nalezen
+    's.metalwork.2': "Geeska fiiqan ka soofee.", // nieuw, nalezen
+    's.metalwork.3': "Gacmahaaga ka fogee dariilka.", // nieuw, nalezen
+    'c.metalwork.q': "Maxay cidhifku sidaas u fiiqan yahay?", // nieuw, nalezen
+    'c.metalwork.a': "Weli geeso fiiqan ayaa ku yaal.", // nieuw, nalezen
+    'c.metalwork': "Ku adkee, weligaa gacanta ha ku qaban", // nieuw, nalezen
+    'c.metalwork.b': "Dariilka taagan agtiisa, weligaa qayb yar gacanta ha ku qaban. Dariilku wuu qabsan karaa oo aad iyo aad ayuu u wareejin karaa. Ku adkee qabtaha miiska. Timo dheer gadaal u xir, hana xiran gacmo-gashi dariil wareegaya agtiisa: gacmo-gashiga wuu jiidi karaa. Xiro muraayadaha badbaadada. Miinshaarid ama daloolin kadib, birtu waxay leedahay geeso fiiqan: cidhif af leh. Ka soofee ka hor intaadan qaybta gacanta ku qaadin ama qof u dhiibin. Jajabka birta ku xaaq burush, ha ku xaaqin gacantaada.", // nieuw, nalezen
+    'c.metalwork.p': "Marka hore waan adkaynayaa.", // nieuw, nalezen
+    'c.metalwork.s': "Waa inaad god ka daloolisaa gabal yar oo bir ah. Qabtaha miisku wuxuu saaran yahay miis kale. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.metalwork.o1': "Soo qaado qabtaha miiska, oo gabalka ku adkee.", // nieuw, nalezen
+    'c.metalwork.o2': "Gacantaada si adag ugu qabo.", // nieuw, nalezen
+    'c.metalwork.o3': "Xiro gacmo-gashi oo qabo.", // nieuw, nalezen
+    'c.metalwork.w': "Dariilku wuu qabsan karaa qayb yar oo wareejin karaa. Markaas wuxuu ku dhacaa gacantaada. Qabtaha miiska dhexdiisa wuu deggan yahay.", // nieuw, nalezen
   },
 };
 

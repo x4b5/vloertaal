@@ -130,6 +130,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "Pot să întreb cum fixez o scândură.", // nieuw, nalezen
     'kjn.u.machines.1': "Pot să spun că apărătoarea de protecție e stricată.", // nieuw, nalezen
     'kjn.u.machines.2': "Pot să întreb cât de des iau o probă.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "Pot să întreb dacă am voie să deschid tabloul electric.", // nieuw, nalezen
+    'kjn.u.install.2': "Pot să spun că un racord pierde apă.", // nieuw, nalezen
   },
 };
 

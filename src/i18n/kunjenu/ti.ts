@@ -130,6 +130,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "ሰሌዳ ብኸመይ ከም ዝትክሎ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.machines.1': "እቲ መከላኸሊ ማሽን ከም ዝተበላሸወ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.machines.2': "ክንደይ ግዜ ናሙና ከም ዝወስድ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "ነቲ ሳጹን ፊውዝ ክኸፍቶ ይፍቀደኒ ድዩ ኢለ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.install.2': "መራኸቢ ቱቦ ከም ዘፍስስ ክብል እኽእል እየ።", // nieuw, nalezen
   },
 };
 

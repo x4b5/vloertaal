@@ -185,6 +185,11 @@ const t: CultureTranslation = {
     'c.inspect.a.why': "Waxaa la weydiiyay intee jeer: saacaddii mar, iyo meesha lagu qoro.", // nieuw, nalezen
     'c.packing.a.why': "Waxaa la weydiiyay immisa sanduuqiiba: tirada, iyo meesha ay ku qoran tahay.", // nieuw, nalezen
     'c.upkeep.a.why': "Waxaa la weydiiyay goorma: maalinta toddobaadka, iyo waqtiga maalintaas.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'c.wiring.a.why': "Waxaa la weydiiyay siliggee meeshee galo: midab iyo midabkiisa.", // nieuw, nalezen
+    'c.testing.a.why': "Waxaa la weydiiyay in la furi karo: maya, iyo cidda samaysa.", // nieuw, nalezen
+    'c.pipes.a.why': "Waxaa la weydiiyay inuu weli daadanayo: wax yar, iyo waxa laga qabanayo.", // nieuw, nalezen
+    'c.metalwork.a.why': "Waxaa la weydiiyay sababta uu u fiiqan yahay: weli geeso fiiqan ayaa ku yaal.", // nieuw, nalezen
   },
 };
 export default t;

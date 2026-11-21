@@ -128,6 +128,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "Ich kann fragen, wie ich ein Brett befestige.", // nieuw, nalezen
     'kjn.u.machines.1': "Ich kann sagen, dass die Schutzabdeckung kaputt ist.", // nieuw, nalezen
     'kjn.u.machines.2': "Ich kann fragen, wie oft ich eine Probe nehme.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "Ich kann fragen, ob ich den Sicherungskasten aufmachen darf.", // nieuw, nalezen
+    'kjn.u.install.2': "Ich kann sagen, dass ein Fitting undicht ist.", // nieuw, nalezen
   },
 };
 

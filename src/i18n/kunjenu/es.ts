@@ -128,6 +128,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "Puedo preguntar cómo fijo una tabla.", // nieuw, nalezen
     'kjn.u.machines.1': "Puedo decir que la protección de la máquina está rota.", // nieuw, nalezen
     'kjn.u.machines.2': "Puedo preguntar cada cuánto tomo una muestra.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "Puedo preguntar si puedo abrir el cuadro eléctrico.", // nieuw, nalezen
+    'kjn.u.install.2': "Puedo decir que un racor pierde agua.", // nieuw, nalezen
   },
 };
 

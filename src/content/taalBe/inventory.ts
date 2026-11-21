@@ -307,6 +307,14 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.packing': L('A', 'A', 'nakijken: het afbreekmes heet in Vlaanderen vaak "de cutter"; het tapepistool, de sealmachine'),
     'l.upkeep': L('A', 'A', 'nakijken: de steeksleutel, het smeerpistool ("het vetspuit"?), de poetsdoek ("de poetslap")'),
   } },
+  // Elektra, leidingen en metaal (21 November 2026): how the work is done, the same in Belgium. The
+  // tips name no rule, right or amount. Flemish words to check.
+  'u.install': { kind: 'A', lessons: {
+    'l.wiring': L('A', 'A', 'nakijken: het stopcontact heet in Vlaanderen ook "de stekkerdoos"/"het stopcontact"; de lasklem ("de Wago-klem"?), de kabelgoot'),
+    'l.testing': L('A', 'A', 'nakijken: de meterkast heet in Vlaanderen "de zekeringkast" of "het verdeelbord"; de zekering, de spanningzoeker'),
+    'l.pipes': L('A', 'A', 'nakijken: de afsluiter ("de stopkraan"), de waterpomptang ("de waterpomptang"/"de pijptang")'),
+    'l.metalwork': L('A', 'A', 'nakijken: de kolomboormachine ("de kolomboor"), de draadtap'),
+  } },
 };
 
 /** The units of the inventory that need a Belgian version (B or C). */

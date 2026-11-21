@@ -2651,6 +2651,88 @@ const t: CultureTranslation = {
     'c.upkeep.o2': "Lo dejas: es solo un poco.", // nieuw, nalezen
     'c.upkeep.o3': "Pones un poco de papel encima, y sigues.", // nieuw, nalezen
     'c.upkeep.w': "Una fuga se hace más grande, y el aceite en el suelo hace que la gente resbale. Si se encuentra pronto, es una reparación pequeña.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'u.install': "Electricidad, tuberías y metal", // nieuw, nalezen
+    'l.wiring': "Conectar hilos y cables", // nieuw, nalezen
+    'w.draad': "el hilo (un hilo dentro de un cable)", // nieuw, nalezen
+    'w.stopcontact': "el enchufe (en la pared)", // nieuw, nalezen
+    'w.schakelaar': "el interruptor (para la luz)", // nieuw, nalezen
+    'w.lasklem': "el conector de palanca (une hilos)", // nieuw, nalezen
+    'w.striptang': "el pelacables", // nieuw, nalezen
+    'w.kabelgoot': "la canaleta (un canal para cables)", // nieuw, nalezen
+    's.wiring.1': "Pela un centímetro del hilo.", // nieuw, nalezen
+    's.wiring.2': "Fija los hilos en el conector de palanca.", // nieuw, nalezen
+    's.wiring.3': "Los cables van en la canaleta.", // nieuw, nalezen
+    'c.wiring.q': "¿Qué hilo va dónde?", // nieuw, nalezen
+    'c.wiring.a': "Marrón con marrón, azul con azul.", // nieuw, nalezen
+    'c.wiring': "Los colores dicen para qué sirve un hilo", // nieuw, nalezen
+    'c.wiring.b': "En un edificio, los hilos tienen colores fijos. El marrón (a veces negro o gris) lleva la corriente. El azul es el de vuelta. El verde y amarillo es la tierra: protege a las personas, y nunca se usa para otra cosa. Conecta el mismo color con el mismo color. Pela solo lo que cabe en el conector: no puede quedar cobre desnudo fuera. Mete el hilo, y luego tira de él suavemente para comprobar que está fijo. ¿No sabes qué hilo es cuál? Para y pregunta.", // nieuw, nalezen
+    'c.wiring.p': "¿De qué color es la tierra?", // nieuw, nalezen
+    'c.wiring.s': "Conectas una lámpara. Un trozo de cobre sale del conector. ¿Qué haces?", // nieuw, nalezen
+    'c.wiring.o1': "Cortas el hilo más corto, y lo vuelves a conectar.", // nieuw, nalezen
+    'c.wiring.o2': "Lo dejas así: la lámpara funciona.", // nieuw, nalezen
+    'c.wiring.o3': "Le pones un trozo de cinta alrededor.", // nieuw, nalezen
+    'c.wiring.w': "El cobre desnudo fuera del conector puede tocar algo. Eso puede dar una descarga o un cortocircuito, también meses después.", // nieuw, nalezen
+    'l.testing': "Medir y trabajar con seguridad", // nieuw, nalezen
+    'w.multimeter': "el multímetro (mide la corriente)", // nieuw, nalezen
+    'w.spanningzoeker': "el buscapolos (un destornillador con una lucecita)", // nieuw, nalezen
+    'w.meterkast': "el cuadro eléctrico", // nieuw, nalezen
+    'w.zekering': "el automático, el fusible (corta la corriente cuando algo va mal)", // nieuw, nalezen
+    'w.hangslot': "el candado", // nieuw, nalezen
+    'w.aardedraad': "el cable de tierra (verde y amarillo)", // nieuw, nalezen
+    's.testing.1': "Ha saltado el automático.", // nieuw, nalezen
+    's.testing.2': "Pon un candado en el interruptor.", // nieuw, nalezen
+    's.testing.3': "Mide primero con el multímetro.", // nieuw, nalezen
+    'c.testing.q': "¿Puedo abrir el cuadro eléctrico?", // nieuw, nalezen
+    'c.testing.a': "No, eso lo hace el electricista.", // nieuw, nalezen
+    'c.testing': "Cortado, bloqueado, medido", // nieuw, nalezen
+    'c.testing.b': "Antes de trabajar con electricidad, sigue tres pasos. Corta: el automático correcto en el cuadro eléctrico, no solo el interruptor de la pared. Bloquea: pon tu propio candado, y guarda la llave contigo, así nadie lo puede volver a conectar. Mide: comprueba con un buscapolos o un multímetro que de verdad no hay corriente. Solo entonces empiezas a trabajar. ¿Un automático salta una y otra vez? No lo sigas subiendo: díselo a tu encargado. Haz trabajos eléctricos solo cuando te han dicho que puedes. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.testing.p': "Ya no hay corriente.", // nieuw, nalezen
+    'c.testing.s': "Has bajado el automático. Un compañero dice: “Empieza ya, está cortado.” ¿Qué haces?", // nieuw, nalezen
+    'c.testing.o1': "Lo bloqueas, y primero mides.", // nieuw, nalezen
+    'c.testing.o2': "Empiezas: tu compañero lo sabe.", // nieuw, nalezen
+    'c.testing.o3': "Tocas el hilo un momento para comprobarlo.", // nieuw, nalezen
+    'c.testing.w': "A veces el automático bajado no es el correcto, o alguien lo vuelve a subir. Un candado y una medición muestran que de verdad es seguro.", // nieuw, nalezen
+    'l.pipes': "Tuberías y agua", // nieuw, nalezen
+    'w.buis': "el tubo", // nieuw, nalezen
+    'w.koppeling': "el racor (une dos tubos)", // nieuw, nalezen
+    'w.pijpsnijder': "el cortatubos", // nieuw, nalezen
+    'w.waterpomptang': "el alicate de pico de loro (alicate ajustable)", // nieuw, nalezen
+    'w.afsluiter': "la llave de paso (cierra el agua)", // nieuw, nalezen
+    'w.teflontape': "la cinta de teflón (cinta blanca para la rosca de un tubo)", // nieuw, nalezen
+    's.pipes.1': "Cierra la llave de paso.", // nieuw, nalezen
+    's.pipes.2': "Corta el tubo con el cortatubos.", // nieuw, nalezen
+    's.pipes.3': "Enrolla cinta de teflón en la rosca.", // nieuw, nalezen
+    'c.pipes.q': "¿Todavía pierde agua el racor?", // nieuw, nalezen
+    'c.pipes.a': "Un poco. Lo aprieto un poco más.", // nieuw, nalezen
+    'c.pipes': "Primero cierra el agua, y ten un cubo listo", // nieuw, nalezen
+    'c.pipes.b': "Antes de abrir una tubería de agua, cierra la llave de paso. Luego abre un grifo más abajo, para que la tubería se vacíe. Pon un cubo y un trapo debajo del sitio donde trabajas. Corta un tubo de cobre con un cortatubos, no con una sierra: el extremo queda redondo y limpio. Aprieta bien un racor, pero no demasiado. Cuando termines, abre el agua despacio y busca gotas. Una fuga pequeña que dejas así acaba en daños por agua.", // nieuw, nalezen
+    'c.pipes.p': "¿Está cerrada el agua?", // nieuw, nalezen
+    'c.pipes.s': "Has hecho un racor nuevo. Abres el agua. Cae una gotita cada minuto. ¿Qué haces?", // nieuw, nalezen
+    'c.pipes.o1': "Cierras el agua, y lo aprietas o lo vuelves a hacer.", // nieuw, nalezen
+    'c.pipes.o2': "Lo dejas así: es solo una gota.", // nieuw, nalezen
+    'c.pipes.o3': "Pones un cubo debajo y te vas a casa.", // nieuw, nalezen
+    'c.pipes.w': "Una gota por minuto son muchos litros a la semana. El agua puede estropear el suelo o el techo de abajo.", // nieuw, nalezen
+    'l.metalwork': "Trabajar el metal", // nieuw, nalezen
+    'w.bankschroef': "el tornillo de banco (sujeta bien una pieza en el banco de trabajo)", // nieuw, nalezen
+    'w.vijl': "la lima (para alisar el metal a mano)", // nieuw, nalezen
+    'w.ijzerzaag': "la sierra de arco (una sierra para metal)", // nieuw, nalezen
+    'w.kolomboormachine': "el taladro de columna (un taladro grande sobre un pie)", // nieuw, nalezen
+    'w.draadtap': "el macho de roscar (hace una rosca en un agujero)", // nieuw, nalezen
+    'w.braam': "la rebaba (un borde afilado después de cortar metal)", // nieuw, nalezen
+    's.metalwork.1': "Sujeta el metal en el tornillo de banco.", // nieuw, nalezen
+    's.metalwork.2': "Quita la rebaba con la lima.", // nieuw, nalezen
+    's.metalwork.3': "Mantén las manos lejos de la broca.", // nieuw, nalezen
+    'c.metalwork.q': "¿Por qué está tan afilado el borde?", // nieuw, nalezen
+    'c.metalwork.a': "Todavía tiene una rebaba.", // nieuw, nalezen
+    'c.metalwork': "Sujétalo en el tornillo, nunca con la mano", // nieuw, nalezen
+    'c.metalwork.b': "En el taladro de columna, nunca aguantes una pieza pequeña con la mano. La broca puede atraparla y hacerla girar muy rápido. Sujétala en el tornillo de banco. Recógete el pelo largo, y no lleves guantes con una broca que gira: puede atrapar el guante. Lleva gafas de seguridad. Después de serrar o taladrar, el metal tiene una rebaba: un borde afilado. Quítala con la lima antes de coger la pieza con la mano o de pasarla a otra persona. Quita las virutas de metal con un cepillo, no con la mano.", // nieuw, nalezen
+    'c.metalwork.p': "Primero lo sujeto en el tornillo.", // nieuw, nalezen
+    'c.metalwork.s': "Tienes que hacer un agujero en una pieza pequeña de metal. El tornillo de banco está en otro banco. ¿Qué haces?", // nieuw, nalezen
+    'c.metalwork.o1': "Vas a buscar el tornillo de banco, y fijas la pieza en él.", // nieuw, nalezen
+    'c.metalwork.o2': "La aguantas fuerte con la mano.", // nieuw, nalezen
+    'c.metalwork.o3': "Te pones guantes y la aguantas.", // nieuw, nalezen
+    'c.metalwork.w': "Una broca puede atrapar una pieza pequeña y hacerla girar. Entonces te golpea la mano. En el tornillo de banco se queda quieta.", // nieuw, nalezen
   },
 };
 

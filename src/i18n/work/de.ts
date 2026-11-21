@@ -2651,6 +2651,88 @@ const t: CultureTranslation = {
     'c.upkeep.o2': "Lass es: Es ist nur ein bisschen.", // nieuw, nalezen
     'c.upkeep.o3': "Leg etwas Papier darauf, und mach weiter.", // nieuw, nalezen
     'c.upkeep.w': "Ein Leck wird größer, und auf Öl am Boden rutschen Menschen aus. Früh gefunden, ist es eine kleine Reparatur.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
+    'u.install': "Elektrik, Rohre und Metall", // nieuw, nalezen
+    'l.wiring': "Verkabeln", // nieuw, nalezen
+    'w.draad': "der Draht (ein Draht in einem Kabel)", // nieuw, nalezen
+    'w.stopcontact': "die Steckdose (in der Wand)", // nieuw, nalezen
+    'w.schakelaar': "der Schalter (für das Licht)", // nieuw, nalezen
+    'w.lasklem': "die Hebelklemme (sie verbindet Drähte)", // nieuw, nalezen
+    'w.striptang': "die Abisolierzange", // nieuw, nalezen
+    'w.kabelgoot': "der Kabelkanal (eine Rinne für Kabel)", // nieuw, nalezen
+    's.wiring.1': "Isolier den Draht einen Zentimeter ab.", // nieuw, nalezen
+    's.wiring.2': "Mach die Drähte in der Hebelklemme fest.", // nieuw, nalezen
+    's.wiring.3': "Die Kabel kommen in den Kabelkanal.", // nieuw, nalezen
+    'c.wiring.q': "Welcher Draht kommt wohin?", // nieuw, nalezen
+    'c.wiring.a': "Braun zu Braun, Blau zu Blau.", // nieuw, nalezen
+    'c.wiring': "Farben zeigen, was ein Draht macht", // nieuw, nalezen
+    'c.wiring.b': "In einem Gebäude haben die Drähte feste Farben. Braun (manchmal Schwarz oder Grau) bringt den Strom. Blau führt zurück. Grün-Gelb ist die Erde: Sie schützt Menschen, und sie wird nie für etwas anderes benutzt. Schließ die gleiche Farbe an die gleiche Farbe an. Isolier nur so viel ab, wie in die Klemme passt: Es darf kein blankes Kupfer herausschauen. Steck den Draht hinein, dann zieh leicht daran, um zu prüfen, ob er fest ist. Nicht sicher, welcher Draht welcher ist? Hör auf und frag.", // nieuw, nalezen
+    'c.wiring.p': "Welche Farbe hat die Erde?", // nieuw, nalezen
+    'c.wiring.s': "Du schließt eine Lampe an. Ein Stück Kupfer schaut aus der Klemme heraus. Was machst du?", // nieuw, nalezen
+    'c.wiring.o1': "Schneid es kürzer, und schließ es neu an.", // nieuw, nalezen
+    'c.wiring.o2': "Lass es so: Die Lampe funktioniert.", // nieuw, nalezen
+    'c.wiring.o3': "Wickel ein Stück Klebeband darum.", // nieuw, nalezen
+    'c.wiring.w': "Blankes Kupfer außerhalb der Klemme kann etwas berühren. Das kann einen Stromschlag oder einen Kurzschluss geben, auch noch Monate später.", // nieuw, nalezen
+    'l.testing': "Messen und sicher arbeiten", // nieuw, nalezen
+    'w.multimeter': "das Multimeter (es misst Strom)", // nieuw, nalezen
+    'w.spanningzoeker': "der Spannungsprüfer (ein Schraubenzieher mit einer kleinen Lampe)", // nieuw, nalezen
+    'w.meterkast': "der Sicherungskasten", // nieuw, nalezen
+    'w.zekering': "die Sicherung (sie schaltet den Strom ab, wenn etwas nicht stimmt)", // nieuw, nalezen
+    'w.hangslot': "das Vorhängeschloss", // nieuw, nalezen
+    'w.aardedraad': "der Schutzleiter, der Erdungsdraht (grün-gelb)", // nieuw, nalezen
+    's.testing.1': "Die Sicherung ist rausgeflogen.", // nieuw, nalezen
+    's.testing.2': "Häng ein Vorhängeschloss an den Schalter.", // nieuw, nalezen
+    's.testing.3': "Miss zuerst mit dem Multimeter.", // nieuw, nalezen
+    'c.testing.q': "Darf ich den Sicherungskasten aufmachen?", // nieuw, nalezen
+    'c.testing.a': "Nein, das macht der Elektriker.", // nieuw, nalezen
+    'c.testing': "Aus, abgeschlossen, gemessen", // nieuw, nalezen
+    'c.testing.b': "Bevor du an der Elektrik arbeitest, mach drei Schritte. Schalt ab: die richtige Sicherung im Sicherungskasten, nicht nur den Schalter an der Wand. Schließ ab: Häng dein eigenes Vorhängeschloss daran und behalt den Schlüssel bei dir, damit niemand wieder einschalten kann. Miss: Prüf mit einem Spannungsprüfer oder einem Multimeter, dass wirklich kein Strom drauf ist. Erst dann fängst du an. Fliegt eine Sicherung immer wieder raus? Schalt sie nicht immer wieder ein: Sag es deinem Vorgesetzten. Mach Elektroarbeiten nur, wenn man dir gesagt hat, dass du das darfst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.testing.p': "Da ist kein Strom mehr drauf.", // nieuw, nalezen
+    'c.testing.s': "Du hast die Sicherung ausgeschaltet. Ein Kollege sagt: „Fang jetzt an, es ist aus.“ Was machst du?", // nieuw, nalezen
+    'c.testing.o1': "Schließ ab, und miss zuerst.", // nieuw, nalezen
+    'c.testing.o2': "Fang an: Dein Kollege weiß es.", // nieuw, nalezen
+    'c.testing.o3': "Fass kurz den Draht an, um es zu prüfen.", // nieuw, nalezen
+    'c.testing.w': "Manchmal ist die falsche Sicherung aus, oder jemand schaltet sie wieder ein. Ein Schloss und eine Messung zeigen, dass es wirklich sicher ist.", // nieuw, nalezen
+    'l.pipes': "Rohre und Wasser", // nieuw, nalezen
+    'w.buis': "das Rohr", // nieuw, nalezen
+    'w.koppeling': "das Fitting, die Verschraubung (es verbindet zwei Rohre)", // nieuw, nalezen
+    'w.pijpsnijder': "der Rohrabschneider", // nieuw, nalezen
+    'w.waterpomptang': "die Wasserpumpenzange", // nieuw, nalezen
+    'w.afsluiter': "das Absperrventil (es stellt das Wasser ab)", // nieuw, nalezen
+    'w.teflontape': "das Teflonband (weißes Band für das Gewinde eines Rohrs)", // nieuw, nalezen
+    's.pipes.1': "Dreh das Absperrventil zu.", // nieuw, nalezen
+    's.pipes.2': "Schneide das Rohr mit dem Rohrabschneider.", // nieuw, nalezen
+    's.pipes.3': "Wickel Teflonband um das Gewinde.", // nieuw, nalezen
+    'c.pipes.q': "Ist das Fitting noch undicht?", // nieuw, nalezen
+    'c.pipes.a': "Ein bisschen. Ich ziehe es noch etwas fester an.", // nieuw, nalezen
+    'c.pipes': "Zuerst das Wasser ab, und ein Eimer bereit", // nieuw, nalezen
+    'c.pipes.b': "Bevor du eine Wasserleitung öffnest, dreh das Absperrventil zu. Dann öffne einen Wasserhahn weiter unten, damit das Rohr leer läuft. Stell einen Eimer und einen Lappen unter die Stelle, an der du arbeitest. Schneide ein Kupferrohr mit einem Rohrabschneider, nicht mit einer Säge: Das Ende bleibt rund und sauber. Zieh ein Fitting fest an, aber nicht zu fest. Wenn du fertig bist, dreh das Wasser langsam auf und such nach Tropfen. Ein kleines Leck, das du lässt, wird zu einem Wasserschaden.", // nieuw, nalezen
+    'c.pipes.p': "Ist das Wasser abgedreht?", // nieuw, nalezen
+    'c.pipes.s': "Du hast ein neues Fitting angebracht. Du drehst das Wasser auf. Jede Minute fällt ein kleiner Tropfen. Was machst du?", // nieuw, nalezen
+    'c.pipes.o1': "Dreh das Wasser zu, und zieh es fester an oder mach es neu.", // nieuw, nalezen
+    'c.pipes.o2': "Lass es: Es ist nur ein Tropfen.", // nieuw, nalezen
+    'c.pipes.o3': "Stell einen Eimer darunter und geh nach Hause.", // nieuw, nalezen
+    'c.pipes.w': "Ein Tropfen pro Minute sind viele Liter pro Woche. Das Wasser kann den Boden oder die Decke darunter beschädigen.", // nieuw, nalezen
+    'l.metalwork': "Metall bearbeiten", // nieuw, nalezen
+    'w.bankschroef': "der Schraubstock (er hält ein Teil auf der Werkbank fest)", // nieuw, nalezen
+    'w.vijl': "die Feile (um Metall mit der Hand glatt zu machen)", // nieuw, nalezen
+    'w.ijzerzaag': "die Metallsäge (eine Säge für Metall)", // nieuw, nalezen
+    'w.kolomboormachine': "die Säulenbohrmaschine (eine große Bohrmaschine auf einem Ständer)", // nieuw, nalezen
+    'w.draadtap': "der Gewindebohrer (er schneidet ein Gewinde in ein Loch)", // nieuw, nalezen
+    'w.braam': "der Grat (eine scharfe Kante nach dem Schneiden von Metall)", // nieuw, nalezen
+    's.metalwork.1': "Spann das Metall in den Schraubstock.", // nieuw, nalezen
+    's.metalwork.2': "Feil den Grat ab.", // nieuw, nalezen
+    's.metalwork.3': "Halt deine Hände vom Bohrer weg.", // nieuw, nalezen
+    'c.metalwork.q': "Warum ist die Kante so scharf?", // nieuw, nalezen
+    'c.metalwork.a': "Da ist noch ein Grat dran.", // nieuw, nalezen
+    'c.metalwork': "Einspannen, nie festhalten", // nieuw, nalezen
+    'c.metalwork.b': "Halt an der Säulenbohrmaschine nie ein kleines Teil in der Hand. Der Bohrer kann es packen und sehr schnell herumdrehen. Spann es in den Schraubstock. Binde lange Haare zurück, und trag keine Handschuhe an einem laufenden Bohrer: Er kann einen Handschuh hineinziehen. Trag eine Schutzbrille. Nach dem Sägen oder Bohren hat Metall einen Grat: eine scharfe Kante. Feil ihn ab, bevor du das Teil in die Hand nimmst oder weitergibst. Feg Metallspäne mit einer Bürste weg, nicht mit der Hand.", // nieuw, nalezen
+    'c.metalwork.p': "Ich spanne es zuerst ein.", // nieuw, nalezen
+    'c.metalwork.s': "Du musst ein Loch in ein kleines Stück Metall bohren. Der Schraubstock ist an einer anderen Werkbank. Was machst du?", // nieuw, nalezen
+    'c.metalwork.o1': "Hol den Schraubstock, und spann das Stück ein.", // nieuw, nalezen
+    'c.metalwork.o2': "Halt es mit der Hand gut fest.", // nieuw, nalezen
+    'c.metalwork.o3': "Zieh Handschuhe an und halt es fest.", // nieuw, nalezen
+    'c.metalwork.w': "Ein Bohrer kann ein kleines Teil packen und herumschleudern. Dann trifft es deine Hand. Im Schraubstock bleibt es still liegen.", // nieuw, nalezen
   },
 };
 

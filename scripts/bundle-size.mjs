@@ -69,6 +69,10 @@ import { gzipSync } from 'node:zlib';
  * Raised once for the whole round instead of at every unit; neither is what a first screen waits
  * for (a learner loads one help language, and no phone loads the tip pages): start file and start
  * keep their own, lower limits.
+ * tip pages 6500 → 7500 (21 November 2026, the owner's choice): the sector units of Bouw, Productie
+ * and Techniek (34 lessons since 20 November) filled the room, at 6406.3 kB; a new unit of four
+ * lessons with its tips is about 200 kB of tip pages. Room for about five more units. The tip pages
+ * load on the site only, never on a phone's first screen.
  */
 export const LIMITS = {
   'start file': 280,
@@ -77,7 +81,8 @@ export const LIMITS = {
   // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
   // 14 November 2026: 93 tips in 15 languages at 4746 kB; later that day 97 tips at 4900 kB.
   // 14 November 2026: room for the basis units at four lessons (see above).
-  'tip pages': 6500,
+  // 21 November 2026: room for about five more sector units (see above).
+  'tip pages': 7500,
 };
 
 /** A page of the workplace tips (/pl/tip/, /pl/tip/<tip>/): counted on its own, see above. */

@@ -130,6 +130,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "Мога да попитам как да закрепя дъска.", // nieuw, nalezen
     'kjn.u.machines.1': "Мога да кажа, че предпазният капак е счупен.", // nieuw, nalezen
     'kjn.u.machines.2': "Мога да попитам колко често да взимам проба.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "Мога да попитам дали може да отворя електрическото табло.", // nieuw, nalezen
+    'kjn.u.install.2': "Мога да кажа, че една връзка тече.", // nieuw, nalezen
   },
 };
 

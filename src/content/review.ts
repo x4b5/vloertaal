@@ -71,6 +71,8 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.ruwbouw': ['u.build', 'u.afbouw'],
   // Machines en gereedschap (21 November 2026): the factory (the line, quality) and safety.
   'u.machines': ['u.factory', 'u.safety'],
+  // Elektra, leidingen en metaal (21 November 2026): the workshop (power off first) and safety.
+  'u.install': ['u.tech', 'u.safety'],
 };
 
 /**
@@ -107,6 +109,8 @@ const relatedWords: Record<string, string[]> = {
   'u.ruwbouw': ['w.waterpas', 'w.duimstok'],
   // Machines en gereedschap: the machine and the emergency stop of "De band en machines".
   'u.machines': ['w.machine', 'w.noodstop'],
+  // Elektra, leidingen en metaal: the cable and the power of "Eerst de stroom eraf".
+  'u.install': ['w.kabel', 'w.stroom'],
   // Goed communiceren: angry (l.speakup) and slowly (l.understand), what the lessons are about.
   'u.communicate': ['w.boos', 'w.langzaam'],
   // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).

@@ -128,6 +128,9 @@ const t: CultureTranslation = {
     'kjn.u.ruwbouw.2': "Bir tahtayı nasıl sabitleyeceğimi sorabilirim.", // nieuw, nalezen
     'kjn.u.machines.1': "Makine korumasının kırık olduğunu söyleyebilirim.", // nieuw, nalezen
     'kjn.u.machines.2': "Ne sıklıkla numune alacağımı sorabilirim.", // nieuw, nalezen
+    // "Elektra, leidingen en metaal" (21 November 2026).
+    'kjn.u.install.1': "Sigorta kutusunu açıp açamayacağımı sorabilirim.", // nieuw, nalezen
+    'kjn.u.install.2': "Bir rakorun sızdırdığını söyleyebilirim.", // nieuw, nalezen
   },
 };
 
