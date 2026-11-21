@@ -7,27 +7,27 @@ const BRASS = { light: PAL.yellow, base: PAL.yellowShade, shade: '#b98a00', insi
 const TAPE = { face: '#e3f5ff', side: PAL.mist, sideDeep: PAL.line };
 
 /** The roll: the centre of its face, the face's radii, and how far its side goes back to the right. */
-const RX0 = 64;
-const RY0 = 50;
+const RX0 = 70;
+const RY0 = 68;
 const FRX = 23;
 const FRY = 31;
 const DEPTH = 15;
 
 /** The small pipe end in front, bottom left: level, its thread on the right. */
-const CY = 94;
+const CY = 88;
 const PR = 9;
-const X0 = 8;
-const TX = 28;
-const WX = 38;
-const EX = 50;
+const X0 = 6;
+const TX = 24;
+const WX = 34;
+const EX = 44;
 
 export default {
   // "de teflontape": the PTFE thread tape — a big roll of white tape seen slanted (light blue-white face,
-  // grey side, a cardboard core round the hole), its band running down to a small brass pipe end in front
+  // grey side, a cardboard core round the hole), its band running to a small brass pipe end beside it
   // with a few turns of tape round its thread.
   'w.teflontape': () => (
     <g>
-      <Ground cx={66} cy={102} rx={40} ry={4.5} />
+      <Ground cx={70} cy={102} rx={40} ry={4.5} />
       {/* The roll: its side (to the right), then the face */}
       <ellipse cx={RX0 + DEPTH} cy={RY0} rx={FRX} ry={FRY} fill={TAPE.sideDeep} />
       <rect x={RX0} y={RY0 - FRY} width={DEPTH} height={2 * FRY} fill={TAPE.side} />
@@ -39,8 +39,8 @@ export default {
       <ellipse cx={RX0 + 1.6} cy={RY0 + 0.6} rx={6.4} ry={9.5} fill={PAL.slate} />
       <Shine d={`M${RX0 - 17} ${RY0 - 8}Q${RX0 - 14} ${RY0 - 22} ${RX0 - 5} ${RY0 - 27}`} width={3.4} opacity={0.9} />
       {/* The band from the roll down to the thread */}
-      <path d={`M${RX0 - 14} ${RY0 + 22}L${RX0 - 4} ${RY0 + 28}L${WX} ${CY + PR - 1}L${TX + 2} ${CY + PR - 1}Z`} fill={TAPE.side} />
-      <path d={`M${RX0 - 14} ${RY0 + 22}L${RX0 - 8} ${RY0 + 26}L${WX - 4} ${CY + PR - 1}L${TX + 2} ${CY + PR - 1}Z`} fill={TAPE.face} />
+      <path d={`M${RX0 - 22} ${RY0 - 8}L${RX0 - 20} ${RY0 + 6}L${WX} ${CY - PR + 1}L${TX + 2} ${CY - PR + 1}Z`} fill={TAPE.side} />
+      <path d={`M${RX0 - 22} ${RY0 - 8}L${RX0 - 21} ${RY0 + 1}L${WX - 4} ${CY - PR + 1}L${TX + 2} ${CY - PR + 1}Z`} fill={TAPE.face} />
       {/* The small brass pipe end: base, shaded underside, the thread as slanted grooves */}
       <rect x={X0} y={CY - PR} width={EX - X0} height={2 * PR} fill={BRASS.base} />
       <rect x={X0} y={CY + 2} width={EX - X0} height={PR - 2} fill={BRASS.shade} />
