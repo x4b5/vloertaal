@@ -6,11 +6,11 @@ const DX = 0.6;
 const DY = -0.8;
 
 /** The clear body: front bottom left corner, width, depth, height. */
-const OX = 30;
-const OY = 82;
-const W = 58;
-const D = 30;
-const H = 24;
+const OX = 36;
+const OY = 80;
+const W = 62;
+const D = 26;
+const H = 32;
 
 /** Copper: a lighter and a darker step of terracotta (no new hue). */
 const COPPER = PAL.clayLight;
@@ -25,20 +25,20 @@ const quad = (...p: P[]) => `M${p.map(([x, y]) => `${x} ${y}`).join('L')}Z`;
 const at = (p: P) => `${p[0]} ${p[1]}`;
 
 /** The two ports: where along the front they are, and how high. */
-const PORTS = [15, 43];
-const PZ = 8;
+const PORTS = [16, 46];
+const PZ = 9;
 
 /** A lever lying on the top over one port: a flat orange slab with a lip over the front. */
 const lever = (u: number, key: string) => {
-  const u0 = u - 11;
-  const u1 = u + 11;
+  const u0 = u - 10;
+  const u1 = u + 10;
   const z0 = H;
-  const z1 = H + 5;
+  const z1 = H + 4;
   return (
     <g key={key}>
-      <path d={quad(iso(u1, -3, z0 - 3), iso(u1, D - 3, z0), iso(u1, D - 3, z1), iso(u1, -3, z1))} fill={PAL.orangeShade} />
-      <path d={quad(iso(u0, -3, z0 - 3), iso(u1, -3, z0 - 3), iso(u1, -3, z1), iso(u0, -3, z1))} fill={PAL.orangeShade} />
-      <path d={quad(iso(u0, -3, z1), iso(u1, -3, z1), iso(u1, D - 3, z1), iso(u0, D - 3, z1))} fill={PAL.orange} />
+      <path d={quad(iso(u1, 2, z0), iso(u1, D - 3, z0), iso(u1, D - 3, z1), iso(u1, 2, z1))} fill={PAL.orangeShade} />
+      <path d={quad(iso(u0, 2, z0), iso(u1, 2, z0), iso(u1, 2, z1), iso(u0, 2, z1))} fill={PAL.orangeShade} />
+      <path d={quad(iso(u0, 2, z1), iso(u1, 2, z1), iso(u1, D - 3, z1), iso(u0, D - 3, z1))} fill={PAL.orange} />
       <path d={`M${at(iso(u0 + 3, 0, z1))}L${at(iso(u0 + 3, D - 7, z1))}`} stroke={PAL.orangeLight} strokeWidth="2.4" strokeLinecap="round" />
     </g>
   );
@@ -47,19 +47,19 @@ const lever = (u: number, key: string) => {
 /** A wire pushed into a port: insulation coming from the front, and its copper core seen through the clear body. */
 const wire = (u: number, color: string, shade: string, end: P, key: string) => {
   const [hx, hy] = iso(u, 0, PZ);
-  const [cx, cy] = iso(u, D - 6, PZ);
+  const [cx, cy] = iso(u, D - 4, PZ);
   const [ix, iy] = iso(u, 6, PZ);
   return {
     inside: (
       <g key={`${key}i`} opacity=".85">
-        <path d={`M${hx} ${hy}L${ix} ${iy}`} stroke={color} strokeWidth="6" strokeLinecap="round" />
-        <path d={`M${ix} ${iy}L${cx} ${cy}`} stroke={COPPER} strokeWidth="3.4" strokeLinecap="round" />
+        <path d={`M${hx} ${hy}L${ix} ${iy}`} stroke={color} strokeWidth="7" strokeLinecap="round" />
+        <path d={`M${ix} ${iy}L${cx} ${cy}`} stroke={COPPER} strokeWidth="4.2" strokeLinecap="round" />
       </g>
     ),
     outside: (
       <g key={`${key}o`}>
-        <path d={`M${hx} ${hy}Q${r1(hx - 10)} ${r1(hy + 14)} ${end[0]} ${end[1]}`} fill="none" stroke={shade} strokeWidth="8" strokeLinecap="round" />
-        <path d={`M${hx} ${hy}Q${r1(hx - 10)} ${r1(hy + 14)} ${end[0]} ${end[1]}`} fill="none" stroke={color} strokeWidth="5.4" strokeLinecap="round" transform="translate(-0.8 -0.8)" />
+        <path d={`M${hx} ${hy}Q${r1(hx - 10)} ${r1(hy + 14)} ${end[0]} ${end[1]}`} fill="none" stroke={shade} strokeWidth="9" strokeLinecap="round" />
+        <path d={`M${hx} ${hy}Q${r1(hx - 10)} ${r1(hy + 14)} ${end[0]} ${end[1]}`} fill="none" stroke={color} strokeWidth="6.2" strokeLinecap="round" transform="translate(-0.8 -0.8)" />
       </g>
     ),
   };
@@ -69,8 +69,8 @@ export default {
   // "de lasklem": the lever wire connector — a small clear grey block with two orange levers on top, a blue and a
   // brown wire pushed in from the front, their copper cores visible inside
   'w.lasklem': () => {
-    const blue = wire(PORTS[0], PAL.blue, PAL.blueShade, [12, 106], 'b');
-    const brown = wire(PORTS[1], BROWN, BROWN_SHADE, [40, 108], 'r');
+    const blue = wire(PORTS[0], PAL.blue, PAL.blueShade, [16, 106], 'b');
+    const brown = wire(PORTS[1], BROWN, BROWN_SHADE, [48, 107], 'r');
     return (
       <g strokeLinejoin="round">
         {/* Shadow under the block */}
@@ -90,7 +90,7 @@ export default {
         {/* The ports in the front, and the wires coming out towards the viewer */}
         {PORTS.map((u, i) => {
           const [x, y] = iso(u, 0, PZ);
-          return <ellipse key={`h${i}`} cx={x} cy={y} rx="5" ry="5" fill={PAL.slate} />;
+          return <ellipse key={`h${i}`} cx={x} cy={y} rx="5.6" ry="5.6" fill={PAL.slate} />;
         })}
         {blue.outside}
         {brown.outside}

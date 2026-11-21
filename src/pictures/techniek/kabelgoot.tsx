@@ -2,19 +2,19 @@ import type { JSX } from 'react';
 import { PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of this view: from a little higher than the series, so the inside of the duct shows. */
-const DX = 0.45;
+const DX = 0.42;
 const DY = -1;
 
 /** The duct: front bottom left corner, length, depth, height of its walls; the wall thickness. */
-const OX = 12;
-const OY = 84;
-const L = 70;
-const D = 24;
-const H = 9;
-const WALL = 2.4;
+const OX = 9;
+const OY = 92;
+const L = 74;
+const D = 34;
+const H = 13;
+const WALL = 3;
 /** The lid: how far along it still covers, and how far its free end is lifted. */
-const LID = 28;
-const LIFT = 8;
+const LID = 30;
+const LIFT = 12;
 
 /** Brown wire: the cardboard's darkest step, with coffee brown as its shade. */
 const BROWN = PAL.cardDark;
@@ -28,23 +28,23 @@ const at = (p: P) => `${p[0]} ${p[1]}`;
 
 /** The three cables, from the back (wall side) to the front: depth, colour, shade, stripe. */
 const CABLES: { v: number; color: string; shade: string; stripe?: string }[] = [
-  { v: 18, color: PAL.green, shade: PAL.greenShade, stripe: PAL.yellow },
-  { v: 12, color: BROWN, shade: PAL.brown },
-  { v: 6, color: PAL.blue, shade: PAL.blueShade },
+  { v: 25, color: PAL.green, shade: PAL.greenShade, stripe: PAL.yellow },
+  { v: 17.5, color: BROWN, shade: PAL.brown },
+  { v: 10, color: PAL.blue, shade: PAL.blueShade },
 ];
 
 /** A cable lying in the duct and leaving its open right end, drooping down to a bare copper tip. */
 const cable = (v: number, color: string, shade: string, stripe: string | undefined, i: number) => {
-  const a = iso(LID - 6, v, 3.2);
-  const b = iso(L, v, 3.2);
-  const end: P = [r1(b[0] + 14 + i * 1), r1(b[1] + 22 - i * 4)];
-  const d = `M${at(a)}L${at(b)}Q${r1(b[0] + 12)} ${b[1]} ${end[0]} ${end[1]}`;
+  const a = iso(LID - 6, v, 5);
+  const b = iso(L, v, 5);
+  const end: P = [r1(b[0] + 10 - i * 2), r1(b[1] + 22 - i * 6)];
+  const d = `M${at(a)}L${at(b)}Q${r1(b[0] + 10)} ${b[1]} ${end[0]} ${end[1]}`;
   return (
     <g key={i}>
-      <path d={d} fill="none" stroke={shade} strokeWidth="6.4" strokeLinecap="round" />
-      <path d={d} fill="none" stroke={color} strokeWidth="4" strokeLinecap="round" transform="translate(-0.6 -0.8)" />
-      {stripe && <path d={d} fill="none" stroke={stripe} strokeWidth="4" strokeDasharray="5 5" transform="translate(-0.6 -0.8)" />}
-      <path d={`M${end[0]} ${end[1]}l1.2 4.6`} stroke={COPPER} strokeWidth="2.6" strokeLinecap="round" />
+      <path d={d} fill="none" stroke={shade} strokeWidth="8" strokeLinecap="round" />
+      <path d={d} fill="none" stroke={color} strokeWidth="5.2" strokeLinecap="round" transform="translate(-0.6 -0.8)" />
+      {stripe && <path d={d} fill="none" stroke={stripe} strokeWidth="5.2" strokeDasharray="5 5" transform="translate(-0.6 -0.8)" />}
+      <path d={`M${end[0]} ${end[1]}l0.6 5`} stroke={COPPER} strokeWidth="3.4" strokeLinecap="round" />
     </g>
   );
 };

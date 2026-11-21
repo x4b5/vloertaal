@@ -32,9 +32,9 @@ export default {
       </Shade>
       {/* The cutting line with its notches, the wire in the middle one */}
       <path d="M60 15V58" stroke={PAL.slate} strokeWidth="1.6" strokeLinecap="round" />
-      <circle cx="60" cy="22" r="2.4" fill={PAL.slate} />
-      <circle cx="60" cy="34" r="3.4" fill={COPPER} />
-      <circle cx="60" cy="46" r="3.8" fill={PAL.slate} />
+      <circle cx="60" cy="23" r="3" fill={PAL.slate} />
+      <circle cx="60" cy="34" r="4" fill={COPPER} />
+      <circle cx="60" cy="46" r="4.6" fill={PAL.slate} />
       <Shine d="M50 24Q51 18 56 16" width={2.6} opacity={0.9} />
       {/* The pivot */}
       <circle cx="60" cy="58" r="6" fill={PAL.slate} />
