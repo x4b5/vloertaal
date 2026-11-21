@@ -125,6 +125,11 @@ const t: CultureTranslation = {
     'kjn.u.feedback.1': "Мога да помоля за пример, когато получавам обратна връзка.", // nieuw, nalezen
     'kjn.u.feedback.2': "Мога любезно да кажа какво може да е по-добре.", // nieuw, nalezen
     'kjn.u.feedback.3': "Мога да задам въпрос на екипна среща.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "Мога да поискам ръчния трион или акумулаторния винтоверт.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Мога да попитам как да закрепя дъска.", // nieuw, nalezen
+    'kjn.u.machines.1': "Мога да кажа, че предпазният капак е счупен.", // nieuw, nalezen
+    'kjn.u.machines.2': "Мога да попитам колко често да взимам проба.", // nieuw, nalezen
   },
 };
 

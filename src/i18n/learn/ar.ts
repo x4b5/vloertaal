@@ -174,6 +174,22 @@ const t: CultureTranslation = {
     'c.tiletools.a.why': "السؤال أين الخلّاط: مكان، وما هو قريب منه.", // nieuw, nalezen
     'c.tiling.a.why': "السؤال من أين البداية: في الوسط، على الخط الأوسط.", // nieuw, nalezen
     'c.plaster.a.why': "السؤال هل جفّ الحائط: لا، وكم مدة الانتظار.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "السؤال هل هو مربّع: لا، مستطيل، ولماذا.", // nieuw, nalezen
+    'c.angles.a.why': "السؤال كم درجة: العدد، ونصف ماذا هو.", // nieuw, nalezen
+    'c.size.a.why': "السؤال كم حجم الأرضية: الحساب، والجواب.", // nieuw, nalezen
+    'c.paint.a.why': "السؤال أيّ فرشاة: العريضة للحائط، والصغيرة للزوايا.", // nieuw, nalezen
+    'c.prep.a.why': "السؤال هل يمكن الطلاء: لا، وما الذي يأتي أولاً.", // nieuw, nalezen
+    'c.brick.a.why': "السؤال كم طوبة بقيت: منصة خشبية واحدة، وأنها تكفي.", // nieuw, nalezen
+    'c.wall.a.why': "السؤال كم يجب أن يكون ارتفاع الصف: أين يمكن رؤية ذلك.", // nieuw, nalezen
+    'c.wood.a.why': "السؤال أيّ منشار: منشار الظهر، ولماذا.", // nieuw, nalezen
+    'c.square.a.why': "السؤال هل الزاوية قائمة: نعم، وكيف يُعرف ذلك.", // nieuw, nalezen
+    'c.screw.a.why': "السؤال أين المثقاب: مكان، وأنه ممتلئ تقريباً.", // nieuw, nalezen
+    'c.fix.a.why': "السؤال كيف يُثبَّت الرفّ: بماذا، وكم.", // nieuw, nalezen
+    'c.atmachine.a.why': "السؤال لماذا تتوقّف: الحسّاس، وما الذي لا يراه.", // nieuw, nalezen
+    'c.inspect.a.why': "السؤال كم مرة: مرة كل ساعة، وأين تُكتب.", // nieuw, nalezen
+    'c.packing.a.why': "السؤال كم في الصندوق: العدد، وأين هو مكتوب.", // nieuw, nalezen
+    'c.upkeep.a.why': "السؤال متى: يوم الأسبوع، والوقت في ذلك اليوم.", // nieuw, nalezen
   },
 };
 

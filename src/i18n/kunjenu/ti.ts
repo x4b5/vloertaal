@@ -125,6 +125,11 @@ const t: CultureTranslation = {
     'kjn.u.feedback.1': "ርእይቶ ምስ ዝወሃበኒ ኣብነት ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.feedback.2': "እንታይ ክመሓየሽ ከም ዝኽእል ብሕያውነት ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.feedback.3': "ኣብ ኣኼባ ጉጅለ ሕቶ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "መጋዝ ኢድ ወይ ብባተሪ ዝሰርሕ መሰርሒ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "ሰሌዳ ብኸመይ ከም ዝትክሎ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.machines.1': "እቲ መከላኸሊ ማሽን ከም ዝተበላሸወ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.machines.2': "ክንደይ ግዜ ናሙና ከም ዝወስድ ክሓትት እኽእል እየ።", // nieuw, nalezen
   },
 };
 

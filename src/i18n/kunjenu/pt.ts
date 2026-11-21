@@ -123,6 +123,11 @@ const t: CultureTranslation = {
     'kjn.u.afbouw.1': "Consigo pedir a talocha dentada ou a colher de pedreiro.", // nieuw, nalezen
     'kjn.u.afbouw.2': "Consigo perguntar por onde começo com os azulejos.", // nieuw, nalezen
     'kjn.u.afbouw.3': "Consigo dizer que a parede ainda não está seca.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "Consigo pedir o serrote ou o berbequim sem fio.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Consigo perguntar como fixo uma prateleira.", // nieuw, nalezen
+    'kjn.u.machines.1': "Consigo dizer que a proteção da máquina está partida.", // nieuw, nalezen
+    'kjn.u.machines.2': "Consigo perguntar de quanto em quanto tempo tiro uma amostra.", // nieuw, nalezen
   },
 };
 

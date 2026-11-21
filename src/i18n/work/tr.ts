@@ -2349,6 +2349,309 @@ const t: CultureTranslation = {
     'c.plaster.o2': "Bu gece önüne bir ısıtıcı koyarsın.", // nieuw, nalezen
     'c.plaster.o3': "Bir şey söylemezsin: boyacı görür.", // nieuw, nalezen
     'c.plaster.w': "Koyu lekeler, sıvanın hâlâ ıslak olduğunu gösterir. Islak duvardaki boya kalkabilir ve ısıtıcı çatlak yapabilir. Beklemek, işi yeniden yapmaktan daha ucuzdur.", // nieuw, nalezen
+    // l.paint and l.prep (u.afbouw), "Metselen, hout en vastmaken" (u.ruwbouw), three lessons of Rekenen (u.numbers) and "Machines en gereedschap" (u.machines), 20-21 November 2026.
+    'u.ruwbouw': "Duvar örmek, ahşap ve sabitlemek", // nieuw, nalezen
+    'u.machines': "Makineler ve aletler", // nieuw, nalezen
+    'l.shapes': "Şekiller", // nieuw, nalezen
+    'w.vierkant': "kare", // nieuw, nalezen
+    'w.rechthoek': "dikdörtgen", // nieuw, nalezen
+    'w.driehoek': "üçgen", // nieuw, nalezen
+    'w.cirkel': "daire", // nieuw, nalezen
+    'w.kubus': "küp", // nieuw, nalezen
+    'w.balk': "blok, dikdörtgen prizma (uzun bir kutu şekli)", // nieuw, nalezen
+    's.shapes.1': "Fayans bir kare.", // nieuw, nalezen
+    's.shapes.2': "Bu oda bir dikdörtgen.", // nieuw, nalezen
+    's.shapes.3': "Bir tuğlanın şekli dikdörtgen prizmadır.", // nieuw, nalezen
+    'c.shapes.q': "Bu bir kare mi?", // nieuw, nalezen
+    'c.shapes.a': "Hayır, bir dikdörtgen. Boyu eninden uzun.", // nieuw, nalezen
+    'c.shapes': "Dikdörtgeni iki çapraz çizgiyle kontrol et", // nieuw, nalezen
+    'c.shapes.b': "Bir oda, bir zemin ya da bir çerçeve çoğu zaman dikdörtgendir. Ama köşeler gerçekten dik mi? Bunun kolay bir kontrolü var. Bir köşeden karşı köşeye ölç. Sonra diğer iki köşenin arasını ölç. İki uzunluk aynı mı? O zaman köşeler doğru. Aynı değil mi? O zaman şekil biraz eğik ve fayanslar ya da zemin iyi oturmaz. Başlamadan önce amirine söyle.", // nieuw, nalezen
+    'c.shapes.p': "Bu iki ölçü aynı değil.", // nieuw, nalezen
+    'c.shapes.s': "Bir zemini köşeden köşeye, iki yönde ölçüyorsun. Biri daha uzun. Ne yaparsın?", // nieuw, nalezen
+    'c.shapes.o1': "Başlamadan önce amirine söylersin.", // nieuw, nalezen
+    'c.shapes.o2': "Bir köşeden başlarsın, olur.", // nieuw, nalezen
+    'c.shapes.o3': "Sadece bir tarafı yeniden ölçersin.", // nieuw, nalezen
+    'c.shapes.w': "İki farklı uzunluk, köşelerin dik olmadığı anlamına gelir. O zaman fayanslar ya da tahtalar oturmaz. Bunu başlamadan önce bilmek daha iyidir.", // nieuw, nalezen
+    'l.angles': "Açılar ve yuvarlak şekiller", // nieuw, nalezen
+    'w.hoek': "açı", // nieuw, nalezen
+    'w.graad': "derece (°)", // nieuw, nalezen
+    'w.geodriehoek': "iletkili gönye (açıölçerli üçgen cetvel)", // nieuw, nalezen
+    'w.boog': "kemer, kavis", // nieuw, nalezen
+    'w.cilinder': "silindir", // nieuw, nalezen
+    'w.parallellogram': "paralelkenar", // nieuw, nalezen
+    's.angles.1': "Bu açı doksan derece.", // nieuw, nalezen
+    's.angles.2': "Açıyı iletkili gönyeyle ölç.", // nieuw, nalezen
+    's.angles.3': "Borunun şekli silindirdir.", // nieuw, nalezen
+    'c.angles.q': "Bu açı kaç derece?", // nieuw, nalezen
+    'c.angles.a': "Kırk beş. Dik açının yarısı.", // nieuw, nalezen
+    'c.angles': "Büyük bir köşeyi 3, 4 ve 5 ile kontrol et", // nieuw, nalezen
+    'c.angles.b': "Şantiyede çoğu zaman dik açıyı kontrol edersin: zemindeki bir duvar, bir odanın köşesi. Küçük bir köşeyi gönyeyle ya da iletkili gönyeyle kontrol edersin. Büyük bir köşe için eski bir yöntem var. Bir tarafta 3 metre, öbür tarafta 4 metre ölç ve ikisine de bir işaret koy. İşaretten işarete tam 5 metre mi? O zaman açı 90 derecedir. Daha küçük de olur: 30, 40 ve 50 santimetre.", // nieuw, nalezen
+    'c.angles.p': "Bu açı dik değil.", // nieuw, nalezen
+    'c.angles.s': "Yeni bir duvarın büyük bir köşesini kontrol etmen gerekiyor. Gönyen çok küçük. Ne yaparsın?", // nieuw, nalezen
+    'c.angles.o1': "3, 4 ve 5 metre ölçersin.", // nieuw, nalezen
+    'c.angles.o2': "Uzaktan bakarsın.", // nieuw, nalezen
+    'c.angles.o3': "Yine de küçük gönyeyi kullanırsın.", // nieuw, nalezen
+    'c.angles.w': "3, 4 ve 5 ile büyük bir köşeyi sadece bir şerit metreyle tam olarak kontrol edebilirsin. Gözle bakınca bir köşe doğru görünebilir ama yine de yanlış olabilir.", // nieuw, nalezen
+    'l.size': "Uzunluk, alan ve hacim", // nieuw, nalezen
+    'w.lengte': "uzunluk", // nieuw, nalezen
+    'w.breedte': "genişlik", // nieuw, nalezen
+    'w.hoogte': "yükseklik", // nieuw, nalezen
+    'w.oppervlakte': "alan (uzunluk çarpı genişlik, metrekare olarak)", // nieuw, nalezen
+    'w.inhoud': "hacim (uzunluk çarpı genişlik çarpı yükseklik)", // nieuw, nalezen
+    'w.centimeter': "santimetre", // nieuw, nalezen
+    's.size.1': "Alan, uzunluk çarpı genişliktir.", // nieuw, nalezen
+    's.size.2': "Hacim, uzunluk çarpı genişlik çarpı yüksekliktir.", // nieuw, nalezen
+    's.size.3': "On milimetre bir santimetredir.", // nieuw, nalezen
+    'c.size.q': "Zemin kaç metrekare?", // nieuw, nalezen
+    'c.size.a': "Dörde beş metre, yani yirmi metrekare.", // nieuw, nalezen
+    'c.size': "Ne kadar gerektiğini hesapla, biraz da ekle", // nieuw, nalezen
+    'c.size.b': "Kaç fayans, ne kadar boya, ne kadar kum? Bunu alanla ya da hacimle hesaplarsın. Alan: uzunluk çarpı genişlik, metrekare olarak. Hacim: uzunluk çarpı genişlik çarpı yükseklik, metreküp olarak. Her şeyi aynı birimle ölç: hepsi metre ya da hepsi santimetre. Ölçüleri yaz, aklında tutma. Sonra kesilen parçalar ve hatalar için biraz fazlasını ekle. Emin değil misin? Bir iş arkadaşından hesabını kontrol etmesini iste.", // nieuw, nalezen
+    'c.size.p': "Ölçüleri yazıyorum.", // nieuw, nalezen
+    'c.size.s': "Zemini ölçtün. Fayansları bugün sipariş etmen gerekiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.size.o1': "Alanı hesaplar ve biraz eklersin.", // nieuw, nalezen
+    'c.size.o2': "Tam alan kadar sipariş edersin, bir fayans bile fazla değil.", // nieuw, nalezen
+    'c.size.o3': "Tahmin edersin: zemini gördün.", // nieuw, nalezen
+    'c.size.w': "Bazı fayansları her zaman kesersin, bazıları da kırılır. Biraz fazlası olursa yarıda durup yeniden sipariş etmen gerekmez.", // nieuw, nalezen
+    'l.paint': "Boya yapmak", // nieuw, nalezen
+    'w.verf': "boya", // nieuw, nalezen
+    'w.kwast': "boya fırçası (geniş bir fırça)", // nieuw, nalezen
+    'w.penseel': "ince fırça (köşeler ve kenarlar için)", // nieuw, nalezen
+    'w.roerstok': "karıştırma çubuğu", // nieuw, nalezen
+    'w.tape': "maskeleme bandı", // nieuw, nalezen
+    'w.strijkvaatje': "boya kabı (boya yaparken elinde tuttuğun küçük kap)", // nieuw, nalezen
+    's.paint.1': "Önce boyayı iyice karıştır.", // nieuw, nalezen
+    's.paint.2': "Kenarı bantla kapat.", // nieuw, nalezen
+    's.paint.3': "Boya kabına biraz boya koy.", // nieuw, nalezen
+    'c.paint.q': "Hangi fırçayı alayım?", // nieuw, nalezen
+    'c.paint.a': "Duvar için geniş olanı, köşeler için ince fırçayı.", // nieuw, nalezen
+    'c.paint': "İyice karıştır ve yukarıdan aşağı boya", // nieuw, nalezen
+    'c.paint.b': "Bir süre bekleyen boya, kutunun dibinde koyu olur. Bu yüzden önce karıştırma çubuğuyla, renk her yerde aynı olana kadar iyice karıştır. Büyük kutudan boyama: boya kabına biraz boya koy ve kutuyu yeniden kapat. O zaman boya bozulmaz. Yukarıdan aşağı boya, böylece damlalar ıslak boyanın üstüne düşer ve onları hâlâ fırçayla düzeltebilirsin. Duvar için geniş fırçayı, köşeler için ince fırçayı kullan. Sonunda fırçaları hemen temizle.", // nieuw, nalezen
+    'c.paint.p': "Önce boyayı iyice karıştırıyorum.", // nieuw, nalezen
+    'c.paint.s': "Eski bir boya kutusu açıyorsun. Üstü sulu, dibi koyu. Ne yaparsın?", // nieuw, nalezen
+    'c.paint.o1': "Önce çubukla iyice karıştırırsın.", // nieuw, nalezen
+    'c.paint.o2': "Üstteki sulu boyayla boyarsın.", // nieuw, nalezen
+    'c.paint.o3': "Her yeri sulu olana kadar su eklersin.", // nieuw, nalezen
+    'c.paint.w': "Rengin bir kısmı kutunun dibindedir. Karıştırmazsan duvarda lekeler ve çizgiler olur.", // nieuw, nalezen
+    'l.prep': "Boyaya hazırlık", // nieuw, nalezen
+    'w.plamuurmes': "macun spatulası (delikleri doldurmak için)", // nieuw, nalezen
+    'w.schuurpapier': "zımpara kâğıdı", // nieuw, nalezen
+    'w.verfkrabber': "boya kazıyıcı", // nieuw, nalezen
+    'w.stoffertje': "küçük süpürge fırçası (toz süpürmek için)", // nieuw, nalezen
+    'w.schuren': "zımparalamak", // nieuw, nalezen
+    'w.afplakken': "bantlamak (bir kenarı bantla kapatmak)", // nieuw, nalezen
+    's.prep.1': "Önce eski boyayı kazı.", // nieuw, nalezen
+    's.prep.2': "Ahşabı zımparalayıp pürüzsüz yap.", // nieuw, nalezen
+    's.prep.3': "Tozu küçük süpürge fırçasıyla süpür.", // nieuw, nalezen
+    'c.prep.q': "Artık boyayabilir miyim?", // nieuw, nalezen
+    'c.prep.a': "Hayır, önce zımparala ve deliği kapat.", // nieuw, nalezen
+    'c.prep': "İyi boya işi boyadan önce başlar", // nieuw, nalezen
+    'c.prep.b': "Boya kirin, tozun ya da gevşek eski boyanın üstüne iyi yapışmaz. Bu yüzden önce gevşek boyayı boya kazıyıcıyla kazı. Delikleri macun ve macun spatulasıyla doldur ve macunun kurumasını bekle. Sonra zımparalayıp pürüzsüz yap. Zımparadan sonra tozu küçük süpürge fırçasıyla süpür, kenarlardan da. En son, temiz kalması gereken yerleri bantla kapat, mesela pencereleri ve prizleri. Zımpara ince toz yapar: toz maskesi tak ve hangisi olduğunu sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.prep.p': "Önce zımpara, sonra boya.", // nieuw, nalezen
+    'c.prep.s': "Kapıyı zımparaladın. Üstünde hâlâ toz var. İş arkadaşın şimdi boyamak istiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.prep.o1': "Önce tozu fırçayla süpürürsün.", // nieuw, nalezen
+    'c.prep.o2': "Boyamasına izin verirsin: boya tozu kapatır.", // nieuw, nalezen
+    'c.prep.o3': "Tozu elinle silersin.", // nieuw, nalezen
+    'c.prep.w': "Tozun üstündeki boya iyi yapışmaz. Sonra pul pul kalkar ve bütün iş yeniden yapılmalıdır.", // nieuw, nalezen
+    'l.brick': "Duvar örmek", // nieuw, nalezen
+    'w.speciekuip': "harç teknesi", // nieuw, nalezen
+    'w.metseltroffel': "duvarcı malası", // nieuw, nalezen
+    'w.baksteen': "tuğla", // nieuw, nalezen
+    'w.cement': "çimento", // nieuw, nalezen
+    'w.voegijzer': "derz demiri (tuğlaların arasındaki derzleri düzlemek için)", // nieuw, nalezen
+    'w.handveger': "el fırçası", // nieuw, nalezen
+    's.brick.1': "Harç teknesinde hâlâ çimento var.", // nieuw, nalezen
+    's.brick.2': "Derzi derz demiriyle düzle.", // nieuw, nalezen
+    's.brick.3': "Duvarı el fırçasıyla temizle.", // nieuw, nalezen
+    'c.brick.q': "Kaç tuğlan kaldı?", // nieuw, nalezen
+    'c.brick.a': "Bir palet daha. Bugün için yeter.", // nieuw, nalezen
+    'c.brick': "Çalışırken duvarı temiz tut", // nieuw, nalezen
+    'c.brick.b': "Tuğlaları dizerken harç ıslaktır ve birkaç saatte sertleşir. Bu yüzden temiz çalış. Derzden taşan harcı hemen malayla kazı. Derzleri, harç biraz katılaşınca derz demiriyle düzle, harç hâlâ ıslakken değil. Sonra duvarı el fırçasıyla fırçala. Tuğlanın önündeki sert harcı çıkarmak çok zordur. Gün sonunda duvarın üstünü ört, böylece yağmur harcı yıkamaz.", // nieuw, nalezen
+    'c.brick.p': "Derzleri düzlüyorum.", // nieuw, nalezen
+    'c.brick.s': "Gün sonunda tuğlaların önünde harç var. Ne yaparsın?", // nieuw, nalezen
+    'c.brick.o1': "Sertleşmeden şimdi fırçayla temizlersin.", // nieuw, nalezen
+    'c.brick.o2': "Bırakırsın: gelecek hafta temizlersin.", // nieuw, nalezen
+    'c.brick.o3': "Duvarı bol suyla yıkarsın.", // nieuw, nalezen
+    'c.brick.w': "Taze harç fırçayla kolayca çıkar. Sert harç tuğlada kalır ve o zaman duvar güzel görünmez.", // nieuw, nalezen
+    'l.wall': "Düz bir duvar", // nieuw, nalezen
+    'w.metseltouw': "duvarcı ipi (düz bir sıra için ip)", // nieuw, nalezen
+    'w.klos': "ip takozu (ipi köşede tutar)", // nieuw, nalezen
+    'w.lagenmaatlat': "sıra cetveli (her sıranın yüksekliğini gösterir)", // nieuw, nalezen
+    'w.profiel': "köşe dikmesi (duvarın ucunda düz bir direk)", // nieuw, nalezen
+    'w.kop': "baş (tuğlanın kısa ucu)", // nieuw, nalezen
+    'w.strek': "boy (tuğlanın uzun yanı)", // nieuw, nalezen
+    's.wall.1': "Duvarcı ipini gergin çek.", // nieuw, nalezen
+    's.wall.2': "Köşe dikmesi düz durmalı.", // nieuw, nalezen
+    's.wall.3': "Tuğlayı uzun yanı dışarı bakacak şekilde koy.", // nieuw, nalezen
+    'c.wall.q': "Bu sıra ne kadar yüksek olmalı?", // nieuw, nalezen
+    'c.wall.a': "Sıra cetveline bak.", // nieuw, nalezen
+    'c.wall': "İp duvarı düz tutar", // nieuw, nalezen
+    'c.wall.b': "Duvarcı gözle örmez. Önce duvarın iki ucunda köşe dikmeleri düz durur. Aralarına, bir sonraki sıranın yüksekliğinde duvarcı ipini gergin çekersin. Her tuğlayı ipe göre koy, ama ipi itme. Sıra cetveli her sıranın ne kadar yüksek olması gerektiğini gösterir. Sık sık su terazisiyle kontrol et. Eğri bir tuğlayı harç ıslakken düzeltmek kolay, yarın düzeltmek çok zor.", // nieuw, nalezen
+    'c.wall.p': "Duvarcı ipi gergin mi?", // nieuw, nalezen
+    'c.wall.s': "Duvarcı ipi gevşek ve ortada biraz sarkıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.wall.o1': "Önce gergin çeker, sonra devam edersin.", // nieuw, nalezen
+    'c.wall.o2': "Tuğlaları yine de altına dizersin.", // nieuw, nalezen
+    'c.wall.o3': "Tuğlaları gözle dizersin.", // nieuw, nalezen
+    'c.wall.w': "Gevşek bir ip ortada sarkar, o zaman sıra da sarkar. Gergin bir ip düz bir sıra verir.", // nieuw, nalezen
+    'l.wood': "Ahşapla çalışmak", // nieuw, nalezen
+    'w.handzaag': "el testeresi", // nieuw, nalezen
+    'w.kapzaag': "sırtlı testere (sert sırtı olan küçük bir testere)", // nieuw, nalezen
+    'w.houtbeitel': "ağaç keskisi", // nieuw, nalezen
+    'w.handschaaf': "el rendesi", // nieuw, nalezen
+    'w.timmermanshamer': "marangoz çekici", // nieuw, nalezen
+    'w.houtenhamer': "tokmak (tahta bir çekiç)", // nieuw, nalezen
+    's.wood.1': "Tahtayı ölçüsüne göre kes.", // nieuw, nalezen
+    's.wood.2': "Kenarı rendeleyip pürüzsüz yap.", // nieuw, nalezen
+    's.wood.3': "Keskiye tokmakla vur.", // nieuw, nalezen
+    'c.wood.q': "Hangi testere lazım?", // nieuw, nalezen
+    'c.wood.a': "Sırtlı testere, bu küçük parça için.", // nieuw, nalezen
+    'c.wood': "Kısa kalan düzeltilemez", // nieuw, nalezen
+    'c.wood.b': "Çok kısa kesilen ahşap yeniden uzatılamaz. Bu yüzden iki kez ölç ve kesmeden önce çizgiyi çiz. Çizginin yanından, ihtiyacın olmayan parçanın tarafından kes. Ahşabı sabit tut: tezgâhta ya da bir işkenceyle, dizinin üstünde değil. Bırak işi testere yapsın, uzun ve sakin hareketlerle. Keskiyi vücudundan ve öbür elinden uzağa doğru it. Keskiyi ve rendeyi keskin tut: kör bir alet daha kolay kayar.", // nieuw, nalezen
+    'c.wood.p': "Bir kez daha ölçüyorum.", // nieuw, nalezen
+    'c.wood.s': "Bir tahtayı ölçüsüne göre kesmen gerekiyor. Bir kez, hızlıca ölçtün. Ne yaparsın?", // nieuw, nalezen
+    'c.wood.o1': "Yeniden ölçer, sonra çizgiyi çizersin.", // nieuw, nalezen
+    'c.wood.o2': "Şimdi kesersin: büyük ihtimalle doğrudur.", // nieuw, nalezen
+    'c.wood.o3': "Çizgi çizmeden, gözle kesersin.", // nieuw, nalezen
+    'c.wood.w': "Çok uzunsa yeniden kesebilirsin, çok kısayı düzeltemezsin. Yeniden ölçmek bir dakika sürer; yeni bir tahta çok daha fazlasını.", // nieuw, nalezen
+    'l.square': "İşaretlemek", // nieuw, nalezen
+    'w.winkelhaak': "gönye (dik açıyı gösterir)", // nieuw, nalezen
+    'w.verstekhaak': "açılı gönye (45 derece)", // nieuw, nalezen
+    'w.zwaaihaak': "ayarlı gönye (açıyı kendin ayarlarsın)", // nieuw, nalezen
+    'w.kruishout': "çizecek (kenar boyunca çizgi çizer)", // nieuw, nalezen
+    'w.passer': "pergel (daire çizer)", // nieuw, nalezen
+    'w.aftekenen': "işaretlemek (keseceğin yeri çizmek)", // nieuw, nalezen
+    's.square.1': "Çizgiyi gönyeyle işaretle.", // nieuw, nalezen
+    's.square.2': "Ayarlı gönyeyi doğru açıya getir.", // nieuw, nalezen
+    's.square.3': "Pergelle bir daire çiz.", // nieuw, nalezen
+    'c.square.q': "Açı dik mi?", // nieuw, nalezen
+    'c.square.a': "Evet, gönye tam oturuyor.", // nieuw, nalezen
+    'c.square': "Tek bir düz kenardan işaretle", // nieuw, nalezen
+    'c.square.b': "Kesmeden ya da delmeden önce yerini işaretlersin. Sivri bir kurşun kalem kullan: kalın bir çizgi tam değildir. Ahşabın düz bir kenarını seç ve her şeyi o kenardan ölç. Gönyenin kalın kısmını kenara sıkıca dayat ve çizgiyi çeliğin boyunca çiz. Kullanmayacağın parçaya küçük bir çarpı çiz. Sonra çizginin yanından, çarpının olduğu taraftan kesersin.", // nieuw, nalezen
+    'c.square.p': "Önce işaretliyorum.", // nieuw, nalezen
+    'c.square.s': "Kurşun kalemin kör ve kalın bir çizgi çiziyor. Bir tahtayı işaretlemek istiyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.square.o1': "Önce kalemi açar, sonra çizersin.", // nieuw, nalezen
+    'c.square.o2': "Çizgiyi yine de çizersin, olur.", // nieuw, nalezen
+    'c.square.o3': "Tırnağınla işaretlersin.", // nieuw, nalezen
+    'c.square.w': "Kalın bir çizgi birkaç milimetre genişliğindedir. O zaman nereden keseceğini bilemezsin ve parça tam olmaz.", // nieuw, nalezen
+    'l.screw': "Matkaplar ve vidalar", // nieuw, nalezen
+    'w.accuboor': "akülü matkap", // nieuw, nalezen
+    'w.boormachine': "elektrikli matkap (kablolu)", // nieuw, nalezen
+    'w.bitje': "tornavida ucu, bits", // nieuw, nalezen
+    'w.plug': "dübel", // nieuw, nalezen
+    'w.schroevendraaier': "tornavida", // nieuw, nalezen
+    'w.spijker': "çivi", // nieuw, nalezen
+    's.screw.1': "Bir delik del ve içine dübel tak.", // nieuw, nalezen
+    's.screw.2': "Bu vidaya hangi uç uyar?", // nieuw, nalezen
+    's.screw.3': "Çiviyi ahşaba çak.", // nieuw, nalezen
+    'c.screw.q': "Akülü matkap nerede?", // nieuw, nalezen
+    'c.screw.a': "Şarj aletinde, neredeyse dolu.", // nieuw, nalezen
+    'c.screw': "Delmeden önce bak", // nieuw, nalezen
+    'c.screw.b': "Bir duvarı delmeden önce arkasında ne olduğunu düşün. Borular ve kablolar çoğu zaman bir prizden ya da bir anahtardan dümdüz yukarı, aşağı ya da yana gider. Nerede olduklarını sor ya da bir dedektörle kontrol et. Dübelle aynı boyda bir matkap ucu seç ve deliği dübelden biraz daha derin del. Vidaya uygun ucu kullan: yanlış uç kayar ve vidanın başını bozar. Delerken koruyucu gözlük tak.", // nieuw, nalezen
+    'c.screw.p': "Burayı delebilir miyim?", // nieuw, nalezen
+    'c.screw.s': "Bir prizin tam üstüne delik delmen gerekiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.screw.o1': "Önce kablonun nereden geçtiğini sorarsın.", // nieuw, nalezen
+    'c.screw.o2': "Delersin: orada asla kablo olmaz.", // nieuw, nalezen
+    'c.screw.o3': "Yavaş delersin, o zaman güvenlidir.", // nieuw, nalezen
+    'c.screw.w': "Bir prizden çoğu zaman dümdüz yukarı bir kablo gider. Kabloyu delmek tehlikelidir ve onarımı çok iş çıkarır.", // nieuw, nalezen
+    'l.fix': "Bir şeyleri sabitlemek", // nieuw, nalezen
+    'w.bevestigen': "sabitlemek (bir şeyi duvara sağlam takmak)", // nieuw, nalezen
+    'w.vastzetten': "sıkmak (sıkı olana kadar çevirmek)", // nieuw, nalezen
+    'w.lijmen': "yapıştırmak", // nieuw, nalezen
+    'w.inbussleutel': "alyan anahtarı (altıgen anahtar)", // nieuw, nalezen
+    'w.kruisschroevendraaier': "yıldız tornavida (artı uçlu)", // nieuw, nalezen
+    'w.platteschroevendraaier': "düz tornavida", // nieuw, nalezen
+    's.fix.1': "Rafı duvara sabitle.", // nieuw, nalezen
+    's.fix.2': "Cıvatayı alyan anahtarıyla sık.", // nieuw, nalezen
+    's.fix.3': "Düz tornavidayı al, yıldızı değil.", // nieuw, nalezen
+    'c.fix.q': "Bu rafı nasıl sabitlerim?", // nieuw, nalezen
+    'c.fix.a': "İki dübel ve iki vidayla.", // nieuw, nalezen
+    'c.fix': "Sıkı, ama fazla sıkı değil", // nieuw, nalezen
+    'c.fix.b': "Bir vida ya da cıvata sıkı olmalı, ama fazla sıkı değil. Çok sert çevirirsen diş bozulur ya da ahşap yarılır. Artık dönmeyene kadar çevir, sonra dur. Akülü matkapta önce numaralı halkayı düşük bir sayıya getir. Duvardaki bir raf, duvara uygun dübel ister: taş duvar, ince bir levha duvardan başka dübel ister. Yapıştırıcı zaman ister: parçaları birbirine bastır, bir işkenceyle tut ve yapıştırıcı kuruyana kadar bekle.", // nieuw, nalezen
+    'c.fix.p': "Raf iyi sabitlendi mi?", // nieuw, nalezen
+    'c.fix.s': "İki ahşap parçayı yapıştırdın. İş arkadaşın onu hemen kullanmak istiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.fix.o1': "Söylersin: önce yapıştırıcının kuruması lazım.", // nieuw, nalezen
+    'c.fix.o2': "Kullanmasına izin verirsin: yapıştırıcı çabuktur.", // nieuw, nalezen
+    'c.fix.o3': "Bir dakika elinde tutarsın.", // nieuw, nalezen
+    'c.fix.w': "Islak yapıştırıcı henüz tutmaz. Çok erken kullanırsan parçalar yine ayrılır. O zaman baştan başlaman gerekir.", // nieuw, nalezen
+    'l.atmachine': "Makinenin başında", // nieuw, nalezen
+    'w.bedieningspaneel': "kontrol paneli (bir makinenin düğmeleri ve ekranı)", // nieuw, nalezen
+    'w.startknop': "başlatma düğmesi (yeşil)", // nieuw, nalezen
+    'w.hendel': "kol, manivela", // nieuw, nalezen
+    'w.afscherming': "makine koruması (hareketli parçaların üstündeki kapak)", // nieuw, nalezen
+    'w.sensor': "sensör (orada bir şey olup olmadığını görür)", // nieuw, nalezen
+    'w.signaallamp': "sinyal lambası (makinenin üstündeki renkli ışıklar)", // nieuw, nalezen
+    's.atmachine.1': "Yeşil başlatma düğmesine bas.", // nieuw, nalezen
+    's.atmachine.2': "Sinyal lambası kırmızı. Bir arıza var.", // nieuw, nalezen
+    's.atmachine.3': "Makine korumasını asla çıkarma.", // nieuw, nalezen
+    'c.atmachine.q': "Makine neden sürekli duruyor?", // nieuw, nalezen
+    'c.atmachine.a': "Sensör kutuyu iyi görmüyor.", // nieuw, nalezen
+    'c.atmachine': "Koruma yerinde kalır", // nieuw, nalezen
+    'c.atmachine.b': "Bir makinenin hareketli parçaları bir eli, bir kolu ya da saçı bir saniyeden kısa sürede içeri çekebilir. Koruma bunun için vardır. Onu asla çıkarma ve makine çalışırken asla arkasına uzanma. Bir koruma ya da sensör çalışmıyor mu? O zaman makine güvenli değildir: makineyi durdur ve ekip liderine söyle. Bir şey mi sıkıştı? Önce makineyi durdur ve sen çalışırken kimsenin onu çalıştıramayacağından emin ol. Bunun nasıl yapıldığı şirketten şirkete değişir: başlamadan önce açıklama iste. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.atmachine.p': "Makine koruması kırık.", // nieuw, nalezen
+    'c.atmachine.s': "Bir kutu makineye, korumanın hemen arkasına sıkıştı. Makine çalışıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.atmachine.o1': "Önce makineyi durdurur, sonra yardım çağırırsın.", // nieuw, nalezen
+    'c.atmachine.o2': "Hızlıca uzanıp kutuyu çekip çıkarırsın.", // nieuw, nalezen
+    'c.atmachine.o3': "Makine çalışırken korumayı açarsın.", // nieuw, nalezen
+    'c.atmachine.w': "Çalışan bir makine, sen tepki veremeden elini içeri çekebilir. Durdurmak bir an sürer; yaralı bir el aylar sürer.", // nieuw, nalezen
+    'l.inspect': "Ölçmek ve kontrol etmek", // nieuw, nalezen
+    'w.weegschaal': "terazi", // nieuw, nalezen
+    'w.meetklok': "komparatör (çok küçük farkları ölçer)", // nieuw, nalezen
+    'w.loep': "büyüteç", // nieuw, nalezen
+    'w.monster': "numune (kontrol etmek için aldığın bir ürün)", // nieuw, nalezen
+    'w.afkeurbak': "hatalı ürün kutusu (iyi olmayan ürünler için)", // nieuw, nalezen
+    'w.teller': "sayaç (ürünleri sayar)", // nieuw, nalezen
+    's.inspect.1': "Ürünü teraziye koy.", // nieuw, nalezen
+    's.inspect.2': "Bu ürün hasarlı. Hatalı ürün kutusuna gidiyor.", // nieuw, nalezen
+    's.inspect.3': "Etikete büyüteçle bakıyorum.", // nieuw, nalezen
+    'c.inspect.q': "Ne sıklıkla numune alıyorum?", // nieuw, nalezen
+    'c.inspect.a': "Her saat bir tane. Listeye yaz.", // nieuw, nalezen
+    'c.inspect': "Kontrol ettiğin şeyi yaz", // nieuw, nalezen
+    'c.inspect.b': "Fabrikada iş sırasında ürünleri kontrol edersin: tartarsın, ölçersin ya da yakından bakarsın. Her kontrolü hemen saatiyle birlikte listeye yaz. Sonra, akıldan değil. Bir ürün doğru değil mi? Onu hatalı ürün kutusuna koy ve sonrakilere dikkatle bak. Daha fazla ürün mü yanlış? O zaman makinede bir sorun var. Hemen ekip liderine söyle. Erken bulunan bir sorun çok ürünü kurtarır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.inspect.p': "Daha fazla ürün yanlış.", // nieuw, nalezen
+    'c.inspect.s': "Terazi, art arda üç ürünün çok hafif olduğunu gösteriyor. Ne yaparsın?", // nieuw, nalezen
+    'c.inspect.o1': "Hemen ekip liderine söylersin.", // nieuw, nalezen
+    'c.inspect.o2': "Onları yeniden banta koyarsın.", // nieuw, nalezen
+    'c.inspect.o3': "Bir şey söylemezsin: olur böyle şeyler.", // nieuw, nalezen
+    'c.inspect.w': "Art arda üç yanlış ürün, makinede bir sorun olduğunu gösterir. Ne kadar erken söylersen o kadar az ürün boşa gider.", // nieuw, nalezen
+    'l.packing': "Paketleme", // nieuw, nalezen
+    'w.verpakking': "ambalaj", // nieuw, nalezen
+    'w.krimpfolie': "shrink folyo (ısıyla sıkılaşan plastik film)", // nieuw, nalezen
+    'w.sealmachine': "kapatma makinesi (paketi ısıyla kapatır)", // nieuw, nalezen
+    'w.vulmateriaal': "dolgu malzemesi (kutudaki hava yastıkları ya da kâğıt)", // nieuw, nalezen
+    'w.afbreekmes': "maket bıçağı", // nieuw, nalezen
+    'w.tapepistool': "koli bandı tabancası", // nieuw, nalezen
+    's.packing.1': "Kutuya dolgu malzemesi koy.", // nieuw, nalezen
+    's.packing.2': "Kutuyu koli bandı tabancasıyla kapat.", // nieuw, nalezen
+    's.packing.3': "Kapatma makinesi sıcak. Dikkat et!", // nieuw, nalezen
+    'c.packing.q': "Bir kutuya kaç ürün giriyor?", // nieuw, nalezen
+    'c.packing.a': "On iki. Listede yazıyor.", // nieuw, nalezen
+    'c.packing': "Vücudundan uzağa doğru kes", // nieuw, nalezen
+    'c.packing.b': "Paketleme hızlı bir iştir ve maket bıçağı çok keskindir. Her zaman vücudundan ve öbür elinden uzağa doğru kes. Her kesimden sonra bıçağı geri it, bıçağı bir anlığına bıraktığında da. Kör bir parçayı dikkatle kır ve eski bıçaklar için olan kutuya at, normal çöpe değil. Kapatma makinesi ve shrink folyo için sıcak hava tabancası çok ısınır: sıcak parçalara dokunma. Her kutuyu da kontrol et: doğru ürün, doğru sayı ve etiket düz mü. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.packing.p': "Önce bıçağı geri itiyorum.", // nieuw, nalezen
+    'c.packing.s': "Maket bıçağını bir anlığına masaya koyuyorsun. Bıçak hâlâ dışarıda. Ne yaparsın?", // nieuw, nalezen
+    'c.packing.o1': "Önce bıçağı geri itersin.", // nieuw, nalezen
+    'c.packing.o2': "Bırakırsın: birazdan yine lazım olacak.", // nieuw, nalezen
+    'c.packing.o3': "Böyle cebine koyarsın.", // nieuw, nalezen
+    'c.packing.w': "Masada ya da cepte açık bir bıçak seni ya da bir iş arkadaşını kesebilir. Geri itmek bir saniye sürer.", // nieuw, nalezen
+    'l.upkeep': "Bakım", // nieuw, nalezen
+    'w.persluchtpistool': "hava tabancası", // nieuw, nalezen
+    'w.steeksleutel': "açık ağızlı anahtar", // nieuw, nalezen
+    'w.oliekannetje': "yağdanlık", // nieuw, nalezen
+    'w.smeerpistool': "gres pompası", // nieuw, nalezen
+    'w.lekbak': "damlama tavası (sızan yağı toplar)", // nieuw, nalezen
+    'w.poetsdoek': "temizlik bezi", // nieuw, nalezen
+    's.upkeep.1': "Yağ sızıyor. Altına damlama tavasını koy.", // nieuw, nalezen
+    's.upkeep.2': "Yağı temizlik beziyle sil.", // nieuw, nalezen
+    's.upkeep.3': "Hava tabancasını asla birine doğru tutma.", // nieuw, nalezen
+    'c.upkeep.q': "Makineyi ne zaman yağlıyoruz?", // nieuw, nalezen
+    'c.upkeep.a': "Her pazartesi, ilk vardiyadan önce.", // nieuw, nalezen
+    'c.upkeep': "Temiz bir makine sorunlarını gösterir", // nieuw, nalezen
+    'c.upkeep.b': "Küçük bakım çoğu zaman işin bir parçasıdır: silmek, yağlamak ve gres yapmak. Bunu sadece makine kapalıyken ve nasıl yapıldığını öğrendiysen yap. Temiz bir makineyi kontrol etmek kolaydır: bir sızıntıyı ya da gevşek bir parçayı hemen görürsün. Yerdeki yağ kaygandır. Sızıntının altına bir damlama tavası koy, yeri sil ve ekip liderine söyle. Yağlı bezleri özel çöp kutusuna at. Hava tabancasını asla bir insana doğru tutma ve onunla asla giysilerini ya da cildini temizleme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.upkeep.p': "Makine yağ sızdırıyor.", // nieuw, nalezen
+    'c.upkeep.s': "Makinenin altında küçük bir yağ birikintisi görüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.upkeep.o1': "Altına bir damlama tavası koyar ve bildirirsin.", // nieuw, nalezen
+    'c.upkeep.o2': "Bırakırsın: sadece biraz.", // nieuw, nalezen
+    'c.upkeep.o3': "Üstüne biraz kâğıt koyar ve devam edersin.", // nieuw, nalezen
+    'c.upkeep.w': "Bir sızıntı büyür ve yerdeki yağ insanları kaydırır. Erken bulunursa küçük bir onarımdır.", // nieuw, nalezen
   },
 };
 

@@ -2410,7 +2410,7 @@
     "s.wood.3": "Hit the chisel with the mallet.",
     "c.wood.q": "Which saw do I need?",
     "c.wood.a": "The tenon saw, for this small piece.",
-    "c.wood": "Measure twice, saw once",
+    "c.wood": "Too short cannot be fixed",
     "c.wood.b": "Wood that is sawn too short cannot be made long again. So measure twice, and draw the line before you saw. Saw next to the line, on the side of the piece you do not need. Hold the wood still: on a workbench or with a clamp, not on your knee. Let the saw do the work, with long, calm strokes. Push a chisel away from your body and your other hand. And keep the chisel and the plane sharp: a blunt tool slips more easily.",
     "c.wood.p": "I measure it one more time.",
     "c.wood.s": "You must saw a plank to size. You measured it once, quickly. What do you do?",

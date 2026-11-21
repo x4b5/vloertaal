@@ -2348,6 +2348,309 @@ const t: CultureTranslation = {
     'c.plaster.o2': "Pões um aquecedor à frente dela esta noite.", // nieuw, nalezen
     'c.plaster.o3': "Não dizes nada: o pintor vai ver.", // nieuw, nalezen
     'c.plaster.w': "Manchas escuras querem dizer que o estuque ainda está molhado. A tinta numa parede molhada pode descolar, e um aquecedor pode fazer rachas. Esperar custa menos do que fazer tudo outra vez.", // nieuw, nalezen
+    // l.paint and l.prep (u.afbouw), "Metselen, hout en vastmaken" (u.ruwbouw), three lessons of Rekenen (u.numbers) and "Machines en gereedschap" (u.machines), 20-21 November 2026.
+    'u.ruwbouw': "Tijolos, madeira e fixar", // nieuw, nalezen
+    'u.machines': "Máquinas e ferramentas", // nieuw, nalezen
+    'l.shapes': "Formas", // nieuw, nalezen
+    'w.vierkant': "o quadrado", // nieuw, nalezen
+    'w.rechthoek': "o retângulo", // nieuw, nalezen
+    'w.driehoek': "o triângulo", // nieuw, nalezen
+    'w.cirkel': "o círculo", // nieuw, nalezen
+    'w.kubus': "o cubo", // nieuw, nalezen
+    'w.balk': "o paralelepípedo, o bloco (uma forma de caixa comprida)", // nieuw, nalezen
+    's.shapes.1': "O azulejo é um quadrado.", // nieuw, nalezen
+    's.shapes.2': "Esta sala é um retângulo.", // nieuw, nalezen
+    's.shapes.3': "Um tijolo tem a forma de um paralelepípedo.", // nieuw, nalezen
+    'c.shapes.q': "É um quadrado?", // nieuw, nalezen
+    'c.shapes.a': "Não, é um retângulo. É mais comprido do que largo.", // nieuw, nalezen
+    'c.shapes': "Verifica um retângulo com duas linhas em cruz", // nieuw, nalezen
+    'c.shapes.b': "Uma sala, um chão ou uma moldura é muitas vezes um retângulo. Mas os cantos estão mesmo em esquadro? Há uma maneira fácil de ver. Mede de um canto até ao canto do outro lado. Depois mede entre os outros dois cantos. As duas medidas são iguais? Então os cantos estão certos. Não são iguais? Então a forma está um pouco torta, e os azulejos ou o chão não vão encaixar bem. Diz ao teu chefe antes de começares.", // nieuw, nalezen
+    'c.shapes.p': "Estas duas medidas não são iguais.", // nieuw, nalezen
+    'c.shapes.s': "Medes um chão de canto a canto, nos dois sentidos. Uma medida é mais comprida. O que fazes?", // nieuw, nalezen
+    'c.shapes.o1': "Dizes ao teu chefe antes de começares.", // nieuw, nalezen
+    'c.shapes.o2': "Começas num canto, vai correr bem.", // nieuw, nalezen
+    'c.shapes.o3': "Medes outra vez só um lado.", // nieuw, nalezen
+    'c.shapes.w': "Duas medidas diferentes querem dizer que os cantos não estão em esquadro. Então os azulejos ou as tábuas não encaixam. É melhor saber isso antes de começares.", // nieuw, nalezen
+    'l.angles': "Ângulos e formas redondas", // nieuw, nalezen
+    'w.hoek': "o ângulo", // nieuw, nalezen
+    'w.graad': "o grau (°)", // nieuw, nalezen
+    'w.geodriehoek': "o esquadro com transferidor", // nieuw, nalezen
+    'w.boog': "o arco, a curva", // nieuw, nalezen
+    'w.cilinder': "o cilindro", // nieuw, nalezen
+    'w.parallellogram': "o paralelogramo", // nieuw, nalezen
+    's.angles.1': "Este ângulo tem noventa graus.", // nieuw, nalezen
+    's.angles.2': "Mede o ângulo com o esquadro com transferidor.", // nieuw, nalezen
+    's.angles.3': "O tubo tem a forma de um cilindro.", // nieuw, nalezen
+    'c.angles.q': "Quantos graus tem este ângulo?", // nieuw, nalezen
+    'c.angles.a': "Quarenta e cinco. Metade de um ângulo reto.", // nieuw, nalezen
+    'c.angles': "Verifica um canto grande com 3, 4 e 5", // nieuw, nalezen
+    'c.angles.b': "Numa obra, verificas muitas vezes um ângulo reto: uma parede num chão, um canto de uma sala. Um canto pequeno verificas com um esquadro ou com o esquadro com transferidor. Para um canto grande, há um truque antigo. Mede 3 metros ao longo de um lado e 4 metros ao longo do outro lado, e faz uma marca nos dois. De marca a marca dá exatamente 5 metros? Então o ângulo tem 90 graus. Mais pequeno também funciona: 30, 40 e 50 centímetros.", // nieuw, nalezen
+    'c.angles.p': "Este ângulo não está reto.", // nieuw, nalezen
+    'c.angles.s': "Tens de verificar um canto grande de uma parede nova. O teu esquadro é pequeno demais. O que fazes?", // nieuw, nalezen
+    'c.angles.o1': "Medes 3, 4 e 5 metros.", // nieuw, nalezen
+    'c.angles.o2': "Olhas para ele de longe.", // nieuw, nalezen
+    'c.angles.o3': "Usas o esquadro pequeno na mesma.", // nieuw, nalezen
+    'c.angles.w': "Com 3, 4 e 5 consegues verificar um canto grande com exatidão, só com uma fita métrica. A olho, um canto pode parecer certo e estar errado.", // nieuw, nalezen
+    'l.size': "Comprimento, área e volume", // nieuw, nalezen
+    'w.lengte': "o comprimento", // nieuw, nalezen
+    'w.breedte': "a largura", // nieuw, nalezen
+    'w.hoogte': "a altura", // nieuw, nalezen
+    'w.oppervlakte': "a área (comprimento vezes largura, em metros quadrados)", // nieuw, nalezen
+    'w.inhoud': "o volume (comprimento vezes largura vezes altura)", // nieuw, nalezen
+    'w.centimeter': "o centímetro", // nieuw, nalezen
+    's.size.1': "A área é o comprimento vezes a largura.", // nieuw, nalezen
+    's.size.2': "O volume é comprimento vezes largura vezes altura.", // nieuw, nalezen
+    's.size.3': "Dez milímetros são um centímetro.", // nieuw, nalezen
+    'c.size.q': "Quantos metros quadrados tem o chão?", // nieuw, nalezen
+    'c.size.a': "Quatro por cinco metros, portanto vinte metros quadrados.", // nieuw, nalezen
+    'c.size': "Calcula o que precisas, e junta um pouco mais", // nieuw, nalezen
+    'c.size.b': "Quantos azulejos, quanta tinta, quanta areia? Calculas isso com a área ou com o volume. Área: o comprimento vezes a largura, em metros quadrados. Volume: o comprimento vezes a largura vezes a altura, em metros cúbicos. Mede tudo na mesma unidade: tudo em metros, ou tudo em centímetros. Escreve as medidas, não as guardes na cabeça. Depois junta um pouco mais, para os bocados cortados e para os erros. Não tens a certeza? Pede a um colega para verificar a tua conta.", // nieuw, nalezen
+    'c.size.p': "Eu escrevo as medidas.", // nieuw, nalezen
+    'c.size.s': "Mediste o chão. Tens de encomendar os azulejos hoje. O que fazes?", // nieuw, nalezen
+    'c.size.o1': "Calculas a área, e juntas um pouco mais.", // nieuw, nalezen
+    'c.size.o2': "Encomendas a área, nem mais um azulejo.", // nieuw, nalezen
+    'c.size.o3': "Adivinhas: já viste o chão.", // nieuw, nalezen
+    'c.size.w': "Há sempre azulejos que cortas, e alguns partem-se. Com um pouco a mais, não tens de parar a meio e encomendar outra vez.", // nieuw, nalezen
+    'l.paint': "Pintar", // nieuw, nalezen
+    'w.verf': "a tinta", // nieuw, nalezen
+    'w.kwast': "a trincha (um pincel largo)", // nieuw, nalezen
+    'w.penseel': "o pincel pequeno (para cantos e bordas)", // nieuw, nalezen
+    'w.roerstok': "o pau de mexer", // nieuw, nalezen
+    'w.tape': "a fita de pintor (fita-cola de papel)", // nieuw, nalezen
+    'w.strijkvaatje': "o balde de pintor pequeno (um recipiente pequeno que seguras enquanto pintas)", // nieuw, nalezen
+    's.paint.1': "Primeiro mexe bem a tinta.", // nieuw, nalezen
+    's.paint.2': "Tapa a borda com fita.", // nieuw, nalezen
+    's.paint.3': "Põe um pouco de tinta no balde pequeno.", // nieuw, nalezen
+    'c.paint.q': "Que pincel é que uso?", // nieuw, nalezen
+    'c.paint.a': "A trincha larga para a parede, o pincel pequeno para os cantos.", // nieuw, nalezen
+    'c.paint': "Mexe bem, e pinta de cima para baixo", // nieuw, nalezen
+    'c.paint.b': "A tinta que esteve parada algum tempo fica grossa no fundo da lata. Por isso, primeiro mexe-a bem, com um pau de mexer, até a cor ser igual em todo o lado. Não pintes da lata grande: põe um pouco de tinta no balde pequeno, e fecha outra vez a lata. Assim a tinta fica boa. Pinta de cima para baixo: assim os pingos caem em tinta molhada e ainda os consegues espalhar. Usa a trincha larga para a parede e o pincel pequeno para os cantos. No fim, limpa logo os pincéis.", // nieuw, nalezen
+    'c.paint.p': "Primeiro mexo bem a tinta.", // nieuw, nalezen
+    'c.paint.s': "Abres uma lata de tinta velha. Em cima está líquida, no fundo está grossa. O que fazes?", // nieuw, nalezen
+    'c.paint.o1': "Primeiro mexes bem, com o pau.", // nieuw, nalezen
+    'c.paint.o2': "Pintas com a tinta líquida de cima.", // nieuw, nalezen
+    'c.paint.o3': "Juntas água até ficar líquida em todo o lado.", // nieuw, nalezen
+    'c.paint.w': "Parte da cor fica no fundo da lata. Sem mexer, a parede fica com manchas e riscas.", // nieuw, nalezen
+    'l.prep': "Preparar para pintar", // nieuw, nalezen
+    'w.plamuurmes': "a espátula de massa (para tapar buracos)", // nieuw, nalezen
+    'w.schuurpapier': "a lixa", // nieuw, nalezen
+    'w.verfkrabber': "o raspador de tinta", // nieuw, nalezen
+    'w.stoffertje': "a escova pequena (para varrer o pó)", // nieuw, nalezen
+    'w.schuren': "lixar", // nieuw, nalezen
+    'w.afplakken': "proteger com fita (tapar uma borda com fita)", // nieuw, nalezen
+    's.prep.1': "Primeiro raspa a tinta velha.", // nieuw, nalezen
+    's.prep.2': "Lixa a madeira até ficar lisa.", // nieuw, nalezen
+    's.prep.3': "Varre o pó com a escova pequena.", // nieuw, nalezen
+    'c.prep.q': "Já posso pintar?", // nieuw, nalezen
+    'c.prep.a': "Não, primeiro lixar e tapar o buraco.", // nieuw, nalezen
+    'c.prep': "Uma boa pintura começa antes da tinta", // nieuw, nalezen
+    'c.prep.b': "A tinta não pega bem em sujidade, pó ou tinta velha solta. Por isso, primeiro raspa a tinta solta com o raspador. Tapa os buracos com massa e a espátula, e deixa a massa secar. Depois lixa até ficar liso. Depois de lixar, varre o pó com a escova pequena, também das bordas. Por fim, protege com fita o que tem de ficar limpo, como janelas e tomadas. Lixar faz um pó fino: usa uma máscara contra o pó, e pergunta qual. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.prep.p': "Primeiro lixar, depois pintar.", // nieuw, nalezen
+    'c.prep.s': "Lixaste a porta. Ainda tem pó. O teu colega quer pintar já. O que fazes?", // nieuw, nalezen
+    'c.prep.o1': "Primeiro tiras o pó, com a escova.", // nieuw, nalezen
+    'c.prep.o2': "Deixas o colega pintar: a tinta tapa o pó.", // nieuw, nalezen
+    'c.prep.o3': "Limpas o pó com a mão.", // nieuw, nalezen
+    'c.prep.w': "A tinta em cima do pó não pega bem. Mais tarde sai em lascas, e então é preciso fazer o trabalho todo outra vez.", // nieuw, nalezen
+    'l.brick': "Assentar tijolo", // nieuw, nalezen
+    'w.speciekuip': "a masseira (o recipiente da argamassa)", // nieuw, nalezen
+    'w.metseltroffel': "a colher de pedreiro (para assentar tijolos)", // nieuw, nalezen
+    'w.baksteen': "o tijolo", // nieuw, nalezen
+    'w.cement': "o cimento", // nieuw, nalezen
+    'w.voegijzer': "o ferro de juntas (para alisar as juntas entre os tijolos)", // nieuw, nalezen
+    'w.handveger': "a escova de mão", // nieuw, nalezen
+    's.brick.1': "Ainda há cimento na masseira.", // nieuw, nalezen
+    's.brick.2': "Alisa a junta com o ferro de juntas.", // nieuw, nalezen
+    's.brick.3': "Limpa a parede com a escova de mão.", // nieuw, nalezen
+    'c.brick.q': "Quantos tijolos ainda tens?", // nieuw, nalezen
+    'c.brick.a': "Mais uma palete. Chega para hoje.", // nieuw, nalezen
+    'c.brick': "Mantém a parede limpa enquanto trabalhas", // nieuw, nalezen
+    'c.brick.b': "A argamassa está molhada quando assentas os tijolos, e endurece em poucas horas. Por isso, trabalha limpo. Raspa logo com a colher a argamassa que sai da junta. Alisa as juntas com o ferro de juntas quando a argamassa já está um pouco firme, não quando ainda está molhada. Depois passa a escova de mão pela parede. A argamassa dura na frente de um tijolo é muito difícil de tirar. No fim do dia, tapa o cimo da parede, para a chuva não lavar a argamassa.", // nieuw, nalezen
+    'c.brick.p': "Estou a alisar as juntas.", // nieuw, nalezen
+    'c.brick.s': "No fim do dia, há argamassa na frente dos tijolos. O que fazes?", // nieuw, nalezen
+    'c.brick.o1': "Tiras com a escova agora, antes de endurecer.", // nieuw, nalezen
+    'c.brick.o2': "Deixas estar: limpas na próxima semana.", // nieuw, nalezen
+    'c.brick.o3': "Lavas a parede com muita água.", // nieuw, nalezen
+    'c.brick.w': "A argamassa fresca sai bem com uma escova. A argamassa dura fica no tijolo, e então a parede não fica bonita.", // nieuw, nalezen
+    'l.wall': "Uma parede direita", // nieuw, nalezen
+    'w.metseltouw': "a linha de pedreiro (um fio para uma fiada direita)", // nieuw, nalezen
+    'w.klos': "o bloco da linha (segura o fio na esquina)", // nieuw, nalezen
+    'w.lagenmaatlat': "a régua de fiadas (mostra a altura de cada fiada)", // nieuw, nalezen
+    'w.profiel': "o perfil de canto (um poste direito no fim da parede)", // nieuw, nalezen
+    'w.kop': "a testa (o lado curto de um tijolo)", // nieuw, nalezen
+    'w.strek': "a face comprida (o lado comprido de um tijolo)", // nieuw, nalezen
+    's.wall.1': "Estica bem a linha de pedreiro.", // nieuw, nalezen
+    's.wall.2': "O perfil de canto tem de estar direito.", // nieuw, nalezen
+    's.wall.3': "Assenta o tijolo com o lado comprido para fora.", // nieuw, nalezen
+    'c.wall.q': "Que altura tem de ter esta fiada?", // nieuw, nalezen
+    'c.wall.a': "Olha para a régua de fiadas.", // nieuw, nalezen
+    'c.wall': "A linha mantém a parede direita", // nieuw, nalezen
+    'c.wall.b': "Um pedreiro não constrói a olho. Primeiro, os perfis de canto ficam direitos nas duas pontas da parede. Entre eles esticas bem a linha de pedreiro, à altura da fiada seguinte. Assenta cada tijolo ao longo da linha, mas não empurres a linha. A régua de fiadas mostra a altura de cada fiada. Verifica muitas vezes com o nível. Um tijolo torto é fácil de corrigir enquanto a argamassa está molhada, e muito difícil de corrigir amanhã.", // nieuw, nalezen
+    'c.wall.p': "A linha de pedreiro está bem esticada?", // nieuw, nalezen
+    'c.wall.s': "A linha de pedreiro está solta e descai um pouco no meio. O que fazes?", // nieuw, nalezen
+    'c.wall.o1': "Primeiro esticas a linha, depois continuas.", // nieuw, nalezen
+    'c.wall.o2': "Assentas os tijolos por baixo dela na mesma.", // nieuw, nalezen
+    'c.wall.o3': "Assentas os tijolos a olho.", // nieuw, nalezen
+    'c.wall.w': "Uma linha solta descai no meio, por isso a fiada também descai. Uma linha bem esticada dá uma fiada direita.", // nieuw, nalezen
+    'l.wood': "Trabalhar com madeira", // nieuw, nalezen
+    'w.handzaag': "o serrote", // nieuw, nalezen
+    'w.kapzaag': "o serrote de costas (um serrote pequeno com as costas rígidas)", // nieuw, nalezen
+    'w.houtbeitel': "o formão", // nieuw, nalezen
+    'w.handschaaf': "a plaina manual", // nieuw, nalezen
+    'w.timmermanshamer': "o martelo de carpinteiro", // nieuw, nalezen
+    'w.houtenhamer': "o maço (um martelo de madeira)", // nieuw, nalezen
+    's.wood.1': "Serra a tábua à medida.", // nieuw, nalezen
+    's.wood.2': "Aplaina a borda até ficar lisa.", // nieuw, nalezen
+    's.wood.3': "Bate no formão com o maço.", // nieuw, nalezen
+    'c.wood.q': "De que serrote preciso?", // nieuw, nalezen
+    'c.wood.a': "O serrote de costas, para esta peça pequena.", // nieuw, nalezen
+    'c.wood': "Curto demais não tem conserto", // nieuw, nalezen
+    'c.wood.b': "A madeira serrada curta demais não volta a ficar comprida. Por isso, mede duas vezes, e risca a linha antes de serrar. Serra ao lado da linha, do lado da peça de que não precisas. Segura bem a madeira: numa bancada ou com um grampo, não no teu joelho. Deixa o serrote fazer o trabalho, com movimentos longos e calmos. Empurra o formão para longe do teu corpo e da tua outra mão. E mantém o formão e a plaina afiados: uma ferramenta sem fio escorrega mais facilmente.", // nieuw, nalezen
+    'c.wood.p': "Vou medir mais uma vez.", // nieuw, nalezen
+    'c.wood.s': "Tens de serrar uma tábua à medida. Mediste uma vez, depressa. O que fazes?", // nieuw, nalezen
+    'c.wood.o1': "Medes outra vez, e depois riscas a linha.", // nieuw, nalezen
+    'c.wood.o2': "Serras já: deve estar certo.", // nieuw, nalezen
+    'c.wood.o3': "Serras a olho, sem linha.", // nieuw, nalezen
+    'c.wood.w': "Comprido demais, podes serrar outra vez. Curto demais, já não tem conserto. Medir outra vez demora um minuto; uma tábua nova custa muito mais.", // nieuw, nalezen
+    'l.square': "Marcar", // nieuw, nalezen
+    'w.winkelhaak': "o esquadro (mostra um ângulo reto)", // nieuw, nalezen
+    'w.verstekhaak': "o esquadro de meia-esquadria (45 graus)", // nieuw, nalezen
+    'w.zwaaihaak': "a suta (tu próprio escolhes o ângulo)", // nieuw, nalezen
+    'w.kruishout': "o graminho (risca uma linha ao longo da borda)", // nieuw, nalezen
+    'w.passer': "o compasso (para desenhar um círculo)", // nieuw, nalezen
+    'w.aftekenen': "marcar (desenhar onde vais cortar)", // nieuw, nalezen
+    's.square.1': "Marca a linha com o esquadro.", // nieuw, nalezen
+    's.square.2': "Põe a suta no ângulo certo.", // nieuw, nalezen
+    's.square.3': "Desenha um círculo com o compasso.", // nieuw, nalezen
+    'c.square.q': "O ângulo está reto?", // nieuw, nalezen
+    'c.square.a': "Sim, o esquadro encaixa certinho.", // nieuw, nalezen
+    'c.square': "Marca a partir de uma borda direita", // nieuw, nalezen
+    'c.square.b': "Antes de serrar ou furar, marcas onde. Usa um lápis afiado: uma linha grossa não é exata. Escolhe uma borda direita da madeira, e mede tudo a partir dessa borda. Encosta bem a parte grossa do esquadro a essa borda, e risca a linha ao longo do aço. Faz uma pequena cruz na peça que não vais usar. Depois serras ao lado da linha, do lado da cruz.", // nieuw, nalezen
+    'c.square.p': "Primeiro vou marcar.", // nieuw, nalezen
+    'c.square.s': "O teu lápis não tem bico e faz uma linha grossa. Queres marcar uma tábua. O que fazes?", // nieuw, nalezen
+    'c.square.o1': "Primeiro afias o lápis, depois riscas.", // nieuw, nalezen
+    'c.square.o2': "Riscas a linha na mesma, não faz mal.", // nieuw, nalezen
+    'c.square.o3': "Marcas com a unha.", // nieuw, nalezen
+    'c.square.w': "Uma linha grossa tem alguns milímetros de largura. Então não sabes onde serrar, e a peça não fica exata.", // nieuw, nalezen
+    'l.screw': "Berbequins e parafusos", // nieuw, nalezen
+    'w.accuboor': "o berbequim sem fio (com bateria)", // nieuw, nalezen
+    'w.boormachine': "o berbequim elétrico (com cabo)", // nieuw, nalezen
+    'w.bitje': "a ponta de aparafusar (o bit)", // nieuw, nalezen
+    'w.plug': "a bucha", // nieuw, nalezen
+    'w.schroevendraaier': "a chave de fendas", // nieuw, nalezen
+    'w.spijker': "o prego", // nieuw, nalezen
+    's.screw.1': "Faz um furo e põe lá uma bucha.", // nieuw, nalezen
+    's.screw.2': "Que ponta é para este parafuso?", // nieuw, nalezen
+    's.screw.3': "Bate o prego na madeira com o martelo.", // nieuw, nalezen
+    'c.screw.q': "Onde está o berbequim sem fio?", // nieuw, nalezen
+    'c.screw.a': "No carregador, está quase cheio.", // nieuw, nalezen
+    'c.screw': "Olha antes de furar", // nieuw, nalezen
+    'c.screw.b': "Antes de furar uma parede, pensa no que está por trás. Os canos e os cabos passam muitas vezes a direito para cima, para baixo ou para o lado a partir de uma tomada ou de um interruptor. Pergunta onde estão, ou verifica com um detetor. Escolhe uma broca do mesmo tamanho da bucha, e faz o furo um pouco mais fundo do que a bucha. Usa a ponta certa para o parafuso: uma ponta errada escorrega e estraga a cabeça do parafuso. Usa óculos de proteção quando furas.", // nieuw, nalezen
+    'c.screw.p': "Posso furar aqui?", // nieuw, nalezen
+    'c.screw.s': "Tens de fazer um furo mesmo por cima de uma tomada. O que fazes?", // nieuw, nalezen
+    'c.screw.o1': "Primeiro perguntas por onde passa o cabo.", // nieuw, nalezen
+    'c.screw.o2': "Furas: nunca há lá um cabo.", // nieuw, nalezen
+    'c.screw.o3': "Furas devagar, assim é seguro.", // nieuw, nalezen
+    'c.screw.w': "Muitas vezes um cabo sobe a direito a partir de uma tomada. Furar o cabo é perigoso, e a reparação dá muito trabalho.", // nieuw, nalezen
+    'l.fix': "Fixar coisas", // nieuw, nalezen
+    'w.bevestigen': "fixar (prender bem uma coisa a uma parede)", // nieuw, nalezen
+    'w.vastzetten': "apertar (rodar até ficar apertado)", // nieuw, nalezen
+    'w.lijmen': "colar", // nieuw, nalezen
+    'w.inbussleutel': "a chave Allen (chave sextavada)", // nieuw, nalezen
+    'w.kruisschroevendraaier': "a chave de estrela (ponta em cruz)", // nieuw, nalezen
+    'w.platteschroevendraaier': "a chave de fendas plana", // nieuw, nalezen
+    's.fix.1': "Fixa a prateleira à parede.", // nieuw, nalezen
+    's.fix.2': "Aperta o parafuso com a chave Allen.", // nieuw, nalezen
+    's.fix.3': "Pega na chave de fendas plana, não na de estrela.", // nieuw, nalezen
+    'c.fix.q': "Como é que fixo esta prateleira?", // nieuw, nalezen
+    'c.fix.a': "Com duas buchas e dois parafusos.", // nieuw, nalezen
+    'c.fix': "Apertado, mas não demais", // nieuw, nalezen
+    'c.fix.b': "Um parafuso tem de ficar apertado, mas não demais. Se rodares com muita força, a rosca parte-se ou a madeira racha. Roda até não mexer mais, e depois para. No berbequim sem fio, primeiro roda o anel com os números para um número baixo. Uma prateleira na parede precisa de buchas que sirvam para essa parede: a pedra precisa de outras buchas do que uma parede fina de placas. A cola precisa de tempo: aperta as peças uma contra a outra, segura-as com um grampo, e espera até a cola estar seca.", // nieuw, nalezen
+    'c.fix.p': "A prateleira está bem fixa?", // nieuw, nalezen
+    'c.fix.s': "Colaste duas peças de madeira. O teu colega quer usá-las já. O que fazes?", // nieuw, nalezen
+    'c.fix.o1': "Dizes: primeiro a cola tem de secar.", // nieuw, nalezen
+    'c.fix.o2': "Deixas o colega usar: a cola é rápida.", // nieuw, nalezen
+    'c.fix.o3': "Seguras as peças nas mãos durante um minuto.", // nieuw, nalezen
+    'c.fix.w': "A cola molhada ainda não segura. Se usares cedo demais, as peças soltam-se outra vez. Então tens de começar de novo.", // nieuw, nalezen
+    'l.atmachine': "Na máquina", // nieuw, nalezen
+    'w.bedieningspaneel': "o painel de comando (os botões e o ecrã de uma máquina)", // nieuw, nalezen
+    'w.startknop': "o botão de arranque (verde)", // nieuw, nalezen
+    'w.hendel': "a alavanca", // nieuw, nalezen
+    'w.afscherming': "a proteção da máquina (uma tampa por cima das peças que se mexem)", // nieuw, nalezen
+    'w.sensor': "o sensor (vê se há alguma coisa)", // nieuw, nalezen
+    'w.signaallamp': "a luz de sinalização (luzes de cores em cima de uma máquina)", // nieuw, nalezen
+    's.atmachine.1': "Carrega no botão de arranque verde.", // nieuw, nalezen
+    's.atmachine.2': "A luz de sinalização está vermelha. Há uma avaria.", // nieuw, nalezen
+    's.atmachine.3': "Nunca tires a proteção da máquina.", // nieuw, nalezen
+    'c.atmachine.q': "Porque é que a máquina está sempre a parar?", // nieuw, nalezen
+    'c.atmachine.a': "O sensor não vê bem a caixa.", // nieuw, nalezen
+    'c.atmachine': "A proteção fica no lugar", // nieuw, nalezen
+    'c.atmachine.b': "As peças de uma máquina que se mexem podem puxar uma mão, uma manga ou o cabelo em menos de um segundo. A proteção está lá para isso. Nunca a tires, e nunca metas a mão por trás dela com a máquina a trabalhar. Uma proteção ou um sensor não funciona? Então a máquina não é segura: para a máquina e avisa o teu chefe de equipa. Ficou alguma coisa presa? Primeiro para a máquina, e garante que ninguém a pode ligar enquanto trabalhas. Como se faz isso é diferente em cada empresa: pede a explicação antes de começares. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.atmachine.p': "A proteção da máquina está partida.", // nieuw, nalezen
+    'c.atmachine.s': "Uma caixa ficou presa na máquina, mesmo atrás da proteção. A máquina está a trabalhar. O que fazes?", // nieuw, nalezen
+    'c.atmachine.o1': "Primeiro paras a máquina, depois vais buscar ajuda.", // nieuw, nalezen
+    'c.atmachine.o2': "Metes a mão depressa e puxas a caixa.", // nieuw, nalezen
+    'c.atmachine.o3': "Abres a proteção com a máquina a trabalhar.", // nieuw, nalezen
+    'c.atmachine.w': "Uma máquina a trabalhar pode puxar a tua mão antes de conseguires reagir. Parar a máquina demora um momento; uma mão ferida demora meses.", // nieuw, nalezen
+    'l.inspect': "Medir e verificar", // nieuw, nalezen
+    'w.weegschaal': "a balança", // nieuw, nalezen
+    'w.meetklok': "o comparador (mede diferenças muito pequenas)", // nieuw, nalezen
+    'w.loep': "a lupa", // nieuw, nalezen
+    'w.monster': "a amostra (um produto que tiras para verificar)", // nieuw, nalezen
+    'w.afkeurbak': "a caixa dos rejeitados (para produtos que não estão bons)", // nieuw, nalezen
+    'w.teller': "o contador (conta os produtos)", // nieuw, nalezen
+    's.inspect.1': "Põe o produto na balança.", // nieuw, nalezen
+    's.inspect.2': "Este produto está danificado. Vai para a caixa dos rejeitados.", // nieuw, nalezen
+    's.inspect.3': "Olho para a etiqueta com a lupa.", // nieuw, nalezen
+    'c.inspect.q': "De quanto em quanto tempo tiro uma amostra?", // nieuw, nalezen
+    'c.inspect.a': "Uma por hora. Escreve na lista.", // nieuw, nalezen
+    'c.inspect': "Escreve o que verificas", // nieuw, nalezen
+    'c.inspect.b': "Numa fábrica verificas os produtos durante o trabalho: pesas, medes, ou olhas para eles com atenção. Escreve logo cada verificação na lista, com a hora. Não mais tarde, de memória. Um produto não está bem? Põe-no na caixa dos rejeitados e olha com atenção para os seguintes. Há mais produtos errados? Então há alguma coisa errada com a máquina. Avisa logo o teu chefe de equipa. Um problema encontrado cedo poupa muitos produtos. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.inspect.p': "Há mais produtos errados.", // nieuw, nalezen
+    'c.inspect.s': "A balança mostra que três produtos seguidos são leves demais. O que fazes?", // nieuw, nalezen
+    'c.inspect.o1': "Avisas logo o teu chefe de equipa.", // nieuw, nalezen
+    'c.inspect.o2': "Pões os produtos outra vez na linha.", // nieuw, nalezen
+    'c.inspect.o3': "Não dizes nada: acontece.", // nieuw, nalezen
+    'c.inspect.w': "Três produtos errados seguidos mostram um problema na máquina. Quanto mais cedo avisares, menos produtos vão para o lixo.", // nieuw, nalezen
+    'l.packing': "Embalar", // nieuw, nalezen
+    'w.verpakking': "a embalagem", // nieuw, nalezen
+    'w.krimpfolie': "o filme retrátil (plástico que aperta com o calor)", // nieuw, nalezen
+    'w.sealmachine': "a seladora (fecha uma embalagem com calor)", // nieuw, nalezen
+    'w.vulmateriaal': "o material de enchimento (almofadas de ar ou papel numa caixa)", // nieuw, nalezen
+    'w.afbreekmes': "o x-ato (uma faca com lâmina que se parte)", // nieuw, nalezen
+    'w.tapepistool': "a pistola de fita-cola", // nieuw, nalezen
+    's.packing.1': "Põe material de enchimento na caixa.", // nieuw, nalezen
+    's.packing.2': "Fecha a caixa com a pistola de fita-cola.", // nieuw, nalezen
+    's.packing.3': "A seladora está quente. Cuidado!", // nieuw, nalezen
+    'c.packing.q': "Quantos produtos vão numa caixa?", // nieuw, nalezen
+    'c.packing.a': "Doze. Está na lista.", // nieuw, nalezen
+    'c.packing': "Corta para longe do teu corpo", // nieuw, nalezen
+    'c.packing.b': "Embalar é um trabalho rápido, e um x-ato corta muito. Corta sempre para longe do teu corpo e da tua outra mão. Recolhe a lâmina depois de cada corte, também quando pousas o x-ato por um momento. Parte com cuidado um bocado sem fio, e deita-o na caixa das lâminas velhas, não no lixo normal. A seladora e a pistola de ar quente do filme retrátil ficam muito quentes: não toques nas partes quentes. E verifica cada caixa: o produto certo, o número certo, e a etiqueta direita. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.packing.p': "Primeiro recolho a lâmina.", // nieuw, nalezen
+    'c.packing.s': "Pousas o x-ato na mesa por um momento. A lâmina ainda está de fora. O que fazes?", // nieuw, nalezen
+    'c.packing.o1': "Primeiro recolhes a lâmina.", // nieuw, nalezen
+    'c.packing.o2': "Deixas assim: vais precisar dele daqui a pouco.", // nieuw, nalezen
+    'c.packing.o3': "Metes o x-ato no bolso assim.", // nieuw, nalezen
+    'c.packing.w': "Uma lâmina de fora numa mesa ou num bolso pode cortar-te a ti ou a um colega. Recolhê-la demora um segundo.", // nieuw, nalezen
+    'l.upkeep': "Manutenção", // nieuw, nalezen
+    'w.persluchtpistool': "a pistola de ar comprimido", // nieuw, nalezen
+    'w.steeksleutel': "a chave de bocas", // nieuw, nalezen
+    'w.oliekannetje': "a almotolia (uma lata pequena de óleo)", // nieuw, nalezen
+    'w.smeerpistool': "a bomba de massa (para lubrificar)", // nieuw, nalezen
+    'w.lekbak': "o tabuleiro de pingos (apanha o óleo que pinga)", // nieuw, nalezen
+    'w.poetsdoek': "o pano de limpeza", // nieuw, nalezen
+    's.upkeep.1': "Está a pingar óleo. Põe o tabuleiro de pingos por baixo.", // nieuw, nalezen
+    's.upkeep.2': "Limpa o óleo com um pano de limpeza.", // nieuw, nalezen
+    's.upkeep.3': "Nunca apontes a pistola de ar comprimido a ninguém.", // nieuw, nalezen
+    'c.upkeep.q': "Quando é que lubrificamos a máquina?", // nieuw, nalezen
+    'c.upkeep.a': "Todas as segundas-feiras, antes do primeiro turno.", // nieuw, nalezen
+    'c.upkeep': "Uma máquina limpa mostra os seus problemas", // nieuw, nalezen
+    'c.upkeep.b': "A pequena manutenção faz muitas vezes parte do trabalho: limpar, pôr óleo e lubrificar. Só o faças com a máquina desligada, e quando já aprendeste como. Uma máquina limpa é fácil de verificar: vês logo uma fuga ou uma peça solta. O óleo no chão escorrega. Põe um tabuleiro de pingos por baixo de uma fuga, limpa o chão, e avisa o teu chefe de equipa. Deita os panos com óleo no caixote especial. Nunca apontes uma pistola de ar comprimido a uma pessoa, e nunca a uses para limpar a tua roupa ou a tua pele. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.upkeep.p': "A máquina está a perder óleo.", // nieuw, nalezen
+    'c.upkeep.s': "Vês uma pequena poça de óleo debaixo da máquina. O que fazes?", // nieuw, nalezen
+    'c.upkeep.o1': "Pões um tabuleiro de pingos por baixo, e avisas.", // nieuw, nalezen
+    'c.upkeep.o2': "Deixas estar: é só um bocadinho.", // nieuw, nalezen
+    'c.upkeep.o3': "Pões um bocado de papel em cima, e continuas.", // nieuw, nalezen
+    'c.upkeep.w': "Uma fuga fica maior, e o óleo no chão faz as pessoas escorregar. Encontrada cedo, é uma reparação pequena.", // nieuw, nalezen
   },
 };
 

@@ -169,6 +169,22 @@ const t: CultureTranslation = {
     'c.tiletools.a.why': "Waxaa la weydiiyay meesha uu yaal mashiinka qasa: meel, iyo waxa u dhow.", // nieuw, nalezen
     'c.tiling.a.why': "Waxaa la weydiiyay meesha laga bilaabo: bartamaha, xariiqda dhexe.", // nieuw, nalezen
     'c.plaster.a.why': "Waxaa la weydiiyay in derbigu qallalay: maya, iyo inta la sugayo.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "Waxaa la weydiiyay inuu afargeesle yahay: maya, waa leydi, iyo sababta.", // nieuw, nalezen
+    'c.angles.a.why': "Waxaa la weydiiyay immisa darajo: tirada, iyo waxa ay badhka ka tahay.", // nieuw, nalezen
+    'c.size.a.why': "Waxaa la weydiiyay inta uu dhulku le'eg yahay: xisaabta, iyo jawaabta.", // nieuw, nalezen
+    'c.paint.a.why': "Waxaa la weydiiyay burushkee: kan ballaaran derbiga, kan yarna geesaha.", // nieuw, nalezen
+    'c.prep.a.why': "Waxaa la weydiiyay in la rinjiyeyn karo: maya, iyo waxa marka hore la sameeyo.", // nieuw, nalezen
+    'c.brick.a.why': "Waxaa la weydiiyay immisa bulukeeti ayaa haray: hal baaleet, iyo inay ku filan yihiin.", // nieuw, nalezen
+    'c.wall.a.why': "Waxaa la weydiiyay joogga safka: meesha lagu arki karo.", // nieuw, nalezen
+    'c.wood.a.why': "Waxaa la weydiiyay miinshaarkee: miinshaarka yar, iyo sababta.", // nieuw, nalezen
+    'c.square.a.why': "Waxaa la weydiiyay in xagashu qumman tahay: haa, iyo sida lagu ogaaday.", // nieuw, nalezen
+    'c.screw.a.why': "Waxaa la weydiiyay meesha uu dariilku yaal: meel, iyo inuu ku dhowaad buuxo.", // nieuw, nalezen
+    'c.fix.a.why': "Waxaa la weydiiyay sida khaanadda loo xiro: waxa lagu xiro, iyo immisa.", // nieuw, nalezen
+    'c.atmachine.a.why': "Waxaa la weydiiyay sababta uu u istaago: dareemaha, iyo waxa uusan arkin.", // nieuw, nalezen
+    'c.inspect.a.why': "Waxaa la weydiiyay intee jeer: saacaddii mar, iyo meesha lagu qoro.", // nieuw, nalezen
+    'c.packing.a.why': "Waxaa la weydiiyay immisa sanduuqiiba: tirada, iyo meesha ay ku qoran tahay.", // nieuw, nalezen
+    'c.upkeep.a.why': "Waxaa la weydiiyay goorma: maalinta toddobaadka, iyo waqtiga maalintaas.", // nieuw, nalezen
   },
 };
 export default t;

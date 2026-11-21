@@ -173,6 +173,22 @@ const t: CultureTranslation = {
     'c.tiletools.a.why': "Mikserin nerede olduğu soruluyor: bir yer, bir de yakınında ne olduğu.", // nieuw, nalezen
     'c.tiling.a.why': "Nereden başlanacağı soruluyor: ortadan, orta çizgiden.", // nieuw, nalezen
     'c.plaster.a.why': "Duvarın kuru olup olmadığı soruluyor: hayır, bir de ne kadar bekleneceği.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "Kare olup olmadığı soruluyor: hayır, bir dikdörtgen, bir de neden.", // nieuw, nalezen
+    'c.angles.a.why': "Kaç derece olduğu soruluyor: sayı, bir de neyin yarısı olduğu.", // nieuw, nalezen
+    'c.size.a.why': "Zeminin ne kadar büyük olduğu soruluyor: hesap, bir de sonuç.", // nieuw, nalezen
+    'c.paint.a.why': "Hangi fırça olduğu soruluyor: duvar için geniş, köşeler için ince.", // nieuw, nalezen
+    'c.prep.a.why': "Boyanıp boyanamayacağı soruluyor: hayır, bir de önce ne geldiği.", // nieuw, nalezen
+    'c.brick.a.why': "Kaç tuğla kaldığı soruluyor: bir palet, bir de bunun yettiği.", // nieuw, nalezen
+    'c.wall.a.why': "Sıranın ne kadar yüksek olması gerektiği soruluyor: bunun nerede görüldüğü.", // nieuw, nalezen
+    'c.wood.a.why': "Hangi testere olduğu soruluyor: sırtlı testere, bir de neden.", // nieuw, nalezen
+    'c.square.a.why': "Açının dik olup olmadığı soruluyor: evet, bir de bunun nasıl bilindiği.", // nieuw, nalezen
+    'c.screw.a.why': "Matkabın nerede olduğu soruluyor: bir yer, bir de neredeyse dolu olduğu.", // nieuw, nalezen
+    'c.fix.a.why': "Rafın nasıl sabitleneceği soruluyor: neyle, bir de kaç tane.", // nieuw, nalezen
+    'c.atmachine.a.why': "Neden durduğu soruluyor: sensör, bir de neyi görmediği.", // nieuw, nalezen
+    'c.inspect.a.why': "Ne sıklıkla olduğu soruluyor: saatte bir, bir de nereye yazılacağı.", // nieuw, nalezen
+    'c.packing.a.why': "Bir kutuya kaç tane girdiği soruluyor: sayı, bir de nerede yazdığı.", // nieuw, nalezen
+    'c.upkeep.a.why': "Ne zaman olduğu soruluyor: haftanın günü, bir de o gün hangi an.", // nieuw, nalezen
   },
 };
 

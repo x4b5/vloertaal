@@ -172,6 +172,22 @@ const t: CultureTranslation = {
     'c.tiletools.a.why': "On demande où est le malaxeur : un endroit, et ce qui est tout près.", // nieuw, nalezen
     'c.tiling.a.why': "On demande où commencer : au milieu, sur la ligne d’axe.", // nieuw, nalezen
     'c.plaster.a.why': "On demande si le mur est sec : non, et combien de temps attendre.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "On demande si c’est un carré : non, un rectangle, et pourquoi.", // nieuw, nalezen
+    'c.angles.a.why': "On demande combien de degrés : le chiffre, et de quoi c’est la moitié.", // nieuw, nalezen
+    'c.size.a.why': "On demande la taille du sol : le calcul, et la réponse.", // nieuw, nalezen
+    'c.paint.a.why': "On demande quel pinceau : le large pour le mur, le petit pour les coins.", // nieuw, nalezen
+    'c.prep.a.why': "On demande si on peut peindre : non, et ce qui vient d’abord.", // nieuw, nalezen
+    'c.brick.a.why': "On demande combien de briques il reste : une palette, et que c’est assez.", // nieuw, nalezen
+    'c.wall.a.why': "On demande à quelle hauteur doit être le rang : où on peut le voir.", // nieuw, nalezen
+    'c.wood.a.why': "On demande quelle scie : la scie à dos, et pourquoi.", // nieuw, nalezen
+    'c.square.a.why': "On demande si l’angle est droit : oui, et comment on le sait.", // nieuw, nalezen
+    'c.screw.a.why': "On demande où est la perceuse : un endroit, et qu’elle est presque pleine.", // nieuw, nalezen
+    'c.fix.a.why': "On demande comment fixer l’étagère : avec quoi, et combien.", // nieuw, nalezen
+    'c.atmachine.a.why': "On demande pourquoi elle s’arrête : le capteur, et ce qu’il ne voit pas.", // nieuw, nalezen
+    'c.inspect.a.why': "On demande tous les combien : une fois par heure, et où le noter.", // nieuw, nalezen
+    'c.packing.a.why': "On demande combien par carton : le nombre, et où c’est écrit.", // nieuw, nalezen
+    'c.upkeep.a.why': "On demande quand : le jour de la semaine, et le moment dans ce jour.", // nieuw, nalezen
   },
 };
 

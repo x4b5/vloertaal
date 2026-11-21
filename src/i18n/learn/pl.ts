@@ -174,6 +174,22 @@ const t: CultureTranslation = {
     'c.tiletools.a.why': "Pytanie, gdzie jest mieszadło: miejsce i co jest blisko.", // nieuw, nalezen
     'c.tiling.a.why': "Pytanie, gdzie zacząć: pośrodku, na linii środkowej.", // nieuw, nalezen
     'c.plaster.a.why': "Pytanie, czy ściana jest sucha: nie, i jak długo czekać.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "Pytanie, czy to kwadrat: nie, prostokąt, i dlaczego.", // nieuw, nalezen
+    'c.angles.a.why': "Pytanie, ile stopni: liczba i czego to połowa.", // nieuw, nalezen
+    'c.size.a.why': "Pytanie, jak duża jest podłoga: obliczenie i wynik.", // nieuw, nalezen
+    'c.paint.a.why': "Pytanie, który pędzel: szeroki do ściany, mały do rogów.", // nieuw, nalezen
+    'c.prep.a.why': "Pytanie, czy można malować: nie, i co jest najpierw.", // nieuw, nalezen
+    'c.brick.a.why': "Pytanie, ile zostało cegieł: jedna paleta i że to wystarczy.", // nieuw, nalezen
+    'c.wall.a.why': "Pytanie, jak wysoka ma być warstwa: gdzie można to zobaczyć.", // nieuw, nalezen
+    'c.wood.a.why': "Pytanie, która piła: grzbietnica, i dlaczego.", // nieuw, nalezen
+    'c.square.a.why': "Pytanie, czy kąt jest prosty: tak, i skąd to wiadomo.", // nieuw, nalezen
+    'c.screw.a.why': "Pytanie, gdzie jest wkrętarka: miejsce i że jest prawie naładowana.", // nieuw, nalezen
+    'c.fix.a.why': "Pytanie, jak przymocować półkę: czym i ile.", // nieuw, nalezen
+    'c.atmachine.a.why': "Pytanie, dlaczego się zatrzymuje: czujnik i czego nie widzi.", // nieuw, nalezen
+    'c.inspect.a.why': "Pytanie, jak często: raz na godzinę, i gdzie to zapisać.", // nieuw, nalezen
+    'c.packing.a.why': "Pytanie, ile do kartonu: liczba i gdzie to jest napisane.", // nieuw, nalezen
+    'c.upkeep.a.why': "Pytanie, kiedy: dzień tygodnia i pora tego dnia.", // nieuw, nalezen
   },
 };
 

@@ -123,6 +123,11 @@ const t: CultureTranslation = {
     'kjn.u.afbouw.1': "Puedo pedir la llana dentada o la paleta.", // nieuw, nalezen
     'kjn.u.afbouw.2': "Puedo preguntar por dónde empiezo con los azulejos.", // nieuw, nalezen
     'kjn.u.afbouw.3': "Puedo decir que la pared todavía no está seca.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "Puedo pedir el serrucho o el taladro de batería.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Puedo preguntar cómo fijo una tabla.", // nieuw, nalezen
+    'kjn.u.machines.1': "Puedo decir que la protección de la máquina está rota.", // nieuw, nalezen
+    'kjn.u.machines.2': "Puedo preguntar cada cuánto tomo una muestra.", // nieuw, nalezen
   },
 };
 

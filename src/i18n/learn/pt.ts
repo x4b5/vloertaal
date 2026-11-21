@@ -172,6 +172,22 @@ const t: CultureTranslation = {
     'c.tiletools.a.why': "Perguntam onde está o misturador: um sítio, e o que está perto.", // nieuw, nalezen
     'c.tiling.a.why': "Perguntam por onde começar: no meio, na linha central.", // nieuw, nalezen
     'c.plaster.a.why': "Perguntam se a parede está seca: não, e quanto tempo esperar.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "Perguntam se é um quadrado: não, um retângulo, e porquê.", // nieuw, nalezen
+    'c.angles.a.why': "Perguntam quantos graus: o número, e de que é metade.", // nieuw, nalezen
+    'c.size.a.why': "Perguntam o tamanho do chão: a conta, e o resultado.", // nieuw, nalezen
+    'c.paint.a.why': "Perguntam que pincel: o largo para a parede, o pequeno para os cantos.", // nieuw, nalezen
+    'c.prep.a.why': "Perguntam se já se pode pintar: não, e o que vem primeiro.", // nieuw, nalezen
+    'c.brick.a.why': "Perguntam quantos tijolos sobram: uma palete, e que chega.", // nieuw, nalezen
+    'c.wall.a.why': "Perguntam a altura da fiada: onde se pode ver.", // nieuw, nalezen
+    'c.wood.a.why': "Perguntam que serrote: o serrote de costas, e porquê.", // nieuw, nalezen
+    'c.square.a.why': "Perguntam se o ângulo está reto: sim, e como se sabe.", // nieuw, nalezen
+    'c.screw.a.why': "Perguntam onde está o berbequim: um sítio, e que está quase cheio.", // nieuw, nalezen
+    'c.fix.a.why': "Perguntam como fixar a prateleira: com quê, e quantos.", // nieuw, nalezen
+    'c.atmachine.a.why': "Perguntam porque para: o sensor, e o que ele não vê.", // nieuw, nalezen
+    'c.inspect.a.why': "Perguntam de quanto em quanto tempo: uma vez por hora, e onde escrever.", // nieuw, nalezen
+    'c.packing.a.why': "Perguntam quantos por caixa: o número, e onde está escrito.", // nieuw, nalezen
+    'c.upkeep.a.why': "Perguntam quando: o dia da semana, e o momento nesse dia.", // nieuw, nalezen
   },
 };
 

@@ -2078,9 +2078,11 @@ const bouwMoreTips = [
     NONE,
   ),
   tipFor(
+    // Not "Measure twice, saw once": that is the title of c.measure (l.measure), and a tip's
+    // title gives its page address on the site (src/lib/tipPages.ts tipSlug).
     'wood',
     '🪚',
-    'Measure twice, saw once',
+    'Too short cannot be fixed',
     'Wood that is sawn too short cannot be made long again. So measure twice, and draw the line before you saw. Saw next to the line, on the side of the piece you do not need. Hold the wood still: on a workbench or with a clamp, not on your knee. Let the saw do the work, with long, calm strokes. Push a chisel away from your body and your other hand. And keep the chisel and the plane sharp: a blunt tool slips more easily.',
     ['Ik meet het nog een keer.', 'I measure it one more time.'],
     'You must saw a plank to size. You measured it once, quickly. What do you do?',

@@ -172,6 +172,22 @@ const t: CultureTranslation = {
     'c.tiletools.a.why': "Te preguntan dónde está la batidora: un sitio, y qué hay cerca.", // nieuw, nalezen
     'c.tiling.a.why': "Te preguntan por dónde empezar: en el medio, en la línea central.", // nieuw, nalezen
     'c.plaster.a.why': "Te preguntan si la pared está seca: no, y cuánto hay que esperar.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "Te preguntan si es un cuadrado: no, un rectángulo, y por qué.", // nieuw, nalezen
+    'c.angles.a.why': "Te preguntan cuántos grados: el número, y de qué es la mitad.", // nieuw, nalezen
+    'c.size.a.why': "Te preguntan qué tamaño tiene el suelo: la cuenta, y el resultado.", // nieuw, nalezen
+    'c.paint.a.why': "Te preguntan qué brocha: la ancha para la pared, la pequeña para las esquinas.", // nieuw, nalezen
+    'c.prep.a.why': "Te preguntan si se puede pintar: no, y qué va primero.", // nieuw, nalezen
+    'c.brick.a.why': "Te preguntan cuántos ladrillos quedan: un palé, y que es suficiente.", // nieuw, nalezen
+    'c.wall.a.why': "Te preguntan qué altura tiene que tener la hilada: dónde se puede ver.", // nieuw, nalezen
+    'c.wood.a.why': "Te preguntan qué sierra: el serrucho de costilla, y por qué.", // nieuw, nalezen
+    'c.square.a.why': "Te preguntan si el ángulo está recto: sí, y cómo lo sabe.", // nieuw, nalezen
+    'c.screw.a.why': "Te preguntan dónde está el taladro: un sitio, y que está casi lleno.", // nieuw, nalezen
+    'c.fix.a.why': "Te preguntan cómo fijar la balda: con qué, y cuántos.", // nieuw, nalezen
+    'c.atmachine.a.why': "Te preguntan por qué se para: el sensor, y lo que no ve.", // nieuw, nalezen
+    'c.inspect.a.why': "Te preguntan cada cuánto: una vez por hora, y dónde apuntarlo.", // nieuw, nalezen
+    'c.packing.a.why': "Te preguntan cuántos por caja: el número, y dónde está escrito.", // nieuw, nalezen
+    'c.upkeep.a.why': "Te preguntan cuándo: el día de la semana, y el momento de ese día.", // nieuw, nalezen
   },
 };
 

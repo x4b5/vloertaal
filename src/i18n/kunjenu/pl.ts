@@ -125,6 +125,11 @@ const t: CultureTranslation = {
     'kjn.u.feedback.1': "Umiem poprosić o przykład, kiedy dostaję feedback.", // nieuw, nalezen
     'kjn.u.feedback.2': "Umiem miło powiedzieć, co może być lepsze.", // nieuw, nalezen
     'kjn.u.feedback.3': "Umiem zadać pytanie na spotkaniu zespołu.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "Umiem poprosić o piłę ręczną albo wkrętarkę.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Umiem zapytać, jak przymocować półkę.", // nieuw, nalezen
+    'kjn.u.machines.1': "Umiem powiedzieć, że osłona maszyny jest zepsuta.", // nieuw, nalezen
+    'kjn.u.machines.2': "Umiem zapytać, jak często mam brać próbkę.", // nieuw, nalezen
   },
 };
 

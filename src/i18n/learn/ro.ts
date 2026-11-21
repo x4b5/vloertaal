@@ -174,6 +174,22 @@ const t: CultureTranslation = {
     'c.tiletools.a.why': "Întrebarea e unde e mixerul: un loc, și ce e aproape de el.", // nieuw, nalezen
     'c.tiling.a.why': "Întrebarea e de unde să înceapă: din mijloc, de pe linia de mijloc.", // nieuw, nalezen
     'c.plaster.a.why': "Întrebarea e dacă peretele e uscat: nu, și cât să mai aștepte.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "Întrebarea e dacă e un pătrat: nu, un dreptunghi, și de ce.", // nieuw, nalezen
+    'c.angles.a.why': "Întrebarea e câte grade: numărul, și din ce e jumătate.", // nieuw, nalezen
+    'c.size.a.why': "Întrebarea e cât de mare e podeaua: calculul și rezultatul.", // nieuw, nalezen
+    'c.paint.a.why': "Întrebarea e ce pensulă: lată pentru perete, mică pentru colțuri.", // nieuw, nalezen
+    'c.prep.a.why': "Întrebarea e dacă poate vopsi: nu, și ce vine întâi.", // nieuw, nalezen
+    'c.brick.a.why': "Întrebarea e câte cărămizi au mai rămas: un palet, și că e destul.", // nieuw, nalezen
+    'c.wall.a.why': "Întrebarea e cât de înalt trebuie să fie rândul: unde se poate vedea.", // nieuw, nalezen
+    'c.wood.a.why': "Întrebarea e ce fierăstrău: fierăstrăul cu spate, și de ce.", // nieuw, nalezen
+    'c.square.a.why': "Întrebarea e dacă unghiul e drept: da, și de unde se știe.", // nieuw, nalezen
+    'c.screw.a.why': "Întrebarea e unde e bormașina: un loc, și că e aproape plină.", // nieuw, nalezen
+    'c.fix.a.why': "Întrebarea e cum se fixează raftul: cu ce și câte.", // nieuw, nalezen
+    'c.atmachine.a.why': "Întrebarea e de ce se oprește: senzorul, și ce nu vede.", // nieuw, nalezen
+    'c.inspect.a.why': "Întrebarea e cât de des: o dată pe oră, și unde se notează.", // nieuw, nalezen
+    'c.packing.a.why': "Întrebarea e câte într-o cutie: numărul, și unde scrie.", // nieuw, nalezen
+    'c.upkeep.a.why': "Întrebarea e când: ziua din săptămână, și momentul din acea zi.", // nieuw, nalezen
   },
 };
 

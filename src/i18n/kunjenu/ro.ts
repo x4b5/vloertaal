@@ -125,6 +125,11 @@ const t: CultureTranslation = {
     'kjn.u.feedback.1': "Pot să cer un exemplu când primesc feedback.", // nieuw, nalezen
     'kjn.u.feedback.2': "Pot să spun prietenos ce poate fi mai bine.", // nieuw, nalezen
     'kjn.u.feedback.3': "Pot să pun o întrebare la o ședință de echipă.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "Pot să cer fierăstrăul de mână sau bormașina cu acumulator.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Pot să întreb cum fixez o scândură.", // nieuw, nalezen
+    'kjn.u.machines.1': "Pot să spun că apărătoarea de protecție e stricată.", // nieuw, nalezen
+    'kjn.u.machines.2': "Pot să întreb cât de des iau o probă.", // nieuw, nalezen
   },
 };
 

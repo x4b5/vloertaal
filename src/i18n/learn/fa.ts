@@ -173,6 +173,22 @@ const t: CultureTranslation = {
     'c.tiletools.a.why': "پرسیده‌اند همزن کجاست: یک جا، و چیزی که نزدیکش است.", // nieuw, nalezen
     'c.tiling.a.why': "پرسیده‌اند از کجا شروع کند: از وسط، روی خط وسط.", // nieuw, nalezen
     'c.plaster.a.why': "پرسیده‌اند دیوار خشک شده یا نه: نه، و چقدر باید صبر کرد.", // nieuw, nalezen
+    // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
+    'c.shapes.a.why': "پرسیده‌اند مربع است یا نه: نه، مستطیل، و چرا.", // nieuw, nalezen
+    'c.angles.a.why': "پرسیده‌اند چند درجه: عدد، و اینکه نصفِ چیست.", // nieuw, nalezen
+    'c.size.a.why': "پرسیده‌اند کف چقدر بزرگ است: حساب، و جواب.", // nieuw, nalezen
+    'c.paint.a.why': "پرسیده‌اند کدام قلم‌مو: پهن برای دیوار، کوچک برای گوشه‌ها.", // nieuw, nalezen
+    'c.prep.a.why': "پرسیده‌اند می‌شود رنگ زد یا نه: نه، و اینکه اول چه کاری باید کرد.", // nieuw, nalezen
+    'c.brick.a.why': "پرسیده‌اند چند آجر مانده: یک پالت، و اینکه بس است.", // nieuw, nalezen
+    'c.wall.a.why': "پرسیده‌اند ردیف چقدر باید بلند باشد: جایی که می‌شود آن را دید.", // nieuw, nalezen
+    'c.wood.a.why': "پرسیده‌اند کدام اره: ارهٔ پشت‌دار، و چرا.", // nieuw, nalezen
+    'c.square.a.why': "پرسیده‌اند زاویه قائمه است یا نه: بله، و از کجا معلوم است.", // nieuw, nalezen
+    'c.screw.a.why': "پرسیده‌اند دریل کجاست: یک جا، و اینکه تقریباً پر است.", // nieuw, nalezen
+    'c.fix.a.why': "پرسیده‌اند قفسه را چطور محکم کند: با چه چیزی، و چند تا.", // nieuw, nalezen
+    'c.atmachine.a.why': "پرسیده‌اند چرا می‌ایستد: حسگر، و چیزی که نمی‌بیند.", // nieuw, nalezen
+    'c.inspect.a.why': "پرسیده‌اند هر چند وقت یک بار: ساعتی یک بار، و کجا باید نوشت.", // nieuw, nalezen
+    'c.packing.a.why': "پرسیده‌اند در هر جعبه چند تا: عدد، و جایی که نوشته شده.", // nieuw, nalezen
+    'c.upkeep.a.why': "پرسیده‌اند کی: روز هفته، و وقتش در آن روز.", // nieuw, nalezen
   },
 };
 

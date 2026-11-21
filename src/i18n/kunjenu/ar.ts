@@ -125,6 +125,11 @@ const t: CultureTranslation = {
     'kjn.u.feedback.1': "أستطيع أن أطلب مثالاً عندما أتلقى ملاحظات.", // nieuw, nalezen
     'kjn.u.feedback.2': "أستطيع أن أقول بلطف ما يمكن أن يكون أفضل.", // nieuw, nalezen
     'kjn.u.feedback.3': "أستطيع أن أطرح سؤالاً في اجتماع الفريق.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "أستطيع أن أطلب المنشار اليدوي أو المثقاب اللاسلكي.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "أستطيع أن أسأل كيف أثبّت لوحاً خشبياً.", // nieuw, nalezen
+    'kjn.u.machines.1': "أستطيع أن أقول إن الغطاء الواقي مكسور.", // nieuw, nalezen
+    'kjn.u.machines.2': "أستطيع أن أسأل كم مرة آخذ عيّنة.", // nieuw, nalezen
   },
 };
 

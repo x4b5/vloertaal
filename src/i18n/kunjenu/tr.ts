@@ -123,6 +123,11 @@ const t: CultureTranslation = {
     'kjn.u.afbouw.1': "Dişli malayı ya da malayı isteyebilirim.", // nieuw, nalezen
     'kjn.u.afbouw.2': "Fayanslara nereden başlayacağımı sorabilirim.", // nieuw, nalezen
     'kjn.u.afbouw.3': "Duvarın henüz kurumadığını söyleyebilirim.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "El testeresini ya da akülü matkabı isteyebilirim.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "Bir tahtayı nasıl sabitleyeceğimi sorabilirim.", // nieuw, nalezen
+    'kjn.u.machines.1': "Makine korumasının kırık olduğunu söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.machines.2': "Ne sıklıkla numune alacağımı sorabilirim.", // nieuw, nalezen
   },
 };
 

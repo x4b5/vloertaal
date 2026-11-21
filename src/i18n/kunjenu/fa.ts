@@ -124,6 +124,11 @@ const t: CultureTranslation = {
     'kjn.u.feedback.1': "می‌توانم وقتی بازخورد می‌گیرم یک مثال بخواهم.", // nieuw, nalezen
     'kjn.u.feedback.2': "می‌توانم با مهربانی بگویم چه چیزی می‌تواند بهتر شود.", // nieuw, nalezen
     'kjn.u.feedback.3': "می‌توانم در جلسهٔ تیم یک سؤال بپرسم.", // nieuw, nalezen
+    // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
+    'kjn.u.ruwbouw.1': "می‌توانم ارهٔ دستی یا دریل شارژی را بخواهم.", // nieuw, nalezen
+    'kjn.u.ruwbouw.2': "می‌توانم بپرسم یک تخته را چطور محکم کنم.", // nieuw, nalezen
+    'kjn.u.machines.1': "می‌توانم بگویم که حفاظ دستگاه خراب است.", // nieuw, nalezen
+    'kjn.u.machines.2': "می‌توانم بپرسم هر چند وقت یک بار نمونه بردارم.", // nieuw, nalezen
   },
 };
 
