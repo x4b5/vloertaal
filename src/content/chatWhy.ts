@@ -126,7 +126,7 @@ const reasons: Record<string, string> = {
   'c.tiletools.a': 'Asked where the mixer is: a place, and what is close to it.',
   'c.tiling.a': 'Asked where to start: in the middle, on the centre line.',
   'c.plaster.a': 'Asked if the wall is dry: no, and how long to wait.',
-  'c.paint.a': 'Asked which brush: the wide one for the wall, the small one for corners.',
+  'c.paint.a': 'Asked which brush: wide for the wall, small for the corners.',
   'c.prep.a': 'Asked if you may paint: no, and what comes first.',
   'c.brick.a': 'Asked how many bricks are left: one pallet, and that it is enough.',
   'c.wall.a': 'Asked how high the row must be: where you can see it.',
