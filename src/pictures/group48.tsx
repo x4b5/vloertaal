@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, CurveArrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Tick, r1, twinkle, type Pt } from './kit';
+import { Arrow, CurveArrow, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Tick, r1, twinkle, type Pt } from './kit';
 
 /**
  * Word pictures, group 48 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -104,12 +104,14 @@ export default {
       <rect x="10" y="32" width="100" height="15" rx="2" fill={PAL.mist} />
       <rect x="10" y="42" width="100" height="5" rx="2" fill={PAL.steel} />
       <path d="M30 33V39M38 33V37M46 33V39M86 33V39M94 33V37M102 33V39" stroke={PAL.slate} strokeWidth="1.8" strokeLinecap="round" />
-      {/* The sliding jaw */}
-      <path d="M51 46H61V80L51 90Z" fill={PAL.navy} stroke={PAL.navy} strokeWidth="2" strokeLinejoin="round" />
-      <path d="M52 30V20L60 30Z" fill={PAL.navy} stroke={PAL.navy} strokeWidth="2" strokeLinejoin="round" />
-      <rect x="50" y="28" width="30" height="23" rx="3" fill={PAL.navy} />
-      <rect x="57" y="34" width="17" height="7" rx="1.5" fill={PAL.mist} />
-      <circle cx="73" cy="54" r="5" fill={PAL.navyShade} />
+      {/* The sliding jaw: on the intro card it slides in and closes on the disc */}
+      <Move kind="from" dx={30}>
+        <path d="M51 46H61V80L51 90Z" fill={PAL.navy} stroke={PAL.navy} strokeWidth="2" strokeLinejoin="round" />
+        <path d="M52 30V20L60 30Z" fill={PAL.navy} stroke={PAL.navy} strokeWidth="2" strokeLinejoin="round" />
+        <rect x="50" y="28" width="30" height="23" rx="3" fill={PAL.navy} />
+        <rect x="57" y="34" width="17" height="7" rx="1.5" fill={PAL.mist} />
+        <circle cx="73" cy="54" r="5" fill={PAL.navyShade} />
+      </Move>
     </g>
   ),
 
@@ -226,9 +228,12 @@ export default {
       <rect x="10" y="96" width="100" height="10" rx="3" fill={PAL.wood} />
       <path d="M14 98.5H106" stroke={PAL.card} strokeWidth="2" strokeLinecap="round" />
       <rect x="56" y="89" width="30" height="7" rx="1.5" fill={PAL.steel} />
-      <circle cx="72" cy="83" r="5" fill={PAL.line} />
-      <circle cx="76" cy="73" r="6.5" fill={PAL.line} />
-      <circle cx="68" cy="68" r="5.5" fill={PAL.line} />
+      {/* On the intro card the smoke rises from the work up to the hood */}
+      <Move kind="slow" dy={14}>
+        <circle cx="72" cy="83" r="5" fill={PAL.line} />
+        <circle cx="76" cy="73" r="6.5" fill={PAL.line} />
+        <circle cx="68" cy="68" r="5.5" fill={PAL.line} />
+      </Move>
       <CurveArrow from={[26, 90]} to={[50, 66]} bend={-9} color={PAL.sky} width={7} head={12} />
     </g>
   ),

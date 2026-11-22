@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { Bust } from './bust';
-import { ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Tick, type Pt } from './kit';
+import { ExclaimMark, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Tick, type Pt } from './kit';
 
 /**
  * Word pictures, group 41 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -89,8 +89,11 @@ export default {
   'w.rolmaat': () => (
     <g>
       <Ground cx={58} cy={104} rx={48} ry={4} />
-      <Tape x0={56} x1={106} y={82} h={15} />
-      <rect x="104" y="78" width="5.5" height="24" rx="1.5" fill={PAL.slate} />
+      {/* On the intro card the tape comes out of the case (it slides out from under it) */}
+      <Move kind="from" dx={-40}>
+        <Tape x0={56} x1={106} y={82} h={15} />
+        <rect x="104" y="78" width="5.5" height="24" rx="1.5" fill={PAL.slate} />
+      </Move>
       <TapeCase x={12} y={42} s={58} />
       <Shine d="M21 62Q23 53 33 50" color={PAL.yellowShine} width={4.5} opacity={0.85} />
     </g>
@@ -107,7 +110,10 @@ export default {
       {/* The middle glass */}
       <rect x="40" y="46" width="40" height="20" rx="8" fill={PAL.lime} />
       <path d="M52 47.5V64.5M68 47.5V64.5" stroke={PAL.greenShade} strokeWidth="2.4" />
-      <ellipse cx="60" cy="56" rx="5.2" ry="5.8" fill={PAL.white} />
+      {/* On the intro card the bubble comes to rest between the lines: level */}
+      <Move kind="from" dx={13}>
+        <ellipse cx="60" cy="56" rx="5.2" ry="5.8" fill={PAL.white} />
+      </Move>
       {/* The end glasses */}
       <circle cx="24" cy="56" r="7.5" fill={PAL.lime} />
       <circle cx="96" cy="56" r="7.5" fill={PAL.lime} />

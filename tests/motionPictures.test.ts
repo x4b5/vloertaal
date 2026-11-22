@@ -56,7 +56,7 @@ const MOTION_FUNCTION = [
   // Bouw (group53, group56, group57, group61).
   'w.tegelsnijder', 'w.duimstok', 'w.roerstok', 'w.verfkrabber', 'w.passer',
   // The second round (the owner: "look further", 22 November 2026).
-  'w.lijmkam', 'w.mixer', 'w.zwaaihaak',
+  'w.lijmkam', 'w.mixer', 'w.zwaaihaak', 'w.rolmaat', 'w.waterpas', 'w.afzuiging', 'w.schuifmaat', 'w.spanningzoeker',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */

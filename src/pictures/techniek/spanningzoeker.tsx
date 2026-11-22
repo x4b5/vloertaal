@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 export default {
   // "de spanningzoeker": the voltage tester — a small screwdriver lying on a slant, its red see-through
@@ -7,6 +7,8 @@ export default {
   'w.spanningzoeker': () => (
     <g>
       <Ground cx={60} cy={104} rx={40} ry={4} />
+      {/* On the intro card the tip comes forward (to the contact), then the lamp lights up */}
+      <Move kind="from" dx={-6} dy={5}>
       <g transform="translate(58 63) rotate(-38) scale(1.1)">
         {/* The steel shaft and the flat blade: lit top half, darker bottom half */}
         <rect x="16" y="-3.2" width="31" height="6.4" rx="1.5" fill={PAL.steel} />
@@ -22,13 +24,16 @@ export default {
         </Shade>
         {/* The see-through window with the glowing lamp */}
         <rect x="-37" y="-6" width="32" height="12" rx="5.5" fill={PAL.redLight} />
-        <circle cx="-21" cy="0" r="15" fill={PAL.yellow} opacity="0.35" />
-        <ellipse cx="-21" cy="0" rx="9" ry="4.6" fill={PAL.orange} />
-        <ellipse cx="-21" cy="-0.4" rx="4.6" ry="2.4" fill={PAL.yellowShine} />
-        {/* Glow rays */}
-        <path d="M-21 -17V-24M-33 -14L-37 -20M-9 -14L-5 -20" stroke={PAL.orange} strokeWidth="3" strokeLinecap="round" />
+        <Move kind="show">
+          <circle cx="-21" cy="0" r="15" fill={PAL.yellow} opacity="0.35" />
+          <ellipse cx="-21" cy="0" rx="9" ry="4.6" fill={PAL.orange} />
+          <ellipse cx="-21" cy="-0.4" rx="4.6" ry="2.4" fill={PAL.yellowShine} />
+          {/* Glow rays */}
+          <path d="M-21 -17V-24M-33 -14L-37 -20M-9 -14L-5 -20" stroke={PAL.orange} strokeWidth="3" strokeLinecap="round" />
+        </Move>
         <Shine d="M-40 -6.5H-38" width={3} opacity={0.7} />
       </g>
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;
