@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine } from '../kit';
+import { Ground, Move, PAL, Shine } from '../kit';
 
 /** The seat seen from the side, facing left: cushion, backrest and headrest. */
 const CUSHION = 'M26 70Q24 64 32 63H78Q86 63 86 71V78Q86 84 80 84H32Q26 84 26 78Z';
@@ -27,11 +27,14 @@ export default {
       <path d={BACK} fill={PAL.slate} />
       <path d={HEAD} fill={PAL.slate} />
       <path d={CUSHION} fill={PAL.slateDark} />
-      {/* The plastic cover: its grey edge, the white see-through sheet, a few folds */}
-      <path d={COVER} fill="none" stroke={PAL.mist} strokeWidth="3.4" />
-      <path d={COVER} fill={PAL.white} opacity=".45" />
-      <path d="M40 66L46 82M60 66L58 82M84 34L80 64M90 14L88 22" stroke={PAL.mist} strokeWidth="1.8" strokeLinecap="round" />
-      <Shine d="M30 66H52" width={3} opacity={0.9} />
+      {/* The plastic cover: its grey edge, the white see-through sheet, a few folds (on the intro
+          card it slides down over the seat) */}
+      <Move kind="from" dy={-26}>
+        <path d={COVER} fill="none" stroke={PAL.mist} strokeWidth="3.4" />
+        <path d={COVER} fill={PAL.white} opacity=".45" />
+        <path d="M40 66L46 82M60 66L58 82M84 34L80 64M90 14L88 22" stroke={PAL.mist} strokeWidth="1.8" strokeLinecap="round" />
+        <Shine d="M30 66H52" width={3} opacity={0.9} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

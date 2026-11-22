@@ -109,7 +109,8 @@ export default {
         {face('M11.7 91L84.6 91L97.8 73.7L24.9 73.7Z', PAL.mist)}
         {face('M11.7 91L84.6 91L84.6 93.5L11.7 93.5Z', PAL.line)}
         {face('M84.6 91L97.8 73.7L97.8 76.2L84.6 93.5Z', PAL.steel)}
-        {/* The combed ridges of glue */}
+        {/* The combed ridges of glue: on the intro card they rise behind the trowel as it drags back */}
+        <Move kind="sag" grow={0.12}>
         {RIDGES.map((x) => (
           <g key={x}>
             {face(`M${x} 87L${r1(x + 5)} 87L${r1(x + 17.1)} 71.1L${r1(x + 12.2)} 71.1Z`, PAL.paper)}
@@ -117,6 +118,9 @@ export default {
             {face(`M${x} 87L${r1(x + 5)} 87L${r1(x + 5)} 89.7L${x} 89.7Z`, PAL.paperShade)}
           </g>
         ))}
+        </Move>
+        {/* The trowel drags back over the plate (intro card), combing the glue */}
+        <Move kind="slow" dx={-12} dy={16}>
         {/* The blade with its teeth, shaded on the right */}
         {face(BLADE, PAL.steel)}
         {BLADE_TEETH.map((d) => <path key={d} d={d} fill={PAL.steel} />)}
@@ -132,6 +136,7 @@ export default {
         {line('M44.2 41.6L88.9 41.6', PAL.cardDark, 9.1)}
         {line('M43.8 40.9L88.6 40.9', PAL.wood, 5.8)}
         {line('M47.6 40.2L71.6 40.2', PAL.card, 2)}
+        </Move>
       </g>
     );
   },
@@ -228,6 +233,8 @@ export default {
       <path d="M77 58L94 58L87 101Q82 102.5 76 103.5Z" fill={PAL.skyShade} />
       <ellipse cx="60" cy="58" rx="34" ry="9" fill={PAL.skyShade} />
       <ellipse cx="60" cy="59" rx="30" ry="7" fill={MORTAR} />
+      {/* On the intro card the paddle goes down into the mortar, then the arrow shows it stirs */}
+      <Move kind="from" dy={-26}>
       {/* The back half of the paddle, in the mortar */}
       <path d={ribbon(42, false)} fill="none" stroke={STEEL_DARK} strokeWidth="6" strokeLinecap="round" />
       {/* The shaft, from the chuck at the top into the mortar */}
@@ -236,11 +243,14 @@ export default {
       {/* The front half of the paddle, light steel, going under the mortar at the bottom */}
       <path d={ribbon(37, true)} fill="none" stroke={PAL.mist} strokeWidth="6.5" strokeLinecap="round" />
       <path d={ribbon(51, true, 17, 7)} fill="none" stroke={PAL.mist} strokeWidth="6.5" strokeLinecap="round" />
+      </Move>
       {/* The mortar closes over the lowest turn */}
       <path d="M31 60Q60 70 89 60Q89 66 60 66Q31 66 31 60Z" fill={MORTAR} />
       {/* The stirring arrow on the mortar */}
-      <path d="M38 63Q60 71 80 64" fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" />
-      <path d="M74 60L82 63.5L76 69" fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      <Move kind="show">
+        <path d="M38 63Q60 71 80 64" fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" />
+        <path d="M74 60L82 63.5L76 69" fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      </Move>
       {/* A light streak on the bucket */}
       <Shine d="M32 70Q34 84 37 95" width={3.2} opacity={0.5} />
     </g>

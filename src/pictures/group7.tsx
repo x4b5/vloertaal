@@ -255,7 +255,12 @@ export default {
       <path d="M68 28L74 8L80 28Z" fill={PAL.yellowShade} />
       {/* Hook cable */}
       <path d="M30 32V58" stroke={PAL.slate} strokeWidth="2.4" />
-      <Hook x={30} y={58} s={0.7} />
+      {/* On the intro card the hook is hoisted up: a copy of the cable, its top hidden behind the
+          jib, comes up with it, so the cable never breaks (docs/tekenstijl.md "Beweging") */}
+      <Move kind="from" dy={34}>
+        <path d="M30 28V58" stroke={PAL.slate} strokeWidth="2.4" />
+        <Hook x={30} y={58} s={0.7} />
+      </Move>
       {/* Jib and counter-jib */}
       <rect x="10" y="26" width="98" height="8" rx="2" fill={PAL.yellow} />
       <path d="M14 33L20 27L26 33L32 27L38 33L44 27L50 33L56 27L62 33" fill="none" stroke={PAL.yellowShade} strokeWidth="1.8" strokeLinejoin="round" />
@@ -378,11 +383,13 @@ export default {
         </g>
       ))}
       <path d="M30 77H42M54 77H66M78 77H90" stroke={PAL.steel} strokeWidth="2.2" strokeLinecap="round" />
-      {/* Boxes */}
-      <Box x={22} y={44} w={24} h={22} depth={8} />
-      <Box x={66} y={44} w={24} h={22} depth={8} />
-      <Motion x={20} y={54} dir={180} spread={40} n={3} len={8} gap={0} color={PAL.line} width={3} />
-      <Motion x={64} y={54} dir={180} spread={40} n={3} len={8} gap={0} color={PAL.line} width={3} />
+      {/* Boxes (on the intro card they ride in along the belt) */}
+      <Move kind="slow" dx={-20}>
+        <Box x={22} y={44} w={24} h={22} depth={8} />
+        <Box x={66} y={44} w={24} h={22} depth={8} />
+        <Motion x={20} y={54} dir={180} spread={40} n={3} len={8} gap={0} color={PAL.line} width={3} />
+        <Motion x={64} y={54} dir={180} spread={40} n={3} len={8} gap={0} color={PAL.line} width={3} />
+      </Move>
     </g>
   ),
 

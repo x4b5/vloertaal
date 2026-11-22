@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view (as in group55): one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -89,7 +89,9 @@ export default {
       <g>
         <Ground cx={52} cy={104} rx={44} ry={4} />
         {/* The film behind: the back row's sleeve and the open end on the right */}
-        <path d={rowFilm(bx, by)} fill={FILM} />
+        <Move kind="sag" grow={1.4}>
+          <path d={rowFilm(bx, by)} fill={FILM} />
+        </Move>
         <polygon
           points={pts([
             [fr, FRONT_Y + RIM - 2],
@@ -101,7 +103,9 @@ export default {
         />
         {back.map((x) => bottle(x, by))}
         {/* The film in front, then the front row */}
-        <path d={rowFilm(FRONT_X, FRONT_Y)} fill={FILM} />
+        <Move kind="sag" grow={1.4}>
+          <path d={rowFilm(FRONT_X, FRONT_Y)} fill={FILM} />
+        </Move>
         {front.map((x) => bottle(x, FRONT_Y))}
         {/* Shine on the tight film, across bottles and gaps alike */}
         <Shine d={`M${FRONT_X - 6} ${FRONT_Y - 8}L${FRONT_X + 16} ${FRONT_Y - 40}`} width={3.4} opacity={0.9} />

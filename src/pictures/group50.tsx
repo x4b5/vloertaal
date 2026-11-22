@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { Bust } from './bust';
-import { Arrow, Box, Clock, ExclaimMark, Ground, Hand, PAL, QuestionMark, SKIN, Shade, Shine } from './kit';
+import { Arrow, Box, Clock, ExclaimMark, Ground, Hand, Move, PAL, QuestionMark, SKIN, Shade, Shine } from './kit';
 
 /**
  * Word pictures, group 50 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -374,10 +374,14 @@ export default {
   'w.pompwagen': () => (
     <g>
       <Ground cx={62} cy={106} rx={50} ry={4} />
-      <Box x={52} y={42} w={40} h={36} depth={12} />
-      <PalletFront x={42} y={78} w={66} />
-      {/* Forks and their small wheel */}
-      <rect x="30" y="91" width="80" height="6" rx="2.5" fill={PAL.steel} />
+      {/* On the intro card the forks lift the pallet a little off the floor */}
+      <Move kind="from" dy={6}>
+        <Box x={52} y={42} w={40} h={36} depth={12} />
+        <PalletFront x={42} y={78} w={66} />
+        {/* Forks */}
+        <rect x="30" y="91" width="80" height="6" rx="2.5" fill={PAL.steel} />
+      </Move>
+      {/* The forks' small wheel */}
       <circle cx="101" cy="101" r="4.500" fill={PAL.slateDark} />
       {/* Handle */}
       <path d="M28 68L19 28" stroke={PAL.slate} strokeWidth="5.5" strokeLinecap="round" />
@@ -402,12 +406,15 @@ export default {
       <FlatBox x={50} y={68} w={30} h={24} />
       <FlatBox x={19} y={44} w={28} h={24} />
       <FlatBox x={49} y={46} w={30} h={22} />
-      {/* The film from the stack to the roll */}
-      <path d="M84 46L96 58V98L84 88Z" fill={PAL.ice} opacity=".75" />
-      {/* The film round the stack */}
-      <rect x="11" y="39" width="74" height="56" rx="6" fill={PAL.ice} opacity=".62" />
-      <path d="M11 57H85M11 75H85" stroke={PAL.sky} strokeWidth="2" opacity=".45" />
-      <path d="M22 86L42 48M44 88L58 60" stroke={PAL.white} strokeWidth="4" strokeLinecap="round" opacity=".8" />
+      {/* On the intro card the film winds up the stack from the pallet */}
+      <Move kind="sag" grow={0.2}>
+        {/* The film from the stack to the roll */}
+        <path d="M84 46L96 58V98L84 88Z" fill={PAL.ice} opacity=".75" />
+        {/* The film round the stack */}
+        <rect x="11" y="39" width="74" height="56" rx="6" fill={PAL.ice} opacity=".62" />
+        <path d="M11 57H85M11 75H85" stroke={PAL.sky} strokeWidth="2" opacity=".45" />
+        <path d="M22 86L42 48M44 88L58 60" stroke={PAL.white} strokeWidth="4" strokeLinecap="round" opacity=".8" />
+      </Move>
       {/* The roll */}
       <Shade color={PAL.sky} opacity={0.55} at={[112, 78, 8, 30]}>
         <rect x="94" y="54" width="17" height="50" rx="3.500" fill={PAL.ice} />

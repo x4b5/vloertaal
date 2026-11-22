@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Ground, PAL, Shine } from '../kit';
+import { Arrow, Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view (as in group55): one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -68,7 +68,9 @@ export default {
       {/* The clear bag: soft bulging sides, a pale depth edge, the tint, the jar inside, a shine */}
       <path d={bag(BAG.x + 3, BAG.y + 3)} fill={PAL.ice} />
       <path d={bag(BAG.x, BAG.y)} fill={BAG_TINT} />
-      {jar(BAG.x + BAG.w / 2, BAG.y + BAG.h - 6)}
+      <Move kind="from" dx={r1(PLACES[TAKEN] - BAG.x - BAG.w / 2)} dy={r1(STAND - BAG.y - BAG.h + 6)}>
+        {jar(BAG.x + BAG.w / 2, BAG.y + BAG.h - 6)}
+      </Move>
       <rect x={BAG.x - 2} y={BAG.y - 6} width={BAG.w + 4} height="7" rx="2.5" fill={PAL.blue} />
       <path d={`M${BAG.x + 1} ${BAG.y - 2.5}H${BAG.x + BAG.w - 1}`} stroke={PAL.blueShade} strokeWidth="1.6" strokeLinecap="round" />
       <Shine d={`M${BAG.x + 3.5} ${BAG.y + 8}Q${BAG.x + 2} ${BAG.y + 18} ${BAG.x + 3.5} ${BAG.y + 28}`} width={3} opacity={0.9} />

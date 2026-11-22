@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shade, Shine } from '../kit';
+import { Move, PAL, Shade, Shine } from '../kit';
 
 /** A small dark fly stuck on the card at (x, y), turned by `a` degrees. */
 const fly = (x: number, y: number, a: number) => (
@@ -36,10 +36,10 @@ export default {
       <path d="M43 40V96M59 40V96M75 40V96M33 54H85M33 70H85M33 86H85" stroke={PAL.yellowShade} strokeWidth="1.2" opacity=".55" />
       {/* The stuck flies */}
       {fly(40, 48, -20)}
-      {fly(68, 50, 25)}
+      <Move kind="from" dx={34} dy={-24}>{fly(68, 50, 25)}</Move>
       {fly(52, 64, 10)}
-      {fly(78, 74, -35)}
-      {fly(42, 82, 40)}
+      <Move kind="from" dx={30} dy={14}>{fly(78, 74, -35)}</Move>
+      <Move kind="from" dx={-30} dy={10}>{fly(42, 82, 40)}</Move>
       {fly(64, 90, -10)}
       <Shine d="M33 50Q33 39 40 37" color={PAL.yellowShine} width={3.4} opacity={0.8} />
     </g>

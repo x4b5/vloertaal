@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shine, r1 } from '../kit';
+import { Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view (as group55): one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -72,12 +72,16 @@ export default {
 
         {/* The dark oil on the floor, with a ripple where the drop lands and a gleam */}
         <path d={poolPath()} fill={PAL.slateDark} />
-        <ellipse cx={px} cy={py} rx="8" ry="3" fill="none" stroke={PAL.slate} strokeWidth="1.8" />
+        <Move kind="show">
+          <ellipse cx={px} cy={py} rx="8" ry="3" fill="none" stroke={PAL.slate} strokeWidth="1.8" />
+        </Move>
         <path d={`M${px - 15} ${py + 4}Q${px - 9} ${py + 6.5} ${px - 2} ${py + 6}`} fill="none" stroke={PAL.steel} strokeWidth="1.8" strokeLinecap="round" />
 
         {/* The falling drop, over the tray's inside wall */}
-        <path d={`M${DROP_X} 51Q${DROP_X + 6.5} 61 ${DROP_X + 6.5} 65A6.5 6.5 0 0 1 ${DROP_X - 6.5} 65Q${DROP_X - 6.5} 61 ${DROP_X} 51Z`} fill={PAL.slateDark} />
-        <path d={`M${DROP_X - 2.8} 65Q${DROP_X - 2.8} 62.5 ${DROP_X - 1} 60.5`} fill="none" stroke={PAL.steel} strokeWidth="1.6" strokeLinecap="round" />
+        <Move kind="drop" dy={-14}>
+          <path d={`M${DROP_X} 51Q${DROP_X + 6.5} 61 ${DROP_X + 6.5} 65A6.5 6.5 0 0 1 ${DROP_X - 6.5} 65Q${DROP_X - 6.5} 61 ${DROP_X} 51Z`} fill={PAL.slateDark} />
+          <path d={`M${DROP_X - 2.8} 65Q${DROP_X - 2.8} 62.5 ${DROP_X - 1} 60.5`} fill="none" stroke={PAL.steel} strokeWidth="1.6" strokeLinecap="round" />
+        </Move>
 
         {/* The right side (shade) and the front of the tray */}
         <path d={quad(iso(w, 0, 0), iso(w, d, 0), iso(w, d, h), iso(w, 0, h))} fill={PAL.yellowShade} />

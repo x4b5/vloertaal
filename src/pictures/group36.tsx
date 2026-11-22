@@ -1,5 +1,5 @@
 import { useId, type JSX, type ReactNode } from 'react';
-import { Arrow, Box, Ground, Hand, Motion, PAL, SKIN, Shade, Shine } from './kit';
+import { Arrow, Box, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine } from './kit';
 
 /**
  * Word pictures, group 36 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -215,11 +215,14 @@ export default {
     <g>
       <Ground cx={62} cy={106} rx={42} ry={4} />
       <g transform="rotate(-10 40 98)">
-        <Box x={46} y={66} w={36} h={30} depth={10} />
-        <Box x={48} y={38} w={30} h={28} depth={9} label />
-        {/* Frame, handle and toe plate */}
-        <path d="M40 98V20Q40 12 32 12H26" fill="none" stroke={PAL.red} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
-        <rect x="38" y="95" width="48" height="6" rx="2" fill={PAL.steel} />
+        {/* On the intro card it stands upright first, then tilts back on its wheel with the boxes */}
+        <Move kind="turn" turn={10} at={[40, 98]}>
+          <Box x={46} y={66} w={36} h={30} depth={10} />
+          <Box x={48} y={38} w={30} h={28} depth={9} label />
+          {/* Frame, handle and toe plate */}
+          <path d="M40 98V20Q40 12 32 12H26" fill="none" stroke={PAL.red} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+          <rect x="38" y="95" width="48" height="6" rx="2" fill={PAL.steel} />
+        </Move>
       </g>
       <Wheel cx={38} cy={98} r={10} />
     </g>

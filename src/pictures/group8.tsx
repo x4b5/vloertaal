@@ -206,25 +206,30 @@ const pictures: Record<string, () => JSX.Element> = {
   'w.dweil': () => (
     <g>
       <Ground cx={60} cy={106} rx={46} ry={4.5} />
-      <ellipse cx="34" cy="102" rx="24" ry="5" fill={PAL.ice} opacity=".8" />
+      <Move kind="grow" grow={0.15}>
+        <ellipse cx="34" cy="102" rx="24" ry="5" fill={PAL.ice} opacity=".8" />
+      </Move>
       <MopBucket x={64} y={102} s={1} />
-      {/* Stick */}
-      <path d="M62 12L38 88" stroke={PAL.wood} strokeWidth="5.5" strokeLinecap="round" />
-      <path d="M61 14L58 24" stroke={PAL.slate} strokeWidth="6" strokeLinecap="round" />
-      {/* Mop head: floppy strands */}
-      <rect x="30" y="84" width="16" height="8" rx="3" fill={PAL.steel} />
-      <g stroke={PAL.mist} strokeWidth="5" strokeLinecap="round" fill="none">
-        <path d="M32 90Q24 94 16 100" />
-        <path d="M34 91Q28 97 24 103" />
-        <path d="M38 92Q37 98 34 104" />
-        <path d="M42 92Q45 98 46 104" />
-        <path d="M44 91Q51 95 56 101" />
-      </g>
-      <g stroke={PAL.paper} strokeWidth="2.2" strokeLinecap="round" fill="none" opacity=".9">
-        <path d="M32 90Q26 93 21 97" />
-        <path d="M38 92Q37 96 36 99" />
-      </g>
-      <Motion x={28} y={98} dir={-160} spread={40} n={2} len={6} gap={14} color={PAL.sky} width={3} />
+      {/* On the intro card the mop wipes in from the left and the wet shine grows behind it */}
+      <Move kind="from" dx={-16}>
+        {/* Stick */}
+        <path d="M62 12L38 88" stroke={PAL.wood} strokeWidth="5.5" strokeLinecap="round" />
+        <path d="M61 14L58 24" stroke={PAL.slate} strokeWidth="6" strokeLinecap="round" />
+        {/* Mop head: floppy strands */}
+        <rect x="30" y="84" width="16" height="8" rx="3" fill={PAL.steel} />
+        <g stroke={PAL.mist} strokeWidth="5" strokeLinecap="round" fill="none">
+          <path d="M32 90Q24 94 16 100" />
+          <path d="M34 91Q28 97 24 103" />
+          <path d="M38 92Q37 98 34 104" />
+          <path d="M42 92Q45 98 46 104" />
+          <path d="M44 91Q51 95 56 101" />
+        </g>
+        <g stroke={PAL.paper} strokeWidth="2.2" strokeLinecap="round" fill="none" opacity=".9">
+          <path d="M32 90Q26 93 21 97" />
+          <path d="M38 92Q37 96 36 99" />
+        </g>
+        <Motion x={28} y={98} dir={-160} spread={40} n={2} len={6} gap={14} color={PAL.sky} width={3} />
+      </Move>
     </g>
   ),
 

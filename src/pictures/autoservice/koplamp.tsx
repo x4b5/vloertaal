@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 export default {
   // "de koplamp": the headlight — the front half of a blue car, side on and facing right, with a big bright
@@ -7,9 +7,11 @@ export default {
   'w.koplamp': () => (
     <g strokeLinejoin="round">
       <Ground cx={48} cy={104} rx={40} ry={4.5} />
-      {/* The light: a pale fan and three bold beams */}
-      <path d="M72 60L112 42V94L72 72Z" fill={PAL.yellowShine} opacity=".9" />
-      <path d="M84 58L108 50M86 66H110M84 74L108 82" stroke={PAL.yellow} strokeWidth="4.5" strokeLinecap="round" />
+      {/* The light: a pale fan and three bold beams (on the intro card it comes on: one fade) */}
+      <Move kind="show">
+        <path d="M72 60L112 42V94L72 72Z" fill={PAL.yellowShine} opacity=".9" />
+        <path d="M84 58L108 50M86 66H110M84 74L108 82" stroke={PAL.yellow} strokeWidth="4.5" strokeLinecap="round" />
+      </Move>
       {/* The body: roof, windscreen, bonnet, nose */}
       <Shade color={PAL.blueShade} opacity={1} at={[60, 98, 70, 14]}>
         <path d="M10 34H20Q24 34 27 37L44 52L66 55Q76 57 78 63V88Q78 96 70 96H10Z" fill={PAL.blue} />

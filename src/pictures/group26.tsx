@@ -247,6 +247,8 @@ export default {
       <rect x="100" y="20" width="10" height="86" rx="2" fill={PAL.blue} />
       <rect x="106" y="20" width="4" height="86" fill={PAL.blueShade} />
       <rect x="96" y="100" width="18" height="6" rx="2" fill={PAL.blueShade} />
+      {/* On the intro card the arms and the car go up the posts from the floor */}
+      <Move kind="slow" dy={34}>
       {/* Lift arms under the car */}
       <rect x="14" y="58" width="92" height="6" rx="2" fill={PAL.slate} />
       {/* The car */}
@@ -257,8 +259,11 @@ export default {
       <Wheel cx={38} cy={56} r={9} />
       <Wheel cx={86} cy={56} r={9} />
       <Shine d="M30 43Q40 41 46 41" opacity={0.6} />
-      {/* Going up */}
-      <Arrow from={[60, 100]} to={[60, 72]} color={PAL.sky} width={7} head={12} />
+      </Move>
+      {/* Going up (on the intro card it comes at the end, so it is not over the car going up) */}
+      <Move kind="show">
+        <Arrow from={[60, 100]} to={[60, 72]} color={PAL.sky} width={7} head={12} />
+      </Move>
     </g>
   ),
 

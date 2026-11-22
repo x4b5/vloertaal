@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -95,15 +95,18 @@ export default {
         {/* The nut's depth faces behind the jaw */}
         {sides(NUT_PTS, 0, T + 1, NUT.top, NUT.side, 'n')}
         {/* The spanner: depth faces, then the front */}
-        {sides(BAR, 0, T, CHROME.top, CHROME.side, 'b')}
-        {sides(SMALL, 0, T, CHROME.top, CHROME.side, 's')}
-        {sides(BIG, 0, T, CHROME.top, CHROME.side, 'g')}
-        {face(BAR, 0, CHROME.front)}
-        {face(SMALL, 0, CHROME.front)}
-        {face(BIG, 0, CHROME.front)}
-        {/* The sunken middle of the bar */}
-        <path d={`M${at(17, 0).join(' ')}L${at(L - 22, 0).join(' ')}`} stroke={PAL.line} strokeWidth="5" strokeLinecap="round" />
-        <Shine d={`M${at(15, -4.4).join(' ')}L${at(L - 24, -5.4).join(' ')}`} width={2.4} opacity={0.85} />
+        {/* On the intro card it turns round the nut, as it tightens it */}
+        <Move kind="turn" turn={-35} at={at(NUT_C[0], NUT_C[1], T / 2)}>
+          {sides(BAR, 0, T, CHROME.top, CHROME.side, 'b')}
+          {sides(SMALL, 0, T, CHROME.top, CHROME.side, 's')}
+          {sides(BIG, 0, T, CHROME.top, CHROME.side, 'g')}
+          {face(BAR, 0, CHROME.front)}
+          {face(SMALL, 0, CHROME.front)}
+          {face(BIG, 0, CHROME.front)}
+          {/* The sunken middle of the bar */}
+          <path d={`M${at(17, 0).join(' ')}L${at(L - 22, 0).join(' ')}`} stroke={PAL.line} strokeWidth="5" strokeLinecap="round" />
+          <Shine d={`M${at(15, -4.4).join(' ')}L${at(L - 24, -5.4).join(' ')}`} width={2.4} opacity={0.85} />
+        </Move>
         {/* The nut stands proud of the jaw: its front depth faces and front, the bolt end in its hole */}
         {sides(NUT_PTS, -NUT_UP, 0, NUT.top, NUT.side, 'f')}
         {face(NUT_PTS, -NUT_UP, NUT.front)}

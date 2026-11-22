@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shine, r1 } from '../kit';
+import { Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -65,14 +65,18 @@ export default {
         <Block u={0} v={0} z={PZ} w={PW} d={PD} h={PH} top={PAL.mist} front={PAL.steel} side={STEEL_DARK} />
         <Shine d={`M${iso(4, 0, PZ + PH / 2).join(' ')}L${iso(30, 0, PZ + PH / 2).join(' ')}`} width={2.4} opacity={0.7} />
         {/* The product: a cardboard box on the plate */}
-        <Block u={7} v={4} z={PZ + PH} w={28} d={14} h={24} top={CARD_LIGHT} front={PAL.card} side={PAL.cardShade} />
-        <path d={`M${iso(21, 4, PZ + PH + 24).join(' ')}L${iso(21, 18, PZ + PH + 24).join(' ')}`} stroke={PAL.cardShade} strokeWidth="2" strokeLinecap="round" />
+        <Move kind="from" dy={-22}>
+          <Block u={7} v={4} z={PZ + PH} w={28} d={14} h={24} top={CARD_LIGHT} front={PAL.card} side={PAL.cardShade} />
+          <path d={`M${iso(21, 4, PZ + PH + 24).join(' ')}L${iso(21, 18, PZ + PH + 24).join(' ')}`} stroke={PAL.cardShade} strokeWidth="2" strokeLinecap="round" />
+        </Move>
         {/* The indicator head: a blue housing, a dark screen with three lit bars */}
         <Block u={HU} v={HV} z={HZ} w={HW} d={HD} h={HH} top={PAL.blueLight} front={PAL.blue} side={PAL.blueShade} />
         <rect x={sx} y={sy} width={HW - 8} height={HH - 8} rx="2.5" fill={PAL.slateDark} />
-        {[0, 1, 2].map((i) => (
-          <rect key={i} x={r1(sx + 3.5 + i * 8.5)} y={r1(sy + (HH - 8) / 2 - 2)} width="6.5" height="4" rx="1.2" fill={PAL.lime} />
-        ))}
+        <Move kind="show">
+          {[0, 1, 2].map((i) => (
+            <rect key={i} x={r1(sx + 3.5 + i * 8.5)} y={r1(sy + (HH - 8) / 2 - 2)} width="6.5" height="4" rx="1.2" fill={PAL.lime} />
+          ))}
+        </Move>
       </g>
     );
   },
