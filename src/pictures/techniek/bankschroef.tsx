@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -29,9 +29,11 @@ export default {
       {block(34, 76, 52, 16, 12, PAL.blue, PAL.blueLight, PAL.blueShade)}
       {/* The dark gap between the jaws */}
       <path d="M50 44H66L74.4 32.8V66H50Z" fill={PAL.slateDark} />
-      {/* The moving jaw (left) with its dark jaw plate */}
-      {block(28, 44, 22, 32, 14, PAL.blue, PAL.blueLight, PAL.blueShade)}
-      <rect x="45" y="44" width="5" height="18" fill={PAL.slate} />
+      {/* The moving jaw (left) with its dark jaw plate, and the screw with its T-handle: they slide in together */}
+      <Move kind="from" dx={-22}>
+        {block(28, 44, 22, 32, 14, PAL.blue, PAL.blueLight, PAL.blueShade)}
+        <rect x="45" y="44" width="5" height="18" fill={PAL.slate} />
+      </Move>
       {/* The steel bar in the jaws */}
       {block(50, 20, 16, 42, 14, PAL.mist, PAL.paper, PAL.steel)}
       <Shine d="M54 25V54" width={2.6} opacity={0.9} />
@@ -40,11 +42,13 @@ export default {
       <rect x="66" y="44" width="5" height="18" fill={PAL.slate} />
       <Shine d="M76 50V68" width={3} opacity={0.6} />
       {/* The screw and its T-handle */}
-      <rect x="15" y="58" width="15" height="8" rx="2" fill={PAL.steel} />
-      <path d="M15 40V84" stroke={PAL.slate} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="15" cy="39" r="5.5" fill={PAL.slateDark} />
-      <circle cx="15" cy="85" r="5.5" fill={PAL.slateDark} />
-      <circle cx="16" cy="62" r="6" fill={PAL.slate} />
+      <Move kind="from" dx={-10}>
+        <rect x="15" y="58" width="15" height="8" rx="2" fill={PAL.steel} />
+        <path d="M15 40V84" stroke={PAL.slate} strokeWidth="6" strokeLinecap="round" />
+        <circle cx="15" cy="39" r="5.5" fill={PAL.slateDark} />
+        <circle cx="15" cy="85" r="5.5" fill={PAL.slateDark} />
+        <circle cx="16" cy="62" r="6" fill={PAL.slate} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;
