@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { CurveArrow, Ground, Motion, PAL, Shade, Shine, r1 } from '../kit';
+import { CurveArrow, Ground, Motion, Move, PAL, Shade, Shine, r1 } from '../kit';
 
 /** The wrench lies along a line rising to the top right; its local origin is the centre of the ring head. */
 const TURN = 'translate(30 80) rotate(-36)';
@@ -18,6 +18,8 @@ export default {
       <Ground cx={60} cy={104} rx={44} ry={4} />
       {/* The turning arrow round the nut */}
       <CurveArrow from={[12, 92]} to={[20, 58]} bend={-14} color={PAL.sky} width={6} head={10} />
+      {/* The wrench turns round the nut into place */}
+      <Move kind="turn" turn={-28} at={[30, 80]}>
       <g transform={TURN}>
         {/* The shaft: its underside in shade */}
         <rect x="6" y="-4" width="52" height="9.5" rx="3" fill={PAL.slate} />
@@ -44,8 +46,11 @@ export default {
         <Shine d="M18 -2.4H34" width={2.4} opacity={0.8} />
         <Shine d="M73 -5.6H93" width={2.6} opacity={0.55} />
       </g>
+      </Move>
       {/* The click: short lines above the scale */}
-      <Motion x={70} y={44} dir={-110} spread={70} n={3} len={7} gap={9} color={PAL.line} width={3} />
+      <Move kind="show">
+        <Motion x={70} y={44} dir={-110} spread={70} n={3} len={7} gap={9} color={PAL.line} width={3} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shade, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -68,8 +68,10 @@ export default {
       <ellipse cx={CX} cy={CY} rx={RX - 7} ry={RY - 4} fill="none" stroke={PAL.paperShade} strokeWidth="1.6" />
       <Shine d={`M${CX - 30} ${CY - 6}Q${CX - 18} ${CY - 12} ${CX - 4} ${CY - 13}`} width={3} opacity={0.8} />
       {/* The part on the table */}
-      {block(42, 44, 30, 22, 14, PAL.blue, PAL.blueLight, PAL.blueShade)}
-      <circle cx="57" cy="55" r="5.5" fill={PAL.navyShade} />
+      <Move kind="turn" turn={30} at={[CX, CY]}>
+        {block(42, 44, 30, 22, 14, PAL.blue, PAL.blueLight, PAL.blueShade)}
+        <circle cx="57" cy="55" r="5.5" fill={PAL.navyShade} />
+      </Move>
       {/* The turning arrow round the front */}
       <path
         d={`M${on(ARX, ARY, A0).join(' ')}A${ARX} ${ARY} 0 0 0 ${on(ARX, ARY, A1).join(' ')}`}

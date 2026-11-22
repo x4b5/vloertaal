@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Ground, PAL, Shine, r1 } from '../kit';
+import { Arrow, Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -27,10 +27,16 @@ export default {
       {/* The rail at the top, with the trolley */}
       {block(14, 12, 84, 7, 8, PAL.slate, PAL.steel, PAL.slateDark)}
       <rect x="49" y="19" width="22" height="6" rx="2" fill={PAL.steel} />
+      {/* The tube's lower end, hidden under the head: seen only while the head is lower */}
+      <rect x="51" y="56" width="18" height="10" rx="2" fill={PAL.mist} />
+      <rect x="62" y="56" width="7" height="10" rx="2" fill={PAL.steel} />
+      <path d="M52 60H68" stroke={PAL.line} strokeWidth="2" strokeLinecap="round" />
       {/* The ribbed vacuum tube */}
       <rect x="51" y="24" width="18" height="34" rx="4" fill={PAL.mist} />
       <rect x="62" y="24" width="7" height="34" rx="3" fill={PAL.steel} />
       <path d="M52 30H68M52 36H68M52 42H68M52 48H68M52 54H68" stroke={PAL.line} strokeWidth="2" strokeLinecap="round" />
+      {/* The lift: the head, the pad and the box come up from the floor */}
+      <Move kind="from" dy={9}>
       {/* The head with its orange handle */}
       <rect x="44" y="56" width="32" height="11" rx="3" fill={PAL.slate} />
       <rect x="68" y="56" width="8" height="11" rx="3" fill={PAL.slateDark} />
@@ -42,8 +48,11 @@ export default {
       {/* The black suction pad on the box's top */}
       {block(36, 72, 42, 5, 7, PAL.ink, PAL.slateDark, PAL.ink)}
       <Shine d="M27 83H44" width={2.6} opacity={0.5} />
+      </Move>
       {/* The way it goes: up */}
-      <Arrow from={[14, 70]} to={[14, 36]} width={6.5} head={10} />
+      <Move kind="show">
+        <Arrow from={[14, 70]} to={[14, 36]} width={6.5} head={10} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

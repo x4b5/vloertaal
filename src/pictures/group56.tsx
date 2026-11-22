@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
+import { Ground, Hand, Move, PAL, SKIN, Shade, Shine } from './kit';
 
 /**
  * Word pictures, group 56 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -129,19 +129,22 @@ export default {
     <g strokeLinejoin="round">
       {/* The back half of the stirring arrow, behind the slat */}
       <path d="M33 74A25 7.5 0 0 1 83 74" fill="none" stroke={PAL.orange} strokeWidth="4.6" strokeLinecap="round" />
-      {/* The slat: its top end, its thickness on the right, then its face */}
-      <polygon points="62.7,12.3 77.3,15.7 81.3,12.7 66.7,9.3" fill={LIGHT_WOOD} />
-      <polygon points="77.3,15.7 81.3,12.7 63.3,90.7 59.3,93.7" fill={PAL.cardDark} />
-      <polygon points="62.7,12.3 77.3,15.7 59.3,93.7 44.7,90.3" fill={PAL.card} />
-      <path d="M65.8 22L60 47M71 26L65.5 50" stroke={PAL.cardShade} strokeWidth="1.8" strokeLinecap="round" />
-      {/* The paint on its lower end, with a drop hanging from it */}
-      <polygon points="66.2,64 70.2,61 63.3,90.7 59.3,93.7" fill={PAINT[1]} />
-      <path d="M51.5 60.7C53.5 65 56 65 58.5 62.8C61 60.6 63.5 65.5 66.2 64L59.3 93.7L44.7 90.3Z" fill={PAINT[0]} />
-      <path d={drip(52, 91.4, 7, 6.5)} fill={PAINT[0]} />
+      {/* The slat with its paint: on the intro card its dipped end swings through the paint, as the arrow goes */}
+      <Move kind="turn" turn={-14} at={[66, 12]}>
+        {/* The slat: its top end, its thickness on the right, then its face */}
+        <polygon points="62.7,12.3 77.3,15.7 81.3,12.7 66.7,9.3" fill={LIGHT_WOOD} />
+        <polygon points="77.3,15.7 81.3,12.7 63.3,90.7 59.3,93.7" fill={PAL.cardDark} />
+        <polygon points="62.7,12.3 77.3,15.7 59.3,93.7 44.7,90.3" fill={PAL.card} />
+        <path d="M65.8 22L60 47M71 26L65.5 50" stroke={PAL.cardShade} strokeWidth="1.8" strokeLinecap="round" />
+        {/* The paint on its lower end, with a drop hanging from it */}
+        <polygon points="66.2,64 70.2,61 63.3,90.7 59.3,93.7" fill={PAINT[1]} />
+        <path d="M51.5 60.7C53.5 65 56 65 58.5 62.8C61 60.6 63.5 65.5 66.2 64L59.3 93.7L44.7 90.3Z" fill={PAINT[0]} />
+        <path d={drip(52, 91.4, 7, 6.5)} fill={PAINT[0]} />
+        <Shine d="M64 17.6L59.7 36.3" width={3} opacity={0.6} />
+      </Move>
       {/* The front half of the stirring arrow, with its head */}
       <path d="M83 74A25 7.5 0 0 1 41 79.6" fill="none" stroke={PAL.orange} strokeWidth="4.6" strokeLinecap="round" />
       <polygon points="43.5,73 30.5,79 43.5,86" fill={PAL.orange} stroke={PAL.orange} strokeWidth="2.6" />
-      <Shine d="M64 17.6L59.7 36.3" width={3} opacity={0.6} />
     </g>
   ),
 

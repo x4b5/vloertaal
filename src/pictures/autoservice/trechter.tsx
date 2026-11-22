@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -41,8 +41,10 @@ export default {
       <ellipse cx={CX} cy={MOUTH} rx={RX} ry={RY} fill={PAL.redShade} />
       <ellipse cx={CX} cy={MOUTH + 0.6} rx={RX - 4} ry={RY - 2.6} fill={PAL.yellowShade} />
       <ellipse cx={CX} cy={MOUTH + 1} rx="7" ry="2.2" fill={PAL.yellow} />
-      {/* The stream of oil falling into it */}
-      <path d={`M${CX} 10V${MOUTH}`} stroke={PAL.yellow} strokeWidth="5" />
+      {/* The stream of oil falling into it (on the intro card it comes down from above) */}
+      <Move kind="from" dy={-24}>
+        <path d={`M${CX} 10V${MOUTH}`} stroke={PAL.yellow} strokeWidth="5" />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

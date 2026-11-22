@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL } from '../kit';
+import { Move, PAL } from '../kit';
 
 /** The glass of the roof. */
 const GLASS = PAL.ice;
@@ -22,9 +22,16 @@ export default {
       {/* The posts */}
       <path d="M14 52V102M60 52V102M106 52V102" stroke={PAL.steel} strokeWidth="4" strokeLinecap="round" />
       <path d="M10 102H110" stroke={PAL.line} strokeWidth="3" strokeLinecap="round" />
-      {/* The screen: a white cloth drawn from the left, its shaded underside */}
+      {/* The screen: a white cloth drawn from the left, its shaded underside. It runs out from the
+          folded pack to the left post (Move: a grow, flipped about x 41 so it grows from its right edge) */}
+      <g transform="matrix(-1 0 0 1 82 0)">
+      <Move kind="grow" grow={0.06}>
+      <g transform="matrix(-1 0 0 1 82 0)">
       <path d="M14 57H70L68 68H12Z" fill={PAL.paperShade} />
       <path d="M14 57H70L69 63H13Z" fill={PAL.white} />
+      </g>
+      </Move>
+      </g>
       {/* The folded-up part on the right */}
       {PLEATS.map((x) => (
         <rect key={x} x={x - 3} y="53" width="6" height="18" rx="2.8" fill={PAL.paperShade} />

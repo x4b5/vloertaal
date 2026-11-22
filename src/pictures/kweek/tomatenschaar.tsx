@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 /** A ripe tomato centred on (x, y), with its calyx and a highlight. */
 function Tomato({ x, y, r }: { x: number; y: number; r: number }) {
@@ -36,6 +36,8 @@ export default {
         <path d="M58 58L100 64L110 68L98 70L60 66Z" fill={PAL.steel} />
         {/* The spring between the handles */}
         <path d="M44 66Q38 60 44 54" fill="none" stroke={PAL.mist} strokeWidth="2.6" strokeLinecap="round" />
+        {/* The front blade and its handle: they close on the stalk around the pivot (Move) */}
+        <Move kind="turn" turn={-22} at={[60, 60]}>
         {/* The front blade, pointed, over the stalk */}
         <Shade color={PAL.steel} opacity={1} at={[94, 60, 24, 6]}>
           <path d="M54 56Q58 48 70 48L110 50L98 58L58 64Z" fill={PAL.mist} />
@@ -44,6 +46,7 @@ export default {
         {/* The front handle */}
         <path d="M30 44L58 56" stroke={PAL.orange} strokeWidth="12" strokeLinecap="round" />
         <Shine d="M32 41L50 49" width={2.6} opacity={0.6} />
+        </Move>
         {/* The pivot */}
         <circle cx="60" cy="60" r="5.6" fill={PAL.slate} />
         <circle cx="60" cy="60" r="2.2" fill={PAL.steel} />

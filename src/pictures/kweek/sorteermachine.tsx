@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 /** A tomato centred on (x, y): red or still green, a calyx and a highlight. */
 function Tomato({ x, y, r, ripe = true }: { x: number; y: number; r: number; ripe?: boolean }) {
@@ -39,7 +39,12 @@ export default {
       {/* The crates and what is already in them */}
       <Tomato x={28} y={79} r={6} ripe={false} />
       <Tomato x={40} y={80} r={6} ripe={false} />
-      {[66, 78, 90].map((x) => <Tomato key={x} x={x} y={77} r={7} />)}
+      <Tomato x={66} y={77} r={7} />
+      {/* This one drops from under the belt down the chute into the crate (Move) */}
+      <Move kind="drop" dy={-22}>
+        <Tomato x={78} y={77} r={7} />
+      </Move>
+      <Tomato x={90} y={77} r={7} />
       {crate(16, 80, 34, 22, PAL.blue, PAL.blueShade)}
       {crate(58, 78, 44, 24, PAL.blue, PAL.blueShade)}
       {/* The lamp's light on the belt */}

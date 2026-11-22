@@ -1,11 +1,13 @@
-import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { useId, type JSX } from 'react';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 export default {
   // "het etiketpistool": the label gun — a blue hand-held labeller with a dark pistol grip and a
   // grey squeeze lever, a big roll of white labels on its back, and one white label sticking out
   // at its nose on the left.
-  'w.etiketpistool': () => (
+  'w.etiketpistool': () => {
+    const id = `ep-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
+    return (
     <g strokeLinejoin="round" transform="translate(4 0)">
       <Ground cx={62} cy={104} rx={34} ry={4} />
       {/* The squeeze lever under the body */}
@@ -30,10 +32,19 @@ export default {
       </Shade>
       <rect x="18" y="45" width="10" height="17" rx="3" fill={PAL.slate} />
       <Shine d="M34 48.4H62" width={3} opacity={0.6} />
-      {/* The label coming out at the nose */}
+      {/* The label coming out at the nose (Move: it slides out of the nose; clipped at the nose's
+          edge, so it never shows over the nose) */}
+      <clipPath id={id}>
+        <rect x="-10" y="30" width="30" height="40" />
+      </clipPath>
+      <g clipPath={`url(#${id})`}>
+      <Move kind="from" dx={13}>
       <path d="M6 48L18 46V58L6 60Z" fill={PAL.paperShade} transform="translate(1 3)" />
       <path d="M6 48L18 46V58L6 60Z" fill={PAL.white} />
       <path d="M9 52L15 51M9 55.5L14 54.6" stroke={PAL.line} strokeWidth="1.4" strokeLinecap="round" />
+      </Move>
+      </g>
     </g>
-  ),
+    );
+  },
 } as Record<string, () => JSX.Element>;

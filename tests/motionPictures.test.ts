@@ -45,6 +45,16 @@ const MOTION_ROUND3 = ['w.opruimen', 'w.afruimen', 'w.inpakken', 'w.afpakken', '
 const MOTION_FUNCTION = [
   // Productie (src/pictures/maken).
   'w.hendel', 'w.meetklok', 'w.sealmachine', 'w.tapepistool', 'w.persluchtpistool', 'w.oliekannetje', 'w.smeerpistool',
+  // Montage (src/pictures/montage).
+  'w.schroefmachine', 'w.momentsleutel', 'w.takel', 'w.tilhulp', 'w.draaitafel', 'w.rolbaan', 'w.voetpedaal', 'w.stempel',
+  // Techniek (src/pictures/techniek).
+  'w.lasklem', 'w.zekering', 'w.hangslot', 'w.pijpsnijder', 'w.afsluiter', 'w.kolomboormachine', 'w.draadtap',
+  // Tuinbouw (src/pictures/kweek).
+  'w.gieter', 'w.druppelaar', 'w.luchtraam', 'w.kasscherm', 'w.sorteermachine', 'w.etiketpistool', 'w.tomatenschaar', 'w.buisrailkar',
+  // Garage (src/pictures/autoservice).
+  'w.bandenspanningsmeter', 'w.bandenwisselaar', 'w.trechter', 'w.oliepeilstok',
+  // Bouw (group53, group56, group57, group61).
+  'w.tegelsnijder', 'w.duimstok', 'w.roerstok', 'w.verfkrabber', 'w.passer',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */

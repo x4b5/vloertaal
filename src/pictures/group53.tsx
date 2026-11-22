@@ -1,5 +1,5 @@
 import { useId, type JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from './kit';
+import { Ground, Move, PAL, Shine, r1 } from './kit';
 
 /**
  * Word pictures, group 53 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -173,7 +173,10 @@ export default {
       {face('M36.2 79.5L72.1 79.5L72.1 77.6L36.2 77.6Z', PAL.mist)}
       {face('M72.1 79.5L82.6 65.8L82.6 63.8L72.1 77.6Z', PAL.line)}
       {face('M36.2 77.6L72.1 77.6L82.6 63.8L46.7 63.8Z', PAL.paper)}
-      {line('M41.4 70.6L63.3 70.6', PAL.line, 1.2)}
+      {/* The scored line: on the intro card it is drawn as the slide runs along the tile */}
+      <Move kind="grow" grow={0.1}>
+        {line('M41.4 70.6L63.3 70.6', PAL.line, 1.2)}
+      </Move>
       {/* The posts and the rail */}
       {face('M23 75.2L28.5 75.2L28.5 60.4L23 60.4Z', PAL.steel)}
       {face('M28.5 75.2L32.4 70.1L32.4 55.2L28.5 60.4Z', PAL.slate)}
@@ -183,13 +186,15 @@ export default {
       {face('M86.3 60.4L91.8 60.4L95.7 55.2L90.3 55.2Z', PAL.mist)}
       {line('M27.7 56.6L91 56.6', PAL.steel, 4.3)}
       {line('M28.9 55.6L89.8 55.6', PAL.mist, 1.4)}
-      {/* The slide and its lever */}
-      {face('M60.2 63.9L70.4 63.9L70.4 56.1L60.2 56.1Z', PAL.redShade)}
-      {face('M70.4 63.9L75 57.9L75 50.1L70.4 56.1Z', RED_DEEP)}
-      {face('M60.2 56.1L70.4 56.1L75 50.1L64.8 50.1Z', PAL.red)}
-      {line('M68 53.1L91.4 31.2', PAL.slate, 3.9)}
-      {line('M81.3 40.7L91.4 31.2', PAL.orange, 7.4)}
-      {line('M82.8 37.9L89.8 31.4', PAL.orangeLight, 1.9)}
+      {/* The slide and its lever: on the intro card it runs along the rail over the tile */}
+      <Move kind="from" dx={-22}>
+        {face('M60.2 63.9L70.4 63.9L70.4 56.1L60.2 56.1Z', PAL.redShade)}
+        {face('M70.4 63.9L75 57.9L75 50.1L70.4 56.1Z', RED_DEEP)}
+        {face('M60.2 56.1L70.4 56.1L75 50.1L64.8 50.1Z', PAL.red)}
+        {line('M68 53.1L91.4 31.2', PAL.slate, 3.9)}
+        {line('M81.3 40.7L91.4 31.2', PAL.orange, 7.4)}
+        {line('M82.8 37.9L89.8 31.4', PAL.orangeLight, 1.9)}
+      </Move>
     </g>
   ),
 
@@ -253,7 +258,10 @@ export default {
         {line(range(13).map((i) => `M${-36 + i * 6} -5.2V${i % 5 === 0 ? -0.5 : -2.8}`).join(''), PAL.brown, 1.4)}
       </g>
       {rulerLength(23.5, 14)}
-      {rulerLength(82, 101.5)}
+      {/* The bottom length: on the intro card it folds open around its hinge, off the middle length */}
+      <Move kind="turn" turn={-32} at={[20, 88.5]}>
+        {rulerLength(82, 101.5)}
+      </Move>
       {hinge(100, 30)}
       {hinge(20, 88.5)}
     </g>

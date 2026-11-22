@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shade, Shine, r1 } from '../kit';
 
 /** The darker side of the black parts. */
 const INK = '#1b232a';
@@ -45,7 +45,10 @@ export default {
         {TICKS.map((a) => (
           <path key={a} d={tick(a, DR - 10, DR - 7)} stroke={PAL.line} strokeWidth="2" strokeLinecap="round" />
         ))}
-        <path d={`M${DCX} ${DCY}L${r1(DCX + Math.cos(nt) * (DR - 9))} ${r1(DCY + Math.sin(nt) * (DR - 9))}`} stroke={PAL.red} strokeWidth="3" strokeLinecap="round" />
+        {/* On the intro card the needle swings up from the lowest tick to its value */}
+        <Move kind="turn" turn={TICKS[0] - NEEDLE} at={[DCX, DCY]}>
+          <path d={`M${DCX} ${DCY}L${r1(DCX + Math.cos(nt) * (DR - 9))} ${r1(DCY + Math.sin(nt) * (DR - 9))}`} stroke={PAL.red} strokeWidth="3" strokeLinecap="round" />
+        </Move>
         <circle cx={DCX} cy={DCY} r="3.5" fill={PAL.slateDark} />
         <Shine d={`M${DCX - DR + 3} ${DCY - 4}A${DR - 3} ${DR - 3} 0 0 1 ${DCX - 6} ${DCY - DR + 3}`} color={PAL.steel} width={2.6} opacity={0.9} />
         {/* The neck of the gauge where the hose comes in */}

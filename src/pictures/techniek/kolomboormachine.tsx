@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -40,23 +40,28 @@ export default {
       {/* The table on the column, with its collar */}
       <rect x="58" y="74" width="17" height="10" rx="2" fill={PAL.slate} />
       {block(24, 72, 46, 6, 14, PAL.slate, PAL.line, PAL.slateDark)}
+      {/* The quill, the chuck and the bit pointing down at the table (drawn before the head: on the
+          intro card they come down out of it) */}
+      <Move kind="from" dy={-9}>
+        <rect x="41" y="50" width="12" height="6" fill={PAL.steel} />
+        <path d="M39.5 56H54.5L51.5 63H42.5Z" fill={PAL.slate} />
+        <path d="M45.4 63H48.6V67.5L47 70.5L45.4 67.5Z" fill={PAL.slateDark} />
+      </Move>
       {/* The motor on top of the head, then the head */}
       <rect x="52" y="14" width="20" height="9" fill={PAL.slate} />
       <rect x="64" y="14" width="8" height="9" fill={PAL.slateDark} />
       <ellipse cx="62" cy="14" rx="10" ry="2.6" fill={PAL.steel} />
       {block(18, 26, 60, 24, 12, PAL.green, PAL.leaf, PAL.greenShade)}
       <Shine d="M24 32H48" color={PAL.lime} width={3.4} opacity={0.75} />
-      {/* The quill, the chuck and the bit pointing down at the table */}
-      <rect x="41" y="50" width="12" height="6" fill={PAL.steel} />
-      <path d="M39.5 56H54.5L51.5 63H42.5Z" fill={PAL.slate} />
-      <path d="M45.4 63H48.6V67.5L47 70.5L45.4 67.5Z" fill={PAL.slateDark} />
-      {/* The feed handle */}
-      {SPOKES.map(([x, y], i) => (
-        <path key={`s${i}`} d={`M${HUB[0]} ${HUB[1]}L${x} ${y}`} stroke={PAL.slate} strokeWidth="4" strokeLinecap="round" />
-      ))}
-      {SPOKES.map(([x, y], i) => (
-        <circle key={`b${i}`} cx={x} cy={y} r="5.5" fill={PAL.red} />
-      ))}
+      {/* The feed handle: it turns as the bit comes down */}
+      <Move kind="turn" turn={-60} at={HUB}>
+        {SPOKES.map(([x, y], i) => (
+          <path key={`s${i}`} d={`M${HUB[0]} ${HUB[1]}L${x} ${y}`} stroke={PAL.slate} strokeWidth="4" strokeLinecap="round" />
+        ))}
+        {SPOKES.map(([x, y], i) => (
+          <circle key={`b${i}`} cx={x} cy={y} r="5.5" fill={PAL.red} />
+        ))}
+      </Move>
       <circle cx={HUB[0]} cy={HUB[1]} r="6" fill={PAL.steel} />
     </g>
   ),
