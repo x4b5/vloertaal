@@ -1,6 +1,6 @@
 import type { JSX, ReactNode } from 'react';
 import { Bust } from './bust';
-import { Arrow, Box, Cross, Ground, Hand, PAL, SKIN, Shade, Shine, Sparkle, r1 } from './kit';
+import { Arrow, Box, Cross, Ground, Hand, Move, PAL, SKIN, Shade, Shine, Sparkle, r1 } from './kit';
 
 /**
  * Word pictures, group 46 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -99,7 +99,7 @@ export default {
   ),
 
   // "de korting": the discount — a green tag with a percent sign (a slash and two rings), and an
-  // arrow going down: you pay less.
+  // arrow going down: you pay less. On the intro card the arrow goes down.
   'w.korting': () => (
     <g>
       <path d="M44 28Q36 12 46 10Q54 9 52 20" fill="none" stroke={PAL.slate} strokeWidth="3" strokeLinecap="round" />
@@ -114,7 +114,9 @@ export default {
         <circle cx="32" cy="56" r="6.5" fill="none" stroke={PAL.white} strokeWidth="5" />
         <circle cx="56" cy="84" r="6.5" fill="none" stroke={PAL.white} strokeWidth="5" />
       </g>
-      <Arrow from={[94, 30]} to={[94, 100]} color={PAL.sky} width={10} head={16} />
+      <Move kind="from" dy={-24}>
+        <Arrow from={[94, 30]} to={[94, 100]} color={PAL.sky} width={10} head={16} />
+      </Move>
     </g>
   ),
 
@@ -175,7 +177,7 @@ export default {
   ),
 
   // "bestellen": to order — a finger taps the button on a phone that shows a box; an arrow goes
-  // to the box that will come.
+  // to the box that will come. On the intro card the finger taps, then the box comes out along the arrow.
   'w.bestellen': () => (
     <g>
       <rect x="10" y="12" width="52" height="94" rx="8" fill={PAL.slateDark} />
@@ -188,8 +190,12 @@ export default {
       <path d="M30 73.5L34.5 78L42 69.5" fill="none" stroke={PAL.white} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
       {/* The box that comes */}
       <Arrow from={[68, 40]} to={[82, 40]} color={PAL.sky} width={6} head={9} />
-      <Box x={84} y={32} w={18} h={18} depth={6} />
-      <Hand pose="point" x={62} y={114} rotate={-25} scale={0.82} skin={SKIN.jada} sleeve={[PAL.yellow, PAL.yellowShade]} />
+      <Move kind="then" dx={-20}>
+        <Box x={84} y={32} w={18} h={18} depth={6} />
+      </Move>
+      <Move kind="from" dx={10} dy={18}>
+        <Hand pose="point" x={62} y={114} rotate={-25} scale={0.82} skin={SKIN.jada} sleeve={[PAL.yellow, PAL.yellowShade]} />
+      </Move>
     </g>
   ),
 
@@ -253,6 +259,7 @@ export default {
   ),
 
   // "stelen": to steal — a hand takes a tin off a shop shelf; a red cross: this is not allowed.
+  // On the intro card the hand reaches in to the tin, then the cross.
   'w.stelen': () => (
     <g>
       <rect x="10" y="30" width="64" height="62" rx="3" fill={PAL.mist} />
@@ -260,35 +267,45 @@ export default {
       <Tin x={34} y={56} w={16} h={24} color={PAL.blue} shade={PAL.blueShade} />
       <ShelfBoard x={8} y={80} w={68} strips={3} />
       <Tin x={64} y={50} w={17} h={25} />
-      <Hand pose="hold" x={86} y={98} rotate={-38} scale={0.82} skin={SKIN.henk} sleeve={[COAT, COAT_SHADE]} />
-      <Cross x={90} y={28} r={17} />
+      <Move kind="from" dx={20} dy={20}>
+        <Hand pose="hold" x={86} y={98} rotate={-38} scale={0.82} skin={SKIN.henk} sleeve={[COAT, COAT_SHADE]} />
+      </Move>
+      <Move kind="show">
+        <Cross x={90} y={28} r={17} />
+      </Move>
     </g>
   ),
 
   // "schreeuwen": to shout — Jada with her mouth wide open; three big red jagged lines come out.
+  // On the intro card the jagged lines shoot out from her mouth.
   'w.schreeuwen': () => (
     <g>
       <Bust who="jada" x={40} y={124} scale={0.74} emotion="angry" bold />
       <ellipse cx="40" cy="82.4" rx="5.4" ry="6.4" fill={PAL.mouth} />
+      <Move kind="from" dx={-18}>
       <g fill="none" stroke={PAL.red} strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M66 64L78 50L82 60L98 40" />
         <path d="M68 80L84 74L86 84L106 78" />
         <path d="M72 94L86 96L84 105L102 108" />
       </g>
+      </Move>
     </g>
   ),
 
   // "geld terug": money back — a banknote on an open hand, under an arrow that turns round and comes back.
+  // On the intro card the banknote comes back down onto the open hand.
   'w.geldterug': () => (
     <g>
       <Hand pose="open" x={40} y={122} scale={1.3} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
       {/* The banknote, on the palm */}
+      <Move kind="from" dx={36} dy={-44}>
       <g transform="rotate(-8 42 100)">
         <rect x="16" y="90" width="52" height="26" rx="3" fill={PAL.greenShade} />
         <rect x="16" y="87" width="52" height="26" rx="3" fill={PAL.green} />
         <rect x="20" y="91" width="44" height="18" rx="2" fill="none" stroke={PAL.lime} strokeWidth="2" />
         <circle cx="42" cy="100" r="6" fill={PAL.lime} />
       </g>
+      </Move>
       {/* The arrow that turns back */}
       <path d="M28 20H80Q102 20 102 44Q102 70 88 79" fill="none" stroke={PAL.sky} strokeWidth="8" strokeLinecap="round" />
       <polygon points="72 93 88 93.7 73.5 77.1" fill={PAL.sky} stroke={PAL.sky} strokeWidth="4" strokeLinejoin="round" />

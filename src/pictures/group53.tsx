@@ -205,19 +205,26 @@ export default {
 
   // "de nijptang": the pincers — a closed round head of two steel half rings meeting at the
   // cutting edge, a dark pivot, two red handles opening downwards.
+  // On the intro card the two halves turn shut round the pivot: the handles squeeze, the jaws close.
   'w.nijptang': () => (
     <g transform="translate(60 60) scale(0.92) rotate(-14) translate(-60 -61)">
-      {line('M62 42Q52 70 49 106', STEEL_DARK, 8)}
-      {line('M58 42Q68 70 71 106', PAL.steel, 8)}
+      <Move kind="turn" turn={16} at={[60, 42.5]}>{line('M62 42Q52 70 49 106', STEEL_DARK, 8)}</Move>
+      <Move kind="turn" turn={-16} at={[60, 42.5]}>{line('M58 42Q68 70 71 106', PAL.steel, 8)}</Move>
       {/* The handles, slightly open */}
-      {line('M55.9 62.5Q50.95 82.6 49 106', PAL.red, 11.5)}
-      {line('M54.3 66Q50.2 84 48.6 102', PAL.redLight, 2, { opacity: 0.75 })}
-      {line('M64.1 62.5Q69.05 82.6 71 106', PAL.redShade, 11.5)}
-      {line('M63.2 64Q67.8 83 69.6 105', PAL.red, 6.5)}
+      <Move kind="turn" turn={16} at={[60, 42.5]}>
+        {line('M55.9 62.5Q50.95 82.6 49 106', PAL.red, 11.5)}
+        {line('M54.3 66Q50.2 84 48.6 102', PAL.redLight, 2, { opacity: 0.75 })}
+      </Move>
+      <Move kind="turn" turn={-16} at={[60, 42.5]}>
+        {line('M64.1 62.5Q69.05 82.6 71 106', PAL.redShade, 11.5)}
+        {line('M63.2 64Q67.8 83 69.6 105', PAL.red, 6.5)}
+      </Move>
       {/* The round head: two half rings whose cutting edges meet at the top, and the pivot */}
-      {line('M62.5 41C78 38 77 17 60.9 17', STEEL_DARK, 9.5, { cap: 'butt' })}
-      {line('M57.5 41C42 38 43 17 59.1 17', PAL.steel, 9.5, { cap: 'butt' })}
-      <Shine d="M45.5 33C44.5 27 47 22 52 19.5" width={2.2} opacity={0.55} />
+      <Move kind="turn" turn={16} at={[60, 42.5]}>{line('M62.5 41C78 38 77 17 60.9 17', STEEL_DARK, 9.5, { cap: 'butt' })}</Move>
+      <Move kind="turn" turn={-16} at={[60, 42.5]}>
+        {line('M57.5 41C42 38 43 17 59.1 17', PAL.steel, 9.5, { cap: 'butt' })}
+        <Shine d="M45.5 33C44.5 27 47 22 52 19.5" width={2.2} opacity={0.55} />
+      </Move>
       <circle cx="60" cy="42.5" r="5.2" fill={PAL.slate} />
       <circle cx="60" cy="42.5" r="1.9" fill={PAL.mist} />
     </g>

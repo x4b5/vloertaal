@@ -1,5 +1,5 @@
 import { useId, type JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view (as group55): one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -43,6 +43,7 @@ const bolt = (cx: number, cy: number) => (
 export default {
   // "de afscherming": the machine guard — a big yellow box cover bolted down on a thin blue machine
   // base, a big steel gear with sharp teeth inside it, seen only through the thick bars of its front.
+  // On the intro card the gear turns behind the bars: the moving part the guard keeps you from.
   'w.afscherming': () => {
     const id = `as-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
     const B = BASE;
@@ -82,8 +83,12 @@ export default {
         </clipPath>
         <rect x={wx} y={wy} width={ww} height={wh} rx="1.5" fill={PAL.slateDark} />
         <g clipPath={`url(#${id})`}>
-          <path d={gear(gx + 2.4, gy - 1.6, 16, 23, 10, 0.16)} fill={STEEL_DARK} />
-          <path d={gear(gx, gy, 16, 23, 10, 0.16)} fill={PAL.mist} />
+          <Move kind="turn" turn={-90} at={[gx + 2.4, gy - 1.6]}>
+            <path d={gear(gx + 2.4, gy - 1.6, 16, 23, 10, 0.16)} fill={STEEL_DARK} />
+          </Move>
+          <Move kind="turn" turn={-90} at={[gx, gy]}>
+            <path d={gear(gx, gy, 16, 23, 10, 0.16)} fill={PAL.mist} />
+          </Move>
           <circle cx={gx} cy={gy} r="6" fill={PAL.slate} />
         </g>
         <path d={bars} stroke={PAL.yellow} strokeWidth="5" strokeLinecap="square" clipPath={`url(#${id})`} />

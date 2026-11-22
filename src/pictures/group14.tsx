@@ -723,6 +723,7 @@ export default {
 
   // "de bel": the bike bell — a big bell on the handlebar of a bike, right next to the grip;
   // the rider's thumb flicks the lever and it rings
+  // On the intro card: the thumb flicks the lever over, then the ringing lines appear.
   'w.bel': () => (
     <g>
       {/* Front of the bike: head tube, fork and the top of the front wheel */}
@@ -741,16 +742,21 @@ export default {
       <circle cx="51" cy="33" r="4.6" fill={PAL.slate} />
       <Shine d="M31 58Q33 45 44 40" width={4.4} opacity={0.75} />
       {/* Lever, under the thumb */}
-      <path d="M56 74L76 72" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
+      <Move kind="turn" turn={40} at={[56, 74]}>
+        <path d="M56 74L76 72" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
+      </Move>
       {/* Rider's hand round the grip, thumb on the lever */}
       <Hand pose="thumb" x={107} y={89} rotate={-60} scale={0.7} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
       {/* Ringing */}
-      <path d="M14 46Q8 36 14 26M24 32Q22 20 32 14M76 14Q86 18 88 30" fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" />
+      <Move kind="show">
+        <path d="M14 46Q8 36 14 26M24 32Q22 20 32 14M76 14Q86 18 88 30" fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" />
+      </Move>
     </g>
   ),
 
   // "aankleden": helping someone get dressed — the carer's hands pull a jumper down over
   // Henk's head; he sits in his vest, the arrows show the jumper going on
+  // On the intro card: the carer's hands pull the jumper down from above to over Henk's head.
   'w.aankleden': () => (
     <g>
       <Person
@@ -768,6 +774,7 @@ export default {
         )}
       />
       {/* The jumper, held up over his head */}
+      <Move kind="from" dy={-22}>
       <path d="M50 8Q60 14 70 8L88 14L106 36L96 43L82 30V46H38V30L24 43L14 36L32 14Z" fill={PAL.clayShade} transform="translate(0 2.5)" stroke={PAL.clayShade} strokeWidth="3" strokeLinejoin="round" />
       <Shade color={PAL.clayShade} opacity={0.8} at={[100, 30, 14, 26]}>
         <path d="M50 8Q60 14 70 8L88 14L106 36L96 43L82 30V46H38V30L24 43L14 36L32 14Z" fill={PAL.clay} stroke={PAL.clay} strokeWidth="3" strokeLinejoin="round" />
@@ -778,6 +785,7 @@ export default {
       {/* The carer's hands on the hem */}
       <Hand pose="hold" x={22} y={50} rotate={70} scale={0.5} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
       <Hand pose="hold" x={98} y={50} rotate={-70} scale={0.5} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} mirror />
+      </Move>
       <Arrow from={[12, 68]} to={[12, 94]} color={PAL.sky} width={5} head={8} />
       <Arrow from={[108, 68]} to={[108, 94]} color={PAL.sky} width={5} head={8} />
     </g>

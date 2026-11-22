@@ -71,6 +71,9 @@ const MOTION_FUNCTION = [
 const MOTION_ROUND4 = [
   'w.zoeken', 'w.bewaren', 'w.hamer', 'w.afkeuren', 'w.wassen', 'w.prullenbak', 'w.verzamelen', 'w.lossen', 'w.tanken', 'w.opladen', 'w.parkeren', 'w.retour', 'w.typen', 'w.opslaan', 'w.ophangen', 'w.tempo', 'w.vakkenvullen', 'w.pakken', 'w.kruishout', 'w.aftekenen', 'w.mal', 'w.tiewrap',
   'w.betalen', 'w.pinnen', 'w.kijken', 'w.licht', 'w.snijden', 'w.bezorgen', 'w.inladen', 'w.aanbellen', 'w.rijden', 'w.handje', 'w.aandebel', 'w.motorkap', 'w.lamp', 'w.morsen', 'w.samen', 'w.penseel', 'w.achterlamp', 'w.waarschuwingslampje', 'w.signaallamp', 'w.rolcontainer',
+  'w.drinken', 'w.repareren', 'w.stemmen', 'w.klikken', 'w.proefrit', 'w.korting', 'w.bestellen', 'w.stelen', 'w.schreeuwen', 'w.geldterug', 'w.storen', 'w.aanwijzen', 'w.slijpen', 'w.nijptang', 'w.slagmoersleutel', 'w.afscherming', 'w.accuboor', 'w.boormachine', 'w.vonk', 'w.bel', 'w.aankleden',
+  // The Belgian twin of "stemmen" shares its picture.
+  'be.w.stemmen',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
@@ -119,7 +122,9 @@ describe('moving word pictures: the trial', () => {
 
   it('no other picture moves (only the words chosen, one by one)', () => {
     const moving = Object.entries(words).filter(([, draw]) => /class="mv-/.test(renderToStaticMarkup(createElement(draw)))).map(([id]) => id);
-    expect(moving.sort()).toEqual([...MOVING].sort());
+    // A Belgian twin of a moving word shares its picture (and moves on its own intro card too).
+    const twins = MOVING.map((id) => `be.${id}`).filter((id) => id in words);
+    expect(moving.sort()).toEqual([...MOVING, ...twins].sort());
   });
 
   it('the moving-only words are abstract: their picture is on the intro card, never in a choice', () => {
