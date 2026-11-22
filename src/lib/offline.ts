@@ -1,5 +1,6 @@
 import { KEYS, STORES } from './storageKeys';
 import { loadedTipsUrl, tipForLesson } from './tips';
+import { loadedLessonTextsUrl } from '../content/lessonTexts';
 import { findItem, phrasebookIds, teachingLessons } from '../content/curriculum';
 import { courseUnits } from '../content/courses';
 import { ruleStepTexts } from '../content/regels/course';
@@ -221,6 +222,9 @@ export function shellUrls(): string[] {
   // The "Zo werkt het hier" tips (their own file, src/lib/tips.ts).
   const tips = loadedTipsUrl();
   if (tips) sameOrigin(tips);
+  // The lesson texts of the work and sector units (their own file, src/content/lessonTexts.ts).
+  const texts = loadedLessonTextsUrl();
+  if (texts) sameOrigin(texts);
   for (const e of performance.getEntriesByType?.('resource') ?? []) {
     const u = new URL(e.name);
     // Fonts, CSS and JS; not data the app fetched for a moment (the count, backups).
@@ -435,7 +439,7 @@ export function warmUrls(own: (string | undefined)[], resources: string[], origi
 export function warmLanguageCache(): void {
   if (!navigator.serviceWorker?.controller) return;
   const resources = (performance.getEntriesByType?.('resource') ?? []).map((e) => e.name);
-  for (const url of warmUrls([...loadedPackUrls(), ...loadedRegionUrls(), loadedPicturesUrl(), loadedTipsUrl()], resources, location.origin)) fetch(url).catch(() => {});
+  for (const url of warmUrls([...loadedPackUrls(), ...loadedRegionUrls(), loadedPicturesUrl(), loadedTipsUrl(), loadedLessonTextsUrl()], resources, location.origin)) fetch(url).catch(() => {});
 }
 
 /**

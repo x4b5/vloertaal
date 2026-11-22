@@ -10,6 +10,8 @@
 // Usage: npm run taal                  (every file)
 //        npm run taal -- ziek tijd      (only files whose path contains one of these words)
 //        npm run taal -- be/            (only the Belgian units)
+// The lesson texts first (src/content/lessonTextsNode.ts): the course is read below.
+import '../src/content/lessonTextsNode';
 import { readFileSync } from 'node:fs';
 import { rulesUnits, sectorRulesUnits } from '../src/content/regels';
 import type { RuleOption, RuleUnit } from '../src/content/regels/types';

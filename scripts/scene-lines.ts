@@ -15,6 +15,8 @@
 // ("voices"), dus elevenlabs.mjs neemt hem alleen in die stem op: Henk in Daniel, Jada in Noa,
 // Bram in Thijmen, Amina in Ariël (zoals src/lib/voices.ts). Een beurt van de leerling ("ik")
 // wordt in Thijmen en in Ariël opgenomen, net als learnerVoice: van zo'n scène komen twee mixen.
+// The lesson texts first (src/content/lessonTextsNode.ts): the course is read below.
+import '../src/content/lessonTextsNode';
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { geluidsscenes, type Spreker } from '../src/content/geluidsscenes';
 import { sayAs } from '../src/lib/sayAs';

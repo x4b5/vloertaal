@@ -1,6 +1,8 @@
 // Writes public/audio/clips.json: every Dutch line the app can speak, keyed by a
 // stable id, for the recorded (ElevenLabs) voices: scripts/voices/elevenlabs.mjs records each
 // clip in every voice, unless the clip names its voices ("voices": only those record it).
+// The lesson texts first (src/content/lessonTextsNode.ts): the course is read below.
+import '../src/content/lessonTextsNode';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { cultureTips } from '../src/content/culture';
 import { beOnlyTaalLessons, phrasebookExtras, units as courseUnits } from '../src/content/curriculum';

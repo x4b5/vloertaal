@@ -24,6 +24,7 @@ import { setRulesTrack } from './lib/track';
 import { setDeviceRate } from './lib/audio';
 import { loadPictures } from './pictures';
 import { loadTips } from './lib/tips';
+import { loadLessonTexts } from './content/lessonTexts';
 import { ensureUpdates } from './content/updatesLive';
 import '@fontsource-variable/lexend';
 import '@fontsource/big-shoulders-stencil-display/800';
@@ -59,6 +60,9 @@ const picsBoot = loadPictures().catch(() => {});
 // The "Zo werkt het hier" tips load alongside too (their own file, src/lib/tips.ts): no first screen
 // shows one, a returning learner's lessons need them.
 void loadTips().catch(() => {});
+// The lesson texts of the work and sector units load alongside as well (their own file,
+// src/content/lessonTexts.ts): the app waits for them like for the help language's file.
+void loadLessonTexts().catch(() => {});
 // The logbook (src/content/updatesLive.ts, not in the start file): a returning learner's home may
 // show a notice from it ("Er is iets veranderd"), so it loads alongside. A new visitor never sees one.
 const newsBoot = loadProgress().onboarded ? ensureUpdates().catch(() => {}) : null;
@@ -107,7 +111,7 @@ if (import.meta.env.DEV && params.get('shot')) {
   if (params.get('lang') === 'nl') setDeviceRate('regels');
   const shotLang: UiCode | undefined = params.get('lang') === 'nl' ? 'nl' : LANG_CODES.find((c) => c === params.get('lang'));
   // The region Zuid-Limburg's file and texts too (development only: its shots, &region=zl).
-  void Promise.all([import('./dev/ShotHarness'), loadPictures(), loadTips(), ensureLanguage(shotLang), ensureRegion('zl'), ensureRegionTexts(shotLang)]).then(([{ ShotHarness }]) =>
+  void Promise.all([import('./dev/ShotHarness'), loadPictures(), loadTips(), loadLessonTexts(), ensureLanguage(shotLang), ensureRegion('zl'), ensureRegionTexts(shotLang)]).then(([{ ShotHarness }]) =>
     render(<ShotHarness shot={params.get('shot')!} lang={params.get('lang')} word={params.get('word')} />));
 } else {
   // The saved help language's texts first (index.html's static splash stays up meanwhile), so the

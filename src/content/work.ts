@@ -3262,3 +3262,6 @@ export const workUnits: Unit[] = [
   carserviceUnit,
 ];
 
+
+/** This file's address (saved with the app for offline use, src/content/lessonTexts.ts). */
+export const url: string = import.meta.url;

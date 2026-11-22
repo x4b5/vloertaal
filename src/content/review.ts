@@ -246,8 +246,22 @@ export function mixLessonFor(unit: Unit, all: Unit[], completed: Record<string, 
   return lesson;
 }
 
-/** Adds the mixed-review lesson to the end of every unit (in place, so unit objects keep their identity). */
+/**
+ * Adds the mixed-review lesson to the end of every unit (in place, so unit objects keep their
+ * identity). Its words, sentences and chats are built when they are first read: the lesson texts
+ * of most units load right after the start (src/content/lessonTexts.ts), after this runs.
+ */
 export function addMixLessons(units: Unit[]): void {
-  const mixes = units.map((u) => mixLesson(u, units));
-  units.forEach((u, i) => u.lessons.push(mixes[i]));
+  units.forEach((u) => {
+    let built: Lesson | undefined;
+    const mix = () => (built ??= mixLesson(u, units));
+    u.lessons.push({
+      id: mixLessonId(u.id),
+      title: MIX_TITLE,
+      get words() { return mix().words; },
+      get sentences() { return mix().sentences; },
+      get dialogues() { return mix().dialogues; },
+      get tipFrom() { return mix().tipFrom; },
+    });
+  });
 }

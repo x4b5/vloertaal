@@ -73,6 +73,13 @@ import { gzipSync } from 'node:zlib';
  * and Techniek (34 lessons since 20 November) filled the room, at 6406.3 kB; a new unit of four
  * lessons with its tips is about 200 kB of tip pages. Room for about five more units. The tip pages
  * load on the site only, never on a phone's first screen.
+ * The lesson texts out of the start file (22 November 2026, the owner's choice): the words,
+ * sentences and chats of the work, sector and culture units (src/content/work.ts, 41.5 kB gz) come
+ * in a file of their own, asked for right away next to the start (index.html, modulepreload) and
+ * waited for like the help language's file (src/content/lessonTexts.ts); the start file keeps
+ * their skeleton (names and ids, src/content/workSkeleton.ts). Start file 278.6 -> 243.4 kB, start
+ * 398.9 -> 363.7 kB. The limits stay: a new unit adds about 0.3 kB to the start file now (its
+ * skeleton), so there is room for many units. dist does not change: the weight moved.
  */
 export const LIMITS = {
   'start file': 280,

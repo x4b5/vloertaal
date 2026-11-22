@@ -3,6 +3,8 @@
  * English text, a short place in plain words ("Taal › Werk en contract › tip"), the country it is
  * about (NL, BE or beide), and how urgent it is (rights and safety first).
  */
+// The lesson texts first (src/content/lessonTextsNode.ts): the course is read below.
+import '../../src/content/lessonTextsNode';
 import { units, beTaalUnits, phrasebookExtras } from '../../src/content/curriculum';
 import { cultureTips, type CultureTip } from '../../src/content/culture';
 import { abroadLine } from '../../src/content/abroad';
