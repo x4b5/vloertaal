@@ -75,6 +75,9 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.install': ['u.tech', 'u.safety'],
   // Assemblage en montage (21 November 2026): the machines and the factory.
   'u.montage': ['u.machines', 'u.factory'],
+  // Kweken, sorteren en de kas and Banden, olie en remmen (22 November 2026): their sector's first unit and safety.
+  'u.kweek': ['u.kas', 'u.safety'],
+  'u.carservice': ['u.garage', 'u.safety'],
 };
 
 /**
@@ -115,6 +118,9 @@ const relatedWords: Record<string, string[]> = {
   'u.install': ['w.kabel', 'w.stroom'],
   // Assemblage en montage: the part and the bolt (of other lessons, used in its sentences).
   'u.montage': ['w.onderdeel', 'w.bout'],
+  // Kweken, sorteren en de kas: the crate and the tomato; Banden, olie en remmen: the tyre and the oil.
+  'u.kweek': ['w.krat', 'w.tomaat'],
+  'u.carservice': ['w.band', 'w.olie'],
   // Goed communiceren: angry (l.speakup) and slowly (l.understand), what the lessons are about.
   'u.communicate': ['w.boos', 'w.langzaam'],
   // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).

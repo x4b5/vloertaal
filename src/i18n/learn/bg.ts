@@ -200,6 +200,15 @@ const t: CultureTranslation = {
     'c.fastening.a.why': "Питат колко здраво: докато ключът щракне.", // nieuw, nalezen
     'c.handling.a.why': "Питат дали може да се стои там: не, никога, и защо.", // nieuw, nalezen
     'c.finalcheck.a.why': "Питат дали е добър: не, и какво му е.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'c.sowing.a.why': "Питат колко дълбоко: дълбочината, и не по-дълбоко.", // nieuw, nalezen
+    'c.sorting.a.why': "Питат дали е узрял: не, твърде зелен е, и какво да се прави.", // nieuw, nalezen
+    'c.greenhouse.a.why': "Питат защо е топло: завесата и прозорците са затворени.", // nieuw, nalezen
+    'c.pests.a.why': "Питат дали може да се убие: не, и защо помага.", // nieuw, nalezen
+    'c.tyres.a.why': "Питат дали трябва да се свалят: да, и защо.", // nieuw, nalezen
+    'c.oilchange.a.why': "Питат колко: литрите и как да се провери.", // nieuw, nalezen
+    'c.brakes.a.why': "Питат дали трябва да е нов: да, и защо.", // nieuw, nalezen
+    'c.diagnosis.a.why': "Питат какво трябва да се направи: да се погледне работната поръчка.", // nieuw, nalezen
   },
 };
 

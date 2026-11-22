@@ -136,6 +136,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "أستطيع أن أقول إن صندوق القطع شبه فارغ.", // nieuw, nalezen
     'kjn.u.montage.2': "أستطيع أن أسأل كم يجب أن يكون المسمار الملولب مشدوداً.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "أستطيع أن أقول إن على نبتة عفناً.", // nieuw, nalezen
+    'kjn.u.kweek.2': "أستطيع أن أسأل هل حبة الطماطم ناضجة بما يكفي.", // nieuw, nalezen
+    'kjn.u.carservice.1': "أستطيع أن أقول إن ضوء التحذير مضاء.", // nieuw, nalezen
+    'kjn.u.carservice.2': "أستطيع أن أسأل كم من الزيت يجب أن يدخل.", // nieuw, nalezen
   },
 };
 

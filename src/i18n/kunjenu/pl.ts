@@ -136,6 +136,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "Umiem powiedzieć, że pojemnik na części jest prawie pusty.", // nieuw, nalezen
     'kjn.u.montage.2': "Umiem zapytać, jak mocno trzeba dokręcić śrubę.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "Umiem powiedzieć, że na roślinie jest pleśń.", // nieuw, nalezen
+    'kjn.u.kweek.2': "Umiem zapytać, czy pomidor jest wystarczająco dojrzały.", // nieuw, nalezen
+    'kjn.u.carservice.1': "Umiem powiedzieć, że świeci się kontrolka ostrzegawcza.", // nieuw, nalezen
+    'kjn.u.carservice.2': "Umiem zapytać, ile oleju trzeba wlać.", // nieuw, nalezen
   },
 };
 

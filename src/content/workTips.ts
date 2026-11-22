@@ -2400,10 +2400,144 @@ const montageTips = [
   ),
 ];
 
+// ---- Growing, sorting and the greenhouse (u.kweek) and Tyres, oil and brakes (u.carservice) ----
+// The owner's request, 22 November 2026: one tip per lesson of the second own units of Tuinbouw
+// and Garage (./work.ts kweekUnit, carserviceUnit). None of them states a right, a law or an
+// amount: they are about how the work is done (NONE), or about rules that differ per company
+// (HOUSE_LINE). The short situations are in tests/situationLength.test.ts.
+
+const kweekServiceTips = [
+  tipFor(
+    'sowing',
+    '🌱',
+    'Small plants need a gentle hand',
+    'Young plants are weak. Hold a cutting or a seedling by a leaf, not by the stem: a leaf grows again, a broken stem does not. Press the soil softly, not hard. Give water slowly, with a fine spray, so the seeds do not wash away. Work with clean hands and clean trays: young plants get sick easily. Write the date and the kind of plant on every tray, so everyone knows what is in it.',
+    ['Ik houd hem vast bij het blad.', 'I hold it by the leaf.'],
+    'You must move a small seedling to a pot. What do you do?',
+    [
+      'Hold it gently by a leaf.',
+      'Pull it up by the stem.',
+      'Squeeze it out with the soil.',
+    ],
+    'A leaf can grow again. A broken stem cannot, and then the plant dies.',
+    NONE,
+  ),
+  tipFor(
+    'sorting',
+    '🍅',
+    'Every fruit counts',
+    'Fruit and vegetables bruise easily. Put them down, do not drop or throw them. You do not see a bruise today, but tomorrow the fruit is soft and brown. Look at the colour chart to know which colour goes where. Put a damaged or rotten fruit aside: one bad fruit in a punnet can spoil the others. Keep the punnets and crates clean, and never put them on the floor.',
+    ['Deze is beschadigd.', 'This one is damaged.'],
+    'You are packing punnets. One tomato has a soft brown spot. What do you do?',
+    [
+      'Put it aside.',
+      'Hide it at the bottom.',
+      'Pack it anyway.',
+    ],
+    'A rotten tomato makes the others rot faster. The customer finds it, and the whole punnet comes back.',
+    NONE,
+  ),
+  // Who may use the pipe-rail trolley, and who changes the climate, differ per company: HOUSE_LINE.
+  tipFor(
+    'greenhouse',
+    '💨',
+    'Leave the climate to the computer',
+    'In a greenhouse a computer sets the climate: the vents, the screen, the heating and the water. Do not open a vent or change a setting yourself. Do you see something strange, like a dripper that leaks or a vent that does not close? Tell your supervisor. The pipe-rail trolley rides on the heating pipes: only use it when you have learned how. Keep your feet on the platform, and never touch the pipes: they can be hot.',
+    ['Deze druppelaar lekt.', 'This dripper is leaking.'],
+    'A dripper is loose. Water runs onto the floor. What do you do?',
+    [
+      'Put it back, and tell your supervisor.',
+      'Leave it: it is only water.',
+      'Turn off the water for the whole row.',
+    ],
+    'A loose dripper wastes water, the plant gets too little, and a wet floor is slippery.',
+    HOUSE_LINE,
+  ),
+  // How a company works against pests and diseases differs: HOUSE_LINE.
+  tipFor(
+    'pests',
+    '🐞',
+    'Do not carry diseases from row to row',
+    'A disease or a pest spreads fast in a greenhouse. You can carry it on your hands, your clothes and your tools. So walk over the disinfection mat at every door, and wash your hands when you go to another part of the greenhouse. Start your work in the healthy rows, and end in the sick rows. Do you see insects, spots or mould on a plant? Do not touch it, but tell your supervisor where it is. Some insects in the greenhouse are helpers: leave them alone.',
+    ['Hier zit schimmel.', 'There is mould here.'],
+    'You see grey mould on a few plants in your row. What do you do?',
+    [
+      'Tell your supervisor where it is.',
+      'Pick off the bad leaves and go on.',
+      'Say nothing: it is only a few plants.',
+    ],
+    'Mould spreads fast. Your supervisor knows what to do, and where to start.',
+    HOUSE_LINE,
+  ),
+  // How a wheel is fitted and checked differs per garage: HOUSE_LINE.
+  tipFor(
+    'tyres',
+    '🛞',
+    'Turn in by hand, tighten with the torque wrench',
+    'An impact wrench is fast and very strong. Use it to take wheel bolts off, but not to tighten them hard. First turn the bolts in by hand. Then tighten them crosswise with a torque wrench, to the force for that car. A wheel that is not tight can come off while driving. Check the tread and the pressure of every tyre that you take in your hands.',
+    ['Ik draai ze eerst met de hand in.', 'I turn them in by hand first.'],
+    'You put a wheel back. A colleague says: "Use the impact wrench, it is faster." What do you do?',
+    [
+      'Turn them in by hand, then use the torque wrench.',
+      'Tighten them hard with the impact wrench.',
+      'Turn them in by hand, and leave it.',
+    ],
+    'An impact wrench can make a bolt too tight or not tight enough. Only the torque wrench gives the right force.',
+    HOUSE_LINE,
+  ),
+  // Where old oil, filters and cloths go differs per garage: HOUSE_LINE.
+  tipFor(
+    'oilchange',
+    '🫗',
+    'Old oil goes in the drum, not in the drain',
+    'Old oil is bad for water and soil. A little oil can make a lot of water dirty. So catch all the old oil in the drain pan, and pour it into the drum for old oil. Never pour it into a drain or a sink. Old filters and oily cloths go into their own bin. Hot oil can burn your skin: let the engine cool down a little first, and wear gloves. Clean up spilled oil right away: oil on the floor is slippery.',
+    ['Waar gaat de oude olie heen?', 'Where does the old oil go?'],
+    'The drain pan is full of old oil. The drum is at the other end of the workshop. What do you do?',
+    [
+      'Carry it to the drum, carefully.',
+      'Pour it into the drain outside.',
+      'Leave it under the car for later.',
+    ],
+    'Old oil in a drain makes the water dirty. A full pan under a car gets kicked over.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'brakes',
+    '🔴',
+    'Brakes: check twice',
+    'Brakes keep people alive. So work calmly, and check your work twice. After new pads or discs, press the brake pedal a few times before the car moves: the first press often goes too deep. Brake fluid is bad for your skin and for paint: wear gloves, and wipe up drops right away. Do not blow brake dust away with compressed air: clean it with brake cleaner and a cloth. Before the car leaves, check every light, also the brake lights.',
+    ['Ik trap het rempedaal een paar keer in.', 'I press the brake pedal a few times.'],
+    'You fitted new brake pads. The car must go outside. What do you do?',
+    [
+      'Press the brake pedal a few times.',
+      'Drive it out right away.',
+      'Push it out without checking.',
+    ],
+    'After new pads the pedal can go too deep the first time. Then the car does not stop.',
+    NONE,
+  ),
+  // What a mechanic may do without asking differs per garage: HOUSE_LINE.
+  tipFor(
+    'diagnosis',
+    '🏷️',
+    'Treat the car as if it is your own',
+    'A customer gives you their car and their key. Treat both with care. Put a seat cover on the seat and a mat on the floor before you get in. Do only what is on the job card. Do you find something else that is wrong? Write it down and tell your supervisor: the customer decides. Keep the key in its place, with its label. Do not use the radio, the phone or the things in the car.',
+    ['Dit staat niet op de werkorder.', 'This is not on the job card.'],
+    'You change the oil. A tyre is almost bald. It is not on the job card. What do you do?',
+    [
+      'Write it down, and tell your supervisor.',
+      'Change the tyre right away.',
+      'Say nothing: it is not your job.',
+    ],
+    'The customer decides what is done and paid. But they must know that the tyre is dangerous.',
+    HOUSE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

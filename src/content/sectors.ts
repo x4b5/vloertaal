@@ -61,7 +61,8 @@ export const sectors: Sector[] = [
   { id: 'cleaning', nl: 'Schoonmaak', key: 'sectorCleaning', units: ['u.clean'], focus: ['u.time', 'u.safety'],
     rules: { units: ['r.clean'], focus: ['r.veilig', 'r.tijd'] } },
   // Tuinbouw en kas (30 October 2026): heat, sprays and lifting (Safety), and piece rate (Pay).
-  { id: 'horticulture', nl: 'Tuinbouw', key: 'sectorHorticulture', units: ['u.kas'], focus: ['u.safety', 'u.pay'],
+  // "Kweken, sorteren en de kas" (u.kweek, 22 November 2026): the second own unit of Tuinbouw.
+  { id: 'horticulture', nl: 'Tuinbouw', key: 'sectorHorticulture', units: ['u.kas', 'u.kweek'], focus: ['u.safety', 'u.pay'],
     rules: { units: ['r.kas'], focus: ['r.veilig', 'r.loon'] } },
   // Techniek (metaal, elektro, installatie) and the garage (mobiliteit), from the Entree rounds
   // (30 October 2026, docs/werkregels-curriculum.md deel 7): sparks, noise and power (Safety), and
@@ -69,7 +70,8 @@ export const sectors: Sector[] = [
   // "Elektra, leidingen en metaal" (u.install, 21 November 2026): the second own unit of Techniek.
   { id: 'technical', nl: 'Techniek', key: 'sectorTechnical', units: ['u.tech', 'u.install'], focus: ['u.safety', 'u.finish'],
     rules: { units: ['r.techniek'], focus: ['r.veilig', 'r.afronden'] } },
-  { id: 'garage', nl: 'Garage', key: 'sectorGarage', units: ['u.garage'], focus: ['u.safety', 'u.finish'],
+  // "Banden, olie en remmen" (u.carservice, 22 November 2026): the second own unit of Garage.
+  { id: 'garage', nl: 'Garage', key: 'sectorGarage', units: ['u.garage', 'u.carservice'], focus: ['u.safety', 'u.finish'],
     rules: { units: ['r.werkplaats'], focus: ['r.veilig', 'r.afronden'] } },
   // De winkel (31 October 2026): was a basis unit for everyone ("Je baan"); now a sector of its
   // own, so who works in a shop or supermarket gets it early. The roster (evenings and weekends)

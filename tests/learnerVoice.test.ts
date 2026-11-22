@@ -157,6 +157,15 @@ const PENDING_RECORDING = new Set<string>([
   'Tot de momentsleutel klikt.',
   'Nee, nooit onder een hangende last.',
   'Nee, er zit een barst in.',
+  // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026):
+  'Een halve centimeter. Niet dieper.',
+  'Nee, nog te groen. Laat hem hangen.',
+  'Het scherm is dicht, en de ramen ook.',
+  'Nee, dat is een sluipwesp. Die helpt ons.',
+  'Ja, het profiel is bijna weg.',
+  'Vier liter. Kijk daarna op de peilstok.',
+  'Ja, hij is te dun.',
+  'Kijk op de werkorder.',
 ]);
 
 

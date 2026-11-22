@@ -134,6 +134,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "Parça kutusunun neredeyse boş olduğunu söyleyebilirim.", // nieuw, nalezen
     'kjn.u.montage.2': "Bir cıvatanın ne kadar sıkı olması gerektiğini sorabilirim.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "Bir bitkide küf olduğunu söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.kweek.2': "Bir domatesin yeterince olgun olup olmadığını sorabilirim.", // nieuw, nalezen
+    'kjn.u.carservice.1': "Uyarı lambasının yandığını söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.carservice.2': "Ne kadar yağ girmesi gerektiğini sorabilirim.", // nieuw, nalezen
   },
 };
 

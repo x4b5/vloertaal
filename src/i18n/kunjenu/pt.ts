@@ -134,6 +134,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "Consigo dizer que a caixa de peças está quase vazia.", // nieuw, nalezen
     'kjn.u.montage.2': "Consigo perguntar quão apertado tem de ficar um parafuso.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "Consigo dizer que há bolor numa planta.", // nieuw, nalezen
+    'kjn.u.kweek.2': "Consigo perguntar se um tomate está maduro que chegue.", // nieuw, nalezen
+    'kjn.u.carservice.1': "Consigo dizer que a luz de aviso está acesa.", // nieuw, nalezen
+    'kjn.u.carservice.2': "Consigo perguntar quanto óleo tem de levar.", // nieuw, nalezen
   },
 };
 

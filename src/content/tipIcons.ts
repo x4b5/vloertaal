@@ -67,6 +67,15 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🔧': 'w.momentsleutel',
   '🪝': 'w.hijshaak',
   '☑': 'w.goedkeursticker',
+  // Kweken, sorteren en de kas and Banden, olie en remmen (22 November 2026): each tip shows a word of its own lesson.
+  '🌱': 'w.zaaibak',
+  '🍅': 'w.tros',
+  '💨': 'w.luchtraam',
+  '🐞': 'w.luis',
+  '🛞': 'w.bandenprofiel',
+  '🫗': 'w.opvangbak',
+  '🔴': 'w.remblok',
+  '🏷': 'w.autosleutel',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

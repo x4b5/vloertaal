@@ -136,6 +136,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "Мога да кажа, че кутията за части е почти празна.", // nieuw, nalezen
     'kjn.u.montage.2': "Мога да попитам колко здраво трябва да е затегнат един болт.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "Мога да кажа, че по растение има плесен.", // nieuw, nalezen
+    'kjn.u.kweek.2': "Мога да попитам дали един домат е достатъчно узрял.", // nieuw, nalezen
+    'kjn.u.carservice.1': "Мога да кажа, че предупредителната лампичка свети.", // nieuw, nalezen
+    'kjn.u.carservice.2': "Мога да попитам колко масло трябва да се сложи.", // nieuw, nalezen
   },
 };
 

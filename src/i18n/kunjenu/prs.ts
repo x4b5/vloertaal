@@ -135,6 +135,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "می‌توانم بگویم که قطی پرزه‌ها تقریباً خالی است.", // nieuw, nalezen
     'kjn.u.montage.2': "می‌توانم بپرسم که یک بولت باید چقدر محکم باشد.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "می‌توانم بگویم که روی یک نبات پوپنک است.", // nieuw, nalezen
+    'kjn.u.kweek.2': "می‌توانم بپرسم که یک بادنجان رومی به اندازهٔ کافی پخته است یا نی.", // nieuw, nalezen
+    'kjn.u.carservice.1': "می‌توانم بگویم که چراغ اخطار روشن است.", // nieuw, nalezen
+    'kjn.u.carservice.2': "می‌توانم بپرسم که چقدر روغن باید انداخته شود.", // nieuw, nalezen
   },
 };
 

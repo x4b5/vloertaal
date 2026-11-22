@@ -17,6 +17,14 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-22',
+    items: [
+      'Nieuw onderwerp in Taal voor de Tuinbouw: Kweken, sorteren en de kas. Wie Tuinbouw kiest, krijgt het direct na In de kas. Vier lessen: zaaien en stekken, sorteren en verpakken, de kas en het klimaat, en plagen en schoon werken.',
+      'Nieuw onderwerp in Taal voor de Garage: Banden, olie en remmen. Wie Garage kiest, krijgt het direct na In de garage. Vier lessen: banden wisselen, olie verversen, remmen en lampen, en uitlezen en de werkorder.',
+      'Bij elke les hoort een tip van "Zo werkt het hier" en een eigen tekening per woord. Alles staat in alle hulptalen; de vertalingen zijn nog niet nagekeken door een moedertaalspreker. De stemmen volgen: tot dan leest de stem van je telefoon de nieuwe zinnen voor.',
+    ],
+  },
+  {
     date: '2026-11-21',
     items: [
       'Bouw: Tegels, stuc en verf heeft nu vijf lessen. Nieuw: verven, en het werk voor het verven (schuren, plamuren, afplakken).',

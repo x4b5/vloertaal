@@ -199,6 +199,15 @@ const t: CultureTranslation = {
     'c.fastening.a.why': "پرسیده‌اند چقدر سفت: تا وقتی آچار تق صدا بدهد.", // nieuw, nalezen
     'c.handling.a.why': "پرسیده‌اند اجازه دارد آنجا بایستد یا نه: نه، هیچ‌وقت، و چرا.", // nieuw, nalezen
     'c.finalcheck.a.why': "پرسیده‌اند سالم است یا نه: نه، و چه ایرادی دارد.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'c.sowing.a.why': "پرسیده‌اند چقدر عمیق: اندازه‌اش، و نه عمیق‌تر.", // nieuw, nalezen
+    'c.sorting.a.why': "پرسیده‌اند رسیده است یا نه: نه، زیادی سبز است، و چه باید کرد.", // nieuw, nalezen
+    'c.greenhouse.a.why': "پرسیده‌اند چرا گرم است: پرده و دریچه‌ها بسته‌اند.", // nieuw, nalezen
+    'c.pests.a.why': "پرسیده‌اند اجازه دارد آن را بکشد یا نه: نه، و چرا کمک می‌کند.", // nieuw, nalezen
+    'c.tyres.a.why': "پرسیده‌اند باید عوض شوند یا نه: بله، و چرا.", // nieuw, nalezen
+    'c.oilchange.a.why': "پرسیده‌اند چقدر: چند لیتر، و طرز بررسی‌اش.", // nieuw, nalezen
+    'c.brakes.a.why': "پرسیده‌اند باید نو شود یا نه: بله، و چرا.", // nieuw, nalezen
+    'c.diagnosis.a.why': "پرسیده‌اند چه کاری باید انجام شود: نگاه کردن به برگهٔ کار.", // nieuw, nalezen
   },
 };
 

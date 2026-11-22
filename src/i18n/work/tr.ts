@@ -2816,6 +2816,169 @@ const t: CultureTranslation = {
     'c.finalcheck.o2': "Onay etiketini yapıştırırsın: çizik küçük.", // nieuw, nalezen
     'c.finalcheck.o3': "Etiketi çiziğin üstüne kaydırırsın.", // nieuw, nalezen
     'c.finalcheck.w': "Küçük bir çizik, hatta bir sorunun işareti olabilir. Onu saklamak, sorunu sadece müşteriye taşır.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'u.kweek': "Yetiştirme, ayıklama ve sera", // nieuw, nalezen
+    'l.sowing': "Ekim ve çelik", // nieuw, nalezen
+    'w.zaad': "tohumlar", // nieuw, nalezen
+    'w.zaaibak': "fide viyolü", // nieuw, nalezen
+    'w.stek': "çelik (yeni kök salan bir bitki parçası)", // nieuw, nalezen
+    'w.potgrond': "saksı toprağı", // nieuw, nalezen
+    'w.kweekpot': "fide saksısı", // nieuw, nalezen
+    'w.gieter': "sulama kabı", // nieuw, nalezen
+    's.sowing.1': "Her göze iki tohum koy.", // nieuw, nalezen
+    's.sowing.2': "Çeliği saksı toprağına koy.", // nieuw, nalezen
+    's.sowing.3': "Genç bitkilere biraz su ver.", // nieuw, nalezen
+    'c.sowing.q': "Tohum ne kadar derine girmeli?", // nieuw, nalezen
+    'c.sowing.a': "Yarım santimetre. Daha derine değil.", // nieuw, nalezen
+    'c.sowing': "Küçük bitkiler nazik bir el ister", // nieuw, nalezen
+    'c.sowing.b': "Genç bitkiler zayıftır. Bir çeliği ya da fideyi saptan değil, yapraktan tut: yaprak yeniden büyür, kırık bir sap büyümez. Toprağı sert değil, hafifçe bastır. Tohumlar akıp gitmesin diye suyu yavaşça, ince bir püskürtmeyle ver. Temiz ellerle ve temiz viyollerle çalış: genç bitkiler kolayca hastalanır. Herkes içinde ne olduğunu bilsin diye her viyolün üstüne tarihi ve bitki çeşidini yaz.", // nieuw, nalezen
+    'c.sowing.p': "Onu yapraktan tutuyorum.", // nieuw, nalezen
+    'c.sowing.s': "Küçük bir fideyi bir saksıya taşıman gerekiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.sowing.o1': "Onu nazikçe bir yapraktan tutarsın.", // nieuw, nalezen
+    'c.sowing.o2': "Onu saptan çekip çıkarırsın.", // nieuw, nalezen
+    'c.sowing.o3': "Onu toprakla birlikte sıkarak çıkarırsın.", // nieuw, nalezen
+    'c.sowing.w': "Bir yaprak yeniden büyüyebilir. Kırık bir sap büyüyemez ve o zaman bitki ölür.", // nieuw, nalezen
+    'l.sorting': "Ayıklama ve paketleme", // nieuw, nalezen
+    'w.tros': "salkım (tek bir sapta bir demet domates)", // nieuw, nalezen
+    'w.bakje': "kutu (meyve için küçük bir kutu)", // nieuw, nalezen
+    'w.sorteermachine': "ayıklama makinesi", // nieuw, nalezen
+    'w.etiketpistool': "etiket tabancası", // nieuw, nalezen
+    'w.kleurenkaart': "renk kartı (meyvenin ne kadar olgun olması gerektiğini gösterir)", // nieuw, nalezen
+    'w.tomatenschaar': "hasat makası", // nieuw, nalezen
+    's.sorting.1': "Salkımları kasaya dikkatlice koy.", // nieuw, nalezen
+    's.sorting.2': "Bu domates fazla olgun. Kenara gidiyor.", // nieuw, nalezen
+    's.sorting.3': "Renk kartına bak.", // nieuw, nalezen
+    'c.sorting.q': "Bu domates yeterince olgun mu?", // nieuw, nalezen
+    'c.sorting.a': "Hayır, hâlâ fazla yeşil. Bitkide bırak.", // nieuw, nalezen
+    'c.sorting': "Her meyve önemlidir", // nieuw, nalezen
+    'c.sorting.b': "Meyve ve sebze kolayca ezilir. Onları yavaşça bırak, düşürme ya da fırlatma. Bugün bir ezik görmezsin, ama yarın meyve yumuşak ve kahverengidir. Hangi rengin nereye gittiğini bilmek için renk kartına bak. Hasarlı ya da çürük bir meyveyi kenara koy: bir kutudaki tek bir kötü meyve diğerlerini bozabilir. Kutuları ve kasaları temiz tut ve onları asla yere koyma.", // nieuw, nalezen
+    'c.sorting.p': "Bu hasarlı.", // nieuw, nalezen
+    'c.sorting.s': "Kutu dolduruyorsun. Bir domateste yumuşak, kahverengi bir leke var. Ne yaparsın?", // nieuw, nalezen
+    'c.sorting.o1': "Onu kenara koyarsın.", // nieuw, nalezen
+    'c.sorting.o2': "Onu kutunun dibine saklarsın.", // nieuw, nalezen
+    'c.sorting.o3': "Onu yine de paketlersin.", // nieuw, nalezen
+    'c.sorting.w': "Çürük bir domates diğerlerinin daha hızlı çürümesine yol açar. Müşteri onu bulur ve bütün kutu geri gelir.", // nieuw, nalezen
+    'l.greenhouse': "Sera ve iklimi", // nieuw, nalezen
+    'w.buisrailkar': "boru ray arabası (ısıtma borularının üstünde gider)", // nieuw, nalezen
+    'w.druppelaar': "damlatıcı (suyu damla damla verir)", // nieuw, nalezen
+    'w.luchtraam': "çatı penceresi (çatıdaki bir pencere)", // nieuw, nalezen
+    'w.kasscherm': "sera perdesi (çatının altındaki bir bez)", // nieuw, nalezen
+    'w.ventilator': "vantilatör", // nieuw, nalezen
+    'w.thermometer': "termometre", // nieuw, nalezen
+    's.greenhouse.1': "Boru ray arabasını sıranın sonuna sür.", // nieuw, nalezen
+    's.greenhouse.2': "Damlatıcı gevşek.", // nieuw, nalezen
+    's.greenhouse.3': "Hava sıcak. Çatı pencereleri açılıyor.", // nieuw, nalezen
+    'c.greenhouse.q': "Serada neden bu kadar sıcak?", // nieuw, nalezen
+    'c.greenhouse.a': "Perde kapalı, pencereler de.", // nieuw, nalezen
+    'c.greenhouse': "İklimi bilgisayara bırak", // nieuw, nalezen
+    'c.greenhouse.b': "Serada iklimi bir bilgisayar ayarlar: pencereleri, perdeyi, ısıtmayı ve suyu. Bir pencereyi kendin açma ya da bir ayarı kendin değiştirme. Sızdıran bir damlatıcı ya da kapanmayan bir pencere gibi garip bir şey mi görüyorsun? Amirine söyle. Boru ray arabası ısıtma borularının üstünde gider: onu sadece nasıl kullanılacağını öğrendiysen kullan. Ayaklarını platformda tut ve borulara asla dokunma: sıcak olabilirler. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.greenhouse.p': "Bu damlatıcı sızdırıyor.", // nieuw, nalezen
+    'c.greenhouse.s': "Bir damlatıcı gevşemiş. Su yere akıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.greenhouse.o1': "Onu yerine takar ve amirine söylersin.", // nieuw, nalezen
+    'c.greenhouse.o2': "Bırakırsın: sadece su.", // nieuw, nalezen
+    'c.greenhouse.o3': "Bütün sıranın suyunu kapatırsın.", // nieuw, nalezen
+    'c.greenhouse.w': "Gevşek bir damlatıcı su israf eder, bitki çok az su alır ve ıslak zemin kaygandır.", // nieuw, nalezen
+    'l.pests': "Zararlılar ve temiz çalışmak", // nieuw, nalezen
+    'w.luis': "yaprak biti (bitkilerin üstünde küçük yeşil bir böcek)", // nieuw, nalezen
+    'w.vangplaat': "yapışkan tuzak (böcekleri yakalayan sarı bir kart)", // nieuw, nalezen
+    'w.rups': "tırtıl", // nieuw, nalezen
+    'w.sluipwesp': "parazit eşek arısı (zararlıları öldüren küçük bir eşek arısı)", // nieuw, nalezen
+    'w.schimmel': "küf", // nieuw, nalezen
+    'w.ontsmettingsmat': "dezenfeksiyon paspası (kapıda üstüne basarsın)", // nieuw, nalezen
+    's.pests.1': "Bu yaprakta yaprak bitleri var.", // nieuw, nalezen
+    's.pests.2': "Yapışkan tuzağı bitkilerin üstüne as.", // nieuw, nalezen
+    's.pests.3': "Dezenfeksiyon paspasının üstünden yürü.", // nieuw, nalezen
+    'c.pests.q': "Bu eşek arısını öldürebilir miyim?", // nieuw, nalezen
+    'c.pests.a': "Hayır, o bir parazit eşek arısı. Bize yardım ediyor.", // nieuw, nalezen
+    'c.pests': "Hastalıkları sıradan sıraya taşıma", // nieuw, nalezen
+    'c.pests.b': "Serada bir hastalık ya da zararlı hızla yayılır. Onu ellerinde, kıyafetlerinde ve aletlerinde taşıyabilirsin. Bu yüzden her kapıda dezenfeksiyon paspasının üstünden yürü ve seranın başka bir bölümüne geçerken ellerini yıka. İşine sağlıklı sıralarda başla ve hasta sıralarda bitir. Bir bitkide böcek, leke ya da küf mü görüyorsun? Ona dokunma, ama nerede olduğunu amirine söyle. Seradaki bazı böcekler yardımcıdır: onları rahat bırak. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.pests.p': "Burada küf var.", // nieuw, nalezen
+    'c.pests.s': "Sırandaki birkaç bitkide gri küf görüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.pests.o1': "Nerede olduğunu amirine söylersin.", // nieuw, nalezen
+    'c.pests.o2': "Kötü yaprakları koparır ve devam edersin.", // nieuw, nalezen
+    'c.pests.o3': "Hiçbir şey söylemezsin: sadece birkaç bitki.", // nieuw, nalezen
+    'c.pests.w': "Küf hızla yayılır. Amirin ne yapılacağını ve nereden başlanacağını bilir.", // nieuw, nalezen
+    'u.carservice': "Lastik, yağ ve frenler", // nieuw, nalezen
+    'l.tyres': "Lastik değiştirmek", // nieuw, nalezen
+    'w.wielbout': "bijon cıvatası", // nieuw, nalezen
+    'w.slagmoersleutel': "darbeli somun anahtarı", // nieuw, nalezen
+    'w.bandenspanningsmeter': "lastik basınç ölçer", // nieuw, nalezen
+    'w.bandenprofiel': "lastik dişi (lastikteki oluklar)", // nieuw, nalezen
+    'w.velg': "jant", // nieuw, nalezen
+    'w.bandenwisselaar': "lastik sökme makinesi (lastiği janttan çıkaran bir makine)", // nieuw, nalezen
+    's.tyres.1': "Bijon cıvatalarını çapraz sırayla sık.", // nieuw, nalezen
+    's.tyres.2': "Lastik dişi çok az.", // nieuw, nalezen
+    's.tyres.3': "Basıncı lastik basınç ölçerle ölç.", // nieuw, nalezen
+    'c.tyres.q': "Bu lastiklerin çıkması lazım mı?", // nieuw, nalezen
+    'c.tyres.a': "Evet, diş neredeyse bitti.", // nieuw, nalezen
+    'c.tyres': "Elle tak, tork anahtarıyla sık", // nieuw, nalezen
+    'c.tyres.b': "Darbeli somun anahtarı hızlı ve çok güçlüdür. Onu bijon cıvatalarını sökmek için kullan, ama sıkıca sıkmak için değil. Önce cıvataları elle tak. Sonra onları tork anahtarıyla, o arabanın kuvvetine göre çapraz sırayla sık. Sıkı olmayan bir tekerlek yolda giderken çıkabilir. Eline aldığın her lastiğin dişini ve basıncını kontrol et. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.tyres.p': "Önce onları elle takıyorum.", // nieuw, nalezen
+    'c.tyres.s': "Bir tekerleği geri takıyorsun. Bir iş arkadaşın diyor ki: “Darbeli somun anahtarını kullan, daha hızlı.” Ne yaparsın?", // nieuw, nalezen
+    'c.tyres.o1': "Elle takar, sonra tork anahtarını kullanırsın.", // nieuw, nalezen
+    'c.tyres.o2': "Darbeli somun anahtarıyla sıkıca sıkarsın.", // nieuw, nalezen
+    'c.tyres.o3': "Elle takar ve öyle bırakırsın.", // nieuw, nalezen
+    'c.tyres.w': "Darbeli somun anahtarı bir cıvatayı fazla sıkabilir ya da yeterince sıkmayabilir. Doğru kuvveti sadece tork anahtarı verir.", // nieuw, nalezen
+    'l.oilchange': "Yağ değiştirmek", // nieuw, nalezen
+    'w.oliefilter': "yağ filtresi", // nieuw, nalezen
+    'w.oliepeilstok': "yağ çubuğu (ne kadar yağ olduğunu gösterir)", // nieuw, nalezen
+    'w.opvangbak': "yağ toplama kabı (eski yağı toplar)", // nieuw, nalezen
+    'w.trechter': "huni", // nieuw, nalezen
+    'w.aftapplug': "boşaltma tapası", // nieuw, nalezen
+    'w.olievat': "yağ varili", // nieuw, nalezen
+    's.oilchange.1': "Yağ toplama kabını motorun altına koy.", // nieuw, nalezen
+    's.oilchange.2': "Boşaltma tapasını sök.", // nieuw, nalezen
+    's.oilchange.3': "Yağ çubuğuna bak.", // nieuw, nalezen
+    'c.oilchange.q': "Ne kadar yağ girmeli?", // nieuw, nalezen
+    'c.oilchange.a': "Dört litre. Sonra yağ çubuğuna bak.", // nieuw, nalezen
+    'c.oilchange': "Eski yağ varile gider, gidere değil", // nieuw, nalezen
+    'c.oilchange.b': "Eski yağ suya ve toprağa zararlıdır. Biraz yağ bile çok fazla suyu kirletebilir. Bu yüzden bütün eski yağı yağ toplama kabında topla ve eski yağ variline dök. Onu asla bir gidere ya da lavaboya dökme. Eski filtreler ve yağlı bezler kendi çöp kutularına gider. Sıcak yağ cildini yakabilir: önce motoru biraz soğumaya bırak ve eldiven giy. Dökülen yağı hemen temizle: yerdeki yağ kaygandır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.oilchange.p': "Eski yağ nereye gidiyor?", // nieuw, nalezen
+    'c.oilchange.s': "Yağ toplama kabı eski yağla dolu. Varil atölyenin öbür ucunda. Ne yaparsın?", // nieuw, nalezen
+    'c.oilchange.o1': "Onu dikkatlice varile taşırsın.", // nieuw, nalezen
+    'c.oilchange.o2': "Onu dışarıdaki gidere dökersin.", // nieuw, nalezen
+    'c.oilchange.o3': "Sonra için arabanın altında bırakırsın.", // nieuw, nalezen
+    'c.oilchange.w': "Gidere dökülen eski yağ suyu kirletir. Arabanın altında duran dolu bir kaba birisi çarpar ve kap devrilir.", // nieuw, nalezen
+    'l.brakes': "Frenler ve lambalar", // nieuw, nalezen
+    'w.remschijf': "fren diski", // nieuw, nalezen
+    'w.remblok': "fren balatası", // nieuw, nalezen
+    'w.koplamp': "far", // nieuw, nalezen
+    'w.remvloeistof': "fren hidroliği", // nieuw, nalezen
+    'w.remklauw': "fren kaliperi", // nieuw, nalezen
+    'w.achterlamp': "arka lamba", // nieuw, nalezen
+    's.brakes.1': "Fren balataları aşınmış.", // nieuw, nalezen
+    's.brakes.2': "Fren hidroliğini kontrol et.", // nieuw, nalezen
+    's.brakes.3': "Sol arka lamba çalışmıyor.", // nieuw, nalezen
+    'c.brakes.q': "Fren diskinin de değişmesi lazım mı?", // nieuw, nalezen
+    'c.brakes.a': "Evet, çok ince.", // nieuw, nalezen
+    'c.brakes': "Frenler: iki kez kontrol et", // nieuw, nalezen
+    'c.brakes.b': "Frenler insanları hayatta tutar. Bu yüzden sakin çalış ve işini iki kez kontrol et. Yeni balata ya da diskten sonra, araba hareket etmeden önce fren pedalına birkaç kez bas: ilk basış çoğu zaman fazla derine gider. Fren hidroliği cildine ve boyaya zararlıdır: eldiven giy ve damlaları hemen sil. Fren tozunu basınçlı havayla üfleme: onu fren temizleyiciyle ve bir bezle temizle. Araba çıkmadan önce her lambayı kontrol et, fren lambalarını da.", // nieuw, nalezen
+    'c.brakes.p': "Fren pedalına birkaç kez basıyorum.", // nieuw, nalezen
+    'c.brakes.s': "Yeni fren balataları taktın. Arabanın dışarı çıkması gerekiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.brakes.o1': "Fren pedalına birkaç kez basarsın.", // nieuw, nalezen
+    'c.brakes.o2': "Onu hemen dışarı sürersin.", // nieuw, nalezen
+    'c.brakes.o3': "Kontrol etmeden dışarı itersin.", // nieuw, nalezen
+    'c.brakes.w': "Yeni balatalardan sonra pedal ilk seferde fazla derine gidebilir. O zaman araba durmaz.", // nieuw, nalezen
+    'l.diagnosis': "Arıza okumak ve iş emri", // nieuw, nalezen
+    'w.diagnosecomputer': "arıza tespit cihazı (arabanın arızalarını okur)", // nieuw, nalezen
+    'w.waarschuwingslampje': "uyarı lambası (gösterge panelinde)", // nieuw, nalezen
+    'w.werkorder': "iş emri (arabada ne yapılması gerektiği)", // nieuw, nalezen
+    'w.kentekenplaat': "plaka", // nieuw, nalezen
+    'w.autosleutel': "araba anahtarı", // nieuw, nalezen
+    'w.stoelhoes': "koltuk kılıfı (koltuğu temiz tutar)", // nieuw, nalezen
+    's.diagnosis.1': "Arıza tespit cihazını bağla.", // nieuw, nalezen
+    's.diagnosis.2': "Uyarı lambası yanıyor.", // nieuw, nalezen
+    's.diagnosis.3': "Koltuğa bir koltuk kılıfı geçir.", // nieuw, nalezen
+    'c.diagnosis.q': "Bu arabada ne yapılması gerekiyor?", // nieuw, nalezen
+    'c.diagnosis.a': "İş emrine bak.", // nieuw, nalezen
+    'c.diagnosis': "Arabaya kendi araban gibi davran", // nieuw, nalezen
+    'c.diagnosis.b': "Bir müşteri sana arabasını ve anahtarını verir. İkisine de özenle davran. Binmeden önce koltuğa bir koltuk kılıfı geçir ve yere bir paspas koy. Sadece iş emrinde yazanı yap. Başka bozuk bir şey mi buluyorsun? Not al ve amirine söyle: karar müşterinindir. Anahtarı etiketiyle birlikte yerinde tut. Radyoyu, telefonu ya da arabadaki eşyaları kullanma. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.diagnosis.p': "Bu iş emrinde yok.", // nieuw, nalezen
+    'c.diagnosis.s': "Yağ değiştiriyorsun. Bir lastiğin dişi neredeyse bitmiş. Bu iş emrinde yok. Ne yaparsın?", // nieuw, nalezen
+    'c.diagnosis.o1': "Not alır ve amirine söylersin.", // nieuw, nalezen
+    'c.diagnosis.o2': "Lastiği hemen değiştirirsin.", // nieuw, nalezen
+    'c.diagnosis.o3': "Hiçbir şey söylemezsin: bu senin işin değil.", // nieuw, nalezen
+    'c.diagnosis.w': "Neyin yapılıp ödeneceğine müşteri karar verir. Ama lastiğin tehlikeli olduğunu bilmesi gerekir.", // nieuw, nalezen
   },
 };
 

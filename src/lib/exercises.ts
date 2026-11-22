@@ -972,9 +972,10 @@ export function buildRuleLesson(lesson: Lesson, opts: { seed?: number; review?: 
 // hout en vastmaken" (20 November 2026): one topic more, and buildAll stays one step after front;
 // front 25 and buildAll 26 since "Machines en gereedschap" (21 November 2026), the same way;
 // front 26 and buildAll 27 since "Elektra, leidingen en metaal" (the same day); front 27 and
-// buildAll 28 since "Assemblage en montage" (the same day). The early steps (4, 7, 10) count topics done,
+// buildAll 28 since "Assemblage en montage" (the same day); front 29 and buildAll 30 since the
+// second units of Tuinbouw and Garage (22 November 2026), two topics more. The early steps (4, 7, 10) count topics done,
 // so they stay: a learner has still had that many topics before each step.
-export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10, front: 27, buildAll: 28 } as const;
+export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10, front: 29, buildAll: 30 } as const;
 
 /** A line of a lesson that can be built: its sentences and the lines of its chats. */
 function linesOf(lesson: Lesson): Sentence[] {

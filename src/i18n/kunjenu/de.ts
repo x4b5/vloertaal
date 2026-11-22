@@ -134,6 +134,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "Ich kann sagen, dass die Teilekiste fast leer ist.", // nieuw, nalezen
     'kjn.u.montage.2': "Ich kann fragen, wie fest ein Bolzen sein muss.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "Ich kann sagen, dass an einer Pflanze Schimmel ist.", // nieuw, nalezen
+    'kjn.u.kweek.2': "Ich kann fragen, ob eine Tomate reif genug ist.", // nieuw, nalezen
+    'kjn.u.carservice.1': "Ich kann sagen, dass die Warnleuchte an ist.", // nieuw, nalezen
+    'kjn.u.carservice.2': "Ich kann fragen, wie viel Öl rein muss.", // nieuw, nalezen
   },
 };
 

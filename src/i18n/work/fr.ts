@@ -2815,6 +2815,169 @@ const t: CultureTranslation = {
     'c.finalcheck.o2': "Tu mets l’autocollant : c’est petit.", // nieuw, nalezen
     'c.finalcheck.o3': "Tu déplaces l’étiquette sur la rayure.", // nieuw, nalezen
     'c.finalcheck.w': "Une petite rayure peut être le signe d’un problème sur la chaîne. La cacher envoie juste le problème chez le client.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'u.kweek': "Cultiver, trier et la serre", // nieuw, nalezen
+    'l.sowing': "Semer et bouturer", // nieuw, nalezen
+    'w.zaad': "les graines", // nieuw, nalezen
+    'w.zaaibak': "le plateau de semis", // nieuw, nalezen
+    'w.stek': "la bouture (un morceau de plante qui fait de nouvelles racines)", // nieuw, nalezen
+    'w.potgrond': "le terreau", // nieuw, nalezen
+    'w.kweekpot': "le pot de culture", // nieuw, nalezen
+    'w.gieter': "l’arrosoir", // nieuw, nalezen
+    's.sowing.1': "Mets deux graines dans chaque case.", // nieuw, nalezen
+    's.sowing.2': "Mets la bouture dans le terreau.", // nieuw, nalezen
+    's.sowing.3': "Donne un peu d’eau aux jeunes plantes.", // nieuw, nalezen
+    'c.sowing.q': "La graine doit aller à quelle profondeur ?", // nieuw, nalezen
+    'c.sowing.a': "Un demi-centimètre. Pas plus profond.", // nieuw, nalezen
+    'c.sowing': "Les petites plantes demandent une main douce", // nieuw, nalezen
+    'c.sowing.b': "Les jeunes plantes sont fragiles. Tiens une bouture ou un semis par une feuille, pas par la tige : une feuille repousse, une tige cassée non. Appuie doucement sur la terre, pas fort. Arrose lentement, avec un jet fin, pour que les graines ne partent pas avec l’eau. Travaille avec des mains propres et des plateaux propres : les jeunes plantes tombent vite malades. Écris la date et la sorte de plante sur chaque plateau, pour que tout le monde sache ce qu’il y a dedans.", // nieuw, nalezen
+    'c.sowing.p': "Je la tiens par la feuille.", // nieuw, nalezen
+    'c.sowing.s': "Tu dois mettre un petit semis dans un pot. Que fais-tu ?", // nieuw, nalezen
+    'c.sowing.o1': "Tu le tiens doucement par une feuille.", // nieuw, nalezen
+    'c.sowing.o2': "Tu le tires par la tige.", // nieuw, nalezen
+    'c.sowing.o3': "Tu le sors en serrant la terre.", // nieuw, nalezen
+    'c.sowing.w': "Une feuille peut repousser. Une tige cassée non, et alors la plante meurt.", // nieuw, nalezen
+    'l.sorting': "Trier et emballer", // nieuw, nalezen
+    'w.tros': "la grappe (des tomates sur une même tige)", // nieuw, nalezen
+    'w.bakje': "la barquette (une petite boîte pour les fruits)", // nieuw, nalezen
+    'w.sorteermachine': "la trieuse", // nieuw, nalezen
+    'w.etiketpistool': "la pince à étiqueter", // nieuw, nalezen
+    'w.kleurenkaart': "la carte des couleurs (elle montre à quel point le fruit doit être mûr)", // nieuw, nalezen
+    'w.tomatenschaar': "le sécateur de récolte", // nieuw, nalezen
+    's.sorting.1': "Mets les grappes avec soin dans la caisse.", // nieuw, nalezen
+    's.sorting.2': "Cette tomate est trop mûre. Elle va de côté.", // nieuw, nalezen
+    's.sorting.3': "Regarde la carte des couleurs.", // nieuw, nalezen
+    'c.sorting.q': "Cette tomate est assez mûre ?", // nieuw, nalezen
+    'c.sorting.a': "Non, encore trop verte. Laisse-la sur la plante.", // nieuw, nalezen
+    'c.sorting': "Chaque fruit compte", // nieuw, nalezen
+    'c.sorting.b': "Les fruits et les légumes s’abîment facilement. Pose-les, ne les laisse pas tomber et ne les jette pas. Aujourd’hui tu ne vois pas le coup, mais demain le fruit est mou et brun. Regarde la carte des couleurs pour savoir quelle couleur va où. Mets de côté un fruit abîmé ou pourri : un seul mauvais fruit dans une barquette peut gâter les autres. Garde les barquettes et les caisses propres, et ne les pose jamais par terre.", // nieuw, nalezen
+    'c.sorting.p': "Celle-ci est abîmée.", // nieuw, nalezen
+    'c.sorting.s': "Tu remplis des barquettes. Une tomate a une tache brune et molle. Que fais-tu ?", // nieuw, nalezen
+    'c.sorting.o1': "Tu la mets de côté.", // nieuw, nalezen
+    'c.sorting.o2': "Tu la caches au fond.", // nieuw, nalezen
+    'c.sorting.o3': "Tu l’emballes quand même.", // nieuw, nalezen
+    'c.sorting.w': "Une tomate pourrie fait pourrir les autres plus vite. Le client la trouve, et toute la barquette revient.", // nieuw, nalezen
+    'l.greenhouse': "La serre et son climat", // nieuw, nalezen
+    'w.buisrailkar': "le chariot sur rails (il roule sur les tuyaux de chauffage)", // nieuw, nalezen
+    'w.druppelaar': "le goutteur (il donne l’eau goutte à goutte)", // nieuw, nalezen
+    'w.luchtraam': "l’ouvrant (une fenêtre dans le toit)", // nieuw, nalezen
+    'w.kasscherm': "l’écran de serre (une toile sous le toit)", // nieuw, nalezen
+    'w.ventilator': "le ventilateur", // nieuw, nalezen
+    'w.thermometer': "le thermomètre", // nieuw, nalezen
+    's.greenhouse.1': "Roule avec le chariot sur rails jusqu’au bout de la rangée.", // nieuw, nalezen
+    's.greenhouse.2': "Le goutteur est détaché.", // nieuw, nalezen
+    's.greenhouse.3': "Il fait chaud. Les ouvrants s’ouvrent.", // nieuw, nalezen
+    'c.greenhouse.q': "Pourquoi il fait si chaud dans la serre ?", // nieuw, nalezen
+    'c.greenhouse.a': "L’écran est fermé, et les ouvrants aussi.", // nieuw, nalezen
+    'c.greenhouse': "Laisse le climat à l’ordinateur", // nieuw, nalezen
+    'c.greenhouse.b': "Dans une serre, un ordinateur règle le climat : les ouvrants, l’écran, le chauffage et l’eau. N’ouvre pas un ouvrant et ne change pas un réglage toi-même. Tu vois quelque chose de bizarre, comme un goutteur qui fuit ou un ouvrant qui ne se ferme pas ? Dis-le à ton responsable. Le chariot sur rails roule sur les tuyaux de chauffage : utilise-le seulement quand tu as appris comment faire. Garde tes pieds sur la plateforme, et ne touche jamais les tuyaux : ils peuvent être chauds. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.greenhouse.p': "Ce goutteur fuit.", // nieuw, nalezen
+    'c.greenhouse.s': "Un goutteur est détaché. L’eau coule par terre. Que fais-tu ?", // nieuw, nalezen
+    'c.greenhouse.o1': "Tu le remets en place, et tu le dis à ton responsable.", // nieuw, nalezen
+    'c.greenhouse.o2': "Tu laisses : c’est juste de l’eau.", // nieuw, nalezen
+    'c.greenhouse.o3': "Tu coupes l’eau de toute la rangée.", // nieuw, nalezen
+    'c.greenhouse.w': "Un goutteur détaché gaspille de l’eau, la plante en reçoit trop peu, et un sol mouillé est glissant.", // nieuw, nalezen
+    'l.pests': "Les ravageurs et le travail propre", // nieuw, nalezen
+    'w.luis': "le puceron (un petit insecte vert sur les plantes)", // nieuw, nalezen
+    'w.vangplaat': "le piège collant (une carte jaune qui attrape les insectes)", // nieuw, nalezen
+    'w.rups': "la chenille", // nieuw, nalezen
+    'w.sluipwesp': "la guêpe parasite (une petite guêpe qui tue les ravageurs)", // nieuw, nalezen
+    'w.schimmel': "la moisissure", // nieuw, nalezen
+    'w.ontsmettingsmat': "le tapis désinfectant (tu marches dessus à la porte)", // nieuw, nalezen
+    's.pests.1': "Il y a des pucerons sur cette feuille.", // nieuw, nalezen
+    's.pests.2': "Accroche le piège collant au-dessus des plantes.", // nieuw, nalezen
+    's.pests.3': "Marche sur le tapis désinfectant.", // nieuw, nalezen
+    'c.pests.q': "Je peux tuer cette guêpe ?", // nieuw, nalezen
+    'c.pests.a': "Non, c’est une guêpe parasite. Elle nous aide.", // nieuw, nalezen
+    'c.pests': "Ne porte pas les maladies d’une rangée à l’autre", // nieuw, nalezen
+    'c.pests.b': "Une maladie ou un ravageur se répand vite dans une serre. Tu peux le porter sur tes mains, tes vêtements et tes outils. Alors marche sur le tapis désinfectant à chaque porte, et lave-toi les mains quand tu vas dans une autre partie de la serre. Commence ton travail dans les rangées saines, et finis dans les rangées malades. Tu vois des insectes, des taches ou de la moisissure sur une plante ? Ne la touche pas, mais dis à ton responsable où elle est. Certains insectes dans la serre sont des aides : laisse-les tranquilles. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.pests.p': "Il y a de la moisissure ici.", // nieuw, nalezen
+    'c.pests.s': "Tu vois de la moisissure grise sur quelques plantes de ta rangée. Que fais-tu ?", // nieuw, nalezen
+    'c.pests.o1': "Tu dis à ton responsable où elle est.", // nieuw, nalezen
+    'c.pests.o2': "Tu enlèves les mauvaises feuilles et tu continues.", // nieuw, nalezen
+    'c.pests.o3': "Tu ne dis rien : c’est juste quelques plantes.", // nieuw, nalezen
+    'c.pests.w': "La moisissure se répand vite. Ton responsable sait quoi faire, et par où commencer.", // nieuw, nalezen
+    'u.carservice': "Pneus, huile et freins", // nieuw, nalezen
+    'l.tyres': "Changer les pneus", // nieuw, nalezen
+    'w.wielbout': "le boulon de roue", // nieuw, nalezen
+    'w.slagmoersleutel': "la clé à chocs", // nieuw, nalezen
+    'w.bandenspanningsmeter': "le manomètre de pneus", // nieuw, nalezen
+    'w.bandenprofiel': "les sculptures du pneu (les rainures dans le pneu)", // nieuw, nalezen
+    'w.velg': "la jante", // nieuw, nalezen
+    'w.bandenwisselaar': "le démonte-pneu (une machine pour enlever un pneu de la jante)", // nieuw, nalezen
+    's.tyres.1': "Serre les boulons de roue en croix.", // nieuw, nalezen
+    's.tyres.2': "Les sculptures du pneu sont trop usées.", // nieuw, nalezen
+    's.tyres.3': "Mesure la pression avec le manomètre de pneus.", // nieuw, nalezen
+    'c.tyres.q': "Ces pneus doivent être changés ?", // nieuw, nalezen
+    'c.tyres.a': "Oui, les sculptures sont presque parties.", // nieuw, nalezen
+    'c.tyres': "Visse à la main, serre avec la clé dynamométrique", // nieuw, nalezen
+    'c.tyres.b': "Une clé à chocs est rapide et très forte. Utilise-la pour enlever les boulons de roue, mais pas pour les serrer fort. D’abord, visse les boulons à la main. Ensuite, serre-les en croix avec une clé dynamométrique, à la force prévue pour cette voiture. Une roue mal serrée peut se détacher pendant que la voiture roule. Contrôle les sculptures et la pression de chaque pneu que tu prends en main. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.tyres.p': "Je les visse d’abord à la main.", // nieuw, nalezen
+    'c.tyres.s': "Tu remets une roue. Un collègue dit : “Prends la clé à chocs, c’est plus rapide.” Que fais-tu ?", // nieuw, nalezen
+    'c.tyres.o1': "Tu les visses à la main, puis tu prends la clé dynamométrique.", // nieuw, nalezen
+    'c.tyres.o2': "Tu les serres fort avec la clé à chocs.", // nieuw, nalezen
+    'c.tyres.o3': "Tu les visses à la main, et tu laisses comme ça.", // nieuw, nalezen
+    'c.tyres.w': "Une clé à chocs peut serrer un boulon trop fort ou pas assez. Seule la clé dynamométrique donne la bonne force.", // nieuw, nalezen
+    'l.oilchange': "Faire la vidange", // nieuw, nalezen
+    'w.oliefilter': "le filtre à huile", // nieuw, nalezen
+    'w.oliepeilstok': "la jauge d’huile (elle montre combien d’huile il y a)", // nieuw, nalezen
+    'w.opvangbak': "le bac de vidange (il récupère la vieille huile)", // nieuw, nalezen
+    'w.trechter': "l’entonnoir", // nieuw, nalezen
+    'w.aftapplug': "le bouchon de vidange", // nieuw, nalezen
+    'w.olievat': "le fût d’huile", // nieuw, nalezen
+    's.oilchange.1': "Mets le bac de vidange sous le moteur.", // nieuw, nalezen
+    's.oilchange.2': "Dévisse le bouchon de vidange.", // nieuw, nalezen
+    's.oilchange.3': "Regarde la jauge d’huile.", // nieuw, nalezen
+    'c.oilchange.q': "Il faut mettre combien d’huile ?", // nieuw, nalezen
+    'c.oilchange.a': "Quatre litres. Ensuite, regarde la jauge.", // nieuw, nalezen
+    'c.oilchange': "La vieille huile va dans le fût, pas dans l’égout", // nieuw, nalezen
+    'c.oilchange.b': "La vieille huile est mauvaise pour l’eau et pour le sol. Un peu d’huile peut salir beaucoup d’eau. Alors récupère toute la vieille huile dans le bac de vidange, et verse-la dans le fût pour la vieille huile. Ne la verse jamais dans un égout ou dans un évier. Les vieux filtres et les chiffons pleins d’huile vont dans leur propre poubelle. L’huile chaude peut brûler ta peau : laisse d’abord le moteur refroidir un peu, et porte des gants. Nettoie tout de suite l’huile renversée : de l’huile par terre, c’est glissant. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.oilchange.p': "Où va la vieille huile ?", // nieuw, nalezen
+    'c.oilchange.s': "Le bac de vidange est plein de vieille huile. Le fût est à l’autre bout de l’atelier. Que fais-tu ?", // nieuw, nalezen
+    'c.oilchange.o1': "Tu le portes jusqu’au fût, avec précaution.", // nieuw, nalezen
+    'c.oilchange.o2': "Tu le vides dans l’égout dehors.", // nieuw, nalezen
+    'c.oilchange.o3': "Tu le laisses sous la voiture pour plus tard.", // nieuw, nalezen
+    'c.oilchange.w': "De la vieille huile dans un égout salit l’eau. Un bac plein sous une voiture, quelqu’un finit par le renverser d’un coup de pied.", // nieuw, nalezen
+    'l.brakes': "Freins et feux", // nieuw, nalezen
+    'w.remschijf': "le disque de frein", // nieuw, nalezen
+    'w.remblok': "la plaquette de frein", // nieuw, nalezen
+    'w.koplamp': "le phare", // nieuw, nalezen
+    'w.remvloeistof': "le liquide de frein", // nieuw, nalezen
+    'w.remklauw': "l’étrier de frein", // nieuw, nalezen
+    'w.achterlamp': "le feu arrière", // nieuw, nalezen
+    's.brakes.1': "Les plaquettes de frein sont usées.", // nieuw, nalezen
+    's.brakes.2': "Contrôle le liquide de frein.", // nieuw, nalezen
+    's.brakes.3': "Le feu arrière gauche ne marche pas.", // nieuw, nalezen
+    'c.brakes.q': "Le disque de frein doit être changé aussi ?", // nieuw, nalezen
+    'c.brakes.a': "Oui, il est trop fin.", // nieuw, nalezen
+    'c.brakes': "Les freins : contrôle deux fois", // nieuw, nalezen
+    'c.brakes.b': "Les freins gardent les gens en vie. Alors travaille calmement, et contrôle ton travail deux fois. Après des plaquettes ou des disques neufs, appuie quelques fois sur la pédale de frein avant que la voiture bouge : la première fois, la pédale descend souvent trop loin. Le liquide de frein est mauvais pour ta peau et pour la peinture : porte des gants, et essuie les gouttes tout de suite. Ne souffle pas la poussière de frein avec l’air comprimé : nettoie-la avec du nettoyant pour freins et un chiffon. Avant que la voiture parte, contrôle chaque feu, aussi les feux stop.", // nieuw, nalezen
+    'c.brakes.p': "J’appuie quelques fois sur la pédale de frein.", // nieuw, nalezen
+    'c.brakes.s': "Tu as monté des plaquettes de frein neuves. La voiture doit sortir. Que fais-tu ?", // nieuw, nalezen
+    'c.brakes.o1': "Tu appuies quelques fois sur la pédale de frein.", // nieuw, nalezen
+    'c.brakes.o2': "Tu la sors tout de suite en roulant.", // nieuw, nalezen
+    'c.brakes.o3': "Tu la pousses dehors sans contrôler.", // nieuw, nalezen
+    'c.brakes.w': "Après des plaquettes neuves, la pédale peut descendre trop loin la première fois. Alors la voiture ne s’arrête pas.", // nieuw, nalezen
+    'l.diagnosis': "Lire les pannes et le bon de travail", // nieuw, nalezen
+    'w.diagnosecomputer': "l’appareil de diagnostic (il lit les pannes de la voiture)", // nieuw, nalezen
+    'w.waarschuwingslampje': "le voyant d’alerte (sur le tableau de bord)", // nieuw, nalezen
+    'w.werkorder': "le bon de travail (ce qu’il faut faire sur la voiture)", // nieuw, nalezen
+    'w.kentekenplaat': "la plaque d’immatriculation", // nieuw, nalezen
+    'w.autosleutel': "la clé de voiture", // nieuw, nalezen
+    'w.stoelhoes': "la housse de siège (elle garde le siège propre)", // nieuw, nalezen
+    's.diagnosis.1': "Branche l’appareil de diagnostic.", // nieuw, nalezen
+    's.diagnosis.2': "Le voyant d’alerte est allumé.", // nieuw, nalezen
+    's.diagnosis.3': "Mets une housse sur le siège.", // nieuw, nalezen
+    'c.diagnosis.q': "Qu’est-ce qu’il faut faire sur cette voiture ?", // nieuw, nalezen
+    'c.diagnosis.a': "Regarde le bon de travail.", // nieuw, nalezen
+    'c.diagnosis': "Traite la voiture comme si c’était la tienne", // nieuw, nalezen
+    'c.diagnosis.b': "Un client te donne sa voiture et sa clé. Prends soin des deux. Mets une housse sur le siège et un tapis par terre avant de monter. Fais seulement ce qui est sur le bon de travail. Tu trouves autre chose qui ne va pas ? Note-le et dis-le à ton responsable : c’est le client qui décide. Range la clé à sa place, avec son étiquette. N’utilise pas la radio, le téléphone ou les affaires dans la voiture. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.diagnosis.p': "Ce n’est pas sur le bon de travail.", // nieuw, nalezen
+    'c.diagnosis.s': "Tu fais la vidange. Un pneu est presque lisse. Ce n’est pas sur le bon de travail. Que fais-tu ?", // nieuw, nalezen
+    'c.diagnosis.o1': "Tu le notes, et tu le dis à ton responsable.", // nieuw, nalezen
+    'c.diagnosis.o2': "Tu changes le pneu tout de suite.", // nieuw, nalezen
+    'c.diagnosis.o3': "Tu ne dis rien : ce n’est pas ton travail.", // nieuw, nalezen
+    'c.diagnosis.w': "C’est le client qui décide ce qui est fait et payé. Mais il doit savoir que le pneu est dangereux.", // nieuw, nalezen
   },
 };
 

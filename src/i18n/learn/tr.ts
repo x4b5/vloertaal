@@ -199,6 +199,15 @@ const t: CultureTranslation = {
     'c.fastening.a.why': "Ne kadar sıkı olacağı soruluyor: anahtar tık edene kadar.", // nieuw, nalezen
     'c.handling.a.why': "Orada durulup durulamayacağı soruluyor: hayır, asla, bir de nedeni.", // nieuw, nalezen
     'c.finalcheck.a.why': "İyi olup olmadığı soruluyor: hayır, bir de neyinin yanlış olduğu.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'c.sowing.a.why': "Ne kadar derine gideceği soruluyor: derinlik, bir de daha derine gitmediği.", // nieuw, nalezen
+    'c.sorting.a.why': "Olgun olup olmadığı soruluyor: hayır, fazla yeşil, bir de ne yapılacağı.", // nieuw, nalezen
+    'c.greenhouse.a.why': "Neden sıcak olduğu soruluyor: perde ve pencereler kapalı.", // nieuw, nalezen
+    'c.pests.a.why': "Öldürülüp öldürülemeyeceği soruluyor: hayır, bir de neden yardım ettiği.", // nieuw, nalezen
+    'c.tyres.a.why': "Çıkmaları gerekip gerekmediği soruluyor: evet, bir de nedeni.", // nieuw, nalezen
+    'c.oilchange.a.why': "Ne kadar olduğu soruluyor: kaç litre, bir de nasıl kontrol edileceği.", // nieuw, nalezen
+    'c.brakes.a.why': "Yenisinin gerekip gerekmediği soruluyor: evet, bir de nedeni.", // nieuw, nalezen
+    'c.diagnosis.a.why': "Ne yapılması gerektiği soruluyor: iş emrine bakılır.", // nieuw, nalezen
   },
 };
 
