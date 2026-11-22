@@ -364,20 +364,27 @@ export default {
       <rect x="8" y="80" width="104" height="18" rx="3" fill={PAL.cardShade} />
       <rect x="8" y="78" width="104" height="14" rx="3" fill={PAL.card} />
       <path d="M14 84H40M74 86H104" stroke={PAL.cardShade} strokeWidth="1.6" strokeLinecap="round" />
-      {/* The saw: the blade in the cut, the handle up right */}
+      {/* The saw: the blade in the cut, the handle up right. On the intro card it saws once, along
+          its blade: a pull back (from), then a push forward (then), ending where it is drawn. */}
       <g transform="rotate(-24 58 76)">
-        <path d="M20 70L90 62V84L20 80Z" fill={PAL.mist} strokeLinejoin="round" stroke={PAL.mist} strokeWidth="2" />
-        <path d="M22 80L90 84" stroke={PAL.steel} strokeWidth="2.4" />
-        <path d="M24 72L86 65" stroke={PAL.white} strokeWidth="2" strokeLinecap="round" opacity=".7" />
-        <path d="M86 56H104Q110 56 110 64V82Q110 90 102 90H88Z" fill={PAL.wood} />
-        <rect x="93" y="64" width="9" height="16" rx="4" fill={PAL.cardDark} />
+        <Move kind="from" dx={22}>
+          <Move kind="then" dx={-22}>
+            <path d="M20 70L90 62V84L20 80Z" fill={PAL.mist} strokeLinejoin="round" stroke={PAL.mist} strokeWidth="2" />
+            <path d="M22 80L90 84" stroke={PAL.steel} strokeWidth="2.4" />
+            <path d="M24 72L86 65" stroke={PAL.white} strokeWidth="2" strokeLinecap="round" opacity=".7" />
+            <path d="M86 56H104Q110 56 110 64V82Q110 90 102 90H88Z" fill={PAL.wood} />
+            <rect x="93" y="64" width="9" height="16" rx="4" fill={PAL.cardDark} />
+          </Move>
+        </Move>
       </g>
-      {/* Sawdust */}
-      <g fill={PAL.cardShade}>
-        <circle cx="40" cy="102" r="2.4" />
-        <circle cx="47" cy="106" r="2" />
-        <circle cx="34" cy="107" r="1.8" />
-      </g>
+      {/* Sawdust: it comes from the cut as the saw saws */}
+      <Move kind="show">
+        <g fill={PAL.cardShade}>
+          <circle cx="40" cy="102" r="2.4" />
+          <circle cx="47" cy="106" r="2" />
+          <circle cx="34" cy="107" r="1.8" />
+        </g>
+      </Move>
       {/* Back and forth */}
       <g transform="rotate(-24 60 30)">
         <Arrow from={[52, 30]} to={[82, 30]} color={PAL.sky} width={5} head={9} />

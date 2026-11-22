@@ -61,6 +61,8 @@ const MOTION_FUNCTION = [
   'w.popnageltang', 'w.hijshaak', 'w.goedkeursticker', 'w.testbank', 'w.ventilator', 'w.thermometer', 'w.vangplaat', 'w.ontsmettingsmat',
   'w.weegschaal', 'w.sensor', 'w.krimpfolie', 'w.afbreekmes', 'w.steeksleutel', 'w.poetsdoek', 'w.lekbak', 'w.monster', 'w.loep',
   'w.heftruck', 'w.scanner', 'w.kraan', 'w.lopendeband', 'w.dweil', 'w.steekwagen', 'w.folie', 'w.pompwagen',
+  // The owner's "look at zagen" (22 November 2026): the saw pulls back and pushes once, the sawdust comes.
+  'w.zagen',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
