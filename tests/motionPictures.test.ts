@@ -64,7 +64,14 @@ const MOTION_FUNCTION = [
   // The owner's "look at zagen" (22 November 2026): the saw pulls back and pushes once, the sawdust comes.
   'w.zagen',
 ];
-const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION];
+/**
+ * Round 4 (the owner, 22 November 2026: "zagen is an example ... there are probably many others"):
+ * every still picture whose meaning or function is a movement or an action.
+ */
+const MOTION_ROUND4 = [
+  'w.zoeken', 'w.bewaren', 'w.hamer', 'w.afkeuren', 'w.wassen', 'w.prullenbak', 'w.verzamelen', 'w.lossen', 'w.tanken', 'w.opladen', 'w.parkeren', 'w.retour', 'w.typen', 'w.opslaan', 'w.ophangen', 'w.tempo', 'w.vakkenvullen', 'w.pakken', 'w.kruishout', 'w.aftekenen', 'w.mal', 'w.tiewrap',
+];
+const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
 const MOTION_ONLY: [string, string][] = [
   ['w.ontruimen', 'l.alarm'], ['w.bijna', 'l.task'],

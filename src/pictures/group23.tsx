@@ -231,6 +231,7 @@ export default {
   ),
 
   // "typen": two hands with fingers on a keyboard, tapping
+  // On the intro card: both hands come down onto the keys, then the tap lines.
   'w.typen': () => (
     <g>
       {/* Keyboard, seen from the front and a little from above */}
@@ -243,21 +244,28 @@ export default {
       )}
       <rect x="34" y="73" width="52" height="4" rx="1.6" fill={PAL.paperShade} />
       {/* Hands from below, a finger down on a key */}
-      <Hand pose="point" x={40} y={100} scale={0.74} rotate={4} skin={SKIN.jada} sleeve={[PAL.yellow, PAL.yellowShade]} />
-      <Hand pose="point" x={80} y={100} scale={0.74} rotate={-4} skin={SKIN.jada} sleeve={[PAL.yellow, PAL.yellowShade]} mirror />
-      <Motion x={34} y={58} dir={-90} spread={80} len={6} gap={7} color={PAL.sky} width={2.8} />
-      <Motion x={86} y={58} dir={-90} spread={80} len={6} gap={7} color={PAL.sky} width={2.8} />
+      <Move kind="from" dy={18}>
+        <Hand pose="point" x={40} y={100} scale={0.74} rotate={4} skin={SKIN.jada} sleeve={[PAL.yellow, PAL.yellowShade]} />
+        <Hand pose="point" x={80} y={100} scale={0.74} rotate={-4} skin={SKIN.jada} sleeve={[PAL.yellow, PAL.yellowShade]} mirror />
+      </Move>
+      <Move kind="show">
+        <Motion x={34} y={58} dir={-90} spread={80} len={6} gap={7} color={PAL.sky} width={2.8} />
+        <Motion x={86} y={58} dir={-90} spread={80} len={6} gap={7} color={PAL.sky} width={2.8} />
+      </Move>
     </g>
   ),
 
   // "opslaan": a document dropping into a blue tray (saved)
+  // On the intro card: the paper goes down into the tray.
   'w.opslaan': () => (
     <g>
       <Ground cy={106} rx={40} />
       {/* The tray: back wall, the paper going in, then the front */}
       <path d="M18 70H102L96 104H24Z" fill={PAL.blueShade} />
       <g transform="rotate(-4 60 40)">
-        <Paper x={38} y={20} w={40} h={52} lines={5} />
+        <Move kind="from" dy={-26}>
+          <Paper x={38} y={20} w={40} h={52} lines={5} />
+        </Move>
       </g>
       <Shade color={PAL.blueShade} opacity={1} at={[104, 92, 14, 30]}>
         <path d="M14 78H106L98 104H22Z" fill={PAL.blue} />
@@ -301,13 +309,16 @@ export default {
   ),
 
   // "ophangen": a finger presses the red hang-up button
+  // On the intro card: the finger comes in from the bottom right to the red hang-up button.
   'w.ophangen': () => (
     <g>
       <circle cx="54" cy="52" r="38" fill={PAL.redShade} />
       <circle cx="54" cy="48" r="38" fill={PAL.red} />
       <Handset x={54} y={50} k={1.15} />
       <Shine d="M24 36Q30 20 46 15" opacity={0.45} />
-      <Hand pose="point" x={96} y={116} rotate={-28} scale={0.8} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
+      <Move kind="from" dx={20} dy={22}>
+        <Hand pose="point" x={96} y={116} rotate={-28} scale={0.8} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
+      </Move>
     </g>
   ),
 
@@ -385,13 +396,16 @@ export default {
   ),
 
   // "het tempo": a speed dial (green to red, the needle high) over a hand scanner
+  // On the intro card: the needle swings up from the green to the red (fast).
   'w.tempo': () => (
     <g>
       {/* The dial: a half circle in three colours */}
       <path d="M14 64A46 46 0 0 1 37 24L48 43A24 24 0 0 0 36 64Z" fill={PAL.leaf} />
       <path d="M37 24A46 46 0 0 1 83 24L72 43A24 24 0 0 0 48 43Z" fill={PAL.yellow} />
       <path d="M83 24A46 46 0 0 1 106 64H84A24 24 0 0 0 72 43Z" fill={PAL.red} />
-      <path d="M60 64L92 34" stroke={PAL.slateDark} strokeWidth="6" strokeLinecap="round" />
+      <Move kind="turn" turn={-110} at={[60, 64]}>
+        <path d="M60 64L92 34" stroke={PAL.slateDark} strokeWidth="6" strokeLinecap="round" />
+      </Move>
       <circle cx="60" cy="64" r="10" fill={PAL.paperShade} />
       <circle cx="60" cy="64" r="6.5" fill={PAL.slateDark} />
       {/* The scanner below */}

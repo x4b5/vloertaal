@@ -245,6 +245,7 @@ export default {
   ),
 
   // "verzamelen": to collect — products in a blue picking bin; one more goes in (an arrow down).
+  // On the intro card: the red product comes in from the right (off the rack) to above the bin.
   'w.verzamelen': () => (
     <g>
       <Ground cx={60} cy={105} rx={42} ry={4.5} />
@@ -261,8 +262,10 @@ export default {
       <rect x="47" y="76" width="26" height="8" rx="4" fill={PAL.blueShade} />
       <Shine d="M19 59.500H50" color={PAL.blueLight} width={2.6} opacity={0.8} />
       {/* One more */}
-      <rect x="80" y="10" width="16" height="22" rx="4" fill={PAL.red} />
-      <rect x="80" y="17" width="16" height="8" fill={PAL.paper} />
+      <Move kind="from" dx={24}>
+        <rect x="80" y="10" width="16" height="22" rx="4" fill={PAL.red} />
+        <rect x="80" y="17" width="16" height="8" fill={PAL.paper} />
+      </Move>
       <Arrow from={[88, 36]} to={[88, 54]} color={PAL.sky} width={7} head={10} />
     </g>
   ),
@@ -351,6 +354,7 @@ export default {
 
   // "lossen": to unload — the open back of the trailer; an arrow comes out of it to the boxes
   // that stand on a pallet on the floor ("inladen" is an arrow into a van).
+  // On the intro card: the box on its pallet comes out of the trailer onto the floor.
   'w.lossen': () => (
     <g>
       <Ground cx={60} cy={106} rx={52} ry={4} />
@@ -363,8 +367,10 @@ export default {
       <rect x="56" y="22" width="5" height="62" rx="2" fill={PAL.steel} />
       <Wheel cx={26} cy={94} />
       {/* On the floor */}
-      <PalletFront x={66} y={92} w={44} />
-      <Box x={70} y={62} w={30} h={30} depth={9} />
+      <Move kind="from" dx={-34}>
+        <PalletFront x={66} y={92} w={44} />
+        <Box x={70} y={62} w={30} h={30} depth={9} />
+      </Move>
       <Arrow from={[48, 42]} to={[98, 42]} color={PAL.sky} width={8} head={13} />
     </g>
   ),
@@ -514,6 +520,7 @@ export default {
 
   // "tanken": to fill up — a green fuel nozzle in the filler of the white van, its hose hanging
   // down; a golden drop falls ("de benzine" is the whole pump).
+  // On the intro card: the nozzle with its hose goes into the filler, then the drop.
   'w.tanken': () => (
     <g>
       {/* The side of the van */}
@@ -526,19 +533,24 @@ export default {
       <rect x="18" y="30" width="11" height="34" rx="3.500" fill={PAL.steel} />
       <circle cx="48" cy="47" r="17" fill={PAL.slate} />
       <circle cx="48" cy="47" r="10.500" fill={PAL.slateDark} />
-      <Drop x={44} y={66} s={15} />
+      <Move kind="show">
+        <Drop x={44} y={66} s={15} />
+      </Move>
       {/* Hose, spout and nozzle */}
+      <Move kind="from" dx={22} dy={-8}>
       <path d="M103 60Q110 90 94 110" fill="none" stroke={PAL.slate} strokeWidth="6" strokeLinecap="round" />
       <path d="M50 46L78 36" stroke={PAL.steel} strokeWidth="7.5" strokeLinecap="round" />
       <path d="M88 44Q88 58 100 60" fill="none" stroke={PAL.slateDark} strokeWidth="3.4" strokeLinecap="round" />
       <path d="M97 30L104 60" stroke={PAL.greenShade} strokeWidth="11" strokeLinecap="round" />
       <path d="M76 31L100 22L105 35L81 44Z" fill={PAL.green} stroke={PAL.green} strokeWidth="5" strokeLinejoin="round" />
       <Shine d="M80 33L96 27" opacity={0.45} width={2.8} />
+      </Move>
     </g>
   ),
 
   // "opladen": to charge — a battery, two of its three bars full, a lightning bolt on it, on a
   // cable with a plug ("de elektrische auto" is a car at a charging post).
+  // On the intro card: the two green bars fill up from the left, under the bolt.
   'w.opladen': () => (
     <g>
       <rect x="96" y="38" width="9" height="22" rx="3.500" fill={PAL.steel} />
@@ -546,8 +558,10 @@ export default {
         <rect x="12" y="22" width="86" height="54" rx="10" fill={PAL.slate} />
       </Shade>
       <rect x="19" y="29" width="72" height="40" rx="5" fill={PAL.paper} />
-      <rect x="23" y="33" width="19" height="32" rx="3" fill={PAL.leaf} />
-      <rect x="45.500" y="33" width="19" height="32" rx="3" fill={PAL.leaf} />
+      <Move kind="grow" grow={0.3}>
+        <rect x="23" y="33" width="19" height="32" rx="3" fill={PAL.leaf} />
+        <rect x="45.500" y="33" width="19" height="32" rx="3" fill={PAL.leaf} />
+      </Move>
       <rect x="68" y="33" width="19" height="32" rx="3" fill={PAL.mist} />
       <Bolt x={55} y={49} s={38} />
       {/* Cable and plug */}
@@ -559,6 +573,7 @@ export default {
 
   // "parkeren": to park — seen from above: the white van stands between the white lines of a
   // parking bay, an arrow shows the way in; a grey car stands in the bay next to it.
+  // On the intro card: the van drives up from below into the bay.
   'w.parkeren': () => (
     <g>
       <rect x="10" y="12" width="100" height="96" rx="8" fill={PAL.slate} />
@@ -567,6 +582,7 @@ export default {
       <rect x="16" y="24" width="18" height="46" rx="6" fill={PAL.steel} />
       <rect x="19" y="32" width="12" height="8" rx="2.500" fill={PAL.slateDark} opacity=".6" />
       {/* The van, nose to the top */}
+      <Move kind="from" dy={30}>
       <rect x="44" y="30" width="5" height="6" rx="2" fill={PAL.mist} />
       <rect x="71" y="30" width="5" height="6" rx="2" fill={PAL.mist} />
       <Shade color={PAL.mist} opacity={1} at={[76, 50, 8, 40]}>
@@ -574,6 +590,7 @@ export default {
       </Shade>
       <rect x="50" y="24" width="20" height="10" rx="3" fill={PAL.ice} />
       <rect x="47" y="64" width="26" height="6" fill={PAL.orange} />
+      </Move>
       <Arrow from={[60, 104]} to={[60, 86]} color={PAL.ice} width={7} head={11} />
     </g>
   ),
@@ -668,10 +685,13 @@ export default {
 
   // "het retour": the return — a parcel with its label under an arrow that sets off and turns
   // back to where it came from.
+  // On the intro card: the parcel comes back from the right, the way the arrow turns.
   'w.retour': () => (
     <g>
       <Ground cx={58} cy={106} rx={42} ry={4.5} />
-      <Box x={20} y={66} w={58} h={38} depth={16} label />
+      <Move kind="from" dx={28}>
+        <Box x={20} y={66} w={58} h={38} depth={16} label />
+      </Move>
       <path d="M46 46H88Q104 46 104 31Q104 16 88 16H44" fill="none" stroke={PAL.sky} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M26 16L44 4V28Z" fill={PAL.sky} stroke={PAL.sky} strokeWidth="4" strokeLinejoin="round" />
     </g>

@@ -1,7 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import type { Expr } from '../components/Faces';
-import { Arrow, Cross, CurveArrow, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Cross, CurveArrow, Ground, Hand, Motion, Move, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle } from './kit';
 
 /** Word pictures, group 14 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
 
@@ -272,10 +272,12 @@ export default {
   ),
 
   // "zoeken": to look for — a big magnifying glass sweeps around, a question mark in the lens
+  // On the intro card: the magnifying glass sweeps in along its dotted trail from the bottom left.
   'w.zoeken': () => (
     <g>
       <path d="M20 96Q10 74 22 54" fill="none" stroke={PAL.mist} strokeWidth="4" strokeLinecap="round" strokeDasharray="1 9" />
       <Motion x={52} y={48} dir={200} spread={50} n={3} len={8} gap={38} color={PAL.line} width={3.4} />
+      <Move kind="from" dx={-30} dy={26}>
       {/* Handle */}
       <path d="M73 69L98 96" stroke={PAL.slate} strokeWidth="9" strokeLinecap="round" />
       {/* A red grip (an ink-black grip was lost on the dark card) */}
@@ -286,11 +288,13 @@ export default {
       <circle cx="54" cy="50" r="28" fill="none" stroke={PAL.slate} strokeWidth="8" />
       <QuestionMark x={54} y={51} size={34} color={PAL.sky} />
       <Shine d="M36 44A19 19 0 0 1 48 31" width={4} opacity={0.9} />
+      </Move>
     </g>
   ),
 
   // "bewaren": to keep (papers) — a sheet goes into the open top drawer of a filing cabinet,
   // in between the other papers in their folders
+  // On the intro card: the sheet goes down into the open top drawer.
   'w.bewaren': () => (
     <g>
       <Ground cx={60} cy={106} rx={40} ry={4} />
@@ -301,11 +305,13 @@ export default {
       {/* Folders in the open top drawer, and the sheet going in */}
       <rect x="32" y="28" width="17" height="20" rx="2" fill={PAL.sky} />
       <rect x="71" y="28" width="17" height="20" rx="2" fill={PAL.yellow} />
-      <g transform="rotate(-4 60 24)">
-        <rect x="45" y="6" width="30" height="40" rx="3" fill={PAL.paperShade} transform="translate(2 2)" />
-        <rect x="45" y="6" width="30" height="40" rx="3" fill={PAL.white} />
-        <path d="M50 13H69M50 20H70M50 27H64" stroke={PAL.line} strokeWidth="2.2" strokeLinecap="round" />
-      </g>
+      <Move kind="from" dy={-24}>
+        <g transform="rotate(-4 60 24)">
+          <rect x="45" y="6" width="30" height="40" rx="3" fill={PAL.paperShade} transform="translate(2 2)" />
+          <rect x="45" y="6" width="30" height="40" rx="3" fill={PAL.white} />
+          <path d="M50 13H69M50 20H70M50 27H64" stroke={PAL.line} strokeWidth="2.2" strokeLinecap="round" />
+        </g>
+      </Move>
       <rect x="54" y="32" width="17" height="16" rx="2" fill={PAL.green} />
       {/* Drawer fronts: the top one pulled out */}
       <rect x="24" y="40" width="72" height="20" rx="3" fill={PAL.slate} transform="translate(0 3)" />
@@ -360,6 +366,7 @@ export default {
   ),
 
   // "de hamer": the hammer — a claw hammer about to hit a nail into a plank
+  // On the intro card: the hammer swings down from high up onto the nail, then the strike lines.
   'w.hamer': () => (
     <g>
       <Ground cx={60} cy={106} rx={46} ry={4} />
@@ -368,8 +375,11 @@ export default {
       <rect x="14" y="88" width="92" height="11" rx="3" fill={PAL.card} />
       <rect x="31" y="74" width="4" height="16" rx="1.5" fill={PAL.steel} />
       <rect x="27" y="72" width="12" height="4" rx="2" fill={PAL.slate} />
-      <Motion x={33} y={66} dir={-90} spread={110} n={3} len={6} gap={10} color={PAL.orange} width={3.2} />
-      {/* Hammer */}
+      <Move kind="show">
+        <Motion x={33} y={66} dir={-90} spread={110} n={3} len={6} gap={10} color={PAL.orange} width={3.2} />
+      </Move>
+      {/* Hammer: it turns round the grip (93, 90) */}
+      <Move kind="turn" turn={40} at={[93, 90]}>
       <g transform="rotate(-30 70 50)">
         <rect x="64" y="38" width="12" height="62" rx="5" fill={PAL.wood} />
         <rect x="64" y="70" width="12" height="30" rx="5" fill={PAL.ink} />
@@ -382,6 +392,7 @@ export default {
         <path d="M80 40Q92 37 104 42" fill="none" stroke={PAL.slate} strokeWidth="2" strokeLinecap="round" />
         <Shine d="M50 29H74" width={2.6} opacity={0.6} />
       </g>
+      </Move>
     </g>
   ),
 
@@ -411,6 +422,7 @@ export default {
 
   // "afkeuren": to reject — Amina's hand takes a product off the line: it gets a red cross and
   // goes into the red crate for rejects (no thumbs down: a neutral cross and a crate)
+  // On the intro card: the hand lifts the product up off the line, then the red cross appears.
   'w.afkeuren': () => (
     <g>
       <Ground cx={84} cy={106} rx={28} ry={4} />
@@ -421,6 +433,7 @@ export default {
       <rect x="59" y="66" width="52" height="9" rx="3" fill={PAL.redShade} />
       <rect x="59" y="66" width="40" height="3" rx="1.5" fill={PAL.redLight} opacity=".7" />
       {/* The product (blue retail box with its label), lifted off and tilted towards the crate */}
+      <Move kind="from" dy={26}>
       <g transform="rotate(-12 36 60)">
         <path d="M16 40L24 33H56L48 40Z" fill={PAL.blueLight} />
         <path d="M48 40L56 33V78L48 86Z" fill={PAL.blueShade} />
@@ -430,8 +443,11 @@ export default {
         <circle cx="32" cy="52" r="6" fill={PAL.yellow} />
       </g>
       <Hand pose="hold" x={2} y={76} rotate={78} scale={0.74} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      </Move>
       <CurveArrow from={[56, 28]} to={[88, 58]} bend={-14} color={PAL.sky} width={6} head={11} />
-      <Cross x={22} y={30} r={14} />
+      <Move kind="show">
+        <Cross x={22} y={30} r={14} />
+      </Move>
     </g>
   ),
 
@@ -494,18 +510,25 @@ export default {
 
   // "wassen": to wash (a client) — the carer washes Henk's face with a soapy washcloth; a bowl
   // of water in front
+  // On the intro card: the hand with the washcloth rubs up and back down once, then the foam.
   'w.wassen': () => (
     <g>
       <Person who="henk" x={42} y={118} scale={0.64} expr="pleased" torso={CARDIGAN(PAL.purple, PAL.purpleShade)} />
       {/* Carer's hand with the washcloth, foam */}
-      <Hand pose="hold" x={88} y={76} rotate={-70} scale={0.62} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
-      <g transform="rotate(-14 72 70)">
-        <rect x="60" y="60" width="24" height="20" rx="5" fill={PAL.blue} />
-        <path d="M64 66H80M64 73H80" stroke={PAL.blueLight} strokeWidth="1.8" strokeLinecap="round" />
-      </g>
-      {[[58, 58, 6], [52, 68, 4.4], [64, 47, 4.6], [76, 50, 3.4], [50, 50, 3.2], [70, 38, 2.8]].map(([cx, cy, r], i) => (
-        <circle key={i} cx={cx} cy={cy} r={r} fill={PAL.white} stroke={PAL.ice} strokeWidth="1.6" />
-      ))}
+      <Move kind="from" dy={18}>
+        <Move kind="then" dy={-18}>
+          <Hand pose="hold" x={88} y={76} rotate={-70} scale={0.62} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
+          <g transform="rotate(-14 72 70)">
+            <rect x="60" y="60" width="24" height="20" rx="5" fill={PAL.blue} />
+            <path d="M64 66H80M64 73H80" stroke={PAL.blueLight} strokeWidth="1.8" strokeLinecap="round" />
+          </g>
+        </Move>
+      </Move>
+      <Move kind="show">
+        {[[58, 58, 6], [52, 68, 4.4], [64, 47, 4.6], [76, 50, 3.4], [50, 50, 3.2], [70, 38, 2.8]].map(([cx, cy, r], i) => (
+          <circle key={i} cx={cx} cy={cy} r={r} fill={PAL.white} stroke={PAL.ice} strokeWidth="1.6" />
+        ))}
+      </Move>
       {/* Wash bowl */}
       <path d="M72 96H112L106 110H78Z" fill={PAL.skyShade} />
       <ellipse cx="92" cy="96" rx="20" ry="4.6" fill={PAL.ice} />
@@ -667,6 +690,7 @@ export default {
 
   // "de prullenbak": the bin — a pedal bin with its lid up, rubbish in it, a paper ball
   // going in
+  // On the intro card: the paper ball is thrown in from the top right to just over the bin.
   'w.prullenbak': () => (
     <g>
       <Ground cx={58} cy={106} rx={34} ry={5} />
@@ -689,8 +713,10 @@ export default {
       {/* Pedal */}
       <rect x="44" y="100" width="22" height="7" rx="3.5" fill={PAL.slate} />
       {/* Paper ball dropping in */}
-      <path d="M90 18L95 11L103 12L107 19L104 27L96 29L90 25Z" fill={PAL.mist} stroke={PAL.mist} strokeWidth="2" strokeLinejoin="round" />
-      <path d="M95 11L98 19L90 25M98 19L107 19M98 19L96 29" fill="none" stroke={PAL.steel} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      <Move kind="from" dx={22} dy={-20}>
+        <path d="M90 18L95 11L103 12L107 19L104 27L96 29L90 25Z" fill={PAL.mist} stroke={PAL.mist} strokeWidth="2" strokeLinejoin="round" />
+        <path d="M95 11L98 19L90 25M98 19L107 19M98 19L96 29" fill="none" stroke={PAL.steel} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      </Move>
       <Arrow from={[100, 36]} to={[90, 50]} color={PAL.sky} width={4.4} head={8} />
     </g>
   ),

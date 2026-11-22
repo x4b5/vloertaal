@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -51,23 +51,28 @@ const clamp = (u: number, v: number, reach: number) => {
       {/* The foot */}
       <rect x={fx - 7} y={fy - 8} width="14" height="8" rx="1.5" fill={PAL.yellowShade} />
       <rect x={fx - 7} y={fy - 8} width="11" height="8" rx="1.5" fill={PAL.yellow} />
-      {/* The arm over the part, the spindle at its end */}
+      {/* The arm over the part, the spindle at its end: on the intro card it comes down from open */}
+      <Move kind="turn" turn={-s * 40} at={[fx, fy - 19]}>
       <path d={`M${fx} ${fy - 19}L${ax} ${ay - 19}`} stroke={PAL.yellowShade} strokeWidth="8" strokeLinecap="round" />
       <path d={`M${fx} ${fy - 20.5}L${ax} ${ay - 20.5}`} stroke={PAL.yellow} strokeWidth="5" strokeLinecap="round" />
       <rect x={ax - 2.6} y={ay - 17} width="5.2" height="10" rx="1" fill={PAL.slate} />
       <rect x={ax - 4.4} y={ay - 9} width="8.8" height="4" rx="1.6" fill={PAL.slateDark} />
+      </Move>
       {/* The body and pivot */}
       <path d={`M${fx} ${fy - 6}V${fy - 19}`} stroke={PAL.yellow} strokeWidth="9" strokeLinecap="round" />
       <path d={`M${fx + 3} ${fy - 6}V${fy - 18}`} stroke={PAL.yellowShade} strokeWidth="3" strokeLinecap="round" />
-      {/* The handle, up and away from the part */}
+      {/* The handle, up and away from the part (it turns with the arm) */}
+      <Move kind="turn" turn={-s * 40} at={[fx, fy - 19]}>
       <path d={`M${fx} ${fy - 19}L${fx - s * 11} ${fy - 46}`} stroke={PAL.orange} strokeWidth="6" strokeLinecap="round" />
       <path d={`M${fx - s * 7} ${fy - 38}L${fx - s * 12} ${fy - 48}`} stroke={PAL.red} strokeWidth="8" strokeLinecap="round" />
+      </Move>
       <circle cx={fx} cy={fy - 19} r="3" fill={PAL.slate} />
     </g>
   );
 };
 
 export default {
+  // On the intro card: both toggle clamps swing down from open and press the bracket onto the plate.
   // "de mal": the assembly jig — a dark steel base plate; a blue bracket (a flat foot with an upright back) lies on it
   // between steel locating pins, and two yellow toggle clamps (orange handles up) press it down from left and right.
   'w.mal': () => (
