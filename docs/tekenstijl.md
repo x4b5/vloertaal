@@ -196,6 +196,23 @@ would say too little or look like another word of its lesson, so it never stands
 choice; the people in those pictures are cast heads, not busts, so the word's voice stays the
 same (`pictureCast`).
 
+
+### Gereedschap en machines: de beweging laat de functie zien (22 november 2026)
+
+The owner's choice (22 November 2026): **a tool or a machine may move when its function is a movement
+and a short movement makes clear what it is for.** The still picture of a pipe cutter, a hoist or a
+pressure gauge shows the thing; the movement shows what you do with it: the cutter goes round the pipe,
+the hoist lifts the load, the needle swings to its value. This widens the first rule ("only where the
+meaning is a movement") for tools and machines; the list of "things" above stays still where a movement
+would only decorate (a helmet, a forklift standing there).
+
+All other limits stay: only on the intro card, once, short, at most two steps, ending on the still
+picture (which does not change), CSS only, nothing moves with "less motion" or "Rustig scherm". In
+doubt, not: a tool whose function a movement does not make clearer stays still.
+
+The first round (the tools of the sector units of 20–22 November 2026) is listed in
+tests/motionPictures.test.ts (MOTION_FUNCTION), with what moves per word in the pictures' comments.
+
 ## Template
 
 ```tsx
