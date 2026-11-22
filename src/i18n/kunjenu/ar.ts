@@ -133,6 +133,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "أستطيع أن أسأل هل يمكنني أن أفتح لوحة الكهرباء.", // nieuw, nalezen
     'kjn.u.install.2': "أستطيع أن أقول إن وصلة تسرّب.", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "أستطيع أن أقول إن صندوق القطع شبه فارغ.", // nieuw, nalezen
+    'kjn.u.montage.2': "أستطيع أن أسأل كم يجب أن يكون المسمار الملولب مشدوداً.", // nieuw, nalezen
   },
 };
 

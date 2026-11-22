@@ -2733,6 +2733,88 @@ const t: CultureTranslation = {
     'c.metalwork.o2': "La aguantas fuerte con la mano.", // nieuw, nalezen
     'c.metalwork.o3': "Te pones guantes y la aguantas.", // nieuw, nalezen
     'c.metalwork.w': "Una broca puede atrapar una pieza pequeña y hacerla girar. Entonces te golpea la mano. En el tornillo de banco se queda quieta.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'u.montage': "Montaje", // nieuw, nalezen
+    'l.assembly': "En la línea de montaje", // nieuw, nalezen
+    'w.werkinstructie': "la instrucción de trabajo (una hoja con los pasos)", // nieuw, nalezen
+    'w.onderdelenbak': "la caja de piezas", // nieuw, nalezen
+    'w.mal': "la plantilla (sujeta la pieza en el sitio correcto)", // nieuw, nalezen
+    'w.rolbaan': "el transportador de rodillos", // nieuw, nalezen
+    'w.montagetafel': "la mesa de montaje", // nieuw, nalezen
+    'w.voetpedaal': "el pedal (un interruptor que pisas con el pie)", // nieuw, nalezen
+    's.assembly.1': "Lee primero la instrucción de trabajo.", // nieuw, nalezen
+    's.assembly.2': "La caja de piezas está casi vacía.", // nieuw, nalezen
+    's.assembly.3': "Pon la pieza en la plantilla.", // nieuw, nalezen
+    'c.assembly.q': "¿Qué paso toca ahora?", // nieuw, nalezen
+    'c.assembly.a': "El paso cuatro. Mira la instrucción de trabajo.", // nieuw, nalezen
+    'c.assembly': "Sigue los pasos, en el mismo orden", // nieuw, nalezen
+    'c.assembly.b': "En una línea de montaje cada paso tiene su sitio y su orden. La instrucción de trabajo los muestra, muchas veces con dibujos. Haz los pasos siempre en el mismo orden, también cuando crees que sabes una forma más rápida. Otro orden puede dar un producto que parece bueno pero no funciona. ¿Una caja está casi vacía? Dilo a tiempo, para que la línea no se pare. ¿Ves un paso que podría ser mejor? Díselo a tu jefe de equipo: así puede cambiar para todos.", // nieuw, nalezen
+    'c.assembly.p': "Necesito piezas nuevas.", // nieuw, nalezen
+    'c.assembly.s': "Has encontrado una forma más rápida de hacer el paso tres. La instrucción de trabajo dice otra cosa. ¿Qué haces?", // nieuw, nalezen
+    'c.assembly.o1': "Primero preguntas a tu jefe de equipo.", // nieuw, nalezen
+    'c.assembly.o2': "A partir de ahora lo haces a tu manera.", // nieuw, nalezen
+    'c.assembly.o3': "Enseñas tu manera a tus compañeros.", // nieuw, nalezen
+    'c.assembly.w': "El orden muchas veces tiene una razón que no ves. Si tu manera es mejor, puede cambiar para todos.", // nieuw, nalezen
+    'l.fastening': "Apretar y fijar", // nieuw, nalezen
+    'w.schroefmachine': "el atornillador eléctrico (cuelga encima de la línea)", // nieuw, nalezen
+    'w.momentsleutel': "la llave dinamométrica (hace clic cuando el perno está bastante apretado)", // nieuw, nalezen
+    'w.tiewrap': "la brida", // nieuw, nalezen
+    'w.sluitring': "la arandela", // nieuw, nalezen
+    'w.klinknagel': "el remache", // nieuw, nalezen
+    'w.popnageltang': "la remachadora", // nieuw, nalezen
+    's.fastening.1': "Aprieta el perno con la llave dinamométrica.", // nieuw, nalezen
+    's.fastening.2': "No olvides la arandela.", // nieuw, nalezen
+    's.fastening.3': "Une los cables con una brida.", // nieuw, nalezen
+    'c.fastening.q': "¿Cuánto hay que apretar este perno?", // nieuw, nalezen
+    'c.fastening.a': "Hasta que la llave dinamométrica haga clic.", // nieuw, nalezen
+    'c.fastening': "El clic es suficiente", // nieuw, nalezen
+    'c.fastening.b': "Una llave dinamométrica hace clic cuando un perno está bastante apretado. Para en el clic: no sigas girando. Demasiado apretado puede romper el perno o la pieza, y demasiado flojo se puede soltar. El atornillador eléctrico funciona igual: se para solo. Pon cada arandela en su sitio: una arandela que falta es difícil de ver más tarde. Cuenta tus pernos. ¿Sobra uno, o te falta uno? Entonces algo va mal: díselo a tu jefe de equipo.", // nieuw, nalezen
+    'c.fastening.p': "Sobra un perno.", // nieuw, nalezen
+    'c.fastening.s': "Tu llave dinamométrica ha hecho clic. El perno todavía te parece un poco flojo. ¿Qué haces?", // nieuw, nalezen
+    'c.fastening.o1': "Paras, y preguntas a tu jefe de equipo.", // nieuw, nalezen
+    'c.fastening.o2': "Lo giras un poco más con la mano.", // nieuw, nalezen
+    'c.fastening.o3': "Usas una llave más larga.", // nieuw, nalezen
+    'c.fastening.w': "El clic está ajustado a la fuerza correcta. Si te parece mal, puede que haya que revisar la llave. Si sigues girando, el perno se puede romper.", // nieuw, nalezen
+    'l.handling': "Levantar y mover", // nieuw, nalezen
+    'w.takel': "el polipasto (levanta piezas pesadas con una cadena)", // nieuw, nalezen
+    'w.hijshaak': "el gancho de elevación", // nieuw, nalezen
+    'w.tilhulp': "la ayuda de elevación (sujeta una pieza con ventosas)", // nieuw, nalezen
+    'w.onderdelenkar': "el carro de piezas", // nieuw, nalezen
+    'w.draaitafel': "la mesa giratoria (giras la pieza, no tu cuerpo)", // nieuw, nalezen
+    'w.rolcontainer': "el carro jaula (una jaula alta con ruedas)", // nieuw, nalezen
+    's.handling.1': "No levantes esto sin ayuda. Usa el polipasto.", // nieuw, nalezen
+    's.handling.2': "¿Está bien cerrado el gancho de elevación?", // nieuw, nalezen
+    's.handling.3': "Empuja el carro de piezas, no tires de él.", // nieuw, nalezen
+    'c.handling.q': "¿Puedo ponerme debajo del polipasto?", // nieuw, nalezen
+    'c.handling.a': "No, nunca debajo de una carga colgada.", // nieuw, nalezen
+    'c.handling': "Deja que el polipasto haga el trabajo pesado", // nieuw, nalezen
+    'c.handling.b': "Las piezas pesadas se levantan con un polipasto o una ayuda de elevación, no con tu espalda. Revisa el gancho antes de levantar: el cierre de seguridad tiene que cerrar. Levanta despacio, y mantén las manos y los pies lejos de la carga. Nunca te pongas ni pases debajo de una carga colgada. Usa la mesa giratoria para girar una pieza: así no tienes que torcer la espalda. Empuja un carro o un carro jaula: ves por dónde vas, y tu espalda trabaja menos. Usa un polipasto solo cuando has aprendido cómo. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.handling.p': "Uso el polipasto.", // nieuw, nalezen
+    'c.handling.s': "Una pieza es muy pesada. El polipasto está ocupado diez minutos más. ¿Qué haces?", // nieuw, nalezen
+    'c.handling.o1': "Esperas al polipasto.", // nieuw, nalezen
+    'c.handling.o2': { m: "La levantas tú solo, rápido.", f: "La levantas tú sola, rápido.", x: "La levantas sin ayuda, rápido." }, // nieuw, nalezen
+    'c.handling.o3': "La arrastras por el suelo.", // nieuw, nalezen
+    'c.handling.w': "Una pieza pesada puede dañar tu espalda en un segundo. Diez minutos de espera es mejor que meses de dolor.", // nieuw, nalezen
+    'l.finalcheck': "La revisión final", // nieuw, nalezen
+    'w.typeplaatje': "la placa de características (una placa pequeña de metal con el tipo y el número)", // nieuw, nalezen
+    'w.stempel': "el sello", // nieuw, nalezen
+    'w.testbank': "el banco de pruebas", // nieuw, nalezen
+    'w.goedkeursticker': "la pegatina de aprobado (una pegatina verde: el producto está bien)", // nieuw, nalezen
+    'w.kras': "el arañazo", // nieuw, nalezen
+    'w.barst': "la grieta", // nieuw, nalezen
+    's.finalcheck.1': "La placa de características está torcida.", // nieuw, nalezen
+    's.finalcheck.2': "Este producto tiene un arañazo.", // nieuw, nalezen
+    's.finalcheck.3': "Sin la pegatina de aprobado no sale.", // nieuw, nalezen
+    'c.finalcheck.q': "¿Está bien este producto?", // nieuw, nalezen
+    'c.finalcheck.a': "No, tiene una grieta.", // nieuw, nalezen
+    'c.finalcheck': "Solo los productos buenos llevan la pegatina", // nieuw, nalezen
+    'c.finalcheck.b': { m: "La revisión final es la última oportunidad de encontrar un fallo antes de que lo encuentre el cliente. Revisa cada punto de la lista, también cuando hay mucho trabajo. Un arañazo o una grieta pequeña se te escapa fácilmente: mira con buena luz, y desde más de un lado. Pon la pegatina de aprobado o el sello solo cuando todos los puntos están bien. ¿No estás seguro? Pon el producto aparte y pregunta. Un fallo que se encuentra aquí cuesta poco, y un fallo en casa del cliente cuesta mucho. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", f: "La revisión final es la última oportunidad de encontrar un fallo antes de que lo encuentre el cliente. Revisa cada punto de la lista, también cuando hay mucho trabajo. Un arañazo o una grieta pequeña se te escapa fácilmente: mira con buena luz, y desde más de un lado. Pon la pegatina de aprobado o el sello solo cuando todos los puntos están bien. ¿No estás segura? Pon el producto aparte y pregunta. Un fallo que se encuentra aquí cuesta poco, y un fallo en casa del cliente cuesta mucho. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", x: "La revisión final es la última oportunidad de encontrar un fallo antes de que lo encuentre el cliente. Revisa cada punto de la lista, también cuando hay mucho trabajo. Un arañazo o una grieta pequeña se te escapa fácilmente: mira con buena luz, y desde más de un lado. Pon la pegatina de aprobado o el sello solo cuando todos los puntos están bien. ¿Tienes dudas? Pon el producto aparte y pregunta. Un fallo que se encuentra aquí cuesta poco, y un fallo en casa del cliente cuesta mucho. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo." }, // nieuw, nalezen
+    'c.finalcheck.p': "Este producto va aparte.", // nieuw, nalezen
+    'c.finalcheck.s': "Hay mucho trabajo en la línea. Ves un pequeño arañazo en un producto, debajo de la etiqueta. ¿Qué haces?", // nieuw, nalezen
+    'c.finalcheck.o1': "Lo pones aparte, y se lo dices a tu jefe de equipo.", // nieuw, nalezen
+    'c.finalcheck.o2': "Le pones la pegatina: es pequeño.", // nieuw, nalezen
+    'c.finalcheck.o3': "Mueves la etiqueta encima del arañazo.", // nieuw, nalezen
+    'c.finalcheck.w': "Un arañazo pequeño puede ser señal de un problema en la línea. Esconderlo solo pasa el problema al cliente.", // nieuw, nalezen
   },
 };
 

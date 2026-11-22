@@ -2734,6 +2734,88 @@ const t: CultureTranslation = {
     'c.metalwork.o2': "O ții strâns cu mâna.", // nieuw, nalezen
     'c.metalwork.o3': "Îți pui mănuși și o ții.", // nieuw, nalezen
     'c.metalwork.w': "Un burghiu poate prinde o piesă mică și o poate învârti. Atunci îți lovește mâna. În menghină, piesa stă pe loc.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'u.montage': "Asamblare și montaj", // nieuw, nalezen
+    'l.assembly': "La linia de asamblare", // nieuw, nalezen
+    'w.werkinstructie': "instrucțiunea de lucru (o foaie cu pașii)", // nieuw, nalezen
+    'w.onderdelenbak': "lada cu piese", // nieuw, nalezen
+    'w.mal': "dispozitivul de fixare (ține piesa în locul potrivit)", // nieuw, nalezen
+    'w.rolbaan': "conveiorul cu role", // nieuw, nalezen
+    'w.montagetafel': "masa de montaj", // nieuw, nalezen
+    'w.voetpedaal': "pedala (un întrerupător pe care îl apeși cu piciorul)", // nieuw, nalezen
+    's.assembly.1': "Citește întâi instrucțiunea de lucru.", // nieuw, nalezen
+    's.assembly.2': "Lada cu piese e aproape goală.", // nieuw, nalezen
+    's.assembly.3': "Pune piesa în dispozitivul de fixare.", // nieuw, nalezen
+    'c.assembly.q': "Ce pas urmează acum?", // nieuw, nalezen
+    'c.assembly.a': "Pasul patru. Uită-te în instrucțiunea de lucru.", // nieuw, nalezen
+    'c.assembly': "Urmează pașii, în aceeași ordine", // nieuw, nalezen
+    'c.assembly.b': "La o linie de asamblare, fiecare pas are locul și ordinea lui. Instrucțiunea de lucru ți le arată, des cu imagini. Fă pașii de fiecare dată în aceeași ordine, și când crezi că știi un mod mai rapid. O altă ordine poate da un produs care arată bine, dar nu funcționează. O ladă e aproape goală? Spune la timp, ca să nu se oprească linia. Vezi un pas care ar putea fi mai bun? Spune-i șefului de echipă: atunci se poate schimba pentru toată lumea.", // nieuw, nalezen
+    'c.assembly.p': "Am nevoie de piese noi.", // nieuw, nalezen
+    'c.assembly.s': "Ai găsit un mod mai rapid de a face pasul trei. Instrucțiunea de lucru spune altceva. Ce faci?", // nieuw, nalezen
+    'c.assembly.o1': "Îl întrebi întâi pe șeful de echipă.", // nieuw, nalezen
+    'c.assembly.o2': "De acum îl faci în felul tău.", // nieuw, nalezen
+    'c.assembly.o3': "Îi înveți pe colegi felul tău.", // nieuw, nalezen
+    'c.assembly.w': "Ordinea are des un motiv pe care nu îl vezi. Dacă felul tău e mai bun, ordinea se poate schimba pentru toată lumea.", // nieuw, nalezen
+    'l.fastening': "Prinderea pieselor", // nieuw, nalezen
+    'w.schroefmachine': "mașina de înșurubat (atârnă deasupra liniei)", // nieuw, nalezen
+    'w.momentsleutel': "cheia dinamometrică (face clic când bolțul e strâns destul)", // nieuw, nalezen
+    'w.tiewrap': "colierul de plastic", // nieuw, nalezen
+    'w.sluitring': "șaiba", // nieuw, nalezen
+    'w.klinknagel': "nitul", // nieuw, nalezen
+    'w.popnageltang': "cleștele de nituit", // nieuw, nalezen
+    's.fastening.1': "Strânge bolțul cu cheia dinamometrică.", // nieuw, nalezen
+    's.fastening.2': "Nu uita șaiba.", // nieuw, nalezen
+    's.fastening.3': "Leagă cablurile cu un colier de plastic.", // nieuw, nalezen
+    'c.fastening.q': "Cât de strâns trebuie să fie bolțul ăsta?", // nieuw, nalezen
+    'c.fastening.a': "Până face clic cheia dinamometrică.", // nieuw, nalezen
+    'c.fastening': "Clicul e de ajuns", // nieuw, nalezen
+    'c.fastening.b': "O cheie dinamometrică face clic când un bolț e strâns destul. Oprește-te la clic: nu mai roti. Prea strâns poate rupe bolțul sau piesa, iar prea slab se poate desface. Mașina de înșurubat funcționează la fel: se oprește singură. Pune fiecare șaibă la locul ei: o șaibă care lipsește e greu de văzut mai târziu. Numără-ți bolțurile. A rămas unul în plus, sau îți mai trebuie unul? Atunci ceva e greșit: spune-i șefului de echipă.", // nieuw, nalezen
+    'c.fastening.p': "A rămas un bolț în plus.", // nieuw, nalezen
+    'c.fastening.s': "Cheia ta dinamometrică a făcut clic. Ți se pare că bolțul e încă puțin slăbit. Ce faci?", // nieuw, nalezen
+    'c.fastening.o1': "Te oprești și îl întrebi pe șeful de echipă.", // nieuw, nalezen
+    'c.fastening.o2': "Îl mai rotești puțin cu mâna.", // nieuw, nalezen
+    'c.fastening.o3': "Folosești o cheie mai lungă.", // nieuw, nalezen
+    'c.fastening.w': "Clicul e reglat la forța potrivită. Dacă ți se pare ceva greșit, poate cheia trebuie verificată. Dacă rotești mai departe, poți rupe bolțul.", // nieuw, nalezen
+    'l.handling': "Ridicare și mutare", // nieuw, nalezen
+    'w.takel': "palanul (ridică piese grele cu un lanț)", // nieuw, nalezen
+    'w.hijshaak': "cârligul de ridicare", // nieuw, nalezen
+    'w.tilhulp': "dispozitivul de ridicare (ține o piesă prin vacuum)", // nieuw, nalezen
+    'w.onderdelenkar': "căruciorul cu piese", // nieuw, nalezen
+    'w.draaitafel': "masa rotativă (rotești piesa, nu pe tine)", // nieuw, nalezen
+    'w.rolcontainer': "containerul cu role (o cușcă înaltă pe roți)", // nieuw, nalezen
+    's.handling.1': "Nu ridica asta fără ajutor. Folosește palanul.", // nieuw, nalezen
+    's.handling.2': "Cârligul de ridicare e bine închis?", // nieuw, nalezen
+    's.handling.3': "Împinge căruciorul cu piese, nu-l trage.", // nieuw, nalezen
+    'c.handling.q': "Am voie să stau sub palan?", // nieuw, nalezen
+    'c.handling.a': "Nu, niciodată sub o sarcină suspendată.", // nieuw, nalezen
+    'c.handling': "Lasă palanul să facă munca grea", // nieuw, nalezen
+    'c.handling.b': "Piesele grele se ridică cu un palan sau cu un dispozitiv de ridicare, nu cu spatele. Verifică cârligul înainte să ridici: clapeta de siguranță trebuie să se închidă. Ridică încet și ține mâinile și picioarele departe de sarcină. Nu sta și nu trece niciodată pe sub o sarcină suspendată. Folosește masa rotativă ca să întorci o piesă: atunci nu trebuie să-ți răsucești spatele. Împinge un cărucior sau un container cu role: vezi unde mergi, iar spatele tău muncește mai puțin. Folosește un palan doar când ai învățat cum. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.handling.p': "Folosesc palanul.", // nieuw, nalezen
+    'c.handling.s': "O piesă e foarte grea. Palanul mai e ocupat zece minute. Ce faci?", // nieuw, nalezen
+    'c.handling.o1': "Aștepți palanul.", // nieuw, nalezen
+    'c.handling.o2': { m: "O ridici singur, repede.", f: "O ridici singură, repede.", x: "O ridici fără ajutor, repede." }, // nieuw, nalezen
+    'c.handling.o3': "O târăști pe jos.", // nieuw, nalezen
+    'c.handling.w': "O piesă grea îți poate răni spatele într-o secundă. Zece minute de așteptare sunt mai bune decât luni de durere.", // nieuw, nalezen
+    'l.finalcheck': "Verificarea finală", // nieuw, nalezen
+    'w.typeplaatje': "plăcuța de identificare (o plăcuță mică de metal cu tipul și numărul)", // nieuw, nalezen
+    'w.stempel': "ștampila", // nieuw, nalezen
+    'w.testbank': "bancul de testare", // nieuw, nalezen
+    'w.goedkeursticker': "autocolantul de aprobare (un autocolant verde: produsul e bun)", // nieuw, nalezen
+    'w.kras': "zgârietura", // nieuw, nalezen
+    'w.barst': "fisura", // nieuw, nalezen
+    's.finalcheck.1': "Plăcuța de identificare e strâmbă.", // nieuw, nalezen
+    's.finalcheck.2': "Produsul ăsta are o zgârietură.", // nieuw, nalezen
+    's.finalcheck.3': "Fără autocolantul de aprobare nu pleacă.", // nieuw, nalezen
+    'c.finalcheck.q': "E bun produsul ăsta?", // nieuw, nalezen
+    'c.finalcheck.a': "Nu, are o fisură.", // nieuw, nalezen
+    'c.finalcheck': "Doar produsele bune primesc autocolantul", // nieuw, nalezen
+    'c.finalcheck.b': "Verificarea finală e ultima șansă să găsești o greșeală înainte s-o găsească clientul. Verifică fiecare punct de pe listă, și când e aglomerat. O zgârietură sau o fisură mică îți scapă ușor: uită-te într-o lumină bună și din mai multe părți. Pune autocolantul de aprobare sau ștampila doar când fiecare punct e bun. Ai dubii? Pune produsul deoparte și întreabă. O greșeală găsită aici costă puțin, iar o greșeală la client costă mult. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.finalcheck.p': "Produsul ăsta merge deoparte.", // nieuw, nalezen
+    'c.finalcheck.s': "Pe linie e aglomerat. Vezi o zgârietură mică pe un produs, sub etichetă. Ce faci?", // nieuw, nalezen
+    'c.finalcheck.o1': "Îl pui deoparte și îi spui șefului de echipă.", // nieuw, nalezen
+    'c.finalcheck.o2': "Pui autocolantul: e mică.", // nieuw, nalezen
+    'c.finalcheck.o3': "Muți eticheta peste zgârietură.", // nieuw, nalezen
+    'c.finalcheck.w': "O zgârietură mică poate fi semnul unei probleme pe linie. Dacă o ascunzi, doar muți problema la client.", // nieuw, nalezen
   },
 };
 

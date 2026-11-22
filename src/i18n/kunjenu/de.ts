@@ -131,6 +131,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "Ich kann fragen, ob ich den Sicherungskasten aufmachen darf.", // nieuw, nalezen
     'kjn.u.install.2': "Ich kann sagen, dass ein Fitting undicht ist.", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "Ich kann sagen, dass die Teilekiste fast leer ist.", // nieuw, nalezen
+    'kjn.u.montage.2': "Ich kann fragen, wie fest ein Bolzen sein muss.", // nieuw, nalezen
   },
 };
 

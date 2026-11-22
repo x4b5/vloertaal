@@ -315,6 +315,14 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.pipes': L('A', 'A', 'nakijken: de afsluiter ("de stopkraan"), de waterpomptang ("de waterpomptang"/"de pijptang")'),
     'l.metalwork': L('A', 'A', 'nakijken: de kolomboormachine ("de kolomboor"), de draadtap'),
   } },
+  // Assemblage en montage (21 November 2026): how the work is done, the same in Belgium. The tips
+  // name no rule, right or amount. Flemish words to check.
+  'u.montage': { kind: 'A', lessons: {
+    'l.assembly': L('A', 'A', 'nakijken: de werkinstructie, de mal, de rolbaan ("de rollenbaan")'),
+    'l.fastening': L('A', 'A', 'nakijken: de momentsleutel, de tie-wrap ("de kabelbinder", "de serre-câble"), de popnageltang ("de blindklinktang")'),
+    'l.handling': L('A', 'A', 'nakijken: de takel, de tilhulp, de rolcontainer'),
+    'l.finalcheck': L('A', 'A', 'nakijken: het typeplaatje ("het kenplaatje"), de goedkeursticker'),
+  } },
 };
 
 /** The units of the inventory that need a Belgian version (B or C). */

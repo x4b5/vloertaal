@@ -131,6 +131,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "Consigo perguntar se posso abrir o quadro elétrico.", // nieuw, nalezen
     'kjn.u.install.2': "Consigo dizer que uma união está a pingar.", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "Consigo dizer que a caixa de peças está quase vazia.", // nieuw, nalezen
+    'kjn.u.montage.2': "Consigo perguntar quão apertado tem de ficar um parafuso.", // nieuw, nalezen
   },
 };
 

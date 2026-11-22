@@ -152,6 +152,11 @@ const PENDING_RECORDING = new Set<string>([
   'Nee, dat doet de elektricien.',
   'Een beetje. Ik draai hem nog wat vaster.',
   'Er zit nog een braam aan.',
+  // "Assemblage en montage" (u.montage, 21 November 2026):
+  'Stap vier. Kijk op de werkinstructie.',
+  'Tot de momentsleutel klikt.',
+  'Nee, nooit onder een hangende last.',
+  'Nee, er zit een barst in.',
 ]);
 
 

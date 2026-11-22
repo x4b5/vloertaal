@@ -195,6 +195,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "Питат дали може да се отвори: не, и кой го прави.", // nieuw, nalezen
     'c.pipes.a.why': "Питат дали още тече: малко, и какво ще се направи.", // nieuw, nalezen
     'c.metalwork.a.why': "Питат защо е остър: още има чапак.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "Питат коя стъпка: номерът и къде да се погледне.", // nieuw, nalezen
+    'c.fastening.a.why': "Питат колко здраво: докато ключът щракне.", // nieuw, nalezen
+    'c.handling.a.why': "Питат дали може да се стои там: не, никога, и защо.", // nieuw, nalezen
+    'c.finalcheck.a.why': "Питат дали е добър: не, и какво му е.", // nieuw, nalezen
   },
 };
 

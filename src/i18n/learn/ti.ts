@@ -195,6 +195,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "ክኽፈት ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ መን ከም ዝገብሮ ድማ።", // nieuw, nalezen
     'c.pipes.a.why': "ገና የፍስስ ድዩ ተሓቲቱ: ቁሩብ፡ እንታይ ከም ዝግበረሉ ድማ።", // nieuw, nalezen
     'c.metalwork.a.why': "ስለምንታይ በሊሕ ከም ዝኾነ ተሓቲቱ: ገና በሊሕ ተረፍ ኣለዎ።", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "ኣየናይ ደረጃ ተሓቲቱ: እቲ ቁጽሪ፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen
+    'c.fastening.a.why': "ክሳብ ክንደይ ክጸንዕ ተሓቲቱ: ክሳብ እቲ መፍትሕ ቲክ ዝብል።", // nieuw, nalezen
+    'c.handling.a.why': "ኣብኡ ደው ምባል ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ ፈጺሙ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
+    'c.finalcheck.a.why': "ጽቡቕ ድዩ ተሓቲቱ: ኣይፋል፡ እንታይ ጌጋ ከም ዘለዎ ድማ።", // nieuw, nalezen
   },
 };
 

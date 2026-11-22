@@ -50,8 +50,9 @@ export const sectors: Sector[] = [
   { id: 'construction', nl: 'Bouw', key: 'sectorConstruction', units: ['u.build', 'u.afbouw', 'u.ruwbouw'], focus: ['u.safety', 'u.tools'],
     rules: { units: ['r.build'], focus: ['r.veilig', 'r.contract'] } },
   // "Machines en gereedschap" (u.machines, 21 November 2026): the second own unit of Productie
-  // (the machine, checking, packing, maintenance), right after "In de productie" in the sector slot.
-  { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory', 'u.machines'], focus: ['u.safety', 'u.tools'],
+  // (the machine, checking, packing, maintenance), right after "In de productie" in the sector slot;
+  // "Assemblage en montage" (u.montage, the same day) right after it.
+  { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory', 'u.machines', 'u.montage'], focus: ['u.safety', 'u.tools'],
     rules: { units: ['r.factory'], focus: ['r.veilig', 'r.tijd'] } },
   { id: 'care', nl: 'Zorg', key: 'sectorCare', units: ['u.care'], focus: ['u.teamwork', 'u.health'],
     rules: { units: ['r.care'], focus: ['r.samen', 'r.ziek'] } },

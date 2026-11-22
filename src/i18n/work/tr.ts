@@ -2734,6 +2734,88 @@ const t: CultureTranslation = {
     'c.metalwork.o2': "Elinle sıkıca tutarsın.", // nieuw, nalezen
     'c.metalwork.o3': "Eldiven giyer ve tutarsın.", // nieuw, nalezen
     'c.metalwork.w': "Matkap küçük bir parçayı yakalayıp döndürebilir. O zaman parça eline çarpar. Mengenede ise yerinde durur.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'u.montage': "Montaj", // nieuw, nalezen
+    'l.assembly': "Montaj hattında", // nieuw, nalezen
+    'w.werkinstructie': "iş talimatı (adımların yazılı olduğu bir kâğıt)", // nieuw, nalezen
+    'w.onderdelenbak': "parça kutusu", // nieuw, nalezen
+    'w.mal': "fikstür (parçayı doğru yerde tutar)", // nieuw, nalezen
+    'w.rolbaan': "makaralı konveyör", // nieuw, nalezen
+    'w.montagetafel': "montaj tezgâhı", // nieuw, nalezen
+    'w.voetpedaal': "ayak pedalı (ayağınla bastığın bir düğme)", // nieuw, nalezen
+    's.assembly.1': "Önce iş talimatını oku.", // nieuw, nalezen
+    's.assembly.2': "Parça kutusu neredeyse boş.", // nieuw, nalezen
+    's.assembly.3': "Parçayı fikstüre koy.", // nieuw, nalezen
+    'c.assembly.q': "Şimdi hangi adım geliyor?", // nieuw, nalezen
+    'c.assembly.a': "Dördüncü adım. İş talimatına bak.", // nieuw, nalezen
+    'c.assembly': "Adımları izle, hep aynı sırayla", // nieuw, nalezen
+    'c.assembly.b': "Montaj hattında her adımın kendi yeri ve sırası vardır. İş talimatı bunları gösterir, çoğu zaman resimlerle. Adımları her seferinde aynı sırayla yap, daha hızlı bir yol bildiğini düşündüğünde de. Başka bir sıra, iyi görünen ama çalışmayan bir ürün çıkarabilir. Bir kutu neredeyse boş mu? Zamanında söyle, böylece hat durmaz. Daha iyi olabilecek bir adım mı görüyorsun? Ekip liderine söyle: o zaman herkes için değişebilir.", // nieuw, nalezen
+    'c.assembly.p': "Yeni parçalara ihtiyacım var.", // nieuw, nalezen
+    'c.assembly.s': "Üçüncü adımı yapmanın daha hızlı bir yolunu buldun. İş talimatı başka bir şey söylüyor. Ne yaparsın?", // nieuw, nalezen
+    'c.assembly.o1': "Önce ekip liderine sorarsın.", // nieuw, nalezen
+    'c.assembly.o2': "Bundan sonra kendi bildiğin gibi yaparsın.", // nieuw, nalezen
+    'c.assembly.o3': "İş arkadaşlarına kendi yolunu öğretirsin.", // nieuw, nalezen
+    'c.assembly.w': "Sıranın çoğu zaman göremediğin bir nedeni vardır. Senin yolun daha iyiyse, herkes için değişebilir.", // nieuw, nalezen
+    'l.fastening': "Sıkma ve bağlama", // nieuw, nalezen
+    'w.schroefmachine': "vidalama makinesi (hattın üstünde asılı durur)", // nieuw, nalezen
+    'w.momentsleutel': "tork anahtarı (cıvata yeterince sıkı olunca tık eder)", // nieuw, nalezen
+    'w.tiewrap': "kablo bağı", // nieuw, nalezen
+    'w.sluitring': "pul", // nieuw, nalezen
+    'w.klinknagel': "perçin", // nieuw, nalezen
+    'w.popnageltang': "perçin tabancası", // nieuw, nalezen
+    's.fastening.1': "Cıvatayı tork anahtarıyla sık.", // nieuw, nalezen
+    's.fastening.2': "Pulu unutma.", // nieuw, nalezen
+    's.fastening.3': "Kabloları bir kablo bağıyla birbirine bağla.", // nieuw, nalezen
+    'c.fastening.q': "Bu cıvata ne kadar sıkı olmalı?", // nieuw, nalezen
+    'c.fastening.a': "Tork anahtarı tık edene kadar.", // nieuw, nalezen
+    'c.fastening': "Tık sesi yeterli", // nieuw, nalezen
+    'c.fastening.b': "Tork anahtarı, cıvata yeterince sıkı olunca tık eder. Tık sesinde dur: daha fazla çevirme. Fazla sıkı, cıvatayı ya da parçayı kırabilir; fazla gevşek ise yerinden çıkabilir. Vidalama makinesi de aynı şekilde çalışır: kendiliğinden durur. Her pulu yerine tak: eksik bir pul sonradan zor görülür. Cıvatalarını say. Bir tane artıyor mu, ya da bir tane daha mı lazım? O zaman bir şey yanlış: ekip liderine söyle.", // nieuw, nalezen
+    'c.fastening.p': "Bir cıvata arttı.", // nieuw, nalezen
+    'c.fastening.s': "Tork anahtarın tık etti. Cıvata sana hâlâ biraz gevşek geliyor. Ne yaparsın?", // nieuw, nalezen
+    'c.fastening.o1': "Durur ve ekip liderine sorarsın.", // nieuw, nalezen
+    'c.fastening.o2': "Elinle biraz daha çevirirsin.", // nieuw, nalezen
+    'c.fastening.o3': "Daha uzun bir anahtar kullanırsın.", // nieuw, nalezen
+    'c.fastening.w': "Tık sesi doğru kuvvete ayarlıdır. Yanlış geliyorsa anahtarın kontrol edilmesi gerekebilir. Daha fazla çevirmek cıvatayı kırabilir.", // nieuw, nalezen
+    'l.handling': "Kaldırmak ve taşımak", // nieuw, nalezen
+    'w.takel': "caraskal (ağır parçaları zincirle kaldırır)", // nieuw, nalezen
+    'w.hijshaak': "kaldırma kancası", // nieuw, nalezen
+    'w.tilhulp': "kaldırma yardımcısı (parçayı vakumla tutar)", // nieuw, nalezen
+    'w.onderdelenkar': "parça arabası", // nieuw, nalezen
+    'w.draaitafel': "döner tabla (kendini değil, parçayı döndürürsün)", // nieuw, nalezen
+    'w.rolcontainer': "tekerlekli kafes (tekerlekler üstünde yüksek bir kafes)", // nieuw, nalezen
+    's.handling.1': "Bunu tek başına kaldırma. Caraskalı kullan.", // nieuw, nalezen
+    's.handling.2': "Kaldırma kancası iyice kapandı mı?", // nieuw, nalezen
+    's.handling.3': "Parça arabasını it, çekme.", // nieuw, nalezen
+    'c.handling.q': "Caraskalın altında durabilir miyim?", // nieuw, nalezen
+    'c.handling.a': "Hayır, asılı bir yükün altında asla.", // nieuw, nalezen
+    'c.handling': "Ağır işi caraskal yapsın", // nieuw, nalezen
+    'c.handling.b': "Ağır parçalar sırtınla değil, bir caraskal ya da kaldırma yardımcısıyla kaldırılır. Kaldırmadan önce kancayı kontrol et: emniyet mandalı kapanmalı. Yavaş kaldır ve ellerini ve ayaklarını yükten uzak tut. Asılı bir yükün altında asla durma ya da yürüme. Bir parçayı döndürmek için döner tablayı kullan: o zaman sırtını bükmen gerekmez. Bir arabayı ya da tekerlekli kafesi it: nereye gittiğini görürsün ve sırtın daha az yorulur. Caraskalı sadece nasıl kullanılacağını öğrendiysen kullan. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.handling.p': "Caraskalı kullanıyorum.", // nieuw, nalezen
+    'c.handling.s': "Bir parça çok ağır. Caraskal on dakika daha dolu. Ne yaparsın?", // nieuw, nalezen
+    'c.handling.o1': "Caraskalı beklersin.", // nieuw, nalezen
+    'c.handling.o2': "Tek başına, hızlıca kaldırırsın.", // nieuw, nalezen
+    'c.handling.o3': "Yerde sürüklersin.", // nieuw, nalezen
+    'c.handling.w': "Ağır bir parça sırtını bir saniyede sakatlayabilir. On dakika beklemek, aylarca ağrı çekmekten iyidir.", // nieuw, nalezen
+    'l.finalcheck': "Son kontrol", // nieuw, nalezen
+    'w.typeplaatje': "tip plakası (tipi ve numarası yazan küçük metal bir plaka)", // nieuw, nalezen
+    'w.stempel': "damga", // nieuw, nalezen
+    'w.testbank': "test tezgâhı", // nieuw, nalezen
+    'w.goedkeursticker': "onay etiketi (yeşil bir etiket: ürün iyi)", // nieuw, nalezen
+    'w.kras': "çizik", // nieuw, nalezen
+    'w.barst': "çatlak", // nieuw, nalezen
+    's.finalcheck.1': "Tip plakası eğri.", // nieuw, nalezen
+    's.finalcheck.2': "Bu üründe bir çizik var.", // nieuw, nalezen
+    's.finalcheck.3': "Onay etiketi olmadan gitmez.", // nieuw, nalezen
+    'c.finalcheck.q': "Bu ürün iyi mi?", // nieuw, nalezen
+    'c.finalcheck.a': "Hayır, içinde bir çatlak var.", // nieuw, nalezen
+    'c.finalcheck': "Etiketi sadece iyi ürünler alır", // nieuw, nalezen
+    'c.finalcheck.b': "Son kontrol, müşteri bulmadan önce bir hatayı bulmak için son şanstır. Listedeki her maddeyi kontrol et, iş yoğunken de. Küçük bir çizik ya da çatlak kolayca gözden kaçar: iyi ışıkta ve birden fazla taraftan bak. Onay etiketini yapıştır ya da damgayı vur, ama sadece her madde iyiyse. Emin değil misin? Ürünü kenara koy ve sor. Burada bulunan bir hata az tutar, müşteride bulunan bir hata ise çok pahalıya mal olur. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.finalcheck.p': "Bu ürün kenara gidiyor.", // nieuw, nalezen
+    'c.finalcheck.s': "Hat çok yoğun. Bir üründe, etiketin altında küçük bir çizik görüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.finalcheck.o1': "Kenara koyar ve ekip liderine söylersin.", // nieuw, nalezen
+    'c.finalcheck.o2': "Onay etiketini yapıştırırsın: çizik küçük.", // nieuw, nalezen
+    'c.finalcheck.o3': "Etiketi çiziğin üstüne kaydırırsın.", // nieuw, nalezen
+    'c.finalcheck.w': "Küçük bir çizik, hatta bir sorunun işareti olabilir. Onu saklamak, sorunu sadece müşteriye taşır.", // nieuw, nalezen
   },
 };
 

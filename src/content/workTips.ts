@@ -2329,10 +2329,81 @@ const installTips = [
   ),
 ];
 
+// ---- Assembly (u.montage, the owner's request, 21 November 2026) ----
+// One tip per lesson of the third own unit of Productie (./work.ts montageUnit). None of them
+// states a right, a law or an amount: they are about how the work is done (NONE), or about rules
+// that differ per company (HOUSE_LINE: who may use a hoist, what the final check holds). The short
+// situations are in tests/situationLength.test.ts.
+
+const montageTips = [
+  tipFor(
+    'assembly',
+    '🗒️',
+    'Follow the steps, in the same order',
+    'At an assembly line every step has its place and its order. The work instruction shows them, often with pictures. Do the steps in the same order every time, also when you think you know a faster way. Another order can make a product that looks good but does not work. Is a bin almost empty? Say it in time, so the line does not stop. Do you see a step that could be better? Tell your team leader: then it can change for everyone.',
+    ['Ik heb nieuwe onderdelen nodig.', 'I need new parts.'],
+    'You found a faster way to do step three. The work instruction says something else. What do you do?',
+    [
+      'Ask your team leader first.',
+      'Do it your way from now on.',
+      'Teach your colleagues your way.',
+    ],
+    'The order is often there for a reason you cannot see. If your way is better, it can change for everyone.',
+    NONE,
+  ),
+  tipFor(
+    'fastening',
+    '🔧',
+    'The click is enough',
+    'A torque wrench clicks when a bolt is tight enough. Stop at the click: do not turn further. Too tight can break the bolt or the part, and too loose can come off. The power screwdriver works the same way: it stops by itself. Put every washer in its place: a missing washer is hard to see later. Count your bolts. Is one left over, or do you need one more? Then something is wrong: tell your team leader.',
+    ['Er is een bout over.', 'There is a bolt left over.'],
+    'Your torque wrench clicked. The bolt still feels a little loose to you. What do you do?',
+    [
+      'Stop, and ask your team leader.',
+      'Turn it a bit more by hand.',
+      'Use a longer wrench.',
+    ],
+    'The click is set to the right force. If it feels wrong, the wrench may need a check. Turning further can break the bolt.',
+    NONE,
+  ),
+  // Who may use a hoist, and after which training, differs per company: HOUSE_LINE.
+  tipFor(
+    'handling',
+    '🪝',
+    'Let the hoist do the heavy work',
+    'Heavy parts are lifted with a hoist or a lifting aid, not with your back. Check the hook before you lift: the latch must close. Lift slowly, and keep your hands and feet away from the load. Never stand or walk under a hanging load. Use the turntable to turn a part: then you do not have to twist your back. Push a trolley or a roll cage: you see where you go, and your back has less work. Only use a hoist when you have learned how.',
+    ['Ik gebruik de takel.', 'I use the hoist.'],
+    'A part is very heavy. The hoist is busy for ten more minutes. What do you do?',
+    [
+      'Wait for the hoist.',
+      'Lift it alone, quickly.',
+      'Drag it over the floor.',
+    ],
+    'A heavy part can hurt your back in one second. Ten minutes of waiting is better than months of pain.',
+    HOUSE_LINE,
+  ),
+  // What the final check holds, and who may approve, differ per company: HOUSE_LINE.
+  tipFor(
+    'finalcheck',
+    '☑️',
+    'Only good products get the sticker',
+    'The final check is the last chance to find a mistake before the customer finds it. Check every point on the list, also when it is busy. A small scratch or crack is easy to miss: look in good light, and from more than one side. Only put the OK sticker or the stamp on it when every point is good. Not sure? Put the product aside and ask. A mistake that is found here costs little, and a mistake at the customer costs a lot.',
+    ['Dit product gaat apart.', 'This product goes aside.'],
+    'The line is busy. You see a small scratch on a product, under the label. What do you do?',
+    [
+      'Put it aside, and tell your team leader.',
+      'Put the sticker on: it is small.',
+      'Move the label over the scratch.',
+    ],
+    'A small scratch can be a sign of a problem in the line. Hiding it only moves the problem to the customer.',
+    HOUSE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

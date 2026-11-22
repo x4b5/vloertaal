@@ -133,6 +133,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "Umiem zapytać, czy mogę otworzyć skrzynkę z bezpiecznikami.", // nieuw, nalezen
     'kjn.u.install.2': "Umiem powiedzieć, że złączka cieknie.", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "Umiem powiedzieć, że pojemnik na części jest prawie pusty.", // nieuw, nalezen
+    'kjn.u.montage.2': "Umiem zapytać, jak mocno trzeba dokręcić śrubę.", // nieuw, nalezen
   },
 };
 

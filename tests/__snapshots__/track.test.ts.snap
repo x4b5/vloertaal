@@ -52,6 +52,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.ruwbouw",
   "u.machines",
   "u.install",
+  "u.montage",
 ]
 `;
 
@@ -107,6 +108,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.ruwbouw",
   "u.machines",
   "u.install",
+  "u.montage",
 ]
 `;
 
@@ -162,6 +164,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.delivery",
   "u.machines",
   "u.install",
+  "u.montage",
 ]
 `;
 
@@ -217,6 +220,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.ruwbouw",
   "u.machines",
   "u.install",
+  "u.montage",
 ]
 `;
 
@@ -272,6 +276,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.ruwbouw",
   "u.machines",
   "u.install",
+  "u.montage",
 ]
 `;
 
@@ -327,6 +332,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.ruwbouw",
   "u.machines",
   "u.install",
+  "u.montage",
 ]
 `;
 
@@ -382,6 +388,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.ruwbouw",
   "u.machines",
   "u.install",
+  "u.montage",
 ]
 `;
 
@@ -437,6 +444,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.ruwbouw",
   "u.machines",
   "u.install",
+  "u.montage",
 ]
 `;
 
@@ -450,6 +458,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.emergency",
   "u.factory",
   "u.machines",
+  "u.montage",
   "u.data",
   "u.time",
   "u.sounds",
@@ -547,6 +556,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.ruwbouw",
   "u.machines",
   "u.install",
+  "u.montage",
 ]
 `;
 
@@ -602,6 +612,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.afbouw",
   "u.ruwbouw",
   "u.machines",
+  "u.montage",
 ]
 `;
 
@@ -657,5 +668,6 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.ruwbouw",
   "u.machines",
   "u.install",
+  "u.montage",
 ]
 `;

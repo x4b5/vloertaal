@@ -1756,6 +1756,90 @@ const installUnit = unit('install', 'Electrics, pipes and metal', 'Elektra, leid
   ),
 ]);
 
+// ---- Assembly (the owner's request, 21 November 2026) ----
+// The third own unit of the sector Productie (src/content/sectors.ts): assembly work in the
+// manufacturing industry: the line, fastening, lifting heavy parts and the final check. In the
+// path of a learner who chose Productie it comes right after "Machines en gereedschap"; in every
+// other course it is appended at the very end (workUnits below), so no existing course changes.
+// Already words of other lessons, used here in a sentence or the chat only: "het onderdeel", "de
+// bout", "het product", "de last" and "de lijst". The drawings: src/pictures/groupMontage.tsx (one
+// file per word in src/pictures/montage).
+
+const montageUnit = unit('montage', 'Assembly', 'Assemblage en montage', '🔧', '#2f7d6d', [
+  lesson(
+    'assembly',
+    'At the assembly line',
+    [
+      ['werkinstructie', 'de werkinstructie', 'the work instruction (a sheet with the steps)', '🗒️'],
+      ['onderdelenbak', 'de onderdelenbak', 'the parts bin', '🧺'],
+      ['mal', 'de mal', 'the jig (it holds the part in the right place)', '⬛'],
+      ['rolbaan', 'de rolbaan', 'the roller conveyor', '🛼'],
+      ['montagetafel', 'de montagetafel', 'the assembly bench', '🪑'],
+      ['voetpedaal', 'het voetpedaal', 'the foot pedal (a switch you press with your foot)', '🦶'],
+    ],
+    [
+      ['Lees eerst de werkinstructie.', 'Read the work instruction first.'],
+      ['De onderdelenbak is bijna leeg.', 'The parts bin is almost empty.'],
+      ['Leg het onderdeel in de mal.', 'Put the part in the jig.'],
+    ],
+    [['Welke stap komt nu?', 'Which step comes now?'], ['Stap vier. Kijk op de werkinstructie.', 'Step four. Look at the work instruction.']],
+  ),
+  lesson(
+    'fastening',
+    'Fastening',
+    [
+      ['schroefmachine', 'de schroefmachine', 'the power screwdriver (it hangs above the line)', '🪛'],
+      ['momentsleutel', 'de momentsleutel', 'the torque wrench (it clicks when the bolt is tight enough)', '🔧'],
+      ['tiewrap', 'de tie-wrap', 'the cable tie', '🎗️'],
+      ['sluitring', 'de sluitring', 'the washer', '🍩'],
+      ['klinknagel', 'de klinknagel', 'the rivet', '📍'],
+      ['popnageltang', 'de popnageltang', 'the rivet gun', '🗜️'],
+    ],
+    [
+      ['Draai de bout vast met de momentsleutel.', 'Tighten the bolt with the torque wrench.'],
+      ['Vergeet de sluitring niet.', 'Do not forget the washer.'],
+      ['Bind de kabels samen met een tie-wrap.', 'Tie the cables together with a cable tie.'],
+    ],
+    [['Hoe vast moet deze bout?', 'How tight must this bolt be?'], ['Tot de momentsleutel klikt.', 'Until the torque wrench clicks.']],
+  ),
+  lesson(
+    'handling',
+    'Lifting and moving',
+    [
+      ['takel', 'de takel', 'the hoist (it lifts heavy parts with a chain)', '⛓️'],
+      ['hijshaak', 'de hijshaak', 'the lifting hook', '🪝'],
+      ['tilhulp', 'de tilhulp', 'the lifting aid (it holds a part with suction)', '🫳'],
+      ['onderdelenkar', 'de onderdelenkar', 'the parts trolley', '🛒'],
+      ['draaitafel', 'de draaitafel', 'the turntable (you turn the part, not yourself)', '💿'],
+      ['rolcontainer', 'de rolcontainer', 'the roll cage (a tall cage on wheels)', '🗳️'],
+    ],
+    [
+      ['Til dit niet alleen. Gebruik de takel.', 'Do not lift this alone. Use the hoist.'],
+      ['Is de hijshaak goed dicht?', 'Is the lifting hook closed properly?'],
+      ['Duw de onderdelenkar, trek hem niet.', 'Push the parts trolley, do not pull it.'],
+    ],
+    [['Mag ik onder de takel staan?', 'May I stand under the hoist?'], ['Nee, nooit onder een hangende last.', 'No, never under a hanging load.']],
+  ),
+  lesson(
+    'finalcheck',
+    'The final check',
+    [
+      ['typeplaatje', 'het typeplaatje', 'the rating plate (a small metal plate with the type and number)', '🪪'],
+      ['stempel', 'de stempel', 'the stamp', '🔖'],
+      ['testbank', 'de testbank', 'the test bench', '🧪'],
+      ['goedkeursticker', 'de goedkeursticker', 'the OK sticker (a green sticker: the product is good)', '☑️'],
+      ['kras', 'de kras', 'the scratch', '〽️'],
+      ['barst', 'de barst', 'the crack', '💥'],
+    ],
+    [
+      ['Het typeplaatje zit scheef.', 'The rating plate is crooked.'],
+      ['Er zit een kras op dit product.', 'There is a scratch on this product.'],
+      ['Zonder goedkeursticker gaat het niet weg.', 'Without the OK sticker it does not leave.'],
+    ],
+    [['Is dit product goed?', 'Is this product good?'], ['Nee, er zit een barst in.', 'No, there is a crack in it.']],
+  ),
+]);
+
 // ---- In the shop, and Time, money and measures (docs/entree-aanvulling.md, part 5) ----
 // Basis units (no sector of their own), after the sector units: the course of every existing
 // sector keeps its order, the two units come at the end of it.
@@ -3004,5 +3088,7 @@ export const workUnits: Unit[] = [
   machinesUnit,
   // Techniek's second own unit (21 November 2026), at the very end (see "Electrics, pipes and metal" above).
   installUnit,
+  // Productie's third own unit (21 November 2026), at the very end (see "Assembly" above).
+  montageUnit,
 ];
 

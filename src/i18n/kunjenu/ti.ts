@@ -133,6 +133,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "ነቲ ሳጹን ፊውዝ ክኸፍቶ ይፍቀደኒ ድዩ ኢለ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.install.2': "መራኸቢ ቱቦ ከም ዘፍስስ ክብል እኽእል እየ።", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "እቲ ሳጹን ክፍልታት ዳርጋ ጥራሑ ምዃኑ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.montage.2': "ሓደ ቡሎን ክሳብ ክንደይ ክጸንዕ ከም ዘለዎ ክሓትት እኽእል እየ።", // nieuw, nalezen
   },
 };
 

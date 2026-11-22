@@ -2733,6 +2733,88 @@ const t: CultureTranslation = {
     'c.metalwork.o2': "Seguras a peça com força na mão.", // nieuw, nalezen
     'c.metalwork.o3': "Pões luvas e seguras a peça.", // nieuw, nalezen
     'c.metalwork.w': "Uma broca pode agarrar uma peça pequena e pô-la a rodar. Então bate-te na mão. No torno de bancada, fica parada.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'u.montage': "Montagem", // nieuw, nalezen
+    'l.assembly': "Na linha de montagem", // nieuw, nalezen
+    'w.werkinstructie': "a instrução de trabalho (uma folha com os passos)", // nieuw, nalezen
+    'w.onderdelenbak': "a caixa de peças", // nieuw, nalezen
+    'w.mal': "o gabarito (segura a peça no sítio certo)", // nieuw, nalezen
+    'w.rolbaan': "o transportador de rolos", // nieuw, nalezen
+    'w.montagetafel': "a bancada de montagem", // nieuw, nalezen
+    'w.voetpedaal': "o pedal (um interruptor que carregas com o pé)", // nieuw, nalezen
+    's.assembly.1': "Lê primeiro a instrução de trabalho.", // nieuw, nalezen
+    's.assembly.2': "A caixa de peças está quase vazia.", // nieuw, nalezen
+    's.assembly.3': "Põe a peça no gabarito.", // nieuw, nalezen
+    'c.assembly.q': "Que passo vem agora?", // nieuw, nalezen
+    'c.assembly.a': "O passo quatro. Vê na instrução de trabalho.", // nieuw, nalezen
+    'c.assembly': "Segue os passos, pela mesma ordem", // nieuw, nalezen
+    'c.assembly.b': "Numa linha de montagem cada passo tem o seu lugar e a sua ordem. A instrução de trabalho mostra-os, muitas vezes com imagens. Faz os passos sempre pela mesma ordem, também quando achas que sabes uma maneira mais rápida. Outra ordem pode dar um produto que parece bom mas não funciona. Uma caixa está quase vazia? Diz a tempo, para a linha não parar. Vês um passo que podia ser melhor? Diz ao teu chefe de equipa: assim pode mudar para todos.", // nieuw, nalezen
+    'c.assembly.p': "Preciso de peças novas.", // nieuw, nalezen
+    'c.assembly.s': "Encontraste uma maneira mais rápida de fazer o passo três. A instrução de trabalho diz outra coisa. O que fazes?", // nieuw, nalezen
+    'c.assembly.o1': "Primeiro perguntas ao teu chefe de equipa.", // nieuw, nalezen
+    'c.assembly.o2': "A partir de agora fazes à tua maneira.", // nieuw, nalezen
+    'c.assembly.o3': "Ensinas a tua maneira aos teus colegas.", // nieuw, nalezen
+    'c.assembly.w': "A ordem tem muitas vezes uma razão que não vês. Se a tua maneira for melhor, pode mudar para todos.", // nieuw, nalezen
+    'l.fastening': "Apertar e fixar", // nieuw, nalezen
+    'w.schroefmachine': "a aparafusadora elétrica (está pendurada por cima da linha)", // nieuw, nalezen
+    'w.momentsleutel': "a chave dinamométrica (faz clique quando o parafuso está apertado o suficiente)", // nieuw, nalezen
+    'w.tiewrap': "a abraçadeira de plástico", // nieuw, nalezen
+    'w.sluitring': "a anilha", // nieuw, nalezen
+    'w.klinknagel': "o rebite", // nieuw, nalezen
+    'w.popnageltang': "a rebitadora", // nieuw, nalezen
+    's.fastening.1': "Aperta o parafuso com a chave dinamométrica.", // nieuw, nalezen
+    's.fastening.2': "Não te esqueças da anilha.", // nieuw, nalezen
+    's.fastening.3': "Junta os cabos com uma abraçadeira de plástico.", // nieuw, nalezen
+    'c.fastening.q': "Quão apertado tem de ficar este parafuso?", // nieuw, nalezen
+    'c.fastening.a': "Até a chave dinamométrica fazer clique.", // nieuw, nalezen
+    'c.fastening': "O clique chega", // nieuw, nalezen
+    'c.fastening.b': "Uma chave dinamométrica faz clique quando um parafuso está apertado o suficiente. Para no clique: não rodes mais. Apertado demais pode partir o parafuso ou a peça, e solto demais pode cair. A aparafusadora elétrica funciona da mesma maneira: para sozinha. Põe cada anilha no seu lugar: uma anilha que falta é difícil de ver mais tarde. Conta os teus parafusos. Sobra um, ou falta-te um? Então há alguma coisa errada: avisa o teu chefe de equipa.", // nieuw, nalezen
+    'c.fastening.p': "Sobra um parafuso.", // nieuw, nalezen
+    'c.fastening.s': "A tua chave dinamométrica fez clique. O parafuso ainda te parece um pouco solto. O que fazes?", // nieuw, nalezen
+    'c.fastening.o1': "Paras, e perguntas ao teu chefe de equipa.", // nieuw, nalezen
+    'c.fastening.o2': "Rodas mais um bocadinho à mão.", // nieuw, nalezen
+    'c.fastening.o3': "Usas uma chave mais comprida.", // nieuw, nalezen
+    'c.fastening.w': "O clique está regulado para a força certa. Se te parecer errado, talvez a chave precise de ser verificada. Rodar mais pode partir o parafuso.", // nieuw, nalezen
+    'l.handling': "Levantar e mover", // nieuw, nalezen
+    'w.takel': "a talha (levanta peças pesadas com uma corrente)", // nieuw, nalezen
+    'w.hijshaak': "o gancho de elevação", // nieuw, nalezen
+    'w.tilhulp': "o auxiliar de elevação (segura uma peça por sucção)", // nieuw, nalezen
+    'w.onderdelenkar': "o carrinho de peças", // nieuw, nalezen
+    'w.draaitafel': "a mesa giratória (rodas a peça, não o teu corpo)", // nieuw, nalezen
+    'w.rolcontainer': "o carro gaiola (uma gaiola alta com rodas)", // nieuw, nalezen
+    's.handling.1': "Não levantes isto sem ajuda. Usa a talha.", // nieuw, nalezen
+    's.handling.2': "O gancho de elevação está bem fechado?", // nieuw, nalezen
+    's.handling.3': "Empurra o carrinho de peças, não o puxes.", // nieuw, nalezen
+    'c.handling.q': "Posso ficar debaixo da talha?", // nieuw, nalezen
+    'c.handling.a': "Não, nunca debaixo de uma carga suspensa.", // nieuw, nalezen
+    'c.handling': "Deixa a talha fazer o trabalho pesado", // nieuw, nalezen
+    'c.handling.b': "As peças pesadas levantam-se com uma talha ou um auxiliar de elevação, não com as tuas costas. Verifica o gancho antes de levantar: a patilha de segurança tem de fechar. Levanta devagar, e mantém as mãos e os pés longe da carga. Nunca fiques nem passes debaixo de uma carga suspensa. Usa a mesa giratória para rodar uma peça: assim não tens de torcer as costas. Empurra um carrinho ou um carro gaiola: vês para onde vais, e as tuas costas trabalham menos. Usa uma talha só quando já aprendeste como. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.handling.p': "Uso a talha.", // nieuw, nalezen
+    'c.handling.s': "Uma peça é muito pesada. A talha ainda está ocupada mais dez minutos. O que fazes?", // nieuw, nalezen
+    'c.handling.o1': "Esperas pela talha.", // nieuw, nalezen
+    'c.handling.o2': { m: "Levantas a peça sozinho, depressa.", f: "Levantas a peça sozinha, depressa.", x: "Levantas a peça sem ajuda, depressa." }, // nieuw, nalezen
+    'c.handling.o3': "Arrastas a peça pelo chão.", // nieuw, nalezen
+    'c.handling.w': "Uma peça pesada pode magoar as tuas costas num segundo. Esperar dez minutos é melhor do que meses de dores.", // nieuw, nalezen
+    'l.finalcheck': "A verificação final", // nieuw, nalezen
+    'w.typeplaatje': "a chapa de características (uma pequena chapa de metal com o tipo e o número)", // nieuw, nalezen
+    'w.stempel': "o carimbo", // nieuw, nalezen
+    'w.testbank': "a bancada de ensaio", // nieuw, nalezen
+    'w.goedkeursticker': "o autocolante de aprovado (um autocolante verde: o produto está bom)", // nieuw, nalezen
+    'w.kras': "o risco", // nieuw, nalezen
+    'w.barst': "a racha", // nieuw, nalezen
+    's.finalcheck.1': "A chapa de características está torta.", // nieuw, nalezen
+    's.finalcheck.2': "Este produto tem um risco.", // nieuw, nalezen
+    's.finalcheck.3': "Sem o autocolante de aprovado não sai.", // nieuw, nalezen
+    'c.finalcheck.q': "Este produto está bom?", // nieuw, nalezen
+    'c.finalcheck.a': "Não, tem uma racha.", // nieuw, nalezen
+    'c.finalcheck': "Só os produtos bons levam o autocolante", // nieuw, nalezen
+    'c.finalcheck.b': "A verificação final é a última oportunidade de encontrar um erro antes de o cliente o encontrar. Verifica cada ponto da lista, também quando há muito trabalho. Um pequeno risco ou uma racha passam facilmente despercebidos: olha com boa luz, e de mais de um lado. Põe o autocolante de aprovado ou o carimbo só quando todos os pontos estão bons. Não tens a certeza? Põe o produto à parte e pergunta. Um erro encontrado aqui custa pouco, e um erro no cliente custa muito. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.finalcheck.p': "Este produto fica à parte.", // nieuw, nalezen
+    'c.finalcheck.s': "Há muito trabalho na linha. Vês um pequeno risco num produto, por baixo da etiqueta. O que fazes?", // nieuw, nalezen
+    'c.finalcheck.o1': "Pões o produto à parte, e avisas o teu chefe de equipa.", // nieuw, nalezen
+    'c.finalcheck.o2': "Pões o autocolante: é pequeno.", // nieuw, nalezen
+    'c.finalcheck.o3': "Mudas a etiqueta para cima do risco.", // nieuw, nalezen
+    'c.finalcheck.w': "Um pequeno risco pode ser sinal de um problema na linha. Escondê-lo só passa o problema para o cliente.", // nieuw, nalezen
   },
 };
 

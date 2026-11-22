@@ -133,6 +133,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "Pot să întreb dacă am voie să deschid tabloul electric.", // nieuw, nalezen
     'kjn.u.install.2': "Pot să spun că un racord pierde apă.", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "Pot să spun că lada cu piese e aproape goală.", // nieuw, nalezen
+    'kjn.u.montage.2': "Pot să întreb cât de strâns trebuie să fie un bolț.", // nieuw, nalezen
   },
 };
 

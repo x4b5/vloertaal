@@ -132,6 +132,9 @@ const t: CultureTranslation = {
     // "Elektra, leidingen en metaal" (21 November 2026).
     'kjn.u.install.1': "می‌توانم بپرسم اجازه دارم تابلو برق را باز کنم یا نه.", // nieuw, nalezen
     'kjn.u.install.2': "می‌توانم بگویم که یک اتصال لوله نشت می‌کند.", // nieuw, nalezen
+    // "Assemblage en montage" (21 November 2026).
+    'kjn.u.montage.1': "می‌توانم بگویم که جعبهٔ قطعات تقریباً خالی است.", // nieuw, nalezen
+    'kjn.u.montage.2': "می‌توانم بپرسم یک پیچ چقدر باید سفت باشد.", // nieuw, nalezen
   },
 };
 

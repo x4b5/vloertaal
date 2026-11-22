@@ -195,6 +195,11 @@ const t: CultureTranslation = {
     'c.testing.a.why': "Pytanie, czy można to otworzyć: nie, i kto to robi.", // nieuw, nalezen
     'c.pipes.a.why': "Pytanie, czy jeszcze cieknie: trochę, i co się z tym robi.", // nieuw, nalezen
     'c.metalwork.a.why': "Pytanie, dlaczego jest ostra: jest na niej jeszcze zadzior.", // nieuw, nalezen
+    // "Assemblage en montage" (u.montage, 21 November 2026).
+    'c.assembly.a.why': "Pytanie, który krok: numer i gdzie patrzeć.", // nieuw, nalezen
+    'c.fastening.a.why': "Pytanie, jak mocno: aż klucz kliknie.", // nieuw, nalezen
+    'c.handling.a.why': "Pytanie, czy można tam stać: nie, nigdy, i dlaczego.", // nieuw, nalezen
+    'c.finalcheck.a.why': "Pytanie, czy jest dobry: nie, i co jest z nim nie tak.", // nieuw, nalezen
   },
 };
 
