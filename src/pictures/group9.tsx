@@ -197,12 +197,15 @@ export default {
   ),
 
   // "het licht": the bike light — a lamp on the front of a bike, shining a beam ahead
+  // On the intro card: the lamp switches on, its beam and rays appear.
   'w.licht': () => (
     <g>
       <Ground cx={38} cy={106} rx={26} ry={4} />
       {/* Beam */}
-      <path d="M58 40L112 14V80Z" fill={PAL.yellowLight} opacity=".55" />
-      <path d="M58 40L112 30V58Z" fill={PAL.yellowShine} opacity=".9" />
+      <Move kind="show">
+        <path d="M58 40L112 14V80Z" fill={PAL.yellowLight} opacity=".55" />
+        <path d="M58 40L112 30V58Z" fill={PAL.yellowShine} opacity=".9" />
+      </Move>
       {/* Front wheel and fork */}
       <circle cx="38" cy="80" r="24" fill="none" stroke={PAL.ink} strokeWidth="6" />
       <circle cx="38" cy="80" r="17" fill="none" stroke={PAL.mist} strokeWidth="1.6" />
@@ -216,7 +219,9 @@ export default {
       <ellipse cx="59" cy="39.5" rx="4" ry="8" fill={PAL.yellow} />
       <ellipse cx="59" cy="39.5" rx="2" ry="4.6" fill={PAL.white} />
       <Shine d="M44 35H52" width={2.4} opacity={0.5} />
-      <Motion x={90} y={44} dir={0} spread={60} n={3} len={8} gap={16} color={PAL.yellowShade} width={3.6} />
+      <Move kind="show">
+        <Motion x={90} y={44} dir={0} spread={60} n={3} len={8} gap={16} color={PAL.yellowShade} width={3.6} />
+      </Move>
     </g>
   ),
 
@@ -521,6 +526,7 @@ export default {
   ),
 
   // "snijden": to cut — a knife slicing a carrot on a wooden board
+  // On the intro card: the knife comes down into the carrot.
   'w.snijden': () => (
     <g>
       <Ground cx={58} cy={104} rx={50} ry={4} />
@@ -537,6 +543,7 @@ export default {
       <ellipse cx="86" cy="80" rx="4" ry="6.4" fill={PAL.orangeShade} />
       <ellipse cx="85" cy="80" rx="4" ry="6.4" fill={PAL.orangeLight} />
       {/* Knife: blade cutting down into the carrot */}
+      <Move kind="from" dy={-22}>
       <g transform="rotate(-24 62 60)">
         <path d="M58 76L60 24Q66 22 70 30L68 76Z" fill={PAL.mist} />
         <path d="M66 76L68 32Q69 28 70 30L68 76Z" fill={PAL.steel} />
@@ -545,6 +552,7 @@ export default {
         <circle cx="63" cy="86" r="1.6" fill={PAL.steel} />
         <circle cx="63" cy="97" r="1.6" fill={PAL.steel} />
       </g>
+      </Move>
       <Arrow from={[96, 34]} to={[96, 60]} color={PAL.sky} width={6} head={10} />
     </g>
   ),

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Motion, PAL, Shade, Shine } from '../kit';
+import { Motion, Move, PAL, Shade, Shine } from '../kit';
 
 /** The tower's round column: centre x, half width, and the curve of its rings seen from above. */
 const CX = 60;
@@ -28,6 +28,7 @@ export default {
   // "de signaallamp": the signal tower light — a tall round stack of four thin lamps (red, orange,
   // green, blue) between dark rings, a dark dome on top, on a short pole on the corner of a grey
   // machine: the red lamp on top is lit with rays, the others are off (pale glass).
+  // On the intro card: the red lamp's rays appear, as it lights up (one fade, no blinking).
   'w.signaallamp': () => (
     <g>
       {/* The machine's corner: ground shadow, front, right side, top */}
@@ -36,8 +37,10 @@ export default {
       <path d="M84 99L100 89L100 97L84 107Z" fill={PAL.slate} />
       <path d="M18 99L84 99L100 89L34 89Z" fill={PAL.mist} />
       {/* The rays of the lit lamp */}
-      <Motion x={CX} y={30} dir={180} spread={64} n={3} len={7} gap={27} color={PAL.red} width={3.4} />
-      <Motion x={CX} y={30} dir={0} spread={64} n={3} len={7} gap={27} color={PAL.red} width={3.4} />
+      <Move kind="show">
+        <Motion x={CX} y={30} dir={180} spread={64} n={3} len={7} gap={27} color={PAL.red} width={3.4} />
+        <Motion x={CX} y={30} dir={0} spread={64} n={3} len={7} gap={27} color={PAL.red} width={3.4} />
+      </Move>
       {/* The small round foot and the short pole */}
       <path d={ring(93, 95.5, 11, 3)} fill={PAL.slate} />
       <ellipse cx={CX} cy={93} rx={11} ry={3} fill={PAL.steel} />

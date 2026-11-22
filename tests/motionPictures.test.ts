@@ -70,6 +70,7 @@ const MOTION_FUNCTION = [
  */
 const MOTION_ROUND4 = [
   'w.zoeken', 'w.bewaren', 'w.hamer', 'w.afkeuren', 'w.wassen', 'w.prullenbak', 'w.verzamelen', 'w.lossen', 'w.tanken', 'w.opladen', 'w.parkeren', 'w.retour', 'w.typen', 'w.opslaan', 'w.ophangen', 'w.tempo', 'w.vakkenvullen', 'w.pakken', 'w.kruishout', 'w.aftekenen', 'w.mal', 'w.tiewrap',
+  'w.betalen', 'w.pinnen', 'w.kijken', 'w.licht', 'w.snijden', 'w.bezorgen', 'w.inladen', 'w.aanbellen', 'w.rijden', 'w.handje', 'w.aandebel', 'w.motorkap', 'w.lamp', 'w.morsen', 'w.samen', 'w.penseel', 'w.achterlamp', 'w.waarschuwingslampje', 'w.signaallamp', 'w.rolcontainer',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */

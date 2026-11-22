@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Bubble, Clock, Cross, Dots, ExclaimMark, Motion, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Bubble, Clock, Cross, Dots, ExclaimMark, Motion, Move, PAL, QuestionMark, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 6 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -85,8 +85,10 @@ export default {
 
   // "samen": together — the team puts their hands in, one on top of the other: four sleeves
   // in the cast's colours, from both sides
+  // On the intro card: the four hands come in from both sides onto the stack.
   'w.samen': () => {
     const hand = (y: number, fromLeft: boolean, skin: [string, string], sleeve: [string, string]) => (
+      <Move kind="from" dx={fromLeft ? -26 : 26}>
       <g transform={fromLeft ? undefined : 'translate(120 0) scale(-1 1)'}>
         <rect x="-4" y={y - 9} width="36" height="18" rx="6" fill={sleeve[0]} />
         <rect x="26" y={y - 9.5} width="9" height="19" rx="4.5" fill={sleeve[1]} />
@@ -96,6 +98,7 @@ export default {
         <rect x="36" y={y - 12} width="15" height="7" rx="3.5" fill={skin[0]} transform={`rotate(-14 36 ${y - 8})`} />
         <path d={`M56 ${y - 2.5}H72`} stroke={skin[1]} strokeWidth="1.4" strokeLinecap="round" opacity=".7" />
       </g>
+      </Move>
     );
     return (
       <g>

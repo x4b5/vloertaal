@@ -1,7 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 import { CastHead, type CharacterId } from '../components/Characters';
 import type { Expr } from '../components/Faces';
-import { Bubble, Dots, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Bubble, Dots, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 13 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -186,6 +186,7 @@ export default {
 
   // "betalen": to pay — a bank card tapped on a pay terminal (euro on its screen), with the
   // contactless waves
+  // On the intro card: the card comes to the terminal, then its contactless waves appear.
   'w.betalen': () => (
     <g>
       <Ground cx={52} cy={106} rx={30} ry={4} />
@@ -201,14 +202,18 @@ export default {
       )))}
       <Shine d="M29 46Q29 38 36 37" width={3} opacity={0.35} />
       {/* Contactless waves */}
-      <path d="M80 50Q85 56 80 62M86 46Q93 56 86 66" fill="none" stroke={PAL.sky} strokeWidth="3.6" strokeLinecap="round" />
+      <Move kind="show">
+        <path d="M80 50Q85 56 80 62M86 46Q93 56 86 66" fill="none" stroke={PAL.sky} strokeWidth="3.6" strokeLinecap="round" />
+      </Move>
       {/* Card */}
-      <g transform="translate(-9 6) rotate(-24 98 40)">
-        <rect x="76" y="27" width="44" height="28" rx="5" fill={PAL.navyShade} />
-        <rect x="76" y="24" width="44" height="28" rx="5" fill={PAL.blue} />
-        <rect x="82" y="31" width="10" height="8" rx="2" fill={PAL.yellow} />
-        <path d="M82 46H100" stroke={PAL.blueLight} strokeWidth="2.4" strokeLinecap="round" />
-      </g>
+      <Move kind="from" dx={22} dy={-18}>
+        <g transform="translate(-9 6) rotate(-24 98 40)">
+          <rect x="76" y="27" width="44" height="28" rx="5" fill={PAL.navyShade} />
+          <rect x="76" y="24" width="44" height="28" rx="5" fill={PAL.blue} />
+          <rect x="82" y="31" width="10" height="8" rx="2" fill={PAL.yellow} />
+          <path d="M82 46H100" stroke={PAL.blueLight} strokeWidth="2.4" strokeLinecap="round" />
+        </g>
+      </Move>
     </g>
   ),
 
@@ -513,6 +518,7 @@ export default {
   ),
 
   // "kijken": to look, to check — a big pair of eyes, looking to the side
+  // On the intro card: the pupils move from the left to the side they look at.
   'w.kijken': () => (
     <g>
       {[36, 84].map((cx) => (
@@ -521,9 +527,11 @@ export default {
           <Shade color={PAL.paperShade} opacity={1} at={[cx + 26, 66, 12, 34]}>
             <ellipse cx={cx} cy={60} rx="22" ry="30" fill={PAL.white} />
           </Shade>
-          <circle cx={cx + 9} cy={62} r="12" fill={PAL.brown} />
-          <circle cx={cx + 10} cy={62} r="7" fill={PAL.ink} />
-          <circle cx={cx + 6} cy={57} r="3.2" fill={PAL.white} />
+          <Move kind="from" dx={-16}>
+            <circle cx={cx + 9} cy={62} r="12" fill={PAL.brown} />
+            <circle cx={cx + 10} cy={62} r="7" fill={PAL.ink} />
+            <circle cx={cx + 6} cy={57} r="3.2" fill={PAL.white} />
+          </Move>
         </g>
       ))}
       <Shine d="M20 50Q22 40 30 36" width={3} opacity={0.9} color={PAL.ice} />

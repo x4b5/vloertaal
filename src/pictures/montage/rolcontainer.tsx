@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Box, Ground, PAL, r1 } from '../kit';
+import { Box, Ground, Move, PAL, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -38,9 +38,11 @@ const mesh = (x0: number, y0: number, x1: number, y1: number, step: number) => {
 export default {
   // "de rolcontainer": the roll cage — a tall steel wire cage on a low base with four wheels, cardboard
   // boxes stacked inside behind the wire mesh.
+  // On the intro card: the roll cage rolls in from the left to its place.
   'w.rolcontainer': () => (
     <g strokeLinejoin="round">
       <Ground cx={57} cy={105} rx={40} ry={4} />
+      <Move kind="from" dx={-26}>
       {/* The back frame */}
       <path d={`M${L + ox} ${T + oy}H${R + ox}V${B + oy}`} fill="none" stroke={PAL.steel} strokeWidth="3.4" strokeLinecap="round" />
       {/* The boxes inside */}
@@ -65,6 +67,7 @@ export default {
       <rect x={L} y={T} width={R - L} height={B - T} fill="none" stroke={PAL.mist} strokeWidth="3.6" />
       <path d={`M${R} ${T}V${B}`} stroke={PAL.steel} strokeWidth="3.6" />
       <path d={`M${R + ox} ${T + oy}V${B + oy}`} stroke={PAL.steel} strokeWidth="3.4" strokeLinecap="round" />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;
