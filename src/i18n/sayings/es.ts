@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'Entonces hoy tomo el autobús.',
     'c.plain.a.why': 'Lluvia muy fuerte: en el autobús no te mojas.',
     'c.easy': 'Dichos: las palabras quieren decir otra cosa',
-    'c.easy.b': 'Aquí la gente usa mucho los dichos, también en el trabajo. Las palabras dicen una cosa, pero quieren decir otra. “Een eitje” es un huevito, pero quiere decir: muy fácil. Tú no tienes que usar dichos. ¿No entiendes un dicho? Entonces pregunta qué quiere decir.', // nieuw, nalezen
+    'c.easy.b': 'Aquí la gente usa mucho los dichos, también en el trabajo. Las palabras dicen una cosa, pero quieren decir otra. “Een eitje” es un huevito, pero quiere decir: muy fácil. Tú no tienes que usar dichos. ¿No entiendes un dicho? Entonces pregunta qué quiere decir.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.easy.p': '¿Qué quieres decir con eso?',
     'c.easy.s': 'Tu compañero mira la tarea nueva y dice: “Dat is een eitje!” ¿Qué quiere decir?',
     'c.easy.o1': 'La tarea es muy fácil.',
@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': '¿Mantienes un ojito en la vela?',
     'zg.zeil.m': '¿Vigilas que todo vaya bien y de forma segura?',
     'zg.zeil.s': 'Tu encargada tiene que irse un momento. Dice: “Hou je een oogje in het zeil?” ¿Qué quiere decir?',
-    'zg.zeil.o1': "Vigila mientras ella no está.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
+    'zg.zeil.o1': "Vigila mientras ella no está.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken) // nagelezen AI 22 nov
     'zg.zeil.o2': 'Ve a mirar un barco.',
     'zg.zeil.o3': 'Cierra los ojos un momento.',
     'zg.zeil.w': '“Een oogje in het zeil houden” quiere decir: prestar atención para que todo vaya bien. ¿No sabes bien qué vigilar? Pregúntale antes de que se vaya.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'El tiempo es dinero.',
     'zg.tijdgeld.m': 'El tiempo vale mucho: no lo pierdas.',
     'zg.tijdgeld.s': 'Tu jefe quiere que el camión se cargue rápido. Dice: “Tijd is geld.” ¿Qué quiere decir?',
-    'zg.tijdgeld.o1': "Trabaja rápido, no pierdas tiempo.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
+    'zg.tijdgeld.o1': "Trabaja rápido, no pierdas tiempo.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken) // nagelezen AI 22 nov
     'zg.tijdgeld.o2': 'Te dan dinero por llegar tarde.',
     'zg.tijdgeld.o3': 'El reloj es muy caro.',
     'zg.tijdgeld.w': 'Este dicho quiere decir que el tiempo vale mucho. Nunca es una razón para un trabajo peligroso ni para horas sin pagar.',

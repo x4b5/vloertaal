@@ -571,7 +571,7 @@ const lang: HelpLanguageSource = {
 
     // Unit: Safety first
     'u.safety': 'Безпека понад усе',
-    'u.emergency': "Коли щось іде не так", // nieuw, nalezen
+    'u.emergency': "Коли щось іде не так", // nieuw, nalezen // nagelezen AI 22 nov
     'l.gear': 'Засоби захисту',
     'w.helm': 'каска',
     'w.handschoenen': 'рукавиці',
@@ -592,16 +592,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Обережно, підлога мокра!',
     's.danger.2': 'Де аварійний вихід?',
     's.danger.3': 'Стався нещасний випадок!',
-    'l.alarm': 'Пожежна тривога та евакуація', // nieuw, nalezen
-    'w.alarm': 'сигнал тривоги', // nieuw, nalezen
-    'w.ontruimen': 'евакуювати (усі виходять із будівлі)', // nieuw, nalezen
-    'w.vluchtroute': 'шлях евакуації', // nieuw, nalezen
-    'w.trap': 'сходи', // nieuw, nalezen
-    'w.verzamelplaats': 'місце збору (де всі збираються надворі)', // nieuw, nalezen
-    'w.brandblusser': 'вогнегасник', // nieuw, nalezen
-    's.alarm.1': 'Де вогнегасник?', // nieuw, nalezen
-    's.alarm.2': 'Ми маємо евакуювати будівлю.', // nieuw, nalezen
-    's.alarm.3': 'Іди сходами, не ліфтом.', // nieuw, nalezen
+    'l.alarm': 'Пожежна тривога та евакуація', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alarm': 'сигнал тривоги', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontruimen': 'евакуювати (усі виходять із будівлі)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vluchtroute': 'шлях евакуації', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.trap': 'сходи', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.verzamelplaats': 'місце збору (де всі збираються надворі)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.brandblusser': 'вогнегасник', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.1': 'Де вогнегасник?', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.2': 'Ми маємо евакуювати будівлю.', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.3': 'Іди сходами, не ліфтом.', // nieuw, nalezen // nagelezen AI 22 nov
     'l.accident': 'Повідомити про нещасний випадок',
     'w.gewond': 'поранений',
     'w.bloeden': 'кровоточити',
@@ -610,7 +610,7 @@ const lang: HelpLanguageSource = {
     'w.ziekenhuis': 'лікарня',
     'w.gebeuren': 'ставатися, траплятися',
     's.accident.1': 'Мій колега впав.',
-    's.accident.2': { m: 'Я порізався.', f: 'Я порізалася.', x: 'У мене поріз.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.accident.2': { m: 'Я порізався.', f: 'Я порізалася.', x: 'У мене поріз.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     's.accident.3': 'Я хочу повідомити про нещасний випадок.',
 
     // Unit: In the warehouse
@@ -681,8 +681,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Так, вона на мені.',
     'c.danger.q': 'Стався нещасний випадок?',
     'c.danger.a': 'Так, дзвони 112!',
-    'c.alarm.q': 'Усі надворі?', // nieuw, nalezen
-    'c.alarm.a': 'Ні, мого колеги ще немає.', // nieuw, nalezen
+    'c.alarm.q': 'Усі надворі?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.a': 'Ні, мого колеги ще немає.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.accident.q': 'Що сталося?',
     'c.accident.a': 'Він упав. У нього йде кров.',
     'l.notyet': 'Цього мене ще не навчили',
@@ -692,9 +692,9 @@ const lang: HelpLanguageSource = {
     'w.voordoen': 'показувати, як (спершу зробити самому)',
     'w.gevaarlijk': 'небезпечний',
     'w.uitleg': 'пояснення',
-    's.notyet.1': { m: 'Я цього ще не навчився.', f: 'Я цього ще не навчилася.', x: 'Мене цього ще не навчили.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.notyet.1': { m: 'Я цього ще не навчився.', f: 'Я цього ще не навчилася.', x: 'Мене цього ще не навчили.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     's.notyet.2': 'Мені ще нічого не пояснили.',
-    's.notyet.3': { m: 'Мені вже можна робити це самому?', f: 'Мені вже можна робити це самій?', x: 'Мені вже можна робити це самостійно?' }, // x: nieuw, nalezen
+    's.notyet.3': { m: 'Мені вже можна робити це самому?', f: 'Мені вже можна робити це самій?', x: 'Мені вже можна робити це самостійно?' }, // x: nieuw, nalezen // nagelezen AI 22 nov
     'c.notyet.q': 'Просто спробуй, це легко.',
     'c.notyet.a': 'Можеш спершу показати, як?',
     'c.things.q': 'Куди поставити коробку?',

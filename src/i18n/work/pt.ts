@@ -227,19 +227,19 @@ const t: CultureTranslation = {
     's.rights.3': 'Isto é discriminação.',
     'c.rights.q': 'Assina aqui o teu despedimento.',
     'c.rights.a': 'Não, ainda não assino.',
-    'l.mustmay': 'Tens de, ou podes escolher?', // nieuw, nalezen
-    'w.moeten': 'ter de, dever', // nieuw, nalezen
-    'w.niethoeven': 'não ter de, não ser preciso', // nieuw, nalezen
-    'w.nodig': 'necessário, preciso', // nieuw, nalezen
-    'w.vrijwillig': 'voluntário, por escolha', // nieuw, nalezen
-    'w.keuze': 'a escolha', // nieuw, nalezen
-    'w.regel': 'a regra', // nieuw, nalezen
-    's.mustmay.1': 'Tenho de assinar isto?', // nieuw, nalezen
-    's.mustmay.2': 'Não, não tens de assinar.', // nieuw, nalezen
-    's.mustmay.3': 'É a regra: o capacete é obrigatório.', // nieuw, nalezen
-    'c.mustmay.q': 'Tenho de fazer horas extra no sábado?', // nieuw, nalezen
-    'c.mustmay.a': 'Não, não é preciso. É voluntário.', // nieuw, nalezen
-    'u.leave': "Férias e licenças", // nieuw, nalezen
+    'l.mustmay': 'Tens de, ou podes escolher?', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.moeten': 'ter de, dever', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.niethoeven': 'não ter de, não ser preciso', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.nodig': 'necessário, preciso', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vrijwillig': 'voluntário, por escolha', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.keuze': 'a escolha', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.regel': 'a regra', // nieuw, nalezen // nagelezen AI 22 nov
+    's.mustmay.1': 'Tenho de assinar isto?', // nieuw, nalezen // nagelezen AI 22 nov
+    's.mustmay.2': 'Não, não tens de assinar.', // nieuw, nalezen // nagelezen AI 22 nov
+    's.mustmay.3': 'É a regra: o capacete é obrigatório.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.q': 'Tenho de fazer horas extra no sábado?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.a': 'Não, não é preciso. É voluntário.', // nieuw, nalezen // nagelezen AI 22 nov
+    'u.leave': "Férias e licenças", // nieuw, nalezen // nagelezen AI 22 nov
     'l.leave': 'Dias de folga',
     'w.vakantiedagen': 'os dias de férias',
     'w.verlof': 'a licença',
@@ -423,7 +423,7 @@ const t: CultureTranslation = {
     'w.ontslagnemen': 'despedir-se (sair do emprego por vontade própria)',
     'w.werkzoekende': 'a pessoa à procura de emprego',
     's.ww.1': 'Vou pedir o subsídio de desemprego no UWV.',
-    's.ww.2': { m: 'Estou desempregado.', f: 'Estou desempregada.', x: 'Estou sem emprego.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.ww.2': { m: 'Estou desempregado.', f: 'Estou desempregada.', x: 'Estou sem emprego.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     's.ww.3': 'O meu contrato acaba.',
     'c.ww.q': 'O que vais fazer agora que o teu contrato acaba?',
     'c.ww.a': 'Vou pedir já o subsídio de desemprego.',
@@ -564,8 +564,8 @@ const t: CultureTranslation = {
     's.cleansafe.3': 'Nunca mistures produtos de limpeza.',
     'c.cleansafe.q': 'Posso passar por aqui?',
     'c.cleansafe.a': 'Cuidado, o chão ainda está escorregadio.',
-    'c.cv': 'Um CV curto', // nieuw, nalezen
-    'c.cv.b': 'Aqui, um CV é curto: 1 ou 2 páginas. Escreve os teus contactos, a experiência de trabalho, a formação, as línguas e as competências. Não é preciso fotografia. Não tens de escrever a tua religião, a idade ou o estado civil. Diz a verdade sobre o que sabes fazer. Pede a alguém para verificar o teu neerlandês.', // nieuw, nalezen
+    'c.cv': 'Um CV curto', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.cv.b': 'Aqui, um CV é curto: 1 ou 2 páginas. Escreve os teus contactos, a experiência de trabalho, a formação, as línguas e as competências. Não é preciso fotografia. Não tens de escrever a tua religião, a idade ou o estado civil. Diz a verdade sobre o que sabes fazer. Pede a alguém para verificar o teu neerlandês.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.cv.p': 'Podes ler o meu CV? O meu neerlandês está certo?',
     'c.cv.s': 'Trabalhaste 3 anos numa fábrica no teu país, mas não tens diploma. O que pões no teu CV?',
     'c.cv.o1': 'Escreves o trabalho e o que fazias lá, com honestidade.',
@@ -576,58 +576,58 @@ const t: CultureTranslation = {
     'c.interview.b': 'Chega a horas: 5 a 10 minutos antes. Cumprimenta com educação e olha para a pessoa. Conta em poucas palavras o que sabes fazer. Fazeres tu também perguntas é normal e positivo, por exemplo sobre o horário, o trabalho ou a formação. No fim podes perguntar quando vais ter notícias. Não faz mal dizer que ainda estás a aprender neerlandês. Um empregador não pode perguntar pela tua religião, por uma gravidez ou pela tua saúde. Não tens de responder: podes dizer com educação que preferes não responder.',
     'c.interview.p': 'Também posso perguntar uma coisa? Quantas horas por semana é o trabalho?',
     'c.interview.s': 'No fim da entrevista, o empregador pergunta: "Heb je nog vragen?" O que fazes?',
-    'c.interview.o1': 'Fazes uma pergunta sobre o horário ou a formação.', // nagelezen (2e lezing)
+    'c.interview.o1': 'Fazes uma pergunta sobre o horário ou a formação.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.interview.o2': 'Dizes que não, porque fazer perguntas não é educado.',
-    'c.interview.o3': 'Falas mais de ti, para mostrar que trabalhas bem.', // nagelezen (2e lezing)
-    'c.interview.w': 'As perguntas mostram que tens interesse no emprego. Aqui, os empregadores costumam esperar perguntas.', // nieuw, nalezen
+    'c.interview.o3': 'Falas mais de ti, para mostrar que trabalhas bem.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.interview.w': 'As perguntas mostram que tens interesse no emprego. Aqui, os empregadores costumam esperar perguntas.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.findwork': 'Pede o teu contrato em papel',
     'c.findwork.b': 'Pede sempre um contrato escrito e uma cópia para ti. Lê-o antes de assinar, ou pede ajuda a alguém em quem confias. Uma agência de trabalho temporário (uitzendbureau) não te pode pedir dinheiro para te arranjar trabalho. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.findwork.p': 'Posso ler primeiro o contrato?',
     'c.findwork.s': 'Um empregador novo diz: "Assina já aqui. Podes ler mais tarde." O que fazes?',
-    'c.findwork.o1': 'Pedes tempo para o ler, ou uma cópia.', // nagelezen (2e lezing)
+    'c.findwork.o1': 'Pedes tempo para o ler, ou uma cópia.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.findwork.o2': 'Assinas depressa, para não perderes o emprego.',
-    'c.findwork.o3': 'Assinas, e depois pedes uma cópia.', // nagelezen (2e lezing)
+    'c.findwork.o3': 'Assinas, e depois pedes uma cópia.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.findwork.w': 'O teu contrato diz quanto ganhas e quais são os teus direitos. Um bom empregador dá-te tempo para o ler. Podes perguntar tudo o que não percebes.',
     'c.contract': 'Período experimental e trabalho à chamada',
-    'c.contract.b': 'Um período experimental (proeftijd) tem de estar por escrito. Não é permitido num contrato de 6 meses ou menos. Num contrato mais longo, mas de menos de 2 anos, é no máximo 1 mês. Num contrato de 2 anos ou mais, ou num contrato efetivo, é no máximo 2 meses. És trabalhador à chamada (oproepkracht)? Normalmente, o teu empregador tem de te chamar pelo menos 4 dias antes. Se for mais tarde, não tens de ir. Uma cao pode encurtar estes 4 dias, mas nunca para menos de 1 dia. Se cancelarem o teu trabalho depois disso, recebes na mesma. Se te chamarem para menos de 3 horas de trabalho, normalmente recebes 3 horas. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.', // nalezen: feit gelijk getrokken
+    'c.contract.b': 'Um período experimental (proeftijd) tem de estar por escrito. Não é permitido num contrato de 6 meses ou menos. Num contrato mais longo, mas de menos de 2 anos, é no máximo 1 mês. Num contrato de 2 anos ou mais, ou num contrato efetivo, é no máximo 2 meses. És trabalhador à chamada (oproepkracht)? Normalmente, o teu empregador tem de te chamar pelo menos 4 dias antes. Se for mais tarde, não tens de ir. Uma cao pode encurtar estes 4 dias, mas nunca para menos de 1 dia. Se cancelarem o teu trabalho depois disso, recebes na mesma. Se te chamarem para menos de 3 horas de trabalho, normalmente recebes 3 horas. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.', // nalezen: feit gelijk getrokken // nagelezen AI 22 nov
     'c.contract.p': 'O período experimental está no meu contrato?',
     'c.contract.s': 'O teu contrato é de 3 meses. Diz: "Proeftijd: 1 maand". O que fazes?',
-    'c.contract.o1': 'Perguntas: este período experimental não conta.', // nagelezen (2e lezing)
+    'c.contract.o1': 'Perguntas: este período experimental não conta.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.contract.o2': 'Nada. Todos os contratos têm período experimental.',
     'c.contract.o3': 'Assinas e nunca perguntas, porque o patrão é que sabe.',
     'c.contract.w': 'Um período experimental num contrato de 6 meses ou menos não conta. Perguntar com calma é normal. Se a resposta não for clara, pede conselho ao sindicato ou ao Juridisch Loket.',
     'c.agency': 'A tua agência é o teu empregador',
     'c.agency.b': 'Se trabalhas através de uma agência de trabalho temporário (uitzendbureau), o teu empregador é a agência, não a empresa onde trabalhas. O teu contrato e o teu salário vêm da agência, e há uma cao para trabalhadores temporários (uitzend-cao). Tens direito ao mesmo salário que os trabalhadores da empresa que fazem o mesmo trabalho. Também recebes subsídio de férias (vakantiegeld) e acumulas dias de férias. Faz a tua própria lista das horas que trabalhaste e confirma-as no recibo de vencimento. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
-    'c.agency.x': 'Um empregador de outro país enviou-te para cá por algum tempo? Então trabalhas aqui em destacamento (gedetacheerd). Pede ao teu empregador o documento A1: mostra onde tens seguro. Aqui recebes na mesma pelo menos o salário mínimo neerlandês.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
+    'c.agency.x': 'Um empregador de outro país enviou-te para cá por algum tempo? Então trabalhas aqui em destacamento (gedetacheerd). Pede ao teu empregador o documento A1: mostra onde tens seguro. Aqui recebes na mesma pelo menos o salário mínimo neerlandês.', // nieuw, nalezen (uit een ander land, 10 nov 2026) // nagelezen AI 22 nov
     'c.agency.p': 'O meu recibo de vencimento tem horas a menos.',
     'c.agency.s': 'O teu recibo de vencimento diz 32 horas, mas trabalhaste 38. O que fazes?',
-    'c.agency.o1': 'Mostras a tua lista de horas à agência e pedes que corrijam.', // nagelezen (2e lezing)
+    'c.agency.o1': 'Mostras a tua lista de horas à agência e pedes que corrijam.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.agency.o2': 'Não dizes nada, porque são só 6 horas.',
     'c.agency.o3': 'Pedes ao chefe da empresa onde trabalhas que te pague as 6 horas.',
     'c.agency.w': 'Quem te paga é a agência, por isso é a agência que tem de corrigir o erro. A tua própria lista de datas e horas ajuda. Perguntar é um direito teu.',
     'c.bsn': 'O teu BSN: guarda-o bem',
     'c.bsn.b': 'Recebes um BSN (burgerservicenummer) quando te inscreves no município (gemeente). Só cá estás pouco tempo? Então inscreves-te num balcão RNI. Precisas do teu BSN para trabalhar, para os impostos, para o seguro de saúde e para uma conta bancária. O teu empregador precisa do teu documento de identificação e do teu BSN. Não dês o teu BSN nem uma cópia do teu documento a qualquer pessoa. Pergunta primeiro porque precisam dele. Vais mudar de casa? Regista a nova morada na gemeente no prazo de 5 dias. O DigiD é o teu acesso aos sites do Estado: nunca o dês a outra pessoa. Vives ou trabalhas cá? Então normalmente tens de ter um seguro de saúde neerlandês (zorgverzekering). Trata disso depressa. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.bsn.p': 'Porque precisa do meu BSN?',
-    'c.bsn.s': 'Um desconhecido oferece-te um trabalho no WhatsApp. Pede uma foto do teu passaporte e o teu acesso ao DigiD. O que fazes?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.bsn.o1': 'Nunca dás o acesso ao DigiD. Verificas quem ele é.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.bsn.o2': 'Envias tudo depressa para ficares com o trabalho.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.bsn.o3': 'Envias só a foto do passaporte.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.bsn.s': 'Um desconhecido oferece-te um trabalho no WhatsApp. Pede uma foto do teu passaporte e o teu acesso ao DigiD. O que fazes?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.bsn.o1': 'Nunca dás o acesso ao DigiD. Verificas quem ele é.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.bsn.o2': 'Envias tudo depressa para ficares com o trabalho.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.bsn.o3': 'Envias só a foto do passaporte.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.bsn.w': 'Com o teu DigiD ou uma cópia do teu documento, outras pessoas podem usar o teu nome, por exemplo para empréstimos ou subsídios. Um empregador a sério precisa do teu documento e do BSN, mas nunca do teu acesso ao DigiD.',
     'c.housing': 'Casa através do empregador',
     'c.housing.b': 'O teu empregador ou a tua agência arranja-te casa? Então o contrato de arrendamento tem de estar separado do contrato de trabalho. Pede um contrato de arrendamento por escrito e um comprovativo do que pagas. A renda só pode ser descontada do teu salário se concordaste por escrito, e dentro dos limites da lei: confirma no recibo de vencimento. Uma caução (borg) é no máximo 2 meses de renda base. Recebes a caução de volta quando sais, menos os danos reais. Regista a tua morada na gemeente. Casa sem segurança, ameaças ou custos injustos? Comunica à gemeente (meldpunt) e pede conselho grátis ao Juridisch Loket ou a um serviço de apoio à habitação. Para um problema com o valor da renda ou os custos de serviços, existe a Huurcommissie. O teu trabalho acaba? Pede conselho antes de saíres de casa. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.',
     'c.housing.p': 'Pode dar-me um comprovativo de que paguei?',
     'c.housing.s': 'O teu trabalho acaba. A agência diz: "Tens de sair da casa amanhã." O que fazes?',
-    'c.housing.o1': 'Primeiro pedes conselho ao Juridisch Loket.', // nagelezen (2e lezing)
+    'c.housing.o1': 'Primeiro pedes conselho ao Juridisch Loket.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.housing.o2': 'Sais logo e esqueces a caução.',
     'c.housing.o3': 'Ficas, e deixas de responder à agência.',
     'c.housing.w': 'O teu contrato de arrendamento tem as suas próprias regras, separadas do teu trabalho. Um conselho grátis ajuda-te a conhecer os teus direitos, por exemplo sobre quando tens de sair e sobre a caução.',
     'c.payslip': 'Verifica o teu recibo de vencimento',
-    'c.payslip.b': 'Bruto é o teu salário antes dos impostos. Netto (líquido) é o que recebes na tua conta bancária: o bruto menos os impostos e as contribuições (loonheffing). O teu empregador tem de te dar um recibo de vencimento (loonstrook). Verifica as horas e o salário em cada recibo, e aponta as horas que trabalhas. Tens dois empregos? Usa a dedução fiscal (loonheffingskorting) só num empregador. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.payslip.b': 'Bruto é o teu salário antes dos impostos. Netto (líquido) é o que recebes na tua conta bancária: o bruto menos os impostos e as contribuições (loonheffing). O teu empregador tem de te dar um recibo de vencimento (loonstrook). Verifica as horas e o salário em cada recibo, e aponta as horas que trabalhas. Tens dois empregos? Usa a dedução fiscal (loonheffingskorting) só num empregador. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.payslip.p': 'Trabalhei mais horas. Podes verificar?',
     'c.payslip.s': 'O teu recibo de vencimento tem menos horas do que as que trabalhaste. O que fazes?',
-    'c.payslip.o1': 'Mostras as tuas notas e pedes ao teu chefe que verifique.', // nagelezen (2e lezing)
+    'c.payslip.o1': 'Mostras as tuas notas e pedes ao teu chefe que verifique.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.payslip.o2': 'Não dizes nada, porque não queres problemas.',
-    'c.payslip.o3': 'Esperas um mês: no próximo recibo de vencimento já vai estar certo.', // nagelezen (2e lezing)
+    'c.payslip.o3': 'Esperas um mês: no próximo recibo de vencimento já vai estar certo.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.payslip.w': 'Há erros nos recibos de vencimento. Perguntar é normal e é um direito teu. As tuas notas de datas e horas ajudam muito.',
     'c.extra': 'Subsídio de férias e salário mínimo',
     'c.extra.b': 'Recebes subsídio de férias (vakantiegeld): pelo menos 8% do teu salário bruto. A maioria dos empregadores paga-o uma vez por ano, em maio ou junho. O teu salário nunca pode ser mais baixo do que o salário mínimo legal (minimumloon); para trabalhadores com menos de 21 anos é mais baixo. O valor muda todos os anos: vê em rijksoverheid.nl. Uma cao muitas vezes dá um pagamento extra por horas extra ou trabalho noturno. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
@@ -635,7 +635,7 @@ const t: CultureTranslation = {
     'c.extra.s': 'Um colega diz: "Em maio recebes dinheiro extra do patrão." O que é?',
     'c.extra.o1': 'O subsídio de férias: pelo menos 8% do teu salário bruto.',
     'c.extra.o2': 'Um presente, só para os melhores trabalhadores.',
-    'c.extra.o3': 'O 13.º mês: um salário de um mês a mais, para todos.', // nagelezen (2e lezing)
+    'c.extra.o3': 'O 13.º mês: um salário de um mês a mais, para todos.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.extra.w': 'O subsídio de férias é um direito teu, não é um presente. Acumulas com cada hora que trabalhas. Se saíres do emprego mais cedo, recebes com o último salário.',
     'c.phone': 'O teu telemóvel no trabalho',
     'c.phone.b': 'Muitos locais de trabalho não permitem telemóveis durante o trabalho, sobretudo perto de máquinas e empilhadores, ou na produção de alimentos. Pode ser perigoso ou pouco higiénico. Usa o telemóvel na pausa. Estás à espera de uma chamada urgente da família? Avisa primeiro o teu chefe. Não tires fotografias nem faças vídeos no trabalho sem autorização: pensa na privacidade dos colegas e nos segredos da empresa. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
@@ -649,7 +649,7 @@ const t: CultureTranslation = {
     'c.smoking.b': 'Nos Países Baixos, fumar dentro de um local de trabalho é proibido por lei. Também vale para os cigarros eletrónicos. Desde 2022, as salas de fumo dentro das empresas já não são permitidas. Fuma só lá fora, no sítio que o teu empregador permite, e normalmente só na pausa. Pausas extra para fumar não são um direito: combina-as com o teu chefe. Nunca fumes perto de coisas que ardem facilmente, como combustível ou caixas num armazém. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.smoking.p': 'Posso fumar lá fora na minha pausa?',
     'c.smoking.s': 'Está frio e a chover. Um colega diz: "Fuma no armazém, ninguém vê." O que fazes?',
-    'c.smoking.o1': 'Dizes que não, e fumas lá fora, na tua pausa.', // nieuw, nalezen
+    'c.smoking.o1': 'Dizes que não, e fumas lá fora, na tua pausa.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.smoking.o2': 'Fumas depressa no armazém, só desta vez.',
     'c.smoking.o3': 'Usas o cigarro eletrónico lá dentro, porque isso é permitido.',
     'c.smoking.w': 'Fumar lá dentro é contra a lei e pode causar um incêndio. O cigarro eletrónico lá dentro também não é permitido. Cumprir a regra mantém toda a gente em segurança.',
@@ -657,7 +657,7 @@ const t: CultureTranslation = {
     'c.clock.b': 'Pica tu o ponto à entrada e à saída, no momento em que começas e acabas mesmo de trabalhar. Nunca piques o ponto por um colega, e nunca deixes outra pessoa usar o teu cartão. Isso é fraude e pode levar ao despedimento. Vais chegar tarde? Liga antes de o teu turno começar. Confirma que as horas picadas batem certo com o recibo de vencimento. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.clock.p': 'Esqueci-me de picar o ponto à saída. Podes corrigir?',
     'c.clock.s': 'Um colega dá-te o cartão dele: "Pica o ponto por mim, chego 20 minutos atrasado." O que fazes?',
-    'c.clock.o1': 'Dizes que não, e dizes-lhe para ligar ao chefe.', // nagelezen (2e lezing)
+    'c.clock.o1': 'Dizes que não, e dizes-lhe para ligar ao chefe.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.clock.o2': 'Fazes só desta vez, porque ele é teu amigo.',
     'c.clock.o3': 'Picas o ponto por ele e dizes ao chefe mais tarde.',
     'c.clock.w': 'Picar o ponto por outra pessoa é fraude, para os dois. Dizer que não protege o teu colega e o teu próprio emprego.',
@@ -665,7 +665,7 @@ const t: CultureTranslation = {
     'c.hygiene.b': 'O álcool e as drogas no trabalho, ou vir trabalhar depois de os usar, são proibidos em quase todas as empresas. É muito perigoso perto de máquinas e empilhadores, e pode levar ao despedimento. Um medicamento dá-te sono ou tonturas? Avisa o teu chefe, para fazeres um trabalho seguro. Não tens de dizer que medicamento é. Na produção de alimentos, as regras de higiene são rigorosas: lava as mãos, usa roupa de trabalho limpa, rede no cabelo se for preciso, e nada de joias. Vómitos ou diarreia? Avisa antes de começar. Mantém o teu posto de trabalho arrumado. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.hygiene.p': 'Estou a tomar um medicamento. Dá-me sono.',
     'c.hygiene.s': 'O teu médico dá-te um medicamento que te dá sono. Amanhã tens de conduzir um empilhador. O que fazes?',
-    'c.hygiene.o1': 'Avisas o teu chefe antes de começar.', // nieuw, nalezen
+    'c.hygiene.o1': 'Avisas o teu chefe antes de começar.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.hygiene.o2': 'Não dizes nada e conduzes muito devagar.',
     'c.hygiene.o3': 'Deixas de tomar o medicamento sem perguntar ao teu médico.',
     'c.hygiene.w': 'O teu chefe não precisa de saber que medicamento é, só que agora não podes conduzir nem trabalhar com máquinas. Isso mantém-te a ti e aos teus colegas em segurança.',
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.mistakes.b': 'Toda a gente comete erros no trabalho. Diz logo, para se poder corrigir: "Sorry, ik heb een fout gemaakt." Esconder um erro é visto como muito pior do que o próprio erro. O feedback é sobre o trabalho, não sobre ti como pessoa. Recebeste um elogio? Agradece, simplesmente. Não sabes bem o que fazer melhor? Pergunta: "Kun je het uitleggen?"',
     'c.mistakes.p': 'Desculpa, cometi um erro. Como posso resolver isto?',
     'c.mistakes.s': 'Puseste 20 caixas na palete errada. Ainda ninguém viu. O que fazes?',
-    'c.mistakes.o1': 'Dizes ao teu chefe e ajudas a corrigir.', // nagelezen (2e lezing)
+    'c.mistakes.o1': 'Dizes ao teu chefe e ajudas a corrigir.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.mistakes.o2': 'Não dizes nada e esperas que ninguém repare.',
     'c.mistakes.o3': 'Dizes que foi um colega.',
     'c.mistakes.w': 'Um erro contado cedo é fácil de corrigir. Ser honesto cria confiança, e isso conta mais do que nunca errar.',
@@ -690,33 +690,33 @@ const t: CultureTranslation = {
     'c.respect.p': 'Prefiro não dar a mão, mas cumprimento-te com gosto.',
     'c.respect.s': 'Um colega faz muitas vezes piadas sobre a tua religião. Pediste-lhe para parar, mas ele continua. O que fazes?',
     'c.respect.o1': 'Dizes ao teu chefe ou à vertrouwenspersoon.',
-    'c.respect.o2': 'Ris-te com ele, para não haver problemas.', // nieuw, nalezen
+    'c.respect.o2': 'Ris-te com ele, para não haver problemas.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.respect.o3': 'Fazes também piadas sobre a origem dele.',
     'c.respect.w': 'Piadas assim não são aceites no trabalho. Comunicar é normal: a empresa tem de manter o local de trabalho seguro para todos.',
     'c.health': 'Pausas e horário de trabalho',
-    'c.health.b': 'A lei protege a tua saúde. Trabalhas mais de 5,5 horas? Então tens pelo menos 30 minutos de pausa (pode ser 2 vezes 15 minutos). Mais de 10 horas? Então pelo menos 45 minutos. Uma cao pode ter regras de pausas um pouco diferentes. Podes trabalhar no máximo 12 horas num turno e 60 horas numa semana. Tens menos de 18 anos? Então podes trabalhar menos horas. O teu empregador tem de te dar equipamento de proteção, como sapatos de segurança ou luvas, de graça. Trabalho perigoso ou salário baixo demais? Podes denunciar à Nederlandse Arbeidsinspectie, também sem dar o teu nome. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.', // nieuw, nalezen
+    'c.health.b': 'A lei protege a tua saúde. Trabalhas mais de 5,5 horas? Então tens pelo menos 30 minutos de pausa (pode ser 2 vezes 15 minutos). Mais de 10 horas? Então pelo menos 45 minutos. Uma cao pode ter regras de pausas um pouco diferentes. Podes trabalhar no máximo 12 horas num turno e 60 horas numa semana. Tens menos de 18 anos? Então o teu limite de horas é mais baixo. O teu empregador tem de te dar equipamento de proteção, como sapatos de segurança ou luvas, de graça. Trabalho perigoso ou salário baixo demais? Podes denunciar à Nederlandse Arbeidsinspectie, também sem dar o teu nome. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.health.p': 'Ainda não fiz pausa.',
     'c.health.s': 'Trabalhaste 6 horas sem pausa. O teu chefe pede-te para continuares. O que fazes?',
-    'c.health.o1': 'Dizes que agora precisas da tua pausa.', // nagelezen (2e lezing)
-    'c.health.o2': 'Continuas, e mais tarde fazes uma pausa mais longa.', // nagelezen (2e lezing)
+    'c.health.o1': 'Dizes que agora precisas da tua pausa.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.health.o2': 'Continuas, e mais tarde fazes uma pausa mais longa.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.health.o3': 'Sais do trabalho e vais para casa sem dizer nada.',
     'c.health.w': 'Quando trabalhas mais de 5,5 horas, a pausa é lei, não é um favor. O descanso também te ajuda a trabalhar em segurança.',
     'c.rights': 'Discriminação e despedimento',
     'c.rights.b': 'A discriminação no trabalho é proibida, por exemplo por causa da tua origem, religião ou género. O teu empregador não te pode simplesmente despedir: normalmente precisa de autorização do UWV ou de um juiz, ou do teu acordo. (No período experimental ou no fim de um contrato temporário, há outras regras.) Não assines um papel sobre o teu despedimento que não percebas. Assinaste um acordo para acabar o teu trabalho (vaststellingsovereenkomst)? Então normalmente ainda o podes anular por escrito no prazo de 14 dias. Pede primeiro ajuda. Vai ao sindicato (por exemplo a FNV), a um serviço contra a discriminação ou ao Juridisch Loket. O Juridisch Loket dá aconselhamento jurídico grátis. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.',
     'c.rights.p': 'Primeiro quero pedir conselho.',
     'c.rights.s': 'O teu patrão dá-te um papel: "Assina hoje, assim sais por acordo." Não percebes bem. O que fazes?',
-    'c.rights.o1': 'Ainda não assinas. Primeiro pedes conselho.', // nieuw, nalezen
+    'c.rights.o1': 'Ainda não assinas. Primeiro pedes conselho.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.rights.o2': 'Assinas, porque o patrão diz que está tudo bem.',
     'c.rights.o3': 'Guardas o papel e nunca falas disso.',
-    'c.rights.w': 'Há algo errado no papel? Então podes perder direitos, por exemplo ao subsídio de desemprego (WW). Pedir tempo para pedir conselho é normal e permitido.', // nieuw, nalezen
-    'c.mustmay': 'Moet, hoeft niet, mag niet', // nieuw, nalezen
-    'c.mustmay.b': 'Em neerlandês, o contrário de "moeten" é "niet hoeven". "Je moet tekenen" quer dizer: não tens escolha. "Je hoeft niet te tekenen" quer dizer: podes escolher. "Je mag niet tekenen" quer dizer: é proibido. Atenção: em inglês, "must not" quer dizer "mag niet". Em português, "não tens de" quer dizer "hoeft niet". Não tens a certeza? Pergunta.', // nieuw, nalezen
-    'c.mustmay.p': 'Tenho de, ou tenho escolha?', // nieuw, nalezen
-    'c.mustmay.s': 'O teu chefe de equipa diz: "Je hoeft zaterdag niet te komen." O que quer ele dizer?', // nieuw, nalezen
-    'c.mustmay.o1': 'Não tens de vir no sábado. Podes escolher.', // nieuw, nalezen
-    'c.mustmay.o2': 'Não podes vir no sábado: é proibido.', // nieuw, nalezen
-    'c.mustmay.o3': 'Tens de vir no sábado.', // nieuw, nalezen
-    'c.mustmay.w': '"Niet hoeven" quer dizer que não é obrigatório: podes escolher. "Niet mogen" quereria dizer que é proibido.', // nieuw, nalezen
+    'c.rights.w': 'Há algo errado no papel? Então podes perder direitos, por exemplo ao subsídio de desemprego (WW). Pedir tempo para pedir conselho é normal e permitido.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay': 'Moet, hoeft niet, mag niet', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.b': 'Em neerlandês, o contrário de "moeten" é "niet hoeven". "Je moet tekenen" quer dizer: não tens escolha. "Je hoeft niet te tekenen" quer dizer: podes escolher. "Je mag niet tekenen" quer dizer: é proibido. Atenção: em inglês, "must not" quer dizer "mag niet". Em português, "não tens de" quer dizer "hoeft niet". Não tens a certeza? Pergunta.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.p': 'Tenho de, ou tenho escolha?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.s': 'O teu chefe de equipa diz: "Je hoeft zaterdag niet te komen." O que quer ele dizer?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.o1': 'Não tens de vir no sábado. Podes escolher.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.o2': 'Não podes vir no sábado: é proibido.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.o3': 'Tens de vir no sábado.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.w': '"Niet hoeven" quer dizer que não é obrigatório: podes escolher. "Niet mogen" quereria dizer que é proibido.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.leave': 'Férias e licença de emergência',
     'c.leave.b': 'Por lei tens dias de férias pagos: pelo menos 4 vezes os dias que trabalhas por semana. A tempo inteiro, 5 dias por semana? Então pelo menos 20 dias por ano. Uma cao pode dar mais. Pede as férias a tempo, e por escrito. Uma emergência repentina, como um acidente ou uma doença na tua família? Então podes ter uma licença curta paga (calamiteitenverlof). Avisa logo o teu empregador. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.leave.p': 'Gostava de pedir férias para julho.',
@@ -724,53 +724,53 @@ const t: CultureTranslation = {
     'c.leave.o1': 'Pedes as férias ao teu empregador com antecedência, por escrito.',
     'c.leave.o2': 'Vais simplesmente, e dizes ao patrão quando voltares.',
     'c.leave.o3': 'Pedes a um colega que diga ao patrão na véspera.',
-    'c.leave.w': 'Normalmente, o teu empregador tem de dizer que sim. Só pode dizer que não por um motivo muito importante, e então por escrito dentro de 2 semanas. Pedir cedo dá a melhor hipótese de um sim.', // nagelezen (2e lezing)
+    'c.leave.w': 'Normalmente, o teu empregador tem de dizer que sim. Só pode dizer que não por um motivo muito importante, e então por escrito dentro de 2 semanas. Pedir cedo dá a melhor hipótese de um sim.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.illness': 'Os teus direitos quando estás doente',
     'c.illness.b': 'Quando estás doente, o teu empregador tem de pagar pelo menos 70% do teu salário, até 2 anos. Uma cao muitas vezes dá mais. Pode haver até 2 dias de espera (wachtdagen) sem pagamento, mas só se o teu contrato ou a cao o disserem. O teu patrão não pode perguntar que doença tens. Falas da tua saúde e do teu trabalho com o médico da empresa (bedrijfsarts). Liga ao teu empregador quando estiveres melhor (betermelden). No primeiro ano recebes pelo menos o salário mínimo. Um contrato a termo acaba na data de fim, mesmo quando estás doente. Trabalhas através de uma agência? Se o teu contrato tiver uma cláusula de agência (uitzendbeding), pode acabar quando ficas doente. Então pergunta ao UWV sobre a Ziektewet, ou pergunta a um sindicato. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
-    'c.illness.x': 'Estás de baixa e queres ir ao teu país? Pergunta primeiro ao teu empregador ou à agência. Sem autorização, o teu salário pode parar. Dá a tua morada lá e atende o telefone.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
+    'c.illness.x': 'Estás de baixa e queres ir ao teu país? Pergunta primeiro ao teu empregador ou à agência. Sem autorização, o teu salário pode parar. Dá a tua morada lá e atende o telefone.', // nieuw, nalezen (uit een ander land, 10 nov 2026) // nagelezen AI 22 nov
     'c.illness.p': 'Já estou melhor. Amanhã venho trabalhar.',
-    'c.illness.s': 'Estás doente há uma semana. O teu empregador manda-te ao médico da empresa. O que fazes?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.illness.o1': 'Vais, e falas sobre a tua saúde e o teu trabalho.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.illness.o2': 'Não vais: tens o teu próprio médico.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.illness.o3': 'Voltas ao trabalho enquanto ainda estás doente.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.illness.s': 'Estás doente há uma semana. O teu empregador manda-te ao médico da empresa. O que fazes?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.illness.o1': 'Vais, e falas sobre a tua saúde e o teu trabalho.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.illness.o2': 'Não vais: tens o teu próprio médico.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.illness.o3': 'Voltas ao trabalho enquanto ainda estás doente.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.illness.w': 'O médico da empresa ajuda-te a voltar ao trabalho de forma saudável. O médico não conta os teus dados médicos ao patrão, só diz que trabalho podes fazer.',
     'c.warning': 'Sinais de exploração',
     'c.warning.b': 'Atenção a estes sinais. O teu empregador fica com o teu passaporte ou documento de identificação. Isso não é permitido: és tu que guardas o teu documento. Um empregador só pode fazer uma cópia. Recebes muito menos do que o combinado, ou não recebes recibo de vencimento. Tens de pagar uma grande dívida ao empregador ou à agência. Tens de trabalhar horas demais, sem escolha. Alguém te ameaça, ou usa a tua casa para te pressionar. Isto não é normal e não é permitido. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.',
     'c.warning.p': 'Quero o meu passaporte de volta.',
     'c.warning.s': 'No teu primeiro dia, a agência diz: "Ficamos com o teu passaporte, por segurança." O que fazes?',
-    'c.warning.o1': 'Ficas tu com ele. Podem fazer uma cópia.', // nagelezen (2e lezing)
+    'c.warning.o1': 'Ficas tu com ele. Podem fazer uma cópia.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.warning.o2': 'Dás o passaporte, porque a agência conhece as regras.',
     'c.warning.o3': 'Dás o passaporte, mas primeiro tiras-lhe uma fotografia.',
     'c.warning.w': 'O teu passaporte é teu. Ficar com ele é uma forma de controlar os trabalhadores. Um empregador só precisa de uma cópia para os arquivos.',
     'c.gethelp': 'Onde pedir ajuda',
     'c.gethelp.b': 'Vês sinais de exploração, contigo ou com outra pessoa? Pede ajuda. Podes denunciar à Nederlandse Arbeidsinspectie, também de forma anónima, ou à polícia. Meld Misdaad Anoniem: 0800-7000. Aconselhamento jurídico grátis: o Juridisch Loket. Em perigo? Liga para o 112. Todas as pessoas que trabalham nos Países Baixos podem ter ajuda, também os migrantes. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.',
-    'c.gethelp.p': { m: 'Preciso de ajuda. Estou a ser explorado.', f: 'Preciso de ajuda. Estou a ser explorada.', x: 'Preciso de ajuda. Estão a explorar-me.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.gethelp.s': 'Um amigo trabalha 14 horas por dia e quase não recebe nada. Tem medo do patrão. O que podes fazer?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.gethelp.o1': 'Ajudá-lo a contactar a Arbeidsinspectie ou o Juridisch Loket.', // nieuw, nalezen
+    'c.gethelp.p': { m: 'Preciso de ajuda. Estou a ser explorado.', f: 'Preciso de ajuda. Estou a ser explorada.', x: 'Preciso de ajuda. Estão a explorar-me.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.gethelp.s': 'Um amigo trabalha 14 horas por dia e quase não recebe nada. Tem medo do patrão. O que podes fazer?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.gethelp.o1': 'Ajudá-lo a contactar a Arbeidsinspectie ou o Juridisch Loket.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.gethelp.o2': 'Dizer-lhe que isto é normal para trabalhadores novos.',
-    'c.gethelp.o3': 'Dizer-lhe para esperar até o contrato acabar e depois sair.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.gethelp.o3': 'Dizer-lhe para esperar até o contrato acabar e depois sair.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.gethelp.w': 'Há ajuda para todas as pessoas que trabalham nos Países Baixos. Uma denúncia também pode ser feita sem nomes.',
     'c.callin': 'Ligar ao teu chefe',
     'c.callin.b': 'Quando ligas ao teu chefe, diz o teu nome, a razão e quando achas que voltas. Doente? Só tens de dizer que estás doente, não que doença tens. Liga: não mandes só uma mensagem, a não ser que a tua empresa diga que uma mensagem chega. Ninguém atende? Deixa uma mensagem de voz e tenta outra vez. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.callin.p': 'Olá, fala o Ali. Hoje não posso ir.',
     'c.callin.s': 'O teu filho está doente e não podes ir trabalhar. A tua empresa quer que ligues. O que fazes?',
-    'c.callin.o1': 'Ligas ao teu chefe antes do turno.', // nagelezen (2e lezing)
+    'c.callin.o1': 'Ligas ao teu chefe antes do turno.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.callin.o2': 'Mandas uma mensagem curta quando o turno começa.',
     'c.callin.o3': 'Pedes ao teu vizinho para ligar por ti.',
-    'c.callin.w': 'Uma chamada é clara e rápida, e o teu chefe pode fazer perguntas. Dizer quando achas que voltas ajuda-o a organizar o trabalho. Diz também o teu nome e a razão.', // nagelezen (2e lezing)
+    'c.callin.w': 'Uma chamada é clara e rápida, e o teu chefe pode fazer perguntas. Dizer quando achas que voltas ajuda-o a organizar o trabalho. Diz também o teu nome e a razão.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.texting': 'Mensagens para o trabalho: curtas e educadas',
     'c.texting.b': 'As mensagens para o trabalho devem ser curtas e educadas. Diz quem és e o que se passa, e acaba com uma saudação. Por exemplo: "Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali". Vê muitas vezes o teu horário (rooster) na app. Responde a tempo aos pedidos de turnos. Para trocar um turno, o teu chefe ou quem faz o horário tem de concordar primeiro, por isso pergunta: "Mag ik mijn dienst ruilen?" As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.texting.p': 'Olá Mark, chego 10 minutos tarde. Desculpa! Cumprimentos, Ali',
     'c.texting.s': 'Vais chegar 10 minutos tarde. Que mensagem para o teu chefe é a melhor?',
     'c.texting.o1': '"Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali"',
-    'c.texting.o2': '"Sorry, ik ben er zo!" (sem o teu nome, sem a hora).', // nagelezen (2e lezing)
+    'c.texting.o2': '"Sorry, ik ben er zo!" (sem o teu nome, sem a hora).', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.texting.o3': 'Uma mensagem de voz de três minutos sobre o trânsito.',
     'c.texting.w': 'Uma boa mensagem diz quem és e o que se passa, em poucas palavras. Assim o teu chefe fica logo a saber.',
     'c.certs': 'Os certificados ajudam-te',
     'c.certs.b': 'Na construção, na indústria e no trabalho temporário precisas muitas vezes de um certificado VCA (segurança). Para conduzir um empilhador normalmente precisas de um certificado de empilhador (heftruckcertificaat). Pergunta ao teu empregador se paga o curso e o exame.',
     'c.certs.p': 'Posso fazer aqui um curso VCA?',
     'c.certs.s': 'Uma oferta de emprego pede um certificado VCA. Ainda não o tens. O que fazes?',
-    'c.certs.o1': 'Pedes ao empregador ou à agência para te ajudar a tirá-lo.', // nagelezen (2e lezing)
+    'c.certs.o1': 'Pedes ao empregador ou à agência para te ajudar a tirá-lo.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.certs.o2': 'Não te candidatas, porque nunca vais ficar com o emprego.',
     'c.certs.o3': 'Dizes que o tens, e esperas que ninguém verifique.',
     'c.certs.w': 'Muitos empregadores e agências ajudam com o VCA. Perguntar mostra que queres aprender.',
@@ -778,7 +778,7 @@ const t: CultureTranslation = {
     'c.diploma.b': 'Tens um diploma de outro país? Podes pedir a avaliação dele no IDW (Internationale Diplomawaardering). Assim os empregadores podem ver quanto vale aqui. Uma formação é obrigatória para o teu trabalho? Então o teu empregador tem de a pagar, e conta como tempo de trabalho. Pergunta ao teu chefe sobre cursos. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.diploma.p': 'Há cursos para mim?',
     'c.diploma.s': 'O teu empregador diz que tens de fazer uma formação de segurança obrigatória no sábado, sem pagamento. O que é verdade?',
-    'c.diploma.o1': 'O empregador paga, e é tempo de trabalho.', // nagelezen (2e lezing)
+    'c.diploma.o1': 'O empregador paga, e é tempo de trabalho.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.diploma.o2': 'A formação é sempre no teu tempo livre.',
     'c.diploma.o3': 'Tens de ser tu a pagar a formação.',
     'c.diploma.w': 'Se uma formação é obrigatória para o teu trabalho, o empregador paga e conta como tempo de trabalho. Se não estiver claro, pede conselho.',
@@ -794,15 +794,15 @@ const t: CultureTranslation = {
     'c.insurance.b': 'Quando vives ou trabalhas nos Países Baixos, o seguro de saúde básico normalmente é obrigatório. Pagas um prémio todos os meses. Todos os anos há uma franquia (eigen risico): os primeiros custos pagas tu. O valor muda: confirma com a tua seguradora. As consultas no médico de família (huisarts) não contam para a franquia. Com um rendimento baixo podes receber o subsídio para o seguro de saúde (zorgtoeslag). Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.insurance.p': 'Preciso de um seguro de saúde. Pode ajudar-me?',
     'c.insurance.s': 'Começaste a trabalhar aqui há duas semanas e ainda não tens seguro de saúde. O que fazes?',
-    'c.insurance.o1': 'Tratas depressa do seguro de saúde.', // nagelezen (2e lezing)
-    'c.insurance.o2': 'Esperas: o seguro do teu país chega.', // nagelezen (2e lezing)
+    'c.insurance.o1': 'Tratas depressa do seguro de saúde.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.insurance.o2': 'Esperas: o seguro do teu país chega.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.insurance.o3': 'Usas o cartão do seguro de um amigo.',
-    'c.insurance.w': 'Sem seguro, um médico ou um hospital pode custar muito dinheiro, e podes levar uma multa. Tratar disso depressa protege-te. O teu empregador ou a agência pode ajudar-te.', // nagelezen (2e lezing)
+    'c.insurance.w': 'Sem seguro, um médico ou um hospital pode custar muito dinheiro, e podes levar uma multa. Tratar disso depressa protege-te. O teu empregador ou a agência pode ajudar-te.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.letters': 'Não ignores as cartas',
     'c.letters.b': 'Não ignores as cartas do Belastingdienst, da gemeente ou do UWV. Pede a alguém em quem confias para te ajudar a lê-las. A declaração de impostos (aangifte) do ano passado normalmente tem de ser feita antes de 1 de maio. Podes pedir mais tempo. Os subsídios (toeslagen), como o zorgtoeslag e o huurtoeslag, dependem do teu rendimento. Se recebes demais, tens de devolver, por isso mantém os dados do teu rendimento atualizados. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.letters.p': 'Recebi uma carta. Podes ajudar-me?',
     'c.letters.s': 'Recebes uma carta do Belastingdienst. Não a percebes. O que fazes?',
-    'c.letters.o1': 'Pedes ajuda a alguém em quem confias.', // nagelezen (2e lezing)
+    'c.letters.o1': 'Pedes ajuda a alguém em quem confias.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.letters.o2': 'Guarda-la numa gaveta e esperas.',
     'c.letters.o3': 'Deita-la fora, porque deve ser publicidade.',
     'c.letters.w': 'As cartas oficiais muitas vezes têm um prazo. Se reagires a tempo, os problemas normalmente são mais fáceis de resolver.',
@@ -828,14 +828,14 @@ const t: CultureTranslation = {
     'c.transit.s': 'Vais de autocarro para o trabalho todos os dias. Um colega recebe dinheiro para a viagem, tu não. O que fazes?',
     'c.transit.o1': 'Perguntas ao teu chefe quais são as regras na tua empresa ou na cao.',
     'c.transit.o2': 'Não dizes nada, porque provavelmente não é para ti.',
-    'c.transit.o3': 'Dizes ao teu chefe: a lei diz que também tens de o receber.', // nagelezen (2e lezing)
+    'c.transit.o3': 'Dizes ao teu chefe: a lei diz que também tens de o receber.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.transit.w': 'O subsídio de transporte depende do empregador ou da cao. Perguntar é normal e ajuda-te a conhecer os teus direitos.',
     'c.ww': 'Subsídio de desemprego (WW)',
     'c.ww.b': 'Perdeste o emprego? Pede o WW no UWV o mais depressa possível, no prazo de uma semana a contar do teu primeiro dia sem trabalho. Normalmente tens de ter trabalhado pelo menos 26 das últimas 36 semanas. Se te despedires tu, normalmente não recebes WW. Inscreve-te como pessoa à procura de emprego em werk.nl. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
-    'c.ww.x': 'Procuras trabalho noutro país da UE? Às vezes podes levar o teu WW contigo. Antes de partires, pede à UWV o formulário U2. Sem U2, o teu WW para.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
+    'c.ww.x': 'Procuras trabalho noutro país da UE? Às vezes podes levar o teu WW contigo. Antes de partires, pede ao UWV o formulário U2. Sem U2, o teu WW para.', // nieuw, nalezen (uit een ander land, 10 nov 2026) // nagelezen AI 22 nov
     'c.ww.p': 'Quero pedir o subsídio de desemprego. O que tenho de fazer?',
     'c.ww.s': 'O teu trabalho irrita-te e queres despedir-te hoje. O que é sensato?',
-    'c.ww.o1': 'Pedes conselho primeiro, antes de te despedires.', // nagelezen (2e lezing)
+    'c.ww.o1': 'Pedes conselho primeiro, antes de te despedires.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.ww.o2': 'Despedes-te hoje: vais receber WW na mesma.',
     'c.ww.o3': 'Deixas de ir trabalhar sem dizer nada.',
     'c.ww.w': 'Despedires-te pode fazer-te perder o subsídio. Falar primeiro com o teu chefe, o sindicato ou o Juridisch Loket pode ajudar-te a encontrar um caminho melhor.',
@@ -843,15 +843,15 @@ const t: CultureTranslation = {
     'c.newjob.b': 'Antes de saíres, pede uma referência (referentie). Guarda os teus recibos de vencimento e o teu contrato. Atualiza o teu CV. Procura trabalho em agências de trabalho temporário (uitzendbureaus) e em werk.nl. Nunca pagues para ter um emprego. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.',
     'c.newjob.p': 'Posso dar o seu nome como referência?',
     'c.newjob.s': 'Alguém te oferece um emprego, mas primeiro tens de pagar 300 euros "pelo emprego". O que fazes?',
-    'c.newjob.o1': 'Não pagas. Procuras uma agência a sério.', // nagelezen (2e lezing)
+    'c.newjob.o1': 'Não pagas. Procuras uma agência a sério.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.newjob.o2': 'Pagas, porque um bom emprego vale a pena.',
     'c.newjob.o3': 'Pagas metade agora e o resto mais tarde.',
-    'c.newjob.w': 'Pedir dinheiro por um emprego é um sinal de alarme. Uma agência de trabalho temporário não te pode cobrar por te arranjar trabalho. Também podes procurar trabalho no werk.nl.', // nagelezen (2e lezing)
+    'c.newjob.w': 'Pedir dinheiro por um emprego é um sinal de alarme. Uma agência de trabalho temporário não te pode cobrar por te arranjar trabalho. Também podes procurar trabalho no werk.nl.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.tools': 'A reunião toolbox',
     'c.tools.b': 'Em muitas obras há regularmente uma reunião curta sobre segurança: a reunião toolbox. Ouves falar dos riscos e das regras novas. Vai, ouve e faz perguntas se não perceberes. Verifica as tuas ferramentas antes de as usares. Uma ferramenta está estragada? Diz ao teu chefe.',
     'c.tools.p': 'Este berbequim está estragado. Há outro?',
     'c.tools.s': 'Há uma reunião toolbox, mas o teu neerlandês ainda não é bom. O que fazes?',
-    'c.tools.o1': 'Vais, e depois perguntas a um colega o que te escapou.', // nagelezen (2e lezing)
+    'c.tools.o1': 'Vais, e depois perguntas a um colega o que te escapou.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.tools.o2': 'Não vais, porque de qualquer forma não vais perceber.',
     'c.tools.o3': 'Assinas a lista de presenças sem ir.',
     'c.tools.w': 'A informação de segurança é para todos. Uma app de tradução pode ajudar-te a acompanhar a reunião, se lá forem permitidos telemóveis. Perguntar depois a um colega é normal e confirma que percebeste bem.',
@@ -859,7 +859,7 @@ const t: CultureTranslation = {
     'c.site.b': 'Antes de começares uma tarefa, para um momento e verifica: o que pode correr mal aqui? Isto é a LMRA (análise de riscos de última hora). Usa sempre o capacete, e proteção contra quedas quando trabalhas em altura. Nunca fiques debaixo de uma carga suspensa. O trabalho é mesmo perigoso? Então podes parar, e tens de avisar logo o teu chefe. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.site.p': 'Ainda não começo. Isto não é seguro.',
     'c.site.s': 'Tens de trabalhar num andaime, mas falta um corrimão de proteção. Um colega diz: "Tem só cuidado." O que fazes?',
-    'c.site.o1': 'Não começas, e dizes ao teu chefe.', // nieuw, nalezen
+    'c.site.o1': 'Não começas, e dizes ao teu chefe.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.site.o2': 'Começas, mas com muito cuidado.',
     'c.site.o3': 'Arranjas tu o corrimão com uma corda.',
     'c.site.w': 'Uma queda de uma altura pode causar ferimentos muito graves. Podes parar um trabalho perigoso, e comunicá-lo protege toda a equipa.',
@@ -868,7 +868,7 @@ const t: CultureTranslation = {
     'c.line.p': 'Há uma avaria. Carreguei na paragem de emergência.',
     'c.line.s': 'Um produto ficou preso na máquina. A máquina ainda está a trabalhar. O que fazes?',
     'c.line.o1': 'Carregas na paragem de emergência e chamas o teu chefe.',
-    'c.line.o2': 'Tiras o produto depressa com a mão, antes que se parta.', // nieuw, nalezen
+    'c.line.o2': 'Tiras o produto depressa com a mão, antes que se parta.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.line.o3': 'Deixas estar e esperas que a máquina resolva.',
     'c.line.w': 'As máquinas a trabalhar podem causar acidentes graves num segundo. Parar a máquina é sempre permitido e é sempre melhor.',
     'c.quality': 'Qualidade: diz o que vês',
@@ -883,7 +883,7 @@ const t: CultureTranslation = {
     'c.client.b': 'Bate à porta antes de entrares no quarto de um cliente. Diz quem és, explica o que vais fazer e pede autorização. Trata os clientes por "u", a não ser que te peçam para dizer "je". Deixa os clientes fazer o que conseguem fazer sozinhos.',
     'c.client.p': 'Posso entrar? Venho ajudar a lavar-se.',
     'c.client.s': 'Tens de ajudar uma cliente a lavar-se. A porta do quarto dela está fechada. O que fazes?',
-    'c.client.o1': 'Bates, esperas, e dizes quem és e porque vens.', // nagelezen (2e lezing)
+    'c.client.o1': 'Bates, esperas, e dizes quem és e porque vens.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.client.o2': 'Entras depressa, porque tens muito trabalho.',
     'c.client.o3': 'Não fazes a higiene, para não a incomodares.',
     'c.client.w': 'O quarto é a casa do cliente. Bater à porta e explicar mostra respeito e torna os cuidados mais calmos.',
@@ -891,7 +891,7 @@ const t: CultureTranslation = {
     'c.privacy.b': 'O que vês e ouves sobre os clientes fica no trabalho. Não fales dos clientes fora do trabalho, e nunca publiques fotografias deles. Limpa as mãos antes e depois dos cuidados. Notas uma mudança num cliente, como dor ou uma queda? Diz logo à enfermeira. Nunca dês medicamentos, a não ser que tenhas formação e autorização para isso. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.privacy.p': 'O senhor tem mais dores do que ontem.',
     'c.privacy.s': 'Uma cliente pede-te os comprimidos dela. Não tens formação para dar medicamentos. O que fazes?',
-    'c.privacy.o1': 'Dizes com simpatia que vais chamar a enfermeira.', // nieuw, nalezen
+    'c.privacy.o1': 'Dizes com simpatia que vais chamar a enfermeira.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.privacy.o2': 'Dás-lhe os comprimidos, porque ela sabe do que precisa.',
     'c.privacy.o3': 'Dizes que não e vais-te embora.',
     'c.privacy.w': 'Um medicamento errado pode ser perigoso. Chamar depressa a pessoa certa ajuda o cliente e mantém todos em segurança.',
@@ -915,7 +915,7 @@ const t: CultureTranslation = {
     'c.cleaning.b': 'Todos os produtos de limpeza têm um rótulo. Os pictogramas (pequenos desenhos num losango vermelho) mostram o perigo, por exemplo para a pele, os olhos ou os pulmões. Lê o rótulo, ou pergunta para que serve o produto e como se usa. Usa as luvas que o teu empregador te dá. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.cleaning.p': 'Para que serve este produto?',
     'c.cleaning.s': 'Recebes um produto de limpeza novo. Não consegues ler bem o rótulo. O que fazes?',
-    'c.cleaning.o1': 'Perguntas como o usar com segurança.', // nagelezen (2e lezing)
+    'c.cleaning.o1': 'Perguntas como o usar com segurança.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.cleaning.o2': 'Usas muito, assim funciona melhor.',
     'c.cleaning.o3': 'Experimentas sem luvas.',
     'c.cleaning.w': 'O produto errado, ou demasiado produto, pode fazer mal à pele, aos olhos ou aos pulmões. Perguntar demora um minuto.',
@@ -923,7 +923,7 @@ const t: CultureTranslation = {
     'c.cleansafe.b': 'Nunca mistures produtos de limpeza, por exemplo lixívia e um produto para a sanita. Isso pode libertar gases perigosos. Deixa entrar ar fresco. Vais lavar o chão com a esfregona? Põe a placa de chão molhado (Pas op, glad!), para ninguém escorregar. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.cleansafe.p': 'Vou pôr a placa. O chão está molhado.',
     'c.cleansafe.s': 'A casa de banho está muito suja. Uma colega diz: "Mistura dois produtos, assim funciona melhor." O que fazes?',
-    'c.cleansafe.o1': 'Não os misturas. Usas um produto.', // nagelezen (2e lezing)
+    'c.cleansafe.o1': 'Não os misturas. Usas um produto.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.cleansafe.o2': 'Misturas, mas abres uma janela.',
     'c.cleansafe.o3': 'Misturas depressa e sais da casa de banho.',
     'c.cleansafe.w': 'Misturar produtos pode libertar gases venenosos, mesmo com a janela aberta. Um produto, bem usado, chega.',
@@ -967,16 +967,16 @@ const t: CultureTranslation = {
     'c.translate': 'Apps de tradução: inteligentes, mas verifica',
     'c.translate.b': 'Uma app de tradução, como o Google Tradutor, ajuda muito. Podes escrever, falar ou usar o modo de conversa para falar com um colega. Com a câmara podes traduzir placas, papéis e instruções. Em muitos telemóveis, o WhatsApp também consegue traduzir mensagens. Usa o telemóvel só onde é seguro e permitido. Nunca perto de máquinas ou empilhadores. Pergunta sempre primeiro. As apps cometem erros. Para coisas importantes, como o teu contrato, uma carta ou uma instrução de segurança, pede também a uma pessoa que te explique. Não tires fotografias de papéis confidenciais do trabalho sem autorização.',
     'c.translate.p': 'Posso usar o meu telemóvel para traduzir?',
-    'c.translate.s': 'O teu chefe dá-te instruções de segurança em neerlandês. Só percebes algumas palavras. O que fazes?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.translate.o1': 'Pedes uma explicação, e perguntas se podes usar uma app.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.translate.o2': 'Dizes "ja, ja" e começas a trabalhar.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.translate.o3': 'Tiras uma fotografia e envias para os teus amigos, para eles traduzirem.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.translate.s': 'O teu chefe dá-te instruções de segurança em neerlandês. Só percebes algumas palavras. O que fazes?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.translate.o1': 'Pedes uma explicação, e perguntas se podes usar uma app.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.translate.o2': 'Dizes "ja, ja" e começas a trabalhar.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.translate.o3': 'Tiras uma fotografia e envias para os teus amigos, para eles traduzirem.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.translate.w': 'Uma app de tradução ajuda-te a perceber depressa, mas pode errar. Para a segurança, a explicação de uma pessoa é a melhor verificação. Os papéis do trabalho podem ser confidenciais, por isso não os partilhes sem autorização.',
     'c.understood': 'Confirma que percebeste',
     'c.understood.b': 'O teu telemóvel pode transformar a fala em texto (legendas em direto): Live Transcribe no Android, Legendas ao Vivo no iPhone. Vê que línguas o teu telemóvel aceita. Também podes pedir a alguém para escrever, para mostrar ou para falar devagar. Pergunta se há uma instrução com imagens, ou na tua língua. Depois repete o que percebeste: "Dus ik moet eerst …?" Isto é normal aqui, e evita erros.',
     'c.understood.p': 'Então primeiro tenho de contar as caixas?',
     'c.understood.s': 'Uma colega explica como funciona uma máquina nova. Ela fala depressa e perdes algumas palavras. O que fazes?',
-    'c.understood.o1': 'Pedes-lhe para mostrar ou escrever, e depois repetes.', // nagelezen (2e lezing)
+    'c.understood.o1': 'Pedes-lhe para mostrar ou escrever, e depois repetes.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.understood.o2': 'Acenas com a cabeça e dizes "ja, ja", para ela não perder tempo.',
     'c.understood.o3': 'Mais tarde experimentas a máquina sem ajuda e vês o que acontece.',
     'c.understood.w': 'Mostrar, escrever e repetir são verificações rápidas. A tua colega pode corrigir-te antes de alguma coisa correr mal. Aqui, isto é visto como cuidado, não como lentidão.',
@@ -984,9 +984,9 @@ const t: CultureTranslation = {
     'c.keeplearning.b': 'Alguns minutos todos os dias ajudam mais do que uma hora longa por semana. Guarda as palavras novas do trabalho numa app de notas no telemóvel. Ouve neerlandês fácil, por exemplo o NOS Jeugdjournaal (notícias para crianças) ou um podcast em neerlandês lento. Muitas bibliotecas públicas têm um Taalhuis: ajuda grátis com o neerlandês, muitas vezes com um taalcafé (um sítio para praticar a falar) ou um colega de língua (taalmaatje). Os colegas muitas vezes mudam para inglês para te ajudar. Pede-lhes com simpatia para falarem neerlandês contigo: a maioria das pessoas gosta de ajudar.',
     'c.keeplearning.p': 'Fala comigo em neerlandês, assim aprendo mais depressa.',
     'c.keeplearning.s': 'Os teus colegas mudam sempre para inglês quando falam contigo. Queres aprender neerlandês. O que fazes?',
-    'c.keeplearning.o1': 'Agradeces e pedes-lhes para falarem neerlandês contigo.', // nagelezen (2e lezing)
+    'c.keeplearning.o1': 'Agradeces e pedes-lhes para falarem neerlandês contigo.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.keeplearning.o2': 'Não dizes nada. O neerlandês vem sozinho.',
-    'c.keeplearning.o3': 'Também respondes em inglês, porque é mais educado.', // nagelezen (2e lezing)
+    'c.keeplearning.o3': 'Também respondes em inglês, porque é mais educado.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.keeplearning.w': 'Os colegas muitas vezes mudam para inglês por simpatia. Quando pedes neerlandês, a maioria fica contente por ajudar. Falar um pouco todos os dias no trabalho é uma das formas mais rápidas de aprender.',
     'l.gossip': 'Mexericos e redes sociais',
     'w.roddelen': 'falar mal dos outros, fazer mexericos',
@@ -1016,18 +1016,18 @@ const t: CultureTranslation = {
     'c.gossip.b': 'Falar de um colega pelas costas (roddelen) estraga a confiança numa equipa. Tens um problema com alguém? Fala com essa pessoa, ou com o teu chefe. Na internet valem as mesmas regras que no trabalho. Não publiques nada sobre colegas, clientes ou a empresa sem autorização. Isso inclui fotografias, vídeos e mensagens. O teu patrão pode ver o que publicas, e isso pode ficar online durante anos. Muitas equipas têm um grupo de mensagens (groepsapp) para o trabalho: fala só de trabalho, e não partilhes capturas de ecrã do grupo com outras pessoas. Partilhar coisas privadas de um colega ou gozar com alguém na internet também é bullying.',
     'c.gossip.p': 'Não quero isso na internet.',
     'c.gossip.s': 'Um colega filma-te quando escorregas no chão molhado. Ele quer pôr o vídeo no TikTok. O que fazes?',
-    'c.gossip.o1': 'Dizes "Nee, dat wil ik niet" e pedes-lhe para apagar.', // nagelezen (2e lezing)
+    'c.gossip.o1': 'Dizes "Nee, dat wil ik niet" e pedes-lhe para apagar.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.gossip.o2': 'Ris-te e deixas que ele publique, para não criares problemas.',
-    'c.gossip.o3': 'Pedes-lhe para o publicar sem o teu nome.', // nagelezen (2e lezing)
-    'c.gossip.w': 'Normalmente, ninguém pode pôr um vídeo teu na internet sem a tua autorização. Dizer que não é normal, e o teu empregador tem de agir quando os colegas gozam uns com os outros na internet. Se ele publicar na mesma, diz ao teu chefe.', // nieuw, nalezen
+    'c.gossip.o3': 'Pedes-lhe para o publicar sem o teu nome.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.gossip.w': 'Normalmente, ninguém pode pôr um vídeo teu na internet sem a tua autorização. Dizer que não é normal, e o teu empregador tem de agir quando os colegas gozam uns com os outros na internet. Se ele publicar na mesma, diz ao teu chefe.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.boundaries': 'Passar dos limites',
     'c.boundaries.b': 'Grensoverschrijdend gedrag é um comportamento que passa os limites de alguém. Por exemplo: toques indesejados, comentários ou piadas sexuais, olhares insistentes, imagens indesejadas, ameaças ou gritos. Não importa se a outra pessoa "estava a brincar": o que conta é como tu te sentes. Se puderes, diz com clareza que queres que pare. Escreve o que aconteceu, quando e quem viu. Diz ao teu chefe, à pessoa de confiança (vertrouwenspersoon, se houver) ou aos recursos humanos. O teu empregador tem de te proteger, e ninguém te pode castigar por comunicares. Viste isto acontecer a um colega? Pergunta se está bem, e oferece-te para ser testemunha.',
     'c.boundaries.p': 'Quero que pares.',
-    'c.boundaries.s': { m: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás "bonito". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?', f: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás "bonita". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?', x: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás com "bom aspeto". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?' }, // x: nieuw, nalezen
-    'c.boundaries.o1': 'Escreves o que acontece e contas à vertrouwenspersoon.', // nagelezen (2e lezing)
+    'c.boundaries.s': { m: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás "bonito". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?', f: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás "bonita". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?', x: 'O teu chefe de equipa põe muitas vezes a mão nas tuas costas e diz que estás com "bom aspeto". Isso deixa-te desconfortável. É ele que decide os teus turnos. O que fazes?' }, // x: nieuw, nalezen // nagelezen AI 22 nov
+    'c.boundaries.o1': 'Escreves o que acontece e contas à vertrouwenspersoon.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.boundaries.o2': 'Não dizes nada, porque é ele que decide os teus turnos.',
     'c.boundaries.o3': 'Despedes-te sem dizer a ninguém porquê.',
-    'c.boundaries.w': 'Isto é um comportamento indesejado, e a culpa não é tua. Uma pessoa de confiança ouve-te em confidência e ajuda-te a escolher o passo seguinte. A lei protege-te quando comunicas. Também podes falar com os recursos humanos.', // nagelezen (2e lezing)
+    'c.boundaries.w': 'Isto é um comportamento indesejado, e a culpa não é tua. Uma pessoa de confiança ouve-te em confidência e ajuda-te a escolher o passo seguinte. A lei protege-te quando comunicas. Também podes falar com os recursos humanos.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'u.shop': 'Na loja',
     'l.shelves': 'Prateleiras e stock',
     'w.schap': 'a prateleira (numa loja)',
@@ -1093,27 +1093,27 @@ const t: CultureTranslation = {
     'c.shelves': 'O mais antigo à frente',
     'c.shelves.b': 'Quando repões as prateleiras, olha para a data dos produtos. Põe à frente os produtos com a data mais próxima, e os novos atrás. Os clientes tiram da frente, por isso os produtos mais antigos saem primeiro. Um produto passou da data, ou está danificado? Tira-o da prateleira e pergunta o que fazer com ele. Mantém os corredores livres de caixas e carrinhos. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.shelves.p': 'O que faço com os produtos fora da data?',
-    'c.shelves.s': 'Pões leite novo na prateleira. À frente há leite com uma data mais próxima. O que fazes?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.shelves.o1': 'O leite novo atrás, o leite antigo à frente.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.shelves.o2': 'O leite novo à frente, porque é mais fresco.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.shelves.o3': 'Deitas fora o leite antigo.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.shelves.s': 'Pões leite novo na prateleira. À frente há leite com uma data mais próxima. O que fazes?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.shelves.o1': 'O leite novo atrás, o leite antigo à frente.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.shelves.o2': 'O leite novo à frente, porque é mais fresco.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.shelves.o3': 'Deitas fora o leite antigo.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.shelves.w': 'Os clientes tiram da frente. Quando os produtos mais antigos saem primeiro, deita-se fora menos comida.',
     'c.checkout': 'Identificação para álcool e tabaco',
     'c.checkout.b': 'Não podes vender álcool nem tabaco a menores de 18 anos: é a lei. Não tens a certeza da idade de um cliente? Pede a identificação. Muitas lojas pedem identificação a todas as pessoas que parecem ter menos de 25 anos. Sem identificação, ou menor de 18? Então não vendes, e manténs a educação. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.checkout.p': 'Sem identificação não posso vender isto.',
     'c.checkout.s': 'Um rapaz quer comprar cerveja. Parece ter uns 17 anos. Diz que tem 19, mas não tem identificação com ele. O que fazes?',
-    'c.checkout.o1': 'Dizes que não podes vender sem identificação.', // nagelezen (2e lezing)
+    'c.checkout.o1': 'Dizes que não podes vender sem identificação.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.checkout.o2': 'Vendes, porque ele diz que tem 19.',
     'c.checkout.o3': 'Vendes, mas só uma lata.',
     'c.checkout.w': 'Sem identificação não podes saber a idade dele. Vender álcool a um menor de 18 é contra a lei, e a loja pode levar uma multa.',
-    'c.counting': 'Vijfentwintig: primeiro o 5, depois o 20', // nieuw, nalezen
-    'c.counting.b': 'Em neerlandês, do 0 ao 12 cada número tem a sua palavra: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. Do 13 ao 19 acabam em -tien: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. As dezenas acabam em -tig: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. Do 21 ao 99 diz-se primeiro o último algarismo: 25 é vijfentwintig, "cinco e vinte". Por isso, 47 é zevenenveertig, e 74 é vierenzeventig. Dertien e dertig soam quase igual: ouve o fim. Tens dúvidas? Repete os algarismos um a um.', // nieuw, nalezen
-    'c.counting.p': 'Quatro, sete? Então, quarenta e sete?', // nieuw, nalezen
-    'c.counting.s': 'O teu chefe diz: "Ga naar gang zevenenveertig." Qual é o corredor?', // nieuw, nalezen
-    'c.counting.o1': 'O corredor 47.', // nieuw, nalezen
-    'c.counting.o2': 'O corredor 74.', // nieuw, nalezen
-    'c.counting.o3': 'O corredor 40.', // nieuw, nalezen
-    'c.counting.w': '"Zevenenveertig" é "sete e quarenta": primeiro o 7, depois o 40. Por isso é o corredor 47. Muitos recém-chegados ouvem 74 e vão para o corredor errado.', // nieuw, nalezen
+    'c.counting': 'Vijfentwintig: primeiro o 5, depois o 20', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.b': 'Em neerlandês, do 0 ao 12 cada número tem a sua palavra: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. Do 13 ao 19 acabam em -tien: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. As dezenas acabam em -tig: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. Do 21 ao 99 diz-se primeiro o último algarismo: 25 é vijfentwintig, "cinco e vinte". Por isso, 47 é zevenenveertig, e 74 é vierenzeventig. Dertien e dertig soam quase igual: ouve o fim. Tens dúvidas? Repete os algarismos um a um.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.p': 'Quatro, sete? Então, quarenta e sete?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.s': 'O teu chefe diz: "Ga naar gang zevenenveertig." Qual é o corredor?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.o1': 'O corredor 47.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.o2': 'O corredor 74.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.o3': 'O corredor 40.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.w': '"Zevenenveertig" é "sete e quarenta": primeiro o 7, depois o 40. Por isso é o corredor 47. Muitos recém-chegados ouvem 74 e vão para o corredor errado.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.hours': 'Half acht é 7:30',
     'c.hours.b': 'Em neerlandês, "half" conta para a hora seguinte: half acht é 7:30, não 8:30. Kwart over acht é 8:15, e kwart voor acht é 7:45. Confirma tu as tuas horas: a hora de fim menos a hora de início, menos a pausa. A pausa muitas vezes não é paga. Aponta as tuas horas todos os dias.',
     'c.hours.p': 'Half acht? Então meia hora antes das oito?',
@@ -1183,7 +1183,7 @@ const t: CultureTranslation = {
     'c.aihelp.b': 'As apps de IA e os chatbots, como o ChatGPT, conseguem traduzir, explicar uma carta ou ajudar-te a escrever uma mensagem. Isso é útil. Mas a IA às vezes erra, e mesmo assim parece muito segura. É sobre o teu contrato, o teu salário, medicamentos ou segurança? Então verifica sempre a resposta com uma pessoa. Por exemplo o teu chefe, os recursos humanos ou o Juridisch Loket.',
     'c.aihelp.p': 'Isto está certo? Pode ver isto comigo?',
     'c.aihelp.s': 'Perguntas a um chatbot sobre o teu contrato. Ele diz que não recebes subsídio de férias. O que fazes?',
-    'c.aihelp.o1': 'Pedes aos recursos humanos ou ao Juridisch Loket para verificarem.', // nalezen: korter goed antwoord
+    'c.aihelp.o1': 'Pedes aos recursos humanos ou ao Juridisch Loket para verificarem.', // nalezen: korter goed antwoord // nagelezen AI 22 nov
     'c.aihelp.o2': 'Acreditas: o chatbot parece ter muita certeza.',
     'c.aihelp.o3': 'Não dizes nada e esqueces o assunto.',
     'c.aihelp.w': 'Um chatbot pode enganar-se sobre regras e contratos. Nos Países Baixos quase todos os trabalhadores recebem subsídio de férias. Uma pessoa que conhece as regras pode verificar.',
@@ -1191,7 +1191,7 @@ const t: CultureTranslation = {
     'c.aiprivate.b': 'O que escreves num chatbot pode ser guardado e usado pela empresa que o faz. Por isso nunca escrevas o teu BSN, uma palavra-passe ou os teus dados bancários. Não ponhas nomes ou fotografias de clientes, doentes ou colegas, nem papéis do trabalho. Muitos empregadores têm regras sobre a IA. Pergunta primeiro se a podes usar no teu trabalho. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.',
     'c.aiprivate.p': 'Posso usar IA para isto?',
     'c.aiprivate.s': 'Queres que um chatbot escreva um relatório sobre um cliente. O relatório tem o nome e a morada do cliente. O que fazes?',
-    'c.aiprivate.o1': 'Primeiro perguntas, e deixas de fora o nome e a morada.', // nagelezen (2e lezing)
+    'c.aiprivate.o1': 'Primeiro perguntas, e deixas de fora o nome e a morada.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aiprivate.o2': 'Pões tudo no chatbot: é mais rápido.',
     'c.aiprivate.o3': 'Envias o relatório a um amigo para ele verificar.',
     'c.aiprivate.w': 'Os nomes e as moradas são dados pessoais. Não podem simplesmente ir para outra empresa. O teu empregador sabe que apps são permitidas.',
@@ -1199,7 +1199,7 @@ const t: CultureTranslation = {
     'c.aifake.b': 'Com a IA, os criminosos conseguem copiar uma voz e fazer fotografias e vídeos falsos. Uma chamada ou mensagem que parece do teu patrão, do teu banco ou de alguém da tua família pode ser falsa. Cuidado quando há pressa, dinheiro e um número novo. Desliga, e liga tu de volta para o número que conheces. Um banco, um empregador ou a polícia a sério nunca te pedem os teus códigos.',
     'c.aifake.p': 'Desligo e sou eu que ligo de volta.',
     'c.aifake.s': 'O teu telemóvel toca. Uma voz igualzinha à do teu patrão diz: "Paga já esta fatura, é urgente." O que fazes?',
-    'c.aifake.o1': 'Desligas e ligas tu ao teu patrão.', // nagelezen (2e lezing)
+    'c.aifake.o1': 'Desligas e ligas tu ao teu patrão.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aifake.o2': 'Pagas depressa: é o teu patrão.',
     'c.aifake.o3': 'Dás o teu código do banco, para o teu patrão poder pagar.',
     'c.aifake.w': 'Uma voz pode ser copiada com IA. Pressa e dinheiro juntos são um sinal de alarme. Ligar de volta para um número que conheces é uma verificação rápida e segura.',
@@ -1207,9 +1207,9 @@ const t: CultureTranslation = {
     'c.aiplan.b': 'Cada vez mais empresas deixam uma app ou um computador decidir coisas. Por exemplo, faz o horário ou mede o teu ritmo com o leitor. Podes perguntar que informação sobre ti é recolhida. Há uma decisão grande sobre ti, como menos horas, um aviso ou um despedimento? Pergunta quem decidiu. Um computador tomou essa decisão sozinho? Então podes pedir que uma pessoa a verifique outra vez e a explique. Aponta as tuas próprias horas. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.',
     'c.aiplan.p': 'Uma pessoa pode ver isto?',
     'c.aiplan.s': 'A app do horário dá-te muito menos horas no próximo mês. Ninguém te diz porquê. O que fazes?',
-    'c.aiplan.o1': 'Pedes que uma pessoa te explique.', // nagelezen (2e lezing)
+    'c.aiplan.o1': 'Pedes que uma pessoa te explique.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aiplan.o2': 'Aceitas: a app tem sempre razão.',
-    'c.aiplan.o3': 'Perguntas ao chatbot da app porquê.', // nagelezen (2e lezing)
+    'c.aiplan.o3': 'Perguntas ao chatbot da app porquê.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aiplan.w': 'As apps erram, e não sabem tudo sobre ti. Podes pedir uma explicação, e uma pessoa pode ver outra vez.',
     // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
     'u.kas': "Na estufa", // nagelezen (2e lezing)
@@ -1237,22 +1237,22 @@ const t: CultureTranslation = {
     's.greensafe.3': "Onde está o carrinho de colheita?", // nagelezen (2e lezing)
     'c.greensafe.q': "Posso trabalhar na estufa três?", // nagelezen (2e lezing)
     'c.greensafe.a': "Não, ainda não. Acabou de ser pulverizada.", // nagelezen (2e lezing)
-    'c.harvest': "Ritmo e pagamento à peça", // nagelezen (2e lezing)
-    'c.harvest.b': "Numa estufa trabalhas muitas vezes a um ritmo fixo (tempo). Alguns empregadores pagam por caixa, por fila ou por quilo: é o pagamento à peça (stukloon). Mesmo com pagamento à peça, tens de ganhar pelo menos o salário mínimo por cada hora que trabalhas. Vê o valor em rijksoverheid.nl. Aponta todos os dias as tuas horas e as tuas caixas, e compara-as com o teu recibo de vencimento. Trabalhar depressa é bom, mas trabalhar em segurança vem primeiro. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.", // nagelezen (2e lezing)
-    'c.harvest.p': "Quantas caixas fiz hoje?", // nagelezen (2e lezing)
-    'c.harvest.s': "Pagam-te por caixa. Esta semana ganhas menos do que o salário mínimo por hora. O que fazes?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.o1': "Mostras a tua própria lista de horas e caixas.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.o2': "Não dizes nada e trabalhas mais depressa.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.o3': "Aceitas: com pagamento à peça, isso é normal.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.w': "Com pagamento à peça, tens na mesma de receber pelo menos o salário mínimo por cada hora que trabalhaste. A tua lista de horas e caixas ajuda-te a mostrar o que fizeste. Se não for corrigido, pede ajuda.", // nagelezen (2e lezing)
-    'c.greensafe': "Calor e produtos fitofarmacêuticos", // nagelezen (2e lezing)
-    'c.greensafe.b': "Numa estufa pode estar muito calor, mesmo na primavera. Bebe água muitas vezes, mesmo antes de teres sede, e faz as tuas pausas num sítio fresco. Tens tonturas, náuseas ou dores de cabeça? Para e diz a alguém. Às vezes as plantas são pulverizadas com químicos (spuitmiddelen). Uma estufa que acabou de ser pulverizada tem muitas vezes um aviso na porta. Não entres até o teu chefe dizer que já é seguro outra vez. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nagelezen (2e lezing)
-    'c.greensafe.p': "Já posso trabalhar nesta estufa?", // nagelezen (2e lezing)
-    'c.greensafe.s': "Uma estufa foi pulverizada hoje de manhã. Há um aviso na porta. Um colega diz: \"Anda, é só um bocadinho.\" O que fazes?", // nagelezen (2e lezing)
-    'c.greensafe.o1': "Ficas cá fora e perguntas quando é seguro.", // nagelezen (2e lezing)
-    'c.greensafe.o2': "Entras depressa e susténs a respiração.", // nagelezen (2e lezing)
-    'c.greensafe.o3': "Entras, e depois lavas bem as mãos.", // nagelezen (2e lezing)
-    'c.greensafe.w': "Os produtos fitofarmacêuticos podem fazer mal à tua pele, aos teus olhos e aos teus pulmões, mesmo quando não cheiras nada. Depois da pulverização há um tempo de espera antes de se poder entrar outra vez. O teu chefe sabe quando acaba.", // nagelezen (2e lezing)
+    'c.harvest': "Ritmo e pagamento à peça", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.harvest.b': "Numa estufa trabalhas muitas vezes a um ritmo fixo (tempo). Alguns empregadores pagam por caixa, por fila ou por quilo: é o pagamento à peça (stukloon). Mesmo com pagamento à peça, tens de ganhar pelo menos o salário mínimo por cada hora que trabalhas. Vê o valor em rijksoverheid.nl. Aponta todos os dias as tuas horas e as tuas caixas, e compara-as com o teu recibo de vencimento. Trabalhar depressa é bom, mas trabalhar em segurança vem primeiro. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.harvest.p': "Quantas caixas fiz hoje?", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.harvest.s': "Pagam-te por caixa. Esta semana ganhas menos do que o salário mínimo por hora. O que fazes?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.o1': "Mostras a tua própria lista de horas e caixas.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.o2': "Não dizes nada e trabalhas mais depressa.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.o3': "Aceitas: com pagamento à peça, isso é normal.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.w': "Com pagamento à peça, tens na mesma de receber pelo menos o salário mínimo por cada hora que trabalhaste. A tua lista de horas e caixas ajuda-te a mostrar o que fizeste. Se não for corrigido, pede ajuda.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe': "Calor e produtos químicos", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.b': "Numa estufa pode estar muito calor, mesmo na primavera. Bebe água muitas vezes, mesmo antes de teres sede, e faz as tuas pausas num sítio fresco. Tens tonturas, náuseas ou dores de cabeça? Para e diz a alguém. Às vezes as plantas são pulverizadas com químicos (spuitmiddelen). Uma estufa que acabou de ser pulverizada tem muitas vezes um aviso na porta. Não entres até o teu chefe dizer que já é seguro outra vez. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.p': "Já posso trabalhar nesta estufa?", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.s': "Uma estufa foi pulverizada hoje de manhã. Há um aviso na porta. Um colega diz: \"Anda, é só um bocadinho.\" O que fazes?", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.o1': "Ficas cá fora e perguntas quando é seguro.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.o2': "Entras depressa e susténs a respiração.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.o3': "Entras, e depois lavas bem as mãos.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.w': "Os produtos químicos que se pulverizam nas plantas podem fazer mal à tua pele, aos teus olhos e aos teus pulmões, mesmo quando não cheiras nada. Depois da pulverização há um tempo de espera antes de se poder entrar outra vez. O teu chefe sabe quando acaba.", // nagelezen (2e lezing) // nagelezen AI 22 nov
     // nagelezen (2e lezing): Getallen en gegevens (u.data), l.permit, l.kids, l.body, l.jobends and their tips (30 October 2026).
     'u.data': "Números e dados",
     'l.details': "Os teus dados",
@@ -1279,102 +1279,102 @@ const t: CultureTranslation = {
     's.dates.3': "Na semana passada trabalhei quarenta horas.",
     'c.dates.q': "Que dia é hoje?",
     'c.dates.a': "É segunda-feira, 3 de junho.",
-    'l.permit': "Papéis, integração e o teu trabalho",
-    'w.papieren': "os papéis (os documentos)",
-    'w.werkvergunning': "a autorização de trabalho",
-    'w.werknemer': "o trabalhador por conta de outrem (trabalhas para um empregador)",
-    'w.zzper': "o trabalhador independente (trabalhas por conta própria)",
-    'w.inburgering': "a integração cívica (o curso e os exames para recém-chegados)",
-    'w.taalles': "a aula de língua",
-    's.permit.1': "Posso trabalhar aqui com os meus papéis?",
-    's.permit.2': "Trabalho por conta de outrem ou por conta própria?",
-    's.permit.3': "Trabalho à chamada.",
-    'c.permit.q': "Podes trabalhar na terça-feira?",
-    'c.permit.a': "Não, nesse dia tenho aula de língua. Na quarta posso.",
-    'l.kids': "Filhos e trabalho",
-    'w.zwanger': "grávida",
-    'w.kinderopvang': "a creche, o infantário",
-    'w.ophalen': "ir buscar (alguém)",
-    'w.ziekkind': "uma criança doente",
-    'w.ouderschapsverlof': "a licença parental",
-    'w.zorgverlof': "a licença para cuidar (dias sem trabalhar para cuidar de um familiar doente)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    's.kids.1': "O meu filho está doente. Tenho de o ir buscar.",
-    's.kids.2': "Posso tirar uma licença de emergência?",
-    's.kids.3': "O meu empregador continua a pagar o meu salário?",
-    'c.kids.q': "Porque é que tens de ir embora agora?",
-    'c.kids.a': "A creche ligou. O meu filho tem febre.",
-    'l.body': "O corpo e a dor",
-    'w.hoofd': "a cabeça",
-    'w.rug': "as costas",
-    'w.arm': "o braço",
-    'w.hand': "a mão",
-    'w.buik': "a barriga",
-    'w.oog': "o olho",
-    's.body.1': "Tenho dores na mão.",
-    's.body.2': "Não me sinto bem.",
-    's.body.3': "Caí em cima do braço.",
-    'c.body.q': "Onde é que dói?",
-    'c.body.a': "Nas costas. Levantei uma caixa pesada.",
-    'l.jobends': "Quando o teu trabalho acaba",
-    'w.eindafrekening': "o acerto final de contas (o teu último pagamento quando um trabalho acaba)",
-    'w.opzeggen': "rescindir (um contrato), cancelar",
-    'w.uitschrijven': "cancelar a inscrição (tirar o teu nome de uma lista)",
-    'w.sleutel': "a chave",
-    'w.verhuizen': "mudar de casa",
-    'w.busje': "a carrinha (um autocarro pequeno)",
-    's.jobends.1': "Recebo o subsídio de férias e os meus dias de férias pagos?",
-    's.jobends.2': "Peço conselho ao Juridisch Loket.",
-    's.jobends.3': "Trato eu de um novo seguro de saúde.",
-    'c.jobends.q': "O teu trabalho acaba na sexta-feira. Aí também tens de sair da casa.",
-    'c.jobends.a': "Qual é o prazo de aviso prévio do meu contrato de arrendamento?",
-    'c.details': "Os teus dados: dá-os bem",
-    'c.details.b': "No início de um trabalho, dás os teus dados. São o teu nome, a tua morada, o teu número de telefone, a tua data de nascimento e o teu BSN. Soletra o teu nome devagar, letra a letra. Depois, verifica o teu nome no contrato e no recibo de vencimento. Um erro no teu nome ou no BSN pode dar problemas com o salário ou com os impostos. Tens uma morada ou um número de telefone novo? Diz ao teu empregador.",
-    'c.details.p': "Eu soletro: A, L, I.",
-    'c.details.s': "Ao telefone, a agência escreve o teu apelido. Ouves que o estão a escrever mal. O que fazes?",
-    'c.details.o1': "Soletras o teu nome devagar e pedes que o leiam em voz alta.", // nagelezen (2e lezing)
-    'c.details.o2': "Não dizes nada: um pequeno erro no nome não faz mal.",
-    'c.details.o3': "Desligas, e esperas que encontrem o erro mais tarde.",
-    'c.details.w': "O teu nome tem de ser igual no contrato, no recibo de vencimento e no documento de identificação. Assim o salário e os impostos ficam certos. Soletrar e pedir que leiam em voz alta é uma verificação rápida.",
-    'c.dates': "Datas: primeiro o dia",
-    'c.dates.b': "Em neerlandês, o dia vem antes do mês: 3-6 é 3 de junho, não 6 de março. \"Tot en met\" quer dizer que o último dia também conta. Os dias e os meses escrevem-se com letra minúscula: maandag, juni. Tens dúvidas sobre uma data? Pergunta, e repete-a.",
-    'c.dates.p': "Queres dizer 3 de junho?",
-    'c.dates.s': "O teu horário diz: \"Vrij: 3-6 tot en met 5-6\". Quando estás de folga?",
-    'c.dates.o1': "A 3, 4 e 5 de junho.",
-    'c.dates.o2': "Só a 3 e 4 de junho.",
-    'c.dates.o3': "De 6 de março a 6 de maio.",
-    'c.dates.w': "Primeiro vem o dia, depois o mês: 3-6 é 3 de junho. \"Tot en met\" quer dizer que 5 de junho também conta, por isso tens três dias de folga.",
-    'c.permit': "Trabalho e integração",
-    'c.permit.b': "Tens de fazer a integração cívica (inburgering)? Diz ao teu empregador, e diz à gemeente (a câmara municipal) que trabalhas. Pergunta cedo se as tuas aulas de língua podem encaixar no teu horário. Não tens a certeza se podes trabalhar aqui? Confirma antes de começar, por exemplo no IND, no UWV ou na VluchtelingenWerk. Pedem-te para te registares como independente (zzp’er) para este trabalho? Pede conselho primeiro. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.",
-    'c.permit.p': "Tenho aula de língua à terça-feira. O meu horário pode ter isso em conta?",
-    'c.permit.s': "A tua aula de língua é à terça de manhã. No teu novo horário, trabalhas a essa hora. O que fazes?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.o1': "Pedes ao teu chefe para mudar o horário.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.o2': "Faltas à aula: o trabalho vem primeiro.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.o3': "Ficas em casa às terças sem dizer nada.",
-    'c.permit.w': "A tua integração também é uma obrigação. Muitos empregadores ajudam quando sabem cedo. A gemeente também te pode ajudar a encaixar o teu plano no teu trabalho.",
-    'c.kids': "O teu filho está doente",
-    'c.kids.b': "O teu filho fica doente de repente? Diz logo ao teu empregador. Nas primeiras horas ou dias podes tirar uma licença de emergência (calamiteitenverlof), e o teu empregador continua a pagar-te. O teu filho precisa de cuidados durante mais tempo? Então podes pedir uma licença para cuidar (zorgverlof). Estás grávida? O teu empregador não te pode despedir por isso. Informa-te a tempo sobre a licença de gravidez e a licença parental (ouderschapsverlof). Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.",
-    'c.kids.p': "O meu filho está doente. Posso sair mais cedo hoje?",
-    'c.kids.s': "A creche (kinderopvang) liga-te para o trabalho. O teu filho tem febre e tem de ir para casa. O que fazes?",
-    'c.kids.o1': "Dizes ao teu chefe, e pedes uma licença de emergência.", // nagelezen (2e lezing)
-    'c.kids.o2': "Sais sem dizer nada, e explicas amanhã.",
-    'c.kids.o3': "Ficas no trabalho, e deixas o teu filho à espera até ao fim do teu turno.",
-    'c.kids.w': "Um filho doente é uma emergência em casa. Se disseres primeiro ao teu chefe, ele pode organizar o trabalho. A licença de emergência é para momentos como este.",
-    'c.body': "Diz o que aconteceu e onde dói",
-    'c.body.b': "No médico, diz o que aconteceu e onde dói. Por exemplo: \"Ik ben gevallen. Mijn arm doet pijn.\" Diz também há quanto tempo tens a dor. Não tens de adivinhar o que tens: isso é o médico que vê. Aconteceu no trabalho? Diz ao teu chefe no mesmo dia.",
-    'c.body.p': "Caí. Dói-me o braço.",
-    'c.body.s': "No trabalho levantaste uma caixa pesada. Agora doem-te muito as costas. Estás no médico de família (huisarts). O que dizes?",
-    'c.body.o1': "Onde dói, e o que aconteceu: levantaste uma caixa pesada.",
-    'c.body.o2': "Só que te sentes mal, mais nada.",
-    'c.body.o3': "O nome de uma doença que encontraste na internet.",
-    'c.body.w': "Quando dizes onde dói e o que aconteceu, o médico percebe-te mais depressa. O médico vê o que é. Aconteceu no trabalho? Diz também ao teu chefe.",
-    'c.jobends': "O teu trabalho acaba: o que mais acaba?",
-    'c.jobends.b': "Quando o teu trabalho acaba, verifica o acerto final de contas (eindafrekening). Os dias de férias que não gozaste e o subsídio de férias costumam ser pagos com ele. A casa, o seguro de saúde ou uma carrinha da agência podem acabar ao mesmo tempo. Trata a tempo do teu próprio seguro de saúde. O teu contrato de arrendamento tem regras próprias: pede conselho antes de saíres da casa. Vais mudar de casa, ou sair dos Países Baixos? Diz à gemeente. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.",
-    'c.jobends.p': "Quando recebo o acerto final de contas?",
-    'c.jobends.s': "O teu trabalho acaba na sexta-feira. O teu seguro de saúde é através da agência. O que fazes?",
-    'c.jobends.o1': "Perguntas quando acaba o seguro, e tratas do teu a tempo.", // nagelezen (2e lezing)
-    'c.jobends.o2': "Nada: o seguro continua sozinho.",
-    'c.jobends.o3': "Esperas até ficares doente, e tratas disso nessa altura.",
-    'c.jobends.w': "O seguro através da agência acaba muitas vezes quando o trabalho acaba. Se vives ou trabalhas nos Países Baixos, normalmente tens de ter seguro de saúde. Se tratares disso a tempo, não ficas sem seguro.",
+    'l.permit': "Papéis, integração e o teu trabalho", // nagelezen AI 22 nov
+    'w.papieren': "os papéis (os documentos)", // nagelezen AI 22 nov
+    'w.werkvergunning': "a autorização de trabalho", // nagelezen AI 22 nov
+    'w.werknemer': "o trabalhador por conta de outrem (trabalhas para um empregador)", // nagelezen AI 22 nov
+    'w.zzper': "o trabalhador independente (trabalhas por conta própria)", // nagelezen AI 22 nov
+    'w.inburgering': "a integração cívica (o curso e os exames para recém-chegados)", // nagelezen AI 22 nov
+    'w.taalles': "a aula de língua", // nagelezen AI 22 nov
+    's.permit.1': "Posso trabalhar aqui com os meus papéis?", // nagelezen AI 22 nov
+    's.permit.2': "Trabalho por conta de outrem ou por conta própria?", // nagelezen AI 22 nov
+    's.permit.3': "Trabalho à chamada.", // nagelezen AI 22 nov
+    'c.permit.q': "Podes trabalhar na terça-feira?", // nagelezen AI 22 nov
+    'c.permit.a': "Não, nesse dia tenho aula de língua. Na quarta posso.", // nagelezen AI 22 nov
+    'l.kids': "Filhos e trabalho", // nagelezen AI 22 nov
+    'w.zwanger': "grávida", // nagelezen AI 22 nov
+    'w.kinderopvang': "a creche, o infantário", // nagelezen AI 22 nov
+    'w.ophalen': "ir buscar (alguém)", // nagelezen AI 22 nov
+    'w.ziekkind': "uma criança doente", // nagelezen AI 22 nov
+    'w.ouderschapsverlof': "a licença parental", // nagelezen AI 22 nov
+    'w.zorgverlof': "a licença para cuidar (dias sem trabalhar para cuidar de um familiar doente)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    's.kids.1': "O meu filho está doente. Tenho de o ir buscar.", // nagelezen AI 22 nov
+    's.kids.2': "Posso tirar uma licença de emergência?", // nagelezen AI 22 nov
+    's.kids.3': "O meu empregador continua a pagar o meu salário?", // nagelezen AI 22 nov
+    'c.kids.q': "Porque é que tens de ir embora agora?", // nagelezen AI 22 nov
+    'c.kids.a': "A creche ligou. O meu filho tem febre.", // nagelezen AI 22 nov
+    'l.body': "O corpo e a dor", // nagelezen AI 22 nov
+    'w.hoofd': "a cabeça", // nagelezen AI 22 nov
+    'w.rug': "as costas", // nagelezen AI 22 nov
+    'w.arm': "o braço", // nagelezen AI 22 nov
+    'w.hand': "a mão", // nagelezen AI 22 nov
+    'w.buik': "a barriga", // nagelezen AI 22 nov
+    'w.oog': "o olho", // nagelezen AI 22 nov
+    's.body.1': "Tenho dores na mão.", // nagelezen AI 22 nov
+    's.body.2': "Não me sinto bem.", // nagelezen AI 22 nov
+    's.body.3': "Caí em cima do braço.", // nagelezen AI 22 nov
+    'c.body.q': "Onde é que dói?", // nagelezen AI 22 nov
+    'c.body.a': "Nas costas. Levantei uma caixa pesada.", // nagelezen AI 22 nov
+    'l.jobends': "Quando o teu trabalho acaba", // nagelezen AI 22 nov
+    'w.eindafrekening': "o acerto final de contas (o teu último pagamento quando um trabalho acaba)", // nagelezen AI 22 nov
+    'w.opzeggen': "rescindir (um contrato), cancelar", // nagelezen AI 22 nov
+    'w.uitschrijven': "cancelar a inscrição (tirar o teu nome de uma lista)", // nagelezen AI 22 nov
+    'w.sleutel': "a chave", // nagelezen AI 22 nov
+    'w.verhuizen': "mudar de casa", // nagelezen AI 22 nov
+    'w.busje': "a carrinha (um autocarro pequeno)", // nagelezen AI 22 nov
+    's.jobends.1': "Recebo o subsídio de férias e os meus dias de férias pagos?", // nagelezen AI 22 nov
+    's.jobends.2': "Peço conselho ao Juridisch Loket.", // nagelezen AI 22 nov
+    's.jobends.3': "Trato eu de um novo seguro de saúde.", // nagelezen AI 22 nov
+    'c.jobends.q': "O teu trabalho acaba na sexta-feira. Aí também tens de sair da casa.", // nagelezen AI 22 nov
+    'c.jobends.a': "Qual é o prazo de aviso prévio do meu contrato de arrendamento?", // nagelezen AI 22 nov
+    'c.details': "Os teus dados: dá-os bem", // nagelezen AI 22 nov
+    'c.details.b': "No início de um trabalho, dás os teus dados. São o teu nome, a tua morada, o teu número de telefone, a tua data de nascimento e o teu BSN. Soletra o teu nome devagar, letra a letra. Depois, verifica o teu nome no contrato e no recibo de vencimento. Um erro no teu nome ou no BSN pode dar problemas com o salário ou com os impostos. Tens uma morada ou um número de telefone novo? Diz ao teu empregador.", // nagelezen AI 22 nov
+    'c.details.p': "Eu soletro: A, L, I.", // nagelezen AI 22 nov
+    'c.details.s': "Ao telefone, a agência escreve o teu apelido. Ouves que o estão a escrever mal. O que fazes?", // nagelezen AI 22 nov
+    'c.details.o1': "Soletras o teu nome devagar e pedes que o leiam em voz alta.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.details.o2': "Não dizes nada: um pequeno erro no nome não faz mal.", // nagelezen AI 22 nov
+    'c.details.o3': "Desligas, e esperas que encontrem o erro mais tarde.", // nagelezen AI 22 nov
+    'c.details.w': "O teu nome tem de ser igual no contrato, no recibo de vencimento e no documento de identificação. Assim o salário e os impostos ficam certos. Soletrar e pedir que leiam em voz alta é uma verificação rápida.", // nagelezen AI 22 nov
+    'c.dates': "Datas: primeiro o dia", // nagelezen AI 22 nov
+    'c.dates.b': "Em neerlandês, o dia vem antes do mês: 3-6 é 3 de junho, não 6 de março. \"Tot en met\" quer dizer que o último dia também conta. Os dias e os meses escrevem-se com letra minúscula: maandag, juni. Tens dúvidas sobre uma data? Pergunta, e repete-a.", // nagelezen AI 22 nov
+    'c.dates.p': "Queres dizer 3 de junho?", // nagelezen AI 22 nov
+    'c.dates.s': "O teu horário diz: \"Vrij: 3-6 tot en met 5-6\". Quando estás de folga?", // nagelezen AI 22 nov
+    'c.dates.o1': "A 3, 4 e 5 de junho.", // nagelezen AI 22 nov
+    'c.dates.o2': "Só a 3 e 4 de junho.", // nagelezen AI 22 nov
+    'c.dates.o3': "De 6 de março a 6 de maio.", // nagelezen AI 22 nov
+    'c.dates.w': "Primeiro vem o dia, depois o mês: 3-6 é 3 de junho. \"Tot en met\" quer dizer que 5 de junho também conta, por isso tens três dias de folga.", // nagelezen AI 22 nov
+    'c.permit': "Trabalho e integração", // nagelezen AI 22 nov
+    'c.permit.b': "Tens de fazer a integração cívica (inburgering)? Diz ao teu empregador, e diz à gemeente (a câmara municipal) que trabalhas. Pergunta cedo se as tuas aulas de língua podem encaixar no teu horário. Não tens a certeza se podes trabalhar aqui? Confirma antes de começar, por exemplo no IND, no UWV ou na VluchtelingenWerk. Pedem-te para te registares como independente (zzp’er) para este trabalho? Pede conselho primeiro. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nagelezen AI 22 nov
+    'c.permit.p': "Tenho aula de língua à terça-feira. O meu horário pode ter isso em conta?", // nagelezen AI 22 nov
+    'c.permit.s': "A tua aula de língua é à terça de manhã. No teu novo horário, trabalhas a essa hora. O que fazes?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.o1': "Pedes ao teu chefe para mudar o horário.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.o2': "Faltas à aula: o trabalho vem primeiro.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.o3': "Ficas em casa às terças sem dizer nada.", // nagelezen AI 22 nov
+    'c.permit.w': "A tua integração também é uma obrigação. Muitos empregadores ajudam quando sabem cedo. A gemeente também te pode ajudar a encaixar o teu plano no teu trabalho.", // nagelezen AI 22 nov
+    'c.kids': "O teu filho está doente", // nagelezen AI 22 nov
+    'c.kids.b': "O teu filho fica doente de repente? Diz logo ao teu empregador. Nas primeiras horas ou dias podes tirar uma licença de emergência (calamiteitenverlof), e o teu empregador continua a pagar-te. O teu filho precisa de cuidados durante mais tempo? Então podes pedir uma licença para cuidar (zorgverlof). Estás grávida? O teu empregador não te pode despedir por isso. Informa-te a tempo sobre a licença de gravidez e a licença parental (ouderschapsverlof). Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nagelezen AI 22 nov
+    'c.kids.p': "O meu filho está doente. Posso sair mais cedo hoje?", // nagelezen AI 22 nov
+    'c.kids.s': "A creche (kinderopvang) liga-te para o trabalho. O teu filho tem febre e tem de ir para casa. O que fazes?", // nagelezen AI 22 nov
+    'c.kids.o1': "Dizes ao teu chefe, e pedes uma licença de emergência.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.kids.o2': "Sais sem dizer nada, e explicas amanhã.", // nagelezen AI 22 nov
+    'c.kids.o3': "Ficas no trabalho, e deixas o teu filho à espera até ao fim do teu turno.", // nagelezen AI 22 nov
+    'c.kids.w': "Um filho doente é uma emergência em casa. Se disseres primeiro ao teu chefe, ele pode organizar o trabalho. A licença de emergência é para momentos como este.", // nagelezen AI 22 nov
+    'c.body': "Diz o que aconteceu e onde dói", // nagelezen AI 22 nov
+    'c.body.b': "No médico, diz o que aconteceu e onde dói. Por exemplo: \"Ik ben gevallen. Mijn arm doet pijn.\" Diz também há quanto tempo tens a dor. Não tens de adivinhar o que tens: isso é o médico que vê. Aconteceu no trabalho? Diz ao teu chefe no mesmo dia.", // nagelezen AI 22 nov
+    'c.body.p': "Caí. Dói-me o braço.", // nagelezen AI 22 nov
+    'c.body.s': "No trabalho levantaste uma caixa pesada. Agora doem-te muito as costas. Estás no médico de família (huisarts). O que dizes?", // nagelezen AI 22 nov
+    'c.body.o1': "Onde dói, e o que aconteceu: levantaste uma caixa pesada.", // nagelezen AI 22 nov
+    'c.body.o2': "Só que te sentes mal, mais nada.", // nagelezen AI 22 nov
+    'c.body.o3': "O nome de uma doença que encontraste na internet.", // nagelezen AI 22 nov
+    'c.body.w': "Quando dizes onde dói e o que aconteceu, o médico percebe-te mais depressa. O médico vê o que é. Aconteceu no trabalho? Diz também ao teu chefe.", // nagelezen AI 22 nov
+    'c.jobends': "O teu trabalho acaba: o que mais acaba?", // nagelezen AI 22 nov
+    'c.jobends.b': "Quando o teu trabalho acaba, verifica o acerto final de contas (eindafrekening). Os dias de férias que não gozaste e o subsídio de férias costumam ser pagos com ele. A casa, o seguro de saúde ou uma carrinha da agência podem acabar ao mesmo tempo. Trata a tempo do teu próprio seguro de saúde. O teu contrato de arrendamento tem regras próprias: pede conselho antes de saíres da casa. Vais mudar de casa, ou sair dos Países Baixos? Diz à gemeente. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nagelezen AI 22 nov
+    'c.jobends.p': "Quando recebo o acerto final de contas?", // nagelezen AI 22 nov
+    'c.jobends.s': "O teu trabalho acaba na sexta-feira. O teu seguro de saúde é através da agência. O que fazes?", // nagelezen AI 22 nov
+    'c.jobends.o1': "Perguntas quando acaba o seguro, e tratas do teu a tempo.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.jobends.o2': "Nada: o seguro continua sozinho.", // nagelezen AI 22 nov
+    'c.jobends.o3': "Esperas até ficares doente, e tratas disso nessa altura.", // nagelezen AI 22 nov
+    'c.jobends.w': "O seguro através da agência acaba muitas vezes quando o trabalho acaba. Se vives ou trabalhas nos Países Baixos, normalmente tens de ter seguro de saúde. Se tratares disso a tempo, não ficas sem seguro.", // nagelezen AI 22 nov
     // Entree in the Taal track (30 October 2026): nieuw, nalezen.
     'u.finish': "Terminar o teu trabalho", // nieuw, nalezen
     'l.workorder': "A ordem de trabalho", // nieuw, nalezen
@@ -1574,155 +1574,155 @@ const t: CultureTranslation = {
     's.budget.3': "Vou cancelar esta assinatura.", // nieuw, nalezen
     'c.budget.q': "Compra esse telemóvel agora e paga depois!", // nieuw, nalezen
     'c.budget.a': { m: "Não, obrigado. Pagar depois também é uma dívida.", f: "Não, obrigada. Pagar depois também é uma dívida.", x: "Não, obrigado / obrigada. Pagar depois também é uma dívida." }, // nieuw, nalezen
-    'l.healthy': "Em forma para o trabalho", // nieuw, nalezen
-    'w.slapen': "dormir", // nieuw, nalezen
-    'w.ontbijt': "o pequeno-almoço", // nieuw, nalezen
-    'w.bewegen': "mexer-se, estar ativo", // nieuw, nalezen
-    'w.moe': "cansado", // nieuw, nalezen
-    'w.drugs': "as drogas", // nieuw, nalezen
-    'w.somber': "em baixo (triste durante muito tempo)", // nieuw, nalezen
-    's.healthy.1': { m: "Hoje estou muito cansado.", f: "Hoje estou muito cansada.", x: "Hoje estou muito cansado / cansada." }, // nieuw, nalezen
-    's.healthy.2': "Tomo sempre primeiro o pequeno-almoço.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    's.healthy.3': "Na pausa vou dar uma pequena volta a pé.", // nieuw, nalezen
-    'c.healthy.q': "Queres um comprimido? Assim não adormeces.", // nieuw, nalezen
-    'c.healthy.a': { m: "Não, obrigado. Não trabalho sob efeito de nada.", f: "Não, obrigada. Não trabalho sob efeito de nada.", x: "Não, obrigado / obrigada. Não trabalho sob efeito de nada." }, // nieuw, nalezen
-    'c.workorder': "Primeiro lê, depois começa", // nieuw, nalezen
-    'c.workorder.b': "Antes de começares, lê a ordem de trabalho (werkbon) ou a tarefa na app. Verifica a morada, a tarefa e o número de coisas. Alguma coisa não está clara? Pergunta antes de começar, não a meio. Depois prepara as ferramentas e o material. Assim poupas tempo e fazes menos erros. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.workorder.p': "A ordem de trabalho diz dez caixas. Está certo?", // nieuw, nalezen
-    'c.workorder.s': "A tua ordem de trabalho diz: pintar o quarto 3. O teu colega diz que é o quarto 5. O que fazes?", // nieuw, nalezen
-    'c.workorder.o1': "Perguntas ao teu chefe qual é o quarto certo.", // nieuw, nalezen
-    'c.workorder.o2': "Pintas o quarto 3, porque é o que diz a ordem de trabalho.", // nieuw, nalezen
-    'c.workorder.o3': "Pintas os dois quartos, assim não há erro.", // nieuw, nalezen
-    'c.workorder.w': "Quando duas coisas não batem certo, verificas antes de começar. Uma pergunta curta leva menos tempo do que fazer o trabalho outra vez.", // nieuw, nalezen
-    'c.handover': "Diz o que está feito e o que não está", // nieuw, nalezen
-    'c.handover.b': "O teu trabalho não acaba quando paras. Primeiro arruma o teu sítio e as tuas ferramentas. Depois pede a alguém para verificar o teu trabalho. Diz ao teu chefe o que está feito e o que não está. Alguma coisa correu mal ou está avariada? Diz agora, não amanhã. Avisar que terminaste faz parte do teu trabalho. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.handover.p': "O quarto quatro ainda não está pronto. A porta estava fechada à chave.", // nieuw, nalezen
-    'c.handover.s': "Limpaste cinco quartos. O quarto 4 estava fechado à chave. O teu turno acaba. O que fazes?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.o1': "Dizes ao teu chefe: o quarto 4 não está feito.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.o2': "Vais para casa: o quarto 4 estava fechado, a culpa não é tua.", // nieuw, nalezen
-    'c.handover.o3': "Escreves \"tudo feito\" na lista.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.w': "O teu chefe planeia o trabalho. Quando sabe que o quarto 4 não está feito, pode mandar outra pessoa. Assim nenhum cliente encontra um quarto sujo.", // nieuw, nalezen
-    'c.workshop': "Olhos, ouvidos e fogo", // nieuw, nalezen
-    'c.workshop.b': "Rebarbar, serrar e furar fazem faíscas, bocadinhos e muito barulho. Usa óculos de proteção e proteção auditiva, também para um trabalho curto. Quando há muito barulho, o teu empregador tem de te dar proteção auditiva. As faíscas podem provocar um incêndio. Para soldar, ou rebarbar perto de coisas que podem arder, há regras extra (heet werk): pergunta antes de começar. Depois do trabalho, apanha os bocadinhos de metal. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
-    'c.workshop.p': "Vou rebarbar. Onde está a proteção auditiva?", // nieuw, nalezen
-    'c.workshop.s': "Tens de rebarbar uma pequena peça de metal. Demora um minuto. Os teus óculos de proteção estão na outra sala. O que fazes?", // nieuw, nalezen
-    'c.workshop.o1': "Primeiro vais buscar os óculos, também para um minuto.", // nieuw, nalezen
-    'c.workshop.o2': "Rebarbas com os olhos meio fechados, é rápido.", // nieuw, nalezen
-    'c.workshop.o3': "Pões a outra mão à frente dos olhos.", // nieuw, nalezen
-    'c.workshop.w': "Uma faísca ou um bocadinho de metal no olho pode estragar-te o olho para sempre. Isso pode acontecer num segundo. Os óculos de proteção ajudam, também para um trabalho curto.", // nieuw, nalezen
-    'c.power': "Eletricidade: nunca à toa", // nieuw, nalezen
-    'c.power.b': "Nunca trabalhes em algo que tem corrente (onder spanning). Primeiro um colega com formação torna tudo seguro: desliga a corrente e verifica. Só pessoas com a formação certa podem fazer isto. Vês um cabo ou uma ficha avariada? Não uses e diz logo ao teu chefe. Não sabes se a corrente está desligada? Então está ligada. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
-    'c.power.p': "Vejo um cabo avariado. Quem pode ver isto?", // nieuw, nalezen
-    'c.power.s': "Tens de pendurar uma lâmpada. Um colega diz: \"A corrente está desligada, acho eu.\" O que fazes?", // nieuw, nalezen
-    'c.power.o1': "Pedes a um colega com formação que veja se não há corrente.", // nieuw, nalezen
-    'c.power.o2': "Começas, mas pões luvas grossas para tocar nos fios.", // nieuw, nalezen
-    'c.power.o3': "Acendes e apagas a luz para ver se não há corrente.", // nieuw, nalezen
-    'c.power.w': "\"Acho eu\" não chega com eletricidade. Um choque pode matar-te. Um colega com formação verifica que não há corrente, e depois podes começar.", // nieuw, nalezen
-    'c.garage': "Seguro debaixo de um carro", // nieuw, nalezen
-    'c.garage.b': "Nunca te ponhas debaixo de um carro que só está num macaco. O carro tem de estar bem firme no elevador ou em cavaletes. O óleo entornado deixa o chão escorregadio: limpa logo. O óleo usado, as baterias e os produtos de limpeza são resíduos perigosos. Vão para um sítio especial, nunca para o lixo normal nem para o esgoto. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.garage.p': "Há óleo no chão. Vou limpar.", // nieuw, nalezen
-    'c.garage.s': "Tens de ver por baixo de um carro que só está num macaco. Um colega diz: \"Não faz mal, sê rápido.\" O que fazes?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.o1': "Esperas pelo elevador ou por cavaletes.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.o2': "Vais lá para baixo depressa, com as pernas de fora.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.o3': "Pedes ao colega que segure o carro.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.w': "Um macaco pode escorregar. Um carro é muito pesado, e debaixo dele não consegues sair depressa. Os cavaletes ou um elevador mantêm o carro no lugar.", // nieuw, nalezen
-    'c.carjob': "Trabalho extra? Primeiro pergunta ao cliente", // nieuw, nalezen
-    'c.carjob.b': "Encontras mais problemas do que diz a ordem de trabalho? Não os arranjes assim sem mais. O cliente tem de concordar primeiro com o trabalho extra e com os custos. O teu chefe ou a receção liga ao cliente. Um test drive só com autorização, e só com uma carta de condução válida. Escreve o que fizeste e que peças usaste. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
-    'c.carjob.p': "Vejo mais um problema. Quem liga ao cliente?", // nieuw, nalezen
-    'c.carjob.s': "Estás a mudar o óleo de um carro. Os travões também estão maus. Tem de estar pronto daqui a uma hora. O que fazes?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.carjob.o1': "Dizes ao teu chefe, para ele ligar ao cliente.", // nieuw, nalezen
-    'c.carjob.o2': "Arranjas também os travões, por segurança.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.carjob.o3': "Não dizes nada: não estão na ordem de trabalho.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.carjob.w': "O cliente paga, por isso o cliente decide. Sem o acordo dele, a garagem não pode fazer trabalho extra assim sem mais. Travões maus são perigosos, por isso é importante avisar.", // nieuw, nalezen
-    'c.placement': "Primeiro assina, depois começa", // nieuw, nalezen
-    'c.placement.b': "No Entree aprendes muito numa empresa: é o teu estágio (stage, ou bpv). Antes de começares, tu, a escola e a empresa assinam um contrato: o POK. Na empresa, ajuda-te o orientador (praktijkopleider). Na escola, ajuda-te o orientador de estágio (stagebegeleider). Estás doente? Liga para a empresa antes da hora de entrada, e avisa também a escola. As regras são diferentes em cada escola: pergunta ao teu orientador de estágio.", // nieuw, nalezen
-    'c.placement.p': "Só começo quando o contrato de estágio estiver assinado.", // nieuw, nalezen
-    'c.placement.s': "A empresa pede-te para começares amanhã. O POK ainda não está assinado. O que fazes?", // nieuw, nalezen
-    'c.placement.o1': "Pedes ao orientador de estágio que trate primeiro do POK.", // nieuw, nalezen
-    'c.placement.o2': "Começas amanhã e assinas o POK quando tiveres tempo.", // nieuw, nalezen
-    'c.placement.o3': "Começas, mas por agora não dizes nada à escola.", // nieuw, nalezen
-    'c.placement.w': "O POK diz o que aprendes e quem te ajuda. Sem um POK assinado, o teu estágio pode não contar para o diploma. Por isso assinas antes de começar.", // nieuw, nalezen
-    'c.review': "Pede feedback, e um exemplo", // nieuw, nalezen
-    'c.review.b': "No estágio, as pessoas dizem-te o que corre bem e o que pode ser melhor: é o feedback. É normal, e ajuda-te a aprender. Não percebes? Pede um exemplo. Pede tu também feedback, por exemplo uma vez por semana. Alguma coisa corre mesmo mal no estágio? Primeiro fala com o orientador na empresa. Não ajuda? Então vai ter com o orientador de estágio da escola.", // nieuw, nalezen
-    'c.review.p': "O que correu bem, e o que pode ser melhor?", // nieuw, nalezen
-    'c.review.s': "O teu orientador diz: \"Tens de trabalhar com mais cuidado.\" Não sabes o que ele quer dizer. O que fazes?", // nieuw, nalezen
-    'c.review.o1': "Pedes um exemplo do que tens de fazer de outra forma.", // nieuw, nalezen
-    'c.review.o2': { m: "Dizes que sim e esperas perceber sozinho.", f: "Dizes que sim e esperas perceber sozinha.", x: "Dizes que sim e esperas perceber sozinho / sozinha." }, // nieuw, nalezen
-    'c.review.o3': "A partir de agora trabalhas muito mais devagar, para nada correr mal.", // nieuw, nalezen
-    'c.review.w': "Com um exemplo, sabes o que mudar. Perguntar mostra que queres aprender. Os orientadores gostam disso.", // nieuw, nalezen
-    'c.council': "Quem pode votar?", // nieuw, nalezen
-    'c.council.b': "Nos Países Baixos escolhes, pelo voto, quem decide. A assembleia municipal (gemeenteraad) decide sobre a tua cidade. A Tweede Kamer faz as leis para todo o país. Com a nacionalidade neerlandesa, podes votar em todas as eleições, a partir dos 18 anos. Para a assembleia municipal podem votar mais pessoas. Pessoas de outro país da UE que vivem cá podem votar. Pessoas de fora da UE podem votar depois de 5 anos de residência legal. O município (gemeente) envia-te um cartão de voto (stempas). Leva-o com o teu documento de identificação. Não sabes se podes votar? Pergunta ao município.",
-    'c.council.p': "Posso votar para a assembleia municipal?", // nieuw, nalezen
-    'c.council.s': "Vens de Marrocos e vives cá legalmente há seis anos, sem a nacionalidade neerlandesa. O que é verdade?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.council.o1': "Podes votar para a assembleia municipal.", // nieuw, nalezen
-    'c.council.o2': "Também podes votar para a Tweede Kamer.", // nieuw, nalezen
-    'c.council.o3': "Sem passaporte neerlandês não podes votar.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.council.w': "Depois de 5 anos de residência legal, podes votar para a assembleia municipal. Para a Tweede Kamer, precisas da nacionalidade neerlandesa.", // nieuw, nalezen
-    'c.police': "O teu documento e os teus direitos", // nieuw, nalezen
-    'c.police.b': { m: "A partir dos 14 anos, tens de mostrar o teu documento de identificação quando a polícia pede. Por isso, anda sempre com ele. Recebeste uma carta do município ou do UWV, por exemplo? Não concordas com a decisão que vem nela? Então podes fazer uma reclamação por escrito (bezwaar maken). Fá-lo antes da data que vem na carta. A polícia e o juiz têm de tratar todos por igual. Foste detido? Podes pedir um advogado. O Juridisch Loket dá conselhos de graça.", f: "A partir dos 14 anos, tens de mostrar o teu documento de identificação quando a polícia pede. Por isso, anda sempre com ele. Recebeste uma carta do município ou do UWV, por exemplo? Não concordas com a decisão que vem nela? Então podes fazer uma reclamação por escrito (bezwaar maken). Fá-lo antes da data que vem na carta. A polícia e o juiz têm de tratar todos por igual. Foste detida? Podes pedir um advogado. O Juridisch Loket dá conselhos de graça.", x: "A partir dos 14 anos, tens de mostrar o teu documento de identificação quando a polícia pede. Por isso, anda sempre com ele. Recebeste uma carta do município ou do UWV, por exemplo? Não concordas com a decisão que vem nela? Então podes fazer uma reclamação por escrito (bezwaar maken). Fá-lo antes da data que vem na carta. A polícia e o juiz têm de tratar todos por igual. Foste detido / detida? Podes pedir um advogado. O Juridisch Loket dá conselhos de graça." },
-    'c.police.p': "Não concordo com esta decisão. Vou fazer uma reclamação.", // nieuw, nalezen
-    'c.police.s': "Recebes uma carta do município. Não concordas com a decisão deles. A carta diz que tens seis semanas. O que fazes?", // nieuw, nalezen
-    'c.police.o1': "Escreves uma carta de reclamação, antes da data.", // nieuw, nalezen
-    'c.police.o2': "Ligas-lhes uma vez e esperas que te liguem de volta.", // nieuw, nalezen
-    'c.police.o3': "Esperas: depois de seis semanas, passa sozinho.", // nieuw, nalezen
-    'c.police.w': "A reclamação faz-se por escrito, antes da data que vem na carta. Depois dessa data, muitas vezes é tarde demais. O Juridisch Loket pode ajudar-te a escrevê-la.", // nieuw, nalezen // nagelezen AI 31 okt
-    'c.login': "O teu acesso é só teu", // nieuw, nalezen
-    'c.login.b': "A tua palavra-passe e o teu DigiD são só para ti. Não os dês a ninguém, nem ao teu empregador nem a um colega. Num computador partilhado, termina sempre a sessão quando acabares. Vais sair um momento? Bloqueia o ecrã. Esqueceste-te da palavra-passe? Pede uma nova ao departamento de informática (ICT-afdeling). As regras dos computadores são diferentes em cada empresa: pergunta ao departamento de informática quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.login.p': "Vou sair um momento. Vou bloquear o ecrã.", // nieuw, nalezen
-    'c.login.s': "O teu chefe pede o teu DigiD e a tua palavra-passe para tratar depressa dos teus papéis. O que fazes?", // nieuw, nalezen
-    'c.login.o1': "Dizes que não, e entras tu enquanto ele ajuda.", // nieuw, nalezen
-    'c.login.o2': "Dás desta vez, porque é o teu chefe.", // nieuw, nalezen
-    'c.login.o3': "Escreves num papel, para ele usar mais tarde.", // nieuw, nalezen
-    'c.login.w': "Com o teu DigiD, alguém pode ver e mudar os teus impostos, subsídios e papéis de saúde. É só para ti. Podes entrar tu e deixar alguém ajudar-te.", // nieuw, nalezen
-    'c.phish': "Pressa e um botão? Não cliques", // nieuw, nalezen
-    'c.phish.b': "Um e-mail falso (phishing) muitas vezes parece verdadeiro. Quer que ajas depressa: \"A tua conta vai ser fechada hoje!\" Verifica o remetente. Não cliques num link nem abras um anexo que não esperavas. Vai tu ao site ou à app verdadeira. Clicaste mesmo assim? Muda já a palavra-passe e liga ao departamento de informática. Não é vergonha: quanto mais cedo souberem, melhor. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.phish.p': "Cliquei num link suspeito.", // nieuw, nalezen
-    'c.phish.s': "Clicaste num link de um e-mail e escreveste a tua palavra-passe. Depois vês que o e-mail era falso. O que fazes?", // nieuw, nalezen
-    'c.phish.o1': "Mudas a palavra-passe e ligas à informática.", // nieuw, nalezen
-    'c.phish.o2': "Apagas o e-mail, para mais ninguém clicar nele.", // nieuw, nalezen
-    'c.phish.o3': "Esperas um dia para ver se corre alguma coisa mal.", // nieuw, nalezen
-    'c.phish.w': "Com a tua palavra-passe, outra pessoa pode entrar nos sistemas do teu trabalho. Se a mudares depressa e avisares a informática, eles podem parar isso a tempo.", // nieuw, nalezen
-    'c.mychoice': "Os teus pontos fortes contam", // nieuw, nalezen
-    'c.mychoice.b': "Em que é que tens jeito? Pensa no trabalho, na escola e em casa. Cuidar da família, um part-time ou voluntariado também contam. Do que é que gostas, e do que é que não gostas? Não sabes que trabalho é para ti? Pede para acompanhar alguém no trabalho durante um dia (meeloopdag). O teu orientador na escola pode ajudar-te a escolher.", // nieuw, nalezen
-    'c.mychoice.p': "Sei lidar bem com as pessoas. Em casa ajudo muito.", // nieuw, nalezen
-    'c.mychoice.s': "Na escola perguntam-te: \"Em que é que tens jeito?\" Nunca tiveste um trabalho pago. O que dizes?", // nieuw, nalezen
-    'c.mychoice.o1': "O que fazes bem em casa, como cuidar dos outros.", // nieuw, nalezen
-    'c.mychoice.o2': "Que ainda não sabes, porque nunca tiveste emprego.", // nieuw, nalezen
-    'c.mychoice.o3': "Que consegues fazer qualquer trabalho, mesmo tudo.", // nieuw, nalezen
-    'c.mychoice.w': "O que fazes em casa também conta. Cuidar, planear e ajudar são competências de que os empregadores precisam. Diz o que fizeste, com um exemplo.", // nieuw, nalezen
-    'c.nextstep': "Depois do Entree: nível 2 ou trabalho", // nieuw, nalezen
-    'c.nextstep.b': "Com um diploma Entree, podes continuar para o nível 2 do mbo. Um diploma de nível 2 ou superior é uma qualificação básica (startkwalificatie). Ajuda-te a encontrar trabalho e a mantê-lo. Na bbl trabalhas numa empresa e vais à escola mais ou menos um dia por semana. Para isso precisas de um emprego ou de um lugar de trabalho e formação (leerwerkbaan). Vai a um dia aberto, e fala com o teu orientador na escola.", // nieuw, nalezen
-    'c.nextstep.p': "Posso ir para o nível 2 depois do Entree?", // nieuw, nalezen
-    'c.nextstep.s': "Tens o teu diploma Entree. Uma empresa oferece-te um trabalho sem formação. Tu também queres continuar a aprender. O que fazes?", // nieuw, nalezen
-    'c.nextstep.o1': "Perguntas à empresa se é possível um lugar na bbl.", // nieuw, nalezen
-    'c.nextstep.o2': "Aceitas o trabalho e deixas de estudar para sempre.", // nieuw, nalezen
-    'c.nextstep.o3': "Ficas em casa até uma escola te ligar.", // nieuw, nalezen
-    'c.nextstep.w': "Na bbl trabalhas e aprendes ao mesmo tempo. Ganhas dinheiro e recebes um diploma de nível 2. Muitas empresas gostam disso.", // nieuw, nalezen
-    'c.email': "Um e-mail curto: quem, o quê, quando", // nieuw, nalezen
-    'c.email.b': "Um e-mail para o trabalho é curto e educado. Começa com uma saudação, como \"Beste Karin,\". Depois diz o que queres, e quando. Termina com uma saudação e o teu nome completo. Escreve um assunto curto, como \"Vrij op vrijdag\". Lê o teu e-mail outra vez antes de o enviares.", // nieuw, nalezen
-    'c.email.p': "Cara Karin, posso ter folga na sexta-feira? Cumprimentos, Ali Haddad", // nieuw, nalezen
-    'c.email.s': "Queres folga na próxima sexta-feira. Que e-mail para o teu chefe é o melhor?", // nieuw, nalezen
-    'c.email.o1': "\"Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad\"", // nieuw, nalezen
-    'c.email.o2': "\"Vrijdag ben ik er niet.\" (sem saudação e sem o teu nome).", // nieuw, nalezen
-    'c.email.o3': "Um e-mail comprido sobre a tua semana, com a pergunta no fim.", // nieuw, nalezen
-    'c.email.w': "Um bom e-mail tem uma saudação, uma pergunta clara e o teu nome. Assim o teu chefe pode responder depressa.", // nieuw, nalezen
-    'c.budget': "Primeiro as despesas fixas", // nieuw, nalezen
-    'c.budget.b': "Quando recebes o ordenado, paga primeiro as despesas fixas: a renda, o seguro e o telemóvel. Tenta poupar um pequeno valor todos os meses, nem que sejam 10 euros. Comprar agora e pagar depois também é uma dívida. Compraste alguma coisa online? Então normalmente podes mudar de ideias em 14 dias. Guarda o talão: precisas dele para a garantia.", // nieuw, nalezen
-    'c.budget.p': "Prefiro pagar agora. Assim não tenho dívidas.", // nieuw, nalezen
-    'c.budget.s': "Hoje recebes o ordenado. Queres uns sapatos novos, e a renda ainda não está paga. O que fazes?", // nieuw, nalezen
-    'c.budget.o1': "Pagas primeiro a renda, e depois vês o que sobra.", // nieuw, nalezen
-    'c.budget.o2': "Compras os sapatos e pagas a renda mais tarde.", // nieuw, nalezen
-    'c.budget.o3': "Compras os sapatos com \"compra agora, paga depois\".", // nieuw, nalezen
-    'c.budget.w': "A renda, o seguro e o telemóvel voltam todos os meses. Se os pagares primeiro, sabes quanto dinheiro sobra. Assim não ficas com dívidas.", // nieuw, nalezen
-    'c.healthy': "Sono, comida e nada de drogas", // nieuw, nalezen
-    'c.healthy.b': "Trabalhas melhor e com mais segurança quando dormes o suficiente, também depois de um turno tardio. Toma o pequeno-almoço e bebe água durante o dia. Mexe-te na pausa, por exemplo com uma pequena volta a pé. Trabalhar sob efeito de álcool ou drogas é perigoso, e a maioria dos empregadores proíbe isso. Sentes-te em baixo há muito tempo, ou não consegues parar de beber ou de consumir? Fala com o teu médico de família (huisarts). Ele pode ajudar, e guarda segredo.", // nieuw, nalezen
-    'c.healthy.p': "Sinto-me em baixo há muito tempo. Posso marcar uma consulta?", // nieuw, nalezen
-    'c.healthy.s': "Esta noite tens turno da noite. Um colega oferece-te um comprimido para não adormeceres. O que fazes?", // nieuw, nalezen
-    'c.healthy.o1': "Dizes que não, e dormes umas horas antes do turno.", // nieuw, nalezen
-    'c.healthy.o2': "Tomas meio comprimido, isso não é perigoso.", // nieuw, nalezen
-    'c.healthy.o3': "Tomas, mas não dizes nada a ninguém no trabalho.", // nieuw, nalezen
-    'c.healthy.w': "Comprimidos de um colega podem ser drogas. Podem fazer-te mal, ou fazer-te errar no trabalho. Dormir é a forma segura de te manteres alerta.", // nieuw, nalezen
-    'u.sick': "Doença", // nieuw, nalezen
+    'l.healthy': "Em forma para o trabalho", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.slapen': "dormir", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontbijt': "o pequeno-almoço", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.bewegen': "mexer-se, estar ativo", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.moe': "cansado", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.drugs': "as drogas", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.somber': "em baixo (triste durante muito tempo)", // nieuw, nalezen // nagelezen AI 22 nov
+    's.healthy.1': { m: "Hoje estou muito cansado.", f: "Hoje estou muito cansada.", x: "Hoje sinto um grande cansaço." }, // nieuw, nalezen // nagelezen AI 22 nov
+    's.healthy.2': "Tomo sempre primeiro o pequeno-almoço.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    's.healthy.3': "Na pausa vou dar uma pequena volta a pé.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.q': "Queres um comprimido? Assim não adormeces.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.a': { m: "Não, obrigado. Não trabalho sob efeito de nada.", f: "Não, obrigada. Não trabalho sob efeito de nada.", x: "Não, mas agradeço. Não trabalho sob efeito de nada." }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder': "Primeiro lê, depois começa", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.b': "Antes de começares, lê a ordem de trabalho (werkbon) ou a tarefa na app. Verifica a morada, a tarefa e o número de coisas. Alguma coisa não está clara? Pergunta antes de começar, não a meio. Depois prepara as ferramentas e o material. Assim poupas tempo e fazes menos erros. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.p': "A ordem de trabalho diz dez caixas. Está certo?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.s': "A tua ordem de trabalho diz: pintar o quarto 3. O teu colega diz que é o quarto 5. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.o1': "Perguntas ao teu chefe qual é o quarto certo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.o2': "Pintas o quarto 3, porque é o que diz a ordem de trabalho.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.o3': "Pintas os dois quartos, assim não há erro.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.w': "Quando duas coisas não batem certo, verificas antes de começar. Uma pergunta curta leva menos tempo do que fazer o trabalho outra vez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover': "Diz o que está feito e o que não está", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.b': "O teu trabalho não acaba quando paras. Primeiro arruma o teu sítio e as tuas ferramentas. Depois pede a alguém para verificar o teu trabalho. Diz ao teu chefe o que está feito e o que não está. Alguma coisa correu mal ou está avariada? Diz agora, não amanhã. Avisar que terminaste faz parte do teu trabalho. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.p': "O quarto quatro ainda não está pronto. A porta estava fechada à chave.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.s': "Limpaste cinco quartos. O quarto 4 estava fechado à chave. O teu turno acaba. O que fazes?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.o1': "Dizes ao teu chefe: o quarto 4 não está feito.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.o2': "Vais para casa: o quarto 4 estava fechado, a culpa não é tua.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.o3': "Escreves \"tudo feito\" na lista.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.w': "O teu chefe planeia o trabalho. Quando sabe que o quarto 4 não está feito, pode mandar outra pessoa. Assim nenhum cliente encontra um quarto sujo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop': "Olhos, ouvidos e fogo", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.b': "Rebarbar, serrar e furar fazem faíscas, bocadinhos e muito barulho. Usa óculos de proteção e proteção auditiva, também para um trabalho curto. Quando há muito barulho, o teu empregador tem de te dar proteção auditiva. As faíscas podem provocar um incêndio. Para soldar, ou rebarbar perto de coisas que podem arder, há regras extra (heet werk): pergunta antes de começar. Depois do trabalho, apanha os bocadinhos de metal. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.p': "Vou rebarbar. Onde está a proteção auditiva?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.s': "Tens de rebarbar uma pequena peça de metal. Demora um minuto. Os teus óculos de proteção estão na outra sala. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.o1': "Primeiro vais buscar os óculos, também para um minuto.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.o2': "Rebarbas com os olhos meio fechados, é rápido.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.o3': "Pões a outra mão à frente dos olhos.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.w': "Uma faísca ou um bocadinho de metal no olho pode estragar-te o olho para sempre. Isso pode acontecer num segundo. Os óculos de proteção ajudam, também para um trabalho curto.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power': "Eletricidade: nunca à toa", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.b': "Nunca trabalhes em algo que tem corrente (onder spanning). Primeiro um colega com formação torna tudo seguro: desliga a corrente e verifica. Só pessoas com a formação certa podem fazer isto. Vês um cabo ou uma ficha avariada? Não uses e diz logo ao teu chefe. Não sabes se a corrente está desligada? Então está ligada. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.p': "Vejo um cabo avariado. Quem pode ver isto?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.s': "Tens de pendurar uma lâmpada. Um colega diz: \"A corrente está desligada, acho eu.\" O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.o1': "Pedes a um colega com formação que veja se não há corrente.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.o2': "Começas, mas pões luvas grossas para tocar nos fios.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.o3': "Acendes e apagas a luz para ver se não há corrente.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.w': "\"Acho eu\" não chega com eletricidade. Um choque pode matar-te. Um colega com formação verifica que não há corrente, e depois podes começar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage': "Seguro debaixo de um carro", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage.b': "Nunca te ponhas debaixo de um carro que só está num macaco. O carro tem de estar bem firme no elevador ou em cavaletes. O óleo entornado deixa o chão escorregadio: limpa logo. O óleo usado, as baterias e os produtos de limpeza são resíduos perigosos. Vão para um sítio especial, nunca para o lixo normal nem para o esgoto. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage.p': "Há óleo no chão. Vou limpar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage.s': "Tens de ver por baixo de um carro que só está num macaco. Um colega diz: \"Não faz mal, despacha-te.\" O que fazes?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.o1': "Esperas pelo elevador ou por cavaletes.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.o2': "Vais lá para baixo depressa, com as pernas de fora.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.o3': "Pedes ao colega que segure o carro.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.w': "Um macaco pode escorregar. Um carro é muito pesado, e debaixo dele não consegues sair depressa. Os cavaletes ou um elevador mantêm o carro no lugar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob': "Trabalho extra? Primeiro pergunta ao cliente", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.b': "Encontras mais problemas do que diz a ordem de trabalho? Não os arranjes assim sem mais. O cliente tem de concordar primeiro com o trabalho extra e com os custos. O teu chefe ou a receção liga ao cliente. Um test drive só com autorização, e só com uma carta de condução válida. Escreve o que fizeste e que peças usaste. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.p': "Vejo mais um problema. Quem liga ao cliente?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.s': "Estás a mudar o óleo de um carro. Os travões também estão maus. Tem de estar pronto daqui a uma hora. O que fazes?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.carjob.o1': "Dizes ao teu chefe, para ele ligar ao cliente.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.o2': "Arranjas também os travões, por segurança.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.carjob.o3': "Não dizes nada: não estão na ordem de trabalho.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.carjob.w': "O cliente paga, por isso o cliente decide. Sem o acordo dele, a garagem não pode fazer trabalho extra assim sem mais. Travões maus são perigosos, por isso é importante avisar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement': "Primeiro assina, depois começa", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.b': "No Entree aprendes muito numa empresa: é o teu estágio (stage, ou bpv). Antes de começares, tu, a escola e a empresa assinam um contrato: o POK. Na empresa, ajuda-te o orientador (praktijkopleider). Na escola, ajuda-te o orientador de estágio (stagebegeleider). Estás doente? Liga para a empresa antes da hora de entrada, e avisa também a escola. As regras são diferentes em cada escola: pergunta ao teu orientador de estágio.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.p': "Só começo quando o contrato de estágio estiver assinado.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.s': "A empresa pede-te para começares amanhã. O POK ainda não está assinado. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.o1': "Pedes ao orientador de estágio que trate primeiro do POK.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.o2': "Começas amanhã e assinas o POK quando tiveres tempo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.o3': "Começas, mas por agora não dizes nada à escola.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.w': "O POK diz o que aprendes e quem te ajuda. Sem um POK assinado, o teu estágio pode não contar para o diploma. Por isso assinas antes de começar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review': "Pede feedback, e um exemplo", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.b': "No estágio, as pessoas dizem-te o que corre bem e o que pode ser melhor: é o feedback. É normal, e ajuda-te a aprender. Não percebes? Pede um exemplo. Pede tu também feedback, por exemplo uma vez por semana. Alguma coisa corre mesmo mal no estágio? Primeiro fala com o orientador na empresa. Não ajuda? Então vai ter com o orientador de estágio da escola.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.p': "O que correu bem, e o que pode ser melhor?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.s': "O teu orientador diz: \"Tens de trabalhar com mais cuidado.\" Não sabes o que ele quer dizer. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.o1': "Pedes um exemplo do que tens de fazer de outra forma.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.o2': { m: "Dizes que sim e esperas perceber sozinho.", f: "Dizes que sim e esperas perceber sozinha.", x: "Dizes que sim e esperas perceber por tua conta." }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.o3': "A partir de agora trabalhas muito mais devagar, para nada correr mal.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.w': "Com um exemplo, sabes o que mudar. Perguntar mostra que queres aprender. Os orientadores gostam disso.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council': "Quem pode votar?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.b': "Nos Países Baixos escolhes, pelo voto, quem decide. A assembleia municipal (gemeenteraad) decide sobre a tua cidade. A Tweede Kamer faz as leis para todo o país. Com a nacionalidade neerlandesa, podes votar em todas as eleições, a partir dos 18 anos. Para a assembleia municipal podem votar mais pessoas. Pessoas de outro país da UE que vivem cá podem votar. Pessoas de fora da UE podem votar depois de 5 anos de residência legal. O município (gemeente) envia-te um cartão de voto (stempas). Leva-o com o teu documento de identificação. Não sabes se podes votar? Pergunta ao município.", // nagelezen AI 22 nov
+    'c.council.p': "Posso votar para a assembleia municipal?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.s': "Vens de Marrocos e vives cá legalmente há seis anos, sem a nacionalidade neerlandesa. O que é verdade?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.council.o1': "Podes votar para a assembleia municipal.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.o2': "Também podes votar para a Tweede Kamer.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.o3': "Sem passaporte neerlandês não podes votar.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.council.w': "Depois de 5 anos de residência legal, podes votar para a assembleia municipal. Para a Tweede Kamer, precisas da nacionalidade neerlandesa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police': "O teu documento e os teus direitos", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.b': { m: "A partir dos 14 anos, tens de mostrar o teu documento de identificação quando a polícia pede. Por isso, anda sempre com ele. Recebeste uma carta do município ou do UWV, por exemplo? Não concordas com a decisão que vem nela? Então podes fazer uma reclamação por escrito (bezwaar maken). Fá-lo antes da data que vem na carta. A polícia e o juiz têm de tratar todos por igual. Foste detido? Podes pedir um advogado. O Juridisch Loket dá conselhos de graça.", f: "A partir dos 14 anos, tens de mostrar o teu documento de identificação quando a polícia pede. Por isso, anda sempre com ele. Recebeste uma carta do município ou do UWV, por exemplo? Não concordas com a decisão que vem nela? Então podes fazer uma reclamação por escrito (bezwaar maken). Fá-lo antes da data que vem na carta. A polícia e o juiz têm de tratar todos por igual. Foste detida? Podes pedir um advogado. O Juridisch Loket dá conselhos de graça.", x: "A partir dos 14 anos, tens de mostrar o teu documento de identificação quando a polícia pede. Por isso, anda sempre com ele. Recebeste uma carta do município ou do UWV, por exemplo? Não concordas com a decisão que vem nela? Então podes fazer uma reclamação por escrito (bezwaar maken). Fá-lo antes da data que vem na carta. A polícia e o juiz têm de tratar todos por igual. A polícia prendeu-te? Podes pedir um advogado. O Juridisch Loket dá conselhos de graça." }, // nagelezen AI 22 nov
+    'c.police.p': "Não concordo com esta decisão. Vou fazer uma reclamação.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.s': "Recebes uma carta do município. Não concordas com a decisão deles. A carta diz que tens seis semanas. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.o1': "Escreves uma carta de reclamação, antes da data.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.o2': "Ligas-lhes uma vez e esperas que te liguem de volta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.o3': "Esperas: depois de seis semanas, passa sozinho.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.w': "A reclamação faz-se por escrito, antes da data que vem na carta. Depois dessa data, muitas vezes é tarde demais. O Juridisch Loket pode ajudar-te a escrevê-la.", // nieuw, nalezen // nagelezen AI 31 okt // nagelezen AI 22 nov
+    'c.login': "O teu acesso é só teu", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.b': "A tua palavra-passe e o teu DigiD são só para ti. Não os dês a ninguém, nem ao teu empregador nem a um colega. Num computador partilhado, termina sempre a sessão quando acabares. Vais sair um momento? Bloqueia o ecrã. Esqueceste-te da palavra-passe? Pede uma nova ao departamento de informática (ICT-afdeling). As regras dos computadores são diferentes em cada empresa: pergunta ao departamento de informática quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.p': "Vou sair um momento. Vou bloquear o ecrã.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.s': "O teu chefe pede o teu DigiD e a tua palavra-passe para tratar depressa dos teus papéis. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.o1': "Dizes que não, e entras tu enquanto ele ajuda.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.o2': "Dás desta vez, porque é o teu chefe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.o3': "Escreves num papel, para ele usar mais tarde.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.w': "Com o teu DigiD, alguém pode ver e mudar os teus impostos, subsídios e papéis de saúde. É só para ti. Podes entrar tu e deixar alguém ajudar-te.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish': "Pressa e um botão? Não cliques", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.b': "Um e-mail falso (phishing) muitas vezes parece verdadeiro. Quer que ajas depressa: \"A tua conta vai ser fechada hoje!\" Verifica o remetente. Não cliques num link nem abras um anexo que não esperavas. Vai tu ao site ou à app verdadeira. Clicaste mesmo assim? Muda já a palavra-passe e liga ao departamento de informática. Não é vergonha: quanto mais cedo souberem, melhor. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.p': "Cliquei num link suspeito.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.s': "Clicaste num link de um e-mail e escreveste a tua palavra-passe. Depois vês que o e-mail era falso. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.o1': "Mudas a palavra-passe e ligas à informática.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.o2': "Apagas o e-mail, para mais ninguém clicar nele.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.o3': "Esperas um dia para ver se corre alguma coisa mal.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.w': "Com a tua palavra-passe, outra pessoa pode entrar nos sistemas do teu trabalho. Se a mudares depressa e avisares a informática, eles podem parar isso a tempo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice': "Os teus pontos fortes contam", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.b': "Em que é que tens jeito? Pensa no trabalho, na escola e em casa. Cuidar da família, um part-time ou voluntariado também contam. Do que é que gostas, e do que é que não gostas? Não sabes que trabalho é para ti? Pede para acompanhar alguém no trabalho durante um dia (meeloopdag). O teu orientador na escola pode ajudar-te a escolher.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.p': "Sei lidar bem com as pessoas. Em casa ajudo muito.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.s': "Na escola perguntam-te: \"Em que é que tens jeito?\" Nunca tiveste um trabalho pago. O que dizes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.o1': "O que fazes bem em casa, como cuidar dos outros.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.o2': "Que ainda não sabes, porque nunca tiveste emprego.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.o3': "Que consegues fazer qualquer trabalho, mesmo tudo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.w': "O que fazes em casa também conta. Cuidar, planear e ajudar são competências de que os empregadores precisam. Diz o que fizeste, com um exemplo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep': "Depois do Entree: nível 2 ou trabalho", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.b': "Com um diploma Entree, podes continuar para o nível 2 do mbo. Um diploma de nível 2 ou superior é uma qualificação básica (startkwalificatie). Ajuda-te a encontrar trabalho e a mantê-lo. Na bbl trabalhas numa empresa e vais à escola mais ou menos um dia por semana. Para isso precisas de um emprego ou de um lugar de trabalho e formação (leerwerkbaan). Vai a um dia aberto, e fala com o teu orientador na escola.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.p': "Posso ir para o nível 2 depois do Entree?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.s': "Tens o teu diploma Entree. Uma empresa oferece-te um trabalho sem formação. Tu também queres continuar a aprender. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.o1': "Perguntas à empresa se é possível um lugar na bbl.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.o2': "Aceitas o trabalho e deixas de estudar para sempre.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.o3': "Ficas em casa até uma escola te ligar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.w': "Na bbl trabalhas e aprendes ao mesmo tempo. Ganhas dinheiro e recebes um diploma de nível 2. Muitas empresas gostam disso.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email': "Um e-mail curto: quem, o quê, quando", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.b': "Um e-mail para o trabalho é curto e educado. Começa com uma saudação, como \"Beste Karin,\". Depois diz o que queres, e quando. Termina com uma saudação e o teu nome completo. Escreve um assunto curto, como \"Vrij op vrijdag\". Lê o teu e-mail outra vez antes de o enviares.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.p': "Cara Karin, posso ter folga na sexta-feira? Cumprimentos, Ali Haddad", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.s': "Queres folga na próxima sexta-feira. Que e-mail para o teu chefe é o melhor?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.o1': "\"Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad\"", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.o2': "\"Vrijdag ben ik er niet.\" (sem saudação e sem o teu nome).", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.o3': "Um e-mail comprido sobre a tua semana, com a pergunta no fim.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.w': "Um bom e-mail tem uma saudação, uma pergunta clara e o teu nome. Assim o teu chefe pode responder depressa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget': "Primeiro as despesas fixas", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.b': "Quando recebes o ordenado, paga primeiro as despesas fixas: a renda, o seguro e o telemóvel. Tenta poupar um pequeno valor todos os meses, nem que sejam 10 euros. Comprar agora e pagar depois também é uma dívida. Compraste alguma coisa online? Então normalmente podes mudar de ideias em 14 dias. Guarda o talão: precisas dele para a garantia.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.p': "Prefiro pagar agora. Assim não tenho dívidas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.s': "Hoje recebes o ordenado. Queres uns sapatos novos, e a renda ainda não está paga. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.o1': "Pagas primeiro a renda, e depois vês o que sobra.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.o2': "Compras os sapatos e pagas a renda mais tarde.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.o3': "Compras os sapatos com \"compra agora, paga depois\".", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.w': "A renda, o seguro e o telemóvel voltam todos os meses. Se os pagares primeiro, sabes quanto dinheiro sobra. Assim não ficas com dívidas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy': "Sono, comida e nada de drogas", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.b': "Trabalhas melhor e com mais segurança quando dormes o suficiente, também depois de um turno tardio. Toma o pequeno-almoço e bebe água durante o dia. Mexe-te na pausa, por exemplo com uma pequena volta a pé. Trabalhar sob efeito de álcool ou drogas é perigoso, e a maioria dos empregadores proíbe isso. Sentes-te em baixo há muito tempo, ou não consegues parar de beber ou de consumir? Fala com o teu médico de família (huisarts). Ele pode ajudar, e guarda segredo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.p': "Sinto-me em baixo há muito tempo. Posso marcar uma consulta?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.s': "Esta noite tens turno da noite. Um colega oferece-te um comprimido para não adormeceres. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.o1': "Dizes que não, e dormes umas horas antes do turno.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.o2': "Tomas meio comprimido, isso não é perigoso.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.o3': "Tomas, mas não dizes nada a ninguém no trabalho.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.w': "Comprimidos de um colega podem ser drogas. Podem fazer-te mal, ou fazer-te errar no trabalho. Dormir é a forma segura de te manteres alerta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'u.sick': "Doença", // nieuw, nalezen // nagelezen AI 22 nov
     'l.food': "Trabalhar com alimentos", // nieuw, nalezen
     'w.mes': "a faca", // nieuw, nalezen
     'w.snijhandschoen': "a luva anticorte (uma luva contra cortes)", // nieuw, nalezen
@@ -1735,14 +1735,14 @@ const t: CultureTranslation = {
     's.food.3': "Na câmara de congelação uso um casaco quente.", // nieuw, nalezen
     'c.food.q': "Porque é que estamos a limpar a linha agora?", // nieuw, nalezen
     'c.food.a': "A seguir vem um produto sem frutos secos.", // nieuw, nalezen
-    'c.food': "Mãos limpas, alimentos seguros", // nieuw, nalezen
-    'c.food.b': "Trabalhar com alimentos tem regras de higiene rigorosas: uma rede para o cabelo, roupa de trabalho limpa, mãos lavadas e nada de joias. Estas regras são iguais para todos. Não dizem nada sobre ti: mantêm os alimentos seguros para as pessoas que os comem. Com uma faca, usa sempre a tua luva anticorte. Numa sala fria ou numa câmara de congelação, veste a roupa quente que te dão, e aquece-te na pausa. Estás doente, ou tens uma ferida na mão? Avisa antes de começares. Então podes receber um penso especial, ou outro trabalho durante algum tempo. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.food.p': "Tenho um pequeno corte na mão. Pode dar-me um penso?", // nieuw, nalezen
-    'c.food.s': "Em casa fizeste um pequeno corte no dedo. Hoje trabalhas com carne. O que fazes?", // nieuw, nalezen
-    'c.food.o1': "Dizes ao teu chefe, e pedes um penso.", // nieuw, nalezen
-    'c.food.o2': "Não dizes nada: é só um corte pequeno.", // nieuw, nalezen
-    'c.food.o3': "Pões uma luva por cima, para ninguém ver.", // nieuw, nalezen
-    'c.food.w': "Uma ferida pequena pode levar micróbios para os alimentos. Quando avisas, podes receber um penso especial ou outro trabalho durante algum tempo. Avisar é normal: ninguém te culpa por isso.", // nieuw, nalezen
+    'c.food': "Mãos limpas, alimentos seguros", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.b': "Trabalhar com alimentos tem regras de higiene rigorosas: uma rede para o cabelo, roupa de trabalho limpa, mãos lavadas e nada de joias. Estas regras são iguais para todos. Não dizem nada sobre ti: mantêm os alimentos seguros para as pessoas que os comem. Com uma faca, usa sempre a tua luva anticorte. Numa sala fria ou numa câmara de congelação, veste a roupa quente que te dão, e aquece-te na pausa. Estás doente, ou tens uma ferida na mão? Avisa antes de começares. Então podes receber um penso especial, ou outro trabalho durante algum tempo. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.p': "Tenho um pequeno corte na mão. Pode dar-me um penso?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.s': "Em casa fizeste um pequeno corte no dedo. Hoje trabalhas com carne. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.o1': "Dizes ao teu chefe, e pedes um penso.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.o2': "Não dizes nada: é só um corte pequeno.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.o3': "Pões uma luva por cima, para ninguém ver.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.w': "Uma ferida pequena pode levar micróbios para os alimentos. Quando avisas, podes receber um penso especial ou outro trabalho durante algum tempo. Avisar é normal: ninguém te culpa por isso.", // nieuw, nalezen // nagelezen AI 22 nov
     'u.delivery': "Transporte e entregas", // nieuw, nalezen
     'l.parcel': "Entregar encomendas", // nieuw, nalezen
     'w.pakket': "a encomenda", // nieuw, nalezen
@@ -1768,62 +1768,62 @@ const t: CultureTranslation = {
     's.road.3': "Quem decide a minha rota e os meus horários?", // nieuw, nalezen
     'c.road.q': "Podes fazer mais uma volta hoje?", // nieuw, nalezen
     'c.road.a': "Não, assim não tenho tempo para a minha pausa.", // nieuw, nalezen
-    'c.parcel': "Ninguém em casa, ou uma encomenda estragada", // nieuw, nalezen
-    'c.parcel.b': "O cliente não está em casa? Segue as regras da tua empresa: tenta os vizinhos, ou leva a encomenda de volta. Não a deixes simplesmente à porta, a não ser que o cliente o tenha pedido. Uma encomenda está estragada ou molhada? Não a entregues como se nada fosse. Tira uma foto como prova, e regista isso no scanner ou na app. Dizer a verdade sobre um problema é sempre melhor do que escondê-lo. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.parcel.p': "Esta encomenda está estragada. Aqui está uma foto.", // nieuw, nalezen
-    'c.parcel.s': "O cliente não está em casa, e os vizinhos também não. O que fazes?", // nieuw, nalezen
-    'c.parcel.o1': "Registas \"não está em casa\" no scanner, e levas a encomenda de volta.", // nieuw, nalezen
-    'c.parcel.o2': "Registas como entregue, e deixas a encomenda à porta.", // nieuw, nalezen
-    'c.parcel.o3': "Escondes a encomenda atrás do caixote do lixo, para ninguém ver.", // nieuw, nalezen
-    'c.parcel.w': "Uma encomenda registada como entregue tem de estar mesmo com o cliente. Quando registas o que aconteceu de verdade, o cliente pode receber a encomenda mais tarde, e ninguém pensa que a perdeste.", // nieuw, nalezen
-    'c.road': "Seguro na estrada, e trabalho justo", // nieuw, nalezen
-    'c.road.b': "Nunca tenhas o telemóvel na mão enquanto conduzes: é proibido. Usa um suporte para a navegação. Faz as tuas pausas, também num dia com muito trabalho. Uma encomenda pesada? Usa o carrinho de carga, ou levanta-a com outra pessoa. Gelo ou neve? Conduz devagar: chegar tarde é melhor do que um acidente. Algumas empresas dizem que trabalhas como independente (zelfstandig). Mas quem decide o teu horário, a tua rota e a tua roupa? Se a empresa decide tudo isso, talvez trabalhes afinal por conta de outrem (in loondienst). Então muitas vezes tens mais direitos, como receber salário quando estás doente. Mais sobre isto na lição \"Papéis, integração e o teu trabalho\". Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.", // nieuw, nalezen
-    'c.road.p': "Agora faço a minha pausa. Depois continuo a conduzir.", // nieuw, nalezen
-    'c.road.s': "A empresa diz que és independente. Mas decide o teu horário, a tua rota e a tua roupa. O que fazes?", // nieuw, nalezen
-    'c.road.o1': "Pedes conselho: talvez trabalhes por conta de outrem.", // nieuw, nalezen
-    'c.road.o2': "Nada: o contrato diz \"independente\", por isso é assim.", // nieuw, nalezen
-    'c.road.o3': "Trabalhas mais horas, para ganhares o mesmo.", // nieuw, nalezen
-    'c.road.w': "O que conta é como trabalhas de verdade, não só a palavra no contrato. Se a empresa decide como, quando e onde trabalhas, muitas vezes trabalhas por conta de outrem. Então tens mais direitos.", // nieuw, nalezen
-    'l.feelwell': "Sentir-se bem no trabalho", // nieuw, nalezen
-    'w.werkdruk': "a pressão do trabalho (trabalho demais em pouco tempo)", // nieuw, nalezen
-    'w.wakkerliggen': "ficar acordado na cama (não consegues dormir)", // nieuw, nalezen
-    'w.ploegendienst': "o trabalho por turnos (turnos da manhã, da tarde e da noite, alternados)", // nieuw, nalezen
-    'w.heimwee': "as saudades de casa (sentes falta de casa)", // nieuw, nalezen
-    'w.familie': "a família", // nieuw, nalezen
-    'w.alleen': "sozinho", // nieuw, nalezen
-    's.feelwell.1': "Durmo mal por causa dos turnos.", // nieuw, nalezen
-    's.feelwell.2': { m: "É demais. Não consigo sozinho.", f: "É demais. Não consigo sozinha.", x: "É demais. Não consigo sem ajuda." }, // nieuw, nalezen
-    's.feelwell.3': "Tenho saudades de casa. A minha família está longe.", // nieuw, nalezen
-    'c.feelwell.q': "Estás bem?", // nieuw, nalezen
-    'c.feelwell.a': "Não muito bem. Muitas vezes não consigo dormir.", // nieuw, nalezen
-    'c.feelwell': "É demais? Não tens de passar por isto sem ajuda", // nieuw, nalezen
-    'c.feelwell.b': "Toda a gente se sente às vezes cansada, stressada ou triste. Trabalho a mais (werkdruk), dormir mal por causa dos turnos ou ter saudades da família podem tornar tudo pesado. Não tens de carregar isso sem ajuda, e dizer \"é demais\" não é fraqueza. Fala com alguém de confiança. Por exemplo o teu chefe, o médico da empresa (bedrijfsarts) ou o teu médico de família (huisarts). Ou a pessoa de confiança (vertrouwenspersoon), se a tua empresa tiver uma. Também podes ser tu a pedir uma conversa com o médico da empresa. Os médicos não contam ao teu patrão o que disseste. Pensas em suicídio, ou preocupa-te alguém? Liga para o 113 (grátis, de dia e de noite), ou fala por chat em 113.nl.",
-    'c.feelwell.p': "Não estou muito bem. Posso falar contigo um momento?", // nieuw, nalezen
-    'c.feelwell.s': { m: "Há semanas que dormes mal e o trabalho é demais. Sentes-te muito cansado. O que fazes?", f: "Há semanas que dormes mal e o trabalho é demais. Sentes-te muito cansada. O que fazes?", x: "Há semanas que dormes mal e o trabalho é demais. Sentes um grande cansaço. O que fazes?" }, // nieuw, nalezen
-    'c.feelwell.o1': "Dizes ao teu chefe ou ao médico da empresa.", // nieuw, nalezen
-    'c.feelwell.o2': "Não dizes nada, e trabalhas mais e mais depressa.", // nieuw, nalezen
-    'c.feelwell.o3': "Ficas em casa, e não dizes a ninguém porquê.", // nieuw, nalezen
-    'c.feelwell.w': "Dizer cedo não é fraqueza. Assim podem procurar juntos uma saída, por exemplo outros turnos. Não tens de fazer isto sem ajuda.", // nieuw, nalezen
-    'l.backtowork': "Voltar ao trabalho depois de uma doença", // nieuw, nalezen
-    'w.opbouwen': "aumentar aos poucos (devagar, passo a passo)", // nieuw, nalezen
-    'w.halvedagen': "meios dias (trabalhas só uma parte do dia)", // nieuw, nalezen
-    'w.lichtwerk': "o trabalho leve (não pesado)", // nieuw, nalezen
-    'w.zwaarwerk': "o trabalho pesado", // nieuw, nalezen
-    'w.herstellen': "recuperar, ficar bom outra vez", // nieuw, nalezen
-    'w.welkomterug': "bem-vindo de volta", // nieuw, nalezen
-    's.backtowork.1': "Começo com meios dias.", // nieuw, nalezen
-    's.backtowork.2': "Já consigo fazer trabalho leve. Trabalho pesado, ainda não.", // nieuw, nalezen
-    's.backtowork.3': "O médico da empresa diz: aumentar aos poucos.", // nieuw, nalezen
-    'c.backtowork.q': { m: "Bem-vindo de volta! Estás melhor?", f: "Bem-vinda de volta! Estás melhor?", x: "Bem-vindo/a de volta! Estás melhor?" }, // nieuw, nalezen
-    'c.backtowork.a': "Sim, está a correr melhor. Vou com calma.", // nieuw, nalezen
-    'c.backtowork': "Voltar passo a passo", // nieuw, nalezen
-    'c.backtowork.b': "Estás melhor? Diz ao teu empregador que já podes trabalhar outra vez (betermelden). Depois de uma doença longa, muitas vezes começas passo a passo: primeiro menos horas, ou trabalho mais leve. O médico da empresa (bedrijfsarts) dá conselhos sobre o que consegues fazer. Estás doente há muito tempo? Então tu e o teu empregador fazem juntos um plano para o teu regresso. É o que diz a lei (Wet verbetering poortwachter). Diz claramente o que consegues fazer, e o que ainda não. Não tens de contar aos colegas que doença tiveste. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
-    'c.backtowork.p': "Isto já consigo fazer. Aquilo ainda não.", // nieuw, nalezen
-    'c.backtowork.s': "Estiveste doente três semanas. No teu primeiro dia de volta, o teu chefe pede-te para levantares caixas pesadas. O médico da empresa disse: por agora, só trabalho leve. O que fazes?", // nieuw, nalezen
-    'c.backtowork.o1': "Dizes com calma que agora consegues fazer trabalho leve, e o que ainda não consegues.", // nieuw, nalezen
-    'c.backtowork.o2': "Levantas as caixas na mesma: não queres criar problemas.", // nieuw, nalezen
-    'c.backtowork.o3': "Vais para casa sem dizer nada.", // nieuw, nalezen
-    'c.backtowork.w': "O teu chefe quer-te de volta, e com saúde. Quando dizes claramente o que consegues fazer, ele pode planear o trabalho. Fazer demasiado, cedo demais, pode fazer-te adoecer outra vez.", // nieuw, nalezen
+    'c.parcel': "Ninguém em casa, ou uma encomenda estragada", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.b': "O cliente não está em casa? Segue as regras da tua empresa: tenta os vizinhos, ou leva a encomenda de volta. Não a deixes simplesmente à porta, a não ser que o cliente o tenha pedido. Uma encomenda está estragada ou molhada? Não a entregues como se nada fosse. Tira uma foto como prova, e regista isso no scanner ou na app. Dizer a verdade sobre um problema é sempre melhor do que escondê-lo. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.p': "Esta encomenda está estragada. Aqui está uma foto.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.s': "O cliente não está em casa, e os vizinhos também não. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.o1': "Registas \"não está em casa\" no scanner, e levas a encomenda de volta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.o2': "Registas como entregue, e deixas a encomenda à porta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.o3': "Escondes a encomenda atrás do caixote do lixo, para ninguém ver.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.w': "Uma encomenda registada como entregue tem de estar mesmo com o cliente. Quando registas o que aconteceu de verdade, o cliente pode receber a encomenda mais tarde, e ninguém pensa que a perdeste.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road': "Seguro na estrada, e trabalho justo", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.b': "Nunca tenhas o telemóvel na mão enquanto conduzes: é proibido. Usa um suporte para a navegação. Faz as tuas pausas, também num dia com muito trabalho. Uma encomenda pesada? Usa o carrinho de carga, ou levanta-a com outra pessoa. Gelo ou neve? Conduz devagar: chegar tarde é melhor do que um acidente. Algumas empresas dizem que trabalhas como independente (zelfstandig). Mas quem decide o teu horário, a tua rota e a tua roupa? Se a empresa decide tudo isso, talvez trabalhes afinal por conta de outrem (in loondienst). Então muitas vezes tens mais direitos, como receber salário quando estás doente. Mais sobre isto na lição \"Papéis, integração e o teu trabalho\". Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.p': "Agora faço a minha pausa. Depois continuo a conduzir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.s': "A empresa diz que és independente. Mas decide o teu horário, a tua rota e a tua roupa. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.o1': "Pedes conselho: talvez trabalhes por conta de outrem.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.o2': "Nada: o contrato diz \"independente\", por isso é assim.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.o3': "Trabalhas mais horas, para ganhares o mesmo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.w': "O que conta é como trabalhas de verdade, não só a palavra no contrato. Se a empresa decide como, quando e onde trabalhas, muitas vezes trabalhas por conta de outrem. Então tens mais direitos.", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.feelwell': "Sentir-se bem no trabalho", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.werkdruk': "a pressão do trabalho (trabalho demais em pouco tempo)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.wakkerliggen': "ficar acordado na cama (não consegues dormir)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ploegendienst': "o trabalho por turnos (turnos da manhã, da tarde e da noite, alternados)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.heimwee': "as saudades de casa (sentes falta de casa)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.familie': "a família", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alleen': "sozinho", // nieuw, nalezen // nagelezen AI 22 nov
+    's.feelwell.1': "Durmo mal por causa dos turnos.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.feelwell.2': { m: "É demais. Não consigo sozinho.", f: "É demais. Não consigo sozinha.", x: "É demais. Não consigo sem ajuda." }, // nieuw, nalezen // nagelezen AI 22 nov
+    's.feelwell.3': "Tenho saudades de casa. A minha família está longe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.q': "Estás bem?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.a': "Não muito bem. Muitas vezes não consigo dormir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell': "É demais? Não tens de passar por isto sem ajuda", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.b': "Toda a gente se sente às vezes cansada, stressada ou triste. Trabalho a mais (werkdruk), dormir mal por causa dos turnos ou ter saudades da família podem tornar tudo pesado. Não tens de carregar isso sem ajuda, e dizer \"é demais\" não é fraqueza. Fala com alguém de confiança. Por exemplo o teu chefe, o médico da empresa (bedrijfsarts) ou o teu médico de família (huisarts). Ou a pessoa de confiança (vertrouwenspersoon), se a tua empresa tiver uma. Também podes ser tu a pedir uma conversa com o médico da empresa. Os médicos não contam ao teu patrão o que disseste. Pensas em suicídio, ou preocupa-te alguém? Liga para o 113 (grátis, de dia e de noite), ou fala por chat em 113.nl.", // nagelezen AI 22 nov
+    'c.feelwell.p': "Não estou muito bem. Posso falar contigo um momento?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.s': { m: "Há semanas que dormes mal e o trabalho é demais. Sentes-te muito cansado. O que fazes?", f: "Há semanas que dormes mal e o trabalho é demais. Sentes-te muito cansada. O que fazes?", x: "Há semanas que dormes mal e o trabalho é demais. Sentes um grande cansaço. O que fazes?" }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.o1': "Dizes ao teu chefe ou ao médico da empresa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.o2': "Não dizes nada, e trabalhas mais e mais depressa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.o3': "Ficas em casa, e não dizes a ninguém porquê.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.w': "Dizer cedo não é fraqueza. Assim podem procurar juntos uma saída, por exemplo outros turnos. Não tens de fazer isto sem ajuda.", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.backtowork': "Voltar ao trabalho depois de uma doença", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.opbouwen': "aumentar aos poucos (devagar, passo a passo)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.halvedagen': "meios dias (trabalhas só uma parte do dia)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.lichtwerk': "o trabalho leve (não pesado)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.zwaarwerk': "o trabalho pesado", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.herstellen': "recuperar, ficar bom outra vez", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.welkomterug': "bem-vindo de volta", // nieuw, nalezen // nagelezen AI 22 nov
+    's.backtowork.1': "Começo com meios dias.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.backtowork.2': "Já consigo fazer trabalho leve. Trabalho pesado, ainda não.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.backtowork.3': "O médico da empresa diz: aumentar aos poucos.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.q': { m: "Bem-vindo de volta! Estás melhor?", f: "Bem-vinda de volta! Estás melhor?", x: "Que bom teres voltado! Estás melhor?" }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.a': "Sim, está a correr melhor. Vou com calma.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork': "Voltar passo a passo", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.b': "Estás melhor? Diz ao teu empregador que já podes trabalhar outra vez (betermelden). Depois de uma doença longa, muitas vezes começas passo a passo: primeiro menos horas, ou trabalho mais leve. O médico da empresa (bedrijfsarts) dá conselhos sobre o que consegues fazer. Estás doente há muito tempo? Então tu e o teu empregador fazem juntos um plano para o teu regresso. É o que diz a lei (Wet verbetering poortwachter). Diz claramente o que consegues fazer, e o que ainda não. Não tens de contar aos colegas que doença tiveste. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.p': "Isto já consigo fazer. Aquilo ainda não.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.s': "Estiveste doente três semanas. No teu primeiro dia de volta, o teu chefe pede-te para levantares caixas pesadas. O médico da empresa disse: por agora, só trabalho leve. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.o1': "Dizes com calma que agora consegues fazer trabalho leve, e o que ainda não consegues.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.o2': "Levantas as caixas na mesma: não queres criar problemas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.o3': "Vais para casa sem dizer nada.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.w': "O teu chefe quer-te de volta, e com saúde. Quando dizes claramente o que consegues fazer, ele pode planear o trabalho. Fazer demasiado, cedo demais, pode fazer-te adoecer outra vez.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.measure': "Medir", // nieuw, nalezen
     'w.rolmaat': "a fita métrica", // nieuw, nalezen
     'w.waterpas': "o nível (mostra se uma coisa está direita)", // nieuw, nalezen
@@ -1836,14 +1836,14 @@ const t: CultureTranslation = {
     's.measure.3': "Meço duas vezes.", // nieuw, nalezen
     'c.measure.q': "Que largura tem de ter?", // nieuw, nalezen
     'c.measure.a': "Noventa centímetros. Vou escrever.", // nieuw, nalezen
-    'c.measure': "Mede duas vezes, serra uma", // nieuw, nalezen
-    'c.measure.b': "Numa obra, as medidas são muitas vezes em milímetros. Por isso, \"novecentos\" pode querer dizer 90 centímetros. Não tens a certeza? Pergunta: \"São milímetros ou centímetros?\" Repete o número, e escreve-o. Mede duas vezes antes de serrar ou furar: uma tábua curta demais fica curta demais. Enganaste-te? Diz logo. Assim a equipa ainda pode corrigir, e custa menos.", // nieuw, nalezen
-    'c.measure.p': "Isso é em milímetros ou em centímetros?", // nieuw, nalezen
-    'c.measure.s': "O teu colega diz uma medida em voz alta. Não ouviste bem. O que fazes?", // nieuw, nalezen
-    'c.measure.o1': "Repetes o número, e perguntas se está certo.", // nieuw, nalezen
-    'c.measure.o2': "Serras a tábua pela medida que achas que ouviste.", // nieuw, nalezen
-    'c.measure.o3': "Esperas até ele vir ver.", // nieuw, nalezen
-    'c.measure.w': "Uma medida errada custa material e tempo. Repetir o número demora dois segundos, e numa obra todos o fazem.", // nieuw, nalezen
+    'c.measure': "Mede duas vezes, serra uma", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.b': "Numa obra, as medidas são muitas vezes em milímetros. Por isso, \"novecentos\" pode querer dizer 90 centímetros. Não tens a certeza? Pergunta: \"São milímetros ou centímetros?\" Repete o número, e escreve-o. Mede duas vezes antes de serrar ou furar: uma tábua curta demais fica curta demais. Enganaste-te? Diz logo. Assim a equipa ainda pode corrigir, e custa menos.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.p': "Isso é em milímetros ou em centímetros?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.s': "O teu colega diz uma medida em voz alta. Não ouviste bem. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.o1': "Repetes o número, e perguntas se está certo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.o2': "Serras a tábua pela medida que achas que ouviste.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.o3': "Esperas até ele vir ver.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.w': "Uma medida errada custa material e tempo. Repetir o número demora dois segundos, e numa obra todos o fazem.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.siteday': "Uma obra arrumada", // nieuw, nalezen
     'w.bouwplaats': "a obra (o sítio onde se constrói)", // nieuw, nalezen
     'w.uitvoerder': "o encarregado da obra (quem manda na obra)", // nieuw, nalezen
@@ -1856,14 +1856,14 @@ const t: CultureTranslation = {
     's.siteday.3': "Cuidado, aqui podes tropeçar.", // nieuw, nalezen
     'c.siteday.q': "Para onde vai esta madeira?", // nieuw, nalezen
     'c.siteday.a': "Para o contentor que está à entrada.", // nieuw, nalezen
-    'c.siteday': "Uma obra arrumada é uma obra segura", // nieuw, nalezen
-    'c.siteday.b': "Numa obra, arrumar faz parte do trabalho, para todos. Tábuas soltas, cabos e lixo fazem as pessoas tropeçar e cair. Por isso, arruma o teu lugar durante o dia, não só no fim. O lixo é separado: madeira, pedra e metal vão muitas vezes para contentores diferentes. Não sabes qual? Pergunta. Vês um prego de fora, ou um buraco sem tampa? Resolve tu, se o puderes fazer em segurança, ou diz ao encarregado da obra (de uitvoerder). As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.siteday.p': "Eu arrumo isto. Assim ninguém tropeça.", // nieuw, nalezen
-    'c.siteday.s': "Há tábuas com pregos no caminho. Não são tuas. O que fazes?", // nieuw, nalezen
-    'c.siteday.o1': "Põe-las de lado, ou dizes ao encarregado.", // nieuw, nalezen
-    'c.siteday.o2': "Passas por cima: as tábuas não são tuas.", // nieuw, nalezen
-    'c.siteday.o3': "Esperas: outra pessoa vai arrumá-las.", // nieuw, nalezen
-    'c.siteday.w': "Todos usam os mesmos caminhos. Quem vê um perigo faz alguma coisa: isso é normal numa obra.", // nieuw, nalezen
+    'c.siteday': "Uma obra arrumada é uma obra segura", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.b': "Numa obra, arrumar faz parte do trabalho, para todos. Tábuas soltas, cabos e lixo fazem as pessoas tropeçar e cair. Por isso, arruma o teu lugar durante o dia, não só no fim. O lixo é separado: madeira, pedra e metal vão muitas vezes para contentores diferentes. Não sabes qual? Pergunta. Vês um prego de fora, ou um buraco sem tampa? Resolve tu, se o puderes fazer em segurança, ou diz ao encarregado da obra (de uitvoerder). As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.p': "Eu arrumo isto. Assim ninguém tropeça.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.s': "Há tábuas com pregos no caminho. Não são tuas. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.o1': "Põe-las de lado, ou dizes ao encarregado.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.o2': "Passas por cima: as tábuas não são tuas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.o3': "Esperas: outra pessoa vai arrumá-las.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.w': "Todos usam os mesmos caminhos. Quem vê um perigo faz alguma coisa: isso é normal numa obra.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.shifts': "Passar o turno", // nieuw, nalezen
     'w.vroegedienst': "o turno da manhã", // nieuw, nalezen
     'w.latedienst': "o turno da tarde", // nieuw, nalezen
@@ -1876,14 +1876,14 @@ const t: CultureTranslation = {
     's.shifts.3': "A máquina dois teve uma avaria.", // nieuw, nalezen
     'c.shifts.q': "Aconteceu alguma coisa no teu turno?", // nieuw, nalezen
     'c.shifts.a': "Sim. A linha esteve parada meia hora.", // nieuw, nalezen
-    'c.shifts': "Conta ao turno seguinte", // nieuw, nalezen
-    'c.shifts.b': "Uma fábrica trabalha muitas vezes dia e noite, por turnos. No fim do teu turno, um colega fica no teu lugar. Não te vás logo embora: espera até o teu colega chegar. Conta em poucas palavras o que aconteceu: uma avaria, um produto que saiu mal, uma coisa que não ficou acabada. Muitas empresas também têm uma lista ou um ecrã para isto. Um problema que não passas volta no turno seguinte, e então ninguém sabe porquê. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.shifts.p': "A máquina teve uma avaria. Agora já funciona outra vez.", // nieuw, nalezen
-    'c.shifts.s': "O teu turno acabou. O teu colega está cinco minutos atrasado. O que fazes?", // nieuw, nalezen
-    'c.shifts.o1': "Esperas, e avisas o chefe de equipa.", // nieuw, nalezen
-    'c.shifts.o2': "Vais para casa: o teu turno acabou.", // nieuw, nalezen
-    'c.shifts.o3': "Paras a máquina e vais-te embora.", // nieuw, nalezen
-    'c.shifts.w': "Uma máquina a trabalhar não pode ficar sem ninguém. Quando esperas e avisas, o trabalho continua em segurança, e o chefe de equipa pode resolver.", // nieuw, nalezen
+    'c.shifts': "Conta ao turno seguinte", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.b': "Uma fábrica trabalha muitas vezes dia e noite, por turnos. No fim do teu turno, um colega fica no teu lugar. Não te vás logo embora: espera até o teu colega chegar. Conta em poucas palavras o que aconteceu: uma avaria, um produto que saiu mal, uma coisa que não ficou acabada. Muitas empresas também têm uma lista ou um ecrã para isto. Um problema que não passas volta no turno seguinte, e então ninguém sabe porquê. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.p': "A máquina teve uma avaria. Agora já funciona outra vez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.s': "O teu turno acabou. O teu colega está cinco minutos atrasado. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.o1': "Esperas, e avisas o chefe de equipa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.o2': "Vais para casa: o teu turno acabou.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.o3': "Paras a máquina e vais-te embora.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.w': "Uma máquina a trabalhar não pode ficar sem ninguém. Quando esperas e avisas, o trabalho continua em segurança, e o chefe de equipa pode resolver.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.signals': "Diz o que vês", // nieuw, nalezen
     'w.duizelig': "com tonturas", // nieuw, nalezen
     'w.misselijk': "enjoado (com vontade de vomitar)", // nieuw, nalezen
@@ -1896,14 +1896,14 @@ const t: CultureTranslation = {
     's.signals.3': "Podes vir ver um momento?", // nieuw, nalezen
     'c.signals.q': "Como está o senhor Jansen?", // nieuw, nalezen
     'c.signals.a': "Está confuso. Ontem não estava assim.", // nieuw, nalezen
-    'c.signals': "Tu vês o cliente todos os dias", // nieuw, nalezen
-    'c.signals.b': "Muitas vezes és tu quem mais vê o cliente. Por isso és a primeira pessoa a notar quando algo está diferente: come menos, tem mais dores, está confuso, tem falta de ar. Não tens de saber o que é. Diz o que vês, e diz quando o viste. Conta à enfermeira no mesmo dia, e escreve-o se essa for a tua tarefa. Parece grave? Não esperes: chama logo a enfermeira. Mais vale uma vez a mais do que uma vez a menos.", // nieuw, nalezen
-    'c.signals.p': "A senhora não come e está com tonturas. Não é como costuma ser.", // nieuw, nalezen
-    'c.signals.s': "Uma cliente hoje está calada e não quer comer. Normalmente fala muito. O que fazes?", // nieuw, nalezen
-    'c.signals.o1': "Dizes à enfermeira o que vês, hoje.", // nieuw, nalezen
-    'c.signals.o2': "Esperas uns dias: talvez passe.", // nieuw, nalezen
-    'c.signals.o3': "Dás-lhe um comprimido do armário.", // nieuw, nalezen
-    'c.signals.w': "Uma pequena mudança pode ser o primeiro sinal de uma doença. Não és tu que decides o que é: é a enfermeira. Mas ela só pode fazer alguma coisa se tu lhe contares.", // nieuw, nalezen
+    'c.signals': "Tu vês o cliente todos os dias", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.b': "Muitas vezes és tu quem mais vê o cliente. Por isso és a primeira pessoa a notar quando algo está diferente: come menos, tem mais dores, está confuso, tem falta de ar. Não tens de saber o que é. Diz o que vês, e diz quando o viste. Conta à enfermeira no mesmo dia, e escreve-o se essa for a tua tarefa. Parece grave? Não esperes: chama logo a enfermeira. Mais vale uma vez a mais do que uma vez a menos.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.p': "A senhora não come e está com tonturas. Não é como costuma ser.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.s': "Uma cliente hoje está calada e não quer comer. Normalmente fala muito. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.o1': "Dizes à enfermeira o que vês, hoje.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.o2': "Esperas uns dias: talvez passe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.o3': "Dás-lhe um comprimido do armário.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.w': "Uma pequena mudança pode ser o primeiro sinal de uma doença. Não és tu que decides o que é: é a enfermeira. Mas ela só pode fazer alguma coisa se tu lhe contares.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.transfer': "Ajudar alguém a levantar-se", // nieuw, nalezen
     'w.tillift': "o elevador de transferência (uma máquina que levanta uma pessoa)", // nieuw, nalezen
     'w.rollator': "o andarilho com rodas", // nieuw, nalezen
@@ -1916,14 +1916,14 @@ const t: CultureTranslation = {
     's.transfer.3': "Primeiro vou buscar o elevador de transferência.", // nieuw, nalezen
     'c.transfer.q': "Podes tirar a senhora da cama?", // nieuw, nalezen
     'c.transfer.a': { m: "Sozinho não. Vou buscar o elevador de transferência.", f: "Sozinha não. Vou buscar o elevador de transferência.", x: "Sem ajuda não. Vou buscar o elevador de transferência." }, // nieuw, nalezen
-    'c.transfer': "Primeiro dizer, depois ajudar", // nieuw, nalezen
-    'c.transfer.b': "Antes de tocares num cliente, diz o que vais fazer: \"Ik help u nu met opstaan.\" Assim o cliente não se assusta, e pode ajudar. Deixa o cliente fazer o que ainda consegue fazer: isso mantém-no forte. Não levantes uma pessoa sem ajuda. Usa os equipamentos que existem, como o elevador de transferência, e trabalha como te mostraram. Ainda não te mostraram? Pergunta primeiro. As tuas costas têm de durar uma vida inteira de trabalho. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.transfer.p': "Agora vou ajudá-lo a levantar-se. Podemos começar?", // nieuw, nalezen
-    'c.transfer.s': "Uma cliente quer sair da cama. Ainda não aprendeste a usar o elevador de transferência. O que fazes?", // nieuw, nalezen
-    'c.transfer.o1': "Pedes ajuda a um colega que conhece o elevador.", // nieuw, nalezen
-    'c.transfer.o2': "Levanta-la tu: ela não é pesada.", // nieuw, nalezen
-    'c.transfer.o3': "Experimentas o elevador: não deve ser difícil.", // nieuw, nalezen
-    'c.transfer.w': "Levantar mal uma pessoa pode magoar o cliente e as tuas costas. Pedir ajuda a um colega demora uns minutos. Uma queda pode demorar meses.", // nieuw, nalezen
+    'c.transfer': "Primeiro dizer, depois ajudar", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.b': "Antes de tocares num cliente, diz o que vais fazer: \"Ik help u nu met opstaan.\" Assim o cliente não se assusta, e pode ajudar. Deixa o cliente fazer o que ainda consegue fazer: isso mantém-no forte. Não levantes uma pessoa sem ajuda. Usa os equipamentos que existem, como o elevador de transferência, e trabalha como te mostraram. Ainda não te mostraram? Pergunta primeiro. As tuas costas têm de durar uma vida inteira de trabalho. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.p': "Agora vou ajudá-lo a levantar-se. Podemos começar?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.s': "Uma cliente quer sair da cama. Ainda não aprendeste a usar o elevador de transferência. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.o1': "Pedes ajuda a um colega que conhece o elevador.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.o2': "Levanta-la tu: ela não é pesada.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.o3': "Experimentas o elevador: não deve ser difícil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.w': "Levantar mal uma pessoa pode magoar o cliente e as tuas costas. Pedir ajuda a um colega demora uns minutos. Uma queda pode demorar meses.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.dishes': "Lavar a loiça", // nieuw, nalezen
     'w.afwas': "a loiça para lavar", // nieuw, nalezen
     'w.vaatwasser': "a máquina de lavar loiça", // nieuw, nalezen
@@ -1936,14 +1936,14 @@ const t: CultureTranslation = {
     's.dishes.3': "Já não há talheres limpos.", // nieuw, nalezen
     'c.dishes.q': "Ainda há copos limpos?", // nieuw, nalezen
     'c.dishes.a': "Sim, levo-os já.", // nieuw, nalezen
-    'c.dishes': "Vidro partido: diz logo", // nieuw, nalezen
-    'c.dishes.b': "Numa cozinha, o vidro parte-se. É normal, e ninguém se zanga por isso. Mas diz logo, alto e claro: \"Glas!\" Não apanhes os cacos com as mãos: usa uma escova. Caiu vidro perto de comida, ou no gelo? Então essa comida ou esse gelo tem de ir para o lixo, tudo. Um bocadinho de vidro numa refeição é muito perigoso para um cliente. O vidro vai para um caixote próprio, não para um saco que alguém levanta. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.dishes.p': "Cuidado, vidro! Eu limpo já.", // nieuw, nalezen
-    'c.dishes.s': "Um copo parte-se por cima do gelo para as bebidas. Há muito trabalho. O que fazes?", // nieuw, nalezen
-    'c.dishes.o1': "Dizes logo, e deitas fora o gelo todo.", // nieuw, nalezen
-    'c.dishes.o2': "Tiras os cacos que consegues ver.", // nieuw, nalezen
-    'c.dishes.o3': "Não dizes nada: agora há trabalho demais.", // nieuw, nalezen
-    'c.dishes.w': "No gelo, não se veem os bocadinhos de vidro. Gelo novo custa pouco. Um cliente com vidro na bebida pode ficar muito ferido.", // nieuw, nalezen
+    'c.dishes': "Vidro partido: diz logo", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.b': "Numa cozinha, o vidro parte-se. É normal, e ninguém se zanga por isso. Mas diz logo, alto e claro: \"Glas!\" Não apanhes os cacos com as mãos: usa uma escova. Caiu vidro perto de comida, ou no gelo? Então essa comida ou esse gelo tem de ir para o lixo, tudo. Um bocadinho de vidro numa refeição é muito perigoso para um cliente. O vidro vai para um caixote próprio, não para um saco que alguém levanta. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.p': "Cuidado, vidro! Eu limpo já.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.s': "Um copo parte-se por cima do gelo para as bebidas. Há muito trabalho. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.o1': "Dizes logo, e deitas fora o gelo todo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.o2': "Tiras os cacos que consegues ver.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.o3': "Não dizes nada: agora há trabalho demais.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.w': "No gelo, não se veem os bocadinhos de vidro. Gelo novo custa pouco. Um cliente com vidro na bebida pode ficar muito ferido.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.rush': "Quando há muito trabalho", // nieuw, nalezen
     'w.heet': "muito quente", // nieuw, nalezen
     'w.chef': "o chefe de cozinha (quem manda na cozinha)", // nieuw, nalezen
@@ -1956,14 +1956,14 @@ const t: CultureTranslation = {
     's.rush.3': "Levo isto para a esplanada.", // nieuw, nalezen
     'c.rush.q': "Podes tratar da mesa quatro?", // nieuw, nalezen
     'c.rush.a': "Sim, chefe. Já vou.", // nieuw, nalezen
-    'c.rush': "Palavras curtas quando há muito trabalho", // nieuw, nalezen
-    'c.rush.b': "Quando há muito trabalho, as pessoas numa cozinha falam com palavras curtas: \"Heet!\", \"Achter!\", \"Tafel zes!\" Isso não é falta de educação. É rápido e seguro: todos sabem onde estão os tachos quentes e as facas. Grita tu também \"Heet!\" ou \"Achter!\" quando passas por trás de alguém. Ouviste uma ordem? Repete: \"Ja, chef.\" Assim o chefe de cozinha sabe que ouviste. Alguém foi seco contigo na hora de mais trabalho? Muitas vezes isso passa depois do serviço. Continua a ser desagradável? Então fala sobre isso num momento calmo.", // nieuw, nalezen
-    'c.rush.p': "Atrás! Trago um tacho quente.", // nieuw, nalezen
-    'c.rush.s': "Há muito trabalho. O chefe de cozinha grita: \"Tafel zes, nu!\" Não diz \"por favor\". O que fazes?", // nieuw, nalezen
-    'c.rush.o1': "Dizes \"Ja, chef\", e fazes.", // nieuw, nalezen
-    'c.rush.o2': "Paras, e dizes que ele é mal-educado.", // nieuw, nalezen
-    'c.rush.o3': "Fazes, mas não respondes nada.", // nieuw, nalezen
-    'c.rush.w': "Na hora de mais trabalho, falar curto é normal e não é nada contra ti. Repetir mostra que ouviste. Assim a cozinha continua rápida e segura.", // nieuw, nalezen
+    'c.rush': "Palavras curtas quando há muito trabalho", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.b': "Quando há muito trabalho, as pessoas numa cozinha falam com palavras curtas: \"Heet!\", \"Achter!\", \"Tafel zes!\" Isso não é falta de educação. É rápido e seguro: todos sabem onde estão os tachos quentes e as facas. Grita tu também \"Heet!\" ou \"Achter!\" quando passas por trás de alguém. Ouviste uma ordem? Repete: \"Ja, chef.\" Assim o chefe de cozinha sabe que ouviste. Alguém foi seco contigo na hora de mais trabalho? Muitas vezes isso passa depois do serviço. Continua a ser desagradável? Então fala sobre isso num momento calmo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.p': "Atrás! Trago um tacho quente.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.s': "Há muito trabalho. O chefe de cozinha grita: \"Tafel zes, nu!\" Não diz \"por favor\". O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.o1': "Dizes \"Ja, chef\", e fazes.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.o2': "Paras, e dizes que ele é mal-educado.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.o3': "Fazes, mas não respondes nada.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.w': "Na hora de mais trabalho, falar curto é normal e não é nada contra ti. Repetir mostra que ouviste. Assim a cozinha continua rápida e segura.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.rounds': "A tua ronda", // nieuw, nalezen
     'w.kantoor': "o escritório", // nieuw, nalezen
     'w.verdieping': "o andar (o 1.º ou o 2.º andar de um edifício)", // nieuw, nalezen
@@ -1976,14 +1976,14 @@ const t: CultureTranslation = {
     's.rounds.3': "Estou a repor o sabonete.", // nieuw, nalezen
     'c.rounds.q': "Já fizeste o escritório três?", // nieuw, nalezen
     'c.rounds.a': "Não, ainda está lá uma pessoa a trabalhar.", // nieuw, nalezen
-    'c.rounds': "Limpar onde as pessoas trabalham", // nieuw, nalezen
-    'c.rounds.b': "Muitas vezes limpas enquanto outras pessoas ainda estão a trabalhar. Cumprimenta-as, e pergunta: \"Mag ik hier even schoonmaken?\" A maioria das pessoas diz que sim. Alguém está numa reunião ou ao telefone? Então volta mais tarde. Não mexas nos papéis de uma secretária, e não os leias: limpa à volta deles. Tens um tempo fixo para a tua ronda. O tempo é curto demais para fazer bem? Não saltes salas sem dizer nada. Diz ao teu chefe o que não conseguiste fazer, e porquê.", // nieuw, nalezen
-    'c.rounds.p': "Boa tarde. Posso limpar aqui um momento?", // nieuw, nalezen
-    'c.rounds.s': "Hoje a tua ronda demora mais: uma sala estava muito suja. Faltam dois escritórios. O que fazes?", // nieuw, nalezen
-    'c.rounds.o1': "Dizes ao teu chefe quais são os dois, e porquê.", // nieuw, nalezen
-    'c.rounds.o2': "Vais para casa, e esperas que ninguém veja.", // nieuw, nalezen
-    'c.rounds.o3': "Fazes os dois muito depressa, sem o chão.", // nieuw, nalezen
-    'c.rounds.w': "Um cliente que encontra um escritório sujo faz queixa. Um chefe que sabe o que aconteceu pode explicar, ou dar-te mais tempo. Avisar não é falhar.", // nieuw, nalezen
+    'c.rounds': "Limpar onde as pessoas trabalham", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.b': "Muitas vezes limpas enquanto outras pessoas ainda estão a trabalhar. Cumprimenta-as, e pergunta: \"Mag ik hier even schoonmaken?\" A maioria das pessoas diz que sim. Alguém está numa reunião ou ao telefone? Então volta mais tarde. Não mexas nos papéis de uma secretária, e não os leias: limpa à volta deles. Tens um tempo fixo para a tua ronda. O tempo é curto demais para fazer bem? Não saltes salas sem dizer nada. Diz ao teu chefe o que não conseguiste fazer, e porquê.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.p': "Boa tarde. Posso limpar aqui um momento?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.s': "Hoje a tua ronda demora mais: uma sala estava muito suja. Faltam dois escritórios. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.o1': "Dizes ao teu chefe quais são os dois, e porquê.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.o2': "Vais para casa, e esperas que ninguém veja.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.o3': "Fazes os dois muito depressa, sem o chão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.w': "Um cliente que encontra um escritório sujo faz queixa. Um chefe que sabe o que aconteceu pode explicar, ou dar-te mais tempo. Avisar não é falhar.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.colours': "Cores e panos", // nieuw, nalezen
     'w.doek': "o pano", // nieuw, nalezen
     'w.spons': "a esponja", // nieuw, nalezen
@@ -1996,14 +1996,14 @@ const t: CultureTranslation = {
     's.colours.3': "Que cor uso aqui?", // nieuw, nalezen
     'c.colours.q': "Posso usar este pano para a secretária?", // nieuw, nalezen
     'c.colours.a': "Não, o vermelho é só para a casa de banho.", // nieuw, nalezen
-    'c.colours': "Cada cor tem o seu sítio", // nieuw, nalezen
-    'c.colours.b': "Muitas empresas de limpeza trabalham com cores. Cada cor de pano, esponja e balde é para um só sítio. Muitas vezes o vermelho é para a casa de banho, e o azul é para secretárias e mesas. Assim, a sujidade da casa de banho não vai parar a uma secretária ou a uma cozinha. As cores podem ser diferentes em cada empresa, por isso pergunta no teu primeiro dia. Um pano está sujo, ou caiu ao chão? Pega num limpo. Os panos usados vão para o saco da roupa suja, não voltam para o carrinho. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.colours.p': "Aqui, que cor é para a casa de banho?", // nieuw, nalezen
-    'c.colours.s': "Os teus panos azuis acabaram. Ainda tens de limpar três secretárias. Só tens panos vermelhos. O que fazes?", // nieuw, nalezen
-    'c.colours.o1': "Primeiro vais buscar panos azuis novos.", // nieuw, nalezen
-    'c.colours.o2': "Usas um pano vermelho: limpo é limpo.", // nieuw, nalezen
-    'c.colours.o3': "Usas outra vez um pano azul para as três.", // nieuw, nalezen
-    'c.colours.w': "Um sistema de cores só funciona quando todos o seguem sempre. Assim ninguém tem de pensar onde é que um pano já esteve.", // nieuw, nalezen
+    'c.colours': "Cada cor tem o seu sítio", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.b': "Muitas empresas de limpeza trabalham com cores. Cada cor de pano, esponja e balde é para um só sítio. Muitas vezes o vermelho é para a casa de banho, e o azul é para secretárias e mesas. Assim, a sujidade da casa de banho não vai parar a uma secretária ou a uma cozinha. As cores podem ser diferentes em cada empresa, por isso pergunta no teu primeiro dia. Um pano está sujo, ou caiu ao chão? Pega num limpo. Os panos usados vão para o saco da roupa suja, não voltam para o carrinho. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.p': "Aqui, que cor é para a casa de banho?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.s': "Os teus panos azuis acabaram. Ainda tens de limpar três secretárias. Só tens panos vermelhos. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.o1': "Primeiro vais buscar panos azuis novos.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.o2': "Usas um pano vermelho: limpo é limpo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.o3': "Usas outra vez um pano azul para as três.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.w': "Um sistema de cores só funciona quando todos o seguem sempre. Assim ninguém tem de pensar onde é que um pano já esteve.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.shophelp': "Ajudar um cliente", // nieuw, nalezen
     'w.aanbieding': "a promoção (mais barato durante pouco tempo)", // nieuw, nalezen
     'w.korting': "o desconto (pagas menos)", // nieuw, nalezen
@@ -2016,14 +2016,14 @@ const t: CultureTranslation = {
     's.shophelp.3': "Este café está em promoção.", // nieuw, nalezen
     'c.shophelp.q': "Ainda tem leite?", // nieuw, nalezen
     'c.shophelp.a': "Vou ver ao armazém.", // nieuw, nalezen
-    'c.shophelp': "\"Não sei\" não é o fim", // nieuw, nalezen
-    'c.shophelp.b': "Um cliente pergunta uma coisa e tu não sabes a resposta. Não faz mal: ninguém sabe tudo. Mas não digas só \"nee\" ou \"weet ik niet\", e não te vás embora. Diz: \"Ik vraag het even voor u\", e vai chamar um colega. Um produto está esgotado? Diz quando volta a chegar, ou mostra uma coisa parecida. Olha para o cliente e cumprimenta-o, também quando estás a repor as prateleiras. Não percebeste a pergunta? Pede ao cliente para repetir, devagar.", // nieuw, nalezen
-    'c.shophelp.p': "Isso não sei. Vou perguntar.", // nieuw, nalezen
-    'c.shophelp.s': "Uma cliente pede um produto. Não conheces a palavra. O que fazes?", // nieuw, nalezen
-    'c.shophelp.o1': "Dizes: \"Ik vraag het even voor u.\"", // nieuw, nalezen
-    'c.shophelp.o2': "Dizes \"nee\", e continuas a trabalhar.", // nieuw, nalezen
-    'c.shophelp.o3': "Apontas para um sítio qualquer, para ela se ir embora.", // nieuw, nalezen
-    'c.shophelp.w': "Um cliente não se importa que sejas uma pessoa nova ou que ainda estejas a aprender neerlandês. Um cliente importa-se, sim, de ficar sem ajuda. Ir chamar um colega é bom serviço.", // nieuw, nalezen
+    'c.shophelp': "\"Não sei\" não é o fim", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.b': "Um cliente pergunta uma coisa e tu não sabes a resposta. Não faz mal: ninguém sabe tudo. Mas não digas só \"nee\" ou \"weet ik niet\", e não te vás embora. Diz: \"Ik vraag het even voor u\", e vai chamar um colega. Um produto está esgotado? Diz quando volta a chegar, ou mostra uma coisa parecida. Olha para o cliente e cumprimenta-o, também quando estás a repor as prateleiras. Não percebeste a pergunta? Pede ao cliente para repetir, devagar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.p': "Isso não sei. Vou perguntar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.s': "Uma cliente pede um produto. Não conheces a palavra. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.o1': "Dizes: \"Ik vraag het even voor u.\"", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.o2': "Dizes \"nee\", e continuas a trabalhar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.o3': "Apontas para um sítio qualquer, para ela se ir embora.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.w': "Um cliente não se importa que sejas uma pessoa nova ou que ainda estejas a aprender neerlandês. Um cliente importa-se, sim, de ficar sem ajuda. Ir chamar um colega é bom serviço.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.shoptrouble': "Momentos difíceis", // nieuw, nalezen
     'w.bedrijfsleider': "o gerente da loja", // nieuw, nalezen
     'w.beveiliger': "o segurança", // nieuw, nalezen
@@ -2036,14 +2036,14 @@ const t: CultureTranslation = {
     's.shoptrouble.3': "Acho que alguém está a roubar uma coisa.", // nieuw, nalezen
     'c.shoptrouble.q': "Quero o meu dinheiro de volta, já!", // nieuw, nalezen
     'c.shoptrouble.a': "Compreendo. Vou chamar o meu colega.", // nieuw, nalezen
-    'c.shoptrouble': "Um cliente zangado ou um ladrão: primeiro estás tu", // nieuw, nalezen
-    'c.shoptrouble.b': "Às vezes um cliente fica zangado, ou vês alguém a roubar. A tua segurança está primeiro, sempre. Com um cliente zangado: mantém a calma, não grites de volta, e vai chamar o gerente da loja. Não tens de resolver isso sem ajuda. Vês um ladrão? Não corras atrás dele, não o agarres, e não tapes a porta. Olha bem para o que vês, e diz logo ao gerente ou ao segurança. As coisas podem ser substituídas. Tu não. Ficaste com medo depois? Fala sobre isso com o teu chefe. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.shoptrouble.p': "Vejo uma pessoa a meter uma coisa no saco.", // nieuw, nalezen
-    'c.shoptrouble.s': "Um homem mete uma garrafa debaixo do casaco e vai para a saída. O que fazes?", // nieuw, nalezen
-    'c.shoptrouble.o1': "Dizes ao gerente ou ao segurança.", // nieuw, nalezen
-    'c.shoptrouble.o2': "Corres atrás dele e agarras-lhe o braço.", // nieuw, nalezen
-    'c.shoptrouble.o3': "Pões-te à frente da porta.", // nieuw, nalezen
-    'c.shoptrouble.w': "Um ladrão que é parado pode ficar violento. O gerente e o segurança sabem o que fazer. Nenhum produto vale um ferimento.", // nieuw, nalezen
+    'c.shoptrouble': "Um cliente zangado ou um ladrão: primeiro estás tu", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.b': "Às vezes um cliente fica zangado, ou vês alguém a roubar. A tua segurança está primeiro, sempre. Com um cliente zangado: mantém a calma, não grites de volta, e vai chamar o gerente da loja. Não tens de resolver isso sem ajuda. Vês um ladrão? Não corras atrás dele, não o agarres, e não tapes a porta. Olha bem para o que vês, e diz logo ao gerente ou ao segurança. As coisas podem ser substituídas. Tu não. Ficaste com medo depois? Fala sobre isso com o teu chefe. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.p': "Vejo uma pessoa a meter uma coisa no saco.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.s': "Um homem mete uma garrafa debaixo do casaco e vai para a saída. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.o1': "Dizes ao gerente ou ao segurança.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.o2': "Corres atrás dele e agarras-lhe o braço.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.o3': "Pões-te à frente da porta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.w': "Um ladrão que é parado pode ficar violento. O gerente e o segurança sabem o que fazer. Nenhum produto vale um ferimento.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.plantcare': "Cuidar da planta", // nieuw, nalezen
     'w.plantblad': "a folha (de uma planta)", // nieuw, nalezen
     'w.stengel': "o caule", // nieuw, nalezen
@@ -2056,14 +2056,14 @@ const t: CultureTranslation = {
     's.plantcare.3': "O caule está partido.", // nieuw, nalezen
     'c.plantcare.q': "Que tomates apanho?", // nieuw, nalezen
     'c.plantcare.a': "Só os vermelhos. Os verdes ainda não estão maduros.", // nieuw, nalezen
-    'c.plantcare': "Mãos limpas, plantas saudáveis", // nieuw, nalezen
-    'c.plantcare.b': "As plantas também podem ficar doentes. Um vírus passa de planta para planta pelas mãos, luvas, facas e roupa. Numa estufa, uma planta doente pode querer dizer que milhares de plantas têm de ir fora. Por isso há regras rigorosas à porta: lava as mãos, veste a roupa de trabalho da empresa, e passa pelo banho de desinfeção para os pés. Muitas estufas não deixam trazer os teus próprios tomates, pimentos ou pepinos no almoço. Vês uma planta com um aspeto estranho? Não lhe toques. Diz ao teu chefe em que fila está. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.plantcare.p': "Há uma planta doente na fila doze.", // nieuw, nalezen
-    'c.plantcare.s': "Vês uma planta com manchas amarelas estranhas. O que fazes?", // nieuw, nalezen
-    'c.plantcare.o1': "Deixas a planta, e dizes ao teu chefe.", // nieuw, nalezen
-    'c.plantcare.o2': "Arrancas a planta e levas contigo.", // nieuw, nalezen
-    'c.plantcare.o3': "Cortas as folhas com manchas.", // nieuw, nalezen
-    'c.plantcare.w': "Quando tocas numa planta doente, o vírus vai contigo para as plantas seguintes. O teu chefe sabe como tirá-la em segurança.", // nieuw, nalezen
+    'c.plantcare': "Mãos limpas, plantas saudáveis", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.b': "As plantas também podem ficar doentes. Um vírus passa de planta para planta pelas mãos, luvas, facas e roupa. Numa estufa, uma planta doente pode querer dizer que milhares de plantas têm de ir fora. Por isso há regras rigorosas à porta: lava as mãos, veste a roupa de trabalho da empresa, e passa pelo banho de desinfeção para os pés. Muitas estufas não deixam trazer os teus próprios tomates, pimentos ou pepinos no almoço. Vês uma planta com um aspeto estranho? Não lhe toques. Diz ao teu chefe em que fila está. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.p': "Há uma planta doente na fila doze.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.s': "Vês uma planta com manchas amarelas estranhas. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.o1': "Deixas a planta, e dizes ao teu chefe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.o2': "Arrancas a planta e levas contigo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.o3': "Cortas as folhas com manchas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.w': "Quando tocas numa planta doente, o vírus vai contigo para as plantas seguintes. O teu chefe sabe como tirá-la em segurança.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.outdoors': "Trabalhar ao ar livre", // nieuw, nalezen
     'w.land': "o campo (onde as plantas crescem ao ar livre)", // nieuw, nalezen
     'w.regen': "a chuva", // nieuw, nalezen
@@ -2076,14 +2076,14 @@ const t: CultureTranslation = {
     's.outdoors.3': "Hoje o sol está forte.", // nieuw, nalezen
     'c.outdoors.q': "Vem aí trovoada. O que fazemos?", // nieuw, nalezen
     'c.outdoors.a': "Paramos e vamos para dentro.", // nieuw, nalezen
-    'c.outdoors': "Sol, chuva e trovoada", // nieuw, nalezen
-    'c.outdoors.b': "Lá fora, trabalhas com todo o tipo de tempo. Ao sol: tapa a cabeça e a pele, usa protetor solar, e bebe água muitas vezes. À chuva: veste o fato de chuva e as botas, e põe roupa seca na pausa. O molhado e o frio fazem-te adoecer e trabalhar mais devagar. Há trovoada? Então para e vai para dentro, ou para um carro ou uma carrinha. Não debaixo de uma árvore, nem num campo aberto. Precisas de roupa de chuva ou de botas para o trabalho? Pergunta ao teu empregador antes de as comprares tu.", // nieuw, nalezen
-    'c.outdoors.p': "Vai haver trovoada. Vamos para dentro?", // nieuw, nalezen
-    'c.outdoors.s': "Estás no campo. Ouves trovões perto. A tua fila está quase acabada. O que fazes?", // nieuw, nalezen
-    'c.outdoors.o1': "Paras, e vais para dentro ou para a carrinha.", // nieuw, nalezen
-    'c.outdoors.o2': "Primeiro acabas a fila depressa.", // nieuw, nalezen
-    'c.outdoors.o3': "Esperas debaixo da árvore grande.", // nieuw, nalezen
-    'c.outdoors.w': "O raio cai no ponto mais alto, e num campo plano esse ponto és tu. A fila pode esperar um quarto de hora.", // nieuw, nalezen
+    'c.outdoors': "Sol, chuva e trovoada", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.b': "Lá fora, trabalhas com todo o tipo de tempo. Ao sol: tapa a cabeça e a pele, usa protetor solar, e bebe água muitas vezes. À chuva: veste o fato de chuva e as botas, e põe roupa seca na pausa. O molhado e o frio fazem-te adoecer e trabalhar mais devagar. Há trovoada? Então para e vai para dentro, ou para um carro ou uma carrinha. Não debaixo de uma árvore, nem num campo aberto. Precisas de roupa de chuva ou de botas para o trabalho? Pergunta ao teu empregador antes de as comprares tu.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.p': "Vai haver trovoada. Vamos para dentro?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.s': "Estás no campo. Ouves trovões perto. A tua fila está quase acabada. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.o1': "Paras, e vais para dentro ou para a carrinha.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.o2': "Primeiro acabas a fila depressa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.o3': "Esperas debaixo da árvore grande.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.w': "O raio cai no ponto mais alto, e num campo plano esse ponto és tu. A fila pode esperar um quarto de hora.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.drawing': "O desenho e a medida", // nieuw, nalezen
     'w.tekening': "o desenho (mostra como a peça tem de ser)", // nieuw, nalezen
     'w.maat': "a medida", // nieuw, nalezen
@@ -2096,14 +2096,14 @@ const t: CultureTranslation = {
     's.drawing.3': "Tem dois milímetros a mais.", // nieuw, nalezen
     'c.drawing.q': "O parafuso encaixa?", // nieuw, nalezen
     'c.drawing.a': "Não. Vou medir mais uma vez.", // nieuw, nalezen
-    'c.drawing': "O desenho é que manda", // nieuw, nalezen
-    'c.drawing.b': "Numa oficina fazes o que diz o desenho, não o que parece mais ou menos bem. As medidas são em milímetros, e um milímetro pode ser demais. Uma peça não encaixa? Não faças força, e não alargues o furo \"só um bocadinho\". Mede outra vez, e olha para o desenho. Não consegues ler o desenho, ou falta uma medida? Pergunta antes de começares. Uma pergunta custa um minuto. Uma peça errada custa material e horas.", // nieuw, nalezen
-    'c.drawing.p': "Não consigo ler esta medida. Podes ver?", // nieuw, nalezen
-    'c.drawing.s': "Uma peça não encaixa: tem um milímetro a mais. Com um martelo, entrava. O que fazes?", // nieuw, nalezen
-    'c.drawing.o1': "Medes outra vez, e perguntas o que fazer.", // nieuw, nalezen
-    'c.drawing.o2': "Metes a peça à martelada.", // nieuw, nalezen
-    'c.drawing.o3': "Rebarbas um bocadinho, e não dizes nada.", // nieuw, nalezen
-    'c.drawing.w': "Uma peça que entra à força pode partir-se mais tarde, no cliente. Quando avisas, pode-se encontrar a causa.", // nieuw, nalezen
+    'c.drawing': "O desenho é que manda", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.b': "Numa oficina fazes o que diz o desenho, não o que parece mais ou menos bem. As medidas são em milímetros, e um milímetro pode ser demais. Uma peça não encaixa? Não faças força, e não alargues o furo \"só um bocadinho\". Mede outra vez, e olha para o desenho. Não consegues ler o desenho, ou falta uma medida? Pergunta antes de começares. Uma pergunta custa um minuto. Uma peça errada custa material e horas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.p': "Não consigo ler esta medida. Podes ver?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.s': "Uma peça não encaixa: tem um milímetro a mais. Com um martelo, entrava. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.o1': "Medes outra vez, e perguntas o que fazer.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.o2': "Metes a peça à martelada.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.o3': "Rebarbas um bocadinho, e não dizes nada.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.w': "Uma peça que entra à força pode partir-se mais tarde, no cliente. Quando avisas, pode-se encontrar a causa.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.weld': "Soldar e trabalho a quente", // nieuw, nalezen
     'w.lassen': "soldar (juntar metal com muito calor)", // nieuw, nalezen
     'w.laskap': "a máscara de soldar", // nieuw, nalezen
@@ -2116,14 +2116,14 @@ const t: CultureTranslation = {
     's.weld.3': "Cuidado, o metal ainda está quente.", // nieuw, nalezen
     'c.weld.q': "Já posso pegar nisto?", // nieuw, nalezen
     'c.weld.a': "Não, espera. Primeiro tem de arrefecer.", // nieuw, nalezen
-    'c.weld': "O metal quente parece frio", // nieuw, nalezen
-    'c.weld.b': "Soldar dá uma luz muito forte. Não olhes para ela sem máscara de soldar, nem de longe: os teus olhos podem queimar-se, e só o sentes horas depois. Um colega está a soldar perto de ti? Olha para outro lado, ou fica atrás do painel de proteção. O metal que acabou de ser soldado ou rebarbado parece normal, mas está muito quente. Não lhe pegues com as mãos sem luvas. O fumo da soldadura faz mal aos pulmões: liga a extração. Uma queimadura? Arrefece-a logo com água, durante pelo menos dez minutos, e avisa. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.weld.p': "Isto já arrefeceu?", // nieuw, nalezen
-    'c.weld.s': "Um colega está a soldar ao teu lado. Não tens máscara de soldar. O que fazes?", // nieuw, nalezen
-    'c.weld.o1': "Olhas para outro lado, e ficas atrás do painel de proteção.", // nieuw, nalezen
-    'c.weld.o2': "Ficas a ver um bocadinho: assim aprendes.", // nieuw, nalezen
-    'c.weld.o3': "Fechas os olhos até meio.", // nieuw, nalezen
-    'c.weld.w': "A luz da soldadura queima os olhos, também de lado e de longe. Só sentes a dor mais tarde, muitas vezes à noite.", // nieuw, nalezen
+    'c.weld': "O metal quente parece frio", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.b': "Soldar dá uma luz muito forte. Não olhes para ela sem máscara de soldar, nem de longe: os teus olhos podem queimar-se, e só o sentes horas depois. Um colega está a soldar perto de ti? Olha para outro lado, ou fica atrás do painel de proteção. O metal que acabou de ser soldado ou rebarbado parece normal, mas está muito quente. Não lhe pegues com as mãos sem luvas. O fumo da soldadura faz mal aos pulmões: liga a extração. Uma queimadura? Arrefece-a logo com água, durante pelo menos dez minutos, e avisa. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.p': "Isto já arrefeceu?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.s': "Um colega está a soldar ao teu lado. Não tens máscara de soldar. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.o1': "Olhas para outro lado, e ficas atrás do painel de proteção.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.o2': "Ficas a ver um bocadinho: assim aprendes.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.o3': "Fechas os olhos até meio.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.w': "A luz da soldadura queima os olhos, também de lado e de longe. Só sentes a dor mais tarde, muitas vezes à noite.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.carparts': "Peças do carro", // nieuw, nalezen
     'w.motor': "o motor", // nieuw, nalezen
     'w.motorkap': "o capô (a tampa por cima do motor)", // nieuw, nalezen
@@ -2136,14 +2136,14 @@ const t: CultureTranslation = {
     's.carparts.3': "Os travões fazem barulho.", // nieuw, nalezen
     'c.carparts.q': "O que ouves?", // nieuw, nalezen
     'c.carparts.a': "O motor faz um barulho estranho.", // nieuw, nalezen
-    'c.carparts': "O carro é do cliente", // nieuw, nalezen
-    'c.carparts.b': "Um carro na garagem não é teu: é do cliente. Põe uma capa no banco e no volante antes de entrares, e trabalha com as mãos limpas lá dentro. Deixa o banco, os espelhos e o rádio como estavam. Tiveste de mexer no banco? Põe-no como estava. Não toques nas coisas pessoais que estão no carro. Fizeste um risco ou uma mancha? Diz logo ao teu chefe. Um cliente que descobre isso em casa não volta.", // nieuw, nalezen
-    'c.carparts.p': "Fiz um risco. Peço desculpa.", // nieuw, nalezen
-    'c.carparts.s': "Fazes um pequeno risco na porta do carro de um cliente. Ninguém viu. O que fazes?", // nieuw, nalezen
-    'c.carparts.o1': "Dizes logo ao teu chefe.", // nieuw, nalezen
-    'c.carparts.o2': "Não dizes nada: é muito pequeno.", // nieuw, nalezen
-    'c.carparts.o3': "Esfregas com um pano, e esperas que saia.", // nieuw, nalezen
-    'c.carparts.w': "Todos se enganam de vez em quando. Uma garagem pode arranjar um risco, ou dizer a verdade ao cliente. Um risco escondido custa à garagem o seu bom nome.", // nieuw, nalezen
+    'c.carparts': "O carro é do cliente", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.b': "Um carro na garagem não é teu: é do cliente. Põe uma capa no banco e no volante antes de entrares, e trabalha com as mãos limpas lá dentro. Deixa o banco, os espelhos e o rádio como estavam. Tiveste de mexer no banco? Põe-no como estava. Não toques nas coisas pessoais que estão no carro. Fizeste um risco ou uma mancha? Diz logo ao teu chefe. Um cliente que descobre isso em casa não volta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.p': "Fiz um risco. Peço desculpa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.s': "Fazes um pequeno risco na porta do carro de um cliente. Ninguém viu. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.o1': "Dizes logo ao teu chefe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.o2': "Não dizes nada: é muito pequeno.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.o3': "Esfregas com um pano, e esperas que saia.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.w': "Todos se enganam de vez em quando. Uma garagem pode arranjar um risco, ou dizer a verdade ao cliente. Um risco escondido custa à garagem o seu bom nome.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.carsafe': "Gasolina, gás e corrente", // nieuw, nalezen
     'w.krik': "o macaco (levanta um lado do carro)", // nieuw, nalezen
     'w.benzine': "a gasolina", // nieuw, nalezen
@@ -2156,14 +2156,14 @@ const t: CultureTranslation = {
     's.carsafe.3': "Não toco nos cabos cor de laranja.", // nieuw, nalezen
     'c.carsafe.q': "Posso trabalhar neste carro?", // nieuw, nalezen
     'c.carsafe.a': "Ainda não. É um carro elétrico.", // nieuw, nalezen
-    'c.carsafe': "Cabos cor de laranja e motores a trabalhar", // nieuw, nalezen
-    'c.carsafe.b': "Um carro elétrico ou híbrido tem uma bateria com uma corrente muito forte. Os cabos dela são cor de laranja. Não lhes toques nem os desligues: primeiro um mecânico com formação especial tem de tornar o carro seguro. Há uma placa ou um cone junto ao carro? Então fica longe. Um motor a trabalhar num sítio fechado faz um gás que não se cheira nem se vê, e que pode matar. Por isso: liga a mangueira de escape, ou abre as portas. Cheira a gasolina? Nada de faíscas e nada de fumar. Diz logo ao teu chefe. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.carsafe.p': "Este carro já está seguro?", // nieuw, nalezen
-    'c.carsafe.s': "Tens de trocar uma roda num carro elétrico. Debaixo do carro vês um cabo cor de laranja solto. O que fazes?", // nieuw, nalezen
-    'c.carsafe.o1': "Não tocas em nada, e vais chamar o mecânico com formação.", // nieuw, nalezen
-    'c.carsafe.o2': "Empurras o cabo para o sítio com a mão.", // nieuw, nalezen
-    'c.carsafe.o3': "Empurras o cabo para o sítio com um pano seco.", // nieuw, nalezen
-    'c.carsafe.w': "A bateria de um carro elétrico tem corrente suficiente para matar, mesmo com o carro desligado. Só quem tem a formação pode tocar nestas peças.", // nieuw, nalezen
+    'c.carsafe': "Cabos cor de laranja e motores a trabalhar", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.b': "Um carro elétrico ou híbrido tem uma bateria com uma corrente muito forte. Os cabos dela são cor de laranja. Não lhes toques nem os desligues: primeiro um mecânico com formação especial tem de tornar o carro seguro. Há uma placa ou um cone junto ao carro? Então fica longe. Um motor a trabalhar num sítio fechado faz um gás que não se cheira nem se vê, e que pode matar. Por isso: liga a mangueira de escape, ou abre as portas. Cheira a gasolina? Nada de faíscas e nada de fumar. Diz logo ao teu chefe. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.p': "Este carro já está seguro?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.s': "Tens de trocar uma roda num carro elétrico. Debaixo do carro vês um cabo cor de laranja solto. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.o1': "Não tocas em nada, e vais chamar o mecânico com formação.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.o2': "Empurras o cabo para o sítio com a mão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.o3': "Empurras o cabo para o sítio com um pano seco.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.w': "A bateria de um carro elétrico tem corrente suficiente para matar, mesmo com o carro desligado. Só quem tem a formação pode tocar nestas peças.", // nieuw, nalezen // nagelezen AI 22 nov
     // Logistiek at four lessons per unit (14 November 2026).
     'l.vancheck': "Verificar a carrinha", // nieuw, nalezen
     'w.schade': "o dano", // nieuw, nalezen
@@ -2177,14 +2177,14 @@ const t: CultureTranslation = {
     's.vancheck.3': "Primeiro ainda tenho de abastecer.", // nieuw, nalezen
     'c.vancheck.q': "Está tudo bem com a carrinha de entregas?", // nieuw, nalezen
     'c.vancheck.a': "Não, o espelho está partido.", // nieuw, nalezen
-    'c.vancheck': "Olha antes de conduzir", // nieuw, nalezen
-    'c.vancheck.b': "Dá uma volta à carrinha antes da tua primeira volta de entregas. Vês uma amolgadela, um risco ou um espelho partido? Tira uma foto, e avisa antes de arrancares. Assim todos sabem que o dano já lá estava. Aconteceu alguma coisa durante a tua volta? Avisa no mesmo dia, também quando é pequeno. Esconder um dano dá problemas maiores mais tarde. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.vancheck.p': "A carrinha de entregas tem um dano. Aqui está uma foto.", // nieuw, nalezen
-    'c.vancheck.s': "De manhã vês uma amolgadela nova na carrinha. Não foste tu que a fizeste. O que fazes?", // nieuw, nalezen
-    'c.vancheck.o1': "Tiras uma foto, e avisas antes de conduzir.", // nieuw, nalezen
-    'c.vancheck.o2': "Não dizes nada: a amolgadela não é tua.", // nieuw, nalezen
-    'c.vancheck.o3': "Esperas para ver se alguém pergunta por ela.", // nieuw, nalezen
-    'c.vancheck.w': "Quando avisas antes de conduzir, ninguém pode pensar que foste tu. Uma foto com a hora é clara para todos.", // nieuw, nalezen
+    'c.vancheck': "Olha antes de conduzir", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.b': "Dá uma volta à carrinha antes da tua primeira volta de entregas. Vês uma amolgadela, um risco ou um espelho partido? Tira uma foto, e avisa antes de arrancares. Assim todos sabem que o dano já lá estava. Aconteceu alguma coisa durante a tua volta? Avisa no mesmo dia, também quando é pequeno. Esconder um dano dá problemas maiores mais tarde. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.p': "A carrinha de entregas tem um dano. Aqui está uma foto.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.s': "De manhã vês uma amolgadela nova na carrinha. Não foste tu que a fizeste. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.o1': "Tiras uma foto, e avisas antes de conduzir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.o2': "Não dizes nada: a amolgadela não é tua.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.o3': "Esperas para ver se alguém pergunta por ela.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.w': "Quando avisas antes de conduzir, ninguém pode pensar que foste tu. Uma foto com a hora é clara para todos.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.delay': "Atrasos na estrada", // nieuw, nalezen
     'w.file': "o engarrafamento", // nieuw, nalezen
     'w.vertraging': "o atraso (chegas mais tarde do que o previsto)", // nieuw, nalezen
@@ -2197,14 +2197,14 @@ const t: CultureTranslation = {
     's.delay.3': "Esta encomenda volta para trás.", // nieuw, nalezen
     'c.delay.q': "Onde estás agora?", // nieuw, nalezen
     'c.delay.a': "No desvio. Chego dez minutos mais tarde.", // nieuw, nalezen
-    'c.delay': "Vais chegar tarde? Diz a tempo", // nieuw, nalezen
-    'c.delay.b': "Um engarrafamento ou uma estrada cortada não é culpa tua. Mas diz ao planeador logo que saibas que vais chegar tarde. Assim o planeador pode avisar os clientes, ou mudar a rota. Para primeiro num sítio seguro: não ligues com o telemóvel na mão enquanto conduzes. E não conduzas mais depressa para recuperar o tempo. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.delay.p': "Estou num engarrafamento. Chego meia hora mais tarde.", // nieuw, nalezen
-    'c.delay.s': "Uma estrada está cortada. O desvio custa-te trinta minutos. O que fazes?", // nieuw, nalezen
-    'c.delay.o1': "Dizes ao planeador logo que possas parar em segurança.", // nieuw, nalezen
-    'c.delay.o2': "Conduzes mais depressa para recuperar o tempo.", // nieuw, nalezen
-    'c.delay.o3': "Não dizes nada: talvez ninguém repare.", // nieuw, nalezen
-    'c.delay.w': "Quando o planeador sabe cedo, os clientes ficam a saber e ninguém espera para nada. Conduzir mais depressa é perigoso, e quase não se ganha tempo.", // nieuw, nalezen
+    'c.delay': "Vais chegar tarde? Diz a tempo", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.b': "Um engarrafamento ou uma estrada cortada não é culpa tua. Mas diz ao planeador logo que saibas que vais chegar tarde. Assim o planeador pode avisar os clientes, ou mudar a rota. Para primeiro num sítio seguro: não ligues com o telemóvel na mão enquanto conduzes. E não conduzas mais depressa para recuperar o tempo. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.p': "Estou num engarrafamento. Chego meia hora mais tarde.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.s': "Uma estrada está cortada. O desvio custa-te trinta minutos. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.o1': "Dizes ao planeador logo que possas parar em segurança.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.o2': "Conduzes mais depressa para recuperar o tempo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.o3': "Não dizes nada: talvez ninguém repare.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.w': "Quando o planeador sabe cedo, os clientes ficam a saber e ninguém espera para nada. Conduzir mais depressa é perigoso, e quase não se ganha tempo.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Instructies", a new basis unit (u.do, 14 November 2026).
     'u.do': "Instruções", // nieuw, nalezen
     'l.putdown': "Põe isso ali", // nieuw, nalezen
@@ -2219,14 +2219,14 @@ const t: CultureTranslation = {
     's.putdown.3': "Segura isto um momento.", // nieuw, nalezen
     'c.putdown.q': "Podes segurar isto um momento?", // nieuw, nalezen
     'c.putdown.a': "Sim. Onde tenho de pôr isto?", // nieuw, nalezen
-    'c.putdown': "Diz que já o tens", // nieuw, nalezen
-    'c.putdown.b': "Levas alguma coisa com um colega, ou um colega passa-te uma coisa pesada? Diz \"Ik heb hem\" quando já seguras bem. Assim o teu colega sabe que pode largar sem perigo. Queres largar tu? Pergunta primeiro: \"Heb je hem?\" E espera pela resposta. Isto é normal em qualquer local de trabalho. Assim as coisas não caem em cima dos pés e das mãos.", // nieuw, nalezen
-    'c.putdown.p': "Já o tenho. Podes largar.", // nieuw, nalezen
-    'c.putdown.s': "Um colega passa-te uma caixa pesada. Ainda não a seguras bem. O que fazes?", // nieuw, nalezen
-    'c.putdown.o1': "Dizes \"wacht\", e primeiro seguras melhor.", // nieuw, nalezen
-    'c.putdown.o2': "Não dizes nada: ele vai ver.", // nieuw, nalezen
-    'c.putdown.o3': "Pegas nela depressa, para ele não esperar.", // nieuw, nalezen
-    'c.putdown.w': "O teu colega larga quando pensa que já a tens. Uma só palavra dá-te tempo para segurar bem.", // nieuw, nalezen
+    'c.putdown': "Diz que já o tens", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.b': "Levas alguma coisa com um colega, ou um colega passa-te uma coisa pesada? Diz \"Ik heb hem\" quando já seguras bem. Assim o teu colega sabe que pode largar sem perigo. Queres largar tu? Pergunta primeiro: \"Heb je hem?\" E espera pela resposta. Isto é normal em qualquer local de trabalho. Assim as coisas não caem em cima dos pés e das mãos.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.p': "Já o tenho. Podes largar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.s': "Um colega passa-te uma caixa pesada. Ainda não a seguras bem. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.o1': "Dizes \"wacht\", e primeiro seguras melhor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.o2': "Não dizes nada: ele vai ver.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.o3': "Pegas nela depressa, para ele não esperar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.w': "O teu colega larga quando pensa que já a tens. Uma só palavra dá-te tempo para segurar bem.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.onoff': "Ligado e desligado, aberto e fechado", // nieuw, nalezen
     'w.aanzetten': "ligar", // nieuw, nalezen
     'w.opendoen': "abrir", // nieuw, nalezen
@@ -2239,14 +2239,14 @@ const t: CultureTranslation = {
     's.onoff.3': "Para! Desliga isso.", // nieuw, nalezen
     'c.onoff.q': "A porta está fechada?", // nieuw, nalezen
     'c.onoff.a': "Não. Fecho-a agora.", // nieuw, nalezen
-    'c.onoff': "Stop quer dizer parar", // nieuw, nalezen
-    'c.onoff.b': "Alguém grita \"Stop!\"? Para logo, também quando não sabes porquê. Pergunta depois. Aqui, uma palavra curta e alta não é zanga: é assim que os colegas se protegem uns aos outros. Vês tu alguma coisa perigosa? Grita também \"Stop!\", também a alguém que trabalha aqui há anos. Ninguém acha isso estranho.", // nieuw, nalezen
-    'c.onoff.p': "Para! Espera um momento.", // nieuw, nalezen
-    'c.onoff.s': "Ligas uma máquina. Um colega grita \"Stop!\". Não vês nenhum problema. O que fazes?", // nieuw, nalezen
-    'c.onoff.o1': "Paras logo, e perguntas porquê depois.", // nieuw, nalezen
-    'c.onoff.o2': "Continuas: não vês nenhum problema.", // nieuw, nalezen
-    'c.onoff.o3': "Perguntas primeiro porque tens de parar.", // nieuw, nalezen
-    'c.onoff.w': "O teu colega pode ver uma coisa que tu não vês. Primeiro parar, depois falar: assim todos ficam em segurança.", // nieuw, nalezen
+    'c.onoff': "Stop quer dizer parar", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.b': "Alguém grita \"Stop!\"? Para logo, também quando não sabes porquê. Pergunta depois. Aqui, uma palavra curta e alta não é zanga: é assim que os colegas se protegem uns aos outros. Vês tu alguma coisa perigosa? Grita também \"Stop!\", também a alguém que trabalha aqui há anos. Ninguém acha isso estranho.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.p': "Para! Espera um momento.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.s': "Ligas uma máquina. Um colega grita \"Stop!\". Não vês nenhum problema. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.o1': "Paras logo, e perguntas porquê depois.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.o2': "Continuas: não vês nenhum problema.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.o3': "Perguntas primeiro porque tens de parar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.w': "O teu colega pode ver uma coisa que tu não vês. Primeiro parar, depois falar: assim todos ficam em segurança.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.fillempty': "Empurrar, puxar, encher", // nieuw, nalezen
     'w.duwen': "empurrar", // nieuw, nalezen
     'w.trekken': "puxar", // nieuw, nalezen
@@ -2259,14 +2259,14 @@ const t: CultureTranslation = {
     's.fillempty.3': "Limpa isto, por favor.", // nieuw, nalezen
     'c.fillempty.q': "Já está cheio?", // nieuw, nalezen
     'c.fillempty.a': "Sim. Vou esvaziá-lo.", // nieuw, nalezen
-    'c.fillempty': "Acabaste? Diz", // nieuw, nalezen
-    'c.fillempty.b': "Acabaste uma tarefa? Diz: \"Ik ben klaar.\" E pergunta o que podes fazer a seguir. Esperar em silêncio até alguém te ver pode parecer que não queres trabalhar, também quando isso não é verdade. Os colegas que pedem a tarefa seguinte recebem muitas vezes trabalho mais interessante passado algum tempo. Queres aprender uma coisa nova? Pergunta isso também: \"Mag ik dat ook leren?\"", // nieuw, nalezen
-    'c.fillempty.p': "Já acabei. O que posso fazer mais?", // nieuw, nalezen
-    'c.fillempty.s': "Acabaste a tua tarefa. O teu chefe está ocupado com outra coisa. O que fazes?", // nieuw, nalezen
-    'c.fillempty.o1': "Dizes que acabaste, e perguntas o que vem a seguir.", // nieuw, nalezen
-    'c.fillempty.o2': "Esperas até o teu chefe te ver.", // nieuw, nalezen
-    'c.fillempty.o3': "Fazes uma pausa: o teu trabalho está feito.", // nieuw, nalezen
-    'c.fillempty.w': "Um chefe não consegue ver tudo. Quando dizes que acabaste, o trabalho continua, e mostras que queres fazer mais.", // nieuw, nalezen
+    'c.fillempty': "Acabaste? Diz", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.b': "Acabaste uma tarefa? Diz: \"Ik ben klaar.\" E pergunta o que podes fazer a seguir. Esperar em silêncio até alguém te ver pode parecer que não queres trabalhar, também quando isso não é verdade. Os colegas que pedem a tarefa seguinte recebem muitas vezes trabalho mais interessante passado algum tempo. Queres aprender uma coisa nova? Pergunta isso também: \"Mag ik dat ook leren?\"", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.p': "Já acabei. O que posso fazer mais?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.s': "Acabaste a tua tarefa. O teu chefe está ocupado com outra coisa. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.o1': "Dizes que acabaste, e perguntas o que vem a seguir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.o2': "Esperas até o teu chefe te ver.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.o3': "Fazes uma pausa: o teu trabalho está feito.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.w': "Um chefe não consegue ver tudo. Quando dizes que acabaste, o trabalho continua, e mostras que queres fazer mais.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.order': "Primeiro isto, depois aquilo", // nieuw, nalezen
     'w.nu': "agora", // nieuw, nalezen
     'w.dan': "depois, a seguir", // nieuw, nalezen
@@ -2279,14 +2279,14 @@ const t: CultureTranslation = {
     's.order.3': "Faz isto sempre assim.", // nieuw, nalezen
     'c.order.q': "Podes fazer isto agora?", // nieuw, nalezen
     'c.order.a': "Sim. Primeiro isto, e depois?", // nieuw, nalezen
-    'c.order': "Muitas tarefas de uma vez? Pergunta qual é a primeira", // nieuw, nalezen
-    'c.order.b': "Às vezes recebes três tarefas numa só frase. Isso é difícil de lembrar, também para quem fala bem neerlandês. Pergunta qual é a primeira: \"Wat moet ik eerst doen?\" Também podes escrever as tarefas, ou contá-las pelos dedos e repeti-las. Esqueceste-te de uma? Volta atrás e pergunta. É melhor do que adivinhar.", // nieuw, nalezen
-    'c.order.p': "Isso é muito. O que tenho de fazer primeiro?", // nieuw, nalezen
-    'c.order.s': "O teu chefe dá-te três tarefas, muito depressa. Só te lembras da primeira. O que fazes?", // nieuw, nalezen
-    'c.order.o1': "Pedes logo para ouvir as tarefas mais uma vez.", // nieuw, nalezen
-    'c.order.o2': "Fazes a primeira, e esperas lembrar-te do resto.", // nieuw, nalezen
-    'c.order.o3': "Não fazes nada: não sabes as três.", // nieuw, nalezen
-    'c.order.w': "Perguntar logo custa dez segundos. Mais tarde o teu chefe pode já não estar lá, e então ficas à espera ou a adivinhar.", // nieuw, nalezen
+    'c.order': "Muitas tarefas de uma vez? Pergunta qual é a primeira", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.b': "Às vezes recebes três tarefas numa só frase. Isso é difícil de lembrar, também para quem fala bem neerlandês. Pergunta qual é a primeira: \"Wat moet ik eerst doen?\" Também podes escrever as tarefas, ou contá-las pelos dedos e repeti-las. Esqueceste-te de uma? Volta atrás e pergunta. É melhor do que adivinhar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.p': "Isso é muito. O que tenho de fazer primeiro?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.s': "O teu chefe dá-te três tarefas, muito depressa. Só te lembras da primeira. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.o1': "Pedes logo para ouvir as tarefas mais uma vez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.o2': "Fazes a primeira, e esperas lembrar-te do resto.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.o3': "Não fazes nada: não sabes as três.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.w': "Perguntar logo custa dez segundos. Mais tarde o teu chefe pode já não estar lá, e então ficas à espera ou a adivinhar.", // nieuw, nalezen // nagelezen AI 22 nov
     'u.afbouw': "Azulejos, estuque e pintura", // nieuw, nalezen
     'l.tiletools': "As ferramentas do ladrilhador", // nieuw, nalezen
     'w.lijmkam': "a talocha dentada (espalha o cimento-cola em sulcos)", // nieuw, nalezen
@@ -2300,14 +2300,14 @@ const t: CultureTranslation = {
     's.tiletools.3': "Mede primeiro com o metro articulado.", // nieuw, nalezen
     'c.tiletools.q': "Onde está o misturador?", // nieuw, nalezen
     'c.tiletools.a': "Ao pé do balde, ao lado da porta.", // nieuw, nalezen
-    'c.tiletools': "Limpa as ferramentas antes de o cimento-cola endurecer", // nieuw, nalezen
-    'c.tiletools.b': "O cimento-cola e o estuque endurecem depressa, também nas ferramentas. Por isso, limpa logo a talocha dentada, a colher e o misturador num balde de água, também antes da tua pausa. O cimento-cola duro já não sai, e uma talocha dentada com cimento-cola duro faz sulcos maus. Não deites a água suja num lava-loiça nem num ralo: fica entupido. Pergunta onde se pode deitar a água. O misturador: segura-o com as duas mãos, e liga-o devagar. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.tiletools.p': "Estou só a limpar a talocha dentada.", // nieuw, nalezen
-    'c.tiletools.s': "É a hora da tua pausa. A tua talocha dentada está cheia de cimento-cola fresco. O que fazes?", // nieuw, nalezen
-    'c.tiletools.o1': "Limpa-la em água, e depois fazes a pausa.", // nieuw, nalezen
-    'c.tiletools.o2': "Deixa-la assim: limpas depois do trabalho.", // nieuw, nalezen
-    'c.tiletools.o3': "Mete-la no balde do cimento-cola.", // nieuw, nalezen
-    'c.tiletools.w': "O cimento-cola também endurece durante a pausa. Uma talocha dentada limpa faz bons sulcos, e os azulejos colam bem. Com cimento-cola duro, limpá-la dá muito trabalho, ou precisas de uma ferramenta nova.", // nieuw, nalezen
+    'c.tiletools': "Limpa as ferramentas antes de o cimento-cola endurecer", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.b': "O cimento-cola e o estuque endurecem depressa, também nas ferramentas. Por isso, limpa logo a talocha dentada, a colher e o misturador num balde de água, também antes da tua pausa. O cimento-cola duro já não sai, e uma talocha dentada com cimento-cola duro faz sulcos maus. Não deites a água suja num lava-loiça nem num ralo: fica entupido. Pergunta onde se pode deitar a água. O misturador: segura-o com as duas mãos, e liga-o devagar. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.p': "Estou só a limpar a talocha dentada.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.s': "É a hora da tua pausa. A tua talocha dentada está cheia de cimento-cola fresco. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.o1': "Limpa-la em água, e depois fazes a pausa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.o2': "Deixa-la assim: limpas depois do trabalho.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.o3': "Mete-la no balde do cimento-cola.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.w': "O cimento-cola também endurece durante a pausa. Uma talocha dentada limpa faz bons sulcos, e os azulejos colam bem. Com cimento-cola duro, limpá-la dá muito trabalho, ou precisas de uma ferramenta nova.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.tiling': "Azulejos, cimento-cola e a linha central", // nieuw, nalezen
     'w.tegel': "o azulejo, o ladrilho", // nieuw, nalezen
     'w.tegellijm': "o cimento-cola (a cola para azulejos)", // nieuw, nalezen
@@ -2320,14 +2320,14 @@ const t: CultureTranslation = {
     's.tiling.3': "Primeiro risca a linha central com o lápis.", // nieuw, nalezen
     'c.tiling.q': "Por onde começo com os azulejos?", // nieuw, nalezen
     'c.tiling.a': "No meio, na linha central.", // nieuw, nalezen
-    'c.tiling': "Começa na linha central, com pouco cimento-cola", // nieuw, nalezen
-    'c.tiling.b': "Um ladrilhador não começa num canto. Primeiro riscas a linha central, com um lápis e o nível, e começas aí. Assim, os azulejos cortados nas duas pontas ficam do mesmo tamanho. Espalha só o cimento-cola que consegues cobrir com azulejos em pouco tempo. O cimento-cola que fica muito tempo parado ganha uma pele seca, e então os azulejos não colam bem. Põe uma cruzeta em cada cruzamento, para todas as juntas ficarem iguais. Verifica muitas vezes com o nível: um azulejo torto é fácil de corrigir agora, e difícil de corrigir amanhã.", // nieuw, nalezen
-    'c.tiling.p': "Não espalho cimento-cola demais de uma vez.", // nieuw, nalezen
-    'c.tiling.s': "Depois de uma chamada longa, o cimento-cola na parede tem uma pele seca. O que fazes?", // nieuw, nalezen
-    'c.tiling.o1': "Raspa-lo, e espalhas cimento-cola novo.", // nieuw, nalezen
-    'c.tiling.o2': "Assentas os azulejos nele na mesma.", // nieuw, nalezen
-    'c.tiling.o3': "Molha-lo com uma esponja, e continuas.", // nieuw, nalezen
-    'c.tiling.w': "Cimento-cola com uma pele seca não segura bem um azulejo. Mais tarde o azulejo pode descolar, e então é preciso fazer o trabalho outra vez.", // nieuw, nalezen
+    'c.tiling': "Começa na linha central, com pouco cimento-cola", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.b': "Um ladrilhador não começa num canto. Primeiro riscas a linha central, com um lápis e o nível, e começas aí. Assim, os azulejos cortados nas duas pontas ficam do mesmo tamanho. Espalha só o cimento-cola que consegues cobrir com azulejos em pouco tempo. O cimento-cola que fica muito tempo parado ganha uma pele seca, e então os azulejos não colam bem. Põe uma cruzeta em cada cruzamento, para todas as juntas ficarem iguais. Verifica muitas vezes com o nível: um azulejo torto é fácil de corrigir agora, e difícil de corrigir amanhã.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.p': "Não espalho cimento-cola demais de uma vez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.s': "Depois de uma chamada longa, o cimento-cola na parede tem uma pele seca. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.o1': "Raspa-lo, e espalhas cimento-cola novo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.o2': "Assentas os azulejos nele na mesma.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.o3': "Molha-lo com uma esponja, e continuas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.w': "Cimento-cola com uma pele seca não segura bem um azulejo. Mais tarde o azulejo pode descolar, e então é preciso fazer o trabalho outra vez.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.plaster': "Estucar", // nieuw, nalezen
     'w.stucspaan': "a talocha de aço (uma talocha plana para alisar o estuque)", // nieuw, nalezen
     'w.oplegspaan': "o porta-massa (uma tábua plana onde seguras o estuque)", // nieuw, nalezen
@@ -2340,14 +2340,14 @@ const t: CultureTranslation = {
     's.plaster.3': "Passa a régua pela parede.", // nieuw, nalezen
     'c.plaster.q': "A parede já está seca?", // nieuw, nalezen
     'c.plaster.a': "Não, espera mais um dia.", // nieuw, nalezen
-    'c.plaster': "O estuque precisa de tempo para secar", // nieuw, nalezen
-    'c.plaster.b': "O estuque novo fica molhado durante muito tempo. Uma parede molhada é mais escura do que uma seca. O pintor só pode começar quando a parede estiver seca em todo o lado, e isso pode levar dias ou semanas. Não seques mais depressa com um aquecedor: o estuque pode rachar. Alguém quer pintar cedo demais? Diz que a parede ainda não está seca. E antes de começares, tapa o chão, as janelas e as tomadas: o estuque é difícil de tirar.", // nieuw, nalezen
-    'c.plaster.p': "A parede ainda está molhada. Ainda não se pode pintar.", // nieuw, nalezen
-    'c.plaster.s': "O pintor quer começar amanhã. O estuque novo ainda tem manchas escuras. O que fazes?", // nieuw, nalezen
-    'c.plaster.o1': "Dizes ao pintor: a parede ainda não está seca.", // nieuw, nalezen
-    'c.plaster.o2': "Pões um aquecedor à frente dela esta noite.", // nieuw, nalezen
-    'c.plaster.o3': "Não dizes nada: o pintor vai ver.", // nieuw, nalezen
-    'c.plaster.w': "Manchas escuras querem dizer que o estuque ainda está molhado. A tinta numa parede molhada pode descolar, e um aquecedor pode fazer rachas. Esperar custa menos do que fazer tudo outra vez.", // nieuw, nalezen
+    'c.plaster': "O estuque precisa de tempo para secar", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.b': "O estuque novo fica molhado durante muito tempo. Uma parede molhada é mais escura do que uma seca. O pintor só pode começar quando a parede estiver seca em todo o lado, e isso pode levar dias ou semanas. Não seques mais depressa com um aquecedor: o estuque pode rachar. Alguém quer pintar cedo demais? Diz que a parede ainda não está seca. E antes de começares, tapa o chão, as janelas e as tomadas: o estuque é difícil de tirar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.p': "A parede ainda está molhada. Ainda não se pode pintar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.s': "O pintor quer começar amanhã. O estuque novo ainda tem manchas escuras. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.o1': "Dizes ao pintor: a parede ainda não está seca.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.o2': "Pões um aquecedor à frente dela esta noite.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.o3': "Não dizes nada: o pintor vai ver.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.w': "Manchas escuras querem dizer que o estuque ainda está molhado. A tinta numa parede molhada pode descolar, e um aquecedor pode fazer rachas. Esperar custa menos do que fazer tudo outra vez.", // nieuw, nalezen // nagelezen AI 22 nov
     // l.paint and l.prep (u.afbouw), "Metselen, hout en vastmaken" (u.ruwbouw), three lessons of Rekenen (u.numbers) and "Machines en gereedschap" (u.machines), 20-21 November 2026.
     'u.ruwbouw': "Tijolos, madeira e fixar", // nieuw, nalezen
     'u.machines': "Máquinas e ferramentas", // nieuw, nalezen
@@ -2363,14 +2363,14 @@ const t: CultureTranslation = {
     's.shapes.3': "Um tijolo tem a forma de um paralelepípedo.", // nieuw, nalezen
     'c.shapes.q': "É um quadrado?", // nieuw, nalezen
     'c.shapes.a': "Não, é um retângulo. É mais comprido do que largo.", // nieuw, nalezen
-    'c.shapes': "Verifica um retângulo com duas linhas em cruz", // nieuw, nalezen
-    'c.shapes.b': "Uma sala, um chão ou uma moldura é muitas vezes um retângulo. Mas os cantos estão mesmo em esquadro? Há uma maneira fácil de ver. Mede de um canto até ao canto do outro lado. Depois mede entre os outros dois cantos. As duas medidas são iguais? Então os cantos estão certos. Não são iguais? Então a forma está um pouco torta, e os azulejos ou o chão não vão encaixar bem. Diz ao teu chefe antes de começares.", // nieuw, nalezen
-    'c.shapes.p': "Estas duas medidas não são iguais.", // nieuw, nalezen
-    'c.shapes.s': "Medes um chão de canto a canto, nos dois sentidos. Uma medida é mais comprida. O que fazes?", // nieuw, nalezen
-    'c.shapes.o1': "Dizes ao teu chefe antes de começares.", // nieuw, nalezen
-    'c.shapes.o2': "Começas num canto, vai correr bem.", // nieuw, nalezen
-    'c.shapes.o3': "Medes outra vez só um lado.", // nieuw, nalezen
-    'c.shapes.w': "Duas medidas diferentes querem dizer que os cantos não estão em esquadro. Então os azulejos ou as tábuas não encaixam. É melhor saber isso antes de começares.", // nieuw, nalezen
+    'c.shapes': "Verifica um retângulo com duas linhas em cruz", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.b': "Uma sala, um chão ou uma moldura é muitas vezes um retângulo. Mas os cantos estão mesmo em esquadro? Há uma maneira fácil de ver. Mede de um canto até ao canto do outro lado. Depois mede entre os outros dois cantos. As duas medidas são iguais? Então os cantos estão certos. Não são iguais? Então a forma está um pouco torta, e os azulejos ou o chão não vão encaixar bem. Diz ao teu chefe antes de começares.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.p': "Estas duas medidas não são iguais.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.s': "Medes um chão de canto a canto, nos dois sentidos. Uma medida é mais comprida. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.o1': "Dizes ao teu chefe antes de começares.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.o2': "Começas num canto, vai correr bem.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.o3': "Medes outra vez só um lado.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.w': "Duas medidas diferentes querem dizer que os cantos não estão em esquadro. Então os azulejos ou as tábuas não encaixam. É melhor saber isso antes de começares.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.angles': "Ângulos e formas redondas", // nieuw, nalezen
     'w.hoek': "o ângulo", // nieuw, nalezen
     'w.graad': "o grau (°)", // nieuw, nalezen
@@ -2383,14 +2383,14 @@ const t: CultureTranslation = {
     's.angles.3': "O tubo tem a forma de um cilindro.", // nieuw, nalezen
     'c.angles.q': "Quantos graus tem este ângulo?", // nieuw, nalezen
     'c.angles.a': "Quarenta e cinco. Metade de um ângulo reto.", // nieuw, nalezen
-    'c.angles': "Verifica um canto grande com 3, 4 e 5", // nieuw, nalezen
-    'c.angles.b': "Numa obra, verificas muitas vezes um ângulo reto: uma parede num chão, um canto de uma sala. Um canto pequeno verificas com um esquadro ou com o esquadro com transferidor. Para um canto grande, há um truque antigo. Mede 3 metros ao longo de um lado e 4 metros ao longo do outro lado, e faz uma marca nos dois. De marca a marca dá exatamente 5 metros? Então o ângulo tem 90 graus. Mais pequeno também funciona: 30, 40 e 50 centímetros.", // nieuw, nalezen
-    'c.angles.p': "Este ângulo não está reto.", // nieuw, nalezen
-    'c.angles.s': "Tens de verificar um canto grande de uma parede nova. O teu esquadro é pequeno demais. O que fazes?", // nieuw, nalezen
-    'c.angles.o1': "Medes 3, 4 e 5 metros.", // nieuw, nalezen
-    'c.angles.o2': "Olhas para ele de longe.", // nieuw, nalezen
-    'c.angles.o3': "Usas o esquadro pequeno na mesma.", // nieuw, nalezen
-    'c.angles.w': "Com 3, 4 e 5 consegues verificar um canto grande com exatidão, só com uma fita métrica. A olho, um canto pode parecer certo e estar errado.", // nieuw, nalezen
+    'c.angles': "Verifica um canto grande com 3, 4 e 5", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.b': "Numa obra, verificas muitas vezes um ângulo reto: uma parede num chão, um canto de uma sala. Um canto pequeno verificas com um esquadro ou com o esquadro com transferidor. Para um canto grande, há um truque antigo. Mede 3 metros ao longo de um lado e 4 metros ao longo do outro lado, e faz uma marca nos dois. De marca a marca dá exatamente 5 metros? Então o ângulo tem 90 graus. Mais pequeno também funciona: 30, 40 e 50 centímetros.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.p': "Este ângulo não está reto.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.s': "Tens de verificar um canto grande de uma parede nova. O teu esquadro é pequeno demais. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.o1': "Medes 3, 4 e 5 metros.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.o2': "Olhas para ele de longe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.o3': "Usas o esquadro pequeno na mesma.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.w': "Com 3, 4 e 5 consegues verificar um canto grande com exatidão, só com uma fita métrica. A olho, um canto pode parecer certo e estar errado.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.size': "Comprimento, área e volume", // nieuw, nalezen
     'w.lengte': "o comprimento", // nieuw, nalezen
     'w.breedte': "a largura", // nieuw, nalezen
@@ -2403,14 +2403,14 @@ const t: CultureTranslation = {
     's.size.3': "Dez milímetros são um centímetro.", // nieuw, nalezen
     'c.size.q': "Quantos metros quadrados tem o chão?", // nieuw, nalezen
     'c.size.a': "Quatro por cinco metros, portanto vinte metros quadrados.", // nieuw, nalezen
-    'c.size': "Calcula o que precisas, e junta um pouco mais", // nieuw, nalezen
-    'c.size.b': "Quantos azulejos, quanta tinta, quanta areia? Calculas isso com a área ou com o volume. Área: o comprimento vezes a largura, em metros quadrados. Volume: o comprimento vezes a largura vezes a altura, em metros cúbicos. Mede tudo na mesma unidade: tudo em metros, ou tudo em centímetros. Escreve as medidas, não as guardes na cabeça. Depois junta um pouco mais, para os bocados cortados e para os erros. Não tens a certeza? Pede a um colega para verificar a tua conta.", // nieuw, nalezen
-    'c.size.p': "Eu escrevo as medidas.", // nieuw, nalezen
-    'c.size.s': "Mediste o chão. Tens de encomendar os azulejos hoje. O que fazes?", // nieuw, nalezen
-    'c.size.o1': "Calculas a área, e juntas um pouco mais.", // nieuw, nalezen
-    'c.size.o2': "Encomendas a área, nem mais um azulejo.", // nieuw, nalezen
-    'c.size.o3': "Adivinhas: já viste o chão.", // nieuw, nalezen
-    'c.size.w': "Há sempre azulejos que cortas, e alguns partem-se. Com um pouco a mais, não tens de parar a meio e encomendar outra vez.", // nieuw, nalezen
+    'c.size': "Calcula o que precisas, e junta um pouco mais", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.b': "Quantos azulejos, quanta tinta, quanta areia? Calculas isso com a área ou com o volume. Área: o comprimento vezes a largura, em metros quadrados. Volume: o comprimento vezes a largura vezes a altura, em metros cúbicos. Mede tudo na mesma unidade: tudo em metros, ou tudo em centímetros. Escreve as medidas, não as guardes na cabeça. Depois junta um pouco mais, para os bocados cortados e para os erros. Não tens a certeza? Pede a um colega para verificar a tua conta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.p': "Eu escrevo as medidas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.s': "Mediste o chão. Tens de encomendar os azulejos hoje. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.o1': "Calculas a área, e juntas um pouco mais.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.o2': "Encomendas a área, nem mais um azulejo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.o3': "Adivinhas: já viste o chão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.w': "Há sempre azulejos que cortas, e alguns partem-se. Com um pouco a mais, não tens de parar a meio e encomendar outra vez.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.paint': "Pintar", // nieuw, nalezen
     'w.verf': "a tinta", // nieuw, nalezen
     'w.kwast': "a trincha (um pincel largo)", // nieuw, nalezen
@@ -2423,14 +2423,14 @@ const t: CultureTranslation = {
     's.paint.3': "Põe um pouco de tinta no balde pequeno.", // nieuw, nalezen
     'c.paint.q': "Que pincel é que uso?", // nieuw, nalezen
     'c.paint.a': "A trincha larga para a parede, o pincel pequeno para os cantos.", // nieuw, nalezen
-    'c.paint': "Mexe bem, e pinta de cima para baixo", // nieuw, nalezen
-    'c.paint.b': "A tinta que esteve parada algum tempo fica grossa no fundo da lata. Por isso, primeiro mexe-a bem, com um pau de mexer, até a cor ser igual em todo o lado. Não pintes da lata grande: põe um pouco de tinta no balde pequeno, e fecha outra vez a lata. Assim a tinta fica boa. Pinta de cima para baixo: assim os pingos caem em tinta molhada e ainda os consegues espalhar. Usa a trincha larga para a parede e o pincel pequeno para os cantos. No fim, limpa logo os pincéis.", // nieuw, nalezen
-    'c.paint.p': "Primeiro mexo bem a tinta.", // nieuw, nalezen
-    'c.paint.s': "Abres uma lata de tinta velha. Em cima está líquida, no fundo está grossa. O que fazes?", // nieuw, nalezen
-    'c.paint.o1': "Primeiro mexes bem, com o pau.", // nieuw, nalezen
-    'c.paint.o2': "Pintas com a tinta líquida de cima.", // nieuw, nalezen
-    'c.paint.o3': "Juntas água até ficar líquida em todo o lado.", // nieuw, nalezen
-    'c.paint.w': "Parte da cor fica no fundo da lata. Sem mexer, a parede fica com manchas e riscas.", // nieuw, nalezen
+    'c.paint': "Mexe bem, e pinta de cima para baixo", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.b': "A tinta que esteve parada algum tempo fica grossa no fundo da lata. Por isso, primeiro mexe-a bem, com um pau de mexer, até a cor ser igual em todo o lado. Não pintes da lata grande: põe um pouco de tinta no balde pequeno, e fecha outra vez a lata. Assim a tinta fica boa. Pinta de cima para baixo: assim os pingos caem em tinta molhada e ainda os consegues espalhar. Usa a trincha larga para a parede e o pincel pequeno para os cantos. No fim, limpa logo os pincéis.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.p': "Primeiro mexo bem a tinta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.s': "Abres uma lata de tinta velha. Em cima está líquida, no fundo está grossa. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.o1': "Primeiro mexes bem, com o pau.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.o2': "Pintas com a tinta líquida de cima.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.o3': "Juntas água até ficar líquida em todo o lado.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.w': "Parte da cor fica no fundo da lata. Sem mexer, a parede fica com manchas e riscas.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.prep': "Preparar para pintar", // nieuw, nalezen
     'w.plamuurmes': "a espátula de massa (para tapar buracos)", // nieuw, nalezen
     'w.schuurpapier': "a lixa", // nieuw, nalezen
@@ -2443,14 +2443,14 @@ const t: CultureTranslation = {
     's.prep.3': "Varre o pó com a escova pequena.", // nieuw, nalezen
     'c.prep.q': "Já posso pintar?", // nieuw, nalezen
     'c.prep.a': "Não, primeiro lixar e tapar o buraco.", // nieuw, nalezen
-    'c.prep': "Uma boa pintura começa antes da tinta", // nieuw, nalezen
-    'c.prep.b': "A tinta não pega bem em sujidade, pó ou tinta velha solta. Por isso, primeiro raspa a tinta solta com o raspador. Tapa os buracos com massa e a espátula, e deixa a massa secar. Depois lixa até ficar liso. Depois de lixar, varre o pó com a escova pequena, também das bordas. Por fim, protege com fita o que tem de ficar limpo, como janelas e tomadas. Lixar faz um pó fino: usa uma máscara contra o pó, e pergunta qual. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.prep.p': "Primeiro lixar, depois pintar.", // nieuw, nalezen
-    'c.prep.s': "Lixaste a porta. Ainda tem pó. O teu colega quer pintar já. O que fazes?", // nieuw, nalezen
-    'c.prep.o1': "Primeiro tiras o pó, com a escova.", // nieuw, nalezen
-    'c.prep.o2': "Deixas o colega pintar: a tinta tapa o pó.", // nieuw, nalezen
-    'c.prep.o3': "Limpas o pó com a mão.", // nieuw, nalezen
-    'c.prep.w': "A tinta em cima do pó não pega bem. Mais tarde sai em lascas, e então é preciso fazer o trabalho todo outra vez.", // nieuw, nalezen
+    'c.prep': "Uma boa pintura começa antes da tinta", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.b': "A tinta não pega bem em sujidade, pó ou tinta velha solta. Por isso, primeiro raspa a tinta solta com o raspador. Tapa os buracos com massa e a espátula, e deixa a massa secar. Depois lixa até ficar liso. Depois de lixar, varre o pó com a escova pequena, também das bordas. Por fim, protege com fita o que tem de ficar limpo, como janelas e tomadas. Lixar faz um pó fino: usa uma máscara contra o pó, e pergunta qual. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.p': "Primeiro lixar, depois pintar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.s': "Lixaste a porta. Ainda tem pó. O teu colega quer pintar já. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.o1': "Primeiro tiras o pó, com a escova.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.o2': "Deixas o colega pintar: a tinta tapa o pó.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.o3': "Limpas o pó com a mão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.w': "A tinta em cima do pó não pega bem. Mais tarde sai em lascas, e então é preciso fazer o trabalho todo outra vez.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.brick': "Assentar tijolo", // nieuw, nalezen
     'w.speciekuip': "a masseira (o recipiente da argamassa)", // nieuw, nalezen
     'w.metseltroffel': "a colher de pedreiro (para assentar tijolos)", // nieuw, nalezen
@@ -2463,14 +2463,14 @@ const t: CultureTranslation = {
     's.brick.3': "Limpa a parede com a escova de mão.", // nieuw, nalezen
     'c.brick.q': "Quantos tijolos ainda tens?", // nieuw, nalezen
     'c.brick.a': "Mais uma palete. Chega para hoje.", // nieuw, nalezen
-    'c.brick': "Mantém a parede limpa enquanto trabalhas", // nieuw, nalezen
-    'c.brick.b': "A argamassa está molhada quando assentas os tijolos, e endurece em poucas horas. Por isso, trabalha limpo. Raspa logo com a colher a argamassa que sai da junta. Alisa as juntas com o ferro de juntas quando a argamassa já está um pouco firme, não quando ainda está molhada. Depois passa a escova de mão pela parede. A argamassa dura na frente de um tijolo é muito difícil de tirar. No fim do dia, tapa o cimo da parede, para a chuva não lavar a argamassa.", // nieuw, nalezen
-    'c.brick.p': "Estou a alisar as juntas.", // nieuw, nalezen
-    'c.brick.s': "No fim do dia, há argamassa na frente dos tijolos. O que fazes?", // nieuw, nalezen
-    'c.brick.o1': "Tiras com a escova agora, antes de endurecer.", // nieuw, nalezen
-    'c.brick.o2': "Deixas estar: limpas na próxima semana.", // nieuw, nalezen
-    'c.brick.o3': "Lavas a parede com muita água.", // nieuw, nalezen
-    'c.brick.w': "A argamassa fresca sai bem com uma escova. A argamassa dura fica no tijolo, e então a parede não fica bonita.", // nieuw, nalezen
+    'c.brick': "Mantém a parede limpa enquanto trabalhas", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.b': "A argamassa está molhada quando assentas os tijolos, e endurece em poucas horas. Por isso, trabalha limpo. Raspa logo com a colher a argamassa que sai da junta. Alisa as juntas com o ferro de juntas quando a argamassa já está um pouco firme, não quando ainda está molhada. Depois passa a escova de mão pela parede. A argamassa dura na frente de um tijolo é muito difícil de tirar. No fim do dia, tapa o cimo da parede, para a chuva não lavar a argamassa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.p': "Estou a alisar as juntas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.s': "No fim do dia, há argamassa na frente dos tijolos. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.o1': "Tiras com a escova agora, antes de endurecer.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.o2': "Deixas estar: limpas na próxima semana.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.o3': "Lavas a parede com muita água.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.w': "A argamassa fresca sai bem com uma escova. A argamassa dura fica no tijolo, e então a parede não fica bonita.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.wall': "Uma parede direita", // nieuw, nalezen
     'w.metseltouw': "a linha de pedreiro (um fio para uma fiada direita)", // nieuw, nalezen
     'w.klos': "o bloco da linha (segura o fio na esquina)", // nieuw, nalezen
@@ -2483,14 +2483,14 @@ const t: CultureTranslation = {
     's.wall.3': "Assenta o tijolo com o lado comprido para fora.", // nieuw, nalezen
     'c.wall.q': "Que altura tem de ter esta fiada?", // nieuw, nalezen
     'c.wall.a': "Olha para a régua de fiadas.", // nieuw, nalezen
-    'c.wall': "A linha mantém a parede direita", // nieuw, nalezen
-    'c.wall.b': "Um pedreiro não constrói a olho. Primeiro, os perfis de canto ficam direitos nas duas pontas da parede. Entre eles esticas bem a linha de pedreiro, à altura da fiada seguinte. Assenta cada tijolo ao longo da linha, mas não empurres a linha. A régua de fiadas mostra a altura de cada fiada. Verifica muitas vezes com o nível. Um tijolo torto é fácil de corrigir enquanto a argamassa está molhada, e muito difícil de corrigir amanhã.", // nieuw, nalezen
-    'c.wall.p': "A linha de pedreiro está bem esticada?", // nieuw, nalezen
-    'c.wall.s': "A linha de pedreiro está solta e descai um pouco no meio. O que fazes?", // nieuw, nalezen
-    'c.wall.o1': "Primeiro esticas a linha, depois continuas.", // nieuw, nalezen
-    'c.wall.o2': "Assentas os tijolos por baixo dela na mesma.", // nieuw, nalezen
-    'c.wall.o3': "Assentas os tijolos a olho.", // nieuw, nalezen
-    'c.wall.w': "Uma linha solta descai no meio, por isso a fiada também descai. Uma linha bem esticada dá uma fiada direita.", // nieuw, nalezen
+    'c.wall': "A linha mantém a parede direita", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.b': "Um pedreiro não constrói a olho. Primeiro, os perfis de canto ficam direitos nas duas pontas da parede. Entre eles esticas bem a linha de pedreiro, à altura da fiada seguinte. Assenta cada tijolo ao longo da linha, mas não empurres a linha. A régua de fiadas mostra a altura de cada fiada. Verifica muitas vezes com o nível. Um tijolo torto é fácil de corrigir enquanto a argamassa está molhada, e muito difícil de corrigir amanhã.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.p': "A linha de pedreiro está bem esticada?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.s': "A linha de pedreiro está solta e descai um pouco no meio. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.o1': "Primeiro esticas a linha, depois continuas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.o2': "Assentas os tijolos por baixo dela na mesma.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.o3': "Assentas os tijolos a olho.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.w': "Uma linha solta descai no meio, por isso a fiada também descai. Uma linha bem esticada dá uma fiada direita.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.wood': "Trabalhar com madeira", // nieuw, nalezen
     'w.handzaag': "o serrote", // nieuw, nalezen
     'w.kapzaag': "o serrote de costas (um serrote pequeno com as costas rígidas)", // nieuw, nalezen
@@ -2503,14 +2503,14 @@ const t: CultureTranslation = {
     's.wood.3': "Bate no formão com o maço.", // nieuw, nalezen
     'c.wood.q': "De que serrote preciso?", // nieuw, nalezen
     'c.wood.a': "O serrote de costas, para esta peça pequena.", // nieuw, nalezen
-    'c.wood': "Curto demais não tem conserto", // nieuw, nalezen
-    'c.wood.b': "A madeira serrada curta demais não volta a ficar comprida. Por isso, mede duas vezes, e risca a linha antes de serrar. Serra ao lado da linha, do lado da peça de que não precisas. Segura bem a madeira: numa bancada ou com um grampo, não no teu joelho. Deixa o serrote fazer o trabalho, com movimentos longos e calmos. Empurra o formão para longe do teu corpo e da tua outra mão. E mantém o formão e a plaina afiados: uma ferramenta sem fio escorrega mais facilmente.", // nieuw, nalezen
-    'c.wood.p': "Vou medir mais uma vez.", // nieuw, nalezen
-    'c.wood.s': "Tens de serrar uma tábua à medida. Mediste uma vez, depressa. O que fazes?", // nieuw, nalezen
-    'c.wood.o1': "Medes outra vez, e depois riscas a linha.", // nieuw, nalezen
-    'c.wood.o2': "Serras já: deve estar certo.", // nieuw, nalezen
-    'c.wood.o3': "Serras a olho, sem linha.", // nieuw, nalezen
-    'c.wood.w': "Comprido demais, podes serrar outra vez. Curto demais, já não tem conserto. Medir outra vez demora um minuto; uma tábua nova custa muito mais.", // nieuw, nalezen
+    'c.wood': "Curto demais não tem conserto", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.b': "A madeira serrada curta demais não volta a ficar comprida. Por isso, mede duas vezes, e risca a linha antes de serrar. Serra ao lado da linha, do lado da peça de que não precisas. Segura bem a madeira: numa bancada ou com um grampo, não no teu joelho. Deixa o serrote fazer o trabalho, com movimentos longos e calmos. Empurra o formão para longe do teu corpo e da tua outra mão. E mantém o formão e a plaina afiados: uma ferramenta sem fio escorrega mais facilmente.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.p': "Vou medir mais uma vez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.s': "Tens de serrar uma tábua à medida. Mediste uma vez, depressa. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.o1': "Medes outra vez, e depois riscas a linha.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.o2': "Serras já: deve estar certo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.o3': "Serras a olho, sem linha.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.w': "Comprido demais, podes serrar outra vez. Curto demais, já não tem conserto. Medir outra vez demora um minuto; uma tábua nova custa muito mais.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.square': "Marcar", // nieuw, nalezen
     'w.winkelhaak': "o esquadro (mostra um ângulo reto)", // nieuw, nalezen
     'w.verstekhaak': "o esquadro de meia-esquadria (45 graus)", // nieuw, nalezen
@@ -2523,14 +2523,14 @@ const t: CultureTranslation = {
     's.square.3': "Desenha um círculo com o compasso.", // nieuw, nalezen
     'c.square.q': "O ângulo está reto?", // nieuw, nalezen
     'c.square.a': "Sim, o esquadro encaixa certinho.", // nieuw, nalezen
-    'c.square': "Marca a partir de uma borda direita", // nieuw, nalezen
-    'c.square.b': "Antes de serrar ou furar, marcas onde. Usa um lápis afiado: uma linha grossa não é exata. Escolhe uma borda direita da madeira, e mede tudo a partir dessa borda. Encosta bem a parte grossa do esquadro a essa borda, e risca a linha ao longo do aço. Faz uma pequena cruz na peça que não vais usar. Depois serras ao lado da linha, do lado da cruz.", // nieuw, nalezen
-    'c.square.p': "Primeiro vou marcar.", // nieuw, nalezen
-    'c.square.s': "O teu lápis não tem bico e faz uma linha grossa. Queres marcar uma tábua. O que fazes?", // nieuw, nalezen
-    'c.square.o1': "Primeiro afias o lápis, depois riscas.", // nieuw, nalezen
-    'c.square.o2': "Riscas a linha na mesma, não faz mal.", // nieuw, nalezen
-    'c.square.o3': "Marcas com a unha.", // nieuw, nalezen
-    'c.square.w': "Uma linha grossa tem alguns milímetros de largura. Então não sabes onde serrar, e a peça não fica exata.", // nieuw, nalezen
+    'c.square': "Marca a partir de uma borda direita", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.b': "Antes de serrar ou furar, marcas onde. Usa um lápis afiado: uma linha grossa não é exata. Escolhe uma borda direita da madeira, e mede tudo a partir dessa borda. Encosta bem a parte grossa do esquadro a essa borda, e risca a linha ao longo do aço. Faz uma pequena cruz na peça que não vais usar. Depois serras ao lado da linha, do lado da cruz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.p': "Primeiro vou marcar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.s': "O teu lápis não tem bico e faz uma linha grossa. Queres marcar uma tábua. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.o1': "Primeiro afias o lápis, depois riscas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.o2': "Riscas a linha na mesma, não faz mal.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.o3': "Marcas com a unha.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.w': "Uma linha grossa tem alguns milímetros de largura. Então não sabes onde serrar, e a peça não fica exata.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.screw': "Berbequins e parafusos", // nieuw, nalezen
     'w.accuboor': "o berbequim sem fio (com bateria)", // nieuw, nalezen
     'w.boormachine': "o berbequim elétrico (com cabo)", // nieuw, nalezen
@@ -2543,14 +2543,14 @@ const t: CultureTranslation = {
     's.screw.3': "Bate o prego na madeira com o martelo.", // nieuw, nalezen
     'c.screw.q': "Onde está o berbequim sem fio?", // nieuw, nalezen
     'c.screw.a': "No carregador, está quase cheio.", // nieuw, nalezen
-    'c.screw': "Olha antes de furar", // nieuw, nalezen
-    'c.screw.b': "Antes de furar uma parede, pensa no que está por trás. Os canos e os cabos passam muitas vezes a direito para cima, para baixo ou para o lado a partir de uma tomada ou de um interruptor. Pergunta onde estão, ou verifica com um detetor. Escolhe uma broca do mesmo tamanho da bucha, e faz o furo um pouco mais fundo do que a bucha. Usa a ponta certa para o parafuso: uma ponta errada escorrega e estraga a cabeça do parafuso. Usa óculos de proteção quando furas.", // nieuw, nalezen
-    'c.screw.p': "Posso furar aqui?", // nieuw, nalezen
-    'c.screw.s': "Tens de fazer um furo mesmo por cima de uma tomada. O que fazes?", // nieuw, nalezen
-    'c.screw.o1': "Primeiro perguntas por onde passa o cabo.", // nieuw, nalezen
-    'c.screw.o2': "Furas: nunca há lá um cabo.", // nieuw, nalezen
-    'c.screw.o3': "Furas devagar, assim é seguro.", // nieuw, nalezen
-    'c.screw.w': "Muitas vezes um cabo sobe a direito a partir de uma tomada. Furar o cabo é perigoso, e a reparação dá muito trabalho.", // nieuw, nalezen
+    'c.screw': "Olha antes de furar", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.b': "Antes de furar uma parede, pensa no que está por trás. Os canos e os cabos passam muitas vezes a direito para cima, para baixo ou para o lado a partir de uma tomada ou de um interruptor. Pergunta onde estão, ou verifica com um detetor. Escolhe uma broca do mesmo tamanho da bucha, e faz o furo um pouco mais fundo do que a bucha. Usa a ponta certa para o parafuso: uma ponta errada escorrega e estraga a cabeça do parafuso. Usa óculos de proteção quando furas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.p': "Posso furar aqui?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.s': "Tens de fazer um furo mesmo por cima de uma tomada. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.o1': "Primeiro perguntas por onde passa o cabo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.o2': "Furas: nunca há lá um cabo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.o3': "Furas devagar, assim é seguro.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.w': "Muitas vezes um cabo sobe a direito a partir de uma tomada. Furar o cabo é perigoso, e a reparação dá muito trabalho.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.fix': "Fixar coisas", // nieuw, nalezen
     'w.bevestigen': "fixar (prender bem uma coisa a uma parede)", // nieuw, nalezen
     'w.vastzetten': "apertar (rodar até ficar apertado)", // nieuw, nalezen
@@ -2563,14 +2563,14 @@ const t: CultureTranslation = {
     's.fix.3': "Pega na chave de fendas plana, não na de estrela.", // nieuw, nalezen
     'c.fix.q': "Como é que fixo esta prateleira?", // nieuw, nalezen
     'c.fix.a': "Com duas buchas e dois parafusos.", // nieuw, nalezen
-    'c.fix': "Apertado, mas não demais", // nieuw, nalezen
-    'c.fix.b': "Um parafuso tem de ficar apertado, mas não demais. Se rodares com muita força, a rosca parte-se ou a madeira racha. Roda até não mexer mais, e depois para. No berbequim sem fio, primeiro roda o anel com os números para um número baixo. Uma prateleira na parede precisa de buchas que sirvam para essa parede: a pedra precisa de outras buchas do que uma parede fina de placas. A cola precisa de tempo: aperta as peças uma contra a outra, segura-as com um grampo, e espera até a cola estar seca.", // nieuw, nalezen
-    'c.fix.p': "A prateleira está bem fixa?", // nieuw, nalezen
-    'c.fix.s': "Colaste duas peças de madeira. O teu colega quer usá-las já. O que fazes?", // nieuw, nalezen
-    'c.fix.o1': "Dizes: primeiro a cola tem de secar.", // nieuw, nalezen
-    'c.fix.o2': "Deixas o colega usar: a cola é rápida.", // nieuw, nalezen
-    'c.fix.o3': "Seguras as peças nas mãos durante um minuto.", // nieuw, nalezen
-    'c.fix.w': "A cola molhada ainda não segura. Se usares cedo demais, as peças soltam-se outra vez. Então tens de começar de novo.", // nieuw, nalezen
+    'c.fix': "Apertado, mas não demais", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.b': "Um parafuso tem de ficar apertado, mas não demais. Se rodares com muita força, a rosca parte-se ou a madeira racha. Roda até não mexer mais, e depois para. No berbequim sem fio, primeiro roda o anel com os números para um número baixo. Uma prateleira na parede precisa de buchas que sirvam para essa parede: a pedra precisa de outras buchas do que uma parede fina de placas. A cola precisa de tempo: aperta as peças uma contra a outra, segura-as com um grampo, e espera até a cola estar seca.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.p': "A prateleira está bem fixa?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.s': "Colaste duas peças de madeira. O teu colega quer usá-las já. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.o1': "Dizes: primeiro a cola tem de secar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.o2': "Deixas o colega usar: a cola é rápida.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.o3': "Seguras as peças nas mãos durante um minuto.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.w': "A cola molhada ainda não segura. Se usares cedo demais, as peças soltam-se outra vez. Então tens de começar de novo.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.atmachine': "Na máquina", // nieuw, nalezen
     'w.bedieningspaneel': "o painel de comando (os botões e o ecrã de uma máquina)", // nieuw, nalezen
     'w.startknop': "o botão de arranque (verde)", // nieuw, nalezen
@@ -2583,14 +2583,14 @@ const t: CultureTranslation = {
     's.atmachine.3': "Nunca tires a proteção da máquina.", // nieuw, nalezen
     'c.atmachine.q': "Porque é que a máquina está sempre a parar?", // nieuw, nalezen
     'c.atmachine.a': "O sensor não vê bem a caixa.", // nieuw, nalezen
-    'c.atmachine': "A proteção fica no lugar", // nieuw, nalezen
-    'c.atmachine.b': "As peças de uma máquina que se mexem podem puxar uma mão, uma manga ou o cabelo em menos de um segundo. A proteção está lá para isso. Nunca a tires, e nunca metas a mão por trás dela com a máquina a trabalhar. Uma proteção ou um sensor não funciona? Então a máquina não é segura: para a máquina e avisa o teu chefe de equipa. Ficou alguma coisa presa? Primeiro para a máquina, e garante que ninguém a pode ligar enquanto trabalhas. Como se faz isso é diferente em cada empresa: pede a explicação antes de começares. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.atmachine.p': "A proteção da máquina está partida.", // nieuw, nalezen
-    'c.atmachine.s': "Uma caixa ficou presa na máquina, mesmo atrás da proteção. A máquina está a trabalhar. O que fazes?", // nieuw, nalezen
-    'c.atmachine.o1': "Primeiro paras a máquina, depois vais buscar ajuda.", // nieuw, nalezen
-    'c.atmachine.o2': "Metes a mão depressa e puxas a caixa.", // nieuw, nalezen
-    'c.atmachine.o3': "Abres a proteção com a máquina a trabalhar.", // nieuw, nalezen
-    'c.atmachine.w': "Uma máquina a trabalhar pode puxar a tua mão antes de conseguires reagir. Parar a máquina demora um momento; uma mão ferida demora meses.", // nieuw, nalezen
+    'c.atmachine': "A proteção fica no lugar", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.b': "As peças de uma máquina que se mexem podem puxar uma mão, uma manga ou o cabelo em menos de um segundo. A proteção está lá para isso. Nunca a tires, e nunca metas a mão por trás dela com a máquina a trabalhar. Uma proteção ou um sensor não funciona? Então a máquina não é segura: para a máquina e avisa o teu chefe de equipa. Ficou alguma coisa presa? Primeiro para a máquina, e garante que ninguém a pode ligar enquanto trabalhas. Como se faz isso é diferente em cada empresa: pede a explicação antes de começares. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.p': "A proteção da máquina está partida.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.s': "Uma caixa ficou presa na máquina, mesmo atrás da proteção. A máquina está a trabalhar. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.o1': "Primeiro paras a máquina, depois vais buscar ajuda.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.o2': "Metes a mão depressa e puxas a caixa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.o3': "Abres a proteção com a máquina a trabalhar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.w': "Uma máquina a trabalhar pode puxar a tua mão antes de conseguires reagir. Parar a máquina demora um momento; uma mão ferida demora meses.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.inspect': "Medir e verificar", // nieuw, nalezen
     'w.weegschaal': "a balança", // nieuw, nalezen
     'w.meetklok': "o comparador (mede diferenças muito pequenas)", // nieuw, nalezen
@@ -2603,14 +2603,14 @@ const t: CultureTranslation = {
     's.inspect.3': "Olho para a etiqueta com a lupa.", // nieuw, nalezen
     'c.inspect.q': "De quanto em quanto tempo tiro uma amostra?", // nieuw, nalezen
     'c.inspect.a': "Uma por hora. Escreve na lista.", // nieuw, nalezen
-    'c.inspect': "Escreve o que verificas", // nieuw, nalezen
-    'c.inspect.b': "Numa fábrica verificas os produtos durante o trabalho: pesas, medes, ou olhas para eles com atenção. Escreve logo cada verificação na lista, com a hora. Não mais tarde, de memória. Um produto não está bem? Põe-no na caixa dos rejeitados e olha com atenção para os seguintes. Há mais produtos errados? Então há alguma coisa errada com a máquina. Avisa logo o teu chefe de equipa. Um problema encontrado cedo poupa muitos produtos. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.inspect.p': "Há mais produtos errados.", // nieuw, nalezen
-    'c.inspect.s': "A balança mostra que três produtos seguidos são leves demais. O que fazes?", // nieuw, nalezen
-    'c.inspect.o1': "Avisas logo o teu chefe de equipa.", // nieuw, nalezen
-    'c.inspect.o2': "Pões os produtos outra vez na linha.", // nieuw, nalezen
-    'c.inspect.o3': "Não dizes nada: acontece.", // nieuw, nalezen
-    'c.inspect.w': "Três produtos errados seguidos mostram um problema na máquina. Quanto mais cedo avisares, menos produtos vão para o lixo.", // nieuw, nalezen
+    'c.inspect': "Escreve o que verificas", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.b': "Numa fábrica verificas os produtos durante o trabalho: pesas, medes, ou olhas para eles com atenção. Escreve logo cada verificação na lista, com a hora. Não mais tarde, de memória. Um produto não está bem? Põe-no na caixa dos rejeitados e olha com atenção para os seguintes. Há mais produtos errados? Então há alguma coisa errada com a máquina. Avisa logo o teu chefe de equipa. Um problema encontrado cedo poupa muitos produtos. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.p': "Há mais produtos errados.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.s': "A balança mostra que três produtos seguidos são leves demais. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.o1': "Avisas logo o teu chefe de equipa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.o2': "Pões os produtos outra vez na linha.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.o3': "Não dizes nada: acontece.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.w': "Três produtos errados seguidos mostram um problema na máquina. Quanto mais cedo avisares, menos produtos vão para o lixo.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.packing': "Embalar", // nieuw, nalezen
     'w.verpakking': "a embalagem", // nieuw, nalezen
     'w.krimpfolie': "o filme retrátil (plástico que aperta com o calor)", // nieuw, nalezen
@@ -2623,14 +2623,14 @@ const t: CultureTranslation = {
     's.packing.3': "A seladora está quente. Cuidado!", // nieuw, nalezen
     'c.packing.q': "Quantos produtos vão numa caixa?", // nieuw, nalezen
     'c.packing.a': "Doze. Está na lista.", // nieuw, nalezen
-    'c.packing': "Corta para longe do teu corpo", // nieuw, nalezen
-    'c.packing.b': "Embalar é um trabalho rápido, e um x-ato corta muito. Corta sempre para longe do teu corpo e da tua outra mão. Recolhe a lâmina depois de cada corte, também quando pousas o x-ato por um momento. Parte com cuidado um bocado sem fio, e deita-o na caixa das lâminas velhas, não no lixo normal. A seladora e a pistola de ar quente do filme retrátil ficam muito quentes: não toques nas partes quentes. E verifica cada caixa: o produto certo, o número certo, e a etiqueta direita. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.packing.p': "Primeiro recolho a lâmina.", // nieuw, nalezen
-    'c.packing.s': "Pousas o x-ato na mesa por um momento. A lâmina ainda está de fora. O que fazes?", // nieuw, nalezen
-    'c.packing.o1': "Primeiro recolhes a lâmina.", // nieuw, nalezen
-    'c.packing.o2': "Deixas assim: vais precisar dele daqui a pouco.", // nieuw, nalezen
-    'c.packing.o3': "Metes o x-ato no bolso assim.", // nieuw, nalezen
-    'c.packing.w': "Uma lâmina de fora numa mesa ou num bolso pode cortar-te a ti ou a um colega. Recolhê-la demora um segundo.", // nieuw, nalezen
+    'c.packing': "Corta para longe do teu corpo", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.b': "Embalar é um trabalho rápido, e um x-ato corta muito. Corta sempre para longe do teu corpo e da tua outra mão. Recolhe a lâmina depois de cada corte, também quando pousas o x-ato por um momento. Parte com cuidado um bocado sem fio, e deita-o na caixa das lâminas velhas, não no lixo normal. A seladora e a pistola de ar quente do filme retrátil ficam muito quentes: não toques nas partes quentes. E verifica cada caixa: o produto certo, o número certo, e a etiqueta direita. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.p': "Primeiro recolho a lâmina.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.s': "Pousas o x-ato na mesa por um momento. A lâmina ainda está de fora. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.o1': "Primeiro recolhes a lâmina.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.o2': "Deixas assim: vais precisar dele daqui a pouco.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.o3': "Metes o x-ato no bolso assim.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.w': "Uma lâmina de fora numa mesa ou num bolso pode cortar-te a ti ou a um colega. Recolhê-la demora um segundo.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.upkeep': "Manutenção", // nieuw, nalezen
     'w.persluchtpistool': "a pistola de ar comprimido", // nieuw, nalezen
     'w.steeksleutel': "a chave de bocas", // nieuw, nalezen
@@ -2643,14 +2643,14 @@ const t: CultureTranslation = {
     's.upkeep.3': "Nunca apontes a pistola de ar comprimido a ninguém.", // nieuw, nalezen
     'c.upkeep.q': "Quando é que lubrificamos a máquina?", // nieuw, nalezen
     'c.upkeep.a': "Todas as segundas-feiras, antes do primeiro turno.", // nieuw, nalezen
-    'c.upkeep': "Uma máquina limpa mostra os seus problemas", // nieuw, nalezen
-    'c.upkeep.b': "A pequena manutenção faz muitas vezes parte do trabalho: limpar, pôr óleo e lubrificar. Só o faças com a máquina desligada, e quando já aprendeste como. Uma máquina limpa é fácil de verificar: vês logo uma fuga ou uma peça solta. O óleo no chão escorrega. Põe um tabuleiro de pingos por baixo de uma fuga, limpa o chão, e avisa o teu chefe de equipa. Deita os panos com óleo no caixote especial. Nunca apontes uma pistola de ar comprimido a uma pessoa, e nunca a uses para limpar a tua roupa ou a tua pele. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.upkeep.p': "A máquina está a perder óleo.", // nieuw, nalezen
-    'c.upkeep.s': "Vês uma pequena poça de óleo debaixo da máquina. O que fazes?", // nieuw, nalezen
-    'c.upkeep.o1': "Pões um tabuleiro de pingos por baixo, e avisas.", // nieuw, nalezen
-    'c.upkeep.o2': "Deixas estar: é só um bocadinho.", // nieuw, nalezen
-    'c.upkeep.o3': "Pões um bocado de papel em cima, e continuas.", // nieuw, nalezen
-    'c.upkeep.w': "Uma fuga fica maior, e o óleo no chão faz as pessoas escorregar. Encontrada cedo, é uma reparação pequena.", // nieuw, nalezen
+    'c.upkeep': "Uma máquina limpa mostra os seus problemas", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.b': "A pequena manutenção faz muitas vezes parte do trabalho: limpar, pôr óleo e lubrificar. Só o faças com a máquina desligada, e quando já aprendeste como. Uma máquina limpa é fácil de verificar: vês logo uma fuga ou uma peça solta. O óleo no chão escorrega. Põe um tabuleiro de pingos por baixo de uma fuga, limpa o chão, e avisa o teu chefe de equipa. Deita os panos com óleo no caixote especial. Nunca apontes uma pistola de ar comprimido a uma pessoa, e nunca a uses para limpar a tua roupa ou a tua pele. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.p': "A máquina está a perder óleo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.s': "Vês uma pequena poça de óleo debaixo da máquina. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.o1': "Pões um tabuleiro de pingos por baixo, e avisas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.o2': "Deixas estar: é só um bocadinho.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.o3': "Pões um bocado de papel em cima, e continuas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.w': "Uma fuga fica maior, e o óleo no chão faz as pessoas escorregar. Encontrada cedo, é uma reparação pequena.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
     'u.install': "Eletricidade, canos e metal", // nieuw, nalezen
     'l.wiring': "Ligar fios", // nieuw, nalezen
@@ -2665,14 +2665,14 @@ const t: CultureTranslation = {
     's.wiring.3': "Os cabos vão na calha.", // nieuw, nalezen
     'c.wiring.q': "Que fio vai para onde?", // nieuw, nalezen
     'c.wiring.a': "Castanho com castanho, azul com azul.", // nieuw, nalezen
-    'c.wiring': "As cores dizem para que serve um fio", // nieuw, nalezen
-    'c.wiring.b': "Num edifício, os fios têm cores fixas. O castanho (às vezes preto ou cinzento) traz a corrente. O azul é o retorno. O verde e amarelo é a terra: protege as pessoas, e nunca se usa para mais nada. Liga a mesma cor à mesma cor. Descarna só o que cabe no ligador: não pode ficar cobre à vista. Mete o fio, e depois puxa-o devagar para ver se está preso. Não sabes que fio é qual? Para e pergunta.", // nieuw, nalezen
-    'c.wiring.p': "De que cor é a terra?", // nieuw, nalezen
-    'c.wiring.s': "Estás a ligar um candeeiro. Um bocado de cobre sai do ligador. O que fazes?", // nieuw, nalezen
-    'c.wiring.o1': "Cortas o fio mais curto, e ligas outra vez.", // nieuw, nalezen
-    'c.wiring.o2': "Deixas estar: o candeeiro funciona.", // nieuw, nalezen
-    'c.wiring.o3': "Pões um bocado de fita-cola à volta.", // nieuw, nalezen
-    'c.wiring.w': "O cobre à vista fora do ligador pode tocar em alguma coisa. Isso pode dar um choque ou um curto-circuito, também meses depois.", // nieuw, nalezen
+    'c.wiring': "As cores dizem para que serve um fio", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.b': "Num edifício, os fios têm cores fixas. O castanho (às vezes preto ou cinzento) traz a corrente. O azul é o retorno. O verde e amarelo é a terra: protege as pessoas, e nunca se usa para mais nada. Liga a mesma cor à mesma cor. Descarna só o que cabe no ligador: não pode ficar cobre à vista. Mete o fio, e depois puxa-o devagar para ver se está preso. Não sabes que fio é qual? Para e pergunta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.p': "De que cor é a terra?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.s': "Estás a ligar um candeeiro. Um bocado de cobre sai do ligador. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.o1': "Cortas o fio mais curto, e ligas outra vez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.o2': "Deixas estar: o candeeiro funciona.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.o3': "Pões um bocado de fita-cola à volta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.w': "O cobre à vista fora do ligador pode tocar em alguma coisa. Isso pode dar um choque ou um curto-circuito, também meses depois.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.testing': "Medir e trabalhar em segurança", // nieuw, nalezen
     'w.multimeter': "o multímetro (mede a corrente)", // nieuw, nalezen
     'w.spanningzoeker': "o busca-polos (uma chave de fendas com uma pequena luz)", // nieuw, nalezen
@@ -2685,14 +2685,14 @@ const t: CultureTranslation = {
     's.testing.3': "Mede primeiro com o multímetro.", // nieuw, nalezen
     'c.testing.q': "Posso abrir o quadro elétrico?", // nieuw, nalezen
     'c.testing.a': "Não, quem faz isso é o eletricista.", // nieuw, nalezen
-    'c.testing': "Desligado, trancado, medido", // nieuw, nalezen
-    'c.testing.b': "Antes de trabalhares na eletricidade, segue três passos. Desliga: o disjuntor certo no quadro elétrico, não só o interruptor na parede. Tranca: põe lá o teu próprio cadeado, e fica com a chave contigo, para ninguém o poder voltar a ligar. Mede: verifica com um busca-polos ou um multímetro que não há mesmo corrente. Só então começas. Um disjuntor dispara uma e outra vez? Não o continues a ligar: avisa o teu chefe. Só faças trabalhos elétricos quando te disseram que podes. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.testing.p': "Já não há corrente.", // nieuw, nalezen
-    'c.testing.s': "Desligaste o disjuntor. Um colega diz: \"Começa já, está desligado.\" O que fazes?", // nieuw, nalezen
-    'c.testing.o1': "Trancas, e primeiro medes.", // nieuw, nalezen
-    'c.testing.o2': "Começas: o teu colega sabe.", // nieuw, nalezen
-    'c.testing.o3': "Tocas no fio rapidamente para verificar.", // nieuw, nalezen
-    'c.testing.w': "Às vezes está desligado o disjuntor errado, ou alguém volta a ligá-lo. Um cadeado e uma medição mostram que é mesmo seguro.", // nieuw, nalezen
+    'c.testing': "Desligado, trancado, medido", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.b': "Antes de trabalhares na eletricidade, segue três passos. Desliga: o disjuntor certo no quadro elétrico, não só o interruptor na parede. Tranca: põe lá o teu próprio cadeado, e fica com a chave contigo, para ninguém o poder voltar a ligar. Mede: verifica com um busca-polos ou um multímetro que não há mesmo corrente. Só então começas. Um disjuntor dispara uma e outra vez? Não o continues a ligar: avisa o teu chefe. Só faças trabalhos elétricos quando te disseram que podes. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.p': "Já não há corrente.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.s': "Desligaste o disjuntor. Um colega diz: \"Começa já, está desligado.\" O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.o1': "Trancas, e primeiro medes.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.o2': "Começas: o teu colega sabe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.o3': "Tocas no fio rapidamente para verificar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.w': "Às vezes está desligado o disjuntor errado, ou alguém volta a ligá-lo. Um cadeado e uma medição mostram que é mesmo seguro.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.pipes': "Canos e água", // nieuw, nalezen
     'w.buis': "o tubo", // nieuw, nalezen
     'w.koppeling': "a união (junta dois tubos)", // nieuw, nalezen
@@ -2705,14 +2705,14 @@ const t: CultureTranslation = {
     's.pipes.3': "Enrola fita de teflon à volta da rosca.", // nieuw, nalezen
     'c.pipes.q': "A união ainda está a pingar?", // nieuw, nalezen
     'c.pipes.a': "Um bocadinho. Vou apertá-la mais um pouco.", // nieuw, nalezen
-    'c.pipes': "Primeiro fecha a água, e tem um balde pronto", // nieuw, nalezen
-    'c.pipes.b': "Antes de abrires um cano de água, fecha a torneira de passagem. Depois abre uma torneira mais abaixo, para o cano esvaziar. Põe um balde e um pano por baixo do sítio onde trabalhas. Corta um tubo de cobre com um corta-tubos, não com uma serra: a ponta fica redonda e limpa. Aperta bem uma união, mas não com força demais. Quando acabares, abre a água devagar e procura pingos. Uma pequena fuga que deixas ficar acaba em estragos de água.", // nieuw, nalezen
-    'c.pipes.p': "A água está fechada?", // nieuw, nalezen
-    'c.pipes.s': "Fizeste uma união nova. Abres a água. Cai um pingo pequeno por minuto. O que fazes?", // nieuw, nalezen
-    'c.pipes.o1': "Fechas a água, e apertas ou fazes de novo.", // nieuw, nalezen
-    'c.pipes.o2': "Deixas estar: é só um pingo.", // nieuw, nalezen
-    'c.pipes.o3': "Pões um balde por baixo e vais para casa.", // nieuw, nalezen
-    'c.pipes.w': "Um pingo por minuto são muitos litros por semana. A água pode estragar o chão ou o teto do andar de baixo.", // nieuw, nalezen
+    'c.pipes': "Primeiro fecha a água, e tem um balde pronto", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.b': "Antes de abrires um cano de água, fecha a torneira de passagem. Depois abre uma torneira mais abaixo, para o cano esvaziar. Põe um balde e um pano por baixo do sítio onde trabalhas. Corta um tubo de cobre com um corta-tubos, não com uma serra: a ponta fica redonda e limpa. Aperta bem uma união, mas não com força demais. Quando acabares, abre a água devagar e procura pingos. Uma pequena fuga que deixas ficar acaba em estragos de água.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.p': "A água está fechada?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.s': "Fizeste uma união nova. Abres a água. Cai um pingo pequeno por minuto. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.o1': "Fechas a água, e apertas ou fazes de novo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.o2': "Deixas estar: é só um pingo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.o3': "Pões um balde por baixo e vais para casa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.w': "Um pingo por minuto são muitos litros por semana. A água pode estragar o chão ou o teto do andar de baixo.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.metalwork': "Trabalhar o metal", // nieuw, nalezen
     'w.bankschroef': "o torno de bancada (prende bem uma peça na bancada)", // nieuw, nalezen
     'w.vijl': "a lima (para alisar o metal à mão)", // nieuw, nalezen
@@ -2725,14 +2725,14 @@ const t: CultureTranslation = {
     's.metalwork.3': "Mantém as mãos longe da broca.", // nieuw, nalezen
     'c.metalwork.q': "Porque é que a aresta está tão afiada?", // nieuw, nalezen
     'c.metalwork.a': "Ainda tem uma rebarba.", // nieuw, nalezen
-    'c.metalwork': "Prende a peça, nunca a segures na mão", // nieuw, nalezen
-    'c.metalwork.b': "No engenho de furar, nunca segures uma peça pequena na mão. A broca pode agarrá-la e pô-la a rodar muito depressa. Prende-a no torno de bancada. Apanha o cabelo comprido, e não uses luvas com uma broca a rodar: pode puxar a luva. Usa óculos de proteção. Depois de serrar ou furar, o metal tem uma rebarba: uma aresta afiada. Tira-a com a lima antes de pegares na peça ou de a passares a alguém. Limpa as aparas de metal com uma escova, não com a mão.", // nieuw, nalezen
-    'c.metalwork.p': "Primeiro prendo a peça.", // nieuw, nalezen
-    'c.metalwork.s': "Tens de fazer um furo numa peça pequena de metal. O torno de bancada está noutra bancada. O que fazes?", // nieuw, nalezen
-    'c.metalwork.o1': "Vais buscar o torno, e prendes a peça.", // nieuw, nalezen
-    'c.metalwork.o2': "Seguras a peça com força na mão.", // nieuw, nalezen
-    'c.metalwork.o3': "Pões luvas e seguras a peça.", // nieuw, nalezen
-    'c.metalwork.w': "Uma broca pode agarrar uma peça pequena e pô-la a rodar. Então bate-te na mão. No torno de bancada, fica parada.", // nieuw, nalezen
+    'c.metalwork': "Prende a peça, nunca a segures na mão", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.b': "No engenho de furar, nunca segures uma peça pequena na mão. A broca pode agarrá-la e pô-la a rodar muito depressa. Prende-a no torno de bancada. Apanha o cabelo comprido, e não uses luvas com uma broca a rodar: pode puxar a luva. Usa óculos de proteção. Depois de serrar ou furar, o metal tem uma rebarba: uma aresta afiada. Tira-a com a lima antes de pegares na peça ou de a passares a alguém. Limpa as aparas de metal com uma escova, não com a mão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.p': "Primeiro prendo a peça.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.s': "Tens de fazer um furo numa peça pequena de metal. O torno de bancada está noutra bancada. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.o1': "Vais buscar o torno, e prendes a peça.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.o2': "Seguras a peça com força na mão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.o3': "Pões luvas e seguras a peça.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.w': "Uma broca pode agarrar uma peça pequena e pô-la a rodar. Então bate-te na mão. No torno de bancada, fica parada.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Assemblage en montage" (u.montage, 21 November 2026).
     'u.montage': "Montagem", // nieuw, nalezen
     'l.assembly': "Na linha de montagem", // nieuw, nalezen
@@ -2747,14 +2747,14 @@ const t: CultureTranslation = {
     's.assembly.3': "Põe a peça no gabarito.", // nieuw, nalezen
     'c.assembly.q': "Que passo vem agora?", // nieuw, nalezen
     'c.assembly.a': "O passo quatro. Vê na instrução de trabalho.", // nieuw, nalezen
-    'c.assembly': "Segue os passos, pela mesma ordem", // nieuw, nalezen
-    'c.assembly.b': "Numa linha de montagem cada passo tem o seu lugar e a sua ordem. A instrução de trabalho mostra-os, muitas vezes com imagens. Faz os passos sempre pela mesma ordem, também quando achas que sabes uma maneira mais rápida. Outra ordem pode dar um produto que parece bom mas não funciona. Uma caixa está quase vazia? Diz a tempo, para a linha não parar. Vês um passo que podia ser melhor? Diz ao teu chefe de equipa: assim pode mudar para todos.", // nieuw, nalezen
-    'c.assembly.p': "Preciso de peças novas.", // nieuw, nalezen
-    'c.assembly.s': "Encontraste uma maneira mais rápida de fazer o passo três. A instrução de trabalho diz outra coisa. O que fazes?", // nieuw, nalezen
-    'c.assembly.o1': "Primeiro perguntas ao teu chefe de equipa.", // nieuw, nalezen
-    'c.assembly.o2': "A partir de agora fazes à tua maneira.", // nieuw, nalezen
-    'c.assembly.o3': "Ensinas a tua maneira aos teus colegas.", // nieuw, nalezen
-    'c.assembly.w': "A ordem tem muitas vezes uma razão que não vês. Se a tua maneira for melhor, pode mudar para todos.", // nieuw, nalezen
+    'c.assembly': "Segue os passos, pela mesma ordem", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.b': "Numa linha de montagem cada passo tem o seu lugar e a sua ordem. A instrução de trabalho mostra-os, muitas vezes com imagens. Faz os passos sempre pela mesma ordem, também quando achas que sabes uma maneira mais rápida. Outra ordem pode dar um produto que parece bom mas não funciona. Uma caixa está quase vazia? Diz a tempo, para a linha não parar. Vês um passo que podia ser melhor? Diz ao teu chefe de equipa: assim pode mudar para todos.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.p': "Preciso de peças novas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.s': "Encontraste uma maneira mais rápida de fazer o passo três. A instrução de trabalho diz outra coisa. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.o1': "Primeiro perguntas ao teu chefe de equipa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.o2': "A partir de agora fazes à tua maneira.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.o3': "Ensinas a tua maneira aos teus colegas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.w': "A ordem tem muitas vezes uma razão que não vês. Se a tua maneira for melhor, pode mudar para todos.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.fastening': "Apertar e fixar", // nieuw, nalezen
     'w.schroefmachine': "a aparafusadora elétrica (está pendurada por cima da linha)", // nieuw, nalezen
     'w.momentsleutel': "a chave dinamométrica (faz clique quando o parafuso está apertado o suficiente)", // nieuw, nalezen
@@ -2767,14 +2767,14 @@ const t: CultureTranslation = {
     's.fastening.3': "Junta os cabos com uma abraçadeira de plástico.", // nieuw, nalezen
     'c.fastening.q': "Quão apertado tem de ficar este parafuso?", // nieuw, nalezen
     'c.fastening.a': "Até a chave dinamométrica fazer clique.", // nieuw, nalezen
-    'c.fastening': "O clique chega", // nieuw, nalezen
-    'c.fastening.b': "Uma chave dinamométrica faz clique quando um parafuso está apertado o suficiente. Para no clique: não rodes mais. Apertado demais pode partir o parafuso ou a peça, e solto demais pode cair. A aparafusadora elétrica funciona da mesma maneira: para sozinha. Põe cada anilha no seu lugar: uma anilha que falta é difícil de ver mais tarde. Conta os teus parafusos. Sobra um, ou falta-te um? Então há alguma coisa errada: avisa o teu chefe de equipa.", // nieuw, nalezen
-    'c.fastening.p': "Sobra um parafuso.", // nieuw, nalezen
-    'c.fastening.s': "A tua chave dinamométrica fez clique. O parafuso ainda te parece um pouco solto. O que fazes?", // nieuw, nalezen
-    'c.fastening.o1': "Paras, e perguntas ao teu chefe de equipa.", // nieuw, nalezen
-    'c.fastening.o2': "Rodas mais um bocadinho à mão.", // nieuw, nalezen
-    'c.fastening.o3': "Usas uma chave mais comprida.", // nieuw, nalezen
-    'c.fastening.w': "O clique está regulado para a força certa. Se te parecer errado, talvez a chave precise de ser verificada. Rodar mais pode partir o parafuso.", // nieuw, nalezen
+    'c.fastening': "O clique chega", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.b': "Uma chave dinamométrica faz clique quando um parafuso está apertado o suficiente. Para no clique: não rodes mais. Apertado demais pode partir o parafuso ou a peça, e solto demais pode cair. A aparafusadora elétrica funciona da mesma maneira: para sozinha. Põe cada anilha no seu lugar: uma anilha que falta é difícil de ver mais tarde. Conta os teus parafusos. Sobra um, ou falta-te um? Então há alguma coisa errada: avisa o teu chefe de equipa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.p': "Sobra um parafuso.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.s': "A tua chave dinamométrica fez clique. O parafuso ainda te parece um pouco solto. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.o1': "Paras, e perguntas ao teu chefe de equipa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.o2': "Rodas mais um bocadinho à mão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.o3': "Usas uma chave mais comprida.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.w': "O clique está regulado para a força certa. Se te parecer errado, talvez a chave precise de ser verificada. Rodar mais pode partir o parafuso.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.handling': "Levantar e mover", // nieuw, nalezen
     'w.takel': "a talha (levanta peças pesadas com uma corrente)", // nieuw, nalezen
     'w.hijshaak': "o gancho de elevação", // nieuw, nalezen
@@ -2787,14 +2787,14 @@ const t: CultureTranslation = {
     's.handling.3': "Empurra o carrinho de peças, não o puxes.", // nieuw, nalezen
     'c.handling.q': "Posso ficar debaixo da talha?", // nieuw, nalezen
     'c.handling.a': "Não, nunca debaixo de uma carga suspensa.", // nieuw, nalezen
-    'c.handling': "Deixa a talha fazer o trabalho pesado", // nieuw, nalezen
-    'c.handling.b': "As peças pesadas levantam-se com uma talha ou um auxiliar de elevação, não com as tuas costas. Verifica o gancho antes de levantar: a patilha de segurança tem de fechar. Levanta devagar, e mantém as mãos e os pés longe da carga. Nunca fiques nem passes debaixo de uma carga suspensa. Usa a mesa giratória para rodar uma peça: assim não tens de torcer as costas. Empurra um carrinho ou um carro gaiola: vês para onde vais, e as tuas costas trabalham menos. Usa uma talha só quando já aprendeste como. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.handling.p': "Uso a talha.", // nieuw, nalezen
-    'c.handling.s': "Uma peça é muito pesada. A talha ainda está ocupada mais dez minutos. O que fazes?", // nieuw, nalezen
-    'c.handling.o1': "Esperas pela talha.", // nieuw, nalezen
-    'c.handling.o2': { m: "Levantas a peça sozinho, depressa.", f: "Levantas a peça sozinha, depressa.", x: "Levantas a peça sem ajuda, depressa." }, // nieuw, nalezen
-    'c.handling.o3': "Arrastas a peça pelo chão.", // nieuw, nalezen
-    'c.handling.w': "Uma peça pesada pode magoar as tuas costas num segundo. Esperar dez minutos é melhor do que meses de dores.", // nieuw, nalezen
+    'c.handling': "Deixa a talha fazer o trabalho pesado", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.b': "As peças pesadas levantam-se com uma talha ou um auxiliar de elevação, não com as tuas costas. Verifica o gancho antes de levantar: a patilha de segurança tem de fechar. Levanta devagar, e mantém as mãos e os pés longe da carga. Nunca fiques nem passes debaixo de uma carga suspensa. Usa a mesa giratória para rodar uma peça: assim não tens de torcer as costas. Empurra um carrinho ou um carro gaiola: vês para onde vais, e as tuas costas trabalham menos. Usa uma talha só quando já aprendeste como. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.p': "Uso a talha.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.s': "Uma peça é muito pesada. A talha ainda está ocupada mais dez minutos. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.o1': "Esperas pela talha.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.o2': { m: "Levantas a peça sozinho, depressa.", f: "Levantas a peça sozinha, depressa.", x: "Levantas a peça sem ajuda, depressa." }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.o3': "Arrastas a peça pelo chão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.w': "Uma peça pesada pode magoar as tuas costas num segundo. Esperar dez minutos é melhor do que meses de dores.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.finalcheck': "A verificação final", // nieuw, nalezen
     'w.typeplaatje': "a chapa de características (uma pequena chapa de metal com o tipo e o número)", // nieuw, nalezen
     'w.stempel': "o carimbo", // nieuw, nalezen
@@ -2807,14 +2807,14 @@ const t: CultureTranslation = {
     's.finalcheck.3': "Sem o autocolante de aprovado não sai.", // nieuw, nalezen
     'c.finalcheck.q': "Este produto está bom?", // nieuw, nalezen
     'c.finalcheck.a': "Não, tem uma racha.", // nieuw, nalezen
-    'c.finalcheck': "Só os produtos bons levam o autocolante", // nieuw, nalezen
-    'c.finalcheck.b': "A verificação final é a última oportunidade de encontrar um erro antes de o cliente o encontrar. Verifica cada ponto da lista, também quando há muito trabalho. Um pequeno risco ou uma racha passam facilmente despercebidos: olha com boa luz, e de mais de um lado. Põe o autocolante de aprovado ou o carimbo só quando todos os pontos estão bons. Não tens a certeza? Põe o produto à parte e pergunta. Um erro encontrado aqui custa pouco, e um erro no cliente custa muito. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.finalcheck.p': "Este produto fica à parte.", // nieuw, nalezen
-    'c.finalcheck.s': "Há muito trabalho na linha. Vês um pequeno risco num produto, por baixo da etiqueta. O que fazes?", // nieuw, nalezen
-    'c.finalcheck.o1': "Pões o produto à parte, e avisas o teu chefe de equipa.", // nieuw, nalezen
-    'c.finalcheck.o2': "Pões o autocolante: é pequeno.", // nieuw, nalezen
-    'c.finalcheck.o3': "Mudas a etiqueta para cima do risco.", // nieuw, nalezen
-    'c.finalcheck.w': "Um pequeno risco pode ser sinal de um problema na linha. Escondê-lo só passa o problema para o cliente.", // nieuw, nalezen
+    'c.finalcheck': "Só os produtos bons levam o autocolante", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.b': "A verificação final é a última oportunidade de encontrar um erro antes de o cliente o encontrar. Verifica cada ponto da lista, também quando há muito trabalho. Um pequeno risco ou uma racha passam facilmente despercebidos: olha com boa luz, e de mais de um lado. Põe o autocolante de aprovado ou o carimbo só quando todos os pontos estão bons. Não tens a certeza? Põe o produto à parte e pergunta. Um erro encontrado aqui custa pouco, e um erro no cliente custa muito. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.p': "Este produto fica à parte.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.s': "Há muito trabalho na linha. Vês um pequeno risco num produto, por baixo da etiqueta. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.o1': "Pões o produto à parte, e avisas o teu chefe de equipa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.o2': "Pões o autocolante: é pequeno.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.o3': "Mudas a etiqueta para cima do risco.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.w': "Um pequeno risco pode ser sinal de um problema na linha. Escondê-lo só passa o problema para o cliente.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
     'u.kweek': "Cultivar, separar e a estufa", // nieuw, nalezen
     'l.sowing': "Semear e estacas", // nieuw, nalezen
@@ -2829,14 +2829,14 @@ const t: CultureTranslation = {
     's.sowing.3': "Dá um pouco de água às plantas novas.", // nieuw, nalezen
     'c.sowing.q': "A que profundidade vai a semente?", // nieuw, nalezen
     'c.sowing.a': "Meio centímetro. Não mais fundo.", // nieuw, nalezen
-    'c.sowing': "As plantas pequenas precisam de uma mão leve", // nieuw, nalezen
-    'c.sowing.b': "As plantas novas são fracas. Pega numa estaca ou numa plântula por uma folha, não pelo caule: uma folha volta a crescer, um caule partido não. Aperta a terra com cuidado, sem força. Rega devagar, com um borrifo fino, para a água não levar as sementes. Trabalha com as mãos limpas e com tabuleiros limpos: as plantas novas ficam doentes com facilidade. Escreve a data e o tipo de planta em cada tabuleiro, para todos saberem o que lá está.", // nieuw, nalezen
-    'c.sowing.p': "Pego nela pela folha.", // nieuw, nalezen
-    'c.sowing.s': "Tens de passar uma plântula pequena para um vaso. O que fazes?", // nieuw, nalezen
-    'c.sowing.o1': "Pegas nela com cuidado por uma folha.", // nieuw, nalezen
-    'c.sowing.o2': "Puxas a planta pelo caule.", // nieuw, nalezen
-    'c.sowing.o3': "Apertas para a tirar com a terra.", // nieuw, nalezen
-    'c.sowing.w': "Uma folha pode voltar a crescer. Um caule partido não, e então a planta morre.", // nieuw, nalezen
+    'c.sowing': "As plantas pequenas precisam de uma mão leve", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.b': "As plantas novas são fracas. Pega numa estaca ou numa plântula por uma folha, não pelo caule: uma folha volta a crescer, um caule partido não. Aperta a terra com cuidado, sem força. Rega devagar, com um borrifo fino, para a água não levar as sementes. Trabalha com as mãos limpas e com tabuleiros limpos: as plantas novas ficam doentes com facilidade. Escreve a data e o tipo de planta em cada tabuleiro, para todos saberem o que lá está.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.p': "Pego nela pela folha.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.s': "Tens de passar uma plântula pequena para um vaso. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.o1': "Pegas nela com cuidado por uma folha.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.o2': "Puxas a planta pelo caule.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.o3': "Apertas para a tirar com a terra.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.w': "Uma folha pode voltar a crescer. Um caule partido não, e então a planta morre.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.sorting': "Separar e embalar", // nieuw, nalezen
     'w.tros': "o cacho (tomates num mesmo caule)", // nieuw, nalezen
     'w.bakje': "a cuvete (uma caixinha para fruta)", // nieuw, nalezen
@@ -2849,14 +2849,14 @@ const t: CultureTranslation = {
     's.sorting.3': "Vê na carta de cores.", // nieuw, nalezen
     'c.sorting.q': "Este tomate já está maduro que chegue?", // nieuw, nalezen
     'c.sorting.a': "Não, ainda está muito verde. Deixa-o na planta.", // nieuw, nalezen
-    'c.sorting': "Cada fruto conta", // nieuw, nalezen
-    'c.sorting.b': "A fruta e os legumes pisam-se com facilidade. Pousa-os, não os deixes cair nem os atires. Hoje não vês a pisadura, mas amanhã o fruto está mole e castanho. Vê na carta de cores que cor vai para onde. Põe de lado um fruto estragado ou podre: um fruto mau numa cuvete pode estragar os outros. Mantém as cuvetes e as caixas limpas, e nunca as ponhas no chão.", // nieuw, nalezen
-    'c.sorting.p': "Este está estragado.", // nieuw, nalezen
-    'c.sorting.s': "Estás a encher cuvetes. Um tomate tem uma mancha castanha e mole. O que fazes?", // nieuw, nalezen
-    'c.sorting.o1': "Pões o tomate de lado.", // nieuw, nalezen
-    'c.sorting.o2': "Escondes o tomate no fundo.", // nieuw, nalezen
-    'c.sorting.o3': "Embalas o tomate na mesma.", // nieuw, nalezen
-    'c.sorting.w': "Um tomate podre faz os outros apodrecer mais depressa. O cliente encontra-o, e a cuvete toda é devolvida.", // nieuw, nalezen
+    'c.sorting': "Cada fruto conta", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.b': "A fruta e os legumes pisam-se com facilidade. Pousa-os, não os deixes cair nem os atires. Hoje não vês a pisadura, mas amanhã o fruto está mole e castanho. Vê na carta de cores que cor vai para onde. Põe de lado um fruto estragado ou podre: um fruto mau numa cuvete pode estragar os outros. Mantém as cuvetes e as caixas limpas, e nunca as ponhas no chão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.p': "Este está estragado.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.s': "Estás a encher cuvetes. Um tomate tem uma mancha castanha e mole. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.o1': "Pões o tomate de lado.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.o2': "Escondes o tomate no fundo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.o3': "Embalas o tomate na mesma.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.w': "Um tomate podre faz os outros apodrecer mais depressa. O cliente encontra-o, e a cuvete toda é devolvida.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.greenhouse': "A estufa e o clima", // nieuw, nalezen
     'w.buisrailkar': "o carrinho de carris (anda sobre os tubos do aquecimento)", // nieuw, nalezen
     'w.druppelaar': "o gotejador (dá água gota a gota)", // nieuw, nalezen
@@ -2869,14 +2869,14 @@ const t: CultureTranslation = {
     's.greenhouse.3': "Está calor. As janelas do telhado estão a abrir.", // nieuw, nalezen
     'c.greenhouse.q': "Porque está tanto calor na estufa?", // nieuw, nalezen
     'c.greenhouse.a': "A tela está fechada, e as janelas também.", // nieuw, nalezen
-    'c.greenhouse': "Deixa o clima com o computador", // nieuw, nalezen
-    'c.greenhouse.b': "Numa estufa é um computador que controla o clima: as janelas, a tela, o aquecimento e a água. Não abras uma janela nem mudes uma regulação tu mesmo. Vês alguma coisa estranha, como um gotejador a pingar ou uma janela que não fecha? Diz ao teu chefe. O carrinho de carris anda sobre os tubos do aquecimento: só o uses quando já aprendeste como. Mantém os pés na plataforma, e nunca toques nos tubos: podem estar quentes. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.greenhouse.p': "Este gotejador está a pingar.", // nieuw, nalezen
-    'c.greenhouse.s': "Um gotejador está solto. Está a cair água no chão. O que fazes?", // nieuw, nalezen
-    'c.greenhouse.o1': "Voltas a pô-lo no sítio, e dizes ao teu chefe.", // nieuw, nalezen
-    'c.greenhouse.o2': "Deixas estar: é só água.", // nieuw, nalezen
-    'c.greenhouse.o3': "Fechas a água da fila toda.", // nieuw, nalezen
-    'c.greenhouse.w': "Um gotejador solto gasta água, a planta recebe pouca, e um chão molhado escorrega.", // nieuw, nalezen
+    'c.greenhouse': "Deixa o clima com o computador", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.b': "Numa estufa é um computador que controla o clima: as janelas, a tela, o aquecimento e a água. Não abras uma janela nem mudes uma regulação tu mesmo. Vês alguma coisa estranha, como um gotejador a pingar ou uma janela que não fecha? Diz ao teu chefe. O carrinho de carris anda sobre os tubos do aquecimento: só o uses quando já aprendeste como. Mantém os pés na plataforma, e nunca toques nos tubos: podem estar quentes. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.p': "Este gotejador está a pingar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.s': "Um gotejador está solto. Está a cair água no chão. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.o1': "Voltas a pô-lo no sítio, e dizes ao teu chefe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.o2': "Deixas estar: é só água.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.o3': "Fechas a água da fila toda.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.w': "Um gotejador solto gasta água, a planta recebe pouca, e um chão molhado escorrega.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.pests': "Pragas e trabalhar com higiene", // nieuw, nalezen
     'w.luis': "o pulgão (um inseto verde pequeno nas plantas)", // nieuw, nalezen
     'w.vangplaat': "a armadilha adesiva (um cartão amarelo que apanha insetos)", // nieuw, nalezen
@@ -2889,14 +2889,14 @@ const t: CultureTranslation = {
     's.pests.3': "Passa pelo tapete de desinfeção.", // nieuw, nalezen
     'c.pests.q': "Posso matar esta vespa?", // nieuw, nalezen
     'c.pests.a': "Não, é uma vespa parasitoide. Ajuda-nos.", // nieuw, nalezen
-    'c.pests': "Não leves doenças de fila para fila", // nieuw, nalezen
-    'c.pests.b': "Uma doença ou uma praga espalha-se depressa numa estufa. Podes levá-la nas mãos, na roupa e nas ferramentas. Por isso passa pelo tapete de desinfeção em cada porta, e lava as mãos quando vais para outra parte da estufa. Começa o trabalho nas filas saudáveis, e acaba nas filas doentes. Vês insetos, manchas ou bolor numa planta? Não lhe toques, mas diz ao teu chefe onde está. Alguns insetos na estufa são ajudantes: deixa-os em paz. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.pests.p': "Há bolor aqui.", // nieuw, nalezen
-    'c.pests.s': "Vês bolor cinzento em algumas plantas da tua fila. O que fazes?", // nieuw, nalezen
-    'c.pests.o1': "Dizes ao teu chefe onde está.", // nieuw, nalezen
-    'c.pests.o2': "Tiras as folhas más e continuas.", // nieuw, nalezen
-    'c.pests.o3': "Não dizes nada: são só algumas plantas.", // nieuw, nalezen
-    'c.pests.w': "O bolor espalha-se depressa. O teu chefe sabe o que fazer, e por onde começar.", // nieuw, nalezen
+    'c.pests': "Não leves doenças de fila para fila", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.b': "Uma doença ou uma praga espalha-se depressa numa estufa. Podes levá-la nas mãos, na roupa e nas ferramentas. Por isso passa pelo tapete de desinfeção em cada porta, e lava as mãos quando vais para outra parte da estufa. Começa o trabalho nas filas saudáveis, e acaba nas filas doentes. Vês insetos, manchas ou bolor numa planta? Não lhe toques, mas diz ao teu chefe onde está. Alguns insetos na estufa são ajudantes: deixa-os em paz. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.p': "Há bolor aqui.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.s': "Vês bolor cinzento em algumas plantas da tua fila. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.o1': "Dizes ao teu chefe onde está.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.o2': "Tiras as folhas más e continuas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.o3': "Não dizes nada: são só algumas plantas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.w': "O bolor espalha-se depressa. O teu chefe sabe o que fazer, e por onde começar.", // nieuw, nalezen // nagelezen AI 22 nov
     'u.carservice': "Pneus, óleo e travões", // nieuw, nalezen
     'l.tyres': "Mudar pneus", // nieuw, nalezen
     'w.wielbout': "o parafuso da roda", // nieuw, nalezen
@@ -2910,14 +2910,14 @@ const t: CultureTranslation = {
     's.tyres.3': "Mede a pressão com o manómetro dos pneus.", // nieuw, nalezen
     'c.tyres.q': "Estes pneus têm de sair?", // nieuw, nalezen
     'c.tyres.a': "Sim, o piso já quase não existe.", // nieuw, nalezen
-    'c.tyres': "Enrosca à mão, aperta com a chave dinamométrica", // nieuw, nalezen
-    'c.tyres.b': "Uma chave de impacto é rápida e muito forte. Usa-a para tirar os parafusos da roda, mas não para os apertar com força. Primeiro enrosca os parafusos à mão. Depois aperta-os em cruz com uma chave dinamométrica, com a força certa para esse carro. Uma roda que não está bem apertada pode soltar-se em andamento. Verifica o piso e a pressão de cada pneu que te passa pelas mãos. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.tyres.p': "Primeiro enrosco-os à mão.", // nieuw, nalezen
-    'c.tyres.s': "Estás a pôr uma roda outra vez. Um colega diz: \"Usa a chave de impacto, é mais rápido.\" O que fazes?", // nieuw, nalezen
-    'c.tyres.o1': "Enroscas à mão, e depois usas a chave dinamométrica.", // nieuw, nalezen
-    'c.tyres.o2': "Apertas com força com a chave de impacto.", // nieuw, nalezen
-    'c.tyres.o3': "Enroscas à mão, e deixas assim.", // nieuw, nalezen
-    'c.tyres.w': "Uma chave de impacto pode deixar um parafuso apertado demais ou de menos. Só a chave dinamométrica dá a força certa.", // nieuw, nalezen
+    'c.tyres': "Enrosca à mão, aperta com a chave dinamométrica", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.b': "Uma chave de impacto é rápida e muito forte. Usa-a para tirar os parafusos da roda, mas não para os apertar com força. Primeiro enrosca os parafusos à mão. Depois aperta-os em cruz com uma chave dinamométrica, com a força certa para esse carro. Uma roda que não está bem apertada pode soltar-se em andamento. Verifica o piso e a pressão de cada pneu que te passa pelas mãos. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.p': "Primeiro enrosco-os à mão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.s': "Estás a pôr uma roda outra vez. Um colega diz: \"Usa a chave de impacto, é mais rápido.\" O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.o1': "Enroscas à mão, e depois usas a chave dinamométrica.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.o2': "Apertas com força com a chave de impacto.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.o3': "Enroscas à mão, e deixas assim.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.w': "Uma chave de impacto pode deixar um parafuso apertado demais ou de menos. Só a chave dinamométrica dá a força certa.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.oilchange': "Mudar o óleo", // nieuw, nalezen
     'w.oliefilter': "o filtro do óleo", // nieuw, nalezen
     'w.oliepeilstok': "a vareta do óleo (mostra quanto óleo há)", // nieuw, nalezen
@@ -2930,14 +2930,14 @@ const t: CultureTranslation = {
     's.oilchange.3': "Vê a vareta do óleo.", // nieuw, nalezen
     'c.oilchange.q': "Quanto óleo tem de levar?", // nieuw, nalezen
     'c.oilchange.a': "Quatro litros. Depois vê a vareta.", // nieuw, nalezen
-    'c.oilchange': "O óleo velho vai para o bidão, não para o esgoto", // nieuw, nalezen
-    'c.oilchange.b': "O óleo velho faz mal à água e à terra. Um pouco de óleo pode sujar muita água. Por isso apanha todo o óleo velho no recipiente de recolha, e despeja-o no bidão do óleo velho. Nunca o despejes num esgoto nem num lava-loiça. Os filtros velhos e os panos com óleo vão para o seu próprio caixote. O óleo quente pode queimar a pele: deixa primeiro o motor arrefecer um pouco, e põe luvas. Limpa logo o óleo entornado: o óleo no chão escorrega. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.oilchange.p': "Para onde vai o óleo velho?", // nieuw, nalezen
-    'c.oilchange.s': "O recipiente de recolha está cheio de óleo velho. O bidão está do outro lado da oficina. O que fazes?", // nieuw, nalezen
-    'c.oilchange.o1': "Levas o recipiente até ao bidão, com cuidado.", // nieuw, nalezen
-    'c.oilchange.o2': "Despejas o óleo no esgoto lá fora.", // nieuw, nalezen
-    'c.oilchange.o3': "Deixas o recipiente debaixo do carro para mais tarde.", // nieuw, nalezen
-    'c.oilchange.w': "Óleo velho no esgoto suja a água. Um recipiente cheio debaixo de um carro acaba por levar um pontapé e virar.", // nieuw, nalezen
+    'c.oilchange': "O óleo velho vai para o bidão, não para o esgoto", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.b': "O óleo velho faz mal à água e à terra. Um pouco de óleo pode sujar muita água. Por isso apanha todo o óleo velho no recipiente de recolha, e despeja-o no bidão do óleo velho. Nunca o despejes num esgoto nem num lava-loiça. Os filtros velhos e os panos com óleo vão para o seu próprio caixote. O óleo quente pode queimar a pele: deixa primeiro o motor arrefecer um pouco, e põe luvas. Limpa logo o óleo entornado: o óleo no chão escorrega. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.p': "Para onde vai o óleo velho?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.s': "O recipiente de recolha está cheio de óleo velho. O bidão está do outro lado da oficina. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.o1': "Levas o recipiente até ao bidão, com cuidado.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.o2': "Despejas o óleo no esgoto lá fora.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.o3': "Deixas o recipiente debaixo do carro para mais tarde.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.w': "Óleo velho no esgoto suja a água. Um recipiente cheio debaixo de um carro acaba por levar um pontapé e virar.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.brakes': "Travões e luzes", // nieuw, nalezen
     'w.remschijf': "o disco de travão", // nieuw, nalezen
     'w.remblok': "a pastilha de travão", // nieuw, nalezen
@@ -2950,14 +2950,14 @@ const t: CultureTranslation = {
     's.brakes.3': "O farolim traseiro esquerdo não funciona.", // nieuw, nalezen
     'c.brakes.q': "O disco de travão também tem de ser novo?", // nieuw, nalezen
     'c.brakes.a': "Sim, está fino demais.", // nieuw, nalezen
-    'c.brakes': "Travões: verifica duas vezes", // nieuw, nalezen
-    'c.brakes.b': "Os travões mantêm as pessoas vivas. Por isso trabalha com calma, e verifica o teu trabalho duas vezes. Depois de pastilhas ou discos novos, carrega algumas vezes no pedal do travão antes de o carro andar: a primeira vez o pedal vai muitas vezes fundo demais. O óleo dos travões faz mal à pele e à pintura: põe luvas, e limpa logo as gotas. Não sopres o pó dos travões com ar comprimido: limpa-o com produto de limpeza de travões e um pano. Antes de o carro sair, verifica todas as luzes, também as luzes de travagem.", // nieuw, nalezen
-    'c.brakes.p': "Carrego algumas vezes no pedal do travão.", // nieuw, nalezen
-    'c.brakes.s': "Montaste pastilhas de travão novas. O carro tem de ir lá para fora. O que fazes?", // nieuw, nalezen
-    'c.brakes.o1': "Carregas algumas vezes no pedal do travão.", // nieuw, nalezen
-    'c.brakes.o2': "Tiras o carro logo a conduzir.", // nieuw, nalezen
-    'c.brakes.o3': "Empurras o carro para fora sem verificar.", // nieuw, nalezen
-    'c.brakes.w': "Depois de pastilhas novas, o pedal pode ir fundo demais na primeira vez. Então o carro não para.", // nieuw, nalezen
+    'c.brakes': "Travões: verifica duas vezes", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.b': "Os travões mantêm as pessoas vivas. Por isso trabalha com calma, e verifica o teu trabalho duas vezes. Depois de pastilhas ou discos novos, carrega algumas vezes no pedal do travão antes de o carro andar: a primeira vez o pedal vai muitas vezes fundo demais. O óleo dos travões faz mal à pele e à pintura: põe luvas, e limpa logo as gotas. Não sopres o pó dos travões com ar comprimido: limpa-o com produto de limpeza de travões e um pano. Antes de o carro sair, verifica todas as luzes, também as luzes de travagem.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.p': "Carrego algumas vezes no pedal do travão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.s': "Montaste pastilhas de travão novas. O carro tem de ir lá para fora. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.o1': "Carregas algumas vezes no pedal do travão.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.o2': "Tiras o carro logo a conduzir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.o3': "Empurras o carro para fora sem verificar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.w': "Depois de pastilhas novas, o pedal pode ir fundo demais na primeira vez. Então o carro não para.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.diagnosis': "Ler avarias e a ordem de trabalho", // nieuw, nalezen
     'w.diagnosecomputer': "a máquina de diagnóstico (lê as avarias do carro)", // nieuw, nalezen
     'w.waarschuwingslampje': "a luz de aviso (no painel)", // nieuw, nalezen
@@ -2970,14 +2970,14 @@ const t: CultureTranslation = {
     's.diagnosis.3': "Põe uma capa no banco.", // nieuw, nalezen
     'c.diagnosis.q': "O que é preciso fazer a este carro?", // nieuw, nalezen
     'c.diagnosis.a': "Vê na ordem de trabalho.", // nieuw, nalezen
-    'c.diagnosis': "Trata o carro como se fosse teu", // nieuw, nalezen
-    'c.diagnosis.b': "Um cliente dá-te o carro e a chave. Trata os dois com cuidado. Põe uma capa no banco e um tapete no chão antes de entrares. Faz só o que está na ordem de trabalho. Encontras outra coisa que está mal? Escreve e diz ao teu chefe: o cliente decide. Põe a chave no sítio dela, com a etiqueta. Não uses o rádio, o telefone nem as coisas que estão no carro. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.diagnosis.p': "Isto não está na ordem de trabalho.", // nieuw, nalezen
-    'c.diagnosis.s': "Estás a mudar o óleo. Um pneu está quase careca. Não está na ordem de trabalho. O que fazes?", // nieuw, nalezen
-    'c.diagnosis.o1': "Escreves, e dizes ao teu chefe.", // nieuw, nalezen
-    'c.diagnosis.o2': "Mudas o pneu logo.", // nieuw, nalezen
-    'c.diagnosis.o3': "Não dizes nada: não é o teu trabalho.", // nieuw, nalezen
-    'c.diagnosis.w': "O cliente decide o que é feito e pago. Mas tem de saber que o pneu é perigoso.", // nieuw, nalezen
+    'c.diagnosis': "Trata o carro como se fosse teu", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.b': "Um cliente dá-te o carro e a chave. Trata os dois com cuidado. Põe uma capa no banco e um tapete no chão antes de entrares. Faz só o que está na ordem de trabalho. Encontras outra coisa que está mal? Escreve e diz ao teu chefe: o cliente decide. Põe a chave no sítio dela, com a etiqueta. Não uses o rádio, o telefone nem as coisas que estão no carro. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.p': "Isto não está na ordem de trabalho.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.s': "Estás a mudar o óleo. Um pneu está quase careca. Não está na ordem de trabalho. O que fazes?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.o1': "Escreves, e dizes ao teu chefe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.o2': "Mudas o pneu logo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.o3': "Não dizes nada: não é o teu trabalho.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.w': "O cliente decide o que é feito e pago. Mas tem de saber que o pneu é perigoso.", // nieuw, nalezen // nagelezen AI 22 nov
   },
 };
 
