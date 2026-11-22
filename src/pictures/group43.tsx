@@ -105,6 +105,35 @@ function Figure({ head, shoulder, hip, knee, foot, hand }: { head: Pt; shoulder:
   );
 }
 
+/**
+ * The standing figure of "opstaan" (the same drawing as Figure) cut at its joints, so that on the intro
+ * card it rises from a squat: the shin turns about the foot, the thigh about the knee, the body about
+ * the hip, each from bent back to the still pose (the chain nests, as in "tillen").
+ */
+function RisingFigure({ head, shoulder, hip, knee, foot, hand }: { head: Pt; shoulder: Pt; hip: Pt; knee: Pt; foot: Pt; hand: Pt }) {
+  const [s, sh] = SKIN.henk;
+  const line = (a: Pt, b: Pt) => `M${a[0]} ${a[1]}L${b[0]} ${b[1]}`;
+  const shin = (c: ReactNode) => <Move kind="turn" turn={40} at={foot}>{c}</Move>;
+  const thigh = (c: ReactNode) => shin(<Move kind="turn" turn={-100} at={knee}>{c}</Move>);
+  const body = (c: ReactNode) => thigh(<Move kind="turn" turn={70} at={hip}>{c}</Move>);
+  return (
+    <g strokeLinecap="round" strokeLinejoin="round" fill="none">
+      {shin(<path d={line(knee, foot)} stroke={PAL.navy} strokeWidth="10" />)}
+      {thigh(<path d={line(hip, knee)} stroke={PAL.navy} strokeWidth="10" />)}
+      <rect x={foot[0] - 5} y={foot[1] - 4} width="17" height="8" rx="4" fill={PAL.slateDark} />
+      {body(
+        <g>
+          <path d={line(shoulder, hip)} stroke={PAL.purple} strokeWidth="15" />
+          <path d={line(shoulder, hand)} stroke={PAL.purpleShade} strokeWidth="6.5" />
+          <circle cx={hand[0]} cy={hand[1]} r="4.2" fill={s} />
+          <circle cx={head[0]} cy={head[1]} r="9.5" fill={s} />
+          <circle cx={head[0] + 3.2} cy={head[1] + 1.4} r="5.8" fill={sh} opacity=".45" />
+        </g>,
+      )}
+    </g>
+  );
+}
+
 export default {
   // "duizelig": dizzy — Jada, her head tilted, a hand on her forehead; a big blue spiral above her head.
   'w.duizelig': () => (
@@ -250,21 +279,25 @@ export default {
   ),
 
   // "opstaan": to get up — the figure stands up in front of the chair; a green arrow up.
+  // On the intro card the figure rises from a squat: knees, hips and back straighten (RisingFigure).
   'w.opstaan': () => (
     <g>
       <Ground cx={52} cy={107} rx={40} ry={4} />
       <Chair />
-      <Figure head={[74, 22]} shoulder={[71, 42]} hip={[67, 68]} knee={[72, 86]} foot={[68, 102]} hand={[80, 62]} />
+      <RisingFigure head={[74, 22]} shoulder={[71, 42]} hip={[67, 68]} knee={[72, 86]} foot={[68, 102]} hand={[80, 62]} />
       <Arrow from={[100, 92]} to={[100, 22]} color={PAL.leafShade} width={9} head={14} />
     </g>
   ),
 
   // "gaan zitten": to sit down — the figure is down on the seat of the same chair; an orange arrow down.
+  // On the intro card the figure comes down onto the seat.
   'w.gaanzitten': () => (
     <g>
       <Ground cx={52} cy={107} rx={40} ry={4} />
       <Chair />
-      <Figure head={[42, 26]} shoulder={[40, 44]} hip={[40, 64]} knee={[66, 66]} foot={[68, 102]} hand={[58, 58]} />
+      <Move kind="from" dy={-18}>
+        <Figure head={[42, 26]} shoulder={[40, 44]} hip={[40, 64]} knee={[66, 66]} foot={[68, 102]} hand={[58, 58]} />
+      </Move>
       <Arrow from={[100, 22]} to={[100, 92]} color={PAL.orange} width={9} head={14} />
     </g>
   ),

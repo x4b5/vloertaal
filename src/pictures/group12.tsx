@@ -184,12 +184,15 @@ export default {
 
   // "spreken": to speak — Bram speaks out loud: big sound waves come from his open mouth
   // (no speech bubble, no phone).
+  // On the intro card the sound waves go out from his mouth (they grow from the mouth outwards).
   'w.spreken': () => {
     const [mx, my] = onBust(42, 122, 0.74, 77, 77);
     return (
       <g>
         <Bust who="bram" x={42} y={122} scale={0.74} expr="pleased" talk />
-        <Waves x={mx + 8} y={my - 2} dir={1} n={3} r0={12} gap={11} width={5.5} color={PAL.sky} />
+        <Move kind="grow" grow={0.2}>
+          <Waves x={mx + 8} y={my - 2} dir={1} n={3} r0={12} gap={11} width={5.5} color={PAL.sky} />
+        </Move>
       </g>
     );
   },
@@ -209,13 +212,16 @@ export default {
   ),
 
   // "luisteren": to listen — Henk cups his hand behind his ear; sound waves come in.
+  // On the intro card the sound waves come in from the left to his ear.
   'w.luisteren': () => {
     const [ex, ey] = onBust(68, 122, 0.74, 39.6, 61);
     return (
       <g>
         <Hand pose="hold" x={ex - 2} y={ey + 24} rotate={-8} scale={0.7} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
         <Bust who="henk" x={68} y={122} scale={0.74} expr="thinking" />
-        <Waves x={4} y={ey - 6} dir={1} n={3} r0={6} gap={8} width={5} color={PAL.sky} />
+        <Move kind="from" dx={-20}>
+          <Waves x={4} y={ey - 6} dir={1} n={3} r0={6} gap={8} width={5} color={PAL.sky} />
+        </Move>
       </g>
     );
   },
@@ -243,6 +249,7 @@ export default {
   ),
 
   // "begroeten": to greet — Amina and Henk shake hands.
+  // On the intro card their forearms come in from both sides and the hands meet in the middle.
   'w.begroeten': () => {
     const [as, ash] = SKIN.amina;
     const [hs, hsh] = SKIN.henk;
@@ -252,17 +259,21 @@ export default {
         <Bust who="henk" x={98} y={124} scale={0.66} expr="pleased" flip />
         <g transform="translate(0 10)">
           {/* Forearms, level, meeting in the middle */}
-          <path d="M10 106L40 94" stroke={PAL.green} strokeWidth="15" strokeLinecap="round" />
-          <path d="M110 106L80 94" stroke={PAL.navy} strokeWidth="15" strokeLinecap="round" />
-          <rect x={34} y={84} width={9} height={19} rx="4" fill={PAL.greenShade} transform="rotate(-24 38 94)" />
-          <rect x={77} y={84} width={9} height={19} rx="4" fill={PAL.navyShade} transform="rotate(24 82 94)" />
+          <Move kind="from" dx={-18}><path d="M10 106L40 94" stroke={PAL.green} strokeWidth="15" strokeLinecap="round" /></Move>
+          <Move kind="from" dx={18}><path d="M110 106L80 94" stroke={PAL.navy} strokeWidth="15" strokeLinecap="round" /></Move>
+          <Move kind="from" dx={-18}><rect x={34} y={84} width={9} height={19} rx="4" fill={PAL.greenShade} transform="rotate(-24 38 94)" /></Move>
+          <Move kind="from" dx={18}><rect x={77} y={84} width={9} height={19} rx="4" fill={PAL.navyShade} transform="rotate(24 82 94)" /></Move>
           {/* Amina's hand (fingertips show under Henk's hand) */}
-          <rect x={40} y={84} width={30} height={16} rx="8" fill={as} />
-          <rect x={62} y={93} width={14} height={9} rx="4.5" fill={ash} />
+          <Move kind="from" dx={-18}>
+            <rect x={40} y={84} width={30} height={16} rx="8" fill={as} />
+            <rect x={62} y={93} width={14} height={9} rx="4.5" fill={ash} />
+          </Move>
           {/* Henk's hand wraps over it: the back of the hand, finger gaps, thumb over the top */}
-          <rect x={50} y={80} width={30} height={18} rx="8" fill={hs} />
-          <path d="M56 86V97M62 85V97M68 86V97" stroke={hsh} strokeWidth="1.8" strokeLinecap="round" />
-          <rect x={40} y={77} width={20} height={8} rx="4" fill={hs} transform="rotate(8 50 81)" />
+          <Move kind="from" dx={18}>
+            <rect x={50} y={80} width={30} height={18} rx="8" fill={hs} />
+            <path d="M56 86V97M62 85V97M68 86V97" stroke={hsh} strokeWidth="1.8" strokeLinecap="round" />
+            <rect x={40} y={77} width={20} height={8} rx="4" fill={hs} transform="rotate(8 50 81)" />
+          </Move>
         </g>
       </g>
     );
@@ -270,33 +281,43 @@ export default {
 
   // "een vraag stellen": to ask a question — Jada raises her hand and asks: a question mark
   // in her speech bubble.
+  // On the intro card her hand goes up, then the bubble with the question mark appears.
   'w.vraagstellen': () => (
     <g>
       <Bust who="jada" x={44} y={124} scale={0.62} expr="pleased" />
-      <Hand pose="open" x={90} y={86} rotate={10} scale={0.74} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} mirror />
-      <Bubble x={8} y={6} w={42} h={34} tail="right">
-        <QuestionMark x={29} y={23} size={26} color={PAL.sky} />
-      </Bubble>
+      <Move kind="from" dy={26}>
+        <Hand pose="open" x={90} y={86} rotate={10} scale={0.74} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} mirror />
+      </Move>
+      <Move kind="show">
+        <Bubble x={8} y={6} w={42} h={34} tail="right">
+          <QuestionMark x={29} y={23} size={26} color={PAL.sky} />
+        </Bubble>
+      </Move>
     </g>
   ),
 
   // "tekenen": to sign — a hand with a pen finishes a signature on the signature line.
+  // On the intro card the pen writes the signature: the hand goes along the line, the signature grows.
   'w.tekenen': () => (
     <g>
       <rect x={6} y={44} width={104} height={64} rx="5" fill={PAL.paperShade} transform="translate(0 4)" />
       <rect x={6} y={44} width={104} height={64} rx="5" fill={PAL.white} />
       <path d="M16 56H70M16 66H58" stroke={PAL.mist} strokeWidth="3.2" strokeLinecap="round" />
       <path d="M16 96H100" stroke={PAL.steel} strokeWidth="2.6" strokeLinecap="round" />
-      <path
-        d="M18 92C22 74 30 68 30 78S24 96 34 88 42 74 46 82 48 92 54 86 60 80 64 86"
-        fill="none"
-        stroke={PAL.navy}
-        strokeWidth="3.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <Pen x={64} y={86} angle={-62} len={50} />
-      <Hand pose="hold" x={98} y={62} rotate={-62} scale={0.78} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <Move kind="grow" grow={0.1}>
+        <path
+          d="M18 92C22 74 30 68 30 78S24 96 34 88 42 74 46 82 48 92 54 86 60 80 64 86"
+          fill="none"
+          stroke={PAL.navy}
+          strokeWidth="3.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </Move>
+      <Move kind="from" dx={-42}>
+        <Pen x={64} y={86} angle={-62} len={50} />
+        <Hand pose="hold" x={98} y={62} rotate={-62} scale={0.78} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      </Move>
     </g>
   ),
 
@@ -371,6 +392,7 @@ export default {
   ),
 
   // "posten": to post online — a photo goes up from the phone onto the internet and gets likes.
+  // On the intro card the photo goes up out of the phone, then the hearts appear.
   'w.posten': () => (
     <g>
       <Phone x={14} y={50} w={46} h={74}>
@@ -378,15 +400,19 @@ export default {
       </Phone>
       <Hand pose="hold" x={37} y={128} scale={0.9} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
       <Arrow from={[38, 70]} to={[56, 40]} color={PAL.sky} width={7} head={11} />
-      <g transform="rotate(8 82 34)">
-        <rect x={56} y={10} width={50} height={46} rx="4" fill={PAL.paperShade} transform="translate(2 3)" />
-        <rect x={56} y={10} width={50} height={46} rx="4" fill={PAL.white} />
-        <MiniPhoto x={60} y={14} w={42} h={30} />
-        <path d="M62 50H80" stroke={PAL.line} strokeWidth="2.6" strokeLinecap="round" />
-      </g>
-      <Heart cx={96} cy={72} r={8} />
-      <Heart cx={80} cy={86} r={6} />
-      <Heart cx={100} cy={96} r={5} />
+      <Move kind="from" dx={-30} dy={30}>
+        <g transform="rotate(8 82 34)">
+          <rect x={56} y={10} width={50} height={46} rx="4" fill={PAL.paperShade} transform="translate(2 3)" />
+          <rect x={56} y={10} width={50} height={46} rx="4" fill={PAL.white} />
+          <MiniPhoto x={60} y={14} w={42} h={30} />
+          <path d="M62 50H80" stroke={PAL.line} strokeWidth="2.6" strokeLinecap="round" />
+        </g>
+      </Move>
+      <Move kind="show">
+        <Heart cx={96} cy={72} r={8} />
+        <Heart cx={80} cy={86} r={6} />
+        <Heart cx={100} cy={96} r={5} />
+      </Move>
     </g>
   ),
 
@@ -425,18 +451,20 @@ export default {
   },
 
   // "delen": to share — one phone sends the same photo out to three other phones.
+  // On the intro card the three phones with the photo go out from the first phone to their places.
   'w.delen': () => (
     <g>
-      <Phone x={10} y={30} w={40} h={68}>
-        <MiniPhoto x={16} y={44} w={28} h={24} />
-      </Phone>
+      {/* The three phones first: on the intro card they come out from behind the first one */}
       {([[94, 14], [100, 50], [94, 86]] as Pt[]).map(([x, y], i) => (
-        <g key={i}>
+        <Move key={i} kind="from" dx={-52} dy={(50 - y) * 0.7}>
           <rect x={x - 11} y={y - 1} width={22} height={34} rx="4" fill={PAL.slateDark} />
           <rect x={x - 12} y={y - 3} width={22} height={34} rx="4" fill={PAL.slate} />
           <MiniPhoto x={x - 9} y={y + 4} w={16} h={14} />
-        </g>
+        </Move>
       ))}
+      <Phone x={10} y={30} w={40} h={68}>
+        <MiniPhoto x={16} y={44} w={28} h={24} />
+      </Phone>
       <Arrow from={[54, 50]} to={[76, 30]} color={PAL.sky} width={6} head={10} />
       <Arrow from={[56, 64]} to={[82, 64]} color={PAL.sky} width={6} head={10} />
       <Arrow from={[54, 78]} to={[76, 98]} color={PAL.sky} width={6} head={10} />
@@ -537,6 +565,7 @@ export default {
   ),
 
   // "uitleggen": to explain — Henk explains to Jada how it works: step, arrow, done.
+  // On the intro card the arrow in his bubble grows from the step, then the tick appears.
   'w.uitleggen': () => (
     <g>
       <Bust who="henk" x={30} y={124} scale={0.58} expr="pleased" talk />
@@ -545,34 +574,48 @@ export default {
       <Bubble x={40} y={6} w={72} h={40} tail="left">
         <rect x={48} y={16} width={16} height={16} rx="3" fill={PAL.card} />
         <path d="M54 16V22" stroke={PAL.cardShade} strokeWidth="3" />
-        <Arrow from={[68, 24]} to={[84, 24]} color={PAL.orange} width={5} head={8} />
-        <Tick x={96} y={24} r={9} />
+        <Move kind="grow" grow={0.15}>
+          <Arrow from={[68, 24]} to={[84, 24]} color={PAL.orange} width={5} head={8} />
+        </Move>
+        <Move kind="show">
+          <Tick x={96} y={24} r={9} />
+        </Move>
       </Bubble>
     </g>
   ),
 
   // "leren": to learn — Amina reads an open book and gets the idea (a light bulb).
+  // On the intro card the book comes up to read, then the light bulb appears.
   'w.leren': () => (
     <g>
       <Bust who="amina" x={56} y={128} scale={0.62} expr="pleased" />
-      <Bulb cx={94} cy={30} r={12} />
+      <Move kind="show">
+        <Bulb cx={94} cy={30} r={12} />
+      </Move>
       {/* Open book held in front of her */}
-      <path d="M22 92L56 98V122L22 116Z" fill={PAL.redShade} />
-      <path d="M90 92L56 98V122L90 116Z" fill={PAL.red} />
-      <path d="M25 88Q42 86 56 94V116Q42 108 25 110Z" fill={PAL.white} />
-      <path d="M87 88Q70 86 56 94V116Q70 108 87 110Z" fill={PAL.paperShade} />
-      <path d="M30 95Q42 93 51 98M30 102Q42 100 51 105M61 98Q70 93 82 95M61 105Q70 100 82 102" fill="none" stroke={PAL.line} strokeWidth="2" strokeLinecap="round" />
+      <Move kind="from" dy={18}>
+        <path d="M22 92L56 98V122L22 116Z" fill={PAL.redShade} />
+        <path d="M90 92L56 98V122L90 116Z" fill={PAL.red} />
+        <path d="M25 88Q42 86 56 94V116Q42 108 25 110Z" fill={PAL.white} />
+        <path d="M87 88Q70 86 56 94V116Q70 108 87 110Z" fill={PAL.paperShade} />
+        <path d="M30 95Q42 93 51 98M30 102Q42 100 51 105M61 98Q70 93 82 95M61 105Q70 100 82 102" fill="none" stroke={PAL.line} strokeWidth="2" strokeLinecap="round" />
+      </Move>
     </g>
   ),
 
   // "nee zeggen": to say no — Bram says no: a red cross in his speech bubble, his hand up.
+  // On the intro card his hand comes up, then the red cross appears in the bubble.
   'w.neezeggen': () => (
     <g>
       <Bust who="bram" x={38} y={124} scale={0.64} expr="neutral" />
       <Bubble x={58} y={8} w={52} h={44} tail="left" fill="#ffe1db" depth={PAL.redLight}>
-        <Cross x={84} y={30} r={15} />
+        <Move kind="show">
+          <Cross x={84} y={30} r={15} />
+        </Move>
       </Bubble>
-      <Hand pose="open" x={86} y={118} rotate={6} scale={0.62} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} mirror />
+      <Move kind="from" dy={24}>
+        <Hand pose="open" x={86} y={118} rotate={6} scale={0.62} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} mirror />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

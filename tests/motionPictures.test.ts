@@ -72,8 +72,17 @@ const MOTION_ROUND4 = [
   'w.zoeken', 'w.bewaren', 'w.hamer', 'w.afkeuren', 'w.wassen', 'w.prullenbak', 'w.verzamelen', 'w.lossen', 'w.tanken', 'w.opladen', 'w.parkeren', 'w.retour', 'w.typen', 'w.opslaan', 'w.ophangen', 'w.tempo', 'w.vakkenvullen', 'w.pakken', 'w.kruishout', 'w.aftekenen', 'w.mal', 'w.tiewrap',
   'w.betalen', 'w.pinnen', 'w.kijken', 'w.licht', 'w.snijden', 'w.bezorgen', 'w.inladen', 'w.aanbellen', 'w.rijden', 'w.handje', 'w.aandebel', 'w.motorkap', 'w.lamp', 'w.morsen', 'w.samen', 'w.penseel', 'w.achterlamp', 'w.waarschuwingslampje', 'w.signaallamp', 'w.rolcontainer',
   'w.drinken', 'w.repareren', 'w.stemmen', 'w.klikken', 'w.proefrit', 'w.korting', 'w.bestellen', 'w.stelen', 'w.schreeuwen', 'w.geldterug', 'w.storen', 'w.aanwijzen', 'w.slijpen', 'w.nijptang', 'w.slagmoersleutel', 'w.afscherming', 'w.accuboor', 'w.boormachine', 'w.vonk', 'w.bel', 'w.aankleden',
-  // The Belgian twin of "stemmen" shares its picture.
-  'be.w.stemmen',
+  'w.bewegen', 'w.sparen', 'w.oogsten', 'w.zetten', 'w.leggen', 'w.brengen', 'w.geven', 'w.loslaten', 'w.aanzetten', 'w.opendoen',
+  'w.dichtdoen', 'w.drukken', 'w.draaien', 'w.stoppen', 'w.duwen', 'w.trekken', 'w.vullen', 'w.leegmaken', 'w.schoonmaken', 'w.bijvullen',
+  'w.hallo', 'w.goedemorgen', 'w.totmorgen', 'w.werk', 'w.afdrogen', 'w.passen', 'w.lassen', 'w.stucspaan', 'w.rei', 'w.sponsspaan',
+  'w.handzaag', 'w.kapzaag', 'w.houtbeitel', 'w.handschaaf', 'w.timmermanshamer', 'w.houtenhamer', 'w.helpen', 'w.plamuurmes', 'w.stoffertje', 'w.schuren',
+  'w.afplakken', 'w.ijzerzaag', 'w.vertalen', 'w.opschrijven', 'w.latenzien', 'w.ondertiteling', 'w.appen', 'w.handenwassen', 'w.stoffen', 'w.luchten',
+  'w.spoelen', 'w.stilstaan', 'w.lampje', 'w.komen', 'w.aankijken', 'w.ademhalen', 'w.opnemen', 'w.knippen', 'w.regen', 'w.meten',
+  'w.struikelen', 'w.vinden', 'w.opstaan', 'w.gaanzitten', 'w.bevestigen', 'w.vastzetten', 'w.lijmen', 'w.opbouwen', 'w.lichtwerk', 'w.welkomterug',
+  'w.diagnosecomputer', 'w.onderdelenkar', 'w.koppeling', 'w.spreken', 'w.luisteren', 'w.begroeten', 'w.vraagstellen', 'w.tekenen', 'w.uitleggen', 'w.leren',
+  'w.neezeggen', 'w.posten', 'w.delen', 'w.vertellen', 'w.solliciteren', 'w.inschrijven', 'w.boor', 'w.beton', 'w.weigeren', 'w.machine',
+  'w.noodstop', 'w.productie', 'w.beginnen', 'w.bellen', 'w.totenmet', 'w.dichtplakken', 'w.idee', 'w.handopsteken', 'w.voegijzer', 'w.handveger',
+  'w.startknop', 'w.waterpomptang',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
@@ -123,7 +132,7 @@ describe('moving word pictures: the trial', () => {
   it('no other picture moves (only the words chosen, one by one)', () => {
     const moving = Object.entries(words).filter(([, draw]) => /class="mv-/.test(renderToStaticMarkup(createElement(draw)))).map(([id]) => id);
     // A Belgian twin of a moving word shares its picture (and moves on its own intro card too).
-    const twins = MOVING.map((id) => `be.${id}`).filter((id) => id in words);
+    const twins = MOVING.map((id) => `be.${id}`).filter((id) => words[id] && words[id] === words[id.slice(3)]);
     expect(moving.sort()).toEqual([...MOVING, ...twins].sort());
   });
 

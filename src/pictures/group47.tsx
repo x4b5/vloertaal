@@ -1,5 +1,5 @@
 import { useId, type JSX } from 'react';
-import { Ground, Motion, PAL, Shade, Shine, Tick } from './kit';
+import { Ground, Motion, Move, PAL, Shade, Shine, Tick } from './kit';
 
 /**
  * Word pictures, group 47 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -160,30 +160,37 @@ export default {
     </g>
   ),
 
-  // "knippen": to cut with scissors — open red scissors round a leaf stalk; the cut leaf drops off
+  // "knippen": to cut with scissors — open red scissors round a leaf stalk; the cut leaf drops off.
+  // On the intro card the blades close in from wide open (a snip), and the cut leaf drops.
   'w.knippen': () => (
     <g>
       {/* The stalk from the plant, and the leaf that is cut off */}
       <path d="M86 10V54" stroke={PAL.green} strokeWidth="6" strokeLinecap="round" />
-      <g transform="rotate(14 88 70)">
-        <path d="M88 70V84" stroke={PAL.green} strokeWidth="6" strokeLinecap="round" />
-        <ellipse cx="88" cy="96" rx="10" ry="14" fill={PAL.leaf} />
-        <path d="M88 82A10 14 0 0 1 88 110Z" fill={PAL.leafShade} />
-      </g>
+      <Move kind="drop" dy={-16}>
+        <g transform="rotate(14 88 70)">
+          <path d="M88 70V84" stroke={PAL.green} strokeWidth="6" strokeLinecap="round" />
+          <ellipse cx="88" cy="96" rx="10" ry="14" fill={PAL.leaf} />
+          <path d="M88 82A10 14 0 0 1 88 110Z" fill={PAL.leafShade} />
+        </g>
+      </Move>
       <Motion x={98} y={62} dir={0} spread={50} n={3} len={7} gap={4} />
       {/* Scissors: two halves crossing at the pivot */}
       <g transform="translate(52 62)">
+        <Move kind="turn" turn={18} at={[0, 0]}>
         <g transform="rotate(14) scale(1 -1)">
           <path d="M-4 0L-24 12" stroke={PAL.redShade} strokeWidth="7.5" strokeLinecap="round" />
           <circle cx="-31" cy="16" r="10" fill="none" stroke={PAL.redShade} strokeWidth="7.5" />
           <path d="M-8 -6L40 -3L47 1L-8 7Z" fill={PAL.steel} strokeLinejoin="round" stroke={PAL.steel} strokeWidth="2" />
         </g>
+        </Move>
+        <Move kind="turn" turn={-18} at={[0, 0]}>
         <g transform="rotate(-14)">
           <path d="M-4 0L-24 12" stroke={PAL.red} strokeWidth="7.5" strokeLinecap="round" />
           <circle cx="-31" cy="16" r="10" fill="none" stroke={PAL.red} strokeWidth="7.5" />
           <path d="M-8 -6L40 -3L47 1L-8 7Z" fill={PAL.mist} strokeLinejoin="round" stroke={PAL.mist} strokeWidth="2" />
           <path d="M0 -3L36 -1" stroke={PAL.white} strokeWidth="1.6" strokeLinecap="round" opacity=".8" />
         </g>
+        </Move>
         <circle cx="0" cy="0" r="4" fill={PAL.slate} />
       </g>
     </g>
@@ -214,15 +221,18 @@ export default {
     </g>
   ),
 
-  // "de regen": the rain — a light grey cloud with many blue drops falling from it
+  // "de regen": the rain — a light grey cloud with many blue drops falling from it.
+  // On the intro card the drops fall out of the cloud.
   'w.regen': () => (
     <g>
-      <Drop x={30} y={82} />
-      <Drop x={54} y={82} />
-      <Drop x={78} y={82} />
-      <Drop x={40} y={101} />
-      <Drop x={64} y={101} />
-      <Drop x={88} y={101} />
+      <Move kind="drop" dy={-26}>
+        <Drop x={30} y={82} />
+        <Drop x={54} y={82} />
+        <Drop x={78} y={82} />
+        <Drop x={40} y={101} />
+        <Drop x={64} y={101} />
+        <Drop x={88} y={101} />
+      </Move>
       <Cloud fill={PAL.mist} shade={PAL.line} depth={PAL.steel} shine={PAL.white} />
     </g>
   ),

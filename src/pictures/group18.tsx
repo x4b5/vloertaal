@@ -139,7 +139,8 @@ export default {
     </g>
   ),
 
-  // "vinden": to find — a map with a dotted route that ends at a red pin, and a sparkle
+  // "vinden": to find — a map with a dotted route that ends at a red pin, and a sparkle.
+  // On the intro card the pin drops onto the end of the route, then the sparkles show.
   'w.vinden': () => (
     <g>
       {/* Folded map: three panels */}
@@ -155,11 +156,15 @@ export default {
       <path d="M22 92Q40 84 58 82Q76 80 80 58" fill="none" stroke={PAL.line} strokeWidth="4" strokeLinecap="round" strokeDasharray="1 8" />
       <circle cx="22" cy="92" r="4" fill={PAL.slate} />
       {/* Pin */}
-      <path d="M82 58C76 50 70 44 70 36A12 12 0 0 1 94 36C94 44 88 50 82 58Z" fill={PAL.red} />
-      <path d="M86 25.5A12 12 0 0 1 94 36C94 44 88 50 82 58V47Z" fill={PAL.redShade} opacity=".8" />
-      <circle cx="82" cy="36" r="4.6" fill={PAL.white} />
-      <Sparkle x={100} y={52} r={7} />
-      <Sparkle x={66} y={22} r={5} />
+      <Move kind="drop" dy={-24}>
+        <path d="M82 58C76 50 70 44 70 36A12 12 0 0 1 94 36C94 44 88 50 82 58Z" fill={PAL.red} />
+        <path d="M86 25.5A12 12 0 0 1 94 36C94 44 88 50 82 58V47Z" fill={PAL.redShade} opacity=".8" />
+        <circle cx="82" cy="36" r="4.6" fill={PAL.white} />
+      </Move>
+      <Move kind="show">
+        <Sparkle x={100} y={52} r={7} />
+        <Sparkle x={66} y={22} r={5} />
+      </Move>
     </g>
   ),
 

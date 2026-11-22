@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine } from '../kit';
+import { Ground, Move, PAL, Shine } from '../kit';
 
 /** Copper (terracotta steps) and brass (darker steps of the hard-hat yellow). */
 const CU = { base: PAL.clay, shade: PAL.clayShade, light: PAL.clayLight, inside: '#8f3a1a' };
@@ -38,15 +38,18 @@ const nut = (x: number, w: number, r: number) => {
 export default {
   // "de koppeling": the pipe fitting — a big brass compression coupling: a body between two large hex
   // nuts (lit top face, dark bottom face and right end), joining two thick copper pipe ends that come
-  // in from left and right; the left pipe's open end shows.
+  // in from left and right; the left pipe's open end shows. On the intro card the two pipe ends slide
+  // in from both sides into the nuts.
   'w.koppeling': () => (
     <g>
       <Ground cx={60} cy={98} rx={50} ry={5} />
-      {pipe(12, 30)}
-      {pipe(88, 108)}
-      {/* The left pipe's open end, facing the viewer */}
-      <ellipse cx={12} cy={CY} rx={5.5} ry={PR} fill={CU.light} />
-      <ellipse cx={12.6} cy={CY} rx={3.2} ry={PR - 4} fill={CU.inside} />
+      <Move kind="from" dx={-16}>
+        {pipe(12, 30)}
+        {/* The left pipe's open end, facing the viewer */}
+        <ellipse cx={12} cy={CY} rx={5.5} ry={PR} fill={CU.light} />
+        <ellipse cx={12.6} cy={CY} rx={3.2} ry={PR - 4} fill={CU.inside} />
+      </Move>
+      <Move kind="from" dx={16}>{pipe(88, 108)}</Move>
       {/* The body in the middle, slimmer than the nuts */}
       {nut(48, 24, 19)}
       {/* The two big nuts */}

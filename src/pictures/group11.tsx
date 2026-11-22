@@ -304,12 +304,15 @@ export default {
   },
 
   // "appen": to send app messages — two thumbs typing on a phone, chat messages on the screen.
+  // On the intro card the newest message comes up from behind the keyboard.
   'w.appen': () => (
     <g>
       <Phone x={34} y={8} w={52} h={88}>
         <Msg x={41} y={19} w={28} h={10} />
         <Msg x={51} y={35} w={28} h={10} sent />
-        <Msg x={41} y={51} w={24} h={10} />
+        <Move kind="from" dy={18}>
+          <Msg x={41} y={51} w={24} h={10} />
+        </Move>
         <rect x={40} y={68} width={40} height={20} rx="3" fill={PAL.mist} />
         <path d="M44 73H76M44 78H76M48 83H72" stroke={PAL.white} strokeWidth="2.6" strokeLinecap="round" strokeDasharray="2.6 3.2" />
       </Phone>
@@ -473,18 +476,23 @@ export default {
   ),
 
   // "vertalen": to translate — two speech bubbles in different scripts with arrows between them.
+  // On the intro card the translated bubble comes out of the first one, then the arrow back shows.
   'w.vertalen': () => (
     <g>
       <Bubble x={8} y={10} w={60} h={38} tail="left">
         <WaveScript x={17} y={23} w={42} color={PAL.skyShade} width={3.4} />
         <WaveScript x={17} y={36} w={28} color={PAL.skyShade} width={3.4} />
       </Bubble>
-      <Bubble x={52} y={64} w={60} h={34} tail="right" fill="#fff3d6" depth={PAL.yellowLight}>
-        <BlockScript x={60} y={76} w={44} color={PAL.orangeShade} size={8} />
-        <BlockScript x={60} y={89} w={24} color={PAL.orangeShade} size={8} />
-      </Bubble>
+      <Move kind="from" dx={-20} dy={-24}>
+        <Bubble x={52} y={64} w={60} h={34} tail="right" fill="#fff3d6" depth={PAL.yellowLight}>
+          <BlockScript x={60} y={76} w={44} color={PAL.orangeShade} size={8} />
+          <BlockScript x={60} y={89} w={24} color={PAL.orangeShade} size={8} />
+        </Bubble>
+      </Move>
       <CurveArrow from={[76, 26]} to={[98, 54]} bend={12} color={PAL.sky} width={7} head={12} />
-      <CurveArrow from={[42, 92]} to={[22, 66]} bend={12} color={PAL.orange} width={7} head={12} />
+      <Move kind="show">
+        <CurveArrow from={[42, 92]} to={[22, 66]} bend={12} color={PAL.orange} width={7} head={12} />
+      </Move>
     </g>
   ),
 
@@ -518,10 +526,12 @@ export default {
   ),
 
   // "laten zien": to show — Jada holds up her phone so Henk can see the screen.
+  // On the intro card she lifts the phone up to Henk, then the lines show.
   'w.latenzien': () => (
     <g>
       <Bust who="jada" x={28} y={122} scale={0.5} expr="pleased" />
       <Bust who="henk" x={94} y={122} scale={0.5} expr="thinking" flip />
+      <Move kind="from" dy={26}>
       <g transform="rotate(10 60 40)">
         <rect x={44} y={18} width={34} height={46} rx="5" fill={PAL.slateDark} transform="translate(2 3)" />
         <rect x={44} y={18} width={34} height={46} rx="5" fill={PAL.slate} />
@@ -530,12 +540,15 @@ export default {
         <path d="M47.5 52Q55 40 62 48Q68 43 74.5 50V60H47.5Z" fill={PAL.green} />
       </g>
       <Hand pose="hold" x={52} y={88} rotate={12} scale={0.6} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
-      <Motion x={62} y={40} dir={-90} spread={140} n={3} len={6} gap={32} color={PAL.sky} width={3.4} />
+      </Move>
+      <Move kind="show">
+        <Motion x={62} y={40} dir={-90} spread={140} n={3} len={6} gap={32} color={PAL.sky} width={3.4} />
+      </Move>
     </g>
   ),
 
   // "de ondertiteling": the captions — a video on a phone (sideways), a dark caption bar with
-  // lines of text under the speaking face.
+  // lines of text under the speaking face. On the intro card the line of text runs out as she speaks.
   'w.ondertiteling': () => (
     <g>
       <rect x={10} y={26} width={100} height={66} rx="9" fill={PAL.slateDark} transform="translate(2.5 3)" />
@@ -545,7 +558,9 @@ export default {
         <Bust who="jada" x={60} y={92} scale={0.5} expr="joy" />
       </svg>
       <rect x={22} y={68} width={76} height={15} rx="4" fill={PAL.ink} opacity=".85" />
-      <path d="M29 75.5H52M57 75.5H73M78 75.5H91" stroke={PAL.white} strokeWidth="3.4" strokeLinecap="round" />
+      <Move kind="grow">
+        <path d="M29 75.5H52M57 75.5H73M78 75.5H91" stroke={PAL.white} strokeWidth="3.4" strokeLinecap="round" />
+      </Move>
     </g>
   ),
 
@@ -583,6 +598,7 @@ export default {
   },
 
   // "opschrijven": to write down — a hand writing on a notepad with a pencil.
+  // On the intro card the pencil writes the second line from left to right.
   'w.opschrijven': () => (
     <g>
       <Sheet x={14} y={14} w={70} h={92} rx={5}>
@@ -592,9 +608,12 @@ export default {
         ))}
         <path d="M22 40H76M22 52H76M22 64H76M22 76H76M22 88H76" stroke={PAL.paperShade} strokeWidth="2" strokeLinecap="round" />
         <WaveScript x={24} y={51} w={48} color={PAL.navy} width={2.8} />
-        <WaveScript x={24} y={63} w={28} color={PAL.navy} width={2.8} />
+        <Move kind="grow">
+          <WaveScript x={24} y={63} w={28} color={PAL.navy} width={2.8} />
+        </Move>
       </Sheet>
       {/* Hand holding the pencil, tip on the end of the written line */}
+      <Move kind="from" dx={-26}>
       <Hand pose="hold" x={84} y={91} rotate={-45} scale={0.62} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
       <g transform="translate(53 63) rotate(38.8)">
         <path d="M0 0L9 -4V4Z" fill={PAL.card} />
@@ -603,6 +622,7 @@ export default {
         <rect x={9} y={1} width={46} height={3} fill={PAL.yellowShade} />
         <rect x={53} y={-4} width={8} height={8} rx="2" fill={PAL.redLight} />
       </g>
+      </Move>
     </g>
   ),
 

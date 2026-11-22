@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 type P = [number, number];
 const poly = (p: P[]) => `M${p.map(([x, y]) => `${r1(x)} ${r1(y)}`).join('L')}Z`;
@@ -45,6 +45,7 @@ export default {
   // "de waterpomptang": the slip-joint (water-pump) pliers — two long handles with blue grips going down
   // to the bottom left, the joint with its long slot of grooves, and two serrated steel jaws bent away
   // to the right and wide open.
+  // On the intro card the front handle and the upper jaw swing open around the joint (from gripping).
   'w.waterpomptang': () => (
     <g strokeLinejoin="round" strokeLinecap="round">
       <Ground cx={58} cy={106} rx={44} ry={4} />
@@ -53,11 +54,13 @@ export default {
       <path d="M44 74L18 98" stroke={PAL.blueShade} strokeWidth="13" fill="none" />
       <path d={LOWER} fill={PAL.slate} />
       {/* The front handle and the upper jaw */}
-      <path d={`M${J[0] + 2} ${J[1]}L36 104`} stroke={PAL.steel} strokeWidth="10" fill="none" />
-      <path d="M50 80L36 104" stroke={PAL.blue} strokeWidth="13" fill="none" />
-      <Shine d="M46 83L41 93" width={2.8} opacity={0.55} />
-      <path d={UPPER} fill={PAL.steel} />
-      <Shine d="M64 46L82 28" width={2.6} opacity={0.6} />
+      <Move kind="turn" turn={24} at={J}>
+        <path d={`M${J[0] + 2} ${J[1]}L36 104`} stroke={PAL.steel} strokeWidth="10" fill="none" />
+        <path d="M50 80L36 104" stroke={PAL.blue} strokeWidth="13" fill="none" />
+        <Shine d="M46 83L41 93" width={2.8} opacity={0.55} />
+        <path d={UPPER} fill={PAL.steel} />
+        <Shine d="M64 46L82 28" width={2.6} opacity={0.6} />
+      </Move>
       {/* The joint plate with its slot of grooves, and the bolt */}
       <g transform={`rotate(-58 ${J[0]} ${J[1]})`}>
         <rect x={J[0] - 17} y={J[1] - 8} width={30} height={16} rx="8" fill={PAL.mist} />

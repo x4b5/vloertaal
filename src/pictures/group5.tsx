@@ -130,6 +130,7 @@ export default {
   ),
 
   // "beginnen": to start — a finger presses the big green start button on a machine.
+  // On the intro card the finger comes to the button, then the green lines appear (it starts).
   'w.beginnen': () => (
     <g>
       <rect x="12" y="14" width="70" height="66" rx="10" fill={PAL.slateDark} transform="translate(0 4)" />
@@ -138,8 +139,12 @@ export default {
       <circle cx="44" cy="47" r="23" fill={PAL.ok} />
       <path d="M37 35L57 47L37 59Z" fill={PAL.white} stroke={PAL.white} strokeWidth="4" strokeLinejoin="round" />
       <Shine d="M27 41A18 18 0 0 1 36 30" opacity={0.5} />
-      <Motion x={44} y={47} dir={-90} spread={100} n={3} len={7} gap={30} color={PAL.ok} width={3.6} />
-      <Hand pose="point" x={94} y={92} rotate={-42} scale={0.95} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <Move kind="show">
+        <Motion x={44} y={47} dir={-90} spread={100} n={3} len={7} gap={30} color={PAL.ok} width={3.6} />
+      </Move>
+      <Move kind="from" dx={18} dy={18}>
+        <Hand pose="point" x={94} y={92} rotate={-42} scale={0.95} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      </Move>
     </g>
   ),
 
@@ -198,8 +203,10 @@ export default {
   ),
 
   // "bellen": to call — a phone in the hand, ringing, with the green call button on screen.
+  // On the intro card the hand brings the phone up, then the ringing lines appear (once, no blinking).
   'w.bellen': () => (
     <g>
+      <Move kind="from" dy={22}>
       <rect x="40" y="14" width="40" height="76" rx="8" fill={PAL.slateDark} transform="translate(2 3)" />
       <rect x="40" y="14" width="40" height="76" rx="8" fill={PAL.slate} />
       <rect x="44.5" y="22" width="31" height="58" rx="4" fill="#e3f5ff" />
@@ -211,8 +218,11 @@ export default {
         <rect x="3.6" y="-6" width="5.4" height="6" rx="2" fill={PAL.white} transform="rotate(-30 6 -3)" />
       </g>
       <Hand pose="hold" x={60} y={116} scale={1.15} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
-      <Motion x={40} y={34} dir={-160} spread={60} n={3} len={8} gap={6} color={PAL.sky} width={3.8} />
-      <Motion x={80} y={34} dir={-20} spread={60} n={3} len={8} gap={6} color={PAL.sky} width={3.8} />
+      </Move>
+      <Move kind="show">
+        <Motion x={40} y={34} dir={-160} spread={60} n={3} len={8} gap={6} color={PAL.sky} width={3.8} />
+        <Motion x={80} y={34} dir={-20} spread={60} n={3} len={8} gap={6} color={PAL.sky} width={3.8} />
+      </Move>
     </g>
   ),
 

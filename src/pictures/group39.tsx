@@ -1,6 +1,6 @@
 import type { JSX, ReactNode } from 'react';
 import { Bust } from './bust';
-import { Arrow, Box, Bubble, CurveArrow, Dots, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Box, Bubble, CurveArrow, Dots, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 
 /**
  * Word pictures, group 39 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -63,7 +63,8 @@ function Coin({ cx, cy }: { cx: number; cy: number }) {
 
 export default {
   // "stilstaan": to stand still — the belt with two boxes on it, no motion lines, and above it a
-  // big round pause sign (two bars): the line has stopped.
+  // big round pause sign (two bars): the line has stopped. On the intro card the boxes ride in and
+  // come to a stop, then the pause sign shows.
   'w.stilstaan': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4} />
@@ -76,18 +77,22 @@ export default {
           <circle cx={x} cy="85.5" r="2" fill={PAL.steel} />
         </g>
       ))}
-      <Box x={18} y={57} w={26} h={21} depth={8} />
-      <Box x={70} y={57} w={26} h={21} depth={8} />
-      <circle cx="60" cy="31" r="21" fill={PAL.skyShade} />
-      <circle cx="60" cy="28" r="21" fill={PAL.sky} />
-      <rect x="50" y="17" width="7" height="22" rx="2.5" fill={PAL.white} />
-      <rect x="63" y="17" width="7" height="22" rx="2.5" fill={PAL.white} />
-      <Shine d="M45 20Q48 12 56 10" width={3.2} opacity={0.5} />
+      <Move kind="from" dx={-24}>
+        <Box x={18} y={57} w={26} h={21} depth={8} />
+        <Box x={70} y={57} w={26} h={21} depth={8} />
+      </Move>
+      <Move kind="show">
+        <circle cx="60" cy="31" r="21" fill={PAL.skyShade} />
+        <circle cx="60" cy="28" r="21" fill={PAL.sky} />
+        <rect x="50" y="17" width="7" height="22" rx="2.5" fill={PAL.white} />
+        <rect x="63" y="17" width="7" height="22" rx="2.5" fill={PAL.white} />
+        <Shine d="M45 20Q48 12 56 10" width={3.2} opacity={0.5} />
+      </Move>
     </g>
   ),
 
   // "het lampje": the (warning) light — a red signal light on its dark foot, lit: light rays
-  // come off its dome.
+  // come off its dome. On the intro card the light goes on (one fade of its glow and rays).
   'w.lampje': () => (
     <g>
       <Ground cx={60} cy={104} rx={32} ry={4} />
@@ -96,26 +101,33 @@ export default {
       <Shade color={PAL.redShade} opacity={1} at={[86, 62, 12, 30]}>
         <path d="M40 82V60Q40 38 60 38Q80 38 80 60V82Z" fill={PAL.red} />
       </Shade>
-      <ellipse cx="58" cy="60" rx="8" ry="14" fill={PAL.redLight} opacity=".85" />
+      <Move kind="show">
+        <ellipse cx="58" cy="60" rx="8" ry="14" fill={PAL.redLight} opacity=".85" />
+      </Move>
       <path d="M38 82H82" stroke={PAL.slateDark} strokeWidth="3" strokeLinecap="round" />
-      <Motion x={60} y={56} dir={-90} spread={150} n={5} len={9} gap={30} color={PAL.red} width={4.2} />
+      <Move kind="show">
+        <Motion x={60} y={56} dir={-90} spread={150} n={5} len={9} gap={30} color={PAL.red} width={4.2} />
+      </Move>
       <Shine d="M46 58Q46 48 52 44" width={3.4} opacity={0.7} />
     </g>
   ),
 
   // "komen": to come — Jada waves someone over with her open hand; a big arrow comes to her
-  // from the other side.
+  // from the other side. On the intro card the arrow comes in from the left to her.
   'w.komen': () => (
     <g>
       <Bust who="jada" x={80} y={120} scale={0.66} expr="pleased" />
       <Hand pose="open" x={44} y={80} rotate={-24} scale={0.62} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} mirror />
       <Motion x={36} y={42} dir={-150} spread={50} n={3} len={6} gap={6} color={PAL.sky} width={3.4} />
-      <Arrow from={[8, 98]} to={[46, 98]} color={PAL.green} width={8} head={13} />
+      <Move kind="from" dx={-26}>
+        <Arrow from={[8, 98]} to={[46, 98]} color={PAL.green} width={8} head={13} />
+      </Move>
     </g>
   ),
 
   // "aankijken": to look at someone — two eyes that look straight at you (not to the side, as in
-  // "kijken"), under the bubble of the one who talks.
+  // "kijken"), under the bubble of the one who talks. On the intro card the eyes look aside first,
+  // then turn to look straight at you.
   'w.aankijken': () => (
     <g>
       <Bubble x={34} y={8} w={52} h={26} tail="none">
@@ -127,9 +139,11 @@ export default {
           <Shade color={PAL.paperShade} opacity={1} at={[cx + 22, 78, 10, 28]}>
             <ellipse cx={cx} cy={75} rx="20" ry="25" fill={PAL.white} />
           </Shade>
-          <circle cx={cx} cy={74} r="11" fill={PAL.brown} />
-          <circle cx={cx} cy={74} r="6.4" fill={PAL.ink} />
-          <circle cx={cx - 3.6} cy={70} r="2.8" fill={PAL.white} />
+          <Move kind="from" dx={-9}>
+            <circle cx={cx} cy={74} r="11" fill={PAL.brown} />
+            <circle cx={cx} cy={74} r="6.4" fill={PAL.ink} />
+            <circle cx={cx - 3.6} cy={70} r="2.8" fill={PAL.white} />
+          </Move>
         </g>
       ))}
       <path d="M48 44L54 52M72 44L66 52" stroke={PAL.sky} strokeWidth="3.4" strokeLinecap="round" />
@@ -154,13 +168,15 @@ export default {
   ),
 
   // "ademhalen": to breathe — Bram with his eyes calmly closed; a long, slow breath goes out
-  // in a soft curve.
+  // in a soft curve. On the intro card the breath flows slowly out from his mouth.
   'w.ademhalen': () => (
     <g>
       <Bust who="bram" x={44} y={122} scale={0.72} emotion="rest" />
-      <path d="M72 70Q84 62 92 70T110 68" fill="none" stroke={PAL.ice} strokeWidth="5" strokeLinecap="round" />
-      <path d="M74 80Q86 74 94 82T108 82" fill="none" stroke={PAL.sky} strokeWidth="4" strokeLinecap="round" opacity=".7" />
-      <path d="M72 58Q82 52 90 58" fill="none" stroke={PAL.ice} strokeWidth="3.4" strokeLinecap="round" opacity=".8" />
+      <Move kind="slow" dx={-16}>
+        <path d="M72 70Q84 62 92 70T110 68" fill="none" stroke={PAL.ice} strokeWidth="5" strokeLinecap="round" />
+        <path d="M74 80Q86 74 94 82T108 82" fill="none" stroke={PAL.sky} strokeWidth="4" strokeLinecap="round" opacity=".7" />
+        <path d="M72 58Q82 52 90 58" fill="none" stroke={PAL.ice} strokeWidth="3.4" strokeLinecap="round" opacity=".8" />
+      </Move>
     </g>
   ),
 
@@ -191,7 +207,8 @@ export default {
   ),
 
   // "opnemen": to pick up the phone — a finger presses the big green button with its handset
-  // (the twin of "ophangen", whose button is red); the phone still rings.
+  // (the twin of "ophangen", whose button is red); the phone still rings. On the intro card the
+  // finger comes in from the bottom right to the button.
   'w.opnemen': () => (
     <g>
       <circle cx="54" cy="52" r="36" fill={PAL.okShade} />
@@ -200,7 +217,9 @@ export default {
       <Shine d="M26 36Q32 22 46 17" opacity={0.45} />
       <Motion x={54} y={48} dir={-150} spread={40} n={3} len={7} gap={42} color={PAL.sky} width={3.6} />
       <Motion x={54} y={48} dir={-30} spread={40} n={3} len={7} gap={42} color={PAL.sky} width={3.6} />
-      <Hand pose="point" x={96} y={116} rotate={-28} scale={0.8} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      <Move kind="from" dx={16} dy={16}>
+        <Hand pose="point" x={96} y={116} rotate={-28} scale={0.8} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      </Move>
     </g>
   ),
 

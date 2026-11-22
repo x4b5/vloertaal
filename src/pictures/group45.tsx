@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Ground, PAL, Shade, Shine } from './kit';
+import { Arrow, Ground, Move, PAL, Shade, Shine } from './kit';
 
 /**
  * Word pictures, group 45 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -170,24 +170,33 @@ export default {
   ),
 
   // "bijvullen": to refill, to top up — a blue can pours into a see-through dispenser; a green arrow shows the level going up.
+  // On the intro card the can tips over, then the stream runs while the level in the dispenser rises.
   'w.bijvullen': () => (
     <g>
       <Ground cx={66} cy={106} rx={30} ry={4} />
       {/* The stream */}
-      <path d="M66 44V84" stroke={PAL.sky} strokeWidth="6" strokeLinecap="round" />
+      <Move kind="show">
+        <path d="M66 44V84" stroke={PAL.sky} strokeWidth="6" strokeLinecap="round" />
+      </Move>
       {/* The refill can, tipped over */}
+      <Move kind="turn" turn={-70} at={[57, 40]}>
       <g transform="translate(57 40) rotate(115)">
         <rect x="-6" y="-10" width="12" height="12" rx="2" fill={PAL.slate} />
         <rect x="-14" y="0" width="28" height="40" rx="5" fill={PAL.blue} />
         <rect x="-14" y="0" width="9" height="40" rx="4" fill={PAL.blueShade} />
         <rect x="-3" y="10" width="13" height="20" rx="2" fill={PAL.white} />
       </g>
+      </Move>
       {/* The dispenser: open neck, see-through, half full */}
       <rect x="56" y="50" width="20" height="10" rx="2" fill={PAL.steel} />
       <rect x="44" y="58" width="44" height="47" rx="7" fill={PAL.ice} />
-      <path d="M44 80H88V98A7 7 0 0 1 81 105H51A7 7 0 0 1 44 98Z" fill={PAL.sky} />
-      <path d="M78 80H88V98A7 7 0 0 1 81 105H78Z" fill={PAL.skyShade} />
-      <path d="M66 62V80" stroke={PAL.sky} strokeWidth="6" />
+      <Move kind="sag" grow={0.5}>
+        <path d="M44 80H88V98A7 7 0 0 1 81 105H51A7 7 0 0 1 44 98Z" fill={PAL.sky} />
+        <path d="M78 80H88V98A7 7 0 0 1 81 105H78Z" fill={PAL.skyShade} />
+      </Move>
+      <Move kind="show">
+        <path d="M66 62V80" stroke={PAL.sky} strokeWidth="6" />
+      </Move>
       <Shine d="M50 64V76" width={3} opacity={0.8} />
       <Arrow from={[101, 100]} to={[101, 64]} color={PAL.green} width={7} head={11} />
     </g>

@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { Bust } from './bust';
-import { Box, Bubble, CurveArrow, Dots, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Box, Bubble, CurveArrow, Dots, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 
 /**
  * Word pictures, group 40 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -45,16 +45,19 @@ function Stack({ lean = false }: { lean?: boolean }) {
 }
 
 export default {
-  // "nadenken": to think about something — Bram with his thinking face; a cloud of small rounds
-  // goes up from his head to a thought cloud with three dots.
+  // "dichtplakken": to tape shut — a box with a strip of tape over its top, the roll at its end.
+  // On the intro card the roll of tape rolls along the top of the box to its end.
   'w.dichtplakken': () => (
     <g>
       <Ground cx={56} cy={106} rx={46} ry={4} />
       <Box x={12} y={60} w={68} h={44} depth={20} />
-      {/* The roll of tape at the back end of the strip */}
-      <circle cx="68" cy="42" r="12" fill="#f6dcae" />
-      <circle cx="68" cy="42" r="11" fill="none" stroke={PAL.cardShade} strokeWidth="2.4" />
-      <circle cx="68" cy="42" r="5" fill={PAL.cardDark} />
+      {/* The roll of tape at the back end of the strip: on the intro card it rolls over the box
+          along the strip to here (taping it shut) */}
+      <Move kind="from" dx={-30} dy={8}>
+        <circle cx="68" cy="42" r="12" fill="#f6dcae" />
+        <circle cx="68" cy="42" r="11" fill="none" stroke={PAL.cardShade} strokeWidth="2.4" />
+        <circle cx="68" cy="42" r="5" fill={PAL.cardDark} />
+      </Move>
       <CurveArrow from={[22, 40]} to={[52, 20]} bend={-8} color={PAL.green} width={6} head={11} />
     </g>
   ),
@@ -91,9 +94,12 @@ export default {
   ),
 
   // "het idee": the idea — a lamp that is lit: a yellow glass, a grey foot, short rays round it.
+  // On the intro card the lamp switches on: its rays appear.
   'w.idee': () => (
     <g>
-      <Motion x={60} y={20} dir={-90} spread={120} n={5} len={8} gap={6} color={PAL.yellowShade} width={4} />
+      <Move kind="show">
+        <Motion x={60} y={20} dir={-90} spread={120} n={5} len={8} gap={6} color={PAL.yellowShade} width={4} />
+      </Move>
       <rect x="48" y="80" width="24" height="18" rx="4" fill={PAL.mist} />
       <path d="M48 86H72M48 92H72" stroke={PAL.steel} strokeWidth="2" />
       <rect x="53" y="96" width="14" height="8" rx="4" fill={PAL.slate} />
@@ -106,10 +112,13 @@ export default {
   ),
 
   // "je hand opsteken": to raise your hand — Jada raises one hand straight up, her other arm down.
+  // On the intro card her hand goes up.
   'w.handopsteken': () => (
     <g>
       <Bust who="jada" x={52} y={122} scale={0.66} expr="pleased" />
-      <Hand pose="open" x={90} y={46} rotate={4} scale={0.6} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
+      <Move kind="from" dy={30}>
+        <Hand pose="open" x={90} y={46} rotate={4} scale={0.6} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;
