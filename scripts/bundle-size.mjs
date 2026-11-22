@@ -80,11 +80,14 @@ import { gzipSync } from 'node:zlib';
  * their skeleton (names and ids, src/content/workSkeleton.ts). Start file 278.6 -> 243.4 kB, start
  * 398.9 -> 363.7 kB. The limits stay: a new unit adds about 0.3 kB to the start file now (its
  * skeleton), so there is room for many units. dist does not change: the weight moved.
+ * dist 4350 -> 4800 (22 November 2026, the owner's choice): at 4312.9 kB, and a sector unit of four
+ * lessons in 14 help languages adds about 45 kB to dist. Room for about ten more units. dist is
+ * every file together: a phone loads one help language and never the tip pages.
  */
 export const LIMITS = {
   'start file': 280,
   start: 400,
-  dist: 4350,
+  dist: 4800,
   // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
   // 14 November 2026: 93 tips in 15 languages at 4746 kB; later that day 97 tips at 4900 kB.
   // 14 November 2026: room for the basis units at four lessons (see above).
