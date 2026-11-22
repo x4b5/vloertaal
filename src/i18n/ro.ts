@@ -256,7 +256,7 @@ const lang: HelpLanguageSource = {
     speakBrave: "Greșelile fac parte din învățare. Nu te-au înțeles? Spune încă o dată.", // nieuw, nalezen
     speakBrave2: "Emoții? E normal. Spune totuși.", // nieuw, nalezen
     speakBrave3: "Nu trebuie să spui perfect. Doar încearcă.", // nieuw, nalezen
-    reasonTitle: "De ce înveți neerlandeză?", // nieuw, nalezen
+    reasonTitle: "De ce înveți olandeză?", // nieuw, nalezen
     reasonHint: "Alege unul sau două.", // nieuw, nalezen
     reasonDone: "Gata", // nieuw, nalezen
     reasonWork: "Să-mi fac bine munca", // nieuw, nalezen

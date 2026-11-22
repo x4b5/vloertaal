@@ -2384,7 +2384,7 @@ const t: CultureTranslation = {
     'c.angles.q': "¿Cuántos grados tiene este ángulo?", // nieuw, nalezen
     'c.angles.a': "Cuarenta y cinco. La mitad de un ángulo recto.", // nieuw, nalezen
     'c.angles': "Comprueba una esquina grande con 3, 4 y 5", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.angles.b': "En una obra, muchas veces compruebas un ángulo recto: una pared sobre un suelo, la esquina de una habitación. Una esquina pequeña la compruebas con una escuadra de carpintero o con un cartabón. Para una esquina grande hay un truco antiguo. Mide 3 metros por un lado y 4 metros por el otro lado, y haz una marca en los dos. ¿Hay exactamente 5 metros de marca a marca? Entonces el ángulo es de 90 grados. Más pequeño también funciona: 30, 40 y 50 centímetros.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.b': "En una obra, muchas veces compruebas un ángulo recto: una pared sobre un suelo, la esquina de una habitación. Una esquina pequeña la compruebas con una escuadra o con una escuadra con transportador. Para una esquina grande hay un truco antiguo. Mide 3 metros por un lado y 4 metros por el otro lado, y haz una marca en los dos. ¿Hay exactamente 5 metros de marca a marca? Entonces el ángulo es de 90 grados. Más pequeño también funciona: 30, 40 y 50 centímetros.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.p': "Este ángulo no está recto.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.s': "Tienes que comprobar una esquina grande de una pared nueva. Tu escuadra es demasiado pequeña. ¿Qué haces?", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.o1': "Mides 3, 4 y 5 metros.", // nieuw, nalezen // nagelezen AI 22 nov

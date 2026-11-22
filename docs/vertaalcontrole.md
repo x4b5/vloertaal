@@ -1983,3 +1983,288 @@ Per taal, wat de vertaler zelf het minst zeker vond:
 - **ti**: Zoals de bestaande Tigrinya-lessen: alles wat de leerder aanspreekt (gebiedende zinnen, c.*.a met gebiedende wijs, opties, aansprekende tiptitels, tips, situaties) als m/f/x met x = beleefd meervoud; whys onpersoonlijk als string. Sluipwesp = 'ጥገኛ ተርቢ' en wesp = 'ተርቢ': onzeker of 'ተርቢ' het gangbare Eritrese woord voor wesp is. Graag nalezen door moedertaalspreker. Garagetermen met Italiaanse leenwoorden zoals in Eritrea gebruikelijk: velg = 'ቸርኪዮ', trechter = 'ኢምቡቶ', aftapplug = 'ቱፖ'; remblok = 'ፋሻ ፍሬኖ' (onzeker, soms 'ፓስቲልያ'). Controleren. Schimmel = 'ፈንገስ (ሻጋታ)', luis = 'ቅማል ኣትክልቲ', stek = 'ጨንፈር ንምትኻል', ontsmettingsmat = 'ምንጣፍ ምንጻህ': nalezen op begrijpelijkheid. Slagmoersleutel als leenwoord 'ኢምፓክት መፍትሕ'; momentsleutel volgt de bestaande term 'መፍትሕ ቶርክ', opvangbak = 'መቐበሊ ዘይቲ' (zoals lekbak).
 - **tr**: w.zaaibak: 'fide viyolü' (vakterm); in de zinnen kort 'viyol'. Controleren of dit begrijpelijk genoeg is. w.slagmoersleutel: 'darbeli somun anahtarı' consequent gebruikt in tip, situatie en opties. w.remvloeistof: 'fren hidroliği' (gangbaar in Turkse garages) in plaats van letterlijk 'fren sıvısı'. c.diagnosis.s: 'bijna kale band' weergegeven als 'het profiel is bijna op' (kel lastik is te spreektalig). Tips eindigen met exact dezelfde regelzin als c.atmachine.b.
 - **uk**: 'olie' (motorolie) consequent 'мастило', zoals in l.garage; 'масло' alleen in l.upkeep. 'trechter' = 'воронка' en 'gieter' = 'лійка (для поливу)', om verwarring tussen beide te vermijden. 'werkorder' = 'наряд', zoals in c.carjob; 'stek' = 'живець', 'seedling' = 'сіянець'. c.brakes.s is m/f/x ('поставив/поставила'); x is passief ('встановлено'). 'sluipwesp' = 'оса-наїзник'; 'luchtraam' = 'кватирка в даху'.
+
+## AI-nalezing van het gevoelige deel, alle hulptalen (22 november 2026)
+
+De eigenaar koos (22 november): eerst het gevoelige deel nalezen, in alle 14 hulptalen. Dat zijn alle
+tips van "Zo werkt het hier" (veiligheidsregels, wat je doet) en de onderwerpen Gezondheid, Ziekte, Loon,
+Werk en contract, Regels en rechten, Uitbuiting herkennen, Verlof, Werk kwijt, Als het misgaat en
+Veiligheid. Een fout hier kan iemand schaden. De Belgische regels (`be.*`, src/i18n/be/units/) vallen
+buiten deze ronde: die komen later.
+
+**Werkwijze, zoals in oktober.** Per taal één AI-lezer (Tigrinya in twee delen: het work-bestand en de
+rest), met de Engelse bron en het Nederlands naast elke vertaling. A = verkeerde betekenis of gevaarlijk
+onduidelijk, B = vorm, variant, "je/u", gender. Bij twijfel niets veranderen maar een vraag noteren. Elke
+gelezen sleutel kreeg `// nagelezen AI 22 nov` achter de bestaande markering. Daarna las een tweede,
+onafhankelijke AI-lezer elke wijziging opnieuw (zonder de redenen van de eerste te vertrouwen): 236 van
+de 246 wijzigingen goed, 2 teruggedraaid, 6 nog verbeterd (hieronder per taal). Na elke taal: `tsc` en
+de tests i18n, genderX en g4b3Tips in een schone kopie van de repo.
+
+**Dit vervangt geen moedertaalspreker.** De vragen hieronder zijn voor hen; ze staan ook bovenaan de
+nakijkpakketten (`npm run review:export`, docs/nakijken.md). Wat een AI terecht vond, zegt niets over
+wat ze allebei over het hoofd zagen.
+
+**Wat opviel over alle talen heen.**
+- "Mag" werd vaak "kan" in veiligheids- en rechtenregels (bg, fr, uk, es, so). Dat is verbeterd waar het
+  een verbod of een recht is; de twijfelgevallen staan als vraag.
+- "Onder 18 is je maximum lager" las in drie talen als een keuze ("je mag minder werken"): ar, prs, pt
+  verbeterd (A).
+- c.mustmay.b: veel talen vervangen "In veel talen betekent ..." door een uitleg over de eigen taal. Dat
+  is inhoudelijk juist en nuttig, maar wijkt af van het Engels: elke taal heeft er een vraag over.
+
+| Taal | Sleutels | A | B | Na 2e lezing | Vragen | Vertrouwen |
+|---|---|---|---|---|---|---|
+| Arabisch (ar) | 1192 | 4 | 2 | alles goed | 6 | middel-hoog |
+| Bulgaars (bg) | 1203 | 1 | 5 | 1 aangepast | 6 | middel-hoog |
+| Duits (de) | 1166 | 0 | 5 | alles goed | 6 | hoog |
+| Spaans (es) | 1165 | 0 | 27 | 1 aangepast | 7 | middel-hoog |
+| Perzisch (Iran) (fa) | 1214 | 0 | 7 | alles goed | 5 | middel-hoog |
+| Frans (fr) | 1173 | 0 | 12 | 1 aangepast | 9 | middel-hoog |
+| Pools (pl) | 1216 | 0 | 19 | alles goed | 7 | middel-hoog |
+| Dari (prs) | 1170 | 2 | 17 | alles goed | 8 | middel |
+| Portugees (pt) | 1168 | 1 | 13 | alles goed | 7 | middel-hoog |
+| Roemeens (ro) | 1206 | 1 | 19 | 1 aangepast | 9 | middel-hoog |
+| Somalisch (so) | 2035 | 3 | 29 | 1 aangepast | 10 | middel |
+| Tigrinya (ti) | 1391 | 4 | 38 | 1 aangepast | 19 | middel |
+| Turks (tr) | 1140 | 2 | 10 | alles goed | 7 | middel-hoog |
+| Oekraïens (uk) | 1215 | 0 | 25 | 1 aangepast | 7 | middel-hoog |
+
+Somalisch stond niet in de ronde van oktober: dit was de eerste volledige controle. De sleutels van
+Somalisch tellen ook de woorden en zinnen van de lessen, omdat die in dezelfde bestanden staan.
+
+
+### Arabisch (ar)
+
+Verkeerde betekenis (A), verbeterd:
+- `c.health.b` (m): "Onder 18: maximum is lager" las als "je mag minder uren werken" (keuze i.p.v. grens); nu "je maximum aantal uren is lager".
+- `c.health.b` (f): Zelfde als m: grens las als toestemming/keuze.
+- `c.budget.b` (m): "Buy now, pay later" stond als gebiedende wijs ("Koop nu en betaal later") en las als advies; nu als zelfstandig naamwoord.
+- `c.budget.b` (f): Zelfde als m (bovendien mannelijke gebiedende wijs in de f-vorm).
+
+Vragen voor een moedertaalspreker:
+- `c.greensafe.p / s.kids.2 / c.screw.p / c.food.p`: "Mag ik …?" is vertaald als "هل يمكنني …؟" (letterlijk 'kan ik'). In het Arabisch is dat de gewone beleefde vraag om toestemming, maar bij veiligheid (mag ik al in de kas werken, mag ik hier boren) is "هل يُسمح لي …؟" duidelijker. Overal gelijk trekken of laten?
+- `c.health.b`: "You may work at most 12 hours" staat als "يمكنك أن تعمل 12 ساعة على الأكثر" ('je kunt maximaal'). Is dat sterk genoeg als wettelijke grens, of liever "لا يجوز أن تعمل أكثر من 12 ساعة"?
+- `c.counting.b`: De vertaling voegt "كما في العربية" ('zoals in het Arabisch') toe bij 25 = vijfentwintig. Dat klopt en helpt, maar staat niet in het Engels. Houden?
+- `c.illness.x`: Alleen een onpersoonlijke vorm: "المرض والرغبة في السفر إلى البلد الأصلي؟" ('ziekte en de wens om te reizen?') klinkt stijf. Is een directe vraag beter (dan wel met m/f-vorm)?
+- `c.transfer.p`: "Bent u er klaar voor?" tegen een cliënt staat als "هل أنت جاهز؟" (mannelijk, informeel). Beter "هل حضرتك جاهز/جاهزة؟" of een neutrale vorm?
+- `x-vormen algemeen (o.a. c.dates.w, c.signals.b, c.fillempty.s)`: In x-vormen staan soms nog "أنت" of het bezittelijk "ـك". Zonder klinkertekens is dat in schrift neutraal, maar uitgesproken (TTS) wordt het meestal mannelijk. Accepteren of verder herschrijven?
+
+### Bulgaars (bg)
+
+Verkeerde betekenis (A), verbeterd:
+- `c.ask.w`: Extra zin toegevoegd die niet in het Engels/Nederlands staat ("knikken betekent hier ja/begrepen"): verwijderd.
+
+Na de tweede lezing:
+- `c.ask.w`: terug: de zin "Тук кимането значи „да“ или „разбрах“" is een bewuste toevoeging (in Bulgarije betekent knikken van oudsher "nee"; besluit 16 oktober)
+
+Vragen voor een moedertaalspreker:
+- `c.healthy.a`: "Работя само на трезва глава" voor "Ik werk niet onder invloed" (context: pillen/drugs): dekt "трезва глава" ook drugs, of beter "Не работя под въздействие на нищо"?
+- `c.greensafe.b`: "гади ти се" (misselijk) voor EN "sick": klopt dat met het Nederlands, of bedoelt de tekst "je ziek/beroerd voelen" ("лошо ти е")?
+- `c.outdoors.a.why`: "Идва буря" voor onweer: duidelijk genoeg, of "гръмотевична буря"?
+- `c.shoptrouble.b`: "не заставай на вратата" voor "do not block the door": duidelijk, of beter "не препречвай вратата"?
+- `c.carjob.w`: "сервизът не може просто така да прави" (kan niet) voor "may not": laten zo of "няма право"?
+- `c.health.p`: x-vorm "Още чакам почивка" (ik wacht nog op pauze) voor "Ik heb nog geen pauze gehad": natuurlijk genoeg als neutrale vorm?
+
+### Duits (de)
+
+Geen verkeerde betekenis gevonden; 5 verbeteringen van vorm (B).
+
+Vragen voor een moedertaalspreker:
+- `c.healthy.a`: Engels 'I do not work under the influence'; Duits voegt 'von Drogen oder Alkohol' toe omdat 'unter dem Einfluss' alleen onaf klinkt. Goed zo, of korter ('Ich arbeite nicht berauscht')?
+- `c.mustmay.b`: De zin 'In veel talen betekent "not must" "hoeft niet"' is bewust aangepast naar 'Auf Deutsch heißt "muss nicht" "hoeft niet"'. Klopt, en nuttig voor Duitstaligen; bevestigen dat die lokale aanpassing gewenst is.
+- `c.ww.x`: 'dein WW' (onzijdig) voor de Nederlandse WW-uitkering: natuurlijk genoeg, of beter 'dein Arbeitslosengeld (WW)'?
+- `c.wiring.p`: 'Welche Farbe hat die Erde?' kan los ook lezen als 'welke kleur heeft de aarde/grond'. In de les is het duidelijk; liever 'Welche Farbe hat der Schutzleiter (die Erde)?'
+- `c.sowing.p`: 'Ich halte ihn am Blatt fest' verwijst naar Keimling/Steckling; als losse zin is 'ihn' onduidelijk. Laten zo of 'Ich halte die Pflanze am Blatt'?
+- `c.road.a.why`: 'Noch eine Tour ist gefragt' is stroef; beter 'Gefragt nach noch einer Tour: ...'?
+
+### Spaans (es)
+
+Geen verkeerde betekenis gevonden; 27 verbeteringen van vorm (B).
+
+Na de tweede lezing:
+- `c.angles.b`: terug naar "escuadra" en "escuadra con transportador": dat zijn de woorden van de les zelf (w.geodriehoek, s.angles.2)
+
+Vragen voor een moedertaalspreker:
+- `c.mustmay.b`: Het Engels zegt 'In veel talen betekent "not must" "hoeft niet"'; het Spaans is aangepast naar 'En español, "no tienes que" significa "hoeft niet"'. Klopt die aanpassing en is ze duidelijk (en moet 'no debes' = 'mag niet' erbij)?
+- `c.kids.b`: Is 'permiso por emergencia' (calamiteitenverlof) begrijpelijk, of is 'permiso por causa de fuerza mayor' / 'permiso urgente' beter? Ook in c.kids.o1, c.kids.w, s.kids.2.
+- `c.police.b`: 'presentar una reclamación' voor bezwaar maken: goed genoeg, of liever 'recurso' / 'alegaciones' (Spanje) of iets dat ook in Latijns-Amerika werkt?
+- `c.placement.a.why`: 'el convenio va primero' voor de POK: 'convenio' kan ook als cao (convenio colectivo) gelezen worden. Liever 'el convenio de prácticas'?
+- `c.angles.b`: Ik veranderde 'escuadra con transportador' in 'escuadra de carpintero o cartabón'. Is 'cartabón' bekend buiten Spanje (anders 'escuadra triangular')?
+- `c.food.p`: 'tirita' is Spanje; in Latijns-Amerika 'curita'. Erbij zetten, zoals bij taquilla/casillero? En 'buscapolos' (c.testing.b) is ook Spanje (LatAm: 'probador de voltaje').
+- `c.jobends.b`: 'finiquito' voor eindafrekening is Spanje; in delen van Latijns-Amerika 'liquidación'. Tweede woord toevoegen?
+
+### Perzisch (Iran) (fa)
+
+Geen verkeerde betekenis gevonden; 7 verbeteringen van vorm (B).
+
+Vragen voor een moedertaalspreker:
+- `c.angles.b`: "set square" (tekendriehoek/winkelhaak) staat als گونیای نقاله‌دار (= winkelhaak met gradenboog). Is گونیای سه‌گوش of alleen گونیا beter?
+- `c.testing.b`: "voltage tester" staat als فازمتر (spanningzoeker-schroevendraaier). Voor 'controleren dat er echt geen spanning is' is een tweepolige tester bedoeld: is فازمتر hier goed genoeg, of beter تستر ولتاژ?
+- `c.mustmay.b`: De zin over 'in veel talen betekent not must = hoeft niet' is aangepast aan het Perzisch (نباید = mag niet, لازم نیست = hoeft niet). Inhoudelijk juist en nuttig; akkoord dat dit afwijkt van het Engels?
+- `s.permit.3`: Oproepkracht als آنکال (من آنکال کار می‌کنم): begrijpt een Iraanse lezer dit, of liever نیروی کار آنکال / کارگر فراخوانی (vraag uit oktober staat nog open)?
+- `c.explain.b`: Na Nederlandse zinnen tussen «» staat soms een extra punt («De band staat stil.».) en soms niet (c.order.b). Typografie gelijktrekken? (Niet aangepast i.v.m. zinstelling van de tip.)
+
+### Frans (fr)
+
+Geen verkeerde betekenis gevonden; 12 verbeteringen van vorm (B).
+
+Na de tweede lezing:
+- `c.power.b`: "peuvent faire ça" (kunnen) was nog "may"; nu "ont le droit de faire ça" in m, f en x
+
+Vragen voor een moedertaalspreker:
+- `c.feelwell.q`: 'Ça va, toi ?' klinkt als een gewone groet; NL 'Gaat het wel met je?' toont bezorgdheid. Beter 'Tout va bien pour toi ?' of 'Ça va vraiment ?'
+- `c.boundaries.w`: 'un comportement non voulu' (zoals w.ongewenst) is begrijpelijk maar 'comportement indésirable' is de gangbare term. Beide aanpassen?
+- `c.power.b`: 'Pas sûr que le courant soit coupé ? Alors il ne l’est pas.' Klopt, maar is 'Alors, considère qu’il ne l’est pas' duidelijker voor een veiligheidsregel?
+- `c.healthy.a`: 'Je ne travaille pas sous l’effet de quoi que ce soit' is lang; is 'Je ne travaille pas sous influence' natuurlijker en duidelijk genoeg?
+- `c.police.b`: bezwaar maken = 'faire une réclamation'. Is 'faire un recours' / 'contester la décision' duidelijker voor de lezer?
+- `w.ploegendienst`: 'le travail posté' is de vakterm, maar kent een laaggeletterde lezer die? Eventueel 'le travail en équipes'.
+- `c.signals / c.transfer`: cliënt in de zorg = 'résident' (verpleeghuis). Past dat ook voor thuiszorg, of liever 'la personne aidée' / 'le patient'?
+- `c.mustmay.b`: De zin 'In many languages, “not must” means “hoeft niet”' is bewust vervangen door een uitleg voor het Frans ('tu ne dois pas' = mag niet). Inhoud klopt; graag bevestigen dat dit zo mag.
+- `c.whereis.p (x)`: 'J’ai perdu mon chemin' voor x is neutraal maar wat formeel/vreemd; is 'Je ne trouve plus mon chemin' beter?
+
+### Pools (pl)
+
+Geen verkeerde betekenis gevonden; 19 verbeteringen van vorm (B).
+
+Vragen voor een moedertaalspreker:
+- `c.unsafe.w`: 'Pracodawca nie może cię za to ukarać': leest 'nie może' duidelijk als 'mag niet' (verbod), of beter 'nie wolno' zoals in c.accident.w?
+- `c.kids.b`: 'urlop macierzyński' voor zwangerschapsverlof (pregnancy leave): goed genoeg, of beter 'urlop ciążowy' / 'urlop przed porodem'?
+- `c.kids.s, c.kids.a, w.kinderopvang`: 'żłobek' voor kinderopvang: in Polen alleen tot 3 jaar. Breder 'opieka nad dziećmi' / 'przedszkole', of laten?
+- `s.insurance.2`: 'Czy to jest refundowane?' voor 'Wordt dit vergoed?': natuurlijk bij de zorgverzekeraar, of beter 'Czy ubezpieczenie za to płaci?'?
+- `c.health.p#x`: x-vorm 'Wciąż czekam na przerwę' ('ik wacht nog op mijn pauze') is iets anders dan 'ik heb nog geen pauze gehad'. Acceptabel als neutrale vorm?
+- `c.carsafe.b`: 'otwórz drzwi warsztatu' voegt 'van de werkplaats' toe aan 'open the doors'. Klopt die lezing (niet de autodeuren)?
+- `x-vormen met schuine streep (o.a. c.sick.p, c.body.p, c.phish.*, c.login.*, c.review.*)`: Veel x-vormen zijn nog 'sam / sama', 'chory / chora'. Bewust zo laten, of waar mogelijk neutraal herschrijven?
+
+### Dari (prs)
+
+Verkeerde betekenis (A), verbeterd:
+- `c.health.b`: 'اجازه دارید کمتر te werken' las als keuze/toestemming; bedoeld is: je maximum aantal uren is lager
+- `c.reachable.b`: کود = mest/kunstmest, niet 'code'; nu کد (zoals ui.unlockHint)
+
+Vragen voor een moedertaalspreker:
+- `c.mustmay.b`: De Engelse zin 'In veel talen betekent "niet moeten" hoeft niet' is in het Dari vervangen door een Dari-uitleg (نباید = mag niet, لازم نیست = hoeft niet). Klopt dat zo en is die aanpassing gewenst?
+- `c.transfer.b`: Tillift (hoist) is in de zorgtips لیفت, terwijl lift in c.alarm.b لفت is en bij c.handling کرین زنجیری. Is لیفت voor een tillift duidelijk, of leest het als personenlift?
+- `c.harvest.b`: Stukloon is 'مزد فی دانه' (per stuk), terwijl het per krat/rij/kilo gaat. Gangbare Afghaanse term, of beter 'مزد کارِ مقطوع / مزد به حساب مقدار'?
+- `u.emergency`: 'Als het misgaat' is 'وقتی کدام حادثه رخ می‌دهد' (als er een ongeluk gebeurt). Te smal (ook brand/alarm), of beter 'وقتی کدام مشکل پیش می‌آید'?
+- `c.putdown.p`: Zeg-het-zo-zinnen naar een collega staan soms in تو (c.putdown.p, c.onoff.p) en soms in شما (c.mayask.p, c.feelwell.p). Eén lijn kiezen?
+- `c.shapes.b`: Vloer is op meerdere plekken فرش (ook 'tapijt'). Duidelijk genoeg op de bouw, of beter 'کف اتاق / زمین'?
+- `c.workshop.b`: Voor veiligheidsmiddelen staat ایمنی (عینک ایمنی, بوت ایمنی), voor veiligheid in het algemeen مصئون/مصئونیت. Zo laten (vaste productnamen) of overal مصئون?
+- `c.fillempty.o3`: 'Neem pauze' is 'تفریح کنید'; kan ook als 'vermaak je' gelezen worden (al eerder gevraagd). Beter 'وقت تفریح بگیرید / استراحت کنید'?
+
+### Portugees (pt)
+
+Verkeerde betekenis (A), verbeterd:
+- `c.health.b`: 'podes trabalhar minder' las als keuze; het Engels zegt dat je maximum lager is (grens).
+
+Vragen voor een moedertaalspreker:
+- `c.kids.b`: 'licença de gravidez' voor zwangerschapsverlof: in Portugal zegt men eerder 'licença de maternidade' of 'licença parental inicial'. Wat is het begrijpelijkst?
+- `c.mustmay.b`: De zin 'In many languages, "not must" means "hoeft niet"' is aangepast naar 'Em português, "não tens de" quer dizer "hoeft niet"'. Klopt dat en mag die aanpassing blijven?
+- `c.angles.b`: 'esquadro com transferidor' voor de tekendriehoek (set square): is 'esquadro' of 'esquadro de desenho' gewoner op de bouw?
+- `c.workorder.s`: 'pintar o quarto 3' voor 'kamer 3' bij schilderwerk: 'quarto' is slaapkamer; is 'a divisão 3' / 'a sala 3' beter? (Bij schoonmaak in een hotel, c.handover, past 'quarto' wel.)
+- `c.metalwork.b`: Braam = 'rebarba: uma aresta afiada' (ook c.metalwork.a.why 'porque está afiada'). 'afiada' klinkt als geslepen mes; is 'cortante' natuurlijker?
+- `c.greensafe.b`: Spuitmiddelen: nu 'químicos (spuitmiddelen)' in de tip en 'produtos químicos' in titel en uitleg, maar het losse woord w.spuitmiddelen zegt nog 'produtos fitofarmacêuticos'. Liever overal 'pesticidas'?
+- `c.brakes.o2`: 'Tiras o carro logo a conduzir.' klinkt wat stroef; beter 'Sais logo com o carro.'?
+
+### Roemeens (ro)
+
+Verkeerde betekenis (A), verbeterd:
+- `c.rounds.w`: las als 'Nee zeggen betekent dat je fout zat' (omgekeerde betekenis); nu duidelijk 'het melden is geen falen'
+
+Na de tweede lezing:
+- `c.healthy.w (x)`: "slaap is de veilige manier om niet in slaap te vallen"; nu "Să dormi destul e calea sigură ca să nu-ți fie somn în tură"
+
+Vragen voor een moedertaalspreker:
+- `c.mustmay.b`: Het Roemeens vervangt 'In veel talen betekent "not must" hoeft niet' door een eigen zin: 'In het Roemeens is "nu trebuie" een valkuil: hoeft niet = "nu e nevoie"'. Klopt dit en is het duidelijk? (bewuste aanpassing, niet gewijzigd)
+- `c.transfer.b / c.transfer.s / c.transfer.o1 / c.transfer.o3 / c.transfer.a.why`: Tillift = 'liftul pentru pacienți', daarna kort 'liftul'. Begrijpt een Roemeense zorgmedewerker dit, of is 'lifterul' / 'dispozitivul de ridicare' gebruikelijker? 'liftul' alleen kan als 'de lift (elevator)' gelezen worden.
+- `c.unsafe.o3 / c.site.o3 / c.understood.o3 / c.whereis.w (x)`: x-vorm gebruikt 'pe cont propriu' voor 'alleen/zelf'. In dezelfde lessen betekent 'pe cont propriu' ook 'zzp'er'. Verwarrend? Alternatief: 'fără ajutor' (zoals elders in x-vormen).
+- `c.alarm.p (x)`: 'Sunt o persoană nouă aici' is neutraal maar wat stijf. Liever 'Abia am început aici' (zoals nu in c.names.p x)?
+- `zg.lekker.w (f)`: De vrouwvorm zegt 'niet lekker' = 'puțin bolnav' (mannelijk). Als woordbetekenis aanvaardbaar, of 'puțin bolnavă' in de f-vorm? (Alleen x is aangepast.)
+- `c.healthy.b / c.healthy.p (x)`: x-vorm nu 'o stare de tristețe' voor 'somber' (m/f: deprimat/deprimată). Is dit even sterk als 'somber/depressief', of klinkt het te licht voor iemand die hulp moet zoeken?
+- `c.council.b`: 'În Țările de Jos' (officieel) naast 'Olanda' elders in het bestand. Voor een lezer die weinig leest liever overal 'Olanda'?
+- `c.greensafe / c.greensafe.w`: Spuitmiddelen/sprays = 'pesticidele'. Niet alle middelen zijn pesticiden; is 'substanțele de stropit' of 'pesticidele' het gewone woord in de kas?
+- `c.outdoors.a.why`: Thunder = 'Vine furtuna' (er komt storm). Liever 'Vine o furtună cu tunete' zodat het over onweer gaat?
+
+### Somalisch (so)
+
+Verkeerde betekenis (A), verbeterd:
+- `c.contract.b`: Zin zei 'een contract van 6 maanden of korter is niet toegestaan'; bedoeld: proeftijd niet toegestaan in zo'n contract.
+- `c.illness.x`: 'Halkaas ka bixi cinwaankaaga' leest als 'vertrek daar van je adres'; nu 'geef je adres daar'. Ook uitzendbureau/werkgever gelijk aan de rest van de app.
+- `c.letters.b`: 'als je veel krijgt' suggereerde dat elke grote toeslag terug moet; bedoeld: meer dan waar je recht op hebt.
+
+Na de tweede lezing:
+- `c.ask.s`: "Ma fahmin" las alsof de leidinggevende het niet begreep; nu "Adigu ma fahmin"
+
+Vragen voor een moedertaalspreker:
+- `c.housing.b / c.housing.o2 / c.housing.w / c.budget.b`: Borg heet in c.housing.b 'lacagta dhigaalka (borg)', maar in o2 en w 'lacagta dammaanadda'; in c.budget.b is 'dammaanad' de garantie. Welk woord is voor een huurborg het gangbaarst, zodat het overal hetzelfde is en niet met garantie verward wordt?
+- `c.agency.x / w.werkgever`: c.agency.x gebruikt 'shaqo-bixiye' voor werkgever, de rest van de app 'loo-shaqeeye'. Allebei goed? Moet het overal gelijk zijn?
+- `c.leave.a / c.leave.p / c.extra.b`: Maanden: c.leave.a zegt 'Bisha Luulyo', c.leave.p en c.extra.b 'July', 'May', 'June'. Welke vorm lezen migranten het makkelijkst? Overal gelijk maken?
+- `u.exploit / w.uitbuiting / c.warning`: Uitbuiting = 'ka faa'iidaysiga xun (dhiig-miirashada)'. Is dit duidelijk genoeg als woord voor arbeidsuitbuiting, of is er een gangbaarder term?
+- `c.mustmay.b`: EN zegt 'In many languages, "not must" means "hoeft niet"'; de Somalische tekst gebruikt hier het Somalische 'khasab ma aha'. Klopt de uitleg zo voor een Somalische lezer, of moet het letterlijker?
+- `c.doctor.a / c.doctor.s`: Hoge koorts is in c.doctor.a 'qandho kulul' en in c.doctor.s 'qandho sare'. Welke is natuurlijk, en klinkt geen van beide als een noodgeval (de les gaat over huisartsenpost i.p.v. 112)?
+- `s.danger.1 / c.cleansafe.p / c.plaster.p / c.notyet.q`: Zinnen als 'dhulku waa qoyan yahay' en 'waa fudud tahay' combineren 'waa' met 'yahay/tahay'. Is dit natuurlijke spreektaal of moet het 'dhulku waa qoyan' / 'wuu qoyan yahay' zijn?
+- `c.translate.s`: De Somalische situatie spreekt van een papier ('warqad tilmaamo'), EN alleen van 'safety instructions in Dutch'. Toevoeging laten staan of weghalen?
+- `c.unsafe.b / c.site.b / c.road.b`: 'Waad joojin kartaa' voor 'you may stop (dangerous work)': leest dit voldoende als een recht ('je mag'), of beter 'waa laguu oggol yahay inaad joojiso'?
+- `c.whereis.b / c.alarm.b / w.nooduitgang`: Nooduitgang is 'albaabka degdegga', in c.alarm.b 'albaabbada gurmadka', in c.whereis.b 'albaabbada laga baxo'. Eén vaste term kiezen?
+
+### Tigrinya (ti)
+
+Verkeerde betekenis (A), verbeterd:
+- `c.email.p`: ፍቕርቲ = geliefde/liefste (romantisch); in een werkmail aan de leidinggevende is "Beste" = ክብርቲ (geachte/beste).
+- `c.pests.b` (m): መሳርሕኻ leest als "je collega" (መሳርሕቲ); bedoeld is "je gereedschap" (መሳርሒታት).
+- `c.pests.b` (f): Idem (gereedschap, niet collega); bovendien -ክን (jullie, vrouwelijk meervoud) i.p.v. -ኪን (jij, v.).
+- `c.pests.b` (x): መሳርሕኹም leest als "jullie collega"; bedoeld is gereedschap.
+
+Na de tweede lezing:
+- `c.mychoice.s, c.feelwell.b en 6 andere tips (f)`: in de vrouwelijke vorm nog "-ክን" (mannelijk) in ኣየድልየክን/ኣይነበረክን; nu "-ኪን" in alle f-vormen (c.calm.b, c.backtowork.b, c.signals.b, c.shoptrouble.b, c.size.w, c.feelwell, c.feelwell.w)
+
+Vragen voor een moedertaalspreker:
+- `c.screw.p`: "ይፍቀደኒ ድዩ?" (mag ik?) staat 8 keer in work/ti.ts, elders in de app "ይፍቀደለይ". Is ይፍቀደኒ correct/natuurlijk, of overal ይፍቀደለይ?
+- `c.line.o1`: "ናይ ህጹጽ መጠጠዊ ጠውቑ" voor "druk op de noodstop": is dit op de werkvloer meteen duidelijk als de rode noodstopknop?
+- `c.garage.b`: "ቦኽቦኽ" voor "het putje/de afvoer" (geen olie in de afvoer): klopt dit woord? Elders staat ቦይ (c.oilchange) en ፍሳስ (c.tiletools).
+- `c.carsafe.o1`: Gebiedende wijs met lijdend voorwerp "ጸውዓዮ" (haal hem) en "ድፍኣዮ" (c.carsafe.o2/o3, duw het): correct, of "ጸውዖ" / "ድፍኦ"?
+- `c.client.o1`: "ኳሕኳሕ፡ ተጸበ" voor "Klop, wacht": is ኳሕኳሕ als gebiedende wijs natuurlijk, of beter "ማዕጾ ኳሕ ኣብል"?
+- `c.kids.b`: m-vorm: "Zwanger? Je werkgever mag je niet ontslaan" is voor mannen omgezet naar de derde persoon ("Is een werkneemster zwanger? Haar werkgever mag haar niet ontslaan"). Natuurlijk en duidelijk?
+- `c.mustmay.b`: EN: "In veel talen betekent 'niet moeten' 'hoeft niet'"; ti zegt specifiek "In het Tigrinya betekent «ግድን ኣይኮነን» 'hoeft niet'". Klopt die bewering voor het Tigrinya, en is deze aanpassing goed?
+- `c.police.b`: Recht op een advocaat staat passief: "ጠበቓ ክሕተት ይከኣል" (er kan een advocaat gevraagd worden). Is "ጠበቓ ክትሓትት መሰል ኣለካ" (je hebt het recht) duidelijker voor een rechtentekst?
+- `c.understood.w`: "ከም ድንጉይነት ኣይኮነን" voor "niet als traag": leest ድንጉይነት als "traag" of als "te laat"?
+- `c.tiletools.b`: Vakwoorden: "ኣስናን ዘለዎ ማንካ" (lijmkam), "ማንካ ህንጻ" (troffel), "ኮላ ሸክላ" (tegellijm). Gebruiken Eritrese bouwvakkers deze woorden?
+- `c.order.b`: "ኣብ ሓደ ምሉእ ሓሳብ" voor "in één zin": natuurlijk, of beter "ብሓደ ዓረፍተ ነገር"?
+- `c.howto.p`: 'Wil je even kijken' (je) staat in de beleefde/meervoudsvorm (ክትርእዩለይ ትኽእሉ), net als c.mayask.p, terwijl c.explain.p en c.getfeedback.p de enkelvoudige vorm gebruiken. Eén lijn kiezen voor 'je' tegen een collega?
+- `c.time`: Titel 'ብግዜ ማለት ቁሩብ ኣቐዲምኩም' (op tijd = een beetje vroeg): natuurlijk, of beter 'ቁሩብ ኣቐዲምካ ምብጻሕ' (een beetje vroeg aankomen)?
+- `c.body.a.why`: 'ኣበይ ከም ዘቐንዝው': juiste vorm van 'waar het pijn doet'? (bijv. ኣበይ ከም ዝቐንዝወካ).
+- `c.givefeedback.p`: 'ብተፕ' voor tape: gangbare spelling, of ቴፕ?
+- `c.getfeedback.s`: Vrouwelijke ontkenning 'ኣይትፈልጢን' tegenover 'ኣይትፈልጥን': welke spelling is gangbaar in Eritrea?
+- `c.mayask.p`: 'ይቕሬታ' hier en in c.clear.p, maar 'ይቕረታ' elders in hetzelfde bestand: één spelling kiezen?
+- `c.alarm.s`: 'Bijna klaar met een order' is 'ሓደ ስራሕ' (een klus). Duidelijk genoeg in een magazijn, of 'ትእዛዝ' (order) zoals in c.picking.w?
+- `c.whereis.b`: Mannelijke vorm schrijft ክትረክብ, vrouwelijke ክትረኽቢ (ኽ). Variant of moet het overal ኽ zijn?
+
+### Turks (tr)
+
+Verkeerde betekenis (A), verbeterd:
+- `c.atmachine.b`: "kol" las als "arm"; mouw (losse kleding) als gevaar ging verloren.
+- `c.finalcheck.w`: "hatta" leest als "zelfs"; "in de lijn" ging verloren.
+
+Vragen voor een moedertaalspreker:
+- `c.power`: Titel "Elektrik: asla öylece değil" is letterlijk en wat stroef. Natuurlijker, bv. "Elektrik: asla rastgele çalışma"?
+- `c.testing.b`: "kontrol kalemi" voor spanningzoeker/voltagetester: begrijpt een Turkse elektricien dit zo, of liever "voltaj test cihazı"?
+- `c.handling.b`: "caraskal" voor takel (hoist): gangbaar op de werkvloer, of beter "vinç" / "palanga"?
+- `c.sowing.b`: "viyol" voor zaaitray: kent een niet-tuinder dit woord, of "fide tepsisi" erbij zetten?
+- `c.greensafe.b`: "miden mi bulanıyor" voor "sick" (misselijk/onwel): klopt de bedoeling, of breder "kendini kötü mü hissediyorsun"?
+- `c.mayask.p`: "Pardon, rahatsız ediyorum" (open vraag uit oktober: Pardon vs "Kusura bakma") nog steeds natuurlijk?
+- `c.alarm.a`: Nu "iş arkadaşım henüz burada değil": duidelijk genoeg dat de collega nog binnen kan zijn (bij ontruiming)?
+
+### Oekraïens (uk)
+
+Geen verkeerde betekenis gevonden; 25 verbeteringen van vorm (B).
+
+Na de tweede lezing:
+- `c.inspect.p`: "Неправильних виробів більше" las als vergelijking; nu "Є ще неправильні вироби"
+
+Vragen voor een moedertaalspreker:
+- `c.carsafe.b, c.carsafe.w`: 'батарея з дуже сильним струмом' voor 'very high power': is 'з дуже високою напругою' (hoogspanning, oranje kabels) beter?
+- `c.alarm.b`: 'лише навчання' voor een oefenalarm: duidelijk, of beter 'навчальна тривога'?
+- `c.council.o3`: 'Без нідерландського паспорта ти не можеш голосувати': 'не можеш' of 'не маєш права'? (quizoptie, o1/o2 gebruiken ook 'можеш')
+- `c.newjob.p`: 'Можна вказати ваші контакти для рекомендації?' voor 'May I give your name as a reference?': natuurlijk? (stond al open)
+- `c.greensafe, c.greensafe.b/.s/.w`: 'засоби для обприскування' / 'хімікати' voor spuitmiddelen: begrijpelijk, of 'пестициди' / 'отрутохімікати'?
+- `s.findwork.1`: 'податися на роботу': acceptabel, of 'подати заявку / резюме'? (stond al open)
+- `c.delay.b`: 'не телефонуй із телефоном у руці' klinkt dubbel; beter 'не дзвони, тримаючи телефон у руці'?

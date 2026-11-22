@@ -41,7 +41,7 @@ const t: CultureTranslation = {
     'c.ask': "Su'aalo weydiintu waa wanaagsan tahay", // nieuw, nalezen // nagelezen AI 22 nov
     'c.ask.b': "Su'aal weydiintu waxay muujinaysaa inaad rabto inaad shaqada si fiican u qabato. Madax ruxid marka aadan fahmin waxay keeni kartaa khaladaad ama shilal. Mar kale weydiintu gebi ahaanba waa caadi.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.ask.p': "Waan ka xumahay, ma fahmin. Mar kale ma ii sharxi doontaa?", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.ask.s': "Madaxaagu hawl ayuu si aad u dhakhso ah u sharxayaa. Ma fahmin. Maxaad samaynaysaa?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.ask.s': "Madaxaagu hawl ayuu si aad u dhakhso ah u sharxayaa. Adigu ma fahmin. Maxaad samaynaysaa?", // nieuw, nalezen // nagelezen AI 22 nov
     'c.ask.o1': "Codso in mar kale laguu sharxo.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.ask.o2': "Madaxa ruxo oo isku day inaad qiyaasto.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.ask.o3': "Raali gelin ka bixi Af-Holandiiskaaga oo bilow shaqada.", // nieuw, nalezen // nagelezen AI 22 nov

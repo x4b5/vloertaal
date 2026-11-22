@@ -1721,7 +1721,7 @@ const t: CultureTranslation = {
     'c.healthy.o1': "Spui nu și dormi câteva ore înainte de tură.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.healthy.o2': "Iei o jumătate de pastilă, nu e periculos.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.healthy.o3': "O iei, dar nu spui nimănui de la lucru.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.healthy.w': { m: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să rămâi treaz.", f: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să rămâi trează.", x: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să nu adormi." }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.w': { m: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să rămâi treaz.", f: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Somnul e calea sigură ca să rămâi trează.", x: "Pastilele de la un coleg pot fi droguri. Te pot îmbolnăvi sau te pot face să greșești la lucru. Să dormi destul e calea sigură ca să nu-ți fie somn în tură." }, // nieuw, nalezen // nagelezen AI 22 nov
     // Vertaalronde 5 november 2026: u.sick (l.backtowork), l.feelwell, l.food, u.delivery (l.parcel, l.road).
     'u.sick': "Boală", // nieuw, nalezen // nagelezen AI 22 nov
     'l.backtowork': "Înapoi la muncă după boală", // nieuw, nalezen // nagelezen AI 22 nov
