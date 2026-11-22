@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine } from '../kit';
+import { Ground, Move, PAL, Shine } from '../kit';
 
 /** The depth axis of the slanted view (as in group55): one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -61,11 +61,15 @@ export default {
       <rect x="10" y="95" width="36" height="5" rx="1.5" fill={PAL.steel} />
       <rect x="10" y="100" width="36" height="3" rx="1.5" fill={PAL.slateDark} />
       {/* The light: a pale band with a lighter core from the lens to the box */}
-      <g transform={`translate(${PIVOT[0]} ${PIVOT[1]}) rotate(${TILT})`}>
-        <polygon points={beam(5, 8, -66)} fill={PAL.ice} />
-        <polygon points={beam(2, 3.4, -66)} fill={ICE_LIGHT} />
-      </g>
-      <Slab x={12} y={95} w={16} d={10} h={26} top={CARD_LIGHT} front={PAL.card} side={PAL.cardShade} />
+      <Move kind="show">
+        <g transform={`translate(${PIVOT[0]} ${PIVOT[1]}) rotate(${TILT})`}>
+          <polygon points={beam(5, 8, -66)} fill={PAL.ice} />
+          <polygon points={beam(2, 3.4, -66)} fill={ICE_LIGHT} />
+        </g>
+      </Move>
+      <Move kind="from" dx={-24}>
+        <Slab x={12} y={95} w={16} d={10} h={26} top={CARD_LIGHT} front={PAL.card} side={PAL.cardShade} />
+      </Move>
       {/* The yellow bracket: a foot on the floor and an upright plate */}
       <Slab x={68} y={104} w={30} d={10} h={4} top={PAL.yellowLight} front={PAL.yellow} side={PAL.yellowShade} />
       <Slab x={74} y={100} w={8} d={10} h={62} top={PAL.yellowLight} front={PAL.yellow} side={PAL.yellowShade} />
@@ -76,8 +80,10 @@ export default {
         <path d={`M${BACK} -1.4Q${BACK + 7.6} -1.4 ${BACK + 8.6} 6`} fill="none" stroke={PAL.steel} strokeWidth="1.4" strokeLinecap="round" />
         {/* The plastic back end with its lit green light */}
         <rect x={THREAD[1] - 2} y={-R + 1} width={BACK - THREAD[1] + 2} height={2 * R - 2} rx="3" fill={PAL.slate} />
-        <circle cx={BACK - 4} cy={-R + 1.5} r="3" fill={PAL.leaf} />
-        <circle cx={BACK - 4.6} cy={-R + 0.9} r="1.2" fill={PAL.lime} />
+        <Move kind="show">
+          <circle cx={BACK - 4} cy={-R + 1.5} r="3" fill={PAL.leaf} />
+          <circle cx={BACK - 4.6} cy={-R + 0.9} r="1.2" fill={PAL.lime} />
+        </Move>
         {/* The threaded steel barrel: light top, dark underside, thread bands */}
         <rect x={THREAD[0]} y={-R} width={THREAD[1] - THREAD[0]} height={2 * R} rx="2" fill={PAL.steel} />
         <rect x={THREAD[0]} y={3} width={THREAD[1] - THREAD[0]} height={R - 3} rx="2" fill={STEEL_DARK} />

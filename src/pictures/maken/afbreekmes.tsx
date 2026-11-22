@@ -1,5 +1,5 @@
-import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { useId, type JSX } from 'react';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -51,33 +51,50 @@ const BB = 6.5;
 const SLANT = 8;
 const TIP = 104;
 const BLADE: [number, number][] = [[B0, BT], [TIP - SLANT, BT], [TIP, BB], [B0, BB]];
+/** On the intro card the blade slides out of the body this far, along the knife. */
+const OUT = 36;
+const OUT_DX = r1(-OUT * COS);
+const OUT_DY = r1(-OUT * SIN);
 /** The snap lines across the blade, parallel to the slanted tip. */
 const SNAPS = [1, 2, 3, 4].map((k) => TIP - SLANT - k * 8.5);
 
 export default {
   // "het afbreekmes": the snap-off knife — a yellow box cutter rising to the top right, black slider on its
   // back, a long steel blade with a slanted tip and diagonal snap lines across it.
-  'w.afbreekmes': () => (
-    <g>
-      <Ground cx={60} cy={104} rx={44} ry={4.5} />
-      {/* The blade sits in the middle of the body's thickness */}
-      {slab(BLADE, 2.5, 3.5, PAL.mist, PAL.paper, PAL.steel)}
-      {/* The body */}
-      {slab(BODY, 0, 6, PAL.yellow, PAL.yellowLight, PAL.yellowShade)}
-      {/* The dark nose where the blade comes out */}
-      {slab([[49, -9], [52, -9], [58, -6.5], [58, 6.5], [52, 9], [49, 9]], 0, 6, PAL.slate, PAL.steel, PAL.slateDark)}
-      {/* The slider on the back, with its ridges */}
-      {slab([[22, -14], [38, -14], [38, -9], [22, -9]], 1, 5, PAL.slate, PAL.steel, PAL.slateDark)}
-      <path d={[26, 30, 34].map((x) => `M${at(x, -10.5, 1).join(' ')}L${at(x, -12.8, 1).join(' ')}`).join('')} stroke={PAL.slateDark} strokeWidth="1.6" strokeLinecap="round" />
-      {/* The blade's front face over again, out of the nose, with the snap lines */}
-      <path d={path(BLADE.map(([x, y]) => at(Math.max(x, 58), y, 2.5)))} fill={PAL.mist} />
-      <path
-        d={SNAPS.map((x) => `M${at(x, BT, 2.5).join(' ')}L${at(x + SLANT, BB, 2.5).join(' ')}`).join('')}
-        stroke={PAL.slate}
-        strokeWidth="2.4"
-        strokeLinecap="round"
-      />
-      <Shine d={`M${at(8, -5.5, 0).join(' ')}L${at(44, -5.5, 0).join(' ')}`} color={PAL.yellowShine} width={3} opacity={0.8} />
-    </g>
-  ),
+  'w.afbreekmes': () => {
+    const id = `am-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
+    return (
+      <g>
+        <Ground cx={60} cy={104} rx={44} ry={4.5} />
+        {/* Only out of the nose is the blade seen over the body (it slides out on the intro card) */}
+        <clipPath id={id}>
+          <path d={path([at(58, -40, 0), at(160, -40, 0), at(160, 40, 0), at(58, 40, 0)])} />
+        </clipPath>
+        {/* The blade sits in the middle of the body's thickness */}
+        <Move kind="from" dx={OUT_DX} dy={OUT_DY}>
+          {slab(BLADE, 2.5, 3.5, PAL.mist, PAL.paper, PAL.steel)}
+        </Move>
+        {/* The body */}
+        {slab(BODY, 0, 6, PAL.yellow, PAL.yellowLight, PAL.yellowShade)}
+        {/* The dark nose where the blade comes out */}
+        {slab([[49, -9], [52, -9], [58, -6.5], [58, 6.5], [52, 9], [49, 9]], 0, 6, PAL.slate, PAL.steel, PAL.slateDark)}
+        {/* The slider on the back, with its ridges */}
+        {slab([[22, -14], [38, -14], [38, -9], [22, -9]], 1, 5, PAL.slate, PAL.steel, PAL.slateDark)}
+        <path d={[26, 30, 34].map((x) => `M${at(x, -10.5, 1).join(' ')}L${at(x, -12.8, 1).join(' ')}`).join('')} stroke={PAL.slateDark} strokeWidth="1.6" strokeLinecap="round" />
+        {/* The blade's front face over again, out of the nose, with the snap lines */}
+        <g clipPath={`url(#${id})`}>
+          <Move kind="from" dx={OUT_DX} dy={OUT_DY}>
+            <path d={path(BLADE.map(([x, y]) => at(Math.max(x, 58), y, 2.5)))} fill={PAL.mist} />
+            <path
+              d={SNAPS.map((x) => `M${at(x, BT, 2.5).join(' ')}L${at(x + SLANT, BB, 2.5).join(' ')}`).join('')}
+              stroke={PAL.slate}
+              strokeWidth="2.4"
+              strokeLinecap="round"
+            />
+          </Move>
+        </g>
+        <Shine d={`M${at(8, -5.5, 0).join(' ')}L${at(44, -5.5, 0).join(' ')}`} color={PAL.yellowShine} width={3} opacity={0.8} />
+      </g>
+    );
+  },
 } as Record<string, () => JSX.Element>;

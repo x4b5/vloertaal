@@ -1,5 +1,5 @@
 import { useId, type JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -55,31 +55,33 @@ export default {
         <polygon points={quad(iso(0, 0, PH), iso(PW, 0, PH), iso(PW, PD, PH), iso(0, PD, PH))} fill={PAL.blueLight} />
         <polygon points={quad(iso(0, 0, 0), iso(PW, 0, 0), iso(PW, 0, PH), iso(0, 0, PH))} fill={PAL.blue} />
         <polygon points={quad(iso(PW, 0, 0), iso(PW, PD, 0), iso(PW, PD, PH), iso(PW, 0, PH))} fill={PAL.blueShade} />
-        {/* The loupe's shadow on the plate, and the small scratch next to it */}
-        <ellipse cx="58" cy="84" rx="20" ry="4.5" fill={PAL.blue} />
         {scratch(82, 80, 0.6)}
-        {/* The handle: a steel neck and a yellow grip, to the top right */}
-        <path d={`M${n0[0]} ${n0[1]}L${n1[0]} ${n1[1]}`} stroke={PAL.steel} strokeWidth="7" strokeLinecap="round" />
-        <path d={`M${g0[0]} ${g0[1]}L${g1[0]} ${g1[1]}`} stroke={PAL.yellow} strokeWidth="12" strokeLinecap="round" />
-        <path d={`M${along(LR + 15)[0] + 2.2} ${along(LR + 15)[1] + 3}L${along(LR + 38)[0] + 2.2} ${along(LR + 38)[1] + 3}`} stroke={PAL.yellowShade} strokeWidth="4" strokeLinecap="round" />
-        {/* In the lens: the plate's paint, big, with the scratch big */}
-        <clipPath id={id}>
-          <circle cx={LX} cy={LY} r={LR} />
-        </clipPath>
-        <g clipPath={`url(#${id})`}>
-          <circle cx={LX} cy={LY} r={LR} fill={PAL.blueLight} />
-          {scratch(LX, LY + 1, 1.55)}
-        </g>
-        {/* The rim: yellow, its lower right half in the shade step */}
-        <circle cx={LX} cy={LY} r={LR} fill="none" stroke={PAL.yellow} strokeWidth="7" />
-        <path
-          d={`M${r1(LX + LR * Math.cos(-0.35))} ${r1(LY + LR * Math.sin(-0.35))}A${LR} ${LR} 0 0 1 ${r1(LX - LR * 0.7)} ${r1(LY + LR * 0.71)}`}
-          fill="none"
-          stroke={PAL.yellowShade}
-          strokeWidth="7"
-        />
-        <Shine d={`M${LX - 17} ${LY - 4}A18 18 0 0 1 ${LX - 5} ${LY - 17}`} width={3.4} opacity={0.85} />
-        <Shine d={`M${LX - 22} ${LY - 13}A26 26 0 0 1 ${LX - 13} ${LY - 22}`} color={PAL.yellowShine} width={2.4} opacity={0.8} />
+        {/* The loupe (and its shadow) moves over the plate to the scratch on the intro card */}
+        <Move kind="from" dx={-24} dy={-4}>
+          <ellipse cx="58" cy="84" rx="20" ry="4.5" fill={PAL.blue} />
+          {/* The handle: a steel neck and a yellow grip, to the top right */}
+          <path d={`M${n0[0]} ${n0[1]}L${n1[0]} ${n1[1]}`} stroke={PAL.steel} strokeWidth="7" strokeLinecap="round" />
+          <path d={`M${g0[0]} ${g0[1]}L${g1[0]} ${g1[1]}`} stroke={PAL.yellow} strokeWidth="12" strokeLinecap="round" />
+          <path d={`M${along(LR + 15)[0] + 2.2} ${along(LR + 15)[1] + 3}L${along(LR + 38)[0] + 2.2} ${along(LR + 38)[1] + 3}`} stroke={PAL.yellowShade} strokeWidth="4" strokeLinecap="round" />
+          {/* In the lens: the plate's paint, big, with the scratch big */}
+          <clipPath id={id}>
+            <circle cx={LX} cy={LY} r={LR} />
+          </clipPath>
+          <g clipPath={`url(#${id})`}>
+            <circle cx={LX} cy={LY} r={LR} fill={PAL.blueLight} />
+            <Move kind="show">{scratch(LX, LY + 1, 1.55)}</Move>
+          </g>
+          {/* The rim: yellow, its lower right half in the shade step */}
+          <circle cx={LX} cy={LY} r={LR} fill="none" stroke={PAL.yellow} strokeWidth="7" />
+          <path
+            d={`M${r1(LX + LR * Math.cos(-0.35))} ${r1(LY + LR * Math.sin(-0.35))}A${LR} ${LR} 0 0 1 ${r1(LX - LR * 0.7)} ${r1(LY + LR * 0.71)}`}
+            fill="none"
+            stroke={PAL.yellowShade}
+            strokeWidth="7"
+          />
+          <Shine d={`M${LX - 17} ${LY - 4}A18 18 0 0 1 ${LX - 5} ${LY - 17}`} width={3.4} opacity={0.85} />
+          <Shine d={`M${LX - 22} ${LY - 13}A26 26 0 0 1 ${LX - 13} ${LY - 22}`} color={PAL.yellowShine} width={2.4} opacity={0.8} />
+        </Move>
       </g>
     );
   },
