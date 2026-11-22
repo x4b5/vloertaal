@@ -571,7 +571,7 @@ const lang: HelpLanguageSource = {
 
     // Unit: Safety first
     'u.safety': 'Sicherheit zuerst',
-    'u.emergency': "Wenn etwas schiefgeht", // nieuw, nalezen
+    'u.emergency': "Wenn etwas schiefgeht", // nieuw, nalezen // nagelezen AI 22 nov
     'l.gear': 'Schutzausrüstung',
     'w.helm': 'der Helm',
     'w.handschoenen': 'die Handschuhe',
@@ -592,16 +592,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Vorsicht, der Boden ist nass!',
     's.danger.2': 'Wo ist der Notausgang?',
     's.danger.3': 'Es ist ein Unfall passiert!',
-    'l.alarm': 'Feueralarm und Evakuierung', // nieuw, nalezen
-    'w.alarm': 'der Alarm', // nieuw, nalezen
-    'w.ontruimen': 'räumen, evakuieren (alle verlassen das Gebäude)', // nieuw, nalezen
-    'w.vluchtroute': 'der Fluchtweg', // nieuw, nalezen
-    'w.trap': 'die Treppe', // nieuw, nalezen
-    'w.verzamelplaats': 'der Sammelplatz (wo sich alle draußen treffen)', // nieuw, nalezen
-    'w.brandblusser': 'der Feuerlöscher', // nieuw, nalezen
-    's.alarm.1': 'Wo hängt der Feuerlöscher?', // nieuw, nalezen
-    's.alarm.2': 'Wir müssen das Gebäude räumen.', // nieuw, nalezen
-    's.alarm.3': 'Nimm die Treppe, nicht den Aufzug.', // nieuw, nalezen
+    'l.alarm': 'Feueralarm und Evakuierung', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alarm': 'der Alarm', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontruimen': 'räumen, evakuieren (alle verlassen das Gebäude)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vluchtroute': 'der Fluchtweg', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.trap': 'die Treppe', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.verzamelplaats': 'der Sammelplatz (wo sich alle draußen treffen)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.brandblusser': 'der Feuerlöscher', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.1': 'Wo hängt der Feuerlöscher?', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.2': 'Wir müssen das Gebäude räumen.', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.3': 'Nimm die Treppe, nicht den Aufzug.', // nieuw, nalezen // nagelezen AI 22 nov
     'l.accident': 'Einen Unfall melden',
     'w.gewond': 'verletzt',
     'w.bloeden': 'bluten',
@@ -681,8 +681,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Ja, ich trage ihn.',
     'c.danger.q': 'Ist ein Unfall passiert?',
     'c.danger.a': 'Ja, ruf 112 an!',
-    'c.alarm.q': 'Sind alle draußen?', // nieuw, nalezen
-    'c.alarm.a': 'Nein, mein Kollege ist noch nicht da.', // nieuw, nalezen
+    'c.alarm.q': 'Sind alle draußen?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.a': 'Nein, mein Kollege ist noch nicht da.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.accident.q': 'Was ist passiert?',
     'c.accident.a': 'Er ist gestürzt. Er blutet.',
     'l.notyet': 'Das habe ich noch nicht gelernt',
