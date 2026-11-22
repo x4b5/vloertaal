@@ -166,9 +166,12 @@ export default {
     const end = onArc(pivot, 84, ang);
     return (
       <g>
+        {/* On the intro card the blade swings open round the knob to its angle */}
+        <Move kind="turn" turn={44} at={pivot}>
         <Extrude p={bar(pivot, end, 14)} {...STEEL} />
         <path d={`M${pts([onArc(pivot, 20, ang)])}L${pts([onArc(pivot, 66, ang)])}`} stroke={PAL.slateDark} strokeWidth="4.4" strokeLinecap="round" />
         <Shine d={`M${pts([onArc([pivot[0] - 4.8, pivot[1] - 3], 28, ang)])}L${pts([onArc([pivot[0] - 4.8, pivot[1] - 3], 76, ang)])}`} width={2.4} />
+        </Move>
         {/* The short handle */}
         <Extrude p={bar([pivot[0] - 4, pivot[1]], [98, pivot[1]], 16)} d={dz(6)} front={PAL.orange} top={PAL.orangeLight} side={PAL.orangeShade} />
         <path d={`M${pivot[0] + 16} ${pivot[1]}H92`} stroke={PAL.orangeShade} strokeWidth="3" strokeLinecap="round" />
