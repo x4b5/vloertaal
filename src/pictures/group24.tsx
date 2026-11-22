@@ -624,10 +624,12 @@ export default {
     </g>
   ),
 
-  // "bewegen": to move, to be active — Jada walks with big steps, swinging her arms
+  // "bewegen": to move, to be active — Jada walks with big steps, swinging her arms. On the intro
+  // card she walks in from the left.
   'w.bewegen': () => (
     <g>
       <Ground cy={106} rx={30} ry={4} />
+      <Move kind="from" dx={-26}>
       {/* Back arm and back leg */}
       <path d="M54 50L44 70" stroke={SKIN.jada[1]} strokeWidth="7" strokeLinecap="round" />
       <path d="M58 76L42 102" stroke={PAL.navy} strokeWidth="10" strokeLinecap="round" />
@@ -643,6 +645,7 @@ export default {
       {/* Front arm swinging forward */}
       <path d="M68 50L80 64L90 56" fill="none" stroke={SKIN.jada[0]} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
       <Head who="jada" x={62} y={46} s={0.44} expr="joy" />
+      </Move>
       <Motion x={30} y={62} dir={180} spread={50} len={9} gap={2} />
     </g>
   ),
@@ -659,7 +662,8 @@ export default {
     </g>
   ),
 
-  // "sparen": to save (money) — a coin dropping into a glass jar that is filling up with coins
+  // "sparen": to save (money) — a coin dropping into a glass jar that is filling up with coins.
+  // On the intro card the coin drops down to the slot.
   'w.sparen': () => (
     <g>
       <Ground cy={106} rx={34} ry={4} />
@@ -673,7 +677,9 @@ export default {
       {/* The lid with a slot */}
       <rect x="28" y="34" width="60" height="12" rx="4" fill={PAL.slate} />
       <rect x="46" y="37" width="24" height="4.6" rx="2.3" fill={PAL.slateDark} />
-      <Coin x={58} y={18} r={10} />
+      <Move kind="drop" dy={-22}>
+        <Coin x={58} y={18} r={10} />
+      </Move>
       <Arrow from={[84, 14]} to={[84, 30]} color={PAL.ok} width={5} head={8} />
     </g>
   ),
@@ -778,7 +784,8 @@ export default {
     </g>
   ),
 
-  // "oogsten": to harvest — Amina picks a ripe tomato from the plant
+  // "oogsten": to harvest — Amina picks a ripe tomato from the plant. On the intro card her hand
+  // takes the tomato from its stalk on the plant down to her.
   'w.oogsten': () => (
     <g>
       {/* The plant: a tall stem with leaves and tomatoes */}
@@ -791,8 +798,10 @@ export default {
       <path d="M92 54L84 62" stroke={PAL.greenShade} strokeWidth="2.4" strokeLinecap="round" />
       <Bust who="amina" x={38} y={126} scale={0.64} expr="pleased" bold />
       {/* Her hand, holding the tomato she just picked */}
-      <Hand pose="hold" x={74} y={98} rotate={14} scale={0.6} skin={SKIN.amina} sleeve={['#2f8f3e', '#23722f']} />
-      <Tomato x={78} y={83} r={9} />
+      <Move kind="from" dx={8} dy={-20}>
+        <Hand pose="hold" x={74} y={98} rotate={14} scale={0.6} skin={SKIN.amina} sleeve={['#2f8f3e', '#23722f']} />
+        <Tomato x={78} y={83} r={9} />
+      </Move>
     </g>
   ),
 

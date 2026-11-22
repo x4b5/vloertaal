@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { CastHead } from '../components/Characters';
-import { Box, Bubble, Cross, CurveArrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
+import { Box, Bubble, Cross, CurveArrow, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle, Tick } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 1 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -53,19 +53,24 @@ function NewHat({ x = 60, y = 70, s = 1 }: { x?: number; y?: number; s?: number 
 }
 
 export default {
-  // "hallo": Bram smiles and waves.
+  // "hallo": Bram smiles and waves. On the intro card his hand waves once (it turns in from the side).
   'w.hallo': () => (
     <g>
       <Bust who="bram" x={48} y={112} scale={0.72} expr="joy" />
-      <Hand pose="open" x={95} y={74} rotate={14} scale={0.78} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
+      <Move kind="turn" turn={-30} at={[92, 100]}>
+        <Hand pose="open" x={95} y={74} rotate={14} scale={0.78} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
+      </Move>
       <Motion x={100} y={26} dir={-40} spread={70} len={8} gap={8} color={PAL.sky} width={3.8} />
     </g>
   ),
 
-  // "goedemorgen": Amina waves hello while the morning sun comes up behind her.
+  // "goedemorgen": Amina waves hello while the morning sun comes up behind her. On the intro card
+  // the sun comes up from behind her.
   'w.goedemorgen': () => (
     <g>
-      <Sun cx={30} cy={36} r={15} />
+      <Move kind="slow" dy={30}>
+        <Sun cx={30} cy={36} r={15} />
+      </Move>
       <Bust who="amina" x={50} y={116} scale={0.7} expr="joy" />
       <Hand pose="open" x={96} y={82} rotate={14} scale={0.74} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
       <Motion x={101} y={36} dir={-40} spread={70} len={7} gap={7} color={PAL.sky} width={3.6} />
@@ -111,13 +116,16 @@ export default {
     </g>
   ),
 
-  // "tot morgen": a hand waves goodbye; the moon goes over to the next day's sun.
+  // "tot morgen": a hand waves goodbye; the moon goes over to the next day's sun. On the intro
+  // card the hand waves once (it turns in from the side).
   'w.totmorgen': () => (
     <g>
       <Moon x={76} y={26} r={13} />
       <CurveArrow from={[94, 22]} to={[102, 64]} bend={12} color={PAL.sky} width={6.5} head={11} />
       <Sun cx={86} cy={88} r={11} />
-      <Hand pose="open" x={38} y={116} rotate={-12} scale={1.08} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
+      <Move kind="turn" turn={28} at={[38, 110]}>
+        <Hand pose="open" x={38} y={116} rotate={-12} scale={1.08} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
+      </Move>
       <Motion x={22} y={36} dir={-130} spread={70} len={8} gap={10} color={PAL.sky} width={3.8} />
       <Motion x={60} y={30} dir={-40} spread={60} n={2} len={8} gap={10} color={PAL.sky} width={3.8} />
     </g>
@@ -170,16 +178,19 @@ export default {
     </g>
   ),
 
-  // "het werk": Bram at work, swinging a hammer.
+  // "het werk": Bram at work, swinging a hammer. On the intro card the hammer swings once, from
+  // further back to where it is drawn.
   'w.werk': () => (
     <g>
       <Bust who="bram" x={44} y={116} scale={0.68} expr="neutral" />
+      <Move kind="turn" turn={35} at={[88, 84]}>
       <g transform="rotate(-24 88 78)">
         <path d="M88 86V30" stroke={PAL.wood} strokeWidth="8" strokeLinecap="round" />
         <rect x="70" y="18" width="36" height="15" rx="4" fill={PAL.slate} />
         <rect x="70" y="18" width="12" height="15" rx="4" fill={PAL.steel} />
         <Hand pose="hold" x={88} y={84} scale={0.62} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
       </g>
+      </Move>
       <Motion x={70} y={14} dir={-150} spread={60} len={8} gap={8} color={PAL.sky} width={3.6} />
     </g>
   ),

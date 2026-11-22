@@ -304,6 +304,7 @@ export default {
   ),
 
   // "pakken": to take — a hand grabs one tomato and takes it out of a full crate
+  // On the intro card: the hand lifts the tomato up out of the crate.
   'w.pakken': () => (
     <g>
       <Ground cx={60} cy={107} rx={46} ry={3.5} />
@@ -319,6 +320,7 @@ export default {
         <rect key={x} x={x - 4} y={95} width={8} height={6} rx="3" fill={PAL.greenShade} />
       ))}
       {/* The tomato being taken, lifted out of the crate */}
+      <Move kind="from" dy={30}>
       <g transform="translate(56 52) scale(0.88) translate(-52 -58)">
       <circle cx={52} cy={58} r={20} fill={PAL.red} />
       <path d="M68 48A20 20 0 0 1 54 77.8" fill="none" stroke={PAL.redShade} strokeWidth="6" strokeLinecap="round" />
@@ -344,6 +346,7 @@ export default {
         <path d="M42 30Q52 34 62 30" fill="none" stroke={SKIN.amina[1]} strokeWidth="1.5" strokeLinecap="round" opacity=".8" />
       </g>
       </g>
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

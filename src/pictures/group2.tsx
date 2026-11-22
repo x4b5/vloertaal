@@ -56,15 +56,18 @@ export default {
     </g>
   ),
 
-  // "helpen": to help — Amina sweats under a heavy box; a cheerful Bram lifts the other side
+  // "helpen": to help — Amina sweats under a heavy box; a cheerful Bram lifts the other side. On the
+  // intro card the two lift the box up together.
   'w.helpen': () => (
     <g>
       <Ground cx={60} cy={108} rx={46} ry={4} />
       <Bust who="amina" x={30} y={112} scale={0.52} expr="disappointed" />
       <Bust who="bram" x={92} y={112} scale={0.52} expr="pleased" />
-      <Box x={36} y={70} w={42} h={32} depth={10} />
-      <Hand pose="open" x={30} y={100} rotate={60} scale={0.5} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
-      <Hand pose="open" x={94} y={102} rotate={-60} scale={0.5} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} mirror />
+      <Move kind="from" dy={18}>
+        <Box x={36} y={70} w={42} h={32} depth={10} />
+        <Hand pose="open" x={30} y={100} rotate={60} scale={0.5} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+        <Hand pose="open" x={94} y={102} rotate={-60} scale={0.5} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} mirror />
+      </Move>
       {/* Amina is straining: sweat drops */}
       <path d="M14 44Q10 50 14 52Q18 50 14 44ZM50 40Q46 46 50 48Q54 46 50 40Z" fill={PAL.sky} />
       <Arrow from={[61, 56]} to={[61, 24]} color={PAL.sky} width={7} head={11} />

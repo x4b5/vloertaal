@@ -124,7 +124,8 @@ export default {
   ),
 
   // "meten": to measure — a plank with the tape along it, a hand on the case, and a double
-  // arrow over the length that is measured.
+  // arrow over the length that is measured. On the intro card the case is pulled to the right and
+  // the tape runs out of it along the plank.
   'w.meten': () => (
     <g>
       <Ground cx={58} cy={104} rx={50} ry={4} />
@@ -136,10 +137,14 @@ export default {
       <rect x="10" y="90" width="98" height="10" rx="2" fill={PAL.cardShade} />
       <path d="M18 78H52M64 83H98" stroke={PAL.cardShade} strokeWidth="1.8" strokeLinecap="round" />
       {/* The tape, hooked over the end */}
-      <Tape x0={11} x1={78} y={59} h={11} />
+      <Move kind="grow" grow={0.4}>
+        <Tape x0={11} x1={78} y={59} h={11} />
+      </Move>
       <rect x="8" y="57" width="4.5" height="19" rx="1.5" fill={PAL.slate} />
-      <TapeCase x={70} y={42} s={30} />
-      <Hand pose="hold" x={111} y={56} rotate={-90} scale={0.62} skin={SKIN.jada} />
+      <Move kind="slow" dx={-40}>
+        <TapeCase x={70} y={42} s={30} />
+        <Hand pose="hold" x={111} y={56} rotate={-90} scale={0.62} skin={SKIN.jada} />
+      </Move>
     </g>
   ),
 
@@ -307,7 +312,8 @@ export default {
   ),
 
   // "struikelen": to trip over something — a walking leg: the boot catches on a plank lying on
-  // the ground, with lines at the bump and a warning mark.
+  // the ground, with lines at the bump and a warning mark. On the intro card the front leg swings
+  // forward from behind and catches on the plank; then the lines and the mark show.
   'w.struikelen': () => (
     <g>
       <Ground cx={58} cy={107} rx={50} ry={4} />
@@ -320,11 +326,15 @@ export default {
         <rect x="76" y="100" width="34" height="4" rx="2" fill={PAL.cardShade} />
       </g>
       {/* The front leg: swinging forward, the toe hits the plank */}
-      {cap([36, 14], [48, 48], 15, PAL.blue)}
-      {cap([48, 48], [54, 76], 14, PAL.blue)}
-      <Boot x={54} y={78} rotate={14} />
-      <Motion x={84} y={84} dir={-60} spread={80} n={3} len={9} gap={6} color={PAL.orange} width={3.6} />
-      <ExclaimMark x={100} y={40} size={30} />
+      <Move kind="turn" turn={30} at={[36, 14]}>
+        {cap([36, 14], [48, 48], 15, PAL.blue)}
+        {cap([48, 48], [54, 76], 14, PAL.blue)}
+        <Boot x={54} y={78} rotate={14} />
+      </Move>
+      <Move kind="show">
+        <Motion x={84} y={84} dir={-60} spread={80} n={3} len={9} gap={6} color={PAL.orange} width={3.6} />
+        <ExclaimMark x={100} y={40} size={30} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

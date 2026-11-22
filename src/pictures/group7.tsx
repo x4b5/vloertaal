@@ -1,4 +1,4 @@
-import type { JSX } from 'react';
+import { useId, type JSX } from 'react';
 import { CastHead } from '../components/Characters';
 import { Box, ExclaimMark, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 import { Bust } from './bust';
@@ -108,7 +108,7 @@ function ForkliftShape() {
 }
 
 /** An industrial machine: blue cabinet, a window with a gear, a control panel and a beacon. */
-function Machine({ fault = false }: { fault?: boolean }) {
+function Machine({ fault = false, run = false }: { fault?: boolean; run?: boolean }) {
   return (
     <g>
       <Ground cx={60} cy={105} rx={48} ry={4.5} />
@@ -128,7 +128,13 @@ function Machine({ fault = false }: { fault?: boolean }) {
       <path d="M20 37H76" stroke={fault ? PAL.mist : PAL.blueLight} strokeWidth="2.6" strokeLinecap="round" opacity=".8" />
       {/* Window with the gear inside */}
       <rect x="22" y="44" width="44" height="44" rx="5" fill={PAL.slateDark} />
-      <Gear cx={44} cy={66} r={12} n={8} color={fault ? PAL.steel : PAL.yellow} shade={fault ? PAL.slate : PAL.yellowShade} hole={PAL.slateDark} />
+      {run ? (
+        <Move kind="turn" turn={-100} at={[44, 66]}>
+          <Gear cx={44} cy={66} r={12} n={8} color={PAL.yellow} shade={PAL.yellowShade} hole={PAL.slateDark} />
+        </Move>
+      ) : (
+        <Gear cx={44} cy={66} r={12} n={8} color={fault ? PAL.steel : PAL.yellow} shade={fault ? PAL.slate : PAL.yellowShade} hole={PAL.slateDark} />
+      )}
       {/* Control panel */}
       <rect x="72" y="44" width="26" height="44" rx="4" fill={PAL.paper} />
       <rect x="72" y="84" width="26" height="4" rx="2" fill={PAL.paperShade} />
@@ -181,13 +187,24 @@ export default {
     </g>
   ),
 
-  // "de boor": the drill — a yellow cordless drill with a black grip and battery, drill bit to the left
-  'w.boor': () => (
+  // "de boor": the drill — a yellow cordless drill with a black grip and battery, drill bit to the left.
+  // On the intro card the bit turns: its spiral grooves run along it (two grooves), clipped to the bit.
+  'w.boor': () => {
+    const clip = `boor-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
+    return (
     <g>
       <Ground cx={74} cy={105} rx={30} ry={4} />
       {/* Drill bit with spiral */}
       <rect x="8" y="39" width="26" height="7" rx="3" fill={PAL.steel} />
-      <path d="M13 39.5L16 45.5M20 39.5L23 45.5M27 39.5L30 45.5" stroke={PAL.slate} strokeWidth="1.8" strokeLinecap="round" />
+      <clipPath id={clip}>
+        <rect x="8" y="37.5" width="26" height="10" rx="3" />
+      </clipPath>
+      <g clipPath={`url(#${clip})`}>
+        {/* Two extra grooves past the bit's end (under the chuck at rest) fill the bit while they run */}
+        <Move kind="slow" dx={-14}>
+          <path d="M13 39.5L16 45.5M20 39.5L23 45.5M27 39.5L30 45.5M34 39.5L37 45.5M41 39.5L44 45.5" stroke={PAL.slate} strokeWidth="1.8" strokeLinecap="round" />
+        </Move>
+      </g>
       {/* Chuck */}
       <rect x="28" y="33" width="14" height="19" rx="4" fill={PAL.slate} />
       <path d="M32 36V49M37 36V49" stroke={PAL.slateDark} strokeWidth="1.8" strokeLinecap="round" />
@@ -208,16 +225,20 @@ export default {
       {/* Spinning */}
       <path d="M12 30Q20 27 26 30M12 55Q20 58 26 55" fill="none" stroke={PAL.line} strokeWidth="2.6" strokeLinecap="round" />
     </g>
-  ),
+    );
+  },
 
-  // "het beton": concrete — a concrete mixer truck (striped drum) pouring grey concrete onto a heap
+  // "het beton": concrete — a concrete mixer truck (striped drum) pouring grey concrete onto a heap.
+  // On the intro card the heap of concrete grows up under the chute.
   'w.beton': () => (
     <g>
       <Ground cx={56} cy={104} rx={50} ry={4} />
       {/* Grey concrete stream and heap */}
       <path d="M98 66Q104 70 104 80V96" stroke={PAL.line} strokeWidth="6" strokeLinecap="round" fill="none" />
-      <path d="M88 104Q90 92 102 90Q114 92 116 104Z" fill={PAL.line} />
-      <path d="M104 92Q112 94 114 102H106Z" fill={PAL.steel} />
+      <Move kind="sag" grow={0.3}>
+        <path d="M88 104Q90 92 102 90Q114 92 116 104Z" fill={PAL.line} />
+        <path d="M104 92Q112 94 114 102H106Z" fill={PAL.steel} />
+      </Move>
       {/* Chute */}
       <path d="M86 60L100 68" stroke={PAL.slate} strokeWidth="6" strokeLinecap="round" />
       {/* Chassis */}
@@ -414,8 +435,9 @@ export default {
   ),
 
   // "de machine": the machine — a blue factory machine with a gear behind glass, a control
-  // panel with green and red buttons, and a green light on top
-  'w.machine': () => <Machine />,
+  // panel with green and red buttons, and a green light on top.
+  // On the intro card the gear turns: the machine runs.
+  'w.machine': () => <Machine run />,
 
   // "de storing": the breakdown — the same machine stopped: grey (off), a red flashing light, a
   // grey gear, smoke, and a big yellow warning sign in front
@@ -436,7 +458,8 @@ export default {
     </g>
   ),
 
-  // "de noodstop": the emergency stop — a big red mushroom button on a yellow box
+  // "de noodstop": the emergency stop — a big red mushroom button on a yellow box.
+  // On the intro card the red cap is pushed down into place.
   'w.noodstop': () => (
     <g strokeLinejoin="round">
       <Ground cx={60} cy={105} rx={44} ry={4.5} />
@@ -448,12 +471,14 @@ export default {
       <path d="M26 69H80" stroke={PAL.yellowShine} strokeWidth="2.4" strokeLinecap="round" opacity=".9" />
       {/* Collar and stem */}
       <ellipse cx="60" cy="60" rx="22" ry="6" fill={PAL.slate} />
-      <rect x="49" y="44" width="22" height="16" fill={PAL.redShade} />
-      {/* Mushroom cap */}
-      <Shade color={PAL.redShade} opacity={1} at={[96, 36, 16, 24]}>
-        <path d="M24 44Q24 16 60 16Q96 16 96 44Q96 50 60 50Q24 50 24 44Z" fill={PAL.red} />
-      </Shade>
-      <Shine d="M34 34Q38 24 52 21" width={4.5} opacity={0.55} />
+      <Move kind="fast" dy={-15}>
+        <rect x="49" y="44" width="22" height="16" fill={PAL.redShade} />
+        {/* Mushroom cap */}
+        <Shade color={PAL.redShade} opacity={1} at={[96, 36, 16, 24]}>
+          <path d="M24 44Q24 16 60 16Q96 16 96 44Q96 50 60 50Q24 50 24 44Z" fill={PAL.red} />
+        </Shade>
+        <Shine d="M34 34Q38 24 52 21" width={4.5} opacity={0.55} />
+      </Move>
     </g>
   ),
 
@@ -486,7 +511,8 @@ export default {
     );
   },
 
-  // "de productie": production — a machine on a line turns out a row of identical yellow products
+  // "de productie": production — a machine on a line turns out a row of identical yellow products.
+  // On the intro card the products come out of the machine and run along the belt to the right.
   'w.productie': () => (
     <g>
       <Ground cx={60} cy={105} rx={52} ry={4} />
@@ -496,12 +522,12 @@ export default {
       <rect x="12" y="76" width="96" height="4" rx="2" fill={PAL.slate} />
       {/* Products coming out */}
       {[56, 76, 96].map((cx) => (
-        <g key={cx}>
+        <Move key={cx} kind="slow" dx={-24}>
           <rect x={cx - 7} y="56" width="14" height="20" rx="3" fill={PAL.yellow} />
           <rect x={cx} y="56" width="7" height="20" rx="3" fill={PAL.yellowShade} />
           <rect x={cx - 7} y="53" width="14" height="5" rx="2" fill={PAL.red} />
           <rect x={cx - 7} y="63" width="14" height="6" fill={PAL.paper} />
-        </g>
+        </Move>
       ))}
       {/* The machine over the start of the line */}
       <Shade color={PAL.blueShade} opacity={1} at={[50, 50, 6, 40]}>
@@ -532,11 +558,14 @@ export default {
     </g>
   ),
 
-  // "weigeren": to refuse — Jada holds up a flat hand: no, I won't do that dangerous job
+  // "weigeren": to refuse — Jada holds up a flat hand: no, I won't do that dangerous job.
+  // On the intro card her flat hand comes up.
   'w.weigeren': () => (
     <g>
       <Bust who="jada" x={44} y={124} scale={0.7} expr="disappointed" />
-      <Hand pose="open" x={88} y={112} rotate={6} scale={0.86} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} mirror />
+      <Move kind="from" dy={26}>
+        <Hand pose="open" x={88} y={112} rotate={6} scale={0.86} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} mirror />
+      </Move>
       {/* The danger she refuses */}
       <path d="M96 12L110 36H82Z" fill={PAL.yellow} stroke={PAL.yellow} strokeWidth="6" strokeLinejoin="round" />
       <ExclaimMark x={96} y={28} size={15} color={PAL.ink} />

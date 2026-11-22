@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Ground, Hand, PAL, SKIN, Shade, Shine, type Pt } from './kit';
+import { Arrow, Ground, Hand, Move, PAL, SKIN, Shade, Shine, type Pt } from './kit';
 
 /**
  * Word pictures, group 63 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -157,23 +157,30 @@ const NUT = pts(Array.from({ length: 6 }, (_, i) => dir(i * 60).map((v) => v * 1
  * A nut lying on the plate at `c`, from `from` to `to` units above it: its sides (stacked copies),
  * and with `top` its light top face.
  */
-function Nut({ c, from, to, top = false }: { c: Pt; from: number; to: number; top?: boolean }) {
+function Nut({ c, from, to, top = false, turn = 0 }: { c: Pt; from: number; to: number; top?: boolean; turn?: number }) {
   const steps = Array.from({ length: Math.ceil((from - to) / 1.2) + 1 }, (_, i) => Math.max(to, from - i * 1.2));
+  const face = (fill: string) => {
+    const p = <polygon points={NUT} fill={fill} />;
+    return turn ? <Move kind="turn" turn={turn} at={[0, 0]}>{p}</Move> : p;
+  };
   return (
     <g>
       {steps.map((k) => (
         <g key={k} transform={flatAt(c[0], c[1] - k)}>
-          <polygon points={NUT} fill={STEEL_DARK} />
+          {face(STEEL_DARK)}
         </g>
       ))}
       {top && (
         <g transform={flatAt(c[0], c[1] - to)}>
-          <polygon points={NUT} fill={PAL.steel} />
+          {face(PAL.steel)}
         </g>
       )}
     </g>
   );
 }
+
+/** How far the spanner and nut of "vastzetten" turn on the intro card (a sixth of a turn). */
+const TIGHTEN = 60;
 
 /** An open-end spanner in the ground plane, its jaws round a nut at (0, 0), its handle turned `rot` degrees. */
 const Spanner = ({ rot, color }: { rot: number; color: string }) => (
@@ -228,7 +235,8 @@ function KeyBar({ a, b, colors: [base, shade, light] }: { a: number; b: number; 
 
 export default {
   // "bevestigen": to fix, attach firmly to a wall — a board on a plain brick wall, one screw in, the
-  // other screw going in, a sky-blue arrow pushing it into the wall.
+  // other screw going in, a sky-blue arrow pushing it into the wall. On the intro card the second
+  // screw goes into the wall, along the arrow.
   'w.bevestigen': () => {
     const hole: Pt = [67, 52];
     const out: Pt = [-0.786, 0.618];
@@ -251,11 +259,13 @@ export default {
         {line('M23.6 48.4H31.2M27.4 44.6V52.2', PAL.slate, 2)}
         {/* The second screw, half in: its hole, its thread and its head towards us */}
         <ellipse cx={hole[0]} cy={hole[1]} rx="4.5" ry="4" fill={PAL.brown} />
+        <Move kind="from" dx={r1(out[0] * 18)} dy={r1(out[1] * 18)}>
         {line(`M${pts([hole])}L${pts([head])}`, PAL.steel, 7)}
         {line([6, 11, 16, 21].map((k) => `M${pts([at(k, -3.4)])}L${pts([at(k - 2, 3.4)])}`).join(''), STEEL_DARK, 1.6)}
         <circle cx={head[0]} cy={head[1]} r="9" fill={PAL.steel} />
         <circle cx={head[0] - 0.7} cy={head[1] - 0.7} r="7.2" fill={PAL.mist} />
         {line(`M${head[0] - 5.5} ${head[1] - 0.7}H${head[0] + 4}M${head[0] - 0.7} ${head[1] - 5.5}V${head[1] + 4}`, PAL.slate, 2.4)}
+        </Move>
         {/* The arrow: into the wall */}
         <Arrow from={at(30, -15)} to={at(4, -15)} width={7} head={11} />
       </g>
@@ -263,7 +273,8 @@ export default {
   },
 
   // "vastzetten": to tighten — a spanner round the nut of a bolt in a blue steel plate, and a
-  // sky-blue arrow going round the nut clockwise.
+  // sky-blue arrow going round the nut clockwise. On the intro card the spanner turns the nut a
+  // sixth of a turn, clockwise (the nut ends as it was: six sides).
   'w.vastzetten': () => {
     const c: Pt = [50, 72];
     const h = 11;
@@ -280,14 +291,18 @@ export default {
         {/* The steel plate, lying, seen at a slant */}
         <Slab x={8} y={84} w={74} h={12} d={46} front={PAL.blueShade} top={PAL.blue} side={PAL.navy} />
         {/* The nut's lower half, the spanner round it, the nut's upper half and its top, the bolt's end */}
-        <Nut c={c} from={h} to={h / 2} />
+        <Nut c={c} from={h} to={h / 2} turn={TIGHTEN} />
         <g transform={flatAt(c[0], c[1] - h / 2 + 3)}>
-          <Spanner rot={rot} color={PAL.steel} />
+          <Move kind="turn" turn={TIGHTEN} at={[0, 0]}>
+            <Spanner rot={rot} color={PAL.steel} />
+          </Move>
         </g>
         <g transform={flatAt(c[0], c[1] - h / 2)}>
-          <Spanner rot={rot} color={PAL.mist} />
+          <Move kind="turn" turn={TIGHTEN} at={[0, 0]}>
+            <Spanner rot={rot} color={PAL.mist} />
+          </Move>
         </g>
-        <Nut c={c} from={h / 2} to={0} top />
+        <Nut c={c} from={h / 2} to={0} top turn={TIGHTEN} />
         <rect x={c[0] - 6} y={c[1] - h - 9} width="12" height="9" fill={PAL.mist} />
         <rect x={c[0] + 1.5} y={c[1] - h - 9} width="4.5" height="9" fill={PAL.steel} />
         <g transform={flatAt(c[0], c[1] - h - 9)}>
@@ -300,7 +315,8 @@ export default {
   },
 
   // "lijmen": to glue — a hand holds a fat white glue bottle by its end, nozzle down; a thick line
-  // of white glue runs along the top of a darker wooden block to the nozzle.
+  // of white glue runs along the top of a darker wooden block to the nozzle. On the intro card the
+  // bottle moves to the right and the line of glue runs out behind it.
   'w.lijmen': () => {
     const tip: Pt = [58, 70];
     const ang = -58;
@@ -313,8 +329,11 @@ export default {
         <Ground cx={54} cy={104} rx={46} ry={4} />
         <Slab x={10} y={80} w={64} h={22} d={34} front={PAL.cardShade} top={PAL.card} side={PAL.cardDark} />
         {/* The line of glue along the block's top, ending at the nozzle */}
-        {line(`M20 73.4H${tip[0] - 2}`, PAL.mist, 9)}
-        {line(`M20 71.6H${tip[0] - 2}`, PAL.white, 7)}
+        <Move kind="grow" grow={0.15}>
+          {line(`M20 73.4H${tip[0] - 2}`, PAL.mist, 9)}
+          {line(`M20 71.6H${tip[0] - 2}`, PAL.white, 7)}
+        </Move>
+        <Move kind="slow" dx={-30}>
         {/* The bottle, nozzle down: an orange nozzle and cap, a fat white body with a blue label */}
         <g transform={`translate(${tip[0]} ${tip[1]}) rotate(${ang})`}>
           <path d="M0 -2L13 -5.5V5.5L0 2Z" fill={PAL.orange} stroke={PAL.orange} strokeWidth="1.6" strokeLinejoin="round" />
@@ -325,6 +344,7 @@ export default {
           <rect x="31" y="-16.5" width="16" height="33" fill={PAL.blue} />
         </g>
         <Hand pose="hold" x={wrist[0]} y={wrist[1]} rotate={ang} scale={s} skin={SKIN.henk} sleeve={[PAL.green, PAL.greenShade]} />
+        </Move>
       </g>
     );
   },

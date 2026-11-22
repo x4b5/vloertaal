@@ -312,12 +312,15 @@ export default {
   ),
 
   // "vertellen": to tell — Bram tells his story (a bubble full of lines), Jada listens.
+  // On the intro card the lines of his story fill the bubble from left to right.
   'w.vertellen': () => (
     <g>
       <Bust who="bram" x={34} y={122} scale={0.62} expr="pleased" talk />
       <Bust who="jada" x={96} y={122} scale={0.4} expr="neutral" flip />
       <Bubble x={50} y={10} w={60} h={42} tail="left">
-        <Lines x={60} y0={22} widths={[40, 32, 22]} gap={9} color={PAL.skyShade} width={4} />
+        <Move kind="grow" grow={0.1}>
+          <Lines x={60} y0={22} widths={[40, 32, 22]} gap={9} color={PAL.skyShade} width={4} />
+        </Move>
       </Bubble>
     </g>
   ),
@@ -353,11 +356,14 @@ export default {
   ),
 
   // "solliciteren": to apply — Amina's hand hands over her CV, Henk's hand reaches for it.
+  // On the intro card her hand brings the CV up from below, towards Henk.
   'w.solliciteren': () => (
     <g>
-      <Hand pose="hold" x={34} y={120} rotate={14} scale={0.66} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
-      <CvSheet x={20} y={32} w={44} h={58} who="amina" rot={-8} id="g10-sol-cv" />
-      <rect x="31" y="84" width="9" height="18" rx="4.5" fill={SKIN.amina[0]} transform="rotate(24 35 93)" />
+      <Move kind="from" dx={-16} dy={26}>
+        <Hand pose="hold" x={34} y={120} rotate={14} scale={0.66} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+        <CvSheet x={20} y={32} w={44} h={58} who="amina" rot={-8} id="g10-sol-cv" />
+        <rect x="31" y="84" width="9" height="18" rx="4.5" fill={SKIN.amina[0]} transform="rotate(24 35 93)" />
+      </Move>
       <Hand pose="open" x={94} y={118} rotate={-34} scale={0.66} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
       <CurveArrow from={[64, 24]} to={[98, 52]} bend={14} color={PAL.sky} width={6} head={11} />
     </g>
@@ -454,6 +460,7 @@ export default {
   ),
 
   // "inschrijven": to register — filling in a form at the counter, pen in hand.
+  // On the intro card the hand with the pen comes down the form from the rows above.
   'w.inschrijven': () => (
     <g>
       <Paper x={22} y={10} w={62} h={74}>
@@ -470,8 +477,10 @@ export default {
       <rect x="4" y="86" width="112" height="24" rx="3" fill={PAL.wood} />
       <rect x="4" y="80" width="112" height="9" rx="3" fill={PAL.card} />
       <rect x="4" y="80" width="112" height="3" rx="1.5" fill="#f0c48a" />
-      <Pen x={62} y={58} angle={58} len={40} />
-      <Hand pose="hold" x={86} y={112} rotate={-28} scale={0.62} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
+      <Move kind="from" dx={-6} dy={-24}>
+        <Pen x={62} y={58} angle={58} len={40} />
+        <Hand pose="hold" x={86} y={112} rotate={-28} scale={0.62} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
+      </Move>
     </g>
   ),
 

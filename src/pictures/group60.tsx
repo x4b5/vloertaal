@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shine } from './kit';
+import { Move, PAL, Shine } from './kit';
 
 /**
  * Word pictures, group 60 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -112,21 +112,29 @@ const MALLET_HANDLE = 'M53 50H67V100Q67 106 60 106Q53 106 53 100Z';
 
 export default {
   // "de handzaag": the handsaw — a long grey blade tapering from the heel to a narrow tip, big dark
-  // teeth along the bottom, an orange closed handle, rising a little to the right.
+  // teeth along the bottom, an orange closed handle, rising a little to the right. On the intro
+  // card it saws once along its blade: a pull back, then a push forward (as "zagen").
   'w.handzaag': () => (
     <g transform="translate(60 60) rotate(-8) translate(-61 -58)">
+      <Move kind="from" dx={-22}>
+      <Move kind="then" dx={22}>
       {/* The big teeth, then the blade on its dark depth edge */}
       <path d={teeth(36, 111, 74, 7.5, 8)} fill={STEEL_DARK} />
       <Part d={HANDSAW_BLADE} fill={PAL.steel} edge={STEEL_DARK} />
       <Shine d="M44 43L96 60" width={3} opacity={0.6} />
       <SawHandle x={10} y={36} w={27} h={42} grip={ORANGE_GRIP} />
+      </Move>
+      </Move>
     </g>
   ),
 
   // "de kapzaag": the tenon saw — a short, deep, straight grey blade with a yellow brass strip along
-  // its back, fine dark teeth along the whole bottom and a wooden closed handle, lying level.
+  // its back, fine dark teeth along the whole bottom and a wooden closed handle, lying level. On
+  // the intro card it saws once: a pull back, then a push forward.
   'w.kapzaag': () => (
     <g transform="translate(0 -2)">
+      <Move kind="from" dx={-20}>
+      <Move kind="then" dx={20}>
       {/* The deep square blade on its dark depth edge, then its fine teeth */}
       <Part d="M40 46H102Q104 46 104 48V80H40Z" fill={PAL.steel} edge={STEEL_DARK} />
       <path d={teeth(40, 104, 80, 6.4, 8)} fill={STEEL_DARK} />
@@ -135,14 +143,17 @@ export default {
       <Part d="M38 39H104Q107 39 107 42V48H38Z" fill={PAL.yellow} edge={PAL.yellowShade} />
       <Shine d="M46 42.5H90" color={PAL.yellowShine} width={2.2} opacity={0.9} />
       <SawHandle x={12} y={38} w={30} h={46} grip={WOOD_GRIP} />
+      </Move>
+      </Move>
     </g>
   ),
 
   // "de houtbeitel": the wood chisel — a long wooden handle, a steel ring, a short neck and a long,
   // narrow steel blade (narrower than the handle) ending in a light bevel and a white cutting edge,
-  // rising to the right.
+  // rising to the right. On the intro card it is pushed forward along its blade, as it cuts.
   'w.houtbeitel': () => (
     <g transform="rotate(-20 60 60)">
+      <Move kind="from" dx={-22}>
       {/* The handle, thick at the butt and narrowing to the ring */}
       <Part d={CHISEL_HANDLE} fill={PAL.wood} edge={PAL.cardDark} />
       <Shine d="M17 55.5Q21 54 31 53.6" color={WOOD_LIGHT} width={2.6} opacity={0.9} />
@@ -154,13 +165,16 @@ export default {
       <path d="M97 55.5H107Q109 55.5 109 57.5V62.5Q109 64.5 107 64.5H97Z" fill={PAL.mist} />
       <path d="M108.2 57.5V62.5" stroke={PAL.white} strokeWidth="1.6" strokeLinecap="round" />
       <Shine d="M62 58H92" width={2} opacity={0.6} />
+      </Move>
     </g>
   ),
 
   // "de handschaaf": the hand plane — a long, low red body on a dark sole, a wooden handle leaning
   // back at the rear, the steel iron leaning back in the middle, a round wooden knob at the front.
+  // On the intro card it is pushed forward once, as it planes.
   'w.handschaaf': () => (
     <g transform="translate(0 4)">
+      <Move kind="from" dx={-24}>
       {/* The rear handle */}
       <Part d={PLANE_TOTE} fill={PAL.wood} edge={PAL.cardDark} />
       <Shine d="M25 54Q23 46 20.5 40Q19 34.5 24.5 33.5" color={WOOD_LIGHT} width={2.4} opacity={0.9} />
@@ -175,12 +189,15 @@ export default {
       <Part d={PLANE_BODY} fill={PAL.red} edge={RED_DARK} />
       <Part d="M12 80H106V86H12Z" fill={PAL.slate} edge={PAL.slateDark} />
       <Shine d="M22 67H94" color={PAL.redLight} width={2.4} opacity={0.8} />
+      </Move>
     </g>
   ),
 
   // "de timmermanshamer": the carpenter's hammer — a long, slim steel head with a square striking
   // face at one end and a wedge-shaped pen at the other, the light wooden handle through its middle.
+  // On the intro card it swings down once from higher up, round the end of its handle.
   'w.timmermanshamer': () => (
+    <Move kind="turn" turn={35} at={[97, 50]}>
     <g transform="translate(60 60) rotate(-18) translate(-66 -55) scale(1.04)">
       {/* The handle, reaching into the head */}
       <Part d={HAMMER_HANDLE} fill={PAL.card} edge={PAL.cardDark} />
@@ -190,11 +207,14 @@ export default {
       <Part d={HAMMER_FACE} fill={PAL.steel} edge={STEEL_DARK} />
       <Shine d="M31.5 41V66" width={2.4} opacity={0.6} />
     </g>
+    </Move>
   ),
 
   // "de houten hamer": the mallet — a big square-cornered block of light wood on a thick darker
-  // wooden handle, the handle's end showing on its top.
+  // wooden handle, the handle's end showing on its top. On the intro card it swings down once
+  // from further back, round the end of its handle.
   'w.houtenhamer': () => (
+    <Move kind="turn" turn={-35} at={[58, 104]}>
     <g transform="rotate(14 60 62)">
       {/* The thick handle */}
       <Part d={MALLET_HANDLE} fill={PAL.wood} edge={PAL.cardDark} />
@@ -204,5 +224,6 @@ export default {
       <rect x="54" y="18" width="12" height="6" rx="1.5" fill={PAL.wood} />
       <Shine d="M32 28H70" color={WOOD_LIGHT} width={3.2} opacity={0.95} />
     </g>
+    </Move>
   ),
 } as Record<string, () => JSX.Element>;

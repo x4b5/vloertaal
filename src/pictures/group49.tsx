@@ -149,6 +149,7 @@ export default {
 
   // "de motorkap": the bonnet — a grey car from the side; its bonnet, in green, stands open on a
   // rod over the dark engine bay.
+  // On the intro card: the bonnet swings open from closed, then the prop rod appears.
   'w.motorkap': () => (
     <g>
       <Ground cx={60} cy={105} rx={50} ry={4} />
@@ -165,10 +166,14 @@ export default {
       <Wheel cx={34} cy={92} r={11.5} />
       <Wheel cx={88} cy={92} r={11.5} />
       {/* Prop rod and the open bonnet */}
-      <path d="M21 65L31 38" stroke={PAL.steel} strokeWidth="2.6" strokeLinecap="round" />
-      <path d="M53 60L22 27" stroke={PAL.greenShade} strokeWidth="10" strokeLinecap="round" />
-      <path d="M54.5 58.500L23.5 25.500" stroke={PAL.green} strokeWidth="7" strokeLinecap="round" />
-      <Shine d="M27 28L38 40" opacity={0.5} width={2.6} />
+      <Move kind="show">
+        <path d="M21 65L31 38" stroke={PAL.steel} strokeWidth="2.6" strokeLinecap="round" />
+      </Move>
+      <Move kind="turn" turn={-55} at={[53, 60]}>
+        <path d="M53 60L22 27" stroke={PAL.greenShade} strokeWidth="10" strokeLinecap="round" />
+        <path d="M54.5 58.500L23.5 25.500" stroke={PAL.green} strokeWidth="7" strokeLinecap="round" />
+        <Shine d="M27 28L38 40" opacity={0.5} width={2.6} />
+      </Move>
     </g>
   ),
 
@@ -209,6 +214,7 @@ export default {
 
   // "de lamp": the light of a car — a dark car seen from the front, both headlights lit yellow,
   // with rays round them.
+  // On the intro card: the headlights switch on, their bright centres and rays appear.
   'w.lamp': () => (
     <g>
       <Ground cx={60} cy={103} rx={40} ry={4} />
@@ -224,13 +230,15 @@ export default {
       <path d="M53 64H67M53 68H67" stroke={PAL.steel} strokeWidth="1.6" strokeLinecap="round" />
       {/* Headlights, lit */}
       <circle cx="37" cy="63" r="12" fill={PAL.yellow} />
-      <circle cx="37" cy="63" r="6.500" fill={PAL.yellowShine} />
       <circle cx="83" cy="63" r="12" fill={PAL.yellow} />
-      <circle cx="83" cy="63" r="6.500" fill={PAL.yellowShine} />
-      <g opacity="1">
+      <Move kind="show">
+        <circle cx="37" cy="63" r="6.500" fill={PAL.yellowShine} />
+        <circle cx="83" cy="63" r="6.500" fill={PAL.yellowShine} />
+      </Move>
+      <Move kind="show">
         <Motion x={37} y={63} dir={180} spread={110} n={3} len={9} gap={15} color={PAL.yellowShade} width={4} />
         <Motion x={83} y={63} dir={0} spread={110} n={3} len={9} gap={15} color={PAL.yellowShade} width={4} />
-      </g>
+      </Move>
     </g>
   ),
 
@@ -361,14 +369,18 @@ export default {
 
   // "morsen": to spill — a blue can lies on its side; its golden contents run out into a puddle
   // that spreads over the floor.
+  // On the intro card: the can tips over, then the stream, the puddle and the splashes appear.
   'w.morsen': () => (
     <g>
       {/* The puddle */}
+      <Move kind="show">
       <path d="M40 90Q58 84 78 88Q104 86 109 95Q112 105 94 106Q66 110 44 106Q28 102 40 90Z" fill={PAL.yellowShade} />
       <path d="M56 100Q72 103 90 100" fill="none" stroke={PAL.yellowShine} strokeWidth="2.6" strokeLinecap="round" opacity=".8" />
       {/* The stream out of the can */}
       <path d="M60 62Q74 68 74 94H54Q60 82 54 74Z" fill={PAL.yellowShade} />
+      </Move>
       {/* The can, tipped over */}
+      <Move kind="turn" turn={-30} at={[10, 78]}>
       <g transform="rotate(14 38 64)">
         <Shade color={PAL.blueShade} opacity={1} at={[38, 88, 40, 12]}>
           <rect x="12" y="44" width="50" height="40" rx="5" fill={PAL.blue} />
@@ -379,9 +391,12 @@ export default {
         <ellipse cx="62" cy="72" rx="4" ry="11" fill={PAL.yellowShade} />
         <Shine d="M17 50H24" opacity={0.6} width={3} />
       </g>
+      </Move>
       {/* Splashes */}
-      <Drop x={96} y={64} s={13} />
-      <Drop x={86} y={50} s={10} />
+      <Move kind="show">
+        <Drop x={96} y={64} s={13} />
+        <Drop x={86} y={50} s={10} />
+      </Move>
     </g>
   ),
 

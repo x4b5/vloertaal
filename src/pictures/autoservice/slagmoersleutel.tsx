@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shade, Shine, r1 } from '../kit';
 
 /** The wheel stands with its face turned to the right: a face circle of radius R squashed to SX across. */
 const CX = 40;
@@ -22,6 +22,7 @@ const INK = '#1b232a';
 export default {
   // "de slagmoersleutel": the impact wrench — a red-and-black cordless impact wrench with its battery
   // under the grip, its steel socket on a wheel bolt of a wheel that stands turned towards it.
+  // On the intro card the wrench comes in from the right and sets its socket on the bolt.
   'w.slagmoersleutel': () => {
     const [bx, by] = P(-18, RB);
     return (
@@ -40,6 +41,7 @@ export default {
         })}
         <path d={`M${CX - T - 4} ${CY - 22}Q${CX - T - 9} ${CY} ${CX - T - 4} ${CY + 22}`} stroke={PAL.slate} strokeWidth="2.4" fill="none" strokeLinecap="round" />
         {/* The wrench, its nose to the left on the bolt */}
+        <Move kind="from" dx={22}>
         <g transform={`translate(${bx} ${by})`}>
           {/* The socket and the anvil */}
           <rect x="0" y="-6.5" width="14" height="13" rx="2.5" fill={PAL.mist} />
@@ -60,6 +62,7 @@ export default {
           <rect x="40" y="43" width="32" height="4" rx="2" fill={INK} />
           <rect x="44" y="37" width="20" height="3.5" rx="1.5" fill={PAL.red} />
         </g>
+        </Move>
         <Shine d={`M${P(196, R - 4).join(' ')}Q${P(225, R - 4).join(' ')} ${P(245, R - 4).join(' ')}`} color={PAL.steel} width={3} opacity={0.9} />
       </g>
     );

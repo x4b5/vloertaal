@@ -186,10 +186,12 @@ export default {
    * ------------------------------------------------------------------------------------- */
 
   // "drinken": to drink — Amina drinks from a water bottle (in the heat, drink enough)
+  // On the intro card her arm brings the bottle up from below to her lips.
   'w.drinken': () => (
     <g>
       <Bust who="amina" x={46} y={120} scale={0.84} />
       {/* Her forearm comes up from below */}
+      <Move kind="from" dx={10} dy={28}>
       <path d="M108 130L84 58" stroke="#2f8f3e" strokeWidth="13" strokeLinecap="round" />
       {/* The bottle, its cap at her lips, tipped up */}
       <g transform="translate(56 73) rotate(-34)">
@@ -203,6 +205,7 @@ export default {
         <rect x="26" y="-14" width="16" height="28" rx="7" fill={SKIN.amina[0]} />
         <path d="M30 -12V12M35 -12V12" stroke={SKIN.amina[1]} strokeWidth="1.6" strokeLinecap="round" />
       </g>
+      </Move>
     </g>
   ),
 
@@ -364,20 +367,27 @@ export default {
       <rect x="8" y="80" width="104" height="18" rx="3" fill={PAL.cardShade} />
       <rect x="8" y="78" width="104" height="14" rx="3" fill={PAL.card} />
       <path d="M14 84H40M74 86H104" stroke={PAL.cardShade} strokeWidth="1.6" strokeLinecap="round" />
-      {/* The saw: the blade in the cut, the handle up right */}
+      {/* The saw: the blade in the cut, the handle up right. On the intro card it saws once, along
+          its blade: a pull back (from), then a push forward (then), ending where it is drawn. */}
       <g transform="rotate(-24 58 76)">
-        <path d="M20 70L90 62V84L20 80Z" fill={PAL.mist} strokeLinejoin="round" stroke={PAL.mist} strokeWidth="2" />
-        <path d="M22 80L90 84" stroke={PAL.steel} strokeWidth="2.4" />
-        <path d="M24 72L86 65" stroke={PAL.white} strokeWidth="2" strokeLinecap="round" opacity=".7" />
-        <path d="M86 56H104Q110 56 110 64V82Q110 90 102 90H88Z" fill={PAL.wood} />
-        <rect x="93" y="64" width="9" height="16" rx="4" fill={PAL.cardDark} />
+        <Move kind="from" dx={22}>
+          <Move kind="then" dx={-22}>
+            <path d="M20 70L90 62V84L20 80Z" fill={PAL.mist} strokeLinejoin="round" stroke={PAL.mist} strokeWidth="2" />
+            <path d="M22 80L90 84" stroke={PAL.steel} strokeWidth="2.4" />
+            <path d="M24 72L86 65" stroke={PAL.white} strokeWidth="2" strokeLinecap="round" opacity=".7" />
+            <path d="M86 56H104Q110 56 110 64V82Q110 90 102 90H88Z" fill={PAL.wood} />
+            <rect x="93" y="64" width="9" height="16" rx="4" fill={PAL.cardDark} />
+          </Move>
+        </Move>
       </g>
-      {/* Sawdust */}
-      <g fill={PAL.cardShade}>
-        <circle cx="40" cy="102" r="2.4" />
-        <circle cx="47" cy="106" r="2" />
-        <circle cx="34" cy="107" r="1.8" />
-      </g>
+      {/* Sawdust: it comes from the cut as the saw saws */}
+      <Move kind="show">
+        <g fill={PAL.cardShade}>
+          <circle cx="40" cy="102" r="2.4" />
+          <circle cx="47" cy="106" r="2" />
+          <circle cx="34" cy="107" r="1.8" />
+        </g>
+      </Move>
       {/* Back and forth */}
       <g transform="rotate(-24 60 30)">
         <Arrow from={[52, 30]} to={[82, 30]} color={PAL.sky} width={5} head={9} />
@@ -387,11 +397,13 @@ export default {
   ),
 
   // "de vonk": the spark — sparks fly off the end of a metal bar
+  // On the intro card the sparks appear once at the end of the bar (one fade, no flashing).
   'w.vonk': () => (
     <g>
       <rect x="4" y="84" width="54" height="13" rx="4" fill={PAL.slate} transform="rotate(-32 30 90)" />
       <rect x="4" y="84" width="54" height="5" rx="2.5" fill={PAL.steel} transform="rotate(-32 30 90)" />
       {/* The flying sparks */}
+      <Move kind="show">
       <g stroke={PAL.orange} strokeWidth="4" strokeLinecap="round">
         <path d="M58 60L80 34" />
         <path d="M60 62L98 48" />
@@ -408,6 +420,7 @@ export default {
       <Sparkle x={58} y={62} r={10} color={PAL.yellowShine} />
       <Sparkle x={66} y={18} r={6} color={PAL.yellowLight} />
       <Sparkle x={95} y={95} r={6} color={PAL.yellowLight} />
+      </Move>
     </g>
   ),
 
@@ -548,11 +561,14 @@ export default {
   ),
 
   // "de proefrit": the test drive — a car driving off along the road, with its key
+  // On the intro card the car drives in along the road from the left.
   'w.proefrit': () => (
     <g>
       <rect x="8" y="94" width="104" height="8" rx="4" fill={PAL.mist} />
       <path d="M20 98H34M52 98H66M84 98H98" stroke={PAL.white} strokeWidth="2.4" strokeLinecap="round" />
-      <Car x={64} y={88} k={0.98} body={PAL.green} shade={PAL.greenShade} />
+      <Move kind="from" dx={-28}>
+        <Car x={64} y={88} k={0.98} body={PAL.green} shade={PAL.greenShade} />
+      </Move>
       <g stroke={PAL.line} strokeWidth="3.6" strokeLinecap="round" opacity=".8">
         <path d="M10 62H18M6 72H16M12 82H18" />
       </g>
@@ -589,6 +605,7 @@ export default {
   ),
 
   // "repareren": to repair, to fix — a hand turns a big nut tight with a wrench
+  // On the intro card the wrench and the hand turn the nut round, the way the arrow goes.
   'w.repareren': () => (
     <g>
       {/* The part with its nut */}
@@ -597,8 +614,10 @@ export default {
       <polygon points="38,32 50,39 50,53 38,60 26,53 26,39" fill={PAL.steel} stroke={PAL.steel} strokeWidth="2" strokeLinejoin="round" />
       <circle cx="38" cy="46" r="5" fill={PAL.slate} />
       {/* The wrench on the nut, handle down to the right, held by the hand */}
-      <Wrench x={59} y={65} rotate={-135} len={64} color={PAL.blue} shade={PAL.blueShade} />
-      <Hand pose="fist" x={88} y={92} rotate={-45} scale={0.7} skin={SKIN.jada} sleeve={[PAL.orange, PAL.orangeShade]} />
+      <Move kind="turn" turn={-30} at={[38, 46]}>
+        <Wrench x={59} y={65} rotate={-135} len={64} color={PAL.blue} shade={PAL.blueShade} />
+        <Hand pose="fist" x={88} y={92} rotate={-45} scale={0.7} skin={SKIN.jada} sleeve={[PAL.orange, PAL.orangeShade]} />
+      </Move>
       <CurveArrow from={[72, 12]} to={[106, 48]} bend={12} color={PAL.sky} width={6} head={10} />
     </g>
   ),
@@ -699,15 +718,18 @@ export default {
    * ------------------------------------------------------------------------------------- */
 
   // "stemmen": to vote — a hand puts the folded ballot paper in the ballot box
+  // On the intro card the hand lowers the ballot paper into the slot.
   'w.stemmen': () => (
     <g>
       <Ground cy={106} rx={42} />
       {/* The ballot paper, half in the slot */}
+      <Move kind="from" dy={-24}>
       <rect x="48" y="28" width="26" height="40" rx="2" fill={PAL.paperShade} />
       <rect x="46" y="26" width="26" height="40" rx="2" fill={PAL.white} />
       <rect x="51" y="44" width="8" height="8" rx="1" fill={PAL.red} />
       <path d="M62 48H68M51 36H67" stroke={PAL.line} strokeWidth="2" strokeLinecap="round" />
       <Hand pose="hold" x={73} y={32} rotate={-90} scale={0.66} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
+      </Move>
       {/* The box: lid with its slot, then the front */}
       <path d="M22 62H98L104 70H16Z" fill={PAL.mist} />
       <rect x="40" y="63" width="40" height="4" rx="2" fill={PAL.slateDark} />
@@ -791,6 +813,7 @@ export default {
   ),
 
   // "klikken": to click — a finger clicks the left button of a mouse
+  // On the intro card the finger comes down on the button, then the click lines.
   'w.klikken': () => (
     <g>
       <Ground cx={50} cy={96} rx={28} ry={4} />
@@ -800,8 +823,12 @@ export default {
       <path d="M50 22V50M22 50H78" stroke={PAL.steel} strokeWidth="2" />
       <path d="M48 22H46Q22 22 22 46V48H48Z" fill={PAL.sky} />
       <rect x="47" y="30" width="6" height="12" rx="3" fill={PAL.slate} />
-      <Hand pose="point" x={70} y={58} rotate={-50} scale={0.72} skin={SKIN.henk} sleeve={['#2d5a92', PAL.navyShade]} />
-      <Motion x={34} y={30} dir={-135} spread={80} n={3} len={7} gap={12} color={PAL.sky} width={3} />
+      <Move kind="from" dx={8} dy={-18}>
+        <Hand pose="point" x={70} y={58} rotate={-50} scale={0.72} skin={SKIN.henk} sleeve={['#2d5a92', PAL.navyShade]} />
+      </Move>
+      <Move kind="show">
+        <Motion x={34} y={30} dir={-135} spread={80} n={3} len={7} gap={12} color={PAL.sky} width={3} />
+      </Move>
     </g>
   ),
 

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Ground, PAL, Shade, Shine, r1 } from './kit';
+import { Arrow, Ground, Move, PAL, Shade, Shine, r1 } from './kit';
 
 /**
  * Word pictures, group 55 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -96,13 +96,14 @@ const spaanSeg = (a: [number, number], b: [number, number]) => `M${a[0]} ${a[1]}
 export default {
   // "de stucspaan": the plastering trowel — a big flat steel plate seen at an angle, its thin edge
   // showing, a wooden grip standing up on two dark posts, a smear of plaster on the front of the plate.
+  // On the intro card the trowel slides once along, as it smooths.
   'w.stucspaan': () => {
     const W = 82;
     const D = 42;
     const T = 3;
     const mid = D / 2;
     return (
-      <g>
+      <Move kind="from" dx={-24} dy={6}>
         <path d={spaanQuad(spaanIso(3, -3), spaanIso(W + 3, -3), spaanIso(W + 3, D - 3), spaanIso(3, D - 3))} fill="#000" opacity="0.14" />
         {/* The steel plate: thin front and side edge, top */}
         <path d={spaanQuad(spaanIso(0, 0, 0), spaanIso(W, 0, 0), spaanIso(W, 0, T), spaanIso(0, 0, T))} fill={STEEL_DARK} />
@@ -119,7 +120,7 @@ export default {
         <path d={`M${spaanIso(14, mid, T + 13).join(' ')}Q${spaanIso(W / 2, mid, T + 30).join(' ')} ${spaanIso(W - 14, mid, T + 13).join(' ')}`} fill="none" stroke={PAL.cardDark} strokeWidth="11" strokeLinecap="round" />
         <path d={`M${spaanIso(14, mid, T + 14.5).join(' ')}Q${spaanIso(W / 2, mid, T + 31.5).join(' ')} ${spaanIso(W - 14, mid, T + 14.5).join(' ')}`} fill="none" stroke={PAL.wood} strokeWidth="7.5" strokeLinecap="round" />
         <path d={`M${spaanIso(24, mid, T + 19.5).join(' ')}Q${spaanIso(34, mid, T + 25).join(' ')} ${spaanIso(44, mid, T + 25.5).join(' ')}`} fill="none" stroke={PAL.card} strokeWidth="2.4" strokeLinecap="round" />
-      </g>
+      </Move>
     );
   },
 
@@ -167,6 +168,7 @@ export default {
 
   // "de rei": the straightedge — a long aluminium bar laid flat across a freshly plastered wall:
   // below it the plaster is smooth, above it still rough with lumps; an arrow: it is pulled up.
+  // On the intro card the bar is pulled up the wall to where it is drawn.
   'w.rei': () => (
     <g>
       {/* The wall: plaster, its right edge a shade darker */}
@@ -177,20 +179,25 @@ export default {
         <ellipse key={`${cx}-${cy}`} cx={cx} cy={cy} rx={r} ry={r * 0.7} fill={PLASTER_DARK} />
       ))}
       {/* The bar: top face, front face, end face, a heap of plaster it pushes in front of it */}
-      <path d="M22 56Q60 49 98 56L98 58L22 58Z" fill={PLASTER_DARK} />
-      <path d="M8 58H104L112 52H16Z" fill={PAL.mist} />
-      <rect x="8" y="58" width="96" height="13" fill={PAL.steel} />
-      <path d="M104 58L112 52V65L104 71Z" fill={PAL.slate} />
-      <path d="M14 61.5H60" stroke={PAL.white} strokeWidth="2.6" strokeLinecap="round" opacity="0.6" />
+      <Move kind="slow" dy={26}>
+        <path d="M22 56Q60 49 98 56L98 58L22 58Z" fill={PLASTER_DARK} />
+        <path d="M8 58H104L112 52H16Z" fill={PAL.mist} />
+        <rect x="8" y="58" width="96" height="13" fill={PAL.steel} />
+        <path d="M104 58L112 52V65L104 71Z" fill={PAL.slate} />
+        <path d="M14 61.5H60" stroke={PAL.white} strokeWidth="2.6" strokeLinecap="round" opacity="0.6" />
+      </Move>
       {/* Upward arrow: the bar goes up the wall */}
       <Arrow from={[60, 96]} to={[60, 78]} color={PAL.orange} width={6} head={10} />
     </g>
   ),
 
   // "de sponsspaan": the sponge float — seen from the side, a long thin green plate with a thick
-  // yellow sponge under it and a tall green arched grip on top.
+  // yellow sponge under it and a tall green arched grip on top. On the intro card it rubs once
+  // along, out and back.
   'w.sponsspaan': () => (
     <g strokeLinejoin="round">
+      <Move kind="from" dx={-18}>
+      <Move kind="then" dx={18}>
       <polygon points="14,104 102,104 108,96 20,96" fill="#000" opacity=".14" />
       {/* The sponge: its shaded side, its front, the pores */}
       <polygon points="98,82 104,74 104,93 98,101" fill={PAL.yellowShade} />
@@ -208,6 +215,8 @@ export default {
         <path d="M30 74Q30 38 58 38Q86 38 86 74H77Q77 47 58 47Q39 47 39 74Z" fill={PAL.green} />
       </Shade>
       <Shine d="M35 62Q37 46 49 41.6" color={PAL.lime} width={2.6} opacity={0.8} />
+      </Move>
+      </Move>
     </g>
   ),
 

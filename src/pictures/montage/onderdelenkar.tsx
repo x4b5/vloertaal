@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -30,10 +30,11 @@ const bin = (x: number, y: number, w: number, h: number) => (
 
 export default {
   // "de onderdelenkar": the parts trolley — a low steel trolley with two shelves on four caster wheels
-  // and a push handle, with blue parts bins on both shelves.
+  // and a push handle, with blue parts bins on both shelves. On the intro card it rolls in from the left.
   'w.onderdelenkar': () => (
     <g strokeLinejoin="round">
       <Ground cx={58} cy={105} rx={46} ry={4} />
+      <Move kind="from" dx={-26}>
       {/* The back uprights */}
       <path d="M26.6 44V84M86.6 44V84" stroke={PAL.steel} strokeWidth="4" strokeLinecap="round" />
       {/* The push handle on the right */}
@@ -58,6 +59,7 @@ export default {
           <circle cx={wx} cy="97" r="2.6" fill={PAL.mist} />
         </g>
       ))}
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

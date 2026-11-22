@@ -1,6 +1,6 @@
 import type { JSX, ReactNode } from 'react';
 import { Bust } from './bust';
-import { Arrow, Box, Bubble, Clock, Ground, Hand, Motion, PAL, QuestionMark, SKIN, Shade, Shine } from './kit';
+import { Arrow, Box, Bubble, Clock, Ground, Hand, Motion, Move, PAL, QuestionMark, SKIN, Shade, Shine } from './kit';
 
 /**
  * Word pictures, group 51 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -140,6 +140,7 @@ export default {
   ),
 
   // "storen": to disturb — Henk is busy, on the phone; a finger taps his shoulder.
+  // On the intro card the finger comes to his shoulder, then the tap lines.
   'w.storen': () => (
     <g>
       <Bust who="henk" x={74} y={124} scale={0.64} talk bold />
@@ -150,8 +151,12 @@ export default {
         <rect x="91" y="72" width="17" height="18" rx="4" fill={SKIN.henk[0]} />
         <path d="M92 78H107M92 84H107" stroke={SKIN.henk[1]} strokeWidth="1.5" strokeLinecap="round" />
       </g>
-      <Hand pose="point" x={10} y={117} rotate={58} scale={0.86} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
-      <Motion x={45} y={86} dir={-110} spread={70} n={3} len={8} gap={5} color={PAL.orange} width={3.6} />
+      <Move kind="from" dx={-18} dy={12}>
+        <Hand pose="point" x={10} y={117} rotate={58} scale={0.86} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
+      </Move>
+      <Move kind="show">
+        <Motion x={45} y={86} dir={-110} spread={70} n={3} len={8} gap={5} color={PAL.orange} width={3.6} />
+      </Move>
     </g>
   ),
 
@@ -210,13 +215,17 @@ export default {
   ),
 
   // "aanwijzen": to point at — a hand with its finger out, a dotted line to the box in a ring:
-  // "that one".
+  // "that one". On the intro card the hand comes in and points, then the ring.
   'w.aanwijzen': () => (
     <g>
       <Ground cx={86} cy={98} rx={24} ry={4} />
-      <circle cx="84" cy="74" r="29" fill="none" stroke={PAL.sky} strokeWidth="4" strokeDasharray="1 9" strokeLinecap="round" />
+      <Move kind="show">
+        <circle cx="84" cy="74" r="29" fill="none" stroke={PAL.sky} strokeWidth="4" strokeDasharray="1 9" strokeLinecap="round" />
+      </Move>
       <Box x={68} y={62} w={28} h={28} depth={9} />
-      <Hand pose="point" x={7} y={86} rotate={84} scale={0.92} skin={SKIN.henk} sleeve={['#2d5a92', PAL.navyShade]} />
+      <Move kind="from" dx={-20}>
+        <Hand pose="point" x={7} y={86} rotate={84} scale={0.92} skin={SKIN.henk} sleeve={['#2d5a92', PAL.navyShade]} />
+      </Move>
     </g>
   ),
 

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shine } from '../kit';
+import { Move, PAL, Shine } from '../kit';
 
 /** The frame: the back post, the long top bar and the front post down to the blade. */
 const FRAME = 'M30 74V36H98V74';
@@ -14,8 +14,11 @@ const teeth = (x0: number, x1: number, y: number) => {
 export default {
   // "de ijzerzaag": the hacksaw — a red square-cornered frame, a thin steel blade with fine teeth
   // stretched along its bottom between the posts, a wing nut at the front and a dark pistol grip.
+  // On the intro card it saws once along its blade: a pull back, then a push forward.
   'w.ijzerzaag': () => (
     <g transform="translate(0 4)" strokeLinejoin="round">
+      <Move kind="from" dx={-20}>
+      <Move kind="then" dx={20}>
       {/* The frame on its depth edge */}
       <path d={FRAME} fill="none" stroke={PAL.redShade} strokeWidth="8" strokeLinecap="round" transform="translate(1.5 2.5)" />
       <path d={FRAME} fill="none" stroke={PAL.red} strokeWidth="8" strokeLinecap="round" />
@@ -31,6 +34,8 @@ export default {
       <path d="M22 66H36L33 98Q32 102 27 102H18Q13 102 14 97Z" fill={PAL.slateDark} transform="translate(1.5 1.5)" />
       <path d="M22 66H36L33 98Q32 102 27 102H18Q13 102 14 97Z" fill={PAL.slate} />
       <path d="M20 74L17 96" stroke={PAL.steel} strokeWidth="2.4" strokeLinecap="round" opacity="0.8" />
+      </Move>
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

@@ -1,5 +1,5 @@
 import { useId, type JSX } from 'react';
-import { PAL, Shade, Shine, r1 } from '../kit';
+import { Move, PAL, Shade, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -50,6 +50,7 @@ const dome = (cx: number, t: number, r: number, d: number) =>
 export default {
   // "de startknop": the start button — the green sibling of the emergency stop: one big green push
   // button, a low cap with a domed top in a dark collar, alone on a steel button box.
+  // On the intro card the green button is pushed down into its collar.
   'w.startknop': () => {
     const id = `sk-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
     const [cx, cy] = iso(HW / 2, HD / 2, HH);
@@ -70,11 +71,13 @@ export default {
         {/* The collar: a dark ring the button stands in */}
         {cylinder(`${id}-c`, cx, cy, R + 5, COLLAR, PAL.slate, PAL.slateDark, '#1b232a')}
         {/* The button: a low green cap with a domed top, its right side in shade */}
-        {cylinder(`${id}-b`, cx, cy - COLLAR, R, CAP, PAL.green, PAL.greenShade, GREEN_DEEP)}
-        <Shade color={PAL.greenShade} opacity={1} at={[cx + R + 2, top - 6, 14, 22]}>
-          <path d={dome(cx, top, R, DOME)} fill={PAL.green} />
-        </Shade>
-        <Shine d={`M${r1(cx - R + 7)} ${r1(top - 4)}Q${r1(cx - R + 12)} ${r1(top - 13)} ${r1(cx - 6)} ${r1(top - 16)}`} color={PAL.lime} width={3.5} opacity={0.85} />
+        <Move kind="fast" dy={-15}>
+          {cylinder(`${id}-b`, cx, cy - COLLAR, R, CAP, PAL.green, PAL.greenShade, GREEN_DEEP)}
+          <Shade color={PAL.greenShade} opacity={1} at={[cx + R + 2, top - 6, 14, 22]}>
+            <path d={dome(cx, top, R, DOME)} fill={PAL.green} />
+          </Shade>
+          <Shine d={`M${r1(cx - R + 7)} ${r1(top - 4)}Q${r1(cx - R + 12)} ${r1(top - 13)} ${r1(cx - 6)} ${r1(top - 16)}`} color={PAL.lime} width={3.5} opacity={0.85} />
+        </Move>
       </g>
     );
   },

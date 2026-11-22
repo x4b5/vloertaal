@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 /** The screen's dark glass: one step under PAL.slateDark. */
 const GLASS = '#1b232a';
@@ -7,6 +7,7 @@ const GLASS = '#1b232a';
 export default {
   // "de diagnosecomputer": the diagnostic tester — a rugged handheld tablet with an orange rubber edge,
   // a dark screen with a car and three green bars, and a cable running to a plug in a dark socket.
+  // On the intro card the plug is pushed up into the socket, then the bars (the read faults) show.
   'w.diagnosecomputer': () => (
     <g strokeLinejoin="round">
       <Ground cx={56} cy={105} rx={46} ry={4} />
@@ -15,9 +16,11 @@ export default {
       <path d="M85 46H103L100 56H88Z" fill={PAL.slateDark} />
       {/* The cable: from the tablet's foot along the floor, up into the plug */}
       <path d="M46 96C46 108 94 108 94 78" stroke={PAL.slateDark} strokeWidth="4.5" strokeLinecap="round" fill="none" />
-      <rect x="89" y="68" width="10" height="12" rx="2" fill={PAL.slate} />
-      <path d="M86 52H102L100 68H88Z" fill={PAL.blue} />
-      <path d="M89 56H99" stroke={PAL.blueShade} strokeWidth="1.6" strokeLinecap="round" />
+      <Move kind="from" dy={16}>
+        <rect x="89" y="68" width="10" height="12" rx="2" fill={PAL.slate} />
+        <path d="M86 52H102L100 68H88Z" fill={PAL.blue} />
+        <path d="M89 56H99" stroke={PAL.blueShade} strokeWidth="1.6" strokeLinecap="round" />
+      </Move>
       {/* The tablet: its depth side, then the orange rubber front */}
       <rect x="18" y="14" width="56" height="84" rx="11" fill={PAL.orangeShade} />
       <Shade color={PAL.orangeShade} opacity={1} at={[72, 60, 6, 50]}>
@@ -36,9 +39,11 @@ export default {
       <circle cx="47" cy="48" r="3.4" fill={GLASS} />
       <circle cx="47" cy="48" r="2" fill={PAL.ice} />
       {/* Three green bars */}
-      <rect x="27" y="56" width="22" height="3.4" rx="1.4" fill={PAL.lime} />
-      <rect x="27" y="61.5" width="15" height="3.4" rx="1.4" fill={PAL.lime} />
-      <rect x="27" y="67" width="19" height="3.4" rx="1.4" fill={PAL.orangeLight} />
+      <Move kind="show">
+        <rect x="27" y="56" width="22" height="3.4" rx="1.4" fill={PAL.lime} />
+        <rect x="27" y="61.5" width="15" height="3.4" rx="1.4" fill={PAL.lime} />
+        <rect x="27" y="67" width="19" height="3.4" rx="1.4" fill={PAL.orangeLight} />
+      </Move>
       {/* Two buttons under the screen */}
       <circle cx="31" cy="83" r="4.5" fill={PAL.mist} />
       <circle cx="49" cy="83" r="4.5" fill={PAL.leaf} />

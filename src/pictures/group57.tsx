@@ -89,12 +89,14 @@ const STRIP = 'M30 92L96 80Q100 79.5 102 82L108 96Q109 99 105 99.6L34 104Z';
 
 export default {
   // "het plamuurmes": the putty knife — lying flat, its blade towards us: a wide thin steel blade
-  // with a white dab of filler on it, a short ferrule and a thick orange handle going back.
+  // with a white dab of filler on it, a short ferrule and a thick orange handle going back. On the
+  // intro card it slides once along, blade first, as it spreads the filler.
   'w.plamuurmes': () => (
     <g strokeLinejoin="round">
       <g transform="rotate(-47 66 66)">
         <Ground cx={66} cy={68} rx={46} ry={7} />
       </g>
+      <Move kind="from" dx={16} dy={-17}>
       {/* The handle and the ferrule, thick: underside first */}
       <Flat {...PK_AT} lift={1}>
         <path d={PK_HANDLE} fill={PAL.orangeShade} />
@@ -124,6 +126,7 @@ export default {
       <Flat {...PK_AT} lift={5}>
         <path d={PK_FILLER} fill={PAL.white} />
       </Flat>
+      </Move>
     </g>
   ),
 
@@ -196,7 +199,8 @@ export default {
   ),
 
   // "het stoffertje": the hand brush — a wooden brush with yellow bristles, tilted as it sweeps,
-  // and the grey heap of dust it sweeps together.
+  // and the grey heap of dust it sweeps together. On the intro card the brush sweeps once towards
+  // the heap.
   'w.stoffertje': () => (
     <g strokeLinejoin="round">
       <Ground cx={62} cy={102} rx={50} ry={5} />
@@ -205,6 +209,7 @@ export default {
       <path d="M15 95Q17 90 22 91" fill="none" stroke={PAL.mist} strokeWidth="3" strokeLinecap="round" />
       <circle cx="28" cy="93" r="2.2" fill={PAL.mist} />
       {/* The brush, tilted: bristles, then the wooden back and its handle */}
+      <Move kind="from" dx={24}>
       <g transform="translate(35 101) rotate(-18) scale(0.8)">
         <path d="M2 -30H62L64 0H0Z" fill={PAL.yellow} />
         <path d="M66 -30L62 -30L64 0L68 -4Z" fill={PAL.yellowShade} />
@@ -216,11 +221,13 @@ export default {
         <circle cx="103" cy="-37" r="2.6" fill={PAL.cardDark} />
         <Shine d="M5 -40Q7 -46 16 -46H56" color={PAL.card} width={3.2} opacity={1} />
       </g>
+      </Move>
     </g>
   ),
 
   // "schuren": to sand — a hand on a sanding block with thick red-brown sandpaper under it, on a
-  // grey board, dust at both ends, under a double arrow (back and forth).
+  // grey board, dust at both ends, under a double arrow (back and forth). On the intro card the
+  // block goes back and forth once, then the dust.
   'w.schuren': () => (
     <g strokeLinejoin="round">
       <Ground cx={60} cy={102} rx={50} ry={4} />
@@ -229,9 +236,13 @@ export default {
       <polygon points="88,90 110,74 110,82 88,98" fill={PAL.steel} />
       <polygon points="10,90 88,90 110,74 32,74" fill={PAL.mist} />
       {/* Dust at both ends of the block */}
-      <path d="M18 88Q19 81 25 82Q29 79 32 84L33 88Z" fill={PAL.paper} />
-      <path d="M86 81Q87 75 92 76Q96 74 98 79L98 81Z" fill={PAL.paper} />
+      <Move kind="show">
+        <path d="M18 88Q19 81 25 82Q29 79 32 84L33 88Z" fill={PAL.paper} />
+        <path d="M86 81Q87 75 92 76Q96 74 98 79L98 81Z" fill={PAL.paper} />
+      </Move>
       {/* The sandpaper: thick, its grit on the front edge, then the block on it */}
+      <Move kind="from" dx={-16}>
+      <Move kind="then" dx={16}>
       <polygon points="34,78 80,78 92,69 92,76 80,86 34,86" fill={GRIT.shade} />
       <polygon points="34,78 80,78 80,86 34,86" fill={GRIT.base} />
       <Grit x={34} y={78} w={46} h={8} step={4.4} />
@@ -240,6 +251,8 @@ export default {
       <polygon points="36,66 80,66 92,57 48,57" fill={PAL.steel} />
       {/* The hand flat on the block, fingers forward, the sleeve to the right */}
       <Hand pose="open" x={88} y={58} rotate={-100} scale={0.82} skin={SKIN.amina} sleeve={[PAL.orange, PAL.orangeShade]} />
+      </Move>
+      </Move>
       {/* Back and forth */}
       <Arrow from={[52, 22]} to={[14, 22]} color={PAL.sky} width={7} head={12} />
       <Arrow from={[48, 22]} to={[86, 22]} color={PAL.sky} width={7} head={12} />
@@ -248,7 +261,8 @@ export default {
 
   // "afplakken": to mask off — a wall next to a wooden window frame; a strip of yellow tape runs
   // along the frame, the roll at its top end (an arrow: it goes up). The blue paint on the wall
-  // runs onto the tape, so the frame stays clean.
+  // runs onto the tape, so the frame stays clean. On the intro card the roll goes up along the
+  // frame and the tape grows behind it, then the paint.
   'w.afplakken': () => (
     <g>
       {/* The wall */}
@@ -258,16 +272,22 @@ export default {
       <rect x="88" y="12" width="6" height="96" fill={PAL.cardShade} />
       <rect x="94" y="12" width="14" height="96" rx="3" fill={PAL.ice} />
       {/* The tape along the frame, from the bottom up to the roll */}
-      <rect x="61" y="34" width="13" height="74" fill={PAL.yellow} />
-      <rect x="61" y="34" width="3" height="74" fill={PAL.yellowShine} opacity="0.7" />
+      <Move kind="sag" grow={0.3}>
+        <rect x="61" y="34" width="13" height="74" fill={PAL.yellow} />
+        <rect x="61" y="34" width="3" height="74" fill={PAL.yellowShine} opacity="0.7" />
+      </Move>
       {/* Blue paint on the wall; it runs onto the tape, the frame stays clean */}
-      <path d="M12 64Q14 58 20 58H67V108H17Q12 108 12 103Z" fill={PAL.sky} />
-      <path d="M20 63H42" stroke={PAL.ice} strokeWidth="2.6" strokeLinecap="round" />
+      <Move kind="show">
+        <path d="M12 64Q14 58 20 58H67V108H17Q12 108 12 103Z" fill={PAL.sky} />
+        <path d="M20 63H42" stroke={PAL.ice} strokeWidth="2.6" strokeLinecap="round" />
+      </Move>
       {/* The roll at the top end */}
-      <circle cx="68" cy="27" r="13" fill={PAL.yellowShade} />
-      <circle cx="66.5" cy="25.5" r="12" fill={PAL.yellow} />
-      <circle cx="66.5" cy="25.5" r="5" fill={PAL.card} />
-      <circle cx="66.5" cy="25.5" r="3" fill={PAL.paperShade} />
+      <Move kind="slow" dy={52}>
+        <circle cx="68" cy="27" r="13" fill={PAL.yellowShade} />
+        <circle cx="66.5" cy="25.5" r="12" fill={PAL.yellow} />
+        <circle cx="66.5" cy="25.5" r="5" fill={PAL.card} />
+        <circle cx="66.5" cy="25.5" r="3" fill={PAL.paperShade} />
+      </Move>
       {/* The arrow: the tape goes on upwards, along the frame */}
       <Arrow from={[40, 32]} to={[40, 14]} color={PAL.orange} width={6} head={9} />
     </g>

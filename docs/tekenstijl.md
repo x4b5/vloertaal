@@ -171,7 +171,7 @@ by the same rules; in doubt, not.
 | verhuizen | the box comes out from the old house on its way to the new one |
 | vergrendelen | the padlock's shackle snaps shut, then the lines: to lock (the action; "op slot" stays the still padlock) |
 
-Not moved in the last round, with the reason:
+Not moved in the last round, with the reason (many of these move since round 4, below: an action is no longer "already clear standing still"):
 
 - **Already clear standing still, movement adds little** (in doubt, not): pakken, opschrijven,
   tekenen, stemmen, oogsten, vakken vullen, afkeuren, luchten, stoffen, spoelen, typen, klikken,
@@ -212,6 +212,29 @@ doubt, not: a tool whose function a movement does not make clearer stays still.
 
 The first round (the tools of the sector units of 20–22 November 2026) is listed in
 tests/motionPictures.test.ts (MOTION_FUNCTION), with what moves per word in the pictures' comments.
+
+### Ronde 4: elke handeling en elk gebruik beweegt (22 november 2026)
+
+The owner looked at "zagen": the saw stood still with two arrows, and he expected it to move. "Zagen is
+an example of a picture where I expected movement ... there are probably many others." So the rule is
+now: **a picture moves when its meaning or its function is a movement or an action**, and a short
+movement shows that more clearly than the still picture. Actions (zagen, boren, snijden, duwen,
+trekken, vegen, wassen, vullen, opendoen, betalen, typen ...), tools in use (the hammer strikes, the
+saw saws along its blade, the drill bit's flutes run so it seems to turn, the pliers close), things
+that open or close, fill or empty, go on (a lamp: one fade, never a blink), and pictures that showed a
+movement with arrows or motion lines. The arrows stay: the still picture needs them.
+
+Still stay still: things that just are (a helmet, a building, a vehicle as a noun: bus, trein,
+vrachtwagen; but "parkeren" and "proefrit" move), places (boven, beneden), people, documents,
+feelings and states, colours and numbers, the time words, money as a noun (huur, borg, netto,
+belasting), anything that would blink or flash (alarm, stoplicht, onweer, camera), "afmaken" (next to
+"bijna"), "pesten", and the kl.\* and zg.\* words. Also left still where no kind of `Move` can show the
+use well: a screwdriver or hex key (turning about its own axis), the rocker switch, "afkoelen".
+
+All other limits are as before: only on the intro card, once, at most two steps, ending on the still
+picture, CSS only, nothing with "less motion" or "Rustig scherm". All 725 still pictures were looked at
+in six groups; 165 move since this round (and "zagen" itself). The list is MOTION_ROUND4 in tests/motionPictures.test.ts,
+and a line above each picture says what moves.
 
 ## Template
 

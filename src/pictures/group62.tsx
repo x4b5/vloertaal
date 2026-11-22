@@ -1,5 +1,5 @@
-import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine, r1, type Pt } from './kit';
+import { useId, type JSX } from 'react';
+import { Ground, Move, PAL, Shade, Shine, r1, type Pt } from './kit';
 
 /**
  * Word pictures, group 62 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -41,12 +41,27 @@ const spiral = (x0: number, x1: number, y: number, h: number) => {
   return lines.join('');
 };
 
-/** A drill's bit and steel chuck: the bit from x0 to the chuck at cx, centre line y. */
+/**
+ * A drill's bit and steel chuck: the bit from x0 to the chuck at cx, centre line y.
+ * On the intro card the bit turns: its grooves slide along the axis towards the chuck (four grooves
+ * more are drawn under the chuck, out of the clip, to come in from the left); at rest they stand as drawn.
+ */
 function BitAndChuck({ x0, cx, y }: { x0: number; cx: number; y: number }) {
+  const id = `bc-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
+  // The last groove as drawn at rest: the clip ends just past it, so the grooves after it stay hidden.
+  let last = x0 + 4;
+  while (last + 6 < cx - 2) last += 6;
   return (
     <g>
       <rect x={x0} y={y - 3.5} width={cx - x0 + 4} height="7" rx="3" fill={PAL.steel} />
-      <path d={spiral(x0, cx, y, 7)} stroke={PAL.slate} strokeWidth="1.8" strokeLinecap="round" />
+      <clipPath id={id}>
+        <rect x={x0} y={y - 3.5} width={last + 4 - x0} height="7" />
+      </clipPath>
+      <g clipPath={`url(#${id})`}>
+        <Move kind="slow" dx={-24}>
+          <path d={spiral(x0, cx + 24, y, 7)} stroke={PAL.slate} strokeWidth="1.8" strokeLinecap="round" />
+        </Move>
+      </g>
       <rect x={cx} y={y - 10.5} width="16" height="21" rx="4" fill={PAL.steel} />
       <rect x={cx} y={y - 10.5} width="16" height="6" rx="3" fill={PAL.mist} />
       <path d={`M${cx + 5} ${y - 3}V${y + 8}M${cx + 10} ${y - 3}V${y + 8}`} stroke={STEEL_DARK} strokeWidth="1.8" strokeLinecap="round" />
@@ -88,6 +103,7 @@ function Lying({ cx, cy, angle, len, children }: {
 export default {
   // "de accuboor": the cordless drill — one orange drill with a short bit; the grip ends in a wide
   // orange foot with a grey battery clicked under it.
+  // On the intro card the bit turns: its grooves run along it (BitAndChuck).
   'w.accuboor': () => (
     <g strokeLinejoin="round">
       <Ground cx={70} cy={105} rx={36} ry={4} />
@@ -114,6 +130,7 @@ export default {
 
   // "de boormachine": the power drill with a cable — a long blue drill with a long bit and a narrow
   // grip without a battery; a thick grey cable drops from the grip and lies coiled on the floor.
+  // On the intro card the bit turns: its grooves run along it (BitAndChuck).
   'w.boormachine': () => (
     <g strokeLinejoin="round">
       <Ground cx={60} cy={104} rx={46} ry={4} />

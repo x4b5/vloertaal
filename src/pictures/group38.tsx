@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { Bust } from './bust';
-import { Box, CurveArrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Box, CurveArrow, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 
 /**
  * Word pictures, group 38 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -25,13 +25,17 @@ function HalfDay({ x, y, s = 22 }: { x: number; y: number; s?: number }) {
 
 export default {
   // "licht werk": light work — Amina, at ease, holds a small box up on one hand; short lines
-  // above it say that it goes up easily.
+  // above it say that it goes up easily. On the intro card the box goes up quickly, then the lines.
   'w.lichtwerk': () => (
     <g>
       <Bust who="amina" x={44} y={120} scale={0.68} expr="pleased" />
-      <Hand pose="hold" x={90} y={86} rotate={4} scale={0.6} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
-      <Box x={76} y={52} w={26} h={20} depth={8} />
+      <Move kind="fast" dy={18}>
+        <Hand pose="hold" x={90} y={86} rotate={4} scale={0.6} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+        <Box x={76} y={52} w={26} h={20} depth={8} />
+      </Move>
+      <Move kind="show">
       <Motion x={92} y={36} dir={-90} spread={50} n={3} len={7} gap={6} color={PAL.sky} width={3.4} />
+      </Move>
     </g>
   ),
 
@@ -49,11 +53,13 @@ export default {
   ),
 
   // "welkom terug": welcome back — Henk, the supervisor, waves with a big smile; next to him an
-  // arrow turns round and comes back.
+  // arrow turns round and comes back. On the intro card his hand waves once.
   'w.welkomterug': () => (
     <g>
       <Bust who="henk" x={54} y={120} scale={0.7} expr="joy" squint />
-      <Hand pose="open" x={100} y={80} rotate={14} scale={0.72} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
+      <Move kind="turn" turn={-26} at={[100, 80]}>
+        <Hand pose="open" x={100} y={80} rotate={14} scale={0.72} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
+      </Move>
       <Motion x={104} y={33} dir={-40} spread={70} len={7} gap={7} color={PAL.sky} width={3.6} />
       <CurveArrow from={[14, 14]} to={[12, 50]} bend={30} color={PAL.green} width={6} head={11} />
       <Sparkle x={76} y={16} r={6} />
@@ -61,16 +67,21 @@ export default {
   ),
 
   // "opbouwen": to build up step by step — three stacks of boxes, one, two and three high, and a
-  // green arrow going up over them (a memory picture: "rustig opbouwen" at work).
+  // green arrow going up over them (a memory picture: "rustig opbouwen" at work). On the intro card
+  // the top box of the middle stack comes down onto it, then the top box of the high stack.
   'w.opbouwen': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4} />
       <Box x={12} y={84} w={24} h={20} depth={7} tape={false} />
       <Box x={44} y={84} w={24} h={20} depth={7} tape={false} />
-      <Box x={44} y={63} w={24} h={20} depth={7} tape={false} />
+      <Move kind="from" dy={-26}>
+        <Box x={44} y={63} w={24} h={20} depth={7} tape={false} />
+      </Move>
       <Box x={76} y={84} w={24} h={20} depth={7} tape={false} />
       <Box x={76} y={63} w={24} h={20} depth={7} tape={false} />
-      <Box x={76} y={42} w={24} h={20} depth={7} tape={false} />
+      <Move kind="then" dy={-26}>
+        <Box x={76} y={42} w={24} h={20} depth={7} tape={false} />
+      </Move>
       <CurveArrow from={[16, 70]} to={[78, 20]} bend={-16} color={PAL.green} width={6.5} head={12} />
     </g>
   ),

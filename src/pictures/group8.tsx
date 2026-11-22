@@ -298,7 +298,8 @@ const pictures: Record<string, () => JSX.Element> = {
     </g>
   ),
 
-  // "stoffen": to dust — a hand sweeps a feather duster along a shelf, dust puffs fly off
+  // "stoffen": to dust — a hand sweeps a feather duster along a shelf, dust puffs fly off.
+  // On the intro card the duster sweeps along the shelf from the left, then the dust puffs show.
   'w.stoffen': () => (
     <g>
       {/* Shelf with a plant pot and a jar on it */}
@@ -310,20 +311,23 @@ const pictures: Record<string, () => JSX.Element> = {
       <path d="M28 62H34L32 80H28Z" fill={PAL.clayShade} />
       <path d="M25 62Q20 50 14 48M25 62Q28 48 36 44" fill="none" stroke={PAL.leaf} strokeWidth="4" strokeLinecap="round" />
       {/* Dust puffs */}
-      <g fill={PAL.mist}>
-        <circle cx="50" cy="72" r="5.5" />
-        <circle cx="44" cy="60" r="4" />
-        <circle cx="54" cy="52" r="3.2" />
-        <circle cx="40" cy="72" r="3" />
-      </g>
+      <Move kind="show">
+        <g fill={PAL.mist}>
+          <circle cx="50" cy="72" r="5.5" />
+          <circle cx="44" cy="60" r="4" />
+          <circle cx="54" cy="52" r="3.2" />
+          <circle cx="40" cy="72" r="3" />
+        </g>
+      </Move>
       {/* Duster: a fan of feathers on the shelf, handle up to the hand */}
+      <Move kind="from" dx={-22}>
       <path d="M74 66L100 36" stroke={PAL.cardDark} strokeWidth="5" strokeLinecap="round" />
       {[-70, -40, -10, 20, 50].map((a, i) => (
         <ellipse key={a} cx="74" cy="56" rx="6" ry="17" fill={i % 2 ? PAL.purple : PAL.purpleLight} transform={`rotate(${a - 40} 74 68) translate(0 -2)`} />
       ))}
       <circle cx="74" cy="68" r="5" fill={PAL.purpleShade} />
       <Hand pose="hold" x={112} y={46} rotate={-140} scale={0.55} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
-      
+      </Move>
     </g>
   ),
 
@@ -394,7 +398,8 @@ const pictures: Record<string, () => JSX.Element> = {
     </g>
   ),
 
-  // "luchten": to air out — a window swung open, fresh air streams in
+  // "luchten": to air out — a window swung open, fresh air streams in.
+  // On the intro card the air streams in through the open window.
   'w.luchten': () => (
     <g>
       {/* Wall opening with the outside sky */}
@@ -411,6 +416,7 @@ const pictures: Record<string, () => JSX.Element> = {
       <path d="M90 13V103" stroke={PAL.paperShade} strokeWidth="3" />
       <rect x="64" y="54" width="4" height="10" rx="2" fill={PAL.steel} />
       {/* Fresh air flowing in */}
+      <Move kind="from" dx={-18}>
       <g fill="none" stroke={PAL.sky} strokeWidth="4.5" strokeLinecap="round">
         <path d="M28 44Q44 36 58 46T96 46" />
         <path d="M30 66Q46 58 60 68T100 68" />
@@ -418,10 +424,12 @@ const pictures: Record<string, () => JSX.Element> = {
       <path d="M92 39L101 46L92 53" fill="none" stroke={PAL.sky} strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M96 61L105 68L96 75" fill="none" stroke={PAL.sky} strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M26 86Q40 80 54 86" fill="none" stroke={PAL.skyShade} strokeWidth="3.4" strokeLinecap="round" opacity=".6" />
+      </Move>
     </g>
   ),
 
-  // "spoelen": to rinse — a cloth held under the running tap, water dripping into the sink
+  // "spoelen": to rinse — a cloth held under the running tap, water dripping into the sink.
+  // On the intro card the cloth swishes once through the stream (left and back), then the drips.
   'w.spoelen': () => (
     <g>
       <Tap x={50} y={30} s={1.1} />
@@ -431,16 +439,22 @@ const pictures: Record<string, () => JSX.Element> = {
       <path d="M80 88H104Q102 106 84 106H76Z" fill={PAL.steel} opacity=".45" />
       <rect x="10" y="84" width="98" height="8" rx="4" fill={PAL.paperShade} />
       {/* The wet cloth, held by one corner, hanging in the stream */}
+      <Move kind="from" dx={16}>
+      <Move kind="then" dx={-16}>
       <path d="M78 52Q66 50 48 58Q44 70 48 82Q54 78 58 84Q63 79 68 84Q72 76 76 80Q80 66 78 52Z" fill={PAL.sky} />
       <path d="M78 52Q70 54 66 60Q68 72 68 84Q72 76 76 80Q80 66 78 52Z" fill={PAL.skyShade} />
       <path d="M52 64Q58 62 64 64M52 72Q56 71 62 72" fill="none" stroke={PAL.skyShade} strokeWidth="1.8" strokeLinecap="round" />
       <Hand pose="hold" x={98} y={70} rotate={-70} scale={0.62} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
+      </Move>
+      </Move>
       {/* Drips */}
-      <g fill={PAL.ice}>
-        <path d="M52 88Q55 92 55 94A3 3 0 0 1 49 94Q49 92 52 88Z" />
-        <path d="M62 90Q65 94 65 96A3 3 0 0 1 59 96Q59 94 62 90Z" />
-      </g>
-      <Motion x={56} y={84} dir={-90} spread={140} n={3} len={5} gap={22} color={PAL.sky} width={3} />
+      <Move kind="show">
+        <g fill={PAL.ice}>
+          <path d="M52 88Q55 92 55 94A3 3 0 0 1 49 94Q49 92 52 88Z" />
+          <path d="M62 90Q65 94 65 96A3 3 0 0 1 59 96Q59 94 62 90Z" />
+        </g>
+        <Motion x={56} y={84} dir={-90} spread={140} n={3} len={5} gap={22} color={PAL.sky} width={3} />
+      </Move>
     </g>
   ),
 
@@ -649,13 +663,22 @@ const pictures: Record<string, () => JSX.Element> = {
     );
   },
 
-  // "handen wassen": to wash hands — two soapy hands rub together under the running tap
+  // "handen wassen": to wash hands — two soapy hands rub together under the running tap.
+  // On the intro card the two hands rub: one goes up and the other down, and back.
   'w.handenwassen': () => (
     <g>
       <Tap x={56} y={22} s={1} />
       <Stream x={60} y0={24} y1={44} w={7} />
-      <Hand pose="open" x={46} y={112} rotate={28} scale={0.9} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
-      <Hand pose="open" x={74} y={112} rotate={-28} scale={0.9} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} mirror />
+      <Move kind="from" dy={-15}>
+        <Move kind="then" dy={15}>
+          <Hand pose="open" x={46} y={112} rotate={28} scale={0.9} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} />
+        </Move>
+      </Move>
+      <Move kind="from" dy={15}>
+        <Move kind="then" dy={-15}>
+          <Hand pose="open" x={74} y={112} rotate={-28} scale={0.9} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} mirror />
+        </Move>
+      </Move>
       {/* Soap foam */}
       <g fill={PAL.white}>
         <circle cx="60" cy="58" r="8" />

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine } from '../kit';
+import { Ground, Move, PAL, Shine } from '../kit';
 
 /** The three wires of the bundle (back to front): their centre line y, colour and shade. */
 const WIRES: [number, string, string][] = [
@@ -10,6 +10,7 @@ const WIRES: [number, string, string][] = [
 const wire = (y: number) => `M16 ${y}Q60 ${y - 4} 104 ${y}`;
 
 export default {
+  // On the intro card: the tail is pulled out of the head, up to the top right (pulling it tight).
   // "de tie-wrap": the cable tie — a black cable tie pulled tight round a bundle of three wires (green, blue, red) with
   // copper ends; its square head sits on top and the ridged tail sticks up to the top right.
   'w.tiewrap': () => (
@@ -26,8 +27,10 @@ export default {
       ))}
       <Shine d="M30 53.4Q46 51 58 50.8" width={2.6} opacity={0.6} />
       {/* The tail: the ridged strip running up to the top right from the head */}
+      <Move kind="from" dx={-14} dy={11}>
       <path d="M66 42L98 16" stroke={PAL.slateDark} strokeWidth="9" strokeLinecap="round" />
       <path d="M72.4 38.6l-3.4 -4.2M78.4 33.8l-3.4 -4.2M84.4 28.9l-3.4 -4.2M90.4 24l-3.4 -4.2M96.4 19.2l-3.4 -4.2" stroke={PAL.steel} strokeWidth="1.5" strokeLinecap="round" />
+      </Move>
       {/* The band round the bundle: the front part, bulging a little */}
       <path d="M56 45Q51 64 55.6 82" fill="none" stroke={PAL.slateDark} strokeWidth="8" strokeLinecap="round" />
       <path d="M54.4 50Q51 64 54.4 77" fill="none" stroke={PAL.steel} strokeWidth="1.6" strokeLinecap="round" opacity=".8" />

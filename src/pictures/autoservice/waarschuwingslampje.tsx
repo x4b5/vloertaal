@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shade, Shine } from '../kit';
+import { Move, PAL, Shade, Shine } from '../kit';
 
 /** The dashboard's black face: one step under PAL.slateDark. */
 const DASH = '#1b232a';
@@ -21,6 +21,7 @@ const engine = (fill: string) => (
 export default {
   // "het waarschuwingslampje": the warning light — a black car dashboard with a speedometer arc and
   // its red needle, and one big orange engine light glowing beside it.
+  // On the intro card: the orange engine light switches on (one fade, no blinking).
   'w.waarschuwingslampje': () => (
     <g strokeLinejoin="round">
       {/* The dashboard: its depth edge, then the dark panel */}
@@ -36,9 +37,11 @@ export default {
       <path d="M38 72L47 61" stroke={PAL.red} strokeWidth="3.4" strokeLinecap="round" />
       <circle cx="38" cy="72" r="3.6" fill={PAL.mist} />
       {/* The engine light: its glow, then the lit orange engine */}
-      <circle cx="78" cy="58" r="25" fill={PAL.orange} opacity=".16" />
-      <g transform="translate(78 59) scale(0.9)">{engine(PAL.orangeLight)}</g>
-      <path d="M-8 -3H6M-8 4H6" transform="translate(78 59) scale(0.9)" stroke={DASH} strokeWidth="2.4" strokeLinecap="round" />
+      <Move kind="show">
+        <circle cx="78" cy="58" r="25" fill={PAL.orange} opacity=".16" />
+        <g transform="translate(78 59) scale(0.9)">{engine(PAL.orangeLight)}</g>
+        <path d="M-8 -3H6M-8 4H6" transform="translate(78 59) scale(0.9)" stroke={DASH} strokeWidth="2.4" strokeLinecap="round" />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

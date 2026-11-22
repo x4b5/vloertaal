@@ -110,6 +110,7 @@ export default {
   },
 
   // "pinnen": to pay by card — a hand holds a blue bank card to a card terminal; waves between them.
+  // On the intro card: the hand brings the card to the terminal, then the waves and the tick appear.
   'w.pinnen': () => (
     <g>
       <Ground cx={78} cy={106} rx={24} ry={4} />
@@ -118,14 +119,19 @@ export default {
         <rect x="60" y="34" width="36" height="72" rx="7" fill={PAL.slate} />
       </Shade>
       <rect x="65" y="40" width="26" height="18" rx="3" fill={PAL.ice} />
-      <path d="M71 49L76 54L85 45" fill="none" stroke={PAL.ok} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
+      <Move kind="show">
+        <path d="M71 49L76 54L85 45" fill="none" stroke={PAL.ok} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
+      </Move>
       {[0, 1, 2].map((rI) => [0, 1, 2].map((c) => (
         <rect key={`${rI}${c}`} x={66 + c * 8.5} y={64 + rI * 8} width="6.5" height="5" rx="1.5" fill={rI === 2 && c === 2 ? PAL.leaf : PAL.mist} />
       )))}
       <rect x="66" y="90" width="23.5" height="5" rx="1.5" fill={PAL.steel} />
       {/* Contactless waves */}
-      <path d="M52 30Q57 36 52 42M57 25Q65 36 57 47" fill="none" stroke={PAL.sky} strokeWidth="3.4" strokeLinecap="round" />
+      <Move kind="show">
+        <path d="M52 30Q57 36 52 42M57 25Q65 36 57 47" fill="none" stroke={PAL.sky} strokeWidth="3.4" strokeLinecap="round" />
+      </Move>
       {/* The card in the hand */}
+      <Move kind="from" dx={-22} dy={10}>
       <Hand pose="hold" x={30} y={78} rotate={-8} scale={0.78} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} />
       <g transform="rotate(-18 32 44)">
         <rect x="12" y="32" width="40" height="26" rx="4" fill={PAL.blueShade} transform="translate(2 2.5)" />
@@ -135,6 +141,7 @@ export default {
       </g>
       {/* thumb over the card */}
       <rect x="34" y="44" width="7" height="15" rx="3" fill={SKIN.henk[0]} transform="rotate(-8 30 78)" />
+      </Move>
     </g>
   ),
 

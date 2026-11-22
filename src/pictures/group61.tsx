@@ -186,6 +186,7 @@ export default {
   // "het kruishout": the marking gauge — at work on a plank: a dark wooden block with a brass
   // screw against the plank's front edge, a light stick through it running back over the plank, its
   // steel pin at the far end, and the dark line it has scratched along the plank, parallel to the edge.
+  // On the intro card: the gauge slides along the plank from the left, scratching its line.
   'w.kruishout': () => {
     const plank = { x0: 10, x1: 76, y0: 84, y1: 94, z0: 0, z1: 42 };
     const gx = 58;
@@ -197,7 +198,10 @@ export default {
         {footprint(plank.x0, plank.x1, plank.y1, plank.z0, plank.z1)}
         <Slab {...plank} top={WOOD_LIGHT} front={PAL.card} side={PAL.cardShade} />
         {/* The line scratched along the plank, from its left end up to the pin */}
-        <path d={`M${pts([P(plank.x0 + 3, plank.y0, pinZ)])}L${pts([pin])}`} stroke={PAL.slateDark} strokeWidth="4" strokeLinecap="round" />
+        <Move kind="grow" grow={0.25}>
+          <path d={`M${pts([P(plank.x0 + 3, plank.y0, pinZ)])}L${pts([pin])}`} stroke={PAL.slateDark} strokeWidth="4" strokeLinecap="round" />
+        </Move>
+        <Move kind="from" dx={-30}>
         {/* The steel pin under the stick's far end */}
         <polygon points={pts([[pin[0] - 3.6, pin[1] - 9], [pin[0] + 3.6, pin[1] - 9], [pin[0], pin[1] + 1.5]])} fill={PAL.steel} stroke={PAL.steel} strokeWidth="1.4" strokeLinejoin="round" />
         {/* The stick, running back over the plank */}
@@ -206,6 +210,7 @@ export default {
         <Slab x0={gx - 14} x1={gx + 14} y0={plank.y0 - 19} y1={plank.y1 + 5} z0={-9} z1={-1} top={PAL.cardDark} front={PAL.brown} side={PAL.slateDark} />
         <Rivet x={P(gx, 0, -9)[0]} y={plank.y0 + 4 + dz(-9)[1]} r={4.6} />
         <Shine d={`M${pts([P(gx - 10, plank.y0 - 14, -9)])}L${pts([P(gx - 10, plank.y1, -9)])}`} color={PAL.wood} width={2.8} opacity={0.9} />
+        </Move>
       </g>
     );
   },
@@ -257,6 +262,7 @@ export default {
 
   // "aftekenen": to mark out, draw where you will cut — a plank seen from above; a hand in an
   // orange sleeve holds a red pencil and draws a dark line square across the top of the plank.
+  // On the intro card: the hand draws the pencil across the plank from the left, the line growing behind it.
   'w.aftekenen': () => {
     const plank = { x0: 12, x1: 72, y0: 84, y1: 95, z0: 0, z1: 44 };
     const lz = 22;
@@ -271,10 +277,14 @@ export default {
         {footprint(plank.x0, plank.x1, plank.y1, plank.z0, plank.z1)}
         <Slab {...plank} top={WOOD_LIGHT} front={PAL.card} side={PAL.cardShade} />
         {/* The pencil line: from the left edge to the point, square across the plank */}
-        <path d={`M${pts([P(plank.x0 + 1, plank.y0, lz)])}L${pts([tip])}`} stroke={PAL.slate} strokeWidth="3.4" strokeLinecap="round" />
-        <Pencil tip={tip} ang={ang} len={50} />
-        {/* The hand round the pencil, the arm in an orange sleeve going off to the right */}
-        <Hand pose="hold" x={wrist[0]} y={wrist[1]} rotate={ang} scale={s} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
+        <Move kind="grow" grow={0.25}>
+          <path d={`M${pts([P(plank.x0 + 1, plank.y0, lz)])}L${pts([tip])}`} stroke={PAL.slate} strokeWidth="3.4" strokeLinecap="round" />
+        </Move>
+        <Move kind="from" dx={-32}>
+          <Pencil tip={tip} ang={ang} len={50} />
+          {/* The hand round the pencil, the arm in an orange sleeve going off to the right */}
+          <Hand pose="hold" x={wrist[0]} y={wrist[1]} rotate={ang} scale={s} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
+        </Move>
       </g>
     );
   },

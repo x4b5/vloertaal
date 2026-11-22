@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Box, Clock, Cross, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Box, Clock, Cross, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 import { Bust } from './bust';
 
 /**
@@ -135,10 +135,13 @@ export default {
   ),
 
   // "een handje helpen": to help with a little hand — a small hand holds up a big box from below; up it goes.
+  // On the intro card: the little hand lifts the big box up from below.
   'w.handje': () => (
     <g>
-      <Box x={18} y={30} w={58} h={38} depth={16} />
-      <Hand pose="open" x={50} y={108} scale={0.8} skin={SKIN.jada} sleeve={[PAL.green, PAL.greenShade]} />
+      <Move kind="from" dy={22}>
+        <Box x={18} y={30} w={58} h={38} depth={16} />
+        <Hand pose="open" x={50} y={108} scale={0.8} skin={SKIN.jada} sleeve={[PAL.green, PAL.greenShade]} />
+      </Move>
       <Arrow from={[98, 96]} to={[98, 56]} color={PAL.sky} width={7} head={11} />
     </g>
   ),
@@ -197,6 +200,7 @@ export default {
 
   // "aan de bel trekken": to pull the bell (to warn) — an old brass bell on a beam, a hand
   // pulls its rope down; it rings.
+  // On the intro card: the hand pulls down along the rope, then the bell's ringing lines appear.
   'w.aandebel': () => (
     <g>
       <rect x="26" y="10" width="64" height="9" rx="3" fill={PAL.wood} />
@@ -210,9 +214,13 @@ export default {
       {/* The rope, pulled down by a hand */}
       <path d="M58 72V108" stroke={PAL.card} strokeWidth="5" strokeLinecap="round" />
       <path d="M56 78l4 3M56 85l4 3M56 92l4 3" stroke={PAL.cardShade} strokeWidth="1.6" strokeLinecap="round" />
-      <Hand pose="hold" x={58} y={118} scale={0.7} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
-      <Motion x={58} y={42} dir={180} spread={50} n={2} len={9} gap={26} color={PAL.orange} width={3.6} />
-      <Motion x={58} y={42} dir={0} spread={50} n={2} len={9} gap={26} color={PAL.orange} width={3.6} />
+      <Move kind="from" dy={-18}>
+        <Hand pose="hold" x={58} y={118} scale={0.7} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
+      </Move>
+      <Move kind="show">
+        <Motion x={58} y={42} dir={180} spread={50} n={2} len={9} gap={26} color={PAL.orange} width={3.6} />
+        <Motion x={58} y={42} dir={0} spread={50} n={2} len={9} gap={26} color={PAL.orange} width={3.6} />
+      </Move>
       <path d="M90 78V96" stroke={PAL.sky} strokeWidth="6" strokeLinecap="round" />
       <path d="M83 92L90 101L97 92" fill="none" stroke={PAL.sky} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
     </g>

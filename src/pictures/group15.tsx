@@ -1,5 +1,5 @@
 import type { JSX, ReactNode } from 'react';
-import { Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
+import { Ground, Hand, Move, PAL, SKIN, Shade, Shine } from './kit';
 import { Bust } from './bust';
 
 /**
@@ -183,14 +183,17 @@ export default {
   ),
 
   // "vakken vullen": to stock the shelves — Jada puts a tin on a half-empty shop shelf.
+  // On the intro card: her hand brings the tin from her side up to the gap on the shelf.
   'w.vakkenvullen': () => (
     <g>
       <Ground cx={78} cy={108} rx={32} ry={4} />
       <ShopShelf x={58} y={16} w={50} h={90} full={false} />
       <Bust who="jada" x={36} y={128} scale={0.6} expr="pleased" />
       {/* The tin held up to the gap on the middle board */}
-      <Hand pose="hold" x={70} y={92} rotate={8} scale={0.62} skin={SKIN.jada} sleeve={[PAL.green, PAL.greenShade]} />
-      <Can x={63} y={80} w={14} h={19} color={PAL.red} shade={PAL.redShade} />
+      <Move kind="from" dx={-20} dy={16}>
+        <Hand pose="hold" x={70} y={92} rotate={8} scale={0.62} skin={SKIN.jada} sleeve={[PAL.green, PAL.greenShade]} />
+        <Can x={63} y={80} w={14} h={19} color={PAL.red} shade={PAL.redShade} />
+      </Move>
     </g>
   ),
 

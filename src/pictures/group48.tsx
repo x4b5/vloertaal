@@ -116,19 +116,23 @@ export default {
   ),
 
   // "passen": to fit — a yellow block goes down into the slot of a grey block: the same width;
-  // an arrow down and a tick.
+  // an arrow down and a tick. On the intro card the block goes down into the slot, then the tick.
   'w.passen': () => (
     <g>
       <Ground cx={60} cy={104} rx={46} ry={4} />
       <Shade color={PAL.slate} opacity={0.5} at={[106, 80, 22, 40]}>
         <path d="M16 62H42V88H78V62H104V102H16Z" fill={PAL.steel} stroke={PAL.steel} strokeWidth="3" strokeLinejoin="round" />
       </Shade>
-      <Shade color={PAL.yellowShade} opacity={1} at={[82, 62, 12, 40]}>
-        <rect x="44" y="40" width="32" height="40" rx="3" fill={PAL.yellow} />
-      </Shade>
-      <Shine d="M49 46V60" color={PAL.yellowShine} width={3} opacity={0.8} />
+      <Move kind="from" dy={-26}>
+        <Shade color={PAL.yellowShade} opacity={1} at={[82, 62, 12, 40]}>
+          <rect x="44" y="40" width="32" height="40" rx="3" fill={PAL.yellow} />
+        </Shade>
+        <Shine d="M49 46V60" color={PAL.yellowShine} width={3} opacity={0.8} />
+      </Move>
       <Arrow from={[60, 10]} to={[60, 34]} color={PAL.sky} width={7} head={11} />
-      <Tick x={94} y={30} r={14} />
+      <Move kind="show">
+        <Tick x={94} y={30} r={14} />
+      </Move>
     </g>
   ),
 
@@ -151,7 +155,8 @@ export default {
   ),
 
   // "lassen": to weld — a welding torch (red handle, bent neck) on the seam between two steel plates; a
-  // blue-white star of light and sparks where it touches.
+  // blue-white star of light and sparks where it touches. On the intro card the torch comes down
+  // to the seam, then the light and the sparks.
   'w.lassen': () => (
     <g>
       <Ground cx={60} cy={104} rx={50} ry={4} />
@@ -159,18 +164,22 @@ export default {
       <path d="M62 78H103L110 102H58Z" fill={PAL.mist} stroke={PAL.mist} strokeWidth="2" strokeLinejoin="round" />
       <path d="M57 94L56 101" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
       {/* The torch: a cable, a red handle, a bent steel neck and a nozzle at the seam */}
+      <Move kind="from" dx={8} dy={-22}>
       <path d="M104 31Q112 34 108 46" fill="none" stroke={PAL.steel} strokeWidth="5" strokeLinecap="round" />
       <path d="M84 34Q68 36 66 62" fill="none" stroke={PAL.steel} strokeWidth="7.5" strokeLinecap="round" />
       <path d="M66.5 58L65 70" stroke={PAL.slate} strokeWidth="12" strokeLinecap="round" />
       <path d="M82 34L102 30" stroke={PAL.red} strokeWidth="16" strokeLinecap="round" />
       <path d="M85 27L86.5 40" stroke={PAL.redShade} strokeWidth="4" strokeLinecap="round" />
       <Shine d="M90 28L100 26" width={2.8} opacity={0.45} />
+      </Move>
       {/* The light and the sparks */}
-      <Motion x={60} y={80} dir={-160} spread={70} n={3} len={9} gap={22} color={PAL.orange} width={3.6} />
-      <circle cx="26" cy="50" r="3" fill={PAL.yellow} />
-      <circle cx="44" cy="38" r="2.6" fill={PAL.orange} />
-      <path d={twinkle(60, 80, 21)} fill={PAL.ice} />
-      <path d={twinkle(60, 80, 12)} fill={PAL.white} />
+      <Move kind="show">
+        <Motion x={60} y={80} dir={-160} spread={70} n={3} len={9} gap={22} color={PAL.orange} width={3.6} />
+        <circle cx="26" cy="50" r="3" fill={PAL.yellow} />
+        <circle cx="44" cy="38" r="2.6" fill={PAL.orange} />
+        <path d={twinkle(60, 80, 21)} fill={PAL.ice} />
+        <path d={twinkle(60, 80, 12)} fill={PAL.white} />
+      </Move>
     </g>
   ),
 

@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { Bust } from './bust';
-import { ExclaimMark, Ground, Hand, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { ExclaimMark, Ground, Hand, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 
 /**
  * Word pictures, group 44 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -185,7 +185,8 @@ export default {
     </g>
   ),
 
-  // "afdrogen": to dry with a cloth — a hand rubs a red tea towel over a plate; it shines
+  // "afdrogen": to dry with a cloth — a hand rubs a red tea towel over a plate; it shines. On the
+  // intro card the hand rubs the towel over the plate, out and back, then the sparkles.
   'w.afdrogen': () => (
     <g>
       <circle cx="48" cy="66" r="36" fill={PAL.steel} />
@@ -193,13 +194,19 @@ export default {
       <circle cx="46" cy="62" r="29" fill="none" stroke={PAL.blueLight} strokeWidth="3.4" />
       <circle cx="46" cy="63" r="20" fill={PAL.paperShade} />
       {/* The tea towel */}
-      <Shade color={PAL.redShade} opacity={0.9} at={[112, 70, 16, 44]}>
-        <path d="M58 40Q80 28 104 38Q110 62 108 96Q98 104 88 96Q78 106 66 96Q54 70 58 40Z" fill={PAL.red} />
-      </Shade>
-      <path d="M68 42Q64 68 74 96M82 37Q80 66 88 93" fill="none" stroke={PAL.redLight} strokeWidth="3.4" strokeLinecap="round" />
-      <Hand pose="fist" x={100} y={86} rotate={-42} scale={0.86} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
-      <Sparkle x={22} y={22} r={9} />
-      <Sparkle x={48} y={12} r={5} />
+      <Move kind="from" dx={-20} dy={14}>
+        <Move kind="then" dx={20} dy={-14}>
+          <Shade color={PAL.redShade} opacity={0.9} at={[112, 70, 16, 44]}>
+            <path d="M58 40Q80 28 104 38Q110 62 108 96Q98 104 88 96Q78 106 66 96Q54 70 58 40Z" fill={PAL.red} />
+          </Shade>
+          <path d="M68 42Q64 68 74 96M82 37Q80 66 88 93" fill="none" stroke={PAL.redLight} strokeWidth="3.4" strokeLinecap="round" />
+          <Hand pose="fist" x={100} y={86} rotate={-42} scale={0.86} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
+        </Move>
+      </Move>
+      <Move kind="show">
+        <Sparkle x={22} y={22} r={9} />
+        <Sparkle x={48} y={12} r={5} />
+      </Move>
     </g>
   ),
 

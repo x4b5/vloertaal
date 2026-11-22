@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from './kit';
+import { Ground, Move, PAL, Shade, Shine } from './kit';
 
 /**
  * Word pictures, group 58 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -185,6 +185,7 @@ export default {
 
   // "het voegijzer": the jointer, to smooth the joints between bricks — at work: a wooden handle at
   // the top left, a Z-shaped neck, a long thin rod with a round end pressed into a wall's grey joint.
+  // On the intro card the jointer is drawn along the joint to the right (smoothing it).
   'w.voegijzer': () => (
     <g>
       <Ground cx={78} cy={106} rx={32} ry={3.5} />
@@ -198,17 +199,20 @@ export default {
       ))}
       {/* The jointer, big: a wooden handle at the top left, a Z-shaped steel neck, a long steel rod
           running down into the joint */}
-      {line('M30 92L106 92', '#000', 8, { opacity: 0.18 })}
-      {line('M28 88.5H105', PAL.slate, 9)}
-      {line('M30 86.5H103', PAL.mist, 4)}
-      {line('M30 40H36Q42 40 43 46L44 80Q44.5 88.5 32 88.5', PAL.slate, 7)}
-      {handle(10, 40, 34, 40, 19)}
-      {line('M31 40H38', PAL.steel, 19.5, { cap: 'butt' })}
+      <Move kind="from" dx={-24}>
+        {line('M30 92L106 92', '#000', 8, { opacity: 0.18 })}
+        {line('M28 88.5H105', PAL.slate, 9)}
+        {line('M30 86.5H103', PAL.mist, 4)}
+        {line('M30 40H36Q42 40 43 46L44 80Q44.5 88.5 32 88.5', PAL.slate, 7)}
+        {handle(10, 40, 34, 40, 19)}
+        {line('M31 40H38', PAL.steel, 19.5, { cap: 'butt' })}
+      </Move>
     </g>
   ),
 
   // "de handveger": the hand brush — from the side, a wooden back running out into a long handle with
   // a hanging hole, soft yellow bristles splaying out at the bottom, a little heap of sand.
+  // On the intro card the brush sweeps in from the left towards the heap of sand.
   'w.handveger': () => (
     <g strokeLinejoin="round">
       <Ground cx={58} cy={102} rx={50} ry={4.5} />
@@ -216,6 +220,7 @@ export default {
       <path d="M84 102Q86 93 92 93Q96 88 101 93Q108 95 109 102Z" fill={PAL.card} />
       <path d="M101 93Q108 95 109 102H102Q104 97 101 93Z" fill={PAL.cardShade} />
       <circle cx="79" cy="100" r="2.4" fill={PAL.card} />
+      <Move kind="from" dx={-26}>
       {/* The bristles, splaying out to soft tufts, their right side in shade */}
       <Shade color={PAL.yellowShade} opacity={1} at={[84, 88, 16, 24]}>
         <path d={bristles()} fill={PAL.yellow} />
@@ -228,6 +233,7 @@ export default {
       </Shade>
       <circle cx="101" cy="65.5" r="2.4" fill={PAL.cardDark} />
       <Shine d="M18 64Q20 59 28 58.5H60" color={PAL.card} width={3} opacity={0.95} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

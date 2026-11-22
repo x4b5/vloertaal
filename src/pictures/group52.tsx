@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { Bust } from './bust';
-import { Arrow, Box, CurveArrow, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
+import { Arrow, Box, CurveArrow, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Sparkle } from './kit';
 
 /**
  * Word pictures, group 52 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -57,7 +57,7 @@ function Table({ y = 94 }: { y?: number }) {
 }
 
 /** A clear jug standing on the floor (x 30-86, y 46-104), water up to `level` (a y). */
-function Jug({ level }: { level: number }) {
+function Jug({ level, rise }: { level: number; rise?: boolean }) {
   return (
     <g>
       <Ground cx={58} cy={105} rx={34} ry={4} />
@@ -67,8 +67,15 @@ function Jug({ level }: { level: number }) {
         <path d="M28 46H88L84 99Q84 104 78 104H38Q32 104 32 99Z" fill={PAL.mist} />
       </Shade>
       <path d={`M33.6 52H82.4L79.4 97Q79.2 99.500 77 99.500H39Q36.800 99.500 36.600 97Z`} fill={PAL.white} />
-      <path d={`M${33.6 + (level - 52) * 0.067} ${level}H${82.4 - (level - 52) * 0.067}L79.400 97Q79.200 99.500 77 99.500H39Q36.800 99.500 36.600 97Z`} fill={PAL.sky} />
-      <rect x={35 + (level - 52) * 0.067} y={level} width={46 - (level - 52) * 0.134} height="4" rx="2" fill={PAL.ice} />
+      {(() => {
+        const water = (
+          <g>
+            <path d={`M${33.6 + (level - 52) * 0.067} ${level}H${82.4 - (level - 52) * 0.067}L79.400 97Q79.200 99.500 77 99.500H39Q36.800 99.500 36.600 97Z`} fill={PAL.sky} />
+            <rect x={35 + (level - 52) * 0.067} y={level} width={46 - (level - 52) * 0.134} height="4" rx="2" fill={PAL.ice} />
+          </g>
+        );
+        return rise ? <Move kind="sag" grow={0.25}>{water}</Move> : water;
+      })()}
       <Shine d="M40 60V90" width={3} opacity={0.6} />
     </g>
   );
@@ -101,42 +108,49 @@ export default {
    * ------------------------------------------------------------------------------------- */
 
   // "zetten": to put (something that stands) — a blue bucket, held by its handle, is lowered onto
-  // a table: it stands.
+  // a table: it stands. On the intro card the hand lowers the bucket onto the table.
   'w.zetten': () => (
     <g>
       <Table />
-      <Hand pose="hold" x={50} y={2} rotate={180} scale={0.92} skin={SKIN.bram} sleeve={ORANGE} />
-      <path d="M30 56Q30 21 50 21Q70 21 70 56" fill="none" stroke={PAL.steel} strokeWidth="4" strokeLinecap="round" />
-      <Shade color={PAL.skyShade} opacity={1} at={[78, 74, 12, 30]}>
-        <path d="M24 52H76L70 90Q69.500 94 65 94H35Q30.500 94 30 90Z" fill={PAL.sky} />
-      </Shade>
-      <rect x="22" y="48" width="56" height="8" rx="4" fill={PAL.skyShade} />
-      <Shine d="M33 62L36 86" width={3.4} opacity={0.5} />
+      <Move kind="from" dy={-26}>
+        <Hand pose="hold" x={50} y={2} rotate={180} scale={0.92} skin={SKIN.bram} sleeve={ORANGE} />
+        <path d="M30 56Q30 21 50 21Q70 21 70 56" fill="none" stroke={PAL.steel} strokeWidth="4" strokeLinecap="round" />
+        <Shade color={PAL.skyShade} opacity={1} at={[78, 74, 12, 30]}>
+          <path d="M24 52H76L70 90Q69.500 94 65 94H35Q30.500 94 30 90Z" fill={PAL.sky} />
+        </Shade>
+        <rect x="22" y="48" width="56" height="8" rx="4" fill={PAL.skyShade} />
+        <Shine d="M33 62L36 86" width={3.4} opacity={0.5} />
+      </Move>
       <Arrow from={[98, 30]} to={[98, 84]} color={PAL.sky} />
     </g>
   ),
 
   // "leggen": to lay (something that lies flat) — a purple book lying on the table, a flat hand
-  // on it: low and wide, where "zetten" is tall.
+  // on it: low and wide, where "zetten" is tall. On the intro card the hand lays the book down.
   'w.leggen': () => (
     <g>
       <Table />
-      <rect x="20" y="78" width="66" height="16" rx="3" fill={PAL.purple} />
-      <rect x="24" y="82" width="62" height="8" fill={PAL.paper} />
-      <path d="M26 86H84" stroke={PAL.line} strokeWidth="1.4" strokeLinecap="round" />
-      <rect x="20" y="90" width="66" height="4" rx="2" fill={PAL.purpleShade} />
-      <Hand pose="open" x={22} y={64} rotate={90} scale={0.9} skin={SKIN.henk} sleeve={NAVY} />
+      <Move kind="from" dy={-28}>
+        <rect x="20" y="78" width="66" height="16" rx="3" fill={PAL.purple} />
+        <rect x="24" y="82" width="62" height="8" fill={PAL.paper} />
+        <path d="M26 86H84" stroke={PAL.line} strokeWidth="1.4" strokeLinecap="round" />
+        <rect x="20" y="90" width="66" height="4" rx="2" fill={PAL.purpleShade} />
+        <Hand pose="open" x={22} y={64} rotate={90} scale={0.9} skin={SKIN.henk} sleeve={NAVY} />
+      </Move>
       <Arrow from={[100, 26]} to={[100, 82]} color={PAL.sky} />
     </g>
   ),
 
   // "brengen": to bring, to take — Jada carries a box; an arrow to the spot where it must go.
+  // On the intro card she comes in from the left with the box.
   'w.brengen': () => (
     <g>
-      <Bust who="jada" x={38} y={128} scale={0.74} bold />
-      <Box x={18} y={96} w={40} h={26} depth={9} />
-      <circle cx="19" cy="108" r="6" fill={SKIN.jada[0]} />
-      <circle cx="59" cy="108" r="6" fill={SKIN.jada[0]} />
+      <Move kind="from" dx={-26}>
+        <Bust who="jada" x={38} y={128} scale={0.74} bold />
+        <Box x={18} y={96} w={40} h={26} depth={9} />
+        <circle cx="19" cy="108" r="6" fill={SKIN.jada[0]} />
+        <circle cx="59" cy="108" r="6" fill={SKIN.jada[0]} />
+      </Move>
       <ellipse cx="96" cy="100" rx="15" ry="4.6" fill="none" stroke={PAL.sky} strokeWidth="3.4" />
       <ellipse cx="96" cy="100" rx="6" ry="2" fill={PAL.sky} />
       <CurveArrow from={[72, 50]} to={[97, 88]} bend={16} color={PAL.sky} width={8} head={13} />
@@ -144,15 +158,18 @@ export default {
   ),
 
   // "geven": to give — a yellow roll of tape on an open palm, held out to a second open hand.
+  // On the intro card the hand with the tape reaches out to the other hand.
   'w.geven': () => (
     <g>
       <Hand pose="open" x={112} y={92} rotate={-90} scale={0.84} skin={SKIN.amina} sleeve={GREEN} mirror />
-      <Hand pose="open" x={8} y={74} rotate={90} scale={0.9} skin={SKIN.bram} sleeve={BLUE} />
-      <Shade color={PAL.yellowShade} opacity={1} at={[50, 46, 8, 20]}>
-        <circle cx="38" cy="46" r="15" fill={PAL.yellow} />
-      </Shade>
-      <circle cx="38" cy="46" r="6" fill={PAL.card} />
-      <Shine d="M27 42A12 12 0 0 1 34 35" color={PAL.yellowShine} width={3} opacity={1} />
+      <Move kind="from" dx={-22}>
+        <Hand pose="open" x={8} y={74} rotate={90} scale={0.9} skin={SKIN.bram} sleeve={BLUE} />
+        <Shade color={PAL.yellowShade} opacity={1} at={[50, 46, 8, 20]}>
+          <circle cx="38" cy="46" r="15" fill={PAL.yellow} />
+        </Shade>
+        <circle cx="38" cy="46" r="6" fill={PAL.card} />
+        <Shine d="M27 42A12 12 0 0 1 34 35" color={PAL.yellowShine} width={3} opacity={1} />
+      </Move>
       <CurveArrow from={[62, 34]} to={[92, 62]} bend={12} color={PAL.sky} width={8} head={13} />
     </g>
   ),
@@ -168,12 +185,17 @@ export default {
   ),
 
   // "loslaten": to let go — the same box: the hands are open and away from it, the box drops.
+  // On the intro card the box falls from between the open hands, then the fall lines.
   'w.loslaten': () => (
     <g>
-      <g transform="rotate(9 58 84)">
-        <Box x={38} y={64} w={40} h={38} depth={11} />
-      </g>
-      <path d="M46 34V48M60 28V46M74 34V48" stroke={PAL.line} strokeWidth="3.4" strokeLinecap="round" opacity=".8" />
+      <Move kind="drop" dy={-34}>
+        <g transform="rotate(9 58 84)">
+          <Box x={38} y={64} w={40} h={38} depth={11} />
+        </g>
+      </Move>
+      <Move kind="show">
+        <path d="M46 34V48M60 28V46M74 34V48" stroke={PAL.line} strokeWidth="3.4" strokeLinecap="round" opacity=".8" />
+      </Move>
       <Hand pose="open" x={2} y={30} rotate={82} scale={0.74} skin={SKIN.jada} sleeve={[PAL.yellow, PAL.yellowShade]} />
       <Hand pose="open" x={118} y={30} rotate={-82} scale={0.74} skin={SKIN.jada} sleeve={[PAL.yellow, PAL.yellowShade]} mirror />
     </g>
@@ -183,51 +205,68 @@ export default {
    * l.onoff: on and off, open and closed
    * ------------------------------------------------------------------------------------- */
 
-  // "aanzetten": to switch on — a finger on a wall switch; the lamp is on.
+  // "aanzetten": to switch on — a finger on a wall switch; the lamp is on. On the intro card the
+  // finger comes to the switch, then the grey lamp lights up (one fade).
   'w.aanzetten': () => (
     <g>
       <path d="M36 4V16" stroke={PAL.slate} strokeWidth="4" strokeLinecap="round" />
       <rect x="27" y="14" width="18" height="12" rx="3" fill={PAL.slate} />
-      <Shade color={PAL.yellowShade} opacity={0.8} at={[56, 46, 10, 26]}>
-        <circle cx="36" cy="44" r="21" fill={PAL.yellow} />
-      </Shade>
-      <Shine d="M22 44A14 14 0 0 1 30 31" color={PAL.yellowShine} width={4} opacity={1} />
-      <Motion x={36} y={44} dir={90} spread={200} n={5} len={9} gap={27} color={PAL.yellowShade} width={4} />
+      <circle cx="36" cy="44" r="21" fill={PAL.mist} />
+      <Move kind="show">
+        <Shade color={PAL.yellowShade} opacity={0.8} at={[56, 46, 10, 26]}>
+          <circle cx="36" cy="44" r="21" fill={PAL.yellow} />
+        </Shade>
+        <Shine d="M22 44A14 14 0 0 1 30 31" color={PAL.yellowShine} width={4} opacity={1} />
+        <Motion x={36} y={44} dir={90} spread={200} n={5} len={9} gap={27} color={PAL.yellowShade} width={4} />
+      </Move>
       <rect x="46" y="62" width="38" height="50" rx="6" fill={PAL.steel} />
       <rect x="46" y="58" width="38" height="50" rx="6" fill={PAL.mist} />
       <rect x="55" y="66" width="20" height="34" rx="4" fill={PAL.slate} />
       <rect x="55" y="66" width="20" height="17" rx="4" fill={PAL.leaf} />
-      <Hand pose="point" x={112} y={70} rotate={-90} scale={0.86} skin={SKIN.henk} sleeve={NAVY} />
+      <Move kind="from" dx={22}>
+        <Hand pose="point" x={112} y={70} rotate={-90} scale={0.86} skin={SKIN.henk} sleeve={NAVY} />
+      </Move>
     </g>
   ),
 
   // "opendoen": to open — the green door is swung wide open, the bright doorway is free; a hand
-  // on the handle, the arrow goes away from the post.
+  // on the handle, the arrow goes away from the post. On the intro card the door swings open
+  // from shut (the door is mirrored about its hinge, so the hinge is the left edge that grows).
   'w.opendoen': () => (
     <g>
       <Doorway />
-      <path d="M50 40L20 30V114L50 106Z" fill={PAL.green} stroke={PAL.green} strokeWidth="2" strokeLinejoin="round" />
-      <path d="M26 32L20 30V114L26 112.400Z" fill={PAL.greenShade} />
-      <rect x="28" y="68" width="14" height="6" rx="3" fill={PAL.yellow} />
+      <g transform="translate(100 0) scale(-1 1)">
+        <Move kind="grow" grow={-1.25}>
+          <g transform="translate(100 0) scale(-1 1)">
+            <path d="M50 40L20 30V114L50 106Z" fill={PAL.green} stroke={PAL.green} strokeWidth="2" strokeLinejoin="round" />
+            <path d="M26 32L20 30V114L26 112.400Z" fill={PAL.greenShade} />
+            <rect x="28" y="68" width="14" height="6" rx="3" fill={PAL.yellow} />
+          </g>
+        </Move>
+      </g>
       <Hand pose="fist" x={12} y={96} rotate={38} scale={0.62} skin={SKIN.bram} sleeve={ORANGE} />
       <CurveArrow from={[92, 24]} to={[30, 18]} bend={-9} color={PAL.sky} width={8} head={13} />
     </g>
   ),
 
   // "dichtdoen": to close — the same door, nearly shut: only a strip of the doorway is left; a
-  // flat hand pushes it, the arrow goes to the post.
+  // flat hand pushes it, the arrow goes to the post. On the intro card the door swings shut from
+  // wide open (it grows from its hinge, the left edge, out of a mirrored open door).
   'w.dichtdoen': () => (
     <g>
       <Doorway />
-      <path d="M50 40L88 36V110L50 106Z" fill={PAL.green} stroke={PAL.green} strokeWidth="2" strokeLinejoin="round" />
-      <path d="M80 36.800L88 36V110L80 109.200Z" fill={PAL.greenShade} />
-      <rect x="68" y="66" width="12" height="6" rx="3" fill={PAL.yellow} />
+      <Move kind="grow" grow={-0.8}>
+        <path d="M50 40L88 36V110L50 106Z" fill={PAL.green} stroke={PAL.green} strokeWidth="2" strokeLinejoin="round" />
+        <path d="M80 36.800L88 36V110L80 109.200Z" fill={PAL.greenShade} />
+        <rect x="68" y="66" width="12" height="6" rx="3" fill={PAL.yellow} />
+      </Move>
       <Hand pose="open" x={62} y={126} rotate={-4} scale={0.8} skin={SKIN.amina} sleeve={GREEN} />
       <CurveArrow from={[26, 26]} to={[94, 22]} bend={9} color={PAL.sky} width={8} head={13} />
     </g>
   ),
 
-  // "drukken": to press — a finger comes down on a big blue button; an arrow down.
+  // "drukken": to press — a finger comes down on a big blue button; an arrow down. On the intro
+  // card the finger comes down onto the button.
   'w.drukken': () => (
     <g>
       <Ground cx={62} cy={106} rx={40} ry={4} />
@@ -239,13 +278,18 @@ export default {
         <path d="M42 80Q42 60 62 60Q82 60 82 80Z" fill={PAL.blue} />
       </Shade>
       <Shine d="M49 72Q51 66 58 64.500" width={3} opacity={0.6} />
-      <Hand pose="point" x={55.500} y={18} rotate={180} scale={0.84} skin={SKIN.jada} sleeve={[PAL.yellow, PAL.yellowShade]} />
+      <Move kind="from" dy={-22}>
+        <Hand pose="point" x={55.500} y={18} rotate={180} scale={0.84} skin={SKIN.jada} sleeve={[PAL.yellow, PAL.yellowShade]} />
+      </Move>
       <Arrow from={[20, 22]} to={[20, 68]} color={PAL.sky} />
-      <path d="M92 62L100 56M94 72H104" stroke={PAL.orange} strokeWidth="3.6" strokeLinecap="round" opacity=".85" />
+      <Move kind="show">
+        <path d="M92 62L100 56M94 72H104" stroke={PAL.orange} strokeWidth="3.6" strokeLinecap="round" opacity=".85" />
+      </Move>
     </g>
   ),
 
-  // "draaien": to turn — a hand on a round knob; an arrow goes round it.
+  // "draaien": to turn — a hand on a round knob; an arrow goes round it. On the intro card the
+  // knob's mark turns a quarter round to the top.
   'w.draaien': () => (
     <g>
       <rect x="22" y="22" width="76" height="76" rx="12" fill={PAL.mist} />
@@ -253,7 +297,9 @@ export default {
       <Shade color={PAL.slateDark} opacity={1} at={[86, 60, 14, 34]}>
         <circle cx="60" cy="58" r="27" fill={PAL.slate} />
       </Shade>
-      <path d="M60 37V50" stroke={PAL.white} strokeWidth="5" strokeLinecap="round" />
+      <Move kind="turn" turn={-90} at={[60, 58]}>
+        <path d="M60 37V50" stroke={PAL.white} strokeWidth="5" strokeLinecap="round" />
+      </Move>
       <Shine d="M40 52A21 21 0 0 1 50 39" opacity={0.35} />
       <Hand pose="hold" x={60} y={112} scale={0.96} skin={SKIN.bram} sleeve={BLUE} />
       <CurveArrow from={[18, 40]} to={[100, 36]} bend={30} color={PAL.sky} width={8} head={13} />
@@ -261,10 +307,12 @@ export default {
   ),
 
   // "stoppen": to stop — an arrow that ends at a red bar; behind it a raised hand: no further.
-  // A memory picture (`picture: 'hook'`).
+  // A memory picture (`picture: 'hook'`). On the intro card the arrow comes fast and stops at the bar.
   'w.stoppen': () => (
     <g>
-      <Arrow from={[10, 56]} to={[48, 56]} color={PAL.sky} width={10} head={15} />
+      <Move kind="fast" dx={-30}>
+        <Arrow from={[10, 56]} to={[48, 56]} color={PAL.sky} width={10} head={15} />
+      </Move>
       <rect x="56" y="22" width="12" height="76" rx="6" fill={PAL.redShade} />
       <rect x="54" y="20" width="12" height="76" rx="6" fill={PAL.red} />
       <Hand pose="open" x={92} y={92} scale={0.98} skin={SKIN.henk} sleeve={NAVY} mirror />
@@ -276,19 +324,24 @@ export default {
    * ------------------------------------------------------------------------------------- */
 
   // "duwen": to push — two flat hands against a cardboard box; the arrow goes away from the hands.
+  // On the intro card the hands push the box to the right.
   'w.duwen': () => (
     <g>
-      <Ground cx={74} cy={105} rx={32} ry={4} />
-      <Box x={54} y={52} w={40} h={52} depth={11} />
-      <Hand pose="open" x={18} y={64} rotate={90} scale={0.72} skin={SKIN.henk} sleeve={NAVY} />
-      <Hand pose="open" x={18} y={90} rotate={90} scale={0.72} skin={SKIN.henk} sleeve={NAVY} />
+      <Move kind="slow" dx={-24}>
+        <Ground cx={74} cy={105} rx={32} ry={4} />
+        <Box x={54} y={52} w={40} h={52} depth={11} />
+        <Hand pose="open" x={18} y={64} rotate={90} scale={0.72} skin={SKIN.henk} sleeve={NAVY} />
+        <Hand pose="open" x={18} y={90} rotate={90} scale={0.72} skin={SKIN.henk} sleeve={NAVY} />
+      </Move>
       <Arrow from={[52, 24]} to={[104, 24]} color={PAL.sky} />
     </g>
   ),
 
   // "trekken": to pull — a fist round the handle of a blue cart; the arrow goes towards the hand.
+  // On the intro card the hand pulls the cart in from the right.
   'w.trekken': () => (
     <g>
+      <Move kind="slow" dx={24}>
       <Ground cx={84} cy={106} rx={30} ry={3.5} />
       <path d="M66 70H38" stroke={PAL.steel} strokeWidth="5" strokeLinecap="round" />
       <path d="M38 50V90" stroke={PAL.steel} strokeWidth="7" strokeLinecap="round" />
@@ -301,14 +354,16 @@ export default {
         <rect x="62" y="52" width="48" height="42" rx="5" fill={PAL.blue} />
       </Shade>
       <rect x="62" y="52" width="48" height="6" rx="3" fill={PAL.blueLight} />
+      </Move>
       <Arrow from={[84, 26]} to={[16, 26]} color={PAL.sky} />
     </g>
   ),
 
-  // "vullen": to fill — water runs from a tap into a jug that is half full; an arrow up.
+  // "vullen": to fill — water runs from a tap into a jug that is half full; an arrow up. On the
+  // intro card the water rises in the jug.
   'w.vullen': () => (
     <g>
-      <Jug level={76} />
+      <Jug level={76} rise />
       <rect x="54" y="30" width="8" height="48" rx="4" fill={PAL.ice} />
       <path d="M8 18H50Q58 18 58 26V30" fill="none" stroke={PAL.steel} strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
       <rect x="24" y="4" width="20" height="7" rx="3.500" fill={PAL.red} />
@@ -317,9 +372,11 @@ export default {
     </g>
   ),
 
-  // "leegmaken": to empty — a green bin held upside down; the rubbish falls out.
+  // "leegmaken": to empty — a green bin held upside down; the rubbish falls out. On the intro
+  // card the hand tips the bin over, then the rubbish is out of it (one fade).
   'w.leegmaken': () => (
     <g>
+      <Move kind="turn" turn={-80} at={[52, 44]}>
       <g transform="translate(52 44) rotate(140)">
         <Shade color={PAL.greenShade} opacity={1} at={[-22, 0, 12, 40]}>
           <path d="M-26 -30H26L20 30H-20Z" fill={PAL.green} stroke={PAL.green} strokeWidth="3" strokeLinejoin="round" />
@@ -327,29 +384,39 @@ export default {
         <rect x="-29" y="-35" width="58" height="9" rx="4" fill={PAL.greenShade} />
       </g>
       <Hand pose="open" x={-6} y={30} rotate={76} scale={0.74} skin={SKIN.bram} sleeve={ORANGE} />
-      <PaperBall x={84} y={66} s={1.15} />
-      <path d="M68 84Q72 70 86 82Q78 84 78 92Z" fill={PAL.yellow} />
-      <PaperBall x={98} y={92} />
-      <rect x="62" y="96" width="14" height="10" rx="2" fill={PAL.card} transform="rotate(-18 69 101)" />
-      <path d="M104 52V66M94 38V46" stroke={PAL.line} strokeWidth="3.2" strokeLinecap="round" opacity=".8" />
+      </Move>
+      <Move kind="show">
+        <PaperBall x={84} y={66} s={1.15} />
+        <path d="M68 84Q72 70 86 82Q78 84 78 92Z" fill={PAL.yellow} />
+        <PaperBall x={98} y={92} />
+        <rect x="62" y="96" width="14" height="10" rx="2" fill={PAL.card} transform="rotate(-18 69 101)" />
+        <path d="M104 52V66M94 38V46" stroke={PAL.line} strokeWidth="3.2" strokeLinecap="round" opacity=".8" />
+      </Move>
     </g>
   ),
 
   // "schoonmaken": to clean — a hand wipes a worktop with a yellow sponge: clean and shining
-  // where it has been, spots where it has not.
+  // where it has been, spots where it has not. On the intro card the sponge wipes from the left
+  // to where it is drawn, the clean strip growing behind it, then the sparkles.
   'w.schoonmaken': () => (
     <g>
       <rect x="6" y="62" width="108" height="46" rx="6" fill={PAL.steel} />
       <rect x="6" y="58" width="108" height="46" rx="6" fill={PAL.mist} />
-      <rect x="10" y="68" width="52" height="26" rx="13" fill={PAL.white} />
+      <Move kind="grow" grow={0.3}>
+        <rect x="10" y="68" width="52" height="26" rx="13" fill={PAL.white} />
+      </Move>
       <circle cx="96" cy="70" r="5" fill={PAL.wood} />
       <circle cx="104" cy="88" r="4" fill={PAL.wood} />
       <circle cx="88" cy="92" r="5.500" fill={PAL.wood} />
-      <rect x="44" y="70" width="34" height="22" rx="5" fill={PAL.yellowShade} />
-      <rect x="44" y="67" width="34" height="20" rx="5" fill={PAL.yellow} />
-      <Hand pose="open" x={61} y={30} rotate={180} scale={0.94} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
-      <Sparkle x={22} y={44} r={9} />
-      <Sparkle x={28} y={81} r={6} color={PAL.sky} />
+      <Move kind="from" dx={-30}>
+        <rect x="44" y="70" width="34" height="22" rx="5" fill={PAL.yellowShade} />
+        <rect x="44" y="67" width="34" height="20" rx="5" fill={PAL.yellow} />
+        <Hand pose="open" x={61} y={30} rotate={180} scale={0.94} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
+      </Move>
+      <Move kind="show">
+        <Sparkle x={22} y={44} r={9} />
+        <Sparkle x={28} y={81} r={6} color={PAL.sky} />
+      </Move>
     </g>
   ),
 

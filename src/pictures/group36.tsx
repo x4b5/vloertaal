@@ -132,17 +132,21 @@ export default {
   ),
 
   // "bezorgen": to deliver — a parcel goes to the front door of a house (an arrow)
+  // On the intro card: the parcel comes from the right to the front door.
   'w.bezorgen': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4} />
       <FrontDoor x={12} y={24} w={42} h={82} />
       <rect x="8" y="102" width="50" height="5" rx="2" fill={PAL.cardDark} />
-      <Box x={66} y={64} w={30} h={26} depth={12} />
+      <Move kind="from" dx={24}>
+        <Box x={66} y={64} w={30} h={26} depth={12} />
+      </Move>
       <Arrow from={[96, 40]} to={[60, 40]} color={PAL.sky} width={8} head={13} />
     </g>
   ),
 
   // "inladen": to load — the back of the van open, a parcel goes in (an arrow)
+  // On the intro card: the front parcel goes up into the van.
   'w.inladen': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4} />
@@ -160,13 +164,16 @@ export default {
       <Wheel cx={88} cy={98} r={8} />
       {/* One parcel already inside, one going in */}
       <Box x={66} y={60} w={20} h={16} depth={6} tape={false} />
-      <Box x={34} y={50} w={28} h={24} depth={9} />
+      <Move kind="from" dy={22}>
+        <Box x={34} y={50} w={28} h={24} depth={9} />
+      </Move>
       <Arrow from={[48, 106]} to={[48, 82]} color={PAL.sky} width={8} head={12} />
     </g>
   ),
 
   // "aanbellen": to ring the doorbell — a finger presses the bell button next to the door; the
   // bell rings (lines)
+  // On the intro card: the finger comes to the bell button, then the ringing lines appear.
   'w.aanbellen': () => (
     <g>
       <rect x="22" y="10" width="44" height="98" rx="3" fill={PAL.mist} />
@@ -177,14 +184,19 @@ export default {
       <circle cx="81" cy="40" r="9" fill={PAL.yellowShade} />
       <circle cx="81" cy="39" r="8" fill={PAL.yellow} />
       <rect x="72" y="56" width="18" height="6" rx="2" fill={PAL.line} />
-      <Motion x={81} y={39} dir={-60} spread={60} n={3} len={8} gap={14} color={PAL.sky} width={3.4} />
-      <Hand pose="point" x={89} y={93} rotate={-4} scale={1.05} skin={SKIN.amina} sleeve={[PAL.orange, PAL.orangeShade]} />
+      <Move kind="show">
+        <Motion x={81} y={39} dir={-60} spread={60} n={3} len={8} gap={14} color={PAL.sky} width={3.4} />
+      </Move>
+      <Move kind="from" dx={14} dy={18}>
+        <Hand pose="point" x={89} y={93} rotate={-4} scale={1.05} skin={SKIN.amina} sleeve={[PAL.orange, PAL.orangeShade]} />
+      </Move>
     </g>
   ),
 
   // "rijden": to drive — two hands on the steering wheel
+  // On the intro card: the hands turn the steering wheel back to straight.
   'w.rijden': () => (
-    <g>
+    <Move kind="turn" turn={-35} at={[60, 64]}>
       <circle cx="60" cy="64" r="38" fill="none" stroke={PAL.slate} strokeWidth="10" />
       <path d="M30 42A38 38 0 0 1 56 26" fill="none" stroke={PAL.steel} strokeWidth="3" strokeLinecap="round" opacity=".7" />
       <path d="M24 66H96M60 66V100" stroke={PAL.slate} strokeWidth="9" strokeLinecap="round" />
@@ -192,7 +204,7 @@ export default {
       <circle cx="60" cy="66" r="5" fill={PAL.steel} />
       <Hand pose="fist" x={24} y={58} rotate={-28} scale={0.66} skin={SKIN.henk} sleeve={[PAL.blue, PAL.blueShade]} />
       <Hand pose="fist" x={96} y={58} rotate={28} scale={0.66} skin={SKIN.henk} sleeve={[PAL.blue, PAL.blueShade]} mirror />
-    </g>
+    </Move>
   ),
 
   // "zwaar": heavy — an iron weight with a handle presses on the floor (lines pushed down)

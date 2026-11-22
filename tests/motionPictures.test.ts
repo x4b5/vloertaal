@@ -61,8 +61,30 @@ const MOTION_FUNCTION = [
   'w.popnageltang', 'w.hijshaak', 'w.goedkeursticker', 'w.testbank', 'w.ventilator', 'w.thermometer', 'w.vangplaat', 'w.ontsmettingsmat',
   'w.weegschaal', 'w.sensor', 'w.krimpfolie', 'w.afbreekmes', 'w.steeksleutel', 'w.poetsdoek', 'w.lekbak', 'w.monster', 'w.loep',
   'w.heftruck', 'w.scanner', 'w.kraan', 'w.lopendeband', 'w.dweil', 'w.steekwagen', 'w.folie', 'w.pompwagen',
+  // The owner's "look at zagen" (22 November 2026): the saw pulls back and pushes once, the sawdust comes.
+  'w.zagen',
 ];
-const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION];
+/**
+ * Round 4 (the owner, 22 November 2026: "zagen is an example ... there are probably many others"):
+ * every still picture whose meaning or function is a movement or an action.
+ */
+const MOTION_ROUND4 = [
+  'w.zoeken', 'w.bewaren', 'w.hamer', 'w.afkeuren', 'w.wassen', 'w.prullenbak', 'w.verzamelen', 'w.lossen', 'w.tanken', 'w.opladen', 'w.parkeren', 'w.retour', 'w.typen', 'w.opslaan', 'w.ophangen', 'w.tempo', 'w.vakkenvullen', 'w.pakken', 'w.kruishout', 'w.aftekenen', 'w.mal', 'w.tiewrap',
+  'w.betalen', 'w.pinnen', 'w.kijken', 'w.licht', 'w.snijden', 'w.bezorgen', 'w.inladen', 'w.aanbellen', 'w.rijden', 'w.handje', 'w.aandebel', 'w.motorkap', 'w.lamp', 'w.morsen', 'w.samen', 'w.penseel', 'w.achterlamp', 'w.waarschuwingslampje', 'w.signaallamp', 'w.rolcontainer',
+  'w.drinken', 'w.repareren', 'w.stemmen', 'w.klikken', 'w.proefrit', 'w.korting', 'w.bestellen', 'w.stelen', 'w.schreeuwen', 'w.geldterug', 'w.storen', 'w.aanwijzen', 'w.slijpen', 'w.nijptang', 'w.slagmoersleutel', 'w.afscherming', 'w.accuboor', 'w.boormachine', 'w.vonk', 'w.bel', 'w.aankleden',
+  'w.bewegen', 'w.sparen', 'w.oogsten', 'w.zetten', 'w.leggen', 'w.brengen', 'w.geven', 'w.loslaten', 'w.aanzetten', 'w.opendoen',
+  'w.dichtdoen', 'w.drukken', 'w.draaien', 'w.stoppen', 'w.duwen', 'w.trekken', 'w.vullen', 'w.leegmaken', 'w.schoonmaken', 'w.bijvullen',
+  'w.hallo', 'w.goedemorgen', 'w.totmorgen', 'w.werk', 'w.afdrogen', 'w.passen', 'w.lassen', 'w.stucspaan', 'w.rei', 'w.sponsspaan',
+  'w.handzaag', 'w.kapzaag', 'w.houtbeitel', 'w.handschaaf', 'w.timmermanshamer', 'w.houtenhamer', 'w.helpen', 'w.plamuurmes', 'w.stoffertje', 'w.schuren',
+  'w.afplakken', 'w.ijzerzaag', 'w.vertalen', 'w.opschrijven', 'w.latenzien', 'w.ondertiteling', 'w.appen', 'w.handenwassen', 'w.stoffen', 'w.luchten',
+  'w.spoelen', 'w.stilstaan', 'w.lampje', 'w.komen', 'w.aankijken', 'w.ademhalen', 'w.opnemen', 'w.knippen', 'w.regen', 'w.meten',
+  'w.struikelen', 'w.vinden', 'w.opstaan', 'w.gaanzitten', 'w.bevestigen', 'w.vastzetten', 'w.lijmen', 'w.opbouwen', 'w.lichtwerk', 'w.welkomterug',
+  'w.diagnosecomputer', 'w.onderdelenkar', 'w.koppeling', 'w.spreken', 'w.luisteren', 'w.begroeten', 'w.vraagstellen', 'w.tekenen', 'w.uitleggen', 'w.leren',
+  'w.neezeggen', 'w.posten', 'w.delen', 'w.vertellen', 'w.solliciteren', 'w.inschrijven', 'w.boor', 'w.beton', 'w.weigeren', 'w.machine',
+  'w.noodstop', 'w.productie', 'w.beginnen', 'w.bellen', 'w.totenmet', 'w.dichtplakken', 'w.idee', 'w.handopsteken', 'w.voegijzer', 'w.handveger',
+  'w.startknop', 'w.waterpomptang',
+];
+const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
 const MOTION_ONLY: [string, string][] = [
   ['w.ontruimen', 'l.alarm'], ['w.bijna', 'l.task'],
@@ -109,7 +131,9 @@ describe('moving word pictures: the trial', () => {
 
   it('no other picture moves (only the words chosen, one by one)', () => {
     const moving = Object.entries(words).filter(([, draw]) => /class="mv-/.test(renderToStaticMarkup(createElement(draw)))).map(([id]) => id);
-    expect(moving.sort()).toEqual([...MOVING].sort());
+    // A Belgian twin of a moving word shares its picture (and moves on its own intro card too).
+    const twins = MOVING.map((id) => `be.${id}`).filter((id) => words[id] && words[id] === words[id.slice(3)]);
+    expect(moving.sort()).toEqual([...MOVING, ...twins].sort());
   });
 
   it('the moving-only words are abstract: their picture is on the intro card, never in a choice', () => {

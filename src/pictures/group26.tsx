@@ -176,6 +176,7 @@ export default {
   ),
 
   // "slijpen": to grind — a hand holds an angle grinder; its disc on a metal bar throws sparks
+  // On the intro card the grinder runs along the bar to the left, then the sparks.
   'w.slijpen': () => (
     <g>
       {/* Metal bar on two blocks */}
@@ -186,10 +187,13 @@ export default {
       <rect x="8" y="91" width="74" height="5" rx="2" fill={PAL.slate} opacity=".45" />
       <path d="M12 86.5H78" stroke={PAL.mist} strokeWidth="2" strokeLinecap="round" />
       {/* Sparks flying off to the left */}
-      <Motion x={36} y={84} dir={-165} spread={50} n={4} len={11} gap={4} color={PAL.orange} width={3.4} />
-      <Sparkle x={14} y={66} r={6} />
-      <Sparkle x={22} y={52} r={4.5} color={PAL.orangeLight} />
+      <Move kind="show">
+        <Motion x={36} y={84} dir={-165} spread={50} n={4} len={11} gap={4} color={PAL.orange} width={3.4} />
+        <Sparkle x={14} y={66} r={6} />
+        <Sparkle x={22} y={52} r={4.5} color={PAL.orangeLight} />
+      </Move>
       {/* Disc and its guard */}
+      <Move kind="from" dx={24}>
       <circle cx="44" cy="70" r="15" fill={PAL.slate} />
       <circle cx="44" cy="70" r="4" fill={PAL.mist} />
       <path d="M27 66A17 17 0 0 1 61 66H55A11 11 0 0 0 33 66Z" fill={PAL.mist} />
@@ -201,6 +205,7 @@ export default {
       <path d="M96 60V72M101 60V72" stroke={PAL.orangeShade} strokeWidth="1.8" strokeLinecap="round" />
       <Shine d="M56 60H72" opacity={0.6} />
       <Hand pose="hold" x={80} y={88} scale={0.82} skin={SKIN.amina} sleeve={[PAL.blue, PAL.blueShade]} />
+      </Move>
     </g>
   ),
 

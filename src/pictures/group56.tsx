@@ -98,10 +98,14 @@ export default {
   // "het penseel": the small brush for corners — a green handle, thick at the band and tapering to
   // its end, a steel band and a flat tuft that flares out, its tip in blue; a stroke of blue paint
   // runs from the tip, so it is a brush and not a pen.
+  // On the intro card: the brush moves along and paints the stroke behind it.
   'w.penseel': () => (
     <g strokeLinejoin="round">
       {/* The stroke of paint the brush has just put down */}
-      <path d="M84 91Q70 99 54 96Q40 93.5 27 101" fill="none" stroke={PAINT[0]} strokeWidth="7" strokeLinecap="round" />
+      <Move kind="grow" grow={0.1}>
+        <path d="M84 91Q70 99 54 96Q40 93.5 27 101" fill="none" stroke={PAINT[0]} strokeWidth="7" strokeLinecap="round" />
+      </Move>
+      <Move kind="from" dx={-44} dy={6}>
       <g transform="translate(-6 -7) rotate(-42 60 60)">
         {/* The handle: thin at its end, thick before the band */}
         <Shade color={PAL.greenShade} opacity={1} at={[67, 34, 4.5, 40]}>
@@ -120,6 +124,7 @@ export default {
         <path d="M56 77.5L54 85M64 77.5L66 85" stroke={PAL.cardShade} strokeWidth="1.5" strokeLinecap="round" />
         <Shine d="M58.4 12L57.2 50" color={PAL.lime} width={2.4} opacity={0.8} />
       </g>
+      </Move>
     </g>
   ),
 
