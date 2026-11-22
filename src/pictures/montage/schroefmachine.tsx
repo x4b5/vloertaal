@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shade, Shine, r1 } from '../kit';
 
 /** The screwdriver is drawn lying along x (back end left, bit right) and tipped so the bit points down to the right. */
 const TURN = 'translate(43 59) rotate(40) scale(1.1)';
@@ -28,10 +28,14 @@ export default {
       <polygon points="44,96 100,96 108,86 52,86" fill={PAL.mist} />
       <rect x="44" y="96" width="56" height="7" fill={PAL.line} />
       {/* The screw head the bit sits in */}
-      <ellipse cx="80" cy="91.4" rx="7.4" ry="3.2" fill={PAL.slate} />
-      <ellipse cx="80" cy="90.6" rx="5.8" ry="2.4" fill={PAL.steel} />
+      <Move kind="from" dy={-4}>
+        <ellipse cx="80" cy="91.4" rx="7.4" ry="3.2" fill={PAL.slate} />
+        <ellipse cx="80" cy="90.6" rx="5.8" ry="2.4" fill={PAL.steel} />
+      </Move>
       {/* The back halves of the hose loops, and the straight bit into the tool */}
       <path d={loops(false)} fill="none" stroke={PAL.greenShade} strokeWidth="2.6" strokeLinecap="round" />
+      {/* The tool comes in along its axis to the screw */}
+      <Move kind="from" dx={-11} dy={-9}>
       <g transform={TURN}>
         {/* The pistol grip: shaded far side, then the grip, and its dark foot */}
         <path d="M-12 4L0 31" stroke={PAL.orangeShade} strokeWidth="14" strokeLinecap="round" />
@@ -51,6 +55,7 @@ export default {
         <rect x="27" y="-2.2" width="21" height="4.4" rx="1.6" fill={PAL.steel} />
         <rect x="28" y="-2.2" width="18" height="1.6" rx=".8" fill={PAL.paper} />
       </g>
+      </Move>
       {/* The front halves of the hose loops, and where it plugs into the back cap */}
       <path d={loops(true)} fill="none" stroke={PAL.green} strokeWidth="2.6" strokeLinecap="round" />
     </g>

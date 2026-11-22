@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view (as in group55): one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -71,7 +71,11 @@ export default {
       <rect x={BX} y={BY} width={BW} height={BB - BY} fill={PAL.card} />
       {/* The open seam ahead of the gun, and the tape already laid along it behind */}
       <path d={`M${top(ROLLER[0], SEAM).join(' ')}L${top(BX + BW, SEAM).join(' ')}`} stroke={PAL.cardShade} strokeWidth="1.6" strokeLinecap="round" />
-      <polygon points={pts([top(BX, T0), top(ROLLER[0] + 2, T0), top(ROLLER[0] + 2, T1), top(BX, T1)])} fill={PAL.cardDark} />
+      <Move kind="grow" grow={0.15}>
+        <polygon points={pts([top(BX, T0), top(ROLLER[0] + 2, T0), top(ROLLER[0] + 2, T1), top(BX, T1)])} fill={PAL.cardDark} />
+      </Move>
+      {/* (The gun runs along the seam from the left and lays the tape behind it.) */}
+      <Move kind="from" dx={-30}>
       {/* The frame: a dark arm from the roller up to the hub and back to the grip, and a brace over the
           top that closes the handle into a loop */}
       <path d={`M${ROLLER[0]} ${ROLLER[1]}L${ROLL[0]} ${ROLL[1]}L86 52`} fill="none" stroke={PAL.slate} strokeWidth="9" strokeLinecap="round" />
@@ -93,6 +97,7 @@ export default {
       <circle cx={ROLL[0]} cy={ROLL[1]} r="5.5" fill={PAL.slate} />
       <circle cx={ROLL[0] - 1} cy={ROLL[1] - 1} r="2" fill={PAL.steel} />
       <Shine d={`M${ROLL[0] - 16} ${ROLL[1] - 3}A16 16 0 0 1 ${ROLL[0] - 4} ${ROLL[1] - 15.5}`} width={3} opacity={0.45} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

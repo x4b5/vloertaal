@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 /** The boot's shaded side: one step under coffee brown. */
 const BROWN_DARK = '#4f2e18';
@@ -24,6 +24,7 @@ export default {
       <path d="M46 92V84L78 80V92Z" fill={PAL.slate} />
       <path d="M50 87.4L75 84.4" stroke={PAL.steel} strokeWidth="2" strokeLinecap="round" />
       {/* The boot: sole, upper (shaded on the right), collar, laces; its toe in the opening on the pedal */}
+      <Move kind="from" dy={-7}>
       <g transform="translate(20 100) rotate(-12) scale(0.95)">
         <rect x="-2" y="-7" width="58" height="7" rx="3" fill={PAL.ink} />
         <Shade color={BROWN_DARK} opacity={1} at={[58, -14, 14, 30]}>
@@ -33,6 +34,7 @@ export default {
         <path d="M27 -36L20 -36M29 -29L22 -30M33 -24L27 -26" stroke={PAL.card} strokeWidth="2" strokeLinecap="round" />
         <Shine d="M4 -14V-38" color={PAL.card} width={2.6} opacity={0.6} />
       </g>
+      </Move>
       {/* The hood's front rim again, over the boot: the toe goes into the opening */}
       <Shade color={PAL.yellowShade} opacity={1} at={[110, 64, 20, 44]}>
         <path d="M40 92V50Q40 26 66 26H86Q108 26 108 50V92ZM46 92V56Q46 38 62 38Q78 38 78 56V92Z" fill={PAL.yellow} fillRule="evenodd" />

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Hand, PAL, SKIN, Shine, type Pt } from './kit';
+import { Hand, Move, PAL, SKIN, Shine, type Pt } from './kit';
 
 /**
  * Word pictures, group 61 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -228,19 +228,26 @@ export default {
       <g>
         <polygon points={pts(sheet.map(([x, y]) => [x, y + 3] as Pt))} fill={PAL.ice} stroke={PAL.ice} strokeWidth="2" strokeLinejoin="round" />
         <polygon points={pts(sheet)} fill={TINT} stroke={TINT} strokeWidth="2" strokeLinejoin="round" />
-        <polyline points={pts(circle)} fill="none" stroke={PAL.slate} strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" />
-        {/* The needle leg */}
-        <Extrude p={bar(hinge, needle, 13)} {...STEEL} d={legD} />
-        <path d={`M${needle[0]} ${needle[1] - 2}L${pts([c])}`} stroke={PAL.slateDark} strokeWidth="3" strokeLinecap="round" />
-        {/* The pencil leg, holding a short red pencil at its foot */}
-        <Extrude p={bar(hinge, lead, 13)} {...STEEL} d={legD} />
-        <Pencil tip={pen} ang={-98} len={24} />
-        <Shine d={`M${hinge[0] - 6} ${hinge[1] + 14}L${hinge[0] - 10} ${hinge[1] + 36}`} width={2.6} />
-        {/* Handle and hinge */}
-        <rect x={hinge[0] - 5} y={hinge[1] - 19} width="10" height="15" rx="3.5" fill={PAL.red} />
-        <rect x={hinge[0] + 0.6} y={hinge[1] - 19} width="4.4" height="15" rx="2" fill={PAL.redShade} />
-        <circle cx={hinge[0]} cy={hinge[1]} r="10" fill={PAL.slate} />
-        <circle cx={hinge[0] - 2} cy={hinge[1] - 2} r="3.6" fill={PAL.steel} />
+        {/* The circle: the last stretch the pencil drew grows towards it */}
+        <polyline points={pts(circle.slice(3))} fill="none" stroke={PAL.slate} strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" />
+        <Move kind="grow" grow={0.05}>
+          <polyline points={pts(circle.slice(0, 4).reverse())} fill="none" stroke={PAL.slate} strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" />
+        </Move>
+        {/* The compasses turn round the needle point, the pencil drawing the arc */}
+        <Move kind="turn" turn={-12} at={c}>
+          {/* The needle leg */}
+          <Extrude p={bar(hinge, needle, 13)} {...STEEL} d={legD} />
+          <path d={`M${needle[0]} ${needle[1] - 2}L${pts([c])}`} stroke={PAL.slateDark} strokeWidth="3" strokeLinecap="round" />
+          {/* The pencil leg, holding a short red pencil at its foot */}
+          <Extrude p={bar(hinge, lead, 13)} {...STEEL} d={legD} />
+          <Pencil tip={pen} ang={-98} len={24} />
+          <Shine d={`M${hinge[0] - 6} ${hinge[1] + 14}L${hinge[0] - 10} ${hinge[1] + 36}`} width={2.6} />
+          {/* Handle and hinge */}
+          <rect x={hinge[0] - 5} y={hinge[1] - 19} width="10" height="15" rx="3.5" fill={PAL.red} />
+          <rect x={hinge[0] + 0.6} y={hinge[1] - 19} width="4.4" height="15" rx="2" fill={PAL.redShade} />
+          <circle cx={hinge[0]} cy={hinge[1]} r="10" fill={PAL.slate} />
+          <circle cx={hinge[0] - 2} cy={hinge[1] - 2} r="3.6" fill={PAL.steel} />
+        </Move>
       </g>
     );
   },

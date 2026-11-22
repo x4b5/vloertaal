@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -30,7 +30,9 @@ export default {
       {/* The rockwool block: white wrap, fibrous top, a wet spot */}
       {block(18, 70, 66, 32, 26, PAL.paperShade, WOOL, PAL.mist)}
       <path d="M18 70H84" stroke={WOOL} strokeWidth="3" />
-      <ellipse cx="54" cy="61" rx="16" ry="5" fill={PAL.cardShade} opacity=".55" />
+      <Move kind="show">
+        <ellipse cx="54" cy="61" rx="16" ry="5" fill={PAL.cardShade} opacity=".55" />
+      </Move>
       <Shine d="M22 76V94" width={3} opacity={0.9} />
       {/* The black drip line across the top, with the emitter on it */}
       <path d="M10 22Q60 30 110 20" fill="none" stroke={PAL.slateDark} strokeWidth="7" strokeLinecap="round" />
@@ -40,9 +42,11 @@ export default {
       {/* The dripper peg, stuck slanting into the block */}
       <path d="M72 46L62 62" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
       <rect x="66.5" y="40" width="10" height="8" rx="2.4" fill={PAL.slateDark} transform="rotate(32 71.5 44)" />
-      {/* The falling water drop */}
+      {/* The falling water drop: it falls onto the block (Move), then the wet spot shows */}
+      <Move kind="drop" dy={-16}>
       <path d="M50 36Q58 47 58 51.5A8 8 0 0 1 42 51.5Q42 47 50 36Z" fill={PAL.sky} />
       <path d="M45.6 52Q45.8 48.8 47.6 46.8" stroke={PAL.ice} strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

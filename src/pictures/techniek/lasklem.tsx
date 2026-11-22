@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shine, r1 } from '../kit';
+import { Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -34,13 +34,14 @@ const lever = (u: number, key: string) => {
   const u1 = u + 10;
   const z0 = H;
   const z1 = H + 4;
+  const [hx, hy] = iso(u, D - 3, z1);
   return (
-    <g key={key}>
+    <Move key={key} kind="turn" turn={60} at={[hx, hy]}>
       <path d={quad(iso(u1, 2, z0), iso(u1, D - 3, z0), iso(u1, D - 3, z1), iso(u1, 2, z1))} fill={PAL.orangeShade} />
       <path d={quad(iso(u0, 2, z0), iso(u1, 2, z0), iso(u1, 2, z1), iso(u0, 2, z1))} fill={PAL.orangeShade} />
       <path d={quad(iso(u0, 2, z1), iso(u1, 2, z1), iso(u1, D - 3, z1), iso(u0, D - 3, z1))} fill={PAL.orange} />
       <path d={`M${at(iso(u0 + 3, 0, z1))}L${at(iso(u0 + 3, D - 7, z1))}`} stroke={PAL.orangeLight} strokeWidth="2.4" strokeLinecap="round" />
-    </g>
+    </Move>
   );
 };
 

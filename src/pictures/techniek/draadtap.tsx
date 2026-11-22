@@ -1,5 +1,5 @@
 import { useId, type JSX } from 'react';
-import { CurveArrow, Ground, PAL, Shine, r1 } from '../kit';
+import { CurveArrow, Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -35,6 +35,7 @@ export default {
         {/* The steel block and the hole in its top */}
         {block(24, 80, 62, 22, 20, PAL.steel, PAL.mist, PAL.slate)}
         <ellipse cx={HX} cy={HY} rx="9" ry="3.6" fill={PAL.slateDark} />
+        <Move kind="from" dy={-12}>
         {/* The tap: a threaded steel bit, its lower end in the hole */}
         <clipPath id={id}>
           <path d={`M${HX - 6} 40H${HX + 6}V${HY}A6 2.4 0 0 1 ${HX - 6} ${HY}Z`} />
@@ -49,6 +50,7 @@ export default {
         <rect x={HX - 9} y="32" width="18" height="14" rx="3" fill={PAL.steel} />
         <rect x={HX - 9} y="32" width="18" height="12" rx="3" fill={PAL.mist} />
         <Shine d={`M${HX - 5} 35.5H${HX + 3}`} width={2.4} opacity={0.9} />
+        </Move>
         {/* Turning */}
         <CurveArrow from={[30, 30]} to={[86, 16]} bend={14} color={PAL.sky} width={6} head={11} />
       </g>

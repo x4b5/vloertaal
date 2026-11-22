@@ -1,5 +1,5 @@
 import type { JSX, ReactNode } from 'react';
-import { Arrow, Ground, Hand, PAL, SKIN, Shade, Shine } from './kit';
+import { Arrow, Ground, Hand, Move, PAL, SKIN, Shade, Shine } from './kit';
 
 /**
  * Word pictures, group 57 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -157,36 +157,41 @@ export default {
       <g transform="rotate(45 53 66)">
         <Ground cx={53} cy={68} rx={46} ry={7} />
       </g>
-      {/* The handle, thick: underside first, then the shaft */}
-      <Flat {...SC_AT} lift={1}>
-        <path d={SC_HANDLE} fill={PAL.blueShade} />
-      </Flat>
-      <Flat {...SC_AT} lift={7}>
-        <path d={SC_HANDLE} fill={PAL.blue} />
-        <path d="M74 5Q84 6 96 5" fill="none" stroke={PAL.blueLight} strokeWidth="3.4" strokeLinecap="round" />
-      </Flat>
-      <Flat {...SC_AT} lift={3}>
-        <rect x="30" y="-3" width="40" height="6" rx="2.6" fill={PAL.slate} />
-        <rect x="60" y="-6" width="10" height="12" rx="2" fill={PAL.mist} />
-      </Flat>
-      {/* The triangle: its dark edge, then the lit steel face and the hole */}
-      <Flat {...SC_AT} lift={-3.5}>
-        <path d={SC_BLADE} fill={PAL.slateDark} />
-      </Flat>
-      <Flat {...SC_AT}>
-        <Shade color={PAL.slate} opacity={0.35} at={[20, -34, 40, 16]}>
-          <path d={SC_BLADE} fill={PAL.steel} />
-        </Shade>
-        <circle cx="13" cy="0" r="6.5" fill={PAL.slateDark} />
-        <path d="M6 18L26 6" fill="none" stroke={PAL.white} strokeWidth="4" strokeLinecap="round" opacity=".8" />
-      </Flat>
+      {/* On the intro card the scraper slides along, then the flakes it scraped off show */}
+      <Move kind="from" dx={-24} dy={-10}>
+        {/* The handle, thick: underside first, then the shaft */}
+        <Flat {...SC_AT} lift={1}>
+          <path d={SC_HANDLE} fill={PAL.blueShade} />
+        </Flat>
+        <Flat {...SC_AT} lift={7}>
+          <path d={SC_HANDLE} fill={PAL.blue} />
+          <path d="M74 5Q84 6 96 5" fill="none" stroke={PAL.blueLight} strokeWidth="3.4" strokeLinecap="round" />
+        </Flat>
+        <Flat {...SC_AT} lift={3}>
+          <rect x="30" y="-3" width="40" height="6" rx="2.6" fill={PAL.slate} />
+          <rect x="60" y="-6" width="10" height="12" rx="2" fill={PAL.mist} />
+        </Flat>
+        {/* The triangle: its dark edge, then the lit steel face and the hole */}
+        <Flat {...SC_AT} lift={-3.5}>
+          <path d={SC_BLADE} fill={PAL.slateDark} />
+        </Flat>
+        <Flat {...SC_AT}>
+          <Shade color={PAL.slate} opacity={0.35} at={[20, -34, 40, 16]}>
+            <path d={SC_BLADE} fill={PAL.steel} />
+          </Shade>
+          <circle cx="13" cy="0" r="6.5" fill={PAL.slateDark} />
+          <path d="M6 18L26 6" fill="none" stroke={PAL.white} strokeWidth="4" strokeLinecap="round" opacity=".8" />
+        </Flat>
+      </Move>
       {/* Flakes of old paint it scraped off */}
-      <path d="M14 99L30 92L35 101L19 106Z" fill={PAL.leafShade} />
-      <path d="M14 97L30 90L35 99L19 104Z" fill={PAL.leaf} />
-      <path d="M15 95Q22 88 31 88" fill="none" stroke={PAL.lime} strokeWidth="4.5" strokeLinecap="round" />
-      <path d="M40 104L52 99L56 106L44 109Z" fill={PAL.leafShade} />
-      <path d="M40 102L52 97L56 104L44 107Z" fill={PAL.leaf} />
-      <path d="M41 100Q46 95 53 95" fill="none" stroke={PAL.lime} strokeWidth="4" strokeLinecap="round" />
+      <Move kind="show">
+        <path d="M14 99L30 92L35 101L19 106Z" fill={PAL.leafShade} />
+        <path d="M14 97L30 90L35 99L19 104Z" fill={PAL.leaf} />
+        <path d="M15 95Q22 88 31 88" fill="none" stroke={PAL.lime} strokeWidth="4.5" strokeLinecap="round" />
+        <path d="M40 104L52 99L56 106L44 109Z" fill={PAL.leafShade} />
+        <path d="M40 102L52 97L56 104L44 107Z" fill={PAL.leaf} />
+        <path d="M41 100Q46 95 53 95" fill="none" stroke={PAL.lime} strokeWidth="4" strokeLinecap="round" />
+      </Move>
     </g>
   ),
 

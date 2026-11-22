@@ -735,14 +735,16 @@ function GenderShot({ lang, gender, greet }: { lang: LangCode; gender?: Gender; 
 }
 
 /** Some word pictures by id, at 160, 120 and 48 px, on a light and on a dark card: to review
- *  drawings before their lessons exist (/?shot=pictures&ids=w.a,w.b). */
+ *  drawings before their lessons exist (/?shot=pictures&ids=w.a,w.b). The big one sits on an intro
+ *  card, so a moving picture moves there once, as on a lesson's intro card. */
 function PictureIds({ ids }: { ids: string[] }) {
   return (
     <div className="pics-page">
       <div className="pics-grid">
         {ids.map((id) => (
           <div key={id} className="pics-cell">
-            <div className="pics-row">
+            {/* On an intro card (class intro-card), so a moving picture moves here as in a lesson. */}
+            <div className="pics-row intro-card" style={{ border: 0, padding: 0, background: 'none', boxShadow: 'none' }}>
               <WordPicture id={id} emoji="❓" size={160} />
             </div>
             <div className="pics-row">

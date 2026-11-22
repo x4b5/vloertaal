@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 /** Copper: a lighter and a darker step of terracotta (no new hue). */
 const COPPER = PAL.clayLight;
@@ -21,8 +21,10 @@ export default {
         {/* Below the jaws: the bare copper core, then the piece of insulation pulled off */}
         <path d="M88 68V82" stroke={COPPER} strokeWidth="4.6" strokeLinecap="round" />
         <path d="M89.6 70V81" stroke={COPPER_DARK} strokeWidth="1.4" strokeLinecap="round" />
-        <path d="M88 88V102" stroke={PAL.blueShade} strokeWidth="9" strokeLinecap="round" />
-        <path d="M86.8 88V102" stroke={PAL.blue} strokeWidth="5.6" strokeLinecap="round" />
+        <Move kind="from" dy={-32}>
+          <path d="M88 88V102" stroke={PAL.blueShade} strokeWidth="9" strokeLinecap="round" />
+          <path d="M86.8 88V102" stroke={PAL.blue} strokeWidth="5.6" strokeLinecap="round" />
+        </Move>
         {/* The handles: steel by the pivot, then the orange grips */}
         <path d="M60 55L36 46" stroke={PAL.steel} strokeWidth="9" strokeLinecap="round" />
         <path d="M60 65L36 72" stroke={PAL.steel} strokeWidth="9" strokeLinecap="round" />

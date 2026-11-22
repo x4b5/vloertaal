@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The dipstick lies along a line falling to the bottom right: from under the handle to the tip. */
 const A: [number, number] = [32, 30];
@@ -20,22 +20,27 @@ export default {
   'w.oliepeilstok': () => (
     <g strokeLinecap="round">
       <Ground cx={66} cy={105} rx={40} ry={3.6} />
-      {/* The thin rod, then the wider flat tip */}
-      <path d={`M${at(4)}L${at(LEN - 34)}`} stroke={PAL.steel} strokeWidth="5" />
-      <path d={`M${at(LEN - 36)}L${at(LEN)}`} stroke={PAL.mist} strokeWidth="10" />
-      <path d={`M${at(LEN - 36, 2.6)}L${at(LEN, 2.6)}`} stroke={PAL.steel} strokeWidth="3.6" />
-      {/* The golden oil film between the marks, and the two marks */}
-      <path d={`M${at(MAX)}L${at(MIN + 2)}`} stroke={PAL.yellowShade} strokeWidth="11" />
-      <path d={`M${at(MAX - 0.5, -6)}L${at(MAX - 0.5, 6)}`} stroke={PAL.slateDark} strokeWidth="3" />
-      <path d={`M${at(MIN, -6)}L${at(MIN, 6)}`} stroke={PAL.slateDark} strokeWidth="3" />
-      <Shine d={`M${at(MAX + 4, -3)}L${at(MAX + 12, -3)}`} color={PAL.yellowShine} width={2} opacity={0.9} />
+      {/* On the intro card the stick slides out along its axis (to the top left), then the drop falls */}
+      <Move kind="from" dx={r1(UX * 22)} dy={r1(UY * 22)}>
+        {/* The thin rod, then the wider flat tip */}
+        <path d={`M${at(4)}L${at(LEN - 34)}`} stroke={PAL.steel} strokeWidth="5" />
+        <path d={`M${at(LEN - 36)}L${at(LEN)}`} stroke={PAL.mist} strokeWidth="10" />
+        <path d={`M${at(LEN - 36, 2.6)}L${at(LEN, 2.6)}`} stroke={PAL.steel} strokeWidth="3.6" />
+        {/* The golden oil film between the marks, and the two marks */}
+        <path d={`M${at(MAX)}L${at(MIN + 2)}`} stroke={PAL.yellowShade} strokeWidth="11" />
+        <path d={`M${at(MAX - 0.5, -6)}L${at(MAX - 0.5, 6)}`} stroke={PAL.slateDark} strokeWidth="3" />
+        <path d={`M${at(MIN, -6)}L${at(MIN, 6)}`} stroke={PAL.slateDark} strokeWidth="3" />
+        <Shine d={`M${at(MAX + 4, -3)}L${at(MAX + 12, -3)}`} color={PAL.yellowShine} width={2} opacity={0.9} />
+        {/* The dark rubber stopper and the yellow ring handle */}
+        <path d={`M${at(3)}L${at(13)}`} stroke={PAL.slateDark} strokeWidth="11" />
+        <circle cx="24" cy="23" r="12" fill="none" stroke={PAL.yellow} strokeWidth="8" />
+        <path d="M34.4 17A12 12 0 0 1 30 33.4" fill="none" stroke={PAL.yellowShade} strokeWidth="8" strokeLinecap="butt" />
+        <Shine d="M15 19Q17 14 22 12.5" color={PAL.yellowShine} width={2.4} opacity={0.9} />
+      </Move>
       {/* The drop falling from the tip */}
-      <path d="M103 91Q108 97 108 99.5A5 5 0 0 1 98 99.5Q98 97 103 91Z" fill={PAL.yellowShade} />
-      {/* The dark rubber stopper and the yellow ring handle */}
-      <path d={`M${at(3)}L${at(13)}`} stroke={PAL.slateDark} strokeWidth="11" />
-      <circle cx="24" cy="23" r="12" fill="none" stroke={PAL.yellow} strokeWidth="8" />
-      <path d="M34.4 17A12 12 0 0 1 30 33.4" fill="none" stroke={PAL.yellowShade} strokeWidth="8" strokeLinecap="butt" />
-      <Shine d="M15 19Q17 14 22 12.5" color={PAL.yellowShine} width={2.4} opacity={0.9} />
+      <Move kind="show">
+        <path d="M103 91Q108 97 108 99.5A5 5 0 0 1 98 99.5Q98 97 103 91Z" fill={PAL.yellowShade} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

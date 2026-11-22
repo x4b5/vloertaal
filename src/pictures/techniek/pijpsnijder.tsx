@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { CurveArrow, PAL, Shine } from '../kit';
+import { CurveArrow, Move, PAL, Shine } from '../kit';
 
 /** Copper (terracotta steps). */
 const CU = { base: PAL.clay, shade: PAL.clayShade, light: PAL.clayLight, inside: '#8f3a1a' };
@@ -51,7 +51,9 @@ export default {
       <rect x={57} y={CY + FR + 10} width={10} height={30} rx="5" fill={PAL.redShade} />
       <path d={`M51 ${CY + FR + 15}V${CY + FR + 34}M57 ${CY + FR + 15}V${CY + FR + 34}`} stroke={PAL.redShade} strokeWidth="2" />
       {/* It turns round the pipe */}
-      <CurveArrow from={[92, 14]} to={[96, 74]} bend={-15} color={PAL.sky} width={7} head={13} />
+      <Move kind="turn" turn={-80} at={C}>
+        <CurveArrow from={[92, 14]} to={[96, 74]} bend={-15} color={PAL.sky} width={7} head={13} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

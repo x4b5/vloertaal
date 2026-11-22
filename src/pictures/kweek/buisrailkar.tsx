@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -48,15 +48,19 @@ export default {
       {wheel(85, 74.5, true)}
       {/* The chassis */}
       {block(24, 72, 60, 10, 13, PAL.slate, PAL.steel, PAL.slateDark)}
-      {/* The scissor lift: two crossed steel arms */}
+      {/* The scissor lift: two crossed steel arms. It unfolds and the platform rises (Move) */}
+      <Move kind="sag" grow={0.3}>
       <path d="M34 70L74 50M34 50L74 70" stroke={PAL.steel} strokeWidth="4.5" strokeLinecap="round" />
       <circle cx="54" cy="60" r="3" fill={PAL.slate} />
+      </Move>
+      <Move kind="slow" dy={14}>
       {/* The guard rail on the platform */}
       <path d="M30 44V20H86V44M58 44V20" fill="none" stroke={PAL.yellowShade} strokeWidth="4.5" strokeLinecap="round" />
       <path d="M30 32H86" stroke={PAL.yellowShade} strokeWidth="3.5" strokeLinecap="round" />
       {/* The yellow platform */}
       {block(24, 44, 64, 6, 12, PAL.yellow, PAL.yellowLight, PAL.yellowShade)}
       <Shine d="M28 46H50" color={PAL.yellowShine} width={2.4} opacity={0.9} />
+      </Move>
       {/* The front pipe and the front wheels on it */}
       {pipe(10, 102, 96)}
       {wheel(32, 83.5, false)}

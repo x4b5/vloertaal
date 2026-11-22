@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view (as in group55): one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -99,7 +99,11 @@ export default {
         {/* The front halves of the hose loops */}
         <path d={c.front} fill="none" stroke={PAL.green} strokeWidth="3.6" strokeLinecap="round" />
         {/* The air going from the nozzle to the plate */}
-        <path d={air()} stroke={PAL.sky} strokeWidth="2.6" strokeLinecap="round" />
+        <Move kind="fast" dx={8} dy={-6}>
+          <path d={air()} stroke={PAL.sky} strokeWidth="2.6" strokeLinecap="round" />
+        </Move>
+        {/* (The dust starts on the plate and is blown up off its end.) */}
+        <Move kind="from" dx={14} dy={12}>
         {/* The puff of dust lifting off the plate's left end, and chips flying off */}
         <circle cx="25" cy="81" r="7" fill={PAL.cardShade} />
         <circle cx="15" cy="83" r="6" fill={PAL.card} />
@@ -107,6 +111,7 @@ export default {
         <circle cx="27" cy="71" r="4.5" fill={PAL.card} />
         <rect x="11" y="54" width="5" height="5" rx="1" fill={PAL.cardDark} transform="rotate(25 13.5 56.5)" />
         <rect x="24" y="53" width="4.5" height="4.5" rx="1" fill={PAL.cardDark} transform="rotate(-20 26 55)" />
+        </Move>
       </g>
     );
   },

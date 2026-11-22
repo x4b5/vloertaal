@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 /** Copper (terracotta steps) and brass (darker steps of the hard-hat yellow). */
 const CU = { base: PAL.clay, shade: PAL.clayShade, light: PAL.clayLight, inside: '#8f3a1a' };
@@ -46,10 +46,12 @@ export default {
       <rect x={54} y={CY - 30} width={12} height={12} fill={BRASS.shade} />
       <rect x={51} y={CY - 37} width={18} height={9} rx="2" fill={PAL.steel} />
       {/* The big red lever, along the pipe */}
-      <rect x={38} y={CY - 58} width={72} height={22} rx="8" fill={PAL.redShade} />
-      <rect x={38} y={CY - 58} width={72} height={16} rx="8" fill={PAL.red} />
-      <circle cx={60} cy={CY - 47} r={5} fill={PAL.redShade} />
-      <Shine d={`M72 ${CY - 53}H103`} width={3.4} opacity={0.6} />
+      <Move kind="turn" turn={90} at={[60, CY - 47]}>
+        <rect x={38} y={CY - 58} width={72} height={22} rx="8" fill={PAL.redShade} />
+        <rect x={38} y={CY - 58} width={72} height={16} rx="8" fill={PAL.red} />
+        <circle cx={60} cy={CY - 47} r={5} fill={PAL.redShade} />
+        <Shine d={`M72 ${CY - 53}H103`} width={3.4} opacity={0.6} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

@@ -38,7 +38,25 @@ const MOTION_ROUND2 = [
  * the report's "later" list and a pass over every word, by the same rules; in doubt, not.
  */
 const MOTION_ROUND3 = ['w.opruimen', 'w.afruimen', 'w.inpakken', 'w.afpakken', 'w.kiezen', 'w.beter', 'w.duren', 'w.verhuizen', 'w.vergrendelen'];
-const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3];
+/**
+ * Tools and machines whose function is a movement (the owner's choice, 22 November 2026;
+ * docs/tekenstijl.md "Gereedschap en machines"): the movement shows what the thing is for.
+ */
+const MOTION_FUNCTION = [
+  // Productie (src/pictures/maken).
+  'w.hendel', 'w.meetklok', 'w.sealmachine', 'w.tapepistool', 'w.persluchtpistool', 'w.oliekannetje', 'w.smeerpistool',
+  // Montage (src/pictures/montage).
+  'w.schroefmachine', 'w.momentsleutel', 'w.takel', 'w.tilhulp', 'w.draaitafel', 'w.rolbaan', 'w.voetpedaal', 'w.stempel',
+  // Techniek (src/pictures/techniek).
+  'w.striptang', 'w.lasklem', 'w.zekering', 'w.hangslot', 'w.pijpsnijder', 'w.afsluiter', 'w.bankschroef', 'w.kolomboormachine', 'w.draadtap',
+  // Tuinbouw (src/pictures/kweek).
+  'w.gieter', 'w.druppelaar', 'w.luchtraam', 'w.kasscherm', 'w.sorteermachine', 'w.etiketpistool', 'w.tomatenschaar', 'w.buisrailkar',
+  // Garage (src/pictures/autoservice).
+  'w.bandenspanningsmeter', 'w.bandenwisselaar', 'w.trechter', 'w.oliepeilstok',
+  // Bouw (group53, group56, group57, group61).
+  'w.tegelsnijder', 'w.duimstok', 'w.roerstok', 'w.verfkrabber', 'w.passer',
+];
+const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
 const MOTION_ONLY: [string, string][] = [
   ['w.ontruimen', 'l.alarm'], ['w.bijna', 'l.task'],

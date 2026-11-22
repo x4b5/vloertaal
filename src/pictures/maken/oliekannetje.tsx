@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shade, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view (as in group55): one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -91,8 +91,10 @@ export default {
       {/* The long thin spout */}
       <path d={spout()} fill={PAL.yellowShade} />
       {/* The drop of oil, falling on the gear */}
-      <path d="M97 54Q103 62 103 65.5A6 6 0 0 1 91 65.5Q91 62 97 54Z" fill={PAL.yellowShade} />
-      <path d="M94.2 64.6Q94.4 62.2 95.8 60.6" stroke={PAL.yellowShine} strokeWidth="1.6" strokeLinecap="round" fill="none" />
+      <Move kind="drop" dy={-10}>
+        <path d="M97 54Q103 62 103 65.5A6 6 0 0 1 91 65.5Q91 62 97 54Z" fill={PAL.yellowShade} />
+        <path d="M94.2 64.6Q94.4 62.2 95.8 60.6" stroke={PAL.yellowShine} strokeWidth="1.6" strokeLinecap="round" fill="none" />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view (as in group55): one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -46,12 +46,14 @@ export default {
       <path d={`M${NX} ${AXIS + R}V${NY - 12}`} stroke={PAL.steel} strokeWidth="5" strokeLinecap="round" />
       <rect x={NX - 5.5} y={NY - 20} width="11" height="12" rx="2.5" fill={PAL.steel} />
       {/* The grease swelling out around the nozzle */}
-      <path
-        d={`M${NX - 10} ${NY - 4}Q${NX - 11} ${NY - 10} ${NX - 5} ${NY - 10}H${NX + 5}Q${NX + 11} ${NY - 10} ${NX + 10} ${NY - 4}Q${NX + 9} ${NY - 1} ${NX} ${NY - 1}Q${NX - 9} ${NY - 1} ${NX - 10} ${NY - 4}Z`}
-        fill={GREASE}
-      />
-      <path d={`M${NX + 3} ${NY - 2}Q${NX + 9} ${NY - 2} ${NX + 10} ${NY - 5}`} stroke={GREASE_SHADE} strokeWidth="2.4" strokeLinecap="round" fill="none" />
-      <path d={`M${NX - 7} ${NY - 6}Q${NX - 6} ${NY - 8.5} ${NX - 3} ${NY - 8.5}`} stroke={PAL.yellowLight} strokeWidth="2" strokeLinecap="round" fill="none" />
+      <Move kind="sag" grow={0.2}>
+        <path
+          d={`M${NX - 10} ${NY - 4}Q${NX - 11} ${NY - 10} ${NX - 5} ${NY - 10}H${NX + 5}Q${NX + 11} ${NY - 10} ${NX + 10} ${NY - 4}Q${NX + 9} ${NY - 1} ${NX} ${NY - 1}Q${NX - 9} ${NY - 1} ${NX - 10} ${NY - 4}Z`}
+          fill={GREASE}
+        />
+        <path d={`M${NX + 3} ${NY - 2}Q${NX + 9} ${NY - 2} ${NX + 10} ${NY - 5}`} stroke={GREASE_SHADE} strokeWidth="2.4" strokeLinecap="round" fill="none" />
+        <path d={`M${NX - 7} ${NY - 6}Q${NX - 6} ${NY - 8.5} ${NX - 3} ${NY - 8.5}`} stroke={PAL.yellowLight} strokeWidth="2" strokeLinecap="round" fill="none" />
+      </Move>
       {/* The long tube (grease barrel): base, the dark underside, the light top */}
       <rect x={TUBE_X} y={AXIS - R} width={TUBE_END - TUBE_X} height={2 * R} rx="3" fill={PAL.blue} />
       <rect x={TUBE_X} y={AXIS + R - 7} width={TUBE_END - TUBE_X} height="7" rx="3" fill={PAL.blueShade} />

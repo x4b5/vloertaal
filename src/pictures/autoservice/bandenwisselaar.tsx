@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -57,9 +57,12 @@ export default {
       {/* The shaft going down from the arm to the head */}
       <rect x="50" y="27" width="6" height="15" fill={PAL.steel} />
       <rect x="53" y="27" width="3" height="15" fill={PAL.line} />
-      {/* The black mount head pressing on the tyre's edge (near the back of the rim) */}
-      <path d="M45 38H61L59 46Q53 50 47 46Z" fill={PAL.slateDark} />
-      <rect x="45" y="37" width="16" height="4" rx="1.5" fill={PAL.slate} />
+      {/* The black mount head pressing on the tyre's edge (near the back of the rim); on the intro
+          card it comes down onto the tyre */}
+      <Move kind="from" dy={-8}>
+        <path d="M45 38H61L59 46Q53 50 47 46Z" fill={PAL.slateDark} />
+        <rect x="45" y="37" width="16" height="4" rx="1.5" fill={PAL.slate} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

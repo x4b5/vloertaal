@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 export default {
   // "de gieter": the watering can — a green can with a round body, a big loop handle over the top, a
@@ -7,6 +7,8 @@ export default {
   'w.gieter': () => (
     <g strokeLinejoin="round">
       <Ground cx={50} cy={104} rx={36} ry={4} />
+      {/* The can tips forward into the pour (Move), then the drops fall from the rose */}
+      <Move kind="turn" turn={-16} at={[43, 104]}>
       {/* The long spout, from the bottom of the body up to the rose */}
       <path d="M60 88L88 46" stroke={PAL.greenShade} strokeWidth="7" strokeLinecap="round" />
       <path d="M59 84L84 47" stroke={PAL.green} strokeWidth="3" strokeLinecap="round" />
@@ -28,10 +30,15 @@ export default {
       <ellipse cx="43" cy="52" rx="27" ry="5" fill={PAL.leaf} />
       <ellipse cx="34" cy="52" rx="9" ry="2.4" fill={PAL.greenShade} />
       <Shine d="M22 62V90" width={3.6} opacity={0.6} />
+      </Move>
       {/* The drops */}
+      <Move kind="show">
+      <Move kind="then" dy={-16}>
       {[[104, 58], [96, 66], [108, 74]].map(([x, y]) => (
         <path key={x} d={`M${x} ${y}Q${x + 4} ${y + 6} ${x + 4} ${y + 8}A4 4 0 0 1 ${x - 4} ${y + 8}Q${x - 4} ${y + 6} ${x} ${y}Z`} fill={PAL.sky} />
       ))}
+      </Move>
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

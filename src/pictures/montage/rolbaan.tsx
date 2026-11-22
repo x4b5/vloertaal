@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Ground, PAL, Shine, r1 } from '../kit';
+import { Arrow, Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -38,12 +38,14 @@ export default {
             <path d={line(iso(u - 0.8, 1, 0.8), iso(u - 0.8, D - 1, 0.8))} stroke={PAL.mist} strokeWidth="3.6" strokeLinecap="round" />
           </g>
         ))}
-        {/* The box riding on the rollers: right side, top, front */}
+        {/* The box riding on the rollers: right side, top, front; it rolls in from the left */}
+        <Move kind="from" dx={-26}>
         <path d={quad(iso(box.u1, box.v0, 3), iso(box.u1, box.v1, 3), iso(box.u1, box.v1, 3 + box.h), iso(box.u1, box.v0, 3 + box.h))} fill={PAL.cardShade} />
         <path d={quad(iso(box.u0, box.v0, 3 + box.h), iso(box.u1, box.v0, 3 + box.h), iso(box.u1, box.v1, 3 + box.h), iso(box.u0, box.v1, 3 + box.h))} fill="#f0c48a" />
         <path d={quad(iso(box.u0, box.v0, 3), iso(box.u1, box.v0, 3), iso(box.u1, box.v0, 3 + box.h), iso(box.u0, box.v0, 3 + box.h))} fill={PAL.card} />
         <path d={quad(iso(46, box.v0, 3 + box.h), iso(50, box.v0, 3 + box.h), iso(50, box.v1, 3 + box.h), iso(46, box.v1, 3 + box.h))} fill="#f6dcae" />
         <path d={quad(iso(46, box.v0, 3 + box.h), iso(50, box.v0, 3 + box.h), iso(50, box.v0, 3 + box.h - 8), iso(46, box.v0, 3 + box.h - 8))} fill="#f6dcae" />
+        </Move>
         {/* The front legs and the front rail */}
         <path d={line(iso(4, 0, -6), iso(4, 0, -26))} stroke={PAL.slate} strokeWidth="5" />
         <path d={line(iso(L - 4, 0, -6), iso(L - 4, 0, -26))} stroke={PAL.slate} strokeWidth="5" />
