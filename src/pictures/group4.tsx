@@ -143,11 +143,14 @@ export default {
       {/* Mast and forks (light steel, shade on the right) */}
       <rect x="31" y="14" width="11" height="86" rx="3" fill={PAL.mist} />
       <rect x="37" y="14" width="5" height="86" rx="2.5" fill={PAL.steel} />
-      <rect x="26" y="64" width="9" height="36" rx="2.5" fill={PAL.steel} />
-      <rect x="7" y="94" width="29" height="6" rx="3" fill={PAL.steel} />
-      {/* The load */}
-      <Box x={9} y={68} w={22} h={27} depth={0} tape={false} />
-      <rect x="18" y="68" width="5" height="10" fill="#f6dcae" />
+      {/* On the intro card the forks come down the mast with the load (docs/tekenstijl.md "Beweging") */}
+      <Move kind="from" dy={-40}>
+        <rect x="26" y="64" width="9" height="36" rx="2.5" fill={PAL.steel} />
+        <rect x="7" y="94" width="29" height="6" rx="3" fill={PAL.steel} />
+        {/* The load */}
+        <Box x={9} y={68} w={22} h={27} depth={0} tape={false} />
+        <rect x="18" y="68" width="5" height="10" fill="#f6dcae" />
+      </Move>
       {/* Wheels: dark tyres with big light hubs */}
       <circle cx="56" cy="94" r="12" fill={PAL.slateDark} />
       <circle cx="56" cy="94" r="6.5" fill={PAL.mist} />
@@ -196,10 +199,13 @@ export default {
       <rect x="22" y="11" width="76" height="28" rx="4" fill={PAL.white} />
       <path d="M31 17V33M36 17V33M43 17V33M47 17V33M54 17V33M61 17V33M65 17V33M72 17V33M78 17V33M83 17V33M89 17V33" stroke={PAL.ink} strokeWidth="3" />
       <path d="M33.5 17V33M51 17V33M68.5 17V33M86 17V33" stroke={PAL.ink} strokeWidth="1.6" />
-      {/* Beam */}
-      <path d="M53 58L67 58L94 42H26Z" fill={PAL.red} opacity=".28" />
-      <path d="M24 25H96" stroke={PAL.red} strokeWidth="3" strokeLinecap="round" />
-      {/* Handheld terminal */}
+      {/* Beam: on the intro card it lights up once the terminal is at the label */}
+      <Move kind="show">
+        <path d="M53 58L67 58L94 42H26Z" fill={PAL.red} opacity=".28" />
+        <path d="M24 25H96" stroke={PAL.red} strokeWidth="3" strokeLinecap="round" />
+      </Move>
+      {/* Handheld terminal (on the intro card it comes up to the label) */}
+      <Move kind="from" dy={16}>
       <Shade color={PAL.yellowShade} opacity={1} at={[90, 86, 12, 40]}>
         <rect x="36" y="52" width="48" height="64" rx="12" fill={PAL.yellow} />
       </Shade>
@@ -217,6 +223,7 @@ export default {
         <rect key={kx} x={kx - 2} y="101" width="8" height="6" rx="3" fill={PAL.steel} />
       ))}
       <Shine d="M44 66V96" width={3} opacity={0.35} />
+      </Move>
     </g>
   ),
 
