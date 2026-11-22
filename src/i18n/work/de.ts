@@ -227,19 +227,19 @@ const t: CultureTranslation = {
     's.rights.3': 'Das ist Diskriminierung.',
     'c.rights.q': 'Unterschreib hier für deine Kündigung.',
     'c.rights.a': 'Nein, ich unterschreibe noch nicht.',
-    'l.mustmay': 'Musst du, oder darfst du wählen?', // nieuw, nalezen
-    'w.moeten': 'müssen', // nieuw, nalezen
-    'w.niethoeven': 'nicht müssen', // nieuw, nalezen
-    'w.nodig': 'nötig, notwendig', // nieuw, nalezen
-    'w.vrijwillig': 'freiwillig', // nieuw, nalezen
-    'w.keuze': 'die Wahl', // nieuw, nalezen
-    'w.regel': 'die Regel', // nieuw, nalezen
-    's.mustmay.1': 'Muss ich das unterschreiben?', // nieuw, nalezen
-    's.mustmay.2': 'Nein, du musst nicht unterschreiben.', // nieuw, nalezen
-    's.mustmay.3': 'Das ist die Regel: Ein Helm ist Pflicht.', // nieuw, nalezen
-    'c.mustmay.q': 'Muss ich am Samstag Überstunden machen?', // nieuw, nalezen
-    'c.mustmay.a': 'Nein, das ist nicht nötig. Es ist freiwillig.', // nieuw, nalezen
-    'u.leave': "Urlaub", // nieuw, nalezen
+    'l.mustmay': 'Musst du, oder darfst du wählen?', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.moeten': 'müssen', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.niethoeven': 'nicht müssen', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.nodig': 'nötig, notwendig', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vrijwillig': 'freiwillig', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.keuze': 'die Wahl', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.regel': 'die Regel', // nieuw, nalezen // nagelezen AI 22 nov
+    's.mustmay.1': 'Muss ich das unterschreiben?', // nieuw, nalezen // nagelezen AI 22 nov
+    's.mustmay.2': 'Nein, du musst nicht unterschreiben.', // nieuw, nalezen // nagelezen AI 22 nov
+    's.mustmay.3': 'Das ist die Regel: Ein Helm ist Pflicht.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.q': 'Muss ich am Samstag Überstunden machen?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.a': 'Nein, das ist nicht nötig. Es ist freiwillig.', // nieuw, nalezen // nagelezen AI 22 nov
+    'u.leave': "Urlaub", // nieuw, nalezen // nagelezen AI 22 nov
     'l.leave': 'Freie Tage',
     'w.vakantiedagen': 'die Urlaubstage',
     'w.verlof': 'der Urlaub, die Freistellung',
@@ -354,7 +354,7 @@ const t: CultureTranslation = {
     'c.doctor.a': 'Mein Sohn hat hohes Fieber.',
     'l.insurance': 'Krankenversicherung',
     'w.premie': 'der Beitrag (monatliche Zahlung)',
-    'w.eigenrisico': 'die Selbstbeteiligung (Kosten, die du zuerst selbst zahlst)', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.eigenrisico': 'die Selbstbeteiligung (Kosten, die du zuerst selbst zahlst)', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'w.zorgtoeslag': 'der Zuschuss zur Krankenversicherung (zorgtoeslag)',
     'w.verzekeraar': 'die Versicherung (die Firma)',
     'w.permaand': 'pro Monat',
@@ -564,8 +564,8 @@ const t: CultureTranslation = {
     's.cleansafe.3': 'Misch nie Reinigungsmittel.',
     'c.cleansafe.q': 'Darf ich hier langgehen?', // nieuw, nalezen (AI-correctie 2 nov 2026)
     'c.cleansafe.a': 'Vorsicht, der Boden ist noch rutschig.',
-    'c.cv': 'Ein kurzer Lebenslauf', // nieuw, nalezen
-    'c.cv.b': 'Ein Lebenslauf ist hier kurz: 1 oder 2 Seiten. Schreib deine Kontaktdaten, Berufserfahrung, Ausbildung, Sprachen und Fähigkeiten auf. Ein Foto ist nicht nötig. Religion, Alter oder Familienstand musst du nicht angeben. Sei ehrlich darüber, was du kannst. Bitte jemanden, dein Niederländisch zu prüfen.', // nieuw, nalezen
+    'c.cv': 'Ein kurzer Lebenslauf', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.cv.b': 'Ein Lebenslauf ist hier kurz: 1 oder 2 Seiten. Schreib deine Kontaktdaten, Berufserfahrung, Ausbildung, Sprachen und Fähigkeiten auf. Ein Foto ist nicht nötig. Religion, Alter oder Familienstand musst du nicht angeben. Sei ehrlich darüber, was du kannst. Bitte jemanden, dein Niederländisch zu prüfen.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.cv.p': 'Liest du meinen Lebenslauf? Ist mein Niederländisch richtig?',
     'c.cv.s': 'Du hast 3 Jahre in einer Fabrik in deinem Heimatland gearbeitet, aber du hast keinen Abschluss. Was schreibst du in deinen Lebenslauf?',
     'c.cv.o1': 'Schreib die Arbeit auf und was du dort gemacht hast, ehrlich.',
@@ -576,48 +576,48 @@ const t: CultureTranslation = {
     'c.interview.b': 'Komm pünktlich: 5 bis 10 Minuten früher. Grüß höflich und schau die Person an. Erzähl kurz, was du kannst. Selbst Fragen stellen ist normal und gut, zum Beispiel zu den Stunden, der Arbeit oder Schulungen. Am Ende darfst du fragen, wann du etwas hörst. Du kannst ruhig sagen, dass du noch Niederländisch lernst. Ein Arbeitgeber darf nicht nach deiner Religion, einer Schwangerschaft oder deiner Gesundheit fragen. Du musst nicht antworten: Du darfst höflich sagen, dass du lieber nicht antwortest.',
     'c.interview.p': 'Darf ich auch etwas fragen? Wie viele Stunden pro Woche ist die Arbeit?',
     'c.interview.s': 'Am Ende des Gesprächs fragt der Arbeitgeber: „Heb je nog vragen?“ Was machst du?',
-    'c.interview.o1': 'Stell eine Frage zu den Stunden oder zu Schulungen.', // nagelezen (2e lezing)
+    'c.interview.o1': 'Stell eine Frage zu den Stunden oder zu Schulungen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.interview.o2': 'Sag nein, weil Fragen stellen nicht höflich ist.',
-    'c.interview.o3': 'Erzähl mehr über dich, um zu zeigen, dass du gut arbeitest.', // nagelezen (2e lezing)
-    'c.interview.w': 'Fragen zeigen, dass du dich für die Stelle interessierst. Arbeitgeber hier erwarten sie oft.', // nieuw, nalezen
+    'c.interview.o3': 'Erzähl mehr über dich, um zu zeigen, dass du gut arbeitest.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.interview.w': 'Fragen zeigen, dass du dich für die Stelle interessierst. Arbeitgeber hier erwarten sie oft.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.findwork': 'Hol dir deinen Vertrag auf Papier',
     'c.findwork.b': 'Frag immer nach einem schriftlichen Vertrag und einer Kopie für dich. Lies ihn, bevor du unterschreibst, oder bitte jemanden, dem du vertraust, um Hilfe. Eine Zeitarbeitsfirma (uitzendbureau) darf kein Geld von dir verlangen, um dir Arbeit zu vermitteln. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.findwork.p': 'Darf ich den Vertrag zuerst lesen?',
     'c.findwork.s': 'Ein neuer Arbeitgeber sagt: „Unterschreib jetzt hier. Lesen kannst du später.“ Was machst du?',
-    'c.findwork.o1': 'Bitte um Zeit zum Lesen oder um eine Kopie.', // nagelezen (2e lezing)
+    'c.findwork.o1': 'Bitte um Zeit zum Lesen oder um eine Kopie.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.findwork.o2': 'Unterschreib schnell, damit du die Stelle nicht verlierst.',
-    'c.findwork.o3': 'Unterschreib und bitte danach um eine Kopie.', // nagelezen (2e lezing)
+    'c.findwork.o3': 'Unterschreib und bitte danach um eine Kopie.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.findwork.w': 'In deinem Vertrag steht, was du verdienst und welche Rechte du hast. Ein guter Arbeitgeber gibt dir Zeit, ihn zu lesen. Du darfst nach allem fragen, was du nicht verstehst.',
     'c.contract': 'Probezeit und Arbeit auf Abruf',
-    'c.contract.b': 'Eine Probezeit (proeftijd) muss schriftlich vereinbart sein. In einem Vertrag von 6 Monaten oder kürzer ist sie nicht erlaubt. In einem längeren Vertrag unter 2 Jahren ist sie höchstens 1 Monat. In einem Vertrag von 2 Jahren oder länger, oder in einem unbefristeten, ist sie höchstens 2 Monate. Arbeitest du auf Abruf (oproepkracht)? Dein Arbeitgeber muss dir meistens mindestens 4 Tage vorher sagen, wann du arbeiten sollst. Wenn es später ist, musst du nicht kommen. Ein Tarifvertrag (cao) kann diese 4 Tage kürzer machen, aber nicht kürzer als 1 Tag. Wenn sie deine Arbeit später absagen, bekommst du trotzdem deinen Lohn. Wenn sie dich für weniger als 3 Stunden zur Arbeit rufen, bekommst du meistens 3 Stunden bezahlt. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.contract.b': 'Eine Probezeit (proeftijd) muss schriftlich vereinbart sein. In einem Vertrag von 6 Monaten oder kürzer ist sie nicht erlaubt. In einem längeren Vertrag unter 2 Jahren ist sie höchstens 1 Monat. In einem Vertrag von 2 Jahren oder länger, oder in einem unbefristeten, ist sie höchstens 2 Monate. Arbeitest du auf Abruf (oproepkracht)? Dein Arbeitgeber muss dir meistens mindestens 4 Tage vorher sagen, wann du arbeiten sollst. Wenn es später ist, musst du nicht kommen. Ein Tarifvertrag (cao) kann diese 4 Tage kürzer machen, aber nicht kürzer als 1 Tag. Wenn sie deine Arbeit später absagen, bekommst du trotzdem deinen Lohn. Wenn sie dich für weniger als 3 Stunden zur Arbeit rufen, bekommst du meistens 3 Stunden bezahlt. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.contract.p': 'Steht die Probezeit in meinem Vertrag?',
     'c.contract.s': 'Dein Vertrag geht 3 Monate. Darin steht: „Proeftijd: 1 maand“. Was machst du?',
-    'c.contract.o1': 'Frag nach: Diese Probezeit zählt nicht.', // nagelezen (2e lezing)
+    'c.contract.o1': 'Frag nach: Diese Probezeit zählt nicht.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.contract.o2': 'Nichts. Jeder Vertrag hat eine Probezeit.',
     'c.contract.o3': 'Unterschreib und frag nie, der Chef weiß es am besten.',
     'c.contract.w': 'Eine Probezeit in einem Vertrag von 6 Monaten oder kürzer gilt nicht. Ruhig nachfragen ist normal. Wenn die Antwort nicht klar ist, hol dir Rat bei der Gewerkschaft oder beim Juridisch Loket.',
     'c.agency': 'Deine Zeitarbeitsfirma ist dein Arbeitgeber',
     'c.agency.b': 'Wenn du über eine Zeitarbeitsfirma (uitzendbureau) arbeitest, ist die Zeitarbeitsfirma dein Arbeitgeber, nicht die Firma, in der du arbeitest. Dein Vertrag und dein Lohn kommen von der Zeitarbeitsfirma, und es gibt einen Tarifvertrag für Zeitarbeitskräfte (uitzend-cao). Du hast ein Recht auf denselben Lohn wie die Mitarbeiter der Firma, die dieselbe Arbeit machen. Du bekommst auch Urlaubsgeld (vakantiegeld) und sammelst freie Tage an. Führ deine eigene Liste mit den Stunden, die du gearbeitet hast, und prüfe sie auf deiner Lohnabrechnung. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
-    'c.agency.x': 'Hat dich ein Arbeitgeber aus einem anderen Land für eine Zeit hierher geschickt? Dann bist du entsandt (gedetacheerd). Frag deinen Arbeitgeber nach deiner A1-Bescheinigung: Sie zeigt, wo du versichert bist. Hier bekommst du trotzdem mindestens den niederländischen Mindestlohn.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
+    'c.agency.x': 'Hat dich ein Arbeitgeber aus einem anderen Land für eine Zeit hierher geschickt? Dann bist du entsandt (gedetacheerd). Frag deinen Arbeitgeber nach deiner A1-Bescheinigung: Sie zeigt, wo du versichert bist. Hier bekommst du trotzdem mindestens den niederländischen Mindestlohn.', // nieuw, nalezen (uit een ander land, 10 nov 2026) // nagelezen AI 22 nov
     'c.agency.p': 'Auf meiner Lohnabrechnung stehen zu wenige Stunden.',
     'c.agency.s': 'Auf deiner Lohnabrechnung stehen 32 Stunden, aber du hast 38 gearbeitet. Was machst du?',
-    'c.agency.o1': 'Zeig der Zeitarbeitsfirma deine Stundenliste und bitte um Korrektur.', // nagelezen (2e lezing)
+    'c.agency.o1': 'Zeig der Zeitarbeitsfirma deine Stundenliste und bitte um Korrektur.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.agency.o2': 'Sag nichts, es sind ja nur 6 Stunden.',
     'c.agency.o3': 'Bitte den Chef in der Firma, in der du arbeitest, die 6 Stunden zu bezahlen.',
     'c.agency.w': 'Die Zeitarbeitsfirma bezahlt dich, also muss die Zeitarbeitsfirma den Fehler korrigieren. Deine eigene Liste mit Daten und Stunden hilft. Danach zu fragen ist dein Recht.',
     'c.bsn': 'Deine BSN: Pass gut darauf auf',
     'c.bsn.b': 'Du bekommst eine BSN (burgerservicenummer), wenn du dich bei der Gemeinde (gemeente) anmeldest. Nur kurz hier? Dann meldest du dich an einem RNI-Schalter an. Du brauchst deine BSN für die Arbeit, für Steuern, für die Krankenversicherung und für ein Bankkonto. Dein Arbeitgeber braucht deinen Ausweis und deine BSN. Gib deine BSN oder eine Kopie deines Ausweises nicht einfach jedem. Frag zuerst, warum sie sie brauchen. Du ziehst um? Melde deine neue Adresse innerhalb von 5 Tagen bei der Gemeinde. DigiD ist dein Login für Websites der Behörden: Gib es nie an jemand anderen. Wohnst oder arbeitest du hier? Dann musst du meistens eine niederländische Krankenversicherung (zorgverzekering) haben. Kümmere dich schnell darum. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.bsn.p': 'Warum brauchen Sie meine BSN?',
-    'c.bsn.s': 'Ein Fremder bietet dir über WhatsApp eine Arbeit an. Er will ein Foto von deinem Pass und deine DigiD-Zugangsdaten. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.bsn.o1': 'Gib nie deine DigiD-Zugangsdaten. Prüfe, wer er ist.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.bsn.o2': 'Schick schnell alles, um die Arbeit zu bekommen.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.bsn.o3': 'Schick nur das Foto vom Pass.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.bsn.s': 'Ein Fremder bietet dir über WhatsApp eine Arbeit an. Er will ein Foto von deinem Pass und deine DigiD-Zugangsdaten. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.bsn.o1': 'Gib nie deine DigiD-Zugangsdaten. Prüfe, wer er ist.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.bsn.o2': 'Schick schnell alles, um die Arbeit zu bekommen.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.bsn.o3': 'Schick nur das Foto vom Pass.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.bsn.w': 'Mit deinem DigiD oder einer Kopie deines Ausweises können andere Leute deinen Namen benutzen, zum Beispiel für Kredite oder Sozialleistungen. Ein echter Arbeitgeber braucht deinen Ausweis und deine BSN, aber nie deine DigiD-Zugangsdaten.',
     'c.housing': 'Wohnen über deinen Arbeitgeber',
     'c.housing.b': 'Kümmert sich dein Arbeitgeber oder deine Zeitarbeitsfirma um deine Wohnung? Dann muss der Mietvertrag getrennt von deinem Arbeitsvertrag sein. Frag nach einem schriftlichen Mietvertrag und einem Nachweis, was du bezahlst. Miete darf nur von deinem Lohn abgezogen werden, wenn du schriftlich zugestimmt hast, und nur innerhalb der gesetzlichen Grenzen: Prüfe es auf deiner Lohnabrechnung. Eine Kaution (borg) ist höchstens 2 Monate Kaltmiete. Du bekommst sie zurück, wenn du ausziehst, minus echte Schäden. Melde dich mit deiner Adresse bei der Gemeinde an. Unsichere Wohnung, Drohungen oder unfaire Kosten? Melde es der Gemeinde (meldpunt) und hol dir kostenlose Beratung beim Juridisch Loket oder bei einer Wohnberatung. Bei Problemen mit der Miethöhe oder den Nebenkosten gibt es die Huurcommissie. Deine Arbeit endet? Hol dir Rat, bevor du aus deiner Wohnung ausziehst. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
     'c.housing.p': 'Darf ich einen Nachweis haben, dass ich bezahlt habe?',
     'c.housing.s': 'Deine Arbeit endet. Die Zeitarbeitsfirma sagt: „Du musst morgen aus dem Haus.“ Was machst du?',
-    'c.housing.o1': 'Hol dir zuerst Rat beim Juridisch Loket.', // nagelezen (2e lezing)
+    'c.housing.o1': 'Hol dir zuerst Rat beim Juridisch Loket.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.housing.o2': 'Zieh sofort aus und vergiss deine Kaution.',
     'c.housing.o3': 'Bleib und antworte der Zeitarbeitsfirma nicht mehr.',
     'c.housing.w': 'Dein Mietvertrag hat eigene Regeln, getrennt von deiner Arbeit. Kostenlose Beratung hilft dir, deine Rechte zu kennen, zum Beispiel wann du ausziehen musst und was mit deiner Kaution ist.',
@@ -625,9 +625,9 @@ const t: CultureTranslation = {
     'c.payslip.b': 'Brutto ist dein Lohn vor den Steuern. Netto ist das, was auf dein Bankkonto kommt: brutto minus Steuern und Beiträge (loonheffing). Dein Arbeitgeber muss dir eine Lohnabrechnung (loonstrook) geben. Prüfe auf jeder Lohnabrechnung die Stunden und den Lohn, und schreib die Stunden auf, die du arbeitest. Hast du zwei Jobs? Nutze die Steuerermäßigung (loonheffingskorting) nur bei einem Arbeitgeber. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.payslip.p': 'Ich habe mehr Stunden gearbeitet. Kannst du das prüfen?',
     'c.payslip.s': 'Auf deiner Lohnabrechnung stehen weniger Stunden, als du gearbeitet hast. Was machst du?',
-    'c.payslip.o1': 'Zeig deine Notizen und bitte deinen Vorgesetzten, es zu prüfen.', // nagelezen (2e lezing)
+    'c.payslip.o1': 'Zeig deine Notizen und bitte deinen Vorgesetzten, es zu prüfen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.payslip.o2': 'Sag nichts, weil du keine Probleme willst.',
-    'c.payslip.o3': 'Warte einen Monat: Auf der nächsten Lohnabrechnung stimmt es dann.', // nagelezen (2e lezing)
+    'c.payslip.o3': 'Warte einen Monat: Auf der nächsten Lohnabrechnung stimmt es dann.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.payslip.w': 'Fehler auf einer Lohnabrechnung passieren. Danach zu fragen ist normal und dein Recht. Deine eigenen Notizen mit Daten und Stunden helfen sehr.',
     'c.extra': 'Urlaubsgeld und Mindestlohn',
     'c.extra.b': 'Du bekommst Urlaubsgeld (vakantiegeld): mindestens 8 % von deinem Bruttolohn. Die meisten Arbeitgeber zahlen es einmal im Jahr, im Mai oder Juni. Dein Lohn darf nie niedriger sein als der gesetzliche Mindestlohn (minimumloon); für Arbeitnehmer unter 21 ist er niedriger. Der Betrag ändert sich jedes Jahr: Schau auf rijksoverheid.nl nach. Ein Tarifvertrag (cao) gibt oft extra Geld für Überstunden oder Nachtarbeit. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
@@ -635,7 +635,7 @@ const t: CultureTranslation = {
     'c.extra.s': 'Ein Kollege sagt: „Im Mai bekommst du extra Geld vom Chef.“ Was ist das?',
     'c.extra.o1': 'Urlaubsgeld: mindestens 8 % von deinem Bruttolohn.',
     'c.extra.o2': 'Ein Geschenk, nur für die besten Mitarbeiter.',
-    'c.extra.o3': 'Ein 13. Monatsgehalt: ein zusätzlicher Monatslohn für alle.', // nagelezen (2e lezing)
+    'c.extra.o3': 'Ein 13. Monatsgehalt: ein zusätzlicher Monatslohn für alle.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.extra.w': 'Urlaubsgeld ist dein Recht, kein Geschenk. Du sammelst es mit jeder Stunde an, die du arbeitest. Wenn du früher aufhörst, bekommst du es mit deinem letzten Lohn.',
     'c.phone': 'Dein Handy bei der Arbeit',
     'c.phone.b': 'An vielen Arbeitsplätzen sind Handys während der Arbeit nicht erlaubt, vor allem an Maschinen und Gabelstaplern oder in der Lebensmittelproduktion. Es kann unsicher oder unhygienisch sein. Benutz dein Handy in der Pause. Wartest du auf einen dringenden Anruf von deiner Familie? Sag es zuerst deinem Vorgesetzten. Mach bei der Arbeit keine Fotos oder Videos ohne Erlaubnis: Denk an die Privatsphäre der Kollegen und an Firmengeheimnisse. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
@@ -646,10 +646,10 @@ const t: CultureTranslation = {
     'c.phone.o3': 'Bleib zu Hause, ohne jemandem zu sagen, warum.',
     'c.phone.w': 'Vorgesetzte haben meistens Verständnis für einen Notfall in der Familie. Wenn sie es wissen, können sie eine sichere Lösung finden, zum Beispiel eine feste Zeit, in der du auf dein Handy schauen kannst.',
     'c.smoking': 'Rauchen nur draußen',
-    'c.smoking.b': 'In den Niederlanden ist Rauchen in Innenräumen am Arbeitsplatz gesetzlich verboten. Das gilt auch für E-Zigaretten (Vapes). Seit 2022 sind Raucherräume in Firmen nicht mehr erlaubt. Rauch nur draußen, an dem Platz, den dein Arbeitgeber erlaubt, und meistens nur in deiner Pause. Extra Raucherpausen sind kein Recht: Sprich sie mit deinem Vorgesetzten ab. Rauch nie in der Nähe von Dingen, die leicht brennen, wie Treibstoff oder Kartons im Lager. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.', // nagelezen AI ronde 3
+    'c.smoking.b': 'In den Niederlanden ist Rauchen in Innenräumen am Arbeitsplatz gesetzlich verboten. Das gilt auch für E-Zigaretten (Vapes). Seit 2022 sind Raucherräume in Firmen nicht mehr erlaubt. Rauch nur draußen, an dem Platz, den dein Arbeitgeber erlaubt, und meistens nur in deiner Pause. Extra Raucherpausen sind kein Recht: Sprich sie mit deinem Vorgesetzten ab. Rauch nie in der Nähe von Dingen, die leicht brennen, wie Treibstoff oder Kartons im Lager. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.', // nagelezen AI ronde 3 // nagelezen AI 22 nov
     'c.smoking.p': 'Darf ich in meiner Pause draußen rauchen?',
     'c.smoking.s': 'Es ist kalt und es regnet. Ein Kollege sagt: „Rauch doch im Lagerraum, da sieht es keiner.“ Was machst du?',
-    'c.smoking.o1': 'Sag nein und rauch in deiner Pause draußen.', // nieuw, nalezen
+    'c.smoking.o1': 'Sag nein und rauch in deiner Pause draußen.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.smoking.o2': 'Rauch schnell im Lagerraum, nur dieses eine Mal.',
     'c.smoking.o3': 'Nimm stattdessen drinnen deine Vape, das ist ja erlaubt.',
     'c.smoking.w': 'Rauchen in Gebäuden ist gegen das Gesetz und kann ein Feuer auslösen. Eine Vape drinnen ist auch nicht erlaubt. Wer sich an die Regel hält, schützt alle.',
@@ -657,7 +657,7 @@ const t: CultureTranslation = {
     'c.clock.b': 'Stempel selbst ein und aus, genau dann, wenn du wirklich anfängst und aufhörst zu arbeiten. Stempel nie für einen Kollegen ein oder aus, und lass nie jemand anderen deine Karte benutzen. Das gilt als Betrug und kann zur Kündigung führen. Kommst du zu spät? Ruf an, bevor deine Schicht anfängt. Prüfe, ob deine gestempelten Stunden zu deiner Lohnabrechnung passen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.clock.p': 'Ich habe vergessen auszustempeln. Kannst du das korrigieren?',
     'c.clock.s': 'Ein Kollege gibt dir seine Karte: „Stempel mich ein, ich komme 20 Minuten später.“ Was machst du?',
-    'c.clock.o1': 'Sag nein und sag ihm, er soll den Vorgesetzten anrufen.', // nagelezen (2e lezing)
+    'c.clock.o1': 'Sag nein und sag ihm, er soll den Vorgesetzten anrufen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.clock.o2': 'Mach es nur einmal, er ist ja dein Freund.',
     'c.clock.o3': 'Stempel ihn ein und sag es später dem Vorgesetzten.',
     'c.clock.w': 'Für jemand anderen stempeln gilt als Betrug, für euch beide. Nein sagen schützt deinen Kollegen und deine eigene Arbeit.',
@@ -665,7 +665,7 @@ const t: CultureTranslation = {
     'c.hygiene.b': 'Alkohol und Drogen bei der Arbeit, oder zur Arbeit kommen, nachdem man sie genommen hat, sind in fast allen Firmen verboten. An Maschinen und Gabelstaplern ist das sehr gefährlich, und es kann zur Kündigung führen. Macht dich ein Medikament müde oder schwindlig? Sag es deinem Vorgesetzten, damit du sicher arbeiten kannst. Welches Medikament, musst du nicht sagen. In der Lebensmittelproduktion sind die Hygieneregeln streng: Wasch dir die Hände, trag saubere Arbeitskleidung, wenn nötig ein Haarnetz, und keinen Schmuck. Erbrechen oder Durchfall? Melde es, bevor du anfängst. Halte deinen Arbeitsplatz ordentlich. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.hygiene.p': 'Ich nehme ein Medikament. Davon werde ich müde.',
     'c.hygiene.s': 'Dein Arzt gibt dir ein Medikament, das müde macht. Morgen musst du Gabelstapler fahren. Was machst du?',
-    'c.hygiene.o1': 'Sag es deinem Vorgesetzten, bevor du anfängst.', // nieuw, nalezen
+    'c.hygiene.o1': 'Sag es deinem Vorgesetzten, bevor du anfängst.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.hygiene.o2': 'Sag nichts und fahr sehr langsam.',
     'c.hygiene.o3': 'Hör auf, das Medikament zu nehmen, ohne deinen Arzt zu fragen.',
     'c.hygiene.w': 'Dein Vorgesetzter muss nicht wissen, welches Medikament, nur dass du jetzt nicht fahren oder an Maschinen arbeiten kannst. So bleiben du und deine Kollegen sicher.',
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.mistakes.b': 'Jeder macht bei der Arbeit Fehler. Sag es schnell, damit man es beheben kann: „Sorry, ik heb een fout gemaakt.“ Einen Fehler verstecken gilt als viel schlimmer als der Fehler selbst. Beim Feedback geht es um die Arbeit, nicht um dich als Person. Hast du ein Kompliment bekommen? Sag einfach danke. Nicht klar, was du besser machen sollst? Frag: „Kun je het uitleggen?“',
     'c.mistakes.p': 'Entschuldigung, ich habe einen Fehler gemacht. Wie kann ich das beheben?',
     'c.mistakes.s': 'Du hast 20 Kartons auf die falsche Palette gestellt. Noch hat es niemand gesehen. Was machst du?',
-    'c.mistakes.o1': 'Sag es deinem Vorgesetzten und hilf, es zu beheben.', // nagelezen (2e lezing)
+    'c.mistakes.o1': 'Sag es deinem Vorgesetzten und hilf, es zu beheben.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.mistakes.o2': 'Sag nichts und hoffe, dass es niemand merkt.',
     'c.mistakes.o3': 'Sag, dass ein Kollege es war.',
     'c.mistakes.w': 'Ein Fehler, den man früh sagt, ist leicht zu beheben. Ehrlichkeit schafft Vertrauen, und das zählt mehr, als nie einen Fehler zu machen.',
@@ -690,33 +690,33 @@ const t: CultureTranslation = {
     'c.respect.p': 'Ich gebe lieber nicht die Hand, aber ich grüße dich gern.',
     'c.respect.s': 'Ein Kollege macht oft Witze über deine Religion. Du hast ihn gebeten aufzuhören, aber er macht weiter. Was machst du?',
     'c.respect.o1': 'Sag es deinem Vorgesetzten oder der vertrouwenspersoon.',
-    'c.respect.o2': 'Lach mit ihm mit, damit es keinen Ärger gibt.', // nieuw, nalezen
+    'c.respect.o2': 'Lach mit ihm mit, damit es keinen Ärger gibt.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.respect.o3': 'Mach zur Antwort Witze über seine Herkunft.',
     'c.respect.w': 'Solche Witze werden bei der Arbeit nicht akzeptiert. Es zu melden ist normal: Die Firma muss den Arbeitsplatz für alle sicher halten.',
     'c.health': 'Pausen und Arbeitszeiten',
-    'c.health.b': 'Das Gesetz schützt deine Gesundheit. Arbeitest du mehr als 5,5 Stunden? Dann bekommst du mindestens 30 Minuten Pause (das dürfen 2-mal 15 Minuten sein). Mehr als 10 Stunden? Dann mindestens 45 Minuten. Ein Tarifvertrag (cao) kann etwas andere Pausenregeln haben. Du darfst höchstens 12 Stunden in einer Schicht und 60 Stunden in einer Woche arbeiten. Unter 18? Dann darfst du weniger Stunden arbeiten. Dein Arbeitgeber muss dir Schutzausrüstung, zum Beispiel Sicherheitsschuhe oder Handschuhe, kostenlos geben. Unsichere Arbeit oder zu wenig Lohn? Du kannst es der Nederlandse Arbeidsinspectie melden, auch ohne deinen Namen zu nennen. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.', // nieuw, nalezen
+    'c.health.b': 'Das Gesetz schützt deine Gesundheit. Arbeitest du mehr als 5,5 Stunden? Dann bekommst du mindestens 30 Minuten Pause (das dürfen 2-mal 15 Minuten sein). Mehr als 10 Stunden? Dann mindestens 45 Minuten. Ein Tarifvertrag (cao) kann etwas andere Pausenregeln haben. Du darfst höchstens 12 Stunden in einer Schicht und 60 Stunden in einer Woche arbeiten. Unter 18? Dann darfst du weniger Stunden arbeiten. Dein Arbeitgeber muss dir Schutzausrüstung, zum Beispiel Sicherheitsschuhe oder Handschuhe, kostenlos geben. Unsichere Arbeit oder zu wenig Lohn? Du kannst es der Nederlandse Arbeidsinspectie melden, auch ohne deinen Namen zu nennen. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.health.p': 'Ich hatte noch keine Pause.',
     'c.health.s': 'Du hast 6 Stunden ohne Pause gearbeitet. Dein Vorgesetzter bittet dich weiterzumachen. Was machst du?',
-    'c.health.o1': 'Sag, dass du jetzt deine Pause brauchst.', // nagelezen (2e lezing)
-    'c.health.o2': 'Mach weiter und mach später eine längere Pause.', // nagelezen (2e lezing)
+    'c.health.o1': 'Sag, dass du jetzt deine Pause brauchst.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.health.o2': 'Mach weiter und mach später eine längere Pause.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.health.o3': 'Hör auf zu arbeiten und geh ohne ein Wort nach Hause.',
     'c.health.w': 'Wenn du mehr als 5,5 Stunden arbeitest, ist eine Pause Gesetz, kein Gefallen. Erholung hilft dir auch, sicher zu arbeiten.',
     'c.rights': 'Diskriminierung und Kündigung',
     'c.rights.b': 'Diskriminierung bei der Arbeit ist verboten, zum Beispiel wegen deiner Herkunft, Religion oder deines Geschlechts. Dein Arbeitgeber kann dich nicht einfach entlassen: Normalerweise braucht er die Erlaubnis vom UWV oder von einem Richter, oder deine Zustimmung. (In der Probezeit oder am Ende eines befristeten Vertrags gelten andere Regeln.) Unterschreib kein Papier über deine Kündigung, das du nicht verstehst. Hast du eine Vereinbarung zum Ende deiner Arbeit unterschrieben (vaststellingsovereenkomst)? Dann kannst du sie meistens noch innerhalb von 14 Tagen schriftlich widerrufen. Hol dir zuerst Hilfe. Geh zur Gewerkschaft (zum Beispiel FNV), zu einer Antidiskriminierungsstelle oder zum Juridisch Loket. Das Juridisch Loket gibt kostenlose Rechtsberatung. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
     'c.rights.p': 'Ich möchte mich zuerst beraten lassen.',
     'c.rights.s': 'Dein Chef gibt dir ein Papier: „Unterschreib heute, dann gehst du im gegenseitigen Einvernehmen.“ Du verstehst es nicht gut. Was machst du?',
-    'c.rights.o1': 'Unterschreib noch nicht. Lass dich zuerst beraten.', // nieuw, nalezen
+    'c.rights.o1': 'Unterschreib noch nicht. Lass dich zuerst beraten.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.rights.o2': 'Unterschreib, der Chef sagt ja, es ist in Ordnung.',
     'c.rights.o3': 'Leg das Papier weg und sprich nie darüber.',
-    'c.rights.w': 'Steht darin etwas Falsches? Dann kannst du Rechte verlieren, zum Beispiel auf Arbeitslosengeld (WW). Um Zeit für eine Beratung zu bitten ist normal und erlaubt.', // nieuw, nalezen
-    'c.mustmay': 'Moet, hoeft niet, mag niet', // nieuw, nalezen
-    'c.mustmay.b': 'Auf Niederländisch ist das Gegenteil von „moeten“ „niet hoeven“. „Je moet tekenen“ heißt: Du hast keine Wahl. „Je hoeft niet te tekenen“ heißt: Du darfst wählen. „Je mag niet tekenen“ heißt: Es ist verboten. Achtung: Auf Englisch heißt „must not“ „mag niet“. Auf Deutsch heißt „muss nicht“ „hoeft niet“. Nicht sicher? Frag nach.', // nieuw, nalezen
-    'c.mustmay.p': 'Muss ich, oder habe ich die Wahl?', // nieuw, nalezen
-    'c.mustmay.s': 'Dein Teamleiter sagt: „Je hoeft zaterdag niet te komen.“ Was meint er?', // nieuw, nalezen
-    'c.mustmay.o1': 'Du musst am Samstag nicht kommen. Du darfst wählen.', // nieuw, nalezen
-    'c.mustmay.o2': 'Du darfst am Samstag nicht kommen.', // nieuw, nalezen
-    'c.mustmay.o3': 'Du musst am Samstag kommen.', // nieuw, nalezen
-    'c.mustmay.w': '„Niet hoeven“ heißt: Es ist keine Pflicht, du darfst wählen. „Niet mogen“ würde heißen: Es ist verboten.', // nieuw, nalezen
+    'c.rights.w': 'Steht darin etwas Falsches? Dann kannst du Rechte verlieren, zum Beispiel auf Arbeitslosengeld (WW). Um Zeit für eine Beratung zu bitten ist normal und erlaubt.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay': 'Moet, hoeft niet, mag niet', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.b': 'Auf Niederländisch ist das Gegenteil von „moeten“ „niet hoeven“. „Je moet tekenen“ heißt: Du hast keine Wahl. „Je hoeft niet te tekenen“ heißt: Du darfst wählen. „Je mag niet tekenen“ heißt: Es ist verboten. Achtung: Auf Englisch heißt „must not“ „mag niet“. Auf Deutsch heißt „muss nicht“ „hoeft niet“. Nicht sicher? Frag nach.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.p': 'Muss ich, oder habe ich die Wahl?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.s': 'Dein Teamleiter sagt: „Je hoeft zaterdag niet te komen.“ Was meint er?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.o1': 'Du musst am Samstag nicht kommen. Du darfst wählen.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.o2': 'Du darfst am Samstag nicht kommen.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.o3': 'Du musst am Samstag kommen.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.w': '„Niet hoeven“ heißt: Es ist keine Pflicht, du darfst wählen. „Niet mogen“ würde heißen: Es ist verboten.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.leave': 'Urlaub und Sonderurlaub für Notfälle',
     'c.leave.b': 'Nach dem Gesetz bekommst du bezahlte freie Tage: mindestens 4-mal so viele Tage, wie du pro Woche arbeitest. Vollzeit, 5 Tage pro Woche? Dann mindestens 20 Tage im Jahr. Ein Tarifvertrag (cao) kann mehr geben. Beantrage Urlaub rechtzeitig und schriftlich. Ein plötzlicher Notfall, zum Beispiel ein Unfall oder eine Krankheit in deiner Familie? Dann kannst du kurzen bezahlten Sonderurlaub bekommen (calamiteitenverlof). Sag es sofort deinem Arbeitgeber. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.leave.p': 'Ich möchte gern Urlaub für Juli beantragen.',
@@ -724,53 +724,53 @@ const t: CultureTranslation = {
     'c.leave.o1': 'Beantrage früh und schriftlich Urlaub bei deinem Arbeitgeber.',
     'c.leave.o2': 'Fahr einfach und sag es deinem Chef, wenn du zurück bist.',
     'c.leave.o3': 'Bitte einen Kollegen, es dem Chef am Tag vorher zu sagen.',
-    'c.leave.w': 'Dein Arbeitgeber muss meistens Ja sagen. Er darf nur aus einem sehr wichtigen Grund Nein sagen, und dann schriftlich innerhalb von 2 Wochen. Wer früh fragt, hat die besten Chancen auf ein Ja.', // nagelezen (2e lezing)
+    'c.leave.w': 'Dein Arbeitgeber muss meistens Ja sagen. Er darf nur aus einem sehr wichtigen Grund Nein sagen, und dann schriftlich innerhalb von 2 Wochen. Wer früh fragt, hat die besten Chancen auf ein Ja.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.illness': 'Deine Rechte, wenn du krank bist',
     'c.illness.b': 'Wenn du krank bist, muss dein Arbeitgeber mindestens 70 % deines Lohns zahlen, bis zu 2 Jahre lang. Ein Tarifvertrag (cao) gibt oft mehr. Es kann bis zu 2 Karenztage (wachtdagen) ohne Lohn geben, aber nur, wenn das in deinem Vertrag oder im Tarifvertrag steht. Dein Chef darf nicht fragen, welche Krankheit du hast. Über deine Gesundheit und deine Arbeit sprichst du mit dem Betriebsarzt (bedrijfsarts). Ruf deinen Arbeitgeber an, wenn du wieder gesund bist (betermelden). Im ersten Jahr bekommst du mindestens den Mindestlohn. Ein befristeter Vertrag endet am Enddatum, auch wenn du krank bist. Arbeitest du über eine Zeitarbeitsfirma? Wenn dein Vertrag eine Zeitarbeitsklausel (uitzendbeding) hat, kann er enden, wenn du krank wirst. Frag dann beim UWV nach der Ziektewet, oder frag bei einer Gewerkschaft. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
-    'c.illness.x': 'Du bist krank und willst in dein Heimatland? Frag zuerst deinen Arbeitgeber oder die Agentur. Ohne Erlaubnis kann dein Lohn gestoppt werden. Gib dort deine Adresse an und geh ans Telefon.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
+    'c.illness.x': 'Du bist krank und willst in dein Heimatland? Frag zuerst deinen Arbeitgeber oder die Zeitarbeitsfirma. Ohne Erlaubnis kann dein Lohn gestoppt werden. Gib dort deine Adresse an und geh ans Telefon.', // nieuw, nalezen (uit een ander land, 10 nov 2026) // nagelezen AI 22 nov
     'c.illness.p': 'Ich bin wieder gesund. Ich komme morgen zur Arbeit.',
-    'c.illness.s': 'Du bist eine Woche krank. Dein Arbeitgeber schickt dich zum Betriebsarzt. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.illness.o1': 'Geh hin und sprich über deine Gesundheit und Arbeit.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.illness.o2': 'Geh nicht hin, du hast deinen eigenen Arzt.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.illness.o3': 'Geh krank wieder arbeiten.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.illness.s': 'Du bist eine Woche krank. Dein Arbeitgeber schickt dich zum Betriebsarzt. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.illness.o1': 'Geh hin und sprich über deine Gesundheit und Arbeit.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.illness.o2': 'Geh nicht hin, du hast deinen eigenen Arzt.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.illness.o3': 'Geh krank wieder arbeiten.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.illness.w': 'Der Betriebsarzt hilft dir, gesund wieder an die Arbeit zu kommen. Der Arzt sagt deinem Chef keine medizinischen Details, nur welche Arbeit du machen kannst.',
     'c.warning': 'Zeichen von Ausbeutung',
     'c.warning.b': 'Achte auf diese Zeichen. Dein Arbeitgeber behält deinen Pass oder Ausweis. Das ist nicht erlaubt: Du behältst deinen Ausweis selbst. Ein Arbeitgeber darf nur eine Kopie machen. Du bekommst viel weniger Lohn als abgemacht, oder keine Lohnabrechnung. Du musst hohe Schulden beim Arbeitgeber oder bei der Zeitarbeitsfirma abbezahlen. Du musst extrem lange arbeiten, ohne Wahl. Jemand bedroht dich oder setzt dich mit deiner Wohnung unter Druck. Das ist nicht normal und nicht erlaubt. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
     'c.warning.p': 'Ich will meinen Pass zurück.',
     'c.warning.s': 'An deinem ersten Tag sagt die Zeitarbeitsfirma: „Wir behalten deinen Pass, zur Sicherheit.“ Was machst du?',
-    'c.warning.o1': 'Behalte ihn selbst. Sie dürfen eine Kopie machen.', // nagelezen (2e lezing)
+    'c.warning.o1': 'Behalte ihn selbst. Sie dürfen eine Kopie machen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.warning.o2': 'Gib ihn ab, die Zeitarbeitsfirma kennt ja die Regeln.',
     'c.warning.o3': 'Gib ihn ab, aber mach vorher ein Foto davon.',
     'c.warning.w': 'Dein Pass gehört dir. Ihn zu behalten ist eine Art, Arbeiter zu kontrollieren. Ein Arbeitgeber braucht nur eine Kopie für die Akten.',
     'c.gethelp': 'Wo du Hilfe bekommst',
     'c.gethelp.b': 'Siehst du Zeichen von Ausbeutung, bei dir oder bei jemand anderem? Hol dir Hilfe. Du kannst es der Nederlandse Arbeidsinspectie melden, auch anonym, oder der Polizei. Meld Misdaad Anoniem: 0800-7000. Kostenlose Rechtsberatung: das Juridisch Loket. In Gefahr? Ruf 112 an. Jeder, der in den Niederlanden arbeitet, kann Hilfe bekommen, auch Migranten. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
     'c.gethelp.p': 'Ich brauche Hilfe. Ich werde ausgebeutet.',
-    'c.gethelp.s': 'Ein Freund arbeitet 14 Stunden am Tag für fast keinen Lohn. Er hat Angst vor seinem Chef. Was kannst du tun?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.gethelp.o1': 'Hilf ihm, Kontakt mit der Arbeidsinspectie oder dem Juridisch Loket aufzunehmen.', // nieuw, nalezen
-    'c.gethelp.o2': 'Sag ihm, das ist für neue Arbeiter normal.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.gethelp.o3': 'Sag ihm, er soll warten, bis sein Vertrag endet, und dann gehen.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.gethelp.s': 'Ein Freund arbeitet 14 Stunden am Tag für fast keinen Lohn. Er hat Angst vor seinem Chef. Was kannst du tun?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.gethelp.o1': 'Hilf ihm, Kontakt mit der Arbeidsinspectie oder dem Juridisch Loket aufzunehmen.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.gethelp.o2': 'Sag ihm, das ist für neue Arbeiter normal.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.gethelp.o3': 'Sag ihm, er soll warten, bis sein Vertrag endet, und dann gehen.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.gethelp.w': 'Hilfe gibt es für alle, die in den Niederlanden arbeiten. Eine Meldung geht auch ohne Namen.',
     'c.callin': 'Deinen Vorgesetzten anrufen',
     'c.callin.b': 'Wenn du deinen Vorgesetzten anrufst, sag deinen Namen, den Grund und wann du wahrscheinlich wiederkommst. Krank? Du musst nur sagen, dass du krank bist, nicht welche Krankheit du hast. Ruf an: Schick nicht nur eine Nachricht, außer deine Firma sagt, dass eine Nachricht reicht. Keine Antwort? Sprich auf die Mailbox und versuch es noch einmal. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.callin.p': 'Hallo, hier ist Ali. Ich kann heute nicht kommen.',
     'c.callin.s': 'Dein Kind ist krank, und du kannst nicht zur Arbeit kommen. Deine Firma will, dass du anrufst. Was machst du?',
-    'c.callin.o1': 'Ruf vor deiner Schicht deinen Vorgesetzten an.', // nagelezen (2e lezing)
+    'c.callin.o1': 'Ruf vor deiner Schicht deinen Vorgesetzten an.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.callin.o2': 'Schick zu Beginn deiner Schicht eine kurze Nachricht.',
     'c.callin.o3': 'Bitte deinen Nachbarn, für dich anzurufen.',
-    'c.callin.w': 'Ein Anruf ist klar und schnell, und dein Vorgesetzter kann Fragen stellen. Wenn du sagst, wann du wahrscheinlich zurück bist, hilft das bei der Planung. Sag auch deinen Namen und den Grund.', // nagelezen (2e lezing)
+    'c.callin.w': 'Ein Anruf ist klar und schnell, und dein Vorgesetzter kann Fragen stellen. Wenn du sagst, wann du wahrscheinlich zurück bist, hilft das bei der Planung. Sag auch deinen Namen und den Grund.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.texting': 'Nachrichten an die Arbeit: kurz und höflich',
     'c.texting.b': 'Halte Nachrichten an die Arbeit kurz und höflich. Sag, wer du bist und was los ist, und schließ mit einem Gruß. Zum Beispiel: „Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali“. Schau oft in die App auf deinen Dienstplan (rooster). Antworte rechtzeitig auf Anfragen für Schichten. Um eine Schicht zu tauschen, muss zuerst dein Vorgesetzter oder der Planer zustimmen, also frag: „Mag ik mijn dienst ruilen?“ Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.texting.p': 'Hallo Mark, ich komme 10 Minuten zu spät. Entschuldigung! Gruß, Ali',
     'c.texting.s': 'Du kommst 10 Minuten zu spät. Welche Nachricht an deinen Vorgesetzten ist am besten?',
     'c.texting.o1': '„Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali“',
-    'c.texting.o2': '„Sorry, ik ben er zo!“ (ohne deinen Namen, ohne Uhrzeit).', // nagelezen (2e lezing)
+    'c.texting.o2': '„Sorry, ik ben er zo!“ (ohne deinen Namen, ohne Uhrzeit).', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.texting.o3': 'Eine Sprachnachricht von drei Minuten über den Verkehr.',
     'c.texting.w': 'Eine gute Nachricht sagt in wenigen Worten, wer du bist und was los ist. Dann weiß dein Vorgesetzter es sofort.',
     'c.certs': 'Zertifikate helfen dir',
     'c.certs.b': 'Auf dem Bau, in der Industrie und in der Zeitarbeit brauchst du oft ein VCA-Zertifikat (Sicherheit). Um Gabelstapler zu fahren, brauchst du meistens einen Staplerschein (heftruckcertificaat). Frag deinen Arbeitgeber, ob er den Kurs und die Prüfung bezahlt.',
     'c.certs.p': 'Kann ich hier einen VCA-Kurs machen?',
     'c.certs.s': 'Für eine Stelle braucht man ein VCA-Zertifikat. Du hast es noch nicht. Was machst du?',
-    'c.certs.o1': 'Bitte den Arbeitgeber oder die Zeitarbeitsfirma um Hilfe.', // nagelezen (2e lezing)
+    'c.certs.o1': 'Bitte den Arbeitgeber oder die Zeitarbeitsfirma um Hilfe.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.certs.o2': 'Bewirb dich nicht, du bekommst die Stelle ja sowieso nie.',
     'c.certs.o3': 'Sag, dass du es hast, und hoffe, dass es niemand prüft.',
     'c.certs.w': 'Viele Arbeitgeber und Zeitarbeitsfirmen helfen beim VCA. Wenn du fragst, zeigst du, dass du lernen willst.',
@@ -778,7 +778,7 @@ const t: CultureTranslation = {
     'c.diploma.b': 'Hast du einen Abschluss aus einem anderen Land? Du kannst ihn bei IDW (Internationale Diplomawaardering) bewerten lassen. Dann sehen Arbeitgeber, was er hier wert ist. Ist eine Schulung für deine Arbeit Pflicht? Dann muss dein Arbeitgeber sie bezahlen, und sie zählt als Arbeitszeit. Frag deinen Vorgesetzten nach Kursen. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.diploma.p': 'Gibt es Kurse für mich?',
     'c.diploma.s': 'Dein Arbeitgeber sagt, du musst am Samstag eine Pflicht-Sicherheitsschulung machen, ohne Lohn. Was stimmt?',
-    'c.diploma.o1': 'Der Arbeitgeber bezahlt sie, und sie ist Arbeitszeit.', // nagelezen (2e lezing)
+    'c.diploma.o1': 'Der Arbeitgeber bezahlt sie, und sie ist Arbeitszeit.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.diploma.o2': 'Schulungen sind immer in deiner eigenen Freizeit.',
     'c.diploma.o3': 'Du musst die Schulung selbst bezahlen.',
     'c.diploma.w': 'Wenn eine Schulung für deine Arbeit Pflicht ist, zahlt der Arbeitgeber, und sie zählt als Arbeitszeit. Wenn es nicht klar ist, lass dich beraten.',
@@ -794,15 +794,15 @@ const t: CultureTranslation = {
     'c.insurance.b': 'Wenn du in den Niederlanden wohnst oder arbeitest, ist eine Grundversicherung für Gesundheit meistens Pflicht. Du zahlst jeden Monat einen Beitrag (premie). Jedes Jahr gibt es einen Eigenanteil (eigen risico): Die ersten Kosten zahlst du selbst. Der Betrag ändert sich: Frag bei deiner Versicherung nach. Besuche beim Hausarzt (huisarts) zählen nicht für den Eigenanteil. Mit wenig Einkommen bekommst du vielleicht einen Zuschuss (zorgtoeslag). Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.insurance.p': 'Ich brauche eine Krankenversicherung. Können Sie mir helfen?',
     'c.insurance.s': 'Du arbeitest seit zwei Wochen hier und hast noch keine Krankenversicherung. Was machst du?',
-    'c.insurance.o1': 'Kümmere dich schnell um eine Krankenversicherung.', // nagelezen (2e lezing)
-    'c.insurance.o2': 'Warte: Deine Versicherung von zu Hause reicht.', // nagelezen (2e lezing)
+    'c.insurance.o1': 'Kümmere dich schnell um eine Krankenversicherung.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.insurance.o2': 'Warte: Deine Versicherung von zu Hause reicht.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.insurance.o3': 'Benutz die Versichertenkarte von einem Freund.',
-    'c.insurance.w': 'Ohne Versicherung kann ein Arzt oder ein Krankenhaus viel kosten, und du kannst eine Strafe bekommen. Wenn du dich schnell darum kümmerst, schützt du dich. Dein Arbeitgeber oder deine Zeitarbeitsfirma kann dir helfen.', // nagelezen (2e lezing)
+    'c.insurance.w': 'Ohne Versicherung kann ein Arzt oder ein Krankenhaus viel kosten, und du kannst eine Strafe bekommen. Wenn du dich schnell darum kümmerst, schützt du dich. Dein Arbeitgeber oder deine Zeitarbeitsfirma kann dir helfen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.letters': 'Ignorier keine Briefe',
     'c.letters.b': 'Ignorier keine Briefe vom Belastingdienst, von der gemeente oder vom UWV. Bitte jemanden, dem du vertraust, dir beim Lesen zu helfen. Die Steuererklärung (aangifte) für das letzte Jahr muss meistens vor dem 1. Mai gemacht sein. Du kannst um mehr Zeit bitten. Zuschüsse (toeslagen) wie zorgtoeslag und huurtoeslag hängen von deinem Einkommen ab. Wenn du zu viel bekommst, musst du es zurückzahlen. Halte deine Angaben zum Einkommen also aktuell. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.letters.p': 'Ich habe einen Brief bekommen. Kannst du mir helfen?',
     'c.letters.s': 'Du bekommst einen Brief vom Belastingdienst. Du verstehst ihn nicht. Was machst du?',
-    'c.letters.o1': 'Bitte jemanden, dem du vertraust, um Hilfe.', // nagelezen (2e lezing)
+    'c.letters.o1': 'Bitte jemanden, dem du vertraust, dir beim Lesen zu helfen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.letters.o2': 'Leg ihn in eine Schublade und warte.',
     'c.letters.o3': 'Wirf ihn weg, das ist wahrscheinlich Werbung.',
     'c.letters.w': 'Offizielle Briefe haben oft eine Frist. Wenn du rechtzeitig reagierst, sind Probleme meistens leichter zu lösen.',
@@ -828,14 +828,14 @@ const t: CultureTranslation = {
     'c.transit.s': 'Du fährst jeden Tag mit dem Bus zur Arbeit. Ein Kollege bekommt Fahrgeld, du nicht. Was machst du?',
     'c.transit.o1': 'Frag deinen Vorgesetzten nach den Regeln von Firma oder Tarifvertrag.',
     'c.transit.o2': 'Sag nichts, das ist wahrscheinlich nicht für dich.',
-    'c.transit.o3': 'Sag deinem Vorgesetzten: Laut Gesetz musst du es auch bekommen.', // nagelezen (2e lezing)
+    'c.transit.o3': 'Sag deinem Vorgesetzten: Laut Gesetz musst du es auch bekommen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.transit.w': 'Fahrtkostenerstattung hängt vom Arbeitgeber oder vom Tarifvertrag ab. Danach zu fragen ist normal und hilft dir, deine Rechte zu kennen.',
     'c.ww': 'Arbeitslosengeld (WW)',
     'c.ww.b': 'Arbeit verloren? Beantrage so schnell wie möglich WW beim UWV, innerhalb einer Woche nach deinem ersten Tag ohne Arbeit. Meistens musst du mindestens 26 der letzten 36 Wochen gearbeitet haben. Wenn du selbst kündigst, bekommst du meistens kein WW. Melde dich auf werk.nl als arbeitssuchend. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
-    'c.ww.x': 'Du suchst Arbeit in einem anderen EU-Land? Manchmal kannst du dein WW mitnehmen. Beantrage vor der Abreise bei UWV das Formular U2. Ohne U2 endet dein WW.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
+    'c.ww.x': 'Du suchst Arbeit in einem anderen EU-Land? Manchmal kannst du dein WW mitnehmen. Beantrage vor der Abreise beim UWV das Formular U2. Ohne U2 endet dein WW.', // nieuw, nalezen (uit een ander land, 10 nov 2026) // nagelezen AI 22 nov
     'c.ww.p': 'Ich möchte Arbeitslosengeld beantragen. Was muss ich tun?',
     'c.ww.s': 'Du bist wütend wegen deiner Arbeit und willst heute kündigen. Was ist klug?',
-    'c.ww.o1': 'Lass dich zuerst beraten, bevor du kündigst.', // nagelezen (2e lezing)
+    'c.ww.o1': 'Lass dich zuerst beraten, bevor du kündigst.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.ww.o2': 'Kündige heute: Du bekommst WW sowieso.',
     'c.ww.o3': 'Komm einfach nicht mehr zur Arbeit, ohne etwas zu sagen.',
     'c.ww.w': 'Eine Kündigung kann dich dein Arbeitslosengeld kosten. Wenn du zuerst mit deinem Vorgesetzten, der Gewerkschaft oder dem Juridisch Loket sprichst, findest du vielleicht einen besseren Weg.',
@@ -843,15 +843,15 @@ const t: CultureTranslation = {
     'c.newjob.b': 'Bevor du gehst, bitte um eine Referenz (referentie). Bewahre deine Lohnabrechnungen und deinen Vertrag auf. Aktualisiere deinen Lebenslauf. Such Arbeit bei Zeitarbeitsfirmen (uitzendbureaus) und auf werk.nl. Zahl nie Geld, um eine Arbeit zu bekommen. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.',
     'c.newjob.p': 'Darf ich Sie als Referenz angeben?',
     'c.newjob.s': 'Jemand bietet dir eine Arbeit an, aber zuerst musst du 300 Euro „für die Stelle“ zahlen. Was machst du?',
-    'c.newjob.o1': 'Zahl nicht. Such eine echte Zeitarbeitsfirma.', // nagelezen (2e lezing)
+    'c.newjob.o1': 'Zahl nicht. Such eine echte Zeitarbeitsfirma.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.newjob.o2': 'Zahl, eine gute Stelle ist das wert.',
     'c.newjob.o3': 'Zahl jetzt die Hälfte und den Rest später.',
-    'c.newjob.w': 'Geld für eine Stelle zu verlangen ist ein Warnzeichen. Eine Zeitarbeitsfirma darf dir kein Geld dafür berechnen, dass sie Arbeit für dich findet. Du kannst auch auf werk.nl nach Arbeit suchen.', // nagelezen (2e lezing)
+    'c.newjob.w': 'Geld für eine Stelle zu verlangen ist ein Warnzeichen. Eine Zeitarbeitsfirma darf dir kein Geld dafür berechnen, dass sie Arbeit für dich findet. Du kannst auch auf werk.nl nach Arbeit suchen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.tools': 'Das Toolbox-Meeting',
     'c.tools.b': 'Auf vielen Baustellen gibt es regelmäßig ein kurzes Sicherheitstreffen: das Toolbox-Meeting. Dort hörst du von Risiken und neuen Regeln. Geh hin, hör zu und stell Fragen, wenn du etwas nicht verstehst. Prüfe dein Werkzeug, bevor du es benutzt. Ist ein Werkzeug kaputt? Sag es deinem Vorgesetzten.',
     'c.tools.p': 'Diese Bohrmaschine ist kaputt. Gibt es eine andere?',
     'c.tools.s': 'Es gibt ein Toolbox-Meeting, aber dein Niederländisch ist noch nicht gut. Was machst du?',
-    'c.tools.o1': 'Geh hin, und frag danach einen Kollegen, was du verpasst hast.', // nagelezen (2e lezing)
+    'c.tools.o1': 'Geh hin, und frag danach einen Kollegen, was du verpasst hast.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.tools.o2': 'Geh nicht hin, du verstehst es ja sowieso nicht.',
     'c.tools.o3': 'Unterschreib die Anwesenheitsliste, ohne hinzugehen.',
     'c.tools.w': 'Sicherheitsinformationen sind für alle. Eine Übersetzungs-App kann dir helfen, dem Meeting zu folgen, wenn Handys dort erlaubt sind. Danach einen Kollegen zu fragen ist normal und prüft, ob du es richtig verstanden hast.',
@@ -859,7 +859,7 @@ const t: CultureTranslation = {
     'c.site.b': 'Bevor du mit einer Arbeit anfängst, halte kurz an und prüfe: Was kann hier schiefgehen? Das ist die LMRA (Last-Minute-Risikoanalyse). Trag immer deinen Helm, und eine Absturzsicherung, wenn du in der Höhe arbeitest. Stell dich nie unter eine hängende Last. Ist die Arbeit wirklich gefährlich? Dann darfst du aufhören, und du musst es sofort deinem Vorgesetzten sagen. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.site.p': 'Ich fange noch nicht an. Das ist nicht sicher.',
     'c.site.s': 'Du musst auf einem Gerüst arbeiten, aber ein Geländer fehlt. Ein Kollege sagt: „Pass einfach auf.“ Was machst du?',
-    'c.site.o1': 'Fang nicht an, und sag es deinem Vorgesetzten.', // nieuw, nalezen
+    'c.site.o1': 'Fang nicht an, und sag es deinem Vorgesetzten.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.site.o2': 'Fang an, aber pass sehr gut auf.',
     'c.site.o3': 'Repariere das Geländer selbst mit einem Seil.',
     'c.site.w': 'Ein Sturz aus der Höhe kann sehr schwere Verletzungen verursachen. Gefährliche Arbeit darfst du stoppen, und eine Meldung schützt das ganze Team.',
@@ -868,7 +868,7 @@ const t: CultureTranslation = {
     'c.line.p': 'Es gibt eine Störung. Ich habe den Notaus gedrückt.',
     'c.line.s': 'Ein Produkt steckt in der Maschine fest. Die Maschine läuft noch. Was machst du?',
     'c.line.o1': 'Drück den Notaus und ruf deinen Vorgesetzten.',
-    'c.line.o2': 'Zieh es schnell mit der Hand heraus, bevor es kaputtgeht.', // nieuw, nalezen
+    'c.line.o2': 'Zieh es schnell mit der Hand heraus, bevor es kaputtgeht.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.line.o3': 'Lass es und hoffe, dass die Maschine es selbst löst.',
     'c.line.w': 'Laufende Maschinen können in einer Sekunde schwere Unfälle verursachen. Die Maschine anhalten ist immer erlaubt und immer besser.',
     'c.quality': 'Qualität: Sag, was du siehst',
@@ -883,7 +883,7 @@ const t: CultureTranslation = {
     'c.client.b': 'Klopf an, bevor du in das Zimmer eines Klienten gehst. Sag, wer du bist, erklär, was du machen wirst, und frag um Erlaubnis. Sag „u“ zu Klienten, außer sie bitten dich, „je“ zu sagen. Lass Klienten das machen, was sie selbst können.',
     'c.client.p': 'Darf ich hereinkommen? Ich helfe Ihnen beim Waschen.',
     'c.client.s': 'Du musst einer Klientin beim Waschen helfen. Die Tür ihres Zimmers ist zu. Was machst du?',
-    'c.client.o1': 'Klopf an, warte und sag, wer du bist und warum.', // nagelezen (2e lezing)
+    'c.client.o1': 'Klopf an, warte und sag, wer du bist und warum.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.client.o2': 'Geh schnell hinein, du hast ja viel zu tun.',
     'c.client.o3': 'Lass das Waschen aus, damit du sie nicht störst.',
     'c.client.w': 'Das Zimmer ist das Zuhause der Klientin. Anklopfen und erklären zeigt Respekt und macht die Pflege ruhiger.',
@@ -891,7 +891,7 @@ const t: CultureTranslation = {
     'c.privacy.b': 'Was du über Klienten siehst und hörst, bleibt bei der Arbeit. Sprich außerhalb der Arbeit nicht über Klienten und poste nie Fotos von ihnen. Reinige deine Hände vor und nach der Pflege. Merkst du eine Veränderung bei einem Klienten, zum Beispiel Schmerzen oder einen Sturz? Sag es sofort der Pflegefachkraft. Gib nie Medikamente, außer du bist dafür geschult und darfst es. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.privacy.p': 'Der Herr hat mehr Schmerzen als gestern.',
     'c.privacy.s': 'Eine Klientin bittet dich um ihre Tabletten. Du bist nicht geschult, Medikamente zu geben. Was machst du?',
-    'c.privacy.o1': 'Sag freundlich, dass du die Pflegefachkraft holst.', // nieuw, nalezen
+    'c.privacy.o1': 'Sag freundlich, dass du die Pflegefachkraft holst.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.privacy.o2': 'Gib ihr die Tabletten, sie weiß ja, was sie braucht.',
     'c.privacy.o3': 'Sag nein und geh weg.',
     'c.privacy.w': 'Falsche Medikamente können gefährlich sein. Schnell die richtige Person zu holen hilft der Klientin und schützt alle.',
@@ -915,7 +915,7 @@ const t: CultureTranslation = {
     'c.cleaning.b': 'Jedes Reinigungsmittel hat ein Etikett. Gefahrensymbole (kleine Bilder in einer roten Raute) zeigen die Gefahr, zum Beispiel für deine Haut, Augen oder Lunge. Lies das Etikett oder frag, wofür das Mittel ist und wie man es benutzt. Trag die Handschuhe, die dein Arbeitgeber dir gibt. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.cleaning.p': 'Wofür ist dieses Mittel?',
     'c.cleaning.s': 'Du bekommst ein neues Reinigungsmittel. Du kannst das Etikett nicht gut lesen. Was machst du?',
-    'c.cleaning.o1': 'Frag, wie du es sicher benutzt.', // nagelezen (2e lezing)
+    'c.cleaning.o1': 'Frag, wie du es sicher benutzt.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.cleaning.o2': 'Nimm viel davon, dann wirkt es besser.',
     'c.cleaning.o3': 'Probier es einfach ohne Handschuhe.',
     'c.cleaning.w': 'Das falsche Mittel, oder zu viel davon, kann deine Haut, Augen oder Lunge verletzen. Fragen dauert eine Minute.',
@@ -923,7 +923,7 @@ const t: CultureTranslation = {
     'c.cleansafe.b': 'Misch nie Reinigungsmittel, zum Beispiel Bleiche und einen WC-Reiniger. Dabei können gefährliche Gase entstehen. Lass frische Luft herein. Du wischst einen Boden? Stell das Schild für nasse Böden auf (Pas op, glad!), damit niemand ausrutscht. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.cleansafe.p': 'Ich stelle das Schild hin. Der Boden ist nass.',
     'c.cleansafe.s': 'Die Toilette ist sehr schmutzig. Eine Kollegin sagt: „Misch zwei Mittel, dann wirkt es besser.“ Was machst du?',
-    'c.cleansafe.o1': 'Misch sie nicht. Nimm ein Mittel.', // nagelezen (2e lezing)
+    'c.cleansafe.o1': 'Misch sie nicht. Nimm ein Mittel.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.cleansafe.o2': 'Misch sie, aber mach ein Fenster auf.',
     'c.cleansafe.o3': 'Misch sie schnell und geh aus dem Raum.',
     'c.cleansafe.w': 'Gemischte Mittel können giftiges Gas machen, auch bei offenem Fenster. Ein Mittel, richtig benutzt, reicht.',
@@ -967,16 +967,16 @@ const t: CultureTranslation = {
     'c.translate': 'Übersetzungs-Apps: schlau, aber prüfe',
     'c.translate.b': 'Eine Übersetzungs-App wie Google Übersetzer hilft sehr. Du kannst tippen, sprechen oder den Gesprächsmodus benutzen, um mit einem Kollegen zu reden. Mit der Kamera kannst du Schilder, Zettel und Anleitungen übersetzen. Auf vielen Handys kann auch WhatsApp Nachrichten übersetzen. Benutz dein Handy nur da, wo es sicher und erlaubt ist. Nie an Maschinen oder Gabelstaplern. Frag immer zuerst. Apps machen Fehler. Bei wichtigen Dingen, wie deinem Vertrag, einem Brief oder einer Sicherheitsanweisung, bitte auch einen Menschen, es dir zu erklären. Mach keine Fotos von vertraulichen Arbeitspapieren ohne Erlaubnis.',
     'c.translate.p': 'Darf ich mein Handy zum Übersetzen benutzen?',
-    'c.translate.s': 'Dein Vorgesetzter gibt dir Sicherheitsanweisungen auf Niederländisch. Du verstehst nur ein paar Wörter. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.translate.o1': 'Bitte um eine Erklärung und frag, ob eine App okay ist.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.translate.o2': 'Sag „ja, ja“ und fang an zu arbeiten.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.translate.o3': 'Mach ein Foto und schick es deinen Freunden zum Übersetzen.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.translate.s': 'Dein Vorgesetzter gibt dir Sicherheitsanweisungen auf Niederländisch. Du verstehst nur ein paar Wörter. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.translate.o1': 'Bitte um eine Erklärung und frag, ob eine App okay ist.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.translate.o2': 'Sag „ja, ja“ und fang an zu arbeiten.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.translate.o3': 'Mach ein Foto und schick es deinen Freunden zum Übersetzen.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.translate.w': 'Eine Übersetzungs-App hilft dir, schnell zu verstehen, aber sie kann Fehler machen. Bei Sicherheit ist eine Erklärung von einem Menschen die beste Kontrolle. Arbeitspapiere können vertraulich sein, also teile sie nicht ohne Erlaubnis.',
     'c.understood': 'Prüfe, ob du es verstanden hast',
     'c.understood.b': 'Dein Handy kann Sprache in Text verwandeln (Live-Untertitel): Live Transcribe auf Android, Live-Untertitel auf dem iPhone. Prüfe, welche Sprachen dein Handy kann. Du kannst auch jemanden bitten, es aufzuschreiben, es zu zeigen oder langsam zu sprechen. Frag, ob es eine Anleitung mit Bildern gibt, oder in deiner Sprache. Sag dann zurück, was du verstanden hast: „Dus ik moet eerst …?“ Das ist hier normal, und es verhindert Fehler.',
     'c.understood.p': 'Ich muss also zuerst die Kartons zählen?',
     'c.understood.s': 'Eine Kollegin erklärt, wie eine neue Maschine funktioniert. Sie spricht schnell, und du verpasst ein paar Wörter. Was machst du?',
-    'c.understood.o1': 'Bitte sie, es zu zeigen oder aufzuschreiben, und wiederhole es.', // nagelezen (2e lezing)
+    'c.understood.o1': 'Bitte sie, es zu zeigen oder aufzuschreiben, und wiederhole es.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.understood.o2': 'Nick und sag „ja, ja“, damit sie keine Zeit verliert.',
     'c.understood.o3': 'Probier die Maschine später allein aus und schau, was passiert.',
     'c.understood.w': 'Zeigen, aufschreiben und zurücksagen sind schnelle Kontrollen. Deine Kollegin kann dich korrigieren, bevor etwas schiefgeht. Hier gilt das als sorgfältig, nicht als langsam.',
@@ -984,9 +984,9 @@ const t: CultureTranslation = {
     'c.keeplearning.b': 'Jeden Tag ein paar Minuten hilft mehr als eine lange Stunde pro Woche. Speichere neue Wörter von der Arbeit in einer Notiz-App auf deinem Handy. Hör einfaches Niederländisch, zum Beispiel das NOS Jeugdjournaal (Nachrichten für Kinder) oder einen Podcast in langsamem Niederländisch. Viele Bibliotheken haben ein Taalhuis: kostenlose Hilfe beim Niederländisch, oft mit einem taalcafé (ein Ort, um Sprechen zu üben) oder einem Sprachpartner (taalmaatje). Kollegen wechseln oft ins Englische, um dir zu helfen. Bitte sie freundlich, Niederländisch mit dir zu sprechen: Die meisten helfen gern.',
     'c.keeplearning.p': 'Sprich ruhig Niederländisch mit mir, dann lerne ich es schneller.',
     'c.keeplearning.s': 'Deine Kollegen wechseln immer ins Englische, wenn sie mit dir reden. Du willst Niederländisch lernen. Was machst du?',
-    'c.keeplearning.o1': 'Bedank dich und bitte sie, Niederländisch mit dir zu sprechen.', // nagelezen (2e lezing)
+    'c.keeplearning.o1': 'Bedank dich und bitte sie, Niederländisch mit dir zu sprechen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.keeplearning.o2': 'Sag nichts. Das Niederländisch kommt von selbst.',
-    'c.keeplearning.o3': 'Antworte auch auf Englisch, weil das höflicher ist.', // nagelezen (2e lezing)
+    'c.keeplearning.o3': 'Antworte auch auf Englisch, weil das höflicher ist.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.keeplearning.w': 'Kollegen wechseln oft ins Englische, um nett zu sein. Wenn du um Niederländisch bittest, helfen die meisten gern. Jeden Tag ein bisschen bei der Arbeit sprechen ist einer der schnellsten Wege zu lernen.',
     'l.gossip': 'Lästern und soziale Medien',
     'w.roddelen': 'lästern, tratschen',
@@ -1016,18 +1016,18 @@ const t: CultureTranslation = {
     'c.gossip.b': 'Hinter dem Rücken eines Kollegen reden (roddelen) schadet dem Vertrauen im Team. Hast du ein Problem mit jemandem? Sprich mit dieser Person oder mit deinem Vorgesetzten. Online gelten dieselben Regeln wie bei der Arbeit. Poste nichts über Kollegen, Klienten oder die Firma ohne Erlaubnis. Das gilt auch für Fotos, Videos und Nachrichten. Dein Chef kann sehen, was du postest, und es kann jahrelang online bleiben. Viele Teams haben einen Gruppenchat (groepsapp) für die Arbeit: Bleib dort bei der Arbeit und teile keine Screenshots davon mit anderen. Private Dinge eines Kollegen teilen oder jemanden online lächerlich machen ist auch Mobbing.',
     'c.gossip.p': 'Das will ich nicht online haben.',
     'c.gossip.s': 'Ein Kollege filmt dich, als du auf dem nassen Boden ausrutschst. Er will das Video auf TikTok stellen. Was machst du?',
-    'c.gossip.o1': 'Sag „Nee, dat wil ik niet“ und bitte ihn, es zu löschen.', // nagelezen (2e lezing)
+    'c.gossip.o1': 'Sag „Nee, dat wil ik niet“ und bitte ihn, es zu löschen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.gossip.o2': 'Lach und lass ihn posten, damit du nicht schwierig bist.',
-    'c.gossip.o3': 'Bitte ihn, es ohne deinen Namen zu posten.', // nagelezen (2e lezing)
-    'c.gossip.w': 'Meistens darf niemand ohne deine Erlaubnis ein Video von dir online stellen. Nein sagen ist normal, und dein Arbeitgeber muss handeln, wenn Kollegen sich online übereinander lustig machen. Wenn er es trotzdem postet, sag es deinem Vorgesetzten.', // nieuw, nalezen
+    'c.gossip.o3': 'Bitte ihn, es ohne deinen Namen zu posten.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.gossip.w': 'Meistens darf niemand ohne deine Erlaubnis ein Video von dir online stellen. Nein sagen ist normal, und dein Arbeitgeber muss handeln, wenn Kollegen sich online übereinander lustig machen. Wenn er es trotzdem postet, sag es deinem Vorgesetzten.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.boundaries': 'Grenzen überschreiten',
     'c.boundaries.b': 'Grensoverschrijdend gedrag ist Verhalten, das die Grenze von jemandem überschreitet. Zum Beispiel: unerwünschtes Anfassen, sexuelle Bemerkungen oder Witze, Anstarren, unerwünschte Bilder, Drohungen oder Anschreien. Es ist egal, ob die andere Person es „als Witz gemeint“ hat: Es zählt, wie es sich für dich anfühlt. Wenn du kannst, sag klar, dass es aufhören soll. Schreib auf, was passiert ist, wann und wer es gesehen hat. Sag es deinem Vorgesetzten, der Vertrauensperson (vertrouwenspersoon, wenn es eine gibt) oder der Personalabteilung (HR). Dein Arbeitgeber muss dich schützen, und du darfst nicht bestraft werden, weil du es meldest. Hast du gesehen, dass es einem Kollegen passiert? Frag, ob alles okay ist, und biete an, Zeuge zu sein.',
     'c.boundaries.p': 'Ich will, dass du aufhörst.',
     'c.boundaries.s': 'Dein Teamleiter legt oft seine Hand auf deinen Rücken und sagt, du siehst „hübsch“ aus. Dabei fühlst du dich unwohl. Er bestimmt deine Schichten. Was machst du?',
-    'c.boundaries.o1': 'Schreib alles auf und sag es der vertrouwenspersoon.', // nagelezen (2e lezing)
+    'c.boundaries.o1': 'Schreib alles auf und sag es der vertrouwenspersoon.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.boundaries.o2': 'Sag nichts, er bestimmt ja deine Schichten.',
     'c.boundaries.o3': 'Kündige, ohne jemandem zu sagen, warum.',
-    'c.boundaries.w': 'Das ist unerwünschtes Verhalten, und es ist nicht deine Schuld. Eine Vertrauensperson hört dir vertraulich zu und hilft dir, den nächsten Schritt zu wählen. Du bist geschützt, wenn du es meldest. Du kannst auch mit der Personalabteilung sprechen.', // nagelezen (2e lezing)
+    'c.boundaries.w': 'Das ist unerwünschtes Verhalten, und es ist nicht deine Schuld. Eine Vertrauensperson hört dir vertraulich zu und hilft dir, den nächsten Schritt zu wählen. Du bist geschützt, wenn du es meldest. Du kannst auch mit der Personalabteilung sprechen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'u.shop': 'Im Geschäft',
     'l.shelves': 'Regale und Bestand',
     'w.schap': 'das Regal (im Geschäft)',
@@ -1093,27 +1093,27 @@ const t: CultureTranslation = {
     'c.shelves': 'Alt nach vorne',
     'c.shelves.b': 'Wenn du Regale auffüllst, schau auf das Datum der Produkte. Stell die Produkte mit dem frühesten Datum nach vorne und die neuen nach hinten. Kunden nehmen von vorne, so gehen die alten Produkte zuerst weg. Ist ein Produkt abgelaufen oder beschädigt? Nimm es aus dem Regal und frag, was du damit machen sollst. Halte die Gänge frei von Kartons und Wagen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.shelves.p': 'Was mache ich mit abgelaufenen Produkten?',
-    'c.shelves.s': 'Du stellst neue Milch ins Regal. Vorne steht Milch mit einem früheren Datum. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.shelves.o1': 'Neue Milch nach hinten, alte Milch nach vorne.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.shelves.o2': 'Neue Milch nach vorne, sie ist frischer.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.shelves.o3': 'Wirf die alte Milch weg.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.shelves.s': 'Du stellst neue Milch ins Regal. Vorne steht Milch mit einem früheren Datum. Was machst du?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.shelves.o1': 'Neue Milch nach hinten, alte Milch nach vorne.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.shelves.o2': 'Neue Milch nach vorne, sie ist frischer.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.shelves.o3': 'Wirf die alte Milch weg.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.shelves.w': 'Kunden nehmen von vorne. Wenn die alten Produkte zuerst weggehen, wird weniger Essen weggeworfen.',
     'c.checkout': 'Ausweis für Alkohol und Tabak',
     'c.checkout.b': 'Du darfst an niemanden unter 18 Alkohol oder Tabak verkaufen: Das ist Gesetz. Nicht sicher, wie alt ein Kunde ist? Frag nach dem Ausweis. Viele Geschäfte fragen jeden nach dem Ausweis, der jünger als 25 aussieht. Kein Ausweis, oder unter 18? Dann verkaufst du es nicht, und du bleibst höflich. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.checkout.p': 'Ohne Ausweis darf ich das nicht verkaufen.',
     'c.checkout.s': 'Ein junger Mann will Bier kaufen. Er sieht aus wie 17. Er sagt, er ist 19, aber er hat keinen Ausweis dabei. Was machst du?',
-    'c.checkout.o1': 'Sag, ohne Ausweis geht es nicht.', // nagelezen (2e lezing)
+    'c.checkout.o1': 'Sag, ohne Ausweis geht es nicht.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.checkout.o2': 'Verkauf es, er sagt ja, er ist 19.',
     'c.checkout.o3': 'Verkauf es, aber nur eine Dose.',
     'c.checkout.w': 'Ohne Ausweis kannst du sein Alter nicht wissen. Alkohol an jemanden unter 18 zu verkaufen ist gegen das Gesetz, und das Geschäft kann eine Strafe bekommen.',
-    'c.counting': 'Vijfentwintig: erst die 5, dann die 20', // nieuw, nalezen
-    'c.counting.b': 'Auf Niederländisch hat jede Zahl von 0 bis 12 ein eigenes Wort: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. Die Zahlen von 13 bis 19 enden auf -tien: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. Die Zehner enden auf -tig: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. Von 21 bis 99 sagt man zuerst die letzte Ziffer, wie im Deutschen: 25 ist vijfentwintig, „fünfundzwanzig“. Also ist 47 zevenenveertig, und 74 ist vierenzeventig. Dertien und dertig klingen fast gleich: Hör auf das Ende. Nicht sicher? Sag die Ziffern einzeln zurück.', // nieuw, nalezen
-    'c.counting.p': 'Vier, sieben? Also siebenundvierzig?', // nieuw, nalezen
-    'c.counting.s': 'Dein Vorgesetzter sagt: „Ga naar gang zevenenveertig.“ Welcher Gang ist es?', // nieuw, nalezen
-    'c.counting.o1': 'Gang 47.', // nieuw, nalezen
-    'c.counting.o2': 'Gang 74.', // nieuw, nalezen
-    'c.counting.o3': 'Gang 40.', // nieuw, nalezen
-    'c.counting.w': '„Zevenenveertig“ heißt „sieben und vierzig“: erst die 7, dann die 40. Also ist es Gang 47. Viele Neue hören 74 und gehen in den falschen Gang.', // nieuw, nalezen
+    'c.counting': 'Vijfentwintig: erst die 5, dann die 20', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.b': 'Auf Niederländisch hat jede Zahl von 0 bis 12 ein eigenes Wort: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. Die Zahlen von 13 bis 19 enden auf -tien: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. Die Zehner enden auf -tig: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. Von 21 bis 99 sagt man zuerst die letzte Ziffer, wie im Deutschen: 25 ist vijfentwintig, „fünfundzwanzig“. Also ist 47 zevenenveertig, und 74 ist vierenzeventig. Dertien und dertig klingen fast gleich: Hör auf das Ende. Nicht sicher? Sag die Ziffern einzeln zurück.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.p': 'Vier, sieben? Also siebenundvierzig?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.s': 'Dein Vorgesetzter sagt: „Ga naar gang zevenenveertig.“ Welcher Gang ist es?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.o1': 'Gang 47.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.o2': 'Gang 74.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.o3': 'Gang 40.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.w': '„Zevenenveertig“ heißt „sieben und vierzig“: erst die 7, dann die 40. Also ist es Gang 47. Viele Neue hören 74 und gehen in den falschen Gang.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.hours': 'Half acht ist 7:30 Uhr',
     'c.hours.b': 'Im Niederländischen zählt „half“ zur nächsten Stunde: half acht ist 7:30 Uhr, nicht 8:30 Uhr. Das ist wie „halb acht“ im Deutschen. Kwart over acht ist 8:15 Uhr, und kwart voor acht ist 7:45 Uhr. Prüfe deine Stunden selbst: die Endzeit minus die Anfangszeit, minus die Pause. Eine Pause ist oft nicht bezahlt. Schreib jeden Tag deine Stunden auf.',
     'c.hours.p': 'Half acht? Also eine halbe Stunde vor acht?',
@@ -1183,7 +1183,7 @@ const t: CultureTranslation = {
     'c.aihelp.b': 'KI-Apps und Chatbots wie ChatGPT können übersetzen, einen Brief erklären oder dir helfen, eine Nachricht zu schreiben. Das ist nützlich. Aber KI macht manchmal Fehler und klingt trotzdem sehr sicher. Geht es um deinen Vertrag, deinen Lohn, Medikamente oder Sicherheit? Dann prüfe die Antwort immer mit einem Menschen. Zum Beispiel mit deinem Vorgesetzten, der Personalabteilung (HR) oder dem Juridisch Loket.',
     'c.aihelp.p': 'Stimmt das? Können Sie kurz mit draufschauen?',
     'c.aihelp.s': 'Du fragst einen Chatbot zu deinem Vertrag. Er sagt, du bekommst kein Urlaubsgeld. Was machst du?',
-    'c.aihelp.o1': 'Bitte HR oder das Juridisch Loket, es zu prüfen.', // nagelezen (2e lezing)
+    'c.aihelp.o1': 'Bitte HR oder das Juridisch Loket, es zu prüfen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aihelp.o2': 'Glaub es: Der Chatbot klingt sehr sicher.',
     'c.aihelp.o3': 'Sag nichts und vergiss es.',
     'c.aihelp.w': 'Ein Chatbot kann sich bei Regeln und Verträgen irren. In den Niederlanden bekommt fast jeder Arbeitnehmer Urlaubsgeld. Ein Mensch, der die Regeln kennt, kann es prüfen.',
@@ -1191,7 +1191,7 @@ const t: CultureTranslation = {
     'c.aiprivate.b': 'Was du in einen Chatbot eingibst, kann von der Firma, die ihn macht, gespeichert und benutzt werden. Gib also nie deine BSN, ein Passwort oder deine Bankdaten ein. Gib keine Namen oder Fotos von Kunden, Patienten oder Kollegen ein, und keine Papiere von der Arbeit. Viele Arbeitgeber haben Regeln für KI. Frag zuerst, ob du sie für deine Arbeit benutzen darfst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.',
     'c.aiprivate.p': 'Darf ich dafür KI benutzen?',
     'c.aiprivate.s': 'Du willst, dass ein Chatbot einen Bericht über einen Kunden schreibt. Im Bericht stehen der Name und die Adresse des Kunden. Was machst du?',
-    'c.aiprivate.o1': 'Frag zuerst und lass den Namen und die Adresse weg.', // nagelezen (2e lezing)
+    'c.aiprivate.o1': 'Frag zuerst und lass den Namen und die Adresse weg.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aiprivate.o2': 'Gib alles in den Chatbot ein: Das geht schneller.',
     'c.aiprivate.o3': 'Schick den Bericht an einen Freund, damit er ihn prüft.',
     'c.aiprivate.w': 'Namen und Adressen sind persönliche Daten. Sie dürfen nicht einfach an eine andere Firma gehen. Dein Arbeitgeber weiß, welche Apps erlaubt sind.',
@@ -1199,7 +1199,7 @@ const t: CultureTranslation = {
     'c.aifake.b': 'Mit KI können Kriminelle eine Stimme kopieren und gefälschte Fotos und Videos machen. Ein Anruf oder eine Nachricht, die wie dein Chef, deine Bank oder jemand aus deiner Familie klingt, kann gefälscht sein. Sei vorsichtig, wenn es eilig ist, um Geld geht und eine neue Nummer dabei ist. Leg auf und ruf selbst unter der Nummer zurück, die du kennst. Eine echte Bank, ein echter Arbeitgeber oder die Polizei fragt nie nach deinen Codes.',
     'c.aifake.p': 'Ich lege auf und rufe selbst zurück.',
     'c.aifake.s': 'Dein Handy klingelt. Eine Stimme, die genau wie dein Chef klingt, sagt: „Bezahl diese Rechnung jetzt, es ist dringend.“ Was machst du?',
-    'c.aifake.o1': 'Leg auf und ruf deinen Chef selbst an.', // nagelezen (2e lezing)
+    'c.aifake.o1': 'Leg auf und ruf deinen Chef selbst an.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aifake.o2': 'Bezahl schnell: Es ist ja dein Chef.',
     'c.aifake.o3': 'Gib deinen Bankcode, damit dein Chef es bezahlen kann.',
     'c.aifake.w': 'Eine Stimme kann man mit KI kopieren. Eile und Geld zusammen sind ein Warnzeichen. Unter einer Nummer zurückrufen, die du kennst, ist eine schnelle und sichere Kontrolle.',
@@ -1207,9 +1207,9 @@ const t: CultureTranslation = {
     'c.aiplan.b': 'Immer mehr Firmen lassen eine App oder einen Computer Dinge entscheiden. Zum Beispiel macht er den Dienstplan oder misst dein Tempo mit dem Scanner. Du darfst fragen, welche Informationen über dich gesammelt werden. Gibt es eine große Entscheidung über dich, zum Beispiel weniger Stunden, eine Abmahnung oder eine Kündigung? Frag, wer das entschieden hat. Hat ein Computer so eine Entscheidung allein getroffen? Dann darfst du einen Menschen bitten, sie noch einmal zu prüfen und zu erklären. Schreib deine eigenen Stunden auf. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
     'c.aiplan.p': 'Kann sich ein Mensch das kurz ansehen?',
     'c.aiplan.s': 'Die Planungs-App gibt dir nächsten Monat viel weniger Stunden. Niemand sagt dir, warum. Was machst du?',
-    'c.aiplan.o1': 'Bitte einen Menschen, es zu erklären.', // nagelezen (2e lezing)
+    'c.aiplan.o1': 'Bitte einen Menschen, es zu erklären.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aiplan.o2': 'Akzeptier es: Die App hat immer recht.',
-    'c.aiplan.o3': 'Frag den Chatbot in der App, warum.', // nagelezen (2e lezing)
+    'c.aiplan.o3': 'Frag den Chatbot in der App, warum.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aiplan.w': 'Apps machen Fehler, und sie wissen nicht alles über dich. Du darfst um eine Erklärung bitten, und ein Mensch kann es sich noch einmal ansehen.',
     // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
     'u.kas': "Im Gewächshaus", // nagelezen (2e lezing)
@@ -1237,22 +1237,22 @@ const t: CultureTranslation = {
     's.greensafe.3': "Wo steht der Erntewagen?", // nagelezen (2e lezing)
     'c.greensafe.q': "Darf ich in Gewächshaus drei arbeiten?", // nagelezen (2e lezing)
     'c.greensafe.a': "Nein, noch nicht. Es wurde gerade gespritzt.", // nagelezen (2e lezing)
-    'c.harvest': "Tempo und Stücklohn", // nagelezen (2e lezing)
-    'c.harvest.b': "Im Gewächshaus arbeitest du oft in einem festen Tempo. Manche Arbeitgeber zahlen pro Kiste, pro Reihe oder pro Kilo: Stücklohn (stukloon). Auch mit Stücklohn musst du für jede Stunde, die du arbeitest, mindestens den Mindestlohn verdienen. Schau den Betrag auf rijksoverheid.nl nach. Schreib jeden Tag deine Stunden und deine Kisten auf und vergleiche sie mit deiner Lohnabrechnung. Schnell arbeiten ist gut, aber sicher arbeiten geht vor. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nagelezen (2e lezing)
-    'c.harvest.p': "Wie viele Kisten habe ich heute geschafft?", // nagelezen (2e lezing)
-    'c.harvest.s': "Du wirst pro Kiste bezahlt. Diese Woche verdienst du pro Stunde weniger als den Mindestlohn. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.o1': "Zeig deine eigene Liste mit Stunden und Kisten.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.o2': "Sag nichts und arbeite schneller.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.o3': "Akzeptiere es: Mit Stücklohn ist das normal.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.w': "Auch mit Stücklohn musst du für jede gearbeitete Stunde mindestens den Mindestlohn bekommen. Deine eigene Liste mit Stunden und Kisten hilft dir zu zeigen, was du gemacht hast. Wird es nicht korrigiert, hol dir Hilfe.", // nagelezen (2e lezing)
-    'c.greensafe': "Hitze und Spritzmittel", // nagelezen (2e lezing)
-    'c.greensafe.b': "Im Gewächshaus kann es sehr heiß werden, auch im Frühling. Trink oft Wasser, auch bevor du Durst hast, und mach deine Pausen an einem kühlen Ort. Ist dir schwindelig oder übel, oder hast du Kopfschmerzen? Hör auf und sag es jemandem. Pflanzen werden manchmal mit Chemikalien gespritzt (spuitmiddelen). An einem Gewächshaus, das gerade gespritzt wurde, hängt oft ein Schild an der Tür. Geh erst wieder hinein, wenn dein Vorgesetzter sagt, dass es sicher ist. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nagelezen (2e lezing)
-    'c.greensafe.p': "Darf ich schon in diesem Gewächshaus arbeiten?", // nagelezen (2e lezing)
-    'c.greensafe.s': "Ein Gewächshaus wurde heute Morgen gespritzt. An der Tür hängt ein Schild. Ein Kollege sagt: „Komm schon, es ist nur kurz.“ Was machst du?", // nagelezen (2e lezing)
-    'c.greensafe.o1': "Bleib draußen und frag, wann es sicher ist.", // nagelezen (2e lezing)
-    'c.greensafe.o2': "Geh schnell hinein und halte die Luft an.", // nagelezen (2e lezing)
-    'c.greensafe.o3': "Geh hinein und wasch dir danach gut die Hände.", // nagelezen (2e lezing)
-    'c.greensafe.w': "Spritzmittel können deiner Haut, deinen Augen und deiner Lunge schaden, auch wenn du nichts riechst. Nach dem Spritzen gibt es eine Wartezeit, bevor man wieder hineindarf. Dein Vorgesetzter weiß, wann sie vorbei ist.", // nagelezen (2e lezing)
+    'c.harvest': "Tempo und Stücklohn", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.harvest.b': "Im Gewächshaus arbeitest du oft in einem festen Tempo. Manche Arbeitgeber zahlen pro Kiste, pro Reihe oder pro Kilo: Stücklohn (stukloon). Auch mit Stücklohn musst du für jede Stunde, die du arbeitest, mindestens den Mindestlohn verdienen. Schau den Betrag auf rijksoverheid.nl nach. Schreib jeden Tag deine Stunden und deine Kisten auf und vergleiche sie mit deiner Lohnabrechnung. Schnell arbeiten ist gut, aber sicher arbeiten geht vor. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.harvest.p': "Wie viele Kisten habe ich heute geschafft?", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.harvest.s': "Du wirst pro Kiste bezahlt. Diese Woche verdienst du pro Stunde weniger als den Mindestlohn. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.o1': "Zeig deine eigene Liste mit Stunden und Kisten.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.o2': "Sag nichts und arbeite schneller.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.o3': "Akzeptiere es: Mit Stücklohn ist das normal.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.w': "Auch mit Stücklohn musst du für jede gearbeitete Stunde mindestens den Mindestlohn bekommen. Deine eigene Liste mit Stunden und Kisten hilft dir zu zeigen, was du gemacht hast. Wird es nicht korrigiert, hol dir Hilfe.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe': "Hitze und Spritzmittel", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.b': "Im Gewächshaus kann es sehr heiß werden, auch im Frühling. Trink oft Wasser, auch bevor du Durst hast, und mach deine Pausen an einem kühlen Ort. Ist dir schwindelig oder übel, oder hast du Kopfschmerzen? Hör auf und sag es jemandem. Pflanzen werden manchmal mit Chemikalien gespritzt (spuitmiddelen). An einem Gewächshaus, das gerade gespritzt wurde, hängt oft ein Schild an der Tür. Geh erst wieder hinein, wenn dein Vorgesetzter sagt, dass es sicher ist. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.p': "Darf ich schon in diesem Gewächshaus arbeiten?", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.s': "Ein Gewächshaus wurde heute Morgen gespritzt. An der Tür hängt ein Schild. Ein Kollege sagt: „Komm schon, es ist nur kurz.“ Was machst du?", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.o1': "Bleib draußen und frag, wann es sicher ist.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.o2': "Geh schnell hinein und halte die Luft an.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.o3': "Geh hinein und wasch dir danach gut die Hände.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.w': "Spritzmittel können deiner Haut, deinen Augen und deiner Lunge schaden, auch wenn du nichts riechst. Nach dem Spritzen gibt es eine Wartezeit, bevor man wieder hineindarf. Dein Vorgesetzter weiß, wann sie vorbei ist.", // nagelezen (2e lezing) // nagelezen AI 22 nov
     // nagelezen (2e lezing): Getallen en gegevens (u.data), l.permit, l.kids, l.body, l.jobends and their tips (30 October 2026).
     'u.data': "Zahlen und Angaben",
     'l.details': "Deine Angaben",
@@ -1279,102 +1279,102 @@ const t: CultureTranslation = {
     's.dates.3': "Letzte Woche habe ich vierzig Stunden gearbeitet.",
     'c.dates.q': "Welches Datum ist heute?",
     'c.dates.a': "Heute ist Montag, der 3. Juni.",
-    'l.permit': "Papiere, Integration und dein Job",
-    'w.papieren': "die Papiere (Dokumente)",
-    'w.werkvergunning': "die Arbeitserlaubnis",
-    'w.werknemer': "der Arbeitnehmer (du arbeitest für einen Arbeitgeber)",
-    'w.zzper': "der Selbstständige (du arbeitest für dich selbst)",
-    'w.inburgering': "die Integration (der Kurs und die Prüfungen für Neuankömmlinge)",
-    'w.taalles': "der Sprachkurs, die Sprachstunde",
-    's.permit.1': "Darf ich mit meinen Papieren hier arbeiten?",
-    's.permit.2': "Bin ich Arbeitnehmer oder selbstständig?",
-    's.permit.3': "Ich arbeite auf Abruf.",
-    'c.permit.q': "Kannst du am Dienstag arbeiten?",
-    'c.permit.a': "Nein, da habe ich Sprachkurs. Mittwoch geht.",
-    'l.kids': "Kinder und Arbeit",
-    'w.zwanger': "schwanger",
-    'w.kinderopvang': "die Kinderbetreuung, die Kita",
-    'w.ophalen': "abholen (jemanden holen)",
-    'w.ziekkind': "ein krankes Kind",
-    'w.ouderschapsverlof': "die Elternzeit",
-    'w.zorgverlof': "der Pflegeurlaub (freie Zeit, um ein krankes Familienmitglied zu pflegen)",
-    's.kids.1': "Mein Kind ist krank. Ich muss es abholen.",
-    's.kids.2': "Darf ich Sonderurlaub für einen Notfall nehmen?",
-    's.kids.3': "Zahlt mein Arbeitgeber meinen Lohn weiter?",
-    'c.kids.q': "Warum musst du jetzt weg?",
-    'c.kids.a': "Die Kita hat angerufen. Mein Sohn hat Fieber.",
-    'l.body': "Körper und Schmerzen",
-    'w.hoofd': "der Kopf",
-    'w.rug': "der Rücken",
-    'w.arm': "der Arm",
-    'w.hand': "die Hand",
-    'w.buik': "der Bauch",
-    'w.oog': "das Auge",
-    's.body.1': "Ich habe Schmerzen in der Hand.",
-    's.body.2': "Ich fühle mich nicht gut.",
-    's.body.3': "Ich bin auf den Arm gefallen.",
-    'c.body.q': "Wo tut es weh?",
-    'c.body.a': "Im Rücken. Ich habe einen schweren Karton gehoben.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'l.jobends': "Wenn dein Job endet",
-    'w.eindafrekening': "die Schlussabrechnung (dein letzter Lohn, wenn ein Job endet)",
-    'w.opzeggen': "kündigen (einen Vertrag), absagen",
-    'w.uitschrijven': "abmelden (deinen Namen von einer Liste nehmen)",
-    'w.sleutel': "der Schlüssel",
-    'w.verhuizen': "umziehen (in eine andere Wohnung)",
-    'w.busje': "der Kleinbus",
-    's.jobends.1': "Bekomme ich mein Urlaubsgeld und meine freien Tage ausgezahlt?",
-    's.jobends.2': "Ich hole mir Rat beim Juridisch Loket.",
-    's.jobends.3': "Ich schließe selbst eine neue Krankenversicherung ab.",
-    'c.jobends.q': "Deine Arbeit endet am Freitag. Dann musst du auch aus der Wohnung raus.",
-    'c.jobends.a': "Wie lang ist die Kündigungsfrist von meinem Mietvertrag?",
-    'c.details': "Deine Angaben: Gib sie richtig an",
-    'c.details.b': "Am Anfang eines Jobs gibst du deine Angaben. Das sind dein Name, deine Adresse, deine Telefonnummer, dein Geburtsdatum und deine BSN. Buchstabiere deinen Namen langsam, Buchstabe für Buchstabe. Prüfe danach deinen Namen auf deinem Vertrag und auf deiner Lohnabrechnung. Ein Fehler in deinem Namen oder deiner BSN kann Probleme mit deinem Lohn oder deinen Steuern machen. Neue Adresse oder Telefonnummer? Sag es deinem Arbeitgeber.",
-    'c.details.p': "Ich buchstabiere es kurz: A, L, I.",
-    'c.details.s': "Am Telefon schreibt die Zeitarbeitsfirma deinen Nachnamen auf. Du hörst, dass sie ihn falsch schreiben. Was machst du?",
-    'c.details.o1': "Buchstabiere langsam und bitte sie, den Namen vorzulesen.", // nagelezen (2e lezing)
-    'c.details.o2': "Sag nichts: Ein kleiner Fehler im Namen ist egal.",
-    'c.details.o3': "Leg auf und hoffe, dass sie den Fehler später finden.",
-    'c.details.w': "Dein Name muss auf deinem Vertrag, deiner Lohnabrechnung und deinem Ausweis gleich sein. Dann stimmen dein Lohn und deine Steuern. Buchstabieren und vorlesen lassen ist eine schnelle Kontrolle.",
-    'c.dates': "Daten: Der Tag kommt zuerst",
-    'c.dates.b': "Im Niederländischen kommt der Tag vor dem Monat: 3-6 ist der 3. Juni, nicht der 6. März. „Tot en met“ heißt, dass der letzte Tag mitzählt. Tage und Monate schreibt man klein: maandag, juni. Bei einem Datum nicht sicher? Frag nach und sag es noch einmal.",
-    'c.dates.p': "Meinst du den 3. Juni?",
-    'c.dates.s': "In deinem Dienstplan steht: „Vrij: 3-6 tot en met 5-6“. Wann hast du frei?",
-    'c.dates.o1': "Am 3., 4. und 5. Juni.",
-    'c.dates.o2': "Nur am 3. und 4. Juni.",
-    'c.dates.o3': "Vom 6. März bis zum 6. Mai.",
-    'c.dates.w': "Zuerst kommt der Tag, dann der Monat: 3-6 ist der 3. Juni. „Tot en met“ heißt, dass der 5. Juni mitzählt. Du hast also drei Tage frei.",
-    'c.permit': "Arbeit und Integration",
-    'c.permit.b': "Musst du den Integrationskurs (inburgering) machen? Sag es deinem Arbeitgeber, und sag der gemeente (der Gemeinde), dass du arbeitest. Frag früh, ob deine Sprachkurse zu deinem Dienstplan passen können. Nicht sicher, ob du hier arbeiten darfst? Prüfe es, bevor du anfängst, zum Beispiel beim IND, beim UWV oder bei VluchtelingenWerk. Sollst du dich für diesen Job als Selbstständiger (zzp’er) anmelden? Hol dir zuerst Rat. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.p': "Ich habe dienstags Sprachkurs. Kann mein Dienstplan darauf Rücksicht nehmen?",
-    'c.permit.s': "Dein Sprachkurs ist dienstagmorgens. Laut deinem neuen Dienstplan arbeitest du dann. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.o1': "Bitte deinen Vorgesetzten, den Dienstplan zu ändern.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.o2': "Lass den Kurs ausfallen: Die Arbeit geht vor.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.o3': "Bleib dienstags zu Hause und sag nichts.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.w': "Deine Integration ist auch eine Pflicht. Viele Arbeitgeber helfen, wenn sie es früh wissen. Die gemeente kann dir auch helfen, deinen Plan mit deiner Arbeit zu verbinden.",
-    'c.kids': "Dein Kind ist krank",
-    'c.kids.b': "Ist dein Kind plötzlich krank? Sag es sofort deinem Arbeitgeber. Für die ersten Stunden oder Tage kannst du Sonderurlaub für Notfälle nehmen (calamiteitenverlof), und dein Arbeitgeber zahlt dich weiter. Braucht dein Kind länger Pflege? Dann kannst du Pflegeurlaub (zorgverlof) beantragen. Schwanger? Deshalb darf dein Arbeitgeber dir nicht kündigen. Frag rechtzeitig nach dem Mutterschutz und der Elternzeit (ouderschapsverlof). Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.",
-    'c.kids.p': "Mein Kind ist krank. Kann ich heute früher gehen?",
-    'c.kids.s': "Die Kita (kinderopvang) ruft dich bei der Arbeit an. Dein Kind hat Fieber und muss nach Hause. Was machst du?",
-    'c.kids.o1': "Sag es deinem Vorgesetzten und bitte um Sonderurlaub.", // nagelezen (2e lezing)
-    'c.kids.o2': "Geh ohne ein Wort und erklär es morgen.",
-    'c.kids.o3': "Bleib bei der Arbeit und lass dein Kind warten, bis deine Schicht vorbei ist.",
-    'c.kids.w': "Ein krankes Kind ist ein Notfall zu Hause. Wenn du es zuerst deinem Vorgesetzten sagst, kann er die Arbeit planen. Sonderurlaub für Notfälle ist für solche Momente da.",
-    'c.body': "Sag, was passiert ist und wo es wehtut",
-    'c.body.b': "Sag beim Arzt, was passiert ist und wo es wehtut. Zum Beispiel: „Ik ben gevallen. Mijn arm doet pijn.“ Sag auch, wie lange du die Schmerzen schon hast. Du musst nicht raten, was du hast: Das prüft der Arzt. Ist es bei der Arbeit passiert? Sag es deinem Vorgesetzten noch am selben Tag.",
-    'c.body.p': "Ich bin gefallen. Mein Arm tut weh.",
-    'c.body.s': "Du hast bei der Arbeit eine schwere Kiste gehoben. Jetzt tut dein Rücken sehr weh. Du bist beim Hausarzt (huisarts). Was sagst du?",
-    'c.body.o1': "Wo es wehtut und was passiert ist: Du hast eine schwere Kiste gehoben.",
-    'c.body.o2': "Nur, dass es dir schlecht geht, mehr nicht.",
-    'c.body.o3': "Den Namen einer Krankheit, die du im Internet gefunden hast.",
-    'c.body.w': "Wenn du sagst, wo es wehtut und was passiert ist, versteht dich der Arzt schneller. Der Arzt prüft, was es ist. Ist es bei der Arbeit passiert? Sag es auch deinem Vorgesetzten.",
-    'c.jobends': "Dein Job endet: Was hört noch auf?",
-    'c.jobends.b': "Wenn dein Job endet, prüfe deine Schlussabrechnung (eindafrekening). Freie Tage, die du nicht genommen hast, und dein Urlaubsgeld werden meistens damit ausgezahlt. Wohnung, Krankenversicherung oder ein Kleinbus über die Zeitarbeitsfirma können gleichzeitig enden. Schließ rechtzeitig selbst eine Krankenversicherung ab. Dein Mietvertrag hat eigene Regeln: Hol dir Rat, bevor du aus der Wohnung ausziehst. Ziehst du um oder verlässt du die Niederlande? Sag es der gemeente. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.",
-    'c.jobends.p': "Wann bekomme ich meine Schlussabrechnung?",
-    'c.jobends.s': "Dein Job endet am Freitag. Deine Krankenversicherung läuft über die Zeitarbeitsfirma. Was machst du?",
-    'c.jobends.o1': "Frag, wann sie endet, und versichere dich rechtzeitig selbst.", // nagelezen (2e lezing)
-    'c.jobends.o2': "Nichts: Die Versicherung läuft von selbst weiter.",
-    'c.jobends.o3': "Warte, bis du krank wirst, und kümmere dich dann darum.",
-    'c.jobends.w': "Eine Versicherung über die Zeitarbeitsfirma endet oft, wenn dein Job endet. Wenn du in den Niederlanden wohnst oder arbeitest, musst du meistens eine Krankenversicherung haben. Wenn du dich rechtzeitig kümmerst, bleibst du versichert.",
+    'l.permit': "Papiere, Integration und dein Job", // nagelezen AI 22 nov
+    'w.papieren': "die Papiere (Dokumente)", // nagelezen AI 22 nov
+    'w.werkvergunning': "die Arbeitserlaubnis", // nagelezen AI 22 nov
+    'w.werknemer': "der Arbeitnehmer (du arbeitest für einen Arbeitgeber)", // nagelezen AI 22 nov
+    'w.zzper': "der Selbstständige (du arbeitest für dich selbst)", // nagelezen AI 22 nov
+    'w.inburgering': "die Integration (der Kurs und die Prüfungen für Neuankömmlinge)", // nagelezen AI 22 nov
+    'w.taalles': "der Sprachkurs, die Sprachstunde", // nagelezen AI 22 nov
+    's.permit.1': "Darf ich mit meinen Papieren hier arbeiten?", // nagelezen AI 22 nov
+    's.permit.2': "Bin ich Arbeitnehmer oder selbstständig?", // nagelezen AI 22 nov
+    's.permit.3': "Ich arbeite auf Abruf.", // nagelezen AI 22 nov
+    'c.permit.q': "Kannst du am Dienstag arbeiten?", // nagelezen AI 22 nov
+    'c.permit.a': "Nein, da habe ich Sprachkurs. Mittwoch geht.", // nagelezen AI 22 nov
+    'l.kids': "Kinder und Arbeit", // nagelezen AI 22 nov
+    'w.zwanger': "schwanger", // nagelezen AI 22 nov
+    'w.kinderopvang': "die Kinderbetreuung, die Kita", // nagelezen AI 22 nov
+    'w.ophalen': "abholen (jemanden holen)", // nagelezen AI 22 nov
+    'w.ziekkind': "ein krankes Kind", // nagelezen AI 22 nov
+    'w.ouderschapsverlof': "die Elternzeit", // nagelezen AI 22 nov
+    'w.zorgverlof': "der Pflegeurlaub (freie Zeit, um ein krankes Familienmitglied zu pflegen)", // nagelezen AI 22 nov
+    's.kids.1': "Mein Kind ist krank. Ich muss es abholen.", // nagelezen AI 22 nov
+    's.kids.2': "Darf ich Sonderurlaub für einen Notfall nehmen?", // nagelezen AI 22 nov
+    's.kids.3': "Zahlt mein Arbeitgeber meinen Lohn weiter?", // nagelezen AI 22 nov
+    'c.kids.q': "Warum musst du jetzt weg?", // nagelezen AI 22 nov
+    'c.kids.a': "Die Kita hat angerufen. Mein Sohn hat Fieber.", // nagelezen AI 22 nov
+    'l.body': "Körper und Schmerzen", // nagelezen AI 22 nov
+    'w.hoofd': "der Kopf", // nagelezen AI 22 nov
+    'w.rug': "der Rücken", // nagelezen AI 22 nov
+    'w.arm': "der Arm", // nagelezen AI 22 nov
+    'w.hand': "die Hand", // nagelezen AI 22 nov
+    'w.buik': "der Bauch", // nagelezen AI 22 nov
+    'w.oog': "das Auge", // nagelezen AI 22 nov
+    's.body.1': "Ich habe Schmerzen in der Hand.", // nagelezen AI 22 nov
+    's.body.2': "Ich fühle mich nicht gut.", // nagelezen AI 22 nov
+    's.body.3': "Ich bin auf den Arm gefallen.", // nagelezen AI 22 nov
+    'c.body.q': "Wo tut es weh?", // nagelezen AI 22 nov
+    'c.body.a': "Im Rücken. Ich habe einen schweren Karton gehoben.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'l.jobends': "Wenn dein Job endet", // nagelezen AI 22 nov
+    'w.eindafrekening': "die Schlussabrechnung (dein letzter Lohn, wenn ein Job endet)", // nagelezen AI 22 nov
+    'w.opzeggen': "kündigen (einen Vertrag), absagen", // nagelezen AI 22 nov
+    'w.uitschrijven': "abmelden (deinen Namen von einer Liste nehmen)", // nagelezen AI 22 nov
+    'w.sleutel': "der Schlüssel", // nagelezen AI 22 nov
+    'w.verhuizen': "umziehen (in eine andere Wohnung)", // nagelezen AI 22 nov
+    'w.busje': "der Kleinbus", // nagelezen AI 22 nov
+    's.jobends.1': "Bekomme ich mein Urlaubsgeld und meine freien Tage ausgezahlt?", // nagelezen AI 22 nov
+    's.jobends.2': "Ich hole mir Rat beim Juridisch Loket.", // nagelezen AI 22 nov
+    's.jobends.3': "Ich schließe selbst eine neue Krankenversicherung ab.", // nagelezen AI 22 nov
+    'c.jobends.q': "Deine Arbeit endet am Freitag. Dann musst du auch aus der Wohnung raus.", // nagelezen AI 22 nov
+    'c.jobends.a': "Wie lang ist die Kündigungsfrist von meinem Mietvertrag?", // nagelezen AI 22 nov
+    'c.details': "Deine Angaben: Gib sie richtig an", // nagelezen AI 22 nov
+    'c.details.b': "Am Anfang eines Jobs gibst du deine Angaben. Das sind dein Name, deine Adresse, deine Telefonnummer, dein Geburtsdatum und deine BSN. Buchstabiere deinen Namen langsam, Buchstabe für Buchstabe. Prüfe danach deinen Namen auf deinem Vertrag und auf deiner Lohnabrechnung. Ein Fehler in deinem Namen oder deiner BSN kann Probleme mit deinem Lohn oder deinen Steuern machen. Neue Adresse oder Telefonnummer? Sag es deinem Arbeitgeber.", // nagelezen AI 22 nov
+    'c.details.p': "Ich buchstabiere es kurz: A, L, I.", // nagelezen AI 22 nov
+    'c.details.s': "Am Telefon schreibt die Zeitarbeitsfirma deinen Nachnamen auf. Du hörst, dass sie ihn falsch schreiben. Was machst du?", // nagelezen AI 22 nov
+    'c.details.o1': "Buchstabiere langsam und bitte sie, den Namen vorzulesen.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.details.o2': "Sag nichts: Ein kleiner Fehler im Namen ist egal.", // nagelezen AI 22 nov
+    'c.details.o3': "Leg auf und hoffe, dass sie den Fehler später finden.", // nagelezen AI 22 nov
+    'c.details.w': "Dein Name muss auf deinem Vertrag, deiner Lohnabrechnung und deinem Ausweis gleich sein. Dann stimmen dein Lohn und deine Steuern. Buchstabieren und vorlesen lassen ist eine schnelle Kontrolle.", // nagelezen AI 22 nov
+    'c.dates': "Daten: Der Tag kommt zuerst", // nagelezen AI 22 nov
+    'c.dates.b': "Im Niederländischen kommt der Tag vor dem Monat: 3-6 ist der 3. Juni, nicht der 6. März. „Tot en met“ heißt, dass der letzte Tag mitzählt. Tage und Monate schreibt man klein: maandag, juni. Bei einem Datum nicht sicher? Frag nach und sag es noch einmal.", // nagelezen AI 22 nov
+    'c.dates.p': "Meinst du den 3. Juni?", // nagelezen AI 22 nov
+    'c.dates.s': "In deinem Dienstplan steht: „Vrij: 3-6 tot en met 5-6“. Wann hast du frei?", // nagelezen AI 22 nov
+    'c.dates.o1': "Am 3., 4. und 5. Juni.", // nagelezen AI 22 nov
+    'c.dates.o2': "Nur am 3. und 4. Juni.", // nagelezen AI 22 nov
+    'c.dates.o3': "Vom 6. März bis zum 6. Mai.", // nagelezen AI 22 nov
+    'c.dates.w': "Zuerst kommt der Tag, dann der Monat: 3-6 ist der 3. Juni. „Tot en met“ heißt, dass der 5. Juni mitzählt. Du hast also drei Tage frei.", // nagelezen AI 22 nov
+    'c.permit': "Arbeit und Integration", // nagelezen AI 22 nov
+    'c.permit.b': "Musst du den Integrationskurs (inburgering) machen? Sag es deinem Arbeitgeber, und sag der gemeente (der Gemeinde), dass du arbeitest. Frag früh, ob deine Sprachkurse zu deinem Dienstplan passen können. Nicht sicher, ob du hier arbeiten darfst? Prüfe es, bevor du anfängst, zum Beispiel beim IND, beim UWV oder bei VluchtelingenWerk. Sollst du dich für diesen Job als Selbstständiger (zzp’er) anmelden? Hol dir zuerst Rat. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.p': "Ich habe dienstags Sprachkurs. Kann mein Dienstplan darauf Rücksicht nehmen?", // nagelezen AI 22 nov
+    'c.permit.s': "Dein Sprachkurs ist dienstagmorgens. Laut deinem neuen Dienstplan arbeitest du dann. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.o1': "Bitte deinen Vorgesetzten, den Dienstplan zu ändern.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.o2': "Lass den Kurs ausfallen: Die Arbeit geht vor.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.o3': "Bleib dienstags zu Hause und sag nichts.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.w': "Deine Integration ist auch eine Pflicht. Viele Arbeitgeber helfen, wenn sie es früh wissen. Die gemeente kann dir auch helfen, deinen Plan mit deiner Arbeit zu verbinden.", // nagelezen AI 22 nov
+    'c.kids': "Dein Kind ist krank", // nagelezen AI 22 nov
+    'c.kids.b': "Ist dein Kind plötzlich krank? Sag es sofort deinem Arbeitgeber. Für die ersten Stunden oder Tage kannst du Sonderurlaub für Notfälle nehmen (calamiteitenverlof), und dein Arbeitgeber zahlt dich weiter. Braucht dein Kind länger Pflege? Dann kannst du Pflegeurlaub (zorgverlof) beantragen. Schwanger? Deshalb darf dein Arbeitgeber dir nicht kündigen. Frag rechtzeitig nach dem Mutterschutz und der Elternzeit (ouderschapsverlof). Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nagelezen AI 22 nov
+    'c.kids.p': "Mein Kind ist krank. Kann ich heute früher gehen?", // nagelezen AI 22 nov
+    'c.kids.s': "Die Kita (kinderopvang) ruft dich bei der Arbeit an. Dein Kind hat Fieber und muss nach Hause. Was machst du?", // nagelezen AI 22 nov
+    'c.kids.o1': "Sag es deinem Vorgesetzten und bitte um Sonderurlaub.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.kids.o2': "Geh ohne ein Wort und erklär es morgen.", // nagelezen AI 22 nov
+    'c.kids.o3': "Bleib bei der Arbeit und lass dein Kind warten, bis deine Schicht vorbei ist.", // nagelezen AI 22 nov
+    'c.kids.w': "Ein krankes Kind ist ein Notfall zu Hause. Wenn du es zuerst deinem Vorgesetzten sagst, kann er die Arbeit planen. Sonderurlaub für Notfälle ist für solche Momente da.", // nagelezen AI 22 nov
+    'c.body': "Sag, was passiert ist und wo es wehtut", // nagelezen AI 22 nov
+    'c.body.b': "Sag beim Arzt, was passiert ist und wo es wehtut. Zum Beispiel: „Ik ben gevallen. Mijn arm doet pijn.“ Sag auch, wie lange du die Schmerzen schon hast. Du musst nicht raten, was du hast: Das prüft der Arzt. Ist es bei der Arbeit passiert? Sag es deinem Vorgesetzten noch am selben Tag.", // nagelezen AI 22 nov
+    'c.body.p': "Ich bin gefallen. Mein Arm tut weh.", // nagelezen AI 22 nov
+    'c.body.s': "Du hast bei der Arbeit eine schwere Kiste gehoben. Jetzt tut dein Rücken sehr weh. Du bist beim Hausarzt (huisarts). Was sagst du?", // nagelezen AI 22 nov
+    'c.body.o1': "Wo es wehtut und was passiert ist: Du hast eine schwere Kiste gehoben.", // nagelezen AI 22 nov
+    'c.body.o2': "Nur, dass es dir schlecht geht, mehr nicht.", // nagelezen AI 22 nov
+    'c.body.o3': "Den Namen einer Krankheit, die du im Internet gefunden hast.", // nagelezen AI 22 nov
+    'c.body.w': "Wenn du sagst, wo es wehtut und was passiert ist, versteht dich der Arzt schneller. Der Arzt prüft, was es ist. Ist es bei der Arbeit passiert? Sag es auch deinem Vorgesetzten.", // nagelezen AI 22 nov
+    'c.jobends': "Dein Job endet: Was hört noch auf?", // nagelezen AI 22 nov
+    'c.jobends.b': "Wenn dein Job endet, prüfe deine Schlussabrechnung (eindafrekening). Freie Tage, die du nicht genommen hast, und dein Urlaubsgeld werden meistens damit ausgezahlt. Wohnung, Krankenversicherung oder ein Kleinbus über die Zeitarbeitsfirma können gleichzeitig enden. Schließ rechtzeitig selbst eine Krankenversicherung ab. Dein Mietvertrag hat eigene Regeln: Hol dir Rat, bevor du aus der Wohnung ausziehst. Ziehst du um oder verlässt du die Niederlande? Sag es der gemeente. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nagelezen AI 22 nov
+    'c.jobends.p': "Wann bekomme ich meine Schlussabrechnung?", // nagelezen AI 22 nov
+    'c.jobends.s': "Dein Job endet am Freitag. Deine Krankenversicherung läuft über die Zeitarbeitsfirma. Was machst du?", // nagelezen AI 22 nov
+    'c.jobends.o1': "Frag, wann sie endet, und versichere dich rechtzeitig selbst.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.jobends.o2': "Nichts: Die Versicherung läuft von selbst weiter.", // nagelezen AI 22 nov
+    'c.jobends.o3': "Warte, bis du krank wirst, und kümmere dich dann darum.", // nagelezen AI 22 nov
+    'c.jobends.w': "Eine Versicherung über die Zeitarbeitsfirma endet oft, wenn dein Job endet. Wenn du in den Niederlanden wohnst oder arbeitest, musst du meistens eine Krankenversicherung haben. Wenn du dich rechtzeitig kümmerst, bleibst du versichert.", // nagelezen AI 22 nov
     // Entree in the Taal track (30 October 2026): nieuw, nalezen.
     'u.finish': "Deine Arbeit abschließen", // nieuw, nalezen
     'l.workorder': "Der Arbeitsauftrag", // nieuw, nalezen
@@ -1574,155 +1574,155 @@ const t: CultureTranslation = {
     's.budget.3': "Ich kündige dieses Abo.", // nieuw, nalezen
     'c.budget.q': "Kauf das Handy jetzt und zahl später!", // nieuw, nalezen
     'c.budget.a': "Nein, danke. Später zahlen heißt auch Schulden machen.", // nieuw, nalezen // nagelezen AI 31 okt
-    'l.healthy': "Fit für die Arbeit", // nieuw, nalezen
-    'w.slapen': "schlafen", // nieuw, nalezen
-    'w.ontbijt': "das Frühstück", // nieuw, nalezen
-    'w.bewegen': "sich bewegen, aktiv sein", // nieuw, nalezen
-    'w.moe': "müde", // nieuw, nalezen
-    'w.drugs': "die Drogen", // nieuw, nalezen
-    'w.somber': "niedergeschlagen (lange traurig)", // nieuw, nalezen
-    's.healthy.1': "Ich bin heute sehr müde.", // nieuw, nalezen
-    's.healthy.2': "Ich frühstücke immer zuerst.", // nieuw, nalezen
-    's.healthy.3': "In der Pause gehe ich kurz spazieren.", // nieuw, nalezen
-    'c.healthy.q': "Willst du eine Pille? Dann bleibst du wach.", // nieuw, nalezen
-    'c.healthy.a': "Nein, danke. Ich arbeite nicht unter dem Einfluss von Drogen oder Alkohol.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.workorder': "Erst lesen, dann anfangen", // nieuw, nalezen
-    'c.workorder.b': "Bevor du anfängst, lies den Arbeitsauftrag (werkbon) oder die Aufgabe in der App. Prüfe die Adresse, die Aufgabe und die Anzahl der Dinge. Ist etwas unklar? Frag, bevor du anfängst, nicht mittendrin. Dann leg dein Werkzeug und das Material bereit. Das spart Zeit, und du machst weniger Fehler. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.workorder.p': "Auf dem Arbeitsauftrag stehen zehn Kartons. Stimmt das?", // nieuw, nalezen
-    'c.workorder.s': "Auf deinem Arbeitsauftrag steht: Zimmer 3 streichen. Dein Kollege sagt, es ist Zimmer 5. Was machst du?", // nieuw, nalezen
-    'c.workorder.o1': "Du fragst deinen Vorgesetzten, welches Zimmer richtig ist.", // nieuw, nalezen
-    'c.workorder.o2': "Du streichst Zimmer 3, weil es auf dem Arbeitsauftrag steht.", // nieuw, nalezen
-    'c.workorder.o3': "Du streichst beide Zimmer, dann bist du sicher.", // nieuw, nalezen
-    'c.workorder.w': "Wenn zwei Dinge nicht zusammenpassen, prüfst du das, bevor du anfängst. Eine kurze Frage kostet weniger Zeit, als die Arbeit noch einmal zu machen.", // nieuw, nalezen
-    'c.handover': "Sag, was fertig ist und was nicht", // nieuw, nalezen
-    'c.handover.b': "Deine Arbeit ist nicht fertig, wenn du aufhörst. Räum zuerst deinen Platz und dein Werkzeug auf. Dann bitte jemanden, deine Arbeit zu prüfen. Sag deinem Vorgesetzten, was fertig ist und was nicht. Ist etwas schiefgegangen, oder ist etwas kaputt? Sag es jetzt, nicht morgen. Dich abzumelden gehört zu deiner Arbeit. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.handover.p': "Zimmer vier ist noch nicht fertig. Die Tür war abgeschlossen.", // nieuw, nalezen
-    'c.handover.s': "Du hast fünf Zimmer geputzt. Zimmer 4 war abgeschlossen. Deine Schicht ist zu Ende. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.o1': "Du sagst deinem Vorgesetzten: Zimmer 4 ist nicht fertig.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.o2': "Du gehst nach Hause: Zimmer 4 war zu, nicht deine Schuld.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.o3': "Du schreibst „alles fertig“ auf die Liste.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.w': "Dein Vorgesetzter plant die Arbeit. Wenn er weiß, dass Zimmer 4 nicht fertig ist, kann er jemand anderen schicken. Dann findet kein Kunde ein schmutziges Zimmer.", // nieuw, nalezen
-    'c.workshop': "Augen, Ohren und Feuer", // nieuw, nalezen
-    'c.workshop.b': "Schleifen, Sägen und Bohren machen Funken, kleine Stücke und viel Lärm. Trag eine Schutzbrille und Gehörschutz, auch bei einer kurzen Arbeit. Wenn es sehr laut ist, muss dein Arbeitgeber dir Gehörschutz geben. Funken können einen Brand auslösen. Beim Schweißen oder Schleifen in der Nähe von Dingen, die brennen können, gibt es extra Regeln (heet werk): Frag, bevor du anfängst. Räum nach der Arbeit die Metallstücke weg. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
-    'c.workshop.p': "Ich will schleifen. Wo ist der Gehörschutz?", // nieuw, nalezen
-    'c.workshop.s': "Du musst ein kleines Stück Metall schleifen. Es dauert eine Minute. Deine Schutzbrille liegt im anderen Raum. Was machst du?", // nieuw, nalezen
-    'c.workshop.o1': "Du holst zuerst deine Brille, auch für eine Minute.", // nieuw, nalezen
-    'c.workshop.o2': "Du schleifst mit halb geschlossenen Augen, es geht ja schnell.", // nieuw, nalezen
-    'c.workshop.o3': "Du hältst deine andere Hand vor die Augen.", // nieuw, nalezen
-    'c.workshop.w': "Ein Funke oder ein Stück Metall im Auge kann dein Auge für immer schädigen. Das kann in einer Sekunde passieren. Eine Schutzbrille hilft, auch bei einer kurzen Arbeit.", // nieuw, nalezen
-    'c.power': "Strom: nie einfach so", // nieuw, nalezen
-    'c.power.b': "Arbeite nie an etwas, das unter Spannung steht (onder spanning). Zuerst macht ein ausgebildeter Kollege es sicher: Er schaltet den Strom ab und prüft es. Nur Leute mit der richtigen Ausbildung dürfen das. Siehst du ein kaputtes Kabel oder einen kaputten Stecker? Benutz es nicht, und sag es sofort deinem Vorgesetzten. Nicht sicher, ob der Strom aus ist? Dann ist er an. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
-    'c.power.p': "Ich sehe ein kaputtes Kabel. Wer kann sich das ansehen?", // nieuw, nalezen
-    'c.power.s': "Du sollst eine Lampe aufhängen. Ein Kollege sagt: „Der Strom ist aus, glaube ich.“ Was machst du?", // nieuw, nalezen
-    'c.power.o1': "Du bittest einen ausgebildeten Kollegen zu prüfen, ob der Strom aus ist.", // nieuw, nalezen
-    'c.power.o2': "Du fängst an, trägst aber dicke Handschuhe, wenn du die Drähte anfasst.", // nieuw, nalezen
-    'c.power.o3': "Du schaltest das Licht an und aus, um zu prüfen, ob der Strom aus ist.", // nieuw, nalezen
-    'c.power.w': "„Ich glaube“ reicht bei Strom nicht. Ein Stromschlag kann dich töten. Ein ausgebildeter Kollege prüft, dass kein Strom drauf ist, und dann kannst du anfangen.", // nieuw, nalezen
-    'c.garage': "Sicher unter dem Auto", // nieuw, nalezen
-    'c.garage.b': "Geh nie unter ein Auto, das nur auf einem Wagenheber steht. Das Auto muss fest auf der Hebebühne oder auf Unterstellböcken stehen. Ausgelaufenes Öl macht den Boden rutschig: Wisch es sofort auf. Altöl, Batterien und Putzmittel sind gefährlicher Abfall. Sie kommen an einen besonderen Ort, nie in den normalen Müll oder in den Abfluss. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.garage.p': "Da ist Öl auf dem Boden. Ich wische es auf.", // nieuw, nalezen
-    'c.garage.s': "Du musst unter ein Auto schauen, das nur auf einem Wagenheber steht. Ein Kollege sagt: „Passt schon, mach schnell.“ Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.o1': "Du wartest auf die Hebebühne oder auf Böcke.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.o2': "Du gehst schnell drunter, die Beine draußen.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.o3': "Du bittest den Kollegen, das Auto zu halten.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.w': "Ein Wagenheber kann wegrutschen. Ein Auto ist sehr schwer, und darunter kommst du nicht schnell weg. Böcke oder eine Hebebühne halten das Auto an seinem Platz.", // nieuw, nalezen
-    'c.carjob': "Mehr Arbeit? Frag zuerst den Kunden", // nieuw, nalezen
-    'c.carjob.b': "Findest du mehr Probleme, als auf dem Arbeitsauftrag stehen? Repariere sie nicht einfach. Der Kunde muss der Extraarbeit und den Kosten zuerst zustimmen. Dein Vorgesetzter oder die Annahme ruft den Kunden an. Eine Probefahrt gibt es nur mit Erlaubnis und nur mit einem gültigen Führerschein. Schreib auf, was du gemacht hast und welche Teile du benutzt hast. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
-    'c.carjob.p': "Ich sehe noch ein Problem. Wer ruft den Kunden an?", // nieuw, nalezen
-    'c.carjob.s': "Du machst bei einem Auto einen Ölwechsel. Auch die Bremsen sind schlecht. Es muss in einer Stunde fertig sein. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.carjob.o1': "Du sagst es deinem Vorgesetzten, damit er den Kunden anruft.", // nieuw, nalezen
-    'c.carjob.o2': "Du reparierst auch die Bremsen, zur Sicherheit.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.carjob.o3': "Du sagst nichts, sie stehen nicht auf dem Auftrag.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.carjob.w': "Der Kunde zahlt, also entscheidet der Kunde. Ohne sein Okay darf die Werkstatt nicht einfach mehr Arbeit machen. Schlechte Bremsen sind gefährlich, darum ist es wichtig, es zu sagen.", // nieuw, nalezen
-    'c.placement': "Erst unterschreiben, dann anfangen", // nieuw, nalezen
-    'c.placement.b': "In Entree lernst du viel in einem Betrieb: Das ist dein Praktikum (stage oder bpv). Bevor du anfängst, unterschreiben du, die Schule und der Betrieb einen Vertrag: den POK. Im Betrieb hilft dir dein Ausbilder (praktijkopleider). In der Schule hilft dir deine Praktikumsbetreuung (stagebegeleider). Krank? Ruf vor deinem Arbeitsbeginn im Betrieb an, und sag auch der Schule Bescheid. Die Regeln sind an jeder Schule anders: Frag deine Praktikumsbetreuung.", // nieuw, nalezen
-    'c.placement.p': "Ich fange erst an, wenn der Praktikumsvertrag unterschrieben ist.", // nieuw, nalezen
-    'c.placement.s': "Der Betrieb will, dass du morgen anfängst. Der POK ist noch nicht unterschrieben. Was machst du?", // nieuw, nalezen
-    'c.placement.o1': "Du bittest deine Praktikumsbetreuung, zuerst den POK zu klären.", // nieuw, nalezen
-    'c.placement.o2': "Du fängst morgen an und unterschreibst den POK, wenn du Zeit hast.", // nieuw, nalezen
-    'c.placement.o3': "Du fängst an, sagst der Schule aber vorerst nichts.", // nieuw, nalezen
-    'c.placement.w': "Im POK steht, was du lernst und wer dir hilft. Ohne unterschriebenen POK zählt dein Praktikum vielleicht nicht für dein Diplom. Darum unterschreibst du ihn, bevor du anfängst.", // nieuw, nalezen
-    'c.review': "Frag nach Feedback und nach einem Beispiel", // nieuw, nalezen
-    'c.review.b': "Im Praktikum sagen dir Leute, was gut läuft und was besser geht: Feedback. Das ist normal, und es hilft dir beim Lernen. Du verstehst es nicht? Frag nach einem Beispiel. Frag auch selbst nach Feedback, zum Beispiel einmal pro Woche. Läuft im Praktikum wirklich etwas schief? Sprich zuerst mit deinem Ausbilder im Betrieb. Hilft das nicht? Dann geh zu deiner Praktikumsbetreuung in der Schule.", // nieuw, nalezen
-    'c.review.p': "Was lief gut, und was geht besser?", // nieuw, nalezen
-    'c.review.s': "Dein Ausbilder sagt: „Du musst sorgfältiger arbeiten.“ Du weißt nicht, was er meint. Was machst du?", // nieuw, nalezen
-    'c.review.o1': "Du fragst nach einem Beispiel, was du anders machen sollst.", // nieuw, nalezen
-    'c.review.o2': "Du sagst Ja und hoffst, dass du es selbst herausfindest.", // nieuw, nalezen
-    'c.review.o3': "Du arbeitest ab jetzt viel langsamer, damit nichts schiefgeht.", // nieuw, nalezen
-    'c.review.w': "Mit einem Beispiel weißt du, was du ändern sollst. Fragen zeigt, dass du lernen willst. Das finden Ausbilder gut.", // nieuw, nalezen
-    'c.council': "Wer darf wählen?", // nieuw, nalezen
-    'c.council.b': "In den Niederlanden bestimmst du durch Wählen, wer entscheidet. Der Gemeinderat (gemeenteraad) entscheidet über deinen Ort. Die Tweede Kamer macht die Gesetze für das ganze Land. Mit der niederländischen Staatsangehörigkeit darfst du bei allen Wahlen wählen, ab 18. Für den Gemeinderat dürfen mehr Menschen wählen. Menschen aus einem anderen EU-Land, die hier wohnen, dürfen wählen. Menschen von außerhalb der EU dürfen nach 5 Jahren legalem Aufenthalt wählen. Die Gemeinde (gemeente) schickt dir eine Wahlkarte (stempas). Bring sie mit deinem Ausweis mit. Nicht sicher, ob du wählen darfst? Frag die Gemeinde.",
-    'c.council.p': "Darf ich für den Gemeinderat wählen?", // nieuw, nalezen
-    'c.council.s': "Du kommst aus Marokko und wohnst seit sechs Jahren legal hier, ohne niederländische Staatsangehörigkeit. Was stimmt?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.council.o1': "Du darfst für den Gemeinderat wählen.", // nieuw, nalezen
-    'c.council.o2': "Du darfst auch für die Tweede Kamer wählen.", // nieuw, nalezen
-    'c.council.o3': "Ohne niederländischen Pass darfst du nicht wählen.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.council.w': "Nach 5 Jahren legalem Aufenthalt darfst du für den Gemeinderat wählen. Für die Tweede Kamer brauchst du die niederländische Staatsangehörigkeit.", // nieuw, nalezen
-    'c.police': "Dein Ausweis und deine Rechte", // nieuw, nalezen
-    'c.police.b': "Ab 14 musst du deinen Ausweis zeigen, wenn die Polizei danach fragt. Trag ihn also immer bei dir. Hast du einen Brief bekommen, zum Beispiel von der Gemeinde oder vom UWV? Bist du mit der Entscheidung darin nicht einverstanden? Dann kannst du schriftlich Widerspruch einlegen (bezwaar maken). Mach das vor dem Datum im Brief. Die Polizei und das Gericht müssen alle gleich behandeln. Festgenommen? Du darfst einen Anwalt verlangen. Das Juridisch Loket berät dich kostenlos.",
-    'c.police.p': "Ich bin mit dieser Entscheidung nicht einverstanden. Ich lege Widerspruch ein.", // nieuw, nalezen
-    'c.police.s': "Du bekommst einen Brief von der Gemeinde. Du bist mit ihrer Entscheidung nicht einverstanden. Im Brief steht, dass du sechs Wochen Zeit hast. Was machst du?", // nieuw, nalezen
-    'c.police.o1': "Du schreibst einen Widerspruch, vor dem Datum.", // nieuw, nalezen
-    'c.police.o2': "Du rufst dort einmal an und wartest, bis sie dich zurückrufen.", // nieuw, nalezen
-    'c.police.o3': "Du wartest: Nach sechs Wochen ist es von selbst vorbei.", // nieuw, nalezen
-    'c.police.w': "Widerspruch legst du schriftlich ein, vor dem Datum im Brief. Nach diesem Datum ist es oft zu spät. Das Juridisch Loket kann dir beim Schreiben helfen.", // nieuw, nalezen
-    'c.login': "Dein Login gehört nur dir", // nieuw, nalezen
-    'c.login.b': "Dein Passwort und deine DigiD sind nur für dich. Gib sie niemandem, auch nicht deinem Arbeitgeber oder einem Kollegen. An einem gemeinsamen Computer logg dich immer aus, wenn du fertig bist. Gehst du kurz weg? Sperr deinen Bildschirm. Passwort vergessen? Frag die IT-Abteilung (ICT-afdeling) nach einem neuen. Die Regeln für Computer sind in jeder Firma anders: Frag die IT-Abteilung, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.login.p': "Ich gehe kurz weg. Ich sperre meinen Bildschirm.", // nieuw, nalezen
-    'c.login.s': "Dein Vorgesetzter fragt nach deiner DigiD und deinem Passwort, um deine Papiere schnell zu erledigen. Was machst du?", // nieuw, nalezen
-    'c.login.o1': "Du sagst Nein und loggst dich selbst ein, während er hilft.", // nieuw, nalezen
-    'c.login.o2': "Du gibst sie ihm dieses eine Mal, weil er dein Chef ist.", // nieuw, nalezen
-    'c.login.o3': "Du schreibst sie auf einen Zettel, damit er sie später nutzt.", // nieuw, nalezen
-    'c.login.w': "Mit deiner DigiD kann jemand deine Steuern, Leistungen und Gesundheitsdaten sehen und ändern. Sie ist nur für dich. Du kannst dich selbst einloggen und dir dabei helfen lassen.", // nieuw, nalezen
-    'c.phish': "Eile und ein Knopf? Nicht klicken", // nieuw, nalezen
-    'c.phish.b': "Eine gefälschte E-Mail (phishing) sieht oft echt aus. Sie will, dass du schnell handelst: „Ihr Konto wird heute geschlossen!“ Prüf den Absender. Klick auf keinen Link und öffne keinen Anhang, den du nicht erwartet hast. Geh selbst auf die echte Website oder in die echte App. Doch geklickt? Ändere sofort dein Passwort, und ruf die IT-Abteilung an. Das ist keine Schande: Je früher sie es wissen, desto besser. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.phish.p': "Ich habe auf einen verdächtigen Link geklickt.", // nieuw, nalezen
-    'c.phish.s': "Du hast auf einen Link in einer E-Mail geklickt und dein Passwort eingegeben. Dann siehst du, dass die E-Mail gefälscht war. Was machst du?", // nieuw, nalezen
-    'c.phish.o1': "Du änderst dein Passwort und rufst die IT-Abteilung an.", // nieuw, nalezen
-    'c.phish.o2': "Du löschst die E-Mail, damit niemand sonst darauf klickt.", // nieuw, nalezen
-    'c.phish.o3': "Du wartest einen Tag, ob etwas schiefgeht.", // nieuw, nalezen
-    'c.phish.w': "Mit deinem Passwort kann jemand anderes in die Systeme deiner Arbeit kommen. Wenn du es schnell änderst und der IT-Abteilung Bescheid sagst, können sie es rechtzeitig stoppen.", // nieuw, nalezen
-    'c.mychoice': "Deine Stärken zählen", // nieuw, nalezen
-    'c.mychoice.b': "Was kannst du gut? Denk an Arbeit, Schule und zu Hause. Familie versorgen, ein Nebenjob oder ein Ehrenamt zählen auch. Was magst du, und was magst du nicht? Du weißt nicht, welche Arbeit zu dir passt? Frag, ob du einen Tag bei jemandem mitlaufen darfst (meeloopdag). Deine Betreuung in der Schule kann dir beim Aussuchen helfen.", // nieuw, nalezen
-    'c.mychoice.p': "Ich kann gut mit Menschen umgehen. Zu Hause helfe ich viel.", // nieuw, nalezen
-    'c.mychoice.s': "In der Schule fragt man dich: „Was kannst du gut?“ Du hattest noch nie eine bezahlte Arbeit. Was sagst du?", // nieuw, nalezen
-    'c.mychoice.o1': "Was du zu Hause gut machst, zum Beispiel andere versorgen.", // nieuw, nalezen
-    'c.mychoice.o2': "Dass du es noch nicht weißt, weil du nie einen Job hattest.", // nieuw, nalezen
-    'c.mychoice.o3': "Dass du jede Arbeit kannst, wirklich alles.", // nieuw, nalezen
-    'c.mychoice.w': "Fähigkeiten von zu Hause zählen auch. Versorgen, planen und helfen sind Fähigkeiten, die Arbeitgeber brauchen. Sag, was du gemacht hast, mit einem Beispiel.", // nieuw, nalezen
-    'c.nextstep': "Nach Entree: Niveau 2 oder Arbeit", // nieuw, nalezen
-    'c.nextstep.b': "Mit einem Entree-Diplom darfst du auf Niveau 2 im mbo weitermachen. Ein Abschluss auf Niveau 2 oder höher ist eine Grundqualifikation (startkwalificatie). Sie hilft dir, Arbeit zu finden und zu behalten. In der bbl arbeitest du in einem Betrieb und gehst etwa einen Tag pro Woche zur Schule. Dafür brauchst du eine Stelle oder einen Lern- und Arbeitsplatz (leerwerkbaan). Geh zu einem Tag der offenen Tür, und sprich mit deiner Betreuung in der Schule.", // nieuw, nalezen
-    'c.nextstep.p': "Kann ich nach Entree auf Niveau 2?", // nieuw, nalezen
-    'c.nextstep.s': "Du hast dein Entree-Diplom. Eine Firma bietet dir eine Arbeit ohne Ausbildung an. Du willst aber auch weiter lernen. Was machst du?", // nieuw, nalezen
-    'c.nextstep.o1': "Du fragst die Firma, ob ein bbl-Platz möglich ist.", // nieuw, nalezen
-    'c.nextstep.o2': "Du nimmst die Arbeit und hörst für immer mit dem Lernen auf.", // nieuw, nalezen
-    'c.nextstep.o3': "Du bleibst zu Hause, bis eine Schule dich anruft.", // nieuw, nalezen
-    'c.nextstep.w': "In der bbl arbeitest und lernst du gleichzeitig. Du verdienst Geld, und du bekommst ein Diplom auf Niveau 2. Viele Firmen finden das gut.", // nieuw, nalezen
-    'c.email': "Eine kurze E-Mail: wer, was, wann", // nieuw, nalezen
-    'c.email.b': "Eine E-Mail an die Arbeit ist kurz und höflich. Fang mit einer Anrede an, zum Beispiel „Beste Karin,“. Dann schreib, was du willst und wann. Hör mit einem Gruß und deinem vollen Namen auf. Schreib einen kurzen Betreff, zum Beispiel „Vrij op vrijdag“. Lies deine E-Mail noch einmal, bevor du sie schickst.", // nieuw, nalezen
-    'c.email.p': "Liebe Karin, darf ich am Freitag freihaben? Viele Grüße, Ali Haddad", // nieuw, nalezen
-    'c.email.s': "Du willst nächsten Freitag frei haben. Welche E-Mail an deinen Vorgesetzten ist am besten?", // nieuw, nalezen
-    'c.email.o1': "„Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad“", // nieuw, nalezen
-    'c.email.o2': "„Vrijdag ben ik er niet.“ (ohne Anrede und ohne deinen Namen).", // nieuw, nalezen
-    'c.email.o3': "Eine lange E-Mail über deine Woche, mit der Frage am Ende.", // nieuw, nalezen
-    'c.email.w': "Eine gute E-Mail hat eine Anrede, eine klare Frage und deinen Namen. Dann kann dein Vorgesetzter schnell antworten.", // nieuw, nalezen
-    'c.budget': "Zuerst die Fixkosten", // nieuw, nalezen
-    'c.budget.b': "Wenn du deinen Lohn bekommst, bezahl zuerst die Fixkosten: Miete, Versicherung und dein Handy. Versuch, jeden Monat einen kleinen Betrag zu sparen, auch nur 10 Euro. Jetzt kaufen, später zahlen heißt auch Schulden machen. Hast du etwas online gekauft? Dann kannst du es dir meistens innerhalb von 14 Tagen anders überlegen. Heb den Kassenbon auf: Du brauchst ihn für die Garantie.", // nieuw, nalezen // nagelezen AI 31 okt
-    'c.budget.p': "Ich zahle lieber jetzt. Dann habe ich keine Schulden.", // nieuw, nalezen
-    'c.budget.s': "Heute bekommst du deinen Lohn. Du willst neue Schuhe, und deine Miete ist noch nicht bezahlt. Was machst du?", // nieuw, nalezen
-    'c.budget.o1': "Du zahlst zuerst die Miete, dann schaust du, was übrig ist.", // nieuw, nalezen
-    'c.budget.o2': "Du kaufst die Schuhe und zahlst die Miete später.", // nieuw, nalezen
-    'c.budget.o3': "Du kaufst die Schuhe mit „jetzt kaufen, später zahlen“.", // nieuw, nalezen
-    'c.budget.w': "Miete, Versicherung und dein Handy kommen jeden Monat wieder. Wenn du die zuerst zahlst, weißt du, wie viel Geld übrig ist. Dann machst du keine Schulden.", // nieuw, nalezen
-    'c.healthy': "Schlaf, Essen und keine Drogen", // nieuw, nalezen
-    'c.healthy.b': "Du arbeitest besser und sicherer, wenn du genug schläfst, auch nach einer Spätschicht. Iss ein Frühstück, und trink über den Tag Wasser. Beweg dich in der Pause, zum Beispiel mit einem kurzen Spaziergang. Unter Einfluss von Alkohol oder Drogen zu arbeiten ist gefährlich, und die meisten Arbeitgeber verbieten es. Fühlst du dich schon lange niedergeschlagen, oder kannst du nicht aufhören, Alkohol zu trinken oder Drogen zu nehmen? Sprich mit deinem Hausarzt (huisarts). Er kann helfen, und er behält es für sich.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.healthy.p': "Ich fühle mich schon lange niedergeschlagen. Kann ich einen Termin machen?", // nieuw, nalezen
-    'c.healthy.s': "Heute Nacht hast du Nachtschicht. Ein Kollege bietet dir eine Pille an, damit du wach bleibst. Was machst du?", // nieuw, nalezen
-    'c.healthy.o1': "Du sagst Nein und schläfst vor der Schicht ein paar Stunden.", // nieuw, nalezen
-    'c.healthy.o2': "Du nimmst eine halbe Pille, das ist nicht gefährlich.", // nieuw, nalezen
-    'c.healthy.o3': "Du nimmst sie, sagst bei der Arbeit aber niemandem etwas.", // nieuw, nalezen
-    'c.healthy.w': "Pillen von einem Kollegen können Drogen sein. Sie können dich krank machen oder dazu bringen, dass du bei der Arbeit Fehler machst. Schlaf ist der sichere Weg, wach zu bleiben.", // nieuw, nalezen
-    'u.sick': "Krankheit", // nieuw, nalezen
+    'l.healthy': "Fit für die Arbeit", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.slapen': "schlafen", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontbijt': "das Frühstück", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.bewegen': "sich bewegen, aktiv sein", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.moe': "müde", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.drugs': "die Drogen", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.somber': "niedergeschlagen (lange traurig)", // nieuw, nalezen // nagelezen AI 22 nov
+    's.healthy.1': "Ich bin heute sehr müde.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.healthy.2': "Ich frühstücke immer zuerst.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.healthy.3': "In der Pause gehe ich kurz spazieren.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.q': "Willst du eine Pille? Dann bleibst du wach.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.a': "Nein, danke. Ich arbeite nicht unter dem Einfluss von Drogen oder Alkohol.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.workorder': "Erst lesen, dann anfangen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.b': "Bevor du anfängst, lies den Arbeitsauftrag (werkbon) oder die Aufgabe in der App. Prüfe die Adresse, die Aufgabe und die Anzahl der Dinge. Ist etwas unklar? Frag, bevor du anfängst, nicht mittendrin. Dann leg dein Werkzeug und das Material bereit. Das spart Zeit, und du machst weniger Fehler. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.p': "Auf dem Arbeitsauftrag stehen zehn Kartons. Stimmt das?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.s': "Auf deinem Arbeitsauftrag steht: Zimmer 3 streichen. Dein Kollege sagt, es ist Zimmer 5. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.o1': "Du fragst deinen Vorgesetzten, welches Zimmer richtig ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.o2': "Du streichst Zimmer 3, weil es auf dem Arbeitsauftrag steht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.o3': "Du streichst beide Zimmer, dann bist du sicher.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.w': "Wenn zwei Dinge nicht zusammenpassen, prüfst du das, bevor du anfängst. Eine kurze Frage kostet weniger Zeit, als die Arbeit noch einmal zu machen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover': "Sag, was fertig ist und was nicht", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.b': "Deine Arbeit ist nicht fertig, wenn du aufhörst. Räum zuerst deinen Platz und dein Werkzeug auf. Dann bitte jemanden, deine Arbeit zu prüfen. Sag deinem Vorgesetzten, was fertig ist und was nicht. Ist etwas schiefgegangen, oder ist etwas kaputt? Sag es jetzt, nicht morgen. Dich abzumelden gehört zu deiner Arbeit. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.p': "Zimmer vier ist noch nicht fertig. Die Tür war abgeschlossen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.s': "Du hast fünf Zimmer geputzt. Zimmer 4 war abgeschlossen. Deine Schicht ist zu Ende. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.o1': "Du sagst deinem Vorgesetzten: Zimmer 4 ist nicht fertig.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.o2': "Du gehst nach Hause: Zimmer 4 war zu, nicht deine Schuld.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.o3': "Du schreibst „alles fertig“ auf die Liste.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.w': "Dein Vorgesetzter plant die Arbeit. Wenn er weiß, dass Zimmer 4 nicht fertig ist, kann er jemand anderen schicken. Dann findet kein Kunde ein schmutziges Zimmer.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop': "Augen, Ohren und Feuer", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.b': "Schleifen, Sägen und Bohren machen Funken, kleine Stücke und viel Lärm. Trag eine Schutzbrille und Gehörschutz, auch bei einer kurzen Arbeit. Wenn es sehr laut ist, muss dein Arbeitgeber dir Gehörschutz geben. Funken können einen Brand auslösen. Beim Schweißen oder Schleifen in der Nähe von Dingen, die brennen können, gibt es extra Regeln (heet werk): Frag, bevor du anfängst. Räum nach der Arbeit die Metallstücke weg. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.p': "Ich will schleifen. Wo ist der Gehörschutz?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.s': "Du musst ein kleines Stück Metall schleifen. Es dauert eine Minute. Deine Schutzbrille liegt im anderen Raum. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.o1': "Du holst zuerst deine Brille, auch für eine Minute.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.o2': "Du schleifst mit halb geschlossenen Augen, es geht ja schnell.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.o3': "Du hältst deine andere Hand vor die Augen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.w': "Ein Funke oder ein Stück Metall im Auge kann dein Auge für immer schädigen. Das kann in einer Sekunde passieren. Eine Schutzbrille hilft, auch bei einer kurzen Arbeit.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power': "Strom: nie einfach so", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.b': "Arbeite nie an etwas, das unter Spannung steht (onder spanning). Zuerst macht ein ausgebildeter Kollege es sicher: Er schaltet den Strom ab und prüft es. Nur Leute mit der richtigen Ausbildung dürfen das. Siehst du ein kaputtes Kabel oder einen kaputten Stecker? Benutz es nicht, und sag es sofort deinem Vorgesetzten. Nicht sicher, ob der Strom aus ist? Dann ist er an. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.p': "Ich sehe ein kaputtes Kabel. Wer kann sich das ansehen?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.s': "Du sollst eine Lampe aufhängen. Ein Kollege sagt: „Der Strom ist aus, glaube ich.“ Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.o1': "Du bittest einen ausgebildeten Kollegen zu prüfen, ob der Strom aus ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.o2': "Du fängst an, trägst aber dicke Handschuhe, wenn du die Drähte anfasst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.o3': "Du schaltest das Licht an und aus, um zu prüfen, ob der Strom aus ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.w': "„Ich glaube“ reicht bei Strom nicht. Ein Stromschlag kann dich töten. Ein ausgebildeter Kollege prüft, dass kein Strom drauf ist, und dann kannst du anfangen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage': "Sicher unter dem Auto", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage.b': "Geh nie unter ein Auto, das nur auf einem Wagenheber steht. Das Auto muss fest auf der Hebebühne oder auf Unterstellböcken stehen. Ausgelaufenes Öl macht den Boden rutschig: Wisch es sofort auf. Altöl, Batterien und Putzmittel sind gefährlicher Abfall. Sie kommen an einen besonderen Ort, nie in den normalen Müll oder in den Abfluss. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage.p': "Da ist Öl auf dem Boden. Ich wische es auf.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage.s': "Du musst unter ein Auto schauen, das nur auf einem Wagenheber steht. Ein Kollege sagt: „Passt schon, mach schnell.“ Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.o1': "Du wartest auf die Hebebühne oder auf Böcke.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.o2': "Du gehst schnell drunter, die Beine draußen.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.o3': "Du bittest den Kollegen, das Auto zu halten.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.w': "Ein Wagenheber kann wegrutschen. Ein Auto ist sehr schwer, und darunter kommst du nicht schnell weg. Böcke oder eine Hebebühne halten das Auto an seinem Platz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob': "Mehr Arbeit? Frag zuerst den Kunden", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.b': "Findest du mehr Probleme, als auf dem Arbeitsauftrag stehen? Repariere sie nicht einfach. Der Kunde muss der Extraarbeit und den Kosten zuerst zustimmen. Dein Vorgesetzter oder die Annahme ruft den Kunden an. Eine Probefahrt gibt es nur mit Erlaubnis und nur mit einem gültigen Führerschein. Schreib auf, was du gemacht hast und welche Teile du benutzt hast. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.p': "Ich sehe noch ein Problem. Wer ruft den Kunden an?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.s': "Du machst bei einem Auto einen Ölwechsel. Auch die Bremsen sind schlecht. Es muss in einer Stunde fertig sein. Was machst du?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.carjob.o1': "Du sagst es deinem Vorgesetzten, damit er den Kunden anruft.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.o2': "Du reparierst auch die Bremsen, zur Sicherheit.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.carjob.o3': "Du sagst nichts, sie stehen nicht auf dem Auftrag.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.carjob.w': "Der Kunde zahlt, also entscheidet der Kunde. Ohne sein Okay darf die Werkstatt nicht einfach mehr Arbeit machen. Schlechte Bremsen sind gefährlich, darum ist es wichtig, es zu sagen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement': "Erst unterschreiben, dann anfangen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.b': "In Entree lernst du viel in einem Betrieb: Das ist dein Praktikum (stage oder bpv). Bevor du anfängst, unterschreiben du, die Schule und der Betrieb einen Vertrag: den POK. Im Betrieb hilft dir dein Ausbilder (praktijkopleider). In der Schule hilft dir deine Praktikumsbetreuung (stagebegeleider). Krank? Ruf vor deinem Arbeitsbeginn im Betrieb an, und sag auch der Schule Bescheid. Die Regeln sind an jeder Schule anders: Frag deine Praktikumsbetreuung.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.p': "Ich fange erst an, wenn der Praktikumsvertrag unterschrieben ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.s': "Der Betrieb will, dass du morgen anfängst. Der POK ist noch nicht unterschrieben. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.o1': "Du bittest deine Praktikumsbetreuung, zuerst den POK zu klären.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.o2': "Du fängst morgen an und unterschreibst den POK, wenn du Zeit hast.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.o3': "Du fängst an, sagst der Schule aber vorerst nichts.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.w': "Im POK steht, was du lernst und wer dir hilft. Ohne unterschriebenen POK zählt dein Praktikum vielleicht nicht für dein Diplom. Darum unterschreibst du ihn, bevor du anfängst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review': "Frag nach Feedback und nach einem Beispiel", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.b': "Im Praktikum sagen dir Leute, was gut läuft und was besser geht: Feedback. Das ist normal, und es hilft dir beim Lernen. Du verstehst es nicht? Frag nach einem Beispiel. Frag auch selbst nach Feedback, zum Beispiel einmal pro Woche. Läuft im Praktikum wirklich etwas schief? Sprich zuerst mit deinem Ausbilder im Betrieb. Hilft das nicht? Dann geh zu deiner Praktikumsbetreuung in der Schule.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.p': "Was lief gut, und was geht besser?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.s': "Dein Ausbilder sagt: „Du musst sorgfältiger arbeiten.“ Du weißt nicht, was er meint. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.o1': "Du fragst nach einem Beispiel, was du anders machen sollst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.o2': "Du sagst Ja und hoffst, dass du es selbst herausfindest.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.o3': "Du arbeitest ab jetzt viel langsamer, damit nichts schiefgeht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.w': "Mit einem Beispiel weißt du, was du ändern sollst. Fragen zeigt, dass du lernen willst. Das finden Ausbilder gut.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council': "Wer darf wählen?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.b': "In den Niederlanden bestimmst du durch Wählen, wer entscheidet. Der Gemeinderat (gemeenteraad) entscheidet über deinen Ort. Die Tweede Kamer macht die Gesetze für das ganze Land. Mit der niederländischen Staatsangehörigkeit darfst du bei allen Wahlen wählen, ab 18. Für den Gemeinderat dürfen mehr Menschen wählen. Menschen aus einem anderen EU-Land, die hier wohnen, dürfen wählen. Menschen von außerhalb der EU dürfen nach 5 Jahren legalem Aufenthalt wählen. Die Gemeinde (gemeente) schickt dir eine Wahlkarte (stempas). Bring sie mit deinem Ausweis mit. Nicht sicher, ob du wählen darfst? Frag die Gemeinde.", // nagelezen AI 22 nov
+    'c.council.p': "Darf ich für den Gemeinderat wählen?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.s': "Du kommst aus Marokko und wohnst seit sechs Jahren legal hier, ohne niederländische Staatsangehörigkeit. Was stimmt?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.council.o1': "Du darfst für den Gemeinderat wählen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.o2': "Du darfst auch für die Tweede Kamer wählen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.o3': "Ohne niederländischen Pass darfst du nicht wählen.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.council.w': "Nach 5 Jahren legalem Aufenthalt darfst du für den Gemeinderat wählen. Für die Tweede Kamer brauchst du die niederländische Staatsangehörigkeit.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police': "Dein Ausweis und deine Rechte", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.b': "Ab 14 musst du deinen Ausweis zeigen, wenn die Polizei danach fragt. Trag ihn also immer bei dir. Hast du einen Brief bekommen, zum Beispiel von der Gemeinde oder vom UWV? Bist du mit der Entscheidung darin nicht einverstanden? Dann kannst du schriftlich Widerspruch einlegen (bezwaar maken). Mach das vor dem Datum im Brief. Die Polizei und das Gericht müssen alle gleich behandeln. Festgenommen? Du darfst einen Anwalt verlangen. Das Juridisch Loket berät dich kostenlos.", // nagelezen AI 22 nov
+    'c.police.p': "Ich bin mit dieser Entscheidung nicht einverstanden. Ich lege Widerspruch ein.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.s': "Du bekommst einen Brief von der Gemeinde. Du bist mit ihrer Entscheidung nicht einverstanden. Im Brief steht, dass du sechs Wochen Zeit hast. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.o1': "Du schreibst einen Widerspruch, vor dem Datum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.o2': "Du rufst dort einmal an und wartest, bis sie dich zurückrufen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.o3': "Du wartest: Nach sechs Wochen ist es von selbst vorbei.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.w': "Widerspruch legst du schriftlich ein, vor dem Datum im Brief. Nach diesem Datum ist es oft zu spät. Das Juridisch Loket kann dir beim Schreiben helfen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login': "Dein Login gehört nur dir", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.b': "Dein Passwort und deine DigiD sind nur für dich. Gib sie niemandem, auch nicht deinem Arbeitgeber oder einem Kollegen. An einem gemeinsamen Computer logg dich immer aus, wenn du fertig bist. Gehst du kurz weg? Sperr deinen Bildschirm. Passwort vergessen? Frag die IT-Abteilung (ICT-afdeling) nach einem neuen. Die Regeln für Computer sind in jeder Firma anders: Frag die IT-Abteilung, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.p': "Ich gehe kurz weg. Ich sperre meinen Bildschirm.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.s': "Dein Vorgesetzter fragt nach deiner DigiD und deinem Passwort, um deine Papiere schnell zu erledigen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.o1': "Du sagst Nein und loggst dich selbst ein, während er hilft.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.o2': "Du gibst sie ihm dieses eine Mal, weil er dein Chef ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.o3': "Du schreibst sie auf einen Zettel, damit er sie später nutzt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.w': "Mit deiner DigiD kann jemand deine Steuern, Leistungen und Gesundheitsdaten sehen und ändern. Sie ist nur für dich. Du kannst dich selbst einloggen und dir dabei helfen lassen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish': "Eile und ein Knopf? Nicht klicken", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.b': "Eine gefälschte E-Mail (phishing) sieht oft echt aus. Sie will, dass du schnell handelst: „Ihr Konto wird heute geschlossen!“ Prüf den Absender. Klick auf keinen Link und öffne keinen Anhang, den du nicht erwartet hast. Geh selbst auf die echte Website oder in die echte App. Doch geklickt? Ändere sofort dein Passwort, und ruf die IT-Abteilung an. Das ist keine Schande: Je früher sie es wissen, desto besser. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.p': "Ich habe auf einen verdächtigen Link geklickt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.s': "Du hast auf einen Link in einer E-Mail geklickt und dein Passwort eingegeben. Dann siehst du, dass die E-Mail gefälscht war. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.o1': "Du änderst dein Passwort und rufst die IT-Abteilung an.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.o2': "Du löschst die E-Mail, damit niemand sonst darauf klickt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.o3': "Du wartest einen Tag, ob etwas schiefgeht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.w': "Mit deinem Passwort kann jemand anderes in die Systeme deiner Arbeit kommen. Wenn du es schnell änderst und der IT-Abteilung Bescheid sagst, können sie es rechtzeitig stoppen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice': "Deine Stärken zählen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.b': "Was kannst du gut? Denk an Arbeit, Schule und zu Hause. Familie versorgen, ein Nebenjob oder ein Ehrenamt zählen auch. Was magst du, und was magst du nicht? Du weißt nicht, welche Arbeit zu dir passt? Frag, ob du einen Tag bei jemandem mitlaufen darfst (meeloopdag). Deine Betreuung in der Schule kann dir beim Aussuchen helfen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.p': "Ich kann gut mit Menschen umgehen. Zu Hause helfe ich viel.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.s': "In der Schule fragt man dich: „Was kannst du gut?“ Du hattest noch nie eine bezahlte Arbeit. Was sagst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.o1': "Was du zu Hause gut machst, zum Beispiel andere versorgen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.o2': "Dass du es noch nicht weißt, weil du nie einen Job hattest.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.o3': "Dass du jede Arbeit kannst, wirklich alles.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.w': "Fähigkeiten von zu Hause zählen auch. Versorgen, planen und helfen sind Fähigkeiten, die Arbeitgeber brauchen. Sag, was du gemacht hast, mit einem Beispiel.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep': "Nach Entree: Niveau 2 oder Arbeit", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.b': "Mit einem Entree-Diplom darfst du auf Niveau 2 im mbo weitermachen. Ein Abschluss auf Niveau 2 oder höher ist eine Grundqualifikation (startkwalificatie). Sie hilft dir, Arbeit zu finden und zu behalten. In der bbl arbeitest du in einem Betrieb und gehst etwa einen Tag pro Woche zur Schule. Dafür brauchst du eine Stelle oder einen Lern- und Arbeitsplatz (leerwerkbaan). Geh zu einem Tag der offenen Tür, und sprich mit deiner Betreuung in der Schule.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.p': "Kann ich nach Entree auf Niveau 2?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.s': "Du hast dein Entree-Diplom. Eine Firma bietet dir eine Arbeit ohne Ausbildung an. Du willst aber auch weiter lernen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.o1': "Du fragst die Firma, ob ein bbl-Platz möglich ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.o2': "Du nimmst die Arbeit und hörst für immer mit dem Lernen auf.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.o3': "Du bleibst zu Hause, bis eine Schule dich anruft.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.w': "In der bbl arbeitest und lernst du gleichzeitig. Du verdienst Geld, und du bekommst ein Diplom auf Niveau 2. Viele Firmen finden das gut.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email': "Eine kurze E-Mail: wer, was, wann", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.b': "Eine E-Mail an die Arbeit ist kurz und höflich. Fang mit einer Anrede an, zum Beispiel „Beste Karin,“. Dann schreib, was du willst und wann. Hör mit einem Gruß und deinem vollen Namen auf. Schreib einen kurzen Betreff, zum Beispiel „Vrij op vrijdag“. Lies deine E-Mail noch einmal, bevor du sie schickst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.p': "Liebe Karin, darf ich am Freitag freihaben? Viele Grüße, Ali Haddad", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.s': "Du willst nächsten Freitag frei haben. Welche E-Mail an deinen Vorgesetzten ist am besten?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.o1': "„Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad“", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.o2': "„Vrijdag ben ik er niet.“ (ohne Anrede und ohne deinen Namen).", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.o3': "Eine lange E-Mail über deine Woche, mit der Frage am Ende.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.w': "Eine gute E-Mail hat eine Anrede, eine klare Frage und deinen Namen. Dann kann dein Vorgesetzter schnell antworten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget': "Zuerst die Fixkosten", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.b': "Wenn du deinen Lohn bekommst, bezahl zuerst die Fixkosten: Miete, Versicherung und dein Handy. Versuch, jeden Monat einen kleinen Betrag zu sparen, auch nur 10 Euro. Jetzt kaufen, später zahlen heißt auch Schulden machen. Hast du etwas online gekauft? Dann kannst du es dir meistens innerhalb von 14 Tagen anders überlegen. Heb den Kassenbon auf: Du brauchst ihn für die Garantie.", // nieuw, nalezen // nagelezen AI 31 okt // nagelezen AI 22 nov
+    'c.budget.p': "Ich zahle lieber jetzt. Dann habe ich keine Schulden.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.s': "Heute bekommst du deinen Lohn. Du willst neue Schuhe, und deine Miete ist noch nicht bezahlt. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.o1': "Du zahlst zuerst die Miete, dann schaust du, was übrig ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.o2': "Du kaufst die Schuhe und zahlst die Miete später.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.o3': "Du kaufst die Schuhe mit „jetzt kaufen, später zahlen“.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.w': "Miete, Versicherung und dein Handy kommen jeden Monat wieder. Wenn du die zuerst zahlst, weißt du, wie viel Geld übrig ist. Dann machst du keine Schulden.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy': "Schlaf, Essen und keine Drogen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.b': "Du arbeitest besser und sicherer, wenn du genug schläfst, auch nach einer Spätschicht. Iss ein Frühstück, und trink über den Tag Wasser. Beweg dich in der Pause, zum Beispiel mit einem kurzen Spaziergang. Unter Einfluss von Alkohol oder Drogen zu arbeiten ist gefährlich, und die meisten Arbeitgeber verbieten es. Fühlst du dich schon lange niedergeschlagen, oder kannst du nicht aufhören, Alkohol zu trinken oder Drogen zu nehmen? Sprich mit deinem Hausarzt (huisarts). Er kann helfen, und er behält es für sich.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.healthy.p': "Ich fühle mich schon lange niedergeschlagen. Kann ich einen Termin machen?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.s': "Heute Nacht hast du Nachtschicht. Ein Kollege bietet dir eine Pille an, damit du wach bleibst. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.o1': "Du sagst Nein und schläfst vor der Schicht ein paar Stunden.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.o2': "Du nimmst eine halbe Pille, das ist nicht gefährlich.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.o3': "Du nimmst sie, sagst bei der Arbeit aber niemandem etwas.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.w': "Pillen von einem Kollegen können Drogen sein. Sie können dich krank machen oder dazu bringen, dass du bei der Arbeit Fehler machst. Schlaf ist der sichere Weg, wach zu bleiben.", // nieuw, nalezen // nagelezen AI 22 nov
+    'u.sick': "Krankheit", // nieuw, nalezen // nagelezen AI 22 nov
     'l.food': "Arbeiten mit Lebensmitteln", // nieuw, nalezen
     'w.mes': "das Messer", // nieuw, nalezen
     'w.snijhandschoen': "der Schnittschutzhandschuh (ein Handschuh gegen Schnitte)", // nieuw, nalezen
@@ -1735,14 +1735,14 @@ const t: CultureTranslation = {
     's.food.3': "Im Tiefkühlraum trage ich eine warme Jacke.", // nieuw, nalezen
     'c.food.q': "Warum putzen wir jetzt die Linie?", // nieuw, nalezen
     'c.food.a': "Als Nächstes kommt ein Produkt ohne Nüsse.", // nieuw, nalezen
-    'c.food': "Saubere Hände, sichere Lebensmittel", // nieuw, nalezen
-    'c.food.b': "Bei der Arbeit mit Lebensmitteln gelten strenge Hygieneregeln: ein Haarnetz, saubere Arbeitskleidung, gewaschene Hände und kein Schmuck. Diese Regeln sind für alle gleich. Sie sagen nichts über dich: Sie halten die Lebensmittel sicher für die Menschen, die sie essen. Trag bei der Arbeit mit einem Messer immer deinen Schnittschutzhandschuh. Zieh in einem kalten Raum oder einem Tiefkühlraum die warme Kleidung an, die du bekommst, und wärm dich in der Pause auf. Bist du krank, oder hast du eine Wunde an der Hand? Melde es, bevor du anfängst. Dann bekommst du ein spezielles Pflaster oder für eine Weile andere Arbeit. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.food.p': "Ich habe einen kleinen Schnitt an der Hand. Kann ich ein Pflaster haben?", // nieuw, nalezen
-    'c.food.s': "Du hast dich zu Hause ein bisschen in den Finger geschnitten. Heute arbeitest du mit Fleisch. Was machst du?", // nieuw, nalezen
-    'c.food.o1': "Du sagst es deinem Vorgesetzten und fragst nach einem Pflaster.", // nieuw, nalezen
-    'c.food.o2': "Du sagst nichts: Es ist nur ein kleiner Schnitt.", // nieuw, nalezen
-    'c.food.o3': "Du ziehst einen Handschuh darüber, damit es keiner sieht.", // nieuw, nalezen
-    'c.food.w': "Eine kleine Wunde kann Keime in die Lebensmittel bringen. Wenn du es meldest, bekommst du ein spezielles Pflaster oder für eine Weile andere Arbeit. Es zu melden ist normal: Niemand macht dir einen Vorwurf.", // nieuw, nalezen
+    'c.food': "Saubere Hände, sichere Lebensmittel", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.b': "Bei der Arbeit mit Lebensmitteln gelten strenge Hygieneregeln: ein Haarnetz, saubere Arbeitskleidung, gewaschene Hände und kein Schmuck. Diese Regeln sind für alle gleich. Sie sagen nichts über dich: Sie halten die Lebensmittel sicher für die Menschen, die sie essen. Trag bei der Arbeit mit einem Messer immer deinen Schnittschutzhandschuh. Zieh in einem kalten Raum oder einem Tiefkühlraum die warme Kleidung an, die du bekommst, und wärm dich in der Pause auf. Bist du krank, oder hast du eine Wunde an der Hand? Melde es, bevor du anfängst. Dann bekommst du ein spezielles Pflaster oder für eine Weile andere Arbeit. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.p': "Ich habe einen kleinen Schnitt an der Hand. Kann ich ein Pflaster haben?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.s': "Du hast dich zu Hause ein bisschen in den Finger geschnitten. Heute arbeitest du mit Fleisch. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.o1': "Du sagst es deinem Vorgesetzten und fragst nach einem Pflaster.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.o2': "Du sagst nichts: Es ist nur ein kleiner Schnitt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.o3': "Du ziehst einen Handschuh darüber, damit es keiner sieht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.w': "Eine kleine Wunde kann Keime in die Lebensmittel bringen. Wenn du es meldest, bekommst du ein spezielles Pflaster oder für eine Weile andere Arbeit. Es zu melden ist normal: Niemand macht dir einen Vorwurf.", // nieuw, nalezen // nagelezen AI 22 nov
     'u.delivery': "Transport und Zustellung", // nieuw, nalezen
     'l.parcel': "Pakete zustellen", // nieuw, nalezen
     'w.pakket': "das Paket", // nieuw, nalezen
@@ -1768,62 +1768,62 @@ const t: CultureTranslation = {
     's.road.3': "Wer bestimmt meine Route und meine Zeiten?", // nieuw, nalezen
     'c.road.q': "Kannst du heute noch eine Tour fahren?", // nieuw, nalezen
     'c.road.a': "Nein, dann habe ich keine Zeit für meine Pause.", // nieuw, nalezen
-    'c.parcel': "Nicht zu Hause, oder ein kaputtes Paket", // nieuw, nalezen
-    'c.parcel.b': "Ist der Kunde nicht zu Hause? Halte dich an die Regeln deiner Firma: Versuch es bei den Nachbarn, oder nimm das Paket wieder mit. Stell es nicht einfach vor die Tür, außer der Kunde hat darum gebeten. Ist ein Paket kaputt oder nass? Stell es nicht zu, als wäre nichts. Mach ein Foto als Beweis und melde es im Scanner oder in der App. Ehrlich über ein Problem zu sein, ist immer besser, als es zu verstecken. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.parcel.p': "Dieses Paket ist kaputt. Hier ist ein Foto.", // nieuw, nalezen
-    'c.parcel.s': "Der Kunde ist nicht zu Hause, und die Nachbarn auch nicht. Was machst du?", // nieuw, nalezen
-    'c.parcel.o1': "Du scannst „nicht zu Hause“ und nimmst das Paket wieder mit.", // nieuw, nalezen
-    'c.parcel.o2': "Du scannst es als zugestellt und lässt es vor der Tür.", // nieuw, nalezen
-    'c.parcel.o3': "Du versteckst es hinter der Mülltonne, damit es keiner sieht.", // nieuw, nalezen
-    'c.parcel.w': "Ein Paket, das als zugestellt gescannt ist, muss wirklich beim Kunden sein. Wenn du scannst, was wirklich passiert ist, kann der Kunde das Paket später bekommen, und niemand denkt, dass du es verloren hast.", // nieuw, nalezen
-    'c.road': "Sicher unterwegs, und faire Arbeit", // nieuw, nalezen
-    'c.road.b': "Halte nie dein Handy in der Hand, während du fährst: Das ist verboten. Benutze eine Halterung für das Navi. Mach deine Pausen, auch an einem vollen Tag. Ein schweres Paket? Nimm die Sackkarre, oder heb es zu zweit. Eis oder Schnee? Fahr langsam: Zu spät kommen ist besser als ein Unfall. Manche Firmen sagen, du arbeitest selbstständig (zelfstandig). Aber wer bestimmt deine Arbeitszeiten, deine Route und deine Kleidung? Wenn die Firma das alles bestimmt, bist du vielleicht doch angestellt (in loondienst). Dann hast du oft mehr Rechte, zum Beispiel Lohn, wenn du krank bist. Mehr dazu in der Lektion „Papiere, Integration und dein Job“. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nieuw, nalezen
-    'c.road.p': "Ich mache jetzt meine Pause. Dann fahre ich weiter.", // nieuw, nalezen
-    'c.road.s': "Die Firma sagt, du bist selbstständig. Aber sie bestimmt deine Arbeitszeiten, deine Route und deine Kleidung. Was machst du?", // nieuw, nalezen
-    'c.road.o1': "Du holst dir Rat: Vielleicht bist du angestellt.", // nieuw, nalezen
-    'c.road.o2': "Nichts: Im Vertrag steht „selbstständig“, also ist es so.", // nieuw, nalezen
-    'c.road.o3': "Du arbeitest mehr Stunden, damit du gleich viel verdienst.", // nieuw, nalezen
-    'c.road.w': "Es zählt, wie du wirklich arbeitest, nicht nur das Wort im Vertrag. Wenn die Firma bestimmt, wie, wann und wo du arbeitest, bist du oft angestellt. Dann hast du mehr Rechte.", // nieuw, nalezen
-    'l.feelwell': "Sich bei der Arbeit wohlfühlen", // nieuw, nalezen
-    'w.werkdruk': "der Arbeitsdruck (zu viel Arbeit in zu wenig Zeit)", // nieuw, nalezen
-    'w.wakkerliggen': "wach liegen (du kannst nicht schlafen)", // nieuw, nalezen
-    'w.ploegendienst': "die Schichtarbeit (Früh-, Spät- und Nachtschicht im Wechsel)", // nieuw, nalezen
-    'w.heimwee': "das Heimweh (du vermisst dein Zuhause)", // nieuw, nalezen
-    'w.familie': "die Familie", // nieuw, nalezen
-    'w.alleen': "allein", // nieuw, nalezen
-    's.feelwell.1': "Ich schlafe schlecht wegen der Schichtarbeit.", // nieuw, nalezen
-    's.feelwell.2': "Es ist zu viel. Ich schaffe es nicht allein.", // nieuw, nalezen
-    's.feelwell.3': "Ich habe Heimweh. Meine Familie ist weit weg.", // nieuw, nalezen
-    'c.feelwell.q': "Geht es dir gut?", // nieuw, nalezen
-    'c.feelwell.a': "Nicht so gut. Ich liege oft wach.", // nieuw, nalezen
-    'c.feelwell': "Zu viel? Du musst das nicht allein schaffen", // nieuw, nalezen
-    'c.feelwell.b': "Jeder ist manchmal müde, gestresst oder traurig. Zu viel Arbeit (werkdruk), schlechter Schlaf durch Schichtarbeit oder Sehnsucht nach deiner Familie können es schwer machen. Du musst das nicht allein tragen, und zu sagen „es ist zu viel“ ist keine Schwäche. Sprich mit jemandem, dem du vertraust. Zum Beispiel mit deinem Vorgesetzten, dem Betriebsarzt (bedrijfsarts) oder deinem Hausarzt (huisarts). Oder mit der Vertrauensperson (vertrouwenspersoon), wenn deine Firma eine hat. Du kannst auch selbst um ein Gespräch mit dem Betriebsarzt bitten. Ärzte erzählen deinem Chef nicht, was du gesagt hast. Denkst du an Suizid, oder machst du dir Sorgen um jemanden? Ruf 113 an (kostenlos, Tag und Nacht), oder chatte auf 113.nl.",
-    'c.feelwell.p': "Mir geht es nicht so gut. Kann ich kurz mit dir reden?", // nieuw, nalezen
-    'c.feelwell.s': "Seit Wochen schläfst du schlecht, und die Arbeit ist zu viel. Du bist sehr müde. Was machst du?", // nieuw, nalezen
-    'c.feelwell.o1': "Du sagst es deinem Vorgesetzten oder dem Betriebsarzt.", // nieuw, nalezen
-    'c.feelwell.o2': "Du sagst nichts und arbeitest härter und schneller.", // nieuw, nalezen
-    'c.feelwell.o3': "Du bleibst zu Hause und sagst niemandem, warum.", // nieuw, nalezen
-    'c.feelwell.w': "Es früh zu sagen ist keine Schwäche. Dann könnt ihr zusammen einen Ausweg suchen, zum Beispiel andere Schichten. Du musst das nicht allein schaffen.", // nieuw, nalezen
-    'l.backtowork': "Nach einer Krankheit zurück zur Arbeit", // nieuw, nalezen
-    'w.opbouwen': "langsam steigern (Schritt für Schritt)", // nieuw, nalezen
-    'w.halvedagen': "halbe Tage (du arbeitest nur einen Teil des Tages)", // nieuw, nalezen
-    'w.lichtwerk': "leichte Arbeit (nicht schwer)", // nieuw, nalezen
-    'w.zwaarwerk': "schwere Arbeit", // nieuw, nalezen
-    'w.herstellen': "sich erholen, wieder gesund werden", // nieuw, nalezen
-    'w.welkomterug': "willkommen zurück", // nieuw, nalezen
-    's.backtowork.1': "Ich fange mit halben Tagen an.", // nieuw, nalezen
-    's.backtowork.2': "Leichte Arbeit kann ich schon. Schwere Arbeit noch nicht.", // nieuw, nalezen
-    's.backtowork.3': "Der Betriebsarzt sagt: langsam steigern.", // nieuw, nalezen
-    'c.backtowork.q': "Willkommen zurück! Geht es dir besser?", // nieuw, nalezen
-    'c.backtowork.a': "Ja, es geht besser. Ich mache langsam.", // nieuw, nalezen
-    'c.backtowork': "Schritt für Schritt zurück", // nieuw, nalezen
-    'c.backtowork.b': "Bist du wieder gesund? Sag deinem Arbeitgeber, dass du wieder arbeiten kannst (betermelden). Nach einer längeren Krankheit fängst du oft Schritt für Schritt an: zuerst weniger Stunden oder leichtere Arbeit. Der Betriebsarzt (bedrijfsarts) berät dich, was du machen kannst. Länger krank? Dann machen du und dein Arbeitgeber zusammen einen Plan für deine Rückkehr. So steht es im Gesetz (Wet verbetering poortwachter). Sag deutlich, was du kannst und was noch nicht. Du musst Kollegen nicht sagen, welche Krankheit du hattest. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
-    'c.backtowork.p': "Das kann ich schon. Das kann ich noch nicht.", // nieuw, nalezen
-    'c.backtowork.s': "Du warst drei Wochen krank. An deinem ersten Tag zurück bittet dich dein Vorgesetzter, schwere Kisten zu heben. Der Betriebsarzt hat gesagt: vorerst nur leichte Arbeit. Was machst du?", // nieuw, nalezen
-    'c.backtowork.o1': "Du sagst ruhig, dass du jetzt leichte Arbeit machen kannst und was du noch nicht kannst.", // nieuw, nalezen
-    'c.backtowork.o2': "Du hebst die Kisten trotzdem: Du willst keine Umstände machen.", // nieuw, nalezen
-    'c.backtowork.o3': "Du gehst ohne ein Wort nach Hause.", // nieuw, nalezen
-    'c.backtowork.w': "Dein Vorgesetzter will dich zurück, und zwar gesund. Wenn du deutlich sagst, was du kannst, kann er die Arbeit planen. Zu viel zu früh kann dich wieder krank machen.", // nieuw, nalezen
+    'c.parcel': "Nicht zu Hause, oder ein kaputtes Paket", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.b': "Ist der Kunde nicht zu Hause? Halte dich an die Regeln deiner Firma: Versuch es bei den Nachbarn, oder nimm das Paket wieder mit. Stell es nicht einfach vor die Tür, außer der Kunde hat darum gebeten. Ist ein Paket kaputt oder nass? Stell es nicht zu, als wäre nichts. Mach ein Foto als Beweis und melde es im Scanner oder in der App. Ehrlich über ein Problem zu sein, ist immer besser, als es zu verstecken. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.p': "Dieses Paket ist kaputt. Hier ist ein Foto.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.s': "Der Kunde ist nicht zu Hause, und die Nachbarn auch nicht. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.o1': "Du scannst „nicht zu Hause“ und nimmst das Paket wieder mit.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.o2': "Du scannst es als zugestellt und lässt es vor der Tür.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.o3': "Du versteckst es hinter der Mülltonne, damit es keiner sieht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.w': "Ein Paket, das als zugestellt gescannt ist, muss wirklich beim Kunden sein. Wenn du scannst, was wirklich passiert ist, kann der Kunde das Paket später bekommen, und niemand denkt, dass du es verloren hast.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road': "Sicher unterwegs, und faire Arbeit", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.b': "Halte nie dein Handy in der Hand, während du fährst: Das ist verboten. Benutze eine Halterung für das Navi. Mach deine Pausen, auch an einem vollen Tag. Ein schweres Paket? Nimm die Sackkarre, oder heb es zu zweit. Eis oder Schnee? Fahr langsam: Zu spät kommen ist besser als ein Unfall. Manche Firmen sagen, du arbeitest selbstständig (zelfstandig). Aber wer bestimmt deine Arbeitszeiten, deine Route und deine Kleidung? Wenn die Firma das alles bestimmt, bist du vielleicht doch angestellt (in loondienst). Dann hast du oft mehr Rechte, zum Beispiel Lohn, wenn du krank bist. Mehr dazu in der Lektion „Papiere, Integration und dein Job“. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.p': "Ich mache jetzt meine Pause. Dann fahre ich weiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.s': "Die Firma sagt, du bist selbstständig. Aber sie bestimmt deine Arbeitszeiten, deine Route und deine Kleidung. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.o1': "Du holst dir Rat: Vielleicht bist du angestellt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.o2': "Nichts: Im Vertrag steht „selbstständig“, also ist es so.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.o3': "Du arbeitest mehr Stunden, damit du gleich viel verdienst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.w': "Es zählt, wie du wirklich arbeitest, nicht nur das Wort im Vertrag. Wenn die Firma bestimmt, wie, wann und wo du arbeitest, bist du oft angestellt. Dann hast du mehr Rechte.", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.feelwell': "Sich bei der Arbeit wohlfühlen", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.werkdruk': "der Arbeitsdruck (zu viel Arbeit in zu wenig Zeit)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.wakkerliggen': "wach liegen (du kannst nicht schlafen)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ploegendienst': "die Schichtarbeit (Früh-, Spät- und Nachtschicht im Wechsel)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.heimwee': "das Heimweh (du vermisst dein Zuhause)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.familie': "die Familie", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alleen': "allein", // nieuw, nalezen // nagelezen AI 22 nov
+    's.feelwell.1': "Ich schlafe schlecht wegen der Schichtarbeit.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.feelwell.2': "Es ist zu viel. Ich schaffe es nicht allein.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.feelwell.3': "Ich habe Heimweh. Meine Familie ist weit weg.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.q': "Geht es dir gut?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.a': "Nicht so gut. Ich liege oft wach.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell': "Zu viel? Du musst das nicht allein schaffen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.b': "Jeder ist manchmal müde, gestresst oder traurig. Zu viel Arbeit (werkdruk), schlechter Schlaf durch Schichtarbeit oder Sehnsucht nach deiner Familie können es schwer machen. Du musst das nicht allein tragen, und zu sagen „es ist zu viel“ ist keine Schwäche. Sprich mit jemandem, dem du vertraust. Zum Beispiel mit deinem Vorgesetzten, dem Betriebsarzt (bedrijfsarts) oder deinem Hausarzt (huisarts). Oder mit der Vertrauensperson (vertrouwenspersoon), wenn deine Firma eine hat. Du kannst auch selbst um ein Gespräch mit dem Betriebsarzt bitten. Ärzte erzählen deinem Chef nicht, was du gesagt hast. Denkst du an Suizid, oder machst du dir Sorgen um jemanden? Ruf 113 an (kostenlos, Tag und Nacht), oder chatte auf 113.nl.", // nagelezen AI 22 nov
+    'c.feelwell.p': "Mir geht es nicht so gut. Kann ich kurz mit dir reden?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.s': "Seit Wochen schläfst du schlecht, und die Arbeit ist zu viel. Du bist sehr müde. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.o1': "Du sagst es deinem Vorgesetzten oder dem Betriebsarzt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.o2': "Du sagst nichts und arbeitest härter und schneller.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.o3': "Du bleibst zu Hause und sagst niemandem, warum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.w': "Es früh zu sagen ist keine Schwäche. Dann könnt ihr zusammen einen Ausweg suchen, zum Beispiel andere Schichten. Du musst das nicht allein schaffen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.backtowork': "Nach einer Krankheit zurück zur Arbeit", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.opbouwen': "langsam steigern (Schritt für Schritt)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.halvedagen': "halbe Tage (du arbeitest nur einen Teil des Tages)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.lichtwerk': "leichte Arbeit (nicht schwer)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.zwaarwerk': "schwere Arbeit", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.herstellen': "sich erholen, wieder gesund werden", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.welkomterug': "willkommen zurück", // nieuw, nalezen // nagelezen AI 22 nov
+    's.backtowork.1': "Ich fange mit halben Tagen an.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.backtowork.2': "Leichte Arbeit kann ich schon. Schwere Arbeit noch nicht.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.backtowork.3': "Der Betriebsarzt sagt: langsam steigern.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.q': "Willkommen zurück! Geht es dir besser?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.a': "Ja, es geht besser. Ich mache langsam.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork': "Schritt für Schritt zurück", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.b': "Bist du wieder gesund? Sag deinem Arbeitgeber, dass du wieder arbeiten kannst (betermelden). Nach einer längeren Krankheit fängst du oft Schritt für Schritt an: zuerst weniger Stunden oder leichtere Arbeit. Der Betriebsarzt (bedrijfsarts) berät dich, was du machen kannst. Länger krank? Dann machen du und dein Arbeitgeber zusammen einen Plan für deine Rückkehr. So steht es im Gesetz (Wet verbetering poortwachter). Sag deutlich, was du kannst und was noch nicht. Du musst Kollegen nicht sagen, welche Krankheit du hattest. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.p': "Das kann ich schon. Das kann ich noch nicht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.s': "Du warst drei Wochen krank. An deinem ersten Tag zurück bittet dich dein Vorgesetzter, schwere Kisten zu heben. Der Betriebsarzt hat gesagt: vorerst nur leichte Arbeit. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.o1': "Du sagst ruhig, dass du jetzt leichte Arbeit machen kannst und was du noch nicht kannst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.o2': "Du hebst die Kisten trotzdem: Du willst keine Umstände machen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.o3': "Du gehst ohne ein Wort nach Hause.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.w': "Dein Vorgesetzter will dich zurück, und zwar gesund. Wenn du deutlich sagst, was du kannst, kann er die Arbeit planen. Zu viel zu früh kann dich wieder krank machen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.measure': "Messen", // nieuw, nalezen
     'w.rolmaat': "das Maßband", // nieuw, nalezen
     'w.waterpas': "die Wasserwaage (sie zeigt, ob etwas gerade ist)", // nieuw, nalezen
@@ -1836,14 +1836,14 @@ const t: CultureTranslation = {
     's.measure.3': "Ich messe es zweimal.", // nieuw, nalezen
     'c.measure.q': "Wie breit muss es sein?", // nieuw, nalezen
     'c.measure.a': "Neunzig Zentimeter. Ich schreibe es auf.", // nieuw, nalezen
-    'c.measure': "Zweimal messen, einmal sägen", // nieuw, nalezen
-    'c.measure.b': "Auf einer Baustelle sind Maße oft in Millimetern. „Neunhundert“ kann also 90 Zentimeter heißen. Nicht sicher? Frag: „Sind das Millimeter oder Zentimeter?“ Wiederhol die Zahl, und schreib sie auf. Miss zweimal, bevor du sägst oder bohrst: Ein Brett, das zu kurz ist, bleibt zu kurz. Hast du einen Fehler gemacht? Sag es sofort. Dann kann das Team es noch in Ordnung bringen, und es kostet weniger.", // nieuw, nalezen
-    'c.measure.p': "Ist das in Millimetern oder in Zentimetern?", // nieuw, nalezen
-    'c.measure.s': "Dein Kollege ruft dir ein Maß zu. Du hast es nicht gut gehört. Was machst du?", // nieuw, nalezen
-    'c.measure.o1': "Wiederhol die Zahl, und frag, ob sie stimmt.", // nieuw, nalezen
-    'c.measure.o2': "Säg das Brett so, wie du es wohl gehört hast.", // nieuw, nalezen
-    'c.measure.o3': "Warte, bis er selbst kommt und nachsieht.", // nieuw, nalezen
-    'c.measure.w': "Ein falsches Maß kostet Material und Zeit. Die Zahl zu wiederholen dauert zwei Sekunden, und auf einer Baustelle machen das alle.", // nieuw, nalezen
+    'c.measure': "Zweimal messen, einmal sägen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.b': "Auf einer Baustelle sind Maße oft in Millimetern. „Neunhundert“ kann also 90 Zentimeter heißen. Nicht sicher? Frag: „Sind das Millimeter oder Zentimeter?“ Wiederhol die Zahl, und schreib sie auf. Miss zweimal, bevor du sägst oder bohrst: Ein Brett, das zu kurz ist, bleibt zu kurz. Hast du einen Fehler gemacht? Sag es sofort. Dann kann das Team es noch in Ordnung bringen, und es kostet weniger.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.p': "Ist das in Millimetern oder in Zentimetern?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.s': "Dein Kollege ruft dir ein Maß zu. Du hast es nicht gut gehört. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.o1': "Wiederhol die Zahl, und frag, ob sie stimmt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.o2': "Säg das Brett so, wie du es wohl gehört hast.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.o3': "Warte, bis er selbst kommt und nachsieht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.w': "Ein falsches Maß kostet Material und Zeit. Die Zahl zu wiederholen dauert zwei Sekunden, und auf einer Baustelle machen das alle.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.siteday': "Eine ordentliche Baustelle", // nieuw, nalezen
     'w.bouwplaats': "die Baustelle", // nieuw, nalezen
     'w.uitvoerder': "der Bauleiter (der Chef auf der Baustelle)", // nieuw, nalezen
@@ -1856,14 +1856,14 @@ const t: CultureTranslation = {
     's.siteday.3': "Vorsicht, hier kannst du stolpern.", // nieuw, nalezen
     'c.siteday.q': "Wo muss dieses Holz hin?", // nieuw, nalezen
     'c.siteday.a': "In den Container am Eingang.", // nieuw, nalezen
-    'c.siteday': "Eine ordentliche Baustelle ist eine sichere Baustelle", // nieuw, nalezen
-    'c.siteday.b': "Auf einer Baustelle gehört Aufräumen zur Arbeit, für alle. Über lose Bretter, Kabel und Abfall stolpern und fallen Menschen. Räum also deinen Platz schon während des Tages auf, nicht erst am Ende. Abfall wird getrennt: Holz, Stein und Metall kommen oft in verschiedene Container. Nicht sicher, in welchen? Frag. Siehst du einen Nagel, der heraussteht, oder ein Loch ohne Abdeckung? Bring es in Ordnung, wenn du das sicher machen kannst, oder sag es dem Bauleiter (de uitvoerder). Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.siteday.p': "Ich räume das weg. Dann stolpert niemand.", // nieuw, nalezen
-    'c.siteday.s': "Auf dem Weg liegen Bretter mit Nägeln. Es sind nicht deine. Was machst du?", // nieuw, nalezen
-    'c.siteday.o1': "Leg sie zur Seite, oder sag es dem Bauleiter.", // nieuw, nalezen
-    'c.siteday.o2': "Steig darüber: Es sind nicht deine Bretter.", // nieuw, nalezen
-    'c.siteday.o3': "Warte: Jemand anders räumt sie weg.", // nieuw, nalezen
-    'c.siteday.w': "Alle benutzen dieselben Wege. Wer eine Gefahr sieht, tut etwas dagegen: Das ist auf einer Baustelle normal.", // nieuw, nalezen
+    'c.siteday': "Eine ordentliche Baustelle ist eine sichere Baustelle", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.b': "Auf einer Baustelle gehört Aufräumen zur Arbeit, für alle. Über lose Bretter, Kabel und Abfall stolpern und fallen Menschen. Räum also deinen Platz schon während des Tages auf, nicht erst am Ende. Abfall wird getrennt: Holz, Stein und Metall kommen oft in verschiedene Container. Nicht sicher, in welchen? Frag. Siehst du einen Nagel, der heraussteht, oder ein Loch ohne Abdeckung? Bring es in Ordnung, wenn du das sicher machen kannst, oder sag es dem Bauleiter (de uitvoerder). Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.p': "Ich räume das weg. Dann stolpert niemand.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.s': "Auf dem Weg liegen Bretter mit Nägeln. Es sind nicht deine. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.o1': "Leg sie zur Seite, oder sag es dem Bauleiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.o2': "Steig darüber: Es sind nicht deine Bretter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.o3': "Warte: Jemand anders räumt sie weg.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.w': "Alle benutzen dieselben Wege. Wer eine Gefahr sieht, tut etwas dagegen: Das ist auf einer Baustelle normal.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.shifts': "Deine Schicht übergeben", // nieuw, nalezen
     'w.vroegedienst': "die Frühschicht", // nieuw, nalezen
     'w.latedienst': "die Spätschicht", // nieuw, nalezen
@@ -1876,14 +1876,14 @@ const t: CultureTranslation = {
     's.shifts.3': "Maschine zwei hatte eine Störung.", // nieuw, nalezen
     'c.shifts.q': "Ist in deiner Schicht etwas passiert?", // nieuw, nalezen
     'c.shifts.a': "Ja. Die Linie stand eine halbe Stunde still.", // nieuw, nalezen
-    'c.shifts': "Sag es der nächsten Schicht", // nieuw, nalezen
-    'c.shifts.b': "Eine Fabrik läuft oft Tag und Nacht, in Schichten. Am Ende deiner Schicht übernimmt ein Kollege deinen Platz. Geh nicht einfach weg: Warte, bis dein Kollege da ist. Sag in ein paar Worten, was passiert ist: eine Störung, ein Produkt, das nicht in Ordnung war, etwas, das nicht fertig ist. Viele Firmen haben dafür auch eine Liste oder einen Bildschirm. Ein Problem, das du nicht weitergibst, kommt in der nächsten Schicht wieder, und dann weiß niemand, warum. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.shifts.p': "Die Maschine hatte eine Störung. Jetzt läuft sie wieder.", // nieuw, nalezen
-    'c.shifts.s': "Deine Schicht ist vorbei. Dein Kollege kommt fünf Minuten zu spät. Was machst du?", // nieuw, nalezen
-    'c.shifts.o1': "Warte, und sag es dem Teamleiter.", // nieuw, nalezen
-    'c.shifts.o2': "Geh nach Hause: Deine Schicht ist vorbei.", // nieuw, nalezen
-    'c.shifts.o3': "Stopp die Maschine und geh.", // nieuw, nalezen
-    'c.shifts.w': "Eine laufende Maschine darf nicht allein bleiben. Wenn du wartest und es meldest, geht die Arbeit sicher weiter, und der Teamleiter kann es lösen.", // nieuw, nalezen
+    'c.shifts': "Sag es der nächsten Schicht", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.b': "Eine Fabrik läuft oft Tag und Nacht, in Schichten. Am Ende deiner Schicht übernimmt ein Kollege deinen Platz. Geh nicht einfach weg: Warte, bis dein Kollege da ist. Sag in ein paar Worten, was passiert ist: eine Störung, ein Produkt, das nicht in Ordnung war, etwas, das nicht fertig ist. Viele Firmen haben dafür auch eine Liste oder einen Bildschirm. Ein Problem, das du nicht weitergibst, kommt in der nächsten Schicht wieder, und dann weiß niemand, warum. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.p': "Die Maschine hatte eine Störung. Jetzt läuft sie wieder.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.s': "Deine Schicht ist vorbei. Dein Kollege kommt fünf Minuten zu spät. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.o1': "Warte, und sag es dem Teamleiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.o2': "Geh nach Hause: Deine Schicht ist vorbei.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.o3': "Stopp die Maschine und geh.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.w': "Eine laufende Maschine darf nicht allein bleiben. Wenn du wartest und es meldest, geht die Arbeit sicher weiter, und der Teamleiter kann es lösen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.signals': "Sag, was du siehst", // nieuw, nalezen
     'w.duizelig': "schwindlig", // nieuw, nalezen
     'w.misselijk': "übel (du fühlst, dass du dich übergeben musst)", // nieuw, nalezen
@@ -1896,14 +1896,14 @@ const t: CultureTranslation = {
     's.signals.3': "Kannst du mal kommen und schauen?", // nieuw, nalezen
     'c.signals.q': "Wie geht es Herrn Jansen?", // nieuw, nalezen
     'c.signals.a': "Er ist verwirrt. Das ist anders als gestern.", // nieuw, nalezen
-    'c.signals': "Du siehst den Klienten jeden Tag", // nieuw, nalezen
-    'c.signals.b': "Oft bist du die Person, die einen Klienten am meisten sieht. Du merkst also als Erste oder Erster, wenn etwas anders ist: weniger essen, mehr Schmerzen, verwirrt, kurzatmig. Du musst nicht wissen, was es ist. Sag, was du siehst, und sag, wann du es gesehen hast. Sag es der Pflegefachkraft noch am selben Tag, und schreib es auf, wenn das deine Aufgabe ist. Sieht es ernst aus? Warte nicht: Ruf sofort die Pflegefachkraft. Lieber einmal zu viel als einmal zu wenig.", // nieuw, nalezen
-    'c.signals.p': "Die Dame isst nicht und ihr ist schwindlig. Das ist anders als normal.", // nieuw, nalezen
-    'c.signals.s': "Eine Klientin ist heute still und will nicht essen. Normalerweise redet sie viel. Was machst du?", // nieuw, nalezen
-    'c.signals.o1': "Sag der Pflegefachkraft, was du siehst, noch heute.", // nieuw, nalezen
-    'c.signals.o2': "Warte ein paar Tage: Vielleicht geht es vorbei.", // nieuw, nalezen
-    'c.signals.o3': "Gib ihr eine Tablette aus dem Schrank.", // nieuw, nalezen
-    'c.signals.w': "Eine kleine Veränderung kann das erste Zeichen einer Krankheit sein. Du entscheidest nicht, was es ist: Das macht die Pflegefachkraft. Aber sie kann nur etwas tun, wenn du es ihr sagst.", // nieuw, nalezen
+    'c.signals': "Du siehst den Klienten jeden Tag", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.b': "Oft bist du die Person, die einen Klienten am meisten sieht. Du merkst also als Erste oder Erster, wenn etwas anders ist: weniger essen, mehr Schmerzen, verwirrt, kurzatmig. Du musst nicht wissen, was es ist. Sag, was du siehst, und sag, wann du es gesehen hast. Sag es der Pflegefachkraft noch am selben Tag, und schreib es auf, wenn das deine Aufgabe ist. Sieht es ernst aus? Warte nicht: Ruf sofort die Pflegefachkraft. Lieber einmal zu viel als einmal zu wenig.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.p': "Die Dame isst nicht und ihr ist schwindlig. Das ist anders als normal.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.s': "Eine Klientin ist heute still und will nicht essen. Normalerweise redet sie viel. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.o1': "Sag der Pflegefachkraft, was du siehst, noch heute.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.o2': "Warte ein paar Tage: Vielleicht geht es vorbei.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.o3': "Gib ihr eine Tablette aus dem Schrank.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.w': "Eine kleine Veränderung kann das erste Zeichen einer Krankheit sein. Du entscheidest nicht, was es ist: Das macht die Pflegefachkraft. Aber sie kann nur etwas tun, wenn du es ihr sagst.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.transfer': "Jemandem beim Aufstehen helfen", // nieuw, nalezen
     'w.tillift': "der Lifter (ein Gerät, das einen Menschen hebt)", // nieuw, nalezen
     'w.rollator': "der Rollator (eine Gehhilfe mit Rädern)", // nieuw, nalezen
@@ -1916,14 +1916,14 @@ const t: CultureTranslation = {
     's.transfer.3': "Zuerst hole ich den Lifter.", // nieuw, nalezen
     'c.transfer.q': "Kannst du die Dame aus dem Bett heben?", // nieuw, nalezen
     'c.transfer.a': "Nicht allein. Ich hole den Lifter.", // nieuw, nalezen
-    'c.transfer': "Erst sagen, dann helfen", // nieuw, nalezen
-    'c.transfer.b': "Bevor du einen Klienten anfasst, sag, was du machst: „Ik help u nu met opstaan.“ Dann erschrickt der Klient nicht und kann mithelfen. Lass den Klienten machen, was er noch selbst kann: Das hält ihn stark. Heb einen Menschen nicht allein. Benutz die Hilfsmittel, die da sind, wie den Lifter, und arbeite so, wie man es dir gezeigt hat. Noch nicht gezeigt? Frag zuerst. Dein Rücken muss ein ganzes Arbeitsleben halten. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.transfer.p': "Ich helfe Ihnen jetzt beim Aufstehen. Sind Sie bereit?", // nieuw, nalezen
-    'c.transfer.s': "Eine Klientin will aus dem Bett. Du hast noch nicht gelernt, den Lifter zu benutzen. Was machst du?", // nieuw, nalezen
-    'c.transfer.o1': "Frag einen Kollegen, der den Lifter kennt.", // nieuw, nalezen
-    'c.transfer.o2': "Heb sie selbst: Sie ist nicht schwer.", // nieuw, nalezen
-    'c.transfer.o3': "Probier den Lifter aus: So schwer kann es nicht sein.", // nieuw, nalezen
-    'c.transfer.w': "Wer einen Menschen falsch hebt, kann dem Klienten und dem eigenen Rücken wehtun. Einen Kollegen zu fragen dauert ein paar Minuten. Ein Sturz kann Monate dauern.", // nieuw, nalezen
+    'c.transfer': "Erst sagen, dann helfen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.b': "Bevor du einen Klienten anfasst, sag, was du machst: „Ik help u nu met opstaan.“ Dann erschrickt der Klient nicht und kann mithelfen. Lass den Klienten machen, was er noch selbst kann: Das hält ihn stark. Heb einen Menschen nicht allein. Benutz die Hilfsmittel, die da sind, wie den Lifter, und arbeite so, wie man es dir gezeigt hat. Noch nicht gezeigt? Frag zuerst. Dein Rücken muss ein ganzes Arbeitsleben halten. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.p': "Ich helfe Ihnen jetzt beim Aufstehen. Sind Sie bereit?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.s': "Eine Klientin will aus dem Bett. Du hast noch nicht gelernt, den Lifter zu benutzen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.o1': "Frag einen Kollegen, der den Lifter kennt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.o2': "Heb sie selbst: Sie ist nicht schwer.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.o3': "Probier den Lifter aus: So schwer kann es nicht sein.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.w': "Wer einen Menschen falsch hebt, kann dem Klienten und dem eigenen Rücken wehtun. Einen Kollegen zu fragen dauert ein paar Minuten. Ein Sturz kann Monate dauern.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.dishes': "Abwaschen", // nieuw, nalezen
     'w.afwas': "der Abwasch, das schmutzige Geschirr", // nieuw, nalezen
     'w.vaatwasser': "die Spülmaschine", // nieuw, nalezen
@@ -1936,14 +1936,14 @@ const t: CultureTranslation = {
     's.dishes.3': "Es gibt kein sauberes Besteck mehr.", // nieuw, nalezen
     'c.dishes.q': "Gibt es noch saubere Gläser?", // nieuw, nalezen
     'c.dishes.a': "Ja, ich bringe sie sofort.", // nieuw, nalezen
-    'c.dishes': "Glas kaputt: sofort sagen", // nieuw, nalezen
-    'c.dishes.b': "In einer Küche geht Glas kaputt. Das ist normal, und niemand ist deshalb böse. Aber sag es sofort, laut und deutlich: „Glas!“ Heb die Scherben nicht mit bloßen Händen auf: Nimm einen Handfeger. Ist Glas in die Nähe von Essen gefallen, oder ins Eis? Dann muss dieses Essen oder dieses Eis weg, und zwar alles. Ein kleines Stück Glas im Essen ist für einen Gast sehr gefährlich. Glas kommt in eine eigene Tonne, nicht in einen Sack, den jemand hochhebt. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.dishes.p': "Vorsicht, Glas! Ich räume es sofort weg.", // nieuw, nalezen
-    'c.dishes.s': "Ein Glas geht über dem Eis für die Getränke kaputt. Es ist sehr viel los. Was machst du?", // nieuw, nalezen
-    'c.dishes.o1': "Sag es, und wirf das ganze Eis weg.", // nieuw, nalezen
-    'c.dishes.o2': "Nimm die Scherben heraus, die du siehst.", // nieuw, nalezen
-    'c.dishes.o3': "Sag nichts: Es ist jetzt zu viel los.", // nieuw, nalezen
-    'c.dishes.w': "Kleine Glasstücke im Eis kannst du nicht sehen. Neues Eis kostet wenig. Ein Gast mit Glas im Getränk kann sich schwer verletzen.", // nieuw, nalezen
+    'c.dishes': "Glas kaputt: sofort sagen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.b': "In einer Küche geht Glas kaputt. Das ist normal, und niemand ist deshalb böse. Aber sag es sofort, laut und deutlich: „Glas!“ Heb die Scherben nicht mit bloßen Händen auf: Nimm einen Handfeger. Ist Glas in die Nähe von Essen gefallen, oder ins Eis? Dann muss dieses Essen oder dieses Eis weg, und zwar alles. Ein kleines Stück Glas im Essen ist für einen Gast sehr gefährlich. Glas kommt in eine eigene Tonne, nicht in einen Sack, den jemand hochhebt. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.p': "Vorsicht, Glas! Ich räume es sofort weg.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.s': "Ein Glas geht über dem Eis für die Getränke kaputt. Es ist sehr viel los. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.o1': "Sag es, und wirf das ganze Eis weg.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.o2': "Nimm die Scherben heraus, die du siehst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.o3': "Sag nichts: Es ist jetzt zu viel los.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.w': "Kleine Glasstücke im Eis kannst du nicht sehen. Neues Eis kostet wenig. Ein Gast mit Glas im Getränk kann sich schwer verletzen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.rush': "Wenn viel los ist", // nieuw, nalezen
     'w.heet': "heiß", // nieuw, nalezen
     'w.chef': "der Küchenchef (der Chef in der Küche)", // nieuw, nalezen
@@ -1956,14 +1956,14 @@ const t: CultureTranslation = {
     's.rush.3': "Ich bringe das auf die Terrasse.", // nieuw, nalezen
     'c.rush.q': "Kannst du Tisch vier machen?", // nieuw, nalezen
     'c.rush.a': "Ja, Chef. Ich komme.", // nieuw, nalezen
-    'c.rush': "Kurze Worte, wenn viel los ist", // nieuw, nalezen
-    'c.rush.b': "Wenn viel los ist, reden die Leute in einer Küche in kurzen Worten: „Heet!“, „Achter!“, „Tafel zes!“ Das ist nicht unhöflich. Es ist schnell und sicher: Alle wissen, wo die heißen Pfannen und die Messer sind. Ruf selbst „Heet!“ oder „Achter!“, wenn du hinter jemandem vorbeigehst. Hast du einen Auftrag gehört? Wiederhol ihn: „Ja, chef.“ Dann weiß der Chef, dass du es gehört hast. War jemand im Stress kurz angebunden zu dir? Oft ist das vorbei, wenn es wieder ruhig ist. Bleibt es unangenehm? Dann sprich darüber in einem ruhigen Moment.", // nieuw, nalezen
-    'c.rush.p': "Hinter dir! Ich habe eine heiße Pfanne.", // nieuw, nalezen
-    'c.rush.s': "Es ist sehr viel los. Der Chef ruft: „Tafel zes, nu!“ Er sagt nicht bitte. Was machst du?", // nieuw, nalezen
-    'c.rush.o1': "Sag „Ja, chef“, und mach es.", // nieuw, nalezen
-    'c.rush.o2': "Bleib stehen, und sag, dass er unhöflich ist.", // nieuw, nalezen
-    'c.rush.o3': "Mach es, aber sag nichts zurück.", // nieuw, nalezen
-    'c.rush.w': "Im Stress ist kurz normal und nicht persönlich gemeint. Wenn du es wiederholst, zeigst du, dass du es gehört hast. So bleibt die Küche schnell und sicher.", // nieuw, nalezen
+    'c.rush': "Kurze Worte, wenn viel los ist", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.b': "Wenn viel los ist, reden die Leute in einer Küche in kurzen Worten: „Heet!“, „Achter!“, „Tafel zes!“ Das ist nicht unhöflich. Es ist schnell und sicher: Alle wissen, wo die heißen Pfannen und die Messer sind. Ruf selbst „Heet!“ oder „Achter!“, wenn du hinter jemandem vorbeigehst. Hast du einen Auftrag gehört? Wiederhol ihn: „Ja, chef.“ Dann weiß der Chef, dass du es gehört hast. War jemand im Stress kurz angebunden zu dir? Oft ist das vorbei, wenn es wieder ruhig ist. Bleibt es unangenehm? Dann sprich darüber in einem ruhigen Moment.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.p': "Hinter dir! Ich habe eine heiße Pfanne.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.s': "Es ist sehr viel los. Der Chef ruft: „Tafel zes, nu!“ Er sagt nicht bitte. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.o1': "Sag „Ja, chef“, und mach es.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.o2': "Bleib stehen, und sag, dass er unhöflich ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.o3': "Mach es, aber sag nichts zurück.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.w': "Im Stress ist kurz normal und nicht persönlich gemeint. Wenn du es wiederholst, zeigst du, dass du es gehört hast. So bleibt die Küche schnell und sicher.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.rounds': "Deine Runde", // nieuw, nalezen
     'w.kantoor': "das Büro", // nieuw, nalezen
     'w.verdieping': "das Stockwerk, die Etage (der erste oder zweite Stock in einem Gebäude)", // nieuw, nalezen
@@ -1976,14 +1976,14 @@ const t: CultureTranslation = {
     's.rounds.3': "Ich fülle die Seife nach.", // nieuw, nalezen
     'c.rounds.q': "Hast du Büro drei schon gemacht?", // nieuw, nalezen
     'c.rounds.a': "Nein, da arbeitet noch jemand.", // nieuw, nalezen
-    'c.rounds': "Putzen, wo Menschen arbeiten", // nieuw, nalezen
-    'c.rounds.b': "Oft putzt du, während andere Leute noch arbeiten. Grüß sie, und frag: „Mag ik hier even schoonmaken?“ Die meisten sagen Ja. Ist jemand in einer Besprechung oder am Telefon? Dann komm später wieder. Verschieb keine Papiere auf einem Schreibtisch, und lies sie nicht: Putz um sie herum. Du hast eine feste Zeit für deine Runde. Ist die Zeit zu kurz, um es gut zu machen? Lass nicht still und heimlich Räume aus. Sag deinem Vorgesetzten, was du nicht geschafft hast, und warum.", // nieuw, nalezen
-    'c.rounds.p': "Guten Tag. Darf ich hier kurz putzen?", // nieuw, nalezen
-    'c.rounds.s': "Deine Runde dauert heute länger: Ein Raum war sehr schmutzig. Zwei Büros sind nicht fertig. Was machst du?", // nieuw, nalezen
-    'c.rounds.o1': "Sag deinem Vorgesetzten, welche zwei, und warum.", // nieuw, nalezen
-    'c.rounds.o2': "Geh nach Hause, und hoff, dass es niemand sieht.", // nieuw, nalezen
-    'c.rounds.o3': "Mach sie ganz schnell, ohne die Böden.", // nieuw, nalezen
-    'c.rounds.w': "Ein Kunde, der ein schmutziges Büro findet, beschwert sich. Ein Vorgesetzter, der es weiß, kann es erklären oder dir mehr Zeit geben. Es zu sagen ist kein Versagen.", // nieuw, nalezen
+    'c.rounds': "Putzen, wo Menschen arbeiten", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.b': "Oft putzt du, während andere Leute noch arbeiten. Grüß sie, und frag: „Mag ik hier even schoonmaken?“ Die meisten sagen Ja. Ist jemand in einer Besprechung oder am Telefon? Dann komm später wieder. Verschieb keine Papiere auf einem Schreibtisch, und lies sie nicht: Putz um sie herum. Du hast eine feste Zeit für deine Runde. Ist die Zeit zu kurz, um es gut zu machen? Lass nicht still und heimlich Räume aus. Sag deinem Vorgesetzten, was du nicht geschafft hast, und warum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.p': "Guten Tag. Darf ich hier kurz putzen?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.s': "Deine Runde dauert heute länger: Ein Raum war sehr schmutzig. Zwei Büros sind nicht fertig. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.o1': "Sag deinem Vorgesetzten, welche zwei, und warum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.o2': "Geh nach Hause, und hoff, dass es niemand sieht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.o3': "Mach sie ganz schnell, ohne die Böden.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.w': "Ein Kunde, der ein schmutziges Büro findet, beschwert sich. Ein Vorgesetzter, der es weiß, kann es erklären oder dir mehr Zeit geben. Es zu sagen ist kein Versagen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.colours': "Farben und Tücher", // nieuw, nalezen
     'w.doek': "das Tuch", // nieuw, nalezen
     'w.spons': "der Schwamm", // nieuw, nalezen
@@ -1996,14 +1996,14 @@ const t: CultureTranslation = {
     's.colours.3': "Welche Farbe nehme ich hier?", // nieuw, nalezen
     'c.colours.q': "Darf ich dieses Tuch für den Schreibtisch nehmen?", // nieuw, nalezen
     'c.colours.a': "Nein, das rote ist nur für die Toilette.", // nieuw, nalezen
-    'c.colours': "Jede Farbe hat ihren Platz", // nieuw, nalezen
-    'c.colours.b': "Viele Reinigungsfirmen arbeiten mit Farben. Jede Farbe von Tuch, Schwamm und Eimer ist für einen Ort. Oft ist Rot für die Toilette, und Blau ist für Schreibtische und Tische. So kommt Schmutz von der Toilette nicht auf einen Schreibtisch oder in eine Küche. Die Farben können in jeder Firma anders sein, frag also an deinem ersten Tag. Ist ein Tuch schmutzig, oder ist es auf den Boden gefallen? Nimm ein sauberes. Benutzte Tücher kommen in den Wäschesack, nicht zurück auf den Wagen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.colours.p': "Welche Farbe ist hier für die Toilette?", // nieuw, nalezen
-    'c.colours.s': "Deine blauen Tücher sind alle. Du musst noch drei Schreibtische putzen. Du hast nur rote Tücher. Was machst du?", // nieuw, nalezen
-    'c.colours.o1': "Hol zuerst neue blaue Tücher.", // nieuw, nalezen
-    'c.colours.o2': "Nimm ein rotes Tuch: Sauber ist sauber.", // nieuw, nalezen
-    'c.colours.o3': "Nimm ein blaues Tuch noch einmal für alle drei.", // nieuw, nalezen
-    'c.colours.w': "Ein Farbsystem funktioniert nur, wenn sich alle immer daran halten. Dann muss sich niemand fragen, wo ein Tuch schon war.", // nieuw, nalezen
+    'c.colours': "Jede Farbe hat ihren Platz", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.b': "Viele Reinigungsfirmen arbeiten mit Farben. Jede Farbe von Tuch, Schwamm und Eimer ist für einen Ort. Oft ist Rot für die Toilette, und Blau ist für Schreibtische und Tische. So kommt Schmutz von der Toilette nicht auf einen Schreibtisch oder in eine Küche. Die Farben können in jeder Firma anders sein, frag also an deinem ersten Tag. Ist ein Tuch schmutzig, oder ist es auf den Boden gefallen? Nimm ein sauberes. Benutzte Tücher kommen in den Wäschesack, nicht zurück auf den Wagen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.p': "Welche Farbe ist hier für die Toilette?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.s': "Deine blauen Tücher sind alle. Du musst noch drei Schreibtische putzen. Du hast nur rote Tücher. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.o1': "Hol zuerst neue blaue Tücher.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.o2': "Nimm ein rotes Tuch: Sauber ist sauber.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.o3': "Nimm ein blaues Tuch noch einmal für alle drei.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.w': "Ein Farbsystem funktioniert nur, wenn sich alle immer daran halten. Dann muss sich niemand fragen, wo ein Tuch schon war.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.shophelp': "Einem Kunden helfen", // nieuw, nalezen
     'w.aanbieding': "das Angebot (für kurze Zeit billiger)", // nieuw, nalezen
     'w.korting': "der Rabatt (du zahlst weniger)", // nieuw, nalezen
@@ -2016,14 +2016,14 @@ const t: CultureTranslation = {
     's.shophelp.3': "Dieser Kaffee ist im Angebot.", // nieuw, nalezen
     'c.shophelp.q': "Haben Sie noch Milch?", // nieuw, nalezen
     'c.shophelp.a': "Ich schaue für Sie im Lager nach.", // nieuw, nalezen
-    'c.shophelp': "„Ich weiß es nicht“ ist nicht das Ende", // nieuw, nalezen
-    'c.shophelp.b': "Ein Kunde fragt etwas, und du weißt die Antwort nicht. Das ist in Ordnung: Niemand weiß alles. Aber sag nicht nur „nee“ oder „weet ik niet“, und geh nicht weg. Sag: „Ik vraag het even voor u“, und hol einen Kollegen. Ist ein Produkt ausverkauft? Sag, wann es wieder kommt, oder zeig etwas Ähnliches. Schau den Kunden an und grüß ihn, auch wenn du gerade Regale einräumst. Hast du die Frage nicht verstanden? Bitte den Kunden, es noch einmal zu sagen, langsam.", // nieuw, nalezen
-    'c.shophelp.p': "Das weiß ich nicht. Ich frage für Sie nach.", // nieuw, nalezen
-    'c.shophelp.s': "Eine Kundin fragt nach einem Produkt. Du kennst das Wort nicht. Was machst du?", // nieuw, nalezen
-    'c.shophelp.o1': "Sag: „Ik vraag het even voor u.“", // nieuw, nalezen
-    'c.shophelp.o2': "Sag „nee“, und arbeite weiter.", // nieuw, nalezen
-    'c.shophelp.o3': "Zeig irgendwohin, damit sie weggeht.", // nieuw, nalezen
-    'c.shophelp.w': "Einen Kunden stört es nicht, dass du neu bist oder noch Niederländisch lernst. Einen Kunden stört es, wenn er keine Hilfe bekommt. Einen Kollegen zu holen ist guter Service.", // nieuw, nalezen
+    'c.shophelp': "„Ich weiß es nicht“ ist nicht das Ende", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.b': "Ein Kunde fragt etwas, und du weißt die Antwort nicht. Das ist in Ordnung: Niemand weiß alles. Aber sag nicht nur „nee“ oder „weet ik niet“, und geh nicht weg. Sag: „Ik vraag het even voor u“, und hol einen Kollegen. Ist ein Produkt ausverkauft? Sag, wann es wieder kommt, oder zeig etwas Ähnliches. Schau den Kunden an und grüß ihn, auch wenn du gerade Regale einräumst. Hast du die Frage nicht verstanden? Bitte den Kunden, es noch einmal zu sagen, langsam.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.p': "Das weiß ich nicht. Ich frage für Sie nach.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.s': "Eine Kundin fragt nach einem Produkt. Du kennst das Wort nicht. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.o1': "Sag: „Ik vraag het even voor u.“", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.o2': "Sag „nee“, und arbeite weiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.o3': "Zeig irgendwohin, damit sie weggeht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.w': "Einen Kunden stört es nicht, dass du neu bist oder noch Niederländisch lernst. Einen Kunden stört es, wenn er keine Hilfe bekommt. Einen Kollegen zu holen ist guter Service.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.shoptrouble': "Schwierige Momente", // nieuw, nalezen
     'w.bedrijfsleider': "der Filialleiter (der Chef im Geschäft)", // nieuw, nalezen
     'w.beveiliger': "der Wachmann, der Sicherheitsdienst", // nieuw, nalezen
@@ -2036,14 +2036,14 @@ const t: CultureTranslation = {
     's.shoptrouble.3': "Ich glaube, da stiehlt jemand etwas.", // nieuw, nalezen
     'c.shoptrouble.q': "Ich will jetzt mein Geld zurück!", // nieuw, nalezen
     'c.shoptrouble.a': "Ich verstehe. Ich hole meinen Kollegen.", // nieuw, nalezen
-    'c.shoptrouble': "Ein wütender Kunde oder ein Dieb: Du gehst vor", // nieuw, nalezen
-    'c.shoptrouble.b': "Manchmal wird ein Kunde wütend, oder du siehst, dass jemand stiehlt. Deine Sicherheit geht vor, immer. Bei einem wütenden Kunden: Bleib ruhig, schrei nicht zurück, und hol den Filialleiter. Du musst es nicht allein lösen. Siehst du einen Dieb? Lauf ihm nicht nach, halt ihn nicht fest, und stell dich nicht in die Tür. Schau gut hin, was du siehst, und sag es sofort dem Filialleiter oder dem Wachmann. Sachen kann man ersetzen. Dich nicht. Hast du danach einen Schreck gehabt? Sprich darüber mit deinem Vorgesetzten. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.shoptrouble.p': "Ich sehe, dass jemand etwas in seine Tasche steckt.", // nieuw, nalezen
-    'c.shoptrouble.s': "Ein Mann steckt eine Flasche unter seine Jacke und geht zum Ausgang. Was machst du?", // nieuw, nalezen
-    'c.shoptrouble.o1': "Sag es dem Filialleiter oder dem Wachmann.", // nieuw, nalezen
-    'c.shoptrouble.o2': "Lauf ihm nach und halt ihn am Arm fest.", // nieuw, nalezen
-    'c.shoptrouble.o3': "Stell dich vor die Tür.", // nieuw, nalezen
-    'c.shoptrouble.w': "Ein Dieb, den man aufhält, kann gewalttätig werden. Der Filialleiter und der Wachmann wissen, was zu tun ist. Kein Produkt ist es wert, dass du verletzt wirst.", // nieuw, nalezen
+    'c.shoptrouble': "Ein wütender Kunde oder ein Dieb: Du gehst vor", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.b': "Manchmal wird ein Kunde wütend, oder du siehst, dass jemand stiehlt. Deine Sicherheit geht vor, immer. Bei einem wütenden Kunden: Bleib ruhig, schrei nicht zurück, und hol den Filialleiter. Du musst es nicht allein lösen. Siehst du einen Dieb? Lauf ihm nicht nach, halt ihn nicht fest, und stell dich nicht in die Tür. Schau gut hin, was du siehst, und sag es sofort dem Filialleiter oder dem Wachmann. Sachen kann man ersetzen. Dich nicht. Hast du danach einen Schreck gehabt? Sprich darüber mit deinem Vorgesetzten. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.p': "Ich sehe, dass jemand etwas in seine Tasche steckt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.s': "Ein Mann steckt eine Flasche unter seine Jacke und geht zum Ausgang. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.o1': "Sag es dem Filialleiter oder dem Wachmann.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.o2': "Lauf ihm nach und halt ihn am Arm fest.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.o3': "Stell dich vor die Tür.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.w': "Ein Dieb, den man aufhält, kann gewalttätig werden. Der Filialleiter und der Wachmann wissen, was zu tun ist. Kein Produkt ist es wert, dass du verletzt wirst.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.plantcare': "Die Pflanze pflegen", // nieuw, nalezen
     'w.plantblad': "das Blatt (von einer Pflanze)", // nieuw, nalezen
     'w.stengel': "der Stängel", // nieuw, nalezen
@@ -2056,14 +2056,14 @@ const t: CultureTranslation = {
     's.plantcare.3': "Der Stängel ist gebrochen.", // nieuw, nalezen
     'c.plantcare.q': "Welche Tomaten pflücke ich?", // nieuw, nalezen
     'c.plantcare.a': "Nur die roten. Die grünen sind noch nicht reif.", // nieuw, nalezen
-    'c.plantcare': "Saubere Hände, gesunde Pflanzen", // nieuw, nalezen
-    'c.plantcare.b': "Auch Pflanzen können krank werden. Ein Virus geht von Pflanze zu Pflanze, über Hände, Handschuhe, Messer und Kleidung. In einem Gewächshaus kann eine kranke Pflanze heißen, dass Tausende Pflanzen weg müssen. Darum gibt es an der Tür strenge Regeln: Wasch dir die Hände, trag die Arbeitskleidung der Firma, und geh durch das Fußbad. In vielen Gewächshäusern sind eigene Tomaten, Paprika oder Gurken in deinem Pausenessen verboten. Siehst du eine Pflanze, die komisch aussieht? Fass sie nicht an. Sag deinem Vorgesetzten, in welcher Reihe sie steht. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.plantcare.p': "In Reihe zwölf steht eine kranke Pflanze.", // nieuw, nalezen
-    'c.plantcare.s': "Du siehst eine Pflanze mit komischen gelben Flecken. Was machst du?", // nieuw, nalezen
-    'c.plantcare.o1': "Lass sie stehen, und sag es deinem Vorgesetzten.", // nieuw, nalezen
-    'c.plantcare.o2': "Zieh sie heraus und nimm sie mit.", // nieuw, nalezen
-    'c.plantcare.o3': "Schneid die Blätter mit Flecken ab.", // nieuw, nalezen
-    'c.plantcare.w': "Wenn du eine kranke Pflanze anfasst, geht das Virus mit dir zu den nächsten Pflanzen. Dein Vorgesetzter weiß, wie man sie sicher wegbringt.", // nieuw, nalezen
+    'c.plantcare': "Saubere Hände, gesunde Pflanzen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.b': "Auch Pflanzen können krank werden. Ein Virus geht von Pflanze zu Pflanze, über Hände, Handschuhe, Messer und Kleidung. In einem Gewächshaus kann eine kranke Pflanze heißen, dass Tausende Pflanzen weg müssen. Darum gibt es an der Tür strenge Regeln: Wasch dir die Hände, trag die Arbeitskleidung der Firma, und geh durch das Fußbad. In vielen Gewächshäusern sind eigene Tomaten, Paprika oder Gurken in deinem Pausenessen verboten. Siehst du eine Pflanze, die komisch aussieht? Fass sie nicht an. Sag deinem Vorgesetzten, in welcher Reihe sie steht. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.p': "In Reihe zwölf steht eine kranke Pflanze.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.s': "Du siehst eine Pflanze mit komischen gelben Flecken. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.o1': "Lass sie stehen, und sag es deinem Vorgesetzten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.o2': "Zieh sie heraus und nimm sie mit.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.o3': "Schneid die Blätter mit Flecken ab.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.w': "Wenn du eine kranke Pflanze anfasst, geht das Virus mit dir zu den nächsten Pflanzen. Dein Vorgesetzter weiß, wie man sie sicher wegbringt.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.outdoors': "Draußen arbeiten", // nieuw, nalezen
     'w.land': "das Feld (wo Pflanzen draußen wachsen)", // nieuw, nalezen
     'w.regen': "der Regen", // nieuw, nalezen
@@ -2076,14 +2076,14 @@ const t: CultureTranslation = {
     's.outdoors.3': "Die Sonne ist heute stark.", // nieuw, nalezen
     'c.outdoors.q': "Es kommt ein Gewitter. Was machen wir?", // nieuw, nalezen
     'c.outdoors.a': "Wir hören auf und gehen rein.", // nieuw, nalezen
-    'c.outdoors': "Sonne, Regen und Gewitter", // nieuw, nalezen
-    'c.outdoors.b': "Draußen arbeitest du bei jedem Wetter. In der Sonne: Bedeck deinen Kopf und deine Haut, nimm Sonnencreme, und trink oft Wasser. Im Regen: Trag deinen Regenanzug und Stiefel, und zieh in der Pause trockene Kleidung an. Nass und kalt macht dich krank und langsam. Gibt es ein Gewitter? Dann hör auf und geh rein, oder in ein Auto oder einen Transporter. Nicht unter einen Baum, und nicht auf ein offenes Feld. Brauchst du Regenkleidung oder Stiefel für die Arbeit? Frag deinen Arbeitgeber danach, bevor du sie selbst kaufst.", // nieuw, nalezen
-    'c.outdoors.p': "Es gibt gleich ein Gewitter. Sollen wir reingehen?", // nieuw, nalezen
-    'c.outdoors.s': "Du bist auf dem Feld. Du hörst Donner in der Nähe. Deine Reihe ist fast fertig. Was machst du?", // nieuw, nalezen
-    'c.outdoors.o1': "Hör auf, und geh rein oder in den Transporter.", // nieuw, nalezen
-    'c.outdoors.o2': "Mach zuerst schnell die Reihe fertig.", // nieuw, nalezen
-    'c.outdoors.o3': "Warte unter dem großen Baum.", // nieuw, nalezen
-    'c.outdoors.w': "Der Blitz schlägt in den höchsten Punkt ein, und auf einem flachen Feld bist du das. Die Reihe kann eine Viertelstunde warten.", // nieuw, nalezen
+    'c.outdoors': "Sonne, Regen und Gewitter", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.b': "Draußen arbeitest du bei jedem Wetter. In der Sonne: Bedeck deinen Kopf und deine Haut, nimm Sonnencreme, und trink oft Wasser. Im Regen: Trag deinen Regenanzug und Stiefel, und zieh in der Pause trockene Kleidung an. Nass und kalt macht dich krank und langsam. Gibt es ein Gewitter? Dann hör auf und geh rein, oder in ein Auto oder einen Transporter. Nicht unter einen Baum, und nicht auf ein offenes Feld. Brauchst du Regenkleidung oder Stiefel für die Arbeit? Frag deinen Arbeitgeber danach, bevor du sie selbst kaufst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.p': "Es gibt gleich ein Gewitter. Sollen wir reingehen?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.s': "Du bist auf dem Feld. Du hörst Donner in der Nähe. Deine Reihe ist fast fertig. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.o1': "Hör auf, und geh rein oder in den Transporter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.o2': "Mach zuerst schnell die Reihe fertig.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.o3': "Warte unter dem großen Baum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.w': "Der Blitz schlägt in den höchsten Punkt ein, und auf einem flachen Feld bist du das. Die Reihe kann eine Viertelstunde warten.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.drawing': "Die Zeichnung und das Maß", // nieuw, nalezen
     'w.tekening': "die Zeichnung (sie zeigt, wie das Teil sein muss)", // nieuw, nalezen
     'w.maat': "das Maß, die Größe", // nieuw, nalezen
@@ -2096,14 +2096,14 @@ const t: CultureTranslation = {
     's.drawing.3': "Es ist zwei Millimeter zu groß.", // nieuw, nalezen
     'c.drawing.q': "Passt der Bolzen?", // nieuw, nalezen
     'c.drawing.a': "Nein. Ich messe es noch einmal.", // nieuw, nalezen
-    'c.drawing': "Die Zeichnung bestimmt", // nieuw, nalezen
-    'c.drawing.b': "In einer Werkstatt machst du, was auf der Zeichnung steht, nicht, was ungefähr richtig aussieht. Die Maße sind in Millimetern, und ein Millimeter kann schon zu viel sein. Passt ein Teil nicht? Benutz keine Gewalt, und mach das Loch nicht „nur ein bisschen“ größer. Miss noch einmal, und schau auf die Zeichnung. Kannst du die Zeichnung nicht lesen, oder fehlt ein Maß? Frag, bevor du anfängst. Eine Frage kostet eine Minute. Ein falsches Teil kostet Material und Stunden.", // nieuw, nalezen
-    'c.drawing.p': "Ich kann dieses Maß nicht lesen. Kannst du mal schauen?", // nieuw, nalezen
-    'c.drawing.s': "Ein Teil passt nicht: Es ist einen Millimeter zu groß. Mit einem Hammer würde es hineingehen. Was machst du?", // nieuw, nalezen
-    'c.drawing.o1': "Miss noch einmal, und frag, was du tun sollst.", // nieuw, nalezen
-    'c.drawing.o2': "Schlag es mit dem Hammer hinein.", // nieuw, nalezen
-    'c.drawing.o3': "Schleif ein bisschen ab, und sag nichts.", // nieuw, nalezen
-    'c.drawing.w': "Ein Teil, das nur mit Gewalt hineingeht, kann später kaputtgehen, beim Kunden. Wenn du es meldest, kann man die Ursache finden.", // nieuw, nalezen
+    'c.drawing': "Die Zeichnung bestimmt", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.b': "In einer Werkstatt machst du, was auf der Zeichnung steht, nicht, was ungefähr richtig aussieht. Die Maße sind in Millimetern, und ein Millimeter kann schon zu viel sein. Passt ein Teil nicht? Benutz keine Gewalt, und mach das Loch nicht „nur ein bisschen“ größer. Miss noch einmal, und schau auf die Zeichnung. Kannst du die Zeichnung nicht lesen, oder fehlt ein Maß? Frag, bevor du anfängst. Eine Frage kostet eine Minute. Ein falsches Teil kostet Material und Stunden.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.p': "Ich kann dieses Maß nicht lesen. Kannst du mal schauen?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.s': "Ein Teil passt nicht: Es ist einen Millimeter zu groß. Mit einem Hammer würde es hineingehen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.o1': "Miss noch einmal, und frag, was du tun sollst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.o2': "Schlag es mit dem Hammer hinein.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.o3': "Schleif ein bisschen ab, und sag nichts.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.w': "Ein Teil, das nur mit Gewalt hineingeht, kann später kaputtgehen, beim Kunden. Wenn du es meldest, kann man die Ursache finden.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.weld': "Schweißen und heiße Arbeit", // nieuw, nalezen
     'w.lassen': "schweißen (Metall mit großer Hitze verbinden)", // nieuw, nalezen
     'w.laskap': "der Schweißhelm", // nieuw, nalezen
@@ -2116,14 +2116,14 @@ const t: CultureTranslation = {
     's.weld.3': "Vorsicht, das Metall ist noch heiß.", // nieuw, nalezen
     'c.weld.q': "Darf ich das schon anfassen?", // nieuw, nalezen
     'c.weld.a': "Nein, warte. Es muss erst abkühlen.", // nieuw, nalezen
-    'c.weld': "Heißes Metall sieht kalt aus", // nieuw, nalezen
-    'c.weld.b': "Schweißen macht sehr helles Licht. Schau nicht ohne Schweißhelm hinein, auch nicht aus der Entfernung: Deine Augen können verbrennen, und du spürst es erst Stunden später. Schweißt ein Kollege in deiner Nähe? Schau weg, oder stell dich hinter die Schutzwand. Metall, das gerade geschweißt oder geschliffen wurde, sieht normal aus, aber es ist sehr heiß. Fass es nicht mit bloßen Händen an. Schweißrauch ist schlecht für deine Lunge: Schalt die Absaugung ein. Eine Brandwunde? Kühl sie sofort mit Wasser, mindestens zehn Minuten lang, und melde es. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.weld.p': "Ist das schon abgekühlt?", // nieuw, nalezen
-    'c.weld.s': "Ein Kollege schweißt neben dir. Du hast keinen Schweißhelm auf. Was machst du?", // nieuw, nalezen
-    'c.weld.o1': "Schau weg, und stell dich hinter die Schutzwand.", // nieuw, nalezen
-    'c.weld.o2': "Schau kurz zu: Davon kannst du lernen.", // nieuw, nalezen
-    'c.weld.o3': "Mach die Augen halb zu.", // nieuw, nalezen
-    'c.weld.w': "Das Licht beim Schweißen verbrennt deine Augen, auch von der Seite und aus der Entfernung. Den Schmerz spürst du erst später, oft in der Nacht.", // nieuw, nalezen
+    'c.weld': "Heißes Metall sieht kalt aus", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.b': "Schweißen macht sehr helles Licht. Schau nicht ohne Schweißhelm hinein, auch nicht aus der Entfernung: Deine Augen können verbrennen, und du spürst es erst Stunden später. Schweißt ein Kollege in deiner Nähe? Schau weg, oder stell dich hinter die Schutzwand. Metall, das gerade geschweißt oder geschliffen wurde, sieht normal aus, aber es ist sehr heiß. Fass es nicht mit bloßen Händen an. Schweißrauch ist schlecht für deine Lunge: Schalt die Absaugung ein. Eine Brandwunde? Kühl sie sofort mit Wasser, mindestens zehn Minuten lang, und melde es. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.p': "Ist das schon abgekühlt?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.s': "Ein Kollege schweißt neben dir. Du hast keinen Schweißhelm auf. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.o1': "Schau weg, und stell dich hinter die Schutzwand.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.o2': "Schau kurz zu: Davon kannst du lernen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.o3': "Mach die Augen halb zu.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.w': "Das Licht beim Schweißen verbrennt deine Augen, auch von der Seite und aus der Entfernung. Den Schmerz spürst du erst später, oft in der Nacht.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.carparts': "Teile des Autos", // nieuw, nalezen
     'w.motor': "der Motor", // nieuw, nalezen
     'w.motorkap': "die Motorhaube (die Klappe über dem Motor)", // nieuw, nalezen
@@ -2136,14 +2136,14 @@ const t: CultureTranslation = {
     's.carparts.3': "Die Bremsen machen Geräusche.", // nieuw, nalezen
     'c.carparts.q': "Was hörst du?", // nieuw, nalezen
     'c.carparts.a': "Der Motor macht ein komisches Geräusch.", // nieuw, nalezen
-    'c.carparts': "Das Auto gehört dem Kunden", // nieuw, nalezen
-    'c.carparts.b': "Ein Auto in der Werkstatt gehört nicht dir: Es gehört dem Kunden. Leg einen Schutzbezug auf den Sitz und auf das Lenkrad, bevor du einsteigst, und arbeite innen mit sauberen Händen. Lass den Sitz, die Spiegel und das Radio so, wie sie waren. Musstest du den Sitz verstellen? Stell ihn zurück. Fass keine persönlichen Sachen im Auto an. Hast du einen Kratzer oder einen Fleck gemacht? Sag es sofort deinem Vorgesetzten. Ein Kunde, der es zu Hause entdeckt, kommt nicht wieder.", // nieuw, nalezen
-    'c.carparts.p': "Ich habe einen Kratzer gemacht. Es tut mir leid.", // nieuw, nalezen
-    'c.carparts.s': "Du machst einen kleinen Kratzer in die Autotür eines Kunden. Niemand hat es gesehen. Was machst du?", // nieuw, nalezen
-    'c.carparts.o1': "Sag es sofort deinem Vorgesetzten.", // nieuw, nalezen
-    'c.carparts.o2': "Sag nichts: Er ist sehr klein.", // nieuw, nalezen
-    'c.carparts.o3': "Reib ihn mit einem Tuch weg, und hoff das Beste.", // nieuw, nalezen
-    'c.carparts.w': "Jeder macht mal einen Fehler. Eine Werkstatt kann einen Kratzer reparieren oder es dem Kunden ehrlich sagen. Ein versteckter Kratzer kostet die Werkstatt ihren guten Namen.", // nieuw, nalezen
+    'c.carparts': "Das Auto gehört dem Kunden", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.b': "Ein Auto in der Werkstatt gehört nicht dir: Es gehört dem Kunden. Leg einen Schutzbezug auf den Sitz und auf das Lenkrad, bevor du einsteigst, und arbeite innen mit sauberen Händen. Lass den Sitz, die Spiegel und das Radio so, wie sie waren. Musstest du den Sitz verstellen? Stell ihn zurück. Fass keine persönlichen Sachen im Auto an. Hast du einen Kratzer oder einen Fleck gemacht? Sag es sofort deinem Vorgesetzten. Ein Kunde, der es zu Hause entdeckt, kommt nicht wieder.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.p': "Ich habe einen Kratzer gemacht. Es tut mir leid.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.s': "Du machst einen kleinen Kratzer in die Autotür eines Kunden. Niemand hat es gesehen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.o1': "Sag es sofort deinem Vorgesetzten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.o2': "Sag nichts: Er ist sehr klein.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.o3': "Reib ihn mit einem Tuch weg, und hoff das Beste.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.w': "Jeder macht mal einen Fehler. Eine Werkstatt kann einen Kratzer reparieren oder es dem Kunden ehrlich sagen. Ein versteckter Kratzer kostet die Werkstatt ihren guten Namen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.carsafe': "Benzin, Gas und Strom", // nieuw, nalezen
     'w.krik': "der Wagenheber (er hebt eine Seite des Autos)", // nieuw, nalezen
     'w.benzine': "das Benzin", // nieuw, nalezen
@@ -2156,14 +2156,14 @@ const t: CultureTranslation = {
     's.carsafe.3': "Die orangen Kabel fasse ich nicht an.", // nieuw, nalezen
     'c.carsafe.q': "Darf ich an diesem Auto arbeiten?", // nieuw, nalezen
     'c.carsafe.a': "Noch nicht. Es ist ein Elektroauto.", // nieuw, nalezen
-    'c.carsafe': "Orange Kabel und laufende Motoren", // nieuw, nalezen
-    'c.carsafe.b': "Ein Elektroauto oder ein Hybridauto hat eine Batterie mit sehr starkem Strom. Die Kabel dafür sind orange. Fass sie nicht an und mach sie nicht los: Ein Mechaniker mit einer speziellen Ausbildung muss das Auto zuerst sicher machen. Steht ein Schild oder ein Kegel am Auto? Dann bleib weg. Ein Motor, der drinnen läuft, macht ein Gas, das du nicht riechen oder sehen kannst, und es kann töten. Also: Schließ den Abgasschlauch an, oder mach die Tore auf. Riechst du Benzin? Keine Funken und nicht rauchen. Sag es sofort deinem Vorgesetzten. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.carsafe.p': "Ist dieses Auto schon sicher gemacht?", // nieuw, nalezen
-    'c.carsafe.s': "Du sollst an einem Elektroauto ein Rad wechseln. Unter dem Auto siehst du ein loses oranges Kabel. Was machst du?", // nieuw, nalezen
-    'c.carsafe.o1': "Fass nichts an, und hol den ausgebildeten Mechaniker.", // nieuw, nalezen
-    'c.carsafe.o2': "Schieb das Kabel mit der Hand zurück.", // nieuw, nalezen
-    'c.carsafe.o3': "Schieb es mit einem trockenen Tuch zurück.", // nieuw, nalezen
-    'c.carsafe.w': "Die Batterie eines Elektroautos hat genug Strom, um zu töten, auch wenn das Auto aus ist. Nur wer die Ausbildung hat, darf diese Teile anfassen.", // nieuw, nalezen
+    'c.carsafe': "Orange Kabel und laufende Motoren", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.b': "Ein Elektroauto oder ein Hybridauto hat eine Batterie mit sehr starkem Strom. Die Kabel dafür sind orange. Fass sie nicht an und mach sie nicht los: Ein Mechaniker mit einer speziellen Ausbildung muss das Auto zuerst sicher machen. Steht ein Schild oder ein Kegel am Auto? Dann bleib weg. Ein Motor, der drinnen läuft, macht ein Gas, das du nicht riechen oder sehen kannst, und es kann töten. Also: Schließ den Abgasschlauch an, oder mach die Tore auf. Riechst du Benzin? Keine Funken und nicht rauchen. Sag es sofort deinem Vorgesetzten. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.p': "Ist dieses Auto schon sicher gemacht?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.s': "Du sollst an einem Elektroauto ein Rad wechseln. Unter dem Auto siehst du ein loses oranges Kabel. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.o1': "Fass nichts an, und hol den ausgebildeten Mechaniker.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.o2': "Schieb das Kabel mit der Hand zurück.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.o3': "Schieb es mit einem trockenen Tuch zurück.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.w': "Die Batterie eines Elektroautos hat genug Strom, um zu töten, auch wenn das Auto aus ist. Nur wer die Ausbildung hat, darf diese Teile anfassen.", // nieuw, nalezen // nagelezen AI 22 nov
     // Logistiek at four lessons per unit (14 November 2026).
     'l.vancheck': "Den Lieferwagen prüfen", // nieuw, nalezen
     'w.schade': "der Schaden", // nieuw, nalezen
@@ -2177,14 +2177,14 @@ const t: CultureTranslation = {
     's.vancheck.3': "Ich muss erst noch tanken.", // nieuw, nalezen
     'c.vancheck.q': "Ist mit dem Lieferwagen alles in Ordnung?", // nieuw, nalezen
     'c.vancheck.a': "Nein, der Spiegel ist kaputt.", // nieuw, nalezen
-    'c.vancheck': "Erst schauen, dann fahren", // nieuw, nalezen
-    'c.vancheck.b': "Geh vor deiner ersten Tour einmal um den Lieferwagen herum. Siehst du eine Delle, einen Kratzer oder einen kaputten Spiegel? Mach ein Foto und melde es, bevor du losfährst. Dann wissen alle, dass der Schaden schon da war. Ist auf deiner Tour etwas passiert? Melde es am selben Tag, auch wenn es klein ist. Einen Schaden zu verstecken, macht später größere Probleme. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.vancheck.p': "Am Lieferwagen ist ein Schaden. Hier ist ein Foto.", // nieuw, nalezen
-    'c.vancheck.s': "Am Morgen siehst du eine neue Delle im Lieferwagen. Du hast sie nicht gemacht. Was machst du?", // nieuw, nalezen
-    'c.vancheck.o1': "Du machst ein Foto und meldest es, bevor du fährst.", // nieuw, nalezen
-    'c.vancheck.o2': "Du sagst nichts: Es ist nicht deine Delle.", // nieuw, nalezen
-    'c.vancheck.o3': "Du wartest ab, ob jemand danach fragt.", // nieuw, nalezen
-    'c.vancheck.w': "Wenn du es meldest, bevor du fährst, kann niemand denken, dass du es warst. Ein Foto mit der Uhrzeit ist für alle klar.", // nieuw, nalezen
+    'c.vancheck': "Erst schauen, dann fahren", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.b': "Geh vor deiner ersten Tour einmal um den Lieferwagen herum. Siehst du eine Delle, einen Kratzer oder einen kaputten Spiegel? Mach ein Foto und melde es, bevor du losfährst. Dann wissen alle, dass der Schaden schon da war. Ist auf deiner Tour etwas passiert? Melde es am selben Tag, auch wenn es klein ist. Einen Schaden zu verstecken, macht später größere Probleme. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.p': "Am Lieferwagen ist ein Schaden. Hier ist ein Foto.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.s': "Am Morgen siehst du eine neue Delle im Lieferwagen. Du hast sie nicht gemacht. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.o1': "Du machst ein Foto und meldest es, bevor du fährst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.o2': "Du sagst nichts: Es ist nicht deine Delle.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.o3': "Du wartest ab, ob jemand danach fragt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.w': "Wenn du es meldest, bevor du fährst, kann niemand denken, dass du es warst. Ein Foto mit der Uhrzeit ist für alle klar.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.delay': "Verspätungen unterwegs", // nieuw, nalezen
     'w.file': "der Stau", // nieuw, nalezen
     'w.vertraging': "die Verspätung (du bist später als geplant)", // nieuw, nalezen
@@ -2197,14 +2197,14 @@ const t: CultureTranslation = {
     's.delay.3': "Dieses Paket geht als Retoure zurück.", // nieuw, nalezen
     'c.delay.q': "Wo bist du jetzt?", // nieuw, nalezen
     'c.delay.a': "Bei der Umleitung. Ich komme zehn Minuten später.", // nieuw, nalezen
-    'c.delay': "Zu spät? Sag rechtzeitig Bescheid", // nieuw, nalezen
-    'c.delay.b': "Ein Stau oder eine gesperrte Straße ist nicht deine Schuld. Aber sag dem Planer Bescheid, sobald du weißt, dass du später kommst. Dann kann der Planer den Kunden Bescheid sagen oder die Route ändern. Halte zuerst an einem sicheren Ort an: Telefoniere nicht mit dem Handy in der Hand, während du fährst. Und fahr nicht schneller, um die Zeit wieder aufzuholen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.delay.p': "Ich stehe im Stau. Ich komme eine halbe Stunde später.", // nieuw, nalezen
-    'c.delay.s': "Eine Straße ist gesperrt. Die Umleitung kostet dich dreißig Minuten. Was machst du?", // nieuw, nalezen
-    'c.delay.o1': "Du sagst dem Planer Bescheid, sobald du sicher anhalten kannst.", // nieuw, nalezen
-    'c.delay.o2': "Du fährst schneller, um die Zeit aufzuholen.", // nieuw, nalezen
-    'c.delay.o3': "Du sagst nichts: Vielleicht merkt es niemand.", // nieuw, nalezen
-    'c.delay.w': "Wenn der Planer es früh weiß, erfahren es die Kunden, und niemand wartet umsonst. Schneller fahren ist gefährlich, und es bringt fast keine Zeit.", // nieuw, nalezen
+    'c.delay': "Zu spät? Sag rechtzeitig Bescheid", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.b': "Ein Stau oder eine gesperrte Straße ist nicht deine Schuld. Aber sag dem Planer Bescheid, sobald du weißt, dass du später kommst. Dann kann der Planer den Kunden Bescheid sagen oder die Route ändern. Halte zuerst an einem sicheren Ort an: Telefoniere nicht mit dem Handy in der Hand, während du fährst. Und fahr nicht schneller, um die Zeit wieder aufzuholen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.p': "Ich stehe im Stau. Ich komme eine halbe Stunde später.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.s': "Eine Straße ist gesperrt. Die Umleitung kostet dich dreißig Minuten. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.o1': "Du sagst dem Planer Bescheid, sobald du sicher anhalten kannst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.o2': "Du fährst schneller, um die Zeit aufzuholen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.o3': "Du sagst nichts: Vielleicht merkt es niemand.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.w': "Wenn der Planer es früh weiß, erfahren es die Kunden, und niemand wartet umsonst. Schneller fahren ist gefährlich, und es bringt fast keine Zeit.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Instructies", a new basis unit (u.do, 14 November 2026).
     'u.do': "Anweisungen", // nieuw, nalezen
     'l.putdown': "Stell es da hin", // nieuw, nalezen
@@ -2219,14 +2219,14 @@ const t: CultureTranslation = {
     's.putdown.3': "Halt das mal kurz.", // nieuw, nalezen
     'c.putdown.q': "Kannst du das kurz halten?", // nieuw, nalezen
     'c.putdown.a': "Ja. Wo soll ich es hinstellen?", // nieuw, nalezen
-    'c.putdown': "Sag, dass du es hast", // nieuw, nalezen
-    'c.putdown.b': "Tragt ihr etwas zusammen, oder gibt dir ein Kollege etwas Schweres? Sag „Ik heb hem“, wenn du es gut hältst. Dann weiß dein Kollege, dass er sicher loslassen kann. Willst du selbst loslassen? Frag zuerst: „Heb je hem?“ Und warte auf die Antwort. Das ist an jedem Arbeitsplatz normal. So fällt nichts auf Füße und Hände.", // nieuw, nalezen
-    'c.putdown.p': "Ich habe es. Du kannst loslassen.", // nieuw, nalezen
-    'c.putdown.s': "Ein Kollege gibt dir einen schweren Karton. Du hältst ihn noch nicht gut. Was machst du?", // nieuw, nalezen
-    'c.putdown.o1': "Du sagst „wacht“ und hältst ihn zuerst besser.", // nieuw, nalezen
-    'c.putdown.o2': "Du sagst nichts: Er sieht es schon.", // nieuw, nalezen
-    'c.putdown.o3': "Du nimmst ihn schnell, damit er nicht wartet.", // nieuw, nalezen
-    'c.putdown.w': "Dein Kollege lässt los, wenn er denkt, dass du ihn hast. Ein Wort gibt dir die Zeit, ihn gut zu halten.", // nieuw, nalezen
+    'c.putdown': "Sag, dass du es hast", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.b': "Tragt ihr etwas zusammen, oder gibt dir ein Kollege etwas Schweres? Sag „Ik heb hem“, wenn du es gut hältst. Dann weiß dein Kollege, dass er sicher loslassen kann. Willst du selbst loslassen? Frag zuerst: „Heb je hem?“ Und warte auf die Antwort. Das ist an jedem Arbeitsplatz normal. So fällt nichts auf Füße und Hände.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.p': "Ich habe es. Du kannst loslassen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.s': "Ein Kollege gibt dir einen schweren Karton. Du hältst ihn noch nicht gut. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.o1': "Du sagst „wacht“ und hältst ihn zuerst besser.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.o2': "Du sagst nichts: Er sieht es schon.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.o3': "Du nimmst ihn schnell, damit er nicht wartet.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.w': "Dein Kollege lässt los, wenn er denkt, dass du ihn hast. Ein Wort gibt dir die Zeit, ihn gut zu halten.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.onoff': "An und aus, auf und zu", // nieuw, nalezen
     'w.aanzetten': "einschalten, anmachen", // nieuw, nalezen
     'w.opendoen': "aufmachen, öffnen", // nieuw, nalezen
@@ -2239,14 +2239,14 @@ const t: CultureTranslation = {
     's.onoff.3': "Stopp! Mach es aus.", // nieuw, nalezen
     'c.onoff.q': "Ist die Tür zu?", // nieuw, nalezen
     'c.onoff.a': "Nein. Ich mache sie jetzt zu.", // nieuw, nalezen
-    'c.onoff': "Stopp heißt Stopp", // nieuw, nalezen
-    'c.onoff.b': "Ruft jemand „Stop!“? Hör sofort auf, auch wenn du nicht weißt, warum. Frag danach. Ein kurzes, lautes Wort ist hier kein Ärger: So schützen sich Kollegen gegenseitig. Siehst du selbst etwas Gefährliches? Ruf auch „Stop!“, auch zu jemandem, der schon seit Jahren hier arbeitet. Niemand findet das komisch.", // nieuw, nalezen
-    'c.onoff.p': "Stopp! Warte kurz.", // nieuw, nalezen
-    'c.onoff.s': "Du schaltest eine Maschine ein. Ein Kollege ruft „Stop!“. Du siehst kein Problem. Was machst du?", // nieuw, nalezen
-    'c.onoff.o1': "Du hörst sofort auf und fragst danach, warum.", // nieuw, nalezen
-    'c.onoff.o2': "Du machst weiter: Du siehst kein Problem.", // nieuw, nalezen
-    'c.onoff.o3': "Du fragst zuerst, warum du aufhören sollst.", // nieuw, nalezen
-    'c.onoff.w': "Dein Kollege sieht vielleicht etwas, das du nicht siehst. Erst stoppen, dann reden: So bleiben alle sicher.", // nieuw, nalezen
+    'c.onoff': "Stopp heißt Stopp", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.b': "Ruft jemand „Stop!“? Hör sofort auf, auch wenn du nicht weißt, warum. Frag danach. Ein kurzes, lautes Wort ist hier kein Ärger: So schützen sich Kollegen gegenseitig. Siehst du selbst etwas Gefährliches? Ruf auch „Stop!“, auch zu jemandem, der schon seit Jahren hier arbeitet. Niemand findet das komisch.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.p': "Stopp! Warte kurz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.s': "Du schaltest eine Maschine ein. Ein Kollege ruft „Stop!“. Du siehst kein Problem. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.o1': "Du hörst sofort auf und fragst danach, warum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.o2': "Du machst weiter: Du siehst kein Problem.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.o3': "Du fragst zuerst, warum du aufhören sollst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.w': "Dein Kollege sieht vielleicht etwas, das du nicht siehst. Erst stoppen, dann reden: So bleiben alle sicher.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.fillempty': "Schieben, ziehen, füllen", // nieuw, nalezen
     'w.duwen': "schieben", // nieuw, nalezen
     'w.trekken': "ziehen", // nieuw, nalezen
@@ -2259,14 +2259,14 @@ const t: CultureTranslation = {
     's.fillempty.3': "Mach das mal kurz sauber.", // nieuw, nalezen
     'c.fillempty.q': "Ist er schon voll?", // nieuw, nalezen
     'c.fillempty.a': "Ja. Ich mache ihn leer.", // nieuw, nalezen
-    'c.fillempty': "Fertig? Sag es", // nieuw, nalezen
-    'c.fillempty.b': "Bist du mit einer Aufgabe fertig? Sag es: „Ik ben klaar.“ Und frag, was du als Nächstes tun kannst. Still warten, bis dich jemand sieht, kann so aussehen, als ob du nicht arbeiten willst, auch wenn das nicht stimmt. Kollegen, die nach der nächsten Aufgabe fragen, bekommen nach einer Weile oft interessantere Arbeit. Willst du etwas Neues lernen? Frag auch das: „Mag ik dat ook leren?“", // nieuw, nalezen
-    'c.fillempty.p': "Ich bin fertig. Was kann ich noch machen?", // nieuw, nalezen
-    'c.fillempty.s': "Du bist mit deiner Aufgabe fertig. Dein Vorgesetzter ist mit etwas anderem beschäftigt. Was machst du?", // nieuw, nalezen
-    'c.fillempty.o1': "Du sagst, dass du fertig bist, und fragst, was als Nächstes kommt.", // nieuw, nalezen
-    'c.fillempty.o2': "Du wartest, bis dein Vorgesetzter dich sieht.", // nieuw, nalezen
-    'c.fillempty.o3': "Du machst Pause: Deine Arbeit ist fertig.", // nieuw, nalezen
-    'c.fillempty.w': "Ein Vorgesetzter kann nicht alles sehen. Wenn du sagst, dass du fertig bist, geht die Arbeit weiter, und du zeigst, dass du mehr machen willst.", // nieuw, nalezen
+    'c.fillempty': "Fertig? Sag es", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.b': "Bist du mit einer Aufgabe fertig? Sag es: „Ik ben klaar.“ Und frag, was du als Nächstes tun kannst. Still warten, bis dich jemand sieht, kann so aussehen, als ob du nicht arbeiten willst, auch wenn das nicht stimmt. Kollegen, die nach der nächsten Aufgabe fragen, bekommen nach einer Weile oft interessantere Arbeit. Willst du etwas Neues lernen? Frag auch das: „Mag ik dat ook leren?“", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.p': "Ich bin fertig. Was kann ich noch machen?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.s': "Du bist mit deiner Aufgabe fertig. Dein Vorgesetzter ist mit etwas anderem beschäftigt. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.o1': "Du sagst, dass du fertig bist, und fragst, was als Nächstes kommt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.o2': "Du wartest, bis dein Vorgesetzter dich sieht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.o3': "Du machst Pause: Deine Arbeit ist fertig.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.w': "Ein Vorgesetzter kann nicht alles sehen. Wenn du sagst, dass du fertig bist, geht die Arbeit weiter, und du zeigst, dass du mehr machen willst.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.order': "Erst das hier, dann das da", // nieuw, nalezen
     'w.nu': "jetzt", // nieuw, nalezen
     'w.dan': "dann", // nieuw, nalezen
@@ -2279,14 +2279,14 @@ const t: CultureTranslation = {
     's.order.3': "Mach das immer so.", // nieuw, nalezen
     'c.order.q': "Kannst du das jetzt machen?", // nieuw, nalezen
     'c.order.a': "Ja. Erst das, und dann?", // nieuw, nalezen
-    'c.order': "Viele Aufgaben auf einmal? Frag, was zuerst kommt", // nieuw, nalezen
-    'c.order.b': "Manchmal bekommst du drei Aufgaben in einem Satz. Das ist schwer zu merken, auch für Leute, die gut Niederländisch sprechen. Frag, welche zuerst kommt: „Wat moet ik eerst doen?“ Du darfst die Aufgaben auch aufschreiben, oder sie an den Fingern abzählen und noch einmal sagen. Hast du eine vergessen? Geh zurück und frag. Das ist besser als raten.", // nieuw, nalezen
-    'c.order.p': "Das ist viel. Was soll ich zuerst machen?", // nieuw, nalezen
-    'c.order.s': "Dein Vorgesetzter gibt dir drei Aufgaben, sehr schnell. Du merkst dir nur die erste. Was machst du?", // nieuw, nalezen
-    'c.order.o1': "Du bittest sofort darum, die Aufgaben noch einmal zu hören.", // nieuw, nalezen
-    'c.order.o2': "Du machst die erste und hoffst, dass dir der Rest wieder einfällt.", // nieuw, nalezen
-    'c.order.o3': "Du machst nichts: Du weißt nicht alle drei.", // nieuw, nalezen
-    'c.order.w': "Sofort fragen kostet zehn Sekunden. Später ist dein Vorgesetzter vielleicht weg, und dann wartest du oder rätst.", // nieuw, nalezen
+    'c.order': "Viele Aufgaben auf einmal? Frag, was zuerst kommt", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.b': "Manchmal bekommst du drei Aufgaben in einem Satz. Das ist schwer zu merken, auch für Leute, die gut Niederländisch sprechen. Frag, welche zuerst kommt: „Wat moet ik eerst doen?“ Du darfst die Aufgaben auch aufschreiben, oder sie an den Fingern abzählen und noch einmal sagen. Hast du eine vergessen? Geh zurück und frag. Das ist besser als raten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.p': "Das ist viel. Was soll ich zuerst machen?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.s': "Dein Vorgesetzter gibt dir drei Aufgaben, sehr schnell. Du merkst dir nur die erste. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.o1': "Du bittest sofort darum, die Aufgaben noch einmal zu hören.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.o2': "Du machst die erste und hoffst, dass dir der Rest wieder einfällt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.o3': "Du machst nichts: Du weißt nicht alle drei.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.w': "Sofort fragen kostet zehn Sekunden. Später ist dein Vorgesetzter vielleicht weg, und dann wartest du oder rätst.", // nieuw, nalezen // nagelezen AI 22 nov
     'u.afbouw': "Fliesen, Putz und Farbe", // nieuw, nalezen
     'l.tiletools': "Das Werkzeug zum Fliesenlegen", // nieuw, nalezen
     'w.lijmkam': "die Zahnkelle (verteilt den Fliesenkleber in Rillen)", // nieuw, nalezen
@@ -2300,14 +2300,14 @@ const t: CultureTranslation = {
     's.tiletools.3': "Miss zuerst mit dem Zollstock.", // nieuw, nalezen
     'c.tiletools.q': "Wo ist das Rührgerät?", // nieuw, nalezen
     'c.tiletools.a': "Beim Eimer, neben der Tür.", // nieuw, nalezen
-    'c.tiletools': "Mach dein Werkzeug sauber, bevor der Kleber hart ist", // nieuw, nalezen
-    'c.tiletools.b': "Fliesenkleber und Putz werden schnell hart, auch an deinem Werkzeug. Mach die Zahnkelle, die Kelle und das Rührgerät also sofort in einem Eimer Wasser sauber, auch vor deiner Pause. Harter Kleber geht nicht mehr ab, und eine Zahnkelle mit hartem Kleber macht schlechte Rillen. Kipp das schmutzige Wasser nicht in ein Waschbecken oder einen Abfluss: Die verstopfen. Frag, wohin das Wasser darf. Das Rührgerät: Halt es mit zwei Händen, und lass es langsam anlaufen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.tiletools.p': "Ich mache kurz die Zahnkelle sauber.", // nieuw, nalezen
-    'c.tiletools.s': "Es ist Zeit für deine Pause. Deine Zahnkelle ist voll mit nassem Kleber. Was machst du?", // nieuw, nalezen
-    'c.tiletools.o1': "Wasch sie in Wasser ab, dann mach Pause.", // nieuw, nalezen
-    'c.tiletools.o2': "Lass sie liegen: Du machst sie nach der Arbeit sauber.", // nieuw, nalezen
-    'c.tiletools.o3': "Steck sie in den Eimer mit Kleber.", // nieuw, nalezen
-    'c.tiletools.w': "Fliesenkleber wird auch in deiner Pause hart. Eine saubere Zahnkelle macht gute Rillen, und die Fliesen halten gut. Harter Kleber daran ist viel Arbeit, oder ein neues Werkzeug.", // nieuw, nalezen
+    'c.tiletools': "Mach dein Werkzeug sauber, bevor der Kleber hart ist", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.b': "Fliesenkleber und Putz werden schnell hart, auch an deinem Werkzeug. Mach die Zahnkelle, die Kelle und das Rührgerät also sofort in einem Eimer Wasser sauber, auch vor deiner Pause. Harter Kleber geht nicht mehr ab, und eine Zahnkelle mit hartem Kleber macht schlechte Rillen. Kipp das schmutzige Wasser nicht in ein Waschbecken oder einen Abfluss: Die verstopfen. Frag, wohin das Wasser darf. Das Rührgerät: Halt es mit zwei Händen, und lass es langsam anlaufen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.p': "Ich mache kurz die Zahnkelle sauber.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.s': "Es ist Zeit für deine Pause. Deine Zahnkelle ist voll mit nassem Kleber. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.o1': "Wasch sie in Wasser ab, dann mach Pause.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.o2': "Lass sie liegen: Du machst sie nach der Arbeit sauber.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.o3': "Steck sie in den Eimer mit Kleber.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.w': "Fliesenkleber wird auch in deiner Pause hart. Eine saubere Zahnkelle macht gute Rillen, und die Fliesen halten gut. Harter Kleber daran ist viel Arbeit, oder ein neues Werkzeug.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.tiling': "Fliesen, Kleber und die Mittellinie", // nieuw, nalezen
     'w.tegel': "die Fliese", // nieuw, nalezen
     'w.tegellijm': "der Fliesenkleber", // nieuw, nalezen
@@ -2320,14 +2320,14 @@ const t: CultureTranslation = {
     's.tiling.3': "Zeichne zuerst die Mittellinie mit dem Bleistift.", // nieuw, nalezen
     'c.tiling.q': "Wo fange ich mit den Fliesen an?", // nieuw, nalezen
     'c.tiling.a': "In der Mitte, auf der Mittellinie.", // nieuw, nalezen
-    'c.tiling': "Fang an der Mittellinie an, mit wenig Kleber", // nieuw, nalezen
-    'c.tiling.b': "Beim Fliesenlegen fängt man nicht in einer Ecke an. Du zeichnest zuerst die Mittellinie, mit einem Bleistift und der Wasserwaage, und fängst dort an. Dann sind die geschnittenen Fliesen an beiden Enden gleich groß. Trag nur so viel Kleber auf, wie du in kurzer Zeit mit Fliesen belegen kannst. Kleber, der zu lange steht, bekommt eine trockene Haut, und dann halten die Fliesen nicht gut. Setz an jede Kreuzung ein Fugenkreuz, so werden alle Fugen gleich. Prüf oft mit der Wasserwaage: Eine schiefe Fliese ist jetzt leicht zu richten, und morgen schwer.", // nieuw, nalezen
-    'c.tiling.p': "Ich trage nicht zu viel Kleber auf einmal auf.", // nieuw, nalezen
-    'c.tiling.s': "Nach einem langen Telefongespräch hat der Kleber an der Wand eine trockene Haut. Was machst du?", // nieuw, nalezen
-    'c.tiling.o1': "Kratz ihn ab, und trag frischen Kleber auf.", // nieuw, nalezen
-    'c.tiling.o2': "Drück die Fliesen trotzdem hinein.", // nieuw, nalezen
-    'c.tiling.o3': "Mach ihn mit einem Schwamm nass, und mach weiter.", // nieuw, nalezen
-    'c.tiling.w': "Kleber mit einer trockenen Haut hält eine Fliese nicht gut. Später kann sich die Fliese lösen, und dann muss die Arbeit noch einmal gemacht werden.", // nieuw, nalezen
+    'c.tiling': "Fang an der Mittellinie an, mit wenig Kleber", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.b': "Beim Fliesenlegen fängt man nicht in einer Ecke an. Du zeichnest zuerst die Mittellinie, mit einem Bleistift und der Wasserwaage, und fängst dort an. Dann sind die geschnittenen Fliesen an beiden Enden gleich groß. Trag nur so viel Kleber auf, wie du in kurzer Zeit mit Fliesen belegen kannst. Kleber, der zu lange steht, bekommt eine trockene Haut, und dann halten die Fliesen nicht gut. Setz an jede Kreuzung ein Fugenkreuz, so werden alle Fugen gleich. Prüf oft mit der Wasserwaage: Eine schiefe Fliese ist jetzt leicht zu richten, und morgen schwer.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.p': "Ich trage nicht zu viel Kleber auf einmal auf.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.s': "Nach einem langen Telefongespräch hat der Kleber an der Wand eine trockene Haut. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.o1': "Kratz ihn ab, und trag frischen Kleber auf.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.o2': "Drück die Fliesen trotzdem hinein.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.o3': "Mach ihn mit einem Schwamm nass, und mach weiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.w': "Kleber mit einer trockenen Haut hält eine Fliese nicht gut. Später kann sich die Fliese lösen, und dann muss die Arbeit noch einmal gemacht werden.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.plaster': "Verputzen", // nieuw, nalezen
     'w.stucspaan': "die Glättkelle (eine flache Kelle aus Stahl, um den Putz glatt zu machen)", // nieuw, nalezen
     'w.oplegspaan': "das Putzbrett (ein flaches Brett, auf dem du den Putz hältst)", // nieuw, nalezen
@@ -2340,14 +2340,14 @@ const t: CultureTranslation = {
     's.plaster.3': "Zieh die Richtlatte über die Wand.", // nieuw, nalezen
     'c.plaster.q': "Ist die Wand schon trocken?", // nieuw, nalezen
     'c.plaster.a': "Nein, warte noch einen Tag.", // nieuw, nalezen
-    'c.plaster': "Putz braucht Zeit zum Trocknen", // nieuw, nalezen
-    'c.plaster.b': "Frischer Putz bleibt lange nass. Eine nasse Wand ist dunkler als eine trockene. Der Maler kann erst anfangen, wenn die Wand überall trocken ist, und das kann Tage oder Wochen dauern. Trockne sie nicht schneller mit einem Heizgerät: Dann kann der Putz reißen. Will jemand zu früh streichen? Sag, dass die Wand noch nicht trocken ist. Und bevor du anfängst, deck den Boden, die Fenster und die Steckdosen ab: Putz geht schwer wieder ab.", // nieuw, nalezen
-    'c.plaster.p': "Die Wand ist noch nass. Du kannst noch nicht streichen.", // nieuw, nalezen
-    'c.plaster.s': "Der Maler will morgen anfangen. Der neue Putz hat noch dunkle Flecken. Was machst du?", // nieuw, nalezen
-    'c.plaster.o1': "Sag dem Maler: Die Wand ist noch nicht trocken.", // nieuw, nalezen
-    'c.plaster.o2': "Stell heute Abend ein Heizgerät davor.", // nieuw, nalezen
-    'c.plaster.o3': "Sag nichts: Der Maler sieht es schon.", // nieuw, nalezen
-    'c.plaster.w': "Dunkle Flecken heißen, dass der Putz noch nass ist. Farbe auf einer nassen Wand kann abgehen, und ein Heizgerät kann Risse machen. Warten kostet weniger, als alles noch einmal zu machen.", // nieuw, nalezen
+    'c.plaster': "Putz braucht Zeit zum Trocknen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.b': "Frischer Putz bleibt lange nass. Eine nasse Wand ist dunkler als eine trockene. Der Maler kann erst anfangen, wenn die Wand überall trocken ist, und das kann Tage oder Wochen dauern. Trockne sie nicht schneller mit einem Heizgerät: Dann kann der Putz reißen. Will jemand zu früh streichen? Sag, dass die Wand noch nicht trocken ist. Und bevor du anfängst, deck den Boden, die Fenster und die Steckdosen ab: Putz geht schwer wieder ab.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.p': "Die Wand ist noch nass. Du kannst noch nicht streichen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.s': "Der Maler will morgen anfangen. Der neue Putz hat noch dunkle Flecken. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.o1': "Sag dem Maler: Die Wand ist noch nicht trocken.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.o2': "Stell heute Abend ein Heizgerät davor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.o3': "Sag nichts: Der Maler sieht es schon.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.w': "Dunkle Flecken heißen, dass der Putz noch nass ist. Farbe auf einer nassen Wand kann abgehen, und ein Heizgerät kann Risse machen. Warten kostet weniger, als alles noch einmal zu machen.", // nieuw, nalezen // nagelezen AI 22 nov
     // l.paint and l.prep (u.afbouw), "Metselen, hout en vastmaken" (u.ruwbouw), three lessons of Rekenen (u.numbers) and "Machines en gereedschap" (u.machines), 20-21 November 2026.
     'u.ruwbouw': "Mauern, Holz und Befestigen", // nieuw, nalezen
     'u.machines': "Maschinen und Werkzeug", // nieuw, nalezen
@@ -2363,14 +2363,14 @@ const t: CultureTranslation = {
     's.shapes.3': "Ein Ziegelstein hat die Form eines Quaders.", // nieuw, nalezen
     'c.shapes.q': "Ist es ein Quadrat?", // nieuw, nalezen
     'c.shapes.a': "Nein, ein Rechteck. Es ist länger als breit.", // nieuw, nalezen
-    'c.shapes': "Prüf ein Rechteck mit zwei Linien über Kreuz", // nieuw, nalezen
-    'c.shapes.b': "Ein Raum, ein Boden oder ein Rahmen ist oft ein Rechteck. Aber sind die Ecken wirklich rechtwinklig? Das kannst du leicht prüfen. Miss von einer Ecke bis zur Ecke gegenüber. Dann miss zwischen den anderen zwei Ecken. Sind die zwei Längen gleich? Dann stimmen die Ecken. Nicht gleich? Dann ist die Form ein bisschen schief, und Fliesen oder ein Boden passen nicht gut. Sag es deinem Vorgesetzten, bevor du anfängst.", // nieuw, nalezen
-    'c.shapes.p': "Diese zwei Maße sind nicht gleich.", // nieuw, nalezen
-    'c.shapes.s': "Du misst einen Boden von Ecke zu Ecke, in beide Richtungen. Ein Maß ist länger. Was machst du?", // nieuw, nalezen
-    'c.shapes.o1': "Sag es deinem Vorgesetzten, bevor du anfängst.", // nieuw, nalezen
-    'c.shapes.o2': "Fang in einer Ecke an, das geht schon.", // nieuw, nalezen
-    'c.shapes.o3': "Miss nur eine Seite noch einmal.", // nieuw, nalezen
-    'c.shapes.w': "Zwei verschiedene Längen heißen, dass die Ecken nicht rechtwinklig sind. Dann passen Fliesen oder Bretter nicht. Es ist besser, das zu wissen, bevor du anfängst.", // nieuw, nalezen
+    'c.shapes': "Prüf ein Rechteck mit zwei Linien über Kreuz", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.b': "Ein Raum, ein Boden oder ein Rahmen ist oft ein Rechteck. Aber sind die Ecken wirklich rechtwinklig? Das kannst du leicht prüfen. Miss von einer Ecke bis zur Ecke gegenüber. Dann miss zwischen den anderen zwei Ecken. Sind die zwei Längen gleich? Dann stimmen die Ecken. Nicht gleich? Dann ist die Form ein bisschen schief, und Fliesen oder ein Boden passen nicht gut. Sag es deinem Vorgesetzten, bevor du anfängst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.p': "Diese zwei Maße sind nicht gleich.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.s': "Du misst einen Boden von Ecke zu Ecke, in beide Richtungen. Ein Maß ist länger. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.o1': "Sag es deinem Vorgesetzten, bevor du anfängst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.o2': "Fang in einer Ecke an, das geht schon.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.o3': "Miss nur eine Seite noch einmal.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.w': "Zwei verschiedene Längen heißen, dass die Ecken nicht rechtwinklig sind. Dann passen Fliesen oder Bretter nicht. Es ist besser, das zu wissen, bevor du anfängst.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.angles': "Winkel und runde Formen", // nieuw, nalezen
     'w.hoek': "der Winkel", // nieuw, nalezen
     'w.graad': "das Grad (°)", // nieuw, nalezen
@@ -2383,14 +2383,14 @@ const t: CultureTranslation = {
     's.angles.3': "Das Rohr hat die Form eines Zylinders.", // nieuw, nalezen
     'c.angles.q': "Wie viel Grad hat dieser Winkel?", // nieuw, nalezen
     'c.angles.a': "Fünfundvierzig. Die Hälfte von einem rechten Winkel.", // nieuw, nalezen
-    'c.angles': "Prüf eine große Ecke mit 3, 4 und 5", // nieuw, nalezen
-    'c.angles.b': "Auf einer Baustelle prüfst du oft einen rechten Winkel: eine Wand auf einem Boden, eine Ecke von einem Raum. Eine kleine Ecke prüfst du mit einem Anschlagwinkel oder einem Geodreieck. Für eine große Ecke gibt es einen alten Trick. Miss 3 Meter an einer Seite und 4 Meter an der anderen Seite, und mach an beiden Stellen einen Strich. Sind es von Strich zu Strich genau 5 Meter? Dann ist der Winkel 90 Grad. Kleiner geht es auch: 30, 40 und 50 Zentimeter.", // nieuw, nalezen
-    'c.angles.p': "Dieser Winkel ist nicht rechtwinklig.", // nieuw, nalezen
-    'c.angles.s': "Du musst eine große Ecke von einer neuen Wand prüfen. Dein Winkel ist viel zu klein. Was machst du?", // nieuw, nalezen
-    'c.angles.o1': "Miss 3, 4 und 5 Meter.", // nieuw, nalezen
-    'c.angles.o2': "Schau es dir von weitem an.", // nieuw, nalezen
-    'c.angles.o3': "Nimm trotzdem den kleinen Winkel.", // nieuw, nalezen
-    'c.angles.w': "Mit 3, 4 und 5 kannst du eine große Ecke genau prüfen, nur mit einem Maßband. Mit dem Auge kann eine Ecke gerade aussehen und trotzdem falsch sein.", // nieuw, nalezen
+    'c.angles': "Prüf eine große Ecke mit 3, 4 und 5", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.b': "Auf einer Baustelle prüfst du oft einen rechten Winkel: eine Wand auf einem Boden, eine Ecke von einem Raum. Eine kleine Ecke prüfst du mit einem Anschlagwinkel oder einem Geodreieck. Für eine große Ecke gibt es einen alten Trick. Miss 3 Meter an einer Seite und 4 Meter an der anderen Seite, und mach an beiden Stellen einen Strich. Sind es von Strich zu Strich genau 5 Meter? Dann ist der Winkel 90 Grad. Kleiner geht es auch: 30, 40 und 50 Zentimeter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.p': "Dieser Winkel ist nicht rechtwinklig.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.s': "Du musst eine große Ecke von einer neuen Wand prüfen. Dein Winkel ist viel zu klein. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.o1': "Miss 3, 4 und 5 Meter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.o2': "Schau es dir von weitem an.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.o3': "Nimm trotzdem den kleinen Winkel.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.w': "Mit 3, 4 und 5 kannst du eine große Ecke genau prüfen, nur mit einem Maßband. Mit dem Auge kann eine Ecke gerade aussehen und trotzdem falsch sein.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.size': "Länge, Fläche und Volumen", // nieuw, nalezen
     'w.lengte': "die Länge", // nieuw, nalezen
     'w.breedte': "die Breite", // nieuw, nalezen
@@ -2403,14 +2403,14 @@ const t: CultureTranslation = {
     's.size.3': "Zehn Millimeter sind ein Zentimeter.", // nieuw, nalezen
     'c.size.q': "Wie viele Quadratmeter hat der Boden?", // nieuw, nalezen
     'c.size.a': "Vier mal fünf Meter, also zwanzig Quadratmeter.", // nieuw, nalezen
-    'c.size': "Rechne aus, was du brauchst, und nimm ein bisschen mehr", // nieuw, nalezen
-    'c.size.b': "Wie viele Fliesen, wie viel Farbe, wie viel Sand? Das rechnest du mit der Fläche oder dem Volumen aus. Fläche: die Länge mal die Breite, in Quadratmetern. Volumen: die Länge mal die Breite mal die Höhe, in Kubikmetern. Miss alles in derselben Einheit: alles in Metern, oder alles in Zentimetern. Schreib die Maße auf, behalte sie nicht nur im Kopf. Nimm dann ein bisschen mehr, für die geschnittenen Stücke und für Fehler. Nicht sicher? Bitte einen Kollegen, deine Rechnung zu prüfen.", // nieuw, nalezen
-    'c.size.p': "Ich schreibe die Maße auf.", // nieuw, nalezen
-    'c.size.s': "Du hast den Boden gemessen. Du musst heute die Fliesen bestellen. Was machst du?", // nieuw, nalezen
-    'c.size.o1': "Rechne die Fläche aus, und nimm ein bisschen mehr.", // nieuw, nalezen
-    'c.size.o2': "Bestell genau die Fläche, keine Fliese mehr.", // nieuw, nalezen
-    'c.size.o3': "Schätz es: Du hast den Boden ja gesehen.", // nieuw, nalezen
-    'c.size.w': "Du schneidest immer ein paar Fliesen, und ein paar gehen kaputt. Mit ein bisschen mehr musst du nicht in der Mitte aufhören und noch einmal bestellen.", // nieuw, nalezen
+    'c.size': "Rechne aus, was du brauchst, und nimm ein bisschen mehr", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.b': "Wie viele Fliesen, wie viel Farbe, wie viel Sand? Das rechnest du mit der Fläche oder dem Volumen aus. Fläche: die Länge mal die Breite, in Quadratmetern. Volumen: die Länge mal die Breite mal die Höhe, in Kubikmetern. Miss alles in derselben Einheit: alles in Metern, oder alles in Zentimetern. Schreib die Maße auf, behalte sie nicht nur im Kopf. Nimm dann ein bisschen mehr, für die geschnittenen Stücke und für Fehler. Nicht sicher? Bitte einen Kollegen, deine Rechnung zu prüfen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.p': "Ich schreibe die Maße auf.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.s': "Du hast den Boden gemessen. Du musst heute die Fliesen bestellen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.o1': "Rechne die Fläche aus, und nimm ein bisschen mehr.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.o2': "Bestell genau die Fläche, keine Fliese mehr.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.o3': "Schätz es: Du hast den Boden ja gesehen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.w': "Du schneidest immer ein paar Fliesen, und ein paar gehen kaputt. Mit ein bisschen mehr musst du nicht in der Mitte aufhören und noch einmal bestellen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.paint': "Streichen", // nieuw, nalezen
     'w.verf': "die Farbe", // nieuw, nalezen
     'w.kwast': "der Malerpinsel (ein breiter Pinsel)", // nieuw, nalezen
@@ -2423,14 +2423,14 @@ const t: CultureTranslation = {
     's.paint.3': "Tu ein bisschen Farbe in den kleinen Farbeimer.", // nieuw, nalezen
     'c.paint.q': "Welchen Pinsel nehme ich?", // nieuw, nalezen
     'c.paint.a': "Den breiten für die Wand, den kleinen Pinsel für die Ecken.", // nieuw, nalezen
-    'c.paint': "Gut umrühren, und von oben nach unten streichen", // nieuw, nalezen
-    'c.paint.b': "Farbe, die eine Weile gestanden hat, ist unten in der Dose dick. Rühr sie also zuerst gut um, mit einem Rührstab, bis die Farbe überall gleich ist. Streich nicht aus der großen Dose: Tu ein bisschen Farbe in den kleinen Farbeimer, und mach die Dose wieder zu. Dann bleibt die Farbe gut. Streich von oben nach unten, so landen Tropfen auf nasser Farbe, und du kannst sie noch wegstreichen. Nimm den breiten Pinsel für die Wand und den kleinen Pinsel für die Ecken. Mach die Pinsel am Ende sofort sauber.", // nieuw, nalezen
-    'c.paint.p': "Ich rühre die Farbe zuerst gut um.", // nieuw, nalezen
-    'c.paint.s': "Du machst eine alte Dose Farbe auf. Oben ist sie dünn, unten dick. Was machst du?", // nieuw, nalezen
-    'c.paint.o1': "Rühr sie zuerst gut um, mit dem Rührstab.", // nieuw, nalezen
-    'c.paint.o2': "Streich mit der dünnen Farbe oben.", // nieuw, nalezen
-    'c.paint.o3': "Gib Wasser dazu, bis sie überall dünn ist.", // nieuw, nalezen
-    'c.paint.w': "Ein Teil der Farbe liegt unten in der Dose. Ohne Umrühren bekommt die Wand Flecken und Streifen.", // nieuw, nalezen
+    'c.paint': "Gut umrühren, und von oben nach unten streichen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.b': "Farbe, die eine Weile gestanden hat, ist unten in der Dose dick. Rühr sie also zuerst gut um, mit einem Rührstab, bis die Farbe überall gleich ist. Streich nicht aus der großen Dose: Tu ein bisschen Farbe in den kleinen Farbeimer, und mach die Dose wieder zu. Dann bleibt die Farbe gut. Streich von oben nach unten, so landen Tropfen auf nasser Farbe, und du kannst sie noch wegstreichen. Nimm den breiten Pinsel für die Wand und den kleinen Pinsel für die Ecken. Mach die Pinsel am Ende sofort sauber.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.p': "Ich rühre die Farbe zuerst gut um.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.s': "Du machst eine alte Dose Farbe auf. Oben ist sie dünn, unten dick. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.o1': "Rühr sie zuerst gut um, mit dem Rührstab.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.o2': "Streich mit der dünnen Farbe oben.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.o3': "Gib Wasser dazu, bis sie überall dünn ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.w': "Ein Teil der Farbe liegt unten in der Dose. Ohne Umrühren bekommt die Wand Flecken und Streifen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.prep': "Das Streichen vorbereiten", // nieuw, nalezen
     'w.plamuurmes': "das Spachtelmesser (um Löcher zu füllen)", // nieuw, nalezen
     'w.schuurpapier': "das Schleifpapier", // nieuw, nalezen
@@ -2443,14 +2443,14 @@ const t: CultureTranslation = {
     's.prep.3': "Feg den Staub mit dem kleinen Handfeger weg.", // nieuw, nalezen
     'c.prep.q': "Darf ich schon streichen?", // nieuw, nalezen
     'c.prep.a': "Nein, zuerst schleifen und das Loch zumachen.", // nieuw, nalezen
-    'c.prep': "Gute Malerarbeit fängt vor der Farbe an", // nieuw, nalezen
-    'c.prep.b': "Farbe hält nicht gut auf Schmutz, Staub oder loser alter Farbe. Kratz also zuerst die lose Farbe mit dem Farbschaber ab. Füll Löcher mit Spachtelmasse und dem Spachtelmesser, und lass die Spachtelmasse trocknen. Dann schleif sie glatt. Feg nach dem Schleifen den Staub mit dem kleinen Handfeger weg, auch von den Kanten. Kleb zum Schluss ab, was sauber bleiben muss, zum Beispiel Fenster und Steckdosen. Schleifen macht feinen Staub: Trag eine Staubmaske, und frag, welche. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.prep.p': "Zuerst schleifen, dann streichen.", // nieuw, nalezen
-    'c.prep.s': "Du hast die Tür geschliffen. Es ist noch Staub darauf. Dein Kollege will jetzt streichen. Was machst du?", // nieuw, nalezen
-    'c.prep.o1': "Feg zuerst den Staub ab, mit dem Handfeger.", // nieuw, nalezen
-    'c.prep.o2': "Lass ihn streichen: Die Farbe deckt den Staub zu.", // nieuw, nalezen
-    'c.prep.o3': "Wisch den Staub mit der Hand ab.", // nieuw, nalezen
-    'c.prep.w': "Farbe auf Staub hält nicht gut. Später blättert sie ab, und dann muss die ganze Arbeit noch einmal gemacht werden.", // nieuw, nalezen
+    'c.prep': "Gute Malerarbeit fängt vor der Farbe an", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.b': "Farbe hält nicht gut auf Schmutz, Staub oder loser alter Farbe. Kratz also zuerst die lose Farbe mit dem Farbschaber ab. Füll Löcher mit Spachtelmasse und dem Spachtelmesser, und lass die Spachtelmasse trocknen. Dann schleif sie glatt. Feg nach dem Schleifen den Staub mit dem kleinen Handfeger weg, auch von den Kanten. Kleb zum Schluss ab, was sauber bleiben muss, zum Beispiel Fenster und Steckdosen. Schleifen macht feinen Staub: Trag eine Staubmaske, und frag, welche. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.p': "Zuerst schleifen, dann streichen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.s': "Du hast die Tür geschliffen. Es ist noch Staub darauf. Dein Kollege will jetzt streichen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.o1': "Feg zuerst den Staub ab, mit dem Handfeger.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.o2': "Lass ihn streichen: Die Farbe deckt den Staub zu.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.o3': "Wisch den Staub mit der Hand ab.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.w': "Farbe auf Staub hält nicht gut. Später blättert sie ab, und dann muss die ganze Arbeit noch einmal gemacht werden.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.brick': "Mauern", // nieuw, nalezen
     'w.speciekuip': "die Mörtelwanne", // nieuw, nalezen
     'w.metseltroffel': "die Maurerkelle", // nieuw, nalezen
@@ -2463,14 +2463,14 @@ const t: CultureTranslation = {
     's.brick.3': "Feg die Mauer mit dem Handfeger sauber.", // nieuw, nalezen
     'c.brick.q': "Wie viele Ziegelsteine hast du noch?", // nieuw, nalezen
     'c.brick.a': "Noch eine Palette. Genug für heute.", // nieuw, nalezen
-    'c.brick': "Halt die Mauer sauber, während du arbeitest", // nieuw, nalezen
-    'c.brick.b': "Mörtel ist nass, wenn du die Steine legst, und in ein paar Stunden wird er hart. Arbeite also sauber. Kratz den Mörtel, der aus der Fuge kommt, sofort mit der Kelle ab. Mach die Fugen mit dem Fugeisen glatt, wenn der Mörtel ein bisschen fest ist, nicht wenn er noch nass ist. Dann feg die Mauer mit dem Handfeger ab. Harter Mörtel vorne auf einem Stein geht sehr schwer wieder ab. Deck am Ende des Tages die Mauer oben ab, damit der Regen den Mörtel nicht auswäscht.", // nieuw, nalezen
-    'c.brick.p': "Ich mache die Fugen glatt.", // nieuw, nalezen
-    'c.brick.s': "Am Ende des Tages ist Mörtel vorne auf den Steinen. Was machst du?", // nieuw, nalezen
-    'c.brick.o1': "Feg ihn jetzt ab, bevor er hart ist.", // nieuw, nalezen
-    'c.brick.o2': "Lass ihn: Du machst es nächste Woche sauber.", // nieuw, nalezen
-    'c.brick.o3': "Wasch die Mauer mit viel Wasser.", // nieuw, nalezen
-    'c.brick.w': "Frischer Mörtel geht mit einem Handfeger leicht ab. Harter Mörtel bleibt auf dem Stein, und dann sieht die Mauer nicht gut aus.", // nieuw, nalezen
+    'c.brick': "Halt die Mauer sauber, während du arbeitest", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.b': "Mörtel ist nass, wenn du die Steine legst, und in ein paar Stunden wird er hart. Arbeite also sauber. Kratz den Mörtel, der aus der Fuge kommt, sofort mit der Kelle ab. Mach die Fugen mit dem Fugeisen glatt, wenn der Mörtel ein bisschen fest ist, nicht wenn er noch nass ist. Dann feg die Mauer mit dem Handfeger ab. Harter Mörtel vorne auf einem Stein geht sehr schwer wieder ab. Deck am Ende des Tages die Mauer oben ab, damit der Regen den Mörtel nicht auswäscht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.p': "Ich mache die Fugen glatt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.s': "Am Ende des Tages ist Mörtel vorne auf den Steinen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.o1': "Feg ihn jetzt ab, bevor er hart ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.o2': "Lass ihn: Du machst es nächste Woche sauber.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.o3': "Wasch die Mauer mit viel Wasser.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.w': "Frischer Mörtel geht mit einem Handfeger leicht ab. Harter Mörtel bleibt auf dem Stein, und dann sieht die Mauer nicht gut aus.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.wall': "Eine gerade Mauer", // nieuw, nalezen
     'w.metseltouw': "die Maurerschnur (eine Schnur für eine gerade Reihe)", // nieuw, nalezen
     'w.klos': "der Schnurhalter (hält die Schnur an der Ecke)", // nieuw, nalezen
@@ -2483,14 +2483,14 @@ const t: CultureTranslation = {
     's.wall.3': "Leg den Stein mit der langen Seite nach außen.", // nieuw, nalezen
     'c.wall.q': "Wie hoch muss diese Reihe sein?", // nieuw, nalezen
     'c.wall.a': "Schau auf die Schichtlatte.", // nieuw, nalezen
-    'c.wall': "Die Schnur hält die Mauer gerade", // nieuw, nalezen
-    'c.wall.b': "Ein Maurer baut nicht nach Augenmaß. Zuerst stehen die Mauerlehren gerade an beiden Enden der Mauer. Dazwischen spannst du die Maurerschnur straff, auf der Höhe der nächsten Reihe. Leg jeden Stein an der Schnur entlang, aber drück die Schnur nicht weg. Die Schichtlatte zeigt, wie hoch jede Reihe sein muss. Prüf oft mit der Wasserwaage. Ein schiefer Stein ist leicht zu richten, solange der Mörtel nass ist, und morgen sehr schwer.", // nieuw, nalezen
-    'c.wall.p': "Ist die Maurerschnur straff?", // nieuw, nalezen
-    'c.wall.s': "Die Maurerschnur ist locker und hängt in der Mitte ein bisschen durch. Was machst du?", // nieuw, nalezen
-    'c.wall.o1': "Spann sie zuerst straff, dann mach weiter.", // nieuw, nalezen
-    'c.wall.o2': "Leg die Steine trotzdem darunter.", // nieuw, nalezen
-    'c.wall.o3': "Leg die Steine nach Augenmaß.", // nieuw, nalezen
-    'c.wall.w': "Eine lockere Schnur hängt in der Mitte durch, also hängt die Reihe auch durch. Eine straffe Schnur gibt eine gerade Reihe.", // nieuw, nalezen
+    'c.wall': "Die Schnur hält die Mauer gerade", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.b': "Ein Maurer baut nicht nach Augenmaß. Zuerst stehen die Mauerlehren gerade an beiden Enden der Mauer. Dazwischen spannst du die Maurerschnur straff, auf der Höhe der nächsten Reihe. Leg jeden Stein an der Schnur entlang, aber drück die Schnur nicht weg. Die Schichtlatte zeigt, wie hoch jede Reihe sein muss. Prüf oft mit der Wasserwaage. Ein schiefer Stein ist leicht zu richten, solange der Mörtel nass ist, und morgen sehr schwer.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.p': "Ist die Maurerschnur straff?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.s': "Die Maurerschnur ist locker und hängt in der Mitte ein bisschen durch. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.o1': "Spann sie zuerst straff, dann mach weiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.o2': "Leg die Steine trotzdem darunter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.o3': "Leg die Steine nach Augenmaß.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.w': "Eine lockere Schnur hängt in der Mitte durch, also hängt die Reihe auch durch. Eine straffe Schnur gibt eine gerade Reihe.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.wood': "Mit Holz arbeiten", // nieuw, nalezen
     'w.handzaag': "die Handsäge", // nieuw, nalezen
     'w.kapzaag': "die Rückensäge (eine kleine Säge mit festem Rücken)", // nieuw, nalezen
@@ -2503,14 +2503,14 @@ const t: CultureTranslation = {
     's.wood.3': "Schlag mit dem Holzhammer auf den Beitel.", // nieuw, nalezen
     'c.wood.q': "Welche Säge brauche ich?", // nieuw, nalezen
     'c.wood.a': "Die Rückensäge, für dieses kleine Stück.", // nieuw, nalezen
-    'c.wood': "Zu kurz lässt sich nicht reparieren", // nieuw, nalezen
-    'c.wood.b': "Holz, das zu kurz gesägt ist, wird nicht wieder lang. Miss also zweimal, und zeichne die Linie, bevor du sägst. Säg neben der Linie, auf der Seite von dem Stück, das du nicht brauchst. Halt das Holz still: auf einer Werkbank oder mit einer Zwinge, nicht auf deinem Knie. Lass die Säge die Arbeit machen, mit langen, ruhigen Zügen. Drück einen Beitel von deinem Körper und deiner anderen Hand weg. Und halt den Beitel und den Hobel scharf: Ein stumpfes Werkzeug rutscht leichter ab.", // nieuw, nalezen
-    'c.wood.p': "Ich messe es noch einmal.", // nieuw, nalezen
-    'c.wood.s': "Du musst ein Brett auf Maß sägen. Du hast es einmal schnell gemessen. Was machst du?", // nieuw, nalezen
-    'c.wood.o1': "Miss noch einmal, dann zeichne die Linie.", // nieuw, nalezen
-    'c.wood.o2': "Säg es jetzt: Es stimmt wahrscheinlich.", // nieuw, nalezen
-    'c.wood.o3': "Säg es nach Augenmaß, ohne Linie.", // nieuw, nalezen
-    'c.wood.w': "Zu lang kannst du noch einmal sägen, zu kurz kannst du nicht reparieren. Noch einmal messen dauert eine Minute, ein neues Brett viel länger.", // nieuw, nalezen
+    'c.wood': "Zu kurz lässt sich nicht reparieren", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.b': "Holz, das zu kurz gesägt ist, wird nicht wieder lang. Miss also zweimal, und zeichne die Linie, bevor du sägst. Säg neben der Linie, auf der Seite von dem Stück, das du nicht brauchst. Halt das Holz still: auf einer Werkbank oder mit einer Zwinge, nicht auf deinem Knie. Lass die Säge die Arbeit machen, mit langen, ruhigen Zügen. Drück einen Beitel von deinem Körper und deiner anderen Hand weg. Und halt den Beitel und den Hobel scharf: Ein stumpfes Werkzeug rutscht leichter ab.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.p': "Ich messe es noch einmal.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.s': "Du musst ein Brett auf Maß sägen. Du hast es einmal schnell gemessen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.o1': "Miss noch einmal, dann zeichne die Linie.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.o2': "Säg es jetzt: Es stimmt wahrscheinlich.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.o3': "Säg es nach Augenmaß, ohne Linie.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.w': "Zu lang kannst du noch einmal sägen, zu kurz kannst du nicht reparieren. Noch einmal messen dauert eine Minute, ein neues Brett viel länger.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.square': "Anzeichnen", // nieuw, nalezen
     'w.winkelhaak': "der Anschlagwinkel (zeigt einen rechten Winkel)", // nieuw, nalezen
     'w.verstekhaak': "der Gehrungswinkel (45 Grad)", // nieuw, nalezen
@@ -2523,14 +2523,14 @@ const t: CultureTranslation = {
     's.square.3': "Zeichne einen Kreis mit dem Zirkel.", // nieuw, nalezen
     'c.square.q': "Ist der Winkel rechtwinklig?", // nieuw, nalezen
     'c.square.a': "Ja, der Anschlagwinkel passt genau.", // nieuw, nalezen
-    'c.square': "Zeichne von einer geraden Kante aus an", // nieuw, nalezen
-    'c.square.b': "Bevor du sägst oder bohrst, zeichnest du an, wo. Nimm einen spitzen Bleistift: Eine dicke Linie ist nicht genau. Such dir eine gerade Kante vom Holz aus, und miss alles von dieser Kante aus. Drück den dicken Teil vom Anschlagwinkel fest dagegen, und zeichne die Linie am Stahl entlang. Zeichne ein kleines Kreuz auf das Stück, das du nicht brauchst. Dann sägst du neben der Linie, auf der Seite vom Kreuz.", // nieuw, nalezen
-    'c.square.p': "Ich zeichne es zuerst an.", // nieuw, nalezen
-    'c.square.s': "Dein Bleistift ist stumpf und macht eine dicke Linie. Du willst ein Brett anzeichnen. Was machst du?", // nieuw, nalezen
-    'c.square.o1': "Spitz zuerst den Bleistift, dann zeichne.", // nieuw, nalezen
-    'c.square.o2': "Zeichne die Linie trotzdem, das geht schon.", // nieuw, nalezen
-    'c.square.o3': "Zeichne es mit deinem Fingernagel an.", // nieuw, nalezen
-    'c.square.w': "Eine dicke Linie ist ein paar Millimeter breit. Dann weißt du nicht, wo du sägen sollst, und das Stück ist nicht genau.", // nieuw, nalezen
+    'c.square': "Zeichne von einer geraden Kante aus an", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.b': "Bevor du sägst oder bohrst, zeichnest du an, wo. Nimm einen spitzen Bleistift: Eine dicke Linie ist nicht genau. Such dir eine gerade Kante vom Holz aus, und miss alles von dieser Kante aus. Drück den dicken Teil vom Anschlagwinkel fest dagegen, und zeichne die Linie am Stahl entlang. Zeichne ein kleines Kreuz auf das Stück, das du nicht brauchst. Dann sägst du neben der Linie, auf der Seite vom Kreuz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.p': "Ich zeichne es zuerst an.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.s': "Dein Bleistift ist stumpf und macht eine dicke Linie. Du willst ein Brett anzeichnen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.o1': "Spitz zuerst den Bleistift, dann zeichne.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.o2': "Zeichne die Linie trotzdem, das geht schon.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.o3': "Zeichne es mit deinem Fingernagel an.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.w': "Eine dicke Linie ist ein paar Millimeter breit. Dann weißt du nicht, wo du sägen sollst, und das Stück ist nicht genau.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.screw': "Bohrer und Schrauben", // nieuw, nalezen
     'w.accuboor': "der Akkuschrauber (eine Bohrmaschine mit Akku)", // nieuw, nalezen
     'w.boormachine': "die Bohrmaschine (mit Kabel)", // nieuw, nalezen
@@ -2543,14 +2543,14 @@ const t: CultureTranslation = {
     's.screw.3': "Schlag den Nagel ins Holz.", // nieuw, nalezen
     'c.screw.q': "Wo ist der Akkuschrauber?", // nieuw, nalezen
     'c.screw.a': "Am Ladegerät, er ist fast voll.", // nieuw, nalezen
-    'c.screw': "Schau, bevor du bohrst", // nieuw, nalezen
-    'c.screw.b': "Bevor du in eine Wand bohrst, denk daran, was dahinter ist. Rohre und Kabel laufen oft gerade nach oben, nach unten oder zur Seite von einer Steckdose oder einem Schalter. Frag, wo sie sind, oder prüf es mit einem Suchgerät. Nimm einen Bohrer, der so dick ist wie der Dübel, und bohr das Loch ein bisschen tiefer als der Dübel. Nimm den richtigen Bit für die Schraube: Ein falscher Bit rutscht ab und macht den Kopf der Schraube kaputt. Trag beim Bohren eine Schutzbrille.", // nieuw, nalezen
-    'c.screw.p': "Darf ich hier bohren?", // nieuw, nalezen
-    'c.screw.s': "Du musst direkt über einer Steckdose ein Loch bohren. Was machst du?", // nieuw, nalezen
-    'c.screw.o1': "Frag zuerst, wo das Kabel läuft.", // nieuw, nalezen
-    'c.screw.o2': "Bohr: Da ist nie ein Kabel.", // nieuw, nalezen
-    'c.screw.o3': "Bohr langsam, dann ist es sicher.", // nieuw, nalezen
-    'c.screw.w': "Von einer Steckdose läuft oft ein Kabel gerade nach oben. Hineinbohren ist gefährlich, und die Reparatur ist viel Arbeit.", // nieuw, nalezen
+    'c.screw': "Schau, bevor du bohrst", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.b': "Bevor du in eine Wand bohrst, denk daran, was dahinter ist. Rohre und Kabel laufen oft gerade nach oben, nach unten oder zur Seite von einer Steckdose oder einem Schalter. Frag, wo sie sind, oder prüf es mit einem Suchgerät. Nimm einen Bohrer, der so dick ist wie der Dübel, und bohr das Loch ein bisschen tiefer als der Dübel. Nimm den richtigen Bit für die Schraube: Ein falscher Bit rutscht ab und macht den Kopf der Schraube kaputt. Trag beim Bohren eine Schutzbrille.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.p': "Darf ich hier bohren?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.s': "Du musst direkt über einer Steckdose ein Loch bohren. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.o1': "Frag zuerst, wo das Kabel läuft.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.o2': "Bohr: Da ist nie ein Kabel.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.o3': "Bohr langsam, dann ist es sicher.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.w': "Von einer Steckdose läuft oft ein Kabel gerade nach oben. Hineinbohren ist gefährlich, und die Reparatur ist viel Arbeit.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.fix': "Dinge befestigen", // nieuw, nalezen
     'w.bevestigen': "befestigen (etwas fest an einer Wand anbringen)", // nieuw, nalezen
     'w.vastzetten': "festdrehen (drehen, bis es fest ist)", // nieuw, nalezen
@@ -2563,14 +2563,14 @@ const t: CultureTranslation = {
     's.fix.3': "Nimm den flachen Schraubenzieher, nicht den Kreuzschraubenzieher.", // nieuw, nalezen
     'c.fix.q': "Wie befestige ich dieses Regalbrett?", // nieuw, nalezen
     'c.fix.a': "Mit zwei Dübeln und zwei Schrauben.", // nieuw, nalezen
-    'c.fix': "Fest, aber nicht zu fest", // nieuw, nalezen
-    'c.fix.b': "Eine Schraube oder ein Bolzen muss fest sein, aber nicht zu fest. Drehst du zu stark, geht das Gewinde kaputt oder das Holz reißt. Dreh, bis es sich nicht mehr bewegt, dann hör auf. Beim Akkuschrauber: Dreh zuerst den Ring mit den Zahlen auf eine niedrige Zahl. Ein Regalbrett an der Wand braucht Dübel, die zur Wand passen: Stein braucht andere Dübel als eine dünne Wand aus Platten. Kleber braucht Zeit: Drück die Teile zusammen, halt sie mit einer Zwinge fest, und warte, bis der Kleber trocken ist.", // nieuw, nalezen
-    'c.fix.p': "Ist das Regalbrett gut befestigt?", // nieuw, nalezen
-    'c.fix.s': "Du hast zwei Stücke Holz geklebt. Dein Kollege will es sofort benutzen. Was machst du?", // nieuw, nalezen
-    'c.fix.o1': "Sag: Der Kleber muss zuerst trocknen.", // nieuw, nalezen
-    'c.fix.o2': "Lass ihn es benutzen: Kleber ist schnell.", // nieuw, nalezen
-    'c.fix.o3': "Halt es eine Minute in deinen Händen.", // nieuw, nalezen
-    'c.fix.w': "Nasser Kleber hält noch nicht. Benutzt du es zu früh, gehen die Teile wieder auseinander. Dann musst du noch einmal anfangen.", // nieuw, nalezen
+    'c.fix': "Fest, aber nicht zu fest", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.b': "Eine Schraube oder ein Bolzen muss fest sein, aber nicht zu fest. Drehst du zu stark, geht das Gewinde kaputt oder das Holz reißt. Dreh, bis es sich nicht mehr bewegt, dann hör auf. Beim Akkuschrauber: Dreh zuerst den Ring mit den Zahlen auf eine niedrige Zahl. Ein Regalbrett an der Wand braucht Dübel, die zur Wand passen: Stein braucht andere Dübel als eine dünne Wand aus Platten. Kleber braucht Zeit: Drück die Teile zusammen, halt sie mit einer Zwinge fest, und warte, bis der Kleber trocken ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.p': "Ist das Regalbrett gut befestigt?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.s': "Du hast zwei Stücke Holz geklebt. Dein Kollege will es sofort benutzen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.o1': "Sag: Der Kleber muss zuerst trocknen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.o2': "Lass es ihn benutzen: Kleber trocknet schnell.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.o3': "Halt es eine Minute in deinen Händen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.w': "Nasser Kleber hält noch nicht. Benutzt du es zu früh, gehen die Teile wieder auseinander. Dann musst du noch einmal anfangen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.atmachine': "An der Maschine", // nieuw, nalezen
     'w.bedieningspaneel': "das Bedienfeld (die Knöpfe und der Bildschirm einer Maschine)", // nieuw, nalezen
     'w.startknop': "der Startknopf (grün)", // nieuw, nalezen
@@ -2583,14 +2583,14 @@ const t: CultureTranslation = {
     's.atmachine.3': "Nimm die Schutzabdeckung nie weg.", // nieuw, nalezen
     'c.atmachine.q': "Warum hält die Maschine immer wieder an?", // nieuw, nalezen
     'c.atmachine.a': "Der Sensor sieht den Karton nicht gut.", // nieuw, nalezen
-    'c.atmachine': "Die Schutzabdeckung bleibt dran", // nieuw, nalezen
-    'c.atmachine.b': "Die Teile einer Maschine, die sich bewegen, können in weniger als einer Sekunde eine Hand, einen Ärmel oder Haare hineinziehen. Dafür ist die Schutzabdeckung da. Nimm sie nie weg, und greif nie dahinter, während die Maschine läuft. Funktioniert eine Schutzabdeckung oder ein Sensor nicht? Dann ist die Maschine nicht sicher: Halt sie an und sag es deinem Teamleiter. Steckt etwas fest? Halt zuerst die Maschine an, und sorg dafür, dass niemand sie starten kann, während du arbeitest. Wie das geht, ist in jeder Firma anders: Lass es dir erklären, bevor du anfängst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.atmachine.p': "Die Schutzabdeckung ist kaputt.", // nieuw, nalezen
-    'c.atmachine.s': "Ein Karton steckt in der Maschine fest, direkt hinter der Schutzabdeckung. Die Maschine läuft. Was machst du?", // nieuw, nalezen
-    'c.atmachine.o1': "Halt zuerst die Maschine an, dann hol Hilfe.", // nieuw, nalezen
-    'c.atmachine.o2': "Greif schnell hinein und zieh den Karton heraus.", // nieuw, nalezen
-    'c.atmachine.o3': "Mach die Schutzabdeckung auf, während sie läuft.", // nieuw, nalezen
-    'c.atmachine.w': "Eine laufende Maschine kann deine Hand hineinziehen, bevor du reagieren kannst. Anhalten dauert einen Moment, eine verletzte Hand Monate.", // nieuw, nalezen
+    'c.atmachine': "Die Schutzabdeckung bleibt dran", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.b': "Die Teile einer Maschine, die sich bewegen, können in weniger als einer Sekunde eine Hand, einen Ärmel oder Haare hineinziehen. Dafür ist die Schutzabdeckung da. Nimm sie nie weg, und greif nie dahinter, während die Maschine läuft. Funktioniert eine Schutzabdeckung oder ein Sensor nicht? Dann ist die Maschine nicht sicher: Halt sie an und sag es deinem Teamleiter. Steckt etwas fest? Halt zuerst die Maschine an, und sorg dafür, dass niemand sie starten kann, während du arbeitest. Wie das geht, ist in jeder Firma anders: Lass es dir erklären, bevor du anfängst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.p': "Die Schutzabdeckung ist kaputt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.s': "Ein Karton steckt in der Maschine fest, direkt hinter der Schutzabdeckung. Die Maschine läuft. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.o1': "Halt zuerst die Maschine an, dann hol Hilfe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.o2': "Greif schnell hinein und zieh den Karton heraus.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.o3': "Mach die Schutzabdeckung auf, während die Maschine läuft.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.w': "Eine laufende Maschine kann deine Hand hineinziehen, bevor du reagieren kannst. Anhalten dauert einen Moment, eine verletzte Hand Monate.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.inspect': "Messen und prüfen", // nieuw, nalezen
     'w.weegschaal': "die Waage", // nieuw, nalezen
     'w.meetklok': "die Messuhr (misst sehr kleine Unterschiede)", // nieuw, nalezen
@@ -2603,14 +2603,14 @@ const t: CultureTranslation = {
     's.inspect.3': "Ich schaue mir das Etikett mit der Lupe an.", // nieuw, nalezen
     'c.inspect.q': "Wie oft nehme ich eine Probe?", // nieuw, nalezen
     'c.inspect.a': "Jede Stunde eine. Schreib es auf die Liste.", // nieuw, nalezen
-    'c.inspect': "Schreib auf, was du prüfst", // nieuw, nalezen
-    'c.inspect.b': "In einer Fabrik prüfst du die Produkte während der Arbeit: Du wiegst sie, du misst sie, oder du schaust sie dir genau an. Schreib jede Prüfung sofort auf die Liste, mit der Uhrzeit. Nicht später, aus dem Kopf. Ist ein Produkt nicht in Ordnung? Leg es in die Ausschusskiste und schau dir die nächsten genau an. Sind mehr Produkte falsch? Dann stimmt etwas mit der Maschine nicht. Sag es sofort deinem Teamleiter. Ein Problem, das früh gefunden wird, spart viele Produkte. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.inspect.p': "Mehr Produkte sind falsch.", // nieuw, nalezen
-    'c.inspect.s': "Die Waage zeigt, dass drei Produkte hintereinander zu leicht sind. Was machst du?", // nieuw, nalezen
-    'c.inspect.o1': "Sag es sofort deinem Teamleiter.", // nieuw, nalezen
-    'c.inspect.o2': "Leg sie zurück aufs Band.", // nieuw, nalezen
-    'c.inspect.o3': "Sag nichts: Das passiert halt.", // nieuw, nalezen
-    'c.inspect.w': "Drei falsche Produkte hintereinander zeigen ein Problem in der Maschine. Je schneller du es sagst, desto weniger Produkte gehen verloren.", // nieuw, nalezen
+    'c.inspect': "Schreib auf, was du prüfst", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.b': "In einer Fabrik prüfst du die Produkte während der Arbeit: Du wiegst sie, du misst sie, oder du schaust sie dir genau an. Schreib jede Prüfung sofort auf die Liste, mit der Uhrzeit. Nicht später, aus dem Kopf. Ist ein Produkt nicht in Ordnung? Leg es in die Ausschusskiste und schau dir die nächsten genau an. Sind mehr Produkte falsch? Dann stimmt etwas mit der Maschine nicht. Sag es sofort deinem Teamleiter. Ein Problem, das früh gefunden wird, spart viele Produkte. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.p': "Mehr Produkte sind falsch.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.s': "Die Waage zeigt, dass drei Produkte hintereinander zu leicht sind. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.o1': "Sag es sofort deinem Teamleiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.o2': "Leg sie zurück aufs Band.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.o3': "Sag nichts: Das passiert halt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.w': "Drei falsche Produkte hintereinander zeigen ein Problem in der Maschine. Je schneller du es sagst, desto weniger Produkte gehen verloren.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.packing': "Verpacken", // nieuw, nalezen
     'w.verpakking': "die Verpackung", // nieuw, nalezen
     'w.krimpfolie': "die Schrumpffolie (Plastikfolie, die durch Wärme straff wird)", // nieuw, nalezen
@@ -2623,14 +2623,14 @@ const t: CultureTranslation = {
     's.packing.3': "Die Siegelmaschine ist heiß. Vorsicht!", // nieuw, nalezen
     'c.packing.q': "Wie viele Produkte kommen in einen Karton?", // nieuw, nalezen
     'c.packing.a': "Zwölf. Das steht auf der Liste.", // nieuw, nalezen
-    'c.packing': "Schneide von deinem Körper weg", // nieuw, nalezen
-    'c.packing.b': "Verpacken ist schnelle Arbeit, und ein Cuttermesser ist sehr scharf. Schneide immer von deinem Körper weg und von deiner anderen Hand weg. Schieb die Klinge nach jedem Schnitt zurück, auch wenn du das Messer kurz hinlegst. Brich ein stumpfes Stück vorsichtig ab, und wirf es in die Box für alte Klingen, nicht in den normalen Mülleimer. Die Siegelmaschine und der Heißluftföhn für Schrumpffolie werden sehr heiß: Fass die heißen Teile nicht an. Und prüf jeden Karton: das richtige Produkt, die richtige Anzahl, und das Etikett gerade. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.packing.p': "Ich schiebe zuerst das Messer zurück.", // nieuw, nalezen
-    'c.packing.s': "Du legst das Cuttermesser kurz auf den Tisch. Die Klinge ist noch draußen. Was machst du?", // nieuw, nalezen
-    'c.packing.o1': "Schieb zuerst die Klinge zurück.", // nieuw, nalezen
-    'c.packing.o2': "Lass es so: Du brauchst es gleich wieder.", // nieuw, nalezen
-    'c.packing.o3': "Steck es so in deine Tasche.", // nieuw, nalezen
-    'c.packing.w': "Eine offene Klinge auf einem Tisch oder in einer Tasche kann dich oder einen Kollegen schneiden. Sie zurückzuschieben dauert eine Sekunde.", // nieuw, nalezen
+    'c.packing': "Schneide von deinem Körper weg", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.b': "Verpacken ist schnelle Arbeit, und ein Cuttermesser ist sehr scharf. Schneide immer von deinem Körper weg und von deiner anderen Hand weg. Schieb die Klinge nach jedem Schnitt zurück, auch wenn du das Messer kurz hinlegst. Brich ein stumpfes Stück vorsichtig ab, und wirf es in die Box für alte Klingen, nicht in den normalen Mülleimer. Die Siegelmaschine und der Heißluftföhn für Schrumpffolie werden sehr heiß: Fass die heißen Teile nicht an. Und prüf jeden Karton: das richtige Produkt, die richtige Anzahl, und das Etikett gerade. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.p': "Ich schiebe zuerst das Messer zurück.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.s': "Du legst das Cuttermesser kurz auf den Tisch. Die Klinge ist noch draußen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.o1': "Schieb zuerst die Klinge zurück.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.o2': "Lass es so: Du brauchst es gleich wieder.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.o3': "Steck es so in deine Tasche.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.w': "Eine offene Klinge auf einem Tisch oder in einer Tasche kann dich oder einen Kollegen schneiden. Sie zurückzuschieben dauert eine Sekunde.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.upkeep': "Wartung", // nieuw, nalezen
     'w.persluchtpistool': "die Druckluftpistole", // nieuw, nalezen
     'w.steeksleutel': "der Maulschlüssel, der Gabelschlüssel", // nieuw, nalezen
@@ -2643,14 +2643,14 @@ const t: CultureTranslation = {
     's.upkeep.3': "Richte die Druckluftpistole nie auf jemanden.", // nieuw, nalezen
     'c.upkeep.q': "Wann schmieren wir die Maschine?", // nieuw, nalezen
     'c.upkeep.a': "Jeden Montag, vor der ersten Schicht.", // nieuw, nalezen
-    'c.upkeep': "Eine saubere Maschine zeigt ihre Probleme", // nieuw, nalezen
-    'c.upkeep.b': "Kleine Wartung gehört oft zur Arbeit: abwischen, ölen und schmieren. Mach das nur, wenn die Maschine aus ist, und wenn du gelernt hast, wie es geht. Eine saubere Maschine ist leicht zu prüfen: Du siehst ein Leck oder ein loses Teil sofort. Öl auf dem Boden ist rutschig. Stell eine Auffangwanne unter ein Leck, wisch den Boden, und sag es deinem Teamleiter. Wirf ölige Lappen in den speziellen Mülleimer. Richte eine Druckluftpistole nie auf einen Menschen, und mach nie deine Kleidung oder deine Haut damit sauber. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.upkeep.p': "Die Maschine verliert Öl.", // nieuw, nalezen
-    'c.upkeep.s': "Du siehst eine kleine Öllache unter der Maschine. Was machst du?", // nieuw, nalezen
-    'c.upkeep.o1': "Stell eine Auffangwanne darunter, und melde es.", // nieuw, nalezen
-    'c.upkeep.o2': "Lass es: Es ist nur ein bisschen.", // nieuw, nalezen
-    'c.upkeep.o3': "Leg etwas Papier darauf, und mach weiter.", // nieuw, nalezen
-    'c.upkeep.w': "Ein Leck wird größer, und auf Öl am Boden rutschen Menschen aus. Früh gefunden, ist es eine kleine Reparatur.", // nieuw, nalezen
+    'c.upkeep': "Eine saubere Maschine zeigt ihre Probleme", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.b': "Kleine Wartung gehört oft zur Arbeit: abwischen, ölen und schmieren. Mach das nur, wenn die Maschine aus ist, und wenn du gelernt hast, wie es geht. Eine saubere Maschine ist leicht zu prüfen: Du siehst ein Leck oder ein loses Teil sofort. Öl auf dem Boden ist rutschig. Stell eine Auffangwanne unter ein Leck, wisch den Boden, und sag es deinem Teamleiter. Wirf ölige Lappen in den speziellen Mülleimer. Richte eine Druckluftpistole nie auf einen Menschen, und mach nie deine Kleidung oder deine Haut damit sauber. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.p': "Die Maschine verliert Öl.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.s': "Du siehst eine kleine Öllache unter der Maschine. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.o1': "Stell eine Auffangwanne darunter, und melde es.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.o2': "Lass es: Es ist nur ein bisschen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.o3': "Leg etwas Papier darauf, und mach weiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.w': "Ein Leck wird größer, und auf Öl am Boden rutschen Menschen aus. Früh gefunden, ist es eine kleine Reparatur.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
     'u.install': "Elektrik, Rohre und Metall", // nieuw, nalezen
     'l.wiring': "Verkabeln", // nieuw, nalezen
@@ -2665,14 +2665,14 @@ const t: CultureTranslation = {
     's.wiring.3': "Die Kabel kommen in den Kabelkanal.", // nieuw, nalezen
     'c.wiring.q': "Welcher Draht kommt wohin?", // nieuw, nalezen
     'c.wiring.a': "Braun zu Braun, Blau zu Blau.", // nieuw, nalezen
-    'c.wiring': "Farben zeigen, was ein Draht macht", // nieuw, nalezen
-    'c.wiring.b': "In einem Gebäude haben die Drähte feste Farben. Braun (manchmal Schwarz oder Grau) bringt den Strom. Blau führt zurück. Grün-Gelb ist die Erde: Sie schützt Menschen, und sie wird nie für etwas anderes benutzt. Schließ die gleiche Farbe an die gleiche Farbe an. Isolier nur so viel ab, wie in die Klemme passt: Es darf kein blankes Kupfer herausschauen. Steck den Draht hinein, dann zieh leicht daran, um zu prüfen, ob er fest ist. Nicht sicher, welcher Draht welcher ist? Hör auf und frag.", // nieuw, nalezen
-    'c.wiring.p': "Welche Farbe hat die Erde?", // nieuw, nalezen
-    'c.wiring.s': "Du schließt eine Lampe an. Ein Stück Kupfer schaut aus der Klemme heraus. Was machst du?", // nieuw, nalezen
-    'c.wiring.o1': "Schneid es kürzer, und schließ es neu an.", // nieuw, nalezen
-    'c.wiring.o2': "Lass es so: Die Lampe funktioniert.", // nieuw, nalezen
-    'c.wiring.o3': "Wickel ein Stück Klebeband darum.", // nieuw, nalezen
-    'c.wiring.w': "Blankes Kupfer außerhalb der Klemme kann etwas berühren. Das kann einen Stromschlag oder einen Kurzschluss geben, auch noch Monate später.", // nieuw, nalezen
+    'c.wiring': "Farben zeigen, was ein Draht macht", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.b': "In einem Gebäude haben die Drähte feste Farben. Braun (manchmal Schwarz oder Grau) bringt den Strom. Blau führt zurück. Grün-Gelb ist die Erde: Sie schützt Menschen, und sie wird nie für etwas anderes benutzt. Schließ die gleiche Farbe an die gleiche Farbe an. Isolier nur so viel ab, wie in die Klemme passt: Es darf kein blankes Kupfer herausschauen. Steck den Draht hinein, dann zieh leicht daran, um zu prüfen, ob er fest ist. Nicht sicher, welcher Draht welcher ist? Hör auf und frag.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.p': "Welche Farbe hat die Erde?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.s': "Du schließt eine Lampe an. Ein Stück Kupfer schaut aus der Klemme heraus. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.o1': "Schneid es kürzer, und schließ es neu an.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.o2': "Lass es so: Die Lampe funktioniert.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.o3': "Wickel ein Stück Klebeband darum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.w': "Blankes Kupfer außerhalb der Klemme kann etwas berühren. Das kann einen Stromschlag oder einen Kurzschluss geben, auch noch Monate später.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.testing': "Messen und sicher arbeiten", // nieuw, nalezen
     'w.multimeter': "das Multimeter (es misst Strom)", // nieuw, nalezen
     'w.spanningzoeker': "der Spannungsprüfer (ein Schraubenzieher mit einer kleinen Lampe)", // nieuw, nalezen
@@ -2685,14 +2685,14 @@ const t: CultureTranslation = {
     's.testing.3': "Miss zuerst mit dem Multimeter.", // nieuw, nalezen
     'c.testing.q': "Darf ich den Sicherungskasten aufmachen?", // nieuw, nalezen
     'c.testing.a': "Nein, das macht der Elektriker.", // nieuw, nalezen
-    'c.testing': "Aus, abgeschlossen, gemessen", // nieuw, nalezen
-    'c.testing.b': "Bevor du an der Elektrik arbeitest, mach drei Schritte. Schalt ab: die richtige Sicherung im Sicherungskasten, nicht nur den Schalter an der Wand. Schließ ab: Häng dein eigenes Vorhängeschloss daran und behalt den Schlüssel bei dir, damit niemand wieder einschalten kann. Miss: Prüf mit einem Spannungsprüfer oder einem Multimeter, dass wirklich kein Strom drauf ist. Erst dann fängst du an. Fliegt eine Sicherung immer wieder raus? Schalt sie nicht immer wieder ein: Sag es deinem Vorgesetzten. Mach Elektroarbeiten nur, wenn man dir gesagt hat, dass du das darfst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.testing.p': "Da ist kein Strom mehr drauf.", // nieuw, nalezen
-    'c.testing.s': "Du hast die Sicherung ausgeschaltet. Ein Kollege sagt: „Fang jetzt an, es ist aus.“ Was machst du?", // nieuw, nalezen
-    'c.testing.o1': "Schließ ab, und miss zuerst.", // nieuw, nalezen
-    'c.testing.o2': "Fang an: Dein Kollege weiß es.", // nieuw, nalezen
-    'c.testing.o3': "Fass kurz den Draht an, um es zu prüfen.", // nieuw, nalezen
-    'c.testing.w': "Manchmal ist die falsche Sicherung aus, oder jemand schaltet sie wieder ein. Ein Schloss und eine Messung zeigen, dass es wirklich sicher ist.", // nieuw, nalezen
+    'c.testing': "Aus, abgeschlossen, gemessen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.b': "Bevor du an der Elektrik arbeitest, mach drei Schritte. Schalt ab: die richtige Sicherung im Sicherungskasten, nicht nur den Schalter an der Wand. Schließ ab: Häng dein eigenes Vorhängeschloss daran und behalt den Schlüssel bei dir, damit niemand wieder einschalten kann. Miss: Prüf mit einem Spannungsprüfer oder einem Multimeter, dass wirklich kein Strom drauf ist. Erst dann fängst du an. Fliegt eine Sicherung immer wieder raus? Schalt sie nicht immer wieder ein: Sag es deinem Vorgesetzten. Mach Elektroarbeiten nur, wenn man dir gesagt hat, dass du das darfst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.p': "Da ist kein Strom mehr drauf.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.s': "Du hast die Sicherung ausgeschaltet. Ein Kollege sagt: „Fang jetzt an, es ist aus.“ Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.o1': "Schließ ab, und miss zuerst.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.o2': "Fang an: Dein Kollege weiß es.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.o3': "Fass kurz den Draht an, um es zu prüfen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.w': "Manchmal ist die falsche Sicherung aus, oder jemand schaltet sie wieder ein. Ein Schloss und eine Messung zeigen, dass es wirklich sicher ist.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.pipes': "Rohre und Wasser", // nieuw, nalezen
     'w.buis': "das Rohr", // nieuw, nalezen
     'w.koppeling': "das Fitting, die Verschraubung (es verbindet zwei Rohre)", // nieuw, nalezen
@@ -2705,14 +2705,14 @@ const t: CultureTranslation = {
     's.pipes.3': "Wickel Teflonband um das Gewinde.", // nieuw, nalezen
     'c.pipes.q': "Ist das Fitting noch undicht?", // nieuw, nalezen
     'c.pipes.a': "Ein bisschen. Ich ziehe es noch etwas fester an.", // nieuw, nalezen
-    'c.pipes': "Zuerst das Wasser ab, und ein Eimer bereit", // nieuw, nalezen
-    'c.pipes.b': "Bevor du eine Wasserleitung öffnest, dreh das Absperrventil zu. Dann öffne einen Wasserhahn weiter unten, damit das Rohr leer läuft. Stell einen Eimer und einen Lappen unter die Stelle, an der du arbeitest. Schneide ein Kupferrohr mit einem Rohrabschneider, nicht mit einer Säge: Das Ende bleibt rund und sauber. Zieh ein Fitting fest an, aber nicht zu fest. Wenn du fertig bist, dreh das Wasser langsam auf und such nach Tropfen. Ein kleines Leck, das du lässt, wird zu einem Wasserschaden.", // nieuw, nalezen
-    'c.pipes.p': "Ist das Wasser abgedreht?", // nieuw, nalezen
-    'c.pipes.s': "Du hast ein neues Fitting angebracht. Du drehst das Wasser auf. Jede Minute fällt ein kleiner Tropfen. Was machst du?", // nieuw, nalezen
-    'c.pipes.o1': "Dreh das Wasser zu, und zieh es fester an oder mach es neu.", // nieuw, nalezen
-    'c.pipes.o2': "Lass es: Es ist nur ein Tropfen.", // nieuw, nalezen
-    'c.pipes.o3': "Stell einen Eimer darunter und geh nach Hause.", // nieuw, nalezen
-    'c.pipes.w': "Ein Tropfen pro Minute sind viele Liter pro Woche. Das Wasser kann den Boden oder die Decke darunter beschädigen.", // nieuw, nalezen
+    'c.pipes': "Zuerst das Wasser ab, und ein Eimer bereit", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.b': "Bevor du eine Wasserleitung öffnest, dreh das Absperrventil zu. Dann öffne einen Wasserhahn weiter unten, damit das Rohr leer läuft. Stell einen Eimer und einen Lappen unter die Stelle, an der du arbeitest. Schneide ein Kupferrohr mit einem Rohrabschneider, nicht mit einer Säge: Das Ende bleibt rund und sauber. Zieh ein Fitting fest an, aber nicht zu fest. Wenn du fertig bist, dreh das Wasser langsam auf und such nach Tropfen. Ein kleines Leck, das du lässt, wird zu einem Wasserschaden.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.p': "Ist das Wasser abgedreht?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.s': "Du hast ein neues Fitting angebracht. Du drehst das Wasser auf. Jede Minute fällt ein kleiner Tropfen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.o1': "Dreh das Wasser zu, und zieh es fester an oder mach es neu.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.o2': "Lass es: Es ist nur ein Tropfen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.o3': "Stell einen Eimer darunter und geh nach Hause.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.w': "Ein Tropfen pro Minute sind viele Liter pro Woche. Das Wasser kann den Boden oder die Decke darunter beschädigen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.metalwork': "Metall bearbeiten", // nieuw, nalezen
     'w.bankschroef': "der Schraubstock (er hält ein Teil auf der Werkbank fest)", // nieuw, nalezen
     'w.vijl': "die Feile (um Metall mit der Hand glatt zu machen)", // nieuw, nalezen
@@ -2725,14 +2725,14 @@ const t: CultureTranslation = {
     's.metalwork.3': "Halt deine Hände vom Bohrer weg.", // nieuw, nalezen
     'c.metalwork.q': "Warum ist die Kante so scharf?", // nieuw, nalezen
     'c.metalwork.a': "Da ist noch ein Grat dran.", // nieuw, nalezen
-    'c.metalwork': "Einspannen, nie festhalten", // nieuw, nalezen
-    'c.metalwork.b': "Halt an der Säulenbohrmaschine nie ein kleines Teil in der Hand. Der Bohrer kann es packen und sehr schnell herumdrehen. Spann es in den Schraubstock. Binde lange Haare zurück, und trag keine Handschuhe an einem laufenden Bohrer: Er kann einen Handschuh hineinziehen. Trag eine Schutzbrille. Nach dem Sägen oder Bohren hat Metall einen Grat: eine scharfe Kante. Feil ihn ab, bevor du das Teil in die Hand nimmst oder weitergibst. Feg Metallspäne mit einer Bürste weg, nicht mit der Hand.", // nieuw, nalezen
-    'c.metalwork.p': "Ich spanne es zuerst ein.", // nieuw, nalezen
-    'c.metalwork.s': "Du musst ein Loch in ein kleines Stück Metall bohren. Der Schraubstock ist an einer anderen Werkbank. Was machst du?", // nieuw, nalezen
-    'c.metalwork.o1': "Hol den Schraubstock, und spann das Stück ein.", // nieuw, nalezen
-    'c.metalwork.o2': "Halt es mit der Hand gut fest.", // nieuw, nalezen
-    'c.metalwork.o3': "Zieh Handschuhe an und halt es fest.", // nieuw, nalezen
-    'c.metalwork.w': "Ein Bohrer kann ein kleines Teil packen und herumschleudern. Dann trifft es deine Hand. Im Schraubstock bleibt es still liegen.", // nieuw, nalezen
+    'c.metalwork': "Einspannen, nie festhalten", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.b': "Halt an der Säulenbohrmaschine nie ein kleines Teil in der Hand. Der Bohrer kann es packen und sehr schnell herumdrehen. Spann es in den Schraubstock. Binde lange Haare zurück, und trag keine Handschuhe an einem laufenden Bohrer: Er kann einen Handschuh hineinziehen. Trag eine Schutzbrille. Nach dem Sägen oder Bohren hat Metall einen Grat: eine scharfe Kante. Feil ihn ab, bevor du das Teil in die Hand nimmst oder weitergibst. Feg Metallspäne mit einer Bürste weg, nicht mit der Hand.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.p': "Ich spanne es zuerst ein.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.s': "Du musst ein Loch in ein kleines Stück Metall bohren. Der Schraubstock ist an einer anderen Werkbank. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.o1': "Hol den Schraubstock, und spann das Stück ein.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.o2': "Halt es mit der Hand gut fest.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.o3': "Zieh Handschuhe an und halt es fest.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.w': "Ein Bohrer kann ein kleines Teil packen und herumschleudern. Dann trifft es deine Hand. Im Schraubstock bleibt es still liegen.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Assemblage en montage" (u.montage, 21 November 2026).
     'u.montage': "Montage", // nieuw, nalezen
     'l.assembly': "Am Montageband", // nieuw, nalezen
@@ -2747,14 +2747,14 @@ const t: CultureTranslation = {
     's.assembly.3': "Leg das Teil in die Vorrichtung.", // nieuw, nalezen
     'c.assembly.q': "Welcher Schritt kommt jetzt?", // nieuw, nalezen
     'c.assembly.a': "Schritt vier. Schau in die Arbeitsanweisung.", // nieuw, nalezen
-    'c.assembly': "Halte dich an die Schritte, immer in der gleichen Reihenfolge", // nieuw, nalezen
-    'c.assembly.b': "Am Montageband hat jeder Schritt seinen Platz und seine Reihenfolge. Die Arbeitsanweisung zeigt sie, oft mit Bildern. Mach die Schritte jedes Mal in der gleichen Reihenfolge, auch wenn du glaubst, dass es schneller geht. Eine andere Reihenfolge kann ein Produkt ergeben, das gut aussieht, aber nicht funktioniert. Ist eine Kiste fast leer? Sag es rechtzeitig, damit das Band nicht stehen bleibt. Siehst du einen Schritt, der besser sein könnte? Sag es deinem Teamleiter: Dann kann es für alle geändert werden.", // nieuw, nalezen
-    'c.assembly.p': "Ich brauche neue Teile.", // nieuw, nalezen
-    'c.assembly.s': "Du hast einen schnelleren Weg für Schritt drei gefunden. In der Arbeitsanweisung steht etwas anderes. Was machst du?", // nieuw, nalezen
-    'c.assembly.o1': "Frag zuerst deinen Teamleiter.", // nieuw, nalezen
-    'c.assembly.o2': "Mach es ab jetzt auf deine Art.", // nieuw, nalezen
-    'c.assembly.o3': "Bring deinen Kollegen deine Art bei.", // nieuw, nalezen
-    'c.assembly.w': "Die Reihenfolge hat oft einen Grund, den du nicht siehst. Wenn deine Art besser ist, kann sie für alle geändert werden.", // nieuw, nalezen
+    'c.assembly': "Halte dich an die Schritte, immer in der gleichen Reihenfolge", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.b': "Am Montageband hat jeder Schritt seinen Platz und seine Reihenfolge. Die Arbeitsanweisung zeigt sie, oft mit Bildern. Mach die Schritte jedes Mal in der gleichen Reihenfolge, auch wenn du glaubst, dass es schneller geht. Eine andere Reihenfolge kann ein Produkt ergeben, das gut aussieht, aber nicht funktioniert. Ist eine Kiste fast leer? Sag es rechtzeitig, damit das Band nicht stehen bleibt. Siehst du einen Schritt, der besser sein könnte? Sag es deinem Teamleiter: Dann kann es für alle geändert werden.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.p': "Ich brauche neue Teile.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.s': "Du hast einen schnelleren Weg für Schritt drei gefunden. In der Arbeitsanweisung steht etwas anderes. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.o1': "Frag zuerst deinen Teamleiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.o2': "Mach es ab jetzt auf deine Art.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.o3': "Bring deinen Kollegen deine Art bei.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.w': "Die Reihenfolge hat oft einen Grund, den du nicht siehst. Wenn deine Art besser ist, kann sie für alle geändert werden.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.fastening': "Verschrauben und befestigen", // nieuw, nalezen
     'w.schroefmachine': "der Elektroschrauber (er hängt über dem Band)", // nieuw, nalezen
     'w.momentsleutel': "der Drehmomentschlüssel (er klickt, wenn der Bolzen fest genug ist)", // nieuw, nalezen
@@ -2767,14 +2767,14 @@ const t: CultureTranslation = {
     's.fastening.3': "Binde die Kabel mit einem Kabelbinder zusammen.", // nieuw, nalezen
     'c.fastening.q': "Wie fest muss dieser Bolzen sein?", // nieuw, nalezen
     'c.fastening.a': "Bis der Drehmomentschlüssel klickt.", // nieuw, nalezen
-    'c.fastening': "Der Klick reicht", // nieuw, nalezen
-    'c.fastening.b': "Ein Drehmomentschlüssel klickt, wenn ein Bolzen fest genug ist. Hör beim Klick auf: Dreh nicht weiter. Zu fest kann den Bolzen oder das Teil kaputt machen, und zu locker kann sich lösen. Der Elektroschrauber funktioniert genauso: Er hört von selbst auf. Leg jede Unterlegscheibe an ihren Platz: Eine fehlende Scheibe sieht man später kaum. Zähl deine Bolzen. Ist einer übrig, oder brauchst du noch einen? Dann stimmt etwas nicht: Sag es deinem Teamleiter.", // nieuw, nalezen
-    'c.fastening.p': "Ein Bolzen ist übrig.", // nieuw, nalezen
-    'c.fastening.s': "Dein Drehmomentschlüssel hat geklickt. Der Bolzen fühlt sich für dich noch etwas locker an. Was machst du?", // nieuw, nalezen
-    'c.fastening.o1': "Hör auf, und frag deinen Teamleiter.", // nieuw, nalezen
-    'c.fastening.o2': "Dreh ihn mit der Hand noch etwas weiter.", // nieuw, nalezen
-    'c.fastening.o3': "Nimm einen längeren Schlüssel.", // nieuw, nalezen
-    'c.fastening.w': "Der Klick ist auf die richtige Kraft eingestellt. Wenn es sich falsch anfühlt, muss der Schlüssel vielleicht geprüft werden. Weiterdrehen kann den Bolzen kaputt machen.", // nieuw, nalezen
+    'c.fastening': "Der Klick reicht", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.b': "Ein Drehmomentschlüssel klickt, wenn ein Bolzen fest genug ist. Hör beim Klick auf: Dreh nicht weiter. Zu fest kann den Bolzen oder das Teil kaputt machen, und zu locker kann sich lösen. Der Elektroschrauber funktioniert genauso: Er hört von selbst auf. Leg jede Unterlegscheibe an ihren Platz: Eine fehlende Scheibe sieht man später kaum. Zähl deine Bolzen. Ist einer übrig, oder brauchst du noch einen? Dann stimmt etwas nicht: Sag es deinem Teamleiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.p': "Ein Bolzen ist übrig.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.s': "Dein Drehmomentschlüssel hat geklickt. Der Bolzen fühlt sich für dich noch etwas locker an. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.o1': "Hör auf, und frag deinen Teamleiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.o2': "Dreh ihn mit der Hand noch etwas weiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.o3': "Nimm einen längeren Schlüssel.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.w': "Der Klick ist auf die richtige Kraft eingestellt. Wenn es sich falsch anfühlt, muss der Schlüssel vielleicht geprüft werden. Weiterdrehen kann den Bolzen kaputt machen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.handling': "Heben und bewegen", // nieuw, nalezen
     'w.takel': "der Kettenzug (er hebt schwere Teile mit einer Kette)", // nieuw, nalezen
     'w.hijshaak': "der Lasthaken", // nieuw, nalezen
@@ -2787,14 +2787,14 @@ const t: CultureTranslation = {
     's.handling.3': "Schieb den Teilewagen, zieh ihn nicht.", // nieuw, nalezen
     'c.handling.q': "Darf ich unter dem Kettenzug stehen?", // nieuw, nalezen
     'c.handling.a': "Nein, nie unter einer hängenden Last.", // nieuw, nalezen
-    'c.handling': "Lass den Kettenzug die schwere Arbeit machen", // nieuw, nalezen
-    'c.handling.b': "Schwere Teile hebt man mit einem Kettenzug oder einer Hebehilfe, nicht mit deinem Rücken. Prüf den Haken, bevor du hebst: Die Sicherung muss schließen. Heb langsam, und halt deine Hände und Füße von der Last weg. Steh oder geh nie unter einer hängenden Last. Nimm den Drehtisch, um ein Teil zu drehen: Dann musst du deinen Rücken nicht verdrehen. Schieb einen Wagen oder einen Rollcontainer: Du siehst, wohin du gehst, und dein Rücken hat weniger Arbeit. Benutz einen Kettenzug nur, wenn du gelernt hast, wie es geht. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.handling.p': "Ich nehme den Kettenzug.", // nieuw, nalezen
-    'c.handling.s': "Ein Teil ist sehr schwer. Der Kettenzug ist noch zehn Minuten besetzt. Was machst du?", // nieuw, nalezen
-    'c.handling.o1': "Warte auf den Kettenzug.", // nieuw, nalezen
-    'c.handling.o2': "Heb es allein, schnell.", // nieuw, nalezen
-    'c.handling.o3': "Zieh es über den Boden.", // nieuw, nalezen
-    'c.handling.w': "Ein schweres Teil kann deinem Rücken in einer Sekunde schaden. Zehn Minuten warten ist besser als monatelange Schmerzen.", // nieuw, nalezen
+    'c.handling': "Lass den Kettenzug die schwere Arbeit machen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.b': "Schwere Teile hebt man mit einem Kettenzug oder einer Hebehilfe, nicht mit deinem Rücken. Prüf den Haken, bevor du hebst: Die Sicherung muss schließen. Heb langsam, und halt deine Hände und Füße von der Last weg. Steh oder geh nie unter einer hängenden Last. Nimm den Drehtisch, um ein Teil zu drehen: Dann musst du deinen Rücken nicht verdrehen. Schieb einen Wagen oder einen Rollcontainer: Du siehst, wohin du gehst, und dein Rücken hat weniger Arbeit. Benutz einen Kettenzug nur, wenn du gelernt hast, wie es geht. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.p': "Ich nehme den Kettenzug.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.s': "Ein Teil ist sehr schwer. Der Kettenzug ist noch zehn Minuten besetzt. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.o1': "Warte auf den Kettenzug.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.o2': "Heb es allein, schnell.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.o3': "Zieh es über den Boden.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.w': "Ein schweres Teil kann deinem Rücken in einer Sekunde schaden. Zehn Minuten warten ist besser als monatelange Schmerzen.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.finalcheck': "Die Endkontrolle", // nieuw, nalezen
     'w.typeplaatje': "das Typenschild (ein kleines Metallschild mit dem Typ und der Nummer)", // nieuw, nalezen
     'w.stempel': "der Stempel", // nieuw, nalezen
@@ -2807,14 +2807,14 @@ const t: CultureTranslation = {
     's.finalcheck.3': "Ohne OK-Aufkleber geht es nicht raus.", // nieuw, nalezen
     'c.finalcheck.q': "Ist dieses Produkt in Ordnung?", // nieuw, nalezen
     'c.finalcheck.a': "Nein, da ist ein Riss drin.", // nieuw, nalezen
-    'c.finalcheck': "Nur gute Produkte bekommen den Aufkleber", // nieuw, nalezen
-    'c.finalcheck.b': "Die Endkontrolle ist die letzte Chance, einen Fehler zu finden, bevor der Kunde ihn findet. Prüf jeden Punkt auf der Liste, auch wenn viel los ist. Einen kleinen Kratzer oder Riss übersieht man leicht: Schau bei gutem Licht, und von mehr als einer Seite. Mach den OK-Aufkleber oder den Stempel nur drauf, wenn jeder Punkt in Ordnung ist. Nicht sicher? Leg das Produkt zur Seite und frag. Ein Fehler, der hier gefunden wird, kostet wenig, und ein Fehler beim Kunden kostet viel. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.finalcheck.p': "Dieses Produkt kommt zur Seite.", // nieuw, nalezen
-    'c.finalcheck.s': "Am Band ist viel los. Du siehst einen kleinen Kratzer auf einem Produkt, unter dem Etikett. Was machst du?", // nieuw, nalezen
-    'c.finalcheck.o1': "Leg es zur Seite, und sag es deinem Teamleiter.", // nieuw, nalezen
-    'c.finalcheck.o2': "Kleb den Aufkleber drauf: Der Kratzer ist klein.", // nieuw, nalezen
-    'c.finalcheck.o3': "Schieb das Etikett über den Kratzer.", // nieuw, nalezen
-    'c.finalcheck.w': "Ein kleiner Kratzer kann ein Zeichen für ein Problem am Band sein. Wer ihn versteckt, schiebt das Problem nur zum Kunden.", // nieuw, nalezen
+    'c.finalcheck': "Nur gute Produkte bekommen den Aufkleber", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.b': "Die Endkontrolle ist die letzte Chance, einen Fehler zu finden, bevor der Kunde ihn findet. Prüf jeden Punkt auf der Liste, auch wenn viel los ist. Einen kleinen Kratzer oder Riss übersieht man leicht: Schau bei gutem Licht, und von mehr als einer Seite. Mach den OK-Aufkleber oder den Stempel nur drauf, wenn jeder Punkt in Ordnung ist. Nicht sicher? Leg das Produkt zur Seite und frag. Ein Fehler, der hier gefunden wird, kostet wenig, und ein Fehler beim Kunden kostet viel. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.p': "Dieses Produkt kommt zur Seite.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.s': "Am Band ist viel los. Du siehst einen kleinen Kratzer auf einem Produkt, unter dem Etikett. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.o1': "Leg es zur Seite, und sag es deinem Teamleiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.o2': "Kleb den Aufkleber drauf: Der Kratzer ist klein.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.o3': "Schieb das Etikett über den Kratzer.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.w': "Ein kleiner Kratzer kann ein Zeichen für ein Problem am Band sein. Wer ihn versteckt, schiebt das Problem nur zum Kunden.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
     'u.kweek': "Anbauen, sortieren und das Gewächshaus", // nieuw, nalezen
     'l.sowing': "Säen und Stecklinge", // nieuw, nalezen
@@ -2829,14 +2829,14 @@ const t: CultureTranslation = {
     's.sowing.3': "Gib den jungen Pflanzen ein bisschen Wasser.", // nieuw, nalezen
     'c.sowing.q': "Wie tief muss der Samen rein?", // nieuw, nalezen
     'c.sowing.a': "Einen halben Zentimeter. Nicht tiefer.", // nieuw, nalezen
-    'c.sowing': "Kleine Pflanzen brauchen eine sanfte Hand", // nieuw, nalezen
-    'c.sowing.b': "Junge Pflanzen sind empfindlich. Halte einen Steckling oder einen Keimling an einem Blatt, nicht am Stängel: Ein Blatt wächst nach, ein gebrochener Stängel nicht. Drück die Erde sanft an, nicht fest. Gieß langsam, mit einem feinen Strahl, damit die Samen nicht weggespült werden. Arbeite mit sauberen Händen und sauberen Schalen: Junge Pflanzen werden schnell krank. Schreib das Datum und die Pflanzensorte auf jede Schale, damit jeder weiß, was drin ist.", // nieuw, nalezen
-    'c.sowing.p': "Ich halte ihn am Blatt fest.", // nieuw, nalezen
-    'c.sowing.s': "Du sollst einen kleinen Keimling in einen Topf setzen. Was machst du?", // nieuw, nalezen
-    'c.sowing.o1': "Halt ihn vorsichtig an einem Blatt.", // nieuw, nalezen
-    'c.sowing.o2': "Zieh ihn am Stängel heraus.", // nieuw, nalezen
-    'c.sowing.o3': "Drück ihn mit der Erde heraus.", // nieuw, nalezen
-    'c.sowing.w': "Ein Blatt kann nachwachsen. Ein gebrochener Stängel nicht, und dann stirbt die Pflanze.", // nieuw, nalezen
+    'c.sowing': "Kleine Pflanzen brauchen eine sanfte Hand", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.b': "Junge Pflanzen sind empfindlich. Halte einen Steckling oder einen Keimling an einem Blatt, nicht am Stängel: Ein Blatt wächst nach, ein gebrochener Stängel nicht. Drück die Erde sanft an, nicht fest. Gieß langsam, mit einem feinen Strahl, damit die Samen nicht weggespült werden. Arbeite mit sauberen Händen und sauberen Schalen: Junge Pflanzen werden schnell krank. Schreib das Datum und die Pflanzensorte auf jede Schale, damit jeder weiß, was drin ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.p': "Ich halte ihn am Blatt fest.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.s': "Du sollst einen kleinen Keimling in einen Topf setzen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.o1': "Halt ihn vorsichtig an einem Blatt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.o2': "Zieh ihn am Stängel heraus.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.o3': "Drück ihn mit der Erde heraus.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.w': "Ein Blatt kann nachwachsen. Ein gebrochener Stängel nicht, und dann stirbt die Pflanze.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.sorting': "Sortieren und verpacken", // nieuw, nalezen
     'w.tros': "die Rispe (mehrere Tomaten an einem Stiel)", // nieuw, nalezen
     'w.bakje': "die Schale (eine kleine Packung für Obst)", // nieuw, nalezen
@@ -2849,14 +2849,14 @@ const t: CultureTranslation = {
     's.sorting.3': "Schau auf die Farbkarte.", // nieuw, nalezen
     'c.sorting.q': "Ist diese Tomate reif genug?", // nieuw, nalezen
     'c.sorting.a': "Nein, noch zu grün. Lass sie hängen.", // nieuw, nalezen
-    'c.sorting': "Jede Frucht zählt", // nieuw, nalezen
-    'c.sorting.b': "Obst und Gemüse bekommen schnell Druckstellen. Leg sie hin, lass sie nicht fallen und wirf sie nicht. Heute siehst du die Druckstelle nicht, aber morgen ist die Frucht weich und braun. Schau auf die Farbkarte, damit du weißt, welche Farbe wohin kommt. Leg beschädigtes oder faules Obst zur Seite: Eine schlechte Frucht in einer Schale kann die anderen verderben. Halte die Schalen und Kisten sauber, und stell sie nie auf den Boden.", // nieuw, nalezen
-    'c.sorting.p': "Diese ist beschädigt.", // nieuw, nalezen
-    'c.sorting.s': "Du packst Schalen. Eine Tomate hat eine weiche braune Stelle. Was machst du?", // nieuw, nalezen
-    'c.sorting.o1': "Leg sie zur Seite.", // nieuw, nalezen
-    'c.sorting.o2': "Versteck sie ganz unten.", // nieuw, nalezen
-    'c.sorting.o3': "Pack sie trotzdem ein.", // nieuw, nalezen
-    'c.sorting.w': "Eine faule Tomate lässt die anderen schneller faulen. Der Kunde findet sie, und die ganze Schale kommt zurück.", // nieuw, nalezen
+    'c.sorting': "Jede Frucht zählt", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.b': "Obst und Gemüse bekommen schnell Druckstellen. Leg sie hin, lass sie nicht fallen und wirf sie nicht. Heute siehst du die Druckstelle nicht, aber morgen ist die Frucht weich und braun. Schau auf die Farbkarte, damit du weißt, welche Farbe wohin kommt. Leg beschädigtes oder faules Obst zur Seite: Eine schlechte Frucht in einer Schale kann die anderen verderben. Halte die Schalen und Kisten sauber, und stell sie nie auf den Boden.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.p': "Diese ist beschädigt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.s': "Du packst Schalen. Eine Tomate hat eine weiche braune Stelle. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.o1': "Leg sie zur Seite.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.o2': "Versteck sie ganz unten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.o3': "Pack sie trotzdem ein.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.w': "Eine faule Tomate lässt die anderen schneller faulen. Der Kunde findet sie, und die ganze Schale kommt zurück.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.greenhouse': "Das Gewächshaus und sein Klima", // nieuw, nalezen
     'w.buisrailkar': "der Rohrschienenwagen (er fährt auf den Heizungsrohren)", // nieuw, nalezen
     'w.druppelaar': "der Tropfer (er gibt Wasser Tropfen für Tropfen)", // nieuw, nalezen
@@ -2869,14 +2869,14 @@ const t: CultureTranslation = {
     's.greenhouse.3': "Es ist warm. Die Lüftungsklappen gehen auf.", // nieuw, nalezen
     'c.greenhouse.q': "Warum ist es so warm im Gewächshaus?", // nieuw, nalezen
     'c.greenhouse.a': "Der Schirm ist zu, und die Klappen auch.", // nieuw, nalezen
-    'c.greenhouse': "Überlass das Klima dem Computer", // nieuw, nalezen
-    'c.greenhouse.b': "Im Gewächshaus regelt ein Computer das Klima: die Lüftungsklappen, den Schirm, die Heizung und das Wasser. Mach keine Klappe selbst auf und ändere keine Einstellung. Siehst du etwas Komisches, zum Beispiel einen Tropfer, der leckt, oder eine Klappe, die nicht zugeht? Sag es deinem Vorgesetzten. Der Rohrschienenwagen fährt auf den Heizungsrohren: Benutz ihn nur, wenn du gelernt hast, wie das geht. Bleib mit den Füßen auf der Plattform, und fass die Rohre nie an: Sie können heiß sein. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.greenhouse.p': "Dieser Tropfer leckt.", // nieuw, nalezen
-    'c.greenhouse.s': "Ein Tropfer ist lose. Wasser läuft auf den Boden. Was machst du?", // nieuw, nalezen
-    'c.greenhouse.o1': "Steck ihn wieder fest, und sag es deinem Vorgesetzten.", // nieuw, nalezen
-    'c.greenhouse.o2': "Lass es: Es ist nur Wasser.", // nieuw, nalezen
-    'c.greenhouse.o3': "Dreh das Wasser für die ganze Reihe ab.", // nieuw, nalezen
-    'c.greenhouse.w': "Ein loser Tropfer verschwendet Wasser, die Pflanze bekommt zu wenig, und ein nasser Boden ist rutschig.", // nieuw, nalezen
+    'c.greenhouse': "Überlass das Klima dem Computer", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.b': "Im Gewächshaus regelt ein Computer das Klima: die Lüftungsklappen, den Schirm, die Heizung und das Wasser. Mach keine Klappe selbst auf und ändere keine Einstellung. Siehst du etwas Komisches, zum Beispiel einen Tropfer, der leckt, oder eine Klappe, die nicht zugeht? Sag es deinem Vorgesetzten. Der Rohrschienenwagen fährt auf den Heizungsrohren: Benutz ihn nur, wenn du gelernt hast, wie das geht. Bleib mit den Füßen auf der Plattform, und fass die Rohre nie an: Sie können heiß sein. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.p': "Dieser Tropfer leckt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.s': "Ein Tropfer ist lose. Wasser läuft auf den Boden. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.o1': "Steck ihn wieder fest, und sag es deinem Vorgesetzten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.o2': "Lass es: Es ist nur Wasser.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.o3': "Dreh das Wasser für die ganze Reihe ab.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.w': "Ein loser Tropfer verschwendet Wasser, die Pflanze bekommt zu wenig, und ein nasser Boden ist rutschig.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.pests': "Schädlinge und sauberes Arbeiten", // nieuw, nalezen
     'w.luis': "die Blattlaus (ein kleines grünes Insekt auf Pflanzen)", // nieuw, nalezen
     'w.vangplaat': "die Gelbtafel (eine gelbe Karte, an der Insekten kleben bleiben)", // nieuw, nalezen
@@ -2889,14 +2889,14 @@ const t: CultureTranslation = {
     's.pests.3': "Geh über die Desinfektionsmatte.", // nieuw, nalezen
     'c.pests.q': "Darf ich diese Wespe totmachen?", // nieuw, nalezen
     'c.pests.a': "Nein, das ist eine Schlupfwespe. Die hilft uns.", // nieuw, nalezen
-    'c.pests': "Trag keine Krankheiten von Reihe zu Reihe", // nieuw, nalezen
-    'c.pests.b': "Eine Krankheit oder ein Schädling breitet sich im Gewächshaus schnell aus. Du kannst sie an deinen Händen, deiner Kleidung und deinem Werkzeug mitnehmen. Geh also an jeder Tür über die Desinfektionsmatte, und wasch dir die Hände, wenn du in einen anderen Teil des Gewächshauses gehst. Fang deine Arbeit in den gesunden Reihen an, und hör in den kranken Reihen auf. Siehst du Insekten, Flecken oder Schimmel an einer Pflanze? Fass sie nicht an, aber sag deinem Vorgesetzten, wo sie ist. Manche Insekten im Gewächshaus sind Helfer: Lass sie in Ruhe. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.pests.p': "Hier ist Schimmel.", // nieuw, nalezen
-    'c.pests.s': "Du siehst grauen Schimmel an ein paar Pflanzen in deiner Reihe. Was machst du?", // nieuw, nalezen
-    'c.pests.o1': "Sag deinem Vorgesetzten, wo er ist.", // nieuw, nalezen
-    'c.pests.o2': "Zupf die schlechten Blätter ab und mach weiter.", // nieuw, nalezen
-    'c.pests.o3': "Sag nichts: Es sind nur ein paar Pflanzen.", // nieuw, nalezen
-    'c.pests.w': "Schimmel breitet sich schnell aus. Dein Vorgesetzter weiß, was zu tun ist und wo man anfängt.", // nieuw, nalezen
+    'c.pests': "Trag keine Krankheiten von Reihe zu Reihe", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.b': "Eine Krankheit oder ein Schädling breitet sich im Gewächshaus schnell aus. Du kannst sie an deinen Händen, deiner Kleidung und deinem Werkzeug mitnehmen. Geh also an jeder Tür über die Desinfektionsmatte, und wasch dir die Hände, wenn du in einen anderen Teil des Gewächshauses gehst. Fang deine Arbeit in den gesunden Reihen an, und hör in den kranken Reihen auf. Siehst du Insekten, Flecken oder Schimmel an einer Pflanze? Fass sie nicht an, aber sag deinem Vorgesetzten, wo sie ist. Manche Insekten im Gewächshaus sind Helfer: Lass sie in Ruhe. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.p': "Hier ist Schimmel.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.s': "Du siehst grauen Schimmel an ein paar Pflanzen in deiner Reihe. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.o1': "Sag deinem Vorgesetzten, wo er ist.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.o2': "Zupf die schlechten Blätter ab und mach weiter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.o3': "Sag nichts: Es sind nur ein paar Pflanzen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.w': "Schimmel breitet sich schnell aus. Dein Vorgesetzter weiß, was zu tun ist und wo man anfängt.", // nieuw, nalezen // nagelezen AI 22 nov
     'u.carservice': "Reifen, Öl und Bremsen", // nieuw, nalezen
     'l.tyres': "Reifen wechseln", // nieuw, nalezen
     'w.wielbout': "die Radschraube", // nieuw, nalezen
@@ -2910,14 +2910,14 @@ const t: CultureTranslation = {
     's.tyres.3': "Miss den Druck mit dem Reifendruckprüfer.", // nieuw, nalezen
     'c.tyres.q': "Müssen diese Reifen runter?", // nieuw, nalezen
     'c.tyres.a': "Ja, das Profil ist fast weg.", // nieuw, nalezen
-    'c.tyres': "Von Hand eindrehen, mit dem Drehmomentschlüssel festziehen", // nieuw, nalezen
-    'c.tyres.b': "Ein Schlagschrauber ist schnell und sehr stark. Nimm ihn, um Radschrauben zu lösen, aber nicht, um sie fest anzuziehen. Dreh die Schrauben zuerst von Hand ein. Dann zieh sie über Kreuz mit einem Drehmomentschlüssel fest, mit der Kraft für dieses Auto. Ein Rad, das nicht fest ist, kann sich beim Fahren lösen. Prüf das Profil und den Druck von jedem Reifen, den du in die Hand nimmst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.tyres.p': "Ich drehe sie zuerst von Hand ein.", // nieuw, nalezen
-    'c.tyres.s': "Du machst ein Rad wieder dran. Ein Kollege sagt: „Nimm den Schlagschrauber, das geht schneller.“ Was machst du?", // nieuw, nalezen
-    'c.tyres.o1': "Dreh sie von Hand ein, dann nimm den Drehmomentschlüssel.", // nieuw, nalezen
-    'c.tyres.o2': "Zieh sie mit dem Schlagschrauber fest an.", // nieuw, nalezen
-    'c.tyres.o3': "Dreh sie von Hand ein, und lass es so.", // nieuw, nalezen
-    'c.tyres.w': "Ein Schlagschrauber kann eine Schraube zu fest oder nicht fest genug anziehen. Nur der Drehmomentschlüssel gibt die richtige Kraft.", // nieuw, nalezen
+    'c.tyres': "Von Hand eindrehen, mit dem Drehmomentschlüssel festziehen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.b': "Ein Schlagschrauber ist schnell und sehr stark. Nimm ihn, um Radschrauben zu lösen, aber nicht, um sie fest anzuziehen. Dreh die Schrauben zuerst von Hand ein. Dann zieh sie über Kreuz mit einem Drehmomentschlüssel fest, mit der Kraft für dieses Auto. Ein Rad, das nicht fest ist, kann sich beim Fahren lösen. Prüf das Profil und den Druck von jedem Reifen, den du in die Hand nimmst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.p': "Ich drehe sie zuerst von Hand ein.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.s': "Du machst ein Rad wieder dran. Ein Kollege sagt: „Nimm den Schlagschrauber, das geht schneller.“ Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.o1': "Dreh sie von Hand ein, dann nimm den Drehmomentschlüssel.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.o2': "Zieh sie mit dem Schlagschrauber fest an.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.o3': "Dreh sie von Hand ein, und lass es so.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.w': "Ein Schlagschrauber kann eine Schraube zu fest oder nicht fest genug anziehen. Nur der Drehmomentschlüssel gibt die richtige Kraft.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.oilchange': "Ölwechsel", // nieuw, nalezen
     'w.oliefilter': "der Ölfilter", // nieuw, nalezen
     'w.oliepeilstok': "der Ölmessstab (er zeigt, wie viel Öl drin ist)", // nieuw, nalezen
@@ -2930,14 +2930,14 @@ const t: CultureTranslation = {
     's.oilchange.3': "Schau auf den Ölmessstab.", // nieuw, nalezen
     'c.oilchange.q': "Wie viel Öl muss rein?", // nieuw, nalezen
     'c.oilchange.a': "Vier Liter. Schau danach auf den Messstab.", // nieuw, nalezen
-    'c.oilchange': "Altöl kommt ins Fass, nicht in den Abfluss", // nieuw, nalezen
-    'c.oilchange.b': "Altöl ist schlecht für Wasser und Boden. Ein bisschen Öl kann viel Wasser verschmutzen. Fang also das ganze Altöl in der Auffangwanne auf, und gieß es in das Fass für Altöl. Gieß es nie in einen Abfluss oder ein Waschbecken. Alte Filter und ölige Lappen kommen in ihren eigenen Behälter. Heißes Öl kann deine Haut verbrennen: Lass den Motor zuerst etwas abkühlen, und trag Handschuhe. Wisch verschüttetes Öl sofort auf: Öl auf dem Boden ist rutschig. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.oilchange.p': "Wohin kommt das Altöl?", // nieuw, nalezen
-    'c.oilchange.s': "Die Auffangwanne ist voll mit Altöl. Das Fass steht am anderen Ende der Werkstatt. Was machst du?", // nieuw, nalezen
-    'c.oilchange.o1': "Trag sie vorsichtig zum Fass.", // nieuw, nalezen
-    'c.oilchange.o2': "Gieß sie draußen in den Abfluss.", // nieuw, nalezen
-    'c.oilchange.o3': "Lass sie für später unter dem Auto stehen.", // nieuw, nalezen
-    'c.oilchange.w': "Altöl im Abfluss verschmutzt das Wasser. Eine volle Wanne unter einem Auto wird leicht umgetreten.", // nieuw, nalezen
+    'c.oilchange': "Altöl kommt ins Fass, nicht in den Abfluss", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.b': "Altöl ist schlecht für Wasser und Boden. Ein bisschen Öl kann viel Wasser verschmutzen. Fang also das ganze Altöl in der Auffangwanne auf, und gieß es in das Fass für Altöl. Gieß es nie in einen Abfluss oder ein Waschbecken. Alte Filter und ölige Lappen kommen in ihren eigenen Behälter. Heißes Öl kann deine Haut verbrennen: Lass den Motor zuerst etwas abkühlen, und trag Handschuhe. Wisch verschüttetes Öl sofort auf: Öl auf dem Boden ist rutschig. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.p': "Wohin kommt das Altöl?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.s': "Die Auffangwanne ist voll mit Altöl. Das Fass steht am anderen Ende der Werkstatt. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.o1': "Trag sie vorsichtig zum Fass.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.o2': "Gieß sie draußen in den Abfluss.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.o3': "Lass sie für später unter dem Auto stehen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.w': "Altöl im Abfluss verschmutzt das Wasser. Eine volle Wanne unter einem Auto wird leicht umgetreten.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.brakes': "Bremsen und Licht", // nieuw, nalezen
     'w.remschijf': "die Bremsscheibe", // nieuw, nalezen
     'w.remblok': "der Bremsbelag", // nieuw, nalezen
@@ -2950,14 +2950,14 @@ const t: CultureTranslation = {
     's.brakes.3': "Das linke Rücklicht geht nicht.", // nieuw, nalezen
     'c.brakes.q': "Muss die Bremsscheibe auch neu?", // nieuw, nalezen
     'c.brakes.a': "Ja, sie ist zu dünn.", // nieuw, nalezen
-    'c.brakes': "Bremsen: zweimal prüfen", // nieuw, nalezen
-    'c.brakes.b': "Bremsen halten Menschen am Leben. Arbeite also ruhig, und prüf deine Arbeit zweimal. Tritt nach neuen Belägen oder Scheiben ein paar Mal auf das Bremspedal, bevor das Auto fährt: Beim ersten Treten geht das Pedal oft zu tief. Bremsflüssigkeit ist schlecht für deine Haut und für den Lack: Trag Handschuhe, und wisch Tropfen sofort weg. Blas Bremsstaub nicht mit Druckluft weg: Mach ihn mit Bremsenreiniger und einem Lappen sauber. Bevor das Auto rausfährt, prüf jedes Licht, auch die Bremslichter.", // nieuw, nalezen
-    'c.brakes.p': "Ich trete ein paar Mal auf das Bremspedal.", // nieuw, nalezen
-    'c.brakes.s': "Du hast neue Bremsbeläge eingebaut. Das Auto muss nach draußen. Was machst du?", // nieuw, nalezen
-    'c.brakes.o1': "Tritt ein paar Mal auf das Bremspedal.", // nieuw, nalezen
-    'c.brakes.o2': "Fahr es sofort raus.", // nieuw, nalezen
-    'c.brakes.o3': "Schieb es raus, ohne zu prüfen.", // nieuw, nalezen
-    'c.brakes.w': "Nach neuen Belägen kann das Pedal beim ersten Mal zu tief gehen. Dann hält das Auto nicht an.", // nieuw, nalezen
+    'c.brakes': "Bremsen: zweimal prüfen", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.b': "Bremsen halten Menschen am Leben. Arbeite also ruhig, und prüf deine Arbeit zweimal. Tritt nach neuen Belägen oder Scheiben ein paar Mal auf das Bremspedal, bevor das Auto fährt: Beim ersten Treten geht das Pedal oft zu tief. Bremsflüssigkeit ist schlecht für deine Haut und für den Lack: Trag Handschuhe, und wisch Tropfen sofort weg. Blas Bremsstaub nicht mit Druckluft weg: Mach ihn mit Bremsenreiniger und einem Lappen sauber. Bevor das Auto rausfährt, prüf jedes Licht, auch die Bremslichter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.p': "Ich trete ein paar Mal auf das Bremspedal.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.s': "Du hast neue Bremsbeläge eingebaut. Das Auto muss nach draußen. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.o1': "Tritt ein paar Mal auf das Bremspedal.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.o2': "Fahr es sofort raus.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.o3': "Schieb es raus, ohne zu prüfen.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.w': "Nach neuen Belägen kann das Pedal beim ersten Mal zu tief gehen. Dann hält das Auto nicht an.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.diagnosis': "Fehler auslesen und der Arbeitsauftrag", // nieuw, nalezen
     'w.diagnosecomputer': "das Diagnosegerät (es liest die Fehler des Autos aus)", // nieuw, nalezen
     'w.waarschuwingslampje': "die Warnleuchte (am Armaturenbrett)", // nieuw, nalezen
@@ -2970,14 +2970,14 @@ const t: CultureTranslation = {
     's.diagnosis.3': "Leg einen Sitzbezug auf den Sitz.", // nieuw, nalezen
     'c.diagnosis.q': "Was muss an diesem Auto gemacht werden?", // nieuw, nalezen
     'c.diagnosis.a': "Schau auf den Arbeitsauftrag.", // nieuw, nalezen
-    'c.diagnosis': "Behandle das Auto, als wäre es dein eigenes", // nieuw, nalezen
-    'c.diagnosis.b': "Ein Kunde gibt dir sein Auto und seinen Schlüssel. Geh mit beidem sorgfältig um. Leg einen Sitzbezug auf den Sitz und eine Matte auf den Boden, bevor du einsteigst. Mach nur, was auf dem Arbeitsauftrag steht. Findest du noch etwas anderes, das nicht stimmt? Schreib es auf und sag es deinem Vorgesetzten: Der Kunde entscheidet. Leg den Schlüssel an seinen Platz, mit seinem Anhänger. Benutz nicht das Radio, das Telefon oder die Sachen im Auto. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
-    'c.diagnosis.p': "Das steht nicht auf dem Arbeitsauftrag.", // nieuw, nalezen
-    'c.diagnosis.s': "Du machst einen Ölwechsel. Ein Reifen ist fast abgefahren. Das steht nicht auf dem Arbeitsauftrag. Was machst du?", // nieuw, nalezen
-    'c.diagnosis.o1': "Schreib es auf, und sag es deinem Vorgesetzten.", // nieuw, nalezen
-    'c.diagnosis.o2': "Wechsle den Reifen sofort.", // nieuw, nalezen
-    'c.diagnosis.o3': "Sag nichts: Das ist nicht deine Aufgabe.", // nieuw, nalezen
-    'c.diagnosis.w': "Der Kunde entscheidet, was gemacht und bezahlt wird. Aber er muss wissen, dass der Reifen gefährlich ist.", // nieuw, nalezen
+    'c.diagnosis': "Behandle das Auto, als wäre es dein eigenes", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.b': "Ein Kunde gibt dir sein Auto und seinen Schlüssel. Geh mit beidem sorgfältig um. Leg einen Sitzbezug auf den Sitz und eine Matte auf den Boden, bevor du einsteigst. Mach nur, was auf dem Arbeitsauftrag steht. Findest du noch etwas anderes, das nicht stimmt? Schreib es auf und sag es deinem Vorgesetzten: Der Kunde entscheidet. Leg den Schlüssel an seinen Platz, mit seinem Anhänger. Benutz nicht das Radio, das Telefon oder die Sachen im Auto. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.p': "Das steht nicht auf dem Arbeitsauftrag.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.s': "Du machst einen Ölwechsel. Ein Reifen ist fast abgefahren. Das steht nicht auf dem Arbeitsauftrag. Was machst du?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.o1': "Schreib es auf, und sag es deinem Vorgesetzten.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.o2': "Wechsle den Reifen sofort.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.o3': "Sag nichts: Das ist nicht deine Aufgabe.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.w': "Der Kunde entscheidet, was gemacht und bezahlt wird. Aber er muss wissen, dass der Reifen gefährlich ist.", // nieuw, nalezen // nagelezen AI 22 nov
   },
 };
 

@@ -292,17 +292,18 @@ export function formStatus(e: Entry, form: string): Status {
   const own = e.comments.map((c) => c.text).join(' ');
   const text = hasStatus(own) ? own : (e.header ?? '');
   const gender = form.split('.').pop()!;
+  // A person's check wins; otherwise the last mark counts, because a new mark is written after the
+  // old one ("// nieuw, nalezen // nagelezen AI 22 nov" was read again by an AI).
   let checked = false;
-  let fresh = false;
-  let ai = false;
+  let last: Status = 'ongemarkeerd';
   for (const p of text.split('//').map((x) => x.trim())) {
     // "x: nieuw, nalezen", "x: nagekeken: pl 2026-11-03": only about the x form.
     if (/^x:/.test(p) && gender !== 'x') continue;
     if (/nagekeken:/.test(p)) checked = true;
-    else if (/\bnalezen\b/.test(p)) fresh = true;
-    else if (/\bnagelezen\b/.test(p)) ai = true;
+    else if (/\bnalezen\b/.test(p)) last = 'nieuw, nalezen';
+    else if (/\bnagelezen\b/.test(p)) last = 'nagelezen AI';
   }
-  return checked ? 'nagekeken' : fresh ? 'nieuw, nalezen' : ai ? 'nagelezen AI' : 'ongemarkeerd';
+  return checked ? 'nagekeken' : last;
 }
 
 /** A string literal with this value, in this quote. */

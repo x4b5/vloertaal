@@ -109,6 +109,26 @@ describe('review package: the translation lists', { timeout: 60_000 }, () => {
     expect(r.nagekeken).toEqual([id]);
   });
 
+  it('the last mark counts: a text read again by an AI after "nieuw, nalezen" is "nagelezen AI"', () => {
+    const src = [
+      'const t = {',
+      '  gloss: {',
+      "  'a.one': 'Tekst', // nieuw, nalezen // nagelezen AI 22 nov",
+      "  'a.two': 'Tekst', // nieuw, nalezen",
+      "  'a.three': 'Tekst', // nagelezen AI 31 okt // nagekeken: pl 2026-11-03",
+      "  'a.four': { m: 'M', f: 'F', x: 'X' }, // nagelezen AI 31 okt // x: nieuw, nalezen",
+      '  },',
+      '};',
+    ].join('\n');
+    const es = scanSource('src/i18n/work/pl.ts', src, 'pl');
+    const st = (id: string, form = '') => formStatus(es.find((e) => e.id === id)!, form);
+    expect(st('a.one')).toBe('nagelezen AI');
+    expect(st('a.two')).toBe('nieuw, nalezen');
+    expect(st('a.three')).toBe('nagekeken');
+    expect(st('a.four', 'm')).toBe('nagelezen AI');
+    expect(st('a.four', 'x')).toBe('nieuw, nalezen');
+  });
+
   it('an x form that alone had a mark gets "x: nagekeken", the other forms stay as they were', () => {
     const rows = taalRows(entries, 'pl');
     const x = rows.find((r) => r.vorm === 'x' && !rows.some((o) => o.id === r.id && o.vorm === 'm'))!;

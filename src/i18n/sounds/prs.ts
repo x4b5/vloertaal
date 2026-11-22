@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     's.pbgk.3': 'خوب انجامش می‌دهید!', // nagelezen AI 31 okt
     'c.pbgk.q': 'چطور هستید؟', // nagelezen AI 31 okt
     'c.pbgk.a': 'خوب هستم، ولی سردم است.',
-    'c.pbgk.a.why': 'حال را می‌پرسند: یک جواب، و این‌که چه احساس دارید.', // nagelezen AI 31 okt
+    'c.pbgk.a.why': 'حال را می‌پرسند: یک جواب، و این‌که چه احساس دارید.', // nagelezen AI 31 okt // nagelezen AI 22 nov
     // "Hoe zeg je het?" (src/content/klankMond.ts): how the mouth makes each sound.
     'k.uitleg.a': 'دهن را باز کنید، کمی کمتر از «aa». زبان به عقب می‌رود. کوتاه بگویید.', // nieuw, nalezen
     'k.uitleg.aa': 'دهن را کاملاً باز کنید. لب‌ها آرام هستند. زبان پایین و هموار است.', // nieuw, nalezen

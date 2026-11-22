@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'Então hoje vou de autocarro.',
     'c.plain.a.why': 'Chuva muito forte: no autocarro não te molhas.',
     'c.easy': 'Expressões: as palavras querem dizer outra coisa',
-    'c.easy.b': 'Aqui, as pessoas usam muitas vezes expressões, também no trabalho. As palavras dizem uma coisa, mas querem dizer outra. "Een eitje" é um ovinho, mas quer dizer: muito fácil. Não precisas de usar expressões. Não percebes uma expressão? Então pergunta simplesmente o que quer dizer.', // nieuw, nalezen
+    'c.easy.b': 'Aqui, as pessoas usam muitas vezes expressões, também no trabalho. As palavras dizem uma coisa, mas querem dizer outra. "Een eitje" é um ovinho, mas quer dizer: muito fácil. Não precisas de usar expressões. Não percebes uma expressão? Então pergunta simplesmente o que quer dizer.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.easy.p': 'O que queres dizer com isso?',
     'c.easy.s': 'O teu colega olha para a tarefa nova e diz: "Dat is een eitje!" O que quer ele dizer?',
     'c.easy.o1': 'A tarefa é muito fácil.',
@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Ficas com um olhinho na vela?',
     'zg.zeil.m': 'Vais vigiar para que tudo corra bem e em segurança?',
     'zg.zeil.s': 'A tua chefe tem de sair um momento. Ela diz: "Hou je een oogje in het zeil?" O que quer ela dizer?',
-    'zg.zeil.o1': "Fica de vigia enquanto ela não está.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
+    'zg.zeil.o1': "Fica de vigia enquanto ela não está.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken) // nagelezen AI 22 nov
     'zg.zeil.o2': 'Vai ver um barco.',
     'zg.zeil.o3': 'Fecha os olhos um momento.',
     'zg.zeil.w': '"Een oogje in het zeil houden" quer dizer: estar atento para que tudo corra bem. Não sabes o que tens de vigiar? Pergunta-lhe antes de ela sair.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'Tempo é dinheiro.',
     'zg.tijdgeld.m': 'O tempo é valioso: não o desperdices.',
     'zg.tijdgeld.s': 'O teu patrão quer o camião carregado depressa. Ele diz: "Tijd is geld." O que quer ele dizer?',
-    'zg.tijdgeld.o1': "Trabalha depressa, não percas tempo.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
+    'zg.tijdgeld.o1': "Trabalha depressa, não percas tempo.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken) // nagelezen AI 22 nov
     'zg.tijdgeld.o2': 'Recebes dinheiro por chegares tarde.',
     'zg.tijdgeld.o3': 'O relógio é muito caro.',
     'zg.tijdgeld.w': 'Esta expressão quer dizer que o tempo é valioso. Nunca é uma razão para trabalho perigoso ou horas sem pagamento.',

@@ -86,7 +86,7 @@ const t: CultureTranslation = {
     'kjn.u.papers.1': "Waan sheegi karaa in cinwaankaygu isbeddelay.", // nieuw, nalezen
     'kjn.u.papers.2': "Waan weydiin karaa inta uu kirada yahay.", // nieuw, nalezen
     'kjn.u.health.1': "Waan sheegi karaa meesha i xanuunaysa.", // nieuw, nalezen
-    'kjn.u.health.2': "Waan ballan ka codsan karaa dhakhtarka guud (huisarts).", // nieuw, nalezen
+    'kjn.u.health.2': "Waan ballan ka codsan karaa dhakhtarka qoyska (huisarts).", // nieuw, nalezen
     'kjn.u.money.1': "Waan sheegi karaa inaanan fahmin warqad.", // nieuw, nalezen
     'kjn.u.money.2': "Waan taleefanka ugu dhihi karaa maya khiyaano-badane.", // nieuw, nalezen
     'kjn.u.travel.1': "Waan sheegi karaa sida aan shaqada u imaado.", // nieuw, nalezen

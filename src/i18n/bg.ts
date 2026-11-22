@@ -537,7 +537,7 @@ const lang: HelpLanguageSource = {
     'u.firstday': 'Първи работен ден',
     'u.help': 'Как да поискаш помощ',
     'u.safety': 'Безопасността на първо място',
-    'u.emergency': "Когато нещо се обърка", // nieuw, nalezen
+    'u.emergency': "Когато нещо се обърка", // nieuw, nalezen // nagelezen AI 22 nov
     'u.warehouse': 'В склада',
     'u.time': 'Време и график',
 
@@ -631,16 +631,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Внимавай, подът е мокър!',
     's.danger.2': 'Къде е аварийният изход?',
     's.danger.3': 'Има злополука!',
-    'l.alarm': 'Пожарна аларма и евакуация', // nieuw, nalezen
-    'w.alarm': 'алармата', // nieuw, nalezen
-    'w.ontruimen': 'евакуирам (всички излизат от сградата)', // nieuw, nalezen
-    'w.vluchtroute': 'евакуационният път', // nieuw, nalezen
-    'w.trap': 'стълбите', // nieuw, nalezen
-    'w.verzamelplaats': 'мястото за събиране (където всички се събират навън)', // nieuw, nalezen
-    'w.brandblusser': 'пожарогасителят', // nieuw, nalezen
-    's.alarm.1': 'Къде е пожарогасителят?', // nieuw, nalezen
-    's.alarm.2': 'Трябва да евакуираме сградата.', // nieuw, nalezen
-    's.alarm.3': 'Използвай стълбите, не асансьора.', // nieuw, nalezen
+    'l.alarm': 'Пожарна аларма и евакуация', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alarm': 'алармата', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontruimen': 'евакуирам (всички излизат от сградата)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vluchtroute': 'евакуационният път', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.trap': 'стълбите', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.verzamelplaats': 'мястото за събиране (където всички се събират навън)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.brandblusser': 'пожарогасителят', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.1': 'Къде е пожарогасителят?', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.2': 'Трябва да евакуираме сградата.', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.3': 'Използвай стълбите, не асансьора.', // nieuw, nalezen // nagelezen AI 22 nov
     's.accident.1': 'Колегата ми падна.',
     's.accident.2': 'Порязах се.',
     's.accident.3': 'Искам да съобщя за злополука.',
@@ -678,8 +678,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Да, нося я.',
     'c.danger.q': 'Има ли злополука?',
     'c.danger.a': 'Да, обади се на 112!',
-    'c.alarm.q': 'Всички ли са навън?', // nieuw, nalezen
-    'c.alarm.a': 'Не, колегата ми още го няма.', // nieuw, nalezen
+    'c.alarm.q': 'Всички ли са навън?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.a': 'Не, колегата ми още го няма.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.accident.q': 'Какво се случи?',
     'c.accident.a': 'Падна. Кърви.',
     'l.notyet': 'Това още не са ме учили',
@@ -689,9 +689,9 @@ const lang: HelpLanguageSource = {
     'w.voordoen': 'показвам как (като го направя първо)',
     'w.gevaarlijk': 'опасен',
     'w.uitleg': 'обяснението',
-    's.notyet.1': { m: 'Още не съм научил това.', f: 'Още не съм научила това.', x: 'Още не са ме учили на това.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.notyet.1': { m: 'Още не съм научил това.', f: 'Още не съм научила това.', x: 'Още не са ме учили на това.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     's.notyet.2': 'Още никой не ми е обяснил.',
-    's.notyet.3': { m: 'Мога ли вече да го правя сам?', f: 'Мога ли вече да го правя сама?', x: 'Мога ли вече да го правя самостоятелно?' }, // x: nieuw, nalezen
+    's.notyet.3': { m: 'Мога ли вече да го правя сам?', f: 'Мога ли вече да го правя сама?', x: 'Мога ли вече да го правя самостоятелно?' }, // x: nieuw, nalezen // nagelezen AI 22 nov
     'c.notyet.q': 'Просто опитай, лесно е.',
     'c.notyet.a': 'Можеш ли първо да ми покажеш как?',
     'c.things.q': 'Къде да отиде кашонът?',

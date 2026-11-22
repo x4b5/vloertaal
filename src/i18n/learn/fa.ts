@@ -24,11 +24,11 @@ const t: CultureTranslation = {
     'c.arrive.a.why': "سؤال این است که برای چه آمده. این جواب می‌گوید: تازه‌وارد است و امروز شروع می‌کند.",
     'c.understand.a.why': "متوجه نشدی؟ خواستن تکرار عادی است.",
     'c.translate.a.why': "یادداشت هنوز روشن نیست، پس اول ترجمه می‌شود.",
-    'c.understood.a.why': "با دوباره گفتنِ کار، معلوم می‌شود که ترتیب کارها درست فهمیده شده یا نه.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.understood.a.why': "با دوباره گفتنِ کار، معلوم می‌شود که ترتیب کارها درست فهمیده شده یا نه.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.keeplearning.a.why': "خواستن هلندی اشکالی ندارد: تمرین کمک می‌کند.",
     'c.gear.a.why': "سؤال درباره کلاه ایمنی است: بله، روی سر است.",
     'c.danger.a.why': "در حادثه اول به ۱۱۲ زنگ می‌زنند.",
-    'c.alarm.a.why': "پرسیده‌اند همه بیرون آمده‌اند یا نه: این جواب می‌گوید چه کسی هنوز نیامده.", // nieuw, nalezen
+    'c.alarm.a.why': "پرسیده‌اند همه بیرون آمده‌اند یا نه: این جواب می‌گوید چه کسی هنوز نیامده.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.accident.a.why': "پرسیده‌اند چه اتفاقی افتاده: این جواب می‌گوید چه شده و حالش چطور است.",
     'c.notyet.a.why': "وقتی می‌گویند «فقط امتحان کن»، جواب ایمن این است که اول بخواهی نشانت بدهند.",
     'c.things.a.why': "سؤال «کجا» است. این جواب یک جا را می‌گوید.",
@@ -38,28 +38,28 @@ const t: CultureTranslation = {
     'd.speakup.a.why': "وقتی می‌پرسند مشکلی هست، یک «بله»ی صادقانه خوب است.",
     'd.agree.a.why': "نه گفتن مجاز است. پیشنهاد روز دیگر کمک می‌کند.",
     'd.task.a.why': "می‌پرسند کار تمام شده یا نه: این جواب می‌گوید «تقریباً» و چقدر دیگر مانده.",
-    'd.clear.a.why': "می‌پرسند روشن است یا نه: اول «بله»، بعد همان یک سؤال.", // nieuw, nalezen
+    'd.clear.a.why': "می‌پرسند روشن است یا نه: اول «بله»، بعد همان یک سؤال.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.cv.a.why': "معرّف، رئیس قبلی است که می‌تواند درباره کار بگوید.",
     'c.interview.a.why': "در مصاحبه کاری، تجربه کاری مهم است.",
     'c.findwork.a.why': "سؤال نوع کار را می‌پرسد. این جواب آن را می‌گوید.",
     'c.contract.a.why': "«بله» همراه سؤال درباره ساعت، روشن و مشتاقانه است.",
     'c.agency.a.why': "سؤال دربارهٔ ساعت‌هاست: بله، و می‌گوید کی و چطور.",
-    'c.bsn.a.why': "کارفرما می‌تواند بخواهد مدرک شناسایی‌ات، مثلاً پاسپورت، را ببیند.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.bsn.a.why': "کارفرما می‌تواند بخواهد مدرک شناسایی‌ات، مثلاً پاسپورت، را ببیند.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.housing.a.why': "پولی که از حقوق کم می‌شود باید روی کاغذ توافق شود.",
     'c.payslip.a.why': "ساعت‌های جاافتاده در فیش حقوقی باید گزارش شود.",
     'c.extra.a.why': "اضافه‌کاری یادداشت می‌شود تا بتوان آن را در فیش حقوقی بررسی کرد.",
     'c.phone.a.why': "گوشی کنار دستگاه نه: پیام‌ها تا وقت استراحت صبر می‌کنند.",
     'c.smoking.a.why': "استراحت‌ها ساعت مشخصی دارند، نه زودتر.",
     'c.clock.a.why': "ثبت ورود به جای کس دیگر مجاز نیست.",
-    'c.hygiene.a.why': "تور مو روی سر، زیورآلات درآورده: قانون‌های بهداشت غذا.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.hygiene.a.why': "تور مو روی سر، زیورآلات درآورده: قانون‌های بهداشت غذا.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.smalltalk.a.why': "سؤال درباره آخر هفته است: یک چیز کافی است.",
     'c.mistakes.a.why': "به تعریف با تشکر جواب می‌دهند.",
     'c.respect.a.why': "اذیت و قلدری باید گفته شود تا کسی بتواند کمک کند.",
     'c.gossip.a.why': "شرکت نکردن در غیبت، اعتماد را در تیم نگه می‌دارد.",
     'c.boundaries.a.why': "شوخی‌ای را که آزار می‌دهد، می‌شود واضح متوقف کرد.",
-    'c.health.a.why': "استراحت از سلامت محافظت می‌کند، برای همین باید استراحت کرد.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.health.a.why': "استراحت از سلامت محافظت می‌کند، برای همین باید استراحت کرد.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.rights.a.why': "برگه اخراج هرگز فوراً امضا نمی‌شود. اول مشورت.",
-    'c.mustmay.a.why': "اختیاری یعنی می‌توانی انتخاب کنی: کار در روز شنبه لازم نیست.", // nieuw, nalezen
+    'c.mustmay.a.why': "اختیاری یعنی می‌توانی انتخاب کنی: کار در روز شنبه لازم نیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.leave.a.why': "کی؟ این جواب ماه و مدت را می‌گوید.",
     'c.illness.a.why': "جزئیات پزشکی برای پزشک شرکت است، نه برای رئیس.",
     'c.warning.a.why': "کارفرما می‌تواند از پاسپورت کپی بگیرد، نه این‌که آن را نگه دارد.",
@@ -70,7 +70,7 @@ const t: CultureTranslation = {
     'c.diploma.a.why': "«بله» به آموزش و پرسیدن این‌که چه کسی پول می‌دهد، عادی است.",
     'c.doctor.a.why': "پزشک کشیک باید بداند چه کسی بیمار است و چه مشکلی دارد.",
     'c.insurance.a.why': "نام بیمه روی کارت بیمه درمانی است.",
-    'c.letters.a.why': "اظهارنامهٔ مالیاتی باید تا ۱ مه داده شود.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.letters.a.why': "اظهارنامهٔ مالیاتی باید تا ۱ مه داده شود.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.scams.a.why': "بانک هرگز رمز کارت را نمی‌پرسد. قطع کردن تلفن درست است.",
     'c.bike.a.why': "چطور؟ این جواب وسیله و زمان را می‌گوید.",
     'c.transit.a.why': "نه قطار: این جواب اتوبوس را می‌گوید.",
@@ -88,7 +88,7 @@ const t: CultureTranslation = {
     'c.cleansafe.a.why': "زمین خیس لیز است: هشدار کمک می‌کند.",
     'c.shelves.a.why': "سؤال «کجا» است. این جواب راهرو را می‌گوید و کمک هم می‌کند.",
     'c.checkout.a.why': "سؤال دربارهٔ پرداخت با کارت است: یک «بله» کوتاه و دوستانه.",
-    'c.counting.a.why': "پرسیده‌اند چند تا: این جواب عدد را می‌گوید و آن را رقم به رقم چک می‌کند.", // nieuw, nalezen
+    'c.counting.a.why': "پرسیده‌اند چند تا: این جواب عدد را می‌گوید و آن را رقم به رقم چک می‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.hours.a.why': "سؤال دربارهٔ ساعت است. این جواب یک ساعت را می‌گوید.",
     'c.measures.a.why': "سؤال دربارهٔ طول است. این جواب یک طول را می‌گوید.",
     'c.aihelp.a.why': "می‌پرسند چه کسی نوشته: یک «بله» صادقانه که کمک را هم می‌گوید.",
@@ -96,118 +96,118 @@ const t: CultureTranslation = {
     'c.aifake.a.why': "یک شمارهٔ جدید پول می‌خواهد: این جواب اول بررسی می‌کند.",
     'c.aiplan.a.why': "برنامهٔ کاری را اپ ساخته: این جواب یک آدم می‌خواهد.",
     // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
-    'c.harvest.a.why': "می‌پرسند چند ردیف: این جواب یک عدد می‌گوید، و اینکه چقدر مانده.", // nagelezen (2e lezing)
-    'c.greensafe.a.why': "تازه سم‌پاشی شده: این جواب می‌گوید هنوز نه، و چرا.", // nagelezen (2e lezing)
+    'c.harvest.a.why': "می‌پرسند چند ردیف: این جواب یک عدد می‌گوید، و اینکه چقدر مانده.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.a.why': "تازه سم‌پاشی شده: این جواب می‌گوید هنوز نه، و چرا.", // nagelezen (2e lezing) // nagelezen AI 22 nov
     // nagelezen (2e lezing): why the chat replies of the new lessons fit (30 October 2026).
-    'c.details.a.why': "نام خانوادگی را می‌پرسند: این جواب آن را می‌گوید و پیشنهاد می‌کند هجی‌اش کند.",
-    'c.dates.a.why': "تاریخ را می‌پرسند: این جواب روز و تاریخ را می‌گوید.",
-    'c.permit.a.why': "«نه» گفتن با یک دلیل اشکالی ندارد. پیشنهاد یک روز دیگر کمک می‌کند.",
-    'c.kids.a.why': "می‌پرسند چرا: این جواب دلیل را می‌گوید، مهدکودک زنگ زده.",
-    'c.body.a.why': "می‌پرسند کجا درد می‌کند: این جواب جا و علت را می‌گوید.",
-    'c.jobends.a.why': "خانه به کار وابسته است: این جواب مهلت اطلاع قبلی را می‌پرسد.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.details.a.why': "نام خانوادگی را می‌پرسند: این جواب آن را می‌گوید و پیشنهاد می‌کند هجی‌اش کند.", // nagelezen AI 22 nov
+    'c.dates.a.why': "تاریخ را می‌پرسند: این جواب روز و تاریخ را می‌گوید.", // nagelezen AI 22 nov
+    'c.permit.a.why': "«نه» گفتن با یک دلیل اشکالی ندارد. پیشنهاد یک روز دیگر کمک می‌کند.", // nagelezen AI 22 nov
+    'c.kids.a.why': "می‌پرسند چرا: این جواب دلیل را می‌گوید، مهدکودک زنگ زده.", // nagelezen AI 22 nov
+    'c.body.a.why': "می‌پرسند کجا درد می‌کند: این جواب جا و علت را می‌گوید.", // nagelezen AI 22 nov
+    'c.jobends.a.why': "خانه به کار وابسته است: این جواب مهلت اطلاع قبلی را می‌پرسد.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     // Entree in the Taal track (30 October 2026), why the chat replies fit: nieuw, nalezen.
-    'c.workorder.a.why': "کلمه‌ای روشن نیست: پرسیدن پیش از شروع جواب درست است.", // nieuw, nalezen
-    'c.handover.a.why': "پرسیده‌اند همه‌چیز تمام است یا نه: این جواب می‌گوید چه چیزی تمام نشده، و چرا.", // nieuw, nalezen
-    'c.workshop.a.why': "پرسیده‌اند چرا: این جواب دلیل را می‌گوید، چشم باید محافظت شود.", // nieuw, nalezen
-    'c.power.a.why': "کار روی لامپ: این جواب اول می‌پرسد برق قطع است یا نه.", // nieuw, nalezen
-    'c.garage.a.why': "خواسته‌اند لاستیک‌ها را عوض کند: یک بله، و سؤالی دربارهٔ جای لاستیک‌ها.", // nieuw, nalezen
-    'c.carjob.a.why': "کار اضافه: مشتری باید اول موافقت کند، پس این جواب از سرپرست می‌پرسد.", // nieuw, nalezen
-    'c.placement.a.why': "پرسیده‌اند کِی: این جواب روز را می‌گوید، و قرارداد اول است.", // nieuw, nalezen
-    'c.review.a.why': "بازخورد هنوز روشن نیست: خواستن اینکه نشان بدهند جواب خوبی است.", // nieuw, nalezen
-    'c.council.a.why': "دربارهٔ رأی دادن: یک بله، و دو چیزی که باید همراه برد.", // nieuw, nalezen
-    'c.police.a.why': "پلیس مدرک شناسایی می‌خواهد: نشانش بده و بپرس چه شده.", // nieuw, nalezen
-    'c.login.a.why': "پرسیده‌اند ورود کار می‌کند یا نه: این جواب نه می‌گوید، و چرا.", // nieuw, nalezen
-    'c.phish.a.why': "دربارهٔ لینک: یک بلهٔ صادقانه، و یک تماس با بخش IT.", // nieuw, nalezen
-    'c.mychoice.a.why': "پرسیده‌اند نقطهٔ قوت چیست: این جواب یکی را با مثال می‌گوید.", // nieuw, nalezen
-    'c.nextstep.a.why': "پرسیده‌اند برنامه چیست: این جواب bbl را می‌گوید و معنایش را.", // nieuw, nalezen
-    'c.email.a.why': "پرسیده‌اند فرستاده شده یا نه: هنوز نه، اول بررسی می‌شود.", // nieuw, nalezen
-    'c.budget.a.why': "پیشنهاد «بعداً بپرداز»: یک نهٔ مؤدبانه، با دلیل.", // nieuw, nalezen
-    'c.healthy.a.why': "پیشنهاد قرص: یک نهٔ مؤدبانه، با دلیل.", // nieuw, nalezen
-    'd.newcolleague.a.why': "«فکر کنم» یعنی هنوز مطمئن نیست: وقتی بخواهی نشان بدهد، معلوم می‌شود که درست کار می‌کند یا نه.", // nieuw, nalezen
-    'c.food.a.why': "پرسیده‌اند چرا خط را تمیز می‌کنند: محصول بعدی آجیل ندارد.", // nieuw, nalezen
-    'c.parcel.a.why': "پرسیده‌اند بسته مال اوست یا نه: بله، و بعد امضا.", // nieuw, nalezen
-    'c.road.a.why': "یک سرویس دیگر خواسته‌اند: نه، چون اول استراحت است.", // nieuw, nalezen
-    'c.backtowork.a.why': "پرسیده‌اند حالت چطور است: یک بلهٔ کوتاه، و اینکه آرام‌آرام پیش می‌روی.", // nieuw, nalezen
-    'c.feelwell.a.why': "پرسیده‌اند حالت چطور است: یک «نه چندان» صادقانه اشکالی ندارد.", // nieuw, nalezen
-    'c.measure.a.why': "پرسیده‌اند پهنا چقدر: یک عدد با واحدش، و نوشتن آن.", // nieuw, nalezen
-    'c.siteday.a.why': "پرسیده‌اند چوب کجا برود: یک جا، و اینکه آن جا کجاست.", // nieuw, nalezen
-    'c.shifts.a.why': "پرسیده‌اند چه اتفاقی افتاد: بله، و چه چیزی، و چه مدت.", // nieuw, nalezen
-    'c.signals.a.why': "پرسیده‌اند حالش چطور است: چیزی که می‌بینی، و اینکه تازه است.", // nieuw, nalezen
-    'c.transfer.a.why': "خواسته‌اند کسی را بلند کنی: تنهایی نه، اول بالابر.", // nieuw, nalezen
-    'c.dishes.a.why': "لیوان تمیز خواسته‌اند: بله، و اینکه کِی می‌رسد.", // nieuw, nalezen
-    'c.rush.a.why': "دستور سرآشپز: تکرارش می‌کنی، تا بداند شنیده‌ای.", // nieuw, nalezen
-    'c.rounds.a.why': "پرسیده‌اند دفتر تمیز شده یا نه: نه، با دلیل.", // nieuw, nalezen
-    'c.colours.a.why': "دربارهٔ یک دستمال پرسیده‌اند: نه، چون قرمز برای توالت است.", // nieuw, nalezen
-    'c.shophelp.a.why': "شیر خواسته‌اند: نه یک «نه»، بلکه نگاه کردن در انبار.", // nieuw, nalezen
-    'c.shoptrouble.a.why': "مشتری عصبانی: کلمه‌های آرام، و یک همکار می‌آید.", // nieuw, nalezen
-    'c.plantcare.a.why': "پرسیده‌اند کدام را بچینند: رنگ نشان می‌دهد کدام رسیده است.", // nieuw, nalezen
-    'c.outdoors.a.why': "رعد و برق در راه است: دست کشیدن و داخل رفتن کار ایمن است.", // nieuw, nalezen
-    'c.drawing.a.why': "پرسیده‌اند جا می‌رود یا نه: نه، و دوباره اندازه گرفتن قبل از زور زدن.", // nieuw, nalezen
-    'c.weld.a.why': "پرسیده‌اند می‌شود برداشت یا نه: هنوز نه، فلز داغ باید اول خنک شود.", // nieuw, nalezen
-    'c.carparts.a.why': "پرسیده‌اند چه می‌شنوی: کدام قطعه، و چه می‌کند.", // nieuw, nalezen
-    'c.carsafe.a.why': "پرسیده‌اند می‌شود کار را شروع کرد: هنوز نه، چون ماشین برقی است.", // nieuw, nalezen
+    'c.workorder.a.why': "کلمه‌ای روشن نیست: پرسیدن پیش از شروع جواب درست است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.a.why': "پرسیده‌اند همه‌چیز تمام است یا نه: این جواب می‌گوید چه چیزی تمام نشده، و چرا.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.a.why': "پرسیده‌اند چرا: این جواب دلیل را می‌گوید، چشم باید محافظت شود.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.a.why': "کار روی لامپ: این جواب اول می‌پرسد برق قطع است یا نه.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage.a.why': "خواسته‌اند لاستیک‌ها را عوض کند: یک بله، و سؤالی دربارهٔ جای لاستیک‌ها.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.a.why': "کار اضافه: مشتری باید اول موافقت کند، پس این جواب از سرپرست می‌پرسد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.a.why': "پرسیده‌اند کِی: این جواب روز را می‌گوید، و قرارداد اول است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.a.why': "بازخورد هنوز روشن نیست: خواستن اینکه نشان بدهند جواب خوبی است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.a.why': "دربارهٔ رأی دادن: یک بله، و دو چیزی که باید همراه برد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.a.why': "پلیس مدرک شناسایی می‌خواهد: نشانش بده و بپرس چه شده.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.a.why': "پرسیده‌اند ورود کار می‌کند یا نه: این جواب نه می‌گوید، و چرا.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.a.why': "دربارهٔ لینک: یک بلهٔ صادقانه، و یک تماس با بخش IT.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.a.why': "پرسیده‌اند نقطهٔ قوت چیست: این جواب یکی را با مثال می‌گوید.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.a.why': "پرسیده‌اند برنامه چیست: این جواب bbl را می‌گوید و معنایش را.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.a.why': "پرسیده‌اند فرستاده شده یا نه: هنوز نه، اول بررسی می‌شود.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.a.why': "پیشنهاد «بعداً بپرداز»: یک نهٔ مؤدبانه، با دلیل.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.a.why': "پیشنهاد قرص: یک نهٔ مؤدبانه، با دلیل.", // nieuw, nalezen // nagelezen AI 22 nov
+    'd.newcolleague.a.why': "«فکر کنم» یعنی هنوز مطمئن نیست: وقتی بخواهی نشان بدهد، معلوم می‌شود که درست کار می‌کند یا نه.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.a.why': "پرسیده‌اند چرا خط را تمیز می‌کنند: محصول بعدی آجیل ندارد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.a.why': "پرسیده‌اند بسته مال اوست یا نه: بله، و بعد امضا.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.a.why': "یک سرویس دیگر خواسته‌اند: نه، چون اول استراحت است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.a.why': "پرسیده‌اند حالت چطور است: یک بلهٔ کوتاه، و اینکه آرام‌آرام پیش می‌روی.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.a.why': "پرسیده‌اند حالت چطور است: یک «نه چندان» صادقانه اشکالی ندارد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.a.why': "پرسیده‌اند پهنا چقدر: یک عدد با واحدش، و نوشتن آن.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.a.why': "پرسیده‌اند چوب کجا برود: یک جا، و اینکه آن جا کجاست.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.a.why': "پرسیده‌اند چه اتفاقی افتاد: بله، و چه چیزی، و چه مدت.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.a.why': "پرسیده‌اند حالش چطور است: چیزی که می‌بینی، و اینکه تازه است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.a.why': "خواسته‌اند کسی را بلند کنی: تنهایی نه، اول بالابر.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.a.why': "لیوان تمیز خواسته‌اند: بله، و اینکه کِی می‌رسد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.a.why': "دستور سرآشپز: تکرارش می‌کنی، تا بداند شنیده‌ای.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.a.why': "پرسیده‌اند دفتر تمیز شده یا نه: نه، با دلیل.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.a.why': "دربارهٔ یک دستمال پرسیده‌اند: نه، چون قرمز برای توالت است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.a.why': "شیر خواسته‌اند: نه یک «نه»، بلکه نگاه کردن در انبار.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.a.why': "مشتری عصبانی: کلمه‌های آرام، و یک همکار می‌آید.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.a.why': "پرسیده‌اند کدام را بچینند: رنگ نشان می‌دهد کدام رسیده است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.a.why': "رعد و برق در راه است: دست کشیدن و داخل رفتن کار ایمن است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.a.why': "پرسیده‌اند جا می‌رود یا نه: نه، و دوباره اندازه گرفتن قبل از زور زدن.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.a.why': "پرسیده‌اند می‌شود برداشت یا نه: هنوز نه، فلز داغ باید اول خنک شود.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.a.why': "پرسیده‌اند چه می‌شنوی: کدام قطعه، و چه می‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.a.why': "پرسیده‌اند می‌شود کار را شروع کرد: هنوز نه، چون ماشین برقی است.", // nieuw, nalezen // nagelezen AI 22 nov
     // Goed communiceren en Feedback en overleg (5 nov 2026)
-    'd.explain.a.why': "پرسیده‌اند چه مشکلی هست: این جواب می‌گوید چه شده، و چه لازم است.", // nieuw, nalezen
-    'd.listen.a.why': "مطمئن نیستی شوخی است یا نه: پرسیدن بهتر از حدس زدن است.", // nieuw, nalezen
-    'd.calm.a.why': "پرسیده‌اند چرا تمام نشده: یک دلیل آرام، و اینکه اول چه کاری است.", // nieuw, nalezen
-    'd.talkintime.a.why': "کسی کمی وقت می‌خواهد: یک بله، و یک سؤال تا بتواند تعریف کند.", // nieuw, nalezen
-    'd.reachable.a.why': "زنگ زدن بعد از یک تماس بی‌پاسخ: یک سلام، و اینکه چرا زنگ می‌زنی.", // nieuw, nalezen
-    'd.getfeedback.a.why': "پیشنهاد بازخورد: یک بله، و اینکه می‌خواهی کار را خوب انجام بدهی.", // nieuw, nalezen
-    'd.givefeedback.a.why': "پرسیده‌اند کارش چطور است: اول چیزی که خوب است، بعد چیزی که می‌تواند بهتر شود.", // nieuw, nalezen
-    'd.meeting.a.why': "پرسیده‌اند سؤالی هست: این جواب یک سؤال می‌پرسد، دربارهٔ برنامهٔ کاری.", // nieuw, nalezen
+    'd.explain.a.why': "پرسیده‌اند چه مشکلی هست: این جواب می‌گوید چه شده، و چه لازم است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'd.listen.a.why': "مطمئن نیستی شوخی است یا نه: پرسیدن بهتر از حدس زدن است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'd.calm.a.why': "پرسیده‌اند چرا تمام نشده: یک دلیل آرام، و اینکه اول چه کاری است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'd.talkintime.a.why': "کسی کمی وقت می‌خواهد: یک بله، و یک سؤال تا بتواند تعریف کند.", // nieuw, nalezen // nagelezen AI 22 nov
+    'd.reachable.a.why': "زنگ زدن بعد از یک تماس بی‌پاسخ: یک سلام، و اینکه چرا زنگ می‌زنی.", // nieuw, nalezen // nagelezen AI 22 nov
+    'd.getfeedback.a.why': "پیشنهاد بازخورد: یک بله، و اینکه می‌خواهی کار را خوب انجام بدهی.", // nieuw, nalezen // nagelezen AI 22 nov
+    'd.givefeedback.a.why': "پرسیده‌اند کارش چطور است: اول چیزی که خوب است، بعد چیزی که می‌تواند بهتر شود.", // nieuw, nalezen // nagelezen AI 22 nov
+    'd.meeting.a.why': "پرسیده‌اند سؤالی هست: این جواب یک سؤال می‌پرسد، دربارهٔ برنامهٔ کاری.", // nieuw, nalezen // nagelezen AI 22 nov
     // Logistiek at four lessons per unit (14 November 2026).
-    'c.picking.a.why': "پرسیده‌اند کدام محل: راهرو و خانهٔ قفسه.", // nieuw, nalezen
-    'c.loading.a.why': "پرسیده‌اند پالت آماده است یا نه: نه، و اینکه هنوز چه لازم دارد.", // nieuw, nalezen
-    'c.vancheck.a.why': "پرسیده‌اند ون خوب است یا نه: نه، و اینکه چه چیزی خراب است.", // nieuw, nalezen
-    'c.delay.a.why': "پرسیده‌اند کجایی: جا، و اینکه چقدر دیر می‌رسی.", // nieuw, nalezen
+    'c.picking.a.why': "پرسیده‌اند کدام محل: راهرو و خانهٔ قفسه.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.loading.a.why': "پرسیده‌اند پالت آماده است یا نه: نه، و اینکه هنوز چه لازم دارد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.a.why': "پرسیده‌اند ون خوب است یا نه: نه، و اینکه چه چیزی خراب است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.a.why': "پرسیده‌اند کجایی: جا، و اینکه چقدر دیر می‌رسی.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Hulp vragen" at four lessons (14 November 2026).
-    'c.howto.a.why': "پرسیده‌اند می‌دانی چطور یا نه: نه، هنوز نه، و روراست گفته شده.", // nieuw, nalezen
-    'c.mayask.a.why': "پرسیده‌اند سؤالی داری یا نه: بله، و اول اینکه وقت هست یا نه.", // nieuw, nalezen
-    'c.whereis.a.why': "پرسیده‌اند می‌توانی پیدایش کنی یا نه: نه، و خواهشِ نشان دادنش.", // nieuw, nalezen
+    'c.howto.a.why': "پرسیده‌اند می‌دانی چطور یا نه: نه، هنوز نه، و روراست گفته شده.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.a.why': "پرسیده‌اند سؤالی داری یا نه: بله، و اول اینکه وقت هست یا نه.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.whereis.a.why': "پرسیده‌اند می‌توانی پیدایش کنی یا نه: نه، و خواهشِ نشان دادنش.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Instructies", a new basis unit (u.do, 14 November 2026).
-    'c.putdown.a.why': "خواسته‌اند چیزی را نگه دارد: بله، و می‌پرسد کجا بگذارد.", // nieuw, nalezen
-    'c.onoff.a.why': "پرسیده‌اند در بسته است یا نه: نه، و الان آن را می‌بندد.", // nieuw, nalezen
-    'c.fillempty.a.why': "پرسیده‌اند پر شده یا نه: بله، و آن را خالی می‌کند.", // nieuw, nalezen
-    'c.order.a.why': "خواسته‌اند الان انجامش بدهد: بله، و می‌پرسد بعدش چه.", // nieuw, nalezen
+    'c.putdown.a.why': "خواسته‌اند چیزی را نگه دارد: بله، و می‌پرسد کجا بگذارد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.a.why': "پرسیده‌اند در بسته است یا نه: نه، و الان آن را می‌بندد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.a.why': "پرسیده‌اند پر شده یا نه: بله، و آن را خالی می‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.a.why': "خواسته‌اند الان انجامش بدهد: بله، و می‌پرسد بعدش چه.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Tegels, stuc en verf", a new sector unit of Bouw (u.afbouw, 20 November 2026).
-    'c.tiletools.a.why': "پرسیده‌اند همزن کجاست: یک جا، و چیزی که نزدیکش است.", // nieuw, nalezen
-    'c.tiling.a.why': "پرسیده‌اند از کجا شروع کند: از وسط، روی خط وسط.", // nieuw, nalezen
-    'c.plaster.a.why': "پرسیده‌اند دیوار خشک شده یا نه: نه، و چقدر باید صبر کرد.", // nieuw, nalezen
+    'c.tiletools.a.why': "پرسیده‌اند همزن کجاست: یک جا، و چیزی که نزدیکش است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.a.why': "پرسیده‌اند از کجا شروع کند: از وسط، روی خط وسط.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.a.why': "پرسیده‌اند دیوار خشک شده یا نه: نه، و چقدر باید صبر کرد.", // nieuw, nalezen // nagelezen AI 22 nov
     // l.paint, l.prep, "Metselen, hout en vastmaken", three lessons of Rekenen and "Machines en gereedschap" (20-21 November 2026).
-    'c.shapes.a.why': "پرسیده‌اند مربع است یا نه: نه، مستطیل، و چرا.", // nieuw, nalezen
-    'c.angles.a.why': "پرسیده‌اند چند درجه: عدد، و اینکه نصفِ چیست.", // nieuw, nalezen
-    'c.size.a.why': "پرسیده‌اند کف چقدر بزرگ است: حساب، و جواب.", // nieuw, nalezen
-    'c.paint.a.why': "پرسیده‌اند کدام قلم‌مو: پهن برای دیوار، کوچک برای گوشه‌ها.", // nieuw, nalezen
-    'c.prep.a.why': "پرسیده‌اند می‌شود رنگ زد یا نه: نه، و اینکه اول چه کاری باید کرد.", // nieuw, nalezen
-    'c.brick.a.why': "پرسیده‌اند چند آجر مانده: یک پالت، و اینکه بس است.", // nieuw, nalezen
-    'c.wall.a.why': "پرسیده‌اند ردیف چقدر باید بلند باشد: جایی که می‌شود آن را دید.", // nieuw, nalezen
-    'c.wood.a.why': "پرسیده‌اند کدام اره: ارهٔ پشت‌دار، و چرا.", // nieuw, nalezen
-    'c.square.a.why': "پرسیده‌اند زاویه قائمه است یا نه: بله، و از کجا معلوم است.", // nieuw, nalezen
-    'c.screw.a.why': "پرسیده‌اند دریل کجاست: یک جا، و اینکه تقریباً پر است.", // nieuw, nalezen
-    'c.fix.a.why': "پرسیده‌اند قفسه را چطور محکم کند: با چه چیزی، و چند تا.", // nieuw, nalezen
-    'c.atmachine.a.why': "پرسیده‌اند چرا می‌ایستد: حسگر، و چیزی که نمی‌بیند.", // nieuw, nalezen
-    'c.inspect.a.why': "پرسیده‌اند هر چند وقت یک بار: ساعتی یک بار، و کجا باید نوشت.", // nieuw, nalezen
-    'c.packing.a.why': "پرسیده‌اند در هر جعبه چند تا: عدد، و جایی که نوشته شده.", // nieuw, nalezen
-    'c.upkeep.a.why': "پرسیده‌اند کی: روز هفته، و وقتش در آن روز.", // nieuw, nalezen
+    'c.shapes.a.why': "پرسیده‌اند مربع است یا نه: نه، مستطیل، و چرا.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.a.why': "پرسیده‌اند چند درجه: عدد، و اینکه نصفِ چیست.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.a.why': "پرسیده‌اند کف چقدر بزرگ است: حساب، و جواب.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.a.why': "پرسیده‌اند کدام قلم‌مو: پهن برای دیوار، کوچک برای گوشه‌ها.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.a.why': "پرسیده‌اند می‌شود رنگ زد یا نه: نه، و اینکه اول چه کاری باید کرد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.a.why': "پرسیده‌اند چند آجر مانده: یک پالت، و اینکه بس است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.a.why': "پرسیده‌اند ردیف چقدر باید بلند باشد: جایی که می‌شود آن را دید.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.a.why': "پرسیده‌اند کدام اره: ارهٔ پشت‌دار، و چرا.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.a.why': "پرسیده‌اند زاویه قائمه است یا نه: بله، و از کجا معلوم است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.a.why': "پرسیده‌اند دریل کجاست: یک جا، و اینکه تقریباً پر است.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.a.why': "پرسیده‌اند قفسه را چطور محکم کند: با چه چیزی، و چند تا.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.a.why': "پرسیده‌اند چرا می‌ایستد: حسگر، و چیزی که نمی‌بیند.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.a.why': "پرسیده‌اند هر چند وقت یک بار: ساعتی یک بار، و کجا باید نوشت.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.a.why': "پرسیده‌اند در هر جعبه چند تا: عدد، و جایی که نوشته شده.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.a.why': "پرسیده‌اند کی: روز هفته، و وقتش در آن روز.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
-    'c.wiring.a.why': "پرسیده‌اند کدام سیم کجا می‌رود: هر رنگ به همان رنگ.", // nieuw, nalezen
-    'c.testing.a.why': "پرسیده‌اند اجازه دارد بازش کند یا نه: نه، و اینکه چه کسی این کار را می‌کند.", // nieuw, nalezen
-    'c.pipes.a.why': "پرسیده‌اند هنوز نشت می‌کند یا نه: کمی، و کاری که برایش انجام می‌دهد.", // nieuw, nalezen
-    'c.metalwork.a.why': "پرسیده‌اند چرا تیز است: هنوز پلیسه دارد.", // nieuw, nalezen
+    'c.wiring.a.why': "پرسیده‌اند کدام سیم کجا می‌رود: هر رنگ به همان رنگ.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.a.why': "پرسیده‌اند اجازه دارد بازش کند یا نه: نه، و اینکه چه کسی این کار را می‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.a.why': "پرسیده‌اند هنوز نشت می‌کند یا نه: کمی، و کاری که برایش انجام می‌دهد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.a.why': "پرسیده‌اند چرا تیز است: هنوز پلیسه دارد.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Assemblage en montage" (u.montage, 21 November 2026).
-    'c.assembly.a.why': "پرسیده‌اند کدام مرحله: شماره‌اش، و کجا باید نگاه کرد.", // nieuw, nalezen
-    'c.fastening.a.why': "پرسیده‌اند چقدر سفت: تا وقتی آچار تق صدا بدهد.", // nieuw, nalezen
-    'c.handling.a.why': "پرسیده‌اند اجازه دارد آنجا بایستد یا نه: نه، هیچ‌وقت، و چرا.", // nieuw, nalezen
-    'c.finalcheck.a.why': "پرسیده‌اند سالم است یا نه: نه، و چه ایرادی دارد.", // nieuw, nalezen
+    'c.assembly.a.why': "پرسیده‌اند کدام مرحله: شماره‌اش، و کجا باید نگاه کرد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.a.why': "پرسیده‌اند چقدر سفت: تا وقتی آچار تق صدا بدهد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.a.why': "پرسیده‌اند اجازه دارد آنجا بایستد یا نه: نه، هیچ‌وقت، و چرا.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.a.why': "پرسیده‌اند سالم است یا نه: نه، و چه ایرادی دارد.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
-    'c.sowing.a.why': "پرسیده‌اند چقدر عمیق: اندازه‌اش، و نه عمیق‌تر.", // nieuw, nalezen
-    'c.sorting.a.why': "پرسیده‌اند رسیده است یا نه: نه، زیادی سبز است، و چه باید کرد.", // nieuw, nalezen
-    'c.greenhouse.a.why': "پرسیده‌اند چرا گرم است: پرده و دریچه‌ها بسته‌اند.", // nieuw, nalezen
-    'c.pests.a.why': "پرسیده‌اند اجازه دارد آن را بکشد یا نه: نه، و چرا کمک می‌کند.", // nieuw, nalezen
-    'c.tyres.a.why': "پرسیده‌اند باید عوض شوند یا نه: بله، و چرا.", // nieuw, nalezen
-    'c.oilchange.a.why': "پرسیده‌اند چقدر: چند لیتر، و طرز بررسی‌اش.", // nieuw, nalezen
-    'c.brakes.a.why': "پرسیده‌اند باید نو شود یا نه: بله، و چرا.", // nieuw, nalezen
-    'c.diagnosis.a.why': "پرسیده‌اند چه کاری باید انجام شود: نگاه کردن به برگهٔ کار.", // nieuw, nalezen
+    'c.sowing.a.why': "پرسیده‌اند چقدر عمیق: اندازه‌اش، و نه عمیق‌تر.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.a.why': "پرسیده‌اند رسیده است یا نه: نه، زیادی سبز است، و چه باید کرد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.a.why': "پرسیده‌اند چرا گرم است: پرده و دریچه‌ها بسته‌اند.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.a.why': "پرسیده‌اند اجازه دارد آن را بکشد یا نه: نه، و چرا کمک می‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.a.why': "پرسیده‌اند باید عوض شوند یا نه: بله، و چرا.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.a.why': "پرسیده‌اند چقدر: چند لیتر، و طرز بررسی‌اش.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.a.why': "پرسیده‌اند باید نو شود یا نه: بله، و چرا.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.a.why': "پرسیده‌اند چه کاری باید انجام شود: نگاه کردن به برگهٔ کار.", // nieuw, nalezen // nagelezen AI 22 nov
   },
 };
 

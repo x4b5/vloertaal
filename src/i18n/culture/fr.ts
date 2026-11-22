@@ -18,16 +18,16 @@ const t: CultureTranslation = {
     'c.je.p': 'Je peux te dire “je” ?',
     'c.je.s': 'Ta nouvelle responsable dit : “Zeg maar je, hoor!” Qu’est-ce qu’elle veut dire ?',
     'c.je.o1': 'Elle veut que tu lui dises “je”.',
-    'c.je.o2': 'Elle te demande de dire quelque chose.', // nagelezen (2e lezing)
-    'c.je.o3': 'Elle veut que tu parles plus poliment.', // nagelezen (2e lezing)
+    'c.je.o2': 'Elle te demande de dire quelque chose.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.je.o3': 'Elle veut que tu parles plus poliment.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.je.w': '“Zeg maar je”, c’est gentil : elle veut moins de distance. Dans beaucoup d’entreprises néerlandaises, c’est normal de dire “je” à un responsable.',
     'c.names': 'Le prénom et une poignée de main',
     'c.names.b': 'Le premier jour, serre la main rapidement, regarde la personne et dis ton prénom. Les collègues et les responsables utilisent en général les prénoms.',
     'c.names.p': { m: 'Salut, je suis Ali. Je suis nouveau ici.', f: 'Salut, je suis Ali. Je suis nouvelle ici.', x: 'Salut, je suis Ali. Je suis nouveau / nouvelle ici.' },
     'c.names.s': 'Un collègue vient vers toi : “Hoi, ik ben Mark.” Que fais-tu ?',
-    'c.names.o1': 'Serre-lui la main et dis ton nom.', // nagelezen (2e lezing)
-    'c.names.o2': 'Fais oui de la tête, souris et attends les questions.', // nagelezen (2e lezing)
-    'c.names.o3': 'Serre-lui la main et appelle-le “meneer” (monsieur).', // nagelezen (2e lezing)
+    'c.names.o1': 'Serre-lui la main et dis ton nom.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.names.o2': 'Fais oui de la tête, souris et attends les questions.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.names.o3': 'Serre-lui la main et appelle-le “meneer” (monsieur).', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.names.w': 'Se présenter rapidement avec son prénom, c’est le début normal. Ça aide les collègues à se souvenir de toi et à t’inviter.',
     'c.arrive': 'Ton premier jour : où aller',
     'c.arrive.b': 'Le premier jour, va d’abord à l’accueil ou à l’entrée principale. Dis ton nom, ton agence si tu en as une, et qui tu dois voir. Beaucoup d’entreprises te donnent un parrain ou une marraine : tu peux tout lui demander.',
@@ -41,10 +41,10 @@ const t: CultureTranslation = {
     'c.ask.b': 'Poser une question montre que tu veux bien faire ton travail. Faire oui de la tête quand tu ne comprends pas peut causer des erreurs ou des accidents. Redemander, c’est tout à fait normal.',
     'c.ask.p': 'Pardon, je ne comprends pas. Tu peux me l’expliquer encore une fois ?',
     'c.ask.s': 'Ton responsable explique une tâche très vite. Tu n’as pas compris. Que fais-tu ?',
-    'c.ask.o1': 'Demande qu’on t’explique encore une fois.', // nagelezen (2e lezing)
+    'c.ask.o1': 'Demande qu’on t’explique encore une fois.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.ask.o2': 'Fais oui de la tête et essaie de deviner.',
-    'c.ask.o3': 'Excuse-toi pour ton néerlandais et commence à travailler.', // nagelezen (2e lezing)
-    'c.ask.w': 'Ici, les responsables s’attendent à des questions. Mieux vaut demander deux fois que faire une erreur.', // nieuw, nalezen
+    'c.ask.o3': 'Excuse-toi pour ton néerlandais et commence à travailler.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.ask.w': 'Ici, les responsables s’attendent à des questions. Mieux vaut demander deux fois que faire une erreur.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.gear': 'Les règles de sécurité sont pour tout le monde',
     'c.gear.b': 'Les règles sur les casques, les chaussures et les gants ne sont pas des conseils : tout le monde les suit, même le patron. Ton employeur doit te donner gratuitement l’équipement de protection dont tu as besoin. Un équipement qui ne te va pas te protège mal. Alors demande ta taille : “Heb je dit ook in mijn maat?”',
     'c.gear.p': 'Mes gants sont abîmés. Où est-ce que j’en trouve de nouveaux ?',
@@ -55,30 +55,30 @@ const t: CultureTranslation = {
     'c.gear.w': 'L’équipement de protection, c’est le rôle de l’employeur. Le demander est normal et montre que tu prends la sécurité au sérieux.',
     'c.unsafe': 'Dis-le quand c’est dangereux',
     'c.unsafe.b': 'Si quelque chose est dangereux, dis-le tout de suite, aussi à ton patron. Tu as le droit d’arrêter un travail vraiment dangereux. Signale les accidents et les presque-accidents, même petits.',
-    'c.unsafe.p': 'Stop ! C’est dangereux.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.unsafe.p': 'Stop ! C’est dangereux.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.unsafe.s': 'Une palette est empilée trop haut et tombe presque. Personne n’est blessé. Que fais-tu ?',
     'c.unsafe.o1': 'Préviens les collègues et dis-le à ton responsable.',
     'c.unsafe.o2': 'Ne dis rien, car il ne s’est rien passé.',
-    'c.unsafe.o3': 'Répare toi-même la palette et ne le dis à personne.', // nieuw, nalezen
+    'c.unsafe.o3': 'Répare toi-même la palette et ne le dis à personne.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.unsafe.w': 'Un presque-accident est un avertissement. Le signaler aide à éviter un vrai accident. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé.',
-    'c.alarm': 'L’alarme sonne : arrête-toi et sors', // nieuw, nalezen
-    'c.alarm.b': 'Le premier jour, demande où sont les sorties de secours et le point de rassemblement. Quand l’alarme sonne, arrête tout de suite ton travail. Laisse tes affaires et sors par le chemin d’évacuation. Prends l’escalier, jamais l’ascenseur. Au point de rassemblement, on compte qui est dehors : alors reste là. Sors aussi quand tu penses que c’est seulement un exercice.', // nieuw, nalezen
-    'c.alarm.p': { m: 'Je suis nouveau. Où est le point de rassemblement ?', f: 'Je suis nouvelle. Où est le point de rassemblement ?', x: 'Je suis nouveau / nouvelle. Où est le point de rassemblement ?' }, // nieuw, nalezen
-    'c.alarm.s': 'L’alarme incendie sonne. Tu as presque fini une commande. Que fais-tu ?', // nieuw, nalezen
-    'c.alarm.o1': 'Arrête-toi tout de suite et va au point de rassemblement.', // nieuw, nalezen
-    'c.alarm.o2': 'Finis d’abord la commande, puis sors.', // nieuw, nalezen
-    'c.alarm.o3': 'Va d’abord chercher ta veste et ton téléphone au casier.', // nieuw, nalezen
-    'c.alarm.w': 'La fumée se répand vite, donc tu sors tout de suite. Tes affaires peuvent attendre. Au point de rassemblement, on compte tout le monde : ainsi, personne ne doit te chercher à l’intérieur.', // nieuw, nalezen
+    'c.alarm': 'L’alarme sonne : arrête-toi et sors', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.b': 'Le premier jour, demande où sont les sorties de secours et le point de rassemblement. Quand l’alarme sonne, arrête tout de suite ton travail. Laisse tes affaires et sors par le chemin d’évacuation. Prends l’escalier, jamais l’ascenseur. Au point de rassemblement, on compte qui est dehors : donc reste là. Sors aussi quand tu penses que c’est seulement un exercice.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.p': { m: 'Je suis nouveau. Où est le point de rassemblement ?', f: 'Je suis nouvelle. Où est le point de rassemblement ?', x: 'Je suis nouveau / nouvelle. Où est le point de rassemblement ?' }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.s': 'L’alarme incendie sonne. Tu as presque fini une commande. Que fais-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.o1': 'Arrête-toi tout de suite et va au point de rassemblement.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.o2': 'Finis d’abord la commande, puis sors.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.o3': 'Va d’abord chercher ta veste et ton téléphone au casier.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.w': 'La fumée se répand vite, donc tu sors tout de suite. Tes affaires peuvent attendre. Au point de rassemblement, on compte tout le monde : ainsi, personne ne doit te chercher à l’intérieur.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.accident': 'Signale chaque accident',
-    'c.accident.b': 'Parle de chaque accident à ton responsable ou au BHV’er (le secouriste de l’entreprise), même d’un petit. Tu travailles via une agence ? Préviens aussi l’agence. En cas d’urgence, appelle d’abord le 112. L’entreprise où l’accident a eu lieu doit déclarer un accident grave à la Nederlandse Arbeidsinspectie (même si tu travailles via une agence) : quand quelqu’un meurt, est blessé pour toute sa vie ou doit rester à l’hôpital. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.accident.b': 'Parle de chaque accident à ton responsable ou au BHV’er (le secouriste de l’entreprise), même d’un petit. Tu travailles via une agence ? Préviens aussi l’agence. En cas d’urgence, appelle d’abord le 112. L’entreprise où l’accident a eu lieu doit déclarer un accident grave à la Nederlandse Arbeidsinspectie (même si tu travailles via une agence) : quand quelqu’un meurt, est blessé pour toute sa vie ou doit rester à l’hôpital. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.accident.p': 'Mon collègue est blessé. Où est le secouriste ?',
     'c.accident.s': 'Tu t’es fait mal au dos en soulevant quelque chose. Tu as peur de perdre ton travail. Que fais-tu ?',
-    'c.accident.o1': 'Signale-le à ton responsable le jour même.', // nagelezen (2e lezing)
+    'c.accident.o1': 'Signale-le à ton responsable le jour même.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.accident.o2': 'Ne dis rien, pour ne pas perdre ton travail.',
     'c.accident.o3': 'Attends de voir si la douleur part toute seule.',
-    'c.accident.w': 'Signale-le le jour même, même si ça semble petit : la douleur peut empirer plus tard. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé. Tu travailles via une agence ? Dis-le aussi à l’agence.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.accident.w': 'Signale-le le jour même, même si ça semble petit : la douleur peut empirer plus tard. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé. Tu travailles via une agence ? Dis-le aussi à l’agence.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.notyet': 'Pas encore appris ? Dis-le',
-    'c.notyet.b': 'L’entreprise où tu travailles doit t’expliquer comment faire ton travail en sécurité. N’utilise pas une machine ou un chariot élévateur si personne ne t’a appris à t’en servir. Dire “Dit heb ik nog niet geleerd” est normal ici : ça montre que tu travailles en sécurité.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.notyet.b': 'L’entreprise où tu travailles doit t’expliquer comment faire ton travail en sécurité. N’utilise pas une machine ou un chariot élévateur si personne ne t’a appris à t’en servir. Dire “Dit heb ik nog niet geleerd” est normal ici : ça montre que tu travailles en sécurité.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.notyet.p': 'Je n’ai pas encore appris ça. Tu peux me montrer comment faire ?',
     'c.notyet.s': 'Une matinée chargée. Ton responsable dit : “Pak jij even de heftruck? Het is makkelijk.” Tu n’as jamais conduit de chariot élévateur. Que fais-tu ?',
     'c.notyet.o1': 'Dis que tu ne l’as pas appris. Demande une formation.',
@@ -90,7 +90,7 @@ const t: CultureTranslation = {
     'c.direct.p': 'D’accord, alors comment il faut faire ?',
     'c.direct.s': 'Un collègue dit : “Nee, dat is fout. Die doos moet daar.” Que fais-tu ?',
     'c.direct.o1': 'Demande comment il faut faire et déplace le carton.',
-    'c.direct.o2': 'Excuse-toi plusieurs fois : ton collègue est en colère.', // nagelezen (2e lezing)
+    'c.direct.o2': 'Excuse-toi plusieurs fois : ton collègue est en colère.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.direct.o3': 'Ne dis rien et laisse le carton où il est.',
     'c.direct.w': 'Une remarque directe parle du travail, pas de toi. Demander “hoe moet het dan?” montre que tu veux apprendre.',
     'c.limits': 'Dis-le quand c’est trop lourd',
@@ -105,15 +105,15 @@ const t: CultureTranslation = {
     'c.time.b': 'Être à l’heure est très important. Beaucoup de gens arrivent cinq ou dix minutes avant le début du service. Si tu vas être en retard, envoie un message ou appelle avant le début de ton service, pas après.',
     'c.time.p': { m: 'Désolé, le bus a du retard. Je serai là à huit heures.', f: 'Désolée, le bus a du retard. Je serai là à huit heures.', x: 'Désolé / désolée, le bus a du retard. Je serai là à huit heures.' },
     'c.time.s': 'Ton bus a du retard et tu vas arriver 15 minutes en retard. Que fais-tu ?',
-    'c.time.o1': 'Préviens tout de suite ton responsable.', // nagelezen (2e lezing)
+    'c.time.o1': 'Préviens tout de suite ton responsable.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.time.o2': 'Explique-le quand tu arrives.',
     'c.time.o3': 'Ne va pas du tout au travail aujourd’hui.',
     'c.time.w': 'Prévenir tôt permet à l’équipe de s’organiser. Être en retard sans message est vu comme bien pire que le retard lui-même.',
     'c.sick': 'Comment te déclarer malade',
-    'c.sick.b': 'Appelle toi-même ton responsable, avant le début de ton service, sauf si ton entreprise a une autre règle. Tu travailles via une agence ? Préviens aussi l’agence. Tu n’as pas besoin de dire quelle maladie tu as. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.sick.b': 'Appelle toi-même ton responsable, avant le début de ton service, sauf si ton entreprise a une autre règle. Tu travailles via une agence ? Préviens aussi l’agence. Tu n’as pas besoin de dire quelle maladie tu as. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.sick.p': 'Je suis malade. Je ne peux pas venir travailler aujourd’hui.',
     'c.sick.s': 'Tu te réveilles avec de la fièvre. Ton service commence à 7 h 00. Que fais-tu ?',
-    'c.sick.o1': 'Appelle ton responsable avant 7 h 00.', // nagelezen (2e lezing)
+    'c.sick.o1': 'Appelle ton responsable avant 7 h 00.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.sick.o2': 'Demande à un collègue de le dire au patron plus tard.',
     'c.sick.o3': 'Reste à la maison et appelle demain.',
     'c.sick.w': 'Dans la plupart des entreprises aux Pays-Bas, la règle est de te déclarer malade toi-même et à temps. Ton employeur peut demander combien de temps ça va durer, mais pas quelle maladie tu as.',
@@ -121,7 +121,7 @@ const t: CultureTranslation = {
     'c.speakup.b': 'Ici, c’est normal et respecté de dire calmement quand quelque chose te gêne. Parle d’abord à la personne, à un moment calme. Utilise des phrases avec “ik” : “Ik vind het niet fijn dat ...”. Si ça n’aide pas, parle à ton responsable.',
     'c.speakup.p': 'Quelque chose me tracasse. On peut parler un moment ?',
     'c.speakup.s': 'Un collègue te laisse toujours le travail lourd. Ça te gêne. Que fais-tu ?',
-    'c.speakup.o1': 'Dis au collègue ce qui te gêne.', // nagelezen (2e lezing)
+    'c.speakup.o1': 'Dis au collègue ce qui te gêne.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.speakup.o2': 'Tais-toi et énerve-toi de plus en plus.',
     'c.speakup.o3': 'Plains-toi de lui à tous les autres collègues.',
     'c.speakup.w': 'Les collègues néerlandais préfèrent en général l’entendre directement. Le dire tôt et calmement garde une bonne relation.',
@@ -129,26 +129,26 @@ const t: CultureTranslation = {
     'c.no.b': 'Quand tu dis “ja”, les gens comptent dessus : un accord, c’est un accord. Alors c’est bien de dire “nee” ou “dat lukt niet” quand tu ne peux pas faire quelque chose. Dis-le à temps et, si tu peux, propose une autre solution.',
     'c.no.p': 'Non, aujourd’hui ce n’est pas possible. Demain, je peux.',
     'c.no.s': 'Ton responsable demande si tu peux faire des heures en plus samedi. Tu ne peux pas. Que fais-tu ?',
-    'c.no.o1': 'Dis non et propose un autre jour.', // nagelezen (2e lezing)
+    'c.no.o1': 'Dis non et propose un autre jour.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.no.o2': 'Dis oui et puis ne viens pas.',
-    'c.no.o3': 'Dis oui : on ne peut pas dire non à un chef.', // nagelezen (2e lezing)
+    'c.no.o3': 'Dis oui : on ne peut pas dire non à un chef.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.no.w': 'Un “nee” clair est respecté. Dire “ja” et ne pas venir casse beaucoup plus la confiance.',
     'c.task': 'Dis quand c’est fini, demande quand ce n’est pas clair',
     'c.task.b': 'Aux Pays-Bas, un responsable donne souvent une tâche en quelques mots. Quand c’est fini, tu le dis. Dire “ja” quand tu n’as pas compris cause souvent des erreurs. Redemander, ou demander qu’on te montre, est normal ici et pas impoli.',
     'c.task.p': 'Fini ! Qu’est-ce que je dois faire maintenant ?',
     'c.task.s': 'Ton responsable explique une tâche très vite. Tu n’as compris que la moitié. Que fais-tu ?',
-    'c.task.o1': 'Demande à le voir encore une fois.', // nagelezen (2e lezing)
-    'c.task.o2': 'Commence par la moitié que tu as comprise.', // nagelezen (2e lezing)
+    'c.task.o1': 'Demande à le voir encore une fois.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.task.o2': 'Commence par la moitié que tu as comprise.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.task.o3': 'Attends qu’un collègue le fasse.',
     'c.task.w': 'Redemander est normal et prend une minute. Réparer une erreur prend bien plus de temps. La plupart des responsables préfèrent montrer deux fois.',
-    'c.clear': 'Dis d’abord le plus important', // nieuw, nalezen
+    'c.clear': 'Dis d’abord le plus important', // nieuw, nalezen // nagelezen AI 22 nov
     'c.clear.b': 'Dans beaucoup de langues, il est poli de raconter d’abord toute l’histoire, et l’essentiel à la fin. Au travail ici, c’est l’inverse. Dis d’abord ce qui ne va pas ou ce dont tu as besoin. Ensuite, donne la raison. Parle calmement, et arrête-toi après deux ou trois phrases, pour que l’autre puisse poser une question. Dans un entretien d’embauche aussi : d’abord la réponse, puis un exemple. Parler lentement n’est pas impoli ici : ça aide les gens à te comprendre.',
-    'c.clear.p': 'Pardon, je le redis calmement.', // nieuw, nalezen
-    'c.clear.s': 'Tu arrives avec 20 minutes de retard. Ton responsable demande : “Wat is er?” Que fais-tu ?', // nieuw, nalezen
-    'c.clear.o1': 'Dis d’abord que tu es en retard et excuse-toi. Puis dis pourquoi.', // nieuw, nalezen
-    'c.clear.o2': 'Raconte tout ce qui s’est passé ce matin, depuis le début.', // nieuw, nalezen
-    'c.clear.o3': 'Ne dis rien et commence vite à travailler.', // nieuw, nalezen
-    'c.clear.w': 'Ton responsable veut d’abord savoir ce qui se passe. La raison vient après. Court et calme, c’est clair, et ici c’est aussi poli.', // nieuw, nalezen
+    'c.clear.p': 'Pardon, je le redis calmement.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.clear.s': 'Tu arrives avec 20 minutes de retard. Ton responsable demande : “Wat is er?” Que fais-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.clear.o1': 'Dis d’abord que tu es en retard et excuse-toi. Puis dis pourquoi.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.clear.o2': 'Raconte tout ce qui s’est passé ce matin, depuis le début.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.clear.o3': 'Ne dis rien et commence vite à travailler.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.clear.w': 'Ton responsable veut d’abord savoir ce qui se passe. La raison vient après. Court et calme, c’est clair, et ici c’est aussi poli.', // nieuw, nalezen // nagelezen AI 22 nov
     'u.teamwork': 'Travailler ensemble',
     'l.speakup': 'Quelque chose me gêne',
     'w.probleem': 'le problème',
@@ -210,14 +210,14 @@ const t: CultureTranslation = {
     's.newcolleague.3': "Les gants sont dans ce placard.", // nieuw, nalezen
     'd.newcolleague.q': "J’ai compris, je crois.", // nieuw, nalezen
     'd.newcolleague.a': "Bien. Montre-moi.", // nieuw, nalezen
-    'c.newcolleague': "Montre-le, étape par étape", // nieuw, nalezen
-    'c.newcolleague.b': "Ce qui était difficile pour toi les premières semaines l’est aussi pour un nouveau collègue. Explique le travail en petites étapes : d’abord ceci, puis cela. Ne parle pas plus vite ni plus fort : montre, et laisse-le refaire après toi. Ne demande pas “Snap je het?” : beaucoup de gens disent oui, même quand ils ne comprennent pas. Dis plutôt “Laat eens zien”, et regarde. Dis-lui où sont les choses, comme les toilettes, la cantine et les gants. Aie de la patience (geduld) : apprendre prend du temps, pour tout le monde.", // nieuw, nalezen
-    'c.newcolleague.p': "Bravo ! Maintenant, l’étape suivante.", // nieuw, nalezen
-    'c.newcolleague.s': "Tu expliques une tâche à un nouveau collègue. Il dit : “Ja, ja, ik snap het.” Que fais-tu ?", // nieuw, nalezen
-    'c.newcolleague.o1': "Tu dis “Laat eens zien,” et tu le regardes faire.", // nieuw, nalezen
-    'c.newcolleague.o2': "Tu dis “Goed zo,” et tu retournes à ton travail.", // nieuw, nalezen
-    'c.newcolleague.o3': "Tu réexpliques tout, plus vite et plus fort.", // nieuw, nalezen
-    'c.newcolleague.w': "Beaucoup de gens disent “ja”, même quand ils n’ont pas compris. Quand il le montre, vous voyez tous les deux si ça marche. C’est plus rapide que de corriger une erreur plus tard.", // nieuw, nalezen
+    'c.newcolleague': "Montre-le, étape par étape", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.newcolleague.b': "Ce qui était difficile pour toi les premières semaines l’est aussi pour un nouveau collègue. Explique le travail en petites étapes : d’abord ceci, puis cela. Ne parle pas plus vite ni plus fort : montre, et laisse-le refaire après toi. Ne demande pas “Snap je het?” : beaucoup de gens disent oui, même quand ils ne comprennent pas. Dis plutôt “Laat eens zien”, et regarde. Dis-lui où sont les choses, comme les toilettes, la cantine et les gants. Aie de la patience (geduld) : apprendre prend du temps, pour tout le monde.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.newcolleague.p': "Bravo ! Maintenant, l’étape suivante.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.newcolleague.s': "Tu expliques une tâche à un nouveau collègue. Il dit : “Ja, ja, ik snap het.” Que fais-tu ?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.newcolleague.o1': "Tu dis “Laat eens zien,” et tu le regardes faire.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.newcolleague.o2': "Tu dis “Goed zo,” et tu retournes à ton travail.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.newcolleague.o3': "Tu réexpliques tout, plus vite et plus fort.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.newcolleague.w': "Beaucoup de gens disent “ja”, même quand ils n’ont pas compris. Quand il le montre, vous voyez tous les deux si ça marche. C’est plus rapide que de corriger une erreur plus tard.", // nieuw, nalezen // nagelezen AI 22 nov
     'u.communicate': 'Bien communiquer', // nieuw, nalezen
     'l.explain': 'Dire ce qui ne va pas', // nieuw, nalezen
     'w.ietsmis': 'quelque chose ne va pas', // nieuw, nalezen
@@ -279,46 +279,46 @@ const t: CultureTranslation = {
     's.reachable.3': 'J’ai un nouveau numéro.', // nieuw, nalezen
     'd.reachable.q': 'Bonjour, ici le service planning.', // nieuw, nalezen
     'd.reachable.a': 'Bonjour. Vous avez appelé ? Pardon, j’ai manqué l’appel.', // nieuw, nalezen
-    'c.explain': 'Quoi, où, ce dont tu as besoin', // nieuw, nalezen
-    'c.explain.b': 'Quand quelque chose ne va pas au travail, dis-le en trois étapes. D’abord ce qui ne va pas : “De band staat stil.” Puis où : “Bij lijn twee.” Puis ce dont tu as besoin : “Kun je komen?” Maintenant l’autre sait quoi faire, sans beaucoup de questions. Tu ne connais pas le mot ? Montre la chose du doigt. C’est dangereux ? Dis-le d’abord : “Het is gevaarlijk.” Un accident ? D’abord, va chercher de l’aide (plus dans la leçon “Signaler un accident”).', // nieuw, nalezen
-    'c.explain.p': 'Tu peux venir voir ?', // nieuw, nalezen
-    'c.explain.s': 'Le scanner à ton poste ne marche plus. Tu appelles ton chef d’équipe. Que dis-tu ?', // nieuw, nalezen
-    'c.explain.o1': '“De scanner is kapot. Bij gang vier. Kun je komen?”', // nieuw, nalezen
-    'c.explain.o2': '“Hallo, ik heb een probleem.” Puis tu attends.', // nieuw, nalezen
-    'c.explain.o3': '“Sorry, sorry! Het is niet mijn schuld!”', // nieuw, nalezen
-    'c.explain.w': 'Maintenant ton chef d’équipe sait ce qui ne va pas, où, et ce dont tu as besoin. Personne ne doit d’abord poser trois questions.', // nieuw, nalezen
-    'c.listen': 'D’abord écouter, puis vérifier', // nieuw, nalezen
+    'c.explain': 'Quoi, où, ce dont tu as besoin', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.explain.b': 'Quand quelque chose ne va pas au travail, dis-le en trois étapes. D’abord ce qui ne va pas : “De band staat stil.” Puis où : “Bij lijn twee.” Puis ce dont tu as besoin : “Kun je komen?” Maintenant l’autre sait quoi faire, sans beaucoup de questions. Tu ne connais pas le mot ? Montre la chose du doigt. C’est dangereux ? Dis-le d’abord : “Het is gevaarlijk.” Un accident ? D’abord, va chercher de l’aide (plus dans la leçon “Signaler un accident”).', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.explain.p': 'Tu peux venir voir ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.explain.s': 'Le scanner à ton poste ne marche plus. Tu appelles ton chef d’équipe. Que dis-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.explain.o1': '“De scanner is kapot. Bij gang vier. Kun je komen?”', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.explain.o2': '“Hallo, ik heb een probleem.” Puis tu attends.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.explain.o3': '“Sorry, sorry! Het is niet mijn schuld!”', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.explain.w': 'Maintenant ton chef d’équipe sait ce qui ne va pas, où, et ce dont tu as besoin. Personne ne doit d’abord poser trois questions.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.listen': 'D’abord écouter, puis vérifier', // nieuw, nalezen // nagelezen AI 22 nov
     'c.listen.b': 'Laisse l’autre finir de parler (uitpraten) avant de répondre. Regarde la personne qui te parle : ici, ça montre que tu écoutes. Dans beaucoup de pays, on ne regarde pas son chef dans les yeux. C’est un signe de respect. Ici, le regarder de temps en temps est poli. Quand l’autre a fini, répète ce que tu as entendu : “Dus eerst …, en dan …?” Tu ne sais pas bien ce qu’un mot veut dire ? Demande : “Wat bedoel je met …?” Certains collègues font des blagues avec un air sérieux. Tu as un doute ? Demande : “Was dat een grapje?”',
-    'c.listen.p': 'Attends, je veux bien comprendre.', // nieuw, nalezen
-    'c.listen.s': 'Ta responsable explique une nouvelle tâche. Tu veux dire quelque chose, mais elle parle encore. Que fais-tu ?', // nieuw, nalezen
-    'c.listen.o1': 'Laisse-la finir. Puis répète ce que tu as entendu.', // nieuw, nalezen
-    'c.listen.o2': 'Commence tout de suite à parler, pour ne pas oublier.', // nieuw, nalezen
-    'c.listen.o3': 'Dis oui à tout et ne pose aucune question.', // nieuw, nalezen
-    'c.listen.w': 'Quand elle a fini, tu connais toute la tâche. Répéter montre que tu as écouté, et elle peut encore te corriger.', // nieuw, nalezen
-    'c.calm': 'Reste calme, même quand c’est dur', // nieuw, nalezen
-    'c.calm.b': 'Tout le monde se fâche parfois, au travail aussi. Quelqu’un est en colère contre toi ? Écoute d’abord, et reste calme. Tu n’as pas besoin de répondre tout de suite : “Mag ik even nadenken?” Tu t’énerves toi-même ? Respire lentement, et dis : “Kunnen we straks praten?” Parlez-en ensuite, quand le calme est revenu. Beaucoup de travail ? Demande ce qui doit être fait d’abord. Crier, menacer ou pousser, ce n’est jamais acceptable au travail. Dis stop, et préviens ton responsable (plus dans les leçons “Le respect pour tout le monde” et “Dépasser les limites”).', // nieuw, nalezen
-    'c.calm.p': 'Je pense que c’est un malentendu.', // nieuw, nalezen
-    'c.calm.s': 'Un collègue est en colère : la palette n’est pas au bon endroit. Tu penses que ce n’était pas toi. Que fais-tu ?', // nieuw, nalezen
-    'c.calm.o1': 'Reste calme, écoute, puis dis ce que tu sais.', // nieuw, nalezen
-    'c.calm.o2': 'Fâche-toi aussi, et parle plus fort.', // nieuw, nalezen
-    'c.calm.o3': 'Pars et ne lui parle plus.', // nieuw, nalezen
-    'c.calm.w': 'Quand tu restes calme, l’autre se calme souvent aussi. Vous pouvez alors chercher ce qui s’est passé, et régler ça ensemble.', // nieuw, nalezen
-    'c.talkintime': 'Parles-en tant que c’est petit', // nieuw, nalezen
-    'c.talkintime.b': 'Un petit problème devient grand quand tu n’en parles pas. Alors tu te fâches tout à coup, ou tu arrêtes tout à coup. Parle à temps : à ton responsable, à un collègue ou à la personne de confiance (vertrouwenspersoon), s’il y en a une. Demande un moment : “Heb je even tijd?” Dis en quelques mots quel est le problème et ce que tu veux. Tu penses à démissionner ? Parle d’abord. Il y a souvent une solution, comme un autre horaire ou une autre tâche. Si tu démissionnes toi-même, tu peux perdre ton allocation (uitkering), et il y a souvent un préavis (opzegtermijn). Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen
-    'c.talkintime.p': 'On peut chercher une solution ensemble ?', // nieuw, nalezen
-    'c.talkintime.s': 'Depuis des semaines, ton planning pose problème. Aujourd’hui, tu es en colère et tu veux arrêter tout de suite. Que fais-tu ?', // nieuw, nalezen
-    'c.talkintime.o1': 'Demande d’abord un entretien à ton responsable.', // nieuw, nalezen
-    'c.talkintime.o2': 'Pars maintenant et ne reviens pas.', // nieuw, nalezen
-    'c.talkintime.o3': 'Ne dis rien et continue.', // nieuw, nalezen
-    'c.talkintime.w': 'En parler à temps garde un problème petit. Il y a souvent une solution, et souvent tu gardes ainsi ton emploi et ton revenu.', // nieuw, nalezen
-    'c.reachable': 'Décroche, ou rappelle le jour même', // nieuw, nalezen
-    'c.reachable.b': 'Les agences et les employeurs appellent souvent quand il y a du travail. Souvent, la première personne qui décroche, ou qui rappelle, a le travail. Tu as manqué un appel ? Rappelle le jour même. Pas de téléphone au travail ? Rappelle pendant ta pause. Écoute ta messagerie vocale, et garde un peu de crédit (beltegoed) sur ton téléphone. Tu as du mal à comprendre au téléphone ? Dis-le, et demande : “Kunt u het ook appen?” Quelqu’un te demande de l’argent ou des codes ? Raccroche (plus dans la leçon “Attention aux arnaques”). Un nouveau numéro ? Donne-le à ton travail, à l’agence et à la mairie (gemeente).', // nieuw, nalezen
-    'c.reachable.p': 'Je vous rappelle pendant ma pause.', // nieuw, nalezen
-    'c.reachable.s': 'Pendant ta pause, tu vois un appel manqué de l’agence. Que fais-tu ?', // nieuw, nalezen
-    'c.reachable.o1': 'Rappelle maintenant, pendant ta pause.', // nieuw, nalezen
-    'c.reachable.o2': 'Attends qu’ils te rappellent.', // nieuw, nalezen
-    'c.reachable.o3': 'Rappelle la semaine prochaine, quand tu es libre.', // nieuw, nalezen
-    'c.reachable.w': 'Les agences appellent souvent quand il y a du travail. Quand tu rappelles le jour même, tu montres que tu le veux, et tu as peut-être le travail.', // nieuw, nalezen
+    'c.listen.p': 'Attends, je veux bien comprendre.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.listen.s': 'Ta responsable explique une nouvelle tâche. Tu veux dire quelque chose, mais elle parle encore. Que fais-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.listen.o1': 'Laisse-la finir. Puis répète ce que tu as entendu.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.listen.o2': 'Commence tout de suite à parler, pour ne pas oublier.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.listen.o3': 'Dis oui à tout et ne pose aucune question.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.listen.w': 'Quand elle a fini, tu connais toute la tâche. Répéter montre que tu as écouté, et elle peut encore te corriger.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.calm': 'Reste calme, même quand c’est dur', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.calm.b': 'Tout le monde se fâche parfois, au travail aussi. Quelqu’un est en colère contre toi ? Écoute d’abord, et reste calme. Tu n’as pas besoin de répondre tout de suite : “Mag ik even nadenken?” Tu t’énerves toi-même ? Respire lentement, et dis : “Kunnen we straks praten?” Ensuite, parle avec l’autre quand vous êtes calmes tous les deux. Beaucoup de travail ? Demande ce qui doit être fait d’abord. Crier, menacer ou pousser, ce n’est jamais acceptable au travail. Dis stop, et préviens ton responsable (plus dans les leçons “Le respect pour tout le monde” et “Dépasser les limites”).', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.calm.p': 'Je pense que c’est un malentendu.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.calm.s': 'Un collègue est en colère : la palette n’est pas au bon endroit. Tu penses que ce n’était pas toi. Que fais-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.calm.o1': 'Reste calme, écoute, puis dis ce que tu sais.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.calm.o2': 'Fâche-toi aussi, et parle plus fort.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.calm.o3': 'Pars et ne lui parle plus.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.calm.w': 'Quand tu restes calme, l’autre se calme souvent aussi. Vous pouvez alors chercher ce qui s’est passé, et régler ça ensemble.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.talkintime': 'Parles-en tant que c’est petit', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.talkintime.b': 'Un petit problème devient grand quand tu n’en parles pas. Alors tu te fâches tout à coup, ou tu arrêtes tout à coup. Parle à temps : à ton responsable, à un collègue ou à la personne de confiance (vertrouwenspersoon), s’il y en a une. Demande un moment : “Heb je even tijd?” Dis en quelques mots quel est le problème et ce que tu veux. Tu penses à démissionner ? Parle d’abord. Il y a souvent une solution, comme un autre horaire ou une autre tâche. Si tu démissionnes toi-même, tu peux perdre ton allocation (uitkering), et il y a souvent un préavis (opzegtermijn). Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.talkintime.p': 'On peut chercher une solution ensemble ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.talkintime.s': 'Depuis des semaines, ton planning pose problème. Aujourd’hui, tu es en colère et tu veux arrêter tout de suite. Que fais-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.talkintime.o1': 'Demande d’abord un entretien à ton responsable.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.talkintime.o2': 'Pars maintenant et ne reviens pas.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.talkintime.o3': 'Ne dis rien et continue.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.talkintime.w': 'Parler à temps permet de garder un problème petit. Il y a souvent une solution, et souvent tu gardes ainsi ton emploi et ton revenu.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.reachable': 'Décroche, ou rappelle le jour même', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.reachable.b': 'Les agences et les employeurs appellent souvent quand il y a du travail. Souvent, la première personne qui décroche, ou qui rappelle, a le travail. Tu as manqué un appel ? Rappelle le jour même. Pas de téléphone au travail ? Rappelle pendant ta pause. Écoute ta messagerie vocale, et garde un peu de crédit (beltegoed) sur ton téléphone. Tu as du mal à comprendre au téléphone ? Dis-le, et demande : “Kunt u het ook appen?” Quelqu’un te demande de l’argent ou des codes ? Raccroche (plus dans la leçon “Attention aux arnaques”). Un nouveau numéro ? Donne-le à ton travail, à l’agence et à la mairie (gemeente).', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.reachable.p': 'Je vous rappelle pendant ma pause.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.reachable.s': 'Pendant ta pause, tu vois un appel manqué de l’agence. Que fais-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.reachable.o1': 'Rappelle maintenant, pendant ta pause.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.reachable.o2': 'Attends qu’ils te rappellent.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.reachable.o3': 'Rappelle la semaine prochaine, quand tu es libre.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.reachable.w': 'Les agences appellent souvent quand il y a du travail. Quand tu rappelles le jour même, tu montres que tu le veux, et tu as peut-être le travail.', // nieuw, nalezen // nagelezen AI 22 nov
     'u.feedback': 'Feedback et réunions d’équipe', // nieuw, nalezen
     'l.getfeedback': 'Recevoir un feedback', // nieuw, nalezen
     'w.tip': 'le conseil, l’astuce (un petit conseil)', // nieuw, nalezen
@@ -356,72 +356,72 @@ const t: CultureTranslation = {
     's.meeting.3': 'J’ai une idée.', // nieuw, nalezen
     'd.meeting.q': 'Quelqu’un a encore une question ?', // nieuw, nalezen
     'd.meeting.a': 'Oui. Quand est-ce que le nouveau planning arrive ?', // nieuw, nalezen
-    'c.getfeedback': 'Le feedback parle de ton travail', // nieuw, nalezen
-    'c.getfeedback.b': 'Le feedback, c’est ce que quelqu’un dit de ton travail : ce qui va bien, et ce qui peut être mieux. Ça parle de ton travail, pas de toi. Au travail ici, le feedback est normal et sert à aider. Ce que tu dois faire autrement n’est pas clair ? Demande un exemple. Écoute d’abord, et ne te défends pas tout de suite. Ensuite, dis merci, et essaie. Tu peux aussi demander toi-même du feedback : “Wat kan ik beter doen?”', // nieuw, nalezen
-    'c.getfeedback.p': 'Merci. Tu peux donner un exemple ?', // nieuw, nalezen
-    'c.getfeedback.s': 'Ta responsable regarde ton travail et dit : “Dit kan beter.” Tu ne sais pas ce qu’elle veut dire. Que fais-tu ?', // nieuw, nalezen
-    'c.getfeedback.o1': 'Dis merci, et demande un exemple.', // nieuw, nalezen
-    'c.getfeedback.o2': 'Dis que tu as vraiment fait de ton mieux.', // nieuw, nalezen
-    'c.getfeedback.o3': 'Fais oui de la tête, et refais pareil.', // nieuw, nalezen
-    'c.getfeedback.w': 'Le feedback sert à t’aider. Un exemple montre ce qu’elle veut. Et un “merci” montre que tu écoutes.', // nieuw, nalezen
-    'c.givefeedback': 'Donner un feedback : d’abord le positif', // nieuw, nalezen
-    'c.givefeedback.b': 'Tu veux dire quelque chose sur le travail d’un collègue ? Dis d’abord ce qui va bien. Puis dis gentiment et clairement ce qui peut être mieux, avec un exemple. Dis-le au bon moment, à cette personne seule, pas quand tout le monde est là. Dis ce que tu vois, pas ce que tu penses de la personne : “Ik zie dat ...”. Reste aimable : tu veux aider, pas gagner.', // nieuw, nalezen
-    'c.givefeedback.p': 'Ça, tu le fais bien. Tu peux aussi fermer les cartons avec du ruban adhésif ?', // nieuw, nalezen
-    'c.givefeedback.s': 'Un nouveau collègue oublie de fermer les cartons avec du ruban adhésif. Vous êtes tous à la cantine. Que fais-tu ?', // nieuw, nalezen
-    'c.givefeedback.o1': 'Plus tard, seul à seul : d’abord ce qui va bien, puis les cartons.', // nieuw, nalezen
-    'c.givefeedback.o2': 'Dis-lui devant tout le monde que c’est mal fait.', // nieuw, nalezen
-    'c.givefeedback.o3': 'Ne dis rien, et ferme ses cartons toi-même.', // nieuw, nalezen
-    'c.givefeedback.w': 'Seul avec toi, il peut écouter sans avoir honte. Quand tu dis d’abord ce qui va bien, il entend mieux le reste.', // nieuw, nalezen
-    'c.meeting': 'Ta voix compte en réunion', // nieuw, nalezen
-    'c.meeting.b': 'Beaucoup d’équipes ont une courte réunion sur le travail (het werkoverleg). Ton avis y est le bienvenu, même si ton néerlandais n’est pas parfait. Une question est aussi une bonne contribution : d’autres veulent peut-être le savoir aussi. Attends ton tour, et laisse l’autre finir. Puis lève la main, ou dis : “Mag ik iets zeggen?” Tu n’oses pas le dire devant le groupe ? Dis-le à ton responsable après la réunion.', // nieuw, nalezen
-    'c.meeting.p': 'Je peux dire quelque chose ? J’ai une idée.', // nieuw, nalezen
-    'c.meeting.s': 'En réunion d’équipe, ta responsable explique le nouveau planning. Tu ne comprends pas quand ton service commence. Que fais-tu ?', // nieuw, nalezen
-    'c.meeting.o1': 'Quand elle s’arrête de parler, pose ta question.', // nieuw, nalezen
-    'c.meeting.o2': 'Ne dis rien, pour ne pas perdre de temps.', // nieuw, nalezen
-    'c.meeting.o3': 'Demande tout de suite, pendant qu’elle parle encore.', // nieuw, nalezen
-    'c.meeting.w': 'Une question est une bonne contribution : d’autres n’ont peut-être pas compris non plus. Quand tu attends ton tour, tout le monde peut l’entendre.', // nieuw, nalezen
+    'c.getfeedback': 'Le feedback parle de ton travail', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.getfeedback.b': 'Le feedback, c’est ce que quelqu’un dit de ton travail : ce qui va bien, et ce qui peut être mieux. Ça parle de ton travail, pas de toi. Au travail ici, le feedback est normal et sert à aider. Ce que tu dois faire autrement n’est pas clair ? Demande un exemple. Écoute d’abord, et ne te défends pas tout de suite. Ensuite, dis merci, et essaie. Tu peux aussi demander toi-même du feedback : “Wat kan ik beter doen?”', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.getfeedback.p': 'Merci. Tu peux donner un exemple ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.getfeedback.s': 'Ta responsable regarde ton travail et dit : “Dit kan beter.” Tu ne sais pas ce qu’elle veut dire. Que fais-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.getfeedback.o1': 'Dis merci, et demande un exemple.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.getfeedback.o2': 'Dis que tu as vraiment fait de ton mieux.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.getfeedback.o3': 'Fais oui de la tête, et refais pareil.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.getfeedback.w': 'Le feedback sert à t’aider. Un exemple montre ce qu’elle veut. Et un “merci” montre que tu écoutes.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.givefeedback': 'Donner un feedback : d’abord le positif', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.givefeedback.b': 'Tu veux dire quelque chose sur le travail d’un collègue ? Dis d’abord ce qui va bien. Puis dis gentiment et clairement ce qui peut être mieux, avec un exemple. Dis-le au bon moment, à cette personne seule, pas quand tout le monde est là. Dis ce que tu vois, pas ce que tu penses de la personne : “Ik zie dat ...”. Reste aimable : tu veux aider, pas gagner.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.givefeedback.p': 'Ça, tu le fais bien. Tu peux aussi fermer les cartons avec du ruban adhésif ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.givefeedback.s': 'Un nouveau collègue oublie de fermer les cartons avec du ruban adhésif. Vous êtes tous à la cantine. Que fais-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.givefeedback.o1': 'Plus tard, seul à seul : d’abord ce qui va bien, puis les cartons.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.givefeedback.o2': 'Dis-lui devant tout le monde que c’est mal fait.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.givefeedback.o3': 'Ne dis rien, et ferme ses cartons toi-même.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.givefeedback.w': 'Seul avec toi, il peut écouter sans avoir honte. Quand tu dis d’abord ce qui va bien, il entend mieux le reste.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.meeting': 'Ta voix compte en réunion', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.meeting.b': 'Beaucoup d’équipes ont une courte réunion sur le travail (het werkoverleg). Ton avis y est le bienvenu, même si ton néerlandais n’est pas parfait. Une question est aussi une bonne contribution : d’autres veulent peut-être le savoir aussi. Attends ton tour, et laisse l’autre finir. Puis lève la main, ou dis : “Mag ik iets zeggen?” Tu n’oses pas le dire devant le groupe ? Dis-le à ton responsable après la réunion.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.meeting.p': 'Je peux dire quelque chose ? J’ai une idée.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.meeting.s': 'En réunion d’équipe, ta responsable explique le nouveau planning. Tu ne comprends pas quand ton service commence. Que fais-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.meeting.o1': 'Quand elle s’arrête de parler, pose ta question.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.meeting.o2': 'Ne dis rien, pour ne pas perdre de temps.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.meeting.o3': 'Demande tout de suite, pendant qu’elle parle encore.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.meeting.w': 'Une question est une bonne contribution : d’autres n’ont peut-être pas compris non plus. Quand tu attends ton tour, tout le monde peut l’entendre.', // nieuw, nalezen // nagelezen AI 22 nov
     // Logistiek at four lessons per unit (14 November 2026).
-    'c.picking': "Un article manque ? Dis-le", // nieuw, nalezen
-    'c.picking.b': "La case est vide, ou l’article n’est pas là ? Ne prends pas un autre article qui ressemble : sinon le client reçoit la mauvaise chose. Dis-le à ton chef d’équipe, ou signale-le dans le scanner. Vérifie le numéro sur l’autocollant, pas seulement la couleur ou l’image. Travailler avec précision est plus important que travailler vite.", // nieuw, nalezen
-    'c.picking.p': "Cet article manque. Qu’est-ce que je dois faire ?", // nieuw, nalezen
-    'c.picking.s': "La case est vide. Dans la case d’à côté, il y a un article presque pareil. Que fais-tu ?", // nieuw, nalezen
-    'c.picking.o1': "Signale que l’article manque.", // nieuw, nalezen
-    'c.picking.o2': "Prends l’autre article : il est pareil.", // nieuw, nalezen
-    'c.picking.o3': "Saute l’article et ne dis rien.", // nieuw, nalezen
-    'c.picking.w': "Un mauvais article revient, et ça prend plus de temps que de demander. Quand tu le signales, quelqu’un peut remplir la case ou changer la commande.", // nieuw, nalezen
-    'c.loading': "Jamais derrière un camion qui recule", // nieuw, nalezen
-    'c.loading.b': { m: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vu. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte.", f: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vue. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte.", x: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vu / vue. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte." }, // nieuw, nalezen
-    'c.loading.p': "Attends un moment. Le camion recule.", // nieuw, nalezen
-    'c.loading.s': "Un camion recule vers la porte. Tu veux vite traverser derrière lui. Que fais-tu ?", // nieuw, nalezen
-    'c.loading.o1': "Attends que le camion soit à l’arrêt.", // nieuw, nalezen
-    'c.loading.o2': "Cours derrière : tu es assez rapide.", // nieuw, nalezen
-    'c.loading.o3': "Passe derrière et fais signe au chauffeur.", // nieuw, nalezen
-    'c.loading.w': "Derrière un camion, il y a un endroit que le chauffeur ne peut pas voir. Attendre coûte une minute. Un accident à cet endroit est très grave.", // nieuw, nalezen
+    'c.picking': "Un article manque ? Dis-le", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.picking.b': "La case est vide, ou l’article n’est pas là ? Ne prends pas un autre article qui lui ressemble : sinon le client reçoit la mauvaise chose. Dis-le à ton chef d’équipe, ou signale-le dans le scanner. Vérifie le numéro sur l’autocollant, pas seulement la couleur ou l’image. Travailler avec précision est plus important que travailler vite.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.picking.p': "Cet article manque. Qu’est-ce que je dois faire ?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.picking.s': "La case est vide. Dans la case d’à côté, il y a un article presque pareil. Que fais-tu ?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.picking.o1': "Signale que l’article manque.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.picking.o2': "Prends l’autre article : il est pareil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.picking.o3': "Saute l’article et ne dis rien.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.picking.w': "Un mauvais article revient, et ça prend plus de temps que de demander. Quand tu le signales, quelqu’un peut remplir la case ou changer la commande.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.loading': "Jamais derrière un camion qui recule", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.loading.b': { m: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vu. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte.", f: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vue. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte.", x: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vu / vue. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte." }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.loading.p': "Attends un moment. Le camion recule.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.loading.s': "Un camion recule vers la porte. Tu veux vite traverser derrière lui. Que fais-tu ?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.loading.o1': "Attends que le camion soit à l’arrêt.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.loading.o2': "Cours derrière : tu es assez rapide.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.loading.o3': "Passe derrière et fais signe au chauffeur.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.loading.w': "Derrière un camion, il y a un endroit que le chauffeur ne peut pas voir. Attendre coûte une minute. Un accident à cet endroit est très grave.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Hulp vragen" at four lessons (14 November 2026).
-    'c.howto': "Vérifie si tu fais bien", // nieuw, nalezen
-    'c.howto.b': "Tu ne sais pas bien comment faire une tâche ? Demande comment, ou demande à un collègue de regarder ton travail un moment. Vérifier, c’est normal ici, même après une semaine ou un mois. Deviner prend plus de temps que demander : s’il y a une erreur, il faut refaire. “Doe ik het zo goed?” est une question que les collègues aiment entendre.", // nieuw, nalezen
-    'c.howto.p': "Tu peux regarder un moment si c’est bien ?", // nieuw, nalezen
-    'c.howto.s': { m: "Tu fais une nouvelle tâche. Tu n’es pas sûr de bien la faire. Que fais-tu ?", f: "Tu fais une nouvelle tâche. Tu n’es pas sûre de bien la faire. Que fais-tu ?", x: "Tu fais une nouvelle tâche. Tu n’es pas sûr / sûre de bien la faire. Que fais-tu ?" }, // nieuw, nalezen
-    'c.howto.o1': "Demande à un collègue de regarder.", // nieuw, nalezen
-    'c.howto.o2': "Continue : c’est peut-être bien.", // nieuw, nalezen
-    'c.howto.o3': "Arrête et attends que quelqu’un vienne.", // nieuw, nalezen
-    'c.howto.w': "Un petit coup d’œil d’un collègue évite beaucoup de travail plus tard. Et tu apprends la tâche plus vite.", // nieuw, nalezen
-    'c.mayask': "Le bon moment pour demander", // nieuw, nalezen
-    'c.mayask.b': "C’est une question de sécurité, ou quelque chose peut mal tourner tout de suite ? Demande tout de suite, même quand ton collègue est occupé. Ce n’est pas urgent ? Attends que ton collègue ait fini, puis demande : “Heb je even tijd?” Tu as beaucoup de petites questions ? Écris-les et pose-les ensemble. Personne ne trouve une question gênante. Une erreur coûte plus de temps.", // nieuw, nalezen
-    'c.mayask.p': "Pardon de déranger. Tu as un moment ?", // nieuw, nalezen
-    'c.mayask.s': "Ton collègue est au téléphone. Tu as une question qui n’est pas urgente. Que fais-tu ?", // nieuw, nalezen
-    'c.mayask.o1': "Attends la fin de l’appel, puis demande.", // nieuw, nalezen
-    'c.mayask.o2': "Demande maintenant : une question, c’est toujours bien.", // nieuw, nalezen
-    'c.mayask.o3': "Ne demande pas : ton collègue est occupé.", // nieuw, nalezen
-    'c.mayask.w': "Attendre un moment montre du respect, et tu as quand même ta réponse. Seul le danger ne peut pas attendre.", // nieuw, nalezen
-    'c.whereis': "Tu as perdu ton chemin ? Demande", // nieuw, nalezen
-    'c.whereis.b': "Un nouveau lieu de travail est grand, et beaucoup de portes se ressemblent. Personne n’attend que tu trouves tout après un jour. Tu ne trouves pas une salle, un outil ou une personne ? Demande au premier collègue que tu vois. Beaucoup de collègues t’accompagnent, ou te montrent le chemin. Tu sais où sont les sorties ? Demande-le le premier jour : c’est pour ta sécurité.", // nieuw, nalezen
-    'c.whereis.p': { m: "Je suis perdu. Où est la cantine ?", f: "Je suis perdue. Où est la cantine ?", x: "J’ai perdu mon chemin. Où est la cantine ?" }, // nieuw, nalezen
-    'c.whereis.s': "C’est ton deuxième jour. Tu ne trouves pas le vestiaire, et ton service commence dans cinq minutes. Que fais-tu ?", // nieuw, nalezen
-    'c.whereis.o1': "Demande au premier collègue que tu vois.", // nieuw, nalezen
-    'c.whereis.o2': "Continue à chercher : c’est gênant de redemander.", // nieuw, nalezen
-    'c.whereis.o3': "Commence le travail avec tes propres vêtements.", // nieuw, nalezen
-    'c.whereis.w': "Demander prend dix secondes. Chercher sans aide peut te mettre en retard. Les collègues savent qu’il est difficile de trouver son chemin dans un nouvel endroit.", // nieuw, nalezen
+    'c.howto': "Vérifie si tu fais bien", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.b': "Tu ne sais pas bien comment faire une tâche ? Demande comment, ou demande à un collègue de regarder ton travail un moment. Vérifier, c’est normal ici, même après une semaine ou un mois. Deviner prend plus de temps que demander : s’il y a une erreur, il faut refaire. “Doe ik het zo goed?” est une question que les collègues aiment entendre.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.p': "Tu peux regarder un moment si c’est bien ?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.s': { m: "Tu fais une nouvelle tâche. Tu n’es pas sûr de bien la faire. Que fais-tu ?", f: "Tu fais une nouvelle tâche. Tu n’es pas sûre de bien la faire. Que fais-tu ?", x: "Tu fais une nouvelle tâche. Tu n’es pas sûr / sûre de bien la faire. Que fais-tu ?" }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.o1': "Demande à un collègue de regarder.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.o2': "Continue : c’est peut-être bien.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.o3': "Arrête et attends que quelqu’un vienne.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.w': "Un petit coup d’œil d’un collègue évite beaucoup de travail plus tard. Et tu apprends la tâche plus vite.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask': "Le bon moment pour demander", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.b': "C’est une question de sécurité, ou quelque chose peut mal tourner tout de suite ? Demande tout de suite, même quand ton collègue est occupé. Ce n’est pas urgent ? Attends que ton collègue ait fini, puis demande : “Heb je even tijd?” Tu as beaucoup de petites questions ? Écris-les et pose-les ensemble. Personne ne trouve une question gênante. Une erreur coûte plus de temps.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.p': "Pardon de déranger. Tu as un moment ?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.s': "Ton collègue est au téléphone. Tu as une question qui n’est pas urgente. Que fais-tu ?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.o1': "Attends la fin de l’appel, puis demande.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.o2': "Demande maintenant : une question, c’est toujours bien.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.o3': "Ne demande pas : ton collègue est occupé.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.w': "Attendre un moment montre du respect, et tu as quand même ta réponse. Seul le danger ne peut pas attendre.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.whereis': "Tu as perdu ton chemin ? Demande", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.whereis.b': "Un nouveau lieu de travail est grand, et beaucoup de portes se ressemblent. Personne n’attend que tu trouves tout après un jour. Tu ne trouves pas une salle, un outil ou une personne ? Demande au premier collègue que tu vois. Beaucoup de collègues t’accompagnent, ou te montrent le chemin. Tu sais où sont les sorties ? Demande-le le premier jour : c’est pour ta sécurité.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.whereis.p': { m: "Je suis perdu. Où est la cantine ?", f: "Je suis perdue. Où est la cantine ?", x: "J’ai perdu mon chemin. Où est la cantine ?" }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.whereis.s': "C’est ton deuxième jour. Tu ne trouves pas le vestiaire, et ton service commence dans cinq minutes. Que fais-tu ?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.whereis.o1': "Demande au premier collègue que tu vois.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.whereis.o2': "Continue à chercher : c’est gênant de redemander.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.whereis.o3': "Commence le travail avec tes propres vêtements.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.whereis.w': "Demander prend dix secondes. Chercher sans aide peut te mettre en retard. Les collègues savent qu’il est difficile de trouver son chemin dans un nouvel endroit.", // nieuw, nalezen // nagelezen AI 22 nov
   },
 };
 

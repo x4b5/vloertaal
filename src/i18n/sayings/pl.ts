@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'To dziś pojadę autobusem.',
     'c.plain.a.why': 'Bardzo mocny deszcz: w autobusie nie zmokniesz.',
     'c.easy': 'Powiedzenia: słowa znaczą coś innego',
-    'c.easy.b': 'Tutaj ludzie często używają powiedzeń, także w pracy. Słowa mówią jedno, ale znaczą coś innego. „Een eitje” to małe jajko, ale znaczy: bardzo łatwe. Ty nie musisz używać powiedzeń. Nie rozumiesz jakiegoś powiedzenia? To po prostu zapytaj, co ono znaczy.', // nieuw, nalezen
+    'c.easy.b': 'Tutaj ludzie często używają powiedzeń, także w pracy. Słowa mówią jedno, ale znaczą coś innego. „Een eitje” to małe jajko, ale znaczy: bardzo łatwe. Ty nie musisz używać powiedzeń. Nie rozumiesz jakiegoś powiedzenia? To po prostu zapytaj, co ono znaczy.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.easy.p': 'Co masz na myśli?',
     'c.easy.s': 'Kolega patrzy na nowe zadanie i mówi: „Dat is een eitje!” Co ma na myśli?',
     'c.easy.o1': 'Zadanie jest bardzo łatwe.',
@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Będziesz trzymać oczko na żaglu?',
     'zg.zeil.m': 'Popilnujesz, żeby wszystko szło dobrze i bezpiecznie?',
     'zg.zeil.s': 'Twoja przełożona musi na chwilę wyjść. Mówi: „Hou je een oogje in het zeil?” Co ma na myśli?',
-    'zg.zeil.o1': "Pilnuj, kiedy jej nie ma.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
+    'zg.zeil.o1': "Pilnuj, kiedy jej nie ma.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken) // nagelezen AI 22 nov
     'zg.zeil.o2': 'Idź popatrzeć na łódź.',
     'zg.zeil.o3': 'Zamknij na chwilę oczy.',
     'zg.zeil.w': '„Een oogje in het zeil houden” znaczy: uważać, żeby wszystko szło dobrze. Nie wiesz, czego pilnować? Zapytaj ją, zanim wyjdzie.',
@@ -95,7 +95,7 @@ const t: CultureTranslation = {
     'zg.oefening.lit': 'Ćwiczenie rodzi sztukę.',
     'zg.oefening.m': 'Kto dużo ćwiczy, ten robi to coraz lepiej.',
     'zg.oefening.s': 'Kurs jest dla ciebie trudny. Nauczycielka mówi: „Oefening baart kunst.” Co ma na myśli?',
-    'zg.oefening.o1': { m: 'Ćwicz dalej, a będziesz w tym dobry.', f: 'Ćwicz dalej, a będziesz w tym dobra.', x: 'Ćwicz dalej, a będzie ci szło coraz lepiej.' }, // x: nieuw, nalezen
+    'zg.oefening.o1': { m: 'Ćwicz dalej, a będziesz w tym dobry.', f: 'Ćwicz dalej, a będziesz w tym dobra.', x: 'Ćwicz dalej, a będzie ci szło coraz lepiej.' }, // x: nieuw, nalezen // nagelezen AI 22 nov
     'zg.oefening.o2': 'Musisz iść na lekcję sztuki.',
     'zg.oefening.o3': 'Przestań, to dla ciebie za trudne.',
     'zg.oefening.w': 'To przysłowie: dzięki ćwiczeniu robisz coś coraz lepiej. To dotyczy też nauki niderlandzkiego.',
@@ -108,7 +108,7 @@ const t: CultureTranslation = {
     'zg.zwartwit.w': 'Coś na piśmie to dowód. Przy pensji, godzinach i umowie proś o to „zwart op wit”.',
     'zg.temooi.lit': 'To zbyt piękne, żeby było prawdziwe.',
     'zg.temooi.m': 'Brzmi tak dobrze, że to pewnie nieprawda.',
-    'zg.temooi.s': { m: 'Dostajesz wiadomość: „Wygrałeś 1000 euro! Wyślij dane swojego konta.” Sąsiadka mówi: „Dat is te mooi om waar te zijn.” Co ma na myśli?', f: 'Dostajesz wiadomość: „Wygrałaś 1000 euro! Wyślij dane swojego konta.” Sąsiadka mówi: „Dat is te mooi om waar te zijn.” Co ma na myśli?', x: 'Dostajesz wiadomość: „Wygrywasz 1000 euro! Wyślij dane swojego konta.” Sąsiadka mówi: „Dat is te mooi om waar te zijn.” Co ma na myśli?' }, // x: nieuw, nalezen
+    'zg.temooi.s': { m: 'Dostajesz wiadomość: „Wygrałeś 1000 euro! Wyślij dane swojego konta.” Sąsiadka mówi: „Dat is te mooi om waar te zijn.” Co ma na myśli?', f: 'Dostajesz wiadomość: „Wygrałaś 1000 euro! Wyślij dane swojego konta.” Sąsiadka mówi: „Dat is te mooi om waar te zijn.” Co ma na myśli?', x: 'Dostajesz wiadomość: „Wygrywasz 1000 euro! Wyślij dane swojego konta.” Sąsiadka mówi: „Dat is te mooi om waar te zijn.” Co ma na myśli?' }, // x: nieuw, nalezen // nagelezen AI 22 nov
     'zg.temooi.o1': 'To pewnie oszustwo.',
     'zg.temooi.o2': 'Masz szczęście: szybko wyślij dane.',
     'zg.temooi.o3': 'Wiadomość jest bardzo ładna.',
@@ -130,14 +130,14 @@ const t: CultureTranslation = {
     'zg.koning.lit': 'Klient jest królem.',
     'zg.koning.m': 'Klient jest bardzo ważny: pomagaj mu dobrze i uprzejmie.',
     'zg.koning.s': 'Klient jest trochę nieuprzejmy. Twój przełożony mówi: „De klant is koning.” Co ma na myśli?',
-    'zg.koning.o1': { m: 'Bądź uprzejmy i dobrze pomóż klientowi.', f: 'Bądź uprzejma i dobrze pomóż klientowi.', x: 'Mów uprzejmie i dobrze pomóż klientowi.' }, // x: nieuw, nalezen
+    'zg.koning.o1': { m: 'Bądź uprzejmy i dobrze pomóż klientowi.', f: 'Bądź uprzejma i dobrze pomóż klientowi.', x: 'Mów uprzejmie i dobrze pomóż klientowi.' }, // x: nieuw, nalezen // nagelezen AI 22 nov
     'zg.koning.o2': 'Klient jest prawdziwym królem.',
     'zg.koning.o3': 'Poproś klienta, żeby wyszedł.',
     'zg.koning.w': 'W sklepie klient jest najważniejszy, więc zachowujesz się uprzejmie. Klient jest niegrzeczny albo grozi? Wtedy zawołaj przełożonego.',
     'zg.tijdgeld.lit': 'Czas to pieniądz.',
     'zg.tijdgeld.m': 'Czas jest cenny: nie marnuj go.',
     'zg.tijdgeld.s': 'Szef chce, żeby ciężarówkę szybko załadować. Mówi: „Tijd is geld.” Co ma na myśli?',
-    'zg.tijdgeld.o1': "Pracuj szybko, nie trać czasu.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
+    'zg.tijdgeld.o1': "Pracuj szybko, nie trać czasu.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken) // nagelezen AI 22 nov
     'zg.tijdgeld.o2': 'Dostajesz pieniądze za spóźnienie.',
     'zg.tijdgeld.o3': 'Zegar jest bardzo drogi.',
     'zg.tijdgeld.w': 'To powiedzenie znaczy, że czas jest cenny. To nigdy nie jest powód do niebezpiecznej pracy ani do godzin bez zapłaty.',

@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'Dann nehme ich heute den Bus.',
     'c.plain.a.why': 'Sehr starker Regen: Im Bus bleibt man trocken.',
     'c.easy': 'Redewendungen: Die Wörter meinen etwas anderes',
-    'c.easy.b': 'Hier benutzen die Leute oft Redewendungen, auch bei der Arbeit. Die Wörter sagen das eine, aber sie meinen etwas anderes. „Een eitje“ ist ein kleines Ei, aber es bedeutet: sehr leicht. Du musst selbst keine Redewendungen benutzen. Du verstehst eine Redewendung nicht? Dann frag einfach, was sie bedeutet.', // nieuw, nalezen
+    'c.easy.b': 'Hier benutzen die Leute oft Redewendungen, auch bei der Arbeit. Die Wörter sagen das eine, aber sie meinen etwas anderes. „Een eitje“ ist ein kleines Ei, aber es bedeutet: sehr leicht. Du musst selbst keine Redewendungen benutzen. Du verstehst eine Redewendung nicht? Dann frag einfach, was sie bedeutet.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.easy.p': 'Was meinst du damit?',
     'c.easy.s': 'Dein Kollege sieht sich die neue Aufgabe an und sagt: „Dat is een eitje!“ Was meint er?',
     'c.easy.o1': 'Die Aufgabe ist sehr leicht.',
@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Hältst du ein Äuglein auf das Segel?',
     'zg.zeil.m': 'Passt du auf, dass alles gut und sicher läuft?',
     'zg.zeil.s': 'Deine Vorgesetzte muss kurz weg. Sie sagt: „Hou je een oogje in het zeil?“ Was meint sie?',
-    'zg.zeil.o1': "Pass auf, solange sie weg ist.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
+    'zg.zeil.o1': "Pass auf, solange sie weg ist.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken) // nagelezen AI 22 nov
     'zg.zeil.o2': 'Geh ein Boot anschauen.',
     'zg.zeil.o3': 'Mach kurz die Augen zu.',
     'zg.zeil.w': '„Een oogje in het zeil houden“ bedeutet: aufpassen, dass alles gut läuft. Nicht sicher, worauf du achten sollst? Frag sie, bevor sie geht.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'Zeit ist Geld.',
     'zg.tijdgeld.m': 'Zeit ist wertvoll: Verschwende sie nicht.',
     'zg.tijdgeld.s': 'Dein Chef will, dass der Lkw schnell beladen wird. Er sagt: „Tijd is geld.“ Was meint er?',
-    'zg.tijdgeld.o1': "Arbeite schnell, verschwende keine Zeit.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken)
+    'zg.tijdgeld.o1': "Arbeite schnell, verschwende keine Zeit.", // nagelezen (2e lezing) (controle/uitdrukkingen-klanken) // nagelezen AI 22 nov
     'zg.tijdgeld.o2': 'Du bekommst Geld, wenn du zu spät kommst.',
     'zg.tijdgeld.o3': 'Die Uhr ist sehr teuer.',
     'zg.tijdgeld.w': 'Diese Redewendung bedeutet, dass Zeit wertvoll ist. Sie ist nie ein Grund für unsichere Arbeit oder Stunden ohne Lohn.',

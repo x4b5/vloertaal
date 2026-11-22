@@ -570,48 +570,48 @@ const lang: HelpLanguageSource = {
     's.understand.3': "Xaggee ayay musqushu ku taal?", // nieuw, nalezen
 
     // Unit: Safety first
-    'u.safety': "Ammaanku waa koowaad", // nieuw, nalezen
-    'u.emergency': "Marka wax khaldamaan", // nieuw, nalezen
-    'l.gear': "Qalabka badbaadada", // nieuw, nalezen
-    'w.helm': "koofiyadda adag", // nieuw, nalezen
-    'w.handschoenen': "galoofyada", // nieuw, nalezen
-    'w.veiligheidsschoenen': "kabaha badbaadada", // nieuw, nalezen
-    'w.hesje': "jaakadda badbaadada", // nieuw, nalezen
-    'w.bril': "muraayadaha badbaadada", // nieuw, nalezen
-    'w.dragen': "xirasho (dhar ama qalab)", // nieuw, nalezen
-    's.gear.1': "Had iyo jeer xiro koofiyaddaada adag.", // nieuw, nalezen
-    's.gear.2': "Xaggee ayay galoofyadu yaalliin?", // nieuw, nalezen
-    's.gear.3': "Waxaan xiranahay jaakaddayda badbaadada.", // nieuw, nalezen
-    'l.danger': "Khatar!", // nieuw, nalezen
-    'w.pasop': "iska jir", // nieuw, nalezen
-    'w.stop': "joogso", // nieuw, nalezen
-    'w.help': "caawimaad", // nieuw, nalezen
-    'w.brand': "dabka", // nieuw, nalezen
-    'w.nooduitgang': "albaabka degdegga", // nieuw, nalezen
-    'w.ongeluk': "shilka", // nieuw, nalezen
-    's.danger.1': "Iska jir, dhulku waa qoyan yahay!", // nieuw, nalezen
-    's.danger.2': "Xaggee ayuu albaabka degdeggu ku yaal?", // nieuw, nalezen
-    's.danger.3': "Shil ayaa dhacay!", // nieuw, nalezen
-    'l.alarm': "Alaarmiga dabka iyo ka bixidda dhismaha", // nieuw, nalezen
-    'w.alarm': "alaarmiga", // nieuw, nalezen
-    'w.ontruimen': "ka bixin dhismaha (qof walba wuu ka baxaa dhismaha)", // nieuw, nalezen
-    'w.vluchtroute': "jidka baxsashada", // nieuw, nalezen
-    'w.trap': "jaranjarada", // nieuw, nalezen
-    'w.verzamelplaats': "goobta isu imaatinka (halka qof walba dibadda ku kulmo)", // nieuw, nalezen
-    'w.brandblusser': "dab-demiska", // nieuw, nalezen
-    's.alarm.1': "Xaggee ayuu dab-demisku ku yaal?", // nieuw, nalezen
-    's.alarm.2': "Waa inaan ka bixinnaa dhismaha.", // nieuw, nalezen
-    's.alarm.3': "Qaado jaranjarada, ha qaadan wiishka.", // nieuw, nalezen
-    'l.accident': "Soo sheeg shil", // nieuw, nalezen
-    'w.gewond': "dhaawacan", // nieuw, nalezen
-    'w.bloeden': "dhiig ka bixid", // nieuw, nalezen
-    'w.ehbodoos': "sanduuqa gargaarka degdegga", // nieuw, nalezen
-    'w.bhver': "caawiyaha degdegga ee shirkadda (gargaarka koowaad, dabka, ka bixidda dhismaha)", // nieuw, nalezen
-    'w.ziekenhuis': "isbitaalka", // nieuw, nalezen
-    'w.gebeuren': "dhicid", // nieuw, nalezen
-    's.accident.1': "Saaxiibkayga shaqada ayaa dhacay.", // nieuw, nalezen
-    's.accident.2': "Waan is gooyay.", // nieuw, nalezen
-    's.accident.3': "Waxaan rabaa inaan soo sheego shil.", // nieuw, nalezen
+    'u.safety': "Ammaanku waa koowaad", // nieuw, nalezen // nagelezen AI 22 nov
+    'u.emergency': "Marka wax khaldamaan", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.gear': "Qalabka badbaadada", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.helm': "koofiyadda adag", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.handschoenen': "galoofyada", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.veiligheidsschoenen': "kabaha badbaadada", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.hesje': "jaakadda badbaadada", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.bril': "muraayadaha badbaadada", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.dragen': "xirasho (dhar ama qalab)", // nieuw, nalezen // nagelezen AI 22 nov
+    's.gear.1': "Had iyo jeer xiro koofiyaddaada adag.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.gear.2': "Xaggee ayay galoofyadu yaalliin?", // nieuw, nalezen // nagelezen AI 22 nov
+    's.gear.3': "Waxaan xiranahay jaakaddayda badbaadada.", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.danger': "Khatar!", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.pasop': "iska jir", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.stop': "joogso", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.help': "caawimaad", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.brand': "dabka", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.nooduitgang': "albaabka degdegga", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ongeluk': "shilka", // nieuw, nalezen // nagelezen AI 22 nov
+    's.danger.1': "Iska jir, dhulku waa qoyan yahay!", // nieuw, nalezen // nagelezen AI 22 nov
+    's.danger.2': "Xaggee ayuu albaabka degdeggu ku yaal?", // nieuw, nalezen // nagelezen AI 22 nov
+    's.danger.3': "Shil ayaa dhacay!", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.alarm': "Alaarmiga dabka iyo ka bixidda dhismaha", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alarm': "alaarmiga", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontruimen': "ka bixin dhismaha (qof walba wuu ka baxaa dhismaha)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vluchtroute': "jidka baxsashada", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.trap': "jaranjarada", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.verzamelplaats': "goobta isu imaatinka (halka qof walba dibadda ku kulmo)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.brandblusser': "dab-demiska", // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.1': "Xaggee ayuu dab-demisku ku yaal?", // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.2': "Waa inaan ka bixinnaa dhismaha.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.3': "Qaado jaranjarada, ha qaadan wiishka.", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.accident': "Soo sheeg shil", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.gewond': "dhaawacan", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.bloeden': "dhiig ka bixid", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ehbodoos': "sanduuqa gargaarka degdegga", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.bhver': "caawiyaha degdegga ee shirkadda (gargaarka koowaad, dabka, ka bixidda dhismaha)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ziekenhuis': "isbitaalka", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.gebeuren': "dhicid", // nieuw, nalezen // nagelezen AI 22 nov
+    's.accident.1': "Saaxiibkayga shaqada ayaa dhacay.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.accident.2': "Waan is gooyay.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.accident.3': "Waxaan rabaa inaan soo sheego shil.", // nieuw, nalezen // nagelezen AI 22 nov
 
     // Unit: In the warehouse
     'u.warehouse': "Bakhaarka", // nieuw, nalezen
@@ -677,26 +677,26 @@ const lang: HelpLanguageSource = {
     'c.arrive.a': "Waxaan ahay qof cusub. Maanta ayaan bilaabayaa.", // nieuw, nalezen
     'c.understand.q': "Ma fahantay?", // nieuw, nalezen
     'c.understand.a': "Maya, mar kale fadlan.", // nieuw, nalezen
-    'c.gear.q': "Koofiyaddaada adag ma haysataa?", // nieuw, nalezen
-    'c.gear.a': "Haa, waan xiranahay.", // nieuw, nalezen
-    'c.danger.q': "Shil ma dhacay?", // nieuw, nalezen
-    'c.danger.a': "Haa, wac 112!", // nieuw, nalezen
-    'c.alarm.q': "Qof walba dibadda ma joogaa?", // nieuw, nalezen
-    'c.alarm.a': "Maya, saaxiibkayga shaqada weli halkan ma joogo.", // nieuw, nalezen
-    'c.accident.q': "Maxaa dhacay?", // nieuw, nalezen
-    'c.accident.a': "Wuu dhacay. Dhiig ayaa ka imanaya.", // nieuw, nalezen
-    'l.notyet': "Tan weli ma baran", // nieuw, nalezen
-    'w.nogniet': "weli maya", // nieuw, nalezen
-    'w.mogen': "loo oggol yahay", // nieuw, nalezen
-    'w.proberen': "isku dayid", // nieuw, nalezen
-    'w.voordoen': "tusid (adigoo marka hore samaynaya)", // nieuw, nalezen
-    'w.gevaarlijk': "khatar ah", // nieuw, nalezen
-    'w.uitleg': "sharraxaadda", // nieuw, nalezen
-    's.notyet.1': "Tan weli ma baran.", // nieuw, nalezen
-    's.notyet.2': "Weli sharraxaad lama i siin.", // nieuw, nalezen
-    's.notyet.3': "Ma la ii oggol yahay inaan tan hadda keligay sameeyo?", // nieuw, nalezen
-    'c.notyet.q': "Isku day uun, waa fudud tahay.", // nieuw, nalezen
-    'c.notyet.a': "Marka hore ma i tusi kartaa sida loo sameeyo?", // nieuw, nalezen
+    'c.gear.q': "Koofiyaddaada adag ma haysataa?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.gear.a': "Haa, waan xiranahay.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.danger.q': "Shil ma dhacay?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.danger.a': "Haa, wac 112!", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.q': "Qof walba dibadda ma joogaa?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.a': "Maya, saaxiibkayga shaqada weli halkan ma joogo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.accident.q': "Maxaa dhacay?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.accident.a': "Wuu dhacay. Dhiig ayaa ka imanaya.", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.notyet': "Tan weli ma baran", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.nogniet': "weli maya", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.mogen': "loo oggol yahay", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.proberen': "isku dayid", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.voordoen': "tusid (adigoo marka hore samaynaya)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.gevaarlijk': "khatar ah", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.uitleg': "sharraxaadda", // nieuw, nalezen // nagelezen AI 22 nov
+    's.notyet.1': "Tan weli ma baran.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.notyet.2': "Weli sharraxaad lama i siin.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.notyet.3': "Ma la ii oggol yahay inaan tan hadda keligay sameeyo?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.notyet.q': "Isku day uun, waa fudud tahay.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.notyet.a': "Marka hore ma i tusi kartaa sida loo sameeyo?", // nieuw, nalezen // nagelezen AI 22 nov
     'c.things.q': "Xaggee kartoonku aadayaa?", // nieuw, nalezen
     'c.things.a': "Baaleetka dushiisa.", // nieuw, nalezen
     'c.directions.q': "Bidix mise midig?", // nieuw, nalezen

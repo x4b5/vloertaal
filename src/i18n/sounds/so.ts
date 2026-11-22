@@ -17,7 +17,7 @@ const t: CultureTranslation = {
     's.shortlong.3': "Dukaanku wuxuu furmaa saacadda sagaalka.", // nieuw, nalezen
     'c.shortlong.q': "Ma rabtaa ukun?", // nieuw, nalezen
     'c.shortlong.a': "Maya, mahadsanid. Horay ayaan wax u cunay.", // nieuw, nalezen
-    'c.shortlong.a.why': "Ukun ayaa laguu soo bandhigay: maya edeb leh, oo sabab leh.", // nieuw, nalezen
+    'c.shortlong.a.why': "Ukun ayaa laguu soo bandhigay: maya edeb leh, oo sabab leh.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.roundsounds': "uu, oe iyo eu", // nieuw, nalezen
     'w.kl.muur': "darbiga, gidaarka", // nieuw, nalezen
     'w.kl.moer': "nuutka (ee boolka)", // nieuw, nalezen
@@ -30,7 +30,7 @@ const t: CultureTranslation = {
     's.roundsounds.3': "Jaakaddaas aad bay qaali u tahay.", // nieuw, nalezen
     'c.roundsounds.q': "Albaabku ma furan yahay?", // nieuw, nalezen
     'c.roundsounds.a': "Maya, wuu xiran yahay.", // nieuw, nalezen
-    'c.roundsounds.a.why': "Waxaa la weydiiyay in albaabku furan yahay: jawaabtani waxay sheegaysaa inuusan furnayn.", // nieuw, nalezen
+    'c.roundsounds.a.why': "Waxaa la weydiiyay in albaabku furan yahay: jawaabtani waxay sheegaysaa inuusan furnayn.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.pbgk': "p ama b, g, k ama h", // nieuw, nalezen
     'w.kl.pak': "suudhka", // nieuw, nalezen
     'w.kl.bak': "sanduuqa, weelka qashinka", // nieuw, nalezen
@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     's.pbgk.3': "Si fiican ayaad u samaynaysaa!", // nieuw, nalezen
     'c.pbgk.q': "Sidee tahay?", // nieuw, nalezen
     'c.pbgk.a': "Waan fiicnahay, laakiin qabow ayaa i haya.", // nieuw, nalezen
-    'c.pbgk.a.why': "Waxaa lagu weydiiyay sidaad tahay: jawaab, iyo sidaad dareemayso.", // nieuw, nalezen
+    'c.pbgk.a.why': "Waxaa lagu weydiiyay sidaad tahay: jawaab, iyo sidaad dareemayso.", // nieuw, nalezen // nagelezen AI 22 nov
     'k.uitleg.a': "Afka fur, wax yar ka yar sida “aa”. Carrabku gadaal buu u dhaqaaqaa. Si gaaban u dheh.", // nieuw, nalezen
     'k.uitleg.aa': "Afka si ballaaran u fur. Bushimuhu way debecsan yihiin. Carrabku hoos buu u jiifaa oo waa siman yahay.", // nieuw, nalezen
     'k.uitleg.e': "Afku badh buu furan yahay, in ka badan “ee”. Bushimuhu way debecsan yihiin. Si gaaban u dheh.", // nieuw, nalezen

@@ -38,22 +38,22 @@ const t: CultureTranslation = {
     'rg.zl.s.2.3': "Fasax ma qaadan karaa karnifaalka?", // nieuw, nalezen
     'rg.zl.c.2.q': "Waan ka xumahay, aad baan u dhakhso u hadlayaa.", // nieuw, nalezen
     'rg.zl.c.2.a': "Haa, wax yar si tartiib ah, fadlan.", // nieuw, nalezen
-    'rg.zl.c.1': "Diiwaangeli cinwaankaaga, oo raadi guri", // nieuw, nalezen
-    'rg.zl.c.1.b': "Marka aad guurto, u sheeg gemeente-gaaga cusub (xarunta dowladda hoose) muddo 5 maalmood gudahood. Gemeente-yada intooda badan waxay ku shaqeeyaan ballan: marka hore eeg bogga internetkooda. Haddii aad dibadda ka timid, adigu tag, adigoo wata baasaboorkaaga ama aqoonsigaaga iyo qandaraaska kirada. Kirada bulshada, si bilaash ah isu diiwaangeli thuisinlimburg.nl oo cusboonaysii sannad kasta. Weligaa lacag ha ku bixin guri aadan arag. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
-    'rg.zl.c.1.p': "Ballan ma qabsan karaa?", // nieuw, nalezen
-    'rg.zl.c.1.s': "Toddobaadkii hore waxaad u guurtay Maastricht. Boostadaadu weli waxay tagtaa cinwaankaagii hore. Maxaad samaynaysaa?", // nieuw, nalezen
-    'rg.zl.c.1.o1': "Hadda cinwaankaaga cusub ka diiwaangeli gemeente-ga Maastricht.", // nieuw, nalezen
-    'rg.zl.c.1.o2': "Sug. Gemeente-gu iskiis ayuu u ogaan doonaa.", // nieuw, nalezen
-    'rg.zl.c.1.o3': "Cinwaankaaga cusub u sheeg loo-shaqeeyahaaga oo keliya.", // nieuw, nalezen
-    'rg.zl.c.1.w': "Waa inaad adigu u sheegto gemeente-gaaga cusub, muddo 5 maalmood gudahood. Cinwaankaaga waxaa loo baahan yahay boostadaada, mushaharkaaga, caymiskaaga caafimaadka iyo gunnooyinka.", // nieuw, nalezen
-    'rg.zl.c.2': "Karnifaalka, lahjadda iyo xadka", // nieuw, nalezen
-    'rg.zl.c.2.b': "Karnifaalka (Limburg waxaa sidoo kale lagu yiraahdaa “vastelaovend”) sannad kasta wuu wareegaa, bisha February ama March. Ma aha fasax rasmi ah: hore u codso maalmo fasax ah. Dad badan ayaa shaqada ku hadla lahjadda Limburg. Waa caadi inaadan fahmin. Si naxariis leh u weydii: “Kunt u Nederlands praten?” Saaxiibada shaqada qaarkood waxay ku hadlaan Jarmal ama Faransiis. Ma ku nooshahay hal dal oo ka shaqaysaa dal kale? Ka hor intaadan saxiixin, weydii GrensInfoPunt talo bilaash ah oo ku saabsan cashuurta, caymiska iyo gunnooyinka.", // nieuw, nalezen
-    'rg.zl.c.2.p': "Ma ku sheegi doontaa Af-Holandiis?", // nieuw, nalezen
-    'rg.zl.c.2.s': "Saaxiib shaqo ayaa hawl kuugu sharraxaya lahjad. Ma fahmin. Maxaad samaynaysaa?", // nieuw, nalezen
-    'rg.zl.c.2.o1': "Si naxariis leh u weydii inuu Af-Holandiis ku sheegi karo.", // nieuw, nalezen
-    'rg.zl.c.2.o2': "Madaxa ruxo oo iska qiyaas waxa la samaynayo.", // nieuw, nalezen
-    'rg.zl.c.2.o3': "U sheeg in lahjaddu edeb darro tahay.", // nieuw, nalezen
-    'rg.zl.c.2.w': "Dad badan lahjaddu waa luqaddooda, ma aha edeb darro. Saaxiibada shaqada intooda badan way ku faraxsan yihiin inay u beddelaan Af-Holandiis. Qiyaasidu waxay keeni kartaa khaladaad, ammaanka marka la eegona waa inaad had iyo jeer fahantaa.", // nieuw, nalezen
+    'rg.zl.c.1': "Diiwaangeli cinwaankaaga, oo raadi guri", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.1.b': "Marka aad guurto, u sheeg gemeente-gaaga cusub (xarunta dowladda hoose) muddo 5 maalmood gudahood. Gemeente-yada intooda badan waxay ku shaqeeyaan ballan: marka hore eeg bogga internetkooda. Haddii aad dibadda ka timid, adigu tag, adigoo wata baasaboorkaaga ama aqoonsigaaga iyo qandaraaska kirada. Kirada bulshada, si bilaash ah isu diiwaangeli thuisinlimburg.nl oo cusboonaysii sannad kasta. Weligaa lacag ha ku bixin guri aadan arag. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.1.p': "Ballan ma qabsan karaa?", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.1.s': "Toddobaadkii hore waxaad u guurtay Maastricht. Boostadaadu weli waxay tagtaa cinwaankaagii hore. Maxaad samaynaysaa?", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.1.o1': "Hadda cinwaankaaga cusub ka diiwaangeli gemeente-ga Maastricht.", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.1.o2': "Sug. Gemeente-gu iskiis ayuu u ogaan doonaa.", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.1.o3': "Cinwaankaaga cusub u sheeg loo-shaqeeyahaaga oo keliya.", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.1.w': "Waa inaad adigu u sheegto gemeente-gaaga cusub, muddo 5 maalmood gudahood. Cinwaankaaga waxaa loo baahan yahay boostadaada, mushaharkaaga, caymiskaaga caafimaadka iyo gunnooyinka.", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.2': "Karnifaalka, lahjadda iyo xadka", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.2.b': "Karnifaalka (Limburg waxaa sidoo kale lagu yiraahdaa “vastelaovend”) sannad kasta wuu wareegaa, bisha February ama March. Ma aha fasax rasmi ah: hore u codso maalmo fasax ah. Dad badan ayaa shaqada ku hadla lahjadda Limburg. Waa caadi inaadan fahmin. Si naxariis leh u weydii: “Kunt u Nederlands praten?” Saaxiibada shaqada qaarkood waxay ku hadlaan Jarmal ama Faransiis. Ma ku nooshahay hal dal oo ka shaqaysaa dal kale? Ka hor intaadan saxiixin, weydii GrensInfoPunt talo bilaash ah oo ku saabsan cashuurta, caymiska iyo gunnooyinka.", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.2.p': "Ma ku sheegi doontaa Af-Holandiis?", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.2.s': "Saaxiib shaqo ayaa hawl kuugu sharraxaya lahjad. Ma fahmin. Maxaad samaynaysaa?", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.2.o1': "Si naxariis leh u weydii inuu Af-Holandiis ku sheegi karo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.2.o2': "Madaxa ruxo oo iska qiyaas waxa la samaynayo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.2.o3': "U sheeg in lahjaddu edeb darro tahay.", // nieuw, nalezen // nagelezen AI 22 nov
+    'rg.zl.c.2.w': "Dad badan lahjaddu waa luqaddooda, ma aha edeb darro. Saaxiibada shaqada intooda badan way ku faraxsan yihiin inay u beddelaan Af-Holandiis. Qiyaasidu waxay keeni kartaa khaladaad, ammaanka marka la eegona waa inaad had iyo jeer fahantaa.", // nieuw, nalezen // nagelezen AI 22 nov
     'rg.cat.gemeente': "Xarunta dowladda hoose (gemeente)", // nieuw, nalezen
     'rg.cat.juridisch': "Talo sharci", // nieuw, nalezen
     'rg.cat.werk': "Shaqo", // nieuw, nalezen

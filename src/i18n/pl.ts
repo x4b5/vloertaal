@@ -571,7 +571,7 @@ const lang: HelpLanguageSource = {
 
     // Unit: Safety first
     'u.safety': 'Bezpieczeństwo przede wszystkim',
-    'u.emergency': "Kiedy coś pójdzie nie tak", // nieuw, nalezen
+    'u.emergency': "Kiedy coś pójdzie nie tak", // nieuw, nalezen // nagelezen AI 22 nov
     'l.gear': 'Środki ochrony',
     'w.helm': 'kask',
     'w.handschoenen': 'rękawice',
@@ -592,16 +592,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Uwaga, podłoga jest mokra!',
     's.danger.2': 'Gdzie jest wyjście ewakuacyjne?',
     's.danger.3': 'Był wypadek!',
-    'l.alarm': 'Alarm pożarowy i ewakuacja', // nieuw, nalezen
-    'w.alarm': 'alarm', // nieuw, nalezen
-    'w.ontruimen': 'ewakuować (wszyscy wychodzą z budynku)', // nieuw, nalezen
-    'w.vluchtroute': 'droga ewakuacyjna', // nieuw, nalezen
-    'w.trap': 'schody', // nieuw, nalezen
-    'w.verzamelplaats': 'miejsce zbiórki (gdzie wszyscy spotykają się na zewnątrz)', // nieuw, nalezen
-    'w.brandblusser': 'gaśnica', // nieuw, nalezen
-    's.alarm.1': 'Gdzie jest gaśnica?', // nieuw, nalezen
-    's.alarm.2': 'Musimy ewakuować budynek.', // nieuw, nalezen
-    's.alarm.3': 'Idź schodami, nie windą.', // nieuw, nalezen
+    'l.alarm': 'Alarm pożarowy i ewakuacja', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alarm': 'alarm', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontruimen': 'ewakuować (wszyscy wychodzą z budynku)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vluchtroute': 'droga ewakuacyjna', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.trap': 'schody', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.verzamelplaats': 'miejsce zbiórki (gdzie wszyscy spotykają się na zewnątrz)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.brandblusser': 'gaśnica', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.1': 'Gdzie jest gaśnica?', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.2': 'Musimy ewakuować budynek.', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.3': 'Idź schodami, nie windą.', // nieuw, nalezen // nagelezen AI 22 nov
     'l.accident': 'Zgłaszanie wypadku',
     'w.gewond': 'ranny',
     'w.bloeden': 'krwawić',
@@ -610,7 +610,7 @@ const lang: HelpLanguageSource = {
     'w.ziekenhuis': 'szpital',
     'w.gebeuren': 'dziać się, zdarzyć się',
     's.accident.1': 'Mój kolega upadł.',
-    's.accident.2': { m: 'Skaleczyłem się.', f: 'Skaleczyłam się.', x: 'Mam skaleczenie.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.accident.2': { m: 'Skaleczyłem się.', f: 'Skaleczyłam się.', x: 'Mam skaleczenie.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     's.accident.3': 'Chcę zgłosić wypadek.',
 
     // Unit: In the warehouse
@@ -681,8 +681,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Tak, mam go na sobie.',
     'c.danger.q': 'Czy był wypadek?',
     'c.danger.a': 'Tak, dzwoń pod 112!',
-    'c.alarm.q': 'Czy wszyscy są na zewnątrz?', // nieuw, nalezen
-    'c.alarm.a': 'Nie, mojego kolegi jeszcze nie ma.', // nieuw, nalezen
+    'c.alarm.q': 'Czy wszyscy są na zewnątrz?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.a': 'Nie, mojego kolegi jeszcze nie ma.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.accident.q': 'Co się stało?',
     'c.accident.a': 'Upadł. Krwawi.',
     'l.notyet': 'Jeszcze mnie tego nie nauczyli',
@@ -692,9 +692,9 @@ const lang: HelpLanguageSource = {
     'w.voordoen': 'pokazywać (robiąc to najpierw samemu)',
     'w.gevaarlijk': 'niebezpieczny',
     'w.uitleg': 'wyjaśnienie',
-    's.notyet.1': { m: 'Jeszcze się tego nie nauczyłem.', f: 'Jeszcze się tego nie nauczyłam.', x: 'Tego jeszcze nie umiem.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.notyet.1': { m: 'Jeszcze się tego nie nauczyłem.', f: 'Jeszcze się tego nie nauczyłam.', x: 'Tego jeszcze nie umiem.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     's.notyet.2': 'Nikt mi jeszcze tego nie wyjaśnił.',
-    's.notyet.3': { m: 'Czy mogę już robić to sam?', f: 'Czy mogę już robić to sama?', x: 'Czy mogę już robić to samodzielnie?' }, // x: nieuw, nalezen
+    's.notyet.3': { m: 'Czy mogę już robić to sam?', f: 'Czy mogę już robić to sama?', x: 'Czy mogę już robić to samodzielnie?' }, // x: nieuw, nalezen // nagelezen AI 22 nov
     'c.notyet.q': 'Po prostu spróbuj, to łatwe.',
     'c.notyet.a': 'Możesz mi najpierw pokazać, jak to się robi?',
     'c.things.q': 'Gdzie ma iść ten karton?',

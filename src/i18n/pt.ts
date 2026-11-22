@@ -571,14 +571,14 @@ const lang: HelpLanguageSource = {
 
     // Unit: Safety first
     'u.safety': 'Segurança em primeiro lugar',
-    'u.emergency': "Quando algo corre mal", // nieuw, nalezen
+    'u.emergency': "Quando algo corre mal", // nieuw, nalezen // nagelezen AI 22 nov
     'l.gear': 'Equipamento de proteção',
     'w.helm': 'o capacete',
     'w.handschoenen': 'as luvas',
     'w.veiligheidsschoenen': 'os sapatos de segurança',
     'w.hesje': 'o colete refletor',
     'w.bril': 'os óculos de proteção',
-    'w.dragen': 'usar (roupa ou equipamento)', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.dragen': 'usar (roupa ou equipamento)', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     's.gear.1': 'Usa sempre o teu capacete.',
     's.gear.2': 'Onde estão as luvas?',
     's.gear.3': 'Estou com o meu colete refletor.',
@@ -592,16 +592,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Cuidado, o chão está molhado!',
     's.danger.2': 'Onde é a saída de emergência?',
     's.danger.3': 'Houve um acidente!',
-    'l.alarm': 'O alarme de incêndio e a evacuação', // nieuw, nalezen
-    'w.alarm': 'o alarme', // nieuw, nalezen
-    'w.ontruimen': 'evacuar (todos saem do edifício)', // nieuw, nalezen
-    'w.vluchtroute': 'o caminho de evacuação', // nieuw, nalezen
-    'w.trap': 'as escadas', // nieuw, nalezen
-    'w.verzamelplaats': 'o ponto de encontro (onde todos se juntam lá fora)', // nieuw, nalezen
-    'w.brandblusser': 'o extintor', // nieuw, nalezen
-    's.alarm.1': 'Onde está o extintor?', // nieuw, nalezen
-    's.alarm.2': 'Temos de evacuar o edifício.', // nieuw, nalezen
-    's.alarm.3': 'Vai pelas escadas, não pelo elevador.', // nieuw, nalezen
+    'l.alarm': 'O alarme de incêndio e a evacuação', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alarm': 'o alarme', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontruimen': 'evacuar (todos saem do edifício)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vluchtroute': 'o caminho de evacuação', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.trap': 'as escadas', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.verzamelplaats': 'o ponto de encontro (onde todos se juntam lá fora)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.brandblusser': 'o extintor', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.1': 'Onde está o extintor?', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.2': 'Temos de evacuar o edifício.', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.3': 'Vai pelas escadas, não pelo elevador.', // nieuw, nalezen // nagelezen AI 22 nov
     'l.accident': 'Comunicar um acidente',
     'w.gewond': 'ferido',
     'w.bloeden': 'sangrar',
@@ -681,8 +681,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Sim, estou com ele posto.',
     'c.danger.q': 'Houve um acidente?',
     'c.danger.a': 'Sim, liga para o 112!',
-    'c.alarm.q': 'Estão todos lá fora?', // nieuw, nalezen
-    'c.alarm.a': 'Não, o meu colega ainda não está cá.', // nieuw, nalezen
+    'c.alarm.q': 'Estão todos lá fora?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.a': 'Não, o meu colega ainda não está cá.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.accident.q': 'O que aconteceu?',
     'c.accident.a': 'Ele caiu. Está a sangrar.',
     'l.notyet': 'Ainda não aprendi isto',
@@ -694,7 +694,7 @@ const lang: HelpLanguageSource = {
     'w.uitleg': 'a explicação',
     's.notyet.1': 'Isto ainda não aprendi.',
     's.notyet.2': 'Ainda ninguém me explicou isto.',
-    's.notyet.3': { m: 'Já posso fazer isto sozinho?', f: 'Já posso fazer isto sozinha?', x: 'Já posso fazer isto por minha conta?' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.notyet.3': { m: 'Já posso fazer isto sozinho?', f: 'Já posso fazer isto sozinha?', x: 'Já posso fazer isto por minha conta?' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.notyet.q': 'Experimenta, é fácil.',
     'c.notyet.a': 'Podes mostrar-me primeiro como se faz?',
     'c.things.q': 'Para onde vai a caixa?',

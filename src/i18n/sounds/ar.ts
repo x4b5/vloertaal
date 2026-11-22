@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     's.pbgk.3': { m: 'أنت تعمل بشكل جيد!', f: 'أنتِ تعملين بشكل جيد!' },
     'c.pbgk.q': 'كيف حالك؟',
     'c.pbgk.a': 'بخير، لكنني أشعر بالبرد.',
-    'c.pbgk.a.why': 'السؤال عن الحال: جواب، ثم وصف الشعور.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.pbgk.a.why': 'السؤال عن الحال: جواب، ثم وصف الشعور.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     // "Hoe zeg je het?" (src/content/klankMond.ts): how the mouth makes each sound.
     'k.uitleg.a': 'الفم مفتوح، أقلّ قليلًا من «aa». اللسان إلى الخلف. الصوت قصير.', // nieuw, nalezen
     'k.uitleg.aa': 'الفم مفتوح على وسعه. الشفتان مرتخيتان. اللسان منخفض ومسطّح.', // nieuw, nalezen
