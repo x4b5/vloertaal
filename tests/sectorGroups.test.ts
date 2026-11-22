@@ -75,7 +75,7 @@ describe('the new sectors Techniek and Garage', () => {
     expect(themeOf('u.tech')?.id).toBe('theme.sector');
     expect(themeOf('u.garage')?.id).toBe('theme.sector');
     const own = planGroups(coursePlan('garage'));
-    expect(own.find((g) => g.key === 'theme.sector')!.units.map((u) => u.id)).toEqual(['u.garage']);
+    expect(own.find((g) => g.key === 'theme.sector')!.units.map((u) => u.id)).toEqual(['u.garage', 'u.carservice']); // Garage's second unit since 22 November 2026
     expect(own.find((g) => g.key === 'other')!.units.map((u) => u.id)).toContain('u.tech');
     const care = planGroups(coursePlan('care'));
     expect(care.find((g) => g.key === 'other')!.units.map((u) => u.id)).toEqual(expect.arrayContaining(['u.tech', 'u.garage']));

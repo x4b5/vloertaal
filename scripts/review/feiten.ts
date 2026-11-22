@@ -3,6 +3,8 @@
  * summary in Markdown. The way back never changes the content: changing a fact stays work for a
  * person (or for Claude, with that summary).
  */
+// The lesson texts first (src/content/lessonTextsNode.ts): the course is read below.
+import '../../src/content/lessonTextsNode';
 import { toCsv, parseCsv, type Row } from './csv';
 import { bestSentence, overlap, scanFacts, type Fact, type Land } from './facts';
 import { idIndex } from './content';

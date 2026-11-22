@@ -1840,6 +1840,172 @@ const montageUnit = unit('montage', 'Assembly', 'Assemblage en montage', '🔧',
   ),
 ]);
 
+// ---- Growing, sorting and the greenhouse (the owner's request, 22 November 2026) ----
+// The second own unit of the sector Tuinbouw (src/content/sectors.ts): sowing and cuttings,
+// sorting and packing, the greenhouse and its climate, and pests and working clean. In the path of
+// a learner who chose Tuinbouw it comes right after "In de kas"; in every other course it is
+// appended at the very end (workUnits below), so no existing course changes. Already words of
+// other lessons, used here in a sentence or the chat only: "de krat", "de rij", "het blad", "de
+// tomaat" (u.kas) and "beschadigd". The drawings: src/pictures/groupKweek.tsx.
+
+const kweekUnit = unit('kweek', 'Growing, sorting and the greenhouse', 'Kweken, sorteren en de kas', '🌱', '#4a7c2a', [
+  lesson(
+    'sowing',
+    'Sowing and cuttings',
+    [
+      ['zaad', 'het zaad', 'the seeds', '🫘'],
+      ['zaaibak', 'de zaaibak', 'the seed tray', '🌱'],
+      ['stek', 'de stek', 'the cutting (a piece of a plant that grows new roots)', '🌿'],
+      ['potgrond', 'de potgrond', 'the potting soil', '🟤'],
+      ['kweekpot', 'de kweekpot', 'the growing pot', '🪴'],
+      ['gieter', 'de gieter', 'the watering can', '🚿'],
+    ],
+    [
+      ['Leg twee zaadjes in elk vakje.', 'Put two seeds in each cell.'],
+      ['Zet de stek in de potgrond.', 'Put the cutting in the potting soil.'],
+      ['Geef de jonge planten een beetje water.', 'Give the young plants a little water.'],
+    ],
+    [['Hoe diep moet het zaad?', 'How deep must the seed go?'], ['Een halve centimeter. Niet dieper.', 'Half a centimetre. Not deeper.']],
+  ),
+  lesson(
+    'sorting',
+    'Sorting and packing',
+    [
+      ['tros', 'de tros', 'the truss (a bunch of tomatoes on one stem)', '🍅'],
+      ['bakje', 'het bakje', 'the punnet (a small box for fruit)', '🥡'],
+      ['sorteermachine', 'de sorteermachine', 'the sorting machine', '🔀'],
+      ['etiketpistool', 'het etiketpistool', 'the label gun', '🏷️'],
+      ['kleurenkaart', 'de kleurenkaart', 'the colour chart (it shows how ripe the fruit must be)', '🌈'],
+      ['tomatenschaar', 'de tomatenschaar', 'the harvest scissors', '✂️'],
+    ],
+    [
+      ['Leg de trossen voorzichtig in de krat.', 'Put the trusses carefully in the crate.'],
+      ['Deze tomaat is te rijp. Hij gaat apart.', 'This tomato is too ripe. It goes aside.'],
+      ['Kijk op de kleurenkaart.', 'Look at the colour chart.'],
+    ],
+    [['Is deze tomaat rijp genoeg?', 'Is this tomato ripe enough?'], ['Nee, nog te groen. Laat hem hangen.', 'No, still too green. Leave it on the plant.']],
+  ),
+  lesson(
+    'greenhouse',
+    'The greenhouse and its climate',
+    [
+      ['buisrailkar', 'de buisrailkar', 'the pipe-rail trolley (it rides on the heating pipes)', '🛤️'],
+      ['druppelaar', 'de druppelaar', 'the dripper (it gives water drop by drop)', '💧'],
+      ['luchtraam', 'het luchtraam', 'the roof vent (a window in the roof)', '🪟'],
+      ['kasscherm', 'het kasscherm', 'the greenhouse screen (a cloth under the roof)', '⛱️'],
+      ['ventilator', 'de ventilator', 'the fan', '🌀'],
+      ['thermometer', 'de thermometer', 'the thermometer', '🌡️'],
+    ],
+    [
+      ['Rijd de buisrailkar naar het eind van de rij.', 'Ride the pipe-rail trolley to the end of the row.'],
+      ['De druppelaar zit los.', 'The dripper is loose.'],
+      ['Het is warm. De luchtramen gaan open.', 'It is warm. The roof vents are opening.'],
+    ],
+    [['Waarom is het zo warm in de kas?', 'Why is it so warm in the greenhouse?'], ['Het scherm is dicht, en de ramen ook.', 'The screen is closed, and the vents too.']],
+  ),
+  lesson(
+    'pests',
+    'Pests and working clean',
+    [
+      ['luis', 'de luis', 'the aphid (a small green insect on plants)', '🦗'],
+      ['vangplaat', 'de vangplaat', 'the sticky trap (a yellow card that catches insects)', '🟨'],
+      ['rups', 'de rups', 'the caterpillar', '🐛'],
+      ['sluipwesp', 'de sluipwesp', 'the parasitic wasp (a small wasp that kills pests)', '🐝'],
+      ['schimmel', 'de schimmel', 'the mould', '🍄'],
+      ['ontsmettingsmat', 'de ontsmettingsmat', 'the disinfection mat (you step on it at the door)', '🧼'],
+    ],
+    [
+      ['Er zitten luizen op dit blad.', 'There are aphids on this leaf.'],
+      ['Hang de vangplaat boven de planten.', 'Hang the sticky trap above the plants.'],
+      ['Loop over de ontsmettingsmat.', 'Walk over the disinfection mat.'],
+    ],
+    [['Mag ik deze wesp doodmaken?', 'May I kill this wasp?'], ['Nee, dat is een sluipwesp. Die helpt ons.', 'No, that is a parasitic wasp. It helps us.']],
+  ),
+]);
+
+// ---- Tyres, oil and brakes (the owner's request, 22 November 2026) ----
+// The second own unit of the sector Garage (src/content/sectors.ts): changing tyres, changing the
+// oil, brakes and lights, and reading faults with the job card. In the path of a learner who chose
+// Garage it comes right after "In de garage"; in every other course it is appended at the very end
+// (workUnits below), so no existing course changes. Already words of other lessons, used here in a
+// sentence or the chat only: "de band", "de olie", "de motor", "de stoel" (u.garage) and "de rem".
+// The drawings: src/pictures/groupAutoservice.tsx.
+
+const carserviceUnit = unit('carservice', 'Tyres, oil and brakes', 'Banden, olie en remmen', '🛞', '#8a3b2e', [
+  lesson(
+    'tyres',
+    'Changing tyres',
+    [
+      ['wielbout', 'de wielbout', 'the wheel bolt', '🔩'],
+      ['slagmoersleutel', 'de slagmoersleutel', 'the impact wrench', '🔧'],
+      ['bandenspanningsmeter', 'de bandenspanningsmeter', 'the tyre pressure gauge', '⏲️'],
+      ['bandenprofiel', 'het bandenprofiel', 'the tyre tread (the grooves in the tyre)', '〰️'],
+      ['velg', 'de velg', 'the wheel rim', '⭕'],
+      ['bandenwisselaar', 'de bandenwisselaar', 'the tyre changer (a machine to take a tyre off the rim)', '⚙️'],
+    ],
+    [
+      ['Draai de wielbouten kruislings vast.', 'Tighten the wheel bolts crosswise.'],
+      ['Het bandenprofiel is te laag.', 'The tyre tread is too low.'],
+      ['Meet de druk met de bandenspanningsmeter.', 'Measure the pressure with the tyre pressure gauge.'],
+    ],
+    [['Moeten deze banden eraf?', 'Must these tyres come off?'], ['Ja, het profiel is bijna weg.', 'Yes, the tread is almost gone.']],
+  ),
+  lesson(
+    'oilchange',
+    'Changing the oil',
+    [
+      ['oliefilter', 'het oliefilter', 'the oil filter', '🛢️'],
+      ['oliepeilstok', 'de oliepeilstok', 'the dipstick (it shows how much oil there is)', '📏'],
+      ['opvangbak', 'de opvangbak', 'the drain pan (it catches the old oil)', '🫗'],
+      ['trechter', 'de trechter', 'the funnel', '🔻'],
+      ['aftapplug', 'de aftapplug', 'the drain plug', '🔩'],
+      ['olievat', 'het olievat', 'the oil drum', '🛢️'],
+    ],
+    [
+      ['Zet de opvangbak onder de motor.', 'Put the drain pan under the engine.'],
+      ['Draai de aftapplug los.', 'Undo the drain plug.'],
+      ['Kijk op de oliepeilstok.', 'Look at the dipstick.'],
+    ],
+    [['Hoeveel olie moet erin?', 'How much oil must go in?'], ['Vier liter. Kijk daarna op de peilstok.', 'Four litres. Then look at the dipstick.']],
+  ),
+  lesson(
+    'brakes',
+    'Brakes and lights',
+    [
+      ['remschijf', 'de remschijf', 'the brake disc', '⚪'],
+      ['remblok', 'het remblok', 'the brake pad', '🟫'],
+      ['koplamp', 'de koplamp', 'the headlight', '🔦'],
+      ['remvloeistof', 'de remvloeistof', 'the brake fluid', '🧴'],
+      ['remklauw', 'de remklauw', 'the brake caliper', '🦞'],
+      ['achterlamp', 'de achterlamp', 'the rear light', '🔴'],
+    ],
+    [
+      ['De remblokken zijn versleten.', 'The brake pads are worn.'],
+      ['Controleer de remvloeistof.', 'Check the brake fluid.'],
+      ['De linker achterlamp doet het niet.', 'The left rear light does not work.'],
+    ],
+    [['Moet de remschijf ook nieuw?', 'Does the brake disc need replacing too?'], ['Ja, hij is te dun.', 'Yes, it is too thin.']],
+  ),
+  lesson(
+    'diagnosis',
+    'Reading faults and the job card',
+    [
+      ['diagnosecomputer', 'de diagnosecomputer', 'the diagnostic tester (it reads the faults of the car)', '💻'],
+      ['waarschuwingslampje', 'het waarschuwingslampje', 'the warning light (on the dashboard)', '🟠'],
+      ['werkorder', 'de werkorder', 'the job card (what must be done on the car)', '📋'],
+      ['kentekenplaat', 'de kentekenplaat', 'the number plate', '🚘'],
+      ['autosleutel', 'de autosleutel', 'the car key', '🗝️'],
+      ['stoelhoes', 'de stoelhoes', 'the seat cover (it keeps the seat clean)', '💺'],
+    ],
+    [
+      ['Sluit de diagnosecomputer aan.', 'Connect the diagnostic tester.'],
+      ['Het waarschuwingslampje brandt.', 'The warning light is on.'],
+      ['Leg een stoelhoes op de stoel.', 'Put a seat cover on the seat.'],
+    ],
+    [['Wat moet er aan deze auto gebeuren?', 'What must be done on this car?'], ['Kijk op de werkorder.', 'Look at the job card.']],
+  ),
+]);
+
 // ---- In the shop, and Time, money and measures (docs/entree-aanvulling.md, part 5) ----
 // Basis units (no sector of their own), after the sector units: the course of every existing
 // sector keeps its order, the two units come at the end of it.
@@ -3090,5 +3256,12 @@ export const workUnits: Unit[] = [
   installUnit,
   // Productie's third own unit (21 November 2026), at the very end (see "Assembly" above).
   montageUnit,
+  // Tuinbouw's and Garage's second own units (22 November 2026), at the very end (see "Growing,
+  // sorting and the greenhouse" and "Tyres, oil and brakes" above).
+  kweekUnit,
+  carserviceUnit,
 ];
 
+
+/** This file's address (saved with the app for offline use, src/content/lessonTexts.ts). */
+export const url: string = import.meta.url;

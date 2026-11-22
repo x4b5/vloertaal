@@ -2815,6 +2815,169 @@ const t: CultureTranslation = {
     'c.finalcheck.o2': "Kleb den Aufkleber drauf: Der Kratzer ist klein.", // nieuw, nalezen
     'c.finalcheck.o3': "Schieb das Etikett über den Kratzer.", // nieuw, nalezen
     'c.finalcheck.w': "Ein kleiner Kratzer kann ein Zeichen für ein Problem am Band sein. Wer ihn versteckt, schiebt das Problem nur zum Kunden.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'u.kweek': "Anbauen, sortieren und das Gewächshaus", // nieuw, nalezen
+    'l.sowing': "Säen und Stecklinge", // nieuw, nalezen
+    'w.zaad': "die Samen", // nieuw, nalezen
+    'w.zaaibak': "die Anzuchtschale", // nieuw, nalezen
+    'w.stek': "der Steckling (ein Stück Pflanze, das neue Wurzeln bildet)", // nieuw, nalezen
+    'w.potgrond': "die Blumenerde", // nieuw, nalezen
+    'w.kweekpot': "der Anzuchttopf", // nieuw, nalezen
+    'w.gieter': "die Gießkanne", // nieuw, nalezen
+    's.sowing.1': "Leg zwei Samen in jedes Fach.", // nieuw, nalezen
+    's.sowing.2': "Steck den Steckling in die Blumenerde.", // nieuw, nalezen
+    's.sowing.3': "Gib den jungen Pflanzen ein bisschen Wasser.", // nieuw, nalezen
+    'c.sowing.q': "Wie tief muss der Samen rein?", // nieuw, nalezen
+    'c.sowing.a': "Einen halben Zentimeter. Nicht tiefer.", // nieuw, nalezen
+    'c.sowing': "Kleine Pflanzen brauchen eine sanfte Hand", // nieuw, nalezen
+    'c.sowing.b': "Junge Pflanzen sind empfindlich. Halte einen Steckling oder einen Keimling an einem Blatt, nicht am Stängel: Ein Blatt wächst nach, ein gebrochener Stängel nicht. Drück die Erde sanft an, nicht fest. Gieß langsam, mit einem feinen Strahl, damit die Samen nicht weggespült werden. Arbeite mit sauberen Händen und sauberen Schalen: Junge Pflanzen werden schnell krank. Schreib das Datum und die Pflanzensorte auf jede Schale, damit jeder weiß, was drin ist.", // nieuw, nalezen
+    'c.sowing.p': "Ich halte ihn am Blatt fest.", // nieuw, nalezen
+    'c.sowing.s': "Du sollst einen kleinen Keimling in einen Topf setzen. Was machst du?", // nieuw, nalezen
+    'c.sowing.o1': "Halt ihn vorsichtig an einem Blatt.", // nieuw, nalezen
+    'c.sowing.o2': "Zieh ihn am Stängel heraus.", // nieuw, nalezen
+    'c.sowing.o3': "Drück ihn mit der Erde heraus.", // nieuw, nalezen
+    'c.sowing.w': "Ein Blatt kann nachwachsen. Ein gebrochener Stängel nicht, und dann stirbt die Pflanze.", // nieuw, nalezen
+    'l.sorting': "Sortieren und verpacken", // nieuw, nalezen
+    'w.tros': "die Rispe (mehrere Tomaten an einem Stiel)", // nieuw, nalezen
+    'w.bakje': "die Schale (eine kleine Packung für Obst)", // nieuw, nalezen
+    'w.sorteermachine': "die Sortiermaschine", // nieuw, nalezen
+    'w.etiketpistool': "die Etikettierpistole", // nieuw, nalezen
+    'w.kleurenkaart': "die Farbkarte (sie zeigt, wie reif das Obst sein muss)", // nieuw, nalezen
+    'w.tomatenschaar': "die Ernteschere", // nieuw, nalezen
+    's.sorting.1': "Leg die Rispen vorsichtig in die Kiste.", // nieuw, nalezen
+    's.sorting.2': "Diese Tomate ist zu reif. Sie kommt zur Seite.", // nieuw, nalezen
+    's.sorting.3': "Schau auf die Farbkarte.", // nieuw, nalezen
+    'c.sorting.q': "Ist diese Tomate reif genug?", // nieuw, nalezen
+    'c.sorting.a': "Nein, noch zu grün. Lass sie hängen.", // nieuw, nalezen
+    'c.sorting': "Jede Frucht zählt", // nieuw, nalezen
+    'c.sorting.b': "Obst und Gemüse bekommen schnell Druckstellen. Leg sie hin, lass sie nicht fallen und wirf sie nicht. Heute siehst du die Druckstelle nicht, aber morgen ist die Frucht weich und braun. Schau auf die Farbkarte, damit du weißt, welche Farbe wohin kommt. Leg beschädigtes oder faules Obst zur Seite: Eine schlechte Frucht in einer Schale kann die anderen verderben. Halte die Schalen und Kisten sauber, und stell sie nie auf den Boden.", // nieuw, nalezen
+    'c.sorting.p': "Diese ist beschädigt.", // nieuw, nalezen
+    'c.sorting.s': "Du packst Schalen. Eine Tomate hat eine weiche braune Stelle. Was machst du?", // nieuw, nalezen
+    'c.sorting.o1': "Leg sie zur Seite.", // nieuw, nalezen
+    'c.sorting.o2': "Versteck sie ganz unten.", // nieuw, nalezen
+    'c.sorting.o3': "Pack sie trotzdem ein.", // nieuw, nalezen
+    'c.sorting.w': "Eine faule Tomate lässt die anderen schneller faulen. Der Kunde findet sie, und die ganze Schale kommt zurück.", // nieuw, nalezen
+    'l.greenhouse': "Das Gewächshaus und sein Klima", // nieuw, nalezen
+    'w.buisrailkar': "der Rohrschienenwagen (er fährt auf den Heizungsrohren)", // nieuw, nalezen
+    'w.druppelaar': "der Tropfer (er gibt Wasser Tropfen für Tropfen)", // nieuw, nalezen
+    'w.luchtraam': "die Lüftungsklappe (ein Fenster im Dach)", // nieuw, nalezen
+    'w.kasscherm': "der Energieschirm (ein Tuch unter dem Dach)", // nieuw, nalezen
+    'w.ventilator': "der Ventilator", // nieuw, nalezen
+    'w.thermometer': "das Thermometer", // nieuw, nalezen
+    's.greenhouse.1': "Fahr den Rohrschienenwagen bis zum Ende der Reihe.", // nieuw, nalezen
+    's.greenhouse.2': "Der Tropfer ist lose.", // nieuw, nalezen
+    's.greenhouse.3': "Es ist warm. Die Lüftungsklappen gehen auf.", // nieuw, nalezen
+    'c.greenhouse.q': "Warum ist es so warm im Gewächshaus?", // nieuw, nalezen
+    'c.greenhouse.a': "Der Schirm ist zu, und die Klappen auch.", // nieuw, nalezen
+    'c.greenhouse': "Überlass das Klima dem Computer", // nieuw, nalezen
+    'c.greenhouse.b': "Im Gewächshaus regelt ein Computer das Klima: die Lüftungsklappen, den Schirm, die Heizung und das Wasser. Mach keine Klappe selbst auf und ändere keine Einstellung. Siehst du etwas Komisches, zum Beispiel einen Tropfer, der leckt, oder eine Klappe, die nicht zugeht? Sag es deinem Vorgesetzten. Der Rohrschienenwagen fährt auf den Heizungsrohren: Benutz ihn nur, wenn du gelernt hast, wie das geht. Bleib mit den Füßen auf der Plattform, und fass die Rohre nie an: Sie können heiß sein. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.greenhouse.p': "Dieser Tropfer leckt.", // nieuw, nalezen
+    'c.greenhouse.s': "Ein Tropfer ist lose. Wasser läuft auf den Boden. Was machst du?", // nieuw, nalezen
+    'c.greenhouse.o1': "Steck ihn wieder fest, und sag es deinem Vorgesetzten.", // nieuw, nalezen
+    'c.greenhouse.o2': "Lass es: Es ist nur Wasser.", // nieuw, nalezen
+    'c.greenhouse.o3': "Dreh das Wasser für die ganze Reihe ab.", // nieuw, nalezen
+    'c.greenhouse.w': "Ein loser Tropfer verschwendet Wasser, die Pflanze bekommt zu wenig, und ein nasser Boden ist rutschig.", // nieuw, nalezen
+    'l.pests': "Schädlinge und sauberes Arbeiten", // nieuw, nalezen
+    'w.luis': "die Blattlaus (ein kleines grünes Insekt auf Pflanzen)", // nieuw, nalezen
+    'w.vangplaat': "die Gelbtafel (eine gelbe Karte, an der Insekten kleben bleiben)", // nieuw, nalezen
+    'w.rups': "die Raupe", // nieuw, nalezen
+    'w.sluipwesp': "die Schlupfwespe (eine kleine Wespe, die Schädlinge tötet)", // nieuw, nalezen
+    'w.schimmel': "der Schimmel", // nieuw, nalezen
+    'w.ontsmettingsmat': "die Desinfektionsmatte (du trittst an der Tür darauf)", // nieuw, nalezen
+    's.pests.1': "Auf diesem Blatt sind Blattläuse.", // nieuw, nalezen
+    's.pests.2': "Häng die Gelbtafel über die Pflanzen.", // nieuw, nalezen
+    's.pests.3': "Geh über die Desinfektionsmatte.", // nieuw, nalezen
+    'c.pests.q': "Darf ich diese Wespe totmachen?", // nieuw, nalezen
+    'c.pests.a': "Nein, das ist eine Schlupfwespe. Die hilft uns.", // nieuw, nalezen
+    'c.pests': "Trag keine Krankheiten von Reihe zu Reihe", // nieuw, nalezen
+    'c.pests.b': "Eine Krankheit oder ein Schädling breitet sich im Gewächshaus schnell aus. Du kannst sie an deinen Händen, deiner Kleidung und deinem Werkzeug mitnehmen. Geh also an jeder Tür über die Desinfektionsmatte, und wasch dir die Hände, wenn du in einen anderen Teil des Gewächshauses gehst. Fang deine Arbeit in den gesunden Reihen an, und hör in den kranken Reihen auf. Siehst du Insekten, Flecken oder Schimmel an einer Pflanze? Fass sie nicht an, aber sag deinem Vorgesetzten, wo sie ist. Manche Insekten im Gewächshaus sind Helfer: Lass sie in Ruhe. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.pests.p': "Hier ist Schimmel.", // nieuw, nalezen
+    'c.pests.s': "Du siehst grauen Schimmel an ein paar Pflanzen in deiner Reihe. Was machst du?", // nieuw, nalezen
+    'c.pests.o1': "Sag deinem Vorgesetzten, wo er ist.", // nieuw, nalezen
+    'c.pests.o2': "Zupf die schlechten Blätter ab und mach weiter.", // nieuw, nalezen
+    'c.pests.o3': "Sag nichts: Es sind nur ein paar Pflanzen.", // nieuw, nalezen
+    'c.pests.w': "Schimmel breitet sich schnell aus. Dein Vorgesetzter weiß, was zu tun ist und wo man anfängt.", // nieuw, nalezen
+    'u.carservice': "Reifen, Öl und Bremsen", // nieuw, nalezen
+    'l.tyres': "Reifen wechseln", // nieuw, nalezen
+    'w.wielbout': "die Radschraube", // nieuw, nalezen
+    'w.slagmoersleutel': "der Schlagschrauber", // nieuw, nalezen
+    'w.bandenspanningsmeter': "der Reifendruckprüfer", // nieuw, nalezen
+    'w.bandenprofiel': "das Reifenprofil (die Rillen im Reifen)", // nieuw, nalezen
+    'w.velg': "die Felge", // nieuw, nalezen
+    'w.bandenwisselaar': "die Reifenmontiermaschine (eine Maschine, die den Reifen von der Felge nimmt)", // nieuw, nalezen
+    's.tyres.1': "Zieh die Radschrauben über Kreuz fest.", // nieuw, nalezen
+    's.tyres.2': "Das Reifenprofil ist zu niedrig.", // nieuw, nalezen
+    's.tyres.3': "Miss den Druck mit dem Reifendruckprüfer.", // nieuw, nalezen
+    'c.tyres.q': "Müssen diese Reifen runter?", // nieuw, nalezen
+    'c.tyres.a': "Ja, das Profil ist fast weg.", // nieuw, nalezen
+    'c.tyres': "Von Hand eindrehen, mit dem Drehmomentschlüssel festziehen", // nieuw, nalezen
+    'c.tyres.b': "Ein Schlagschrauber ist schnell und sehr stark. Nimm ihn, um Radschrauben zu lösen, aber nicht, um sie fest anzuziehen. Dreh die Schrauben zuerst von Hand ein. Dann zieh sie über Kreuz mit einem Drehmomentschlüssel fest, mit der Kraft für dieses Auto. Ein Rad, das nicht fest ist, kann sich beim Fahren lösen. Prüf das Profil und den Druck von jedem Reifen, den du in die Hand nimmst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.tyres.p': "Ich drehe sie zuerst von Hand ein.", // nieuw, nalezen
+    'c.tyres.s': "Du machst ein Rad wieder dran. Ein Kollege sagt: „Nimm den Schlagschrauber, das geht schneller.“ Was machst du?", // nieuw, nalezen
+    'c.tyres.o1': "Dreh sie von Hand ein, dann nimm den Drehmomentschlüssel.", // nieuw, nalezen
+    'c.tyres.o2': "Zieh sie mit dem Schlagschrauber fest an.", // nieuw, nalezen
+    'c.tyres.o3': "Dreh sie von Hand ein, und lass es so.", // nieuw, nalezen
+    'c.tyres.w': "Ein Schlagschrauber kann eine Schraube zu fest oder nicht fest genug anziehen. Nur der Drehmomentschlüssel gibt die richtige Kraft.", // nieuw, nalezen
+    'l.oilchange': "Ölwechsel", // nieuw, nalezen
+    'w.oliefilter': "der Ölfilter", // nieuw, nalezen
+    'w.oliepeilstok': "der Ölmessstab (er zeigt, wie viel Öl drin ist)", // nieuw, nalezen
+    'w.opvangbak': "die Auffangwanne (sie fängt das alte Öl auf)", // nieuw, nalezen
+    'w.trechter': "der Trichter", // nieuw, nalezen
+    'w.aftapplug': "die Ölablassschraube", // nieuw, nalezen
+    'w.olievat': "das Ölfass", // nieuw, nalezen
+    's.oilchange.1': "Stell die Auffangwanne unter den Motor.", // nieuw, nalezen
+    's.oilchange.2': "Dreh die Ölablassschraube heraus.", // nieuw, nalezen
+    's.oilchange.3': "Schau auf den Ölmessstab.", // nieuw, nalezen
+    'c.oilchange.q': "Wie viel Öl muss rein?", // nieuw, nalezen
+    'c.oilchange.a': "Vier Liter. Schau danach auf den Messstab.", // nieuw, nalezen
+    'c.oilchange': "Altöl kommt ins Fass, nicht in den Abfluss", // nieuw, nalezen
+    'c.oilchange.b': "Altöl ist schlecht für Wasser und Boden. Ein bisschen Öl kann viel Wasser verschmutzen. Fang also das ganze Altöl in der Auffangwanne auf, und gieß es in das Fass für Altöl. Gieß es nie in einen Abfluss oder ein Waschbecken. Alte Filter und ölige Lappen kommen in ihren eigenen Behälter. Heißes Öl kann deine Haut verbrennen: Lass den Motor zuerst etwas abkühlen, und trag Handschuhe. Wisch verschüttetes Öl sofort auf: Öl auf dem Boden ist rutschig. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.oilchange.p': "Wohin kommt das Altöl?", // nieuw, nalezen
+    'c.oilchange.s': "Die Auffangwanne ist voll mit Altöl. Das Fass steht am anderen Ende der Werkstatt. Was machst du?", // nieuw, nalezen
+    'c.oilchange.o1': "Trag sie vorsichtig zum Fass.", // nieuw, nalezen
+    'c.oilchange.o2': "Gieß sie draußen in den Abfluss.", // nieuw, nalezen
+    'c.oilchange.o3': "Lass sie für später unter dem Auto stehen.", // nieuw, nalezen
+    'c.oilchange.w': "Altöl im Abfluss verschmutzt das Wasser. Eine volle Wanne unter einem Auto wird leicht umgetreten.", // nieuw, nalezen
+    'l.brakes': "Bremsen und Licht", // nieuw, nalezen
+    'w.remschijf': "die Bremsscheibe", // nieuw, nalezen
+    'w.remblok': "der Bremsbelag", // nieuw, nalezen
+    'w.koplamp': "der Scheinwerfer", // nieuw, nalezen
+    'w.remvloeistof': "die Bremsflüssigkeit", // nieuw, nalezen
+    'w.remklauw': "der Bremssattel", // nieuw, nalezen
+    'w.achterlamp': "das Rücklicht", // nieuw, nalezen
+    's.brakes.1': "Die Bremsbeläge sind abgenutzt.", // nieuw, nalezen
+    's.brakes.2': "Prüf die Bremsflüssigkeit.", // nieuw, nalezen
+    's.brakes.3': "Das linke Rücklicht geht nicht.", // nieuw, nalezen
+    'c.brakes.q': "Muss die Bremsscheibe auch neu?", // nieuw, nalezen
+    'c.brakes.a': "Ja, sie ist zu dünn.", // nieuw, nalezen
+    'c.brakes': "Bremsen: zweimal prüfen", // nieuw, nalezen
+    'c.brakes.b': "Bremsen halten Menschen am Leben. Arbeite also ruhig, und prüf deine Arbeit zweimal. Tritt nach neuen Belägen oder Scheiben ein paar Mal auf das Bremspedal, bevor das Auto fährt: Beim ersten Treten geht das Pedal oft zu tief. Bremsflüssigkeit ist schlecht für deine Haut und für den Lack: Trag Handschuhe, und wisch Tropfen sofort weg. Blas Bremsstaub nicht mit Druckluft weg: Mach ihn mit Bremsenreiniger und einem Lappen sauber. Bevor das Auto rausfährt, prüf jedes Licht, auch die Bremslichter.", // nieuw, nalezen
+    'c.brakes.p': "Ich trete ein paar Mal auf das Bremspedal.", // nieuw, nalezen
+    'c.brakes.s': "Du hast neue Bremsbeläge eingebaut. Das Auto muss nach draußen. Was machst du?", // nieuw, nalezen
+    'c.brakes.o1': "Tritt ein paar Mal auf das Bremspedal.", // nieuw, nalezen
+    'c.brakes.o2': "Fahr es sofort raus.", // nieuw, nalezen
+    'c.brakes.o3': "Schieb es raus, ohne zu prüfen.", // nieuw, nalezen
+    'c.brakes.w': "Nach neuen Belägen kann das Pedal beim ersten Mal zu tief gehen. Dann hält das Auto nicht an.", // nieuw, nalezen
+    'l.diagnosis': "Fehler auslesen und der Arbeitsauftrag", // nieuw, nalezen
+    'w.diagnosecomputer': "das Diagnosegerät (es liest die Fehler des Autos aus)", // nieuw, nalezen
+    'w.waarschuwingslampje': "die Warnleuchte (am Armaturenbrett)", // nieuw, nalezen
+    'w.werkorder': "der Arbeitsauftrag (was am Auto gemacht werden muss)", // nieuw, nalezen
+    'w.kentekenplaat': "das Nummernschild", // nieuw, nalezen
+    'w.autosleutel': "der Autoschlüssel", // nieuw, nalezen
+    'w.stoelhoes': "der Sitzbezug (er hält den Sitz sauber)", // nieuw, nalezen
+    's.diagnosis.1': "Schließ das Diagnosegerät an.", // nieuw, nalezen
+    's.diagnosis.2': "Die Warnleuchte ist an.", // nieuw, nalezen
+    's.diagnosis.3': "Leg einen Sitzbezug auf den Sitz.", // nieuw, nalezen
+    'c.diagnosis.q': "Was muss an diesem Auto gemacht werden?", // nieuw, nalezen
+    'c.diagnosis.a': "Schau auf den Arbeitsauftrag.", // nieuw, nalezen
+    'c.diagnosis': "Behandle das Auto, als wäre es dein eigenes", // nieuw, nalezen
+    'c.diagnosis.b': "Ein Kunde gibt dir sein Auto und seinen Schlüssel. Geh mit beidem sorgfältig um. Leg einen Sitzbezug auf den Sitz und eine Matte auf den Boden, bevor du einsteigst. Mach nur, was auf dem Arbeitsauftrag steht. Findest du noch etwas anderes, das nicht stimmt? Schreib es auf und sag es deinem Vorgesetzten: Der Kunde entscheidet. Leg den Schlüssel an seinen Platz, mit seinem Anhänger. Benutz nicht das Radio, das Telefon oder die Sachen im Auto. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.diagnosis.p': "Das steht nicht auf dem Arbeitsauftrag.", // nieuw, nalezen
+    'c.diagnosis.s': "Du machst einen Ölwechsel. Ein Reifen ist fast abgefahren. Das steht nicht auf dem Arbeitsauftrag. Was machst du?", // nieuw, nalezen
+    'c.diagnosis.o1': "Schreib es auf, und sag es deinem Vorgesetzten.", // nieuw, nalezen
+    'c.diagnosis.o2': "Wechsle den Reifen sofort.", // nieuw, nalezen
+    'c.diagnosis.o3': "Sag nichts: Das ist nicht deine Aufgabe.", // nieuw, nalezen
+    'c.diagnosis.w': "Der Kunde entscheidet, was gemacht und bezahlt wird. Aber er muss wissen, dass der Reifen gefährlich ist.", // nieuw, nalezen
   },
 };
 

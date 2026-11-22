@@ -200,6 +200,15 @@ const t: CultureTranslation = {
     'c.fastening.a.why': "Întrebarea e cât de strâns: până face cheia clic.", // nieuw, nalezen
     'c.handling.a.why': "Întrebarea e dacă e voie să stea acolo: nu, niciodată, și de ce.", // nieuw, nalezen
     'c.finalcheck.a.why': "Întrebarea e dacă e bun: nu, și ce defect are.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'c.sowing.a.why': "Întrebarea e cât de adânc: adâncimea, și nu mai adânc.", // nieuw, nalezen
+    'c.sorting.a.why': "Întrebarea e dacă e coaptă: nu, e prea verde, și ce se face.", // nieuw, nalezen
+    'c.greenhouse.a.why': "Întrebarea e de ce e cald: ecranul și ferestrele sunt închise.", // nieuw, nalezen
+    'c.pests.a.why': "Întrebarea e dacă e voie să fie omorâtă: nu, și de ce ajută.", // nieuw, nalezen
+    'c.tyres.a.why': "Întrebarea e dacă trebuie scoase: da, și de ce.", // nieuw, nalezen
+    'c.oilchange.a.why': "Întrebarea e cât: litrii, și cum se verifică.", // nieuw, nalezen
+    'c.brakes.a.why': "Întrebarea e dacă trebuie unul nou: da, și de ce.", // nieuw, nalezen
+    'c.diagnosis.a.why': "Întrebarea e ce trebuie făcut: uită-te pe fișa de lucru.", // nieuw, nalezen
   },
 };
 

@@ -199,6 +199,15 @@ const t: CultureTranslation = {
     'c.fastening.a.why': "Gefragt, wie fest: bis der Schlüssel klickt.", // nieuw, nalezen
     'c.handling.a.why': "Gefragt, ob man dort stehen darf: Nein, nie, und warum.", // nieuw, nalezen
     'c.finalcheck.a.why': "Gefragt, ob es in Ordnung ist: Nein, und was damit nicht stimmt.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'c.sowing.a.why': "Gefragt, wie tief: die Tiefe, und nicht tiefer.", // nieuw, nalezen
+    'c.sorting.a.why': "Gefragt, ob sie reif ist: Nein, zu grün, und was man tun soll.", // nieuw, nalezen
+    'c.greenhouse.a.why': "Gefragt, warum es warm ist: Der Schirm und die Klappen sind zu.", // nieuw, nalezen
+    'c.pests.a.why': "Gefragt, ob man sie totmachen darf: Nein, und warum sie hilft.", // nieuw, nalezen
+    'c.tyres.a.why': "Gefragt, ob sie runter müssen: Ja, und warum.", // nieuw, nalezen
+    'c.oilchange.a.why': "Gefragt, wie viel: die Liter, und wie man es prüft.", // nieuw, nalezen
+    'c.brakes.a.why': "Gefragt, ob sie neu muss: Ja, und warum.", // nieuw, nalezen
+    'c.diagnosis.a.why': "Gefragt, was gemacht werden muss: auf den Arbeitsauftrag schauen.", // nieuw, nalezen
   },
 };
 

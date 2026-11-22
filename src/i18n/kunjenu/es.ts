@@ -134,6 +134,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "Puedo decir que la caja de piezas está casi vacía.", // nieuw, nalezen
     'kjn.u.montage.2': "Puedo preguntar cuánto hay que apretar un perno.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "Puedo decir que hay moho en una planta.", // nieuw, nalezen
+    'kjn.u.kweek.2': "Puedo preguntar si un tomate está bastante maduro.", // nieuw, nalezen
+    'kjn.u.carservice.1': "Puedo decir que el testigo está encendido.", // nieuw, nalezen
+    'kjn.u.carservice.2': "Puedo preguntar cuánto aceite hay que echar.", // nieuw, nalezen
   },
 };
 

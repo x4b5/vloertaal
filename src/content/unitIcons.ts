@@ -70,6 +70,9 @@ export const unitIcons: Record<string, string> = {
   'u.install': 'w.stopcontact',
   // Assemblage en montage (21 November 2026): the torque wrench (groupMontage).
   'u.montage': 'w.momentsleutel',
+  // Kweken, sorteren en de kas and Banden, olie en remmen (22 November 2026).
+  'u.kweek': 'w.kweekpot',
+  'u.carservice': 'w.velg',
 };
 
 /**

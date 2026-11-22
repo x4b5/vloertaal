@@ -135,6 +135,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "Я можу сказати, що ящик для деталей майже порожній.", // nieuw, nalezen
     'kjn.u.montage.2': "Я можу запитати, як туго треба затягнути болт.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "Я можу сказати, що на рослині пліснява.", // nieuw, nalezen
+    'kjn.u.kweek.2': "Я можу запитати, чи помідор достатньо стиглий.", // nieuw, nalezen
+    'kjn.u.carservice.1': "Я можу сказати, що горить контрольна лампа.", // nieuw, nalezen
+    'kjn.u.carservice.2': "Я можу запитати, скільки мастила треба залити.", // nieuw, nalezen
   },
 };
 

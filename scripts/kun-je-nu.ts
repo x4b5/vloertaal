@@ -1,3 +1,5 @@
+// The lesson texts first (src/content/lessonTextsNode.ts): the course is read below.
+import '../src/content/lessonTextsNode';
 import { writeFileSync } from 'node:fs';
 import { kunJeNuMarkdown } from '../src/lib/kunJeNuDoc';
 

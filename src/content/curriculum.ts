@@ -1,5 +1,6 @@
 import { communicateUnit, feedbackUnit, teamworkUnit } from './cultureUnits';
-import { dataUnit, doUnit, toolsUnit, workUnits } from './work';
+import { workSkeleton } from './workSkeleton';
+import { skeletonUnit, whenLessonTexts } from './lessonTexts';
 import { soundsUnit } from './sounds';
 import { addMixLessons, isMixLesson, mixLessonFor } from './review';
 import type { ChatLine, Dialogue, Lesson, Sentence, Unit, Word } from './types';
@@ -11,7 +12,12 @@ import type { Track } from '../lib/track';
 /**
  * The course: Dutch for the work floor, explained in English.
  * Every id here is also a translation key in src/i18n/<lang>.ts.
+ *
+ * The units of ./work.ts come from its skeleton (names and ids): their words, sentences and chats
+ * load right after the start (src/content/lessonTexts.ts), and the lists of all words, chats and
+ * replies below are filled then.
  */
+const [doUnit, toolsUnit, dataUnit, ...workUnits] = workSkeleton.map(skeletonUnit);
 export const units: Unit[] = [
   {
     id: 'u.firstday',
@@ -592,10 +598,17 @@ function allLessonsOf(list: Unit[]): Lesson[] {
 export const allLessons: Lesson[] = units.flatMap((u) => u.lessons);
 /** The lessons that teach new items; mixed reviews only repeat them. */
 export const teachingLessons: Lesson[] = allLessons.filter((l) => !isMixLesson(l));
-export const allWords: Word[] = teachingLessons.flatMap((l) => l.words);
-export const allDialogues: Dialogue[] = teachingLessons.flatMap((l) => l.dialogues ?? []);
-/** Every learner reply; wrong options in a chat exercise come from here. */
-export const allReplies: ChatLine[] = allDialogues.map((d) => d.reply);
+/** Every word of the course: filled when the lesson texts are here (src/content/lessonTexts.ts). */
+export const allWords: Word[] = [];
+/** Every chat of the course (filled with the lesson texts, as allWords). */
+export const allDialogues: Dialogue[] = [];
+/** Every learner reply; wrong options in a chat exercise come from here (filled as allWords). */
+export const allReplies: ChatLine[] = [];
+whenLessonTexts(() => {
+  allWords.push(...teachingLessons.flatMap((l) => l.words));
+  allDialogues.push(...teachingLessons.flatMap((l) => l.dialogues ?? []));
+  allReplies.push(...allDialogues.map((d) => d.reply));
+});
 
 /**
  * Words learned: every distinct word of the lessons the learner has finished (each finished

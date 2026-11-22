@@ -200,6 +200,15 @@ const t: CultureTranslation = {
     'c.fastening.a.why': "Питають, як туго: поки ключ не клацне.", // nieuw, nalezen
     'c.handling.a.why': "Питають, чи можна там стояти: ні, ніколи, і чому.", // nieuw, nalezen
     'c.finalcheck.a.why': "Питають, чи він хороший: ні, і що з ним не так.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'c.sowing.a.why': "Питають, як глибоко: глибина, і не глибше.", // nieuw, nalezen
+    'c.sorting.a.why': "Питають, чи він стиглий: ні, ще зелений, і що робити.", // nieuw, nalezen
+    'c.greenhouse.a.why': "Питають, чому тепло: екран і кватирки закриті.", // nieuw, nalezen
+    'c.pests.a.why': "Питають, чи можна її вбити: ні, і чому вона допомагає.", // nieuw, nalezen
+    'c.tyres.a.why': "Питають, чи треба їх знімати: так, і чому.", // nieuw, nalezen
+    'c.oilchange.a.why': "Питають, скільки: літри, і як перевірити.", // nieuw, nalezen
+    'c.brakes.a.why': "Питають, чи треба новий: так, і чому.", // nieuw, nalezen
+    'c.diagnosis.a.why': "Питають, що треба зробити: подивитися в наряд.", // nieuw, nalezen
   },
 };
 

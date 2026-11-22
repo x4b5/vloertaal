@@ -2817,6 +2817,169 @@ const t: CultureTranslation = {
     'c.finalcheck.o2': "Naklejasz naklejkę: rysa jest mała.", // nieuw, nalezen
     'c.finalcheck.o3': "Przesuwasz etykietę na rysę.", // nieuw, nalezen
     'c.finalcheck.w': "Mała rysa może być znakiem problemu na linii. Ukrycie jej tylko przenosi problem do klienta.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'u.kweek': "Uprawa, sortowanie i szklarnia", // nieuw, nalezen
+    'l.sowing': "Siew i sadzonki", // nieuw, nalezen
+    'w.zaad': "nasiona", // nieuw, nalezen
+    'w.zaaibak': "taca do wysiewu", // nieuw, nalezen
+    'w.stek': "sadzonka (kawałek rośliny, który wypuszcza nowe korzenie)", // nieuw, nalezen
+    'w.potgrond': "ziemia doniczkowa", // nieuw, nalezen
+    'w.kweekpot': "doniczka do uprawy", // nieuw, nalezen
+    'w.gieter': "konewka", // nieuw, nalezen
+    's.sowing.1': "Włóż dwa nasiona do każdej komórki.", // nieuw, nalezen
+    's.sowing.2': "Włóż sadzonkę do ziemi doniczkowej.", // nieuw, nalezen
+    's.sowing.3': "Daj młodym roślinom trochę wody.", // nieuw, nalezen
+    'c.sowing.q': "Jak głęboko ma iść nasiono?", // nieuw, nalezen
+    'c.sowing.a': "Pół centymetra. Nie głębiej.", // nieuw, nalezen
+    'c.sowing': "Małe rośliny potrzebują delikatnej ręki", // nieuw, nalezen
+    'c.sowing.b': "Młode rośliny są słabe. Sadzonkę albo siewkę trzymaj za liść, nie za łodygę: liść odrośnie, złamana łodyga nie. Dociskaj ziemię delikatnie, nie mocno. Podlewaj powoli, drobnym strumieniem, żeby nie wypłukać nasion. Pracuj czystymi rękami i z czystymi tacami: młode rośliny łatwo chorują. Na każdej tacy napisz datę i rodzaj rośliny, żeby każdy wiedział, co w niej jest.", // nieuw, nalezen
+    'c.sowing.p': "Trzymam ją za liść.", // nieuw, nalezen
+    'c.sowing.s': "Musisz przesadzić małą siewkę do doniczki. Co robisz?", // nieuw, nalezen
+    'c.sowing.o1': "Delikatnie trzymasz ją za liść.", // nieuw, nalezen
+    'c.sowing.o2': "Wyciągasz ją za łodygę.", // nieuw, nalezen
+    'c.sowing.o3': "Wyciskasz ją razem z ziemią.", // nieuw, nalezen
+    'c.sowing.w': "Liść może odrosnąć. Złamana łodyga nie, i wtedy roślina umiera.", // nieuw, nalezen
+    'l.sorting': "Sortowanie i pakowanie", // nieuw, nalezen
+    'w.tros': "kiść (pomidory na jednej łodyżce)", // nieuw, nalezen
+    'w.bakje': "pojemnik (małe pudełko na owoce)", // nieuw, nalezen
+    'w.sorteermachine': "sortownica, maszyna do sortowania", // nieuw, nalezen
+    'w.etiketpistool': "metkownica", // nieuw, nalezen
+    'w.kleurenkaart': "wzornik kolorów (pokazuje, jak dojrzały ma być owoc)", // nieuw, nalezen
+    'w.tomatenschaar': "nożyczki do zbioru", // nieuw, nalezen
+    's.sorting.1': "Ostrożnie włóż kiście do skrzynki.", // nieuw, nalezen
+    's.sorting.2': "Ten pomidor jest za dojrzały. Idzie na bok.", // nieuw, nalezen
+    's.sorting.3': "Spójrz na wzornik kolorów.", // nieuw, nalezen
+    'c.sorting.q': "Czy ten pomidor jest wystarczająco dojrzały?", // nieuw, nalezen
+    'c.sorting.a': "Nie, jeszcze za zielony. Zostaw go na roślinie.", // nieuw, nalezen
+    'c.sorting': "Liczy się każdy owoc", // nieuw, nalezen
+    'c.sorting.b': "Owoce i warzywa łatwo się obijają. Odkładaj je, nie upuszczaj ich i nie rzucaj. Dziś nie widzisz obicia, ale jutro owoc jest miękki i brązowy. Patrz na wzornik kolorów, żeby wiedzieć, który kolor idzie gdzie. Uszkodzony albo zgniły owoc odłóż na bok: jeden zły owoc w pojemniku może zepsuć pozostałe. Utrzymuj pojemniki i skrzynki w czystości i nigdy nie stawiaj ich na podłodze.", // nieuw, nalezen
+    'c.sorting.p': "Ten jest uszkodzony.", // nieuw, nalezen
+    'c.sorting.s': "Pakujesz pojemniki. Jeden pomidor ma miękką brązową plamę. Co robisz?", // nieuw, nalezen
+    'c.sorting.o1': "Odkładasz go na bok.", // nieuw, nalezen
+    'c.sorting.o2': "Chowasz go na dnie.", // nieuw, nalezen
+    'c.sorting.o3': "I tak go pakujesz.", // nieuw, nalezen
+    'c.sorting.w': "Zgniły pomidor sprawia, że inne gniją szybciej. Klient go znajduje i cały pojemnik wraca.", // nieuw, nalezen
+    'l.greenhouse': "Szklarnia i jej klimat", // nieuw, nalezen
+    'w.buisrailkar': "wózek na rurach (jeździ po rurach grzewczych)", // nieuw, nalezen
+    'w.druppelaar': "kroplownik (daje wodę kropla po kropli)", // nieuw, nalezen
+    'w.luchtraam': "wietrznik dachowy (okno w dachu)", // nieuw, nalezen
+    'w.kasscherm': "ekran szklarniowy (tkanina pod dachem)", // nieuw, nalezen
+    'w.ventilator': "wentylator", // nieuw, nalezen
+    'w.thermometer': "termometr", // nieuw, nalezen
+    's.greenhouse.1': "Przejedź wózkiem na rurach do końca rzędu.", // nieuw, nalezen
+    's.greenhouse.2': "Kroplownik jest luźny.", // nieuw, nalezen
+    's.greenhouse.3': "Jest ciepło. Wietrzniki się otwierają.", // nieuw, nalezen
+    'c.greenhouse.q': "Dlaczego w szklarni jest tak ciepło?", // nieuw, nalezen
+    'c.greenhouse.a': "Ekran jest zamknięty, wietrzniki też.", // nieuw, nalezen
+    'c.greenhouse': "Klimat zostaw komputerowi", // nieuw, nalezen
+    'c.greenhouse.b': "W szklarni klimat ustawia komputer: wietrzniki, ekran, ogrzewanie i wodę. Nie otwieraj wietrznika i nie zmieniaj ustawień na własną rękę. Widzisz coś dziwnego, na przykład kroplownik, który cieknie, albo wietrznik, który się nie zamyka? Powiedz przełożonemu. Wózek na rurach jeździ po rurach grzewczych: używaj go tylko wtedy, gdy wiesz, jak to robić. Trzymaj stopy na platformie i nigdy nie dotykaj rur: mogą być gorące. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.greenhouse.p': "Ten kroplownik cieknie.", // nieuw, nalezen
+    'c.greenhouse.s': "Kroplownik jest luźny. Woda leci na podłogę. Co robisz?", // nieuw, nalezen
+    'c.greenhouse.o1': "Wkładasz go z powrotem i mówisz przełożonemu.", // nieuw, nalezen
+    'c.greenhouse.o2': "Zostawiasz to: to tylko woda.", // nieuw, nalezen
+    'c.greenhouse.o3': "Zakręcasz wodę dla całego rzędu.", // nieuw, nalezen
+    'c.greenhouse.w': "Luźny kroplownik marnuje wodę, roślina dostaje jej za mało, a mokra podłoga jest śliska.", // nieuw, nalezen
+    'l.pests': "Szkodniki i czysta praca", // nieuw, nalezen
+    'w.luis': "mszyca (mały zielony owad na roślinach)", // nieuw, nalezen
+    'w.vangplaat': "tablica lepowa (żółta karta, która łapie owady)", // nieuw, nalezen
+    'w.rups': "gąsienica", // nieuw, nalezen
+    'w.sluipwesp': "osa pasożytnicza (mała osa, która zabija szkodniki)", // nieuw, nalezen
+    'w.schimmel': "pleśń", // nieuw, nalezen
+    'w.ontsmettingsmat': "mata dezynfekcyjna (stajesz na niej przy drzwiach)", // nieuw, nalezen
+    's.pests.1': "Na tym liściu są mszyce.", // nieuw, nalezen
+    's.pests.2': "Powieś tablicę lepową nad roślinami.", // nieuw, nalezen
+    's.pests.3': "Przejdź po macie dezynfekcyjnej.", // nieuw, nalezen
+    'c.pests.q': "Mogę zabić tę osę?", // nieuw, nalezen
+    'c.pests.a': "Nie, to osa pasożytnicza. Ona nam pomaga.", // nieuw, nalezen
+    'c.pests': "Nie przenoś chorób z rzędu do rzędu", // nieuw, nalezen
+    'c.pests.b': "Choroba albo szkodnik szybko się rozprzestrzenia w szklarni. Możesz go przenieść na rękach, ubraniu i narzędziach. Dlatego przy każdych drzwiach przechodź po macie dezynfekcyjnej i myj ręce, kiedy idziesz do innej części szklarni. Zaczynaj pracę w zdrowych rzędach, a kończ w chorych. Widzisz na roślinie owady, plamy albo pleśń? Nie dotykaj jej, ale powiedz przełożonemu, gdzie to jest. Niektóre owady w szklarni są pomocnikami: zostaw je w spokoju. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.pests.p': "Tu jest pleśń.", // nieuw, nalezen
+    'c.pests.s': "Widzisz szarą pleśń na kilku roślinach w swoim rzędzie. Co robisz?", // nieuw, nalezen
+    'c.pests.o1': "Mówisz przełożonemu, gdzie to jest.", // nieuw, nalezen
+    'c.pests.o2': "Obrywasz złe liście i pracujesz dalej.", // nieuw, nalezen
+    'c.pests.o3': "Nic nie mówisz: to tylko kilka roślin.", // nieuw, nalezen
+    'c.pests.w': "Pleśń szybko się rozprzestrzenia. Przełożony wie, co robić i od czego zacząć.", // nieuw, nalezen
+    'u.carservice': "Opony, olej i hamulce", // nieuw, nalezen
+    'l.tyres': "Wymiana opon", // nieuw, nalezen
+    'w.wielbout': "śruba koła", // nieuw, nalezen
+    'w.slagmoersleutel': "klucz udarowy", // nieuw, nalezen
+    'w.bandenspanningsmeter': "manometr do opon", // nieuw, nalezen
+    'w.bandenprofiel': "bieżnik opony (rowki w oponie)", // nieuw, nalezen
+    'w.velg': "felga", // nieuw, nalezen
+    'w.bandenwisselaar': "montażownica do opon (maszyna do zdejmowania opony z felgi)", // nieuw, nalezen
+    's.tyres.1': "Dokręć śruby koła na krzyż.", // nieuw, nalezen
+    's.tyres.2': "Bieżnik opony jest za niski.", // nieuw, nalezen
+    's.tyres.3': "Zmierz ciśnienie manometrem do opon.", // nieuw, nalezen
+    'c.tyres.q': "Te opony trzeba zdjąć?", // nieuw, nalezen
+    'c.tyres.a': "Tak, bieżnika prawie już nie ma.", // nieuw, nalezen
+    'c.tyres': "Wkręć ręką, dokręć kluczem dynamometrycznym", // nieuw, nalezen
+    'c.tyres.b': "Klucz udarowy jest szybki i bardzo mocny. Używaj go do odkręcania śrub koła, ale nie do mocnego dokręcania. Najpierw wkręć śruby ręką. Potem dokręć je na krzyż kluczem dynamometrycznym, z siłą podaną dla tego samochodu. Koło, które nie jest dobrze dokręcone, może odpaść w czasie jazdy. Sprawdź bieżnik i ciśnienie każdej opony, którą bierzesz do ręki. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.tyres.p': "Najpierw wkręcam je ręką.", // nieuw, nalezen
+    'c.tyres.s': "Zakładasz koło z powrotem. Kolega mówi: „Użyj klucza udarowego, tak jest szybciej.” Co robisz?", // nieuw, nalezen
+    'c.tyres.o1': "Wkręcasz je ręką, potem używasz klucza dynamometrycznego.", // nieuw, nalezen
+    'c.tyres.o2': "Mocno dokręcasz je kluczem udarowym.", // nieuw, nalezen
+    'c.tyres.o3': "Wkręcasz je ręką i tak zostawiasz.", // nieuw, nalezen
+    'c.tyres.w': "Klucz udarowy może dokręcić śrubę za mocno albo za słabo. Tylko klucz dynamometryczny daje właściwą siłę.", // nieuw, nalezen
+    'l.oilchange': "Wymiana oleju", // nieuw, nalezen
+    'w.oliefilter': "filtr oleju", // nieuw, nalezen
+    'w.oliepeilstok': "bagnet oleju (pokazuje, ile jest oleju)", // nieuw, nalezen
+    'w.opvangbak': "wanna na olej (łapie stary olej)", // nieuw, nalezen
+    'w.trechter': "lejek", // nieuw, nalezen
+    'w.aftapplug': "korek spustowy", // nieuw, nalezen
+    'w.olievat': "beczka na olej", // nieuw, nalezen
+    's.oilchange.1': "Postaw wannę na olej pod silnikiem.", // nieuw, nalezen
+    's.oilchange.2': "Odkręć korek spustowy.", // nieuw, nalezen
+    's.oilchange.3': "Spójrz na bagnet oleju.", // nieuw, nalezen
+    'c.oilchange.q': "Ile oleju trzeba wlać?", // nieuw, nalezen
+    'c.oilchange.a': "Cztery litry. Potem spójrz na bagnet.", // nieuw, nalezen
+    'c.oilchange': "Stary olej do beczki, nie do kanalizacji", // nieuw, nalezen
+    'c.oilchange.b': "Stary olej szkodzi wodzie i glebie. Trochę oleju może zabrudzić dużo wody. Dlatego zbierz cały stary olej do wanny na olej i przelej go do beczki na stary olej. Nigdy nie wylewaj go do kanalizacji ani do zlewu. Stare filtry i zaolejone szmaty idą do osobnego pojemnika. Gorący olej może poparzyć skórę: najpierw pozwól silnikowi trochę ostygnąć i noś rękawice. Rozlany olej od razu sprzątnij: olej na podłodze jest śliski. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.oilchange.p': "Gdzie idzie stary olej?", // nieuw, nalezen
+    'c.oilchange.s': "Wanna na olej jest pełna starego oleju. Beczka stoi na drugim końcu warsztatu. Co robisz?", // nieuw, nalezen
+    'c.oilchange.o1': "Ostrożnie zanosisz ją do beczki.", // nieuw, nalezen
+    'c.oilchange.o2': "Wylewasz olej do kanalizacji na zewnątrz.", // nieuw, nalezen
+    'c.oilchange.o3': "Zostawiasz ją pod samochodem na później.", // nieuw, nalezen
+    'c.oilchange.w': "Stary olej w kanalizacji brudzi wodę. Pełną wannę pod samochodem ktoś przewróci nogą.", // nieuw, nalezen
+    'l.brakes': "Hamulce i światła", // nieuw, nalezen
+    'w.remschijf': "tarcza hamulcowa", // nieuw, nalezen
+    'w.remblok': "klocek hamulcowy", // nieuw, nalezen
+    'w.koplamp': "reflektor (przednie światło)", // nieuw, nalezen
+    'w.remvloeistof': "płyn hamulcowy", // nieuw, nalezen
+    'w.remklauw': "zacisk hamulcowy", // nieuw, nalezen
+    'w.achterlamp': "tylne światło", // nieuw, nalezen
+    's.brakes.1': "Klocki hamulcowe są zużyte.", // nieuw, nalezen
+    's.brakes.2': "Sprawdź płyn hamulcowy.", // nieuw, nalezen
+    's.brakes.3': "Lewe tylne światło nie działa.", // nieuw, nalezen
+    'c.brakes.q': "Tarczę hamulcową też trzeba wymienić?", // nieuw, nalezen
+    'c.brakes.a': "Tak, jest za cienka.", // nieuw, nalezen
+    'c.brakes': "Hamulce: sprawdź dwa razy", // nieuw, nalezen
+    'c.brakes.b': "Hamulce ratują ludziom życie. Dlatego pracuj spokojnie i sprawdzaj swoją pracę dwa razy. Po nowych klockach albo tarczach naciśnij kilka razy pedał hamulca, zanim samochód ruszy: pierwsze naciśnięcie często idzie za głęboko. Płyn hamulcowy szkodzi skórze i lakierowi: noś rękawice i od razu wycieraj krople. Nie wydmuchuj pyłu z hamulców sprężonym powietrzem: czyść go zmywaczem do hamulców i szmatką. Zanim samochód wyjedzie, sprawdź każde światło, także światła hamowania.", // nieuw, nalezen
+    'c.brakes.p': "Kilka razy naciskam pedał hamulca.", // nieuw, nalezen
+    'c.brakes.s': { m: "Założyłeś nowe klocki hamulcowe. Samochód musi wyjechać na zewnątrz. Co robisz?", f: "Założyłaś nowe klocki hamulcowe. Samochód musi wyjechać na zewnątrz. Co robisz?", x: "Nowe klocki hamulcowe są już założone. Samochód musi wyjechać na zewnątrz. Co robisz?" }, // nieuw, nalezen
+    'c.brakes.o1': "Kilka razy naciskasz pedał hamulca.", // nieuw, nalezen
+    'c.brakes.o2': "Od razu wyjeżdżasz nim na zewnątrz.", // nieuw, nalezen
+    'c.brakes.o3': "Wypychasz go bez sprawdzania.", // nieuw, nalezen
+    'c.brakes.w': "Po nowych klockach pedał za pierwszym razem może wejść za głęboko. Wtedy samochód się nie zatrzyma.", // nieuw, nalezen
+    'l.diagnosis': "Odczyt błędów i zlecenie", // nieuw, nalezen
+    'w.diagnosecomputer': "tester diagnostyczny (odczytuje błędy samochodu)", // nieuw, nalezen
+    'w.waarschuwingslampje': "kontrolka ostrzegawcza (na desce rozdzielczej)", // nieuw, nalezen
+    'w.werkorder': "zlecenie (co trzeba zrobić przy samochodzie)", // nieuw, nalezen
+    'w.kentekenplaat': "tablica rejestracyjna", // nieuw, nalezen
+    'w.autosleutel': "kluczyk do samochodu", // nieuw, nalezen
+    'w.stoelhoes': "pokrowiec na fotel (chroni fotel przed brudem)", // nieuw, nalezen
+    's.diagnosis.1': "Podłącz tester diagnostyczny.", // nieuw, nalezen
+    's.diagnosis.2': "Kontrolka ostrzegawcza się świeci.", // nieuw, nalezen
+    's.diagnosis.3': "Połóż pokrowiec na fotelu.", // nieuw, nalezen
+    'c.diagnosis.q': "Co trzeba zrobić przy tym samochodzie?", // nieuw, nalezen
+    'c.diagnosis.a': "Spójrz na zlecenie.", // nieuw, nalezen
+    'c.diagnosis': "Traktuj samochód jak swój", // nieuw, nalezen
+    'c.diagnosis.b': "Klient daje ci swój samochód i swój kluczyk. Dbaj o jedno i drugie. Zanim wsiądziesz, załóż pokrowiec na fotel i połóż matę na podłodze. Rób tylko to, co jest w zleceniu. Znajdujesz coś innego, co jest nie tak? Zapisz to i powiedz przełożonemu: decyduje klient. Trzymaj kluczyk na jego miejscu, z jego etykietą. Nie używaj radia, telefonu ani rzeczy w samochodzie. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.diagnosis.p': "Tego nie ma w zleceniu.", // nieuw, nalezen
+    'c.diagnosis.s': "Wymieniasz olej. Jedna opona jest prawie łysa. Nie ma tego w zleceniu. Co robisz?", // nieuw, nalezen
+    'c.diagnosis.o1': "Zapisujesz to i mówisz przełożonemu.", // nieuw, nalezen
+    'c.diagnosis.o2': "Od razu wymieniasz oponę.", // nieuw, nalezen
+    'c.diagnosis.o3': "Nic nie mówisz: to nie twoja praca.", // nieuw, nalezen
+    'c.diagnosis.w': "Klient decyduje, co się robi i za co płaci. Ale musi wiedzieć, że opona jest niebezpieczna.", // nieuw, nalezen
   },
 };
 

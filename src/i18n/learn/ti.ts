@@ -200,6 +200,15 @@ const t: CultureTranslation = {
     'c.fastening.a.why': "ክሳብ ክንደይ ክጸንዕ ተሓቲቱ: ክሳብ እቲ መፍትሕ ቲክ ዝብል።", // nieuw, nalezen
     'c.handling.a.why': "ኣብኡ ደው ምባል ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ ፈጺሙ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
     'c.finalcheck.a.why': "ጽቡቕ ድዩ ተሓቲቱ: ኣይፋል፡ እንታይ ጌጋ ከም ዘለዎ ድማ።", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'c.sowing.a.why': "ክሳብ ክንደይ ክዓሙቕ ተሓቲቱ: እቲ ዕምቈት፡ ካብኡ ከይዓመቐ ድማ።", // nieuw, nalezen
+    'c.sorting.a.why': "በሲላ ድያ ተሓቲቱ: ኣይፋል፡ ገና ቀጠልያ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
+    'c.greenhouse.a.why': "ስለምንታይ ውዑይ ምዃኑ ተሓቲቱ: መጋረጃን መሳኹትን ዕጹዋት እዮም።", // nieuw, nalezen
+    'c.pests.a.why': "ክቕተል ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ ስለምንታይ ከም ዝሕግዝ ድማ።", // nieuw, nalezen
+    'c.tyres.a.why': "ክወጹ ኣለዎም ድዩ ተሓቲቱ: እወ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
+    'c.oilchange.a.why': "ክንደይ ተሓቲቱ: እቲ ሊትሮ፡ ብኸመይ ከም ዝፍተሽ ድማ።", // nieuw, nalezen
+    'c.brakes.a.why': "ሓድሽ ክኸውን ኣለዎ ድዩ ተሓቲቱ: እወ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
+    'c.diagnosis.a.why': "እንታይ ክግበር ከም ዘለዎ ተሓቲቱ: ኣብቲ ትእዛዝ ስራሕ ምርኣይ።", // nieuw, nalezen
   },
 };
 

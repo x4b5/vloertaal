@@ -133,6 +133,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "Waan sheegi karaa in weelka qaybuhu ku dhowaad madhan yahay.", // nieuw, nalezen
     'kjn.u.montage.2': "Waan weydiin karaa intee le'eg in bool la adkeeyo.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "Waan sheegi karaa in caarad geed ku taal.", // nieuw, nalezen
+    'kjn.u.kweek.2': "Waan weydiin karaa in yaanyo si ku filan u bislaatay.", // nieuw, nalezen
+    'kjn.u.carservice.1': "Waan sheegi karaa in nalka digniintu shidan yahay.", // nieuw, nalezen
+    'kjn.u.carservice.2': "Waan weydiin karaa immisa saliid ah oo la gelinayo.", // nieuw, nalezen
   },
 };
 export default t;

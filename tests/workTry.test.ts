@@ -27,6 +27,7 @@ function storage(broken = false) {
 async function load() {
   vi.resetModules();
   await (await import('../src/lib/tips')).loadTips();
+  await (await import('../src/content/lessonTexts')).loadLessonTexts();
   return import('../src/lib/workTry');
 }
 
@@ -139,6 +140,7 @@ describe('"Probeer het vandaag" never has a name in it (4 November 2026)', () =>
   it('in both tracks, both countries and a region: no name of the cast or of anyone the lessons name', async () => {
     vi.resetModules();
     await (await import('../src/lib/tips')).loadTips();
+    await (await import('../src/content/lessonTexts')).loadLessonTexts();
     await import('./regionLoaded');
     await import('../src/i18n/packs/nl');
     const { allRegionTips, allRegionUnits, setRegionsOn } = await import('../src/content/regio');

@@ -198,6 +198,15 @@ const t: CultureTranslation = {
     'c.fastening.a.why': "Te preguntan cuánto apretar: hasta que la llave hace clic.", // nieuw, nalezen
     'c.handling.a.why': "Te preguntan si se puede estar ahí: no, nunca, y por qué.", // nieuw, nalezen
     'c.finalcheck.a.why': "Te preguntan si está bien: no, y qué problema tiene.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'c.sowing.a.why': "Te preguntan a qué profundidad: la profundidad, y no más.", // nieuw, nalezen
+    'c.sorting.a.why': "Te preguntan si está maduro: no, todavía verde, y qué hacer.", // nieuw, nalezen
+    'c.greenhouse.a.why': "Te preguntan por qué hace calor: la pantalla y las ventanas están cerradas.", // nieuw, nalezen
+    'c.pests.a.why': "Te preguntan si se puede matar: no, y por qué ayuda.", // nieuw, nalezen
+    'c.tyres.a.why': "Te preguntan si hay que quitarlos: sí, y por qué.", // nieuw, nalezen
+    'c.oilchange.a.why': "Te preguntan cuánto: los litros, y cómo comprobarlo.", // nieuw, nalezen
+    'c.brakes.a.why': "Te preguntan si hay que cambiarlo: sí, y por qué.", // nieuw, nalezen
+    'c.diagnosis.a.why': "Te preguntan qué hay que hacer: mirar la orden de trabajo.", // nieuw, nalezen
   },
 };
 

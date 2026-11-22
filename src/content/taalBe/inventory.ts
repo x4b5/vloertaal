@@ -323,6 +323,21 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.handling': L('A', 'A', 'nakijken: de takel, de tilhulp, de rolcontainer'),
     'l.finalcheck': L('A', 'A', 'nakijken: het typeplaatje ("het kenplaatje"), de goedkeursticker'),
   } },
+  // Kweken, sorteren en de kas (22 November 2026): how the work is done, the same in Belgium. The
+  // tips name no rule, right or amount. Flemish words to check.
+  'u.kweek': { kind: 'A', lessons: {
+    'l.sowing': L('A', 'A', 'nakijken: de zaaibak ("de zaaitray"), de stek, de potgrond'),
+    'l.sorting': L('A', 'A', 'nakijken: de tros, het bakje ("het schaaltje"), het etiketpistool'),
+    'l.greenhouse': L('A', 'A', 'nakijken: de buisrailkar, het luchtraam ("het luchtvenster"), het kasscherm'),
+    'l.pests': L('A', 'A', 'nakijken: de vangplaat, de sluipwesp, de ontsmettingsmat'),
+  } },
+  // Banden, olie en remmen (22 November 2026): how the work is done, the same in Belgium. Flemish words to check.
+  'u.carservice': { kind: 'A', lessons: {
+    'l.tyres': L('A', 'A', 'nakijken: de wielbout, de slagmoersleutel, de velg'),
+    'l.oilchange': L('A', 'A', 'nakijken: de oliepeilstok ("de peilstok"), de aftapplug ("de aftapbout")'),
+    'l.brakes': L('A', 'A', 'nakijken: het remblok ("de remblok"), de remklauw, de achterlamp ("het achterlicht")'),
+    'l.diagnosis': L('A', 'A', 'nakijken: de werkorder ("de werkfiche"), de kentekenplaat ("de nummerplaat"; in België wit met rode letters)'),
+  } },
 };
 
 /** The units of the inventory that need a Belgian version (B or C). */

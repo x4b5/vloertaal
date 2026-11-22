@@ -51,6 +51,8 @@ import group52 from './group52';
 import groupMaken from './groupMaken';
 import groupTechniek from './groupTechniek';
 import groupMontage from './groupMontage';
+import groupAutoservice from './groupAutoservice';
+import groupKweek from './groupKweek';
 import group53 from './group53';
 import group54 from './group54';
 import group55 from './group55';
@@ -130,6 +132,10 @@ const words: Record<string, () => JSX.Element> = {
   // Productie, "Assemblage en montage": 24 words of 21 November 2026, drawn ahead of their four
   // lessons.
   ...groupMontage,
+  // Garage unit "Banden, olie en remmen": 24 words of 22 November 2026, drawn ahead of their lessons.
+  ...groupAutoservice,
+  // Tuinbouw unit "Kweken, sorteren en de kas": 24 words of 22 November 2026, drawn ahead of their lessons.
+  ...groupKweek,
   // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): l.tiletools, l.tiling and l.plaster.
   ...group53,
   ...group54,

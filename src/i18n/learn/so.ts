@@ -195,6 +195,15 @@ const t: CultureTranslation = {
     'c.fastening.a.why': "Waxaa la weydiiyay intee le'eg in la adkeeyo: ilaa furaha xooggu dhawaaqo.", // nieuw, nalezen
     'c.handling.a.why': "Waxaa la weydiiyay in halkaas la istaagi karo: maya, weligaa, iyo sababta.", // nieuw, nalezen
     'c.finalcheck.a.why': "Waxaa la weydiiyay inay fiican tahay: maya, iyo waxa ka khaldan.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'c.sowing.a.why': "Waxaa la weydiiyay intee hoos u galo: qotada, oo wax ka badan maya.", // nieuw, nalezen
+    'c.sorting.a.why': "Waxaa la weydiiyay inay bislaatay: maya, aad bay u cagaaran tahay, iyo waxa la sameeyo.", // nieuw, nalezen
+    'c.greenhouse.a.why': "Waxaa la weydiiyay sababta ay u kulushahay: daahda iyo daaqaduhu way xiran yihiin.", // nieuw, nalezen
+    'c.pests.a.why': "Waxaa la weydiiyay in la dili karo: maya, iyo sababta uu u caawiyo.", // nieuw, nalezen
+    'c.tyres.a.why': "Waxaa la weydiiyay in la furayo: haa, iyo sababta.", // nieuw, nalezen
+    'c.oilchange.a.why': "Waxaa la weydiiyay immisa: litirrada, iyo sida loo hubiyo.", // nieuw, nalezen
+    'c.brakes.a.why': "Waxaa la weydiiyay in mid cusub loo baahan yahay: haa, iyo sababta.", // nieuw, nalezen
+    'c.diagnosis.a.why': "Waxaa la weydiiyay waxa la qabanayo: eeg kaarka shaqada.", // nieuw, nalezen
   },
 };
 export default t;

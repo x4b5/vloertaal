@@ -1,6 +1,8 @@
 // The short lines of the first pages to record in every help language (src/lib/helpAudio.ts): the
 // questions and their short hints, not every text. Used by scripts/list-help-clips.ts (which writes
 // public/audio-help/clips.json) and by tests/helpAudio.test.ts.
+// The lesson texts first (src/content/lessonTextsNode.ts): the course is read below.
+import '../src/content/lessonTextsNode';
 import { getHelpLanguage } from '../src/i18n/all';
 import { languageMeta } from '../src/i18n/meta';
 import type { Gender, LangCode, UiKey } from '../src/i18n/types';

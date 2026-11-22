@@ -136,6 +136,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "Pot să spun că lada cu piese e aproape goală.", // nieuw, nalezen
     'kjn.u.montage.2': "Pot să întreb cât de strâns trebuie să fie un bolț.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "Pot să spun că e mucegai pe o plantă.", // nieuw, nalezen
+    'kjn.u.kweek.2': "Pot să întreb dacă o roșie e destul de coaptă.", // nieuw, nalezen
+    'kjn.u.carservice.1': "Pot să spun că martorul de avertizare e aprins.", // nieuw, nalezen
+    'kjn.u.carservice.2': "Pot să întreb cât ulei trebuie pus.", // nieuw, nalezen
   },
 };
 

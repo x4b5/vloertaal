@@ -75,6 +75,9 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.install': ['u.tech', 'u.safety'],
   // Assemblage en montage (21 November 2026): the machines and the factory.
   'u.montage': ['u.machines', 'u.factory'],
+  // Kweken, sorteren en de kas and Banden, olie en remmen (22 November 2026): their sector's first unit and safety.
+  'u.kweek': ['u.kas', 'u.safety'],
+  'u.carservice': ['u.garage', 'u.safety'],
 };
 
 /**
@@ -115,6 +118,9 @@ const relatedWords: Record<string, string[]> = {
   'u.install': ['w.kabel', 'w.stroom'],
   // Assemblage en montage: the part and the bolt (of other lessons, used in its sentences).
   'u.montage': ['w.onderdeel', 'w.bout'],
+  // Kweken, sorteren en de kas: the crate and the tomato; Banden, olie en remmen: the tyre and the oil.
+  'u.kweek': ['w.krat', 'w.tomaat'],
+  'u.carservice': ['w.band', 'w.olie'],
   // Goed communiceren: angry (l.speakup) and slowly (l.understand), what the lessons are about.
   'u.communicate': ['w.boos', 'w.langzaam'],
   // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).
@@ -240,8 +246,22 @@ export function mixLessonFor(unit: Unit, all: Unit[], completed: Record<string, 
   return lesson;
 }
 
-/** Adds the mixed-review lesson to the end of every unit (in place, so unit objects keep their identity). */
+/**
+ * Adds the mixed-review lesson to the end of every unit (in place, so unit objects keep their
+ * identity). Its words, sentences and chats are built when they are first read: the lesson texts
+ * of most units load right after the start (src/content/lessonTexts.ts), after this runs.
+ */
 export function addMixLessons(units: Unit[]): void {
-  const mixes = units.map((u) => mixLesson(u, units));
-  units.forEach((u, i) => u.lessons.push(mixes[i]));
+  units.forEach((u) => {
+    let built: Lesson | undefined;
+    const mix = () => (built ??= mixLesson(u, units));
+    u.lessons.push({
+      id: mixLessonId(u.id),
+      title: MIX_TITLE,
+      get words() { return mix().words; },
+      get sentences() { return mix().sentences; },
+      get dialogues() { return mix().dialogues; },
+      get tipFrom() { return mix().tipFrom; },
+    });
+  });
 }

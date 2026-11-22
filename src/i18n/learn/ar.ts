@@ -200,6 +200,15 @@ const t: CultureTranslation = {
     'c.fastening.a.why': "السؤال كم يُشدّ: حتى يُصدر المفتاح طقّته.", // nieuw, nalezen
     'c.handling.a.why': "السؤال هل يُسمح بالوقوف هناك: لا، أبداً، والسبب.", // nieuw, nalezen
     'c.finalcheck.a.why': "السؤال هل هو جيد: لا، وما الخطأ فيه.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'c.sowing.a.why': "السؤال عن العمق: العمق، وليس أعمق.", // nieuw, nalezen
+    'c.sorting.a.why': "السؤال هل هي ناضجة: لا، خضراء جداً، وما العمل.", // nieuw, nalezen
+    'c.greenhouse.a.why': "السؤال لماذا الجو حار: الستارة والفتحات مغلقة.", // nieuw, nalezen
+    'c.pests.a.why': "السؤال هل يُسمح بقتله: لا، ولماذا يساعد.", // nieuw, nalezen
+    'c.tyres.a.why': "السؤال هل يجب نزعها: نعم، والسبب.", // nieuw, nalezen
+    'c.oilchange.a.why': "السؤال كم: اللترات، وطريقة الفحص.", // nieuw, nalezen
+    'c.brakes.a.why': "السؤال هل يجب تغييره: نعم، والسبب.", // nieuw, nalezen
+    'c.diagnosis.a.why': "السؤال ماذا يجب أن يُعمل: النظر في أمر العمل.", // nieuw, nalezen
   },
 };
 

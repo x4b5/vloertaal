@@ -5,6 +5,8 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { defineConfig, type Plugin, type Rolldown } from 'vite';
 import react from '@vitejs/plugin-react';
+// The lesson texts before any file of the course: the site pages read them (src/content/lessonTextsNode.ts).
+import './src/content/lessonTextsNode';
 import { beLangSplit } from './scripts/beLangSplit';
 import { UPCOMING, UPDATES } from './src/content/updates';
 import { updatesPage } from './src/lib/updatesPage';
@@ -86,16 +88,20 @@ function lazyScreenLinks(): Plugin {
  * (src/main.tsx), which the app only asks for once its main file has loaded and run. A few lines
  * in index.html ask for those two right away instead, next to the main file (modulepreload), when
  * this phone's progress says which language: one wait instead of two in a row on a slow
- * connection. A new visitor gets nothing extra. The names come from this build.
+ * connection. The lesson texts of the work and sector units (src/content/lessonTexts.ts) for every
+ * visitor: every screen waits for them. The names come from this build.
  */
 export function bootPreloadScript(bundle: Record<string, { type: string; fileName: string; facadeModuleId?: string | null }>): string {
   const packs: Record<string, string> = {};
   let pictures = '';
+  // The lesson texts (src/content/lessonTexts.ts): every screen waits for them, a new visitor's too.
+  let texts = '';
   for (const c of Object.values(bundle)) {
     if (c.type !== 'chunk' || !c.facadeModuleId) continue;
     const pack = c.facadeModuleId.match(/[\\/]src[\\/]i18n[\\/]packs[\\/]([a-z]+)\.ts$/);
     if (pack) packs[pack[1]] = `./${c.fileName}`;
     if (/[\\/]src[\\/]pictures[\\/]words\.tsx?$/.test(c.facadeModuleId)) pictures = `./${c.fileName}`;
+    if (/[\\/]src[\\/]content[\\/]work\.ts$/.test(c.facadeModuleId)) texts = `./${c.fileName}`;
   }
   // Also the learner's look and text size, before the first paint (src/lib/theme.ts and
   // textSize.ts again, small): a dark theme must not flash light while the app file loads, and a
@@ -103,7 +109,7 @@ export function bootPreloadScript(bundle: Record<string, { type: string; fileNam
   // The saved colour (Zand = light unless the save says otherwise); before themeVersion 3 only
   // dark survives, and "follow the phone" only when chosen since light became the default.
   const look = `var d=document.documentElement,q=p||{},B=${JSON.stringify(THEME_BAR)},v=q.themeVersion===3,t=v&&q.theme==='auto'?'auto':v&&B.hasOwnProperty(q.theme)?q.theme:q.theme==='dark'?'dark':'light';if(t==='auto'){delete d.dataset.theme}else{d.dataset.theme=t;document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute('content',B[t])})}if(q.textSize==='large'||q.textSize==='xl')d.dataset.text=q.textSize`;
-  return `<script>try{var p=JSON.parse(localStorage.getItem('vloertaal:v1')||'null'),f=${JSON.stringify(packs)},a=function(h){if(!h)return;var l=document.createElement('link');l.rel='modulepreload';l.href=h;document.head.appendChild(l)};${look};if(p&&p.onboarded){a(f[p.helpLang]);a(${JSON.stringify(pictures)})}}catch(e){}</script>`;
+  return `<script>try{var p=JSON.parse(localStorage.getItem('vloertaal:v1')||'null'),f=${JSON.stringify(packs)},a=function(h){if(!h)return;var l=document.createElement('link');l.rel='modulepreload';l.href=h;document.head.appendChild(l)};${look};a(${JSON.stringify(texts)});if(p&&p.onboarded){a(f[p.helpLang]);a(${JSON.stringify(pictures)})}}catch(e){}</script>`;
 }
 
 /** vloertaal.nl/nieuw: "Wat is er nieuw?" ("Binnenkort" first), a plain page made from src/content/updates.ts. */

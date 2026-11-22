@@ -136,6 +136,11 @@ const t: CultureTranslation = {
     // "Assemblage en montage" (21 November 2026).
     'kjn.u.montage.1': "እቲ ሳጹን ክፍልታት ዳርጋ ጥራሑ ምዃኑ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.montage.2': "ሓደ ቡሎን ክሳብ ክንደይ ክጸንዕ ከም ዘለዎ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
+    'kjn.u.kweek.1': "ኣብ ተኽሊ ፈንገስ ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.kweek.2': "ሓንቲ ኮሚደረ እኹል በሲላ እንተ ኾይና ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.carservice.1': "እቲ መጠንቀቕታ መብራህቲ ይበርህ ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.carservice.2': "ክንደይ ዘይቲ ክኣቱ ከም ዘለዎ ክሓትት እኽእል እየ።", // nieuw, nalezen
   },
 };
 

@@ -2816,6 +2816,169 @@ const t: CultureTranslation = {
     'c.finalcheck.o2': "Pui autocolantul: e mică.", // nieuw, nalezen
     'c.finalcheck.o3': "Muți eticheta peste zgârietură.", // nieuw, nalezen
     'c.finalcheck.w': "O zgârietură mică poate fi semnul unei probleme pe linie. Dacă o ascunzi, doar muți problema la client.", // nieuw, nalezen
+    // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
+    'u.kweek': "Cultivare, sortare și sera", // nieuw, nalezen
+    'l.sowing': "Semănat și butași", // nieuw, nalezen
+    'w.zaad': "semințele", // nieuw, nalezen
+    'w.zaaibak': "tava de semănat", // nieuw, nalezen
+    'w.stek': "butașul (o bucată de plantă care face rădăcini noi)", // nieuw, nalezen
+    'w.potgrond': "pământul pentru ghivece", // nieuw, nalezen
+    'w.kweekpot': "ghiveciul pentru răsaduri", // nieuw, nalezen
+    'w.gieter': "stropitoarea", // nieuw, nalezen
+    's.sowing.1': "Pune două semințe în fiecare căsuță.", // nieuw, nalezen
+    's.sowing.2': "Pune butașul în pământul pentru ghivece.", // nieuw, nalezen
+    's.sowing.3': "Dă-le plantelor tinere puțină apă.", // nieuw, nalezen
+    'c.sowing.q': "Cât de adânc trebuie pusă sămânța?", // nieuw, nalezen
+    'c.sowing.a': "O jumătate de centimetru. Nu mai adânc.", // nieuw, nalezen
+    'c.sowing': "Plantele mici au nevoie de o mână blândă", // nieuw, nalezen
+    'c.sowing.b': "Plantele tinere sunt slabe. Ține un butaș sau un răsad de o frunză, nu de tulpină: o frunză crește la loc, o tulpină ruptă nu. Apasă pământul ușor, nu tare. Udă încet, cu un jet fin, ca să nu fie spălate semințele. Lucrează cu mâini curate și tăvi curate: plantele tinere se îmbolnăvesc ușor. Scrie data și felul plantei pe fiecare tavă, ca toată lumea să știe ce e în ea.", // nieuw, nalezen
+    'c.sowing.p': "Îl țin de frunză.", // nieuw, nalezen
+    'c.sowing.s': "Trebuie să muți un răsad mic într-un ghiveci. Ce faci?", // nieuw, nalezen
+    'c.sowing.o1': "Îl ții ușor de o frunză.", // nieuw, nalezen
+    'c.sowing.o2': "Îl tragi afară de tulpină.", // nieuw, nalezen
+    'c.sowing.o3': "Îl scoți strângându-l împreună cu pământul.", // nieuw, nalezen
+    'c.sowing.w': "O frunză poate crește la loc. O tulpină ruptă nu poate, și atunci planta moare.", // nieuw, nalezen
+    'l.sorting': "Sortare și ambalare", // nieuw, nalezen
+    'w.tros': "ciorchinele (mai multe roșii pe o singură tulpină)", // nieuw, nalezen
+    'w.bakje': "caserola (o cutie mică pentru fructe)", // nieuw, nalezen
+    'w.sorteermachine': "mașina de sortat", // nieuw, nalezen
+    'w.etiketpistool': "pistolul de etichetat", // nieuw, nalezen
+    'w.kleurenkaart': "cartela de culori (arată cât de copt trebuie să fie fructul)", // nieuw, nalezen
+    'w.tomatenschaar': "foarfeca de recoltat", // nieuw, nalezen
+    's.sorting.1': "Pune ciorchinii cu grijă în ladă.", // nieuw, nalezen
+    's.sorting.2': "Roșia asta e prea coaptă. Se pune deoparte.", // nieuw, nalezen
+    's.sorting.3': "Uită-te pe cartela de culori.", // nieuw, nalezen
+    'c.sorting.q': "E destul de coaptă roșia asta?", // nieuw, nalezen
+    'c.sorting.a': "Nu, e încă prea verde. Las-o pe plantă.", // nieuw, nalezen
+    'c.sorting': "Fiecare fruct contează", // nieuw, nalezen
+    'c.sorting.b': "Fructele și legumele se lovesc ușor. Pune-le jos, nu le scăpa și nu le arunca. Azi nu vezi lovitura, dar mâine fructul e moale și maro. Uită-te pe cartela de culori ca să știi ce culoare unde merge. Pune deoparte un fruct lovit sau putred: un singur fruct stricat într-o caserolă le poate strica pe celelalte. Ține caserolele și lăzile curate și nu le pune niciodată pe jos.", // nieuw, nalezen
+    'c.sorting.p': "Asta e lovită.", // nieuw, nalezen
+    'c.sorting.s': "Pui roșii în caserole. O roșie are o pată moale și maro. Ce faci?", // nieuw, nalezen
+    'c.sorting.o1': "O pui deoparte.", // nieuw, nalezen
+    'c.sorting.o2': "O ascunzi la fund.", // nieuw, nalezen
+    'c.sorting.o3': "O pui totuși în caserolă.", // nieuw, nalezen
+    'c.sorting.w': "O roșie putredă le face pe celelalte să putrezească mai repede. Clientul o găsește, și toată caserola vine înapoi.", // nieuw, nalezen
+    'l.greenhouse': "Sera și climatul ei", // nieuw, nalezen
+    'w.buisrailkar': "căruciorul pe țevi (merge pe țevile de încălzire)", // nieuw, nalezen
+    'w.druppelaar': "picurătorul (dă apă picătură cu picătură)", // nieuw, nalezen
+    'w.luchtraam': "fereastra de aerisire (o fereastră în acoperiș)", // nieuw, nalezen
+    'w.kasscherm': "ecranul serei (o pânză sub acoperiș)", // nieuw, nalezen
+    'w.ventilator': "ventilatorul", // nieuw, nalezen
+    'w.thermometer': "termometrul", // nieuw, nalezen
+    's.greenhouse.1': "Du căruciorul pe țevi până la capătul rândului.", // nieuw, nalezen
+    's.greenhouse.2': "Picurătorul s-a desprins.", // nieuw, nalezen
+    's.greenhouse.3': "E cald. Ferestrele de aerisire se deschid.", // nieuw, nalezen
+    'c.greenhouse.q': "De ce e așa de cald în seră?", // nieuw, nalezen
+    'c.greenhouse.a': "Ecranul e închis, și ferestrele la fel.", // nieuw, nalezen
+    'c.greenhouse': "Lasă climatul pe seama calculatorului", // nieuw, nalezen
+    'c.greenhouse.b': "Într-o seră, un calculator reglează climatul: ferestrele, ecranul, încălzirea și apa. Nu deschide singur o fereastră și nu schimba nicio setare. Vezi ceva ciudat, de exemplu un picurător care curge sau o fereastră care nu se închide? Spune-i șefului. Căruciorul pe țevi merge pe țevile de încălzire: folosește-l doar când ai învățat cum. Ține picioarele pe platformă și nu atinge niciodată țevile: pot fi fierbinți. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.greenhouse.p': "Picurătorul ăsta curge.", // nieuw, nalezen
+    'c.greenhouse.s': "Un picurător s-a desprins. Apa curge pe jos. Ce faci?", // nieuw, nalezen
+    'c.greenhouse.o1': "Îl pui la loc și îi spui șefului.", // nieuw, nalezen
+    'c.greenhouse.o2': "Îl lași: e doar apă.", // nieuw, nalezen
+    'c.greenhouse.o3': "Oprești apa pentru tot rândul.", // nieuw, nalezen
+    'c.greenhouse.w': "Un picurător desprins risipește apă, planta primește prea puțină, iar podeaua udă e alunecoasă.", // nieuw, nalezen
+    'l.pests': "Dăunători și lucru curat", // nieuw, nalezen
+    'w.luis': "păduchele de plante (o insectă mică și verde pe plante)", // nieuw, nalezen
+    'w.vangplaat': "capcana lipicioasă (un carton galben care prinde insecte)", // nieuw, nalezen
+    'w.rups': "omida", // nieuw, nalezen
+    'w.sluipwesp': "viespea parazită (o viespe mică ce omoară dăunătorii)", // nieuw, nalezen
+    'w.schimmel': "mucegaiul", // nieuw, nalezen
+    'w.ontsmettingsmat': "covorașul de dezinfectare (calci pe el la ușă)", // nieuw, nalezen
+    's.pests.1': "Pe frunza asta sunt păduchi.", // nieuw, nalezen
+    's.pests.2': "Agață capcana lipicioasă deasupra plantelor.", // nieuw, nalezen
+    's.pests.3': "Treci peste covorașul de dezinfectare.", // nieuw, nalezen
+    'c.pests.q': "Am voie să omor viespea asta?", // nieuw, nalezen
+    'c.pests.a': "Nu, e o viespe parazită. Ne ajută.", // nieuw, nalezen
+    'c.pests': "Nu duce bolile din rând în rând", // nieuw, nalezen
+    'c.pests.b': "O boală sau un dăunător se răspândește repede într-o seră. Îl poți duce pe mâini, pe haine și pe unelte. Așa că treci peste covorașul de dezinfectare la fiecare ușă și spală-te pe mâini când mergi în altă parte a serei. Începe lucrul în rândurile sănătoase și termină în rândurile bolnave. Vezi insecte, pete sau mucegai pe o plantă? Nu o atinge, dar spune-i șefului unde este. Unele insecte din seră sunt ajutoare: lasă-le în pace. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.pests.p': "Aici e mucegai.", // nieuw, nalezen
+    'c.pests.s': "Vezi mucegai gri pe câteva plante din rândul tău. Ce faci?", // nieuw, nalezen
+    'c.pests.o1': "Îi spui șefului unde este.", // nieuw, nalezen
+    'c.pests.o2': "Rupi frunzele stricate și continui.", // nieuw, nalezen
+    'c.pests.o3': "Nu spui nimic: sunt doar câteva plante.", // nieuw, nalezen
+    'c.pests.w': "Mucegaiul se răspândește repede. Șeful știe ce trebuie făcut și de unde să înceapă.", // nieuw, nalezen
+    'u.carservice': "Anvelope, ulei și frâne", // nieuw, nalezen
+    'l.tyres': "Schimbarea anvelopelor", // nieuw, nalezen
+    'w.wielbout': "prezonul (șurubul roții)", // nieuw, nalezen
+    'w.slagmoersleutel': "cheia pneumatică cu impact", // nieuw, nalezen
+    'w.bandenspanningsmeter': "manometrul pentru anvelope", // nieuw, nalezen
+    'w.bandenprofiel': "profilul anvelopei (șanțurile din anvelopă)", // nieuw, nalezen
+    'w.velg': "janta", // nieuw, nalezen
+    'w.bandenwisselaar': "mașina de montat anvelope (o mașină care scoate anvelopa de pe jantă)", // nieuw, nalezen
+    's.tyres.1': "Strânge prezoanele în cruce.", // nieuw, nalezen
+    's.tyres.2': "Profilul anvelopei e prea mic.", // nieuw, nalezen
+    's.tyres.3': "Măsoară presiunea cu manometrul pentru anvelope.", // nieuw, nalezen
+    'c.tyres.q': "Trebuie scoase anvelopele astea?", // nieuw, nalezen
+    'c.tyres.a': "Da, profilul aproape a dispărut.", // nieuw, nalezen
+    'c.tyres': "Înșurubează cu mâna, strânge cu cheia dinamometrică", // nieuw, nalezen
+    'c.tyres.b': "O cheie pneumatică cu impact e rapidă și foarte puternică. Folosește-o ca să scoți prezoanele, dar nu ca să le strângi tare. Întâi înșurubează prezoanele cu mâna. Apoi strânge-le în cruce cu o cheie dinamometrică, la forța pentru mașina respectivă. O roată care nu e strânsă bine poate ieși în timpul mersului. Verifică profilul și presiunea la fiecare anvelopă pe care o iei în mână. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.tyres.p': "Întâi le înșurubez cu mâna.", // nieuw, nalezen
+    'c.tyres.s': "Pui o roată la loc. Un coleg zice: „Folosește cheia pneumatică, e mai repede.” Ce faci?", // nieuw, nalezen
+    'c.tyres.o1': "Le înșurubezi cu mâna, apoi folosești cheia dinamometrică.", // nieuw, nalezen
+    'c.tyres.o2': "Le strângi tare cu cheia pneumatică.", // nieuw, nalezen
+    'c.tyres.o3': "Le înșurubezi cu mâna și lași așa.", // nieuw, nalezen
+    'c.tyres.w': "O cheie pneumatică poate strânge un prezon prea tare sau nu destul. Doar cheia dinamometrică dă forța potrivită.", // nieuw, nalezen
+    'l.oilchange': "Schimbul de ulei", // nieuw, nalezen
+    'w.oliefilter': "filtrul de ulei", // nieuw, nalezen
+    'w.oliepeilstok': "joja de ulei (arată cât ulei este)", // nieuw, nalezen
+    'w.opvangbak': "tava de scurgere (prinde uleiul vechi)", // nieuw, nalezen
+    'w.trechter': "pâlnia", // nieuw, nalezen
+    'w.aftapplug': "bușonul de golire", // nieuw, nalezen
+    'w.olievat': "butoiul de ulei", // nieuw, nalezen
+    's.oilchange.1': "Pune tava de scurgere sub motor.", // nieuw, nalezen
+    's.oilchange.2': "Deșurubează bușonul de golire.", // nieuw, nalezen
+    's.oilchange.3': "Uită-te pe joja de ulei.", // nieuw, nalezen
+    'c.oilchange.q': "Cât ulei trebuie pus?", // nieuw, nalezen
+    'c.oilchange.a': "Patru litri. Apoi uită-te pe jojă.", // nieuw, nalezen
+    'c.oilchange': "Uleiul vechi merge în butoi, nu în canalizare", // nieuw, nalezen
+    'c.oilchange.b': "Uleiul vechi e rău pentru apă și pentru sol. Puțin ulei poate murdări multă apă. Așa că prinde tot uleiul vechi în tava de scurgere și toarnă-l în butoiul pentru ulei vechi. Nu-l turna niciodată în canalizare sau în chiuvetă. Filtrele vechi și cârpele cu ulei merg în coșul lor special. Uleiul fierbinte îți poate arde pielea: lasă întâi motorul să se răcească puțin și poartă mănuși. Curăță imediat uleiul vărsat: uleiul pe jos e alunecos. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.oilchange.p': "Unde se pune uleiul vechi?", // nieuw, nalezen
+    'c.oilchange.s': "Tava de scurgere e plină cu ulei vechi. Butoiul e în celălalt capăt al atelierului. Ce faci?", // nieuw, nalezen
+    'c.oilchange.o1': "O duci cu grijă la butoi.", // nieuw, nalezen
+    'c.oilchange.o2': "O golești în canalizarea de afară.", // nieuw, nalezen
+    'c.oilchange.o3': "O lași sub mașină pentru mai târziu.", // nieuw, nalezen
+    'c.oilchange.w': "Uleiul vechi din canalizare murdărește apa. O tavă plină sub o mașină e răsturnată ușor cu piciorul.", // nieuw, nalezen
+    'l.brakes': "Frâne și lumini", // nieuw, nalezen
+    'w.remschijf': "discul de frână", // nieuw, nalezen
+    'w.remblok': "plăcuța de frână", // nieuw, nalezen
+    'w.koplamp': "farul", // nieuw, nalezen
+    'w.remvloeistof': "lichidul de frână", // nieuw, nalezen
+    'w.remklauw': "etrierul de frână", // nieuw, nalezen
+    'w.achterlamp': "lampa din spate", // nieuw, nalezen
+    's.brakes.1': "Plăcuțele de frână sunt uzate.", // nieuw, nalezen
+    's.brakes.2': "Verifică lichidul de frână.", // nieuw, nalezen
+    's.brakes.3': "Lampa din spate stânga nu merge.", // nieuw, nalezen
+    'c.brakes.q': "Trebuie schimbat și discul de frână?", // nieuw, nalezen
+    'c.brakes.a': "Da, e prea subțire.", // nieuw, nalezen
+    'c.brakes': "Frânele: verifică de două ori", // nieuw, nalezen
+    'c.brakes.b': "Frânele țin oamenii în viață. Așa că lucrează calm și verifică-ți munca de două ori. După plăcuțe sau discuri noi, apasă pedala de frână de câteva ori înainte ca mașina să se miște: prima apăsare merge des prea adânc. Lichidul de frână e rău pentru piele și pentru vopsea: poartă mănuși și șterge imediat picăturile. Nu sufla praful de frână cu aer comprimat: curăță-l cu spray pentru frâne și o cârpă. Înainte să plece mașina, verifică fiecare lumină, și stopurile.", // nieuw, nalezen
+    'c.brakes.p': "Apăs pedala de frână de câteva ori.", // nieuw, nalezen
+    'c.brakes.s': "Ai montat plăcuțe de frână noi. Mașina trebuie să iasă afară. Ce faci?", // nieuw, nalezen
+    'c.brakes.o1': "Apeși pedala de frână de câteva ori.", // nieuw, nalezen
+    'c.brakes.o2': "O scoți imediat afară.", // nieuw, nalezen
+    'c.brakes.o3': "O împingi afară fără să verifici.", // nieuw, nalezen
+    'c.brakes.w': "După plăcuțe noi, pedala poate merge prea adânc prima dată. Atunci mașina nu se oprește.", // nieuw, nalezen
+    'l.diagnosis': "Citirea defectelor și fișa de lucru", // nieuw, nalezen
+    'w.diagnosecomputer': "testerul de diagnoză (citește defectele mașinii)", // nieuw, nalezen
+    'w.waarschuwingslampje': "martorul de avertizare (pe bord)", // nieuw, nalezen
+    'w.werkorder': "fișa de lucru (ce trebuie făcut la mașină)", // nieuw, nalezen
+    'w.kentekenplaat': "plăcuța de înmatriculare", // nieuw, nalezen
+    'w.autosleutel': "cheia mașinii", // nieuw, nalezen
+    'w.stoelhoes': "husa de scaun (ține scaunul curat)", // nieuw, nalezen
+    's.diagnosis.1': "Conectează testerul de diagnoză.", // nieuw, nalezen
+    's.diagnosis.2': "Martorul de avertizare e aprins.", // nieuw, nalezen
+    's.diagnosis.3': "Pune o husă pe scaun.", // nieuw, nalezen
+    'c.diagnosis.q': "Ce trebuie făcut la mașina asta?", // nieuw, nalezen
+    'c.diagnosis.a': "Uită-te pe fișa de lucru.", // nieuw, nalezen
+    'c.diagnosis': "Ai grijă de mașină ca și cum ar fi a ta", // nieuw, nalezen
+    'c.diagnosis.b': "Un client îți dă mașina și cheia lui. Ai grijă de amândouă. Pune o husă pe scaun și un covoraș pe jos înainte să urci. Fă doar ce scrie pe fișa de lucru. Găsești și altceva care nu e în regulă? Notează și spune-i șefului: clientul decide. Ține cheia la locul ei, cu eticheta ei. Nu folosi radioul, telefonul sau lucrurile din mașină. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.diagnosis.p': "Asta nu scrie pe fișa de lucru.", // nieuw, nalezen
+    'c.diagnosis.s': "Schimbi uleiul. O anvelopă e aproape tocită. Nu scrie pe fișa de lucru. Ce faci?", // nieuw, nalezen
+    'c.diagnosis.o1': "Notezi și îi spui șefului.", // nieuw, nalezen
+    'c.diagnosis.o2': "Schimbi imediat anvelopa.", // nieuw, nalezen
+    'c.diagnosis.o3': "Nu spui nimic: nu e treaba ta.", // nieuw, nalezen
+    'c.diagnosis.w': "Clientul decide ce se face și ce se plătește. Dar trebuie să știe că anvelopa e periculoasă.", // nieuw, nalezen
   },
 };
 
