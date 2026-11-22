@@ -487,6 +487,14 @@ const lang: HelpLanguageSource = {
     calmScreen: 'ህዱእ ስክሪን', // nieuw, nalezen
     calmAuto: { m: 'ከም ተሌፎንካ', f: 'ከም ተሌፎንኪ', x: 'ከም ተሌፎንኩም' }, // nieuw, nalezen
     calmHint: 'ክፉት: ዝንቀሳቐስ የለን፡ ድሕሪ ትምህርቲ ናይ ተኸታታሊ መዓልትታት ጽምብል የለን፡ መዓልትታትን ቃላትን ኣብ ቀንዲ ስክሪን ኣይርአዩን።', // nieuw, nalezen
+    playMode: 'ናይ ጸወታ ኣገባብ', // nieuw, nalezen
+    playHint: 'ክፉት: ንነፍሲ ወከፍ ቅኑዕ መልሲ ነጥቢ፡ ብዙሓት ብተኸታታሊ ቅኑዓት እንተኾይኖም ዝያዳ ነጥቢ። ዝያዳ ድምጽን ምንቅስቓስን። ጌጋ ዋጋ የብሉን።', // nieuw, nalezen
+    playPoints: 'ነጥቢ', // nieuw, nalezen
+    playTotal: { m: 'ኩሉ ነጥብታትካ', f: 'ኩሉ ነጥብታትኪ', x: 'ኩሉ ነጥብታትኩም' }, // nieuw, nalezen
+    playAskTitle: { m: 'ብኸመይ ክትለማመድ ትደሊ?', f: 'ብኸመይ ክትለማመዲ ትደልዪ?', x: 'ብኸመይ ክትለማመዱ ትደልዩ?' }, // nieuw, nalezen
+    playAskCalm: 'ብህድኣት', // nieuw, nalezen
+    playAskFun: 'ምስ ጸወታ', // nieuw, nalezen
+    playAskHint: { m: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ።', f: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይርዮ ትኽእሊ ኢኺ።', x: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይርዎ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
     infoMore: 'ተወሳኺ መብርሂ', // nieuw, nalezen
     tipsAbout: 'ብዛዕባ እዞም ምኽርታት', // nieuw, nalezen
     tipsNotChecked: 'እዚ መብርሂ ገና ብክኢላ ኣይተፈተሸን።', // nieuw, nalezen

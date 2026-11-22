@@ -1,3 +1,4 @@
+import { PLAY_ASK_AFTER } from '../lib/play';
 import { BRIDGE_SHARE } from '../lib/bridge';
 import { NUDGE_AGAIN, NUDGE_FIRST } from '../lib/backupNudge';
 import { SHY_AFTER } from '../lib/chorus';
@@ -49,6 +50,7 @@ export const MOMENTS: Moment[] = [
   { id: 'werkregels', key: 'bridge', plek: 'thuis-kaart', naam: 'Wil je ook de werkregels leren?', wanneer: `Alleen in Taal, als ${Math.round(BRIDGE_SHARE * 100)}% van het eigen lespad af is.`, onthoudt: 'Eén keer (in de voortgang).', code: 'bridgeDue, src/lib/bridge.ts' },
   { id: 'bewaar', key: 'nudge', plek: 'thuis-kaart', naam: 'Bewaar je voortgang', wanneer: `Alleen op een telefoon die de voortgang kan kwijtraken, na ${NUDGE_FIRST} lessen. Daarna pas weer na ${NUDGE_AGAIN} lessen.`, onthoudt: 'Losse sleutel vloertaal:backup-nudge.', code: 'nudgeDue, src/lib/backupNudge.ts' },
   { id: 'waarom', key: 'reason', plek: 'thuis-kaart', naam: 'Waarom leer jij Nederlands?', wanneer: `Na ${REASON_AFTER} lessen, tot de leerling antwoordt of het wegzet.`, onthoudt: 'Eén keer (in de voortgang).', code: 'reasonDue, src/lib/reason.ts' },
+  { id: 'spel', key: 'play', plek: 'thuis-kaart', naam: 'Hoe wil je oefenen? Rustig of met spel', wanneer: `Na ${PLAY_ASK_AFTER} les, tot de leerling kiest. Niet als "Rustig scherm" al aan staat of de spelmodus al gekozen is.`, onthoudt: 'Eén keer (in de voortgang).', code: 'playAskDue, src/lib/play.ts' },
 
   { id: 'gelukt', plek: 'thuis-regel', naam: 'Gelukt?', wanneer: 'De dag na "Probeer het vandaag op je werk". Na "Nog niet" de dag erna nog één keer.', onthoudt: 'Losse sleutel vloertaal:work-try-ask.', code: 'geluktDue, src/lib/workTry.ts' },
   { id: 'toets', plek: 'thuis-regel', naam: 'Wat ken je al?', wanneer: `De eerste toets: vanaf ${INSTAP_FROM_LESSONS} les tot en met ${INSTAP_UNTIL_LESSONS} lessen. De tweede: na ${END_DAYS} dagen of ${END_UNITS} onderwerpen.`, onthoudt: 'In de voortgang.', code: 'toetsOffer, src/lib/toets.ts' },

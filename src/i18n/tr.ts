@@ -487,6 +487,14 @@ const lang: HelpLanguageSource = {
     calmScreen: 'Sakin ekran', // nieuw, nalezen
     calmAuto: 'Telefonundaki gibi', // nieuw, nalezen
     calmHint: 'Açık: hiçbir şey hareket etmez, dersten sonra serin için kutlama olmaz, serin ve kelimelerin ana ekranda görünmez.', // nieuw, nalezen
+    playMode: 'Oyun modu', // nieuw, nalezen
+    playHint: 'Açık: her doğru cevap için puan, art arda birkaç doğru cevap için daha çok puan. Daha çok ses ve hareket. Hata yapmak hiçbir şey kaybettirmez.', // nieuw, nalezen
+    playPoints: 'Puan', // nieuw, nalezen
+    playTotal: 'Tüm puanların', // nieuw, nalezen
+    playAskTitle: 'Nasıl çalışmak istersin?', // nieuw, nalezen
+    playAskCalm: 'Sakin', // nieuw, nalezen
+    playAskFun: 'Oyunlu', // nieuw, nalezen
+    playAskHint: 'Oyunlu: puan, ses ve hareket. Bunu Ayarlar’dan değiştirebilirsin.', // nieuw, nalezen
     infoMore: 'Daha fazla açıklama', // nieuw, nalezen
     tipsAbout: 'Bu ipuçları hakkında', // nieuw, nalezen
     tipsNotChecked: 'Bu açıklama henüz bir uzman tarafından kontrol edilmedi.', // nieuw, nalezen

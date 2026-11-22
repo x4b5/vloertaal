@@ -630,6 +630,15 @@ export const uiEn = {
   calmScreen: 'Calm screen',
   calmAuto: 'Like your phone',
   calmHint: 'On: nothing moves. No celebration of your streak after a lesson. Your streak and words are not on the home screen.',
+  /* "Spelmodus" (Settings › Lessons, the card on the home; src/lib/play.ts): points, more sound and movement. */
+  playMode: 'Game mode',
+  playHint: 'On: points for every right answer, more for several right in a row. More sounds and movement. A mistake costs nothing.',
+  playPoints: 'Points',
+  playTotal: 'All your points',
+  playAskTitle: 'How do you want to practise?',
+  playAskCalm: 'Calm',
+  playAskFun: 'With a game',
+  playAskHint: 'With a game: points, sounds and movement. You can change it in Settings.',
   /* An ⓘ that opens a side matter in place (src/components/InfoMore.tsx): its label says what is behind it. */
   infoMore: 'More explanation',
   tipsAbout: 'About these tips',

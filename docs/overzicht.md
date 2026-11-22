@@ -8,7 +8,7 @@ Vijf lijsten, in gewone taal:
 
 1. [Wat staat aan en uit](#1-wat-staat-aan-en-uit): 6 schakelaars
 2. [Wie krijgt wat](#2-wie-krijgt-wat): 3 soorten leerlingen
-3. [Wat de app uit zichzelf laat zien](#3-wat-de-app-uit-zichzelf-laat-zien): 18 momenten
+3. [Wat de app uit zichzelf laat zien](#3-wat-de-app-uit-zichzelf-laat-zien): 19 momenten
 4. [Alle schermen](#4-alle-schermen): 33 schermen
 5. [Wat de telefoon onthoudt](#5-wat-de-telefoon-onthoudt): 47 plekken
 
@@ -75,6 +75,7 @@ Eén kaart tegelijk. De bovenste in deze lijst gaat voor.
 | 2 | **Wil je ook de werkregels leren?** | Alleen in Taal, als 80% van het eigen lespad af is. | Eén keer (in de voortgang). | `bridgeDue, src/lib/bridge.ts` |
 | 3 | **Bewaar je voortgang** | Alleen op een telefoon die de voortgang kan kwijtraken, na 3 lessen. Daarna pas weer na 30 lessen. | Losse sleutel vloertaal:backup-nudge. | `nudgeDue, src/lib/backupNudge.ts` |
 | 4 | **Waarom leer jij Nederlands?** | Na 3 lessen, tot de leerling antwoordt of het wegzet. | Eén keer (in de voortgang). | `reasonDue, src/lib/reason.ts` |
+| 5 | **Hoe wil je oefenen? Rustig of met spel** | Na 1 les, tot de leerling kiest. Niet als "Rustig scherm" al aan staat of de spelmodus al gekozen is. | Eén keer (in de voortgang). | `playAskDue, src/lib/play.ts` |
 
 ### Op Route: een regel onder de volgende les
 

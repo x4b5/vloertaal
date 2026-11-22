@@ -509,3 +509,11 @@ export const SearchIcon = (p: IconProps) => (
 export const CartIcon = (p: IconProps) => (
   <Svg {...p}><path d="M3 4h2.4l2.2 10.2h10.2L20 7H6.4" {...stroke} /><circle cx="9.4" cy="19" r="1.6" {...stroke} /><circle cx="16.6" cy="19" r="1.6" {...stroke} /></Svg>
 );
+
+/** "Spelmodus" (src/lib/play.ts): a star; `on` adds two small sparks. */
+export const PlayIcon = ({ size = 24, on = true }: { size?: number; on?: boolean }) => (
+  <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
+    <path d="M12 3.5l2.5 5.2 5.6.7-4.1 3.9 1 5.6L12 16.2l-5 2.7 1-5.6-4.1-3.9 5.6-.7z" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+    {on && <path d="M20.5 3v2.4M19.3 4.2h2.4M3.5 17.5v2.4M2.3 18.7h2.4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />}
+  </svg>
+);

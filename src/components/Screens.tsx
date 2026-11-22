@@ -908,7 +908,10 @@ const FEEL_FACES: readonly [Face, string, 'feelBad' | 'feelOk' | 'feelGood'][] =
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, kept, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, onFeel, feltShot, easier = false, workTry }: {
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, kept, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, onFeel, feltShot, easier = false, workTry, points, allPoints }: {
+  /** "Spelmodus" (src/lib/play.ts): this lesson's points and all points so far; with them, confetti. */
+  points?: number;
+  allPoints?: number;
   /** "Wat vind je van Vloertaal?" (src/lib/feel.ts), after the 3rd and 15th lesson: three faces
    *  above Continue, a list of one kind (Continue stays: not answering is always possible). A tap
    *  counts the face and says thank you. */
@@ -1008,6 +1011,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           {/* Bram (the one with the thumb up) says one calm line. */}
           <BramSays text={ui(resultLineFor(kind, right, total), lang)} tail="down" />
           <LessonCelebration />
+          {points !== undefined && <Confetti />}
           {/* No KLAAR stamp beside the heading any more: the heading and the celebration say it;
               stamps stay for rarer moments (a week in a row, a certificate). The owner's choice,
               2 November 2026. */}
@@ -1036,6 +1040,16 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             done={repeated !== undefined || shownNew === newWords}
           />
         </div>
+        {/* "Spelmodus": the lesson's points, big, and all points so far (src/lib/play.ts). */}
+        {points !== undefined && (
+          <p className="result-line play-result" dir={rtl ? 'rtl' : undefined}>
+            <span className="play-result-n" dir="ltr"><span className="play-star" aria-hidden>★</span>+{points}</span>
+            <span className="play-result-label"><Bi text={ui('playPoints', lang)} /></span>
+            {allPoints !== undefined && (
+              <span className="play-result-all"><Bi text={ui('playTotal', lang)} /> <span dir="ltr">{allPoints}</span></span>
+            )}
+          </p>
+        )}
         {/* The rules track: the one line to remember from this lesson (plain Dutch, as the rule card). */}
         {remember && (
           <div className="result-remember" lang="nl">
@@ -1258,4 +1272,26 @@ export function versionText(build: string, day?: string): string {
   if (!d || Number.isNaN(d.getTime())) return build;
   const date = new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(d);
   return `${date} · ${build}`;
+}
+
+/**
+ * "Spelmodus" (src/lib/play.ts): confetti over the result, once (about 2 s), drawn by CSS only.
+ * The phone's "less motion" and "Rustig scherm" stop it (styles.css): then nothing shows. The
+ * pieces fall and turn; none blinks.
+ */
+const CONFETTI = Array.from({ length: 18 }, (_, i) => ({
+  x: (i * 37) % 100,
+  delay: ((i * 7) % 6) * 0.08,
+  turn: ((i * 53) % 360) - 180,
+  colour: ['var(--yellow)', 'var(--green)', 'var(--blue)', '#e86f4c'][i % 4],
+}));
+
+export function Confetti() {
+  return (
+    <div className="confetti" aria-hidden>
+      {CONFETTI.map((c, i) => (
+        <span key={i} className="confetti-bit" style={{ left: `${c.x}%`, animationDelay: `${c.delay}s`, background: c.colour, '--turn': `${c.turn}deg` } as React.CSSProperties} />
+      ))}
+    </div>
+  );
 }

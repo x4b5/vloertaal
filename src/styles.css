@@ -5583,3 +5583,54 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 
 /* The speed slider under a Dutch sentence (src/components/SpeedSlider.tsx): in the middle, a little apart. */
 .tip-say .klank-speed, .build-steps .klank-speed { margin: 12px auto 4px; }
+
+/* ---- "Spelmodus" (src/lib/play.ts; data-play on <html>, never with data-calm) ----
+   The game mode adds: the points counter at the top of a lesson (its number pops when it grows,
+   the gain floats up and fades), springy buttons, and confetti on the result. Everything rests
+   invisible or still: with the phone's "less motion" (the rule above) or "Rustig scherm" the
+   animations are off, and then the gain and the confetti simply do not show. Nothing repeats,
+   nothing blinks. */
+.play-score {
+  position: relative; flex: none;
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 10px; border-radius: 999px;
+  background: var(--yellow); color: var(--ink, #2a2118); border: 2px solid var(--edge-strong, #2a2118);
+  font-weight: 800; font-variant-numeric: tabular-nums; font-size: 1rem; line-height: 1.2;
+}
+.play-star { font-size: 0.95em; }
+.play-score-n { display: inline-block; min-width: 2ch; text-align: end; animation: play-pop 0.35s cubic-bezier(0.3, 1.6, 0.5, 1) 1 both; }
+.play-gain {
+  position: absolute; inset-inline-end: 6px; top: 100%;
+  font-weight: 800; font-size: 0.95rem; color: var(--right-ink, #1f6b3a);
+  opacity: 0; pointer-events: none;
+  animation: play-gain 1s ease-out 1 both;
+}
+@keyframes play-pop { from { transform: scale(1.45); } }
+@keyframes play-gain {
+  0% { opacity: 0; transform: translateY(14px) scale(0.8); }
+  25% { opacity: 1; transform: translateY(2px) scale(1.15); }
+  100% { opacity: 0; transform: translateY(-10px) scale(1); }
+}
+/* Springy buttons: a press squeezes a little and springs back. */
+:root[data-play] .btn, :root[data-play] .choice, :root[data-play] .tile-with-say {
+  transition: transform 0.18s cubic-bezier(0.3, 1.8, 0.5, 1);
+}
+:root[data-play] .btn:active, :root[data-play] .choice:active, :root[data-play] .tile-with-say:active { transform: scale(0.94); }
+/* The result: its points, then confetti from the top of the hero, once. */
+.play-result { flex-wrap: wrap; justify-content: center; gap: 4px 10px; }
+.play-result-n { font-size: 1.6rem; font-weight: 800; color: var(--gold-ink, #8a5a00); }
+.play-result-label { font-weight: 700; }
+.play-result-all { width: 100%; text-align: center; color: var(--muted); font-size: 0.95rem; }
+.result-hero { position: relative; }
+.confetti { position: absolute; inset: -12px 0 auto; height: 0; pointer-events: none; z-index: 2; }
+.confetti-bit {
+  position: absolute; top: 0; width: 9px; height: 14px; border-radius: 2px;
+  opacity: 0;
+  animation: confetti-fall 2.2s cubic-bezier(0.25, 0.5, 0.45, 1) 1 both;
+}
+@keyframes confetti-fall {
+  0% { opacity: 0; transform: translateY(-10px) rotate(0deg); }
+  10% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(240px) rotate(var(--turn, 180deg)); }
+}

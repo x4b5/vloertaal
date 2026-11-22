@@ -27,6 +27,7 @@ import { tempoOf, TEMPOS, type Tempo } from '../lib/tempo';
 import { fasterOn } from '../lib/pace';
 import { TEXT_SIZES, type TextSize } from '../lib/textSize';
 import { CALM_CHOICES, type CalmChoice } from '../lib/calm';
+import { playOn } from '../lib/play';
 import { FlameIcon } from './StreakArt';
 import { Character } from './Characters';
 import { VOICE_SAMPLE } from '../lib/voices';
@@ -46,6 +47,7 @@ import { GenderPicker, NeutralIcon } from './Gender';
 import {
   AlertIcon, AutoThemeIcon, BubblesIcon, CalendarIcon, CheckIcon, ChevronIcon, CloseIcon, CrateIcon, GlobeIcon, KeyboardIcon,
   LettersIcon, LockIcon, PencilIcon, RouteIcon, SpeakerIcon, SpeakerOffIcon,
+  PlayIcon,
 } from './Icons';
 import { BackupCard, ClockGlyph, InstallCard, OwnTime, addReminder, remindAddedKey, remindStoppedKey, stopReminder } from './Keep';
 import { DownloadIcon, OfflineSettingCard } from './Offline';
@@ -169,6 +171,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   text: { nl: 'Tekstgrootte', key: 'textSize', icon: <TextA size="normal" /> },
   theme: { nl: 'Weergave', key: 'theme', icon: <AutoThemeIcon size={24} /> },
   calm: { nl: 'Rustig scherm', key: 'calmScreen', icon: <CalmIcon size={24} /> },
+  play: { nl: 'Spelmodus', key: 'playMode', icon: <PlayIcon size={24} /> },
   // An arrow into the phone's tray: lessons downloaded (the crate is the backup's file).
   offline: { nl: 'Lessen op deze telefoon', key: 'settingKeepLessons', icon: <DownloadIcon size={24} /> },
   reminder: { nl: 'Herinner mij elke dag', key: 'remindTitle', icon: <CalendarIcon size={24} /> },
@@ -206,7 +209,7 @@ function Head({ page, lang, onBack }: { page: SettingsPage | null; lang?: HelpLa
 }
 
 export function Settings({
-  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onCountry, onTheme, onTextSize, onCalm, onVoice, onQuiet, onTempo, onReset,
+  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onCountry, onTheme, onTextSize, onCalm, onPlay, onVoice, onQuiet, onTempo, onReset,
   onRestore, access = 'full', onAccess, onCertificate, onFaster,
 }: {
   progress: Progress;
@@ -228,6 +231,8 @@ export function Settings({
   onTextSize: (size: TextSize) => void;
   /** "Rustig scherm": auto (as the phone), on or off (src/lib/calm.ts). */
   onCalm?: (calm: CalmChoice) => void;
+  /** "Spelmodus" on or off (src/lib/play.ts). */
+  onPlay?: (on: boolean) => void;
   onVoice: (voice: string | null) => void;
   /** "Without sound" on (true) or off. */
   onQuiet: (quiet: boolean) => void;
@@ -374,6 +379,7 @@ export function Settings({
       case 'text': return <Value text={say(TEXT_KEYS[progress.textSize ?? 'normal'])} />;
       case 'theme': return <Value text={say(THEME_KEYS[progress.theme])} />;
       case 'calm': return <Value text={say(CALM_KEYS[progress.calm ?? 'auto'])} />;
+      case 'play': return <Value text={say(playOn(progress) ? 'settingOn' : 'settingOff')} />;
       case 'offline': return <Value text={say(offlineAuto() ? 'settingOn' : 'settingOff')} />;
       case 'reminder': {
         const t = reminderTime();
@@ -690,6 +696,19 @@ export function Settings({
               options={CALM_CHOICES.map((c) => ({ id: c, text: say(CALM_KEYS[c]), picture: c === 'auto' ? <PhoneIcon size={26} /> : <CalmIcon size={26} still={c === 'on'} /> }))}
             />
             <p className="max3-hint"><Bi text={say('calmHint')} /></p>
+          </>
+        );
+      case 'play':
+        // Two cards, as "Rustig scherm"; on switches the calm screen off (src/lib/play.ts withPlay).
+        return (
+          <>
+            <ChoiceCards
+              label={said(ui('playMode', lang))}
+              current={playOn(progress) ? 'on' : 'off'}
+              onPick={(c) => { onPlay?.(c === 'on'); answered(); }}
+              options={(['on', 'off'] as const).map((c) => ({ id: c, text: say(c === 'on' ? 'settingOn' : 'settingOff'), picture: c === 'on' ? <PlayIcon size={26} /> : <CalmIcon size={26} still /> }))}
+            />
+            <p className="max3-hint"><Bi text={say('playHint')} /></p>
           </>
         );
       case 'offline':

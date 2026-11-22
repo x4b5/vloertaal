@@ -486,6 +486,14 @@ const lang: HelpLanguageSource = {
     calmScreen: 'شاشة هادئة', // nieuw, nalezen
     calmAuto: 'مثل هاتفك', // nieuw, nalezen
     calmHint: 'مُفعّل: لا شيء يتحرك، لا احتفال بسلسلة أيامك بعد الدرس، ولا تظهر السلسلة والكلمات في الشاشة الرئيسية.', // nieuw, nalezen
+    playMode: 'وضع اللعب', // nieuw, nalezen
+    playHint: 'مُفعّل: نقاط لكل إجابة صحيحة، ونقاط أكثر لعدة إجابات صحيحة متتالية. أصوات وحركة أكثر. الخطأ لا يكلّف شيئاً.', // nieuw, nalezen
+    playPoints: 'النقاط', // nieuw, nalezen
+    playTotal: 'كل نقاطك', // nieuw, nalezen
+    playAskTitle: { m: 'كيف تريد أن تتدرّب؟', f: 'كيف تريدين أن تتدرّبي؟', x: 'أي طريقة للتدريب؟' }, // nieuw, nalezen
+    playAskCalm: 'بهدوء', // nieuw, nalezen
+    playAskFun: 'مع لعبة', // nieuw, nalezen
+    playAskHint: 'مع لعبة: نقاط وأصوات وحركة. يمكنك تغيير ذلك في الإعدادات.', // nieuw, nalezen
     infoMore: 'مزيد من الشرح', // nieuw, nalezen
     tipsAbout: 'عن هذه النصائح', // nieuw, nalezen
     tipsNotChecked: 'لم يراجع خبيرٌ هذا الشرح بعد.', // nieuw, nalezen

@@ -812,6 +812,47 @@ export const sounds = {
   },
 };
 
+/** A major scale from C5, for the game mode's chime that climbs with the run. */
+const PLAY_STEPS = [523.25, 587.33, 659.25, 698.46, 783.99, 880, 987.77, 1046.5];
+
+/**
+ * The game mode's sounds ("Spelmodus", src/lib/play.ts): brighter than `sounds`, still short and
+ * soft (no sound over 0.7 s, peaks below the voice). "Without sound" stops them, as every effect.
+ */
+export const playSounds = {
+  /** A right answer: two notes, one step higher with every answer in the run (from the run's start). */
+  correct: (run: number) => {
+    if (quietAudio) return;
+    const c = audioCtx();
+    if (!c) return;
+    const t = c.currentTime;
+    const i = Math.min(PLAY_STEPS.length - 2, Math.max(0, run - 1));
+    note(c, PLAY_STEPS[i], t, 0.12, 0.08, 'triangle');
+    note(c, PLAY_STEPS[i + 1] * 1.5, t + 0.07, 0.2, 0.07, 'triangle');
+  },
+  /** 3, 5 or 8 in a row: a short rising fanfare (three notes, the last held). */
+  combo: () => {
+    if (quietAudio) return;
+    const c = audioCtx();
+    if (!c) return;
+    const t = c.currentTime + 0.18;
+    note(c, 659.25, t, 0.12, 0.07, 'triangle');
+    note(c, 783.99, t + 0.1, 0.12, 0.07, 'triangle');
+    note(c, 1046.5, t + 0.2, 0.36, 0.08, 'triangle');
+  },
+  /** The lesson is done: a little fanfare (C E G C, the last one long). */
+  done: () => {
+    if (quietAudio) return;
+    const c = audioCtx();
+    if (!c) return;
+    const t = c.currentTime;
+    note(c, 523.25, t, 0.14, 0.08, 'triangle');
+    note(c, 659.25, t + 0.12, 0.14, 0.08, 'triangle');
+    note(c, 783.99, t + 0.24, 0.14, 0.08, 'triangle');
+    note(c, 1046.5, t + 0.36, 0.5, 0.09, 'triangle');
+  },
+};
+
 /**
  * The device's own voice for a help language (Tigrinya, Arabic, ...), or null when the phone has
  * none: then no "read aloud" button is shown. Dari may use a Persian voice. No recordings needed.
