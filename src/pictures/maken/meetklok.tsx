@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shade, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view (as in group55): one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -96,7 +96,9 @@ export default {
       <path d={ticks(false)} stroke={PAL.slate} strokeWidth="1.4" strokeLinecap="round" />
       <path d={ticks(true)} stroke={PAL.ink} strokeWidth="2.4" strokeLinecap="round" />
       {/* The long red needle with a short tail, on a dark hub */}
-      <path d={`M${pts([at(NEEDLE + 180, 7)]).replace(',', ' ')}L${pts([at(NEEDLE, FACE - 3)]).replace(',', ' ')}`} stroke={PAL.red} strokeWidth="2.6" strokeLinecap="round" />
+      <Move kind="turn" turn={-NEEDLE} at={[CX, CY]}>
+        <path d={`M${pts([at(NEEDLE + 180, 7)]).replace(',', ' ')}L${pts([at(NEEDLE, FACE - 3)]).replace(',', ' ')}`} stroke={PAL.red} strokeWidth="2.6" strokeLinecap="round" />
+      </Move>
       <circle cx={CX} cy={CY} r="4.2" fill={PAL.slate} />
       <circle cx={CX - 1} cy={CY - 1} r="1.6" fill={PAL.steel} />
       <Shine d={`M${CX - R + 4.5} ${CY - 6}Q${CX - R + 7} ${CY - R + 10} ${CX - 10} ${CY - R + 4}`} width={3} opacity={0.8} />

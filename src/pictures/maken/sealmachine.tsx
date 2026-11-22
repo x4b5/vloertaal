@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shine, r1 } from '../kit';
+import { Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -67,7 +67,11 @@ export default {
         <Block u={1} v={POST.v} z={BH} w={POST.w} d={POST.d} h={H.z + H.h - BH} top={PAL.mist} front={PAL.steel} side={STEEL_DARK} />
         <Block u={BW - POST.w - 1} v={POST.v} z={BH} w={POST.w} d={POST.d} h={H.z + H.h - BH} top={PAL.mist} front={PAL.steel} side={STEEL_DARK} />
         {/* The black food tray; its top is the red sealed rim with the clear film inside */}
-        <Block u={T.u} v={T.v} z={BH} w={T.w} d={T.d} h={T.h} top={PAL.red} front={PAL.slate} side={PAL.slateDark} />
+        {/* (Before the seal the rim is the tray's own dark top; the red seal line shows once the head is down.) */}
+        <Block u={T.u} v={T.v} z={BH} w={T.w} d={T.d} h={T.h} top={PAL.slateDark} front={PAL.slate} side={PAL.slateDark} />
+        <Move kind="show">
+          <path d={quad(iso(T.u, T.v, tz), iso(T.u + T.w, T.v, tz), iso(T.u + T.w, T.v + T.d, tz), iso(T.u, T.v + T.d, tz))} fill={PAL.red} />
+        </Move>
         <path d={quad(iso(T.u + r, T.v + r, tz), iso(T.u + T.w - r, T.v + r, tz), iso(T.u + T.w - r, T.v + T.d - r, tz), iso(T.u + r, T.v + T.d - r, tz))} fill={FILM} />
         {/* The food under the film, in light tints */}
         {(() => {
@@ -84,11 +88,14 @@ export default {
         })()}
         <Shine d={`M${iso(T.u + 6, T.v + T.d - 5, tz).join(' ')}L${iso(T.u + 16, T.v + 5, tz).join(' ')}`} width={2.2} opacity={0.9} />
         {/* Heat waves from the hot plate down to the tray */}
-        <path d={heat.join('')} fill="none" stroke={PAL.red} strokeWidth="2.8" strokeLinecap="round" />
-        {/* The red-hot plate and the blue head */}
-        <Block u={H.u + 2} v={H.v + 2} z={H.z - H.plate} w={H.w - 4} d={H.d - 4} h={H.plate} top={PAL.red} front={PAL.red} side={PAL.redShade} />
-        <Block u={H.u} v={H.v} z={H.z} w={H.w} d={H.d} h={H.h} top={PAL.blueLight} front={PAL.blue} side={BLUE_DEEP} />
-        <Shine d={`M${iso(H.u + 4, H.v, H.z + H.h - 3).join(' ')}L${iso(H.u + 26, H.v, H.z + H.h - 3).join(' ')}`} width={2.4} opacity={0.7} />
+        {/* (The head comes down onto the tray, its heat with it.) */}
+        <Move kind="from" dy={-14}>
+          <path d={heat.join('')} fill="none" stroke={PAL.red} strokeWidth="2.8" strokeLinecap="round" />
+          {/* The red-hot plate and the blue head */}
+          <Block u={H.u + 2} v={H.v + 2} z={H.z - H.plate} w={H.w - 4} d={H.d - 4} h={H.plate} top={PAL.red} front={PAL.red} side={PAL.redShade} />
+          <Block u={H.u} v={H.v} z={H.z} w={H.w} d={H.d} h={H.h} top={PAL.blueLight} front={PAL.blue} side={BLUE_DEEP} />
+          <Shine d={`M${iso(H.u + 4, H.v, H.z + H.h - 3).join(' ')}L${iso(H.u + 26, H.v, H.z + H.h - 3).join(' ')}`} width={2.4} opacity={0.7} />
+        </Move>
       </g>
     );
   },
