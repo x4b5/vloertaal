@@ -239,7 +239,7 @@ const t: CultureTranslation = {
     's.mustmay.3': 'Kural bu: kask zorunludur.',
     'c.mustmay.q': 'Cumartesi fazla mesai yapmak zorunda mıyım?',
     'c.mustmay.a': 'Hayır, gerekli değil. Gönüllüdür.',
-    'u.leave': "İzin", // nieuw, nalezen
+    'u.leave': "İzin", // nieuw, nalezen // nagelezen AI 22 nov
     'l.leave': 'İzin günleri',
     'w.vakantiedagen': 'izin günleri (tatil)',
     'w.verlof': 'izin',
@@ -275,7 +275,7 @@ const t: CultureTranslation = {
     's.warning.1': 'Pasaportum patronumda.',
     's.warning.2': 'Maaş bordrosu almıyorum.',
     's.warning.3': 'Bir borcu geri ödemem gerekiyor.',
-    'c.warning.q': 'Pasaportunu bana ver.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.warning.q': 'Pasaportunu bana ver.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.warning.a': 'Hayır, sadece bir kopyasını alabilirsiniz.',
     'l.gethelp': 'Yardım almak',
     'w.politie': 'polis',
@@ -351,7 +351,7 @@ const t: CultureTranslation = {
     's.doctor.2': 'Eczane nerede?',
     's.doctor.3': 'Acil.',
     'c.doctor.q': 'Nöbetçi aile hekimi, size nasıl yardım edebilirim?',
-    'c.doctor.a': 'Oğlumun ateşi yüksek.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.doctor.a': 'Oğlumun ateşi yüksek.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'l.insurance': 'Sağlık sigortası',
     'w.premie': 'prim (aylık ödeme)',
     'w.eigenrisico': 'kendi payın (önce senin ödediğin masraflar)',
@@ -564,8 +564,8 @@ const t: CultureTranslation = {
     's.cleansafe.3': 'Temizlik ürünlerini asla karıştırma.',
     'c.cleansafe.q': 'Buradan geçebilir miyim?',
     'c.cleansafe.a': 'Dikkat, zemin hâlâ kaygan.',
-    'c.cv': 'Kısa bir CV', // nieuw, nalezen
-    'c.cv.b': 'Burada CV kısadır: 1 veya 2 sayfa. İletişim bilgilerini, iş deneyimini, eğitimini, dillerini ve becerilerini yaz. Fotoğraf gerekmez. Dinini, yaşını veya medeni durumunu yazmak zorunda değilsin. Neler yapabildiğin konusunda dürüst ol. Hollandacanı birine kontrol ettir.', // nieuw, nalezen
+    'c.cv': 'Kısa bir CV', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.cv.b': 'Burada CV kısadır: 1 veya 2 sayfa. İletişim bilgilerini, iş deneyimini, eğitimini, dillerini ve becerilerini yaz. Fotoğraf gerekmez. Dinini, yaşını veya medeni durumunu yazmak zorunda değilsin. Neler yapabildiğin konusunda dürüst ol. Hollandacanı birine kontrol ettir.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.cv.p': 'CV’mi okur musun? Hollandacam doğru mu?',
     'c.cv.s': 'Kendi ülkende 3 yıl bir fabrikada çalıştın ama diploman yok. CV’ne ne yazarsın?',
     'c.cv.o1': 'İşi ve orada ne yaptığını dürüstçe yazarsın.',
@@ -576,48 +576,48 @@ const t: CultureTranslation = {
     'c.interview.b': 'Zamanında gel: 5-10 dakika erken. Kibarca selam ver ve kişinin yüzüne bak. Neler yapabildiğini kısaca anlat. Senin de soru sorman normal ve olumludur, örneğin çalışma saatleri, iş veya eğitim hakkında. Sonunda ne zaman haber alacağını sorabilirsin. Hâlâ Hollandaca öğrendiğini söylemek sorun değil. İşveren sana dinini, hamilelik durumunu veya sağlığını soramaz. Cevap vermek zorunda değilsin: kibarca cevap vermemeyi tercih ettiğini söyleyebilirsin.',
     'c.interview.p': 'Ben de bir şey sorabilir miyim? İş haftada kaç saat?',
     'c.interview.s': 'Görüşmenin sonunda işveren soruyor: “Heb je nog vragen?” Ne yaparsın?',
-    'c.interview.o1': 'Çalışma saatleri veya eğitim hakkında bir soru sorarsın.', // nagelezen (2e lezing)
+    'c.interview.o1': 'Çalışma saatleri veya eğitim hakkında bir soru sorarsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.interview.o2': 'Soru sormak kibar olmadığı için hayır dersin.',
-    'c.interview.o3': 'İyi çalıştığını göstermek için kendinden daha çok bahsedersin.', // nagelezen (2e lezing)
-    'c.interview.w': 'Sorular işle ilgilendiğini gösterir. Burada işverenler genelde soru bekler.', // nieuw, nalezen
+    'c.interview.o3': 'İyi çalıştığını göstermek için kendinden daha çok bahsedersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.interview.w': 'Sorular işle ilgilendiğini gösterir. Burada işverenler genelde soru bekler.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.findwork': 'Sözleşmeni yazılı al',
     'c.findwork.b': 'Her zaman yazılı bir sözleşme ve kendin için bir kopya iste. İmzalamadan önce oku veya güvendiğin birinden yardım iste. Geçici iş ajansı (uitzendbureau) sana iş bulmak için senden para isteyemez. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.findwork.p': 'Sözleşmeyi önce okuyabilir miyim?',
     'c.findwork.s': 'Yeni bir işveren diyor ki: “Hemen buraya imza at. Sonra okursun.” Ne yaparsın?',
-    'c.findwork.o1': 'Okumak için zaman veya bir kopya istersin.', // nagelezen (2e lezing)
+    'c.findwork.o1': 'Okumak için zaman veya bir kopya istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.findwork.o2': 'İşi kaybetmemek için hemen imzalarsın.',
-    'c.findwork.o3': 'İmzalar, sonra bir kopya istersin.', // nagelezen (2e lezing)
+    'c.findwork.o3': 'İmzalar, sonra bir kopya istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.findwork.w': 'Sözleşmen ne kazandığını ve hakların neler olduğunu söyler. İyi bir işveren sana okuman için zaman verir. Anlamadığın her şeyi sorabilirsin.',
     'c.contract': 'Deneme süresi ve çağrı üzerine çalışma',
-    'c.contract.b': 'Deneme süresi (proeftijd) yazılı olmalıdır. 6 ay veya daha kısa bir sözleşmede deneme süresine izin yoktur. Daha uzun ama 2 yıldan kısa bir sözleşmede en fazla 1 aydır. 2 yıl veya daha uzun ya da süresiz bir sözleşmede en fazla 2 aydır. Çağrı üzerine mi çalışıyorsun (oproepkracht)? İşveren seni genelde en az 4 gün önceden çağırmalı. Daha geç çağırırsa gelmek zorunda değilsin. Bir cao bu 4 günü kısaltabilir, ama 1 günden kısa olamaz. İşini bundan daha geç iptal ederlerse yine de ücretini alırsın. Seni 3 saatten az bir iş için çağırırlarsa genelde 3 saatlik ücret alırsın. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.', // nalezen: feit gelijk getrokken
+    'c.contract.b': 'Deneme süresi (proeftijd) yazılı olmalıdır. 6 ay veya daha kısa bir sözleşmede deneme süresine izin yoktur. Daha uzun ama 2 yıldan kısa bir sözleşmede en fazla 1 aydır. 2 yıl veya daha uzun ya da süresiz bir sözleşmede en fazla 2 aydır. Çağrı üzerine mi çalışıyorsun (oproepkracht)? İşveren seni genelde en az 4 gün önceden çağırmalı. Daha geç çağırırsa gelmek zorunda değilsin. Bir cao bu 4 günü kısaltabilir, ama 1 günden kısa olamaz. İşini bundan daha geç iptal ederlerse yine de ücretini alırsın. Seni 3 saatten az bir iş için çağırırlarsa genelde 3 saatlik ücret alırsın. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.', // nalezen: feit gelijk getrokken // nagelezen AI 22 nov
     'c.contract.p': 'Deneme süresi sözleşmemde var mı?',
     'c.contract.s': 'Sözleşmen 3 aylık. İçinde şöyle yazıyor: “Proeftijd: 1 maand”. Ne yaparsın?',
-    'c.contract.o1': 'Bunu sorarsın: bu deneme süresi geçerli değil.', // nagelezen (2e lezing)
+    'c.contract.o1': 'Bunu sorarsın: bu deneme süresi geçerli değil.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.contract.o2': 'Hiçbir şey yapmazsın. Her sözleşmede deneme süresi vardır.',
     'c.contract.o3': 'İmzalarsın ve hiç sormazsın, çünkü patron en iyisini bilir.',
     'c.contract.w': '6 ay veya daha kısa bir sözleşmedeki deneme süresi geçerli değildir. Sakince sormak normaldir. Cevap net değilse sendikadan veya Juridisch Loket’ten tavsiye al.',
     'c.agency': 'İşverenin ajanstır',
     'c.agency.b': 'Geçici iş ajansı (uitzendbureau) üzerinden çalışıyorsan, işverenin ajanstır, çalıştığın şirket değil. Sözleşmen ve maaşın ajanstan gelir ve geçici işçiler için bir cao (uitzend-cao) vardır. Aynı işi yapan şirket çalışanlarıyla aynı ücreti alma hakkın var. Ayrıca tatil parası (vakantiegeld) alırsın ve izin günleri biriktirirsin. Çalıştığın saatlerin kendi listesini tut ve bunları maaş bordronda kontrol et. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
-    'c.agency.x': 'Başka bir ülkedeki işveren seni bir süreliğine buraya mı gönderdi? O zaman görevlendirilmiş (gedetacheerd) çalışıyorsun. İşverenden A1 belgesini iste: nerede sigortalı olduğunu gösterir. Burada yine de en az Hollanda asgari ücretini alırsın.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
+    'c.agency.x': 'Başka bir ülkedeki işveren seni bir süreliğine buraya mı gönderdi? O zaman görevlendirilmiş (gedetacheerd) çalışıyorsun. İşverenden A1 belgesini iste: nerede sigortalı olduğunu gösterir. Burada yine de en az Hollanda asgari ücretini alırsın.', // nieuw, nalezen (uit een ander land, 10 nov 2026) // nagelezen AI 22 nov
     'c.agency.p': 'Maaş bordromda saatler eksik.',
     'c.agency.s': 'Maaş bordronda 32 saat yazıyor, ama sen 38 saat çalıştın. Ne yaparsın?',
-    'c.agency.o1': 'Kendi saat listeni ajansa gösterir ve düzeltmesini istersin.', // nagelezen (2e lezing)
+    'c.agency.o1': 'Kendi saat listeni ajansa gösterir ve düzeltmesini istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.agency.o2': 'Sadece 6 saat olduğu için hiçbir şey söylemezsin.',
     'c.agency.o3': 'Çalıştığın şirketteki patrondan bu 6 saati ödemesini istersin.',
     'c.agency.w': 'Sana ajans ödeme yapıyor, bu yüzden hatayı ajans düzeltmeli. Tarih ve saatlerin olduğu kendi listen yardımcı olur. Bunu sormak senin hakkın.',
     'c.bsn': 'BSN’ini güvende tut',
     'c.bsn.b': 'Belediyeye (gemeente) kaydolduğunda bir BSN (burgerservicenummer) alırsın. Burada sadece kısa bir süre mi kalıyorsun? O zaman bir RNI masasına kaydolursun. BSN’in çalışmak, vergi, sağlık sigortası ve banka hesabı için gerekir. İşverenin kimliğine ve BSN’ine ihtiyaç duyar. BSN’ini veya kimliğinin kopyasını herkese verme. Önce neden ihtiyaç duyduklarını sor. Taşınıyor musun? Yeni adresini 5 gün içinde gemeente’ye kaydettir. DigiD, devlet sitelerine giriş bilgindir: onu asla başkasına verme. Burada yaşıyor veya çalışıyor musun? O zaman genelde Hollanda sağlık sigortası (zorgverzekering) yaptırman gerekir. Bunu çabuk hallet. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.bsn.p': 'BSN’ime neden ihtiyacınız var?',
-    'c.bsn.s': 'Tanımadığın biri sana WhatsApp’tan iş teklif ediyor. Pasaport fotoğrafını ve DigiD giriş bilgilerini istiyor. Ne yaparsın?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.bsn.o1': 'DigiD giriş bilgilerini asla vermezsin. Kim olduğunu kontrol edersin.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.bsn.s': 'Tanımadığın biri sana WhatsApp’tan iş teklif ediyor. Pasaport fotoğrafını ve DigiD giriş bilgilerini istiyor. Ne yaparsın?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.bsn.o1': 'DigiD giriş bilgilerini asla vermezsin. Kim olduğunu kontrol edersin.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.bsn.o2': 'İşi almak için her şeyi hemen gönderirsin.',
-    'c.bsn.o3': 'Sadece pasaport fotoğrafını gönderirsin.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.bsn.o3': 'Sadece pasaport fotoğrafını gönderirsin.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.bsn.w': 'DigiD’in veya kimliğinin kopyasıyla başkaları senin adını kullanabilir, örneğin kredi veya sosyal yardım almak için. Gerçek bir işverenin kimliğine ve BSN’ine ihtiyacı vardır, ama DigiD giriş bilgilerine asla.',
     'c.housing': 'İşverenden konut',
     'c.housing.b': 'Konutunu işverenin veya ajansın mı ayarlıyor? O zaman kira sözleşmesi iş sözleşmenden ayrı olmalıdır. Yazılı bir kira sözleşmesi ve ne ödediğine dair bir belge iste. Kira maaşından ancak yazılı olarak kabul ettiysen ve yasal sınırlar içinde kesilebilir: bunu maaş bordronda kontrol et. Depozito (borg) en fazla 2 aylık temel kiradır. Ayrıldığında, gerçek hasar düşüldükten sonra geri alırsın. Adresine gemeente’de kaydol. Güvensiz konut, tehdit veya haksız masraflar mı var? Bunu gemeente’ye (meldpunt) bildir ve Juridisch Loket’ten veya bir konut danışma hizmetinden ücretsiz tavsiye al. Kira fiyatı veya hizmet giderleriyle ilgili bir sorun için Huurcommissie vardır. İşin mi bitiyor? Evden ayrılmadan önce tavsiye al. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.',
     'c.housing.p': 'Ödediğime dair bir belge alabilir miyim?',
     'c.housing.s': 'İşin bitiyor. Ajans diyor ki: “Yarın evden çıkmalısın.” Ne yaparsın?',
-    'c.housing.o1': 'Önce Juridisch Loket’ten tavsiye alırsın.', // nagelezen (2e lezing)
+    'c.housing.o1': 'Önce Juridisch Loket’ten tavsiye alırsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.housing.o2': 'Hemen çıkar ve depozitonu unutursun.',
     'c.housing.o3': 'Kalırsın ve ajansa artık cevap vermezsin.',
     'c.housing.w': 'Kira sözleşmenin işinden ayrı, kendi kuralları vardır. Ücretsiz tavsiye haklarını bilmene yardım eder, örneğin ne zaman çıkman gerektiği ve depozito hakkında.',
@@ -625,9 +625,9 @@ const t: CultureTranslation = {
     'c.payslip.b': 'Bruto, vergiden önceki maaşındır. Netto, banka hesabına yatan paradır: bruto eksi vergi ve primler (loonheffing). İşveren sana bir maaş bordrosu (loonstrook) vermek zorundadır. Her bordroda saatleri ve ücreti kontrol et, çalıştığın saatleri de not et. İki işin mi var? Vergi indirimini (loonheffingskorting) sadece bir işverende kullan. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.payslip.p': 'Daha fazla saat çalıştım. Kontrol edebilir misin?',
     'c.payslip.s': 'Maaş bordronda çalıştığından daha az saat görünüyor. Ne yaparsın?',
-    'c.payslip.o1': 'Notlarını gösterir ve amirinden kontrol etmesini istersin.', // nagelezen (2e lezing)
+    'c.payslip.o1': 'Notlarını gösterir ve amirinden kontrol etmesini istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.payslip.o2': 'Sorun istemediğin için hiçbir şey söylemezsin.',
-    'c.payslip.o3': 'Bir ay beklersin: bir sonraki bordroda düzelir.', // nagelezen (2e lezing)
+    'c.payslip.o3': 'Bir ay beklersin: bir sonraki bordroda düzelir.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.payslip.w': 'Maaş bordrosunda hatalar olur. Bunu sormak normaldir ve senin hakkındır. Tarih ve saatlerle ilgili kendi notların çok yardımcı olur.',
     'c.extra': 'Tatil parası ve asgari ücret',
     'c.extra.b': 'Tatil parası (vakantiegeld) alırsın: brüt maaşının en az %8’i. Çoğu işveren bunu yılda bir kez, mayıs veya haziranda öder. Maaşın asla yasal asgari ücretten (minimumloon) düşük olamaz; 21 yaşından küçükler için asgari ücret daha düşüktür. Miktar her yıl değişir: rijksoverheid.nl sitesinden kontrol et. Bir cao çoğu zaman fazla mesai veya gece çalışması için ek ücret verir. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
@@ -635,7 +635,7 @@ const t: CultureTranslation = {
     'c.extra.s': 'Bir iş arkadaşın diyor ki: “Mayısta patrondan ekstra para alırsın.” Bu nedir?',
     'c.extra.o1': 'Tatil parası: brüt maaşının en az %8’i.',
     'c.extra.o2': 'Sadece en iyi çalışanlara verilen bir hediye.',
-    'c.extra.o3': '13. maaş: herkese bir aylık ek maaş.', // nagelezen (2e lezing)
+    'c.extra.o3': '13. maaş: herkese bir aylık ek maaş.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.extra.w': 'Tatil parası senin hakkındır, hediye değil. Çalıştığın her saatle birikir. İşinden daha erken ayrılırsan son maaşınla birlikte alırsın.',
     'c.phone': 'İş yerinde telefonun',
     'c.phone.b': 'Birçok iş yerinde çalışırken telefona izin verilmez, özellikle makinelerin ve forkliftlerin yanında veya gıda üretiminde. Bu güvensiz veya hijyene aykırı olabilir. Telefonunu molada kullan. Ailenden acil bir arama mı bekliyorsun? Önce amirine söyle. İzin almadan iş yerinde fotoğraf veya video çekme: iş arkadaşlarının gizliliğini ve şirket sırlarını düşün. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
@@ -649,7 +649,7 @@ const t: CultureTranslation = {
     'c.smoking.b': 'Hollanda’da iş yerinin içinde sigara içmek yasayla yasaktır. Bu elektronik sigaralar (vape) için de geçerlidir. 2022’den beri şirketlerin içinde sigara odalarına da izin yoktur. Sadece dışarıda, işverenin izin verdiği yerde ve genelde sadece molanda sigara iç. Ekstra sigara molaları bir hak değildir: bunları amirinle konuşup kararlaştır. Yakıt veya depodaki kutular gibi kolay yanan şeylerin yanında asla sigara içme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.smoking.p': 'Molamda dışarıda sigara içebilir miyim?',
     'c.smoking.s': 'Hava soğuk ve yağmurlu. Bir iş arkadaşın diyor ki: “Depo odasında iç gitsin, kimse görmez.” Ne yaparsın?',
-    'c.smoking.o1': 'Hayır der ve molanda dışarıda içersin.', // nieuw, nalezen
+    'c.smoking.o1': 'Hayır der ve molanda dışarıda içersin.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.smoking.o2': 'Bu seferlik depo odasında hızlıca içersin.',
     'c.smoking.o3': 'Onun yerine içeride vape kullanırsın, çünkü buna izin var.',
     'c.smoking.w': 'İçeride sigara içmek yasaya aykırıdır ve yangın çıkarabilir. İçeride vape de yasaktır. Kurala uymak herkesi güvende tutar.',
@@ -657,7 +657,7 @@ const t: CultureTranslation = {
     'c.clock.b': 'Giriş ve çıkış kaydını kendin yap, işe gerçekten başladığın ve bıraktığın anda. Asla bir iş arkadaşın için giriş veya çıkış kaydı yapma ve kartını asla başkasına kullandırma. Bu sahtekârlık sayılır ve işten çıkarılmana yol açabilir. Geç mi kalacaksın? Vardiyan başlamadan önce ara. Kayıtlı saatlerinin maaş bordronla uyuştuğunu kontrol et. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.clock.p': 'Çıkış kaydı yapmayı unuttum. Düzeltebilir misin?',
     'c.clock.s': 'Bir iş arkadaşın sana kartını veriyor: “Benim yerime giriş kaydı yap, 20 dakika geç kalacağım.” Ne yaparsın?',
-    'c.clock.o1': 'Hayır der ve amiri aramasını söylersin.', // nagelezen (2e lezing)
+    'c.clock.o1': 'Hayır der ve amiri aramasını söylersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.clock.o2': 'Arkadaşın olduğu için bir kereliğine yaparsın.',
     'c.clock.o3': 'Onun yerine giriş kaydı yapar ve amire sonra söylersin.',
     'c.clock.w': 'Başkası yerine giriş kaydı yapmak ikiniz için de sahtekârlık sayılır. Hayır demek hem iş arkadaşını hem kendi işini korur.',
@@ -665,7 +665,7 @@ const t: CultureTranslation = {
     'c.hygiene.b': 'İş yerinde alkol ve uyuşturucu kullanmak veya bunları kullandıktan sonra işe gelmek neredeyse tüm şirketlerde yasaktır. Makinelerin ve forkliftlerin yanında çok tehlikelidir ve işten çıkarılmana yol açabilir. Bir ilaç uykunu getiriyor veya başını döndürüyor mu? Amirine söyle, böylece güvenli bir iş yapabilirsin. Hangi ilaç olduğunu söylemek zorunda değilsin. Gıda üretiminde hijyen kuralları sıkıdır: ellerini yıka, temiz iş kıyafeti giy, gerekirse bone tak ve takı takma. Kusma veya ishal mi var? Başlamadan önce bildir. Çalışma yerini düzenli tut. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.hygiene.p': 'Bir ilaç kullanıyorum. Uykumu getiriyor.',
     'c.hygiene.s': 'Doktorun sana uyku yapan bir ilaç veriyor. Yarın forklift kullanman gerekiyor. Ne yaparsın?',
-    'c.hygiene.o1': 'Başlamadan önce amirine söylersin.', // nieuw, nalezen
+    'c.hygiene.o1': 'Başlamadan önce amirine söylersin.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.hygiene.o2': 'Hiçbir şey söylemez ve çok yavaş sürersin.',
     'c.hygiene.o3': 'Doktoruna sormadan ilacı bırakırsın.',
     'c.hygiene.w': 'Amirinin hangi ilaç olduğunu bilmesi gerekmez, sadece şu an araç süremeyeceğini veya makinelerle çalışamayacağını bilmesi yeter. Bu seni ve iş arkadaşlarını güvende tutar.',
@@ -681,7 +681,7 @@ const t: CultureTranslation = {
     'c.mistakes.b': 'İş yerinde herkes hata yapar. Düzeltilebilmesi için hemen söyle: “Sorry, ik heb een fout gemaakt.” Bir hatayı saklamak, hatanın kendisinden çok daha kötü görülür. Geri bildirim işle ilgilidir, bir insan olarak seninle değil. Övgü mü aldın? Sadece teşekkür et. Neyi daha iyi yapacağın belli değil mi? Sor: “Kun je het uitleggen?”',
     'c.mistakes.p': 'Pardon, bir hata yaptım. Nasıl düzeltebilirim?',
     'c.mistakes.s': '20 kutuyu yanlış palete koydun. Henüz kimse görmedi. Ne yaparsın?',
-    'c.mistakes.o1': 'Amirine söyler ve düzeltmeye yardım edersin.', // nagelezen (2e lezing)
+    'c.mistakes.o1': 'Amirine söyler ve düzeltmeye yardım edersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.mistakes.o2': 'Hiçbir şey söylemez ve kimsenin fark etmemesini umarsın.',
     'c.mistakes.o3': 'Bir iş arkadaşının yaptığını söylersin.',
     'c.mistakes.w': 'Erken söylenen bir hata kolay düzeltilir. Dürüst olmak güven oluşturur ve bu, hiç hata yapmamaktan daha önemlidir.',
@@ -690,25 +690,25 @@ const t: CultureTranslation = {
     'c.respect.p': 'Tokalaşmamayı tercih ederim, ama seni selamlamaktan memnuniyet duyarım.',
     'c.respect.s': 'Bir iş arkadaşın sık sık dininle ilgili şakalar yapıyor. Durmasını istedin ama devam ediyor. Ne yaparsın?',
     'c.respect.o1': 'Amirine veya vertrouwenspersoon’a söylersin.',
-    'c.respect.o2': 'Sorun çıkmasın diye onunla birlikte gülersin.', // nieuw, nalezen
+    'c.respect.o2': 'Sorun çıkmasın diye onunla birlikte gülersin.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.respect.o3': 'Sen de onun kökeniyle ilgili şakalar yaparsın.',
     'c.respect.w': 'Böyle şakalar iş yerinde kabul edilmez. Bildirmek normaldir: şirket iş yerini herkes için güvenli tutmak zorundadır.',
     'c.health': 'Molalar ve çalışma saatleri',
-    'c.health.b': 'Yasa sağlığını korur. 5,5 saatten fazla mı çalışıyorsun? O zaman en az 30 dakika mola hakkın var (2 kez 15 dakika olabilir). 10 saatten fazla mı? O zaman en az 45 dakika. Bir cao’da biraz farklı mola kuralları olabilir. Bir vardiyada en fazla 12 saat, bir haftada en fazla 60 saat çalışabilirsin. 18 yaşından küçük müsün? O zaman daha az saat çalışabilirsin. İşveren sana iş ayakkabısı veya eldiven gibi koruyucu ekipmanı ücretsiz vermek zorundadır. Güvensiz iş veya çok düşük ücret mi var? Bunu Nederlandse Arbeidsinspectie’ye bildirebilirsin, adını vermeden de. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.', // nieuw, nalezen
+    'c.health.b': 'Yasa sağlığını korur. 5,5 saatten fazla mı çalışıyorsun? O zaman en az 30 dakika mola hakkın var (2 kez 15 dakika olabilir). 10 saatten fazla mı? O zaman en az 45 dakika. Bir cao’da biraz farklı mola kuralları olabilir. Bir vardiyada en fazla 12 saat, bir haftada en fazla 60 saat çalışabilirsin. 18 yaşından küçük müsün? O zaman çalışabileceğin en fazla saat daha azdır. İşveren sana iş ayakkabısı veya eldiven gibi koruyucu ekipmanı ücretsiz vermek zorundadır. Güvensiz iş veya çok düşük ücret mi var? Bunu Nederlandse Arbeidsinspectie’ye bildirebilirsin, adını vermeden de. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.health.p': 'Henüz mola vermedim.',
     'c.health.s': '6 saattir molasız çalışıyorsun. Amirin devam etmeni istiyor. Ne yaparsın?',
-    'c.health.o1': 'Şimdi molaya ihtiyacın olduğunu söylersin.', // nagelezen (2e lezing)
-    'c.health.o2': 'Devam eder, sonra daha uzun bir mola verirsin.', // nagelezen (2e lezing)
+    'c.health.o1': 'Şimdi molaya ihtiyacın olduğunu söylersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.health.o2': 'Devam eder, sonra daha uzun bir mola verirsin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.health.o3': 'Tek kelime etmeden işi bırakıp eve gidersin.',
     'c.health.w': '5,5 saatten fazla çalıştığında mola yasal bir haktır, bir iyilik değil. Dinlenmek güvenli çalışmana da yardım eder.',
     'c.rights': 'Ayrımcılık ve işten çıkarılma',
     'c.rights.b': 'İş yerinde ayrımcılık yasaktır, örneğin kökenin, dinin veya cinsiyetin yüzünden. İşveren seni öylece işten çıkaramaz: normalde UWV’den veya bir hâkimden izin ya da senin onayın gerekir. (Deneme süresinde veya geçici bir sözleşmenin sonunda başka kurallar geçerlidir.) İşten çıkarılmanla ilgili anlamadığın bir kâğıdı imzalama. İş sözleşmeni sona erdiren bir anlaşma (vaststellingsovereenkomst) mı imzaladın? O zaman genelde 14 gün içinde yazılı olarak iptal edebilirsin. Önce yardım al. Sendikaya (örneğin FNV), bir ayrımcılık danışma merkezine veya Juridisch Loket’e git. Juridisch Loket ücretsiz hukuki tavsiye verir. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.',
     'c.rights.p': 'Önce tavsiye almak istiyorum.',
     'c.rights.s': 'Patronun sana bir kâğıt veriyor: “Bugün imzala, anlaşmayla ayrılırsın.” Tam anlamıyorsun. Ne yaparsın?',
-    'c.rights.o1': 'Henüz imzalamazsın. Önce tavsiye alırsın.', // nieuw, nalezen
+    'c.rights.o1': 'Henüz imzalamazsın. Önce tavsiye alırsın.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.rights.o2': 'Patron sorun olmadığını söylediği için imzalarsın.',
     'c.rights.o3': 'Kâğıdı kaldırır ve bu konuda bir daha hiç konuşmazsın.',
-    'c.rights.w': 'İçinde yanlış bir şey var mı? O zaman haklarını kaybedebilirsin, örneğin işsizlik maaşı (WW) hakkını. Tavsiye almak için zaman istemek normaldir ve buna izin vardır.', // nieuw, nalezen
+    'c.rights.w': 'İçinde yanlış bir şey var mı? O zaman haklarını kaybedebilirsin, örneğin işsizlik maaşı (WW) hakkını. Tavsiye almak için zaman istemek normaldir ve buna izin vardır.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.mustmay': 'Moet, hoeft niet, mag niet',
     'c.mustmay.b': 'Hollandacada “moeten” kelimesinin tersi “niet hoeven” olur. “Je moet tekenen” şu demek: seçeneğin yok. “Je hoeft niet te tekenen” şu demek: seçebilirsin. “Je mag niet tekenen” şu demek: yasak. Dikkat: İngilizcede “must not”, “mag niet” demektir. Türkçede “zorunda değilsin”, “hoeft niet” demektir. Emin değil misin? Sor.',
     'c.mustmay.p': 'Zorunlu mu, yoksa seçme hakkım var mı?',
@@ -724,53 +724,53 @@ const t: CultureTranslation = {
     'c.leave.o1': 'İşverenden erkenden, yazılı olarak izin istersin.',
     'c.leave.o2': 'Öylece gider ve döndüğünde patronuna söylersin.',
     'c.leave.o3': 'Bir iş arkadaşından patrona bir gün önce söylemesini istersin.',
-    'c.leave.w': 'İşveren genellikle evet demek zorundadır. Sadece çok önemli bir sebeple hayır diyebilir, o zaman da 2 hafta içinde yazılı olarak. Erken sormak “evet” cevabı için en iyi şansı verir.', // nagelezen (2e lezing)
+    'c.leave.w': 'İşveren genellikle evet demek zorundadır. Sadece çok önemli bir sebeple hayır diyebilir, o zaman da 2 hafta içinde yazılı olarak. Erken sormak “evet” cevabı için en iyi şansı verir.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.illness': 'Hastayken hakların',
     'c.illness.b': 'Hasta olduğunda işveren 2 yıla kadar maaşının en az %70’ini ödemek zorundadır. Bir cao çoğu zaman daha fazlasını verir. Ücretsiz en fazla 2 bekleme günü (wachtdagen) olabilir, ama sadece sözleşmende veya cao’da yazıyorsa. Patronun hangi hastalığın olduğunu soramaz. Sağlığını ve işini işyeri hekimiyle (bedrijfsarts) konuşursun. İyileşince işverenini ara (betermelden). İlk yıl en az asgari ücret alırsın. Süreli bir sözleşme, hasta olsan da bitiş tarihinde biter. Bir ajans üzerinden mi çalışıyorsun? Sözleşmende ajans maddesi (uitzendbeding) varsa, hastalanınca sözleşmen bitebilir. O zaman UWV’ye Ziektewet’i sor veya sendikaya sor. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
-    'c.illness.x': 'Hastasın ve kendi ülkene gitmek mi istiyorsun? Önce işverenine veya ajansa sor. İzinsiz gidersen maaşın durabilir. Oradaki adresini ver ve telefonu aç.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
+    'c.illness.x': 'Hastasın ve kendi ülkene gitmek mi istiyorsun? Önce işverenine veya ajansa sor. İzinsiz gidersen maaşın kesilebilir. Oradaki adresini ver ve telefonu aç.', // nieuw, nalezen (uit een ander land, 10 nov 2026) // nagelezen AI 22 nov
     'c.illness.p': 'İyileştim. Yarın işe geliyorum.',
-    'c.illness.s': 'Bir haftadır hastasın. İşverenin seni işyeri hekimine gönderiyor. Ne yaparsın?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.illness.o1': 'Gider, sağlığın ve işin hakkında konuşursun.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.illness.o2': 'Gitmezsin: kendi doktorun var.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.illness.o3': 'Hâlâ hastayken işe dönersin.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.illness.s': 'Bir haftadır hastasın. İşverenin seni işyeri hekimine gönderiyor. Ne yaparsın?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.illness.o1': 'Gider, sağlığın ve işin hakkında konuşursun.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.illness.o2': 'Gitmezsin: kendi doktorun var.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.illness.o3': 'Hâlâ hastayken işe dönersin.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.illness.w': 'İşyeri hekimi sağlıklı bir şekilde işe dönmene yardım eder. Hekim patronuna tıbbi bilgilerini söylemez, sadece hangi işleri yapabileceğini söyler.',
     'c.warning': 'Sömürü işaretleri',
     'c.warning.b': 'Bu işaretlere dikkat et. İşveren pasaportunu veya kimliğini elinde tutuyor. Buna izin yok: kimliğini kendin saklarsın. İşveren sadece kopyasını alabilir. Anlaşılandan çok daha az ücret alıyorsun veya maaş bordron yok. İşverene veya ajansa büyük bir borç ödemek zorundasın. Başka seçeneğin olmadan aşırı uzun saatler çalışmak zorundasın. Biri seni tehdit ediyor veya konutunu sana baskı yapmak için kullanıyor. Bu normal değildir ve yasaktır. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.',
     'c.warning.p': 'Pasaportumu geri istiyorum.',
     'c.warning.s': 'İlk gününde ajans diyor ki: “Güvenlik için pasaportunu biz saklıyoruz.” Ne yaparsın?',
-    'c.warning.o1': 'Pasaportu kendin saklarsın. Kopyasını alabilirler.', // nagelezen (2e lezing)
+    'c.warning.o1': 'Pasaportu kendin saklarsın. Kopyasını alabilirler.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.warning.o2': 'Ajans kuralları bildiği için verirsin.',
     'c.warning.o3': 'Verirsin, ama önce fotoğrafını çekersin.',
     'c.warning.w': 'Pasaportun senindir. Onu elde tutmak, çalışanları kontrol etmenin bir yoludur. İşverenin dosyalar için sadece bir kopyaya ihtiyacı vardır.',
     'c.gethelp': 'Nereden yardım alırsın',
     'c.gethelp.b': 'Kendinde veya başkasında sömürü işaretleri mi görüyorsun? Yardım al. Bunu Nederlandse Arbeidsinspectie’ye, istersen adını vermeden, veya polise bildirebilirsin. Meld Misdaad Anoniem: 0800-7000. Ücretsiz hukuki tavsiye: Juridisch Loket. Tehlikede misin? 112’yi ara. Hollanda’da çalışan herkes yardım alabilir, göçmenler de. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.',
     'c.gethelp.p': 'Yardıma ihtiyacım var. Sömürülüyorum.',
-    'c.gethelp.s': 'Bir arkadaşın neredeyse hiç ücret almadan günde 14 saat çalışıyor. Patronundan korkuyor. Ne yapabilirsin?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.gethelp.o1': 'Arbeidsinspectie veya Juridisch Loket ile iletişime geçmesine yardım edersin.', // nieuw, nalezen
+    'c.gethelp.s': 'Bir arkadaşın neredeyse hiç ücret almadan günde 14 saat çalışıyor. Patronundan korkuyor. Ne yapabilirsin?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.gethelp.o1': 'Arbeidsinspectie veya Juridisch Loket ile iletişime geçmesine yardım edersin.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.gethelp.o2': 'Ona bunun yeni çalışanlar için normal olduğunu söylersin.',
-    'c.gethelp.o3': 'Sözleşmesi bitene kadar beklemesini, sonra ayrılmasını söylersin.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.gethelp.o3': 'Sözleşmesi bitene kadar beklemesini, sonra ayrılmasını söylersin.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.gethelp.w': 'Hollanda’da çalışan herkes için yardım vardır. Bildirim isim vermeden de yapılabilir.',
     'c.callin': 'Amirini aramak',
     'c.callin.b': 'Amirini aradığında adını, sebebi ve ne zaman geri gelmeyi düşündüğünü söyle. Hasta mısın? Sadece hasta olduğunu söylemen yeterli, hangi hastalığın olduğunu değil. Telefonla ara: şirketin mesajın yeterli olduğunu söylemiyorsa sadece mesaj atma. Cevap yok mu? Sesli mesaj bırak ve tekrar dene. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.callin.p': 'Merhaba, ben Ali. Bugün gelemiyorum.',
     'c.callin.s': 'Çocuğun hasta ve işe gelemiyorsun. Şirketin aramanı istiyor. Ne yaparsın?',
-    'c.callin.o1': 'Vardiyandan önce amirini ararsın.', // nagelezen (2e lezing)
+    'c.callin.o1': 'Vardiyandan önce amirini ararsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.callin.o2': 'Vardiyanın başında kısa bir mesaj atarsın.',
     'c.callin.o3': 'Komşundan senin yerine aramasını istersin.',
-    'c.callin.w': 'Telefonla aramak açık ve hızlıdır, amirin de soru sorabilir. Ne zaman döneceğini düşündüğünü söylemek plan yapmasına yardım eder. Adını ve sebebi de söyle.', // nagelezen (2e lezing)
+    'c.callin.w': 'Telefonla aramak açık ve hızlıdır, amirin de soru sorabilir. Ne zaman döneceğini düşündüğünü söylemek plan yapmasına yardım eder. Adını ve sebebi de söyle.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.texting': 'İşe mesaj: kısa ve kibar',
     'c.texting.b': 'İşe attığın mesajları kısa ve kibar tut. Kim olduğunu ve ne olduğunu söyle, sonunda selam ver. Örneğin: “Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”. Uygulamadaki çalışma planına (rooster) sık sık bak. Vardiya isteklerine zamanında cevap ver. Vardiya değiştirmek için önce amirinin ya da planlamacının onay vermesi gerekir, bu yüzden sor: “Mag ik mijn dienst ruilen?” Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.texting.p': 'Merhaba Mark, 10 dakika geç kalacağım. Pardon! Selamlar, Ali',
     'c.texting.s': '10 dakika geç kalacaksın. Amirine hangi mesaj en iyisi?',
     'c.texting.o1': '“Hoi Mark, ik ben 10 minuten te laat. Sorry! Groet, Ali”',
-    'c.texting.o2': '“Sorry, ik ben er zo!” (adın olmadan, saat olmadan).', // nagelezen (2e lezing)
+    'c.texting.o2': '“Sorry, ik ben er zo!” (adın olmadan, saat olmadan).', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.texting.o3': 'Trafik hakkında üç dakikalık bir sesli mesaj.',
     'c.texting.w': 'İyi bir mesaj birkaç kelimeyle kim olduğunu ve ne olduğunu söyler. Böylece amirin durumu hemen anlar.',
     'c.certs': 'Sertifikalar sana yardım eder',
     'c.certs.b': 'İnşaatta, sanayide ve geçici işlerde çoğu zaman VCA sertifikası (güvenlik) gerekir. Forklift kullanmak için genelde forklift sertifikası (heftruckcertificaat) gerekir. İşverenine kursun ve sınavın parasını ödeyip ödemediğini sor.',
     'c.certs.p': 'Burada VCA kursu yapabilir miyim?',
     'c.certs.s': 'Bir iş için VCA sertifikası isteniyor. Henüz sende yok. Ne yaparsın?',
-    'c.certs.o1': 'İşverenden veya ajanstan sertifikayı almana yardım etmesini istersin.', // nagelezen (2e lezing)
+    'c.certs.o1': 'İşverenden veya ajanstan sertifikayı almana yardım etmesini istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.certs.o2': 'İşi asla alamayacağını düşündüğün için başvurmazsın.',
     'c.certs.o3': 'Sende olduğunu söyler ve kimsenin kontrol etmemesini umarsın.',
     'c.certs.w': 'Birçok işveren ve ajans VCA için yardım eder. Sormak öğrenmek istediğini gösterir.',
@@ -778,7 +778,7 @@ const t: CultureTranslation = {
     'c.diploma.b': 'Başka bir ülkeden diploman mı var? Onu IDW’de (Internationale Diplomawaardering) değerlendirtebilirsin. Böylece işverenler buradaki değerini görebilir. İşin için bir eğitim zorunlu mu? O zaman parasını işveren ödemek zorundadır ve çalışma süresinden sayılır. Kurslar hakkında amirine sor. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.diploma.p': 'Benim için kurslar var mı?',
     'c.diploma.s': 'İşverenin, cumartesi ücretsiz olarak zorunlu bir güvenlik eğitimi yapman gerektiğini söylüyor. Hangisi doğru?',
-    'c.diploma.o1': 'Parasını işveren öder ve çalışma süresi sayılır.', // nagelezen (2e lezing)
+    'c.diploma.o1': 'Parasını işveren öder ve çalışma süresi sayılır.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.diploma.o2': 'Eğitim her zaman kendi boş zamanındadır.',
     'c.diploma.o3': 'Eğitimin parasını kendin ödemelisin.',
     'c.diploma.w': 'Bir eğitim işin için zorunluysa parasını işveren öder ve çalışma süresinden sayılır. Net değilse tavsiye al.',
@@ -794,15 +794,15 @@ const t: CultureTranslation = {
     'c.insurance.b': 'Hollanda’da yaşıyor veya çalışıyorsan genelde temel sağlık sigortası zorunludur. Her ay prim ödersin. Her yıl bir kendi payı (eigen risico) vardır: ilk masrafları kendin ödersin. Miktar değişir: sigorta şirketine sor. Aile hekimine (huisarts) gitmek kendi payına sayılmaz. Gelirin düşükse sağlık yardımı (zorgtoeslag) alabilirsin. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.insurance.p': 'Sağlık sigortasına ihtiyacım var. Bana yardım edebilir misiniz?',
     'c.insurance.s': 'İki hafta önce burada çalışmaya başladın ve henüz sağlık sigortan yok. Ne yaparsın?',
-    'c.insurance.o1': 'Hemen sağlık sigortası yaptırırsın.', // nagelezen (2e lezing)
-    'c.insurance.o2': 'Beklersin: kendi ülkendeki sigortan yeterli.', // nagelezen (2e lezing)
+    'c.insurance.o1': 'Hemen sağlık sigortası yaptırırsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.insurance.o2': 'Beklersin: kendi ülkendeki sigortan yeterli.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.insurance.o3': 'Bir arkadaşının sigorta kartını kullanırsın.',
-    'c.insurance.w': 'Sigortan yoksa doktor veya hastane çok pahalıya mal olabilir ve ceza alabilirsin. Bunu hemen halletmek seni korur. İşverenin veya ajansın sana yardım edebilir.', // nagelezen (2e lezing)
+    'c.insurance.w': 'Sigortan yoksa doktor veya hastane çok pahalıya mal olabilir ve ceza alabilirsin. Bunu hemen halletmek seni korur. İşverenin veya ajansın sana yardım edebilir.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.letters': 'Mektupları görmezden gelme',
     'c.letters.b': 'Belastingdienst, gemeente veya UWV’den gelen mektupları görmezden gelme. Okumak için güvendiğin birinden yardım iste. Geçen yılın vergi beyannamesi (aangifte) genelde 1 Mayıs’tan önce verilmelidir. Ek süre isteyebilirsin. Zorgtoeslag ve huurtoeslag gibi yardımlar (toeslagen) gelirine bağlıdır. Fazla alırsan geri ödemen gerekir, bu yüzden gelir bilgilerini güncel tut. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.letters.p': 'Bir mektup aldım. Bana yardım edebilir misin?',
     'c.letters.s': 'Belastingdienst’ten bir mektup alıyorsun. Anlamıyorsun. Ne yaparsın?',
-    'c.letters.o1': 'Güvendiğin birinden yardım istersin.', // nagelezen (2e lezing)
+    'c.letters.o1': 'Güvendiğin birinden okumana yardım etmesini istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.letters.o2': 'Bir çekmeceye koyar ve beklersin.',
     'c.letters.o3': 'Muhtemelen reklam olduğu için atarsın.',
     'c.letters.w': 'Resmî mektupların çoğu zaman bir son tarihi vardır. Zamanında cevap verirsen sorunlar genelde daha kolay çözülür.',
@@ -828,14 +828,14 @@ const t: CultureTranslation = {
     'c.transit.s': 'Her gün otobüsle işe gidiyorsun. Bir iş arkadaşın yol parası alıyor, sen almıyorsun. Ne yaparsın?',
     'c.transit.o1': 'Amirine şirketinde veya cao’nda kuralların ne olduğunu sorarsın.',
     'c.transit.o2': 'Muhtemelen senin için olmadığından hiçbir şey söylemezsin.',
-    'c.transit.o3': 'Amirine şunu söylersin: kanuna göre sana da verilmesi gerekir.', // nagelezen (2e lezing)
+    'c.transit.o3': 'Amirine şunu söylersin: kanuna göre sana da verilmesi gerekir.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.transit.w': 'Yol parası işverene veya cao’ya bağlıdır. Bunu sormak normaldir ve haklarını bilmene yardım eder.',
     'c.ww': 'İşsizlik maaşı (WW)',
     'c.ww.b': 'İşini mi kaybettin? WW için mümkün olan en kısa sürede, işsiz kaldığın ilk günden sonraki bir hafta içinde UWV’ye başvur. Genelde son 36 haftanın en az 26’sında çalışmış olman gerekir. İşinden kendin ayrılırsan genelde WW alamazsın. werk.nl sitesinde iş arayan olarak kaydol. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
-    'c.ww.x': 'Başka bir AB ülkesinde iş mi arıyorsun? WW’yi bazen yanında götürebilirsin. Gitmeden önce UWV’den U2 formunu iste. U2 olmadan WW’n durur.', // nieuw, nalezen (uit een ander land, 10 nov 2026)
+    'c.ww.x': 'Başka bir AB ülkesinde iş mi arıyorsun? WW’yi bazen yanında götürebilirsin. Gitmeden önce UWV’den U2 formunu iste. U2 olmadan WW’n kesilir.', // nieuw, nalezen (uit een ander land, 10 nov 2026) // nagelezen AI 22 nov
     'c.ww.p': 'İşsizlik maaşına başvurmak istiyorum. Ne yapmalıyım?',
     'c.ww.s': 'İşine kızgınsın ve bugün istifa etmek istiyorsun. Akıllıca olan ne?',
-    'c.ww.o1': 'Ayrılmadan önce tavsiye alırsın.', // nagelezen (2e lezing)
+    'c.ww.o1': 'Ayrılmadan önce tavsiye alırsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.ww.o2': 'Bugün istifa edersin: nasılsa WW alırsın.',
     'c.ww.o3': 'Hiçbir şey söylemeden işe gitmeyi bırakırsın.',
     'c.ww.w': 'İstifa etmek, işsizlik maaşını kaybetmene yol açabilir. Önce amirinle, sendikayla veya Juridisch Loket ile konuşmak daha iyi bir yol bulmana yardım edebilir.',
@@ -843,15 +843,15 @@ const t: CultureTranslation = {
     'c.newjob.b': 'Ayrılmadan önce bir referans (referentie) iste. Maaş bordrolarını ve sözleşmeni sakla. CV’ni güncelle. Geçici iş ajanslarında (uitzendbureaus) ve werk.nl sitesinde iş ara. İş bulmak için asla para ödeme. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.',
     'c.newjob.p': 'Adınızı referans olarak verebilir miyim?',
     'c.newjob.s': 'Biri sana iş teklif ediyor, ama önce “iş için” 300 euro ödemen gerekiyor. Ne yaparsın?',
-    'c.newjob.o1': 'Ödemezsin. Gerçek bir ajans ararsın.', // nagelezen (2e lezing)
+    'c.newjob.o1': 'Ödemezsin. Gerçek bir ajans ararsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.newjob.o2': 'İyi bir iş buna değer diye ödersin.',
     'c.newjob.o3': 'Yarısını şimdi, kalanını sonra ödersin.',
-    'c.newjob.w': 'Bir iş için para istemek bir uyarı işaretidir. Geçici iş ajansı sana iş bulduğu için senden para alamaz. werk.nl’de de iş arayabilirsin.', // nagelezen (2e lezing)
+    'c.newjob.w': 'Bir iş için para istemek bir uyarı işaretidir. Geçici iş ajansı sana iş bulduğu için senden para alamaz. werk.nl’de de iş arayabilirsin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.tools': 'Toolbox toplantısı',
     'c.tools.b': 'Birçok inşaat alanında düzenli olarak kısa bir güvenlik toplantısı yapılır: toolbox toplantısı. Riskler ve yeni kurallar hakkında bilgi alırsın. Toplantıya git, dinle ve anlamadığın bir şey olursa soru sor. Aletlerini kullanmadan önce kontrol et. Bir alet bozuk mu? Amirine söyle.',
     'c.tools.p': 'Bu matkap bozuk. Başka bir tane var mı?',
     'c.tools.s': 'Bir toolbox toplantısı var, ama Hollandacan henüz iyi değil. Ne yaparsın?',
-    'c.tools.o1': 'Gider, kaçırdığını sonra bir arkadaşa sorarsın.', // nagelezen (2e lezing)
+    'c.tools.o1': 'Gider, kaçırdığını sonra bir arkadaşa sorarsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.tools.o2': 'Nasılsa anlamayacağın için gitmezsin.',
     'c.tools.o3': 'Gitmeden katılım listesini imzalarsın.',
     'c.tools.w': 'Güvenlik bilgisi herkes içindir. Orada telefona izin varsa, bir çeviri uygulaması toplantıyı takip etmene yardım edebilir. Sonra bir iş arkadaşına sormak normaldir ve doğru anlayıp anlamadığını kontrol etmeni sağlar.',
@@ -859,7 +859,7 @@ const t: CultureTranslation = {
     'c.site.b': 'Bir işe başlamadan önce bir an dur ve kontrol et: burada ne ters gidebilir? Buna LMRA (işe başlamadan hemen önce yapılan risk analizi) denir. Her zaman baretini tak, yüksekte çalışırken düşme korumanı da. Asla asılı bir yükün altında durma. İş gerçekten tehlikeli mi? O zaman durabilirsin ve hemen amirine söylemelisin. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.site.p': 'Henüz başlamıyorum. Bu güvenli değil.',
     'c.site.s': 'Bir iskelede çalışman gerekiyor ama bir korkuluk eksik. Bir iş arkadaşın diyor ki: “Dikkatli ol, yeter.” Ne yaparsın?',
-    'c.site.o1': 'Başlamazsın ve amirine söylersin.', // nieuw, nalezen
+    'c.site.o1': 'Başlamazsın ve amirine söylersin.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.site.o2': 'Başlarsın ama çok dikkatli olursun.',
     'c.site.o3': 'Korkuluğu biraz iple kendin tamir edersin.',
     'c.site.w': 'Yüksekten düşmek çok ağır yaralanmalara yol açabilir. Tehlikeli işi durdurabilirsin ve bildirmek bütün ekibi korur.',
@@ -868,7 +868,7 @@ const t: CultureTranslation = {
     'c.line.p': 'Bir arıza var. Acil durdurma düğmesine bastım.',
     'c.line.s': 'Bir ürün makineye sıkıştı. Makine hâlâ çalışıyor. Ne yaparsın?',
     'c.line.o1': 'Acil durdurma düğmesine basar ve amirini çağırırsın.',
-    'c.line.o2': 'Bozulmadan önce hızlıca elinle çekip çıkarırsın.', // nieuw, nalezen
+    'c.line.o2': 'Bozulmadan önce hızlıca elinle çekip çıkarırsın.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.line.o3': 'Bırakır ve makinenin kendiliğinden düzelmesini umarsın.',
     'c.line.w': 'Çalışan makineler bir saniyede ağır kazalara yol açabilir. Makineyi durdurmana her zaman izin vardır ve bu her zaman daha iyidir.',
     'c.quality': 'Kalite: gördüğünü söyle',
@@ -883,7 +883,7 @@ const t: CultureTranslation = {
     'c.client.b': 'Bir danışanın odasına girmeden önce kapıyı çal. Kim olduğunu söyle, ne yapacağını açıkla ve izin iste. Danışanlara “u” de, senden “je” demeni istemedikleri sürece. Danışanların kendi yapabildikleri şeyleri kendilerinin yapmasına izin ver.',
     'c.client.p': 'Girebilir miyim? Yıkanmanıza yardım etmeye geldim.',
     'c.client.s': 'Bir danışanın yıkanmasına yardım etmen gerekiyor. Odasının kapısı kapalı. Ne yaparsın?',
-    'c.client.o1': 'Çalar, bekler, kim olduğunu ve neden geldiğini söylersin.', // nagelezen (2e lezing)
+    'c.client.o1': 'Çalar, bekler, kim olduğunu ve neden geldiğini söylersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.client.o2': 'Meşgul olduğun için hızlıca içeri girersin.',
     'c.client.o3': 'Onu rahatsız etmemek için yıkamayı atlarsın.',
     'c.client.w': 'Oda, danışanın evidir. Kapıyı çalmak ve açıklamak saygı gösterir ve bakımı daha sakin yapar.',
@@ -891,7 +891,7 @@ const t: CultureTranslation = {
     'c.privacy.b': 'Danışanlar hakkında gördüğün ve duyduğun şeyler iş yerinde kalır. İş dışında danışanlardan bahsetme ve asla onların fotoğraflarını paylaşma. Bakımdan önce ve sonra ellerini temizle. Bir danışanda ağrı veya düşme gibi bir değişiklik mi fark ediyorsun? Hemen hemşireye söyle. Eğitimin ve iznin yoksa asla ilaç verme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.privacy.p': 'Beyefendinin dünden daha fazla ağrısı var.',
     'c.privacy.s': 'Bir danışan senden haplarını istiyor. İlaç vermek için eğitimin yok. Ne yaparsın?',
-    'c.privacy.o1': 'Kibarca hemşireyi çağıracağını söylersin.', // nieuw, nalezen
+    'c.privacy.o1': 'Kibarca hemşireyi çağıracağını söylersin.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.privacy.o2': 'Neye ihtiyacı olduğunu bildiği için hapları verirsin.',
     'c.privacy.o3': 'Hayır der ve gidersin.',
     'c.privacy.w': 'Yanlış ilaç tehlikeli olabilir. Doğru kişiyi hemen çağırmak danışana yardım eder ve herkesi güvende tutar.',
@@ -915,7 +915,7 @@ const t: CultureTranslation = {
     'c.cleaning.b': 'Her temizlik ürününün bir etiketi vardır. Piktogramlar (kırmızı bir eşkenar dörtgen içindeki küçük resimler) tehlikeyi gösterir, örneğin cildin, gözlerin veya ciğerlerin için. Etiketi oku ya da ürünün ne için olduğunu ve nasıl kullanılacağını sor. İşverenin verdiği eldivenleri tak. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.cleaning.p': 'Bu ürün ne için?',
     'c.cleaning.s': 'Yeni bir temizlik ürünü alıyorsun. Etiketi iyi okuyamıyorsun. Ne yaparsın?',
-    'c.cleaning.o1': 'Nasıl güvenli kullanılacağını sorarsın.', // nagelezen (2e lezing)
+    'c.cleaning.o1': 'Nasıl güvenli kullanılacağını sorarsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.cleaning.o2': 'Bol bol kullanırsın, o zaman daha iyi işe yarar.',
     'c.cleaning.o3': 'Eldivensiz denersin.',
     'c.cleaning.w': 'Yanlış ürün veya fazlası cildine, gözlerine veya ciğerlerine zarar verebilir. Sormak bir dakika sürer.',
@@ -923,7 +923,7 @@ const t: CultureTranslation = {
     'c.cleansafe.b': 'Temizlik ürünlerini asla karıştırma, örneğin çamaşır suyu ve tuvalet temizleyicisini. Bu tehlikeli gazlar oluşturabilir. Ortamı havalandır. Yer mi siliyorsun? Kimse kaymasın diye ıslak zemin levhasını (Pas op, glad!) koy. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.cleansafe.p': 'Levhayı koyuyorum. Zemin ıslak.',
     'c.cleansafe.s': 'Tuvalet çok kirli. Bir iş arkadaşın diyor ki: “İki ürünü karıştır, daha iyi işe yarar.” Ne yaparsın?',
-    'c.cleansafe.o1': 'Karıştırmazsın. Tek bir ürün kullanırsın.', // nagelezen (2e lezing)
+    'c.cleansafe.o1': 'Karıştırmazsın. Tek bir ürün kullanırsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.cleansafe.o2': 'Karıştırırsın, ama bir pencere açarsın.',
     'c.cleansafe.o3': 'Hızlıca karıştırır ve odadan çıkarsın.',
     'c.cleansafe.w': 'Ürünleri karıştırmak, pencere açık olsa bile zehirli gaz oluşturabilir. İyi kullanılan tek bir ürün yeterlidir.',
@@ -967,16 +967,16 @@ const t: CultureTranslation = {
     'c.translate': 'Çeviri uygulamaları: akıllı, ama kontrol et',
     'c.translate.b': 'Google Translate gibi bir çeviri uygulaması çok yardımcı olur. Yazabilir, konuşabilir veya bir iş arkadaşınla konuşmak için sohbet modunu kullanabilirsin. Kamerayla tabelaları, notları ve talimatları çevirebilirsin. Birçok telefonda WhatsApp da mesajları çevirebilir. Telefonunu sadece güvenli ve izin verilen yerlerde kullan. Makinelerin ve forkliftlerin yanında asla kullanma. Her zaman önce sor. Uygulamalar hata yapar. Sözleşmen, bir mektup veya bir güvenlik talimatı gibi önemli şeyleri bir kişiye de açıklat. İzin almadan gizli iş belgelerinin fotoğrafını çekme.',
     'c.translate.p': 'Çeviri için telefonumu kullanabilir miyim?',
-    'c.translate.s': 'Amirin sana Hollandaca güvenlik talimatları veriyor. Sadece birkaç kelime anlıyorsun. Ne yaparsın?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.translate.o1': 'Bir açıklama ister ve uygulama kullanıp kullanamayacağını sorarsın.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.translate.o2': '“ja, ja” der ve işe başlarsın.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.translate.o3': 'Fotoğrafını çeker ve arkadaşlarına gönderirsin, onlar çevirsin diye.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.translate.s': 'Amirin sana Hollandaca güvenlik talimatları veriyor. Sadece birkaç kelime anlıyorsun. Ne yaparsın?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.translate.o1': 'Bir açıklama ister ve uygulama kullanıp kullanamayacağını sorarsın.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.translate.o2': '“ja, ja” der ve işe başlarsın.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.translate.o3': 'Fotoğrafını çeker ve arkadaşlarına gönderirsin, onlar çevirsin diye.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.translate.w': 'Çeviri uygulaması hızlı anlamana yardım eder, ama hata yapabilir. Güvenlik için en iyi kontrol, bir kişinin açıklamasıdır. İş belgeleri gizli olabilir, bu yüzden onları izinsiz paylaşma.',
     'c.understood': 'Anladığını kontrol et',
     'c.understood.b': 'Telefonun konuşmayı yazıya çevirebilir (canlı altyazı): Android’de Live Transcribe, iPhone’da Live Captions. Telefonunun hangi dilleri desteklediğini kontrol et. Birinden bunu yazmasını, göstermesini veya yavaş konuşmasını da isteyebilirsin. Resimli veya senin dilinde bir talimat olup olmadığını sor. Sonra anladığını tekrar söyle: “Dus ik moet eerst …?” Burada bu normaldir ve hataları önler.',
     'c.understood.p': 'Yani önce kutuları saymam mı gerekiyor?',
     'c.understood.s': 'Bir iş arkadaşın yeni bir makinenin nasıl çalıştığını anlatıyor. Hızlı konuşuyor ve bazı kelimeleri kaçırıyorsun. Ne yaparsın?',
-    'c.understood.o1': 'Ondan göstermesini veya yazmasını istersin, sonra tekrar söylersin.', // nagelezen (2e lezing)
+    'c.understood.o1': 'Ondan göstermesini veya yazmasını istersin, sonra tekrar söylersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.understood.o2': 'Başını sallar ve “ja, ja” dersin, zaman kaybetmesin diye.',
     'c.understood.o3': 'Makineyi sonra tek başına dener ve ne olacağını görürsün.',
     'c.understood.w': 'Göstermek, yazmak ve tekrar söylemek hızlı kontrollerdir. İş arkadaşın, bir şey ters gitmeden seni düzeltebilir. Burada bu yavaşlık olarak değil, dikkat olarak görülür.',
@@ -984,9 +984,9 @@ const t: CultureTranslation = {
     'c.keeplearning.b': 'Her gün birkaç dakika, haftada bir uzun saatten daha çok yardımcı olur. İşteki yeni kelimeleri telefonundaki bir not uygulamasına kaydet. Kolay Hollandaca dinle, örneğin NOS Jeugdjournaal (çocuklar için haberler) veya yavaş Hollandaca bir podcast. Birçok halk kütüphanesinde bir Taalhuis var: Hollandaca için ücretsiz yardım, çoğu zaman bir taalcafé (konuşma pratiği yapılan bir yer) veya bir dil arkadaşı (taalmaatje) ile. İş arkadaşların sana yardım etmek için çoğu zaman İngilizceye geçer. Onlardan kibarca seninle Hollandaca konuşmalarını iste: çoğu insan yardım etmeyi sever.',
     'c.keeplearning.p': 'Benimle sadece Hollandaca konuş, böylece daha hızlı öğrenirim.',
     'c.keeplearning.s': 'İş arkadaşların seninle konuşurken hep İngilizceye geçiyor. Hollandaca öğrenmek istiyorsun. Ne yaparsın?',
-    'c.keeplearning.o1': 'Onlara teşekkür eder ve seninle Hollandaca konuşmalarını istersin.', // nagelezen (2e lezing)
+    'c.keeplearning.o1': 'Onlara teşekkür eder ve seninle Hollandaca konuşmalarını istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.keeplearning.o2': 'Hiçbir şey söylemezsin. Hollandaca kendiliğinden gelir.',
-    'c.keeplearning.o3': 'Daha kibar olduğu için sen de İngilizce cevap verirsin.', // nagelezen (2e lezing)
+    'c.keeplearning.o3': 'Daha kibar olduğu için sen de İngilizce cevap verirsin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.keeplearning.w': 'İş arkadaşları kibar olmak için çoğu zaman İngilizceye geçer. Hollandaca istediğinde çoğu yardım etmekten mutlu olur. İş yerinde her gün biraz konuşmak, öğrenmenin en hızlı yollarından biridir.',
     'l.gossip': "Dedikodu ve sosyal medya",
     'w.roddelen': "dedikodu yapmak",
@@ -1016,18 +1016,18 @@ const t: CultureTranslation = {
     'c.gossip.b': "Bir iş arkadaşının arkasından konuşmak (roddelen) ekipteki güvene zarar verir. Biriyle bir sorunun mu var? O kişiyle veya amirinle konuş. İnternette de işteki kurallar geçerlidir. İzin almadan iş arkadaşların, müşteriler veya şirket hakkında hiçbir şey paylaşma. Buna fotoğraflar, videolar ve mesajlar da dahildir. Patronun ne paylaştığını görebilir ve bu yıllarca internette kalabilir. Birçok ekibin iş için bir grup sohbeti (groepsapp) vardır: orada sadece işten konuş ve ekran görüntülerini başkalarıyla paylaşma. Bir iş arkadaşının özel şeylerini paylaşmak veya internette biriyle alay etmek de zorbalıktır.",
     'c.gossip.p': "Bunun internette olmasını istemiyorum.",
     'c.gossip.s': "Islak zeminde kaydığında bir iş arkadaşın seni videoya çekiyor. Videoyu TikTok’a koymak istiyor. Ne yaparsın?",
-    'c.gossip.o1': '“Nee, dat wil ik niet” der ve videoyu silmesini istersin.', // nagelezen (2e lezing)
+    'c.gossip.o1': '“Nee, dat wil ik niet” der ve videoyu silmesini istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.gossip.o2': "Zorluk çıkarmamak için güler ve paylaşmasına izin verirsin.",
-    'c.gossip.o3': 'Videoyu adın olmadan paylaşmasını istersin.', // nagelezen (2e lezing)
-    'c.gossip.w': 'Genelde kimse senin iznin olmadan videonu internete koyamaz. Hayır demek normaldir ve iş arkadaşları internette birbirleriyle alay ettiğinde işverenin harekete geçmek zorundadır. Yine de paylaşırsa amirine söyle.', // nieuw, nalezen
+    'c.gossip.o3': 'Videoyu adın olmadan paylaşmasını istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.gossip.w': 'Genelde kimse senin iznin olmadan videonu internete koyamaz. Hayır demek normaldir ve iş arkadaşları internette birbirleriyle alay ettiğinde işverenin harekete geçmek zorundadır. Yine de paylaşırsa amirine söyle.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.boundaries': "Sınırı aşmak",
     'c.boundaries.b': "Grensoverschrijdend gedrag, birinin sınırını aşan davranıştır. Örneğin: istenmeyen dokunma, cinsel sözler veya şakalar, dik dik bakmak, istenmeyen resimler, tehdit veya bağırmak. Diğer kişinin bunu “şaka olarak” söylemiş olması önemli değildir: önemli olan senin nasıl hissettiğindir. Yapabiliyorsan, durmasını istediğini açıkça söyle. Ne olduğunu, ne zaman olduğunu ve kimin gördüğünü yaz. Amirine, güven danışmanına (vertrouwenspersoon, varsa) veya HR’a söyle. İşverenin seni korumak zorundadır ve bildirdiğin için cezalandırılamazsın. Bunun bir iş arkadaşının başına geldiğini mi gördün? İyi olup olmadığını sor ve tanık olmayı teklif et.",
     'c.boundaries.p': "Durmanı istiyorum.",
     'c.boundaries.s': "Ekip liderin sık sık elini sırtına koyuyor ve “güzel” göründüğünü söylüyor. Bu seni rahatsız ediyor. Vardiyalarına o karar veriyor. Ne yaparsın?",
-    'c.boundaries.o1': 'Olanları yazar ve vertrouwenspersoon ile konuşursun.', // nagelezen (2e lezing)
+    'c.boundaries.o1': 'Olanları yazar ve vertrouwenspersoon ile konuşursun.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.boundaries.o2': "Vardiyalarına o karar verdiği için hiçbir şey söylemezsin.",
     'c.boundaries.o3': "Kimseye nedenini söylemeden işten ayrılırsın.",
-    'c.boundaries.w': 'Bu istenmeyen bir davranıştır ve senin suçun değildir. Güven danışmanı seni gizlilik içinde dinler ve sonraki adımı seçmene yardım eder. Bildirdiğinde korunursun. HR ile de konuşabilirsin.', // nagelezen (2e lezing)
+    'c.boundaries.w': 'Bu istenmeyen bir davranıştır ve senin suçun değildir. Güven danışmanı seni gizlilik içinde dinler ve sonraki adımı seçmene yardım eder. Bildirdiğinde korunursun. HR ile de konuşabilirsin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'u.shop': 'Mağazada',
     'l.shelves': 'Raflar ve stok',
     'w.schap': 'raf (mağazada)',
@@ -1093,27 +1093,27 @@ const t: CultureTranslation = {
     'c.shelves': 'Eskiler öne',
     'c.shelves.b': 'Rafları doldururken ürünlerin üzerindeki tarihe bak. Tarihi daha yakın olan ürünleri öne, yenileri arkaya koy. Müşteriler önden alır, böylece eski ürünler önce satılır. Bir ürünün tarihi geçmiş mi, ya da hasarlı mı? Onu raftan al ve ne yapacağını sor. Koridorları kutulardan ve arabalardan boş tut. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.shelves.p': 'Tarihi geçmiş ürünlerle ne yapayım?',
-    'c.shelves.s': 'Rafa yeni süt koyuyorsun. Önde tarihi daha yakın olan süt var. Ne yaparsın?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.shelves.o1': 'Yeni süt arkaya, eski süt öne.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.shelves.o2': 'Yeni süt öne, çünkü daha taze.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.shelves.o3': 'Eski sütü atarsın.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.shelves.s': 'Rafa yeni süt koyuyorsun. Önde tarihi daha yakın olan süt var. Ne yaparsın?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.shelves.o1': 'Yeni süt arkaya, eski süt öne.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.shelves.o2': 'Yeni süt öne, çünkü daha taze.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.shelves.o3': 'Eski sütü atarsın.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.shelves.w': 'Müşteriler önden alır. Eski ürünler önce satılınca daha az yiyecek atılır.',
     'c.checkout': 'Alkol ve tütün için kimlik',
     'c.checkout.b': '18 yaşından küçük birine alkol veya tütün satamazsın: kanun böyle. Müşterinin kaç yaşında olduğundan emin değil misin? Kimliğini iste. Birçok mağaza 25 yaşından genç görünen herkesten kimlik ister. Kimlik yok mu, ya da 18 yaşından küçük mü? O zaman satmazsın ve kibar kalırsın. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.checkout.p': 'Kimlik olmadan bunu satamam.',
     'c.checkout.s': 'Genç bir adam bira almak istiyor. Yaklaşık 17 yaşında görünüyor. 19 yaşında olduğunu söylüyor ama yanında kimliği yok. Ne yaparsın?',
-    'c.checkout.o1': 'Kimlik olmadan satamayacağını söylersin.', // nagelezen (2e lezing)
+    'c.checkout.o1': 'Kimlik olmadan satamayacağını söylersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.checkout.o2': '19 yaşında olduğunu söylediği için satarsın.',
     'c.checkout.o3': 'Satarsın, ama sadece bir kutu.',
     'c.checkout.w': 'Kimlik olmadan yaşını bilemezsin. 18 yaşından küçük birine alkol satmak kanuna aykırıdır ve mağaza para cezası alabilir.',
-    'c.counting': 'Vijfentwintig: önce 5, sonra 20', // nieuw, nalezen
-    'c.counting.b': 'Hollandacada 0’dan 12’ye kadar her sayının kendi kelimesi var: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. 13’ten 19’a kadar olan sayılar -tien ile biter: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. Onluklar -tig ile biter: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. 21’den 99’a kadar önce son rakam söylenir: 25, vijfentwintig yani “beş ve yirmi” olur. Yani 47 zevenenveertig, 74 de vierenzeventig. Dertien ve dertig neredeyse aynı duyulur: sonuna dikkat et. Emin değil misin? Rakamları tek tek tekrar et.', // nieuw, nalezen
-    'c.counting.p': 'Dört, yedi? Yani kırk yedi?', // nieuw, nalezen
-    'c.counting.s': 'Amirin diyor ki: “Ga naar gang zevenenveertig.” Hangi koridor?', // nieuw, nalezen
-    'c.counting.o1': '47 numaralı koridor.', // nieuw, nalezen
-    'c.counting.o2': '74 numaralı koridor.', // nieuw, nalezen
-    'c.counting.o3': '40 numaralı koridor.', // nieuw, nalezen
-    'c.counting.w': '“Zevenenveertig”, “yedi ve kırk” demek: önce 7, sonra 40. Yani 47 numaralı koridor. Birçok yeni gelen 74 duyar ve yanlış koridora gider.', // nieuw, nalezen
+    'c.counting': 'Vijfentwintig: önce 5, sonra 20', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.b': 'Hollandacada 0’dan 12’ye kadar her sayının kendi kelimesi var: nul, een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien, elf, twaalf. 13’ten 19’a kadar olan sayılar -tien ile biter: dertien, veertien, vijftien, zestien, zeventien, achttien, negentien. Onluklar -tig ile biter: twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig. 21’den 99’a kadar önce son rakam söylenir: 25, vijfentwintig yani “beş ve yirmi” olur. Yani 47 zevenenveertig, 74 de vierenzeventig. Dertien ve dertig neredeyse aynı duyulur: sonuna dikkat et. Emin değil misin? Rakamları tek tek tekrar et.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.p': 'Dört, yedi? Yani kırk yedi?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.s': 'Amirin diyor ki: “Ga naar gang zevenenveertig.” Hangi koridor?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.o1': '47 numaralı koridor.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.o2': '74 numaralı koridor.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.o3': '40 numaralı koridor.', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.counting.w': '“Zevenenveertig”, “yedi ve kırk” demek: önce 7, sonra 40. Yani 47 numaralı koridor. Birçok yeni gelen 74 duyar ve yanlış koridora gider.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.hours': '“Half acht” 7.30 demek',
     'c.hours.b': 'Hollandacada “half” bir sonraki saate göre söylenir: half acht 7.30 demektir, 8.30 değil. Kwart over acht 8.15, kwart voor acht ise 7.45 demektir. Saatlerini kendin kontrol et: bitiş saati eksi başlangıç saati, eksi mola. Mola çoğu zaman ücretli değildir. Saatlerini her gün not et.',
     'c.hours.p': '“Half acht” mı? Yani sekizden yarım saat önce mi?',
@@ -1183,7 +1183,7 @@ const t: CultureTranslation = {
     'c.aihelp.b': 'ChatGPT gibi yapay zekâ uygulamaları ve sohbet robotları çeviri yapabilir, bir mektubu açıklayabilir ya da mesaj yazmana yardım edebilir. Bu faydalı. Ama yapay zekâ bazen hata yapar ve yine de çok emin konuşur. Konu sözleşmen, maaşın, ilaçlar ya da iş güvenliği mi? O zaman cevabı mutlaka bir insanla kontrol et. Örneğin amirinle, insan kaynaklarıyla (HR) ya da Juridisch Loket’le.',
     'c.aihelp.p': 'Bu doğru mu? Benimle birlikte bir bakabilir misiniz?',
     'c.aihelp.s': 'Bir sohbet robotuna sözleşmeni soruyorsun. Tatil parası (vakantiegeld) almadığını söylüyor. Ne yaparsın?',
-    'c.aihelp.o1': 'HR’dan veya Juridisch Loket’ten kontrol etmelerini istersin.', // nagelezen (2e lezing)
+    'c.aihelp.o1': 'HR’dan veya Juridisch Loket’ten kontrol etmelerini istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aihelp.o2': 'İnanırsın: sohbet robotu çok emin konuşuyor.',
     'c.aihelp.o3': 'Hiçbir şey söylemez, unutursun.',
     'c.aihelp.w': 'Sohbet robotu kurallar ve sözleşmeler konusunda yanılabilir. Hollanda’da neredeyse her çalışan tatil parası alır. Kuralları bilen bir insan bunu kontrol edebilir.',
@@ -1191,7 +1191,7 @@ const t: CultureTranslation = {
     'c.aiprivate.b': 'Bir sohbet robotuna yazdıkların, onu yapan şirket tarafından kaydedilip kullanılabilir. Bu yüzden BSN’ini, şifreni ya da banka bilgilerini asla yazma. Müşterilerin, hastaların ya da iş arkadaşlarının isimlerini veya fotoğraflarını, iş belgelerini de girme. Birçok işverenin yapay zekâ hakkında kuralları var. Önce işin için kullanıp kullanamayacağını sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.',
     'c.aiprivate.p': 'Bunun için yapay zekâ kullanabilir miyim?',
     'c.aiprivate.s': 'Bir sohbet robotunun bir müşteri hakkında rapor yazmasını istiyorsun. Raporda müşterinin adı ve adresi var. Ne yaparsın?',
-    'c.aiprivate.o1': 'Önce sorar, adı ve adresi çıkarırsın.', // nagelezen (2e lezing)
+    'c.aiprivate.o1': 'Önce sorar, adı ve adresi çıkarırsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aiprivate.o2': 'Her şeyi sohbet robotuna yazarsın: daha hızlı.',
     'c.aiprivate.o3': 'Raporu kontrol etsin diye bir arkadaşına gönderirsin.',
     'c.aiprivate.w': 'İsimler ve adresler kişisel verilerdir. Öylece başka bir şirkete gidemezler. İşverenin hangi uygulamalara izin verildiğini bilir.',
@@ -1199,7 +1199,7 @@ const t: CultureTranslation = {
     'c.aifake.b': 'Yapay zekâyla dolandırıcılar bir sesi taklit edebilir, sahte fotoğraf ve videolar yapabilir. Patronun, bankan ya da ailenden biri gibi gelen bir arama veya mesaj sahte olabilir. Acele, para ve yeni bir numara bir aradaysa dikkatli ol. Telefonu kapat ve bildiğin numarayı kendin geri ara. Gerçek bir banka, işveren ya da polis kodlarını asla istemez.',
     'c.aifake.p': 'Telefonu kapatıp kendim geri ararım.',
     'c.aifake.s': 'Telefonun çalıyor. Tıpkı patronunun sesi gibi bir ses “Bu faturayı hemen öde, acil.” diyor. Ne yaparsın?',
-    'c.aifake.o1': 'Telefonu kapatır, patronunu kendin ararsın.', // nagelezen (2e lezing)
+    'c.aifake.o1': 'Telefonu kapatır, patronunu kendin ararsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aifake.o2': 'Hemen ödersin: sonuçta patronun.',
     'c.aifake.o3': 'Patronun ödeyebilsin diye banka kodunu verirsin.',
     'c.aifake.w': 'Bir ses yapay zekâyla taklit edilebilir. Acele ve para bir aradaysa bu bir uyarı işaretidir. Bildiğin bir numarayı geri aramak hızlı ve güvenli bir kontroldür.',
@@ -1207,9 +1207,9 @@ const t: CultureTranslation = {
     'c.aiplan.b': 'Gittikçe daha fazla şirket kararları bir uygulamaya ya da bilgisayara bırakıyor. Örneğin çalışma planını o yapıyor ya da hızını el tarayıcısıyla ölçüyor. Hakkında hangi bilgilerin toplandığını sorabilirsin. Hakkında büyük bir karar mı var, örneğin daha az saat, bir uyarı ya da işten çıkarılma? Kimin karar verdiğini sor. Bu kararı tek başına bir bilgisayar mı verdi? O zaman bir insanın tekrar kontrol etmesini ve açıklamasını isteyebilirsin. Kendi saatlerini not et. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.',
     'c.aiplan.p': 'Bir insan buna bir bakabilir mi?',
     'c.aiplan.s': 'Planlama uygulaması gelecek ay sana çok daha az saat veriyor. Kimse nedenini söylemiyor. Ne yaparsın?',
-    'c.aiplan.o1': 'Bir insanın bunu açıklamasını istersin.', // nagelezen (2e lezing)
+    'c.aiplan.o1': 'Bir insanın bunu açıklamasını istersin.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aiplan.o2': 'Kabul edersin: uygulama hep haklıdır.',
-    'c.aiplan.o3': 'Uygulamadaki sohbet robotuna nedenini sorarsın.', // nagelezen (2e lezing)
+    'c.aiplan.o3': 'Uygulamadaki sohbet robotuna nedenini sorarsın.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.aiplan.w': 'Uygulamalar hata yapar ve senin hakkında her şeyi bilmez. Açıklama isteyebilirsin, bir insan da buna tekrar bakabilir.',
     // In de kas (u.kas, 30 okt 2026): nagelezen (2e lezing).
     'u.kas': "Serada", // nagelezen (2e lezing)
@@ -1237,22 +1237,22 @@ const t: CultureTranslation = {
     's.greensafe.3': "Toplama arabası nerede?", // nagelezen (2e lezing)
     'c.greensafe.q': "Üç numaralı serada çalışabilir miyim?", // nagelezen (2e lezing)
     'c.greensafe.a': "Hayır, henüz değil. Az önce ilaçlandı.", // nagelezen (2e lezing)
-    'c.harvest': "Tempo ve parça başı ücret", // nagelezen (2e lezing)
-    'c.harvest.b': "Serada çoğu zaman sabit bir tempoda (tempo) çalışırsın. Bazı işverenler kasa, sıra veya kilo başına öder: buna parça başı ücret (stukloon) denir. Parça başı ücrette bile çalıştığın her saat için en az asgari ücreti kazanmalısın. Tutarı rijksoverheid.nl sitesinden kontrol et. Her gün saatlerini ve kasalarını not et ve maaş bordronla karşılaştır. Hızlı çalışmak iyidir, ama güvenli çalışmak önce gelir. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.", // nagelezen (2e lezing)
-    'c.harvest.p': "Bugün kaç kasa yaptım?", // nagelezen (2e lezing)
-    'c.harvest.s': "Sana kasa başına ödeme yapılıyor. Bu hafta saat başına asgari ücretten daha az kazanıyorsun. Ne yaparsın?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.o1': "Kendi saat ve kasa listeni gösterirsin.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.o2': "Hiçbir şey söylemez, daha hızlı çalışırsın.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.o3': "Kabul edersin: parça başı ücrette bu normaldir.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.harvest.w': "Parça başı ücrette de çalıştığın her saat için en az asgari ücreti almalısın. Kendi saat ve kasa listen, ne yaptığını göstermene yardım eder. Düzeltilmezse yardım iste.", // nagelezen (2e lezing)
-    'c.greensafe': "Sıcak ve tarım ilaçları", // nagelezen (2e lezing)
-    'c.greensafe.b': "Serada hava çok sıcak olabilir, ilkbaharda da. Sık sık su iç, susamadan önce de, ve molalarını serin bir yerde ver. Başın mı dönüyor, miden mi bulanıyor ya da başın mı ağrıyor? Dur ve birine söyle. Bitkiler bazen kimyasallarla ilaçlanır (spuitmiddelen). Az önce ilaçlanmış bir seranın kapısında çoğu zaman bir uyarı levhası olur. Amirin tekrar güvenli olduğunu söyleyene kadar içeri girme. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nagelezen (2e lezing)
-    'c.greensafe.p': "Bu serada artık çalışabilir miyim?", // nagelezen (2e lezing)
-    'c.greensafe.s': "Bu sabah bir sera ilaçlandı. Kapıda bir uyarı levhası var. Bir iş arkadaşın diyor ki: “Hadi, sadece bir dakika.” Ne yaparsın?", // nagelezen (2e lezing)
-    'c.greensafe.o1': "Girmez, ne zaman güvenli olacağını sorarsın.", // nagelezen (2e lezing)
-    'c.greensafe.o2': "Hızlıca girer ve nefesini tutarsın.", // nagelezen (2e lezing)
-    'c.greensafe.o3': "Girersin, sonra ellerini iyice yıkarsın.", // nagelezen (2e lezing)
-    'c.greensafe.w': "Tarım ilaçları hiçbir koku almasan da cildine, gözlerine ve akciğerlerine zarar verebilir. İlaçlamadan sonra tekrar içeri girmeden önce bir bekleme süresi vardır. Bu sürenin ne zaman bittiğini amirin bilir.", // nagelezen (2e lezing)
+    'c.harvest': "Tempo ve parça başı ücret", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.harvest.b': "Serada çoğu zaman sabit bir tempoda (tempo) çalışırsın. Bazı işverenler kasa, sıra veya kilo başına öder: buna parça başı ücret (stukloon) denir. Parça başı ücrette bile çalıştığın her saat için en az asgari ücreti kazanmalısın. Tutarı rijksoverheid.nl sitesinden kontrol et. Her gün saatlerini ve kasalarını not et ve maaş bordronla karşılaştır. Hızlı çalışmak iyidir, ama güvenli çalışmak önce gelir. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.harvest.p': "Bugün kaç kasa yaptım?", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.harvest.s': "Sana kasa başına ödeme yapılıyor. Bu hafta saat başına asgari ücretten daha az kazanıyorsun. Ne yaparsın?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.o1': "Kendi saat ve kasa listeni gösterirsin.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.o2': "Hiçbir şey söylemez, daha hızlı çalışırsın.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.o3': "Kabul edersin: parça başı ücrette bu normaldir.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.harvest.w': "Parça başı ücrette de çalıştığın her saat için en az asgari ücreti almalısın. Kendi saat ve kasa listen, ne yaptığını göstermene yardım eder. Düzeltilmezse yardım iste.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe': "Sıcak ve tarım ilaçları", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.b': "Serada hava çok sıcak olabilir, ilkbaharda da. Sık sık su iç, susamadan önce de, ve molalarını serin bir yerde ver. Başın mı dönüyor, miden mi bulanıyor ya da başın mı ağrıyor? Dur ve birine söyle. Bitkiler bazen kimyasallarla ilaçlanır (spuitmiddelen). Az önce ilaçlanmış bir seranın kapısında çoğu zaman bir uyarı levhası olur. Amirin tekrar güvenli olduğunu söyleyene kadar içeri girme. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.p': "Bu serada artık çalışabilir miyim?", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.s': "Bu sabah bir sera ilaçlandı. Kapıda bir uyarı levhası var. Bir iş arkadaşın diyor ki: “Hadi, sadece bir dakika.” Ne yaparsın?", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.o1': "Girmez, ne zaman güvenli olacağını sorarsın.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.o2': "Hızlıca girer ve nefesini tutarsın.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.o3': "Girersin, sonra ellerini iyice yıkarsın.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.greensafe.w': "Tarım ilaçları hiçbir koku almasan da cildine, gözlerine ve akciğerlerine zarar verebilir. İlaçlamadan sonra tekrar içeri girmeden önce bir bekleme süresi vardır. Bu sürenin ne zaman bittiğini amirin bilir.", // nagelezen (2e lezing) // nagelezen AI 22 nov
     // nagelezen (2e lezing): Getallen en gegevens (u.data), l.permit, l.kids, l.body, l.jobends and their tips (30 October 2026).
     'u.data': "Sayılar ve bilgiler",
     'l.details': "Kişisel bilgilerin",
@@ -1279,102 +1279,102 @@ const t: CultureTranslation = {
     's.dates.3': "Geçen hafta kırk saat çalıştım.",
     'c.dates.q': "Bugün tarih ne?",
     'c.dates.a': "Bugün 3 Haziran Pazartesi.",
-    'l.permit': "Belgeler, uyum ve işin",
-    'w.papieren': "belgeler (evraklar)",
-    'w.werkvergunning': "çalışma izni",
-    'w.werknemer': "işçi, çalışan (bir işveren için çalışırsın)",
-    'w.zzper': "serbest çalışan (kendi hesabına çalışırsın)",
-    'w.inburgering': "uyum süreci (yeni gelenler için kurs ve sınavlar)",
-    'w.taalles': "dil dersi",
-    's.permit.1': "Belgelerimle burada çalışabilir miyim?",
-    's.permit.2': "Ben işçi miyim, serbest çalışan mı?",
-    's.permit.3': "Çağrı üzerine çalışıyorum.",
-    'c.permit.q': "Salı günü çalışabilir misin?",
-    'c.permit.a': "Hayır, o gün dil dersim var. Çarşamba olur.",
-    'l.kids': "Çocuklar ve iş",
-    'w.zwanger': "hamile",
-    'w.kinderopvang': "çocuk bakımı, kreş",
-    'w.ophalen': "almak (gidip birini almak)",
-    'w.ziekkind': "hasta bir çocuk",
-    'w.ouderschapsverlof': "ebeveyn izni",
-    'w.zorgverlof': "bakım izni (hasta bir aile üyesine bakmak için izin)",
-    's.kids.1': "Çocuğum hasta. Onu almaya gitmem gerekiyor.",
-    's.kids.2': "Acil durum izni alabilir miyim?",
-    's.kids.3': "İşverenim maaşımı ödemeye devam ediyor mu?",
-    'c.kids.q': "Neden şimdi gitmen gerekiyor?",
-    'c.kids.a': "Kreş aradı. Oğlumun ateşi var.",
-    'l.body': "Vücut ve ağrı",
-    'w.hoofd': "baş, kafa",
-    'w.rug': "sırt",
-    'w.arm': "kol",
-    'w.hand': "el",
-    'w.buik': "karın",
-    'w.oog': "göz",
-    's.body.1': "Elim ağrıyor.",
-    's.body.2': "Kendimi iyi hissetmiyorum.",
-    's.body.3': "Kolumun üstüne düştüm.",
-    'c.body.q': "Neren ağrıyor?",
-    'c.body.a': "Sırtım. Ağır bir koli kaldırdım.",
-    'l.jobends': "İşin bittiğinde",
-    'w.eindafrekening': "son hesap (iş bittiğinde aldığın son ödeme)",
-    'w.opzeggen': "feshetmek (bir sözleşmeyi), iptal etmek",
-    'w.uitschrijven': "kaydını sildirmek (adını bir listeden çıkarmak)",
-    'w.sleutel': "anahtar",
-    'w.verhuizen': "taşınmak (başka bir eve)",
-    'w.busje': "minibüs",
-    's.jobends.1': "Tatil param ve izin günlerimin parası bana ödenecek mi?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    's.jobends.2': "Juridisch Loket’ten tavsiye alıyorum.",
-    's.jobends.3': "Yeni sağlık sigortamı kendim ayarlıyorum.",
-    'c.jobends.q': "İşin cuma günü bitiyor. O zaman evden de çıkman gerekiyor.",
-    'c.jobends.a': "Kira sözleşmemin ihbar süresi ne kadar?",
-    'c.details': "Bilgilerini doğru ver",
-    'c.details.b': "Bir işe başlarken bilgilerini verirsin. Yani adını, adresini, telefon numaranı, doğum tarihini ve BSN’ni. Adını yavaşça, harf harf söyle. Sonra adını sözleşmende ve maaş bordronda kontrol et. Adında veya BSN’nde bir hata, maaşında veya vergide sorun çıkarabilir. Yeni adres ya da telefon numarası mı? İşverenine söyle.",
-    'c.details.p': "Harf harf söyleyeyim: A, L, I.",
-    'c.details.s': "Ajans telefonda soyadını yazıyor. Yanlış yazdıklarını duyuyorsun. Ne yaparsın?",
-    'c.details.o1': "Adını yavaşça harf harf söyler ve geri okumalarını istersin.", // nagelezen (2e lezing)
-    'c.details.o2': "Hiçbir şey söylemezsin: adındaki küçük bir hata önemli değil.",
-    'c.details.o3': "Telefonu kapatır ve hatayı sonra bulmalarını umarsın.",
-    'c.details.w': "Adın sözleşmende, maaş bordronda ve kimliğinde aynı olmalı. O zaman maaşın ve vergin doğru olur. Harf harf söylemek ve geri okutmak hızlı bir kontroldür.",
-    'c.dates': "Tarihler: önce gün gelir",
-    'c.dates.b': "Hollandacada gün aydan önce gelir: 3-6, 3 Haziran demektir, 6 Mart değil. “Tot en met”, son günün de sayıldığı anlamına gelir. Günler ve aylar küçük harfle yazılır: maandag, juni. Bir tarihten emin değil misin? Sor ve tekrar et.",
-    'c.dates.p': "3 Haziran’ı mı kastediyorsun?",
-    'c.dates.s': "Çalışma programında şöyle yazıyor: “Vrij: 3-6 tot en met 5-6”. Ne zaman izinlisin?",
-    'c.dates.o1': "3, 4 ve 5 Haziran’da.",
-    'c.dates.o2': "Sadece 3 ve 4 Haziran’da.",
-    'c.dates.o3': "6 Mart’tan 6 Mayıs’a kadar.",
-    'c.dates.w': "Önce gün, sonra ay gelir: 3-6, 3 Haziran demektir. “Tot en met”, 5 Haziran’ın da sayıldığı anlamına gelir, yani üç gün izinlisin.",
-    'c.permit': "İş ve uyum",
-    'c.permit.b': "Uyum sürecini (inburgering) yapman mı gerekiyor? İşverenine söyle ve belediyeye (gemeente) çalıştığını bildir. Dil derslerinin çalışma programına uyup uymayacağını erkenden sor. Burada çalışıp çalışamayacağından emin değil misin? Başlamadan önce kontrol et, örneğin IND’de, UWV’de veya VluchtelingenWerk’te. Bu iş için serbest çalışan (zzp’er) olarak kayıt olmanı mı istiyorlar? Önce tavsiye al. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.",
-    'c.permit.p': "Salı günleri dil dersim var. Çalışma programım bunu dikkate alabilir mi?",
-    'c.permit.s': "Dil dersin salı sabahı. Yeni programına göre o saatte çalışıyorsun. Ne yaparsın?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.o1': "Amirinden programı değiştirmesini istersin.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.o2': "Derse gitmezsin: iş önce gelir.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.o3': "Salı günleri evde kalır ve hiçbir şey söylemezsin.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.permit.w': "Uyum süreci de bir yükümlülüktür. Birçok işveren erkenden öğrenirse yardım eder. Belediye (gemeente) de planını işine göre ayarlamana yardım edebilir.",
-    'c.kids': "Çocuğun hasta",
-    'c.kids.b': "Çocuğun aniden mi hastalandı? Hemen işverenine söyle. İlk saatler veya günler için acil durum izni (calamiteitenverlof) alabilirsin ve işverenin maaşını ödemeye devam eder. Çocuğunun daha uzun süre bakıma mı ihtiyacı var? O zaman bakım izni (zorgverlof) isteyebilirsin. Hamile misin? İşverenin seni bu yüzden işten çıkaramaz. Doğum izni ve ebeveyn izni (ouderschapsverlof) hakkında zamanında bilgi al. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.",
-    'c.kids.p': "Çocuğum hasta. Bugün erken çıkabilir miyim?",
-    'c.kids.s': "Kreş (kinderopvang) seni işte arıyor. Çocuğunun ateşi var ve eve gitmesi gerekiyor. Ne yaparsın?",
-    'c.kids.o1': "Amirine söyler, acil durum izni istersin.", // nagelezen (2e lezing)
-    'c.kids.o2': "Tek kelime etmeden çıkar, yarın açıklarsın.",
-    'c.kids.o3': "İşte kalır, çocuğunu vardiyan bitene kadar bekletirsin.",
-    'c.kids.w': "Hasta bir çocuk evde acil bir durumdur. Önce amirine söylersen işi planlayabilir. Acil durum izni böyle anlar içindir.",
-    'c.body': "Ne olduğunu ve neresinin ağrıdığını söyle",
-    'c.body.b': "Doktorda ne olduğunu ve neresinin ağrıdığını söyle. Örneğin: “Ik ben gevallen. Mijn arm doet pijn.” Ağrının ne zamandır olduğunu da söyle. Neyin olduğunu tahmin etmek zorunda değilsin: bunu doktor kontrol eder. İşte mi oldu? Aynı gün amirine de söyle.",
-    'c.body.p': "Düştüm. Kolum ağrıyor.",
-    'c.body.s': "İşte ağır bir koli kaldırdın. Şimdi sırtın çok ağrıyor. Aile hekimindesin (huisarts). Ne söylersin?",
-    'c.body.o1': "Neresinin ağrıdığını ve ne olduğunu: ağır bir koli kaldırdığını.",
-    'c.body.o2': "Sadece kendini kötü hissettiğini, başka bir şey değil.",
-    'c.body.o3': "İnternette bulduğun bir hastalığın adını.",
-    'c.body.w': "Neresinin ağrıdığını ve ne olduğunu söylersen doktor seni daha hızlı anlar. Ne olduğunu doktor kontrol eder. İşte mi oldu? Amirine de söyle.",
-    'c.jobends': "İşin bitiyor: başka ne bitiyor?",
-    'c.jobends.b': "İşin bittiğinde son hesabını (eindafrekening) kontrol et. Kullanmadığın izin günleri ve tatil paran genelde bununla birlikte ödenir. Ajans üzerinden olan konut, sağlık sigortası veya minibüs aynı anda bitebilir. Kendi sağlık sigortanı zamanında ayarla. Kira sözleşmenin kendi kuralları var: evden çıkmadan önce tavsiye al. Taşınıyor musun ya da Hollanda’dan mı ayrılıyorsun? Belediyeye (gemeente) bildir. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.",
-    'c.jobends.p': "Son hesabımı ne zaman alırım?",
-    'c.jobends.s': "İşin cuma günü bitiyor. Sağlık sigortan ajans üzerinden. Ne yaparsın?",
-    'c.jobends.o1': "Ne zaman bittiğini sorar, zamanında sigorta yaptırırsın.", // nagelezen (2e lezing)
-    'c.jobends.o2': "Hiçbir şey: sigorta kendiliğinden devam eder.",
-    'c.jobends.o3': "Hastalanana kadar bekler, o zaman ayarlarsın.",
-    'c.jobends.w': "Ajans üzerinden olan sigorta çoğu zaman işin bittiğinde biter. Hollanda’da yaşıyor veya çalışıyorsan genelde sağlık sigortası yaptırman zorunludur. Zamanında ayarlarsan sigortasız kalmazsın.",
+    'l.permit': "Belgeler, uyum ve işin", // nagelezen AI 22 nov
+    'w.papieren': "belgeler (evraklar)", // nagelezen AI 22 nov
+    'w.werkvergunning': "çalışma izni", // nagelezen AI 22 nov
+    'w.werknemer': "işçi, çalışan (bir işveren için çalışırsın)", // nagelezen AI 22 nov
+    'w.zzper': "serbest çalışan (kendi hesabına çalışırsın)", // nagelezen AI 22 nov
+    'w.inburgering': "uyum süreci (yeni gelenler için kurs ve sınavlar)", // nagelezen AI 22 nov
+    'w.taalles': "dil dersi", // nagelezen AI 22 nov
+    's.permit.1': "Belgelerimle burada çalışabilir miyim?", // nagelezen AI 22 nov
+    's.permit.2': "Ben işçi miyim, serbest çalışan mı?", // nagelezen AI 22 nov
+    's.permit.3': "Çağrı üzerine çalışıyorum.", // nagelezen AI 22 nov
+    'c.permit.q': "Salı günü çalışabilir misin?", // nagelezen AI 22 nov
+    'c.permit.a': "Hayır, o gün dil dersim var. Çarşamba olur.", // nagelezen AI 22 nov
+    'l.kids': "Çocuklar ve iş", // nagelezen AI 22 nov
+    'w.zwanger': "hamile", // nagelezen AI 22 nov
+    'w.kinderopvang': "çocuk bakımı, kreş", // nagelezen AI 22 nov
+    'w.ophalen': "almak (gidip birini almak)", // nagelezen AI 22 nov
+    'w.ziekkind': "hasta bir çocuk", // nagelezen AI 22 nov
+    'w.ouderschapsverlof': "ebeveyn izni", // nagelezen AI 22 nov
+    'w.zorgverlof': "bakım izni (hasta bir aile üyesine bakmak için izin)", // nagelezen AI 22 nov
+    's.kids.1': "Çocuğum hasta. Onu almaya gitmem gerekiyor.", // nagelezen AI 22 nov
+    's.kids.2': "Acil durum izni alabilir miyim?", // nagelezen AI 22 nov
+    's.kids.3': "İşverenim maaşımı ödemeye devam ediyor mu?", // nagelezen AI 22 nov
+    'c.kids.q': "Neden şimdi gitmen gerekiyor?", // nagelezen AI 22 nov
+    'c.kids.a': "Kreş aradı. Oğlumun ateşi var.", // nagelezen AI 22 nov
+    'l.body': "Vücut ve ağrı", // nagelezen AI 22 nov
+    'w.hoofd': "baş, kafa", // nagelezen AI 22 nov
+    'w.rug': "sırt", // nagelezen AI 22 nov
+    'w.arm': "kol", // nagelezen AI 22 nov
+    'w.hand': "el", // nagelezen AI 22 nov
+    'w.buik': "karın", // nagelezen AI 22 nov
+    'w.oog': "göz", // nagelezen AI 22 nov
+    's.body.1': "Elim ağrıyor.", // nagelezen AI 22 nov
+    's.body.2': "Kendimi iyi hissetmiyorum.", // nagelezen AI 22 nov
+    's.body.3': "Kolumun üstüne düştüm.", // nagelezen AI 22 nov
+    'c.body.q': "Neren ağrıyor?", // nagelezen AI 22 nov
+    'c.body.a': "Sırtım. Ağır bir koli kaldırdım.", // nagelezen AI 22 nov
+    'l.jobends': "İşin bittiğinde", // nagelezen AI 22 nov
+    'w.eindafrekening': "son hesap (iş bittiğinde aldığın son ödeme)", // nagelezen AI 22 nov
+    'w.opzeggen': "feshetmek (bir sözleşmeyi), iptal etmek", // nagelezen AI 22 nov
+    'w.uitschrijven': "kaydını sildirmek (adını bir listeden çıkarmak)", // nagelezen AI 22 nov
+    'w.sleutel': "anahtar", // nagelezen AI 22 nov
+    'w.verhuizen': "taşınmak (başka bir eve)", // nagelezen AI 22 nov
+    'w.busje': "minibüs", // nagelezen AI 22 nov
+    's.jobends.1': "Tatil param ve izin günlerimin parası bana ödenecek mi?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    's.jobends.2': "Juridisch Loket’ten tavsiye alıyorum.", // nagelezen AI 22 nov
+    's.jobends.3': "Yeni sağlık sigortamı kendim ayarlıyorum.", // nagelezen AI 22 nov
+    'c.jobends.q': "İşin cuma günü bitiyor. O zaman evden de çıkman gerekiyor.", // nagelezen AI 22 nov
+    'c.jobends.a': "Kira sözleşmemin ihbar süresi ne kadar?", // nagelezen AI 22 nov
+    'c.details': "Bilgilerini doğru ver", // nagelezen AI 22 nov
+    'c.details.b': "Bir işe başlarken bilgilerini verirsin. Yani adını, adresini, telefon numaranı, doğum tarihini ve BSN’ni. Adını yavaşça, harf harf söyle. Sonra adını sözleşmende ve maaş bordronda kontrol et. Adında veya BSN’nde bir hata, maaşında veya vergide sorun çıkarabilir. Yeni adres ya da telefon numarası mı? İşverenine söyle.", // nagelezen AI 22 nov
+    'c.details.p': "Harf harf söyleyeyim: A, L, I.", // nagelezen AI 22 nov
+    'c.details.s': "Ajans telefonda soyadını yazıyor. Yanlış yazdıklarını duyuyorsun. Ne yaparsın?", // nagelezen AI 22 nov
+    'c.details.o1': "Adını yavaşça harf harf söyler ve geri okumalarını istersin.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.details.o2': "Hiçbir şey söylemezsin: adındaki küçük bir hata önemli değil.", // nagelezen AI 22 nov
+    'c.details.o3': "Telefonu kapatır ve hatayı sonra bulmalarını umarsın.", // nagelezen AI 22 nov
+    'c.details.w': "Adın sözleşmende, maaş bordronda ve kimliğinde aynı olmalı. O zaman maaşın ve vergin doğru olur. Harf harf söylemek ve geri okutmak hızlı bir kontroldür.", // nagelezen AI 22 nov
+    'c.dates': "Tarihler: önce gün gelir", // nagelezen AI 22 nov
+    'c.dates.b': "Hollandacada gün aydan önce gelir: 3-6, 3 Haziran demektir, 6 Mart değil. “Tot en met”, son günün de sayıldığı anlamına gelir. Günler ve aylar küçük harfle yazılır: maandag, juni. Bir tarihten emin değil misin? Sor ve tekrar et.", // nagelezen AI 22 nov
+    'c.dates.p': "3 Haziran’ı mı kastediyorsun?", // nagelezen AI 22 nov
+    'c.dates.s': "Çalışma programında şöyle yazıyor: “Vrij: 3-6 tot en met 5-6”. Ne zaman izinlisin?", // nagelezen AI 22 nov
+    'c.dates.o1': "3, 4 ve 5 Haziran’da.", // nagelezen AI 22 nov
+    'c.dates.o2': "Sadece 3 ve 4 Haziran’da.", // nagelezen AI 22 nov
+    'c.dates.o3': "6 Mart’tan 6 Mayıs’a kadar.", // nagelezen AI 22 nov
+    'c.dates.w': "Önce gün, sonra ay gelir: 3-6, 3 Haziran demektir. “Tot en met”, 5 Haziran’ın da sayıldığı anlamına gelir, yani üç gün izinlisin.", // nagelezen AI 22 nov
+    'c.permit': "İş ve uyum", // nagelezen AI 22 nov
+    'c.permit.b': "Uyum sürecini (inburgering) yapman mı gerekiyor? İşverenine söyle ve belediyeye (gemeente) çalıştığını bildir. Dil derslerinin çalışma programına uyup uymayacağını erkenden sor. Burada çalışıp çalışamayacağından emin değil misin? Başlamadan önce kontrol et, örneğin IND’de, UWV’de veya VluchtelingenWerk’te. Bu iş için serbest çalışan (zzp’er) olarak kayıt olmanı mı istiyorlar? Önce tavsiye al. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nagelezen AI 22 nov
+    'c.permit.p': "Salı günleri dil dersim var. Çalışma programım bunu dikkate alabilir mi?", // nagelezen AI 22 nov
+    'c.permit.s': "Dil dersin salı sabahı. Yeni programına göre o saatte çalışıyorsun. Ne yaparsın?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.o1': "Amirinden programı değiştirmesini istersin.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.o2': "Derse gitmezsin: iş önce gelir.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.o3': "Salı günleri evde kalır ve hiçbir şey söylemezsin.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.permit.w': "Uyum süreci de bir yükümlülüktür. Birçok işveren erkenden öğrenirse yardım eder. Belediye (gemeente) de planını işine göre ayarlamana yardım edebilir.", // nagelezen AI 22 nov
+    'c.kids': "Çocuğun hasta", // nagelezen AI 22 nov
+    'c.kids.b': "Çocuğun aniden mi hastalandı? Hemen işverenine söyle. İlk saatler veya günler için acil durum izni (calamiteitenverlof) alabilirsin ve işverenin maaşını ödemeye devam eder. Çocuğunun daha uzun süre bakıma mı ihtiyacı var? O zaman bakım izni (zorgverlof) isteyebilirsin. Hamile misin? İşverenin seni bu yüzden işten çıkaramaz. Doğum izni ve ebeveyn izni (ouderschapsverlof) hakkında zamanında bilgi al. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nagelezen AI 22 nov
+    'c.kids.p': "Çocuğum hasta. Bugün erken çıkabilir miyim?", // nagelezen AI 22 nov
+    'c.kids.s': "Kreş (kinderopvang) seni işte arıyor. Çocuğunun ateşi var ve eve gitmesi gerekiyor. Ne yaparsın?", // nagelezen AI 22 nov
+    'c.kids.o1': "Amirine söyler, acil durum izni istersin.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.kids.o2': "Tek kelime etmeden çıkar, yarın açıklarsın.", // nagelezen AI 22 nov
+    'c.kids.o3': "İşte kalır, çocuğunu vardiyan bitene kadar bekletirsin.", // nagelezen AI 22 nov
+    'c.kids.w': "Hasta bir çocuk evde acil bir durumdur. Önce amirine söylersen işi planlayabilir. Acil durum izni böyle anlar içindir.", // nagelezen AI 22 nov
+    'c.body': "Ne olduğunu ve neresinin ağrıdığını söyle", // nagelezen AI 22 nov
+    'c.body.b': "Doktorda ne olduğunu ve neresinin ağrıdığını söyle. Örneğin: “Ik ben gevallen. Mijn arm doet pijn.” Ağrının ne zamandır olduğunu da söyle. Neyin olduğunu tahmin etmek zorunda değilsin: bunu doktor kontrol eder. İşte mi oldu? Aynı gün amirine de söyle.", // nagelezen AI 22 nov
+    'c.body.p': "Düştüm. Kolum ağrıyor.", // nagelezen AI 22 nov
+    'c.body.s': "İşte ağır bir koli kaldırdın. Şimdi sırtın çok ağrıyor. Aile hekimindesin (huisarts). Ne söylersin?", // nagelezen AI 22 nov
+    'c.body.o1': "Neresinin ağrıdığını ve ne olduğunu: ağır bir koli kaldırdığını.", // nagelezen AI 22 nov
+    'c.body.o2': "Sadece kendini kötü hissettiğini, başka bir şey değil.", // nagelezen AI 22 nov
+    'c.body.o3': "İnternette bulduğun bir hastalığın adını.", // nagelezen AI 22 nov
+    'c.body.w': "Neresinin ağrıdığını ve ne olduğunu söylersen doktor seni daha hızlı anlar. Ne olduğunu doktor kontrol eder. İşte mi oldu? Amirine de söyle.", // nagelezen AI 22 nov
+    'c.jobends': "İşin bitiyor: başka ne bitiyor?", // nagelezen AI 22 nov
+    'c.jobends.b': "İşin bittiğinde son hesabını (eindafrekening) kontrol et. Kullanmadığın izin günleri ve tatil paran genelde bununla birlikte ödenir. Ajans üzerinden olan konut, sağlık sigortası veya minibüs aynı anda bitebilir. Kendi sağlık sigortanı zamanında ayarla. Kira sözleşmenin kendi kuralları var: evden çıkmadan önce tavsiye al. Taşınıyor musun ya da Hollanda’dan mı ayrılıyorsun? Belediyeye (gemeente) bildir. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nagelezen AI 22 nov
+    'c.jobends.p': "Son hesabımı ne zaman alırım?", // nagelezen AI 22 nov
+    'c.jobends.s': "İşin cuma günü bitiyor. Sağlık sigortan ajans üzerinden. Ne yaparsın?", // nagelezen AI 22 nov
+    'c.jobends.o1': "Ne zaman bittiğini sorar, zamanında kendi sigortanı yaptırırsın.", // nagelezen (2e lezing) // nagelezen AI 22 nov
+    'c.jobends.o2': "Hiçbir şey: sigorta kendiliğinden devam eder.", // nagelezen AI 22 nov
+    'c.jobends.o3': "Hastalanana kadar bekler, o zaman ayarlarsın.", // nagelezen AI 22 nov
+    'c.jobends.w': "Ajans üzerinden olan sigorta çoğu zaman işin bittiğinde biter. Hollanda’da yaşıyor veya çalışıyorsan genelde sağlık sigortası yaptırman zorunludur. Zamanında ayarlarsan sigortasız kalmazsın.", // nagelezen AI 22 nov
     // Entree in the Taal track (30 October 2026): nieuw, nalezen.
     'u.finish': "İşini bitirmek", // nieuw, nalezen
     'l.workorder': "İş emri", // nieuw, nalezen
@@ -1574,154 +1574,154 @@ const t: CultureTranslation = {
     's.budget.3': "Bu aboneliği iptal ediyorum.", // nieuw, nalezen
     'c.budget.q': "Bu telefonu şimdi al, sonra öde!", // nieuw, nalezen
     'c.budget.a': "Hayır, teşekkürler. Sonra ödemek de borçtur.", // nieuw, nalezen
-    'l.healthy': "İşe hazır ve formda", // nieuw, nalezen
-    'w.slapen': "uyumak", // nieuw, nalezen
-    'w.ontbijt': "kahvaltı", // nieuw, nalezen
-    'w.bewegen': "hareket etmek, aktif olmak", // nieuw, nalezen
-    'w.moe': "yorgun", // nieuw, nalezen
-    'w.drugs': "uyuşturucu", // nieuw, nalezen
-    'w.somber': "moralsiz, çökkün (uzun süre üzgün)", // nieuw, nalezen
-    's.healthy.1': "Bugün çok yorgunum.", // nieuw, nalezen
-    's.healthy.2': "Her zaman önce kahvaltı yaparım.", // nieuw, nalezen
-    's.healthy.3': "Molada biraz yürüyüş yapıyorum.", // nieuw, nalezen
-    'c.healthy.q': "Hap ister misin? Uyanık kalırsın.", // nieuw, nalezen
-    'c.healthy.a': "Hayır, teşekkürler. Bir şeyin etkisi altında çalışmam.", // nieuw, nalezen
-    'c.workorder': "Önce oku, sonra başla", // nieuw, nalezen
-    'c.workorder.b': "Başlamadan önce iş emrini (werkbon) ya da uygulamadaki görevi oku. Adresi, görevi ve şeylerin sayısını kontrol et. Bir şey net değil mi? Başlamadan önce sor, yarıda değil. Sonra aletlerini ve malzemeyi hazırla. Bu zaman kazandırır ve daha az hata yaparsın. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.workorder.p': "İş emrinde on koli yazıyor. Doğru mu?", // nieuw, nalezen
-    'c.workorder.s': "İş emrinde şöyle yazıyor: 3 numaralı odayı boya. İş arkadaşın 5 numaralı oda olduğunu söylüyor. Ne yaparsın?", // nieuw, nalezen
-    'c.workorder.o1': "Amirine hangi odanın doğru olduğunu sorarsın.", // nieuw, nalezen
-    'c.workorder.o2': "3 numaralı odayı boyarsın, çünkü iş emrinde öyle yazıyor.", // nieuw, nalezen
-    'c.workorder.o3': "İki odayı da boyarsın, böylece emin olursun.", // nieuw, nalezen
-    'c.workorder.w': "İki şey birbirini tutmuyorsa, başlamadan önce kontrol edersin. Kısa bir soru, işi baştan yapmaktan daha az zaman alır.", // nieuw, nalezen
-    'c.handover': "Neyin bittiğini, neyin bitmediğini söyle", // nieuw, nalezen
-    'c.handover.b': "Durduğunda işin bitmiş olmaz. Önce yerini ve aletlerini topla. Sonra birinden işini kontrol etmesini iste. Amirine neyin bittiğini, neyin bitmediğini söyle. Bir şey ters mi gitti ya da bir şey mi bozuk? Bunu şimdi söyle, yarın değil. İşi bitirdiğini bildirmek de işinin bir parçası. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.handover.p': "Dört numaralı oda daha bitmedi. Kapı kilitliydi.", // nieuw, nalezen
-    'c.handover.s': "Beş oda temizledin. 4 numaralı oda kilitliydi. Vardiyan bitiyor. Ne yaparsın?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.o1': "Amirine 4 numaralı odanın bitmediğini söylersin.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.o2': "Eve gidersin: 4 numaralı oda kilitliydi, bu senin suçun değil.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.o3': "Listeye “hepsi bitti” yazarsın.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.handover.w': "Amirin işi planlar. 4 numaralı odanın bitmediğini bilirse, başka birini gönderebilir. Böylece hiçbir müşteri kirli bir oda bulmaz.", // nieuw, nalezen
-    'c.workshop': "Gözler, kulaklar ve yangın", // nieuw, nalezen
-    'c.workshop.b': "Taşlama, kesme ve delme kıvılcım, küçük parçalar ve çok gürültü yapar. Kısa bir iş için bile koruyucu gözlük ve kulak koruyucu tak. Çok gürültü olduğunda, işverenin sana kulak koruyucu vermek zorundadır. Kıvılcımlar yangın çıkarabilir. Kaynak için ya da yanabilen şeylerin yakınında taşlama için ek kurallar var (heet werk): başlamadan önce sor. İşten sonra metal parçalarını topla. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
-    'c.workshop.p': "Taşlama yapacağım. Kulak koruyucu nerede?", // nieuw, nalezen
-    'c.workshop.s': "Küçük bir metal parçasını taşlaman gerekiyor. Bir dakika sürüyor. Koruyucu gözlüğün diğer odada. Ne yaparsın?", // nieuw, nalezen
-    'c.workshop.o1': "Bir dakika da olsa önce gözlüğünü alırsın.", // nieuw, nalezen
-    'c.workshop.o2': "Gözlerin yarı kapalı taşlarsın, nasılsa çabuk biter.", // nieuw, nalezen
-    'c.workshop.o3': "Öbür elini gözlerinin önüne tutarsın.", // nieuw, nalezen
-    'c.workshop.w': "Gözüne giren bir kıvılcım ya da metal parçası gözüne kalıcı zarar verebilir. Bu bir saniyede olabilir. Koruyucu gözlük kısa bir işte bile yardımcı olur.", // nieuw, nalezen
-    'c.power': "Elektrik: asla öylece değil", // nieuw, nalezen
-    'c.power.b': "Gerilim altındaki (onder spanning) bir şeyde asla çalışma. Önce eğitimli bir iş arkadaşı orayı güvenli hâle getirir: elektriği keser ve kontrol eder. Bunu sadece doğru eğitimi alan kişiler yapabilir. Bozuk bir kablo ya da fiş mi görüyorsun? Onu kullanma ve hemen amirine söyle. Elektriğin kesik olduğundan emin değil misin? O zaman elektrik vardır. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
-    'c.power.p': "Bozuk bir kablo görüyorum. Kim bakabilir?", // nieuw, nalezen
-    'c.power.s': "Bir lamba asman gerekiyor. Bir iş arkadaşın diyor ki: “Elektrik kesik, sanırım.” Ne yaparsın?", // nieuw, nalezen
-    'c.power.o1': "Eğitimli bir iş arkadaşından elektriğin kesik olduğunu kontrol etmesini istersin.", // nieuw, nalezen
-    'c.power.o2': "Başlarsın, ama kablolara dokunurken kalın eldiven giyersin.", // nieuw, nalezen
-    'c.power.o3': "Elektriğin kesik olduğunu kontrol etmek için ışığı açıp kapatırsın.", // nieuw, nalezen
-    'c.power.w': "Elektrikte “sanırım” yeterli değildir. Elektrik çarpması seni öldürebilir. Eğitimli bir iş arkadaşı elektrik olmadığını kontrol eder, sonra başlayabilirsin.", // nieuw, nalezen
-    'c.garage': "Arabanın altında güvenlik", // nieuw, nalezen
-    'c.garage.b': "Sadece kriko üzerinde duran bir arabanın altına asla girme. Araba liftte ya da sehpalar üzerinde sağlam durmalı. Dökülen yağ zemini kaygan yapar: hemen temizle. Eski yağ, aküler ve temizlik ürünleri tehlikeli atıktır. Bunlar özel bir yere gider, asla normal çöpe ya da gidere değil. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.garage.p': "Yerde yağ var. Temizliyorum.", // nieuw, nalezen
-    'c.garage.s': "Sadece kriko üzerinde duran bir arabanın altına bakman gerekiyor. Bir iş arkadaşın diyor ki: “Sorun yok, çabuk ol.” Ne yaparsın?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.o1': "Lifti ya da sehpaları beklersin.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.o2': "Altına hızlıca girersin, bacakların dışarıda.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.o3': "İş arkadaşından arabayı tutmasını istersin.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.garage.w': "Kriko kayabilir. Araba çok ağırdır ve altından hızlı çıkamazsın. Sehpalar ya da lift arabayı yerinde tutar.", // nieuw, nalezen
-    'c.carjob': "Ek iş mi? Önce müşteriye sor", // nieuw, nalezen
-    'c.carjob.b': "İş emrinde yazandan fazla sorun mu buluyorsun? Onları öylece tamir etme. Müşteri önce ek işi ve masrafları onaylamalı. Amirin ya da servis danışmanı müşteriyi arar. Test sürüşü sadece izinle ve sadece geçerli bir ehliyetle yapılır. Ne yaptığını ve hangi parçaları kullandığını yaz. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
-    'c.carjob.p': "Bir sorun daha görüyorum. Müşteriyi kim arayacak?", // nieuw, nalezen
-    'c.carjob.s': "Bir arabanın yağını değiştiriyorsun. Frenler de kötü. Bir saat içinde hazır olmalı. Ne yaparsın?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.carjob.o1': "Müşteriyi araması için amirine söylersin.", // nieuw, nalezen
-    'c.carjob.o2': "Güvenlik için frenleri de tamir edersin.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.carjob.o3': "Hiçbir şey söylemezsin: iş emrinde yoklar.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.carjob.w': "Müşteri öder, bu yüzden müşteri karar verir. Onun onayı olmadan servis öylece ek iş yapamaz. Kötü frenler tehlikelidir, bu yüzden söylemek önemlidir.", // nieuw, nalezen
-    'c.placement': "Önce imzala, sonra başla", // nieuw, nalezen
-    'c.placement.b': "Entree’de bir şirkette çok şey öğrenirsin: bu senin stajındır (stage ya da bpv). Başlamadan önce sen, okul ve şirket bir sözleşme imzalarsınız: POK. Şirkette işyeri eğitmenin (praktijkopleider) sana yardım eder. Okulda staj danışmanın (stagebegeleider) sana yardım eder. Hasta mısın? Başlama saatinden önce şirketi ara ve okula da haber ver. Kurallar okuldan okula değişir: staj danışmanına sor.", // nieuw, nalezen
-    'c.placement.p': "Staj sözleşmesi imzalanınca başlarım.", // nieuw, nalezen
-    'c.placement.s': "Şirket yarın başlamanı istiyor. POK daha imzalanmadı. Ne yaparsın?", // nieuw, nalezen
-    'c.placement.o1': "Staj danışmanından önce POK’u halletmesini istersin.", // nieuw, nalezen
-    'c.placement.o2': "Yarın başlarsın, POK’u vaktin olunca imzalarsın.", // nieuw, nalezen
-    'c.placement.o3': "Başlarsın, ama şimdilik okula bir şey söylemezsin.", // nieuw, nalezen
-    'c.placement.w': "POK’ta ne öğrendiğin ve sana kimin yardım ettiği yazar. İmzalı bir POK olmadan stajın diploman için sayılmayabilir. Bu yüzden başlamadan önce imzalarsın.", // nieuw, nalezen
-    'c.review': "Geri bildirim iste, bir de örnek", // nieuw, nalezen
-    'c.review.b': "Stajda insanlar sana neyin iyi gittiğini ve neyin daha iyi olabileceğini söyler: geri bildirim (feedback). Bu normaldir ve öğrenmene yardım eder. Anlamadın mı? Bir örnek iste. Sen de geri bildirim iste, örneğin haftada bir. Stajında gerçekten bir sorun mu var? Önce işyeri eğitmeninle konuş. İşe yaramıyor mu? O zaman okuldaki staj danışmanına git.", // nieuw, nalezen
-    'c.review.p': "Ne iyi gitti, ne daha iyi olabilir?", // nieuw, nalezen
-    'c.review.s': "İşyeri eğitmenin diyor ki: “Daha dikkatli çalışman lazım.” Ne demek istediğini bilmiyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.review.o1': "Neyi farklı yapman gerektiğine dair bir örnek istersin.", // nieuw, nalezen
-    'c.review.o2': "Evet dersin ve kendin anlayacağını umarsın.", // nieuw, nalezen
-    'c.review.o3': "Hiçbir şey ters gitmesin diye bundan sonra çok daha yavaş çalışırsın.", // nieuw, nalezen
-    'c.review.w': "Bir örnekle neyi değiştireceğini bilirsin. Sormak, öğrenmek istediğini gösterir. Eğitmenler bunu sever.", // nieuw, nalezen
-    'c.council': "Kim oy verebilir?", // nieuw, nalezen
-    'c.council.b': "Hollanda’da kimin karar vereceğini oy vererek seçersin. Belediye meclisi (gemeenteraad) senin şehrin hakkında karar verir. Tweede Kamer bütün ülke için yasaları yapar. Hollanda vatandaşlığın varsa 18 yaşından itibaren bütün seçimlerde oy verebilirsin. Belediye meclisi için daha çok kişi oy verebilir. Burada yaşayan başka bir AB ülkesinden insanlar oy verebilir. AB dışından insanlar 5 yıl yasal oturumdan sonra oy verebilir. Belediye (gemeente) sana bir oy kartı (stempas) gönderir. Onu kimliğinle birlikte götür. Oy verip veremeyeceğinden emin değil misin? Belediyeye sor.",
-    'c.council.p': "Belediye meclisi için oy verebilir miyim?", // nieuw, nalezen
-    'c.council.s': "Faslısın ve altı yıldır Hollanda vatandaşlığı olmadan burada yasal olarak yaşıyorsun. Hangisi doğru?", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.council.o1': "Belediye meclisi için oy verebilirsin.", // nieuw, nalezen
-    'c.council.o2': "Tweede Kamer için de oy verebilirsin.", // nieuw, nalezen
-    'c.council.o3': "Hollanda pasaportu olmadan oy veremezsin.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.council.w': "5 yıl yasal oturumdan sonra belediye meclisi için oy verebilirsin. Tweede Kamer için Hollanda vatandaşlığı gerekir.", // nieuw, nalezen
-    'c.police': "Kimliğin ve hakların", // nieuw, nalezen
-    'c.police.b': "14 yaşından itibaren polis isterse kimliğini göstermek zorundasın. Bu yüzden onu hep yanında taşı. Örneğin belediyeden ya da UWV’den bir mektup mu aldın? İçindeki karara katılmıyor musun? O zaman yazılı olarak itiraz edebilirsin (bezwaar maken). Bunu mektuptaki tarihten önce yap. Polis ve hâkim herkese eşit davranmak zorundadır. Gözaltına mı alındın? Avukat isteyebilirsin. Juridisch Loket ücretsiz danışmanlık verir.",
-    'c.police.p': "Bu karara katılmıyorum. İtiraz ediyorum.", // nieuw, nalezen
-    'c.police.s': "Belediyeden bir mektup alıyorsun. Onların kararına katılmıyorsun. Mektupta altı haftan olduğu yazıyor. Ne yaparsın?", // nieuw, nalezen
-    'c.police.o1': "Tarihten önce bir itiraz mektubu yazarsın.", // nieuw, nalezen
-    'c.police.o2': "Onları bir kez ararsın ve seni geri aramalarını beklersin.", // nieuw, nalezen
-    'c.police.o3': "Beklersin: altı hafta sonra kendiliğinden biter.", // nieuw, nalezen
-    'c.police.w': "İtiraz yazılı olarak, mektuptaki tarihten önce yapılır. O tarihten sonra çoğu zaman çok geçtir. Juridisch Loket onu yazmana yardım edebilir.", // nieuw, nalezen
-    'c.login': "Girişin sadece senin", // nieuw, nalezen
-    'c.login.b': "Şifren ve DigiD’n sadece senin için. Onları kimseye verme, işverenine ya da bir iş arkadaşına bile. Ortak bir bilgisayarda işin bitince her zaman çıkış yap. Kısa bir süre mi uzaklaşıyorsun? Ekranını kilitle. Şifreni mi unuttun? Bilgi işlem bölümünden (ICT-afdeling) yenisini iste. Bilgisayar kuralları şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu bilgi işlem bölümüne sor.", // nieuw, nalezen
-    'c.login.p': "Biraz uzaklaşıyorum. Ekranımı kilitliyorum.", // nieuw, nalezen
-    'c.login.s': "Amirin, evraklarını hızlıca halletmek için DigiD’ni ve şifreni istiyor. Ne yaparsın?", // nieuw, nalezen
-    'c.login.o1': "Hayır dersin, o yardım ederken girişi kendin yaparsın.", // nieuw, nalezen
-    'c.login.o2': "Bu seferlik verirsin, çünkü o senin şefin.", // nieuw, nalezen
-    'c.login.o3': "Sonra kullanabilsin diye bir kâğıda yazarsın.", // nieuw, nalezen
-    'c.login.w': "DigiD’nle biri vergilerini, yardımlarını ve sağlık belgelerini görüp değiştirebilir. O sadece senin için. Girişi kendin yapıp birinin sana yardım etmesine izin verebilirsin.", // nieuw, nalezen
-    'c.phish': "Acele ve bir düğme mi? Tıklama", // nieuw, nalezen
-    'c.phish.b': "Sahte bir e-posta (phishing) çoğu zaman gerçek gibi görünür. Hızlı davranmanı ister: “Hesabınız bugün kapatılacak!” Göndereni kontrol et. Beklemediğin bir bağlantıya tıklama ve beklemediğin bir eki açma. Gerçek siteye ya da uygulamaya kendin git. Yine de tıkladın mı? Şifreni hemen değiştir ve bilgi işlem bölümünü ara. Bu utanılacak bir şey değil: ne kadar erken bilirlerse o kadar iyi. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.phish.p': "Şüpheli bir bağlantıya tıkladım.", // nieuw, nalezen
-    'c.phish.s': "Bir e-postadaki bağlantıya tıkladın ve şifreni yazdın. Sonra e-postanın sahte olduğunu görüyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.phish.o1': "Şifreni değiştirir ve bilgi işlem bölümünü ararsın.", // nieuw, nalezen
-    'c.phish.o2': "Başka kimse tıklamasın diye e-postayı silersin.", // nieuw, nalezen
-    'c.phish.o3': "Bir şey ters gidecek mi diye bir gün beklersin.", // nieuw, nalezen
-    'c.phish.w': "Şifrenle başka biri işinin sistemlerine girebilir. Şifreni hızlıca değiştirip bilgi işlem bölümüne haber verirsen, bunu zamanında durdurabilirler.", // nieuw, nalezen
-    'c.mychoice': "Güçlü yönlerin önemli", // nieuw, nalezen
-    'c.mychoice.b': "Neyde iyisin? İşi, okulu ve evi düşün. Ailene bakmak, bir yan iş ya da gönüllü çalışma da sayılır. Neyi seversin, neyi sevmezsin? Hangi işin sana uyduğunu bilmiyor musun? Bir gün birinin yanında işe gitmek iste (meeloopdag). Okuldaki danışmanın seçmene yardım edebilir.", // nieuw, nalezen
-    'c.mychoice.p': "İnsanlarla iyi geçinebilirim. Evde çok yardım ederim.", // nieuw, nalezen
-    'c.mychoice.s': "Okulda sana soruyorlar: “Neyde iyisin?” Hiç maaşlı bir işin olmadı. Ne dersin?", // nieuw, nalezen
-    'c.mychoice.o1': "Evde iyi yaptığın şeyleri, örneğin başkalarına bakmayı.", // nieuw, nalezen
-    'c.mychoice.o2': "Henüz bilmediğini, çünkü hiç işin olmadığını.", // nieuw, nalezen
-    'c.mychoice.o3': "Her işi yapabileceğini, gerçekten her şeyi.", // nieuw, nalezen
-    'c.mychoice.w': "Evde kazandığın beceriler de sayılır. Bakım, planlama ve yardım, işverenlerin ihtiyaç duyduğu becerilerdir. Ne yaptığını bir örnekle anlat.", // nieuw, nalezen
-    'c.nextstep': "Entree’den sonra: seviye 2 ya da iş", // nieuw, nalezen
-    'c.nextstep.b': "Entree diplomasıyla mbo’nun seviye 2’sine geçebilirsin. Seviye 2 ya da daha yüksek bir diploma, temel yeterliliktir (startkwalificatie). İş bulmana ve işini korumana yardım eder. bbl’de bir şirkette çalışır ve haftada yaklaşık bir gün okula gidersin. Bunun için bir işe ya da bir çalış-öğren yerine (leerwerkbaan) ihtiyacın var. Bir açık güne git ve okuldaki danışmanınla konuş.", // nieuw, nalezen
-    'c.nextstep.p': "Entree’den sonra seviye 2’ye geçebilir miyim?", // nieuw, nalezen
-    'c.nextstep.s': "Entree diploman var. Bir şirket sana eğitimsiz bir iş teklif ediyor. Sen de öğrenmeye devam etmek istiyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.nextstep.o1': "Şirkete bbl yeri olup olmadığını sorarsın.", // nieuw, nalezen
-    'c.nextstep.o2': "İşi alırsın ve öğrenmeyi tamamen bırakırsın.", // nieuw, nalezen
-    'c.nextstep.o3': "Bir okul seni arayana kadar evde beklersin.", // nieuw, nalezen
-    'c.nextstep.w': "bbl ile hem çalışır hem öğrenirsin. Para kazanırsın ve seviye 2 diploması alırsın. Birçok şirket bunu sever.", // nieuw, nalezen
-    'c.email': "Kısa bir e-posta: kim, ne, ne zaman", // nieuw, nalezen
-    'c.email.b': "İşe yazılan e-posta kısa ve kibardır. Bir selamla başla, örneğin “Beste Karin,”. Sonra ne istediğini ve ne zaman istediğini yaz. Bir selam ve tam adınla bitir. Kısa bir konu yaz, örneğin “Vrij op vrijdag”. Göndermeden önce e-postanı tekrar oku.", // nieuw, nalezen
-    'c.email.p': "Sevgili Karin, cuma günü izin alabilir miyim? Selamlar, Ali Haddad", // nieuw, nalezen
-    'c.email.s': "Gelecek cuma izin istiyorsun. Amirine hangi e-posta en iyisi?", // nieuw, nalezen
-    'c.email.o1': "“Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad”", // nieuw, nalezen
-    'c.email.o2': "“Vrijdag ben ik er niet.” (selamsız ve adın olmadan).", // nieuw, nalezen
-    'c.email.o3': "Haftan hakkında uzun bir e-posta, soru en sonda.", // nieuw, nalezen
-    'c.email.w': "İyi bir e-postada bir selam, net bir soru ve adın olur. Böylece amirin hızlıca cevap verebilir.", // nieuw, nalezen
-    'c.budget': "Önce sabit giderler", // nieuw, nalezen
-    'c.budget.b': "Maaşını aldığında önce sabit giderleri öde: kira, sigorta ve telefon. Her ay küçük bir miktar biriktirmeye çalış, 10 euro bile olsa. Şimdi al, sonra öde de bir borçtur. İnternetten bir şey mi aldın? O zaman genelde 14 gün içinde vazgeçebilirsin. Fişi sakla: garanti için ona ihtiyacın var.", // nieuw, nalezen
-    'c.budget.p': "Şimdi ödemeyi tercih ederim. Böylece borcum olmaz.", // nieuw, nalezen
-    'c.budget.s': "Bugün maaşını alıyorsun. Yeni ayakkabı istiyorsun, kiran da daha ödenmedi. Ne yaparsın?", // nieuw, nalezen
-    'c.budget.o1': "Önce kirayı ödersin, sonra ne kaldığına bakarsın.", // nieuw, nalezen
-    'c.budget.o2': "Ayakkabıları alırsın, kirayı sonra ödersin.", // nieuw, nalezen
-    'c.budget.o3': "Ayakkabıları “şimdi al, sonra öde” ile alırsın.", // nieuw, nalezen
-    'c.budget.w': "Kira, sigorta ve telefon her ay tekrar gelir. Önce bunları ödersen, ne kadar paran kaldığını bilirsin. Böylece borca girmezsin.", // nieuw, nalezen
-    'c.healthy': "Uyku, beslenme ve uyuşturucuya hayır", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.healthy.b': "Yeterince uyuduğunda daha iyi ve daha güvenli çalışırsın, geç bir vardiyadan sonra da. Kahvaltı yap ve gün içinde su iç. Molada hareket et, örneğin kısa bir yürüyüş yap. Alkol ya da uyuşturucunun etkisi altında çalışmak tehlikelidir ve çoğu işveren bunu yasaklar. Uzun süredir moralin mi bozuk, ya da içmeyi veya kullanmayı bırakamıyor musun? Aile hekiminle (huisarts) konuş. Sana yardım edebilir ve bunu gizli tutar.", // nieuw, nalezen
-    'c.healthy.p': "Uzun süredir moralim bozuk. Randevu alabilir miyim?", // nieuw, nalezen
-    'c.healthy.s': "Bu gece gece vardiyan var. Bir iş arkadaşın uyanık kalman için sana bir hap veriyor. Ne yaparsın?", // nieuw, nalezen
-    'c.healthy.o1': "Hayır dersin ve vardiyadan önce birkaç saat uyursun.", // nieuw, nalezen
-    'c.healthy.o2': "Yarım hap alırsın, bu tehlikeli değil.", // nieuw, nalezen
-    'c.healthy.o3': "Alırsın, ama işte kimseye söylemezsin.", // nieuw, nalezen
-    'c.healthy.w': "Bir iş arkadaşından gelen haplar uyuşturucu olabilir. Seni hasta edebilir ya da işte hata yaptırabilir. Uyku, uyanık kalmanın güvenli yoludur.", // nieuw, nalezen
+    'l.healthy': "İşe hazır ve formda", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.slapen': "uyumak", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontbijt': "kahvaltı", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.bewegen': "hareket etmek, aktif olmak", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.moe': "yorgun", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.drugs': "uyuşturucu", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.somber': "moralsiz, çökkün (uzun süre üzgün)", // nieuw, nalezen // nagelezen AI 22 nov
+    's.healthy.1': "Bugün çok yorgunum.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.healthy.2': "Her zaman önce kahvaltı yaparım.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.healthy.3': "Molada biraz yürüyüş yapıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.q': "Hap ister misin? Uyanık kalırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.a': "Hayır, teşekkürler. Bir şeyin etkisi altında çalışmam.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder': "Önce oku, sonra başla", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.b': "Başlamadan önce iş emrini (werkbon) ya da uygulamadaki görevi oku. Adresi, görevi ve şeylerin sayısını kontrol et. Bir şey net değil mi? Başlamadan önce sor, yarıda değil. Sonra aletlerini ve malzemeyi hazırla. Bu zaman kazandırır ve daha az hata yaparsın. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.p': "İş emrinde on koli yazıyor. Doğru mu?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.s': "İş emrinde şöyle yazıyor: 3 numaralı odayı boya. İş arkadaşın 5 numaralı oda olduğunu söylüyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.o1': "Amirine hangi odanın doğru olduğunu sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.o2': "3 numaralı odayı boyarsın, çünkü iş emrinde öyle yazıyor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.o3': "İki odayı da boyarsın, böylece emin olursun.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workorder.w': "İki şey birbirini tutmuyorsa, başlamadan önce kontrol edersin. Kısa bir soru, işi baştan yapmaktan daha az zaman alır.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover': "Neyin bittiğini, neyin bitmediğini söyle", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.b': "Durduğunda işin bitmiş olmaz. Önce yerini ve aletlerini topla. Sonra birinden işini kontrol etmesini iste. Amirine neyin bittiğini, neyin bitmediğini söyle. Bir şey ters mi gitti ya da bir şey mi bozuk? Bunu şimdi söyle, yarın değil. İşi bitirdiğini bildirmek de işinin bir parçası. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.p': "Dört numaralı oda daha bitmedi. Kapı kilitliydi.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handover.s': "Beş oda temizledin. 4 numaralı oda kilitliydi. Vardiyan bitiyor. Ne yaparsın?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.o1': "Amirine 4 numaralı odanın bitmediğini söylersin.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.o2': "Eve gidersin: 4 numaralı oda kilitliydi, bu senin suçun değil.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.o3': "Listeye “hepsi bitti” yazarsın.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.handover.w': "Amirin işi planlar. 4 numaralı odanın bitmediğini bilirse, başka birini gönderebilir. Böylece hiçbir müşteri kirli bir oda bulmaz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop': "Gözler, kulaklar ve yangın", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.b': "Taşlama, kesme ve delme kıvılcım, küçük parçalar ve çok gürültü yapar. Kısa bir iş için bile koruyucu gözlük ve kulak koruyucu tak. Çok gürültü olduğunda, işverenin sana kulak koruyucu vermek zorundadır. Kıvılcımlar yangın çıkarabilir. Kaynak için ya da yanabilen şeylerin yakınında taşlama için ek kurallar var (heet werk): başlamadan önce sor. İşten sonra metal parçalarını topla. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.p': "Taşlama yapacağım. Kulak koruyucu nerede?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.s': "Küçük bir metal parçasını taşlaman gerekiyor. Bir dakika sürüyor. Koruyucu gözlüğün diğer odada. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.o1': "Bir dakika da olsa önce gözlüğünü alırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.o2': "Gözlerin yarı kapalı taşlarsın, nasılsa çabuk biter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.o3': "Öbür elini gözlerinin önüne tutarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.workshop.w': "Gözüne giren bir kıvılcım ya da metal parçası gözüne kalıcı zarar verebilir. Bu bir saniyede olabilir. Koruyucu gözlük kısa bir işte bile yardımcı olur.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power': "Elektrik: asla öylece değil", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.b': "Gerilim altındaki (onder spanning) bir şeyde asla çalışma. Önce eğitimli bir iş arkadaşı orayı güvenli hâle getirir: elektriği keser ve kontrol eder. Bunu sadece doğru eğitimi alan kişiler yapabilir. Bozuk bir kablo ya da fiş mi görüyorsun? Onu kullanma ve hemen amirine söyle. Elektriğin kesik olduğundan emin değil misin? O zaman elektrik vardır. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.p': "Bozuk bir kablo görüyorum. Kim bakabilir?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.s': "Bir lamba asman gerekiyor. Bir iş arkadaşın diyor ki: “Elektrik kesik, sanırım.” Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.o1': "Eğitimli bir iş arkadaşından elektriğin kesik olduğunu kontrol etmesini istersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.o2': "Başlarsın, ama kablolara dokunurken kalın eldiven giyersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.o3': "Elektriğin kesik olduğunu kontrol etmek için ışığı açıp kapatırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.power.w': "Elektrikte “sanırım” yeterli değildir. Elektrik çarpması seni öldürebilir. Eğitimli bir iş arkadaşı elektrik olmadığını kontrol eder, sonra başlayabilirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage': "Arabanın altında güvenlik", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage.b': "Sadece kriko üzerinde duran bir arabanın altına asla girme. Araba liftte ya da sehpalar üzerinde sağlam durmalı. Dökülen yağ zemini kaygan yapar: hemen temizle. Eski yağ, aküler ve temizlik ürünleri tehlikeli atıktır. Bunlar özel bir yere gider, asla normal çöpe ya da gidere değil. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage.p': "Yerde yağ var. Temizliyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.garage.s': "Sadece kriko üzerinde duran bir arabanın altına bakman gerekiyor. Bir iş arkadaşın diyor ki: “Sorun yok, çabuk ol.” Ne yaparsın?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.o1': "Lifti ya da sehpaları beklersin.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.o2': "Altına hızlıca girersin, bacakların dışarıda.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.o3': "İş arkadaşından arabayı tutmasını istersin.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.garage.w': "Kriko kayabilir. Araba çok ağırdır ve altından hızlı çıkamazsın. Sehpalar ya da lift arabayı yerinde tutar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob': "Ek iş mi? Önce müşteriye sor", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.b': "İş emrinde yazandan fazla sorun mu buluyorsun? Onları öylece tamir etme. Müşteri önce ek işi ve masrafları onaylamalı. Amirin ya da servis danışmanı müşteriyi arar. Test sürüşü sadece izinle ve sadece geçerli bir ehliyetle yapılır. Ne yaptığını ve hangi parçaları kullandığını yaz. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.p': "Bir sorun daha görüyorum. Müşteriyi kim arayacak?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.s': "Bir arabanın yağını değiştiriyorsun. Frenler de kötü. Bir saat içinde hazır olmalı. Ne yaparsın?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.carjob.o1': "Müşteriyi araması için amirine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carjob.o2': "Güvenlik için frenleri de tamir edersin.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.carjob.o3': "Hiçbir şey söylemezsin: iş emrinde yoklar.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.carjob.w': "Müşteri öder, bu yüzden müşteri karar verir. Onun onayı olmadan servis öylece ek iş yapamaz. Kötü frenler tehlikelidir, bu yüzden söylemek önemlidir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement': "Önce imzala, sonra başla", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.b': "Entree’de bir şirkette çok şey öğrenirsin: bu senin stajındır (stage ya da bpv). Başlamadan önce sen, okul ve şirket bir sözleşme imzalarsınız: POK. Şirkette işyeri eğitmenin (praktijkopleider) sana yardım eder. Okulda staj danışmanın (stagebegeleider) sana yardım eder. Hasta mısın? Başlama saatinden önce şirketi ara ve okula da haber ver. Kurallar okuldan okula değişir: staj danışmanına sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.p': "Ancak staj sözleşmesi imzalanınca başlarım.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.s': "Şirket yarın başlamanı istiyor. POK daha imzalanmadı. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.o1': "Staj danışmanından önce POK’u halletmesini istersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.o2': "Yarın başlarsın, POK’u vaktin olunca imzalarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.o3': "Başlarsın, ama şimdilik okula bir şey söylemezsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.placement.w': "POK’ta ne öğrendiğin ve sana kimin yardım ettiği yazar. İmzalı bir POK olmadan stajın diploman için sayılmayabilir. Bu yüzden başlamadan önce imzalarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review': "Geri bildirim iste, bir de örnek", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.b': "Stajda insanlar sana neyin iyi gittiğini ve neyin daha iyi olabileceğini söyler: geri bildirim (feedback). Bu normaldir ve öğrenmene yardım eder. Anlamadın mı? Bir örnek iste. Sen de geri bildirim iste, örneğin haftada bir. Stajında gerçekten bir sorun mu var? Önce işyeri eğitmeninle konuş. İşe yaramıyor mu? O zaman okuldaki staj danışmanına git.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.p': "Ne iyi gitti, ne daha iyi olabilir?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.s': "İşyeri eğitmenin diyor ki: “Daha dikkatli çalışman lazım.” Ne demek istediğini bilmiyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.o1': "Neyi farklı yapman gerektiğine dair bir örnek istersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.o2': "Evet dersin ve kendin anlayacağını umarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.o3': "Hiçbir şey ters gitmesin diye bundan sonra çok daha yavaş çalışırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.review.w': "Bir örnekle neyi değiştireceğini bilirsin. Sormak, öğrenmek istediğini gösterir. Eğitmenler bunu sever.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council': "Kim oy verebilir?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.b': "Hollanda’da kimin karar vereceğini oy vererek seçersin. Belediye meclisi (gemeenteraad) senin şehrin hakkında karar verir. Tweede Kamer bütün ülke için yasaları yapar. Hollanda vatandaşlığın varsa 18 yaşından itibaren bütün seçimlerde oy verebilirsin. Belediye meclisi için daha çok kişi oy verebilir. Burada yaşayan başka bir AB ülkesinden insanlar oy verebilir. AB dışından insanlar 5 yıl yasal oturumdan sonra oy verebilir. Belediye (gemeente) sana bir oy kartı (stempas) gönderir. Onu kimliğinle birlikte götür. Oy verip veremeyeceğinden emin değil misin? Belediyeye sor.", // nagelezen AI 22 nov
+    'c.council.p': "Belediye meclisi için oy verebilir miyim?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.s': "Faslısın ve altı yıldır Hollanda vatandaşlığı olmadan burada yasal olarak yaşıyorsun. Hangisi doğru?", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.council.o1': "Belediye meclisi için oy verebilirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.o2': "Tweede Kamer için de oy verebilirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.council.o3': "Hollanda pasaportu olmadan oy veremezsin.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.council.w': "5 yıl yasal oturumdan sonra belediye meclisi için oy verebilirsin. Tweede Kamer için Hollanda vatandaşlığı gerekir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police': "Kimliğin ve hakların", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.b': "14 yaşından itibaren polis isterse kimliğini göstermek zorundasın. Bu yüzden onu hep yanında taşı. Örneğin belediyeden ya da UWV’den bir mektup mu aldın? İçindeki karara katılmıyor musun? O zaman yazılı olarak itiraz edebilirsin (bezwaar maken). Bunu mektuptaki tarihten önce yap. Polis ve hâkim herkese eşit davranmak zorundadır. Gözaltına mı alındın? Avukat isteyebilirsin. Juridisch Loket ücretsiz danışmanlık verir.", // nagelezen AI 22 nov
+    'c.police.p': "Bu karara katılmıyorum. İtiraz ediyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.s': "Belediyeden bir mektup alıyorsun. Onların kararına katılmıyorsun. Mektupta altı haftan olduğu yazıyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.o1': "Tarihten önce bir itiraz mektubu yazarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.o2': "Onları bir kez ararsın ve seni geri aramalarını beklersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.o3': "Beklersin: altı hafta sonra kendiliğinden biter.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.police.w': "İtiraz yazılı olarak, mektuptaki tarihten önce yapılır. O tarihten sonra çoğu zaman çok geçtir. Juridisch Loket onu yazmana yardım edebilir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login': "Girişin sadece senin", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.b': "Şifren ve DigiD’n sadece senin için. Onları kimseye verme, işverenine ya da bir iş arkadaşına bile. Ortak bir bilgisayarda işin bitince her zaman çıkış yap. Kısa bir süre mi uzaklaşıyorsun? Ekranını kilitle. Şifreni mi unuttun? Bilgi işlem bölümünden (ICT-afdeling) yenisini iste. Bilgisayar kuralları şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu bilgi işlem bölümüne sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.p': "Biraz uzaklaşıyorum. Ekranımı kilitliyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.s': "Amirin, evraklarını hızlıca halletmek için DigiD’ni ve şifreni istiyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.o1': "Hayır dersin, o yardım ederken girişi kendin yaparsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.o2': "Bu seferlik verirsin, çünkü o senin şefin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.o3': "Sonra kullanabilsin diye bir kâğıda yazarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.login.w': "DigiD’nle biri vergilerini, yardımlarını ve sağlık belgelerini görüp değiştirebilir. O sadece senin için. Girişi kendin yapıp birinin sana yardım etmesine izin verebilirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish': "Acele ve bir düğme mi? Tıklama", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.b': "Sahte bir e-posta (phishing) çoğu zaman gerçek gibi görünür. Hızlı davranmanı ister: “Hesabınız bugün kapatılacak!” Göndereni kontrol et. Beklemediğin bir bağlantıya tıklama ve beklemediğin bir eki açma. Gerçek siteye ya da uygulamaya kendin git. Yine de tıkladın mı? Şifreni hemen değiştir ve bilgi işlem bölümünü ara. Bu utanılacak bir şey değil: ne kadar erken bilirlerse o kadar iyi. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.p': "Şüpheli bir bağlantıya tıkladım.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.s': "Bir e-postadaki bağlantıya tıkladın ve şifreni yazdın. Sonra e-postanın sahte olduğunu görüyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.o1': "Şifreni değiştirir ve bilgi işlem bölümünü ararsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.o2': "Başka kimse tıklamasın diye e-postayı silersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.o3': "Bir şey ters gidecek mi diye bir gün beklersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.phish.w': "Şifrenle başka biri işinin sistemlerine girebilir. Şifreni hızlıca değiştirip bilgi işlem bölümüne haber verirsen, bunu zamanında durdurabilirler.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice': "Güçlü yönlerin önemli", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.b': "Neyde iyisin? İşi, okulu ve evi düşün. Ailene bakmak, bir yan iş ya da gönüllü çalışma da sayılır. Neyi seversin, neyi sevmezsin? Hangi işin sana uyduğunu bilmiyor musun? Bir gün birinin yanında işe gitmek iste (meeloopdag). Okuldaki danışmanın seçmene yardım edebilir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.p': "İnsanlarla iyi geçinebilirim. Evde çok yardım ederim.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.s': "Okulda sana soruyorlar: “Neyde iyisin?” Hiç maaşlı bir işin olmadı. Ne dersin?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.o1': "Evde iyi yaptığın şeyleri, örneğin başkalarına bakmayı.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.o2': "Henüz bilmediğini, çünkü hiç işin olmadığını.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.o3': "Her işi yapabileceğini, gerçekten her şeyi.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mychoice.w': "Evde kazandığın beceriler de sayılır. Bakım, planlama ve yardım, işverenlerin ihtiyaç duyduğu becerilerdir. Ne yaptığını bir örnekle anlat.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep': "Entree’den sonra: seviye 2 ya da iş", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.b': "Entree diplomasıyla mbo’nun seviye 2’sine geçebilirsin. Seviye 2 ya da daha yüksek bir diploma, temel yeterliliktir (startkwalificatie). İş bulmana ve işini korumana yardım eder. bbl’de bir şirkette çalışır ve haftada yaklaşık bir gün okula gidersin. Bunun için bir işe ya da bir çalış-öğren yerine (leerwerkbaan) ihtiyacın var. Bir açık güne git ve okuldaki danışmanınla konuş.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.p': "Entree’den sonra seviye 2’ye geçebilir miyim?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.s': "Entree diploman var. Bir şirket sana eğitimsiz bir iş teklif ediyor. Sen de öğrenmeye devam etmek istiyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.o1': "Şirkete bbl yeri olup olmadığını sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.o2': "İşi alırsın ve öğrenmeyi tamamen bırakırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.o3': "Bir okul seni arayana kadar evde beklersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.nextstep.w': "bbl ile hem çalışır hem öğrenirsin. Para kazanırsın ve seviye 2 diploması alırsın. Birçok şirket bunu sever.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email': "Kısa bir e-posta: kim, ne, ne zaman", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.b': "İşe yazılan e-posta kısa ve kibardır. Bir selamla başla, örneğin “Beste Karin,”. Sonra ne istediğini ve ne zaman istediğini yaz. Bir selam ve tam adınla bitir. Kısa bir konu yaz, örneğin “Vrij op vrijdag”. Göndermeden önce e-postanı tekrar oku.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.p': "Sevgili Karin, cuma günü izin alabilir miyim? Selamlar, Ali Haddad", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.s': "Gelecek cuma izin istiyorsun. Amirine hangi e-posta en iyisi?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.o1': "“Beste Karin, mag ik vrijdag vrij? Groet, Ali Haddad”", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.o2': "“Vrijdag ben ik er niet.” (selamsız ve adın olmadan).", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.o3': "Haftan hakkında uzun bir e-posta, soru en sonda.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.email.w': "İyi bir e-postada bir selam, net bir soru ve adın olur. Böylece amirin hızlıca cevap verebilir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget': "Önce sabit giderler", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.b': "Maaşını aldığında önce sabit giderleri öde: kira, sigorta ve telefon. Her ay küçük bir miktar biriktirmeye çalış, 10 euro bile olsa. Şimdi al, sonra öde de bir borçtur. İnternetten bir şey mi aldın? O zaman genelde 14 gün içinde vazgeçebilirsin. Fişi sakla: garanti için ona ihtiyacın var.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.p': "Şimdi ödemeyi tercih ederim. Böylece borcum olmaz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.s': "Bugün maaşını alıyorsun. Yeni ayakkabı istiyorsun, kiran da daha ödenmedi. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.o1': "Önce kirayı ödersin, sonra ne kaldığına bakarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.o2': "Ayakkabıları alırsın, kirayı sonra ödersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.o3': "Ayakkabıları “şimdi al, sonra öde” ile alırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.budget.w': "Kira, sigorta ve telefon her ay tekrar gelir. Önce bunları ödersen, ne kadar paran kaldığını bilirsin. Böylece borca girmezsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy': "Uyku, beslenme ve uyuşturucuya hayır", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.healthy.b': "Yeterince uyuduğunda daha iyi ve daha güvenli çalışırsın, geç bir vardiyadan sonra da. Kahvaltı yap ve gün içinde su iç. Molada hareket et, örneğin kısa bir yürüyüş yap. Alkol ya da uyuşturucunun etkisi altında çalışmak tehlikelidir ve çoğu işveren bunu yasaklar. Uzun süredir moralin mi bozuk, ya da içmeyi veya kullanmayı bırakamıyor musun? Aile hekiminle (huisarts) konuş. Sana yardım edebilir ve bunu gizli tutar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.p': "Uzun süredir moralim bozuk. Randevu alabilir miyim?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.s': "Bu gece gece vardiyan var. Bir iş arkadaşın uyanık kalman için sana bir hap veriyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.o1': "Hayır dersin ve vardiyadan önce birkaç saat uyursun.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.o2': "Yarım hap alırsın, bu tehlikeli değil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.o3': "Alırsın, ama işte kimseye söylemezsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.healthy.w': "Bir iş arkadaşından gelen haplar uyuşturucu olabilir. Seni hasta edebilir ya da işte hata yaptırabilir. Uyku, uyanık kalmanın güvenli yoludur.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.food': "Gıdayla çalışmak", // nieuw, nalezen
     'w.mes': "bıçak", // nieuw, nalezen
     'w.snijhandschoen': "kesilmeye dayanıklı eldiven (kesiklere karşı bir eldiven)", // nieuw, nalezen
@@ -1734,14 +1734,14 @@ const t: CultureTranslation = {
     's.food.3': "Dondurucu odada kalın bir mont giyiyorum.", // nieuw, nalezen
     'c.food.q': "Bandı neden şimdi temizliyoruz?", // nieuw, nalezen
     'c.food.a': "Sırada kuruyemişsiz bir ürün var.", // nieuw, nalezen
-    'c.food': "Temiz eller, güvenli gıda", // nieuw, nalezen
-    'c.food.b': "Gıdayla çalışmanın sıkı hijyen kuralları vardır: bone, temiz iş kıyafeti, yıkanmış eller ve takı yok. Bu kurallar herkes için aynıdır. Senin hakkında bir şey söylemezler: yiyeceği, onu yiyecek insanlar için güvenli tutarlar. Bıçakla çalışırken her zaman kesilmeye dayanıklı eldivenini tak. Soğuk bir odada veya dondurucu odada sana verilen sıcak kıyafetleri giy ve molanda ısın. Hasta mısın, ya da elinde bir yara mı var? İşe başlamadan önce bunu bildir. O zaman özel bir yara bandı ya da bir süreliğine başka bir iş alabilirsin. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.food.p': "Elimde küçük bir kesik var. Bir yara bandı alabilir miyim?", // nieuw, nalezen
-    'c.food.s': "Evde parmağını biraz kestin. Bugün etle çalışıyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.food.o1': "Amirine söyler ve bir yara bandı istersin.", // nieuw, nalezen
-    'c.food.o2': "Hiçbir şey söylemezsin: sadece küçük bir kesik.", // nieuw, nalezen
-    'c.food.o3': "Kimse görmesin diye üstüne eldiven giyersin.", // nieuw, nalezen
-    'c.food.w': "Küçük bir yara yiyeceğe mikrop bulaştırabilir. Bildirdiğinde özel bir yara bandı ya da bir süreliğine başka bir iş alabilirsin. Bildirmek normaldir: kimse seni bunun için suçlamaz.", // nieuw, nalezen
+    'c.food': "Temiz eller, güvenli gıda", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.b': "Gıdayla çalışmanın sıkı hijyen kuralları vardır: bone, temiz iş kıyafeti, yıkanmış eller ve takı yok. Bu kurallar herkes için aynıdır. Senin hakkında bir şey söylemezler: yiyeceği, onu yiyecek insanlar için güvenli tutarlar. Bıçakla çalışırken her zaman kesilmeye dayanıklı eldivenini tak. Soğuk bir odada veya dondurucu odada sana verilen sıcak kıyafetleri giy ve molanda ısın. Hasta mısın, ya da elinde bir yara mı var? İşe başlamadan önce bunu bildir. O zaman özel bir yara bandı ya da bir süreliğine başka bir iş alabilirsin. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.p': "Elimde küçük bir kesik var. Bir yara bandı alabilir miyim?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.s': "Evde parmağını biraz kestin. Bugün etle çalışıyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.o1': "Amirine söyler ve bir yara bandı istersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.o2': "Hiçbir şey söylemezsin: sadece küçük bir kesik.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.o3': "Kimse görmesin diye üstüne eldiven giyersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.food.w': "Küçük bir yara yiyeceğe mikrop bulaştırabilir. Bildirdiğinde özel bir yara bandı ya da bir süreliğine başka bir iş alabilirsin. Bildirmek normaldir: kimse seni bunun için suçlamaz.", // nieuw, nalezen // nagelezen AI 22 nov
     'u.delivery': "Taşımacılık ve teslimat", // nieuw, nalezen
     'l.parcel': "Paket teslimatı", // nieuw, nalezen
     'w.pakket': "paket", // nieuw, nalezen
@@ -1767,63 +1767,63 @@ const t: CultureTranslation = {
     's.road.3': "Güzergâhımı ve saatlerimi kim belirliyor?", // nieuw, nalezen
     'c.road.q': "Bugün bir sefer daha yapabilir misin?", // nieuw, nalezen
     'c.road.a': "Hayır, o zaman molama vaktim kalmaz.", // nieuw, nalezen
-    'c.parcel': "Evde yok ya da paket hasarlı", // nieuw, nalezen
-    'c.parcel.b': "Müşteri evde değil mi? Şirketinin kurallarına uy: komşuları dene ya da paketi geri götür. Müşteri istemediyse paketi öylece kapının önüne bırakma. Bir paket hasarlı ya da ıslak mı? Hiçbir sorun yokmuş gibi teslim etme. Kanıt olarak bir fotoğraf çek ve bunu barkod okuyucuda ya da uygulamada bildir. Bir sorun hakkında dürüst olmak, onu saklamaktan her zaman daha iyidir. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.parcel.p': "Bu paket hasarlı. İşte bir fotoğraf.", // nieuw, nalezen
-    'c.parcel.s': "Müşteri evde değil, komşular da yok. Ne yaparsın?", // nieuw, nalezen
-    'c.parcel.o1': "“Evde yok” diye okutur ve paketi geri götürürsün.", // nieuw, nalezen
-    'c.parcel.o2': "“Teslim edildi” diye okutur ve kapının önüne bırakırsın.", // nieuw, nalezen
-    'c.parcel.o3': "Kimse görmesin diye çöp kutusunun arkasına saklarsın.", // nieuw, nalezen
-    'c.parcel.w': "“Teslim edildi” diye okutulan bir paket gerçekten müşteride olmalıdır. Gerçekte ne olduysa onu okutursan, müşteri paketi sonra alabilir ve kimse onu kaybettiğini düşünmez.", // nieuw, nalezen
-    'c.road': "Yolda güvenlik ve adil çalışma", // nieuw, nalezen
-    'c.road.b': "Araç sürerken telefonunu asla elinde tutma: bu yasaktır. Navigasyon için bir telefon tutucu kullan. Yoğun bir günde de molalarını ver. Ağır bir paket mi? Yük arabasını kullan ya da birlikte kaldırın. Buz ya da kar mı var? Yavaş sür: geç varmak kazadan iyidir. Bazı şirketler serbest çalışan (zelfstandig) olarak çalıştığını söyler. Ama saatlerini, güzergâhını ve kıyafetlerini kim belirliyor? Bunların hepsini şirket belirliyorsa, aslında maaşlı çalışan (in loondienst) olabilirsin. O zaman çoğu zaman daha fazla hakkın olur, örneğin hastayken ücret almak. Bu konuda daha fazlası “Belgeler, uyum ve işin” dersinde. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.", // nieuw, nalezen
-    'c.road.p': "Şimdi molamı veriyorum. Sonra yoluma devam edeceğim.", // nieuw, nalezen
-    'c.road.s': "Şirket sana serbest çalışan diyor. Ama saatlerini, güzergâhını ve kıyafetlerini o belirliyor. Ne yaparsın?", // nieuw, nalezen
-    'c.road.o1': "Tavsiye istersin: belki de maaşlı çalışansın.", // nieuw, nalezen
-    'c.road.o2': "Hiçbir şey yapmazsın: sözleşmede serbest çalışan yazıyor, o hâlde öyledir.", // nieuw, nalezen
-    'c.road.o3': "Aynı parayı kazanmak için daha çok saat çalışırsın.", // nieuw, nalezen
-    'c.road.w': "Önemli olan, sadece sözleşmedeki kelime değil, gerçekte nasıl çalıştığındır. Şirket nasıl, ne zaman ve nerede çalışacağını belirliyorsa, çoğu zaman maaşlı çalışansın. O zaman daha fazla hakkın olur.", // nieuw, nalezen
-    'l.feelwell': "İşte iyi hissetmek", // nieuw, nalezen
-    'w.werkdruk': "iş yükü baskısı (az zamanda çok iş)", // nieuw, nalezen
-    'w.wakkerliggen': "uyanık yatmak (uyuyamıyorsun)", // nieuw, nalezen
-    'w.ploegendienst': "vardiyalı çalışma (sırayla sabah, akşam ve gece vardiyası)", // nieuw, nalezen
-    'w.heimwee': "sıla hasreti (evini özlemek)", // nieuw, nalezen
-    'w.familie': "aile", // nieuw, nalezen
-    'w.alleen': "yalnız", // nieuw, nalezen
-    's.feelwell.1': "Vardiyalı çalışma yüzünden kötü uyuyorum.", // nieuw, nalezen
-    's.feelwell.2': "Çok fazla. Tek başıma başaramıyorum.", // nieuw, nalezen
-    's.feelwell.3': "Memleketimi özledim. Ailem çok uzakta.", // nieuw, nalezen
-    'c.feelwell.q': "İyi misin?", // nieuw, nalezen
-    'c.feelwell.a': "Pek iyi değil. Geceleri sık sık uyuyamıyorum.", // nieuw, nalezen
-    'c.feelwell': "Çok mu fazla? Tek başına yapmak zorunda değilsin", // nieuw, nalezen
-    'c.feelwell.b': "Herkes bazen yorgun, stresli ya da üzgün hisseder. Çok fazla iş (werkdruk), vardiyalı çalışma yüzünden kötü uyku ya da aileni özlemek her şeyi ağırlaştırabilir. Bunu tek başına taşımak zorunda değilsin ve “bu çok fazla” demek zayıflık değildir. Güvendiğin biriyle konuş. Örneğin amirin, işyeri hekimi (bedrijfsarts) ya da aile hekimin (huisarts). Ya da şirketinde varsa güven danışmanı (vertrouwenspersoon). İşyeri hekimiyle bir görüşmeyi kendin de isteyebilirsin. Doktorlar ne söylediğini patronuna anlatmaz. İntihar etmeyi mi düşünüyorsun, ya da biri için endişeleniyor musun? 113’ü ara (ücretsiz, gece gündüz) ya da 113.nl’de sohbet et.",
-    'c.feelwell.p': "Pek iyi değilim. Seninle biraz konuşabilir miyim?", // nieuw, nalezen
-    'c.feelwell.s': "Haftalardır kötü uyuyorsun ve iş çok fazla. Kendini çok yorgun hissediyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.feelwell.o1': "Amirine ya da işyeri hekimine söylersin.", // nieuw, nalezen
-    'c.feelwell.o2': "Hiçbir şey söylemez, daha çok ve daha hızlı çalışırsın.", // nieuw, nalezen
-    'c.feelwell.o3': "Evde kalır, kimseye nedenini söylemezsin.", // nieuw, nalezen
-    'c.feelwell.w': "Bunu erken söylemek zayıflık değildir. O zaman birlikte bir çıkış yolu arayabilirsiniz, örneğin başka vardiyalar. Bunu tek başına yapmak zorunda değilsin.", // nieuw, nalezen
-    'u.sick': "Hastalık", // nieuw, nalezen
-    'l.backtowork': "Hastalıktan sonra işe dönüş", // nieuw, nalezen
-    'w.opbouwen': "kademeli artırmak (yavaş yavaş, adım adım)", // nieuw, nalezen
-    'w.halvedagen': "yarım günler (günün sadece bir kısmında çalışırsın)", // nieuw, nalezen
-    'w.lichtwerk': "hafif iş (ağır olmayan)", // nieuw, nalezen
-    'w.zwaarwerk': "ağır iş", // nieuw, nalezen
-    'w.herstellen': "iyileşmek, yeniden sağlığına kavuşmak", // nieuw, nalezen
-    'w.welkomterug': "tekrar hoş geldin", // nieuw, nalezen
-    's.backtowork.1': "Yarım günlerle başlıyorum.", // nieuw, nalezen
-    's.backtowork.2': "Hafif işi artık yapabiliyorum. Ağır işi henüz değil.", // nieuw, nalezen
-    's.backtowork.3': "İşyeri hekimi diyor ki: yavaş yavaş artır.", // nieuw, nalezen
-    'c.backtowork.q': "Tekrar hoş geldin! Daha iyi misin?", // nieuw, nalezen
-    'c.backtowork.a': "Evet, daha iyiyim. Kendimi zorlamıyorum.", // nieuw, nalezen
-    'c.backtowork': "Adım adım geri dönmek", // nieuw, nalezen
-    'c.backtowork.b': "İyileştin mi? İşverenine yeniden çalışabileceğini bildir (betermelden). Daha uzun bir hastalıktan sonra çoğu zaman adım adım başlarsın: önce daha az saat ya da daha hafif iş. İşyeri hekimi (bedrijfsarts) neler yapabileceğin konusunda tavsiye verir. Daha uzun süre mi hastaydın? O zaman sen ve işverenin dönüşün için birlikte bir plan yaparsınız. Bu yasadır (Wet verbetering poortwachter). Neler yapabildiğini ve neleri henüz yapamadığını açıkça söyle. Hangi hastalığı geçirdiğini iş arkadaşlarına söylemek zorunda değilsin. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
-    'c.backtowork.p': "Bunu artık yapabiliyorum. Şunu henüz yapamıyorum.", // nieuw, nalezen
-    'c.backtowork.s': "Üç hafta hastaydın. Döndüğün ilk gün amirin senden ağır kutuları kaldırmanı istiyor. İşyeri hekimi dedi ki: şimdilik sadece hafif iş. Ne yaparsın?", // nieuw, nalezen
-    'c.backtowork.o1': "Şimdi hafif iş yapabildiğini ve neyi henüz yapamadığını sakince söylersin.", // nieuw, nalezen
-    'c.backtowork.o2': "Yine de kutuları kaldırırsın: zorluk çıkarmak istemiyorsun.", // nieuw, nalezen
-    'c.backtowork.o3': "Tek kelime etmeden eve gidersin.", // nieuw, nalezen
-    'c.backtowork.w': "Amirin geri dönmeni istiyor, hem de sağlıklı olarak. Neler yapabildiğini açıkça söylersen, işi planlayabilir. Çok erken çok fazla iş yapmak seni yeniden hasta edebilir.", // nieuw, nalezen
+    'c.parcel': "Evde yok ya da paket hasarlı", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.b': "Müşteri evde değil mi? Şirketinin kurallarına uy: komşuları dene ya da paketi geri götür. Müşteri istemediyse paketi öylece kapının önüne bırakma. Bir paket hasarlı ya da ıslak mı? Hiçbir sorun yokmuş gibi teslim etme. Kanıt olarak bir fotoğraf çek ve bunu barkod okuyucuda ya da uygulamada bildir. Bir sorun hakkında dürüst olmak, onu saklamaktan her zaman daha iyidir. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.p': "Bu paket hasarlı. İşte bir fotoğraf.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.s': "Müşteri evde değil, komşular da yok. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.o1': "“Evde yok” diye okutur ve paketi geri götürürsün.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.o2': "“Teslim edildi” diye okutur ve kapının önüne bırakırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.o3': "Kimse görmesin diye çöp kutusunun arkasına saklarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.parcel.w': "“Teslim edildi” diye okutulan bir paket gerçekten müşteride olmalıdır. Gerçekte ne olduysa onu okutursan, müşteri paketi sonra alabilir ve kimse onu kaybettiğini düşünmez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road': "Yolda güvenlik ve adil çalışma", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.b': "Araç sürerken telefonunu asla elinde tutma: bu yasaktır. Navigasyon için bir telefon tutucu kullan. Yoğun bir günde de molalarını ver. Ağır bir paket mi? Yük arabasını kullan ya da birlikte kaldırın. Buz ya da kar mı var? Yavaş sür: geç varmak kazadan iyidir. Bazı şirketler serbest çalışan (zelfstandig) olarak çalıştığını söyler. Ama saatlerini, güzergâhını ve kıyafetlerini kim belirliyor? Bunların hepsini şirket belirliyorsa, aslında maaşlı çalışan (in loondienst) olabilirsin. O zaman çoğu zaman daha fazla hakkın olur, örneğin hastayken ücret almak. Bu konuda daha fazlası “Belgeler, uyum ve işin” dersinde. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.p': "Şimdi molamı veriyorum. Sonra yoluma devam edeceğim.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.s': "Şirket sana serbest çalışan diyor. Ama saatlerini, güzergâhını ve kıyafetlerini o belirliyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.o1': "Tavsiye istersin: belki de maaşlı çalışansın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.o2': "Hiçbir şey yapmazsın: sözleşmede serbest çalışan yazıyor, o hâlde öyledir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.o3': "Aynı parayı kazanmak için daha çok saat çalışırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.road.w': "Önemli olan, sadece sözleşmedeki kelime değil, gerçekte nasıl çalıştığındır. Şirket nasıl, ne zaman ve nerede çalışacağını belirliyorsa, çoğu zaman maaşlı çalışansın. O zaman daha fazla hakkın olur.", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.feelwell': "İşte iyi hissetmek", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.werkdruk': "iş yükü baskısı (az zamanda çok iş)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.wakkerliggen': "uyanık yatmak (uyuyamıyorsun)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ploegendienst': "vardiyalı çalışma (sırayla sabah, akşam ve gece vardiyası)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.heimwee': "sıla hasreti (evini özlemek)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.familie': "aile", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alleen': "yalnız", // nieuw, nalezen // nagelezen AI 22 nov
+    's.feelwell.1': "Vardiyalı çalışma yüzünden kötü uyuyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.feelwell.2': "Çok fazla. Tek başıma başaramıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.feelwell.3': "Memleketimi özledim. Ailem çok uzakta.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.q': "İyi misin?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.a': "Pek iyi değil. Geceleri sık sık uyuyamıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell': "Çok mu fazla? Tek başına yapmak zorunda değilsin", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.b': "Herkes bazen yorgun, stresli ya da üzgün hisseder. Çok fazla iş (werkdruk), vardiyalı çalışma yüzünden kötü uyku ya da aileni özlemek her şeyi ağırlaştırabilir. Bunu tek başına taşımak zorunda değilsin ve “bu çok fazla” demek zayıflık değildir. Güvendiğin biriyle konuş. Örneğin amirin, işyeri hekimi (bedrijfsarts) ya da aile hekimin (huisarts). Ya da şirketinde varsa güven danışmanı (vertrouwenspersoon). İşyeri hekimiyle bir görüşmeyi kendin de isteyebilirsin. Doktorlar ne söylediğini patronuna anlatmaz. İntihar etmeyi mi düşünüyorsun, ya da biri için endişeleniyor musun? 113’ü ara (ücretsiz, gece gündüz) ya da 113.nl’de sohbet et.", // nagelezen AI 22 nov
+    'c.feelwell.p': "Pek iyi değilim. Seninle biraz konuşabilir miyim?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.s': "Haftalardır kötü uyuyorsun ve iş çok fazla. Kendini çok yorgun hissediyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.o1': "Amirine ya da işyeri hekimine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.o2': "Hiçbir şey söylemez, daha çok ve daha hızlı çalışırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.o3': "Evde kalır, kimseye nedenini söylemezsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.feelwell.w': "Bunu erken söylemek zayıflık değildir. O zaman birlikte bir çıkış yolu arayabilirsiniz, örneğin başka vardiyalar. Bunu tek başına yapmak zorunda değilsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'u.sick': "Hastalık", // nieuw, nalezen // nagelezen AI 22 nov
+    'l.backtowork': "Hastalıktan sonra işe dönüş", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.opbouwen': "kademeli artırmak (yavaş yavaş, adım adım)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.halvedagen': "yarım günler (günün sadece bir kısmında çalışırsın)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.lichtwerk': "hafif iş (ağır olmayan)", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.zwaarwerk': "ağır iş", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.herstellen': "iyileşmek, yeniden sağlığına kavuşmak", // nieuw, nalezen // nagelezen AI 22 nov
+    'w.welkomterug': "tekrar hoş geldin", // nieuw, nalezen // nagelezen AI 22 nov
+    's.backtowork.1': "Yarım günlerle başlıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.backtowork.2': "Hafif işi artık yapabiliyorum. Ağır işi henüz değil.", // nieuw, nalezen // nagelezen AI 22 nov
+    's.backtowork.3': "İşyeri hekimi diyor ki: yavaş yavaş artır.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.q': "Tekrar hoş geldin! Daha iyi misin?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.a': "Evet, daha iyiyim. Kendimi zorlamıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork': "Adım adım geri dönmek", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.b': "İyileştin mi? İşverenine yeniden çalışabileceğini bildir (betermelden). Daha uzun bir hastalıktan sonra çoğu zaman adım adım başlarsın: önce daha az saat ya da daha hafif iş. İşyeri hekimi (bedrijfsarts) neler yapabileceğin konusunda tavsiye verir. Daha uzun süre mi hastaydın? O zaman sen ve işverenin dönüşün için birlikte bir plan yaparsınız. Bu yasadır (Wet verbetering poortwachter). Neler yapabildiğini ve neleri henüz yapamadığını açıkça söyle. Hangi hastalığı geçirdiğini iş arkadaşlarına söylemek zorunda değilsin. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.p': "Bunu artık yapabiliyorum. Şunu henüz yapamıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.s': "Üç hafta hastaydın. Döndüğün ilk gün amirin senden ağır kutuları kaldırmanı istiyor. İşyeri hekimi dedi ki: şimdilik sadece hafif iş. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.o1': "Şimdi hafif iş yapabildiğini ve neyi henüz yapamadığını sakince söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.o2': "Yine de kutuları kaldırırsın: zorluk çıkarmak istemiyorsun.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.o3': "Tek kelime etmeden eve gidersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.backtowork.w': "Amirin geri dönmeni istiyor, hem de sağlıklı olarak. Neler yapabildiğini açıkça söylersen, işi planlayabilir. Çok erken çok fazla iş yapmak seni yeniden hasta edebilir.", // nieuw, nalezen // nagelezen AI 22 nov
 
     'l.measure': "Ölçmek", // nieuw, nalezen
     'w.rolmaat': "şerit metre", // nieuw, nalezen
@@ -1837,14 +1837,14 @@ const t: CultureTranslation = {
     's.measure.3': "İki kez ölçüyorum.", // nieuw, nalezen
     'c.measure.q': "Genişliği ne kadar olmalı?", // nieuw, nalezen
     'c.measure.a': "Doksan santimetre. Not alıyorum.", // nieuw, nalezen
-    'c.measure': "İki kez ölç, bir kez kes", // nieuw, nalezen
-    'c.measure.b': "Şantiyede ölçüler çoğu zaman milimetre olarak söylenir. Yani “dokuz yüz”, 90 santimetre demek olabilir. Emin değil misin? Sor: “Bu milimetre mi, santimetre mi?” Sayıyı tekrar et ve yaz. Kesmeden ya da delmeden önce iki kez ölç: kısa kesilen tahta kısa kalır. Hata mı yaptın? Hemen söyle. O zaman ekip bunu hâlâ düzeltebilir ve daha ucuza gelir.", // nieuw, nalezen
-    'c.measure.p': "Bu milimetre mi, santimetre mi?", // nieuw, nalezen
-    'c.measure.s': "İş arkadaşın bir ölçü söylüyor. İyi duymadın. Ne yaparsın?", // nieuw, nalezen
-    'c.measure.o1': "Sayıyı tekrar eder ve doğru mu diye sorarsın.", // nieuw, nalezen
-    'c.measure.o2': "Tahtayı, duyduğunu sandığın ölçüye göre kesersin.", // nieuw, nalezen
-    'c.measure.o3': "Kendisi gelip bakana kadar beklersin.", // nieuw, nalezen
-    'c.measure.w': "Yanlış bir ölçü malzeme ve zaman kaybettirir. Sayıyı tekrar etmek iki saniye sürer ve şantiyede herkes bunu yapar.", // nieuw, nalezen
+    'c.measure': "İki kez ölç, bir kez kes", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.b': "Şantiyede ölçüler çoğu zaman milimetre olarak söylenir. Yani “dokuz yüz”, 90 santimetre demek olabilir. Emin değil misin? Sor: “Bu milimetre mi, santimetre mi?” Sayıyı tekrar et ve yaz. Kesmeden ya da delmeden önce iki kez ölç: kısa kesilen tahta kısa kalır. Hata mı yaptın? Hemen söyle. O zaman ekip bunu hâlâ düzeltebilir ve daha ucuza gelir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.p': "Bu milimetre mi, santimetre mi?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.s': "İş arkadaşın bir ölçü söylüyor. İyi duymadın. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.o1': "Sayıyı tekrar eder ve doğru mu diye sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.o2': "Tahtayı, duyduğunu sandığın ölçüye göre kesersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.o3': "Kendisi gelip bakana kadar beklersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.measure.w': "Yanlış bir ölçü malzeme ve zaman kaybettirir. Sayıyı tekrar etmek iki saniye sürer ve şantiyede herkes bunu yapar.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.siteday': "Düzenli bir şantiye", // nieuw, nalezen
     'w.bouwplaats': "şantiye", // nieuw, nalezen
     'w.uitvoerder': "şantiye şefi (şantiyedeki amir)", // nieuw, nalezen
@@ -1857,14 +1857,14 @@ const t: CultureTranslation = {
     's.siteday.3': "Dikkat, burada ayağın takılabilir.", // nieuw, nalezen
     'c.siteday.q': "Bu tahtalar nereye gidecek?", // nieuw, nalezen
     'c.siteday.a': "Girişteki konteynere.", // nieuw, nalezen
-    'c.siteday': "Düzenli şantiye, güvenli şantiyedir", // nieuw, nalezen
-    'c.siteday.b': "Şantiyede ortalığı toplamak işin bir parçasıdır, herkes için. Ortada duran tahtalar, kablolar ve atıklar insanların takılıp düşmesine yol açar. Bu yüzden kendi yerini sadece gün sonunda değil, gün içinde de topla. Atıklar ayrılır: ahşap, taş ve metal çoğu zaman ayrı konteynerlere gider. Hangisi olduğundan emin değil misin? Sor. Dışarı çıkmış bir çivi ya da kapağı olmayan bir çukur mu görüyorsun? Güvenli bir şekilde yapabiliyorsan düzelt, ya da şantiye şefine (de uitvoerder) söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.siteday.p': "Burayı topluyorum. Böylece kimse takılıp düşmez.", // nieuw, nalezen
-    'c.siteday.s': "Yolun üstünde çivili tahtalar duruyor. Senin değiller. Ne yaparsın?", // nieuw, nalezen
-    'c.siteday.o1': "Onları kenara çekersin ya da şantiye şefine söylersin.", // nieuw, nalezen
-    'c.siteday.o2': "Üstlerinden atlarsın: senin tahtaların değil.", // nieuw, nalezen
-    'c.siteday.o3': "Beklersin: başka biri toplar.", // nieuw, nalezen
-    'c.siteday.w': "Herkes aynı yolları kullanır. Tehlikeyi gören bir şey yapar: şantiyede bu normaldir.", // nieuw, nalezen
+    'c.siteday': "Düzenli şantiye, güvenli şantiyedir", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.b': "Şantiyede ortalığı toplamak işin bir parçasıdır, herkes için. Ortada duran tahtalar, kablolar ve atıklar insanların takılıp düşmesine yol açar. Bu yüzden kendi yerini sadece gün sonunda değil, gün içinde de topla. Atıklar ayrılır: ahşap, taş ve metal çoğu zaman ayrı konteynerlere gider. Hangisi olduğundan emin değil misin? Sor. Dışarı çıkmış bir çivi ya da kapağı olmayan bir çukur mu görüyorsun? Güvenli bir şekilde yapabiliyorsan düzelt, ya da şantiye şefine (de uitvoerder) söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.p': "Burayı topluyorum. Böylece kimse takılıp düşmez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.s': "Yolun üstünde çivili tahtalar duruyor. Senin değiller. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.o1': "Onları kenara çekersin ya da şantiye şefine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.o2': "Üstlerinden atlarsın: senin tahtaların değil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.o3': "Beklersin: başka biri toplar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.siteday.w': "Herkes aynı yolları kullanır. Tehlikeyi gören bir şey yapar: şantiyede bu normaldir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.shifts': "Vardiyanı devretmek", // nieuw, nalezen
     'w.vroegedienst': "sabah vardiyası", // nieuw, nalezen
     'w.latedienst': "akşam vardiyası", // nieuw, nalezen
@@ -1877,14 +1877,14 @@ const t: CultureTranslation = {
     's.shifts.3': "İki numaralı makine arıza yaptı.", // nieuw, nalezen
     'c.shifts.q': "Vardiyanda bir şey oldu mu?", // nieuw, nalezen
     'c.shifts.a': "Evet. Bant yarım saat durdu.", // nieuw, nalezen
-    'c.shifts': "Sonraki vardiyaya anlat", // nieuw, nalezen
-    'c.shifts.b': "Bir fabrika çoğu zaman gece gündüz, vardiyalarla çalışır. Vardiyanın sonunda yerini bir iş arkadaşın alır. Öylece gitme: iş arkadaşın gelene kadar bekle. Ne olduğunu birkaç kelimeyle anlat: bir arıza, hatalı bir ürün, bitmemiş bir iş. Birçok şirkette bunun için bir liste ya da ekran da vardır. Aktarmadığın bir sorun sonraki vardiyada geri gelir ve o zaman kimse nedenini bilmez. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.shifts.p': "Makine arıza yaptı. Şimdi yine çalışıyor.", // nieuw, nalezen
-    'c.shifts.s': "Vardiyan bitti. İş arkadaşın beş dakika gecikti. Ne yaparsın?", // nieuw, nalezen
-    'c.shifts.o1': "Beklersin ve ekip liderine haber verirsin.", // nieuw, nalezen
-    'c.shifts.o2': "Eve gidersin: vardiyan bitti.", // nieuw, nalezen
-    'c.shifts.o3': "Makineyi durdurur ve gidersin.", // nieuw, nalezen
-    'c.shifts.w': "Çalışan bir makine tek başına bırakılamaz. Bekleyip haber verirsen iş güvenli şekilde devam eder ve ekip lideri sorunu çözebilir.", // nieuw, nalezen
+    'c.shifts': "Sonraki vardiyaya anlat", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.b': "Bir fabrika çoğu zaman gece gündüz, vardiyalarla çalışır. Vardiyanın sonunda yerini bir iş arkadaşın alır. Öylece gitme: iş arkadaşın gelene kadar bekle. Ne olduğunu birkaç kelimeyle anlat: bir arıza, hatalı bir ürün, bitmemiş bir iş. Birçok şirkette bunun için bir liste ya da ekran da vardır. Aktarmadığın bir sorun sonraki vardiyada geri gelir ve o zaman kimse nedenini bilmez. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.p': "Makine arıza yaptı. Şimdi yine çalışıyor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.s': "Vardiyan bitti. İş arkadaşın beş dakika gecikti. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.o1': "Beklersin ve ekip liderine haber verirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.o2': "Eve gidersin: vardiyan bitti.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.o3': "Makineyi durdurur ve gidersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shifts.w': "Çalışan bir makine tek başına bırakılamaz. Bekleyip haber verirsen iş güvenli şekilde devam eder ve ekip lideri sorunu çözebilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.signals': "Gördüğünü söyle", // nieuw, nalezen
     'w.duizelig': "başı dönen", // nieuw, nalezen
     'w.misselijk': "midesi bulanan (kusacak gibi hissedersin)", // nieuw, nalezen
@@ -1897,14 +1897,14 @@ const t: CultureTranslation = {
     's.signals.3': "Gelip bir bakabilir misin?", // nieuw, nalezen
     'c.signals.q': "Bay Jansen nasıl?", // nieuw, nalezen
     'c.signals.a': "Kafası karışık. Bu dünkünden farklı.", // nieuw, nalezen
-    'c.signals': "Danışanı her gün sen görürsün", // nieuw, nalezen
-    'c.signals.b': "Çoğu zaman bir danışanı en çok gören kişi sensin. Bu yüzden bir şey farklı olduğunda ilk sen fark edersin: daha az yemek, daha çok ağrı, kafa karışıklığı, nefes darlığı. Ne olduğunu bilmek zorunda değilsin. Ne gördüğünü ve ne zaman gördüğünü söyle. Aynı gün hemşireye anlat ve görevinse yaz. Ciddi mi görünüyor? Bekleme: hemen hemşireyi ara. Bir kez fazla haber vermek, bir kez eksik haber vermekten iyidir.", // nieuw, nalezen
-    'c.signals.p': "Hanımefendi yemek yemiyor ve başı dönüyor. Bu normalden farklı.", // nieuw, nalezen
-    'c.signals.s': "Bir danışan bugün sessiz ve yemek yemek istemiyor. Normalde çok konuşur. Ne yaparsın?", // nieuw, nalezen
-    'c.signals.o1': "Gördüğünü bugün hemşireye söylersin.", // nieuw, nalezen
-    'c.signals.o2': "Birkaç gün beklersin: belki geçer.", // nieuw, nalezen
-    'c.signals.o3': "Ona dolaptan bir hap verirsin.", // nieuw, nalezen
-    'c.signals.w': "Küçük bir değişiklik bir hastalığın ilk işareti olabilir. Ne olduğuna sen karar vermezsin: hemşire karar verir. Ama ancak sen söylersen bir şey yapabilir.", // nieuw, nalezen
+    'c.signals': "Danışanı her gün sen görürsün", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.b': "Çoğu zaman bir danışanı en çok gören kişi sensin. Bu yüzden bir şey farklı olduğunda ilk sen fark edersin: daha az yemek, daha çok ağrı, kafa karışıklığı, nefes darlığı. Ne olduğunu bilmek zorunda değilsin. Ne gördüğünü ve ne zaman gördüğünü söyle. Aynı gün hemşireye anlat ve görevinse yaz. Ciddi mi görünüyor? Bekleme: hemen hemşireyi ara. Bir kez fazla haber vermek, bir kez eksik haber vermekten iyidir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.p': "Hanımefendi yemek yemiyor ve başı dönüyor. Bu normalden farklı.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.s': "Bir danışan bugün sessiz ve yemek yemek istemiyor. Normalde çok konuşur. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.o1': "Gördüğünü bugün hemşireye söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.o2': "Birkaç gün beklersin: belki geçer.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.o3': "Ona dolaptan bir hap verirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.signals.w': "Küçük bir değişiklik bir hastalığın ilk işareti olabilir. Ne olduğuna sen karar vermezsin: hemşire karar verir. Ama ancak sen söylersen bir şey yapabilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.transfer': "Birinin kalkmasına yardım etmek", // nieuw, nalezen
     'w.tillift': "kaldırma lifti (insanı kaldıran bir makine)", // nieuw, nalezen
     'w.rollator': "tekerlekli yürüteç", // nieuw, nalezen
@@ -1917,14 +1917,14 @@ const t: CultureTranslation = {
     's.transfer.3': "Önce kaldırma liftini getiriyorum.", // nieuw, nalezen
     'c.transfer.q': "Hanımefendiyi yataktan kaldırabilir misin?", // nieuw, nalezen
     'c.transfer.a': "Tek başıma olmaz. Kaldırma liftini getiriyorum.", // nieuw, nalezen
-    'c.transfer': "Önce söyle, sonra yardım et", // nieuw, nalezen
-    'c.transfer.b': "Bir danışana dokunmadan önce ne yapacağını söyle: “Ik help u nu met opstaan.” O zaman danışan korkmaz ve sana yardımcı olabilir. Danışanın hâlâ yapabildiği şeyleri kendisinin yapmasına izin ver: bu onu güçlü tutar. Bir insanı tek başına kaldırma. Orada bulunan yardımcı araçları, örneğin kaldırma liftini kullan ve sana gösterildiği gibi çalış. Henüz gösterilmedi mi? Önce sor. Belin bütün çalışma hayatın boyunca sana lazım. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.transfer.p': "Şimdi kalkmanıza yardım edeceğim. Hazır mısınız?", // nieuw, nalezen
-    'c.transfer.s': "Bir danışan yataktan kalkmak istiyor. Kaldırma liftini kullanmayı henüz öğrenmedin. Ne yaparsın?", // nieuw, nalezen
-    'c.transfer.o1': "Lifti bilen bir iş arkadaşına sorarsın.", // nieuw, nalezen
-    'c.transfer.o2': "Onu kendin kaldırırsın: ağır değil.", // nieuw, nalezen
-    'c.transfer.o3': "Lifti denersin: zor olamaz.", // nieuw, nalezen
-    'c.transfer.w': "Bir insanı yanlış kaldırmak danışana da senin beline de zarar verebilir. Bir iş arkadaşına sormak birkaç dakika sürer. Bir düşme aylar sürebilir.", // nieuw, nalezen
+    'c.transfer': "Önce söyle, sonra yardım et", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.b': "Bir danışana dokunmadan önce ne yapacağını söyle: “Ik help u nu met opstaan.” O zaman danışan korkmaz ve sana yardımcı olabilir. Danışanın hâlâ yapabildiği şeyleri kendisinin yapmasına izin ver: bu onu güçlü tutar. Bir insanı tek başına kaldırma. Orada bulunan yardımcı araçları, örneğin kaldırma liftini kullan ve sana gösterildiği gibi çalış. Henüz gösterilmedi mi? Önce sor. Belin bütün çalışma hayatın boyunca sana lazım. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.p': "Şimdi kalkmanıza yardım edeceğim. Hazır mısınız?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.s': "Bir danışan yataktan kalkmak istiyor. Kaldırma liftini kullanmayı henüz öğrenmedin. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.o1': "Lifti bilen bir iş arkadaşına sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.o2': "Onu kendin kaldırırsın: ağır değil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.o3': "Lifti denersin: zor olamaz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.transfer.w': "Bir insanı yanlış kaldırmak danışana da senin beline de zarar verebilir. Bir iş arkadaşına sormak birkaç dakika sürer. Bir düşme aylar sürebilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.dishes': "Bulaşık yıkamak", // nieuw, nalezen
     'w.afwas': "bulaşık", // nieuw, nalezen
     'w.vaatwasser': "bulaşık makinesi", // nieuw, nalezen
@@ -1937,14 +1937,14 @@ const t: CultureTranslation = {
     's.dishes.3': "Temiz çatal bıçak kalmadı.", // nieuw, nalezen
     'c.dishes.q': "Temiz bardak kaldı mı?", // nieuw, nalezen
     'c.dishes.a': "Evet, hemen getiriyorum.", // nieuw, nalezen
-    'c.dishes': "Cam kırıldı: hemen söyle", // nieuw, nalezen
-    'c.dishes.b': "Mutfakta cam kırılır. Bu normaldir ve kimse buna kızmaz. Ama hemen, yüksek sesle ve açıkça söyle: “Glas!” Parçaları çıplak elle toplama: fırça kullan. Cam yiyeceğin yakınına ya da buzun içine mi düştü? O zaman o yiyecek ya da o buz atılmalıdır, hepsi. Yemeğin içindeki küçük bir cam parçası misafir için çok tehlikelidir. Cam kendi kutusuna atılır, birinin kaldıracağı bir torbaya değil. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.dishes.p': "Dikkat, cam! Hemen topluyorum.", // nieuw, nalezen
-    'c.dishes.s': "İçecekler için olan buzun üstünde bir bardak kırılıyor. Çok yoğun. Ne yaparsın?", // nieuw, nalezen
-    'c.dishes.o1': "Söylersin ve bütün buzu atarsın.", // nieuw, nalezen
-    'c.dishes.o2': "Görebildiğin parçaları çıkarırsın.", // nieuw, nalezen
-    'c.dishes.o3': "Hiçbir şey söylemezsin: şimdi çok yoğun.", // nieuw, nalezen
-    'c.dishes.w': "Buzun içindeki küçük cam parçalarını göremezsin. Yeni buz az paraya mal olur. İçeceğinde cam olan bir misafir ciddi şekilde yaralanabilir.", // nieuw, nalezen
+    'c.dishes': "Cam kırıldı: hemen söyle", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.b': "Mutfakta cam kırılır. Bu normaldir ve kimse buna kızmaz. Ama hemen, yüksek sesle ve açıkça söyle: “Glas!” Parçaları çıplak elle toplama: fırça kullan. Cam yiyeceğin yakınına ya da buzun içine mi düştü? O zaman o yiyecek ya da o buz atılmalıdır, hepsi. Yemeğin içindeki küçük bir cam parçası misafir için çok tehlikelidir. Cam kendi kutusuna atılır, birinin kaldıracağı bir torbaya değil. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.p': "Dikkat, cam! Hemen topluyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.s': "İçecekler için olan buzun üstünde bir bardak kırılıyor. Çok yoğun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.o1': "Söylersin ve bütün buzu atarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.o2': "Görebildiğin parçaları çıkarırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.o3': "Hiçbir şey söylemezsin: şimdi çok yoğun.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.dishes.w': "Buzun içindeki küçük cam parçalarını göremezsin. Yeni buz az paraya mal olur. İçeceğinde cam olan bir misafir ciddi şekilde yaralanabilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.rush': "İş yoğunken", // nieuw, nalezen
     'w.heet': "sıcak, kızgın", // nieuw, nalezen
     'w.chef': "şef (mutfağın amiri)", // nieuw, nalezen
@@ -1957,14 +1957,14 @@ const t: CultureTranslation = {
     's.rush.3': "Bunu terasa götürüyorum.", // nieuw, nalezen
     'c.rush.q': "Dört numaralı masaya bakabilir misin?", // nieuw, nalezen
     'c.rush.a': "Evet, şef. Geliyorum.", // nieuw, nalezen
-    'c.rush': "İş yoğunken kısa sözler", // nieuw, nalezen
-    'c.rush.b': "İş yoğunken mutfakta insanlar kısa sözlerle konuşur: “Heet!”, “Achter!”, “Tafel zes!” Bu kabalık değildir. Hızlı ve güvenlidir: herkes sıcak tavaların ve bıçakların nerede olduğunu bilir. Birinin arkasından geçerken sen de “Heet!” ya da “Achter!” diye seslen. Sana bir iş mi söylendi? Tekrar et: “Ja, chef.” O zaman şef duyduğunu bilir. Yoğunlukta biri sana sert mi konuştu? Çoğu zaman bu, servis bitince geçer. Tatsızlık devam mı ediyor? O zaman sakin bir anda bunu konuş.", // nieuw, nalezen
-    'c.rush.p': "Arkandayım! Elimde sıcak bir tava var.", // nieuw, nalezen
-    'c.rush.s': "Çok yoğun. Şef sesleniyor: “Tafel zes, nu!” Lütfen demiyor. Ne yaparsın?", // nieuw, nalezen
-    'c.rush.o1': "“Ja, chef” der ve yaparsın.", // nieuw, nalezen
-    'c.rush.o2': "Durur ve ona kaba olduğunu söylersin.", // nieuw, nalezen
-    'c.rush.o3': "Yaparsın, ama karşılık olarak hiçbir şey söylemezsin.", // nieuw, nalezen
-    'c.rush.w': "Yoğunlukta kısa konuşmak normaldir ve kişisel değildir. Tekrar etmek, duyduğunu gösterir. Bu, mutfağı hızlı ve güvenli tutar.", // nieuw, nalezen
+    'c.rush': "İş yoğunken kısa sözler", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.b': "İş yoğunken mutfakta insanlar kısa sözlerle konuşur: “Heet!”, “Achter!”, “Tafel zes!” Bu kabalık değildir. Hızlı ve güvenlidir: herkes sıcak tavaların ve bıçakların nerede olduğunu bilir. Birinin arkasından geçerken sen de “Heet!” ya da “Achter!” diye seslen. Sana bir iş mi söylendi? Tekrar et: “Ja, chef.” O zaman şef duyduğunu bilir. Yoğunlukta biri sana sert mi konuştu? Çoğu zaman bu, servis bitince geçer. Tatsızlık devam mı ediyor? O zaman sakin bir anda bunu konuş.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.p': "Arkandayım! Elimde sıcak bir tava var.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.s': "Çok yoğun. Şef sesleniyor: “Tafel zes, nu!” Lütfen demiyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.o1': "“Ja, chef” der ve yaparsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.o2': "Durur ve ona kaba olduğunu söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.o3': "Yaparsın, ama karşılık olarak hiçbir şey söylemezsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rush.w': "Yoğunlukta kısa konuşmak normaldir ve kişisel değildir. Tekrar etmek, duyduğunu gösterir. Bu, mutfağı hızlı ve güvenli tutar.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.rounds': "Temizlik turun", // nieuw, nalezen
     'w.kantoor': "ofis", // nieuw, nalezen
     'w.verdieping': "kat (bir binanın 1. ya da 2. katı)", // nieuw, nalezen
@@ -1977,14 +1977,14 @@ const t: CultureTranslation = {
     's.rounds.3': "Sabunu dolduruyorum.", // nieuw, nalezen
     'c.rounds.q': "Üç numaralı ofisi yaptın mı?", // nieuw, nalezen
     'c.rounds.a': "Hayır, orada hâlâ biri çalışıyor.", // nieuw, nalezen
-    'c.rounds': "İnsanların çalıştığı yerde temizlik", // nieuw, nalezen
-    'c.rounds.b': "Çoğu zaman başkaları hâlâ çalışırken temizlik yaparsın. Onlara selam ver ve sor: “Mag ik hier even schoonmaken?” Çoğu kişi evet der. Biri toplantıda ya da telefonda mı? O zaman sonra tekrar gel. Masadaki kâğıtların yerini değiştirme ve onları okuma: etraflarını temizle. Turun için belirli bir süren var. Süre işi iyi yapmak için çok mu kısa? Kimseye söylemeden oda atlama. Neyi yapamadığını ve nedenini amirine söyle.", // nieuw, nalezen
-    'c.rounds.p': "İyi günler. Burayı temizleyebilir miyim?", // nieuw, nalezen
-    'c.rounds.s': "Turun bugün daha uzun sürüyor: bir oda çok kirliydi. İki ofis yapılmadı. Ne yaparsın?", // nieuw, nalezen
-    'c.rounds.o1': "Amirine hangi iki ofis olduğunu ve nedenini söylersin.", // nieuw, nalezen
-    'c.rounds.o2': "Eve gidersin ve kimsenin fark etmemesini umarsın.", // nieuw, nalezen
-    'c.rounds.o3': "Onları çok hızlı yaparsın, yerleri silmeden.", // nieuw, nalezen
-    'c.rounds.w': "Kirli bir ofis bulan müşteri şikâyet eder. Durumu bilen bir amir bunu açıklayabilir ya da sana daha fazla süre verebilir. Söylemek başarısızlık değildir.", // nieuw, nalezen
+    'c.rounds': "İnsanların çalıştığı yerde temizlik", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.b': "Çoğu zaman başkaları hâlâ çalışırken temizlik yaparsın. Onlara selam ver ve sor: “Mag ik hier even schoonmaken?” Çoğu kişi evet der. Biri toplantıda ya da telefonda mı? O zaman sonra tekrar gel. Masadaki kâğıtların yerini değiştirme ve onları okuma: etraflarını temizle. Turun için belirli bir süren var. Süre işi iyi yapmak için çok mu kısa? Kimseye söylemeden oda atlama. Neyi yapamadığını ve nedenini amirine söyle.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.p': "İyi günler. Burayı temizleyebilir miyim?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.s': "Turun bugün daha uzun sürüyor: bir oda çok kirliydi. İki ofis yapılmadı. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.o1': "Amirine hangi iki ofis olduğunu ve nedenini söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.o2': "Eve gidersin ve kimsenin fark etmemesini umarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.o3': "Onları çok hızlı yaparsın, yerleri silmeden.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.rounds.w': "Kirli bir ofis bulan müşteri şikâyet eder. Durumu bilen bir amir bunu açıklayabilir ya da sana daha fazla süre verebilir. Söylemek başarısızlık değildir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.colours': "Renkler ve bezler", // nieuw, nalezen
     'w.doek': "bez", // nieuw, nalezen
     'w.spons': "sünger", // nieuw, nalezen
@@ -1997,14 +1997,14 @@ const t: CultureTranslation = {
     's.colours.3': "Burada hangi rengi kullanayım?", // nieuw, nalezen
     'c.colours.q': "Bu bezi çalışma masası için kullanabilir miyim?", // nieuw, nalezen
     'c.colours.a': "Hayır, kırmızı olan sadece tuvalet için.", // nieuw, nalezen
-    'c.colours': "Her rengin bir yeri var", // nieuw, nalezen
-    'c.colours.b': "Birçok temizlik şirketi renklerle çalışır. Bezin, süngerin ve kovanın her rengi tek bir yer içindir. Çoğu zaman kırmızı tuvalet için, mavi ise çalışma masaları ve masalar içindir. Böylece tuvaletteki kir bir masaya ya da mutfağa taşınmaz. Renkler her şirkette farklı olabilir, bu yüzden ilk gününde sor. Bir bez kirli mi, ya da yere mi düştü? Temiz bir tane al. Kullanılmış bezler çamaşır torbasına konur, arabaya geri değil. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.colours.p': "Burada tuvalet için hangi renk kullanılıyor?", // nieuw, nalezen
-    'c.colours.s': "Mavi bezlerin bitti. Daha üç masa temizlemen gerekiyor. Sadece kırmızı bezlerin var. Ne yaparsın?", // nieuw, nalezen
-    'c.colours.o1': "Önce yeni mavi bezler alırsın.", // nieuw, nalezen
-    'c.colours.o2': "Kırmızı bir bez kullanırsın: temiz temizdir.", // nieuw, nalezen
-    'c.colours.o3': "Üçü için de aynı mavi bezi yeniden kullanırsın.", // nieuw, nalezen
-    'c.colours.w': "Bir renk sistemi ancak herkes ona her zaman uyarsa işe yarar. O zaman kimse bir bezin nerede kullanıldığını merak etmek zorunda kalmaz.", // nieuw, nalezen
+    'c.colours': "Her rengin bir yeri var", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.b': "Birçok temizlik şirketi renklerle çalışır. Bezin, süngerin ve kovanın her rengi tek bir yer içindir. Çoğu zaman kırmızı tuvalet için, mavi ise çalışma masaları ve masalar içindir. Böylece tuvaletteki kir bir masaya ya da mutfağa taşınmaz. Renkler her şirkette farklı olabilir, bu yüzden ilk gününde sor. Bir bez kirli mi, ya da yere mi düştü? Temiz bir tane al. Kullanılmış bezler çamaşır torbasına konur, arabaya geri değil. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.p': "Burada tuvalet için hangi renk kullanılıyor?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.s': "Mavi bezlerin bitti. Daha üç masa temizlemen gerekiyor. Sadece kırmızı bezlerin var. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.o1': "Önce yeni mavi bezler alırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.o2': "Kırmızı bir bez kullanırsın: temiz temizdir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.o3': "Üçü için de aynı mavi bezi yeniden kullanırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.colours.w': "Bir renk sistemi ancak herkes ona her zaman uyarsa işe yarar. O zaman kimse bir bezin nerede kullanıldığını merak etmek zorunda kalmaz.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.shophelp': "Müşteriye yardım etmek", // nieuw, nalezen
     'w.aanbieding': "kampanya (kısa bir süre için daha ucuz)", // nieuw, nalezen
     'w.korting': "indirim (daha az ödersin)", // nieuw, nalezen
@@ -2017,14 +2017,14 @@ const t: CultureTranslation = {
     's.shophelp.3': "Bu kahve kampanyada.", // nieuw, nalezen
     'c.shophelp.q': "Süt kaldı mı?", // nieuw, nalezen
     'c.shophelp.a': "Sizin için depoya bir bakayım.", // nieuw, nalezen
-    'c.shophelp': "“Bilmiyorum” son söz değildir", // nieuw, nalezen
-    'c.shophelp.b': "Bir müşteri bir şey soruyor ve sen cevabı bilmiyorsun. Sorun değil: kimse her şeyi bilmez. Ama sadece “nee” ya da “weet ik niet” deme ve çekip gitme. Şöyle de: “Ik vraag het even voor u”, ve bir iş arkadaşını çağır. Bir ürün tükendi mi? Ne zaman yeniden geleceğini söyle ya da ona benzer bir şey göster. Rafları doldurmakla meşgulken de müşteriye bak ve selam ver. Soruyu anlamadın mı? Müşteriden yavaşça tekrar söylemesini iste.", // nieuw, nalezen
-    'c.shophelp.p': "Bunu bilmiyorum. Sizin için sorayım.", // nieuw, nalezen
-    'c.shophelp.s': "Bir müşteri bir ürün soruyor. Kelimeyi bilmiyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.shophelp.o1': "Şöyle dersin: “Ik vraag het even voor u.”", // nieuw, nalezen
-    'c.shophelp.o2': "“Nee” der ve çalışmaya devam edersin.", // nieuw, nalezen
-    'c.shophelp.o3': "Gitsin diye rastgele bir yeri gösterirsin.", // nieuw, nalezen
-    'c.shophelp.w': "Müşteri yeni olmana ya da hâlâ Hollandaca öğrenmene aldırmaz. Ama yardım alamamak müşteriyi rahatsız eder. Bir iş arkadaşını çağırmak iyi hizmettir.", // nieuw, nalezen
+    'c.shophelp': "“Bilmiyorum” son söz değildir", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.b': "Bir müşteri bir şey soruyor ve sen cevabı bilmiyorsun. Sorun değil: kimse her şeyi bilmez. Ama sadece “nee” ya da “weet ik niet” deme ve çekip gitme. Şöyle de: “Ik vraag het even voor u”, ve bir iş arkadaşını çağır. Bir ürün tükendi mi? Ne zaman yeniden geleceğini söyle ya da ona benzer bir şey göster. Rafları doldurmakla meşgulken de müşteriye bak ve selam ver. Soruyu anlamadın mı? Müşteriden yavaşça tekrar söylemesini iste.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.p': "Bunu bilmiyorum. Sizin için sorayım.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.s': "Bir müşteri bir ürün soruyor. Kelimeyi bilmiyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.o1': "Şöyle dersin: “Ik vraag het even voor u.”", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.o2': "“Nee” der ve çalışmaya devam edersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.o3': "Gitsin diye rastgele bir yeri gösterirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shophelp.w': "Müşteri yeni olmana ya da hâlâ Hollandaca öğrenmene aldırmaz. Ama yardım alamamak müşteriyi rahatsız eder. Bir iş arkadaşını çağırmak iyi hizmettir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.shoptrouble': "Zor anlar", // nieuw, nalezen
     'w.bedrijfsleider': "mağaza müdürü", // nieuw, nalezen
     'w.beveiliger': "güvenlik görevlisi", // nieuw, nalezen
@@ -2037,14 +2037,14 @@ const t: CultureTranslation = {
     's.shoptrouble.3': "Sanırım biri bir şey çalıyor.", // nieuw, nalezen
     'c.shoptrouble.q': "Paramı hemen geri istiyorum!", // nieuw, nalezen
     'c.shoptrouble.a': "Anlıyorum. İş arkadaşımı çağırıyorum.", // nieuw, nalezen
-    'c.shoptrouble': "Kızgın müşteri ya da hırsız: önce sen gelirsin", // nieuw, nalezen
-    'c.shoptrouble.b': "Bazen bir müşteri kızar ya da birinin bir şey çaldığını görürsün. Senin güvenliğin önce gelir, her zaman. Kızgın bir müşteride: sakin kal, karşılık olarak bağırma ve mağaza müdürünü çağır. Bunu tek başına çözmek zorunda değilsin. Bir hırsız mı görüyorsun? Peşinden koşma, onu tutma ve kapının önünü kesme. Ne gördüğüne iyi bak ve hemen müdüre ya da güvenlik görevlisine söyle. Eşyaların yerine yenisi konabilir. Senin yerine konamaz. Sonrasında korktun mu? Bunu amirinle konuş. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.shoptrouble.p': "Birinin çantasına bir şey koyduğunu görüyorum.", // nieuw, nalezen
-    'c.shoptrouble.s': "Bir adam montunun altına bir şişe koyuyor ve çıkışa yürüyor. Ne yaparsın?", // nieuw, nalezen
-    'c.shoptrouble.o1': "Müdüre ya da güvenlik görevlisine söylersin.", // nieuw, nalezen
-    'c.shoptrouble.o2': "Peşinden koşar ve kolunu tutarsın.", // nieuw, nalezen
-    'c.shoptrouble.o3': "Kapının önünde durursun.", // nieuw, nalezen
-    'c.shoptrouble.w': "Durdurulan bir hırsız şiddete başvurabilir. Müdür ve güvenlik görevlisi ne yapılacağını bilir. Hiçbir ürün yaralanmana değmez.", // nieuw, nalezen
+    'c.shoptrouble': "Kızgın müşteri ya da hırsız: önce sen gelirsin", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.b': "Bazen bir müşteri kızar ya da birinin bir şey çaldığını görürsün. Senin güvenliğin önce gelir, her zaman. Kızgın bir müşteride: sakin kal, karşılık olarak bağırma ve mağaza müdürünü çağır. Bunu tek başına çözmek zorunda değilsin. Bir hırsız mı görüyorsun? Peşinden koşma, onu tutma ve kapının önünü kesme. Ne gördüğüne iyi bak ve hemen müdüre ya da güvenlik görevlisine söyle. Eşyaların yerine yenisi konabilir. Senin yerine konamaz. Sonrasında korktun mu? Bunu amirinle konuş. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.p': "Birinin çantasına bir şey koyduğunu görüyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.s': "Bir adam montunun altına bir şişe koyuyor ve çıkışa yürüyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.o1': "Müdüre ya da güvenlik görevlisine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.o2': "Peşinden koşar ve kolunu tutarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.o3': "Kapının önünde durursun.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shoptrouble.w': "Durdurulan bir hırsız şiddete başvurabilir. Müdür ve güvenlik görevlisi ne yapılacağını bilir. Hiçbir ürün yaralanmana değmez.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.plantcare': "Bitkiye bakmak", // nieuw, nalezen
     'w.plantblad': "yaprak", // nieuw, nalezen
     'w.stengel': "sap, gövde", // nieuw, nalezen
@@ -2057,14 +2057,14 @@ const t: CultureTranslation = {
     's.plantcare.3': "Sap kırılmış.", // nieuw, nalezen
     'c.plantcare.q': "Hangi domatesleri toplayayım?", // nieuw, nalezen
     'c.plantcare.a': "Sadece kırmızıları. Yeşiller henüz olgun değil.", // nieuw, nalezen
-    'c.plantcare': "Temiz eller, sağlıklı bitkiler", // nieuw, nalezen
-    'c.plantcare.b': "Bitkiler de hastalanabilir. Bir virüs eller, eldivenler, bıçaklar ve kıyafetlerle bitkiden bitkiye geçer. Bir serada tek bir hasta bitki, binlerce bitkinin atılması anlamına gelebilir. Bu yüzden kapıda sıkı kurallar vardır: ellerini yıka, şirketin iş kıyafetlerini giy ve ayak dezenfektan havuzundan geç. Birçok sera, öğle yemeğinde kendi domatesini, biberini ya da salatalığını getirmene izin vermez. Garip görünen bir bitki mi görüyorsun? Ona dokunma. Hangi sırada olduğunu amirine söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.plantcare.p': "On ikinci sırada hasta bir bitki var.", // nieuw, nalezen
-    'c.plantcare.s': "Garip sarı lekeleri olan bir bitki görüyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.plantcare.o1': "Dokunmazsın ve amirine söylersin.", // nieuw, nalezen
-    'c.plantcare.o2': "Onu söker ve yanında götürürsün.", // nieuw, nalezen
-    'c.plantcare.o3': "Lekeli yaprakları kesersin.", // nieuw, nalezen
-    'c.plantcare.w': "Hasta bir bitkiye dokunduğunda virüs seninle birlikte sonraki bitkilere gider. Amirin onu güvenli şekilde nasıl kaldıracağını bilir.", // nieuw, nalezen
+    'c.plantcare': "Temiz eller, sağlıklı bitkiler", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.b': "Bitkiler de hastalanabilir. Bir virüs eller, eldivenler, bıçaklar ve kıyafetlerle bitkiden bitkiye geçer. Bir serada tek bir hasta bitki, binlerce bitkinin atılması anlamına gelebilir. Bu yüzden kapıda sıkı kurallar vardır: ellerini yıka, şirketin iş kıyafetlerini giy ve ayak dezenfektan havuzundan geç. Birçok sera, öğle yemeğinde kendi domatesini, biberini ya da salatalığını getirmene izin vermez. Garip görünen bir bitki mi görüyorsun? Ona dokunma. Hangi sırada olduğunu amirine söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.p': "On ikinci sırada hasta bir bitki var.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.s': "Garip sarı lekeleri olan bir bitki görüyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.o1': "Dokunmazsın ve amirine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.o2': "Onu söker ve yanında götürürsün.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.o3': "Lekeli yaprakları kesersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plantcare.w': "Hasta bir bitkiye dokunduğunda virüs seninle birlikte sonraki bitkilere gider. Amirin onu güvenli şekilde nasıl kaldıracağını bilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.outdoors': "Dışarıda çalışmak", // nieuw, nalezen
     'w.land': "tarla (bitkilerin dışarıda yetiştiği yer)", // nieuw, nalezen
     'w.regen': "yağmur", // nieuw, nalezen
@@ -2077,14 +2077,14 @@ const t: CultureTranslation = {
     's.outdoors.3': "Bugün güneş çok güçlü.", // nieuw, nalezen
     'c.outdoors.q': "Gök gürültülü fırtına geliyor. Ne yapacağız?", // nieuw, nalezen
     'c.outdoors.a': "Duruyoruz ve içeri giriyoruz.", // nieuw, nalezen
-    'c.outdoors': "Güneş, yağmur ve gök gürültüsü", // nieuw, nalezen
-    'c.outdoors.b': "Dışarıda her türlü havada çalışırsın. Güneşte: başını ve cildini ört, güneş kremi kullan ve sık sık su iç. Yağmurda: yağmurluk takımını ve çizmelerini giy, molada da kuru kıyafetler giy. Islaklık ve soğuk seni hasta eder ve yavaşlatır. Gök mü gürlüyor? O zaman dur ve içeri gir, ya da bir arabaya veya minibüse bin. Ağacın altına değil, açık tarlaya da değil. İş için yağmurluk ya da çizme mi lazım? Kendin satın almadan önce işverenine sor.", // nieuw, nalezen
-    'c.outdoors.p': "Fırtına geliyor. İçeri girelim mi?", // nieuw, nalezen
-    'c.outdoors.s': "Tarladasın. Yakında gök gürültüsü duyuyorsun. Sıran neredeyse bitti. Ne yaparsın?", // nieuw, nalezen
-    'c.outdoors.o1': "Durur ve içeri ya da minibüse girersin.", // nieuw, nalezen
-    'c.outdoors.o2': "Önce sırayı çabucak bitirirsin.", // nieuw, nalezen
-    'c.outdoors.o3': "Büyük ağacın altında beklersin.", // nieuw, nalezen
-    'c.outdoors.w': "Yıldırım en yüksek noktaya düşer, düz bir tarlada bu sensin. Sıra bir çeyrek saat bekleyebilir.", // nieuw, nalezen
+    'c.outdoors': "Güneş, yağmur ve gök gürültüsü", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.b': "Dışarıda her türlü havada çalışırsın. Güneşte: başını ve cildini ört, güneş kremi kullan ve sık sık su iç. Yağmurda: yağmurluk takımını ve çizmelerini giy, molada da kuru kıyafetler giy. Islaklık ve soğuk seni hasta eder ve yavaşlatır. Gök mü gürlüyor? O zaman dur ve içeri gir, ya da bir arabaya veya minibüse bin. Ağacın altına değil, açık tarlaya da değil. İş için yağmurluk ya da çizme mi lazım? Kendin satın almadan önce işverenine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.p': "Fırtına geliyor. İçeri girelim mi?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.s': "Tarladasın. Yakında gök gürültüsü duyuyorsun. Sıran neredeyse bitti. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.o1': "Durur ve içeri ya da minibüse girersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.o2': "Önce sırayı çabucak bitirirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.o3': "Büyük ağacın altında beklersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.outdoors.w': "Yıldırım en yüksek noktaya düşer, düz bir tarlada bu sensin. Sıra bir çeyrek saat bekleyebilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.drawing': "Çizim ve ölçü", // nieuw, nalezen
     'w.tekening': "çizim (parçanın nasıl olması gerektiğini gösterir)", // nieuw, nalezen
     'w.maat': "ölçü, boyut", // nieuw, nalezen
@@ -2097,14 +2097,14 @@ const t: CultureTranslation = {
     's.drawing.3': "İki milimetre fazla büyük.", // nieuw, nalezen
     'c.drawing.q': "Cıvata uyuyor mu?", // nieuw, nalezen
     'c.drawing.a': "Hayır. Bir kez daha ölçüyorum.", // nieuw, nalezen
-    'c.drawing': "Çizim ne diyorsa o", // nieuw, nalezen
-    'c.drawing.b': "Atölyede çizimde ne yazıyorsa onu yaparsın, göze aşağı yukarı doğru görüneni değil. Ölçüler milimetredir ve bir milimetre bile fazla olabilir. Bir parça uymuyor mu? Zorlama ve deliği “azıcık” büyütme. Yeniden ölç ve çizime bak. Çizimi okuyamıyor musun, ya da bir ölçü mü eksik? Başlamadan önce sor. Bir soru bir dakikanı alır. Yanlış bir parça malzemeye ve saatlere mal olur.", // nieuw, nalezen
-    'c.drawing.p': "Bu ölçüyü okuyamıyorum. Bir bakabilir misin?", // nieuw, nalezen
-    'c.drawing.s': "Bir parça uymuyor: bir milimetre fazla büyük. Çekiçle vurursan girer. Ne yaparsın?", // nieuw, nalezen
-    'c.drawing.o1': "Yeniden ölçer ve ne yapman gerektiğini sorarsın.", // nieuw, nalezen
-    'c.drawing.o2': "Çekiçle vurarak sokarsın.", // nieuw, nalezen
-    'c.drawing.o3': "Biraz taşlarsın ve hiçbir şey söylemezsin.", // nieuw, nalezen
-    'c.drawing.w': "Zorla giren bir parça sonradan, müşterideyken kırılabilir. Bildirirsen sebep bulunabilir.", // nieuw, nalezen
+    'c.drawing': "Çizim ne diyorsa o", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.b': "Atölyede çizimde ne yazıyorsa onu yaparsın, göze aşağı yukarı doğru görüneni değil. Ölçüler milimetredir ve bir milimetre bile fazla olabilir. Bir parça uymuyor mu? Zorlama ve deliği “azıcık” büyütme. Yeniden ölç ve çizime bak. Çizimi okuyamıyor musun, ya da bir ölçü mü eksik? Başlamadan önce sor. Bir soru bir dakikanı alır. Yanlış bir parça malzemeye ve saatlere mal olur.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.p': "Bu ölçüyü okuyamıyorum. Bir bakabilir misin?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.s': "Bir parça uymuyor: bir milimetre fazla büyük. Çekiçle vurursan girer. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.o1': "Yeniden ölçer ve ne yapman gerektiğini sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.o2': "Çekiçle vurarak sokarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.o3': "Biraz taşlarsın ve hiçbir şey söylemezsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.drawing.w': "Zorla giren bir parça sonradan, müşterideyken kırılabilir. Bildirirsen sebep bulunabilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.weld': "Kaynak ve sıcak iş", // nieuw, nalezen
     'w.lassen': "kaynak yapmak (metali çok yüksek ısıyla birleştirmek)", // nieuw, nalezen
     'w.laskap': "kaynak maskesi", // nieuw, nalezen
@@ -2117,14 +2117,14 @@ const t: CultureTranslation = {
     's.weld.3': "Dikkat, metal hâlâ sıcak.", // nieuw, nalezen
     'c.weld.q': "Bunu şimdi alabilir miyim?", // nieuw, nalezen
     'c.weld.a': "Hayır, bekle. Önce soğuması lazım.", // nieuw, nalezen
-    'c.weld': "Sıcak metal soğuk görünür", // nieuw, nalezen
-    'c.weld.b': "Kaynak çok parlak bir ışık verir. Kaynak maskesi olmadan ona bakma, uzaktan bile: gözlerin yanabilir ve bunu ancak saatler sonra hissedersin. Yakınında bir iş arkadaşın mı kaynak yapıyor? Başka yöne bak ya da paravanın arkasında dur. Yeni kaynak yapılmış ya da taşlanmış metal normal görünür, ama çok sıcaktır. Onu çıplak elle tutma. Kaynak dumanı akciğerlerine zararlıdır: duman emme sistemini çalıştır. Yanık mı oldu? Hemen suyla soğut, en az on dakika, ve bildir. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.weld.p': "Bu soğudu mu?", // nieuw, nalezen
-    'c.weld.s': "Yanında bir iş arkadaşın kaynak yapıyor. Sende kaynak maskesi yok. Ne yaparsın?", // nieuw, nalezen
-    'c.weld.o1': "Başka yöne bakar ve paravanın arkasında durursun.", // nieuw, nalezen
-    'c.weld.o2': "Biraz izlersin: bundan bir şey öğrenebilirsin.", // nieuw, nalezen
-    'c.weld.o3': "Gözlerini yarı kapatırsın.", // nieuw, nalezen
-    'c.weld.w': "Kaynak ışığı gözlerini yakar, yandan ve uzaktan da. Acıyı ancak sonra hissedersin, çoğu zaman gece.", // nieuw, nalezen
+    'c.weld': "Sıcak metal soğuk görünür", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.b': "Kaynak çok parlak bir ışık verir. Kaynak maskesi olmadan ona bakma, uzaktan bile: gözlerin yanabilir ve bunu ancak saatler sonra hissedersin. Yakınında bir iş arkadaşın mı kaynak yapıyor? Başka yöne bak ya da paravanın arkasında dur. Yeni kaynak yapılmış ya da taşlanmış metal normal görünür, ama çok sıcaktır. Onu çıplak elle tutma. Kaynak dumanı akciğerlerine zararlıdır: duman emme sistemini çalıştır. Yanık mı oldu? Hemen suyla soğut, en az on dakika, ve bildir. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.p': "Bu soğudu mu?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.s': "Yanında bir iş arkadaşın kaynak yapıyor. Sende kaynak maskesi yok. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.o1': "Başka yöne bakar ve paravanın arkasında durursun.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.o2': "Biraz izlersin: bundan bir şey öğrenebilirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.o3': "Gözlerini yarı kapatırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.weld.w': "Kaynak ışığı gözlerini yakar, yandan ve uzaktan da. Acıyı ancak sonra hissedersin, çoğu zaman gece.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.carparts': "Arabanın parçaları", // nieuw, nalezen
     'w.motor': "motor", // nieuw, nalezen
     'w.motorkap': "kaput (motorun üstündeki kapak)", // nieuw, nalezen
@@ -2137,14 +2137,14 @@ const t: CultureTranslation = {
     's.carparts.3': "Frenler ses yapıyor.", // nieuw, nalezen
     'c.carparts.q': "Ne duyuyorsun?", // nieuw, nalezen
     'c.carparts.a': "Motor garip bir ses çıkarıyor.", // nieuw, nalezen
-    'c.carparts': "Araba müşterinindir", // nieuw, nalezen
-    'c.carparts.b': "Tamirhanedeki araba senin değildir: müşterinindir. Binmeden önce koltuğa ve direksiyona kılıf geçir, içeride de temiz ellerle çalış. Koltuğu, aynaları ve radyoyu olduğu gibi bırak. Koltuğu oynatman mı gerekti? Eski yerine getir. Arabadaki kişisel eşyalara dokunma. Bir çizik ya da leke mi yaptın? Hemen amirine söyle. Bunu evde fark eden müşteri bir daha gelmez.", // nieuw, nalezen
-    'c.carparts.p': "Bir çizik yaptım. Özür dilerim.", // nieuw, nalezen
-    'c.carparts.s': "Bir müşterinin araba kapısında küçük bir çizik yapıyorsun. Kimse görmedi. Ne yaparsın?", // nieuw, nalezen
-    'c.carparts.o1': "Hemen amirine söylersin.", // nieuw, nalezen
-    'c.carparts.o2': "Hiçbir şey söylemezsin: çok küçük.", // nieuw, nalezen
-    'c.carparts.o3': "Bir bezle silersin ve geçmesini umarsın.", // nieuw, nalezen
-    'c.carparts.w': "Herkes bazen hata yapar. Bir tamirhane çiziği onarabilir ya da müşteriye dürüstçe söyleyebilir. Saklanan bir çizik tamirhanenin iyi adını zedeler.", // nieuw, nalezen
+    'c.carparts': "Araba müşterinindir", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.b': "Tamirhanedeki araba senin değildir: müşterinindir. Binmeden önce koltuğa ve direksiyona kılıf geçir, içeride de temiz ellerle çalış. Koltuğu, aynaları ve radyoyu olduğu gibi bırak. Koltuğu oynatman mı gerekti? Eski yerine getir. Arabadaki kişisel eşyalara dokunma. Bir çizik ya da leke mi yaptın? Hemen amirine söyle. Bunu evde fark eden müşteri bir daha gelmez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.p': "Bir çizik yaptım. Özür dilerim.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.s': "Bir müşterinin araba kapısında küçük bir çizik yapıyorsun. Kimse görmedi. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.o1': "Hemen amirine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.o2': "Hiçbir şey söylemezsin: çok küçük.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.o3': "Bir bezle silersin ve geçmesini umarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carparts.w': "Herkes bazen hata yapar. Bir tamirhane çiziği onarabilir ya da müşteriye dürüstçe söyleyebilir. Saklanan bir çizik tamirhanenin iyi adını zedeler.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.carsafe': "Benzin, gaz ve elektrik", // nieuw, nalezen
     'w.krik': "kriko (arabanın bir tarafını kaldırır)", // nieuw, nalezen
     'w.benzine': "benzin", // nieuw, nalezen
@@ -2157,14 +2157,14 @@ const t: CultureTranslation = {
     's.carsafe.3': "Turuncu kablolara dokunmuyorum.", // nieuw, nalezen
     'c.carsafe.q': "Bu arabada çalışabilir miyim?", // nieuw, nalezen
     'c.carsafe.a': "Henüz değil. Bu elektrikli bir araba.", // nieuw, nalezen
-    'c.carsafe': "Turuncu kablolar ve çalışan motorlar", // nieuw, nalezen
-    'c.carsafe.b': "Elektrikli ya da hibrit bir arabada çok yüksek gerilimli bir batarya vardır. Bunun kabloları turuncudur. Onlara dokunma ve onları sökme: önce özel eğitimli bir tamirci arabayı güvenli hâle getirmelidir. Arabanın yanında bir levha ya da koni mi var? O zaman uzak dur. Kapalı yerde çalışan bir motor, koklayamadığın ve göremediğin bir gaz çıkarır ve bu gaz öldürebilir. Yani: egzoz hortumunu tak ya da kapıları aç. Benzin kokusu mu alıyorsun? Kıvılcım yok, sigara yok. Hemen amirine söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.carsafe.p': "Bu araba güvenli hâle getirildi mi?", // nieuw, nalezen
-    'c.carsafe.s': "Elektrikli bir arabada tekerlek değiştirmen gerekiyor. Arabanın altında gevşek bir turuncu kablo görüyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.carsafe.o1': "Hiçbir şeye dokunmaz ve eğitimli tamirciyi çağırırsın.", // nieuw, nalezen
-    'c.carsafe.o2': "Kabloyu elinle geri itersin.", // nieuw, nalezen
-    'c.carsafe.o3': "Kuru bir bezle geri itersin.", // nieuw, nalezen
-    'c.carsafe.w': "Elektrikli bir arabanın bataryasında, araba kapalıyken bile öldürecek kadar elektrik vardır. Bu parçalara sadece eğitimi olan kişi dokunabilir.", // nieuw, nalezen
+    'c.carsafe': "Turuncu kablolar ve çalışan motorlar", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.b': "Elektrikli ya da hibrit bir arabada çok yüksek gerilimli bir batarya vardır. Bunun kabloları turuncudur. Onlara dokunma ve onları sökme: önce özel eğitimli bir tamirci arabayı güvenli hâle getirmelidir. Arabanın yanında bir levha ya da koni mi var? O zaman uzak dur. Kapalı yerde çalışan bir motor, koklayamadığın ve göremediğin bir gaz çıkarır ve bu gaz öldürebilir. Yani: egzoz hortumunu tak ya da kapıları aç. Benzin kokusu mu alıyorsun? Kıvılcım yok, sigara yok. Hemen amirine söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.p': "Bu araba güvenli hâle getirildi mi?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.s': "Elektrikli bir arabada tekerlek değiştirmen gerekiyor. Arabanın altında gevşek bir turuncu kablo görüyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.o1': "Hiçbir şeye dokunmaz ve eğitimli tamirciyi çağırırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.o2': "Kabloyu elinle geri itersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.o3': "Kuru bir bezle geri itersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.carsafe.w': "Elektrikli bir arabanın bataryasında, araba kapalıyken bile öldürecek kadar elektrik vardır. Bu parçalara sadece eğitimi olan kişi dokunabilir.", // nieuw, nalezen // nagelezen AI 22 nov
     // Logistiek at four lessons per unit (14 November 2026).
     'l.vancheck': "Kamyoneti kontrol etmek", // nieuw, nalezen
     'w.schade': "hasar", // nieuw, nalezen
@@ -2178,14 +2178,14 @@ const t: CultureTranslation = {
     's.vancheck.3': "Önce daha yakıt almam gerekiyor.", // nieuw, nalezen
     'c.vancheck.q': "Kamyonette her şey yolunda mı?", // nieuw, nalezen
     'c.vancheck.a': "Hayır, ayna kırık.", // nieuw, nalezen
-    'c.vancheck': "Sürmeden önce bak", // nieuw, nalezen
-    'c.vancheck.b': "İlk seferinden önce kamyonetin etrafında bir tur at. Bir göçük, bir çizik ya da kırık bir ayna mı görüyorsun? Bir fotoğraf çek ve yola çıkmadan önce bildir. Böylece herkes hasarın zaten orada olduğunu bilir. Seferin sırasında bir şey mi oldu? Küçük olsa bile aynı gün bildir. Hasarı saklamak sonra daha büyük sorunlar çıkarır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.vancheck.p': "Kamyonette hasar var. İşte bir fotoğraf.", // nieuw, nalezen
-    'c.vancheck.s': "Sabah kamyonette yeni bir göçük görüyorsun. Onu sen yapmadın. Ne yaparsın?", // nieuw, nalezen
-    'c.vancheck.o1': "Bir fotoğraf çeker ve sürmeden önce bildirirsin.", // nieuw, nalezen
-    'c.vancheck.o2': "Hiçbir şey söylemezsin: bu senin göçüğün değil.", // nieuw, nalezen
-    'c.vancheck.o3': "Bekler ve birinin sorup sormayacağına bakarsın.", // nieuw, nalezen
-    'c.vancheck.w': "Sürmeden önce bildirirsen, kimse bunu senin yaptığını düşünemez. Saati olan bir fotoğraf herkes için açıktır.", // nieuw, nalezen
+    'c.vancheck': "Sürmeden önce bak", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.b': "İlk seferinden önce kamyonetin etrafında bir tur at. Bir göçük, bir çizik ya da kırık bir ayna mı görüyorsun? Bir fotoğraf çek ve yola çıkmadan önce bildir. Böylece herkes hasarın zaten orada olduğunu bilir. Seferin sırasında bir şey mi oldu? Küçük olsa bile aynı gün bildir. Hasarı saklamak sonra daha büyük sorunlar çıkarır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.p': "Kamyonette hasar var. İşte bir fotoğraf.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.s': "Sabah kamyonette yeni bir göçük görüyorsun. Onu sen yapmadın. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.o1': "Bir fotoğraf çeker ve sürmeden önce bildirirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.o2': "Hiçbir şey söylemezsin: bu senin göçüğün değil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.o3': "Bekler ve birinin sorup sormayacağına bakarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.vancheck.w': "Sürmeden önce bildirirsen, kimse bunu senin yaptığını düşünemez. Saati olan bir fotoğraf herkes için açıktır.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.delay': "Yolda gecikmeler", // nieuw, nalezen
     'w.file': "trafik sıkışıklığı", // nieuw, nalezen
     'w.vertraging': "gecikme (planlanandan daha geç kalırsın)", // nieuw, nalezen
@@ -2198,14 +2198,14 @@ const t: CultureTranslation = {
     's.delay.3': "Bu paket iade olarak geri gidiyor.", // nieuw, nalezen
     'c.delay.q': "Şimdi neredesin?", // nieuw, nalezen
     'c.delay.a': "Alternatif güzergâhtayım. On dakika geç kalacağım.", // nieuw, nalezen
-    'c.delay': "Geç mi kalıyorsun? Zamanında söyle", // nieuw, nalezen
-    'c.delay.b': "Trafik sıkışıklığı ya da kapalı bir yol senin suçun değil. Ama geç kalacağını öğrenir öğrenmez planlamacıya söyle. O zaman planlamacı müşterilere haber verebilir ya da güzergâhı değiştirebilir. Önce güvenli bir yerde dur: araç sürerken telefon elindeyken arama yapma. Ve zamanı geri kazanmak için daha hızlı sürme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.delay.p': "Trafik sıkışıklığındayım. Yarım saat geç kalacağım.", // nieuw, nalezen
-    'c.delay.s': "Bir yol kapalı. Alternatif güzergâh sana otuz dakika kaybettiriyor. Ne yaparsın?", // nieuw, nalezen
-    'c.delay.o1': "Güvenli şekilde durabildiğin anda planlamacıya söylersin.", // nieuw, nalezen
-    'c.delay.o2': "Zamanı geri kazanmak için daha hızlı sürersin.", // nieuw, nalezen
-    'c.delay.o3': "Hiçbir şey söylemezsin: belki kimse fark etmez.", // nieuw, nalezen
-    'c.delay.w': "Planlamacı bunu erken öğrenirse, müşteriler haber alır ve kimse boşuna beklemez. Daha hızlı sürmek tehlikelidir ve neredeyse hiç zaman kazandırmaz.", // nieuw, nalezen
+    'c.delay': "Geç mi kalıyorsun? Zamanında söyle", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.b': "Trafik sıkışıklığı ya da kapalı bir yol senin suçun değil. Ama geç kalacağını öğrenir öğrenmez planlamacıya söyle. O zaman planlamacı müşterilere haber verebilir ya da güzergâhı değiştirebilir. Önce güvenli bir yerde dur: araç sürerken telefon elindeyken arama yapma. Ve zamanı geri kazanmak için daha hızlı sürme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.p': "Trafik sıkışıklığındayım. Yarım saat geç kalacağım.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.s': "Bir yol kapalı. Alternatif güzergâh sana otuz dakika kaybettiriyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.o1': "Güvenli şekilde durabildiğin anda planlamacıya söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.o2': "Zamanı geri kazanmak için daha hızlı sürersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.o3': "Hiçbir şey söylemezsin: belki kimse fark etmez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.delay.w': "Planlamacı bunu erken öğrenirse, müşteriler haber alır ve kimse boşuna beklemez. Daha hızlı sürmek tehlikelidir ve neredeyse hiç zaman kazandırmaz.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Instructies", a new basis unit (u.do, 14 November 2026).
     'u.do': "Talimatlar", // nieuw, nalezen
     'l.putdown': "Onu oraya koy", // nieuw, nalezen
@@ -2220,14 +2220,14 @@ const t: CultureTranslation = {
     's.putdown.3': "Bunu bir saniye tut.", // nieuw, nalezen
     'c.putdown.q': "Bunu bir saniye tutar mısın?", // nieuw, nalezen
     'c.putdown.a': "Evet. Nereye koyayım?", // nieuw, nalezen
-    'c.putdown': "Tuttuğunu söyle", // nieuw, nalezen
-    'c.putdown.b': "Bir şeyi birlikte mi taşıyorsunuz, ya da bir iş arkadaşın sana ağır bir şey mi veriyor? Onu iyi tuttuğunda “Ik heb hem” de. O zaman iş arkadaşın bırakmanın güvenli olduğunu bilir. Kendin mi bırakmak istiyorsun? Önce sor: “Heb je hem?” Ve cevabı bekle. Bu her iş yerinde normaldir. Böylece eşyalar ayaklara ve ellere düşmez.", // nieuw, nalezen
-    'c.putdown.p': "Tuttum. Bırakabilirsin.", // nieuw, nalezen
-    'c.putdown.s': "Bir iş arkadaşın sana ağır bir kutu veriyor. Onu henüz iyi tutmuyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.putdown.o1': "“wacht” der ve önce daha iyi tutarsın.", // nieuw, nalezen
-    'c.putdown.o2': "Hiçbir şey söylemezsin: o görür.", // nieuw, nalezen
-    'c.putdown.o3': "Hızlıca alırsın, o beklemesin diye.", // nieuw, nalezen
-    'c.putdown.w': "İş arkadaşın, senin tuttuğunu düşündüğünde bırakır. Tek bir kelime sana iyi tutman için zaman verir.", // nieuw, nalezen
+    'c.putdown': "Tuttuğunu söyle", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.b': "Bir şeyi birlikte mi taşıyorsunuz, ya da bir iş arkadaşın sana ağır bir şey mi veriyor? Onu iyi tuttuğunda “Ik heb hem” de. O zaman iş arkadaşın bırakmanın güvenli olduğunu bilir. Kendin mi bırakmak istiyorsun? Önce sor: “Heb je hem?” Ve cevabı bekle. Bu her iş yerinde normaldir. Böylece eşyalar ayaklara ve ellere düşmez.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.p': "Tuttum. Bırakabilirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.s': "Bir iş arkadaşın sana ağır bir kutu veriyor. Onu henüz iyi tutmuyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.o1': "“wacht” der ve önce daha iyi tutarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.o2': "Hiçbir şey söylemezsin: o görür.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.o3': "Hızlıca alırsın, o beklemesin diye.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.putdown.w': "İş arkadaşın, senin tuttuğunu düşündüğünde bırakır. Tek bir kelime sana iyi tutman için zaman verir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.onoff': "Çalıştır ve durdur, aç ve kapat", // nieuw, nalezen
     'w.aanzetten': "çalıştırmak, açmak (bir makineyi, ışığı)", // nieuw, nalezen
     'w.opendoen': "açmak", // nieuw, nalezen
@@ -2240,14 +2240,14 @@ const t: CultureTranslation = {
     's.onoff.3': "Dur! Onu kapat.", // nieuw, nalezen
     'c.onoff.q': "Kapı kapalı mı?", // nieuw, nalezen
     'c.onoff.a': "Hayır. Şimdi kapatıyorum.", // nieuw, nalezen
-    'c.onoff': "Dur demek dur demektir", // nieuw, nalezen
-    'c.onoff.b': "Biri “Stop!” diye mi bağırıyor? Hemen dur, nedenini bilmesen bile. Sonra sor. Kısa ve yüksek sesli bir kelime burada öfke değildir: iş arkadaşları birbirini böyle güvende tutar. Kendin mi tehlikeli bir şey görüyorsun? Sen de “Stop!” diye bağır, yıllardır burada çalışan birine bile. Kimse bunu garip bulmaz.", // nieuw, nalezen
-    'c.onoff.p': "Dur! Bir saniye bekle.", // nieuw, nalezen
-    'c.onoff.s': "Bir makineyi çalıştırıyorsun. Bir iş arkadaşın “Stop!” diye bağırıyor. Sen bir sorun görmüyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.onoff.o1': "Hemen durursun ve nedenini sonra sorarsın.", // nieuw, nalezen
-    'c.onoff.o2': "Devam edersin: bir sorun görmüyorsun.", // nieuw, nalezen
-    'c.onoff.o3': "Önce neden durman gerektiğini sorarsın.", // nieuw, nalezen
-    'c.onoff.w': "İş arkadaşın senin görmediğin bir şeyi görüyor olabilir. Önce dur, sonra konuş: bu herkesi güvende tutar.", // nieuw, nalezen
+    'c.onoff': "Dur demek dur demektir", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.b': "Biri “Stop!” diye mi bağırıyor? Hemen dur, nedenini bilmesen bile. Sonra sor. Kısa ve yüksek sesli bir kelime burada öfke değildir: iş arkadaşları birbirini böyle güvende tutar. Kendin mi tehlikeli bir şey görüyorsun? Sen de “Stop!” diye bağır, yıllardır burada çalışan birine bile. Kimse bunu garip bulmaz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.p': "Dur! Bir saniye bekle.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.s': "Bir makineyi çalıştırıyorsun. Bir iş arkadaşın “Stop!” diye bağırıyor. Sen bir sorun görmüyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.o1': "Hemen durursun ve nedenini sonra sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.o2': "Devam edersin: bir sorun görmüyorsun.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.o3': "Önce neden durman gerektiğini sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.onoff.w': "İş arkadaşın senin görmediğin bir şeyi görüyor olabilir. Önce dur, sonra konuş: bu herkesi güvende tutar.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.fillempty': "İt, çek, doldur", // nieuw, nalezen
     'w.duwen': "itmek", // nieuw, nalezen
     'w.trekken': "çekmek", // nieuw, nalezen
@@ -2260,14 +2260,14 @@ const t: CultureTranslation = {
     's.fillempty.3': "Bunu bir temizle.", // nieuw, nalezen
     'c.fillempty.q': "Doldu mu?", // nieuw, nalezen
     'c.fillempty.a': "Evet. Boşaltıyorum.", // nieuw, nalezen
-    'c.fillempty': "Bitti mi? Söyle", // nieuw, nalezen
-    'c.fillempty.b': "Bir işi bitirdin mi? Söyle: “Ik ben klaar.” Ve sonra ne yapabileceğini sor. Biri seni görene kadar sessizce beklemek, doğru olmasa bile, çalışmak istemiyormuşsun gibi görünebilir. Sıradaki işi soran iş arkadaşları bir süre sonra çoğu zaman daha ilginç işler alır. Yeni bir şey öğrenmek mi istiyorsun? Onu da sor: “Mag ik dat ook leren?”", // nieuw, nalezen
-    'c.fillempty.p': "Bitirdim. Başka ne yapabilirim?", // nieuw, nalezen
-    'c.fillempty.s': "İşini bitirdin. Amirin başka bir şeyle meşgul. Ne yaparsın?", // nieuw, nalezen
-    'c.fillempty.o1': "Bitirdiğini söyler ve sırada ne olduğunu sorarsın.", // nieuw, nalezen
-    'c.fillempty.o2': "Amirin seni görene kadar beklersin.", // nieuw, nalezen
-    'c.fillempty.o3': "Mola verirsin: işin bitti.", // nieuw, nalezen
-    'c.fillempty.w': "Bir amir her şeyi göremez. Bitirdiğini söylediğinde iş devam eder ve daha fazlasını yapmak istediğini gösterirsin.", // nieuw, nalezen
+    'c.fillempty': "Bitti mi? Söyle", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.b': "Bir işi bitirdin mi? Söyle: “Ik ben klaar.” Ve sonra ne yapabileceğini sor. Biri seni görene kadar sessizce beklemek, doğru olmasa bile, çalışmak istemiyormuşsun gibi görünebilir. Sıradaki işi soran iş arkadaşları bir süre sonra çoğu zaman daha ilginç işler alır. Yeni bir şey öğrenmek mi istiyorsun? Onu da sor: “Mag ik dat ook leren?”", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.p': "Bitirdim. Başka ne yapabilirim?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.s': "İşini bitirdin. Amirin başka bir şeyle meşgul. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.o1': "Bitirdiğini söyler ve sırada ne olduğunu sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.o2': "Amirin seni görene kadar beklersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.o3': "Mola verirsin: işin bitti.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fillempty.w': "Bir amir her şeyi göremez. Bitirdiğini söylediğinde iş devam eder ve daha fazlasını yapmak istediğini gösterirsin.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.order': "Önce bu, sonra şu", // nieuw, nalezen
     'w.nu': "şimdi", // nieuw, nalezen
     'w.dan': "sonra", // nieuw, nalezen
@@ -2280,14 +2280,14 @@ const t: CultureTranslation = {
     's.order.3': "Bunu her zaman böyle yap.", // nieuw, nalezen
     'c.order.q': "Bunu şimdi yapabilir misin?", // nieuw, nalezen
     'c.order.a': "Evet. Önce bu, peki sonra?", // nieuw, nalezen
-    'c.order': "Aynı anda çok iş mi? Önce hangisi, sor", // nieuw, nalezen
-    'c.order.b': "Bazen tek bir cümlede üç iş alırsın. Bunu akılda tutmak zordur, Hollandacayı iyi konuşanlar için bile. Hangisinin önce geldiğini sor: “Wat moet ik eerst doen?” İşleri yazabilir, ya da parmaklarınla sayıp geri söyleyebilirsin. Birini mi unuttun? Geri dön ve sor. Bu, tahmin etmekten daha iyidir.", // nieuw, nalezen
-    'c.order.p': "Bu çok fazla. Önce ne yapayım?", // nieuw, nalezen
-    'c.order.s': "Amirin sana çok hızlı üç iş veriyor. Sadece ilkini hatırlıyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.order.o1': "Hemen işleri bir kez daha söylemesini istersin.", // nieuw, nalezen
-    'c.order.o2': "İlkini yapar ve gerisini hatırlamayı umarsın.", // nieuw, nalezen
-    'c.order.o3': "Hiçbir şey yapmazsın: üçünü de bilmiyorsun.", // nieuw, nalezen
-    'c.order.w': "Hemen sormak on saniye sürer. Sonra amirin gitmiş olabilir, o zaman ya beklersin ya da tahmin edersin.", // nieuw, nalezen
+    'c.order': "Aynı anda çok iş mi? Önce hangisi, sor", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.b': "Bazen tek bir cümlede üç iş alırsın. Bunu akılda tutmak zordur, Hollandacayı iyi konuşanlar için bile. Hangisinin önce geldiğini sor: “Wat moet ik eerst doen?” İşleri yazabilir, ya da parmaklarınla sayıp geri söyleyebilirsin. Birini mi unuttun? Geri dön ve sor. Bu, tahmin etmekten daha iyidir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.p': "Bu çok fazla. Önce ne yapayım?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.s': "Amirin sana çok hızlı üç iş veriyor. Sadece ilkini hatırlıyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.o1': "Hemen işleri bir kez daha söylemesini istersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.o2': "İlkini yapar ve gerisini hatırlamayı umarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.o3': "Hiçbir şey yapmazsın: üçünü de bilmiyorsun.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.order.w': "Hemen sormak on saniye sürer. Sonra amirin gitmiş olabilir, o zaman ya beklersin ya da tahmin edersin.", // nieuw, nalezen // nagelezen AI 22 nov
     'u.afbouw': "Fayans, sıva ve boya", // nieuw, nalezen
     'l.tiletools': "Fayansçının aletleri", // nieuw, nalezen
     'w.lijmkam': "dişli mala, tarak (fayans yapıştırıcısını çizgi çizgi yayar)", // nieuw, nalezen
@@ -2301,14 +2301,14 @@ const t: CultureTranslation = {
     's.tiletools.3': "Önce katlanır metreyle ölç.", // nieuw, nalezen
     'c.tiletools.q': "Mikser nerede?", // nieuw, nalezen
     'c.tiletools.a': "Kovanın orada, kapının yanında.", // nieuw, nalezen
-    'c.tiletools': "Yapıştırıcı sertleşmeden aletlerini temizle", // nieuw, nalezen
-    'c.tiletools.b': "Fayans yapıştırıcısı ve sıva çabuk sertleşir, aletlerinin üstünde de. Bu yüzden dişli malayı, malayı ve mikseri hemen bir kova suda temizle, moladan önce de. Sertleşmiş yapıştırıcı çıkmaz ve üstünde sert yapıştırıcı olan dişli mala kötü çizgiler yapar. Kirli suyu lavaboya ya da gidere dökme: tıkanır. Suyun nereye dökülebileceğini sor. Mikser: iki elinle tut ve yavaş çalıştır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.tiletools.p': "Dişli malayı bir temizliyorum.", // nieuw, nalezen
-    'c.tiletools.s': "Mola zamanı. Dişli malan ıslak yapıştırıcıyla dolu. Ne yaparsın?", // nieuw, nalezen
-    'c.tiletools.o1': "Suda temizler, sonra molaya çıkarsın.", // nieuw, nalezen
-    'c.tiletools.o2': "Bırakırsın: iş bitince temizlersin.", // nieuw, nalezen
-    'c.tiletools.o3': "Yapıştırıcı kovasına koyarsın.", // nieuw, nalezen
-    'c.tiletools.w': "Fayans yapıştırıcısı molada da sertleşir. Temiz bir dişli mala iyi çizgiler yapar ve fayanslar iyi yapışır. Üstünde sertleşmiş yapıştırıcı olursa çok iş çıkar, ya da yeni bir alet gerekir.", // nieuw, nalezen
+    'c.tiletools': "Yapıştırıcı sertleşmeden aletlerini temizle", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.b': "Fayans yapıştırıcısı ve sıva çabuk sertleşir, aletlerinin üstünde de. Bu yüzden dişli malayı, malayı ve mikseri hemen bir kova suda temizle, moladan önce de. Sertleşmiş yapıştırıcı çıkmaz ve üstünde sert yapıştırıcı olan dişli mala kötü çizgiler yapar. Kirli suyu lavaboya ya da gidere dökme: tıkanır. Suyun nereye dökülebileceğini sor. Mikser: iki elinle tut ve yavaş çalıştır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.p': "Dişli malayı bir temizliyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.s': "Mola zamanı. Dişli malan ıslak yapıştırıcıyla dolu. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.o1': "Suda temizler, sonra molaya çıkarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.o2': "Bırakırsın: iş bitince temizlersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.o3': "Yapıştırıcı kovasına koyarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiletools.w': "Fayans yapıştırıcısı molada da sertleşir. Temiz bir dişli mala iyi çizgiler yapar ve fayanslar iyi yapışır. Üstünde sertleşmiş yapıştırıcı olursa çok iş çıkar, ya da yeni bir alet gerekir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.tiling': "Fayans, yapıştırıcı ve orta çizgi", // nieuw, nalezen
     'w.tegel': "fayans, karo", // nieuw, nalezen
     'w.tegellijm': "fayans yapıştırıcısı", // nieuw, nalezen
@@ -2321,14 +2321,14 @@ const t: CultureTranslation = {
     's.tiling.3': "Önce kurşun kalemle orta çizgiyi çiz.", // nieuw, nalezen
     'c.tiling.q': "Fayanslara nereden başlıyorum?", // nieuw, nalezen
     'c.tiling.a': "Ortadan, orta çizgiden.", // nieuw, nalezen
-    'c.tiling': "Orta çizgiden başla, az yapıştırıcıyla", // nieuw, nalezen
-    'c.tiling.b': "Fayansçı bir köşeden başlamaz. Önce kurşun kalem ve su terazisiyle orta çizgiyi çizersin ve oradan başlarsın. O zaman iki uçtaki kesik fayanslar aynı boyda olur. Sadece kısa sürede fayansla kapatabileceğin kadar yapıştırıcı sür. Çok uzun bekleyen yapıştırıcının üstünde kuru bir kabuk oluşur ve o zaman fayanslar iyi yapışmaz. Her kesişme noktasına bir derz artısı koy, böylece bütün derzler aynı olur. Sık sık su terazisiyle kontrol et: eğri bir fayansı şimdi düzeltmek kolay, yarın zor.", // nieuw, nalezen
-    'c.tiling.p': "Bir seferde çok fazla yapıştırıcı sürmüyorum.", // nieuw, nalezen
-    'c.tiling.s': "Uzun bir telefon konuşmasından sonra duvardaki yapıştırıcının üstünde kuru bir kabuk var. Ne yaparsın?", // nieuw, nalezen
-    'c.tiling.o1': "Kazıyıp alır, taze yapıştırıcı sürersin.", // nieuw, nalezen
-    'c.tiling.o2': "Fayansları yine de üstüne bastırırsın.", // nieuw, nalezen
-    'c.tiling.o3': "Süngerle ıslatır ve devam edersin.", // nieuw, nalezen
-    'c.tiling.w': "Üstünde kuru kabuk olan yapıştırıcı fayansı iyi tutmaz. Sonra fayans yerinden çıkabilir ve o zaman iş yeniden yapılmalıdır.", // nieuw, nalezen
+    'c.tiling': "Orta çizgiden başla, az yapıştırıcıyla", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.b': "Fayansçı bir köşeden başlamaz. Önce kurşun kalem ve su terazisiyle orta çizgiyi çizersin ve oradan başlarsın. O zaman iki uçtaki kesik fayanslar aynı boyda olur. Sadece kısa sürede fayansla kapatabileceğin kadar yapıştırıcı sür. Çok uzun bekleyen yapıştırıcının üstünde kuru bir kabuk oluşur ve o zaman fayanslar iyi yapışmaz. Her kesişme noktasına bir derz artısı koy, böylece bütün derzler aynı olur. Sık sık su terazisiyle kontrol et: eğri bir fayansı şimdi düzeltmek kolay, yarın zor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.p': "Bir seferde çok fazla yapıştırıcı sürmüyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.s': "Uzun bir telefon konuşmasından sonra duvardaki yapıştırıcının üstünde kuru bir kabuk var. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.o1': "Kazıyıp alır, taze yapıştırıcı sürersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.o2': "Fayansları yine de üstüne bastırırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.o3': "Süngerle ıslatır ve devam edersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tiling.w': "Üstünde kuru kabuk olan yapıştırıcı fayansı iyi tutmaz. Sonra fayans yerinden çıkabilir ve o zaman iş yeniden yapılmalıdır.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.plaster': "Sıva yapmak", // nieuw, nalezen
     'w.stucspaan': "perdah malası (sıvayı düzlemek için düz çelik mala)", // nieuw, nalezen
     'w.oplegspaan': "sıvacı tablası (üstünde sıva tutulan düz levha)", // nieuw, nalezen
@@ -2341,14 +2341,14 @@ const t: CultureTranslation = {
     's.plaster.3': "Mastarı duvarın üstünden çek.", // nieuw, nalezen
     'c.plaster.q': "Duvar kurudu mu?", // nieuw, nalezen
     'c.plaster.a': "Hayır, bir gün daha bekle.", // nieuw, nalezen
-    'c.plaster': "Sıvanın kuruması zaman alır", // nieuw, nalezen
-    'c.plaster.b': "Yeni sıva uzun süre ıslak kalır. Islak bir duvar, kuru bir duvardan daha koyudur. Boyacı ancak duvar her yerde kuruyunca başlayabilir ve bu günler ya da haftalar sürebilir. Isıtıcıyla daha hızlı kurutma: o zaman sıva çatlayabilir. Biri çok erken mi boyamak istiyor? Duvarın henüz kurumadığını söyle. Başlamadan önce de zemini, pencereleri ve prizleri ört: sıva zor çıkar.", // nieuw, nalezen
-    'c.plaster.p': "Duvar hâlâ ıslak. Henüz boyayamazsın.", // nieuw, nalezen
-    'c.plaster.s': "Boyacı yarın başlamak istiyor. Yeni sıvada hâlâ koyu lekeler var. Ne yaparsın?", // nieuw, nalezen
-    'c.plaster.o1': "Boyacıya söylersin: duvar henüz kuru değil.", // nieuw, nalezen
-    'c.plaster.o2': "Bu gece önüne bir ısıtıcı koyarsın.", // nieuw, nalezen
-    'c.plaster.o3': "Bir şey söylemezsin: boyacı görür.", // nieuw, nalezen
-    'c.plaster.w': "Koyu lekeler, sıvanın hâlâ ıslak olduğunu gösterir. Islak duvardaki boya kalkabilir ve ısıtıcı çatlak yapabilir. Beklemek, işi yeniden yapmaktan daha ucuzdur.", // nieuw, nalezen
+    'c.plaster': "Sıvanın kuruması zaman alır", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.b': "Yeni sıva uzun süre ıslak kalır. Islak bir duvar, kuru bir duvardan daha koyudur. Boyacı ancak duvar her yerde kuruyunca başlayabilir ve bu günler ya da haftalar sürebilir. Isıtıcıyla daha hızlı kurutma: o zaman sıva çatlayabilir. Biri çok erken mi boyamak istiyor? Duvarın henüz kurumadığını söyle. Başlamadan önce de zemini, pencereleri ve prizleri ört: sıva zor çıkar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.p': "Duvar hâlâ ıslak. Henüz boyayamazsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.s': "Boyacı yarın başlamak istiyor. Yeni sıvada hâlâ koyu lekeler var. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.o1': "Boyacıya söylersin: duvar henüz kuru değil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.o2': "Bu gece önüne bir ısıtıcı koyarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.o3': "Bir şey söylemezsin: boyacı görür.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.plaster.w': "Koyu lekeler, sıvanın hâlâ ıslak olduğunu gösterir. Islak duvardaki boya kalkabilir ve ısıtıcı çatlak yapabilir. Beklemek, işi yeniden yapmaktan daha ucuzdur.", // nieuw, nalezen // nagelezen AI 22 nov
     // l.paint and l.prep (u.afbouw), "Metselen, hout en vastmaken" (u.ruwbouw), three lessons of Rekenen (u.numbers) and "Machines en gereedschap" (u.machines), 20-21 November 2026.
     'u.ruwbouw': "Duvar örmek, ahşap ve sabitlemek", // nieuw, nalezen
     'u.machines': "Makineler ve aletler", // nieuw, nalezen
@@ -2364,14 +2364,14 @@ const t: CultureTranslation = {
     's.shapes.3': "Bir tuğlanın şekli dikdörtgen prizmadır.", // nieuw, nalezen
     'c.shapes.q': "Bu bir kare mi?", // nieuw, nalezen
     'c.shapes.a': "Hayır, bir dikdörtgen. Boyu eninden uzun.", // nieuw, nalezen
-    'c.shapes': "Dikdörtgeni iki çapraz çizgiyle kontrol et", // nieuw, nalezen
-    'c.shapes.b': "Bir oda, bir zemin ya da bir çerçeve çoğu zaman dikdörtgendir. Ama köşeler gerçekten dik mi? Bunun kolay bir kontrolü var. Bir köşeden karşı köşeye ölç. Sonra diğer iki köşenin arasını ölç. İki uzunluk aynı mı? O zaman köşeler doğru. Aynı değil mi? O zaman şekil biraz eğik ve fayanslar ya da zemin iyi oturmaz. Başlamadan önce amirine söyle.", // nieuw, nalezen
-    'c.shapes.p': "Bu iki ölçü aynı değil.", // nieuw, nalezen
-    'c.shapes.s': "Bir zemini köşeden köşeye, iki yönde ölçüyorsun. Biri daha uzun. Ne yaparsın?", // nieuw, nalezen
-    'c.shapes.o1': "Başlamadan önce amirine söylersin.", // nieuw, nalezen
-    'c.shapes.o2': "Bir köşeden başlarsın, olur.", // nieuw, nalezen
-    'c.shapes.o3': "Sadece bir tarafı yeniden ölçersin.", // nieuw, nalezen
-    'c.shapes.w': "İki farklı uzunluk, köşelerin dik olmadığı anlamına gelir. O zaman fayanslar ya da tahtalar oturmaz. Bunu başlamadan önce bilmek daha iyidir.", // nieuw, nalezen
+    'c.shapes': "Dikdörtgeni iki çapraz çizgiyle kontrol et", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.b': "Bir oda, bir zemin ya da bir çerçeve çoğu zaman dikdörtgendir. Ama köşeler gerçekten dik mi? Bunun kolay bir kontrolü var. Bir köşeden karşı köşeye ölç. Sonra diğer iki köşenin arasını ölç. İki uzunluk aynı mı? O zaman köşeler doğru. Aynı değil mi? O zaman şekil biraz eğik ve fayanslar ya da zemin iyi oturmaz. Başlamadan önce amirine söyle.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.p': "Bu iki ölçü aynı değil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.s': "Bir zemini köşeden köşeye, iki yönde ölçüyorsun. Biri daha uzun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.o1': "Başlamadan önce amirine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.o2': "Bir köşeden başlarsın, olur.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.o3': "Sadece bir tarafı yeniden ölçersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.shapes.w': "İki farklı uzunluk, köşelerin dik olmadığı anlamına gelir. O zaman fayanslar ya da tahtalar oturmaz. Bunu başlamadan önce bilmek daha iyidir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.angles': "Açılar ve yuvarlak şekiller", // nieuw, nalezen
     'w.hoek': "açı", // nieuw, nalezen
     'w.graad': "derece (°)", // nieuw, nalezen
@@ -2384,14 +2384,14 @@ const t: CultureTranslation = {
     's.angles.3': "Borunun şekli silindirdir.", // nieuw, nalezen
     'c.angles.q': "Bu açı kaç derece?", // nieuw, nalezen
     'c.angles.a': "Kırk beş. Dik açının yarısı.", // nieuw, nalezen
-    'c.angles': "Büyük bir köşeyi 3, 4 ve 5 ile kontrol et", // nieuw, nalezen
-    'c.angles.b': "Şantiyede çoğu zaman dik açıyı kontrol edersin: zemindeki bir duvar, bir odanın köşesi. Küçük bir köşeyi gönyeyle ya da iletkili gönyeyle kontrol edersin. Büyük bir köşe için eski bir yöntem var. Bir tarafta 3 metre, öbür tarafta 4 metre ölç ve ikisine de bir işaret koy. İşaretten işarete tam 5 metre mi? O zaman açı 90 derecedir. Daha küçük de olur: 30, 40 ve 50 santimetre.", // nieuw, nalezen
-    'c.angles.p': "Bu açı dik değil.", // nieuw, nalezen
-    'c.angles.s': "Yeni bir duvarın büyük bir köşesini kontrol etmen gerekiyor. Gönyen çok küçük. Ne yaparsın?", // nieuw, nalezen
-    'c.angles.o1': "3, 4 ve 5 metre ölçersin.", // nieuw, nalezen
-    'c.angles.o2': "Uzaktan bakarsın.", // nieuw, nalezen
-    'c.angles.o3': "Yine de küçük gönyeyi kullanırsın.", // nieuw, nalezen
-    'c.angles.w': "3, 4 ve 5 ile büyük bir köşeyi sadece bir şerit metreyle tam olarak kontrol edebilirsin. Gözle bakınca bir köşe doğru görünebilir ama yine de yanlış olabilir.", // nieuw, nalezen
+    'c.angles': "Büyük bir köşeyi 3, 4 ve 5 ile kontrol et", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.b': "Şantiyede çoğu zaman dik açıyı kontrol edersin: zemindeki bir duvar, bir odanın köşesi. Küçük bir köşeyi gönyeyle ya da iletkili gönyeyle kontrol edersin. Büyük bir köşe için eski bir yöntem var. Bir tarafta 3 metre, öbür tarafta 4 metre ölç ve ikisine de bir işaret koy. İşaretten işarete tam 5 metre mi? O zaman açı 90 derecedir. Daha küçük de olur: 30, 40 ve 50 santimetre.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.p': "Bu açı dik değil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.s': "Yeni bir duvarın büyük bir köşesini kontrol etmen gerekiyor. Gönyen çok küçük. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.o1': "3, 4 ve 5 metre ölçersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.o2': "Uzaktan bakarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.o3': "Yine de küçük gönyeyi kullanırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.angles.w': "3, 4 ve 5 ile büyük bir köşeyi sadece bir şerit metreyle tam olarak kontrol edebilirsin. Gözle bakınca bir köşe doğru görünebilir ama yine de yanlış olabilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.size': "Uzunluk, alan ve hacim", // nieuw, nalezen
     'w.lengte': "uzunluk", // nieuw, nalezen
     'w.breedte': "genişlik", // nieuw, nalezen
@@ -2404,14 +2404,14 @@ const t: CultureTranslation = {
     's.size.3': "On milimetre bir santimetredir.", // nieuw, nalezen
     'c.size.q': "Zemin kaç metrekare?", // nieuw, nalezen
     'c.size.a': "Dörde beş metre, yani yirmi metrekare.", // nieuw, nalezen
-    'c.size': "Ne kadar gerektiğini hesapla, biraz da ekle", // nieuw, nalezen
-    'c.size.b': "Kaç fayans, ne kadar boya, ne kadar kum? Bunu alanla ya da hacimle hesaplarsın. Alan: uzunluk çarpı genişlik, metrekare olarak. Hacim: uzunluk çarpı genişlik çarpı yükseklik, metreküp olarak. Her şeyi aynı birimle ölç: hepsi metre ya da hepsi santimetre. Ölçüleri yaz, aklında tutma. Sonra kesilen parçalar ve hatalar için biraz fazlasını ekle. Emin değil misin? Bir iş arkadaşından hesabını kontrol etmesini iste.", // nieuw, nalezen
-    'c.size.p': "Ölçüleri yazıyorum.", // nieuw, nalezen
-    'c.size.s': "Zemini ölçtün. Fayansları bugün sipariş etmen gerekiyor. Ne yaparsın?", // nieuw, nalezen
-    'c.size.o1': "Alanı hesaplar ve biraz eklersin.", // nieuw, nalezen
-    'c.size.o2': "Tam alan kadar sipariş edersin, bir fayans bile fazla değil.", // nieuw, nalezen
-    'c.size.o3': "Tahmin edersin: zemini gördün.", // nieuw, nalezen
-    'c.size.w': "Bazı fayansları her zaman kesersin, bazıları da kırılır. Biraz fazlası olursa yarıda durup yeniden sipariş etmen gerekmez.", // nieuw, nalezen
+    'c.size': "Ne kadar gerektiğini hesapla, biraz da ekle", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.b': "Kaç fayans, ne kadar boya, ne kadar kum? Bunu alanla ya da hacimle hesaplarsın. Alan: uzunluk çarpı genişlik, metrekare olarak. Hacim: uzunluk çarpı genişlik çarpı yükseklik, metreküp olarak. Her şeyi aynı birimle ölç: hepsi metre ya da hepsi santimetre. Ölçüleri yaz, aklında tutma. Sonra kesilen parçalar ve hatalar için biraz fazlasını ekle. Emin değil misin? Bir iş arkadaşından hesabını kontrol etmesini iste.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.p': "Ölçüleri yazıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.s': "Zemini ölçtün. Fayansları bugün sipariş etmen gerekiyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.o1': "Alanı hesaplar ve biraz eklersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.o2': "Tam alan kadar sipariş edersin, bir fayans bile fazla değil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.o3': "Tahmin edersin: zemini gördün.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.size.w': "Bazı fayansları her zaman kesersin, bazıları da kırılır. Biraz fazlası olursa yarıda durup yeniden sipariş etmen gerekmez.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.paint': "Boya yapmak", // nieuw, nalezen
     'w.verf': "boya", // nieuw, nalezen
     'w.kwast': "boya fırçası (geniş bir fırça)", // nieuw, nalezen
@@ -2424,14 +2424,14 @@ const t: CultureTranslation = {
     's.paint.3': "Boya kabına biraz boya koy.", // nieuw, nalezen
     'c.paint.q': "Hangi fırçayı alayım?", // nieuw, nalezen
     'c.paint.a': "Duvar için geniş olanı, köşeler için ince fırçayı.", // nieuw, nalezen
-    'c.paint': "İyice karıştır ve yukarıdan aşağı boya", // nieuw, nalezen
-    'c.paint.b': "Bir süre bekleyen boya, kutunun dibinde koyu olur. Bu yüzden önce karıştırma çubuğuyla, renk her yerde aynı olana kadar iyice karıştır. Büyük kutudan boyama: boya kabına biraz boya koy ve kutuyu yeniden kapat. O zaman boya bozulmaz. Yukarıdan aşağı boya, böylece damlalar ıslak boyanın üstüne düşer ve onları hâlâ fırçayla düzeltebilirsin. Duvar için geniş fırçayı, köşeler için ince fırçayı kullan. Sonunda fırçaları hemen temizle.", // nieuw, nalezen
-    'c.paint.p': "Önce boyayı iyice karıştırıyorum.", // nieuw, nalezen
-    'c.paint.s': "Eski bir boya kutusu açıyorsun. Üstü sulu, dibi koyu. Ne yaparsın?", // nieuw, nalezen
-    'c.paint.o1': "Önce çubukla iyice karıştırırsın.", // nieuw, nalezen
-    'c.paint.o2': "Üstteki sulu boyayla boyarsın.", // nieuw, nalezen
-    'c.paint.o3': "Her yeri sulu olana kadar su eklersin.", // nieuw, nalezen
-    'c.paint.w': "Rengin bir kısmı kutunun dibindedir. Karıştırmazsan duvarda lekeler ve çizgiler olur.", // nieuw, nalezen
+    'c.paint': "İyice karıştır ve yukarıdan aşağı boya", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.b': "Bir süre bekleyen boya, kutunun dibinde koyu olur. Bu yüzden önce karıştırma çubuğuyla, renk her yerde aynı olana kadar iyice karıştır. Büyük kutudan boyama: boya kabına biraz boya koy ve kutuyu yeniden kapat. O zaman boya bozulmaz. Yukarıdan aşağı boya, böylece damlalar ıslak boyanın üstüne düşer ve onları hâlâ fırçayla düzeltebilirsin. Duvar için geniş fırçayı, köşeler için ince fırçayı kullan. Sonunda fırçaları hemen temizle.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.p': "Önce boyayı iyice karıştırıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.s': "Eski bir boya kutusu açıyorsun. Üstü sulu, dibi koyu. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.o1': "Önce çubukla iyice karıştırırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.o2': "Üstteki sulu boyayla boyarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.o3': "Her yeri sulu olana kadar su eklersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.paint.w': "Rengin bir kısmı kutunun dibindedir. Karıştırmazsan duvarda lekeler ve çizgiler olur.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.prep': "Boyaya hazırlık", // nieuw, nalezen
     'w.plamuurmes': "macun spatulası (delikleri doldurmak için)", // nieuw, nalezen
     'w.schuurpapier': "zımpara kâğıdı", // nieuw, nalezen
@@ -2444,14 +2444,14 @@ const t: CultureTranslation = {
     's.prep.3': "Tozu küçük süpürge fırçasıyla süpür.", // nieuw, nalezen
     'c.prep.q': "Artık boyayabilir miyim?", // nieuw, nalezen
     'c.prep.a': "Hayır, önce zımparala ve deliği kapat.", // nieuw, nalezen
-    'c.prep': "İyi boya işi boyadan önce başlar", // nieuw, nalezen
-    'c.prep.b': "Boya kirin, tozun ya da gevşek eski boyanın üstüne iyi yapışmaz. Bu yüzden önce gevşek boyayı boya kazıyıcıyla kazı. Delikleri macun ve macun spatulasıyla doldur ve macunun kurumasını bekle. Sonra zımparalayıp pürüzsüz yap. Zımparadan sonra tozu küçük süpürge fırçasıyla süpür, kenarlardan da. En son, temiz kalması gereken yerleri bantla kapat, mesela pencereleri ve prizleri. Zımpara ince toz yapar: toz maskesi tak ve hangisi olduğunu sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.prep.p': "Önce zımpara, sonra boya.", // nieuw, nalezen
-    'c.prep.s': "Kapıyı zımparaladın. Üstünde hâlâ toz var. İş arkadaşın şimdi boyamak istiyor. Ne yaparsın?", // nieuw, nalezen
-    'c.prep.o1': "Önce tozu fırçayla süpürürsün.", // nieuw, nalezen
-    'c.prep.o2': "Boyamasına izin verirsin: boya tozu kapatır.", // nieuw, nalezen
-    'c.prep.o3': "Tozu elinle silersin.", // nieuw, nalezen
-    'c.prep.w': "Tozun üstündeki boya iyi yapışmaz. Sonra pul pul kalkar ve bütün iş yeniden yapılmalıdır.", // nieuw, nalezen
+    'c.prep': "İyi boya işi boyadan önce başlar", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.b': "Boya kirin, tozun ya da gevşek eski boyanın üstüne iyi yapışmaz. Bu yüzden önce gevşek boyayı boya kazıyıcıyla kazı. Delikleri macun ve macun spatulasıyla doldur ve macunun kurumasını bekle. Sonra zımparalayıp pürüzsüz yap. Zımparadan sonra tozu küçük süpürge fırçasıyla süpür, kenarlardan da. En son, temiz kalması gereken yerleri bantla kapat, mesela pencereleri ve prizleri. Zımpara ince toz yapar: toz maskesi tak ve hangisi olduğunu sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.p': "Önce zımpara, sonra boya.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.s': "Kapıyı zımparaladın. Üstünde hâlâ toz var. İş arkadaşın şimdi boyamak istiyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.o1': "Önce tozu fırçayla süpürürsün.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.o2': "Boyamasına izin verirsin: boya tozu kapatır.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.o3': "Tozu elinle silersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.prep.w': "Tozun üstündeki boya iyi yapışmaz. Sonra pul pul kalkar ve bütün iş yeniden yapılmalıdır.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.brick': "Duvar örmek", // nieuw, nalezen
     'w.speciekuip': "harç teknesi", // nieuw, nalezen
     'w.metseltroffel': "duvarcı malası", // nieuw, nalezen
@@ -2464,14 +2464,14 @@ const t: CultureTranslation = {
     's.brick.3': "Duvarı el fırçasıyla temizle.", // nieuw, nalezen
     'c.brick.q': "Kaç tuğlan kaldı?", // nieuw, nalezen
     'c.brick.a': "Bir palet daha. Bugün için yeter.", // nieuw, nalezen
-    'c.brick': "Çalışırken duvarı temiz tut", // nieuw, nalezen
-    'c.brick.b': "Tuğlaları dizerken harç ıslaktır ve birkaç saatte sertleşir. Bu yüzden temiz çalış. Derzden taşan harcı hemen malayla kazı. Derzleri, harç biraz katılaşınca derz demiriyle düzle, harç hâlâ ıslakken değil. Sonra duvarı el fırçasıyla fırçala. Tuğlanın önündeki sert harcı çıkarmak çok zordur. Gün sonunda duvarın üstünü ört, böylece yağmur harcı yıkamaz.", // nieuw, nalezen
-    'c.brick.p': "Derzleri düzlüyorum.", // nieuw, nalezen
-    'c.brick.s': "Gün sonunda tuğlaların önünde harç var. Ne yaparsın?", // nieuw, nalezen
-    'c.brick.o1': "Sertleşmeden şimdi fırçayla temizlersin.", // nieuw, nalezen
-    'c.brick.o2': "Bırakırsın: gelecek hafta temizlersin.", // nieuw, nalezen
-    'c.brick.o3': "Duvarı bol suyla yıkarsın.", // nieuw, nalezen
-    'c.brick.w': "Taze harç fırçayla kolayca çıkar. Sert harç tuğlada kalır ve o zaman duvar güzel görünmez.", // nieuw, nalezen
+    'c.brick': "Çalışırken duvarı temiz tut", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.b': "Tuğlaları dizerken harç ıslaktır ve birkaç saatte sertleşir. Bu yüzden temiz çalış. Derzden taşan harcı hemen malayla kazı. Derzleri, harç biraz katılaşınca derz demiriyle düzle, harç hâlâ ıslakken değil. Sonra duvarı el fırçasıyla fırçala. Tuğlanın önündeki sert harcı çıkarmak çok zordur. Gün sonunda duvarın üstünü ört, böylece yağmur harcı yıkamaz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.p': "Derzleri düzlüyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.s': "Gün sonunda tuğlaların önünde harç var. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.o1': "Sertleşmeden şimdi fırçayla temizlersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.o2': "Bırakırsın: gelecek hafta temizlersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.o3': "Duvarı bol suyla yıkarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brick.w': "Taze harç fırçayla kolayca çıkar. Sert harç tuğlada kalır ve o zaman duvar güzel görünmez.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.wall': "Düz bir duvar", // nieuw, nalezen
     'w.metseltouw': "duvarcı ipi (düz bir sıra için ip)", // nieuw, nalezen
     'w.klos': "ip takozu (ipi köşede tutar)", // nieuw, nalezen
@@ -2484,14 +2484,14 @@ const t: CultureTranslation = {
     's.wall.3': "Tuğlayı uzun yanı dışarı bakacak şekilde koy.", // nieuw, nalezen
     'c.wall.q': "Bu sıra ne kadar yüksek olmalı?", // nieuw, nalezen
     'c.wall.a': "Sıra cetveline bak.", // nieuw, nalezen
-    'c.wall': "İp duvarı düz tutar", // nieuw, nalezen
-    'c.wall.b': "Duvarcı gözle örmez. Önce duvarın iki ucunda köşe dikmeleri düz durur. Aralarına, bir sonraki sıranın yüksekliğinde duvarcı ipini gergin çekersin. Her tuğlayı ipe göre koy, ama ipi itme. Sıra cetveli her sıranın ne kadar yüksek olması gerektiğini gösterir. Sık sık su terazisiyle kontrol et. Eğri bir tuğlayı harç ıslakken düzeltmek kolay, yarın düzeltmek çok zor.", // nieuw, nalezen
-    'c.wall.p': "Duvarcı ipi gergin mi?", // nieuw, nalezen
-    'c.wall.s': "Duvarcı ipi gevşek ve ortada biraz sarkıyor. Ne yaparsın?", // nieuw, nalezen
-    'c.wall.o1': "Önce gergin çeker, sonra devam edersin.", // nieuw, nalezen
-    'c.wall.o2': "Tuğlaları yine de altına dizersin.", // nieuw, nalezen
-    'c.wall.o3': "Tuğlaları gözle dizersin.", // nieuw, nalezen
-    'c.wall.w': "Gevşek bir ip ortada sarkar, o zaman sıra da sarkar. Gergin bir ip düz bir sıra verir.", // nieuw, nalezen
+    'c.wall': "İp duvarı düz tutar", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.b': "Duvarcı gözle örmez. Önce duvarın iki ucunda köşe dikmeleri düz durur. Aralarına, bir sonraki sıranın yüksekliğinde duvarcı ipini gergin çekersin. Her tuğlayı ipe göre koy, ama ipi itme. Sıra cetveli her sıranın ne kadar yüksek olması gerektiğini gösterir. Sık sık su terazisiyle kontrol et. Eğri bir tuğlayı harç ıslakken düzeltmek kolay, yarın düzeltmek çok zor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.p': "Duvarcı ipi gergin mi?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.s': "Duvarcı ipi gevşek ve ortada biraz sarkıyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.o1': "Önce gergin çeker, sonra devam edersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.o2': "Tuğlaları yine de altına dizersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.o3': "Tuğlaları gözle dizersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wall.w': "Gevşek bir ip ortada sarkar, o zaman sıra da sarkar. Gergin bir ip düz bir sıra verir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.wood': "Ahşapla çalışmak", // nieuw, nalezen
     'w.handzaag': "el testeresi", // nieuw, nalezen
     'w.kapzaag': "sırtlı testere (sert sırtı olan küçük bir testere)", // nieuw, nalezen
@@ -2504,14 +2504,14 @@ const t: CultureTranslation = {
     's.wood.3': "Keskiye tokmakla vur.", // nieuw, nalezen
     'c.wood.q': "Hangi testere lazım?", // nieuw, nalezen
     'c.wood.a': "Sırtlı testere, bu küçük parça için.", // nieuw, nalezen
-    'c.wood': "Kısa kalan düzeltilemez", // nieuw, nalezen
-    'c.wood.b': "Çok kısa kesilen ahşap yeniden uzatılamaz. Bu yüzden iki kez ölç ve kesmeden önce çizgiyi çiz. Çizginin yanından, ihtiyacın olmayan parçanın tarafından kes. Ahşabı sabit tut: tezgâhta ya da bir işkenceyle, dizinin üstünde değil. Bırak işi testere yapsın, uzun ve sakin hareketlerle. Keskiyi vücudundan ve öbür elinden uzağa doğru it. Keskiyi ve rendeyi keskin tut: kör bir alet daha kolay kayar.", // nieuw, nalezen
-    'c.wood.p': "Bir kez daha ölçüyorum.", // nieuw, nalezen
-    'c.wood.s': "Bir tahtayı ölçüsüne göre kesmen gerekiyor. Bir kez, hızlıca ölçtün. Ne yaparsın?", // nieuw, nalezen
-    'c.wood.o1': "Yeniden ölçer, sonra çizgiyi çizersin.", // nieuw, nalezen
-    'c.wood.o2': "Şimdi kesersin: büyük ihtimalle doğrudur.", // nieuw, nalezen
-    'c.wood.o3': "Çizgi çizmeden, gözle kesersin.", // nieuw, nalezen
-    'c.wood.w': "Çok uzunsa yeniden kesebilirsin, çok kısayı düzeltemezsin. Yeniden ölçmek bir dakika sürer; yeni bir tahta çok daha fazlasını.", // nieuw, nalezen
+    'c.wood': "Kısa kalan düzeltilemez", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.b': "Çok kısa kesilen ahşap yeniden uzatılamaz. Bu yüzden iki kez ölç ve kesmeden önce çizgiyi çiz. Çizginin yanından, ihtiyacın olmayan parçanın tarafından kes. Ahşabı sabit tut: tezgâhta ya da bir işkenceyle, dizinin üstünde değil. Bırak işi testere yapsın, uzun ve sakin hareketlerle. Keskiyi vücudundan ve öbür elinden uzağa doğru it. Keskiyi ve rendeyi keskin tut: kör bir alet daha kolay kayar.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.p': "Bir kez daha ölçüyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.s': "Bir tahtayı ölçüsüne göre kesmen gerekiyor. Bir kez, hızlıca ölçtün. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.o1': "Yeniden ölçer, sonra çizgiyi çizersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.o2': "Şimdi kesersin: büyük ihtimalle doğrudur.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.o3': "Çizgi çizmeden, gözle kesersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.w': "Çok uzunsa yeniden kesebilirsin, çok kısayı düzeltemezsin. Yeniden ölçmek bir dakika sürer; yeni bir tahta çok daha fazlasını.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.square': "İşaretlemek", // nieuw, nalezen
     'w.winkelhaak': "gönye (dik açıyı gösterir)", // nieuw, nalezen
     'w.verstekhaak': "açılı gönye (45 derece)", // nieuw, nalezen
@@ -2524,14 +2524,14 @@ const t: CultureTranslation = {
     's.square.3': "Pergelle bir daire çiz.", // nieuw, nalezen
     'c.square.q': "Açı dik mi?", // nieuw, nalezen
     'c.square.a': "Evet, gönye tam oturuyor.", // nieuw, nalezen
-    'c.square': "Tek bir düz kenardan işaretle", // nieuw, nalezen
-    'c.square.b': "Kesmeden ya da delmeden önce yerini işaretlersin. Sivri bir kurşun kalem kullan: kalın bir çizgi tam değildir. Ahşabın düz bir kenarını seç ve her şeyi o kenardan ölç. Gönyenin kalın kısmını kenara sıkıca dayat ve çizgiyi çeliğin boyunca çiz. Kullanmayacağın parçaya küçük bir çarpı çiz. Sonra çizginin yanından, çarpının olduğu taraftan kesersin.", // nieuw, nalezen
-    'c.square.p': "Önce işaretliyorum.", // nieuw, nalezen
-    'c.square.s': "Kurşun kalemin kör ve kalın bir çizgi çiziyor. Bir tahtayı işaretlemek istiyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.square.o1': "Önce kalemi açar, sonra çizersin.", // nieuw, nalezen
-    'c.square.o2': "Çizgiyi yine de çizersin, olur.", // nieuw, nalezen
-    'c.square.o3': "Tırnağınla işaretlersin.", // nieuw, nalezen
-    'c.square.w': "Kalın bir çizgi birkaç milimetre genişliğindedir. O zaman nereden keseceğini bilemezsin ve parça tam olmaz.", // nieuw, nalezen
+    'c.square': "Tek bir düz kenardan işaretle", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.b': "Kesmeden ya da delmeden önce yerini işaretlersin. Sivri bir kurşun kalem kullan: kalın bir çizgi tam değildir. Ahşabın düz bir kenarını seç ve her şeyi o kenardan ölç. Gönyenin kalın kısmını kenara sıkıca dayat ve çizgiyi çeliğin boyunca çiz. Kullanmayacağın parçaya küçük bir çarpı çiz. Sonra çizginin yanından, çarpının olduğu taraftan kesersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.p': "Önce işaretliyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.s': "Kurşun kalemin kör ve kalın bir çizgi çiziyor. Bir tahtayı işaretlemek istiyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.o1': "Önce kalemi açar, sonra çizersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.o2': "Çizgiyi yine de çizersin, olur.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.o3': "Tırnağınla işaretlersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.square.w': "Kalın bir çizgi birkaç milimetre genişliğindedir. O zaman nereden keseceğini bilemezsin ve parça tam olmaz.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.screw': "Matkaplar ve vidalar", // nieuw, nalezen
     'w.accuboor': "akülü matkap", // nieuw, nalezen
     'w.boormachine': "elektrikli matkap (kablolu)", // nieuw, nalezen
@@ -2544,14 +2544,14 @@ const t: CultureTranslation = {
     's.screw.3': "Çiviyi ahşaba çak.", // nieuw, nalezen
     'c.screw.q': "Akülü matkap nerede?", // nieuw, nalezen
     'c.screw.a': "Şarj aletinde, neredeyse dolu.", // nieuw, nalezen
-    'c.screw': "Delmeden önce bak", // nieuw, nalezen
-    'c.screw.b': "Bir duvarı delmeden önce arkasında ne olduğunu düşün. Borular ve kablolar çoğu zaman bir prizden ya da bir anahtardan dümdüz yukarı, aşağı ya da yana gider. Nerede olduklarını sor ya da bir dedektörle kontrol et. Dübelle aynı boyda bir matkap ucu seç ve deliği dübelden biraz daha derin del. Vidaya uygun ucu kullan: yanlış uç kayar ve vidanın başını bozar. Delerken koruyucu gözlük tak.", // nieuw, nalezen
-    'c.screw.p': "Burayı delebilir miyim?", // nieuw, nalezen
-    'c.screw.s': "Bir prizin tam üstüne delik delmen gerekiyor. Ne yaparsın?", // nieuw, nalezen
-    'c.screw.o1': "Önce kablonun nereden geçtiğini sorarsın.", // nieuw, nalezen
-    'c.screw.o2': "Delersin: orada asla kablo olmaz.", // nieuw, nalezen
-    'c.screw.o3': "Yavaş delersin, o zaman güvenlidir.", // nieuw, nalezen
-    'c.screw.w': "Bir prizden çoğu zaman dümdüz yukarı bir kablo gider. Kabloyu delmek tehlikelidir ve onarımı çok iş çıkarır.", // nieuw, nalezen
+    'c.screw': "Delmeden önce bak", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.b': "Bir duvarı delmeden önce arkasında ne olduğunu düşün. Borular ve kablolar çoğu zaman bir prizden ya da bir anahtardan dümdüz yukarı, aşağı ya da yana gider. Nerede olduklarını sor ya da bir dedektörle kontrol et. Dübelle aynı boyda bir matkap ucu seç ve deliği dübelden biraz daha derin del. Vidaya uygun ucu kullan: yanlış uç kayar ve vidanın başını bozar. Delerken koruyucu gözlük tak.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.p': "Burayı delebilir miyim?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.s': "Bir prizin tam üstüne delik delmen gerekiyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.o1': "Önce kablonun nereden geçtiğini sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.o2': "Delersin: orada asla kablo olmaz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.o3': "Yavaş delersin, o zaman güvenlidir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.screw.w': "Bir prizden çoğu zaman dümdüz yukarı bir kablo gider. Kabloyu delmek tehlikelidir ve onarımı çok iş çıkarır.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.fix': "Bir şeyleri sabitlemek", // nieuw, nalezen
     'w.bevestigen': "sabitlemek (bir şeyi duvara sağlam takmak)", // nieuw, nalezen
     'w.vastzetten': "sıkmak (sıkı olana kadar çevirmek)", // nieuw, nalezen
@@ -2564,14 +2564,14 @@ const t: CultureTranslation = {
     's.fix.3': "Düz tornavidayı al, yıldızı değil.", // nieuw, nalezen
     'c.fix.q': "Bu rafı nasıl sabitlerim?", // nieuw, nalezen
     'c.fix.a': "İki dübel ve iki vidayla.", // nieuw, nalezen
-    'c.fix': "Sıkı, ama fazla sıkı değil", // nieuw, nalezen
-    'c.fix.b': "Bir vida ya da cıvata sıkı olmalı, ama fazla sıkı değil. Çok sert çevirirsen diş bozulur ya da ahşap yarılır. Artık dönmeyene kadar çevir, sonra dur. Akülü matkapta önce numaralı halkayı düşük bir sayıya getir. Duvardaki bir raf, duvara uygun dübel ister: taş duvar, ince bir levha duvardan başka dübel ister. Yapıştırıcı zaman ister: parçaları birbirine bastır, bir işkenceyle tut ve yapıştırıcı kuruyana kadar bekle.", // nieuw, nalezen
-    'c.fix.p': "Raf iyi sabitlendi mi?", // nieuw, nalezen
-    'c.fix.s': "İki ahşap parçayı yapıştırdın. İş arkadaşın onu hemen kullanmak istiyor. Ne yaparsın?", // nieuw, nalezen
-    'c.fix.o1': "Söylersin: önce yapıştırıcının kuruması lazım.", // nieuw, nalezen
-    'c.fix.o2': "Kullanmasına izin verirsin: yapıştırıcı çabuktur.", // nieuw, nalezen
-    'c.fix.o3': "Bir dakika elinde tutarsın.", // nieuw, nalezen
-    'c.fix.w': "Islak yapıştırıcı henüz tutmaz. Çok erken kullanırsan parçalar yine ayrılır. O zaman baştan başlaman gerekir.", // nieuw, nalezen
+    'c.fix': "Sıkı, ama fazla sıkı değil", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.b': "Bir vida ya da cıvata sıkı olmalı, ama fazla sıkı değil. Çok sert çevirirsen diş bozulur ya da ahşap yarılır. Artık dönmeyene kadar çevir, sonra dur. Akülü matkapta önce numaralı halkayı düşük bir sayıya getir. Duvardaki bir raf, duvara uygun dübel ister: taş duvar, ince bir levha duvardan başka dübel ister. Yapıştırıcı zaman ister: parçaları birbirine bastır, bir işkenceyle tut ve yapıştırıcı kuruyana kadar bekle.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.p': "Raf iyi sabitlendi mi?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.s': "İki ahşap parçayı yapıştırdın. İş arkadaşın onu hemen kullanmak istiyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.o1': "Söylersin: önce yapıştırıcının kuruması lazım.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.o2': "Kullanmasına izin verirsin: yapıştırıcı çabuktur.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.o3': "Bir dakika elinde tutarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fix.w': "Islak yapıştırıcı henüz tutmaz. Çok erken kullanırsan parçalar yine ayrılır. O zaman baştan başlaman gerekir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.atmachine': "Makinenin başında", // nieuw, nalezen
     'w.bedieningspaneel': "kontrol paneli (bir makinenin düğmeleri ve ekranı)", // nieuw, nalezen
     'w.startknop': "başlatma düğmesi (yeşil)", // nieuw, nalezen
@@ -2584,14 +2584,14 @@ const t: CultureTranslation = {
     's.atmachine.3': "Makine korumasını asla çıkarma.", // nieuw, nalezen
     'c.atmachine.q': "Makine neden sürekli duruyor?", // nieuw, nalezen
     'c.atmachine.a': "Sensör kutuyu iyi görmüyor.", // nieuw, nalezen
-    'c.atmachine': "Koruma yerinde kalır", // nieuw, nalezen
-    'c.atmachine.b': "Bir makinenin hareketli parçaları bir eli, bir kolu ya da saçı bir saniyeden kısa sürede içeri çekebilir. Koruma bunun için vardır. Onu asla çıkarma ve makine çalışırken asla arkasına uzanma. Bir koruma ya da sensör çalışmıyor mu? O zaman makine güvenli değildir: makineyi durdur ve ekip liderine söyle. Bir şey mi sıkıştı? Önce makineyi durdur ve sen çalışırken kimsenin onu çalıştıramayacağından emin ol. Bunun nasıl yapıldığı şirketten şirkete değişir: başlamadan önce açıklama iste. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.atmachine.p': "Makine koruması kırık.", // nieuw, nalezen
-    'c.atmachine.s': "Bir kutu makineye, korumanın hemen arkasına sıkıştı. Makine çalışıyor. Ne yaparsın?", // nieuw, nalezen
-    'c.atmachine.o1': "Önce makineyi durdurur, sonra yardım çağırırsın.", // nieuw, nalezen
-    'c.atmachine.o2': "Hızlıca uzanıp kutuyu çekip çıkarırsın.", // nieuw, nalezen
-    'c.atmachine.o3': "Makine çalışırken korumayı açarsın.", // nieuw, nalezen
-    'c.atmachine.w': "Çalışan bir makine, sen tepki veremeden elini içeri çekebilir. Durdurmak bir an sürer; yaralı bir el aylar sürer.", // nieuw, nalezen
+    'c.atmachine': "Koruma yerinde kalır", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.b': "Bir makinenin hareketli parçaları bir eli, bir giysi kolunu ya da saçı bir saniyeden kısa sürede içeri çekebilir. Koruma bunun için vardır. Onu asla çıkarma ve makine çalışırken asla arkasına uzanma. Bir koruma ya da sensör çalışmıyor mu? O zaman makine güvenli değildir: makineyi durdur ve ekip liderine söyle. Bir şey mi sıkıştı? Önce makineyi durdur ve sen çalışırken kimsenin onu çalıştıramayacağından emin ol. Bunun nasıl yapıldığı şirketten şirkete değişir: başlamadan önce açıklama iste. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.p': "Makine koruması kırık.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.s': "Bir kutu makineye, korumanın hemen arkasına sıkıştı. Makine çalışıyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.o1': "Önce makineyi durdurur, sonra yardım çağırırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.o2': "Hızlıca uzanıp kutuyu çekip çıkarırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.o3': "Makine çalışırken korumayı açarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.atmachine.w': "Çalışan bir makine, sen tepki veremeden elini içeri çekebilir. Durdurmak bir an sürer; yaralı bir el aylar sürer.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.inspect': "Ölçmek ve kontrol etmek", // nieuw, nalezen
     'w.weegschaal': "terazi", // nieuw, nalezen
     'w.meetklok': "komparatör (çok küçük farkları ölçer)", // nieuw, nalezen
@@ -2604,14 +2604,14 @@ const t: CultureTranslation = {
     's.inspect.3': "Etikete büyüteçle bakıyorum.", // nieuw, nalezen
     'c.inspect.q': "Ne sıklıkla numune alıyorum?", // nieuw, nalezen
     'c.inspect.a': "Her saat bir tane. Listeye yaz.", // nieuw, nalezen
-    'c.inspect': "Kontrol ettiğin şeyi yaz", // nieuw, nalezen
-    'c.inspect.b': "Fabrikada iş sırasında ürünleri kontrol edersin: tartarsın, ölçersin ya da yakından bakarsın. Her kontrolü hemen saatiyle birlikte listeye yaz. Sonra, akıldan değil. Bir ürün doğru değil mi? Onu hatalı ürün kutusuna koy ve sonrakilere dikkatle bak. Daha fazla ürün mü yanlış? O zaman makinede bir sorun var. Hemen ekip liderine söyle. Erken bulunan bir sorun çok ürünü kurtarır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.inspect.p': "Daha fazla ürün yanlış.", // nieuw, nalezen
-    'c.inspect.s': "Terazi, art arda üç ürünün çok hafif olduğunu gösteriyor. Ne yaparsın?", // nieuw, nalezen
-    'c.inspect.o1': "Hemen ekip liderine söylersin.", // nieuw, nalezen
-    'c.inspect.o2': "Onları yeniden banta koyarsın.", // nieuw, nalezen
-    'c.inspect.o3': "Bir şey söylemezsin: olur böyle şeyler.", // nieuw, nalezen
-    'c.inspect.w': "Art arda üç yanlış ürün, makinede bir sorun olduğunu gösterir. Ne kadar erken söylersen o kadar az ürün boşa gider.", // nieuw, nalezen
+    'c.inspect': "Kontrol ettiğin şeyi yaz", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.b': "Fabrikada iş sırasında ürünleri kontrol edersin: tartarsın, ölçersin ya da yakından bakarsın. Her kontrolü hemen saatiyle birlikte listeye yaz. Sonra, akıldan değil. Bir ürün doğru değil mi? Onu hatalı ürün kutusuna koy ve sonrakilere dikkatle bak. Daha fazla ürün mü yanlış? O zaman makinede bir sorun var. Hemen ekip liderine söyle. Erken bulunan bir sorun çok ürünü kurtarır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.p': "Daha fazla ürün yanlış.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.s': "Terazi, art arda üç ürünün çok hafif olduğunu gösteriyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.o1': "Hemen ekip liderine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.o2': "Onları yeniden banta koyarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.o3': "Bir şey söylemezsin: olur böyle şeyler.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.inspect.w': "Art arda üç yanlış ürün, makinede bir sorun olduğunu gösterir. Ne kadar erken söylersen o kadar az ürün boşa gider.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.packing': "Paketleme", // nieuw, nalezen
     'w.verpakking': "ambalaj", // nieuw, nalezen
     'w.krimpfolie': "shrink folyo (ısıyla sıkılaşan plastik film)", // nieuw, nalezen
@@ -2624,14 +2624,14 @@ const t: CultureTranslation = {
     's.packing.3': "Kapatma makinesi sıcak. Dikkat et!", // nieuw, nalezen
     'c.packing.q': "Bir kutuya kaç ürün giriyor?", // nieuw, nalezen
     'c.packing.a': "On iki. Listede yazıyor.", // nieuw, nalezen
-    'c.packing': "Vücudundan uzağa doğru kes", // nieuw, nalezen
-    'c.packing.b': "Paketleme hızlı bir iştir ve maket bıçağı çok keskindir. Her zaman vücudundan ve öbür elinden uzağa doğru kes. Her kesimden sonra bıçağı geri it, bıçağı bir anlığına bıraktığında da. Kör bir parçayı dikkatle kır ve eski bıçaklar için olan kutuya at, normal çöpe değil. Kapatma makinesi ve shrink folyo için sıcak hava tabancası çok ısınır: sıcak parçalara dokunma. Her kutuyu da kontrol et: doğru ürün, doğru sayı ve etiket düz mü. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.packing.p': "Önce bıçağı geri itiyorum.", // nieuw, nalezen
-    'c.packing.s': "Maket bıçağını bir anlığına masaya koyuyorsun. Bıçak hâlâ dışarıda. Ne yaparsın?", // nieuw, nalezen
-    'c.packing.o1': "Önce bıçağı geri itersin.", // nieuw, nalezen
-    'c.packing.o2': "Bırakırsın: birazdan yine lazım olacak.", // nieuw, nalezen
-    'c.packing.o3': "Böyle cebine koyarsın.", // nieuw, nalezen
-    'c.packing.w': "Masada ya da cepte açık bir bıçak seni ya da bir iş arkadaşını kesebilir. Geri itmek bir saniye sürer.", // nieuw, nalezen
+    'c.packing': "Vücudundan uzağa doğru kes", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.b': "Paketleme hızlı bir iştir ve maket bıçağı çok keskindir. Her zaman vücudundan ve öbür elinden uzağa doğru kes. Her kesimden sonra bıçağı geri it, bıçağı bir anlığına bıraktığında da. Kör bir parçayı dikkatle kır ve eski bıçaklar için olan kutuya at, normal çöpe değil. Kapatma makinesi ve shrink folyo için sıcak hava tabancası çok ısınır: sıcak parçalara dokunma. Her kutuyu da kontrol et: doğru ürün, doğru sayı ve etiket düz mü. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.p': "Önce bıçağı geri itiyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.s': "Maket bıçağını bir anlığına masaya koyuyorsun. Bıçak hâlâ dışarıda. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.o1': "Önce bıçağı geri itersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.o2': "Bırakırsın: birazdan yine lazım olacak.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.o3': "Böyle cebine koyarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.packing.w': "Masada ya da cepte açık bir bıçak seni ya da bir iş arkadaşını kesebilir. Geri itmek bir saniye sürer.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.upkeep': "Bakım", // nieuw, nalezen
     'w.persluchtpistool': "hava tabancası", // nieuw, nalezen
     'w.steeksleutel': "açık ağızlı anahtar", // nieuw, nalezen
@@ -2644,14 +2644,14 @@ const t: CultureTranslation = {
     's.upkeep.3': "Hava tabancasını asla birine doğru tutma.", // nieuw, nalezen
     'c.upkeep.q': "Makineyi ne zaman yağlıyoruz?", // nieuw, nalezen
     'c.upkeep.a': "Her pazartesi, ilk vardiyadan önce.", // nieuw, nalezen
-    'c.upkeep': "Temiz bir makine sorunlarını gösterir", // nieuw, nalezen
-    'c.upkeep.b': "Küçük bakım çoğu zaman işin bir parçasıdır: silmek, yağlamak ve gres yapmak. Bunu sadece makine kapalıyken ve nasıl yapıldığını öğrendiysen yap. Temiz bir makineyi kontrol etmek kolaydır: bir sızıntıyı ya da gevşek bir parçayı hemen görürsün. Yerdeki yağ kaygandır. Sızıntının altına bir damlama tavası koy, yeri sil ve ekip liderine söyle. Yağlı bezleri özel çöp kutusuna at. Hava tabancasını asla bir insana doğru tutma ve onunla asla giysilerini ya da cildini temizleme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.upkeep.p': "Makine yağ sızdırıyor.", // nieuw, nalezen
-    'c.upkeep.s': "Makinenin altında küçük bir yağ birikintisi görüyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.upkeep.o1': "Altına bir damlama tavası koyar ve bildirirsin.", // nieuw, nalezen
-    'c.upkeep.o2': "Bırakırsın: sadece biraz.", // nieuw, nalezen
-    'c.upkeep.o3': "Üstüne biraz kâğıt koyar ve devam edersin.", // nieuw, nalezen
-    'c.upkeep.w': "Bir sızıntı büyür ve yerdeki yağ insanları kaydırır. Erken bulunursa küçük bir onarımdır.", // nieuw, nalezen
+    'c.upkeep': "Temiz bir makine sorunlarını gösterir", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.b': "Küçük bakım çoğu zaman işin bir parçasıdır: silmek, yağlamak ve gres yapmak. Bunu sadece makine kapalıyken ve nasıl yapıldığını öğrendiysen yap. Temiz bir makineyi kontrol etmek kolaydır: bir sızıntıyı ya da gevşek bir parçayı hemen görürsün. Yerdeki yağ kaygandır. Sızıntının altına bir damlama tavası koy, yeri sil ve ekip liderine söyle. Yağlı bezleri özel çöp kutusuna at. Hava tabancasını asla bir insana doğru tutma ve onunla asla giysilerini ya da cildini temizleme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.p': "Makine yağ sızdırıyor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.s': "Makinenin altında küçük bir yağ birikintisi görüyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.o1': "Altına bir damlama tavası koyar ve bildirirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.o2': "Bırakırsın: sadece biraz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.o3': "Üstüne biraz kâğıt koyar ve devam edersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.w': "Bir sızıntı büyür ve yerdeki yağ insanları kaydırır. Erken bulunursa küçük bir onarımdır.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
     'u.install': "Elektrik, borular ve metal", // nieuw, nalezen
     'l.wiring': "Kablo bağlantısı", // nieuw, nalezen
@@ -2666,14 +2666,14 @@ const t: CultureTranslation = {
     's.wiring.3': "Kablolar kablo kanalına girer.", // nieuw, nalezen
     'c.wiring.q': "Hangi tel nereye gidiyor?", // nieuw, nalezen
     'c.wiring.a': "Kahverengi kahverengiye, mavi maviye.", // nieuw, nalezen
-    'c.wiring': "Renkler telin ne yaptığını söyler", // nieuw, nalezen
-    'c.wiring.b': "Bir binada tellerin sabit renkleri vardır. Kahverengi (bazen siyah ya da gri) elektriği getirir. Mavi geri döner. Yeşil-sarı topraktır: insanları korur ve asla başka bir şey için kullanılmaz. Aynı rengi aynı renge bağla. Sadece klemense sığacak kadar sıy: dışarıda hiç çıplak bakır kalmamalı. Teli içeri it, sonra sabit olduğunu kontrol etmek için hafifçe çek. Hangi telin hangisi olduğundan emin değil misin? Dur ve sor.", // nieuw, nalezen
-    'c.wiring.p': "Toprak hangi renk?", // nieuw, nalezen
-    'c.wiring.s': "Bir lamba bağlıyorsun. Klemensten bir parça bakır dışarı çıkıyor. Ne yaparsın?", // nieuw, nalezen
-    'c.wiring.o1': "Teli kısaltır ve yeniden bağlarsın.", // nieuw, nalezen
-    'c.wiring.o2': "Bırakırsın: lamba çalışıyor.", // nieuw, nalezen
-    'c.wiring.o3': "Etrafına bir parça bant sararsın.", // nieuw, nalezen
-    'c.wiring.w': "Klemensin dışındaki çıplak bakır bir şeye değebilir. Bu, elektrik çarpmasına ya da kısa devreye yol açabilir, aylar sonra bile.", // nieuw, nalezen
+    'c.wiring': "Renkler telin ne yaptığını söyler", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.b': "Bir binada tellerin sabit renkleri vardır. Kahverengi (bazen siyah ya da gri) elektriği getirir. Mavi geri döner. Yeşil-sarı topraktır: insanları korur ve asla başka bir şey için kullanılmaz. Aynı rengi aynı renge bağla. Teli sadece klemense sığacak kadar soy: dışarıda hiç çıplak bakır kalmamalı. Teli içeri it, sonra sabit olduğunu kontrol etmek için hafifçe çek. Hangi telin hangisi olduğundan emin değil misin? Dur ve sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.p': "Toprak hangi renk?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.s': "Bir lamba bağlıyorsun. Klemensten bir parça bakır dışarı çıkıyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.o1': "Teli kısaltır ve yeniden bağlarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.o2': "Bırakırsın: lamba çalışıyor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.o3': "Etrafına bir parça bant sararsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wiring.w': "Klemensin dışındaki çıplak bakır bir şeye değebilir. Bu, elektrik çarpmasına ya da kısa devreye yol açabilir, aylar sonra bile.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.testing': "Ölçmek ve güvenli çalışmak", // nieuw, nalezen
     'w.multimeter': "multimetre (elektriği ölçer)", // nieuw, nalezen
     'w.spanningzoeker': "kontrol kalemi (küçük lambalı bir tornavida)", // nieuw, nalezen
@@ -2686,14 +2686,14 @@ const t: CultureTranslation = {
     's.testing.3': "Önce multimetreyle ölç.", // nieuw, nalezen
     'c.testing.q': "Sigorta kutusunu açabilir miyim?", // nieuw, nalezen
     'c.testing.a': "Hayır, onu elektrikçi yapar.", // nieuw, nalezen
-    'c.testing': "Kapalı, kilitli, ölçülmüş", // nieuw, nalezen
-    'c.testing.b': "Elektrik işine başlamadan önce üç adım at. Kapat: sigorta kutusundaki doğru sigortayı, sadece duvardaki anahtarı değil. Kilitle: üstüne kendi asma kilidini tak ve anahtarı yanında tut, böylece kimse onu yeniden açamaz. Ölç: bir kontrol kalemi ya da multimetreyle gerçekten elektrik olmadığını kontrol et. Ancak ondan sonra başlarsın. Bir sigorta tekrar tekrar mı atıyor? Onu açmaya devam etme: amirine söyle. Elektrik işini sadece yapabileceğin söylendiyse yap. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.testing.p': "Artık üzerinde elektrik yok.", // nieuw, nalezen
-    'c.testing.s': "Sigortayı kapattın. Bir iş arkadaşın diyor ki: “Şimdi başla, kapalı.” Ne yaparsın?", // nieuw, nalezen
-    'c.testing.o1': "Kilitler ve önce ölçersin.", // nieuw, nalezen
-    'c.testing.o2': "Başlarsın: iş arkadaşın biliyor.", // nieuw, nalezen
-    'c.testing.o3': "Kontrol etmek için tele hızlıca dokunursun.", // nieuw, nalezen
-    'c.testing.w': "Bazen yanlış sigorta kapalıdır ya da biri onu yeniden açar. Bir kilit ve bir ölçüm, gerçekten güvenli olduğunu gösterir.", // nieuw, nalezen
+    'c.testing': "Kapalı, kilitli, ölçülmüş", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.b': "Elektrik işine başlamadan önce üç adım at. Kapat: sigorta kutusundaki doğru sigortayı, sadece duvardaki anahtarı değil. Kilitle: üstüne kendi asma kilidini tak ve anahtarı yanında tut, böylece kimse onu yeniden açamaz. Ölç: bir kontrol kalemi ya da multimetreyle gerçekten elektrik olmadığını kontrol et. Ancak ondan sonra başlarsın. Bir sigorta tekrar tekrar mı atıyor? Onu açmaya devam etme: amirine söyle. Elektrik işini sadece sana izin verildiyse yap. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.p': "Artık üzerinde elektrik yok.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.s': "Sigortayı kapattın. Bir iş arkadaşın diyor ki: “Şimdi başla, kapalı.” Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.o1': "Kilitler ve önce ölçersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.o2': "Başlarsın: iş arkadaşın biliyor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.o3': "Kontrol etmek için tele hızlıca dokunursun.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.testing.w': "Bazen yanlış sigorta kapalıdır ya da biri onu yeniden açar. Bir kilit ve bir ölçüm, gerçekten güvenli olduğunu gösterir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.pipes': "Borular ve su", // nieuw, nalezen
     'w.buis': "boru", // nieuw, nalezen
     'w.koppeling': "rakor (iki boruyu birleştirir)", // nieuw, nalezen
@@ -2706,14 +2706,14 @@ const t: CultureTranslation = {
     's.pipes.3': "Dişin etrafına teflon bant sar.", // nieuw, nalezen
     'c.pipes.q': "Rakor hâlâ sızdırıyor mu?", // nieuw, nalezen
     'c.pipes.a': "Biraz. Biraz daha sıkacağım.", // nieuw, nalezen
-    'c.pipes': "Önce su kapalı, bir de kova hazır", // nieuw, nalezen
-    'c.pipes.b': "Bir su borusunu açmadan önce vanayı kapat. Sonra daha aşağıdaki bir musluğu aç, böylece boru boşalır. Çalıştığın yerin altına bir kova ve bir bez koy. Bakır boruyu testereyle değil, boru kesiciyle kes: uç yuvarlak ve temiz kalır. Rakoru sıkıca sık, ama fazla sert değil. İşin bitince suyu yavaşça aç ve damla olup olmadığına bak. Bıraktığın küçük bir sızıntı su hasarına dönüşür.", // nieuw, nalezen
-    'c.pipes.p': "Su kapalı mı?", // nieuw, nalezen
-    'c.pipes.s': "Yeni bir rakor taktın. Suyu açıyorsun. Her dakika küçük bir damla düşüyor. Ne yaparsın?", // nieuw, nalezen
-    'c.pipes.o1': "Suyu kapatır, rakoru sıkar ya da yeniden yaparsın.", // nieuw, nalezen
-    'c.pipes.o2': "Bırakırsın: sadece bir damla.", // nieuw, nalezen
-    'c.pipes.o3': "Altına bir kova koyar ve eve gidersin.", // nieuw, nalezen
-    'c.pipes.w': "Dakikada bir damla, haftada birçok litre eder. Su, yere ya da alttaki tavana zarar verebilir.", // nieuw, nalezen
+    'c.pipes': "Önce su kapalı, bir de kova hazır", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.b': "Bir su borusunu açmadan önce vanayı kapat. Sonra daha aşağıdaki bir musluğu aç, böylece boru boşalır. Çalıştığın yerin altına bir kova ve bir bez koy. Bakır boruyu testereyle değil, boru kesiciyle kes: uç yuvarlak ve temiz kalır. Rakoru sıkıca sık, ama fazla sert değil. İşin bitince suyu yavaşça aç ve damla olup olmadığına bak. Bıraktığın küçük bir sızıntı su hasarına dönüşür.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.p': "Su kapalı mı?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.s': "Yeni bir rakor taktın. Suyu açıyorsun. Her dakika küçük bir damla düşüyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.o1': "Suyu kapatır, rakoru sıkar ya da yeniden yaparsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.o2': "Bırakırsın: sadece bir damla.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.o3': "Altına bir kova koyar ve eve gidersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pipes.w': "Dakikada bir damla, haftada birçok litre eder. Su, yere ya da alttaki tavana zarar verebilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.metalwork': "Metal işleme", // nieuw, nalezen
     'w.bankschroef': "mengene (bir parçayı tezgâhta sıkıca tutar)", // nieuw, nalezen
     'w.vijl': "eğe (metali elle düzeltmek için)", // nieuw, nalezen
@@ -2726,14 +2726,14 @@ const t: CultureTranslation = {
     's.metalwork.3': "Ellerini matkaptan uzak tut.", // nieuw, nalezen
     'c.metalwork.q': "Kenar neden bu kadar keskin?", // nieuw, nalezen
     'c.metalwork.a': "Üstünde hâlâ çapak var.", // nieuw, nalezen
-    'c.metalwork': "Sıkıştır, asla elle tutma", // nieuw, nalezen
-    'c.metalwork.b': "Sütunlu matkapta küçük bir parçayı asla elinde tutma. Matkap onu yakalayıp çok hızlı döndürebilir. Onu mengeneye sıkıştır. Uzun saçını bağla ve dönen bir matkapta eldiven giyme: eldiveni içeri çekebilir. Koruyucu gözlük tak. Testereyle kestikten ya da deldikten sonra metalde çapak olur: keskin bir kenar. Parçayı eline almadan ya da birine vermeden önce onu eğeyle al. Metal talaşlarını elinle değil, bir fırçayla süpür.", // nieuw, nalezen
-    'c.metalwork.p': "Önce onu sıkıştırıyorum.", // nieuw, nalezen
-    'c.metalwork.s': "Küçük bir metal parçasına delik delmen gerekiyor. Mengene başka bir tezgâhta. Ne yaparsın?", // nieuw, nalezen
-    'c.metalwork.o1': "Mengeneyi getirir ve parçayı sıkıştırırsın.", // nieuw, nalezen
-    'c.metalwork.o2': "Elinle sıkıca tutarsın.", // nieuw, nalezen
-    'c.metalwork.o3': "Eldiven giyer ve tutarsın.", // nieuw, nalezen
-    'c.metalwork.w': "Matkap küçük bir parçayı yakalayıp döndürebilir. O zaman parça eline çarpar. Mengenede ise yerinde durur.", // nieuw, nalezen
+    'c.metalwork': "Sıkıştır, asla elle tutma", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.b': "Sütunlu matkapta küçük bir parçayı asla elinde tutma. Matkap onu yakalayıp çok hızlı döndürebilir. Onu mengeneye sıkıştır. Uzun saçını bağla ve dönen bir matkapta eldiven giyme: eldiveni içeri çekebilir. Koruyucu gözlük tak. Testereyle kestikten ya da deldikten sonra metalde çapak olur: keskin bir kenar. Parçayı eline almadan ya da birine vermeden önce onu eğeyle al. Metal talaşlarını elinle değil, bir fırçayla süpür.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.p': "Önce onu sıkıştırıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.s': "Küçük bir metal parçasına delik delmen gerekiyor. Mengene başka bir tezgâhta. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.o1': "Mengeneyi getirir ve parçayı sıkıştırırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.o2': "Elinle sıkıca tutarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.o3': "Eldiven giyer ve tutarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.metalwork.w': "Matkap küçük bir parçayı yakalayıp döndürebilir. O zaman parça eline çarpar. Mengenede ise yerinde durur.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Assemblage en montage" (u.montage, 21 November 2026).
     'u.montage': "Montaj", // nieuw, nalezen
     'l.assembly': "Montaj hattında", // nieuw, nalezen
@@ -2748,14 +2748,14 @@ const t: CultureTranslation = {
     's.assembly.3': "Parçayı fikstüre koy.", // nieuw, nalezen
     'c.assembly.q': "Şimdi hangi adım geliyor?", // nieuw, nalezen
     'c.assembly.a': "Dördüncü adım. İş talimatına bak.", // nieuw, nalezen
-    'c.assembly': "Adımları izle, hep aynı sırayla", // nieuw, nalezen
-    'c.assembly.b': "Montaj hattında her adımın kendi yeri ve sırası vardır. İş talimatı bunları gösterir, çoğu zaman resimlerle. Adımları her seferinde aynı sırayla yap, daha hızlı bir yol bildiğini düşündüğünde de. Başka bir sıra, iyi görünen ama çalışmayan bir ürün çıkarabilir. Bir kutu neredeyse boş mu? Zamanında söyle, böylece hat durmaz. Daha iyi olabilecek bir adım mı görüyorsun? Ekip liderine söyle: o zaman herkes için değişebilir.", // nieuw, nalezen
-    'c.assembly.p': "Yeni parçalara ihtiyacım var.", // nieuw, nalezen
-    'c.assembly.s': "Üçüncü adımı yapmanın daha hızlı bir yolunu buldun. İş talimatı başka bir şey söylüyor. Ne yaparsın?", // nieuw, nalezen
-    'c.assembly.o1': "Önce ekip liderine sorarsın.", // nieuw, nalezen
-    'c.assembly.o2': "Bundan sonra kendi bildiğin gibi yaparsın.", // nieuw, nalezen
-    'c.assembly.o3': "İş arkadaşlarına kendi yolunu öğretirsin.", // nieuw, nalezen
-    'c.assembly.w': "Sıranın çoğu zaman göremediğin bir nedeni vardır. Senin yolun daha iyiyse, herkes için değişebilir.", // nieuw, nalezen
+    'c.assembly': "Adımları izle, hep aynı sırayla", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.b': "Montaj hattında her adımın kendi yeri ve sırası vardır. İş talimatı bunları gösterir, çoğu zaman resimlerle. Adımları her seferinde aynı sırayla yap, daha hızlı bir yol bildiğini düşündüğünde de. Başka bir sıra, iyi görünen ama çalışmayan bir ürün çıkarabilir. Bir kutu neredeyse boş mu? Zamanında söyle, böylece hat durmaz. Daha iyi olabilecek bir adım mı görüyorsun? Ekip liderine söyle: o zaman herkes için değişebilir.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.p': "Yeni parçalara ihtiyacım var.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.s': "Üçüncü adımı yapmanın daha hızlı bir yolunu buldun. İş talimatı başka bir şey söylüyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.o1': "Önce ekip liderine sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.o2': "Bundan sonra kendi bildiğin gibi yaparsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.o3': "İş arkadaşlarına kendi yolunu öğretirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.assembly.w': "Sıranın çoğu zaman göremediğin bir nedeni vardır. Senin yolun daha iyiyse, herkes için değişebilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.fastening': "Sıkma ve bağlama", // nieuw, nalezen
     'w.schroefmachine': "vidalama makinesi (hattın üstünde asılı durur)", // nieuw, nalezen
     'w.momentsleutel': "tork anahtarı (cıvata yeterince sıkı olunca tık eder)", // nieuw, nalezen
@@ -2768,14 +2768,14 @@ const t: CultureTranslation = {
     's.fastening.3': "Kabloları bir kablo bağıyla birbirine bağla.", // nieuw, nalezen
     'c.fastening.q': "Bu cıvata ne kadar sıkı olmalı?", // nieuw, nalezen
     'c.fastening.a': "Tork anahtarı tık edene kadar.", // nieuw, nalezen
-    'c.fastening': "Tık sesi yeterli", // nieuw, nalezen
-    'c.fastening.b': "Tork anahtarı, cıvata yeterince sıkı olunca tık eder. Tık sesinde dur: daha fazla çevirme. Fazla sıkı, cıvatayı ya da parçayı kırabilir; fazla gevşek ise yerinden çıkabilir. Vidalama makinesi de aynı şekilde çalışır: kendiliğinden durur. Her pulu yerine tak: eksik bir pul sonradan zor görülür. Cıvatalarını say. Bir tane artıyor mu, ya da bir tane daha mı lazım? O zaman bir şey yanlış: ekip liderine söyle.", // nieuw, nalezen
-    'c.fastening.p': "Bir cıvata arttı.", // nieuw, nalezen
-    'c.fastening.s': "Tork anahtarın tık etti. Cıvata sana hâlâ biraz gevşek geliyor. Ne yaparsın?", // nieuw, nalezen
-    'c.fastening.o1': "Durur ve ekip liderine sorarsın.", // nieuw, nalezen
-    'c.fastening.o2': "Elinle biraz daha çevirirsin.", // nieuw, nalezen
-    'c.fastening.o3': "Daha uzun bir anahtar kullanırsın.", // nieuw, nalezen
-    'c.fastening.w': "Tık sesi doğru kuvvete ayarlıdır. Yanlış geliyorsa anahtarın kontrol edilmesi gerekebilir. Daha fazla çevirmek cıvatayı kırabilir.", // nieuw, nalezen
+    'c.fastening': "Tık sesi yeterli", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.b': "Tork anahtarı, cıvata yeterince sıkı olunca tık eder. Tık sesinde dur: daha fazla çevirme. Fazla sıkı, cıvatayı ya da parçayı kırabilir; fazla gevşek ise yerinden çıkabilir. Vidalama makinesi de aynı şekilde çalışır: kendiliğinden durur. Her pulu yerine tak: eksik bir pul sonradan zor görülür. Cıvatalarını say. Bir tane artıyor mu, ya da bir tane daha mı lazım? O zaman bir şey yanlış: ekip liderine söyle.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.p': "Bir cıvata arttı.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.s': "Tork anahtarın tık etti. Cıvata sana hâlâ biraz gevşek geliyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.o1': "Durur ve ekip liderine sorarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.o2': "Elinle biraz daha çevirirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.o3': "Daha uzun bir anahtar kullanırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.fastening.w': "Tık sesi doğru kuvvete ayarlıdır. Yanlış geliyorsa anahtarın kontrol edilmesi gerekebilir. Daha fazla çevirmek cıvatayı kırabilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.handling': "Kaldırmak ve taşımak", // nieuw, nalezen
     'w.takel': "caraskal (ağır parçaları zincirle kaldırır)", // nieuw, nalezen
     'w.hijshaak': "kaldırma kancası", // nieuw, nalezen
@@ -2788,14 +2788,14 @@ const t: CultureTranslation = {
     's.handling.3': "Parça arabasını it, çekme.", // nieuw, nalezen
     'c.handling.q': "Caraskalın altında durabilir miyim?", // nieuw, nalezen
     'c.handling.a': "Hayır, asılı bir yükün altında asla.", // nieuw, nalezen
-    'c.handling': "Ağır işi caraskal yapsın", // nieuw, nalezen
-    'c.handling.b': "Ağır parçalar sırtınla değil, bir caraskal ya da kaldırma yardımcısıyla kaldırılır. Kaldırmadan önce kancayı kontrol et: emniyet mandalı kapanmalı. Yavaş kaldır ve ellerini ve ayaklarını yükten uzak tut. Asılı bir yükün altında asla durma ya da yürüme. Bir parçayı döndürmek için döner tablayı kullan: o zaman sırtını bükmen gerekmez. Bir arabayı ya da tekerlekli kafesi it: nereye gittiğini görürsün ve sırtın daha az yorulur. Caraskalı sadece nasıl kullanılacağını öğrendiysen kullan. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.handling.p': "Caraskalı kullanıyorum.", // nieuw, nalezen
-    'c.handling.s': "Bir parça çok ağır. Caraskal on dakika daha dolu. Ne yaparsın?", // nieuw, nalezen
-    'c.handling.o1': "Caraskalı beklersin.", // nieuw, nalezen
-    'c.handling.o2': "Tek başına, hızlıca kaldırırsın.", // nieuw, nalezen
-    'c.handling.o3': "Yerde sürüklersin.", // nieuw, nalezen
-    'c.handling.w': "Ağır bir parça sırtını bir saniyede sakatlayabilir. On dakika beklemek, aylarca ağrı çekmekten iyidir.", // nieuw, nalezen
+    'c.handling': "Ağır işi caraskal yapsın", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.b': "Ağır parçalar sırtınla değil, bir caraskal ya da kaldırma yardımcısıyla kaldırılır. Kaldırmadan önce kancayı kontrol et: emniyet mandalı kapanmalı. Yavaş kaldır ve ellerini ve ayaklarını yükten uzak tut. Asılı bir yükün altında asla durma ya da yürüme. Bir parçayı döndürmek için döner tablayı kullan: o zaman sırtını bükmen gerekmez. Bir arabayı ya da tekerlekli kafesi it: nereye gittiğini görürsün ve sırtın daha az yorulur. Caraskalı sadece nasıl kullanılacağını öğrendiysen kullan. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.p': "Caraskalı kullanıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.s': "Bir parça çok ağır. Caraskal on dakika daha dolu. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.o1': "Caraskalı beklersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.o2': "Tek başına, hızlıca kaldırırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.o3': "Yerde sürüklersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.handling.w': "Ağır bir parça sırtını bir saniyede sakatlayabilir. On dakika beklemek, aylarca ağrı çekmekten iyidir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.finalcheck': "Son kontrol", // nieuw, nalezen
     'w.typeplaatje': "tip plakası (tipi ve numarası yazan küçük metal bir plaka)", // nieuw, nalezen
     'w.stempel': "damga", // nieuw, nalezen
@@ -2808,14 +2808,14 @@ const t: CultureTranslation = {
     's.finalcheck.3': "Onay etiketi olmadan gitmez.", // nieuw, nalezen
     'c.finalcheck.q': "Bu ürün iyi mi?", // nieuw, nalezen
     'c.finalcheck.a': "Hayır, içinde bir çatlak var.", // nieuw, nalezen
-    'c.finalcheck': "Etiketi sadece iyi ürünler alır", // nieuw, nalezen
-    'c.finalcheck.b': "Son kontrol, müşteri bulmadan önce bir hatayı bulmak için son şanstır. Listedeki her maddeyi kontrol et, iş yoğunken de. Küçük bir çizik ya da çatlak kolayca gözden kaçar: iyi ışıkta ve birden fazla taraftan bak. Onay etiketini yapıştır ya da damgayı vur, ama sadece her madde iyiyse. Emin değil misin? Ürünü kenara koy ve sor. Burada bulunan bir hata az tutar, müşteride bulunan bir hata ise çok pahalıya mal olur. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.finalcheck.p': "Bu ürün kenara gidiyor.", // nieuw, nalezen
-    'c.finalcheck.s': "Hat çok yoğun. Bir üründe, etiketin altında küçük bir çizik görüyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.finalcheck.o1': "Kenara koyar ve ekip liderine söylersin.", // nieuw, nalezen
-    'c.finalcheck.o2': "Onay etiketini yapıştırırsın: çizik küçük.", // nieuw, nalezen
-    'c.finalcheck.o3': "Etiketi çiziğin üstüne kaydırırsın.", // nieuw, nalezen
-    'c.finalcheck.w': "Küçük bir çizik, hatta bir sorunun işareti olabilir. Onu saklamak, sorunu sadece müşteriye taşır.", // nieuw, nalezen
+    'c.finalcheck': "Etiketi sadece iyi ürünler alır", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.b': "Son kontrol, müşteri bulmadan önce bir hatayı bulmak için son şanstır. Listedeki her maddeyi kontrol et, iş yoğunken de. Küçük bir çizik ya da çatlak kolayca gözden kaçar: iyi ışıkta ve birden fazla taraftan bak. Onay etiketini ya da damgayı sadece her madde iyiyse koy. Emin değil misin? Ürünü kenara koy ve sor. Burada bulunan bir hata az tutar, müşteride bulunan bir hata ise çok pahalıya mal olur. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.p': "Bu ürün kenara gidiyor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.s': "Hat çok yoğun. Bir üründe, etiketin altında küçük bir çizik görüyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.o1': "Kenara koyar ve ekip liderine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.o2': "Onay etiketini yapıştırırsın: çizik küçük.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.o3': "Etiketi çiziğin üstüne kaydırırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.finalcheck.w': "Küçük bir çizik, üretim hattında bir sorunun işareti olabilir. Onu saklamak, sorunu sadece müşteriye taşır.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
     'u.kweek': "Yetiştirme, ayıklama ve sera", // nieuw, nalezen
     'l.sowing': "Ekim ve çelik", // nieuw, nalezen
@@ -2830,14 +2830,14 @@ const t: CultureTranslation = {
     's.sowing.3': "Genç bitkilere biraz su ver.", // nieuw, nalezen
     'c.sowing.q': "Tohum ne kadar derine girmeli?", // nieuw, nalezen
     'c.sowing.a': "Yarım santimetre. Daha derine değil.", // nieuw, nalezen
-    'c.sowing': "Küçük bitkiler nazik bir el ister", // nieuw, nalezen
-    'c.sowing.b': "Genç bitkiler zayıftır. Bir çeliği ya da fideyi saptan değil, yapraktan tut: yaprak yeniden büyür, kırık bir sap büyümez. Toprağı sert değil, hafifçe bastır. Tohumlar akıp gitmesin diye suyu yavaşça, ince bir püskürtmeyle ver. Temiz ellerle ve temiz viyollerle çalış: genç bitkiler kolayca hastalanır. Herkes içinde ne olduğunu bilsin diye her viyolün üstüne tarihi ve bitki çeşidini yaz.", // nieuw, nalezen
-    'c.sowing.p': "Onu yapraktan tutuyorum.", // nieuw, nalezen
-    'c.sowing.s': "Küçük bir fideyi bir saksıya taşıman gerekiyor. Ne yaparsın?", // nieuw, nalezen
-    'c.sowing.o1': "Onu nazikçe bir yapraktan tutarsın.", // nieuw, nalezen
-    'c.sowing.o2': "Onu saptan çekip çıkarırsın.", // nieuw, nalezen
-    'c.sowing.o3': "Onu toprakla birlikte sıkarak çıkarırsın.", // nieuw, nalezen
-    'c.sowing.w': "Bir yaprak yeniden büyüyebilir. Kırık bir sap büyüyemez ve o zaman bitki ölür.", // nieuw, nalezen
+    'c.sowing': "Küçük bitkiler nazik bir el ister", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.b': "Genç bitkiler zayıftır. Bir çeliği ya da fideyi saptan değil, yapraktan tut: yaprak yeniden büyür, kırık bir sap büyümez. Toprağı sert değil, hafifçe bastır. Tohumlar akıp gitmesin diye suyu yavaşça, ince bir püskürtmeyle ver. Temiz ellerle ve temiz viyollerle çalış: genç bitkiler kolayca hastalanır. Herkes içinde ne olduğunu bilsin diye her viyolün üstüne tarihi ve bitki çeşidini yaz.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.p': "Onu yapraktan tutuyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.s': "Küçük bir fideyi bir saksıya taşıman gerekiyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.o1': "Onu nazikçe bir yapraktan tutarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.o2': "Onu saptan çekip çıkarırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.o3': "Onu toprakla birlikte sıkarak çıkarırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sowing.w': "Bir yaprak yeniden büyüyebilir. Kırık bir sap büyüyemez ve o zaman bitki ölür.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.sorting': "Ayıklama ve paketleme", // nieuw, nalezen
     'w.tros': "salkım (tek bir sapta bir demet domates)", // nieuw, nalezen
     'w.bakje': "kutu (meyve için küçük bir kutu)", // nieuw, nalezen
@@ -2850,14 +2850,14 @@ const t: CultureTranslation = {
     's.sorting.3': "Renk kartına bak.", // nieuw, nalezen
     'c.sorting.q': "Bu domates yeterince olgun mu?", // nieuw, nalezen
     'c.sorting.a': "Hayır, hâlâ fazla yeşil. Bitkide bırak.", // nieuw, nalezen
-    'c.sorting': "Her meyve önemlidir", // nieuw, nalezen
-    'c.sorting.b': "Meyve ve sebze kolayca ezilir. Onları yavaşça bırak, düşürme ya da fırlatma. Bugün bir ezik görmezsin, ama yarın meyve yumuşak ve kahverengidir. Hangi rengin nereye gittiğini bilmek için renk kartına bak. Hasarlı ya da çürük bir meyveyi kenara koy: bir kutudaki tek bir kötü meyve diğerlerini bozabilir. Kutuları ve kasaları temiz tut ve onları asla yere koyma.", // nieuw, nalezen
-    'c.sorting.p': "Bu hasarlı.", // nieuw, nalezen
-    'c.sorting.s': "Kutu dolduruyorsun. Bir domateste yumuşak, kahverengi bir leke var. Ne yaparsın?", // nieuw, nalezen
-    'c.sorting.o1': "Onu kenara koyarsın.", // nieuw, nalezen
-    'c.sorting.o2': "Onu kutunun dibine saklarsın.", // nieuw, nalezen
-    'c.sorting.o3': "Onu yine de paketlersin.", // nieuw, nalezen
-    'c.sorting.w': "Çürük bir domates diğerlerinin daha hızlı çürümesine yol açar. Müşteri onu bulur ve bütün kutu geri gelir.", // nieuw, nalezen
+    'c.sorting': "Her meyve önemlidir", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.b': "Meyve ve sebze kolayca ezilir. Onları yavaşça bırak, düşürme ya da fırlatma. Bugün bir ezik görmezsin, ama yarın meyve yumuşak ve kahverengidir. Hangi rengin nereye gittiğini bilmek için renk kartına bak. Hasarlı ya da çürük bir meyveyi kenara koy: bir kutudaki tek bir kötü meyve diğerlerini bozabilir. Kutuları ve kasaları temiz tut ve onları asla yere koyma.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.p': "Bu hasarlı.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.s': "Kutu dolduruyorsun. Bir domateste yumuşak, kahverengi bir leke var. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.o1': "Onu kenara koyarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.o2': "Onu kutunun dibine saklarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.o3': "Onu yine de paketlersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.sorting.w': "Çürük bir domates diğerlerinin daha hızlı çürümesine yol açar. Müşteri onu bulur ve bütün kutu geri gelir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.greenhouse': "Sera ve iklimi", // nieuw, nalezen
     'w.buisrailkar': "boru ray arabası (ısıtma borularının üstünde gider)", // nieuw, nalezen
     'w.druppelaar': "damlatıcı (suyu damla damla verir)", // nieuw, nalezen
@@ -2870,14 +2870,14 @@ const t: CultureTranslation = {
     's.greenhouse.3': "Hava sıcak. Çatı pencereleri açılıyor.", // nieuw, nalezen
     'c.greenhouse.q': "Serada neden bu kadar sıcak?", // nieuw, nalezen
     'c.greenhouse.a': "Perde kapalı, pencereler de.", // nieuw, nalezen
-    'c.greenhouse': "İklimi bilgisayara bırak", // nieuw, nalezen
-    'c.greenhouse.b': "Serada iklimi bir bilgisayar ayarlar: pencereleri, perdeyi, ısıtmayı ve suyu. Bir pencereyi kendin açma ya da bir ayarı kendin değiştirme. Sızdıran bir damlatıcı ya da kapanmayan bir pencere gibi garip bir şey mi görüyorsun? Amirine söyle. Boru ray arabası ısıtma borularının üstünde gider: onu sadece nasıl kullanılacağını öğrendiysen kullan. Ayaklarını platformda tut ve borulara asla dokunma: sıcak olabilirler. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.greenhouse.p': "Bu damlatıcı sızdırıyor.", // nieuw, nalezen
-    'c.greenhouse.s': "Bir damlatıcı gevşemiş. Su yere akıyor. Ne yaparsın?", // nieuw, nalezen
-    'c.greenhouse.o1': "Onu yerine takar ve amirine söylersin.", // nieuw, nalezen
-    'c.greenhouse.o2': "Bırakırsın: sadece su.", // nieuw, nalezen
-    'c.greenhouse.o3': "Bütün sıranın suyunu kapatırsın.", // nieuw, nalezen
-    'c.greenhouse.w': "Gevşek bir damlatıcı su israf eder, bitki çok az su alır ve ıslak zemin kaygandır.", // nieuw, nalezen
+    'c.greenhouse': "İklimi bilgisayara bırak", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.b': "Serada iklimi bir bilgisayar ayarlar: pencereleri, perdeyi, ısıtmayı ve suyu. Bir pencereyi kendin açma ya da bir ayarı kendin değiştirme. Sızdıran bir damlatıcı ya da kapanmayan bir pencere gibi garip bir şey mi görüyorsun? Amirine söyle. Boru ray arabası ısıtma borularının üstünde gider: onu sadece nasıl kullanılacağını öğrendiysen kullan. Ayaklarını platformda tut ve borulara asla dokunma: sıcak olabilirler. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.p': "Bu damlatıcı sızdırıyor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.s': "Bir damlatıcı gevşemiş. Su yere akıyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.o1': "Onu yerine takar ve amirine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.o2': "Bırakırsın: sadece su.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.o3': "Bütün sıranın suyunu kapatırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.greenhouse.w': "Gevşek bir damlatıcı su israf eder, bitki çok az su alır ve ıslak zemin kaygandır.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.pests': "Zararlılar ve temiz çalışmak", // nieuw, nalezen
     'w.luis': "yaprak biti (bitkilerin üstünde küçük yeşil bir böcek)", // nieuw, nalezen
     'w.vangplaat': "yapışkan tuzak (böcekleri yakalayan sarı bir kart)", // nieuw, nalezen
@@ -2890,14 +2890,14 @@ const t: CultureTranslation = {
     's.pests.3': "Dezenfeksiyon paspasının üstünden yürü.", // nieuw, nalezen
     'c.pests.q': "Bu eşek arısını öldürebilir miyim?", // nieuw, nalezen
     'c.pests.a': "Hayır, o bir parazit eşek arısı. Bize yardım ediyor.", // nieuw, nalezen
-    'c.pests': "Hastalıkları sıradan sıraya taşıma", // nieuw, nalezen
-    'c.pests.b': "Serada bir hastalık ya da zararlı hızla yayılır. Onu ellerinde, kıyafetlerinde ve aletlerinde taşıyabilirsin. Bu yüzden her kapıda dezenfeksiyon paspasının üstünden yürü ve seranın başka bir bölümüne geçerken ellerini yıka. İşine sağlıklı sıralarda başla ve hasta sıralarda bitir. Bir bitkide böcek, leke ya da küf mü görüyorsun? Ona dokunma, ama nerede olduğunu amirine söyle. Seradaki bazı böcekler yardımcıdır: onları rahat bırak. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.pests.p': "Burada küf var.", // nieuw, nalezen
-    'c.pests.s': "Sırandaki birkaç bitkide gri küf görüyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.pests.o1': "Nerede olduğunu amirine söylersin.", // nieuw, nalezen
-    'c.pests.o2': "Kötü yaprakları koparır ve devam edersin.", // nieuw, nalezen
-    'c.pests.o3': "Hiçbir şey söylemezsin: sadece birkaç bitki.", // nieuw, nalezen
-    'c.pests.w': "Küf hızla yayılır. Amirin ne yapılacağını ve nereden başlanacağını bilir.", // nieuw, nalezen
+    'c.pests': "Hastalıkları sıradan sıraya taşıma", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.b': "Serada bir hastalık ya da zararlı hızla yayılır. Onu ellerinde, kıyafetlerinde ve aletlerinde taşıyabilirsin. Bu yüzden her kapıda dezenfeksiyon paspasının üstünden yürü ve seranın başka bir bölümüne geçerken ellerini yıka. İşine sağlıklı sıralarda başla ve hasta sıralarda bitir. Bir bitkide böcek, leke ya da küf mü görüyorsun? Ona dokunma, ama nerede olduğunu amirine söyle. Seradaki bazı böcekler yardımcıdır: onları rahat bırak. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.p': "Burada küf var.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.s': "Sırandaki birkaç bitkide gri küf görüyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.o1': "Nerede olduğunu amirine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.o2': "Kötü yaprakları koparır ve devam edersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.o3': "Hiçbir şey söylemezsin: sadece birkaç bitki.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.pests.w': "Küf hızla yayılır. Amirin ne yapılacağını ve nereden başlanacağını bilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'u.carservice': "Lastik, yağ ve frenler", // nieuw, nalezen
     'l.tyres': "Lastik değiştirmek", // nieuw, nalezen
     'w.wielbout': "bijon cıvatası", // nieuw, nalezen
@@ -2911,14 +2911,14 @@ const t: CultureTranslation = {
     's.tyres.3': "Basıncı lastik basınç ölçerle ölç.", // nieuw, nalezen
     'c.tyres.q': "Bu lastiklerin çıkması lazım mı?", // nieuw, nalezen
     'c.tyres.a': "Evet, diş neredeyse bitti.", // nieuw, nalezen
-    'c.tyres': "Elle tak, tork anahtarıyla sık", // nieuw, nalezen
-    'c.tyres.b': "Darbeli somun anahtarı hızlı ve çok güçlüdür. Onu bijon cıvatalarını sökmek için kullan, ama sıkıca sıkmak için değil. Önce cıvataları elle tak. Sonra onları tork anahtarıyla, o arabanın kuvvetine göre çapraz sırayla sık. Sıkı olmayan bir tekerlek yolda giderken çıkabilir. Eline aldığın her lastiğin dişini ve basıncını kontrol et. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.tyres.p': "Önce onları elle takıyorum.", // nieuw, nalezen
-    'c.tyres.s': "Bir tekerleği geri takıyorsun. Bir iş arkadaşın diyor ki: “Darbeli somun anahtarını kullan, daha hızlı.” Ne yaparsın?", // nieuw, nalezen
-    'c.tyres.o1': "Elle takar, sonra tork anahtarını kullanırsın.", // nieuw, nalezen
-    'c.tyres.o2': "Darbeli somun anahtarıyla sıkıca sıkarsın.", // nieuw, nalezen
-    'c.tyres.o3': "Elle takar ve öyle bırakırsın.", // nieuw, nalezen
-    'c.tyres.w': "Darbeli somun anahtarı bir cıvatayı fazla sıkabilir ya da yeterince sıkmayabilir. Doğru kuvveti sadece tork anahtarı verir.", // nieuw, nalezen
+    'c.tyres': "Elle tak, tork anahtarıyla sık", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.b': "Darbeli somun anahtarı hızlı ve çok güçlüdür. Onu bijon cıvatalarını sökmek için kullan, ama sıkıca sıkmak için değil. Önce cıvataları elle tak. Sonra onları tork anahtarıyla, o arabanın kuvvetine göre çapraz sırayla sık. Sıkı olmayan bir tekerlek yolda giderken çıkabilir. Eline aldığın her lastiğin dişini ve basıncını kontrol et. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.p': "Önce onları elle takıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.s': "Bir tekerleği geri takıyorsun. Bir iş arkadaşın diyor ki: “Darbeli somun anahtarını kullan, daha hızlı.” Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.o1': "Elle takar, sonra tork anahtarını kullanırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.o2': "Darbeli somun anahtarıyla sıkıca sıkarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.o3': "Elle takar ve öyle bırakırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.tyres.w': "Darbeli somun anahtarı bir cıvatayı fazla sıkabilir ya da yeterince sıkmayabilir. Doğru kuvveti sadece tork anahtarı verir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.oilchange': "Yağ değiştirmek", // nieuw, nalezen
     'w.oliefilter': "yağ filtresi", // nieuw, nalezen
     'w.oliepeilstok': "yağ çubuğu (ne kadar yağ olduğunu gösterir)", // nieuw, nalezen
@@ -2931,14 +2931,14 @@ const t: CultureTranslation = {
     's.oilchange.3': "Yağ çubuğuna bak.", // nieuw, nalezen
     'c.oilchange.q': "Ne kadar yağ girmeli?", // nieuw, nalezen
     'c.oilchange.a': "Dört litre. Sonra yağ çubuğuna bak.", // nieuw, nalezen
-    'c.oilchange': "Eski yağ varile gider, gidere değil", // nieuw, nalezen
-    'c.oilchange.b': "Eski yağ suya ve toprağa zararlıdır. Biraz yağ bile çok fazla suyu kirletebilir. Bu yüzden bütün eski yağı yağ toplama kabında topla ve eski yağ variline dök. Onu asla bir gidere ya da lavaboya dökme. Eski filtreler ve yağlı bezler kendi çöp kutularına gider. Sıcak yağ cildini yakabilir: önce motoru biraz soğumaya bırak ve eldiven giy. Dökülen yağı hemen temizle: yerdeki yağ kaygandır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.oilchange.p': "Eski yağ nereye gidiyor?", // nieuw, nalezen
-    'c.oilchange.s': "Yağ toplama kabı eski yağla dolu. Varil atölyenin öbür ucunda. Ne yaparsın?", // nieuw, nalezen
-    'c.oilchange.o1': "Onu dikkatlice varile taşırsın.", // nieuw, nalezen
-    'c.oilchange.o2': "Onu dışarıdaki gidere dökersin.", // nieuw, nalezen
-    'c.oilchange.o3': "Sonra için arabanın altında bırakırsın.", // nieuw, nalezen
-    'c.oilchange.w': "Gidere dökülen eski yağ suyu kirletir. Arabanın altında duran dolu bir kaba birisi çarpar ve kap devrilir.", // nieuw, nalezen
+    'c.oilchange': "Eski yağ varile gider, gidere değil", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.b': "Eski yağ suya ve toprağa zararlıdır. Biraz yağ bile çok fazla suyu kirletebilir. Bu yüzden bütün eski yağı yağ toplama kabında topla ve eski yağ variline dök. Onu asla bir gidere ya da lavaboya dökme. Eski filtreler ve yağlı bezler kendi çöp kutularına gider. Sıcak yağ cildini yakabilir: önce motoru biraz soğumaya bırak ve eldiven giy. Dökülen yağı hemen temizle: yerdeki yağ kaygandır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.p': "Eski yağ nereye gidiyor?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.s': "Yağ toplama kabı eski yağla dolu. Varil atölyenin öbür ucunda. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.o1': "Onu dikkatlice varile taşırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.o2': "Onu dışarıdaki gidere dökersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.o3': "Sonra için arabanın altında bırakırsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.oilchange.w': "Gidere dökülen eski yağ suyu kirletir. Arabanın altında duran dolu bir kaba birisi çarpar ve kap devrilir.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.brakes': "Frenler ve lambalar", // nieuw, nalezen
     'w.remschijf': "fren diski", // nieuw, nalezen
     'w.remblok': "fren balatası", // nieuw, nalezen
@@ -2951,14 +2951,14 @@ const t: CultureTranslation = {
     's.brakes.3': "Sol arka lamba çalışmıyor.", // nieuw, nalezen
     'c.brakes.q': "Fren diskinin de değişmesi lazım mı?", // nieuw, nalezen
     'c.brakes.a': "Evet, çok ince.", // nieuw, nalezen
-    'c.brakes': "Frenler: iki kez kontrol et", // nieuw, nalezen
-    'c.brakes.b': "Frenler insanları hayatta tutar. Bu yüzden sakin çalış ve işini iki kez kontrol et. Yeni balata ya da diskten sonra, araba hareket etmeden önce fren pedalına birkaç kez bas: ilk basış çoğu zaman fazla derine gider. Fren hidroliği cildine ve boyaya zararlıdır: eldiven giy ve damlaları hemen sil. Fren tozunu basınçlı havayla üfleme: onu fren temizleyiciyle ve bir bezle temizle. Araba çıkmadan önce her lambayı kontrol et, fren lambalarını da.", // nieuw, nalezen
-    'c.brakes.p': "Fren pedalına birkaç kez basıyorum.", // nieuw, nalezen
-    'c.brakes.s': "Yeni fren balataları taktın. Arabanın dışarı çıkması gerekiyor. Ne yaparsın?", // nieuw, nalezen
-    'c.brakes.o1': "Fren pedalına birkaç kez basarsın.", // nieuw, nalezen
-    'c.brakes.o2': "Onu hemen dışarı sürersin.", // nieuw, nalezen
-    'c.brakes.o3': "Kontrol etmeden dışarı itersin.", // nieuw, nalezen
-    'c.brakes.w': "Yeni balatalardan sonra pedal ilk seferde fazla derine gidebilir. O zaman araba durmaz.", // nieuw, nalezen
+    'c.brakes': "Frenler: iki kez kontrol et", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.b': "Frenler insanları hayatta tutar. Bu yüzden sakin çalış ve işini iki kez kontrol et. Yeni balata ya da diskten sonra, araba hareket etmeden önce fren pedalına birkaç kez bas: ilk basış çoğu zaman fazla derine gider. Fren hidroliği cildine ve boyaya zararlıdır: eldiven giy ve damlaları hemen sil. Fren tozunu basınçlı havayla üfleme: onu fren temizleyiciyle ve bir bezle temizle. Araba çıkmadan önce her lambayı kontrol et, fren lambalarını da.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.p': "Fren pedalına birkaç kez basıyorum.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.s': "Yeni fren balataları taktın. Arabanın dışarı çıkması gerekiyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.o1': "Fren pedalına birkaç kez basarsın.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.o2': "Onu hemen dışarı sürersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.o3': "Kontrol etmeden dışarı itersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.brakes.w': "Yeni balatalardan sonra pedal ilk seferde fazla derine gidebilir. O zaman araba durmaz.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.diagnosis': "Arıza okumak ve iş emri", // nieuw, nalezen
     'w.diagnosecomputer': "arıza tespit cihazı (arabanın arızalarını okur)", // nieuw, nalezen
     'w.waarschuwingslampje': "uyarı lambası (gösterge panelinde)", // nieuw, nalezen
@@ -2971,14 +2971,14 @@ const t: CultureTranslation = {
     's.diagnosis.3': "Koltuğa bir koltuk kılıfı geçir.", // nieuw, nalezen
     'c.diagnosis.q': "Bu arabada ne yapılması gerekiyor?", // nieuw, nalezen
     'c.diagnosis.a': "İş emrine bak.", // nieuw, nalezen
-    'c.diagnosis': "Arabaya kendi araban gibi davran", // nieuw, nalezen
-    'c.diagnosis.b': "Bir müşteri sana arabasını ve anahtarını verir. İkisine de özenle davran. Binmeden önce koltuğa bir koltuk kılıfı geçir ve yere bir paspas koy. Sadece iş emrinde yazanı yap. Başka bozuk bir şey mi buluyorsun? Not al ve amirine söyle: karar müşterinindir. Anahtarı etiketiyle birlikte yerinde tut. Radyoyu, telefonu ya da arabadaki eşyaları kullanma. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.diagnosis.p': "Bu iş emrinde yok.", // nieuw, nalezen
-    'c.diagnosis.s': "Yağ değiştiriyorsun. Bir lastiğin dişi neredeyse bitmiş. Bu iş emrinde yok. Ne yaparsın?", // nieuw, nalezen
-    'c.diagnosis.o1': "Not alır ve amirine söylersin.", // nieuw, nalezen
-    'c.diagnosis.o2': "Lastiği hemen değiştirirsin.", // nieuw, nalezen
-    'c.diagnosis.o3': "Hiçbir şey söylemezsin: bu senin işin değil.", // nieuw, nalezen
-    'c.diagnosis.w': "Neyin yapılıp ödeneceğine müşteri karar verir. Ama lastiğin tehlikeli olduğunu bilmesi gerekir.", // nieuw, nalezen
+    'c.diagnosis': "Arabaya kendi araban gibi davran", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.b': "Bir müşteri sana arabasını ve anahtarını verir. İkisine de özenle davran. Binmeden önce koltuğa bir koltuk kılıfı geçir ve yere bir paspas koy. Sadece iş emrinde yazanı yap. Başka bozuk bir şey mi buluyorsun? Not al ve amirine söyle: karar müşterinindir. Anahtarı etiketiyle birlikte yerinde tut. Radyoyu, telefonu ya da arabadaki eşyaları kullanma. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.p': "Bu iş emrinde yok.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.s': "Yağ değiştiriyorsun. Bir lastiğin dişi neredeyse bitmiş. Bu iş emrinde yok. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.o1': "Not alır ve amirine söylersin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.o2': "Lastiği hemen değiştirirsin.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.o3': "Hiçbir şey söylemezsin: bu senin işin değil.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.diagnosis.w': "Neyin yapılıp ödeneceğine müşteri karar verir. Ama lastiğin tehlikeli olduğunu bilmesi gerekir.", // nieuw, nalezen // nagelezen AI 22 nov
   },
 };
 

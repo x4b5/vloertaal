@@ -571,7 +571,7 @@ const lang: HelpLanguageSource = {
 
     // Unit: Safety first
     'u.safety': 'Önce güvenlik',
-    'u.emergency': "Bir şeyler ters gittiğinde", // nieuw, nalezen
+    'u.emergency': "Bir şeyler ters gittiğinde", // nieuw, nalezen // nagelezen AI 22 nov
     'l.gear': 'Koruyucu ekipman',
     'w.helm': 'baret',
     'w.handschoenen': 'eldivenler',
@@ -592,16 +592,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Dikkat, zemin ıslak!',
     's.danger.2': 'Acil çıkış nerede?',
     's.danger.3': 'Bir kaza var!',
-    'l.alarm': 'Yangın alarmı ve tahliye', // nieuw, nalezen
-    'w.alarm': 'alarm', // nieuw, nalezen
-    'w.ontruimen': 'tahliye etmek (herkes binadan çıkar)', // nieuw, nalezen
-    'w.vluchtroute': 'kaçış yolu', // nieuw, nalezen
-    'w.trap': 'merdiven', // nieuw, nalezen
-    'w.verzamelplaats': 'toplanma alanı (herkesin dışarıda buluştuğu yer)', // nieuw, nalezen
-    'w.brandblusser': 'yangın söndürücü', // nieuw, nalezen
-    's.alarm.1': 'Yangın söndürücü nerede?', // nieuw, nalezen
-    's.alarm.2': 'Binayı tahliye etmemiz gerekiyor.', // nieuw, nalezen
-    's.alarm.3': 'Merdiveni kullan, asansörü değil.', // nieuw, nalezen
+    'l.alarm': 'Yangın alarmı ve tahliye', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alarm': 'alarm', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontruimen': 'tahliye etmek (herkes binadan çıkar)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vluchtroute': 'kaçış yolu', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.trap': 'merdiven', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.verzamelplaats': 'toplanma alanı (herkesin dışarıda buluştuğu yer)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.brandblusser': 'yangın söndürücü', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.1': 'Yangın söndürücü nerede?', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.2': 'Binayı tahliye etmemiz gerekiyor.', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.3': 'Merdiveni kullan, asansörü değil.', // nieuw, nalezen // nagelezen AI 22 nov
     'l.accident': 'Kaza bildirmek',
     'w.gewond': 'yaralı',
     'w.bloeden': 'kanamak',
@@ -681,8 +681,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Evet, takıyorum.',
     'c.danger.q': 'Kaza mı oldu?',
     'c.danger.a': 'Evet, 112\'yi ara!',
-    'c.alarm.q': 'Herkes dışarıda mı?', // nieuw, nalezen
-    'c.alarm.a': 'Hayır, iş arkadaşım daha gelmedi.', // nieuw, nalezen
+    'c.alarm.q': 'Herkes dışarıda mı?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.a': 'Hayır, iş arkadaşım henüz burada değil.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.accident.q': 'Ne oldu?',
     'c.accident.a': 'Düştü. Kanıyor.',
     'l.notyet': 'Bunu henüz öğrenmedim',

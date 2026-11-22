@@ -49,7 +49,7 @@ const t: CultureTranslation = {
     'c.plain.a': 'O zaman bugün otobüse binerim.',
     'c.plain.a.why': 'Çok şiddetli yağmur var: otobüste ıslanmazsın.',
     'c.easy': 'Deyimler: kelimeler başka bir şey anlatır',
-    'c.easy.b': 'Burada insanlar sık sık deyim kullanır, iş yerinde de. Kelimeler bir şey söyler, ama başka bir şey anlatır. “Een eitje” küçük bir yumurtadır, ama anlamı: çok kolay. Senin deyim kullanman gerekmez. Bir deyimi anlamadın mı? O zaman ne demek olduğunu sor.', // nieuw, nalezen
+    'c.easy.b': 'Burada insanlar sık sık deyim kullanır, iş yerinde de. Kelimeler bir şey söyler, ama başka bir şey anlatır. “Een eitje” küçük bir yumurtadır, ama anlamı: çok kolay. Senin deyim kullanman gerekmez. Bir deyimi anlamadın mı? O zaman ne demek olduğunu sor.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.easy.p': 'Bununla ne demek istiyorsun?',
     'c.easy.s': 'İş arkadaşın yeni işe bakıyor ve diyor ki: “Dat is een eitje!” Ne demek istiyor?',
     'c.easy.o1': 'İş çok kolay.',
@@ -67,7 +67,7 @@ const t: CultureTranslation = {
     'zg.zeil.lit': 'Yelkenin üstünde küçük bir göz tutar mısın?',
     'zg.zeil.m': 'Her şeyin iyi ve güvenli gitmesine dikkat eder misin?',
     'zg.zeil.s': 'Amirin kısa bir süre gitmek zorunda. Diyor ki: “Hou je een oogje in het zeil?” Ne demek istiyor?',
-    'zg.zeil.o1': "O yokken göz kulak ol.", // nagelezen (2e lezing)
+    'zg.zeil.o1': "O yokken göz kulak ol.", // nagelezen (2e lezing) // nagelezen AI 22 nov
     'zg.zeil.o2': 'Git bir tekneye bak.',
     'zg.zeil.o3': 'Bir an gözlerini kapat.',
     'zg.zeil.w': '“Een oogje in het zeil houden” şu demek: her şeyin iyi gitmesine dikkat etmek. Neye dikkat edeceğinden emin değil misin? O gitmeden önce ona sor.',
@@ -137,7 +137,7 @@ const t: CultureTranslation = {
     'zg.tijdgeld.lit': 'Zaman paradır.',
     'zg.tijdgeld.m': 'Zaman değerlidir: onu boşa harcama.',
     'zg.tijdgeld.s': 'Patronun kamyonun çabuk yüklenmesini istiyor. Diyor ki: “Tijd is geld.” Ne demek istiyor?',
-    'zg.tijdgeld.o1': "Hızlı çalış, zaman kaybetme.", // nagelezen (2e lezing)
+    'zg.tijdgeld.o1': "Hızlı çalış, zaman kaybetme.", // nagelezen (2e lezing) // nagelezen AI 22 nov
     'zg.tijdgeld.o2': 'Geç geldiğin için para alırsın.',
     'zg.tijdgeld.o3': 'Saat çok pahalı.',
     'zg.tijdgeld.w': 'Bu söz zamanın değerli olduğunu anlatır. Bu, güvensiz çalışma ya da ücretsiz saatler için asla bir sebep değildir.',
