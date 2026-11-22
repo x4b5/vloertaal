@@ -537,7 +537,7 @@ const lang: HelpLanguageSource = {
     'u.firstday': 'Prima zi de muncă',
     'u.help': 'Cum ceri ajutor',
     'u.safety': 'Siguranța pe primul loc',
-    'u.emergency': "Când ceva nu merge bine", // nieuw, nalezen
+    'u.emergency': "Când ceva nu merge bine", // nieuw, nalezen // nagelezen AI 22 nov
     'u.warehouse': 'În depozit',
     'u.time': 'Timp și program',
 
@@ -631,16 +631,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': 'Atenție, podeaua este udă!',
     's.danger.2': 'Unde este ieșirea de urgență?',
     's.danger.3': 'S-a întâmplat un accident!',
-    'l.alarm': 'Alarma de incendiu și evacuarea', // nieuw, nalezen
-    'w.alarm': 'alarma', // nieuw, nalezen
-    'w.ontruimen': 'a evacua (toată lumea iese din clădire)', // nieuw, nalezen
-    'w.vluchtroute': 'traseul de evacuare', // nieuw, nalezen
-    'w.trap': 'scara', // nieuw, nalezen
-    'w.verzamelplaats': 'punctul de adunare (unde se strâng toți afară)', // nieuw, nalezen
-    'w.brandblusser': 'extinctorul', // nieuw, nalezen
-    's.alarm.1': 'Unde este extinctorul?', // nieuw, nalezen
-    's.alarm.2': 'Trebuie să evacuăm clădirea.', // nieuw, nalezen
-    's.alarm.3': 'Ia scara, nu liftul.', // nieuw, nalezen
+    'l.alarm': 'Alarma de incendiu și evacuarea', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alarm': 'alarma', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontruimen': 'a evacua (toată lumea iese din clădire)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vluchtroute': 'traseul de evacuare', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.trap': 'scara', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.verzamelplaats': 'punctul de adunare (unde se strâng toți afară)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.brandblusser': 'extinctorul', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.1': 'Unde este extinctorul?', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.2': 'Trebuie să evacuăm clădirea.', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.3': 'Ia scara, nu liftul.', // nieuw, nalezen // nagelezen AI 22 nov
     's.accident.1': 'Colegul meu a căzut.',
     's.accident.2': 'M-am tăiat.',
     's.accident.3': 'Vreau să raportez un accident.',
@@ -678,8 +678,8 @@ const lang: HelpLanguageSource = {
     'c.gear.a': 'Da, o port.',
     'c.danger.q': 'S-a întâmplat un accident?',
     'c.danger.a': 'Da, sună la 112!',
-    'c.alarm.q': 'Sunt toți afară?', // nieuw, nalezen
-    'c.alarm.a': 'Nu, colegul meu nu e încă aici.', // nieuw, nalezen
+    'c.alarm.q': 'Sunt toți afară?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.a': 'Nu, colegul meu nu e încă aici.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.accident.q': 'Ce s-a întâmplat?',
     'c.accident.a': 'A căzut. Sângerează.',
     'l.notyet': 'Asta n-am învățat-o încă',
@@ -691,7 +691,7 @@ const lang: HelpLanguageSource = {
     'w.uitleg': 'explicația',
     's.notyet.1': 'Asta n-am învățat-o încă.',
     's.notyet.2': 'Încă nu mi s-a explicat.',
-    's.notyet.3': { m: 'Am voie să fac asta deja singur?', f: 'Am voie să fac asta deja singură?', x: 'Am voie să fac asta deja fără ajutor?' }, // x: nieuw, nalezen
+    's.notyet.3': { m: 'Am voie să fac asta deja singur?', f: 'Am voie să fac asta deja singură?', x: 'Am voie să fac asta deja fără ajutor?' }, // x: nieuw, nalezen // nagelezen AI 22 nov
     'c.notyet.q': 'Încearcă, e ușor.',
     'c.notyet.a': 'Poți să-mi arăți întâi cum se face?',
     'c.things.q': 'Unde trebuie pusă cutia?',

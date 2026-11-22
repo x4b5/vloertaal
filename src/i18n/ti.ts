@@ -538,7 +538,7 @@ const lang: HelpLanguageSource = {
     'u.firstday': 'ቀዳማይ መዓልቲ ስራሕ',
     'u.help': 'ሓገዝ ምሕታት',
     'u.safety': 'ድሕንነት ቅድሚ ኩሉ',
-    'u.emergency': "ገለ ነገር ምስ ዝጋገ", // nieuw, nalezen
+    'u.emergency': "ጸገም ምስ ዘጋጥም", // nieuw, nalezen // nagelezen AI 22 nov
     'u.warehouse': 'ኣብ መኽዘን',
     'u.time': 'ግዜን መደብ ስራሕን',
 
@@ -632,16 +632,16 @@ const lang: HelpLanguageSource = {
     's.danger.1': { m: 'ተጠንቀቕ፡ መሬት ጠሊሉ እዩ!', f: 'ተጠንቀቒ፡ መሬት ጠሊሉ እዩ!', x: 'ተጠንቀቑ፡ መሬት ጠሊሉ እዩ!' },
     's.danger.2': 'ናይ ህጹጽ ግዜ መውጽኢ ኣበይ ኣሎ?',
     's.danger.3': 'ሓደጋ ኣሎ!',
-    'l.alarm': 'ደወል ሓዊን ካብ ህንጻ ምውጻእን', // nieuw, nalezen
-    'w.alarm': 'ደወል ሓደጋ (ኣላርም)', // nieuw, nalezen
-    'w.ontruimen': 'ህንጻ ምልቃቕ (ኩሉ ሰብ ካብ ህንጻ ይወጽእ)', // nieuw, nalezen
-    'w.vluchtroute': 'መገዲ ምህዳም (ናብ መውጽኢ ዝወስድ መገዲ)', // nieuw, nalezen
-    'w.trap': 'መደያይቦ', // nieuw, nalezen
-    'w.verzamelplaats': 'ቦታ ምእካብ (ኩሉ ሰብ ኣብ ደገ ዝራኸበሉ)', // nieuw, nalezen
-    'w.brandblusser': 'መጥፍኢ ሓዊ', // nieuw, nalezen
-    's.alarm.1': 'መጥፍኢ ሓዊ ኣበይ ኣሎ?', // nieuw, nalezen
-    's.alarm.2': 'ነቲ ህንጻ ክንለቕቖ ኣሎና።', // nieuw, nalezen
-    's.alarm.3': { m: 'መደያይቦ ተጠቐም፡ ሊፍት ኣይኮነን።', f: 'መደያይቦ ተጠቐሚ፡ ሊፍት ኣይኮነን።', x: 'መደያይቦ ተጠቐሙ፡ ሊፍት ኣይኮነን።' }, // nieuw, nalezen
+    'l.alarm': 'ደወል ሓዊን ካብ ህንጻ ምውጻእን', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.alarm': 'ደወል ሓደጋ (ኣላርም)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.ontruimen': 'ህንጻ ምልቃቕ (ኩሉ ሰብ ካብ ህንጻ ይወጽእ)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.vluchtroute': 'መገዲ ምህዳም (ናብ መውጽኢ ዝወስድ መገዲ)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.trap': 'መደያይቦ', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.verzamelplaats': 'ቦታ ምእካብ (ኩሉ ሰብ ኣብ ደገ ዝራኸበሉ)', // nieuw, nalezen // nagelezen AI 22 nov
+    'w.brandblusser': 'መጥፍኢ ሓዊ', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.1': 'መጥፍኢ ሓዊ ኣበይ ኣሎ?', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.2': 'ነቲ ህንጻ ክንለቕቖ ኣሎና።', // nieuw, nalezen // nagelezen AI 22 nov
+    's.alarm.3': { m: 'መደያይቦ ተጠቐም፡ ሊፍት ኣይኮነን።', f: 'መደያይቦ ተጠቐሚ፡ ሊፍት ኣይኮነን።', x: 'መደያይቦ ተጠቐሙ፡ ሊፍት ኣይኮነን።' }, // nieuw, nalezen // nagelezen AI 22 nov
     's.accident.1': 'ብጻይ ስራሐይ ወዲቑ።',
     's.accident.2': 'ተቖሪጸ።',
     's.accident.3': 'ሓደጋ ክሕብር እደሊ።',
@@ -675,17 +675,17 @@ const lang: HelpLanguageSource = {
     'c.arrive.a': { m: 'ሓድሽ እየ። ሎሚ እጅምር።', f: 'ሓዳስ እየ። ሎሚ እጅምር።' },
     'c.understand.q': { m: 'ተረዲኡካ ድዩ?', f: 'ተረዲኡኪ ድዩ?', x: 'ተረዲኡኩም ድዩ?' }, // x: nieuw, nalezen
     'c.understand.a': 'ኣይፋል፣ በጃኻ ሓንሳብ ደጊምካ።',
-    'c.gear.q': { m: 'ሄልመትካ ኣለካ ድዩ?', f: 'ሄልመትኪ ኣለኪ ድዩ?', x: 'ሄልመትኩም ኣለኩም ድዩ?' }, // x: nieuw, nalezen
+    'c.gear.q': { m: 'ሄልመትካ ኣለካ ድዩ?', f: 'ሄልመትኪ ኣለኪ ድዩ?', x: 'ሄልመትኩም ኣለኩም ድዩ?' }, // x: nieuw, nalezen // nagelezen AI 22 nov
     'c.gear.a': 'እወ፣ ገይረዮ ኣለኹ።',
     'c.danger.q': 'ሓደጋ ኣሎ ድዩ?',
     'c.danger.a': 'እወ፣ ናብ 112 ደውል!',
-    'c.alarm.q': 'ኩሉ ሰብ ናብ ደገ ወጺኡ ድዩ?', // nieuw, nalezen
-    'c.alarm.a': 'ኣይፋል፡ ብጻይ ስራሐይ ገና ኣይመጸን።', // nieuw, nalezen
+    'c.alarm.q': 'ኩሉ ሰብ ናብ ደገ ወጺኡ ድዩ?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.a': 'ኣይፋል፡ ብጻይ ስራሐይ ገና ኣይመጸን።', // nieuw, nalezen // nagelezen AI 22 nov
     'c.accident.q': 'እንታይ ኣጋጢሙ?',
     'c.accident.a': 'ወዲቑ። ይደምይ ኣሎ።',
     'l.notyet': 'እዚ ገና ኣይተማሃርክዎን',
     'w.nogniet': 'ገና',
-    'w.mogen': 'ፍቓድ ምርካብ (ይፍቀደለይ)', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.mogen': 'ፍቓድ ምርካብ (ይፍቀደለይ)', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'w.proberen': 'ምፍታን',
     'w.voordoen': 'ብተግባር ምርኣይ (ቅድም ገይሩ ምርኣይ)',
     'w.gevaarlijk': 'ሓደገኛ',
