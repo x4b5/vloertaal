@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -30,8 +30,11 @@ export default {
       <path d={`M${X + 4} ${Y - 2}H${X + W - 3}L${X + W + ox - 4} ${Y + oy + 2}H${X + ox + 3}Z`} fill={PAL.sky} />
       {/* The wet shine on the liquid, and ripples round the sole */}
       <path d="M22 92L34 82M84 84L96 74" stroke={PAL.ice} strokeWidth="2.8" strokeLinecap="round" />
-      <ellipse cx="60" cy="84" rx="27" ry="5.5" fill="none" stroke={PAL.ice} strokeWidth="1.8" />
+      <Move kind="show">
+        <ellipse cx="60" cy="84" rx="27" ry="5.5" fill="none" stroke={PAL.ice} strokeWidth="1.8" />
+      </Move>
       {/* The boot: shaft, foot and the dark sole on the mat */}
+      <Move kind="from" dy={-26}>
       <g transform="translate(62 84) scale(0.82) translate(-60 -88)">
       <Shade color={PAL.greenShade} opacity={1} at={[76, 60, 12, 40]}>
         <path d="M42 36H66V68C66 72 70 74 76 75C82 76 84 80 84 84V86H38V40C38 37 40 36 42 36Z" fill={PAL.green} />
@@ -40,8 +43,11 @@ export default {
       <rect x="36" y="84" width="50" height="5" rx="2.2" fill={PAL.slateDark} />
       <Shine d="M44 46V64" color={PAL.white} width={3.4} opacity={0.5} />
       </g>
+      </Move>
       {/* Splashes */}
-      <path d="M34 76L30 70M92 74L97 69M38 72L36 66" stroke={PAL.sky} strokeWidth="2.6" strokeLinecap="round" />
+      <Move kind="show">
+        <path d="M34 76L30 70M92 74L97 69M38 72L36 66" stroke={PAL.sky} strokeWidth="2.6" strokeLinecap="round" />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

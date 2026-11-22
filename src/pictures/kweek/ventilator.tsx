@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shine } from '../kit';
+import { Move, PAL, Shine } from '../kit';
 
 /** The fan's centre and the outer radius of its ring. */
 const CX = 68;
@@ -22,13 +22,17 @@ export default {
       <circle cx={CX} cy={CY} r={R - 6} fill={PAL.slate} />
       <Shine d={`M${CX - 29} ${CY - 6}A30 30 0 0 1 ${CX - 10} ${CY - 29}`} width={3} opacity={0.7} />
       {/* The blades and the hub */}
-      {[20, 110, 200, 290].map((a) => (
-        <path key={a} d={BLADE} fill={PAL.mist} transform={`translate(${CX} ${CY}) rotate(${a})`} />
-      ))}
+      <Move kind="turn" turn={-360} at={[CX, CY]}>
+        {[20, 110, 200, 290].map((a) => (
+          <path key={a} d={BLADE} fill={PAL.mist} transform={`translate(${CX} ${CY}) rotate(${a})`} />
+        ))}
+      </Move>
       <circle cx={CX} cy={CY} r="7" fill={PAL.slateDark} />
       <circle cx={CX - 2} cy={CY - 2} r="2.2" fill={PAL.steel} />
       {/* The air blowing out to the left */}
-      <path d="M26 46H12M28 62H10M26 78H12" stroke={PAL.sky} strokeWidth="4" strokeLinecap="round" />
+      <Move kind="show">
+        <path d="M26 46H12M28 62H10M26 78H12" stroke={PAL.sky} strokeWidth="4" strokeLinecap="round" />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

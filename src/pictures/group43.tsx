@@ -1,7 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 import type { CharacterId } from '../components/Characters';
 import { Bust } from './bust';
-import { Arrow, Ground, Hand, PAL, SKIN, Shade, Shine, Sparkle, r1, type Pt } from './kit';
+import { Arrow, Ground, Hand, Move, PAL, SKIN, Shade, Shine, Sparkle, r1, type Pt } from './kit';
 
 /**
  * Word pictures, group 43 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -184,16 +184,22 @@ export default {
       <path d="M32 54H17" stroke={PAL.steel} strokeWidth="6" strokeLinecap="round" />
       {/* Lifting strut, mast and boom */}
       <path d="M33 76L56 34" stroke={PAL.steel} strokeWidth="5" strokeLinecap="round" />
-      <path d="M32 94V30L84 18" fill="none" stroke={PAL.sky} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M32 94V30" fill="none" stroke={PAL.sky} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M36 92V36" stroke={PAL.skyShade} strokeWidth="3" strokeLinecap="round" />
+      {/* On the intro card the boom slowly lifts the sling up from low, around the top of the mast */}
+      <Move kind="turn" turn={14} at={[32, 30]}>
+      <path d="M32 30L84 18" fill="none" stroke={PAL.sky} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
       <Shine d="M36 26L74 17" width={2.6} opacity={0.55} />
-      {/* Hanger bar and sling */}
+      {/* Hanger bar and sling: they turn back as much around the boom's end, so they hang straight down */}
+      <Move kind="turn" turn={-14} at={[84, 18]}>
       <path d="M84 18V36" stroke={PAL.slate} strokeWidth="4" strokeLinecap="round" />
       <path d="M66 38H102" stroke={PAL.slate} strokeWidth="6" strokeLinecap="round" />
       <Shade color={PAL.purpleShade} opacity={1} at={[108, 66, 12, 30]}>
         <path d="M65 40L69 40L74 62Q84 70 94 62L99 40L103 40L106 66Q104 88 84 88Q64 88 62 66Z" fill={PAL.purple} stroke={PAL.purple} strokeWidth="2" strokeLinejoin="round" />
       </Shade>
       <Shine d="M68 70Q70 80 79 83" color={PAL.purpleLight} width={3} opacity={0.9} />
+      </Move>
+      </Move>
     </g>
   ),
 

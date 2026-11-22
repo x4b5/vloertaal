@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 /** The tool is drawn lying along x (handles left, nose right) and turned to rise to the top right. */
 const TURN = 'translate(60 60) rotate(-30) scale(0.86) translate(-70 -68)';
@@ -12,8 +12,10 @@ export default {
       <Ground cx={58} cy={104} rx={42} ry={4} />
       <g transform={TURN}>
         {/* The lower (moving) handle: steel by the pivot, then its grip, in shade */}
-        <path d="M70 66L40 78" stroke={PAL.steel} strokeWidth="8" strokeLinecap="round" />
-        <path d="M46 76L6 86" stroke={PAL.orangeShade} strokeWidth="13" strokeLinecap="round" />
+        <Move kind="turn" turn={-28} at={[70, 65]}>
+          <path d="M70 66L40 78" stroke={PAL.steel} strokeWidth="8" strokeLinecap="round" />
+          <path d="M46 76L6 86" stroke={PAL.orangeShade} strokeWidth="13" strokeLinecap="round" />
+        </Move>
         {/* The upper (fixed) handle: straight on from the head */}
         <path d="M70 56L40 56" stroke={PAL.steel} strokeWidth="9" strokeLinecap="round" />
         <path d="M46 56L4 60" stroke={PAL.orange} strokeWidth="14" strokeLinecap="round" />

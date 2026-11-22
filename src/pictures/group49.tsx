@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Arrow, Ground, Motion, PAL, Shade, Shine } from './kit';
+import { Arrow, Ground, Motion, Move, PAL, Shade, Shine } from './kit';
 
 /**
  * Word pictures, group 49 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx.
@@ -240,8 +240,10 @@ export default {
     <g>
       <path d="M26 20H94Q102 20 104 28L110 84Q111 94 102 94H18Q9 94 10 84L16 28Q18 20 26 20Z" fill={PAL.slate} />
       <path d="M27 26H93Q97 26 98 30L104 82Q104 87 100 87H20Q16 87 16 82L22 30Q23 26 27 26Z" fill={PAL.ice} />
-      {/* The wiped arc */}
-      <path d="M17.500 53.500A46 46 0 0 1 87.700 59.600L59 79.100A11 11 0 0 0 42.200 78.200Z" fill="#e3f5ff" />
+      {/* The wiped arc (on the intro card it appears once the wiper has swept) */}
+      <Move kind="show">
+        <path d="M17.500 53.500A46 46 0 0 1 87.700 59.600L59 79.100A11 11 0 0 0 42.200 78.200Z" fill="#e3f5ff" />
+      </Move>
       {/* Rain on the rest of the glass */}
       <g fill={PAL.blue}>
         <Drop x={90} y={32} s={11} color={PAL.blue} shine={PAL.ice} />
@@ -250,9 +252,11 @@ export default {
         <Drop x={78} y={70} s={10} color={PAL.blue} shine={PAL.ice} />
         <Drop x={24} y={66} s={10} color={PAL.blue} shine={PAL.ice} />
       </g>
-      {/* Arm and blade */}
-      <path d="M50 86L69 63.400" stroke={PAL.steel} strokeWidth="3.4" strokeLinecap="round" />
-      <path d="M58.400 76L84.500 56.900" stroke={PAL.slateDark} strokeWidth="5.5" strokeLinecap="round" />
+      {/* Arm and blade: on the intro card they sweep across from the left around the pivot */}
+      <Move kind="turn" turn={-80} at={[50, 86]}>
+        <path d="M50 86L69 63.400" stroke={PAL.steel} strokeWidth="3.4" strokeLinecap="round" />
+        <path d="M58.400 76L84.500 56.900" stroke={PAL.slateDark} strokeWidth="5.5" strokeLinecap="round" />
+      </Move>
       <circle cx="50" cy="86" r="5" fill={PAL.slateDark} />
       <Shine d="M24 34L22 48" opacity={0.6} width={3} />
     </g>
@@ -292,16 +296,22 @@ export default {
   'w.krik': () => (
     <g>
       <Ground cx={62} cy={106} rx={48} ry={4} />
-      <g transform="translate(80 93.500) rotate(24) scale(1.05) translate(-26 0)">
-        <Car body={PAL.navy} shade={PAL.navyShade} />
-      </g>
+      {/* On the intro card the front of the car comes up off the ground, on its rear wheel */}
+      <Move kind="turn" turn={-14} at={[80, 93.5]}>
+        <g transform="translate(80 93.500) rotate(24) scale(1.05) translate(-26 0)">
+          <Car body={PAL.navy} shade={PAL.navyShade} />
+        </g>
+      </Move>
       {/* The jack, under the sill */}
       <rect x="35" y="100" width="34" height="5" rx="2" fill={PAL.slate} />
-      <path d="M26 91H66" stroke={PAL.steel} strokeWidth="3" strokeLinecap="round" />
-      <path d="M52 83L35 91L52 100L69 91Z" fill="none" stroke={PAL.yellow} strokeWidth="5.5" strokeLinejoin="round" />
-      <path d="M52 83L69 91L52 100" fill="none" stroke={PAL.yellowShade} strokeWidth="5.5" strokeLinejoin="round" strokeLinecap="round" />
-      <rect x="44" y="78" width="16" height="6" rx="2" fill={PAL.slate} />
-      <circle cx="25" cy="91" r="3.600" fill={PAL.slate} />
+      {/* ... while the jack opens up from low under it */}
+      <Move kind="sag" grow={0.55}>
+        <path d="M26 91H66" stroke={PAL.steel} strokeWidth="3" strokeLinecap="round" />
+        <path d="M52 83L35 91L52 100L69 91Z" fill="none" stroke={PAL.yellow} strokeWidth="5.5" strokeLinejoin="round" />
+        <path d="M52 83L69 91L52 100" fill="none" stroke={PAL.yellowShade} strokeWidth="5.5" strokeLinejoin="round" strokeLinecap="round" />
+        <rect x="44" y="78" width="16" height="6" rx="2" fill={PAL.slate} />
+        <circle cx="25" cy="91" r="3.600" fill={PAL.slate} />
+      </Move>
       <Arrow from={[15, 90]} to={[15, 68]} color={PAL.sky} width={6} head={9} />
     </g>
   ),

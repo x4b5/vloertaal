@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shine } from '../kit';
+import { Move, PAL, Shine } from '../kit';
 
 /** The hook's bowl: its centre and radius (the middle of the steel), and the steel's thickness. */
 const CX = 56;
@@ -33,8 +33,10 @@ export default {
       />
       <Shine d={`M${CX + R - 4.5} 54V70`} width={2.6} opacity={0.9} />
       {/* The yellow safety latch across the opening, from the shank to the tip */}
-      <path d={`M${CX + R - 7} 56L${CX - R + 2} 63`} stroke={PAL.yellowShade} strokeWidth="6" strokeLinecap="round" />
-      <path d={`M${CX + R - 7} 54.6L${CX - R + 2} 61.6`} stroke={PAL.yellow} strokeWidth="3.6" strokeLinecap="round" />
+      <Move kind="tip" turn={-40} at={[CX + R - 6, 56]}>
+        <path d={`M${CX + R - 7} 56L${CX - R + 2} 63`} stroke={PAL.yellowShade} strokeWidth="6" strokeLinecap="round" />
+        <path d={`M${CX + R - 7} 54.6L${CX - R + 2} 61.6`} stroke={PAL.yellow} strokeWidth="3.6" strokeLinecap="round" />
+      </Move>
       <circle cx={CX + R - 6} cy="56" r="3.6" fill={PAL.slate} />
     </g>
   ),

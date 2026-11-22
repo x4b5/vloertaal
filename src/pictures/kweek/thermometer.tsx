@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine } from '../kit';
+import { Ground, Move, PAL, Shine } from '../kit';
 
 /** The ticks of the scale, from top to bottom. */
 const TICKS = [24, 33, 42, 51, 60, 69, 78];
@@ -19,7 +19,9 @@ export default {
       {/* The glass tube and the bulb */}
       <rect x="44" y="18" width="12" height="76" rx="6" fill={PAL.paperShade} />
       <circle cx="50" cy="90" r="10" fill={PAL.red} />
-      <rect x="46.5" y="44" width="7" height="48" rx="3.5" fill={PAL.red} />
+      <Move kind="sag" grow={0.2}>
+        <rect x="46.5" y="44" width="7" height="48" rx="3.5" fill={PAL.red} />
+      </Move>
       <path d="M53 84A6 6 0 0 1 56 92" stroke={PAL.redShade} strokeWidth="3" strokeLinecap="round" fill="none" />
       <Shine d="M46.4 86.6Q47 84.8 48.6 84" width={2.2} opacity={0.8} />
       {/* The scale */}
