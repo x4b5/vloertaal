@@ -18,9 +18,9 @@ export default {
       <path d="M22 66H68V62H22Z" fill={PAL.yellow} />
       <path d="M24 62H66V57H24Z" fill={PAL.red} />
       <path d="M20 58Q24 52 28 58Q32 52 36 58Q40 52 44 58Q48 52 52 58Q56 52 60 58Q64 52 70 58Z" fill={PAL.leaf} />
-      <path d="M22 54Q22 38 45 38Q68 38 68 54Q68 56 66 56H24Q22 56 22 54Z" fill={PAL.card} />
-      <path d="M58 41Q68 45 68 54Q68 56 66 56H60Q62 48 58 41Z" fill={PAL.cardShade} />
-      <Shine d="M30 47Q34 42 42 41" color={PAL.white} width={2.8} opacity={0.55} />
+      <rect x="21" y="45" width="48" height="11" rx="4" fill={PAL.cardShade} />
+      <rect x="21" y="44" width="48" height="9" rx="4" fill={PAL.card} />
+      <Shine d="M27 47H44" color={PAL.white} width={2.6} opacity={0.55} />
       {/* The apple */}
       <Shade color={PAL.redShade} opacity={1} at={[98, 70, 8, 16]}>
         <circle cx="84" cy="66" r="12" fill={PAL.red} />

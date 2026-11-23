@@ -11,12 +11,12 @@ export default {
       <g strokeLinejoin="round" strokeLinecap="round">
         {/* The sun */}
         {rays.map((a, i) => (
-          <path key={i} d={`M${84 + Math.cos(a) * 21} ${32 + Math.sin(a) * 21}L${84 + Math.cos(a) * 27} ${32 + Math.sin(a) * 27}`} stroke={PAL.yellow} strokeWidth="5" />
+          <path key={i} d={`M${84 + Math.cos(a) * 20} ${36 + Math.sin(a) * 20}L${84 + Math.cos(a) * 25} ${36 + Math.sin(a) * 25}`} stroke={PAL.yellow} strokeWidth="5" />
         ))}
-        <Shade color={PAL.yellowShade} opacity={1} at={[100, 36, 8, 18]}>
-          <circle cx="84" cy="32" r="16" fill={PAL.yellow} />
+        <Shade color={PAL.yellowShade} opacity={1} at={[100, 40, 8, 18]}>
+          <circle cx="84" cy="36" r="15" fill={PAL.yellow} />
         </Shade>
-        <Shine d="M75 28Q77 22 82 21" color={PAL.yellowShine} width={3.4} opacity={0.9} />
+        <Shine d="M76 32Q78 26 83 25" color={PAL.yellowShine} width={3.4} opacity={0.9} />
         {/* The sea */}
         <path d="M10 66Q10 62 14 62H106Q110 62 110 66V82H10Z" fill={PAL.sky} />
         <path d="M18 70Q22 67 26 70Q30 73 34 70M58 74Q62 71 66 74Q70 77 74 74M86 68Q90 65 94 68Q98 71 102 68" fill="none" stroke={PAL.ice} strokeWidth="2.6" />
