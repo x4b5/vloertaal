@@ -793,6 +793,55 @@ const lang: HelpLanguageSource = {
     's.whereis.3': "ሽቓቕ ኣብኡ ኣሎ፡ ኣብ ጎድኒ እቲ ካንቲን።", // nieuw, nalezen
     'c.whereis.q': { m: "ክትረኽቦ ትኽእል ዲኻ?", f: "ክትረኽብዮ ትኽእሊ ዲኺ?", x: "ክትረኽብዎ ትኽእሉ ዲኹም?" }, // nieuw, nalezen
     'c.whereis.a': "ኣይፋል። ከተመልክቱለይ ትኽእሉ ዶ?", // nieuw, nalezen
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
+    'l.wound': "ንኣሽቱ መቑሰልትን ቃጸሎን", // nieuw, nalezen
+    'w.wond': "መቑሰሊ", // nieuw, nalezen
+    'w.verband': "መሸፈኒ ቁስሊ (ፋሻ)", // nieuw, nalezen
+    'w.koelen': "ምዝሓል (ብዝሑል ማይ)", // nieuw, nalezen
+    'w.snee': "ምቑራጽ (ካብ ካራ ወይ በሊሕ ነገር ዝመጽእ ንእሽቶ መቑሰሊ)", // nieuw, nalezen
+    'w.flauwvallen': "ስምዒት ምስሓት (ብድኻም ምውዳቕ)", // nieuw, nalezen
+    'w.oogdouche': "መሕጸቢ ዓይኒ (ዓይኒ ዝሕጸበሉ ማይ)", // nieuw, nalezen
+    's.wound.1': { m: "ነቲ ቃጸሎ ብማይ ኣዝሕሎ።", f: "ነቲ ቃጸሎ ብማይ ኣዝሕልዮ።", x: "ነቲ ቃጸሎ ብማይ ኣዝሕልዎ።" }, // nieuw, nalezen
+    's.wound.2': { m: "ንእሽቶ ምቑራጽ እዩ። ነቲ መቑሰሊ ጸቅጦ።", f: "ንእሽቶ ምቑራጽ እዩ። ነቲ መቑሰሊ ጸቅጥዮ።", x: "ንእሽቶ ምቑራጽ እዩ። ነቲ መቑሰሊ ጸቅጥዎ።" }, // nieuw, nalezen
+    's.wound.3': "መሕጸቢ ዓይኒ ኣበይ ኣሎ?", // nieuw, nalezen
+    'c.wound.q': "ብጻይ ስራሐይ ክወድቕ ቀሪቡ ኣሎ።", // nieuw, nalezen
+    'c.wound.a': "ንሓጺር ግዜ ይደቅስ። ሓገዝ ከምጽእ እየ።", // nieuw, nalezen
+    'l.callhelp': "ናብ 112 ምድዋል", // nieuw, nalezen
+    'w.hulpdiensten': "ኣገልግሎታት ህጹጽ ረዲኤት (ኣምቡላንስ፡ መጥፋእቲ ሓዊ፡ ፖሊስ)", // nieuw, nalezen
+    'w.straatnaam': "ስም ጎደና", // nieuw, nalezen
+    'w.huisnummer': "ቁጽሪ ገዛ", // nieuw, nalezen
+    'w.aanspreekbaar': "ዝምልስ (ምስ ዝዛረብዎ መልሲ ዝህብ)", // nieuw, nalezen
+    'w.opwachten': "ምጽባይን ምቕባልን (ንሓደ ሰብ ኣብ ማዕጾ)", // nieuw, nalezen
+    'w.aandelijn': "ኣብ መስመር ምጽናሕ (ተሌፎን ዘይምዕጻው)", // nieuw, nalezen
+    's.callhelp.1': "ናብ 112 እድውል ኣለኹ። ኣምቡላንስ የድልየኒ።", // nieuw, nalezen
+    's.callhelp.2': "ስም ጎደናን ቁጽሪ ገዛን እንታይ እዩ?", // nieuw, nalezen
+    's.callhelp.3': "ኣብ መእተዊ ንኣምቡላንስ ክጽበዮ እየ።", // nieuw, nalezen
+    'c.callhelp.q': { m: "ክትዛረቦ ከለኻ ይምልስ ድዩ?", f: "ክትዛረብዮ ከለኺ ይምልስ ድዩ?", x: "ክትዛረብዎ ከለኹም ይምልስ ድዩ?" }, // nieuw, nalezen
+    'c.callhelp.a': "ኣይፋል። ኣይምልስን እዩ።", // nieuw, nalezen
+    'l.roster': { m: "መደብ ስራሕካ", f: "መደብ ስራሕኪ", x: "መደብ ስራሕኩም" }, // nieuw, nalezen
+    'w.weekrooster': "ሰሙናዊ መደብ ስራሕ (ኣብዚ ሰሙን መን መዓስ ከም ዝሰርሕ)", // nieuw, nalezen
+    'w.roosterapp': "ኣፕ መደብ ስራሕ (ፈረቓታት ስራሕ ኣብ ተሌፎን)", // nieuw, nalezen
+    'w.beschikbaar': "ድሉው (ሽዑ ክሰርሕ ይኽእል)", // nieuw, nalezen
+    'w.wijziging': "ለውጢ", // nieuw, nalezen
+    'w.invallen': "ምትካእ (ኣብ ክንዲ ዘይተረኽበ ሰብ ምስራሕ)", // nieuw, nalezen
+    'w.vrijedag': "መዓልቲ ዕረፍቲ", // nieuw, nalezen
+    's.roster.1': "ሓድሽ መደብ ስራሕ ኣብቲ ኣፕ ኣሎ።", // nieuw, nalezen
+    's.roster.2': "ቀዳም ድሉዋት ዲኹም?", // nieuw, nalezen
+    's.roster.3': "ጽባሕ ኣብ ክንዲ ሳራ ክትሰርሑ ትኽእሉ ዶ?", // nieuw, nalezen
+    'c.roster.q': { m: "ኣብ መደብ ስራሕካ ለውጢ ኣሎ።", f: "ኣብ መደብ ስራሕኪ ለውጢ ኣሎ።", x: "ኣብ መደብ ስራሕኩም ለውጢ ኣሎ።" }, // nieuw, nalezen
+    'c.roster.a': "ሕራይ። ኣየናይ መዓልቲ እየ ክሰርሕ ዘለኒ?", // nieuw, nalezen
+    'l.breaks': "ሰዓታትን ዕረፍቲን", // nieuw, nalezen
+    'w.lunchpauze': "ዕረፍቲ ምሳሕ", // nieuw, nalezen
+    'w.rusttijd': "ግዜ ዕረፍቲ (ኣብ መንጎ ክልተ ፈረቓ ስራሕ ዘሎ ነጻ ግዜ)", // nieuw, nalezen
+    'w.werkdag': "መዓልቲ ስራሕ", // nieuw, nalezen
+    'w.urenlijst': "ዝርዝር ሰዓታት (ዝተሰርሐ ሰዓታት ዝጽሓፈሉ)", // nieuw, nalezen
+    'w.eerderweg': "ኣቐዲምካ ምኻድ", // nieuw, nalezen
+    'w.achterelkaar': "ብተኸታታሊ (ሓደ ድሕሪ ሓደ)", // nieuw, nalezen
+    's.breaks.1': "ሰዓታተይ ኣብ ዝርዝር ሰዓታት እጽሕፎም።", // nieuw, nalezen
+    's.breaks.2': "ሎሚ ሓደ ሰዓት ኣቐዲመ ክኸይድ ይኽእል ዶ?", // nieuw, nalezen
+    's.breaks.3': "ሽዱሽተ መዓልቲ ብተኸታታሊ ሰሪሐ።", // nieuw, nalezen
+    'c.breaks.q': { m: "ዕረፍቲ ምሳሕካ መዓስ እዩ?", f: "ዕረፍቲ ምሳሕኪ መዓስ እዩ?", x: "ዕረፍቲ ምሳሕኩም መዓስ እዩ?" }, // nieuw, nalezen
+    'c.breaks.a': "ሰዓት ዓሰርተው ክልተ፡ ፍርቂ ሰዓት።", // nieuw, nalezen
   },
 };
 

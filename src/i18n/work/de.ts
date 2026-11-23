@@ -4357,6 +4357,447 @@ const t: CultureTranslation = {
     'c.agencyhome.o2': "Zieh heute aus, und schlaf bei einem Freund.", // nieuw, nalezen
     'c.agencyhome.o3': "Pack deine Tasche, und schlaf draußen.", // nieuw, nalezen
     'c.agencyhome.w': "Dein Mietvertrag hat eigene Regeln, getrennt von deiner Arbeit. Ein Rat hilft dir zu wissen, wann du wirklich ausziehen musst.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026): two new lessons each in Solliciteren, Wonen en papieren, Loon, Verlof, Ziekte, Uitbuiting herkennen, Naar je werk, Je werk afronden, Stage lopen, Meedoen in Nederland and Online op je werk.
+    'l.vacancy': "Eine Stellenanzeige lesen", // nieuw, nalezen
+    'w.advertentie': "die Anzeige (ein Text, der eine Arbeit oder eine Sache anbietet)", // nieuw, nalezen
+    'w.eis': "die Anforderung (was du haben oder können musst)", // nieuw, nalezen
+    'w.parttime': "Teilzeit (weniger Stunden pro Woche)", // nieuw, nalezen
+    'w.fulltime': "Vollzeit (eine ganze Arbeitswoche)", // nieuw, nalezen
+    'w.sollicitatiebrief': "das Bewerbungsschreiben", // nieuw, nalezen
+    'w.contactpersoon': "die Kontaktperson (die Person, die du anrufen oder der du schreiben kannst)", // nieuw, nalezen
+    's.vacancy.1': "Ich habe Ihre Anzeige im Internet gesehen.", // nieuw, nalezen
+    's.vacancy.2': "Ist die Stelle in Teilzeit oder Vollzeit?", // nieuw, nalezen
+    's.vacancy.3': "Was sind die Anforderungen?", // nieuw, nalezen
+    'c.vacancy.q': "Warum rufen Sie an?", // nieuw, nalezen
+    'c.vacancy.a': "Ich rufe wegen Ihrer offenen Stelle an. Ist sie noch frei?", // nieuw, nalezen
+    'l.result': "Nach dem Vorstellungsgespräch", // nieuw, nalezen
+    'w.aangenomen': "eingestellt (du hast die Stelle bekommen)", // nieuw, nalezen
+    'w.afwijzing': "die Absage (du hast die Stelle nicht bekommen)", // nieuw, nalezen
+    'w.aanbod': "das Angebot (sie bieten dir die Stelle an)", // nieuw, nalezen
+    'w.proefdag': "der Probetag (ein Tag Arbeit, zum Ausprobieren)", // nieuw, nalezen
+    'w.nabellen': "nachfragen, noch einmal anrufen (fragen, wie es aussieht)", // nieuw, nalezen
+    'w.teleurgesteld': "enttäuscht", // nieuw, nalezen
+    's.result.1': "Sie sind eingestellt!", // nieuw, nalezen
+    's.result.2': "Ich habe eine Absage bekommen.", // nieuw, nalezen
+    's.result.3': "Wird der Probetag bezahlt?", // nieuw, nalezen
+    'c.result.q': "Leider haben wir uns für jemand anderen entschieden.", // nieuw, nalezen
+    'c.result.a': "Schade. Darf ich fragen, warum?", // nieuw, nalezen
+    'l.residence': "Deine Aufenthaltspapiere", // nieuw, nalezen
+    'w.verblijfsvergunning': "die Aufenthaltserlaubnis", // nieuw, nalezen
+    'w.pasfoto': "das Passfoto", // nieuw, nalezen
+    'w.vingerafdruk': "der Fingerabdruck", // nieuw, nalezen
+    'w.geldig': "gültig (man kann es noch benutzen)", // nieuw, nalezen
+    'w.verloopdatum': "das Ablaufdatum (der letzte Tag, an dem es gültig ist)", // nieuw, nalezen
+    'w.volgnummer': "die Wartenummer (der Zettel mit deiner Nummer, wann du dran bist)", // nieuw, nalezen
+    's.residence.1': "Meine Aufenthaltserlaubnis ist noch ein Jahr gültig.", // nieuw, nalezen
+    's.residence.2': "Was ist das Ablaufdatum von deinem Pass?", // nieuw, nalezen
+    's.residence.3': "Ich habe einen Termin bei der Gemeinde.", // nieuw, nalezen
+    'c.residence.q': "Ihre Aufenthaltserlaubnis ist fast abgelaufen.", // nieuw, nalezen
+    'c.residence.a': "Dann beantrage ich sofort eine neue.", // nieuw, nalezen
+    'l.newhome': "Umziehen", // nieuw, nalezen
+    'w.brievenbus': "der Briefkasten", // nieuw, nalezen
+    'w.meterstand': "der Zählerstand (die Zahlen auf dem Zähler für Gas, Strom oder Wasser)", // nieuw, nalezen
+    'w.naambordje': "das Namensschild (dein Name an der Tür)", // nieuw, nalezen
+    'w.woning': "die Wohnung (ein Haus oder eine Wohnung)", // nieuw, nalezen
+    'w.doorsturen': "nachsenden (an eine neue Adresse weiterschicken)", // nieuw, nalezen
+    'w.verhuisdag': "der Umzugstag", // nieuw, nalezen
+    's.newhome.1': "Ich ziehe nächste Woche um.", // nieuw, nalezen
+    's.newhome.2': "Mein Name steht nicht auf dem Briefkasten.", // nieuw, nalezen
+    's.newhome.3': "Ich gebe meine neue Adresse durch.", // nieuw, nalezen
+    'c.newhome.q': "Wo wohnst du jetzt?", // nieuw, nalezen
+    'c.newhome.a': "In einer neuen Wohnung. Hier ist meine neue Adresse.", // nieuw, nalezen
+    'l.payparts': "Was auf deiner Lohnabrechnung steht", // nieuw, nalezen
+    'w.pensioen': "die Rente (Geld für später, wenn du alt bist)", // nieuw, nalezen
+    'w.periode': "der Zeitraum (die Wochen oder der Monat dieses Lohns)", // nieuw, nalezen
+    'w.bedrag': "der Betrag (Geld)", // nieuw, nalezen
+    'w.totaal': "die Summe, insgesamt", // nieuw, nalezen
+    'w.afkorting': "die Abkürzung (eine kurze Form von einem Wort)", // nieuw, nalezen
+    'w.personeelsnummer': "die Personalnummer (deine Nummer in der Firma)", // nieuw, nalezen
+    's.payparts.1': "Was bedeutet diese Abkürzung?", // nieuw, nalezen
+    's.payparts.2': "Dieser Betrag geht in meine Rente.", // nieuw, nalezen
+    's.payparts.3': "Für welchen Zeitraum ist dieser Lohn?", // nieuw, nalezen
+    'c.payparts.q': "Was ist deine Personalnummer?", // nieuw, nalezen
+    'c.payparts.a': "Sie steht oben, neben meinem Namen.", // nieuw, nalezen
+    'l.latepay': "Lohn zu spät, fehlt oder bar", // nieuw, nalezen
+    'w.zwartwerken': "schwarzarbeiten (kein Vertrag, keine Steuer, keine Rechte auf Papier)", // nieuw, nalezen
+    'w.voorschot': "der Vorschuss (ein Teil vom Lohn vor dem Zahltag)", // nieuw, nalezen
+    'w.nabetaling': "die Nachzahlung (Geld, das du später bekommst, um deinen Lohn zu korrigieren)", // nieuw, nalezen
+    'w.tekort': "der Fehlbetrag (Geld, das fehlt)", // nieuw, nalezen
+    'w.betaaldag': "der Zahltag", // nieuw, nalezen
+    'w.bankafschrift': "der Kontoauszug (eine Liste mit dem Geld, das rein- und rausgeht)", // nieuw, nalezen
+    's.latepay.1': "Mein Lohn ist zu spät.", // nieuw, nalezen
+    's.latepay.2': "Ich arbeite nicht schwarz.", // nieuw, nalezen
+    's.latepay.3': "Kann ich einen Vorschuss bekommen?", // nieuw, nalezen
+    'c.latepay.q': "Das fehlende Geld bekommst du nächsten Monat.", // nieuw, nalezen
+    'c.latepay.a': "Kann ich das schriftlich haben?", // nieuw, nalezen
+    'l.holiday': "Deinen Urlaub planen", // nieuw, nalezen
+    'w.saldo': "das Guthaben (wie viele Tage du noch hast)", // nieuw, nalezen
+    'w.goedkeuren': "genehmigen (Ja dazu sagen)", // nieuw, nalezen
+    'w.verlopen': "verfallen, ablaufen (es ist nicht mehr gültig)", // nieuw, nalezen
+    'w.zomervakantie': "der Sommerurlaub, die Sommerferien", // nieuw, nalezen
+    'w.drukte': "die Hochsaison, viel Betrieb (viel Arbeit)", // nieuw, nalezen
+    'w.aanvraag': "der Antrag (du bittest um etwas, oft mit einem Formular)", // nieuw, nalezen
+    's.holiday.1': "Wie viele Urlaubstage habe ich noch?", // nieuw, nalezen
+    's.holiday.2': "Mein Urlaub ist genehmigt.", // nieuw, nalezen
+    's.holiday.3': "Ich fülle das Formular aus.", // nieuw, nalezen
+    'c.holiday.q': "Im Sommer ist viel los. Kannst du im Mai in Urlaub gehen?", // nieuw, nalezen
+    'c.holiday.a': "Lieber im Juli. Dann ist meine Familie zu Hause.", // nieuw, nalezen
+    'l.special': "Besondere freie Tage", // nieuw, nalezen
+    'w.bruiloft': "die Hochzeit", // nieuw, nalezen
+    'w.begrafenis': "die Beerdigung", // nieuw, nalezen
+    'w.geboorteverlof': "der Geburtsurlaub (für den Partner, wenn ein Baby geboren wird)", // nieuw, nalezen
+    'w.bijzonderverlof': "der Sonderurlaub (zum Beispiel für eine Hochzeit oder eine Beerdigung)", // nieuw, nalezen
+    'w.kerstdagen': "Weihnachten (die zwei Weihnachtstage)", // nieuw, nalezen
+    'w.vrijvragen': "um einen freien Tag bitten", // nieuw, nalezen
+    's.special.1': "Mein Bruder heiratet. Kann ich um einen freien Tag bitten?", // nieuw, nalezen
+    's.special.2': "Mein Onkel ist gestorben. Die Beerdigung ist am Freitag.", // nieuw, nalezen
+    's.special.3': "Muss ich an Weihnachten arbeiten?", // nieuw, nalezen
+    'c.special.q': "Herzlichen Glückwunsch zu deinem Baby! Nimmst du Geburtsurlaub?", // nieuw, nalezen
+    'c.special.a': "Ja, die erste Woche bin ich zu Hause.", // nieuw, nalezen
+    'l.unwell': "Dir geht es nicht gut", // nieuw, nalezen
+    'w.hoofdpijn': "die Kopfschmerzen", // nieuw, nalezen
+    'w.griep': "die Grippe", // nieuw, nalezen
+    'w.verkouden': "erkältet", // nieuw, nalezen
+    'w.nietlekker': "nicht gut (du fühlst dich ein bisschen krank)", // nieuw, nalezen
+    'w.naarhuis': "nach Hause gehen", // nieuw, nalezen
+    'w.uitzieken': "zu Hause bleiben, bis du wieder gesund bist", // nieuw, nalezen
+    's.unwell.1': "Ich fühle mich nicht gut.", // nieuw, nalezen
+    's.unwell.2': "Ich habe Kopfschmerzen und ich bin erkältet.", // nieuw, nalezen
+    's.unwell.3': "Ich gehe nach Hause. Ich bin krank.", // nieuw, nalezen
+    'c.unwell.q': "Du siehst blass aus. Geht es dir gut?", // nieuw, nalezen
+    'c.unwell.a': "Nein, ich fühle mich nicht gut. Darf ich nach Hause gehen?", // nieuw, nalezen
+    'l.injury': "Verletzt durch die Arbeit", // nieuw, nalezen
+    'w.bedrijfsongeval': "der Arbeitsunfall", // nieuw, nalezen
+    'w.verzekering': "die Versicherung", // nieuw, nalezen
+    'w.schadevergoeding': "der Schadenersatz (Geld für den Schaden)", // nieuw, nalezen
+    'w.oorzaak': "die Ursache (warum es passiert ist)", // nieuw, nalezen
+    'w.letsel': "die Verletzung (ein Schaden an deinem Körper)", // nieuw, nalezen
+    'w.verklaring': "die Erklärung, die Aussage (was du über das Geschehene schreibst oder sagst)", // nieuw, nalezen
+    's.injury.1': "Ich hatte einen Arbeitsunfall.", // nieuw, nalezen
+    's.injury.2': "Was war die Ursache?", // nieuw, nalezen
+    's.injury.3': "Mein Kollege hat es gesehen.", // nieuw, nalezen
+    'c.injury.q': "Schreibst du hier deine Aussage auf?", // nieuw, nalezen
+    'c.injury.a': "Ja. Darf ich eine Kopie haben?", // nieuw, nalezen
+    'l.debt': "Schulden beim Chef oder bei der Agentur", // nieuw, nalezen
+    'w.lening': "der Kredit, das Darlehen", // nieuw, nalezen
+    'w.lenen': "leihen, sich etwas leihen", // nieuw, nalezen
+    'w.vastzitten': "festsitzen (du kannst nicht weg)", // nieuw, nalezen
+    'w.tussenpersoon': "der Vermittler (jemand, der gegen Geld Arbeit besorgt)", // nieuw, nalezen
+    'w.rente': "die Zinsen (extra Geld, das du für einen Kredit bezahlst)", // nieuw, nalezen
+    'w.belofte': "das Versprechen", // nieuw, nalezen
+    's.debt.1': "Ich musste für diese Arbeit bezahlen.", // nieuw, nalezen
+    's.debt.2': "Meine Schulden werden jeden Monat höher.", // nieuw, nalezen
+    's.debt.3': "Der Vermittler hat meinen Pass.", // nieuw, nalezen
+    'c.debt.q': "Du darfst erst gehen, wenn deine Schulden bezahlt sind.", // nieuw, nalezen
+    'c.debt.a': "Das ist nicht erlaubt. Ich hole mir Hilfe.", // nieuw, nalezen
+    'l.inspection': "Die Inspektion und andere Hilfe", // nieuw, nalezen
+    'w.inspectie': "die Inspektion (Leute, die prüfen, ob die Arbeit fair und sicher ist)", // nieuw, nalezen
+    'w.controle': "die Kontrolle", // nieuw, nalezen
+    'w.slachtoffer': "das Opfer", // nieuw, nalezen
+    'w.mensenhandel': "der Menschenhandel (Menschen werden für Arbeit oder Sex benutzt und verkauft)", // nieuw, nalezen
+    'w.vertrouwen': "vertrauen", // nieuw, nalezen
+    'w.tolk': "der Dolmetscher / die Dolmetscherin", // nieuw, nalezen
+    's.inspection.1': "Morgen kommt die Inspektion.", // nieuw, nalezen
+    's.inspection.2': "Darf ich einen Dolmetscher haben?", // nieuw, nalezen
+    's.inspection.3': "Ich vertraue diesem Mann nicht.", // nieuw, nalezen
+    'c.inspection.q': "Willst du mit der Inspektion sprechen?", // nieuw, nalezen
+    'c.inspection.a': "Ja, aber mein Chef darf es nicht hören.", // nieuw, nalezen
+    'l.carpool': "Fahrgemeinschaft und Firmenbus", // nieuw, nalezen
+    'w.carpoolen': "eine Fahrgemeinschaft bilden (zusammen in einem Auto zur Arbeit fahren)", // nieuw, nalezen
+    'w.meerijden': "mitfahren (im Auto von jemand anderem)", // nieuw, nalezen
+    'w.gordel': "der Sicherheitsgurt", // nieuw, nalezen
+    'w.instappen': "einsteigen (in ein Auto, einen Bus oder einen Zug)", // nieuw, nalezen
+    'w.uitstappen': "aussteigen (aus einem Auto, einem Bus oder einem Zug)", // nieuw, nalezen
+    'w.bijrijder': "der Beifahrer (neben dem Fahrer)", // nieuw, nalezen
+    's.carpool.1': "Darf ich bei dir mitfahren?", // nieuw, nalezen
+    's.carpool.2': "Schnall dich an.", // nieuw, nalezen
+    's.carpool.3': "Ich steige am Bahnhof aus.", // nieuw, nalezen
+    'c.carpool.q': "Wer fährt morgen?", // nieuw, nalezen
+    'c.carpool.a': "Ich fahre. Um sechs hole ich dich ab.", // nieuw, nalezen
+    'l.train': "Zug, Verspätung und zu spät kommen", // nieuw, nalezen
+    'w.station': "der Bahnhof", // nieuw, nalezen
+    'w.perron': "der Bahnsteig (wo du in den Zug steigst)", // nieuw, nalezen
+    'w.overstappen': "umsteigen (in einen anderen Zug oder Bus)", // nieuw, nalezen
+    'w.uitvallen': "ausfallen (der Zug fährt nicht)", // nieuw, nalezen
+    'w.kaartje': "die Fahrkarte", // nieuw, nalezen
+    'w.reisplanner': "die Reiseauskunft (eine App, die Züge und Busse zeigt)", // nieuw, nalezen
+    's.train.1': "Mein Zug fällt aus.", // nieuw, nalezen
+    's.train.2': "Ich muss einmal umsteigen.", // nieuw, nalezen
+    's.train.3': "Von welchem Bahnsteig fährt der Zug?", // nieuw, nalezen
+    'c.train.q': "Warum kommst du so spät?", // nieuw, nalezen
+    'c.train.a': "Mein Zug ist ausgefallen. Ich habe dir eine Nachricht geschickt.", // nieuw, nalezen
+    'l.checklist': "Prüfen, bevor du fertig bist", // nieuw, nalezen
+    'w.checklist': "die Checkliste (eine Liste mit Dingen, die du prüfen musst)", // nieuw, nalezen
+    'w.afvinken': "abhaken (einen Haken hinter eine Aufgabe setzen)", // nieuw, nalezen
+    'w.overdoen': "noch einmal machen", // nieuw, nalezen
+    'w.compleet': "vollständig (es fehlt nichts)", // nieuw, nalezen
+    'w.vergeten': "vergessen", // nieuw, nalezen
+    'w.resultaat': "das Ergebnis", // nieuw, nalezen
+    's.checklist.1': "Ich hake alles auf der Checkliste ab.", // nieuw, nalezen
+    's.checklist.2': "Ist die Bestellung vollständig?", // nieuw, nalezen
+    's.checklist.3': "Das muss ich noch einmal machen.", // nieuw, nalezen
+    'c.checklist.q': "Hast du nichts vergessen?", // nieuw, nalezen
+    'c.checklist.a': "Ich schaue noch einmal auf die Checkliste.", // nieuw, nalezen
+    'l.leavesite': "Deinen Arbeitsplatz verlassen", // nieuw, nalezen
+    'w.terugzetten': "zurückstellen (an seinen Platz)", // nieuw, nalezen
+    'w.vegen': "fegen", // nieuw, nalezen
+    'w.vloer': "der Boden", // nieuw, nalezen
+    'w.uitdoen': "ausschalten (das Licht, eine Maschine)", // nieuw, nalezen
+    'w.alslaatste': "als Letzter", // nieuw, nalezen
+    'w.achterlaten': "hinterlassen (wie du deinen Platz verlässt)", // nieuw, nalezen
+    's.leavesite.1': "Ich hinterlasse meinen Platz ordentlich.", // nieuw, nalezen
+    's.leavesite.2': "Wer geht als Letzter?", // nieuw, nalezen
+    's.leavesite.3': "Mach das Licht aus und die Tür zu.", // nieuw, nalezen
+    'c.leavesite.q': "Gehst du heute als Letzter?", // nieuw, nalezen
+    'c.leavesite.a': "Ja. Ich schalte alles aus und schließe die Tür ab.", // nieuw, nalezen
+    'l.stagedays': "Jeden Tag im Praktikum", // nieuw, nalezen
+    'w.stageplek': "der Praktikumsplatz (die Firma, in der du dein Praktikum machst)", // nieuw, nalezen
+    'w.afwezig': "abwesend (nicht da)", // nieuw, nalezen
+    'w.aanwezig': "anwesend (da)", // nieuw, nalezen
+    'w.stagevergoeding': "die Praktikumsvergütung (Geld, das du im Praktikum bekommen kannst)", // nieuw, nalezen
+    'w.begeleiding': "die Betreuung (Hilfe von deinem Betreuer)", // nieuw, nalezen
+    'w.leerling': "der Schüler / die Schülerin (in der Schule)", // nieuw, nalezen
+    's.stagedays.1': "Ich bin morgen abwesend. Ich bin krank.", // nieuw, nalezen
+    's.stagedays.2': "Bekomme ich eine Praktikumsvergütung?", // nieuw, nalezen
+    's.stagedays.3': "An meinem Praktikumsplatz arbeite ich vier Tage.", // nieuw, nalezen
+    'c.stagedays.q': "Warum warst du gestern nicht da?", // nieuw, nalezen
+    'c.stagedays.a': "Ich war krank. Ich habe die Schule und die Firma angerufen.", // nieuw, nalezen
+    'l.stageend': "Das Ende von deinem Praktikum", // nieuw, nalezen
+    'w.eindgesprek': "das Abschlussgespräch (am Ende von deinem Praktikum)", // nieuw, nalezen
+    'w.geslaagd': "bestanden (du hast es gut genug gemacht)", // nieuw, nalezen
+    'w.gezakt': "durchgefallen (diesmal nicht gut genug)", // nieuw, nalezen
+    'w.herkansing': "die Wiederholungsprüfung (eine neue Chance)", // nieuw, nalezen
+    'w.bedanken': "sich bedanken", // nieuw, nalezen
+    'w.trakteren': "einen ausgeben (etwas Leckeres zum Essen für alle mitbringen)", // nieuw, nalezen
+    's.stageend.1': "Morgen habe ich mein Abschlussgespräch.", // nieuw, nalezen
+    's.stageend.2': "Ich habe mein Praktikum bestanden.", // nieuw, nalezen
+    's.stageend.3': "Ich möchte mich bei allen bedanken.", // nieuw, nalezen
+    'c.stageend.q': "Dein letzter Tag! Was machst du jetzt?", // nieuw, nalezen
+    'c.stageend.a': "Zuerst mein Diplom holen. Dann suche ich Arbeit.", // nieuw, nalezen
+    'l.neighbours': "Deine Nachbarschaft", // nieuw, nalezen
+    'w.buurt': "die Nachbarschaft, das Viertel", // nieuw, nalezen
+    'w.buurthuis': "das Nachbarschaftszentrum (ein Haus für Aktivitäten in deinem Viertel)", // nieuw, nalezen
+    'w.straat': "die Straße", // nieuw, nalezen
+    'w.kennismaken': "sich kennenlernen (jemanden zum ersten Mal treffen)", // nieuw, nalezen
+    'w.overlast': "die Belästigung, die Störung (Lärm oder Ärger für andere)", // nieuw, nalezen
+    'w.buurvrouw': "die Nachbarin (eine Frau)", // nieuw, nalezen
+    's.neighbours.1': "Ich wohne seit kurzem in dieser Straße.", // nieuw, nalezen
+    's.neighbours.2': "In der Bibliothek übe ich Niederländisch.", // nieuw, nalezen
+    's.neighbours.3': "Entschuldigung für die Störung.", // nieuw, nalezen
+    'c.neighbours.q': "Hallo, ich bin deine neue Nachbarin.", // nieuw, nalezen
+    'c.neighbours.a': "Schön, dich kennenzulernen! Ich bin Ali.", // nieuw, nalezen
+    'l.join': "Schule, Sport und Ehrenamt", // nieuw, nalezen
+    'w.vrijwilliger': "der Freiwillige / die Freiwillige (jemand, der ohne Bezahlung hilft)", // nieuw, nalezen
+    'w.vrijwilligerswerk': "die ehrenamtliche Arbeit", // nieuw, nalezen
+    'w.sportclub': "der Sportverein", // nieuw, nalezen
+    'w.ouderavond': "der Elternabend (in der Schule)", // nieuw, nalezen
+    'w.leraar': "der Lehrer / die Lehrerin", // nieuw, nalezen
+    'w.basisschool': "die Grundschule", // nieuw, nalezen
+    's.join.1': "Mein Sohn geht in die Grundschule.", // nieuw, nalezen
+    's.join.2': "Ich spiele Fußball in einem Sportverein.", // nieuw, nalezen
+    's.join.3': "Am Samstag mache ich ehrenamtliche Arbeit.", // nieuw, nalezen
+    'c.join.q': "Kommst du zum Elternabend?", // nieuw, nalezen
+    'c.join.a': "Ja. Ich möchte gern mit dem Lehrer sprechen.", // nieuw, nalezen
+    'l.workphotos': "Fotos und Daten", // nieuw, nalezen
+    'w.gezicht': "das Gesicht", // nieuw, nalezen
+    'w.klantgegevens': "die Kundendaten (Name, Adresse, Telefon von einem Kunden)", // nieuw, nalezen
+    'w.onlinezetten': "online stellen", // nieuw, nalezen
+    'w.wissen': "löschen", // nieuw, nalezen
+    'w.werktelefoon': "das Diensthandy", // nieuw, nalezen
+    'w.bestand': "die Datei (auf einem Computer)", // nieuw, nalezen
+    's.workphotos.1': "Ich stelle keine Fotos von der Arbeit online.", // nieuw, nalezen
+    's.workphotos.2': "Ich lösche das Foto sofort.", // nieuw, nalezen
+    's.workphotos.3': "Sein Gesicht ist auf dem Foto.", // nieuw, nalezen
+    'c.workphotos.q': "Darf ich ein Foto von dir machen? Für das Internet.", // nieuw, nalezen
+    'c.workphotos.a': "Nein, lieber nicht. Ich will nicht online sein.", // nieuw, nalezen
+    'l.device': "Ein sicheres Handy und ein sicherer Computer", // nieuw, nalezen
+    'w.update': "das Update (eine neue Version von einer App oder einem Programm)", // nieuw, nalezen
+    'w.virus': "der Virus (ein Programm, das deinem Computer schadet)", // nieuw, nalezen
+    'w.wifi': "das WLAN", // nieuw, nalezen
+    'w.usbstick': "der USB-Stick", // nieuw, nalezen
+    'w.installeren': "installieren", // nieuw, nalezen
+    'w.openbaar': "öffentlich (für alle)", // nieuw, nalezen
+    's.device.1': "Ich installiere das Update heute Abend.", // nieuw, nalezen
+    's.device.2': "Dieser USB-Stick lag auf dem Boden.", // nieuw, nalezen
+    's.device.3': "Ist dieses WLAN sicher?", // nieuw, nalezen
+    'c.device.q': "Darf ich diese App auf das Diensthandy laden?", // nieuw, nalezen
+    'c.device.a': "Frag zuerst die IT-Abteilung.", // nieuw, nalezen
+    'c.vacancy': "Ruf an, oder schick eine kurze Nachricht", // nieuw, nalezen
+    'c.vacancy.b': "Lies die Anzeige gut: die Stunden, den Ort, und was du haben musst, wie einen Führerschein oder ein Zertifikat. Du musst nicht alles haben: Wenn du das meiste hast, versuch es trotzdem. Ruf an oder schreib eine kurze Nachricht: Sag deinen Namen, welche Stelle, und warum du sie willst. Bezahl nie Geld, um eine Arbeit zu bekommen, und schick nie deine Login-Codes für eine Anzeige.", // nieuw, nalezen
+    'c.vacancy.p': "Ich habe kein Diplom, aber ich habe viel Erfahrung.", // nieuw, nalezen
+    'c.vacancy.s': "Eine Anzeige verlangt 3 Jahre Erfahrung. Du hast 2 Jahre. Was machst du?", // nieuw, nalezen
+    'c.vacancy.o1': "Bewirb dich trotzdem, und sag, was du kannst.", // nieuw, nalezen
+    'c.vacancy.o2': "Bewirb dich nicht: Du hast zu wenig.", // nieuw, nalezen
+    'c.vacancy.o3': "Schreib 3 Jahre: Niemand prüft das.", // nieuw, nalezen
+    'c.vacancy.w': "Eine Anzeige verlangt oft mehr, als die Arbeit wirklich braucht. Ehrlich sagen, was du kannst, funktioniert besser als lügen.", // nieuw, nalezen
+    'c.result': "Ein Nein ist nicht das Ende", // nieuw, nalezen
+    'c.result.b': "Nach einer Woche nichts gehört? Du darfst anrufen und höflich nachfragen. Eine Absage bekommen? Frag, was du nächstes Mal besser machen kannst: Viele Arbeitgeber sagen es dir. Dann versuch es noch einmal: Die meisten Menschen bekommen zuerst ein paar Absagen. Eine Zusage bekommen? Frag, wann du anfängst, und frag nach deinem Vertrag, bevor du beginnst. Zu einem Probetag eingeladen? Frag vorher, wie lange er dauert und ob er bezahlt wird.", // nieuw, nalezen
+    'c.result.p': "Was kann ich nächstes Mal besser machen?", // nieuw, nalezen
+    'c.result.s': "Nach einem Vorstellungsgespräch bekommst du eine Absage per E-Mail. Was machst du?", // nieuw, nalezen
+    'c.result.o1': "Frag höflich, was du besser machen kannst.", // nieuw, nalezen
+    'c.result.o2': "Schreib zurück, dass sie einen Fehler gemacht haben.", // nieuw, nalezen
+    'c.result.o3': "Hör auf, dich zu bewerben: Es klappt nicht.", // nieuw, nalezen
+    'c.result.w': "Eine Rückmeldung hilft dir im nächsten Gespräch. Eine höfliche Frage hinterlässt auch einen guten Eindruck von dir.", // nieuw, nalezen
+    'c.residence': "Deine Papiere: Prüf das Datum", // nieuw, nalezen
+    'c.residence.b': "Aus der EU? Dann darfst du hier mit einem gültigen Pass oder Ausweis wohnen und arbeiten: Du brauchst keine Erlaubnis. Von außerhalb der EU? Dann brauchst du eine gültige Aufenthaltserlaubnis. Auf der Karte steht, ob du arbeiten darfst. Prüf das Ablaufdatum deiner Papiere. Beantrage rechtzeitig eine neue Erlaubnis beim IND: Monate vor dem Datum, nicht in der letzten Woche. Heb eine Kopie von jedem Brief auf. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.residence.p': "Meine Erlaubnis läuft bald ab. Was muss ich tun?", // nieuw, nalezen
+    'c.residence.s': "Deine Aufenthaltserlaubnis läuft in zwei Monaten ab. Du hast bei der Arbeit sehr viel zu tun. Was machst du?", // nieuw, nalezen
+    'c.residence.o1': "Beantrage jetzt eine neue.", // nieuw, nalezen
+    'c.residence.o2': "Warte bis zur letzten Woche.", // nieuw, nalezen
+    'c.residence.o3': "Mach nichts: Die Arbeit geht vor.", // nieuw, nalezen
+    'c.residence.w': "Ohne gültige Erlaubnis darfst du vielleicht nicht arbeiten. Eine neue Erlaubnis braucht Zeit, darum fängst du früh an.", // nieuw, nalezen
+    'c.newhome': "Neue Adresse? Sag es allen", // nieuw, nalezen
+    'c.newhome.b': "Du ziehst um? Sag der gemeente schnell deine neue Adresse: Das musst du tun. Sag es auch deinem Arbeitgeber, deiner Bank, deiner Versicherung und deinem Arzt. Schreib deinen Namen auf den Briefkasten, sonst kommen Briefe nicht bei dir an. Schreib am Umzugstag die Zählerstände auf und mach Fotos davon. Dann bezahlst du nur, was du verbraucht hast.", // nieuw, nalezen
+    'c.newhome.p': "Ich bin umgezogen. Das ist meine neue Adresse.", // nieuw, nalezen
+    'c.newhome.s': "Du bist vor zwei Wochen umgezogen. Deine Briefe gehen noch an deine alte Adresse. Was machst du?", // nieuw, nalezen
+    'c.newhome.o1': "Gib der gemeente jetzt deine neue Adresse.", // nieuw, nalezen
+    'c.newhome.o2': "Warte: Die Post findet dich schon.", // nieuw, nalezen
+    'c.newhome.o3': "Bitte deinen alten Nachbarn, deine Briefe aufzuheben.", // nieuw, nalezen
+    'c.newhome.w': "Wichtige Briefe, wie Bußgelder oder Steuerbriefe, haben Fristen. Wenn sie an die falsche Adresse gehen, kannst du sie verpassen.", // nieuw, nalezen
+    'c.payparts': "Lies jede Zeile", // nieuw, nalezen
+    'c.payparts.b': "Deine Lohnabrechnung hat viele Zeilen und kurze Wörter. Oben: dein Name, deine Personalnummer und der Zeitraum. Dann dein Bruttolohn, deine Stunden und eventuelle Zuschläge. Dann, was abgeht: Steuern und Beiträge. In vielen Jobs bezahlen du und dein Arbeitgeber beide für deine Rente: Deinen Teil siehst du auf deiner Lohnabrechnung. Unten: dein Nettolohn. Du verstehst eine Zeile nicht? Bitte deinen Arbeitgeber, sie zu erklären. Heb alle deine Lohnabrechnungen auf. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.payparts.p': "Was bedeutet diese Zeile auf meiner Lohnabrechnung?", // nieuw, nalezen
+    'c.payparts.s': "Auf deiner Lohnabrechnung geht Geld an „pensioen“. Du weißt nicht, warum. Was machst du?", // nieuw, nalezen
+    'c.payparts.o1': "Bitte deinen Arbeitgeber, es zu erklären.", // nieuw, nalezen
+    'c.payparts.o2': "Bitte darum, es zu stoppen, damit du jetzt mehr Geld bekommst.", // nieuw, nalezen
+    'c.payparts.o3': "Ignorier es: So lange bleibst du nicht.", // nieuw, nalezen
+    'c.payparts.w': "Das Rentengeld wird für dich gespart, für später. Meistens behältst du es, wenn du die Stelle wechselst. Fragen hilft dir zu wissen, was dir gehört.", // nieuw, nalezen
+    'c.latepay': "Lohn zu spät oder bar? Handle rechtzeitig", // nieuw, nalezen
+    'c.latepay.b': "Dein Lohn muss an dem Tag kommen, der in deinem Vertrag oder Tarifvertrag steht. Ist er zu spät, oder fehlt Geld? Frag schriftlich danach, zum Beispiel in einer E-Mail. Heb deine Kontoauszüge und deine eigene Stundenliste auf. Bar bezahlt, ohne Lohnabrechnung? Dann ist es oft Schwarzarbeit (zwart): Deine Stunden sind nicht gemeldet, und später ist es schwer, deine Arbeit zu beweisen oder eine Sozialleistung zu bekommen. Verlang eine Lohnabrechnung. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nieuw, nalezen
+    'c.latepay.p': "Mein Lohn ist noch nicht da. Wann kommt er?", // nieuw, nalezen
+    'c.latepay.s': "Dein Chef sagt: „Ab jetzt bezahle ich dich bar. Keine Lohnabrechnung, das ist einfacher.“ Was machst du?", // nieuw, nalezen
+    'c.latepay.o1': "Sag Nein, und verlang eine Lohnabrechnung.", // nieuw, nalezen
+    'c.latepay.o2': "Sag Ja: Bar ist mehr Geld.", // nieuw, nalezen
+    'c.latepay.o3': "Sag Ja, aber nur diesen Monat.", // nieuw, nalezen
+    'c.latepay.w': "Ohne Lohnabrechnung steht deine Arbeit nicht auf Papier. Dann kannst du Rechte verlieren, zum Beispiel auf eine Sozialleistung, wenn du deine Arbeit verlierst.", // nieuw, nalezen
+    'c.holiday': "Deine freien Tage: Nimm sie rechtzeitig", // nieuw, nalezen
+    'c.holiday.b': "Prüf, wie viele Urlaubstage du noch hast: Oft steht es auf deiner Lohnabrechnung oder in der App. Plan deinen Urlaub früh, und frag schriftlich. Deine gesetzlichen Urlaubstage verfallen 6 Monate nach dem Ende des Jahres, außer du konntest sie nicht nehmen. Zusätzliche Tage aus deinem Tarifvertrag oder Vertrag bleiben länger gültig, meistens 5 Jahre. Endet deine Arbeit? Dann bekommst du Geld für die Tage, die du nicht genommen hast. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.holiday.p': "Ich will meine Urlaubstage noch dieses Jahr nehmen.", // nieuw, nalezen
+    'c.holiday.s': "Es ist November. Du hast noch 12 Urlaubstage von diesem Jahr. Dein Vorgesetzter sagt nichts dazu. Was machst du?", // nieuw, nalezen
+    'c.holiday.o1': "Frag, wann du sie nehmen kannst.", // nieuw, nalezen
+    'c.holiday.o2': "Nichts: Sie bleiben für immer.", // nieuw, nalezen
+    'c.holiday.o3': "Vergiss sie: Sie sind jetzt weg.", // nieuw, nalezen
+    'c.holiday.w': "Freie Tage sind zum Ausruhen, und sie können verfallen. Wenn du rechtzeitig fragst, kannst du sie noch planen.", // nieuw, nalezen
+    'c.special': "Eine Hochzeit, eine Beerdigung, ein Baby", // nieuw, nalezen
+    'c.special.b': "Ist dein Baby geboren, und bist du der Partner? Dann bekommst du 1 Woche bezahlten Geburtsurlaub, in den ersten 4 Wochen. Dein Tarifvertrag gibt oft Sonderurlaub (bijzonder verlof) für deine Hochzeit oder für eine Beerdigung in deiner Familie. Feiertage, wie Weihnachten: Kein Gesetz sagt, dass du frei hast. Dein Vertrag oder Tarifvertrag sagt, ob du frei hast oder ob du mehr Lohn bekommst. Bitte rechtzeitig um deine freien Tage. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.special.p': "Meine Frau bekommt ein Baby. Wie beantrage ich Geburtsurlaub?", // nieuw, nalezen
+    'c.special.s': "Dein Vater ist im Ausland gestorben. Du willst zur Beerdigung. Was machst du?", // nieuw, nalezen
+    'c.special.o1': "Sag es deinem Arbeitgeber, und frag, welchen Urlaub du bekommen kannst.", // nieuw, nalezen
+    'c.special.o2': "Fahr einfach, und sag es, wenn du zurück bist.", // nieuw, nalezen
+    'c.special.o3': "Fahr nicht: Du hast keine freien Tage mehr.", // nieuw, nalezen
+    'c.special.w': "Dein Arbeitgeber versteht, dass das sehr wichtig ist. Viele Tarifverträge geben Sonderurlaub, und du kannst auch deine Urlaubstage nehmen.", // nieuw, nalezen
+    'c.unwell': "Krank bei der Arbeit, oder im Urlaub", // nieuw, nalezen
+    'c.unwell.b': "Fühlst du dich bei der Arbeit krank? Sag es deinem Vorgesetzten, bevor du nach Hause gehst: Das ist deine Krankmeldung. Geh nicht einfach weg. Bist du im Urlaub krank geworden? Melde es deinem Arbeitgeber genauso wie zu Hause, auch aus dem Ausland. Dann zählen die Krankheitstage meistens nicht als Urlaubstage. Vielleicht brauchst du eine Bescheinigung von einem Arzt dort. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.unwell.p': "Ich bin im Urlaub krank geworden.", // nieuw, nalezen
+    'c.unwell.s': "Du bist im Urlaub in deinem Heimatland. Du bekommst die Grippe und liegst 5 Tage im Bett. Was machst du?", // nieuw, nalezen
+    'c.unwell.o1': "Melde es sofort deinem Arbeitgeber.", // nieuw, nalezen
+    'c.unwell.o2': "Nichts: Du hast sowieso Urlaub.", // nieuw, nalezen
+    'c.unwell.o3': "Sag es deinem Arbeitgeber, wenn du zurück bist.", // nieuw, nalezen
+    'c.unwell.w': "Wenn du es rechtzeitig meldest, zählen die Krankheitstage meistens nicht als Urlaubstage. Dann kannst du diese Tage später noch nehmen.", // nieuw, nalezen
+    'c.injury': "Bei der Arbeit verletzt: Schreib es auf", // nieuw, nalezen
+    'c.injury.b': "Wurdest du bei der Arbeit verletzt? Schreib auf, was passiert ist, wann und wo, und wer es gesehen hat. Mach Fotos, und heb alle Papiere vom Arzt auf. Bitte um eine Kopie vom Unfallbericht. Wurdest du verletzt, weil die Arbeit nicht sicher war? Dann muss dein Arbeitgeber meistens deinen Schaden bezahlen. Du musst nicht beweisen, dass es seine Schuld war: Der Arbeitgeber muss zeigen, dass er genug für deine Sicherheit getan hat. Hol dir Rat, bevor du etwas unterschreibst. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.injury.p': "Darf ich eine Kopie vom Bericht haben?", // nieuw, nalezen
+    'c.injury.s': "Du verletzt dich an einer Maschine ohne Schutz an der Hand. Später bittet dich dein Chef, ein Papier zu unterschreiben: „Es war meine eigene Schuld.“ Was machst du?", // nieuw, nalezen
+    'c.injury.o1': "Unterschreib es nicht. Hol dir zuerst Rat.", // nieuw, nalezen
+    'c.injury.o2': "Unterschreib es, dann gibt es keine Probleme.", // nieuw, nalezen
+    'c.injury.o3': "Unterschreib es, aber mach ein Foto davon.", // nieuw, nalezen
+    'c.injury.w': "Was du unterschreibst, kann später zählen, zum Beispiel wenn du Schadenersatz verlangst. Hol dir zuerst Rat bei der Gewerkschaft oder beim Juridisch Loket.", // nieuw, nalezen
+    'c.debt': "Schulden, die nie enden", // nieuw, nalezen
+    'c.debt.b': "In den Niederlanden darf eine Agentur kein Geld von dir verlangen, um dir eine Arbeit zu vermitteln. Musstest du Geld für die Reise oder für die Arbeit leihen, und werden die Schulden immer größer? Musst du bleiben, bis sie bezahlt sind? Das ist ein Zeichen von Ausbeutung. Schulden bedeuten nie, dass du weiterarbeiten musst: Du darfst aufhören. Heb jedes Papier und jede Nachricht über die Schulden auf. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nieuw, nalezen
+    'c.debt.p': "Wie viel muss ich noch bezahlen? Ich will es schriftlich.", // nieuw, nalezen
+    'c.debt.s': "Die Agentur hat deine Busfahrkarte bezahlt. Jetzt zieht sie jede Woche Geld von deinem Lohn ab, und die Schulden werden nicht kleiner. Was machst du?", // nieuw, nalezen
+    'c.debt.o1': "Verlang eine Liste auf Papier, und hol dir Hilfe.", // nieuw, nalezen
+    'c.debt.o2': "Arbeite mehr Stunden, um schneller zu bezahlen.", // nieuw, nalezen
+    'c.debt.o3': "Sag nichts: Die Agentur hat dir geholfen.", // nieuw, nalezen
+    'c.debt.w': "Schulden, die nicht kleiner werden, halten dich fest. Mit der Liste können die Gewerkschaft oder FairWork prüfen, ob es fair ist.", // nieuw, nalezen
+    'c.inspection': "Die Inspektion ist für dich da", // nieuw, nalezen
+    'c.inspection.b': "Die Nederlandse Arbeidsinspectie prüft, ob die Arbeit sicher und fair ist: Lohn, Stunden und Ausbeutung. Inspektoren dürfen zu deiner Arbeit kommen und mit den Arbeitern sprechen. Du darfst ihnen die Wahrheit sagen: Sie sagen deinem Chef nicht, wer etwas gemeldet hat. Brauchst du Hilfe in deiner eigenen Sprache? Bitte um einen Dolmetscher. FairWork hilft Opfern von Ausbeutung kostenlos, auch Menschen ohne gültige Papiere. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nieuw, nalezen
+    'c.inspection.p': "Ich will etwas erzählen, aber ohne meinen Chef dabei.", // nieuw, nalezen
+    'c.inspection.s': "Ein Inspektor fragt nach deinen Stunden. Dein Chef hat gesagt, du sollst 8 Stunden sagen. Du arbeitest 12. Was machst du?", // nieuw, nalezen
+    'c.inspection.o1': "Sag dem Inspektor die Wahrheit.", // nieuw, nalezen
+    'c.inspection.o2': "Sag 8 Stunden, wie dein Chef gesagt hat.", // nieuw, nalezen
+    'c.inspection.o3': "Sag nichts, und geh weg.", // nieuw, nalezen
+    'c.inspection.w': "Der Inspektor kann nur helfen, wenn er die Wahrheit kennt. Was du sagst, hilft dir, und deinen Kollegen auch.", // nieuw, nalezen
+    'c.carpool': "Im Auto: Gurt an, und Kosten absprechen", // nieuw, nalezen
+    'c.carpool.b': "Alle im Auto tragen einen Sicherheitsgurt, auch hinten. Der Fahrer braucht einen gültigen Führerschein und sollte vor dem Fahren keinen Alkohol trinken. Zu viele Leute im Bus, oder fährt der Fahrer gefährlich? Sag es, und steig nicht ein. Fahrgemeinschaft mit Kollegen? Sprecht zuerst ab, wie ihr die Benzinkosten teilt. Im Firmenbus der Agentur? Frag, was es dich kostet, und lass es dir schriftlich geben.", // nieuw, nalezen
+    'c.carpool.p': "Es sind zu viele Leute im Bus. Ich steige nicht ein.", // nieuw, nalezen
+    'c.carpool.s': "Der Firmenbus hat 9 Sitze. Heute Morgen wollen 11 Leute einsteigen. Was machst du?", // nieuw, nalezen
+    'c.carpool.o1': "Steig nicht ein, und ruf deinen Vorgesetzten an.", // nieuw, nalezen
+    'c.carpool.o2': "Setz dich hinten auf den Boden.", // nieuw, nalezen
+    'c.carpool.o3': "Quetsch dich rein: Es sind nur 20 Minuten.", // nieuw, nalezen
+    'c.carpool.w': "Ohne Sitz und Gurt kann ein kleiner Unfall sehr schlimm sein. Dein Arbeitgeber oder die Agentur kann eine andere Lösung finden.", // nieuw, nalezen
+    'c.train': "Zug zu spät? Schick sofort eine Nachricht", // nieuw, nalezen
+    'c.train.b': "Schau in die Reiseauskunft, bevor du losgehst: Züge und Busse können zu spät sein oder ausfallen. Ist dein Zug zu spät? Schick deinem Vorgesetzten sofort eine Nachricht, mit der Uhrzeit, wann du ankommst. An Tagen mit Sturm oder Bauarbeiten an der Strecke nimm einen früheren Zug. Nach einer langen Verspätung kannst du oft Geld zurückbekommen: Schau auf der Website der Bahngesellschaft.", // nieuw, nalezen
+    'c.train.p': "Mein Zug hat Verspätung. Ich bin um neun Uhr da.", // nieuw, nalezen
+    'c.train.s': "Dein Zug fällt aus. Der nächste fährt in 30 Minuten. Deine Schicht beginnt in 40 Minuten. Was machst du?", // nieuw, nalezen
+    'c.train.o1': "Schick jetzt eine Nachricht, dass du zu spät kommst.", // nieuw, nalezen
+    'c.train.o2': "Warte, und erklär es, wenn du da bist.", // nieuw, nalezen
+    'c.train.o3': "Geh nach Hause: Es ist nicht deine Schuld.", // nieuw, nalezen
+    'c.train.w': "Dein Vorgesetzter kann besser planen, wenn er es früh weiß. Eine Verspätung ist nicht deine Schuld, aber es zu melden ist deine Aufgabe.", // nieuw, nalezen
+    'c.checklist': "Prüf es zuerst selbst", // nieuw, nalezen
+    'c.checklist.b': "Bevor du „klaar“ sagst, prüf deine eigene Arbeit. Benutz die Checkliste, wenn es eine gibt, und hak jeden Schritt ab. Schau dir deine Arbeit an, als wärst du der Kunde. Ist etwas nicht gut? Mach es jetzt noch einmal: Das geht schneller als später. Nicht sicher? Bitte einen Kollegen, es anzuschauen. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.checklist.p': "Ich bin fertig. Schaust du es kurz nach?", // nieuw, nalezen
+    'c.checklist.s': "Du bist fertig. Auf der Checkliste ist ein Schritt nicht abgehakt. Du glaubst, du hast ihn gemacht. Was machst du?", // nieuw, nalezen
+    'c.checklist.o1': "Prüf diesen Schritt noch einmal, und hak ihn dann ab.", // nieuw, nalezen
+    'c.checklist.o2': "Hak ihn ab: Du hast ihn wahrscheinlich gemacht.", // nieuw, nalezen
+    'c.checklist.o3': "Lass ihn offen: Niemand liest die Liste.", // nieuw, nalezen
+    'c.checklist.w': "Eine Checkliste hilft nur, wenn sie stimmt. Noch einmal schauen dauert eine Minute. Ein Fehler kann Stunden kosten.", // nieuw, nalezen
+    'c.leavesite': "Hinterlass es so, wie du es vorfinden willst", // nieuw, nalezen
+    'c.leavesite.b': "Hinterlass am Ende deiner Arbeit deinen Platz sauber und sicher. Stell Werkzeuge und Material zurück, und feg den Boden. Schalte die Maschinen und Lichter aus, die du benutzt hast. Bist du der Letzte? Prüf die Fenster und Türen, und schließ ab, so wie deine Firma es sagt. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.leavesite.p': "Ich bin der Letzte. Muss ich die Tür abschließen?", // nieuw, nalezen
+    'c.leavesite.s': "Du bist der Letzte bei der Arbeit. Du weißt nicht, wie man die Alarmanlage einschaltet. Was machst du?", // nieuw, nalezen
+    'c.leavesite.o1': "Ruf deinen Vorgesetzten an und frag.", // nieuw, nalezen
+    'c.leavesite.o2': "Geh ohne Alarmanlage: Es ist spät.", // nieuw, nalezen
+    'c.leavesite.o3': "Drück Knöpfe, bis es piept.", // nieuw, nalezen
+    'c.leavesite.w': "Ein Gebäude ohne Alarmanlage ist nicht sicher. Dein Vorgesetzter bekommt lieber einen Anruf, als morgen ein Problem zu finden.", // nieuw, nalezen
+    'c.stagedays': "Ein Schüler, und ein Kollege", // nieuw, nalezen
+    'c.stagedays.b': "Im Praktikum bist du da, um zu lernen, aber du arbeitest wie ein Kollege: pünktlich, nach den Hausregeln, und du rufst an, wenn du krank bist. Du darfst viele Fragen stellen: Dafür bist du da. Deine Arbeit sollte dir beim Lernen helfen, nicht nur den ganzen Tag putzen oder tragen. Ist das nicht so? Sprich mit deinem Praktikumsbetreuer in der Schule. Eine Praktikumsvergütung gibt es nicht immer: Frag danach, bevor du anfängst. Die Regeln sind in jeder Schule anders: Frag deinen Praktikumsbetreuer.", // nieuw, nalezen
+    'c.stagedays.p': "Ich will das auch lernen. Darf ich zuschauen?", // nieuw, nalezen
+    'c.stagedays.s': "Im Praktikum putzt du nur die Kantine, jeden Tag, drei Wochen lang. Was machst du?", // nieuw, nalezen
+    'c.stagedays.o1': "Sprich mit deinem Praktikumsbetreuer darüber.", // nieuw, nalezen
+    'c.stagedays.o2': "Mach es und sag nichts: Du bist Schüler.", // nieuw, nalezen
+    'c.stagedays.o3': "Bleib zu Hause, bis sie dir andere Arbeit geben.", // nieuw, nalezen
+    'c.stagedays.w': "Ein Praktikum ist zum Lernen von deinem Beruf. Dein Betreuer kann mit der Firma über bessere Aufgaben sprechen.", // nieuw, nalezen
+    'c.stageend': "Gut aufhören, und um eine Referenz bitten", // nieuw, nalezen
+    'c.stageend.b': "Im Abschlussgespräch hörst du, was gut gelaufen ist und was besser sein kann. Frag nach Beispielen, und schreib sie für deine nächste Arbeit auf. Ist es gut gelaufen? Frag, ob du ihren Namen als Referenz angeben darfst. Bedank dich an deinem letzten Tag bei deinen Kollegen: Viele Leute hier bringen eine Kleinigkeit zum Essen mit, wie Kuchen oder Süßigkeiten. Die Regeln sind in jeder Schule anders: Frag deinen Praktikumsbetreuer.", // nieuw, nalezen
+    'c.stageend.p': "Darf ich Sie als Referenz angeben?", // nieuw, nalezen
+    'c.stageend.s': "Es ist der letzte Tag von deinem Praktikum. Was machst du?", // nieuw, nalezen
+    'c.stageend.o1': "Bedank dich bei deinen Kollegen, und verabschiede dich.", // nieuw, nalezen
+    'c.stageend.o2': "Geh leise weg, ohne etwas zu sagen.", // nieuw, nalezen
+    'c.stageend.o3': "Bitte die Firma um ein Geschenk.", // nieuw, nalezen
+    'c.stageend.w': "Ein guter Abschied hinterlässt einen guten Eindruck. Vielleicht willst du später dort arbeiten, oder du brauchst sie als Referenz.", // nieuw, nalezen
+    'c.neighbours': "Grüß deine Nachbarn", // nieuw, nalezen
+    'c.neighbours.b': "Neu in einer Straße? Grüß deine Nachbarn und sag ihnen deinen Namen. Dann lassen sich Probleme später leichter lösen. Arbeitest du nachts, oder wohnst du mit vielen Leuten zusammen? Sei spät am Abend und in der Nacht leise. Stell deinen Müll am richtigen Tag raus. In der Bibliothek und im Nachbarschaftszentrum kannst du oft Niederländisch üben, manchmal kostenlos.", // nieuw, nalezen
+    'c.neighbours.p': "Hallo, ich bin Ali. Ich wohne nebenan.", // nieuw, nalezen
+    'c.neighbours.s': "Du wohnst mit fünf Kollegen zusammen. Eine Nachbarin sagt, dass es nachts oft laut ist. Was machst du?", // nieuw, nalezen
+    'c.neighbours.o1': "Entschuldige dich, und versprich, leise zu sein.", // nieuw, nalezen
+    'c.neighbours.o2': "Sag, dass ihr alle arbeitet und euch entspannen müsst.", // nieuw, nalezen
+    'c.neighbours.o3': "Sag nichts, und mach die Tür zu.", // nieuw, nalezen
+    'c.neighbours.w': "Ein gutes Gespräch früh verhindert größere Probleme. Nachbarn, die dich kennen, sind oft freundlicher und hilfsbereiter.", // nieuw, nalezen
+    'c.join': "Mach mit: Du lernst schneller Niederländisch", // nieuw, nalezen
+    'c.join.b': "Außerhalb der Arbeit lernst du Niederländisch am schnellsten, wenn du Dinge mit Menschen machst: Sport, ein Verein oder ehrenamtliche Arbeit. Dein Kind geht zur Schule? Geh zum Elternabend, auch wenn dein Niederländisch nicht perfekt ist: Der Lehrer will dich kennenlernen. Du darfst um langsames Niederländisch bitten oder eine Übersetzungs-App benutzen. Ehrenamtliche Arbeit sieht auch gut in deinem Lebenslauf aus.", // nieuw, nalezen
+    'c.join.p': "Würden Sie etwas langsamer sprechen?", // nieuw, nalezen
+    'c.join.s': "Du bist zum Elternabend eingeladen. Dein Niederländisch ist noch nicht gut. Was machst du?", // nieuw, nalezen
+    'c.join.o1': "Geh hin, und sprich einfaches Niederländisch oder benutz eine App.", // nieuw, nalezen
+    'c.join.o2': "Geh nicht hin: Der Lehrer versteht dich nicht.", // nieuw, nalezen
+    'c.join.o3': "Schick eine kurze Nachricht, dass du keine Zeit hast.", // nieuw, nalezen
+    'c.join.w': "Der Lehrer will über dein Kind sprechen, nicht über dein Niederländisch. Wenn du kommst, zeigst du, dass es dir wichtig ist.", // nieuw, nalezen
+    'c.workphotos': "Zuerst fragen, dann posten", // nieuw, nalezen
+    'c.workphotos.b': "Ein Foto bei der Arbeit kann mehr zeigen, als du denkst: einen Kunden, einen Klienten, einen Bildschirm oder ein Papier mit Namen. Stell keine Fotos von der Arbeit ohne Erlaubnis von deinem Arbeitgeber online, und nie Fotos von Menschen ohne ihr Ja. Kundendaten bleiben bei der Arbeit: Schick sie nicht an dein eigenes Handy oder deine eigene E-Mail. Aus Versehen etwas geschickt? Sag es sofort deinem Vorgesetzten. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.workphotos.p': "Ich frage zuerst um Erlaubnis.", // nieuw, nalezen
+    'c.workphotos.s': "Ein Kollege stellt ein lustiges Foto von einem Kunden in die Team-App. Was machst du?", // nieuw, nalezen
+    'c.workphotos.o1': "Sag, dass das nicht okay ist, und teil es nicht.", // nieuw, nalezen
+    'c.workphotos.o2': "Teil es: Es ist nur in der Team-App.", // nieuw, nalezen
+    'c.workphotos.o3': "Like es, aber teil es nicht.", // nieuw, nalezen
+    'c.workphotos.w': "Der Kunde hat zu diesem Foto nicht Ja gesagt. Fotos in einer App können schnell überallhin gehen. Wenn du es freundlich sagst, schützt du den Kunden und deinen Kollegen.", // nieuw, nalezen
+    'c.device': "Updates ja, fremde Sticks nein", // nieuw, nalezen
+    'c.device.b': "Installier die Updates auf deinem Handy und Computer: Sie schließen Lücken, die Hacker benutzen. Einen USB-Stick gefunden? Steck ihn nicht in deinen Computer: Gib ihn der IT-Abteilung. Auf einem Diensthandy oder Dienstcomputer installier nur Apps, die deine Arbeit erlaubt. Im öffentlichen WLAN logg dich nicht bei deiner Bank oder deiner Arbeit ein. Sperr dein Handy mit einem Code. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.device.p': "Ich habe einen USB-Stick gefunden. Was soll ich damit machen?", // nieuw, nalezen
+    'c.device.s': "Du findest einen USB-Stick auf dem Parkplatz. Darauf steht „Salaris“. Was machst du?", // nieuw, nalezen
+    'c.device.o1': "Gib ihn der IT-Abteilung.", // nieuw, nalezen
+    'c.device.o2': "Steck ihn in deinen Computer, um zu sehen, wem er gehört.", // nieuw, nalezen
+    'c.device.o3': "Nimm ihn mit nach Hause und schau ihn dort an.", // nieuw, nalezen
+    'c.device.w': "Auf einem Stick kann ein Virus sein, auch wenn er interessant aussieht. Die IT-Abteilung kann ihn sicher prüfen.", // nieuw, nalezen
   },
 };
 

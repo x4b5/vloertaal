@@ -278,6 +278,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "Gesagt, dass der Einsatz endet: okay, und du fragst nach anderer Arbeit.", // nieuw, nalezen
     'c.deductions.a.why': "Von einem Abzug gehört: Du fragst, ob er erlaubt ist, und prüfst es.", // nieuw, nalezen
     'c.agencyhome.a.why': "Gesagt, bald auszuziehen: Das ist kurz, und du holst dir zuerst Rat.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "Gesagt, dass sich der Dienstplan geändert hat: okay, und welcher Tag.", // nieuw, nalezen
+    'c.breaks.a.why': "Nach der Mittagspause gefragt: die Uhrzeit, und wie lange.", // nieuw, nalezen
+    'c.wound.a.why': "Fast ohnmächtig: ihn liegen lassen, und Hilfe holen.", // nieuw, nalezen
+    'c.callhelp.a.why': "Gefragt, ob er reagiert: nein, er reagiert nicht.", // nieuw, nalezen
+    'c.vacancy.a.why': "Gefragt, warum du anrufst: die offene Stelle, und ob sie noch frei ist.", // nieuw, nalezen
+    'c.result.a.why': "Ein Nein bekommen: eine ruhige Antwort, und du fragst nach dem Grund.", // nieuw, nalezen
+    'c.residence.a.why': "Gesagt, dass die Erlaubnis fast abgelaufen ist: Du beantragst sofort eine neue.", // nieuw, nalezen
+    'c.newhome.a.why': "Gefragt, wo du wohnst: eine neue Wohnung, und die neue Adresse.", // nieuw, nalezen
+    'c.payparts.a.why': "Nach der Personalnummer gefragt: wo sie auf der Lohnabrechnung steht.", // nieuw, nalezen
+    'c.latepay.a.why': "Gesagt, dass das Geld später kommt: Du willst das schriftlich.", // nieuw, nalezen
+    'c.holiday.a.why': "Gefragt, ob du im Mai gehst: lieber im Juli, und warum.", // nieuw, nalezen
+    'c.special.a.why': "Nach dem Geburtsurlaub gefragt: ja, und wann.", // nieuw, nalezen
+    'c.unwell.a.why': "Gefragt, ob es dir gut geht: nein, und ob du nach Hause darfst.", // nieuw, nalezen
+    'c.injury.a.why': "Um eine Aussage gebeten: ja, und eine Kopie für dich.", // nieuw, nalezen
+    'c.debt.a.why': "Gesagt, du sollst bleiben, bis die Schulden bezahlt sind: nicht erlaubt, Hilfe holen.", // nieuw, nalezen
+    'c.inspection.a.why': "Gefragt, ob du sprechen willst: ja, aber nicht da, wo der Chef es hört.", // nieuw, nalezen
+    'c.carpool.a.why': "Gefragt, wer fährt: du, und wann du abholst.", // nieuw, nalezen
+    'c.train.a.why': "Gefragt, warum du zu spät bist: der Zug, und du hast eine Nachricht geschickt.", // nieuw, nalezen
+    'c.checklist.a.why': "Gefragt, ob du etwas vergessen hast: noch ein Blick auf die Liste.", // nieuw, nalezen
+    'c.leavesite.a.why': "Gefragt, ob du als Letzter gehst: ja, alles aus und die Tür abgeschlossen.", // nieuw, nalezen
+    'c.stagedays.a.why': "Gefragt, warum du weg warst: krank, und du hast beide angerufen.", // nieuw, nalezen
+    'c.stageend.a.why': "Nach deinen Plänen gefragt: zuerst das Diplom, dann Arbeit.", // nieuw, nalezen
+    'c.neighbours.a.why': "Eine neue Nachbarin grüßt: schön, sie kennenzulernen, und dein Name.", // nieuw, nalezen
+    'c.join.a.why': "Gefragt, ob du kommst: ja, und du willst mit dem Lehrer sprechen.", // nieuw, nalezen
+    'c.workphotos.a.why': "Um ein Foto für das Internet gebeten: ein höfliches Nein.", // nieuw, nalezen
+    'c.device.a.why': "Nach einer neuen App gefragt: zuerst die IT-Abteilung fragen.", // nieuw, nalezen
   },
 };
 

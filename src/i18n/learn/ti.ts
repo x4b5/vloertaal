@@ -279,6 +279,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "ስራሕ ከም ዝውዳእ ተነጊሩ: ሕራይ፡ ካልእ ስራሕ ድማ ይሓትት።", // nieuw, nalezen
     'c.deductions.a.why': "ብዛዕባ ቁርጸት ተነጊሩ: ይፍቀድ ድዩ ኢሉ ይሓትት፡ የረጋግጽ ድማ።", // nieuw, nalezen
     'c.agencyhome.a.why': "ቀልጢፉ ክወጽእ ተነጊሩ: እዚ ሓጺር እዩ፡ ቅድም ድማ ምኽሪ ይደሊ።", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "መደብ ስራሕ ከም ዝተቐየረ ተነጊሩ: ሕራይ፡ ኣየናይ መዓልቲ ድማ።", // nieuw, nalezen
+    'c.breaks.a.why': "ብዛዕባ ዕረፍቲ ምሳሕ ተሓቲቱ: ሰዓቱ፡ ክንደይ ከም ዝወስድ ድማ።", // nieuw, nalezen
+    'c.wound.a.why': "ክወድቕ ቀሪቡ: ይደቅስ፡ ሓገዝ ድማ ይመጽእ።", // nieuw, nalezen
+    'c.callhelp.a.why': "ይምልስ ድዩ ተሓቲቱ: ኣይፋል፡ ኣይምልስን።", // nieuw, nalezen
+    'c.vacancy.a.why': "ስለምንታይ ከም ዝድውል ተሓቲቱ: እቲ ክፉት ቦታ ስራሕ፡ ገና ክፉት ድዩ ድማ።", // nieuw, nalezen
+    'c.result.a.why': "ኣይፋል ተባሂሉ: ህዱእ መልሲ፡ ምኽንያቱ ድማ ይሓትት።", // nieuw, nalezen
+    'c.residence.a.why': "ፍቓድ ግዜኡ ክሓልፍ ከም ዝቐረበ ተነጊሩ: ብቕጽበት ይሓትት።", // nieuw, nalezen
+    'c.newhome.a.why': "ኣበይ ከም ዝነብር ተሓቲቱ: ሓድሽ ገዛ፡ ሓድሽ ኣድራሻ ድማ።", // nieuw, nalezen
+    'c.payparts.a.why': "ቁጽሪ ሰራሕተኛ ተሓቲቱ: ኣብ ወረቐት ደሞዝ ኣበይ ከም ዘሎ።", // nieuw, nalezen
+    'c.latepay.a.why': "ገንዘብ ደሓር ከም ዝመጽእ ተነጊሩ: ብጽሑፍ ይደሊ።", // nieuw, nalezen
+    'c.holiday.a.why': "ኣብ ግንቦት ክኸይድ ተሓቲቱ: ሓምለ ይሓይሽ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
+    'c.special.a.why': "ብዛዕባ ፍቓድ ሕርሲ ተሓቲቱ: እወ፡ መዓስ ድማ።", // nieuw, nalezen
+    'c.unwell.a.why': "ደሓን ድዩ ተሓቲቱ: ኣይፋል፡ ናብ ገዛ ክኸይድ ይኽእል ድዩ ድማ።", // nieuw, nalezen
+    'c.injury.a.why': "ቃል ተሓቲቱ: እወ፡ ንዕኡ ቅዳሕ ድማ።", // nieuw, nalezen
+    'c.debt.a.why': "ክሳብ ዕዳ ዝኽፈል ክጸንሕ ተነጊሩ: ኣይፍቀድን፡ ሓገዝ ይደሊ።", // nieuw, nalezen
+    'c.inspection.a.why': "ክዛረብ ተሓቲቱ: እወ፡ ግን ሓላፊ ኣብ ዘይሰምዓሉ።", // nieuw, nalezen
+    'c.carpool.a.why': "መን ከም ዝዝውር ተሓቲቱ: ንሱ፡ መዓስ ከም ዝወስዶም ድማ።", // nieuw, nalezen
+    'c.train.a.why': "ስለምንታይ ከም ዝደንጎየ ተሓቲቱ: ባቡር፡ መልእኽቲ ድማ ሰዲዱ።", // nieuw, nalezen
+    'c.checklist.a.why': "ዝረስዖ ነገር እንተ ሃልዩ ተሓቲቱ: ሓንሳእ ደጊሙ ነቲ ዝርዝር ይርኢ።", // nieuw, nalezen
+    'c.leavesite.a.why': "ናይ መወዳእታ ይወጽእ ድዩ ተሓቲቱ: እወ፡ ኩሉ ጠፊኡ ማዕጾ ድማ ተዓጽዩ።", // nieuw, nalezen
+    'c.stagedays.a.why': "ስለምንታይ ከም ዘይመጸ ተሓቲቱ: ሓሚሙ፡ ንኽልቲኦም ድማ ደዊሉ።", // nieuw, nalezen
+    'c.stageend.a.why': "ብዛዕባ መደባቱ ተሓቲቱ: ቅድም ዲፕሎማ፡ ድሕሪኡ ስራሕ።", // nieuw, nalezen
+    'c.neighbours.a.why': "ሓዳስ ጎረቤት ሰላም ትብል: ብምፍላጣ ሕጉስ፡ ስሙ ድማ።", // nieuw, nalezen
+    'c.join.a.why': "ክመጽእ ተሓቲቱ: እወ፡ ምስ መምህር ክዛረብ ድማ ይደሊ።", // nieuw, nalezen
+    'c.workphotos.a.why': "ንኢንተርነት ስእሊ ተሓቲቱ: ብትሕትና ኣይፋል።", // nieuw, nalezen
+    'c.device.a.why': "ብዛዕባ ሓድሽ ኣፕ ተሓቲቱ: ቅድም ንክፍሊ IT ምሕታት።", // nieuw, nalezen
   },
 };
 

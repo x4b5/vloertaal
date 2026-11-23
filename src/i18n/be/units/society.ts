@@ -132,6 +132,47 @@ export const ti: Gloss = {
   'be.c.police.o2': 'ሓንሳብ ምድዋል፡ ክሳብ ዝድውሉ ድማ ምጽባይ።', // nieuw, nalezen
   'be.c.police.o3': 'ምጽባይ፡ ድሕሪ እቲ ዕለት ባዕሉ ይውዳእ።', // nieuw, nalezen
   'be.c.police.w': 'መልሲ ብጽሑፍ ይወሃብ፡ ቅድሚ እቲ ኣብ ደብዳቤ ዘሎ ዕለት። ድሕሪ እቲ ዕለት መብዛሕትኡ ግዜ ደንጒዩ እዩ። justitiehuis ቀዳማይ ምኽሪ ብናጻ ይህብ።', // nieuw, nalezen
+  // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
+  'be.l.neighbours': { m: "ከባቢኻ", f: "ከባቢኺ", x: "ከባቢኹም" }, // nieuw, nalezen
+  'be.w.buurt': "ከባቢ፡ ሰፈር", // nieuw, nalezen
+  'be.w.buurthuis': "ማእከል ሰፈር (ንንጥፈታት ሰፈር ዝኸውን ገዛ)", // nieuw, nalezen
+  'be.w.straat': "ጎደና", // nieuw, nalezen
+  'be.w.kennismaken': "ምልላይ (ንመጀመርታ ግዜ ምርኻብ)", // nieuw, nalezen
+  'be.w.overlast': "ረብሻ (ንኻልኦት ዝኸውን ድምጺ ወይ ጸገም)", // nieuw, nalezen
+  'be.w.buurvrouw': "ጎረቤት (ሰበይቲ)", // nieuw, nalezen
+  'be.s.neighbours.1': "ኣብዚ ጎደና ካብ ዝነብር ቁሩብ ግዜ እዩ።", // nieuw, nalezen
+  'be.s.neighbours.2': "ኣብ ቤተ-መጻሕፍቲ ሆላንድኛ እለማመድ።", // nieuw, nalezen
+  'be.s.neighbours.3': "ይቕሬታ ብዛዕባ እቲ ረብሻ።", // nieuw, nalezen
+  'be.c.neighbours.q': { m: "ሰላም፡ ኣነ ሓዳስ ጎረቤትካ እየ።", f: "ሰላም፡ ኣነ ሓዳስ ጎረቤትኪ እየ።", x: "ሰላም፡ ኣነ ሓዳስ ጎረቤትኩም እየ።" }, // nieuw, nalezen
+  'be.c.neighbours.a': "ብምፍላጥኪ ሕጉስ እየ! ኣነ ዓሊ እየ።", // nieuw, nalezen
+  'be.l.join': "ቤት ትምህርቲ፡ ስፖርትን ወለንታዊ ስራሕን", // nieuw, nalezen
+  'be.w.vrijwilliger': "ወለንተኛ (ብዘይ ክፍሊት ዝሕግዝ ሰብ)", // nieuw, nalezen
+  'be.w.vrijwilligerswerk': "ወለንታዊ ስራሕ", // nieuw, nalezen
+  'be.w.sportclub': "ክለብ ስፖርት", // nieuw, nalezen
+  'be.w.ouderavond': "ምሸት ወለዲ (ኣብ ቤት ትምህርቲ)", // nieuw, nalezen
+  'be.w.leraar': "መምህር", // nieuw, nalezen
+  'be.w.basisschool': "ቀዳማይ ደረጃ ቤት ትምህርቲ", // nieuw, nalezen
+  'be.s.join.1': "ወደይ ቀዳማይ ደረጃ ቤት ትምህርቲ ይኸይድ።", // nieuw, nalezen
+  'be.s.join.2': "ኣብ ክለብ ስፖርት ኩዕሶ እግሪ እጻወት።", // nieuw, nalezen
+  'be.s.join.3': "ቀዳም ወለንታዊ ስራሕ እሰርሕ።", // nieuw, nalezen
+  'be.c.join.q': { m: "ናብ ምሸት ወለዲ ክትመጽእ ዲኻ?", f: "ናብ ምሸት ወለዲ ክትመጽኢ ዲኺ?", x: "ናብ ምሸት ወለዲ ክትመጽኡ ዲኹም?" }, // nieuw, nalezen
+  'be.c.join.a': "እወ። ምስ መምህር ክዛረብ ደስ ምበለኒ።", // nieuw, nalezen
+  'be.c.neighbours': { m: "ንጎረባብቲኻ ሰላም በሎም", f: "ንጎረባብቲኺ ሰላም በልዮም", x: "ንጎረባብቲኹም ሰላም በልዎም" }, // nieuw, nalezen
+  'be.c.neighbours.b': { m: "ኣብ ሓደ ጎደና ሓድሽ ዲኻ? ንጎረባብቲኻ ሰላም በሎም፡ ስምካ ድማ ንገሮም። እዚ ደሓር ጸገማት ምፍታሕ የቕልል። ብለይቲ ትሰርሕ ዲኻ፡ ወይስ ምስ ብዙሓት ሰባት ትነብር? ምሸት ዳሕራይን ለይትን ህድእ በል። ጐሓፍካ ኣብታ ቅንዕቲ መዓልቲ ናብ ደገ ኣውጽእ። ኣብ ቤተ-መጻሕፍትን ማእከል ሰፈርን መብዛሕትኡ ግዜ ሆላንድኛ ክትለማመድ ትኽእል፡ ሓደ ሓደ ግዜ ብነጻ።", f: "ኣብ ሓደ ጎደና ሓድሽ ዲኺ? ንጎረባብቲኺ ሰላም በልዮም፡ ስምኪ ድማ ንገርዮም። እዚ ደሓር ጸገማት ምፍታሕ የቕልል። ብለይቲ ትሰርሒ ዲኺ፡ ወይስ ምስ ብዙሓት ሰባት ትነብሪ? ምሸት ዳሕራይን ለይትን ህድእ በሊ። ጐሓፍኪ ኣብታ ቅንዕቲ መዓልቲ ናብ ደገ ኣውጽኢ። ኣብ ቤተ-መጻሕፍትን ማእከል ሰፈርን መብዛሕትኡ ግዜ ሆላንድኛ ክትለማመዲ ትኽእሊ፡ ሓደ ሓደ ግዜ ብነጻ።", x: "ኣብ ሓደ ጎደና ሓድሽ ዲኹም? ንጎረባብቲኹም ሰላም በልዎም፡ ስምኩም ድማ ንገርዎም። እዚ ደሓር ጸገማት ምፍታሕ የቕልል። ብለይቲ ትሰርሑ ዲኹም፡ ወይስ ምስ ብዙሓት ሰባት ትነብሩ? ምሸት ዳሕራይን ለይትን ህድእ በሉ። ጐሓፍኩም ኣብታ ቅንዕቲ መዓልቲ ናብ ደገ ኣውጽኡ። ኣብ ቤተ-መጻሕፍትን ማእከል ሰፈርን መብዛሕትኡ ግዜ ሆላንድኛ ክትለማመዱ ትኽእሉ፡ ሓደ ሓደ ግዜ ብነጻ።" }, // nieuw, nalezen
+  'be.c.neighbours.p': "ሰላም፡ ኣነ ዓሊ እየ። ኣብ ጥቓኹም እነብር።", // nieuw, nalezen
+  'be.c.neighbours.s': { m: "ምስ ሓሙሽተ ብጾት ስራሕ ትነብር። ሓንቲ ጎረቤት ብለይቲ መብዛሕትኡ ግዜ ዕግርግር ከም ዘሎ ትብል። እንታይ ትገብር?", f: "ምስ ሓሙሽተ ብጾት ስራሕ ትነብሪ። ሓንቲ ጎረቤት ብለይቲ መብዛሕትኡ ግዜ ዕግርግር ከም ዘሎ ትብል። እንታይ ትገብሪ?", x: "ምስ ሓሙሽተ ብጾት ስራሕ ትነብሩ። ሓንቲ ጎረቤት ብለይቲ መብዛሕትኡ ግዜ ዕግርግር ከም ዘሎ ትብል። እንታይ ትገብሩ?" }, // nieuw, nalezen
+  'be.c.neighbours.o1': { m: "ይቕሬታ ሕተት፡ ህድእ ክትብሉ ድማ ተሰማማዕ።", f: "ይቕሬታ ሕተቲ፡ ህድእ ክትብሉ ድማ ተሰማምዒ።", x: "ይቕሬታ ሕተቱ፡ ህድእ ክትብሉ ድማ ተሰማምዑ።" }, // nieuw, nalezen
+  'be.c.neighbours.o2': { m: "ኩልኹም ከም እትሰርሑን ምዕራፍ ከም ዘድልየኩምን ንገራ።", f: "ኩልኹም ከም እትሰርሑን ምዕራፍ ከም ዘድልየኩምን ንገርያ።", x: "ኩልኹም ከም እትሰርሑን ምዕራፍ ከም ዘድልየኩምን ንገርዋ።" }, // nieuw, nalezen
+  'be.c.neighbours.o3': { m: "ገለ ኣይትበል፡ ማዕጾ ድማ ዕጸው።", f: "ገለ ኣይትበሊ፡ ማዕጾ ድማ ዕጸዊ።", x: "ገለ ኣይትበሉ፡ ማዕጾ ድማ ዕጸዉ።" }, // nieuw, nalezen
+  'be.c.neighbours.w': { m: "ኣቐዲሙ ዝግበር ጽቡቕ ዝርርብ ዝዓበዩ ጸገማት ይከላኸል። ዝፈልጡኻ ጎረባብቲ መብዛሕትኡ ግዜ ዝያዳ ፍቑራትን ሓገዝትን እዮም።", f: "ኣቐዲሙ ዝግበር ጽቡቕ ዝርርብ ዝዓበዩ ጸገማት ይከላኸል። ዝፈልጡኺ ጎረባብቲ መብዛሕትኡ ግዜ ዝያዳ ፍቑራትን ሓገዝትን እዮም።", x: "ኣቐዲሙ ዝግበር ጽቡቕ ዝርርብ ዝዓበዩ ጸገማት ይከላኸል። ዝፈልጡኹም ጎረባብቲ መብዛሕትኡ ግዜ ዝያዳ ፍቑራትን ሓገዝትን እዮም።" }, // nieuw, nalezen
+  'be.c.join': { m: "ተሳተፍ፡ ሆላንድኛ ቀልጢፍካ ትመሃር", f: "ተሳተፊ፡ ሆላንድኛ ቀልጢፍኪ ትመሃሪ", x: "ተሳተፉ፡ ሆላንድኛ ቀልጢፍኩም ትመሃሩ" }, // nieuw, nalezen
+  'be.c.join.b': { m: "ብደገ ስራሕ፡ ምስ ሰባት ነገራት ብምግባር ሆላንድኛ ኣዝዩ ቀልጢፍካ ትመሃር፡ ስፖርት፡ ክለብ፡ ወይ ወለንታዊ ስራሕ። ቆልዓኻ ኣብ ቤት ትምህርቲ ድዩ? ሆላንድኛኻ ምሉእ እንተ ዘይኮነ እውን ናብ ምሸት ወለዲ ኪድ፡ መምህር ክፈልጠካ ይደሊ እዩ። ቀስ ዝበለ ሆላንድኛ ክትሓትት፡ ወይ ኣፕ ትርጉም ክትጥቀም ይፍቀደልካ። ወለንታዊ ስራሕ ኣብ CVኻ እውን ጽቡቕ ይመስል።", f: "ብደገ ስራሕ፡ ምስ ሰባት ነገራት ብምግባር ሆላንድኛ ኣዝዩ ቀልጢፍኪ ትመሃሪ፡ ስፖርት፡ ክለብ፡ ወይ ወለንታዊ ስራሕ። ቆልዓኺ ኣብ ቤት ትምህርቲ ድዩ? ሆላንድኛኺ ምሉእ እንተ ዘይኮነ እውን ናብ ምሸት ወለዲ ኪዲ፡ መምህር ክፈልጠኪ ይደሊ እዩ። ቀስ ዝበለ ሆላንድኛ ክትሓትቲ፡ ወይ ኣፕ ትርጉም ክትጥቀሚ ይፍቀደልኪ። ወለንታዊ ስራሕ ኣብ CVኺ እውን ጽቡቕ ይመስል።", x: "ብደገ ስራሕ፡ ምስ ሰባት ነገራት ብምግባር ሆላንድኛ ኣዝዩ ቀልጢፍኩም ትመሃሩ፡ ስፖርት፡ ክለብ፡ ወይ ወለንታዊ ስራሕ። ቆልዓኹም ኣብ ቤት ትምህርቲ ድዩ? ሆላንድኛኹም ምሉእ እንተ ዘይኮነ እውን ናብ ምሸት ወለዲ ኪዱ፡ መምህር ክፈልጠኩም ይደሊ እዩ። ቀስ ዝበለ ሆላንድኛ ክትሓትቱ፡ ወይ ኣፕ ትርጉም ክትጥቀሙ ይፍቀደልኩም። ወለንታዊ ስራሕ ኣብ CVኹም እውን ጽቡቕ ይመስል።" }, // nieuw, nalezen
+  'be.c.join.p': "ቁሩብ ቀስ ኢልኩም ክትዛረቡ ትኽእሉ ዶ?", // nieuw, nalezen
+  'be.c.join.s': { m: "ናብ ምሸት ወለዲ ተዓዲምካ። ሆላንድኛኻ ገና ጽቡቕ ኣይኮነን። እንታይ ትገብር?", f: "ናብ ምሸት ወለዲ ተዓዲምኪ። ሆላንድኛኺ ገና ጽቡቕ ኣይኮነን። እንታይ ትገብሪ?", x: "ናብ ምሸት ወለዲ ተዓዲምኩም። ሆላንድኛኹም ገና ጽቡቕ ኣይኮነን። እንታይ ትገብሩ?" }, // nieuw, nalezen
+  'be.c.join.o1': { m: "ኪድ፡ ቀሊል ሆላንድኛ ወይ ኣፕ ድማ ተጠቐም።", f: "ኪዲ፡ ቀሊል ሆላንድኛ ወይ ኣፕ ድማ ተጠቐሚ።", x: "ኪዱ፡ ቀሊል ሆላንድኛ ወይ ኣፕ ድማ ተጠቐሙ።" }, // nieuw, nalezen
+  'be.c.join.o2': { m: "ኣይትኺድ፡ መምህር ኣይርድኦካን እዩ።", f: "ኣይትኸዲ፡ መምህር ኣይርድኦኪን እዩ።", x: "ኣይትኸዱ፡ መምህር ኣይርድኦኩምን እዩ።" }, // nieuw, nalezen
+  'be.c.join.o3': { m: "ከም ዝተጸመድካ ሓጺር መልእኽቲ ስደድ።", f: "ከም ዝተጸመድኪ ሓጺር መልእኽቲ ስደዲ።", x: "ከም ዝተጸመድኩም ሓጺር መልእኽቲ ስደዱ።" }, // nieuw, nalezen
+  'be.c.join.w': { m: "መምህር ብዛዕባ ቆልዓኻ እዩ ክዛረብ ዝደሊ፡ ብዛዕባ ሆላንድኛኻ ኣይኮነን። ምምጻእካ ከም ዘገድሰካ የርኢ።", f: "መምህር ብዛዕባ ቆልዓኺ እዩ ክዛረብ ዝደሊ፡ ብዛዕባ ሆላንድኛኺ ኣይኮነን። ምምጻእኪ ከም ዘገድሰኪ የርኢ።", x: "መምህር ብዛዕባ ቆልዓኹም እዩ ክዛረብ ዝደሊ፡ ብዛዕባ ሆላንድኛኹም ኣይኮነን። ምምጻእኩም ከም ዘገድሰኩም የርኢ።" }, // nieuw, nalezen
 };
 
 export const fa: Gloss = {
@@ -903,6 +944,47 @@ export const de: Gloss = {
   'be.c.police.o2': 'Du rufst einmal an und wartest auf einen Rückruf.', // nieuw, nalezen
   'be.c.police.o3': 'Du wartest: Nach diesem Datum ist es von selbst vorbei.', // nieuw, nalezen
   'be.c.police.w': 'Man antwortet schriftlich, vor dem Datum im Brief. Danach ist es oft zu spät. Das Justitiehuis gibt eine erste Beratung kostenlos.', // nieuw, nalezen
+  // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
+  'be.l.neighbours': "Deine Nachbarschaft", // nieuw, nalezen
+  'be.w.buurt': "die Nachbarschaft, das Viertel", // nieuw, nalezen
+  'be.w.buurthuis': "das Nachbarschaftszentrum (ein Haus für Aktivitäten in deinem Viertel)", // nieuw, nalezen
+  'be.w.straat': "die Straße", // nieuw, nalezen
+  'be.w.kennismaken': "sich kennenlernen (jemanden zum ersten Mal treffen)", // nieuw, nalezen
+  'be.w.overlast': "die Belästigung, die Störung (Lärm oder Ärger für andere)", // nieuw, nalezen
+  'be.w.buurvrouw': "die Nachbarin (eine Frau)", // nieuw, nalezen
+  'be.s.neighbours.1': "Ich wohne seit kurzem in dieser Straße.", // nieuw, nalezen
+  'be.s.neighbours.2': "In der Bibliothek übe ich Niederländisch.", // nieuw, nalezen
+  'be.s.neighbours.3': "Entschuldigung für die Störung.", // nieuw, nalezen
+  'be.c.neighbours.q': "Hallo, ich bin deine neue Nachbarin.", // nieuw, nalezen
+  'be.c.neighbours.a': "Schön, dich kennenzulernen! Ich bin Ali.", // nieuw, nalezen
+  'be.l.join': "Schule, Sport und Ehrenamt", // nieuw, nalezen
+  'be.w.vrijwilliger': "der Freiwillige / die Freiwillige (jemand, der ohne Bezahlung hilft)", // nieuw, nalezen
+  'be.w.vrijwilligerswerk': "die ehrenamtliche Arbeit", // nieuw, nalezen
+  'be.w.sportclub': "der Sportverein", // nieuw, nalezen
+  'be.w.ouderavond': "der Elternabend (in der Schule)", // nieuw, nalezen
+  'be.w.leraar': "der Lehrer / die Lehrerin", // nieuw, nalezen
+  'be.w.basisschool': "die Grundschule", // nieuw, nalezen
+  'be.s.join.1': "Mein Sohn geht in die Grundschule.", // nieuw, nalezen
+  'be.s.join.2': "Ich spiele Fußball in einem Sportverein.", // nieuw, nalezen
+  'be.s.join.3': "Am Samstag mache ich ehrenamtliche Arbeit.", // nieuw, nalezen
+  'be.c.join.q': "Kommst du zum Elternabend?", // nieuw, nalezen
+  'be.c.join.a': "Ja. Ich möchte gern mit dem Lehrer sprechen.", // nieuw, nalezen
+  'be.c.neighbours': "Grüß deine Nachbarn", // nieuw, nalezen
+  'be.c.neighbours.b': "Neu in einer Straße? Grüß deine Nachbarn und sag ihnen deinen Namen. Dann lassen sich Probleme später leichter lösen. Arbeitest du nachts, oder wohnst du mit vielen Leuten zusammen? Sei spät am Abend und in der Nacht leise. Stell deinen Müll am richtigen Tag raus. In der Bibliothek und im Nachbarschaftszentrum kannst du oft Niederländisch üben, manchmal kostenlos.", // nieuw, nalezen
+  'be.c.neighbours.p': "Hallo, ich bin Ali. Ich wohne nebenan.", // nieuw, nalezen
+  'be.c.neighbours.s': "Du wohnst mit fünf Kollegen zusammen. Eine Nachbarin sagt, dass es nachts oft laut ist. Was machst du?", // nieuw, nalezen
+  'be.c.neighbours.o1': "Entschuldige dich, und versprich, leise zu sein.", // nieuw, nalezen
+  'be.c.neighbours.o2': "Sag, dass ihr alle arbeitet und euch entspannen müsst.", // nieuw, nalezen
+  'be.c.neighbours.o3': "Sag nichts, und mach die Tür zu.", // nieuw, nalezen
+  'be.c.neighbours.w': "Ein gutes Gespräch früh verhindert größere Probleme. Nachbarn, die dich kennen, sind oft freundlicher und hilfsbereiter.", // nieuw, nalezen
+  'be.c.join': "Mach mit: Du lernst schneller Niederländisch", // nieuw, nalezen
+  'be.c.join.b': "Außerhalb der Arbeit lernst du Niederländisch am schnellsten, wenn du Dinge mit Menschen machst: Sport, ein Verein oder ehrenamtliche Arbeit. Dein Kind geht zur Schule? Geh zum Elternabend, auch wenn dein Niederländisch nicht perfekt ist: Der Lehrer will dich kennenlernen. Du darfst um langsames Niederländisch bitten oder eine Übersetzungs-App benutzen. Ehrenamtliche Arbeit sieht auch gut in deinem Lebenslauf aus.", // nieuw, nalezen
+  'be.c.join.p': "Würden Sie etwas langsamer sprechen?", // nieuw, nalezen
+  'be.c.join.s': "Du bist zum Elternabend eingeladen. Dein Niederländisch ist noch nicht gut. Was machst du?", // nieuw, nalezen
+  'be.c.join.o1': "Geh hin, und sprich einfaches Niederländisch oder benutz eine App.", // nieuw, nalezen
+  'be.c.join.o2': "Geh nicht hin: Der Lehrer versteht dich nicht.", // nieuw, nalezen
+  'be.c.join.o3': "Schick eine kurze Nachricht, dass du keine Zeit hast.", // nieuw, nalezen
+  'be.c.join.w': "Der Lehrer will über dein Kind sprechen, nicht über dein Niederländisch. Wenn du kommst, zeigst du, dass es dir wichtig ist.", // nieuw, nalezen
 };
 
 /** Somali (so): to be translated, like `de` above. */
@@ -948,4 +1030,45 @@ export const so: Gloss = {
   'be.c.police.o2': "Hal mar wac, oo sug ilaa ay dib kuu soo wacaan.", // nieuw, nalezen
   'be.c.police.o3': "Sug: taariikhdaas kadib, iskeed ayay u joogsanaysaa.", // nieuw, nalezen
   'be.c.police.w': "Qoraal ayaad ku jawaabtaa, ka hor taariikhda warqadda ku qoran. Taariikhdaas kadib, inta badan waa goor dambe. Justitiehuis ayaa ku siin kara talo hore oo bilaash ah.", // nieuw, nalezen
+  // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
+  'be.l.neighbours': "Xaafaddaada", // nieuw, nalezen
+  'be.w.buurt': "xaafadda", // nieuw, nalezen
+  'be.w.buurthuis': "xarunta xaafadda (guri hawlaha xaafaddaada loogu talagalay)", // nieuw, nalezen
+  'be.w.straat': "waddada", // nieuw, nalezen
+  'be.w.kennismaken': "is-barasho (qof markii ugu horreysay la kulmid)", // nieuw, nalezen
+  'be.w.overlast': "dhibaatada (buuq ama qas dadka kale u keena)", // nieuw, nalezen
+  'be.w.buurvrouw': "deriska (haweeney)", // nieuw, nalezen
+  'be.s.neighbours.1': "Waqti yar ayaan ku noolaa waddadan.", // nieuw, nalezen
+  'be.s.neighbours.2': "Maktabadda ayaan ku tababartaa Af-Holandiiska.", // nieuw, nalezen
+  'be.s.neighbours.3': "Waan ka xumahay dhibaatada.", // nieuw, nalezen
+  'be.c.neighbours.q': "Salaan, waxaan ahay deriskaaga cusub.", // nieuw, nalezen
+  'be.c.neighbours.a': "Ku faraxsanahay inaan ku barto! Waxaan ahay Ali.", // nieuw, nalezen
+  'be.l.join': "Dugsiga, ciyaaraha iyo tabarucaadda", // nieuw, nalezen
+  'be.w.vrijwilliger': "tabaruceha (qof caawiya isagoo aan lacag qaadan)", // nieuw, nalezen
+  'be.w.vrijwilligerswerk': "shaqada tabarucaadda", // nieuw, nalezen
+  'be.w.sportclub': "naadiga ciyaaraha", // nieuw, nalezen
+  'be.w.ouderavond': "habeenka waalidiinta (dugsiga)", // nieuw, nalezen
+  'be.w.leraar': "macallinka", // nieuw, nalezen
+  'be.w.basisschool': "dugsiga hoose", // nieuw, nalezen
+  'be.s.join.1': "Wiilkaygu wuxuu dhigtaa dugsiga hoose.", // nieuw, nalezen
+  'be.s.join.2': "Kubadda cagta ayaan ka ciyaaraa naadi ciyaareed.", // nieuw, nalezen
+  'be.s.join.3': "Sabtida waxaan qabtaa shaqo tabarucaad ah.", // nieuw, nalezen
+  'be.c.join.q': "Ma imanaysaa habeenka waalidiinta?", // nieuw, nalezen
+  'be.c.join.a': "Haa. Waxaan jeclaan lahaa inaan la hadlo macallinka.", // nieuw, nalezen
+  'be.c.neighbours': "Salaan deriskaaga", // nieuw, nalezen
+  'be.c.neighbours.b': "Ma ku cusub tahay waddo? Salaan deriskaaga oo u sheeg magacaaga. Taasi waxay goor dambe fududaysaa xallinta dhibaatooyinka. Ma habeenkii ayaad shaqaysaa, mise dad badan ayaad la nooshahay? Aamus fiidka dambe iyo habeenkii. Qashinkaaga bannaanka dhig maalinta saxda ah. Maktabadda iyo xarunta xaafadda badanaa waxaad ku tababaran kartaa Af-Holandiiska, mararka qaarkood bilaash.", // nieuw, nalezen
+  'be.c.neighbours.p': "Salaan, waxaan ahay Ali. Waxaan ku noolahay dhinaca.", // nieuw, nalezen
+  'be.c.neighbours.s': "Waxaad la nooshahay shan saaxiib shaqo. Deris ayaa yiri habeenkii badanaa waa buuq. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.neighbours.o1': "Raali gelin bixi, oo ku heshiiya inaad aamusaysaan.", // nieuw, nalezen
+  'be.c.neighbours.o2': "Dheh dhammaantiin waad shaqaysaan oo waxaad u baahan tihiin nasasho.", // nieuw, nalezen
+  'be.c.neighbours.o3': "Waxba ha odhan, oo albaabka xir.", // nieuw, nalezen
+  'be.c.neighbours.w': "Wada-hadal wanaagsan oo goor hore ah ayaa joojiya dhibaatooyin waaweyn. Deriska ku yaqaan badanaa way ka saaxiibtinimo iyo caawimaad badan yihiin.", // nieuw, nalezen
+  'be.c.join': "Ka qayb qaado: Af-Holandiiska si dhakhso ah ayaad u baranaysaa", // nieuw, nalezen
+  'be.c.join.b': "Shaqada dibaddeeda, Af-Holandiiska waxaad sida ugu dhakhsaha badan u barataa adigoo dad wax la qabanaya: ciyaaraha, naadi, ama shaqo tabarucaad ah. Ilmahaagu ma dugsi buu dhigtaa? Aad habeenka waalidiinta, xitaa haddii Af-Holandiiskaagu aanu dhammaystirnayn: macallinku wuxuu rabaa inuu ku barto. Waxaad codsan kartaa Af-Holandiis tartiib ah, ama isticmaal app turjumaad. Shaqada tabarucaaddu sidoo kale si fiican ayay ugu muuqataa CV-gaaga.", // nieuw, nalezen
+  'be.c.join.p': "Ma ii hadli kartaa wax yar oo tartiib ah?", // nieuw, nalezen
+  'be.c.join.s': "Waxaa lagugu casuumay habeenka waalidiinta. Af-Holandiiskaagu weli ma fiicna. Maxaad samaynaysaa?", // nieuw, nalezen
+  'be.c.join.o1': "Aad, oo isticmaal Af-Holandiis fudud ama app.", // nieuw, nalezen
+  'be.c.join.o2': "Ha aadin: macallinku ku fahmi maayo.", // nieuw, nalezen
+  'be.c.join.o3': "Dir fariin gaaban oo ah inaad mashquul tahay.", // nieuw, nalezen
+  'be.c.join.w': "Macallinku wuxuu rabaa inuu kaala hadlo ilmahaaga, ma aha Af-Holandiiskaaga. Imaatinkaagu wuxuu muujinayaa inaad dan ka leedahay.", // nieuw, nalezen
 };

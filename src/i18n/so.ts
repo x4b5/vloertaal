@@ -795,6 +795,55 @@ const lang: HelpLanguageSource = {
     's.whereis.3': "Musqushu halkaas ayay ku taal, makhaayadda shaqada agteeda.", // nieuw, nalezen
     'c.whereis.q': "Ma heli kartaa?", // nieuw, nalezen
     'c.whereis.a': "Maya. Ma ii tilmaami kartaa?", // nieuw, nalezen
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
+    'l.wound': "Nabarro yaryar iyo gubasho", // nieuw, nalezen
+    'w.wond': "nabarka", // nieuw, nalezen
+    'w.verband': "faashadda", // nieuw, nalezen
+    'w.koelen': "qaboojin (biyo qabow)", // nieuw, nalezen
+    'w.snee': "goosta (nabar yar oo mindi ama wax af leh ka yimid)", // nieuw, nalezen
+    'w.flauwvallen': "suuxid", // nieuw, nalezen
+    'w.oogdouche': "qubeyska indhaha (biyo indhaha lagu dhaqo)", // nieuw, nalezen
+    's.wound.1': "Gubashada biyo ku qabooji.", // nieuw, nalezen
+    's.wound.2': "Waa goos yar. Nabarka cadaadi.", // nieuw, nalezen
+    's.wound.3': "Xaggee ayuu ku yaal qubeyska indhaha?", // nieuw, nalezen
+    'c.wound.q': "Saaxiibkayga shaqada wuu suuxi gaadhay.", // nieuw, nalezen
+    'c.wound.a': "Wax yar jiifi. Caawimaad ayaan keenayaa.", // nieuw, nalezen
+    'l.callhelp': "Wicidda 112", // nieuw, nalezen
+    'w.hulpdiensten': "adeegyada degdegga (ambalaaska, dab-demiska, booliska)", // nieuw, nalezen
+    'w.straatnaam': "magaca waddada", // nieuw, nalezen
+    'w.huisnummer': "lambarka guriga", // nieuw, nalezen
+    'w.aanspreekbaar': "wax ka jawaabi kara (qofku wuu jawaabaa marka aad la hadasho)", // nieuw, nalezen
+    'w.opwachten': "sugid iyo soo dhaweyn (qof albaabka)", // nieuw, nalezen
+    'w.aandelijn': "khadka ku jirid (taleefanka ma dhigto)", // nieuw, nalezen
+    's.callhelp.1': "112 ayaan wacayaa. Ambalaas ayaan u baahanahay.", // nieuw, nalezen
+    's.callhelp.2': "Waa maxay magaca waddada iyo lambarka guriga?", // nieuw, nalezen
+    's.callhelp.3': "Ambalaaska waxaan ku sugayaa albaabka laga soo galo.", // nieuw, nalezen
+    'c.callhelp.q': "Ma ka jawaabayaa marka aad la hadasho?", // nieuw, nalezen
+    'c.callhelp.a': "Maya. Ma jawaabayo.", // nieuw, nalezen
+    'l.roster': "Jadwalkaaga shaqada", // nieuw, nalezen
+    'w.weekrooster': "jadwalka toddobaadka (cidda shaqaynaysa iyo goorta toddobaadkan)", // nieuw, nalezen
+    'w.roosterapp': "app-ka jadwalka (wareegyadaada shaqada taleefankaaga)", // nieuw, nalezen
+    'w.beschikbaar': "diyaar (markaas waad shaqayn kartaa)", // nieuw, nalezen
+    'w.wijziging': "isbeddelka", // nieuw, nalezen
+    'w.invallen': "qof bedelid (u shaqayn qof maqan)", // nieuw, nalezen
+    'w.vrijedag': "maalinta fasaxa", // nieuw, nalezen
+    's.roster.1': "Jadwalka cusub wuxuu ku jiraa app-ka.", // nieuw, nalezen
+    's.roster.2': "Sabtida ma diyaar baad tahay?", // nieuw, nalezen
+    's.roster.3': "Berri ma bedeli kartaa Sara?", // nieuw, nalezen
+    'c.roster.q': "Isbeddel ayaa ku jira jadwalkaaga.", // nieuw, nalezen
+    'c.roster.a': "Hagaag. Maalintee ayay tahay inaan shaqeeyo?", // nieuw, nalezen
+    'l.breaks': "Saacadaha iyo nasashada", // nieuw, nalezen
+    'w.lunchpauze': "nasashada qadada", // nieuw, nalezen
+    'w.rusttijd': "waqtiga nasashada (waqti fasax ah oo u dhexeeya laba wareeg shaqo)", // nieuw, nalezen
+    'w.werkdag': "maalinta shaqada", // nieuw, nalezen
+    'w.urenlijst': "liiska saacadaha (meesha aad ku qorto saacadaha aad shaqaysay)", // nieuw, nalezen
+    'w.eerderweg': "goor hore bixid", // nieuw, nalezen
+    'w.achterelkaar': "isku xigta (mid kale kadib)", // nieuw, nalezen
+    's.breaks.1': "Saacadahayga waxaan ku qoraa liiska saacadaha.", // nieuw, nalezen
+    's.breaks.2': "Maanta ma bixi karaa saacad ka hor?", // nieuw, nalezen
+    's.breaks.3': "Lix maalmood oo isku xigta ayaan shaqeeyay.", // nieuw, nalezen
+    'c.breaks.q': "Goorma ayay tahay nasashadaada qadada?", // nieuw, nalezen
+    'c.breaks.a': "Saacadda laba iyo tobanka, nus saac.", // nieuw, nalezen
   },
 };
 
