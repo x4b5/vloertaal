@@ -487,6 +487,14 @@ const lang: HelpLanguageSource = {
     calmScreen: "Shaashad deggan", // nieuw, nalezen
     calmAuto: "Sida taleefankaaga", // nieuw, nalezen
     calmHint: "Shidan: waxba ma dhaqaaqaan. Dabaaldeg maalmahaaga isku xiga ah ma jiro cashar kadib. Maalmahaaga isku xiga iyo erayadaadu kuma jiraan shaashadda hore.", // nieuw, nalezen
+    playMode: "Habka ciyaarta", // nieuw, nalezen
+    playHint: "Shidan: dhibco jawaab kasta oo sax ah, dhibco badan haddii aad dhowr isku xiga saxdo. Cod iyo dhaqdhaqaaq badan. Khaladku waxba kaa ma jaro.", // nieuw, nalezen
+    playPoints: "Dhibco", // nieuw, nalezen
+    playTotal: "Dhammaan dhibcahaaga", // nieuw, nalezen
+    playAskTitle: "Sidee baad u rabtaa inaad ku celceliso?", // nieuw, nalezen
+    playAskCalm: "Deggan", // nieuw, nalezen
+    playAskFun: "Ciyaar leh", // nieuw, nalezen
+    playAskHint: "Ciyaar leh: dhibco, cod iyo dhaqdhaqaaq. Waxaad ku beddeli kartaa Dejinta.", // nieuw, nalezen
     infoMore: "Sharax dheeraad ah", // nieuw, nalezen
     tipsAbout: "Ku saabsan talooyinkan", // nieuw, nalezen
     tipsNotChecked: "Khabiir weli ma hubin sharraxaaddan.", // nieuw, nalezen

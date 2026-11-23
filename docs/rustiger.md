@@ -82,3 +82,26 @@ regels die we in de code aanhouden, en wat er al gedaan is.
 - **Voor en na:** schermafbeeldingen van dezelfde schermen.
 - **Kleine test met 5 leerlingen:** de tijd tot de eerste tik, fouten, en "hoe druk voelde het" op een schaal van 1 tot 5.
 - **Anoniem meetellen:** hoe vaak een les halverwege stopt, voor en na.
+
+## Spelmodus: de andere kant (22 november 2026)
+
+De eigenaar koos voor een spelmodus als tegenhanger van "Rustig scherm", voor leerders die graag met
+spelelementen oefenen (`src/lib/play.ts`). De lessen blijven hetzelfde; alleen de beleving verandert:
+
+- **Punten**: 10 voor elk goed antwoord, ×2 vanaf 3 op rij en ×3 vanaf 5 op rij. "Bijna goed" telt de
+  helft. Een fout breekt alleen de reeks: er gaan geen punten af. De teller staat bovenin de les; de
+  winst zweeft er even boven.
+- **Geluid**: een helderder geluidje dat bij elk goed antwoord op rij een toon hoger klinkt, een korte
+  fanfare bij 3, 5 en 8 op rij en aan het eind van de les. "Zonder geluid" zet ze uit.
+- **Beweging**: verende knoppen, de teller springt, confetti op de uitslag (één keer, ongeveer 2 s).
+- **De uitslag** toont de punten van de les en al je punten.
+
+Regels:
+
+- Uit, tenzij de leerder het kiest: bij Instellingen › Lessen › Spelmodus, of op de kaart "Hoe wil je
+  oefenen?" die na de eerste les één keer op het beginscherm komt (Met spel / Rustig).
+- Nooit samen met Rustig scherm: de spelmodus aanzetten zet Rustig scherm uit, en Rustig scherm aan
+  zet de spelmodus uit. Wie Rustig scherm al aan had, krijgt de vraag niet.
+- "Minder beweging" op de telefoon stopt alle beweging, ook in de spelmodus; de punten en geluiden
+  blijven dan. Niets flitst of knippert, en niets herhaalt zich.
+

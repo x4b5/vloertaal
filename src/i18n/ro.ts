@@ -487,6 +487,14 @@ const lang: HelpLanguageSource = {
     calmScreen: 'Ecran liniștit', // nieuw, nalezen
     calmAuto: 'Ca telefonul tău', // nieuw, nalezen
     calmHint: 'Pornit: nimic nu se mișcă, nicio sărbătoare pentru seria ta după o lecție, iar seria și cuvintele nu apar pe ecranul principal.', // nieuw, nalezen
+    playMode: 'Mod joc', // nieuw, nalezen
+    playHint: 'Pornit: puncte pentru fiecare răspuns corect, mai multe dacă ai câteva corecte la rând. Mai multe sunete și mișcare. O greșeală nu costă nimic.', // nieuw, nalezen
+    playPoints: 'Puncte', // nieuw, nalezen
+    playTotal: 'Toate punctele tale', // nieuw, nalezen
+    playAskTitle: 'Cum vrei să exersezi?', // nieuw, nalezen
+    playAskCalm: 'În liniște', // nieuw, nalezen
+    playAskFun: 'Cu joc', // nieuw, nalezen
+    playAskHint: 'Cu joc: puncte, sunete și mișcare. Poți schimba asta din Setări.', // nieuw, nalezen
     infoMore: 'Mai multe explicații', // nieuw, nalezen
     tipsAbout: 'Despre aceste sfaturi', // nieuw, nalezen
     tipsNotChecked: 'Un expert nu a verificat încă această explicație.', // nieuw, nalezen

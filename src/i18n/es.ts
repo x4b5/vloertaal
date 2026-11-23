@@ -487,6 +487,14 @@ const lang: HelpLanguageSource = {
     calmScreen: 'Pantalla tranquila', // nieuw, nalezen
     calmAuto: 'Como tu teléfono', // nieuw, nalezen
     calmHint: 'Activado: nada se mueve, no hay celebración de tu racha después de una lección, y tu racha y tus palabras no aparecen en la pantalla de inicio.', // nieuw, nalezen
+    playMode: 'Modo juego', // nieuw, nalezen
+    playHint: 'Activado: puntos por cada respuesta correcta, más si aciertas varias seguidas. Más sonidos y movimiento. Un error no cuesta nada.', // nieuw, nalezen
+    playPoints: 'Puntos', // nieuw, nalezen
+    playTotal: 'Todos tus puntos', // nieuw, nalezen
+    playAskTitle: '¿Cómo quieres practicar?', // nieuw, nalezen
+    playAskCalm: 'Con calma', // nieuw, nalezen
+    playAskFun: 'Con juego', // nieuw, nalezen
+    playAskHint: 'Con juego: puntos, sonidos y movimiento. Puedes cambiarlo en Ajustes.', // nieuw, nalezen
     infoMore: 'Más explicación', // nieuw, nalezen
     tipsAbout: 'Sobre estos consejos', // nieuw, nalezen
     tipsNotChecked: 'Un experto todavía no ha revisado esta explicación.', // nieuw, nalezen

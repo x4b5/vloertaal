@@ -24,10 +24,12 @@ describe('the first that is due', () => {
 
 describe('the cards on the home', () => {
   const card = (due: Partial<Record<(typeof HOME_CARDS)[number], boolean>>) =>
-    firstDue(HOME_CARDS, { notice: () => due.notice, bridge: () => due.bridge, nudge: () => due.nudge, reason: () => due.reason });
+    firstDue(HOME_CARDS, { notice: () => due.notice, bridge: () => due.bridge, nudge: () => due.nudge, reason: () => due.reason, play: () => due.play });
 
-  it('a notice, then the work rules, then the backup, then the reason', () => {
-    expect([...HOME_CARDS]).toEqual(['notice', 'bridge', 'nudge', 'reason']);
+  it('a notice, then the work rules, then the backup, then the reason, then "Hoe wil je oefenen?"', () => {
+    expect([...HOME_CARDS]).toEqual(['notice', 'bridge', 'nudge', 'reason', 'play']);
+    expect(card({ reason: true, play: true })).toBe('reason');
+    expect(card({ play: true })).toBe('play');
     expect(card({ notice: true, bridge: true, nudge: true, reason: true })).toBe('notice');
     expect(card({ bridge: true, nudge: true, reason: true })).toBe('bridge');
     expect(card({ nudge: true, reason: true })).toBe('nudge');

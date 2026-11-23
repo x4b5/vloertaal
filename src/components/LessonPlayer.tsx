@@ -8,7 +8,8 @@ import type { Lesson, Sentence } from '../content/types';
 import type { SectorChoice } from '../content/sectors';
 import { gloss, said, saidLang, ui, withoutN, type Bilingual } from '../i18n';
 import type { Gender, HelpLanguage, UiKey } from '../i18n/types';
-import { autoSpeak, endLessonPace, hasClip, onSoundNeedsInternet, sounds, speak, startLessonPace, stopSpeech, surelySilent } from '../lib/audio';
+import { autoSpeak, endLessonPace, hasClip, onSoundNeedsInternet, playSounds, sounds, speak, startLessonPace, stopSpeech, surelySilent } from '../lib/audio';
+import { playing, pointsFor } from '../lib/play';
 import { getSpeakSpeed, resetSpeakSpeed } from '../lib/speakSpeed';
 import { goClass, goHeld, goHoldId, goOpenedKey, shouldHoldGo, startGoHold, type GoHold } from '../lib/goHold';
 import { realPaceReplay } from '../lib/tempo';
@@ -91,6 +92,8 @@ export interface LessonResult {
   /** Words wrong only in writing (a dictation written wrong, every other question on them right):
    *  from box 3 on they go one box down, not back to box 1 (lib/spaced.ts wrongCard). */
   written?: string[];
+  /** "Spelmodus" (src/lib/play.ts): the points of this lesson. Only in the game mode. */
+  points?: number;
 }
 
 function solution(ex: Exercise): { text: string; nl: boolean } {
@@ -460,6 +463,11 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const graded = useRef(saved && resumed ? { right: saved.right, total: saved.total } : { right: 0, total: 0 });
   /** Right answers in a row (graded exercises only); a miss resets it without a word. */
   const [run, setRun] = useState(resumed ? saved!.run : 0);
+  /** "Spelmodus" (src/lib/play.ts): on for this lesson as it starts. Its points (from 0 on a resumed
+   *  lesson: the save does not keep them), and the last gain, which floats up from the counter. */
+  const [play] = useState(playing);
+  const points = useRef(0);
+  const [gain, setGain] = useState<{ n: number; k: number } | null>(null);
   /** Misses in a row: the character's "oops" plays on the first one only. */
   const [misses, setMisses] = useState(resumed ? saved!.misses : 0);
   /** The main button turns into the outcome-coloured Continue 120 ms after Check. */
@@ -803,8 +811,14 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       goRef.current?.focus({ preventScroll: true });
     });
     if (answer.correct) {
-      sounds.correct();
       const stamp = runStampFor(newRun);
+      if (play) {
+        // Points for a graded answer, more in a run; the counter shows the gain floating up.
+        const n = isGraded(ex) ? pointsFor(newRun, true, answer.almost) : 0;
+        if (n) { points.current += n; setGain((g) => ({ n, k: (g?.k ?? 0) + 1 })); }
+        playSounds.correct(newRun);
+        if (stamp) later(300, () => playSounds.combo());
+      } else sounds.correct();
       if (stamp) later(300, () => { setRunLabel(stamp); setSweep((k) => k + 1); });
     } else {
       sounds.wrong();
@@ -846,12 +860,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
     const { right, total } = graded.current;
     finished.current = true;
     if (persist) clearSave(lesson.id);
-    sounds.done();
+    if (play) playSounds.done();
+    else sounds.done();
     // Without a way to make an answer (another script without writing, no sound), no `made`.
     const canMake = !soundOff && !pickInsteadOfTyping(lang);
     // (A lesson resumed from a save has lost which words those were: the old rule for them, box 1.)
     const written = [...writtenWrong.current].filter((id) => !otherWrong.current.has(id));
-    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current, ...(canMake ? { made: [...made.current] } : {}), ...(almostIds.current.size ? { almost: [...almostIds.current] } : {}), ...(written.length ? { written } : {}) });
+    onFinish({ accuracy: total ? right / total : 1, review, right, total, words: wordResults.current, skipped: skipped.current, ...(canMake ? { made: [...made.current] } : {}), ...(almostIds.current.size ? { almost: [...almostIds.current] } : {}), ...(written.length ? { written } : {}), ...(play ? { points: points.current } : {}) });
   }
 
   function reset() {
@@ -1181,6 +1196,15 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
               exercise's tag or question. */}
           {runLabel && <RunLabel key={sweep} n={runLabel} lang={lang} />}
         </div>
+        {/* "Spelmodus": the points so far; a gain floats up from it (src/lib/play.ts). Read as
+            "Punten: 120"; the gain is not read (the total says it). */}
+        {play && (
+          <span className="play-score" role="img" aria-label={`${said(ui('playPoints', lang))}: ${points.current}`} lang={saidLang(ui('playPoints', lang))}>
+            <span className="play-star" aria-hidden>★</span>
+            <span key={gain?.k ?? 0} className="play-score-n">{points.current}</span>
+            {gain && <span key={`g${gain.k}`} className="play-gain" aria-hidden>+{gain.n}</span>}
+          </span>
+        )}
         {/* The screen's heading for screen readers (one h1 per screen, as elsewhere); the visible
             name shows on wider screens only. */}
         <h1 className="sr-only"><Bi text={gloss(lesson.titleId ?? lesson.id, lesson.title, lang)} /></h1>

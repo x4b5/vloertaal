@@ -487,6 +487,14 @@ const lang: HelpLanguageSource = {
     calmScreen: 'Спокоен екран', // nieuw, nalezen
     calmAuto: 'Като телефона ти', // nieuw, nalezen
     calmHint: 'Включено: нищо не се движи, няма празнуване на серията след урок, а серията и думите не са на началния екран.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    playMode: 'Режим игра', // nieuw, nalezen
+    playHint: 'Включено: точки за всеки верен отговор, повече, ако имаш няколко верни поред. Повече звуци и движение. Грешката не струва нищо.', // nieuw, nalezen
+    playPoints: 'Точки', // nieuw, nalezen
+    playTotal: 'Всички твои точки', // nieuw, nalezen
+    playAskTitle: 'Как искаш да се упражняваш?', // nieuw, nalezen
+    playAskCalm: 'Спокойно', // nieuw, nalezen
+    playAskFun: 'С игра', // nieuw, nalezen
+    playAskHint: 'С игра: точки, звуци и движение. Можеш да го промениш от Настройки.', // nieuw, nalezen
     infoMore: 'Повече обяснения', // nieuw, nalezen
     tipsAbout: 'За тези съвети', // nieuw, nalezen
     tipsNotChecked: 'Експерт още не е проверил това обяснение.', // nieuw, nalezen

@@ -70,6 +70,8 @@ import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpd
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
 import { applyCalm, calmOn } from './lib/calm';
+import { addPoints, applyPlay, playAskDue, playOn, withCalm, withPlay } from './lib/play';
+import { PlayAskCard } from './components/PlayAskCard';
 import { applyEnglish, englishLangFor } from './lib/english';
 import { SocialMap, SocialMapLink } from './components/SocialMap';
 import { regionOf, type RegionChoice } from './content/regio';
@@ -93,7 +95,7 @@ export type View =
   /** after: the screens that follow this result, in order (src/lib/afterLesson.ts). A screen opened
    *  on the way (samen, phrasebook, certificate, pocket, colleague) carries what is left in `after`. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; right: number; total: number; newWords: number; words: number; remember?: string; after: AfterStep[]; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; feel?: FeelAt; easier?: boolean; samen?: string; workTry?: WorkTryLine }
+  | { name: 'result'; points?: number; allPoints?: number; right: number; total: number; newWords: number; words: number; remember?: string; after: AfterStep[]; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; feel?: FeelAt; easier?: boolean; samen?: string; workTry?: WorkTryLine }
   /** "Oefen samen" (src/components/Samen.tsx): a lesson's chats, two people on one phone, from its
    *  result; after: the certificate or the streak milestone still follows. */
   | { name: 'samen'; lessonId: string; after?: AfterStep[] }
@@ -657,6 +659,8 @@ export default function App() {
   useEffect(() => { applyTheme(progress.theme); }, [progress.theme]);
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
   useEffect(() => { applyCalm(progress.calm); }, [progress.calm]);
+  // "Spelmodus" (src/lib/play.ts): data-play on <html>, never with the calm screen.
+  useEffect(() => { applyPlay(playOn(progress)); }, [progress.play, progress.calm]); // eslint-disable-line react-hooks/exhaustive-deps
   // Also on `onboarded`: Back to the language page clears the setting (English shows there), and
   // picking the same language again must hide the English again, though helpLang did not change.
   useEffect(() => { applyEnglish(englishLangFor(progress.helpLang, progress.onboarded)); }, [progress.helpLang, progress.onboarded]);
@@ -873,7 +877,7 @@ export default function App() {
         : playLesson(view.lessonId, progress.completed, dayNumber(dayKey(new Date())));
       // A preview never plays a later unit, whatever the progress or history says.
       if (!found || !isPlayable(found.lesson) || !lessonAllowed(view.lessonId, acc)) return null;
-      const finish = ({ accuracy, review, right, total, words: results, skipped, made, almost, written }: LessonResult) => {
+      const finish = ({ accuracy, review, right, total, words: results, skipped, made, almost, written, points }: LessonResult) => {
         // Opened from #beheer: a look-through, so nothing is saved or counted; back to the list.
         if (view.admin) { leaving.current = true; back(); return; }
         const now = practisedAt(lessonStarted.current, new Date(), progress.lastDay);
@@ -918,7 +922,9 @@ export default function App() {
         if (paced?.ask && !askFaster) next.pace = { ...next.pace, asked: undefined };
         const feel = question === 'feel' ? due.feel : undefined;
         if (feel) markFeelAsked(feel);
-        setProgress(next);
+        // "Spelmodus": the lesson's points join all the points (shown on the result).
+        const scored = points !== undefined ? addPoints(next, points) : next;
+        setProgress(scored);
         keepDue.current = Boolean(access) && !keepOffered();
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
         const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId, progress.certs);
@@ -951,7 +957,7 @@ export default function App() {
         // not "+0 new words", under a review title.
         const reviewing = daily || view.review || isMixLesson(found.lesson) || Boolean(found.lesson.repeat);
         replace({
-          name: 'result', right, total, newWords: words - before, words, after: afterLessonSteps({ cert: unitDone?.id, streakUp }),
+          name: 'result', right, total, newWords: words - before, words, ...(points !== undefined ? { points, allPoints: scored.playPoints ?? 0 } : {}), after: afterLessonSteps({ cert: unitDone?.id, streakUp }),
           kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
           repeated: daily ? wordResultCount(results) || (found.lesson.steps?.length ?? found.lesson.words.length) : reviewing ? wordResultCount(results) || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
@@ -1032,6 +1038,8 @@ export default function App() {
           onFeel={view.feel ? (face) => countFeel(view.feel!, face) : undefined}
           onSamen={view.samen ? () => replace({ name: 'samen', lessonId: view.samen!, after: view.after }) : undefined}
           workTry={view.workTry}
+          points={view.points}
+          allPoints={view.allPoints}
         />
       );
     case 'streak':
@@ -1159,7 +1167,8 @@ export default function App() {
             onRegion={setRegion}
             onCountry={setCountry}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
-            onCalm={(calm) => setProgress((p) => ({ ...p, calm }))}
+            onCalm={(calm) => setProgress((p) => withCalm(p, calm))}
+            onPlay={(on) => setProgress((p) => withPlay(p, on))}
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
@@ -1369,6 +1378,7 @@ export default function App() {
         bridge: () => bridgeDue(progress),
         nudge: () => nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv())),
         reason: () => reasonDue(progress, lessonsDone),
+        play: () => playAskDue(progress, lessonsDone),
       });
       // "Eén app": the language course's review counts the rule questions of "Zo werkt het hier" too.
       const daily = Object.keys(progress.completed).length || progress.reviewDay
@@ -1426,6 +1436,8 @@ export default function App() {
               />
             ) : card === 'reason' ? (
               <ReasonCard lang={lang} onDone={(ids) => setProgress((p) => withReasons(p, ids))} />
+            ) : card === 'play' ? (
+              <PlayAskCard lang={lang} onPick={(on) => setProgress((p) => withPlay(p, on))} />
             ) : undefined}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />

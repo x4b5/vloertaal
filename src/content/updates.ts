@@ -22,6 +22,8 @@ export const UPDATES: Update[] = [
       'Nieuw onderwerp in Taal voor de Tuinbouw: Kweken, sorteren en de kas. Wie Tuinbouw kiest, krijgt het direct na In de kas. Vier lessen: zaaien en stekken, sorteren en verpakken, de kas en het klimaat, en plagen en schoon werken.',
       'Nieuw onderwerp in Taal voor de Garage: Banden, olie en remmen. Wie Garage kiest, krijgt het direct na In de garage. Vier lessen: banden wisselen, olie verversen, remmen en lampen, en uitlezen en de werkorder.',
       'Bij elke les hoort een tip van "Zo werkt het hier" en een eigen tekening per woord. Alles staat in alle hulptalen; de vertalingen zijn nog niet nagekeken door een moedertaalspreker. De stemmen volgen: tot dan leest de stem van je telefoon de nieuwe zinnen voor.',
+      'Nieuw: de spelmodus, voor wie graag met een spel oefent. Je krijgt punten voor elk goed antwoord, meer als je vaker op rij goed hebt. Er is meer geluid en beweging, en confetti na een les. Een fout kost geen punten. Zet het aan bij Instellingen, Lessen, Spelmodus. Na je eerste les vraagt de app één keer: rustig of met spel. Rustig blijft gewoon zoals het was.',
+      'Meer tekeningen bewegen nu één keer op de woordkaart: de zaag zaagt, de hamer slaat, de deur gaat open, de lamp gaat aan. Bij "Minder beweging" op je telefoon of bij Rustig scherm staat alles stil.',
     ],
   },
   {

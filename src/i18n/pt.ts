@@ -487,6 +487,14 @@ const lang: HelpLanguageSource = {
     calmScreen: 'Ecrã calmo', // nieuw, nalezen
     calmAuto: 'Como o teu telemóvel', // nieuw, nalezen
     calmHint: 'Ligado: nada se mexe, não há festa pela tua série depois de uma lição, e a tua série e as palavras não aparecem no ecrã inicial.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    playMode: 'Modo jogo', // nieuw, nalezen
+    playHint: 'Ligado: pontos por cada resposta certa, mais se acertares várias seguidas. Mais sons e movimento. Um erro não custa nada.', // nieuw, nalezen
+    playPoints: 'Pontos', // nieuw, nalezen
+    playTotal: 'Todos os teus pontos', // nieuw, nalezen
+    playAskTitle: 'Como queres praticar?', // nieuw, nalezen
+    playAskCalm: 'Com calma', // nieuw, nalezen
+    playAskFun: 'Com jogo', // nieuw, nalezen
+    playAskHint: 'Com jogo: pontos, sons e movimento. Podes mudar isto nas Definições.', // nieuw, nalezen
     infoMore: 'Mais explicação', // nieuw, nalezen
     tipsAbout: 'Sobre estas dicas', // nieuw, nalezen
     tipsNotChecked: 'Um especialista ainda não verificou esta explicação.', // nieuw, nalezen

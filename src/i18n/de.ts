@@ -487,6 +487,14 @@ const lang: HelpLanguageSource = {
     calmScreen: 'Ruhiger Bildschirm', // nieuw, nalezen
     calmAuto: 'Wie dein Handy', // nieuw, nalezen
     calmHint: 'An: Nichts bewegt sich, keine Feier für deine Serie nach einer Lektion, und deine Serie und Wörter stehen nicht auf der Startseite.', // nieuw, nalezen
+    playMode: 'Spielmodus', // nieuw, nalezen
+    playHint: 'An: Punkte für jede richtige Antwort, mehr, wenn du mehrere hintereinander richtig hast. Mehr Töne und Bewegung. Ein Fehler kostet nichts.', // nieuw, nalezen
+    playPoints: 'Punkte', // nieuw, nalezen
+    playTotal: 'Alle deine Punkte', // nieuw, nalezen
+    playAskTitle: 'Wie willst du üben?', // nieuw, nalezen
+    playAskCalm: 'Ruhig', // nieuw, nalezen
+    playAskFun: 'Mit Spiel', // nieuw, nalezen
+    playAskHint: 'Mit Spiel: Punkte, Töne und Bewegung. Du kannst es in den Einstellungen ändern.', // nieuw, nalezen
     infoMore: 'Mehr Erklärung', // nieuw, nalezen
     tipsAbout: 'Über diese Tipps', // nieuw, nalezen
     tipsNotChecked: 'Eine Fachperson hat diese Erklärung noch nicht geprüft.', // nieuw, nalezen

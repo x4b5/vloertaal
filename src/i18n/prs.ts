@@ -486,6 +486,14 @@ const lang: HelpLanguageSource = {
     calmScreen: 'صفحهٔ آرام', // nieuw, nalezen
     calmAuto: 'مثل تیلفون شما', // nieuw, nalezen (AI-correctie 2 nov 2026)
     calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پیهم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen
+    playMode: 'حالت بازی', // nieuw, nalezen
+    playHint: 'روشن: برای هر جواب درست امتیاز، و اگر چند جواب پیهم درست باشد امتیاز بیشتر. صدا و حرکت بیشتر. اشتباه چیزی از شما کم نمی‌کند.', // nieuw, nalezen
+    playPoints: 'امتیاز', // nieuw, nalezen
+    playTotal: 'همهٔ امتیازهای شما', // nieuw, nalezen
+    playAskTitle: 'چطور می‌خواهید تمرین کنید؟', // nieuw, nalezen
+    playAskCalm: 'آرام', // nieuw, nalezen
+    playAskFun: 'با بازی', // nieuw, nalezen
+    playAskHint: 'با بازی: امتیاز، صدا و حرکت. می‌توانید آن را در تنظیمات تبدیل کنید.', // nieuw, nalezen
     infoMore: 'توضیح بیشتر', // nieuw, nalezen
     tipsAbout: 'در بارهٔ این نکته‌ها', // nieuw, nalezen
     tipsNotChecked: 'هنوز یک متخصص این توضیح را بررسی نکرده است.', // nieuw, nalezen

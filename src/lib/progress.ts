@@ -55,6 +55,12 @@ export interface Progress {
   textSize?: TextSize;
   /** "Rustig scherm" in Settings (src/lib/calm.ts). Missing = auto (as the phone's "less motion"). */
   calm?: CalmChoice;
+  /** "Spelmodus" (src/lib/play.ts): points, combos, more sound and movement. Missing = off. */
+  play?: true;
+  /** The home's "Hoe wil je oefenen?" was answered, or the game mode chosen in Settings: not asked again. */
+  playAsked?: true;
+  /** All points earned in the game mode (src/lib/play.ts), shown on a lesson's result. */
+  playPoints?: number;
   /** "Tempo" in Settings (src/lib/tempo.ts): 'calm' ("Rustig") or 'normal' ("Normaal"). Missing in
    *  older saves = calm, the pace from before. */
   tempo?: Tempo;
@@ -293,6 +299,9 @@ const FIELDS: { [K in keyof Progress]-?: Check<Progress[K]> } = {
   quiet: bool,
   textSize: oneOf(TEXT_SIZES),
   calm: oneOf(CALM_CHOICES),
+  play: (v) => (v === true ? true : undefined),
+  playAsked: (v) => (v === true ? true : undefined),
+  playPoints: count,
   // "Tempo" came later: a missing one is calm (the old pace).
   tempo: (v) => (isTempo(v) ? v : undefined),
   // A help language this app does not know: see progressFrom.

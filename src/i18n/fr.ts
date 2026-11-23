@@ -487,6 +487,14 @@ const lang: HelpLanguageSource = {
     calmScreen: 'Écran calme', // nieuw, nalezen
     calmAuto: 'Comme ton téléphone', // nieuw, nalezen
     calmHint: 'Activé : rien ne bouge, pas de fête pour ta série après une leçon, et ta série et tes mots ne sont pas sur l’écran d’accueil.', // nieuw, nalezen
+    playMode: 'Mode jeu', // nieuw, nalezen
+    playHint: 'Activé : des points pour chaque bonne réponse, plus si tu en as plusieurs justes de suite. Plus de sons et de mouvement. Une erreur ne coûte rien.', // nieuw, nalezen
+    playPoints: 'Points', // nieuw, nalezen
+    playTotal: 'Tous tes points', // nieuw, nalezen
+    playAskTitle: 'Comment veux-tu t’entraîner ?', // nieuw, nalezen
+    playAskCalm: 'Calme', // nieuw, nalezen
+    playAskFun: 'Avec un jeu', // nieuw, nalezen
+    playAskHint: 'Avec un jeu : des points, des sons et du mouvement. Tu peux changer ça dans les Réglages.', // nieuw, nalezen
     infoMore: 'Plus d’explications', // nieuw, nalezen
     tipsAbout: 'À propos de ces conseils', // nieuw, nalezen
     tipsNotChecked: 'Un expert n’a pas encore vérifié cette explication.', // nieuw, nalezen
