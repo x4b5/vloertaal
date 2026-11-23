@@ -19,7 +19,7 @@ import sleutelkluis from './zorg2/sleutelkluis';
 import zorgplan from './zorg2/zorgplan';
 import wijkverpleegkundige from './zorg2/wijkverpleegkundige';
 import mantelzorger from './zorg2/mantelzorger';
-import route from './zorg2/route';
+import alarmknop from './zorg2/alarmknop';
 import glijlaken from './zorg2/glijlaken';
 import tilband from './zorg2/tilband';
 import stalift from './zorg2/stalift';
@@ -45,7 +45,7 @@ export default {
   ...zorgplan,
   ...wijkverpleegkundige,
   ...mantelzorger,
-  ...route,
+  ...alarmknop,
   ...glijlaken,
   ...tilband,
   ...stalift,

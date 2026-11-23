@@ -3045,7 +3045,7 @@ const housekeepingUnit = unit('housekeeping', 'Toilets, hotel rooms and machines
       ['papierbak', 'de papierbak', 'the paper bin (for old paper)', '📰'],
       ['lichtschakelaar', 'de lichtschakelaar', 'the light switch', '💡'],
       ['pantry', 'de pantry', 'the pantry (the small kitchen in an office)', '🫖'],
-      ['koffieautomaat', 'de koffieautomaat', 'the coffee machine', '☕'],
+      ['deurmat', 'de deurmat', 'the doormat (the mat at the entrance)', '🟫'],
       ['alleenwerken', 'alleen werken', 'to work alone (nobody else is in the building)', '🧍'],
     ],
     [
@@ -3195,7 +3195,7 @@ const careworkUnit = unit('carework', 'Personal care and home care', 'Verzorgen 
       ['zorgplan', 'het zorgplan', 'the care plan (what care a client gets, and how)', '📋'],
       ['wijkverpleegkundige', 'de wijkverpleegkundige', 'the district nurse (the nurse of the home care team)', '👩‍⚕️'],
       ['mantelzorger', 'de mantelzorger', 'the family carer (a relative or friend who looks after the client)', '🫂'],
-      ['route', 'de route', 'the route (your clients of the day, in order)', '🗺️'],
+      ['alarmknop', 'de alarmknop', 'the alarm button (the client wears it, to call for help)', '🆘'],
     ],
     [
       ['Ik bel eerst aan. Dan pak ik de sleutel.', 'First I ring the bell. Then I take the key.'],
@@ -3368,7 +3368,7 @@ const uitzendUnit = unit('uitzend', 'Temp agency work', 'Werken via een uitzendb
       ['vervoer', 'het vervoer', 'the transport (the bus or van to work)', '🚐'],
       ['schriftelijk', 'schriftelijk', 'in writing (on paper or in an email)', '📝'],
       ['navragen', 'navragen', 'to check, to ask about (to find out if something is right)', '🔍'],
-      ['terugbetalen', 'terugbetalen', 'to pay back', '💸'],
+      ['brutoloon', 'het brutoloon', 'the gross pay (your pay before tax and deductions)', '💰'],
     ],
     [
       ['Wat is deze inhouding op mijn loonstrook?', 'What is this deduction on my payslip?'],

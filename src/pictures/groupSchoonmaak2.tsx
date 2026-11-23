@@ -24,7 +24,7 @@ import toetsenbord from './schoonmaak2/toetsenbord';
 import papierbak from './schoonmaak2/papierbak';
 import lichtschakelaar from './schoonmaak2/lichtschakelaar';
 import pantry from './schoonmaak2/pantry';
-import koffieautomaat from './schoonmaak2/koffieautomaat';
+import deurmat from './schoonmaak2/deurmat';
 import alleenwerken from './schoonmaak2/alleenwerken';
 
 export default {
@@ -50,6 +50,6 @@ export default {
   ...papierbak,
   ...lichtschakelaar,
   ...pantry,
-  ...koffieautomaat,
+  ...deurmat,
   ...alleenwerken,
 };

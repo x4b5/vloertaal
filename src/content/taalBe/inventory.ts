@@ -384,7 +384,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.sanitary': L('A', 'A', 'nakijken: de wastafel ("de lavabo"), de toiletpot ("de wc-pot"), de ontstopper ("de ontstopper" of "de zuignap")'),
     'l.hotelroom': L('A', 'A', 'nakijken: het dekbed ("het donsdeken"), de kussensloop ("de kussensloop" of "de kussenovertrek")'),
     'l.dosing': L('A', 'A', 'nakijken: de sprayflacon ("het sprayflesje"), het veiligheidsblad ("de veiligheidsfiche"), de schrobzuigmachine'),
-    'l.officenight': L('A', 'A', 'nakijken: de lichtschakelaar ("de lichtknop"), de pantry ("de kitchenette"), de koffieautomaat ("de koffiemachine")'),
+    'l.officenight': L('A', 'A', 'nakijken: de lichtschakelaar ("de lichtknop"), de pantry ("de kitchenette"), de deurmat'),
   } },
   'u.cooking': { kind: 'A', lessons: {
     'l.knives': L('A', 'A', 'nakijken: de dunschiller ("de dunschiller" of "de schiller"), de blokjes ("de blokjes" of "de brunoise")'),
@@ -395,7 +395,7 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.carework': { kind: 'A', lessons: {
     'l.washing': L('A', 'A', 'nakijken: het washandje, de steunkous ("de steunkous" of "de compressiekous")'),
     'l.observing': L('A', 'A', 'nakijken: het zorgdossier, de drukplek ("de doorligwonde"), de vochtlijst ("de vochtbalans")'),
-    'l.homecare': L('A', 'A', 'nakijken: de thuiszorg, de wijkverpleegkundige ("de thuisverpleegkundige"), de mantelzorger, de sleutelkluis'),
+    'l.homecare': L('A', 'A', 'nakijken: de thuiszorg, de wijkverpleegkundige ("de thuisverpleegkundige"), de mantelzorger, de sleutelkluis, de alarmknop ("het noodoproepsysteem")'),
     'l.liftaids': L('A', 'A', 'nakijken: het glijlaken, de stalift ("de sta-lift"), de transferplank'),
   } },
   'u.shopfloor': { kind: 'A', lessons: {

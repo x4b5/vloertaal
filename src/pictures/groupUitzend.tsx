@@ -19,7 +19,7 @@ import vastekracht from './uitzend/vastekracht';
 import vervoer from './uitzend/vervoer';
 import schriftelijk from './uitzend/schriftelijk';
 import navragen from './uitzend/navragen';
-import terugbetalen from './uitzend/terugbetalen';
+import brutoloon from './uitzend/brutoloon';
 import huisvesting from './uitzend/huisvesting';
 import huisgenoot from './uitzend/huisgenoot';
 import huisregels from './uitzend/huisregels';
@@ -45,7 +45,7 @@ export default {
   ...vervoer,
   ...schriftelijk,
   ...navragen,
-  ...terugbetalen,
+  ...brutoloon,
   ...huisvesting,
   ...huisgenoot,
   ...huisregels,
