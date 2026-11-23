@@ -17,6 +17,7 @@ export default {
       <ellipse cx="90" cy="76" rx="14" ry="14" fill={PAL.white} />
       <circle cx="90" cy="76" r="9" fill="none" stroke={PAL.paperShade} strokeWidth="1.6" />
       <circle cx="90" cy="76" r="4" fill={PAL.mist} />
+      <Shine d="M80 70Q82 65 87 63" color={PAL.ice} width={2.4} opacity={0.9} />
       {/* Gauze bands round the palm and wrist (slanted, overlapping) */}
       {[[76, -5], [87, 4], [98, -3]].map(([y, r]) => (
         <g key={y} transform={`rotate(${r} 50 ${y})`}>
