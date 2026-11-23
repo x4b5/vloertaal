@@ -305,7 +305,11 @@ export default defineConfig({
   },
   // `npm test`: only this checkout's tests (not the copies in .claude/worktrees), and time for the
   // tests that walk all the content on a busy machine (5 s was too tight: tests/exercises.test.ts).
-  test: { exclude: ['.claude/**', 'node_modules/**', 'dist/**'], testTimeout: 15000, setupFiles: ['tests/setup.tips.ts'] },
+  // 15 -> 60 s (23 November 2026): with the new lessons some tests that walk every lesson take 12-15 s
+  // on a fast machine (tests/pictures.test.ts "no picture choice ever targets ... an abstract word",
+  // 14.4 s), and the build on statichost.eu runs `npm test` first on a slower one: a test over its
+  // time stops the build, and the site stays at the old version (from #398 on, the site did not update).
+  test: { exclude: ['.claude/**', 'node_modules/**', 'dist/**'], testTimeout: 60000, setupFiles: ['tests/setup.tips.ts'] },
   plugins: [react(), beLangSplit(), nonBlockingCss(), lazyScreenLinks(), voicesIndexFile(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
   build: {
     // Old, cheap phones (Android 7–10 with an old Chrome or Samsung Internet, iPhones on iOS 13–15):
