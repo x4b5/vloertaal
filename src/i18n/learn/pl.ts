@@ -209,6 +209,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "Pytanie, ile: litry, i jak to sprawdzić.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "Pytanie, czy musi być nowa: tak, i dlaczego.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Pytanie, co trzeba zrobić: spojrzeć na zlecenie.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "Pytanie, czy można ją wziąć: tak, i co zrobić najpierw.", // nieuw, nalezen
+    'c.pruning.a.why': "Pytanie, które gałęzie: tylko martwe.", // nieuw, nalezen
+    'c.hedge.a.why': "Pytanie, jak wysoko: do linki, nie niżej.", // nieuw, nalezen
+    'c.chainsaw.a.why': "Pytanie, czy można: jeszcze nie, i co jest najpierw.", // nieuw, nalezen
+    'c.weeding.a.why': "Pytanie, czy to chwast: nie, i co z nim zrobić.", // nieuw, nalezen
+    'c.planting.a.why': "Pytanie, gdzie ma iść: miejsce na rabacie.", // nieuw, nalezen
+    'c.roadside.a.why': "Pytanie, czy można przejść: nie, czekać, i dlaczego.", // nieuw, nalezen
+    'c.litter.a.why': "Mieszkaniec pyta, kiedy: odpowiedź, że nie wiadomo, i kto to wie.", // nieuw, nalezen
+    'c.reception.a.why': "Gość jest umówiony: chwileczkę, i telefon do tej osoby.", // nieuw, nalezen
+    'c.visitors.a.why': "Pytanie, gdzie zostawić kurtkę: miejsce, i gdzie ono jest.", // nieuw, nalezen
+    'c.mailroom.a.why': "Pytanie, dla kogo to jest: dział i piętro.", // nieuw, nalezen
+    'c.meetingroom.a.why': "Pytanie, o której: godzina, i co trzeba zrobić.", // nieuw, nalezen
+    'c.faults.a.why': "Pytanie, dlaczego jest zimno: co jest zepsute i kiedy przyjdzie pomoc.", // nieuw, nalezen
+    'c.repairs.a.why': "Pytanie, czy piszczy: tak, i dlaczego.", // nieuw, nalezen
+    'c.moving.a.why': "Pytanie, gdzie ma iść: pokój, i gdzie patrzeć.", // nieuw, nalezen
+    'c.closing.a.why': "Pytanie, czy ktoś jest w środku: nie, i co się teraz robi.", // nieuw, nalezen
+    'c.patrol.a.why': "Pytanie, czy coś było widać: tak, co, i gdzie.", // nieuw, nalezen
+    'c.access.a.why': "Prośba o wejście bez karty: przykro mi, bez karty nie.", // nieuw, nalezen
+    'c.cameras.a.why': "Pytanie, co widać: kogo, gdzie, i co się robi.", // nieuw, nalezen
+    'c.report.a.why': "Pytanie, co jest w raporcie: co, gdzie i kiedy.", // nieuw, nalezen
+    'c.evacuation.a.why': "Pytanie, czy wszyscy wyszli: nie, i ilu osób brakuje.", // nieuw, nalezen
+    'c.firstaid.a.why': "Pytanie, gdzie jest AED: miejsce, i co jest obok.", // nieuw, nalezen
+    'c.shoplifting.a.why': "Pytanie, czy można przeszukać torbę: nie, i kto to robi.", // nieuw, nalezen
+    'c.aggression.a.why': "Pytanie, dlaczego nie: powód, powiedziany spokojnie.", // nieuw, nalezen
+    'c.hygienelock.a.why': "Pytanie o zegarek: nie, i zasada, która za tym stoi.", // nieuw, nalezen
+    'c.allergens.a.why': "Pytanie, czy może iść razem: nie, i dlaczego.", // nieuw, nalezen
+    'c.coldroom.a.why': "Pytanie, dlaczego piszczy: przyczyna, i co zrobić.", // nieuw, nalezen
+    'c.foreignbody.a.why': "Pytanie, co zrobić: komu to pokazać.", // nieuw, nalezen
+    'c.cutting.a.why': "Pytanie, ile: waga, i gdzie patrzeć.", // nieuw, nalezen
+    'c.labels.a.why': "Pytanie, jaka data: kiedy, i gdzie patrzeć.", // nieuw, nalezen
+    'c.linecleaning.a.why': "Pytanie, czy jest czysta: jeszcze nie, i co zostało do zrobienia.", // nieuw, nalezen
+    'c.haccp.a.why': "Pytanie, dlaczego: żeby wiedzieć, że jedzenie jest bezpieczne.", // nieuw, nalezen
+    'c.binlorry.a.why': "Pytanie, czy można jechać z tyłu: nie, i gdzie się jedzie.", // nieuw, nalezen
+    'c.reversing.a.why': "Prośba o pomoc: tak, gdzie się stoi, i co robić.", // nieuw, nalezen
+    'c.wastesorting.a.why': "Pytanie, gdzie to idzie: pojemnik, i dlaczego.", // nieuw, nalezen
+    'c.wastesafety.a.why': "Pytanie, co robić po skaleczeniu: umyć ranę i powiedzieć.", // nieuw, nalezen
+    'c.yard.a.why': "Pytanie, gdzie to idzie: kontener, i gdzie on jest.", // nieuw, nalezen
+    'c.hazardous.a.why': "Pytanie, co jest w środku: nie wiadomo, więc odstawić na bok.", // nieuw, nalezen
+    'c.baler.a.why': "Pytanie, czy można zajrzeć: nie, i co jest najpierw.", // nieuw, nalezen
+    'c.shovel.a.why': "Pytanie, czy można przejść: tylko kiedy kierowca widzi.", // nieuw, nalezen
+    'c.nappies.a.why': "Pytanie, kiedy: godzina, i gdzie to jest zapisane.", // nieuw, nalezen
+    'c.mealtime.a.why': "Pytanie, czy może to dostać: nie, dlaczego, i gdzie patrzeć.", // nieuw, nalezen
+    'c.naptime.a.why': "Pytanie, czy śpi: tak, od kiedy, i że ktoś zaraz sprawdzi.", // nieuw, nalezen
+    'c.playtime.a.why': "Dziecko pyta, czy może się bawić: tak, gdzie, i co potem.", // nieuw, nalezen
+    'c.pickup.a.why': "Pytanie, kto odbiera: osoba, i że jest na liście.", // nieuw, nalezen
+    'c.childsafety.a.why': "Pytanie, czy się przewróciła: tak, co jej jest, i do kogo się dzwoni.", // nieuw, nalezen
+    'c.sickchild.a.why': "Pytanie, jak się czuje: co widać, i co się robi.", // nieuw, nalezen
+    'c.grouprules.a.why': "Pytanie, czy można wyjść w pojedynkę: tak, ale najpierw powiedzieć koledze.", // nieuw, nalezen
   },
 };
 
