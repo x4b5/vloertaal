@@ -128,7 +128,7 @@ export const be: BeUnit = {
             situation: 'Jayden wil de lamp snel vervangen. Wat kan Jayden het beste doen?',
             options: [
               { id: 'a', text: 'Hij gaat op de bureaustoel staan. Het is maar even.', best: false, feedback: 'Dat snap ik. Maar een bureaustoel kan wegrollen.' },
-              { id: 'b', text: 'Hij haalt eerst de trap.', best: true, feedback: 'Goed. Op een trap sta je stevig.' },
+              { id: 'b', text: 'Hij haalt eerst de trap van de andere verdieping.', best: true, feedback: 'Goed. Op een trap sta je stevig.' },
               { id: 'c', text: 'Hij vraagt een collega om de stoel vast te houden.', best: false, feedback: 'Goed bedoeld. Maar ook dan kan de stoel draaien.' },
             ],
             why: 'Een stoel kan wegrollen of omvallen. Gebruik voor werk op hoogte altijd een trap. Zet hem op een vlakke vloer, helemaal open. Doe eerst het licht uit.',

@@ -526,6 +526,31 @@ export const KUN_REGELS: KunOnderwerp[] = [
     ['Ik kan een werkorder lezen.', '1F', 'lezen'],
     ['Ik kan zeggen dat de klant eerst ja moet zeggen.', '1F', 'gesprekken'],
   ]),
+  // De zes sectoren van 23 november 2026 (curriculum, deel 9).
+  onderwerp('r.groen', 'Werken in het groen', [
+    ['Ik kan zeggen dat ik nog geen cursus heb gehad.', '1F', 'gesprekken'],
+    ['Ik kan een lint in de grond melden.', '1F', 'spreken'],
+  ]),
+  onderwerp('r.facilitair', 'Werken in de facilitaire dienst', [
+    ['Ik kan beleefd zeggen dat ik geen nummer geef.', '1F', 'gesprekken'],
+    ['Ik kan een lek of storing melden.', '1F', 'spreken'],
+  ]),
+  onderwerp('r.beveiliging', 'Werken in de beveiliging', [
+    ['Ik kan aan de meldkamer zeggen wat ik zie.', '1F', 'spreken'],
+    ['Ik kan een kort verslag van een incident schrijven.', '1F', 'schrijven'],
+  ]),
+  onderwerp('r.voeding', 'Werken in de voedingsindustrie', [
+    ['Ik kan een wond of ziekte melden voor mijn dienst.', '1F', 'gesprekken'],
+    ['Ik kan een etiket met allergenen lezen.', '1F', 'lezen'],
+  ]),
+  onderwerp('r.afval', 'Werken in afval en recycling', [
+    ['Ik kan tegen de chauffeur zeggen waar ik sta.', '1F', 'spreken'],
+    ['Ik kan zeggen dat ik onbekend afval apart zet.', '1F', 'gesprekken'],
+  ]),
+  onderwerp('r.kinderopvang', 'Werken in de kinderopvang', [
+    ['Ik kan een ouder vragen een formulier te tekenen.', '1F', 'gesprekken'],
+    ['Ik kan opschrijven wat ik bij een kind zie.', '1F', 'schrijven'],
+  ]),
 ];
 
 const byUnit = new Map([...KUN_TAAL, ...KUN_REGELS].map((o) => [o.unit, o] as const));

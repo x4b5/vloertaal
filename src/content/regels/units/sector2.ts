@@ -1,7 +1,4 @@
-import type { KunRij } from '../../kunJeNu';
-import type { RuleAdviceKind } from '../disclaimer';
 import type { RuleUnit } from '../types';
-import type { ZegHetWrong } from '../zegHet';
 
 /**
  * Sectorlessen, derde ronde (23 november 2026): de zes sectoren die die dag in "Waar werk je?"
@@ -11,6 +8,9 @@ import type { ZegHetWrong } from '../zegHet';
  * then this file. The Taal twins: u.mowing/u.planting, u.frontdesk/u.maintenance,
  * u.guarding/u.incidents, u.foodhygiene/u.foodline, u.collection/u.recycling, u.toddlers/u.daycare
  * (src/content/work.ts), with their tips in src/content/workTips.ts.
+ *
+ * Their "Wat zeg je?" sentences are in ../zegHetData.ts, the advice lines in ../disclaimer.ts and
+ * "Wat kun je nu?" in src/content/kunJeNu.ts, like those of the other units.
  *
  * `// ⚖️ check:` marks a fact the expert must check (docs/werkregels-bronnen.md, §7). The marker is
  * never shown or read aloud. `// Redactie:` notes are for the makers only. Opgezocht op 23 november
@@ -351,7 +351,7 @@ export const facilitairUnit: RuleUnit = {
           situation: 'Jayden wil de lamp snel vervangen. Wat kan Jayden het beste doen?',
           options: [
             { id: 'a', text: 'Hij gaat op de bureaustoel staan. Het is maar even.', best: false, feedback: 'Dat snap ik. Maar een bureaustoel kan wegrollen.' },
-            { id: 'b', text: 'Hij haalt eerst de trap.', best: true, feedback: 'Goed. Op een trap sta je stevig.' },
+            { id: 'b', text: 'Hij haalt eerst de trap van de andere verdieping.', best: true, feedback: 'Goed. Op een trap sta je stevig.' },
             { id: 'c', text: 'Hij vraagt een collega om de stoel vast te houden.', best: false, feedback: 'Goed bedoeld. Maar ook dan kan de stoel draaien.' },
           ],
           why: 'Een stoel kan wegrollen of omvallen. Gebruik voor werk op hoogte altijd een trap.',
@@ -632,7 +632,7 @@ export const voedingUnit: RuleUnit = {
           id: 'r.l.voeding.1.wd1',
           situation: 'Ewa wil terug naar de lijn. Wat kan Ewa het beste doen?',
           options: [
-            { id: 'a', text: 'Ze gaat toch door de sluis.', best: true, feedback: 'Goed. Die paar minuten beschermen veel klanten.' },
+            { id: 'a', text: 'Ze gaat toch door de sluis, en wast haar handen.', best: true, feedback: 'Goed. Die paar minuten beschermen veel klanten.' },
             { id: 'b', text: 'Ze desinfecteert alleen haar handen bij de lijn.', best: false, feedback: 'Dat snap ik. Maar wassen en schone kleding horen er ook bij.' },
             { id: 'c', text: 'Ze doet wat haar collega zegt. Het is maar één keer.', best: false, feedback: 'Eén keer is genoeg om bacteriën in het eten te brengen.' },
           ],
@@ -1113,103 +1113,3 @@ export const kinderopvangUnit: RuleUnit = {
 
 /** The six units of this round, in the order of src/content/sectors.ts. */
 export const sector2Units: RuleUnit[] = [groenUnit, facilitairUnit, beveiligingUnit, voedingUnit, afvalUnit, kinderopvangUnit];
-
-/**
- * Wiring for phase 2 (kept here while other files are being edited): "Wat zeg je?" for every model
- * step (to go into zegHetData.ts ZEG_HET_NL), the advice line for every written rule (to go into
- * disclaimer.ts ruleAdvice), and "Wat kun je nu?" (to go into kunJeNu.ts KUN_REGELS).
- */
-export const SECTOR2_ZEG_HET: Record<string, ZegHetWrong> = {
-  'r.l.groen.1.mo1': [
-    { text: 'Oké, ik probeer het wel. Hoe moeilijk kan het zijn?', feedback: 'Zonder cursus is een kettingzaag te gevaarlijk.' },
-    { text: 'Ik weet niet hoe dat ding werkt. Doe jij het maar.', feedback: 'Dat klinkt onaardig. Vraag liever om ander werk.' },
-  ],
-  'r.l.groen.2.mo1': [
-    { text: 'Ik raakte iets in de grond. Ik graaf nog even verder.', feedback: 'Onder een lint ligt een kabel of leiding. Stop eerst.' },
-    { text: 'Er zat iets raars in de grond, maar het is niks.', feedback: 'Dan weet je leidinggevende niet dat het gevaarlijk kan zijn.' },
-  ],
-  'r.l.facilitair.1.mo1': [
-    { text: 'Natuurlijk, ik zoek het nummer even voor u op.', feedback: 'Het nummer van een collega is privé. Geef het niet.' },
-    { text: 'Dat gaat u helemaal niets aan. Ik hang nu op, hoor.', feedback: 'Dat klinkt boos. Bied liever aan dat ze terugbelt.' },
-  ],
-  'r.l.facilitair.2.mo1': [
-    { text: 'Er is iets met het plafond. Iemand moet maar eens kijken.', feedback: 'Dat is vaag. Zeg waar het is en wat je ziet.' },
-    { text: 'In de gang druppelt water. Ik ga het plafond zelf openmaken.', feedback: 'Repareer niet zelf. Meld het, en zet een emmer neer.' },
-  ],
-  'r.l.beveiliging.1.mo1': [
-    { text: 'Er is iets bij een loods. Ik ga zelf even naar binnen.', feedback: 'Ga niet alleen naar binnen. Meld het, en wacht.' },
-    { text: 'Ik hoor iets, maar het is vast niks. Ik loop verder.', feedback: 'Dan komt er geen hulp. Zeg waar je bent en wat je hoort.' },
-  ],
-  'r.l.beveiliging.2.mo1': [
-    { text: 'Ik heb hier een dief. Ik heb haar tas al helemaal doorzocht.', feedback: 'Een tas doorzoeken mag alleen de politie.' },
-    { text: 'Er is iets gebeurd in de winkel. Komen jullie misschien een keer?', feedback: 'Dat is vaag. Zeg wat er is, en waar.' },
-  ],
-  'r.l.voeding.1.mo1': [
-    { text: 'Ik heb een sneetje, maar het is niks. Ik begin gewoon.', feedback: 'Een wond kan bacteriën in het eten brengen. Meld het.' },
-    { text: 'Mijn vinger bloedt. Ik doe er wel een handschoen over.', feedback: 'Vraag een blauwe pleister. Die zie je in het eten.' },
-  ],
-  'r.l.voeding.2.mo1': [
-    { text: 'Oké, hazelnoten dan. Het verschil proeft toch niemand.', feedback: 'Dan klopt het etiket niet. Dat is gevaarlijk bij een allergie.' },
-    { text: 'Ik weet het niet. Doe maar wat jij wilt, hoor.', feedback: 'Dan beslist niemand. Vraag het de ploegleider.' },
-  ],
-  'r.l.afval.1.mo1': [
-    { text: 'Rij maar, ik loop wel even achterlangs.', feedback: 'Achter de wagen ziet de chauffeur je niet.' },
-    { text: 'Ik sta ergens. Rij maar gewoon achteruit.', feedback: 'Dat is vaag. Zeg waar je staat, en vraag of hij je ziet.' },
-  ],
-  'r.l.afval.2.mo1': [
-    { text: 'Ik weet niet wat het is. Ik ruik er even aan.', feedback: 'De damp kan giftig zijn. Zet hem apart.' },
-    { text: 'Geen idee wat dit is. Ik gooi het gewoon bij de verf.', feedback: 'Onbekend afval kan reageren met ander afval. Vraag het na.' },
-  ],
-  'r.l.kinderopvang.1.mo1': [
-    { text: 'Prima, ik kom morgen. Dat register komt later wel.', feedback: 'Zonder inschrijving mag je niet met de kinderen werken.' },
-    { text: 'Ik weet niet of het mag. Zoek het zelf maar uit.', feedback: 'Dat klinkt onaardig. Zeg wat er nog nodig is.' },
-  ],
-  'r.l.kinderopvang.2.mo1': [
-    { text: 'Geen probleem, ik geef het hem straks wel. Doei!', feedback: 'Zonder toestemming op papier geef je geen medicijn.' },
-    { text: 'Nee, medicijnen geven doen wij hier nooit. Sorry.', feedback: 'Met een formulier mag het meestal wel. Vraag dat eerst.' },
-  ],
-};
-
-/** The line under every written rule (all 'advice': the employer is not the problem here). */
-export const SECTOR2_ADVICE: Record<string, RuleAdviceKind> = {
-  'r.l.groen.1.ru1': 'advice',
-  'r.l.groen.2.ru1': 'advice',
-  'r.l.facilitair.1.ru1': 'advice',
-  'r.l.facilitair.2.ru1': 'advice',
-  'r.l.beveiliging.1.ru1': 'advice',
-  'r.l.beveiliging.2.ru1': 'advice',
-  'r.l.voeding.1.ru1': 'advice',
-  'r.l.voeding.2.ru1': 'advice',
-  'r.l.afval.1.ru1': 'advice',
-  'r.l.afval.2.ru1': 'advice',
-  'r.l.kinderopvang.1.ru1': 'advice',
-  'r.l.kinderopvang.2.ru1': 'advice',
-};
-
-/** "Wat kun je nu?" (2 lines, 1F) per unit, by unit id, for KUN_REGELS. */
-export const SECTOR2_KUN: Record<string, { titel: string; rijen: KunRij[] }> = {
-  'r.groen': { titel: 'Werken in het groen', rijen: [
-    ['Ik kan zeggen dat ik nog geen cursus heb gehad.', '1F', 'gesprekken'],
-    ['Ik kan melden dat ik een lint in de grond heb geraakt.', '1F', 'spreken'],
-  ] },
-  'r.facilitair': { titel: 'Werken in de facilitaire dienst', rijen: [
-    ['Ik kan beleefd zeggen dat ik een nummer niet mag geven.', '1F', 'gesprekken'],
-    ['Ik kan een lek of storing melden.', '1F', 'spreken'],
-  ] },
-  'r.beveiliging': { titel: 'Werken in de beveiliging', rijen: [
-    ['Ik kan aan de meldkamer zeggen waar ik ben en wat ik zie.', '1F', 'spreken'],
-    ['Ik kan een kort verslag van een incident schrijven.', '1F', 'schrijven'],
-  ] },
-  'r.voeding': { titel: 'Werken in de voedingsindustrie', rijen: [
-    ['Ik kan een wond of ziekte melden voor mijn dienst.', '1F', 'gesprekken'],
-    ['Ik kan een etiket met allergenen lezen.', '1F', 'lezen'],
-  ] },
-  'r.afval': { titel: 'Werken in afval en recycling', rijen: [
-    ['Ik kan de chauffeur zeggen waar ik sta.', '1F', 'spreken'],
-    ['Ik kan zeggen dat ik onbekend afval apart zet.', '1F', 'gesprekken'],
-  ] },
-  'r.kinderopvang': { titel: 'Werken in de kinderopvang', rijen: [
-    ['Ik kan een ouder vragen een formulier te tekenen.', '1F', 'gesprekken'],
-    ['Ik kan opschrijven wat ik bij een kind zie.', '1F', 'schrijven'],
-  ] },
-};

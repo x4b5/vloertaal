@@ -5,10 +5,11 @@ import { PAL, Shine, r1 } from '../kit';
  * A rough, chalky crust: a jagged blob round (cx, cy), r wide, `k` high, with a grey edge underneath
  * and a few speckles (seeded, so the picture never changes).
  */
-const crust = (cx: number, cy: number, r: number, k = 0.6, n = 14) => {
+const crust = (cx: number, cy: number, r: number, k = 0.6, seed = 1) => {
+  const n = 28;
   const pts = Array.from({ length: n }, (_, i) => {
     const t = (i / n) * Math.PI * 2;
-    const rr = r * (i % 2 ? 0.78 : 1) * (1 + 0.12 * Math.sin(i * 2.7));
+    const rr = r * (1 + 0.16 * Math.sin(3 * t + seed) + 0.1 * Math.sin(7 * t + seed * 2) + 0.05 * Math.sin(13 * t));
     return `${r1(cx + rr * Math.cos(t))} ${r1(cy + rr * k * Math.sin(t))}`;
   });
   const d = `M${pts.join('L')}Z`;
@@ -32,8 +33,8 @@ export default {
       <path d="M10 43H110M10 74H110M43 12V106M76 12V106" stroke={PAL.skyShade} strokeWidth="2.4" />
       {/* Chalky stains on the tiles */}
       {crust(26, 90, 9, 0.7)}
-      {crust(96, 26, 8, 0.8)}
-      {crust(95, 94, 7, 0.8)}
+      {crust(96, 26, 8, 0.8, 4)}
+      {crust(95, 94, 7, 0.8, 5)}
       {/* The tap: wall flange, arm, spout, handle */}
       <rect x="14" y="40" width="14" height="24" rx="4" fill={PAL.steel} />
       <rect x="24" y="44" width="56" height="12" rx="6" fill={PAL.steel} />
@@ -45,8 +46,9 @@ export default {
       <Shine d="M30 46H50" width={2.4} opacity={0.9} />
       {/* The thick crust on the arm and round the spout's mouth */}
       {crust(42, 56, 11, 0.35)}
-      {crust(75, 72, 14, 0.75, 16)}
-      {crust(76, 84, 7, 0.9, 10)}
+      {crust(75, 72, 14, 0.75, 2)}
+      {crust(76, 84, 7, 0.9, 3)}
+      <path d="M70 88V96M80 90V100" stroke={PAL.paper} strokeWidth="3.4" strokeLinecap="round" />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

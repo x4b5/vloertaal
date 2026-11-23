@@ -33,7 +33,7 @@ export default {
           <path d="M14 64H54L56 102H12Z" fill={PAL.orange} />
         </Shade>
         <Shine d="M19 70L18 92" width={3.2} opacity={0.5} />
-        <Hand pose="fist" x={34} y={30} rotate={180} scale={0.62} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
+        <Hand pose="fist" x={34} y={24} rotate={180} scale={0.8} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
       </Move>
     </g>
   ),

@@ -16,17 +16,21 @@ const lines: Record<string, string> = {
   'De wet geldt voor iedereen. Oneens met een besluit? Maak op tijd bezwaar.': 'Prawo obowiązuje wszystkich. Nie zgadzasz się z decyzją? Złóż sprzeciw (bezwaar) na czas.',
   'Direct zeggen is hier normaal. Het gaat over het werk, niet over jou.': 'Mówienie wprost jest tu normalne. Chodzi o pracę, nie o ciebie.',
   'Discriminatie is verboden. Schrijf het op en meld het.': 'Dyskryminacja jest zabroniona. Zapisz to i zgłoś.',
+  'Door de sluis, elke keer. Ziek of een wond? Meld het voor je begint.': 'Przez śluzę higieniczną, za każdym razem. Choroba albo rana? Zgłoś to przed rozpoczęciem pracy.', // nieuw, nalezen
   'Drink op tijd. Een bespoten kas ga je pas in als het mag.': 'Pij regularnie. Do opryskanej szklarni wchodzisz dopiero wtedy, gdy wolno.',
   'Een brief van de Belastingdienst, UWV of de gemeente: altijd openmaken.': 'List od Belastingdienst, UWV albo z gminy (gemeente): zawsze go otwórz.',
   'Een cv is kort en eerlijk. Ook zorg en vrijwilligerswerk tellen.': 'CV jest krótkie i uczciwe. Opieka nad kimś i wolontariat też się liczą.',
+  'Een lint in de grond, een nest of een naald? Stop, en meld het.': 'Taśma w ziemi, gniazdo albo igła? Przerwij pracę i zgłoś to.', // nieuw, nalezen
   'Een sollicitatiemail: onderwerp, nette groet, waarom jij, en je cv erbij.': 'Mail z podaniem o pracę: temat, grzeczne powitanie, dlaczego ty, i twoje CV w załączniku.',
   'Eerst checken, dan pas doorsturen. Wie zegt het, en waar staat het nog meer?': 'Najpierw sprawdź, dopiero potem przesyłaj dalej. Kto to mówi i gdzie jeszcze o tym piszą?',
   'Eerst de POK tekenen. Dan pas beginnen met je stage.': 'Najpierw podpisz POK. Dopiero potem zaczynasz praktykę.',
+  'Eerst een VOG en het register. Er kijkt of luistert altijd iemand mee.': 'Najpierw zaświadczenie o niekaralności (VOG) i wpis do rejestru (personenregister). Zawsze ktoś może cię widzieć lub słyszeć.', // nieuw, nalezen
   'Eerst iets goeds. Dan rustig en concreet wat beter kan.': 'Najpierw coś dobrego. Potem spokojnie i konkretnie: co można zrobić lepiej.',
   'Eerst je vaste lasten. Dan een beetje sparen. Dan pas de rest.': 'Najpierw stałe opłaty. Potem trochę oszczędzaj. Dopiero potem reszta.',
   'Eerst kijken, dan beginnen. Loop nooit onder een hangende last.': 'Najpierw patrz, potem zaczynaj. Nigdy nie chodź pod wiszącym ładunkiem.',
   'Eerst lezen, dan tekenen.': 'Najpierw przeczytaj, potem podpisz.',
   'Eerst lezen, vragen en klaarleggen. Dan pas beginnen.': 'Najpierw przeczytaj, zapytaj i przygotuj wszystko. Dopiero potem zaczynaj.',
+  'Elke bezoeker meldt zich. Gegevens van collega\'s geef je niet zomaar.': 'Każdy gość się zgłasza. Danych kolegów nie podajesz tak po prostu.', // nieuw, nalezen
   'Extra werk? Eerst moet de klant ja zeggen.': 'Dodatkowa praca? Najpierw klient musi się zgodzić.',
   'Gaat het niet goed op stage? Praat erover: eerst op je werk, dan met school.': 'Coś nie idzie dobrze na praktyce? Porozmawiaj o tym: najpierw w pracy, potem ze szkołą.',
   'Gedetacheerd? Vraag je werkgever om je A1-verklaring.': 'Pracujesz tu jako pracownik delegowany? Poproś pracodawcę o zaświadczenie A1 (A1-verklaring).',
@@ -41,12 +45,16 @@ const lines: Record<string, string> = {
   'Het oneens zijn mag. Zeg het rustig, met een reden.': 'Możesz się nie zgadzać. Powiedz to spokojnie i podaj powód.',
   'Hooguit 12 uur per dienst. Ben je jonger dan 18? Dan minder.': 'Najwyżej 12 godzin na jedną zmianę. Masz mniej niż 18 lat? Wtedy mniej.',
   'Iedereen heeft dezelfde rechten. Discriminatie mag niet, ook niet buiten je werk.': 'Wszyscy mają takie same prawa. Dyskryminacja jest zakazana, także poza pracą.',
+  'Iets kapot? Meld het. Repareer alleen wat je geleerd hebt.': 'Coś jest zepsute? Zgłoś to. Naprawiaj tylko to, czego się nauczyłeś.', // nieuw, nalezen
   'Jarig? Dan trakteer je zelf.': 'Masz urodziny? Wtedy to ty częstujesz innych.',
   'Je DigiD is alleen van jou. Geef hem aan niemand.': 'Twój DigiD należy tylko do ciebie. Nikomu go nie dawaj.',
   'Je paspoort en je bankpas geef je nooit af.': 'Paszportu i karty bankowej nigdy nikomu nie oddajesz.',
   'Je werk stopt? Check je laatste loon. Regel je huis en je zorgverzekering.': 'Twoja praca się kończy? Sprawdź ostatnią wypłatę. Załatw sprawy mieszkania i ubezpieczenia zdrowotnego (zorgverzekering).',
   'Je werktijd is: eindtijd min begintijd, min je pauze.': 'Twój czas pracy to: godzina końca minus godzina początku, minus przerwa.',
   'Klaar? Ruim op en laat het nakijken. Zeg wat klaar is en wat niet.': 'Gotowe? Posprzątaj i daj to do sprawdzenia. Powiedz, co jest gotowe, a co nie.',
+  'Loop nooit achter een wagen die achteruitrijdt. Zorg dat de chauffeur je ziet.': 'Nigdy nie chodź za pojazdem, który cofa. Upewnij się, że kierowca cię widzi.', // nieuw, nalezen
+  'Maaien of zagen? Draag je beschermende spullen, en houd mensen op afstand.': 'Koszenie albo piłowanie? Załóż sprzęt ochronny i trzymaj ludzi z daleka.', // nieuw, nalezen
+  'Medicijnen alleen met toestemming op papier. Zorgen over een kind? Volg de meldcode.': 'Leki tylko za pisemną zgodą. Martwisz się o dziecko? Postępuj według procedury (meldcode).', // nieuw, nalezen
   'Meer dan 5,5 uur werken? Dan heb je recht op pauze.': 'Pracujesz dłużej niż 5,5 godziny? Wtedy masz prawo do przerwy.',
   'Meld elk ongeluk, ook een klein ongeluk.': 'Zgłaszaj każdy wypadek, także mały wypadek.',
   'Meng nooit schoonmaakmiddelen. Lees eerst het etiket.': 'Nigdy nie mieszaj środków czystości. Najpierw przeczytaj etykietę.',
@@ -55,6 +63,7 @@ const lines: Record<string, string> = {
   'Na een nachtdienst heb je recht op lange rust.': 'Po nocnej zmianie masz prawo do długiego odpoczynku.',
   'Nieuw werk? Geef het meteen door: aan de gemeente of UWV, en bij toeslagen.': 'Nowa praca? Zgłoś to od razu: w gminie (gemeente) lub w UWV, i w urzędzie od dodatków (toeslagen).',
   'Of je mag stemmen, hangt af van de verkiezing en je nationaliteit. Vraag het de gemeente.': 'To, czy możesz głosować, zależy od rodzaju wyborów i twojego obywatelstwa. Zapytaj w gminie (gemeente).',
+  'Onbekend afval? Niet openmaken, niet ruiken. Grijp nooit in een pers.': 'Nieznany odpad? Nie otwieraj, nie wąchaj. Nigdy nie wkładaj ręki do prasy.', // nieuw, nalezen
   'Onder een auto? Alleen als hij goed vaststaat, op de brug of op bokken.': 'Pod samochód? Tylko gdy stoi stabilnie: na podnośniku albo na kobyłkach.',
   'Online gekocht? Dan heb je meestal 14 dagen bedenktijd. Bewaar je bonnetje.': 'Zakupy przez internet? Wtedy masz zwykle 14 dni na namysł. Zachowaj paragon.',
   'Onveilig? Zeg het meteen. Bij groot gevaar mag je stoppen.': 'Niebezpiecznie? Powiedz to od razu. Przy dużym zagrożeniu możesz przerwać pracę.',
@@ -90,7 +99,10 @@ const lines: Record<string, string> = {
   'Werk kwijt? Vraag binnen 1 week WW aan.': 'Utrata pracy? Złóż wniosek o WW w ciągu 1 tygodnia.',
   'Werk nooit aan iets onder stroom. Eerst moet de stroom eraf, door iemand die dat mag.': 'Nigdy nie pracuj przy czymś pod napięciem. Najpierw ktoś z uprawnieniami musi wyłączyć prąd.',
   'Werk schoon, koel goed, en zet de datum erop.': 'Pracuj czysto, dobrze schładzaj i oznacz to datą.',
+  'Wissel nooit een ingrediënt. Schrijf op wat je echt meet.': 'Nigdy nie zamieniaj składnika. Zapisuj to, co naprawdę zmierzysz.', // nieuw, nalezen
   'Wonen via het bureau? Check het keurmerk en je loonstrook.': 'Mieszkanie przez agencję pracy (bureau)? Sprawdź znak jakości (keurmerk) i pasek wypłaty (loonstrook).',
+  'Zie je diefstal? Bel de politie. Fouilleer niemand, en gebruik geen grof geweld.': 'Widzisz kradzież? Zadzwoń na policję. Nikogo nie przeszukuj i nie używaj brutalnej siły.', // nieuw, nalezen
+  'Zie je inbraak of gevaar op je ronde? Ga niet alleen naar binnen. Meld het.': 'Widzisz włamanie albo zagrożenie podczas obchodu? Nie wchodź sam do środka. Zgłoś to.', // nieuw, nalezen
   'Ziek en naar huis? Vraag het eerst, en blijf bereikbaar.': 'Choroba i chcesz iść do domu? Najpierw o to zapytaj i bądź pod telefonem.',
   'Ziek? Bel zelf, vóór je dienst begint.': 'Choroba? Zadzwoń osobiście, zanim zacznie się twoja zmiana.',
   'Ziek? Je krijgt meestal minstens 70 procent van je loon.': 'Choroba? Zwykle dostajesz co najmniej 70 procent swojej płacy.',

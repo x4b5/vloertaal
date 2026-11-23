@@ -27,7 +27,6 @@ export default {
         <circle cx="29" cy="44" r="4" fill={PAL.white} opacity=".9" />
         {/* The star */}
         <path d={star(48, 58, 17)} fill={PAL.yellow} stroke={PAL.yellow} strokeWidth="2" />
-        <path d={star(48, 58, 17)} fill={PAL.yellowShade} opacity=".0" />
         {/* Name line */}
         <path d="M72 50H96M72 58H90" stroke={PAL.purpleLight} strokeWidth="3" strokeLinecap="round" />
         {/* The points: three of five saved */}

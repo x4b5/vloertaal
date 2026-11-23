@@ -8,9 +8,9 @@ export default {
   // On the intro card the comb goes through his hair from the left (three rounds).
   'w.kammen': () => (
     <g strokeLinejoin="round" strokeLinecap="round">
-      <Bust who="henk" x={56} y={160} scale={1.05} expr="pleased" bold />
+      <Bust who="henk" x={56} y={150} scale={1.05} expr="pleased" bold />
       <Move kind="from" dx={-24}>
-        <g transform="translate(0 9)">
+        <g transform="translate(0 4)">
         {/* The comb: teeth down into the hair, a long handle */}
         <path d="M30 40H76" stroke={PAL.orangeShade} strokeWidth="9" />
         <path d="M30 39H76" stroke={PAL.orange} strokeWidth="7" />

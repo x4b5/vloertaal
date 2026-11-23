@@ -59,7 +59,7 @@ export const be: BeUnit = {
             id: 'r.be.l.voeding.1.wd1',
             situation: 'Ewa wil terug naar de lijn. Wat kan Ewa het beste doen?',
             options: [
-              { id: 'a', text: 'Ze gaat toch door de sluis.', best: true, feedback: 'Goed. Die paar minuten beschermen veel klanten.' },
+              { id: 'a', text: 'Ze gaat toch door de sluis, en wast haar handen.', best: true, feedback: 'Goed. Die paar minuten beschermen veel klanten.' },
               { id: 'b', text: 'Ze ontsmet alleen haar handen bij de lijn.', best: false, feedback: 'Dat snap ik. Maar wassen en propere kledij horen er ook bij.' },
               { id: 'c', text: 'Ze doet wat haar collega zegt. Het is maar één keer.', best: false, feedback: 'Eén keer is genoeg om bacteriën in het eten te brengen.' },
             ],
@@ -134,7 +134,7 @@ export const be: BeUnit = {
               { id: 'b', text: 'Hij stopt, en vraagt de ploegbaas wat hij moet doen.', best: true, feedback: 'Goed. De ploegbaas beslist wat er gebeurt.' },
               { id: 'c', text: 'Hij doet half hazelnoten, half amandelen.', best: false, feedback: 'Ook dan klopt het etiket niet.' },
             ],
-            why: 'Het etiket moet zeggen wat erin zit. Een andere noot kan iemand met een allergie ziek maken. Twijfel je? Vraag het.',
+            why: 'Het etiket moet zeggen wat erin zit. Een andere noot kan iemand met een allergie ziek maken. Weet je het niet zeker? Vraag het.',
           },
           // ⚖️ check: allergenen gescheiden houden en de lijn reinigen tussen producten (Verordening (EG) 852/2004 art. 5, kruiscontaminatie voorkomen; Verordening (EU) 1169/2011; de autocontrolegids van de sector)
           {

@@ -187,7 +187,7 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 | Kassa, voorraad en sluiten | Ik kan een klant naar het bonnetje vragen. | A1 · gesprekken |
 |  | Ik kan zeggen dat de winkel bijna dichtgaat. | A1 · spreken |
 
-## Werkregels (28 onderwerpen, 59 zinnen)
+## Werkregels (34 onderwerpen, 71 zinnen)
 
 | Onderwerp | Zinnen | Past bij |
 |---|---|---|
@@ -250,3 +250,15 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan een kapotte kabel melden. | 1F · spreken |
 | Werken in de garage | Ik kan een werkorder lezen. | 1F · lezen |
 |  | Ik kan zeggen dat de klant eerst ja moet zeggen. | 1F · gesprekken |
+| Werken in het groen | Ik kan zeggen dat ik nog geen cursus heb gehad. | 1F · gesprekken |
+|  | Ik kan een lint in de grond melden. | 1F · spreken |
+| Werken in de facilitaire dienst | Ik kan beleefd zeggen dat ik geen nummer geef. | 1F · gesprekken |
+|  | Ik kan een lek of storing melden. | 1F · spreken |
+| Werken in de beveiliging | Ik kan aan de meldkamer zeggen wat ik zie. | 1F · spreken |
+|  | Ik kan een kort verslag van een incident schrijven. | 1F · schrijven |
+| Werken in de voedingsindustrie | Ik kan een wond of ziekte melden voor mijn dienst. | 1F · gesprekken |
+|  | Ik kan een etiket met allergenen lezen. | 1F · lezen |
+| Werken in afval en recycling | Ik kan tegen de chauffeur zeggen waar ik sta. | 1F · spreken |
+|  | Ik kan zeggen dat ik onbekend afval apart zet. | 1F · gesprekken |
+| Werken in de kinderopvang | Ik kan een ouder vragen een formulier te tekenen. | 1F · gesprekken |
+|  | Ik kan opschrijven wat ik bij een kind zie. | 1F · schrijven |
