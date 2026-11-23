@@ -304,6 +304,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "Te preguntan si vienes: sí, y quieres hablar con el profesor.", // nieuw, nalezen
     'c.workphotos.a.why': "Te piden una foto para internet: un no educado.", // nieuw, nalezen
     'c.device.a.why': "Te preguntan por una app nueva: primero pregunta al departamento de informática.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "Te preguntan qué significa una señal: cuidado, y qué señal es.", // nieuw, nalezen
+    'c.substances.a.why': "Te preguntan si es tóxico: no adivinas, lo buscas.", // nieuw, nalezen
+    'c.firefight.a.why': "Te dicen que hay fuego: es pequeño, así que vas a por el extintor.", // nieuw, nalezen
+    'c.permitwork.a.why': "Te preguntan quién se queda fuera: tú, y tu tarea.", // nieuw, nalezen
+    'c.vog.a.why': "Te preguntan por tu VOG: todavía no, y qué estás esperando.", // nieuw, nalezen
   },
 };
 

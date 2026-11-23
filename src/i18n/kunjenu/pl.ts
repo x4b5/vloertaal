@@ -177,6 +177,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': { m: "Umiem powiedzieć pielęgniarce, co widziałem.", f: "Umiem powiedzieć pielęgniarce, co widziałam.", x: "Umiem przekazać pielęgniarce swoje obserwacje." }, // nieuw, nalezen
     'kjn.u.shopfloor.1': "Umiem poprosić klienta o paragon.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "Umiem powiedzieć, że sklep zaraz się zamyka.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "Umiem rozpoznać kilka słów o znakach bezpieczeństwa i pożarze.", // nieuw, nalezen
+    'kjn.u.safework.2': "Umiem zapytać, czy środek jest toksyczny.", // nieuw, nalezen
   },
 };
 

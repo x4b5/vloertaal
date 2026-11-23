@@ -177,6 +177,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': "Мога да кажа на медицинската сестра какво видях.", // nieuw, nalezen
     'kjn.u.shopfloor.1': "Мога да поискам от клиент касовата бележка.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "Мога да кажа, че магазинът скоро затваря.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "Мога да разпозная някои думи за знаците за безопасност и пожара.", // nieuw, nalezen
+    'kjn.u.safework.2': "Мога да попитам дали препаратът е отровен.", // nieuw, nalezen
   },
 };
 

@@ -306,6 +306,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "Запрошують прийти: так, і ти хочеш поговорити з учителем.", // nieuw, nalezen
     'c.workphotos.a.why': "Просять фото для інтернету: ввічливе «ні».", // nieuw, nalezen
     'c.device.a.why': "Питають про новий застосунок: спершу запитай IT-відділ.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "Питають, що означає знак: обережно, і який це знак.", // nieuw, nalezen
+    'c.substances.a.why': "Питають, чи це отруйне: ти не вгадуєш, а перевіряєш.", // nieuw, nalezen
+    'c.firefight.a.why': "Кажуть про пожежу: вона невелика, тож ти береш вогнегасник.", // nieuw, nalezen
+    'c.permitwork.a.why': "Питають, хто залишається зовні: ти, і твоє завдання.", // nieuw, nalezen
+    'c.vog.a.why': "Питають про твій VOG: ще ні, і на що ти чекаєш.", // nieuw, nalezen
   },
 };
 

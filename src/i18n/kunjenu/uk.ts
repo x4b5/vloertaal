@@ -176,6 +176,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': { m: "Я можу розповісти медсестрі, що я бачив.", f: "Я можу розповісти медсестрі, що я бачила.", x: "Я можу розповісти медсестрі про свої спостереження." }, // nieuw, nalezen
     'kjn.u.shopfloor.1': "Я можу попросити в покупця чек.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "Я можу сказати, що магазин скоро зачиняється.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "Я можу впізнати деякі слова про знаки безпеки та пожежу.", // nieuw, nalezen
+    'kjn.u.safework.2': "Я можу запитати, чи засіб отруйний.", // nieuw, nalezen
   },
 };
 

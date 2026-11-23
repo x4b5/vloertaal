@@ -4799,6 +4799,108 @@ const t: CultureTranslation = {
     'c.device.o2': "Îl pui în calculator ca să vezi al cui e.", // nieuw, nalezen
     'c.device.o3': "Îl iei acasă și te uiți la el acolo.", // nieuw, nalezen
     'c.device.w': "Un stick poate avea un virus, chiar dacă pare interesant. Departamentul IT îl poate verifica în siguranță.", // nieuw, nalezen
+    // "Veiligheid op het werk" (four lessons) and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
+    'u.safework': "Siguranța la locul de muncă", // nieuw, nalezen
+    'l.vog': "Trecutul tău: VOG-ul", // nieuw, nalezen
+    'w.vog': "certificatul de bună conduită (VOG: o hârtie de la stat care spune că trecutul tău nu e o problemă pentru postul acesta)", // nieuw, nalezen
+    'w.strafblad': "cazierul judiciar (infracțiunile pentru care o instanță te-a condamnat)", // nieuw, nalezen
+    'w.screening': "verificarea antecedentelor (o verificare a trecutului tău înainte să începi)", // nieuw, nalezen
+    'w.personenregister': "registrul pentru îngrijirea copiilor (toți cei care lucrează în îngrijirea copiilor trebuie să fie în el)", // nieuw, nalezen
+    'w.beveiligerspas': "legitimația de agent de pază (cardul de care ai nevoie ca să lucrezi ca agent de pază)", // nieuw, nalezen
+    'w.verleden': "trecutul", // nieuw, nalezen
+    's.vog.1': "În îngrijire cer aproape mereu un VOG.", // nieuw, nalezen
+    's.vog.2': "Am un VOG și sunt în registrul pentru îngrijirea copiilor.", // nieuw, nalezen
+    's.vog.3': "Primesc legitimația de agent de pază după verificare.", // nieuw, nalezen
+    'c.vog.q': "Agenția cere un VOG. Îl ai deja?", // nieuw, nalezen
+    'c.vog.a': "Nu. Încă aștept e-mailul de la Justis.", // nieuw, nalezen
+    'l.safetysigns': "Indicatoare de siguranță", // nieuw, nalezen
+    'w.verbodsbord': "indicatorul de interzicere (un cerc roșu cu o linie peste el: nu ai voie să faci asta)", // nieuw, nalezen
+    'w.gebodsbord': "indicatorul de obligativitate (un cerc albastru cu un desen alb: trebuie să faci asta)", // nieuw, nalezen
+    'w.waarschuwingsbord': "indicatorul de avertizare (un triunghi galben cu margine neagră: atenție, pericol)", // nieuw, nalezen
+    'w.reddingsbord': "indicatorul de salvare (un dreptunghi verde: drumul spre ieșire sau primul ajutor)", // nieuw, nalezen
+    'w.brandbord': "indicatorul pentru echipamentul de incendiu (un pătrat roșu: aici e un extinctor sau un furtun de incendiu)", // nieuw, nalezen
+    'w.pictogram': "pictograma (un desen simplu care spune ceva fără cuvinte)", // nieuw, nalezen
+    's.safetysigns.1': "Un indicator rotund roșu înseamnă: asta nu ai voie.", // nieuw, nalezen
+    's.safetysigns.2': "Un indicator albastru spune ce trebuie să faci.", // nieuw, nalezen
+    's.safetysigns.3': "Urmează indicatoarele verzi până la ieșirea de urgență.", // nieuw, nalezen
+    'c.safetysigns.q': "Ce înseamnă indicatorul ăsta galben?", // nieuw, nalezen
+    'c.safetysigns.a': "Atenție, pericol. E un indicator de avertizare.", // nieuw, nalezen
+    'l.substances': "Substanțe periculoase", // nieuw, nalezen
+    'w.stofmasker': "masca de praf (îți acoperă nasul și gura)", // nieuw, nalezen
+    'w.giftig': "toxic, otrăvitor", // nieuw, nalezen
+    'w.bijtend': "coroziv (îți arde pielea sau roade metalul)", // nieuw, nalezen
+    'w.drinkfles': "sticla de băut", // nieuw, nalezen
+    'w.opbergen': "a pune la locul lui (în locul lui propriu, de exemplu un dulap care se încuie)", // nieuw, nalezen
+    'w.dop': "dopul (unei sticle sau al unei canistre)", // nieuw, nalezen
+    's.substances.1': "Uită-te întâi la simbolul de pericol de pe etichetă.", // nieuw, nalezen
+    's.substances.2': "Nu-l turna niciodată într-o sticlă de băut.", // nieuw, nalezen
+    's.substances.3': "Aici trebuie să porți mască de praf.", // nieuw, nalezen
+    'c.substances.q': "Produsul ăsta e toxic?", // nieuw, nalezen
+    'c.substances.a': "Asta scrie în fișa cu date de securitate. Mă uit acum.", // nieuw, nalezen
+    'l.firefight': "Focul", // nieuw, nalezen
+    'w.branddriehoek': "triunghiul focului (focul are nevoie de combustibil, aer și căldură; dacă iei unul, focul se stinge)", // nieuw, nalezen
+    'w.zuurstof': "oxigenul (e în aer; focul are nevoie de el)", // nieuw, nalezen
+    'w.blussen': "a stinge (un foc)", // nieuw, nalezen
+    'w.blusdeken': "pătura antiincendiu", // nieuw, nalezen
+    'w.openvuur': "flacăra deschisă (o flacără, de exemplu de la o brichetă sau de la un arzător cu gaz)", // nieuw, nalezen
+    'w.brandslang': "furtunul de incendiu (pe un tambur în perete)", // nieuw, nalezen
+    's.firefight.1': "Nu arunca niciodată apă pe ulei care arde.", // nieuw, nalezen
+    's.firefight.2': "Doar un foc mic îl stingi tu.", // nieuw, nalezen
+    's.firefight.3': "Pune pătura antiincendiu peste tigaie.", // nieuw, nalezen
+    'c.firefight.q': "E foc în coșul de gunoi!", // nieuw, nalezen
+    'c.firefight.a': "E mic. Iau extinctorul.", // nieuw, nalezen
+    'l.permitwork': "Autorizații, spații închise și ridicarea cu macaraua", // nieuw, nalezen
+    'w.werkvergunningveilig': "autorizația de lucru (o hârtie de siguranță pentru munca periculoasă: ce, unde și ce pericole; nu actele tale de ședere sau de muncă)", // nieuw, nalezen
+    'w.beslotenruimte': "spațiul închis (un rezervor, o groapă sau o canalizare: mic, cu puțin aer proaspăt)", // nieuw, nalezen
+    'w.gasmeting': "măsurarea gazelor (măsori aerul înainte să intri)", // nieuw, nalezen
+    'w.mangatwacht': "supraveghetorul de la intrare (persoana care stă afară la deschidere, ține legătura și dă alarma)", // nieuw, nalezen
+    'w.signaalgever': "semnalizatorul (persoana care îi face macaragiului semne cu mâna)", // nieuw, nalezen
+    'w.hijsen': "a ridica (o încărcătură cu macaraua)", // nieuw, nalezen
+    's.permitwork.1': "Fără autorizație de lucru nu începem.", // nieuw, nalezen
+    's.permitwork.2': "Întâi măsurarea gazelor, abia apoi intrăm în spațiul închis.", // nieuw, nalezen
+    's.permitwork.3': "Uită-te la semnalizator: ridică, coboară, stop.", // nieuw, nalezen
+    'c.permitwork.q': "Cine stă afară lângă rezervor?", // nieuw, nalezen
+    'c.permitwork.a': { m: "Eu. Eu sunt supraveghetorul de la intrare.", f: "Eu. Eu sunt supraveghetoarea de la intrare.", x: "Eu. Eu stau de pază la intrare." }, // nieuw, nalezen
+    'c.vog': "VOG-ul: o verificare a trecutului tău", // nieuw, nalezen
+    'c.vog.b': "Pentru unele posturi, agenția sau angajatorul îți cere un VOG (Verklaring Omtrent het Gedrag). E o hârtie de la stat: spune că trecutul tău nu e o problemă pentru postul acesta. În îngrijire, în îngrijirea copiilor și în pază ai nevoie aproape mereu de el. De obicei angajatorul începe cererea online. Primești un e-mail de la Justis, iar tu o termini cu DigiD și plătești. Întreabă întâi cine plătește: adesea angajatorul îți dă banii înapoi. Pentru voluntarii care lucrează cu copii sau cu persoane vulnerabile, e adesea gratuit. Ai cazier? Asta nu înseamnă mereu că nu primești VOG: Justis se uită la ce contează pentru postul acesta. Ai dubii? Întreabă la Juridisch Loket. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.vog.p': "Trebuie să plătesc eu VOG-ul?", // nieuw, nalezen
+    'c.vog.s': "Noul tău loc de muncă, într-un cămin de îngrijire, cere un VOG. Acum câțiva ani ai avut o problemă cu poliția. Ce faci?", // nieuw, nalezen
+    'c.vog.o1': "Faci cererea și întrebi la Juridisch Loket dacă ai griji.", // nieuw, nalezen
+    'c.vog.o2': "Nu faci cererea: nu-l primești niciodată.", // nieuw, nalezen
+    'c.vog.o3': "Spui că nu ai timp și cauți altă muncă.", // nieuw, nalezen
+    'c.vog.w': "Justis se uită doar la ce contează pentru post. Mulți oameni cu ceva în trecut primesc totuși un VOG. Un sfat te ajută dacă ai dubii.", // nieuw, nalezen
+    'c.safetysigns': "Ce este VCA?", // nieuw, nalezen
+    'c.safetysigns.b': "VCA este un certificat de siguranță. Multe firme îl cer, și prin agenție, de exemplu în construcții și în industrie. Majoritatea lucrătorilor fac B-VCA (VCA Basis); un șef face VOL-VCA. Faci un curs și un examen cu întrebări cu variante de răspuns, la un centru de examinare recunoscut. Examenul îl poți da adesea în mai multe limbi, de exemplu engleză sau poloneză: întreabă centrul de examinare. Diploma e valabilă 10 ani. Adesea plătește angajatorul sau agenția: întreabă înainte să plătești tu. O agenție nu are voie să-ți rețină din salariu orice cost (vezi tema despre munca prin agenție). În lecțiile acestea înveți câteva cuvinte pe care le întâlnești în munca sigură și la VCA. Pentru VCA faci un curs și un examen. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.safetysigns.p': "Cine plătește cursul VCA?", // nieuw, nalezen
+    'c.safetysigns.s': "O agenție spune: „Ai nevoie de VCA. Plătești tu cursul sau ți-l reținem din salariu.” Ce faci?", // nieuw, nalezen
+    'c.safetysigns.o1': "Întrebi cine plătește și ceri asta în scris.", // nieuw, nalezen
+    'c.safetysigns.o2': "Plătești imediat, ca să primești postul.", // nieuw, nalezen
+    'c.safetysigns.o3': "Nu spui nimic și semnezi.", // nieuw, nalezen
+    'c.safetysigns.w': "Adesea angajatorul sau agenția plătește VCA. Dacă trebuie să plătești ceva, vrei să știi asta dinainte, pe hârtie.", // nieuw, nalezen
+    'c.substances': "Citește eticheta, apoi lucrează", // nieuw, nalezen
+    'c.substances.b': "Un produs periculos are pe etichetă un romb roșu cu un desen negru în el: simbolul de pericol. Desenul arată pericolul, de exemplu foc, otravă sau un produs care îți arde pielea. Eticheta și fișa cu date de securitate (veiligheidsblad) spun cum lucrezi cu el în siguranță și ce faci dacă ceva merge prost. Poartă ce scrie acolo: mănuși, ochelari de protecție sau o mască. Închide dopul și pune produsul la locul lui. Nu-l turna niciodată într-o sticlă de băut: cineva îl poate bea. Nu mânca, nu bea și nu fuma când lucrezi cu el și spală-te pe mâini după aceea. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.substances.p': "Unde e fișa cu date de securitate pentru produsul ăsta?", // nieuw, nalezen
+    'c.substances.s': "Un coleg toarnă un produs de curățenie într-o sticlă goală de apă, ca să-l ia cu el. Ce faci?", // nieuw, nalezen
+    'c.substances.o1': "Spui că e periculos: cineva îl poate bea.", // nieuw, nalezen
+    'c.substances.o2': "Nimic: e sticla lui.", // nieuw, nalezen
+    'c.substances.o3': "Pui un autocolant mic pe sticlă.", // nieuw, nalezen
+    'c.substances.w': "Într-o sticlă de băut, un produs arată ca apa sau limonada. Cineva îl poate bea din greșeală. Un produs rămâne în ambalajul lui, cu eticheta.", // nieuw, nalezen
+    'c.firefight': "Foc mic sau foc mare?", // nieuw, nalezen
+    'c.firefight.b': "Focul are nevoie de trei lucruri: combustibil, aer și căldură. Acesta e triunghiul focului. Ia unul dintre ele și focul se stinge. Pătura antiincendiu ia aerul. Apa ia căldura, dar nu folosi niciodată apă pe ulei sau grăsime care arde sau pe aparate electrice. Uită-te pe extinctor: scrie pentru ce e. Spuma și pulberea merg la multe incendii; CO2 e bun pentru incendii electrice. Ține scânteile și flacăra deschisă departe de produsele care iau foc ușor. Tu stingi doar un foc mic și doar când nu e pericol. E mai mare? Ieși, închide ușa în urma ta și dă alarma. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.firefight.p': "Unde e pătura antiincendiu?", // nieuw, nalezen
+    'c.firefight.s': "La cantină ia foc uleiul dintr-o tigaie. Flăcările sunt încă mici. Ce faci?", // nieuw, nalezen
+    'c.firefight.o1': "Pui pătura antiincendiu peste tigaie.", // nieuw, nalezen
+    'c.firefight.o2': "Arunci un pahar cu apă pe ea.", // nieuw, nalezen
+    'c.firefight.o3': "Duci tigaia afară.", // nieuw, nalezen
+    'c.firefight.w': "Apa pe ulei care arde face o minge mare de foc. Pătura ia aerul și focul se stinge. Oprește plita dacă poți.", // nieuw, nalezen
+    'c.permitwork': "Muncă periculoasă: întâi autorizația", // nieuw, nalezen
+    'c.permitwork.b': "Pentru munca periculoasă, cum ar fi sudura lângă lucruri care ard sau lucrul într-un rezervor sau într-o groapă, firma folosește adesea o autorizație de lucru (werkvergunning). E o hârtie de siguranță, nu actele tale de ședere sau de muncă. Spune ce faci, unde, ce pericole sunt și ce faci împotriva lor. Citește-o și începe doar când e semnată. Într-un spațiu închis poate fi prea puțin aer sau un gaz periculos: întâi măsurarea gazelor, iar un supraveghetor stă afară la intrare. Cineva are probleme înăuntru? Dă alarma: nu intra niciodată fără protecție. La macara, o singură persoană face semnele: semnalizatorul. Nu sta niciodată sub o încărcătură suspendată. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.permitwork.p': "Autorizația de lucru e deja semnată?", // nieuw, nalezen
+    'c.permitwork.s': "Colegul tău dintr-un rezervor nu răspunde. Tu stai de pază la intrare. Ce faci?", // nieuw, nalezen
+    'c.permitwork.o1': "Dai alarma și rămâi afară.", // nieuw, nalezen
+    'c.permitwork.o2': "Intri repede ca să-l ajuți.", // nieuw, nalezen
+    'c.permitwork.o3': "Aștepți câteva minute, apoi te uiți.", // nieuw, nalezen
+    'c.permitwork.w': "Gazul care i-a făcut rău colegului tău îți poate face rău și ție. Multe victime din rezervoare au fost oameni care voiau să ajute. După alarmă vine ajutor cu protecție.", // nieuw, nalezen
   },
 };
 

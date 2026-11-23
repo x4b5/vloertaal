@@ -4800,6 +4800,108 @@ const t: CultureTranslation = {
     'c.device.o2': "Włóż go do komputera, żeby zobaczyć, czyj jest.", // nieuw, nalezen
     'c.device.o3': "Zabierz go do domu i tam go obejrzyj.", // nieuw, nalezen
     'c.device.w': "Na pendrivie może być wirus, nawet kiedy wygląda ciekawie. Dział IT może go bezpiecznie sprawdzić.", // nieuw, nalezen
+    // "Veiligheid op het werk" (four lessons) and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
+    'u.safework': "Bezpieczeństwo w pracy", // nieuw, nalezen
+    'l.vog': "Twoja przeszłość: VOG", // nieuw, nalezen
+    'w.vog': "zaświadczenie o niekaralności (VOG: dokument od państwa, który mówi, że twoja przeszłość nie jest problemem w tej pracy)", // nieuw, nalezen
+    'w.strafblad': "kartoteka karna (przestępstwa, za które sąd cię skazał)", // nieuw, nalezen
+    'w.screening': "sprawdzenie przeszłości (kontrola twojej przeszłości, zanim zaczniesz)", // nieuw, nalezen
+    'w.personenregister': "rejestr osób w opiece nad dziećmi (każdy, kto pracuje w opiece nad dziećmi, musi w nim być)", // nieuw, nalezen
+    'w.beveiligerspas': "legitymacja pracownika ochrony (karta, której potrzebujesz, żeby pracować w ochronie)", // nieuw, nalezen
+    'w.verleden': "przeszłość", // nieuw, nalezen
+    's.vog.1': "W opiece prawie zawsze proszą o VOG.", // nieuw, nalezen
+    's.vog.2': "Mam VOG i jestem w rejestrze osób w opiece nad dziećmi.", // nieuw, nalezen
+    's.vog.3': "Legitymację pracownika ochrony dostanę po sprawdzeniu przeszłości.", // nieuw, nalezen
+    'c.vog.q': "Agencja prosi o VOG. Masz już?", // nieuw, nalezen
+    'c.vog.a': "Nie. Jeszcze czekam na e-mail od Justis.", // nieuw, nalezen
+    'l.safetysigns': "Znaki bezpieczeństwa", // nieuw, nalezen
+    'w.verbodsbord': "znak zakazu (czerwone koło z przekreśleniem: tego nie wolno robić)", // nieuw, nalezen
+    'w.gebodsbord': "znak nakazu (niebieskie koło z białym obrazkiem: to musisz robić)", // nieuw, nalezen
+    'w.waarschuwingsbord': "znak ostrzegawczy (żółty trójkąt z czarną krawędzią: uwaga, niebezpieczeństwo)", // nieuw, nalezen
+    'w.reddingsbord': "znak ewakuacyjny (zielony prostokąt: droga wyjścia albo pierwsza pomoc)", // nieuw, nalezen
+    'w.brandbord': "znak ochrony przeciwpożarowej (czerwony kwadrat: tu jest gaśnica albo wąż pożarniczy)", // nieuw, nalezen
+    'w.pictogram': "piktogram (prosty obrazek, który mówi coś bez słów)", // nieuw, nalezen
+    's.safetysigns.1': "Czerwony okrągły znak oznacza: tego nie wolno.", // nieuw, nalezen
+    's.safetysigns.2': "Niebieski znak mówi, co musisz robić.", // nieuw, nalezen
+    's.safetysigns.3': "Idź za zielonymi znakami do wyjścia ewakuacyjnego.", // nieuw, nalezen
+    'c.safetysigns.q': "Co oznacza ten żółty znak?", // nieuw, nalezen
+    'c.safetysigns.a': "Uwaga, niebezpieczeństwo. To znak ostrzegawczy.", // nieuw, nalezen
+    'l.substances': "Substancje niebezpieczne", // nieuw, nalezen
+    'w.stofmasker': "maska przeciwpyłowa (zakrywa nos i usta)", // nieuw, nalezen
+    'w.giftig': "toksyczny, trujący", // nieuw, nalezen
+    'w.bijtend': "żrący (pali skórę albo niszczy metal)", // nieuw, nalezen
+    'w.drinkfles': "butelka na napoje", // nieuw, nalezen
+    'w.opbergen': "odkładać na miejsce (na swoje własne miejsce, na przykład do szafki zamykanej na klucz)", // nieuw, nalezen
+    'w.dop': "zakrętka (butelki albo kanistra)", // nieuw, nalezen
+    's.substances.1': "Najpierw spójrz na symbol zagrożenia na etykiecie.", // nieuw, nalezen
+    's.substances.2': "Nigdy nie wlewaj tego do butelki na napoje.", // nieuw, nalezen
+    's.substances.3': "Tutaj musisz nosić maskę przeciwpyłową.", // nieuw, nalezen
+    'c.substances.q': "Czy ten środek jest toksyczny?", // nieuw, nalezen
+    'c.substances.a': "To jest w karcie charakterystyki. Sprawdzę to.", // nieuw, nalezen
+    'l.firefight': "Pożar", // nieuw, nalezen
+    'w.branddriehoek': "trójkąt spalania (ogień potrzebuje paliwa, powietrza i ciepła; zabierz jedno, a ogień zgaśnie)", // nieuw, nalezen
+    'w.zuurstof': "tlen (jest w powietrzu; ogień go potrzebuje)", // nieuw, nalezen
+    'w.blussen': "gasić (ogień)", // nieuw, nalezen
+    'w.blusdeken': "koc gaśniczy", // nieuw, nalezen
+    'w.openvuur': "otwarty ogień (płomień, na przykład z zapalniczki albo palnika gazowego)", // nieuw, nalezen
+    'w.brandslang': "wąż pożarniczy (na zwijadle w ścianie)", // nieuw, nalezen
+    's.firefight.1': "Nigdy nie lej wody na płonący olej.", // nieuw, nalezen
+    's.firefight.2': "Samodzielnie gasisz tylko mały pożar.", // nieuw, nalezen
+    's.firefight.3': "Przykryj patelnię kocem gaśniczym.", // nieuw, nalezen
+    'c.firefight.q': "Pali się w koszu na śmieci!", // nieuw, nalezen
+    'c.firefight.a': "Ogień jest mały. Wezmę gaśnicę.", // nieuw, nalezen
+    'l.permitwork': "Pozwolenia, przestrzenie zamknięte i podnoszenie ładunków", // nieuw, nalezen
+    'w.werkvergunningveilig': "pozwolenie na pracę niebezpieczną (dokument bezpieczeństwa przy niebezpiecznej pracy: co, gdzie i jakie zagrożenia; to nie są twoje dokumenty pobytowe ani dokumenty do pracy)", // nieuw, nalezen
+    'w.beslotenruimte': "przestrzeń zamknięta (zbiornik, studzienka albo kanał: mała, z małą ilością świeżego powietrza)", // nieuw, nalezen
+    'w.gasmeting': "pomiar gazów (mierzysz powietrze, zanim wejdziesz)", // nieuw, nalezen
+    'w.mangatwacht': "asekurujący przy włazie (osoba, która zostaje na zewnątrz przy otworze, utrzymuje kontakt i podnosi alarm)", // nieuw, nalezen
+    'w.signaalgever': "sygnalista (osoba, która daje operatorowi dźwigu znaki rękami)", // nieuw, nalezen
+    'w.hijsen': "podnosić (ładunek dźwigiem)", // nieuw, nalezen
+    's.permitwork.1': "Bez pozwolenia na pracę niebezpieczną nie zaczynamy.", // nieuw, nalezen
+    's.permitwork.2': "Najpierw pomiar gazów, dopiero potem do przestrzeni zamkniętej.", // nieuw, nalezen
+    's.permitwork.3': "Patrz na sygnalistę: podnieś, opuść, stop.", // nieuw, nalezen
+    'c.permitwork.q': "Kto zostaje na zewnątrz przy zbiorniku?", // nieuw, nalezen
+    'c.permitwork.a': "Ja. Asekuruję przy włazie.", // nieuw, nalezen
+    'c.vog': "VOG: sprawdzenie twojej przeszłości", // nieuw, nalezen
+    'c.vog.b': "Przy niektórych pracach agencja albo pracodawca prosi o VOG (Verklaring Omtrent het Gedrag). To dokument od państwa: mówi, że twoja przeszłość nie jest problemem w tej pracy. W opiece, opiece nad dziećmi i ochronie prawie zawsze go potrzebujesz. Zwykle pracodawca zaczyna wniosek przez internet. Dostajesz e-mail od Justis, kończysz wniosek przez DigiD i płacisz. Najpierw zapytaj, kto płaci: często pracodawca zwraca te pieniądze. Dla wolontariuszy, którzy pracują z dziećmi albo z osobami wymagającymi szczególnej ochrony, często jest za darmo. Masz wpis w kartotece karnej? To nie zawsze oznacza, że nie dostaniesz VOG: Justis patrzy na to, co ma znaczenie w tej pracy. Masz wątpliwości? Zapytaj Juridisch Loket. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen
+    'c.vog.p': "Czy muszę płacić za VOG z własnej kieszeni?", // nieuw, nalezen
+    'c.vog.s': { m: "Twoja nowa praca w domu opieki wymaga VOG. Kilka lat temu miałeś problem z policją. Co robisz?", f: "Twoja nowa praca w domu opieki wymaga VOG. Kilka lat temu miałaś problem z policją. Co robisz?", x: "Twoja nowa praca w domu opieki wymaga VOG. Kilka lat temu był w twoim życiu problem z policją. Co robisz?" }, // nieuw, nalezen
+    'c.vog.o1': "Złóż wniosek, a jeśli się martwisz, zapytaj Juridisch Loket.", // nieuw, nalezen
+    'c.vog.o2': "Nie składaj wniosku: i tak nigdy go nie dostaniesz.", // nieuw, nalezen
+    'c.vog.o3': "Powiedz, że nie masz czasu, i szukaj innej pracy.", // nieuw, nalezen
+    'c.vog.w': "Justis patrzy tylko na to, co ma znaczenie w tej pracy. Wiele osób z czymś w przeszłości i tak dostaje VOG. Kiedy masz wątpliwości, rada pomaga.", // nieuw, nalezen
+    'c.safetysigns': "Co to jest VCA?", // nieuw, nalezen
+    'c.safetysigns.b': "VCA to certyfikat bezpieczeństwa. Wiele firm, także przy pracy przez agencję, wymaga go, na przykład w budownictwie i przemyśle. Większość pracowników robi B-VCA (VCA Basis); przełożony robi VOL-VCA. Robisz kurs i egzamin z pytaniami wielokrotnego wyboru w uznanym centrum egzaminacyjnym. Egzamin często można zdawać w kilku językach, na przykład po angielsku albo po polsku: zapytaj centrum egzaminacyjne. Dyplom jest ważny 10 lat. Często płaci pracodawca albo agencja: zapytaj, zanim zapłacisz z własnej kieszeni. Agencja nie może potrącać z twojej wypłaty dowolnych kosztów (zobacz temat o pracy przez agencję). W tych lekcjach poznajesz kilka słów, które spotkasz przy bezpiecznej pracy i w VCA. Do VCA robisz kurs i egzamin. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen
+    'c.safetysigns.p': "Kto płaci za kurs VCA?", // nieuw, nalezen
+    'c.safetysigns.s': "Agencja mówi: „Potrzebujesz VCA. Zapłać za kurs albo potrącimy to z twojej wypłaty.” Co robisz?", // nieuw, nalezen
+    'c.safetysigns.o1': "Zapytaj, kto płaci, i poproś o to na piśmie.", // nieuw, nalezen
+    'c.safetysigns.o2': "Od razu zapłać, żeby dostać pracę.", // nieuw, nalezen
+    'c.safetysigns.o3': "Nic nie mów i podpisz.", // nieuw, nalezen
+    'c.safetysigns.w': "Często za VCA płaci pracodawca albo agencja. Jeśli musisz coś zapłacić, chcesz to wiedzieć wcześniej, na papierze.", // nieuw, nalezen
+    'c.substances': "Przeczytaj etykietę, potem pracuj", // nieuw, nalezen
+    'c.substances.b': "Niebezpieczny środek ma na etykiecie czerwony romb z czarnym obrazkiem w środku: symbol zagrożenia. Obrazek pokazuje zagrożenie, na przykład ogień, truciznę albo środek, który pali skórę. Etykieta i karta charakterystyki (veiligheidsblad) mówią, jak bezpiecznie z nim pracować i co robić, jeśli coś pójdzie źle. Noś to, co tam jest napisane: rękawice, okulary ochronne albo maskę. Zakręć zakrętkę i odłóż środek na jego własne miejsce. Nigdy nie wlewaj go do butelki na napoje: ktoś może go wypić. Nie jedz, nie pij i nie pal, kiedy z nim pracujesz, a potem umyj ręce. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.substances.p': "Gdzie jest karta charakterystyki tego środka?", // nieuw, nalezen
+    'c.substances.s': "Kolega wlewa środek czyszczący do pustej butelki po wodzie, żeby zabrać go ze sobą. Co robisz?", // nieuw, nalezen
+    'c.substances.o1': "Powiedz, że to niebezpieczne: ktoś może to wypić.", // nieuw, nalezen
+    'c.substances.o2': "Nic: to jego własna butelka.", // nieuw, nalezen
+    'c.substances.o3': "Naklej na butelkę małą naklejkę.", // nieuw, nalezen
+    'c.substances.w': "W butelce na napoje środek wygląda jak woda albo lemoniada. Ktoś może go wypić przez pomyłkę. Środek zostaje w swoim opakowaniu, z etykietą.", // nieuw, nalezen
+    'c.firefight': "Mały pożar czy duży pożar?", // nieuw, nalezen
+    'c.firefight.b': "Ogień potrzebuje trzech rzeczy: paliwa, powietrza i ciepła. To jest trójkąt spalania. Zabierz jedną z nich, a ogień zgaśnie. Koc gaśniczy odcina powietrze. Woda zabiera ciepło, ale nigdy nie używaj wody na płonący olej albo tłuszcz ani na urządzenia elektryczne. Spójrz na gaśnicę: jest na niej napisane, do czego służy. Piana i proszek działają na wiele pożarów; CO2 jest dobry na pożary urządzeń elektrycznych. Trzymaj iskry i otwarty ogień z dala od środków, które łatwo się palą. Samodzielnie gaś tylko mały pożar i tylko wtedy, gdy jest to bezpieczne. Jest większy? Wyjdź, zamknij za sobą drzwi i podnieś alarm. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.firefight.p': "Gdzie wisi koc gaśniczy?", // nieuw, nalezen
+    'c.firefight.s': "W stołówce zapala się olej na patelni. Płomienie są jeszcze małe. Co robisz?", // nieuw, nalezen
+    'c.firefight.o1': "Przykryj patelnię kocem gaśniczym.", // nieuw, nalezen
+    'c.firefight.o2': "Wylej na to szklankę wody.", // nieuw, nalezen
+    'c.firefight.o3': "Wynieś patelnię na zewnątrz.", // nieuw, nalezen
+    'c.firefight.w': "Woda na płonącym oleju robi dużą kulę ognia. Koc odcina powietrze i ogień gaśnie. Jeśli możesz, wyłącz grzanie.", // nieuw, nalezen
+    'c.permitwork': "Niebezpieczna praca: najpierw pozwolenie", // nieuw, nalezen
+    'c.permitwork.b': "Przy niebezpiecznej pracy, na przykład przy spawaniu blisko rzeczy, które się palą, albo przy pracy w zbiorniku lub studzience, firma często używa pozwolenia na pracę niebezpieczną (werkvergunning). To dokument bezpieczeństwa, a nie twoje dokumenty pobytowe ani dokumenty do pracy. Jest w nim napisane, co robisz, gdzie, jakie są zagrożenia i co z nimi zrobić. Przeczytaj je i zacznij dopiero wtedy, gdy jest podpisane. W przestrzeni zamkniętej może być za mało powietrza albo niebezpieczny gaz: najpierw pomiar gazów, a asekurujący zostaje na zewnątrz przy włazie. Ktoś w środku ma problem? Podnieś alarm: nigdy nie wchodź bez ochrony. Przy dźwigu znaki daje jedna osoba: sygnalista. Nigdy nie stój pod wiszącym ładunkiem. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.permitwork.p': "Czy pozwolenie na pracę niebezpieczną jest już podpisane?", // nieuw, nalezen
+    'c.permitwork.s': "Twój kolega w zbiorniku nie odpowiada. Ty asekurujesz przy włazie. Co robisz?", // nieuw, nalezen
+    'c.permitwork.o1': "Podnieś alarm i zostań na zewnątrz.", // nieuw, nalezen
+    'c.permitwork.o2': "Szybko wejdź do środka, żeby mu pomóc.", // nieuw, nalezen
+    'c.permitwork.o3': "Poczekaj kilka minut, potem zajrzyj.", // nieuw, nalezen
+    'c.permitwork.w': "Gaz, który zaszkodził koledze, może zaszkodzić też tobie. Wiele ofiar w zbiornikach to osoby, które weszły, żeby pomóc. Po alarmie przychodzi pomoc ze sprzętem ochronnym.", // nieuw, nalezen
   },
 };
 

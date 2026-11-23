@@ -4798,6 +4798,108 @@ const t: CultureTranslation = {
     'c.device.o2': "Lo metes en tu ordenador para ver de quién es.", // nieuw, nalezen
     'c.device.o3': "Te lo llevas a casa y lo miras allí.", // nieuw, nalezen
     'c.device.w': "Un pendrive puede tener un virus, también si parece interesante. El departamento de informática lo puede revisar de forma segura.", // nieuw, nalezen
+    // "Veiligheid op het werk" (four lessons) and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
+    'u.safework': "La seguridad en el trabajo", // nieuw, nalezen
+    'l.vog': "Tu pasado: el VOG", // nieuw, nalezen
+    'w.vog': "el certificado de buena conducta (VOG: un papel del gobierno que dice que tu pasado no es un problema para este trabajo)", // nieuw, nalezen
+    'w.strafblad': "los antecedentes penales (los delitos por los que un tribunal te ha declarado culpable)", // nieuw, nalezen
+    'w.screening': "la comprobación de antecedentes (una revisión de tu pasado antes de empezar)", // nieuw, nalezen
+    'w.personenregister': "el registro de cuidado infantil (todas las personas que trabajan en el cuidado de niños tienen que estar en él)", // nieuw, nalezen
+    'w.beveiligerspas': "la tarjeta de vigilante de seguridad (la tarjeta que necesitas para trabajar como vigilante)", // nieuw, nalezen
+    'w.verleden': "el pasado", // nieuw, nalezen
+    's.vog.1': "En los cuidados casi siempre piden un VOG.", // nieuw, nalezen
+    's.vog.2': "Tengo un VOG y estoy en el registro de cuidado infantil.", // nieuw, nalezen
+    's.vog.3': "Recibo mi tarjeta de vigilante después de la comprobación.", // nieuw, nalezen
+    'c.vog.q': "La agencia pide un VOG. ¿Ya lo tienes?", // nieuw, nalezen
+    'c.vog.a': "No. Todavía espero el correo de Justis.", // nieuw, nalezen
+    'l.safetysigns': "Las señales de seguridad", // nieuw, nalezen
+    'w.verbodsbord': "la señal de prohibición (un círculo rojo con una línea encima: no puedes hacer esto)", // nieuw, nalezen
+    'w.gebodsbord': "la señal de obligación (un círculo azul con un dibujo blanco: tienes que hacer esto)", // nieuw, nalezen
+    'w.waarschuwingsbord': "la señal de advertencia (un triángulo amarillo con borde negro: cuidado, peligro)", // nieuw, nalezen
+    'w.reddingsbord': "la señal de salvamento (un rectángulo verde: el camino de salida, o los primeros auxilios)", // nieuw, nalezen
+    'w.brandbord': "la señal de equipos contra incendios (un cuadrado rojo: aquí hay un extintor o una manguera contra incendios)", // nieuw, nalezen
+    'w.pictogram': "el pictograma (un dibujo sencillo que dice algo sin palabras)", // nieuw, nalezen
+    's.safetysigns.1': "Una señal redonda roja significa: eso no está permitido.", // nieuw, nalezen
+    's.safetysigns.2': "Una señal azul dice lo que tienes que hacer.", // nieuw, nalezen
+    's.safetysigns.3': "Sigue las señales verdes hasta la salida de emergencia.", // nieuw, nalezen
+    'c.safetysigns.q': "¿Qué significa esta señal amarilla?", // nieuw, nalezen
+    'c.safetysigns.a': "Cuidado, peligro. Es una señal de advertencia.", // nieuw, nalezen
+    'l.substances': "Las sustancias peligrosas", // nieuw, nalezen
+    'w.stofmasker': "la mascarilla contra el polvo (te tapa la nariz y la boca)", // nieuw, nalezen
+    'w.giftig': "tóxico, venenoso", // nieuw, nalezen
+    'w.bijtend': "corrosivo (te quema la piel o se come el metal)", // nieuw, nalezen
+    'w.drinkfles': "la botella de bebida", // nieuw, nalezen
+    'w.opbergen': "guardar (en su propio sitio, por ejemplo un armario que se cierra con llave)", // nieuw, nalezen
+    'w.dop': "el tapón (de una botella o de una lata)", // nieuw, nalezen
+    's.substances.1': "Mira primero el símbolo de peligro en la etiqueta.", // nieuw, nalezen
+    's.substances.2': "Nunca lo eches en una botella de bebida.", // nieuw, nalezen
+    's.substances.3': "Aquí tienes que llevar mascarilla contra el polvo.", // nieuw, nalezen
+    'c.substances.q': "¿Este producto es tóxico?", // nieuw, nalezen
+    'c.substances.a': "Eso pone en la ficha de seguridad. Lo voy a mirar.", // nieuw, nalezen
+    'l.firefight': "El fuego", // nieuw, nalezen
+    'w.branddriehoek': "el triángulo del fuego (el fuego necesita combustible, aire y calor; quita uno y el fuego se apaga)", // nieuw, nalezen
+    'w.zuurstof': "el oxígeno (está en el aire; el fuego lo necesita)", // nieuw, nalezen
+    'w.blussen': "apagar (un fuego)", // nieuw, nalezen
+    'w.blusdeken': "la manta ignífuga", // nieuw, nalezen
+    'w.openvuur': "el fuego abierto (una llama, por ejemplo de un mechero o de un quemador de gas)", // nieuw, nalezen
+    'w.brandslang': "la manguera contra incendios (en un carrete en la pared)", // nieuw, nalezen
+    's.firefight.1': "Nunca eches agua sobre aceite que arde.", // nieuw, nalezen
+    's.firefight.2': "Solo un fuego pequeño lo apagas tú.", // nieuw, nalezen
+    's.firefight.3': "Pon la manta ignífuga sobre la sartén.", // nieuw, nalezen
+    'c.firefight.q': "¡Hay fuego en la papelera!", // nieuw, nalezen
+    'c.firefight.a': "Es pequeño. Voy a por el extintor.", // nieuw, nalezen
+    'l.permitwork': "Permisos, espacios confinados e izado de cargas", // nieuw, nalezen
+    'w.werkvergunningveilig': "el permiso de seguridad (un papel de seguridad para trabajos peligrosos: qué, dónde y qué peligros; no son tus papeles de residencia o de trabajo)", // nieuw, nalezen
+    'w.beslotenruimte': "el espacio confinado (un tanque, un foso o una alcantarilla: pequeño, con poco aire fresco)", // nieuw, nalezen
+    'w.gasmeting': "la medición de gases (mides el aire antes de entrar)", // nieuw, nalezen
+    'w.mangatwacht': "el vigilante de entrada (la persona que se queda fuera en la abertura, mantiene el contacto y da la alarma)", // nieuw, nalezen
+    'w.signaalgever': "el señalista (la persona que hace señales con las manos al gruista)", // nieuw, nalezen
+    'w.hijsen': "izar (una carga con la grúa)", // nieuw, nalezen
+    's.permitwork.1': "Sin permiso de seguridad no empezamos.", // nieuw, nalezen
+    's.permitwork.2': "Primero una medición de gases, y solo entonces al espacio confinado.", // nieuw, nalezen
+    's.permitwork.3': "Mira al señalista: izar, bajar, parar.", // nieuw, nalezen
+    'c.permitwork.q': "¿Quién se queda fuera junto al tanque?", // nieuw, nalezen
+    'c.permitwork.a': { m: "Yo. Soy el vigilante de entrada.", f: "Yo. Soy la vigilante de entrada.", x: "Yo. Me toca vigilar la entrada." }, // nieuw, nalezen
+    'c.vog': "El VOG: una revisión de tu pasado", // nieuw, nalezen
+    'c.vog.b': "Para algunos trabajos, la agencia o la empresa te pide un VOG (Verklaring Omtrent het Gedrag). Es un papel del gobierno: dice que tu pasado no es un problema para este trabajo. En los cuidados, el cuidado infantil y la seguridad casi siempre lo necesitas. Normalmente la empresa empieza la solicitud por internet. Recibes un correo de Justis, y la terminas con DigiD y pagas. Pregunta primero quién paga: muchas veces la empresa te lo devuelve. Para los voluntarios que trabajan con niños o con personas vulnerables, muchas veces es gratis. ¿Tienes antecedentes? Eso no siempre significa que no te dan el VOG: Justis mira lo que importa para este trabajo. ¿Tienes dudas? Pregunta al Juridisch Loket. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.", // nieuw, nalezen
+    'c.vog.p': "¿Tengo que pagar yo el VOG?", // nieuw, nalezen
+    'c.vog.s': "Tu nuevo trabajo en una residencia pide un VOG. Hace años tuviste un problema con la policía. ¿Qué haces?", // nieuw, nalezen
+    'c.vog.o1': "Lo pides, y preguntas al Juridisch Loket si te preocupa.", // nieuw, nalezen
+    'c.vog.o2': "No lo pides: nunca te lo van a dar.", // nieuw, nalezen
+    'c.vog.o3': "Dices que no tienes tiempo, y buscas otro trabajo.", // nieuw, nalezen
+    'c.vog.w': "Justis solo mira lo que importa para el trabajo. Mucha gente con algo en su pasado consigue igualmente un VOG. Un consejo ayuda si tienes dudas.", // nieuw, nalezen
+    'c.safetysigns': "¿Qué es el VCA?", // nieuw, nalezen
+    'c.safetysigns.b': "El VCA es un certificado de seguridad. Muchas empresas lo piden, también a través de una agencia, por ejemplo en la construcción y la industria. La mayoría de los trabajadores hace el B-VCA (VCA Basis); un encargado hace el VOL-VCA. Haces un curso, y un examen tipo test en un centro de examen reconocido. Muchas veces puedes hacer el examen en varios idiomas, por ejemplo en inglés o en polaco: pregunta al centro de examen. El diploma vale 10 años. Muchas veces paga la empresa o la agencia: pregunta antes de pagar tú. Una agencia no te puede quitar cualquier gasto del sueldo (mira el tema sobre el trabajo por agencia). En estas lecciones aprendes algunas palabras que encuentras en el trabajo seguro y en el VCA. Para el VCA haces un curso y un examen. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.", // nieuw, nalezen
+    'c.safetysigns.p': "¿Quién paga el curso VCA?", // nieuw, nalezen
+    'c.safetysigns.s': "Una agencia dice: \"Necesitas el VCA. Pagas tú el curso, o te lo quitamos del sueldo.\" Y tú, ¿qué haces?", // nieuw, nalezen
+    'c.safetysigns.o1': "Preguntas quién paga, y pides que te lo den por escrito.", // nieuw, nalezen
+    'c.safetysigns.o2': "Pagas enseguida, para conseguir el trabajo.", // nieuw, nalezen
+    'c.safetysigns.o3': "No dices nada, y firmas.", // nieuw, nalezen
+    'c.safetysigns.w': "Muchas veces la empresa o la agencia paga el VCA. Si tienes que pagar algo, quieres saberlo antes, por escrito.", // nieuw, nalezen
+    'c.substances': "Lee la etiqueta, y luego trabaja", // nieuw, nalezen
+    'c.substances.b': "Un producto peligroso tiene en la etiqueta un rombo rojo con un dibujo negro dentro: el símbolo de peligro. El dibujo muestra el peligro, por ejemplo fuego, veneno o un producto que te quema la piel. La etiqueta y la ficha de seguridad (veiligheidsblad) dicen cómo trabajar con él de forma segura, y qué hacer si algo sale mal. Ponte lo que dicen: guantes, gafas de seguridad o una mascarilla. Cierra el tapón, y guarda el producto en su propio sitio. Nunca lo eches en una botella de bebida: alguien se lo puede beber. No comas, no bebas ni fumes mientras trabajas con él, y lávate las manos después. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.substances.p': "¿Dónde está la ficha de seguridad de este producto?", // nieuw, nalezen
+    'c.substances.s': "Un compañero echa un producto de limpieza en una botella de agua vacía, para llevárselo. ¿Qué haces?", // nieuw, nalezen
+    'c.substances.o1': "Dices que es peligroso: alguien se lo puede beber.", // nieuw, nalezen
+    'c.substances.o2': "Nada: es su propia botella.", // nieuw, nalezen
+    'c.substances.o3': "Pones una pegatina pequeña en la botella.", // nieuw, nalezen
+    'c.substances.w': "En una botella de bebida, un producto parece agua o limonada. Alguien se lo puede beber sin querer. Un producto se queda en su propio envase, con la etiqueta.", // nieuw, nalezen
+    'c.firefight': "¿Fuego pequeño o fuego grande?", // nieuw, nalezen
+    'c.firefight.b': "El fuego necesita tres cosas: combustible, aire y calor. Esto es el triángulo del fuego. Quita una, y el fuego se apaga. Una manta ignífuga quita el aire. El agua quita el calor, pero nunca uses agua sobre aceite o grasa que arde, ni sobre aparatos eléctricos. Mira el extintor: pone para qué sirve. La espuma y el polvo sirven para muchos fuegos; el CO2 es bueno para fuegos eléctricos. Mantén las chispas y el fuego abierto lejos de productos que arden fácilmente. Apaga tú solamente un fuego pequeño, y solo cuando sea seguro. ¿Es más grande? Sal, cierra la puerta detrás de ti, y da la alarma. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.firefight.p': "¿Dónde está la manta ignífuga?", // nieuw, nalezen
+    'c.firefight.s': "En el comedor, se prende el aceite de una sartén. Las llamas todavía son pequeñas. ¿Qué haces?", // nieuw, nalezen
+    'c.firefight.o1': "Pones la manta ignífuga sobre la sartén.", // nieuw, nalezen
+    'c.firefight.o2': "Le echas un vaso de agua.", // nieuw, nalezen
+    'c.firefight.o3': "Sacas la sartén fuera.", // nieuw, nalezen
+    'c.firefight.w': "El agua sobre aceite que arde hace una gran bola de fuego. La manta quita el aire, y el fuego se apaga. Apaga el fuego de la cocina si puedes.", // nieuw, nalezen
+    'c.permitwork': "Trabajo peligroso: primero el permiso", // nieuw, nalezen
+    'c.permitwork.b': "Para trabajos peligrosos, como soldar cerca de cosas que arden, o trabajar en un tanque o un foso, la empresa muchas veces usa un permiso de seguridad (werkvergunning). Es un papel de seguridad, no son tus papeles de residencia o de trabajo. Dice qué haces, dónde, qué peligros hay y qué hacer contra ellos. Léelo, y empieza solo cuando esté firmado. En un espacio confinado puede haber demasiado poco aire o un gas peligroso: primero una medición de gases, y un vigilante de entrada se queda fuera. ¿Alguien tiene problemas dentro? Da la alarma: nunca entres sin protección. Con una grúa, una sola persona hace las señales: el señalista. Nunca te pongas debajo de una carga colgada. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.permitwork.p': "¿Ya está firmado el permiso de seguridad?", // nieuw, nalezen
+    'c.permitwork.s': "Tu compañero dentro de un tanque no contesta. Tú vigilas la entrada. ¿Qué haces?", // nieuw, nalezen
+    'c.permitwork.o1': "Das la alarma, y te quedas fuera.", // nieuw, nalezen
+    'c.permitwork.o2': "Entras rápido para ayudarle.", // nieuw, nalezen
+    'c.permitwork.o3': "Esperas unos minutos, y luego miras.", // nieuw, nalezen
+    'c.permitwork.w': "El gas que le ha hecho daño a tu compañero también te puede hacer daño a ti. Muchas víctimas en tanques eran personas que querían ayudar. Después de la alarma, llega ayuda con protección.", // nieuw, nalezen
   },
 };
 
