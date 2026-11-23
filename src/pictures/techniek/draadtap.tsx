@@ -35,7 +35,7 @@ export default {
         {/* The steel block and the hole in its top */}
         {block(24, 80, 62, 22, 20, PAL.steel, PAL.mist, PAL.slate)}
         <ellipse cx={HX} cy={HY} rx="9" ry="3.6" fill={PAL.slateDark} />
-        <Move kind="from" dy={-12}>
+        <Move kind="from" dy={-20}>
         {/* The tap: a threaded steel bit, its lower end in the hole */}
         <clipPath id={id}>
           <path d={`M${HX - 6} 40H${HX + 6}V${HY}A6 2.4 0 0 1 ${HX - 6} ${HY}Z`} />

@@ -24,7 +24,7 @@ export default {
       <path d="M46 92V84L78 80V92Z" fill={PAL.slate} />
       <path d="M50 87.4L75 84.4" stroke={PAL.steel} strokeWidth="2" strokeLinecap="round" />
       {/* The boot: sole, upper (shaded on the right), collar, laces; its toe in the opening on the pedal */}
-      <Move kind="from" dy={-7}>
+      <Move kind="from" dy={-20}>
       <g transform="translate(20 100) rotate(-12) scale(0.95)">
         <rect x="-2" y="-7" width="58" height="7" rx="3" fill={PAL.ink} />
         <Shade color={BROWN_DARK} opacity={1} at={[58, -14, 14, 30]}>

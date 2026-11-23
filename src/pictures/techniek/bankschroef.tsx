@@ -42,7 +42,7 @@ export default {
       <rect x="66" y="44" width="5" height="18" fill={PAL.slate} />
       <Shine d="M76 50V68" width={3} opacity={0.6} />
       {/* The screw and its T-handle */}
-      <Move kind="from" dx={-10}>
+      <Move kind="from" dx={-22}>
         <rect x="15" y="58" width="15" height="8" rx="2" fill={PAL.steel} />
         <path d="M15 40V84" stroke={PAL.slate} strokeWidth="6" strokeLinecap="round" />
         <circle cx="15" cy="39" r="5.5" fill={PAL.slateDark} />
