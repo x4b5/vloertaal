@@ -141,6 +141,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "Мога да попитам дали един домат е достатъчно узрял.", // nieuw, nalezen
     'kjn.u.carservice.1': "Мога да кажа, че предупредителната лампичка свети.", // nieuw, nalezen
     'kjn.u.carservice.2': "Мога да попитам колко масло трябва да се сложи.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "Мога да кажа, че тревата е твърде мокра.", // nieuw, nalezen
+    'kjn.u.mowing.2': "Мога да попитам кои клони трябва да се махнат.", // nieuw, nalezen
+    'kjn.u.planting.1': "Мога да кажа, че има счупени стъкла.", // nieuw, nalezen
+    'kjn.u.planting.2': "Мога да попитам дали може да пресека пътя.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "Мога да поздравя посетител и да му помогна.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "Мога да попитам за кого е колетът.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "Мога да съобщя за повреда.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "Мога да попитам къде трябва да отиде едно бюро.", // nieuw, nalezen
+    'kjn.u.guarding.1': "Мога да поискам да видя документа за самоличност на някого.", // nieuw, nalezen
+    'kjn.u.guarding.2': "Мога да кажа по радиостанцията какво виждам.", // nieuw, nalezen
+    'kjn.u.incidents.1': "Мога да се обадя на 112 и да кажа какво се е случило.", // nieuw, nalezen
+    'kjn.u.incidents.2': "Мога да говоря спокойно с ядосан клиент.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "Мога да кажа, че в хладилната камера е твърде топло.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "Мога да попитам дали има ядки в него.", // nieuw, nalezen
+    'kjn.u.foodline.1': "Мога да кажа, че етикетът не е верен.", // nieuw, nalezen
+    'kjn.u.foodline.2': "Мога да попитам колко трябва да има в една кутийка.", // nieuw, nalezen
+    'kjn.u.collection.1': "Мога да помогна на шофьора да даде на заден ход.", // nieuw, nalezen
+    'kjn.u.collection.2': "Мога да кажа, че кофата на колела е твърде тежка.", // nieuw, nalezen
+    'kjn.u.recycling.1': "Мога да кажа на посетител къде отиват отпадъците му.", // nieuw, nalezen
+    'kjn.u.recycling.2': "Мога да кажа, че пресата е заседнала.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "Мога да кажа, че ще сменя памперса на дете.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "Мога да попитам дали детето вече е заспало.", // nieuw, nalezen
+    'kjn.u.daycare.1': "Мога да кажа на родител как е минал денят.", // nieuw, nalezen
+    'kjn.u.daycare.2': "Мога да попитам кой ще дойде да вземе детето.", // nieuw, nalezen
   },
 };
 

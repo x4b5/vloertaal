@@ -209,6 +209,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "Питат колко: литрите и как да се провери.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "Питат дали трябва да е нов: да, и защо.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Питат какво трябва да се направи: да се погледне работната поръчка.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "Питат дали може да се вземе: да, и какво да се направи първо.", // nieuw, nalezen
+    'c.pruning.a.why': "Питат кои клони: само сухите.", // nieuw, nalezen
+    'c.hedge.a.why': "Питат колко висок: до въжето, не по-ниско.", // nieuw, nalezen
+    'c.chainsaw.a.why': "Питат дали може: още не, и какво идва първо.", // nieuw, nalezen
+    'c.weeding.a.why': "Питат дали е плевел: не, и какво да се прави с него.", // nieuw, nalezen
+    'c.planting.a.why': "Питат къде отива: мястото в лехата.", // nieuw, nalezen
+    'c.roadside.a.why': "Питат дали може да се пресече: не, чакай, и защо.", // nieuw, nalezen
+    'c.litter.a.why': "Живущ пита кога: не знаеш, и кой знае.", // nieuw, nalezen
+    'c.reception.a.why': "Посетител има среща: един момент, ти се обаждаш.", // nieuw, nalezen
+    'c.visitors.a.why': "Питат къде отива палтото: мястото, и къде е то.", // nieuw, nalezen
+    'c.mailroom.a.why': "Питат за кого е: отделът, и етажът.", // nieuw, nalezen
+    'c.meetingroom.a.why': "Питат в колко часа: часът, и какво трябва да се направи.", // nieuw, nalezen
+    'c.faults.a.why': "Питат защо е студено: какво е развалено, и кога идва помощ.", // nieuw, nalezen
+    'c.repairs.a.why': "Питат дали пиука: да, и защо.", // nieuw, nalezen
+    'c.moving.a.why': "Питат къде отива: стаята, и къде да се погледне.", // nieuw, nalezen
+    'c.closing.a.why': "Питат дали има някой вътре: не, и какво правиш сега.", // nieuw, nalezen
+    'c.patrol.a.why': "Питат дали е видяно нещо: да, какво, и къде.", // nieuw, nalezen
+    'c.access.a.why': "Искат да влязат без карта: съжаляваме, не и без карта.", // nieuw, nalezen
+    'c.cameras.a.why': "Питат какво виждаш: кой, къде, и какво правиш.", // nieuw, nalezen
+    'c.report.a.why': "Питат какво пише в доклада: какво, къде и кога.", // nieuw, nalezen
+    'c.evacuation.a.why': "Питат дали всички са навън: не, колко липсват.", // nieuw, nalezen
+    'c.firstaid.a.why': "Питат къде е дефибрилаторът: мястото, и какво има до него.", // nieuw, nalezen
+    'c.shoplifting.a.why': "Питат дали може да се претърси чанта: не, и кой го прави.", // nieuw, nalezen
+    'c.aggression.a.why': "Питат защо не: причината, казана спокойно.", // nieuw, nalezen
+    'c.hygienelock.a.why': "Питат за часовник: не, и правилото зад това.", // nieuw, nalezen
+    'c.allergens.a.why': "Питат дали може да е заедно: не, и защо.", // nieuw, nalezen
+    'c.coldroom.a.why': "Питат защо пиука: причината, и какво да се направи.", // nieuw, nalezen
+    'c.foreignbody.a.why': "Питат какво да се прави: на кого да се покаже.", // nieuw, nalezen
+    'c.cutting.a.why': "Питат колко: теглото, и къде да се погледне.", // nieuw, nalezen
+    'c.labels.a.why': "Питат каква дата: кога, и къде да се погледне.", // nieuw, nalezen
+    'c.linecleaning.a.why': "Питат дали е чисто: още не, и какво остава.", // nieuw, nalezen
+    'c.haccp.a.why': "Питат защо: за да знаем, че храната е безопасна.", // nieuw, nalezen
+    'c.binlorry.a.why': "Питат дали може да се вози отзад: не, и къде да се вози.", // nieuw, nalezen
+    'c.reversing.a.why': "Молят за помощ: да, къде стоиш, и какво да се прави.", // nieuw, nalezen
+    'c.wastesorting.a.why': "Питат къде отива: кофата, и защо.", // nieuw, nalezen
+    'c.wastesafety.a.why': "Питат какво да се прави след порязване: да се измие, и да се каже.", // nieuw, nalezen
+    'c.yard.a.why': "Питат къде отива: контейнерът, и къде е той.", // nieuw, nalezen
+    'c.hazardous.a.why': "Питат какво има вътре: не знаеш, затова се оставя настрана.", // nieuw, nalezen
+    'c.baler.a.why': "Питат дали може да се погледне: не, и какво идва първо.", // nieuw, nalezen
+    'c.shovel.a.why': "Питат дали може да се мине: само когато шофьорът те вижда.", // nieuw, nalezen
+    'c.nappies.a.why': "Питат кога: часът, и къде е записан.", // nieuw, nalezen
+    'c.mealtime.a.why': "Питат дали той може да получи: не, защо, и къде да се погледне.", // nieuw, nalezen
+    'c.naptime.a.why': "Питат дали спи: да, от кога, и че ще провериш.", // nieuw, nalezen
+    'c.playtime.a.why': "Дете пита дали може да играе: да, къде, и какво после.", // nieuw, nalezen
+    'c.pickup.a.why': "Питат кой ще вземе детето: човекът, и че тя е в списъка.", // nieuw, nalezen
+    'c.childsafety.a.why': "Питат дали е паднала: да, какво има, и на кого се обаждаш.", // nieuw, nalezen
+    'c.sickchild.a.why': "Питат как е той: какво виждаш, и какво правиш.", // nieuw, nalezen
+    'c.grouprules.a.why': "Питат дали може да се излезе с групата без колега: да, но първо се казва на колега.", // nieuw, nalezen
   },
 };
 

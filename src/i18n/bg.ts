@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'Включено',
     settingOff: 'Изключено',
     sectorGroupMake: 'Производство и превоз',
-    sectorGroupCare: 'Грижа и обслужване',
+    sectorGroupCare: "Грижа за хора и деца", // nieuw, nalezen
     sectorGroupShop: 'Магазини и заведения', // nieuw, nalezen
     sectorGroupBuild: 'Строителство и техника', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Женски глас',
@@ -500,6 +500,14 @@ const lang: HelpLanguageSource = {
     sfeerStandard: 'Стандартно', // nieuw, nalezen
     sfeerGame: 'Игра', // nieuw, nalezen
     sfeerHint: 'Спокойно: нищо не се движи, няма празнувания. Стандартно: приложението, както си е. Игра: точки, звуци и много движение.', // nieuw, nalezen
+    sectorGroupService: "Обслужване и охрана", // nieuw, nalezen
+    sectorGroupOutdoor: "Работа на открито", // nieuw, nalezen
+    sectorChildcare: "Грижа за деца", // nieuw, nalezen
+    sectorWaste: "Отпадъци и рециклиране", // nieuw, nalezen
+    sectorFood: "Хранителна промишленост", // nieuw, nalezen
+    sectorSecurity: "Охрана", // nieuw, nalezen
+    sectorFacility: "Обслужване на сгради", // nieuw, nalezen
+    sectorGreen: "Зелени площи и градини", // nieuw, nalezen
     playLevel: 'Ниво', // nieuw, nalezen
     playLevel1: 'Начало', // nieuw, nalezen
     playLevel2: 'Учене', // nieuw, nalezen
