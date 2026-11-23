@@ -312,7 +312,7 @@ export default {
   'w.koffie': () => (
     <g>
       <Ground cx={70} cy={107} rx={34} ry={4} />
-      <Move kind="grow" grow={0.35}>
+      <Move kind="grow" grow={0.1}>
         {/* Stream */}
         <path d="M48 40Q62 44 66 70" fill="none" stroke={PAL.brown} strokeWidth="5" strokeLinecap="round" />
       </Move>

@@ -434,12 +434,12 @@ export default {
   ),
 
   // "de gemeente": the town hall — a stately building with a clock tower and the Dutch flag.
-  // On the intro card the wind lifts the flag from hanging to flying (three rounds).
+  // On the intro card the wind blows the flag out from the pole (three rounds).
   'w.gemeente': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4} />
       <path d="M60 22V6" stroke={PAL.steel} strokeWidth="2.4" strokeLinecap="round" />
-      <Move kind="turn" turn={30} at={[60, 6]}>
+      <Move kind="grow" grow={0.4}>
         <rect x="60" y="6" width="20" height="4.5" fill={PAL.red} />
         <rect x="60" y="10.5" width="20" height="4.5" fill={PAL.white} />
         <rect x="60" y="15" width="20" height="4.5" fill={PAL.blue} />
