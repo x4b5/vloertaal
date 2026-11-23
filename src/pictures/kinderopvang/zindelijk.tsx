@@ -36,8 +36,8 @@ export default {
       {/* The child's seat on the rim */}
       <ellipse cx="56" cy="60" rx="30" ry="6" fill={PAL.sky} />
       {/* The child: legs, the long shirt, arms, head */}
-      <path d="M48 70V90M64 70V90" stroke={SKIN.jada[0]} strokeWidth="8" />
-      <path d="M44 92H52M60 92H68" stroke={PAL.red} strokeWidth="6" />
+      <path d="M48 70V84M64 70V84" stroke={SKIN.jada[0]} strokeWidth="8" />
+      <path d="M44 87H52M60 87H68" stroke={PAL.red} strokeWidth="6" />
       <Shade color={PAL.yellowShade} opacity={1} at={[74, 56, 6, 20]}>
         <path d="M42 46Q42 38 50 38H62Q70 38 70 46V72Q56 76 42 72Z" fill={PAL.yellow} />
       </Shade>
@@ -46,8 +46,8 @@ export default {
       <circle cx="76" cy="64" r="4" fill={SKIN.jada[1]} />
       <ChildHead x={56} y={26} r={13} skin={SKIN.jada} hair={PAL.ink} />
       {/* The step */}
-      <rect x="32" y="94" width="48" height="10" rx="3" fill={PAL.green} />
-      <rect x="70" y="94" width="10" height="10" rx="3" fill={PAL.greenShade} />
+      <rect x="32" y="90" width="48" height="14" rx="3" fill={PAL.green} />
+      <rect x="70" y="90" width="10" height="14" rx="3" fill={PAL.greenShade} />
       <Shine d="M27 64Q28 74 34 80" width={3} opacity={0.8} />
       <Tick x={98} y={30} r={13} color={PAL.ok} shade={PAL.okShade} />
     </g>

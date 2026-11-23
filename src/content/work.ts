@@ -2193,7 +2193,7 @@ const frontdeskUnit = unit('frontdesk', 'Reception, post and meetings', 'Recepti
       ['Ik verbind u door.', 'I will put you through.'],
       ['Neemt u even plaats in de wachtruimte.', 'Please take a seat in the waiting area.'],
     ],
-    [['Ik heb een afspraak met mevrouw Jansen.', 'I have an appointment with Mrs Jansen.'], ['Een moment. Ik bel hem even.', 'One moment. I will call him.']],
+    [['Ik heb een afspraak met mevrouw Jansen.', 'I have an appointment with Mrs Jansen.'], ['Een moment. Ik bel haar even.', 'One moment. I will call her.']],
   ),
   lesson(
     'visitors',

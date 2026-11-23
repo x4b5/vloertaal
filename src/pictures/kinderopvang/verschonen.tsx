@@ -7,8 +7,8 @@ const TINT = '#e3f5ff';
 const OPEN = 'M36 44H88L86 58Q76 64 74 74Q74 82 80 90H44Q50 82 50 74Q48 64 38 58Z';
 
 export default {
-  // "verschonen": to change (a nappy) — on a padded green changing mat a hand from above lays down a
-  // clean nappy, open and flat, its tapes ready; the used nappy lies rolled up and closed at the side.
+  // "verschonen": to change (a nappy) — on a padded green changing mat a hand lays down a clean
+  // nappy by its tape, open and flat, its tapes ready; the used nappy lies rolled up and closed at the side.
   // (Only the mat and the nappies, no child.)
   // On the intro card the hand brings the clean nappy down onto the mat (once: one change).
   'w.verschonen': () => (
@@ -30,7 +30,7 @@ export default {
         <path d="M80 90H64Q70 80 70 72Q72 62 86 58Q76 64 74 74Q74 82 80 90Z" fill={PAL.paperShade} opacity=".7" />
         <path d="M37 46L28 47L29 55L38 54Z" fill={PAL.sky} />
         <path d="M87 46L96 47L95 55L86 54Z" fill={PAL.skyShade} />
-        <Hand pose="hold" x={62} y={22} rotate={180} scale={0.6} skin={SKIN.henk} sleeve={[PAL.purple, PAL.purpleShade]} />
+        <Hand pose="hold" x={112} y={52} rotate={-90} scale={0.55} skin={SKIN.henk} sleeve={[PAL.purple, PAL.purpleShade]} />
       </Move>
       <Sparkle x={100} y={68} r={7} color={PAL.yellow} />
     </g>

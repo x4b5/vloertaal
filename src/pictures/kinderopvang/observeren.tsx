@@ -37,7 +37,7 @@ export default {
         <rect x="24" y="64" width="14" height="7" rx="2.5" fill={PAL.steel} />
         <path d="M20 82H42M20 90H42M20 98H34" stroke={PAL.line} strokeWidth="2.2" />
         {/* The pen, writing along the last line */}
-        <Move kind="fast" dx={-14}>
+        <Move kind="fast" dx={-20}>
           <path d="M36 98L52 82" stroke={PAL.sky} strokeWidth="4.4" />
           <path d="M36 98L33.6 100.6" stroke={PAL.ink} strokeWidth="2.2" />
         </Move>

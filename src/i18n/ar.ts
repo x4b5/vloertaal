@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'تشغيل',
     settingOff: 'إيقاف',
     sectorGroupMake: 'الصنع والنقل',
-    sectorGroupCare: 'الرعاية والخدمة',
+    sectorGroupCare: "الرعاية والأطفال", // nieuw, nalezen
     sectorGroupShop: 'المتاجر والمطاعم', // nieuw, nalezen
     sectorGroupBuild: 'البناء والتقنية', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'صوت امرأة',
@@ -499,6 +499,14 @@ const lang: HelpLanguageSource = {
     sfeerStandard: 'عادي', // nieuw, nalezen
     sfeerGame: 'لعبة', // nieuw, nalezen
     sfeerHint: 'هادئ: لا شيء يتحرك، ولا احتفالات. عادي: التطبيق كما هو. لعبة: نقاط وأصوات وحركة كثيرة.', // nieuw, nalezen
+    sectorGroupService: "الخدمة والأمن", // nieuw, nalezen
+    sectorGroupOutdoor: "العمل في الخارج", // nieuw, nalezen
+    sectorChildcare: "رعاية الأطفال", // nieuw, nalezen
+    sectorWaste: "النفايات وإعادة التدوير", // nieuw, nalezen
+    sectorFood: "صناعة الأغذية", // nieuw, nalezen
+    sectorSecurity: "الأمن والحراسة", // nieuw, nalezen
+    sectorFacility: "خدمات المرافق", // nieuw, nalezen
+    sectorGreen: "المساحات الخضراء والحدائق", // nieuw, nalezen
     playLevel: 'المستوى', // nieuw, nalezen
     playLevel1: 'البداية', // nieuw, nalezen
     playLevel2: 'التعلّم', // nieuw, nalezen
