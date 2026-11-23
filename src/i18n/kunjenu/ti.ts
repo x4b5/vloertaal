@@ -180,6 +180,9 @@ const t: CultureTranslation = {
     // "Veiligheid op het werk" and the VOG (23 November 2026).
     'kjn.u.safework.1': "ብዛዕባ ምልክታት ድሕንነትን ሓዊን ገለ ቃላት ክፈልጥ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.safework.2': "ሓደ ፍርያት መርዛም እንተ ኾይኑ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'kjn.u.process.1': "እቲ ጸቕጢ ካብ ዓቐኑ ንላዕሊ ምዃኑ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.process.2': "ኣብ ምርኽኻብ እንታይ ከም ዘጋጠመ ክነግር እኽእል እየ።", // nieuw, nalezen
   },
 };
 

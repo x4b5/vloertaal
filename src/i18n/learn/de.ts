@@ -311,6 +311,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "Gesagt, dass es brennt: Es ist klein, also den Feuerlöscher holen.", // nieuw, nalezen
     'c.permitwork.a.why': "Gefragt, wer draußen bleibt: man selbst, und die eigene Aufgabe.", // nieuw, nalezen
     'c.vog.a.why': "Nach dem VOG gefragt: noch nicht, und worauf man wartet.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "Nach dem Alarm gefragt: was zu hoch ist, und wo.", // nieuw, nalezen
+    'c.plantfault.a.why': "Gefragt, ob man starten darf: nein, es ist noch ein Schloss dran.", // nieuw, nalezen
+    'c.shiftwork.a.why': "Gefragt, was passiert ist: die Störung, und wo sie aufgeschrieben ist.", // nieuw, nalezen
+    'c.heatdust.a.why': "Nach dem Handy gefragt: nein, wegen der Gefahr hier.", // nieuw, nalezen
   },
 };
 

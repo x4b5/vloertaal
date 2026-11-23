@@ -312,6 +312,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "ሓዊ ከም ዘሎ ተነጊሩ: ንእሽቶ እዩ፡ ስለዚ መጥፍኢ ሓዊ ምምጻእ።", // nieuw, nalezen
     'c.permitwork.a.why': "መን ኣብ ደገ ከም ዝጸንሕ ተሓቲቱ: ኣነ፡ ዕማመይ ድማ።", // nieuw, nalezen
     'c.vog.a.why': "ብዛዕባ VOG ተሓቲቱ: ገና ኣይኮነን፡ እንታይ ይጽበ ከም ዘሎ ድማ።", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "ብዛዕባ እቲ ኣላርም ተሓቲቱ: እንታይ ካብ ዓቐኑ ንላዕሊ ምዃኑ፡ ኣበይ ድማ።", // nieuw, nalezen
+    'c.plantfault.a.why': "ክብገስ ይኽእል እንተ ኾይኑ ተሓቲቱ: ኣይፋል፡ ገና ቁልፊ ኣብኡ ኣሎ።", // nieuw, nalezen
+    'c.shiftwork.a.why': "እንታይ ከም ዘጋጠመ ተሓቲቱ: እቲ ብልሽት፡ ኣበይ ከም ዝተጻሕፈ ድማ።", // nieuw, nalezen
+    'c.heatdust.a.why': "ብዛዕባ ተሌፎን ተሓቲቱ: ኣይፋል፡ ብሰንኪ ኣብዚ ዘሎ ሓደጋ።", // nieuw, nalezen
   },
 };
 

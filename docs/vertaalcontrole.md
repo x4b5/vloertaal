@@ -2367,3 +2367,36 @@ De vier lessen van "Veiligheid op het werk" en de VOG-les zijn met AI vertaald i
 - brandblusser = qalabka dab-demiska; kraan = kireen; VOG = shahaadada dhaqan-wanaagga.
 ### de
 - Erlaubnisschein; Sicherungsposten; Einweiser; VOG = das VOG (Führungszeugnis).
+
+## Operator in de procesindustrie (23 november 2026)
+
+De vier lessen van "Operator in de procesindustrie" zijn met AI vertaald in alle 14 hulptalen, elke regel met `// nieuw, nalezen`. Let vooral op de titel (procesindustrie heeft in veel talen geen vaste term) en de vloertermen (controlekamer, technische dienst, ploeg, volcontinu). Wat een moedertaalspreker het eerst moet nalezen:
+
+### fr
+- u.process = Opérateur dans l’industrie de process; resetten = réarmer; aflosser = la relève.
+### ar
+- u.process = مشغّل في مصانع الإنتاج المستمر (omschrijving); smeltoven فرن الصهر, kiln فرن الحرق.
+### pl
+- sterownia, dział utrzymania ruchu, obchód, brygada, w ruchu ciągłym.
+### uk
+- u.process = Оператор на безперервному виробництві; перезмінка (spreektaal).
+### bg
+- контролната зала, отделът по поддръжка; resetten = нулирам (of ресетвам).
+### ro
+- camera de comandă; volcontinu = non-stop, în flux continuu.
+### es
+- aflosser = el sustituto; kwartsstof = polvo de cuarzo (of polvo de sílice?).
+### pt
+- resetten = fazer reset, rearmar; volcontinu = em contínuo, 24 horas por dia.
+### tr
+- vardiya şefi, bakım bölümü, kontrol odası; "no sparks" kıvılcım olmaz / kıvılcım yok.
+### fa
+- صنایع فرایندی; kwartsstof گرد کوارتز / سیلیس.
+### prs
+- صنایع پروسس (geen vaste term); آمر نوبت کاری; بخش تخنیکی.
+### ti
+- u.process letterlijk; waarde = ቁጽሪ; stoom ስቲም; slot = ቁልፊ (ook sleutel).
+### so
+- u.process omschreven; te hoog = xad-dhaafay; controlekamer qolka kontaroolka.
+### de
+- titel "Operator" of "Anlagenfahrer"?; Leitwarte; anfahren (jargon).

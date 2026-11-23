@@ -4900,6 +4900,88 @@ const t: CultureTranslation = {
     'c.permitwork.o2': "Si dhakhso ah u gal si aad u caawiso.", // nieuw, nalezen
     'c.permitwork.o3': "Sug dhowr daqiiqo, kadib eeg.", // nieuw, nalezen
     'c.permitwork.w': "Gaaska dhaawacay saaxiibkaa adigana wuu ku dhaawici karaa. Dhibbanayaal badan oo taangiyada ku jiray waxay ahaayeen caawiyayaal. Alaarmiga kadib, caawimo ilaalin leh ayaa timaadda.", // nieuw, nalezen
+    // "Operator in de procesindustrie", the fourth own unit of Productie (23 November 2026).
+    'u.process': "Hawl-wadeenka warshadaha wax-soo-saarka", // nieuw, nalezen
+    'l.plantround': "Wareegga iyo qolka kontaroolka", // nieuw, nalezen
+    'w.controlekamer': "qolka kontaroolka (halka hawl-wadeennadu ay warshadda oo dhan ka daawadaan shaashado)", // nieuw, nalezen
+    'w.operator': "hawl-wadeenka, operator-ka (qofka shaqaysiiya oo ilaaliya mashiinnada warshadda)", // nieuw, nalezen
+    'w.drukmeter': "cabbirka cadaadiska (mitir wareegsan oo irbad leh)", // nieuw, nalezen
+    'w.niveau': "heerka (inta uu taangi ama silo ka buuxo)", // nieuw, nalezen
+    'w.snelheid': "xawaaraha (sida dhakhsaha ah ee uu khad ama mashiin u socdo)", // nieuw, nalezen
+    'w.alarmmelding': "fariinta alaarmiga (digniin shaashadda ka muuqata oo sheegaysa in wax khaldan yihiin)", // nieuw, nalezen
+    's.plantround.1': "Waxaan socdaa wareeggayga.", // nieuw, nalezen
+    's.plantround.2': "Cadaadisku wuu xad-dhaafay.", // nieuw, nalezen
+    's.plantround.3': "Qiimaha ayaan qorayaa.", // nieuw, nalezen
+    'c.plantround.q': "Maxay alaarm shaashadda ugu jirtaa?", // nieuw, nalezen
+    'c.plantround.a': "Heerka taangiga labaad wuu xad-dhaafay.", // nieuw, nalezen
+    'l.plantfault': "Cillad", // nieuw, nalezen
+    'w.stilstand': "istaagga (khadku wuu istaagaa, waxna lama sameeyo)", // nieuw, nalezen
+    'w.opstarten': "shidid, kicin (mashiin ama khad, tallaabo tallaabo)", // nieuw, nalezen
+    'w.stilzetten': "joojin (mashiin si sax ah loo joojiyo)", // nieuw, nalezen
+    'w.technischedienst': "waaxda dayactirka (TD: waxay dayactiraan mashiinnada)", // nieuw, nalezen
+    'w.onderhoudsmonteur': "makaanikiga dayactirka", // nieuw, nalezen
+    'w.resetten': "dib u dejin, reset (cillad laga tirtiro shaashadda ama looxa xakamaynta)", // nieuw, nalezen
+    's.plantfault.1': "Marka cillad dhacdo, waxaan wacaa hoggaamiyaha wareegga shaqada.", // nieuw, nalezen
+    's.plantfault.2': "Weligaa gacanta ha gelin mashiin shaqaynaya.", // nieuw, nalezen
+    's.plantfault.3': "Waaxda dayactirka way soo socotaa.", // nieuw, nalezen
+    'c.plantfault.q': "Khadka dib ma u shidi karaa?", // nieuw, nalezen
+    'c.plantfault.a': "Maya, sug. Qufulka makaanikiga weli wuu saaran yahay.", // nieuw, nalezen
+    'l.shiftwork': "Shiftiyada iyo habeennada", // nieuw, nalezen
+    'w.ploeg': "kooxda shiftiga (kooxda shiftiyada isku midka ah shaqaysa)", // nieuw, nalezen
+    'w.ploegwissel': "beddelka shiftiga (koox ayaa guriga aadda, kooxda xigtaana way bilowdaa)", // nieuw, nalezen
+    'w.volcontinu': "habeen iyo maalin (warshaddu waxay shaqaysaa habeen iyo maalin, maalin kasta oo toddobaadka ah)", // nieuw, nalezen
+    'w.overdagslapen': "maalintii seexasho (shiftiga habeenka kadib)", // nieuw, nalezen
+    'w.broodtrommel': "sanduuqa cuntada", // nieuw, nalezen
+    'w.aflosser': "qofka ku beddela (saaxiibka shaqo ee meeshaada kala wareega)", // nieuw, nalezen
+    's.shiftwork.1': "Warshaddeennu habeen iyo maalin ayay shaqaysaa.", // nieuw, nalezen
+    's.shiftwork.2': "Ku qor buugga diiwaanka, kooxda shiftiga xigta awgeed.", // nieuw, nalezen
+    's.shiftwork.3': "Wareejinta waqtigeeda ayaan imaadaa.", // nieuw, nalezen
+    'c.shiftwork.q': "Maxaa dhacay xalay?", // nieuw, nalezen
+    'c.shiftwork.a': "Bamka saddexaad wuu istaagay. Waxay ku qoran tahay buugga diiwaanka.", // nieuw, nalezen
+    'l.heatdust': "Kulayl, uumi iyo boodh", // nieuw, nalezen
+    'w.smeltoven': "foornada dhalaalinta (foorno aad u kulul oo dhalaalisa quraarad ama bir)", // nieuw, nalezen
+    'w.stoom': "uumiga (biyo uumi noqday oo aad u kulul)", // nieuw, nalezen
+    'w.stoomleiding': "tuubada uumiga (way kulul tahay, xitaa marka aadan uumi arkin)", // nieuw, nalezen
+    'w.hittekleding': "dharka ka ilaaliya kulaylka", // nieuw, nalezen
+    'w.kwartsstof': "boodhka kuwaartiska (boodh aad u yar oo ka yimaada dhoobo, ciid ama dhagax; wuxuu dhaawacaa sambabadaada)", // nieuw, nalezen
+    'w.explosiegevaar': "khatarta qarxidda (boodh ama uumi hawada ku jira ayaa qarxi kara; calaamad jaalle ah oo EX ku qoran)", // nieuw, nalezen
+    's.heatdust.1': "Foornada dhalaalinta agteeda biyo cab marar badan.", // nieuw, nalezen
+    's.heatdust.2': "Boodhka kuwaartiska ma arki kartid. Xiro maaskarada boodhka.", // nieuw, nalezen
+    's.heatdust.3': "Halkan khatar qarxid ayaa jirta: dhimbiil lama oggola.", // nieuw, nalezen
+    'c.heatdust.q': "Taleefankaygu ma geli karaa aaggan?", // nieuw, nalezen
+    'c.heatdust.a': "Maya. Halkan khatar qarxid ayaa jirta.", // nieuw, nalezen
+    'c.plantround': "Wareeggaaga soco, oo qor", // nieuw, nalezen
+    'c.plantround.b': "Warshad habeen iyo maalin shaqaysa waxay u baahan tahay indho iyo dhego. Wareeggaaga waad eegtaa, dhegaysataa oo urisaa: dhawaq cusub, daadasho ama ur la yaab leh ayaa noqon kara calaamadda ugu horreysa ee dhibaato. Waxaad akhridaa mitirrada: heerkulka, cadaadiska, xawaaraha iyo heerka. Qiime kasta isla markiiba qor, waqtiga la socda, liiska ama nidaamka. Ha qorin goor dambe, adoo xusuusta ka qoraya. Qiime ma xad-dhaafay mise aad buu u hooseeyaa? Isla markiiba u sheeg qolka kontaroolka ama hoggaamiyaha wareegga shaqada. Alaarm shaashadda ka muuqda weligiis ma aha “alaarm uun”: ha demin intaadan ogaan sababta uu u dhacay. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.plantround.p': "Heerkulku wuu xad-dhaafay.", // nieuw, nalezen
+    'c.plantround.s': "Wareeggaaga, cadaadisku wax yar ayuu xad-dhaafay. Shiftigaagu wuu dhammaanayaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.plantround.o1': "Isla markiiba u sheeg qolka kontaroolka.", // nieuw, nalezen
+    'c.plantround.o2': "Qor, oo cidna ha u sheegin.", // nieuw, nalezen
+    'c.plantround.o3': "U daa shiftiga xiga.", // nieuw, nalezen
+    'c.plantround.w': "Warshadda, isbeddel yar si dhakhso ah ayuu u weynaan karaa. Marka qolka kontaroolku goor hore ogaado, wax ayay qaban karaan ka hor inta aysan wax khaldamin.", // nieuw, nalezen
+    'c.plantfault': "Jooji, quful, kadib dayactir", // nieuw, nalezen
+    'c.plantfault.b': "Marka cillad dhacdo, khadku wuu istaagaa, qof kastaana wuxuu doonayaa inuu si dhakhso ah dib ugu shaqeeyo. Laakiin shilal badan ayaa dhaca isla xilligaas. Weligaa gacanta ha gelin mashiin shaqaynaya, xitaa “in yar uun” ha gelin. Wac hoggaamiyaha wareegga shaqada ama waaxda dayactirka. Ka hor inta qof uusan mashiinka ka shaqayn, waa la joojiyaa oo la qufulaa, si aan qofna u shidin. Badanaa qof kasta oo ka shaqeeya wuxuu ku xiraa qufulkiisa gaarka ah. Dib u shid oo keliya marka quful kasta laga qaado oo hoggaamiyaha wareegga shaqadu yiraahdo waa ammaan. Tallaabo tallaabo u shid, sidii laguu baray. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.plantfault.p': "Quful ayaa weli saaran.", // nieuw, nalezen
+    'c.plantfault.s': "Badeeco ayaa ku dhegtay mashiinka. Mashiinku weli wuu shaqaynayaa. Saaxiib shaqo ayaa yiri: “Si dhakhso ah u soo jiid.” Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.plantfault.o1': "Gacanta ha gelin: wac hoggaamiyaha wareegga shaqada.", // nieuw, nalezen
+    'c.plantfault.o2': "Gacantaada si dhakhso ah ugu soo jiid.", // nieuw, nalezen
+    'c.plantfault.o3': "Ul ku soo riix inta uu shaqaynayo.", // nieuw, nalezen
+    'c.plantfault.w': "Mashiin weli shaqaynaya wuu dhaqaaqi karaa daqiiqad kasta. Mashiin la joojiyay oo la qufulay kuma dhaawici karo.", // nieuw, nalezen
+    'c.shiftwork': "Habeennada: seexo, cun, waqtiga ilaali", // nieuw, nalezen
+    'c.shiftwork.b': "Warshado badan waxay shaqeeyaan habeen iyo maalin, maalin kasta oo toddobaadka ah. Waxaad si wareeg ah u shaqaysaa shiftiyada subaxda, galabta iyo habeenka, badanaa saddex ama shan koox oo shift ah. Shiftiga habeenka kadib, ku seexo qol mugdi ah oo aamusan, oo qoyskaaga u sheeg goorta aad seexanayso. Waqtiyo go'an wax ku cun, oo cuntadaada keeno: habeenkii maqaayadda shaqadu badanaa way xiran tahay. Waqtiga ku imow wareejinta: saaxiibkaaga shaqo wuu ku sugayaa, warshaddana keligeed lama dayn karo. Shiftiyada habeenka waxaa u jira xeerar dheeraad ah, sharciga iyo badanaa heshiiska wadajirka ah (cao), tusaale ahaan nasashada habeennadaada kadib. Weydii waxa ay yihiin xeerarka meesha aad ka shaqeyso. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
+    'c.shiftwork.p': "Waa maxay xeerarka shiftiyada habeenka?", // nieuw, nalezen
+    'c.shiftwork.s': "Afar habeen kadib, hoggaamiyaha wareegga shaqadu wuxuu kaa codsaday inaad shaqayso hal habeen oo kale. Aad baad u daallan tahay. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.shiftwork.o1': "Dheh aad baad u daallan tahay, oo weydii xeerarka.", // nieuw, nalezen
+    'c.shiftwork.o2': "Haa dheh, oo cab kafee badan.", // nieuw, nalezen
+    'c.shiftwork.o3': "Haa dheh, oo wax yar ku seexo nasashadaada.", // nieuw, nalezen
+    'c.shiftwork.w': "Dadka daallan waxay sameeyaan khaladaad badan, warshaddana khaladku wuxuu noqon karaa khatar. Waxaa jira xeerar ku saabsan nasashada shiftiyada habeenka kadib.", // nieuw, nalezen
+    'c.heatdust': "Kulayl, boodh iyo dhimbiilo", // nieuw, nalezen
+    'c.heatdust.b': "Foornada dhalaalinta, foornada dhoobada ama uumiga agtooda aad bay u kulul tahay. Biyo cab marar badan, xitaa ka hor intaadan harraadin. Xiro dharka ka ilaaliya kulaylka, hana taaban tuubooyin ama qaybo adigoon gacmo-gashi xiran: uumiga iyo birta kulul way gubaan, xitaa marka aadan arkin. Ma dawakhsan tahay mise lallabo ma haysaa? Jooji, tag meel qabow, oo qof u sheeg. Boodhka dhoobada, ciidda ama dhagaxa waxaa ku jiri kara boodh kuwaarts ah (kwartsstof). Ma arkaysid, laakiin wuxuu dhaawacaa sambabadaada. Isticmaal nuugaha boodhka, xiro maaskarada boodhka, weligaana boodh ha ku afuufin hawo cadaadis leh. Aagag qaar, boodh ama uumi ayaa qarxi kara: calaamad jaalle ah oo EX ku qoran ayaa muujisa. Halkaas: dhimbiil lama oggola, dab lama oggola, badanaana taleefan caadi ah lama oggola. Weydii waxa la oggol yahay aag kasta. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.heatdust.p': "Ma fiicni. Waxaan aadayaa meel qabow.", // nieuw, nalezen
+    'c.heatdust.s': "Boodh dhoobo oo aad u yar ayaa saaran mashiinkaaga. Saaxiib shaqo ayaa yiri: “Ku afuuf qoriga hawada.” Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.heatdust.o1': "Ku nadiifi qoyaan, ama mashiinka boodhka nuuga.", // nieuw, nalezen
+    'c.heatdust.o2': "Afuuf: way ka dhakhso badan tahay.", // nieuw, nalezen
+    'c.heatdust.o3': "U daa shiftiga xiga.", // nieuw, nalezen
+    'c.heatdust.w': "Afuufiddu waxay boodhka kor u kicisaa, hawada iyo sambabadaada. Maro qoyan ama mashiinka boodhka nuuga ayaa boodhka hoos u haya.", // nieuw, nalezen
   },
 };
 

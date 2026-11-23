@@ -177,6 +177,9 @@ const t: CultureTranslation = {
     // "Veiligheid op het werk" and the VOG (23 November 2026).
     'kjn.u.safework.1': "Waan garan karaa erayo ka mid ah calaamadaha badbaadada iyo dabka.", // nieuw, nalezen
     'kjn.u.safework.2': "Waan weydiin karaa in alaab sun tahay.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'kjn.u.process.1': "Waan sheegi karaa in cadaadisku xad-dhaafay.", // nieuw, nalezen
+    'kjn.u.process.2': "Wareejinta waan ka sheegi karaa wixii dhacay.", // nieuw, nalezen
   },
 };
 export default t;

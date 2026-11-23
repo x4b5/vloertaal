@@ -4900,6 +4900,88 @@ const t: CultureTranslation = {
     'c.permitwork.o2': "Kletter schnell hinein, um ihm zu helfen.", // nieuw, nalezen
     'c.permitwork.o3': "Warte ein paar Minuten, dann schau nach.", // nieuw, nalezen
     'c.permitwork.w': "Das Gas, das deinem Kollegen geschadet hat, kann auch dir schaden. Viele Opfer in Tanks waren Helfer. Nach dem Alarm kommt Hilfe mit Schutz.", // nieuw, nalezen
+    // "Operator in de procesindustrie", the fourth own unit of Productie (23 November 2026).
+    'u.process': "Operator in der Prozessindustrie", // nieuw, nalezen
+    'l.plantround': "Der Rundgang und die Leitwarte", // nieuw, nalezen
+    'w.controlekamer': "die Leitwarte, der Kontrollraum (wo Operatoren die ganze Anlage auf Bildschirmen beobachten)", // nieuw, nalezen
+    'w.operator': "der Operator, der Anlagenfahrer (die Person, die die Maschinen einer Anlage bedient und überwacht)", // nieuw, nalezen
+    'w.drukmeter': "das Manometer, der Druckmesser (ein rundes Messgerät mit einem Zeiger)", // nieuw, nalezen
+    'w.niveau': "der Füllstand (wie voll ein Tank oder ein Silo ist)", // nieuw, nalezen
+    'w.snelheid': "die Geschwindigkeit (wie schnell eine Linie oder eine Maschine läuft)", // nieuw, nalezen
+    'w.alarmmelding': "die Alarmmeldung (eine Warnung auf dem Bildschirm, dass etwas nicht stimmt)", // nieuw, nalezen
+    's.plantround.1': "Ich mache meinen Rundgang.", // nieuw, nalezen
+    's.plantround.2': "Der Druck ist zu hoch.", // nieuw, nalezen
+    's.plantround.3': "Ich schreibe den Wert auf.", // nieuw, nalezen
+    'c.plantround.q': "Warum ist ein Alarm auf dem Bildschirm?", // nieuw, nalezen
+    'c.plantround.a': "Der Füllstand in Tank zwei ist zu hoch.", // nieuw, nalezen
+    'l.plantfault': "Eine Störung", // nieuw, nalezen
+    'w.stilstand': "der Stillstand (die Linie hält an, und es wird nichts hergestellt)", // nieuw, nalezen
+    'w.opstarten': "anfahren, hochfahren (eine Maschine oder eine Linie, Schritt für Schritt)", // nieuw, nalezen
+    'w.stilzetten': "abschalten, herunterfahren (eine Maschine auf die richtige Art anhalten)", // nieuw, nalezen
+    'w.technischedienst': "die Instandhaltung, der technische Dienst (die TD: Sie reparieren die Maschinen)", // nieuw, nalezen
+    'w.onderhoudsmonteur': "der Instandhaltungsmechaniker / die Instandhaltungsmechanikerin", // nieuw, nalezen
+    'w.resetten': "zurücksetzen, quittieren (eine Störung auf dem Bildschirm oder am Bedienfeld löschen)", // nieuw, nalezen
+    's.plantfault.1': "Bei einer Störung rufe ich den Schichtleiter an.", // nieuw, nalezen
+    's.plantfault.2': "Greif nie in eine laufende Maschine.", // nieuw, nalezen
+    's.plantfault.3': "Die Instandhaltung ist unterwegs.", // nieuw, nalezen
+    'c.plantfault.q': "Darf ich die Linie wieder anfahren?", // nieuw, nalezen
+    'c.plantfault.a': "Nein, warte. Das Schloss des Mechanikers ist noch dran.", // nieuw, nalezen
+    'l.shiftwork': "Schichten und Nächte", // nieuw, nalezen
+    'w.ploeg': "die Schichtgruppe, die Schicht (die Gruppe, die dieselben Schichten arbeitet)", // nieuw, nalezen
+    'w.ploegwissel': "der Schichtwechsel (eine Gruppe geht nach Hause, die nächste fängt an)", // nieuw, nalezen
+    'w.volcontinu': "rund um die Uhr, vollkontinuierlich (die Anlage läuft Tag und Nacht, an jedem Tag der Woche)", // nieuw, nalezen
+    'w.overdagslapen': "tagsüber schlafen (nach einer Nachtschicht)", // nieuw, nalezen
+    'w.broodtrommel': "die Brotdose", // nieuw, nalezen
+    'w.aflosser': "die Ablösung (der Kollege, der deinen Platz übernimmt)", // nieuw, nalezen
+    's.shiftwork.1': "Unsere Fabrik läuft rund um die Uhr.", // nieuw, nalezen
+    's.shiftwork.2': "Schreib es ins Logbuch für die nächste Schichtgruppe.", // nieuw, nalezen
+    's.shiftwork.3': "Ich bin pünktlich zur Übergabe.", // nieuw, nalezen
+    'c.shiftwork.q': "Was ist heute Nacht passiert?", // nieuw, nalezen
+    'c.shiftwork.a': "Pumpe drei ist ausgefallen. Es steht im Logbuch.", // nieuw, nalezen
+    'l.heatdust': "Hitze, Dampf und Staub", // nieuw, nalezen
+    'w.smeltoven': "der Schmelzofen (ein sehr heißer Ofen, der Glas oder Metall schmilzt)", // nieuw, nalezen
+    'w.stoom': "der Dampf (sehr heißer Wasserdampf)", // nieuw, nalezen
+    'w.stoomleiding': "die Dampfleitung (sie ist heiß, auch wenn du keinen Dampf siehst)", // nieuw, nalezen
+    'w.hittekleding': "die Hitzeschutzkleidung", // nieuw, nalezen
+    'w.kwartsstof': "der Quarzstaub (sehr feiner Staub aus Ton, Sand oder Stein; er schädigt deine Lunge)", // nieuw, nalezen
+    'w.explosiegevaar': "die Explosionsgefahr (Staub oder Dampf in der Luft kann explodieren; ein gelbes Schild mit EX)", // nieuw, nalezen
+    's.heatdust.1': "Trink oft Wasser am Schmelzofen.", // nieuw, nalezen
+    's.heatdust.2': "Quarzstaub siehst du nicht. Setz deine Staubmaske auf.", // nieuw, nalezen
+    's.heatdust.3': "Hier gibt es Explosionsgefahr: keine Funken.", // nieuw, nalezen
+    'c.heatdust.q': "Darf mein Handy mit in diese Zone?", // nieuw, nalezen
+    'c.heatdust.a': "Nein. Hier gibt es Explosionsgefahr.", // nieuw, nalezen
+    'c.plantround': "Mach deinen Rundgang, schreib es auf", // nieuw, nalezen
+    'c.plantround.b': "Eine Anlage, die Tag und Nacht läuft, braucht Augen und Ohren. Auf deinem Rundgang schaust, hörst und riechst du: Ein neues Geräusch, ein Leck oder ein komischer Geruch kann das erste Zeichen für ein Problem sein. Du liest die Messgeräte ab: die Temperatur, den Druck, die Geschwindigkeit und den Füllstand. Schreib jeden Wert sofort auf, mit der Uhrzeit, auf die Liste oder ins System. Nicht später, aus dem Gedächtnis. Ist ein Wert zu hoch oder zu niedrig? Sag es sofort der Leitwarte oder deinem Schichtleiter. Ein Alarm auf dem Bildschirm ist nie „nur ein Alarm“: Schalte ihn nicht aus, bevor du weißt, warum er gekommen ist. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.plantround.p': "Die Temperatur ist zu hoch.", // nieuw, nalezen
+    'c.plantround.s': "Auf deinem Rundgang ist der Druck ein bisschen zu hoch. Deine Schicht ist fast vorbei. Was machst du?", // nieuw, nalezen
+    'c.plantround.o1': "Sag es sofort der Leitwarte.", // nieuw, nalezen
+    'c.plantround.o2': "Schreib es auf, und sag es niemandem.", // nieuw, nalezen
+    'c.plantround.o3': "Lass es für die nächste Schicht.", // nieuw, nalezen
+    'c.plantround.w': "In einer Anlage kann eine kleine Änderung schnell größer werden. Wenn die Leitwarte es früh weiß, kann sie handeln, bevor etwas schiefgeht.", // nieuw, nalezen
+    'c.plantfault': "Anhalten, abschließen, dann reparieren", // nieuw, nalezen
+    'c.plantfault.b': "Bei einer Störung steht die Linie still, und alle wollen, dass sie schnell wieder läuft. Aber genau dann passieren viele Unfälle. Greif nie in eine laufende Maschine, auch nicht „nur kurz“. Ruf deinen Schichtleiter oder die Instandhaltung. Bevor jemand an der Maschine arbeitet, wird sie angehalten und abgeschlossen, damit niemand sie starten kann. Oft hängt jeder, der daran arbeitet, sein eigenes Schloss daran. Fahr erst wieder an, wenn jedes Schloss ab ist und dein Schichtleiter sagt, dass es sicher ist. Fahr Schritt für Schritt an, so wie du es gelernt hast. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.plantfault.p': "Da ist noch ein Schloss dran.", // nieuw, nalezen
+    'c.plantfault.s': "Ein Produkt steckt in der Maschine fest. Die Maschine läuft noch. Ein Kollege sagt: „Zieh es schnell raus.“ Was machst du?", // nieuw, nalezen
+    'c.plantfault.o1': "Greif nicht hinein: Ruf den Schichtleiter.", // nieuw, nalezen
+    'c.plantfault.o2': "Zieh es schnell mit der Hand heraus.", // nieuw, nalezen
+    'c.plantfault.o3': "Drück es mit einem Stock heraus, während sie läuft.", // nieuw, nalezen
+    'c.plantfault.w': "Eine Maschine, die noch läuft, kann sich jeden Moment bewegen. Eine Maschine, die angehalten und abgeschlossen ist, kann dich nicht verletzen.", // nieuw, nalezen
+    'c.shiftwork': "Nachts: schlafen, essen, pünktlich sein", // nieuw, nalezen
+    'c.shiftwork.b': "Viele Fabriken laufen Tag und Nacht, an jedem Tag der Woche. Du arbeitest abwechselnd Früh-, Spät- und Nachtschichten, oft in drei oder fünf Schichtgruppen. Schlaf nach einer Nachtschicht in einem dunklen und ruhigen Zimmer, und sag deiner Familie, wann du schläfst. Iss zu festen Zeiten, und nimm dein eigenes Essen mit: Nachts ist die Kantine oft zu. Sei pünktlich zur Übergabe: Dein Kollege wartet, und die Anlage darf nicht allein gelassen werden. Für Nachtschichten gibt es extra Regeln, im Gesetz und oft im Tarifvertrag (cao), zum Beispiel über die Ruhe nach deinen Nächten. Frag, welche Regeln bei dir gelten. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.shiftwork.p': "Welche Regeln gelten für Nachtschichten?", // nieuw, nalezen
+    'c.shiftwork.s': "Nach vier Nächten bittet dich dein Schichtleiter, noch eine Nacht zu arbeiten. Du bist sehr müde. Was machst du?", // nieuw, nalezen
+    'c.shiftwork.o1': "Sag, dass du sehr müde bist, und frag nach den Regeln.", // nieuw, nalezen
+    'c.shiftwork.o2': "Sag ja, und trink viel Kaffee.", // nieuw, nalezen
+    'c.shiftwork.o3': "Sag ja, und schlaf ein bisschen in deiner Pause.", // nieuw, nalezen
+    'c.shiftwork.w': "Müde Menschen machen mehr Fehler, und in einer Fabrik kann ein Fehler gefährlich sein. Es gibt Regeln für die Ruhe nach Nachtschichten.", // nieuw, nalezen
+    'c.heatdust': "Hitze, Staub und Funken", // nieuw, nalezen
+    'c.heatdust.b': "In der Nähe eines Schmelzofens, eines Brennofens oder von Dampf ist es sehr heiß. Trink oft Wasser, auch bevor du Durst hast. Trag die Hitzeschutzkleidung, und fass keine Leitungen oder Teile ohne Handschuhe an: Dampf und heißes Metall verbrennen dich, auch wenn du sie nicht siehst. Ist dir schwindlig oder übel? Hör auf, geh an einen kühlen Ort, und sag es jemandem. Staub aus Ton, Sand oder Stein kann Quarzstaub (kwartsstof) enthalten. Du siehst ihn nicht, aber er schädigt deine Lunge. Benutz die Absaugung, trag deine Staubmaske, und blas Staub nie mit Druckluft weg. In manchen Zonen kann Staub oder Dampf explodieren: Ein gelbes Schild mit EX zeigt das. Dort gilt: keine Funken, kein Feuer, und oft kein normales Handy. Frag, was in jeder Zone erlaubt ist. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.heatdust.p': "Mir geht es nicht gut. Ich gehe an einen kühlen Ort.", // nieuw, nalezen
+    'c.heatdust.s': "Auf deiner Maschine liegt feiner Tonstaub. Ein Kollege sagt: „Blas ihn mit der Luftpistole weg.“ Was machst du?", // nieuw, nalezen
+    'c.heatdust.o1': "Mach es nass sauber, oder mit dem Staubsauger.", // nieuw, nalezen
+    'c.heatdust.o2': "Blas es weg: Das geht schneller.", // nieuw, nalezen
+    'c.heatdust.o3': "Lass es für die nächste Schicht.", // nieuw, nalezen
+    'c.heatdust.w': "Beim Blasen fliegt der Staub hoch, in die Luft und in deine Lunge. Ein nasses Tuch oder ein Staubsauger hält den Staub unten.", // nieuw, nalezen
   },
 };
 
