@@ -175,6 +175,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': "Hemşireye ne gördüğümü anlatabilirim.", // nieuw, nalezen
     'kjn.u.shopfloor.1': "Bir müşteriden fişi isteyebilirim.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "Mağazanın birazdan kapanacağını söyleyebilirim.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "Güvenlik işaretleri ve yangınla ilgili bazı kelimeleri tanıyabilirim.", // nieuw, nalezen
+    'kjn.u.safework.2': "Bir ürünün zehirli olup olmadığını sorabilirim.", // nieuw, nalezen
   },
 };
 

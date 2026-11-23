@@ -4799,6 +4799,108 @@ const t: CultureTranslation = {
     'c.device.o2': "Kimin olduğunu görmek için bilgisayarına takarsın.", // nieuw, nalezen
     'c.device.o3': "Eve götürür ve orada bakarsın.", // nieuw, nalezen
     'c.device.w': "Bir bellekte virüs olabilir, ilginç görünse bile. Bilgi işlem bölümü onu güvenli bir şekilde kontrol edebilir.", // nieuw, nalezen
+    // "Veiligheid op het werk" (four lessons) and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
+    'u.safework': "İş yerinde güvenlik", // nieuw, nalezen
+    'l.vog': "Geçmişin: VOG", // nieuw, nalezen
+    'w.vog': "iyi hal belgesi (VOG: devletten gelen ve geçmişinin bu iş için sorun olmadığını söyleyen bir belge)", // nieuw, nalezen
+    'w.strafblad': "sabıka kaydı (bir mahkemenin seni suçlu bulduğu suçlar)", // nieuw, nalezen
+    'w.screening': "geçmiş kontrolü (işe başlamadan önce geçmişinin kontrol edilmesi)", // nieuw, nalezen
+    'w.personenregister': "çocuk bakımı sicili (çocuk bakımında çalışan herkes bu sicilde olmalıdır)", // nieuw, nalezen
+    'w.beveiligerspas': "güvenlik görevlisi kartı (güvenlik görevlisi olarak çalışmak için gereken kart)", // nieuw, nalezen
+    'w.verleden': "geçmiş", // nieuw, nalezen
+    's.vog.1': "Bakım işlerinde neredeyse her zaman VOG isterler.", // nieuw, nalezen
+    's.vog.2': "VOG’um var ve çocuk bakımı sicilindeyim.", // nieuw, nalezen
+    's.vog.3': "Güvenlik görevlisi kartımı geçmiş kontrolünden sonra alıyorum.", // nieuw, nalezen
+    'c.vog.q': "Ajans bir VOG istiyor. Onu aldın mı?", // nieuw, nalezen
+    'c.vog.a': "Hayır. Hâlâ Justis’ten gelecek e-postayı bekliyorum.", // nieuw, nalezen
+    'l.safetysigns': "Güvenlik işaretleri", // nieuw, nalezen
+    'w.verbodsbord': "yasak işareti (üzerinde çizgi olan kırmızı bir daire: bunu yapamazsın)", // nieuw, nalezen
+    'w.gebodsbord': "zorunluluk işareti (beyaz resimli mavi bir daire: bunu yapmak zorundasın)", // nieuw, nalezen
+    'w.waarschuwingsbord': "uyarı işareti (siyah kenarlı sarı bir üçgen: dikkat, tehlike)", // nieuw, nalezen
+    'w.reddingsbord': "kurtarma işareti (yeşil bir dikdörtgen: çıkış yolu ya da ilk yardım)", // nieuw, nalezen
+    'w.brandbord': "yangın ekipmanı işareti (kırmızı bir kare: burada bir yangın söndürücü ya da yangın hortumu var)", // nieuw, nalezen
+    'w.pictogram': "piktogram (kelimeler olmadan bir şey söyleyen basit bir resim)", // nieuw, nalezen
+    's.safetysigns.1': "Kırmızı yuvarlak bir işaret şu demektir: buna izin yok.", // nieuw, nalezen
+    's.safetysigns.2': "Mavi bir işaret ne yapman gerektiğini söyler.", // nieuw, nalezen
+    's.safetysigns.3': "Acil çıkışa kadar yeşil işaretleri takip et.", // nieuw, nalezen
+    'c.safetysigns.q': "Bu sarı işaret ne demek?", // nieuw, nalezen
+    'c.safetysigns.a': "Dikkat, tehlike. Bu bir uyarı işareti.", // nieuw, nalezen
+    'l.substances': "Tehlikeli maddeler", // nieuw, nalezen
+    'w.stofmasker': "toz maskesi (burnunu ve ağzını kapatır)", // nieuw, nalezen
+    'w.giftig': "zehirli", // nieuw, nalezen
+    'w.bijtend': "aşındırıcı (cildini yakar ya da metali aşındırır)", // nieuw, nalezen
+    'w.drinkfles': "içecek şişesi", // nieuw, nalezen
+    'w.opbergen': "kaldırmak, yerine koymak (kendi yerine, örneğin kilitlenen bir dolaba)", // nieuw, nalezen
+    'w.dop': "kapak (bir şişenin ya da bidonun)", // nieuw, nalezen
+    's.substances.1': "Önce etiketteki tehlike işaretine bak.", // nieuw, nalezen
+    's.substances.2': "Onu asla bir içecek şişesine dökme.", // nieuw, nalezen
+    's.substances.3': "Burada toz maskesi takmak zorundasın.", // nieuw, nalezen
+    'c.substances.q': "Bu ürün zehirli mi?", // nieuw, nalezen
+    'c.substances.a': "Bu, güvenlik bilgi formunda yazıyor. Ona bakacağım.", // nieuw, nalezen
+    'l.firefight': "Yangın", // nieuw, nalezen
+    'w.branddriehoek': "yangın üçgeni (yangının yakıta, havaya ve ısıya ihtiyacı vardır; birini ortadan kaldırırsan yangın söner)", // nieuw, nalezen
+    'w.zuurstof': "oksijen (havada bulunur; yangının ona ihtiyacı vardır)", // nieuw, nalezen
+    'w.blussen': "söndürmek (bir yangını)", // nieuw, nalezen
+    'w.blusdeken': "yangın battaniyesi", // nieuw, nalezen
+    'w.openvuur': "açık ateş (bir alev, örneğin bir çakmaktan ya da bir gaz brülöründen)", // nieuw, nalezen
+    'w.brandslang': "yangın hortumu (duvardaki bir makarada)", // nieuw, nalezen
+    's.firefight.1': "Yanan yağın üzerine asla su atma.", // nieuw, nalezen
+    's.firefight.2': "Sadece küçük bir yangını kendin söndürürsün.", // nieuw, nalezen
+    's.firefight.3': "Yangın battaniyesini tavanın üzerine ört.", // nieuw, nalezen
+    'c.firefight.q': "Çöp kutusunda yangın var!", // nieuw, nalezen
+    'c.firefight.a': "Küçük. Yangın söndürücüyü getiriyorum.", // nieuw, nalezen
+    'l.permitwork': "İş güvenliği izni, kapalı alanlar ve yük kaldırma", // nieuw, nalezen
+    'w.werkvergunningveilig': "iş güvenliği izni (tehlikeli işler için bir güvenlik belgesi: ne, nerede ve hangi tehlikeler; oturma ya da çalışma belgelerin değil)", // nieuw, nalezen
+    'w.beslotenruimte': "kapalı alan (bir tank, bir çukur ya da bir kanalizasyon: küçük ve az temiz havalı)", // nieuw, nalezen
+    'w.gasmeting': "gaz ölçümü (içeri girmeden önce havayı ölçersin)", // nieuw, nalezen
+    'w.mangatwacht': "giriş gözcüsü (girişte dışarıda kalan, irtibatı sürdüren ve alarm veren kişi)", // nieuw, nalezen
+    'w.signaalgever': "işaretçi (vinç operatörüne el işaretleri veren kişi)", // nieuw, nalezen
+    'w.hijsen': "kaldırmak (bir yükü vinçle)", // nieuw, nalezen
+    's.permitwork.1': "İş güvenliği izni olmadan başlamayız.", // nieuw, nalezen
+    's.permitwork.2': "Önce gaz ölçümü, ancak ondan sonra kapalı alana giriş.", // nieuw, nalezen
+    's.permitwork.3': "İşaretçiye bak: kaldır, indir, dur.", // nieuw, nalezen
+    'c.permitwork.q': "Tankın yanında dışarıda kim kalıyor?", // nieuw, nalezen
+    'c.permitwork.a': "Ben. Giriş gözcüsü benim.", // nieuw, nalezen
+    'c.vog': "VOG: geçmişinin kontrolü", // nieuw, nalezen
+    'c.vog.b': "Bazı işler için ajans ya da işveren bir VOG (Verklaring Omtrent het Gedrag) ister. Bu, devletten gelen bir belgedir: geçmişinin bu iş için sorun olmadığını söyler. Bakım, çocuk bakımı ve güvenlik işlerinde neredeyse her zaman buna ihtiyacın olur. Başvuruyu genelde işveren internetten başlatır. Justis’ten bir e-posta alırsın, başvuruyu DigiD ile tamamlar ve ücreti ödersin. Önce kimin ödeyeceğini sor: çoğu zaman işveren parayı geri öder. Çocuklarla ya da korunmasız kişilerle çalışan gönüllüler için çoğu zaman ücretsizdir. Sabıka kaydın mı var? Bu her zaman VOG alamayacağın anlamına gelmez: Justis bu iş için neyin önemli olduğuna bakar. Emin değil misin? Juridisch Loket’e sor. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.vog.p': "VOG’u kendim mi ödemem gerekiyor?", // nieuw, nalezen
+    'c.vog.s': "Bir bakımevindeki yeni işin senden VOG istiyor. Yıllar önce polisle bir sorunun olmuştu. Ne yaparsın?", // nieuw, nalezen
+    'c.vog.o1': "Başvurursun ve endişeliysen Juridisch Loket’e sorarsın.", // nieuw, nalezen
+    'c.vog.o2': "Başvurmazsın: onu asla alamazsın.", // nieuw, nalezen
+    'c.vog.o3': "Vaktin olmadığını söyler ve başka iş ararsın.", // nieuw, nalezen
+    'c.vog.w': "Justis sadece iş için neyin önemli olduğuna bakar. Geçmişinde bir şey olan birçok kişi yine de VOG alır. Emin değilsen tavsiye almak yardımcı olur.", // nieuw, nalezen
+    'c.safetysigns': "VCA nedir?", // nieuw, nalezen
+    'c.safetysigns.b': "VCA bir iş güvenliği sertifikasıdır. Birçok şirket, ajans üzerinden çalışsan da, bunu ister, örneğin inşaatta ve sanayide. Çoğu işçi B-VCA (VCA Basis) yapar; bir amir VOL-VCA yapar. Bir kursa gidersin ve tanınmış bir sınav merkezinde çoktan seçmeli sorularla bir sınava girersin. Sınava çoğu zaman birkaç dilde, örneğin İngilizce ya da Lehçe girebilirsin: sınav merkezine sor. Diploma 10 yıl geçerlidir. Çoğu zaman işveren ya da ajans öder: kendin ödemeden önce sor. Bir ajans her masrafı maaşından kesemez (ajans üzerinden çalışma konusuna bak). Bu derslerde güvenli çalışmada ve VCA’da karşılaştığın bazı kelimeleri öğrenirsin. VCA için bir kursa gidersin ve bir sınava girersin. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.safetysigns.p': "VCA kursunu kim ödüyor?", // nieuw, nalezen
+    'c.safetysigns.s': "Bir ajans diyor ki: “VCA’ya ihtiyacın var. Kursu sen ödersin, ya da parasını maaşından keseriz.” Ne yaparsın?", // nieuw, nalezen
+    'c.safetysigns.o1': "Kimin ödediğini sorarsın ve bunu yazılı olarak alırsın.", // nieuw, nalezen
+    'c.safetysigns.o2': "İşi almak için hemen ödersin.", // nieuw, nalezen
+    'c.safetysigns.o3': "Hiçbir şey demezsin ve imzalarsın.", // nieuw, nalezen
+    'c.safetysigns.w': "VCA’yı çoğu zaman işveren ya da ajans öder. Bir şey ödemen gerekiyorsa bunu önceden, yazılı olarak bilmek istersin.", // nieuw, nalezen
+    'c.substances': "Önce etiketi oku, sonra çalış", // nieuw, nalezen
+    'c.substances.b': "Tehlikeli bir ürünün etiketinde, içinde siyah bir resim olan kırmızı bir baklava şekli vardır: tehlike işareti. Resim tehlikeyi gösterir, örneğin ateş, zehir ya da cildini yakan bir ürün. Etiket ve güvenlik bilgi formu (veiligheidsblad), onunla nasıl güvenli çalışacağını ve bir şey ters giderse ne yapacağını söyler. Onların söylediklerini giy ve tak: eldiven, koruyucu gözlük ya da maske. Kapağı kapat ve ürünü kendi yerine kaldır. Onu asla bir içecek şişesine dökme: biri onu içebilir. Onunla çalışırken yemek yeme, bir şey içme ya da sigara içme ve sonra ellerini yıka. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.substances.p': "Bu ürünün güvenlik bilgi formu nerede?", // nieuw, nalezen
+    'c.substances.s': "Bir iş arkadaşın, yanında götürmek için bir temizlik ürününü boş bir su şişesine döküyor. Ne yaparsın?", // nieuw, nalezen
+    'c.substances.o1': "Bunun tehlikeli olduğunu söylersin: biri onu içebilir.", // nieuw, nalezen
+    'c.substances.o2': "Hiçbir şey: bu onun kendi şişesi.", // nieuw, nalezen
+    'c.substances.o3': "Şişeye küçük bir etiket yapıştırırsın.", // nieuw, nalezen
+    'c.substances.w': "Bir içecek şişesinde ürün su ya da limonata gibi görünür. Biri onu yanlışlıkla içebilir. Ürün kendi ambalajında, etiketiyle birlikte kalır.", // nieuw, nalezen
+    'c.firefight': "Küçük yangın mı, büyük yangın mı?", // nieuw, nalezen
+    'c.firefight.b': "Yangının üç şeye ihtiyacı vardır: yakıt, hava ve ısı. Buna yangın üçgeni denir. Birini ortadan kaldırırsan yangın söner. Yangın battaniyesi havayı keser. Su ısıyı alır, ama yanan sıvı yağa ya da katı yağa veya elektrikli şeylere asla su kullanma. Yangın söndürücüye bak: ne için olduğu üzerinde yazar. Köpük ve toz birçok yangında işe yarar; CO2 elektrik yangınları için iyidir. Kıvılcımları ve açık ateşi kolay yanan ürünlerden uzak tut. Sadece küçük bir yangını kendin söndür, ve sadece güvenliyse. Daha mı büyük? Dışarı çık, kapıyı arkandan kapat ve alarm ver. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.firefight.p': "Yangın battaniyesi nerede asılı?", // nieuw, nalezen
+    'c.firefight.s': "Kantinde bir tavadaki yağ alev alıyor. Alevler hâlâ küçük. Ne yaparsın?", // nieuw, nalezen
+    'c.firefight.o1': "Yangın battaniyesini tavanın üzerine örtersin.", // nieuw, nalezen
+    'c.firefight.o2': "Üzerine bir bardak su atarsın.", // nieuw, nalezen
+    'c.firefight.o3': "Tavayı dışarı taşırsın.", // nieuw, nalezen
+    'c.firefight.w': "Yanan yağa su atmak büyük bir ateş topu oluşturur. Battaniye havayı keser ve yangın söner. Yapabiliyorsan ocağı kapat.", // nieuw, nalezen
+    'c.permitwork': "Tehlikeli iş: önce izin", // nieuw, nalezen
+    'c.permitwork.b': "Yanabilen şeylerin yakınında kaynak yapmak ya da bir tankta veya çukurda çalışmak gibi tehlikeli işler için şirket çoğu zaman bir iş güvenliği izni (werkvergunning) kullanır. Bu bir güvenlik belgesidir, oturma ya da çalışma belgelerin değil. Ne yaptığını, nerede yaptığını, hangi tehlikeler olduğunu ve onlara karşı ne yapılacağını söyler. Onu oku ve ancak imzalandığında başla. Kapalı bir alanda çok az hava ya da tehlikeli bir gaz olabilir: önce gaz ölçümü yapılır ve bir giriş gözcüsü dışarıda kalır. İçeride biri zor durumda mı? Alarm ver: korunmadan asla içeri girme. Vinçle çalışırken işaretleri tek bir kişi verir: işaretçi. Asla asılı bir yükün altında durma. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.permitwork.p': "İş güvenliği izni imzalandı mı?", // nieuw, nalezen
+    'c.permitwork.s': "Tanktaki iş arkadaşın cevap vermiyor. Giriş gözcüsü sensin. Ne yaparsın?", // nieuw, nalezen
+    'c.permitwork.o1': "Alarm verirsin ve dışarıda kalırsın.", // nieuw, nalezen
+    'c.permitwork.o2': "Ona yardım etmek için hızla içeri tırmanırsın.", // nieuw, nalezen
+    'c.permitwork.o3': "Birkaç dakika beklersin, sonra bakarsın.", // nieuw, nalezen
+    'c.permitwork.w': "İş arkadaşına zarar veren gaz sana da zarar verebilir. Tanklardaki kurbanların birçoğu yardıma koşan kişilerdi. Alarmdan sonra koruyucu donanımla yardım gelir.", // nieuw, nalezen
   },
 };
 

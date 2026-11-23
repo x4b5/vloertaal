@@ -305,6 +305,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "خواسته‌اند بیایی: بله، و می‌خواهی با معلم حرف بزنی.", // nieuw, nalezen
     'c.workphotos.a.why': "برای اینترنت عکس خواسته‌اند: یک «نه» مؤدبانه.", // nieuw, nalezen
     'c.device.a.why': "دربارهٔ یک اپ جدید پرسیده‌اند: اول از بخش IT بپرس.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "پرسیده‌اند یک تابلو یعنی چه: مواظب باش، و کدام تابلو است.", // nieuw, nalezen
+    'c.substances.a.why': "پرسیده‌اند سمی است یا نه: حدس نمی‌زنی، نگاه می‌کنی.", // nieuw, nalezen
+    'c.firefight.a.why': "گفته‌اند آتش گرفته: کوچک است، پس کپسول را می‌آوری.", // nieuw, nalezen
+    'c.permitwork.a.why': "پرسیده‌اند چه کسی بیرون می‌ماند: تو، و وظیفه‌ات.", // nieuw, nalezen
+    'c.vog.a.why': "دربارهٔ VOG تو پرسیده‌اند: هنوز نه، و منتظر چه هستی.", // nieuw, nalezen
   },
 };
 
