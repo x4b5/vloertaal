@@ -5691,7 +5691,7 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
    bar overshoots; on the result the cards drop and land. All of it only with data-play, and all of
    it stops with the phone's "less motion" (the rule at the top) and with Kalm. Each plays once. */
 @keyframes sq-jelly {
-  0% { transform: scale(1, 1); }
+  0% { transform: scale(1.04, 1.04); }
   20% { transform: scale(1.05, 0.84); }
   42% { transform: scale(0.97, 1.12); }
   62% { transform: scale(1.02, 0.95); }
@@ -5745,4 +5745,56 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 :root[data-play] .result-stats .stat-card { animation: sq-land 0.55s cubic-bezier(0.3, 0.7, 0.4, 1) 0.35s 1 both; }
 :root[data-play] .result-stats .stat-card + .stat-card { animation-delay: 0.5s; }
 :root[data-play] .play-result-n { display: inline-block; animation: sq-slam 0.5s cubic-bezier(0.3, 0.7, 0.4, 1) 1.25s 1 both; }
+
+/* ---- "Spelmodus": Bram and Jada jump (23 November 2026) ----
+   With a right answer the colleague beside the question stays in colour and jumps: a crouch
+   (squash, held during the hit stop: the anticipation), up stretched, a landing squash, a settle.
+   The shadow shrinks while they are in the air. From 5 in a row (ch-big) higher, with a second
+   hop. A wrong answer: a short slump, down and back. The figure squashes from its feet
+   (.ch-fig: transform-origin at the feet). Once; nothing with less motion or Kalm. */
+:root[data-play] .player.play-hit :is(.speaker-char, .chat-char, .rule-q-char) { filter: none; opacity: 1; }
+:root[data-play] :is(.speaker-char, .chat-char) svg.ch { overflow: visible; }
+:root[data-play] .play-hit :is(.speaker-char, .chat-char) .ch-fig { animation: ch-jump 0.7s cubic-bezier(0.3, 0.6, 0.4, 1) 1 both; }
+:root[data-play] .play-hit :is(.speaker-char, .chat-char) .ch-big .ch-fig { animation: ch-jump-big 1s cubic-bezier(0.3, 0.6, 0.4, 1) 1 both; }
+:root[data-play] .play-hit :is(.speaker-char, .chat-char) .ch-shadow { animation: ch-jump-shadow 0.7s cubic-bezier(0.3, 0.6, 0.4, 1) 1 both; }
+:root[data-play] .play-hit :is(.speaker-char, .chat-char) .ch-big .ch-shadow { animation: ch-jump-shadow-big 1s cubic-bezier(0.3, 0.6, 0.4, 1) 1 both; }
+:root[data-play] .play-miss :is(.speaker-char, .chat-char) .ch-fig { animation: ch-slump 0.55s ease-out 1 both; }
+@keyframes ch-jump {
+  0% { transform: translateY(0) scale(1.12, 0.84); }
+  28% { transform: translateY(-30px) scale(0.9, 1.14); }
+  50% { transform: translateY(-36px) scale(1, 1); }
+  72% { transform: translateY(0) scale(1.16, 0.82); }
+  86% { transform: translateY(0) scale(0.96, 1.05); }
+  100% { transform: none; }
+}
+@keyframes ch-jump-big {
+  0% { transform: translateY(0) scale(1.14, 0.82); }
+  20% { transform: translateY(-46px) scale(0.88, 1.16); }
+  36% { transform: translateY(-54px) scale(1, 1) rotate(-6deg); }
+  52% { transform: translateY(0) scale(1.18, 0.8); }
+  64% { transform: translateY(-16px) scale(0.94, 1.08); }
+  78% { transform: translateY(0) scale(1.08, 0.92); }
+  90% { transform: translateY(0) scale(0.98, 1.02); }
+  100% { transform: none; }
+}
+@keyframes ch-jump-shadow {
+  0% { transform: scale(1.15, 1); }
+  28%, 50% { transform: scale(0.55); opacity: 0.08; }
+  72% { transform: scale(1.2, 1); }
+  100% { transform: none; }
+}
+@keyframes ch-jump-shadow-big {
+  0% { transform: scale(1.15, 1); }
+  20%, 36% { transform: scale(0.45); opacity: 0.06; }
+  52% { transform: scale(1.25, 1); }
+  64% { transform: scale(0.8); }
+  78% { transform: scale(1.1, 1); }
+  100% { transform: none; }
+}
+@keyframes ch-slump {
+  0% { transform: none; }
+  35% { transform: translateY(4px) scale(1.06, 0.9); }
+  65% { transform: translateY(0) scale(0.98, 1.02); }
+  100% { transform: none; }
+}
 

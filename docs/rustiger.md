@@ -149,3 +149,14 @@ eerste les heeft nu "Met spel" en "Standaard".
 
 Alles speelt één keer, en alles staat stil bij Kalm en bij "minder beweging" op de telefoon.
 
+### Bram en Jada springen, en een hit stop (23 november 2026)
+
+- **Springen**: bij een goed antwoord blijft de collega naast de vraag in kleur en springt. Eerst
+  door de knieën (squash), dan uitgerekt omhoog, dan plat landen en uitveren. De schaduw krimpt in de
+  lucht. Vanaf 5 op rij springt hij of zij hoger, kantelt even en maakt een tweede sprongetje. Bij een
+  fout zakt de figuur kort in en komt weer overeind.
+- **Hit stop**: bij een goed antwoord houdt alles in de les 110 ms zijn eerste beeld vast (de kaart iets
+  groter, de collega door de knieën, het stempel nog niet neer). Daarna komt alles tegelijk los. Zo
+  landt de klap met gewicht (`HIT_STOP_MS`, `src/components/LessonPlayer.tsx`). De oefening die nog
+  wegschuift na een snel antwoord bevriest niet mee.
+
