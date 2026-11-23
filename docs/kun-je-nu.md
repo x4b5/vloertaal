@@ -27,7 +27,7 @@ niveau**, geen toets en geen bewijs van een niveau.
 De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland, Jouw sector
 (`src/i18n/kunjenu/`, gemarkeerd met "nieuw, nalezen"). Werkregels is alleen Nederlands.
 
-## Taal (65 onderwerpen, 145 zinnen)
+## Taal (70 onderwerpen, 155 zinnen)
 
 | Onderwerp | Zinnen | Past bij |
 |---|---|---|
@@ -54,6 +54,8 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 | Werk en contract | Ik kan vragen hoeveel uur ik per week werk. | op weg naar A2 · spreken |
 |  | Ik kan vragen of mijn contract tijdelijk of vast is. | op weg naar A2 · spreken |
 |  | Ik kan zeggen wanneer ik wel en niet kan werken. | op weg naar A2 · gesprekken |
+| Werken via een uitzendbureau | Ik kan vragen in welke fase ik zit. | A1 · gesprekken |
+|  | Ik kan vragen wat een inhouding op mijn loonstrook is. | op weg naar A2 · gesprekken |
 | Diploma’s en verder komen | Ik kan vertellen welke diploma’s en certificaten ik heb. | op weg naar A2 · spreken |
 |  | Ik kan zeggen waar ik goed in ben. | op weg naar A2 · gesprekken |
 | Werk kwijt | Ik kan zeggen dat mijn contract stopt. | op weg naar A2 · spreken |
@@ -176,6 +178,14 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan vragen of een kind al slaapt. | A1 · gesprekken |
 | Ouders, veiligheid en de groep | Ik kan een ouder vertellen hoe de dag ging. | A1 · gesprekken |
 |  | Ik kan vragen wie een kind komt ophalen. | A1 · gesprekken |
+| Sanitair, hotel en machines | Ik kan zeggen dat een toilet verstopt is. | A1 · spreken |
+|  | Ik kan vragen hoeveel middel in de emmer moet. | A1 · gesprekken |
+| De keuken en de bediening | Ik kan de chef vragen hoe ik iets moet snijden. | A1 · gesprekken |
+|  | Ik kan een gast vragen of hij apart wil betalen. | A1 · gesprekken |
+| Verzorgen en thuiszorg | Ik kan een cliënt vragen wat hij wil aantrekken. | A1 · gesprekken |
+|  | Ik kan de verpleegkundige vertellen wat ik heb gezien. | A1 · spreken |
+| Kassa, voorraad en sluiten | Ik kan een klant naar het bonnetje vragen. | A1 · gesprekken |
+|  | Ik kan zeggen dat de winkel bijna dichtgaat. | A1 · spreken |
 
 ## Werkregels (28 onderwerpen, 59 zinnen)
 

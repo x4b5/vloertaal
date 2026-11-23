@@ -54,11 +54,14 @@ export const sectors: Sector[] = [
   // "Assemblage en montage" (u.montage, the same day) right after it.
   { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory', 'u.machines', 'u.montage'], focus: ['u.safety', 'u.tools'],
     rules: { units: ['r.factory'], focus: ['r.veilig', 'r.tijd'] } },
-  { id: 'care', nl: 'Zorg', key: 'sectorCare', units: ['u.care'], focus: ['u.teamwork', 'u.health'],
+  // The second own units of Zorg ("Verzorgen en thuiszorg", u.carework), Horeca ("De keuken en de
+  // bediening", u.cooking), Schoonmaak ("Sanitair, hotel en machines", u.housekeeping) and Winkel
+  // ("Kassa, voorraad en sluiten", u.shopfloor), 23 November 2026: right after the first in the sector slot.
+  { id: 'care', nl: 'Zorg', key: 'sectorCare', units: ['u.care', 'u.carework'], focus: ['u.teamwork', 'u.health'],
     rules: { units: ['r.care'], focus: ['r.samen', 'r.ziek'] } },
-  { id: 'hospitality', nl: 'Horeca', key: 'sectorHospitality', units: ['u.horeca'], focus: ['u.teamwork', 'u.time'],
+  { id: 'hospitality', nl: 'Horeca', key: 'sectorHospitality', units: ['u.horeca', 'u.cooking'], focus: ['u.teamwork', 'u.time'],
     rules: { units: ['r.horeca'], focus: ['r.tijd', 'r.loon'] } },
-  { id: 'cleaning', nl: 'Schoonmaak', key: 'sectorCleaning', units: ['u.clean'], focus: ['u.time', 'u.safety'],
+  { id: 'cleaning', nl: 'Schoonmaak', key: 'sectorCleaning', units: ['u.clean', 'u.housekeeping'], focus: ['u.time', 'u.safety'],
     rules: { units: ['r.clean'], focus: ['r.veilig', 'r.tijd'] } },
   // Tuinbouw en kas (30 October 2026): heat, sprays and lifting (Safety), and piece rate (Pay).
   // "Kweken, sorteren en de kas" (u.kweek, 22 November 2026): the second own unit of Tuinbouw.
@@ -76,7 +79,7 @@ export const sectors: Sector[] = [
   // De winkel (31 October 2026): was a basis unit for everyone ("Je baan"); now a sector of its
   // own, so who works in a shop or supermarket gets it early. The roster (evenings and weekends)
   // and the till (Rekenen: change and prices). Appended, so every existing sector keeps its path.
-  { id: 'retail', nl: 'Winkel', key: 'sectorRetail', units: ['u.shop'], focus: ['u.time', 'u.numbers'],
+  { id: 'retail', nl: 'Winkel', key: 'sectorRetail', units: ['u.shop', 'u.shopfloor'], focus: ['u.time', 'u.numbers'],
     rules: { units: ['r.winkel'], focus: ['r.tijd', 'r.rekenen'] } },
   // Groen (green-space work: hoveniers, groenvoorziening, the plantsoenendienst) and Facilitair
   // (reception, post, meeting rooms, faults, moving; cleaning stays Schoonmaak), the owner's

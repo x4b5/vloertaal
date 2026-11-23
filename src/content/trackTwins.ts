@@ -22,6 +22,7 @@ export const TRACK_TWINS: readonly (readonly [taal: string, regels: string])[] =
   ['u.emergency', 'r.veilig'],
   ['u.apply', 'r.zoeken'],
   ['u.contract', 'r.contract'],
+  ['u.uitzend', 'r.contract'],
   ['u.stage', 'r.stage'],
   ['u.grow', 'r.loopbaan'],
   ['u.pay', 'r.loon'],
@@ -52,8 +53,11 @@ export const TRACK_TWINS: readonly (readonly [taal: string, regels: string])[] =
   ['u.machines', 'r.factory'],
   ['u.montage', 'r.factory'],
   ['u.care', 'r.care'],
+  ['u.carework', 'r.care'],
   ['u.horeca', 'r.horeca'],
+  ['u.cooking', 'r.horeca'],
   ['u.clean', 'r.clean'],
+  ['u.housekeeping', 'r.clean'],
   ['u.kas', 'r.kas'],
   ['u.kweek', 'r.kas'],
   ['u.tech', 'r.techniek'],
@@ -61,6 +65,7 @@ export const TRACK_TWINS: readonly (readonly [taal: string, regels: string])[] =
   ['u.garage', 'r.werkplaats'],
   ['u.carservice', 'r.werkplaats'],
   ['u.shop', 'r.winkel'],
+  ['u.shopfloor', 'r.winkel'],
 ];
 
 /**

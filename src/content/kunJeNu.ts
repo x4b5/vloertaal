@@ -108,6 +108,11 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan vragen of mijn contract tijdelijk of vast is.', 'A2', 'spreken', 'I can ask if my contract is temporary or permanent.'],
     ['Ik kan zeggen wanneer ik wel en niet kan werken.', 'A2', 'gesprekken', 'I can say when I can and cannot work.'],
   ]),
+  // Werken via een uitzendbureau (23 November 2026): two lines.
+  onderwerp('u.uitzend', 'Werken via een uitzendbureau', [
+    ['Ik kan vragen in welke fase ik zit.', 'A1', 'gesprekken', 'I can ask which phase I am in.'],
+    ['Ik kan vragen wat een inhouding op mijn loonstrook is.', 'A2', 'gesprekken', 'I can ask what a deduction on my payslip is.'],
+  ]),
   onderwerp('u.grow', 'Diploma’s en verder komen', [
     ['Ik kan vertellen welke diploma’s en certificaten ik heb.', 'A2', 'spreken', 'I can say which diplomas and certificates I have.'],
     ['Ik kan zeggen waar ik goed in ben.', 'A2', 'gesprekken', 'I can say what I am good at.'],
@@ -375,6 +380,23 @@ export const KUN_TAAL: KunOnderwerp[] = [
   onderwerp('u.daycare', 'Ouders, veiligheid en de groep', [
     ['Ik kan een ouder vertellen hoe de dag ging.', 'A1', 'gesprekken', 'I can tell a parent how the day went.'],
     ['Ik kan vragen wie een kind komt ophalen.', 'A1', 'gesprekken', 'I can ask who is coming to pick up a child.'],
+  ]),
+  // The second own units of Schoonmaak, Horeca, Zorg and Winkel (23 November 2026): two lines each.
+  onderwerp('u.housekeeping', 'Sanitair, hotel en machines', [
+    ['Ik kan zeggen dat een toilet verstopt is.', 'A1', 'spreken', 'I can say that a toilet is blocked.'],
+    ['Ik kan vragen hoeveel middel in de emmer moet.', 'A1', 'gesprekken', 'I can ask how much product goes in the bucket.'],
+  ]),
+  onderwerp('u.cooking', 'De keuken en de bediening', [
+    ['Ik kan de chef vragen hoe ik iets moet snijden.', 'A1', 'gesprekken', 'I can ask the chef how to cut something.'],
+    ['Ik kan een gast vragen of hij apart wil betalen.', 'A1', 'gesprekken', 'I can ask a guest if they want to pay separately.'],
+  ]),
+  onderwerp('u.carework', 'Verzorgen en thuiszorg', [
+    ['Ik kan een cliënt vragen wat hij wil aantrekken.', 'A1', 'gesprekken', 'I can ask a client what they want to wear.'],
+    ['Ik kan de verpleegkundige vertellen wat ik heb gezien.', 'A1', 'spreken', 'I can tell the nurse what I saw.'],
+  ]),
+  onderwerp('u.shopfloor', 'Kassa, voorraad en sluiten', [
+    ['Ik kan een klant naar het bonnetje vragen.', 'A1', 'gesprekken', 'I can ask a customer for the receipt.'],
+    ['Ik kan zeggen dat de winkel bijna dichtgaat.', 'A1', 'spreken', 'I can say that the shop is closing soon.'],
   ]),
 ];
 

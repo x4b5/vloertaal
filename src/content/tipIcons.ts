@@ -126,6 +126,27 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🖐': 'w.vingerstrip',
   '🤮': 'w.overgeven',
   '👁': 'w.vierogenprincipe',
+  // The five units of 23 November 2026 (Schoonmaak, Horeca, Zorg, Winkel, uitzendwerk): each tip shows
+  // a word of its own lesson (placeholder drawings for now); the bill and the home-care key keep the
+  // drawings of 💶 and 🗝 above.
+  '🚽': 'w.toiletpot',
+  '🛌': 'w.opmaken',
+  '🥄': 'w.maatbeker',
+  '🌃': 'w.alleenwerken',
+  '🔪': 'w.koksmes',
+  '🍗': 'w.gaar',
+  '🔔': 'w.pass',
+  '🪥': 'w.tandenpoetsen',
+  '📓': 'w.zorgdossier',
+  '🛷': 'w.glijlaken',
+  '🔄': 'w.terugbrengen',
+  '❄': 'w.diepvries',
+  '👜': 'w.tassencontrole',
+  '🏦': 'w.kluis',
+  '🏭': 'w.inlener',
+  '🅰': 'w.fase',
+  '➖': 'w.inhouding',
+  '🏘': 'w.huisvesting',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

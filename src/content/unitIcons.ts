@@ -87,6 +87,13 @@ export const unitIcons: Record<string, string> = {
   'u.recycling': 'w.milieustraat',
   'u.toddlers': 'w.knuffel',
   'u.daycare': 'w.ouder',
+  // The second own units of Schoonmaak, Horeca, Zorg and Winkel, and "Werken via een uitzendbureau"
+  // (23 November 2026; placeholder drawings for now).
+  'u.housekeeping': 'w.schrobzuigmachine',
+  'u.cooking': 'w.koksmes',
+  'u.carework': 'w.douchestoel',
+  'u.shopfloor': 'w.kassalade',
+  'u.uitzend': 'w.inlener',
 };
 
 /**
