@@ -69,12 +69,13 @@ export default {
   // "opbouwen": to build up step by step — three stacks of boxes, one, two and three high, and a
   // green arrow going up over them (a memory picture: "rustig opbouwen" at work). On the intro card
   // the top box of the middle stack comes down onto it, then the top box of the high stack.
+  // On the intro card it plays once and slowly (it happens once: the stacks grow).
   'w.opbouwen': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4} />
       <Box x={12} y={84} w={24} h={20} depth={7} tape={false} />
       <Box x={44} y={84} w={24} h={20} depth={7} tape={false} />
-      <Move kind="from" dy={-26}>
+      <Move kind="from" dy={-26} once>
         <Box x={44} y={63} w={24} h={20} depth={7} tape={false} />
       </Move>
       <Box x={76} y={84} w={24} h={20} depth={7} tape={false} />

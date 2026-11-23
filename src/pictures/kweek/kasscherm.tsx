@@ -11,6 +11,7 @@ export default {
   // "het kasscherm": the greenhouse screen — under a two-peaked glass greenhouse roof a white cloth
   // screen is drawn half across (the rest folded up at the side); the sun's rays stop on the screen
   // and only reach the floor where it is open.
+  // On the intro card it plays once and slowly (it happens once: the screen closes).
   'w.kasscherm': () => (
     <g strokeLinejoin="round">
       {/* The sun and its rays: stopped by the screen on the left, through to the floor on the right */}
@@ -25,7 +26,7 @@ export default {
       {/* The screen: a white cloth drawn from the left, its shaded underside. It runs out from the
           folded pack to the left post (Move: a grow, flipped about x 41 so it grows from its right edge) */}
       <g transform="matrix(-1 0 0 1 82 0)">
-      <Move kind="grow" grow={0.06}>
+      <Move kind="grow" grow={0.06} once>
       <g transform="matrix(-1 0 0 1 82 0)">
       <path d="M14 57H70L68 68H12Z" fill={PAL.paperShade} />
       <path d="M14 57H70L69 63H13Z" fill={PAL.white} />

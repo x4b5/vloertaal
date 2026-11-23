@@ -295,6 +295,7 @@ export default {
   // "bewaren": to keep (papers) — a sheet goes into the open top drawer of a filing cabinet,
   // in between the other papers in their folders
   // On the intro card: the sheet goes down into the open top drawer.
+  // Once and slowly (it is put away: it happens once).
   'w.bewaren': () => (
     <g>
       <Ground cx={60} cy={106} rx={40} ry={4} />
@@ -305,7 +306,7 @@ export default {
       {/* Folders in the open top drawer, and the sheet going in */}
       <rect x="32" y="28" width="17" height="20" rx="2" fill={PAL.sky} />
       <rect x="71" y="28" width="17" height="20" rx="2" fill={PAL.yellow} />
-      <Move kind="from" dy={-24}>
+      <Move kind="from" dy={-24} once>
         <g transform="rotate(-4 60 24)">
           <rect x="45" y="6" width="30" height="40" rx="3" fill={PAL.paperShade} transform="translate(2 2)" />
           <rect x="45" y="6" width="30" height="40" rx="3" fill={PAL.white} />
@@ -423,6 +424,7 @@ export default {
   // "afkeuren": to reject — Amina's hand takes a product off the line: it gets a red cross and
   // goes into the red crate for rejects (no thumbs down: a neutral cross and a crate)
   // On the intro card: the hand lifts the product up off the line, then the red cross appears.
+  // Once and slowly (one product is rejected: it happens once).
   'w.afkeuren': () => (
     <g>
       <Ground cx={84} cy={106} rx={28} ry={4} />
@@ -433,7 +435,7 @@ export default {
       <rect x="59" y="66" width="52" height="9" rx="3" fill={PAL.redShade} />
       <rect x="59" y="66" width="40" height="3" rx="1.5" fill={PAL.redLight} opacity=".7" />
       {/* The product (blue retail box with its label), lifted off and tilted towards the crate */}
-      <Move kind="from" dy={26}>
+      <Move kind="from" dy={26} once>
       <g transform="rotate(-12 36 60)">
         <path d="M16 40L24 33H56L48 40Z" fill={PAL.blueLight} />
         <path d="M48 40L56 33V78L48 86Z" fill={PAL.blueShade} />
@@ -691,6 +693,7 @@ export default {
   // "de prullenbak": the bin — a pedal bin with its lid up, rubbish in it, a paper ball
   // going in
   // On the intro card: the paper ball is thrown in from the top right to just over the bin.
+  // Once and slowly (it is thrown in: it happens once).
   'w.prullenbak': () => (
     <g>
       <Ground cx={58} cy={106} rx={34} ry={5} />
@@ -713,7 +716,7 @@ export default {
       {/* Pedal */}
       <rect x="44" y="100" width="22" height="7" rx="3.5" fill={PAL.slate} />
       {/* Paper ball dropping in */}
-      <Move kind="from" dx={22} dy={-20}>
+      <Move kind="from" dx={22} dy={-20} once>
         <path d="M90 18L95 11L103 12L107 19L104 27L96 29L90 25Z" fill={PAL.mist} stroke={PAL.mist} strokeWidth="2" strokeLinejoin="round" />
         <path d="M95 11L98 19L90 25M98 19L107 19M98 19L96 29" fill="none" stroke={PAL.steel} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
       </Move>
@@ -757,6 +760,7 @@ export default {
   // "aankleden": helping someone get dressed — the carer's hands pull a jumper down over
   // Henk's head; he sits in his vest, the arrows show the jumper going on
   // On the intro card: the carer's hands pull the jumper down from above to over Henk's head.
+  // Once and slowly (it is put on: it happens once).
   'w.aankleden': () => (
     <g>
       <Person
@@ -774,7 +778,7 @@ export default {
         )}
       />
       {/* The jumper, held up over his head */}
-      <Move kind="from" dy={-22}>
+      <Move kind="from" dy={-22} once>
       <path d="M50 8Q60 14 70 8L88 14L106 36L96 43L82 30V46H38V30L24 43L14 36L32 14Z" fill={PAL.clayShade} transform="translate(0 2.5)" stroke={PAL.clayShade} strokeWidth="3" strokeLinejoin="round" />
       <Shade color={PAL.clayShade} opacity={0.8} at={[100, 30, 14, 26]}>
         <path d="M50 8Q60 14 70 8L88 14L106 36L96 43L82 30V46H38V30L24 43L14 36L32 14Z" fill={PAL.clay} stroke={PAL.clay} strokeWidth="3" strokeLinejoin="round" />

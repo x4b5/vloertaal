@@ -5,11 +5,12 @@ export default {
   // "de achterlamp": the rear light — the back half of a blue hatchback, side on (its rear on the right), with a
   // tall red rear light lit up at the rear corner and a red glow round it; the exhaust pipe under the bumper.
   // On the intro card: the rear light switches on, its glow and rays appear.
+  // Once and slowly (a lamp goes on: it happens once).
   'w.achterlamp': () => (
     <g strokeLinejoin="round">
       <Ground cx={54} cy={104} rx={42} ry={4.5} />
       {/* The red glow round the lamp */}
-      <Move kind="show">
+      <Move kind="show" once>
         <ellipse cx="88" cy="66" rx="22" ry="26" fill={PAL.red} opacity=".14" />
         <ellipse cx="88" cy="66" rx="14" ry="18" fill={PAL.red} opacity=".2" />
       </Move>

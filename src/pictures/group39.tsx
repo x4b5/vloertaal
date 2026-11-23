@@ -65,6 +65,7 @@ export default {
   // "stilstaan": to stand still — the belt with two boxes on it, no motion lines, and above it a
   // big round pause sign (two bars): the line has stopped. On the intro card the boxes ride in and
   // come to a stop, then the pause sign shows.
+  // Once and slowly (the line stops: it happens once).
   'w.stilstaan': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4} />
@@ -77,7 +78,7 @@ export default {
           <circle cx={x} cy="85.5" r="2" fill={PAL.steel} />
         </g>
       ))}
-      <Move kind="from" dx={-24}>
+      <Move kind="from" dx={-24} once>
         <Box x={18} y={57} w={26} h={21} depth={8} />
         <Box x={70} y={57} w={26} h={21} depth={8} />
       </Move>
@@ -93,6 +94,7 @@ export default {
 
   // "het lampje": the (warning) light — a red signal light on its dark foot, lit: light rays
   // come off its dome. On the intro card the light goes on (one fade of its glow and rays).
+  // Once and slowly (a light goes on: it happens once).
   'w.lampje': () => (
     <g>
       <Ground cx={60} cy={104} rx={32} ry={4} />
@@ -101,7 +103,7 @@ export default {
       <Shade color={PAL.redShade} opacity={1} at={[86, 62, 12, 30]}>
         <path d="M40 82V60Q40 38 60 38Q80 38 80 60V82Z" fill={PAL.red} />
       </Shade>
-      <Move kind="show">
+      <Move kind="show" once>
         <ellipse cx="58" cy="60" rx="8" ry="14" fill={PAL.redLight} opacity=".85" />
       </Move>
       <path d="M38 82H82" stroke={PAL.slateDark} strokeWidth="3" strokeLinecap="round" />
@@ -114,12 +116,13 @@ export default {
 
   // "komen": to come — Jada waves someone over with her open hand; a big arrow comes to her
   // from the other side. On the intro card the arrow comes in from the left to her.
+  // Once and slowly (someone arrives: it happens once).
   'w.komen': () => (
     <g>
       <Bust who="jada" x={80} y={120} scale={0.66} expr="pleased" />
       <Hand pose="open" x={44} y={80} rotate={-24} scale={0.62} skin={SKIN.jada} sleeve={[PAL.sky, PAL.skyShade]} mirror />
       <Motion x={36} y={42} dir={-150} spread={50} n={3} len={6} gap={6} color={PAL.sky} width={3.4} />
-      <Move kind="from" dx={-26}>
+      <Move kind="from" dx={-26} once>
         <Arrow from={[8, 98]} to={[46, 98]} color={PAL.green} width={8} head={13} />
       </Move>
     </g>
@@ -128,6 +131,7 @@ export default {
   // "aankijken": to look at someone — two eyes that look straight at you (not to the side, as in
   // "kijken"), under the bubble of the one who talks. On the intro card the eyes look aside first,
   // then turn to look straight at you.
+  // Once and slowly (the eyes turn to you: it happens once).
   'w.aankijken': () => (
     <g>
       <Bubble x={34} y={8} w={52} h={26} tail="none">
@@ -139,7 +143,7 @@ export default {
           <Shade color={PAL.paperShade} opacity={1} at={[cx + 22, 78, 10, 28]}>
             <ellipse cx={cx} cy={75} rx="20" ry="25" fill={PAL.white} />
           </Shade>
-          <Move kind="from" dx={-9}>
+          <Move kind="from" dx={-9} once>
             <circle cx={cx} cy={74} r="11" fill={PAL.brown} />
             <circle cx={cx} cy={74} r="6.4" fill={PAL.ink} />
             <circle cx={cx - 3.6} cy={70} r="2.8" fill={PAL.white} />
@@ -209,6 +213,7 @@ export default {
   // "opnemen": to pick up the phone — a finger presses the big green button with its handset
   // (the twin of "ophangen", whose button is red); the phone still rings. On the intro card the
   // finger comes in from the bottom right to the button.
+  // Once and slowly (the call is answered: it happens once).
   'w.opnemen': () => (
     <g>
       <circle cx="54" cy="52" r="36" fill={PAL.okShade} />
@@ -217,7 +222,7 @@ export default {
       <Shine d="M26 36Q32 22 46 17" opacity={0.45} />
       <Motion x={54} y={48} dir={-150} spread={40} n={3} len={7} gap={42} color={PAL.sky} width={3.6} />
       <Motion x={54} y={48} dir={-30} spread={40} n={3} len={7} gap={42} color={PAL.sky} width={3.6} />
-      <Move kind="from" dx={16} dy={16}>
+      <Move kind="from" dx={16} dy={16} once>
         <Hand pose="point" x={96} y={116} rotate={-28} scale={0.8} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
       </Move>
     </g>

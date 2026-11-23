@@ -44,6 +44,7 @@ const jar = (cx: number, by: number) => (
 export default {
   // "het monster": the sample — a row of identical orange jars on a short belt, one place empty;
   // that jar goes up out of the gap (a small blue arrow) in a clear zip bag with a green tag.
+  // On the intro card: the jar goes up out of the gap into the bag, once and slowly (one jar is taken: it happens once).
   'w.monster': () => (
     <g>
       <Ground cx={58} cy={104} rx={48} ry={4} />
@@ -68,7 +69,7 @@ export default {
       {/* The clear bag: soft bulging sides, a pale depth edge, the tint, the jar inside, a shine */}
       <path d={bag(BAG.x + 3, BAG.y + 3)} fill={PAL.ice} />
       <path d={bag(BAG.x, BAG.y)} fill={BAG_TINT} />
-      <Move kind="from" dx={r1(PLACES[TAKEN] - BAG.x - BAG.w / 2)} dy={r1(STAND - BAG.y - BAG.h + 6)}>
+      <Move kind="from" dx={r1(PLACES[TAKEN] - BAG.x - BAG.w / 2)} dy={r1(STAND - BAG.y - BAG.h + 6)} once>
         {jar(BAG.x + BAG.w / 2, BAG.y + BAG.h - 6)}
       </Move>
       <rect x={BAG.x - 2} y={BAG.y - 6} width={BAG.w + 4} height="7" rx="2.5" fill={PAL.blue} />

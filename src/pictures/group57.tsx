@@ -263,6 +263,7 @@ export default {
   // along the frame, the roll at its top end (an arrow: it goes up). The blue paint on the wall
   // runs onto the tape, so the frame stays clean. On the intro card the roll goes up along the
   // frame and the tape grows behind it, then the paint.
+  // On the intro card it plays once and slowly (it happens once: a job with an end: taped, then painted).
   'w.afplakken': () => (
     <g>
       {/* The wall */}
@@ -272,7 +273,7 @@ export default {
       <rect x="88" y="12" width="6" height="96" fill={PAL.cardShade} />
       <rect x="94" y="12" width="14" height="96" rx="3" fill={PAL.ice} />
       {/* The tape along the frame, from the bottom up to the roll */}
-      <Move kind="sag" grow={0.3}>
+      <Move kind="sag" grow={0.3} once>
         <rect x="61" y="34" width="13" height="74" fill={PAL.yellow} />
         <rect x="61" y="34" width="3" height="74" fill={PAL.yellowShine} opacity="0.7" />
       </Move>

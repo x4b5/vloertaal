@@ -136,9 +136,10 @@ export default {
 
   // "een handje helpen": to help with a little hand — a small hand holds up a big box from below; up it goes.
   // On the intro card: the little hand lifts the big box up from below.
+  // Once and slowly (the box goes up: it happens once).
   'w.handje': () => (
     <g>
-      <Move kind="from" dy={22}>
+      <Move kind="from" dy={22} once>
         <Box x={18} y={30} w={58} h={38} depth={16} />
         <Hand pose="open" x={50} y={108} scale={0.8} skin={SKIN.jada} sleeve={[PAL.green, PAL.greenShade]} />
       </Move>

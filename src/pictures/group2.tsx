@@ -58,12 +58,13 @@ export default {
 
   // "helpen": to help — Amina sweats under a heavy box; a cheerful Bram lifts the other side. On the
   // intro card the two lift the box up together.
+  // On the intro card it plays once and slowly (it happens once: the box is lifted up once).
   'w.helpen': () => (
     <g>
       <Ground cx={60} cy={108} rx={46} ry={4} />
       <Bust who="amina" x={30} y={112} scale={0.52} expr="disappointed" />
       <Bust who="bram" x={92} y={112} scale={0.52} expr="pleased" />
-      <Move kind="from" dy={18}>
+      <Move kind="from" dy={18} once>
         <Box x={36} y={70} w={42} h={32} depth={10} />
         <Hand pose="open" x={30} y={100} rotate={60} scale={0.5} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
         <Hand pose="open" x={94} y={102} rotate={-60} scale={0.5} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} mirror />

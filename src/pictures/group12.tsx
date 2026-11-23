@@ -250,6 +250,7 @@ export default {
 
   // "begroeten": to greet — Amina and Henk shake hands.
   // On the intro card their forearms come in from both sides and the hands meet in the middle.
+  // On the intro card it plays once and slowly (it happens once: one handshake).
   'w.begroeten': () => {
     const [as, ash] = SKIN.amina;
     const [hs, hsh] = SKIN.henk;
@@ -259,7 +260,7 @@ export default {
         <Bust who="henk" x={98} y={124} scale={0.66} expr="pleased" flip />
         <g transform="translate(0 10)">
           {/* Forearms, level, meeting in the middle */}
-          <Move kind="from" dx={-18}><path d="M10 106L40 94" stroke={PAL.green} strokeWidth="15" strokeLinecap="round" /></Move>
+          <Move kind="from" dx={-18} once><path d="M10 106L40 94" stroke={PAL.green} strokeWidth="15" strokeLinecap="round" /></Move>
           <Move kind="from" dx={18}><path d="M110 106L80 94" stroke={PAL.navy} strokeWidth="15" strokeLinecap="round" /></Move>
           <Move kind="from" dx={-18}><rect x={34} y={84} width={9} height={19} rx="4" fill={PAL.greenShade} transform="rotate(-24 38 94)" /></Move>
           <Move kind="from" dx={18}><rect x={77} y={84} width={9} height={19} rx="4" fill={PAL.navyShade} transform="rotate(24 82 94)" /></Move>
@@ -282,10 +283,11 @@ export default {
   // "een vraag stellen": to ask a question — Jada raises her hand and asks: a question mark
   // in her speech bubble.
   // On the intro card her hand goes up, then the bubble with the question mark appears.
+  // On the intro card it plays once and slowly (it happens once: one question is asked).
   'w.vraagstellen': () => (
     <g>
       <Bust who="jada" x={44} y={124} scale={0.62} expr="pleased" />
-      <Move kind="from" dy={26}>
+      <Move kind="from" dy={26} once>
         <Hand pose="open" x={90} y={86} rotate={10} scale={0.74} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} mirror />
       </Move>
       <Move kind="show">
@@ -298,13 +300,14 @@ export default {
 
   // "tekenen": to sign — a hand with a pen finishes a signature on the signature line.
   // On the intro card the pen writes the signature: the hand goes along the line, the signature grows.
+  // On the intro card it plays once and slowly (it happens once: a signature is put down once).
   'w.tekenen': () => (
     <g>
       <rect x={6} y={44} width={104} height={64} rx="5" fill={PAL.paperShade} transform="translate(0 4)" />
       <rect x={6} y={44} width={104} height={64} rx="5" fill={PAL.white} />
       <path d="M16 56H70M16 66H58" stroke={PAL.mist} strokeWidth="3.2" strokeLinecap="round" />
       <path d="M16 96H100" stroke={PAL.steel} strokeWidth="2.6" strokeLinecap="round" />
-      <Move kind="grow" grow={0.1}>
+      <Move kind="grow" grow={0.1} once>
         <path
           d="M18 92C22 74 30 68 30 78S24 96 34 88 42 74 46 82 48 92 54 86 60 80 64 86"
           fill="none"
@@ -358,10 +361,11 @@ export default {
   // shows the power symbol. On the intro card (docs/tekenstijl.md "Beweging", second round, 5
   // November 2026) the screen is lit (as on "de telefoon"), the finger comes to the button and
   // then the screen goes dark: one fade, once.
+  // On the intro card it plays once and slowly (it happens once: the screen goes off).
   'w.uitzetten': () => (
     <g>
       <Phone x={18} y={10} w={60} h={98} screen={PAL.sky}>
-        <Move kind="show">
+        <Move kind="show" once>
           <rect x={22} y={17} width={52} height={84} rx="4" fill={PAL.slateDark} />
           <path d="M38.8 46A15 15 0 1 0 57.2 46" fill="none" stroke={PAL.steel} strokeWidth="5.5" strokeLinecap="round" />
           <path d="M48 38V58" stroke={PAL.steel} strokeWidth="5.5" strokeLinecap="round" />
@@ -393,6 +397,7 @@ export default {
 
   // "posten": to post online — a photo goes up from the phone onto the internet and gets likes.
   // On the intro card the photo goes up out of the phone, then the hearts appear.
+  // On the intro card it plays once and slowly (it happens once: the photo is posted).
   'w.posten': () => (
     <g>
       <Phone x={14} y={50} w={46} h={74}>
@@ -400,7 +405,7 @@ export default {
       </Phone>
       <Hand pose="hold" x={37} y={128} scale={0.9} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
       <Arrow from={[38, 70]} to={[56, 40]} color={PAL.sky} width={7} head={11} />
-      <Move kind="from" dx={-30} dy={30}>
+      <Move kind="from" dx={-30} dy={30} once>
         <g transform="rotate(8 82 34)">
           <rect x={56} y={10} width={50} height={46} rx="4" fill={PAL.paperShade} transform="translate(2 3)" />
           <rect x={56} y={10} width={50} height={46} rx="4" fill={PAL.white} />
@@ -452,11 +457,12 @@ export default {
 
   // "delen": to share — one phone sends the same photo out to three other phones.
   // On the intro card the three phones with the photo go out from the first phone to their places.
+  // On the intro card it plays once and slowly (it happens once: the photo is sent).
   'w.delen': () => (
     <g>
       {/* The three phones first: on the intro card they come out from behind the first one */}
       {([[94, 14], [100, 50], [94, 86]] as Pt[]).map(([x, y], i) => (
-        <Move key={i} kind="from" dx={-52} dy={(50 - y) * 0.7}>
+        <Move key={i} kind="from" dx={-52} dy={(50 - y) * 0.7} once>
           <rect x={x - 11} y={y - 1} width={22} height={34} rx="4" fill={PAL.slateDark} />
           <rect x={x - 12} y={y - 3} width={22} height={34} rx="4" fill={PAL.slate} />
           <MiniPhoto x={x - 9} y={y + 4} w={16} h={14} />
@@ -566,6 +572,7 @@ export default {
 
   // "uitleggen": to explain — Henk explains to Jada how it works: step, arrow, done.
   // On the intro card the arrow in his bubble grows from the step, then the tick appears.
+  // On the intro card it plays once and slowly (it happens once: it ends done, with the tick).
   'w.uitleggen': () => (
     <g>
       <Bust who="henk" x={30} y={124} scale={0.58} expr="pleased" talk />
@@ -574,7 +581,7 @@ export default {
       <Bubble x={40} y={6} w={72} h={40} tail="left">
         <rect x={48} y={16} width={16} height={16} rx="3" fill={PAL.card} />
         <path d="M54 16V22" stroke={PAL.cardShade} strokeWidth="3" />
-        <Move kind="grow" grow={0.15}>
+        <Move kind="grow" grow={0.15} once>
           <Arrow from={[68, 24]} to={[84, 24]} color={PAL.orange} width={5} head={8} />
         </Move>
         <Move kind="show">
@@ -586,10 +593,11 @@ export default {
 
   // "leren": to learn — Amina reads an open book and gets the idea (a light bulb).
   // On the intro card the book comes up to read, then the light bulb appears.
+  // On the intro card it plays once and slowly (it happens once: the idea comes once).
   'w.leren': () => (
     <g>
       <Bust who="amina" x={56} y={128} scale={0.62} expr="pleased" />
-      <Move kind="show">
+      <Move kind="show" once>
         <Bulb cx={94} cy={30} r={12} />
       </Move>
       {/* Open book held in front of her */}
@@ -605,11 +613,12 @@ export default {
 
   // "nee zeggen": to say no — Bram says no: a red cross in his speech bubble, his hand up.
   // On the intro card his hand comes up, then the red cross appears in the bubble.
+  // On the intro card it plays once and slowly (it happens once: one no).
   'w.neezeggen': () => (
     <g>
       <Bust who="bram" x={38} y={124} scale={0.64} expr="neutral" />
       <Bubble x={58} y={8} w={52} h={44} tail="left" fill="#ffe1db" depth={PAL.redLight}>
-        <Move kind="show">
+        <Move kind="show" once>
           <Cross x={84} y={30} r={15} />
         </Move>
       </Bubble>

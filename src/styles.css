@@ -1695,6 +1695,24 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .intro-card .word-pic .mv-drop { animation: mvB-late 2.2s cubic-bezier(0.55, 0, 0.7, 0.6) 0.4s 2 backwards; }
 .intro-card .word-pic .mv-tip { animation: mvB-late-turn 2.2s cubic-bezier(0.55, 0, 0.7, 0.6) 0.4s 2 backwards; }
 .intro-card .word-pic .mv-show { animation: mvB-show 2.2s ease-out 0.4s 2 backwards; }
+/* An event that happens once (Move once: the sun comes up, a door opens, a lamp goes on): one slow
+   round instead of three, 3 s (two steps: 3.6 s), the still picture held at its end. */
+.intro-card .word-pic:has(.mv-once) :is(.mv-from, .mv-slow) { animation: mvA-slide 3s cubic-bezier(0.4, 0.3, 0.4, 1) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once) .mv-fast { animation: mvA-fast 3s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once) .mv-steps { animation: mvA-steps 3s steps(3, jump-none) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once) .mv-turn { animation: mvA-turn 3s ease-in-out 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once) .mv-grow { animation: mvA-grow 3s cubic-bezier(0.4, 0.3, 0.4, 1) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once) .mv-sag { animation: mvA-sag 3s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once):has(.mv-then, .mv-drop, .mv-tip, .mv-show) :is(.mv-from, .mv-slow) { animation: mvB-slide 3.6s cubic-bezier(0.4, 0.3, 0.4, 1) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once):has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-fast { animation: mvB-fast 3.6s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once):has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-steps { animation: mvB-steps 3.6s steps(3, jump-none) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once):has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-turn { animation: mvB-turn 3.6s ease-in-out 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once):has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-grow { animation: mvB-grow 3.6s cubic-bezier(0.4, 0.3, 0.4, 1) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once):has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-sag { animation: mvB-sag 3.6s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once) .mv-then { animation: mvB-then 3.6s cubic-bezier(0.4, 0.3, 0.4, 1) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once) .mv-drop { animation: mvB-late 3.6s cubic-bezier(0.55, 0, 0.7, 0.6) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once) .mv-tip { animation: mvB-late-turn 3.6s cubic-bezier(0.55, 0, 0.7, 0.6) 0.4s 1 backwards; }
+.intro-card .word-pic:has(.mv-once) .mv-show { animation: mvB-show 3.6s ease-out 0.4s 1 backwards; }
 /* One round: the part comes from its start (0%), arrives, and the still picture holds for the rest of
    the round, so the eye sees where it ends; then it plays again. The last stop of every round is the
    still picture itself (no transform), the picture's own base style: with "less motion" or Kalm

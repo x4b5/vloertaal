@@ -21,6 +21,7 @@ const block = (x: number, y: number, w: number, h: number, d: number, front: str
 export default {
   // "de tilhulp": the lifting aid — a vacuum lifter: a ribbed grey tube hanging from a rail, an orange
   // handle at its head, and a wide black suction pad holding a flat cardboard box up off the floor.
+  // Once and slowly: a load is lifted once (the owner's sunrise rule; lifting it three times looks odd).
   'w.tilhulp': () => (
     <g strokeLinejoin="round">
       <Ground cx={58} cy={106} rx={40} ry={4} />
@@ -36,7 +37,7 @@ export default {
       <rect x="62" y="24" width="7" height="34" rx="3" fill={PAL.steel} />
       <path d="M52 30H68M52 36H68M52 42H68M52 48H68M52 54H68" stroke={PAL.line} strokeWidth="2" strokeLinecap="round" />
       {/* The lift: the head, the pad and the box come up from the floor */}
-      <Move kind="from" dy={9}>
+      <Move kind="from" dy={9} once>
       {/* The head with its orange handle */}
       <rect x="44" y="56" width="32" height="11" rx="3" fill={PAL.slate} />
       <rect x="68" y="56" width="8" height="11" rx="3" fill={PAL.slateDark} />

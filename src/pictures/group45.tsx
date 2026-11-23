@@ -171,11 +171,12 @@ export default {
 
   // "bijvullen": to refill, to top up — a blue can pours into a see-through dispenser; a green arrow shows the level going up.
   // On the intro card the can tips over, then the stream runs while the level in the dispenser rises.
+  // On the intro card it plays once and slowly (it happens once: the dispenser fills).
   'w.bijvullen': () => (
     <g>
       <Ground cx={66} cy={106} rx={30} ry={4} />
       {/* The stream */}
-      <Move kind="show">
+      <Move kind="show" once>
         <path d="M66 44V84" stroke={PAL.sky} strokeWidth="6" strokeLinecap="round" />
       </Move>
       {/* The refill can, tipped over */}

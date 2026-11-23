@@ -242,6 +242,7 @@ export default {
   ),
 
   // "de hefbrug": the car lift — a car up on two blue posts, an arrow under it
+  // On the intro card: the car goes up on the lift, then the arrow, once and slowly (the car goes up: it happens once).
   'w.hefbrug': () => (
     <g>
       <Ground cx={60} cy={106} rx={52} ry={4} />
@@ -253,7 +254,7 @@ export default {
       <rect x="106" y="20" width="4" height="86" fill={PAL.blueShade} />
       <rect x="96" y="100" width="18" height="6" rx="2" fill={PAL.blueShade} />
       {/* On the intro card the arms and the car go up the posts from the floor */}
-      <Move kind="slow" dy={34}>
+      <Move kind="slow" dy={34} once>
       {/* Lift arms under the car */}
       <rect x="14" y="58" width="92" height="6" rx="2" fill={PAL.slate} />
       {/* The car */}
@@ -276,10 +277,11 @@ export default {
   // and air hissing out sideways. On the intro card (docs/tekenstijl.md "Beweging", second round,
   // 5 November 2026) the air goes out: the tyre sinks slowly from round onto its flat bottom and
   // the rim comes down with it; the hiss lines come at the end.
+  // Once and slowly (a tyre goes flat: it happens once).
   'w.lek': () => (
     <g>
       <Ground cx={56} cy={106} rx={46} ry={4.5} />
-      <Move kind="sag" grow={1.25}>
+      <Move kind="sag" grow={1.25} once>
         {/* Tyre: round on top, squashed and bulging wide at the bottom */}
         <path d="M14 60A40 40 0 0 1 94 60C96 76 104 92 102 98Q100 105 92 105H16Q8 105 6 98C4 92 12 76 14 60Z" fill={PAL.slate} />
         <path d="M84 30A40 40 0 0 1 94 60C96 76 104 92 102 98Q100 105 92 105H84Z" fill="#000" opacity=".2" />

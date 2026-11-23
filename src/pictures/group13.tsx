@@ -187,6 +187,7 @@ export default {
   // "betalen": to pay — a bank card tapped on a pay terminal (euro on its screen), with the
   // contactless waves
   // On the intro card: the card comes to the terminal, then its contactless waves appear.
+  // On the intro card it plays once and slowly (it happens once: one payment).
   'w.betalen': () => (
     <g>
       <Ground cx={52} cy={106} rx={30} ry={4} />
@@ -202,7 +203,7 @@ export default {
       )))}
       <Shine d="M29 46Q29 38 36 37" width={3} opacity={0.35} />
       {/* Contactless waves */}
-      <Move kind="show">
+      <Move kind="show" once>
         <path d="M80 50Q85 56 80 62M86 46Q93 56 86 66" fill="none" stroke={PAL.sky} strokeWidth="3.6" strokeLinecap="round" />
       </Move>
       {/* Card */}
@@ -519,6 +520,7 @@ export default {
 
   // "kijken": to look, to check — a big pair of eyes, looking to the side
   // On the intro card: the pupils move from the left to the side they look at.
+  // On the intro card it plays once and slowly (it happens once: the eyes turn to one side).
   'w.kijken': () => (
     <g>
       {[36, 84].map((cx) => (
@@ -527,7 +529,7 @@ export default {
           <Shade color={PAL.paperShade} opacity={1} at={[cx + 26, 66, 12, 34]}>
             <ellipse cx={cx} cy={60} rx="22" ry="30" fill={PAL.white} />
           </Shade>
-          <Move kind="from" dx={-16}>
+          <Move kind="from" dx={-16} once>
             <circle cx={cx + 9} cy={62} r="12" fill={PAL.brown} />
             <circle cx={cx + 10} cy={62} r="7" fill={PAL.ink} />
             <circle cx={cx + 6} cy={57} r="3.2" fill={PAL.white} />

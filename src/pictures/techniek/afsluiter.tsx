@@ -28,6 +28,7 @@ const nut = (x: number, w: number, r: number) => (
 export default {
   // "de afsluiter": the stopcock — a brass ball valve on a copper pipe: a round body between two hex
   // ends, a short stem on top and a big red lever lying along the pipe (open).
+  // On the intro card it plays once and slowly (it happens once: the valve opens).
   'w.afsluiter': () => (
     <g>
       <Ground cx={60} cy={104} rx={46} ry={4.5} />
@@ -46,7 +47,7 @@ export default {
       <rect x={54} y={CY - 30} width={12} height={12} fill={BRASS.shade} />
       <rect x={51} y={CY - 37} width={18} height={9} rx="2" fill={PAL.steel} />
       {/* The big red lever, along the pipe */}
-      <Move kind="turn" turn={90} at={[60, CY - 47]}>
+      <Move kind="turn" turn={90} at={[60, CY - 47]} once>
         <rect x={38} y={CY - 58} width={72} height={22} rx="8" fill={PAL.redShade} />
         <rect x={38} y={CY - 58} width={72} height={16} rx="8" fill={PAL.red} />
         <circle cx={60} cy={CY - 47} r={5} fill={PAL.redShade} />

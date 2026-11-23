@@ -7,6 +7,7 @@ const STEEL_DARK = '#5d6a75';
 export default {
   // "het hangslot": the lockout padlock — a big red padlock with a tall steel shackle, hanging from the
   // lock-off tab of a grey switch box at the top.
+  // On the intro card: the shackle goes down into the body: locked, once and slowly (it locks: it happens once).
   'w.hangslot': () => (
     <g>
       {/* The switch box: right side, front, and the tab with its hole */}
@@ -16,7 +17,7 @@ export default {
       <path d="M52 27H68V40A8 8 0 0 1 52 40Z" fill={PAL.steel} />
       <circle cx="60" cy="38" r="4.6" fill={PAL.slateDark} />
       {/* The shackle: through the hole, down into the body */}
-      <Move kind="from" dy={-9}>
+      <Move kind="from" dy={-9} once>
         <path d="M46 66V46A14 14 0 0 1 74 46V66" stroke={PAL.steel} strokeWidth="7" strokeLinecap="round" fill="none" />
         <path d="M48.8 60V46A11 11 0 0 1 56 35.8" stroke={PAL.mist} strokeWidth="2.4" strokeLinecap="round" fill="none" />
       </Move>

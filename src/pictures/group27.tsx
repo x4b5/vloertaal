@@ -178,9 +178,10 @@ export default {
   // "tot en met": up to and including — one bar over Monday up to and including Thursday (the
   // last day counts too), with an arrow in it that stops at the end of Thursday.
   // On the intro card the bar with its arrow grows from Monday up to the end of Thursday.
+  // Once and slowly (time passes: it happens once).
   'w.totenmet': () => (
     <WeekSheet>
-      <Move kind="grow" grow={0.2}>
+      <Move kind="grow" grow={0.2} once>
         <rect x={cellX(0) - 1} y={ROW_Y - 2} width={cellX(3) + CW + 2 - cellX(0)} height={ROW_H + 4} rx="4" fill={FILL_SHADE} />
         <rect x={cellX(0) - 1} y={ROW_Y - 2} width={cellX(3) + CW + 2 - cellX(0)} height={ROW_H + 1} rx="4" fill={FILL} />
         <Arrow from={[cellX(0) + 4, ROW_Y + ROW_H / 2]} to={[cellX(3) + CW - 1.5, ROW_Y + ROW_H / 2]} color={PAL.white} width={4} head={7} />

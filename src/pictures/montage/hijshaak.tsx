@@ -12,6 +12,7 @@ const HOOK = `M${CX + R} 50V${CY}A${R} ${R} 0 0 1 ${CX - R} ${CY}V64`;
 export default {
   // "de hijshaak": the lifting hook — a big steel crane hook with its yellow safety latch across the
   // opening, hanging from a swivel block at the end of a dark chain.
+  // On the intro card: the safety latch snaps shut across the opening, once and slowly (a latch closes: it happens once).
   'w.hijshaak': () => (
     <g strokeLinejoin="round">
       {/* The chain from the top */}
@@ -33,7 +34,7 @@ export default {
       />
       <Shine d={`M${CX + R - 4.5} 54V70`} width={2.6} opacity={0.9} />
       {/* The yellow safety latch across the opening, from the shank to the tip */}
-      <Move kind="tip" turn={-40} at={[CX + R - 6, 56]}>
+      <Move kind="tip" turn={-40} at={[CX + R - 6, 56]} once>
         <path d={`M${CX + R - 7} 56L${CX - R + 2} 63`} stroke={PAL.yellowShade} strokeWidth="6" strokeLinecap="round" />
         <path d={`M${CX + R - 7} 54.6L${CX - R + 2} 61.6`} stroke={PAL.yellow} strokeWidth="3.6" strokeLinecap="round" />
       </Move>

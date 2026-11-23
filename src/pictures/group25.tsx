@@ -187,11 +187,12 @@ export default {
 
   // "drinken": to drink — Amina drinks from a water bottle (in the heat, drink enough)
   // On the intro card her arm brings the bottle up from below to her lips.
+  // Once and slowly (one drink: it happens once).
   'w.drinken': () => (
     <g>
       <Bust who="amina" x={46} y={120} scale={0.84} />
       {/* Her forearm comes up from below */}
-      <Move kind="from" dx={10} dy={28}>
+      <Move kind="from" dx={10} dy={28} once>
       <path d="M108 130L84 58" stroke="#2f8f3e" strokeWidth="13" strokeLinecap="round" />
       {/* The bottle, its cap at her lips, tipped up */}
       <g transform="translate(56 73) rotate(-34)">
@@ -307,6 +308,7 @@ export default {
 
   // "opruimen": to tidy up, to put away — a hand puts the wrench away in a crate, all neat. On the
   // intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the hand lowers the wrench into the crate, then the sparkles come.
+  // Once and slowly (it is put away: it happens once).
   'w.opruimen': () => (
     <g>
       <Ground cy={106} rx={42} />
@@ -314,7 +316,7 @@ export default {
       <path d="M20 58H100L96 66H24Z" fill={PAL.blueShade} />
       <rect x="32" y="48" width="9" height="18" rx="3" fill={PAL.yellow} />
       <rect x="45" y="44" width="10" height="22" rx="3" fill={PAL.red} />
-      <Move kind="from" dy={-30}>
+      <Move kind="from" dy={-30} once>
         <Wrench x={66} y={42} rotate={-90} len={44} />
         <Hand pose="hold" x={80} y={28} rotate={-90} scale={0.66} skin={SKIN.henk} sleeve={['#2d5a92', PAL.navyShade]} />
       </Move>
@@ -562,11 +564,12 @@ export default {
 
   // "de proefrit": the test drive — a car driving off along the road, with its key
   // On the intro card the car drives in along the road from the left.
+  // Once and slowly (a car drives in: it happens once).
   'w.proefrit': () => (
     <g>
       <rect x="8" y="94" width="104" height="8" rx="4" fill={PAL.mist} />
       <path d="M20 98H34M52 98H66M84 98H98" stroke={PAL.white} strokeWidth="2.4" strokeLinecap="round" />
-      <Move kind="from" dx={-28}>
+      <Move kind="from" dx={-28} once>
         <Car x={64} y={88} k={0.98} body={PAL.green} shade={PAL.greenShade} />
       </Move>
       <g stroke={PAL.line} strokeWidth="3.6" strokeLinecap="round" opacity=".8">
@@ -719,11 +722,12 @@ export default {
 
   // "stemmen": to vote — a hand puts the folded ballot paper in the ballot box
   // On the intro card the hand lowers the ballot paper into the slot.
+  // Once and slowly (a vote is cast: it happens once).
   'w.stemmen': () => (
     <g>
       <Ground cy={106} rx={42} />
       {/* The ballot paper, half in the slot */}
-      <Move kind="from" dy={-24}>
+      <Move kind="from" dy={-24} once>
       <rect x="48" y="28" width="26" height="40" rx="2" fill={PAL.paperShade} />
       <rect x="46" y="26" width="26" height="40" rx="2" fill={PAL.white} />
       <rect x="51" y="44" width="8" height="8" rx="1" fill={PAL.red} />
@@ -786,6 +790,7 @@ export default {
   // "vergrendelen": to lock (a screen or a phone) — a finger taps the padlock: the phone locks. On
   // the intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the shackle snaps shut, then the lines come: to lock, the
   // action ("op slot", l.handover, is the padlock standing still).
+  // Once and slowly (it locks: it happens once).
   'w.vergrendelen': () => (
     <g>
       <Shade color={PAL.slateDark} opacity={1} at={[84, 60, 8, 60]}>
@@ -793,7 +798,7 @@ export default {
       </Shade>
       <rect x="31" y="16" width="46" height="86" rx="5" fill={PAL.navy} />
       <Padlock x={54} y={66} w={28} closing />
-      <Move kind="show">
+      <Move kind="show" once>
         <Motion x={54} y={50} dir={-90} spread={100} n={3} len={6} gap={20} color={PAL.ice} width={2.6} />
       </Move>
       <Hand pose="point" x={82} y={90} rotate={-28} scale={0.74} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />

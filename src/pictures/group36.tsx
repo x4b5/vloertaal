@@ -133,12 +133,13 @@ export default {
 
   // "bezorgen": to deliver — a parcel goes to the front door of a house (an arrow)
   // On the intro card: the parcel comes from the right to the front door.
+  // Once and slowly (it is delivered: it happens once).
   'w.bezorgen': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4} />
       <FrontDoor x={12} y={24} w={42} h={82} />
       <rect x="8" y="102" width="50" height="5" rx="2" fill={PAL.cardDark} />
-      <Move kind="from" dx={24}>
+      <Move kind="from" dx={24} once>
         <Box x={66} y={64} w={30} h={26} depth={12} />
       </Move>
       <Arrow from={[96, 40]} to={[60, 40]} color={PAL.sky} width={8} head={13} />
@@ -147,6 +148,7 @@ export default {
 
   // "inladen": to load — the back of the van open, a parcel goes in (an arrow)
   // On the intro card: the front parcel goes up into the van.
+  // Once and slowly (it is put in: it happens once).
   'w.inladen': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4} />
@@ -164,7 +166,7 @@ export default {
       <Wheel cx={88} cy={98} r={8} />
       {/* One parcel already inside, one going in */}
       <Box x={66} y={60} w={20} h={16} depth={6} tape={false} />
-      <Move kind="from" dy={22}>
+      <Move kind="from" dy={22} once>
         <Box x={34} y={50} w={28} h={24} depth={9} />
       </Move>
       <Arrow from={[48, 106]} to={[48, 82]} color={PAL.sky} width={8} head={12} />

@@ -314,6 +314,7 @@ export default {
   // "struikelen": to trip over something — a walking leg: the boot catches on a plank lying on
   // the ground, with lines at the bump and a warning mark. On the intro card the front leg swings
   // forward from behind and catches on the plank; then the lines and the mark show.
+  // On the intro card it plays once and slowly (it happens once: one trip).
   'w.struikelen': () => (
     <g>
       <Ground cx={58} cy={107} rx={50} ry={4} />
@@ -326,7 +327,7 @@ export default {
         <rect x="76" y="100" width="34" height="4" rx="2" fill={PAL.cardShade} />
       </g>
       {/* The front leg: swinging forward, the toe hits the plank */}
-      <Move kind="turn" turn={30} at={[36, 14]}>
+      <Move kind="turn" turn={30} at={[36, 14]} once>
         {cap([36, 14], [48, 48], 15, PAL.blue)}
         {cap([48, 48], [54, 76], 14, PAL.blue)}
         <Boot x={54} y={78} rotate={14} />

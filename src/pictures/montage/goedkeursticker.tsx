@@ -6,6 +6,7 @@ const STEEL_DARK = '#5d6a75';
 export default {
   // "de goedkeursticker": the approval sticker — a big round green sticker with a white tick on the
   // front of a grey product housing, its bottom right edge still lifted off.
+  // On the intro card it plays once and slowly (it happens once: the sticker is put on).
   'w.goedkeursticker': () => (
     <g strokeLinejoin="round">
       <path d="M10 104L88 104L106 90L28 90Z" fill="#000" opacity="0.14" />
@@ -15,7 +16,7 @@ export default {
       <rect x="12" y="34" width="74" height="68" fill={PAL.steel} />
       <path d="M16 38H44" stroke={PAL.mist} strokeWidth="2.4" strokeLinecap="round" opacity="0.8" />
       <path d="M18 94H34" stroke={PAL.slate} strokeWidth="2" strokeLinecap="round" opacity="0.5" />
-      <Move kind="from" dx={-16} dy={-28}>
+      <Move kind="from" dx={-16} dy={-28} once>
         {/* The sticker's shadow on the housing */}
         <circle cx="51" cy="70" r="24" fill="#000" opacity="0.12" />
         {/* The sticker: green disc with the corner on the bottom right lifted (white back showing) */}

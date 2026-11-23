@@ -29,6 +29,7 @@ export default {
   // green, blue) between dark rings, a dark dome on top, on a short pole on the corner of a grey
   // machine: the red lamp on top is lit with rays, the others are off (pale glass).
   // On the intro card: the red lamp's rays appear, as it lights up (one fade, no blinking).
+  // Once and slowly (a lamp goes on: it happens once).
   'w.signaallamp': () => (
     <g>
       {/* The machine's corner: ground shadow, front, right side, top */}
@@ -37,7 +38,7 @@ export default {
       <path d="M84 99L100 89L100 97L84 107Z" fill={PAL.slate} />
       <path d="M18 99L84 99L100 89L34 89Z" fill={PAL.mist} />
       {/* The rays of the lit lamp */}
-      <Move kind="show">
+      <Move kind="show" once>
         <Motion x={CX} y={30} dir={180} spread={64} n={3} len={7} gap={27} color={PAL.red} width={3.4} />
         <Motion x={CX} y={30} dir={0} spread={64} n={3} len={7} gap={27} color={PAL.red} width={3.4} />
       </Move>

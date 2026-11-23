@@ -111,6 +111,7 @@ export default {
 
   // "pinnen": to pay by card — a hand holds a blue bank card to a card terminal; waves between them.
   // On the intro card: the hand brings the card to the terminal, then the waves and the tick appear.
+  // Once and slowly (a payment: it happens once).
   'w.pinnen': () => (
     <g>
       <Ground cx={78} cy={106} rx={24} ry={4} />
@@ -119,7 +120,7 @@ export default {
         <rect x="60" y="34" width="36" height="72" rx="7" fill={PAL.slate} />
       </Shade>
       <rect x="65" y="40" width="26" height="18" rx="3" fill={PAL.ice} />
-      <Move kind="show">
+      <Move kind="show" once>
         <path d="M71 49L76 54L85 45" fill="none" stroke={PAL.ok} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
       </Move>
       {[0, 1, 2].map((rI) => [0, 1, 2].map((c) => (
@@ -192,6 +193,7 @@ export default {
 
   // "duren": to last, to take (time) — an hourglass, the sand running from the top to the bottom.
   // On the intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the sand runs: the top sinks, the heap grows (2 s).
+  // Once and slowly (time passes: it happens once).
   'w.duren': () => (
     <g>
       <Ground cx={60} cy={106} rx={30} ry={4} />
@@ -200,7 +202,7 @@ export default {
         <path d="M38 22H82Q82 46 64 60Q82 74 82 98H38Q38 74 56 60Q38 46 38 22Z" fill="#e3f5ff" />
       </Shade>
       {/* sand: what is left on top, the stream, the heap below */}
-      <Move kind="sag" grow={1.5}>
+      <Move kind="sag" grow={1.5} once>
         <path d="M47 38H73Q70 48 60 54Q50 48 47 38Z" fill={PAL.card} />
       </Move>
       <path d="M60 54V88" stroke={PAL.card} strokeWidth="2.6" strokeLinecap="round" />

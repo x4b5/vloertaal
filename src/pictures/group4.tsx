@@ -124,6 +124,7 @@ export default {
   ),
 
   // "de heftruck": the forklift — a yellow forklift carrying a box on its forks
+  // Once and slowly: a load is lifted once (the owner's sunrise rule; lifting it three times looks odd).
   'w.heftruck': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4.5} />
@@ -144,7 +145,7 @@ export default {
       <rect x="31" y="14" width="11" height="86" rx="3" fill={PAL.mist} />
       <rect x="37" y="14" width="5" height="86" rx="2.5" fill={PAL.steel} />
       {/* On the intro card the forks come down the mast with the load (docs/tekenstijl.md "Beweging") */}
-      <Move kind="from" dy={-40}>
+      <Move kind="from" dy={-40} once>
         <rect x="26" y="64" width="9" height="36" rx="2.5" fill={PAL.steel} />
         <rect x="7" y="94" width="29" height="6" rx="3" fill={PAL.steel} />
         {/* The load */}
@@ -264,10 +265,11 @@ export default {
   // straight, hands at the box on the floor, up to standing. Each joint turns back into this
   // standing pose around its own point (ankle, knee, hip, shoulder, neck), the parts nested so
   // that they stay joined.
+  // Once and slowly (standing up: it happens once).
   'w.tillen': () => (
     <g>
       <Ground cx={66} cy={105} rx={34} ry={3.5} />
-      <Move kind="show">
+      <Move kind="show" once>
         <path d="M70 78V84M76 78V87M82 78V84" stroke={PAL.line} strokeWidth="3" strokeLinecap="round" opacity=".75" />
       </Move>
       {/* Ankle → shin → knee → thigh → hip → back → shoulder → arm and box; and the head */}
@@ -305,6 +307,7 @@ export default {
 
   // "pakken": to take — a hand grabs one tomato and takes it out of a full crate
   // On the intro card: the hand lifts the tomato up out of the crate.
+  // Once and slowly (one tomato is taken: it happens once).
   'w.pakken': () => (
     <g>
       <Ground cx={60} cy={107} rx={46} ry={3.5} />
@@ -320,7 +323,7 @@ export default {
         <rect key={x} x={x - 4} y={95} width={8} height={6} rx="3" fill={PAL.greenShade} />
       ))}
       {/* The tomato being taken, lifted out of the crate */}
-      <Move kind="from" dy={30}>
+      <Move kind="from" dy={30} once>
       <g transform="translate(56 52) scale(0.88) translate(-52 -58)">
       <circle cx={52} cy={58} r={20} fill={PAL.red} />
       <path d="M68 48A20 20 0 0 1 54 77.8" fill="none" stroke={PAL.redShade} strokeWidth="6" strokeLinecap="round" />

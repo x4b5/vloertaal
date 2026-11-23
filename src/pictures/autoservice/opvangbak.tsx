@@ -15,6 +15,7 @@ const FLOOR = 96;
 export default {
   // "de opvangbak": the oil drain pan — a low wide dark pan on the floor with dark amber oil in it; from the
   // drain hole of the car's oil pan above, a thin golden stream of oil falls into it with a ring where it lands.
+  // On the intro card: the oil rises in the pan as the stream runs into it, once and slowly (the pan fills: it happens once).
   'w.opvangbak': () => (
     <g strokeLinecap="round">
       <Ground cx={CX} cy={104} rx={44} ry={4.5} />
@@ -33,7 +34,7 @@ export default {
       <ellipse cx={CX} cy={RIM} rx={RX} ry={RY} fill={PAL.steel} />
       <ellipse cx={CX} cy={RIM + 0.6} rx={RX - 3} ry={RY - 2} fill={PAL.slateDark} />
       {/* On the intro card the oil rises in the pan while the stream runs into it */}
-      <Move kind="sag" grow={0.25}>
+      <Move kind="sag" grow={0.25} once>
         <ellipse cx={CX} cy={RIM + 2.4} rx={RX - 8} ry={RY - 5} fill={OIL} />
         {/* Where the stream lands: a ring in the oil */}
         <ellipse cx={CX} cy={RIM + 3} rx="10" ry="3" fill="none" stroke={OIL_DARK} strokeWidth="1.8" />

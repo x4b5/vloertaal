@@ -39,10 +39,11 @@ export default {
   // "de rolcontainer": the roll cage — a tall steel wire cage on a low base with four wheels, cardboard
   // boxes stacked inside behind the wire mesh.
   // On the intro card: the roll cage rolls in from the left to its place.
+  // On the intro card it plays once and slowly (it happens once: it rolls in to its place).
   'w.rolcontainer': () => (
     <g strokeLinejoin="round">
       <Ground cx={57} cy={105} rx={40} ry={4} />
-      <Move kind="from" dx={-26}>
+      <Move kind="from" dx={-26} once>
       {/* The back frame */}
       <path d={`M${L + ox} ${T + oy}H${R + ox}V${B + oy}`} fill="none" stroke={PAL.steel} strokeWidth="3.4" strokeLinecap="round" />
       {/* The boxes inside */}

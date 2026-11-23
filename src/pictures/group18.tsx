@@ -141,6 +141,7 @@ export default {
 
   // "vinden": to find — a map with a dotted route that ends at a red pin, and a sparkle.
   // On the intro card the pin drops onto the end of the route, then the sparkles show.
+  // On the intro card it plays once and slowly (it happens once: it is found once).
   'w.vinden': () => (
     <g>
       {/* Folded map: three panels */}
@@ -156,7 +157,7 @@ export default {
       <path d="M22 92Q40 84 58 82Q76 80 80 58" fill="none" stroke={PAL.line} strokeWidth="4" strokeLinecap="round" strokeDasharray="1 8" />
       <circle cx="22" cy="92" r="4" fill={PAL.slate} />
       {/* Pin */}
-      <Move kind="drop" dy={-24}>
+      <Move kind="drop" dy={-24} once>
         <path d="M82 58C76 50 70 44 70 36A12 12 0 0 1 94 36C94 44 88 50 82 58Z" fill={PAL.red} />
         <path d="M86 25.5A12 12 0 0 1 94 36C94 44 88 50 82 58V47Z" fill={PAL.redShade} opacity=".8" />
         <circle cx="82" cy="36" r="4.6" fill={PAL.white} />
@@ -211,11 +212,12 @@ export default {
   // there is no tick. A moving picture (`picture: 'motion'`, docs/tekenstijl.md "Beweging"): on
   // the intro card the bar fills, slows down and stops just before the end. Standing still it
   // could pass for "afmaken", so it is only on the intro card.
+  // On the intro card it plays once and slowly (it happens once: the bar fills and stops).
   'w.bijna': () => (
     <g>
       <rect x="10" y="48" width="100" height="24" rx="12" fill={PAL.mist} transform="translate(0 3.5)" />
       <rect x="10" y="48" width="100" height="24" rx="12" fill={PAL.paperShade} />
-      <Move kind="grow" grow={0.12}>
+      <Move kind="grow" grow={0.12} once>
         <rect x="14" y="52" width="78" height="16" rx="8" fill={PAL.orange} />
         <rect x="14" y="60" width="78" height="8" rx="4" fill={PAL.orangeShade} opacity=".7" />
         <path d="M20 56H50" stroke={PAL.orangeLight} strokeWidth="3" strokeLinecap="round" />

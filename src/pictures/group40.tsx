@@ -47,13 +47,14 @@ function Stack({ lean = false }: { lean?: boolean }) {
 export default {
   // "dichtplakken": to tape shut — a box with a strip of tape over its top, the roll at its end.
   // On the intro card the roll of tape rolls along the top of the box to its end.
+  // Once and slowly (the box is shut: it happens once).
   'w.dichtplakken': () => (
     <g>
       <Ground cx={56} cy={106} rx={46} ry={4} />
       <Box x={12} y={60} w={68} h={44} depth={20} />
       {/* The roll of tape at the back end of the strip: on the intro card it rolls over the box
           along the strip to here (taping it shut) */}
-      <Move kind="from" dx={-30} dy={8}>
+      <Move kind="from" dx={-30} dy={8} once>
         <circle cx="68" cy="42" r="12" fill="#f6dcae" />
         <circle cx="68" cy="42" r="11" fill="none" stroke={PAL.cardShade} strokeWidth="2.4" />
         <circle cx="68" cy="42" r="5" fill={PAL.cardDark} />
@@ -95,9 +96,10 @@ export default {
 
   // "het idee": the idea — a lamp that is lit: a yellow glass, a grey foot, short rays round it.
   // On the intro card the lamp switches on: its rays appear.
+  // Once and slowly (a lamp goes on: it happens once).
   'w.idee': () => (
     <g>
-      <Move kind="show">
+      <Move kind="show" once>
         <Motion x={60} y={20} dir={-90} spread={120} n={5} len={8} gap={6} color={PAL.yellowShade} width={4} />
       </Move>
       <rect x="48" y="80" width="24" height="18" rx="4" fill={PAL.mist} />
@@ -113,10 +115,11 @@ export default {
 
   // "je hand opsteken": to raise your hand — Jada raises one hand straight up, her other arm down.
   // On the intro card her hand goes up.
+  // Once and slowly (the hand goes up: it happens once).
   'w.handopsteken': () => (
     <g>
       <Bust who="jada" x={52} y={122} scale={0.66} expr="pleased" />
-      <Move kind="from" dy={30}>
+      <Move kind="from" dy={30} once>
         <Hand pose="open" x={90} y={46} rotate={4} scale={0.6} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
       </Move>
     </g>

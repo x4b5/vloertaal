@@ -527,11 +527,12 @@ export default {
 
   // "laten zien": to show — Jada holds up her phone so Henk can see the screen.
   // On the intro card she lifts the phone up to Henk, then the lines show.
+  // On the intro card it plays once and slowly (it happens once: she shows it once).
   'w.latenzien': () => (
     <g>
       <Bust who="jada" x={28} y={122} scale={0.5} expr="pleased" />
       <Bust who="henk" x={94} y={122} scale={0.5} expr="thinking" flip />
-      <Move kind="from" dy={26}>
+      <Move kind="from" dy={26} once>
       <g transform="rotate(10 60 40)">
         <rect x={44} y={18} width={34} height={46} rx="5" fill={PAL.slateDark} transform="translate(2 3)" />
         <rect x={44} y={18} width={34} height={46} rx="5" fill={PAL.slate} />

@@ -4,6 +4,7 @@ import { Arrow, Ground, Move, PAL, Shine } from '../kit';
 export default {
   // "de zekering": the circuit breaker — one big white modular breaker in a slanted view, its dark lever
   // down (off, tripped) with a green flag in the little window, and a blue arrow pointing down.
+  // On the intro card: the lever drops down (it trips), then the flag and the arrow, once and slowly (it trips: it happens once).
   'w.zekering': () => (
     <g>
       <Ground cx={60} cy={105} rx={34} ry={4.5} />
@@ -21,7 +22,7 @@ export default {
       <path d="M47.6 98.4L54.4 91.6" stroke={PAL.slate} strokeWidth="2" strokeLinecap="round" />
       {/* The flag window: green, off */}
       <rect x="57" y="50" width="10" height="7" rx="1.5" fill={PAL.slateDark} />
-      <Move kind="show">
+      <Move kind="show" once>
         <rect x="58.4" y="51.4" width="7.2" height="4.2" rx="1" fill={PAL.leaf} />
       </Move>
       {/* The lever slot and the lever, down */}
