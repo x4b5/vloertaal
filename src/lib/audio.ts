@@ -840,6 +840,17 @@ export const playSounds = {
     note(c, 783.99, t + 0.1, 0.12, 0.07, 'triangle');
     note(c, 1046.5, t + 0.2, 0.36, 0.08, 'triangle');
   },
+  /** A new level or the day's goal: a bigger fanfare, after the lesson's own (G C E G, the last one long). */
+  levelUp: () => {
+    if (quietAudio) return;
+    const c = audioCtx();
+    if (!c) return;
+    const t = c.currentTime + 0.95;
+    note(c, 783.99, t, 0.12, 0.07, 'triangle');
+    note(c, 1046.5, t + 0.11, 0.12, 0.07, 'triangle');
+    note(c, 1318.5, t + 0.22, 0.12, 0.07, 'triangle');
+    note(c, 1568, t + 0.33, 0.55, 0.08, 'triangle');
+  },
   /** The lesson is done: a little fanfare (C E G C, the last one long). */
   done: () => {
     if (quietAudio) return;

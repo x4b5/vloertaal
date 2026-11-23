@@ -27,7 +27,8 @@ import { tempoOf, TEMPOS, type Tempo } from '../lib/tempo';
 import { fasterOn } from '../lib/pace';
 import { TEXT_SIZES, type TextSize } from '../lib/textSize';
 import { CALM_CHOICES, type CalmChoice } from '../lib/calm';
-import { playOn } from '../lib/play';
+import { playOn, TOOLS, toolsFor } from '../lib/play';
+import { Toolbox } from './Toolbox';
 import { FlameIcon } from './StreakArt';
 import { Character } from './Characters';
 import { VOICE_SAMPLE } from '../lib/voices';
@@ -184,6 +185,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   toets: { nl: 'Wat ken je al?', key: 'toetsTitle', icon: <BarsIcon size={24} /> },
   kaart: { nl: 'Laat zien hoe het gaat', key: 'coachCard', icon: <CardIcon size={24} /> },
   gelukt: { nl: 'Gelukt op het werk', key: 'geluktTitle', icon: <BubblesIcon size={24} /> },
+  toolbox: { nl: 'Mijn gereedschapskist', key: 'playToolbox', icon: <CrateIcon size={24} /> },
   listen: { nl: 'Laat de telefoon luisteren (proef)', key: 'listenTrial', icon: <MicIcon size={24} /> },
 };
 
@@ -344,6 +346,7 @@ export function Settings({
     // Only when the regions are offered (src/content/regio regionsOn) and the app can store one.
     region: regionsOn() && Boolean(onRegion),
     gelukt: Boolean(progress.gelukt?.length),
+    toolbox: playOn(progress) || Boolean(progress.playLessons),
   };
   const writing = nonLatinHelp(lang) && !wantsWriting() ? 'pick' : writingInput(lang);
   const voice = voiceChoiceOf(progress.voice, recorded);
@@ -370,6 +373,7 @@ export function Settings({
       case 'english': return <Value text={say(wantsEnglish() ? 'settingOn' : 'settingOff')} />;
       case 'certificates': return <span className="set-row-value">{earnedCertificates(progress).length}</span>;
       case 'gelukt': return <span className="set-row-value">{progress.gelukt?.length ?? 0}</span>;
+      case 'toolbox': return <span className="set-row-value" dir="ltr">{toolsFor(progress.playLessons ?? 0).length} / {TOOLS.length}</span>;
       case 'sound': return <Value text={say(progress.quiet ? 'withoutSound' : 'soundOn')} />;
       case 'tempo': return <Value text={say(TEMPO_KEYS[tempoChoiceOf(progress)])} />;
       case 'voice': return voice ? <Value text={say(voice === 'f' ? 'voiceWoman' : voice === 'm' ? 'voiceMan' : 'voiceAuto')} /> : null;
@@ -553,6 +557,8 @@ export function Settings({
         return <><CertificatesCard progress={progress} lang={lang} onOpen={onCertificate} /><ToetsLine progress={progress} lang={lang} /></>;
       case 'gelukt':
         return <GeluktList entries={progress.gelukt ?? []} lang={lang} />;
+      case 'toolbox':
+        return <Toolbox lessons={progress.playLessons ?? 0} lang={lang} />;
       case 'sound':
         return (
           <>

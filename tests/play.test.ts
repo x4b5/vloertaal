@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { addPoints, comboOf, playAskDue, playOn, pointsFor, withCalm, withPlay } from '../src/lib/play';
+import { addPoints, comboOf, DAY_GOAL, dayPoints, finishPlayLesson, levelOf, levelShare, PERFECT_BONUS, playAskDue, playOn, pointsFor, TOOLS, toolsFor, withCalm, withPlay } from '../src/lib/play';
 
 /** "Spelmodus" (src/lib/play.ts): the owner's choice of 22 November 2026. */
 describe('the game mode', () => {
@@ -33,5 +33,40 @@ describe('the game mode', () => {
     expect(playAskDue({}, 1)).toBe(true);
     expect(playAskDue({ playAsked: true }, 5)).toBe(false);
     expect(playAskDue({ calm: 'on' }, 5)).toBe(false);
+  });
+});
+
+/** More game (the owner, 23 November 2026): levels, today's goal, the toolbox, a perfect lesson. */
+describe('the game mode: more game', () => {
+  it('levels by all points: Starter 0, Leerling 150 ... Expert 2200, then an Expert star every 1000', () => {
+    expect(levelOf(0)).toMatchObject({ n: 1, stars: 0, from: 0, to: 150 });
+    expect(levelOf(149).n).toBe(1);
+    expect(levelOf(150)).toMatchObject({ n: 2, from: 150, to: 400 });
+    expect(levelOf(2200)).toMatchObject({ n: 6, stars: 1, from: 2200, to: 3200 });
+    expect(levelOf(3300)).toMatchObject({ n: 7, stars: 2, from: 3200, to: 4200 });
+    expect(levelShare(275)).toBeCloseTo(0.5);
+  });
+
+  it('a finished lesson: a bonus without mistakes, today\'s points, the next tool, a new level', () => {
+    const { next, outcome } = finishPlayLesson({ playPoints: 100, playDay: { day: '2026-11-23', points: 60 } }, 70, true, '2026-11-23');
+    expect(outcome).toMatchObject({ points: 120, perfect: true, all: 220, dayGoal: true, tool: TOOLS[0] });
+    expect(outcome.levelUp?.n).toBe(2);
+    expect(next).toEqual({ playPoints: 220, playDay: { day: '2026-11-23', points: 180 }, playLessons: 1 });
+    // Another day: today's points start again; the goal is reached once a day.
+    const later = finishPlayLesson(next, 30, false, '2026-11-24');
+    expect(later.outcome).toMatchObject({ points: 30, perfect: false, dayGoal: false, tool: TOOLS[1] });
+    expect(later.outcome.levelUp).toBeUndefined();
+    expect(dayPoints(later.next, '2026-11-24')).toBe(30);
+    expect(finishPlayLesson({ playDay: { day: '2026-11-24', points: 120 } }, 40, false, '2026-11-24').outcome.dayGoal).toBe(false);
+  });
+
+  it('the toolbox fills one tool a lesson and stops when it is full; every tool is a drawn word', () => {
+    expect(toolsFor(0)).toEqual([]);
+    expect(toolsFor(3)).toEqual(TOOLS.slice(0, 3));
+    expect(toolsFor(99)).toHaveLength(TOOLS.length);
+    expect(new Set(TOOLS).size).toBe(TOOLS.length);
+    expect(finishPlayLesson({ playLessons: TOOLS.length }, 10, false, '2026-11-23').outcome.tool).toBeUndefined();
+    expect(DAY_GOAL).toBe(100);
+    expect(PERFECT_BONUS).toBe(50);
   });
 });
