@@ -1,7 +1,9 @@
 # Bouwinstructies voor statichost.eu (Zweden): zelfde bouw als lokaal, uitvoer in dist/.
-# Eerst de tests (npm test = vitest run): faalt er één, dan stopt de bouw en blijft de site zoals
-# hij was. De tests hebben alleen de bestanden in git nodig, geen server (fase 3, 4 november 2026).
+# Geen tests hier: op de bouwmachine van statichost lopen een paar zware tests (g4r2Learning,
+# pictures) tegen hun tijdslimiet aan, waardoor de site niet meer live ging (23 november 2026).
+# De tests draaien in GitHub Actions (.github/workflows/deploy.yml) bij elke pull request en
+# elke push naar main: merge alleen als die groen is.
 # Beveiliging en bewaartijden: public/_headers. Doorsturen: public/_redirects.
 image: node:22
-command: npm ci && npm test && npm run build
+command: npm ci && npm run build
 public: dist
