@@ -251,6 +251,22 @@ object kan zien". Daarom twee dingen:
 
 Kalm en "minder beweging" zetten nog steeds alles stil; de tekening is dan haar stilstaande zelf.
 
+### Eén keer of drie keer (23 november 2026)
+
+De eigenaar: "bij goedemorgen zie je drie keer de zon omhoog gaan. Dat is nogal vreemd. Ik zou de zon
+rustig omhoog laten gaan." Herhalen past bij het gebruik van een ding, niet bij een gebeurtenis:
+
+- **Eén keer, rustig** (`<Move once>`: de hele tekening speelt één ronde van 3 s, twee stappen 3,6 s):
+  een gebeurtenis of een verandering die één keer gebeurt en een eind heeft. De zon komt op, een deur of
+  deksel gaat open of dicht, een lamp gaat aan, iets valt, morst of loopt vol, iemand komt aan of
+  parkeert, iets wordt verstuurd, gegeven of neergezet, inloggen en betalen, één keuze, opstaan, en een
+  last die een machine optilt (krik, hefbrug, tillift, kraan, heftruck).
+- **Drie keer** (zoals sinds deze dag): gereedschap en machines aan het werk en wat je in het werk
+  steeds opnieuw doet. Zagen, hameren, vegen, boren, een meter die uitslaat, een band die loopt,
+  zwaaien, typen, druppelen.
+- Bij twijfel: vertelt de tekening een verhaaltje met een eind (voor → na), dan één keer; laat ze een
+  ding aan het werk zien, dan drie keer.
+
 ## Template
 
 ```tsx
