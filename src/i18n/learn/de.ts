@@ -208,6 +208,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "Gefragt, wie viel: die Liter, und wie man es prüft.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "Gefragt, ob sie neu muss: Ja, und warum.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Gefragt, was gemacht werden muss: auf den Arbeitsauftrag schauen.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "Gefragt, ob man ihn nehmen darf: Ja, und was man zuerst tun muss.", // nieuw, nalezen
+    'c.pruning.a.why': "Gefragt, welche Äste: nur die toten.", // nieuw, nalezen
+    'c.hedge.a.why': "Gefragt, wie hoch: bis zur Schnur, nicht tiefer.", // nieuw, nalezen
+    'c.chainsaw.a.why': "Gefragt, ob man darf: noch nicht, und was zuerst kommt.", // nieuw, nalezen
+    'c.weeding.a.why': "Gefragt, ob es Unkraut ist: Nein, und was man damit macht.", // nieuw, nalezen
+    'c.planting.a.why': "Gefragt, wohin sie kommt: der Platz im Beet.", // nieuw, nalezen
+    'c.roadside.a.why': "Gefragt, ob man rübergehen kann: Nein, warten, und warum.", // nieuw, nalezen
+    'c.litter.a.why': "Ein Anwohner fragt, wann: Du weißt es nicht, aber wer es weiß.", // nieuw, nalezen
+    'c.reception.a.why': "Ein Besucher hat einen Termin: einen Moment, du rufst an.", // nieuw, nalezen
+    'c.visitors.a.why': "Gefragt, wohin die Jacke kommt: der Ort, und wo er ist.", // nieuw, nalezen
+    'c.mailroom.a.why': "Gefragt, für wen es ist: die Abteilung, und der Stock.", // nieuw, nalezen
+    'c.meetingroom.a.why': "Gefragt, um wie viel Uhr: die Uhrzeit, und was getan werden muss.", // nieuw, nalezen
+    'c.faults.a.why': "Gefragt, warum es kalt ist: was kaputt ist, und wann Hilfe kommt.", // nieuw, nalezen
+    'c.repairs.a.why': "Gefragt, ob er piept: Ja, und warum.", // nieuw, nalezen
+    'c.moving.a.why': "Gefragt, wohin er kommt: der Raum, und wo man nachschaut.", // nieuw, nalezen
+    'c.closing.a.why': "Gefragt, ob noch jemand drinnen ist: Nein, und was du jetzt machst.", // nieuw, nalezen
+    'c.patrol.a.why': "Gefragt, ob du etwas gesehen hast: Ja, was, und wo.", // nieuw, nalezen
+    'c.access.a.why': "Gebeten, ohne Karte hereinzukommen: Tut mir leid, nicht ohne Karte.", // nieuw, nalezen
+    'c.cameras.a.why': "Gefragt, was du siehst: wer, wo, und was du tust.", // nieuw, nalezen
+    'c.report.a.why': "Gefragt, was in den Bericht kommt: was, wo und wann.", // nieuw, nalezen
+    'c.evacuation.a.why': "Gefragt, ob alle draußen sind: Nein, und wie viele fehlen.", // nieuw, nalezen
+    'c.firstaid.a.why': "Gefragt, wo der AED ist: der Ort, und was daneben ist.", // nieuw, nalezen
+    'c.shoplifting.a.why': "Gefragt, ob man eine Tasche durchsuchen darf: Nein, und wer das macht.", // nieuw, nalezen
+    'c.aggression.a.why': "Gefragt, warum nicht: der Grund, ruhig gesagt.", // nieuw, nalezen
+    'c.hygienelock.a.why': "Gefragt nach einer Uhr: Nein, und die Regel dahinter.", // nieuw, nalezen
+    'c.allergens.a.why': "Gefragt, ob es zusammen darf: Nein, und warum.", // nieuw, nalezen
+    'c.coldroom.a.why': "Gefragt, warum er piept: der Grund, und was man tun muss.", // nieuw, nalezen
+    'c.foreignbody.a.why': "Gefragt, was man tun soll: wem man es zeigt.", // nieuw, nalezen
+    'c.cutting.a.why': "Gefragt, wie viel: das Gewicht, und wo man nachschaut.", // nieuw, nalezen
+    'c.labels.a.why': "Gefragt, welches Datum: wann, und wo man nachschaut.", // nieuw, nalezen
+    'c.linecleaning.a.why': "Gefragt, ob es sauber ist: noch nicht, und was noch fehlt.", // nieuw, nalezen
+    'c.haccp.a.why': "Gefragt, warum: damit wir wissen, dass das Essen sicher ist.", // nieuw, nalezen
+    'c.binlorry.a.why': "Gefragt, ob man hinten mitfahren darf: Nein, und wo man mitfährt.", // nieuw, nalezen
+    'c.reversing.a.why': "Um Hilfe gebeten: Ja, wo du stehst, und was der andere tun soll.", // nieuw, nalezen
+    'c.wastesorting.a.why': "Gefragt, wohin es kommt: die Tonne, und warum.", // nieuw, nalezen
+    'c.wastesafety.a.why': "Gefragt, was man nach einem Schnitt tut: auswaschen, und es sagen.", // nieuw, nalezen
+    'c.yard.a.why': "Gefragt, wohin sie kommt: der Container, und wo er ist.", // nieuw, nalezen
+    'c.hazardous.a.why': "Gefragt, was drin ist: Du weißt es nicht, also zur Seite damit.", // nieuw, nalezen
+    'c.baler.a.why': "Gefragt, ob man nachschauen darf: Nein, und was zuerst kommt.", // nieuw, nalezen
+    'c.shovel.a.why': "Gefragt, ob man vorbeigehen darf: nur, wenn der Fahrer dich sieht.", // nieuw, nalezen
+    'c.nappies.a.why': "Gefragt, wann: die Uhrzeit, und wo es steht.", // nieuw, nalezen
+    'c.mealtime.a.why': "Gefragt, ob er ihn haben darf: Nein, warum, und wo man nachschaut.", // nieuw, nalezen
+    'c.naptime.a.why': "Gefragt, ob sie schläft: Ja, seit wann, und dass du nachschaust.", // nieuw, nalezen
+    'c.playtime.a.why': "Gefragt, ob ein Kind spielen darf: Ja, wo, und was danach kommt.", // nieuw, nalezen
+    'c.pickup.a.why': "Gefragt, wer abholt: die Person, und dass sie auf der Liste steht.", // nieuw, nalezen
+    'c.childsafety.a.why': "Gefragt, ob sie hingefallen ist: Ja, was sie hat, und wen du anrufst.", // nieuw, nalezen
+    'c.sickchild.a.why': "Gefragt, wie es ihm geht: was du siehst, und was du tust.", // nieuw, nalezen
+    'c.grouprules.a.why': "Gefragt, ob man allein gehen darf: Ja, aber zuerst einem Kollegen Bescheid sagen.", // nieuw, nalezen
   },
 };
 

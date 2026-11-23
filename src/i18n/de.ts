@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'An',
     settingOff: 'Aus',
     sectorGroupMake: 'Herstellung und Transport', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    sectorGroupCare: 'Pflege und Service',
+    sectorGroupCare: "Pflege und Kinder", // nieuw, nalezen
     sectorGroupShop: 'Handel und Gastronomie', // nieuw, nalezen
     sectorGroupBuild: 'Bau und Technik', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Frauenstimme',
@@ -500,6 +500,14 @@ const lang: HelpLanguageSource = {
     sfeerStandard: 'Standard', // nieuw, nalezen
     sfeerGame: 'Spiel', // nieuw, nalezen
     sfeerHint: 'Ruhig: Nichts bewegt sich, keine Feiern. Standard: die App, wie sie ist. Spiel: Punkte, Töne und viel Bewegung.', // nieuw, nalezen
+    sectorGroupService: "Service und Sicherheit", // nieuw, nalezen
+    sectorGroupOutdoor: "Arbeit im Freien", // nieuw, nalezen
+    sectorChildcare: "Kinderbetreuung", // nieuw, nalezen
+    sectorWaste: "Abfall und Recycling", // nieuw, nalezen
+    sectorFood: "Lebensmittelindustrie", // nieuw, nalezen
+    sectorSecurity: "Sicherheitsdienst", // nieuw, nalezen
+    sectorFacility: "Facility-Services", // nieuw, nalezen
+    sectorGreen: "Grünflächen und Gärten", // nieuw, nalezen
     playLevel: 'Stufe', // nieuw, nalezen
     playLevel1: 'Neu dabei', // nieuw, nalezen
     playLevel2: 'Am Lernen', // nieuw, nalezen
