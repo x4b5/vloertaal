@@ -31,7 +31,7 @@ export default {
       <path d="M102 74L106 40" stroke={PAL.slate} strokeWidth="9" />
       <circle cx="106" cy="38" r="5" fill={SKIN.henk[0]} />
       <path d="M90 30Q90 14 104 14Q118 14 118 30Z" fill={PAL.yellow} transform="translate(-4 0) scale(0.94)" />
-      <rect x="82" y="27" width="32" height="5" rx="2.5" fill={PAL.yellowShade} />
+      <rect x="80" y="27" width="30" height="5" rx="2.5" fill={PAL.yellowShade} />
       <Shine d="M92 24Q93 18 98 16" color={PAL.yellowShine} width={2.8} opacity={0.9} />
       {/* His other hand, open for the money */}
       <path d="M70 78L60 70" stroke={PAL.slate} strokeWidth="9" />
@@ -39,7 +39,7 @@ export default {
       {/* Amina, who must pay */}
       <Bust who="amina" x={28} y={124} scale={0.6} expr="disappointed" />
       {/* The coin, going into his hand */}
-      <Move kind="slow" dx={-26} dy={18} once>
+      <Move kind="slow" dx={-24} dy={32} once>
         {coin(57, 60)}
       </Move>
     </g>
