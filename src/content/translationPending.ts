@@ -9,7 +9,8 @@ import { workUnits } from './work';
  * Afval en recycling and Kinderopvang (23 November 2026; translated the same day), and the twenty
  * lessons of the second units of Schoonmaak, Horeca, Zorg and Winkel and "Werken via een uitzendbureau"
  * (23 November 2026; translated the same day). And the twenty-six lessons of the basis units at four
- * lessons (23 November 2026; translated the same day).
+ * lessons (23 November 2026; translated the same day). And the four lessons of "Veiligheid op het
+ * werk" and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026; translated the same day).
  */
 export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
 

@@ -175,6 +175,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': "Puedo contarle a la enfermera lo que he visto.", // nieuw, nalezen
     'kjn.u.shopfloor.1': "Puedo pedirle el tique a un cliente.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "Puedo decir que la tienda cierra pronto.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "Puedo reconocer algunas palabras sobre las señales de seguridad y el fuego.", // nieuw, nalezen
+    'kjn.u.safework.2': "Puedo preguntar si un producto es tóxico.", // nieuw, nalezen
   },
 };
 

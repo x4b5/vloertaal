@@ -27,7 +27,7 @@ niveau**, geen toets en geen bewijs van een niveau.
 De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland, Jouw sector
 (`src/i18n/kunjenu/`, gemarkeerd met "nieuw, nalezen"). Werkregels is alleen Nederlands.
 
-## Taal (70 onderwerpen, 155 zinnen)
+## Taal (71 onderwerpen, 157 zinnen)
 
 | Onderwerp | Zinnen | Past bij |
 |---|---|---|
@@ -49,6 +49,8 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan zeggen dat ik iets nog niet geleerd heb. | op weg naar A2 · gesprekken |
 | Als het misgaat | Ik kan vragen waar de brandblusser hangt. | A1 · spreken |
 |  | Ik kan een ongeluk melden. | op weg naar A2 · spreken |
+| Veiligheid op het werk | Ik kan een aantal woorden over veiligheidsborden en brand herkennen. | op weg naar A2 · lezen |
+|  | Ik kan vragen of een middel giftig is. | op weg naar A2 · gesprekken |
 | Solliciteren | Ik kan vertellen welke ervaring ik heb. | op weg naar A2 · spreken |
 |  | Ik kan in een sollicitatiegesprek iets over mezelf vertellen. | op weg naar A2 · gesprekken |
 | Werk en contract | Ik kan vragen hoeveel uur ik per week werk. | op weg naar A2 · spreken |

@@ -175,6 +175,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': "Consigo contar à enfermeira o que vi.", // nieuw, nalezen
     'kjn.u.shopfloor.1': "Consigo pedir o talão a um cliente.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "Consigo dizer que a loja vai fechar daqui a pouco.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "Consigo reconhecer algumas palavras sobre sinais de segurança e fogo.", // nieuw, nalezen
+    'kjn.u.safework.2': "Consigo perguntar se um produto é tóxico.", // nieuw, nalezen
   },
 };
 

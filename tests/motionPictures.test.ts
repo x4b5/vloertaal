@@ -116,6 +116,8 @@ const MOTION_ROUND4 = [
   'w.vegen', 'w.terugzetten', 'w.uitdoen', 'w.voorschot', 'w.brievenbus', 'w.verhuisdag', 'w.opwachten', 'w.naarhuis', 'w.bedrijfsongeval', 'w.afvinken',
   'w.aandelijn', 'w.flauwvallen', 'w.vingerafdruk', 'w.volgnummer', 'w.bedanken', 'w.trakteren', 'w.koelen', 'w.oogdouche', 'w.inspectie', 'w.carpoolen',
   'w.meerijden', 'w.gordel', 'w.instappen', 'w.uitstappen', 'w.overstappen', 'w.invallen', 'w.eerderweg', 'w.tussenpersoon', 'w.urenlijst', 'w.wifi',
+  // Veiligheid op het werk (23 November 2026).
+  'w.opbergen', 'w.dop', 'w.blusdeken', 'w.openvuur', 'w.hijsen', 'w.blussen', 'w.gasmeting', 'w.signaalgever',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */

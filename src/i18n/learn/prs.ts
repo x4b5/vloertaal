@@ -305,6 +305,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "خواسته‌اند که بیاید: بلی، و می‌خواهد با معلم گپ بزند.", // nieuw, nalezen
     'c.workphotos.a.why': "برای انترنت عکس خواسته‌اند: یک «نی» با احترام.", // nieuw, nalezen
     'c.device.a.why': "دربارهٔ یک اپ نو پرسیده شد: اول از بخش IT بپرسید.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "پرسیده شد که یک تابلو چه معنی دارد: هوش کنید، و کدام تابلو است.", // nieuw, nalezen
+    'c.substances.a.why': "پرسیده شد که زهری است یا نی: حدس نمی‌زند، نگاه می‌کند.", // nieuw, nalezen
+    'c.firefight.a.why': "گفته شد که آتش است: کوچک است، پس کپسول را می‌آورد.", // nieuw, nalezen
+    'c.permitwork.a.why': "پرسیده شد که کی بیرون می‌ماند: خودش، و وظیفه‌اش.", // nieuw, nalezen
+    'c.vog.a.why': "دربارهٔ VOG او پرسیده شد: هنوز نی، و منتظر چه است.", // nieuw, nalezen
   },
 };
 

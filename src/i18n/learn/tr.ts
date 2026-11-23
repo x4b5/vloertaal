@@ -305,6 +305,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "Gelip gelmeyeceğin soruluyor: evet, bir de öğretmenle konuşmak istiyorsun.", // nieuw, nalezen
     'c.workphotos.a.why': "İnternet için bir fotoğraf isteniyor: kibar bir hayır.", // nieuw, nalezen
     'c.device.a.why': "Yeni bir uygulama soruluyor: önce bilgi işlem bölümüne sor.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "Bir işaretin ne demek olduğu soruluyor: dikkat, bir de hangi işaret olduğu.", // nieuw, nalezen
+    'c.substances.a.why': "Zehirli olup olmadığı soruluyor: tahmin etmiyorsun, bakıyorsun.", // nieuw, nalezen
+    'c.firefight.a.why': "Yangın olduğu söyleniyor: küçük, bu yüzden söndürücüyü getiriyorsun.", // nieuw, nalezen
+    'c.permitwork.a.why': "Dışarıda kimin kalacağı soruluyor: sen, bir de görevin.", // nieuw, nalezen
+    'c.vog.a.why': "VOG’un soruluyor: henüz yok, bir de ne beklediğin.", // nieuw, nalezen
   },
 };
 

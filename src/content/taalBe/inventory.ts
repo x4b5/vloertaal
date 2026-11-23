@@ -133,6 +133,8 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.phases': L('C', 'C', 'geen fasen A, B en C en geen uitzendbeding in België: interimcontracten (ook dagcontracten) volgens de Uitzendarbeidswet en PC 322'),
     'l.deductions': L('C', 'C', 'de loonstrook → de loonbrief; de Nederlandse regel over inhoudingen op het minimumloon geldt niet; Belgische regels over inhoudingen (Loonbeschermingswet)'),
     'l.agencyhome': L('C', 'C', 'Wet goed verhuurderschap, Juridisch Loket, FairWork en de Nederlandse Arbeidsinspectie → Vlaamse huurregels, justitiehuis, Payoke, Toezicht op de Sociale Wetten'),
+    // The VOG (23 November 2026): Belgium has no VOG, no Justis, no personenregister and no beveiligerspas.
+    'l.vog': L('C', 'C', 'de VOG en Justis → het uittreksel uit het strafregister (model 1, model 2 voor werk met kinderen), aan te vragen bij de gemeente of online; het personenregister kinderopvang bestaat niet; de beveiligerspas → de identificatiekaart (FOD Binnenlandse Zaken); DigiD → itsme'),
   } },
   'u.papers': { kind: 'B', lessons: {
     'l.bsn': L('C', 'C', 'ook de titel; BSN, DigiD, zorgverzekering → rijksregisternummer, eID en itsme, ziekenfonds'),
@@ -504,6 +506,17 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.childsafety': L('A', 'A', 'nakijken: het traphekje ("het traphekje" of "het veiligheidshekje"), de bult ("de buil")'),
     'l.sickchild': L('A', 'A', 'nakijken: de adrenalinepen, temperaturen ("de temperatuur nemen")'),
     'l.grouprules': L('A', 'A', 'nakijken: de pedagogisch medewerker ("de kinderbegeleider"), het vierogenprincipe, de mentor'),
+  } },
+  // Veiligheid op het werk (23 November 2026): the same in Belgium. The safety signs (EU-richtlijn
+  // 92/58/EEG), the hazard pictograms (CLP, an EU regulation), the fire classes (EN 2) and the hand
+  // signals for lifting are EU-wide; VCA exists in Belgium too (BeSaCC-VCA: B-VCA and VOL-VCA, valid
+  // 10 years); the tips name no Dutch place or law, and the closing line is swapped by itself.
+  // Flemish words to check.
+  'u.safework': { kind: 'A', lessons: {
+    'l.safetysigns': L('A', 'A', 'nakijken: het reddingsbord ("het reddingsbord" of "het nooduitgangsbord"), het brandbord; de tip over VCA geldt ook in België (BeSaCC-VCA)'),
+    'l.substances': L('A', 'A', 'nakijken: het veiligheidsblad ("de veiligheidsinformatiefiche", VIB), de drinkfles ("de drinkbus"), de dop'),
+    'l.firefight': L('A', 'A', 'nakijken: de blusdeken, de brandslang ("de brandhaspel"), de prullenbak ("de vuilbak")'),
+    'l.permitwork': L('A', 'A', 'nakijken: de werkvergunning (in België ook de vergunning om als buitenlander te werken: de Engelse uitleg zegt "permit to work"), de mangatwacht, de signaalgever'),
   } },
 };
 

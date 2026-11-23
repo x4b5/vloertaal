@@ -26,6 +26,9 @@ import huisregels from './uitzend/huisregels';
 import huismeester from './uitzend/huismeester';
 import meldpunt from './uitzend/meldpunt';
 import advies from './uitzend/advies';
+// The VOG lesson (l.vog, 23 November 2026): placeholders for now.
+import vog from './uitzend/vog';
+import beveiligerspas from './uitzend/beveiligerspas';
 
 export default {
   ...inlener,
@@ -52,4 +55,6 @@ export default {
   ...huismeester,
   ...meldpunt,
   ...advies,
+  ...vog,
+  ...beveiligerspas,
 };

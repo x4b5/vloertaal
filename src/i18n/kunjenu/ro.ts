@@ -177,6 +177,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': "Pot să-i spun asistentei ce am văzut.", // nieuw, nalezen
     'kjn.u.shopfloor.1': "Pot să-i cer unui client bonul.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "Pot să spun că magazinul se închide în curând.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "Pot să recunosc câteva cuvinte despre indicatoarele de siguranță și despre foc.", // nieuw, nalezen
+    'kjn.u.safework.2': "Pot să întreb dacă un produs e toxic.", // nieuw, nalezen
   },
 };
 

@@ -306,6 +306,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "Te întreabă dacă vii: da, și vrei să vorbești cu profesorul.", // nieuw, nalezen
     'c.workphotos.a.why': "Ți se cere o poză pentru internet: un nu politicos.", // nieuw, nalezen
     'c.device.a.why': "Te întreabă de o aplicație nouă: întâi întrebi la departamentul IT.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "Te întreabă ce înseamnă un indicator: atenție, și ce indicator e.", // nieuw, nalezen
+    'c.substances.a.why': "Te întreabă dacă e toxic: nu ghicești, te uiți.", // nieuw, nalezen
+    'c.firefight.a.why': "Ți se spune că e foc: e mic, deci iei extinctorul.", // nieuw, nalezen
+    'c.permitwork.a.why': "Te întreabă cine stă afară: tu, și sarcina ta.", // nieuw, nalezen
+    'c.vog.a.why': "Te întreabă de VOG: încă nu, și ce aștepți.", // nieuw, nalezen
   },
 };
 

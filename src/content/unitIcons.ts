@@ -94,6 +94,8 @@ export const unitIcons: Record<string, string> = {
   'u.carework': 'w.douchestoel',
   'u.shopfloor': 'w.kassalade',
   'u.uitzend': 'w.inlener',
+  // Veiligheid op het werk (23 November 2026; a placeholder drawing for now).
+  'u.safework': 'w.waarschuwingsbord',
 };
 
 /**

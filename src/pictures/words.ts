@@ -65,6 +65,7 @@ import groupZorg2 from './groupZorg2';
 import groupWinkel2 from './groupWinkel2';
 import groupUitzend from './groupUitzend';
 import groupBasis from './groupBasis';
+import groupVeilig2 from './groupVeilig2';
 import group53 from './group53';
 import group54 from './group54';
 import group55 from './group55';
@@ -168,6 +169,9 @@ const words: Record<string, () => JSX.Element> = {
   // The basis units at four lessons: the 83 drawable words of their 26 new lessons (23 November
   // 2026), PLACEHOLDERS for now (./placeholder.tsx).
   ...groupBasis,
+  // "Veiligheid op het werk" (u.safework, 23 November 2026): its 22 drawable words, PLACEHOLDERS for
+  // now (./placeholder.tsx).
+  ...groupVeilig2,
   // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): l.tiletools, l.tiling and l.plaster.
   ...group53,
   ...group54,

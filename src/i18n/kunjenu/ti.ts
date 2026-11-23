@@ -177,6 +177,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': "ንነርስ ዝረኣኹዎ ክነግር እኽእል እየ።", // nieuw, nalezen
     'kjn.u.shopfloor.1': "ንዓሚል ቅብሊት ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.shopfloor.2': "እቲ ድኳን ቀልጢፉ ከም ዝዕጾ ክነግር እኽእል እየ።", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "ብዛዕባ ምልክታት ድሕንነትን ሓዊን ገለ ቃላት ክፈልጥ እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.safework.2': "ሓደ ፍርያት መርዛም እንተ ኾይኑ ክሓትት እኽእል እየ።", // nieuw, nalezen
   },
 };
 

@@ -177,6 +177,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': "أستطيع أن أخبر الممرّضة بما رأيته.", // nieuw, nalezen
     'kjn.u.shopfloor.1': "أستطيع أن أطلب الإيصال من العميل.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "أستطيع أن أقول إن المتجر سيغلق قريباً.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "أستطيع أن أتعرّف على بعض الكلمات عن لافتات السلامة والحريق.", // nieuw, nalezen
+    'kjn.u.safework.2': "أستطيع أن أسأل هل المادة سامّة.", // nieuw, nalezen
   },
 };
 

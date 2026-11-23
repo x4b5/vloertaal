@@ -306,6 +306,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "Zaproszenie: tak, i chcesz porozmawiać z nauczycielem.", // nieuw, nalezen
     'c.workphotos.a.why': "Prośba o zdjęcie do internetu: grzeczne nie.", // nieuw, nalezen
     'c.device.a.why': "Pytanie o nową aplikację: najpierw zapytaj dział IT.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "Pytanie, co oznacza znak: uwaga, i jaki to znak.", // nieuw, nalezen
+    'c.substances.a.why': "Pytanie, czy to toksyczne: nie zgadujesz, tylko sprawdzasz.", // nieuw, nalezen
+    'c.firefight.a.why': "Wiadomość o pożarze: jest mały, więc bierzesz gaśnicę.", // nieuw, nalezen
+    'c.permitwork.a.why': "Pytanie, kto zostaje na zewnątrz: ty i twoje zadanie.", // nieuw, nalezen
+    'c.vog.a.why': "Pytanie o twój VOG: jeszcze nie, i na co czekasz.", // nieuw, nalezen
   },
 };
 

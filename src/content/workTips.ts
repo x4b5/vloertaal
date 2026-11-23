@@ -4147,10 +4147,164 @@ const basisFourTips: CultureTip[] = [
   ),
 ];
 
+/**
+ * The tips of "Veiligheid op het werk" (u.safework) and of the VOG lesson of "Werken via een
+ * uitzendbureau" (l.vog), 23 November 2026 (src/content/work.ts). The owner's rule: the app does not
+ * promise that these lessons get you VCA or prepare you for the exam. c.safetysigns says what VCA is
+ * and that these lessons teach some words you meet in safe work and in VCA. Rights (who pays, the
+ * VOG): ADVICE_LINE, each claim with a ⚖️ note and the tip a section in docs/juridische-check.md. The
+ * other three are how to work safely (HOUSE_LINE: the company's own rules and instructions count),
+ * their facts with a ⚖️ note too. No amounts.
+ */
+const safeworkTips: CultureTip[] = [
+  // ⚖️ check: VCA is a safety certificate that many companies ask for ⚖️ (VCA: the checklist and
+  // the exams of Stichting Samenwerken voor Veiligheid (SSVV), vca.nl / ssvv.nl; no law: companies
+  // with a VCA certificate ask it of their workers, also of agency workers; in Belgium BeSaCC-VCA, besacc-vca.be).
+  // ⚖️ check: B-VCA (VCA Basis) for workers, VOL-VCA for a supervisor (operationeel leidinggevende)
+  // ⚖️ (SSVV, the diplomas "Basisveiligheid VCA" and "Veiligheid voor Operationeel Leidinggevenden";
+  // the same names in Belgium).
+  // ⚖️ check: A course, then an exam with multiple-choice questions at a recognised exam centre ⚖️
+  // (SSVV: exams only at exam institutes recognised by the SSVV, multiple choice; the course itself
+  // is not required by the SSVV: "you do a course" is the usual way, check).
+  // ⚖️ check: The exam can be taken in several languages, for example English or Polish ⚖️ (ssvv.nl:
+  // B-VCA in several languages besides Dutch; the list differs per exam centre and changes, so the
+  // tip says "ask the exam centre"; check that English and Polish are on it in November 2026).
+  // ⚖️ check: The diploma is valid for 10 years ⚖️ (SSVV: B-VCA and VOL-VCA diplomas, 10 years;
+  // BeSaCC-VCA the same; check).
+  // ⚖️ check: Often the employer or the agency pays ⚖️ (no law: practice; "often" on purpose).
+  // ⚖️ check: An agency may not take just any cost off your pay ⚖️ (NL: WML art. 13, from the
+  // minimum wage only rent and health insurance, see c.deductions; a cost you agreed to may come
+  // off pay above the minimum wage, hence "just any"; training costs: the uitzend-cao and BW 7:611a
+  // (no study-cost clause for training the law or the cao requires); Belgium: Loonbeschermingswet
+  // art. 23 limits deductions too).
+  tipFor(
+    'safetysigns',
+    '🪧',
+    'What is VCA?',
+    'VCA is a safety certificate. Many companies, also through an agency, ask for it, for example in construction and industry. Most workers do B-VCA (VCA Basis); a supervisor does VOL-VCA. You do a course, and an exam with multiple-choice questions at a recognised exam centre. You can often do the exam in several languages, for example English or Polish: ask the exam centre. The diploma is valid for 10 years. Often the employer or the agency pays: ask before you pay yourself. An agency may not take just any cost off your pay (see the topic about agency work). In these lessons you learn some words that you meet in safe work and in VCA. For VCA you do a course and an exam.',
+    ['Wie betaalt de VCA-cursus?', 'Who pays for the VCA course?'],
+    'An agency says: "You need VCA. You pay the course, or we take it off your pay." What do you do?',
+    [
+      'Ask who pays, and get it in writing.',
+      'Pay right away, so you get the job.',
+      'Say nothing, and sign.',
+    ],
+    'Often the employer or the agency pays for VCA. If you must pay something, you want to know it before, on paper.',
+    ADVICE_LINE,
+  ),
+  // ⚖️ check: The red diamond with a picture is the hazard pictogram on the label ⚖️ (CLP-verordening
+  // (EG) nr. 1272/2008, art. 17 and 19 and bijlage V: the GHS pictograms, a black symbol in a red
+  // diamond; the same in the whole EU, Belgium too).
+  // ⚖️ check: The label and the safety data sheet say how to work safely and what to do in an
+  // accident ⚖️ (CLP art. 17 and 22: hazard and safety statements on the label; REACH (EG) nr.
+  // 1907/2006 art. 31 and bijlage II: the veiligheidsinformatieblad; Arbobesluit art. 4.2 and 4.3:
+  // the employer informs workers about dangerous substances).
+  // Never in a drinks bottle, no eating, drinking or smoking, washing hands: Arbobesluit art. 4.4 and
+  // 4.7 (hygiene measures) and the safety data sheet; how it goes in a company: HOUSE_LINE.
+  tipFor(
+    'substances',
+    '😷',
+    'Read the label, then work',
+    'A dangerous product has a red diamond on the label, with a black picture in it: the hazard symbol. The picture shows the danger, for example fire, poison, or a product that burns your skin. The label and the safety data sheet (veiligheidsblad) say how to work with it safely, and what to do if something goes wrong. Wear what they say: gloves, safety glasses or a mask. Close the cap, and put the product away in its own place. Never pour it into a drinks bottle: someone can drink it. Do not eat, drink or smoke while you work with it, and wash your hands afterwards.',
+    ['Waar is het veiligheidsblad van dit middel?', 'Where is the safety data sheet for this product?'],
+    'A colleague pours a cleaning product into an empty water bottle, to take it with him. What do you do?',
+    [
+      'Say it is dangerous: someone can drink it.',
+      'Nothing: it is his own bottle.',
+      'Put a small sticker on the bottle.',
+    ],
+    'In a drinks bottle, a product looks like water or lemonade. Someone can drink it by mistake. A product stays in its own packaging, with the label.',
+    HOUSE_LINE,
+  ),
+  // ⚖️ check: Fire needs fuel, air (oxygen) and heat ⚖️ (the fire triangle; brandweer.nl, "Hoe
+  // ontstaat brand"; VCA exam subject "brand en explosie").
+  // ⚖️ check: Never water on burning oil or fat, or on electrical things ⚖️ (brandweer.nl:
+  // "vlam in de pan": never water, a lid or a fire blanket; electricity: no water).
+  // ⚖️ check: The fire extinguisher says what it is for; foam and powder work on many fires, CO2 is
+  // good for electrical fires ⚖️ (NEN-EN 3-7: the label with the fire classes A, B, C, F; NEN-EN 2;
+  // brandweer.nl "Brandblusser"; powder ABC, foam A and B, CO2 B and electrical equipment).
+  // ⚖️ check: Only a small fire yourself, and only when it is safe; else go out, close the door, raise
+  // the alarm ⚖️ (brandweer.nl; the company's BHV plan, Arbowet art. 15; HOUSE_LINE).
+  tipFor(
+    'firefight',
+    '🧣',
+    'Small fire or big fire?',
+    'Fire needs three things: fuel, air and heat. This is the fire triangle. Take one away, and the fire goes out. A fire blanket takes away the air. Water takes away the heat, but never use water on burning oil or fat, or on electrical things. Look at the fire extinguisher: it says what it is for. Foam and powder work on many fires; CO2 is good for electrical fires. Keep sparks and open fire away from products that burn easily. Only put out a small fire yourself, and only when it is safe. Is it bigger? Go out, close the door behind you, and raise the alarm.',
+    ['Waar hangt de blusdeken?', 'Where is the fire blanket?'],
+    'Oil in a pan catches fire in the canteen. The flames are still small. What do you do?',
+    [
+      'Put the fire blanket over the pan.',
+      'Throw a glass of water on it.',
+      'Carry the pan outside.',
+    ],
+    'Water on burning oil makes a big ball of fire. The blanket takes away the air, and the fire goes out. Turn off the heat if you can.',
+    HOUSE_LINE,
+  ),
+  // ⚖️ check: For dangerous work the company often uses a permit to work (werkvergunning) that says
+  // the work, the place, the dangers and the measures ⚖️ (no general law: the VCA checklist asks for a
+  // werkvergunningensysteem; Arbobesluit art. 3.5g and the RI&E for dangerous work; "often" on purpose).
+  // ⚖️ check: In a confined space there can be too little air or a dangerous gas: first a gas test,
+  // and someone stays outside (the mangatwacht) ⚖️ (Arbobesluit art. 3.5g (besloten ruimten) and 4.1;
+  // Arbocatalogi, nlarbeidsinspectie.nl "Besloten ruimten").
+  // ⚖️ check: Do not go in to save someone without protection ⚖️ (nlarbeidsinspectie.nl: many deaths in
+  // confined spaces are rescuers; advice).
+  // ⚖️ check: With a crane one person gives the signs, and nobody stands under a hanging load ⚖️
+  // (Arbobesluit art. 7.20 and 7.23d; the hand signals of bijlage XXI / EU-richtlijn 92/58/EEG,
+  // bijlage IX; the same in Belgium).
+  tipFor(
+    'permitwork',
+    '📋',
+    'Dangerous work: first the permit',
+    'For dangerous work, like welding near things that burn, or work in a tank or a pit, the company often uses a permit to work (werkvergunning). This is a safety paper, not your residence or work papers. It says what you do, where, which dangers there are, and what to do about them. Read it, and only start when it is signed. In a confined space there can be too little air or a dangerous gas: first a gas test, and a hole watch stays outside. Is someone in trouble inside? Raise the alarm: never go in without protection. With a crane, one person gives the signs: the banksman. Never stand under a hanging load.',
+    ['Is de werkvergunning al getekend?', 'Is the permit to work signed yet?'],
+    'Your colleague in a tank does not answer. You are the hole watch. What do you do?',
+    [
+      'Raise the alarm, and stay outside.',
+      'Climb in quickly to help him.',
+      'Wait a few minutes, then look.',
+    ],
+    'The gas that hurt your colleague can hurt you too. Many victims in tanks were helpers. After the alarm, help with protection comes.',
+    HOUSE_LINE,
+  ),
+  // The VOG (u.uitzend, l.vog). Rights: ADVICE_LINE. More in docs/juridische-check.md ("c.vog").
+  // ⚖️ check: For some jobs the employer or the agency asks for a VOG, a statement from the government
+  // that your past is no problem for this job ⚖️ (Wet justitiële en strafvorderlijke gegevens art. 28
+  // e.v.: the Verklaring Omtrent het Gedrag, given by the Minister of Justice and Security through
+  // Justis; justis.nl; the check looks only at crimes that matter for the job (screeningsprofiel)).
+  // ⚖️ check: In care, child care and security work you almost always need one ⚖️ (Wkkgz art. 4 lid 1
+  // onder c (care); Wet kinderopvang art. 1.50 lid 2 (child care, with the personenregister); Wpbr
+  // art. 7 (security: the beveiligerspas after a screening by the police, korpschef)).
+  // ⚖️ check: Usually the employer starts the request online, you get an e-mail, and you finish it
+  // with DigiD and pay ⚖️ (justis.nl "VOG online aanvragen": the organisation starts, the applicant
+  // gets an e-mail with a link, logs in with DigiD and pays; without DigiD: on paper at the gemeente).
+  // ⚖️ check: Often the employer pays it back; for volunteers who work with children or vulnerable
+  // people it is often free ⚖️ (no law that the employer pays; some cao's say it, e.g. cao
+  // Kinderopvang; the Gratis VOG regeling for volunteer organisations, justis.nl / rijksoverheid.nl;
+  // no amount on purpose).
+  // ⚖️ check: A record does not always mean no VOG: Justis looks at what matters for this job ⚖️
+  // (Wjsg art. 35: the risk for society for the purpose of the request; the Beleidsregels VOG).
+  // ⚖️ check: Doubt? Ask the Juridisch Loket ⚖️ (juridischloket.nl, free; the closing line too).
+  tipFor(
+    'vog',
+    '📁',
+    'The VOG: a check of your past',
+    'For some jobs, the agency or the employer asks for a VOG (Verklaring Omtrent het Gedrag). It is a paper from the government: it says that your past is no problem for this job. In care, child care and security work you almost always need one. Usually the employer starts the request online. You get an e-mail from Justis, and you finish it with DigiD and pay. Ask first who pays: often the employer pays it back. For volunteers who work with children or vulnerable people it is often free. Do you have a record? That does not always mean no VOG: Justis looks at what matters for this job. Not sure? Ask the Juridisch Loket.',
+    ['Moet ik de VOG zelf betalen?', 'Must I pay for the VOG myself?'],
+    'Your new job in a care home asks for a VOG. Years ago, you had a problem with the police. What do you do?',
+    [
+      'Apply, and ask the Juridisch Loket if you are worried.',
+      'Do not apply: you will never get it.',
+      'Say you have no time, and look for other work.',
+    ],
+    'Justis only looks at what matters for the job. Many people with something in their past still get a VOG. Advice helps if you are not sure.',
+    ADVICE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips, ...basisFourTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips, ...basisFourTips, ...safeworkTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

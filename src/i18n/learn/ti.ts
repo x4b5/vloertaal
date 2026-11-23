@@ -306,6 +306,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "ክመጽእ ተሓቲቱ: እወ፡ ምስ መምህር ክዛረብ ድማ ይደሊ።", // nieuw, nalezen
     'c.workphotos.a.why': "ንኢንተርነት ስእሊ ተሓቲቱ: ብትሕትና ኣይፋል።", // nieuw, nalezen
     'c.device.a.why': "ብዛዕባ ሓድሽ ኣፕ ተሓቲቱ: ቅድም ንክፍሊ IT ምሕታት።", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "ሰሌዳ እንታይ ማለት ምዃኑ ተሓቲቱ: ጥንቃቐ፡ ኣየናይ ሰሌዳ ምዃኑ ድማ።", // nieuw, nalezen
+    'c.substances.a.why': "መርዛም ምዃኑ ተሓቲቱ: ምግማት ዘይኮነ፡ ምርኣይ።", // nieuw, nalezen
+    'c.firefight.a.why': "ሓዊ ከም ዘሎ ተነጊሩ: ንእሽቶ እዩ፡ ስለዚ መጥፍኢ ሓዊ ምምጻእ።", // nieuw, nalezen
+    'c.permitwork.a.why': "መን ኣብ ደገ ከም ዝጸንሕ ተሓቲቱ: ኣነ፡ ዕማመይ ድማ።", // nieuw, nalezen
+    'c.vog.a.why': "ብዛዕባ VOG ተሓቲቱ: ገና ኣይኮነን፡ እንታይ ይጽበ ከም ዘሎ ድማ።", // nieuw, nalezen
   },
 };
 

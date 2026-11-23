@@ -54,7 +54,8 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     regels: ['r.start'],
   },
   'theme.safe': {
-    taal: ['u.safety', 'u.emergency'],
+    // "Veiligheid op het werk" (u.safework, 23 November 2026): after "Als het misgaat".
+    taal: ['u.safety', 'u.emergency', 'u.safework'],
     regels: ['r.veilig'],
   },
   'theme.find': {

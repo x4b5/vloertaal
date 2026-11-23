@@ -143,6 +143,12 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '⚽': 'w.sportclub',
   '📟': 'w.werktelefoon',
   '💾': 'w.usbstick',
+  // "Veiligheid op het werk" and the VOG lesson (23 November 2026): each new tip shows a word of its
+  // own lesson (placeholder drawings for now); c.permitwork keeps the clipboard of 📋.
+  '🪧': 'w.waarschuwingsbord',
+  '😷': 'w.stofmasker',
+  '🧣': 'w.blusdeken',
+  '📁': 'w.vog',
   // The five units of 23 November 2026 (Schoonmaak, Horeca, Zorg, Winkel, uitzendwerk): each tip shows
   // a word of its own lesson (placeholder drawings for now); the bill (💶, the work-rules table: cash)
   // and home care (🗝, the bunch of keys above) keep the drawings those emoji already have.

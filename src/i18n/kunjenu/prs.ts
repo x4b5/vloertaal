@@ -176,6 +176,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': "می‌توانم به نرس بگویم که چه دیدم.", // nieuw, nalezen
     'kjn.u.shopfloor.1': "می‌توانم رسید را از یک مشتری بخواهم.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "می‌توانم بگویم که دکان به زودی بسته می‌شود.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "می‌توانم چند کلمه را دربارهٔ تابلوهای مصئونیت و آتش بشناسم.", // nieuw, nalezen
+    'kjn.u.safework.2': "می‌توانم بپرسم که یک ماده زهری است یا نی.", // nieuw, nalezen
   },
 };
 

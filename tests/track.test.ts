@@ -72,6 +72,12 @@ const LATE_OWN = ['u.tech', 'u.garage'];
 /** The own units of Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (the same day), after those. */
 /** The second own units of Schoonmaak, Horeca, Zorg and Winkel (the same day), after those. */
 const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage', 'u.kweek', 'u.carservice', 'u.mowing', 'u.planting', 'u.frontdesk', 'u.maintenance', 'u.guarding', 'u.incidents', 'u.foodhygiene', 'u.foodline', 'u.collection', 'u.recycling', 'u.toddlers', 'u.daycare', 'u.housekeeping', 'u.cooking', 'u.carework', 'u.shopfloor'];
+/**
+ * "Veiligheid op het werk" (u.safework, 23 November 2026): a basis unit appended after everything
+ * else. With a sector it ends the learner's own course, right after the late basis units; with
+ * none it comes at the very end.
+ */
+const NEWEST_BASIS = ['u.safework'];
 const expectedOrder = (own: string | string[] | null) => {
   const main = BASIS.flatMap((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
@@ -79,8 +85,8 @@ const expectedOrder = (own: string | string[] | null) => {
   // "In de winkel" became the own unit of Winkel (31 October 2026): with a sector it now waits with
   // the other sectors' units (in its course place, after Schoonmaak), unless it is the own one.
   return own
-    ? [...main, ...APPENDED.filter((id) => id !== SHOP), ...LATE_BASIS.filter((id) => !LATE_OWN.includes(id)), ...[...rest, SHOP].filter((id) => !main.includes(id)), ...late]
-    : [...main, ...rest, ...APPENDED, ...LATE_SECTOR_UNITS, ...LATE_BASIS, ...NEWEST_SECTOR_UNITS];
+    ? [...main, ...APPENDED.filter((id) => id !== SHOP), ...LATE_BASIS.filter((id) => !LATE_OWN.includes(id)), ...NEWEST_BASIS, ...[...rest, SHOP].filter((id) => !main.includes(id)), ...late]
+    : [...main, ...rest, ...APPENDED, ...LATE_SECTOR_UNITS, ...LATE_BASIS, ...NEWEST_SECTOR_UNITS, ...NEWEST_BASIS];
 };
 
 /** routeOrder for every sector, written out from the course as it was before the work-rules track. */

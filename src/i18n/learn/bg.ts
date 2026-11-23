@@ -306,6 +306,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "Канят те: да, и искаш да говориш с учителя.", // nieuw, nalezen
     'c.workphotos.a.why': "Искат снимка за интернет: учтиво „не“.", // nieuw, nalezen
     'c.device.a.why': "Питат за ново приложение: първо питай IT отдела.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "Питат какво означава знак: внимание, и какъв е знакът.", // nieuw, nalezen
+    'c.substances.a.why': "Питат дали е отровно: не гадаеш, а проверяваш.", // nieuw, nalezen
+    'c.firefight.a.why': "Казват, че има пожар: малък е, затова вземаш пожарогасителя.", // nieuw, nalezen
+    'c.permitwork.a.why': "Питат кой остава отвън: ти, и задачата ти.", // nieuw, nalezen
+    'c.vog.a.why': "Питат за VOG: още не, и какво чакаш.", // nieuw, nalezen
   },
 };
 

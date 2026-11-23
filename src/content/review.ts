@@ -102,6 +102,8 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.carework': ['u.care', 'u.health'],
   'u.shopfloor': ['u.shop', 'u.numbers'],
   'u.uitzend': ['u.contract', 'u.pay'],
+  // Veiligheid op het werk (23 November 2026): safety and what to do when it goes wrong.
+  'u.safework': ['u.safety', 'u.emergency'],
 };
 
 /**
@@ -170,6 +172,8 @@ const relatedWords: Record<string, string[]> = {
   'u.carework': ['w.rolstoel', 'w.rem'],
   'u.shopfloor': ['w.bonnetje', 'w.kapot'],
   'u.uitzend': ['w.loonstrook', 'w.huurcontract'],
+  // Veiligheid op het werk: the fire extinguisher and the emergency exit (in its sentences and chat).
+  'u.safework': ['w.brandblusser', 'w.nooduitgang'],
   // Goed communiceren: angry (l.speakup) and slowly (l.understand), what the lessons are about.
   'u.communicate': ['w.boos', 'w.langzaam'],
   // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).

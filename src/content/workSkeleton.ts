@@ -45,6 +45,7 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.phases", title: "Your contract and the phases" },
       { id: "l.deductions", title: "Pay and deductions" },
       { id: "l.agencyhome", title: "Housing and help" },
+      { id: "l.vog", title: "Your past: the VOG" },
   ] },
   { id: "u.papers", title: "Housing and papers", titleNl: "Wonen en papieren", emoji: "🪪", color: "#a35a2a", lessons: [
       { id: "l.bsn", title: "Your BSN and papers" },
@@ -369,5 +370,11 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.facing", title: "Facing and the cold products" },
       { id: "l.shrink", title: "Damage and theft" },
       { id: "l.shopclose", title: "Closing the shop" },
+  ] },
+  { id: "u.safework", title: "Safety at work", titleNl: "Veiligheid op het werk", emoji: "⚠️", color: "#b7791f", lessons: [
+      { id: "l.safetysigns", title: "Safety signs" },
+      { id: "l.substances", title: "Hazardous substances" },
+      { id: "l.firefight", title: "Fire" },
+      { id: "l.permitwork", title: "Permits, confined spaces and lifting" },
   ] },
 ];

@@ -304,6 +304,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "On demande si on vient : oui, et on veut parler à l’enseignant.", // nieuw, nalezen
     'c.workphotos.a.why': "On demande une photo pour internet : un non poli.", // nieuw, nalezen
     'c.device.a.why': "On demande pour une nouvelle appli : d’abord demander au service informatique.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "On demande ce que veut dire un panneau : attention, et quel panneau c’est.", // nieuw, nalezen
+    'c.substances.a.why': "On demande si c’est toxique : on ne devine pas, on vérifie.", // nieuw, nalezen
+    'c.firefight.a.why': "On annonce un feu : il est petit, alors on va chercher l’extincteur.", // nieuw, nalezen
+    'c.permitwork.a.why': "On demande qui reste dehors : moi, et quelle est ma tâche.", // nieuw, nalezen
+    'c.vog.a.why': "On demande la VOG : pas encore, et ce qu’on attend.", // nieuw, nalezen
   },
 };
 
