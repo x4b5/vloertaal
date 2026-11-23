@@ -26,7 +26,7 @@ export default {
         <rect x="44" y="18" width="32" height="5" rx="2.5" fill={PAL.redLight} opacity=".7" />
       </Move>
       <Move kind="show">
-        <CurveArrow from={[22, 40]} to={[96, 22]} bend={-18} color={PAL.sky} width={5} head={10} />
+        <CurveArrow from={[32, 32]} to={[90, 32]} bend={14} color={PAL.sky} width={5} head={11} />
       </Move>
     </g>
   ),

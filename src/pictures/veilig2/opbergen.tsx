@@ -34,7 +34,7 @@ export default {
         <rect x="64" y="25" width="10" height="6" rx="1.5" fill={PAL.slateDark} />
         <path d={diamond(68, 44, 7)} fill={PAL.white} stroke={PAL.white} strokeWidth="1.4" />
         <path d={diamond(68, 44, 4.4)} fill={PAL.ink} />
-        <Hand pose="hold" x={46} y={70} rotate={60} scale={0.66} skin={SKIN.amina} sleeve={['#2f8f3e', '#23722f']} />
+        <Hand pose="hold" x={40} y={46} rotate={90} scale={0.62} skin={SKIN.henk} sleeve={['#2d5a92', PAL.navyShade]} />
       </Move>
     </g>
   ),

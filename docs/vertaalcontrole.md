@@ -2334,3 +2334,36 @@ De 26 nieuwe lessen van de basisonderwerpen (en de Belgische tweelingen van "Mee
 - اجازهٔ اقامت; کار سیاه کردن; c.stagedays.b "این‌طور نیست؟".
 ### prs
 - کار غیر رسمی کردن; oogdouche = شاور چشم; lunchpauze = وقت نان چاشت.
+
+## Veiligheid op het werk en de VOG (23 november 2026)
+
+De vier lessen van "Veiligheid op het werk" en de VOG-les zijn met AI vertaald in alle 14 hulptalen, elke regel met `// nieuw, nalezen`. Let vooral op de vaktermen (de werkvergunning voor gevaarlijk werk tegenover de werkvergunning voor je papieren, de mangatwacht, de signaalgever) en op de bescheiden zin in de VCA-tip. Wat een moedertaalspreker het eerst moet nalezen:
+
+### fr
+- werkvergunning (veiligheid) = permis de travail sécurité; mangatwacht = surveillant extérieur; signaalgever = signaleur.
+### ar
+- تصريح سلامة العمل; mangatwacht = مراقب الفتحة; c.permitwork.w "يمكن أن يؤذي المنقذ أيضاً" sterk genoeg?
+### pl
+- pozwolenie na pracę niebezpieczną; mangatwacht = asekurujący przy włazie; x-vorm c.vog.s nalezen.
+### uk
+- наряд-допуск; спостерігач біля люка; c.permitwork.w "helpers" nalezen.
+### bg
+- нарядът-допуск; gebodsbord = задължителният знак (of предписващ знак?).
+### ro
+- autorizația de lucru; mangatwacht = supraveghetorul de la intrare (geen vaste term).
+### es
+- el permiso de seguridad; mangatwacht = el vigilante de entrada; signaalgever = el señalista.
+### pt
+- a licença de trabalho; mangatwacht = o vigia da entrada; signaalgever = o sinaleiro.
+### tr
+- iş güvenliği izni; mangatwacht = giriş gözcüsü; signaalgever = işaretçi; VOG = iyi hal belgesi.
+### fa
+- مجوز ایمنی کار; نگهبان دریچه; گواهی حسن رفتار.
+### prs
+- اجازه‌نامهٔ کار مصئون; نگهبان دهانه; تصدیق حسن سلوک.
+### ti
+- ናይ ድሕንነት ፍቓድ; mangatwacht ሓላዊ መእተዊ; vormen van de borden omschreven: nalezen.
+### so
+- brandblusser = qalabka dab-demiska; kraan = kireen; VOG = shahaadada dhaqan-wanaagga.
+### de
+- Erlaubnisschein; Sicherungsposten; Einweiser; VOG = das VOG (Führungszeugnis).

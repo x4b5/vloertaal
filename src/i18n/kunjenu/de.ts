@@ -175,6 +175,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': "Ich kann der Pflegefachkraft sagen, was ich gesehen habe.", // nieuw, nalezen
     'kjn.u.shopfloor.1': "Ich kann einen Kunden nach dem Kassenbon fragen.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "Ich kann sagen, dass das Geschäft bald schließt.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "Ich kann einige Wörter über Sicherheitsschilder und Feuer erkennen.", // nieuw, nalezen
+    'kjn.u.safework.2': "Ich kann fragen, ob ein Mittel giftig ist.", // nieuw, nalezen
   },
 };
 

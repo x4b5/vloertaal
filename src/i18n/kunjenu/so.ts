@@ -174,6 +174,9 @@ const t: CultureTranslation = {
     'kjn.u.carework.2': "Waan u sheegi karaa kalkaaliyaha caafimaadka waxa aan arkay.", // nieuw, nalezen
     'kjn.u.shopfloor.1': "Waan weydiin karaa macmiil rasiidhka.", // nieuw, nalezen
     'kjn.u.shopfloor.2': "Waan sheegi karaa in dukaanku dhowaan xiranayo.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'kjn.u.safework.1': "Waan garan karaa erayo ka mid ah calaamadaha badbaadada iyo dabka.", // nieuw, nalezen
+    'kjn.u.safework.2': "Waan weydiin karaa in alaab sun tahay.", // nieuw, nalezen
   },
 };
 export default t;

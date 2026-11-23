@@ -1,22 +1,22 @@
 import type { JSX } from 'react';
-import { Move, PAL, Shade, Shine } from '../kit';
+import { Hand, Move, PAL, SKIN, Shade, Shine } from '../kit';
 
 export default {
-  // "de blusdeken": the fire blanket — a red pouch on the wall with a white flame mark, and the off-white
-  // blanket pulled half out of its bottom by its two black tapes.
-  // Once and slowly: the blanket is pulled down out of the pouch.
+  // "de blusdeken": the fire blanket — a red pouch on the wall with a white flame mark, and a hand pulling
+  // the off-white blanket half out of its bottom by one of its two black tapes.
+  // Once and slowly: the hand pulls the blanket down out of the pouch.
   'w.blusdeken': () => (
     <g strokeLinejoin="round" strokeLinecap="round">
-      {/* The blanket comes out under the pouch */}
+      {/* The blanket comes down out of the pouch, pulled by its tape */}
       <Move kind="from" dy={-30} once>
-        <Shade color={PAL.paperShade} opacity={1} at={[90, 80, 12, 40]}>
-          <path d="M32 44H88V96Q88 102 82 102H38Q32 102 32 96Z" fill={PAL.paper} />
+        <Shade color={PAL.paperShade} opacity={1} at={[92, 76, 14, 40]}>
+          <path d="M30 44H90L92 86Q84 92 74 88Q64 84 54 90Q42 94 28 88Z" fill={PAL.paper} />
         </Shade>
-        <path d="M46 52V98M60 52V98M74 52V98" stroke={PAL.mist} strokeWidth="2" />
-        {/* The tapes at the bottom corners */}
-        <path d="M38 44V104M82 44V104" stroke={PAL.ink} strokeWidth="4" />
-        <rect x="33" y="100" width="10" height="8" rx="2.5" fill={PAL.ink} />
-        <rect x="77" y="100" width="10" height="8" rx="2.5" fill={PAL.ink} />
+        <path d="M48 56Q50 70 46 86M74 56Q72 70 75 84" fill="none" stroke={PAL.mist} strokeWidth="2.2" />
+        {/* The black tapes: the right one hangs, the left one is in the hand */}
+        <path d="M88 82L90 94" stroke={PAL.ink} strokeWidth="4" />
+        <path d="M32 86L41 104" stroke={PAL.ink} strokeWidth="4" />
+        <Hand pose="hold" x={44} y={126} rotate={-10} scale={0.7} skin={SKIN.amina} sleeve={['#2f8f3e', '#23722f']} />
       </Move>
       {/* The pouch on the wall, its depth edge */}
       <rect x="24" y="12" width="72" height="44" rx="6" fill={PAL.redShade} transform="translate(0 3)" />

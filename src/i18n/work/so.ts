@@ -4798,6 +4798,108 @@ const t: CultureTranslation = {
     'c.device.o2': "Geli kombiyuutarkaaga si aad u ogaato cidda iska leh.", // nieuw, nalezen
     'c.device.o3': "Guriga u qaado oo halkaas ku eeg.", // nieuw, nalezen
     'c.device.w': "USB wuxuu ku jiri karaa fayras, xitaa marka uu u eeg yahay mid xiiso leh. Waaxda IT-ga ayaa si ammaan ah u hubin karta.", // nieuw, nalezen
+    // "Veiligheid op het werk" (four lessons) and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
+    'u.safework': "Badbaadada shaqada", // nieuw, nalezen
+    'l.vog': "Waayahaagii hore: VOG-ga", // nieuw, nalezen
+    'w.vog': "shahaadada dhaqan-wanaagga (VOG: warqad dowladda ka timaadda oo sheegta in waayahaagii hore aysan dhibaato u ahayn shaqadan)", // nieuw, nalezen
+    'w.strafblad': "diiwaanka dembiyada (dembiyada maxkamad kugu xukuntay)", // nieuw, nalezen
+    'w.screening': "baaritaanka taariikhda (hubinta waayahaagii hore kahor intaadan bilaabin)", // nieuw, nalezen
+    'w.personenregister': "diiwaanka daryeelka carruurta (qof kasta oo ka shaqeeya daryeelka carruurta waa inuu ku jiraa)", // nieuw, nalezen
+    'w.beveiligerspas': "kaarka ilaalada (kaarka aad u baahan tahay si aad ilaalo ahaan u shaqeyso)", // nieuw, nalezen
+    'w.verleden': "waayihii hore", // nieuw, nalezen
+    's.vog.1': "Shaqada daryeelka had iyo jeer ku dhowaad waxay weydiiyaan VOG.", // nieuw, nalezen
+    's.vog.2': "Waxaan haystaa VOG, waxaanan ku jiraa diiwaanka daryeelka carruurta.", // nieuw, nalezen
+    's.vog.3': "Kaarka ilaalada waxaan helayaa baaritaanka taariikhda kadib.", // nieuw, nalezen
+    'c.vog.q': "Xafiiska shaqo-qoristu wuxuu weydiinayaa VOG. Weli ma haysataa?", // nieuw, nalezen
+    'c.vog.a': "Maya. Weli waxaan sugayaa iimaylka Justis.", // nieuw, nalezen
+    'l.safetysigns': "Calaamadaha badbaadada", // nieuw, nalezen
+    'w.verbodsbord': "calaamadda mamnuucidda (goobaabin cas oo xariiq ka gudubto: tan lama samayn karo)", // nieuw, nalezen
+    'w.gebodsbord': "calaamadda waajibka (goobaabin buluug ah oo sawir cad leh: tan waa inaad samaysaa)", // nieuw, nalezen
+    'w.waarschuwingsbord': "calaamadda digniinta (saddex-xagal jaalle ah oo gees madow leh: taxaddar, khatar)", // nieuw, nalezen
+    'w.reddingsbord': "calaamadda badbaadinta (laydi cagaar ah: jidka bannaanka loo baxo, ama gargaarka degdegga ah)", // nieuw, nalezen
+    'w.brandbord': "calaamadda qalabka dabka (afargees cas: halkan waxaa yaal qalabka dab-demiska ama tuubada dabka)", // nieuw, nalezen
+    'w.pictogram': "sawir-calaamadeedka (sawir fudud oo wax sheega erayo la'aan)", // nieuw, nalezen
+    's.safetysigns.1': "Calaamad cas oo wareegsan waxay ka dhigan tahay: tan lama oggola.", // nieuw, nalezen
+    's.safetysigns.2': "Calaamad buluug ah waxay sheegtaa waxa ay tahay inaad samayso.", // nieuw, nalezen
+    's.safetysigns.3': "Raac calaamadaha cagaaran ilaa albaabka gurmadka.", // nieuw, nalezen
+    'c.safetysigns.q': "Calaamaddan jaallaha ah maxay ka dhigan tahay?", // nieuw, nalezen
+    'c.safetysigns.a': "Taxaddar, khatar. Waa calaamad digniin.", // nieuw, nalezen
+    'l.substances': "Walxaha khatarta ah", // nieuw, nalezen
+    'w.stofmasker': "maaskarada boodhka (waxay daboolaa sankaaga iyo afkaaga)", // nieuw, nalezen
+    'w.giftig': "sun ah", // nieuw, nalezen
+    'w.bijtend': "gubaya (wuxuu gubaa maqaarkaaga ama cunaa birta)", // nieuw, nalezen
+    'w.drinkfles': "dhalada cabbitaanka", // nieuw, nalezen
+    'w.opbergen': "meel dhigid (meeshiisa gaarka ah, tusaale ahaan armaajo la quful karo)", // nieuw, nalezen
+    'w.dop': "daboolka (dhalo ama gasac)", // nieuw, nalezen
+    's.substances.1': "Marka hore eeg astaanta khatarta ee calaamadda.", // nieuw, nalezen
+    's.substances.2': "Weligaa ha ku shubin dhalo cabbitaan.", // nieuw, nalezen
+    's.substances.3': "Halkan waa inaad xirataa maaskarada boodhka.", // nieuw, nalezen
+    'c.substances.q': "Alaabtani ma sun baa?", // nieuw, nalezen
+    'c.substances.a': "Taas waxay ku qoran tahay warqadda badbaadada. Waan eegayaa.", // nieuw, nalezen
+    'l.firefight': "Dab", // nieuw, nalezen
+    'w.branddriehoek': "saddex-xagalka dabka (dabku wuxuu u baahan yahay shidaal, hawo iyo kulayl; mid ka qaad, dabkuna wuu demayaa)", // nieuw, nalezen
+    'w.zuurstof': "ogsijiinta (waxay ku jirtaa hawada; dabku wuu u baahan yahay)", // nieuw, nalezen
+    'w.blussen': "demin (dab)", // nieuw, nalezen
+    'w.blusdeken': "bustaha dab-demiska", // nieuw, nalezen
+    'w.openvuur': "dab furan (olol, tusaale ahaan mid laydar ama dab-shiid gaas ka yimaada)", // nieuw, nalezen
+    'w.brandslang': "tuubada dabka (waxay ku duuban tahay giraan derbiga ku taal)", // nieuw, nalezen
+    's.firefight.1': "Weligaa biyo ha ku tuurin saliid gubanaysa.", // nieuw, nalezen
+    's.firefight.2': "Dab yar oo keliya ayaad adigu demisaa.", // nieuw, nalezen
+    's.firefight.3': "Bustaha dab-demiska saar digsiga.", // nieuw, nalezen
+    'c.firefight.q': "Dab ayaa ka kacay qashin-qubka!", // nieuw, nalezen
+    'c.firefight.a': "Waa yar yahay. Waan keenayaa qalabka dab-demiska.", // nieuw, nalezen
+    'l.permitwork': "Ogolaanshaha shaqada, meelaha xiran iyo kor u qaadidda", // nieuw, nalezen
+    'w.werkvergunningveilig': "ogolaanshaha shaqada khatarta ah (warqad badbaado oo loogu talagalay shaqo khatar ah: maxaa, xaggee iyo khataraha; ma aha warqadahaaga deganaanshaha ama shaqada)", // nieuw, nalezen
+    'w.beslotenruimte': "meesha xiran (taangi, god ama tuubada bullaacadda: yar, hawo nadiif ah oo yar)", // nieuw, nalezen
+    'w.gasmeting': "cabbiraadda gaaska (hawada ayaad cabbirtaa kahor intaadan gelin)", // nieuw, nalezen
+    'w.mangatwacht': "ilaaliyaha godka (qofka ku hara bannaanka, albaabka agtiisa, xiriirka sii haya oo alaarmiga bixiya)", // nieuw, nalezen
+    'w.signaalgever': "calaamad-bixiyaha (qofka darawalka kireenka calaamado gacmeed siiya)", // nieuw, nalezen
+    'w.hijsen': "kor u qaadid (culays, kireen lagu qaado)", // nieuw, nalezen
+    's.permitwork.1': "Ogolaanshaha shaqada khatarta ah la'aantiis ma bilaabno.", // nieuw, nalezen
+    's.permitwork.2': "Marka hore cabbiraadda gaaska, kaddib oo keliya meesha xiran gal.", // nieuw, nalezen
+    's.permitwork.3': "Eeg calaamad-bixiyaha: kor u qaad, hoos u dhig, jooji.", // nieuw, nalezen
+    'c.permitwork.q': "Yaa bannaanka ku haraya taangiga agtiisa?", // nieuw, nalezen
+    'c.permitwork.a': "Aniga. Anigaa ah ilaaliyaha godka.", // nieuw, nalezen
+    'c.vog': "VOG-ga: hubinta waayahaagii hore", // nieuw, nalezen
+    'c.vog.b': "Shaqooyinka qaarkood, xafiiska shaqo-qorista ama loo-shaqeeyaha ayaa weydiiya VOG (Verklaring Omtrent het Gedrag). Waa warqad dowladda ka timaadda: waxay sheegtaa in waayahaagii hore aysan dhibaato u ahayn shaqadan. Daryeelka, daryeelka carruurta iyo shaqada ilaalada ku dhowaad had iyo jeer waad u baahan tahay. Badanaa loo-shaqeeyaha ayaa codsiga ka bilaaba onlayn. Waxaad iimayl ka heshaa Justis, adiguna waxaad ku dhammaysaa DigiD oo waad bixisaa. Marka hore weydii cidda bixinaysa: badanaa loo-shaqeeyaha ayaa lacagta kuu celiya. Mutadawacyada la shaqeeya carruurta ama dadka nugul badanaa waa bilaash. Ma leedahay diiwaan dembi? Taasi had iyo jeer macnaheedu ma aha VOG la'aan: Justis wuxuu eegaa waxa muhiimka u ah shaqadan. Ma hubtid? Weydii Juridisch Loket. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
+    'c.vog.p': "Ma waa inaan VOG-ga anigu bixiyaa?", // nieuw, nalezen
+    'c.vog.s': "Shaqadaada cusub ee guriga daryeelka ayaa weydiinaysa VOG. Sanado ka hor, dhibaato ayaad la lahayd booliiska. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.vog.o1': "Codso, oo weydii Juridisch Loket haddii aad walwalsan tahay.", // nieuw, nalezen
+    'c.vog.o2': "Ha codsan: weligaa ma heli doontid.", // nieuw, nalezen
+    'c.vog.o3': "Dheh waqti ma haysatid, oo raadi shaqo kale.", // nieuw, nalezen
+    'c.vog.w': "Justis wuxuu eegaa oo keliya waxa muhiimka u ah shaqada. Dad badan oo waayahoodii hore wax ku jiraan ayaa weli hela VOG. Talo ayaa ku caawisa haddii aadan hubin.", // nieuw, nalezen
+    'c.safetysigns': "Waa maxay VCA?", // nieuw, nalezen
+    'c.safetysigns.b': "VCA waa shahaado badbaado. Shirkado badan, sidoo kale adigoo maraya xafiis shaqo-qoris, ayaa weydiiya, tusaale ahaan dhismaha iyo warshadaha. Shaqaalaha badankoodu waxay qaataan B-VCA (VCA Basis); madaxa shaqadu wuxuu qaataa VOL-VCA. Waxaad qaadataa koorso, iyo imtixaan su'aalo doorasho leh oo laga qaado xarun imtixaan oo la aqoonsan yahay. Imtixaanka badanaa waxaad ku qaadan kartaa luuqado kala duwan, tusaale ahaan Ingiriis ama Boolish: weydii xarunta imtixaanka. Shahaadadu waxay ansax tahay 10 sano. Badanaa loo-shaqeeyaha ama xafiiska shaqo-qorista ayaa bixiya: weydii kahor intaadan adigu bixin. Xafiiska shaqo-qoristu ma jari karo kharash kasta oo uu doono mushaharkaaga (eeg mawduuca shaqada xafiiska shaqo-qorista). Casharradan waxaad ku baranaysaa erayo ka mid ah kuwa aad kala kulanto shaqada ammaanka ah iyo VCA. VCA waxaad u qaadataa koorso iyo imtixaan. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
+    'c.safetysigns.p': "Yaa bixiya koorsada VCA?", // nieuw, nalezen
+    'c.safetysigns.s': "Xafiis shaqo-qoris ayaa yiri: “Waxaad u baahan tahay VCA. Koorsada adigaa bixinaya, ama waxaan ka jaraynaa mushaharkaaga.” Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.safetysigns.o1': "Weydii cidda bixinaysa, oo qoraal ku hel.", // nieuw, nalezen
+    'c.safetysigns.o2': "Isla markiiba bixi, si aad shaqada u hesho.", // nieuw, nalezen
+    'c.safetysigns.o3': "Waxba ha odhan, oo saxiix.", // nieuw, nalezen
+    'c.safetysigns.w': "Badanaa loo-shaqeeyaha ama xafiiska shaqo-qorista ayaa bixiya VCA. Haddii ay tahay inaad wax bixiso, waxaad rabtaa inaad horay u ogaato, warqad ku qoran.", // nieuw, nalezen
+    'c.substances': "Akhri calaamadda, kadibna shaqee", // nieuw, nalezen
+    'c.substances.b': "Alaab khatar ah waxay calaamaddeeda ku leedahay dheeman cas oo sawir madow ku dhex jiro: astaanta khatarta. Sawirku wuxuu muujiyaa khatarta, tusaale ahaan dab, sun, ama alaab maqaarkaaga gubta. Calaamadda iyo warqadda badbaadada (veiligheidsblad) waxay sheegaan sida si ammaan ah loogu shaqeeyo, iyo waxa la sameeyo haddii wax khaldamaan. Xiro waxa ay sheegaan: gacmo-gashiyo, muraayadaha badbaadada ama maaskaro. Xir daboolka, oo alaabta dhig meeshiisa gaarka ah. Weligaa ha ku shubin dhalo cabbitaan: qof ayaa cabbi kara. Ha cunin, ha cabbin, hana sigaar cabbin inta aad la shaqaynayso, oo gacmahaaga dhaq kadib. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.substances.p': "Xagee ku taal warqadda badbaadada ee alaabtan?", // nieuw, nalezen
+    'c.substances.s': "Saaxiib shaqo ayaa alaab nadiifineed ku shubay dhalo biyo oo madhan, si uu u qaato. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.substances.o1': "Dheh waa khatar: qof ayaa cabbi kara.", // nieuw, nalezen
+    'c.substances.o2': "Waxba: waa dhaladiisa.", // nieuw, nalezen
+    'c.substances.o3': "Dhalada ku dheji calaamad yar oo dheg ah.", // nieuw, nalezen
+    'c.substances.w': "Dhalo cabbitaan gudaheed, alaabtu waxay u ekaataa biyo ama cabbitaan macaan. Qof ayaa si qalad ah u cabbi kara. Alaabtu waxay ku jirtaa baakadkeeda, calaamadda la leh.", // nieuw, nalezen
+    'c.firefight': "Dab yar mise dab weyn?", // nieuw, nalezen
+    'c.firefight.b': "Dabku wuxuu u baahan yahay saddex shay: shidaal, hawo iyo kulayl. Tani waa saddex-xagalka dabka. Mid ka qaad, dabkuna wuu demayaa. Bustaha dab-demisku wuxuu qaadaa hawada. Biyuhu waxay qaadaan kulaylka, laakiin weligaa biyo ha ku isticmaalin saliid ama subag gubanaya, ama qalab koronto. Eeg qalabka dab-demiska: wuxuu sheegaa waxa loogu talagalay. Xumbada iyo budadu waxay ku shaqeeyaan dab badan; CO2 wuxuu u fiican yahay dabka korontada. Dhimbiilaha iyo dabka furan ka fogee alaabta si fudud u gubata. Dab yar oo keliya adigu demi, oo keliya marka ay ammaan tahay. Ma ka weyn yahay? Bax, albaabka xir markaad dhaafto, oo alaarmiga bixi. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.firefight.p': "Xagee ku sudhan yahay bustaha dab-demisku?", // nieuw, nalezen
+    'c.firefight.s': "Saliid digsi ku jirta ayaa dab qabsatay maqaayadda shaqada. Ololku weli waa yar yahay. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.firefight.o1': "Bustaha dab-demiska saar digsiga.", // nieuw, nalezen
+    'c.firefight.o2': "Koob biyo ah ku tuur.", // nieuw, nalezen
+    'c.firefight.o3': "Digsiga u qaad bannaanka.", // nieuw, nalezen
+    'c.firefight.w': "Biyo saliid gubanaysa lagu shubo waxay sameeyaan kubbad dab oo weyn. Bustuhu wuxuu qaadaa hawada, dabkuna wuu demayaa. Dami kulaylka haddii aad awoodo.", // nieuw, nalezen
+    'c.permitwork': "Shaqo khatar ah: marka hore ogolaanshaha", // nieuw, nalezen
+    'c.permitwork.b': "Shaqo khatar ah, sida alxanka meel u dhow waxyaabo guba, ama shaqo taangi ama god gudihiisa, shirkaddu badanaa waxay isticmaashaa ogolaanshaha shaqada khatarta ah (werkvergunning). Tani waa warqad badbaado, ma aha warqadahaaga deganaanshaha ama shaqada. Waxay sheegtaa waxa aad qabanayso, meesha, khataraha jira, iyo waxa laga qabanayo. Akhri, oo bilow oo keliya marka la saxiixo. Meel xiran waxaa ku jiri kara hawo aad u yar ama gaas khatar ah: marka hore cabbiraadda gaaska, ilaaliyaha godkuna bannaanka ayuu joogaa. Qof gudaha ku jira ma dhibaato ku jiraa? Alaarmiga bixi: weligaa ha gelin ilaalin la'aan. Kireenka, hal qof ayaa calaamadaha bixiya: calaamad-bixiyaha. Weligaa ha istaagin culays sudhan hoostiisa. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.permitwork.p': "Ogolaanshaha shaqada khatarta ah weli ma la saxiixay?", // nieuw, nalezen
+    'c.permitwork.s': "Saaxiibkaa shaqada ee taangiga ku jira ma jawaabayo. Adigu waxaad tahay ilaaliyaha godka. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.permitwork.o1': "Alaarmiga bixi, oo bannaanka joog.", // nieuw, nalezen
+    'c.permitwork.o2': "Si dhakhso ah u gal si aad u caawiso.", // nieuw, nalezen
+    'c.permitwork.o3': "Sug dhowr daqiiqo, kadib eeg.", // nieuw, nalezen
+    'c.permitwork.w': "Gaaska dhaawacay saaxiibkaa adigana wuu ku dhaawici karaa. Dhibbanayaal badan oo taangiyada ku jiray waxay ahaayeen caawiyayaal. Alaarmiga kadib, caawimo ilaalin leh ayaa timaadda.", // nieuw, nalezen
   },
 };
 

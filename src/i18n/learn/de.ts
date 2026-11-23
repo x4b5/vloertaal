@@ -305,6 +305,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "Gefragt, ob du kommst: ja, und du willst mit dem Lehrer sprechen.", // nieuw, nalezen
     'c.workphotos.a.why': "Um ein Foto für das Internet gebeten: ein höfliches Nein.", // nieuw, nalezen
     'c.device.a.why': "Nach einer neuen App gefragt: zuerst die IT-Abteilung fragen.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "Gefragt, was ein Schild bedeutet: Vorsicht, und welches Schild es ist.", // nieuw, nalezen
+    'c.substances.a.why': "Gefragt, ob es giftig ist: nicht raten, sondern nachschauen.", // nieuw, nalezen
+    'c.firefight.a.why': "Gesagt, dass es brennt: Es ist klein, also den Feuerlöscher holen.", // nieuw, nalezen
+    'c.permitwork.a.why': "Gefragt, wer draußen bleibt: man selbst, und die eigene Aufgabe.", // nieuw, nalezen
+    'c.vog.a.why': "Nach dem VOG gefragt: noch nicht, und worauf man wartet.", // nieuw, nalezen
   },
 };
 

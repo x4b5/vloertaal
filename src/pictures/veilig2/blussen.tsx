@@ -1,34 +1,33 @@
 import type { JSX } from 'react';
-import { Ground, Hand, Move, PAL, SKIN, Shade } from '../kit';
+import { Ground, Hand, Move, PAL, SKIN, Shade, Shine } from '../kit';
 
 export default {
-  // "blussen": to put out a fire — a hand holds the red extinguisher up by its handle, the other hand aims
-  // the black hose; a white cloud of powder shoots from the nozzle to the base of a small fire on the floor
-  // on the right.
+  // "blussen": to put out a fire — the red extinguisher stands on the left; a hand holds its black hose up
+  // and aims the nozzle down, and a white cloud of powder shoots from it to the base of a small fire on the
+  // floor on the right.
   // The powder shoots out from the nozzle to the fire (three rounds: the extinguisher at work).
   'w.blussen': () => (
     <g strokeLinejoin="round" strokeLinecap="round">
-      <Ground cx={86} cy={104} rx={22} ry={3.5} />
+      <Ground cx={60} cy={105} rx={50} ry={4} />
       {/* The small fire on the floor */}
-      <path d="M86 50C94 60 106 66 106 82C106 96 97 104 86 104C75 104 66 96 66 84C66 74 72 70 74 62C78 70 80 72 82 74C82 64 82 58 86 50Z" fill={PAL.orange} />
-      <path d="M86 76C92 82 95 86 95 92C95 98 91 103 86 103C81 103 77 98 77 92C77 87 81 82 86 76Z" fill={PAL.yellow} />
-      {/* The extinguisher, tilted, with its handle */}
-      <g transform="rotate(-12 30 70)">
-        <Shade color={PAL.redShade} opacity={1} at={[44, 76, 7, 30]}>
-          <rect x="18" y="44" width="26" height="60" rx="11" fill={PAL.red} />
-        </Shade>
-        <rect x="22" y="58" width="16" height="16" rx="2" fill={PAL.paper} />
-        <rect x="25" y="34" width="12" height="11" rx="2" fill={PAL.slate} />
-        <path d="M30 34L46 28" stroke={PAL.slate} strokeWidth="5" />
-      </g>
-      {/* The hose to the nozzle */}
-      <path d="M30 40Q40 66 50 76" fill="none" stroke={PAL.ink} strokeWidth="5" />
-      <path d="M50 76L60 84" stroke={PAL.slateDark} strokeWidth="7" />
-      <Hand pose="fist" x={50} y={98} rotate={-30} scale={0.5} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
+      <path d="M88 48C96 58 108 64 108 82C108 96 99 104 88 104C77 104 68 96 68 84C68 74 74 70 76 62C80 70 82 72 84 74C84 64 84 56 88 48Z" fill={PAL.orange} />
+      <path d="M88 76C94 82 97 86 97 92C97 98 93 103 88 103C83 103 79 98 79 92C79 87 83 82 88 76Z" fill={PAL.yellow} />
+      {/* The extinguisher */}
+      <Shade color={PAL.redShade} opacity={1} at={[44, 76, 7, 34]}>
+        <rect x="14" y="44" width="28" height="62" rx="12" fill={PAL.red} />
+      </Shade>
+      <rect x="19" y="60" width="18" height="18" rx="2" fill={PAL.paper} />
+      <Shine d="M18 54V96" width={3.2} opacity={0.5} />
+      <rect x="22" y="34" width="12" height="11" rx="2" fill={PAL.slate} />
+      <path d="M24 34L12 28M26 31L14 22" stroke={PAL.slate} strokeWidth="4.5" />
+      {/* The hose up to the nozzle, held in the hand and aimed down at the fire */}
+      <path d="M34 40Q56 42 50 66Q46 76 48 80" fill="none" stroke={PAL.ink} strokeWidth="5" />
+      <Hand pose="hold" x={52} y={94} rotate={4} scale={0.6} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
+      <path d="M46 79L64 85" stroke={PAL.slateDark} strokeWidth="7" />
       {/* The powder, from the nozzle to the base of the fire */}
       <Move kind="grow" grow={0.2}>
-        <path d="M62 84L78 88Q88 92 98 92Q100 98 94 102Q84 104 74 98L62 88Z" fill={PAL.white} />
-        <path d="M62 86L94 96" stroke={PAL.paperShade} strokeWidth="3" />
+        <path d="M66 82L84 90Q98 92 106 97Q104 104 92 104Q78 104 70 96L64 88Z" fill={PAL.white} />
+        <path d="M68 88L82 96Q92 100 102 100" fill="none" stroke={PAL.paperShade} strokeWidth="3" />
       </Move>
     </g>
   ),

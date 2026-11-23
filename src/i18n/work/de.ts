@@ -4798,6 +4798,108 @@ const t: CultureTranslation = {
     'c.device.o2': "Steck ihn in deinen Computer, um zu sehen, wem er gehört.", // nieuw, nalezen
     'c.device.o3': "Nimm ihn mit nach Hause und schau ihn dort an.", // nieuw, nalezen
     'c.device.w': "Auf einem Stick kann ein Virus sein, auch wenn er interessant aussieht. Die IT-Abteilung kann ihn sicher prüfen.", // nieuw, nalezen
+    // "Veiligheid op het werk" (four lessons) and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
+    'u.safework': "Sicherheit bei der Arbeit", // nieuw, nalezen
+    'l.vog': "Deine Vergangenheit: das VOG", // nieuw, nalezen
+    'w.vog': "das Führungszeugnis (VOG: ein Papier vom Staat, das sagt, dass deine Vergangenheit für diese Arbeit kein Problem ist)", // nieuw, nalezen
+    'w.strafblad': "das Vorstrafenregister (die Straftaten, für die ein Gericht dich verurteilt hat)", // nieuw, nalezen
+    'w.screening': "die Überprüfung (eine Prüfung deiner Vergangenheit, bevor du anfängst)", // nieuw, nalezen
+    'w.personenregister': "das Register für die Kinderbetreuung (alle, die in der Kinderbetreuung arbeiten, müssen darin stehen)", // nieuw, nalezen
+    'w.beveiligerspas': "der Ausweis für Sicherheitskräfte (die Karte, die du brauchst, um als Wachmann zu arbeiten)", // nieuw, nalezen
+    'w.verleden': "die Vergangenheit", // nieuw, nalezen
+    's.vog.1': "In der Pflege fragen sie fast immer nach einem VOG.", // nieuw, nalezen
+    's.vog.2': "Ich habe ein VOG und ich stehe im Register für die Kinderbetreuung.", // nieuw, nalezen
+    's.vog.3': "Ich bekomme meinen Ausweis für Sicherheitskräfte nach der Überprüfung.", // nieuw, nalezen
+    'c.vog.q': "Die Zeitarbeitsfirma fragt nach einem VOG. Hast du schon eins?", // nieuw, nalezen
+    'c.vog.a': "Nein. Ich warte noch auf die E-Mail von Justis.", // nieuw, nalezen
+    'l.safetysigns': "Sicherheitsschilder", // nieuw, nalezen
+    'w.verbodsbord': "das Verbotsschild (ein roter Kreis mit einem Strich: Das darfst du nicht tun)", // nieuw, nalezen
+    'w.gebodsbord': "das Gebotsschild (ein blauer Kreis mit einem weißen Bild: Das musst du tun)", // nieuw, nalezen
+    'w.waarschuwingsbord': "das Warnschild (ein gelbes Dreieck mit einem schwarzen Rand: Vorsicht, Gefahr)", // nieuw, nalezen
+    'w.reddingsbord': "das Rettungszeichen (ein grünes Rechteck: der Weg nach draußen, oder Erste Hilfe)", // nieuw, nalezen
+    'w.brandbord': "das Brandschutzzeichen (ein rotes Quadrat: Hier ist ein Feuerlöscher oder ein Löschschlauch)", // nieuw, nalezen
+    'w.pictogram': "das Piktogramm (ein einfaches Bild, das etwas ohne Worte sagt)", // nieuw, nalezen
+    's.safetysigns.1': "Ein rotes rundes Schild bedeutet: Das ist verboten.", // nieuw, nalezen
+    's.safetysigns.2': "Ein blaues Schild sagt, was du tun musst.", // nieuw, nalezen
+    's.safetysigns.3': "Folge den grünen Schildern zum Notausgang.", // nieuw, nalezen
+    'c.safetysigns.q': "Was bedeutet dieses gelbe Schild?", // nieuw, nalezen
+    'c.safetysigns.a': "Vorsicht, Gefahr. Es ist ein Warnschild.", // nieuw, nalezen
+    'l.substances': "Gefährliche Stoffe", // nieuw, nalezen
+    'w.stofmasker': "die Staubmaske (sie bedeckt deine Nase und deinen Mund)", // nieuw, nalezen
+    'w.giftig': "giftig", // nieuw, nalezen
+    'w.bijtend': "ätzend (es verbrennt deine Haut oder frisst sich in Metall)", // nieuw, nalezen
+    'w.drinkfles': "die Trinkflasche", // nieuw, nalezen
+    'w.opbergen': "wegräumen (an seinen eigenen Platz, zum Beispiel in einen Schrank, der abschließt)", // nieuw, nalezen
+    'w.dop': "der Deckel, der Verschluss (von einer Flasche oder einem Kanister)", // nieuw, nalezen
+    's.substances.1': "Schau zuerst auf das Gefahrensymbol auf dem Etikett.", // nieuw, nalezen
+    's.substances.2': "Gieß es nie in eine Trinkflasche.", // nieuw, nalezen
+    's.substances.3': "Hier musst du eine Staubmaske tragen.", // nieuw, nalezen
+    'c.substances.q': "Ist dieses Mittel giftig?", // nieuw, nalezen
+    'c.substances.a': "Das steht auf dem Sicherheitsdatenblatt. Ich schaue nach.", // nieuw, nalezen
+    'l.firefight': "Feuer", // nieuw, nalezen
+    'w.branddriehoek': "das Branddreieck (Feuer braucht Brennstoff, Luft und Hitze; nimm eins weg, und das Feuer geht aus)", // nieuw, nalezen
+    'w.zuurstof': "der Sauerstoff (in der Luft; Feuer braucht ihn)", // nieuw, nalezen
+    'w.blussen': "löschen (ein Feuer)", // nieuw, nalezen
+    'w.blusdeken': "die Löschdecke", // nieuw, nalezen
+    'w.openvuur': "offenes Feuer (eine Flamme, zum Beispiel von einem Feuerzeug oder einem Gasbrenner)", // nieuw, nalezen
+    'w.brandslang': "der Löschschlauch (auf einer Rolle in der Wand)", // nieuw, nalezen
+    's.firefight.1': "Wirf nie Wasser auf brennendes Öl.", // nieuw, nalezen
+    's.firefight.2': "Nur ein kleines Feuer löschst du selbst.", // nieuw, nalezen
+    's.firefight.3': "Leg die Löschdecke über die Pfanne.", // nieuw, nalezen
+    'c.firefight.q': "Im Mülleimer brennt es!", // nieuw, nalezen
+    'c.firefight.a': "Es ist klein. Ich hole den Feuerlöscher.", // nieuw, nalezen
+    'l.permitwork': "Erlaubnisschein, enge Räume und Heben", // nieuw, nalezen
+    'w.werkvergunningveilig': "der Erlaubnisschein (ein Sicherheitspapier für gefährliche Arbeit: was, wo und welche Gefahren; nicht deine Aufenthalts- oder Arbeitspapiere)", // nieuw, nalezen
+    'w.beslotenruimte': "der enge Raum (ein Tank, eine Grube oder ein Abwasserkanal: klein, mit wenig frischer Luft)", // nieuw, nalezen
+    'w.gasmeting': "die Gasmessung (du misst die Luft, bevor du hineingehst)", // nieuw, nalezen
+    'w.mangatwacht': "der Sicherungsposten (die Person, die draußen an der Öffnung bleibt, Kontakt hält und Alarm schlägt)", // nieuw, nalezen
+    'w.signaalgever': "der Einweiser (die Person, die dem Kranführer Handzeichen gibt)", // nieuw, nalezen
+    'w.hijsen': "heben (eine Last mit einem Kran)", // nieuw, nalezen
+    's.permitwork.1': "Ohne Erlaubnisschein fangen wir nicht an.", // nieuw, nalezen
+    's.permitwork.2': "Zuerst eine Gasmessung, erst dann in den engen Raum.", // nieuw, nalezen
+    's.permitwork.3': "Schau auf den Einweiser: heben, senken, stopp.", // nieuw, nalezen
+    'c.permitwork.q': "Wer bleibt draußen am Tank?", // nieuw, nalezen
+    'c.permitwork.a': "Ich. Ich bin der Sicherungsposten.", // nieuw, nalezen
+    'c.vog': "Das VOG: eine Prüfung deiner Vergangenheit", // nieuw, nalezen
+    'c.vog.b': "Für manche Stellen fragt die Zeitarbeitsfirma oder der Arbeitgeber nach einem VOG (Verklaring Omtrent het Gedrag). Das ist ein Papier vom Staat: Es sagt, dass deine Vergangenheit für diese Arbeit kein Problem ist. In der Pflege, in der Kinderbetreuung und im Sicherheitsdienst brauchst du fast immer eins. Meistens startet der Arbeitgeber den Antrag online. Du bekommst eine E-Mail von Justis, und du schließt den Antrag mit DigiD ab und bezahlst. Frag zuerst, wer bezahlt: Oft zahlt der Arbeitgeber es dir zurück. Für Ehrenamtliche, die mit Kindern oder schutzbedürftigen Menschen arbeiten, ist es oft kostenlos. Hast du Vorstrafen? Das heißt nicht immer, dass du kein VOG bekommst: Justis schaut, was für diese Arbeit wichtig ist. Nicht sicher? Frag das Juridisch Loket. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.vog.p': "Muss ich das VOG selbst bezahlen?", // nieuw, nalezen
+    'c.vog.s': "Deine neue Stelle in einem Pflegeheim fragt nach einem VOG. Vor Jahren hattest du ein Problem mit der Polizei. Was machst du?", // nieuw, nalezen
+    'c.vog.o1': "Beantrage es, und frag das Juridisch Loket, wenn du dir Sorgen machst.", // nieuw, nalezen
+    'c.vog.o2': "Beantrage es nicht: Du bekommst es sowieso nie.", // nieuw, nalezen
+    'c.vog.o3': "Sag, dass du keine Zeit hast, und such andere Arbeit.", // nieuw, nalezen
+    'c.vog.w': "Justis schaut nur, was für die Arbeit wichtig ist. Viele Menschen mit etwas in ihrer Vergangenheit bekommen trotzdem ein VOG. Eine Beratung hilft, wenn du nicht sicher bist.", // nieuw, nalezen
+    'c.safetysigns': "Was ist VCA?", // nieuw, nalezen
+    'c.safetysigns.b': "VCA ist ein Sicherheitszertifikat. Viele Firmen, auch über eine Zeitarbeitsfirma, fragen danach, zum Beispiel auf dem Bau und in der Industrie. Die meisten Arbeiter machen B-VCA (VCA Basis); ein Vorarbeiter oder Vorgesetzter macht VOL-VCA. Du machst einen Kurs und eine Prüfung mit Multiple-Choice-Fragen bei einem anerkannten Prüfungszentrum. Die Prüfung kannst du oft in mehreren Sprachen machen, zum Beispiel auf Englisch oder Polnisch: Frag das Prüfungszentrum. Das Diplom ist 10 Jahre gültig. Oft bezahlt der Arbeitgeber oder die Zeitarbeitsfirma: Frag, bevor du selbst bezahlst. Eine Zeitarbeitsfirma darf nicht einfach beliebige Kosten von deinem Lohn abziehen (siehe das Thema über Zeitarbeit). In diesen Lektionen lernst du einige Wörter, die dir bei sicherer Arbeit und beim VCA begegnen. Für VCA machst du einen Kurs und eine Prüfung. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.safetysigns.p': "Wer bezahlt den VCA-Kurs?", // nieuw, nalezen
+    'c.safetysigns.s': "Eine Zeitarbeitsfirma sagt: „Du brauchst VCA. Du bezahlst den Kurs, oder wir ziehen ihn von deinem Lohn ab.“ Was machst du?", // nieuw, nalezen
+    'c.safetysigns.o1': "Frag, wer bezahlt, und lass es dir schriftlich geben.", // nieuw, nalezen
+    'c.safetysigns.o2': "Bezahl sofort, damit du die Stelle bekommst.", // nieuw, nalezen
+    'c.safetysigns.o3': "Sag nichts, und unterschreib.", // nieuw, nalezen
+    'c.safetysigns.w': "Oft bezahlt der Arbeitgeber oder die Zeitarbeitsfirma das VCA. Wenn du etwas bezahlen musst, willst du das vorher wissen, auf Papier.", // nieuw, nalezen
+    'c.substances': "Erst das Etikett lesen, dann arbeiten", // nieuw, nalezen
+    'c.substances.b': "Ein gefährliches Mittel hat auf dem Etikett eine rote Raute mit einem schwarzen Bild darin: das Gefahrensymbol. Das Bild zeigt die Gefahr, zum Beispiel Feuer, Gift oder ein Mittel, das deine Haut verätzt. Das Etikett und das Sicherheitsdatenblatt (veiligheidsblad) sagen, wie du sicher damit arbeitest und was du tun musst, wenn etwas schiefgeht. Trag, was dort steht: Handschuhe, eine Schutzbrille oder eine Maske. Mach den Deckel zu, und räum das Mittel an seinen eigenen Platz. Gieß es nie in eine Trinkflasche: Jemand kann es trinken. Iss, trink und rauch nicht, während du damit arbeitest, und wasch dir danach die Hände. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.substances.p': "Wo ist das Sicherheitsdatenblatt für dieses Mittel?", // nieuw, nalezen
+    'c.substances.s': "Ein Kollege gießt ein Reinigungsmittel in eine leere Wasserflasche, um es mitzunehmen. Was machst du?", // nieuw, nalezen
+    'c.substances.o1': "Sag, dass das gefährlich ist: Jemand kann es trinken.", // nieuw, nalezen
+    'c.substances.o2': "Nichts: Es ist seine eigene Flasche.", // nieuw, nalezen
+    'c.substances.o3': "Kleb einen kleinen Aufkleber auf die Flasche.", // nieuw, nalezen
+    'c.substances.w': "In einer Trinkflasche sieht ein Mittel aus wie Wasser oder Limonade. Jemand kann es aus Versehen trinken. Ein Mittel bleibt in seiner eigenen Verpackung, mit dem Etikett.", // nieuw, nalezen
+    'c.firefight': "Kleines Feuer oder großes Feuer?", // nieuw, nalezen
+    'c.firefight.b': "Feuer braucht drei Dinge: Brennstoff, Luft und Hitze. Das ist das Branddreieck. Nimm eins weg, und das Feuer geht aus. Eine Löschdecke nimmt die Luft weg. Wasser nimmt die Hitze weg, aber benutz nie Wasser bei brennendem Öl oder Fett oder bei elektrischen Geräten. Schau auf den Feuerlöscher: Darauf steht, wofür er ist. Schaum und Pulver wirken bei vielen Bränden; CO2 ist gut bei elektrischen Bränden. Halte Funken und offenes Feuer von Mitteln fern, die leicht brennen. Lösch nur ein kleines Feuer selbst, und nur, wenn es sicher ist. Ist es größer? Geh raus, mach die Tür hinter dir zu, und schlag Alarm. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.firefight.p': "Wo hängt die Löschdecke?", // nieuw, nalezen
+    'c.firefight.s': "In der Kantine fängt Öl in einer Pfanne Feuer. Die Flammen sind noch klein. Was machst du?", // nieuw, nalezen
+    'c.firefight.o1': "Leg die Löschdecke über die Pfanne.", // nieuw, nalezen
+    'c.firefight.o2': "Wirf ein Glas Wasser darauf.", // nieuw, nalezen
+    'c.firefight.o3': "Trag die Pfanne nach draußen.", // nieuw, nalezen
+    'c.firefight.w': "Wasser auf brennendem Öl macht einen großen Feuerball. Die Decke nimmt die Luft weg, und das Feuer geht aus. Schalte die Hitze aus, wenn du kannst.", // nieuw, nalezen
+    'c.permitwork': "Gefährliche Arbeit: zuerst der Erlaubnisschein", // nieuw, nalezen
+    'c.permitwork.b': "Für gefährliche Arbeit, wie Schweißen in der Nähe von Dingen, die brennen, oder Arbeit in einem Tank oder einer Grube, benutzt die Firma oft einen Erlaubnisschein (werkvergunning). Das ist ein Sicherheitspapier, nicht deine Aufenthalts- oder Arbeitspapiere. Darauf steht, was du machst, wo, welche Gefahren es gibt und was du dagegen tust. Lies ihn, und fang erst an, wenn er unterschrieben ist. In einem engen Raum kann zu wenig Luft oder ein gefährliches Gas sein: zuerst eine Gasmessung, und ein Sicherungsposten bleibt draußen. Ist drinnen jemand in Not? Schlag Alarm: Geh nie ohne Schutz hinein. Bei einem Kran gibt eine Person die Zeichen: der Einweiser. Stell dich nie unter eine hängende Last. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.permitwork.p': "Ist der Erlaubnisschein schon unterschrieben?", // nieuw, nalezen
+    'c.permitwork.s': "Dein Kollege in einem Tank antwortet nicht. Du bist der Sicherungsposten. Was machst du?", // nieuw, nalezen
+    'c.permitwork.o1': "Schlag Alarm, und bleib draußen.", // nieuw, nalezen
+    'c.permitwork.o2': "Kletter schnell hinein, um ihm zu helfen.", // nieuw, nalezen
+    'c.permitwork.o3': "Warte ein paar Minuten, dann schau nach.", // nieuw, nalezen
+    'c.permitwork.w': "Das Gas, das deinem Kollegen geschadet hat, kann auch dir schaden. Viele Opfer in Tanks waren Helfer. Nach dem Alarm kommt Hilfe mit Schutz.", // nieuw, nalezen
   },
 };
 

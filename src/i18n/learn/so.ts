@@ -301,6 +301,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "Waxaa lagu weydiiyay inaad timaado: haa, oo waxaad rabtaa inaad la hadasho macallinka.", // nieuw, nalezen
     'c.workphotos.a.why': "Sawir internetka loogu talagalay ayaa la weydiiyay: maya edeb leh.", // nieuw, nalezen
     'c.device.a.why': "Waxaa la weydiiyay app cusub: marka hore weydii waaxda IT-ga.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "Waxaa la weydiiyay waxa calaamad ka dhigan tahay: taxaddar, iyo calaamadda ay tahay.", // nieuw, nalezen
+    'c.substances.a.why': "Waxaa la weydiiyay in ay sun tahay: lama qiyaaso, waa la eegaa.", // nieuw, nalezen
+    'c.firefight.a.why': "Waxaa la sheegay in dab jiro: waa yar yahay, sidaas darteed qalabka dab-demiska ayaa la keenaa.", // nieuw, nalezen
+    'c.permitwork.a.why': "Waxaa la weydiiyay cidda bannaanka ku haraysa: qofka laftiisa, iyo hawshiisa.", // nieuw, nalezen
+    'c.vog.a.why': "Waxaa la weydiiyay VOG-ga: weli maya, iyo waxa la sugayo.", // nieuw, nalezen
   },
 };
 export default t;

@@ -12,7 +12,7 @@ export default {
       <path d="M90 22A48 48 0 0 1 60 107A52 52 0 0 0 90 22Z" fill={PAL.blueShade} opacity=".6" />
       {/* The head and neck in profile, facing left */}
       <g fill={PAL.white}>
-        <path d="M44 60Q44 50 52 48H72Q80 52 80 64Q80 76 74 82V94H54V86Q48 84 46 78L40 74L44 68Z" />
+        <path d="M46 62Q46 58 50 58H76Q80 60 80 68Q80 78 74 83V96H54V88Q48 86 46 80L40 76L45 70Z" />
         {/* The hard hat: dome, ridge and brim */}
         <path d="M38 54Q38 26 62 26Q84 26 86 52Z" />
         <rect x="32" y="50" width="58" height="7" rx="3.5" />

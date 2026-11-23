@@ -9,13 +9,10 @@ import { workUnits } from './work';
  * Afval en recycling and Kinderopvang (23 November 2026; translated the same day), and the twenty
  * lessons of the second units of Schoonmaak, Horeca, Zorg and Winkel and "Werken via een uitzendbureau"
  * (23 November 2026; translated the same day). And the twenty-six lessons of the basis units at four
- * lessons (23 November 2026; translated the same day). Again from the four lessons of "Veiligheid op
- * het werk" and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
+ * lessons (23 November 2026; translated the same day). And the four lessons of "Veiligheid op het
+ * werk" and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026; translated the same day).
  */
-export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
-  // "Veiligheid op het werk" (u.safework) and the VOG lesson of u.uitzend (23 November 2026).
-  'safetysigns', 'substances', 'firefight', 'permitwork', 'vog',
-];
+export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
 
 /**
  * The words of the pending lessons of curriculum.ts ("Tijd en rooster", "Als het misgaat"): the
@@ -25,7 +22,7 @@ export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
 const PENDING_CURRICULUM_WORDS: readonly string[] = [];
 
 /** Units whose title waits for its translations too. */
-const PENDING_UNITS: readonly string[] = ['u.safework'];
+const PENDING_UNITS: readonly string[] = [];
 
 const pendingIds = new Set<string>([...PENDING_UNITS, ...PENDING_CURRICULUM_WORDS]);
 for (const l of workUnits.flatMap((u) => u.lessons)) {
