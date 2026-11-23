@@ -639,6 +639,12 @@ export const uiEn = {
   playAskCalm: 'Calm',
   playAskFun: 'With a game',
   playAskHint: 'With a game: points, sounds and movement. You can change it in Settings.',
+  /* "Sfeer" (Settings › Lessons; src/lib/play.ts): the calm screen and the game mode as one setting. */
+  sfeer: 'Mood',
+  sfeerCalm: 'Calm',
+  sfeerStandard: 'Standard',
+  sfeerGame: 'Game',
+  sfeerHint: 'Calm: nothing moves, no celebrations. Standard: the app as it is. Game: points, sounds and lots of movement.',
   playLevel: 'Level',
   playLevel1: 'Starter',
   playLevel2: 'Learner',

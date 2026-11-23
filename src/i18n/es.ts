@@ -495,6 +495,11 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'Con calma', // nieuw, nalezen
     playAskFun: 'Con juego', // nieuw, nalezen
     playAskHint: 'Con juego: puntos, sonidos y movimiento. Puedes cambiarlo en Ajustes.', // nieuw, nalezen
+    sfeer: 'Ambiente', // nieuw, nalezen
+    sfeerCalm: 'Calma', // nieuw, nalezen
+    sfeerStandard: 'Estándar', // nieuw, nalezen
+    sfeerGame: 'Juego', // nieuw, nalezen
+    sfeerHint: 'Calma: nada se mueve, sin celebraciones. Estándar: la app tal como es. Juego: puntos, sonidos y mucho movimiento.', // nieuw, nalezen
     playLevel: 'Nivel', // nieuw, nalezen
     playLevel1: 'Principiante', // nieuw, nalezen
     playLevel2: 'Aprendiz', // nieuw, nalezen

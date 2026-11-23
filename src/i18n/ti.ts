@@ -495,6 +495,11 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'ብህድኣት', // nieuw, nalezen
     playAskFun: 'ምስ ጸወታ', // nieuw, nalezen
     playAskHint: { m: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ።', f: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይርዮ ትኽእሊ ኢኺ።', x: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይርዎ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
+    sfeer: 'ሃዋህው', // nieuw, nalezen
+    sfeerCalm: 'ህዱእ', // nieuw, nalezen
+    sfeerStandard: 'ልሙድ', // nieuw, nalezen
+    sfeerGame: 'ጸወታ', // nieuw, nalezen
+    sfeerHint: 'ህዱእ: ዝንቀሳቐስ የለን፡ ጽምብል የለን። ልሙድ: ኣፕ ከም ዘሎ። ጸወታ: ነጥቢ፡ ድምጽን ብዙሕ ምንቅስቓስን።', // nieuw, nalezen
     playLevel: 'ደረጃ', // nieuw, nalezen
     playLevel1: 'መጀመርታ', // nieuw, nalezen
     playLevel2: 'ምምሃር', // nieuw, nalezen

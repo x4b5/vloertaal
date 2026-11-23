@@ -70,7 +70,7 @@ import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpd
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
 import { applyCalm, calmOn } from './lib/calm';
-import { applyPlay, finishPlayLesson, playAskDue, playOn, withCalm, withPlay, type PlayOutcome } from './lib/play';
+import { applyPlay, finishPlayLesson, playAskDue, playOn, withPlay, withSfeer, type PlayOutcome } from './lib/play';
 import { PlayStrip } from './components/PlayStrip';
 import { PlayAskCard } from './components/PlayAskCard';
 import { applyEnglish, englishLangFor } from './lib/english';
@@ -1169,8 +1169,7 @@ export default function App() {
             onRegion={setRegion}
             onCountry={setCountry}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
-            onCalm={(calm) => setProgress((p) => withCalm(p, calm))}
-            onPlay={(on) => setProgress((p) => withPlay(p, on))}
+            onSfeer={(sfeer) => setProgress((p) => withSfeer(p, sfeer))}
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}

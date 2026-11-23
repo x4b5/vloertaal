@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { addPoints, comboOf, DAY_GOAL, dayPoints, finishPlayLesson, levelOf, levelShare, PERFECT_BONUS, playAskDue, playOn, pointsFor, TOOLS, toolsFor, withCalm, withPlay } from '../src/lib/play';
+import { addPoints, comboOf, DAY_GOAL, SFEER, sfeerOf, withSfeer, dayPoints, finishPlayLesson, levelOf, levelShare, PERFECT_BONUS, playAskDue, playOn, pointsFor, TOOLS, toolsFor, withCalm, withPlay } from '../src/lib/play';
 
 /** "Spelmodus" (src/lib/play.ts): the owner's choice of 22 November 2026. */
 describe('the game mode', () => {
@@ -68,5 +68,23 @@ describe('the game mode: more game', () => {
     expect(finishPlayLesson({ playLessons: TOOLS.length }, 10, false, '2026-11-23').outcome.tool).toBeUndefined();
     expect(DAY_GOAL).toBe(100);
     expect(PERFECT_BONUS).toBe(50);
+  });
+});
+
+/** "Sfeer" (the owner, 23 November 2026): Kalm, Standaard, Spel as one setting over calm and play. */
+describe('Sfeer: one setting for calm and game', () => {
+  it('reads the mood from what was saved, so old progress keeps its choice', () => {
+    expect(sfeerOf({})).toBe('standard');
+    expect(sfeerOf({ calm: 'auto' })).toBe('standard');
+    expect(sfeerOf({ calm: 'on' })).toBe('calm');
+    expect(sfeerOf({ play: true, calm: 'off' })).toBe('game');
+    expect(sfeerOf({ play: true, calm: 'on' })).toBe('calm');
+  });
+
+  it('writes calm and play together; each choice reads back as itself', () => {
+    for (const s of SFEER) expect(sfeerOf(withSfeer({ play: true, calm: 'on' }, s))).toBe(s);
+    expect(withSfeer({ play: true, calm: 'off' }, 'calm')).toEqual({ calm: 'on', playAsked: true });
+    expect(withSfeer({ calm: 'on' }, 'standard')).toEqual({ calm: 'auto', playAsked: true });
+    expect(withSfeer({}, 'game')).toEqual({ play: true, calm: 'off', playAsked: true });
   });
 });

@@ -494,6 +494,11 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'آرام', // nieuw, nalezen
     playAskFun: 'با بازی', // nieuw, nalezen
     playAskHint: 'با بازی: امتیاز، صدا و حرکت. می‌توانید آن را در تنظیمات تبدیل کنید.', // nieuw, nalezen
+    sfeer: 'حال و هوا', // nieuw, nalezen
+    sfeerCalm: 'آرام', // nieuw, nalezen
+    sfeerStandard: 'عادی', // nieuw, nalezen
+    sfeerGame: 'بازی', // nieuw, nalezen
+    sfeerHint: 'آرام: هیچ چیز حرکت نمی‌کند، جشنی نیست. عادی: اپ همان‌طور که هست. بازی: امتیاز، صدا و حرکت زیاد.', // nieuw, nalezen
     playLevel: 'سطح', // nieuw, nalezen
     playLevel1: 'تازه‌کار', // nieuw, nalezen
     playLevel2: 'شاگرد', // nieuw, nalezen

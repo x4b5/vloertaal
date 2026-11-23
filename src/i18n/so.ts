@@ -495,6 +495,11 @@ const lang: HelpLanguageSource = {
     playAskCalm: "Deggan", // nieuw, nalezen
     playAskFun: "Ciyaar leh", // nieuw, nalezen
     playAskHint: "Ciyaar leh: dhibco, cod iyo dhaqdhaqaaq. Waxaad ku beddeli kartaa Dejinta.", // nieuw, nalezen
+    sfeer: "Jawiga", // nieuw, nalezen
+    sfeerCalm: "Deggan", // nieuw, nalezen
+    sfeerStandard: "Caadi", // nieuw, nalezen
+    sfeerGame: "Ciyaar", // nieuw, nalezen
+    sfeerHint: "Deggan: waxba ma dhaqaaqaan, dabaaldeg ma jiro. Caadi: app-ka sidiisa. Ciyaar: dhibco, cod iyo dhaqdhaqaaq badan.", // nieuw, nalezen
     playLevel: "Heer", // nieuw, nalezen
     playLevel1: "Bilow", // nieuw, nalezen
     playLevel2: "Barte", // nieuw, nalezen

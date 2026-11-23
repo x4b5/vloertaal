@@ -179,3 +179,22 @@ export function finishPlayLesson<P extends Pick<Progress, 'playPoints' | 'playDa
     outcome: { points, perfect, all, dayGoal: dayBefore < DAY_GOAL && dayBefore + points >= DAY_GOAL, tool, ...(la.n > lb.n ? { levelUp: la } : {}) },
   };
 }
+
+/* ---- "Sfeer" (the owner, 23 November 2026): calm screen and game mode as one setting ---- */
+
+/** The three moods: Kalm ("Rustig scherm" on), Standaard (the app as it is; as the phone asks), Spel. */
+export type Sfeer = 'calm' | 'standard' | 'game';
+export const SFEER: Sfeer[] = ['calm', 'standard', 'game'];
+
+/** The learner's mood, from the two stored choices (calm and play stay as they were saved). */
+export function sfeerOf(p: Pick<Progress, 'play' | 'calm'>): Sfeer {
+  if (p.play === true && p.calm !== 'on') return 'game';
+  return p.calm === 'on' ? 'calm' : 'standard';
+}
+
+/** The progress with a mood chosen: Kalm = calm on; Standaard = calm as the phone, no game; Spel = the game. */
+export function withSfeer<P extends Pick<Progress, 'play' | 'calm' | 'playAsked'>>(p: P, s: Sfeer): P {
+  if (s === 'game') return withPlay(p, true);
+  const { play: _off, ...rest } = p;
+  return { ...rest, calm: s === 'calm' ? 'on' : 'auto', playAsked: true } as P;
+}

@@ -495,6 +495,11 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'În liniște', // nieuw, nalezen
     playAskFun: 'Cu joc', // nieuw, nalezen
     playAskHint: 'Cu joc: puncte, sunete și mișcare. Poți schimba asta din Setări.', // nieuw, nalezen
+    sfeer: 'Atmosferă', // nieuw, nalezen
+    sfeerCalm: 'Liniște', // nieuw, nalezen
+    sfeerStandard: 'Standard', // nieuw, nalezen
+    sfeerGame: 'Joc', // nieuw, nalezen
+    sfeerHint: 'Liniște: nimic nu se mișcă, fără sărbători. Standard: aplicația așa cum este. Joc: puncte, sunete și multă mișcare.', // nieuw, nalezen
     playLevel: 'Nivel', // nieuw, nalezen
     playLevel1: 'Început', // nieuw, nalezen
     playLevel2: 'Învățare', // nieuw, nalezen

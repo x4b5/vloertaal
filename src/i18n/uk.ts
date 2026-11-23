@@ -495,6 +495,11 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'Спокійно', // nieuw, nalezen
     playAskFun: 'З грою', // nieuw, nalezen
     playAskHint: 'З грою: бали, звуки і рух. Це можна змінити в Налаштуваннях.', // nieuw, nalezen
+    sfeer: 'Настрій', // nieuw, nalezen
+    sfeerCalm: 'Спокійно', // nieuw, nalezen
+    sfeerStandard: 'Стандартно', // nieuw, nalezen
+    sfeerGame: 'Гра', // nieuw, nalezen
+    sfeerHint: 'Спокійно: нічого не рухається, без святкувань. Стандартно: застосунок як є. Гра: бали, звуки і багато руху.', // nieuw, nalezen
     playLevel: 'Рівень', // nieuw, nalezen
     playLevel1: 'Початок', // nieuw, nalezen
     playLevel2: 'Навчання', // nieuw, nalezen

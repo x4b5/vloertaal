@@ -495,6 +495,11 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'Sakin', // nieuw, nalezen
     playAskFun: 'Oyunlu', // nieuw, nalezen
     playAskHint: 'Oyunlu: puan, ses ve hareket. Bunu Ayarlar’dan değiştirebilirsin.', // nieuw, nalezen
+    sfeer: 'Ortam', // nieuw, nalezen
+    sfeerCalm: 'Sakin', // nieuw, nalezen
+    sfeerStandard: 'Standart', // nieuw, nalezen
+    sfeerGame: 'Oyun', // nieuw, nalezen
+    sfeerHint: 'Sakin: hiçbir şey hareket etmez, kutlama olmaz. Standart: uygulama olduğu gibi. Oyun: puan, ses ve bol hareket.', // nieuw, nalezen
     playLevel: 'Seviye', // nieuw, nalezen
     playLevel1: 'Başlangıç', // nieuw, nalezen
     playLevel2: 'Çırak', // nieuw, nalezen

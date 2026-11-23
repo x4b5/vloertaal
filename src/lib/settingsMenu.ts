@@ -12,10 +12,9 @@ export type SettingsPage =
   | 'switch'
   | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'sector-shop' | 'region' | 'country' | 'english' | 'certificates'
   | 'sound' | 'voice' | 'tempo' | 'speaking' | 'writing' | 'text' | 'theme'
-  /** "Rustig scherm" (src/lib/calm.ts), from Lessen, under Weergave. */
-  | 'calm'
-  /** "Spelmodus" (src/lib/play.ts), from Lessen, under "Rustig scherm". */
-  | 'play'
+  /** "Sfeer" (src/lib/play.ts): Kalm ("Rustig scherm", src/lib/calm.ts), Standaard or Spel (the game
+   *  mode), from Lessen, under Weergave. One setting since 23 November 2026 (the owner's choice). */
+  | 'sfeer'
   | 'offline' | 'reminder' | 'reminder-time' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock'
   /** "Wat ken je al?": a screen of its own (App, src/components/Toets.tsx ToetsPage), from Lessen. */
   | 'toets'
@@ -58,8 +57,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   writing: 'lessons',
   text: 'lessons',
   theme: 'lessons',
-  calm: 'lessons',
-  play: 'lessons',
+  sfeer: 'lessons',
   offline: 'phone',
   reminder: 'phone',
   // With a reminder in the calendar, its page offers another time (this page) or Stop.
@@ -122,7 +120,7 @@ export interface SettingsContext {
 export function settingsRows(list: SettingsList, ctx: SettingsContext): SettingsPage[] {
   const rows: (SettingsPage | false)[] =
     list === 'me' ? [ctx.routes === true && 'route', (!ctx.rules || ctx.routes !== true) && 'language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates', ctx.gelukt === true && 'gelukt', ctx.toolbox === true && 'toolbox', 'kaart']
-    : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'tempo', !ctx.rules && 'speaking', !ctx.rules && ctx.listen === true && 'listen', !ctx.rules && 'writing', 'text', 'theme', 'calm', 'play', !ctx.rules && 'toets']
+    : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'tempo', !ctx.rules && 'speaking', !ctx.rules && ctx.listen === true && 'listen', !ctx.rules && 'writing', 'text', 'theme', 'sfeer', !ctx.rules && 'toets']
     : [ctx.preview && 'unlock', ctx.offline && 'offline', 'reminder', ctx.install && 'install', 'backup', 'counting', 'reset'];
   return rows.filter((r): r is SettingsPage => Boolean(r));
 }

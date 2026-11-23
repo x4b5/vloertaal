@@ -494,6 +494,11 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'بهدوء', // nieuw, nalezen
     playAskFun: 'مع لعبة', // nieuw, nalezen
     playAskHint: 'مع لعبة: نقاط وأصوات وحركة. يمكنك تغيير ذلك في الإعدادات.', // nieuw, nalezen
+    sfeer: 'الجو', // nieuw, nalezen
+    sfeerCalm: 'هادئ', // nieuw, nalezen
+    sfeerStandard: 'عادي', // nieuw, nalezen
+    sfeerGame: 'لعبة', // nieuw, nalezen
+    sfeerHint: 'هادئ: لا شيء يتحرك، ولا احتفالات. عادي: التطبيق كما هو. لعبة: نقاط وأصوات وحركة كثيرة.', // nieuw, nalezen
     playLevel: 'المستوى', // nieuw, nalezen
     playLevel1: 'البداية', // nieuw, nalezen
     playLevel2: 'التعلّم', // nieuw, nalezen

@@ -123,3 +123,29 @@ De eigenaar vroeg om "nog iets meer gamification" in de spelmodus:
 
 Niets om op te tikken erbij: de balken en de momenten zijn alleen om te kijken (max. 3 per scherm).
 
+### Sfeer en juice (23 november 2026)
+
+**Sfeer** is nu één instelling (Instellingen › Lessen › Sfeer) met drie keuzes, in plaats van "Rustig
+scherm" en "Spelmodus" apart (`sfeerOf`, `withSfeer` in `src/lib/play.ts`):
+
+- **Kalm**: wat "Rustig scherm: aan" was. Niets beweegt, geen feestjes.
+- **Standaard**: de app zoals hij is; staat de telefoon op "minder beweging", dan beweegt er ook niets.
+- **Spel**: de spelmodus.
+
+De opgeslagen velden blijven `calm` en `play`, dus oude voortgang leest gewoon door. De kaart na de
+eerste les heeft nu "Met spel" en "Standaard".
+
+**Juice** in Spel (de eigenaar: "meer game feel, meer juice, squash and stretch"):
+
+- Een goed antwoord deint als pudding (squash and stretch). Een fout antwoord wiebelt.
+- Het stempel slaat neer en veert terug. "Verder" stuitert erin.
+- De teller wordt geplet en rekt uit; "+10" rekt mee omhoog. Acht sterretjes schieten uit de teller.
+- De voortgangsbalk schiet iets door en veert terug.
+- Tegels van een zin landen met een plof. Een ingedrukte knop wordt plat en veert terug.
+- Op de uitslag vallen de titel en de kaarten naar binnen en landen. De punten slaan neer en de
+  momenten springen op.
+- De telefoon trilt kort bij een goed antwoord, iets langer bij 3, 5 en 8 op rij, en dubbel bij een
+  fout (waar de telefoon dat kan).
+
+Alles speelt één keer, en alles staat stil bij Kalm en bij "minder beweging" op de telefoon.
+
