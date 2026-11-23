@@ -264,6 +264,12 @@ const PENDING_RECORDING = new Set<string>([
   'Ja. Ik wil graag met de leraar praten.',
   'Nee, liever niet. Ik wil niet online.',
   'Vraag het eerst aan de ICT-afdeling.',
+  // "Veiligheid op het werk" and the VOG lesson (23 November 2026).
+  'Pas op, gevaar. Het is een waarschuwingsbord.',
+  'Dat staat op het veiligheidsblad. Ik zoek het op.',
+  'Het is klein. Ik pak de brandblusser.',
+  'Ik. Ik ben de mangatwacht.',
+  'Nee. Ik wacht nog op de mail van Justis.',
 ]);
 
 

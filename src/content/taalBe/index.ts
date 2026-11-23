@@ -35,9 +35,6 @@ import { be as stage } from './units/stage';
 import { be as society } from './units/society';
 import { be as online } from './units/online';
 import { be as uitzend } from './units/uitzend';
-import { be as carework } from './units/carework';
-import { be as daycare } from './units/daycare';
-import { be as guarding } from './units/guarding';
 
 /**
  * The language track for Belgium (Vlaanderen), docs/taal-belgie.md. Every Dutch unit with a B or C
@@ -56,8 +53,6 @@ const BY_NL: Record<string, BeTaal | undefined> = {
   'u.grow': grow, 'u.health': health, 'u.money': money, 'u.travel': travel, 'u.lost': lost, 'u.shop': shop,
   'u.ai': ai, 'u.kas': kas, 'u.stage': stage, 'u.society': society, 'u.online': online,
   'u.uitzend': uitzend,
-  // The VOG round (23 November 2026): one Belgian sentence each (no VOG in Belgium).
-  'u.carework': carework, 'u.daycare': daycare, 'u.guarding': guarding,
 };
 
 /**

@@ -2303,6 +2303,27 @@ describe('pocket card phrases', () => {
       'Wilt u wat langzamer praten?',
       'Ik woon sinds kort in deze straat.',
       'Ik vraag eerst toestemming.',
+      // "Veiligheid op het werk", and the VOG lesson (23 November 2026).
+      'Ik krijg mijn beveiligerspas na de screening.',
+      'Ik heb een VOG en ik sta in het personenregister.',
+      'In de zorg vragen ze bijna altijd een VOG.',
+      'Een rood rond bord betekent: dat mag niet.',
+      'Een blauw bord zegt wat je moet doen.',
+      'Volg de groene borden naar de nooduitgang.',
+      'Kijk eerst naar het gevarensymbool op het etiket.',
+      'Giet het nooit in een drinkfles.',
+      'Hier moet je een stofmasker dragen.',
+      'Gooi nooit water op brandende olie.',
+      'Alleen een klein brandje blus je zelf.',
+      'Leg de blusdeken over de pan.',
+      'Zonder werkvergunning beginnen we niet.',
+      'Eerst een gasmeting, dan pas de besloten ruimte in.',
+      'Kijk naar de signaalgever: hijsen, zakken, stop.',
+      'Moet ik de VOG zelf betalen?',
+      'Wie betaalt de VCA-cursus?',
+      'Waar is het veiligheidsblad van dit middel?',
+      'Waar hangt de blusdeken?',
+      'Is de werkvergunning al getekend?',
     ]);
     for (const unit of [...units, ...allRegionUnits('taal')]) for (const p of pocketPhrases(unit)) if (!pending.has(p.nl)) expect(said.has(p.nl), `${unit.id} ${p.nl}`).toBe(true);
   });

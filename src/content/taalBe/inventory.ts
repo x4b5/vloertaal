@@ -438,11 +438,10 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.pass': L('A', 'A', 'nakijken: de pass, de bon ("het bonnetje"), de spoelkeuken ("de afwasruimte" of "de plonge")'),
     'l.bill': L('A', 'A', 'nakijken: het pinapparaat ("de bancontactterminal", "het betaaltoestel"), apart betalen ("apart betalen" of "elk apart")'),
   } },
-  // B since the VOG round (23 November 2026): s.homecare.4 names the VOG (./units/carework.ts).
-  'u.carework': { kind: 'B', lessons: {
+  'u.carework': { kind: 'A', lessons: {
     'l.washing': L('A', 'A', 'nakijken: het washandje, de steunkous ("de steunkous" of "de compressiekous")'),
     'l.observing': L('A', 'A', 'nakijken: het zorgdossier, de drukplek ("de doorligwonde"), de vochtlijst ("de vochtbalans")'),
-    'l.homecare': L('B', 'A', 'de VOG → het uittreksel uit het strafregister (s.homecare.4); nakijken: de thuiszorg, de wijkverpleegkundige ("de thuisverpleegkundige"), de mantelzorger, de sleutelkluis, de alarmknop ("het noodoproepsysteem")'),
+    'l.homecare': L('A', 'A', 'nakijken: de thuiszorg, de wijkverpleegkundige ("de thuisverpleegkundige"), de mantelzorger, de sleutelkluis, de alarmknop ("het noodoproepsysteem")'),
     'l.liftaids': L('A', 'A', 'nakijken: het glijlaken, de stalift ("de sta-lift"), de transferplank'),
   } },
   'u.shopfloor': { kind: 'A', lessons: {
@@ -454,10 +453,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   // Ronde en toegang and Noodgevallen en de winkel (Beveiliging, 23 November 2026): how the work is
   // done, the same in Belgium (112 too). The shop-theft tip names no law (holding a thief is a
   // house rule; never search, little force). Flemish words to check.
-  // B since the VOG round (23 November 2026): s.access.4 names the beveiligerspas (./units/guarding.ts).
-  'u.guarding': { kind: 'B', lessons: {
+  'u.guarding': { kind: 'A', lessons: {
     'l.patrol': L('A', 'A', 'nakijken: surveilleren ("patrouilleren"), de zaklamp ("de zaklantaarn"), het hek ("de poort", "de omheining")'),
-    'l.access': L('B', 'A', 'de beveiligerspas → de identificatiekaart (s.access.4); nakijken: de legitimatie ("de identiteitskaart"), het kenteken ("de nummerplaat")'),
+    'l.access': L('A', 'A', 'nakijken: de legitimatie ("de identiteitskaart"), het kenteken ("de nummerplaat")'),
     'l.cameras': L('A', 'A', 'nakijken: de meldkamer ("de meldkamer" of "de controlekamer"), het beeldscherm'),
     'l.report': L('A', 'A', 'nakijken: de portofoon ("de walkietalkie"), het rapport ("het verslag")'),
   } },
@@ -503,12 +501,11 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.naptime': L('A', 'A', 'nakijken: de speen ("de fopspeen", "de tutter"), de babyfoon'),
     'l.playtime': L('A', 'A', 'nakijken: de zandbak, de glijbaan ("de schuifaf")'),
   } },
-  // B since the VOG round (23 November 2026): s.grouprules.4 names the VOG and the personenregister (./units/daycare.ts).
-  'u.daycare': { kind: 'B', lessons: {
+  'u.daycare': { kind: 'A', lessons: {
     'l.pickup': L('A', 'A', 'nakijken: het schriftje ("het heen-en-weerschriftje"), de oppas ("de babysit")'),
     'l.childsafety': L('A', 'A', 'nakijken: het traphekje ("het traphekje" of "het veiligheidshekje"), de bult ("de buil")'),
     'l.sickchild': L('A', 'A', 'nakijken: de adrenalinepen, temperaturen ("de temperatuur nemen")'),
-    'l.grouprules': L('B', 'A', 'de VOG en het personenregister → het uittreksel uit het strafregister, model 2 (s.grouprules.4); nakijken: de pedagogisch medewerker ("de kinderbegeleider"), het vierogenprincipe, de mentor'),
+    'l.grouprules': L('A', 'A', 'nakijken: de pedagogisch medewerker ("de kinderbegeleider"), het vierogenprincipe, de mentor'),
   } },
   // Veiligheid op het werk (23 November 2026): the same in Belgium. The safety signs (EU-richtlijn
   // 92/58/EEG), the hazard pictograms (CLP, an EU regulation), the fire classes (EN 2) and the hand

@@ -2372,12 +2372,6 @@ const guardingUnit = unit('guarding', 'Patrols and access', 'Ronde en toegang', 
       ['Mag ik uw legitimatie zien?', 'May I see your ID?'],
       ['Uw pas werkt niet. Ik bel even.', 'Your card does not work. I will make a call.'],
       ['Ik doe de slagboom open.', 'I will open the barrier.'],
-      // The VOG round (23 November 2026): a fourth sentence with a new id (s.access.4), so the three
-      // translated ones stay valid. ⚖️ check: a guard works only with a beveiligerspas, given after a
-      // screening by the police ⚖️ (Wpbr art. 7: toestemming van de korpschef na screening; the same
-      // as r.l.beveiliging.1 in src/content/regels/units/sector2.ts). Belgium: the identificatiekaart
-      // (src/content/taalBe/units/guarding.ts).
-      ['Ik krijg mijn beveiligerspas na de screening.', 'I get my security guard pass after the screening.'],
     ],
     [['Mag ik even naar binnen? Ik ben mijn pas vergeten.', 'May I go in? I forgot my card.'], ['Sorry, zonder pas mag u niet naar binnen.', 'Sorry, without a card you may not go in.']],
   ),
@@ -2973,11 +2967,6 @@ const daycareUnit = unit('daycare', 'Parents, safety and the group', 'Ouders, ve
       ['Ik ben de mentor van Lisa.', 'I am Lisa’s mentor.'],
       ['Een collega kan ons altijd zien of horen.', 'A colleague can always see or hear us.'],
       ['Ik maak me zorgen over Daan.', 'I am worried about Daan.'],
-      // The VOG round (23 November 2026): a fourth sentence with a new id (s.grouprules.4). ⚖️ check:
-      // in child care you need a VOG and must be in the personenregister kinderopvang before you start
-      // ⚖️ (Wet kinderopvang art. 1.48d and 1.50 lid 2; the same as r.l.kinderopvang.1). Belgium: the
-      // uittreksel uit het strafregister, model 2 (src/content/taalBe/units/daycare.ts).
-      ['Ik heb een VOG en ik sta in het personenregister.', 'I have a VOG and I am in the register for child care.'],
     ],
     [['Mag ik alleen met de groep naar buiten?', 'May I go outside alone with the group?'], ['Ja, maar zeg het eerst tegen een collega.', 'Yes, but tell a colleague first.']],
   ),
@@ -3212,11 +3201,6 @@ const careworkUnit = unit('carework', 'Personal care and home care', 'Verzorgen 
       ['Ik bel eerst aan. Dan pak ik de sleutel.', 'First I ring the bell. Then I take the key.'],
       ['Wat staat er in het zorgplan?', 'What is in the care plan?'],
       ['Ik ben vandaag een kwartier later.', 'I am a quarter of an hour late today.'],
-      // The VOG round (23 November 2026): a fourth sentence with a new id (s.homecare.4). ⚖️ check:
-      // a care provider asks a new worker with client contact for a VOG ⚖️ (Wkkgz art. 4 lid 1 onder c
-      // and the Uitvoeringsbesluit Wkkgz; "bijna altijd" because there are exceptions). Belgium: the
-      // uittreksel uit het strafregister (src/content/taalBe/units/carework.ts).
-      ['In de zorg vragen ze bijna altijd een VOG.', 'In care work they almost always ask for a VOG (a certificate of conduct).'],
     ],
     [['Wie is daar?', 'Who is there?'], ['Goedemorgen, de thuiszorg. Mag ik binnenkomen?', 'Good morning, it is home care. May I come in?']],
   ),
@@ -3414,9 +3398,11 @@ const uitzendUnit = unit('uitzend', 'Temp agency work', 'Werken via een uitzendb
   // The VOG (Verklaring Omtrent het Gedrag), 23 November 2026 (the owner's request): a fifth lesson,
   // because the agency or the hirer is where most learners first meet it, and a new lesson keeps every
   // translated text of the unit as it is (five lessons are allowed: u.social, u.health and u.afbouw
-  // have five too). Not a safety topic, so not in "Veiligheid op het werk" (u.safework). Care, child
-  // care and security work name it again in a sentence of their own (s.homecare.4, s.grouprules.4,
-  // s.access.4). "de aanvraag" (l.holiday) comes in a sentence only. Belgium: no VOG (an uittreksel
+  // have five too). Not a safety topic, so not in "Veiligheid op het werk" (u.safework). Its three
+  // sentences are where a worker meets the VOG: care, child care (with the personenregister) and
+  // security (the beveiligerspas). They are not a fourth sentence in a lesson of u.carework,
+  // u.daycare or u.guarding: a lesson there would get 22 exercises (at most 21, tests/workTurn.test.ts),
+  // and replacing a sentence would drop a translated id. Belgium: no VOG (an uittreksel
   // uit het strafregister); the unit is NL-only there (src/content/taalBe/inventory.ts). The tip
   // c.vog has its ⚖️ notes in src/content/workTips.ts and a section in docs/juridische-check.md.
   lesson(
@@ -3431,11 +3417,17 @@ const uitzendUnit = unit('uitzend', 'Temp agency work', 'Werken via een uitzendb
       ['verleden', 'het verleden', 'the past', '⏮️', false],
     ],
     [
-      ['Het uitzendbureau vraagt een VOG.', 'The agency asks for a VOG.'],
-      ['Ik maak de aanvraag af met DigiD.', 'I finish the application with DigiD.'],
-      ['Wie betaalt de VOG?', 'Who pays for the VOG?'],
+      // ⚖️ check: a care provider asks a new worker with client contact for a VOG ⚖️ (Wkkgz art. 4
+      // lid 1 onder c; "bijna altijd" because there are exceptions).
+      ['In de zorg vragen ze bijna altijd een VOG.', 'In care work they almost always ask for a VOG.'],
+      // ⚖️ check: in child care you need a VOG and must be in the personenregister kinderopvang before
+      // you start ⚖️ (Wet kinderopvang art. 1.48d and 1.50 lid 2; the same as r.l.kinderopvang.1).
+      ['Ik heb een VOG en ik sta in het personenregister.', 'I have a VOG and I am in the register for child care.'],
+      // ⚖️ check: a guard works only with a beveiligerspas, given after a screening by the police ⚖️
+      // (Wpbr art. 7; the same as r.l.beveiliging.1 in src/content/regels/units/sector2.ts).
+      ['Ik krijg mijn beveiligerspas na de screening.', 'I get my security guard pass after the screening.'],
     ],
-    [['Heb je al een VOG?', 'Do you have a VOG yet?'], ['Nee. Ik wacht nog op de mail van Justis.', 'No. I am still waiting for the e-mail from Justis.']],
+    [['Het uitzendbureau vraagt een VOG. Heb je die al?', 'The agency asks for a VOG. Do you have one yet?'], ['Nee. Ik wacht nog op de mail van Justis.', 'No. I am still waiting for the e-mail from Justis.']],
   ),
 ]);
 

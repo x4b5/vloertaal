@@ -18,13 +18,6 @@ export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
 ];
 
 /**
- * Single new ids in a lesson whose other texts are translated (23 November 2026, the VOG round): a
- * fourth sentence in a lesson of Zorg, Kinderopvang and Beveiliging. Their Belgian twins
- * ("be.s.homecare.4") wait with them.
- */
-const PENDING_IDS: readonly string[] = ['s.homecare.4', 's.grouprules.4', 's.access.4'];
-
-/**
  * The words of the pending lessons of curriculum.ts ("Tijd en rooster", "Als het misgaat"): the
  * words of work.ts are found by their lesson below, but this file cannot load curriculum.ts (it loads
  * this one), so they are listed here.
@@ -34,7 +27,7 @@ const PENDING_CURRICULUM_WORDS: readonly string[] = [];
 /** Units whose title waits for its translations too. */
 const PENDING_UNITS: readonly string[] = ['u.safework'];
 
-const pendingIds = new Set<string>([...PENDING_UNITS, ...PENDING_CURRICULUM_WORDS, ...PENDING_IDS]);
+const pendingIds = new Set<string>([...PENDING_UNITS, ...PENDING_CURRICULUM_WORDS]);
 for (const l of workUnits.flatMap((u) => u.lessons)) {
   if (!TRANSLATION_PENDING_LESSONS.includes(l.id.slice(2))) continue;
   pendingIds.add(l.id);
