@@ -165,6 +165,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "Я можу запитати, чи дитина вже спить.", // nieuw, nalezen
     'kjn.u.daycare.1': "Я можу розповісти мамі чи татові, як минув день.", // nieuw, nalezen
     'kjn.u.daycare.2': "Я можу запитати, хто прийде забрати дитину.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "Я можу запитати, у якій я фазі.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "Я можу запитати, за що утримання з моєї зарплати.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "Я можу сказати, що туалет забитий.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "Я можу запитати, скільки засобу треба налити у відро.", // nieuw, nalezen
+    'kjn.u.cooking.1': "Я можу запитати шеф-кухаря, як щось нарізати.", // nieuw, nalezen
+    'kjn.u.cooking.2': "Я можу запитати гостя, чи хоче він платити окремо.", // nieuw, nalezen
+    'kjn.u.carework.1': "Я можу запитати клієнта, що він хоче вдягнути.", // nieuw, nalezen
+    'kjn.u.carework.2': { m: "Я можу розповісти медсестрі, що я бачив.", f: "Я можу розповісти медсестрі, що я бачила.", x: "Я можу розповісти медсестрі про свої спостереження." }, // nieuw, nalezen
+    'kjn.u.shopfloor.1': "Я можу попросити в покупця чек.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "Я можу сказати, що магазин скоро зачиняється.", // nieuw, nalezen
   },
 };
 

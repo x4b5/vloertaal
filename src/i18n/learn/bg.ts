@@ -258,6 +258,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "Питат дали е паднала: да, какво има, и на кого се обаждаш.", // nieuw, nalezen
     'c.sickchild.a.why': "Питат как е той: какво виждаш, и какво правиш.", // nieuw, nalezen
     'c.grouprules.a.why': "Питат дали може да се излезе с групата без колега: да, но първо се казва на колега.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "Питат дали е готово: още не, и защо.", // nieuw, nalezen
+    'c.hotelroom.a.why': "Питат колко остават: броят, и кога свършваш.", // nieuw, nalezen
+    'c.dosing.a.why': "Казват да се сложи повече: не, повече не е по-добре, и с какво се мери.", // nieuw, nalezen
+    'c.officenight.a.why': "Питат дали се работи без друг човек в сградата: да, и ще има съобщение.", // nieuw, nalezen
+    'c.knives.a.why': "Молят да се нареже: да, шефе, и въпрос как.", // nieuw, nalezen
+    'c.rawcooked.a.why': "Питат дали е без глутен: не е сигурно, затова се проверява списъкът.", // nieuw, nalezen
+    'c.pass.a.why': "Питат къде е храната: на паса, и вече се носи.", // nieuw, nalezen
+    'c.bill.a.why': "Молят да платят поотделно: да, и терминалът идва.", // nieuw, nalezen
+    'c.washing.a.why': "Клиентът казва не: това е добре, и се предлага нещо друго.", // nieuw, nalezen
+    'c.observing.a.why': "Питат има ли нещо особено: да, и какво точно.", // nieuw, nalezen
+    'c.homecare.a.why': "Питат кой е: поздрав, кой идва, и може ли да се влезе.", // nieuw, nalezen
+    'c.liftaids.a.why': "Питат дали става без помощ: да, с плъзгащия чаршаф, и той се донася.", // nieuw, nalezen
+    'c.returns.a.why': "Искат да върнат стока: може, и въпрос за касовата бележка.", // nieuw, nalezen
+    'c.facing.a.why': "Питат дали е готово: почти, и какво още остава.", // nieuw, nalezen
+    'c.shrink.a.why': "Искат да погледнат в чантата: да, и се показва касовата бележка.", // nieuw, nalezen
+    'c.shopclose.a.why': "Искат да влязат: съжалявам, затворено, и кога се отваря пак.", // nieuw, nalezen
+    'c.hirer.a.why': "Питат за начало на ново място: да, и въпрос за часа.", // nieuw, nalezen
+    'c.phases.a.why': "Казват, че работата спира: добре, и молба за друга работа.", // nieuw, nalezen
+    'c.deductions.a.why': "Казват за удръжка: въпрос дали е разрешено, и проверка.", // nieuw, nalezen
+    'c.agencyhome.a.why': "Казват да се напусне скоро: това е кратко, и първо съвет.", // nieuw, nalezen
   },
 };
 
