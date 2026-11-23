@@ -795,6 +795,55 @@ const lang: HelpLanguageSource = {
     's.whereis.3': "Туалет там, біля їдальні.", // nieuw, nalezen
     'c.whereis.q': "Можеш це знайти?", // nieuw, nalezen
     'c.whereis.a': "Ні. Можеш показати, де це?", // nieuw, nalezen
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
+    'l.wound': "Невеликі рани й опіки", // nieuw, nalezen
+    'w.wond': "рана", // nieuw, nalezen
+    'w.verband': "бинт, пов’язка", // nieuw, nalezen
+    'w.koelen': "охолоджувати (холодною водою)", // nieuw, nalezen
+    'w.snee': "поріз (невелика рана від ножа чи чогось гострого)", // nieuw, nalezen
+    'w.flauwvallen': "знепритомніти", // nieuw, nalezen
+    'w.oogdouche': "станція для промивання очей (вода, щоб промити очі)", // nieuw, nalezen
+    's.wound.1': "Охолоди опік водою.", // nieuw, nalezen
+    's.wound.2': "Це невеликий поріз. Притисни рану.", // nieuw, nalezen
+    's.wound.3': "Де станція для промивання очей?", // nieuw, nalezen
+    'c.wound.q': "Мій колега ось-ось знепритомніє.", // nieuw, nalezen
+    'c.wound.a': "Хай він трохи полежить. Я покличу допомогу.", // nieuw, nalezen
+    'l.callhelp': "Дзвінок на 112", // nieuw, nalezen
+    'w.hulpdiensten': "екстрені служби (швидка, пожежна, поліція)", // nieuw, nalezen
+    'w.straatnaam': "назва вулиці", // nieuw, nalezen
+    'w.huisnummer': "номер будинку", // nieuw, nalezen
+    'w.aanspreekbaar': "при свідомості (людина реагує, коли до неї говорять)", // nieuw, nalezen
+    'w.opwachten': "зустрічати (когось біля дверей)", // nieuw, nalezen
+    'w.aandelijn': "залишатися на лінії (ти не кладеш слухавку)", // nieuw, nalezen
+    's.callhelp.1': "Я дзвоню 112. Мені потрібна швидка.", // nieuw, nalezen
+    's.callhelp.2': "Яка назва вулиці й номер будинку?", // nieuw, nalezen
+    's.callhelp.3': "Я зустріну швидку біля входу.", // nieuw, nalezen
+    'c.callhelp.q': "Він реагує, коли ти до нього говориш?", // nieuw, nalezen
+    'c.callhelp.a': "Ні. Він не реагує.", // nieuw, nalezen
+    'l.roster': "Твій графік", // nieuw, nalezen
+    'w.weekrooster': "тижневий графік (хто коли працює цього тижня)", // nieuw, nalezen
+    'w.roosterapp': "застосунок із графіком (твої зміни в телефоні)", // nieuw, nalezen
+    'w.beschikbaar': "доступний (ти можеш тоді працювати)", // nieuw, nalezen
+    'w.wijziging': "зміна (у плані)", // nieuw, nalezen
+    'w.invallen': "підміняти (працювати замість когось, кого немає)", // nieuw, nalezen
+    'w.vrijedag': "вихідний день", // nieuw, nalezen
+    's.roster.1': "Новий графік є в застосунку.", // nieuw, nalezen
+    's.roster.2': "Ти можеш працювати в суботу?", // nieuw, nalezen
+    's.roster.3': "Можеш завтра підмінити Сару?", // nieuw, nalezen
+    'c.roster.q': "У твоєму графіку є зміна.", // nieuw, nalezen
+    'c.roster.a': "Добре. Якого дня мені працювати?", // nieuw, nalezen
+    'l.breaks': "Години й перерви", // nieuw, nalezen
+    'w.lunchpauze': "обідня перерва", // nieuw, nalezen
+    'w.rusttijd': "час відпочинку (вільний час між двома змінами)", // nieuw, nalezen
+    'w.werkdag': "робочий день", // nieuw, nalezen
+    'w.urenlijst': "табель годин (куди ти записуєш відпрацьовані години)", // nieuw, nalezen
+    'w.eerderweg': "піти раніше", // nieuw, nalezen
+    'w.achterelkaar': "поспіль (один за одним)", // nieuw, nalezen
+    's.breaks.1': "Я записую свої години в табель годин.", // nieuw, nalezen
+    's.breaks.2': "Можна мені сьогодні піти на годину раніше?", // nieuw, nalezen
+    's.breaks.3': { m: "Я відпрацював шість днів поспіль.", f: "Я відпрацювала шість днів поспіль.", x: "У мене вже шість робочих днів поспіль." }, // nieuw, nalezen
+    'c.breaks.q': "Коли в тебе обідня перерва?", // nieuw, nalezen
+    'c.breaks.a': "О дванадцятій, пів години.", // nieuw, nalezen
   },
 };
 

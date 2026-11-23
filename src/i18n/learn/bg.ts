@@ -279,6 +279,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "Казват, че работата спира: добре, и молба за друга работа.", // nieuw, nalezen
     'c.deductions.a.why': "Казват за удръжка: въпрос дали е разрешено, и проверка.", // nieuw, nalezen
     'c.agencyhome.a.why': "Казват да се напусне скоро: това е кратко, и първо съвет.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "Графикът се промени: добре, и въпрос кой ден.", // nieuw, nalezen
+    'c.breaks.a.why': "Питат за обедната почивка: часът и колко трае.", // nieuw, nalezen
+    'c.wound.a.why': "Някой ще припадне: нека полежи, а ти отиваш за помощ.", // nieuw, nalezen
+    'c.callhelp.a.why': "Питат дали реагира: не, не реагира.", // nieuw, nalezen
+    'c.vacancy.a.why': "Питат защо се обаждаш: обявата и дали мястото е още свободно.", // nieuw, nalezen
+    'c.result.a.why': "Отказ: спокоен отговор и въпрос защо.", // nieuw, nalezen
+    'c.residence.a.why': "Разрешението почти изтече: веднага подаваш за ново.", // nieuw, nalezen
+    'c.newhome.a.why': "Питат къде живееш: ново жилище и новият адрес.", // nieuw, nalezen
+    'c.payparts.a.why': "Питат за служебния номер: къде е във фиша за заплата.", // nieuw, nalezen
+    'c.latepay.a.why': "Парите ще дойдат по-късно: искаш това писмено.", // nieuw, nalezen
+    'c.holiday.a.why': "Питат дали можеш в отпуск през май: предпочиташ юли и казваш защо.", // nieuw, nalezen
+    'c.special.a.why': "Питат за отпуска при раждане: да, и кога.", // nieuw, nalezen
+    'c.unwell.a.why': "Питат дали си добре: не, и може ли да си отидеш вкъщи.", // nieuw, nalezen
+    'c.injury.a.why': "Искат обяснение: да, и копие за теб.", // nieuw, nalezen
+    'c.debt.a.why': "Казват ти да останеш, докато дългът се изплати: не е позволено, търсиш помощ.", // nieuw, nalezen
+    'c.inspection.a.why': "Канят те да говориш: да, но не там, където шефът чува.", // nieuw, nalezen
+    'c.carpool.a.why': "Питат кой кара: ти, и кога ще ги вземеш.", // nieuw, nalezen
+    'c.train.a.why': "Питат защо закъсня: влакът, и съобщението вече е изпратено.", // nieuw, nalezen
+    'c.checklist.a.why': "Питат дали нищо не е забравено: още един поглед в списъка.", // nieuw, nalezen
+    'c.leavesite.a.why': "Питат дали си тръгваш след всички: да, всичко е изключено и вратата е заключена.", // nieuw, nalezen
+    'c.stagedays.a.why': "Питат защо отсъства: болест, и обаждане и до училището, и до фирмата.", // nieuw, nalezen
+    'c.stageend.a.why': "Питат за плановете ти: първо дипломата, после работа.", // nieuw, nalezen
+    'c.neighbours.a.why': "Нова съседка поздравява: приятно ти е, и казваш името си.", // nieuw, nalezen
+    'c.join.a.why': "Канят те: да, и искаш да говориш с учителя.", // nieuw, nalezen
+    'c.workphotos.a.why': "Искат снимка за интернет: учтиво „не“.", // nieuw, nalezen
+    'c.device.a.why': "Питат за ново приложение: първо питай IT отдела.", // nieuw, nalezen
   },
 };
 

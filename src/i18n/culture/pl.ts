@@ -425,6 +425,39 @@ const t: CultureTranslation = {
     'c.whereis.o2': "Szukasz dalej: pytać jeszcze raz to wstyd.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.o3': "Zaczynasz pracę we własnym ubraniu.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Pytanie zajmuje dziesięć sekund. Gdy szukasz bez pomocy, możesz się spóźnić. Koledzy wiedzą, że w nowym miejscu trudno znaleźć drogę.", // nieuw, nalezen // nagelezen AI 22 nov
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
+    'c.wound': "Oparzenie? Chłodź wodą", // nieuw, nalezen
+    'c.wound.b': "Małe skaleczenie: uciśnij je czystą szmatką albo opatrunkiem i powiedz o tym osobie od pierwszej pomocy (BHV’er). Oparzenie: od razu chłodź je letnią bieżącą wodą, przez co najmniej 10 minut. Coś w oku? Przepłucz je wodą albo przy płuczce do oczu. Coś poważnego? Dzwoń pod 112. Pierwszego dnia zapytaj, gdzie są apteczka i płuczka do oczu.", // nieuw, nalezen
+    'c.wound.p': { m: "Oparzyłem się. Gdzie jest kran?", f: "Oparzyłam się. Gdzie jest kran?", x: "Mam oparzenie. Gdzie jest kran?" }, // nieuw, nalezen
+    'c.wound.s': "Kolega oparza sobie rękę o gorącą maszynę. Co robisz?", // nieuw, nalezen
+    'c.wound.o1': "Chłodź oparzenie letnią bieżącą wodą.", // nieuw, nalezen
+    'c.wound.o2': "Od razu posmaruj masłem albo kremem.", // nieuw, nalezen
+    'c.wound.o3': "Połóż lód prosto na skórę i czekaj.", // nieuw, nalezen
+    'c.wound.w': "Woda wyciąga ciepło ze skóry, więc oparzenie jest mniej głębokie. Lód, masło i krem mogą to pogorszyć.", // nieuw, nalezen
+    'c.callhelp': "Dzwonisz pod 112: najpierw powiedz, gdzie", // nieuw, nalezen
+    'c.callhelp.b': "Dzwoń pod 112, kiedy życie jest w niebezpieczeństwie albo kiedy liczy się każda minuta. Najpierw powiedz, gdzie jesteś: ulica, numer i miejscowość. Potem powiedz, co się stało. Nie rozłączaj się i odpowiadaj na pytania. Poproś kolegę, żeby czekał na karetkę przy wejściu. Nie znasz adresu swojej pracy? Sprawdź go dzisiaj.", // nieuw, nalezen
+    'c.callhelp.p': "Dzwonię pod 112. Poczekasz na karetkę?", // nieuw, nalezen
+    'c.callhelp.s': "Dzwonisz pod 112. Dyspozytor zadaje dużo pytań, a ty chcesz pomóc koledze. Co robisz?", // nieuw, nalezen
+    'c.callhelp.o1': "Nie rozłączaj się i odpowiadaj.", // nieuw, nalezen
+    'c.callhelp.o2': "Rozłącz się i idź do kolegi.", // nieuw, nalezen
+    'c.callhelp.o3': "Powiedz „przyjedźcie szybko” i się rozłącz.", // nieuw, nalezen
+    'c.callhelp.w': "Dyspozytor wysyła pomoc, kiedy rozmawiasz, i mówi ci, co robić. Kiedy rozłączysz się za wcześnie, pomoc może pojechać w złe miejsce.", // nieuw, nalezen
+    'c.roster': "Codziennie zaglądaj do grafiku", // nieuw, nalezen
+    'c.roster.b': "Grafik może się zmienić, także w ostatniej chwili. Sprawdzaj go codziennie, w aplikacji albo na tablicy. Widzisz zmianę? Sprawdź, czy możesz przyjść. Nie możesz pracować jakiegoś dnia? Powiedz to wcześnie, nie tego samego dnia. Chcesz zamienić się zmianą? Najpierw zapytaj przełożonego: w wielu firmach jest na to zasada. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.roster.p': "W sobotę nie mogę. Mogę się zamienić?", // nieuw, nalezen
+    'c.roster.s': "Twój grafik się zmienił. Teraz musisz pracować w sobotę, ale nie możesz. Co robisz?", // nieuw, nalezen
+    'c.roster.o1': "Powiedz przełożonemu dzisiaj i poproś o zamianę.", // nieuw, nalezen
+    'c.roster.o2': "Nic nie mów i w sobotę zostań w domu.", // nieuw, nalezen
+    'c.roster.o3': "Poproś kolegę, żeby poszedł, i nikomu nie mów.", // nieuw, nalezen
+    'c.roster.w': "Kiedy mówisz to wcześnie, przełożony może znaleźć kogoś innego. Nieobecność bez słowa jest traktowana bardzo poważnie.", // nieuw, nalezen
+    'c.breaks': "Zapisuj swoje godziny", // nieuw, nalezen
+    'c.breaks.b': "Codziennie zapisuj, kiedy zaczynasz, kiedy kończysz i jak długa jest twoja przerwa. Twoja własna lista pomaga, kiedy wypłata się nie zgadza. Musisz wyjść wcześniej, na przykład do lekarza? Zapytaj przełożonego na czas. Praca trwała dłużej, niż planowano? To też zapisz. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.breaks.p': "Jutro muszę iść do lekarza. Mogę wyjść wcześniej?", // nieuw, nalezen
+    'c.breaks.s': "Jutro o trzeciej musisz iść do lekarza. Twoja zmiana kończy się o piątej. Co robisz?", // nieuw, nalezen
+    'c.breaks.o1': "Zapytaj dziś przełożonego, czy możesz wyjść wcześniej.", // nieuw, nalezen
+    'c.breaks.o2': "Wyjdź o trzeciej i wyjaśnij to następnego dnia.", // nieuw, nalezen
+    'c.breaks.o3': "Odpuść lekarza i skończ zmianę.", // nieuw, nalezen
+    'c.breaks.w': "Kiedy pytasz na czas, przełożony może zaplanować pracę. Wyjście bez pytania jest odbierane jako brak rzetelności.", // nieuw, nalezen
   },
 };
 

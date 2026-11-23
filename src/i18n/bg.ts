@@ -792,6 +792,55 @@ const lang: HelpLanguageSource = {
     's.whereis.3': "Тоалетната е там, до стола.", // nieuw, nalezen
     'c.whereis.q': "Можеш ли да го намериш?", // nieuw, nalezen
     'c.whereis.a': "Не. Можеш ли да го посочиш?", // nieuw, nalezen
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
+    'l.wound': "Малки рани и изгаряния", // nieuw, nalezen
+    'w.wond': "раната", // nieuw, nalezen
+    'w.verband': "превръзката", // nieuw, nalezen
+    'w.koelen': "охлаждам (със студена вода)", // nieuw, nalezen
+    'w.snee': "порязването (малка рана от нож или нещо остро)", // nieuw, nalezen
+    'w.flauwvallen': "припадам", // nieuw, nalezen
+    'w.oogdouche': "душът за очи (вода за изплакване на очите)", // nieuw, nalezen
+    's.wound.1': "Охлади изгарянето с вода.", // nieuw, nalezen
+    's.wound.2': "Малко порязване е. Притисни раната.", // nieuw, nalezen
+    's.wound.3': "Къде е душът за очи?", // nieuw, nalezen
+    'c.wound.q': "Колегата ми ще припадне.", // nieuw, nalezen
+    'c.wound.a': "Нека полежи малко. Отивам за помощ.", // nieuw, nalezen
+    'l.callhelp': "Обаждане на 112", // nieuw, nalezen
+    'w.hulpdiensten': "спешните служби (линейка, пожарна, полиция)", // nieuw, nalezen
+    'w.straatnaam': "името на улицата", // nieuw, nalezen
+    'w.huisnummer': "номерът на сградата", // nieuw, nalezen
+    'w.aanspreekbaar': "в съзнание (човекът реагира, когато му говориш)", // nieuw, nalezen
+    'w.opwachten': "посрещам (някого на вратата)", // nieuw, nalezen
+    'w.aandelijn': "оставам на линията (не затваряш)", // nieuw, nalezen
+    's.callhelp.1': "Обаждам се на 112. Трябва ми линейка.", // nieuw, nalezen
+    's.callhelp.2': "Какво е името на улицата и номерът на сградата?", // nieuw, nalezen
+    's.callhelp.3': "Ще посрещна линейката на входа.", // nieuw, nalezen
+    'c.callhelp.q': "Реагира ли, когато му говориш?", // nieuw, nalezen
+    'c.callhelp.a': "Не. Не реагира.", // nieuw, nalezen
+    'l.roster': "Твоят график", // nieuw, nalezen
+    'w.weekrooster': "седмичният график (кой кога работи тази седмица)", // nieuw, nalezen
+    'w.roosterapp': "приложението за графика (смените ти в телефона)", // nieuw, nalezen
+    'w.beschikbaar': "на разположение (можеш да работиш тогава)", // nieuw, nalezen
+    'w.wijziging': "промяната", // nieuw, nalezen
+    'w.invallen': "замествам (работя вместо някой, който отсъства)", // nieuw, nalezen
+    'w.vrijedag': "почивният ден", // nieuw, nalezen
+    's.roster.1': "Новият график е в приложението.", // nieuw, nalezen
+    's.roster.2': "Можеш ли да работиш в събота?", // nieuw, nalezen
+    's.roster.3': "Можеш ли утре да заместиш Сара?", // nieuw, nalezen
+    'c.roster.q': "Има промяна в графика ти.", // nieuw, nalezen
+    'c.roster.a': "Добре. Кой ден трябва да работя?", // nieuw, nalezen
+    'l.breaks': "Часове и почивки", // nieuw, nalezen
+    'w.lunchpauze': "обедната почивка", // nieuw, nalezen
+    'w.rusttijd': "времето за почивка (свободно време между две смени)", // nieuw, nalezen
+    'w.werkdag': "работният ден", // nieuw, nalezen
+    'w.urenlijst': "списъкът с часове (където записваш отработените часове)", // nieuw, nalezen
+    'w.eerderweg': "тръгвам си по-рано", // nieuw, nalezen
+    'w.achterelkaar': "подред (един след друг)", // nieuw, nalezen
+    's.breaks.1': "Записвам часовете си в списъка с часове.", // nieuw, nalezen
+    's.breaks.2': "Може ли днес да си тръгна един час по-рано?", // nieuw, nalezen
+    's.breaks.3': "Работих шест дни подред.", // nieuw, nalezen
+    'c.breaks.q': "Кога ти е обедната почивка?", // nieuw, nalezen
+    'c.breaks.a': "В дванадесет, половин час.", // nieuw, nalezen
   },
 };
 

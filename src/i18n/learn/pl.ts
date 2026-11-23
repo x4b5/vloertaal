@@ -279,6 +279,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "Wiadomość, że praca się kończy: dobrze, i prośba o inną pracę.", // nieuw, nalezen
     'c.deductions.a.why': "Wiadomość o potrąceniu: pytanie, czy to dozwolone, i sprawdzenie.", // nieuw, nalezen
     'c.agencyhome.a.why': "Polecenie szybkiej wyprowadzki: to krótko, i najpierw rada.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "Wiadomość o zmianie w grafiku: zgoda i pytanie o dzień.", // nieuw, nalezen
+    'c.breaks.a.why': "Pytanie o przerwę obiadową: godzina i jak długo trwa.", // nieuw, nalezen
+    'c.wound.a.why': "Ktoś zaraz zemdleje: niech się położy, a ty idziesz po pomoc.", // nieuw, nalezen
+    'c.callhelp.a.why': "Pytanie, czy reaguje: nie, nie reaguje.", // nieuw, nalezen
+    'c.vacancy.a.why': "Pytanie, w jakiej sprawie dzwonisz: oferta pracy i czy jest jeszcze aktualna.", // nieuw, nalezen
+    'c.result.a.why': "Odmowa: spokojna odpowiedź i pytanie dlaczego.", // nieuw, nalezen
+    'c.residence.a.why': "Zezwolenie prawie wygasło: od razu składasz wniosek o nowe.", // nieuw, nalezen
+    'c.newhome.a.why': "Pytanie, gdzie mieszkasz: nowe mieszkanie i nowy adres.", // nieuw, nalezen
+    'c.payparts.a.why': "Pytanie o numer pracownika: gdzie jest na pasku wypłaty.", // nieuw, nalezen
+    'c.latepay.a.why': "Pieniądze przyjdą później: chcesz to mieć na piśmie.", // nieuw, nalezen
+    'c.holiday.a.why': "Prośba o urlop w maju: wolisz lipiec i mówisz dlaczego.", // nieuw, nalezen
+    'c.special.a.why': "Pytanie o urlop z powodu narodzin dziecka: tak, i od kiedy.", // nieuw, nalezen
+    'c.unwell.a.why': "Pytanie, czy wszystko w porządku: nie, i prośba o pójście do domu.", // nieuw, nalezen
+    'c.injury.a.why': "Prośba o oświadczenie: tak, i kopia dla ciebie.", // nieuw, nalezen
+    'c.debt.a.why': "Masz zostać, aż spłacisz dług: tak nie wolno, szukasz pomocy.", // nieuw, nalezen
+    'c.inspection.a.why': "Pytanie o rozmowę: tak, ale tam, gdzie szef nie słyszy.", // nieuw, nalezen
+    'c.carpool.a.why': "Pytanie, kto prowadzi: ty, i o której ich odbierasz.", // nieuw, nalezen
+    'c.train.a.why': "Pytanie, dlaczego tak późno: pociąg, a wiadomość już wysłana.", // nieuw, nalezen
+    'c.checklist.a.why': "Pytanie, czy niczego nie brakuje: jeszcze jedno spojrzenie na listę.", // nieuw, nalezen
+    'c.leavesite.a.why': "Pytanie, czy wychodzisz na końcu: tak, wszystko wyłączone i drzwi zamknięte.", // nieuw, nalezen
+    'c.stagedays.a.why': "Pytanie o nieobecność: choroba i telefon do szkoły i do firmy.", // nieuw, nalezen
+    'c.stageend.a.why': "Pytanie o plany: najpierw dyplom, potem praca.", // nieuw, nalezen
+    'c.neighbours.a.why': "Nowa sąsiadka się wita: miło cię poznać i twoje imię.", // nieuw, nalezen
+    'c.join.a.why': "Zaproszenie: tak, i chcesz porozmawiać z nauczycielem.", // nieuw, nalezen
+    'c.workphotos.a.why': "Prośba o zdjęcie do internetu: grzeczne nie.", // nieuw, nalezen
+    'c.device.a.why': "Pytanie o nową aplikację: najpierw zapytaj dział IT.", // nieuw, nalezen
   },
 };
 
