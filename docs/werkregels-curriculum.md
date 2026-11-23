@@ -4241,10 +4241,12 @@ kan. Wat anders is:
   zegt "werk open" (waar). Medicijnen alleen met een voorschrift en een briefje van de ouders
   (Opgroeien); zorgen: de vaste stappen van de opvang.
 
-**Nog te doen (fase 2, na de vijf Taal-units).** De units in de cursus zetten
-(`src/content/regels/index.ts` `sectorRulesUnits`, `be/index.ts`), `rules.units` in `sectors.ts`,
-de tweelingen in `trackTwins.ts`, de thema's, "Wat kun je nu?", de iconen, zegHet en de
-adviesregel (nu nog in `sector2.ts`: `SECTOR2_ZEG_HET`, `SECTOR2_ADVICE`, `SECTOR2_KUN`) en de tests.
+**Inbouw.** De units staan in de cursus na de winkel (`sectorRulesUnits` in
+`src/content/regels/index.ts`), in `rules.units` van hun sector (`sectors.ts`), als tweeling van
+hun twee Taal-units (`trackTwins.ts`, voor "Zo werkt het hier"), bij het thema "Je sector"
+(`themes.ts`) en met een tekening (`unitIcons.ts`). "Wat zeg je?" staat in `zegHetData.ts`, de
+adviesregel in `disclaimer.ts`, "Wat kun je nu?" in `kunJeNu.ts`. De 12 "Onthoud"-zinnen staan in
+het Pools, Roemeens en Bulgaars in `src/i18n/regelHulp` (met AI vertaald, `// nieuw, nalezen`).
 
 
 ## Sector groen · Werken in het groen

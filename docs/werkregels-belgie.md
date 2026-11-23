@@ -323,7 +323,6 @@ maar `tsw`, `interimkantoor`, `arbeidsarts`, `ziekenfonds` en `vdab`.
   (het vierogenprincipe is in Vlaanderen geen wet), medicijnen alleen met een voorschrift en een
   briefje van de ouders (Opgroeien), de vaste stappen van de opvang bij zorgen.
 
-**Inbouwen (fase 2).** `be/index.ts` importeert de zes bestanden en zet ze in `BY_NL`, in hetzelfde
-commit als de Nederlandse units in `sectorRulesUnits` komen. `BE_TODO` hoeft niet te veranderen: de
-units zijn er meteen in beide landen. De test leest de bestanden als `sector-<naam>.ts`, omdat de
-units sectorunits zijn.
+**Ingebouwd.** `be/index.ts` importeert de zes bestanden en zet ze in `BY_NL`; de Nederlandse
+units staan in `sectorRulesUnits`. `BE_TODO` blijft leeg: de units zijn er meteen in beide landen.
+De test leest de bestanden als `sector-<naam>.ts`, omdat de units sectorunits zijn.
