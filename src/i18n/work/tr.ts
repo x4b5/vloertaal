@@ -2979,6 +2979,979 @@ const t: CultureTranslation = {
     'c.diagnosis.o2': "Lastiği hemen değiştirirsin.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.o3': "Hiçbir şey söylemezsin: bu senin işin değil.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.w': "Neyin yapılıp ödeneceğine müşteri karar verir. Ama lastiğin tehlikeli olduğunu bilmesi gerekir.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang, two units each (23 November 2026).
+    'u.mowing': "Çim biçmek ve budamak", // nieuw, nalezen
+    'l.mowing': "Çimleri biçmek", // nieuw, nalezen
+    'w.gras': "çim", // nieuw, nalezen
+    'w.maaien': "biçmek (çimi kesmek)", // nieuw, nalezen
+    'w.grasmaaier': "çim biçme makinesi", // nieuw, nalezen
+    'w.zitmaaier': "binmeli çim biçme makinesi (üstüne oturduğun bir makine)", // nieuw, nalezen
+    'w.bosmaaier': "tırpan makinesi (uzun bir sapın ucunda bir biçme makinesi)", // nieuw, nalezen
+    'w.gelaatsscherm': "yüz siperi", // nieuw, nalezen
+    's.mowing.1': "Önce kenar boyundaki çimi biç.", // nieuw, nalezen
+    's.mowing.2': "Çim fazla ıslak. Yarın biçeceğiz.", // nieuw, nalezen
+    's.mowing.3': "Yüz siperini tak.", // nieuw, nalezen
+    'c.mowing.q': "Binmeli makineyi alabilir miyim?", // nieuw, nalezen
+    'c.mowing.a': "Evet, ama önce taşları topla.", // nieuw, nalezen
+    'c.mowing': "Taşlar uzağa fırlar", // nieuw, nalezen
+    'c.mowing.b': "Bir çim biçme makinesi ya da tırpan makinesi bir taşı çok uzağa ve çok sert fırlatabilir. Bu yüzden önce çimin üstünden yürü ve taşları, camları ve dalları topla. Yüz siperini ya da koruyucu gözlüğünü, kulak koruyucunu ve güvenlik ayakkabılarını tak. Başka insanları uzak tut. Biri yaklaşıyor mu? Makineyi durdur. Motor çalışırken elini asla bir biçme makinesinin altına sokma: motoru kapat ve bıçak tamamen durana kadar bekle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.mowing.p': "Biraz uzak durur musunuz lütfen?", // nieuw, nalezen
+    'c.mowing.s': "Tırpan makinesini kullanıyorsun. Köpekli bir adam sana doğru yürüyor. Ne yaparsın?", // nieuw, nalezen
+    'c.mowing.o1': "O geçene kadar makineyi durdurursun.", // nieuw, nalezen
+    'c.mowing.o2': "Devam edersin: seni görebiliyor.", // nieuw, nalezen
+    'c.mowing.o3': "Ona sırtını döner ve devam edersin.", // nieuw, nalezen
+    'c.mowing.w': "Tırpan makinesinden fırlayan bir taş, uzaktan bile birini ağır yaralayabilir.", // nieuw, nalezen
+    'l.pruning': "Budamak", // nieuw, nalezen
+    'w.snoeien': "budamak (bir bitkinin dallarını kesmek)", // nieuw, nalezen
+    'w.snoeischaar': "budama makası", // nieuw, nalezen
+    'w.tak': "dal", // nieuw, nalezen
+    'w.struik': "çalı", // nieuw, nalezen
+    'w.boom': "ağaç", // nieuw, nalezen
+    'w.snoeizaag': "budama testeresi", // nieuw, nalezen
+    's.pruning.1': "Yolun kenarındaki çalıları buda.", // nieuw, nalezen
+    's.pruning.2': "Bu dal kuru. Onu testereyle kes.", // nieuw, nalezen
+    's.pruning.3': "Dalları bir yığına koy.", // nieuw, nalezen
+    'c.pruning.q': "Hangi dallar kesilmeli?", // nieuw, nalezen
+    'c.pruning.a': "Sadece kuru dallar.", // nieuw, nalezen
+    'c.pruning': "Temiz bir kesik en iyi iyileşir", // nieuw, nalezen
+    'c.pruning.b': "Keskin ve temiz bir makasla buda. Temiz bir kesik hızla iyileşir; yırtılmış bir dal hastalanır. Bir tomurcuğun ya da yan dalın hemen üstünden kes ve uzun bir parça bırakma. Önce kuru ve kırık dalları kes. Öbür elini bıçaklardan uzak tut. Eldiven giy: bazı bitkilerin dikeni vardır ya da cildini kızartır. İşten sonra makası temizle.", // nieuw, nalezen
+    'c.pruning.p': "Nereden kesmem gerekiyor?", // nieuw, nalezen
+    'c.pruning.s': "Budama makasın kör. Dalları yırtıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.pruning.o1': "Keskin bir makas istersin.", // nieuw, nalezen
+    'c.pruning.o2': "Dalı daha sert çekersin.", // nieuw, nalezen
+    'c.pruning.o3': "Devam edersin: sadece bir çalı.", // nieuw, nalezen
+    'c.pruning.w': "Kör bir makas dalı yırtar. Bitki hastalanır ve sen daha çok yorulursun.", // nieuw, nalezen
+    'l.hedge': "Çit budamak", // nieuw, nalezen
+    'w.heg': "çit (canlı çit)", // nieuw, nalezen
+    'w.heggenschaar': "çit budama makinesi (bir çiti kesen makine)", // nieuw, nalezen
+    'w.kruiwagen': "el arabası", // nieuw, nalezen
+    'w.hark': "tırmık", // nieuw, nalezen
+    'w.snoeiafval': "bahçe atığı (kesilmiş dallar ve yapraklar)", // nieuw, nalezen
+    'w.zeil': "branda (büyük bir plastik örtü)", // nieuw, nalezen
+    's.hedge.1': "Brandayı çitin altına ser.", // nieuw, nalezen
+    's.hedge.2': "Çiti güzel ve düz kes.", // nieuw, nalezen
+    's.hedge.3': "Bahçe atığını el arabasıyla götür.", // nieuw, nalezen
+    'c.hedge.q': "Çit ne kadar yüksek kalmalı?", // nieuw, nalezen
+    'c.hedge.a': "İpe kadar. Daha alçak değil.", // nieuw, nalezen
+    'c.hedge': "Önce yuva var mı bak", // nieuw, nalezen
+    'c.hedge.b': "İlkbaharda ve yazın kuşlar çitlere ve çalılara yuva yapar. Kuşların kullandığı yuvalar koruma altındadır. Bu yüzden kesmeden önce çitin içine bak. Yumurtalı ya da yavru kuşlu bir yuva mı görüyorsun? Orayı kesme ve amirine söyle. Çit budama makinesini iki elinle tut. Yerde ya da sağlam bir merdivende dur, asla bir sandalyede ya da bir kovanın üstünde durma. Kabloyu arkanda tut.", // nieuw, nalezen
+    'c.hedge.p': "Burada bir yuva var.", // nieuw, nalezen
+    'c.hedge.s': "Mayıs ayında bir çit budıyorsun. Yavru kuşlu bir yuva görüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.hedge.o1': "Orada durur ve amirine söylersin.", // nieuw, nalezen
+    'c.hedge.o2': "Etrafını dikkatlice kesersin.", // nieuw, nalezen
+    'c.hedge.o3': "Yuvayı çıkarır ve devam edersin.", // nieuw, nalezen
+    'c.hedge.w': "Kuşların kullandığı yuvalar koruma altındadır. Çitin bu kısmına ne olacağına amirin karar verir.", // nieuw, nalezen
+    'l.chainsaw': "Motorlu testere ve yaprak üfleyici", // nieuw, nalezen
+    'w.kettingzaag': "motorlu testere", // nieuw, nalezen
+    'w.stam': "gövde (bir ağacın)", // nieuw, nalezen
+    'w.zaagbroek': "testere pantolonu (zinciri durdurur)", // nieuw, nalezen
+    'w.bladblazer': "yaprak üfleyici", // nieuw, nalezen
+    'w.bladeren': "yapraklar", // nieuw, nalezen
+    'w.jerrycan': "bidon (yakıt için bir kap)", // nieuw, nalezen
+    's.chainsaw.1': "Testere pantolonunu giy.", // nieuw, nalezen
+    's.chainsaw.2': "Yaprakları bir yığına üfle.", // nieuw, nalezen
+    's.chainsaw.3': "Yakıtı sadece motor soğukken doldur.", // nieuw, nalezen
+    'c.chainsaw.q': "Motorlu testereyle çalışabilir miyim?", // nieuw, nalezen
+    'c.chainsaw.a': "Henüz değil. Önce bir kurs alacaksın.", // nieuw, nalezen
+    'c.chainsaw': "Motorlu testere sadece eğitimle", // nieuw, nalezen
+    'c.chainsaw.b': "Motorlu testere, yeşil alan işindeki en tehlikeli aletlerden biridir. Onunla sadece bir kurs aldıysan ve amirin izin verirse çalış. Her zaman testere pantolonu, yüz siperli bir kask, kulak koruyucu, eldiven ve güvenlik botları giy. Motorlu testereyle asla tek başına çalışma. Onu iki elinle tut ve asla omuzlarının üstünde kesme. Yaprak üfleyiciyle: asla insanlara, arabalara ya da açık pencerelere doğru üfleme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.chainsaw.p': "Bunun için henüz kurs almadım.", // nieuw, nalezen
+    'c.chainsaw.s': "Bir iş arkadaşın diyor ki: “Motorlu testereyi al, kolay.” Hiç kurs almadın. Ne yaparsın?", // nieuw, nalezen
+    'c.chainsaw.o1': "Henüz kurs almadığını söylersin.", // nieuw, nalezen
+    'c.chainsaw.o2': "Dikkatlice, sadece bir kez denersin.", // nieuw, nalezen
+    'c.chainsaw.o3': "Alırsın ve önce bir video izlersin.", // nieuw, nalezen
+    'c.chainsaw.w': "Motorlu testere bacağını bir saniyede kesebilir. Eğitim almadan onun nasıl geri tepebileceğini bilemezsin.", // nieuw, nalezen
+    'u.planting': "Dikim, yabani otlar ve sokak", // nieuw, nalezen
+    'l.weeding': "Ot ayıklamak", // nieuw, nalezen
+    'w.onkruid': "yabani ot (gitmesi gereken bitkiler)", // nieuw, nalezen
+    'w.wieden': "ot ayıklamak (yabani otları çekip çıkarmak)", // nieuw, nalezen
+    'w.schoffel': "çapa", // nieuw, nalezen
+    'w.perk': "çiçek tarhı", // nieuw, nalezen
+    'w.onkruidbrander': "ot yakma aleti (yabani otları ısıyla öldürür)", // nieuw, nalezen
+    'w.wortel': "kök (bir bitkinin)", // nieuw, nalezen
+    's.weeding.1': "Yabani otları köküyle birlikte çek.", // nieuw, nalezen
+    's.weeding.2': "Girişin yanındaki çiçek tarhını çapala.", // nieuw, nalezen
+    's.weeding.3': "Dikkat: ot yakma aleti sıcak.", // nieuw, nalezen
+    'c.weeding.q': "Bu bir yabani ot mu?", // nieuw, nalezen
+    'c.weeding.a': "Hayır, o bir bitki. Onu bırak.", // nieuw, nalezen
+    'c.weeding': "Yabani ot: kök gitmeli", // nieuw, nalezen
+    'c.weeding.b': "Kök toprakta kalırsa yabani ot yeniden büyür. Bu yüzden onu köküyle çek ya da toprağın hemen altından çapala. Toprak biraz ıslakken çalış: o zaman kök kolayca çıkar. Yabani otlara karşı ilaç püskürtme, nasıl yapıldığını öğrenmediysen ve amirin söylemediyse. Ot yakma aleti çok sıcaktır: onu kuru çimden, yapraklardan, çitlerden, arabalardan ve çöp kutularından uzak tut. Yanarken onu asla yere bırakma. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.weeding.p': "Bu yabani ot mu, bitki mi?", // nieuw, nalezen
+    'c.weeding.s': "Ot yakma aletini kullanıyorsun. Yolun yanında kuru bir çit var. Ne yaparsın?", // nieuw, nalezen
+    'c.weeding.o1': "Oradaki otları elle çekersin.", // nieuw, nalezen
+    'c.weeding.o2': "Hızlıca yakar ve yürümeye devam edersin.", // nieuw, nalezen
+    'c.weeding.o3': "Yakar ve bir kez arkana bakarsın.", // nieuw, nalezen
+    'c.weeding.w': "Kuru bir çit hızla tutuşur. Evlerin ya da arabaların yakınında bir yangın çok tehlikelidir.", // nieuw, nalezen
+    'l.planting': "Dikim yapmak", // nieuw, nalezen
+    'w.planten': "dikmek (bitki dikmek)", // nieuw, nalezen
+    'w.schep': "kürek", // nieuw, nalezen
+    'w.plantgat': "dikim çukuru", // nieuw, nalezen
+    'w.kluit': "kök topu (köklerin etrafındaki toprak)", // nieuw, nalezen
+    'w.compost': "kompost", // nieuw, nalezen
+    'w.boompaal': "ağaç kazığı (genç bir ağacı tutan direk)", // nieuw, nalezen
+    's.planting.1': "Ağaç için bir dikim çukuru kaz.", // nieuw, nalezen
+    's.planting.2': "Ağacı kazığın yanına dik olarak koy.", // nieuw, nalezen
+    's.planting.3': "Yeni bitkilere bol su ver.", // nieuw, nalezen
+    'c.planting.q': "Bu bitki nereye gidiyor?", // nieuw, nalezen
+    'c.planting.a': "Çiçek tarhının arkasına, duvarın yanına.", // nieuw, nalezen
+    'c.planting': "Toprağın altında: kablolar ve borular", // nieuw, nalezen
+    'c.planting.b': "Çimin ve kaldırımın altında çoğu zaman kablolar ve borular vardır: elektrik, gaz, su ve internet için. Bu yüzden dikkatlice kaz. Toprakta renkli bir şerit ya da plastik bir levha mı görüyorsun, ya da sert bir şeye mi çarpıyorsun? Kazmayı durdur ve amirine söyle. Asla zorla kazmaya devam etme. Ağır bir ağacı ya da büyük bir kök topunu birlikte ve dizlerini bükerek kaldırın. Yeni bir bitkiye aynı gün su ver. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.planting.p': "Sert bir şeye çarpıyorum.", // nieuw, nalezen
+    'c.planting.s': "Bir dikim çukuru kazıyorsun. Küreğin kırmızı plastik bir şeride çarpıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.planting.o1': "Kazmayı durdurur ve amirine söylersin.", // nieuw, nalezen
+    'c.planting.o2': "Şeridin yanında dikkatlice kazmaya devam edersin.", // nieuw, nalezen
+    'c.planting.o3': "Şeridi çekip çıkarır ve devam edersin.", // nieuw, nalezen
+    'c.planting.w': "Topraktaki bir şerit, altında bir kablo ya da boru olduğunu haber verir. Bir gaz borusu ya da elektrik kablosu çok tehlikelidir.", // nieuw, nalezen
+    'l.roadside': "Yolun kenarında çalışmak", // nieuw, nalezen
+    'w.pion': "trafik konisi", // nieuw, nalezen
+    'w.verkeer': "trafik", // nieuw, nalezen
+    'w.stoep': "kaldırım (yolun yanındaki yaya yolu)", // nieuw, nalezen
+    'w.fietser': "bisikletli", // nieuw, nalezen
+    'w.pijlwagen': "ok römorku (sürücüleri uyaran büyük oklu bir römork)", // nieuw, nalezen
+    'w.berm': "yol kenarı (yolun yanındaki çimenlik)", // nieuw, nalezen
+    's.roadside.1': "Yeleğini giy. Yolun kenarında çalışıyoruz.", // nieuw, nalezen
+    's.roadside.2': "Konileri kamyonetin arkasına koy.", // nieuw, nalezen
+    's.roadside.3': "Bisikletlilere dikkat et.", // nieuw, nalezen
+    'c.roadside.q': "Şimdi karşıya geçebilir miyim?", // nieuw, nalezen
+    'c.roadside.a': "Hayır, bekle. Bir kamyon geliyor.", // nieuw, nalezen
+    'c.roadside': "Yolun kenarında: görünür ol, konilerin arkasında kal", // nieuw, nalezen
+    'c.roadside.b': "Yolun kenarında çalışmak tehlikelidir: sürücüler telefonlarına bakar ya da çok hızlı gider. Bu yüzden kısa bir iş için bile her zaman reflektörlü yeleğini giy. Başlamadan önce konileri ve tabelaları koy ve en son onları topla. Kamyoneti seninle trafik arasında bir kalkan olarak park et. Konilerin arkasında kal. Bakmadan asla geri adım atma ve yapabildiğinde yüzün trafiğe dönük çalış. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.roadside.p': "Önce konileri koyuyorum.", // nieuw, nalezen
+    'c.roadside.s': "Yolun kenarında küçük bir çalıyı kesmen gerekiyor. Beş dakika sürer. Ne yaparsın?", // nieuw, nalezen
+    'c.roadside.o1': "Yeleği giyer ve konileri koyarsın.", // nieuw, nalezen
+    'c.roadside.o2': "Konisiz, hızlıca yaparsın.", // nieuw, nalezen
+    'c.roadside.o3': "Bir iş arkadaşından arabalara bakmasını istersin.", // nieuw, nalezen
+    'c.roadside.w': "Bir kaza sadece bir saniye sürer. Konisiz beş dakika, korumasız beş dakikadır.", // nieuw, nalezen
+    'l.litter': "Sokaktaki çöpler ve mahalle", // nieuw, nalezen
+    'w.zwerfafval': "sokak çöpü (sokakta kalan çöp)", // nieuw, nalezen
+    'w.grijper': "çöp toplama maşası (çöpü tutan bir çubuk)", // nieuw, nalezen
+    'w.vuilniszak': "çöp torbası", // nieuw, nalezen
+    'w.scherven': "cam kırıkları (keskin parçalar)", // nieuw, nalezen
+    'w.aanhanger': "römork", // nieuw, nalezen
+    'w.bewoner': "mahalle sakini (burada oturan biri)", // nieuw, nalezen
+    's.litter.1': "Sokak çöpünü çöp toplama maşasıyla topla.", // nieuw, nalezen
+    's.litter.2': "Dikkat, burada cam kırıkları var.", // nieuw, nalezen
+    's.litter.3': "Çöp torbalarını römorkun yanına koy.", // nieuw, nalezen
+    'c.litter.q': "Bu ağaç ne zaman budanacak?", // nieuw, nalezen
+    'c.litter.a': "Bilmiyorum. Belediyeye sorun.", // nieuw, nalezen
+    'c.litter': "Bir iğneye asla dokunma", // nieuw, nalezen
+    'c.litter.b': "Parklarda ve çalılıklarda bazen bir şırınga iğnesi bulursun. Onu asla elinle alma, eldivenle de alma. Çöp toplama maşasını kullan ve iğneyi kapaklı sert bir kutuya ya da şişeye koy, asla bir çöp torbasına koyma. Amirine söyle. Bir iğne sana battı mı? Yarayı bol suyla yıka ve hemen bir doktoru ara. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.litter.p': "Burada bir iğne var.", // nieuw, nalezen
+    'c.litter.s': "Çimenlerde, bir bankın yanında bir iğne görüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.litter.o1': "Onu çöp toplama maşasıyla alırsın.", // nieuw, nalezen
+    'c.litter.o2': "Onu eldivenle alırsın.", // nieuw, nalezen
+    'c.litter.o3': "Onu çöp torbasına koyarsın.", // nieuw, nalezen
+    'c.litter.w': "Bir iğne hastalık taşıyabilir. Eldiven bir iğneyi durdurmaz, sert bir kutu ise başkalarını güvende tutar.", // nieuw, nalezen
+    'u.frontdesk': "Resepsiyon, posta ve toplantılar", // nieuw, nalezen
+    'l.reception': "Danışma bankosunda", // nieuw, nalezen
+    'w.balie': "danışma bankosu, tezgâh", // nieuw, nalezen
+    'w.bezoeker': "ziyaretçi", // nieuw, nalezen
+    'w.intercom': "diyafon (kapıdaki biriyle konuşursun)", // nieuw, nalezen
+    'w.doorverbinden': "bağlamak (bir telefon görüşmesini)", // nieuw, nalezen
+    'w.toestel': "dahili hat (binanın içindeki bir telefon numarası)", // nieuw, nalezen
+    'w.wachtruimte': "bekleme alanı", // nieuw, nalezen
+    's.reception.1': "Günaydın, size yardımcı olabilir miyim?", // nieuw, nalezen
+    's.reception.2': "Sizi bağlıyorum.", // nieuw, nalezen
+    's.reception.3': "Lütfen bekleme alanında oturun.", // nieuw, nalezen
+    'c.reception.q': "Bayan Jansen ile randevum var.", // nieuw, nalezen
+    'c.reception.a': "Bir dakika. Onu arıyorum.", // nieuw, nalezen
+    'c.reception': "İlk gördükleri yüz sensin", // nieuw, nalezen
+    'c.reception.b': "Danışma bankosunda bir ziyaretçinin karşılaştığı ilk kişi sensin. Başını kaldır, gülümse ve selam ver, telefonla meşgulken de. Ziyaretçilere “u” de. Telefonu şirketin adıyla ve kendi adınla aç. Cevabı bilmiyor musun? Bunu söyle ve bilen birini bul. Tanımadığın insanlara personelin adlarını, telefon numaralarını ya da odalarını asla verme.", // nieuw, nalezen
+    'c.reception.p': "Günaydın, size nasıl yardımcı olabilirim?", // nieuw, nalezen
+    'c.reception.s': "Telefondasın. Bir ziyaretçi bankoya geliyor ve bekliyor. Ne yaparsın?", // nieuw, nalezen
+    'c.reception.o1': "Başını kaldırır ve birazdan geleceğini gösterirsin.", // nieuw, nalezen
+    'c.reception.o2': "Başını kaldırmadan görüşmeni bitirirsin.", // nieuw, nalezen
+    'c.reception.o3': "Telefonu hemen kapatırsın.", // nieuw, nalezen
+    'c.reception.w': "Görüldüğünü bilen bir ziyaretçi sakince bekler. Görülmeyen bir ziyaretçi istenmediğini hisseder.", // nieuw, nalezen
+    'l.visitors': "Ziyaretçi karşılamak", // nieuw, nalezen
+    'w.bezoekerspasje': "ziyaretçi kartı", // nieuw, nalezen
+    'w.lift': "asansör", // nieuw, nalezen
+    'w.garderobe': "vestiyer (montunu astığın yer)", // nieuw, nalezen
+    'w.parkeerplaats': "park yeri", // nieuw, nalezen
+    'w.hal': "hol (girişteki büyük salon)", // nieuw, nalezen
+    'w.begeleiden': "eşlik etmek (biriyle bir yere kadar yürümek)", // nieuw, nalezen
+    's.visitors.1': "Adınızı buraya yazar mısınız?", // nieuw, nalezen
+    's.visitors.2': "Buyurun, ziyaretçi kartınız.", // nieuw, nalezen
+    's.visitors.3': "Sizi asansöre götüreyim.", // nieuw, nalezen
+    'c.visitors.q': "Montumu nereye bırakabilirim?", // nieuw, nalezen
+    'c.visitors.a': "Vestiyere, asansörün yanında.", // nieuw, nalezen
+    'c.visitors': "Her ziyaretçi kayıt yaptırır", // nieuw, nalezen
+    'c.visitors.b': "Her ziyaretçi adını listeye yazar ya da ekranda kayıt yaptırır ve bir ziyaretçi kartı alır. Böylece binada kimin olduğunu bilirsin. Yangın olduğunda bu önemlidir: herkes dışarı çıkmalıdır ve biri listeyi kontrol eder. Ziyaretin sonunda ziyaretçi kartı geri verir. Tanımadığın insanları arkandan içeri alma: kime geldiklerini kibarca sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.visitors.p': "Kime geldiniz?", // nieuw, nalezen
+    'c.visitors.s': "Bir adam bir iş arkadaşının arkasından içeri giriyor. Kartı yok. Ne yaparsın?", // nieuw, nalezen
+    'c.visitors.o1': "Ona kime geldiğini kibarca sorarsın.", // nieuw, nalezen
+    'c.visitors.o2': "Geçmesine izin verirsin: personelle birlikte girdi.", // nieuw, nalezen
+    'c.visitors.o3': "Hemen polisi ararsın.", // nieuw, nalezen
+    'c.visitors.w': "Acil bir durumda içeride kimin olduğunu bilmen gerekir. Ve içeri giren herkesin orada olmak için bir nedeni yoktur.", // nieuw, nalezen
+    'l.mailroom': "Posta ve paketler", // nieuw, nalezen
+    'w.postkamer': "posta odası", // nieuw, nalezen
+    'w.koerier': "kurye (paket getiren biri)", // nieuw, nalezen
+    'w.postvak': "posta gözü (posta için bir göz, her kişiye bir tane)", // nieuw, nalezen
+    'w.envelop': "zarf", // nieuw, nalezen
+    'w.afdeling': "bölüm", // nieuw, nalezen
+    'w.postkar': "posta arabası", // nieuw, nalezen
+    's.mailroom.1': "Kurye bir paket getiriyor.", // nieuw, nalezen
+    's.mailroom.2': "Mektupları doğru posta gözüne koy.", // nieuw, nalezen
+    's.mailroom.3': "Bu paket hasarlı.", // nieuw, nalezen
+    'c.mailroom.q': "Bu paket kimin için?", // nieuw, nalezen
+    'c.mailroom.a': "Mali işler için, ikinci katta.", // nieuw, nalezen
+    'c.mailroom': "Posta özeldir", // nieuw, nalezen
+    'c.mailroom.b': "Posta ve paketler özeldir. Başkası için gelen bir mektubu ya da paketi asla açma. Her parçanın üstündeki adı ve bölümü kontrol et ve onu doğru posta gözüne koy. Bir kurye paket getirdiğinde, imzalamadan önce ona bak: hasarlı mı? Bunu not et. Bir paket garip mi: kokuyor mu, sızdırıyor mu ya da göndereni yok mu? Onu açma ve amirine söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.mailroom.p': "Kutu ıslak ve yırtık.", // nieuw, nalezen
+    'c.mailroom.s': "Bir kurye bir paket getiriyor. Bir köşesi ıslak ve yırtık. Ne yaparsın?", // nieuw, nalezen
+    'c.mailroom.o1': "İmzalamadan önce hasarı yazarsın.", // nieuw, nalezen
+    'c.mailroom.o2': "İmzalarsın ve kimseye söylemezsin.", // nieuw, nalezen
+    'c.mailroom.o3': "Her şey var mı diye onu açarsın.", // nieuw, nalezen
+    'c.mailroom.w': "İmzaladıktan sonra paket sağlammış gibi görünür. O zaman hasarı kimse ödemez.", // nieuw, nalezen
+    'l.meetingroom': "Toplantı odasını hazırlamak", // nieuw, nalezen
+    'w.vergaderzaal': "toplantı odası", // nieuw, nalezen
+    'w.beamer': "projektör", // nieuw, nalezen
+    'w.whiteboard': "beyaz tahta", // nieuw, nalezen
+    'w.thermoskan': "termos (kahveyi sıcak tutar)", // nieuw, nalezen
+    'w.kopje': "fincan", // nieuw, nalezen
+    'w.koffieautomaat': "kahve makinesi", // nieuw, nalezen
+    's.meetingroom.1': "Masanın etrafına on sandalye koy.", // nieuw, nalezen
+    's.meetingroom.2': "Kahve ve çay hazırla.", // nieuw, nalezen
+    's.meetingroom.3': "Projektör çalışmıyor.", // nieuw, nalezen
+    'c.meetingroom.q': "Toplantı saat kaçta başlıyor?", // nieuw, nalezen
+    'c.meetingroom.a': "Onda. Her şeyin hazır olmasını sağla.", // nieuw, nalezen
+    'c.meetingroom': "İlk misafirden önce hazır", // nieuw, nalezen
+    'c.meetingroom.b': "Bir toplantı odası, ilk kişi içeri girmeden önce hazır olmalıdır. Sandalyeleri, masayı, projektörü ve kabloları kontrol et. Fincanlar ve sütle birlikte kahve, çay ve su koy. Sıcak içecekleri dikkatlice taşı ve asla insanların üstünden geçirme. Toplantıdan sonra masayı temizle ve her şeyi geri götür. Bir toplantı odasında duyduklarını kendine saklarsın.", // nieuw, nalezen
+    'c.meetingroom.p': "Oda hazır.", // nieuw, nalezen
+    'c.meetingroom.s': "Toplantı beş dakika sonra başlıyor. Projektör çalışmıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.meetingroom.o1': "Bunu hemen düzenleyen kişiye söylersin.", // nieuw, nalezen
+    'c.meetingroom.o2': "Beklersin: belki kimsenin ihtiyacı olmaz.", // nieuw, nalezen
+    'c.meetingroom.o3': "Masaya bir not bırakırsın.", // nieuw, nalezen
+    'c.meetingroom.w': "Beş dakika, onu tamir etmek ya da başka bir oda bulmak için hâlâ yeterli bir süredir. Sonra herkes bekler.", // nieuw, nalezen
+    'u.maintenance': "Arızalar, onarımlar ve taşınma", // nieuw, nalezen
+    'l.faults': "Arıza bildirmek", // nieuw, nalezen
+    'w.melding': "bildirim (bir şeyin yanlış olduğunu söylersin)", // nieuw, nalezen
+    'w.lekkage': "sızıntı (su dışarı geliyor)", // nieuw, nalezen
+    'w.verwarming': "kalorifer, ısıtma", // nieuw, nalezen
+    'w.airco': "klima", // nieuw, nalezen
+    'w.afvoer': "gider", // nieuw, nalezen
+    'w.verstopt': "tıkalı (hiçbir şey geçmiyor)", // nieuw, nalezen
+    's.faults.1': "Arızayı bildiriyorum.", // nieuw, nalezen
+    's.faults.2': "Mutfakta bir sızıntı var.", // nieuw, nalezen
+    's.faults.3': "Tuvaletin gideri tıkalı.", // nieuw, nalezen
+    'c.faults.q': "Burası neden bu kadar soğuk?", // nieuw, nalezen
+    'c.faults.a': "Kalorifer bozuk. Teknisyen yarın geliyor.", // nieuw, nalezen
+    'c.faults': "Bildir, tek başına tamir etme", // nieuw, nalezen
+    'c.faults.b': "Sızıntı, yanmayan bir lamba ya da kapanmayan bir kapı gibi bozuk bir şey mi görüyorsun? Küçük olsa bile bildir: sisteme ya da amirine. Nerede olduğunu, ne gördüğünü ve ne zamandan beri olduğunu söyle. Elektriği, gazı ya da ısıtmayı kendin tamir etme. Gaz kokusu mu alıyorsun? Yakınında bir düğme ya da telefon kullanma, pencereleri aç, insanları dışarı çıkar ve dışarıda yardım çağır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.faults.p': "Bir arıza bildirmek istiyorum.", // nieuw, nalezen
+    'c.faults.s': "Koridorda tavandan su damlıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.faults.o1': "Bildirir ve altına bir kova koyarsın.", // nieuw, nalezen
+    'c.faults.o2': "Beklersin: belki kendiliğinden durur.", // nieuw, nalezen
+    'c.faults.o3': "Bakmak için tavanı açarsın.", // nieuw, nalezen
+    'c.faults.w': "Küçük bir sızıntı büyük bir hasara dönüşebilir. Kova zemini kuru tutar, böylece kimse kaymaz.", // nieuw, nalezen
+    'l.repairs': "Küçük onarımlar", // nieuw, nalezen
+    'w.vervangen': "değiştirmek (yenisini takmak)", // nieuw, nalezen
+    'w.deurklink': "kapı kolu", // nieuw, nalezen
+    'w.scharnier': "menteşe", // nieuw, nalezen
+    'w.gereedschapskist': "alet kutusu", // nieuw, nalezen
+    'w.rookmelder': "duman dedektörü", // nieuw, nalezen
+    'w.batterij': "pil", // nieuw, nalezen
+    's.repairs.1': "Koridordaki lambayı değiştir.", // nieuw, nalezen
+    's.repairs.2': "Kapı kolu gevşek.", // nieuw, nalezen
+    's.repairs.3': "Sandalyeyi değil, merdiveni al.", // nieuw, nalezen
+    'c.repairs.q': "Duman dedektörü mü bipliyor?", // nieuw, nalezen
+    'c.repairs.a': "Evet, pil neredeyse bitti.", // nieuw, nalezen
+    'c.repairs': "Merdiven, asla sandalye değil", // nieuw, nalezen
+    'c.repairs.b': "Bir lamba ya da yüksek bir raf için merdiven kullan, asla bir sandalye, masa ya da kutu kullanma. Onu düz bir zemine koy, tamamen aç ve en üst basamakta durma. Bir lambayı değiştirmeden önce ışığı kapat ve eski lambayı soğumaya bırak. Sadece öğrendiğin onarımları yap. İşin bitince aletlerini alet kutusuna geri koy, böylece kimse onlara takılıp düşmez. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.repairs.p': "Merdiveni getiriyorum.", // nieuw, nalezen
+    'c.repairs.s': "Ofiste bir lamba bozuk. Merdiven başka bir katta. Ne yaparsın?", // nieuw, nalezen
+    'c.repairs.o1': "Merdiveni getirirsin.", // nieuw, nalezen
+    'c.repairs.o2': "Bir ofis sandalyesinin üstüne çıkarsın.", // nieuw, nalezen
+    'c.repairs.o3': "Masanın üstüne çıkarsın.", // nieuw, nalezen
+    'c.repairs.w': "Bir sandalye kayabilir ya da devrilebilir. Sandalyeden düşmek seni ağır yaralayabilir.", // nieuw, nalezen
+    'l.moving': "Bir çalışma yerini taşımak", // nieuw, nalezen
+    'w.verhuisdoos': "taşınma kutusu", // nieuw, nalezen
+    'w.bureau': "çalışma masası", // nieuw, nalezen
+    'w.bureaustoel': "ofis sandalyesi", // nieuw, nalezen
+    'w.werkplek': "çalışma yeri (birinin çalıştığı masa)", // nieuw, nalezen
+    'w.kamernummer': "oda numarası", // nieuw, nalezen
+    'w.plattegrond': "kat planı (binanın bir haritası)", // nieuw, nalezen
+    's.moving.1': "Her kutunun üstüne oda numarasını yaz.", // nieuw, nalezen
+    's.moving.2': "Kutuları yük arabasına koy.", // nieuw, nalezen
+    's.moving.3': "Çalışma yerini boşalt.", // nieuw, nalezen
+    'c.moving.q': "Bu masa nereye gitmeli?", // nieuw, nalezen
+    'c.moving.a': "On iki numaralı odaya. Kat planına bak.", // nieuw, nalezen
+    'c.moving': "Taşınma: akıllıca kaldır, her şeyi etiketle", // nieuw, nalezen
+    'c.moving.b': "Taşınma ağır bir iştir. Bir kutuyu fazla doldurma: kitaplar ve dosyalar ağırdır. Dizlerini bükerek, sırtın düz ve yük vücuduna yakın şekilde kaldır. Daha çok kutu için yük arabasını kullan ve bir masayı birlikte kaldırın. Her kutunun, sandalyenin ve bilgisayarın üstüne yeni oda numarasını yaz. Önce kabloları çıkar. Kutuları asla bir koridora ya da bir acil çıkışın önüne koyma.", // nieuw, nalezen
+    'c.moving.p': "Bunu kaldırmama yardım edebilir misin?", // nieuw, nalezen
+    'c.moving.s': "Ağır bir masayı taşıman gerekiyor. İş arkadaşın molada. Ne yaparsın?", // nieuw, nalezen
+    'c.moving.o1': "Yardım beklersin ve onu birlikte kaldırırsınız.", // nieuw, nalezen
+    'c.moving.o2': "Onu tek başına sürüklersin.", // nieuw, nalezen
+    'c.moving.o3': "Onu tek başına, çok dikkatlice kaldırırsın.", // nieuw, nalezen
+    'c.moving.w': "Ağır bir masayı tek başına kaldırırsan sırtını sakatlayabilirsin. Birlikte kolay ve güvenlidir.", // nieuw, nalezen
+    'l.closing': "Binayı açmak ve kapatmak", // nieuw, nalezen
+    'w.sleutelbos': "anahtar destesi", // nieuw, nalezen
+    'w.afsluiten': "kilitlemek (her yeri kapatmak)", // nieuw, nalezen
+    'w.ronde': "tur (her odanın önünden geçen bir yürüyüş)", // nieuw, nalezen
+    'w.raam': "pencere", // nieuw, nalezen
+    'w.alarmcode': "alarm kodu", // nieuw, nalezen
+    'w.nachtslot': "gece kilidi (gece için ek kilit)", // nieuw, nalezen
+    's.closing.1': "Binanın son turunu yapıyorum.", // nieuw, nalezen
+    's.closing.2': "Bütün pencereler kapalı mı?", // nieuw, nalezen
+    's.closing.3': "Kapıyı gece kilidine al.", // nieuw, nalezen
+    'c.closing.q': "İçeride hâlâ biri var mı?", // nieuw, nalezen
+    'c.closing.a': "Hayır, herkes gitti. Her yeri kilitliyorum.", // nieuw, nalezen
+    'c.closing': "Alarm kodu gizlidir", // nieuw, nalezen
+    'c.closing.b': "Günün sonunda son turu atarsın. İçeride kimsenin kalmadığını, pencerelerin kapalı ve ışıkların sönük olduğunu kontrol et. Acil çıkışlar boş kalır. Anahtarları yanında tut, asla bir çekmecede bırakma. Alarm kodu gizlidir: onu asla kimseye verme, telefonda da verme. Alarm mı çalıyor? Şirketinin adımlarını izle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.closing.p': "Alarm kodunu kimseye vermem.", // nieuw, nalezen
+    'c.closing.s': "Biri arıyor: “Alarm şirketindenim. Kodunuz ne?” Ne yaparsın?", // nieuw, nalezen
+    'c.closing.o1': "Hayır der ve amirine söylersin.", // nieuw, nalezen
+    'c.closing.o2': "Kodu verirsin: sesi kibar.", // nieuw, nalezen
+    'c.closing.o3': "Kodun sadece yarısını verirsin.", // nieuw, nalezen
+    'c.closing.w': "Gerçek bir alarm şirketi telefonda kodunu sormaz. Bir hırsız sorabilir.", // nieuw, nalezen
+    'u.guarding': "Devriye ve giriş kontrolü", // nieuw, nalezen
+    'l.patrol': "Tur", // nieuw, nalezen
+    'w.surveilleren': "devriye gezmek (etrafta dolaşıp gözlemek)", // nieuw, nalezen
+    'w.zaklamp': "el feneri", // nieuw, nalezen
+    'w.terrein': "arazi (bir binanın etrafındaki alan)", // nieuw, nalezen
+    'w.hek': "çit, kapı (bahçe kapısı)", // nieuw, nalezen
+    'w.inbraak': "hırsızlık (biri çalmak için içeri girer)", // nieuw, nalezen
+    'w.openstaan': "açık olmak (kapalı olması gereken bir kapı ya da pencere)", // nieuw, nalezen
+    's.patrol.1': "Her iki saatte bir tur atıyorum.", // nieuw, nalezen
+    's.patrol.2': "Salonun arkasındaki kapı açık.", // nieuw, nalezen
+    's.patrol.3': "El fenerini yanına al.", // nieuw, nalezen
+    'c.patrol.q': "Turunda bir şey gördün mü?", // nieuw, nalezen
+    'c.patrol.a': "Evet. Arka kapının yanında bir pencere açıktı.", // nieuw, nalezen
+    'c.patrol': "Bak ve bildir, kahramanlık yapma", // nieuw, nalezen
+    'c.patrol.b': "Turunda bakarsın: kapılar ve pencereler kapalı mı, çit sağlam mı, orada olmaması gereken biri var mı? Gördüklerini saatiyle birlikte yaz. Kırık bir pencere ya da gece bir insan gibi garip bir şey mi görüyorsun? Tek başına içeri girme. Telsizle ya da telefonla kontrol merkezini ya da polisi ara ve güvenli bir yerde bekle. Önce kendi güvenliğin gelir. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.patrol.p': "Çitin yanında birini görüyorum.", // nieuw, nalezen
+    'c.patrol.s': "Gece zorla açılmış bir kapı görüyorsun. İçeriden ses duyuyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.patrol.o1': "Dışarıda kalır ve yardım çağırırsın.", // nieuw, nalezen
+    'c.patrol.o2': "Hızlıca içeri girer ve bakarsın.", // nieuw, nalezen
+    'c.patrol.o3': "İçeriye geldiğini bağırırsın.", // nieuw, nalezen
+    'c.patrol.w': "İçerideki bir hırsız tehlikeli olabilir. Polis ne yapacağını bilir; senin işin görmek ve bildirmek.", // nieuw, nalezen
+    'l.access': "Giriş kontrolü", // nieuw, nalezen
+    'w.slagboom': "bariyer (yolun üstünde yukarı kalkan bir çubuk)", // nieuw, nalezen
+    'w.toegangspas': "giriş kartı (kapıyı açan bir kart)", // nieuw, nalezen
+    'w.legitimatie': "kimlik belgesi (pasaport ya da kimlik kartı)", // nieuw, nalezen
+    'w.draaihek': "turnike (aynı anda tek kişi için dönen bir geçit)", // nieuw, nalezen
+    'w.kenteken': "plaka numarası (bir arabanın harfleri ve rakamları)", // nieuw, nalezen
+    'w.toegang': "giriş izni (içeri girebilirsin)", // nieuw, nalezen
+    's.access.1': "Kimliğinizi görebilir miyim?", // nieuw, nalezen
+    's.access.2': "Kartınız çalışmıyor. Bir telefon edeceğim.", // nieuw, nalezen
+    's.access.3': "Bariyeri açıyorum.", // nieuw, nalezen
+    'c.access.q': "İçeri girebilir miyim? Kartımı unuttum.", // nieuw, nalezen
+    'c.access.a': "Üzgünüm, kartsız içeri giremezsiniz.", // nieuw, nalezen
+    'c.access': "Kart yoksa giriş yok", // nieuw, nalezen
+    'c.access.b': "Kapıda ya da bankoda içeri kimin girdiğini kontrol edersin. Herkesin bir kartı olmalı ya da adı listede olmalı. Biri kızgın ya da aceleci olduğunda da güler yüzlü ol. Biri patron olduğunu söylediği için istisna yapma: kontrol et. Kendi kartını asla kimseye ödünç verme ve asla birinin arkandan içeri girmesine izin verme. Kaybolan bir kart hemen bildirilmelidir. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.access.p': "Kartınızı görebilir miyim?", // nieuw, nalezen
+    'c.access.s': "Takım elbiseli bir adam diyor ki: “Ben yeni müdürüm. Henüz kartım yok.” Ne yaparsın?", // nieuw, nalezen
+    'c.access.o1': "İçeri almadan önce kontrol edersin.", // nieuw, nalezen
+    'c.access.o2': "İçeri alırsın: önemli birine benziyor.", // nieuw, nalezen
+    'c.access.o3': "Ona kendi kartını verirsin.", // nieuw, nalezen
+    'c.access.w': "Herkes müdür olduğunu söyleyebilir. Kısa bir kontrol binayı güvende tutar ve gerçek bir müdür bunu anlar.", // nieuw, nalezen
+    'l.cameras': "Kameralar ve kontrol merkezi", // nieuw, nalezen
+    'w.meldkamer': "kontrol merkezi (insanların kameraları izlediği ve çağrılara baktığı yer)", // nieuw, nalezen
+    'w.beeldscherm': "ekran, monitör", // nieuw, nalezen
+    'w.camerabeelden': "kamera görüntüleri (kameranın kaydettikleri)", // nieuw, nalezen
+    'w.inzoomen': "yakınlaştırmak", // nieuw, nalezen
+    'w.bewegingsmelder': "hareket sensörü (bir şey hareket edince bunu görür)", // nieuw, nalezen
+    'w.verdachte': "şüpheli", // nieuw, nalezen
+    's.cameras.1': "Üç numaralı kamerada çitin yanında birini görüyorum.", // nieuw, nalezen
+    's.cameras.2': "Yakınlaştırıyorum.", // nieuw, nalezen
+    's.cameras.3': "Kontrol merkezi polisi arıyor.", // nieuw, nalezen
+    'c.cameras.q': "Ekranda ne görüyorsun?", // nieuw, nalezen
+    'c.cameras.a': "Çitin yanında bir adam. Bir iş arkadaşımı gönderiyorum.", // nieuw, nalezen
+    'c.cameras': "Kamera görüntüleri özeldir", // nieuw, nalezen
+    'c.cameras.b': "Kameralar insanları kaydeder: personeli, ziyaretçileri ve oradan geçen insanları. Ekranlarda gördüklerin özeldir. Sadece işin için izle ve ekranı asla telefonunla çekme. Görüntüleri asla arkadaşlarına gönderme ya da internete koyma. Bir olay mı var? Kamerayı ve saati yaz ve amirine söyle. Görüntüleri kimin alacağına, örneğin polise, sadece şirketin karar verir. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.cameras.p': "Bunu göstermeye iznim yok.", // nieuw, nalezen
+    'c.cameras.s': "Bir iş arkadaşın kameralardan komik bir klip göndermeni istiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.cameras.o1': "Hayır dersin: görüntüler özeldir.", // nieuw, nalezen
+    'c.cameras.o2': "Sadece ona gönderirsin.", // nieuw, nalezen
+    'c.cameras.o3': "Ekranı telefonunla çekersin.", // nieuw, nalezen
+    'c.cameras.w': "Görüntülerdeki insanlar paylaşılmayı kabul etmedi. Göndermek işine mal olabilir.", // nieuw, nalezen
+    'l.report': "Telsiz ve rapor", // nieuw, nalezen
+    'w.portofoon': "telsiz", // nieuw, nalezen
+    'w.rapport': "rapor (olanların yazılı hâli)", // nieuw, nalezen
+    'w.incident': "olay (ters giden bir şey)", // nieuw, nalezen
+    'w.tijdstip': "saat (bir şeyin olduğu an)", // nieuw, nalezen
+    'w.logboek': "kayıt defteri (her şeyi yazdığın bir defter ya da uygulama)", // nieuw, nalezen
+    'w.oproepen': "çağırmak (telsizle)", // nieuw, nalezen
+    's.report.1': "Olayın raporunu yazıyorum.", // nieuw, nalezen
+    's.report.2': "Saat tam olarak kaçtı?", // nieuw, nalezen
+    's.report.3': "Seni iyi duyamıyorum. Tekrar söyle.", // nieuw, nalezen
+    'c.report.q': "Rapora ne yazılmalı?", // nieuw, nalezen
+    'c.report.a': "Ne olduğu, nerede ve saat kaçta olduğu.", // nieuw, nalezen
+    'c.report': "Hemen yaz", // nieuw, nalezen
+    'c.report.b': "Raporu bir olaydan hemen sonra, hâlâ iyi hatırlarken yaz. Kendi gördüğünü ve duyduğunu yaz: ne oldu, nerede, saat kaçta ve orada kim vardı. Düşündüklerini değil, gerçekleri yaz. Telsizde kısa ve açık konuş ve karşındaki bitirene kadar bekle. Kim olduğunu ve nerede olduğunu söyle. İyi bir rapor polise, şirketine ve sana yardım eder.", // nieuw, nalezen
+    'c.report.p': "Hemen yazıyorum.", // nieuw, nalezen
+    'c.report.s': "Yoğun bir geceden sonra çok yorgunsun. Küçük bir olay oldu. Ne yaparsın?", // nieuw, nalezen
+    'c.report.o1': "Eve gitmeden önce raporu yazarsın.", // nieuw, nalezen
+    'c.report.o2': "Yarın, iyi bir uykudan sonra yazarsın.", // nieuw, nalezen
+    'c.report.o3': "Yazmazsın: sadece küçük bir şeydi.", // nieuw, nalezen
+    'c.report.w': "Yarın ayrıntıları unutursun. Saati ya da yeri olmayan bir rapor kimseye yardım etmez.", // nieuw, nalezen
+    'u.incidents': "Acil durumlar ve mağaza", // nieuw, nalezen
+    'l.evacuation': "Yangın ve tahliye", // nieuw, nalezen
+    'w.brandmelder': "yangın alarm butonu (yangın olunca bastığın kırmızı bir kutu)", // nieuw, nalezen
+    'w.brandweer': "itfaiye", // nieuw, nalezen
+    'w.branddeur': "yangın kapısı (ateşi ve dumanı durdurur)", // nieuw, nalezen
+    'w.brandmeldcentrale': "yangın alarm paneli (alarmın nerede olduğunu gösterir)", // nieuw, nalezen
+    'w.ontruimingsplan': "tahliye planı (herkes dışarı çıkmak zorunda kalınca kimin ne yapacağı)", // nieuw, nalezen
+    'w.sirene': "siren", // nieuw, nalezen
+    's.evacuation.1': "İkinci salonda yangın alarmı var.", // nieuw, nalezen
+    's.evacuation.2': "Yangın kapılarını kapalı tut.", // nieuw, nalezen
+    's.evacuation.3': "İtfaiyeyi girişte bekliyorum.", // nieuw, nalezen
+    'c.evacuation.q': "Herkes dışarıda mı?", // nieuw, nalezen
+    'c.evacuation.a': "Hayır, listedeki iki kişi hâlâ eksik.", // nieuw, nalezen
+    'c.evacuation': "Yangın: önce alarm, sonra dışarı", // nieuw, nalezen
+    'c.evacuation.b': "Ateş ya da duman mı görüyorsun? Yangın alarm butonuna bas ya da 112’yi ara. Sonra insanların kaçış yollarından dışarı çıkmasına yardım et, asla asansörle değil. Arkandan kapıları kapat, ama kilitleme. Bir yangını sadece küçükse ve nasıl yapıldığını öğrendiysen söndürmeye çalış. Toplanma noktasına git ve orada kimin olduğunu say. İtfaiyeyi girişte karşıla ve onlara bildiklerini anlat. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.evacuation.p': "Herkes dışarı, toplanma noktasına.", // nieuw, nalezen
+    'c.evacuation.s': "Yangın alarmı çalıyor. Bir adam asansöre binmek istiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.evacuation.o1': "Onu merdivenlere yönlendirirsin.", // nieuw, nalezen
+    'c.evacuation.o2': "Binmesine izin verirsin: asansör daha hızlı.", // nieuw, nalezen
+    'c.evacuation.o3': "Onunla birlikte asansöre binersin.", // nieuw, nalezen
+    'c.evacuation.w': "Yangında asansör durabilir ya da dumanla dolabilir. Merdivenler güvenli çıkış yoludur.", // nieuw, nalezen
+    'l.firstaid': "İlk yardım ve 112", // nieuw, nalezen
+    'w.ehbo': "ilk yardım", // nieuw, nalezen
+    'w.aed': "AED (duran bir kalbe yardım eden bir cihaz)", // nieuw, nalezen
+    'w.reanimeren': "kalp masajı yapmak (bir hayat kurtarmak için göğse bastırmak)", // nieuw, nalezen
+    'w.bewusteloos': "bilinçsiz (kişi uyanmıyor)", // nieuw, nalezen
+    'w.ademen': "nefes almak", // nieuw, nalezen
+    'w.alarmnummer': "acil durum numarası (112)", // nieuw, nalezen
+    's.firstaid.1': "112’yi ara. Ambulans iste.", // nieuw, nalezen
+    's.firstaid.2': "AED’yi resepsiyondan getir.", // nieuw, nalezen
+    's.firstaid.3': "Nefes almıyor. Kalp masajı yapacağım.", // nieuw, nalezen
+    'c.firstaid.q': "AED nerede?", // nieuw, nalezen
+    'c.firstaid.a': "Girişte, asansörün yanında.", // nieuw, nalezen
+    'c.firstaid': "112’yi ara, kalp masajına başla, AED’yi getir", // nieuw, nalezen
+    'c.firstaid.b': "Biri yere düşüyor ve tepki vermiyor mu? Hemen 112’yi ara ya da başka birine arat. Kişinin normal nefes alıp almadığını kontrol et. Almıyorsa: kalp masajına başla ve birine AED’yi getirt. AED konuşur ve sana ne yapacağını söyler; yanlış yapamazsın. Ambulans devralana kadar devam et. İlk yardım kursun var mı? İş arkadaşlarına söyle, böylece kimi çağıracaklarını bilirler.", // nieuw, nalezen
+    'c.firstaid.p': "112’yi ara ve AED’yi getir.", // nieuw, nalezen
+    'c.firstaid.s': "Bir adam holde yere düşüyor. Kıpırdamıyor ve nefes almıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.firstaid.o1': "112’yi arar ve kalp masajına başlarsın.", // nieuw, nalezen
+    'c.firstaid.o2': "Uyanacak mı diye beklersin.", // nieuw, nalezen
+    'c.firstaid.o3': "Onu kaldırır ve bir sandalyeye oturtursun.", // nieuw, nalezen
+    'c.firstaid.w': "Kalp durduğunda her dakika önemlidir. Kalp masajı ve AED, ambulans gelmeden önce bir hayat kurtarabilir.", // nieuw, nalezen
+    'l.shoplifting': "Mağaza hırsızlığı", // nieuw, nalezen
+    'w.winkeldiefstal': "mağazadan hırsızlık", // nieuw, nalezen
+    'w.heterdaad': "suçüstü (olurken görürsün)", // nieuw, nalezen
+    'w.aanhouden': "alıkoymak (polis gelene kadar birini tutmak)", // nieuw, nalezen
+    'w.detectiepoortje': "güvenlik kapısı (kapıda öter)", // nieuw, nalezen
+    'w.alarmlabel': "alarm etiketi (kapının ötmesini sağlar)", // nieuw, nalezen
+    'w.verstoppen': "saklamak", // nieuw, nalezen
+    's.shoplifting.1': "Çıkıştaki kapı ötüyor.", // nieuw, nalezen
+    's.shoplifting.2': "Olurken gördüm.", // nieuw, nalezen
+    's.shoplifting.3': "Polis gelene kadar onu tutuyorum.", // nieuw, nalezen
+    'c.shoplifting.q': "Çantasını arayabilir miyim?", // nieuw, nalezen
+    'c.shoplifting.a': "Hayır. Bunu polis yapar.", // nieuw, nalezen
+    'c.shoplifting': "Mağaza hırsızlığı: izle, bildir, kaba kuvvet yok", // nieuw, nalezen
+    'c.shoplifting.b': "Birinin çaldığını mı gördün? Sakin kal ve hemen polisi ara. Bazı mağazalar bir güvenlik görevlisinin hırsızı polis gelene kadar tutmasına izin verir; başkaları der ki: sadece izle, bildir ve kişinin neye benzediğini aklında tut. Asla vurma ya da tekmeleme ve asla birini boğazından tutma. Bir insanı, ceplerini ya da çantasını asla arama: bu polisin işidir. Gördüklerini yaz ve kamera görüntülerini sakla. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.shoplifting.p': "Benimle gelir misiniz lütfen?", // nieuw, nalezen
+    'c.shoplifting.s': "Bir kadının çantasına bir şişe koyduğunu gördün. Dışarı çıkıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.shoplifting.o1': "Onu sakince durdurur ve polisi ararsın.", // nieuw, nalezen
+    'c.shoplifting.o2': "Kapıda çantasını hızlıca ararsın.", // nieuw, nalezen
+    'c.shoplifting.o3': "Onu sertçe yere itersin.", // nieuw, nalezen
+    'c.shoplifting.w': "Bir insanı aramak polisin işidir ve kaba kuvvet birini yaralayabilir ve seni başını belaya sokabilir.", // nieuw, nalezen
+    'l.aggression': "Zor insanlar", // nieuw, nalezen
+    'w.agressie': "saldırganlık (kızgın, şiddetli davranış)", // nieuw, nalezen
+    'w.schelden': "küfretmek (birine)", // nieuw, nalezen
+    'w.kalmeren': "sakinleşmek", // nieuw, nalezen
+    'w.afstand': "mesafe", // nieuw, nalezen
+    'w.huisverbod': "giriş yasağı (artık buraya giremezsin)", // nieuw, nalezen
+    'w.bodycam': "yaka kamerası (üniformandaki küçük bir kamera)", // nieuw, nalezen
+    's.aggression.1': "Sakin olun beyefendi. Size yardım etmek istiyorum.", // nieuw, nalezen
+    's.aggression.2': "Mesafeni koru ve sakin kal.", // nieuw, nalezen
+    's.aggression.3': "Giriş yasağınız var. Şimdi gitmeniz gerekiyor.", // nieuw, nalezen
+    'c.aggression.q': "Neden içeri giremiyorum?", // nieuw, nalezen
+    'c.aggression.a': "Burada giriş yasağınız var.", // nieuw, nalezen
+    'c.aggression': "Sakin kal, mesafeni koru", // nieuw, nalezen
+    'c.aggression.b': "Kızgın bir insan, sen sakin kaldığında daha hızlı sakinleşir. Yavaş ve sessizce konuş ve kişiye “u” de. Aranızda bir kol boyu ya da daha fazla mesafe bırak ve arkanda bir çıkış yolu tut. Kişiye dokunma ve sen de bağırma. Tehlikeli mi oluyor? Geri çekil ve bir iş arkadaşını ya da polisi çağır. Sonra bunu yaz. Kötü bir olaydan sonra bunu biriyle konuş. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.aggression.p': "Sakin olun. Size yardım etmek istiyorum.", // nieuw, nalezen
+    'c.aggression.s': "Bir adam sana bağırıyor ve çok yaklaşıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.aggression.o1': "Geri çekilir ve sakince konuşursun.", // nieuw, nalezen
+    'c.aggression.o2': "Ondan daha yüksek sesle bağırırsın.", // nieuw, nalezen
+    'c.aggression.o3': "Onu kendinden uzağa itersin.", // nieuw, nalezen
+    'c.aggression.w': "Sakin sözler ve mesafe gerginliği azaltır. Bağırmak ya da itmek durumu daha kötü yapar.", // nieuw, nalezen
+    'u.foodhygiene': "Hijyen ve soğuk", // nieuw, nalezen
+    'l.hygienelock': "Hijyen kabini", // nieuw, nalezen
+    'w.hygienesluis': "hijyen kabini (içeri girmeden önce temizlendiğin oda)", // nieuw, nalezen
+    'w.baardnetje': "sakal filesi", // nieuw, nalezen
+    'w.laarzenwasser': "çizme yıkayıcı (çizmelerini temizleyen fırçalar)", // nieuw, nalezen
+    'w.desinfecteren': "dezenfekte etmek (mikropları öldürmek)", // nieuw, nalezen
+    'w.werkjas': "iş önlüğü", // nieuw, nalezen
+    'w.bacterie': "mikrop, bakteri", // nieuw, nalezen
+    's.hygienelock.1': "Ellerini yıka ve dezenfekte et.", // nieuw, nalezen
+    's.hygienelock.2': "Boneni ve sakal fileni tak.", // nieuw, nalezen
+    's.hygienelock.3': "Çizme yıkayıcıdan geç.", // nieuw, nalezen
+    'c.hygienelock.q': "Saatimi takılı tutabilir miyim?", // nieuw, nalezen
+    'c.hygienelock.a': "Hayır, bütün takılar çıkarılır.", // nieuw, nalezen
+    'c.hygienelock': "Her seferinde temiz gir", // nieuw, nalezen
+    'c.hygienelock.b': "Bir gıda fabrikasında yiyecek için en büyük tehlike sensin: mikroplar ellerinden, saçından ve kıyafetlerinden gelir. Bu yüzden her içeri girişinde hijyen kabininden geç, moladan ya da tuvaletten sonra da. Bone takılı, sakalın varsa sakal filesi takılı, temiz iş kıyafeti, bütün takılar çıkarılmış. Ellerini sabunla yıka, kurula ve dezenfekte et. Hasta mısın, ishalin ya da kusman mı var? Başlamadan önce amirine söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.hygienelock.p': "İshalim var. Bugün çalışabilir miyim?", // nieuw, nalezen
+    'c.hygienelock.s': "Tuvaletten dönüyorsun. İş arkadaşın diyor ki: “Kabini atla, işimiz çok.” Ne yaparsın?", // nieuw, nalezen
+    'c.hygienelock.o1': "Yine de kabinden geçersin.", // nieuw, nalezen
+    'c.hygienelock.o2': "Sadece bu sefer atlarsın.", // nieuw, nalezen
+    'c.hygienelock.o3': "Sadece yeni eldiven giyersin.", // nieuw, nalezen
+    'c.hygienelock.w': "Tuvaletten gelen mikroplar birçok müşteriyi hasta edebilir. Kabinde birkaç dakika bunu önler.", // nieuw, nalezen
+    'l.allergens': "Alerjenler", // nieuw, nalezen
+    'w.allergeen': "alerjen (bazı insanları çok hasta eden yiyecek)", // nieuw, nalezen
+    'w.noten': "kuruyemiş (fındık, ceviz gibi)", // nieuw, nalezen
+    'w.pinda': "yer fıstığı", // nieuw, nalezen
+    'w.gluten': "gluten (buğdayda, yani ekmekte ve kekte)", // nieuw, nalezen
+    'w.sesam': "susam (küçük tohumlar, örneğin ekmeğin üstünde)", // nieuw, nalezen
+    'w.kruisbesmetting': "çapraz bulaşma (bir şey olmaması gereken bir yiyeceğe karışır)", // nieuw, nalezen
+    's.allergens.1': "Bu ürün kuruyemiş içerir.", // nieuw, nalezen
+    's.allergens.2': "İçinde hangi alerjenlerin olduğuna etikette bak.", // nieuw, nalezen
+    's.allergens.3': "Yer fıstığından sonra her şeyi iyice temizle.", // nieuw, nalezen
+    'c.allergens.q': "Bu kap ötekilerle birlikte gidebilir mi?", // nieuw, nalezen
+    'c.allergens.a': "Hayır, içinde kuruyemiş var.", // nieuw, nalezen
+    'c.allergens': "Bir iz bile yeter", // nieuw, nalezen
+    'c.allergens.b': "Bazı insanlar için çok az miktarda kuruyemiş, yer fıstığı, süt, yumurta, gluten ya da susam hayati tehlike yaratabilir. Bu yüzden etiket bir üründe tam olarak ne olduğunu söylemelidir. Alerjenleri ayrı tut: kendi kapları, aletleri ve renkleri. Alerjenli bir üründen sonra, bir sonraki üründen önce hat temizlenir. Bir malzemeyi asla değiştirme, aynı görünse bile. Emin değil misin? Sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.allergens.p': "Bunun içinde kuruyemiş var mı?", // nieuw, nalezen
+    'c.allergens.s': "Bademler bitti. Bir iş arkadaşın diyor ki: “Fındık kullan, kimse fark etmez.” Ne yaparsın?", // nieuw, nalezen
+    'c.allergens.o1': "Hayır der ve amirine söylersin.", // nieuw, nalezen
+    'c.allergens.o2': "Kullanırsın: kuruyemiş kuruyemiştir.", // nieuw, nalezen
+    'c.allergens.o3': "Kullanırsın ve etikette hiçbir şeyi değiştirmezsin.", // nieuw, nalezen
+    'c.allergens.w': "Etiket içinde ne olduğunu söylemelidir. Yanlış bir kuruyemiş, alerjisi olan birini çok hasta edebilir.", // nieuw, nalezen
+    'l.coldroom': "Soğuk oda ve dondurucu", // nieuw, nalezen
+    'w.temperatuur': "sıcaklık", // nieuw, nalezen
+    'w.graden': "derece (°C)", // nieuw, nalezen
+    'w.bevroren': "donmuş", // nieuw, nalezen
+    'w.ontdooien': "çözdürmek (buzunu çözmek)", // nieuw, nalezen
+    'w.koelketen': "soğuk zincir (yiyecek baştan sona soğuk kalır)", // nieuw, nalezen
+    'w.thermokleding': "termal kıyafet (soğuk için sıcak kıyafetler)", // nieuw, nalezen
+    's.coldroom.1': "Dondurucu odada eksi on sekiz derece.", // nieuw, nalezen
+    's.coldroom.2': "Eti hemen soğuk odaya koy.", // nieuw, nalezen
+    's.coldroom.3': "Sıcaklığı listeye yaz.", // nieuw, nalezen
+    'c.coldroom.q': "Soğuk oda neden ötüyor?", // nieuw, nalezen
+    'c.coldroom.a': "Kapı açık. Hemen kapat.", // nieuw, nalezen
+    'c.coldroom': "Soğukta çalışmak: sıcak giyin, ürünü soğuk tut", // nieuw, nalezen
+    'c.coldroom.b': "Yiyecek baştan sona soğuk kalmalıdır: kamyondan soğuk odaya, oradan da mağazaya. Bu yüzden soğuk ürünleri hemen kaldır ve soğuk odanın ve dondurucunun kapılarını kapalı tut. Sıcaklığı kontrol et ve yaz. Dondurucuda termal kıyafetini, eldivenlerini ve bir bere giy ve zamanında sıcak bir mola ver. Kapıyı içeriden her zaman açabildiğinden emin ol. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.coldroom.p': "Burası fazla sıcak. Soğutma çalışmıyor.", // nieuw, nalezen
+    'c.coldroom.s': "Soğuk odanın termometresi normalden çok daha yüksek bir sayı gösteriyor. Ne yaparsın?", // nieuw, nalezen
+    'c.coldroom.o1': "Hemen amirine söylersin.", // nieuw, nalezen
+    'c.coldroom.o2': "Beklersin: yeniden soğur.", // nieuw, nalezen
+    'c.coldroom.o3': "Listeye normal sayıyı yazarsın.", // nieuw, nalezen
+    'c.coldroom.w': "Fazla sıcak, mikropların ürediği anlamına gelir. Yiyeceğin hâlâ güvenli olup olmadığına amirin karar verir.", // nieuw, nalezen
+    'l.foreignbody': "Yiyecekte cam, metal ve plastik", // nieuw, nalezen
+    'w.metaaldetector': "metal dedektörü", // nieuw, nalezen
+    'w.glasbreuk': "cam kırılması (kırılan cam)", // nieuw, nalezen
+    'w.splinter': "kıymık (küçük, keskin bir parça)", // nieuw, nalezen
+    'w.vreemdvoorwerp': "yabancı madde (yiyecekte olmaması gereken bir şey)", // nieuw, nalezen
+    'w.vervuild': "kirlenmiş (içine kirli bir şey girmiş)", // nieuw, nalezen
+    'w.ploegleider': "vardiya şefi", // nieuw, nalezen
+    's.foreignbody.1': "Metal dedektörü ötüyor. Hattı durdur.", // nieuw, nalezen
+    's.foreignbody.2': "İkinci hatta cam kırıldı.", // nieuw, nalezen
+    's.foreignbody.3': "Ürünü ret kutusuna koy.", // nieuw, nalezen
+    'c.foreignbody.q': "Bu plastik parçasıyla ne yapayım?", // nieuw, nalezen
+    'c.foreignbody.a': "Onu vardiya şefine göster.", // nieuw, nalezen
+    'c.foreignbody': "Yiyecekte bir şey mi var? Durdur ve bildir", // nieuw, nalezen
+    'c.foreignbody.b': "Cam, metal, plastik, yara bandı ya da saç asla yiyeceğe karışmamalıdır. Metal dedektörü ötüyor mu ya da garip bir şey mi buluyorsun? Ürünü kenara koy ve vardiya şefine söyle. Cam mı kırıldı? Yakınındaki hattı durdur: neyin atılması gerektiğine vardiya şefi karar verir. Sadece mavi yara bandı kullan, böylece kolayca görülürler. İş alanına asla cam, kalem ya da açıkta duran eşyalar götürme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.foreignbody.p': "Üründe bir şey buldum.", // nieuw, nalezen
+    'c.foreignbody.s': "Hattın üstünde cam bir lamba kırılıyor. Ürünler akmaya devam ediyor. Ne yaparsın?", // nieuw, nalezen
+    'c.foreignbody.o1': "Hattı durdurur ve vardiya şefini çağırırsın.", // nieuw, nalezen
+    'c.foreignbody.o2': "Görebildiğin camları toplarsın.", // nieuw, nalezen
+    'c.foreignbody.o3': "Devam edersin: dedektör camı bulur.", // nieuw, nalezen
+    'c.foreignbody.w': "Bir metal dedektörü camı bulmaz. Göremediğin küçük parçalar bir müşteriyi ağır yaralayabilir.", // nieuw, nalezen
+    'u.foodline': "Üretim hattı", // nieuw, nalezen
+    'l.cutting': "Kesmek ve tartmak", // nieuw, nalezen
+    'w.uitbenen': "kemiğini ayırmak (etin kemiklerini kesip çıkarmak)", // nieuw, nalezen
+    'w.fileren': "fileto yapmak (balığı ya da eti yassı parçalara kesmek)", // nieuw, nalezen
+    'w.portie': "porsiyon", // nieuw, nalezen
+    'w.wegen': "tartmak", // nieuw, nalezen
+    'w.gewicht': "ağırlık", // nieuw, nalezen
+    'w.snijplank': "kesme tahtası", // nieuw, nalezen
+    's.cutting.1': "Her porsiyonu tart.", // nieuw, nalezen
+    's.cutting.2': "Ağırlık fazla düşük.", // nieuw, nalezen
+    's.cutting.3': "Başlamadan önce bıçağını bile.", // nieuw, nalezen
+    'c.cutting.q': "Bir kaba ne kadar girmeli?", // nieuw, nalezen
+    'c.cutting.a': "Beş yüz gram. Teraziye bak.", // nieuw, nalezen
+    'c.cutting': "Keskin bıçak, güvenli el", // nieuw, nalezen
+    'c.cutting.b': "Keskin bir bıçak kör bir bıçaktan daha güvenlidir: daha az kuvvet gerekir, bu yüzden daha az kayar. Öbür elinde her zaman kesilmeye dayanıklı eldivenini giy. Vücudundan dışarı doğru kes. Bir bıçağı tahtanın üstüne düz bırak, asla bir lavaboya ya da etin altına koyma. Düşen bir bıçağı yakalamaya çalışma: geri çekil. Bıçağı ucu aşağıda, bacağına yakın taşı. Küçük bir kesik bile kapatılmalı ve bildirilmelidir.", // nieuw, nalezen
+    'c.cutting.p': "Bıçağım kör.", // nieuw, nalezen
+    'c.cutting.s': "Bıçağın elinden kayıyor ve düşüyor. Ne yaparsın?", // nieuw, nalezen
+    'c.cutting.o1': "Geri çekilir ve düşmesine izin verirsin.", // nieuw, nalezen
+    'c.cutting.o2': "Onu hızlıca yakalarsın.", // nieuw, nalezen
+    'c.cutting.o3': "Onu ayağınla durdurursun.", // nieuw, nalezen
+    'c.cutting.w': "Düşen bir bıçağı tutarsan derin keser. Yerde hiçbir zarar veremez.", // nieuw, nalezen
+    'l.labels': "Paketleme ve etiketler", // nieuw, nalezen
+    'w.etiketteren': "etiketlemek (etiket yapıştırmak)", // nieuw, nalezen
+    'w.lotnummer': "parti numarası (bir parti ürün için tek bir numara)", // nieuw, nalezen
+    'w.vacuum': "vakumlu (bütün hava çıkmış)", // nieuw, nalezen
+    'w.schaal': "tabak (yiyecek için düz bir kap)", // nieuw, nalezen
+    'w.printer': "yazıcı", // nieuw, nalezen
+    'w.omdoos': "dış koli (küçük paketlerin etrafındaki büyük kutu)", // nieuw, nalezen
+    's.labels.1': "Etiketteki tarihin doğru olup olmadığını kontrol et.", // nieuw, nalezen
+    's.labels.2': "Bu paket vakumlu değil. Onu yeniden paketle.", // nieuw, nalezen
+    's.labels.3': "Parti numarasını listeye yaz.", // nieuw, nalezen
+    'c.labels.q': "Üstüne hangi tarih gelmeli?", // nieuw, nalezen
+    'c.labels.a': "On gün sonrası. Listeye bak.", // nieuw, nalezen
+    'c.labels': "Yanlış bir etiket tehlikelidir", // nieuw, nalezen
+    'c.labels.b': "Etiket müşteriye içinde ne olduğunu, ne kadar ağır olduğunu ve ne zamana kadar iyi olduğunu söyler. Yanlış bir tarih ya da yanlış bir etiket insanları hasta edebilir, örneğin bir alerjen eksik olduğunda. Bu yüzden her yeni üretimin ilk etiketlerini kontrol et: ürünü, tarihi ve parti numarasını. Bir şey yanlış mı? Dur ve amirine söyle. Yanlış etiketli ürünler kenara konur, asla satılmaz. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.labels.p': "Etiket doğru değil.", // nieuw, nalezen
+    'c.labels.s': "Etiketlerdeki tarihin bir hafta fazla ileri olduğunu görüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.labels.o1': "Paketlemeyi durdurur ve amirine söylersin.", // nieuw, nalezen
+    'c.labels.o2': "Devam edersin: bir hafta önemli değil.", // nieuw, nalezen
+    'c.labels.o3': "Tarihi bir kalemle değiştirirsin.", // nieuw, nalezen
+    'c.labels.w': "Yanlış bir tarih, insanların artık güvenli olmayan yiyecekleri yemesine yol açabilir. Şimdi durmak, sonra geri çağırmaktan iyidir.", // nieuw, nalezen
+    'l.linecleaning': "Hattı temizlemek", // nieuw, nalezen
+    'w.schuim': "köpük", // nieuw, nalezen
+    'w.hogedrukspuit': "basınçlı yıkama makinesi", // nieuw, nalezen
+    'w.naspoelen': "durulamak (temiz suyla yıkamak)", // nieuw, nalezen
+    'w.demonteren': "sökmek (parçalarına ayırmak)", // nieuw, nalezen
+    'w.borstel': "fırça", // nieuw, nalezen
+    'w.restjes': "artıklar (küçük yiyecek parçaları)", // nieuw, nalezen
+    's.linecleaning.1': "Önce makineyi kapat.", // nieuw, nalezen
+    's.linecleaning.2': "Köpüğü bandın üstüne püskürt.", // nieuw, nalezen
+    's.linecleaning.3': "Sonra her şeyi temiz suyla durula.", // nieuw, nalezen
+    'c.linecleaning.q': "Bant temizlendi mi?", // nieuw, nalezen
+    'c.linecleaning.a': "Henüz değil. Daha durulamam gerekiyor.", // nieuw, nalezen
+    'c.linecleaning': "Temizlemeden önce elektriği kes", // nieuw, nalezen
+    'c.linecleaning.b': "Çalışan bir makineyi asla temizleme. Onu kapat ve kimsenin onu yeniden çalıştıramayacağından emin ol: şirketinin adımlarını izle. Doğru eldiveni, gözlüğü ve çizmeleri giy: temizlik ürünleri cildini ve gözlerini yakabilir. Ürünleri asla karıştırma. Önce artıkları al, sonra köpükle, fırçala ve durula. Elektrik kutularına ya da fişlere su püskürtme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.linecleaning.p': "Makine kapalı mı?", // nieuw, nalezen
+    'c.linecleaning.s': "Bantta biraz et sıkışmış. Makine hâlâ çalışıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.linecleaning.o1': "Önce kapatır, sonra çıkarırsın.", // nieuw, nalezen
+    'c.linecleaning.o2': "Elinle hızlıca çekip çıkarırsın.", // nieuw, nalezen
+    'c.linecleaning.o3': "Bir bıçakla itip çıkarırsın.", // nieuw, nalezen
+    'c.linecleaning.w': "Çalışan bir bant elini bir saniyede içeri çekebilir. Kapatmak sadece bir an sürer.", // nieuw, nalezen
+    'l.haccp': "Kontrol etmek ve yazmak (HACCP)", // nieuw, nalezen
+    'w.controlepunt': "kontrol noktası (bir şeyi kontrol etmen gereken bir adım)", // nieuw, nalezen
+    'w.kerntemperatuur': "iç sıcaklık (yiyeceğin içindeki sıcaklık)", // nieuw, nalezen
+    'w.prikthermometer': "batırma termometresi (yiyeceğin içine batırırsın)", // nieuw, nalezen
+    'w.afwijking': "sapma (bir şey olması gerektiği gibi değil)", // nieuw, nalezen
+    'w.steekproef': "numune kontrolü (birkaç ürünü test edersin)", // nieuw, nalezen
+    'w.kwaliteitsdienst': "kalite bölümü (QA)", // nieuw, nalezen
+    's.haccp.1': "İç sıcaklığı batırma termometresiyle ölç.", // nieuw, nalezen
+    's.haccp.2': "Her şeyi listeye yaz.", // nieuw, nalezen
+    's.haccp.3': "Bir şey mi yanlış? Hemen bildir.", // nieuw, nalezen
+    'c.haccp.q': "Neden her şeyi yazmam gerekiyor?", // nieuw, nalezen
+    'c.haccp.a': "Böylece yiyeceğin güvenli olduğunu biliriz.", // nieuw, nalezen
+    'c.haccp': "HACCP: kontrol et, yaz, bildir", // nieuw, nalezen
+    'c.haccp.b': "Her gıda şirketi bir gıda güvenliği planıyla (HACCP) çalışır. Bu plan, soğuk odanın sıcaklığı ya da pişmiş etin iç sıcaklığı gibi, hangi adımlarda bir şeyi kontrol etmen gerektiğini söyler. Kontrol edersin, yazarsın ve imzalarsın. Gerçekten ölçtüğünü yaz, yanlış olduğunda da. Yanlış bir sayı senin suçun değildir, ama onu saklamak tehlikelidir. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.haccp.p': "Sıcaklık fazla yüksek.", // nieuw, nalezen
+    'c.haccp.s': "Saat onda ölçmeyi unuttun. İş arkadaşın diyor ki: “İyi bir sayı yaz geç.” Ne yaparsın?", // nieuw, nalezen
+    'c.haccp.o1': "Şimdi ölçer ve gerçek saati yazarsın.", // nieuw, nalezen
+    'c.haccp.o2': "Saat on için iyi bir sayı yazarsın.", // nieuw, nalezen
+    'c.haccp.o3': "O satırı boş bırakırsın.", // nieuw, nalezen
+    'c.haccp.w': "Liste gerçekte ne olduğunu göstermelidir. Uydurulmuş bir sayı, insanları hasta edebilecek bir sorunu saklar.", // nieuw, nalezen
+    'u.collection': "Çöp toplamak", // nieuw, nalezen
+    'l.binlorry': "Çöp kamyonu", // nieuw, nalezen
+    'w.vuilniswagen': "çöp kamyonu", // nieuw, nalezen
+    'w.kliko': "tekerlekli çöp kutusu (tekerlekli bir çöp bidonu)", // nieuw, nalezen
+    'w.kieplift': "kutu kaldırıcı (kutuyu kaldırır ve boşaltır)", // nieuw, nalezen
+    'w.treeplank': "arka basamak (kamyonun arkasındaki basamak)", // nieuw, nalezen
+    'w.bijplaatsing': "fazladan çöp (kutunun yanına bırakılan torbalar)", // nieuw, nalezen
+    'w.ophaaldag': "çöp toplama günü", // nieuw, nalezen
+    's.binlorry.1': "Tekerlekli çöp kutusunu kutu kaldırıcıya koy.", // nieuw, nalezen
+    's.binlorry.2': "Konteynerin yanında torbalar var.", // nieuw, nalezen
+    's.binlorry.3': "Tekerlekli çöp kutusu fazla ağır. Onu bırak.", // nieuw, nalezen
+    'c.binlorry.q': "Arkada gidebilir miyim?", // nieuw, nalezen
+    'c.binlorry.a': "Hayır, kabine bin.", // nieuw, nalezen
+    'c.binlorry': "Görünür ol ve içeride git", // nieuw, nalezen
+    'c.binlorry.b': "Her turda reflektörlü kıyafetini giy. Kamyona kaldırım tarafından in ve bin, asla trafik tarafından değil. Kamyonun arkasında değil, kabinde git: arkada sadece şirketin buna açıkça izin veriyorsa dur, kamyon geri giderken ya da hızlı giderken ise asla. Kutu kaldırıcı hareket ederken ondan uzak dur. Bir kutu fazla mı ağır ya da içinden bir şey mi çıkıyor? Onu bırak ve bildir. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.binlorry.p': "Bu tekerlekli çöp kutusu fazla ağır.", // nieuw, nalezen
+    'c.binlorry.s': "Bir sonraki sokak çok yakın. Şoför diyor ki: “Arka basamağa çık.” Ne yaparsın?", // nieuw, nalezen
+    'c.binlorry.o1': "Yine de kabine binersin.", // nieuw, nalezen
+    'c.binlorry.o2': "Basamağa çıkarsın: yakın.", // nieuw, nalezen
+    'c.binlorry.o3': "Kamyonun arkasından yürürsün.", // nieuw, nalezen
+    'c.binlorry.w': "Hareket eden bir kamyondan düşmek bu işin en büyük tehlikelerinden biridir. Kabinde güvendesin.", // nieuw, nalezen
+    'l.reversing': "Güvenli geri manevra", // nieuw, nalezen
+    'w.achteruitrijden': "geri gitmek (geriye doğru sürmek)", // nieuw, nalezen
+    'w.dodehoek': "kör nokta (şoförün seni göremediği yer)", // nieuw, nalezen
+    'w.aanwijzer': "yönlendirici (şoföre yol gösteren kişi)", // nieuw, nalezen
+    'w.oogcontact': "göz teması", // nieuw, nalezen
+    'w.piepen': "ötmek, bip sesi çıkarmak", // nieuw, nalezen
+    'w.cabine': "kabin (şoförün oturduğu yer)", // nieuw, nalezen
+    's.reversing.1': "Asla kamyonun arkasında durma.", // nieuw, nalezen
+    's.reversing.2': "Seni aynada göremiyorum.", // nieuw, nalezen
+    's.reversing.3': "Şoförle göz teması kur.", // nieuw, nalezen
+    'c.reversing.q': "Geri gitmeme yardım edebilir misin?", // nieuw, nalezen
+    'c.reversing.a': "Evet, soldayım. Aynana bak.", // nieuw, nalezen
+    'c.reversing': "Geri giden bir kamyonun arkasında asla durma", // nieuw, nalezen
+    'c.reversing.b': "Çöp kamyonlarıyla olan kazaların çoğu, kamyonlar geri giderken olur. Şoför kamyonun tam arkasını göremez: kör nokta. Bu yüzden geri gidebilecek bir kamyonun arkasında asla durma ya da yürüme. Şoförü yandan, birbirinizi aynada görebileceğiniz yerden yönlendir. Göz teması mı kayboldu? Şoför durur. Başlamadan önce açık işaretler üzerinde anlaşın. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.reversing.p': "Dur! Seni artık göremiyorum.", // nieuw, nalezen
+    'c.reversing.s': "Kamyon geri gidiyor. Bir torbayı almak için arkasından yürüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.reversing.o1': "Kamyon durana kadar beklersin.", // nieuw, nalezen
+    'c.reversing.o2': "Hızlı yürürsün: sadece bir saniye.", // nieuw, nalezen
+    'c.reversing.o3': "Şoföre el sallar ve gidersin.", // nieuw, nalezen
+    'c.reversing.w': "Bir şoför seni kamyonun arkasında göremez. Bir kaza için bir saniye yeter.", // nieuw, nalezen
+    'l.wastesorting': "Çöp ayırmak", // nieuw, nalezen
+    'w.papier': "kâğıt", // nieuw, nalezen
+    'w.plastic': "plastik", // nieuw, nalezen
+    'w.gft': "organik atık (meyve, sebze ve bitkiler)", // nieuw, nalezen
+    'w.restafval': "evsel atık (ayrılamayan çöp)", // nieuw, nalezen
+    'w.karton': "karton", // nieuw, nalezen
+    'w.blik': "teneke kutu", // nieuw, nalezen
+    's.wastesorting.1': "Cam, cam kumbarasına gider.", // nieuw, nalezen
+    's.wastesorting.2': "Bu evsel atığa gider.", // nieuw, nalezen
+    's.wastesorting.3': "Kartonu katlayıp düzleştir.", // nieuw, nalezen
+    'c.wastesorting.q': "Pizza kutusu nereye gider?", // nieuw, nalezen
+    'c.wastesorting.a': "Evsel atığa. Üstünde yağ var.", // nieuw, nalezen
+    'c.wastesorting': "İyi ayırmak iş kazandırır", // nieuw, nalezen
+    'c.wastesorting.b': "Ayrılmış çöp yeniden kullanılabilir: kâğıt kâğıt olur, cam cam olur. Ama yanlış tek bir şey bütün bir yükü bozabilir. Bu yüzden boşaltmadan önce kutunun içine bak. Kâğıdın içinde bir torba evsel atık gibi, oraya ait olmayan bir şey mi var? Onu bırak ya da şirketinin kurallarını izle. Hangi çöpün nereye gittiği şehirden şehire değişir: bölgenin kurallarını öğren. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.wastesorting.p': "Bu buraya ait değil.", // nieuw, nalezen
+    'c.wastesorting.s': "Bir kâğıt kutusu siyah çöp torbalarıyla dolu. Ne yaparsın?", // nieuw, nalezen
+    'c.wastesorting.o1': "Onu bırakır ve bildirirsin.", // nieuw, nalezen
+    'c.wastesorting.o2': "Onu kâğıdın içine boşaltırsın.", // nieuw, nalezen
+    'c.wastesorting.o3': "Torbaları elle çıkarırsın.", // nieuw, nalezen
+    'c.wastesorting.w': "Kâğıdın içindeki çöp bütün yükü bozar. Torbalarda keskin ya da kirli şeyler de olabilir.", // nieuw, nalezen
+    'l.wastesafety': "Keskin şeyler ve kaldırmak", // nieuw, nalezen
+    'w.snijwond': "kesik (keskin bir şeyden olan yara)", // nieuw, nalezen
+    'w.prikken': "batmak (keskin bir uç cildine girer)", // nieuw, nalezen
+    'w.naald': "iğne", // nieuw, nalezen
+    'w.scherp': "keskin", // nieuw, nalezen
+    'w.rugpijn': "sırt ağrısı", // nieuw, nalezen
+    'w.tetanusprik': "tetanos aşısı (yaradaki kirden gelen bir hastalığa karşı iğne)", // nieuw, nalezen
+    's.wastesafety.1': "Bir torbayı asla altından tutma.", // nieuw, nalezen
+    's.wastesafety.2': "Dikkat, bu torbada cam var.", // nieuw, nalezen
+    's.wastesafety.3': "Bana bir iğne battı.", // nieuw, nalezen
+    'c.wastesafety.q': "Elimi kestim. Ne yapmalıyım?", // nieuw, nalezen
+    'c.wastesafety.a': "Yarayı iyice yıka. Ve bana söyle.", // nieuw, nalezen
+    'c.wastesafety': "Bir torbayı asla sıkma", // nieuw, nalezen
+    'c.wastesafety.b': "Bir çöp torbasında cam, bıçak ya da iğne olabilir. Bu yüzden bir torbayı asla vücuduna bastırma, asla sıkma ve asla bacağına dayayarak taşıma: onu üstünden, senden uzakta tut. Eldivenlerini giy. Dizlerini bükerek ve sırtın düz kaldır ve bir kutuyu taşıma, it. Bir şey sana battı mı ya da seni kesti mi? Yarayı suyla iyice yıka ve aynı gün amirine söyle.", // nieuw, nalezen
+    'c.wastesafety.p': "Bana bir şey battı.", // nieuw, nalezen
+    'c.wastesafety.s': "Bir torba yırtılıyor. İçinde bir iğne görüyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.wastesafety.o1': "Ona dokunmaz ve bildirirsin.", // nieuw, nalezen
+    'c.wastesafety.o2': "Eldivenle alırsın.", // nieuw, nalezen
+    'c.wastesafety.o3': "Torbanın içine geri itersin.", // nieuw, nalezen
+    'c.wastesafety.w': "Eldiven bir iğneyi durdurmaz. Bir iğne hastalık taşıyabilir.", // nieuw, nalezen
+    'u.recycling': "Atık getirme merkezi", // nieuw, nalezen
+    'l.yard': "Atık getirme merkezinde", // nieuw, nalezen
+    'w.milieustraat': "atık getirme merkezi (insanların büyük ya da özel atıklarını getirdiği yer)", // nieuw, nalezen
+    'w.grofvuil': "büyük atık (kanepe gibi büyük eşyalar)", // nieuw, nalezen
+    'w.puin': "moloz (kırık taşlar ve tuğlalar)", // nieuw, nalezen
+    'w.matras': "yatak (şilte)", // nieuw, nalezen
+    'w.weegbrug': "kantar (arabalar ve kamyonlar için bir terazi)", // nieuw, nalezen
+    'w.afvalpas': "atık kartı (sakinler onu girişte gösterir)", // nieuw, nalezen
+    's.yard.1': "Moloz dört numaralı konteynere gider.", // nieuw, nalezen
+    's.yard.2': "Atık kartınızı görebilir miyim?", // nieuw, nalezen
+    's.yard.3': "Önce kantarın üstünden geçin.", // nieuw, nalezen
+    'c.yard.q': "Bu yatak nereye gider?", // nieuw, nalezen
+    'c.yard.a': "Arkadaki büyük atık konteynerine.", // nieuw, nalezen
+    'c.yard': "Yardım et, ama alanı güvenli tut", // nieuw, nalezen
+    'c.yard.b': "Atık getirme merkezinde ziyaretçilere atıklarının nereye gittiğini söylersin ve iyi ayrılıp ayrılmadığını kontrol edersin. Güler yüzlü ol: birçok insan yılda sadece birkaç kez gelir ve kuralları bilmez. Çocukları ve ziyaretçileri makinelerden ve yüksek konteynerlerin kenarından uzak tut. Ağır şeyleri birlikte kaldırın ya da ziyaretçinin kendi eşyasını taşımasına izin ver. Biri tanımadığın bir şey mi getiriyor? İçeri girmeden önce sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.yard.p': "Bu dört numaralı konteynere gider.", // nieuw, nalezen
+    'c.yard.s': "Bir adam dolu bir torbayı tahta konteynerine atmak istiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.yard.o1': "Torbada ne olduğunu sorarsın.", // nieuw, nalezen
+    'c.yard.o2': "Atmasına izin verirsin: onun çöpü.", // nieuw, nalezen
+    'c.yard.o3': "Onun yerine sen atarsın.", // nieuw, nalezen
+    'c.yard.w': "Yanlış tek bir şey dolu bir konteyneri bozabilir. Güler yüzlü bir soru atığı temiz tutar.", // nieuw, nalezen
+    'l.hazardous': "Kimyasal atık", // nieuw, nalezen
+    'w.chemischafval': "kimyasal atık (boya ve yağ gibi tehlikeli atık)", // nieuw, nalezen
+    'w.spuitbus': "sprey kutusu", // nieuw, nalezen
+    'w.asbest': "asbest (eski binalarda bulunan tehlikeli bir malzeme)", // nieuw, nalezen
+    'w.lekken': "sızdırmak", // nieuw, nalezen
+    'w.gevarensymbool': "tehlike işareti (tehlikeye karşı uyaran bir resim)", // nieuw, nalezen
+    'w.vat': "varil", // nieuw, nalezen
+    's.hazardous.1': "Boyayı kimyasal atığın yanına koy.", // nieuw, nalezen
+    's.hazardous.2': "Bu şişe sızdırıyor. Onu eldivenle al.", // nieuw, nalezen
+    's.hazardous.3': "Asbest iyi paketlenmiş olmalı.", // nieuw, nalezen
+    'c.hazardous.q': "Bu şişede ne var?", // nieuw, nalezen
+    'c.hazardous.a': "Bilmiyorum. Onu kenara koy.", // nieuw, nalezen
+    'c.hazardous': "Bilinmiyor mu? Açma, koklama", // nieuw, nalezen
+    'c.hazardous.b': "Boya, yağ, temizlik ürünleri, piller ve sprey kutuları gibi kimyasal atıklar yakabilir, zehirleyebilir ya da patlayabilir. Tehlike işaretlerine bak. Eldiven ve koruyucu gözlük tak. İçinde ne olduğunu koklamak için bir şişeyi asla açma ve ürünleri asla karıştırma. Sızdıran bir şişeyi dik tut ve bir tepsiye koy. Asbest sadece iyi paketlenmişse içeri alınabilir: onu asla kırma ve paketinden çıkarma. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.hazardous.p': "Bunun içinde ne var?", // nieuw, nalezen
+    'c.hazardous.s': "Bir kadın etiketsiz bir şişe getiriyor. Keskin bir kokusu var. Ne yaparsın?", // nieuw, nalezen
+    'c.hazardous.o1': "Onu ayrı koyar ve amirine söylersin.", // nieuw, nalezen
+    'c.hazardous.o2': "Onu açar ve ne olduğunu koklarsın.", // nieuw, nalezen
+    'c.hazardous.o3': "Onu boya variline dökersin.", // nieuw, nalezen
+    'c.hazardous.w': "Bilinmeyen ürünler başkalarıyla tepkimeye girebilir. Nereye güvenle gidebileceğini amirin bilir.", // nieuw, nalezen
+    'l.baler': "Balya presi", // nieuw, nalezen
+    'w.balenpers': "balya presi (atığı bloklar hâlinde sıkıştıran bir makine)", // nieuw, nalezen
+    'w.baal': "balya (sıkıştırılmış bir kâğıt ya da plastik bloğu)", // nieuw, nalezen
+    'w.persen': "sıkıştırmak, preslemek", // nieuw, nalezen
+    'w.vastlopen': "sıkışmak, takılmak", // nieuw, nalezen
+    'w.binddraad': "balya teli", // nieuw, nalezen
+    'w.vulopening': "doldurma ağzı (atığın içeri girdiği yer)", // nieuw, nalezen
+    's.baler.1': "Pres sıkıştı. Acil durdurma düğmesine bas.", // nieuw, nalezen
+    's.baler.2': "Elini asla presin içine sokma.", // nieuw, nalezen
+    's.baler.3': "Balyayı iyice bağla.", // nieuw, nalezen
+    'c.baler.q': "Pres takılıyor. Bir bakabilir miyim?", // nieuw, nalezen
+    'c.baler.a': "Hayır. Önce elektrik kesilir.", // nieuw, nalezen
+    'c.baler': "Balya presinin içine asla uzanma", // nieuw, nalezen
+    'c.baler.b': "Bir balya presi çok büyük bir kuvvetle sıkıştırır. Onu sadece nasıl kullanılacağını öğrendiysen kullan. Doldurma ağzına asla elini, kolunu ya da ayağını sokma, makine duruyor gibi görünse de. Takılıyor mu? Acil durdurma düğmesine bas, makineyi kapat ve kimsenin onu açamayacağından emin ol: şirketinin adımlarını izle. Ancak ondan sonra bak. Bir balya presinin ya da konteynerin içine asla tırmanma. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.baler.p': "Pres sıkıştı.", // nieuw, nalezen
+    'c.baler.s': "Doldurma ağzında bir karton parçası sıkışmış. Makine duruyor. Ne yaparsın?", // nieuw, nalezen
+    'c.baler.o1': "Makineyi tamamen kapatır, sonra kartonu çıkarırsın.", // nieuw, nalezen
+    'c.baler.o2': "Elinle hızlıca çekip çıkarırsın.", // nieuw, nalezen
+    'c.baler.o3': "Ayağınla içeri itersin.", // nieuw, nalezen
+    'c.baler.w': "Duran bir makine yeniden çalışabilir. Elektrik kesilmeden elin tehlikededir.", // nieuw, nalezen
+    'l.shovel': "Alandaki kepçe", // nieuw, nalezen
+    'w.shovel': "kepçe (önünde bir kova olan büyük bir makine)", // nieuw, nalezen
+    'w.zwaailamp': "döner lamba (bir makinenin üstündeki turuncu ışık)", // nieuw, nalezen
+    'w.bunker': "bölme (tek tür atık için büyük, betondan bir alan)", // nieuw, nalezen
+    'w.looppad': "yaya yolu (sadece insanlar için bir yol)", // nieuw, nalezen
+    'w.toeteren': "korna çalmak", // nieuw, nalezen
+    'w.opscheppen': "küreklemek, kepçeyle almak", // nieuw, nalezen
+    's.shovel.1': "Yaya yolunda kal.", // nieuw, nalezen
+    's.shovel.2': "Kepçe geri gidiyor. Dikkat!", // nieuw, nalezen
+    's.shovel.3': "Döner lamba yanıyor. Makine hareket ediyor.", // nieuw, nalezen
+    'c.shovel.q': "Kepçenin yanından geçebilir miyim?", // nieuw, nalezen
+    'c.shovel.a': "Sadece şoför seni görüyorsa.", // nieuw, nalezen
+    'c.shovel': "Kepçenin yolundan uzak dur", // nieuw, nalezen
+    'c.shovel.b': "Bir kepçe büyüktür ve şoförü etrafında az şey görür, özellikle arkasında. Bu yüzden yaya yollarında kal ve reflektörlü kıyafetini giy. Hareket eden bir makinenin arkasından asla yürüme. Geçmek mi istiyorsun? Şoför seni görüp bir işaret verene kadar bekle. Döner lamba şu anlama gelir: bu makine çalışıyor. Ziyaretçileri ondan çok uzak tut. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.shovel.p': "Beni gördün mü?", // nieuw, nalezen
+    'c.shovel.s': "Çalışan bir kepçenin yanından geçmen gerekiyor. Şoför başka tarafa bakıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.shovel.o1': "O seni görene kadar beklersin.", // nieuw, nalezen
+    'c.shovel.o2': "Hızlıca yanından geçersin.", // nieuw, nalezen
+    'c.shovel.o3': "Makinenin arkasından yürürsün.", // nieuw, nalezen
+    'c.shovel.w': "Seni görmemiş bir şoför senin için duramaz.", // nieuw, nalezen
+    'u.toddlers': "Çocuklar", // nieuw, nalezen
+    'l.nappies': "Bez değiştirmek", // nieuw, nalezen
+    'w.luier': "bez (çocuk bezi)", // nieuw, nalezen
+    'w.verschonen': "değiştirmek (bezi)", // nieuw, nalezen
+    'w.commode': "alt değiştirme masası", // nieuw, nalezen
+    'w.billendoekje': "ıslak mendil (bebek için)", // nieuw, nalezen
+    'w.potje': "lazımlık", // nieuw, nalezen
+    'w.zindelijk': "tuvalet eğitimini almış (çocuk tuvaleti kullanabiliyor)", // nieuw, nalezen
+    's.nappies.1': "Sem’in bezini değiştireceğim.", // nieuw, nalezen
+    's.nappies.2': "Bez değiştirdikten sonra ellerini yıka.", // nieuw, nalezen
+    's.nappies.3': "Bir çocuğu alt değiştirme masasında asla yalnız bırakma.", // nieuw, nalezen
+    'c.nappies.q': "Noor’un bezini ne zaman değiştirdin?", // nieuw, nalezen
+    'c.nappies.a': "Saat onda. Uygulamada yazıyor.", // nieuw, nalezen
+    'c.nappies': "Bir elin çocuğun üstünde", // nieuw, nalezen
+    'c.nappies.b': "Bir çocuğu alt değiştirme masasına koymadan önce her şeyi hazırla: temiz bir bez, ıslak mendiller ve kıyafetler. Sonra bir elini her zaman çocuğun üstünde tut. Asla uzaklaşma, bir saniyeliğine bile. Her bez değişiminden sonra ellerini yıka ve masayı temizle. Bezi ne zaman değiştirdiğini yaz, böylece anne baba bilir. Bir pişik ya da bir yara mı görüyorsun? Bunu yaz ve bir iş arkadaşına söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.nappies.p': "Şu an bezini değiştiriyorum.", // nieuw, nalezen
+    'c.nappies.s': "Bir bebeğin bezini değiştiriyorsun. Islak mendilleri unuttun; odanın öbür tarafındalar. Ne yaparsın?", // nieuw, nalezen
+    'c.nappies.o1': "Bebeği yanına alırsın.", // nieuw, nalezen
+    'c.nappies.o2': "Hızlıca alırsın: yakında.", // nieuw, nalezen
+    'c.nappies.o3': "Bebeği bırakır ve seslenirsin.", // nieuw, nalezen
+    'c.nappies.w': "Bir bebek bir saniyede alt değiştirme masasından yuvarlanıp düşebilir. Bir çocuğu orada asla yalnız bırakma.", // nieuw, nalezen
+    'l.mealtime': "Yemek ve içmek", // nieuw, nalezen
+    'w.fles': "biberon (bebek için)", // nieuw, nalezen
+    'w.slabbetje': "mama önlüğü", // nieuw, nalezen
+    'w.beker': "kupa (kulplu)", // nieuw, nalezen
+    'w.kinderstoel': "mama sandalyesi", // nieuw, nalezen
+    'w.fruithap': "meyve püresi", // nieuw, nalezen
+    'w.boertje': "gaz çıkarma (geğirme)", // nieuw, nalezen
+    's.mealtime.1': "Yemekten önce ellerini yıka.", // nieuw, nalezen
+    's.mealtime.2': "Lisa’ya biberonunu saat on ikide ver.", // nieuw, nalezen
+    's.mealtime.3': "Herkes masaya oturur.", // nieuw, nalezen
+    'c.mealtime.q': "Daan bir bisküvi yiyebilir mi?", // nieuw, nalezen
+    'c.mealtime.a': "Hayır, alerjisi var. Listeye bak.", // nieuw, nalezen
+    'c.mealtime': "Yiyecek vermeden önce listeye bak", // nieuw, nalezen
+    'c.mealtime.b': "Bir çocuğa yiyecek ya da içecek vermeden önce listeye bak: bazı çocukların alerjisi var, bazıları da sağlıkları ya da inançları yüzünden belirli yiyecekleri yiyemez. Yemekten önce kendi ellerini ve çocukların ellerini yıka. Çocuklar yiyip içerken otursunlar, asla yürümesinler ya da koşmasınlar. Küçük çocuklar için yiyecekleri küçük kes, örneğin üzümleri parçalara. Bir çocuğa başka bir çocuğun evden getirdiği bir şeyi asla verme. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.mealtime.p': "Bunu yiyebilir mi?", // nieuw, nalezen
+    'c.mealtime.s': "Bir çocuk bisküvi için ağlıyor. Bu çocuğu iyi tanımıyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.mealtime.o1': "Önce listeye bakarsın.", // nieuw, nalezen
+    'c.mealtime.o2': "Verirsin: sadece bir bisküvi.", // nieuw, nalezen
+    'c.mealtime.o3': "Yarım bisküvi verirsin.", // nieuw, nalezen
+    'c.mealtime.w': "Bir bisküvide kuruyemiş, süt ya da yumurta olabilir. Alerjisi olan bir çocuk için bu çok tehlikeli olabilir.", // nieuw, nalezen
+    'l.naptime': "Uyumak", // nieuw, nalezen
+    'w.bedje': "bebek karyolası (bebek için küçük bir yatak)", // nieuw, nalezen
+    'w.slaapkamer': "yatak odası, uyku odası", // nieuw, nalezen
+    'w.knuffel': "peluş oyuncak", // nieuw, nalezen
+    'w.speen': "emzik", // nieuw, nalezen
+    'w.babyfoon': "bebek telsizi", // nieuw, nalezen
+    'w.slaapzak': "bebek uyku tulumu", // nieuw, nalezen
+    's.naptime.1': "Bebeği sırtüstü yatır.", // nieuw, nalezen
+    's.naptime.2': "Uyku odasına sık sık bakıyorum.", // nieuw, nalezen
+    's.naptime.3': "İşte peluş oyuncağın. İyi uykular.", // nieuw, nalezen
+    'c.naptime.q': "Mila uyudu mu?", // nieuw, nalezen
+    'c.naptime.a': "Evet, saat birden beri. Birazdan yine bakacağım.", // nieuw, nalezen
+    'c.naptime': "Bebekler sırtüstü uyur", // nieuw, nalezen
+    'c.naptime.b': "Bir bebek en güvenli şekilde sırtüstü, bir uyku tulumunda, kendi karyolasında uyur. Karyolada yastık, açıkta battaniye ve büyük oyuncaklar olmaz. Odayı serin ve havadar tut. Uyuyan çocuklara sık sık bak: bebek telsizi açıkken de bak ve dinle. Bir anne ya da baba bebeğini başka bir şekilde uyutmanı mı istiyor? Önce amirine söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.naptime.p': "Gidip uyku odasına bakacağım.", // nieuw, nalezen
+    'c.naptime.s': "Bir bebek karyolada yüzüstü uyumuş. Ne yaparsın?", // nieuw, nalezen
+    'c.naptime.o1': "Onu nazikçe sırtüstü çevirirsin.", // nieuw, nalezen
+    'c.naptime.o2': "Uyumaya bırakırsın: artık uyuyor.", // nieuw, nalezen
+    'c.naptime.o3': "Yanına bir yastık koyarsın.", // nieuw, nalezen
+    'c.naptime.w': "Sırtüstü yatan bir bebek rahatça nefes alabilir. Bir yastık yüzünü kapatabilir.", // nieuw, nalezen
+    'l.playtime': "Oyun oynamak", // nieuw, nalezen
+    'w.spelen': "oynamak", // nieuw, nalezen
+    'w.speelgoed': "oyuncaklar", // nieuw, nalezen
+    'w.zandbak': "kum havuzu", // nieuw, nalezen
+    'w.glijbaan': "kaydırak", // nieuw, nalezen
+    'w.puzzel': "yapboz", // nieuw, nalezen
+    'w.buitenspelen': "dışarıda oynamak", // nieuw, nalezen
+    's.playtime.1': "Dışarıda oynayacağız. Montlar giyilsin!", // nieuw, nalezen
+    's.playtime.2': "Oyuncakları topla.", // nieuw, nalezen
+    's.playtime.3': "Kaydırağa aynı anda tek çocuk.", // nieuw, nalezen
+    'c.playtime.q': "Yapbozla oynayabilir miyim?", // nieuw, nalezen
+    'c.playtime.a': "Evet, masada. Sonra onu toplarsın.", // nieuw, nalezen
+    'c.playtime': "Güvenli oyun: bak, say, kontrol et", // nieuw, nalezen
+    'c.playtime.b': "Çocuklar oynayarak öğrenir, bu yüzden bir şeyleri denemelerine izin ver. Ama onları her zaman gözünün önünde tut, dışarıda da. Dışarı çıkarken ve içeri dönerken çocukları say. Önce oyun alanını kontrol et: kapı kapalı mı, cam ya da çöp var mı? Küçük parçalı oyuncaklar üç yaşından küçük çocuklar için değildir: boğazlarına kaçabilir. Ağza giren oyuncakları sık sık temizle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.playtime.p': "Herkes burada mı?", // nieuw, nalezen
+    'c.playtime.s': "Oyun alanından içeri dönüyorsun. Saydığında bir çocuk eksik çıkıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.playtime.o1': "Bir iş arkadaşına söyler ve hemen ararsın.", // nieuw, nalezen
+    'c.playtime.o2': "Beklersin: çocuk kendisi içeri gelir.", // nieuw, nalezen
+    'c.playtime.o3': "Yarın yeniden sayarsın.", // nieuw, nalezen
+    'c.playtime.w': "Dışarıda yalnız kalan bir çocuk yaralanabilir ya da uzaklaşabilir. Her dakika önemlidir.", // nieuw, nalezen
+    'u.daycare': "Anne babalar, güvenlik ve grup", // nieuw, nalezen
+    'l.pickup': "Getirmek ve almak", // nieuw, nalezen
+    'w.ouder': "anne ya da baba (veli)", // nieuw, nalezen
+    'w.afscheid': "vedalaşma", // nieuw, nalezen
+    'w.oppas': "bakıcı", // nieuw, nalezen
+    'w.schriftje': "defter (anne babalarla personel arasındaki notlar için)", // nieuw, nalezen
+    'w.ouderapp': "veli uygulaması (anne babalara fotoğraflar ve mesajlar için)", // nieuw, nalezen
+    'w.wennen': "alışmak (yeni bir yere alışmak)", // nieuw, nalezen
+    's.pickup.1': "Bunu deftere yazacağım.", // nieuw, nalezen
+    's.pickup.2': "Babana bay bay de.", // nieuw, nalezen
+    's.pickup.3': "Veli uygulamasına bir fotoğraf koyuyorum.", // nieuw, nalezen
+    'c.pickup.q': "Sem’i bugün kim alacak?", // nieuw, nalezen
+    'c.pickup.a': "Büyükannesi. O listede var.", // nieuw, nalezen
+    'c.pickup': "Sadece listedeki kişilere", // nieuw, nalezen
+    'c.pickup.b': "Bir çocuğu sadece anne ya da babasına ya da anne babanın sana haber verdiği birine teslim et. Kişiyi tanımıyor musun? Kim olduğunu sor, kimliğine bak ve anne babayla ya da amirinle kontrol et. Alırken anne ya da babaya günün nasıl geçtiğini anlat: yemek, uyku, oyun ve özel bir şey varsa. Önemli şeyleri deftere ya da uygulamaya yaz. Başka çocuklar hakkında sadece kendi anne babalarıyla konuş. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.pickup.p': "Siz kimsiniz? Anne babayı arayacağım.", // nieuw, nalezen
+    'c.pickup.s': "Tanımadığın bir adam Sem’i almaya geliyor. Listede yok. Ne yaparsın?", // nieuw, nalezen
+    'c.pickup.o1': "Sem gitmeden önce anne babayı ararsın.", // nieuw, nalezen
+    'c.pickup.o2': "Sem’in gitmesine izin verirsin: adını biliyor.", // nieuw, nalezen
+    'c.pickup.o3': "Sem’e onu tanıyıp tanımadığını sorarsın.", // nieuw, nalezen
+    'c.pickup.w': "Anne babanın seçtiği biri devralana kadar çocuktan sen sorumlusun.", // nieuw, nalezen
+    'l.childsafety': "Grupta güvenlik", // nieuw, nalezen
+    'w.traphekje': "merdiven kapısı", // nieuw, nalezen
+    'w.vingerstrip': "parmak koruyucu (kapıda, parmaklar sıkışmasın diye)", // nieuw, nalezen
+    'w.verslikken': "boğazına kaçmak (yiyecek yanlış yere gider)", // nieuw, nalezen
+    'w.bult': "şişlik (başta)", // nieuw, nalezen
+    'w.schaafwond': "sıyrık (cilt sıyrılmış)", // nieuw, nalezen
+    'w.toezicht': "gözetim (çocuklara göz kulak olursun)", // nieuw, nalezen
+    's.childsafety.1': "Merdiven kapısını her zaman kapat.", // nieuw, nalezen
+    's.childsafety.2': "Şişliğe biraz buz koyuyorum.", // nieuw, nalezen
+    's.childsafety.3': "Sem’in boğazına bir şey kaçtı. Ona yardım ediyorum.", // nieuw, nalezen
+    'c.childsafety.q': "Bo düştü mü?", // nieuw, nalezen
+    'c.childsafety.a': "Evet, başında bir şişlik var. Annesini arıyorum.", // nieuw, nalezen
+    'c.childsafety': "Etrafa bir çocuğun gözüyle bak", // nieuw, nalezen
+    'c.childsafety.b': "Küçük çocuklar her şeyi ağızlarına koyar ve her şeye tırmanır. Bu yüzden merdiven kapısını kapalı tut, temizlik ürünlerini ve ilaçları ulaşamayacakları yere koy ve sıcak içecekleri çocuklardan uzak tut. Odayı her gün kontrol et. Bir çocuk yaralanıyor mu? İlk yardım yap, çocuğu teselli et, anne babaya söyle ve bunu yaz. Ciddi mi? 112’yi ara. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.childsafety.p': "Merdiven kapısı açık.", // nieuw, nalezen
+    'c.childsafety.s': "Sıcak kahveni alçak bir masaya koydun. Küçük bir çocuk ona doğru yürüyor. Ne yaparsın?", // nieuw, nalezen
+    'c.childsafety.o1': "Kahveyi hemen yükseğe koyarsın.", // nieuw, nalezen
+    'c.childsafety.o2': "Çocuğa ona dokunmamasını söylersin.", // nieuw, nalezen
+    'c.childsafety.o3': "Onu hızlıca içersin.", // nieuw, nalezen
+    'c.childsafety.w': "Sıcak kahve küçük bir çocuğu kötü yakabilir. Tek güvenli yer, ulaşamayacağı bir yerdir.", // nieuw, nalezen
+    'l.sickchild': "Hasta bir çocuk ve alerjiler", // nieuw, nalezen
+    'w.huiduitslag': "döküntü (ciltte kırmızı lekeler)", // nieuw, nalezen
+    'w.diarree': "ishal", // nieuw, nalezen
+    'w.overgeven': "kusmak", // nieuw, nalezen
+    'w.allergielijst': "alerji listesi", // nieuw, nalezen
+    'w.adrenalinepen': "adrenalin kalemi (güçlü bir alerji için ilaç kalemi)", // nieuw, nalezen
+    'w.temperaturen': "ateşini ölçmek", // nieuw, nalezen
+    's.sickchild.1': "Sem’in ateşi var. Babasını arıyorum.", // nieuw, nalezen
+    's.sickchild.2': "Yemekten önce alerji listesine bak.", // nieuw, nalezen
+    's.sickchild.3': "İzin olmadan asla ilaç verme.", // nieuw, nalezen
+    'c.sickchild.q': "Jip nasıl?", // nieuw, nalezen
+    'c.sickchild.a': "Çok sıcak. Ateşini ölçeceğim.", // nieuw, nalezen
+    'c.sickchild': "Hasta bir çocuk: tahmin etme, söyle", // nieuw, nalezen
+    'c.sickchild.b': "Çocukların nasıl olduğuna dikkat et. Bir çocuk sıcak mı, çok yorgun mu, kusuyor mu ya da döküntüsü mü var? Ateşini ölç, iş arkadaşına söyle ve anne babayı ara. Bir ilacı sadece anne babanın yazılı izniyle ver ve neyi ne zaman verdiğini yaz. Hangi çocukların alerjisi olduğunu ve ilaçlarının nerede olduğunu bil. Güçlü bir alerjik tepki gösteren bir çocuk: öğrendiysen adrenalin kalemini kullan ve 112’yi ara. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.sickchild.p': "Çocuğunuz hasta. Gelip onu alabilir misiniz?", // nieuw, nalezen
+    'c.sickchild.s': "Bir anne diyor ki: “Ona saat ikide ateş şurubu ver.” Form yok. Ne yaparsın?", // nieuw, nalezen
+    'c.sickchild.o1': "Önce formu imzalamasını istersin.", // nieuw, nalezen
+    'c.sickchild.o2': "Verirsin: anne istedi.", // nieuw, nalezen
+    'c.sickchild.o3': "Güvenli olsun diye yarısını verirsin.", // nieuw, nalezen
+    'c.sickchild.w': "Yazılı izin olmadan ilaç veremezsin. Form çocuğu da seni de korur.", // nieuw, nalezen
+    'l.grouprules': "Grup ve kurallar", // nieuw, nalezen
+    'w.pedagogischmedewerker': "çocuk bakım görevlisi", // nieuw, nalezen
+    'w.mentor': "mentor (bir çocuğu yakından takip eden görevli)", // nieuw, nalezen
+    'w.vierogenprincipe': "dört göz ilkesi (başka bir yetişkin seni her zaman görebilir ya da duyabilir)", // nieuw, nalezen
+    'w.observeren': "gözlemlemek (dikkatle izlemek ve yazmak)", // nieuw, nalezen
+    'w.peuter': "küçük çocuk (iki ya da üç yaşında bir çocuk)", // nieuw, nalezen
+    'w.groep': "grup (her gün birlikte olan çocuklar)", // nieuw, nalezen
+    's.grouprules.1': "Lisa’nın mentoru benim.", // nieuw, nalezen
+    's.grouprules.2': "Bir iş arkadaşı bizi her zaman görebilir ya da duyabilir.", // nieuw, nalezen
+    's.grouprules.3': "Daan için endişeleniyorum.", // nieuw, nalezen
+    'c.grouprules.q': "Grupla tek başıma dışarı çıkabilir miyim?", // nieuw, nalezen
+    'c.grouprules.a': "Evet, ama önce bir iş arkadaşına söyle.", // nieuw, nalezen
+    'c.grouprules': "Asla gözden uzakta yalnız değil", // nieuw, nalezen
+    'c.grouprules.b': "Çocuk bakımında, çocuklarla birlikteyken başka bir yetişkin seni her zaman görebilmeli ya da duyabilmelidir. Bu, çocukları ve seni korur. Her çocuğun bir mentoru vardır: o çocuğu yakından takip eden ve anne babayla konuşan bir görevli. Bir çocuk için evdeki durum yüzünden, örneğin morluklar ya da korku yüzünden endişeleniyor musun? Çocuğa fazla soru sorma: adımları bilen amirine söyle. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.grouprules.p': "Bu çocuk için endişeleniyorum.", // nieuw, nalezen
+    'c.grouprules.s': "Bir çocukta yine morluklar görüyorsun. Çocuk sessiz. Ne yaparsın?", // nieuw, nalezen
+    'c.grouprules.o1': "Aynı gün amirine söylersin.", // nieuw, nalezen
+    'c.grouprules.o2': "Çocuğa çok soru sorarsın.", // nieuw, nalezen
+    'c.grouprules.o3': "Anne babayı arar ve nedenini sorarsın.", // nieuw, nalezen
+    'c.grouprules.w': "Bir çocukla ilgili endişelerde amirin adımları bilir. Çok soru çocuğu korkutabilir.", // nieuw, nalezen
   },
 };
 

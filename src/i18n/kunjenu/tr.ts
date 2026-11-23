@@ -139,6 +139,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "Bir domatesin yeterince olgun olup olmadığını sorabilirim.", // nieuw, nalezen
     'kjn.u.carservice.1': "Uyarı lambasının yandığını söyleyebilirim.", // nieuw, nalezen
     'kjn.u.carservice.2': "Ne kadar yağ girmesi gerektiğini sorabilirim.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "Çimin fazla ıslak olduğunu söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.mowing.2': "Hangi dalların kesilmesi gerektiğini sorabilirim.", // nieuw, nalezen
+    'kjn.u.planting.1': "Cam kırıkları olduğunu söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.planting.2': "Yolun karşısına geçip geçemeyeceğimi sorabilirim.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "Bir ziyaretçiyi karşılayıp ona yardım edebilirim.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "Bir paketin kimin için olduğunu sorabilirim.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "Bir arızayı bildirebilirim.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "Bir masanın nereye gitmesi gerektiğini sorabilirim.", // nieuw, nalezen
+    'kjn.u.guarding.1': "Birinin kimliğini görmek isteyebilirim.", // nieuw, nalezen
+    'kjn.u.guarding.2': "Telsizde ne gördüğümü söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.incidents.1': "112’yi arayıp neyin yanlış olduğunu söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.incidents.2': "Kızgın bir müşteriyle sakince konuşabilirim.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "Soğuk odanın fazla sıcak olduğunu söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "İçinde kuruyemiş olup olmadığını sorabilirim.", // nieuw, nalezen
+    'kjn.u.foodline.1': "Etiketin doğru olmadığını söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.foodline.2': "Bir kaba ne kadar girmesi gerektiğini sorabilirim.", // nieuw, nalezen
+    'kjn.u.collection.1': "Şoförün geri gitmesine yardım edebilirim.", // nieuw, nalezen
+    'kjn.u.collection.2': "Tekerlekli bir çöp kutusunun fazla ağır olduğunu söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.recycling.1': "Bir ziyaretçiye atığının nereye gittiğini söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.recycling.2': "Presin sıkıştığını söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "Bir çocuğun bezini değiştireceğimi söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "Bir çocuğun uyuyup uyumadığını sorabilirim.", // nieuw, nalezen
+    'kjn.u.daycare.1': "Bir anneye ya da babaya günün nasıl geçtiğini anlatabilirim.", // nieuw, nalezen
+    'kjn.u.daycare.2': "Bir çocuğu kimin almaya geleceğini sorabilirim.", // nieuw, nalezen
   },
 };
 
