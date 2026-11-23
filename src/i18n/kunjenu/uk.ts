@@ -140,6 +140,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "Я можу запитати, чи помідор достатньо стиглий.", // nieuw, nalezen
     'kjn.u.carservice.1': "Я можу сказати, що горить контрольна лампа.", // nieuw, nalezen
     'kjn.u.carservice.2': "Я можу запитати, скільки мастила треба залити.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "Я можу сказати, що трава занадто мокра.", // nieuw, nalezen
+    'kjn.u.mowing.2': "Я можу запитати, які гілки треба зрізати.", // nieuw, nalezen
+    'kjn.u.planting.1': "Я можу сказати, що тут бите скло.", // nieuw, nalezen
+    'kjn.u.planting.2': "Я можу запитати, чи можна мені перейти дорогу.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "Я можу привітати відвідувача і допомогти йому.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "Я можу запитати, для кого посилка.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "Я можу повідомити про несправність.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "Я можу запитати, куди треба поставити стіл.", // nieuw, nalezen
+    'kjn.u.guarding.1': "Я можу попросити показати документ.", // nieuw, nalezen
+    'kjn.u.guarding.2': "Я можу сказати по рації, що я бачу.", // nieuw, nalezen
+    'kjn.u.incidents.1': "Я можу подзвонити 112 і сказати, що сталося.", // nieuw, nalezen
+    'kjn.u.incidents.2': "Я можу спокійно говорити зі злим клієнтом.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "Я можу сказати, що в холодильній камері занадто тепло.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "Я можу запитати, чи в цьому є горіхи.", // nieuw, nalezen
+    'kjn.u.foodline.1': "Я можу сказати, що етикетка неправильна.", // nieuw, nalezen
+    'kjn.u.foodline.2': "Я можу запитати, скільки треба класти в контейнер.", // nieuw, nalezen
+    'kjn.u.collection.1': "Я можу допомогти водієві здати назад.", // nieuw, nalezen
+    'kjn.u.collection.2': "Я можу сказати, що контейнер занадто важкий.", // nieuw, nalezen
+    'kjn.u.recycling.1': "Я можу сказати відвідувачу, куди йдуть його відходи.", // nieuw, nalezen
+    'kjn.u.recycling.2': "Я можу сказати, що прес заклинило.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "Я можу сказати, що зараз поміняю дитині підгузок.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "Я можу запитати, чи дитина вже спить.", // nieuw, nalezen
+    'kjn.u.daycare.1': "Я можу розповісти мамі чи татові, як минув день.", // nieuw, nalezen
+    'kjn.u.daycare.2': "Я можу запитати, хто прийде забрати дитину.", // nieuw, nalezen
   },
 };
 
