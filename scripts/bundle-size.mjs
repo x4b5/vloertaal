@@ -83,16 +83,20 @@ import { gzipSync } from 'node:zlib';
  * dist 4350 -> 4800 (22 November 2026, the owner's choice): at 4312.9 kB, and a sector unit of four
  * lessons in 14 help languages adds about 45 kB to dist. Room for about ten more units. dist is
  * every file together: a phone loads one help language and never the tip pages.
+ * dist 4800 -> 5400 and tip pages 7500 -> 10500 (23 November 2026, the owner's choice): six new
+ * sectors (12 units, 48 lessons, 288 pictures) in 14 help languages put dist at 4897.6 kB and the tip
+ * pages at 9434.7 kB (48 new tips in 15 languages). About 10% room; the start is unchanged (374.8 kB).
  */
 export const LIMITS = {
   'start file': 280,
   start: 400,
-  dist: 4800,
+  dist: 5400,
   // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
   // 14 November 2026: 93 tips in 15 languages at 4746 kB; later that day 97 tips at 4900 kB.
   // 14 November 2026: room for the basis units at four lessons (see above).
   // 21 November 2026: room for about five more sector units (see above).
-  'tip pages': 7500,
+  // 23 November 2026: six new sectors, 48 tips more (see above).
+  'tip pages': 10500,
 };
 
 /** A page of the workplace tips (/pl/tip/, /pl/tip/<tip>/): counted on its own, see above. */
