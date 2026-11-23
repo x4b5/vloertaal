@@ -3,7 +3,7 @@ import type { ChatLine } from '../content/types';
 import { sayingQuestion } from '../content/sayings';
 import { gloss, langTag, said as srText, saidLang, ui, type Bilingual } from '../i18n';
 import type { HelpLanguage, UiKey } from '../i18n/types';
-import { checkTyped, nextTileOrder, sentenceOrders, typoMarks } from '../lib/answers';
+import { checkTyped, nextTileOrder, orderLine, sentenceOrders, typoMarks } from '../lib/answers';
 import { autoSpeak, autoSpeakAt, onSpeech, sounds, speak, surelySilent } from '../lib/audio';
 import { followSayAloud, sayMode, stillInMs, type SayMode } from '../lib/sayAloud';
 import { dutchUi } from '../lib/track';
@@ -44,6 +44,9 @@ export interface Answer {
   almost?: boolean;
   /** Sentence building: the tiles in the order the learner put them. */
   given?: string[];
+  /** Sentence building: the line of the order it was built in (the sentence, or one of its right
+   *  `alt` orders), said after it (src/lib/answers.ts orderLine). */
+  line?: string;
   /** The answer is complete: grade it now (a tap on an option, the last word of a sentence).
    *  Without it the learner still finishes with Check (typing). */
   done?: boolean;
@@ -774,7 +777,7 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
       const built = orders[order];
       const next = at + 1;
       setAt(next);
-      if (next >= built.length) onAnswer({ ...stepGrade(wrongTaps.current, BUILD_FORGIVEN_TAPS), done: true, missed: [...new Set(wrongsRef.current.map((x) => built[x.at]))] });
+      if (next >= built.length) onAnswer({ ...stepGrade(wrongTaps.current, BUILD_FORGIVEN_TAPS), done: true, line: orderLine(ex.sentence, built), missed: [...new Set(wrongsRef.current.map((x) => built[x.at]))] });
     } else {
       // The same wrong tile again is the same mistake (as in the line after the sentence).
       if (!wrongsRef.current.some((x) => x.at === at && x.word === w)) wrongTaps.current += 1;
@@ -786,7 +789,9 @@ export function BuildExercise({ ex, lang, locked, onAnswer, verdict, run, misses
   };
   // The bubble's speaker: "Zet het vooraan" plays the line as it was (the new order shows only by
   // building it), and the new sentence once it is built; else the sentence, held back as before.
-  const bubbleSay = front ? (complete || locked ? ex.sentence.nl : front.nl) : ex.sentence.nl;
+  // Built in another right order (an `alt`): that order is said, and lit (the owner, 23 November 2026).
+  const builtLine = complete ? orderLine(ex.sentence, words) : ex.sentence.nl;
+  const bubbleSay = front ? (complete || locked ? ex.sentence.nl : front.nl) : builtLine;
   const sayShown = Boolean(front) || byEar || wrongs.length > 0 || complete || locked;
   // The built sentence is played by itself once it is right (src/components/LessonPlayer.tsx): the tile of
   // the word being said lights up, when the tiles are the words of that very line (not another order).

@@ -866,7 +866,8 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
       // ("Snap je het?" does not: its sentence is shown and said right away, comesBack.)
       if (index < initial.length && comesBack(ex)) queueRetry();
     }
-    const sol = solution(ex);
+    // A sentence built in another right order is said as it was built (its tiles light along).
+    const sol = ex.kind === 'build' && answer.line ? { ...solution(ex), text: answer.line } : solution(ex);
     const said = announcement(ex, answer.correct, lang, answer.almost, answer.given?.[0]);
     later(30, () => setLive(said));
     // The answer is said by the character on screen, so a woman never speaks with a man's voice:
