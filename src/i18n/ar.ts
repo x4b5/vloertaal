@@ -792,6 +792,55 @@ const lang: HelpLanguageSource = {
     's.whereis.3': "المرحاض هناك، بجانب المقصف.", // nieuw, nalezen
     'c.whereis.q': { m: "هل تستطيع أن تجده؟", f: "هل تستطيعين أن تجديه؟" }, // nieuw, nalezen
     'c.whereis.a': "لا. هل يمكنك أن تشير إليه؟", // nieuw, nalezen
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
+    'l.wound': "الجروح الصغيرة والحروق", // nieuw, nalezen
+    'w.wond': "الجرح", // nieuw, nalezen
+    'w.verband': "الضمادة", // nieuw, nalezen
+    'w.koelen': "يبرّد (بالماء البارد)", // nieuw, nalezen
+    'w.snee': "الجرح القطعي (جرح صغير من سكين أو شيء حاد)", // nieuw, nalezen
+    'w.flauwvallen': "يُغمى عليه", // nieuw, nalezen
+    'w.oogdouche': "دُش العين (ماء لغسل العينين)", // nieuw, nalezen
+    's.wound.1': "برّد الحرق بالماء.", // nieuw, nalezen
+    's.wound.2': "إنه جرح صغير. اضغط على الجرح.", // nieuw, nalezen
+    's.wound.3': "أين دُش العين؟", // nieuw, nalezen
+    'c.wound.q': "زميلي سيُغمى عليه.", // nieuw, nalezen
+    'c.wound.a': "دعه يستلقي قليلاً. سأحضر المساعدة.", // nieuw, nalezen
+    'l.callhelp': "الاتصال بـ112", // nieuw, nalezen
+    'w.hulpdiensten': "خدمات الطوارئ (الإسعاف، الإطفاء، الشرطة)", // nieuw, nalezen
+    'w.straatnaam': "اسم الشارع", // nieuw, nalezen
+    'w.huisnummer': "رقم البيت", // nieuw, nalezen
+    'w.aanspreekbaar': "يستجيب (الشخص يتفاعل عند الكلام معه)", // nieuw, nalezen
+    'w.opwachten': "ينتظر ويستقبل (شخصاً عند الباب)", // nieuw, nalezen
+    'w.aandelijn': "يبقى على الخط (لا يُنهي المكالمة)", // nieuw, nalezen
+    's.callhelp.1': "أتصل بـ112. أحتاج إلى سيارة إسعاف.", // nieuw, nalezen
+    's.callhelp.2': "ما اسم الشارع ورقم البيت؟", // nieuw, nalezen
+    's.callhelp.3': "سأنتظر سيارة الإسعاف عند المدخل.", // nieuw, nalezen
+    'c.callhelp.q': { m: "هل يستجيب عندما تكلّمه؟", f: "هل يستجيب عندما تكلّمينه؟", x: "هل يستجيب عند الكلام معه؟" }, // nieuw, nalezen
+    'c.callhelp.a': "لا. لا يستجيب.", // nieuw, nalezen
+    'l.roster': "جدول عملك", // nieuw, nalezen
+    'w.weekrooster': "جدول الأسبوع (من يعمل ومتى هذا الأسبوع)", // nieuw, nalezen
+    'w.roosterapp': "تطبيق جدول العمل (نوباتك على هاتفك)", // nieuw, nalezen
+    'w.beschikbaar': "متاح (يمكن العمل في ذلك الوقت)", // nieuw, nalezen
+    'w.wijziging': "التغيير", // nieuw, nalezen
+    'w.invallen': "ينوب عن (يعمل مكان شخص غائب)", // nieuw, nalezen
+    'w.vrijedag': "يوم العطلة", // nieuw, nalezen
+    's.roster.1': "جدول العمل الجديد في التطبيق.", // nieuw, nalezen
+    's.roster.2': "هل أنت متاح يوم السبت؟", // nieuw, nalezen
+    's.roster.3': "هل يمكنك أن تنوب عن سارة غداً؟", // nieuw, nalezen
+    'c.roster.q': "هناك تغيير في جدول عملك.", // nieuw, nalezen
+    'c.roster.a': "حسناً. في أي يوم يجب أن أعمل؟", // nieuw, nalezen
+    'l.breaks': "الساعات والاستراحات", // nieuw, nalezen
+    'w.lunchpauze': "استراحة الغداء", // nieuw, nalezen
+    'w.rusttijd': "وقت الراحة (وقت حرّ بين نوبتين)", // nieuw, nalezen
+    'w.werkdag': "يوم العمل", // nieuw, nalezen
+    'w.urenlijst': "قائمة الساعات (حيث تُكتب ساعات العمل)", // nieuw, nalezen
+    'w.eerderweg': "يغادر مبكراً", // nieuw, nalezen
+    'w.achterelkaar': "متتالية (واحد بعد الآخر)", // nieuw, nalezen
+    's.breaks.1': "أكتب ساعاتي في قائمة الساعات.", // nieuw, nalezen
+    's.breaks.2': "هل يمكنني أن أغادر قبل ساعة اليوم؟", // nieuw, nalezen
+    's.breaks.3': "عملت ستة أيام متتالية.", // nieuw, nalezen
+    'c.breaks.q': "متى استراحة غدائك؟", // nieuw, nalezen
+    'c.breaks.a': "في الساعة الثانية عشرة، نصف ساعة.", // nieuw, nalezen
   },
 };
 

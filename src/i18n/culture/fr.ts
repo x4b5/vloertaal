@@ -422,6 +422,39 @@ const t: CultureTranslation = {
     'c.whereis.o2': "Continue à chercher : c’est gênant de redemander.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.o3': "Commence le travail avec tes propres vêtements.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Demander prend dix secondes. Chercher sans aide peut te mettre en retard. Les collègues savent qu’il est difficile de trouver son chemin dans un nouvel endroit.", // nieuw, nalezen // nagelezen AI 22 nov
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
+    'c.wound': "Une brûlure ? Refroidis-la avec de l’eau", // nieuw, nalezen
+    'c.wound.b': "Une petite coupure : appuie dessus avec un tissu propre ou un pansement, et préviens le secouriste. Une brûlure : refroidis-la tout de suite sous l’eau tiède qui coule, pendant au moins 10 minutes. Quelque chose dans l’œil ? Rince avec de l’eau, ou à la douche oculaire. C’est grave ? Appelle le 112. Le premier jour, demande où sont la trousse de premiers secours et la douche oculaire.", // nieuw, nalezen
+    'c.wound.p': { m: "Je me suis brûlé. Où est un robinet ?", f: "Je me suis brûlée. Où est un robinet ?", x: "J’ai une brûlure. Où est un robinet ?" }, // nieuw, nalezen
+    'c.wound.s': "Un collègue se brûle la main sur une machine chaude. Que fais-tu ?", // nieuw, nalezen
+    'c.wound.o1': "Refroidis-la sous l’eau tiède qui coule.", // nieuw, nalezen
+    'c.wound.o2': "Mets tout de suite du beurre ou une crème dessus.", // nieuw, nalezen
+    'c.wound.o3': "Mets de la glace directement sur la peau, et attends.", // nieuw, nalezen
+    'c.wound.w': "L’eau enlève la chaleur de la peau, donc la brûlure est moins profonde. La glace, le beurre et la crème peuvent l’aggraver.", // nieuw, nalezen
+    'c.callhelp': "Appeler le 112 : dis d’abord où", // nieuw, nalezen
+    'c.callhelp.b': "Appelle le 112 quand une vie est en danger, ou quand chaque minute compte. Dis d’abord où tu es : la rue, le numéro et la ville. Ensuite, dis ce qui s’est passé. Reste en ligne et réponds aux questions. Demande à un collègue d’attendre l’ambulance à l’entrée. Tu ne connais pas l’adresse de ton travail ? Cherche-la aujourd’hui.", // nieuw, nalezen
+    'c.callhelp.p': "J’appelle le 112. Tu peux attendre l’ambulance ?", // nieuw, nalezen
+    'c.callhelp.s': "Tu appelles le 112. L’opérateur pose beaucoup de questions, mais tu veux aider ton collègue. Que fais-tu ?", // nieuw, nalezen
+    'c.callhelp.o1': "Reste en ligne et réponds.", // nieuw, nalezen
+    'c.callhelp.o2': "Raccroche, et va voir ton collègue.", // nieuw, nalezen
+    'c.callhelp.o3': "Dis « venez vite », et raccroche.", // nieuw, nalezen
+    'c.callhelp.w': "L’opérateur envoie de l’aide pendant que tu parles, et il te dit quoi faire. Si tu raccroches trop tôt, l’aide peut aller au mauvais endroit.", // nieuw, nalezen
+    'c.roster': "Regarde ton planning chaque jour", // nieuw, nalezen
+    'c.roster.b': "Le planning peut changer, même au dernier moment. Regarde-le chaque jour, dans l’appli ou sur le tableau. Tu vois un changement ? Vérifie que tu peux venir. Tu ne peux pas travailler un jour ? Dis-le tôt, pas le jour même. Tu veux échanger un service ? Demande d’abord à ton responsable : beaucoup d’entreprises ont une règle pour ça. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.roster.p': "Je ne peux pas samedi. Je peux échanger ?", // nieuw, nalezen
+    'c.roster.s': "Ton planning a changé. Maintenant tu dois travailler samedi, mais tu ne peux pas. Que fais-tu ?", // nieuw, nalezen
+    'c.roster.o1': "Dis-le à ton responsable aujourd’hui, et demande à échanger.", // nieuw, nalezen
+    'c.roster.o2': "Ne dis rien, et reste chez toi samedi.", // nieuw, nalezen
+    'c.roster.o3': "Demande à un collègue d’y aller, et ne le dis à personne.", // nieuw, nalezen
+    'c.roster.w': "Si tu le dis tôt, ton responsable peut trouver quelqu’un d’autre. Ne pas venir sans rien dire, c’est vu comme très grave.", // nieuw, nalezen
+    'c.breaks': "Note tes heures", // nieuw, nalezen
+    'c.breaks.b': "Note chaque jour quand tu commences, quand tu t’arrêtes et combien de temps dure ta pause. Ta propre liste aide quand ton salaire n’est pas correct. Tu dois partir plus tôt, par exemple pour le médecin ? Demande à ton responsable à temps. Tu as travaillé plus longtemps que prévu ? Note-le aussi. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.breaks.p': "Je dois aller chez le médecin demain. Je peux partir plus tôt ?", // nieuw, nalezen
+    'c.breaks.s': "Demain, tu dois aller chez le médecin à trois heures. Ton service finit à cinq heures. Que fais-tu ?", // nieuw, nalezen
+    'c.breaks.o1': "Demande aujourd’hui à ton responsable si tu peux partir plus tôt.", // nieuw, nalezen
+    'c.breaks.o2': "Pars à trois heures, et explique-le le lendemain.", // nieuw, nalezen
+    'c.breaks.o3': "Annule le médecin, et finis ton service.", // nieuw, nalezen
+    'c.breaks.w': "Demander à temps permet à ton responsable d’organiser le travail. Partir sans demander, c’est vu comme pas fiable.", // nieuw, nalezen
   },
 };
 
