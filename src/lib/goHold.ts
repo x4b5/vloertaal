@@ -12,8 +12,9 @@ import type { Exercise } from './exercises';
  *  - only on a card that really shows the line (goHoldId): the Dutch course has none on its word cards.
  * Continue keeps its place while it waits (the button is only invisible), so nothing moves.
  */
-export const GO_DELAY_MS = 1500;
-export const GO_HOLD_MAX_MS = 5000;
+// Shorter since 23 November 2026 (the owner: the line and Continue came too late): 1500 -> 800 and 5000 -> 3000.
+export const GO_DELAY_MS = 800;
+export const GO_HOLD_MAX_MS = 3000;
 
 /** The cards whose Continue came once: they are not held again (a repeat, or going back). */
 const opened = new Set<string>();

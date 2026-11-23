@@ -12,7 +12,7 @@ import { getHelpLanguage } from '../src/i18n/all';
 import { uiEn } from '../src/i18n/types';
 import { uiNl } from '../src/i18n/nl';
 import { buildLesson, type Exercise } from '../src/lib/exercises';
-import { followSayAloud, SAY_FALLBACK_MS, SAY_SETTLE_MS, sayMode, type SayMode } from '../src/lib/sayAloud';
+import { followSayAloud, SAY_FALLBACK_MS, SAY_SETTLE_MS, sayMode, type SayMode, SAY_EARLY_MS } from '../src/lib/sayAloud';
 import { loadPictures } from '../src/pictures';
 
 /*
@@ -51,33 +51,36 @@ function follow(mode: SayMode, stillIn = 0, wasShown = false) {
 }
 
 describe('when the line appears', () => {
-  it('after the word has sounded, not before', () => {
+  it('the line comes SAY_EARLY_MS after the word starts to sound; the sign after its end', () => {
     vi.useFakeTimers();
     const t = follow('aloud');
     expect(t.shown).toEqual([]);
     t.say('het hesje', true);
-    vi.advanceTimersByTime(500);
+    vi.advanceTimersByTime(SAY_EARLY_MS - 1);
     expect(t.shown).toEqual([]);
-    t.say('het hesje', false);
-    vi.advanceTimersByTime(SAY_SETTLE_MS);
-    expect(t.shown).toEqual(['aloud']);
     vi.advanceTimersByTime(1);
+    expect(t.shown).toEqual(['aloud']);
+    expect(t.pulses()).toBe(0);
+    t.say('het hesje', false);
+    vi.advanceTimersByTime(SAY_SETTLE_MS + 1);
     expect(t.pulses()).toBe(1);
     t.stop();
     vi.useRealTimers();
   });
 
-  it('a play cut off by the next one (a tap on the speaker) waits for the end of that one', () => {
+  it('a play cut off by the next one (a tap on the speaker): the line once, the sign after the last end', () => {
     vi.useFakeTimers();
     const t = follow('aloud');
     t.say('het hesje', true);
     t.say('het hesje', false);
     t.say('het hesje', true);
     vi.advanceTimersByTime(1000);
-    expect(t.shown).toEqual([]);
-    t.say('het hesje', false);
-    vi.advanceTimersByTime(SAY_SETTLE_MS);
     expect(t.shown).toEqual(['aloud']);
+    expect(t.pulses()).toBe(0);
+    t.say('het hesje', false);
+    vi.advanceTimersByTime(SAY_SETTLE_MS + 1);
+    expect(t.shown).toEqual(['aloud']);
+    expect(t.pulses()).toBe(1);
     t.stop();
     vi.useRealTimers();
   });
