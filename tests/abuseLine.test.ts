@@ -3,6 +3,7 @@ import { cultureTips } from '../src/content/culture';
 import { ABUSE_LINE, ADVICE_LINE } from '../src/content/workTips';
 import { helpLanguageSources } from '../src/i18n/all';
 import { allForms } from '../src/i18n/types';
+import { translationPending } from '../src/content/translationPending';
 
 /**
  * Where the employer or agency may be the problem (exploitation, paying for a job, housing pressure, dismissal),
@@ -10,7 +11,9 @@ import { allForms } from '../src/i18n/types';
  */
 // c.harvest: piece rate below the minimum wage (u.kas, 30 October 2026).
 // c.road: called self-employed, but the company decides your hours and route (u.delivery, 5 November 2026).
-const ABUSE_TIPS = ['c.warning', 'c.gethelp', 'c.housing', 'c.rights', 'c.newjob', 'c.harvest', 'c.road'];
+// c.deductions and c.agencyhome: costs taken off the minimum wage, and housing through the agency
+// ("Werken via een uitzendbureau", 23 November 2026).
+const ABUSE_TIPS = ['c.warning', 'c.gethelp', 'c.housing', 'c.rights', 'c.newjob', 'c.harvest', 'c.road', 'c.deductions', 'c.agencyhome'];
 const tip = (id: string) => cultureTips.find((t) => t.id === id)!;
 /** "employer" in each help language (the old closing line named it). */
 const EMPLOYER: Record<string, RegExp> = {
@@ -35,7 +38,8 @@ describe('the closing line of the exploitation and dismissal tips', () => {
 
   it('says the same in every help language, every gender form, with the names kept in Latin', () => {
     for (const src of helpLanguageSources) {
-      for (const id of ABUSE_TIPS) {
+      // Not yet the tips whose translations follow in a later round (src/content/translationPending.ts).
+      for (const id of ABUSE_TIPS.filter((x) => !translationPending(x))) {
         const forms = allForms(src.gloss[`${id}.b`]);
         expect(forms.length, `${src.code} ${id}`).toBeGreaterThan(0);
         for (const f of forms) {

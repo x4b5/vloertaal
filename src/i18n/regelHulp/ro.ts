@@ -16,17 +16,21 @@ const lines: Record<string, string> = {
   'De wet geldt voor iedereen. Oneens met een besluit? Maak op tijd bezwaar.': 'Legea este pentru toți. Nu ești de acord cu o decizie? Fă contestație (bezwaar) la timp.',
   'Direct zeggen is hier normaal. Het gaat over het werk, niet over jou.': 'Aici e normal să spui lucrurile direct. E vorba despre muncă, nu despre tine.',
   'Discriminatie is verboden. Schrijf het op en meld het.': 'Discriminarea este interzisă. Scrie ce s-a întâmplat și raportează.',
+  'Door de sluis, elke keer. Ziek of een wond? Meld het voor je begint.': 'Prin ecluza de igienă, de fiecare dată. Bolnav sau cu o rană? Anunță înainte să începi.', // nieuw, nalezen
   'Drink op tijd. Een bespoten kas ga je pas in als het mag.': 'Bea apă la timp. Într-o seră stropită cu pesticide intri doar când ai voie.',
   'Een brief van de Belastingdienst, UWV of de gemeente: altijd openmaken.': 'O scrisoare de la Belastingdienst, UWV sau primărie (gemeente): deschide-o mereu.',
   'Een cv is kort en eerlijk. Ook zorg en vrijwilligerswerk tellen.': 'Un CV este scurt și sincer. Contează și îngrijirea cuiva și voluntariatul.',
+  'Een lint in de grond, een nest of een naald? Stop, en meld het.': 'O bandă în pământ, un cuib sau un ac? Oprește-te și anunță.', // nieuw, nalezen
   'Een sollicitatiemail: onderwerp, nette groet, waarom jij, en je cv erbij.': 'Un e-mail pentru un job: subiect, salut politicos, de ce tu, și CV-ul atașat.',
   'Eerst checken, dan pas doorsturen. Wie zegt het, en waar staat het nog meer?': 'Întâi verifici, abia apoi trimiți mai departe. Cine spune asta și unde mai scrie?',
   'Eerst de POK tekenen. Dan pas beginnen met je stage.': 'Întâi semnezi POK (contractul de practică). Abia apoi începi stagiul.',
+  'Eerst een VOG en het register. Er kijkt of luistert altijd iemand mee.': 'Întâi cazierul (VOG) și înscrierea în registru (personenregister). Mereu te poate vedea sau auzi cineva.', // nieuw, nalezen
   'Eerst iets goeds. Dan rustig en concreet wat beter kan.': 'Întâi spui ceva bun. Apoi, calm și concret, ce se poate face mai bine.',
   'Eerst je vaste lasten. Dan een beetje sparen. Dan pas de rest.': 'Întâi plătești cheltuielile fixe. Apoi economisești puțin. Abia apoi restul.',
   'Eerst kijken, dan beginnen. Loop nooit onder een hangende last.': 'Întâi te uiți, apoi începi. Nu trece niciodată pe sub o încărcătură care atârnă.',
   'Eerst lezen, dan tekenen.': 'Întâi citești, apoi semnezi.',
   'Eerst lezen, vragen en klaarleggen. Dan pas beginnen.': 'Întâi citești, întrebi și pregătești totul. Abia apoi începi.',
+  'Elke bezoeker meldt zich. Gegevens van collega\'s geef je niet zomaar.': 'Fiecare vizitator se înregistrează. Datele colegilor nu le dai oricui.', // nieuw, nalezen
   'Extra werk? Eerst moet de klant ja zeggen.': 'Muncă în plus? Întâi clientul trebuie să spună da.',
   'Gaat het niet goed op stage? Praat erover: eerst op je werk, dan met school.': 'Nu merge bine la stagiu? Vorbește despre asta: întâi la locul de muncă, apoi cu școala.',
   'Gedetacheerd? Vraag je werkgever om je A1-verklaring.': 'Lucrezi aici prin detașare? Cere-i angajatorului formularul A1 (A1-verklaring).',
@@ -41,12 +45,16 @@ const lines: Record<string, string> = {
   'Het oneens zijn mag. Zeg het rustig, met een reden.': 'Ai voie să nu fii de acord. Spune asta calm, cu un motiv.',
   'Hooguit 12 uur per dienst. Ben je jonger dan 18? Dan minder.': 'Cel mult 12 ore pe tură. Ai sub 18 ani? Atunci mai puțin.',
   'Iedereen heeft dezelfde rechten. Discriminatie mag niet, ook niet buiten je werk.': 'Toți oamenii au aceleași drepturi. Discriminarea este interzisă, și în afara muncii.',
+  'Iets kapot? Meld het. Repareer alleen wat je geleerd hebt.': 'Ceva stricat? Anunță. Repară doar ce ai învățat să repari.', // nieuw, nalezen
   'Jarig? Dan trakteer je zelf.': 'E ziua ta? Atunci tu le aduci colegilor ceva bun de mâncare.',
   'Je DigiD is alleen van jou. Geef hem aan niemand.': 'DigiD-ul tău este doar al tău. Nu-l da nimănui.',
   'Je paspoort en je bankpas geef je nooit af.': 'Pașaportul și cardul bancar nu le dai niciodată altcuiva.',
   'Je werk stopt? Check je laatste loon. Regel je huis en je zorgverzekering.': 'Ți se termină munca? Verifică ultimul salariu. Rezolvă locuința și asigurarea de sănătate (zorgverzekering).',
   'Je werktijd is: eindtijd min begintijd, min je pauze.': 'Timpul tău de lucru este: ora de final minus ora de început, minus pauza.',
   'Klaar? Ruim op en laat het nakijken. Zeg wat klaar is en wat niet.': 'Ai terminat? Fă ordine și cere să fie verificat. Spune ce e gata și ce nu.',
+  'Loop nooit achter een wagen die achteruitrijdt. Zorg dat de chauffeur je ziet.': 'Nu merge niciodată în spatele unui vehicul care dă înapoi. Asigură-te că șoferul te vede.', // nieuw, nalezen
+  'Maaien of zagen? Draag je beschermende spullen, en houd mensen op afstand.': 'Cosești sau tai? Poartă echipamentul de protecție și ține oamenii la distanță.', // nieuw, nalezen
+  'Medicijnen alleen met toestemming op papier. Zorgen over een kind? Volg de meldcode.': 'Medicamente doar cu acord în scris. Îți faci griji pentru un copil? Urmează procedura (meldcode).', // nieuw, nalezen
   'Meer dan 5,5 uur werken? Dan heb je recht op pauze.': 'Lucrezi mai mult de 5,5 ore? Atunci ai dreptul la pauză.',
   'Meld elk ongeluk, ook een klein ongeluk.': 'Raportează orice accident, chiar și unul mic.',
   'Meng nooit schoonmaakmiddelen. Lees eerst het etiket.': 'Nu amesteca niciodată produse de curățenie. Citește întâi eticheta.',
@@ -55,6 +63,7 @@ const lines: Record<string, string> = {
   'Na een nachtdienst heb je recht op lange rust.': 'După o tură de noapte ai dreptul la o odihnă lungă.',
   'Nieuw werk? Geef het meteen door: aan de gemeente of UWV, en bij toeslagen.': 'Ai un loc de muncă nou? Anunță imediat: la primărie (gemeente) sau UWV, și la alocații (toeslagen).',
   'Of je mag stemmen, hangt af van de verkiezing en je nationaliteit. Vraag het de gemeente.': 'Dacă ai voie să votezi depinde de alegeri și de cetățenia ta. Întreabă la primărie (gemeente).',
+  'Onbekend afval? Niet openmaken, niet ruiken. Grijp nooit in een pers.': 'Deșeu necunoscut? Nu-l deschide, nu-l mirosi. Nu băga niciodată mâna în presă.', // nieuw, nalezen
   'Onder een auto? Alleen als hij goed vaststaat, op de brug of op bokken.': 'Sub o mașină? Doar dacă stă bine fixată, pe elevator sau pe capre.',
   'Online gekocht? Dan heb je meestal 14 dagen bedenktijd. Bewaar je bonnetje.': 'Ai cumpărat online? De obicei ai 14 zile să te răzgândești. Păstrează bonul.',
   'Onveilig? Zeg het meteen. Bij groot gevaar mag je stoppen.': 'Nu e sigur? Spune imediat. Dacă e un pericol mare, ai voie să te oprești.',
@@ -90,7 +99,10 @@ const lines: Record<string, string> = {
   'Werk kwijt? Vraag binnen 1 week WW aan.': 'Ți-ai pierdut munca? Cere WW în cel mult 1 săptămână.',
   'Werk nooit aan iets onder stroom. Eerst moet de stroom eraf, door iemand die dat mag.': 'Nu lucra niciodată la ceva care e sub curent. Întâi trebuie oprit curentul, de cineva care are voie să facă asta.',
   'Werk schoon, koel goed, en zet de datum erop.': 'Lucrează curat, păstrează bine la rece și scrie data pe produs.',
+  'Wissel nooit een ingrediënt. Schrijf op wat je echt meet.': 'Nu înlocui niciodată un ingredient. Notează ce măsori cu adevărat.', // nieuw, nalezen
   'Wonen via het bureau? Check het keurmerk en je loonstrook.': 'Locuiești prin agenție? Verifică marca de calitate (keurmerk) și fluturașul de salariu (loonstrook).',
+  'Zie je diefstal? Bel de politie. Fouilleer niemand, en gebruik geen grof geweld.': 'Vezi un furt? Sună la poliție. Nu percheziționa pe nimeni și nu folosi forță brutală.', // nieuw, nalezen
+  'Zie je inbraak of gevaar op je ronde? Ga niet alleen naar binnen. Meld het.': 'Vezi o spargere sau un pericol în timpul rondului? Nu intra singur. Anunță.', // nieuw, nalezen
   'Ziek en naar huis? Vraag het eerst, en blijf bereikbaar.': 'Te-ai îmbolnăvit și vrei să pleci acasă? Întreabă întâi și rămâi de găsit.',
   'Ziek? Bel zelf, vóór je dienst begint.': 'Te-ai îmbolnăvit? Sună tu, înainte să înceapă tura.',
   'Ziek? Je krijgt meestal minstens 70 procent van je loon.': 'Te-ai îmbolnăvit? De obicei primești cel puțin 70 la sută din salariu.',

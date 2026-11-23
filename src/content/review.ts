@@ -95,6 +95,13 @@ export const relatedUnits: Record<string, [string, string]> = {
   'u.recycling': ['u.collection', 'u.safety'],
   'u.toddlers': ['u.daycare', 'u.care'],
   'u.daycare': ['u.toddlers', 'u.emergency'],
+  // The second own units of Schoonmaak, Horeca, Zorg and Winkel (23 November 2026): their sector's
+  // first unit, and the basis unit the work leans on. "Werken via een uitzendbureau": the contract and pay.
+  'u.housekeeping': ['u.clean', 'u.safety'],
+  'u.cooking': ['u.horeca', 'u.safety'],
+  'u.carework': ['u.care', 'u.health'],
+  'u.shopfloor': ['u.shop', 'u.numbers'],
+  'u.uitzend': ['u.contract', 'u.pay'],
 };
 
 /**
@@ -155,6 +162,14 @@ const relatedWords: Record<string, string[]> = {
   'u.recycling': ['w.noodstop', 'w.batterij'],
   'u.toddlers': ['w.slapen', 'w.opruimen'],
   'u.daycare': ['w.koorts', 'w.allergie'],
+  // Sanitair, hotel en machines: the bucket and blocked; De keuken en de bediening: the knife and the
+  // chef; Verzorgen en thuiszorg: the wheelchair and the brake; Kassa, voorraad en sluiten: the receipt
+  // and broken; Werken via een uitzendbureau: the payslip and the rental contract (all in their sentences or chats).
+  'u.housekeeping': ['w.emmer', 'w.verstopt'],
+  'u.cooking': ['w.mes', 'w.chef'],
+  'u.carework': ['w.rolstoel', 'w.rem'],
+  'u.shopfloor': ['w.bonnetje', 'w.kapot'],
+  'u.uitzend': ['w.loonstrook', 'w.huurcontract'],
   // Goed communiceren: angry (l.speakup) and slowly (l.understand), what the lessons are about.
   'u.communicate': ['w.boos', 'w.langzaam'],
   // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).

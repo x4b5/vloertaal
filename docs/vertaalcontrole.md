@@ -2268,3 +2268,36 @@ Vragen voor een moedertaalspreker:
 - `c.greensafe, c.greensafe.b/.s/.w`: 'засоби для обприскування' / 'хімікати' voor spuitmiddelen: begrijpelijk, of 'пестициди' / 'отрутохімікати'?
 - `s.findwork.1`: 'податися на роботу': acceptabel, of 'подати заявку / резюме'? (stond al open)
 - `c.delay.b`: 'не телефонуй із телефоном у руці' klinkt dubbel; beter 'не дзвони, тримаючи телефон у руці'?
+
+## Vijf nieuwe onderwerpen (23 november 2026)
+
+De twintig lessen van Schoonmaak 2, Horeca 2, Zorg 2, Winkel 2 en "Werken via een uitzendbureau" zijn met AI vertaald in alle 14 hulptalen. Elke regel heeft `// nieuw, nalezen`. Wat een moedertaalspreker het eerst moet nalezen, per taal:
+
+### es
+- facen = encarar; inlener = empresa usuaria; inhouding = descuento; pinapparaat = datáfono. c.observing.b "escribidlo juntos" (vosotros) nalezen.
+### pt
+- facen = arrumar a frente; inlener = empresa utilizadora; toiletborstel = piaçaba; "a copa" voor spoelkeuken én pantry: verwarrend?
+### ro
+- inlener = firma utilizatoare; facen = a aranja în față; afschrijven = a scoate din gestiune (te formeel?); overval = jaful armat.
+### pl
+- inlener = firma użytkownik; facen = frontować; uitzendbeding = klauzula agencyjna (omschrijving); huismeester = opiekun mieszkania.
+### uk
+- inlener = компанія-користувач; мийка = spoelkeuken én gootsteen; facen = робити фейсинг; huismeester = комендант.
+### bg
+- inlener = предприятие ползвател; drukplek = декубитус (medisch); derving = фирата.
+### fr
+- client = résident (zorg) / client(e) (thuiszorg); inlener = entreprise utilisatrice; facen = faire le facing; vochtlijst = fiche des boissons.
+### ar
+- inlener = الشركة المستخدِمة; x-vormen van lange tips stijf (c.homecare.b, c.hirer.b, c.agencyhome.b); c.shopclose.w door de lead aangepast naar "حياة الإنسان لا تُعوَّض".
+### tr
+- inlener = kullanıcı şirket; facen = rafı düzeltmek; pass bleef "pass"; afschrijven = kayıttan düşmek.
+### fa
+- inlener = شرکت به‌کارگیرنده; inhouding = کسر از حقوق (formeel?).
+### prs
+- inlener = کمپنی کارگیرنده; wastafel = دستشویی, toilet = تشناب.
+### ti
+- inlener = ተቐባሊ ትካል; fase = ደረጃ; inhouding = ቁርጸት; Italiaanse leenwoorden (ላቫቦ, ሽጎማኖ, ኮቦርታ, ካዝና); overval = ዝምቢ.
+### so
+- inlener = shirkadda kiraysata; inhouding = jaridda; tegoedbon = warqadda deynta ("deyn" kan als schuld gelezen worden); kluis khasnadda adag vs kassa khasnadda.
+### de
+- inlener = Entleiher; vaste kracht = Stammkraft; ontstopper = Pömpel; c.deductions.b inhoud checken.

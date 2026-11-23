@@ -87,6 +87,13 @@ export const unitIcons: Record<string, string> = {
   'u.recycling': 'w.milieustraat',
   'u.toddlers': 'w.knuffel',
   'u.daycare': 'w.ouder',
+  // The second own units of Schoonmaak, Horeca, Zorg and Winkel, and "Werken via een uitzendbureau"
+  // (23 November 2026; placeholder drawings for now).
+  'u.housekeeping': 'w.schrobzuigmachine',
+  'u.cooking': 'w.koksmes',
+  'u.carework': 'w.douchestoel',
+  'u.shopfloor': 'w.kassalade',
+  'u.uitzend': 'w.inlener',
 };
 
 /**
@@ -124,6 +131,13 @@ export const rulesUnitIcons: Record<string, string> = {
   'r.kas': 'w.kas',
   'r.techniek': 'w.boor',
   'r.werkplaats': 'w.garage',
+  // The six sectors of 23 November 2026: the drawing of the sector's first Taal unit.
+  'r.groen': 'w.grasmaaier',
+  'r.facilitair': 'w.balie',
+  'r.beveiliging': 'w.slagboom',
+  'r.voeding': 'w.hygienesluis',
+  'r.afval': 'w.vuilniswagen',
+  'r.kinderopvang': 'w.knuffel',
 };
 
 /** A unit's drawn icon in either track (a Belgian rules unit: its Dutch twin's), or '' (then its emoji). */

@@ -106,6 +106,17 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['achteruitrijden', 9],
   ['gevarensymbool', 7],
   ['vierogenprincipe', [4, 8]],
+  // The five units of 23 November 2026 (Schoonmaak, Horeca, Zorg, Winkel, uitzendwerk).
+  ['schrobzuigmachine', [6, 10]],
+  ['veiligheidsblad', 11],
+  ['lichtschakelaar', 5],
+  ['allergenenlijst', 10],
+  ['wijkverpleegkundige', [4, 12]],
+  ['personeelsaankoop', 10],
+  ['tassencontrole', 6],
+  ['kassamedewerker', [5, 9]],
+  ['bedrijfsregels', 8],
+  ['contactpersoon', 7],
 ];
 
 export const SHY = '\u00ad';

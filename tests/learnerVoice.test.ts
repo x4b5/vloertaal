@@ -216,6 +216,27 @@ const PENDING_RECORDING = new Set<string>([
   'Ja, ze heeft een bult. Ik bel haar moeder.',
   'Hij is erg warm. Ik ga hem temperaturen.',
   'Ja, maar zeg het eerst tegen een collega.',
+  // The five units of 23 November 2026 (Schoonmaak, Horeca, Zorg, Winkel, uitzendwerk):
+  'Nog niet. Er is een toilet verstopt.',
+  'Nog vier. Dan is mijn lijst klaar.',
+  'Nee, meer is niet beter. Ik gebruik de maatbeker.',
+  'Ja. Ik stuur je een bericht als ik klaar ben.',
+  'Ja, chef. In ringen of in blokjes?',
+  'Dat weet ik niet zeker. Ik kijk op de allergenenlijst.',
+  'Het staat op de pass. Ik breng het nu.',
+  'Ja hoor. Ik pak het pinapparaat.',
+  'Dat is goed. Zal ik u aan de wastafel helpen?',
+  'Ja. Ze heeft vandaag bijna niet geplast.',
+  'Goedemorgen, de thuiszorg. Mag ik binnenkomen?',
+  'Met het glijlaken lukt dat. Ik pak het even.',
+  'Dat kan. Heeft u het bonnetje nog?',
+  'Bijna. Ik moet nog facen.',
+  'Ja hoor. Hier is mijn bonnetje.',
+  'Sorry, we zijn gesloten. Morgen zijn we om acht uur open.',
+  'Ja. Hoe laat moet ik er zijn?',
+  'Oké. Heeft u ander werk voor mij?',
+  'Mag dat? Dat vraag ik eerst na.',
+  'Dat is heel kort. Ik vraag eerst advies.',
 ]);
 
 

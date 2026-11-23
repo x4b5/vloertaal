@@ -258,6 +258,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "السؤال هل سقطت: نعم، ما عندها، وبمن يكون الاتصال.", // nieuw, nalezen
     'c.sickchild.a.why': "السؤال كيف حاله: ما يُرى، وما العمل.", // nieuw, nalezen
     'c.grouprules.a.why': "السؤال هل يُسمح بالخروج بشكل فردي: نعم، لكن بعد إخبار زميل.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "السؤال هل انتهى العمل: ليس بعد، والسبب.", // nieuw, nalezen
+    'c.hotelroom.a.why': "السؤال كم بقي: العدد، ومتى ينتهي العمل.", // nieuw, nalezen
+    'c.dosing.a.why': "طلب وضع مادة أكثر: لا، الأكثر ليس أفضل، وما يُستعمل.", // nieuw, nalezen
+    'c.officenight.a.why': "السؤال هل العمل بدون أحد آخر: نعم، وستُرسل رسالة.", // nieuw, nalezen
+    'c.knives.a.why': "طلب التقطيع: نعم يا شيف، وسؤال عن الطريقة.", // nieuw, nalezen
+    'c.rawcooked.a.why': "السؤال هل هي خالية من الغلوتين: لا يقين، لذلك النظر في القائمة.", // nieuw, nalezen
+    'c.pass.a.why': "السؤال أين الطعام: على منضدة التقديم، وسيُحضر الآن.", // nieuw, nalezen
+    'c.bill.a.why': "طلب الدفع بشكل منفصل: نعم، وإحضار جهاز الدفع.", // nieuw, nalezen
+    'c.washing.a.why': "المستفيد من الرعاية يقول لا: لا بأس، وعرض شيء آخر.", // nieuw, nalezen
+    'c.observing.a.why': "السؤال هل هناك شيء خاص: نعم، وما هو بالضبط.", // nieuw, nalezen
+    'c.homecare.a.why': "السؤال من هناك: تحية، ومن القادم، وطلب الإذن بالدخول.", // nieuw, nalezen
+    'c.liftaids.a.why': "طلب القيام بذلك بدون مساعدة: نعم، مع ملاءة الانزلاق، وإحضارها.", // nieuw, nalezen
+    'c.returns.a.why': "طلب إرجاع منتج: نعم، وسؤال عن الإيصال.", // nieuw, nalezen
+    'c.facing.a.why': "السؤال هل انتهى العمل: تقريباً، وما بقي.", // nieuw, nalezen
+    'c.shrink.a.why': "طلب النظر في الحقيبة: نعم، وإظهار الإيصال.", // nieuw, nalezen
+    'c.shopclose.a.why': "طلب الدخول: عذراً، مغلق، ومتى يفتح المتجر من جديد.", // nieuw, nalezen
+    'c.hirer.a.why': "طلب البدء في مكان جديد: نعم، وسؤال عن الوقت.", // nieuw, nalezen
+    'c.phases.a.why': "خبر توقّف العمل: حسناً، وطلب عمل آخر.", // nieuw, nalezen
+    'c.deductions.a.why': "خبر عن خصم: السؤال هل هو مسموح، والتحقّق.", // nieuw, nalezen
+    'c.agencyhome.a.why': "طلب المغادرة قريباً: هذا قصير، وطلب النصيحة أولاً.", // nieuw, nalezen
   },
 };
 

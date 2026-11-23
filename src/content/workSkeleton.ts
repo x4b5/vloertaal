@@ -38,6 +38,12 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.agency", title: "Working through an agency" },
       { id: "l.permit", title: "Papers, integration and your job" },
   ] },
+  { id: "u.uitzend", title: "Temp agency work", titleNl: "Werken via een uitzendbureau", emoji: "🔁", color: "#2e5c9a", lessons: [
+      { id: "l.hirer", title: "The agency and the hirer" },
+      { id: "l.phases", title: "Your contract and the phases" },
+      { id: "l.deductions", title: "Pay and deductions" },
+      { id: "l.agencyhome", title: "Housing and help" },
+  ] },
   { id: "u.papers", title: "Housing and papers", titleNl: "Wonen en papieren", emoji: "🪪", color: "#a35a2a", lessons: [
       { id: "l.bsn", title: "Your BSN and papers" },
       { id: "l.housing", title: "Housing" },
@@ -317,5 +323,29 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.childsafety", title: "Safety in the group" },
       { id: "l.sickchild", title: "A sick child and allergies" },
       { id: "l.grouprules", title: "The group and the rules" },
+  ] },
+  { id: "u.housekeeping", title: "Toilets, hotel rooms and machines", titleNl: "Sanitair, hotel en machines", emoji: "🛁", color: "#16808f", lessons: [
+      { id: "l.sanitary", title: "Toilets and washbasins" },
+      { id: "l.hotelroom", title: "Hotel rooms" },
+      { id: "l.dosing", title: "Products and machines" },
+      { id: "l.officenight", title: "Offices, early or late" },
+  ] },
+  { id: "u.cooking", title: "The kitchen and service", titleNl: "De keuken en de bediening", emoji: "🧑‍🍳", color: "#a55a1c", lessons: [
+      { id: "l.knives", title: "Knives and cutting" },
+      { id: "l.rawcooked", title: "Raw, cooked and allergens" },
+      { id: "l.pass", title: "The dish room and the pass" },
+      { id: "l.bill", title: "Courses and the bill" },
+  ] },
+  { id: "u.carework", title: "Personal care and home care", titleNl: "Verzorgen en thuiszorg", emoji: "🤲", color: "#8e44ad", lessons: [
+      { id: "l.washing", title: "Washing and dressing" },
+      { id: "l.observing", title: "Observing and reporting" },
+      { id: "l.homecare", title: "Home care" },
+      { id: "l.liftaids", title: "Lifting aids and safety" },
+  ] },
+  { id: "u.shopfloor", title: "Till, stock and closing", titleNl: "Kassa, voorraad en sluiten", emoji: "🏪", color: "#1f8a70", lessons: [
+      { id: "l.returns", title: "Returns and the till" },
+      { id: "l.facing", title: "Facing and the cold products" },
+      { id: "l.shrink", title: "Damage and theft" },
+      { id: "l.shopclose", title: "Closing the shop" },
   ] },
 ];

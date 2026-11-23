@@ -28,10 +28,13 @@ type Text = { file: string; where: string; field: string; text: string };
 type Choice = { file: string; where: string; situation: string; options: RuleOption[] };
 
 const SECTOR = new Set(['r.build', 'r.care', 'r.horeca', 'r.clean', 'r.factory', 'r.warehouse', 'r.kas', 'r.techniek', 'r.werkplaats']);
+// The six sectors of 23 November 2026 (curriculum, deel 9) are in their own file.
+const SECTOR2 = new Set(['r.groen', 'r.facilitair', 'r.beveiliging', 'r.voeding', 'r.afval', 'r.kinderopvang']);
 const fileOf = (unitId: string) =>
-  isBeId(unitId) ? `src/content/regels/be/units/${SECTOR.has(nlId(unitId)) ? 'sector-' : ''}${nlId(unitId).slice(2)}.ts`
+  isBeId(unitId) ? `src/content/regels/be/units/${SECTOR.has(nlId(unitId)) || SECTOR2.has(nlId(unitId)) ? 'sector-' : ''}${nlId(unitId).slice(2)}.ts`
   : unitId === zlRegelsUnit.id ? 'src/content/regio/zuid-limburg-regels.ts'
   : SECTOR.has(unitId) ? 'src/content/regels/units/sector.ts'
+  : SECTOR2.has(unitId) ? 'src/content/regels/units/sector2.ts'
   : `src/content/regels/units/${unitId.slice(2)}.ts`;
 
 const texts: Text[] = [];

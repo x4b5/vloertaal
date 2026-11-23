@@ -2972,6 +2972,431 @@ const daycareUnit = unit('daycare', 'Parents, safety and the group', 'Ouders, ve
   ),
 ]);
 
+// ---- Toilets, hotel rooms and machines (the owner's request, 23 November 2026) ----
+// The second own unit of the sector Schoonmaak (src/content/sectors.ts): toilets and washbasins,
+// hotel rooms (the bed, the towels, the room list), products and machines (the dose, the label,
+// the scrubber-dryer), and offices early or late, alone in the building. In the path of a learner
+// who chose Schoonmaak it comes right after "Schoonmaken"; in every other course it is appended at
+// the very end (workUnits below), so no existing course changes. Already words of other lessons,
+// used here in a sentence or the chat only: "de wc", "verstopt", "de verdieping", "de kraan",
+// "het etiket", "de emmer", "de prullenbak", "het bureau" and "het licht". The drawings
+// (placeholders for now): src/pictures/groupSchoonmaak2.tsx.
+
+const housekeepingUnit = unit('housekeeping', 'Toilets, hotel rooms and machines', 'Sanitair, hotel en machines', '🛁', '#16808f', [
+  lesson(
+    'sanitary',
+    'Toilets and washbasins',
+    [
+      ['wastafel', 'de wastafel', 'the washbasin (the sink in a bathroom or toilet)', '🚰'],
+      ['toiletpot', 'de toiletpot', 'the toilet bowl', '🚽'],
+      ['toiletborstel', 'de toiletborstel', 'the toilet brush', '🪥'],
+      ['urinoir', 'het urinoir', 'the urinal', '🚹'],
+      ['kalk', 'de kalk', 'the limescale (white stuff from water on taps and tiles)', '⚪'],
+      ['ontstopper', 'de ontstopper', 'the plunger (a tool for a blocked toilet or drain)', '🪠'],
+    ],
+    [
+      ['Ik doe eerst de wastafels, dan de toiletten.', 'I do the washbasins first, then the toilets.'],
+      ['Er zit kalk op de kraan.', 'There is limescale on the tap.'],
+      ['Het toilet op de eerste verdieping is verstopt.', 'The toilet on the first floor is blocked.'],
+    ],
+    [['Zijn de toiletten klaar?', 'Are the toilets done?'], ['Nog niet. Er is een toilet verstopt.', 'Not yet. One toilet is blocked.']],
+  ),
+  lesson(
+    'hotelroom',
+    'Hotel rooms',
+    [
+      ['laken', 'het laken', 'the sheet (on a bed)', '⬜'],
+      ['kussensloop', 'de kussensloop', 'the pillowcase', '☁️'],
+      ['dekbed', 'het dekbed', 'the duvet', '🛏️'],
+      ['handdoek', 'de handdoek', 'the towel', '🧖'],
+      ['kamerlijst', 'de kamerlijst', 'the room list (the rooms you must do today)', '📋'],
+      ['opmaken', 'opmaken', 'to make (a bed)', '🛌'],
+    ],
+    [
+      ['Ik maak het bed op met schone lakens.', 'I make the bed with clean sheets.'],
+      ['Leg twee schone handdoeken in de badkamer.', 'Put two clean towels in the bathroom.'],
+      ['Kamer twaalf is klaar. Ik ga naar dertien.', 'Room twelve is done. I am going to thirteen.'],
+    ],
+    [['Hoeveel kamers heb je nog?', 'How many rooms do you have left?'], ['Nog vier. Dan is mijn lijst klaar.', 'Four more. Then my list is done.']],
+  ),
+  lesson(
+    'dosing',
+    'Products and machines',
+    [
+      ['doseren', 'doseren', 'to measure out (to use the right amount of a product)', '⚖️'],
+      ['maatbeker', 'de maatbeker', 'the measuring cup', '🥄'],
+      ['sprayflacon', 'de sprayflacon', 'the spray bottle', '💦'],
+      ['concentraat', 'het concentraat', 'the concentrate (a strong product that you mix with water)', '🫙'],
+      ['veiligheidsblad', 'het veiligheidsblad', 'the safety data sheet (it says the dangers of a product, and what to do)', '📄'],
+      ['schrobzuigmachine', 'de schrobzuigmachine', 'the scrubber-dryer (a machine that scrubs the floor and sucks it dry)', '🚜'],
+    ],
+    [
+      ['Doe één dop in een emmer water.', 'Put one capful in a bucket of water.'],
+      ['Lees eerst het etiket.', 'Read the label first.'],
+      ['De schrobzuigmachine moet aan de lader.', 'The scrubber-dryer must go on the charger.'],
+    ],
+    [['Doe er wat meer middel in. Dan wordt het schoner.', 'Put a bit more product in. Then it gets cleaner.'], ['Nee, meer is niet beter. Ik gebruik de maatbeker.', 'No, more is not better. I use the measuring cup.']],
+  ),
+  lesson(
+    'officenight',
+    'Offices, early or late',
+    [
+      ['toetsenbord', 'het toetsenbord', 'the keyboard', '⌨️'],
+      ['papierbak', 'de papierbak', 'the paper bin (for old paper)', '📰'],
+      ['lichtschakelaar', 'de lichtschakelaar', 'the light switch', '💡'],
+      ['pantry', 'de pantry', 'the pantry (the small kitchen in an office)', '🫖'],
+      ['deurmat', 'de deurmat', 'the doormat (the mat at the entrance)', '🟫'],
+      ['alleenwerken', 'alleen werken', 'to work alone (nobody else is in the building)', '🧍'],
+    ],
+    [
+      ['Ik leeg de prullenbakken en de papierbak.', 'I empty the bins and the paper bin.'],
+      ['Ik raak de papieren op het bureau niet aan.', 'I do not touch the papers on the desk.'],
+      ['Ik doe het licht uit als ik klaar ben.', 'I switch off the light when I am finished.'],
+    ],
+    [['Werk je vanavond alleen in het gebouw?', 'Are you working alone in the building tonight?'], ['Ja. Ik stuur je een bericht als ik klaar ben.', 'Yes. I will send you a message when I am done.']],
+  ),
+]);
+
+// ---- The kitchen and service (the owner's request, 23 November 2026) ----
+// The second own unit of the sector Horeca: knives and cutting (the chef's orders), raw and cooked
+// food and the allergen list, the dish room and the pass, and the courses and the bill. In the path
+// of a learner who chose Horeca it comes right after "In de horeca"; in every other course it is
+// appended at the very end. Already words of other lessons, used here in a sentence or the chat
+// only: "het mes", "snijden", "de chef", "de koelcel", "de gluten", "het bord", "de tafel", "de
+// gast", "de rekening" and "pinnen". The drawings (placeholders for now): src/pictures/groupHoreca2.tsx.
+
+const cookingUnit = unit('cooking', 'The kitchen and service', 'De keuken en de bediening', '🧑‍🍳', '#a55a1c', [
+  lesson(
+    'knives',
+    'Knives and cutting',
+    [
+      ['koksmes', 'het koksmes', 'the chef’s knife (a big kitchen knife)', '🔪'],
+      ['dunschiller', 'de dunschiller', 'the vegetable peeler', '🥕'],
+      ['schillen', 'schillen', 'to peel', '🥔'],
+      ['hakken', 'hakken', 'to chop (to cut very small)', '🧅'],
+      ['raspen', 'raspen', 'to grate', '🧀'],
+      ['blokjes', 'de blokjes', 'the cubes (small square pieces)', '🎲'],
+    ],
+    [
+      ['Snijd de wortels in blokjes.', 'Cut the carrots into cubes.'],
+      ['Leg het mes niet in de gootsteen.', 'Do not put the knife in the sink.'],
+      ['Hak de peterselie fijn.', 'Chop the parsley finely.'],
+    ],
+    [['Kun je de uien snijden?', 'Can you cut the onions?'], ['Ja, chef. In ringen of in blokjes?', 'Yes, chef. In rings or in cubes?']],
+  ),
+  lesson(
+    'rawcooked',
+    'Raw, cooked and allergens',
+    [
+      ['rauw', 'rauw', 'raw (not cooked)', '🍣'],
+      ['gaar', 'gaar', 'cooked, done (ready to eat)', '🍗'],
+      ['afdekken', 'afdekken', 'to cover (with a lid or foil)', '🫕'],
+      ['kleurcode', 'de kleurcode', 'the colour code (one colour of board and knife for each kind of food)', '🎨'],
+      ['allergenenlijst', 'de allergenenlijst', 'the allergen list (it says what is in each dish)', '📑'],
+      ['glutenvrij', 'glutenvrij', 'gluten-free (without gluten)', '🌾'],
+    ],
+    [
+      ['Rauw vlees gaat onderin de koelkast.', 'Raw meat goes at the bottom of the fridge.'],
+      ['Is de kip al gaar?', 'Is the chicken done yet?'],
+      ['Dek de bakken af in de koelcel.', 'Cover the containers in the cold store.'],
+    ],
+    [['Is deze saus glutenvrij?', 'Is this sauce gluten-free?'], ['Dat weet ik niet zeker. Ik kijk op de allergenenlijst.', 'I am not sure. I will check the allergen list.']],
+  ),
+  lesson(
+    'pass',
+    'The dish room and the pass',
+    [
+      ['pass', 'de pass', 'the pass (the counter where the plates wait for the waiter)', '🔔'],
+      ['bon', 'de bon', 'the order ticket (the order from the waiter to the kitchen)', '🎫'],
+      ['spoelkeuken', 'de spoelkeuken', 'the dish room (where the washing-up is done)', '🚿'],
+      ['vaatwaskorf', 'de vaatwaskorf', 'the dish rack (the basket that goes into the dishwasher)', '🧺'],
+      ['voorspoelen', 'voorspoelen', 'to pre-rinse (to rinse before the machine)', '💧'],
+      ['warmhoudlamp', 'de warmhoudlamp', 'the heat lamp (it keeps the plates warm)', '🔆'],
+    ],
+    [
+      ['Tafel acht staat op de pass.', 'Table eight is on the pass.'],
+      ['Er komen twee nieuwe bonnen binnen.', 'Two new order tickets are coming in.'],
+      ['Spoel de borden eerst voor.', 'Pre-rinse the plates first.'],
+    ],
+    [['Waar blijft tafel twaalf?', 'Where is table twelve?'], ['Het staat op de pass. Ik breng het nu.', 'It is on the pass. I am bringing it now.']],
+  ),
+  lesson(
+    'bill',
+    'Courses and the bill',
+    [
+      ['voorgerecht', 'het voorgerecht', 'the starter (the first course)', '🥗'],
+      ['hoofdgerecht', 'het hoofdgerecht', 'the main course', '🍝'],
+      ['nagerecht', 'het nagerecht', 'the dessert', '🍰'],
+      ['reservering', 'de reservering', 'the reservation (a table booked before)', '📖'],
+      ['pinapparaat', 'het pinapparaat', 'the card machine', '💳'],
+      ['apartbetalen', 'apart betalen', 'to pay separately (each person pays for himself)', '➗'],
+    ],
+    [
+      ['Heeft u gereserveerd?', 'Do you have a reservation?'],
+      ['Wilt u samen of apart betalen?', 'Would you like to pay together or separately?'],
+      ['Zal ik het hoofdgerecht nu brengen?', 'Shall I bring the main course now?'],
+    ],
+    [['Mogen we apart betalen?', 'May we pay separately?'], ['Ja hoor. Ik pak het pinapparaat.', 'Yes, sure. I will get the card machine.']],
+  ),
+]);
+
+// ---- Personal care and home care (the owner's request, 23 November 2026) ----
+// The second own unit of the sector Zorg: washing and dressing (dignity, asking first), observing
+// and reporting (facts in the care file), home care (the key safe, the care plan) and lifting aids
+// and safety. In the path of a learner who chose Zorg it comes right after "In de zorg"; in every
+// other course it is appended at the very end. Already words of other lessons, used here in a
+// sentence or the chat only: "wassen", "de cliënt", "de verpleegkundige", "de tillift", "het bed",
+// "de rolstoel", "de rem" and "de sleutel". The drawings (placeholders for now):
+// src/pictures/groupZorg2.tsx.
+
+const careworkUnit = unit('carework', 'Personal care and home care', 'Verzorgen en thuiszorg', '🤲', '#8e44ad', [
+  lesson(
+    'washing',
+    'Washing and dressing',
+    [
+      ['washandje', 'het washandje', 'the washcloth (a small cloth like a glove)', '🧤'],
+      ['douchestoel', 'de douchestoel', 'the shower chair', '🚿'],
+      ['tandenpoetsen', 'tandenpoetsen', 'to brush your teeth', '🪥'],
+      ['kammen', 'kammen', 'to comb', '💇'],
+      ['scheren', 'scheren', 'to shave', '🪒'],
+      ['steunkous', 'de steunkous', 'the support stocking (a tight stocking for the legs)', '🧦'],
+    ],
+    [
+      ['Is het water warm genoeg?', 'Is the water warm enough?'],
+      ['Wilt u zelf uw gezicht wassen?', 'Would you like to wash your face yourself?'],
+      ['Ik doe nu uw steunkousen aan.', 'I am putting on your support stockings now.'],
+    ],
+    [['Ik wil vandaag niet douchen.', 'I do not want to shower today.'], ['Dat is goed. Zal ik u aan de wastafel helpen?', 'That is fine. Shall I help you at the washbasin?']],
+  ),
+  lesson(
+    'observing',
+    'Observing and reporting',
+    [
+      ['rapporteren', 'rapporteren', 'to report (to write down what you saw, in the care file)', '🖊️'],
+      ['zorgdossier', 'het zorgdossier', 'the care file (everything about the care of one client)', '📓'],
+      ['drukplek', 'de drukplek', 'the pressure sore (a red spot from lying or sitting long)', '🔴'],
+      ['huid', 'de huid', 'the skin', '✋'],
+      ['plassen', 'plassen', 'to pee', '🚻'],
+      ['vochtlijst', 'de vochtlijst', 'the fluid chart (how much a client drinks)', '💧'],
+    ],
+    [
+      ['Mevrouw heeft een rode plek op haar hiel.', 'The lady has a red spot on her heel.'],
+      ['Meneer heeft vandaag weinig gedronken.', 'The gentleman drank little today.'],
+      ['Ik schrijf het in het zorgdossier.', 'I am writing it in the care file.'],
+    ],
+    [['Is er iets bijzonders met mevrouw Jansen?', 'Is there anything special about Mrs Jansen?'], ['Ja. Ze heeft vandaag bijna niet geplast.', 'Yes. She has hardly peed today.']],
+  ),
+  lesson(
+    'homecare',
+    'Home care',
+    [
+      ['thuiszorg', 'de thuiszorg', 'home care (care in the client’s own home)', '🏠'],
+      ['sleutelkluis', 'de sleutelkluis', 'the key safe (a small box with a code, with the house key in it)', '🔐'],
+      ['zorgplan', 'het zorgplan', 'the care plan (what care a client gets, and how)', '📋'],
+      ['wijkverpleegkundige', 'de wijkverpleegkundige', 'the district nurse (the nurse of the home care team)', '👩‍⚕️'],
+      ['mantelzorger', 'de mantelzorger', 'the family carer (a relative or friend who looks after the client)', '🫂'],
+      ['alarmknop', 'de alarmknop', 'the alarm button (the client wears it, to call for help)', '🆘'],
+    ],
+    [
+      ['Ik bel eerst aan. Dan pak ik de sleutel.', 'First I ring the bell. Then I take the key.'],
+      ['Wat staat er in het zorgplan?', 'What is in the care plan?'],
+      ['Ik ben vandaag een kwartier later.', 'I am a quarter of an hour late today.'],
+    ],
+    [['Wie is daar?', 'Who is there?'], ['Goedemorgen, de thuiszorg. Mag ik binnenkomen?', 'Good morning, it is home care. May I come in?']],
+  ),
+  lesson(
+    'liftaids',
+    'Lifting aids and safety',
+    [
+      ['glijlaken', 'het glijlaken', 'the slide sheet (a smooth sheet to move a client in bed)', '🛷'],
+      ['tilband', 'de tilband', 'the sling (it goes under the client, for the hoist)', '🎗️'],
+      ['stalift', 'de stalift', 'the standing hoist (it helps a client to stand up)', '🧍'],
+      ['werkhoogte', 'de werkhoogte', 'the working height (the bed at the height of your hips)', '📏'],
+      ['bedhek', 'het bedhek', 'the bed rail', '🚧'],
+      ['transferplank', 'de transferplank', 'the transfer board (a board to slide from the bed to a chair)', '🪵'],
+    ],
+    [
+      ['Zet het bed op werkhoogte.', 'Put the bed at working height.'],
+      ['Staat de rolstoel op de rem?', 'Is the brake on the wheelchair?'],
+      ['We doen dit met z’n tweeën.', 'We do this with two people.'],
+    ],
+    [['Kun je mevrouw even alleen omdraaien?', 'Can you turn the lady over on your own?'], ['Met het glijlaken lukt dat. Ik pak het even.', 'With the slide sheet I can. I will get it.']],
+  ),
+]);
+
+// ---- Till, stock and closing (the owner's request, 23 November 2026) ----
+// The second own unit of the sector Winkel: returns and the till, facing and the cold products,
+// damage and theft (writing off, your own shopping, the bag check) and closing the shop (counting,
+// the safe, a robbery). In the path of a learner who chose Winkel it comes right after "In de
+// winkel"; in every other course it is appended at the very end. Already words of other lessons,
+// used here in a sentence or the chat only: "het bonnetje", "geld terug", "kapot", "de
+// houdbaarheidsdatum", "op slot" and "tellen". The drawings (placeholders for now):
+// src/pictures/groupWinkel2.tsx.
+
+const shopfloorUnit = unit('shopfloor', 'Till, stock and closing', 'Kassa, voorraad en sluiten', '🏪', '#1f8a70', [
+  lesson(
+    'returns',
+    'Returns and the till',
+    [
+      ['terugbrengen', 'terugbrengen', 'to bring back (a product to the shop)', '🔄'],
+      ['klantenkaart', 'de klantenkaart', 'the customer card (a card to save points)', '🎴'],
+      ['statiegeld', 'het statiegeld', 'the deposit (money back for an empty bottle or can)', '🍾'],
+      ['kassalade', 'de kassalade', 'the till drawer (the drawer with the money)', '🗄️'],
+      ['streepjescode', 'de streepjescode', 'the barcode', '📟'],
+      ['tegoedbon', 'de tegoedbon', 'the credit note (a paper to spend in the shop later)', '🎟️'],
+    ],
+    [
+      ['Spaart u met de klantenkaart?', 'Do you collect points with the customer card?'],
+      ['De streepjescode doet het niet.', 'The barcode does not work.'],
+      ['Wilt u het geld terug of een tegoedbon?', 'Would you like the money back or a credit note?'],
+    ],
+    [['Ik wil deze trui terugbrengen.', 'I want to bring this jumper back.'], ['Dat kan. Heeft u het bonnetje nog?', 'That is possible. Do you still have the receipt?']],
+  ),
+  lesson(
+    'facing',
+    'Facing and the cold products',
+    [
+      ['facen', 'facen', 'to face up (to pull the products to the front, label forward)', '🔝'],
+      ['afprijzen', 'afprijzen', 'to mark down (to give a lower price)', '🏷️'],
+      ['koelvak', 'het koelvak', 'the fridge shelf (the cold shelf in a shop)', '🧊'],
+      ['diepvries', 'de diepvries', 'the freezer', '❄️'],
+      ['uitpakken', 'uitpakken', 'to unpack', '📦'],
+      ['schapkaartje', 'het schapkaartje', 'the shelf label (the price card on the shelf)', '💲'],
+    ],
+    [
+      ['Eerst het koelvak, dan de rest.', 'The fridge shelf first, then the rest.'],
+      ['Zet alles netjes naar voren.', 'Put everything neatly to the front.'],
+      ['Prijs de producten van vandaag af.', 'Mark down today’s products.'],
+    ],
+    [['Ben je klaar met het koelvak?', 'Are you done with the fridge shelf?'], ['Bijna. Ik moet nog facen.', 'Almost. I still have to face up.']],
+  ),
+  lesson(
+    'shrink',
+    'Damage and theft',
+    [
+      ['derving', 'de derving', 'the shrink (what the shop loses: broken, old or stolen products)', '📉'],
+      ['afschrijven', 'afschrijven', 'to write off (to register a product as lost)', '✍️'],
+      ['personeelsaankoop', 'de personeelsaankoop', 'the staff purchase (what you buy in your own shop)', '🧾'],
+      ['tassencontrole', 'de tassencontrole', 'the bag check', '👜'],
+      ['kassamedewerker', 'de kassamedewerker', 'the cashier', '🧑‍💼'],
+      ['winkelwagen', 'de winkelwagen', 'the shopping trolley', '🛒'],
+    ],
+    [
+      ['Deze pot is kapot. Ik schrijf hem af.', 'This jar is broken. I am writing it off.'],
+      ['Ik reken mijn boodschappen af bij een collega.', 'I pay for my shopping at a colleague’s till.'],
+      ['Er staat een volle winkelwagen bij de uitgang.', 'There is a full trolley by the exit.'],
+    ],
+    [['Mag ik even in je tas kijken?', 'May I have a look in your bag?'], ['Ja hoor. Hier is mijn bonnetje.', 'Yes, sure. Here is my receipt.']],
+  ),
+  lesson(
+    'shopclose',
+    'Closing the shop',
+    [
+      ['sluitingstijd', 'de sluitingstijd', 'the closing time', '🕘'],
+      ['rolluik', 'het rolluik', 'the roller shutter', '🔽'],
+      ['kasverschil', 'het kasverschil', 'the cash difference (more or less money in the till than there should be)', '❓'],
+      ['kluis', 'de kluis', 'the safe (a strong box for money)', '🏦'],
+      ['overval', 'de overval', 'the robbery (someone takes money with threats)', '🦹'],
+      ['achterdeur', 'de achterdeur', 'the back door', '🚪'],
+    ],
+    [
+      ['Over tien minuten gaan we dicht.', 'We close in ten minutes.'],
+      ['We tellen de kassa met z’n tweeën.', 'We count the till with two people.'],
+      ['Is de achterdeur op slot?', 'Is the back door locked?'],
+    ],
+    [['Mag ik nog even snel naar binnen?', 'May I quickly come in?'], ['Sorry, we zijn gesloten. Morgen zijn we om acht uur open.', 'Sorry, we are closed. Tomorrow we open at eight.']],
+  ),
+]);
+
+// ---- Temp agency work (the owner's request, 23 November 2026) ----
+// A basis unit for everyone (most learners work through an agency), in the theme "Werk vinden",
+// right after "Werk en contract" (workUnits below): the agency and the hirer (de inlener), the
+// contract and its phases (A, B and C of the uitzend-cao), pay and deductions (the same pay as the
+// hirer's own workers; from the minimum wage only rent and health insurance), and housing through
+// the agency and where to get help. Its tips state rights: each claim has its ⚖️ note in
+// src/content/workTips.ts and a section in docs/juridische-check.md. Belgium: uitzendwerk is
+// regulated otherwise there (interimkantoor, PC 322, no phases): the unit is C in
+// src/content/taalBe/inventory.ts, NL-only until a Belgian version is written. Already words of
+// other lessons, used here in a sentence or the chat only: "het uitzendbureau", "de
+// uitzendkracht", "de intercedent", "de opdracht", "het contract", "de loonstrook", "het
+// minimumloon", "de huur", "het huurcontract", "de vakbond" and "anoniem". The drawings
+// (placeholders for now): src/pictures/groupUitzend.tsx.
+
+const uitzendUnit = unit('uitzend', 'Temp agency work', 'Werken via een uitzendbureau', '🔁', '#2e5c9a', [
+  lesson(
+    'hirer',
+    'The agency and the hirer',
+    [
+      ['inlener', 'de inlener', 'the hirer (the company where the agency sends you to work)', '🏭'],
+      ['vestiging', 'de vestiging', 'the branch (the office of the agency in your town)', '🏢'],
+      ['intakegesprek', 'het intakegesprek', 'the intake interview (the first talk at the agency)', '🗣️'],
+      ['opstapplaats', 'de opstapplaats', 'the pick-up point (where the agency’s bus picks you up)', '🚏'],
+      ['bedrijfsregels', 'de bedrijfsregels', 'the company rules (the rules of the hirer)', '📜'],
+      ['aanspreekpunt', 'het aanspreekpunt', 'the contact person (the person you go to with questions)', '☝️'],
+    ],
+    [
+      ['Morgen werk je bij een nieuwe inlener.', 'Tomorrow you work at a new hirer.'],
+      ['Wie is hier mijn aanspreekpunt?', 'Who is my contact person here?'],
+      ['De bus vertrekt om zes uur bij de opstapplaats.', 'The bus leaves the pick-up point at six.'],
+    ],
+    [['Kun je morgen bij een nieuwe inlener beginnen?', 'Can you start at a new hirer tomorrow?'], ['Ja. Hoe laat moet ik er zijn?', 'Yes. What time must I be there?']],
+  ),
+  lesson(
+    'phases',
+    'Your contract and the phases',
+    [
+      ['fase', 'de fase', 'the phase (a step in your agency contract: A, B or C)', '🅰️'],
+      ['uitzendbeding', 'het uitzendbeding', 'the agency clause (your work can stop when the hirer no longer needs you)', '✂️'],
+      ['aflopen', 'aflopen', 'to end, to run out (a contract)', '⌛'],
+      ['doorwerken', 'doorwerken', 'to keep working (at the same place)', '▶️'],
+      ['vastecontract', 'het vaste contract', 'the permanent contract (a contract without an end date)', '🖊️'],
+      ['onderbreking', 'de onderbreking', 'the break (a time without work between two contracts)', '⏸️'],
+    ],
+    [
+      ['In welke fase zit ik nu?', 'Which phase am I in now?'],
+      ['Mijn contract loopt volgende week af.', 'My contract ends next week.'],
+      ['Kan ik hier blijven doorwerken?', 'Can I keep working here?'],
+    ],
+    [['Je opdracht stopt vrijdag.', 'Your assignment stops on Friday.'], ['Oké. Heeft u ander werk voor mij?', 'Okay. Do you have other work for me?']],
+  ),
+  lesson(
+    'deductions',
+    'Pay and deductions',
+    [
+      ['inhouding', 'de inhouding', 'the deduction (money taken off your pay)', '➖'],
+      ['vastekracht', 'de vaste kracht', 'the permanent worker (a worker employed by the hirer itself)', '🧑‍🏭'],
+      ['vervoer', 'het vervoer', 'the transport (the bus or van to work)', '🚐'],
+      ['schriftelijk', 'schriftelijk', 'in writing (on paper or in an email)', '📝'],
+      ['navragen', 'navragen', 'to check, to ask about (to find out if something is right)', '🔍'],
+      ['brutoloon', 'het brutoloon', 'the gross pay (your pay before tax and deductions)', '💰'],
+    ],
+    [
+      ['Wat is deze inhouding op mijn loonstrook?', 'What is this deduction on my payslip?'],
+      ['Verdien ik hetzelfde als de vaste krachten?', 'Do I earn the same as the permanent workers?'],
+      ['Dat wil ik eerst op papier zien.', 'I want to see that on paper first.'],
+    ],
+    [['We houden de kosten van de bus in op je loon.', 'We take the cost of the bus off your pay.'], ['Mag dat? Dat vraag ik eerst na.', 'Is that allowed? I will check that first.']],
+  ),
+  lesson(
+    'agencyhome',
+    'Housing and help',
+    [
+      ['huisvesting', 'de huisvesting', 'the housing (a place to live, arranged by the agency)', '🏘️'],
+      ['huisgenoot', 'de huisgenoot', 'the housemate (a person who lives in the same house)', '🧑‍🤝‍🧑'],
+      ['huisregels', 'de huisregels', 'the house rules (the rules of the house where you live)', '📃'],
+      ['huismeester', 'de huismeester', 'the housing manager (the person who looks after the house)', '🧑‍🔧'],
+      ['meldpunt', 'het meldpunt', 'the reporting point (a place where you can report a problem)', '📣'],
+      ['advies', 'het advies', 'the advice', '💬'],
+    ],
+    [
+      ['Ik wil een eigen huurcontract.', 'I want my own rental contract.'],
+      ['Er is schimmel in de badkamer.', 'There is mould in the bathroom.'],
+      ['Ik bel de vakbond voor advies.', 'I am calling the union for advice.'],
+    ],
+    [['Je moet vrijdag uit de woning.', 'You must leave the house on Friday.'], ['Dat is heel kort. Ik vraag eerst advies.', 'That is very short. I will ask for advice first.']],
+  ),
+]);
+
 // ---- In the shop, and Time, money and measures (docs/entree-aanvulling.md, part 5) ----
 // Basis units (no sector of their own), after the sector units: the course of every existing
 // sector keeps its order, the two units come at the end of it.
@@ -4180,6 +4605,9 @@ const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
 export const workUnits: Unit[] = [
   applyUnit,
   { ...byId('u.contract'), lessons: [...byId('u.contract').lessons, ...contractMore] },
+  // "Werken via een uitzendbureau" (23 November 2026, the owner's request): a basis unit right after
+  // "Werk en contract", because most learners work through an agency (see "Temp agency work" above).
+  uitzendUnit,
   byId('u.papers'),
   byId('u.pay'),
   { ...byId('u.house'), lessons: [...byId('u.house').lessons, ...houseMore] },
@@ -4242,6 +4670,12 @@ export const workUnits: Unit[] = [
   recyclingUnit,
   toddlersUnit,
   daycareUnit,
+  // The second own units of Schoonmaak, Horeca, Zorg and Winkel (23 November 2026), at the very end
+  // (see "Toilets, hotel rooms and machines" and the units after it above).
+  housekeepingUnit,
+  cookingUnit,
+  careworkUnit,
+  shopfloorUnit,
 ];
 
 

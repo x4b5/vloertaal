@@ -256,6 +256,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "Te preguntan si se ha caído: sí, qué tiene, y a quién llamas.", // nieuw, nalezen
     'c.sickchild.a.why': "Te preguntan cómo está: lo que ves, y lo que haces.", // nieuw, nalezen
     'c.grouprules.a.why': "Te preguntan si se puede ir a solas: sí, pero antes avisar a un compañero.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "Te preguntan si has terminado: todavía no, y por qué.", // nieuw, nalezen
+    'c.hotelroom.a.why': "Te preguntan cuántas quedan: el número, y cuándo terminas.", // nieuw, nalezen
+    'c.dosing.a.why': "Te dicen que eches más: no, más no es mejor, y qué usas.", // nieuw, nalezen
+    'c.officenight.a.why': "Te preguntan si trabajas a solas: sí, y vas a mandar un mensaje.", // nieuw, nalezen
+    'c.knives.a.why': "Te piden que cortes: sí, chef, y una pregunta sobre cómo.", // nieuw, nalezen
+    'c.rawcooked.a.why': "Te preguntan si es sin gluten: no lo sabes seguro, así que miras la lista.", // nieuw, nalezen
+    'c.pass.a.why': "Te preguntan dónde está la comida: en el pase, y la llevas ahora.", // nieuw, nalezen
+    'c.bill.a.why': "Te piden pagar por separado: sí, y vas a por el datáfono.", // nieuw, nalezen
+    'c.washing.a.why': "El cliente dice que no: está bien, y ofreces otra cosa.", // nieuw, nalezen
+    'c.observing.a.why': "Te preguntan si hay algo especial: sí, y qué exactamente.", // nieuw, nalezen
+    'c.homecare.a.why': "Te preguntan quién es: un saludo, quién eres, y si puedes pasar.", // nieuw, nalezen
+    'c.liftaids.a.why': "Te piden hacerlo sin ayuda: sí, con la sábana deslizante, y vas a por ella.", // nieuw, nalezen
+    'c.returns.a.why': "Te piden devolverlo: sí, y una pregunta sobre el tique.", // nieuw, nalezen
+    'c.facing.a.why': "Te preguntan si has terminado: casi, y qué falta todavía.", // nieuw, nalezen
+    'c.shrink.a.why': "Te piden mirar en tu bolso: sí, y enseñas el tique.", // nieuw, nalezen
+    'c.shopclose.a.why': "Te piden entrar: lo siento, está cerrado, y cuándo se abre otra vez.", // nieuw, nalezen
+    'c.hirer.a.why': "Te piden empezar en un sitio nuevo: sí, y una pregunta sobre la hora.", // nieuw, nalezen
+    'c.phases.a.why': "Te dicen que el trabajo termina: vale, y pides otro trabajo.", // nieuw, nalezen
+    'c.deductions.a.why': "Te hablan de un descuento: preguntas si está permitido, y lo compruebas.", // nieuw, nalezen
+    'c.agencyhome.a.why': "Te dicen que te vayas pronto: es poco tiempo, y primero pides consejo.", // nieuw, nalezen
   },
 };
 

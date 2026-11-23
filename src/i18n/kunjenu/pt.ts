@@ -164,6 +164,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "Consigo perguntar se uma criança já está a dormir.", // nieuw, nalezen
     'kjn.u.daycare.1': "Consigo contar a um pai ou a uma mãe como correu o dia.", // nieuw, nalezen
     'kjn.u.daycare.2': "Consigo perguntar quem vem buscar uma criança.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "Consigo perguntar em que fase estou.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "Consigo perguntar para que é um desconto no meu salário.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "Consigo dizer que uma sanita está entupida.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "Consigo perguntar quanto produto vai no balde.", // nieuw, nalezen
+    'kjn.u.cooking.1': "Consigo perguntar ao chefe como cortar uma coisa.", // nieuw, nalezen
+    'kjn.u.cooking.2': "Consigo perguntar a um cliente se quer pagar em separado.", // nieuw, nalezen
+    'kjn.u.carework.1': "Consigo perguntar a um cliente o que quer vestir.", // nieuw, nalezen
+    'kjn.u.carework.2': "Consigo contar à enfermeira o que vi.", // nieuw, nalezen
+    'kjn.u.shopfloor.1': "Consigo pedir o talão a um cliente.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "Consigo dizer que a loja vai fechar daqui a pouco.", // nieuw, nalezen
   },
 };
 

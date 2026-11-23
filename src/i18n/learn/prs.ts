@@ -257,6 +257,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "پرسیده‌اند افتاده یا نی: بلی، چه شده، و به چه کسی زنگ زده می‌شود.", // nieuw, nalezen
     'c.sickchild.a.why': "پرسیده‌اند حالش چطور است: چه دیده می‌شود، و چه کار می‌شود.", // nieuw, nalezen
     'c.grouprules.a.why': "پرسیده‌اند اجازه دارد تنها برود یا نی: بلی، اما اول به یک همکار بگوید.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "پرسیده‌اند خلاص شده یا نی: هنوز نی، و چرا.", // nieuw, nalezen
+    'c.hotelroom.a.why': "پرسیده‌اند چند تا مانده: تعداد، و چه وقت خلاص می‌شود.", // nieuw, nalezen
+    'c.dosing.a.why': "گفته‌اند بیشتر بریزد: نی، بیشتر بهتر نیست، و از چه استفاده می‌شود.", // nieuw, nalezen
+    'c.officenight.a.why': "پرسیده‌اند تنها کار می‌کند یا نی: بلی، و پیام فرستاده می‌شود.", // nieuw, nalezen
+    'c.knives.a.why': "خواسته‌اند ببرد: بلی آشپز صاحب، و یک سوال دربارهٔ اینکه چطور.", // nieuw, nalezen
+    'c.rawcooked.a.why': "پرسیده‌اند بدون گلوتن است یا نی: مطمئن نیست، پس لست دیده می‌شود.", // nieuw, nalezen
+    'c.pass.a.why': "پرسیده‌اند غذا کجاست: بالای پاس، و حالا آورده می‌شود.", // nieuw, nalezen
+    'c.bill.a.why': "خواسته‌اند جدا پول بدهند: بلی، و ماشین کارت آورده می‌شود.", // nieuw, nalezen
+    'c.washing.a.why': "مراجع نی می‌گوید: خیر است، و چیز دیگری پیشنهاد می‌شود.", // nieuw, nalezen
+    'c.observing.a.why': "پرسیده‌اند چیز خاصی است یا نی: بلی، و دقیقاً چه.", // nieuw, nalezen
+    'c.homecare.a.why': "پرسیده‌اند کیست: سلام، اینکه کیست، و اجازه برای داخل آمدن.", // nieuw, nalezen
+    'c.liftaids.a.why': "خواسته‌اند تنها بکند: بلی، با روجایی لشم، و آن آورده می‌شود.", // nieuw, nalezen
+    'c.returns.a.why': "خواسته‌اند آن را پس بیاورند: بلی، و یک سوال دربارهٔ رسید.", // nieuw, nalezen
+    'c.facing.a.why': "پرسیده‌اند کار خلاص شده یا نی: نزدیک است، و چه چیز مانده.", // nieuw, nalezen
+    'c.shrink.a.why': "خواسته‌اند در بکس را ببینند: بلی، و رسید نشان داده می‌شود.", // nieuw, nalezen
+    'c.shopclose.a.why': "خواسته‌اند داخل بیایند: ببخشید، بسته است، و چه وقت دوباره باز می‌شود.", // nieuw, nalezen
+    'c.hirer.a.why': "خواسته‌اند در جای نو شروع کند: بلی، و یک سوال دربارهٔ ساعت.", // nieuw, nalezen
+    'c.phases.a.why': "گفته‌اند کار ختم می‌شود: خوب، و کار دیگر خواسته می‌شود.", // nieuw, nalezen
+    'c.deductions.a.why': "از یک کسر خبر داده‌اند: پرسیده می‌شود که اجازه است یا نی، و پرسان می‌شود.", // nieuw, nalezen
+    'c.agencyhome.a.why': "گفته‌اند زود از خانه برود: این زود است، و اول مشوره گرفته می‌شود.", // nieuw, nalezen
   },
 };
 

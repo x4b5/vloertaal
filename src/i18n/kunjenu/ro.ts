@@ -166,6 +166,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "Pot să întreb dacă un copil doarme deja.", // nieuw, nalezen
     'kjn.u.daycare.1': "Pot să-i spun unui părinte cum a fost ziua.", // nieuw, nalezen
     'kjn.u.daycare.2': "Pot să întreb cine vine să ia un copil.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "Pot să întreb în ce fază sunt.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "Pot să întreb pentru ce e o reținere din salariul meu.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "Pot să spun că o toaletă e înfundată.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "Pot să întreb cât produs se pune în găleată.", // nieuw, nalezen
+    'kjn.u.cooking.1': "Pot să-l întreb pe bucătarul-șef cum să tai ceva.", // nieuw, nalezen
+    'kjn.u.cooking.2': "Pot să întreb un oaspete dacă vrea să plătească separat.", // nieuw, nalezen
+    'kjn.u.carework.1': "Pot să întreb un client ce vrea să poarte.", // nieuw, nalezen
+    'kjn.u.carework.2': "Pot să-i spun asistentei ce am văzut.", // nieuw, nalezen
+    'kjn.u.shopfloor.1': "Pot să-i cer unui client bonul.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "Pot să spun că magazinul se închide în curând.", // nieuw, nalezen
   },
 };
 

@@ -390,4 +390,53 @@ export const ZEG_HET_NL: Record<string, ZegHetWrong> = {
     { text: 'De remmen zijn bijna op. Ik doe ze er meteen bij.', feedback: 'Eerst moet de klant ja zeggen. Meld het eerst.' },
     { text: 'Ik zag iets aan de remmen. Maar goed, niet mijn werk.', feedback: 'Dan hoort de klant het niet. Zeg het tegen je chef. Die belt haar.' },
   ],
+  // De zes sectoren van 23 november 2026 (curriculum, deel 9).
+  'r.l.groen.1.mo1': [
+    { text: 'Oké, ik probeer het wel. Hoe moeilijk kan het zijn?', feedback: 'Zonder cursus is een kettingzaag te gevaarlijk.' },
+    { text: 'Ik weet niet hoe dat ding werkt. Doe jij het maar.', feedback: 'Dat klinkt onaardig. Vraag liever om ander werk.' },
+  ],
+  'r.l.groen.2.mo1': [
+    { text: 'Ik raakte iets in de grond. Ik graaf nog even verder.', feedback: 'Onder een lint ligt een kabel of leiding. Stop eerst.' },
+    { text: 'Er zat iets raars in de grond, maar het is niks.', feedback: 'Dan weet je leidinggevende niet dat het gevaarlijk kan zijn.' },
+  ],
+  'r.l.facilitair.1.mo1': [
+    { text: 'Natuurlijk, ik zoek het nummer even voor u op.', feedback: 'Het nummer van een collega is privé. Geef het niet.' },
+    { text: 'Dat gaat u helemaal niets aan. Ik hang nu op, hoor.', feedback: 'Dat klinkt boos. Bied liever aan dat ze terugbelt.' },
+  ],
+  'r.l.facilitair.2.mo1': [
+    { text: 'Er is iets met het plafond. Iemand moet maar eens kijken.', feedback: 'Dat is vaag. Zeg waar het is en wat je ziet.' },
+    { text: 'In de gang druppelt water. Ik ga het plafond zelf openmaken.', feedback: 'Repareer niet zelf. Meld het, en zet een emmer neer.' },
+  ],
+  'r.l.beveiliging.1.mo1': [
+    { text: 'Er is iets bij een loods. Ik ga zelf even naar binnen.', feedback: 'Ga niet alleen naar binnen. Meld het, en wacht.' },
+    { text: 'Ik hoor iets, maar het is vast niks. Ik loop verder.', feedback: 'Dan komt er geen hulp. Zeg waar je bent en wat je hoort.' },
+  ],
+  'r.l.beveiliging.2.mo1': [
+    { text: 'Ik heb hier een dief. Ik heb haar tas al helemaal doorzocht.', feedback: 'Een tas doorzoeken mag alleen de politie.' },
+    { text: 'Er is iets gebeurd in de winkel. Komen jullie misschien een keer?', feedback: 'Dat is vaag. Zeg wat er is, en waar.' },
+  ],
+  'r.l.voeding.1.mo1': [
+    { text: 'Ik heb een sneetje, maar het is niks. Ik begin gewoon.', feedback: 'Een wond kan bacteriën in het eten brengen. Meld het.' },
+    { text: 'Mijn vinger bloedt. Ik doe er wel een handschoen over.', feedback: 'Vraag een blauwe pleister. Die zie je in het eten.' },
+  ],
+  'r.l.voeding.2.mo1': [
+    { text: 'Oké, hazelnoten dan. Het verschil proeft toch niemand.', feedback: 'Dan klopt het etiket niet. Dat is gevaarlijk bij een allergie.' },
+    { text: 'Ik weet het niet. Doe maar wat jij wilt, hoor.', feedback: 'Dan beslist niemand. Vraag het de ploegleider.' },
+  ],
+  'r.l.afval.1.mo1': [
+    { text: 'Rij maar, ik loop wel even achterlangs.', feedback: 'Achter de wagen ziet de chauffeur je niet.' },
+    { text: 'Ik sta ergens. Rij maar gewoon achteruit.', feedback: 'Dat is vaag. Zeg waar je staat, en vraag of hij je ziet.' },
+  ],
+  'r.l.afval.2.mo1': [
+    { text: 'Ik weet niet wat het is. Ik ruik er even aan.', feedback: 'De damp kan giftig zijn. Zet hem apart.' },
+    { text: 'Geen idee wat dit is. Ik gooi het gewoon bij de verf.', feedback: 'Onbekend afval kan reageren met ander afval. Vraag het na.' },
+  ],
+  'r.l.kinderopvang.1.mo1': [
+    { text: 'Prima, ik kom morgen. Dat register komt later wel.', feedback: 'Zonder inschrijving mag je niet met de kinderen werken.' },
+    { text: 'Ik weet niet of het mag. Zoek het zelf maar uit.', feedback: 'Dat klinkt onaardig. Zeg wat er nog nodig is.' },
+  ],
+  'r.l.kinderopvang.2.mo1': [
+    { text: 'Geen probleem, ik geef het hem straks wel. Doei!', feedback: 'Zonder toestemming op papier geef je geen medicijn.' },
+    { text: 'Nee, medicijnen geven doen wij hier nooit. Sorry.', feedback: 'Met een formulier mag het meestal wel. Vraag dat eerst.' },
+  ],
 };

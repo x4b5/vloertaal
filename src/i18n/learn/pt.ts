@@ -256,6 +256,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "Perguntam se ela caiu: sim, o que tem, e a quem se liga.", // nieuw, nalezen
     'c.sickchild.a.why': "Perguntam como ele está: o que se vê, e o que se faz.", // nieuw, nalezen
     'c.grouprules.a.why': "Perguntam se se pode ir sem outro adulto: sim, mas avisar primeiro um colega.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "Perguntam se está pronto: ainda não, e porquê.", // nieuw, nalezen
+    'c.hotelroom.a.why': "Perguntam quantos faltam: o número, e quando acabas.", // nieuw, nalezen
+    'c.dosing.a.why': "Dizem para pôr mais: não, mais não é melhor, e o que usas.", // nieuw, nalezen
+    'c.officenight.a.why': "Perguntam se trabalhas sem mais ninguém: sim, e vais mandar uma mensagem.", // nieuw, nalezen
+    'c.knives.a.why': "Pedem para cortar: sim, chefe, e uma pergunta sobre como.", // nieuw, nalezen
+    'c.rawcooked.a.why': "Perguntam se é sem glúten: não se tem a certeza, por isso vê-se a lista.", // nieuw, nalezen
+    'c.pass.a.why': "Perguntam onde está a comida: no passe, e vais levá-la agora.", // nieuw, nalezen
+    'c.bill.a.why': "Pedem para pagar em separado: sim, e vais buscar o terminal.", // nieuw, nalezen
+    'c.washing.a.why': "O cliente diz que não: está bem, e ofereces outra coisa.", // nieuw, nalezen
+    'c.observing.a.why': "Perguntam se há alguma coisa de especial: sim, e o quê exatamente.", // nieuw, nalezen
+    'c.homecare.a.why': "Perguntam quem é: um cumprimento, quem és, e se podes entrar.", // nieuw, nalezen
+    'c.liftaids.a.why': "Pedem para fazer sem ajuda: sim, com o lençol deslizante, e vais buscá-lo.", // nieuw, nalezen
+    'c.returns.a.why': "Pedem para devolver: sim, e uma pergunta sobre o talão.", // nieuw, nalezen
+    'c.facing.a.why': "Perguntam se já acabaste: quase, e o que ainda falta.", // nieuw, nalezen
+    'c.shrink.a.why': "Pedem para ver a tua mala: sim, e mostras o talão.", // nieuw, nalezen
+    'c.shopclose.a.why': "Pedem para entrar: desculpe, está fechado, e quando abre outra vez.", // nieuw, nalezen
+    'c.hirer.a.why': "Pedem para começar num sítio novo: sim, e uma pergunta sobre a hora.", // nieuw, nalezen
+    'c.phases.a.why': "Dizem que o trabalho acaba: está bem, e pedes outro trabalho.", // nieuw, nalezen
+    'c.deductions.a.why': "Falam de um desconto: perguntas se é permitido, e confirmas.", // nieuw, nalezen
+    'c.agencyhome.a.why': "Dizem para sair em breve: é pouco tempo, e primeiro pedes conselho.", // nieuw, nalezen
   },
 };
 

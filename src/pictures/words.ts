@@ -59,6 +59,11 @@ import groupBeveiliging from './groupBeveiliging';
 import groupVoeding from './groupVoeding';
 import groupAfval from './groupAfval';
 import groupKinderopvang from './groupKinderopvang';
+import groupSchoonmaak2 from './groupSchoonmaak2';
+import groupHoreca2 from './groupHoreca2';
+import groupZorg2 from './groupZorg2';
+import groupWinkel2 from './groupWinkel2';
+import groupUitzend from './groupUitzend';
 import group53 from './group53';
 import group54 from './group54';
 import group55 from './group55';
@@ -152,6 +157,13 @@ const words: Record<string, () => JSX.Element> = {
   ...groupVoeding,
   ...groupAfval,
   ...groupKinderopvang,
+  // The second own units of Schoonmaak, Horeca, Zorg and Winkel and the basis unit "Werken via een
+  // uitzendbureau": 5 × 24 words of 23 November 2026, PLACEHOLDERS for now (./placeholder.tsx).
+  ...groupSchoonmaak2,
+  ...groupHoreca2,
+  ...groupZorg2,
+  ...groupWinkel2,
+  ...groupUitzend,
   // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): l.tiletools, l.tiling and l.plaster.
   ...group53,
   ...group54,

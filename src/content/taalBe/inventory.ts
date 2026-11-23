@@ -115,6 +115,17 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.agency': L('B', 'C', 'de intercedent → de consulent; uitzend-cao en 8% vakantiegeld → dagcontracten, PC 322'),
     'l.permit': L('B', 'C', 'de zzp’er → de zelfstandige; IND, UWV, VluchtelingenWerk → DVZ, VDAB, Vluchtelingenwerk Vlaanderen; inburgering via het Agentschap Integratie en Inburgering'),
   } },
+  // Werken via een uitzendbureau (23 November 2026): the Dutch system of agency work (the inlener,
+  // phases A, B and C of the uitzend-cao, the minimum-wage rule on deductions, housing through the
+  // agency, Juridisch Loket, FairWork, Arbeidsinspectie). In Belgium uitzendwerk is regulated
+  // otherwise (interimkantoor, de gebruiker, dagcontracten, PC 322, Uitzendarbeidswet): C, NL-only
+  // until a Belgian version is written (./units/uitzend.ts, BE_TAAL_TODO).
+  'u.uitzend': { kind: 'C', lessons: {
+    'l.hirer': L('C', 'C', 'het uitzendbureau → het interimkantoor; de inlener → de gebruiker; de intercedent → de consulent; ziekmelden en veiligheid volgens het Belgische recht'),
+    'l.phases': L('C', 'C', 'geen fasen A, B en C en geen uitzendbeding in België: interimcontracten (ook dagcontracten) volgens de Uitzendarbeidswet en PC 322'),
+    'l.deductions': L('C', 'C', 'de loonstrook → de loonbrief; de Nederlandse regel over inhoudingen op het minimumloon geldt niet; Belgische regels over inhoudingen (Loonbeschermingswet)'),
+    'l.agencyhome': L('C', 'C', 'Wet goed verhuurderschap, Juridisch Loket, FairWork en de Nederlandse Arbeidsinspectie → Vlaamse huurregels, justitiehuis, Payoke, Toezicht op de Sociale Wetten'),
+  } },
   'u.papers': { kind: 'B', lessons: {
     'l.bsn': L('C', 'C', 'ook de titel; BSN, DigiD, zorgverzekering → rijksregisternummer, eID en itsme, ziekenfonds'),
     'l.housing': L('B', 'C', 'de borg → de huurwaarborg; Huurcommissie en Juridisch Loket → Vlaamse huurregels, justitiehuis'),
@@ -365,6 +376,33 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.repairs': L('A', 'A', 'nakijken: de deurklink, de gereedschapskist ("de gereedschapskoffer"), de trap ("de ladder")'),
     'l.moving': L('A', 'A', 'nakijken: de plattegrond ("het grondplan"), de steekwagen ("de steekkar")'),
     'l.closing': L('A', 'A', 'nakijken: het nachtslot, de sleutelbos'),
+  } },
+  // The second own units of Schoonmaak, Horeca, Zorg and Winkel (23 November 2026): how the work is
+  // done, the same in Belgium; the tips name no rule, right or amount (the allergen list of
+  // l.rawcooked is an EU rule, the same in Belgium). Flemish words to check.
+  'u.housekeeping': { kind: 'A', lessons: {
+    'l.sanitary': L('A', 'A', 'nakijken: de wastafel ("de lavabo"), de toiletpot ("de wc-pot"), de ontstopper ("de ontstopper" of "de zuignap")'),
+    'l.hotelroom': L('A', 'A', 'nakijken: het dekbed ("het donsdeken"), de kussensloop ("de kussensloop" of "de kussenovertrek")'),
+    'l.dosing': L('A', 'A', 'nakijken: de sprayflacon ("het sprayflesje"), het veiligheidsblad ("de veiligheidsfiche"), de schrobzuigmachine'),
+    'l.officenight': L('A', 'A', 'nakijken: de lichtschakelaar ("de lichtknop"), de pantry ("de kitchenette"), de deurmat'),
+  } },
+  'u.cooking': { kind: 'A', lessons: {
+    'l.knives': L('A', 'A', 'nakijken: de dunschiller ("de dunschiller" of "de schiller"), de blokjes ("de blokjes" of "de brunoise")'),
+    'l.rawcooked': L('A', 'A', 'nakijken: gaar ("gaar" of "doorbakken"), de allergenenlijst ("de allergenenfiche")'),
+    'l.pass': L('A', 'A', 'nakijken: de pass, de bon ("het bonnetje"), de spoelkeuken ("de afwasruimte" of "de plonge")'),
+    'l.bill': L('A', 'A', 'nakijken: het pinapparaat ("de bancontactterminal", "het betaaltoestel"), apart betalen ("apart betalen" of "elk apart")'),
+  } },
+  'u.carework': { kind: 'A', lessons: {
+    'l.washing': L('A', 'A', 'nakijken: het washandje, de steunkous ("de steunkous" of "de compressiekous")'),
+    'l.observing': L('A', 'A', 'nakijken: het zorgdossier, de drukplek ("de doorligwonde"), de vochtlijst ("de vochtbalans")'),
+    'l.homecare': L('A', 'A', 'nakijken: de thuiszorg, de wijkverpleegkundige ("de thuisverpleegkundige"), de mantelzorger, de sleutelkluis, de alarmknop ("het noodoproepsysteem")'),
+    'l.liftaids': L('A', 'A', 'nakijken: het glijlaken, de stalift ("de sta-lift"), de transferplank'),
+  } },
+  'u.shopfloor': { kind: 'A', lessons: {
+    'l.returns': L('A', 'A', 'nakijken: het statiegeld ("het leeggoed"), de tegoedbon ("de waardebon"), de kassalade ("de kassaschuif")'),
+    'l.facing': L('A', 'A', 'nakijken: facen ("vooruitzetten", "facen"), afprijzen ("afprijzen" of "in prijs verlagen"), de diepvries'),
+    'l.shrink': L('A', 'A', 'nakijken: de derving ("het verlies"), afschrijven, de personeelsaankoop'),
+    'l.shopclose': L('A', 'A', 'nakijken: het rolluik, de kluis ("de brandkast"), het kasverschil'),
   } },
   // Ronde en toegang and Noodgevallen en de winkel (Beveiliging, 23 November 2026): how the work is
   // done, the same in Belgium (112 too). The shop-theft tip names no law (holding a thief is a

@@ -258,6 +258,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "Pytanie, czy się przewróciła: tak, co jej jest, i do kogo się dzwoni.", // nieuw, nalezen
     'c.sickchild.a.why': "Pytanie, jak się czuje: co widać, i co się robi.", // nieuw, nalezen
     'c.grouprules.a.why': "Pytanie, czy można wyjść w pojedynkę: tak, ale najpierw powiedzieć koledze.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "Pytanie, czy już gotowe: jeszcze nie, i dlaczego.", // nieuw, nalezen
+    'c.hotelroom.a.why': "Pytanie, ile zostało: liczba, i kiedy będzie koniec.", // nieuw, nalezen
+    'c.dosing.a.why': "Prośba, żeby dać więcej: nie, więcej nie znaczy lepiej, i czego się używa.", // nieuw, nalezen
+    'c.officenight.a.why': "Pytanie o pracę w pojedynkę: tak, i że przyjdzie wiadomość.", // nieuw, nalezen
+    'c.knives.a.why': "Prośba o pokrojenie: tak, szefie, i pytanie jak.", // nieuw, nalezen
+    'c.rawcooked.a.why': "Pytanie, czy jest bez glutenu: nie wiadomo na pewno, więc sprawdza się listę.", // nieuw, nalezen
+    'c.pass.a.why': "Pytanie, gdzie jest jedzenie: na wydawce, i że już idzie.", // nieuw, nalezen
+    'c.bill.a.why': "Prośba o osobne płacenie: tak, i terminal już idzie.", // nieuw, nalezen
+    'c.washing.a.why': "Podopieczny mówi nie: to w porządku, i propozycja czegoś innego.", // nieuw, nalezen
+    'c.observing.a.why': "Pytanie, czy jest coś szczególnego: tak, i co dokładnie.", // nieuw, nalezen
+    'c.homecare.a.why': "Pytanie, kto tam: powitanie, kto to jest, i czy można wejść.", // nieuw, nalezen
+    'c.liftaids.a.why': "Pytanie, czy da się w pojedynkę: tak, z matą ślizgową, i że już się ją bierze.", // nieuw, nalezen
+    'c.returns.a.why': "Prośba o zwrot: tak, i pytanie o paragon.", // nieuw, nalezen
+    'c.facing.a.why': "Pytanie, czy już gotowe: prawie, i co jeszcze zostało.", // nieuw, nalezen
+    'c.shrink.a.why': "Prośba o zajrzenie do torby: tak, i pokazanie paragonu.", // nieuw, nalezen
+    'c.shopclose.a.why': "Prośba o wejście: przepraszam, zamknięte, i kiedy znowu otwarte.", // nieuw, nalezen
+    'c.hirer.a.why': "Pytanie o start w nowym miejscu: tak, i pytanie o godzinę.", // nieuw, nalezen
+    'c.phases.a.why': "Wiadomość, że praca się kończy: dobrze, i prośba o inną pracę.", // nieuw, nalezen
+    'c.deductions.a.why': "Wiadomość o potrąceniu: pytanie, czy to dozwolone, i sprawdzenie.", // nieuw, nalezen
+    'c.agencyhome.a.why': "Polecenie szybkiej wyprowadzki: to krótko, i najpierw rada.", // nieuw, nalezen
   },
 };
 

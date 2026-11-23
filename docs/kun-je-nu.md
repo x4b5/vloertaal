@@ -27,7 +27,7 @@ niveau**, geen toets en geen bewijs van een niveau.
 De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland, Jouw sector
 (`src/i18n/kunjenu/`, gemarkeerd met "nieuw, nalezen"). Werkregels is alleen Nederlands.
 
-## Taal (65 onderwerpen, 145 zinnen)
+## Taal (70 onderwerpen, 155 zinnen)
 
 | Onderwerp | Zinnen | Past bij |
 |---|---|---|
@@ -54,6 +54,8 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 | Werk en contract | Ik kan vragen hoeveel uur ik per week werk. | op weg naar A2 · spreken |
 |  | Ik kan vragen of mijn contract tijdelijk of vast is. | op weg naar A2 · spreken |
 |  | Ik kan zeggen wanneer ik wel en niet kan werken. | op weg naar A2 · gesprekken |
+| Werken via een uitzendbureau | Ik kan vragen in welke fase ik zit. | A1 · gesprekken |
+|  | Ik kan vragen waarvoor een inhouding op mijn loon is. | op weg naar A2 · gesprekken |
 | Diploma’s en verder komen | Ik kan vertellen welke diploma’s en certificaten ik heb. | op weg naar A2 · spreken |
 |  | Ik kan zeggen waar ik goed in ben. | op weg naar A2 · gesprekken |
 | Werk kwijt | Ik kan zeggen dat mijn contract stopt. | op weg naar A2 · spreken |
@@ -176,8 +178,16 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan vragen of een kind al slaapt. | A1 · gesprekken |
 | Ouders, veiligheid en de groep | Ik kan een ouder vertellen hoe de dag ging. | A1 · gesprekken |
 |  | Ik kan vragen wie een kind komt ophalen. | A1 · gesprekken |
+| Sanitair, hotel en machines | Ik kan zeggen dat een toilet verstopt is. | A1 · spreken |
+|  | Ik kan vragen hoeveel middel in de emmer moet. | A1 · gesprekken |
+| De keuken en de bediening | Ik kan de chef vragen hoe ik iets moet snijden. | A1 · gesprekken |
+|  | Ik kan een gast vragen of hij apart wil betalen. | A1 · gesprekken |
+| Verzorgen en thuiszorg | Ik kan een cliënt vragen wat hij wil aantrekken. | A1 · gesprekken |
+|  | Ik kan de verpleegkundige vertellen wat ik heb gezien. | A1 · spreken |
+| Kassa, voorraad en sluiten | Ik kan een klant naar het bonnetje vragen. | A1 · gesprekken |
+|  | Ik kan zeggen dat de winkel bijna dichtgaat. | A1 · spreken |
 
-## Werkregels (28 onderwerpen, 59 zinnen)
+## Werkregels (34 onderwerpen, 71 zinnen)
 
 | Onderwerp | Zinnen | Past bij |
 |---|---|---|
@@ -240,3 +250,15 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan een kapotte kabel melden. | 1F · spreken |
 | Werken in de garage | Ik kan een werkorder lezen. | 1F · lezen |
 |  | Ik kan zeggen dat de klant eerst ja moet zeggen. | 1F · gesprekken |
+| Werken in het groen | Ik kan zeggen dat ik nog geen cursus heb gehad. | 1F · gesprekken |
+|  | Ik kan een lint in de grond melden. | 1F · spreken |
+| Werken in de facilitaire dienst | Ik kan beleefd zeggen dat ik geen nummer geef. | 1F · gesprekken |
+|  | Ik kan een lek of storing melden. | 1F · spreken |
+| Werken in de beveiliging | Ik kan aan de meldkamer zeggen wat ik zie. | 1F · spreken |
+|  | Ik kan een kort verslag van een incident schrijven. | 1F · schrijven |
+| Werken in de voedingsindustrie | Ik kan een wond of ziekte melden voor mijn dienst. | 1F · gesprekken |
+|  | Ik kan een etiket met allergenen lezen. | 1F · lezen |
+| Werken in afval en recycling | Ik kan tegen de chauffeur zeggen waar ik sta. | 1F · spreken |
+|  | Ik kan zeggen dat ik onbekend afval apart zet. | 1F · gesprekken |
+| Werken in de kinderopvang | Ik kan een ouder vragen een formulier te tekenen. | 1F · gesprekken |
+|  | Ik kan opschrijven wat ik bij een kind zie. | 1F · schrijven |

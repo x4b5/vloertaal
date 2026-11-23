@@ -66,9 +66,10 @@ describe('docs/juridische-check.md has every Taal tip with a legal closing line'
 
   // 33 since 5 November 2026: c.road (Vervoer en bezorging, the abuse line) and c.backtowork
   // ("Back to work after illness", unit Ziekte). 34 with c.talkintime ("Talk about it in time",
-  // Goed communiceren: quitting yourself can cost your benefit), the same day.
-  it('34 tips end with the advice or the abuse line (31 of the work units, c.accident, c.sick and c.talkintime)', () => {
-    expect(legal).toHaveLength(34);
+  // Goed communiceren: quitting yourself can cost your benefit), the same day. 38 with the four tips of
+  // "Werken via een uitzendbureau" (c.hirer, c.phases, c.deductions, c.agencyhome, 23 November 2026).
+  it('38 tips end with the advice or the abuse line (35 of the work units, c.accident, c.sick and c.talkintime)', () => {
+    expect(legal).toHaveLength(38);
     for (const id of ['c.permit', 'c.kids', 'c.jobends', 'c.harvest', 'c.greensafe', 'c.workshop', 'c.power', 'c.carjob', 'c.backtowork', 'c.road', 'c.talkintime']) expect(legal.map(({ t }) => t.id)).toContain(id);
   });
 
@@ -191,10 +192,11 @@ describe('a Taal tip "about rights": one with a legal closing line', () => {
     setBeTaal(null);
   });
 
-  it('is each of the 34 tips with the advice or abuse line, a region tip with one, and no other', () => {
+  it('is each of the 38 tips with the advice or abuse line, a region tip with one, and no other', () => {
     const rights = cultureTips.filter((t) => rightsTipCountry(t) === 'nl').map((t) => t.id);
-    // 33 (5 November 2026): with c.road and c.backtowork; 34 with c.talkintime.
-    expect(rights).toHaveLength(34);
+    // 33 (5 November 2026): with c.road and c.backtowork; 34 with c.talkintime; 38 with the four tips
+    // of "Werken via een uitzendbureau" (23 November 2026).
+    expect(rights).toHaveLength(38);
     expect(rights).toEqual(expect.arrayContaining(['c.accident', 'c.sick', 'c.permit', 'c.harvest', 'c.carjob', 'c.gethelp']));
     // House rules ("ask your supervisor") and social norms (no line) are not about rights.
     for (const id of ['c.je', 'c.smoking', 'c.clock', 'c.respect']) expect(rightsTipCountry(cultureTips.find((t) => t.id === id)!), id).toBeNull();

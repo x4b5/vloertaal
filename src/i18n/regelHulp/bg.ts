@@ -16,17 +16,21 @@ const lines: Record<string, string> = {
   'De wet geldt voor iedereen. Oneens met een besluit? Maak op tijd bezwaar.': 'Законът важи за всички. Несъгласие с решение? Подай възражение навреме.',
   'Direct zeggen is hier normaal. Het gaat over het werk, niet over jou.': 'Тук е нормално да се говори направо. Става дума за работата, не за теб.',
   'Discriminatie is verboden. Schrijf het op en meld het.': 'Дискриминацията е забранена. Запиши го и го съобщи.',
+  'Door de sluis, elke keer. Ziek of een wond? Meld het voor je begint.': 'През хигиенния шлюз, всеки път. Болен или с рана? Съобщи, преди да започнеш.', // nieuw, nalezen
   'Drink op tijd. Een bespoten kas ga je pas in als het mag.': 'Пий вода навреме. В пръскана оранжерия влизаш само когато е разрешено.',
   'Een brief van de Belastingdienst, UWV of de gemeente: altijd openmaken.': 'Писмо от Belastingdienst, UWV или общината: винаги го отваряй.',
   'Een cv is kort en eerlijk. Ook zorg en vrijwilligerswerk tellen.': 'CV-то е кратко и честно. Грижата за близки и доброволната работа също се броят.',
+  'Een lint in de grond, een nest of een naald? Stop, en meld het.': 'Лента в земята, гнездо или игла? Спри и съобщи.', // nieuw, nalezen
   'Een sollicitatiemail: onderwerp, nette groet, waarom jij, en je cv erbij.': 'Имейл за кандидатстване: тема, учтив поздрав, защо точно ти, и приложи CV-то си.',
   'Eerst checken, dan pas doorsturen. Wie zegt het, en waar staat het nog meer?': 'Първо провери, после препращай. Кой го казва и къде другаде го пише?',
   'Eerst de POK tekenen. Dan pas beginnen met je stage.': 'Първо подпиши договора за практика (POK). Чак после започни стажа си.',
+  'Eerst een VOG en het register. Er kijkt of luistert altijd iemand mee.': 'Първо свидетелство за съдимост (VOG) и вписване в регистъра (personenregister). Винаги някой може да те види или чуе.', // nieuw, nalezen
   'Eerst iets goeds. Dan rustig en concreet wat beter kan.': 'Първо кажи нещо хубаво. После спокойно и конкретно какво може да е по-добре.',
   'Eerst je vaste lasten. Dan een beetje sparen. Dan pas de rest.': 'Първо плащай постоянните си разходи. После спестявай малко. Чак след това – останалото.',
   'Eerst kijken, dan beginnen. Loop nooit onder een hangende last.': 'Първо огледай, после започвай. Никога не минавай под висящ товар.',
   'Eerst lezen, dan tekenen.': 'Първо прочети, после подпиши.',
   'Eerst lezen, vragen en klaarleggen. Dan pas beginnen.': 'Първо прочети, питай и приготви всичко. Чак тогава започвай.',
+  'Elke bezoeker meldt zich. Gegevens van collega\'s geef je niet zomaar.': 'Всеки посетител се регистрира. Данните на колегите не ги даваш просто така.', // nieuw, nalezen
   'Extra werk? Eerst moet de klant ja zeggen.': 'Допълнителна работа? Първо клиентът трябва да каже „да“.',
   'Gaat het niet goed op stage? Praat erover: eerst op je werk, dan met school.': 'Стажът не върви добре? Говори за това: първо на работното място, после с училището.',
   'Gedetacheerd? Vraag je werkgever om je A1-verklaring.': 'Работиш тук чрез командироване? Поискай от работодателя си удостоверение A1 (A1-verklaring).',
@@ -41,12 +45,16 @@ const lines: Record<string, string> = {
   'Het oneens zijn mag. Zeg het rustig, met een reden.': 'Може да имаш друго мнение. Кажи го спокойно и обясни защо.',
   'Hooguit 12 uur per dienst. Ben je jonger dan 18? Dan minder.': 'Най-много 12 часа на смяна. Под 18 години ли си? Тогава по-малко.',
   'Iedereen heeft dezelfde rechten. Discriminatie mag niet, ook niet buiten je werk.': 'Всички имат еднакви права. Дискриминацията е забранена, и извън работата също.',
+  'Iets kapot? Meld het. Repareer alleen wat je geleerd hebt.': 'Нещо е повредено? Съобщи. Поправяй само това, на което си обучен.', // nieuw, nalezen
   'Jarig? Dan trakteer je zelf.': 'Имаш рожден ден? Тогава ти черпиш.',
   'Je DigiD is alleen van jou. Geef hem aan niemand.': 'Твоят DigiD е само твой. Не го давай на никого.',
   'Je paspoort en je bankpas geef je nooit af.': 'Никога не давай на други паспорта и банковата си карта.',
   'Je werk stopt? Check je laatste loon. Regel je huis en je zorgverzekering.': 'Работата ти свършва? Провери последната си заплата. Уреди жилището и здравната си застраховка (zorgverzekering).',
   'Je werktijd is: eindtijd min begintijd, min je pauze.': 'Работното ти време е: час на край минус час на начало, минус почивката.',
   'Klaar? Ruim op en laat het nakijken. Zeg wat klaar is en wat niet.': 'Свърши ли? Подреди и дай да го проверят. Кажи какво е готово и какво не.',
+  'Loop nooit achter een wagen die achteruitrijdt. Zorg dat de chauffeur je ziet.': 'Никога не минавай зад превозно средство, което дава на заден ход. Увери се, че шофьорът те вижда.', // nieuw, nalezen
+  'Maaien of zagen? Draag je beschermende spullen, en houd mensen op afstand.': 'Косиш или режеш? Носи предпазните средства и дръж хората на разстояние.', // nieuw, nalezen
+  'Medicijnen alleen met toestemming op papier. Zorgen over een kind? Volg de meldcode.': 'Лекарства само с писмено съгласие. Тревожиш се за дете? Следвай процедурата (meldcode).', // nieuw, nalezen
   'Meer dan 5,5 uur werken? Dan heb je recht op pauze.': 'Работиш повече от 5,5 часа? Тогава имаш право на почивка.',
   'Meld elk ongeluk, ook een klein ongeluk.': 'Съобщавай за всяка злополука, дори за малка.',
   'Meng nooit schoonmaakmiddelen. Lees eerst het etiket.': 'Никога не смесвай почистващи препарати. Първо прочети етикета.',
@@ -55,6 +63,7 @@ const lines: Record<string, string> = {
   'Na een nachtdienst heb je recht op lange rust.': 'След нощна смяна имаш право на дълга почивка.',
   'Nieuw werk? Geef het meteen door: aan de gemeente of UWV, en bij toeslagen.': 'Нова работа? Съобщи веднага: на общината или на UWV, и в службата за помощи (toeslagen).',
   'Of je mag stemmen, hangt af van de verkiezing en je nationaliteit. Vraag het de gemeente.': 'Дали можеш да гласуваш, зависи от изборите и от гражданството ти. Попитай общината.',
+  'Onbekend afval? Niet openmaken, niet ruiken. Grijp nooit in een pers.': 'Непознат отпадък? Не отваряй, не помирисвай. Никога не бъркай в пресата.', // nieuw, nalezen
   'Onder een auto? Alleen als hij goed vaststaat, op de brug of op bokken.': 'Под кола? Само ако тя стои здраво, на подемника или на стойки.',
   'Online gekocht? Dan heb je meestal 14 dagen bedenktijd. Bewaar je bonnetje.': 'Покупка онлайн? Тогава обикновено имаш 14 дни за размисъл. Пази касовата бележка.',
   'Onveilig? Zeg het meteen. Bij groot gevaar mag je stoppen.': 'Не е безопасно? Кажи веднага. При голяма опасност можеш да спреш.',
@@ -90,7 +99,10 @@ const lines: Record<string, string> = {
   'Werk kwijt? Vraag binnen 1 week WW aan.': 'Загуби работата си? Подай заявление за WW до 1 седмица.',
   'Werk nooit aan iets onder stroom. Eerst moet de stroom eraf, door iemand die dat mag.': 'Никога не работи по нещо под напрежение. Първо токът трябва да се изключи от човек, който има право на това.',
   'Werk schoon, koel goed, en zet de datum erop.': 'Работи чисто, охлаждай добре и напиши датата отгоре.',
+  'Wissel nooit een ingrediënt. Schrijf op wat je echt meet.': 'Никога не заменяй съставка. Записвай това, което наистина измерваш.', // nieuw, nalezen
   'Wonen via het bureau? Check het keurmerk en je loonstrook.': 'Живееш в жилище от агенцията? Провери знака за качество (keurmerk) и фиша за заплата (loonstrook).',
+  'Zie je diefstal? Bel de politie. Fouilleer niemand, en gebruik geen grof geweld.': 'Виждаш кражба? Обади се на полицията. Не претърсвай никого и не използвай груба сила.', // nieuw, nalezen
+  'Zie je inbraak of gevaar op je ronde? Ga niet alleen naar binnen. Meld het.': 'Виждаш взлом или опасност по време на обиколката? Не влизай сам. Съобщи.', // nieuw, nalezen
   'Ziek en naar huis? Vraag het eerst, en blijf bereikbaar.': 'Разболяваш се и искаш да си отидеш вкъщи? Първо попитай и остани на връзка.',
   'Ziek? Bel zelf, vóór je dienst begint.': 'Разболя ли се? Обади се лично, преди да започне смяната ти.',
   'Ziek? Je krijgt meestal minstens 70 procent van je loon.': 'При болест обикновено получаваш поне 70 процента от заплатата си.',

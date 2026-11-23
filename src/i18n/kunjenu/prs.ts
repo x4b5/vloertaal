@@ -165,6 +165,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "می‌توانم بپرسم که یک طفل خواب رفته یا نی.", // nieuw, nalezen
     'kjn.u.daycare.1': "می‌توانم به یکی از والدین بگویم که روز چطور گذشت.", // nieuw, nalezen
     'kjn.u.daycare.2': "می‌توانم بپرسم که چه کسی برای بردن یک طفل می‌آید.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "می‌توانم بپرسم که در کدام مرحله هستم.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "می‌توانم بپرسم که یک کسر از معاشم برای چیست.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "می‌توانم بگویم که یک تشناب بند شده است.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "می‌توانم بپرسم که چقدر ماده در بالتی بریزم.", // nieuw, nalezen
+    'kjn.u.cooking.1': "می‌توانم از آشپز بپرسم که یک چیز را چطور ببرم.", // nieuw, nalezen
+    'kjn.u.cooking.2': "می‌توانم از یک مهمان بپرسم که می‌خواهد جدا پول بدهد یا نی.", // nieuw, nalezen
+    'kjn.u.carework.1': "می‌توانم از یک مراجع بپرسم که چه می‌خواهد بپوشد.", // nieuw, nalezen
+    'kjn.u.carework.2': "می‌توانم به نرس بگویم که چه دیدم.", // nieuw, nalezen
+    'kjn.u.shopfloor.1': "می‌توانم رسید را از یک مشتری بخواهم.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "می‌توانم بگویم که دکان به زودی بسته می‌شود.", // nieuw, nalezen
   },
 };
 

@@ -166,6 +166,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "Umiem zapytać, czy dziecko już śpi.", // nieuw, nalezen
     'kjn.u.daycare.1': "Umiem powiedzieć rodzicowi, jak minął dzień.", // nieuw, nalezen
     'kjn.u.daycare.2': "Umiem zapytać, kto przyjdzie odebrać dziecko.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "Umiem zapytać, w której fazie jestem.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "Umiem zapytać, za co jest potrącenie z mojego wynagrodzenia.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "Umiem powiedzieć, że toaleta jest zatkana.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "Umiem zapytać, ile środka trzeba wlać do wiadra.", // nieuw, nalezen
+    'kjn.u.cooking.1': "Umiem zapytać szefa kuchni, jak coś pokroić.", // nieuw, nalezen
+    'kjn.u.cooking.2': "Umiem zapytać gościa, czy chce płacić osobno.", // nieuw, nalezen
+    'kjn.u.carework.1': "Umiem zapytać podopiecznego, w co chce się ubrać.", // nieuw, nalezen
+    'kjn.u.carework.2': { m: "Umiem powiedzieć pielęgniarce, co widziałem.", f: "Umiem powiedzieć pielęgniarce, co widziałam.", x: "Umiem przekazać pielęgniarce swoje obserwacje." }, // nieuw, nalezen
+    'kjn.u.shopfloor.1': "Umiem poprosić klienta o paragon.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "Umiem powiedzieć, że sklep zaraz się zamyka.", // nieuw, nalezen
   },
 };
 

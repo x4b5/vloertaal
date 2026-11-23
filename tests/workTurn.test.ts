@@ -94,7 +94,9 @@ describe('the sentence of "Probeer het vandaag" said at the end of its lesson', 
     // so 0.55 until their recordings are in.
     // With the thirty-two lessons of Beveiliging, Voedingsindustrie, Afval en recycling and
     // Kinderopvang (the same day, none recorded yet) about 52%: 0.5 until their recordings are in.
-    expect(got.length / lines.length).toBeGreaterThan(0.5);
+    // With the twenty lessons of the five units of the same day (Schoonmaak, Horeca, Zorg, Winkel,
+    // uitzendwerk; none recorded yet) about 48%: 0.45 until their recordings are in.
+    expect(got.length / lines.length).toBeGreaterThan(0.45);
   });
 
   it('gets a spoken-sentence card, so it is said again in "Herhaal vandaag"', () => {

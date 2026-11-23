@@ -166,6 +166,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "أستطيع أن أسأل هل نام الطفل.", // nieuw, nalezen
     'kjn.u.daycare.1': "أستطيع أن أخبر أحد الوالدين كيف كان اليوم.", // nieuw, nalezen
     'kjn.u.daycare.2': "أستطيع أن أسأل من سيأتي ليأخذ الطفل.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "أستطيع أن أسأل في أي مرحلة أنا.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "أستطيع أن أسأل لماذا يوجد خصم من أجري.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "أستطيع أن أقول إن المرحاض مسدود.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "أستطيع أن أسأل كم من المادة توضع في الدلو.", // nieuw, nalezen
+    'kjn.u.cooking.1': "أستطيع أن أسأل الشيف كيف أقطّع شيئاً.", // nieuw, nalezen
+    'kjn.u.cooking.2': "أستطيع أن أسأل ضيفاً هل يريد أن يدفع بشكل منفصل.", // nieuw, nalezen
+    'kjn.u.carework.1': "أستطيع أن أسأل المستفيد من الرعاية ماذا يريد أن يلبس.", // nieuw, nalezen
+    'kjn.u.carework.2': "أستطيع أن أخبر الممرّضة بما رأيته.", // nieuw, nalezen
+    'kjn.u.shopfloor.1': "أستطيع أن أطلب الإيصال من العميل.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "أستطيع أن أقول إن المتجر سيغلق قريباً.", // nieuw, nalezen
   },
 };
 

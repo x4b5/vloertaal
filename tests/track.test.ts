@@ -30,8 +30,9 @@ const doneUnits = (...unitIds: string[]) =>
  * "Goed communiceren" (u.communicate, 5 November 2026) right after "Samenwerken" (u.teamwork),
  * then "Feedback en overleg" (u.feedback).
  */
-// 'u.do' (Instructies, right after Hulp vragen) since 14 November 2026.
-const BASIS = ['u.firstday', 'u.help', 'u.do', 'u.tools', 'u.safety', 'u.emergency', '<own>', 'u.data', 'u.time', 'u.sounds', 'u.teamwork', 'u.communicate', 'u.feedback', 'u.apply', 'u.contract', 'u.papers', 'u.pay', 'u.house', 'u.social', 'u.sayings', 'u.rights', 'u.leave', 'u.sick', 'u.exploit', 'u.contact', 'u.grow', 'u.health', 'u.money', 'u.travel', 'u.lost'];
+// 'u.do' (Instructies, right after Hulp vragen) since 14 November 2026. 'u.uitzend' ("Werken via een
+// uitzendbureau", right after Werk en contract) since 23 November 2026.
+const BASIS = ['u.firstday', 'u.help', 'u.do', 'u.tools', 'u.safety', 'u.emergency', '<own>', 'u.data', 'u.time', 'u.sounds', 'u.teamwork', 'u.communicate', 'u.feedback', 'u.apply', 'u.contract', 'u.uitzend', 'u.papers', 'u.pay', 'u.house', 'u.social', 'u.sayings', 'u.rights', 'u.leave', 'u.sick', 'u.exploit', 'u.contact', 'u.grow', 'u.health', 'u.money', 'u.travel', 'u.lost'];
 const SECTOR_UNITS = ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean'];
 /**
  * Basis units added after the sector units ("In de winkel", "Rekenen"): appended, so every unit
@@ -69,7 +70,8 @@ const LATE_OWN = ['u.tech', 'u.garage'];
 /** The second own units of Tuinbouw and Garage (22 November 2026), after those. */
 /** The own units of the new sectors Groen and Facilitair (23 November 2026), after those. */
 /** The own units of Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (the same day), after those. */
-const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage', 'u.kweek', 'u.carservice', 'u.mowing', 'u.planting', 'u.frontdesk', 'u.maintenance', 'u.guarding', 'u.incidents', 'u.foodhygiene', 'u.foodline', 'u.collection', 'u.recycling', 'u.toddlers', 'u.daycare'];
+/** The second own units of Schoonmaak, Horeca, Zorg and Winkel (the same day), after those. */
+const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage', 'u.kweek', 'u.carservice', 'u.mowing', 'u.planting', 'u.frontdesk', 'u.maintenance', 'u.guarding', 'u.incidents', 'u.foodhygiene', 'u.foodline', 'u.collection', 'u.recycling', 'u.toddlers', 'u.daycare', 'u.housekeeping', 'u.cooking', 'u.carework', 'u.shopfloor'];
 const expectedOrder = (own: string | string[] | null) => {
   const main = BASIS.flatMap((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
@@ -88,13 +90,13 @@ const TAAL_ORDER: Record<string, string[]> = {
   logistics: expectedOrder(['u.warehouse', 'u.delivery']),
   construction: expectedOrder(['u.build', 'u.afbouw', 'u.ruwbouw']),
   production: expectedOrder(['u.factory', 'u.machines', 'u.montage']),
-  care: expectedOrder('u.care'),
-  hospitality: expectedOrder('u.horeca'),
-  cleaning: expectedOrder('u.clean'),
+  care: expectedOrder(['u.care', 'u.carework']),
+  hospitality: expectedOrder(['u.horeca', 'u.cooking']),
+  cleaning: expectedOrder(['u.clean', 'u.housekeeping']),
   horticulture: expectedOrder(['u.kas', 'u.kweek']),
   technical: expectedOrder(['u.tech', 'u.install']),
   garage: expectedOrder(['u.garage', 'u.carservice']),
-  retail: expectedOrder('u.shop'),
+  retail: expectedOrder(['u.shop', 'u.shopfloor']),
   green: expectedOrder(['u.mowing', 'u.planting']),
   facility: expectedOrder(['u.frontdesk', 'u.maintenance']),
   security: expectedOrder(['u.guarding', 'u.incidents']),

@@ -258,6 +258,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "Питають, чи вона впала: так, що в неї, і кому ти дзвониш.", // nieuw, nalezen
     'c.sickchild.a.why': "Питають, як він: що ти бачиш, і що ти робиш.", // nieuw, nalezen
     'c.grouprules.a.why': "Питають, чи можна без колег: так, але спершу сказати колезі.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "Питають, чи все готово: ще ні, і чому.", // nieuw, nalezen
+    'c.hotelroom.a.why': "Питають, скільки лишилося: число, і коли кінець.", // nieuw, nalezen
+    'c.dosing.a.why': "Кажуть налити більше: ні, більше не означає краще, і чим міряють.", // nieuw, nalezen
+    'c.officenight.a.why': "Питають, чи робота наодинці: так, і буде повідомлення.", // nieuw, nalezen
+    'c.knives.a.why': "Просять нарізати: так, шефе, і запитання, як саме.", // nieuw, nalezen
+    'c.rawcooked.a.why': "Питають, чи без глютену: точно невідомо, тому перевіряють список.", // nieuw, nalezen
+    'c.pass.a.why': "Питають, де їжа: на роздачі, і її вже несуть.", // nieuw, nalezen
+    'c.bill.a.why': "Просять заплатити окремо: так, і термінал уже несуть.", // nieuw, nalezen
+    'c.washing.a.why': "Клієнт каже ні: це нормально, і пропозиція чогось іншого.", // nieuw, nalezen
+    'c.observing.a.why': "Питають, чи є щось особливе: так, і що саме.", // nieuw, nalezen
+    'c.homecare.a.why': "Питають, хто там: привітання, хто прийшов, і чи можна зайти.", // nieuw, nalezen
+    'c.liftaids.a.why': "Питають, чи можна без допомоги: так, з ковзним простирадлом, і його вже несуть.", // nieuw, nalezen
+    'c.returns.a.why': "Хочуть повернути товар: можна, і запитання про чек.", // nieuw, nalezen
+    'c.facing.a.why': "Питають, чи все готово: майже, і що ще лишилося.", // nieuw, nalezen
+    'c.shrink.a.why': "Просять заглянути в сумку: так, і показують чек.", // nieuw, nalezen
+    'c.shopclose.a.why': "Просять зайти: вибачте, зачинено, і коли знову відчиняться.", // nieuw, nalezen
+    'c.hirer.a.why': "Пропонують почати на новому місці: так, і запитання про час.", // nieuw, nalezen
+    'c.phases.a.why': "Кажуть, що робота закінчується: гаразд, і прохання про іншу роботу.", // nieuw, nalezen
+    'c.deductions.a.why': "Кажуть про утримання: запитання, чи це дозволено, і перевірка.", // nieuw, nalezen
+    'c.agencyhome.a.why': "Кажуть скоро виїхати: це мало часу, і спершу порада.", // nieuw, nalezen
   },
 };
 

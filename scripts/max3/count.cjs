@@ -565,7 +565,7 @@ function defineStates(LANG) {
   // The next lessons of 20 November 2026 (l.paint and l.prep of u.afbouw, the six of "Metselen,
   // hout en vastmaken", the shapes of Rekenen) and "Machines en gereedschap" (u.machines, 21
   // November 2026) "Elektra, leidingen en metaal" (u.install) and "Assemblage en montage" (u.montage, the same day): every step, the same way (seed 1).
-  for (const lesson of ['paint', 'prep', 'brick', 'wall', 'wood', 'square', 'screw', 'fix', 'shapes', 'angles', 'size', 'atmachine', 'inspect', 'packing', 'upkeep', 'wiring', 'testing', 'pipes', 'metalwork', 'assembly', 'fastening', 'handling', 'finalcheck', 'sowing', 'sorting', 'greenhouse', 'pests', 'tyres', 'oilchange', 'brakes', 'diagnosis', 'mowing', 'pruning', 'hedge', 'chainsaw', 'weeding', 'planting', 'roadside', 'litter', 'reception', 'visitors', 'mailroom', 'meetingroom', 'faults', 'repairs', 'moving', 'closing', 'patrol', 'access', 'cameras', 'report', 'evacuation', 'firstaid', 'shoplifting', 'aggression', 'hygienelock', 'allergens', 'coldroom', 'foreignbody', 'cutting', 'labels', 'linecleaning', 'haccp', 'binlorry', 'reversing', 'wastesorting', 'wastesafety', 'yard', 'hazardous', 'baler', 'shovel', 'nappies', 'mealtime', 'naptime', 'playtime', 'pickup', 'childsafety', 'sickchild', 'grouprules']) {
+  for (const lesson of ['paint', 'prep', 'brick', 'wall', 'wood', 'square', 'screw', 'fix', 'shapes', 'angles', 'size', 'atmachine', 'inspect', 'packing', 'upkeep', 'wiring', 'testing', 'pipes', 'metalwork', 'assembly', 'fastening', 'handling', 'finalcheck', 'sowing', 'sorting', 'greenhouse', 'pests', 'tyres', 'oilchange', 'brakes', 'diagnosis', 'mowing', 'pruning', 'hedge', 'chainsaw', 'weeding', 'planting', 'roadside', 'litter', 'reception', 'visitors', 'mailroom', 'meetingroom', 'faults', 'repairs', 'moving', 'closing', 'patrol', 'access', 'cameras', 'report', 'evacuation', 'firstaid', 'shoplifting', 'aggression', 'hygienelock', 'allergens', 'coldroom', 'foreignbody', 'cutting', 'labels', 'linecleaning', 'haccp', 'binlorry', 'reversing', 'wastesorting', 'wastesafety', 'yard', 'hazardous', 'baler', 'shovel', 'nappies', 'mealtime', 'naptime', 'playtime', 'pickup', 'childsafety', 'sickchild', 'grouprules', 'sanitary', 'hotelroom', 'dosing', 'officenight', 'knives', 'rawcooked', 'pass', 'bill', 'washing', 'observing', 'homecare', 'liftaids', 'returns', 'facing', 'shrink', 'shopclose', 'hirer', 'phases', 'deductions', 'agencyhome']) {
     for (let at = 0; at < 21; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
   }
   // "Je goed voelen op het werk" (l.feelwell, seed 1, 5 November 2026): an abstract word ("de
@@ -1013,6 +1013,11 @@ function defineRuleStates() {
   step('card-werkorder', 'rule&step=card&id=r.l.werkplaats.2.ca1', true);
   step('whatdo-proefrit', 'rule&step=whatdo&id=r.l.werkplaats.2.wd1', true);
   step('whoask-huisarts', 'rule&step=whoask&id=r.l.veilig.5.wa1', true);
+  // The six sectors of 23 November 2026 (curriculum, deel 9): the longest situation (a whatdo with a
+  // quote), a whoask with the huisarts after a prick, and a true statement.
+  step('whatdo-directeur', 'rule&step=whatdo&id=r.l.beveiliging.1.wd2', true);
+  step('whoask-prik', 'rule&step=whoask&id=r.l.groen.2.wa1', true);
+  step('truefalse-vierogen', 'rule&step=truefalse&id=r.l.kinderopvang.1.tf1', true);
   // After another pick, "Meer uitleg" opened: its text has its own speaker (one per block).
   add('rule:whatdo:more', shot('rule&step=whatdo'), async (p) => { await tap(p, choice, 1); await settle(p, 900); await tap(p, '.rule-fb-more summary'); await settle(p); }, { expect: '.rule-fb-more-body .speak-glyph' });
   add('rule:retry', shot('rule&step=whatdo&retry=1'), null, { expect: '.tag-repeat' });

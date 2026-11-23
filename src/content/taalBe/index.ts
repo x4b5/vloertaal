@@ -34,6 +34,7 @@ import { be as kas } from './units/kas';
 import { be as stage } from './units/stage';
 import { be as society } from './units/society';
 import { be as online } from './units/online';
+import { be as uitzend } from './units/uitzend';
 
 /**
  * The language track for Belgium (Vlaanderen), docs/taal-belgie.md. Every Dutch unit with a B or C
@@ -51,6 +52,7 @@ const BY_NL: Record<string, BeTaal | undefined> = {
   'u.house': house, 'u.social': social, 'u.sayings': sayings, 'u.rights': rights, 'u.leave': leave, 'u.sick': sick, 'u.exploit': exploit,
   'u.grow': grow, 'u.health': health, 'u.money': money, 'u.travel': travel, 'u.lost': lost, 'u.shop': shop,
   'u.ai': ai, 'u.kas': kas, 'u.stage': stage, 'u.society': society, 'u.online': online,
+  'u.uitzend': uitzend,
 };
 
 /**
@@ -67,6 +69,10 @@ export const BE_TAAL_TODO: readonly string[] = [
   // Agent C: rechten, verlof en ziekte, werk kwijt, uitbuiting (af)
 
   // Agent D: gezondheid, reizen, de eerste dagen, samenwerken, winkel en kas (af)
+
+  // Werken via een uitzendbureau (23 November 2026): NL-only for now; a Belgian version (interim,
+  // PC 322) still to write, with its translations and an expert check.
+  'u.uitzend',
 ];
 
 /** Every Belgian file written so far. */

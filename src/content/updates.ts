@@ -19,6 +19,9 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-23',
     items: [
+      'Werkregels: zes nieuwe sectoronderwerpen, elk met twee lessen. Werken in het groen (machines, de weg, kabels en naalden), in de facilitaire dienst (bezoek en privacy, storingen en gas), in de beveiliging (je pas en je ronde, diefstal en je verslag), in de voedingsindustrie (de hygiënesluis, allergenen en HACCP), in afval en recycling (de wagen en de pers) en in de kinderopvang (het register, medicijnen en zorgen). Ook in een Belgische versie. Je kiest ze bij "Waar werk je?".',
+      'Nieuw onderwerp voor iedereen: Werken via een uitzendbureau, direct na Werk en contract. Vier lessen: het uitzendbureau en de inlener, je contract en de fasen A, B en C, je loon en wat eraf mag, en wonen via het bureau en waar je hulp krijgt. Het gaat over de regels in Nederland; in België is uitzendwerk anders geregeld.',
+      'Een tweede onderwerp voor vier sectoren. Schoonmaak: Sanitair, hotel en machines. Horeca: De keuken en de bediening. Zorg: Verzorgen en thuiszorg. Winkel: Kassa, voorraad en sluiten. Wie die sector kiest, krijgt het direct na het eerste onderwerp. Bij elke les een tip van "Zo werkt het hier". De vertalingen, de stemmen en de tekeningen volgen.',
       'Vier nieuwe sectoren: Beveiliging (de ronde, toegang, camera’s, het rapport, brand, EHBO en winkeldiefstal), Voedingsindustrie (hygiëne, allergenen, de koelcel, snijden, etiketten en HACCP), Afval en recycling (de vuilniswagen, achteruitrijden, sorteren, de milieustraat en de balenpers) en Kinderopvang (verschonen, eten, slapen, spelen, ouders, veiligheid en de groep). Elk met twee onderwerpen van vier lessen, en bij elke les een tip van "Zo werkt het hier". De keuze van je sector heeft nu zes groepen: Groen en Tuinbouw staan bij "Buiten werken", Facilitair bij het nieuwe "Service en veiligheid", en "Zorg en service" heet nu "Zorg en kinderen". De vertalingen, de stemmen en de tekeningen volgen.',
       'Twee nieuwe sectoren: Groen (maaien, snoeien, planten, onkruid en werken langs de weg) en Facilitair (receptie, post, vergaderzalen, storingen en verhuizen). Elk met twee onderwerpen van vier lessen, en bij elke les een tip van "Zo werkt het hier". De vertalingen, de stemmen en de tekeningen volgen.',
     ],
@@ -489,8 +492,8 @@ export const UPCOMING_LAW: UpcomingLaw[] = [
       { date: '2027-01-01', what: 'Gelijkwaardige beloning voor uitzendkrachten (WAADI): dezelfde arbeidsvoorwaarden als de vaste mensen.' },
       { date: '2028-01-01', what: 'Geen nulurencontract en min-max meer, maar een bandbreedtecontract (vaste minimum- en maximumuren). Ketenregeling: langere tussenpoos. Uitzendwerk: kortere fase A.' },
     ],
-    change: 'Taal: de tips over proeftijd en oproepwerk (c.contract), uitzendwerk (c.agency) en ziek zijn als uitzendkracht (c.illness) herschrijven, met hun situaties en de vertalingen; de ⚖️-comments met "flexwerkers" daarboven bijwerken. Werkregels (contract.ts): de ketenregeling (r.l.contract.2) en oproepwerk en uitzendloon (r.l.contract.3); de comments "Redactie" daar weghalen. Daarna een update met een melding (loon en rechten, NL, beide sporen).',
-    ids: ['c.contract', 'c.agency', 'c.illness', 'r.l.contract.2', 'r.l.contract.3'],
+    change: 'Taal: de tips over proeftijd en oproepwerk (c.contract), uitzendwerk (c.agency), ziek zijn als uitzendkracht (c.illness), de fasen (c.phases) en loon en inhoudingen (c.deductions, unit Werken via een uitzendbureau) herschrijven, met hun situaties en de vertalingen; de ⚖️-comments met "flexwerkers" daarboven bijwerken. Werkregels (contract.ts): de ketenregeling (r.l.contract.2) en oproepwerk en uitzendloon (r.l.contract.3); de comments "Redactie" daar weghalen. Daarna een update met een melding (loon en rechten, NL, beide sporen).',
+    ids: ['c.contract', 'c.agency', 'c.illness', 'c.phases', 'c.deductions', 'r.l.contract.2', 'r.l.contract.3'],
     files: ['src/content/work.ts', 'src/content/workTips.ts', 'src/content/regels/units/contract.ts'],
     source: 'Stb. 2026, 205; inwerkingtredingsbesluit Stb. 2026, 206 (docs/werkregels-bronnen.md). De datums komen uit secundaire bronnen: check het Staatsblad.',
   },
@@ -514,8 +517,8 @@ export const UPCOMING_LAW: UpcomingLaw[] = [
     dates: [
       { date: '2028-07-01', what: 'Gepland, nog niet zeker: de werkgever of het bureau mag de huur niet meer van het minimumloon afhalen. Tot dan mag dat nog, met grenzen (hooguit 25 procent).' },
     ],
-    change: 'Taal: de tip over wonen via het bureau (c.housing). Werkregels: de vragen over huur van je loon (r.l.loon.2.wd2 in loon.ts, r.l.kas.2.wd2 in sector.ts). Eerst een plan: het is nog een wetsvoorstel, gekoppeld aan de Wet passende huur; de datum kan schuiven. Daarna een update met een melding (loon, NL).',
-    ids: ['c.housing', 'r.l.loon.2.wd2', 'r.l.kas.2.wd2'],
+    change: 'Taal: de tips over wonen via het bureau (c.housing) en over inhoudingen op het loon (c.deductions, unit Werken via een uitzendbureau; c.agencyhome noemt de huur van het loon niet). Werkregels: de vragen over huur van je loon (r.l.loon.2.wd2 in loon.ts, r.l.kas.2.wd2 in sector.ts). Eerst een plan: het is nog een wetsvoorstel, gekoppeld aan de Wet passende huur; de datum kan schuiven. Daarna een update met een melding (loon, NL).',
+    ids: ['c.housing', 'c.deductions', 'r.l.loon.2.wd2', 'r.l.kas.2.wd2'],
     files: ['src/content/work.ts', 'src/content/workTips.ts', 'src/content/regels/units/loon.ts', 'src/content/regels/units/sector.ts'],
     source: 'rijksoverheid.nl nieuws 10 sept 2026; Kamerbrief SZW 10 sept 2026 (nr. 2026-0000293074). Eerder plan (2025): later afschaffen; 30 okt 2025 bleef de regeling nog bestaan (rijksoverheid.nl). Gezocht 31 okt 2026, niet in het Staatsblad.',
   },

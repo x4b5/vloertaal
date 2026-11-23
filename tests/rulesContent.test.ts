@@ -88,7 +88,7 @@ const KEY_RULES = [
 ];
 
 describe('rules content: ids', () => {
-  it('has the 10 units in path order, 6 Entree units beside them, 2 more at the end, and the 10 sector units', () => {
+  it('has the 10 units in path order, 6 Entree units beside them, 2 more at the end, and the 16 sector units', () => {
     const FIRST_TEN = ['r.zoeken', 'r.start', 'r.contract', 'r.loon', 'r.tijd', 'r.ziek', 'r.veilig', 'r.samen', 'r.rechten', 'r.geld'];
     expect(rulesUnits.map((u) => u.id)).toEqual([
       'r.zoeken', 'r.start', 'r.afronden', 'r.contract', 'r.stage', 'r.loon', 'r.rekenen', 'r.tijd',
@@ -108,7 +108,12 @@ describe('rules content: ids', () => {
     expect(rulesUnits.filter((u) => FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(47);
     // The 3 lessons of the winkel left the path when it became a sector unit (31 October 2026).
     expect(rulesUnits.filter((u) => !FIRST_TEN.includes(u.id)).flatMap((u) => u.lessons)).toHaveLength(22);
-    expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual(['r.build', 'r.care', 'r.clean', 'r.factory', 'r.horeca', 'r.kas', 'r.techniek', 'r.warehouse', 'r.werkplaats', 'r.winkel']);
+    // With the six sectors of 23 November 2026 (curriculum, deel 9): groen, facilitair, beveiliging,
+    // voeding, afval and kinderopvang.
+    expect(sectorRulesUnits.map((u) => u.id).sort()).toEqual([
+      'r.afval', 'r.beveiliging', 'r.build', 'r.care', 'r.clean', 'r.facilitair', 'r.factory', 'r.groen', 'r.horeca',
+      'r.kas', 'r.kinderopvang', 'r.techniek', 'r.voeding', 'r.warehouse', 'r.werkplaats', 'r.winkel',
+    ]);
     // The winkel was an Entree unit of the path (3 lessons) before it became a sector (31 October 2026).
     for (const u of sectorRulesUnits) expect(u.lessons, u.id).toHaveLength(u.id === 'r.winkel' ? 3 : 2);
   });

@@ -257,6 +257,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "Düşüp düşmediği soruluyor: evet, neyi olduğu, bir de kimi aradığın.", // nieuw, nalezen
     'c.sickchild.a.why': "Nasıl olduğu soruluyor: ne gördüğün, bir de ne yaptığın.", // nieuw, nalezen
     'c.grouprules.a.why': "Tek başına gidip gidemeyeceğin soruluyor: evet, ama önce bir iş arkadaşına söyle.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "Bitip bitmediği soruluyor: henüz değil, bir de nedeni.", // nieuw, nalezen
+    'c.hotelroom.a.why': "Kaç tane kaldığı soruluyor: sayı, bir de ne zaman bittiği.", // nieuw, nalezen
+    'c.dosing.a.why': "Daha fazla kullanman söyleniyor: hayır, fazlası daha iyi değil, bir de ne kullandığın.", // nieuw, nalezen
+    'c.officenight.a.why': "Tek başına çalışıp çalışmadığın soruluyor: evet, bir de mesaj atacağın.", // nieuw, nalezen
+    'c.knives.a.why': "Kesmen isteniyor: evet şef, bir de nasıl kesileceğine dair bir soru.", // nieuw, nalezen
+    'c.rawcooked.a.why': "Glutensiz olup olmadığı soruluyor: emin değilsin, bu yüzden listeye bakıyorsun.", // nieuw, nalezen
+    'c.pass.a.why': "Yemeğin nerede olduğu soruluyor: pass’te, bir de şimdi getirdiğin.", // nieuw, nalezen
+    'c.bill.a.why': "Ayrı ödemek isteniyor: evet, bir de kart makinesini aldığın.", // nieuw, nalezen
+    'c.washing.a.why': "Danışan hayır diyor: sorun değil, bir de başka bir şey önerdiğin.", // nieuw, nalezen
+    'c.observing.a.why': "Özel bir şey olup olmadığı soruluyor: evet, bir de tam olarak ne olduğu.", // nieuw, nalezen
+    'c.homecare.a.why': "Kimin geldiği soruluyor: bir selam, kim olduğun, bir de içeri girip giremeyeceğin.", // nieuw, nalezen
+    'c.liftaids.a.why': "Tek başına yapman isteniyor: evet, kaydırma çarşafıyla, bir de onu aldığın.", // nieuw, nalezen
+    'c.returns.a.why': "İade etmek isteniyor: evet, bir de fişle ilgili bir soru.", // nieuw, nalezen
+    'c.facing.a.why': "İşin bitip bitmediği soruluyor: neredeyse, bir de geriye ne kaldığı.", // nieuw, nalezen
+    'c.shrink.a.why': "Çantana bakmak isteniyor: evet, bir de fişi gösterdiğin.", // nieuw, nalezen
+    'c.shopclose.a.why': "İçeri girmek isteniyor: üzgünüm, kapalı, bir de ne zaman tekrar açıldığı.", // nieuw, nalezen
+    'c.hirer.a.why': "Yeni bir yerde başlaman isteniyor: evet, bir de saatle ilgili bir soru.", // nieuw, nalezen
+    'c.phases.a.why': "İşin bittiği söyleniyor: tamam, bir de başka iş istediğin.", // nieuw, nalezen
+    'c.deductions.a.why': "Bir kesinti söyleniyor: buna izin olup olmadığını soruyorsun, bir de kontrol ediyorsun.", // nieuw, nalezen
+    'c.agencyhome.a.why': "Yakında çıkman söyleniyor: bu kısa, bir de önce tavsiye aldığın.", // nieuw, nalezen
   },
 };
 

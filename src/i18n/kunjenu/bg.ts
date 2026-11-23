@@ -166,6 +166,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "Мога да попитам дали детето вече е заспало.", // nieuw, nalezen
     'kjn.u.daycare.1': "Мога да кажа на родител как е минал денят.", // nieuw, nalezen
     'kjn.u.daycare.2': "Мога да попитам кой ще дойде да вземе детето.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "Мога да попитам в коя фаза съм.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "Мога да попитам за какво е удръжка от заплатата ми.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "Мога да кажа, че тоалетна е запушена.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "Мога да попитам колко препарат се слага в кофата.", // nieuw, nalezen
+    'kjn.u.cooking.1': "Мога да попитам главния готвач как да нарежа нещо.", // nieuw, nalezen
+    'kjn.u.cooking.2': "Мога да попитам гост дали иска да плати поотделно.", // nieuw, nalezen
+    'kjn.u.carework.1': "Мога да попитам клиент какво иска да облече.", // nieuw, nalezen
+    'kjn.u.carework.2': "Мога да кажа на медицинската сестра какво видях.", // nieuw, nalezen
+    'kjn.u.shopfloor.1': "Мога да поискам от клиент касовата бележка.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "Мога да кажа, че магазинът скоро затваря.", // nieuw, nalezen
   },
 };
 

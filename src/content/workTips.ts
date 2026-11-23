@@ -3314,10 +3314,394 @@ const vierSectorenTips = [
   ),
 ];
 
+/**
+ * The tips of the five units of 23 November 2026 (src/content/work.ts): the second own units of
+ * Schoonmaak, Horeca, Zorg and Winkel (how the work is done: house rules, no right or amount), and
+ * the basis unit "Werken via een uitzendbureau" (u.uitzend), whose tips state rights: every claim
+ * has its ⚖️ note right above the tip, and the same claims with their sources stand in
+ * docs/juridische-check.md ("Werken via een uitzendbureau").
+ */
+const vijfUnitsTips = [
+  // Schoonmaak. Working from clean to dirty, and the colours, differ per company: HOUSE_LINE.
+  tipFor(
+    'sanitary',
+    '🚽',
+    'From clean to dirty',
+    'In a washroom you work from clean to dirty: first the mirrors and the washbasins, then the toilets, and the floor last. That way you do not bring dirt from the toilet to the washbasin. Use the cloths with the colour for the toilet, and wear gloves. Clean the toilet brush too, and let it dry. Is a toilet blocked or broken? Put a sign on the door, and report it. Wash your hands when you are done, also when you wore gloves.',
+    ['Dit toilet is verstopt. Ik zet er een bordje op.', 'This toilet is blocked. I am putting a sign on it.'],
+    'You cleaned a toilet. The washbasin is next. You still hold the same cloth. What do you do?',
+    [
+      'Take a cloth with the colour for the washbasin.',
+      'Use the same cloth: it still looks clean.',
+      'Rinse the cloth in the toilet first.',
+    ],
+    'Germs from the toilet are on the cloth, also when you cannot see them. A new cloth keeps them away from hands and faces.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'hotelroom',
+    '🛌',
+    'Knock, say who you are, and wait',
+    'Before you go into a hotel room, knock and say who you are, for example "Housekeeping!". Wait a moment, and knock again. Is there a "Niet storen" sign on the door? Then do not go in, and write it on your room list. Is the guest in the room? Ask if you may clean now, or come back later. The guest’s things stay where they are. Did a guest forget something? Bring it to the reception. Never keep anything for yourself, not even something small.',
+    ['Goedemorgen. Mag ik de kamer nu schoonmaken?', 'Good morning. May I clean the room now?'],
+    'In an empty room you find a phone under the bed. The guest has left. What do you do?',
+    [
+      'Bring it to the reception.',
+      'Keep it: the guest is gone.',
+      'Leave it under the bed.',
+    ],
+    'Lost things still belong to the guest. The reception can give them back. Keeping them is stealing, and can cost you your job.',
+    HOUSE_LINE,
+  ),
+  // How much product, and how a machine is used, is on the label and in the company's instructions: HOUSE_LINE.
+  tipFor(
+    'dosing',
+    '🥄',
+    'The right dose, not more',
+    'More product does not clean better. Too much leaves a sticky layer, so a floor gets dirty faster and can get slippery. It is also worse for your skin and your lungs. Use the measuring cup or the dosing pump, and follow the label. First the water, then the product: so it does not splash. Before you use the scrubber-dryer, check that it is charged, with clean water in the tank. At the end, empty and rinse the tank with the dirty water.',
+    ['Hoeveel moet ik erin doen?', 'How much must I put in?'],
+    'The floor stays sticky. A colleague says: "Use double the product." What do you do?',
+    [
+      'Use the dose on the label, and ask.',
+      'Use double: then it gets clean.',
+      'Pour the product right on the floor.',
+    ],
+    'A sticky floor often means too much product, not too little. The right dose cleans best and is the safest.',
+    HOUSE_LINE,
+  ),
+  // Working alone (alleenwerken): what to do and who to call differs per company and per building: HOUSE_LINE.
+  tipFor(
+    'officenight',
+    '🌃',
+    'Alone in the building',
+    'Early in the morning or late at night you often clean an office alone. Know what to do if something happens: who do you call, and where is the first aid kit? Keep your phone with you. Agree with your supervisor or a colleague that you send a message when you start and when you are done. Do not let in anyone you do not know. Do not touch papers, screens or keyboards more than you need for cleaning, and never read what is on them.',
+    ['Ik ben klaar en ik ga nu naar huis.', 'I am done and I am going home now.'],
+    'At night a man knocks on the glass door. He says he works here and forgot his key. What do you do?',
+    [
+      'Do not open. Call your supervisor.',
+      'Let him in: he looks friendly.',
+      'Give him your own key.',
+    ],
+    'Anyone can say he works there. Your supervisor can check it. Your safety and the building come first.',
+    HOUSE_LINE,
+  ),
+  // Horeca. Knife rules (walk with the point down, never in the sink) are kitchen practice: HOUSE_LINE.
+  tipFor(
+    'knives',
+    '🔪',
+    'A knife is a tool, not a toy',
+    'Keep your knife sharp: a blunt knife slips more easily. Cut on a board that does not move: put a wet cloth under it. Bend your fingers in, like a claw. Walk with the point down, close to your leg, and say "Mes!" when you pass someone. Never put a knife in a sink full of water: someone can grab it without seeing it. Is a knife falling? Step back, do not catch it.',
+    ['Mes! Ik loop achter je langs.', 'Knife! I am walking behind you.'],
+    'You are cutting. Your knife slips off the board and falls. What do you do?',
+    [
+      'Step back, and let it fall.',
+      'Catch it quickly with your hand.',
+      'Stop it with your foot.',
+    ],
+    'A falling knife can cut deep into your hand or your foot. A knife on the floor only needs a wash.',
+    HOUSE_LINE,
+  ),
+  // ⚖️ check: A restaurant must be able to tell guests which allergens are in a dish ⚖️ (Verordening
+  // (EU) nr. 1169/2011, art. 9 lid 1 onder c and art. 44: allergen information also for food that is
+  // not pre-packed, as in a restaurant; in the Netherlands the Warenwetbesluit informatie
+  // levensmiddelen; NVWA "Allergeneninformatie bij niet-voorverpakte levensmiddelen"). The same EU rule
+  // holds in Belgium (FAVV). The rest of the tip is kitchen practice: HOUSE_LINE.
+  tipFor(
+    'rawcooked',
+    '🍗',
+    'Raw and ready never touch',
+    'Raw meat, fish and eggs can carry germs. Keep them away from food that is ready to eat. Use a separate board and knife, or the colour code of your kitchen, and wash your hands after you touch raw food. Raw meat goes at the bottom of the fridge, so nothing drips on other food. Cover food and put a date on it. With allergies, a trace can be enough: use clean tools. A restaurant must be able to tell guests which allergens are in a dish: check the allergen list.',
+    ['Welke plank is voor rauw vlees?', 'Which board is for raw meat?'],
+    'You cut raw chicken. Next you must cut tomatoes for a salad. What do you do?',
+    [
+      'Take a clean board and a clean knife.',
+      'Wipe the board with a cloth, and go on.',
+      'Cut the tomatoes on the same board.',
+    ],
+    'Germs from raw chicken get on the tomatoes, and a salad is not cooked again. A clean board stops that.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'pass',
+    '🔔',
+    'The pass: plates do not wait',
+    'At the pass the kitchen puts the plates for the waiter. Hot food must go to the guest quickly, so a plate does not wait long on the pass. Check the ticket: the right table, the right dishes, a clean edge on the plate? Then take it. In the dish room: pre-rinse, put everything in the racks, and let the machine do the rest. Do not open the machine while it runs: the steam is very hot. Wear gloves when you fill the machine’s products.',
+    ['Welke tafel is dit?', 'Which table is this?'],
+    'There are two plates on the pass. You do not know which table they are for. What do you do?',
+    [
+      'Look at the ticket, or ask the chef.',
+      'Take them to a table that is waiting.',
+      'Wait until someone else takes them.',
+    ],
+    'A plate at the wrong table means two waiting guests and cold food. One short question is faster.',
+    HOUSE_LINE,
+  ),
+  // How the till, cash and tips are handled differs per company: HOUSE_LINE.
+  tipFor(
+    'bill',
+    '💶',
+    'Money at the table: count it twice',
+    'When a guest pays, say the amount clearly and let the guest see the card machine. With cash, count the money when you get it, and again when you give the change. The money goes into the till or your waiter’s wallet, never into your own pocket. Tips (fooi) go where your company says, for example in the tip jar. Did a guest leave without paying? Do not run after them: tell your manager.',
+    ['Dat is dan vijfenveertig euro, alstublieft.', 'That is forty-five euros, please.'],
+    'A guest gives you money and says: "It is right." You did not count it. What do you do?',
+    [
+      'Count it while the guest is there.',
+      'Put it away, and count it later.',
+      'Trust the guest: say thank you.',
+    ],
+    'If you count later and money is missing, nobody can check what happened. Counting at the table protects the guest and you.',
+    HOUSE_LINE,
+  ),
+  // Zorg. Dignity in personal care is a norm of the work, not a rule of one company: no closing line.
+  tipFor(
+    'washing',
+    '🪥',
+    'Ask first, cover, and let them choose',
+    'Washing someone is very personal. Say what you are going to do, and ask first. Cover the parts of the body you are not washing with a towel. Close the door or the curtain. Let the client choose: the shower or a wash at the washbasin, and which clothes to wear. Let the client do what they can still do, also when it is slower. Does a client say no? Do not force it. Try again later, offer something else, and tell the nurse.',
+    ['Wat wilt u vandaag aantrekken?', 'What would you like to wear today?'],
+    'A client says she does not want to be washed today. What do you do?',
+    [
+      'Accept it, and tell the nurse.',
+      'Wash her anyway: it is on the list.',
+      'Skip it, and say nothing.',
+    ],
+    'A client may say no. Forcing care hurts trust. The nurse can look at why, and at what can be done.',
+    NONE,
+  ),
+  // How and where a helper writes in the care file differs per home: HOUSE_LINE.
+  tipFor(
+    'observing',
+    '📓',
+    'Write what you see, not what you think',
+    'What you write in the care file, the next colleague reads. Write facts: what you saw, heard or measured, and when. Not "Mevrouw is lastig", but "Mevrouw wilde niet eten en duwde het bord weg." Write it the same day, in short sentences. Not sure how to write it in Dutch? Tell the nurse, and write it together. Look at the skin when you wash someone: a red spot that does not go away can be the start of a pressure sore.',
+    ['Ik schrijf op wat ik gezien heb.', 'I am writing down what I saw.'],
+    'A client was angry during the wash. You must write it in the file. What do you do?',
+    [
+      'Write what she said and did, and when.',
+      'Write: "Difficult lady, as always."',
+      'Write nothing: it is normal.',
+    ],
+    'Facts help the next colleague and the nurse to act. An opinion does not say what happened.',
+    HOUSE_LINE,
+  ),
+  // What to do when a client does not open the door differs per home care organisation: HOUSE_LINE.
+  tipFor(
+    'homecare',
+    '🗝️',
+    'A guest in someone’s home',
+    'In home care you work in the client’s own home. You are a guest there: ring the bell and say who you are, also when you have a key. The code of the key safe is secret. Never write it where others can see it, and always close the key safe again. Follow the care plan: what you do is in there. Is something different, or does the client not open the door? Do not just leave. Call your team or the district nurse.',
+    ['Goedemorgen, ik ben van de thuiszorg.', 'Good morning, I am from home care.'],
+    'You ring the bell. The client does not open. Her car is there. What do you do?',
+    [
+      'Call your team, and wait.',
+      'Go on to the next client.',
+      'Ring once more, then leave.',
+    ],
+    'The client may have fallen, or be ill. Your team knows what to do, and who has a key.',
+    HOUSE_LINE,
+  ),
+  // Which aid a client needs is in the care plan; the checks follow the instructions of the home: HOUSE_LINE.
+  tipFor(
+    'liftaids',
+    '🛷',
+    'Let the aid do the lifting',
+    'Before you use a hoist, check it: is the battery charged, is the sling the right size and not torn? Put the brakes on the bed and the wheelchair. Bring the bed to the height of your hips, so you do not bend. Tell the client every step. The care plan says which aid a client needs. Is an aid broken or missing? Do not work around it: report it, and ask a colleague to help. Not shown how an aid works? Ask before you start.',
+    ['De tilband is kapot. Ik pak een andere.', 'The sling is broken. I will get another one.'],
+    'You want to use the hoist. The sling has a small tear. What do you do?',
+    [
+      'Take another sling, and report the tear.',
+      'Use it: the tear is very small.',
+      'Tie a knot in the sling.',
+    ],
+    'A small tear can get bigger under the weight of a person. A fall from a hoist can badly hurt the client.',
+    HOUSE_LINE,
+  ),
+  // Winkel. Return rules are the shop's own (a faulty product is another matter, for the manager):
+  // the tip names no right, HOUSE_LINE.
+  tipFor(
+    'returns',
+    '🔄',
+    'Returns: follow the shop’s rules',
+    'Every shop has its own rules for returns: how many days, with or without a receipt, money back or a credit note. Learn them, and follow them for every customer. Not sure? Ask a colleague or the manager, and do not decide alone. At the end of your shift, count your till drawer, with a colleague if your shop does it that way. Never take money from the till for yourself, not even to borrow it for a moment.',
+    ['Ik vraag het even aan de bedrijfsleider.', 'I will just ask the store manager.'],
+    'A customer wants money back for shoes. She has no receipt. You do not know the rule. What do you do?',
+    [
+      'Ask the manager what to do.',
+      'Give the money back: she is nice.',
+      'Say no, and send her away.',
+    ],
+    'The manager knows the rules and can decide. Then the customer gets a fair answer, and you are not to blame.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'facing',
+    '❄️',
+    'Cold first, and the shelf looks full',
+    'Cold and frozen products go into the fridge or the freezer first, before anything else. They may not stand warm for long. Then the rest. Facing means: pull the products to the front, with the label to the customer. Then the shelf looks full and tidy. Check the shelf label: is the price right for this product? When you open boxes, cut away from your body, and not too deep: you can damage the product.',
+    ['Eerst de koude producten, dan de rest.', 'The cold products first, then the rest.'],
+    'A pallet with milk and a pallet with crisps arrive. You are alone. What do you do?',
+    [
+      'Put the milk in the fridge first.',
+      'Start with the crisps: they are lighter.',
+      'Leave both until a colleague comes.',
+    ],
+    'Milk that stands warm too long can make customers ill, and must be thrown away. Crisps can wait.',
+    HOUSE_LINE,
+  ),
+  // Staff purchases and bag checks are shop rules: HOUSE_LINE. The tip names no law.
+  tipFor(
+    'shrink',
+    '👜',
+    'Your own shopping: pay like a customer',
+    'A shop loses a lot through broken products, old products and theft. Help to keep it low. A broken or damaged product? Do not put it back: write it off the way your shop does it. Your own shopping: pay at the till like every customer, and keep the receipt. In many shops you may not ring up your own shopping: a colleague does it. Never eat or take a product without paying, not even a small one. Some shops check bags: that is a shop rule, not a sign of distrust in you.',
+    ['Ik betaal eerst, en ik bewaar de bon.', 'I pay first, and I keep the receipt.'],
+    'At the end of your shift you are hungry. A sandwich is past its date today. What do you do?',
+    [
+      'Ask the manager what the rule is.',
+      'Eat it: it is thrown away anyway.',
+      'Take it home in your bag.',
+    ],
+    'In many shops, taking a product without paying is stealing, also when it is old. Asking first keeps you safe.',
+    HOUSE_LINE,
+  ),
+  // What to do at closing time and in a robbery is in the shop's own rules (the advice "give, do not
+  // fight, call 112 afterwards" holds everywhere): HOUSE_LINE.
+  tipFor(
+    'shopclose',
+    '🏦',
+    'A robbery: give it, and stay safe',
+    'At closing time there is a lot of money in the till, so shops have rules: count it with two people, take the money to the safe, and lock the back door first. A robbery (overval)? Your life is worth more than the money. Stay calm, do what they say, and do not fight or run after them. Remember what you can: clothes, height, voice. When they are gone: lock the door, call 112, and touch nothing. Afterwards, talk about it with your manager or someone you trust.',
+    ['We gaan dicht. Ik doe de deur op slot.', 'We are closing. I am locking the door.'],
+    'A man with a knife wants the money from your till. What do you do?',
+    [
+      'Stay calm, and give him the money.',
+      'Fight him: the money is not his.',
+      'Run to the back, and lock yourself in.',
+    ],
+    'Fighting or running makes a robber nervous and more dangerous. Money can be replaced. You cannot.',
+    HOUSE_LINE,
+  ),
+  // Werken via een uitzendbureau (u.uitzend). Rights: ADVICE_LINE where the law gives the rule,
+  // ABUSE_LINE where the agency itself may be the problem (deductions, housing). More in
+  // docs/juridische-check.md ("Werken via een uitzendbureau").
+  // ⚖️ check (23 November 2026): the Wet meer zekerheid flexwerkers (Stb. 2026, 205) changes agency
+  // work: equal terms for agency workers (WAADI) from 1 January 2027, a shorter phase A from 1 January
+  // 2028 (secondary sources; check the Staatsblad). The tips of this unit name no date and no number of
+  // weeks; rewrite 'c.phases' and 'c.deductions' before those dates (src/content/updates.ts UPCOMING_LAW).
+  // ⚖️ check: The agency is your employer, not the hirer ⚖️ (BW 7:690: de uitzendovereenkomst; the same as c.agency).
+  // ⚖️ check: The hirer must keep your work safe, just like for its own workers ⚖️ (Arbowet art. 1 lid 1
+  // onder 2: who has the work done under his authority counts as the employer for the Arbowet; BW 7:658
+  // lid 4: the hirer is liable for an accident at work; Waadi art. 11: the hirer tells the agency the
+  // qualifications and the risks of the work).
+  // ⚖️ check: Report sick the way your agency says: often to the agency and to the hirer ⚖️ (no law:
+  // the agency's own rules and the uitzend-cao; "often" because it differs per agency).
+  tipFor(
+    'hirer',
+    '🏭',
+    'Two companies: who does what?',
+    'You work through an agency (uitzendbureau), but you do the work at another company: the hirer (inlener). The agency is your employer: your contract, your pay, your payslip and your days off come from the agency. The hirer tells you what to do on the work floor, and must keep your work safe, just like for its own workers. Report sick the way your agency says: often to the agency and to the hirer. Keep the name and phone number of your contact person at the agency in your phone.',
+    ['Wie is mijn contactpersoon bij het uitzendbureau?', 'Who is my contact person at the agency?'],
+    'At the hirer you must work with a machine. Nobody showed you how. What do you do?',
+    [
+      'Ask the hirer to show you first.',
+      'Try it: the agency is responsible.',
+      'Go home, and say nothing.',
+    ],
+    'The hirer must show you how to work safely, the same as its own workers. Asking for it is your right.',
+    ADVICE_LINE,
+  ),
+  // ⚖️ check: Most agency workers work under a cao for agency workers (uitzend-cao) ⚖️ (Cao voor
+  // Uitzendkrachten (ABU/NBBU); "most" because some agencies have their own cao, see the question at
+  // c.agency in docs/juridische-check.md).
+  // ⚖️ check: The cao has phases A, B and C ⚖️ (Cao voor Uitzendkrachten, the phase system ("fasensysteem")).
+  // ⚖️ check: In phase A, your work can usually stop when the hirer no longer needs you (uitzendbeding)
+  // ⚖️ (BW 7:691 lid 2: the uitzendbeding, by law for the first 26 weeks, longer by cao; "usually"
+  // because a contract without the uitzendbeding is possible).
+  // ⚖️ check: In phase B, you get contracts for a fixed time; in phase C, a permanent contract with the
+  // agency ⚖️ (Cao voor Uitzendkrachten, fase B and fase C; BW 7:691 lid 1 and 7:668a for the chain).
+  // ⚖️ check: How long each phase lasts is in your cao ⚖️ (Cao voor Uitzendkrachten; the number of
+  // weeks is left out on purpose: it changes with the Wet meer zekerheid flexwerkers, 2028).
+  tipFor(
+    'phases',
+    '🅰️',
+    'Phases A, B and C',
+    'Most agency workers work under a cao for agency workers (uitzend-cao). It has phases. In phase A, your work can usually stop when the hirer no longer needs you (uitzendbeding). In phase B, you get contracts for a fixed time. In phase C, you get a permanent contract with the agency. How long each phase lasts is in your cao. Ask the agency which phase you are in, and keep all your contracts.',
+    ['Hoe lang duurt fase A voor mij?', 'How long does phase A last for me?'],
+    'You worked a long time for the same agency. You still get short contracts. What do you do?',
+    [
+      'Ask the agency which phase you are in.',
+      'Nothing: agency work is always short.',
+      'Stop, and look for another agency.',
+    ],
+    'After enough time, the cao gives you more security. The agency can tell you where you are, and the union can check it with you.',
+    ADVICE_LINE,
+  ),
+  // ⚖️ check: You have a right to at least the same pay as workers of the hirer who do the same work
+  // ⚖️ (Waadi art. 8 lid 1: at least the wage and allowances of workers in the same or a similar job at
+  // the hirer; the uitzend-cao: inlenersbeloning; the same sentence as c.agency. From 1 January 2027
+  // more equal terms, Wet meer zekerheid flexwerkers).
+  // ⚖️ check: Money taken off your pay must be on your payslip ⚖️ (BW 7:626 lid 2: the payslip shows
+  // the amounts that are taken off).
+  // ⚖️ check: Tax and premiums come off by law ⚖️ (WML art. 13 lid 1: the deductions the law itself
+  // requires, such as wage tax, premiums and a pension premium, may come off the minimum wage too).
+  // ⚖️ check: Apart from those, from the minimum wage, the agency may only take off rent for your housing and the premium
+  // for health insurance, and only if you agreed to it in writing ⚖️ (WML art. 13 and the decree on
+  // deductions from the minimum wage, since 1 January 2017 (Wet aanpak schijnconstructies): rent at most
+  // 25% of the minimum wage and only for housing that meets the quality rules, health insurance at most
+  // the premium itself; the percentage is left out of the tip on purpose. Planned: no rent off the
+  // minimum wage from 1 July 2028: then rewrite 'c.deductions', src/content/updates.ts UPCOMING_LAW).
+  // ⚖️ check: Other costs, like transport, work clothes, fines or a fee for finding you a job, may not
+  // come off the minimum wage ⚖️ (the same: only those two may come off; a fee for the job is never
+  // allowed, Waadi art. 9 lid 1; protective clothing is free, Arbobesluit art. 8.1 and Arbowet art. 8).
+  tipFor(
+    'deductions',
+    '➖',
+    'What may come off your pay?',
+    'You have a right to at least the same pay as workers of the hirer who do the same work. Money that is taken off your pay (inhouding) must be on your payslip. Tax and premiums come off by law. Apart from those, the agency may only take off two costs from the minimum wage: rent for your housing and the premium for health insurance, and only if you agreed to it in writing. Other costs, like transport, work clothes, fines or a fee for finding you a job, may not come off the minimum wage. Do not understand a deduction? Ask the agency to explain it in writing.',
+    ['Waarvoor is deze inhouding?', 'What is this deduction for?'],
+    'The agency takes money off your pay for the bus to work. You earn the minimum wage. What do you do?',
+    [
+      'Ask about it: this is not allowed.',
+      'Nothing: you take the bus every day.',
+      'Stop taking the bus, and walk.',
+    ],
+    'From the minimum wage, only rent and health insurance may come off, and only with your written yes. The union or the Juridisch Loket can help you.',
+    ABUSE_LINE,
+  ),
+  // ⚖️ check: Housing through the agency: a rental contract of your own, in writing, apart from your
+  // work contract ⚖️ (Wet goed verhuurderschap, in force 1 July 2023: the extra rules for renting to
+  // labour migrants, rental contract in writing and separate from the employment contract (check the
+  // article); the uitzend-cao and the SNF norm say the same; the same as c.housing).
+  // ⚖️ check: It says what you pay, and how and when the rental ends ⚖️ (Wet goed verhuurderschap: written
+  // information on the rent, the service costs and the rules; BW 7:271 for the notice of a rental).
+  // ⚖️ check: Your work stops? Your home does not always stop on the same day ⚖️ (the rental contract is
+  // separate from the work contract, see above; "not always" because short stays (logies) can end
+  // sooner; the same advice as c.housing: ask before you leave).
+  // ⚖️ check: The union, the Juridisch Loket (free legal advice), FairWork, or the Nederlandse
+  // Arbeidsinspectie, where you can also report anonymously ⚖️ (juridischloket.nl, 0800-8020, free;
+  // nlarbeidsinspectie.nl/melden: a report can be made anonymously; fairwork.nu; the same places as
+  // c.gethelp and the closing line ABUSE_LINE).
+  tipFor(
+    'agencyhome',
+    '🏘️',
+    'Your home, and where to get help',
+    'Does the agency arrange your housing? Then you get a rental contract of your own, in writing, apart from your work contract. Keep a copy. It says what you pay, and how and when the rental ends. Your work stops? Your home does not always stop on the same day: ask for advice before you leave. Unsafe or very full housing, threats, or pay that is too low? Get help: the union, the Juridisch Loket (free legal advice), FairWork, or the Nederlandse Arbeidsinspectie, where you can also report anonymously.',
+    ['Mag ik een kopie van mijn huurcontract?', 'May I have a copy of my rental contract?'],
+    'Your work stops. The housing manager says you must leave the house today. What do you do?',
+    [
+      'Ask the union or Juridisch Loket first.',
+      'Leave today, and sleep at a friend’s.',
+      'Pack your bag, and sleep outside.',
+    ],
+    'Your rental contract has its own rules, apart from your work. Advice helps you know when you really must leave.',
+    ABUSE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 
