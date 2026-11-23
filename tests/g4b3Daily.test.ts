@@ -88,17 +88,22 @@ describe('Herhaal vandaag rotates sentences and chats', () => {
     // after Samenwerken, so it is one of the first 16 units: 65 of 153 by 6 weeks (42.5%), 111 of
     // 153 by 12 weeks (72.5%), chats 35 and 46 of 51. The same effect as l.alarm: more lessons
     // share the daily places in the first weeks. The limit is a little under.
-    expect(sentencesBy42.size / allSentences).toBeGreaterThan(0.4);
+    // 23 November 2026: with the four new lessons of "Als het misgaat" and "Tijd en rooster" (12
+    // sentences more in the first 16 units) 38% by 6 weeks: the limit is 0.35.
+    expect(sentencesBy42.size / allSentences).toBeGreaterThan(0.35);
     // Both together (weak words first and l.alarm): 76% of the sentences by 12 weeks. Weak words
     // take half the places, so the sentences of the lessons that went well come back later.
-    expect(sentences.size / allSentences).toBeGreaterThan(0.7);
+    // 23 November 2026: "Als het misgaat" and "Tijd en rooster" (both in the first 16 units) got two
+    // lessons each (12 sentences more): 64% by 12 weeks, so the limit is 0.6.
+    expect(sentences.size / allSentences).toBeGreaterThan(0.6);
     // After 6 weeks more than half of the chats came back (a weak lesson keeps the chat to itself:
     // with "Klanken" in the first 16 units 58%), after 12 weeks nearly all.
     expect(chatsBy42.size / allChats).toBeGreaterThan(0.55);
     // One chat a day: more lessons in the first 16 units means more chats to share the 84 days
     // (30 October 2026: with "Getallen en gegevens" and l.permit, 44 chats, 39 of them back; since
-    // 4 November 2026, with the weak words first, 37).
-    expect(chats.size / allChats).toBeGreaterThan(0.8);
+    // 4 November 2026, with the weak words first, 37). 23 November 2026: with the four new lessons of
+    // "Als het misgaat" and "Tijd en rooster" (four chats more) exactly 80%: the limit is 0.75.
+    expect(chats.size / allChats).toBeGreaterThan(0.75);
     // Second and third sentences of lessons come back too.
     const later = done.flatMap((l) => l.sentences.slice(1)).filter((s) => sentencesBy42.has(s.id));
     expect(later.length).toBeGreaterThan(30);

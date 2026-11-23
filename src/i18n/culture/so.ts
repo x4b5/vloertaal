@@ -423,6 +423,39 @@ const t: CultureTranslation = {
     'c.whereis.o2': "Sii wad raadinta: mar kale weydiintu waa ceeb.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.o3': "Shaqada ku bilow dharkaaga gaarka ah.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Weydiintu waxay qaadataa toban ilbiriqsi. Inaad keligaa raadiso way ku daahin kartaa. Saaxiibbada shaqadu way og yihiin in meel cusub ay adag tahay in jidka laga helo.", // nieuw, nalezen // nagelezen AI 22 nov
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
+    'c.wound': "Gubasho? Biyo ku qabooji", // nieuw, nalezen
+    'c.wound.b': "Goos yar: ku cadaadi maro nadiif ah ama faashad, oo u sheeg qofka gargaarka degdegga ah. Gubasho: isla markiiba ku qabooji biyo diirran oo socda, ugu yaraan 10 daqiiqo. Wax ma ku galay ishaada? Biyo ku dhaq, ama qubeyska indhaha. Ma culus tahay? Wac 112. Maalintaada ugu horreysa weydii meesha uu yaal sanduuqa gargaarka degdegga iyo qubeyska indhaha.", // nieuw, nalezen
+    'c.wound.p': "Waan gubtay. Xaggee ayuu ku yaal tuubbada biyuhu?", // nieuw, nalezen
+    'c.wound.s': "Saaxiib shaqo ayaa gacanta ku gubtay mashiin kulul. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.wound.o1': "Ku qabooji biyo diirran oo socda.", // nieuw, nalezen
+    'c.wound.o2': "Isla markiiba saar subag ama kareem.", // nieuw, nalezen
+    'c.wound.o3': "Baraf si toos ah maqaarka u saar, oo sug.", // nieuw, nalezen
+    'c.wound.w': "Biyuhu kulaylka ayay ka saaraan maqaarka, sidaas darteed gubashadu uma sii qoto dheeraato. Barafka, subagga iyo kareemku way ka sii darri karaan.", // nieuw, nalezen
+    'c.callhelp': "Wicidda 112: marka hore sheeg meesha", // nieuw, nalezen
+    'c.callhelp.b': "Wac 112 marka nolol khatar ku jirto, ama marka daqiiqad kasta muhiim tahay. Marka hore sheeg meesha aad joogto: waddada, lambarka iyo magaalada. Kadib sheeg waxa dhacay. Khadka ku jir oo ka jawaab su'aalaha. Weydiiso saaxiib shaqo inuu ambalaaska ku sugo albaabka laga soo galo. Ma taqaanid cinwaanka shaqadaada? Maanta raadi.", // nieuw, nalezen
+    'c.callhelp.p': "112 ayaan wacayaa. Ma sugi kartaa ambalaaska?", // nieuw, nalezen
+    'c.callhelp.s': "Waxaad wacday 112. Qofka taleefanka ka jawaabay su'aalo badan ayuu ku weydiinayaa, laakiin waxaad rabtaa inaad caawiso saaxiibkaaga shaqada. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.callhelp.o1': "Khadka ku jir oo jawaab.", // nieuw, nalezen
+    'c.callhelp.o2': "Dhig taleefanka, oo u tag saaxiibkaaga.", // nieuw, nalezen
+    'c.callhelp.o3': "Dheh “dhakhso u imaada”, oo dhig taleefanka.", // nieuw, nalezen
+    'c.callhelp.w': "Qofka taleefanka ka jawaabay wuxuu soo dirayaa caawimaad inta aad hadlayso, wuxuuna kuu sheegayaa waxa aad samayso. Haddii aad goor hore dhigto taleefanka, caawimaaddu waxay aadi kartaa meel khaldan.", // nieuw, nalezen
+    'c.roster': "Maalin kasta eeg jadwalkaaga", // nieuw, nalezen
+    'c.roster.b': "Jadwalku wuu isbeddeli karaa, xitaa si degdeg ah. Maalin kasta eeg, app-ka ama looxa. Ma aragtaa isbeddel? Hubi inaad iman karto. Maalin ma shaqayn kartid? Goor hore sheeg, ha noqon isla maalintaas. Ma rabtaa inaad wareeg shaqo isweydaarsato? Marka hore weydii madaxaaga: shirkado badan ayaa xeer u leh. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.roster.p': "Sabtida ma shaqayn karo. Ma isweydaarsan karaa?", // nieuw, nalezen
+    'c.roster.s': "Jadwalkaagu wuu isbeddelay. Hadda waa inaad shaqeyso Sabtida, laakiin ma awoodid. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.roster.o1': "Maanta u sheeg madaxaaga, oo weydiiso isweydaarsi.", // nieuw, nalezen
+    'c.roster.o2': "Waxba ha odhan, oo Sabtida guriga joog.", // nieuw, nalezen
+    'c.roster.o3': "Weydiiso saaxiib shaqo inuu aado, oo cidna ha u sheegin.", // nieuw, nalezen
+    'c.roster.w': "Marka aad goor hore sheegto, madaxaagu qof kale ayuu heli karaa. Maqnaansho adigoon waxba sheegin waxaa loo arkaa wax aad u culus.", // nieuw, nalezen
+    'c.breaks': "Qor saacadahaaga", // nieuw, nalezen
+    'c.breaks.b': "Maalin kasta qor goorta aad bilowdo, goorta aad joojiso iyo inta ay le'eg tahay nasashadaadu. Liiskaaga gaarka ah ayaa ku caawiya marka mushaharkaagu aanu sax ahayn. Ma waajib baa inaad goor hore baxdo, tusaale ahaan dhakhtarka? Waqtiga ku weydii madaxaaga. Ma shaqaysay waqti ka dheer intii la qorsheeyay? Taas sidoo kale qor. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.breaks.p': "Berri waa inaan aadaa dhakhtarka. Ma bixi karaa goor hore?", // nieuw, nalezen
+    'c.breaks.s': "Berri waa inaad aaddo dhakhtarka saacadda saddexda. Wareeggaaga shaqadu wuxuu dhammaadaa shanta. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.breaks.o1': "Maanta weydii madaxaaga inaad goor hore bixi karto.", // nieuw, nalezen
+    'c.breaks.o2': "Ka bax saddexda, oo sharax maalinta xigta.", // nieuw, nalezen
+    'c.breaks.o3': "Dhakhtarka iska dhaaf, oo dhammee wareeggaaga shaqada.", // nieuw, nalezen
+    'c.breaks.w': "Inaad waqtiga ku weydiiso waxay u oggolaanaysaa madaxaaga inuu shaqada qorsheeyo. Bixid adigoon weydiin waxaa loo arkaa qof aan la isku hallayn karin.", // nieuw, nalezen
   },
 };
 export default t;

@@ -792,6 +792,55 @@ const lang: HelpLanguageSource = {
     's.whereis.3': "Toaleta e acolo, lângă cantină.", // nieuw, nalezen
     'c.whereis.q': "Găsești?", // nieuw, nalezen
     'c.whereis.a': "Nu. Poți să-mi arăți?", // nieuw, nalezen
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
+    'l.wound': "Răni mici și arsuri", // nieuw, nalezen
+    'w.wond': "rana", // nieuw, nalezen
+    'w.verband': "bandajul", // nieuw, nalezen
+    'w.koelen': "a răci (cu apă rece)", // nieuw, nalezen
+    'w.snee': "tăietura (o rană mică de la un cuțit sau de la ceva ascuțit)", // nieuw, nalezen
+    'w.flauwvallen': "a leșina", // nieuw, nalezen
+    'w.oogdouche': "dușul pentru ochi (apă ca să-ți clătești ochii)", // nieuw, nalezen
+    's.wound.1': "Răcește arsura cu apă.", // nieuw, nalezen
+    's.wound.2': "E o tăietură mică. Apasă pe rană.", // nieuw, nalezen
+    's.wound.3': "Unde e dușul pentru ochi?", // nieuw, nalezen
+    'c.wound.q': "Colegul meu e pe punctul să leșine.", // nieuw, nalezen
+    'c.wound.a': "Lasă-l să stea puțin întins. Eu aduc ajutor.", // nieuw, nalezen
+    'l.callhelp': "Suni la 112", // nieuw, nalezen
+    'w.hulpdiensten': "serviciile de urgență (ambulanța, pompierii, poliția)", // nieuw, nalezen
+    'w.straatnaam': "numele străzii", // nieuw, nalezen
+    'w.huisnummer': "numărul casei", // nieuw, nalezen
+    'w.aanspreekbaar': "conștient, reacționează (persoana răspunde când îi vorbești)", // nieuw, nalezen
+    'w.opwachten': "a aștepta pe cineva (la ușă, ca să-l primești)", // nieuw, nalezen
+    'w.aandelijn': "a rămâne la telefon (nu închizi)", // nieuw, nalezen
+    's.callhelp.1': "Sun la 112. Am nevoie de o ambulanță.", // nieuw, nalezen
+    's.callhelp.2': "Care e numele străzii și numărul casei?", // nieuw, nalezen
+    's.callhelp.3': "Aștept ambulanța la intrare.", // nieuw, nalezen
+    'c.callhelp.q': "Răspunde când îi vorbești?", // nieuw, nalezen
+    'c.callhelp.a': "Nu. Nu reacționează.", // nieuw, nalezen
+    'l.roster': "Programul tău de lucru", // nieuw, nalezen
+    'w.weekrooster': "programul săptămânal (cine lucrează și când, săptămâna asta)", // nieuw, nalezen
+    'w.roosterapp': "aplicația cu programul (turele tale pe telefon)", // nieuw, nalezen
+    'w.beschikbaar': "disponibil (poți lucra atunci)", // nieuw, nalezen
+    'w.wijziging': "schimbarea", // nieuw, nalezen
+    'w.invallen': "a înlocui pe cineva (lucrezi pentru cineva care lipsește)", // nieuw, nalezen
+    'w.vrijedag': "ziua liberă", // nieuw, nalezen
+    's.roster.1': "Programul nou e în aplicație.", // nieuw, nalezen
+    's.roster.2': { m: "Ești disponibil sâmbătă?", f: "Ești disponibilă sâmbătă?", x: "Poți lucra sâmbătă?" }, // nieuw, nalezen
+    's.roster.3': "Poți s-o înlocuiești mâine pe Sara?", // nieuw, nalezen
+    'c.roster.q': "Ai o schimbare în program.", // nieuw, nalezen
+    'c.roster.a': "Bine. În ce zi trebuie să lucrez?", // nieuw, nalezen
+    'l.breaks': "Ore și pauze", // nieuw, nalezen
+    'w.lunchpauze': "pauza de prânz", // nieuw, nalezen
+    'w.rusttijd': "timpul de odihnă (timp liber între două ture)", // nieuw, nalezen
+    'w.werkdag': "ziua de lucru", // nieuw, nalezen
+    'w.urenlijst': "lista de ore (unde scrii orele lucrate)", // nieuw, nalezen
+    'w.eerderweg': "a pleca mai devreme", // nieuw, nalezen
+    'w.achterelkaar': "la rând (una după alta)", // nieuw, nalezen
+    's.breaks.1': "Îmi scriu orele pe lista de ore.", // nieuw, nalezen
+    's.breaks.2': "Pot pleca azi cu o oră mai devreme?", // nieuw, nalezen
+    's.breaks.3': "Am lucrat șase zile la rând.", // nieuw, nalezen
+    'c.breaks.q': "Când ai pauza de prânz?", // nieuw, nalezen
+    'c.breaks.a': "La ora douăsprezece, o jumătate de oră.", // nieuw, nalezen
   },
 };
 

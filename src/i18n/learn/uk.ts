@@ -279,6 +279,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "Кажуть, що робота закінчується: гаразд, і прохання про іншу роботу.", // nieuw, nalezen
     'c.deductions.a.why': "Кажуть про утримання: запитання, чи це дозволено, і перевірка.", // nieuw, nalezen
     'c.agencyhome.a.why': "Кажуть скоро виїхати: це мало часу, і спершу порада.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "Графік змінився: добре, і питання, який день.", // nieuw, nalezen
+    'c.breaks.a.why': "Питають про обідню перерву: час і скільки вона триває.", // nieuw, nalezen
+    'c.wound.a.why': "Колега ось-ось знепритомніє: хай полежить, а ти кличеш допомогу.", // nieuw, nalezen
+    'c.callhelp.a.why': "Питають, чи він реагує: ні, не реагує.", // nieuw, nalezen
+    'c.vacancy.a.why': "Питають, чому ти дзвониш: вакансія і чи вона ще відкрита.", // nieuw, nalezen
+    'c.result.a.why': "Відмова: спокійна відповідь і питання чому.", // nieuw, nalezen
+    'c.residence.a.why': "Дозвіл майже закінчився: ти одразу подаєш заяву на новий.", // nieuw, nalezen
+    'c.newhome.a.why': "Питають, де ти живеш: нове житло і нова адреса.", // nieuw, nalezen
+    'c.payparts.a.why': "Питають табельний номер: де він у розрахунковому листі.", // nieuw, nalezen
+    'c.latepay.a.why': "Гроші прийдуть пізніше: ти хочеш це письмово.", // nieuw, nalezen
+    'c.holiday.a.why': "Пропонують відпустку в травні: ти хочеш у липні й кажеш чому.", // nieuw, nalezen
+    'c.special.a.why': "Питають про відпустку у зв’язку з народженням дитини: так, і коли.", // nieuw, nalezen
+    'c.unwell.a.why': "Питають, чи все гаразд: ні, і чи можна піти додому.", // nieuw, nalezen
+    'c.injury.a.why': "Просять написати пояснення: так, і копію для тебе.", // nieuw, nalezen
+    'c.debt.a.why': "Кажуть залишатися, поки борг не сплачено: так не можна, шукай допомоги.", // nieuw, nalezen
+    'c.inspection.a.why': "Пропонують поговорити: так, але там, де начальник не чує.", // nieuw, nalezen
+    'c.carpool.a.why': "Питають, хто за кермом: ти, і коли ти їх забираєш.", // nieuw, nalezen
+    'c.train.a.why': "Питають, чому ти пізно: потяг, і повідомлення вже надіслане.", // nieuw, nalezen
+    'c.checklist.a.why': "Питають, чи нічого не забуто: ще один погляд у список.", // nieuw, nalezen
+    'c.leavesite.a.why': "Питають, чи ти йдеш після всіх: так, усе вимкнено й двері замкнені.", // nieuw, nalezen
+    'c.stagedays.a.why': "Питають, чому тебе не було: хвороба, і дзвінок і школі, і фірмі.", // nieuw, nalezen
+    'c.stageend.a.why': "Питають про плани: спершу диплом, потім робота.", // nieuw, nalezen
+    'c.neighbours.a.why': "Нова сусідка вітається: приємно познайомитися, і твоє ім’я.", // nieuw, nalezen
+    'c.join.a.why': "Запрошують прийти: так, і ти хочеш поговорити з учителем.", // nieuw, nalezen
+    'c.workphotos.a.why': "Просять фото для інтернету: ввічливе «ні».", // nieuw, nalezen
+    'c.device.a.why': "Питають про новий застосунок: спершу запитай IT-відділ.", // nieuw, nalezen
   },
 };
 

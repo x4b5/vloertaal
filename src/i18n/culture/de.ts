@@ -423,6 +423,39 @@ const t: CultureTranslation = {
     'c.whereis.o2': "Such weiter: Noch einmal fragen ist peinlich.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.o3': "Fang in deiner eigenen Kleidung an zu arbeiten.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Fragen dauert zehn Sekunden. Wenn du allein suchst, kommst du vielleicht zu spät. Kollegen wissen, dass man sich an einem neuen Ort schwer zurechtfindet.", // nieuw, nalezen // nagelezen AI 22 nov
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
+    'c.wound': "Verbrannt? Kühl es mit Wasser", // nieuw, nalezen
+    'c.wound.b': "Ein kleiner Schnitt: Drück mit einem sauberen Tuch oder einem Verband darauf, und sag es dem Ersthelfer. Eine Verbrennung: Kühl sie sofort mit lauwarmem fließendem Wasser, mindestens 10 Minuten. Etwas im Auge? Spül es mit Wasser aus, oder an der Augendusche. Ist es schlimm? Ruf 112 an. Frag an deinem ersten Tag, wo der Erste-Hilfe-Kasten und die Augendusche sind.", // nieuw, nalezen
+    'c.wound.p': "Ich habe mich verbrannt. Wo ist ein Wasserhahn?", // nieuw, nalezen
+    'c.wound.s': "Ein Kollege verbrennt sich die Hand an einer heißen Maschine. Was machst du?", // nieuw, nalezen
+    'c.wound.o1': "Kühl sie mit lauwarmem fließendem Wasser.", // nieuw, nalezen
+    'c.wound.o2': "Tu sofort Butter oder eine Creme darauf.", // nieuw, nalezen
+    'c.wound.o3': "Leg Eis direkt auf die Haut, und warte.", // nieuw, nalezen
+    'c.wound.w': "Wasser nimmt die Hitze aus der Haut, so wird die Verbrennung weniger tief. Eis, Butter und Creme können es schlimmer machen.", // nieuw, nalezen
+    'c.callhelp': "112 anrufen: Sag zuerst, wo", // nieuw, nalezen
+    'c.callhelp.b': "Ruf 112 an, wenn ein Leben in Gefahr ist, oder wenn jede Minute zählt. Sag zuerst, wo du bist: die Straße, die Hausnummer und den Ort. Dann sag, was passiert ist. Bleib am Telefon und beantworte die Fragen. Bitte einen Kollegen, am Eingang auf den Krankenwagen zu warten. Du kennst die Adresse von deiner Arbeit nicht? Schau sie heute nach.", // nieuw, nalezen
+    'c.callhelp.p': "Ich rufe 112 an. Wartest du auf den Krankenwagen?", // nieuw, nalezen
+    'c.callhelp.s': "Du rufst 112 an. Die Person am Telefon stellt viele Fragen, aber du willst deinem Kollegen helfen. Was machst du?", // nieuw, nalezen
+    'c.callhelp.o1': "Bleib am Telefon und antworte.", // nieuw, nalezen
+    'c.callhelp.o2': "Leg auf, und geh zu deinem Kollegen.", // nieuw, nalezen
+    'c.callhelp.o3': "Sag „Kommen Sie schnell“, und leg auf.", // nieuw, nalezen
+    'c.callhelp.w': "Die Person am Telefon schickt Hilfe, während du sprichst, und sagt dir, was du tun sollst. Wenn du zu früh auflegst, kann die Hilfe an den falschen Ort fahren.", // nieuw, nalezen
+    'c.roster': "Schau jeden Tag auf deinen Dienstplan", // nieuw, nalezen
+    'c.roster.b': "Der Dienstplan kann sich ändern, auch kurzfristig. Schau jeden Tag darauf, in der App oder am Brett. Siehst du eine Änderung? Prüf, ob du kommen kannst. Du kannst an einem Tag nicht arbeiten? Sag es früh, nicht erst am selben Tag. Willst du eine Schicht tauschen? Frag zuerst deinen Vorgesetzten: Viele Firmen haben eine Regel dafür. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.roster.p': "Ich kann am Samstag nicht arbeiten. Kann ich tauschen?", // nieuw, nalezen
+    'c.roster.s': "Dein Dienstplan hat sich geändert. Jetzt musst du am Samstag arbeiten, aber du kannst nicht. Was machst du?", // nieuw, nalezen
+    'c.roster.o1': "Sag es heute deinem Vorgesetzten, und frag, ob du tauschen kannst.", // nieuw, nalezen
+    'c.roster.o2': "Sag nichts, und bleib am Samstag zu Hause.", // nieuw, nalezen
+    'c.roster.o3': "Bitte einen Kollegen zu gehen, und sag es niemandem.", // nieuw, nalezen
+    'c.roster.w': "Wenn du es früh sagst, kann dein Vorgesetzter jemand anderen finden. Ohne ein Wort wegbleiben gilt als sehr schlimm.", // nieuw, nalezen
+    'c.breaks': "Schreib deine Stunden auf", // nieuw, nalezen
+    'c.breaks.b': "Schreib jeden Tag auf, wann du anfängst, wann du aufhörst und wie lange deine Pause ist. Deine eigene Liste hilft, wenn dein Lohn nicht stimmt. Musst du früher gehen, zum Beispiel zum Arzt? Frag deinen Vorgesetzten rechtzeitig. Hast du länger gearbeitet als geplant? Schreib das auch auf. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.breaks.p': "Ich muss morgen zum Arzt. Darf ich früher gehen?", // nieuw, nalezen
+    'c.breaks.s': "Morgen musst du um drei Uhr zum Arzt. Deine Schicht endet um fünf. Was machst du?", // nieuw, nalezen
+    'c.breaks.o1': "Frag deinen Vorgesetzten heute, ob du früher gehen darfst.", // nieuw, nalezen
+    'c.breaks.o2': "Geh um drei, und erklär es am nächsten Tag.", // nieuw, nalezen
+    'c.breaks.o3': "Lass den Arzt ausfallen, und mach deine Schicht fertig.", // nieuw, nalezen
+    'c.breaks.w': "Wenn du rechtzeitig fragst, kann dein Vorgesetzter die Arbeit planen. Ohne zu fragen gehen gilt als unzuverlässig.", // nieuw, nalezen
   },
 };
 

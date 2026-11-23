@@ -792,6 +792,55 @@ const lang: HelpLanguageSource = {
     's.whereis.3': "تشناب آنجاست، پهلوی طعام‌خانه.", // nieuw, nalezen
     'c.whereis.q': "پیدا کرده می‌توانی؟", // nieuw, nalezen
     'c.whereis.a': "نی. نشان داده می‌توانی؟", // nieuw, nalezen
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
+    'l.wound': "زخم‌های خورد و سوختگی", // nieuw, nalezen
+    'w.wond': "زخم", // nieuw, nalezen
+    'w.verband': "بنداژ", // nieuw, nalezen
+    'w.koelen': "سرد کردن (با آب سرد)", // nieuw, nalezen
+    'w.snee': "بریدگی (زخم خورد از چاقو یا چیز تیز)", // nieuw, nalezen
+    'w.flauwvallen': "بیهوش شدن", // nieuw, nalezen
+    'w.oogdouche': "شاور چشم (آب برای شستن چشم‌ها)", // nieuw, nalezen
+    's.wound.1': "سوختگی را با آب سرد کنید.", // nieuw, nalezen
+    's.wound.2': "یک بریدگی خورد است. روی زخم فشار بدهید.", // nieuw, nalezen
+    's.wound.3': "شاور چشم کجا است؟", // nieuw, nalezen
+    'c.wound.q': "همکارم نزدیک است بیهوش شود.", // nieuw, nalezen
+    'c.wound.a': "بگذارید کمی دراز بکشد. من کمک می‌آورم.", // nieuw, nalezen
+    'l.callhelp': "زنگ زدن به ۱۱۲", // nieuw, nalezen
+    'w.hulpdiensten': "خدمات عاجل (امبولانس، اطفائیه، پولیس)", // nieuw, nalezen
+    'w.straatnaam': "نام سرک", // nieuw, nalezen
+    'w.huisnummer': "نمبر خانه", // nieuw, nalezen
+    'w.aanspreekbaar': "به هوش (وقتی با او گپ می‌زنید واکنش نشان می‌دهد)", // nieuw, nalezen
+    'w.opwachten': "انتظار کشیدن و پذیرایی کردن (از کسی کنار دروازه)", // nieuw, nalezen
+    'w.aandelijn': "پشت خط ماندن (تیلفون را قطع نمی‌کنید)", // nieuw, nalezen
+    's.callhelp.1': "به ۱۱۲ زنگ می‌زنم. به امبولانس ضرورت دارم.", // nieuw, nalezen
+    's.callhelp.2': "نام سرک و نمبر خانه چیست؟", // nieuw, nalezen
+    's.callhelp.3': "کنار دروازهٔ ورود منتظر امبولانس می‌مانم.", // nieuw, nalezen
+    'c.callhelp.q': "وقتی با او گپ می‌زنید واکنش نشان می‌دهد؟", // nieuw, nalezen
+    'c.callhelp.a': "نی. واکنش نشان نمی‌دهد.", // nieuw, nalezen
+    'l.roster': "تقسیم اوقات کار شما", // nieuw, nalezen
+    'w.weekrooster': "تقسیم اوقات هفته‌وار (کی در این هفته چه وقت کار می‌کند)", // nieuw, nalezen
+    'w.roosterapp': "اپ تقسیم اوقات (نوبت‌های کاری شما در تیلفون)", // nieuw, nalezen
+    'w.beschikbaar': "حاضر به کار (در آن وقت کار کرده می‌توانید)", // nieuw, nalezen
+    'w.wijziging': "تغییر", // nieuw, nalezen
+    'w.invallen': "جای کسی کار کردن (برای کسی که نیست کار کردن)", // nieuw, nalezen
+    'w.vrijedag': "روز رخصتی", // nieuw, nalezen
+    's.roster.1': "تقسیم اوقات نو در اپ است.", // nieuw, nalezen
+    's.roster.2': "روز شنبه وقت دارید؟", // nieuw, nalezen
+    's.roster.3': "فردا جای سارا کار کرده می‌توانید؟", // nieuw, nalezen
+    'c.roster.q': "در تقسیم اوقات کار شما یک تغییر است.", // nieuw, nalezen
+    'c.roster.a': "خوب. کدام روز باید کار کنم؟", // nieuw, nalezen
+    'l.breaks': "ساعت‌ها و وقت تفریح", // nieuw, nalezen
+    'w.lunchpauze': "وقت نان چاشت", // nieuw, nalezen
+    'w.rusttijd': "وقت استراحت (وقت آزاد بین دو نوبت کاری)", // nieuw, nalezen
+    'w.werkdag': "روز کاری", // nieuw, nalezen
+    'w.urenlijst': "لست ساعت‌ها (جایی که ساعت‌های کار خود را می‌نویسید)", // nieuw, nalezen
+    'w.eerderweg': "زودتر رفتن", // nieuw, nalezen
+    'w.achterelkaar': "پشت سر هم (یکی بعد از دیگری)", // nieuw, nalezen
+    's.breaks.1': "ساعت‌های خود را در لست ساعت‌ها می‌نویسم.", // nieuw, nalezen
+    's.breaks.2': "امروز یک ساعت زودتر رفته می‌توانم؟", // nieuw, nalezen
+    's.breaks.3': "شش روز پشت سر هم کار کرده‌ام.", // nieuw, nalezen
+    'c.breaks.q': "وقت نان چاشت شما چه وقت است؟", // nieuw, nalezen
+    'c.breaks.a': "ساعت دوازده، نیم ساعت.", // nieuw, nalezen
   },
 };
 

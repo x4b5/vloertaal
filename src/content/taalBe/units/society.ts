@@ -3,11 +3,13 @@ import type { BeTaal } from '../types';
 
 /**
  * "Meedoen in België" (be.u.society): the Belgian twin of "Meedoen in Nederland" (u.society), the
- * example C unit of docs/taal-belgie.md. The same two lessons in the same order, each with six
+ * example C unit of docs/taal-belgie.md. The same lessons in the same order, each with six
  * words, three sentences, a chat and a "Zo werkt het hier" tip:
  *  - be.l.council: de gemeente (your address, the wijkagent) and voting (the gemeenteraad, the
  *    opkomstplicht, the oproepingsbrief);
- *  - be.l.police: the police and your identity card, objecting (bezwaar maken) and your rights.
+ *  - be.l.police: the police and your identity card, objecting (bezwaar maken) and your rights;
+ *  - be.l.neighbours and be.l.join (23 November 2026): the same as the Dutch lessons (your
+ *    neighbourhood; school, sports and volunteering), with "be." ids.
  * Translations: src/i18n/be/units/society.ts.
  *
  * Sources: vlaanderen.be could not be opened from this session (31 October 2026, the host is not
@@ -63,6 +65,50 @@ const unit = beUnit('society', 'Taking part in Belgium', 'Meedoen in België', '
       ['Ik wil eerst met een advocaat praten.', 'I want to talk to a lawyer first.'],
     ],
     [['Mag ik uw identiteitskaart zien?', 'May I see your identity card?'], ['Ja, hier is ze. Wat is er aan de hand?', 'Yes, here it is. What is going on?']],
+  ),
+  // The two lessons of 23 November 2026 (the basis units at four lessons): the same as the Dutch
+  // l.neighbours and l.join, with "be." ids, because this unit is written anew as a whole. Their
+  // translations follow with the Dutch ones (src/content/translationPending.ts).
+  // ⚖️ check: no rule or right in this lesson: saying hello, noise at night and the rubbish day are
+  // how people live together, the same in Flanders (the day and the bags differ per gemeente).
+  beLesson(
+    'neighbours',
+    'Your neighbourhood',
+    [
+      ['buurt', 'de buurt', 'the neighbourhood', '🏙️'],
+      ['buurthuis', 'het buurthuis', 'the community centre (a house for activities in your neighbourhood)', '🏬'],
+      ['straat', 'de straat', 'the street', '🏘️'],
+      ['kennismaken', 'kennismaken', 'to get to know (meet someone for the first time)', '🤗', false],
+      ['overlast', 'de overlast', 'the nuisance (noise or trouble for others)', '🔊', false],
+      ['buurvrouw', 'de buurvrouw', 'the neighbour (a woman)', '👩'],
+    ],
+    [
+      ['Ik woon sinds kort in deze straat.', 'I have lived in this street for a short time.'],
+      ['In de bibliotheek oefen ik Nederlands.', 'In the library I practise Dutch.'],
+      ['Sorry voor de overlast.', 'Sorry for the nuisance.'],
+    ],
+    [['Hallo, ik ben je nieuwe buurvrouw.', 'Hello, I am your new neighbour.'], ['Leuk om kennis te maken! Ik ben Ali.', 'Nice to meet you! I am Ali.']],
+  ),
+  // ⚖️ check: no rule or right in this lesson: school, sports and volunteer work as a way to learn
+  // Dutch. In Flanders the parents' evening is often called "het oudercontact" (the lesson keeps "de
+  // ouderavond", which is understood).
+  beLesson(
+    'join',
+    'School, sports and volunteering',
+    [
+      ['vrijwilliger', 'de vrijwilliger', 'the volunteer (someone who helps without pay)', '🙋‍♂️'],
+      ['vrijwilligerswerk', 'het vrijwilligerswerk', 'the volunteer work', '🫶', false],
+      ['sportclub', 'de sportclub', 'the sports club', '⚽'],
+      ['ouderavond', 'de ouderavond', 'the parents’ evening (at school)', '👪'],
+      ['leraar', 'de leraar', 'the teacher', '👨‍🏫'],
+      ['basisschool', 'de basisschool', 'the primary school', '🖍️'],
+    ],
+    [
+      ['Mijn zoon gaat naar de basisschool.', 'My son goes to primary school.'],
+      ['Ik speel voetbal bij een sportclub.', 'I play football at a sports club.'],
+      ['Op zaterdag doe ik vrijwilligerswerk.', 'On Saturday I do volunteer work.'],
+    ],
+    [['Kom je naar de ouderavond?', 'Are you coming to the parents’ evening?'], ['Ja. Ik wil graag met de leraar praten.', 'Yes. I would like to talk to the teacher.']],
   ),
 ]);
 
@@ -134,6 +180,39 @@ const tips = [
       'Wait: after that date, it stops by itself.',
     ],
     why: 'You react in writing, before the date in the letter. After that date, it is often too late. The justitiehuis can give you a free first advice.',
+  }),
+  // ⚖️ check: no rule or right in this tip: the same as the Dutch c.neighbours (how people live
+  // together; the library and the community centre often have Dutch practice, sometimes for free).
+  beTip({
+    slug: 'neighbours',
+    lessonId: 'be.l.neighbours',
+    emoji: '📚',
+    title: 'Say hello to your neighbours',
+    body: 'New in a street? Say hello to your neighbours and tell them your name. That makes problems easier to solve later. Work nights, or do you live with many people? Keep it quiet late in the evening and at night. Put your rubbish out on the right day. In the library and the community centre you can often practise Dutch, sometimes for free.',
+    phrase: ['Hallo, ik ben Ali. Ik woon hiernaast.', 'Hello, I am Ali. I live next door.'],
+    situation: 'You live with five colleagues. A neighbour says it is often noisy at night. What do you do?',
+    options: [
+      'Say sorry, and agree to keep it quiet.',
+      'Say that you all work and need to relax.',
+      'Say nothing, and close the door.',
+    ],
+    why: 'A good talk early stops bigger problems. Neighbours who know you are often friendlier and more helpful.',
+  }),
+  // ⚖️ check: no rule or right in this tip: the same as the Dutch c.join.
+  beTip({
+    slug: 'join',
+    lessonId: 'be.l.join',
+    emoji: '⚽',
+    title: 'Join in: you learn Dutch faster',
+    body: 'Outside work, you learn Dutch fastest by doing things with people: sports, a club, or volunteer work. Your child at school? Go to the parents’ evening, also if your Dutch is not perfect: the teacher wants to meet you. You may ask for slow Dutch, or use a translation app. Volunteer work also looks good on your CV.',
+    phrase: ['Wilt u wat langzamer praten?', 'Would you speak a bit slower?'],
+    situation: 'You are invited to the parents’ evening. Your Dutch is not good yet. What do you do?',
+    options: [
+      'Go, and use simple Dutch or an app.',
+      'Do not go: the teacher will not understand you.',
+      'Send a short message that you are busy.',
+    ],
+    why: 'The teacher wants to talk about your child, not about your Dutch. Coming shows that you care.',
   }),
 ];
 

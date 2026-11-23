@@ -112,6 +112,10 @@ const MOTION_ROUND4 = [
   'w.terugbrengen', 'w.statiegeld', 'w.kassalade', 'w.afschrijven', 'w.winkelwagen', 'w.sluitingstijd', 'w.rolluik', 'w.facen', 'w.afprijzen', 'w.uitpakken',
   'w.tassencontrole', 'w.douchestoel', 'w.tandenpoetsen', 'w.kammen', 'w.scheren', 'w.rapporteren', 'w.plassen', 'w.glijlaken', 'w.thuiszorg', 'w.alarmknop',
   'w.stalift', 'w.werkhoogte', 'w.bedhek',
+  // The basis units at four lessons (23 November 2026).
+  'w.vegen', 'w.terugzetten', 'w.uitdoen', 'w.voorschot', 'w.brievenbus', 'w.verhuisdag', 'w.opwachten', 'w.naarhuis', 'w.bedrijfsongeval', 'w.afvinken',
+  'w.aandelijn', 'w.flauwvallen', 'w.vingerafdruk', 'w.volgnummer', 'w.bedanken', 'w.trakteren', 'w.koelen', 'w.oogdouche', 'w.inspectie', 'w.carpoolen',
+  'w.meerijden', 'w.gordel', 'w.instappen', 'w.uitstappen', 'w.overstappen', 'w.invallen', 'w.eerderweg', 'w.tussenpersoon', 'w.urenlijst', 'w.wifi',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */

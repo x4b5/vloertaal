@@ -277,6 +277,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "Dizem que o trabalho acaba: está bem, e pedes outro trabalho.", // nieuw, nalezen
     'c.deductions.a.why': "Falam de um desconto: perguntas se é permitido, e confirmas.", // nieuw, nalezen
     'c.agencyhome.a.why': "Dizem para sair em breve: é pouco tempo, e primeiro pedes conselho.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "Dizem-te que o horário mudou: está bem, e perguntas que dia.", // nieuw, nalezen
+    'c.breaks.a.why': "Perguntam-te pela pausa para almoço: a hora, e quanto tempo dura.", // nieuw, nalezen
+    'c.wound.a.why': "Alguém está quase a desmaiar: deixas a pessoa deitada, e vais buscar ajuda.", // nieuw, nalezen
+    'c.callhelp.a.why': "Perguntam-te se ele reage: não, não reage.", // nieuw, nalezen
+    'c.vacancy.a.why': "Perguntam-te porque ligas: por causa da vaga, e se ainda está aberta.", // nieuw, nalezen
+    'c.result.a.why': "Dizem-te que não: respondes com calma, e perguntas porquê.", // nieuw, nalezen
+    'c.residence.a.why': "Dizem-te que a autorização está quase a caducar: pedes logo uma nova.", // nieuw, nalezen
+    'c.newhome.a.why': "Perguntam-te onde moras: numa casa nova, e dás a nova morada.", // nieuw, nalezen
+    'c.payparts.a.why': "Pedem-te o número de funcionário: onde está no recibo de vencimento.", // nieuw, nalezen
+    'c.latepay.a.why': "Dizem-te que o dinheiro vem mais tarde: queres isso por escrito.", // nieuw, nalezen
+    'c.holiday.a.why': "Pedem-te para ir em maio: preferes julho, e dizes porquê.", // nieuw, nalezen
+    'c.special.a.why': "Perguntam-te pela licença de nascimento: sim, e quando.", // nieuw, nalezen
+    'c.unwell.a.why': "Perguntam-te se estás bem: não, e se podes ir para casa.", // nieuw, nalezen
+    'c.injury.a.why': "Pedem-te uma declaração: sim, e uma cópia para ti.", // nieuw, nalezen
+    'c.debt.a.why': "Dizem-te para ficares até pagares a dívida: não é permitido, pedes ajuda.", // nieuw, nalezen
+    'c.inspection.a.why': "Pedem-te para falar: sim, mas não onde o patrão pode ouvir.", // nieuw, nalezen
+    'c.carpool.a.why': "Perguntam-te quem conduz: tu, e quando os vais buscar.", // nieuw, nalezen
+    'c.train.a.why': "Perguntam-te porque chegas tarde: o comboio, e mandaste uma mensagem.", // nieuw, nalezen
+    'c.checklist.a.why': "Perguntam-te se te esqueceste de alguma coisa: mais uma vista de olhos à lista.", // nieuw, nalezen
+    'c.leavesite.a.why': "Perguntam-te se és tu quem fecha: sim, tudo desligado e a porta fechada à chave.", // nieuw, nalezen
+    'c.stagedays.a.why': "Perguntam-te porque faltaste: estavas doente, e ligaste para os dois.", // nieuw, nalezen
+    'c.stageend.a.why': "Perguntam-te pelos teus planos: primeiro o diploma, depois o trabalho.", // nieuw, nalezen
+    'c.neighbours.a.why': "Uma vizinha nova cumprimenta-te: muito prazer, e dizes o teu nome.", // nieuw, nalezen
+    'c.join.a.why': "Perguntam-te se vens: sim, e queres falar com o professor.", // nieuw, nalezen
+    'c.workphotos.a.why': "Pedem-te uma fotografia para a internet: um não educado.", // nieuw, nalezen
+    'c.device.a.why': "Perguntam-te por uma app nova: primeiro pergunta ao departamento de informática.", // nieuw, nalezen
   },
 };
 

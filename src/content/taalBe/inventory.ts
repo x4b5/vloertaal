@@ -62,6 +62,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.emergency': { kind: 'B', lessons: {
     'l.alarm': L('A', 'A', 'geen BHV’er in de les of de tip; in Vlaanderen hoor je ook evacueren en de vluchtweg (nakijken door een Vlaamse NT2-docent)'),
     'l.accident': L('B', 'B', 'de BHV’er → de EHBO’er; Nederlandse Arbeidsinspectie → Toezicht op het Welzijn op het Werk; arbeidsongevallenverzekeraar'),
+    // First aid and 112 (23 November 2026): the same in Belgium (112 is the European number); no BHV’er.
+    'l.wound': L('A', 'A'),
+    'l.callhelp': L('A', 'A'),
   } },
   'u.warehouse': { kind: 'B', lessons: {
     'l.things': L('A', 'B', 'tip "Direct is not rude": Vlaamse collega’s zijn vaak minder direct'),
@@ -77,6 +80,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.time': { kind: 'B', lessons: {
     'l.shift': L('A', 'A'),
     'l.sick': L('A', 'B', 'vaak een ziektebriefje, soms vanaf de eerste dag (het arbeidsreglement zegt wanneer)'),
+    // The basis units at four lessons (23 November 2026): how it goes at work, the same in Belgium.
+    'l.roster': L('A', 'A', 'nakijken: "de rooster-app" en "invallen" (ook "vervangen")'),
+    'l.breaks': L('A', 'A'),
   } },
   'u.sounds': { kind: 'A', lessons: {
     // The sound cards of "Hoe zeg je het?" at the start (src/content/klankMond.ts) hold in Vlaanderen too: the same vowels.
@@ -108,6 +114,8 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.apply': { kind: 'A', lessons: {
     'l.cv': L('A', 'A', 'de tip zegt "A CV here" (was "A Dutch CV")'),
     'l.interview': L('A', 'A', 'de tip zegt "Employers here" (was "Dutch employers")'),
+    'l.vacancy': L('A', 'A'),
+    'l.result': L('A', 'A'),
   } },
   'u.contract': { kind: 'B', lessons: {
     'l.findwork': L('B', 'B', 'het uitzendbureau → het interimkantoor'),
@@ -129,10 +137,19 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.papers': { kind: 'B', lessons: {
     'l.bsn': L('C', 'C', 'ook de titel; BSN, DigiD, zorgverzekering → rijksregisternummer, eID en itsme, ziekenfonds'),
     'l.housing': L('B', 'C', 'de borg → de huurwaarborg; Huurcommissie en Juridisch Loket → Vlaamse huurregels, justitiehuis'),
+    // 23 November 2026. l.residence: its tip is about Dutch rules (IND, EU citizens): NL-only for now
+    // (BE_LESSON_TODO in ./index.ts). l.newhome: its tip names no Dutch term (the gemeente, quickly).
+    'l.residence': L('A', 'C', 'de IND en de Nederlandse regels → de Dienst Vreemdelingenzaken (DVZ), de verblijfskaart bij de gemeente; nog te schrijven (BE_LESSON_TODO)'),
+    'l.newhome': L('A', 'A', 'de tip zegt "quickly" (in België binnen 8 werkdagen, in Nederland binnen 5 dagen: geen getal); nakijken: de meterstand ("de meterstand" of "de tellerstand")'),
   } },
   'u.pay': { kind: 'B', lessons: {
     'l.payslip': L('B', 'C', 'de loonstrook → de loonbrief; loonheffing → RSZ en bedrijfsvoorheffing'),
     'l.extra': L('B', 'C', 'de toeslag → de premie; 8% vakantiegeld → enkel en dubbel vakantiegeld, eindejaarspremie'),
+    // 23 November 2026. l.payparts: the tip (and its phrase with "de loonstrook") are Dutch: NL-only
+    // for now (BE_LESSON_TODO). l.latepay: its tip holds in Belgium too (pay on the agreed day, cash
+    // without a payslip is often zwart); only the closing line changes.
+    'l.payparts': L('A', 'B', 'de loonstrook → de loonbrief (zin van de tip); pensioen: in België het aanvullend pensioen, meestal door de werkgever betaald; nog te schrijven (BE_LESSON_TODO)'),
+    'l.latepay': L('A', 'A', 'alleen de slotregel'),
   } },
   'u.house': { kind: 'B', lessons: {
     'l.phone': L('A', 'A'),
@@ -160,14 +177,26 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.leave': { kind: 'B', lessons: {
     'l.leave': L('B', 'B', 'het calamiteitenverlof → het verlof om dwingende redenen (zonder loon)'),
     'l.kids': L('B', 'B', 'calamiteitenverlof; ouderschapsverlof en zorgverlof anders geregeld (RVA)'),
+    // 23 November 2026: both tips are about Dutch law (the days off that expire, birth leave, special
+    // leave in the cao): NL-only for now (BE_LESSON_TODO).
+    'l.holiday': L('A', 'B', 'verval van vakantiedagen (6 maanden, 5 jaar) → in België: vakantie nemen in het jaar zelf, met uitzonderingen; enkel en dubbel vakantiegeld; nog te schrijven (BE_LESSON_TODO)'),
+    'l.special': L('B', 'B', 'het bijzonder verlof → het klein verlet; geboorteverlof: in België 20 dagen; feestdagen: in België 10 betaalde wettelijke feestdagen; nog te schrijven (BE_LESSON_TODO)'),
   } },
   'u.sick': { kind: 'B', lessons: {
     'l.illness': L('B', 'C', 'de bedrijfsarts → de arbeidsarts; 70% voor 2 jaar, wachtdag → gewaarborgd loon, dan het ziekenfonds'),
     'l.backtowork': L('B', 'C', 'de bedrijfsarts → de arbeidsarts (zin 3); Wet verbetering poortwachter → het re-integratietraject met de arbeidsarts; deeltijds werken met een uitkering: eerst het ziekenfonds vragen. "herstellen" is in Vlaanderen ook "repareren" (de vertaling zegt "recover"; nakijken door een Vlaamse NT2-docent)'),
+    // 23 November 2026: both tips are about Dutch law (sick on holiday, BW 7:637; the employer's
+    // liability, BW 7:658): NL-only for now (BE_LESSON_TODO).
+    'l.unwell': L('A', 'B', 'ziek op vakantie: in België ook later op te nemen, met een ziektebriefje; nog te schrijven (BE_LESSON_TODO)'),
+    'l.injury': L('A', 'B', 'het bedrijfsongeval → het arbeidsongeval; de verplichte arbeidsongevallenverzekering betaalt (geen bewijs van schuld nodig); Juridisch Loket → justitiehuis; nog te schrijven (BE_LESSON_TODO)'),
   } },
   'u.exploit': { kind: 'B', lessons: {
     'l.warning': L('B', 'A', 'zin "Ik krijg geen loonstrook." → loonbrief; de tip: alleen de slotregel'),
     'l.gethelp': L('A', 'C', 'Arbeidsinspectie, Meld Misdaad Anoniem, Juridisch Loket → Toezicht op de Sociale Wetten, Payoke, justitiehuis'),
+    // 23 November 2026: both tips name Dutch places and rules (Waadi, FairWork, the Nederlandse
+    // Arbeidsinspectie): NL-only for now (BE_LESSON_TODO); the Belgian tip of l.gethelp is the start.
+    'l.debt': L('A', 'B', 'Waadi en FairWork → Belgische regels voor uitzendbureaus en private bemiddeling, Payoke; nog te schrijven (BE_LESSON_TODO)'),
+    'l.inspection': L('A', 'B', 'Nederlandse Arbeidsinspectie en FairWork → Toezicht op de Sociale Wetten, Payoke, PAG-ASA, Sürya; nog te schrijven (BE_LESSON_TODO)'),
   } },
   'u.contact': { kind: 'A', lessons: {
     'l.callin': L('A', 'A'),
@@ -195,6 +224,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.travel': { kind: 'B', lessons: {
     'l.bike': L('A', 'A'),
     'l.transit': L('C', 'C', 'inchecken, OVpay, reiskostenvergoeding → De Lijn en NMBS, de werkgever betaalt mee aan de trein'),
+    // 23 November 2026: the seat belt, the costs of a lift, a late train: the same in Belgium.
+    'l.carpool': L('A', 'A'),
+    'l.train': L('A', 'A', 'geld terug bij vertraging: in België vooral voor abonnees van de NMBS ("often" in de tip); nakijken: het perron ("het perron" of "het spoor")'),
   } },
   'u.lost': { kind: 'B', lessons: {
     'l.ww': L('C', 'C', 'WW, UWV, werk.nl → werkloosheidsuitkering, RVA, C4, VDAB'),
@@ -260,6 +292,8 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.finish': { kind: 'A', lessons: {
     'l.workorder': L('A', 'A'),
     'l.handover': L('A', 'A'),
+    'l.checklist': L('A', 'A'),
+    'l.leavesite': L('A', 'A'),
   } },
   'u.tech': { kind: 'A', lessons: {
     'l.workshop': L('A', 'A', 'alleen de slotregel'),
@@ -276,14 +310,24 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
   'u.stage': { kind: 'B', lessons: {
     'l.placement': L('C', 'C', 'POK, praktijkopleider, stagebegeleider, bpv → stageovereenkomst, mentor, school'),
     'l.review': L('A', 'B', 'tip: "workplace trainer" (praktijkopleider) → de mentor, zoals in l.placement'),
+    // 23 November 2026: the tips say "placement coach" (stagebegeleider, in Vlaanderen ook) and name no
+    // Dutch term; a placement allowance is not always given in either country.
+    'l.stagedays': L('A', 'A'),
+    'l.stageend': L('A', 'A'),
   } },
   'u.society': { kind: 'C', lessons: {
     'l.council': L('C', 'C', 'gemeenteraad, Tweede Kamer, stempas → gemeenteraad, opkomstplicht, oproepingsbrief'),
     'l.police': L('C', 'C', 'identificatieplicht, bezwaar, Juridisch Loket → identiteitskaart, bezwaar, justitiehuis'),
+    // 23 November 2026: the neighbourhood, school, sports and volunteering are the same in Flanders;
+    // the Belgian unit (./units/society.ts) has the same two lessons with "be." ids.
+    'l.neighbours': L('A', 'A', 'dezelfde les in "Meedoen in België" (be.l.neighbours)'),
+    'l.join': L('A', 'A', 'dezelfde les in "Meedoen in België" (be.l.join); in Vlaanderen ook "het oudercontact" (de ouderavond)'),
   } },
   'u.online': { kind: 'B', lessons: {
     'l.login': L('B', 'B', 'DigiD → itsme'),
     'l.phish': L('A', 'A'),
+    'l.workphotos': L('A', 'A'),
+    'l.device': L('A', 'A'),
   } },
   'u.delivery': { kind: 'A', lessons: {
     'l.parcel': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: in Vlaanderen zegt men vaak "de bestelwagen" (de bestelbus wordt begrepen)'),

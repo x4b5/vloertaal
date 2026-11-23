@@ -274,6 +274,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "Waxaa la sheegay in shaqadu joogsanayso: hagaag, oo shaqo kale ayaad weydiinaysaa.", // nieuw, nalezen
     'c.deductions.a.why': "Waxaa lagu sheegay jarid: waxaad weydiinaysaa in la oggol yahay, oo waad hubinaysaa.", // nieuw, nalezen
     'c.agencyhome.a.why': "Waxaa la yiri dhowaan ka bax: taasi waa gaaban tahay, oo marka hore talo ayaad weydiinaysaa.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "Waxaa la sheegay in jadwalku isbeddelay: hagaag, iyo maalintee.", // nieuw, nalezen
+    'c.breaks.a.why': "Waxaa la weydiiyay nasashada qadada: waqtiga, iyo inta ay qaadato.", // nieuw, nalezen
+    'c.wound.a.why': "Wuu suuxi gaadhay: ha jiifo, oo caawimaad keen.", // nieuw, nalezen
+    'c.callhelp.a.why': "Waxaa la weydiiyay inuu jawaabayo: maya, ma jawaabayo.", // nieuw, nalezen
+    'c.vacancy.a.why': "Waxaa la weydiiyay sababta aad u wacdo: shaqada bannaan, oo weli ma furan tahay?", // nieuw, nalezen
+    'c.result.a.why': "Maya ayaa la yiri: jawaab deggan, oo waxaad weydiinaysaa sababta.", // nieuw, nalezen
+    'c.residence.a.why': "Waxaa la sheegay in sharcigu dhici gaadhay: isla markiiba ayaad codsanaysaa.", // nieuw, nalezen
+    'c.newhome.a.why': "Waxaa la weydiiyay meesha aad ku nooshahay: guri cusub, iyo cinwaanka cusub.", // nieuw, nalezen
+    'c.payparts.a.why': "Waxaa la weydiiyay lambarka shaqaalaha: meesha uu ku qoran yahay warqadda mushaharka.", // nieuw, nalezen
+    'c.latepay.a.why': "Waxaa la sheegay in lacagtu goor dambe imanayso: waxaad rabtaa in taas la qoro.", // nieuw, nalezen
+    'c.holiday.a.why': "Waxaa la weydiiyay inaad May aaddo: waxaad door bidaysaa July, iyo sababta.", // nieuw, nalezen
+    'c.special.a.why': "Waxaa la weydiiyay fasaxa dhalashada: haa, iyo goorta.", // nieuw, nalezen
+    'c.unwell.a.why': "Waxaa la weydiiyay inaad fiican tahay: maya, oo ma aadi kartaa guriga?", // nieuw, nalezen
+    'c.injury.a.why': "Waxaa la weydiiyay warbixin: haa, iyo nuqul adiga kuu ah.", // nieuw, nalezen
+    'c.debt.a.why': "Waxaa la yiri joog ilaa deynta la bixiyo: lama oggola, caawimaad raadso.", // nieuw, nalezen
+    'c.inspection.a.why': "Waxaa la weydiiyay inaad hadasho: haa, laakiin meel aanu madaxu maqlayn.", // nieuw, nalezen
+    'c.carpool.a.why': "Waxaa la weydiiyay cidda wadaysa: adiga, iyo goorta aad soo qaadayso.", // nieuw, nalezen
+    'c.train.a.why': "Waxaa la weydiiyay sababta aad u soo daahday: tareenka, oo fariin ayaad dirtay.", // nieuw, nalezen
+    'c.checklist.a.why': "Waxaa la weydiiyay inaad wax illowday: mar kale ayaad liiska eegaysaa.", // nieuw, nalezen
+    'c.leavesite.a.why': "Waxaa la weydiiyay inaad ugu dambeyn baxayso: haa, wax walba waa dansan yihiin oo albaabku waa qufulan yahay.", // nieuw, nalezen
+    'c.stagedays.a.why': "Waxaa la weydiiyay sababta aad u maqnayd: xanuun, oo labadaba waad wacday.", // nieuw, nalezen
+    'c.stageend.a.why': "Waxaa la weydiiyay qorshayaashaada: marka hore shahaadada, kadib shaqo.", // nieuw, nalezen
+    'c.neighbours.a.why': "Deris cusub ayaa salaamay: ku faraxsanahay inaan ku barto, iyo magacaaga.", // nieuw, nalezen
+    'c.join.a.why': "Waxaa lagu weydiiyay inaad timaado: haa, oo waxaad rabtaa inaad la hadasho macallinka.", // nieuw, nalezen
+    'c.workphotos.a.why': "Sawir internetka loogu talagalay ayaa la weydiiyay: maya edeb leh.", // nieuw, nalezen
+    'c.device.a.why': "Waxaa la weydiiyay app cusub: marka hore weydii waaxda IT-ga.", // nieuw, nalezen
   },
 };
 export default t;

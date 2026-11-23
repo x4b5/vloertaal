@@ -7,7 +7,7 @@ import { courseUnits, rulesTwinHere } from '../src/content/courses';
 import { learnerCountry } from '../src/content/country';
 import { setRulesCountry } from '../src/content/rulesCourse';
 import { groupByTheme, THEMES, themeOf } from '../src/content/themes';
-import { BE_TAAL_TODO, beTaalCourse, beTaalFiles, beTaalIds, beTaalOf, beTaalTips, lessonNlOnly, lifeThemeHere, taalBeActive, tipNlOnly, unitNlOnly } from '../src/content/taalBe';
+import { BE_LESSON_TODO, BE_TAAL_TODO, beTaalCourse, beTaalFiles, beTaalIds, beTaalOf, beTaalTips, lessonNlOnly, lifeThemeHere, taalBeActive, tipNlOnly, unitNlOnly } from '../src/content/taalBe';
 import { isTaalBeId, pictureIdOf, taalBeId, taalNlId } from '../src/content/taalBe/ids';
 import { BE_TAAL_UNITS, TAAL_BE_INVENTORY } from '../src/content/taalBe/inventory';
 import { setBeTaal } from '../src/content/taalBe/live';
@@ -143,6 +143,8 @@ describe('Belgian files: the same shape as the Dutch units', () => {
     for (const b of beTaalFiles) {
       for (const [lessonId, inv] of Object.entries(TAAL_BE_INVENTORY[b.nl].lessons)) {
         if (b.unit) continue; // a C unit is new as a whole (checked above)
+        // A lesson that stays Dutch for now in a written unit (BE_LESSON_TODO, 23 November 2026).
+        if (BE_LESSON_TODO.includes(lessonId)) continue;
         const nl = units.find((x) => x.id === b.nl)!.lessons.find((l) => l.id === lessonId)!;
         const lineIds = [...nl.words, ...nl.sentences, ...(nl.dialogues ?? []).flatMap((d) => [d.prompt, d.reply])].map((x) => x.id);
         if (inv.items !== 'A') expect(lineIds.some((id) => b.lines?.[id]), `${lessonId}: no Belgian line`).toBe(true);
@@ -239,6 +241,10 @@ describe('"Dit gaat over Nederland. In België is het anders."', () => {
     expect(unitNlOnly('u.society')).toBe(false); // written: Meedoen in België plays
     expect(lessonNlOnly('be.l.council')).toBe(false);
     expect(tipNlOnly(tipForLesson('l.login')!)).toBe(false);
+    // A lesson that stays Dutch in a written unit (BE_LESSON_TODO): its line stays.
+    expect(lessonNlOnly('l.holiday')).toBe(true);
+    expect(tipNlOnly(tipForLesson('l.holiday')!)).toBe(true);
+    expect(lessonNlOnly('l.latepay')).toBe(false); // A: only its closing line
     expect(lifeThemeHere()).toBe('be');
   });
 
@@ -469,6 +475,18 @@ describe('"Problems at work? Who can help" in Belgium', () => {
   });
 });
 
+describe('BE_LESSON_TODO', () => {
+  it('lists only lessons that differ in Belgium, of units with a Belgian file, and no lesson with a Belgian line or tip', () => {
+    expect(new Set(BE_LESSON_TODO).size).toBe(BE_LESSON_TODO.length);
+    for (const id of BE_LESSON_TODO) {
+      const [unit, inv] = Object.entries(TAAL_BE_INVENTORY).find(([, u]) => u.lessons[id])!;
+      expect(inv.lessons[id].items !== 'A' || inv.lessons[id].tip !== 'A', id).toBe(true);
+      expect(beTaalOf(unit), id).toBeDefined();
+      expect(beTaalTips.some((t) => t.lessonId === id), id).toBe(false);
+    }
+  });
+});
+
 describe('BE_TAAL_TODO', () => {
   it('lists exactly the B and C units whose Belgian file is not written yet, each once', () => {
     expect(new Set(BE_TAAL_TODO).size).toBe(BE_TAAL_TODO.length);
@@ -481,7 +499,9 @@ describe('BE_TAAL_TODO', () => {
   });
 
   it('has a translation for every Belgian id in every help language', () => {
-    for (const lang of helpLanguages) for (const id of beTaalIds()) expect(lang.gloss[id]?.trim(), `${lang.code} ${id}`).toBeTruthy();
+    // Not yet the Belgian twins of the lessons whose translations follow in a later round
+    // (src/content/translationPending.ts: be.l.neighbours and be.l.join, 23 November 2026).
+    for (const lang of helpLanguages) for (const id of beTaalIds().filter((x) => !translationPending(x))) expect(lang.gloss[id]?.trim(), `${lang.code} ${id}`).toBeTruthy();
   });
 });
 

@@ -277,6 +277,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "On dit que la mission s’arrête : d’accord, et on demande un autre travail.", // nieuw, nalezen
     'c.deductions.a.why': "On parle d’une retenue : on demande si c’est permis, et on vérifie.", // nieuw, nalezen
     'c.agencyhome.a.why': "On dit de partir bientôt : c’est court, et on demande d’abord conseil.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "On dit que le planning a changé : d’accord, et quel jour.", // nieuw, nalezen
+    'c.breaks.a.why': "On demande la pause déjeuner : l’heure, et combien de temps.", // nieuw, nalezen
+    'c.wound.a.why': "Quelqu’un va s’évanouir : on l’allonge, et on va chercher de l’aide.", // nieuw, nalezen
+    'c.callhelp.a.why': "On demande s’il réagit : non, il ne réagit pas.", // nieuw, nalezen
+    'c.vacancy.a.why': "On demande pourquoi on appelle : l’offre d’emploi, et est-ce qu’elle est encore libre ?", // nieuw, nalezen
+    'c.result.a.why': "On dit non : une réponse calme, et on demande pourquoi.", // nieuw, nalezen
+    'c.residence.a.why': "On dit que le titre de séjour expire bientôt : on en demande tout de suite un nouveau.", // nieuw, nalezen
+    'c.newhome.a.why': "On demande où on habite : un nouveau logement, et la nouvelle adresse.", // nieuw, nalezen
+    'c.payparts.a.why': "On demande le matricule : où il est sur la fiche de paie.", // nieuw, nalezen
+    'c.latepay.a.why': "On dit que l’argent arrive plus tard : on le veut sur papier.", // nieuw, nalezen
+    'c.holiday.a.why': "On propose de partir en mai : on préfère juillet, et on dit pourquoi.", // nieuw, nalezen
+    'c.special.a.why': "On demande pour le congé de naissance : oui, et quand.", // nieuw, nalezen
+    'c.unwell.a.why': "On demande si ça va : non, et est-ce qu’on peut rentrer ?", // nieuw, nalezen
+    'c.injury.a.why': "On demande une déclaration : oui, et une copie pour soi.", // nieuw, nalezen
+    'c.debt.a.why': "On dit de rester jusqu’à ce que la dette soit payée : ce n’est pas permis, on demande de l’aide.", // nieuw, nalezen
+    'c.inspection.a.why': "On propose de parler : oui, mais pas là où le patron peut entendre.", // nieuw, nalezen
+    'c.carpool.a.why': "On demande qui conduit : c’est moi, et l’heure où je passe prendre l’autre.", // nieuw, nalezen
+    'c.train.a.why': "On demande pourquoi on est en retard : le train, et on a envoyé un message.", // nieuw, nalezen
+    'c.checklist.a.why': "On demande si on a oublié quelque chose : encore un coup d’œil à la liste.", // nieuw, nalezen
+    'c.leavesite.a.why': "On demande qui part en dernier : oui, tout est éteint et la porte est fermée à clé.", // nieuw, nalezen
+    'c.stagedays.a.why': "On demande pourquoi on n’était pas là : malade, et on a appelé les deux.", // nieuw, nalezen
+    'c.stageend.a.why': "On demande les projets : d’abord le diplôme, ensuite le travail.", // nieuw, nalezen
+    'c.neighbours.a.why': "Une nouvelle voisine dit bonjour : un plaisir de faire connaissance, et on donne son nom.", // nieuw, nalezen
+    'c.join.a.why': "On demande si on vient : oui, et on veut parler à l’enseignant.", // nieuw, nalezen
+    'c.workphotos.a.why': "On demande une photo pour internet : un non poli.", // nieuw, nalezen
+    'c.device.a.why': "On demande pour une nouvelle appli : d’abord demander au service informatique.", // nieuw, nalezen
   },
 };
 

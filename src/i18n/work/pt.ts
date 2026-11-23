@@ -4357,6 +4357,447 @@ const t: CultureTranslation = {
     'c.agencyhome.o2': "Sais hoje, e dormes em casa de um amigo.", // nieuw, nalezen
     'c.agencyhome.o3': "Fazes a mala, e dormes na rua.", // nieuw, nalezen
     'c.agencyhome.w': "O teu contrato de arrendamento tem as suas próprias regras, separadas do teu trabalho. Um conselho ajuda-te a saber quando tens mesmo de sair.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026): two new lessons each in Solliciteren, Wonen en papieren, Loon, Verlof, Ziekte, Uitbuiting herkennen, Naar je werk, Je werk afronden, Stage lopen, Meedoen in Nederland and Online op je werk.
+    'l.vacancy': "Ler um anúncio de emprego", // nieuw, nalezen
+    'w.advertentie': "o anúncio (um texto que oferece um emprego ou uma coisa)", // nieuw, nalezen
+    'w.eis': "o requisito (o que tens de ter ou saber fazer)", // nieuw, nalezen
+    'w.parttime': "a tempo parcial (menos horas por semana)", // nieuw, nalezen
+    'w.fulltime': "a tempo inteiro (uma semana de trabalho completa)", // nieuw, nalezen
+    'w.sollicitatiebrief': "a carta de candidatura", // nieuw, nalezen
+    'w.contactpersoon': "a pessoa de contacto (a pessoa a quem podes ligar ou escrever)", // nieuw, nalezen
+    's.vacancy.1': "Vi o vosso anúncio na internet.", // nieuw, nalezen
+    's.vacancy.2': "O emprego é a tempo parcial ou a tempo inteiro?", // nieuw, nalezen
+    's.vacancy.3': "Quais são os requisitos?", // nieuw, nalezen
+    'c.vacancy.q': "Porque está a ligar?", // nieuw, nalezen
+    'c.vacancy.a': "Estou a ligar por causa da vossa vaga. Ainda está aberta?", // nieuw, nalezen
+    'l.result': "Depois da entrevista", // nieuw, nalezen
+    'w.aangenomen': "contratado (ficaste com o emprego)", // nieuw, nalezen
+    'w.afwijzing': "a recusa (não ficaste com o emprego)", // nieuw, nalezen
+    'w.aanbod': "a proposta (oferecem-te o emprego)", // nieuw, nalezen
+    'w.proefdag': "o dia experimental (um dia de trabalho, para experimentar)", // nieuw, nalezen
+    'w.nabellen': "voltar a ligar (para perguntar como está a correr)", // nieuw, nalezen
+    'w.teleurgesteld': "desiludido", // nieuw, nalezen
+    's.result.1': { m: "Está contratado!", f: "Está contratada!", x: "O lugar é seu!" }, // nieuw, nalezen
+    's.result.2': "Recebi uma recusa.", // nieuw, nalezen
+    's.result.3': "O dia experimental é pago?", // nieuw, nalezen
+    'c.result.q': "Infelizmente, escolhemos outra pessoa.", // nieuw, nalezen
+    'c.result.a': "Que pena. Posso perguntar porquê?", // nieuw, nalezen
+    'l.residence': "Os teus documentos de residência", // nieuw, nalezen
+    'w.verblijfsvergunning': "a autorização de residência", // nieuw, nalezen
+    'w.pasfoto': "a fotografia tipo passe", // nieuw, nalezen
+    'w.vingerafdruk': "a impressão digital", // nieuw, nalezen
+    'w.geldig': "válido (ainda serve)", // nieuw, nalezen
+    'w.verloopdatum': "a data de validade (o último dia em que é válido)", // nieuw, nalezen
+    'w.volgnummer': "a senha (o papel com a tua vez)", // nieuw, nalezen
+    's.residence.1': "A minha autorização de residência é válida por mais um ano.", // nieuw, nalezen
+    's.residence.2': "Qual é a data de validade do teu passaporte?", // nieuw, nalezen
+    's.residence.3': "Tenho uma marcação na câmara municipal.", // nieuw, nalezen
+    'c.residence.q': "A sua autorização de residência está quase a caducar.", // nieuw, nalezen
+    'c.residence.a': "Então peço já uma nova.", // nieuw, nalezen
+    'l.newhome': "Mudar de casa", // nieuw, nalezen
+    'w.brievenbus': "a caixa do correio", // nieuw, nalezen
+    'w.meterstand': "a leitura do contador (os números no contador do gás, da luz ou da água)", // nieuw, nalezen
+    'w.naambordje': "a placa com o nome (o teu nome à porta)", // nieuw, nalezen
+    'w.woning': "a habitação (uma casa ou um apartamento)", // nieuw, nalezen
+    'w.doorsturen': "reencaminhar (enviar para uma morada nova)", // nieuw, nalezen
+    'w.verhuisdag': "o dia da mudança", // nieuw, nalezen
+    's.newhome.1': "Mudo de casa na próxima semana.", // nieuw, nalezen
+    's.newhome.2': "O meu nome não está na caixa do correio.", // nieuw, nalezen
+    's.newhome.3': "Vou dar a minha nova morada.", // nieuw, nalezen
+    'c.newhome.q': "Onde moras agora?", // nieuw, nalezen
+    'c.newhome.a': "Numa casa nova. Aqui está a minha nova morada.", // nieuw, nalezen
+    'l.payparts': "O que está no teu recibo de vencimento", // nieuw, nalezen
+    'w.pensioen': "a reforma (dinheiro para quando fores velho)", // nieuw, nalezen
+    'w.periode': "o período (as semanas ou o mês deste salário)", // nieuw, nalezen
+    'w.bedrag': "o montante (de dinheiro)", // nieuw, nalezen
+    'w.totaal': "o total", // nieuw, nalezen
+    'w.afkorting': "a abreviatura (uma forma curta de uma palavra)", // nieuw, nalezen
+    'w.personeelsnummer': "o número de funcionário (o teu número na empresa)", // nieuw, nalezen
+    's.payparts.1': "O que quer dizer esta abreviatura?", // nieuw, nalezen
+    's.payparts.2': "Este montante vai para a minha reforma.", // nieuw, nalezen
+    's.payparts.3': "De que período é este salário?", // nieuw, nalezen
+    'c.payparts.q': "Qual é o teu número de funcionário?", // nieuw, nalezen
+    'c.payparts.a': "Está em cima, ao lado do meu nome.", // nieuw, nalezen
+    'l.latepay': "Salário atrasado, em falta ou em dinheiro", // nieuw, nalezen
+    'w.zwartwerken': "trabalhar sem descontos (sem contrato, sem impostos, sem direitos no papel)", // nieuw, nalezen
+    'w.voorschot': "o adiantamento (parte do teu salário antes do dia de pagamento)", // nieuw, nalezen
+    'w.nabetaling': "o pagamento em atraso (dinheiro que recebes mais tarde, para corrigir o teu salário)", // nieuw, nalezen
+    'w.tekort': "a falta (dinheiro que falta)", // nieuw, nalezen
+    'w.betaaldag': "o dia de pagamento", // nieuw, nalezen
+    'w.bankafschrift': "o extrato bancário (uma lista do dinheiro que entra e sai)", // nieuw, nalezen
+    's.latepay.1': "O meu salário está atrasado.", // nieuw, nalezen
+    's.latepay.2': "Não trabalho sem descontos.", // nieuw, nalezen
+    's.latepay.3': "Posso ter um adiantamento?", // nieuw, nalezen
+    'c.latepay.q': "Recebes o dinheiro em falta no próximo mês.", // nieuw, nalezen
+    'c.latepay.a': "Posso ter isso por escrito?", // nieuw, nalezen
+    'l.holiday': "Planear as tuas férias", // nieuw, nalezen
+    'w.saldo': "o saldo (quantos dias ainda tens)", // nieuw, nalezen
+    'w.goedkeuren': "aprovar (dizer que sim)", // nieuw, nalezen
+    'w.verlopen': "caducar (já não é válido)", // nieuw, nalezen
+    'w.zomervakantie': "as férias de verão", // nieuw, nalezen
+    'w.drukte': "a época de muito trabalho (muito trabalho)", // nieuw, nalezen
+    'w.aanvraag': "o pedido (pedes uma coisa, muitas vezes num formulário)", // nieuw, nalezen
+    's.holiday.1': "Quantos dias de férias ainda tenho?", // nieuw, nalezen
+    's.holiday.2': "As minhas férias foram aprovadas.", // nieuw, nalezen
+    's.holiday.3': "Estou a preencher o formulário.", // nieuw, nalezen
+    'c.holiday.q': "No verão há muito trabalho. Podes ir de férias em maio?", // nieuw, nalezen
+    'c.holiday.a': "Prefiro em julho. Nessa altura a minha família está em casa.", // nieuw, nalezen
+    'l.special': "Dias de folga especiais", // nieuw, nalezen
+    'w.bruiloft': "o casamento", // nieuw, nalezen
+    'w.begrafenis': "o funeral", // nieuw, nalezen
+    'w.geboorteverlof': "a licença de nascimento (para o companheiro ou a companheira, quando nasce um bebé)", // nieuw, nalezen
+    'w.bijzonderverlof': "a licença especial (por exemplo para um casamento ou um funeral)", // nieuw, nalezen
+    'w.kerstdagen': "o Natal (os dois dias de Natal)", // nieuw, nalezen
+    'w.vrijvragen': "pedir um dia de folga", // nieuw, nalezen
+    's.special.1': "O meu irmão vai casar. Posso pedir um dia de folga?", // nieuw, nalezen
+    's.special.2': "O meu tio morreu. O funeral é na sexta-feira.", // nieuw, nalezen
+    's.special.3': "Tenho de trabalhar no Natal?", // nieuw, nalezen
+    'c.special.q': "Parabéns pelo teu bebé! Vais tirar a licença de nascimento?", // nieuw, nalezen
+    'c.special.a': "Sim, na primeira semana fico em casa.", // nieuw, nalezen
+    'l.unwell': "Não te sentes bem", // nieuw, nalezen
+    'w.hoofdpijn': "a dor de cabeça", // nieuw, nalezen
+    'w.griep': "a gripe", // nieuw, nalezen
+    'w.verkouden': "constipado (tens uma constipação)", // nieuw, nalezen
+    'w.nietlekker': "não muito bem (sentes-te um pouco mal)", // nieuw, nalezen
+    'w.naarhuis': "ir para casa", // nieuw, nalezen
+    'w.uitzieken': "ficar em casa até melhorares", // nieuw, nalezen
+    's.unwell.1': "Não me sinto bem.", // nieuw, nalezen
+    's.unwell.2': { m: "Dói-me a cabeça e estou constipado.", f: "Dói-me a cabeça e estou constipada.", x: "Dói-me a cabeça e tenho uma constipação." }, // nieuw, nalezen
+    's.unwell.3': "Vou para casa. Estou doente.", // nieuw, nalezen
+    'c.unwell.q': { m: "Estás pálido. Estás bem?", f: "Estás pálida. Estás bem?", x: "Estás com má cara. Estás bem?" }, // nieuw, nalezen
+    'c.unwell.a': "Não, não me sinto bem. Posso ir para casa?", // nieuw, nalezen
+    'l.injury': "Quando o trabalho te magoa", // nieuw, nalezen
+    'w.bedrijfsongeval': "o acidente de trabalho", // nieuw, nalezen
+    'w.verzekering': "o seguro", // nieuw, nalezen
+    'w.schadevergoeding': "a indemnização (dinheiro pelo dano)", // nieuw, nalezen
+    'w.oorzaak': "a causa (porque aconteceu)", // nieuw, nalezen
+    'w.letsel': "a lesão (dano no teu corpo)", // nieuw, nalezen
+    'w.verklaring': "a declaração (o que escreves ou dizes sobre o que aconteceu)", // nieuw, nalezen
+    's.injury.1': "Tive um acidente de trabalho.", // nieuw, nalezen
+    's.injury.2': "Qual foi a causa?", // nieuw, nalezen
+    's.injury.3': "O meu colega viu.", // nieuw, nalezen
+    'c.injury.q': "Podes escrever aqui a tua declaração?", // nieuw, nalezen
+    'c.injury.a': "Sim. Posso ter uma cópia?", // nieuw, nalezen
+    'l.debt': "Uma dívida ao patrão ou à agência", // nieuw, nalezen
+    'w.lening': "o empréstimo", // nieuw, nalezen
+    'w.lenen': "pedir emprestado, emprestar", // nieuw, nalezen
+    'w.vastzitten': "estar preso (não podes sair)", // nieuw, nalezen
+    'w.tussenpersoon': "o intermediário (alguém que arranja trabalho em troca de dinheiro)", // nieuw, nalezen
+    'w.rente': "os juros (dinheiro a mais que pagas por um empréstimo)", // nieuw, nalezen
+    'w.belofte': "a promessa", // nieuw, nalezen
+    's.debt.1': "Tive de pagar por este emprego.", // nieuw, nalezen
+    's.debt.2': "A minha dívida aumenta todos os meses.", // nieuw, nalezen
+    's.debt.3': "O intermediário tem o meu passaporte.", // nieuw, nalezen
+    'c.debt.q': "Só podes sair quando a tua dívida estiver paga.", // nieuw, nalezen
+    'c.debt.a': "Isso não é permitido. Vou pedir ajuda.", // nieuw, nalezen
+    'l.inspection': "A inspeção e outra ajuda", // nieuw, nalezen
+    'w.inspectie': "a inspeção (pessoas que verificam se o trabalho é justo e seguro)", // nieuw, nalezen
+    'w.controle': "o controlo", // nieuw, nalezen
+    'w.slachtoffer': "a vítima", // nieuw, nalezen
+    'w.mensenhandel': "o tráfico de seres humanos (pessoas são usadas e vendidas para trabalho ou sexo)", // nieuw, nalezen
+    'w.vertrouwen': "confiar", // nieuw, nalezen
+    'w.tolk': "o intérprete", // nieuw, nalezen
+    's.inspection.1': "Amanhã vem a inspeção.", // nieuw, nalezen
+    's.inspection.2': "Posso ter um intérprete?", // nieuw, nalezen
+    's.inspection.3': "Não confio neste homem.", // nieuw, nalezen
+    'c.inspection.q': "Queres falar com a inspeção?", // nieuw, nalezen
+    'c.inspection.a': "Sim, mas o meu patrão não pode ouvir.", // nieuw, nalezen
+    'l.carpool': "Boleia e a carrinha do trabalho", // nieuw, nalezen
+    'w.carpoolen': "partilhar o carro (ir juntos para o trabalho num só carro)", // nieuw, nalezen
+    'w.meerijden': "ir à boleia (no carro de outra pessoa)", // nieuw, nalezen
+    'w.gordel': "o cinto de segurança", // nieuw, nalezen
+    'w.instappen': "entrar (num carro, num autocarro ou num comboio)", // nieuw, nalezen
+    'w.uitstappen': "sair (de um carro, de um autocarro ou de um comboio)", // nieuw, nalezen
+    'w.bijrijder': "o passageiro da frente (ao lado do condutor)", // nieuw, nalezen
+    's.carpool.1': "Posso ir contigo à boleia?", // nieuw, nalezen
+    's.carpool.2': "Põe o cinto.", // nieuw, nalezen
+    's.carpool.3': "Eu saio na estação.", // nieuw, nalezen
+    'c.carpool.q': "Quem conduz amanhã?", // nieuw, nalezen
+    'c.carpool.a': "Conduzo eu. Vou buscar-te às seis.", // nieuw, nalezen
+    'l.train': "O comboio, os atrasos e chegar tarde", // nieuw, nalezen
+    'w.station': "a estação", // nieuw, nalezen
+    'w.perron': "a plataforma (onde entras no comboio)", // nieuw, nalezen
+    'w.overstappen': "mudar (para outro comboio ou autocarro)", // nieuw, nalezen
+    'w.uitvallen': "ser cancelado (o comboio não circula)", // nieuw, nalezen
+    'w.kaartje': "o bilhete", // nieuw, nalezen
+    'w.reisplanner': "o planeador de viagens (uma app que mostra comboios e autocarros)", // nieuw, nalezen
+    's.train.1': "O meu comboio foi cancelado.", // nieuw, nalezen
+    's.train.2': "Tenho de mudar uma vez.", // nieuw, nalezen
+    's.train.3': "De que plataforma parte o comboio?", // nieuw, nalezen
+    'c.train.q': "Porque chegas tão tarde?", // nieuw, nalezen
+    'c.train.a': "O meu comboio foi cancelado. Mandei-te uma mensagem.", // nieuw, nalezen
+    'l.checklist': "Verifica antes de acabar", // nieuw, nalezen
+    'w.checklist': "a lista de verificação (uma lista de coisas para verificar)", // nieuw, nalezen
+    'w.afvinken': "assinalar (pôr um visto ao lado de uma tarefa)", // nieuw, nalezen
+    'w.overdoen': "fazer outra vez", // nieuw, nalezen
+    'w.compleet': "completo (não falta nada)", // nieuw, nalezen
+    'w.vergeten': "esquecer", // nieuw, nalezen
+    'w.resultaat': "o resultado", // nieuw, nalezen
+    's.checklist.1': "Assinalo tudo na lista de verificação.", // nieuw, nalezen
+    's.checklist.2': "A encomenda está completa?", // nieuw, nalezen
+    's.checklist.3': "Tenho de fazer isto outra vez.", // nieuw, nalezen
+    'c.checklist.q': "Não te esqueceste de nada?", // nieuw, nalezen
+    'c.checklist.a': "Vou ver a lista de verificação mais uma vez.", // nieuw, nalezen
+    'l.leavesite': "Sair do teu local de trabalho", // nieuw, nalezen
+    'w.terugzetten': "pôr no lugar (onde estava)", // nieuw, nalezen
+    'w.vegen': "varrer", // nieuw, nalezen
+    'w.vloer': "o chão", // nieuw, nalezen
+    'w.uitdoen': "desligar (a luz, uma máquina)", // nieuw, nalezen
+    'w.alslaatste': "em último lugar", // nieuw, nalezen
+    'w.achterlaten': "deixar (como deixas o teu lugar)", // nieuw, nalezen
+    's.leavesite.1': "Deixo o meu lugar arrumado.", // nieuw, nalezen
+    's.leavesite.2': "Quem sai em último lugar?", // nieuw, nalezen
+    's.leavesite.3': "Apaga a luz e fecha a porta.", // nieuw, nalezen
+    'c.leavesite.q': { m: "És o último a sair hoje?", f: "És a última a sair hoje?", x: "Hoje és tu quem fecha?" }, // nieuw, nalezen
+    'c.leavesite.a': "Sim. Desligo tudo e fecho a porta à chave.", // nieuw, nalezen
+    'l.stagedays': "Todos os dias no teu estágio", // nieuw, nalezen
+    'w.stageplek': "o local de estágio (a empresa onde fazes o estágio)", // nieuw, nalezen
+    'w.afwezig': "ausente (não estás lá)", // nieuw, nalezen
+    'w.aanwezig': "presente (estás lá)", // nieuw, nalezen
+    'w.stagevergoeding': "o subsídio de estágio (dinheiro que podes receber no estágio)", // nieuw, nalezen
+    'w.begeleiding': "o acompanhamento (ajuda do teu orientador)", // nieuw, nalezen
+    'w.leerling': "o aluno (na escola)", // nieuw, nalezen
+    's.stagedays.1': "Amanhã vou faltar. Estou doente.", // nieuw, nalezen
+    's.stagedays.2': "Recebo subsídio de estágio?", // nieuw, nalezen
+    's.stagedays.3': "No meu local de estágio trabalho quatro dias.", // nieuw, nalezen
+    'c.stagedays.q': "Porque faltaste ontem?", // nieuw, nalezen
+    'c.stagedays.a': "Estive doente. Liguei para a escola e para a empresa.", // nieuw, nalezen
+    'l.stageend': "O fim do teu estágio", // nieuw, nalezen
+    'w.eindgesprek': "a conversa final (no fim do teu estágio)", // nieuw, nalezen
+    'w.geslaagd': "aprovado (fizeste bem o suficiente)", // nieuw, nalezen
+    'w.gezakt': "chumbado (desta vez não foi suficiente)", // nieuw, nalezen
+    'w.herkansing': "a repetição (uma nova oportunidade)", // nieuw, nalezen
+    'w.bedanken': "agradecer", // nieuw, nalezen
+    'w.trakteren': "oferecer (trazer uma coisa boa para comer para todos)", // nieuw, nalezen
+    's.stageend.1': "Amanhã tenho a minha conversa final.", // nieuw, nalezen
+    's.stageend.2': "Passei no estágio.", // nieuw, nalezen
+    's.stageend.3': "Quero agradecer a todos.", // nieuw, nalezen
+    'c.stageend.q': "O teu último dia! O que vais fazer agora?", // nieuw, nalezen
+    'c.stageend.a': "Primeiro tirar o meu diploma. Depois procuro trabalho.", // nieuw, nalezen
+    'l.neighbours': "O teu bairro", // nieuw, nalezen
+    'w.buurt': "o bairro", // nieuw, nalezen
+    'w.buurthuis': "o centro comunitário (uma casa para atividades no teu bairro)", // nieuw, nalezen
+    'w.straat': "a rua", // nieuw, nalezen
+    'w.kennismaken': "conhecer (encontrar alguém pela primeira vez)", // nieuw, nalezen
+    'w.overlast': "o incómodo (barulho ou problemas para os outros)", // nieuw, nalezen
+    'w.buurvrouw': "a vizinha (uma mulher)", // nieuw, nalezen
+    's.neighbours.1': "Moro nesta rua há pouco tempo.", // nieuw, nalezen
+    's.neighbours.2': "Na biblioteca pratico neerlandês.", // nieuw, nalezen
+    's.neighbours.3': "Desculpe o incómodo.", // nieuw, nalezen
+    'c.neighbours.q': "Olá, sou a tua nova vizinha.", // nieuw, nalezen
+    'c.neighbours.a': "Muito prazer! Chamo-me Ali.", // nieuw, nalezen
+    'l.join': "A escola, o desporto e o voluntariado", // nieuw, nalezen
+    'w.vrijwilliger': "o voluntário (alguém que ajuda sem receber)", // nieuw, nalezen
+    'w.vrijwilligerswerk': "o voluntariado", // nieuw, nalezen
+    'w.sportclub': "o clube desportivo", // nieuw, nalezen
+    'w.ouderavond': "a reunião de pais (na escola)", // nieuw, nalezen
+    'w.leraar': "o professor", // nieuw, nalezen
+    'w.basisschool': "a escola primária", // nieuw, nalezen
+    's.join.1': "O meu filho anda na escola primária.", // nieuw, nalezen
+    's.join.2': "Jogo futebol num clube desportivo.", // nieuw, nalezen
+    's.join.3': "Ao sábado faço voluntariado.", // nieuw, nalezen
+    'c.join.q': "Vens à reunião de pais?", // nieuw, nalezen
+    'c.join.a': "Sim. Gostava de falar com o professor.", // nieuw, nalezen
+    'l.workphotos': "Fotografias e dados", // nieuw, nalezen
+    'w.gezicht': "a cara", // nieuw, nalezen
+    'w.klantgegevens': "os dados dos clientes (nome, morada, telefone de um cliente)", // nieuw, nalezen
+    'w.onlinezetten': "pôr na internet", // nieuw, nalezen
+    'w.wissen': "apagar", // nieuw, nalezen
+    'w.werktelefoon': "o telemóvel do trabalho", // nieuw, nalezen
+    'w.bestand': "o ficheiro (num computador)", // nieuw, nalezen
+    's.workphotos.1': "Não ponho fotografias do trabalho na internet.", // nieuw, nalezen
+    's.workphotos.2': "Apago a fotografia logo.", // nieuw, nalezen
+    's.workphotos.3': "A cara dele aparece na fotografia.", // nieuw, nalezen
+    'c.workphotos.q': "Posso tirar-te uma fotografia? Para a internet.", // nieuw, nalezen
+    'c.workphotos.a': "Não, prefiro que não. Não quero aparecer na internet.", // nieuw, nalezen
+    'l.device': "Um telemóvel e um computador seguros", // nieuw, nalezen
+    'w.update': "a atualização (uma nova versão de uma app ou de um programa)", // nieuw, nalezen
+    'w.virus': "o vírus (um programa que estraga o teu computador)", // nieuw, nalezen
+    'w.wifi': "o wi-fi", // nieuw, nalezen
+    'w.usbstick': "a pen USB", // nieuw, nalezen
+    'w.installeren': "instalar", // nieuw, nalezen
+    'w.openbaar': "público (para todos)", // nieuw, nalezen
+    's.device.1': "Vou instalar a atualização esta noite.", // nieuw, nalezen
+    's.device.2': "Esta pen USB estava no chão.", // nieuw, nalezen
+    's.device.3': "Este wi-fi é seguro?", // nieuw, nalezen
+    'c.device.q': "Posso pôr esta app no telemóvel do trabalho?", // nieuw, nalezen
+    'c.device.a': "Pergunta primeiro ao departamento de informática.", // nieuw, nalezen
+    'c.vacancy': "Liga, ou manda uma mensagem curta", // nieuw, nalezen
+    'c.vacancy.b': "Lê bem o anúncio: o horário, o local, e o que tens de ter, como carta de condução ou um certificado. Não precisas de ter tudo: se tens quase tudo, tenta na mesma. Liga ou escreve uma mensagem curta: diz o teu nome, que emprego, e porque o queres. Nunca pagues dinheiro para ter um emprego, e nunca mandes os teus códigos de acesso por causa de um anúncio.", // nieuw, nalezen
+    'c.vacancy.p': "Não tenho diploma, mas tenho muita experiência.", // nieuw, nalezen
+    'c.vacancy.s': "Um anúncio pede 3 anos de experiência. Tu tens 2 anos. O que fazes?", // nieuw, nalezen
+    'c.vacancy.o1': "Candidatas-te na mesma, e dizes o que sabes fazer.", // nieuw, nalezen
+    'c.vacancy.o2': "Não te candidatas: tens pouca experiência.", // nieuw, nalezen
+    'c.vacancy.o3': "Escreves 3 anos: ninguém verifica.", // nieuw, nalezen
+    'c.vacancy.w': "Um anúncio pede muitas vezes mais do que o trabalho precisa mesmo. A honestidade sobre o que sabes fazer funciona melhor do que mentir.", // nieuw, nalezen
+    'c.result': "Um não não é o fim", // nieuw, nalezen
+    'c.result.b': "Não sabes nada ao fim de uma semana? Podes voltar a ligar e perguntar com educação. Recebeste um não? Pergunta o que podes fazer melhor da próxima vez: muitos empregadores dizem-te. Depois tenta outra vez: a maioria das pessoas recebe primeiro alguns nãos. Recebeste um sim? Pergunta quando começas, e pede o teu contrato antes de começar. Convidaram-te para um dia experimental? Pergunta antes quanto tempo dura, e se é pago.", // nieuw, nalezen
+    'c.result.p': "O que posso fazer melhor da próxima vez?", // nieuw, nalezen
+    'c.result.s': "Depois de uma entrevista de emprego, recebes um não por e-mail. O que fazes?", // nieuw, nalezen
+    'c.result.o1': "Perguntas com educação o que podes fazer melhor.", // nieuw, nalezen
+    'c.result.o2': "Respondes que se enganaram.", // nieuw, nalezen
+    'c.result.o3': "Deixas de te candidatar: não resulta.", // nieuw, nalezen
+    'c.result.w': "A opinião deles ajuda-te na próxima entrevista. Uma pergunta educada também deixa uma boa imagem de ti.", // nieuw, nalezen
+    'c.residence': "Os teus documentos: vê a data", // nieuw, nalezen
+    'c.residence.b': "És da UE? Então podes viver e trabalhar aqui com um passaporte ou um cartão de cidadão válido: não precisas de autorização. És de fora da UE? Então precisas de uma autorização de residência válida. No cartão diz se podes trabalhar. Vê a data de validade dos teus documentos. Pede uma nova autorização ao IND a tempo: meses antes da data, não na última semana. Guarda uma cópia de cada carta. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.residence.p': "A minha autorização caduca em breve. O que tenho de fazer?", // nieuw, nalezen
+    'c.residence.s': "A tua autorização de residência caduca daqui a dois meses. Tens muito trabalho. O que fazes?", // nieuw, nalezen
+    'c.residence.o1': "Pedes já uma nova.", // nieuw, nalezen
+    'c.residence.o2': "Esperas até à última semana.", // nieuw, nalezen
+    'c.residence.o3': "Não fazes nada: o trabalho vem primeiro.", // nieuw, nalezen
+    'c.residence.w': "Sem uma autorização válida, podes não ter permissão para trabalhar. Uma nova autorização demora, por isso começas cedo.", // nieuw, nalezen
+    'c.newhome': "Morada nova? Diz a toda a gente", // nieuw, nalezen
+    'c.newhome.b': "Vais mudar de casa? Dá depressa a tua nova morada à câmara municipal (gemeente): é obrigatório. Diz também ao teu empregador, ao teu banco, ao teu seguro e ao teu médico. Põe o teu nome na caixa do correio, senão as cartas não te chegam. No dia da mudança, aponta as leituras dos contadores e tira-lhes fotografias. Assim só pagas o que gastaste.", // nieuw, nalezen
+    'c.newhome.p': "Mudei de casa. Esta é a minha nova morada.", // nieuw, nalezen
+    'c.newhome.s': "Mudaste de casa há duas semanas. As tuas cartas ainda vão para a morada antiga. O que fazes?", // nieuw, nalezen
+    'c.newhome.o1': "Dás já a tua nova morada à câmara municipal (gemeente).", // nieuw, nalezen
+    'c.newhome.o2': "Esperas: o correio vai encontrar-te.", // nieuw, nalezen
+    'c.newhome.o3': "Pedes ao teu antigo vizinho para guardar as tuas cartas.", // nieuw, nalezen
+    'c.newhome.w': "As cartas importantes, como multas ou cartas das Finanças, têm prazos. Quando vão para a morada errada, podes perdê-las.", // nieuw, nalezen
+    'c.payparts': "Lê todas as linhas", // nieuw, nalezen
+    'c.payparts.b': "O teu recibo de vencimento tem muitas linhas e palavras curtas. Em cima: o teu nome, o teu número de funcionário e o período. Depois o teu salário bruto, as tuas horas e os pagamentos extra. Depois o que é descontado: impostos e contribuições. Em muitos empregos, tu e o teu empregador pagam os dois a tua reforma: vês a tua parte no recibo. Em baixo: o teu salário líquido. Não percebes uma linha? Pede ao teu empregador para te explicar. Guarda todos os teus recibos de vencimento. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.payparts.p': "O que quer dizer esta linha no meu recibo de vencimento?", // nieuw, nalezen
+    'c.payparts.s': "No teu recibo, há dinheiro que vai para \"pensioen\". Não sabes porquê. O que fazes?", // nieuw, nalezen
+    'c.payparts.o1': "Pedes ao teu empregador para te explicar.", // nieuw, nalezen
+    'c.payparts.o2': "Pedes para parar, para teres mais dinheiro agora.", // nieuw, nalezen
+    'c.payparts.o3': "Ignoras: não vais ficar tanto tempo.", // nieuw, nalezen
+    'c.payparts.w': "O dinheiro da reforma é poupado para ti, para mais tarde. Normalmente ficas com ele quando mudas de emprego. Perguntar ajuda-te a saber o que é teu.", // nieuw, nalezen
+    'c.latepay': "Salário atrasado ou em dinheiro? Age a tempo", // nieuw, nalezen
+    'c.latepay.b': "O teu salário tem de chegar no dia que está no teu contrato ou na tua cao. Está atrasado, ou falta dinheiro? Pergunta por escrito, por exemplo num e-mail. Guarda os teus extratos bancários e a tua própria lista de horas. Pagam-te em dinheiro, sem recibo de vencimento? Então muitas vezes é trabalho sem descontos (zwart): as tuas horas não ficam registadas, e mais tarde é difícil provar o teu trabalho ou receber um subsídio. Pede um recibo de vencimento. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.", // nieuw, nalezen
+    'c.latepay.p': "O meu salário ainda não entrou. Quando chega?", // nieuw, nalezen
+    'c.latepay.s': "O teu patrão diz: \"A partir de agora pago-te em dinheiro. Sem recibo, é mais fácil.\" O que fazes?", // nieuw, nalezen
+    'c.latepay.o1': "Dizes que não, e pedes um recibo de vencimento.", // nieuw, nalezen
+    'c.latepay.o2': "Dizes que sim: em dinheiro é mais dinheiro.", // nieuw, nalezen
+    'c.latepay.o3': "Dizes que sim, mas só este mês.", // nieuw, nalezen
+    'c.latepay.w': "Sem recibo de vencimento, o teu trabalho não está no papel. Então podes perder direitos, por exemplo a um subsídio quando perdes o emprego.", // nieuw, nalezen
+    'c.holiday': "Os teus dias de férias: usa-os a tempo", // nieuw, nalezen
+    'c.holiday.b': "Vê quantos dias de férias ainda tens: muitas vezes está no teu recibo de vencimento ou na app. Planeia as tuas férias cedo, e pede-as por escrito. Os teus dias de férias legais caducam 6 meses depois do fim do ano, a não ser que não os tenhas podido tirar. Os dias extra da tua cao ou do teu contrato continuam válidos mais tempo, normalmente 5 anos. O teu emprego acaba? Então recebes dinheiro pelos dias que não tiraste. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.holiday.p': "Quero tirar os meus dias de férias ainda este ano.", // nieuw, nalezen
+    'c.holiday.s': "Estamos em novembro. Ainda tens 12 dias de férias deste ano. O teu chefe não diz nada sobre isso. O que fazes?", // nieuw, nalezen
+    'c.holiday.o1': "Perguntas quando os podes tirar.", // nieuw, nalezen
+    'c.holiday.o2': "Não fazes nada: ficam para sempre.", // nieuw, nalezen
+    'c.holiday.o3': "Esqueces: já se perderam.", // nieuw, nalezen
+    'c.holiday.w': "Os dias de férias são para descansar, e podem caducar. Se perguntares a tempo, ainda os podes planear.", // nieuw, nalezen
+    'c.special': "Um casamento, um funeral, um bebé", // nieuw, nalezen
+    'c.special.b': { m: "O teu bebé nasceu e tu és o companheiro da mãe? Então tens 1 semana de licença de nascimento paga, nas primeiras 4 semanas. A tua cao dá muitas vezes uma licença especial (bijzonder verlof) para o teu casamento, ou para um funeral na tua família. Feriados, como o Natal: nenhuma lei diz que tens folga. O teu contrato ou a tua cao diz se tens folga, ou se recebes um pagamento extra. Pede os teus dias de folga a tempo. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", f: "O teu bebé nasceu e tu és a companheira da mãe? Então tens 1 semana de licença de nascimento paga, nas primeiras 4 semanas. A tua cao dá muitas vezes uma licença especial (bijzonder verlof) para o teu casamento, ou para um funeral na tua família. Feriados, como o Natal: nenhuma lei diz que tens folga. O teu contrato ou a tua cao diz se tens folga, ou se recebes um pagamento extra. Pede os teus dias de folga a tempo. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", x: "A tua companheira ou o teu companheiro teve um bebé? Então tens 1 semana de licença de nascimento paga, nas primeiras 4 semanas. A tua cao dá muitas vezes uma licença especial (bijzonder verlof) para o teu casamento, ou para um funeral na tua família. Feriados, como o Natal: nenhuma lei diz que tens folga. O teu contrato ou a tua cao diz se tens folga, ou se recebes um pagamento extra. Pede os teus dias de folga a tempo. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket." }, // nieuw, nalezen
+    'c.special.p': "A minha mulher vai ter um bebé. Como peço a licença de nascimento?", // nieuw, nalezen
+    'c.special.s': "O teu pai morreu no estrangeiro. Queres ir ao funeral. O que fazes?", // nieuw, nalezen
+    'c.special.o1': "Dizes ao teu empregador, e perguntas que licença podes ter.", // nieuw, nalezen
+    'c.special.o2': "Vais simplesmente, e avisas quando voltares.", // nieuw, nalezen
+    'c.special.o3': "Não vais: já não tens dias de folga.", // nieuw, nalezen
+    'c.special.w': "O teu empregador percebe que isto é muito importante. Muitas cao dão licença especial, e também podes usar os teus dias de férias.", // nieuw, nalezen
+    'c.unwell': "Doente no trabalho ou nas férias", // nieuw, nalezen
+    'c.unwell.b': "Sentes-te doente no trabalho? Diz ao teu chefe antes de ires para casa: é assim que avisas que estás doente. Não te vás embora sem dizer nada. Ficaste doente nas férias? Avisa o teu empregador da mesma forma que em casa, também do estrangeiro. Então os dias de doença normalmente não contam como dias de férias. Podes precisar de uma declaração de um médico de lá. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.unwell.p': "Fiquei doente nas férias.", // nieuw, nalezen
+    'c.unwell.s': "Estás de férias no teu país. Apanhas gripe e ficas 5 dias de cama. O que fazes?", // nieuw, nalezen
+    'c.unwell.o1': "Avisas logo o teu empregador.", // nieuw, nalezen
+    'c.unwell.o2': "Nada: de qualquer forma estás de férias.", // nieuw, nalezen
+    'c.unwell.o3': "Dizes ao teu empregador quando voltares.", // nieuw, nalezen
+    'c.unwell.w': "Se avisares a tempo, os dias de doença normalmente não contam como dias de férias. Assim ainda podes usar esses dias mais tarde.", // nieuw, nalezen
+    'c.injury': "Magoaste-te no trabalho? Aponta tudo", // nieuw, nalezen
+    'c.injury.b': "Magoaste-te no trabalho? Aponta o que aconteceu, quando e onde, e quem viu. Tira fotografias, e guarda todos os papéis do médico. Pede uma cópia do relatório do acidente. Magoaste-te porque o trabalho não era seguro? Então normalmente o teu empregador tem de pagar o teu prejuízo. Não tens de provar que a culpa foi dele: o empregador tem de mostrar que fez o suficiente pela tua segurança. Pede conselho antes de assinares alguma coisa. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.injury.p': "Posso ter uma cópia do relatório?", // nieuw, nalezen
+    'c.injury.s': "Magoas a mão numa máquina sem proteção. Mais tarde, o teu patrão pede-te para assinares um papel: \"A culpa foi minha.\" O que fazes?", // nieuw, nalezen
+    'c.injury.o1': "Não assinas. Primeiro pedes conselho.", // nieuw, nalezen
+    'c.injury.o2': "Assinas, para não haver problemas.", // nieuw, nalezen
+    'c.injury.o3': "Assinas, mas guardas uma fotografia do papel.", // nieuw, nalezen
+    'c.injury.w': "O que assinas pode contar mais tarde, por exemplo quando pedes uma indemnização. Pede primeiro conselho ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.debt': "Uma dívida que nunca acaba", // nieuw, nalezen
+    'c.debt.b': "Nos Países Baixos, uma agência não te pode pedir dinheiro por te arranjar emprego. Tiveste de pedir dinheiro emprestado para a viagem ou para o emprego, e a dívida não para de crescer? Tens de ficar até a pagares? Isso é um sinal de exploração. Uma dívida nunca quer dizer que tens de continuar a trabalhar: podes parar. Guarda todos os papéis e mensagens sobre a dívida. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.", // nieuw, nalezen
+    'c.debt.p': "Quanto ainda tenho de pagar? Quero isso por escrito.", // nieuw, nalezen
+    'c.debt.s': "A agência pagou o teu bilhete de autocarro. Agora tira-te dinheiro do salário todas as semanas, e a dívida não diminui. O que fazes?", // nieuw, nalezen
+    'c.debt.o1': "Pedes uma lista por escrito, e procuras ajuda.", // nieuw, nalezen
+    'c.debt.o2': "Trabalhas mais horas para pagar mais depressa.", // nieuw, nalezen
+    'c.debt.o3': "Não dizes nada: a agência ajudou-te.", // nieuw, nalezen
+    'c.debt.w': "Uma dívida que não diminui não te deixa sair. Com a lista, o sindicato ou a FairWork podem ver se é justa.", // nieuw, nalezen
+    'c.inspection': "A inspeção está lá para ti", // nieuw, nalezen
+    'c.inspection.b': "A Nederlandse Arbeidsinspectie verifica se o trabalho é seguro e justo: o salário, as horas e a exploração. Os inspetores podem ir ao teu trabalho e falar com os trabalhadores. Podes dizer-lhes a verdade: não dizem ao teu patrão quem denunciou alguma coisa. Precisas de ajuda na tua língua? Pede um intérprete. A FairWork ajuda de graça as vítimas de exploração, também pessoas sem documentos válidos. Informação geral. Para a tua situação: pergunta ao sindicato, ao Juridisch Loket ou à FairWork.", // nieuw, nalezen
+    'c.inspection.p': "Quero contar uma coisa, mas sem o meu patrão presente.", // nieuw, nalezen
+    'c.inspection.s': "Um inspetor pergunta pelas tuas horas. O teu patrão disse-te para dizeres 8 horas. Tu trabalhas 12. O que fazes?", // nieuw, nalezen
+    'c.inspection.o1': "Dizes a verdade ao inspetor.", // nieuw, nalezen
+    'c.inspection.o2': "Dizes 8 horas, como o teu patrão disse.", // nieuw, nalezen
+    'c.inspection.o3': "Não dizes nada, e vais-te embora.", // nieuw, nalezen
+    'c.inspection.w': "O inspetor só pode ajudar quando sabe a verdade. O que dizes ajuda-te a ti, e também aos teus colegas.", // nieuw, nalezen
+    'c.carpool': "No carro: cinto posto, e combinem os custos", // nieuw, nalezen
+    'c.carpool.b': "Toda a gente no carro usa cinto, também atrás. O condutor precisa de uma carta de condução válida, e não deve beber álcool antes de conduzir. Demasiadas pessoas na carrinha, ou o condutor conduz de forma perigosa? Diz isso, e não entres. Partilhas o carro com colegas? Combinem primeiro como dividem o combustível. Na carrinha de trabalho da agência? Pergunta quanto te custa, e pede isso por escrito.", // nieuw, nalezen
+    'c.carpool.p': "Há demasiadas pessoas na carrinha. Não vou entrar.", // nieuw, nalezen
+    'c.carpool.s': "A carrinha do trabalho tem 9 lugares. Esta manhã querem entrar 11 pessoas. O que fazes?", // nieuw, nalezen
+    'c.carpool.o1': "Não entras, e ligas ao teu chefe.", // nieuw, nalezen
+    'c.carpool.o2': "Sentas-te no chão, atrás.", // nieuw, nalezen
+    'c.carpool.o3': "Apertas-te: são só 20 minutos.", // nieuw, nalezen
+    'c.carpool.w': "Sem lugar e sem cinto, um pequeno acidente pode ser muito grave. O teu empregador ou a agência podem encontrar outra solução.", // nieuw, nalezen
+    'c.train': "Comboio atrasado? Manda logo uma mensagem", // nieuw, nalezen
+    'c.train.b': "Vê o planeador de viagens antes de saíres: os comboios e os autocarros podem atrasar-se ou ser cancelados. O teu comboio está atrasado? Manda logo uma mensagem ao teu chefe, com a hora a que vais chegar. Em dias de tempestade ou de obras na linha, apanha um comboio mais cedo. Depois de um atraso grande, muitas vezes podes receber dinheiro de volta: vê no site da empresa de comboios.", // nieuw, nalezen
+    'c.train.p': "O meu comboio está atrasado. Chego às nove.", // nieuw, nalezen
+    'c.train.s': "O teu comboio foi cancelado. O próximo parte daqui a 30 minutos. O teu turno começa daqui a 40 minutos. O que fazes?", // nieuw, nalezen
+    'c.train.o1': "Mandas já uma mensagem a dizer que vais chegar tarde.", // nieuw, nalezen
+    'c.train.o2': "Esperas, e explicas quando chegares.", // nieuw, nalezen
+    'c.train.o3': "Vais para casa: a culpa não é tua.", // nieuw, nalezen
+    'c.train.w': "O teu chefe pode planear melhor quando sabe cedo. Um atraso não é culpa tua, mas avisar é tarefa tua.", // nieuw, nalezen
+    'c.checklist': "Verifica tu primeiro", // nieuw, nalezen
+    'c.checklist.b': "Antes de dizeres \"klaar\", verifica o teu próprio trabalho. Usa a lista de verificação se houver uma, e assinala cada passo. Olha para o teu trabalho como se fosses o cliente. Alguma coisa não está bem? Faz outra vez agora: é mais rápido do que depois. Não tens a certeza? Pede a um colega para ver. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.checklist.p': "Já acabei. Podes ver se está bem?", // nieuw, nalezen
+    'c.checklist.s': "Já acabaste. Na lista de verificação, há um passo que não está assinalado. Achas que o fizeste. O que fazes?", // nieuw, nalezen
+    'c.checklist.o1': "Verificas outra vez esse passo, e depois assinalas.", // nieuw, nalezen
+    'c.checklist.o2': "Assinalas: deves tê-lo feito.", // nieuw, nalezen
+    'c.checklist.o3': "Deixas em branco: ninguém lê a lista.", // nieuw, nalezen
+    'c.checklist.w': "Uma lista de verificação só ajuda quando é verdade. Olhar mais uma vez leva um minuto. Um erro pode levar horas.", // nieuw, nalezen
+    'c.leavesite': "Deixa tudo como gostavas de encontrar", // nieuw, nalezen
+    'c.leavesite.b': { m: "No fim do trabalho, deixa o teu lugar limpo e seguro. Põe as ferramentas e os materiais no lugar, e varre o chão. Desliga as máquinas e as luzes que usaste. És o último? Verifica as janelas e as portas, e fecha como a tua empresa diz. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", f: "No fim do trabalho, deixa o teu lugar limpo e seguro. Põe as ferramentas e os materiais no lugar, e varre o chão. Desliga as máquinas e as luzes que usaste. És a última? Verifica as janelas e as portas, e fecha como a tua empresa diz. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", x: "No fim do trabalho, deixa o teu lugar limpo e seguro. Põe as ferramentas e os materiais no lugar, e varre o chão. Desliga as máquinas e as luzes que usaste. Já não fica mais ninguém? Verifica as janelas e as portas, e fecha como a tua empresa diz. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas." }, // nieuw, nalezen
+    'c.leavesite.p': { m: "Sou o último. Tenho de fechar a porta à chave?", f: "Sou a última. Tenho de fechar a porta à chave?", x: "Já não fica mais ninguém. Tenho de fechar a porta à chave?" }, // nieuw, nalezen
+    'c.leavesite.s': { m: "És o último no trabalho. Não sabes ligar o alarme. O que fazes?", f: "És a última no trabalho. Não sabes ligar o alarme. O que fazes?", x: "Já não está mais ninguém no trabalho. Não sabes ligar o alarme. O que fazes?" }, // nieuw, nalezen
+    'c.leavesite.o1': "Ligas ao teu chefe e perguntas.", // nieuw, nalezen
+    'c.leavesite.o2': "Sais sem alarme: já é tarde.", // nieuw, nalezen
+    'c.leavesite.o3': "Carregas em botões até apitar.", // nieuw, nalezen
+    'c.leavesite.w': "Um edifício sem alarme não está seguro. O teu chefe prefere receber uma chamada a encontrar um problema amanhã.", // nieuw, nalezen
+    'c.stagedays': "Aluno, e também colega", // nieuw, nalezen
+    'c.stagedays.b': "No estágio estás lá para aprender, mas trabalhas como os colegas: a horas, com as regras da casa, e ligas quando estás doente. Podes fazer muitas perguntas: é para isso que lá estás. O teu trabalho deve ajudar-te a aprender, não só limpar ou carregar o dia todo. Não é assim? Fala com o teu orientador de estágio na escola. Nem sempre há subsídio de estágio: pergunta antes de começares. As regras são diferentes em cada escola: pergunta ao teu orientador de estágio.", // nieuw, nalezen
+    'c.stagedays.p': "Também quero aprender isto. Posso ver como se faz?", // nieuw, nalezen
+    'c.stagedays.s': "No estágio só limpas a cantina, todos os dias, há três semanas. O que fazes?", // nieuw, nalezen
+    'c.stagedays.o1': "Falas sobre isso com o teu orientador de estágio.", // nieuw, nalezen
+    'c.stagedays.o2': "Fazes e não dizes nada: estás a estagiar.", // nieuw, nalezen
+    'c.stagedays.o3': "Ficas em casa até te darem outro trabalho.", // nieuw, nalezen
+    'c.stagedays.w': "O estágio é para aprenderes a tua profissão. O teu orientador pode falar com a empresa sobre tarefas melhores.", // nieuw, nalezen
+    'c.stageend': "Acaba bem, e pede uma referência", // nieuw, nalezen
+    'c.stageend.b': "Na conversa final ouves o que correu bem e o que pode ser melhor. Pede exemplos, e aponta-os para o teu próximo emprego. Correu bem? Pergunta se podes dar o nome deles como referência. No teu último dia, agradece aos colegas: aqui muitas pessoas trazem uma coisa pequena para comer, como bolo ou doces. As regras são diferentes em cada escola: pergunta ao teu orientador de estágio.", // nieuw, nalezen
+    'c.stageend.p': "Posso dar o seu nome como referência?", // nieuw, nalezen
+    'c.stageend.s': "É o último dia do teu estágio. O que fazes?", // nieuw, nalezen
+    'c.stageend.o1': "Agradeces aos colegas, e despedes-te.", // nieuw, nalezen
+    'c.stageend.o2': "Sais em silêncio, sem dizer nada.", // nieuw, nalezen
+    'c.stageend.o3': "Pedes um presente à empresa.", // nieuw, nalezen
+    'c.stageend.w': "Uma boa despedida deixa uma boa imagem. Talvez queiras trabalhar lá mais tarde, ou precises deles como referência.", // nieuw, nalezen
+    'c.neighbours': "Cumprimenta os teus vizinhos", // nieuw, nalezen
+    'c.neighbours.b': "Mudaste-te há pouco para uma rua? Cumprimenta os teus vizinhos e diz-lhes o teu nome. Assim é mais fácil resolver problemas mais tarde. Trabalhas de noite, ou vives com muitas pessoas? Faz silêncio à noite e de madrugada. Põe o lixo na rua no dia certo. Na biblioteca e no centro comunitário podes muitas vezes praticar neerlandês, às vezes de graça.", // nieuw, nalezen
+    'c.neighbours.p': "Olá, chamo-me Ali. Moro aqui ao lado.", // nieuw, nalezen
+    'c.neighbours.s': "Vives com cinco colegas. Um vizinho diz que há muitas vezes barulho à noite. O que fazes?", // nieuw, nalezen
+    'c.neighbours.o1': "Pedes desculpa, e combinam fazer silêncio.", // nieuw, nalezen
+    'c.neighbours.o2': "Dizes que todos trabalham e precisam de relaxar.", // nieuw, nalezen
+    'c.neighbours.o3': "Não dizes nada, e fechas a porta.", // nieuw, nalezen
+    'c.neighbours.w': "Uma boa conversa cedo evita problemas maiores. Os vizinhos que te conhecem são muitas vezes mais simpáticos e prestáveis.", // nieuw, nalezen
+    'c.join': "Participa: aprendes neerlandês mais depressa", // nieuw, nalezen
+    'c.join.b': "Fora do trabalho, aprendes neerlandês mais depressa a fazer coisas com outras pessoas: desporto, um clube, ou voluntariado. O teu filho anda na escola? Vai à reunião de pais, mesmo que o teu neerlandês não seja perfeito: o professor quer conhecer-te. Podes pedir que falem neerlandês devagar, ou usar uma app de tradução. O voluntariado também fica bem no teu currículo.", // nieuw, nalezen
+    'c.join.p': "Podia falar um pouco mais devagar?", // nieuw, nalezen
+    'c.join.s': "Recebes um convite para a reunião de pais. O teu neerlandês ainda não é bom. O que fazes?", // nieuw, nalezen
+    'c.join.o1': "Vais, e usas neerlandês simples ou uma app.", // nieuw, nalezen
+    'c.join.o2': "Não vais: o professor não te vai perceber.", // nieuw, nalezen
+    'c.join.o3': "Mandas uma mensagem curta a dizer que não tens tempo.", // nieuw, nalezen
+    'c.join.w': "O professor quer falar do teu filho, não do teu neerlandês. Ires mostra que te importas.", // nieuw, nalezen
+    'c.workphotos': "Primeiro pergunta, depois publica", // nieuw, nalezen
+    'c.workphotos.b': "Uma fotografia no trabalho pode mostrar mais do que pensas: um cliente, um utente, um ecrã ou um papel com nomes. Não ponhas fotografias do trabalho na internet sem autorização do teu empregador, e nunca fotografias de pessoas sem o sim delas. Os dados dos clientes ficam no trabalho: não os mandes para o teu telemóvel ou o teu e-mail. Mandaste alguma coisa por engano? Diz logo ao teu chefe. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.workphotos.p': "Primeiro vou pedir autorização.", // nieuw, nalezen
+    'c.workphotos.s': "Um colega põe uma fotografia engraçada de um cliente na app da equipa. O que fazes?", // nieuw, nalezen
+    'c.workphotos.o1': "Dizes que não está bem, e não partilhas.", // nieuw, nalezen
+    'c.workphotos.o2': "Partilhas: está só na app da equipa.", // nieuw, nalezen
+    'c.workphotos.o3': "Pões um gosto, mas não partilhas.", // nieuw, nalezen
+    'c.workphotos.w': "O cliente não disse que sim a esta fotografia. As fotografias numa app podem ir parar a qualquer lado, depressa. Dizê-lo com simpatia protege o cliente e o teu colega.", // nieuw, nalezen
+    'c.device': "Atualizações sim, pens estranhas não", // nieuw, nalezen
+    'c.device.b': "Instala as atualizações no teu telemóvel e no teu computador: fecham buracos que os hackers usam. Encontraste uma pen USB? Não a ponhas no teu computador: dá-a ao departamento de informática. Num telemóvel ou computador do trabalho, instala só apps que o teu trabalho permite. Numa rede wi-fi pública, não entres no teu banco nem no teu trabalho. Bloqueia o teu telemóvel com um código. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.device.p': "Encontrei uma pen USB. O que devo fazer com ela?", // nieuw, nalezen
+    'c.device.s': "Encontras uma pen USB no parque de estacionamento. Diz \"Salaris\". O que fazes?", // nieuw, nalezen
+    'c.device.o1': "Dás ao departamento de informática.", // nieuw, nalezen
+    'c.device.o2': "Pões no teu computador para ver de quem é.", // nieuw, nalezen
+    'c.device.o3': "Levas para casa e vês lá.", // nieuw, nalezen
+    'c.device.w': "Uma pen pode ter um vírus, também quando parece interessante. O departamento de informática pode verificá-la em segurança.", // nieuw, nalezen
   },
 };
 

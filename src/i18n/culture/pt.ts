@@ -422,6 +422,39 @@ const t: CultureTranslation = {
     'c.whereis.o2': "Continuas a procurar: dá vergonha perguntar outra vez.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.o3': "Começas a trabalhar com a tua própria roupa.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Perguntar demora dez segundos. Se procuras sem ajuda, podes chegar tarde. Os colegas sabem que num sítio novo é difícil encontrar o caminho.", // nieuw, nalezen // nagelezen AI 22 nov
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
+    'c.wound': "Uma queimadura? Arrefece com água", // nieuw, nalezen
+    'c.wound.b': "Um corte pequeno: carrega em cima com um pano limpo ou uma ligadura, e avisa o socorrista. Uma queimadura: arrefece logo com água morna corrente, pelo menos 10 minutos. Alguma coisa no olho? Lava com água, ou no lava-olhos. É grave? Liga para o 112. Pergunta no primeiro dia onde estão a caixa de primeiros socorros e o lava-olhos.", // nieuw, nalezen
+    'c.wound.p': "Queimei-me. Onde há uma torneira?", // nieuw, nalezen
+    'c.wound.s': "Um colega queima a mão numa máquina quente. O que fazes?", // nieuw, nalezen
+    'c.wound.o1': "Arrefeces com água morna corrente.", // nieuw, nalezen
+    'c.wound.o2': "Pões logo manteiga ou um creme.", // nieuw, nalezen
+    'c.wound.o3': "Pões gelo diretamente na pele, e esperas.", // nieuw, nalezen
+    'c.wound.w': "A água tira o calor da pele, por isso a queimadura fica menos funda. O gelo, a manteiga e o creme podem piorar.", // nieuw, nalezen
+    'c.callhelp': "Ligar para o 112: primeiro diz onde", // nieuw, nalezen
+    'c.callhelp.b': "Liga para o 112 quando uma vida está em perigo, ou quando cada minuto conta. Primeiro diz onde estás: a rua, o número e a localidade. Depois diz o que aconteceu. Fica em linha e responde às perguntas. Pede a um colega para esperar pela ambulância à entrada. Não sabes a morada do teu trabalho? Procura-a hoje.", // nieuw, nalezen
+    'c.callhelp.p': "Vou ligar para o 112. Podes esperar tu pela ambulância?", // nieuw, nalezen
+    'c.callhelp.s': "Ligas para o 112. O operador faz muitas perguntas, mas tu queres ajudar o teu colega. O que fazes?", // nieuw, nalezen
+    'c.callhelp.o1': "Ficas em linha e respondes.", // nieuw, nalezen
+    'c.callhelp.o2': "Desligas, e vais ter com o teu colega.", // nieuw, nalezen
+    'c.callhelp.o3': "Dizes \"venham depressa\", e desligas.", // nieuw, nalezen
+    'c.callhelp.w': "O operador manda ajuda enquanto falas, e diz-te o que fazer. Se desligares cedo demais, a ajuda pode ir para o sítio errado.", // nieuw, nalezen
+    'c.roster': "Vê o teu horário todos os dias", // nieuw, nalezen
+    'c.roster.b': "O horário pode mudar, também em cima da hora. Vê-o todos os dias, na app ou no quadro. Vês uma mudança? Confirma que podes ir. Não podes trabalhar num dia? Diz cedo, não no próprio dia. Queres trocar um turno? Pergunta primeiro ao teu chefe: muitas empresas têm uma regra para isso. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.roster.p': "No sábado não posso. Posso trocar?", // nieuw, nalezen
+    'c.roster.s': "O teu horário mudou. Agora tens de trabalhar no sábado, mas não podes. O que fazes?", // nieuw, nalezen
+    'c.roster.o1': "Dizes hoje ao teu chefe, e pedes para trocar.", // nieuw, nalezen
+    'c.roster.o2': "Não dizes nada, e ficas em casa no sábado.", // nieuw, nalezen
+    'c.roster.o3': "Pedes a um colega para ir, e não dizes a ninguém.", // nieuw, nalezen
+    'c.roster.w': "Se disseres cedo, o teu chefe pode arranjar outra pessoa. Faltar sem dizer nada é visto como muito grave.", // nieuw, nalezen
+    'c.breaks': "Aponta as tuas horas", // nieuw, nalezen
+    'c.breaks.b': "Aponta todos os dias quando começas, quando acabas e quanto tempo dura a tua pausa. A tua própria lista ajuda quando o teu salário não está certo. Tens de sair mais cedo, por exemplo para ir ao médico? Pergunta ao teu chefe a tempo. Trabalhaste mais do que estava previsto? Aponta isso também. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.breaks.p': "Amanhã tenho de ir ao médico. Posso sair mais cedo?", // nieuw, nalezen
+    'c.breaks.s': "Amanhã tens de ir ao médico às três. O teu turno acaba às cinco. O que fazes?", // nieuw, nalezen
+    'c.breaks.o1': "Perguntas hoje ao teu chefe se podes sair mais cedo.", // nieuw, nalezen
+    'c.breaks.o2': "Sais às três, e explicas no dia seguinte.", // nieuw, nalezen
+    'c.breaks.o3': "Não vais ao médico, e acabas o teu turno.", // nieuw, nalezen
+    'c.breaks.w': "Se perguntares a tempo, o teu chefe pode planear o trabalho. Sair sem perguntar é visto como pouco sério.", // nieuw, nalezen
   },
 };
 

@@ -423,6 +423,39 @@ const t: CultureTranslation = {
     'c.whereis.o2': "Aramaya devam edersin: tekrar sormak utanç verici.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.o3': "Kendi kıyafetlerinle işe başlarsın.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Sormak on saniye sürer. Tek başına aramak geç kalmana neden olabilir. İş arkadaşları yeni bir yerde yol bulmanın zor olduğunu bilir.", // nieuw, nalezen // nagelezen AI 22 nov
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
+    'c.wound': "Yanık mı? Suyla soğut", // nieuw, nalezen
+    'c.wound.b': "Küçük bir kesik: temiz bir bez ya da sargıyla üzerine bastır ve ilk yardım görevlisine söyle. Bir yanık: hemen ılık akan suyla, en az 10 dakika soğut. Gözüne bir şey mi kaçtı? Suyla ya da göz duşunda yıka. Ciddi mi? 112’yi ara. İlk gününde ilk yardım çantasının ve göz duşunun nerede olduğunu sor.", // nieuw, nalezen
+    'c.wound.p': "Kendimi yaktım. Musluk nerede?", // nieuw, nalezen
+    'c.wound.s': "Bir iş arkadaşın elini sıcak bir makinede yakıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.wound.o1': "Ilık akan suyla soğutursun.", // nieuw, nalezen
+    'c.wound.o2': "Hemen üzerine tereyağı ya da krem sürersin.", // nieuw, nalezen
+    'c.wound.o3': "Doğrudan cilde buz koyar ve beklersin.", // nieuw, nalezen
+    'c.wound.w': "Su ısıyı ciltten çeker, böylece yanık daha az derin olur. Buz, tereyağı ve krem durumu kötüleştirebilir.", // nieuw, nalezen
+    'c.callhelp': "112’yi aramak: önce nerede olduğunu söyle", // nieuw, nalezen
+    'c.callhelp.b': "Bir hayat tehlikedeyse ya da her dakika önemliyse 112’yi ara. Önce nerede olduğunu söyle: sokak, numara ve şehir. Sonra ne olduğunu söyle. Hatta kal ve soruları cevapla. Bir iş arkadaşından ambulansı girişte beklemesini iste. İş yerinin adresini bilmiyor musun? Bugün öğren.", // nieuw, nalezen
+    'c.callhelp.p': "112’yi arıyorum. Ambulansı bekler misin?", // nieuw, nalezen
+    'c.callhelp.s': "112’yi arıyorsun. Operatör çok soru soruyor, ama sen iş arkadaşına yardım etmek istiyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.callhelp.o1': "Hatta kalır ve cevap verirsin.", // nieuw, nalezen
+    'c.callhelp.o2': "Telefonu kapatır ve iş arkadaşına gidersin.", // nieuw, nalezen
+    'c.callhelp.o3': "\"Çabuk gelin\" der ve kapatırsın.", // nieuw, nalezen
+    'c.callhelp.w': "Operatör sen konuşurken yardım gönderir ve sana ne yapacağını söyler. Çok erken kapatırsan yardım yanlış yere gidebilir.", // nieuw, nalezen
+    'c.roster': "Çalışma planına her gün bak", // nieuw, nalezen
+    'c.roster.b': "Çalışma planı değişebilir, son anda bile. Ona her gün bak, uygulamada ya da panoda. Bir değişiklik mi görüyorsun? Gelebileceğini kontrol et. Bir gün çalışamıyor musun? Bunu erken söyle, o gün değil. Bir vardiyayı değiştirmek mi istiyorsun? Önce amirine sor: birçok şirketin bunun için bir kuralı vardır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.roster.p': "Cumartesi çalışamam. Değiştirebilir miyim?", // nieuw, nalezen
+    'c.roster.s': "Çalışma planın değişti. Şimdi cumartesi çalışman gerekiyor, ama çalışamazsın. Ne yaparsın?", // nieuw, nalezen
+    'c.roster.o1': "Bugün amirine söyler ve vardiyayı değiştirmeyi istersin.", // nieuw, nalezen
+    'c.roster.o2': "Hiçbir şey söylemez ve cumartesi evde kalırsın.", // nieuw, nalezen
+    'c.roster.o3': "Bir iş arkadaşından gitmesini ister ve kimseye söylemezsin.", // nieuw, nalezen
+    'c.roster.w': "Erken söylersen amirin başka birini bulabilir. Haber vermeden gelmemek çok ciddi bir şey olarak görülür.", // nieuw, nalezen
+    'c.breaks': "Saatlerini not et", // nieuw, nalezen
+    'c.breaks.b': "Her gün ne zaman başladığını, ne zaman bitirdiğini ve molanın ne kadar sürdüğünü not et. Maaşın doğru olmadığında kendi listen yardımcı olur. Erken çıkman mı gerekiyor, örneğin doktor için? Amirine zamanında sor. Planlanandan daha uzun mu çalıştın? Bunu da not et. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.breaks.p': "Yarın doktora gitmem gerekiyor. Erken çıkabilir miyim?", // nieuw, nalezen
+    'c.breaks.s': "Yarın saat üçte doktora gitmen gerekiyor. Vardiyan beşte bitiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.breaks.o1': "Bugün amirine erken çıkıp çıkamayacağını sorarsın.", // nieuw, nalezen
+    'c.breaks.o2': "Üçte çıkar ve ertesi gün açıklarsın.", // nieuw, nalezen
+    'c.breaks.o3': "Doktora gitmez ve vardiyanı bitirirsin.", // nieuw, nalezen
+    'c.breaks.w': "Zamanında sormak, amirinin işi planlamasını sağlar. Sormadan çıkmak güvenilmezlik olarak görülür.", // nieuw, nalezen
   },
 };
 

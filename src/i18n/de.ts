@@ -795,6 +795,55 @@ const lang: HelpLanguageSource = {
     's.whereis.3': "Die Toilette ist dort, neben der Kantine.", // nieuw, nalezen
     'c.whereis.q': "Findest du es?", // nieuw, nalezen
     'c.whereis.a': "Nein. Kannst du es mir zeigen?", // nieuw, nalezen
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
+    'l.wound': "Kleine Wunden und Verbrennungen", // nieuw, nalezen
+    'w.wond': "die Wunde", // nieuw, nalezen
+    'w.verband': "der Verband", // nieuw, nalezen
+    'w.koelen': "kühlen (mit kaltem Wasser)", // nieuw, nalezen
+    'w.snee': "der Schnitt (eine kleine Wunde von einem Messer oder etwas Scharfem)", // nieuw, nalezen
+    'w.flauwvallen': "ohnmächtig werden", // nieuw, nalezen
+    'w.oogdouche': "die Augendusche (Wasser, um die Augen auszuspülen)", // nieuw, nalezen
+    's.wound.1': "Kühl die Brandwunde mit Wasser.", // nieuw, nalezen
+    's.wound.2': "Es ist ein kleiner Schnitt. Drück auf die Wunde.", // nieuw, nalezen
+    's.wound.3': "Wo ist die Augendusche?", // nieuw, nalezen
+    'c.wound.q': "Mein Kollege wird gleich ohnmächtig.", // nieuw, nalezen
+    'c.wound.a': "Lass ihn kurz liegen. Ich hole Hilfe.", // nieuw, nalezen
+    'l.callhelp': "112 anrufen", // nieuw, nalezen
+    'w.hulpdiensten': "die Rettungsdienste (Krankenwagen, Feuerwehr, Polizei)", // nieuw, nalezen
+    'w.straatnaam': "der Straßenname", // nieuw, nalezen
+    'w.huisnummer': "die Hausnummer", // nieuw, nalezen
+    'w.aanspreekbaar': "ansprechbar (die Person reagiert, wenn du mit ihr sprichst)", // nieuw, nalezen
+    'w.opwachten': "erwarten und empfangen (jemanden an der Tür)", // nieuw, nalezen
+    'w.aandelijn': "am Telefon bleiben (du legst nicht auf)", // nieuw, nalezen
+    's.callhelp.1': "Ich rufe 112 an. Ich brauche einen Krankenwagen.", // nieuw, nalezen
+    's.callhelp.2': "Wie ist der Straßenname und die Hausnummer?", // nieuw, nalezen
+    's.callhelp.3': "Ich warte am Eingang auf den Krankenwagen.", // nieuw, nalezen
+    'c.callhelp.q': "Reagiert er, wenn du mit ihm sprichst?", // nieuw, nalezen
+    'c.callhelp.a': "Nein. Er reagiert nicht.", // nieuw, nalezen
+    'l.roster': "Dein Dienstplan", // nieuw, nalezen
+    'w.weekrooster': "der Wochenplan (wer diese Woche wann arbeitet)", // nieuw, nalezen
+    'w.roosterapp': "die Dienstplan-App (deine Schichten auf deinem Handy)", // nieuw, nalezen
+    'w.beschikbaar': "verfügbar (du kannst dann arbeiten)", // nieuw, nalezen
+    'w.wijziging': "die Änderung", // nieuw, nalezen
+    'w.invallen': "einspringen (für jemanden arbeiten, der nicht da ist)", // nieuw, nalezen
+    'w.vrijedag': "der freie Tag", // nieuw, nalezen
+    's.roster.1': "Der neue Dienstplan ist in der App.", // nieuw, nalezen
+    's.roster.2': "Bist du am Samstag verfügbar?", // nieuw, nalezen
+    's.roster.3': "Kannst du morgen für Sara einspringen?", // nieuw, nalezen
+    'c.roster.q': "Es gibt eine Änderung in deinem Dienstplan.", // nieuw, nalezen
+    'c.roster.a': "Okay. An welchem Tag muss ich arbeiten?", // nieuw, nalezen
+    'l.breaks': "Stunden und Pausen", // nieuw, nalezen
+    'w.lunchpauze': "die Mittagspause", // nieuw, nalezen
+    'w.rusttijd': "die Ruhezeit (freie Zeit zwischen zwei Schichten)", // nieuw, nalezen
+    'w.werkdag': "der Arbeitstag", // nieuw, nalezen
+    'w.urenlijst': "die Stundenliste (wo du die Stunden aufschreibst, die du gearbeitet hast)", // nieuw, nalezen
+    'w.eerderweg': "früher gehen", // nieuw, nalezen
+    'w.achterelkaar': "hintereinander (einer nach dem anderen)", // nieuw, nalezen
+    's.breaks.1': "Ich schreibe meine Stunden auf die Stundenliste.", // nieuw, nalezen
+    's.breaks.2': "Darf ich heute eine Stunde früher gehen?", // nieuw, nalezen
+    's.breaks.3': "Ich habe sechs Tage hintereinander gearbeitet.", // nieuw, nalezen
+    'c.breaks.q': "Wann ist deine Mittagspause?", // nieuw, nalezen
+    'c.breaks.a': "Um zwölf Uhr, eine halbe Stunde.", // nieuw, nalezen
   },
 };
 

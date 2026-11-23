@@ -2,7 +2,7 @@
 
 *Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.road: 5 november 2026).*
 
-*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.backtowork: 5 november 2026; c.hirer, c.phases, c.deductions en c.agencyhome: 23 november 2026).*
+*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.backtowork: 5 november 2026; c.hirer, c.phases, c.deductions en c.agencyhome: 23 november 2026; c.payparts, c.latepay, c.holiday, c.special, c.unwell, c.injury, c.debt, c.inspection en c.residence: 23 november 2026).*
 
 **Terugsturen naar:** ____________________________ (naam en e-mail van de eigenaar van Vloertaal)
 
@@ -2167,6 +2167,383 @@ ______________________________________________________________
 - Klopt „a rental contract of your own, in writing, apart from your work contract” als regel die voor elke uitzendkracht met huisvesting via het bureau geldt (Wet goed verhuurderschap, cao)? Welk artikel is het precies?
 - „Your home does not always stop on the same day”: is dit juist en voorzichtig genoeg, ook voor kort verblijf (logies) en voor huisvesting die bij het werk hoort?
 - Zijn de vier loketten de juiste voor deze doelgroep, en in deze volgorde? Hoort de gemeente (meldpunt huisvesting) erbij, zoals in c.housing?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### De basisonderwerpen naar vier lessen (nieuw, 23 november 2026)
+
+*Op verzoek van de eigenaar kregen dertien basisonderwerpen elk twee nieuwe lessen. Negen tips gaan over rechten: c.payparts en c.latepay (Loon), c.holiday en c.special (Verlof), c.unwell en c.injury (Ziekte), c.debt en c.inspection (Uitbuiting herkennen) en c.residence (Wonen en papieren). Elke bewering staat ook met een ⚖️-noot en bron in `src/content/workTips.ts`. Geen bedragen. In België gelden andere regels: deze lessen zijn daar voorlopig „alleen Nederland” (`BE_LESSON_TODO` in `src/content/taalBe/index.ts`), behalve c.latepay (alleen de slotregel verschilt). De andere nieuwe tips (Tijd en rooster, Als het misgaat, Solliciteren, verhuizen, Naar je werk, Je werk afronden, Stage lopen, Meedoen in Nederland, Online op je werk) noemen geen recht: huisregels of hoe het gaat.*
+
+---
+
+### c.residence — Your papers: check the date (nieuw, 23 november 2026)
+
+*Unit „Wonen en papieren”, les „Your residence papers” (`l.residence`)*
+
+**Samenvatting (NL):** Uit de EU? Dan mag je hier wonen en werken met een geldig paspoort of ID-kaart, zonder vergunning. Van buiten de EU? Dan heb je een geldige verblijfsvergunning nodig; op de pas staat of je mag werken. Let op de verloopdatum. Vraag op tijd een nieuwe vergunning aan bij de IND: maanden ervoor, niet in de laatste week. Bewaar een kopie van elke brief.
+
+**Tekst (Engels, wordt vertaald):**
+
+> From the EU? Then you may live and work here with a valid passport or ID card: you do not need a permit. From outside the EU? Then you need a valid residence permit. On the card it says if you may work. Check the expiry date of your papers. Apply for a new permit at the IND in time: months before the date, not in the last week. Keep a copy of every letter.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Vrij verkeer van EU-burgers: Richtlijn 2004/38/EG, Vreemdelingenwet 2000 art. 8 onder e en Vreemdelingenbesluit 2000 art. 8.7 e.v.; geen tewerkstellingsvergunning nodig: Wav art. 3 lid 1 onder a. Sinds 2014 geen IND-sticker of registratie voor EU-burgers (ind.nl). Inschrijven bij de gemeente staat in c.bsn. Niet-EU: rechtmatig verblijf (Vw 2000 art. 8) en de aantekening arbeidsmarkt op de verblijfspas („arbeid vrij toegestaan, TWV niet vereist”, „TWV vereist”; Wav art. 2 en 3). Verlengen: de IND stuurt ongeveer 3 maanden voor de einddatum een brief; een tijdige aanvraag houdt het recht op werk tijdens de beslissing (Vb 2000 art. 3.80 en de Wav). „Months before” is een advies.
+
+**Zeg het zo (Nederlands):** „Mijn vergunning verloopt bijna. Wat moet ik doen?” — *My permit expires soon. What must I do?*
+
+**Situatie in de les:** Your residence permit expires in two months. You are very busy at work. What do you do?  
+**Goede antwoord:** Apply for a new one now.  
+**Uitleg na het antwoord (`c.residence.w`):** Without a valid permit, you may not be allowed to work. A new permit takes time, so you start early.
+
+**Uitleg bij het gesprekje (`c.residence.a.why`):** „Uw verblijfsvergunning is bijna verlopen.” → „Dan vraag ik meteen een nieuwe aan.”: Told the permit almost expired: you apply right away.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip.
+
+**Onze eigen vraag hierbij:**
+- „From the EU” laat de EER en Zwitserland bewust weg. Is dat aanvaardbaar, of moet er „From the EU (or the EEA or Switzerland)” staan?
+- Klopt „On the card it says if you may work” voor alle verblijfspassen van 2026?
+- Is „months before the date” een goed advies voor verlenging, of noemen we beter niets?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.payparts — Read every line (nieuw, 23 november 2026)
+
+*Unit „Loon”, les „What is on your payslip” (`l.payparts`)*
+
+**Samenvatting (NL):** Op je loonstrook staan bovenaan je naam, je personeelsnummer en de periode; dan je brutoloon, je uren en eventuele toeslagen; dan wat eraf gaat (belasting en premies). In veel banen betalen jij en je werkgever allebei voor je pensioen; jouw deel zie je op je loonstrook. Onderaan je nettoloon. Snap je een regel niet? Vraag je werkgever om uitleg. Bewaar al je loonstroken.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Your payslip has many lines and short words. At the top: your name, your staff number and the period. Then your gross pay, your hours and any extra pay. Then what comes off: tax and premiums. In many jobs, you and your employer both pay for your pension: you see your part on your payslip. At the bottom: your net pay. Do not understand a line? Ask your employer to explain it. Keep all your payslips.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** De loonstrook: BW 7:626 lid 1 en 2 (schriftelijke opgave met het brutobedrag, de onderdelen van het loon, de inhoudingen, het nettobedrag, het tijdvak, het geldende minimumloon en de overeengekomen arbeidsduur). Het personeelsnummer staat niet in de wet: dat is wat loonstroken meestal tonen. Pensioen: geen algemene plicht tot een pensioenregeling, maar een verplicht bedrijfstakpensioenfonds (Wet Bpf 2000) geldt voor de meeste werknemers; het werknemersdeel verschilt per fonds, vandaar „in many jobs”. Behoud van pensioen bij een nieuwe baan: premievrije aanspraak of waardeoverdracht (Pensioenwet art. 70-71); kleine pensioenen kunnen vervallen of worden afgekocht (art. 66-67), vandaar „usually”.
+
+**Zeg het zo (Nederlands):** „Wat betekent deze regel op mijn loonstrook?” — *What does this line on my payslip mean?*
+
+**Situatie in de les:** On your payslip, money goes to "pensioen". You do not know why. What do you do?  
+**Goede antwoord:** Ask your employer to explain it.  
+**Uitleg na het antwoord (`c.payparts.w`):** Pension money is saved for you, for later. You usually keep it when you change jobs. Asking helps you know what is yours.
+
+**Uitleg bij het gesprekje (`c.payparts.a.why`):** „Wat is je personeelsnummer?” → „Dat staat bovenaan, naast mijn naam.”: Asked for your staff number: where it is on the payslip.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip.
+
+**Onze eigen vraag hierbij:**
+- „In many jobs, you and your employer both pay for your pension: you see your part on your payslip”: juist als algemene zin voor 2026 (Wet toekomst pensioenen)?
+- „You usually keep it when you change jobs”: houdbaar met de regels voor kleine pensioenen?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.latepay — Late or cash pay? Act in time (nieuw, 23 november 2026)
+
+*Unit „Loon”, les „Late, missing or cash pay” (`l.latepay`)*
+
+**Samenvatting (NL):** Je loon moet komen op de dag uit je contract of cao. Te laat of mist er geld? Vraag het schriftelijk, bijvoorbeeld per e-mail, en bewaar je bankafschriften en je eigen urenlijst. Contant betaald, zonder loonstrook? Dan is het vaak zwart: je uren staan nergens, en later is het moeilijk je werk te bewijzen of een uitkering te krijgen. Vraag om een loonstrook.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Your pay must come on the day in your contract or cao. Is it late, or is money missing? Ask about it in writing, for example in an e-mail. Keep your bank statements and your own list of hours. Paid in cash, without a payslip? Then it is often off the books (zwart): your hours are not registered, and later it is hard to prove your work or to get a benefit. Ask for a payslip.
+>
+> *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
+
+**Grondslag (onze lezing):** Loon op de afgesproken tijdstippen: BW 7:623; wettelijke verhoging bij te late betaling: BW 7:625 (niet in de tip). Loonstrook: BW 7:626 (bij de eerste betaling en bij elke wijziging; daarom „ask for a payslip” als advies, niet „with every pay”). Loonaangifte door de werkgever: Wet op de loonbelasting 1964 art. 28; de polisadministratie (UWV) is de basis voor WW en Ziektewet. Wie zwart werkt, heeft wel een arbeidsovereenkomst (BW 7:610), maar moet het werk bewijzen: vandaar „hard to prove”. Contant betalen is op zich niet verboden: vandaar „often off the books”.
+
+**Zeg het zo (Nederlands):** „Mijn loon is nog niet binnen. Wanneer komt het?” — *My pay has not come in yet. When will it come?*
+
+**Situatie in de les:** Your boss says: "From now on I pay you in cash. No payslip, that is easier." What do you do?  
+**Goede antwoord:** Say no, and ask for a payslip.  
+**Uitleg na het antwoord (`c.latepay.w`):** Without a payslip, your work is not on paper. Then you can lose rights, for example to a benefit when you lose your job.
+
+**Uitleg bij het gesprekje (`c.latepay.a.why`):** „Je krijgt het tekort volgende maand.” → „Kan ik dat op papier krijgen?”: Told the money comes later: you want that on paper.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip.
+
+**Onze eigen vraag hierbij:**
+- Is „Paid in cash, without a payslip? Then it is often off the books” een eerlijke vereenvoudiging?
+- Moet de tip de wettelijke verhoging bij te laat loon (BW 7:625) noemen?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.holiday — Your days off: use them in time (nieuw, 23 november 2026)
+
+*Unit „Verlof”, les „Planning your holiday” (`l.holiday`)*
+
+**Samenvatting (NL):** Kijk hoeveel vakantiedagen je nog hebt (vaak op je loonstrook of in de app). Plan op tijd en vraag het schriftelijk. Wettelijke vakantiedagen vervallen 6 maanden na het einde van het jaar, tenzij je ze redelijkerwijs niet kon opnemen. Bovenwettelijke dagen uit cao of contract blijven langer geldig, meestal 5 jaar. Stopt je baan? Dan krijg je de niet-opgenomen dagen uitbetaald.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Check how many days off you still have: often it is on your payslip or in the app. Plan your holiday early, and ask in writing. Your legal days off expire 6 months after the end of the year, unless you could not take them. Extra days from your cao or contract stay valid longer, usually 5 years. Does your job end? Then you get money for the days you did not take.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Verval wettelijke dagen: BW 7:640a (zes maanden na de laatste dag van het kalenderjaar van opbouw, tenzij de werknemer redelijkerwijs niet in staat was ze op te nemen; sinds 1 januari 2012). Bovenwettelijke dagen: verjaring na vijf jaar, BW 7:642; een cao kan anders bepalen, vandaar „usually”. Uitbetaling bij einde dienstverband: BW 7:641 lid 1 (de eindafrekening, zie c.jobends).
+
+**Zeg het zo (Nederlands):** „Ik wil mijn vakantiedagen dit jaar nog opnemen.” — *I want to take my days off this year.*
+
+**Situatie in de les:** It is November. You still have 12 days off from this year. Your supervisor says nothing about it. What do you do?  
+**Goede antwoord:** Ask when you can take them.  
+**Uitleg na het antwoord (`c.holiday.w`):** Days off are for rest, and they can expire. When you ask in time, you can still plan them.
+
+**Uitleg bij het gesprekje (`c.holiday.a.why`):** „In de zomer is het druk. Kun je in mei op vakantie?” → „Liever in juli. Dan is mijn familie thuis.”: Asked to go in May: you would rather go in July, and why.
+
+**⚠ Getallen en termijnen:** 6 months; usually 5 years; 12 days off (situatie).
+
+**Onze eigen vraag hierbij:**
+- Moet de tip zeggen dat de werkgever de werknemer moet wijzen op het vervallen van dagen (HvJ EU, Kreuziger/Max-Planck)?
+- Klopt „usually 5 years” voor de bovenwettelijke dagen, ook met afwijkende cao’s?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.special — A wedding, a funeral, a baby (nieuw, 23 november 2026)
+
+*Unit „Verlof”, les „Special days off” (`l.special`)*
+
+**Samenvatting (NL):** Krijgt je partner een baby? Dan krijg je 1 week geboorteverlof met behoud van loon, in de eerste 4 weken. Je cao geeft vaak bijzonder verlof voor je bruiloft of een begrafenis in je familie. Feestdagen zoals kerst: geen wet zegt dat je vrij bent; je contract of cao zegt of je vrij bent of extra betaald krijgt. Vraag je vrije dagen op tijd.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Is your baby born, and are you the partner? Then you get 1 week of birth leave with pay, in the first 4 weeks. Your cao often gives special leave (bijzonder verlof) for your wedding, or for a funeral in your family. Public holidays, like Christmas: no law says you are free. Your contract or cao says if you are free, or if you get extra pay. Ask for your days off in time.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Geboorteverlof: Wet arbeid en zorg art. 4:2 (eenmaal de wekelijkse arbeidsduur, met volledig loon, binnen vier weken na de geboorte). Het aanvullend geboorteverlof (tot vijf weken, met een UWV-uitkering, art. 4:2a) staat bewust niet in de tip. Bijzonder verlof: geen algemene wet, wel cao’s; het kort verzuimverlof van WAZO art. 4:1 dekt „zeer bijzondere persoonlijke omstandigheden”, zoals een overlijden in de familie: daarom zegt de tip „often” en het advies „ask”. Feestdagen: er is in Nederland geen wettelijk recht op een vrije dag op een feestdag; cao’s regelen het vaak (rijksoverheid.nl, „feestdagen”).
+
+**Zeg het zo (Nederlands):** „Mijn vrouw krijgt een baby. Hoe vraag ik geboorteverlof aan?” — *My wife is having a baby. How do I ask for birth leave?*
+
+**Situatie in de les:** Your father has died abroad. You want to go to the funeral. What do you do?  
+**Goede antwoord:** Tell your employer, and ask what leave you can get.  
+**Uitleg na het antwoord (`c.special.w`):** Your employer understands that this is very important. Many cao’s give special leave, and you can also use your days off.
+
+**Uitleg bij het gesprekje (`c.special.a.why`):** „Gefeliciteerd met je baby! Neem je geboorteverlof?” → „Ja, de eerste week ben ik thuis.”: Asked about birth leave: yes, and when.
+
+**⚠ Getallen en termijnen:** 1 week of birth leave; in the first 4 weeks.
+
+**Onze eigen vraag hierbij:**
+- „1 week of birth leave with pay”: goed genoeg voor „eenmaal de wekelijkse arbeidsduur”?
+- Moeten we het aanvullend geboorteverlof (vijf weken, 70% via UWV) noemen?
+- Moet de tip het kort verzuimverlof bij een overlijden noemen, in plaats van alleen de cao?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.unwell — Sick at work, or on holiday (nieuw, 23 november 2026)
+
+*Unit „Ziekte”, les „Feeling unwell” (`l.unwell`)*
+
+**Samenvatting (NL):** Voel je je ziek op het werk? Zeg het tegen je leidinggevende voor je naar huis gaat: dat is je ziekmelding. Ga niet zomaar weg. Ziek geworden op vakantie? Meld het je werkgever zoals thuis, ook vanuit het buitenland. Dan tellen de ziektedagen meestal niet als vakantiedagen. Misschien heb je een briefje van een dokter daar nodig.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Do you feel sick at work? Tell your supervisor before you go home: that is your sick report. Do not just leave. Did you get sick during your holiday? Report it to your employer the same way as at home, also from abroad. Then the sick days usually do not count as days off. You may need a note from a doctor there.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Ziek tijdens vakantie: BW 7:637 lid 1 (dagen van ziekte tellen niet als vakantie); lid 2: schriftelijk kan anders worden afgesproken, alleen voor bovenwettelijke dagen; vandaar „usually”. De manier van ziekmelden volgt het verzuimreglement van het bedrijf (geen wet; dezelfde lijn als c.sick). Een doktersverklaring uit het buitenland: geen algemene plicht, de werkgever kan erom vragen: „may”.
+
+**Zeg het zo (Nederlands):** „Ik ben ziek geworden op vakantie.” — *I got sick on holiday.*
+
+**Situatie in de les:** You are on holiday in your home country. You get the flu and stay in bed for 5 days. What do you do?  
+**Goede antwoord:** Report it to your employer right away.  
+**Uitleg na het antwoord (`c.unwell.w`):** When you report it in time, the sick days usually do not count as days off. Then you can still use those days later.
+
+**Uitleg bij het gesprekje (`c.unwell.a.why`):** „Je ziet bleek. Gaat het?” → „Nee, ik voel me niet lekker. Mag ik naar huis?”: Asked if you are okay: no, and may you go home?
+
+**⚠ Getallen en termijnen:** 5 days (situatie).
+
+**Onze eigen vraag hierbij:**
+- Klopt „Then the sick days usually do not count as days off” als vereenvoudiging van BW 7:637?
+- Moet er een advies bij over contact met de bedrijfsarts of arbodienst bij ziekte in het buitenland?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.injury — Hurt at work: write it down (nieuw, 23 november 2026)
+
+*Unit „Ziekte”, les „Hurt by your work” (`l.injury`)*
+
+**Samenvatting (NL):** Gewond geraakt op het werk? Schrijf op wat er gebeurde, wanneer, waar en wie het zag. Maak foto’s en bewaar alle papieren van de dokter. Vraag een kopie van het ongevalsrapport. Gewond omdat het werk niet veilig was? Dan moet je werkgever meestal je schade betalen. Jij hoeft niet te bewijzen dat het zijn schuld was: de werkgever moet laten zien dat hij genoeg deed voor je veiligheid. Vraag advies voor je iets tekent.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Were you hurt at work? Write down what happened, when and where, and who saw it. Take photos, and keep all papers from the doctor. Ask for a copy of the accident report. Were you hurt because the work was not safe? Then your employer usually must pay for your damage. You do not have to prove that it was their fault: the employer must show they did enough for your safety. Ask for advice before you sign anything.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Werkgeversaansprakelijkheid: BW 7:658 lid 1 en 2 (de werkgever is aansprakelijk voor schade in de uitoefening van de werkzaamheden, tenzij hij aantoont dat hij zijn zorgplicht is nagekomen of dat de schade in belangrijke mate het gevolg is van opzet of bewuste roekeloosheid van de werknemer; de werknemer stelt en bewijst dat de schade in de uitoefening van het werk ontstond): vandaar „usually” en „You do not have to prove that it was their fault”. Kopie van het rapport: geen wettelijk recht, daarom „ask”; de werkgever houdt een lijst van arbeidsongevallen bij (Arbowet art. 9 lid 2). Advies voor je tekent: een eigen-schuldverklaring kan later meewegen.
+
+**Zeg het zo (Nederlands):** „Mag ik een kopie van het rapport?” — *May I have a copy of the report?*
+
+**Situatie in de les:** You hurt your hand at a machine without a guard. Later, your boss asks you to sign a paper: "It was my own fault." What do you do?  
+**Goede antwoord:** Do not sign it. Ask for advice first.  
+**Uitleg na het antwoord (`c.injury.w`):** What you sign can count later, for example when you ask for compensation. First get advice from the union or the Juridisch Loket.
+
+**Uitleg bij het gesprekje (`c.injury.a.why`):** „Wil je hier je verklaring opschrijven?” → „Ja. Mag ik een kopie?”: Asked for a statement: yes, and a copy for you.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip.
+
+**Onze eigen vraag hierbij:**
+- Is „You do not have to prove that it was their fault: the employer must show they did enough for your safety” een juiste A2-samenvatting van de bewijslast bij 7:658?
+- Moet de tip ook de inlener noemen (BW 7:658 lid 4) voor uitzendkrachten?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.debt — A debt that never ends (nieuw, 23 november 2026)
+
+*Unit „Uitbuiting herkennen”, les „A debt to the boss or the agency” (`l.debt`)*
+
+**Samenvatting (NL):** In Nederland mag een uitzendbureau je geen geld vragen voor het vinden van werk. Moest je geld lenen voor de reis of de baan, en groeit de schuld steeds? Moet je blijven tot hij betaald is? Dat is een teken van uitbuiting. Een schuld betekent nooit dat je moet blijven werken: je mag stoppen. Bewaar elk papier en bericht over de schuld.
+
+**Tekst (Engels, wordt vertaald):**
+
+> In the Netherlands, an agency may not ask you money for finding you a job. Did you have to borrow money for the trip or for the job, and does the debt keep growing? Must you stay until it is paid? That is a sign of exploitation. A debt never means that you must keep working: you may stop. Keep every paper and message about the debt.
+>
+> *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
+
+**Grondslag (onze lezing):** Geen geld voor bemiddeling: Waadi art. 9 lid 1 (zoals c.findwork). Schuldslavernij als signaal van arbeidsuitbuiting en mensenhandel: Sr art. 273f; signalenlijsten van de Nederlandse Arbeidsinspectie en CoMensha. Geen gedwongen arbeid: Grondwet art. 19 en EVRM art. 4; de werknemer kan opzeggen met de opzegtermijn (BW 7:672). Een echte schuld blijft een schuld, los van het werk: de tip zegt „you may stop”, niet „you need not pay”.
+
+**Zeg het zo (Nederlands):** „Hoeveel moet ik nog betalen? Ik wil het op papier.” — *How much do I still have to pay? I want it on paper.*
+
+**Situatie in de les:** The agency paid your bus ticket. Now it takes money off your pay every week, and the debt does not get smaller. What do you do?  
+**Goede antwoord:** Ask for a list on paper, and get help.  
+**Uitleg na het antwoord (`c.debt.w`):** A debt that does not get smaller keeps you stuck. With the list, the union or FairWork can check if it is fair.
+
+**Uitleg bij het gesprekje (`c.debt.a.why`):** „Je mag pas weg als je schuld betaald is.” → „Dat mag niet. Ik vraag hulp.”: Told to stay until the debt is paid: not allowed, get help.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip.
+
+**Onze eigen vraag hierbij:**
+- „A debt never means that you must keep working: you may stop”: juist en niet misleidend (opzegtermijn, terugbetaling)?
+- Geldt Waadi art. 9 ook voor een tussenpersoon in het land van herkomst? De tip zegt bewust „In the Netherlands, an agency”.
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.inspection — The inspection is there for you (nieuw, 23 november 2026)
+
+*Unit „Uitbuiting herkennen”, les „The inspection and other help” (`l.inspection`)*
+
+**Samenvatting (NL):** De Nederlandse Arbeidsinspectie controleert of werk veilig en eerlijk is: loon, uren en uitbuiting. Inspecteurs mogen op je werk komen en met werknemers praten. Je mag ze de waarheid vertellen: ze vertellen je baas niet wie iets meldde. Hulp in je eigen taal nodig? Vraag om een tolk. FairWork helpt slachtoffers van uitbuiting gratis, ook mensen zonder geldige papieren.
+
+**Tekst (Engels, wordt vertaald):**
+
+> The Nederlandse Arbeidsinspectie checks if work is safe and fair: pay, hours and exploitation. Inspectors may come to your work and talk to the workers. You may tell them the truth: they do not tell your boss who reported something. Need help in your own language? Ask for an interpreter. FairWork helps victims of exploitation for free, also people without valid papers.
+>
+> *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
+
+**Grondslag (onze lezing):** Toezicht: Arbowet, Arbeidstijdenwet, Wml, Waadi en Wav; toegang en inlichtingen: Awb art. 5:15 en 5:16. Melding vertrouwelijk en anoniem mogelijk: nlarbeidsinspectie.nl/melden (zoals c.gethelp). Tolk: de inspectie werkt met tolken bij gesprekken met werknemers (nlarbeidsinspectie.nl); „ask” houdt het een vraag. FairWork: gratis en vertrouwelijke hulp aan (ongedocumenteerde) arbeidsmigranten (fairwork.nu).
+
+**Zeg het zo (Nederlands):** „Ik wil iets vertellen, maar zonder mijn baas erbij.” — *I want to tell something, but without my boss there.*
+
+**Situatie in de les:** An inspector asks about your hours. Your boss told you to say 8 hours. You work 12. What do you do?  
+**Goede antwoord:** Tell the inspector the truth.  
+**Uitleg na het antwoord (`c.inspection.w`):** The inspector can only help when they know the truth. What you say helps you, and your colleagues too.
+
+**Uitleg bij het gesprekje (`c.inspection.a.why`):** „Wil je met de inspectie praten?” → „Ja, maar mijn baas mag het niet horen.”: Asked to talk: yes, but not where the boss can hear.
+
+**⚠ Getallen en termijnen:** 8 hours, 12 (situatie).
+
+**Onze eigen vraag hierbij:**
+- Klopt „they do not tell your boss who reported something” voor elke melding, ook bij een onderzoek op de werkvloer?
+- Is FairWork in november 2026 nog de juiste naam en plek (zelfde vraag als bij de slotregel)?
 
 **Oordeel deskundige:**
 

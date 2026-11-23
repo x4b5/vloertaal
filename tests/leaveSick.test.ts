@@ -24,9 +24,10 @@ const doneLessons = (...lessonIds: string[]) => Object.fromEntries(lessonIds.map
 describe('Verlof and Ziekte, two topics', () => {
   it('Verlof keeps its id with Days off and Children and work; Ziekte has Sick at home and the new lesson', () => {
     expect(unit('u.leave').titleNl).toBe('Verlof');
-    expect(ids('u.leave')).toEqual(['l.leave', 'l.kids', 'l.leave.mix']);
+    // Since 23 November 2026 both have four lessons (the basis units at four lessons): two new ones at the end.
+    expect(ids('u.leave')).toEqual(['l.leave', 'l.kids', 'l.holiday', 'l.special', 'l.leave.mix']);
     expect(unit('u.sick').titleNl).toBe('Ziekte');
-    expect(ids('u.sick')).toEqual(['l.illness', 'l.backtowork', 'l.sick.mix']);
+    expect(ids('u.sick')).toEqual(['l.illness', 'l.backtowork', 'l.unwell', 'l.injury', 'l.sick.mix']);
   });
 
   it('Ziekte comes right after Verlof: in the course, in the path and in the theme "Je baan"', () => {
@@ -95,8 +96,9 @@ describe('a learner who was busy in "Verlof en ziekte"', () => {
     expect(earned).toContain('u.leave');
     expect(earned).not.toContain('u.sick');
     expect(blockDoneCount(unit('u.sick'), old)).toBe(1);
-    // With the new lesson and the mixed review of Ziekte, its own certificate comes.
-    const all = { ...old, ...doneLessons('l.backtowork', 'l.sick.mix') };
+    // With the new lessons and the mixed review of Ziekte, its own certificate comes (l.unwell and
+    // l.injury since 23 November 2026).
+    const all = { ...old, ...doneLessons('l.backtowork', 'l.unwell', 'l.injury', 'l.sick.mix') };
     expect(earnCertificates({ ...p, completed: all }, now).certs?.['u.sick']).toBe('2026-11-05');
   });
 });

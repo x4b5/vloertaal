@@ -279,6 +279,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "خبر توقّف العمل: حسناً، وطلب عمل آخر.", // nieuw, nalezen
     'c.deductions.a.why': "خبر عن خصم: السؤال هل هو مسموح، والتحقّق.", // nieuw, nalezen
     'c.agencyhome.a.why': "طلب المغادرة قريباً: هذا قصير، وطلب النصيحة أولاً.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "خبر تغيّر الجدول: حسناً، وأي يوم.", // nieuw, nalezen
+    'c.breaks.a.why': "السؤال عن استراحة الغداء: الوقت، وكم تدوم.", // nieuw, nalezen
+    'c.wound.a.why': "شخص سيُغمى عليه: جعله يستلقي، وإحضار المساعدة.", // nieuw, nalezen
+    'c.callhelp.a.why': "السؤال هل يستجيب: لا، لا يتفاعل.", // nieuw, nalezen
+    'c.vacancy.a.why': "السؤال عن سبب الاتصال: الوظيفة الشاغرة، وهل ما زالت متاحة؟", // nieuw, nalezen
+    'c.result.a.why': "خبر الرفض: رد هادئ، وسؤال عن السبب.", // nieuw, nalezen
+    'c.residence.a.why': "خبر قرب انتهاء التصريح: طلب تصريح جديد فوراً.", // nieuw, nalezen
+    'c.newhome.a.why': "السؤال عن السكن: مسكن جديد، والعنوان الجديد.", // nieuw, nalezen
+    'c.payparts.a.why': "السؤال عن الرقم الوظيفي: مكانه في قسيمة الراتب.", // nieuw, nalezen
+    'c.latepay.a.why': "خبر أن المال يأتي لاحقاً: طلب ذلك على ورق.", // nieuw, nalezen
+    'c.holiday.a.why': "طلب الإجازة في مايو: تفضيل يوليو، والسبب.", // nieuw, nalezen
+    'c.special.a.why': "السؤال عن إجازة الولادة: نعم، ومتى.", // nieuw, nalezen
+    'c.unwell.a.why': "السؤال عن الحال: لا، وطلب الذهاب إلى البيت.", // nieuw, nalezen
+    'c.injury.a.why': "طلب إفادة: نعم، ونسخة شخصية.", // nieuw, nalezen
+    'c.debt.a.why': "طلب البقاء حتى دفع الدَّين: غير مسموح، وطلب المساعدة.", // nieuw, nalezen
+    'c.inspection.a.why': "عرض الكلام: نعم، لكن بعيداً عن سمع المدير.", // nieuw, nalezen
+    'c.carpool.a.why': "السؤال عمّن يقود: أنا، ووقت المرور لأخذ الآخر.", // nieuw, nalezen
+    'c.train.a.why': "السؤال عن سبب التأخير: القطار، ورسالة أُرسلت.", // nieuw, nalezen
+    'c.checklist.a.why': "السؤال عن نسيان شيء: نظرة أخرى في القائمة.", // nieuw, nalezen
+    'c.leavesite.a.why': "السؤال عن آخر من يغادر: نعم، كل شيء مطفأ والباب مقفل.", // nieuw, nalezen
+    'c.stagedays.a.why': "السؤال عن سبب الغياب: مرض، واتصال بالجهتين.", // nieuw, nalezen
+    'c.stageend.a.why': "السؤال عن الخطط: الشهادة أولاً، ثم العمل.", // nieuw, nalezen
+    'c.neighbours.a.why': "جارة جديدة تسلّم: سعادة بالتعارف، وذكر الاسم.", // nieuw, nalezen
+    'c.join.a.why': "السؤال عن الحضور: نعم، ورغبة في الكلام مع المعلّم.", // nieuw, nalezen
+    'c.workphotos.a.why': "طلب صورة للإنترنت: رفض مهذّب.", // nieuw, nalezen
+    'c.device.a.why': "السؤال عن تطبيق جديد: سؤال قسم تقنية المعلومات أولاً.", // nieuw, nalezen
   },
 };
 

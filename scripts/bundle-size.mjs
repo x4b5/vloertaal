@@ -86,17 +86,22 @@ import { gzipSync } from 'node:zlib';
  * dist 4800 -> 5400 and tip pages 7500 -> 10500 (23 November 2026, the owner's choice): six new
  * sectors (12 units, 48 lessons, 288 pictures) in 14 help languages put dist at 4897.6 kB and the tip
  * pages at 9434.7 kB (48 new tips in 15 languages). About 10% room; the start is unchanged (374.8 kB).
+ * dist 5400 -> 6000 and tip pages 10500 -> 12300 (23 November 2026, as the owner chose for the round
+ * before): the second units of Schoonmaak, Horeca, Zorg and Winkel, "Werken via een uitzendbureau" and
+ * the basis units at four lessons (46 lessons, 203 pictures, 46 tips in 15 languages) put dist at
+ * 5530.3 kB and the tip pages at 11112.5 kB. About 10% room again; the start grew only by the new
+ * lessons' skeleton (382.0 kB).
  */
 export const LIMITS = {
   'start file': 280,
   start: 400,
-  dist: 5400,
+  dist: 6000,
   // 10 November 2026: 76 tips in 15 languages (1140 pages and 15 lists) at 3872 kB, about 3.4 kB a page.
   // 14 November 2026: 93 tips in 15 languages at 4746 kB; later that day 97 tips at 4900 kB.
   // 14 November 2026: room for the basis units at four lessons (see above).
   // 21 November 2026: room for about five more sector units (see above).
-  // 23 November 2026: six new sectors, 48 tips more (see above).
-  'tip pages': 10500,
+  // 23 November 2026: six new sectors, 48 tips more (see above); later that day 46 more.
+  'tip pages': 12300,
 };
 
 /** A page of the workplace tips (/pl/tip/, /pl/tip/<tip>/): counted on its own, see above. */

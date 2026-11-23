@@ -795,6 +795,55 @@ const lang: HelpLanguageSource = {
     's.whereis.3': "Tuvalet orada, yemekhanenin yanında.", // nieuw, nalezen
     'c.whereis.q': "Bulabiliyor musun?", // nieuw, nalezen
     'c.whereis.a': "Hayır. Gösterebilir misin?", // nieuw, nalezen
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
+    'l.wound': "Küçük yaralar ve yanıklar", // nieuw, nalezen
+    'w.wond': "yara", // nieuw, nalezen
+    'w.verband': "sargı", // nieuw, nalezen
+    'w.koelen': "soğutmak (soğuk suyla)", // nieuw, nalezen
+    'w.snee': "kesik (bıçaktan ya da keskin bir şeyden olan küçük yara)", // nieuw, nalezen
+    'w.flauwvallen': "bayılmak", // nieuw, nalezen
+    'w.oogdouche': "göz duşu (gözlerini yıkamak için su)", // nieuw, nalezen
+    's.wound.1': "Yanığı suyla soğut.", // nieuw, nalezen
+    's.wound.2': "Küçük bir kesik. Yaraya bastır.", // nieuw, nalezen
+    's.wound.3': "Göz duşu nerede?", // nieuw, nalezen
+    'c.wound.q': "İş arkadaşım bayılmak üzere.", // nieuw, nalezen
+    'c.wound.a': "Bir süre yatsın. Ben yardım getiriyorum.", // nieuw, nalezen
+    'l.callhelp': "112’yi aramak", // nieuw, nalezen
+    'w.hulpdiensten': "acil yardım servisleri (ambulans, itfaiye, polis)", // nieuw, nalezen
+    'w.straatnaam': "sokak adı", // nieuw, nalezen
+    'w.huisnummer': "kapı numarası", // nieuw, nalezen
+    'w.aanspreekbaar': "tepki veriyor (onunla konuştuğunda kişi tepki verir)", // nieuw, nalezen
+    'w.opwachten': "karşılamak (birini kapıda beklemek)", // nieuw, nalezen
+    'w.aandelijn': "hatta kalmak (telefonu kapatmazsın)", // nieuw, nalezen
+    's.callhelp.1': "112’yi arıyorum. Bir ambulansa ihtiyacım var.", // nieuw, nalezen
+    's.callhelp.2': "Sokak adı ve kapı numarası ne?", // nieuw, nalezen
+    's.callhelp.3': "Ambulansı girişte karşılayacağım.", // nieuw, nalezen
+    'c.callhelp.q': "Onunla konuştuğunda tepki veriyor mu?", // nieuw, nalezen
+    'c.callhelp.a': "Hayır. Tepki vermiyor.", // nieuw, nalezen
+    'l.roster': "Çalışma planın", // nieuw, nalezen
+    'w.weekrooster': "haftalık çalışma planı (bu hafta kimin ne zaman çalıştığı)", // nieuw, nalezen
+    'w.roosterapp': "çalışma planı uygulaması (telefonundaki vardiyaların)", // nieuw, nalezen
+    'w.beschikbaar': "müsait (o zaman çalışabilirsin)", // nieuw, nalezen
+    'w.wijziging': "değişiklik", // nieuw, nalezen
+    'w.invallen': "yerine çalışmak (olmayan biri için çalışmak)", // nieuw, nalezen
+    'w.vrijedag': "boş gün, izin günü", // nieuw, nalezen
+    's.roster.1': "Yeni çalışma planı uygulamada.", // nieuw, nalezen
+    's.roster.2': "Cumartesi müsait misin?", // nieuw, nalezen
+    's.roster.3': "Yarın Sara’nın yerine çalışabilir misin?", // nieuw, nalezen
+    'c.roster.q': "Çalışma planında bir değişiklik var.", // nieuw, nalezen
+    'c.roster.a': "Tamam. Hangi gün çalışmam gerekiyor?", // nieuw, nalezen
+    'l.breaks': "Saatler ve molalar", // nieuw, nalezen
+    'w.lunchpauze': "öğle molası", // nieuw, nalezen
+    'w.rusttijd': "dinlenme süresi (iki vardiya arasındaki boş zaman)", // nieuw, nalezen
+    'w.werkdag': "iş günü", // nieuw, nalezen
+    'w.urenlijst': "saat listesi (çalıştığın saatleri yazdığın yer)", // nieuw, nalezen
+    'w.eerderweg': "erken çıkmak", // nieuw, nalezen
+    'w.achterelkaar': "art arda (birbiri ardına)", // nieuw, nalezen
+    's.breaks.1': "Saatlerimi saat listesine yazıyorum.", // nieuw, nalezen
+    's.breaks.2': "Bugün bir saat erken çıkabilir miyim?", // nieuw, nalezen
+    's.breaks.3': "Art arda altı gün çalıştım.", // nieuw, nalezen
+    'c.breaks.q': "Öğle molan ne zaman?", // nieuw, nalezen
+    'c.breaks.a': "Saat on ikide, yarım saat.", // nieuw, nalezen
   },
 };
 

@@ -126,6 +126,23 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🖐': 'w.vingerstrip',
   '🤮': 'w.overgeven',
   '👁': 'w.vierogenprincipe',
+  // The basis units at four lessons (23 November 2026): each new tip shows a word of its own lesson
+  // (placeholder drawings for now); the other new tips have emoji that are drawn already.
+  '🚿': 'w.koelen',
+  '🥳': 'w.aangenomen',
+  '📇': 'w.verblijfsvergunning',
+  '📪': 'w.brievenbus',
+  '💵': 'w.voorschot',
+  '☀': 'w.zomervakantie',
+  '💒': 'w.bruiloft',
+  '🤧': 'w.griep',
+  '🕵': 'w.inspectie',
+  '🪢': 'w.gordel',
+  '🚉': 'w.station',
+  '💐': 'w.bedanken',
+  '⚽': 'w.sportclub',
+  '📟': 'w.werktelefoon',
+  '💾': 'w.usbstick',
   // The five units of 23 November 2026 (Schoonmaak, Horeca, Zorg, Winkel, uitzendwerk): each tip shows
   // a word of its own lesson (placeholder drawings for now); the bill (💶, the work-rules table: cash)
   // and home care (🗝, the bunch of keys above) keep the drawings those emoji already have.

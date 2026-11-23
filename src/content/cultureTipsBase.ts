@@ -183,6 +183,41 @@ export const baseTips: CultureTip[] = [
     ],
     why: { id: 'c.accident.w', en: 'Report it the same day, also if it seems small: the pain can get worse later. Your employer is not allowed to punish you for reporting it. Work through an agency? Tell the agency too.' },
   }),
+  // "Als het misgaat" at four lessons (23 November 2026): small wounds and burns (l.wound), and
+  // calling 112 (l.callhelp). No closing line: first aid and 112 are the same everywhere, also in
+  // Belgium. First aid as the Rode Kruis teaches it (rodekruis.nl, "brandwond": cool with lukewarm
+  // running water, at least 10 minutes; no butter, cream or ice; "wond": press with a clean cloth;
+  // "iets in je oog": rinse with water). 112: the emergency number in the whole EU (112.nl; 112.be).
+  tip({
+    id: 'c.wound',
+    lessonId: 'l.wound',
+    emoji: '🚿',
+    title: 'A burn? Cool it with water',
+    body: 'A small cut: press on it with a clean cloth or a bandage, and tell the first-aider. A burn: cool it at once with lukewarm running water, for at least 10 minutes. Something in your eye? Rinse it with water, or at the eye wash. Is it serious? Call 112. Ask on your first day where the first-aid kit and the eye wash are.',
+    phrase: { id: 'c.wound.p', nl: 'Ik heb me gebrand. Waar is een kraan?', en: 'I have burnt myself. Where is a tap?' },
+    situation: { id: 'c.wound.s', en: 'A colleague burns his hand on a hot machine. What do you do?' },
+    options: [
+      { id: 'c.wound.o1', en: 'Cool it with lukewarm running water.', best: true },
+      { id: 'c.wound.o2', en: 'Put butter or a cream on it at once.', best: false },
+      { id: 'c.wound.o3', en: 'Put ice right on the skin, and wait.', best: false },
+    ],
+    why: { id: 'c.wound.w', en: 'Water takes the heat out of the skin, so the burn gets less deep. Ice, butter and cream can make it worse.' },
+  }),
+  tip({
+    id: 'c.callhelp',
+    lessonId: 'l.callhelp',
+    emoji: '☎️',
+    title: 'Calling 112: first say where',
+    body: 'Call 112 when a life is in danger, or when every minute counts. First say where you are: the street, the number and the town. Then say what happened. Stay on the line and answer the questions. Ask a colleague to wait for the ambulance at the entrance. Do you not know the address of your work? Look it up today.',
+    phrase: { id: 'c.callhelp.p', nl: 'Ik bel 112. Wil jij de ambulance opwachten?', en: 'I am calling 112. Will you wait for the ambulance?' },
+    situation: { id: 'c.callhelp.s', en: 'You call 112. The operator asks many questions, but you want to help your colleague. What do you do?' },
+    options: [
+      { id: 'c.callhelp.o1', en: 'Stay on the line and answer.', best: true },
+      { id: 'c.callhelp.o2', en: 'Hang up, and go to your colleague.', best: false },
+      { id: 'c.callhelp.o3', en: 'Say "come quickly", and hang up.', best: false },
+    ],
+    why: { id: 'c.callhelp.w', en: 'The operator sends help while you talk, and tells you what to do. When you hang up too early, help can go to the wrong place.' },
+  }),
   tip({
     id: 'c.notyet',
     lessonId: 'l.notyet',
@@ -295,6 +330,39 @@ export const baseTips: CultureTip[] = [
       { id: 'c.sick.o3', en: 'Stay home and call tomorrow.', best: false },
     ],
     why: { id: 'c.sick.w', en: 'Calling in sick yourself and on time is the rule in most Dutch workplaces. Your employer may ask how long it will take, but not what illness it is.' },
+  }),
+  // "Tijd en rooster" at four lessons (23 November 2026): the roster (l.roster) and hours and breaks
+  // (l.breaks). How it goes at work, set per company: the house-rules closing line (HOUSE_LINE,
+  // src/content/adviceLine.ts), written out. The break rules of the law are in c.health.
+  tip({
+    id: 'c.roster',
+    lessonId: 'l.roster',
+    emoji: '📲',
+    title: 'Look at your roster every day',
+    body: 'The roster can change, also at short notice. Look at it every day, in the app or on the board. Do you see a change? Check that you can come. Cannot work on a day? Say it early, not on the day itself. Want to swap a shift? Ask your supervisor first: many companies have a rule for it. Rules differ per company: ask your supervisor what the rules are where you work.',
+    phrase: { id: 'c.roster.p', nl: 'Ik kan zaterdag niet. Kan ik ruilen?', en: 'I cannot work on Saturday. Can I swap?' },
+    situation: { id: 'c.roster.s', en: 'Your roster changed. Now you must work on Saturday, but you cannot. What do you do?' },
+    options: [
+      { id: 'c.roster.o1', en: 'Tell your supervisor today, and ask to swap.', best: true },
+      { id: 'c.roster.o2', en: 'Say nothing, and stay home on Saturday.', best: false },
+      { id: 'c.roster.o3', en: 'Ask a colleague to go, and tell nobody.', best: false },
+    ],
+    why: { id: 'c.roster.w', en: 'When you say it early, your supervisor can find someone else. Staying away without a word is seen as very serious.' },
+  }),
+  tip({
+    id: 'c.breaks',
+    lessonId: 'l.breaks',
+    emoji: '📝',
+    title: 'Write down your hours',
+    body: 'Write down every day when you start, when you stop and how long your break is. Your own list helps when your pay is not right. Must you leave early, for example for the doctor? Ask your supervisor in time. Did you work longer than planned? Write that down too. Rules differ per company: ask your supervisor what the rules are where you work.',
+    phrase: { id: 'c.breaks.p', nl: 'Ik moet morgen naar de dokter. Mag ik eerder weg?', en: 'I have to go to the doctor tomorrow. May I leave early?' },
+    situation: { id: 'c.breaks.s', en: 'Tomorrow you must go to the doctor at three. Your shift ends at five. What do you do?' },
+    options: [
+      { id: 'c.breaks.o1', en: 'Ask your supervisor today if you may leave early.', best: true },
+      { id: 'c.breaks.o2', en: 'Leave at three, and explain it the next day.', best: false },
+      { id: 'c.breaks.o3', en: 'Skip the doctor, and finish your shift.', best: false },
+    ],
+    why: { id: 'c.breaks.w', en: 'Asking in time lets your supervisor plan the work. Leaving without asking is seen as not reliable.' },
   }),
   tip({
     id: 'c.speakup',
