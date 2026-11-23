@@ -21,8 +21,11 @@ export default {
       <path d="M75 82Q76 70 90 69Q104 70 105 82Q98 76 90 76Q82 76 75 82Z" fill={PAL.card} />
       <Shine d="M80 88Q80 94 84 96" width={2.4} opacity={0.4} />
       {/* The almond */}
-      <path d="M22 96Q10 90 16 78Q22 70 34 76Q42 82 40 92Q32 100 22 96Z" fill={PAL.cardDark} transform="rotate(-20 28 86)" />
-      <path d="M20 84Q26 80 32 84M20 90Q28 86 34 90" fill="none" stroke={PAL.brown} strokeWidth="1.6" strokeLinecap="round" transform="rotate(-20 28 86)" />
+      <g transform="rotate(-30 26 86)">
+        <path d="M26 70Q36 80 34 92Q30 100 26 100Q22 100 18 92Q16 80 26 70Z" fill={PAL.cardDark} />
+        <path d="M26 70Q36 80 34 92Q30 100 26 100Z" fill={PAL.brown} opacity=".35" />
+        <path d="M24 80Q22 88 24 94M29 82Q30 88 28 94" fill="none" stroke={PAL.brown} strokeWidth="1.4" strokeLinecap="round" opacity=".6" />
+      </g>
     </g>
   ),
 } as Record<string, () => JSX.Element>;
