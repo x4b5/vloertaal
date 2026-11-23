@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, Hand, Move, PAL, SKIN, Shade, Shine } from '../kit';
+import { Ground, Hand, Move, PAL, SKIN, Shade } from '../kit';
 import { Bust } from '../bust';
 
 export default {

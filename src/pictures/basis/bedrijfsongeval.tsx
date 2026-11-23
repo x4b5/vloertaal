@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { ExclaimMark, Ground, Move, PAL, Shade, Shine } from '../kit';
+import { ExclaimMark, Ground, Move, PAL, Shine } from '../kit';
 
 export default {
   // "het bedrijfsongeval": the accident at work — a yellow warning triangle with an exclamation mark,

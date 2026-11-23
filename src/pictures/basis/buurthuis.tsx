@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, PAL, SKIN, Shade, Shine } from '../kit';
 
 export default {
   // "het buurthuis": the community centre — a low, wide building with a flat roof and a big window in
@@ -17,9 +17,9 @@ export default {
       <rect x="6" y="44" width="100" height="5" rx="1.5" fill={PAL.slateDark} />
       {/* The big window with two neighbours at the table */}
       <rect x="18" y="58" width="56" height="34" rx="2" fill={PAL.ice} />
-      <circle cx="34" cy="72" r="5.5" fill={SKIN_A} />
+      <circle cx="34" cy="72" r="5.5" fill={SKIN.amina[0]} />
       <path d="M26 86Q26 78 34 78Q42 78 42 86Z" fill={PAL.purple} />
-      <circle cx="58" cy="72" r="5.5" fill={SKIN_B} />
+      <circle cx="58" cy="72" r="5.5" fill={SKIN.bram[0]} />
       <path d="M50 86Q50 78 58 78Q66 78 66 86Z" fill={PAL.green} />
       <rect x="20" y="84" width="52" height="5" rx="1.5" fill={PAL.wood} />
       <rect x="43" y="79" width="6" height="6" rx="1.5" fill={PAL.white} />
@@ -44,6 +44,3 @@ export default {
     </g>
   ),
 } as Record<string, () => JSX.Element>;
-
-const SKIN_A = '#b97a52';
-const SKIN_B = '#f7c49b';
