@@ -4301,10 +4301,131 @@ const safeworkTips: CultureTip[] = [
   ),
 ];
 
+/**
+ * The tips of "Operator in de procesindustrie" (u.process, the fourth own unit of Productie,
+ * 23 November 2026, src/content/work.ts processUnit). Three are about how the work is done safely
+ * (HOUSE_LINE: the round, the lock and the zones are set per plant); c.shiftwork names the rules for
+ * night work in the law and the cao only in general, and closes with ADVICE_LINE (its own section in
+ * docs/juridische-check.md). Every safety fact has a ⚖️ note; the overview with sources is the section
+ * "Operator in de procesindustrie" in docs/juridische-check.md. No amounts, limits or hours.
+ */
+const processTips: CultureTip[] = [
+  // How often the round goes, and where the values are written, differ per plant: HOUSE_LINE.
+  // ⚖️ check: Never switch off or ignore an alarm without knowing why it went ⚖️ (no law as such:
+  // the company's work instructions and the RI&E, Arbowet art. 5; good practice in the process
+  // industry (alarm management, EEMUA 191 / NEN-EN-IEC 62682); "never" is advice, not a law).
+  tipFor(
+    'plantround',
+    '🎛️',
+    'Walk your round, write it down',
+    'A plant that runs day and night needs eyes and ears. On your round you look, listen and smell: a new noise, a leak or a strange smell can be the first sign of a problem. You read the meters: the temperature, the pressure, the speed and the level. Write every value down right away, with the time, on the list or in the system. Not later, from memory. Is a value too high or too low? Tell the control room or your shift leader at once. An alarm on the screen is never "just an alarm": do not switch it off before you know why it went.',
+    ['De temperatuur is te hoog.', 'The temperature is too high.'],
+    'On your round, the pressure is a bit too high. Your shift almost ends. What do you do?',
+    [
+      'Tell the control room right away.',
+      'Write it down, and tell nobody.',
+      'Leave it for the next shift.',
+    ],
+    'In a plant a small change can grow fast. When the control room knows it early, they can act before something goes wrong.',
+    HOUSE_LINE,
+  ),
+  // How a machine is stopped and locked (lockout) differs per plant: HOUSE_LINE.
+  // ⚖️ check: Never reach into a running machine; before work on it, it is stopped and secured so
+  // nobody can start it ⚖️ (Arbobesluit art. 7.7 (bedieningssystemen: no unintended start), 7.10
+  // and 7.13 (bewegende delen, onderhoud aan een stilstaand arbeidsmiddel); the same articles as
+  // r.l.afval in src/content/regels/units/sector2.ts; check the article numbers).
+  // ⚖️ check: Everyone who works on the machine puts their own lock on it ⚖️ (no law: the usual
+  // lockout-tagout practice (LOTO), a company procedure from the RI&E; "everyone ... their own lock"
+  // is the common rule, hence HOUSE_LINE).
+  tipFor(
+    'plantfault',
+    '⏯️',
+    'Stop, lock, then repair',
+    'When there is a fault, the line stops, and everyone wants it to run again fast. But many accidents happen exactly then. Never reach into a running machine, also not "just for a moment". Call your shift leader or the maintenance department. Before anyone works on the machine, it is stopped and locked, so nobody can start it. Often everyone who works on it puts their own lock on it. Only start up again when every lock is off and your shift leader says it is safe. Start up step by step, the way you learned it.',
+    ['Er zit nog een slot op.', 'There is still a lock on it.'],
+    'A product is stuck in the machine. The machine still runs. A colleague says: "Pull it out quickly." What do you do?',
+    [
+      'Do not reach in: call the shift leader.',
+      'Pull it out quickly with your hand.',
+      'Push it out with a stick while it runs.',
+    ],
+    'A machine that still runs can move at any moment. A machine that is stopped and locked cannot hurt you.',
+    HOUSE_LINE,
+  ),
+  // Night work: the law and the cao have rules, named in general only (no hours): ADVICE_LINE.
+  // More in docs/juridische-check.md ("c.shiftwork").
+  // ⚖️ check: Many plants run day and night, every day of the week, with three or five shift teams
+  // ⚖️ (no law: the usual shift systems in the process industry (3-ploegendienst, 5-ploegendienst,
+  // volcontinu); arboportaal.nl "Nachtwerk en ploegendienst"; "often" on purpose).
+  // ⚖️ check: Sleep in a dark and quiet room after a night shift, eat at fixed times ⚖️ (advice:
+  // arboportaal.nl "Nachtwerk en ploegendienst", Gezondheidsraad, advies "Werken in nachtdiensten"
+  // (2017); no law).
+  // ⚖️ check: For night shifts there are extra rules, in the law and often in the cao, for example
+  // about rest after your nights ⚖️ (Arbeidstijdenwet art. 5:8: the nachtdienst, its length, the
+  // number of night shifts and the rest after a night shift and after a series of night shifts;
+  // art. 4:1 (the employer takes the worker's health into account, also in shifts); a cao can set
+  // other limits within the law. Belgium: Arbeidswet of 16 March 1971 art. 35-38 and cao nr. 46
+  // (night work): rules too, so "in the law" holds there as well).
+  // ⚖️ check: Tired people make more mistakes ⚖️ (arboportaal.nl, "Vermoeidheid"; advice).
+  tipFor(
+    'shiftwork',
+    '🌙',
+    'Nights: sleep, eat, be on time',
+    'Many plants run day and night, every day of the week. You work early, late and night shifts in turn, often in three or five shift teams. After a night shift, sleep in a dark and quiet room, and tell your family when you sleep. Eat at fixed times, and take your own food: at night the canteen is often closed. Be on time for the handover: your colleague is waiting, and the plant may not be left alone. For night shifts there are extra rules, in the law and often in the cao, for example about rest after your nights. Ask what the rules are where you work.',
+    ['Wat zijn de regels voor nachtdiensten?', 'What are the rules for night shifts?'],
+    'After four nights, your shift leader asks you to work one more night. You are very tired. What do you do?',
+    [
+      'Say you are very tired, and ask about the rules.',
+      'Say yes, and drink a lot of coffee.',
+      'Say yes, and sleep a bit in your break.',
+    ],
+    'Tired people make more mistakes, and in a plant a mistake can be dangerous. There are rules about rest after night shifts.',
+    ADVICE_LINE,
+  ),
+  // Which zones, which clothes and which mask differ per plant: HOUSE_LINE.
+  // ⚖️ check: Near a furnace or steam: drink water often, also before you feel thirsty; dizzy or
+  // sick: stop, a cool place, tell someone ⚖️ (Arbobesluit art. 6.1 (the employer takes measures
+  // against heat); arboportaal.nl "Hittestress" and "Werken bij hitte"; the same advice as c.greensafe).
+  // ⚖️ check: Steam and hot metal burn, also when you do not see it ⚖️ (superheated steam is
+  // invisible; a pipe can be hot without steam to see; Arbobesluit hoofdstuk 7 (arbeidsmiddelen:
+  // hot parts are screened off or marked, the exact article to check) and the RI&E, Arbowet art. 5).
+  // ⚖️ check: Dust from clay, sand or stone can hold quartz dust; you do not see it, and it damages
+  // your lungs ⚖️ (respirabel kristallijn silica (kwartsstof) is a carcinogenic substance under the
+  // Arbobesluit since 2020 (art. 4.11 (check) and the list of kankerverwekkende stoffen en processen,
+  // werk met respirabel kristallijn silicastof; EU-richtlijn 2017/2398); it causes silicosis and
+  // lung cancer; arboportaal.nl "Kwarts" and nlarbeidsinspectie.nl "Kwartsstof"; no limit value in the tip).
+  // ⚖️ check: Use the extraction, wear your dust mask, never blow dust away with compressed air ⚖️
+  // (Arbobesluit art. 4.2, 4.4 (the order of measures: at the source and extraction first, a mask
+  // last) and 4.17 (carcinogens); nlarbeidsinspectie.nl: no dry sweeping or blowing off with
+  // compressed air, but wet cleaning or an industrial vacuum; Arbocatalogi of the branches).
+  // ⚖️ check: In some zones dust or vapour can explode; a yellow sign with EX shows it; no sparks or
+  // fire there ⚖️ (Arbobesluit art. 3.5a-3.5f (explosieveiligheid: the explosion safety document
+  // and the zones); EU-richtlijn 1999/92/EG (ATEX 137) art. 7 and bijlage III: the warning sign
+  // "Ex", a yellow triangle with a black edge; the same in Belgium (codex boek III titel 4)).
+  // ⚖️ check: Often no normal phone in such a zone ⚖️ (no law that names the phone: equipment in an
+  // Ex zone must be suitable for it (ATEX 114, richtlijn 2014/34/EU; Arbobesluit art. 3.5e and
+  // bijlage); a normal phone is not, so plants forbid it in the zone; "often", and "ask" on purpose).
+  tipFor(
+    'heatdust',
+    '🥵',
+    'Heat, dust and sparks',
+    'Near a furnace, a kiln or steam it is very hot. Drink water often, also before you feel thirsty. Wear the heat-protective clothing, and do not touch pipes or parts without gloves: steam and hot metal burn, also when you do not see them. Do you feel dizzy or sick? Stop, go to a cool place and tell someone. Dust from clay, sand or stone can hold quartz dust (kwartsstof). You do not see it, but it damages your lungs. Use the extraction, wear your dust mask, and never blow dust away with compressed air. In some zones, dust or vapour can explode: a yellow sign with EX shows it. There: no sparks, no fire, and often no normal phone. Ask what is allowed in each zone.',
+    ['Ik voel me niet goed. Ik ga naar een koele plek.', 'I do not feel well. I am going to a cool place.'],
+    'There is fine clay dust on your machine. A colleague says: "Blow it off with the air gun." What do you do?',
+    [
+      'Clean it wet, or with the vacuum.',
+      'Blow it off: it is faster.',
+      'Leave it for the next shift.',
+    ],
+    'Blowing makes the dust fly up, into the air and into your lungs. A wet cloth or a vacuum keeps the dust down.',
+    HOUSE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips, ...basisFourTips, ...safeworkTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips, ...basisFourTips, ...safeworkTips, ...processTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

@@ -404,6 +404,11 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan een klant naar het bonnetje vragen.', 'A1', 'gesprekken', 'I can ask a customer for the receipt.'],
     ['Ik kan zeggen dat de winkel bijna dichtgaat.', 'A1', 'spreken', 'I can say that the shop is closing soon.'],
   ]),
+  // Operator in de procesindustrie (23 November 2026, the fourth own unit of Productie): two lines.
+  onderwerp('u.process', 'Operator in de procesindustrie', [
+    ['Ik kan zeggen dat de druk te hoog is.', 'A1', 'spreken', 'I can say that the pressure is too high.'],
+    ['Ik kan bij de overdracht vertellen wat er is gebeurd.', 'A2', 'gesprekken', 'I can tell at the handover what happened.'],
+  ]),
 ];
 
 /** Spoor Werkregels (alleen Nederlands): per onderwerp, in de volgorde van de thema's. */

@@ -130,6 +130,13 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['waarschuwingsbord', 13],
   ['personenregister', 8],
   ['beveiligerspas', 11],
+  // Operator in de procesindustrie (u.process, 23 November 2026).
+  ['controlekamer', 8],
+  ['alarmmelding', 5],
+  ['onderhoudsmonteur', 10],
+  ['explosiegevaar', 9],
+  ['hittekleding', 5],
+  ['stoomleiding', 5],
 ];
 
 export const SHY = '\u00ad';

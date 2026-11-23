@@ -3523,6 +3523,97 @@ const safeworkUnit = unit('safework', 'Safety at work', 'Veiligheid op het werk'
   ),
 ]);
 
+// ---- Operator in the process industry (the owner's request, 23 November 2026) ----
+// The fourth own unit of the sector Productie (src/content/sectors.ts), for the plants that run
+// day and night: a paper machine, a kiln, a glass furnace, a mixing hall, a steel line. The owner
+// looked at the manufacturers of Maastricht Maakt and their dual track for status holders: they
+// look most for operators and maintenance staff. The round and the control room, a fault, shifts
+// and nights, and heat, steam and dust. General on purpose (no company names), so every plant
+// recognises it. In the path of a learner who chose Productie it comes right after "Assemblage en
+// montage"; in every other course it is appended at the very end (workUnits below), so no
+// existing course changes. Already words of other lessons, used here in a sentence or the chat
+// only: "de ronde", "de temperatuur", "het scherm", "het alarm" and "opschrijven" (l.plantround);
+// "de storing", "de ploegleider", "het slot", "de monteur" and "draaien" (l.plantfault); "de
+// nachtdienst", "de overdracht", "het logboek", "op tijd" and "gebeuren" (l.shiftwork); "de
+// hitte", "het stofmasker", "de afzuiging", "de vonk" and "de drinkfles" (l.heatdust). The safety
+// facts of the sentences and the tips have a ⚖️ note in ./workTips.ts and a section in
+// docs/juridische-check.md. The drawings (placeholders for now): src/pictures/groupProces.tsx.
+
+const processUnit = unit('process', 'Operator in the process industry', 'Operator in de procesindustrie', '🏭', '#5b6770', [
+  lesson(
+    'plantround',
+    'The round and the control room',
+    [
+      ['controlekamer', 'de controlekamer', 'the control room (where operators watch the whole plant on screens)', '🖥️'],
+      ['operator', 'de operator', 'the operator (the person who runs and watches the machines of a plant)', '🧑‍🏭'],
+      ['drukmeter', 'de drukmeter', 'the pressure gauge (a round meter with a needle)', '🧭'],
+      ['niveau', 'het niveau', 'the level (how full a tank or a silo is)', '📶'],
+      ['snelheid', 'de snelheid', 'the speed (how fast a line or a machine runs)', '🏎️'],
+      ['alarmmelding', 'de alarmmelding', 'the alarm message (a warning on the screen that something is wrong)', '🚨'],
+    ],
+    [
+      ['Ik loop mijn ronde.', 'I am walking my round.'],
+      ['De druk is te hoog.', 'The pressure is too high.'],
+      ['Ik schrijf de waarde op.', 'I write down the value.'],
+    ],
+    [['Waarom staat er een alarm op het scherm?', 'Why is there an alarm on the screen?'], ['Het niveau in tank twee is te hoog.', 'The level in tank two is too high.']],
+  ),
+  lesson(
+    'plantfault',
+    'A fault',
+    [
+      ['stilstand', 'de stilstand', 'the standstill (the line stops, and nothing is made)', '⏸️'],
+      ['opstarten', 'opstarten', 'to start up (a machine or a line, step by step)', '▶️'],
+      ['stilzetten', 'stilzetten', 'to shut down (to stop a machine the right way)', '⏹️'],
+      ['technischedienst', 'de technische dienst', 'the maintenance department (the TD: they repair the machines)', '🛠️'],
+      ['onderhoudsmonteur', 'de onderhoudsmonteur', 'the maintenance technician', '🧑‍🔧'],
+      ['resetten', 'resetten', 'to reset (to clear a fault on the screen or the panel)', '🔃'],
+    ],
+    [
+      ['Bij een storing bel ik de ploegleider.', 'When there is a fault, I call the shift leader.'],
+      ['Grijp nooit in een draaiende machine.', 'Never reach into a running machine.'],
+      ['De technische dienst komt eraan.', 'The maintenance department is on its way.'],
+    ],
+    [['Mag ik de lijn weer opstarten?', 'May I start up the line again?'], ['Nee, wacht. Het slot van de monteur zit er nog op.', 'No, wait. The mechanic’s lock is still on it.']],
+  ),
+  lesson(
+    'shiftwork',
+    'Shifts and nights',
+    [
+      ['ploeg', 'de ploeg', 'the shift team (the group that works the same shifts)', '👥'],
+      ['ploegwissel', 'de ploegwissel', 'the shift change (one team goes home, the next team starts)', '🔀'],
+      ['volcontinu', 'volcontinu', 'around the clock (the plant runs day and night, every day of the week)', '🕛'],
+      ['overdagslapen', 'overdag slapen', 'to sleep in the daytime (after a night shift)', '😴'],
+      ['broodtrommel', 'de broodtrommel', 'the lunch box', '🍱'],
+      ['aflosser', 'de aflosser', 'the relief (the colleague who takes over your place)', '🚶'],
+    ],
+    [
+      ['Onze fabriek draait volcontinu.', 'Our plant runs around the clock.'],
+      ['Schrijf het in het logboek voor de volgende ploeg.', 'Write it in the logbook for the next shift team.'],
+      ['Ik ben op tijd voor de overdracht.', 'I am on time for the handover.'],
+    ],
+    [['Wat is er vannacht gebeurd?', 'What happened last night?'], ['Pomp drie viel uit. Het staat in het logboek.', 'Pump three stopped. It is in the logbook.']],
+  ),
+  lesson(
+    'heatdust',
+    'Heat, steam and dust',
+    [
+      ['smeltoven', 'de smeltoven', 'the furnace (a very hot oven that melts glass or metal)', '🌋'],
+      ['stoom', 'de stoom', 'the steam (very hot water vapour)', '♨️'],
+      ['stoomleiding', 'de stoomleiding', 'the steam pipe (it is hot, also when you see no steam)', '〰️'],
+      ['hittekleding', 'de hittekleding', 'the heat-protective clothing', '🧑‍🚒'],
+      ['kwartsstof', 'het kwartsstof', 'the quartz dust (very fine dust from clay, sand or stone; it damages your lungs)', '🌫️'],
+      ['explosiegevaar', 'het explosiegevaar', 'the danger of explosion (dust or vapour in the air can explode; a yellow sign with EX)', '🧨'],
+    ],
+    [
+      ['Drink vaak water bij de smeltoven.', 'Drink water often near the furnace.'],
+      ['Kwartsstof zie je niet. Zet je stofmasker op.', 'You cannot see quartz dust. Put on your dust mask.'],
+      ['Hier is explosiegevaar: geen vonken.', 'There is a danger of explosion here: no sparks.'],
+    ],
+    [['Mag mijn telefoon mee in deze zone?', 'May my phone come into this zone?'], ['Nee. Hier is explosiegevaar.', 'No. There is a danger of explosion here.']],
+  ),
+]);
+
 // ---- In the shop, and Time, money and measures (docs/entree-aanvulling.md, part 5) ----
 // Basis units (no sector of their own), after the sector units: the course of every existing
 // sector keeps its order, the two units come at the end of it.
@@ -5267,6 +5358,8 @@ export const workUnits: Unit[] = [
   shopfloorUnit,
   // "Veiligheid op het werk" (23 November 2026), a basis unit at the very end (see "Safety at work" above).
   safeworkUnit,
+  // Productie's fourth own unit (23 November 2026), at the very end (see "Operator in the process industry" above).
+  processUnit,
   // The basis units at four lessons (23 November 2026): their two new lessons at the end (basisFour above).
 ].map(withFour);
 

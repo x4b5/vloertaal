@@ -78,15 +78,22 @@ const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines'
  * none it comes at the very end.
  */
 const NEWEST_BASIS = ['u.safework'];
+/**
+ * "Operator in de procesindustrie" (u.process, 23 November 2026): the fourth own unit of Productie,
+ * appended after "Veiligheid op het werk". For Productie it comes right after "Assemblage en
+ * montage"; for every other sector it waits at the very end with the other sectors' units; with no
+ * sector it is the very last unit.
+ */
+const NEWEST_AFTER_BASIS = ['u.process'];
 const expectedOrder = (own: string | string[] | null) => {
   const main = BASIS.flatMap((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
-  const late = [...LATE_SECTOR_UNITS, ...LATE_OWN, ...NEWEST_SECTOR_UNITS].filter((id) => !main.includes(id));
+  const late = [...LATE_SECTOR_UNITS, ...LATE_OWN, ...NEWEST_SECTOR_UNITS, ...NEWEST_AFTER_BASIS].filter((id) => !main.includes(id));
   // "In de winkel" became the own unit of Winkel (31 October 2026): with a sector it now waits with
   // the other sectors' units (in its course place, after Schoonmaak), unless it is the own one.
   return own
     ? [...main, ...APPENDED.filter((id) => id !== SHOP), ...LATE_BASIS.filter((id) => !LATE_OWN.includes(id)), ...NEWEST_BASIS, ...[...rest, SHOP].filter((id) => !main.includes(id)), ...late]
-    : [...main, ...rest, ...APPENDED, ...LATE_SECTOR_UNITS, ...LATE_BASIS, ...NEWEST_SECTOR_UNITS, ...NEWEST_BASIS];
+    : [...main, ...rest, ...APPENDED, ...LATE_SECTOR_UNITS, ...LATE_BASIS, ...NEWEST_SECTOR_UNITS, ...NEWEST_BASIS, ...NEWEST_AFTER_BASIS];
 };
 
 /** routeOrder for every sector, written out from the course as it was before the work-rules track. */
@@ -95,7 +102,7 @@ const TAAL_ORDER: Record<string, string[]> = {
   none: expectedOrder(null),
   logistics: expectedOrder(['u.warehouse', 'u.delivery']),
   construction: expectedOrder(['u.build', 'u.afbouw', 'u.ruwbouw']),
-  production: expectedOrder(['u.factory', 'u.machines', 'u.montage']),
+  production: expectedOrder(['u.factory', 'u.machines', 'u.montage', 'u.process']),
   care: expectedOrder(['u.care', 'u.carework']),
   hospitality: expectedOrder(['u.horeca', 'u.cooking']),
   cleaning: expectedOrder(['u.clean', 'u.housekeeping']),

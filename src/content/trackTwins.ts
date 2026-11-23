@@ -54,6 +54,7 @@ export const TRACK_TWINS: readonly (readonly [taal: string, regels: string])[] =
   ['u.factory', 'r.factory'],
   ['u.machines', 'r.factory'],
   ['u.montage', 'r.factory'],
+  ['u.process', 'r.factory'],
   ['u.care', 'r.care'],
   ['u.carework', 'r.care'],
   ['u.horeca', 'r.horeca'],
