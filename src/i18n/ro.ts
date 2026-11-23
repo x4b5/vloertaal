@@ -495,6 +495,20 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'În liniște', // nieuw, nalezen
     playAskFun: 'Cu joc', // nieuw, nalezen
     playAskHint: 'Cu joc: puncte, sunete și mișcare. Poți schimba asta din Setări.', // nieuw, nalezen
+    playLevel: 'Nivel', // nieuw, nalezen
+    playLevel1: 'Început', // nieuw, nalezen
+    playLevel2: 'Învățare', // nieuw, nalezen
+    playLevel3: 'În echipă', // nieuw, nalezen
+    playLevel4: 'Om de meserie', // nieuw, nalezen
+    playLevel5: 'Cu experiență', // nieuw, nalezen
+    playLevel6: 'Măiestrie', // nieuw, nalezen
+    playLevelUp: 'Nivel nou:', // nieuw, nalezen
+    playPerfect: 'Fără greșeli:', // nieuw, nalezen
+    playDayGoal: 'Ținta de azi', // nieuw, nalezen
+    playDayGoalDone: 'Ținta de azi atinsă!', // nieuw, nalezen
+    playNewTool: 'Nou în cutia ta de scule:', // nieuw, nalezen
+    playToolbox: 'Cutia mea de scule', // nieuw, nalezen
+    playToolboxEmpty: 'Termină o lecție cu joc. Atunci primești prima ta unealtă.', // nieuw, nalezen
     infoMore: 'Mai multe explicații', // nieuw, nalezen
     tipsAbout: 'Despre aceste sfaturi', // nieuw, nalezen
     tipsNotChecked: 'Un expert nu a verificat încă această explicație.', // nieuw, nalezen

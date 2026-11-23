@@ -105,3 +105,21 @@ Regels:
 - "Minder beweging" op de telefoon stopt alle beweging, ook in de spelmodus; de punten en geluiden
   blijven dan. Niets flitst of knippert, en niets herhaalt zich.
 
+### Meer spel (23 november 2026)
+
+De eigenaar vroeg om "nog iets meer gamification" in de spelmodus:
+
+- **Niveaus** op al je punten: Starter (0), Leerling (150), Collega (400), Vakkracht (800), Ervaren
+  (1400), Expert (2200); daarna elke 1000 punten een Expert-ster erbij. Het beginscherm toont je
+  niveau en een balk naar het volgende.
+- **Doel van vandaag**: 100 punten op een dag, met een groene balk op het beginscherm.
+- **Geen fouten**: een les zonder fout geeft 50 punten extra.
+- **Mijn gereedschapskist** (Instellingen › Taal en ik): elke les die je met spel afmaakt, legt een
+  gereedschap in je kist, 30 in totaal, in een vaste volgorde. Het zijn woorden die al een tekening
+  en een vertaling hebben (de hamer, de rolmaat, de waterpas ...), dus de kist leert ook woorden.
+- **De uitslag** toont tot vier momenten: geen fouten (+50), een nieuw niveau, het doel van vandaag
+  gehaald, en het nieuwe gereedschap met zijn tekening. Bij een nieuw niveau of het dagdoel klinkt na
+  de gewone fanfare een tweede, hogere.
+
+Niets om op te tikken erbij: de balken en de momenten zijn alleen om te kijken (max. 3 per scherm).
+

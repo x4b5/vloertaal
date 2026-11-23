@@ -494,6 +494,20 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'آرام', // nieuw, nalezen
     playAskFun: 'با بازی', // nieuw, nalezen
     playAskHint: 'با بازی: امتیاز، صدا و حرکت. می‌توانید آن را در تنظیمات تبدیل کنید.', // nieuw, nalezen
+    playLevel: 'سطح', // nieuw, nalezen
+    playLevel1: 'تازه‌کار', // nieuw, nalezen
+    playLevel2: 'شاگرد', // nieuw, nalezen
+    playLevel3: 'همکار', // nieuw, nalezen
+    playLevel4: 'ماهر', // nieuw, nalezen
+    playLevel5: 'باتجربه', // nieuw, nalezen
+    playLevel6: 'استادکار', // nieuw, nalezen
+    playLevelUp: 'سطح نو:', // nieuw, nalezen
+    playPerfect: 'بدون غلطی:', // nieuw, nalezen
+    playDayGoal: 'هدف امروز', // nieuw, nalezen
+    playDayGoalDone: 'به هدف امروز رسیدید!', // nieuw, nalezen
+    playNewTool: 'نو در جعبهٔ افزار شما:', // nieuw, nalezen
+    playToolbox: 'جعبهٔ افزار من', // nieuw, nalezen
+    playToolboxEmpty: 'یک درس را با بازی خلاص کنید. بعد اولین افزار خود را می‌گیرید.', // nieuw, nalezen
     infoMore: 'توضیح بیشتر', // nieuw, nalezen
     tipsAbout: 'در بارهٔ این نکته‌ها', // nieuw, nalezen
     tipsNotChecked: 'هنوز یک متخصص این توضیح را بررسی نکرده است.', // nieuw, nalezen

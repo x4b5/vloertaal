@@ -495,6 +495,20 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'Sakin', // nieuw, nalezen
     playAskFun: 'Oyunlu', // nieuw, nalezen
     playAskHint: 'Oyunlu: puan, ses ve hareket. Bunu Ayarlar’dan değiştirebilirsin.', // nieuw, nalezen
+    playLevel: 'Seviye', // nieuw, nalezen
+    playLevel1: 'Başlangıç', // nieuw, nalezen
+    playLevel2: 'Çırak', // nieuw, nalezen
+    playLevel3: 'İş arkadaşı', // nieuw, nalezen
+    playLevel4: 'Kalfa', // nieuw, nalezen
+    playLevel5: 'Deneyimli', // nieuw, nalezen
+    playLevel6: 'Usta', // nieuw, nalezen
+    playLevelUp: 'Yeni seviye:', // nieuw, nalezen
+    playPerfect: 'Hatasız:', // nieuw, nalezen
+    playDayGoal: 'Bugünkü hedef', // nieuw, nalezen
+    playDayGoalDone: 'Bugünkü hedefe ulaştın!', // nieuw, nalezen
+    playNewTool: 'Alet çantanda yeni:', // nieuw, nalezen
+    playToolbox: 'Alet çantam', // nieuw, nalezen
+    playToolboxEmpty: 'Oyunla bir ders bitir. O zaman ilk aletini alırsın.', // nieuw, nalezen
     infoMore: 'Daha fazla açıklama', // nieuw, nalezen
     tipsAbout: 'Bu ipuçları hakkında', // nieuw, nalezen
     tipsNotChecked: 'Bu açıklama henüz bir uzman tarafından kontrol edilmedi.', // nieuw, nalezen

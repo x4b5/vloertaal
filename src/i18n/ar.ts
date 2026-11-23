@@ -494,6 +494,20 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'بهدوء', // nieuw, nalezen
     playAskFun: 'مع لعبة', // nieuw, nalezen
     playAskHint: 'مع لعبة: نقاط وأصوات وحركة. يمكنك تغيير ذلك في الإعدادات.', // nieuw, nalezen
+    playLevel: 'المستوى', // nieuw, nalezen
+    playLevel1: 'البداية', // nieuw, nalezen
+    playLevel2: 'التعلّم', // nieuw, nalezen
+    playLevel3: 'في الفريق', // nieuw, nalezen
+    playLevel4: 'المهارة', // nieuw, nalezen
+    playLevel5: 'الخبرة', // nieuw, nalezen
+    playLevel6: 'الإتقان', // nieuw, nalezen
+    playLevelUp: 'مستوى جديد:', // nieuw, nalezen
+    playPerfect: 'بلا أخطاء:', // nieuw, nalezen
+    playDayGoal: 'هدف اليوم', // nieuw, nalezen
+    playDayGoalDone: 'تحقّق هدف اليوم!', // nieuw, nalezen
+    playNewTool: 'جديد في صندوق عدّتك:', // nieuw, nalezen
+    playToolbox: 'صندوق عدّتي', // nieuw, nalezen
+    playToolboxEmpty: { m: 'أنهِ درساً مع لعبة. عندها تحصل على أول أداة لك.', f: 'أنهي درساً مع لعبة. عندها تحصلين على أول أداة لكِ.', x: 'بعد إنهاء درس مع لعبة تأتي أول أداة.' }, // nieuw, nalezen
     infoMore: 'مزيد من الشرح', // nieuw, nalezen
     tipsAbout: 'عن هذه النصائح', // nieuw, nalezen
     tipsNotChecked: 'لم يراجع خبيرٌ هذا الشرح بعد.', // nieuw, nalezen

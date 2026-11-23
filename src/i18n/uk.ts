@@ -495,6 +495,20 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'Спокійно', // nieuw, nalezen
     playAskFun: 'З грою', // nieuw, nalezen
     playAskHint: 'З грою: бали, звуки і рух. Це можна змінити в Налаштуваннях.', // nieuw, nalezen
+    playLevel: 'Рівень', // nieuw, nalezen
+    playLevel1: 'Початок', // nieuw, nalezen
+    playLevel2: 'Навчання', // nieuw, nalezen
+    playLevel3: 'У команді', // nieuw, nalezen
+    playLevel4: 'Фах у руках', // nieuw, nalezen
+    playLevel5: 'З досвідом', // nieuw, nalezen
+    playLevel6: 'Майстерність', // nieuw, nalezen
+    playLevelUp: 'Новий рівень:', // nieuw, nalezen
+    playPerfect: 'Без помилок:', // nieuw, nalezen
+    playDayGoal: 'Мета на сьогодні', // nieuw, nalezen
+    playDayGoalDone: 'Мету на сьогодні досягнуто!', // nieuw, nalezen
+    playNewTool: 'Нове у твоєму ящику:', // nieuw, nalezen
+    playToolbox: 'Мій ящик з інструментами', // nieuw, nalezen
+    playToolboxEmpty: 'Закінчи урок з грою. Тоді отримаєш перший інструмент.', // nieuw, nalezen
     infoMore: 'Більше пояснень', // nieuw, nalezen
     tipsAbout: 'Про ці поради', // nieuw, nalezen
     tipsNotChecked: 'Експерт ще не перевірив це пояснення.', // nieuw, nalezen

@@ -5666,7 +5666,8 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
 .play-moment:nth-child(4) { animation-delay: 2.5s; }
 @keyframes play-moment-in { from { opacity: 0; transform: scale(0.6); } }
 .tool-name { display: inline-flex; flex-direction: column; align-items: center; line-height: 1.2; }
-.tool-name b { font-size: 1.05rem; }
+.tool-name b { font-size: 1.05rem; overflow-wrap: anywhere; hyphens: auto; }
+.toolbox-tool { min-width: 0; }
 .tool-gloss { font-weight: 500; color: var(--muted); font-size: 0.9rem; }
 .toolbox { width: 100%; max-width: 560px; margin: 0 auto; }
 .toolbox-count { text-align: center; font-weight: 800; font-size: 1.3rem; margin: 0 0 8px; }

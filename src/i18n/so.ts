@@ -495,6 +495,20 @@ const lang: HelpLanguageSource = {
     playAskCalm: "Deggan", // nieuw, nalezen
     playAskFun: "Ciyaar leh", // nieuw, nalezen
     playAskHint: "Ciyaar leh: dhibco, cod iyo dhaqdhaqaaq. Waxaad ku beddeli kartaa Dejinta.", // nieuw, nalezen
+    playLevel: "Heer", // nieuw, nalezen
+    playLevel1: "Bilow", // nieuw, nalezen
+    playLevel2: "Barte", // nieuw, nalezen
+    playLevel3: "Saaxiib shaqo", // nieuw, nalezen
+    playLevel4: "Xirfadle", // nieuw, nalezen
+    playLevel5: "Khibrad leh", // nieuw, nalezen
+    playLevel6: "Khabiir", // nieuw, nalezen
+    playLevelUp: "Heer cusub:", // nieuw, nalezen
+    playPerfect: "Khalad la'aan:", // nieuw, nalezen
+    playDayGoal: "Hadafka maanta", // nieuw, nalezen
+    playDayGoalDone: "Hadafka maanta waad gaartay!", // nieuw, nalezen
+    playNewTool: "Cusub sanduuqaaga qalabka:", // nieuw, nalezen
+    playToolbox: "Sanduuqayga qalabka", // nieuw, nalezen
+    playToolboxEmpty: "Cashar ku dhammee ciyaarta. Markaas waxaad helaysaa qalabkaaga ugu horreeya.", // nieuw, nalezen
     infoMore: "Sharax dheeraad ah", // nieuw, nalezen
     tipsAbout: "Ku saabsan talooyinkan", // nieuw, nalezen
     tipsNotChecked: "Khabiir weli ma hubin sharraxaaddan.", // nieuw, nalezen

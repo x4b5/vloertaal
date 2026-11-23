@@ -495,6 +495,20 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'Ruhig', // nieuw, nalezen
     playAskFun: 'Mit Spiel', // nieuw, nalezen
     playAskHint: 'Mit Spiel: Punkte, Töne und Bewegung. Du kannst es in den Einstellungen ändern.', // nieuw, nalezen
+    playLevel: 'Stufe', // nieuw, nalezen
+    playLevel1: 'Neu dabei', // nieuw, nalezen
+    playLevel2: 'Am Lernen', // nieuw, nalezen
+    playLevel3: 'Im Team', // nieuw, nalezen
+    playLevel4: 'Fachkraft', // nieuw, nalezen
+    playLevel5: 'Erfahren', // nieuw, nalezen
+    playLevel6: 'Profi', // nieuw, nalezen
+    playLevelUp: 'Neue Stufe:', // nieuw, nalezen
+    playPerfect: 'Keine Fehler:', // nieuw, nalezen
+    playDayGoal: 'Ziel für heute', // nieuw, nalezen
+    playDayGoalDone: 'Ziel für heute erreicht!', // nieuw, nalezen
+    playNewTool: 'Neu in deinem Werkzeugkasten:', // nieuw, nalezen
+    playToolbox: 'Mein Werkzeugkasten', // nieuw, nalezen
+    playToolboxEmpty: 'Mach eine Lektion mit Spiel fertig. Dann bekommst du dein erstes Werkzeug.', // nieuw, nalezen
     infoMore: 'Mehr Erklärung', // nieuw, nalezen
     tipsAbout: 'Über diese Tipps', // nieuw, nalezen
     tipsNotChecked: 'Eine Fachperson hat diese Erklärung noch nicht geprüft.', // nieuw, nalezen

@@ -495,6 +495,20 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'Spokojnie', // nieuw, nalezen
     playAskFun: 'Z grą', // nieuw, nalezen
     playAskHint: 'Z grą: punkty, dźwięki i ruch. Możesz to zmienić w Ustawieniach.', // nieuw, nalezen
+    playLevel: 'Poziom', // nieuw, nalezen
+    playLevel1: 'Początek', // nieuw, nalezen
+    playLevel2: 'Nauka', // nieuw, nalezen
+    playLevel3: 'W zespole', // nieuw, nalezen
+    playLevel4: 'Fach w ręku', // nieuw, nalezen
+    playLevel5: 'Z doświadczeniem', // nieuw, nalezen
+    playLevel6: 'Mistrzostwo', // nieuw, nalezen
+    playLevelUp: 'Nowy poziom:', // nieuw, nalezen
+    playPerfect: 'Bez błędów:', // nieuw, nalezen
+    playDayGoal: 'Cel na dziś', // nieuw, nalezen
+    playDayGoalDone: 'Cel na dziś osiągnięty!', // nieuw, nalezen
+    playNewTool: 'Nowe w twojej skrzynce:', // nieuw, nalezen
+    playToolbox: 'Moja skrzynka z narzędziami', // nieuw, nalezen
+    playToolboxEmpty: 'Skończ lekcję z grą. Wtedy dostaniesz pierwsze narzędzie.', // nieuw, nalezen
     infoMore: 'Więcej wyjaśnień', // nieuw, nalezen
     tipsAbout: 'O tych wskazówkach', // nieuw, nalezen
     tipsNotChecked: 'Ekspert jeszcze nie sprawdził tego wyjaśnienia.', // nieuw, nalezen

@@ -495,6 +495,20 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'ብህድኣት', // nieuw, nalezen
     playAskFun: 'ምስ ጸወታ', // nieuw, nalezen
     playAskHint: { m: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ።', f: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይርዮ ትኽእሊ ኢኺ።', x: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይርዎ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
+    playLevel: 'ደረጃ', // nieuw, nalezen
+    playLevel1: 'መጀመርታ', // nieuw, nalezen
+    playLevel2: 'ምምሃር', // nieuw, nalezen
+    playLevel3: 'ኣብ ጉጅለ', // nieuw, nalezen
+    playLevel4: 'ክእለት', // nieuw, nalezen
+    playLevel5: 'ተሞክሮ', // nieuw, nalezen
+    playLevel6: 'ክኢላ', // nieuw, nalezen
+    playLevelUp: 'ሓድሽ ደረጃ:', // nieuw, nalezen
+    playPerfect: 'ብዘይ ጌጋ:', // nieuw, nalezen
+    playDayGoal: 'ናይ ሎሚ ዕላማ', // nieuw, nalezen
+    playDayGoalDone: 'ናይ ሎሚ ዕላማ ተበጺሑ!', // nieuw, nalezen
+    playNewTool: { m: 'ሓድሽ ኣብ ሳንዱቕ መሳርሒኻ:', f: 'ሓድሽ ኣብ ሳንዱቕ መሳርሒኺ:', x: 'ሓድሽ ኣብ ሳንዱቕ መሳርሒኹም:' }, // nieuw, nalezen
+    playToolbox: 'ናተይ ሳንዱቕ መሳርሒ', // nieuw, nalezen
+    playToolboxEmpty: { m: 'ምስ ጸወታ ሓደ ትምህርቲ ወድእ። ሽዑ ቀዳማይ መሳርሒኻ ትረኽብ።', f: 'ምስ ጸወታ ሓደ ትምህርቲ ወድኢ። ሽዑ ቀዳማይ መሳርሒኺ ትረኽቢ።', x: 'ምስ ጸወታ ሓደ ትምህርቲ ወድኡ። ሽዑ ቀዳማይ መሳርሒኹም ትረኽቡ።' }, // nieuw, nalezen
     infoMore: 'ተወሳኺ መብርሂ', // nieuw, nalezen
     tipsAbout: 'ብዛዕባ እዞም ምኽርታት', // nieuw, nalezen
     tipsNotChecked: 'እዚ መብርሂ ገና ብክኢላ ኣይተፈተሸን።', // nieuw, nalezen
