@@ -17,7 +17,7 @@ export default {
       {[[12, 24, -3], [20, 30, 3], [46, 28, 4], [54, 22, -3]].map(([x, h, l]) => (
         <path key={x} d={blade(x, 101, h, l)} fill={PAL.green} />
       ))}
-      <Move kind="turn" turn={-28} at={[96, 26]}>
+      <Move kind="turn" turn={25} at={[80, 40]}>
         {/* The shaft */}
         <path d="M92 30L32 88" stroke={PAL.steel} strokeWidth="7" />
         <path d="M90 29L56 62" stroke={PAL.mist} strokeWidth="2" opacity=".8" />

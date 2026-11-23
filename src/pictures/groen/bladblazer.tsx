@@ -29,11 +29,10 @@ export default {
       <Shine d="M68 40Q70 35 76 35" width={3.4} opacity={0.6} />
       {/* The air and the leaves blown out of the tube */}
       <path d="M26 86L14 94M30 94L20 102" stroke={PAL.ice} strokeWidth="3.4" />
-      <Move kind="from" dx={22} dy={-14}>
-        {leaf(16, 74, 16, -150, PAL.orange, PAL.orangeShade)}
-        {leaf(22, 98, 15, 150, PAL.yellow, PAL.yellowShade)}
-        {leaf(30, 62, 14, -120, PAL.clay, PAL.clayShade)}
-      </Move>
+      {/* Each leaf flies out from the mouth of the tube (36, 85) to where it is */}
+      <Move kind="from" dx={24} dy={15}>{leaf(12, 70, 16, -150, PAL.orange, PAL.orangeShade)}</Move>
+      <Move kind="from" dx={22} dy={-15}>{leaf(14, 100, 15, 160, PAL.yellow, PAL.yellowShade)}</Move>
+      <Move kind="from" dx={10} dy={27}>{leaf(26, 58, 14, -120, PAL.clay, PAL.clayShade)}</Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

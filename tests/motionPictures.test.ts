@@ -84,6 +84,11 @@ const MOTION_ROUND4 = [
   'w.neezeggen', 'w.posten', 'w.delen', 'w.vertellen', 'w.solliciteren', 'w.inschrijven', 'w.boor', 'w.beton', 'w.weigeren', 'w.machine',
   'w.noodstop', 'w.productie', 'w.beginnen', 'w.bellen', 'w.totenmet', 'w.dichtplakken', 'w.idee', 'w.handopsteken', 'w.voegijzer', 'w.handveger',
   'w.startknop', 'w.waterpomptang',
+  // Groen and Facilitair (23 November 2026): the new sectors' tools and events.
+  'w.afsluiten', 'w.afvoer', 'w.airco', 'w.alarmcode', 'w.beamer', 'w.begeleiden', 'w.deurklink', 'w.doorverbinden', 'w.intercom', 'w.koffieautomaat',
+  'w.lekkage', 'w.lift', 'w.nachtslot', 'w.postvak', 'w.ronde', 'w.rookmelder', 'w.scharnier', 'w.vervangen', 'w.verwarming', 'w.whiteboard',
+  'w.bladblazer', 'w.bosmaaier', 'w.gelaatsscherm', 'w.grasmaaier', 'w.grijper', 'w.hark', 'w.heggenschaar', 'w.kettingzaag', 'w.maaien', 'w.onkruidbrander',
+  'w.planten', 'w.schep', 'w.schoffel', 'w.snoeien', 'w.snoeischaar', 'w.snoeizaag', 'w.verkeer', 'w.wieden', 'w.zeil',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
