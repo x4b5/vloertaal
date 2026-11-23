@@ -89,6 +89,14 @@ const MOTION_ROUND4 = [
   'w.lekkage', 'w.lift', 'w.nachtslot', 'w.postvak', 'w.ronde', 'w.rookmelder', 'w.scharnier', 'w.vervangen', 'w.verwarming', 'w.whiteboard',
   'w.bladblazer', 'w.bosmaaier', 'w.gelaatsscherm', 'w.grasmaaier', 'w.grijper', 'w.hark', 'w.heggenschaar', 'w.kettingzaag', 'w.maaien', 'w.onkruidbrander',
   'w.planten', 'w.schep', 'w.schoffel', 'w.snoeien', 'w.snoeischaar', 'w.snoeizaag', 'w.verkeer', 'w.wieden', 'w.zeil',
+  // Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+  'w.aanhouden', 'w.ademen', 'w.bewegingsmelder', 'w.branddeur', 'w.brandmelder', 'w.draaihek', 'w.heterdaad', 'w.inbraak', 'w.inzoomen', 'w.kalmeren',
+  'w.openstaan', 'w.oproepen', 'w.reanimeren', 'w.schelden', 'w.slagboom', 'w.surveilleren', 'w.toegang', 'w.toegangspas', 'w.verstoppen', 'w.zaklamp',
+  'w.borstel', 'w.demonteren', 'w.desinfecteren', 'w.etiketteren', 'w.fileren', 'w.hogedrukspuit', 'w.koelketen', 'w.kruisbesmetting', 'w.laarzenwasser', 'w.metaaldetector',
+  'w.naspoelen', 'w.ontdooien', 'w.printer', 'w.steekproef', 'w.temperatuur', 'w.uitbenen', 'w.wegen', 'w.aanwijzer', 'w.achteruitrijden', 'w.balenpers',
+  'w.kieplift', 'w.lekken', 'w.opscheppen', 'w.persen', 'w.piepen', 'w.prikken', 'w.tetanusprik', 'w.toeteren', 'w.vastlopen', 'w.vulopening',
+  'w.weegbrug', 'w.zwaailamp', 'w.adrenalinepen', 'w.afscheid', 'w.babyfoon', 'w.billendoekje', 'w.boertje', 'w.buitenspelen', 'w.observeren', 'w.puzzel',
+  'w.spelen', 'w.temperaturen', 'w.traphekje', 'w.verschonen', 'w.verslikken', 'w.wennen',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
