@@ -67,7 +67,8 @@ const LATE_OWN = ['u.tech', 'u.garage'];
 /** "Elektra, leidingen en metaal" (21 November 2026): the second own unit of Techniek, after those. */
 /** "Assemblage en montage" (21 November 2026): the third own unit of Productie, after those. */
 /** The second own units of Tuinbouw and Garage (22 November 2026), after those. */
-const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage', 'u.kweek', 'u.carservice'];
+/** The own units of the new sectors Groen and Facilitair (23 November 2026), after those. */
+const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage', 'u.kweek', 'u.carservice', 'u.mowing', 'u.planting', 'u.frontdesk', 'u.maintenance'];
 const expectedOrder = (own: string | string[] | null) => {
   const main = BASIS.flatMap((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
@@ -93,6 +94,8 @@ const TAAL_ORDER: Record<string, string[]> = {
   technical: expectedOrder(['u.tech', 'u.install']),
   garage: expectedOrder(['u.garage', 'u.carservice']),
   retail: expectedOrder('u.shop'),
+  green: expectedOrder(['u.mowing', 'u.planting']),
+  facility: expectedOrder(['u.frontdesk', 'u.maintenance']),
 };
 
 /** The 3 choices after lesson 1.1, as before the tracks. */
@@ -109,6 +112,8 @@ const TAAL_CHOICES: Record<string, string[]> = {
   technical: ['u.safety', 'u.firstday', 'u.tech'],
   garage: ['u.safety', 'u.firstday', 'u.garage'],
   retail: ['u.time', 'u.firstday', 'u.shop'],
+  green: ['u.safety', 'u.firstday', 'u.mowing'],
+  facility: ['u.help', 'u.firstday', 'u.frontdesk'],
 };
 
 describe("the Dutch course ('taal') is exactly as before", () => {

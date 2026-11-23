@@ -88,7 +88,8 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     // "Elektra, leidingen en metaal": the second own unit of Techniek (21 November 2026).
     // "Assemblage en montage": the third own unit of Productie (21 November 2026).
     // "Kweken, sorteren en de kas" and "Banden, olie en remmen": own units of Tuinbouw and Garage (22 November 2026).
-    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas', 'u.tech', 'u.garage', 'u.shop', 'u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage', 'u.kweek', 'u.carservice'],
+    // The own units of the new sectors Groen and Facilitair (23 November 2026).
+    taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas', 'u.tech', 'u.garage', 'u.shop', 'u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage', 'u.kweek', 'u.carservice', 'u.mowing', 'u.planting', 'u.frontdesk', 'u.maintenance'],
     regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean', 'r.kas', 'r.techniek', 'r.werkplaats', 'r.winkel'],
   },
 };

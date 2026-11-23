@@ -25,8 +25,10 @@ describe('the sector groups', () => {
     expect(sectorGroups.map((g) => [g.nl, g.sectors.map((id) => sectors.find((s) => s.id === id)!.nl)])).toEqual([
       ['Bouw en techniek', ['Bouw', 'Techniek', 'Garage']],
       ['Maken en verplaatsen', ['Productie', 'Logistiek', 'Tuinbouw']],
-      ['Zorg en service', ['Zorg', 'Schoonmaak']],
+      // Facilitair joins "Zorg en service"; Groen has a group of its own (the owner's choice, 23 November 2026).
+      ['Zorg en service', ['Zorg', 'Schoonmaak', 'Facilitair']],
       ['Winkel en horeca', ['Winkel', 'Horeca']],
+      ['Buiten werken', ['Groen']],
     ]);
     expect(isSectorGroupId('build')).toBe(true);
     expect(isSectorGroupId('other')).toBe(false);

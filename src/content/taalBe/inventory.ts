@@ -338,6 +338,34 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.brakes': L('A', 'A', 'nakijken: het remblok ("de remblok"), de remklauw, de achterlamp ("het achterlicht")'),
     'l.diagnosis': L('A', 'A', 'nakijken: de werkorder ("de werkfiche"), de kentekenplaat ("de nummerplaat"; in België wit met rode letters)'),
   } },
+  // Maaien en snoeien and Planten, onkruid en de straat (Groen, 23 November 2026): how the work is
+  // done, the same in Belgium. The tips name no rule, right, amount or Dutch body. Flemish words to check.
+  'u.mowing': { kind: 'A', lessons: {
+    'l.mowing': L('A', 'A', 'nakijken: de zitmaaier, de bosmaaier ("de bosmaaier" of "de kantenmaaier"), het gelaatsscherm ("het vizier")'),
+    'l.pruning': L('A', 'A', 'nakijken: de snoeischaar, de snoeizaag'),
+    'l.hedge': L('A', 'A', 'nakijken: de heggenschaar ("de haagschaar"), de heg ("de haag"), het snoeiafval ("het snoeisel")'),
+    'l.chainsaw': L('A', 'A', 'nakijken: de zaagbroek ("de kettingzaagbroek"), de jerrycan ("de bidon")'),
+  } },
+  'u.planting': { kind: 'A', lessons: {
+    'l.weeding': L('A', 'A', 'nakijken: de schoffel, het perk ("het bloemperk"), de onkruidbrander'),
+    'l.planting': L('A', 'A', 'nakijken: de schep ("de spade"), de kluit, de boompaal'),
+    'l.roadside': L('A', 'A', 'nakijken: de pion ("de kegel", "de verkeerskegel"), de stoep ("het voetpad"), de pijlwagen ("de pijlkar")'),
+    'l.litter': L('A', 'A', 'nakijken: het zwerfafval ("het zwerfvuil"), de grijper ("de afvalgrijper"), de aanhanger ("de aanhangwagen")'),
+  } },
+  // Receptie, post en vergaderen and Storingen, onderhoud en verhuizen (Facilitair, 23 November
+  // 2026): how the work is done, the same in Belgium. Flemish words to check.
+  'u.frontdesk': { kind: 'A', lessons: {
+    'l.reception': L('A', 'A', 'nakijken: de balie ("het onthaal"), de wachtruimte ("de wachtzaal"), het toestel ("het toestelnummer")'),
+    'l.visitors': L('A', 'A', 'nakijken: het bezoekerspasje ("de bezoekersbadge"), de garderobe ("de vestiaire")'),
+    'l.mailroom': L('A', 'A', 'nakijken: de postkamer, het postvak, de koerier'),
+    'l.meetingroom': L('A', 'A', 'nakijken: de beamer ("de projector"), de vergaderzaal, de thermoskan'),
+  } },
+  'u.maintenance': { kind: 'A', lessons: {
+    'l.faults': L('A', 'A', 'nakijken: de lekkage ("het lek"), de verwarming ("de chauffage"), de wc ("het toilet")'),
+    'l.repairs': L('A', 'A', 'nakijken: de deurklink, de gereedschapskist ("de gereedschapskoffer"), de trap ("de ladder")'),
+    'l.moving': L('A', 'A', 'nakijken: de plattegrond ("het grondplan"), de steekwagen ("de steekkar")'),
+    'l.closing': L('A', 'A', 'nakijken: het nachtslot, de sleutelbos'),
+  } },
 };
 
 /** The units of the inventory that need a Belgian version (B or C). */

@@ -308,6 +308,24 @@ export const CarIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** A round tree on its trunk, with grass at its foot: green-space work (Groen, 23 November 2026). */
+export const TreeIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M12 3.5a5.5 5.5 0 0 0-4.6 8.5A4 4 0 0 0 9.5 17H14.5a4 4 0 0 0 2.1-5A5.5 5.5 0 0 0 12 3.5z" {...stroke} strokeWidth={2} />
+    <path d="M12 21v-8M12 15.5l-2.2-2M12 14l2.2-2" {...stroke} strokeWidth={2} />
+    <path d="M4 21h16" {...stroke} strokeWidth={2} />
+  </Svg>
+);
+
+/** A desk bell on a counter: facility services (Facilitair, 23 November 2026). */
+export const DeskBellIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M5 17a7 7 0 0 1 14 0z" {...stroke} strokeWidth={2} />
+    <path d="M12 10V8M10.5 7.5h3" {...stroke} strokeWidth={2} />
+    <path d="M3 20h18" {...stroke} strokeWidth={2} />
+  </Svg>
+);
+
 /** A question mark in a circle: "not sure yet". */
 export const QuestionIcon = (p: IconProps) => (
   <Svg {...p}>

@@ -17,6 +17,12 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-23',
+    items: [
+      'Twee nieuwe sectoren: Groen (maaien, snoeien, planten, onkruid en werken langs de weg) en Facilitair (receptie, post, vergaderzalen, storingen en verhuizen). Elk met twee onderwerpen van vier lessen, en bij elke les een tip van "Zo werkt het hier". Groen staat bij "Buiten werken", Facilitair bij "Zorg en service". De vertalingen, de stemmen en de tekeningen volgen.',
+    ],
+  },
+  {
     date: '2026-11-22',
     items: [
       'Nieuw onderwerp in Taal voor de Tuinbouw: Kweken, sorteren en de kas. Wie Tuinbouw kiest, krijgt het direct na In de kas. Vier lessen: zaaien en stekken, sorteren en verpakken, de kas en het klimaat, en plagen en schoon werken.',

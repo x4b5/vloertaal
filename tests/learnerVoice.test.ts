@@ -166,6 +166,23 @@ const PENDING_RECORDING = new Set<string>([
   'Vier liter. Kijk daarna op de peilstok.',
   'Ja, hij is te dun.',
   'Kijk op de werkorder.',
+  // The new sectors Groen and Facilitair (23 November 2026):
+  'Ja, maar haal eerst de stenen weg.',
+  'Alleen de dode takken.',
+  'Tot het touw. Niet lager.',
+  'Nog niet. Eerst krijg je een cursus.',
+  'Nee, dat is een plant. Laat hem staan.',
+  'Achter in het perk, bij de muur.',
+  'Nee, wacht. Er komt een vrachtwagen.',
+  'Dat weet ik niet. Vraag het aan de gemeente.',
+  'Een moment. Ik bel hem even.',
+  'In de garderobe, naast de lift.',
+  'Voor Financiën, op de tweede verdieping.',
+  'Om tien uur. Zorg dat alles klaarstaat.',
+  'De verwarming is kapot. De monteur komt morgen.',
+  'Ja, de batterij is bijna leeg.',
+  'Naar kamer twaalf. Kijk op de plattegrond.',
+  'Nee, iedereen is weg. Ik sluit af.',
 ]);
 
 

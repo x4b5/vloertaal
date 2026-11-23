@@ -157,6 +157,8 @@ export const uiEn = {
   sectorHorticulture: 'Horticulture',
   sectorTechnical: 'Technical work',
   sectorGarage: 'Car repair',
+  sectorGreen: 'Green spaces & gardens',
+  sectorFacility: 'Facility services',
   sound: 'Sound',
   soundOn: 'Sound on',
   withoutSound: 'Without sound',
@@ -362,6 +364,7 @@ export const uiEn = {
   sectorGroupMake: 'Making & moving',
   sectorGroupCare: 'Care & service',
   sectorGroupShop: 'Shop & hospitality',
+  sectorGroupOutdoor: 'Working outdoors',
   sectorGroupBuild: 'Building & technical',
   /* The regions (src/content/regio): Settings › "Waar woon je?" and the Sociale kaart on the Hulp tab. */
   regionTitle: 'Where do you live?',

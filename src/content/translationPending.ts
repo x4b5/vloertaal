@@ -4,13 +4,17 @@ import { workUnits } from './work';
  * Lessons whose help-language translations follow in a later round. While a lesson is listed, the
  * app shows its English with the Dutch (gloss() has no help text for it), its tip gets no page of
  * its own on the site (src/lib/tipPages.ts), and the translation tests leave its ids out. Remove a
- * lesson here once its translations are in. Empty since 21 November 2026: the fifteen lessons of
- * 20 and 21 November (l.paint, l.prep, u.ruwbouw, three of Rekenen and u.machines) are translated.
+ * lesson here once its translations are in. Empty from 21 November 2026 (the fifteen lessons of 20 and 21 November were translated) until
+ * the sixteen lessons of Groen and Facilitair (23 November 2026).
  */
-export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
+export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
+  // The new sectors Groen and Facilitair (23 November 2026): their four units, translations to follow.
+  'mowing', 'pruning', 'hedge', 'chainsaw', 'weeding', 'planting', 'roadside', 'litter',
+  'reception', 'visitors', 'mailroom', 'meetingroom', 'faults', 'repairs', 'moving', 'closing',
+];
 
 /** Units whose title waits for its translations too. */
-const PENDING_UNITS: readonly string[] = [];
+const PENDING_UNITS: readonly string[] = ['u.mowing', 'u.planting', 'u.frontdesk', 'u.maintenance'];
 
 const pendingIds = new Set<string>(PENDING_UNITS);
 for (const l of workUnits.flatMap((u) => u.lessons)) {

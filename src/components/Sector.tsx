@@ -4,7 +4,7 @@ import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
 import {
-  CareIcon, CarIcon, CartIcon, CheckIcon, ChevronIcon, ConveyorIcon, CupIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SproutIcon, SprayIcon, WrenchIcon,
+  CareIcon, CarIcon, CartIcon, CheckIcon, ChevronIcon, ConveyorIcon, CupIcon, DeskBellIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SproutIcon, SprayIcon, TreeIcon, WrenchIcon,
 } from './Icons';
 import { WordPicture } from '../pictures';
 import { ChoiceCards, QuestionHead, type ChoiceOption } from './Choice';
@@ -24,6 +24,8 @@ const ICONS: Record<SectorId | 'none', typeof ForkliftIcon> = {
   technical: WrenchIcon,
   garage: CarIcon,
   retail: CartIcon,
+  green: TreeIcon,
+  facility: DeskBellIcon,
   none: QuestionIcon,
 };
 
@@ -47,6 +49,10 @@ export const SECTOR_PICTURES: Record<SectorId, string> = {
   garage: 'w.garage',
   // The till of "In de winkel" (u.shop).
   retail: 'w.kassa',
+  // Groen and Facilitair (23 November 2026): the lawnmower of "Maaien en snoeien" (a placeholder
+  // until it is drawn) and the drawn reception desk of an earlier lesson.
+  green: 'w.grasmaaier',
+  facility: 'w.receptie',
 };
 
 const sectorPicture = (id: SectorId, size: number) => <WordPicture id={SECTOR_PICTURES[id]} emoji="" size={size} />;
@@ -60,7 +66,7 @@ const back = { group: null as SectorGroupId | null, at: 0, picked: false };
 const BACK_MS = 2000;
 
 /**
- * Step 1: one list of one kind of row (the list exception of max 3): the four kinds of work,
+ * Step 1: one list of one kind of row (the list exception of max 3): the five kinds of work,
  * each shown by its sectors' pictures and leading on (›, mirrored right to left), and "Weet ik
  * nog niet", which is the choice 'none' at once. The row of the current choice is marked.
  */

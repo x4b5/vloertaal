@@ -246,4 +246,28 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.brakes", title: "Brakes and lights" },
       { id: "l.diagnosis", title: "Reading faults and the job card" },
   ] },
+  { id: "u.mowing", title: "Mowing and pruning", titleNl: "Maaien en snoeien", emoji: "🌳", color: "#4f7a28", lessons: [
+      { id: "l.mowing", title: "Mowing the grass" },
+      { id: "l.pruning", title: "Pruning" },
+      { id: "l.hedge", title: "Trimming the hedge" },
+      { id: "l.chainsaw", title: "The chainsaw and the leaf blower" },
+  ] },
+  { id: "u.planting", title: "Planting, weeds and the street", titleNl: "Planten, onkruid en de straat", emoji: "🌷", color: "#6a8f2a", lessons: [
+      { id: "l.weeding", title: "Weeding" },
+      { id: "l.planting", title: "Planting" },
+      { id: "l.roadside", title: "Working by the road" },
+      { id: "l.litter", title: "Litter and the neighbourhood" },
+  ] },
+  { id: "u.frontdesk", title: "Reception, post and meetings", titleNl: "Receptie, post en vergaderen", emoji: "🛎️", color: "#3d5a80", lessons: [
+      { id: "l.reception", title: "At the front desk" },
+      { id: "l.visitors", title: "Receiving visitors" },
+      { id: "l.mailroom", title: "Post and parcels" },
+      { id: "l.meetingroom", title: "Setting up a meeting room" },
+  ] },
+  { id: "u.maintenance", title: "Faults, repairs and moving", titleNl: "Storingen, onderhoud en verhuizen", emoji: "🧰", color: "#7a5a2e", lessons: [
+      { id: "l.faults", title: "Reporting a fault" },
+      { id: "l.repairs", title: "Small repairs" },
+      { id: "l.moving", title: "Moving a workplace" },
+      { id: "l.closing", title: "Opening and closing the building" },
+  ] },
 ];

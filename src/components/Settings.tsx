@@ -160,6 +160,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   'sector-make': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   'sector-care': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   'sector-shop': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
+  'sector-outdoor': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   region: { nl: 'Waar woon je?', key: 'regionTitle', icon: <PinIcon size={24} /> },
   country: { nl: 'In welk land werk je?', key: 'countryTitle', icon: <FlagIcon size={24} /> },
   english: { nl: 'Ook Engels tonen', key: 'showEnglish', icon: <span className="set-en" lang="en">EN</span> },
@@ -505,7 +506,8 @@ export function Settings({
       case 'sector-build':
       case 'sector-make':
       case 'sector-care':
-      case 'sector-shop': {
+      case 'sector-shop':
+      case 'sector-outdoor': {
         const g = sectorGroups.find((x) => `sector-${x.id}` === page)!;
         return (
           <>

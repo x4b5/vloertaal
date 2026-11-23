@@ -2534,10 +2534,270 @@ const kweekServiceTips = [
   ),
 ];
 
+// ---- Groen (u.mowing, u.planting) and Facilitair (u.frontdesk, u.maintenance) ----
+// The owner's request, 23 November 2026: one tip per lesson of the own units of the new sectors
+// Groen and Facilitair (./work.ts mowingUnit, plantingUnit, frontdeskUnit, maintenanceUnit). None
+// of them states a right or an amount: they are about how the work is done safely (NONE), or about
+// rules that differ per company (HOUSE_LINE). Safety facts are kept general (no numbers, no law).
+
+const groenFacilitairTips = [
+  // How far others must stay from a brush cutter differs per company: HOUSE_LINE.
+  tipFor(
+    'mowing',
+    '🪨',
+    'Stones fly far',
+    'A mower or a brush cutter can throw a stone very far and very hard. So walk over the grass first, and take away stones, glass and branches. Wear your face shield or safety glasses, ear protection and safety shoes. Keep other people far away. Does someone come close? Stop the machine. Never put your hand under a mower while the engine runs: turn it off, and wait until the blade stands still.',
+    ['Wilt u even afstand houden?', 'Would you keep your distance, please?'],
+    'You are using the brush cutter. A man with a dog walks towards you. What do you do?',
+    [
+      'Stop the machine until he has passed.',
+      'Go on: he can see you.',
+      'Turn away from him, and go on.',
+    ],
+    'A stone from a brush cutter can hurt someone badly, also from far away.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'pruning',
+    '✂️',
+    'A clean cut heals best',
+    'Prune with sharp, clean shears. A clean cut heals fast; a torn branch gets sick. Cut just above a bud or a side branch, and do not leave a long piece. Take off the dead and broken branches first. Keep your other hand away from the blades. Wear gloves: some plants have thorns, or make your skin red. Clean the shears after work.',
+    ['Waar moet ik knippen?', 'Where must I cut?'],
+    'Your pruning shears are blunt. They tear the branches. What do you do?',
+    [
+      'Ask for sharp shears.',
+      'Pull harder on the branch.',
+      'Go on: it is only a bush.',
+    ],
+    'Blunt shears tear the branch. The plant gets sick, and you work harder.',
+    NONE,
+  ),
+  tipFor(
+    'hedge',
+    '🪺',
+    'Look for nests first',
+    'In spring and summer, birds make nests in hedges and bushes. Nests that birds use are protected. So look into the hedge before you cut. Do you see a nest with eggs or young birds? Do not cut there, and tell your supervisor. Hold the hedge trimmer with both hands. Stand firmly on the ground or on a good ladder, never on a chair or a bucket. Keep the cable behind you.',
+    ['Hier zit een nest.', 'There is a nest here.'],
+    'You are trimming a hedge in May. You see a nest with young birds. What do you do?',
+    [
+      'Stop there, and tell your supervisor.',
+      'Cut around it carefully.',
+      'Take the nest out, and go on.',
+    ],
+    'Nests that birds use are protected. Your supervisor decides what happens with this part of the hedge.',
+    NONE,
+  ),
+  // Which course a company asks for before the chainsaw differs: HOUSE_LINE.
+  tipFor(
+    'chainsaw',
+    '🪵',
+    'A chainsaw only with training',
+    'A chainsaw is one of the most dangerous tools in green work. Only work with it when you have had a course, and your supervisor says you may. Always wear chainsaw trousers, a helmet with a face shield and ear protection, gloves and safety boots. Never work alone with a chainsaw. Hold it with both hands, and never saw above your shoulders. With a leaf blower: never blow towards people, cars or open windows.',
+    ['Ik heb hier nog geen cursus voor gehad.', 'I have not had a course for this yet.'],
+    'A colleague says: "Take the chainsaw, it is easy." You never had a course. What do you do?',
+    [
+      'Say that you had no course yet.',
+      'Try it carefully, just once.',
+      'Take it, and watch a video first.',
+    ],
+    'A chainsaw can cut your leg in a second. Without training you do not know how it can kick back.',
+    HOUSE_LINE,
+  ),
+  // Whether sprays and the weed burner are used differs per company: HOUSE_LINE.
+  tipFor(
+    'weeding',
+    '🌼',
+    'Weeds: the root must go',
+    'A weed grows back when the root stays in the ground. So pull it out with the root, or hoe just under the soil. Work when the soil is a little wet: then the root comes out easily. Do not use sprays against weeds, unless you have learned how and your supervisor says so. A weed burner is very hot: keep it away from dry grass, leaves, hedges, cars and bins. Never put it down while it burns.',
+    ['Is dit onkruid of een plant?', 'Is this a weed or a plant?'],
+    'You are using the weed burner. Next to the path is a dry hedge. What do you do?',
+    [
+      'Pull the weeds there by hand.',
+      'Burn quickly, and walk on.',
+      'Burn, and look back once.',
+    ],
+    'A dry hedge catches fire fast. A fire near houses or cars is very dangerous.',
+    HOUSE_LINE,
+  ),
+  // What to do when a cable is found differs per company: HOUSE_LINE.
+  tipFor(
+    'planting',
+    '🌳',
+    'Under the ground: cables and pipes',
+    'Under the grass and the pavement there are often cables and pipes: for power, gas, water and internet. So dig carefully. Do you see a coloured tape or a plastic plate in the ground, or do you hit something hard? Stop digging, and tell your supervisor. Never dig on with force. Lift a heavy tree or a big root ball together, with your knees bent. Give a new plant water on the same day.',
+    ['Ik raak iets hards.', 'I am hitting something hard.'],
+    'You are digging a planting hole. Your shovel hits a red plastic tape. What do you do?',
+    [
+      'Stop digging, and tell your supervisor.',
+      'Dig on carefully, next to the tape.',
+      'Pull the tape out, and go on.',
+    ],
+    'A tape in the ground warns that a cable or a pipe is under it. A gas pipe or a power cable is very dangerous.',
+    HOUSE_LINE,
+  ),
+  // How the work by the road is set up differs per company and per road: HOUSE_LINE.
+  tipFor(
+    'roadside',
+    '🦺',
+    'By the road: be seen, stay behind the cones',
+    'Work by the road is dangerous: drivers look at their phone, or drive too fast. So always wear your high-visibility vest, also for a short job. Put the cones and the signs out before you start, and take them in last. Park the van as a shield between you and the traffic. Stay behind the cones. Never step back without looking, and work with your face to the traffic when you can.',
+    ['Ik zet eerst de pionnen neer.', 'First I put out the cones.'],
+    'You must cut one small bush by the road. It takes five minutes. What do you do?',
+    [
+      'Put on the vest, and put out the cones.',
+      'Do it fast, without the cones.',
+      'Ask a colleague to watch the cars.',
+    ],
+    'An accident takes only one second. Five minutes without cones is five minutes without protection.',
+    HOUSE_LINE,
+  ),
+  // Where needles go, and who you call, differs per company: HOUSE_LINE.
+  tipFor(
+    'litter',
+    '💉',
+    'Never touch a needle',
+    'In parks and bushes you sometimes find a needle from a syringe. Never pick it up with your hand, also not with gloves on. Use the litter picker, and put the needle in a hard box or bottle with a lid, never in a rubbish bag. Tell your supervisor. Did a needle prick you? Wash the wound with a lot of water, and call a doctor right away.',
+    ['Hier ligt een naald.', 'There is a needle here.'],
+    'You see a needle in the grass, next to a bench. What do you do?',
+    [
+      'Pick it up with the litter picker.',
+      'Pick it up with your gloves on.',
+      'Put it in the rubbish bag.',
+    ],
+    'A needle can carry a disease. Gloves do not stop a needle, and a hard box keeps others safe.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'reception',
+    '🛎️',
+    'You are the first face',
+    'At the front desk you are the first person a visitor meets. Look up, smile and say hello, also when you are busy on the phone. Speak to visitors with "u". Answer the phone with the name of the company and your own name. Do you not know the answer? Say so, and find someone who knows. Never give names, phone numbers or rooms of staff to people you do not know.',
+    ['Goedemorgen, waarmee kan ik u helpen?', 'Good morning, how can I help you?'],
+    'You are on the phone. A visitor comes to the desk and waits. What do you do?',
+    [
+      'Look up, and show you will come soon.',
+      'Finish your call, without looking up.',
+      'Put the phone down at once.',
+    ],
+    'A visitor who is seen waits calmly. A visitor who is not seen feels unwelcome.',
+    NONE,
+  ),
+  // How visitors sign in differs per building: HOUSE_LINE.
+  tipFor(
+    'visitors',
+    '📛',
+    'Every visitor signs in',
+    'Every visitor writes their name on the list, or signs in on the screen, and gets a visitor pass. Then you know who is in the building. This is important when there is a fire: everyone must get out, and someone checks the list. At the end of the visit, the visitor gives the pass back. Do not let people in behind you that you do not know: ask kindly who they are here for.',
+    ['Voor wie komt u?', 'Who are you here for?'],
+    'A man walks in behind a colleague. He has no pass. What do you do?',
+    [
+      'Ask him kindly who he is here for.',
+      'Let him go: he came in with staff.',
+      'Call the police at once.',
+    ],
+    'In an emergency, you must know who is inside. And not everyone who walks in has a reason to be there.',
+    HOUSE_LINE,
+  ),
+  // How parcels are signed for differs per company: HOUSE_LINE.
+  tipFor(
+    'mailroom',
+    '📫',
+    'Post is private',
+    'Post and parcels are private. Never open a letter or a parcel for someone else. Check the name and the department on each item, and put it in the right pigeonhole. When a courier brings a parcel, look at it before you sign: is it damaged? Write that down. Is a parcel strange: it smells, it leaks, or it has no sender? Do not open it, and tell your supervisor.',
+    ['De doos is nat en kapot.', 'The box is wet and broken.'],
+    'A courier brings a parcel. One corner is wet and torn. What do you do?',
+    [
+      'Write the damage down before you sign.',
+      'Sign, and tell nobody.',
+      'Open it, to see if all is there.',
+    ],
+    'After you sign, it looks as if the parcel was fine. Then nobody pays for the damage.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'meetingroom',
+    '🫖',
+    'Ready before the first guest',
+    'A meeting room must be ready before the first person comes in. Check the chairs, the table, the projector and the cables. Put coffee, tea and water out, with cups and milk. Carry hot drinks carefully, and never over people. After the meeting, clean the table and take everything back. What you hear in a meeting room, you keep to yourself.',
+    ['De zaal is klaar.', 'The room is ready.'],
+    'The meeting starts in five minutes. The projector does not work. What do you do?',
+    [
+      'Tell the organiser right away.',
+      'Wait: maybe nobody needs it.',
+      'Leave a note on the table.',
+    ],
+    'Five minutes is still time to fix it or find another room. Later, everyone waits.',
+    NONE,
+  ),
+  // How a fault is reported (a system, a phone number) differs per company: HOUSE_LINE.
+  tipFor(
+    'faults',
+    '📢',
+    'Report it, do not fix it alone',
+    'Do you see something broken, like a leak, a lamp that is out or a door that does not close? Report it, also when it is small: in the system or to your supervisor. Say where it is, what you see and since when. Do not repair electricity, gas or heating yourself. Do you smell gas? Do not use a switch or a phone near it, open the windows, get people out, and call for help outside.',
+    ['Ik wil een storing melden.', 'I want to report a fault.'],
+    'Water drips from the ceiling in the corridor. What do you do?',
+    [
+      'Report it, and put a bucket under it.',
+      'Wait: maybe it stops by itself.',
+      'Open the ceiling to look.',
+    ],
+    'A small leak can become big damage. A bucket keeps the floor dry, so nobody slips.',
+    HOUSE_LINE,
+  ),
+  // Which repairs you may do yourself differs per company: HOUSE_LINE.
+  tipFor(
+    'repairs',
+    '🪜',
+    'A stepladder, never a chair',
+    'For a lamp or a high shelf, use a stepladder, never a chair, a table or a box. Put it on a flat floor, open it fully, and do not stand on the top step. Switch off the light before you change a lamp, and let an old lamp cool down. Only do the repairs you have learned. Put your tools back in the toolbox when you are done, so nobody trips over them.',
+    ['Ik pak even de trap.', 'I will get the stepladder.'],
+    'A lamp in the office is broken. The stepladder is on another floor. What do you do?',
+    [
+      'Get the stepladder.',
+      'Stand on a desk chair.',
+      'Stand on the desk.',
+    ],
+    'A chair can roll or tip over. A fall from a chair can hurt you badly.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'moving',
+    '🏋️',
+    'Moving: lift smart, label everything',
+    'Moving is heavy work. Do not fill a box too full: books and files are heavy. Lift with your knees bent and your back straight, close to your body. Use the hand truck for more boxes, and lift a desk together. Write the new room number on every box, chair and computer. Unplug the cables first. Never put boxes in a corridor or in front of an emergency exit.',
+    ['Wil je even helpen tillen?', 'Can you help me lift this?'],
+    'You must move a heavy desk. Your colleague is on a break. What do you do?',
+    [
+      'Wait for help, and lift it together.',
+      'Drag it on your own.',
+      'Lift it alone, very carefully.',
+    ],
+    'A heavy desk can hurt your back when you lift it alone. Together it is easy and safe.',
+    NONE,
+  ),
+  // What to do when the alarm goes off differs per building: HOUSE_LINE.
+  tipFor(
+    'closing',
+    '🗝️',
+    'The alarm code is secret',
+    'At the end of the day you walk the last round. Check that nobody is left inside, that the windows are closed and the lights are out. The emergency exits stay free. Keep the keys with you, never in a drawer. The alarm code is secret: never give it to anyone, also not on the phone. Does the alarm go off? Follow the steps of your company.',
+    ['De alarmcode geef ik niet door.', 'I do not pass on the alarm code.'],
+    'Someone calls: "I am from the alarm company. What is your code?" What do you do?',
+    [
+      'Say no, and tell your supervisor.',
+      'Give the code: he sounds kind.',
+      'Give only half of the code.',
+    ],
+    'A real alarm company does not ask for your code on the phone. A thief might.',
+    HOUSE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

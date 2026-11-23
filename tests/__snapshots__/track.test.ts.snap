@@ -55,6 +55,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.montage",
   "u.kweek",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;
 
@@ -113,6 +117,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.montage",
   "u.kweek",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;
 
@@ -171,6 +179,72 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.montage",
   "u.kweek",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
+]
+`;
+
+exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder for every sector, with and without the track argument > routeOrder facility 1`] = `
+[
+  "u.firstday",
+  "u.help",
+  "u.do",
+  "u.tools",
+  "u.safety",
+  "u.emergency",
+  "u.frontdesk",
+  "u.maintenance",
+  "u.data",
+  "u.time",
+  "u.sounds",
+  "u.teamwork",
+  "u.communicate",
+  "u.feedback",
+  "u.apply",
+  "u.contract",
+  "u.papers",
+  "u.pay",
+  "u.house",
+  "u.social",
+  "u.sayings",
+  "u.rights",
+  "u.leave",
+  "u.sick",
+  "u.exploit",
+  "u.contact",
+  "u.grow",
+  "u.health",
+  "u.money",
+  "u.travel",
+  "u.lost",
+  "u.numbers",
+  "u.ai",
+  "u.finish",
+  "u.stage",
+  "u.society",
+  "u.online",
+  "u.warehouse",
+  "u.build",
+  "u.factory",
+  "u.care",
+  "u.horeca",
+  "u.clean",
+  "u.shop",
+  "u.kas",
+  "u.tech",
+  "u.garage",
+  "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
+  "u.install",
+  "u.montage",
+  "u.kweek",
+  "u.carservice",
+  "u.mowing",
+  "u.planting",
 ]
 `;
 
@@ -229,6 +303,72 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.install",
   "u.montage",
   "u.kweek",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
+]
+`;
+
+exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder for every sector, with and without the track argument > routeOrder green 1`] = `
+[
+  "u.firstday",
+  "u.help",
+  "u.do",
+  "u.tools",
+  "u.safety",
+  "u.emergency",
+  "u.mowing",
+  "u.planting",
+  "u.data",
+  "u.time",
+  "u.sounds",
+  "u.teamwork",
+  "u.communicate",
+  "u.feedback",
+  "u.apply",
+  "u.contract",
+  "u.papers",
+  "u.pay",
+  "u.house",
+  "u.social",
+  "u.sayings",
+  "u.rights",
+  "u.leave",
+  "u.sick",
+  "u.exploit",
+  "u.contact",
+  "u.grow",
+  "u.health",
+  "u.money",
+  "u.travel",
+  "u.lost",
+  "u.numbers",
+  "u.ai",
+  "u.finish",
+  "u.stage",
+  "u.society",
+  "u.online",
+  "u.warehouse",
+  "u.build",
+  "u.factory",
+  "u.care",
+  "u.horeca",
+  "u.clean",
+  "u.shop",
+  "u.kas",
+  "u.tech",
+  "u.garage",
+  "u.delivery",
+  "u.afbouw",
+  "u.ruwbouw",
+  "u.machines",
+  "u.install",
+  "u.montage",
+  "u.kweek",
+  "u.carservice",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;
 
@@ -287,6 +427,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.install",
   "u.montage",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;
 
@@ -345,6 +489,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.montage",
   "u.kweek",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;
 
@@ -403,6 +551,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.montage",
   "u.kweek",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;
 
@@ -461,6 +613,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.montage",
   "u.kweek",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;
 
@@ -519,6 +675,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.install",
   "u.kweek",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;
 
@@ -577,6 +737,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.montage",
   "u.kweek",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;
 
@@ -635,6 +799,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.montage",
   "u.kweek",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;
 
@@ -693,5 +861,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.montage",
   "u.kweek",
   "u.carservice",
+  "u.mowing",
+  "u.planting",
+  "u.frontdesk",
+  "u.maintenance",
 ]
 `;

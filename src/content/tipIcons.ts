@@ -76,6 +76,22 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🫗': 'w.opvangbak',
   '🔴': 'w.remblok',
   '🏷': 'w.autosleutel',
+  // Groen and Facilitair (23 November 2026): each tip shows a word of its own lesson (placeholder
+  // drawings for now); the roadside tip has the vest (🦺 above), the moving tip lifting (emojiArt).
+  '🪨': 'w.bosmaaier',
+  '✂': 'w.snoeischaar',
+  '🪺': 'w.heg',
+  '🪵': 'w.kettingzaag',
+  '🌼': 'w.onkruidbrander',
+  '🌳': 'w.schep',
+  '💉': 'w.grijper',
+  '🛎': 'w.balie',
+  '📛': 'w.bezoekerspasje',
+  '📫': 'w.postvak',
+  '🫖': 'w.thermoskan',
+  '📢': 'w.melding',
+  '🪜': 'w.ladder',
+  '🗝': 'w.sleutelbos',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

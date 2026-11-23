@@ -37,6 +37,8 @@ export const SECTOR_PAGES: readonly SectorPage[] = [
   { id: 'technical', path: '/techniek/', name: 'Techniek', phrase: 'de techniek en de werkplaats', short: 'de techniek' },
   { id: 'garage', path: '/garage/', name: 'Garage', phrase: 'de garage en de autowerkplaats', short: 'de garage' },
   { id: 'retail', path: '/winkel/', name: 'Winkel', phrase: 'de winkel en de supermarkt', short: 'de winkel' },
+  { id: 'green', path: '/groen/', name: 'Groen', phrase: 'het groen en de tuin', short: 'het groen' },
+  { id: 'facility', path: '/facilitair/', name: 'Facilitair', phrase: 'de facilitaire dienst', short: 'facilitair werk' },
 ];
 
 const unit = (id: string): Unit => {

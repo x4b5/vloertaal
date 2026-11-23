@@ -72,6 +72,12 @@ tweede helft van het pad. De woorden zijn dan bekend. "Woorden" telt alleen de g
 | 28 | `g.winkel.datum` | Winkel | Over de datum | `u.shop` | Henk, leerling | 34 | zacht | ⚖️ |
 | 29 | `g.winkel.klant` | Winkel | Een klant wil rijst | `u.shop` | Jada, leerling | 29 | zacht |  |
 | 30 | `g.winkel.kassa` | Winkel | Op de kassa | `u.shop` | Henk, leerling | 37 | midden | ⚖️ |
+| 31 | `g.groen.bosmaaier` | Groen | Met de bosmaaier | `u.mowing` | Henk, leerling | 30 | midden | ⚖️ |
+| 32 | `g.groen.weg` | Groen | Langs de weg | `u.planting` | Jada, leerling | 30 | midden | ⚖️ |
+| 33 | `g.groen.heg` | Groen | De heg bij de school | `u.mowing` | Henk, Bram | 36 | zacht |  |
+| 34 | `g.facilitair.bezoek` | Facilitair | Een bezoeker aan de balie | `u.frontdesk` | Henk, leerling | 34 | zacht |  |
+| 35 | `g.facilitair.lekkage` | Facilitair | Een lekkage in de gang | `u.maintenance` | Jada, leerling | 37 | zacht | ⚖️ |
+| 36 | `g.facilitair.afsluiten` | Facilitair | Jij sluit vandaag af | `u.maintenance` | Henk, leerling | 30 | zacht | ⚖️ |
 
 ## De scènes
 
@@ -579,6 +585,108 @@ Na `u.shop`. Geluid (midden, -18 dB): Supermarkt bij de kassa: scanners piepen, 
 - **Hoe laat is je pauze?** Om half twee. · Om drie uur. · **Om half één.** ✔  
   Uitleg: Henk zegt: je pauze is om half één. *(Henk says: your break is at half past twelve.)*
 
+### Groen
+
+#### 31. Met de bosmaaier ⚖️ · `g.groen.bosmaaier`
+
+Na `u.mowing`. Geluid (midden, -18 dB): Park buiten: wind in de bomen, vogels, ver weg een grasmaaier en een auto.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.groen.bosmaaier.1` | Henk (Daniel) | Vandaag maai jij het gras langs het pad. |
+| `g.groen.bosmaaier.2` | Henk (Daniel) | Eerst je gelaatsscherm op. En je gehoorbescherming. |
+| `g.groen.bosmaaier.3` | Leerling (Thijmen én Ariël) | Oké. En als er iemand komt? |
+| `g.groen.bosmaaier.4` | Henk (Daniel) | Dan stop je de bosmaaier. Pas op voor stenen. |
+
+- **Wat doe je als er iemand komt?** **Je stopt de bosmaaier.** ✔ · Je gaat snel verder. · Je roept naar hem.  
+  Uitleg: Stenen van de bosmaaier zijn gevaarlijk. *(Stones from the brush cutter are dangerous.)*
+- **Waar maai je vandaag?** Bij de heg. · **Langs het pad.** ✔ · Langs de weg.  
+  Uitleg: Henk zegt: het gras langs het pad. *(Henk says: the grass along the path.)*
+
+#### 32. Langs de weg ⚖️ · `g.groen.weg`
+
+Na `u.planting`. Geluid (midden, -18 dB): Langs een drukke weg: auto’s rijden voorbij, een fietsbel, een bus die remt.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.groen.weg.1` | Jada (Noa) | We werken vandaag langs de weg. Trek je hesje aan. |
+| `g.groen.weg.2` | Leerling (Thijmen én Ariël) | Oké. Waar zet ik de pionnen? |
+| `g.groen.weg.3` | Jada (Noa) | Achter de bus. Pas daarna beginnen we. |
+| `g.groen.weg.4` | Jada (Noa) | En kijk goed uit voor de fietsers. |
+
+- **Wat trek je aan?** Je regenpak. · Je laarzen. · **Je hesje.** ✔  
+  Uitleg: Langs de weg draag je altijd je hesje. *(By the road you always wear your vest.)*
+- **Waar zet je de pionnen?** **Achter de bus.** ✔ · Op de stoep. · In de berm.  
+  Uitleg: Jada zegt: achter de bus. *(Jada says: behind the van.)*
+
+#### 33. De heg bij de school · `g.groen.heg`
+
+Na `u.mowing`. Geluid (zacht, -24 dB): Bij een school: kinderen spelen ver weg, een heggenschaar zoemt kort, vogels.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.groen.heg.1` | Henk (Daniel) | Bram, knip jij vandaag de heg bij de school? |
+| `g.groen.heg.2` | Bram (Thijmen) | Ja. Hoe hoog moet hij blijven? |
+| `g.groen.heg.3` | Henk (Daniel) | Tot het touw. Leg eerst het zeil eronder. |
+| `g.groen.heg.4` | Bram (Thijmen) | Oké. En het snoeiafval? |
+| `g.groen.heg.5` | Henk (Daniel) | Dat breng je met de kruiwagen naar de aanhanger. |
+
+- **Wat moet Bram eerst onder de heg leggen?** De hark. · **Het zeil.** ✔ · Een krat.  
+  Uitleg: Henk zegt: leg eerst het zeil eronder. *(Henk says: first put the tarp under it.)*
+- **Waar gaat het snoeiafval naartoe?** Naar de school. · In de container. · **Naar de aanhanger.** ✔  
+  Uitleg: Het snoeiafval gaat met de kruiwagen naar de aanhanger. *(The green waste goes to the trailer in the wheelbarrow.)*
+
+### Facilitair
+
+#### 34. Een bezoeker aan de balie · `g.facilitair.bezoek`
+
+Na `u.frontdesk`. Geluid (zacht, -24 dB): Hal van een kantoor: een deur die open en dicht schuift, een telefoon, zachte stemmen.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.facilitair.bezoek.1` | Henk (Daniel) | Goedemorgen. Ik heb om tien uur een afspraak met mevrouw Jansen. |
+| `g.facilitair.bezoek.2` | Leerling (Thijmen én Ariël) | Een moment. Ik bel haar even. |
+| `g.facilitair.bezoek.3` | Henk (Daniel) | Moet ik hier mijn naam schrijven? |
+| `g.facilitair.bezoek.4` | Leerling (Thijmen én Ariël) | Ja, graag. Hier is uw bezoekerspasje. |
+| `g.facilitair.bezoek.5` | Henk (Daniel) | Goed. Dan wacht ik even. |
+
+- **Hoe laat is de afspraak?** **Om tien uur.** ✔ · Om elf uur. · Om twaalf uur.  
+  Uitleg: De bezoeker zegt: om tien uur. *(The visitor says: at ten.)*
+- **Wat geef je de bezoeker?** Een kopje koffie. · **Een bezoekerspasje.** ✔ · Een plattegrond.  
+  Uitleg: Elke bezoeker moet een bezoekerspasje hebben. *(Every visitor must have a visitor pass.)*
+
+#### 35. Een lekkage in de gang ⚖️ · `g.facilitair.lekkage`
+
+Na `u.maintenance`. Geluid (zacht, -24 dB): Gang van een kantoor: water druppelt in een emmer, een lift gaat open, voetstappen.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.facilitair.lekkage.1` | Jada (Noa) | Er is een lekkage in de gang, bij de lift. |
+| `g.facilitair.lekkage.2` | Leerling (Thijmen én Ariël) | Oké. Ik zet er een emmer onder. |
+| `g.facilitair.lekkage.3` | Jada (Noa) | Goed. En maak een melding. De vloer is nat. |
+| `g.facilitair.lekkage.4` | Jada (Noa) | Zet er ook een geel bord bij. Dan valt er niemand. |
+
+- **Waar is de lekkage?** In de keuken. · In de lift. · **In de gang.** ✔  
+  Uitleg: Jada zegt: in de gang, bij de lift. *(Jada says: in the corridor, by the lift.)*
+- **Wat moet je ook doen?** **Een melding maken.** ✔ · De lift stoppen. · De monteur bellen.  
+  Uitleg: Je maakt een melding en zet een bord bij de vloer. *(You report it and put a sign by the floor.)*
+
+#### 36. Jij sluit vandaag af ⚖️ · `g.facilitair.afsluiten`
+
+Na `u.maintenance`. Geluid (zacht, -24 dB): Leeg kantoor in de avond: een printer zoemt nog, een sleutelbos rinkelt, een deur valt dicht.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.facilitair.afsluiten.1` | Henk (Daniel) | Jij sluit vandaag af. Loop eerst de laatste ronde. |
+| `g.facilitair.afsluiten.2` | Henk (Daniel) | Kijk of alle ramen dicht zijn. |
+| `g.facilitair.afsluiten.3` | Leerling (Thijmen én Ariël) | Oké. En de alarmcode? |
+| `g.facilitair.afsluiten.4` | Henk (Daniel) | Die krijg je van mij. Geef hem nooit aan iemand anders. |
+
+- **Wat doe je eerst?** Het alarm aanzetten. · **De laatste ronde lopen.** ✔ · De sleutelbos halen.  
+  Uitleg: Henk zegt: loop eerst de laatste ronde. *(Henk says: first walk the last round.)*
+- **Aan wie geef je de alarmcode?** Aan de bezoeker. · Aan een collega. · **Aan niemand.** ✔  
+  Uitleg: Geef de alarmcode aan niemand. *(Give the alarm code to nobody.)*
+
 ## Zo maak je het met ElevenLabs
 
 ### 1. De stemmen (het bestaande opnamescript)
@@ -645,7 +753,7 @@ ffmpeg -y -i beurt1.mp3 -i beurt2.mp3 -i beurt3.mp3 -stream_loop -1 -i geluid.mp
 (`-stream_loop -1` herhaalt het geluid; `amix ... duration=first` stopt als de stem klaar is;
 `areverse,afade,areverse` is de uitfade. Nodig: ffmpeg 4.4 of nieuwer.) Getest met ffmpeg 6.1.
 
-Alle 30 scènes in één keer, met de goede bestanden en het goede niveau per scène:
+Alle 36 scènes in één keer, met de goede bestanden en het goede niveau per scène:
 
 ```sh
 npm run scenes:lines -- --mix         # schrijft public/audio/scene-mix.sh
@@ -764,5 +872,6 @@ Echte stemmen en echt geluid klinken het meest als de werkvloer. Dat kan bij een
    [In de app](#in-de-app)). Later kan de scène ook in de herhaling komen.
 5. **De ⚖️-scènes** noemen een veiligheidsregel of rechtenfeit (valbeveiliging, last van de kraan,
    spanningsloos werken, rijbewijs, storing aan een machine, heftruck, bespoten kas, hitte, gevallen cliënt, pillen,
-   allergie, datum in de koelcel, natte vloer, middelen mengen, vlees over de datum, alcohol onder de 18). Laat ze nalezen zoals de andere
+   allergie, datum in de koelcel, natte vloer, middelen mengen, vlees over de datum, alcohol onder de 18,
+   stoppen met de bosmaaier, hesje en pionnen langs de weg, een natte gang, de alarmcode geheim). Laat ze nalezen zoals de andere
    ⚖️-teksten.

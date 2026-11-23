@@ -316,6 +316,26 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan zeggen dat het waarschuwingslampje brandt.', 'A1', 'spreken', 'I can say that the warning light is on.'],
     ['Ik kan vragen hoeveel olie erin moet.', 'A1', 'gesprekken', 'I can ask how much oil must go in.'],
   ]),
+  // Maaien en snoeien (23 November 2026, the new sector Groen): two lines.
+  onderwerp('u.mowing', 'Maaien en snoeien', [
+    ['Ik kan zeggen dat het gras te nat is.', 'A1', 'spreken', 'I can say that the grass is too wet.'],
+    ['Ik kan vragen welke takken eraf moeten.', 'A1', 'gesprekken', 'I can ask which branches must come off.'],
+  ]),
+  // Planten, onkruid en de straat (23 November 2026): two lines.
+  onderwerp('u.planting', 'Planten, onkruid en de straat', [
+    ['Ik kan zeggen dat er scherven liggen.', 'A1', 'spreken', 'I can say that there is broken glass.'],
+    ['Ik kan vragen of ik mag oversteken.', 'A1', 'gesprekken', 'I can ask if I may cross the road.'],
+  ]),
+  // Receptie, post en vergaderen (23 November 2026, the new sector Facilitair): two lines.
+  onderwerp('u.frontdesk', 'Receptie, post en vergaderen', [
+    ['Ik kan een bezoeker begroeten en helpen.', 'A1', 'gesprekken', 'I can greet and help a visitor.'],
+    ['Ik kan vragen voor wie een pakket is.', 'A1', 'gesprekken', 'I can ask who a parcel is for.'],
+  ]),
+  // Storingen, onderhoud en verhuizen (23 November 2026): two lines.
+  onderwerp('u.maintenance', 'Storingen, onderhoud en verhuizen', [
+    ['Ik kan een storing melden.', 'A1', 'spreken', 'I can report a fault.'],
+    ['Ik kan vragen waar een bureau naartoe moet.', 'A1', 'gesprekken', 'I can ask where a desk must go.'],
+  ]),
 ];
 
 /** Spoor Werkregels (alleen Nederlands): per onderwerp, in de volgorde van de thema's. */

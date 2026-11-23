@@ -78,6 +78,12 @@ export const relatedUnits: Record<string, [string, string]> = {
   // Kweken, sorteren en de kas and Banden, olie en remmen (22 November 2026): their sector's first unit and safety.
   'u.kweek': ['u.kas', 'u.safety'],
   'u.carservice': ['u.garage', 'u.safety'],
+  // The new sectors Groen and Facilitair (23 November 2026): each other's unit and safety (Groen:
+  // working outside, the weather); the facility units with the cleaning work in the same building.
+  'u.mowing': ['u.planting', 'u.safety'],
+  'u.planting': ['u.mowing', 'u.kas'],
+  'u.frontdesk': ['u.maintenance', 'u.clean'],
+  'u.maintenance': ['u.frontdesk', 'u.safety'],
 };
 
 /**
@@ -121,6 +127,12 @@ const relatedWords: Record<string, string[]> = {
   // Kweken, sorteren en de kas: the crate and the tomato; Banden, olie en remmen: the tyre and the oil.
   'u.kweek': ['w.krat', 'w.tomaat'],
   'u.carservice': ['w.band', 'w.olie'],
+  // Groen: the motor and filling up (Maaien en snoeien), the vest and the municipality (Planten,
+  // onkruid en de straat). Facilitair: the parcel and the coffee; the fault and the hand truck.
+  'u.mowing': ['w.motor', 'w.tanken'],
+  'u.planting': ['w.hesje', 'w.gemeente'],
+  'u.frontdesk': ['w.pakket', 'w.koffie'],
+  'u.maintenance': ['w.storing', 'w.steekwagen'],
   // Goed communiceren: angry (l.speakup) and slowly (l.understand), what the lessons are about.
   'u.communicate': ['w.boos', 'w.langzaam'],
   // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).
