@@ -17,7 +17,7 @@ export default {
         <circle cx="34" cy="32" r="3.6" fill={PAL.ink} />
         <path d="M52 28H74M52 36H68" stroke={PAL.line} strokeWidth="2.8" />
         <path d="M26 54H74M26 64H72M26 74H74M26 84H48" stroke={PAL.line} strokeWidth="2.8" />
-        <Shine d="M20 50V22" width={2.6} opacity={0.0} />
+        <Shine d="M20 96V50" color={PAL.ice} width={2.4} opacity={0.8} />
       </g>
       {/* The hand with the pen, at the end of the last line */}
       <Move kind="fast" dx={-22}>

@@ -258,6 +258,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "Se întreabă dacă a căzut: da, ce are, și pe cine suni.", // nieuw, nalezen
     'c.sickchild.a.why': "Se întreabă ce face: ce vezi, și ce faci.", // nieuw, nalezen
     'c.grouprules.a.why': "Se întreabă dacă ai voie să ieși fără un coleg: da, dar întâi îi spui unui coleg.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "Se întreabă dacă e gata: încă nu, și de ce.", // nieuw, nalezen
+    'c.hotelroom.a.why': "Se întreabă câte au mai rămas: numărul, și când termini.", // nieuw, nalezen
+    'c.dosing.a.why': "Ți se spune să pui mai mult: nu, mai mult nu e mai bine, și ce folosești.", // nieuw, nalezen
+    'c.officenight.a.why': "Se întreabă dacă lucrezi fără colegi: da, și trimiți un mesaj.", // nieuw, nalezen
+    'c.knives.a.why': "Ți se cere să tai: da, chef, și o întrebare despre cum.", // nieuw, nalezen
+    'c.rawcooked.a.why': "Se întreabă dacă e fără gluten: nu știi sigur, deci te uiți pe listă.", // nieuw, nalezen
+    'c.pass.a.why': "Se întreabă unde e mâncarea: pe pass, și o duci acum.", // nieuw, nalezen
+    'c.bill.a.why': "Se cere plata separată: da, și aduci POS-ul.", // nieuw, nalezen
+    'c.washing.a.why': "Clientul spune nu: e în regulă, și oferi altceva.", // nieuw, nalezen
+    'c.observing.a.why': "Se întreabă dacă e ceva deosebit: da, și ce anume.", // nieuw, nalezen
+    'c.homecare.a.why': "Se întreabă cine e: un salut, cine ești, și dacă poți intra.", // nieuw, nalezen
+    'c.liftaids.a.why': "Ți se cere s-o faci fără ajutor: da, cu cearșaful de alunecare, și îl iei.", // nieuw, nalezen
+    'c.returns.a.why': "Se cere un retur: da, și o întrebare despre bon.", // nieuw, nalezen
+    'c.facing.a.why': "Se întreabă dacă ai terminat: aproape, și ce a mai rămas.", // nieuw, nalezen
+    'c.shrink.a.why': "Se cere să se uite în geantă: da, și arăți bonul.", // nieuw, nalezen
+    'c.shopclose.a.why': "Se cere să intre: îmi pare rău, e închis, și când se deschide iar.", // nieuw, nalezen
+    'c.hirer.a.why': "Ți se cere să începi într-un loc nou: da, și o întrebare despre oră.", // nieuw, nalezen
+    'c.phases.a.why': "Ți se spune că munca se oprește: bine, și ceri altă muncă.", // nieuw, nalezen
+    'c.deductions.a.why': "Ți se spune de o reținere: întrebi dacă e permisă și verifici.", // nieuw, nalezen
+    'c.agencyhome.a.why': "Ți se spune să pleci curând: e puțin timp, și ceri întâi un sfat.", // nieuw, nalezen
   },
 };
 

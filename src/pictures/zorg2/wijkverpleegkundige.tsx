@@ -11,7 +11,6 @@ export default {
         {/* The tunic */}
         <path d="M18 134C18 106 36 96 60 96C84 96 102 106 102 134Z" fill={PAL.white} />
         <path d="M86 104C95 110 102 120 102 134H86C88 122 88 112 86 104Z" fill={PAL.paperShade} />
-        <path d="M18 134C18 116 22 106 30 101L34 134Z" fill={PAL.paperShade} opacity=".0" />
         <path d="M46 96L60 114L74 96" fill="none" stroke={PAL.sky} strokeWidth="4" />
         <path d="M30 134V118M90 134V118" stroke={PAL.sky} strokeWidth="3" />
         {/* The house badge */}

@@ -3951,6 +3951,412 @@ const t: CultureTranslation = {
     'c.grouprules.o2': "Le haces muchas preguntas al niño.", // nieuw, nalezen
     'c.grouprules.o3': "Llamas a los padres y les preguntas por qué.", // nieuw, nalezen
     'c.grouprules.w': "Tu encargado conoce los pasos cuando te preocupa un niño. Muchas preguntas pueden asustar al niño.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and "Werken via een uitzendbureau" (23 November 2026).
+    'u.housekeeping': "Baños, hoteles y máquinas", // nieuw, nalezen
+    'l.sanitary': "Inodoros y lavabos", // nieuw, nalezen
+    'w.wastafel': "el lavabo (el lavamanos de un baño o aseo)", // nieuw, nalezen
+    'w.toiletpot': "la taza del inodoro", // nieuw, nalezen
+    'w.toiletborstel': "la escobilla del inodoro", // nieuw, nalezen
+    'w.urinoir': "el urinario", // nieuw, nalezen
+    'w.kalk': "la cal (lo blanco que deja el agua en grifos y azulejos)", // nieuw, nalezen
+    'w.ontstopper': "el desatascador (una herramienta para un inodoro o un desagüe atascado)", // nieuw, nalezen
+    's.sanitary.1': "Primero hago los lavabos, luego los inodoros.", // nieuw, nalezen
+    's.sanitary.2': "Hay cal en el grifo.", // nieuw, nalezen
+    's.sanitary.3': "El inodoro de la primera planta está atascado.", // nieuw, nalezen
+    'c.sanitary.q': "¿Están listos los baños?", // nieuw, nalezen
+    'c.sanitary.a': "Todavía no. Hay un inodoro atascado.", // nieuw, nalezen
+    'c.sanitary': "De lo limpio a lo sucio", // nieuw, nalezen
+    'c.sanitary.b': "En un baño trabajas de lo limpio a lo sucio: primero los espejos y los lavabos, luego los inodoros, y el suelo al final. Así no llevas suciedad del inodoro al lavabo. Usa las bayetas del color para el inodoro, y ponte guantes. Limpia también la escobilla, y déjala secar. ¿Un inodoro está atascado o roto? Pon un cartel en la puerta, y avísalo. Lávate las manos cuando termines, también si llevabas guantes. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.sanitary.p': "Este inodoro está atascado. Le pongo un cartel.", // nieuw, nalezen
+    'c.sanitary.s': "Has limpiado un inodoro. Ahora toca el lavabo. Todavía tienes la misma bayeta en la mano. ¿Qué haces?", // nieuw, nalezen
+    'c.sanitary.o1': "Coges una bayeta del color para el lavabo.", // nieuw, nalezen
+    'c.sanitary.o2': "Usas la misma bayeta: todavía parece limpia.", // nieuw, nalezen
+    'c.sanitary.o3': "Primero enjuagas la bayeta en el inodoro.", // nieuw, nalezen
+    'c.sanitary.w': "Los gérmenes del inodoro están en la bayeta, también cuando no los ves. Una bayeta nueva los mantiene lejos de las manos y las caras.", // nieuw, nalezen
+    'l.hotelroom': "Habitaciones de hotel", // nieuw, nalezen
+    'w.laken': "la sábana (en una cama)", // nieuw, nalezen
+    'w.kussensloop': "la funda de almohada", // nieuw, nalezen
+    'w.dekbed': "el edredón nórdico", // nieuw, nalezen
+    'w.handdoek': "la toalla", // nieuw, nalezen
+    'w.kamerlijst': "la lista de habitaciones (las habitaciones que tienes que hacer hoy)", // nieuw, nalezen
+    'w.opmaken': "hacer (la cama)", // nieuw, nalezen
+    's.hotelroom.1': "Hago la cama con sábanas limpias.", // nieuw, nalezen
+    's.hotelroom.2': "Pon dos toallas limpias en el baño.", // nieuw, nalezen
+    's.hotelroom.3': "La habitación doce está lista. Voy a la trece.", // nieuw, nalezen
+    'c.hotelroom.q': "¿Cuántas habitaciones te quedan?", // nieuw, nalezen
+    'c.hotelroom.a': "Cuatro más. Luego mi lista está terminada.", // nieuw, nalezen
+    'c.hotelroom': "Llama, di quién eres y espera", // nieuw, nalezen
+    'c.hotelroom.b': "Antes de entrar en una habitación de hotel, llama a la puerta y di quién eres, por ejemplo “Housekeeping!”. Espera un momento, y vuelve a llamar. ¿Hay un cartel de “Niet storen” en la puerta? Entonces no entres, y apúntalo en tu lista de habitaciones. ¿Está el cliente en la habitación? Pregunta si puedes limpiar ahora, o vuelve más tarde. Las cosas del cliente se quedan donde están. ¿Un cliente se ha olvidado algo? Llévalo a la recepción. Nunca te quedes nada, ni siquiera algo pequeño. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.hotelroom.p': "Buenos días. ¿Puedo limpiar la habitación ahora?", // nieuw, nalezen
+    'c.hotelroom.s': "En una habitación vacía encuentras un móvil debajo de la cama. El cliente ya se ha ido. ¿Qué haces?", // nieuw, nalezen
+    'c.hotelroom.o1': "Lo llevas a la recepción.", // nieuw, nalezen
+    'c.hotelroom.o2': "Te lo quedas: el cliente ya se ha ido.", // nieuw, nalezen
+    'c.hotelroom.o3': "Lo dejas debajo de la cama.", // nieuw, nalezen
+    'c.hotelroom.w': "Las cosas perdidas siguen siendo del cliente. La recepción se las puede devolver. Quedárselas es robar, y te puede costar el trabajo.", // nieuw, nalezen
+    'l.dosing': "Productos y máquinas", // nieuw, nalezen
+    'w.doseren': "dosificar (usar la cantidad correcta de un producto)", // nieuw, nalezen
+    'w.maatbeker': "el vaso medidor", // nieuw, nalezen
+    'w.sprayflacon': "el pulverizador", // nieuw, nalezen
+    'w.concentraat': "el concentrado (un producto fuerte que se mezcla con agua)", // nieuw, nalezen
+    'w.veiligheidsblad': "la ficha de seguridad (dice los peligros de un producto, y qué hacer)", // nieuw, nalezen
+    'w.schrobzuigmachine': "la fregadora (una máquina que friega el suelo y lo aspira hasta dejarlo seco)", // nieuw, nalezen
+    's.dosing.1': "Pon un tapón en un cubo de agua.", // nieuw, nalezen
+    's.dosing.2': "Lee primero la etiqueta.", // nieuw, nalezen
+    's.dosing.3': "La fregadora tiene que ir al cargador.", // nieuw, nalezen
+    'c.dosing.q': "Echa un poco más de producto. Así queda más limpio.", // nieuw, nalezen
+    'c.dosing.a': "No, más no es mejor. Uso el vaso medidor.", // nieuw, nalezen
+    'c.dosing': "La dosis correcta, no más", // nieuw, nalezen
+    'c.dosing.b': "Más producto no limpia mejor. Demasiado deja una capa pegajosa, así que el suelo se ensucia antes y puede resbalar. También es peor para tu piel y tus pulmones. Usa el vaso medidor o la bomba dosificadora, y sigue la etiqueta. Primero el agua, luego el producto: así no salpica. Antes de usar la fregadora, comprueba que está cargada, con agua limpia en el depósito. Al final, vacía y enjuaga el depósito del agua sucia. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.dosing.p': "¿Cuánto tengo que echar?", // nieuw, nalezen
+    'c.dosing.s': "El suelo sigue pegajoso. Un compañero dice: “Echa el doble de producto.” ¿Qué haces?", // nieuw, nalezen
+    'c.dosing.o1': "Usas la dosis de la etiqueta, y preguntas.", // nieuw, nalezen
+    'c.dosing.o2': "Echas el doble: así queda limpio.", // nieuw, nalezen
+    'c.dosing.o3': "Echas el producto directamente en el suelo.", // nieuw, nalezen
+    'c.dosing.w': "Un suelo pegajoso muchas veces significa demasiado producto, no demasiado poco. La dosis correcta limpia mejor y es lo más seguro.", // nieuw, nalezen
+    'l.officenight': "Oficinas, temprano o tarde", // nieuw, nalezen
+    'w.toetsenbord': "el teclado", // nieuw, nalezen
+    'w.papierbak': "la papelera de papel (para el papel viejo)", // nieuw, nalezen
+    'w.lichtschakelaar': "el interruptor de la luz", // nieuw, nalezen
+    'w.pantry': "el office (la cocina pequeña de una oficina)", // nieuw, nalezen
+    'w.deurmat': "el felpudo (la alfombrilla de la entrada)", // nieuw, nalezen
+    'w.alleenwerken': "trabajar a solas (no hay nadie más en el edificio)", // nieuw, nalezen
+    's.officenight.1': "Vacío las papeleras y la papelera de papel.", // nieuw, nalezen
+    's.officenight.2': "No toco los papeles de la mesa.", // nieuw, nalezen
+    's.officenight.3': "Apago la luz cuando termino.", // nieuw, nalezen
+    'c.officenight.q': "¿Esta noche trabajas a solas en el edificio?", // nieuw, nalezen
+    'c.officenight.a': "Sí. Te mando un mensaje cuando termine.", // nieuw, nalezen
+    'c.officenight': "A solas en el edificio", // nieuw, nalezen
+    'c.officenight.b': "Temprano por la mañana o tarde por la noche, muchas veces limpias una oficina a solas. Debes saber qué hacer si pasa algo: ¿a quién llamas, y dónde está el botiquín? Lleva siempre el móvil encima. Acuerda con tu encargado o con un compañero que mandas un mensaje cuando empiezas y cuando terminas. No dejes entrar a nadie que no conoces. No toques papeles, pantallas ni teclados más de lo que necesitas para limpiar, y nunca leas lo que hay en ellos. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.officenight.p': "He terminado y ahora me voy a casa.", // nieuw, nalezen
+    'c.officenight.s': "De noche un hombre llama al cristal de la puerta. Dice que trabaja aquí y que se ha olvidado la llave. ¿Qué haces?", // nieuw, nalezen
+    'c.officenight.o1': "No abres. Llamas a tu encargado.", // nieuw, nalezen
+    'c.officenight.o2': "Le dejas entrar: parece simpático.", // nieuw, nalezen
+    'c.officenight.o3': "Le das tu propia llave.", // nieuw, nalezen
+    'c.officenight.w': "Cualquiera puede decir que trabaja allí. Tu encargado lo puede comprobar. Tu seguridad y el edificio van primero.", // nieuw, nalezen
+    'u.cooking': "La cocina y el servicio", // nieuw, nalezen
+    'l.knives': "Cuchillos y cortar", // nieuw, nalezen
+    'w.koksmes': "el cuchillo de chef (un cuchillo de cocina grande)", // nieuw, nalezen
+    'w.dunschiller': "el pelador", // nieuw, nalezen
+    'w.schillen': "pelar", // nieuw, nalezen
+    'w.hakken': "picar (cortar muy pequeño)", // nieuw, nalezen
+    'w.raspen': "rallar", // nieuw, nalezen
+    'w.blokjes': "los dados (trozos pequeños y cuadrados)", // nieuw, nalezen
+    's.knives.1': "Corta las zanahorias en dados.", // nieuw, nalezen
+    's.knives.2': "No dejes el cuchillo en el fregadero.", // nieuw, nalezen
+    's.knives.3': "Pica el perejil fino.", // nieuw, nalezen
+    'c.knives.q': "¿Puedes cortar las cebollas?", // nieuw, nalezen
+    'c.knives.a': "Sí, chef. ¿En aros o en dados?", // nieuw, nalezen
+    'c.knives': "Un cuchillo es una herramienta, no un juguete", // nieuw, nalezen
+    'c.knives.b': "Mantén tu cuchillo afilado: un cuchillo sin filo resbala más fácilmente. Corta sobre una tabla que no se mueva: pon un paño mojado debajo. Dobla los dedos hacia dentro, como una garra. Camina con la punta hacia abajo, pegada a la pierna, y di “Mes!” cuando pases junto a alguien. Nunca dejes un cuchillo en un fregadero lleno de agua: alguien lo puede coger sin verlo. ¿Se cae un cuchillo? Échate atrás, no lo cojas. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.knives.p': "¡Cuchillo! Paso detrás de ti.", // nieuw, nalezen
+    'c.knives.s': "Estás cortando. El cuchillo resbala de la tabla y se cae. ¿Qué haces?", // nieuw, nalezen
+    'c.knives.o1': "Te echas atrás, y lo dejas caer.", // nieuw, nalezen
+    'c.knives.o2': "Lo coges rápido con la mano.", // nieuw, nalezen
+    'c.knives.o3': "Lo paras con el pie.", // nieuw, nalezen
+    'c.knives.w': "Un cuchillo que cae te puede hacer un corte profundo en la mano o en el pie. Un cuchillo en el suelo solo hay que lavarlo.", // nieuw, nalezen
+    'l.rawcooked': "Crudo, cocinado y alérgenos", // nieuw, nalezen
+    'w.rauw': "crudo (no cocinado)", // nieuw, nalezen
+    'w.gaar': "hecho, en su punto (listo para comer)", // nieuw, nalezen
+    'w.afdekken': "tapar (con una tapa o con film)", // nieuw, nalezen
+    'w.kleurcode': "el código de colores (un color de tabla y de cuchillo para cada tipo de alimento)", // nieuw, nalezen
+    'w.allergenenlijst': "la lista de alérgenos (dice lo que lleva cada plato)", // nieuw, nalezen
+    'w.glutenvrij': "sin gluten", // nieuw, nalezen
+    's.rawcooked.1': "La carne cruda va abajo en la nevera.", // nieuw, nalezen
+    's.rawcooked.2': "¿Ya está hecho el pollo?", // nieuw, nalezen
+    's.rawcooked.3': "Tapa los recipientes en la cámara frigorífica.", // nieuw, nalezen
+    'c.rawcooked.q': "¿Esta salsa es sin gluten?", // nieuw, nalezen
+    'c.rawcooked.a': "No lo sé con seguridad. Miro la lista de alérgenos.", // nieuw, nalezen
+    'c.rawcooked': "Lo crudo y lo listo nunca se tocan", // nieuw, nalezen
+    'c.rawcooked.b': "La carne, el pescado y los huevos crudos pueden llevar gérmenes. Mantenlos lejos de la comida que está lista para comer. Usa otra tabla y otro cuchillo, o el código de colores de tu cocina, y lávate las manos después de tocar comida cruda. La carne cruda va abajo en la nevera, para que no gotee sobre otra comida. Tapa la comida y ponle la fecha. Con las alergias, una traza puede ser suficiente: usa utensilios limpios. Un restaurante tiene que poder decir a los clientes qué alérgenos lleva un plato: mira la lista de alérgenos. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.rawcooked.p': "¿Qué tabla es para la carne cruda?", // nieuw, nalezen
+    'c.rawcooked.s': "Has cortado pollo crudo. Ahora tienes que cortar tomates para una ensalada. ¿Qué haces?", // nieuw, nalezen
+    'c.rawcooked.o1': "Coges una tabla limpia y un cuchillo limpio.", // nieuw, nalezen
+    'c.rawcooked.o2': "Limpias la tabla con un paño, y sigues.", // nieuw, nalezen
+    'c.rawcooked.o3': "Cortas los tomates en la misma tabla.", // nieuw, nalezen
+    'c.rawcooked.w': "Los gérmenes del pollo crudo pasan a los tomates, y una ensalada no se vuelve a cocinar. Una tabla limpia lo evita.", // nieuw, nalezen
+    'l.pass': "La zona de fregado y el pase", // nieuw, nalezen
+    'w.pass': "el pase (el mostrador donde los platos esperan al camarero)", // nieuw, nalezen
+    'w.bon': "la comanda (el pedido del camarero a la cocina)", // nieuw, nalezen
+    'w.spoelkeuken': "la zona de fregado (donde se lavan los platos)", // nieuw, nalezen
+    'w.vaatwaskorf': "la cesta del lavavajillas (la cesta que entra en el lavavajillas)", // nieuw, nalezen
+    'w.voorspoelen': "prelavar (enjuagar antes de la máquina)", // nieuw, nalezen
+    'w.warmhoudlamp': "la lámpara de calor (mantiene calientes los platos)", // nieuw, nalezen
+    's.pass.1': "La mesa ocho está en el pase.", // nieuw, nalezen
+    's.pass.2': "Entran dos comandas nuevas.", // nieuw, nalezen
+    's.pass.3': "Primero prelava los platos.", // nieuw, nalezen
+    'c.pass.q': "¿Dónde está la mesa doce?", // nieuw, nalezen
+    'c.pass.a': "Está en el pase. La llevo ahora.", // nieuw, nalezen
+    'c.pass': "El pase: los platos no esperan", // nieuw, nalezen
+    'c.pass.b': "En el pase, la cocina deja los platos para el camarero. La comida caliente tiene que llegar rápido al cliente, así que un plato no espera mucho en el pase. Mira la comanda: ¿la mesa correcta, los platos correctos, el borde del plato limpio? Entonces llévalo. En la zona de fregado: prelava, pon todo en las cestas, y deja que la máquina haga el resto. No abras la máquina mientras funciona: el vapor quema mucho. Ponte guantes cuando rellenes los productos de la máquina. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.pass.p': "¿De qué mesa es esto?", // nieuw, nalezen
+    'c.pass.s': "Hay dos platos en el pase. No sabes para qué mesa son. ¿Qué haces?", // nieuw, nalezen
+    'c.pass.o1': "Miras la comanda, o preguntas al jefe de cocina.", // nieuw, nalezen
+    'c.pass.o2': "Los llevas a una mesa que está esperando.", // nieuw, nalezen
+    'c.pass.o3': "Esperas hasta que otra persona los lleve.", // nieuw, nalezen
+    'c.pass.w': "Un plato en la mesa equivocada significa dos mesas esperando y comida fría. Una pregunta corta es más rápida.", // nieuw, nalezen
+    'l.bill': "Los platos y la cuenta", // nieuw, nalezen
+    'w.voorgerecht': "el entrante (el primer plato)", // nieuw, nalezen
+    'w.hoofdgerecht': "el plato principal", // nieuw, nalezen
+    'w.nagerecht': "el postre", // nieuw, nalezen
+    'w.reservering': "la reserva (una mesa reservada antes)", // nieuw, nalezen
+    'w.pinapparaat': "el datáfono (la máquina para pagar con tarjeta)", // nieuw, nalezen
+    'w.apartbetalen': "pagar por separado (cada persona paga lo suyo)", // nieuw, nalezen
+    's.bill.1': "¿Tiene reserva?", // nieuw, nalezen
+    's.bill.2': "¿Quieren pagar juntos o por separado?", // nieuw, nalezen
+    's.bill.3': "¿Les traigo ya el plato principal?", // nieuw, nalezen
+    'c.bill.q': "¿Podemos pagar por separado?", // nieuw, nalezen
+    'c.bill.a': "Sí, claro. Voy a por el datáfono.", // nieuw, nalezen
+    'c.bill': "Dinero en la mesa: cuéntalo dos veces", // nieuw, nalezen
+    'c.bill.b': "Cuando un cliente paga, di el importe claramente y deja que el cliente vea el datáfono. Con efectivo, cuenta el dinero cuando lo recibes, y otra vez cuando das el cambio. El dinero va a la caja o a tu cartera de camarero, nunca a tu propio bolsillo. Las propinas (fooi) van donde dice tu empresa, por ejemplo al bote de las propinas. ¿Un cliente se ha ido sin pagar? No corras detrás de él: díselo a tu encargado. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.bill.p': "Son cuarenta y cinco euros, por favor.", // nieuw, nalezen
+    'c.bill.s': "Un cliente te da dinero y dice: “Está justo.” No lo has contado. ¿Qué haces?", // nieuw, nalezen
+    'c.bill.o1': "Lo cuentas mientras el cliente está delante.", // nieuw, nalezen
+    'c.bill.o2': "Lo guardas, y lo cuentas más tarde.", // nieuw, nalezen
+    'c.bill.o3': "Confías en el cliente: le das las gracias.", // nieuw, nalezen
+    'c.bill.w': "Si cuentas más tarde y falta dinero, nadie puede comprobar qué pasó. Contar en la mesa protege al cliente y a ti.", // nieuw, nalezen
+    'u.carework': "Cuidado personal y atención a domicilio", // nieuw, nalezen
+    'l.washing': "Lavar y vestir", // nieuw, nalezen
+    'w.washandje': "la manopla (un paño pequeño como un guante)", // nieuw, nalezen
+    'w.douchestoel': "la silla de ducha", // nieuw, nalezen
+    'w.tandenpoetsen': "lavarse los dientes", // nieuw, nalezen
+    'w.kammen': "peinar", // nieuw, nalezen
+    'w.scheren': "afeitar", // nieuw, nalezen
+    'w.steunkous': "la media de compresión (una media apretada para las piernas)", // nieuw, nalezen
+    's.washing.1': "¿El agua está bastante caliente?", // nieuw, nalezen
+    's.washing.2': "¿Quiere lavarse la cara sin ayuda?", // nieuw, nalezen
+    's.washing.3': "Ahora le pongo las medias de compresión.", // nieuw, nalezen
+    'c.washing.q': "Hoy no me quiero duchar.", // nieuw, nalezen
+    'c.washing.a': "Está bien. ¿Le ayudo en el lavabo?", // nieuw, nalezen
+    'c.washing': "Pregunta primero, tapa, y deja elegir", // nieuw, nalezen
+    'c.washing.b': "Lavar a alguien es algo muy personal. Di lo que vas a hacer, y pregunta primero. Tapa con una toalla las partes del cuerpo que no estás lavando. Cierra la puerta o la cortina. Deja que el cliente elija: la ducha o lavarse en el lavabo, y qué ropa ponerse. Deja que el cliente haga lo que todavía puede hacer, también cuando va más lento. ¿Un cliente dice que no? No le obligues. Inténtalo más tarde, ofrece otra cosa, y díselo a la enfermera.", // nieuw, nalezen
+    'c.washing.p': "¿Qué le gustaría ponerse hoy?", // nieuw, nalezen
+    'c.washing.s': "Una clienta dice que hoy no quiere que la laven. ¿Qué haces?", // nieuw, nalezen
+    'c.washing.o1': "Lo aceptas, y se lo dices a la enfermera.", // nieuw, nalezen
+    'c.washing.o2': "La lavas de todos modos: está en la lista.", // nieuw, nalezen
+    'c.washing.o3': "Te lo saltas, y no dices nada.", // nieuw, nalezen
+    'c.washing.w': "Un cliente puede decir que no. Obligar a alguien hace daño a la confianza. La enfermera puede ver por qué, y qué se puede hacer.", // nieuw, nalezen
+    'l.observing': "Observar e informar", // nieuw, nalezen
+    'w.rapporteren': "informar por escrito (escribir lo que has visto, en el expediente de cuidados)", // nieuw, nalezen
+    'w.zorgdossier': "el expediente de cuidados (todo sobre los cuidados de un cliente)", // nieuw, nalezen
+    'w.drukplek': "la úlcera por presión (una mancha roja por estar mucho tiempo tumbado o sentado)", // nieuw, nalezen
+    'w.huid': "la piel", // nieuw, nalezen
+    'w.plassen': "hacer pis", // nieuw, nalezen
+    'w.vochtlijst': "el registro de líquidos (cuánto bebe un cliente)", // nieuw, nalezen
+    's.observing.1': "La señora tiene una mancha roja en el talón.", // nieuw, nalezen
+    's.observing.2': "El señor ha bebido poco hoy.", // nieuw, nalezen
+    's.observing.3': "Lo escribo en el expediente de cuidados.", // nieuw, nalezen
+    'c.observing.q': "¿Hay algo especial con la señora Jansen?", // nieuw, nalezen
+    'c.observing.a': "Sí. Hoy casi no ha hecho pis.", // nieuw, nalezen
+    'c.observing': "Escribe lo que ves, no lo que piensas", // nieuw, nalezen
+    'c.observing.b': "Lo que escribes en el expediente de cuidados lo lee el siguiente compañero. Escribe hechos: lo que has visto, oído o medido, y cuándo. No “Mevrouw is lastig”, sino “Mevrouw wilde niet eten en duwde het bord weg.” Escríbelo el mismo día, con frases cortas. ¿No sabes bien cómo escribirlo en neerlandés? Díselo a la enfermera, y escribidlo juntos. Mira la piel cuando lavas a alguien: una mancha roja que no se va puede ser el principio de una úlcera por presión. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.observing.p': "Escribo lo que he visto.", // nieuw, nalezen
+    'c.observing.s': "Una clienta se enfadó durante el lavado. Tienes que escribirlo en el expediente. ¿Qué haces?", // nieuw, nalezen
+    'c.observing.o1': "Escribes lo que dijo e hizo, y cuándo.", // nieuw, nalezen
+    'c.observing.o2': "Escribes: “Señora difícil, como siempre.”", // nieuw, nalezen
+    'c.observing.o3': "No escribes nada: es normal.", // nieuw, nalezen
+    'c.observing.w': "Los hechos ayudan al siguiente compañero y a la enfermera a actuar. Una opinión no dice lo que pasó.", // nieuw, nalezen
+    'l.homecare': "Atención a domicilio", // nieuw, nalezen
+    'w.thuiszorg': "la atención a domicilio (cuidados en la propia casa del cliente)", // nieuw, nalezen
+    'w.sleutelkluis': "la caja de llaves (una cajita con código, con la llave de la casa dentro)", // nieuw, nalezen
+    'w.zorgplan': "el plan de cuidados (qué cuidados recibe un cliente, y cómo)", // nieuw, nalezen
+    'w.wijkverpleegkundige': "el enfermero, la enfermera de barrio (del equipo de atención a domicilio)", // nieuw, nalezen
+    'w.mantelzorger': "el cuidador familiar (un familiar o amigo que cuida al cliente)", // nieuw, nalezen
+    'w.alarmknop': "el botón de alarma (lo lleva el cliente, para pedir ayuda)", // nieuw, nalezen
+    's.homecare.1': "Primero llamo al timbre. Luego cojo la llave.", // nieuw, nalezen
+    's.homecare.2': "¿Qué pone en el plan de cuidados?", // nieuw, nalezen
+    's.homecare.3': "Hoy llego un cuarto de hora tarde.", // nieuw, nalezen
+    'c.homecare.q': "¿Quién es?", // nieuw, nalezen
+    'c.homecare.a': "Buenos días, la atención a domicilio. ¿Puedo pasar?", // nieuw, nalezen
+    'c.homecare': "De visita en casa de otra persona", // nieuw, nalezen
+    'c.homecare.b': "En la atención a domicilio trabajas en la propia casa del cliente. Allí estás de visita: llama al timbre y di quién eres, también cuando tienes llave. El código de la caja de llaves es secreto. Nunca lo escribas donde otros lo puedan ver, y cierra siempre otra vez la caja de llaves. Sigue el plan de cuidados: lo que haces está ahí. ¿Algo es diferente, o el cliente no abre la puerta? No te vayas sin más. Llama a tu equipo o a la enfermera de barrio. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.homecare.p': "Buenos días, soy de la atención a domicilio.", // nieuw, nalezen
+    'c.homecare.s': "Llamas al timbre. La clienta no abre. Su coche está allí. ¿Qué haces?", // nieuw, nalezen
+    'c.homecare.o1': "Llamas a tu equipo, y esperas.", // nieuw, nalezen
+    'c.homecare.o2': "Sigues con el siguiente cliente.", // nieuw, nalezen
+    'c.homecare.o3': "Llamas al timbre otra vez, y te vas.", // nieuw, nalezen
+    'c.homecare.w': "Puede que la clienta se haya caído, o esté enferma. Tu equipo sabe qué hacer, y quién tiene llave.", // nieuw, nalezen
+    'l.liftaids': "Ayudas para mover y seguridad", // nieuw, nalezen
+    'w.glijlaken': "la sábana deslizante (una sábana lisa para mover a un cliente en la cama)", // nieuw, nalezen
+    'w.tilband': "el arnés (va debajo del cliente, para la grúa)", // nieuw, nalezen
+    'w.stalift': "la grúa de bipedestación (ayuda a un cliente a ponerse de pie)", // nieuw, nalezen
+    'w.werkhoogte': "la altura de trabajo (la cama a la altura de tus caderas)", // nieuw, nalezen
+    'w.bedhek': "la barandilla de la cama", // nieuw, nalezen
+    'w.transferplank': "la tabla de transferencia (una tabla para deslizarse de la cama a una silla)", // nieuw, nalezen
+    's.liftaids.1': "Pon la cama a la altura de trabajo.", // nieuw, nalezen
+    's.liftaids.2': "¿Tiene puesto el freno la silla de ruedas?", // nieuw, nalezen
+    's.liftaids.3': "Esto lo hacemos entre dos.", // nieuw, nalezen
+    'c.liftaids.q': "¿Puedes darle la vuelta a la señora sin ayuda?", // nieuw, nalezen
+    'c.liftaids.a': "Con la sábana deslizante sí. Voy a por ella.", // nieuw, nalezen
+    'c.liftaids': "Deja que la ayuda haga el esfuerzo", // nieuw, nalezen
+    'c.liftaids.b': "Antes de usar una grúa, revísala: ¿está cargada la batería, el arnés es de la talla correcta y no está roto? Pon el freno en la cama y en la silla de ruedas. Sube la cama a la altura de tus caderas, para no agacharte. Explica al cliente cada paso. El plan de cuidados dice qué ayuda necesita un cliente. ¿Una ayuda está rota o falta? No lo hagas de otra manera: avísalo, y pide ayuda a un compañero. ¿No te han enseñado cómo funciona una ayuda? Pregunta antes de empezar. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.liftaids.p': "El arnés está roto. Voy a por otro.", // nieuw, nalezen
+    'c.liftaids.s': "Quieres usar la grúa. El arnés tiene un pequeño desgarro. ¿Qué haces?", // nieuw, nalezen
+    'c.liftaids.o1': "Coges otro arnés, y avisas del desgarro.", // nieuw, nalezen
+    'c.liftaids.o2': "Lo usas: el desgarro es muy pequeño.", // nieuw, nalezen
+    'c.liftaids.o3': "Haces un nudo en el arnés.", // nieuw, nalezen
+    'c.liftaids.w': "Un desgarro pequeño se puede hacer más grande con el peso de una persona. Una caída de una grúa puede hacer mucho daño al cliente.", // nieuw, nalezen
+    'u.shopfloor': "Caja, existencias y cierre", // nieuw, nalezen
+    'l.returns': "Devoluciones y la caja", // nieuw, nalezen
+    'w.terugbrengen': "devolver (un producto a la tienda)", // nieuw, nalezen
+    'w.klantenkaart': "la tarjeta de cliente (una tarjeta para acumular puntos)", // nieuw, nalezen
+    'w.statiegeld': "el depósito (dinero que te devuelven por una botella o lata vacía)", // nieuw, nalezen
+    'w.kassalade': "el cajón de la caja (el cajón con el dinero)", // nieuw, nalezen
+    'w.streepjescode': "el código de barras", // nieuw, nalezen
+    'w.tegoedbon': "el vale (un papel para gastar más tarde en la tienda)", // nieuw, nalezen
+    's.returns.1': "¿Acumula puntos con la tarjeta de cliente?", // nieuw, nalezen
+    's.returns.2': "El código de barras no funciona.", // nieuw, nalezen
+    's.returns.3': "¿Quiere que le devuelva el dinero o prefiere un vale?", // nieuw, nalezen
+    'c.returns.q': "Quiero devolver este jersey.", // nieuw, nalezen
+    'c.returns.a': "Se puede. ¿Todavía tiene el tique?", // nieuw, nalezen
+    'c.returns': "Devoluciones: sigue las normas de la tienda", // nieuw, nalezen
+    'c.returns.b': "Cada tienda tiene sus propias normas para las devoluciones: cuántos días, con o sin tique, devolver el dinero o dar un vale. Apréndelas, y síguelas con cada cliente. ¿Tienes dudas? Pregunta a un compañero o al encargado, y no lo decidas por tu cuenta. Al final de tu turno, cuenta el cajón de tu caja, con un compañero si en tu tienda se hace así. Nunca cojas dinero de la caja para ti, ni siquiera prestado un momento. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.returns.p': "Un momento, se lo pregunto al encargado de la tienda.", // nieuw, nalezen
+    'c.returns.s': "Una clienta quiere que le devuelvan el dinero de unos zapatos. No tiene tique. No conoces la norma. ¿Qué haces?", // nieuw, nalezen
+    'c.returns.o1': "Preguntas al encargado qué hacer.", // nieuw, nalezen
+    'c.returns.o2': "Le devuelves el dinero: es simpática.", // nieuw, nalezen
+    'c.returns.o3': "Dices que no, y la mandas fuera.", // nieuw, nalezen
+    'c.returns.w': "El encargado conoce las normas y puede decidir. Así la clienta recibe una respuesta justa, y tú no tienes la culpa.", // nieuw, nalezen
+    'l.facing': "Encarar y los productos fríos", // nieuw, nalezen
+    'w.facen': "encarar (poner los productos delante, con la etiqueta hacia fuera)", // nieuw, nalezen
+    'w.afprijzen': "rebajar (poner un precio más bajo)", // nieuw, nalezen
+    'w.koelvak': "el estante refrigerado (la estantería fría de una tienda)", // nieuw, nalezen
+    'w.diepvries': "el congelador", // nieuw, nalezen
+    'w.uitpakken': "desembalar", // nieuw, nalezen
+    'w.schapkaartje': "la etiqueta del estante (la etiqueta del precio en el estante)", // nieuw, nalezen
+    's.facing.1': "Primero el estante refrigerado, luego lo demás.", // nieuw, nalezen
+    's.facing.2': "Pon todo bien hacia delante.", // nieuw, nalezen
+    's.facing.3': "Rebaja los productos de hoy.", // nieuw, nalezen
+    'c.facing.q': "¿Has terminado con el estante refrigerado?", // nieuw, nalezen
+    'c.facing.a': "Casi. Todavía tengo que encarar.", // nieuw, nalezen
+    'c.facing': "Primero lo frío, y el estante parece lleno", // nieuw, nalezen
+    'c.facing.b': "Los productos fríos y congelados van primero a la nevera o al congelador, antes que nada. No pueden estar mucho tiempo fuera del frío. Luego lo demás. Encarar significa: poner los productos delante, con la etiqueta hacia el cliente. Así el estante parece lleno y ordenado. Mira la etiqueta del estante: ¿es correcto el precio para este producto? Cuando abras cajas, corta hacia fuera de tu cuerpo, y no muy hondo: puedes dañar el producto. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.facing.p': "Primero los productos fríos, luego lo demás.", // nieuw, nalezen
+    'c.facing.s': "Llegan un palé con leche y un palé con patatas fritas. No hay nadie más. ¿Qué haces?", // nieuw, nalezen
+    'c.facing.o1': "Primero pones la leche en la nevera.", // nieuw, nalezen
+    'c.facing.o2': "Empiezas por las patatas fritas: pesan menos.", // nieuw, nalezen
+    'c.facing.o3': "Dejas los dos hasta que venga un compañero.", // nieuw, nalezen
+    'c.facing.w': "La leche que está mucho tiempo fuera del frío puede poner enfermos a los clientes, y hay que tirarla. Las patatas fritas pueden esperar.", // nieuw, nalezen
+    'l.shrink': "Daños y robos", // nieuw, nalezen
+    'w.derving': "la merma (lo que pierde la tienda: productos rotos, viejos o robados)", // nieuw, nalezen
+    'w.afschrijven': "dar de baja (registrar un producto como perdido)", // nieuw, nalezen
+    'w.personeelsaankoop': "la compra de personal (lo que compras en tu propia tienda)", // nieuw, nalezen
+    'w.tassencontrole': "el control de bolsos", // nieuw, nalezen
+    'w.kassamedewerker': "el cajero, la cajera", // nieuw, nalezen
+    'w.winkelwagen': "el carro de la compra", // nieuw, nalezen
+    's.shrink.1': "Este tarro está roto. Lo doy de baja.", // nieuw, nalezen
+    's.shrink.2': "Pago mi compra en la caja de un compañero.", // nieuw, nalezen
+    's.shrink.3': "Hay un carro lleno junto a la salida.", // nieuw, nalezen
+    'c.shrink.q': "¿Puedo mirar un momento en tu bolso?", // nieuw, nalezen
+    'c.shrink.a': "Sí, claro. Aquí está mi tique.", // nieuw, nalezen
+    'c.shrink': "Tu propia compra: paga como un cliente", // nieuw, nalezen
+    'c.shrink.b': "Una tienda pierde mucho por productos rotos, productos viejos y robos. Ayuda a que sea poco. ¿Un producto roto o dañado? No lo vuelvas a poner en el estante: dalo de baja como se hace en tu tienda. Tu propia compra: págala en la caja como cualquier cliente, y guarda el tique. En muchas tiendas no puedes pasar tú tu propia compra por caja: lo hace un compañero. Nunca te comas ni te lleves un producto sin pagar, ni siquiera uno pequeño. Algunas tiendas revisan los bolsos: es una norma de la tienda, no una señal de desconfianza hacia ti. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.shrink.p': "Primero pago, y guardo el tique.", // nieuw, nalezen
+    'c.shrink.s': "Al final de tu turno tienes hambre. Un bocadillo caduca hoy. ¿Qué haces?", // nieuw, nalezen
+    'c.shrink.o1': "Preguntas al encargado cuál es la norma.", // nieuw, nalezen
+    'c.shrink.o2': "Te lo comes: de todos modos se tira.", // nieuw, nalezen
+    'c.shrink.o3': "Te lo llevas a casa en el bolso.", // nieuw, nalezen
+    'c.shrink.w': "En muchas tiendas, llevarse un producto sin pagar es robar, también cuando está caducado. Preguntar primero te protege.", // nieuw, nalezen
+    'l.shopclose': "Cerrar la tienda", // nieuw, nalezen
+    'w.sluitingstijd': "la hora de cierre", // nieuw, nalezen
+    'w.rolluik': "la persiana metálica", // nieuw, nalezen
+    'w.kasverschil': "el descuadre de caja (más o menos dinero en la caja del que debería haber)", // nieuw, nalezen
+    'w.kluis': "la caja fuerte (una caja fuerte para el dinero)", // nieuw, nalezen
+    'w.overval': "el atraco (alguien se lleva dinero con amenazas)", // nieuw, nalezen
+    'w.achterdeur': "la puerta de atrás", // nieuw, nalezen
+    's.shopclose.1': "Cerramos dentro de diez minutos.", // nieuw, nalezen
+    's.shopclose.2': "Contamos la caja entre dos.", // nieuw, nalezen
+    's.shopclose.3': "¿Está cerrada con llave la puerta de atrás?", // nieuw, nalezen
+    'c.shopclose.q': "¿Puedo entrar un momento rápido?", // nieuw, nalezen
+    'c.shopclose.a': "Lo siento, está cerrado. Mañana abrimos a las ocho.", // nieuw, nalezen
+    'c.shopclose': "Un atraco: dalo, y ponte a salvo", // nieuw, nalezen
+    'c.shopclose.b': "A la hora de cierre hay mucho dinero en la caja, así que las tiendas tienen normas: contarlo entre dos, llevar el dinero a la caja fuerte, y antes cerrar con llave la puerta de atrás. ¿Un atraco (overval)? Tu vida vale más que el dinero. Mantén la calma, haz lo que te dicen, y no luches ni corras detrás de ellos. Recuerda lo que puedas: la ropa, la altura, la voz. Cuando se hayan ido: cierra la puerta con llave, llama al 112, y no toques nada. Después, habla de ello con tu encargado o con alguien de confianza. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.shopclose.p': "Vamos a cerrar. Cierro la puerta con llave.", // nieuw, nalezen
+    'c.shopclose.s': "Un hombre con un cuchillo quiere el dinero de tu caja. ¿Qué haces?", // nieuw, nalezen
+    'c.shopclose.o1': "Mantienes la calma, y le das el dinero.", // nieuw, nalezen
+    'c.shopclose.o2': "Luchas con él: el dinero no es suyo.", // nieuw, nalezen
+    'c.shopclose.o3': "Corres al fondo, y te encierras.", // nieuw, nalezen
+    'c.shopclose.w': "Luchar o correr pone nervioso al atracador y lo hace más peligroso. El dinero se puede reponer. Tú no.", // nieuw, nalezen
+    'u.uitzend': "Trabajar con una agencia de trabajo temporal", // nieuw, nalezen
+    'l.hirer': "La agencia y la empresa usuaria", // nieuw, nalezen
+    'w.inlener': "la empresa usuaria (la empresa donde la agencia te manda a trabajar)", // nieuw, nalezen
+    'w.vestiging': "la oficina (la oficina de la agencia en tu ciudad)", // nieuw, nalezen
+    'w.intakegesprek': "la entrevista de entrada (la primera conversación en la agencia)", // nieuw, nalezen
+    'w.opstapplaats': "el punto de recogida (donde te recoge el autobús de la agencia)", // nieuw, nalezen
+    'w.bedrijfsregels': "las normas de la empresa (las normas de la empresa usuaria)", // nieuw, nalezen
+    'w.aanspreekpunt': "la persona de contacto (la persona a la que vas con tus preguntas)", // nieuw, nalezen
+    's.hirer.1': "Mañana trabajas en una empresa usuaria nueva.", // nieuw, nalezen
+    's.hirer.2': "¿Quién es aquí mi persona de contacto?", // nieuw, nalezen
+    's.hirer.3': "El autobús sale del punto de recogida a las seis.", // nieuw, nalezen
+    'c.hirer.q': "¿Puedes empezar mañana en una empresa usuaria nueva?", // nieuw, nalezen
+    'c.hirer.a': "Sí. ¿A qué hora tengo que estar allí?", // nieuw, nalezen
+    'c.hirer': "Dos empresas: ¿quién hace qué?", // nieuw, nalezen
+    'c.hirer.b': "Trabajas a través de una agencia (uitzendbureau), pero haces el trabajo en otra empresa: la empresa usuaria (inlener). La agencia es tu empleador: tu contrato, tu sueldo, tu nómina y tus días libres vienen de la agencia. La empresa usuaria te dice qué hacer en el trabajo, y tiene que hacer que tu trabajo sea seguro, igual que para sus propios trabajadores. Avisa de que estás de baja como dice tu agencia: muchas veces a la agencia y a la empresa usuaria. Guarda en tu móvil el nombre y el teléfono de tu persona de contacto en la agencia. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.", // nieuw, nalezen
+    'c.hirer.p': "¿Quién es mi persona de contacto en la agencia?", // nieuw, nalezen
+    'c.hirer.s': "En la empresa usuaria tienes que trabajar con una máquina. Nadie te ha enseñado cómo. ¿Qué haces?", // nieuw, nalezen
+    'c.hirer.o1': "Pides a la empresa usuaria que primero te lo enseñe.", // nieuw, nalezen
+    'c.hirer.o2': "Lo intentas: la responsable es la agencia.", // nieuw, nalezen
+    'c.hirer.o3': "Te vas a casa, y no dices nada.", // nieuw, nalezen
+    'c.hirer.w': "La empresa usuaria te tiene que enseñar a trabajar de forma segura, igual que a sus propios trabajadores. Pedirlo es tu derecho.", // nieuw, nalezen
+    'l.phases': "Tu contrato y las fases", // nieuw, nalezen
+    'w.fase': "la fase (un paso en tu contrato de agencia: A, B o C)", // nieuw, nalezen
+    'w.uitzendbeding': "la cláusula de agencia (tu trabajo puede terminar cuando la empresa usuaria ya no te necesita)", // nieuw, nalezen
+    'w.aflopen': "terminar, vencer (un contrato)", // nieuw, nalezen
+    'w.doorwerken': "seguir trabajando (en el mismo sitio)", // nieuw, nalezen
+    'w.vastecontract': "el contrato indefinido (un contrato sin fecha de fin)", // nieuw, nalezen
+    'w.onderbreking': "la interrupción (un tiempo sin trabajo entre dos contratos)", // nieuw, nalezen
+    's.phases.1': "¿En qué fase estoy ahora?", // nieuw, nalezen
+    's.phases.2': "Mi contrato termina la semana que viene.", // nieuw, nalezen
+    's.phases.3': "¿Puedo seguir trabajando aquí?", // nieuw, nalezen
+    'c.phases.q': "Tu encargo termina el viernes.", // nieuw, nalezen
+    'c.phases.a': "Vale. ¿Tiene otro trabajo para mí?", // nieuw, nalezen
+    'c.phases': "Fases A, B y C", // nieuw, nalezen
+    'c.phases.b': "La mayoría de los trabajadores temporales trabajan con un cao para trabajadores temporales (uitzend-cao). Tiene fases. En la fase A, tu trabajo normalmente puede terminar cuando la empresa usuaria ya no te necesita (uitzendbeding). En la fase B, tienes contratos por un tiempo fijo. En la fase C, tienes un contrato indefinido con la agencia. Cuánto dura cada fase está en tu cao. Pregunta a la agencia en qué fase estás, y guarda todos tus contratos. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.", // nieuw, nalezen
+    'c.phases.p': "¿Cuánto dura la fase A para mí?", // nieuw, nalezen
+    'c.phases.s': "Llevas mucho tiempo trabajando para la misma agencia. Todavía te dan contratos cortos. ¿Qué haces?", // nieuw, nalezen
+    'c.phases.o1': "Preguntas a la agencia en qué fase estás.", // nieuw, nalezen
+    'c.phases.o2': "Nada: el trabajo temporal siempre es corto.", // nieuw, nalezen
+    'c.phases.o3': "Lo dejas, y buscas otra agencia.", // nieuw, nalezen
+    'c.phases.w': "Después de bastante tiempo, el cao te da más seguridad. La agencia te puede decir dónde estás, y el sindicato lo puede revisar contigo.", // nieuw, nalezen
+    'l.deductions': "El sueldo y los descuentos", // nieuw, nalezen
+    'w.inhouding': "el descuento (dinero que te quitan del sueldo)", // nieuw, nalezen
+    'w.vastekracht': "el trabajador fijo (un trabajador contratado por la propia empresa usuaria)", // nieuw, nalezen
+    'w.vervoer': "el transporte (el autobús o la furgoneta al trabajo)", // nieuw, nalezen
+    'w.schriftelijk': "por escrito (en papel o en un correo electrónico)", // nieuw, nalezen
+    'w.navragen': "comprobar, preguntar (averiguar si algo está bien)", // nieuw, nalezen
+    'w.brutoloon': "el sueldo bruto (tu sueldo antes de impuestos y descuentos)", // nieuw, nalezen
+    's.deductions.1': "¿Qué es este descuento en mi nómina?", // nieuw, nalezen
+    's.deductions.2': "¿Gano lo mismo que los trabajadores fijos?", // nieuw, nalezen
+    's.deductions.3': "Primero quiero verlo en papel.", // nieuw, nalezen
+    'c.deductions.q': "Te descontamos del sueldo el coste del autobús.", // nieuw, nalezen
+    'c.deductions.a': "¿Eso se puede? Primero lo voy a comprobar.", // nieuw, nalezen
+    'c.deductions': "¿Qué te pueden quitar del sueldo?", // nieuw, nalezen
+    'c.deductions.b': "Tienes derecho como mínimo al mismo sueldo que los trabajadores de la empresa usuaria que hacen el mismo trabajo. El dinero que te quitan del sueldo (inhouding) tiene que estar en tu nómina. Los impuestos y las cotizaciones se descuentan por ley. Aparte de eso, la agencia solo puede descontar dos gastos del salario mínimo: el alquiler de tu vivienda y la prima del seguro de salud, y solo si lo aceptaste por escrito. Otros gastos, como el transporte, la ropa de trabajo, las multas o una comisión por buscarte trabajo, no se pueden descontar del salario mínimo. ¿No entiendes un descuento? Pide a la agencia que te lo explique por escrito. Es información general. Para tu situación: pregunta al sindicato, al Juridisch Loket o a FairWork.", // nieuw, nalezen
+    'c.deductions.p': "¿Para qué es este descuento?", // nieuw, nalezen
+    'c.deductions.s': "La agencia te quita dinero del sueldo por el autobús al trabajo. Ganas el salario mínimo. ¿Qué haces?", // nieuw, nalezen
+    'c.deductions.o1': "Lo preguntas: esto no está permitido.", // nieuw, nalezen
+    'c.deductions.o2': "Nada: coges el autobús todos los días.", // nieuw, nalezen
+    'c.deductions.o3': "Dejas de coger el autobús, y vas andando.", // nieuw, nalezen
+    'c.deductions.w': "Del salario mínimo solo se pueden descontar el alquiler y el seguro de salud, y solo con tu sí por escrito. El sindicato o el Juridisch Loket te pueden ayudar.", // nieuw, nalezen
+    'l.agencyhome': "La vivienda y la ayuda", // nieuw, nalezen
+    'w.huisvesting': "la vivienda (un sitio para vivir, que organiza la agencia)", // nieuw, nalezen
+    'w.huisgenoot': "el compañero de piso (una persona que vive en la misma casa)", // nieuw, nalezen
+    'w.huisregels': "las normas de la casa (las normas de la casa donde vives)", // nieuw, nalezen
+    'w.huismeester': "el encargado de la vivienda (la persona que se ocupa de la casa)", // nieuw, nalezen
+    'w.meldpunt': "el punto de denuncia (un sitio donde puedes denunciar un problema)", // nieuw, nalezen
+    'w.advies': "el consejo", // nieuw, nalezen
+    's.agencyhome.1': "Quiero mi propio contrato de alquiler.", // nieuw, nalezen
+    's.agencyhome.2': "Hay moho en el baño.", // nieuw, nalezen
+    's.agencyhome.3': "Llamo al sindicato para pedir consejo.", // nieuw, nalezen
+    'c.agencyhome.q': "Tienes que dejar la casa el viernes.", // nieuw, nalezen
+    'c.agencyhome.a': "Eso es muy poco tiempo. Primero voy a pedir consejo.", // nieuw, nalezen
+    'c.agencyhome': "Tu casa, y dónde pedir ayuda", // nieuw, nalezen
+    'c.agencyhome.b': "¿La agencia te organiza la vivienda? Entonces recibes un contrato de alquiler propio, por escrito, aparte de tu contrato de trabajo. Guarda una copia. Ahí pone lo que pagas, y cómo y cuándo termina el alquiler. ¿Se termina tu trabajo? Tu casa no siempre termina el mismo día: pide consejo antes de irte. ¿Vivienda insegura o muy llena, amenazas, o un sueldo demasiado bajo? Busca ayuda: el sindicato, el Juridisch Loket (consejo legal gratis), FairWork, o la Nederlandse Arbeidsinspectie, donde también puedes denunciar de forma anónima. Es información general. Para tu situación: pregunta al sindicato, al Juridisch Loket o a FairWork.", // nieuw, nalezen
+    'c.agencyhome.p': "¿Me puede dar una copia de mi contrato de alquiler?", // nieuw, nalezen
+    'c.agencyhome.s': "Tu trabajo se termina. El encargado de la vivienda dice que tienes que dejar la casa hoy. ¿Qué haces?", // nieuw, nalezen
+    'c.agencyhome.o1': "Primero preguntas al sindicato o al Juridisch Loket.", // nieuw, nalezen
+    'c.agencyhome.o2': "Te vas hoy, y duermes en casa de un amigo.", // nieuw, nalezen
+    'c.agencyhome.o3': "Haces la maleta, y duermes en la calle.", // nieuw, nalezen
+    'c.agencyhome.w': "Tu contrato de alquiler tiene sus propias normas, aparte de tu trabajo. Un consejo te ayuda a saber cuándo tienes que irte de verdad.", // nieuw, nalezen
   },
 };
 

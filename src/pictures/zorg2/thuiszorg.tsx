@@ -25,11 +25,11 @@ export default {
       <path d="M44 54L79 22L114 54Z" fill={PAL.clayShade} />
       <path d="M44 52L79 20L106 45" fill="none" stroke={PAL.clay} strokeWidth="6" />
       <rect x="88" y="60" width="14" height="14" rx="2" fill={PAL.ice} />
+      <Shine d="M54 56V96" color={PAL.yellowShine} width={2.6} opacity={0.6} />
       <path d="M95 60V74M88 67H102" stroke={PAL.white} strokeWidth="2" />
       {/* The open front door */}
       <rect x="60" y="66" width="18" height="38" fill={PAL.slateDark} />
       <path d="M60 66L52 70V104L60 104Z" fill={PAL.green} />
-      <Shine d="M54 50V60" width={0} opacity={0} />
       {/* The carer walking up to the door */}
       <Move kind="from" dx={-30} once>
         <path d="M28 78L23 102M34 78L40 102" stroke={PAL.navy} strokeWidth="7.5" />

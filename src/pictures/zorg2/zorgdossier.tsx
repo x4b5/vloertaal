@@ -14,7 +14,6 @@ export default {
       <rect x="94" y="44" width="12" height="10" rx="2.5" fill={PAL.green} />
       <rect x="94" y="64" width="12" height="10" rx="2.5" fill={PAL.red} />
       {/* The back cover's edge and the spine */}
-      <path d="M86 16L100 8V96L86 106Z" fill={PAL.blueShade} opacity="0" />
       <rect x="18" y="14" width="14" height="92" rx="4" fill={PAL.blueShade} />
       {/* The front cover */}
       <Shade color={PAL.blueShade} opacity={1} at={[96, 60, 12, 60]}>

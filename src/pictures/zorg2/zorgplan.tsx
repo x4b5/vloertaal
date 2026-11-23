@@ -28,8 +28,8 @@ export default {
       <circle cx="32" cy="94" r="5.6" fill={PAL.white} />
       <path d="M32 90.5V94L34.6 95.6" stroke={PAL.ink} strokeWidth="1.6" />
       <path d="M48 90H90M48 98H74" stroke={PAL.line} strokeWidth="2.8" />
+      <Shine d="M22 42V104" color={PAL.ice} width={2.4} opacity={0.8} />
       <path d="M22 59H98M22 81H98" stroke={PAL.paperShade} strokeWidth="1.6" />
-      <Shine d="M22 40V100" width={0} opacity={0} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

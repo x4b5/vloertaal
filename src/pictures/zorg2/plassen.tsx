@@ -29,7 +29,6 @@ export default {
       <Move kind="from" dy={-22}>
         <path d={drop(48, 26)} fill={PAL.yellow} />
         <path d={drop(48, 46, 0.8)} fill={PAL.yellow} />
-        <path d={drop(48, 20, 0.6)} fill={PAL.yellowShade} transform="translate(0 -14)" opacity="0" />
       </Move>
     </g>
   ),

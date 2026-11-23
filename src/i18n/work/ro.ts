@@ -3952,6 +3952,412 @@ const t: CultureTranslation = {
     'c.grouprules.o2': "Îi pui copilului multe întrebări.", // nieuw, nalezen
     'c.grouprules.o3': "Îi suni pe părinți și îi întrebi de ce.", // nieuw, nalezen
     'c.grouprules.w': "Șeful știe pașii când îți faci griji pentru un copil. Multe întrebări pot speria copilul.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and "Werken via een uitzendbureau" (23 November 2026).
+    'u.housekeeping': "Băi, hoteluri și mașini", // nieuw, nalezen
+    'l.sanitary': "Toalete și chiuvete", // nieuw, nalezen
+    'w.wastafel': "chiuveta (lavoarul dintr-o baie sau toaletă)", // nieuw, nalezen
+    'w.toiletpot': "vasul de toaletă", // nieuw, nalezen
+    'w.toiletborstel': "peria de toaletă", // nieuw, nalezen
+    'w.urinoir': "pisoarul", // nieuw, nalezen
+    'w.kalk': "calcarul (depunerea albă lăsată de apă pe robinete și pe faianță)", // nieuw, nalezen
+    'w.ontstopper': "pompa de desfundat (o unealtă pentru o toaletă sau o scurgere înfundată)", // nieuw, nalezen
+    's.sanitary.1': "Întâi fac chiuvetele, apoi toaletele.", // nieuw, nalezen
+    's.sanitary.2': "E calcar pe robinet.", // nieuw, nalezen
+    's.sanitary.3': "Toaleta de la etajul întâi e înfundată.", // nieuw, nalezen
+    'c.sanitary.q': "Sunt gata toaletele?", // nieuw, nalezen
+    'c.sanitary.a': "Încă nu. O toaletă e înfundată.", // nieuw, nalezen
+    'c.sanitary': "De la curat la murdar", // nieuw, nalezen
+    'c.sanitary.b': "Într-o baie lucrezi de la curat la murdar: întâi oglinzile și chiuvetele, apoi toaletele, iar podeaua la sfârșit. Așa nu duci murdăria de la toaletă la chiuvetă. Folosește lavetele cu culoarea pentru toaletă și pune-ți mănuși. Curăță și peria de toaletă și las-o să se usuce. E o toaletă înfundată sau stricată? Pune un semn pe ușă și anunță. Spală-te pe mâini când termini, chiar dacă ai purtat mănuși. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.sanitary.p': "Toaleta asta e înfundată. Pun un semn pe ea.", // nieuw, nalezen
+    'c.sanitary.s': "Ai curățat o toaletă. Urmează chiuveta. Ai încă aceeași lavetă în mână. Ce faci?", // nieuw, nalezen
+    'c.sanitary.o1': "Iei o lavetă cu culoarea pentru chiuvetă.", // nieuw, nalezen
+    'c.sanitary.o2': "Folosești aceeași lavetă: încă pare curată.", // nieuw, nalezen
+    'c.sanitary.o3': "Clătești întâi laveta în toaletă.", // nieuw, nalezen
+    'c.sanitary.w': "Microbii de la toaletă sunt pe lavetă, chiar dacă nu îi vezi. O lavetă nouă îi ține departe de mâini și de fețe.", // nieuw, nalezen
+    'l.hotelroom': "Camere de hotel", // nieuw, nalezen
+    'w.laken': "cearșaful (pe pat)", // nieuw, nalezen
+    'w.kussensloop': "fața de pernă", // nieuw, nalezen
+    'w.dekbed': "pilota", // nieuw, nalezen
+    'w.handdoek': "prosopul", // nieuw, nalezen
+    'w.kamerlijst': "lista de camere (camerele pe care trebuie să le faci azi)", // nieuw, nalezen
+    'w.opmaken': "a face (patul)", // nieuw, nalezen
+    's.hotelroom.1': "Fac patul cu cearșafuri curate.", // nieuw, nalezen
+    's.hotelroom.2': "Pune două prosoape curate în baie.", // nieuw, nalezen
+    's.hotelroom.3': "Camera doisprezece e gata. Merg la treisprezece.", // nieuw, nalezen
+    'c.hotelroom.q': "Câte camere mai ai?", // nieuw, nalezen
+    'c.hotelroom.a': "Încă patru. Apoi lista mea e gata.", // nieuw, nalezen
+    'c.hotelroom': "Bate, spune cine ești și așteaptă", // nieuw, nalezen
+    'c.hotelroom.b': "Înainte să intri într-o cameră de hotel, bate la ușă și spune cine ești, de exemplu „Housekeeping!”. Așteaptă puțin și bate din nou. E un semn „Niet storen” pe ușă? Atunci nu intra și notează asta pe lista de camere. Oaspetele e în cameră? Întreabă dacă poți face curat acum sau revino mai târziu. Lucrurile oaspetelui rămân unde sunt. A uitat un oaspete ceva? Du lucrul la recepție. Nu păstra niciodată nimic pentru tine, nici măcar ceva mic. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.hotelroom.p': "Bună dimineața. Pot să fac curat în cameră acum?", // nieuw, nalezen
+    'c.hotelroom.s': "Într-o cameră goală găsești un telefon sub pat. Oaspetele a plecat. Ce faci?", // nieuw, nalezen
+    'c.hotelroom.o1': "Îl duci la recepție.", // nieuw, nalezen
+    'c.hotelroom.o2': "Îl păstrezi: oaspetele a plecat.", // nieuw, nalezen
+    'c.hotelroom.o3': "Îl lași sub pat.", // nieuw, nalezen
+    'c.hotelroom.w': "Lucrurile pierdute sunt tot ale oaspetelui. Recepția i le poate da înapoi. Dacă le păstrezi, e furt și poți să-ți pierzi locul de muncă.", // nieuw, nalezen
+    'l.dosing': "Produse și mașini", // nieuw, nalezen
+    'w.doseren': "a doza (a folosi cantitatea potrivită dintr-un produs)", // nieuw, nalezen
+    'w.maatbeker': "paharul gradat", // nieuw, nalezen
+    'w.sprayflacon': "pulverizatorul", // nieuw, nalezen
+    'w.concentraat': "concentratul (un produs puternic pe care îl amesteci cu apă)", // nieuw, nalezen
+    'w.veiligheidsblad': "fișa cu date de securitate (spune pericolele unui produs și ce trebuie făcut)", // nieuw, nalezen
+    'w.schrobzuigmachine': "mașina de spălat pardoseli (o mașină care freacă podeaua și o aspiră până se usucă)", // nieuw, nalezen
+    's.dosing.1': "Pune un capac plin într-o găleată cu apă.", // nieuw, nalezen
+    's.dosing.2': "Citește întâi eticheta.", // nieuw, nalezen
+    's.dosing.3': "Mașina de spălat pardoseli trebuie pusă la încărcat.", // nieuw, nalezen
+    'c.dosing.q': "Mai pune puțin produs. Așa iese mai curat.", // nieuw, nalezen
+    'c.dosing.a': "Nu, mai mult nu e mai bine. Folosesc paharul gradat.", // nieuw, nalezen
+    'c.dosing': "Doza potrivită, nu mai mult", // nieuw, nalezen
+    'c.dosing.b': "Mai mult produs nu curăță mai bine. Prea mult lasă un strat lipicios, așa că podeaua se murdărește mai repede și poate deveni alunecoasă. E mai rău și pentru pielea și plămânii tăi. Folosește paharul gradat sau pompa de dozare și urmează eticheta. Întâi apa, apoi produsul: așa nu stropește. Înainte să folosești mașina de spălat pardoseli, verifică dacă e încărcată și are apă curată în rezervor. La sfârșit, golește și clătește rezervorul cu apa murdară. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.dosing.p': "Cât trebuie să pun?", // nieuw, nalezen
+    'c.dosing.s': "Podeaua rămâne lipicioasă. Un coleg zice: „Pune produs dublu.” Ce faci?", // nieuw, nalezen
+    'c.dosing.o1': "Folosești doza de pe etichetă și întrebi.", // nieuw, nalezen
+    'c.dosing.o2': "Pui dublu: așa se curăță.", // nieuw, nalezen
+    'c.dosing.o3': "Torni produsul direct pe podea.", // nieuw, nalezen
+    'c.dosing.w': "O podea lipicioasă înseamnă de multe ori prea mult produs, nu prea puțin. Doza potrivită curăță cel mai bine și e cea mai sigură.", // nieuw, nalezen
+    'l.officenight': "Birouri, devreme sau târziu", // nieuw, nalezen
+    'w.toetsenbord': "tastatura", // nieuw, nalezen
+    'w.papierbak': "coșul pentru hârtie (pentru hârtie veche)", // nieuw, nalezen
+    'w.lichtschakelaar': "întrerupătorul", // nieuw, nalezen
+    'w.pantry': "chicineta (bucătăria mică dintr-un birou)", // nieuw, nalezen
+    'w.deurmat': "preșul (covorașul de la intrare)", // nieuw, nalezen
+    'w.alleenwerken': "a lucra singur (nu mai e nimeni în clădire)", // nieuw, nalezen
+    's.officenight.1': "Golesc coșurile de gunoi și coșul pentru hârtie.", // nieuw, nalezen
+    's.officenight.2': "Nu ating hârtiile de pe birou.", // nieuw, nalezen
+    's.officenight.3': "Sting lumina când termin.", // nieuw, nalezen
+    'c.officenight.q': { m: "Lucrezi singur în clădire diseară?", f: "Lucrezi singură în clădire diseară?", x: "Diseară nu mai e nimeni cu tine în clădire?" }, // nieuw, nalezen
+    'c.officenight.a': "Da. Îți trimit un mesaj când termin.", // nieuw, nalezen
+    'c.officenight': "Fără nimeni altcineva în clădire", // nieuw, nalezen
+    'c.officenight.b': "Dimineața devreme sau seara târziu faci adesea curat într-un birou fără colegi. Trebuie să știi ce faci dacă se întâmplă ceva: pe cine suni și unde e trusa de prim ajutor? Ține telefonul la tine. Stabilește cu șeful sau cu un coleg că trimiți un mesaj când începi și când termini. Nu lăsa să intre pe nimeni pe care nu-l cunoști. Nu atinge hârtii, ecrane sau tastaturi mai mult decât ai nevoie ca să faci curat și nu citi niciodată ce e pe ele. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.officenight.p': "Am terminat și acum plec acasă.", // nieuw, nalezen
+    'c.officenight.s': "Noaptea un bărbat bate în ușa de sticlă. Zice că lucrează aici și și-a uitat cheia. Ce faci?", // nieuw, nalezen
+    'c.officenight.o1': "Nu deschizi. Îl suni pe șef.", // nieuw, nalezen
+    'c.officenight.o2': "Îl lași să intre: pare de treabă.", // nieuw, nalezen
+    'c.officenight.o3': "Îi dai cheia ta.", // nieuw, nalezen
+    'c.officenight.w': "Oricine poate spune că lucrează acolo. Șeful poate verifica. Siguranța ta și clădirea sunt pe primul loc.", // nieuw, nalezen
+    'u.cooking': "Bucătăria și servirea", // nieuw, nalezen
+    'l.knives': "Cuțite și tăiat", // nieuw, nalezen
+    'w.koksmes': "cuțitul de bucătar (un cuțit mare de bucătărie)", // nieuw, nalezen
+    'w.dunschiller': "curățătorul de legume (economul)", // nieuw, nalezen
+    'w.schillen': "a curăța de coajă", // nieuw, nalezen
+    'w.hakken': "a toca (a tăia foarte mărunt)", // nieuw, nalezen
+    'w.raspen': "a da pe răzătoare", // nieuw, nalezen
+    'w.blokjes': "cuburile (bucăți mici, pătrate)", // nieuw, nalezen
+    's.knives.1': "Taie morcovii cuburi.", // nieuw, nalezen
+    's.knives.2': "Nu pune cuțitul în chiuvetă.", // nieuw, nalezen
+    's.knives.3': "Toacă pătrunjelul mărunt.", // nieuw, nalezen
+    'c.knives.q': "Poți să tai ceapa?", // nieuw, nalezen
+    'c.knives.a': "Da, chef. Rondele sau cuburi?", // nieuw, nalezen
+    'c.knives': "Un cuțit e o unealtă, nu o jucărie", // nieuw, nalezen
+    'c.knives.b': "Ține-ți cuțitul ascuțit: un cuțit tocit alunecă mai ușor. Taie pe un tocător care nu se mișcă: pune o cârpă udă sub el. Îndoaie degetele înăuntru, ca o gheară. Mergi cu vârful în jos, lângă picior, și spune „Mes!” când treci pe lângă cineva. Nu pune niciodată un cuțit într-o chiuvetă plină cu apă: cineva îl poate apuca fără să-l vadă. Cade un cuțit? Fă un pas înapoi, nu-l prinde. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.knives.p': "Cuțit! Trec pe la spatele tău.", // nieuw, nalezen
+    'c.knives.s': "Tai ceva. Cuțitul alunecă de pe tocător și cade. Ce faci?", // nieuw, nalezen
+    'c.knives.o1': "Faci un pas înapoi și îl lași să cadă.", // nieuw, nalezen
+    'c.knives.o2': "Îl prinzi repede cu mâna.", // nieuw, nalezen
+    'c.knives.o3': "Îl oprești cu piciorul.", // nieuw, nalezen
+    'c.knives.w': "Un cuțit care cade îți poate tăia adânc mâna sau piciorul. Un cuțit căzut pe jos trebuie doar spălat.", // nieuw, nalezen
+    'l.rawcooked': "Crud, gătit și alergeni", // nieuw, nalezen
+    'w.rauw': "crud (negătit)", // nieuw, nalezen
+    'w.gaar': "gătit, făcut (gata de mâncat)", // nieuw, nalezen
+    'w.afdekken': "a acoperi (cu un capac sau cu folie)", // nieuw, nalezen
+    'w.kleurcode': "codul de culori (o culoare de tocător și de cuțit pentru fiecare fel de aliment)", // nieuw, nalezen
+    'w.allergenenlijst': "lista de alergeni (spune ce conține fiecare fel de mâncare)", // nieuw, nalezen
+    'w.glutenvrij': "fără gluten", // nieuw, nalezen
+    's.rawcooked.1': "Carnea crudă se pune jos în frigider.", // nieuw, nalezen
+    's.rawcooked.2': "E gata puiul?", // nieuw, nalezen
+    's.rawcooked.3': "Acoperă recipientele din camera frigorifică.", // nieuw, nalezen
+    'c.rawcooked.q': "Sosul ăsta e fără gluten?", // nieuw, nalezen
+    'c.rawcooked.a': "Nu știu sigur. Mă uit pe lista de alergeni.", // nieuw, nalezen
+    'c.rawcooked': "Crudul și gata-de-mâncat nu se ating niciodată", // nieuw, nalezen
+    'c.rawcooked.b': "Carnea, peștele și ouăle crude pot avea microbi. Ține-le departe de mâncarea care e gata de mâncat. Folosește alt tocător și alt cuțit, sau codul de culori al bucătăriei tale, și spală-te pe mâini după ce atingi mâncare crudă. Carnea crudă se pune jos în frigider, ca să nu picure pe altă mâncare. Acoperă mâncarea și pune data pe ea. La alergii, o urmă poate fi de ajuns: folosește ustensile curate. Un restaurant trebuie să le poată spune oaspeților ce alergeni are un fel de mâncare: uită-te pe lista de alergeni. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.rawcooked.p': "Care tocător e pentru carne crudă?", // nieuw, nalezen
+    'c.rawcooked.s': "Ai tăiat pui crud. Acum trebuie să tai roșii pentru o salată. Ce faci?", // nieuw, nalezen
+    'c.rawcooked.o1': "Iei un tocător curat și un cuțit curat.", // nieuw, nalezen
+    'c.rawcooked.o2': "Ștergi tocătorul cu o cârpă și continui.", // nieuw, nalezen
+    'c.rawcooked.o3': "Tai roșiile pe același tocător.", // nieuw, nalezen
+    'c.rawcooked.w': "Microbii de la puiul crud ajung pe roșii, iar o salată nu se mai gătește. Un tocător curat oprește asta.", // nieuw, nalezen
+    'l.pass': "Spălătorul de vase și pass-ul", // nieuw, nalezen
+    'w.pass': "pass-ul (blatul unde farfuriile așteaptă ospătarul)", // nieuw, nalezen
+    'w.bon': "bonul de comandă (comanda de la ospătar pentru bucătărie)", // nieuw, nalezen
+    'w.spoelkeuken': "spălătorul de vase (locul unde se spală vasele)", // nieuw, nalezen
+    'w.vaatwaskorf': "coșul pentru vase (coșul care intră în mașina de spălat vase)", // nieuw, nalezen
+    'w.voorspoelen': "a clăti înainte (a clăti înainte de mașină)", // nieuw, nalezen
+    'w.warmhoudlamp': "lampa de încălzire (ține farfuriile calde)", // nieuw, nalezen
+    's.pass.1': "Masa opt e pe pass.", // nieuw, nalezen
+    's.pass.2': "Vin două bonuri noi.", // nieuw, nalezen
+    's.pass.3': "Clătește întâi farfuriile.", // nieuw, nalezen
+    'c.pass.q': "Unde e masa doisprezece?", // nieuw, nalezen
+    'c.pass.a': "E pe pass. O duc acum.", // nieuw, nalezen
+    'c.pass': "Pass-ul: farfuriile nu așteaptă", // nieuw, nalezen
+    'c.pass.b': "La pass, bucătăria pune farfuriile pentru ospătar. Mâncarea caldă trebuie să ajungă repede la oaspete, așa că o farfurie nu stă mult pe pass. Verifică bonul: masa potrivită, felurile potrivite, marginea farfuriei curată? Atunci ia-o. La spălătorul de vase: clătește înainte, pune totul în coșuri și lasă mașina să facă restul. Nu deschide mașina cât merge: aburul e foarte fierbinte. Pune-ți mănuși când pui produsele în mașină. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.pass.p': "Pentru ce masă e asta?", // nieuw, nalezen
+    'c.pass.s': "Sunt două farfurii pe pass. Nu știi pentru ce masă sunt. Ce faci?", // nieuw, nalezen
+    'c.pass.o1': "Te uiți pe bon sau îl întrebi pe bucătarul-șef.", // nieuw, nalezen
+    'c.pass.o2': "Le duci la o masă care așteaptă.", // nieuw, nalezen
+    'c.pass.o3': "Aștepți până le ia altcineva.", // nieuw, nalezen
+    'c.pass.w': "O farfurie la masa greșită înseamnă doi oaspeți care așteaptă și mâncare rece. O întrebare scurtă e mai rapidă.", // nieuw, nalezen
+    'l.bill': "Felurile și nota de plată", // nieuw, nalezen
+    'w.voorgerecht': "antreul (primul fel)", // nieuw, nalezen
+    'w.hoofdgerecht': "felul principal", // nieuw, nalezen
+    'w.nagerecht': "desertul", // nieuw, nalezen
+    'w.reservering': "rezervarea (o masă rezervată dinainte)", // nieuw, nalezen
+    'w.pinapparaat': "POS-ul (aparatul de plată cu cardul)", // nieuw, nalezen
+    'w.apartbetalen': "a plăti separat (fiecare plătește pentru el)", // nieuw, nalezen
+    's.bill.1': "Aveți rezervare?", // nieuw, nalezen
+    's.bill.2': "Doriți să plătiți împreună sau separat?", // nieuw, nalezen
+    's.bill.3': "Să aduc acum felul principal?", // nieuw, nalezen
+    'c.bill.q': "Putem plăti separat?", // nieuw, nalezen
+    'c.bill.a': "Da, sigur. Aduc POS-ul.", // nieuw, nalezen
+    'c.bill': "Bani la masă: numără de două ori", // nieuw, nalezen
+    'c.bill.b': "Când plătește un oaspete, spune clar suma și lasă-l pe oaspete să vadă POS-ul. La plata cash, numără banii când îi primești și încă o dată când dai restul. Banii merg în casa de marcat sau în portofelul tău de ospătar, niciodată în buzunarul tău. Bacșișul (fooi) merge unde spune firma, de exemplu în borcanul pentru bacșiș. A plecat un oaspete fără să plătească? Nu alerga după el: spune-i managerului. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.bill.p': "Face patruzeci și cinci de euro, vă rog.", // nieuw, nalezen
+    'c.bill.s': "Un oaspete îți dă bani și zice: „E fix.” Nu i-ai numărat. Ce faci?", // nieuw, nalezen
+    'c.bill.o1': "Îi numeri cât oaspetele e de față.", // nieuw, nalezen
+    'c.bill.o2': "Îi pui deoparte și îi numeri mai târziu.", // nieuw, nalezen
+    'c.bill.o3': "Ai încredere în oaspete: îi mulțumești.", // nieuw, nalezen
+    'c.bill.w': "Dacă numeri mai târziu și lipsesc bani, nimeni nu poate verifica ce s-a întâmplat. Numărarea la masă îl protejează pe oaspete și pe tine.", // nieuw, nalezen
+    'u.carework': "Îngrijire personală și îngrijire la domiciliu", // nieuw, nalezen
+    'l.washing': "Spălat și îmbrăcat", // nieuw, nalezen
+    'w.washandje': "mănușa de baie (o cârpă mică în formă de mănușă)", // nieuw, nalezen
+    'w.douchestoel': "scaunul de duș", // nieuw, nalezen
+    'w.tandenpoetsen': "a se spăla pe dinți", // nieuw, nalezen
+    'w.kammen': "a pieptăna", // nieuw, nalezen
+    'w.scheren': "a bărbieri", // nieuw, nalezen
+    'w.steunkous': "ciorapul compresiv (un ciorap strâns pentru picioare)", // nieuw, nalezen
+    's.washing.1': "Apa e destul de caldă?", // nieuw, nalezen
+    's.washing.2': "Vreți să vă spălați pe față fără ajutor?", // nieuw, nalezen
+    's.washing.3': "Acum vă pun ciorapii compresivi.", // nieuw, nalezen
+    'c.washing.q': "Azi nu vreau să fac duș.", // nieuw, nalezen
+    'c.washing.a': "E în regulă. Vă ajut la chiuvetă?", // nieuw, nalezen
+    'c.washing': "Întreabă întâi, acoperă și lasă-l să aleagă", // nieuw, nalezen
+    'c.washing.b': "Să speli pe cineva e ceva foarte personal. Spune ce urmează să faci și întreabă întâi. Acoperă cu un prosop părțile corpului pe care nu le speli. Închide ușa sau perdeaua. Lasă clientul să aleagă: dușul sau spălatul la chiuvetă, și ce haine să poarte. Lasă clientul să facă ce mai poate face, chiar dacă merge mai încet. Spune un client nu? Nu-l forța. Încearcă mai târziu, oferă altceva și spune-i asistentei.", // nieuw, nalezen
+    'c.washing.p': "Ce ați vrea să purtați azi?", // nieuw, nalezen
+    'c.washing.s': "O clientă spune că azi nu vrea să fie spălată. Ce faci?", // nieuw, nalezen
+    'c.washing.o1': "Accepți și îi spui asistentei.", // nieuw, nalezen
+    'c.washing.o2': "O speli oricum: e pe listă.", // nieuw, nalezen
+    'c.washing.o3': "Sari peste și nu spui nimic.", // nieuw, nalezen
+    'c.washing.w': "Un client are voie să spună nu. Îngrijirea forțată strică încrederea. Asistenta poate vedea de ce și ce se poate face.", // nieuw, nalezen
+    'l.observing': "Observat și raportat", // nieuw, nalezen
+    'w.rapporteren': "a raporta (a scrie ce ai văzut, în dosarul de îngrijire)", // nieuw, nalezen
+    'w.zorgdossier': "dosarul de îngrijire (tot ce ține de îngrijirea unui client)", // nieuw, nalezen
+    'w.drukplek': "escara (o pată roșie de la stat mult culcat sau așezat)", // nieuw, nalezen
+    'w.huid': "pielea", // nieuw, nalezen
+    'w.plassen': "a face pipi", // nieuw, nalezen
+    'w.vochtlijst': "fișa de lichide (cât bea un client)", // nieuw, nalezen
+    's.observing.1': "Doamna are o pată roșie pe călcâi.", // nieuw, nalezen
+    's.observing.2': "Domnul a băut puțin azi.", // nieuw, nalezen
+    's.observing.3': "Scriu asta în dosarul de îngrijire.", // nieuw, nalezen
+    'c.observing.q': "E ceva deosebit cu doamna Jansen?", // nieuw, nalezen
+    'c.observing.a': "Da. Azi aproape că n-a făcut pipi.", // nieuw, nalezen
+    'c.observing': "Scrie ce vezi, nu ce crezi", // nieuw, nalezen
+    'c.observing.b': "Ce scrii în dosarul de îngrijire citește colegul următor. Scrie fapte: ce ai văzut, auzit sau măsurat, și când. Nu „Mevrouw is lastig”, ci „Mevrouw wilde niet eten en duwde het bord weg.” Scrie în aceeași zi, cu propoziții scurte. Nu știi bine cum să scrii asta în neerlandeză? Spune-i asistentei și scrieți împreună. Uită-te la piele când speli pe cineva: o pată roșie care nu dispare poate fi începutul unei escare. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.observing.p': "Scriu ce am văzut.", // nieuw, nalezen
+    'c.observing.s': "O clientă a fost furioasă în timpul spălatului. Trebuie să scrii asta în dosar. Ce faci?", // nieuw, nalezen
+    'c.observing.o1': "Scrii ce a spus și ce a făcut, și când.", // nieuw, nalezen
+    'c.observing.o2': "Scrii: „Doamnă dificilă, ca întotdeauna.”", // nieuw, nalezen
+    'c.observing.o3': "Nu scrii nimic: e normal.", // nieuw, nalezen
+    'c.observing.w': "Faptele îi ajută pe colegul următor și pe asistentă să acționeze. O părere nu spune ce s-a întâmplat.", // nieuw, nalezen
+    'l.homecare': "Îngrijire la domiciliu", // nieuw, nalezen
+    'w.thuiszorg': "îngrijirea la domiciliu (îngrijire în casa clientului)", // nieuw, nalezen
+    'w.sleutelkluis': "seiful pentru chei (o cutiuță cu cod, cu cheia casei înăuntru)", // nieuw, nalezen
+    'w.zorgplan': "planul de îngrijire (ce îngrijire primește un client și cum)", // nieuw, nalezen
+    'w.wijkverpleegkundige': "asistenta medicală comunitară (asistenta echipei de îngrijire la domiciliu)", // nieuw, nalezen
+    'w.mantelzorger': "îngrijitorul din familie (o rudă sau un prieten care are grijă de client)", // nieuw, nalezen
+    'w.alarmknop': "butonul de alarmă (clientul îl poartă, ca să cheme ajutor)", // nieuw, nalezen
+    's.homecare.1': "Întâi sun la ușă. Apoi iau cheia.", // nieuw, nalezen
+    's.homecare.2': "Ce scrie în planul de îngrijire?", // nieuw, nalezen
+    's.homecare.3': "Azi întârzii un sfert de oră.", // nieuw, nalezen
+    'c.homecare.q': "Cine e?", // nieuw, nalezen
+    'c.homecare.a': "Bună dimineața, îngrijirea la domiciliu. Pot să intru?", // nieuw, nalezen
+    'c.homecare': "În vizită în casa altcuiva", // nieuw, nalezen
+    'c.homecare.b': "La îngrijirea la domiciliu lucrezi în casa clientului. Acolo ești în vizită: sună la ușă și spune cine ești, chiar dacă ai cheie. Codul seifului pentru chei e secret. Nu-l scrie niciodată unde îl pot vedea alții și închide mereu la loc seiful pentru chei. Urmează planul de îngrijire: acolo scrie ce faci. E ceva altfel, sau clientul nu deschide ușa? Nu pleca pur și simplu. Sună-ți echipa sau asistenta comunitară. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.homecare.p': "Bună dimineața, sunt de la îngrijirea la domiciliu.", // nieuw, nalezen
+    'c.homecare.s': "Suni la ușă. Clienta nu deschide. Mașina ei e acolo. Ce faci?", // nieuw, nalezen
+    'c.homecare.o1': "Îți suni echipa și aștepți.", // nieuw, nalezen
+    'c.homecare.o2': "Mergi mai departe la clientul următor.", // nieuw, nalezen
+    'c.homecare.o3': "Mai suni o dată, apoi pleci.", // nieuw, nalezen
+    'c.homecare.w': "Poate clienta a căzut sau e bolnavă. Echipa ta știe ce e de făcut și cine are o cheie.", // nieuw, nalezen
+    'l.liftaids': "Mijloace de ridicare și siguranță", // nieuw, nalezen
+    'w.glijlaken': "cearșaful de alunecare (un cearșaf neted pentru a muta un client în pat)", // nieuw, nalezen
+    'w.tilband': "hamul (se pune sub client, pentru liftul pentru pacienți)", // nieuw, nalezen
+    'w.stalift': "liftul de ridicare în picioare (ajută un client să se ridice)", // nieuw, nalezen
+    'w.werkhoogte': "înălțimea de lucru (patul la înălțimea șoldurilor tale)", // nieuw, nalezen
+    'w.bedhek': "grilajul patului", // nieuw, nalezen
+    'w.transferplank': "placa de transfer (o placă pentru a aluneca din pat pe un scaun)", // nieuw, nalezen
+    's.liftaids.1': "Pune patul la înălțimea de lucru.", // nieuw, nalezen
+    's.liftaids.2': "Are scaunul cu rotile frâna pusă?", // nieuw, nalezen
+    's.liftaids.3': "Facem asta în doi.", // nieuw, nalezen
+    'c.liftaids.q': "Poți s-o întorci pe doamna fără ajutor?", // nieuw, nalezen
+    'c.liftaids.a': "Cu cearșaful de alunecare pot. Îl iau acum.", // nieuw, nalezen
+    'c.liftaids': "Lasă aparatul să ridice", // nieuw, nalezen
+    'c.liftaids.b': "Înainte să folosești un lift pentru pacienți, verifică-l: e încărcată bateria, hamul are mărimea potrivită și nu e rupt? Pune frâna la pat și la scaunul cu rotile. Ridică patul la înălțimea șoldurilor, ca să nu te apleci. Spune-i clientului fiecare pas. Planul de îngrijire spune de ce mijloc de ridicare are nevoie un client. Un mijloc de ridicare e stricat sau lipsește? Nu te descurca altfel: anunță și cere ajutorul unui coleg. Nu ți s-a arătat cum funcționează un mijloc de ridicare? Întreabă înainte să începi. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.liftaids.p': "Hamul e rupt. Iau altul.", // nieuw, nalezen
+    'c.liftaids.s': "Vrei să folosești liftul pentru pacienți. Hamul are o mică ruptură. Ce faci?", // nieuw, nalezen
+    'c.liftaids.o1': "Iei alt ham și anunți ruptura.", // nieuw, nalezen
+    'c.liftaids.o2': "Îl folosești: ruptura e foarte mică.", // nieuw, nalezen
+    'c.liftaids.o3': "Faci un nod la ham.", // nieuw, nalezen
+    'c.liftaids.w': "O ruptură mică se poate mări sub greutatea unei persoane. O cădere din lift îl poate răni grav pe client.", // nieuw, nalezen
+    'u.shopfloor': "Casa, stocul și închiderea", // nieuw, nalezen
+    'l.returns': "Retururi și casa", // nieuw, nalezen
+    'w.terugbrengen': "a returna (un produs la magazin)", // nieuw, nalezen
+    'w.klantenkaart': "cardul de client (un card pentru strâns puncte)", // nieuw, nalezen
+    'w.statiegeld': "garanția (bani înapoi pentru o sticlă sau o doză goală)", // nieuw, nalezen
+    'w.kassalade': "sertarul casei (sertarul cu bani)", // nieuw, nalezen
+    'w.streepjescode': "codul de bare", // nieuw, nalezen
+    'w.tegoedbon': "bonul valoric (o hârtie pe care o folosești mai târziu în magazin)", // nieuw, nalezen
+    's.returns.1': "Strângeți puncte cu cardul de client?", // nieuw, nalezen
+    's.returns.2': "Codul de bare nu merge.", // nieuw, nalezen
+    's.returns.3': "Vreți banii înapoi sau un bon valoric?", // nieuw, nalezen
+    'c.returns.q': "Vreau să returnez puloverul ăsta.", // nieuw, nalezen
+    'c.returns.a': "Se poate. Mai aveți bonul?", // nieuw, nalezen
+    'c.returns': "Retururi: urmează regulile magazinului", // nieuw, nalezen
+    'c.returns.b': "Fiecare magazin are regulile lui pentru retururi: câte zile, cu sau fără bon, banii înapoi sau un bon valoric. Învață-le și respectă-le la fiecare client. Ai dubii? Întreabă un coleg sau managerul și nu decide pe cont propriu. La sfârșitul turei, numără sertarul casei, cu un coleg dacă așa se face în magazinul tău. Nu lua niciodată bani din casă pentru tine, nici măcar împrumut pentru un moment. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.returns.p': "Îl întreb repede pe managerul magazinului.", // nieuw, nalezen
+    'c.returns.s': "O clientă vrea banii înapoi pentru niște pantofi. Nu are bon. Nu știi regula. Ce faci?", // nieuw, nalezen
+    'c.returns.o1': "Îl întrebi pe manager ce e de făcut.", // nieuw, nalezen
+    'c.returns.o2': "Îi dai banii înapoi: e drăguță.", // nieuw, nalezen
+    'c.returns.o3': "Spui nu și o trimiți acasă.", // nieuw, nalezen
+    'c.returns.w': "Managerul știe regulile și poate decide. Atunci clienta primește un răspuns corect, iar tu nu ești de vină.", // nieuw, nalezen
+    'l.facing': "Aranjatul în față și produsele reci", // nieuw, nalezen
+    'w.facen': "a aranja în față (a trage produsele în față, cu eticheta spre client)", // nieuw, nalezen
+    'w.afprijzen': "a reduce prețul (a pune un preț mai mic)", // nieuw, nalezen
+    'w.koelvak': "raftul frigorific (raftul rece din magazin)", // nieuw, nalezen
+    'w.diepvries': "congelatorul", // nieuw, nalezen
+    'w.uitpakken': "a despacheta", // nieuw, nalezen
+    'w.schapkaartje': "eticheta de raft (eticheta cu prețul de pe raft)", // nieuw, nalezen
+    's.facing.1': "Întâi raftul frigorific, apoi restul.", // nieuw, nalezen
+    's.facing.2': "Pune totul frumos în față.", // nieuw, nalezen
+    's.facing.3': "Redu prețul la produsele de azi.", // nieuw, nalezen
+    'c.facing.q': "Ai terminat cu raftul frigorific?", // nieuw, nalezen
+    'c.facing.a': "Aproape. Mai trebuie să aranjez în față.", // nieuw, nalezen
+    'c.facing': "Întâi recele, și raftul arată plin", // nieuw, nalezen
+    'c.facing.b': "Produsele reci și congelate merg întâi în frigider sau în congelator, înainte de orice. Nu au voie să stea mult la cald. Apoi restul. A aranja în față înseamnă: tragi produsele în față, cu eticheta spre client. Așa raftul arată plin și ordonat. Verifică eticheta de raft: e corect prețul pentru produsul ăsta? Când deschizi cutii, taie dinspre corp în afară și nu prea adânc: poți strica produsul. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.facing.p': "Întâi produsele reci, apoi restul.", // nieuw, nalezen
+    'c.facing.s': "Vin un palet cu lapte și un palet cu chipsuri. Nu mai e nimeni cu tine. Ce faci?", // nieuw, nalezen
+    'c.facing.o1': "Pui întâi laptele în frigider.", // nieuw, nalezen
+    'c.facing.o2': "Începi cu chipsurile: sunt mai ușoare.", // nieuw, nalezen
+    'c.facing.o3': "Le lași pe amândouă până vine un coleg.", // nieuw, nalezen
+    'c.facing.w': "Laptele care stă prea mult la cald îi poate îmbolnăvi pe clienți și trebuie aruncat. Chipsurile pot aștepta.", // nieuw, nalezen
+    'l.shrink': "Pagube și furt", // nieuw, nalezen
+    'w.derving': "pierderile (ce pierde magazinul: produse stricate, vechi sau furate)", // nieuw, nalezen
+    'w.afschrijven': "a scoate din gestiune (a înregistra un produs ca pierdut)", // nieuw, nalezen
+    'w.personeelsaankoop': "cumpărătura de angajat (ce cumperi în propriul magazin)", // nieuw, nalezen
+    'w.tassencontrole': "controlul genților", // nieuw, nalezen
+    'w.kassamedewerker': "casierul, casiera", // nieuw, nalezen
+    'w.winkelwagen': "căruciorul de cumpărături", // nieuw, nalezen
+    's.shrink.1': "Borcanul ăsta e spart. Îl scot din gestiune.", // nieuw, nalezen
+    's.shrink.2': "Îmi plătesc cumpărăturile la casa unui coleg.", // nieuw, nalezen
+    's.shrink.3': "E un cărucior plin lângă ieșire.", // nieuw, nalezen
+    'c.shrink.q': "Pot să mă uit puțin în geanta ta?", // nieuw, nalezen
+    'c.shrink.a': "Da, sigur. Uite bonul meu.", // nieuw, nalezen
+    'c.shrink': "Cumpărăturile tale: plătești ca un client", // nieuw, nalezen
+    'c.shrink.b': "Un magazin pierde mult din cauza produselor stricate, a produselor vechi și a furtului. Ajută ca pierderile să rămână mici. Un produs spart sau deteriorat? Nu-l pune înapoi pe raft: scoate-l din gestiune cum se face în magazinul tău. Cumpărăturile tale: plătește-le la casă ca orice client și păstrează bonul. În multe magazine nu ai voie să-ți scanezi tu cumpărăturile: o face un coleg. Nu mânca și nu lua niciodată un produs fără să plătești, nici măcar unul mic. Unele magazine controlează gențile: e o regulă a magazinului, nu un semn de neîncredere în tine. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.shrink.p': "Întâi plătesc și păstrez bonul.", // nieuw, nalezen
+    'c.shrink.s': "La sfârșitul turei ți-e foame. Un sandviș expiră azi. Ce faci?", // nieuw, nalezen
+    'c.shrink.o1': "Îl întrebi pe manager care e regula.", // nieuw, nalezen
+    'c.shrink.o2': "Îl mănânci: oricum se aruncă.", // nieuw, nalezen
+    'c.shrink.o3': "Îl iei acasă în geantă.", // nieuw, nalezen
+    'c.shrink.w': "În multe magazine, să iei un produs fără să plătești e furt, chiar dacă e vechi. Când întrebi întâi, ești în siguranță.", // nieuw, nalezen
+    'l.shopclose': "Închiderea magazinului", // nieuw, nalezen
+    'w.sluitingstijd': "ora de închidere", // nieuw, nalezen
+    'w.rolluik': "obloanele rulante", // nieuw, nalezen
+    'w.kasverschil': "diferența de casă (mai mulți sau mai puțini bani în casă decât ar trebui)", // nieuw, nalezen
+    'w.kluis': "seiful (o cutie solidă pentru bani)", // nieuw, nalezen
+    'w.overval': "jaful armat (cineva ia bani cu amenințări)", // nieuw, nalezen
+    'w.achterdeur': "ușa din spate", // nieuw, nalezen
+    's.shopclose.1': "Închidem în zece minute.", // nieuw, nalezen
+    's.shopclose.2': "Numărăm casa în doi.", // nieuw, nalezen
+    's.shopclose.3': "E încuiată ușa din spate?", // nieuw, nalezen
+    'c.shopclose.q': "Pot să intru repede puțin?", // nieuw, nalezen
+    'c.shopclose.a': "Îmi pare rău, am închis. Mâine deschidem la opt.", // nieuw, nalezen
+    'c.shopclose': "Un jaf: dă-le banii și rămâi în siguranță", // nieuw, nalezen
+    'c.shopclose.b': "La ora de închidere sunt mulți bani în casă, așa că magazinele au reguli: număratul în doi, banii duși în seif și ușa din spate încuiată mai întâi. Un jaf (overval)? Viața ta valorează mai mult decât banii. Păstrează-ți calmul, fă ce îți spun și nu te lupta cu ei și nu alerga după ei. Ține minte ce poți: hainele, înălțimea, vocea. Când au plecat: încuie ușa, sună la 112 și nu atinge nimic. După aceea, vorbește despre asta cu managerul sau cu cineva în care ai încredere. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.shopclose.p': "Închidem. Încui ușa.", // nieuw, nalezen
+    'c.shopclose.s': "Un bărbat cu un cuțit vrea banii din casa ta. Ce faci?", // nieuw, nalezen
+    'c.shopclose.o1': "Îți păstrezi calmul și îi dai banii.", // nieuw, nalezen
+    'c.shopclose.o2': "Te lupți cu el: banii nu sunt ai lui.", // nieuw, nalezen
+    'c.shopclose.o3': "Fugi în spate și te încui.", // nieuw, nalezen
+    'c.shopclose.w': "Dacă te lupți sau fugi, hoțul devine nervos și mai periculos. Banii pot fi înlocuiți. Tu nu.", // nieuw, nalezen
+    'u.uitzend': "Munca prin agenție de muncă temporară", // nieuw, nalezen
+    'l.hirer': "Agenția și firma utilizatoare", // nieuw, nalezen
+    'w.inlener': "firma utilizatoare (firma unde te trimite agenția să lucrezi)", // nieuw, nalezen
+    'w.vestiging': "filiala (biroul agenției din orașul tău)", // nieuw, nalezen
+    'w.intakegesprek': "interviul de înscriere (prima discuție la agenție)", // nieuw, nalezen
+    'w.opstapplaats': "punctul de îmbarcare (unde te ia autobuzul agenției)", // nieuw, nalezen
+    'w.bedrijfsregels': "regulile firmei (regulile firmei utilizatoare)", // nieuw, nalezen
+    'w.aanspreekpunt': "persoana de contact (persoana la care mergi cu întrebări)", // nieuw, nalezen
+    's.hirer.1': "Mâine lucrezi la o firmă utilizatoare nouă.", // nieuw, nalezen
+    's.hirer.2': "Cine e aici persoana mea de contact?", // nieuw, nalezen
+    's.hirer.3': "Autobuzul pleacă de la punctul de îmbarcare la ora șase.", // nieuw, nalezen
+    'c.hirer.q': "Poți să începi mâine la o firmă utilizatoare nouă?", // nieuw, nalezen
+    'c.hirer.a': "Da. La ce oră trebuie să fiu acolo?", // nieuw, nalezen
+    'c.hirer': "Două firme: cine ce face?", // nieuw, nalezen
+    'c.hirer.b': "Lucrezi printr-o agenție (uitzendbureau), dar faci munca la altă firmă: firma utilizatoare (inlener). Agenția e angajatorul tău: contractul, salariul, fluturașul de salariu și zilele libere le ai de la agenție. Firma utilizatoare îți spune ce să faci la locul de muncă și trebuie să aibă grijă ca munca ta să fie sigură, la fel ca pentru angajații ei. Când te îmbolnăvești, anunță cum spune agenția: de multe ori la agenție și la firma utilizatoare. Păstrează în telefon numele și numărul persoanei tale de contact de la agenție. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.hirer.p': "Cine e persoana mea de contact la agenție?", // nieuw, nalezen
+    'c.hirer.s': "La firma utilizatoare trebuie să lucrezi cu o mașină. Nu ți-a arătat nimeni cum. Ce faci?", // nieuw, nalezen
+    'c.hirer.o1': "Ceri firmei utilizatoare să-ți arate întâi.", // nieuw, nalezen
+    'c.hirer.o2': "Încerci: agenția e răspunzătoare.", // nieuw, nalezen
+    'c.hirer.o3': "Pleci acasă și nu spui nimic.", // nieuw, nalezen
+    'c.hirer.w': "Firma utilizatoare trebuie să-ți arate cum să lucrezi în siguranță, la fel ca angajaților ei. E dreptul tău să ceri asta.", // nieuw, nalezen
+    'l.phases': "Contractul tău și fazele", // nieuw, nalezen
+    'w.fase': "faza (o etapă în contractul cu agenția: A, B sau C)", // nieuw, nalezen
+    'w.uitzendbeding': "clauza de agenție (munca ta se poate opri când firma utilizatoare nu mai are nevoie de tine)", // nieuw, nalezen
+    'w.aflopen': "a expira, a se termina (un contract)", // nieuw, nalezen
+    'w.doorwerken': "a continua să lucrezi (în același loc)", // nieuw, nalezen
+    'w.vastecontract': "contractul pe perioadă nedeterminată (un contract fără dată de sfârșit)", // nieuw, nalezen
+    'w.onderbreking': "întreruperea (o perioadă fără muncă între două contracte)", // nieuw, nalezen
+    's.phases.1': "În ce fază sunt acum?", // nieuw, nalezen
+    's.phases.2': "Contractul meu expiră săptămâna viitoare.", // nieuw, nalezen
+    's.phases.3': "Pot să lucrez mai departe aici?", // nieuw, nalezen
+    'c.phases.q': "Misiunea ta se termină vineri.", // nieuw, nalezen
+    'c.phases.a': "Bine. Aveți altă muncă pentru mine?", // nieuw, nalezen
+    'c.phases': "Fazele A, B și C", // nieuw, nalezen
+    'c.phases.b': "Cei mai mulți lucrători temporari lucrează după un cao pentru lucrători temporari (uitzend-cao). Acesta are faze. În faza A, munca ta se poate opri de obicei când firma utilizatoare nu mai are nevoie de tine (uitzendbeding). În faza B, primești contracte pe perioadă determinată. În faza C, primești un contract pe perioadă nedeterminată cu agenția. Cât durează fiecare fază scrie în cao-ul tău. Întreabă agenția în ce fază ești și păstrează toate contractele. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.phases.p': "Cât durează faza A pentru mine?", // nieuw, nalezen
+    'c.phases.s': "Ai lucrat mult timp pentru aceeași agenție. Primești tot contracte scurte. Ce faci?", // nieuw, nalezen
+    'c.phases.o1': "Întrebi agenția în ce fază ești.", // nieuw, nalezen
+    'c.phases.o2': "Nimic: munca prin agenție e mereu scurtă.", // nieuw, nalezen
+    'c.phases.o3': "Te oprești și cauți altă agenție.", // nieuw, nalezen
+    'c.phases.w': "După destul timp, cao-ul îți dă mai multă siguranță. Agenția îți poate spune unde ești, iar sindicatul poate verifica asta cu tine.", // nieuw, nalezen
+    'l.deductions': "Salariul și reținerile", // nieuw, nalezen
+    'w.inhouding': "reținerea (bani luați din salariul tău)", // nieuw, nalezen
+    'w.vastekracht': "angajatul permanent (un angajat al firmei utilizatoare)", // nieuw, nalezen
+    'w.vervoer': "transportul (autobuzul sau duba până la muncă)", // nieuw, nalezen
+    'w.schriftelijk': "în scris (pe hârtie sau într-un e-mail)", // nieuw, nalezen
+    'w.navragen': "a verifica, a se interesa (a afla dacă ceva e corect)", // nieuw, nalezen
+    'w.brutoloon': "salariul brut (salariul tău înainte de impozit și rețineri)", // nieuw, nalezen
+    's.deductions.1': "Ce e reținerea asta de pe fluturașul meu de salariu?", // nieuw, nalezen
+    's.deductions.2': "Câștig la fel ca angajații permanenți?", // nieuw, nalezen
+    's.deductions.3': "Vreau să văd asta întâi pe hârtie.", // nieuw, nalezen
+    'c.deductions.q': "Îți reținem din salariu costul autobuzului.", // nieuw, nalezen
+    'c.deductions.a': "Aveți voie? Verific asta întâi.", // nieuw, nalezen
+    'c.deductions': "Ce ți se poate reține din salariu?", // nieuw, nalezen
+    'c.deductions.b': "Ai dreptul la cel puțin același salariu ca angajații firmei utilizatoare care fac aceeași muncă. Banii reținuți din salariu (inhouding) trebuie să apară pe fluturașul de salariu. Impozitul și contribuțiile se rețin prin lege. În afară de acestea, agenția poate reține din salariul minim doar două costuri: chiria pentru locuință și prima pentru asigurarea de sănătate, și doar dacă ai fost de acord în scris. Alte costuri, cum ar fi transportul, hainele de lucru, amenzile sau o taxă ca să-ți găsească de lucru, nu au voie să fie reținute din salariul minim. Nu înțelegi o reținere? Cere agenției să ți-o explice în scris. Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.", // nieuw, nalezen
+    'c.deductions.p': "Pentru ce e reținerea asta?", // nieuw, nalezen
+    'c.deductions.s': "Agenția îți ia bani din salariu pentru autobuzul până la muncă. Câștigi salariul minim. Ce faci?", // nieuw, nalezen
+    'c.deductions.o1': "Întrebi: asta nu e permis.", // nieuw, nalezen
+    'c.deductions.o2': "Nimic: iei autobuzul în fiecare zi.", // nieuw, nalezen
+    'c.deductions.o3': "Nu mai iei autobuzul și mergi pe jos.", // nieuw, nalezen
+    'c.deductions.w': "Din salariul minim se pot reține doar chiria și asigurarea de sănătate, și doar cu acordul tău scris. Sindicatul sau Juridisch Loket te pot ajuta.", // nieuw, nalezen
+    'l.agencyhome': "Locuința și ajutorul", // nieuw, nalezen
+    'w.huisvesting': "locuința (un loc unde stai, aranjat de agenție)", // nieuw, nalezen
+    'w.huisgenoot': "colegul de casă (o persoană care locuiește în aceeași casă)", // nieuw, nalezen
+    'w.huisregels': "regulile casei (regulile casei unde locuiești)", // nieuw, nalezen
+    'w.huismeester': "administratorul locuinței (persoana care are grijă de casă)", // nieuw, nalezen
+    'w.meldpunt': "punctul de sesizare (un loc unde poți raporta o problemă)", // nieuw, nalezen
+    'w.advies': "sfatul", // nieuw, nalezen
+    's.agencyhome.1': "Vreau un contract de închiriere al meu.", // nieuw, nalezen
+    's.agencyhome.2': "E mucegai în baie.", // nieuw, nalezen
+    's.agencyhome.3': "Sun la sindicat să cer un sfat.", // nieuw, nalezen
+    'c.agencyhome.q': "Trebuie să pleci din locuință vineri.", // nieuw, nalezen
+    'c.agencyhome.a': "E foarte puțin timp. Întâi cer un sfat.", // nieuw, nalezen
+    'c.agencyhome': "Casa ta și unde găsești ajutor", // nieuw, nalezen
+    'c.agencyhome.b': "Agenția îți aranjează locuința? Atunci primești un contract de închiriere al tău, în scris, separat de contractul de muncă. Păstrează o copie. Acolo scrie cât plătești și cum și când se termină închirierea. Ți se termină munca? Locuința nu se termină mereu în aceeași zi: cere un sfat înainte să pleci. Locuință nesigură sau foarte aglomerată, amenințări sau salariu prea mic? Cere ajutor: sindicatul, Juridisch Loket (sfaturi juridice gratuite), FairWork sau Nederlandse Arbeidsinspectie, unde poți raporta și anonim. Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.", // nieuw, nalezen
+    'c.agencyhome.p': "Îmi puteți da o copie a contractului de închiriere?", // nieuw, nalezen
+    'c.agencyhome.s': "Ți se termină munca. Administratorul locuinței zice că trebuie să pleci din casă azi. Ce faci?", // nieuw, nalezen
+    'c.agencyhome.o1': "Întrebi întâi sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.agencyhome.o2': "Pleci azi și dormi la un prieten.", // nieuw, nalezen
+    'c.agencyhome.o3': "Îți faci bagajul și dormi afară.", // nieuw, nalezen
+    'c.agencyhome.w': "Contractul de închiriere are regulile lui, separat de muncă. Un sfat te ajută să știi când chiar trebuie să pleci.", // nieuw, nalezen
   },
 };
 
