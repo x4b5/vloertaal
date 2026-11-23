@@ -424,15 +424,23 @@ export type MoveKind = 'from' | 'slow' | 'fast' | 'drop' | 'then' | 'steps' | 't
  *  - 'show': it appears at the end of the motion (a tick, a mark: one fade, never a flash).
  * The <g> carries no transform attribute of its own (the animation would replace it): nest it.
  */
-export function Move({ kind, dx = 0, dy = 0, turn = 0, at, grow = 0.1, children }: {
-  kind: MoveKind; dx?: number; dy?: number; turn?: number; at?: Pt; grow?: number; children: ReactNode;
+export function Move({ kind, dx = 0, dy = 0, turn = 0, at, grow = 0.1, once = false, children }: {
+  kind: MoveKind; dx?: number; dy?: number; turn?: number; at?: Pt; grow?: number;
+  /**
+   * The whole picture plays its movement once, slowly, instead of three rounds (styles.css,
+   * docs/tekenstijl.md "Eén keer of drie keer"): for an event that happens once (the sun comes up,
+   * a door opens, a lamp goes on, something falls or fills), where a repeat would look odd. One
+   * part with `once` is enough: every part of that picture then plays once.
+   */
+  once?: boolean;
+  children: ReactNode;
 }) {
   const style: Record<string, string> = {};
   if (kind === 'from' || kind === 'slow' || kind === 'fast' || kind === 'drop' || kind === 'then' || kind === 'steps') Object.assign(style, { '--mv-dx': `${dx}px`, '--mv-dy': `${dy}px` });
   if (kind === 'turn' || kind === 'tip') Object.assign(style, { '--mv-turn': `${turn}deg`, transformOrigin: `${at?.[0] ?? 60}px ${at?.[1] ?? 60}px` });
   if (kind === 'grow') style['--mv-grow'] = String(grow);
   if (kind === 'sag') style['--mv-sag'] = String(grow);
-  return <g className={`mv-${kind}`} style={style}>{children}</g>;
+  return <g className={`mv-${kind}${once ? ' mv-once' : ''}`} style={style}>{children}</g>;
 }
 
 /**

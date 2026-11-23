@@ -138,7 +138,7 @@ describe('moving word pictures: the trial', () => {
   it('each moving word has a picture with a moving part', () => {
     for (const id of MOVING) {
       expect(words[id], id).toBeDefined();
-      expect(renderToStaticMarkup(createElement(words[id])), id).toMatch(/class="mv-(from|slow|fast|drop|then|steps|turn|tip|grow|sag|show)"/);
+      expect(renderToStaticMarkup(createElement(words[id])), id).toMatch(/class="mv-(from|slow|fast|drop|then|steps|turn|tip|grow|sag|show)( mv-once)?"/);
     }
   });
 
@@ -189,7 +189,7 @@ describe('moving word pictures: the motion (styles.css)', () => {
     expect(animating.length).toBeGreaterThanOrEqual(7);
     // (A picture in two steps: its rounds are longer, chosen with :has() on the picture.)
     const sels = animating.flatMap((r) => splitSel(r.sel));
-    for (const sel of sels) expect(sel, sel).toMatch(/^\.intro-card \.word-pic(:has\([^()]*\))? (\.mv-[\w-]+|:is\([^()]*\))$/);
+    for (const sel of sels) expect(sel, sel).toMatch(/^\.intro-card \.word-pic(:has\([^()]*\))* (\.mv-[\w-]+|:is\([^()]*\))$/);
     // The other .mv- rules only say where a part turns or grows from.
     for (const r of mvRules.filter((x) => !animating.includes(x))) {
       const props = [...r.body.matchAll(/([\w-]+)\s*:/g)].map((m) => m[1]);

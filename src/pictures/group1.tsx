@@ -65,10 +65,10 @@ export default {
   ),
 
   // "goedemorgen": Amina waves hello while the morning sun comes up behind her. On the intro card
-  // the sun comes up from behind her.
+  // the sun comes up from behind her, once and slowly (a sunrise happens once: the owner).
   'w.goedemorgen': () => (
     <g>
-      <Move kind="slow" dy={30}>
+      <Move kind="slow" dy={30} once>
         <Sun cx={30} cy={36} r={15} />
       </Move>
       <Bust who="amina" x={50} y={116} scale={0.7} expr="joy" />
