@@ -2597,7 +2597,7 @@ ______________________________________________________________
 
 **Tekst (Engels, wordt vertaald):**
 
-> VCA is a safety certificate. Many companies, also through an agency, ask for it, for example in construction and industry. Most workers do B-VCA (VCA Basis); a supervisor does VOL-VCA. For VCA you do a course and an exam with multiple-choice questions at a recognised exam centre. You can often do the exam in several languages, for example English or Polish: ask the exam centre. The diploma is valid for 10 years. Often the employer or the agency pays: ask before you pay yourself. An agency may not take just any cost off your pay (see the topic about agency work). In these lessons you learn some words that you meet in safe work and in VCA. For VCA you do a course and an exam.
+> VCA is a safety certificate. Many companies, also through an agency, ask for it, for example in construction and industry. Most workers do B-VCA (VCA Basis); a supervisor does VOL-VCA. You do a course, and an exam with multiple-choice questions at a recognised exam centre. You can often do the exam in several languages, for example English or Polish: ask the exam centre. The diploma is valid for 10 years. Often the employer or the agency pays: ask before you pay yourself. An agency may not take just any cost off your pay (see the topic about agency work). In these lessons you learn some words that you meet in safe work and in VCA. For VCA you do a course and an exam.
 >
 > *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
 
