@@ -312,6 +312,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "Ți se spune că e foc: e mic, deci iei extinctorul.", // nieuw, nalezen
     'c.permitwork.a.why': "Te întreabă cine stă afară: tu, și sarcina ta.", // nieuw, nalezen
     'c.vog.a.why': "Te întreabă de VOG: încă nu, și ce aștepți.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "Te întreabă de alarmă: ce e prea mare și unde.", // nieuw, nalezen
+    'c.plantfault.a.why': "Întrebarea e dacă linia poate porni: nu, încă e un lacăt pe ea.", // nieuw, nalezen
+    'c.shiftwork.a.why': "Te întreabă ce s-a întâmplat: defecțiunea și unde e scrisă.", // nieuw, nalezen
+    'c.heatdust.a.why': "Întrebarea e despre telefon: nu, din cauza pericolului de aici.", // nieuw, nalezen
   },
 };
 

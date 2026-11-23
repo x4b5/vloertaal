@@ -310,6 +310,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "Te dicen que hay fuego: es pequeño, así que vas a por el extintor.", // nieuw, nalezen
     'c.permitwork.a.why': "Te preguntan quién se queda fuera: tú, y tu tarea.", // nieuw, nalezen
     'c.vog.a.why': "Te preguntan por tu VOG: todavía no, y qué estás esperando.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "Te preguntan por la alarma: qué está demasiado alto, y dónde.", // nieuw, nalezen
+    'c.plantfault.a.why': "Preguntan si se puede arrancar: no, todavía hay un candado puesto.", // nieuw, nalezen
+    'c.shiftwork.a.why': "Te preguntan qué pasó: la avería, y dónde está apuntada.", // nieuw, nalezen
+    'c.heatdust.a.why': "Preguntan por el teléfono: no, por el peligro que hay aquí.", // nieuw, nalezen
   },
 };
 

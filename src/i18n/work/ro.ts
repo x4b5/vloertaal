@@ -4901,6 +4901,88 @@ const t: CultureTranslation = {
     'c.permitwork.o2': "Intri repede ca să-l ajuți.", // nieuw, nalezen
     'c.permitwork.o3': "Aștepți câteva minute, apoi te uiți.", // nieuw, nalezen
     'c.permitwork.w': "Gazul care i-a făcut rău colegului tău îți poate face rău și ție. Multe victime din rezervoare au fost oameni care voiau să ajute. După alarmă vine ajutor cu protecție.", // nieuw, nalezen
+    // "Operator in de procesindustrie", the fourth own unit of Productie (23 November 2026).
+    'u.process': "Operator în industria de proces", // nieuw, nalezen
+    'l.plantround': "Runda și camera de comandă", // nieuw, nalezen
+    'w.controlekamer': "camera de comandă (de unde operatorii urmăresc toată fabrica pe ecrane)", // nieuw, nalezen
+    'w.operator': "operatorul (persoana care conduce și supraveghează mașinile unei fabrici)", // nieuw, nalezen
+    'w.drukmeter': "manometrul (un aparat rotund cu un ac)", // nieuw, nalezen
+    'w.niveau': "nivelul (cât de plin e un rezervor sau un siloz)", // nieuw, nalezen
+    'w.snelheid': "viteza (cât de repede merge o linie sau o mașină)", // nieuw, nalezen
+    'w.alarmmelding': "mesajul de alarmă (un avertisment pe ecran că ceva nu e în regulă)", // nieuw, nalezen
+    's.plantround.1': "Îmi fac runda.", // nieuw, nalezen
+    's.plantround.2': "Presiunea e prea mare.", // nieuw, nalezen
+    's.plantround.3': "Notez valoarea.", // nieuw, nalezen
+    'c.plantround.q': "De ce e o alarmă pe ecran?", // nieuw, nalezen
+    'c.plantround.a': "Nivelul din rezervorul doi e prea mare.", // nieuw, nalezen
+    'l.plantfault': "O defecțiune", // nieuw, nalezen
+    'w.stilstand': "oprirea (linia stă și nu se produce nimic)", // nieuw, nalezen
+    'w.opstarten': "a porni (o mașină sau o linie, pas cu pas)", // nieuw, nalezen
+    'w.stilzetten': "a opri (oprești o mașină în modul corect)", // nieuw, nalezen
+    'w.technischedienst': "departamentul de întreținere (TD: ei repară mașinile)", // nieuw, nalezen
+    'w.onderhoudsmonteur': "tehnicianul de întreținere", // nieuw, nalezen
+    'w.resetten': "a reseta (a șterge o defecțiune de pe ecran sau de pe panou)", // nieuw, nalezen
+    's.plantfault.1': "Când e o defecțiune, îl sun pe șeful de tură.", // nieuw, nalezen
+    's.plantfault.2': "Nu băga niciodată mâna într-o mașină în funcțiune.", // nieuw, nalezen
+    's.plantfault.3': "Cei de la întreținere sunt pe drum.", // nieuw, nalezen
+    'c.plantfault.q': "Pot să pornesc din nou linia?", // nieuw, nalezen
+    'c.plantfault.a': "Nu, așteaptă. Lacătul mecanicului e încă pe ea.", // nieuw, nalezen
+    'l.shiftwork': "Ture și nopți", // nieuw, nalezen
+    'w.ploeg': "echipa de tură (grupul care lucrează în aceleași ture)", // nieuw, nalezen
+    'w.ploegwissel': "schimbul de tură (o echipă pleacă acasă, următoarea începe)", // nieuw, nalezen
+    'w.volcontinu': "non-stop, în flux continuu (fabrica merge zi și noapte, în fiecare zi a săptămânii)", // nieuw, nalezen
+    'w.overdagslapen': "a dormi ziua (după o tură de noapte)", // nieuw, nalezen
+    'w.broodtrommel': "cutia pentru mâncare, caserola", // nieuw, nalezen
+    'w.aflosser': "înlocuitorul (colegul care îți preia locul)", // nieuw, nalezen
+    's.shiftwork.1': "Fabrica noastră merge non-stop.", // nieuw, nalezen
+    's.shiftwork.2': "Scrie asta în registru pentru echipa de tura următoare.", // nieuw, nalezen
+    's.shiftwork.3': "Ajung la timp pentru predarea turei.", // nieuw, nalezen
+    'c.shiftwork.q': "Ce s-a întâmplat azi-noapte?", // nieuw, nalezen
+    'c.shiftwork.a': "Pompa trei s-a oprit. E scris în registru.", // nieuw, nalezen
+    'l.heatdust': "Căldură, abur și praf", // nieuw, nalezen
+    'w.smeltoven': "cuptorul de topire (un cuptor foarte fierbinte care topește sticla sau metalul)", // nieuw, nalezen
+    'w.stoom': "aburul (apă foarte fierbinte sub formă de gaz)", // nieuw, nalezen
+    'w.stoomleiding': "conducta de abur (e fierbinte, chiar și când nu vezi abur)", // nieuw, nalezen
+    'w.hittekleding': "îmbrăcămintea de protecție termică", // nieuw, nalezen
+    'w.kwartsstof': "praful de cuarț (praf foarte fin din argilă, nisip sau piatră; îți dăunează plămânilor)", // nieuw, nalezen
+    'w.explosiegevaar': "pericolul de explozie (praful sau vaporii din aer pot exploda; un indicator galben cu EX)", // nieuw, nalezen
+    's.heatdust.1': "Bea des apă lângă cuptorul de topire.", // nieuw, nalezen
+    's.heatdust.2': "Praful de cuarț nu se vede. Pune-ți masca de praf.", // nieuw, nalezen
+    's.heatdust.3': "Aici e pericol de explozie: fără scântei.", // nieuw, nalezen
+    'c.heatdust.q': "Am voie să iau telefonul în zona asta?", // nieuw, nalezen
+    'c.heatdust.a': "Nu. Aici e pericol de explozie.", // nieuw, nalezen
+    'c.plantround': "Fă-ți runda, notează tot", // nieuw, nalezen
+    'c.plantround.b': "O fabrică ce merge zi și noapte are nevoie de ochi și urechi. În runda ta te uiți, asculți și miroși: un zgomot nou, o scurgere sau un miros ciudat pot fi primul semn al unei probleme. Citești aparatele: temperatura, presiunea, viteza și nivelul. Notează fiecare valoare imediat, cu ora, pe listă sau în sistem. Nu mai târziu, din memorie. O valoare e prea mare sau prea mică? Anunță imediat camera de comandă sau șeful de tură. O alarmă pe ecran nu e niciodată „doar o alarmă”: nu o opri înainte să știi de ce a pornit. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.plantround.p': "Temperatura e prea mare.", // nieuw, nalezen
+    'c.plantround.s': "În runda ta, presiunea e puțin prea mare. Tura ta e aproape gata. Ce faci?", // nieuw, nalezen
+    'c.plantround.o1': "Anunți imediat camera de comandă.", // nieuw, nalezen
+    'c.plantround.o2': "Notezi valoarea și nu spui nimănui.", // nieuw, nalezen
+    'c.plantround.o3': "O lași pentru tura următoare.", // nieuw, nalezen
+    'c.plantround.w': "Într-o fabrică, o schimbare mică poate crește repede. Când camera de comandă află devreme, poate acționa înainte să meargă ceva prost.", // nieuw, nalezen
+    'c.plantfault': "Oprește, pune lacătul, apoi repară", // nieuw, nalezen
+    'c.plantfault.b': "La o defecțiune, linia se oprește și toată lumea vrea s-o vadă repede pornită din nou. Dar multe accidente se întâmplă exact atunci. Nu băga niciodată mâna într-o mașină în funcțiune, nici „doar o clipă”. Cheamă-l pe șeful de tură sau departamentul de întreținere. Înainte ca cineva să lucreze la mașină, ea e oprită și blocată cu lacăt, ca nimeni să n-o poată porni. Adesea fiecare om care lucrează la ea își pune propriul lacăt. Pornește din nou doar când toate lacătele sunt scoase și șeful de tură spune că e sigur. Pornește pas cu pas, așa cum ai învățat. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.plantfault.p': "Încă e un lacăt pe ea.", // nieuw, nalezen
+    'c.plantfault.s': "Un produs s-a blocat în mașină. Mașina încă merge. Un coleg spune: „Scoate-l repede.” Ce faci?", // nieuw, nalezen
+    'c.plantfault.o1': "Nu bagi mâna: îl chemi pe șeful de tură.", // nieuw, nalezen
+    'c.plantfault.o2': "Îl scoți repede cu mâna.", // nieuw, nalezen
+    'c.plantfault.o3': "Îl împingi afară cu un băț cât timp mașina merge.", // nieuw, nalezen
+    'c.plantfault.w': "O mașină care încă merge se poate mișca în orice moment. O mașină oprită și blocată nu te poate răni.", // nieuw, nalezen
+    'c.shiftwork': "Nopțile: somn, mâncare, punctualitate", // nieuw, nalezen
+    'c.shiftwork.b': "Multe fabrici merg zi și noapte, în fiecare zi a săptămânii. Lucrezi pe rând în tura de dimineață, de după-amiază și de noapte, adesea în trei sau cinci echipe de tură. După o tură de noapte, dormi într-o cameră întunecată și liniștită și spune-le celor din familie când dormi. Mănâncă la ore fixe și ia-ți mâncarea de acasă: noaptea cantina e adesea închisă. Vino la timp pentru predarea turei: colegul tău te așteaptă, iar fabrica nu are voie să rămână fără oameni. Pentru turele de noapte există reguli în plus, în lege și adesea în cao, de exemplu despre odihna după nopțile tale. Întreabă care sunt regulile acolo unde lucrezi. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.shiftwork.p': "Care sunt regulile pentru turele de noapte?", // nieuw, nalezen
+    'c.shiftwork.s': { m: "După patru nopți, șeful de tură te roagă să mai lucrezi o noapte. Ești foarte obosit. Ce faci?", f: "După patru nopți, șeful de tură te roagă să mai lucrezi o noapte. Ești foarte obosită. Ce faci?", x: "După patru nopți, șeful de tură te roagă să mai lucrezi o noapte. Simți o oboseală foarte mare. Ce faci?" }, // nieuw, nalezen
+    'c.shiftwork.o1': { m: "Spui că ești foarte obosit și întrebi care sunt regulile.", f: "Spui că ești foarte obosită și întrebi care sunt regulile.", x: "Spui că simți o oboseală foarte mare și întrebi care sunt regulile." }, // nieuw, nalezen
+    'c.shiftwork.o2': "Spui da și bei multă cafea.", // nieuw, nalezen
+    'c.shiftwork.o3': "Spui da și dormi puțin în pauză.", // nieuw, nalezen
+    'c.shiftwork.w': "Oamenii obosiți fac mai multe greșeli, iar într-o fabrică o greșeală poate fi periculoasă. Există reguli despre odihna după turele de noapte.", // nieuw, nalezen
+    'c.heatdust': "Căldură, praf și scântei", // nieuw, nalezen
+    'c.heatdust.b': "Lângă un cuptor de topire, un cuptor de ardere sau lângă abur e foarte cald. Bea des apă, și înainte să-ți fie sete. Poartă îmbrăcămintea de protecție termică și nu atinge țevi sau piese fără mănuși: aburul și metalul fierbinte ard, chiar și când nu le vezi. Ai amețeli sau ți-e rău? Oprește-te, du-te într-un loc răcoros și spune cuiva. Praful din argilă, nisip sau piatră poate conține praf de cuarț (kwartsstof). Nu-l vezi, dar îți dăunează plămânilor. Folosește aspirația, poartă masca de praf și nu sufla niciodată praful cu aer comprimat. În unele zone, praful sau vaporii pot exploda: un indicator galben cu EX arată asta. Acolo: fără scântei, fără foc și adesea fără telefon obișnuit. Întreabă ce e permis în fiecare zonă. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.heatdust.p': "Nu mă simt bine. Merg într-un loc răcoros.", // nieuw, nalezen
+    'c.heatdust.s': "Pe mașina ta e praf fin de argilă. Un coleg spune: „Suflă-l cu pistolul de aer.” Ce faci?", // nieuw, nalezen
+    'c.heatdust.o1': "Îl cureți umed sau cu aspiratorul.", // nieuw, nalezen
+    'c.heatdust.o2': "Îl sufli: e mai repede.", // nieuw, nalezen
+    'c.heatdust.o3': "Îl lași pentru tura următoare.", // nieuw, nalezen
+    'c.heatdust.w': "Suflatul ridică praful în aer și în plămânii tăi. O cârpă udă sau un aspirator ține praful jos.", // nieuw, nalezen
   },
 };
 
