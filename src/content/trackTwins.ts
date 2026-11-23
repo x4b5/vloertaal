@@ -23,6 +23,8 @@ export const TRACK_TWINS: readonly (readonly [taal: string, regels: string])[] =
   ['u.apply', 'r.zoeken'],
   ['u.contract', 'r.contract'],
   ['u.uitzend', 'r.contract'],
+  // Veiligheid op het werk (23 November 2026): the rules of safe work.
+  ['u.safework', 'r.veilig'],
   ['u.stage', 'r.stage'],
   ['u.grow', 'r.loopbaan'],
   ['u.pay', 'r.loon'],

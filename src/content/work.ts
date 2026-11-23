@@ -2372,6 +2372,12 @@ const guardingUnit = unit('guarding', 'Patrols and access', 'Ronde en toegang', 
       ['Mag ik uw legitimatie zien?', 'May I see your ID?'],
       ['Uw pas werkt niet. Ik bel even.', 'Your card does not work. I will make a call.'],
       ['Ik doe de slagboom open.', 'I will open the barrier.'],
+      // The VOG round (23 November 2026): a fourth sentence with a new id (s.access.4), so the three
+      // translated ones stay valid. ⚖️ check: a guard works only with a beveiligerspas, given after a
+      // screening by the police ⚖️ (Wpbr art. 7: toestemming van de korpschef na screening; the same
+      // as r.l.beveiliging.1 in src/content/regels/units/sector2.ts). Belgium: the identificatiekaart
+      // (src/content/taalBe/units/guarding.ts).
+      ['Ik krijg mijn beveiligerspas na de screening.', 'I get my security guard pass after the screening.'],
     ],
     [['Mag ik even naar binnen? Ik ben mijn pas vergeten.', 'May I go in? I forgot my card.'], ['Sorry, zonder pas mag u niet naar binnen.', 'Sorry, without a card you may not go in.']],
   ),
@@ -2967,6 +2973,11 @@ const daycareUnit = unit('daycare', 'Parents, safety and the group', 'Ouders, ve
       ['Ik ben de mentor van Lisa.', 'I am Lisa’s mentor.'],
       ['Een collega kan ons altijd zien of horen.', 'A colleague can always see or hear us.'],
       ['Ik maak me zorgen over Daan.', 'I am worried about Daan.'],
+      // The VOG round (23 November 2026): a fourth sentence with a new id (s.grouprules.4). ⚖️ check:
+      // in child care you need a VOG and must be in the personenregister kinderopvang before you start
+      // ⚖️ (Wet kinderopvang art. 1.48d and 1.50 lid 2; the same as r.l.kinderopvang.1). Belgium: the
+      // uittreksel uit het strafregister, model 2 (src/content/taalBe/units/daycare.ts).
+      ['Ik heb een VOG en ik sta in het personenregister.', 'I have a VOG and I am in the register for child care.'],
     ],
     [['Mag ik alleen met de groep naar buiten?', 'May I go outside alone with the group?'], ['Ja, maar zeg het eerst tegen een collega.', 'Yes, but tell a colleague first.']],
   ),
@@ -3201,6 +3212,11 @@ const careworkUnit = unit('carework', 'Personal care and home care', 'Verzorgen 
       ['Ik bel eerst aan. Dan pak ik de sleutel.', 'First I ring the bell. Then I take the key.'],
       ['Wat staat er in het zorgplan?', 'What is in the care plan?'],
       ['Ik ben vandaag een kwartier later.', 'I am a quarter of an hour late today.'],
+      // The VOG round (23 November 2026): a fourth sentence with a new id (s.homecare.4). ⚖️ check:
+      // a care provider asks a new worker with client contact for a VOG ⚖️ (Wkkgz art. 4 lid 1 onder c
+      // and the Uitvoeringsbesluit Wkkgz; "bijna altijd" because there are exceptions). Belgium: the
+      // uittreksel uit het strafregister (src/content/taalBe/units/carework.ts).
+      ['In de zorg vragen ze bijna altijd een VOG.', 'In care work they almost always ask for a VOG (a certificate of conduct).'],
     ],
     [['Wie is daar?', 'Who is there?'], ['Goedemorgen, de thuiszorg. Mag ik binnenkomen?', 'Good morning, it is home care. May I come in?']],
   ),
@@ -3394,6 +3410,124 @@ const uitzendUnit = unit('uitzend', 'Temp agency work', 'Werken via een uitzendb
       ['Ik bel de vakbond voor advies.', 'I am calling the union for advice.'],
     ],
     [['Je moet vrijdag uit de woning.', 'You must leave the house on Friday.'], ['Dat is heel kort. Ik vraag eerst advies.', 'That is very short. I will ask for advice first.']],
+  ),
+  // The VOG (Verklaring Omtrent het Gedrag), 23 November 2026 (the owner's request): a fifth lesson,
+  // because the agency or the hirer is where most learners first meet it, and a new lesson keeps every
+  // translated text of the unit as it is (five lessons are allowed: u.social, u.health and u.afbouw
+  // have five too). Not a safety topic, so not in "Veiligheid op het werk" (u.safework). Care, child
+  // care and security work name it again in a sentence of their own (s.homecare.4, s.grouprules.4,
+  // s.access.4). "de aanvraag" (l.holiday) comes in a sentence only. Belgium: no VOG (an uittreksel
+  // uit het strafregister); the unit is NL-only there (src/content/taalBe/inventory.ts). The tip
+  // c.vog has its ⚖️ notes in src/content/workTips.ts and a section in docs/juridische-check.md.
+  lesson(
+    'vog',
+    'Your past: the VOG',
+    [
+      ['vog', 'de VOG', 'the certificate of conduct (VOG: a paper from the government that says your past is no problem for this job)', '📜'],
+      ['strafblad', 'het strafblad', 'the criminal record (the crimes a court has found you guilty of)', '📁', false],
+      ['screening', 'de screening', 'the background check (a check of your past before you start)', '🔎', false],
+      ['personenregister', 'het personenregister', 'the register for child care (everyone who works in child care must be in it)', '🗂️', false],
+      ['beveiligerspas', 'de beveiligerspas', 'the security guard pass (the card you need to work as a guard)', '🪪'],
+      ['verleden', 'het verleden', 'the past', '⏮️', false],
+    ],
+    [
+      ['Het uitzendbureau vraagt een VOG.', 'The agency asks for a VOG.'],
+      ['Ik maak de aanvraag af met DigiD.', 'I finish the application with DigiD.'],
+      ['Wie betaalt de VOG?', 'Who pays for the VOG?'],
+    ],
+    [['Heb je al een VOG?', 'Do you have a VOG yet?'], ['Nee. Ik wacht nog op de mail van Justis.', 'No. I am still waiting for the e-mail from Justis.']],
+  ),
+]);
+
+// ---- Safety at work (the owner's request, 23 November 2026) ----
+// A basis unit for everyone, in the theme "Veilig werken" next to "Veiligheid" and "Als het misgaat"
+// (src/content/themes.ts), appended at the very end of the course (workUnits below) so that no
+// existing course changes. It teaches some of the words a learner meets in safe work and on a VCA
+// course that the course did not have yet: the safety signs (colour and shape), hazardous
+// substances, fire, and the permit to work, the confined space and lifting. It is NOT a VCA course
+// and says so (the owner's rule: no promise to pass, no "practise for the exam"): the tip of
+// l.safetysigns explains what VCA is and says that these lessons teach words, and that VCA is a
+// course and an exam. Already words of other lessons, used here in a sentence or the chat only:
+// "de nooduitgang" (l.danger), "het gevarensymbool" (l.hazardous), "het etiket" (l.quality),
+// "het veiligheidsblad" (l.dosing), "de olie" (l.carjob), "de brandblusser" (l.alarm) and "de
+// prullenbak"; "de tank" and "zakken" in a line only. "de werkvergunning" is a word twice: the
+// work permit for foreign workers (w.werkvergunning, l.permit) and here the permit to work for
+// dangerous work (w.werkvergunningveilig): its English says it is not your papers. The signs are the
+// same all over the EU, so the unit is A in Belgium (src/content/taalBe/inventory.ts). The drawings
+// (placeholders for now): src/pictures/groupVeilig2.tsx.
+
+const safeworkUnit = unit('safework', 'Safety at work', 'Veiligheid op het werk', '⚠️', '#b7791f', [
+  lesson(
+    'safetysigns',
+    'Safety signs',
+    [
+      ['verbodsbord', 'het verbodsbord', 'the prohibition sign (a red circle with a line through it: you may not do this)', '🚫'],
+      ['gebodsbord', 'het gebodsbord', 'the mandatory sign (a blue circle with a white picture: you must do this)', '🔵'],
+      ['waarschuwingsbord', 'het waarschuwingsbord', 'the warning sign (a yellow triangle with a black edge: watch out, danger)', '⚠️'],
+      ['reddingsbord', 'het reddingsbord', 'the safe condition sign (a green rectangle: the way out, or first aid)', '🟩'],
+      ['brandbord', 'het brandbord', 'the fire equipment sign (a red square: here is a fire extinguisher or a fire hose)', '🟥'],
+      ['pictogram', 'het pictogram', 'the pictogram (a simple picture that says something without words)', '🖼️', false],
+    ],
+    [
+      ['Een rood rond bord betekent: dat mag niet.', 'A red round sign means: that is not allowed.'],
+      ['Een blauw bord zegt wat je moet doen.', 'A blue sign says what you must do.'],
+      ['Volg de groene borden naar de nooduitgang.', 'Follow the green signs to the emergency exit.'],
+    ],
+    [['Wat betekent dit gele bord?', 'What does this yellow sign mean?'], ['Pas op, gevaar. Het is een waarschuwingsbord.', 'Watch out, danger. It is a warning sign.']],
+  ),
+  lesson(
+    'substances',
+    'Hazardous substances',
+    [
+      ['stofmasker', 'het stofmasker', 'the dust mask (it covers your nose and mouth)', '😷'],
+      ['giftig', 'giftig', 'toxic, poisonous', '💀'],
+      ['bijtend', 'bijtend', 'corrosive (it burns your skin or eats into metal)', '🫗'],
+      ['drinkfles', 'de drinkfles', 'the drinks bottle', '🥤'],
+      ['opbergen', 'opbergen', 'to put away (in its own place, for example a cupboard that locks)', '📦'],
+      ['dop', 'de dop', 'the cap (of a bottle or a can)', '🔘'],
+    ],
+    [
+      ['Kijk eerst naar het gevarensymbool op het etiket.', 'First look at the hazard symbol on the label.'],
+      ['Giet het nooit in een drinkfles.', 'Never pour it into a drinks bottle.'],
+      ['Hier moet je een stofmasker dragen.', 'You must wear a dust mask here.'],
+    ],
+    [['Is dit middel giftig?', 'Is this product toxic?'], ['Dat staat op het veiligheidsblad. Ik zoek het op.', 'That is on the safety data sheet. I will look it up.']],
+  ),
+  lesson(
+    'firefight',
+    'Fire',
+    [
+      ['branddriehoek', 'de branddriehoek', 'the fire triangle (fire needs fuel, air and heat; take one away and the fire goes out)', '🔺'],
+      ['zuurstof', 'de zuurstof', 'the oxygen (in the air; fire needs it)', '🫧', false],
+      ['blussen', 'blussen', 'to put out (a fire)', '💦'],
+      ['blusdeken', 'de blusdeken', 'the fire blanket', '🧣'],
+      ['openvuur', 'open vuur', 'open fire (a flame, for example from a lighter or a gas burner)', '🔥'],
+      ['brandslang', 'de brandslang', 'the fire hose (on a reel in the wall)', '🚒'],
+    ],
+    [
+      ['Gooi nooit water op brandende olie.', 'Never throw water on burning oil.'],
+      ['Alleen een klein brandje blus je zelf.', 'You only put out a small fire yourself.'],
+      ['Leg de blusdeken over de pan.', 'Put the fire blanket over the pan.'],
+    ],
+    [['Er is brand in de prullenbak!', 'There is a fire in the bin!'], ['Het is klein. Ik pak de brandblusser.', 'It is small. I will get the fire extinguisher.']],
+  ),
+  lesson(
+    'permitwork',
+    'Permits, confined spaces and lifting',
+    [
+      ['werkvergunningveilig', 'de werkvergunning', 'the permit to work (a safety paper for dangerous work: what, where and which dangers; not your residence or work papers)', '📋'],
+      ['beslotenruimte', 'de besloten ruimte', 'the confined space (a tank, a pit or a sewer: small, with little fresh air)', '🛢️'],
+      ['gasmeting', 'de gasmeting', 'the gas test (you measure the air before you go in)', '📟'],
+      ['mangatwacht', 'de mangatwacht', 'the hole watch (the person who stays outside at the opening, keeps contact and raises the alarm)', '🧍'],
+      ['signaalgever', 'de signaalgever', 'the banksman (the person who gives the crane driver hand signs)', '🙋'],
+      ['hijsen', 'hijsen', 'to lift (a load with a crane)', '🏗️'],
+    ],
+    [
+      ['Zonder werkvergunning beginnen we niet.', 'We do not start without a permit to work.'],
+      ['Eerst een gasmeting, dan pas de besloten ruimte in.', 'First a gas test, only then into the confined space.'],
+      ['Kijk naar de signaalgever: hijsen, zakken, stop.', 'Watch the banksman: lift, lower, stop.'],
+    ],
+    [['Wie blijft er buiten bij de tank?', 'Who stays outside at the tank?'], ['Ik. Ik ben de mangatwacht.', 'Me. I am the hole watch.']],
   ),
 ]);
 
@@ -5139,6 +5273,8 @@ export const workUnits: Unit[] = [
   cookingUnit,
   careworkUnit,
   shopfloorUnit,
+  // "Veiligheid op het werk" (23 November 2026), a basis unit at the very end (see "Safety at work" above).
+  safeworkUnit,
   // The basis units at four lessons (23 November 2026): their two new lessons at the end (basisFour above).
 ].map(withFour);
 

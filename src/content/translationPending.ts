@@ -9,9 +9,20 @@ import { workUnits } from './work';
  * Afval en recycling and Kinderopvang (23 November 2026; translated the same day), and the twenty
  * lessons of the second units of Schoonmaak, Horeca, Zorg and Winkel and "Werken via een uitzendbureau"
  * (23 November 2026; translated the same day). And the twenty-six lessons of the basis units at four
- * lessons (23 November 2026; translated the same day).
+ * lessons (23 November 2026; translated the same day). Again from the four lessons of "Veiligheid op
+ * het werk" and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
  */
-export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
+export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
+  // "Veiligheid op het werk" (u.safework) and the VOG lesson of u.uitzend (23 November 2026).
+  'safetysigns', 'substances', 'firefight', 'permitwork', 'vog',
+];
+
+/**
+ * Single new ids in a lesson whose other texts are translated (23 November 2026, the VOG round): a
+ * fourth sentence in a lesson of Zorg, Kinderopvang and Beveiliging. Their Belgian twins
+ * ("be.s.homecare.4") wait with them.
+ */
+const PENDING_IDS: readonly string[] = ['s.homecare.4', 's.grouprules.4', 's.access.4'];
 
 /**
  * The words of the pending lessons of curriculum.ts ("Tijd en rooster", "Als het misgaat"): the
@@ -21,9 +32,9 @@ export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
 const PENDING_CURRICULUM_WORDS: readonly string[] = [];
 
 /** Units whose title waits for its translations too. */
-const PENDING_UNITS: readonly string[] = [];
+const PENDING_UNITS: readonly string[] = ['u.safework'];
 
-const pendingIds = new Set<string>([...PENDING_UNITS, ...PENDING_CURRICULUM_WORDS]);
+const pendingIds = new Set<string>([...PENDING_UNITS, ...PENDING_CURRICULUM_WORDS, ...PENDING_IDS]);
 for (const l of workUnits.flatMap((u) => u.lessons)) {
   if (!TRANSLATION_PENDING_LESSONS.includes(l.id.slice(2))) continue;
   pendingIds.add(l.id);

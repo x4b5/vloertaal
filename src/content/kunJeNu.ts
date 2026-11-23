@@ -98,6 +98,12 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan vragen waar de brandblusser hangt.', 'A1', 'spreken', 'I can ask where the fire extinguisher is.'],
     ['Ik kan een ongeluk melden.', 'A2', 'spreken', 'I can report an accident.'],
   ]),
+  // Veiligheid op het werk (23 November 2026): two lines. Modest on purpose (the owner's rule): some
+  // words, no promise about VCA.
+  onderwerp('u.safework', 'Veiligheid op het werk', [
+    ['Ik ken een aantal woorden over veiligheidsborden, gevaarlijke stoffen en brand.', 'A2', 'lezen', 'I know some words about safety signs, hazardous substances and fire.'],
+    ['Ik kan vragen of een middel giftig is.', 'A2', 'gesprekken', 'I can ask if a product is toxic.'],
+  ]),
   // Werk vinden
   onderwerp('u.apply', 'Solliciteren', [
     ['Ik kan vertellen welke ervaring ik heb.', 'A2', 'spreken', 'I can say what experience I have.'],

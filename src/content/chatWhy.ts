@@ -286,6 +286,12 @@ const reasons: Record<string, string> = {
   'c.join.a': 'Asked to come: yes, and you want to talk to the teacher.',
   'c.workphotos.a': 'Asked for a photo for the internet: a polite no.',
   'c.device.a': 'Asked about a new app: ask the IT department first.',
+  // "Veiligheid op het werk" and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
+  'c.safetysigns.a': 'Asked what a sign means: watch out, and which sign it is.',
+  'c.substances.a': 'Asked if it is toxic: you do not guess, you look it up.',
+  'c.firefight.a': 'Told there is a fire: it is small, so you get the extinguisher.',
+  'c.permitwork.a': 'Asked who stays outside: you, and your task.',
+  'c.vog.a': 'Asked about your VOG: not yet, and what you are waiting for.',
 };
 
 /** Why the right reply of a chat fits, with its translation id; undefined when there is none. */
