@@ -164,6 +164,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "Bir çocuğun uyuyup uyumadığını sorabilirim.", // nieuw, nalezen
     'kjn.u.daycare.1': "Bir anneye ya da babaya günün nasıl geçtiğini anlatabilirim.", // nieuw, nalezen
     'kjn.u.daycare.2': "Bir çocuğu kimin almaya geleceğini sorabilirim.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "Hangi aşamada olduğumu sorabilirim.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "Maaşımdan yapılan bir kesintinin ne için olduğunu sorabilirim.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "Bir tuvaletin tıkalı olduğunu söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "Kovaya ne kadar ürün konacağını sorabilirim.", // nieuw, nalezen
+    'kjn.u.cooking.1': "Şefe bir şeyi nasıl keseceğimi sorabilirim.", // nieuw, nalezen
+    'kjn.u.cooking.2': "Bir misafire ayrı ödemek isteyip istemediğini sorabilirim.", // nieuw, nalezen
+    'kjn.u.carework.1': "Bir danışana ne giymek istediğini sorabilirim.", // nieuw, nalezen
+    'kjn.u.carework.2': "Hemşireye ne gördüğümü anlatabilirim.", // nieuw, nalezen
+    'kjn.u.shopfloor.1': "Bir müşteriden fişi isteyebilirim.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "Mağazanın birazdan kapanacağını söyleyebilirim.", // nieuw, nalezen
   },
 };
 

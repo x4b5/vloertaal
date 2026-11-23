@@ -256,6 +256,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "On demande si elle est tombée : oui, ce qu’elle a, et qui on appelle.", // nieuw, nalezen
     'c.sickchild.a.why': "On demande comment il va : ce qu’on voit, et ce qu’on fait.", // nieuw, nalezen
     'c.grouprules.a.why': "On demande si on peut sortir sans collègue : oui, mais en prévenant d’abord un collègue.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "On demande si c’est fini : pas encore, et pourquoi.", // nieuw, nalezen
+    'c.hotelroom.a.why': "On demande combien il en reste : le nombre, et quand on aura fini.", // nieuw, nalezen
+    'c.dosing.a.why': "On dit d’en mettre plus : non, plus n’est pas mieux, et ce qu’on utilise.", // nieuw, nalezen
+    'c.officenight.a.why': "On demande si on travaille seul : oui, et on enverra un message.", // nieuw, nalezen
+    'c.knives.a.why': "On demande de couper : oui, chef, et une question sur comment.", // nieuw, nalezen
+    'c.rawcooked.a.why': "On demande si c’est sans gluten : pas sûr, alors on regarde la liste.", // nieuw, nalezen
+    'c.pass.a.why': "On demande où est le plat : au passe, et on l’apporte maintenant.", // nieuw, nalezen
+    'c.bill.a.why': "On demande à payer séparément : oui, et on va chercher le terminal de paiement.", // nieuw, nalezen
+    'c.washing.a.why': "Le résident dit non : c’est d’accord, et on propose autre chose.", // nieuw, nalezen
+    'c.observing.a.why': "On demande s’il y a quelque chose de spécial : oui, et quoi exactement.", // nieuw, nalezen
+    'c.homecare.a.why': "On demande qui est là : un bonjour, qui on est, et est-ce que je peux entrer.", // nieuw, nalezen
+    'c.liftaids.a.why': "On demande de le faire sans aide : oui, avec le drap de glisse, et on va le chercher.", // nieuw, nalezen
+    'c.returns.a.why': "On demande à rapporter un article : oui, et une question sur le ticket.", // nieuw, nalezen
+    'c.facing.a.why': "On demande si c’est fini : presque, et ce qui reste à faire.", // nieuw, nalezen
+    'c.shrink.a.why': "On demande à regarder dans le sac : oui, et on montre le ticket.", // nieuw, nalezen
+    'c.shopclose.a.why': "On demande à entrer : désolé, c’est fermé, et quand ça rouvre.", // nieuw, nalezen
+    'c.hirer.a.why': "On demande de commencer ailleurs : oui, et une question sur l’heure.", // nieuw, nalezen
+    'c.phases.a.why': "On dit que la mission s’arrête : d’accord, et on demande un autre travail.", // nieuw, nalezen
+    'c.deductions.a.why': "On parle d’une retenue : on demande si c’est permis, et on vérifie.", // nieuw, nalezen
+    'c.agencyhome.a.why': "On dit de partir bientôt : c’est court, et on demande d’abord conseil.", // nieuw, nalezen
   },
 };
 

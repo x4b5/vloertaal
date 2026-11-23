@@ -164,6 +164,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "Je peux demander si un enfant dort déjà.", // nieuw, nalezen
     'kjn.u.daycare.1': "Je peux dire à un parent comment s’est passée la journée.", // nieuw, nalezen
     'kjn.u.daycare.2': "Je peux demander qui vient chercher un enfant.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "Je peux demander dans quelle phase je suis.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "Je peux demander à quoi sert une retenue sur mon salaire.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "Je peux dire que des toilettes sont bouchées.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "Je peux demander combien de produit il faut mettre dans le seau.", // nieuw, nalezen
+    'kjn.u.cooking.1': "Je peux demander au chef comment couper quelque chose.", // nieuw, nalezen
+    'kjn.u.cooking.2': "Je peux demander à un client s’il veut payer séparément.", // nieuw, nalezen
+    'kjn.u.carework.1': "Je peux demander à un résident ce qu’il veut mettre.", // nieuw, nalezen
+    'kjn.u.carework.2': "Je peux dire à l’infirmière ce que j’ai vu.", // nieuw, nalezen
+    'kjn.u.shopfloor.1': "Je peux demander le ticket de caisse à un client.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "Je peux dire que le magasin va bientôt fermer.", // nieuw, nalezen
   },
 };
 

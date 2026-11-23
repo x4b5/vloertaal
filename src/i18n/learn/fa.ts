@@ -257,6 +257,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "پرسیده‌اند زمین خورده یا نه: بله، چه شده، و به چه کسی زنگ می‌زنی.", // nieuw, nalezen
     'c.sickchild.a.why': "پرسیده‌اند حالش چطور است: چه می‌بینی، و چه کار می‌کنی.", // nieuw, nalezen
     'c.grouprules.a.why': "پرسیده‌اند اجازه دارد تنها برود یا نه: بله، ولی اول به یک همکار بگو.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "پرسیده‌اند تمام شده یا نه: هنوز نه، و چرا.", // nieuw, nalezen
+    'c.hotelroom.a.why': "پرسیده‌اند چند تا مانده: تعدادش، و کی تمام می‌کنی.", // nieuw, nalezen
+    'c.dosing.a.why': "گفته‌اند بیشتر بریز: نه، بیشتر بهتر نیست، و از چه استفاده می‌کنی.", // nieuw, nalezen
+    'c.officenight.a.why': "پرسیده‌اند تنها کار می‌کنی یا نه: بله، و پیام می‌دهی.", // nieuw, nalezen
+    'c.knives.a.why': "خواسته‌اند ببُری: بله سرآشپز، و یک سؤال دربارهٔ اینکه چطور.", // nieuw, nalezen
+    'c.rawcooked.a.why': "پرسیده‌اند بدون گلوتن است یا نه: مطمئن نیستی، پس فهرست را نگاه می‌کنی.", // nieuw, nalezen
+    'c.pass.a.why': "پرسیده‌اند غذا کجاست: روی پاس، و الان می‌آوری‌اش.", // nieuw, nalezen
+    'c.bill.a.why': "خواسته‌اند جدا حساب کنند: بله، و دستگاه کارت‌خوان را می‌آوری.", // nieuw, nalezen
+    'c.washing.a.why': "مراجع می‌گوید نه: اشکالی ندارد، و چیز دیگری پیشنهاد می‌کنی.", // nieuw, nalezen
+    'c.observing.a.why': "پرسیده‌اند چیز خاصی هست یا نه: بله، و دقیقاً چه.", // nieuw, nalezen
+    'c.homecare.a.why': "پرسیده‌اند کیست: سلام، اینکه کی هستی، و اجازه برای داخل آمدن.", // nieuw, nalezen
+    'c.liftaids.a.why': "خواسته‌اند تنهایی انجامش بدهی: بله، با ملافهٔ لغزنده، و آن را می‌آوری.", // nieuw, nalezen
+    'c.returns.a.why': "خواسته‌اند آن را پس بدهند: بله، و یک سؤال دربارهٔ رسید.", // nieuw, nalezen
+    'c.facing.a.why': "پرسیده‌اند کارت تمام شده یا نه: تقریباً، و چه چیزی مانده.", // nieuw, nalezen
+    'c.shrink.a.why': "خواسته‌اند در کیفت را نگاه کنند: بله، و رسید را نشان می‌دهی.", // nieuw, nalezen
+    'c.shopclose.a.why': "خواسته‌اند بیایند داخل: ببخشید، بسته است، و کی دوباره باز می‌شود.", // nieuw, nalezen
+    'c.hirer.a.why': "خواسته‌اند جای جدیدی شروع کنی: بله، و یک سؤال دربارهٔ ساعت.", // nieuw, nalezen
+    'c.phases.a.why': "گفته‌اند کار تمام می‌شود: باشه، و کار دیگری می‌خواهی.", // nieuw, nalezen
+    'c.deductions.a.why': "از یک کسر خبر داده‌اند: می‌پرسی مجاز است یا نه، و پرس‌وجو می‌کنی.", // nieuw, nalezen
+    'c.agencyhome.a.why': "گفته‌اند زود از خانه بروی: این زود است، و اول مشورت می‌گیری.", // nieuw, nalezen
   },
 };
 
