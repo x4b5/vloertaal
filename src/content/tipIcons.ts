@@ -170,6 +170,12 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🅰': 'w.fase',
   '➖': 'w.inhouding',
   '🏘': 'w.huisvesting',
+  // Operator in de procesindustrie (u.process, 23 November 2026): the round shows the control room
+  // and the fault the start-up of its own lesson (placeholders for now); the heat tip shows the
+  // heat (w.hitte, the thermometer in the sun); the night tip keeps the moon of the work rules (🌙).
+  '🎛': 'w.controlekamer',
+  '⏯': 'w.opstarten',
+  '🥵': 'w.hitte',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

@@ -178,6 +178,9 @@ const t: CultureTranslation = {
     // "Veiligheid op het werk" and the VOG (23 November 2026).
     'kjn.u.safework.1': "Je peux reconnaître quelques mots sur les panneaux de sécurité et le feu.", // nieuw, nalezen
     'kjn.u.safework.2': "Je peux demander si un produit est toxique.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'kjn.u.process.1': "Je peux dire que la pression est trop haute.", // nieuw, nalezen
+    'kjn.u.process.2': "Je peux dire à la transmission ce qui s’est passé.", // nieuw, nalezen
   },
 };
 

@@ -307,6 +307,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "Waxaa la sheegay in dab jiro: waa yar yahay, sidaas darteed qalabka dab-demiska ayaa la keenaa.", // nieuw, nalezen
     'c.permitwork.a.why': "Waxaa la weydiiyay cidda bannaanka ku haraysa: qofka laftiisa, iyo hawshiisa.", // nieuw, nalezen
     'c.vog.a.why': "Waxaa la weydiiyay VOG-ga: weli maya, iyo waxa la sugayo.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "Waxaa la weydiiyay alaarmiga: waxa xad-dhaafay, iyo meesha.", // nieuw, nalezen
+    'c.plantfault.a.why': "Waxaa la weydiiyay in la shidi karo: maya, quful ayaa weli saaran.", // nieuw, nalezen
+    'c.shiftwork.a.why': "Waxaa la weydiiyay waxa dhacay: cilladda, iyo meesha lagu qoray.", // nieuw, nalezen
+    'c.heatdust.a.why': "Waxaa la weydiiyay taleefanka: maya, khatarta halkan jirta awgeed.", // nieuw, nalezen
   },
 };
 export default t;

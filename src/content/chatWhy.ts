@@ -292,6 +292,11 @@ const reasons: Record<string, string> = {
   'c.firefight.a': 'Told there is a fire: it is small, so you get the extinguisher.',
   'c.permitwork.a': 'Asked who stays outside: you, and your task.',
   'c.vog.a': 'Asked about your VOG: not yet, and what you are waiting for.',
+  // "Operator in de procesindustrie" (u.process, 23 November 2026).
+  'c.plantround.a': 'Asked about the alarm: what is too high, and where.',
+  'c.plantfault.a': 'Asked if you may start: no, a lock is still on it.',
+  'c.shiftwork.a': 'Asked what happened: the fault, and where it is written.',
+  'c.heatdust.a': 'Asked about the phone: no, because of the danger here.',
 };
 
 /** Why the right reply of a chat fits, with its translation id; undefined when there is none. */

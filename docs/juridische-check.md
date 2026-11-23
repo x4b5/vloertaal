@@ -2674,6 +2674,80 @@ ______________________________________________________________
 ---
 
 
+### Operator in de procesindustrie (nieuw, 23 november 2026)
+
+*Op verzoek van de eigenaar, na Maastricht Maakt (16 maakbedrijven in Maastricht en hun duale traject voor statushouders; ze zoeken vooral operators en technische mensen): een vierde eigen onderwerp van Productie, „Operator in de procesindustrie” (`u.process`), met vier lessen: de ronde en de controlekamer (`l.plantround`), een storing (`l.plantfault`), ploegendienst en nachten (`l.shiftwork`) en hitte, stoom en stof (`l.heatdust`). Algemeen gehouden (geen bedrijfsnamen): een papiermachine, een oven, een glasoven, een menghal, een staallijn. Eén tip gaat over regels uit de wet en heeft hieronder een eigen sectie: c.shiftwork (nachtdiensten, alleen in het algemeen, zonder uren). De drie andere tips (c.plantround, c.plantfault, c.heatdust) gaan over veilig werken en sluiten met de huisregelregel („ask your supervisor”); hun feiten staan hieronder met bron. Elke bewering staat ook met een ⚖️-noot in `src/content/workTips.ts`. Geen getallen, grenswaarden of uren in de tips.*
+
+**Feiten in de andere tips en zinnen (graag ook nakijken):**
+- Een alarm niet uitzetten voordat je weet waarom het ging (c.plantround): geen wet als zodanig; de werkinstructies van het bedrijf en de RI&E (Arbowet art. 5); goede praktijk in de procesindustrie (alarmmanagement, EEMUA 191, NEN-EN-IEC 62682).
+- Nooit in een draaiende machine grijpen; eerst stilzetten en beveiligen tegen aanzetten (c.plantfault, `s.plantfault.2`): Arbobesluit art. 7.7 (bedieningssystemen, geen onbedoeld starten), 7.10 en 7.13 (bewegende delen; onderhoud aan een stilstaand arbeidsmiddel); dezelfde artikelen als de Werkregels-les over de balenpers (r.afval). Artikelnummers graag nakijken.
+- „Vaak hangt iedereen die aan de machine werkt zijn eigen slot erop” (c.plantfault) en „Het slot van de monteur zit er nog op” (`c.plantfault.a`): geen wet; de gebruikelijke lockout-tagout-procedure (LOTO) uit de RI&E van het bedrijf; daarom „often” en de huisregelregel.
+- Hitte bij de oven en stoom: vaak water drinken, ook voor je dorst hebt; duizelig of misselijk: stoppen, koele plek, iemand waarschuwen (c.heatdust, `s.heatdust.1`): Arbobesluit art. 6.1 (de werkgever neemt maatregelen tegen hitte); arboportaal.nl „Hittestress” / „Werken bij hitte”; hetzelfde advies als c.greensafe.
+- Stoom en heet metaal branden, ook als je het niet ziet (c.heatdust): oververhitte stoom is onzichtbaar, een leiding kan heet zijn zonder zichtbare stoom; Arbobesluit hoofdstuk 7 (hete delen van arbeidsmiddelen afschermen of markeren; artikel nakijken) en de RI&E.
+- Kwartsstof uit klei, zand of steen; je ziet het niet; het beschadigt je longen (c.heatdust, `s.heatdust.2`): werken met respirabel kristallijn silicastof staat sinds 2020 op de lijst van kankerverwekkende stoffen en processen (Arbobesluit art. 4.11 e.v. en de lijst; EU-richtlijn 2017/2398); het geeft silicose en longkanker; arboportaal.nl „Kwarts”, nlarbeidsinspectie.nl „Kwartsstof”. Geen grenswaarde in de tip.
+- Afzuiging gebruiken, stofmasker op, nooit stof wegblazen met perslucht; nat schoonmaken of een industriële stofzuiger (c.heatdust): Arbobesluit art. 4.2 en 4.4 (de arbeidshygiënische strategie: eerst bij de bron en afzuiging, een masker als laatste), art. 4.17 (kankerverwekkende stoffen); nlarbeidsinspectie.nl (niet droog vegen of afblazen); de arbocatalogi van de branches.
+- In sommige zones kan stof of damp ontploffen; een geel bord met EX; daar geen vonken en geen vuur (c.heatdust, `s.heatdust.3`): Arbobesluit art. 3.5a–3.5f (explosieveiligheid: het explosieveiligheidsdocument en de zone-indeling); EU-richtlijn 1999/92/EG (ATEX 137) art. 7 en bijlage III (het waarschuwingsbord „Ex”: gele driehoek met zwarte rand). In België hetzelfde (codex boek III titel 4).
+- „Vaak geen gewone telefoon in zo’n zone” (c.heatdust) en „Mag mijn telefoon mee in deze zone? — Nee. Hier is explosiegevaar.” (`c.heatdust.q`/`.a`): geen wet die de telefoon noemt; apparatuur in een Ex-zone moet daarvoor geschikt zijn (ATEX 114, richtlijn 2014/34/EU; Arbobesluit art. 3.5e en bijlage); een gewone telefoon is dat niet, dus bedrijven verbieden hem in de zone. Daarom „often” en „ask what is allowed in each zone”.
+
+**Onze eigen vraag hierbij:**
+- Kloppen de artikelnummers voor stilzetten en beveiligen (Arbobesluit art. 7.7, 7.10 en 7.13) en voor hete delen?
+- Is „never blow dust away with compressed air” juist als algemene regel bij kwartsstof?
+- Is het gesprekje „Mag mijn telefoon mee in deze zone? — Nee. Hier is explosiegevaar.” juist zo stellig, of moet het „Nee, hier niet” worden?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.shiftwork — Nights: sleep, eat, be on time (nieuw, 23 november 2026)
+
+*Unit „Operator in de procesindustrie”, les „Shifts and nights” (`l.shiftwork`)*
+
+**Samenvatting (NL):** Veel fabrieken draaien dag en nacht, elke dag van de week. Je werkt om de beurt vroege, late en nachtdiensten, vaak in drie of vijf ploegen. Slaap na een nachtdienst in een donkere, stille kamer en zeg thuis wanneer je slaapt. Eet op vaste tijden en neem je eigen eten mee: ’s nachts is de kantine vaak dicht. Wees op tijd voor de overdracht: je collega wacht, en de fabriek mag niet alleen blijven. Voor nachtdiensten zijn er extra regels, in de wet en vaak in de cao, bijvoorbeeld over rust na je nachten. Vraag wat de regels zijn waar jij werkt.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Many plants run day and night, every day of the week. You work early, late and night shifts in turn, often in three or five shift teams. After a night shift, sleep in a dark and quiet room, and tell your family when you sleep. Eat at fixed times, and take your own food: at night the canteen is often closed. Be on time for the handover: your colleague is waiting, and the plant may not be left alone. For night shifts there are extra rules, in the law and often in the cao, for example about rest after your nights. Ask what the rules are where you work.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Nachtdiensten: Arbeidstijdenwet art. 5:8 (de lengte van een nachtdienst, het aantal nachtdiensten achter elkaar en de rust na een nachtdienst en na een reeks nachtdiensten); art. 4:1 (de werkgever houdt rekening met de gezondheid van de werknemer, ook bij ploegendienst); een cao kan binnen de wet andere grenzen afspreken. Daarom noemt de tip geen uren: „extra rules, in the law and often in the cao, for example about rest after your nights”. Ploegensystemen (drie- of vijfploegendienst, volcontinu): geen wet, de gangbare roosters in de procesindustrie (arboportaal.nl „Nachtwerk en ploegendienst”). Slapen in een donkere, stille kamer en eten op vaste tijden: advies (arboportaal.nl „Nachtwerk en ploegendienst”; Gezondheidsraad, „Werken in nachtdiensten”, 2017). Op tijd voor de overdracht: huisregel, zoals c.shifts. België: de Arbeidswet van 16 maart 1971 (art. 35–38) en cao nr. 46 regelen nachtarbeid ook; de slotregel wordt in de Belgische cursus vanzelf vervangen.
+
+**Zeg het zo (Nederlands):** „Wat zijn de regels voor nachtdiensten?” — *What are the rules for night shifts?*
+
+**Situatie in de les:** After four nights, your shift leader asks you to work one more night. You are very tired. What do you do?  
+**Goede antwoord:** Say you are very tired, and ask about the rules.  
+**Uitleg na het antwoord (`c.shiftwork.w`):** Tired people make more mistakes, and in a plant a mistake can be dangerous. There are rules about rest after night shifts.
+
+**Uitleg bij het gesprekje (`c.shiftwork.a.why`):** „Wat is er vannacht gebeurd?” → „Pomp drie viel uit. Het staat in het logboek.”: Asked what happened: the fault, and where it is written.
+
+**⚠ Getallen en termijnen:** geen uren of termijnen in de tip; „three or five shift teams” is een beschrijving van gangbare roosters, geen regel.
+
+**Onze eigen vraag hierbij:**
+- Is „For night shifts there are extra rules, in the law and often in the cao, for example about rest after your nights” juist, ook nu de cao binnen de Arbeidstijdenwet van de standaard mag afwijken?
+- Is de situatie (een vijfde nacht na vier nachten) goed gekozen, of moet de tip zeggen dat de wet een grens stelt aan het aantal nachten achter elkaar?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
 ## Werkregels: gewijzigde beweringen (17 oktober 2026)
 
 De track **Werkregels** is voor mensen die al Nederlands spreken. De teksten staan alleen in het

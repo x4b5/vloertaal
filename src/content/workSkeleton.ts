@@ -377,4 +377,10 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.firefight", title: "Fire" },
       { id: "l.permitwork", title: "Permits, confined spaces and lifting" },
   ] },
+  { id: "u.process", title: "Operator in the process industry", titleNl: "Operator in de procesindustrie", emoji: "🏭", color: "#5b6770", lessons: [
+      { id: "l.plantround", title: "The round and the control room" },
+      { id: "l.plantfault", title: "A fault" },
+      { id: "l.shiftwork", title: "Shifts and nights" },
+      { id: "l.heatdust", title: "Heat, steam and dust" },
+  ] },
 ];

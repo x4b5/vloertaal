@@ -179,6 +179,9 @@ const t: CultureTranslation = {
     // "Veiligheid op het werk" and the VOG (23 November 2026).
     'kjn.u.safework.1': "Я можу впізнати деякі слова про знаки безпеки та пожежу.", // nieuw, nalezen
     'kjn.u.safework.2': "Я можу запитати, чи засіб отруйний.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'kjn.u.process.1': "Я можу сказати, що тиск занадто високий.", // nieuw, nalezen
+    'kjn.u.process.2': "Я можу розповісти на передачі зміни, що сталося.", // nieuw, nalezen
   },
 };
 

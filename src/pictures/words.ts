@@ -66,6 +66,7 @@ import groupWinkel2 from './groupWinkel2';
 import groupUitzend from './groupUitzend';
 import groupBasis from './groupBasis';
 import groupVeilig2 from './groupVeilig2';
+import groupProces from './groupProces';
 import group53 from './group53';
 import group54 from './group54';
 import group55 from './group55';
@@ -172,6 +173,9 @@ const words: Record<string, () => JSX.Element> = {
   // "Veiligheid op het werk" (u.safework, 23 November 2026): its 22 drawable words, PLACEHOLDERS for
   // now (./placeholder.tsx).
   ...groupVeilig2,
+  // "Operator in de procesindustrie" (u.process, 23 November 2026): its 24 words, PLACEHOLDERS for
+  // now (./placeholder.tsx).
+  ...groupProces,
   // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): l.tiletools, l.tiling and l.plaster.
   ...group53,
   ...group54,

@@ -11,6 +11,7 @@ import { workUnits } from './work';
  * (23 November 2026; translated the same day). And the twenty-six lessons of the basis units at four
  * lessons (23 November 2026; translated the same day). And the four lessons of "Veiligheid op het
  * werk" and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026; translated the same day).
+ * And the four lessons of "Operator in de procesindustrie" (23 November 2026; translated the same day).
  */
 export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
 

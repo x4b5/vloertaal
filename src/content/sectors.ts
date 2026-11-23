@@ -51,8 +51,10 @@ export const sectors: Sector[] = [
     rules: { units: ['r.build'], focus: ['r.veilig', 'r.contract'] } },
   // "Machines en gereedschap" (u.machines, 21 November 2026): the second own unit of Productie
   // (the machine, checking, packing, maintenance), right after "In de productie" in the sector slot;
-  // "Assemblage en montage" (u.montage, the same day) right after it.
-  { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory', 'u.machines', 'u.montage'], focus: ['u.safety', 'u.tools'],
+  // "Assemblage en montage" (u.montage, the same day) right after it. "Operator in de
+  // procesindustrie" (u.process, 23 November 2026): the fourth, right after that (the plants of
+  // Maastricht Maakt look most for operators).
+  { id: 'production', nl: 'Productie', key: 'sectorProduction', units: ['u.factory', 'u.machines', 'u.montage', 'u.process'], focus: ['u.safety', 'u.tools'],
     rules: { units: ['r.factory'], focus: ['r.veilig', 'r.tijd'] } },
   // The second own units of Zorg ("Verzorgen en thuiszorg", u.carework), Horeca ("De keuken en de
   // bediening", u.cooking), Schoonmaak ("Sanitair, hotel en machines", u.housekeeping) and Winkel

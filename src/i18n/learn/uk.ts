@@ -312,6 +312,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "Кажуть про пожежу: вона невелика, тож ти береш вогнегасник.", // nieuw, nalezen
     'c.permitwork.a.why': "Питають, хто залишається зовні: ти, і твоє завдання.", // nieuw, nalezen
     'c.vog.a.why': "Питають про твій VOG: ще ні, і на що ти чекаєш.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "Питають про тривогу: що занадто високе і де.", // nieuw, nalezen
+    'c.plantfault.a.why': "Питають, чи можна запускати: ні, ще висить замок.", // nieuw, nalezen
+    'c.shiftwork.a.why': "Питають, що сталося: несправність, і де це записано.", // nieuw, nalezen
+    'c.heatdust.a.why': "Питають про телефон: ні, через небезпеку тут.", // nieuw, nalezen
   },
 };
 

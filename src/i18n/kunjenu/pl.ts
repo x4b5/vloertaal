@@ -180,6 +180,9 @@ const t: CultureTranslation = {
     // "Veiligheid op het werk" and the VOG (23 November 2026).
     'kjn.u.safework.1': "Umiem rozpoznać kilka słów o znakach bezpieczeństwa i pożarze.", // nieuw, nalezen
     'kjn.u.safework.2': "Umiem zapytać, czy środek jest toksyczny.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'kjn.u.process.1': "Umiem powiedzieć, że ciśnienie jest za wysokie.", // nieuw, nalezen
+    'kjn.u.process.2': "Umiem przy przekazaniu zmiany opowiedzieć, co się stało.", // nieuw, nalezen
   },
 };
 

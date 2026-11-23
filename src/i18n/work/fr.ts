@@ -4900,6 +4900,88 @@ const t: CultureTranslation = {
     'c.permitwork.o2': "Tu entres vite pour l’aider.", // nieuw, nalezen
     'c.permitwork.o3': "Tu attends quelques minutes, puis tu regardes.", // nieuw, nalezen
     'c.permitwork.w': "Le gaz qui a fait du mal à ton collègue peut te faire du mal aussi. Beaucoup de victimes dans les cuves étaient des sauveteurs. Après l’alarme, une aide avec protection arrive.", // nieuw, nalezen
+    // "Operator in de procesindustrie", the fourth own unit of Productie (23 November 2026).
+    'u.process': "Opérateur dans l’industrie de process", // nieuw, nalezen
+    'l.plantround': "La ronde et la salle de contrôle", // nieuw, nalezen
+    'w.controlekamer': "la salle de contrôle (là où les opérateurs surveillent toute l’usine sur des écrans)", // nieuw, nalezen
+    'w.operator': "l’opérateur (la personne qui fait tourner et surveille les machines d’une usine)", // nieuw, nalezen
+    'w.drukmeter': "le manomètre (un compteur rond avec une aiguille)", // nieuw, nalezen
+    'w.niveau': "le niveau (à quel point une cuve ou un silo est plein)", // nieuw, nalezen
+    'w.snelheid': "la vitesse (à quelle vitesse une ligne ou une machine tourne)", // nieuw, nalezen
+    'w.alarmmelding': "le message d’alarme (un avertissement sur l’écran : quelque chose ne va pas)", // nieuw, nalezen
+    's.plantround.1': "Je fais ma ronde.", // nieuw, nalezen
+    's.plantround.2': "La pression est trop haute.", // nieuw, nalezen
+    's.plantround.3': "Je note la valeur.", // nieuw, nalezen
+    'c.plantround.q': "Pourquoi il y a une alarme sur l’écran ?", // nieuw, nalezen
+    'c.plantround.a': "Le niveau dans la cuve deux est trop haut.", // nieuw, nalezen
+    'l.plantfault': "Une panne", // nieuw, nalezen
+    'w.stilstand': "l’arrêt (la ligne s’arrête, et rien n’est produit)", // nieuw, nalezen
+    'w.opstarten': "démarrer (une machine ou une ligne, étape par étape)", // nieuw, nalezen
+    'w.stilzetten': "arrêter (arrêter une machine de la bonne façon)", // nieuw, nalezen
+    'w.technischedienst': "le service de maintenance (le TD : ils réparent les machines)", // nieuw, nalezen
+    'w.onderhoudsmonteur': "le technicien de maintenance", // nieuw, nalezen
+    'w.resetten': "réarmer (effacer un défaut sur l’écran ou sur le pupitre de commande)", // nieuw, nalezen
+    's.plantfault.1': "En cas de panne, j’appelle le chef de poste.", // nieuw, nalezen
+    's.plantfault.2': "Ne mets jamais la main dans une machine qui tourne.", // nieuw, nalezen
+    's.plantfault.3': "Le service de maintenance arrive.", // nieuw, nalezen
+    'c.plantfault.q': "Je peux redémarrer la ligne ?", // nieuw, nalezen
+    'c.plantfault.a': "Non, attends. Le cadenas du mécanicien est encore dessus.", // nieuw, nalezen
+    'l.shiftwork': "Les équipes et les nuits", // nieuw, nalezen
+    'w.ploeg': "l’équipe (le groupe qui travaille aux mêmes horaires)", // nieuw, nalezen
+    'w.ploegwissel': "le changement d’équipe (une équipe rentre chez elle, l’équipe suivante commence)", // nieuw, nalezen
+    'w.volcontinu': "en continu (l’usine tourne jour et nuit, tous les jours de la semaine)", // nieuw, nalezen
+    'w.overdagslapen': "dormir le jour (après un service de nuit)", // nieuw, nalezen
+    'w.broodtrommel': "la boîte à repas", // nieuw, nalezen
+    'w.aflosser': "la relève (le collègue qui prend ta place)", // nieuw, nalezen
+    's.shiftwork.1': "Notre usine tourne en continu.", // nieuw, nalezen
+    's.shiftwork.2': "Écris-le dans le registre pour l’équipe suivante.", // nieuw, nalezen
+    's.shiftwork.3': "Je suis à l’heure pour la transmission.", // nieuw, nalezen
+    'c.shiftwork.q': "Qu’est-ce qui s’est passé cette nuit ?", // nieuw, nalezen
+    'c.shiftwork.a': "La pompe trois s’est arrêtée. C’est dans le registre.", // nieuw, nalezen
+    'l.heatdust': "Chaleur, vapeur et poussière", // nieuw, nalezen
+    'w.smeltoven': "le four de fusion (un four très chaud qui fait fondre le verre ou le métal)", // nieuw, nalezen
+    'w.stoom': "la vapeur (de la vapeur d’eau très chaude)", // nieuw, nalezen
+    'w.stoomleiding': "la conduite de vapeur (elle est chaude, même quand tu ne vois pas de vapeur)", // nieuw, nalezen
+    'w.hittekleding': "les vêtements de protection contre la chaleur", // nieuw, nalezen
+    'w.kwartsstof': "la poussière de quartz (une poussière très fine d’argile, de sable ou de pierre ; elle abîme tes poumons)", // nieuw, nalezen
+    'w.explosiegevaar': "le risque d’explosion (la poussière ou la vapeur dans l’air peut exploser ; un panneau jaune avec EX)", // nieuw, nalezen
+    's.heatdust.1': "Bois souvent de l’eau près du four de fusion.", // nieuw, nalezen
+    's.heatdust.2': "La poussière de quartz ne se voit pas. Mets ton masque anti-poussière.", // nieuw, nalezen
+    's.heatdust.3': "Ici, il y a un risque d’explosion : pas d’étincelles.", // nieuw, nalezen
+    'c.heatdust.q': "Je peux entrer dans cette zone avec mon téléphone ?", // nieuw, nalezen
+    'c.heatdust.a': "Non. Ici, il y a un risque d’explosion.", // nieuw, nalezen
+    'c.plantround': "Fais ta ronde, et note tout", // nieuw, nalezen
+    'c.plantround.b': "Une usine qui tourne jour et nuit a besoin d’yeux et d’oreilles. Pendant ta ronde, tu regardes, tu écoutes et tu sens : un nouveau bruit, une fuite ou une odeur bizarre peut être le premier signe d’un problème. Tu lis les compteurs : la température, la pression, la vitesse et le niveau. Note chaque valeur tout de suite, avec l’heure, sur la liste ou dans le système. Pas plus tard, de mémoire. Une valeur est trop haute ou trop basse ? Dis-le tout de suite à la salle de contrôle ou à ton chef de poste. Une alarme sur l’écran n’est jamais « juste une alarme » : ne l’éteins pas avant de savoir pourquoi elle s’est déclenchée. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.plantround.p': "La température est trop haute.", // nieuw, nalezen
+    'c.plantround.s': "Pendant ta ronde, la pression est un peu trop haute. Ton service est presque fini. Que fais-tu ?", // nieuw, nalezen
+    'c.plantround.o1': "Tu le dis tout de suite à la salle de contrôle.", // nieuw, nalezen
+    'c.plantround.o2': "Tu le notes, et tu ne le dis à personne.", // nieuw, nalezen
+    'c.plantround.o3': "Tu laisses ça à l’équipe suivante.", // nieuw, nalezen
+    'c.plantround.w': "Dans une usine, un petit changement peut grandir vite. Quand la salle de contrôle le sait tôt, elle peut agir avant qu’un problème arrive.", // nieuw, nalezen
+    'c.plantfault': "Arrêter, cadenasser, puis réparer", // nieuw, nalezen
+    'c.plantfault.b': "Quand il y a une panne, la ligne s’arrête, et tout le monde veut qu’elle tourne vite à nouveau. Mais c’est justement à ce moment-là qu’il y a beaucoup d’accidents. Ne mets jamais la main dans une machine qui tourne, même pas « juste un instant ». Appelle ton chef de poste ou le service de maintenance. Avant que quelqu’un travaille sur la machine, elle est arrêtée et cadenassée, pour que personne ne puisse la démarrer. Souvent, chaque personne qui travaille dessus met son propre cadenas. Redémarre seulement quand tous les cadenas sont enlevés et que ton chef de poste dit que c’est sans danger. Redémarre étape par étape, comme tu l’as appris. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.plantfault.p': "Il y a encore un cadenas dessus.", // nieuw, nalezen
+    'c.plantfault.s': "Un produit est coincé dans la machine. La machine tourne encore. Un collègue dit : “Tire-le vite.” Que fais-tu ?", // nieuw, nalezen
+    'c.plantfault.o1': "Tu ne mets pas la main dedans : tu appelles le chef de poste.", // nieuw, nalezen
+    'c.plantfault.o2': "Tu le tires vite avec la main.", // nieuw, nalezen
+    'c.plantfault.o3': "Tu le pousses avec un bâton pendant que la machine tourne.", // nieuw, nalezen
+    'c.plantfault.w': "Une machine qui tourne encore peut bouger à tout moment. Une machine arrêtée et cadenassée ne peut pas te blesser.", // nieuw, nalezen
+    'c.shiftwork': "Les nuits : dormir, manger, être à l’heure", // nieuw, nalezen
+    'c.shiftwork.b': "Beaucoup d’usines tournent jour et nuit, tous les jours de la semaine. Tu travailles le matin, le soir et la nuit à tour de rôle, souvent en trois ou cinq équipes. Après un service de nuit, dors dans une chambre sombre et calme, et dis à ta famille quand tu dors. Mange à heures fixes, et apporte ta propre nourriture : la nuit, la cantine est souvent fermée. Sois à l’heure pour la transmission : ton collègue attend, et l’usine ne peut pas rester sans personne. Pour le travail de nuit, il y a des règles en plus, dans la loi et souvent dans la convention collective (cao), par exemple sur le repos après tes nuits. Demande quelles sont les règles là où tu travailles. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nalezen
+    'c.shiftwork.p': "Quelles sont les règles pour les services de nuit ?", // nieuw, nalezen
+    'c.shiftwork.s': { m: "Après quatre nuits, ton chef de poste te demande de travailler encore une nuit. Tu es très fatigué. Que fais-tu ?", f: "Après quatre nuits, ton chef de poste te demande de travailler encore une nuit. Tu es très fatiguée. Que fais-tu ?", x: "Après quatre nuits, ton chef de poste te demande de travailler encore une nuit. Tu ressens une très grande fatigue. Que fais-tu ?" }, // nieuw, nalezen
+    'c.shiftwork.o1': { m: "Tu dis que tu es très fatigué, et tu demandes quelles sont les règles.", f: "Tu dis que tu es très fatiguée, et tu demandes quelles sont les règles.", x: "Tu parles de ta grande fatigue, et tu demandes quelles sont les règles." }, // nieuw, nalezen
+    'c.shiftwork.o2': "Tu dis oui, et tu bois beaucoup de café.", // nieuw, nalezen
+    'c.shiftwork.o3': "Tu dis oui, et tu dors un peu pendant ta pause.", // nieuw, nalezen
+    'c.shiftwork.w': "Les gens fatigués font plus d’erreurs, et dans une usine, une erreur peut être dangereuse. Il y a des règles sur le repos après les services de nuit.", // nieuw, nalezen
+    'c.heatdust': "Chaleur, poussière et étincelles", // nieuw, nalezen
+    'c.heatdust.b': "Près d’un four de fusion, d’un four de cuisson ou de la vapeur, il fait très chaud. Bois souvent de l’eau, même avant d’avoir soif. Porte les vêtements de protection contre la chaleur, et ne touche pas les tuyaux ou les pièces sans gants : la vapeur et le métal chaud brûlent, même quand tu ne les vois pas. Tu as la tête qui tourne ou tu te sens mal ? Arrête-toi, va dans un endroit frais et dis-le à quelqu’un. La poussière d’argile, de sable ou de pierre peut contenir de la poussière de quartz (kwartsstof). Tu ne la vois pas, mais elle abîme tes poumons. Utilise l’aspiration, porte ton masque anti-poussière, et ne souffle jamais la poussière avec de l’air comprimé. Dans certaines zones, la poussière ou la vapeur peut exploser : un panneau jaune avec EX le montre. Là : pas d’étincelles, pas de feu, et souvent pas de téléphone normal. Demande ce qui est permis dans chaque zone. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.heatdust.p': "Je ne me sens pas bien. Je vais dans un endroit frais.", // nieuw, nalezen
+    'c.heatdust.s': "Il y a de la poussière d’argile fine sur ta machine. Un collègue dit : “Souffle-la avec la soufflette.” Que fais-tu ?", // nieuw, nalezen
+    'c.heatdust.o1': "Tu nettoies à l’humide, ou avec l’aspirateur.", // nieuw, nalezen
+    'c.heatdust.o2': "Tu souffles : c’est plus rapide.", // nieuw, nalezen
+    'c.heatdust.o3': "Tu laisses ça à l’équipe suivante.", // nieuw, nalezen
+    'c.heatdust.w': "Souffler fait voler la poussière, dans l’air et dans tes poumons. Un chiffon humide ou un aspirateur garde la poussière au sol.", // nieuw, nalezen
   },
 };
 

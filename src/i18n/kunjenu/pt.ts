@@ -178,6 +178,9 @@ const t: CultureTranslation = {
     // "Veiligheid op het werk" and the VOG (23 November 2026).
     'kjn.u.safework.1': "Consigo reconhecer algumas palavras sobre sinais de segurança e fogo.", // nieuw, nalezen
     'kjn.u.safework.2': "Consigo perguntar se um produto é tóxico.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'kjn.u.process.1': "Consigo dizer que a pressão está alta demais.", // nieuw, nalezen
+    'kjn.u.process.2': "Consigo contar na passagem de turno o que aconteceu.", // nieuw, nalezen
   },
 };
 

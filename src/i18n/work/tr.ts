@@ -4901,6 +4901,88 @@ const t: CultureTranslation = {
     'c.permitwork.o2': "Ona yardım etmek için hızla içeri tırmanırsın.", // nieuw, nalezen
     'c.permitwork.o3': "Birkaç dakika beklersin, sonra bakarsın.", // nieuw, nalezen
     'c.permitwork.w': "İş arkadaşına zarar veren gaz sana da zarar verebilir. Tanklardaki kurbanların birçoğu yardıma koşan kişilerdi. Alarmdan sonra koruyucu donanımla yardım gelir.", // nieuw, nalezen
+    // "Operator in de procesindustrie", the fourth own unit of Productie (23 November 2026).
+    'u.process': "Proses endüstrisinde operatör", // nieuw, nalezen
+    'l.plantround': "Tur ve kontrol odası", // nieuw, nalezen
+    'w.controlekamer': "kontrol odası (operatörlerin bütün tesisi ekranlardan izlediği yer)", // nieuw, nalezen
+    'w.operator': "operatör (bir tesisin makinelerini çalıştıran ve izleyen kişi)", // nieuw, nalezen
+    'w.drukmeter': "basınç göstergesi, manometre (ibreli yuvarlak bir gösterge)", // nieuw, nalezen
+    'w.niveau': "seviye (bir tankın ya da silonun ne kadar dolu olduğu)", // nieuw, nalezen
+    'w.snelheid': "hız (bir hattın ya da makinenin ne kadar hızlı çalıştığı)", // nieuw, nalezen
+    'w.alarmmelding': "alarm mesajı (ekranda bir şeyin yanlış olduğunu söyleyen bir uyarı)", // nieuw, nalezen
+    's.plantround.1': "Turumu atıyorum.", // nieuw, nalezen
+    's.plantround.2': "Basınç çok yüksek.", // nieuw, nalezen
+    's.plantround.3': "Değeri yazıyorum.", // nieuw, nalezen
+    'c.plantround.q': "Ekranda neden bir alarm var?", // nieuw, nalezen
+    'c.plantround.a': "İki numaralı tankta seviye çok yüksek.", // nieuw, nalezen
+    'l.plantfault': "Bir arıza", // nieuw, nalezen
+    'w.stilstand': "duruş (hat durur ve hiçbir şey üretilmez)", // nieuw, nalezen
+    'w.opstarten': "çalıştırmak, devreye almak (bir makineyi ya da hattı, adım adım)", // nieuw, nalezen
+    'w.stilzetten': "durdurmak (bir makineyi doğru şekilde durdurmak)", // nieuw, nalezen
+    'w.technischedienst': "bakım bölümü (TD: makineleri onarırlar)", // nieuw, nalezen
+    'w.onderhoudsmonteur': "bakım teknisyeni", // nieuw, nalezen
+    'w.resetten': "resetlemek, sıfırlamak (ekrandaki ya da paneldeki bir arızayı silmek)", // nieuw, nalezen
+    's.plantfault.1': "Arıza olduğunda vardiya şefini ararım.", // nieuw, nalezen
+    's.plantfault.2': "Çalışan bir makinenin içine asla uzanma.", // nieuw, nalezen
+    's.plantfault.3': "Bakım bölümü yolda.", // nieuw, nalezen
+    'c.plantfault.q': "Hattı yeniden çalıştırabilir miyim?", // nieuw, nalezen
+    'c.plantfault.a': "Hayır, bekle. Teknisyenin kilidi hâlâ üzerinde.", // nieuw, nalezen
+    'l.shiftwork': "Vardiyalar ve geceler", // nieuw, nalezen
+    'w.ploeg': "vardiya ekibi (aynı vardiyalarda çalışan grup)", // nieuw, nalezen
+    'w.ploegwissel': "vardiya değişimi (bir ekip eve gider, sonraki ekip başlar)", // nieuw, nalezen
+    'w.volcontinu': "kesintisiz, gece gündüz (tesis haftanın her günü gece gündüz çalışır)", // nieuw, nalezen
+    'w.overdagslapen': "gündüz uyumak (bir gece vardiyasından sonra)", // nieuw, nalezen
+    'w.broodtrommel': "yemek kutusu", // nieuw, nalezen
+    'w.aflosser': "nöbeti devralan kişi (senin yerini alan iş arkadaşı)", // nieuw, nalezen
+    's.shiftwork.1': "Fabrikamız kesintisiz çalışıyor.", // nieuw, nalezen
+    's.shiftwork.2': "Bunu sonraki vardiya ekibi için kayıt defterine yaz.", // nieuw, nalezen
+    's.shiftwork.3': "Devir teslim için zamanındayım.", // nieuw, nalezen
+    'c.shiftwork.q': "Dün gece ne oldu?", // nieuw, nalezen
+    'c.shiftwork.a': "Üç numaralı pompa durdu. Kayıt defterinde yazıyor.", // nieuw, nalezen
+    'l.heatdust': "Isı, buhar ve toz", // nieuw, nalezen
+    'w.smeltoven': "ergitme fırını (camı ya da metali eriten çok sıcak bir fırın)", // nieuw, nalezen
+    'w.stoom': "buhar (çok sıcak su buharı)", // nieuw, nalezen
+    'w.stoomleiding': "buhar borusu (buhar görmesen de sıcaktır)", // nieuw, nalezen
+    'w.hittekleding': "ısıya dayanıklı koruyucu giysi", // nieuw, nalezen
+    'w.kwartsstof': "kuvars tozu (kilden, kumdan ya da taştan çıkan çok ince toz; akciğerlerine zarar verir)", // nieuw, nalezen
+    'w.explosiegevaar': "patlama tehlikesi (havadaki toz ya da buhar patlayabilir; üzerinde EX yazan sarı bir işaret)", // nieuw, nalezen
+    's.heatdust.1': "Ergitme fırınının yanında sık sık su iç.", // nieuw, nalezen
+    's.heatdust.2': "Kuvars tozunu göremezsin. Toz maskeni tak.", // nieuw, nalezen
+    's.heatdust.3': "Burada patlama tehlikesi var: kıvılcım olmaz.", // nieuw, nalezen
+    'c.heatdust.q': "Telefonum bu bölgeye girebilir mi?", // nieuw, nalezen
+    'c.heatdust.a': "Hayır. Burada patlama tehlikesi var.", // nieuw, nalezen
+    'c.plantround': "Turunu at, değerleri yaz", // nieuw, nalezen
+    'c.plantround.b': "Gece gündüz çalışan bir tesisin gözlere ve kulaklara ihtiyacı vardır. Turunda bakar, dinler ve koklarsın: yeni bir ses, bir sızıntı ya da garip bir koku bir sorunun ilk işareti olabilir. Göstergeleri okursun: sıcaklık, basınç, hız ve seviye. Her değeri hemen, saatiyle birlikte listeye ya da sisteme yaz. Sonradan, ezberden değil. Bir değer çok mu yüksek ya da çok mu düşük? Hemen kontrol odasına ya da vardiya şefine söyle. Ekrandaki bir alarm asla “sadece bir alarm” değildir: neden çaldığını bilmeden onu kapatma. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.plantround.p': "Sıcaklık çok yüksek.", // nieuw, nalezen
+    'c.plantround.s': "Turunda basınç biraz fazla yüksek. Vardiyan neredeyse bitiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.plantround.o1': "Hemen kontrol odasına söylersin.", // nieuw, nalezen
+    'c.plantround.o2': "Yazarsın ve kimseye söylemezsin.", // nieuw, nalezen
+    'c.plantround.o3': "Sonraki vardiyaya bırakırsın.", // nieuw, nalezen
+    'c.plantround.w': "Bir tesiste küçük bir değişiklik hızla büyüyebilir. Kontrol odası bunu erken öğrenirse, bir şey ters gitmeden önce müdahale edebilir.", // nieuw, nalezen
+    'c.plantfault': "Durdur, kilitle, sonra onar", // nieuw, nalezen
+    'c.plantfault.b': "Arıza olduğunda hat durur ve herkes onun hızla yeniden çalışmasını ister. Ama birçok kaza tam o zaman olur. Çalışan bir makinenin içine asla uzanma, “sadece bir anlığına” bile. Vardiya şefini ya da bakım bölümünü ara. Biri makinede çalışmadan önce makine durdurulur ve kilitlenir, böylece kimse onu çalıştıramaz. Çoğu zaman makinede çalışan herkes üzerine kendi kilidini takar. Ancak bütün kilitler çıkarıldığında ve vardiya şefin güvenli olduğunu söylediğinde yeniden çalıştır. Öğrendiğin şekilde, adım adım çalıştır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.plantfault.p': "Üzerinde hâlâ bir kilit var.", // nieuw, nalezen
+    'c.plantfault.s': "Makineye bir ürün sıkıştı. Makine hâlâ çalışıyor. Bir iş arkadaşın diyor ki: “Hızlıca çekip çıkar.” Ne yaparsın?", // nieuw, nalezen
+    'c.plantfault.o1': "İçine uzanmazsın: vardiya şefini ararsın.", // nieuw, nalezen
+    'c.plantfault.o2': "Elinle hızlıca çekip çıkarırsın.", // nieuw, nalezen
+    'c.plantfault.o3': "Makine çalışırken bir sopayla iterek çıkarırsın.", // nieuw, nalezen
+    'c.plantfault.w': "Hâlâ çalışan bir makine her an hareket edebilir. Durdurulmuş ve kilitlenmiş bir makine sana zarar veremez.", // nieuw, nalezen
+    'c.shiftwork': "Geceler: uyu, ye, zamanında ol", // nieuw, nalezen
+    'c.shiftwork.b': "Birçok tesis haftanın her günü gece gündüz çalışır. Sırayla sabah, akşam ve gece vardiyalarında çalışırsın, çoğu zaman üç ya da beş vardiya ekibiyle. Gece vardiyasından sonra karanlık ve sessiz bir odada uyu ve ailene ne zaman uyuduğunu söyle. Belli saatlerde ye ve kendi yemeğini getir: gece yemekhane çoğu zaman kapalıdır. Devir teslim için zamanında ol: iş arkadaşın bekliyor ve tesis yalnız bırakılamaz. Gece vardiyaları için yasada ve çoğu zaman cao’da ek kurallar vardır, örneğin gece vardiyalarından sonraki dinlenme hakkında. Çalıştığın yerde kuralların ne olduğunu sor. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.shiftwork.p': "Gece vardiyaları için kurallar neler?", // nieuw, nalezen
+    'c.shiftwork.s': "Dört geceden sonra vardiya şefin senden bir gece daha çalışmanı istiyor. Çok yorgunsun. Ne yaparsın?", // nieuw, nalezen
+    'c.shiftwork.o1': "Çok yorgun olduğunu söyler ve kuralları sorarsın.", // nieuw, nalezen
+    'c.shiftwork.o2': "Evet der ve bol kahve içersin.", // nieuw, nalezen
+    'c.shiftwork.o3': "Evet der ve molanda biraz uyursun.", // nieuw, nalezen
+    'c.shiftwork.w': "Yorgun insanlar daha çok hata yapar ve bir tesiste bir hata tehlikeli olabilir. Gece vardiyalarından sonra dinlenmeyle ilgili kurallar vardır.", // nieuw, nalezen
+    'c.heatdust': "Isı, toz ve kıvılcımlar", // nieuw, nalezen
+    'c.heatdust.b': "Bir ergitme fırınının, bir pişirme fırınının ya da buharın yakınında çok sıcaktır. Sık sık su iç, susamadan önce de. Isıya dayanıklı koruyucu giysiyi giy ve boruları ya da parçaları eldivensiz tutma: buhar ve sıcak metal yakar, onları görmesen de. Başın mı dönüyor ya da miden mi bulanıyor? Dur, serin bir yere git ve birine söyle. Kilden, kumdan ya da taştan çıkan toz kuvars tozu (kwartsstof) içerebilir. Onu görmezsin, ama akciğerlerine zarar verir. Toz emme sistemini kullan, toz maskeni tak ve tozu asla basınçlı havayla üfleme. Bazı bölgelerde toz ya da buhar patlayabilir: bunu üzerinde EX yazan sarı bir işaret gösterir. Orada: kıvılcım yok, ateş yok ve çoğu zaman normal telefon yok. Her bölgede neye izin verildiğini sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.heatdust.p': "Kendimi iyi hissetmiyorum. Serin bir yere gidiyorum.", // nieuw, nalezen
+    'c.heatdust.s': "Makinende ince kil tozu var. Bir iş arkadaşın diyor ki: “Hava tabancasıyla üfle.” Ne yaparsın?", // nieuw, nalezen
+    'c.heatdust.o1': "Islak bezle ya da elektrikli süpürgeyle temizlersin.", // nieuw, nalezen
+    'c.heatdust.o2': "Üflersin: daha hızlı.", // nieuw, nalezen
+    'c.heatdust.o3': "Sonraki vardiyaya bırakırsın.", // nieuw, nalezen
+    'c.heatdust.w': "Üflemek tozu havalandırır, havaya ve akciğerlerine. Islak bir bez ya da elektrikli süpürge tozu aşağıda tutar.", // nieuw, nalezen
   },
 };
 

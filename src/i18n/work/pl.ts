@@ -4902,6 +4902,88 @@ const t: CultureTranslation = {
     'c.permitwork.o2': "Szybko wejdź do środka, żeby mu pomóc.", // nieuw, nalezen
     'c.permitwork.o3': "Poczekaj kilka minut, potem zajrzyj.", // nieuw, nalezen
     'c.permitwork.w': "Gaz, który zaszkodził koledze, może zaszkodzić też tobie. Wiele ofiar w zbiornikach to osoby, które weszły, żeby pomóc. Po alarmie przychodzi pomoc ze sprzętem ochronnym.", // nieuw, nalezen
+    // "Operator in de procesindustrie", the fourth own unit of Productie (23 November 2026).
+    'u.process': "Operator w przemyśle procesowym", // nieuw, nalezen
+    'l.plantround': "Obchód i sterownia", // nieuw, nalezen
+    'w.controlekamer': "sterownia (miejsce, gdzie operatorzy obserwują cały zakład na ekranach)", // nieuw, nalezen
+    'w.operator': "operator (osoba, która prowadzi i obserwuje maszyny w zakładzie)", // nieuw, nalezen
+    'w.drukmeter': "manometr (okrągły miernik ze wskazówką)", // nieuw, nalezen
+    'w.niveau': "poziom (jak pełny jest zbiornik albo silos)", // nieuw, nalezen
+    'w.snelheid': "prędkość (jak szybko pracuje linia albo maszyna)", // nieuw, nalezen
+    'w.alarmmelding': "komunikat alarmowy (ostrzeżenie na ekranie, że coś jest nie tak)", // nieuw, nalezen
+    's.plantround.1': "Robię obchód.", // nieuw, nalezen
+    's.plantround.2': "Ciśnienie jest za wysokie.", // nieuw, nalezen
+    's.plantround.3': "Zapisuję wartość.", // nieuw, nalezen
+    'c.plantround.q': "Dlaczego na ekranie jest alarm?", // nieuw, nalezen
+    'c.plantround.a': "Poziom w zbiorniku numer dwa jest za wysoki.", // nieuw, nalezen
+    'l.plantfault': "Awaria", // nieuw, nalezen
+    'w.stilstand': "postój (linia stoi i nic się nie produkuje)", // nieuw, nalezen
+    'w.opstarten': "uruchamiać (maszynę albo linię, krok po kroku)", // nieuw, nalezen
+    'w.stilzetten': "zatrzymywać (wyłączać maszynę we właściwy sposób)", // nieuw, nalezen
+    'w.technischedienst': "dział utrzymania ruchu (TD: naprawiają maszyny)", // nieuw, nalezen
+    'w.onderhoudsmonteur': "mechanik utrzymania ruchu", // nieuw, nalezen
+    'w.resetten': "resetować (kasować usterkę na ekranie albo na panelu)", // nieuw, nalezen
+    's.plantfault.1': "Przy awarii dzwonię do kierownika zmiany.", // nieuw, nalezen
+    's.plantfault.2': "Nigdy nie sięgaj do pracującej maszyny.", // nieuw, nalezen
+    's.plantfault.3': "Dział utrzymania ruchu już idzie.", // nieuw, nalezen
+    'c.plantfault.q': "Czy mogę znowu uruchomić linię?", // nieuw, nalezen
+    'c.plantfault.a': "Nie, czekaj. Kłódka mechanika jest jeszcze założona.", // nieuw, nalezen
+    'l.shiftwork': "Zmiany i noce", // nieuw, nalezen
+    'w.ploeg': "brygada (grupa, która pracuje na tych samych zmianach)", // nieuw, nalezen
+    'w.ploegwissel': "zmiana brygad (jedna brygada idzie do domu, następna zaczyna)", // nieuw, nalezen
+    'w.volcontinu': "w ruchu ciągłym (zakład pracuje dzień i noc, każdego dnia tygodnia)", // nieuw, nalezen
+    'w.overdagslapen': "spać w dzień (po nocnej zmianie)", // nieuw, nalezen
+    'w.broodtrommel': "pudełko na kanapki", // nieuw, nalezen
+    'w.aflosser': "zmiennik (kolega, który przejmuje twoje miejsce)", // nieuw, nalezen
+    's.shiftwork.1': "Nasz zakład pracuje w ruchu ciągłym.", // nieuw, nalezen
+    's.shiftwork.2': "Zapisz to w dzienniku dla następnej brygady.", // nieuw, nalezen
+    's.shiftwork.3': "Przychodzę na czas na przekazanie zmiany.", // nieuw, nalezen
+    'c.shiftwork.q': "Co się stało w nocy?", // nieuw, nalezen
+    'c.shiftwork.a': "Pompa numer trzy stanęła. To jest w dzienniku.", // nieuw, nalezen
+    'l.heatdust': "Gorąco, para i pył", // nieuw, nalezen
+    'w.smeltoven': "piec do topienia (bardzo gorący piec, który topi szkło albo metal)", // nieuw, nalezen
+    'w.stoom': "para (bardzo gorąca para wodna)", // nieuw, nalezen
+    'w.stoomleiding': "rura parowa (jest gorąca, także kiedy nie widzisz pary)", // nieuw, nalezen
+    'w.hittekleding': "odzież chroniąca przed gorącem", // nieuw, nalezen
+    'w.kwartsstof': "pył kwarcowy (bardzo drobny pył z gliny, piasku albo kamienia; niszczy płuca)", // nieuw, nalezen
+    'w.explosiegevaar': "zagrożenie wybuchem (pył albo opary w powietrzu mogą wybuchnąć; żółty znak z EX)", // nieuw, nalezen
+    's.heatdust.1': "Przy piecu do topienia często pij wodę.", // nieuw, nalezen
+    's.heatdust.2': "Pyłu kwarcowego nie widać. Załóż maskę przeciwpyłową.", // nieuw, nalezen
+    's.heatdust.3': "Tu jest zagrożenie wybuchem: żadnych iskier.", // nieuw, nalezen
+    'c.heatdust.q': "Czy mogę wnieść telefon do tej strefy?", // nieuw, nalezen
+    'c.heatdust.a': "Nie. Tu jest zagrożenie wybuchem.", // nieuw, nalezen
+    'c.plantround': "Zrób obchód i zapisuj", // nieuw, nalezen
+    'c.plantround.b': "Zakład, który pracuje dzień i noc, potrzebuje oczu i uszu. Na obchodzie patrzysz, słuchasz i wąchasz: nowy hałas, wyciek albo dziwny zapach może być pierwszym znakiem problemu. Odczytujesz mierniki: temperaturę, ciśnienie, prędkość i poziom. Każdą wartość zapisz od razu, z godziną, na liście albo w systemie. Nie później, z pamięci. Wartość jest za wysoka albo za niska? Od razu powiedz sterowni albo kierownikowi zmiany. Alarm na ekranie nigdy nie jest „tylko alarmem”: nie wyłączaj go, zanim nie wiesz, dlaczego się włączył. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.plantround.p': "Temperatura jest za wysoka.", // nieuw, nalezen
+    'c.plantround.s': "Na obchodzie ciśnienie jest trochę za wysokie. Twoja zmiana zaraz się kończy. Co robisz?", // nieuw, nalezen
+    'c.plantround.o1': "Od razu powiedz sterowni.", // nieuw, nalezen
+    'c.plantround.o2': "Zapisz to i nikomu nie mów.", // nieuw, nalezen
+    'c.plantround.o3': "Zostaw to następnej zmianie.", // nieuw, nalezen
+    'c.plantround.w': "W zakładzie mała zmiana może szybko urosnąć. Kiedy sterownia wie o tym wcześnie, może zareagować, zanim coś pójdzie źle.", // nieuw, nalezen
+    'c.plantfault': "Zatrzymaj, zablokuj, potem naprawiaj", // nieuw, nalezen
+    'c.plantfault.b': "Przy awarii linia stoi i wszyscy chcą, żeby szybko znowu ruszyła. Ale właśnie wtedy dzieje się wiele wypadków. Nigdy nie sięgaj do pracującej maszyny, także nie „tylko na chwilę”. Zadzwoń do kierownika zmiany albo do działu utrzymania ruchu. Zanim ktoś zacznie pracować przy maszynie, jest ona zatrzymana i zablokowana, żeby nikt nie mógł jej włączyć. Często każdy, kto przy niej pracuje, zakłada na nią własną kłódkę. Uruchamiaj ją znowu dopiero wtedy, gdy wszystkie kłódki są zdjęte, a kierownik zmiany mówi, że jest bezpiecznie. Uruchamiaj krok po kroku, tak jak cię nauczono. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.plantfault.p': "Jeszcze jest na tym kłódka.", // nieuw, nalezen
+    'c.plantfault.s': "Produkt utknął w maszynie. Maszyna dalej pracuje. Kolega mówi: „Szybko go wyciągnij.” Co robisz?", // nieuw, nalezen
+    'c.plantfault.o1': "Nie sięgaj do środka: zadzwoń do kierownika zmiany.", // nieuw, nalezen
+    'c.plantfault.o2': "Szybko wyciągnij go ręką.", // nieuw, nalezen
+    'c.plantfault.o3': "Wypchnij go kijem, kiedy maszyna pracuje.", // nieuw, nalezen
+    'c.plantfault.w': "Maszyna, która dalej pracuje, może się ruszyć w każdej chwili. Maszyna zatrzymana i zablokowana nie może cię zranić.", // nieuw, nalezen
+    'c.shiftwork': "Noce: śpij, jedz, bądź na czas", // nieuw, nalezen
+    'c.shiftwork.b': "Wiele zakładów pracuje dzień i noc, każdego dnia tygodnia. Pracujesz kolejno na zmianach porannych, popołudniowych i nocnych, często w systemie trzech albo pięciu brygad. Po nocnej zmianie śpij w ciemnym i cichym pokoju i powiedz rodzinie, kiedy śpisz. Jedz o stałych porach i bierz własne jedzenie: w nocy stołówka jest często zamknięta. Bądź na czas na przekazanie zmiany: kolega na ciebie czeka, a zakładu nie wolno zostawić bez obsługi. Przy nocnych zmianach są dodatkowe zasady, w prawie i często w układzie zbiorowym (cao), na przykład o odpoczynku po nocach. Zapytaj, jakie zasady obowiązują u ciebie w pracy. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen
+    'c.shiftwork.p': "Jakie są zasady dla nocnych zmian?", // nieuw, nalezen
+    'c.shiftwork.s': { m: "Po czterech nocach kierownik zmiany prosi cię o jeszcze jedną nocną zmianę. Jesteś bardzo zmęczony. Co robisz?", f: "Po czterech nocach kierownik zmiany prosi cię o jeszcze jedną nocną zmianę. Jesteś bardzo zmęczona. Co robisz?", x: "Po czterech nocach kierownik zmiany prosi cię o jeszcze jedną nocną zmianę. Czujesz ogromne zmęczenie. Co robisz?" }, // nieuw, nalezen
+    'c.shiftwork.o1': { m: "Powiedz, że jesteś bardzo zmęczony, i zapytaj o zasady.", f: "Powiedz, że jesteś bardzo zmęczona, i zapytaj o zasady.", x: "Powiedz, że czujesz ogromne zmęczenie, i zapytaj o zasady." }, // nieuw, nalezen
+    'c.shiftwork.o2': "Zgódź się i pij dużo kawy.", // nieuw, nalezen
+    'c.shiftwork.o3': "Zgódź się i prześpij się trochę na przerwie.", // nieuw, nalezen
+    'c.shiftwork.w': "Zmęczeni ludzie robią więcej błędów, a w zakładzie błąd może być niebezpieczny. Są zasady dotyczące odpoczynku po nocnych zmianach.", // nieuw, nalezen
+    'c.heatdust': "Gorąco, pył i iskry", // nieuw, nalezen
+    'c.heatdust.b': "Przy piecu do topienia, piecu do wypalania albo przy parze jest bardzo gorąco. Często pij wodę, także zanim poczujesz pragnienie. Noś odzież chroniącą przed gorącem i nie dotykaj rur ani części bez rękawic: para i gorący metal parzą, także kiedy ich nie widzisz. Kręci ci się w głowie albo jest ci niedobrze? Przerwij pracę, idź w chłodne miejsce i powiedz komuś. Pył z gliny, piasku albo kamienia może zawierać pył kwarcowy (kwartsstof). Nie widzisz go, ale niszczy płuca. Używaj wyciągu, noś maskę przeciwpyłową i nigdy nie zdmuchuj pyłu sprężonym powietrzem. W niektórych strefach pył albo opary mogą wybuchnąć: pokazuje to żółty znak z EX. Tam: żadnych iskier, żadnego ognia i często żadnego zwykłego telefonu. Zapytaj, co wolno w każdej strefie. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.heatdust.p': "Źle się czuję. Idę w chłodne miejsce.", // nieuw, nalezen
+    'c.heatdust.s': "Na twojej maszynie leży drobny pył z gliny. Kolega mówi: „Zdmuchnij to pistoletem na sprężone powietrze.” Co robisz?", // nieuw, nalezen
+    'c.heatdust.o1': "Wyczyść to na mokro albo odkurzaczem.", // nieuw, nalezen
+    'c.heatdust.o2': "Zdmuchnij to: tak jest szybciej.", // nieuw, nalezen
+    'c.heatdust.o3': "Zostaw to następnej zmianie.", // nieuw, nalezen
+    'c.heatdust.w': "Dmuchanie podrywa pył do góry, w powietrze i do twoich płuc. Mokra ściereczka albo odkurzacz nie pozwala pyłowi się unieść.", // nieuw, nalezen
   },
 };
 

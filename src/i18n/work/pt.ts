@@ -4900,6 +4900,88 @@ const t: CultureTranslation = {
     'c.permitwork.o2': "Entras depressa para o ajudar.", // nieuw, nalezen
     'c.permitwork.o3': "Esperas uns minutos, e depois vais ver.", // nieuw, nalezen
     'c.permitwork.w': "O gás que fez mal ao teu colega também te pode fazer mal a ti. Muitas vítimas em tanques eram pessoas que queriam ajudar. Depois do alarme, vem ajuda com proteção.", // nieuw, nalezen
+    // "Operator in de procesindustrie", the fourth own unit of Productie (23 November 2026).
+    'u.process': "Operador na indústria de processo", // nieuw, nalezen
+    'l.plantround': "A ronda e a sala de controlo", // nieuw, nalezen
+    'w.controlekamer': "a sala de controlo (onde os operadores vigiam a fábrica toda em ecrãs)", // nieuw, nalezen
+    'w.operator': "o operador (a pessoa que põe a trabalhar e vigia as máquinas de uma fábrica)", // nieuw, nalezen
+    'w.drukmeter': "o manómetro (um mostrador redondo com um ponteiro)", // nieuw, nalezen
+    'w.niveau': "o nível (quão cheio está um tanque ou um silo)", // nieuw, nalezen
+    'w.snelheid': "a velocidade (quão depressa anda uma linha ou uma máquina)", // nieuw, nalezen
+    'w.alarmmelding': "a mensagem de alarme (um aviso no ecrã de que alguma coisa está mal)", // nieuw, nalezen
+    's.plantround.1': "Estou a fazer a minha ronda.", // nieuw, nalezen
+    's.plantround.2': "A pressão está alta demais.", // nieuw, nalezen
+    's.plantround.3': "Escrevo o valor.", // nieuw, nalezen
+    'c.plantround.q': "Porque é que há um alarme no ecrã?", // nieuw, nalezen
+    'c.plantround.a': "O nível no tanque dois está alto demais.", // nieuw, nalezen
+    'l.plantfault': "Uma avaria", // nieuw, nalezen
+    'w.stilstand': "a paragem (a linha para, e não se produz nada)", // nieuw, nalezen
+    'w.opstarten': "arrancar, pôr a trabalhar (uma máquina ou uma linha, passo a passo)", // nieuw, nalezen
+    'w.stilzetten': "parar (parar uma máquina da maneira certa)", // nieuw, nalezen
+    'w.technischedienst': "o departamento de manutenção (o TD: reparam as máquinas)", // nieuw, nalezen
+    'w.onderhoudsmonteur': "o técnico de manutenção", // nieuw, nalezen
+    'w.resetten': "fazer reset, rearmar (apagar uma avaria no ecrã ou no painel)", // nieuw, nalezen
+    's.plantfault.1': "Quando há uma avaria, ligo ao chefe de turno.", // nieuw, nalezen
+    's.plantfault.2': "Nunca metas a mão numa máquina a trabalhar.", // nieuw, nalezen
+    's.plantfault.3': "O departamento de manutenção está a caminho.", // nieuw, nalezen
+    'c.plantfault.q': "Posso voltar a arrancar a linha?", // nieuw, nalezen
+    'c.plantfault.a': "Não, espera. O cadeado do mecânico ainda lá está.", // nieuw, nalezen
+    'l.shiftwork': "Turnos e noites", // nieuw, nalezen
+    'w.ploeg': "a equipa de turno (o grupo que faz os mesmos turnos)", // nieuw, nalezen
+    'w.ploegwissel': "a mudança de turno (uma equipa vai para casa, a equipa seguinte começa)", // nieuw, nalezen
+    'w.volcontinu': "em contínuo, 24 horas por dia (a fábrica trabalha dia e noite, todos os dias da semana)", // nieuw, nalezen
+    'w.overdagslapen': "dormir de dia (depois de um turno da noite)", // nieuw, nalezen
+    'w.broodtrommel': "a lancheira", // nieuw, nalezen
+    'w.aflosser': "o substituto (o colega que fica no teu lugar)", // nieuw, nalezen
+    's.shiftwork.1': "A nossa fábrica trabalha 24 horas por dia.", // nieuw, nalezen
+    's.shiftwork.2': "Escreve isso no registo para a equipa do turno seguinte.", // nieuw, nalezen
+    's.shiftwork.3': "Chego a horas à passagem de turno.", // nieuw, nalezen
+    'c.shiftwork.q': "O que aconteceu esta noite?", // nieuw, nalezen
+    'c.shiftwork.a': "A bomba três parou. Está no registo.", // nieuw, nalezen
+    'l.heatdust': "Calor, vapor e pó", // nieuw, nalezen
+    'w.smeltoven': "o forno de fusão (um forno muito quente que derrete vidro ou metal)", // nieuw, nalezen
+    'w.stoom': "o vapor (água muito quente em forma de gás)", // nieuw, nalezen
+    'w.stoomleiding': "o tubo de vapor (está quente, mesmo quando não vês vapor)", // nieuw, nalezen
+    'w.hittekleding': "a roupa de proteção contra o calor", // nieuw, nalezen
+    'w.kwartsstof': "o pó de quartzo (pó muito fino de argila, areia ou pedra; danifica-te os pulmões)", // nieuw, nalezen
+    'w.explosiegevaar': "o perigo de explosão (o pó ou o vapor no ar podem explodir; um sinal amarelo com EX)", // nieuw, nalezen
+    's.heatdust.1': "Bebe água muitas vezes perto do forno de fusão.", // nieuw, nalezen
+    's.heatdust.2': "Não consegues ver o pó de quartzo. Põe a máscara contra o pó.", // nieuw, nalezen
+    's.heatdust.3': "Aqui há perigo de explosão: nada de faíscas.", // nieuw, nalezen
+    'c.heatdust.q': "Posso levar o telemóvel para esta zona?", // nieuw, nalezen
+    'c.heatdust.a': "Não. Aqui há perigo de explosão.", // nieuw, nalezen
+    'c.plantround': "Faz a tua ronda, e escreve tudo", // nieuw, nalezen
+    'c.plantround.b': "Uma fábrica que trabalha dia e noite precisa de olhos e ouvidos. Na tua ronda olhas, ouves e cheiras: um barulho novo, uma fuga ou um cheiro estranho podem ser o primeiro sinal de um problema. Lês os mostradores: a temperatura, a pressão, a velocidade e o nível. Escreve logo cada valor, com a hora, na lista ou no sistema. Não mais tarde, de memória. Um valor está alto ou baixo demais? Avisa logo a sala de controlo ou o teu chefe de turno. Um alarme no ecrã nunca é \"só um alarme\": não o desligues antes de saberes porque é que disparou. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.plantround.p': "A temperatura está alta demais.", // nieuw, nalezen
+    'c.plantround.s': "Na tua ronda, a pressão está um pouco alta demais. O teu turno está quase a acabar. O que fazes?", // nieuw, nalezen
+    'c.plantround.o1': "Avisas logo a sala de controlo.", // nieuw, nalezen
+    'c.plantround.o2': "Escreves, e não dizes a ninguém.", // nieuw, nalezen
+    'c.plantround.o3': "Deixas para o turno seguinte.", // nieuw, nalezen
+    'c.plantround.w': "Numa fábrica, uma pequena mudança pode crescer depressa. Quando a sala de controlo sabe cedo, pode agir antes de alguma coisa correr mal.", // nieuw, nalezen
+    'c.plantfault': "Parar, bloquear, depois reparar", // nieuw, nalezen
+    'c.plantfault.b': "Numa avaria, a linha para, e toda a gente quer que volte a trabalhar depressa. Mas é exatamente nessa altura que acontecem muitos acidentes. Nunca metas a mão numa máquina a trabalhar, nem \"só por um momento\". Chama o teu chefe de turno ou o departamento de manutenção. Antes de alguém trabalhar na máquina, ela é parada e bloqueada, para ninguém a poder pôr a trabalhar. Muitas vezes, cada pessoa que trabalha nela põe o seu próprio cadeado. Só voltes a arrancar quando todos os cadeados estiverem tirados e o teu chefe de turno disser que é seguro. Arranca passo a passo, como aprendeste. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.plantfault.p': "Ainda está lá um cadeado.", // nieuw, nalezen
+    'c.plantfault.s': "Um produto ficou preso na máquina. A máquina ainda está a trabalhar. Um colega diz: \"Tira-o depressa.\" O que fazes?", // nieuw, nalezen
+    'c.plantfault.o1': "Não metes a mão: chamas o chefe de turno.", // nieuw, nalezen
+    'c.plantfault.o2': "Tiras depressa com a mão.", // nieuw, nalezen
+    'c.plantfault.o3': "Empurras para fora com um pau, com a máquina a trabalhar.", // nieuw, nalezen
+    'c.plantfault.w': "Uma máquina que ainda está a trabalhar pode mexer-se a qualquer momento. Uma máquina parada e bloqueada não te pode magoar.", // nieuw, nalezen
+    'c.shiftwork': "Noites: dormir, comer, chegar a horas", // nieuw, nalezen
+    'c.shiftwork.b': "Muitas fábricas trabalham dia e noite, todos os dias da semana. Vais alternando entre turnos da manhã, da tarde e da noite, muitas vezes em três ou cinco equipas de turno. Depois de um turno da noite, dorme num quarto escuro e sossegado, e diz à tua família quando estás a dormir. Come a horas certas, e leva a tua própria comida: à noite a cantina está muitas vezes fechada. Chega a horas à passagem de turno: o teu colega está à espera, e a fábrica não pode ficar sem ninguém. Para os turnos da noite há regras extra, na lei e muitas vezes na cao, por exemplo sobre o descanso depois das tuas noites. Pergunta quais são as regras onde trabalhas. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.shiftwork.p': "Quais são as regras para os turnos da noite?", // nieuw, nalezen
+    'c.shiftwork.s': { m: "Depois de quatro noites, o teu chefe de turno pede-te para trabalhares mais uma noite. Estás muito cansado. O que fazes?", f: "Depois de quatro noites, o teu chefe de turno pede-te para trabalhares mais uma noite. Estás muito cansada. O que fazes?", x: "Depois de quatro noites, o teu chefe de turno pede-te para trabalhares mais uma noite. Estás com muito cansaço. O que fazes?" }, // nieuw, nalezen
+    'c.shiftwork.o1': { m: "Dizes que estás muito cansado, e perguntas pelas regras.", f: "Dizes que estás muito cansada, e perguntas pelas regras.", x: "Dizes que estás com muito cansaço, e perguntas pelas regras." }, // nieuw, nalezen
+    'c.shiftwork.o2': "Dizes que sim, e bebes muito café.", // nieuw, nalezen
+    'c.shiftwork.o3': "Dizes que sim, e dormes um bocado na pausa.", // nieuw, nalezen
+    'c.shiftwork.w': "As pessoas cansadas fazem mais erros, e numa fábrica um erro pode ser perigoso. Há regras sobre o descanso depois dos turnos da noite.", // nieuw, nalezen
+    'c.heatdust': "Calor, pó e faíscas", // nieuw, nalezen
+    'c.heatdust.b': "Perto de um forno de fusão, de um forno de cozedura ou de vapor está muito calor. Bebe água muitas vezes, também antes de teres sede. Usa a roupa de proteção contra o calor, e não toques em tubos ou peças sem luvas: o vapor e o metal quente queimam, também quando não os vês. Tens tonturas ou sentes-te mal? Para, vai para um sítio fresco e avisa alguém. O pó de argila, areia ou pedra pode ter pó de quartzo (kwartsstof). Não o vês, mas danifica-te os pulmões. Usa a extração, põe a máscara contra o pó, e nunca sopres o pó com ar comprimido. Em algumas zonas, o pó ou o vapor podem explodir: um sinal amarelo com EX mostra isso. Aí: nada de faíscas, nada de fogo, e muitas vezes nada de telemóvel normal. Pergunta o que é permitido em cada zona. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.heatdust.p': "Não me sinto bem. Vou para um sítio fresco.", // nieuw, nalezen
+    'c.heatdust.s': "Há pó fino de argila na tua máquina. Um colega diz: \"Sopra-o com a pistola de ar.\" O que fazes?", // nieuw, nalezen
+    'c.heatdust.o1': "Limpas com um pano húmido, ou com o aspirador.", // nieuw, nalezen
+    'c.heatdust.o2': "Sopras: é mais rápido.", // nieuw, nalezen
+    'c.heatdust.o3': "Deixas para o turno seguinte.", // nieuw, nalezen
+    'c.heatdust.w': "Soprar faz o pó levantar, para o ar e para os teus pulmões. Um pano húmido ou um aspirador mantêm o pó em baixo.", // nieuw, nalezen
   },
 };
 

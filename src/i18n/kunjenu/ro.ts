@@ -180,6 +180,9 @@ const t: CultureTranslation = {
     // "Veiligheid op het werk" and the VOG (23 November 2026).
     'kjn.u.safework.1': "Pot să recunosc câteva cuvinte despre indicatoarele de siguranță și despre foc.", // nieuw, nalezen
     'kjn.u.safework.2': "Pot să întreb dacă un produs e toxic.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'kjn.u.process.1': "Pot să spun că presiunea e prea mare.", // nieuw, nalezen
+    'kjn.u.process.2': "Pot să spun la predarea turei ce s-a întâmplat.", // nieuw, nalezen
   },
 };
 

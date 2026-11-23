@@ -270,6 +270,11 @@ const PENDING_RECORDING = new Set<string>([
   'Het is klein. Ik pak de brandblusser.',
   'Ik. Ik ben de mangatwacht.',
   'Nee. Ik wacht nog op de mail van Justis.',
+  // "Operator in de procesindustrie" (u.process, 23 November 2026):
+  'Het niveau in tank twee is te hoog.',
+  'Nee, wacht. Het slot van de monteur zit er nog op.',
+  'Pomp drie viel uit. Het staat in het logboek.',
+  'Nee. Hier is explosiegevaar.',
 ]);
 
 

@@ -312,6 +312,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "خبر عن حريق: إنه صغير، لذلك إحضار الطفاية.", // nieuw, nalezen
     'c.permitwork.a.why': "السؤال عمّن يبقى في الخارج: أنا، والمهمّة.", // nieuw, nalezen
     'c.vog.a.why': "السؤال عن VOG: ليس بعد، وما الذي يُنتظر.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "السؤال عن الإنذار: ما المرتفع جداً، وأين.", // nieuw, nalezen
+    'c.plantfault.a.why': "السؤال هل يمكن التشغيل: لا، ما زال عليه قفل.", // nieuw, nalezen
+    'c.shiftwork.a.why': "السؤال عمّا حدث: العطل، وأين هو مكتوب.", // nieuw, nalezen
+    'c.heatdust.a.why': "السؤال عن الهاتف: لا، بسبب الخطر هنا.", // nieuw, nalezen
   },
 };
 

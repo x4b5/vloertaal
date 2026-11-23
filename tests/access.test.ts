@@ -105,8 +105,9 @@ describe('access', () => {
       // 25 since Tuinbouw and Garage have two (22 November 2026); 29 with the four units of Groen and
       // Facilitair (23 November 2026); 37 with the eight units of Beveiliging, Voedingsindustrie, Afval
       // en recycling and Kinderopvang (the same day); 41 with the second units of Schoonmaak, Horeca,
-      // Zorg and Winkel (the same day).
-      expect(sampleLessons('taal').length).toBeLessThan(42);
+      // Zorg and Winkel (the same day); 42 with the fourth own unit of Productie, "Operator in de
+      // procesindustrie" (the same day).
+      expect(sampleLessons('taal').length).toBeLessThan(43);
     });
 
     it('locks the rest, whatever the progress says; the daily review stays open', () => {

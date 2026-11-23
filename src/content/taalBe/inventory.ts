@@ -518,6 +518,18 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.firefight': L('A', 'A', 'nakijken: de blusdeken, de brandslang ("de brandhaspel"), de prullenbak ("de vuilbak")'),
     'l.permitwork': L('A', 'A', 'nakijken: de werkvergunning (in België ook de vergunning om als buitenlander te werken: de Engelse uitleg zegt "permit to work"), de mangatwacht, de signaalgever'),
   } },
+  // Operator in de procesindustrie (23 November 2026): how the work in a plant is done, the same in
+  // Belgium. The tips name no Dutch place, law or amount: the Ex sign and the zones are EU-wide
+  // (richtlijn 1999/92/EG, in Belgium codex boek III titel 4), quartz dust is a carcinogen there too
+  // (codex boek VI titel 2), and c.shiftwork says only that the law and the cao have rules for night
+  // work (in Belgium: the Arbeidswet and cao nr. 46); its closing line is swapped by itself. Flemish
+  // words to check.
+  'u.process': { kind: 'A', lessons: {
+    'l.plantround': L('A', 'A', 'nakijken: de controlekamer ("de controlezaal"), de operator ("de operator" of "de procesoperator"), de drukmeter ("de manometer")'),
+    'l.plantfault': L('A', 'A', 'nakijken: de technische dienst ("de onderhoudsdienst"), de onderhoudsmonteur ("de onderhoudstechnieker"), stilzetten ("stilleggen")'),
+    'l.shiftwork': L('A', 'A', 'nakijken: de ploeg, de ploegwissel, volcontinu ("volcontinu" of "continu"), de broodtrommel ("de brooddoos"), de aflosser'),
+    'l.heatdust': L('A', 'A', 'nakijken: de smeltoven, de hittekleding ("de hittebeschermende kledij"), het kwartsstof ("het kwartsstof" of "het silicastof")'),
+  } },
 };
 
 /** The units of the inventory that need a Belgian version (B or C). */

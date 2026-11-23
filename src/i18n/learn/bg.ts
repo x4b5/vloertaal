@@ -312,6 +312,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "Казват, че има пожар: малък е, затова вземаш пожарогасителя.", // nieuw, nalezen
     'c.permitwork.a.why': "Питат кой остава отвън: ти, и задачата ти.", // nieuw, nalezen
     'c.vog.a.why': "Питат за VOG: още не, и какво чакаш.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "Питат за алармата: какво е твърде високо и къде.", // nieuw, nalezen
+    'c.plantfault.a.why': "Питат дали може да пуснеш: не, още има катинар.", // nieuw, nalezen
+    'c.shiftwork.a.why': "Питат какво е станало: повредата и къде е записана.", // nieuw, nalezen
+    'c.heatdust.a.why': "Питат за телефона: не, заради опасността тук.", // nieuw, nalezen
   },
 };
 
