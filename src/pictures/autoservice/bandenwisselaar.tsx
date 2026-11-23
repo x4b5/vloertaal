@@ -58,11 +58,14 @@ export default {
       <rect x="50" y="27" width="6" height="15" fill={PAL.steel} />
       <rect x="53" y="27" width="3" height="15" fill={PAL.line} />
       {/* The black mount head pressing on the tyre's edge (near the back of the rim); on the intro
-          card it comes down onto the tyre */}
-      <Move kind="from" dy={-8}>
+          card it comes down out of the arm onto the tyre */}
+      <Move kind="from" dy={-22}>
         <path d="M45 38H61L59 46Q53 50 47 46Z" fill={PAL.slateDark} />
         <rect x="45" y="37" width="16" height="4" rx="1.5" fill={PAL.slate} />
       </Move>
+      {/* The arm's front and top again (left of the column, above the shaft), over the head as it starts */}
+      <path d="M42 20H84V13.6H46.8Z" fill={PAL.redLight} />
+      <rect x="42" y="20" width="42" height="7" fill={PAL.red} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;
