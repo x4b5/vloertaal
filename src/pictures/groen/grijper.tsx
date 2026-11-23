@@ -22,10 +22,10 @@ export default {
       <path d="M92 32L98 42" stroke={PAL.yellow} strokeWidth="5" />
       <path d="M86 14L98 26" stroke={PAL.slate} strokeWidth="10" />
       {/* The two jaws: they close round the can */}
-      <Move kind="turn" turn={-28} at={[40, 80]}>
+      <Move kind="turn" turn={28} at={[40, 80]}>
         <path d="M40 80Q26 82 22 92" fill="none" stroke={PAL.slateDark} strokeWidth="7.5" />
       </Move>
-      <Move kind="turn" turn={28} at={[40, 80]}>
+      <Move kind="turn" turn={-28} at={[40, 80]}>
         <path d="M40 80Q44 92 40 100" fill="none" stroke={PAL.slateDark} strokeWidth="7.5" />
       </Move>
       <circle cx="40" cy="80" r="5" fill={PAL.slate} />

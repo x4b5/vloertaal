@@ -20,10 +20,10 @@ export default {
           {/* The broad blade, its top edge the tread */}
           <rect x="54" y="70" width="12" height="8" rx="2" fill={PAL.steel} />
           <Shade color={PAL.steel} opacity={1} at={[78, 92, 10, 26]}>
-            <path d="M44 76H76V100Q76 108 60 112Q44 108 44 100Z" fill={PAL.mist} />
+            <path d="M44 76H76V92Q76 98 60 101Q44 98 44 92Z" fill={PAL.mist} />
           </Shade>
           <rect x="42" y="74" width="36" height="5" rx="2" fill={PAL.steel} />
-          <Shine d="M49 84V98" width={3} opacity={0.9} />
+          <Shine d="M49 82V92" width={3} opacity={0.9} />
         </g>
       </Move>
       {/* The front of the heap, over the lower part of the blade */}
