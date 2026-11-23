@@ -217,6 +217,47 @@ export const fa: Gloss = {
   'be.c.police.o2': 'یک بار زنگ بزن و منتظر بمان تا به تو زنگ بزنند.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o3': 'صبر کن: بعد از آن تاریخ خودش تمام می‌شود.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.w': 'کتبی پاسخ می‌دهی، قبل از تاریخی که در نامه آمده. بعد از آن تاریخ اغلب دیر است. justitiehuis اولین مشاوره را رایگان می‌دهد.', // nieuw, nalezen // nagelezen AI ronde 3
+  // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
+  'be.l.neighbours': "محله‌ات", // nieuw, nalezen
+  'be.w.buurt': "محله", // nieuw, nalezen
+  'be.w.buurthuis': "خانهٔ محله (جایی برای فعالیت‌ها در محله‌ات)", // nieuw, nalezen
+  'be.w.straat': "خیابان", // nieuw, nalezen
+  'be.w.kennismaken': "آشنا شدن (اولین بار کسی را دیدن)", // nieuw, nalezen
+  'be.w.overlast': "مزاحمت (سروصدا یا دردسر برای دیگران)", // nieuw, nalezen
+  'be.w.buurvrouw': "همسایه (یک زن)", // nieuw, nalezen
+  'be.s.neighbours.1': "مدت کوتاهی است که در این خیابان زندگی می‌کنم.", // nieuw, nalezen
+  'be.s.neighbours.2': "در کتابخانه هلندی تمرین می‌کنم.", // nieuw, nalezen
+  'be.s.neighbours.3': "ببخشید بابت مزاحمت.", // nieuw, nalezen
+  'be.c.neighbours.q': "سلام، من همسایهٔ جدیدتان هستم.", // nieuw, nalezen
+  'be.c.neighbours.a': "از آشنایی‌تان خوشوقتم! من علی هستم.", // nieuw, nalezen
+  'be.l.join': "مدرسه، ورزش و کار داوطلبانه", // nieuw, nalezen
+  'be.w.vrijwilliger': "داوطلب (کسی که بدون دستمزد کمک می‌کند)", // nieuw, nalezen
+  'be.w.vrijwilligerswerk': "کار داوطلبانه", // nieuw, nalezen
+  'be.w.sportclub': "باشگاه ورزشی", // nieuw, nalezen
+  'be.w.ouderavond': "جلسهٔ اولیا (در مدرسه)", // nieuw, nalezen
+  'be.w.leraar': "معلم", // nieuw, nalezen
+  'be.w.basisschool': "دبستان", // nieuw, nalezen
+  'be.s.join.1': "پسرم به دبستان می‌رود.", // nieuw, nalezen
+  'be.s.join.2': "در یک باشگاه ورزشی فوتبال بازی می‌کنم.", // nieuw, nalezen
+  'be.s.join.3': "شنبه‌ها کار داوطلبانه می‌کنم.", // nieuw, nalezen
+  'be.c.join.q': "به جلسهٔ اولیا می‌آیی؟", // nieuw, nalezen
+  'be.c.join.a': "بله. می‌خواهم با معلم حرف بزنم.", // nieuw, nalezen
+  'be.c.neighbours': "به همسایه‌هایت سلام کن", // nieuw, nalezen
+  'be.c.neighbours.b': "در یک خیابان تازه‌واردی؟ به همسایه‌هایت سلام کن و اسمت را بگو. این کار حل کردن مشکلات را بعداً آسان‌تر می‌کند. شب کار می‌کنی، یا با آدم‌های زیادی زندگی می‌کنی؟ آخر شب و در شب سروصدا نکن. زباله‌ات را در روز درستش بیرون بگذار. در کتابخانه و خانهٔ محله اغلب می‌توانی هلندی تمرین کنی، گاهی رایگان.", // nieuw, nalezen
+  'be.c.neighbours.p': "سلام، من علی هستم. خانهٔ بغلی زندگی می‌کنم.", // nieuw, nalezen
+  'be.c.neighbours.s': "با پنج همکار زندگی می‌کنی. یک همسایه می‌گوید شب‌ها اغلب سروصدا است. چه کار می‌کنی؟", // nieuw, nalezen
+  'be.c.neighbours.o1': "عذرخواهی می‌کنی، و قرار می‌گذارید که ساکت باشید.", // nieuw, nalezen
+  'be.c.neighbours.o2': "می‌گویی همه‌تان کار می‌کنید و باید استراحت کنید.", // nieuw, nalezen
+  'be.c.neighbours.o3': "چیزی نمی‌گویی، و در را می‌بندی.", // nieuw, nalezen
+  'be.c.neighbours.w': "یک گفت‌وگوی خوب در همان اول جلوی مشکلات بزرگ‌تر را می‌گیرد. همسایه‌هایی که تو را می‌شناسند اغلب مهربان‌تر و کمک‌کننده‌ترند.", // nieuw, nalezen
+  'be.c.join': "شرکت کن: هلندی را سریع‌تر یاد می‌گیری", // nieuw, nalezen
+  'be.c.join.b': "بیرون از کار، هلندی را از همه سریع‌تر با کار کردن با آدم‌ها یاد می‌گیری: ورزش، یک باشگاه، یا کار داوطلبانه. بچه‌ات مدرسه می‌رود؟ به جلسهٔ اولیا برو، حتی اگر هلندی‌ات کامل نیست: معلم می‌خواهد تو را ببیند. می‌توانی بخواهی آهسته هلندی صحبت کنند، یا از اپ ترجمه استفاده کنی. کار داوطلبانه در رزومه‌ات هم خوب به نظر می‌رسد.", // nieuw, nalezen
+  'be.c.join.p': "می‌شود کمی آهسته‌تر صحبت کنید؟", // nieuw, nalezen
+  'be.c.join.s': "به جلسهٔ اولیا دعوت شده‌ای. هلندی‌ات هنوز خوب نیست. چه کار می‌کنی؟", // nieuw, nalezen
+  'be.c.join.o1': "می‌روی، و از هلندی ساده یا یک اپ استفاده می‌کنی.", // nieuw, nalezen
+  'be.c.join.o2': "نمی‌روی: معلم حرفت را نمی‌فهمد.", // nieuw, nalezen
+  'be.c.join.o3': "یک پیام کوتاه می‌فرستی که سرت شلوغ است.", // nieuw, nalezen
+  'be.c.join.w': "معلم می‌خواهد دربارهٔ بچه‌ات حرف بزند، نه دربارهٔ هلندی‌ات. آمدنت نشان می‌دهد که برایت مهم است.", // nieuw, nalezen
 };
 
 export const prs: Gloss = {
@@ -261,6 +302,47 @@ export const prs: Gloss = {
   'be.c.police.o2': 'یک بار زنگ بزنید و منتظر بمانید تا به شما زنگ بزنند.', // nieuw, nalezen
   'be.c.police.o3': 'صبر کنید: بعد از آن تاریخ خودش ختم می‌شود.', // nieuw, nalezen
   'be.c.police.w': 'به‌طور کتبی جواب می‌دهید، پیش از تاریخی که در نامه آمده. بعد از آن تاریخ اکثراً دیر است. justitiehuis اولین مشوره را رایگان می‌دهد.', // nieuw, nalezen // nagelezen AI ronde 3
+  // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
+  'be.l.neighbours': "محلهٔ شما", // nieuw, nalezen
+  'be.w.buurt': "محله", // nieuw, nalezen
+  'be.w.buurthuis': "خانهٔ محله (خانه‌ای برای فعالیت‌ها در محلهٔ شما)", // nieuw, nalezen
+  'be.w.straat': "سرک", // nieuw, nalezen
+  'be.w.kennismaken': "آشنا شدن (اولین بار کسی را دیدن)", // nieuw, nalezen
+  'be.w.overlast': "مزاحمت (سر و صدا یا دردسر برای دیگران)", // nieuw, nalezen
+  'be.w.buurvrouw': "همسایه (یک زن)", // nieuw, nalezen
+  'be.s.neighbours.1': "مدت کمی است که در این سرک زندگی می‌کنم.", // nieuw, nalezen
+  'be.s.neighbours.2': "در کتابخانه هالندی تمرین می‌کنم.", // nieuw, nalezen
+  'be.s.neighbours.3': "ببخشید برای مزاحمت.", // nieuw, nalezen
+  'be.c.neighbours.q': "سلام، من همسایهٔ نو شما هستم.", // nieuw, nalezen
+  'be.c.neighbours.a': "از آشنایی با شما خوشحالم! من علی هستم.", // nieuw, nalezen
+  'be.l.join': "مکتب، ورزش و کار داوطلبانه", // nieuw, nalezen
+  'be.w.vrijwilliger': "داوطلب (کسی که بدون معاش کمک می‌کند)", // nieuw, nalezen
+  'be.w.vrijwilligerswerk': "کار داوطلبانه", // nieuw, nalezen
+  'be.w.sportclub': "باشگاه ورزشی", // nieuw, nalezen
+  'be.w.ouderavond': "جلسهٔ والدین (در مکتب)", // nieuw, nalezen
+  'be.w.leraar': "معلم", // nieuw, nalezen
+  'be.w.basisschool': "مکتب ابتدائیه", // nieuw, nalezen
+  'be.s.join.1': "پسرم به مکتب ابتدائیه می‌رود.", // nieuw, nalezen
+  'be.s.join.2': "در یک باشگاه ورزشی فوتبال بازی می‌کنم.", // nieuw, nalezen
+  'be.s.join.3': "روز شنبه کار داوطلبانه می‌کنم.", // nieuw, nalezen
+  'be.c.join.q': "به جلسهٔ والدین می‌آیید؟", // nieuw, nalezen
+  'be.c.join.a': "بلی. می‌خواهم با معلم گپ بزنم.", // nieuw, nalezen
+  'be.c.neighbours': "به همسایه‌های خود سلام بدهید", // nieuw, nalezen
+  'be.c.neighbours.b': "در یک سرک نو آمده‌اید؟ به همسایه‌های خود سلام بدهید و نام خود را بگویید. این کار حل مشکلات را بعداً آسان‌تر می‌کند. شب کار می‌کنید، یا با مردم زیاد زندگی می‌کنید؟ ناوقت شب و در شب آرام باشید. زباله‌های خود را در روز درست بیرون بگذارید. در کتابخانه و خانهٔ محله اکثراً می‌توانید هالندی تمرین کنید، گاهی مفت.", // nieuw, nalezen
+  'be.c.neighbours.p': "سلام، من علی هستم. در خانهٔ پهلو زندگی می‌کنم.", // nieuw, nalezen
+  'be.c.neighbours.s': "شما با پنج همکار زندگی می‌کنید. یک همسایه می‌گوید که شب‌ها اکثراً سر و صدا است. چه می‌کنید؟", // nieuw, nalezen
+  'be.c.neighbours.o1': "معذرت بخواهید، و موافقه کنید که آرام باشید.", // nieuw, nalezen
+  'be.c.neighbours.o2': "بگویید که همهٔ شما کار می‌کنید و به استراحت ضرورت دارید.", // nieuw, nalezen
+  'be.c.neighbours.o3': "چیزی نگویید، و دروازه را ببندید.", // nieuw, nalezen
+  'be.c.neighbours.w': "یک گفتگوی خوب در اول، جلوی مشکلات بزرگ‌تر را می‌گیرد. همسایه‌هایی که شما را می‌شناسند اکثراً مهربان‌تر و کمک‌کننده‌تر هستند.", // nieuw, nalezen
+  'be.c.join': "اشتراک کنید: هالندی را زودتر یاد می‌گیرید", // nieuw, nalezen
+  'be.c.join.b': "بیرون از کار، هالندی را از همه زودتر با کار کردن همراه مردم یاد می‌گیرید: ورزش، یک باشگاه، یا کار داوطلبانه. طفل شما به مکتب می‌رود؟ به جلسهٔ والدین بروید، حتی اگر هالندی شما کامل نیست: معلم می‌خواهد شما را ببیند. می‌توانید بخواهید که آهسته هالندی گپ بزنند، یا از یک اپ ترجمه استفاده کنید. کار داوطلبانه در سی‌وی شما هم خوب معلوم می‌شود.", // nieuw, nalezen
+  'be.c.join.p': "کمی آهسته‌تر گپ زده می‌توانید؟", // nieuw, nalezen
+  'be.c.join.s': "شما به جلسهٔ والدین دعوت شده‌اید. هالندی شما هنوز خوب نیست. چه می‌کنید؟", // nieuw, nalezen
+  'be.c.join.o1': "بروید، و از هالندی ساده یا یک اپ استفاده کنید.", // nieuw, nalezen
+  'be.c.join.o2': "نروید: معلم گپ شما را نمی‌فهمد.", // nieuw, nalezen
+  'be.c.join.o3': "یک پیام کوتاه بفرستید که مصروف هستید.", // nieuw, nalezen
+  'be.c.join.w': "معلم می‌خواهد دربارهٔ طفل شما گپ بزند، نه دربارهٔ هالندی شما. آمدن نشان می‌دهد که برای شما مهم است.", // nieuw, nalezen
 };
 
 export const uk: Gloss = {
@@ -390,6 +472,47 @@ export const tr: Gloss = {
   'be.c.police.o2': 'Bir kere arar ve seni geri aramalarını beklersin.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o3': 'Beklersin: o tarihten sonra kendiliğinden biter.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.w': 'Mektuptaki tarihten önce yazılı olarak cevap verirsin. O tarihten sonra çoğu zaman çok geçtir. Justitiehuis ilk danışmanlığı ücretsiz verir.', // nieuw, nalezen
+  // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
+  'be.l.neighbours': "Mahallen", // nieuw, nalezen
+  'be.w.buurt': "mahalle", // nieuw, nalezen
+  'be.w.buurthuis': "mahalle evi (mahallendeki etkinlikler için bir yer)", // nieuw, nalezen
+  'be.w.straat': "sokak", // nieuw, nalezen
+  'be.w.kennismaken': "tanışmak (biriyle ilk kez karşılaşmak)", // nieuw, nalezen
+  'be.w.overlast': "rahatsızlık (başkaları için gürültü ya da sorun)", // nieuw, nalezen
+  'be.w.buurvrouw': "komşu (bir kadın)", // nieuw, nalezen
+  'be.s.neighbours.1': "Kısa süredir bu sokakta oturuyorum.", // nieuw, nalezen
+  'be.s.neighbours.2': "Kütüphanede Hollandaca pratik yapıyorum.", // nieuw, nalezen
+  'be.s.neighbours.3': "Rahatsızlık için özür dilerim.", // nieuw, nalezen
+  'be.c.neighbours.q': "Merhaba, ben yeni komşunuzum.", // nieuw, nalezen
+  'be.c.neighbours.a': "Tanıştığımıza memnun oldum! Ben Ali.", // nieuw, nalezen
+  'be.l.join': "Okul, spor ve gönüllülük", // nieuw, nalezen
+  'be.w.vrijwilliger': "gönüllü (para almadan yardım eden kişi)", // nieuw, nalezen
+  'be.w.vrijwilligerswerk': "gönüllü iş", // nieuw, nalezen
+  'be.w.sportclub': "spor kulübü", // nieuw, nalezen
+  'be.w.ouderavond': "veli toplantısı (okulda)", // nieuw, nalezen
+  'be.w.leraar': "öğretmen", // nieuw, nalezen
+  'be.w.basisschool': "ilkokul", // nieuw, nalezen
+  'be.s.join.1': "Oğlum ilkokula gidiyor.", // nieuw, nalezen
+  'be.s.join.2': "Bir spor kulübünde futbol oynuyorum.", // nieuw, nalezen
+  'be.s.join.3': "Cumartesi günleri gönüllü çalışıyorum.", // nieuw, nalezen
+  'be.c.join.q': "Veli toplantısına geliyor musun?", // nieuw, nalezen
+  'be.c.join.a': "Evet. Öğretmenle konuşmak istiyorum.", // nieuw, nalezen
+  'be.c.neighbours': "Komşularına merhaba de", // nieuw, nalezen
+  'be.c.neighbours.b': "Bir sokakta yeni misin? Komşularına merhaba de ve adını söyle. Bu, sonra sorunları çözmeyi kolaylaştırır. Gece mi çalışıyorsun, ya da çok kişiyle mi yaşıyorsun? Akşam geç saatlerde ve gece sessiz ol. Çöpünü doğru günde dışarı çıkar. Kütüphanede ve mahalle evinde çoğu zaman Hollandaca pratik yapabilirsin, bazen ücretsiz.", // nieuw, nalezen
+  'be.c.neighbours.p': "Merhaba, ben Ali. Yan tarafta oturuyorum.", // nieuw, nalezen
+  'be.c.neighbours.s': "Beş iş arkadaşınla yaşıyorsun. Bir komşu, geceleri sık sık gürültü olduğunu söylüyor. Ne yaparsın?", // nieuw, nalezen
+  'be.c.neighbours.o1': "Özür dilersin ve sessiz olmak için anlaşırsın.", // nieuw, nalezen
+  'be.c.neighbours.o2': "Hepinizin çalıştığını ve dinlenmeniz gerektiğini söylersin.", // nieuw, nalezen
+  'be.c.neighbours.o3': "Hiçbir şey söylemez ve kapıyı kapatırsın.", // nieuw, nalezen
+  'be.c.neighbours.w': "Erken yapılan iyi bir konuşma daha büyük sorunları önler. Seni tanıyan komşular çoğu zaman daha cana yakın ve daha yardımseverdir.", // nieuw, nalezen
+  'be.c.join': "Katıl: Hollandacayı daha hızlı öğrenirsin", // nieuw, nalezen
+  'be.c.join.b': "İş dışında Hollandacayı en hızlı, insanlarla bir şeyler yaparak öğrenirsin: spor, bir kulüp ya da gönüllü iş. Çocuğun okula mı gidiyor? Hollandacan mükemmel olmasa da veli toplantısına git: öğretmen seninle tanışmak ister. Yavaş Hollandaca konuşulmasını isteyebilir ya da bir çeviri uygulaması kullanabilirsin. Gönüllü iş CV’nde de iyi görünür.", // nieuw, nalezen
+  'be.c.join.p': "Biraz daha yavaş konuşur musunuz?", // nieuw, nalezen
+  'be.c.join.s': "Veli toplantısına davet edildin. Hollandacan henüz iyi değil. Ne yaparsın?", // nieuw, nalezen
+  'be.c.join.o1': "Gidersin ve basit Hollandaca ya da bir uygulama kullanırsın.", // nieuw, nalezen
+  'be.c.join.o2': "Gitmezsin: öğretmen seni anlamaz.", // nieuw, nalezen
+  'be.c.join.o3': "Meşgul olduğunu söyleyen kısa bir mesaj atarsın.", // nieuw, nalezen
+  'be.c.join.w': "Öğretmen senin Hollandacan hakkında değil, çocuğun hakkında konuşmak istiyor. Gelmek, önem verdiğini gösterir.", // nieuw, nalezen
 };
 
 export const pl: Gloss = {

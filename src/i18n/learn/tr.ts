@@ -278,6 +278,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "İşin bittiği söyleniyor: tamam, bir de başka iş istediğin.", // nieuw, nalezen
     'c.deductions.a.why': "Bir kesinti söyleniyor: buna izin olup olmadığını soruyorsun, bir de kontrol ediyorsun.", // nieuw, nalezen
     'c.agencyhome.a.why': "Yakında çıkman söyleniyor: bu kısa, bir de önce tavsiye aldığın.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "Çalışma planının değiştiği söyleniyor: tamam, bir de hangi gün.", // nieuw, nalezen
+    'c.breaks.a.why': "Öğle molası soruluyor: saati, bir de ne kadar sürdüğü.", // nieuw, nalezen
+    'c.wound.a.why': "Bayılmak üzere: onu yatırırsın ve yardım getirirsin.", // nieuw, nalezen
+    'c.callhelp.a.why': "Tepki verip vermediği soruluyor: hayır, tepki vermiyor.", // nieuw, nalezen
+    'c.vacancy.a.why': "Neden aradığın soruluyor: iş ilanı, bir de hâlâ açık mı?", // nieuw, nalezen
+    'c.result.a.why': "Hayır deniyor: sakin bir cevap, bir de nedenini soruyorsun.", // nieuw, nalezen
+    'c.residence.a.why': "İznin süresinin neredeyse dolduğu söyleniyor: hemen başvuruyorsun.", // nieuw, nalezen
+    'c.newhome.a.why': "Nerede oturduğun soruluyor: yeni bir ev, bir de yeni adres.", // nieuw, nalezen
+    'c.payparts.a.why': "Personel numaran soruluyor: maaş bordrosunda nerede olduğu.", // nieuw, nalezen
+    'c.latepay.a.why': "Paranın sonra geleceği söyleniyor: bunu yazılı olarak istiyorsun.", // nieuw, nalezen
+    'c.holiday.a.why': "Mayısta gitmen isteniyor: temmuzu tercih ediyorsun, bir de nedenini söylüyorsun.", // nieuw, nalezen
+    'c.special.a.why': "Doğum izni soruluyor: evet, bir de ne zaman.", // nieuw, nalezen
+    'c.unwell.a.why': "İyi olup olmadığın soruluyor: hayır, bir de eve gidebilir misin?", // nieuw, nalezen
+    'c.injury.a.why': "İfade isteniyor: evet, bir de senin için bir kopya.", // nieuw, nalezen
+    'c.debt.a.why': "Borç ödenene kadar kalman söyleniyor: buna izin yok, yardım al.", // nieuw, nalezen
+    'c.inspection.a.why': "Konuşmak isteyip istemediğin soruluyor: evet, ama patronun duyamayacağı bir yerde.", // nieuw, nalezen
+    'c.carpool.a.why': "Kimin süreceği soruluyor: sen, bir de onları ne zaman alacağın.", // nieuw, nalezen
+    'c.train.a.why': "Neden geç kaldığın soruluyor: tren, bir de mesaj attın.", // nieuw, nalezen
+    'c.checklist.a.why': "Bir şey unutup unutmadığın soruluyor: listeye bir kez daha bakmak.", // nieuw, nalezen
+    'c.leavesite.a.why': "En son senin çıkıp çıkmadığın soruluyor: evet, her şey kapalı ve kapı kilitli.", // nieuw, nalezen
+    'c.stagedays.a.why': "Neden olmadığın soruluyor: hastaydın, bir de ikisini de aradın.", // nieuw, nalezen
+    'c.stageend.a.why': "Planların soruluyor: önce diploma, sonra iş.", // nieuw, nalezen
+    'c.neighbours.a.why': "Yeni bir komşu merhaba diyor: tanıştığına memnunsun, bir de adın.", // nieuw, nalezen
+    'c.join.a.why': "Gelip gelmeyeceğin soruluyor: evet, bir de öğretmenle konuşmak istiyorsun.", // nieuw, nalezen
+    'c.workphotos.a.why': "İnternet için bir fotoğraf isteniyor: kibar bir hayır.", // nieuw, nalezen
+    'c.device.a.why': "Yeni bir uygulama soruluyor: önce bilgi işlem bölümüne sor.", // nieuw, nalezen
   },
 };
 

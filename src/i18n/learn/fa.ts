@@ -278,6 +278,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "گفته‌اند کار تمام می‌شود: باشه، و کار دیگری می‌خواهی.", // nieuw, nalezen
     'c.deductions.a.why': "از یک کسر خبر داده‌اند: می‌پرسی مجاز است یا نه، و پرس‌وجو می‌کنی.", // nieuw, nalezen
     'c.agencyhome.a.why': "گفته‌اند زود از خانه بروی: این زود است، و اول مشورت می‌گیری.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "گفته‌اند برنامهٔ کاری عوض شده: باشه، و کدام روز.", // nieuw, nalezen
+    'c.breaks.a.why': "دربارهٔ استراحت ناهار پرسیده‌اند: ساعتش، و چقدر طول می‌کشد.", // nieuw, nalezen
+    'c.wound.a.why': "نزدیک است غش کند: بگذار دراز بکشد، و کمک بیاور.", // nieuw, nalezen
+    'c.callhelp.a.why': "پرسیده‌اند واکنش نشان می‌دهد یا نه: نه، واکنشی ندارد.", // nieuw, nalezen
+    'c.vacancy.a.why': "پرسیده‌اند چرا زنگ می‌زنی: آگهی استخدام، و آیا هنوز جای خالی هست؟", // nieuw, nalezen
+    'c.result.a.why': "جواب رد داده‌اند: یک جواب آرام، و می‌پرسی چرا.", // nieuw, nalezen
+    'c.residence.a.why': "گفته‌اند اجازه تقریباً منقضی شده: فوراً درخواست می‌دهی.", // nieuw, nalezen
+    'c.newhome.a.why': "پرسیده‌اند کجا زندگی می‌کنی: یک خانهٔ جدید، و آدرس جدید.", // nieuw, nalezen
+    'c.payparts.a.why': "شمارهٔ پرسنلی‌ات را پرسیده‌اند: جای آن در فیش حقوقی.", // nieuw, nalezen
+    'c.latepay.a.why': "گفته‌اند پول بعداً می‌آید: می‌خواهی آن را کتبی داشته باشی.", // nieuw, nalezen
+    'c.holiday.a.why': "خواسته‌اند ماه مه بروی: ترجیح می‌دهی ژوئیه بروی، و دلیلش را می‌گویی.", // nieuw, nalezen
+    'c.special.a.why': "دربارهٔ مرخصی تولد پرسیده‌اند: بله، و کی.", // nieuw, nalezen
+    'c.unwell.a.why': "پرسیده‌اند حالت خوب است: نه، و می‌توانی بروی خانه؟", // nieuw, nalezen
+    'c.injury.a.why': "اظهارنامه خواسته‌اند: بله، و یک کپی برای خودت.", // nieuw, nalezen
+    'c.debt.a.why': "گفته‌اند تا صاف شدن بدهی بمانی: مجاز نیست، کمک بگیر.", // nieuw, nalezen
+    'c.inspection.a.why': "پرسیده‌اند می‌خواهی حرف بزنی: بله، ولی نه جایی که رئیس بشنود.", // nieuw, nalezen
+    'c.carpool.a.why': "پرسیده‌اند کی رانندگی می‌کند: تو، و کی دنبالشان می‌روی.", // nieuw, nalezen
+    'c.train.a.why': "پرسیده‌اند چرا دیر کردی: قطار، و پیام فرستادی.", // nieuw, nalezen
+    'c.checklist.a.why': "پرسیده‌اند چیزی یادت رفته: یک نگاه دیگر به فهرست.", // nieuw, nalezen
+    'c.leavesite.a.why': "پرسیده‌اند نفر آخری: بله، همه‌چیز خاموش و در قفل.", // nieuw, nalezen
+    'c.stagedays.a.why': "پرسیده‌اند چرا نبودی: مریض بودی، و به هر دو زنگ زدی.", // nieuw, nalezen
+    'c.stageend.a.why': "دربارهٔ برنامه‌هایت پرسیده‌اند: اول مدرک، بعد کار.", // nieuw, nalezen
+    'c.neighbours.a.why': "یک همسایهٔ جدید سلام می‌کند: از آشنایی خوشوقتی، و اسمت.", // nieuw, nalezen
+    'c.join.a.why': "خواسته‌اند بیایی: بله، و می‌خواهی با معلم حرف بزنی.", // nieuw, nalezen
+    'c.workphotos.a.why': "برای اینترنت عکس خواسته‌اند: یک «نه» مؤدبانه.", // nieuw, nalezen
+    'c.device.a.why': "دربارهٔ یک اپ جدید پرسیده‌اند: اول از بخش IT بپرس.", // nieuw, nalezen
   },
 };
 

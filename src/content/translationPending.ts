@@ -8,31 +8,17 @@ import { workUnits } from './work';
  * the sixteen lessons of Groen and Facilitair and the thirty-two of Beveiliging, Voedingsindustrie,
  * Afval en recycling and Kinderopvang (23 November 2026; translated the same day), and the twenty
  * lessons of the second units of Schoonmaak, Horeca, Zorg and Winkel and "Werken via een uitzendbureau"
- * (23 November 2026; translated the same day). Again from the twenty-six lessons of the basis units at four
- * lessons (23 November 2026, below).
+ * (23 November 2026; translated the same day). And the twenty-six lessons of the basis units at four
+ * lessons (23 November 2026; translated the same day).
  */
-export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
-  // The basis units at four lessons (23 November 2026): two new lessons each in Tijd en rooster, Als
-  // het misgaat (both in curriculum.ts), Solliciteren, Wonen en papieren, Loon, Verlof, Ziekte,
-  // Uitbuiting herkennen, Naar je werk, Je werk afronden, Stage lopen, Meedoen in Nederland and Online
-  // op je werk (work.ts basisFour). Translations to follow.
-  'roster', 'breaks', 'wound', 'callhelp',
-  'vacancy', 'result', 'residence', 'newhome', 'payparts', 'latepay', 'holiday', 'special',
-  'unwell', 'injury', 'debt', 'inspection', 'carpool', 'train', 'checklist', 'leavesite',
-  'stagedays', 'stageend', 'neighbours', 'join', 'workphotos', 'device',
-];
+export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
 
 /**
  * The words of the pending lessons of curriculum.ts ("Tijd en rooster", "Als het misgaat"): the
  * words of work.ts are found by their lesson below, but this file cannot load curriculum.ts (it loads
  * this one), so they are listed here.
  */
-const PENDING_CURRICULUM_WORDS: readonly string[] = [
-  'w.weekrooster', 'w.roosterapp', 'w.beschikbaar', 'w.wijziging', 'w.invallen', 'w.vrijedag',
-  'w.lunchpauze', 'w.rusttijd', 'w.werkdag', 'w.urenlijst', 'w.eerderweg', 'w.achterelkaar',
-  'w.wond', 'w.verband', 'w.koelen', 'w.snee', 'w.flauwvallen', 'w.oogdouche',
-  'w.hulpdiensten', 'w.straatnaam', 'w.huisnummer', 'w.aanspreekbaar', 'w.opwachten', 'w.aandelijn',
-];
+const PENDING_CURRICULUM_WORDS: readonly string[] = [];
 
 /** Units whose title waits for its translations too. */
 const PENDING_UNITS: readonly string[] = [];

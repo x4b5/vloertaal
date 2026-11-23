@@ -2301,3 +2301,36 @@ De twintig lessen van Schoonmaak 2, Horeca 2, Zorg 2, Winkel 2 en "Werken via ee
 - inlener = shirkadda kiraysata; inhouding = jaridda; tegoedbon = warqadda deynta ("deyn" kan als schuld gelezen worden); kluis khasnadda adag vs kassa khasnadda.
 ### de
 - inlener = Entleiher; vaste kracht = Stammkraft; ontstopper = Pömpel; c.deductions.b inhoud checken.
+
+## Basisonderwerpen naar vier lessen (23 november 2026)
+
+De 26 nieuwe lessen van de basisonderwerpen (en de Belgische tweelingen van "Meedoen") zijn met AI vertaald in alle 14 hulptalen, elke regel met `// nieuw, nalezen`. Wat een moedertaalspreker het eerst moet nalezen:
+
+### ro
+- zwart werken = a lucra la negru; c.residence.q "expiră în curând" sterk genoeg?; trakteren = a face cinste.
+### es
+- c.special.b "¿Tu pareja ha tenido un bebé?"; drukte = la temporada alta; trakteren = invitar.
+### pt
+- zwart werken = trabalhar sem descontos; pensioen = a reforma; drukte = a época de muito trabalho.
+### fr
+- titre de séjour, matricule, relevé bancaire, gratification de stage; c.special.b "tu es le ou la partenaire" natuurlijk?
+### ar
+- تصريح الإقامة, العمل بالأسود; cijfers als cijfers ("خبرة 2 سنة", "لمدة 1 أسبوع") nalezen; x-vorm van c.special.b vrij.
+### pl
+- s.result.1 formeel (pan/pani); x-vormen met schuine streep ("chory / chora"); oogdouche = płuczka do oczu.
+### uk
+- x-vorm c.stagedays.a vrij vertaald; табельний номер; станція для промивання очей.
+### bg
+- s.result.1 "Работата е ваша!"; душ за очи; служебен номер.
+### ti
+- ፍቓድ መንበሪ, ደላላ, ጡረታ; zwart werken omschreven; enkele woordbetekenissen op -ካ.
+### so
+- verblijfsvergunning = sharciga deganaanshaha; pensioen = hawlgabka; zwart werken = shaqo madow.
+### de
+- "Agentur" in l.debt/c.debt/c.carpool tegenover "Zeitarbeitsfirma" elders; c.stagedays.b/c.stageend.b slotzin nalezen.
+### tr
+- oturma izni; kayıt dışı çalışmak; c.stagedays.b "Böyle olmuyor mu?"; s.special.2 oom = amca.
+### fa
+- اجازهٔ اقامت; کار سیاه کردن; c.stagedays.b "این‌طور نیست؟".
+### prs
+- کار غیر رسمی کردن; oogdouche = شاور چشم; lunchpauze = وقت نان چاشت.
