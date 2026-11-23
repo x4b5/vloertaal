@@ -106,6 +106,12 @@ const MOTION_ROUND4 = [
   'w.kar', 'w.rollator', 'w.shovel', 'w.rups', 'w.fiets', 'w.bus', 'w.trein', 'w.eten', 'w.schoonmaakmiddel', 'w.zeep',
   'w.thermoskan', 'w.schuim', 'w.gemeente', 'w.oproepkracht', 'w.vervuild', 'w.regenpak', 'w.asbest', 'w.spuitbus', 'w.controlepunt', 'w.aanhanger',
   'w.kruiwagen', 'w.sluipwesp', 'w.kerntemperatuur',
+  // Second units of Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+  'w.aflopen', 'w.doorwerken', 'w.inhouding', 'w.vervoer', 'w.navragen', 'w.schillen', 'w.hakken', 'w.raspen', 'w.gaar', 'w.spoelkeuken',
+  'w.voorspoelen', 'w.afdekken', 'w.bon', 'w.warmhoudlamp', 'w.apartbetalen', 'w.ontstopper', 'w.sprayflacon', 'w.schrobzuigmachine', 'w.opmaken', 'w.doseren',
+  'w.terugbrengen', 'w.statiegeld', 'w.kassalade', 'w.afschrijven', 'w.winkelwagen', 'w.sluitingstijd', 'w.rolluik', 'w.facen', 'w.afprijzen', 'w.uitpakken',
+  'w.tassencontrole', 'w.douchestoel', 'w.tandenpoetsen', 'w.kammen', 'w.scheren', 'w.rapporteren', 'w.plassen', 'w.glijlaken', 'w.thuiszorg', 'w.alarmknop',
+  'w.stalift', 'w.werkhoogte', 'w.bedhek',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */
