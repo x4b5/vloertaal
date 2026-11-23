@@ -1,13 +1,26 @@
 import type { JSX } from 'react';
-import { PAL, Shine } from '../kit';
+import { PAL, Shine, r1 } from '../kit';
 
-/** A lumpy white crust: a row of bumps along a base path, with a grey underside. */
-const crust = (pts: [number, number, number][]) => (
-  <g>
-    {pts.map(([x, y, r], i) => <circle key={`s${i}`} cx={x + 0.8} cy={y + 1.4} r={r} fill={PAL.line} />)}
-    {pts.map(([x, y, r], i) => <circle key={`c${i}`} cx={x} cy={y} r={r} fill={PAL.paper} />)}
-  </g>
-);
+/**
+ * A rough, chalky crust: a jagged blob round (cx, cy), r wide, `k` high, with a grey edge underneath
+ * and a few speckles (seeded, so the picture never changes).
+ */
+const crust = (cx: number, cy: number, r: number, k = 0.6, n = 14) => {
+  const pts = Array.from({ length: n }, (_, i) => {
+    const t = (i / n) * Math.PI * 2;
+    const rr = r * (i % 2 ? 0.78 : 1) * (1 + 0.12 * Math.sin(i * 2.7));
+    return `${r1(cx + rr * Math.cos(t))} ${r1(cy + rr * k * Math.sin(t))}`;
+  });
+  const d = `M${pts.join('L')}Z`;
+  return (
+    <g>
+      <path d={d} fill={PAL.line} transform="translate(0.8 1.8)" />
+      <path d={d} fill={PAL.paper} />
+      <circle cx={cx - r * 0.3} cy={cy} r={r * 0.12} fill={PAL.mist} />
+      <circle cx={cx + r * 0.3} cy={cy + r * 0.15 * k} r={r * 0.1} fill={PAL.mist} />
+    </g>
+  );
+};
 
 export default {
   // "de kalk": the limescale — a chrome tap on a blue-tiled wall, its spout and arm thick with lumpy
@@ -17,8 +30,10 @@ export default {
       {/* The tiles */}
       <rect x="10" y="12" width="100" height="94" rx="4" fill={PAL.sky} />
       <path d="M10 43H110M10 74H110M43 12V106M76 12V106" stroke={PAL.skyShade} strokeWidth="2.4" />
-      {/* Chalky spots on the tiles */}
-      {crust([[22, 88, 3], [27, 92, 2.4], [96, 24, 3], [101, 28, 2.2], [92, 92, 2.6], [98, 96, 3.2], [24, 24, 2.4]])}
+      {/* Chalky stains on the tiles */}
+      {crust(26, 90, 9, 0.7)}
+      {crust(96, 26, 8, 0.8)}
+      {crust(95, 94, 7, 0.8)}
       {/* The tap: wall flange, arm, spout, handle */}
       <rect x="14" y="40" width="14" height="24" rx="4" fill={PAL.steel} />
       <rect x="24" y="44" width="56" height="12" rx="6" fill={PAL.steel} />
@@ -28,10 +43,10 @@ export default {
       <rect x="44" y="30" width="6" height="14" rx="2" fill={PAL.slate} />
       <rect x="36" y="26" width="22" height="7" rx="3.5" fill={PAL.steel} />
       <Shine d="M30 46H50" width={2.4} opacity={0.9} />
-      {/* The crust on the arm and round the spout's mouth */}
-      {crust([[34, 56, 3.2], [40, 57, 2.6], [56, 56, 3], [62, 57.5, 3.6]])}
-      {crust([[66, 72, 4.4], [72, 76, 5.4], [79, 75, 4.6], [84, 71, 3.6], [74, 81, 3.4], [70, 66, 3], [84, 64, 2.6]])}
-      {crust([[72, 86, 2.4], [78, 90, 2]])}
+      {/* The thick crust on the arm and round the spout's mouth */}
+      {crust(42, 56, 11, 0.35)}
+      {crust(75, 72, 14, 0.75, 16)}
+      {crust(76, 84, 7, 0.9, 10)}
     </g>
   ),
 } as Record<string, () => JSX.Element>;

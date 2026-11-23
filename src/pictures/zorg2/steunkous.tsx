@@ -2,27 +2,28 @@ import type { JSX } from 'react';
 import { PAL, Shade, Shine } from '../kit';
 
 /** A knee-high stocking from the side: the top band at the top, the heel on the left, the toe on the right. */
-const SOCK = 'M34 16H74C76 40 74 60 70 76C70 82 72 86 80 88L100 92Q108 94 107 101Q106 106 98 106H52Q42 106 42 96L44 80C38 62 30 40 34 16Z';
+const SOCK = 'M40 18H72C74 40 72 60 66 78C66 86 72 88 82 90L100 94Q108 96 106 102Q104 106 96 106H56Q46 106 46 96L48 80C38 62 34 40 40 18Z';
+const BEIGE = '#f0c48a';
 
 export default {
-  // "de steunkous": the support stocking — a long white knee-high stocking from the side, with a wide
-  // ribbed sky-blue band at the top and grey rings that show how tightly it holds the leg.
+  // "de steunkous": the support stocking — a long beige knee-high stocking from the side (heel on the left,
+  // toe on the right), with a wide ribbed band at the top and darker rings that show how tight it is.
   'w.steunkous': () => (
     <g strokeLinejoin="round" strokeLinecap="round">
-      <path d={SOCK} fill={PAL.mist} transform="translate(2 3)" />
-      <Shade color={PAL.paperShade} opacity={1} at={[88, 60, 18, 60]}>
-        <path d={SOCK} fill={PAL.white} />
+      <path d={SOCK} fill={PAL.cardShade} transform="translate(2 3)" />
+      <Shade color={PAL.card} opacity={1} at={[84, 60, 16, 60]}>
+        <path d={SOCK} fill={BEIGE} />
       </Shade>
-      {/* Grey compression rings */}
-      <path d="M36 40Q54 44 74 40M38 56Q55 60 73 56M42 72Q56 75 70 72" fill="none" stroke={PAL.mist} strokeWidth="2.4" />
-      {/* Heel and toe in a light grey */}
-      <path d="M44 88Q44 104 54 104H60Q50 100 50 88Z" fill={PAL.paperShade} />
-      <path d="M96 92Q106 94 105 101Q104 104 98 104H94Q100 98 96 92Z" fill={PAL.paperShade} />
+      {/* Rings: it presses the leg tightly */}
+      <path d="M40 38Q56 42 72 38M42 54Q56 58 70 54M46 70Q56 73 67 70" fill="none" stroke={PAL.cardShade} strokeWidth="2.4" />
+      {/* Heel and toe, a darker knit */}
+      <path d="M48 88Q46 104 58 104H64Q54 100 54 88Z" fill={PAL.cardShade} />
+      <path d="M96 94Q106 96 104 102Q102 104 96 104H92Q98 98 96 94Z" fill={PAL.cardShade} />
       {/* The ribbed top band */}
-      <rect x="31" y="10" width="46" height="16" rx="4" fill={PAL.skyShade} />
-      <rect x="31" y="10" width="46" height="13" rx="4" fill={PAL.sky} />
-      <path d="M38 13V21M45 13V21M52 13V21M59 13V21M66 13V21M71 13V21" stroke={PAL.skyShade} strokeWidth="1.6" />
-      <Shine d="M40 32Q38 52 44 68" width={3.4} opacity={0.9} color={PAL.ice} />
+      <rect x="37" y="10" width="38" height="16" rx="4" fill={PAL.cardDark} />
+      <rect x="37" y="10" width="38" height="13" rx="4" fill={PAL.cardShade} />
+      <path d="M43 13V21M49 13V21M55 13V21M61 13V21M67 13V21" stroke={PAL.cardDark} strokeWidth="1.6" />
+      <Shine d="M44 32Q42 52 48 68" width={3.4} opacity={0.6} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;
